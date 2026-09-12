@@ -1,0 +1,13 @@
+{
+  "volume": 1, "lesson": 32, "author": "opus-5-hand-written",
+  "note": "mulier 沒有屬格進語料（只有 mulier／mulieres／mulierem）。supersubstantiālis 只有主禱文那一個受格 supersubstantialem。",
+  "sentences": [
+    {"latin": "dilectus frater fidelis", "chinese": "心愛而忠信的兄弟。", "targets": ["dilectus", "frater", "fidelis"]},
+    {"latin": "dulce os et mulier", "chinese": "甘美的口，以及那婦人。", "targets": ["dulcis", "os", "mulier"]},
+    {"latin": "fide et spe", "chinese": "以信德與望德。", "targets": ["fides", "spes"]},
+    {"latin": "incidit in latere", "chinese": "它落在肋旁。", "targets": ["incido", "in", "latus"]},
+    {"latin": "preces sursum ad arborem", "chinese": "向上朝那樹的祈求。", "targets": ["prex", "sursum", "ad", "arbor"]},
+    {"latin": "rem supersubstantialem dedit", "chinese": "他給了那超乎本質的東西。", "targets": ["res", "supersubstantialis"]},
+    {"latin": "arbor dulcis et fidelis frater", "chinese": "甘美的樹與忠信的兄弟。", "targets": ["arbor", "dulcis", "fidelis", "frater"]}
+  ]
+}

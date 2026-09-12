@@ -1,0 +1,13 @@
+{
+  "volume": 1, "lesson": 31, "author": "opus-5-hand-written",
+  "note": "subveniō 只認字形，語料裡是 subveni／subvenisti／subvenite 三個命令式與完成式，沒有直述現在式。",
+  "sentences": [
+    {"latin": "ostendit pastorem in tenebris", "chinese": "他在黑暗中顯出了牧人。", "targets": ["ostendo", "pastor", "in", "tenebrae"]},
+    {"latin": "perfecisti et pervenit", "chinese": "你成就了，而他到達了。", "targets": ["perficio", "pervenio"]},
+    {"latin": "processit sapientia et subvenite", "chinese": "智慧前行了，你們要來相助。", "targets": ["procedo", "sapientia", "subvenio"]},
+    {"latin": "Sufficit et superveniet", "chinese": "這已足夠，而他將驟然臨到。", "targets": ["sufficio", "supervenio"]},
+    {"latin": "tendentes aures ad caput", "chinese": "把耳朵伸向那頭。", "targets": ["tendo", "auris", "ad", "caput"]},
+    {"latin": "alit et Cecidit", "chinese": "他滋養了，卻跌倒了。", "targets": ["alo", "cado"]},
+    {"latin": "curavit caput pastoris", "chinese": "他醫治了牧人的頭。", "targets": ["curo", "caput", "pastor"]}
+  ]
+}

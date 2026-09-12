@@ -1,0 +1,13 @@
+{
+  "volume": 1, "lesson": 30, "author": "opus-5-hand-written",
+  "note": "cōtīdiānus 武加大沒有字形；cōtīdiē 只認字形，而武加大寫的是 quotidie，所以題目照語料拼法寫。intentus 只認詞幹。",
+  "sentences": [
+    {"latin": "Concessit et conclusit gregem", "chinese": "他准許了，並且圈住了羊群。", "targets": ["concedo", "concludo", "grex"]},
+    {"latin": "quotidie discessit inde", "chinese": "他每日從那裡離開。", "targets": ["cotidie", "discedo", "inde"]},
+    {"latin": "devota humanitas evangelizavit", "chinese": "虔誠的人性宣講了福音。", "targets": ["devotus", "humanitas", "evangelizo"]},
+    {"latin": "extendit et incedentes", "chinese": "他伸展開來，而那些前行的人。", "targets": ["extendo", "incedo"]},
+    {"latin": "indeficiens et intenta humanitas", "chinese": "恆久而緊張的人性。", "targets": ["indeficiens", "intentus", "humanitas"]},
+    {"latin": "intendit et interfecerunt", "chinese": "他注視著，而他們殺害了。", "targets": ["intendo", "interficio"]},
+    {"latin": "gregem quotidie intendit", "chinese": "他每日注視著羊群。", "targets": ["grex", "cotidie", "intendo"]}
+  ]
+}

@@ -410,8 +410,17 @@ def vocabulary_key_order(row: dict[str, Any]) -> list[str]:
         if not piece or piece.startswith("-"):
             continue
         for word in tokenise(piece):
-            if len(word) > 1:
-                add(word)
+            if len(word) <= 1:
+                continue
+            # A deponent's principal parts end in the auxiliary: ``collaetor,
+            # collaetārī, —, collaetātus sum``.  That ``sum`` is not this word,
+            # and taking it as one of its spellings credits the entry to every
+            # sentence containing ``est`` -- the same false coverage as crediting
+            # 彌撒 to ``mīsit``, reached by a different route.  The verb ``sum``
+            # keeps its own key, because there the word really is ``sum``.
+            if fold(word) == "sum" and fold(row["headword"]) != "sum":
+                continue
+            add(word)
     return keys
 
 

@@ -1,0 +1,13 @@
+{
+  "volume": 1, "lesson": 33, "author": "opus-5-hand-written",
+  "note": "cōnsubstantiālis 武加大沒有字形——尼西亞信經的關鍵字在聖經語料裡本來就不會有。",
+  "sentences": [
+    {"latin": "ausus est et confidit", "chinese": "他放膽了，並且信賴。", "targets": ["audeo", "sum", "confido"]},
+    {"latin": "benedictionem deprecati sunt", "chinese": "他們懇求了祝福。", "targets": ["benedictio", "deprecor", "sum"]},
+    {"latin": "desiderium et memoria", "chinese": "渴望與追思。", "targets": ["desiderium", "memoria"]},
+    {"latin": "Gaudete in igne", "chinese": "你們要在火中喜樂。", "targets": ["gaudeo", "in", "ignis"]},
+    {"latin": "Innocens miser miserere", "chinese": "清白的、可憐的，求你垂憐。", "targets": ["innocens", "miser", "misereor"]},
+    {"latin": "lacrimis nocte nihil", "chinese": "夜裡以眼淚，卻毫無所得。", "targets": ["lacrima", "nox", "nihil"]},
+    {"latin": "opera et orientem vidit", "chinese": "他看見了那些工程與東方。", "targets": ["opus", "orior"]}
+  ]
+}

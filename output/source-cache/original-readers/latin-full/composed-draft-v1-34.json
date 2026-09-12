@@ -1,0 +1,13 @@
+{
+  "volume": 1, "lesson": 34, "author": "opus-5-hand-written",
+  "note": "caelicola 與 collaetor 武加大沒有可用字形——collaetor 的詞形表裡那個 sum 是助動詞，不算它自己的形，所以它練不到。cōnsolō／cōnor／aggredior／amplector 都只剩關身分詞與未來式那幾個形。",
+  "sentences": [
+    {"latin": "paterna potestas potens", "chinese": "父親的權柄是有力的。", "targets": ["paternus", "potestas", "potens"]},
+    {"latin": "peccatores scelus vero", "chinese": "罪人們的惡行確實如此。", "targets": ["peccator", "scelus", "vero"]},
+    {"latin": "affectu agnovit Dominum", "chinese": "他以虔誠的感情認出了上主。", "targets": ["affectus", "agnosco", "dominus"]},
+    {"latin": "aggressus est et amplexus", "chinese": "他上前了，並且擁抱了。", "targets": ["aggredior", "amplector", "sum"]},
+    {"latin": "assidua conatus est", "chinese": "他不斷地嘗試了。", "targets": ["assiduus", "conor", "sum"]},
+    {"latin": "consolabitur peccatores assidue", "chinese": "他要不斷地安慰罪人們。", "targets": ["consolo", "peccator", "assiduus"]},
+    {"latin": "vero paterna potestas potens est", "chinese": "父親的權柄確實是有力的。", "targets": ["vero", "paternus", "potestas", "potens"]}
+  ]
+}
