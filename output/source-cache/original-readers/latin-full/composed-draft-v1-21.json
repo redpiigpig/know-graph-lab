@@ -1,0 +1,13 @@
+{
+  "volume": 1, "lesson": 21, "author": "opus-5-hand-written",
+  "note": "incarno 武加大沒有字形，練不到。pellō 整部武加大只有被動不定式 Pelli 一形，Galilaeus 只有 Galilæi。",
+  "sentences": [
+    {"latin": "donec dum instabat", "chinese": "直到他一直在催逼的時候。", "targets": ["donec", "dum", "insto"]},
+    {"latin": "etsi Judæi et Galilæi", "chinese": "即使猶太人與加里肋亞人也如此。", "targets": ["etsi", "Judaeus", "Galilaeus"]},
+    {"latin": "immutata est et mutavit", "chinese": "她被改變了，而他也改換了。", "targets": ["immuto", "muto"]},
+    {"latin": "nisi peperit, perdet", "chinese": "若非她生產，他就要毀滅。", "targets": ["nisi", "pario", "perdo"]},
+    {"latin": "primum restat Romanus", "chinese": "首先留下的是那羅馬人。", "targets": ["primum", "resto", "Romanus"]},
+    {"latin": "Pelli debet a templo", "chinese": "他應當被逐出聖殿。", "targets": ["pello", "debeo", "a", "templum"]},
+    {"latin": "dum Romani instabant, primum perdidit", "chinese": "當羅馬人催逼時，他先失去了。", "targets": ["dum", "Romanus", "insto", "primum", "perdo"]}
+  ]
+}

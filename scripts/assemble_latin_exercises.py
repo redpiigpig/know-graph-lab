@@ -95,52 +95,65 @@ def target_words_in(
     return [entry.public_record() for entry in targets if entry.ordinal in hits]
 
 
-def unreachable_words(entries: Sequence[Any], corpus: checker.Corpus) -> set[int]:
+def unreachable_words(
+    entries: Sequence[Any], corpus: checker.Corpus, tagger: Tagger, appendix: set[str]
+) -> set[int]:
     """Ordinals of words no sentence could ever practise.
 
-    Gate one refuses a form the corpus never wrote; gate three demands all
-    twenty of a lesson's words.  For a word with no attested form at all the
-    two contradict, and the lesson is unsatisfiable rather than merely hard.
-    Thirty of the two thousand are in that position -- ``Kyrie``, ``eléison``,
-    ``tellus``, the month names -- because this reader's vocabulary comes from
-    Collins and its attestation from the Vulgate, which is not the book Collins
-    teaches out of.  They are reported as their own category, never silently
-    folded into "not practised", and the lesson says so on itself.
+    Gate one refuses a form the corpus never wrote, gate two refuses a word the
+    lessons never taught, and gate three demands all twenty of a lesson's words.
+    For some words the three cannot all hold, and the lesson is unsatisfiable
+    rather than merely hard.  Two shapes of it:
+
+    * the word has no attested form at all -- ``Kyrie``, ``eléison``, ``tellus``,
+      the month names.  This reader's vocabulary comes from Collins and its
+      attestation from the Vulgate, which is not the book Collins teaches from;
+    * every form that would credit it is a different word the lessons never
+      taught -- ``speciō`` survives in the Vulgate only as the adjective
+      ``speciōsus``, so the one spelling that could credit it is refused by the
+      gate before it can.
+
+    So reachability is decided by running the real gates rather than by a rule
+    of its own: a word is reachable when some corpus form both credits it and
+    would pass the taught-words gate.  Deciding it any other way leaves a lesson
+    holding a word it can neither practise nor excuse.
     """
     keys = corpus.keys
-    lemmas: set[str] = set()
-    for row in corpus.forms.values():
-        lemmas.update(row["lemmas"])
-    # Every prefix the corpus can answer to, built once per volume: testing a
-    # thousand entries against forty-six thousand keys one startswith at a time
-    # takes minutes, and this takes a second.  Prefixes shorter than the floor
-    # are never stored, so the set answers exactly the question the credit rule
-    # asks -- no looser, which would report a word reachable that no sentence
-    # can in fact credit, and it would then sit in notPractised for ever.
-    prefixes = {
-        key[:length]
-        for key in keys
-        for length in range(STEM_FLOOR, len(key) + 1)
-    }
-    # An enclitic is never a corpus form on its own -- ``-que`` is only ever
-    # the tail of another word -- but the gate does split it off and does credit
-    # it, so it is reachable and must not be filed as absent.  The other bound
-    # morphemes this reader teaches (``-pleō``, ``-clīnō``) live inside
-    # compounds the gate does not take apart, and those really are unreachable.
-    reachable_keys = keys | set(ENCLITICS)
+    taught_lemmas = {lemma for entry in entries for lemma in entry.lemmas}
+    taught_keys = {key for entry in entries for key in entry.written_keys} | appendix
+    taught_stems = {stem for entry in entries for stem in entry.credit_stems}
+
+    by_lemma: dict[str, set[str]] = {}
+    lemmaless_by_prefix: dict[str, set[str]] = {}
+    for key, row in corpus.forms.items():
+        for lemma in row["lemmas"]:
+            by_lemma.setdefault(lemma, set()).add(key)
+        if not row["lemmas"]:
+            for length in range(STEM_FLOOR, len(key) + 1):
+                lemmaless_by_prefix.setdefault(key[:length], set()).add(key)
+
+    def writable(key: str) -> bool:
+        part = {"key": key, "lemmas": corpus.lemmas(key) | tagger.lemmas_for_key(key)}
+        return checker.part_is_taught(part, taught_lemmas, taught_keys, taught_stems)
+
     out: set[int] = set()
     for entry in entries:
         if getattr(entry, "phrase", False):
-            if not entry.credit_keys <= keys:
+            if not (entry.credit_keys <= keys and all(writable(k) for k in entry.credit_keys)):
                 out.add(entry.ordinal)
             continue
-        if entry.credit_lemmas & lemmas:
-            continue
-        if entry.written_keys & reachable_keys:
-            continue
-        if entry.credit_stems & prefixes:
-            continue
-        out.add(entry.ordinal)
+        candidates: set[str] = set()
+        for lemma in entry.credit_lemmas:
+            candidates |= by_lemma.get(lemma, set())
+        candidates |= entry.written_keys & keys
+        # An enclitic is never a corpus form on its own -- ``-que`` is only ever
+        # the tail of another word -- but the gate does split it off and credit
+        # it, so it is reachable and must not be filed as absent.
+        candidates |= entry.written_keys & set(ENCLITICS)
+        for stem in entry.credit_stems:
+            candidates |= lemmaless_by_prefix.get(stem, set())
+        if not any(key in ENCLITICS or writable(key) for key in candidates):
+            out.add(entry.ordinal)
     return out
 
 
@@ -160,7 +173,7 @@ def build_volume(volume: int) -> dict[str, Any]:
         appendix_all |= keys
 
     unreachable_ordinals = unreachable_words(
-        [entry for entry in entries if entry.volume == volume], corpus
+        [entry for entry in entries if entry.volume <= volume], corpus, tagger, appendix_all
     )
     lessons_out: list[dict[str, Any]] = []
     thin: list[int] = []

@@ -1,0 +1,13 @@
+{
+  "volume": 1, "lesson": 23, "author": "opus-5-hand-written",
+  "note": "ruber 整部武加大只有 Rubro 一形（「紅海」的固定搭配），所以兩句都照那個形寫。lego 沒有完成式複數 legerunt。",
+  "sentences": [
+    {"latin": "juxta patrem et matrem", "chinese": "在父親與母親身旁。", "targets": ["juxta", "pater", "mater"]},
+    {"latin": "legit lumen regis", "chinese": "他讀出君王的光。", "targets": ["lego", "lumen", "rex"]},
+    {"latin": "Pax et munus virginis", "chinese": "那童貞女的平安與禮物。", "targets": ["pax", "munus", "virgo"]},
+    {"latin": "voluntas patris apta est", "chinese": "父親的意願是恰當的。", "targets": ["voluntas", "pater", "aptus", "sum"]},
+    {"latin": "ambo steterunt juxta Rubro", "chinese": "兩人都站在紅海旁。", "targets": ["ambo", "sto", "juxta", "ruber"]},
+    {"latin": "siccum munus regis", "chinese": "君王那乾燥的祭品。", "targets": ["siccus", "munus", "rex"]},
+    {"latin": "lumen matris et pax virginis", "chinese": "母親的光與童貞女的平安。", "targets": ["lumen", "mater", "pax", "virgo"]}
+  ]
+}
