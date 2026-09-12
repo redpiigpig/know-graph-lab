@@ -9,13 +9,41 @@
 | 排程 | 狀態 | 判準 |
 |---|---|---|
 | `KGL_Husserl_OCR` | ✅ **已完成並自我停用**（59/59 批） | — |
-| `KGL_Fathers_Retranslate` | 🔄 進行中，**剩 1,668 段** | `python scripts/fathers_retranslate_untranslated.py --count` |
+| `KGL_Fathers_Retranslate` | 🔄 進行中，**剩 1,666 段**（2026-09-12 08:05 量） | `python scripts/fathers_retranslate_untranslated.py --count` |
 
 補譯跑完會自己 Disable。**完工判準看 `--count` 的輸出，不要看排程狀態。**
 
+🚨 **2026-09-12 複查：兩天只少了 2 段**（1,668 → 1,666），而 worker 明明活著
+（`fathers_retranslate_untranslated.py --all --apply`，當天 00:24 起跑）。所以「排程在跑」
+與「有在前進」是兩件事——下一個人接手時**先看 `--count` 有沒有動**，不要看排程或 pid。
+沒動就去看 `scripts/logs/` 那條線的 log，多半是引擎在退（quota／410／落地閘擋下重試）。
+
 ---
 
-## 1. 胡塞爾《觀念一》——OCR 完成，切章有五處要修（下一步的第一件事）
+## 1. 胡塞爾《觀念一》——✅ 2026-09-12 切章修完，已開翻
+
+**做完了**（原本列的五處是四處實有、一處只講到一半，另外自己又抓出兩處）：
+
+| 原列 | 結果 |
+|---|---|
+| ① 目次被當成章 | ✅ `strip_toc`。目次區塊自「CONTENTS」起、收在最後一個帶頁碼的條目——多吃一行就會把正文的 `## INTRODUCTION` 也吃掉 |
+| ② `sec26` 標題黏一串 | ✅ `split_glued`＋`split_head_from_body`。全書只有 7 行有行內 `##`，但其中一行黏了四件事 |
+| ③ `sec24` 頁碼 `p4–111` | ✅ 先 `repair_folios` 再 `fill_folios`。⚠️ 頁數太少時 repair 會把僅有的頁碼也清掉，設了下限 |
+| ④ 第三部分缺 `SECOND CHAPTER` | ✅ 而且**是兩處不是一處**：第二部分的 `FOURTH CHAPTER`(p171) 也被吞了。根因是系統性的——章首頁沒有書眉，prompt 卻叫模型丟掉最上面那一行。補的字取自本書目次 |
+| ⑤ 略過 `INDEX TO PROPER NAMES` | ✅ 但**真正的大宗是 p429 起的 `ANALYTICAL INDEX`（616 段）**，它被併在最後一章裡（`## ANALYTICAL INDEX` 不以 INDEX 起頭，切章規則抓不到）。改成由目次宣告的索引起始頁去砍 |
+| — | 🚨 **新抓到：印刷頁 176–177 被拍了兩次**，OCR 各轉錄一次。兩張照片像素不同所以雜湊比不出來；不去重站上就有整整兩頁重複 |
+| — | 🚨 **新抓到：b0145 整批「一頁一段」**，段落界線在 OCR 那一步就沒了。加了 `looks_page_collapsed` 閘門並重跑該批，比對確認新的比舊的對（舊版把 `appearance-patterns` 讀成 `experience-patterns`） |
+
+現況：**21 節／正文 1,547 段／註腳 119／頁碼 100%／目次對帳 20 項全 ✓**，
+正文自 `INTRODUCTION`(p41) 起，13 章＝Ideen I 四部分的 2+4+4+3。
+章名不交給引擎翻（四個「FIRST CHAPTER」會變成四個「第一章」），寫死在 `TITLES_ZH`。
+
+翻譯掛在 `fleet_keeper.ps1` 的 `husserl` lane（backend auto＝Gemini→NVIDIA，**不可用 haiku**）。
+複驗指令：`python scripts/husserl_build.py --dry`（末段是目次對帳）／`--gates`（逐批複驗）。
+
+<details><summary>原始交辦內容（保留備查）</summary>
+
+## 1-原. 胡塞爾《觀念一》——OCR 完成，切章有五處要修（下一步的第一件事）
 
 OCR 成果：**472 頁 / 正文 2,373 段 / 註腳 117 條 / 有頁碼 100%**。
 `python scripts/husserl_build.py --dry` 看得到目前的切章。
@@ -39,6 +67,8 @@ OCR 成果：**472 頁 / 正文 2,373 段 / 註腳 117 條 / 有頁碼 100%**。
 修完才跑：`python scripts/uchimura_auto.py --author husserl --run-queue`
 （husserl 已註冊進那支驅動；store 那筆《觀念一》已是 `in-progress` 並掛好 ebookId
 `d0000000-0000-4000-8000-000000000021`）。
+
+</details>
 
 ---
 

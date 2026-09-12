@@ -907,7 +907,41 @@ Ports）。留白時 reader 只顯示英文，那是誠實的；留著錯譯則�
 
 **排程 `KGL_Husserl_OCR`**（每 20 分，`scripts/husserl_ocr_keeper.ps1`）：472 頁 / 8 = **59 批**，
 撞 Gemini 免費層配額牆就等下一班接著跑。**59 批全齊會自己 Disable**（[[feedback_disable_finished_schedules]]）。
-OCR 跑完才輪到翻譯：`python scripts/uchimura_auto.py --author husserl --run-queue`。
+✅ 2026-09-11 59/59 全數完成並自我停用（472 頁／有頁碼 100%）。
+
+### 🚨 OCR 齊了不等於可以翻：切章與收尾的六個坑（2026-09-12 全數修掉）
+
+OCR 完成當下 `--dry` 看起來很正常——36 個「章節」、頁碼 100%。實際上六處都錯，而且
+**每一處都是頁面完全正常而內容錯**。修法全部收在 `husserl_build.py` 的純函式裡（測試 50 例）：
+
+| # | 症狀 | 為什麼看不出來 | 修法 |
+|---|---|---|---|
+| 1 | 印刷頁 176–177 **被拍了兩次**（PDF 第 177、178 張），OCR 忠實地各轉錄一次 | 兩張是不同照片，像素雜湊比不出來；站上就是整整兩頁一字不差的重複。而且重複之前 folio＝掃描頁＋1、之後變成掃描頁－1 | `dedupe_pages`：正規化後前 400 字當指紋；太短的頁不參與（寧可漏一張，不可刪正文） |
+| 2 | scan100 的書眉被讀成「4」 | `fill_folios` 只補**沒有值**的頁，補不到**值是錯的**；那一章的頁碼範圍長成 `p4–111` | 先 `repair_folios`（[[archive_djvu]]）再 fill。⚠️ 頁數太少時沒有鄰頁可對，它會把僅有的頁碼也清掉——設了 `MIN_FOLIOS_TO_REPAIR` |
+| 3 | Vision 偶爾把整頁回成**一行**，章標題、§ 標題、正文黏成一串（`THIRD CHAPTER## THE REGION OF PURE CONSCIOUSNESS## § 47. …CONSCIOUSNESSIn connexion`） | 少一個章界＝兩章併成一章，章數仍然「有」 | `split_glued`＋`split_head_from_body`。**只對全大寫的標題切接縫**——目次那一層是 Title Case，照切會切爛條目 |
+| 4 | p35–40 的**目次被當成正文**（`sec2`–`sec18`，每「章」8–33 段） | 每段都是 § 標題，看起來就像很短的章 | `strip_toc` |
+| 5 | 章首頁的章標題被 OCR 吞掉（p171 的 FOURTH CHAPTER、p212 的 SECOND CHAPTER 連副標一起） | **系統性**的：章首頁沒有書眉，而 prompt 叫模型「丟掉最上面那一行」 | `restore_missing_heads`，補的字一律取自**本書自己的目次** |
+| 6 | p429 起的 ANALYTICAL INDEX 被併進最後一章（616 段索引詞條） | `## ANALYTICAL INDEX` 不以 INDEX 起頭，切章規則抓不到 | `strip_back_matter`，起始頁由目次宣告（只有 Index 可略，[[feedback_transcribe_notes_and_bibliography]]） |
+
+**目次是這本書自己的權威目錄**：4／5／6 三件都靠它判，`check_structure` 再拿它回頭對帳
+——目次說有幾章、切出來就該有幾章、順序也要一樣。`--dry` 末段逐項印 ✓／✗。
+修完：**20 項全 ✓**，正文自 `INTRODUCTION`(p41) 起、13 章＝Ideen I 四部分的 2+4+4+3。
+
+**第二道 OCR 閘門 `looks_page_collapsed`（一頁一段）**：與「一行一段」是同一個毛病的兩端
+（那邊段太多、這邊段太少）。判準＝某頁正文只有一兩則卻超過 1200 字，且「句號後沒空白就接大寫」
+兩處以上，並要兩頁以上中鏢。全 59 批複驗只有 b0145 中鏢，重跑後比對證實**新的比舊的對**
+（`appearance-patterns` 舊版讀成 `experience-patterns`、腳註號碼回來了、段落界線回來了）。
+`--gates` 逐批複驗、`--redo` 重跑沒過的批（**重跑沒過閘門就不覆蓋舊快取**）。
+
+**章名寫死在 `TITLES_ZH`，不交給引擎**：「FIRST CHAPTER」在這本書裡出現四次，逐章送去翻
+只會得到四個「第一章」，reader 目錄與 chapter_path 分不出是哪一章。所以 `split_sections`
+另外留 `subtitle`（章標題下面那一行），以 (章標題, 副標) 為鍵對照寫死的中文章名；
+術語與正文 prompt 的對照表一致（本質直觀／自然態度／懸置／能思／所思）。
+
+OCR 跑完才輪到翻譯：`python scripts/uchimura_auto.py --author husserl --run-queue`
+（正文 1,547 段／註腳 119）。長跑掛 `fleet_keeper.ps1` 的 `husserl` lane
+——單節最大 355 段，一節跑完才印一行，所以 `STALL_PER_LANE` 要放寬，否則 keeper 會把
+正在跑的工作當成卡死殺掉（philo-queue 踩過）。
 
 **其餘現象學原典的取源現況**（2026-09-10 探過）：奧托德英兩版、胡塞爾 LU 1900 德文全開放且有 djvu.xml；
 **范德列烏《宗教的本質與表現》archive.org 是借閱限制**（`access-restricted-item: true`）要另找來源。

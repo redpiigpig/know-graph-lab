@@ -63,6 +63,7 @@ $STALL_PER_LANE = @{
     'jung-queue'     = 180   # same shape: whole-volume translate between log lines
     'panikkar-vedic' = 180
     'aquinas'        = 90    # prints every 20 articles, but a cold volume can be slow
+    'husserl'        = 240   # one log line per SECTION, and the biggest is 355 paragraphs
 }
 function StallLimit($label) {
     if ($STALL_PER_LANE.ContainsKey($label)) { return $STALL_PER_LANE[$label] }
@@ -170,6 +171,15 @@ Ensure 'yanaihara-ndl' 'yanaihara_ndl' @('-X','utf8','scripts\yanaihara_ndl.py',
 # Same driver as Uchimura, --author switches the registry. Haiku for the same reason as
 # the philo lane. Per-section checkpoints, so a restart resumes.
 Ensure 'yanaihara' 'uchimura_auto' @('-X','utf8','scripts\uchimura_auto.py','--author','yanaihara','--run-queue','--backend','haiku')
+
+# Husserl, Ideas I (Boyce Gibson 1931, public domain): Gemini Vision OCR finished
+# 2026-09-11 (59/59 batches, KGL_Husserl_OCR then disabled itself), and the section
+# splitting was repaired 2026-09-12 - 21 sections, 1547 body paragraphs, en + zh.
+# Backend 'auto' = Gemini first, NVIDIA on fallback; NOT haiku (it answers refusals as
+# if they were translations - see feedback_haiku_meta_reply_pollution).
+# Checkpoints are per section under .claude/skills/ebook-collected-works/husserl_data,
+# so a commute-sleep restart resumes where it stopped.
+Ensure 'husserl' 'uchimura_auto --author husserl' @('-X','utf8','scripts\uchimura_auto.py','--author','husserl','--run-queue')
 
 # Panikkar last volume (vedic-experience, huge): on Haiku per user (idle Claude account).
 # When it finishes, replace this lane with Max Weber (sociology) collected works.

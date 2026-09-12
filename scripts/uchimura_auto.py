@@ -112,6 +112,21 @@ def _kana_leak(src: str, out: str) -> bool:
     return bool(out and _needs(src) and _KANA_RE.search(out))
 
 
+def _bad_output(src: str, out: str) -> str:
+    """這一段的譯文能不能存進 checkpoint。回傳原因，空字串＝可以存。
+
+    🚨 `_kana_leak` 只顧得到日文那一側——它是為青空文庫那批做的。英文原著那幾本
+    （胡塞爾《觀念一》、豪斯評傳）用同一支驅動，那條規則等於沒有守門員：整段回抄
+    英文原文、模型的推理外洩、「我注意到您提供的…」這類自言自語，全都會原樣存進
+    譯文欄，而 reader 照排、頁面完全正常。改接 translate_ebook_to_zh 的落地閘
+    （[[feedback_translation_output_gate]]、[[feedback_haiku_meta_reply_pollution]]）。
+    """
+    if _kana_leak(src, out):
+        return "kana-leak"
+    import translate_ebook_to_zh as te
+    return te.unusable_reason(out, src)
+
+
 # ── translate (checkpoint per section, resumable) ────────────────────────────
 def translate_work(slug: str, translate_para, *, save_every: int = 5,
                    maxparas: int | None = None) -> int:
@@ -151,12 +166,16 @@ def translate_work(slug: str, translate_para, *, save_every: int = 5,
                 "src": src, "zh": zh,
             }, ensure_ascii=False, indent=1), encoding="utf-8")
 
+        rejects: dict[str, int] = {}
         for done, j in enumerate(todo, 1):
             out = translate_para(src[j])
-            if _kana_leak(src[j], out):
+            why = _bad_output(src[j], out)
+            if why:
                 out = translate_para(src[j])          # 換 key／換引擎再試一次
-                if _kana_leak(src[j], out):
-                    out = ""                          # 留白，別把日文當譯文存
+                why = _bad_output(src[j], out)
+                if why:
+                    out = ""                          # 留白，別把壞輸出當譯文存
+                    rejects[why] = rejects.get(why, 0) + 1
             if out:
                 zh[j] = out
                 translated += 1
@@ -165,7 +184,8 @@ def translate_work(slug: str, translate_para, *, save_every: int = 5,
         if not todo:
             save()
         filled = sum(1 for z in zh if z)
-        print(f"    sec{i} 「{(title_zh or '')[:18]}」 {filled}/{len(src)}", flush=True)
+        bad = "　擋下：" + "、".join(f"{k}×{v}" for k, v in rejects.items()) if rejects else ""
+        print(f"    sec{i} 「{(title_zh or '')[:18]}」 {filled}/{len(src)}{bad}", flush=True)
     return translated
 
 
