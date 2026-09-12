@@ -706,17 +706,39 @@ def unusable_reason(text: str, source: str = "") -> str:
     return ""
 
 
+# 🚨 OpenCC 把「咸」無條件轉成「鹹」——s2tw／s2twp／s2t 三種配置都一樣，
+# 連清朝的「咸豐」、北韓的「咸興」都會變成「鹹豐」「鹹興」。
+# 2026-09-11 實測：韓國無教會領袖**咸錫憲**（함석헌）在書目裡全被改成「鹹錫憲」，
+# 19 處，等於把一個真人的名字寫錯。
+#
+# 沒有哪個 OpenCC 配置能避開，所以只能在轉換後還原。這張表**只收專名**：
+# 「鹹水」「鹹味」「鹹魚」「鹹海」都是對的，不可一律回轉
+# （全集語料裡 31 處「鹹」全部是這一類）。碰到新的專名就往下加。
+_OPENCC_OVERSHOOT = (
+    ("鹹錫憲", "咸錫憲"),   # 함석헌 Ham Sok-hon
+    ("鹹興", "咸興"),       # 함흥 咸興（北韓城市）
+    ("鹹鏡", "咸鏡"),       # 함경 咸鏡道
+    ("鹹豐", "咸豐"),       # 清文宗年號
+    ("鹹陽", "咸陽"),       # 秦都
+    ("少長鹹集", "少長咸集"),
+    ("鹹與維新", "咸與維新"),
+)
+
+
 def _to_traditional(text: str) -> str:
     """Best-effort 繁體化 — Qwen/DeepSeek/GLM occasionally slip Simplified. opencc
     is lazy-imported; if unavailable we return text unchanged (prompt already
-    asks for 繁體)."""
+    asks for 繁體). 轉完再過一次 `_OPENCC_OVERSHOOT` 還原被誤轉的專名。"""
     try:
         from opencc import OpenCC
         if not hasattr(_to_traditional, "_cc"):
             _to_traditional._cc = OpenCC("s2tw")
-        return _to_traditional._cc.convert(text)
+        out = _to_traditional._cc.convert(text)
     except Exception:
         return text
+    for bad, good in _OPENCC_OVERSHOOT:
+        out = out.replace(bad, good)
+    return out
 
 
 def nvidia_translate(source: str) -> str:

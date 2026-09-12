@@ -42,9 +42,18 @@ TITLE_PROMPT = """把下列{lang}的學術論文題名翻成**繁體中文**。
 1. 嚴守繁體中文（禁簡體）。只輸出譯好的題名，不要引號、不要說明、不要原文。
 2. 無教會主義的專門語彙照既有定名：無教會主義／無教會／聖書（不作「聖經」）／
    傳道／信仰／內村鑑三／矢內原忠雄／金教臣／塚本虎二／高橋三郎。
-3. 人名地名用既有中譯；韓文人名用漢字（김교신＝金教臣、함석헌＝咸錫憲）。
+3. 人名地名用既有中譯；韓文人名用漢字（김교신＝金教臣、함석헌＝**咸錫憲**，
+   注意是「咸」不是「鹹」；류영모＝柳永模、최태용＝崔泰瑢、김범부＝金凡父）。
+3b. 🚨 咸錫憲的核心概念 **씨알**（日文論文寫作「シアル」）一律譯作 **種子思想**
+   （2026-09-11 使用者定名）。不可音譯成「西爾」「希亞爾」「西阿爾」，
+   也不可留著假名不譯。
 4. 副題用破折號「——」接，不要用冒號堆疊。
 5. **西元年份用阿拉伯數字。**
+6. 🚨 **書評要譯成書評的樣子**。原題長成「○○著,『書名』, 出版社, 年月刊, 判型,
+   頁數, 定價」的是書評，不是論文——只譯出書名等於把書評者掛成那本書的作者。
+   請譯成「書評：○○《書名》」，出版社頁數定價一律略去。
+7. 引號一律用「」，書名用《》，**必須成對**。原題用『』或「」框住的整體書名，
+   中譯用《》。
 
 題名：{source}"""
 
@@ -57,6 +66,41 @@ _KIND_TAG = re.compile(r"^\s*[<\[【〔（(]\s*(特集論文|研究ノート|論
                        r"翻訳|研究報告|史料紹介|論文|note|article)\s*[>\]】〕）)]\s*",
                        re.I)
 _CJK = re.compile(r"[　-鿿]")
+_HANGUL = re.compile(r"[가-힣]")
+
+
+_KO_NAMES_PATH = SCRIPT_DIR.parent / "data" / "mukyokai" / "ko-author-names.json"
+
+
+def _ko_names() -> dict:
+    if not hasattr(_ko_names, "_c"):
+        try:
+            _ko_names._c = json.loads(_KO_NAMES_PATH.read_text(encoding="utf-8"))
+        except Exception:
+            _ko_names._c = {}
+    return _ko_names._c
+
+
+def display_author(hangul: str) -> str:
+    """韓文作者名 → 可讀又可對照的顯示形式。
+
+    使用者要的是「漢字（諺文）」：漢字給人讀，諺文當對照的錨。問題是**漢字查不到**
+    ——KCI 的 metadata 只給羅馬拼音，PDF 首頁印的漢字是論文談論的人物（內村鑑三、
+    金敎臣）而不是作者本人。23 位裡只有徐正敏找得到一手來源。
+
+    🚨 剩下 22 位不可以用推的。同音漢字太多，猜下去就是把真人的名字寫錯——
+    「咸錫憲」被 OpenCC 改成「鹹錫憲」那次已經示範過一次了。
+    所以查得到漢字的寫「漢字（諺文）」，查不到的退成「諺文（KCI 官方拼音）」
+    ——兩半都有出處。日後查到漢字就補進 data/mukyokai/ko-author-names.json。
+    """
+    e = _ko_names().get(hangul)
+    if not e:
+        return hangul
+    if e.get("hanja"):
+        return f"{e['hanja']}（{hangul}）"
+    if e.get("romaji"):
+        return f"{hangul}（{e['romaji']}）"
+    return hangul
 
 
 def clean_author(raw: str) -> str:
@@ -73,7 +117,21 @@ def clean_author(raw: str) -> str:
             s = part
             break
     s = re.sub(r"[,，]\s*", "", s)     # 「朴, 賢淑」姓名之間的逗號
-    return re.sub(r"\s+", "", s) if _CJK.search(s) else s.strip()
+    if _CJK.search(s):
+        return re.sub(r"\s+", "", s)
+    s = re.sub(r"\s+", "", s)
+    # 純諺文 → 補上可讀的一半（漢字或 KCI 官方拼音）
+    return display_author(s) if _HANGUL.search(s) else s.strip()
+
+
+# 書評的招牌：原題長成「○○著,『書名』, 出版社, 年月刊, 判型, 頁數, 定價」。
+# 🚨 不判出來的話，題名只會譯出被評的那本書，於是**書評者被掛成那本書的作者**
+# ——2026-09-11 星野靖二與小原克博兩筆就是這樣掛錯的，比錯字嚴重。
+_REVIEW = re.compile(r"(著|編)[,，]\s*[『「《]|[0-9〇一二三四五六七八九十]+円")
+
+
+def is_review(title_original: str) -> bool:
+    return bool(_REVIEW.search(title_original or ""))
 
 
 def clean_title(raw: str) -> str:
@@ -115,9 +173,13 @@ def zh_title(raw: str, lang: str, cache: dict) -> str:
     old = te.PROMPT_TMPL
     try:
         te.PROMPT_TMPL = TITLE_PROMPT.replace("{lang}", LANG_NAME.get(lang, "外文"))
-        out = te.gemini_with_nvidia_fallback(raw).strip().strip("《》「」\"' ")
+        out = te.gemini_with_nvidia_fallback(raw)
     finally:
         te.PROMPT_TMPL = old
+    # 🚨 NVIDIA 會在輸出開頭夾雜 U+FFFD／BOM 雜訊字元。`uchimura_build.clean_zh_output`
+    # 早就在處理這個，但那是走 build 模組的路徑——這裡直接呼叫引擎就漏掉了，
+    # 於是 5 筆書目的題名（連帶 R2 key 與 Drive 檔名）開頭都是一個「�」。
+    out = out.replace("�", "").replace("﻿", "").strip().strip("《》「」\"' ")
     # 🚨 輸出閘：題名太短，整段判準抓不到壞輸出，所以這裡自己再驗一次——
     # 譯不出中文就寧可留原文，不要把模型的碎念寫進書目。
     if not out or not any("一" <= c <= "鿿" for c in out):
@@ -198,7 +260,7 @@ def main() -> None:
                 title=t_zh,
                 author=r.get("author", ""),
                 year=r.get("year", ""),
-                kind=r.get("kind") or "article",
+                kind="review" if is_review(r["title"]) else (r.get("kind") or "article"),
                 note=compose_note({**r, "titleOriginal": r["title"]}),
                 publisher=publisher_of(r),
                 title_original=r["title"],

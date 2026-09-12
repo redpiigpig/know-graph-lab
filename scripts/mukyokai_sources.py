@@ -39,7 +39,7 @@ R2_TXT = "mukyokai-fulltext"
 INDEX_OUT = Path(__file__).resolve().parents[1] / "public/content/research-data/mukyokai/index.json"
 
 KINDS = {"thesis": "學位論文", "book": "專書", "article": "期刊論文",
-         "archive": "檔案史料", "manifesto": "宣言與綱領"}
+         "archive": "檔案史料", "manifesto": "宣言與綱領", "review": "書評"}
 
 # 有假名就是日文；純漢字的中日文無法只靠字形分辨，故以 --lang 為準、此處只做預設值
 JP_KANA = re.compile(r"[぀-ゟ゠-ヿ]")

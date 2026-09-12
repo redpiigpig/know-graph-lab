@@ -37,7 +37,11 @@ for _l in (ROOT_DIR / ".env").read_text(encoding="utf-8").splitlines():
 SRC_ROOT = Path(r"G:\我的雲端硬碟\資料\知識圖工作室\研究資料\大愛道革命\論文資料")
 R2_BUCKET = ENV["R2_BUCKET"]
 TEXT_PREFIX = "dadaodao-fulltext"
-GEMINI_MODEL = "gemini-2.5-flash"
+# 🚨 別寫死世代版號。2026-09-11 實測 7 把 key：舊專案（key#0-2）拿得到
+# gemini-2.5-flash，新專案（key#3-6）一律回 404「no longer available to new users」。
+# 別名才是所有 key 都通的：gemini-flash-lite-latest 7/7 可用，
+# gemini-flash-latest 當天 7/7 都 429（額度，不是不存在）。
+GEMINI_MODEL = os.environ.get("GEMINI_OCR_MODEL", "gemini-flash-lite-latest")
 SONNET_MODEL = "claude-sonnet-4-6"
 OLLAMA_URL = "http://127.0.0.1:11434/api/generate"
 OLLAMA_MODEL = "qwen2.5vl:7b"
@@ -178,6 +182,20 @@ def _is_quota(err):
     s = str(err).lower()
     return any(t in s for t in ("429", "quota", "rate limit", "resource_exhausted", "exhausted", "503", "overloaded"))
 
+
+def _is_model_unavailable(err):
+    """🚨 **單把 key 的 404 不等於模型下架**——換下一把 key，別讓整次呼叫死掉。
+
+    2026-09-11 實測：同一個 `gemini-2.5-flash`，舊專案的 key#0-2 打得通，
+    新專案的 key#3-6 一律回 404「This model … is no longer available to new users」。
+    原本這裡把 404 當致命錯誤 `raise`，於是輪到新 key 就整批 OCR 陣亡，
+    而其實還有兩把打得通。NVIDIA 那條線早就記過同一個坑
+    （要每一把都 404 才算模型真的沒了），Gemini 這側漏了。
+    """
+    s = str(err).lower()
+    return "404" in s and ("no longer available" in s or "not found" in s
+                           or "is not supported" in s)
+
 # ── extractors (no API) ─────────────────────────────────────────────────────
 def extract_docx(path):
     import docx
@@ -266,10 +284,10 @@ def gemini_ocr(path, mime):
             return (resp.text or "").strip()
         except Exception as e:
             last = e
-            if _is_quota(e):
+            if _is_quota(e) or _is_model_unavailable(e):
                 continue
             raise
-    raise RateLimited(f"all gemini keys limited: {last}")
+    raise RateLimited(f"all gemini keys limited/unavailable: {last}")
 
 def sonnet_ocr(path, mime):
     client = anthropic_client()
