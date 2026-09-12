@@ -1,0 +1,13 @@
+{
+  "volume": 1, "lesson": 16, "author": "opus-5-hand-written",
+  "note": "本課四個詞武加大沒有字形：Kyrie、perenniter 與兩個黏著詞素 -clīnō、aggregō。excelsus 沒有複數奪格 excelsis，所以第 1 句不寫 in excelsis。",
+  "sentences": [
+    {"latin": "Hosanna in templo", "chinese": "和散那，在聖殿中。", "targets": ["hosanna", "in", "templum"]},
+    {"latin": "imperium perpetuum Dei", "chinese": "天主永恆的統治權。", "targets": ["imperium", "perpetuus", "Deus"]},
+    {"latin": "ministerium in spatio", "chinese": "在那空間裡的服事。", "targets": ["ministerium", "in", "spatium"]},
+    {"latin": "postea subito venit", "chinese": "其後他突然來了。", "targets": ["postea", "subito", "venio"]},
+    {"latin": "vulnerati sunt in agro", "chinese": "他們在田間受了傷。", "targets": ["vulnero", "sum", "in", "ager"]},
+    {"latin": "aperuit ministerium populo", "chinese": "他向百姓開啟了服事。", "targets": ["aperio", "ministerium", "populus"]},
+    {"latin": "perpetua lætitia postea", "chinese": "其後有永久的喜樂。", "targets": ["perpetuus", "laetitia", "postea"]}
+  ]
+}

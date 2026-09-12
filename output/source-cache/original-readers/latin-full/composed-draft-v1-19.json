@@ -1,0 +1,13 @@
+{
+  "volume": 1, "lesson": 19, "author": "opus-5-hand-written",
+  "note": "maximus 與 optimus 都只認字形——它們的詞位在樹庫裡歸到 magnus／bonus 之下，寫 magnum 不會記到 maximus。",
+  "sentences": [
+    {"latin": "excepit et exclamavit", "chinese": "他接待了，並且大聲呼喊。", "targets": ["excipio", "exclamo"]},
+    {"latin": "gubernare potest populum", "chinese": "他能夠治理百姓。", "targets": ["guberno", "possum", "populus"]},
+    {"latin": "incipiam et resurget", "chinese": "我要開始，而他將復起。", "targets": ["incipio", "resurgo"]},
+    {"latin": "insurrexerunt nimis in agro", "chinese": "他們在田間起來得太過了。", "targets": ["insurgo", "nimis", "in", "ager"]},
+    {"latin": "misit et permisit", "chinese": "他派遣了，也允許了。", "targets": ["mitto", "permitto"]},
+    {"latin": "reliquit optimum et maximum", "chinese": "他留下了最好的與最大的。", "targets": ["relinquo", "optimus", "maximus"]},
+    {"latin": "submiserunt populum in templo", "chinese": "他們在聖殿中壓低了百姓。", "targets": ["submitto", "populus", "in", "templum"]}
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "volume": 1, "lesson": 17, "author": "opus-5-hand-written",
+  "note": "dolōrōsus 與 gregō 武加大沒有字形，練不到。conglōrificō 整部武加大只有 conglorificemur 一形（羅八17），第 5 句就照它寫。lætus 沒有陰性單數 læta。",
+  "sentences": [
+    {"latin": "aula templi et columna", "chinese": "聖殿的殿堂與柱子。", "targets": ["aula", "templum", "columna"]},
+    {"latin": "cibus paratus est parvulis", "chinese": "食物為幼小者預備好了。", "targets": ["cibus", "paro", "sum", "parvulus"]},
+    {"latin": "creaturæ exsultant in flamma", "chinese": "受造物在火焰中歡躍。", "targets": ["creatura", "exsulto", "in", "flamma"]},
+    {"latin": "glorificavit Dominum ob innocentiam", "chinese": "他因那份無辜而光榮了上主。", "targets": ["glorifico", "dominus", "ob", "innocentia"]},
+    {"latin": "hinc læti conglorificemur", "chinese": "從此讓我們歡欣地同受光榮。", "targets": ["hinc", "laetus", "conglorifico"]},
+    {"latin": "hostiam paraverunt in aula", "chinese": "他們在殿堂中預備了祭獻。", "targets": ["hostia", "paro", "in", "aula"]},
+    {"latin": "flamma columnæ in aula", "chinese": "殿堂中柱子的火焰。", "targets": ["flamma", "columna", "in", "aula"]}
+  ]
+}

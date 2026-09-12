@@ -1,0 +1,13 @@
+{
+  "volume": 1, "lesson": 15, "author": "opus-5-hand-written",
+  "note": "eléison 是彌撒常規裡的希臘文呼求，武加大沒有字形，練不到。extollō 沒有直述現在式進語料（只有 extollens／extollitur／extollat 等），故用祈願式。clērus 只有 cleros 一形。dētrīmentum 只有主格與複數 detrimentum／detrimenta，沒有奪格。",
+  "sentences": [
+    {"latin": "sub tecto templi", "chinese": "在聖殿的屋頂下。", "targets": ["sub", "tectum", "templum"]},
+    {"latin": "vere testimonium Domini", "chinese": "確實是上主的見證。", "targets": ["vere", "testimonium", "dominus"]},
+    {"latin": "vestigia ante templum", "chinese": "聖殿前的足跡。", "targets": ["vestigium", "ante", "templum"]},
+    {"latin": "absolvit debitum populi", "chinese": "他免了百姓的債。", "targets": ["absolvo", "debitum", "populus"]},
+    {"latin": "Alleluja, excelsus est Dominus", "chinese": "阿肋路亞，上主是至尊的。", "targets": ["alleluja", "excelsus", "sum", "dominus"]},
+    {"latin": "cleros extollat Dominus", "chinese": "願上主舉揚聖職者。", "targets": ["clerus", "extollo", "dominus"]},
+    {"latin": "detrimentum finitum est", "chinese": "損失結束了。", "targets": ["finio", "detrimentum", "sum"]}
+  ]
+}

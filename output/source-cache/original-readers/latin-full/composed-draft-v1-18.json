@@ -1,0 +1,13 @@
+{
+  "volume": 1, "lesson": 18, "author": "opus-5-hand-written",
+  "note": "resultō 武加大沒有字形，練不到。parvus 只有比較級與最高級進語料（minus／minor／minimus），所以第 1 句用 minor。acclāmō 只認詞幹，dēsinō 沒有不定式，故用命令式 desine。🚨 附錄只收詞頭，dies 在曆法附錄裡但 die 這個奪格不算教過，caput 同理——附錄那一層不是詞形表。",
+  "sentences": [
+    {"latin": "minor propheta acclamabat tertia hora", "chinese": "那較小的先知在第三時辰歡呼。", "targets": ["parvus", "propheta", "acclamo", "tertius", "hora"]},
+    {"latin": "propheta præparavit viam ante Pascha", "chinese": "先知在逾越節前預備了道路。", "targets": ["propheta", "praeparo", "via", "ante", "Pascha"]},
+    {"latin": "scriptura sanctificata et certa est", "chinese": "聖經是被聖化而確實的。", "targets": ["scriptura", "sanctifico", "certus", "sum"]},
+    {"latin": "segregavit et dimisit populum", "chinese": "他分開並遣散了百姓。", "targets": ["segrego", "dimitto", "populus"]},
+    {"latin": "reclinavit in aula", "chinese": "他在殿堂中斜倚著。", "targets": ["reclino", "in", "aula"]},
+    {"latin": "desine a culpa", "chinese": "你要停止犯錯。", "targets": ["desino", "a", "culpa"]},
+    {"latin": "concepit et debemus", "chinese": "她懷孕了，而我們應當如此。", "targets": ["concipio", "debeo"]}
+  ]
+}

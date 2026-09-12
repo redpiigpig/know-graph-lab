@@ -1,0 +1,13 @@
+{
+  "volume": 1, "lesson": 20, "author": "opus-5-hand-written",
+  "note": "cēnō 只認詞幹，整部武加大只有 cœnavit 一形（而且是 cœ- 拼法）。brāchium 只有複數 brachia，dextera 只有 dexteræ。videor 要寫 visus／videris 這類形才記得到——它的 written_keys 雖含 sum，但那條路線只在詞位那條走不通時才開，寫 est 不會記到它。",
+  "sentences": [
+    {"latin": "tamen utilitas magna est", "chinese": "然而那好處是很大的。", "targets": ["tamen", "utilitas", "magnus", "sum"]},
+    {"latin": "valet et addidit", "chinese": "他安康，並且增加了。", "targets": ["valeo", "addo"]},
+    {"latin": "Astiterunt et circumsteterunt", "chinese": "他們站在旁邊，並且圍繞著。", "targets": ["asto", "circumsto"]},
+    {"latin": "Baptista aspiciens brachia", "chinese": "洗者注視著臂膀。", "targets": ["baptista", "aspicio", "brachium"]},
+    {"latin": "cœnavit et despexit", "chinese": "他用了晚餐，卻輕視了。", "targets": ["ceno", "despicio"]},
+    {"latin": "circumspiciens condita visus est", "chinese": "他環顧四周，顯出了樣子。", "targets": ["circumspicio", "condo", "videor"]},
+    {"latin": "digitos dexteræ aspiciens", "chinese": "注視著右手的指頭。", "targets": ["digitus", "dextera", "aspicio"]}
+  ]
+}
