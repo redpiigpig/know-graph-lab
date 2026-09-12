@@ -278,8 +278,50 @@
           </li>
         </ol>
 
+        <h3 class="sub-h">論文發表</h3>
+        <div class="rounded-xl border border-amber-200 bg-amber-50 px-4 py-3.5 mb-3">
+          <h4 class="text-sm font-bold text-amber-800 mb-1">🚨 既有著作可能都不算</h4>
+          <p class="text-xs text-amber-900/85 leading-relaxed">
+            系辦法第五條的主詞是「本系博士生<b>在學期間</b>論文產出及學術活動之規定」。若嚴格照這四個字，
+            115-1（2026/9/7 入學）之前的發表全部不計 —— 包含 2026/8/28–29 印順學那一篇，
+            它比開學日早了十天。這與希伯來文 I 卡在同一個字眼上，要一起問系辦。
+          </p>
+        </div>
+        <div class="tbl-wrap">
+          <table class="tbl">
+            <thead><tr><th>發表</th><th>刊物／會議</th><th class="whitespace-nowrap">時間</th><th class="whitespace-nowrap">在學期間</th></tr></thead>
+            <tbody>
+              <tr v-for="pub in publications" :key="pub.title">
+                <td class="break-words">{{ pub.title }}</td>
+                <td class="text-gray-600 break-words">{{ pub.venue }}</td>
+                <td class="text-gray-600 whitespace-nowrap">{{ pub.date }}</td>
+                <td :class="pub.inProgram ? 'text-emerald-700 font-semibold' : 'text-gray-400'">
+                  {{ pub.inProgram ? '是' : '否' }}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-xs text-gray-500 leading-relaxed">
+          完整著作目錄（3 篇期刊、11 篇會議、3 篇社論）見
+          <NuxtLink to="/papers" class="text-red-800 hover:underline">學術著作目錄</NuxtLink>。
+          上表只列與畢業門檻認定相關的幾筆。
+        </p>
+
         <h3 class="sub-h">演講</h3>
-        <p class="para text-gray-500">尚無紀錄。需求為十場或二十場（兩份文件不一致，見第捌節），其中五場須為本系舉辦，每場 2 小時以上。本系的學術演講場次請留意系網「最新消息」與助教轉知信。</p>
+        <div class="rounded-xl border border-gray-200 bg-white px-4 py-3.5">
+          <p class="text-[13px] text-gray-700 leading-relaxed mb-2">
+            門檻算的是<b>「參加」演講</b>（去聽），不是自己主講 —— 系辦法第五條第三款寫「至少參加二十場演講（每場 2 小時以上），其中需有五場為本系舉辦」。
+          </p>
+          <p class="text-[13px] text-gray-700 leading-relaxed mb-2">
+            <b>目前尚無紀錄</b>，需要你提供已參加的場次（日期、講題、主講人、主辦單位、時數）才能建檔。
+            本系場次請留意系網「最新消息」與助教轉知信。
+          </p>
+          <p class="text-xs text-gray-500 leading-relaxed">
+            自己主講的演講另計，見 <NuxtLink to="/speech" class="text-red-800 hover:underline">演講紀錄</NuxtLink>
+            （目前 1 場：2026/5/19〈台灣佛教具有「民主基因」嗎？〉，玄奘大學妙然樓 M401）。不列入此門檻。
+          </p>
+        </div>
       </section>
 
       <!-- 拾 投稿目標 -->
@@ -379,7 +421,7 @@ const eventStats = [
   { k: '研討會日數', v: '5', note: '證明已備齊' },
   { k: '本系主辦', v: '2', note: '需 3 場' },
   { k: '演講場次', v: '0', note: '需 10 或 20' },
-  { k: '審稿論文', v: '1', note: '需 2 篇' },
+  { k: '審稿論文', v: '0', note: '在學期間口徑' },
 ]
 
 const eventsDone = [
@@ -451,6 +493,15 @@ const eventsPlanned = [
   },
 ]
 
+const publications = [
+  { title: '（題目待補）', venue: '第二十四屆「印順導師思想之理論與實踐」國際學術會議', date: '2026/8/28–29', inProgram: false },
+  { title: '信仰與學術的交互作用：近半世紀印順學與印順學派歷史發展回顧（1973–2023）', venue: '《玄奘佛學研究》', date: '已通過審查，刊登中', inProgram: true },
+  { title: '昭慧法師的戒律學思想與實踐：以性別議題為核心', venue: '第六屆中華國際佛學會議（法鼓山中華佛學研究所）', date: '2025/10/30–11/1', inProgram: false },
+  { title: '從同理心到倫理秩序：主體性動物倫理的建構與社會實踐', venue: '第二十三屆印順導師思想之理論與實踐學術研討會', date: '2025/9/28', inProgram: false },
+  { title: '從「青年佛教」之精神看印順學派的歷史發展', venue: '《法印學報》第 15 期', date: '2024/12', inProgram: false },
+  { title: '昭慧法師與性廣法師對印順學的傳承與實踐', venue: '《法印學報》第 14 期', date: '2023/12', inProgram: false },
+]
+
 const journalsActive = [
   {
     name: '《玄奘佛學研究》',
@@ -482,7 +533,7 @@ const gates = [
   { n: '02', t: '完成語言要求', p: '辦理中', s: 'run', d: '中／英文檢定 ＋ 一門研究語言　·　第三條' },
   { n: '03', t: '通過博士候選人資格考', p: '待修滿學分', s: 'todo', d: '兩科筆試，各 70 分及格　·　第四條' },
   { n: '04', t: '通過論文計畫口試', p: '未開始', s: 'todo', d: '一萬字以上計畫書，口試審查　·　第六條' },
-  { n: '05', t: '發表兩篇審稿論文', p: '可投既有著作', s: 'run', d: '具審稿制度之研討會或專業學術期刊　·　第五條' },
+  { n: '05', t: '發表兩篇審稿論文', p: '在學期間 0 篇', s: 'todo', d: '具審稿制度之研討會或專業學術期刊　·　第五條「在學期間」' },
   { n: '06', t: '通過博士論文口試', p: '未開始', s: 'todo', d: '公開口試，70 分及格　·　第七條' },
 ]
 
