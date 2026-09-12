@@ -6,7 +6,7 @@
     {"latin": "Locutus est et Memoratus", "chinese": "他講了話，也被記念了。", "targets": ["loquor", "memoror", "sum"]},
     {"latin": "majus planctum postulas", "chinese": "你要求更大的哀慟。", "targets": ["major", "planctus", "postulo"]},
     {"latin": "persecutus est et petiit", "chinese": "他追趕了，也請求了。", "targets": ["persequor", "peto", "sum"]},
-    {"latin": "prædicans profiteretur", "chinese": "他一面宣講，一面明認。", "targets": ["praedico", "profiteor"]},
+    {"latin": "prædicans in introitu profiteretur", "chinese": "他在進口處一面宣講，一面明認。", "targets": ["praedico", "profiteor", "introitus", "in"]},
     {"latin": "prosecutus est et rogavit", "chinese": "他一路追隨，也請求了。", "targets": ["prosequor", "rogo", "sum"]},
     {"latin": "sereno inter Spinas", "chinese": "在荊棘之中安詳地。", "targets": ["serenus", "spina", "inter"]}
   ]

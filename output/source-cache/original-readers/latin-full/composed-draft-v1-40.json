@@ -1,0 +1,13 @@
+{
+  "volume": 1, "lesson": 40, "author": "opus-5-hand-written",
+  "note": "illūstro 整部武加大只有 illustretur 一形。",
+  "sentences": [
+    {"latin": "deposuit, proposuit et imposuit lucem", "chinese": "他放下了、提出了，又加上了光。", "targets": ["depono", "propono", "impono", "lux"]},
+    {"latin": "illustretur mons luce", "chinese": "願那山被光照亮。", "targets": ["illustro", "mons", "lux"]},
+    {"latin": "milites mites in monte", "chinese": "山上溫和的士兵們。", "targets": ["miles", "mitis", "in", "mons"]},
+    {"latin": "octo et octoginta participes", "chinese": "八十八位共享者。", "targets": ["octo", "octoginta", "particeps"]},
+    {"latin": "plangent milites in monte", "chinese": "士兵們要在山上哀哭。", "targets": ["plango", "miles", "mons"]},
+    {"latin": "particeps quidem lucis et mitis", "chinese": "的確是光的共享者，也是溫和的。", "targets": ["particeps", "quidem", "lux", "mitis"]},
+    {"latin": "imposuit octo milites et portavit", "chinese": "他派上了八名士兵，並且擔負了。", "targets": ["impono", "octo", "miles", "porto"]}
+  ]
+}

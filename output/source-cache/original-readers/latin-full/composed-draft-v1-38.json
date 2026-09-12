@@ -1,0 +1,13 @@
+{
+  "volume": 1, "lesson": 38, "author": "opus-5-hand-written",
+  "note": "iste 只有 iste／ista／isti 進語料，factor 沒有屬格，cōgitātiō 沒有單數奪格。",
+  "sentences": [
+    {"latin": "iste usus est ordine", "chinese": "這一位按著秩序使用了。", "targets": ["iste", "utor", "sum", "ordo"]},
+    {"latin": "factor amat commemorationem", "chinese": "那造作者喜愛紀念。", "targets": ["factor", "amo", "commemoratio"]},
+    {"latin": "cogitationes illuminabit in deserto", "chinese": "他要在荒野中照亮那些思想。", "targets": ["cogitatio", "illumino", "in", "desertus"]},
+    {"latin": "cooperante largitus est", "chinese": "在協作之下他慷慨賜予了。", "targets": ["cooperor", "largior", "sum"]},
+    {"latin": "operatur et labores", "chinese": "他做工，也有勞苦。", "targets": ["operor", "labor"]},
+    {"latin": "qualis et quanta cogitatio", "chinese": "何等樣、何等大的思想。", "targets": ["qualis", "quantus", "cogitatio"]},
+    {"latin": "quantum operatur factor", "chinese": "那造作者做了多少工。", "targets": ["quantus", "operor", "factor"]}
+  ]
+}

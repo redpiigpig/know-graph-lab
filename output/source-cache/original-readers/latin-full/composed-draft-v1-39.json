@@ -1,0 +1,13 @@
+{
+  "volume": 1, "lesson": 39, "author": "opus-5-hand-written",
+  "note": "commixtiō 與 concinō 都只認詞幹，語料裡活著的是 commixtim 與 concinno 那一家。片語 sicut .. et 要 sicut 與 et 同句。",
+  "sentences": [
+    {"latin": "sic et sicut talia", "chinese": "如此，也正如那樣的事。", "targets": ["sic", "sicut", "sicut et", "talis"]},
+    {"latin": "tam tanta vitis", "chinese": "那麼大的一棵葡萄樹。", "targets": ["tam", "tantus", "vitis"]},
+    {"latin": "accendit cælestis creator", "chinese": "天上的造物主點燃了。", "targets": ["accendo", "caelestis", "creator"]},
+    {"latin": "tueatur consortes a crimine", "chinese": "願他保護同伴們遠離罪過。", "targets": ["tueor", "consors", "a", "crimen"]},
+    {"latin": "Confestim commixtim concinnant", "chinese": "他們立刻混雜地齊唱。", "targets": ["confestim", "commixtio", "concino"]},
+    {"latin": "crimine tanto confestim", "chinese": "因那麼大的罪過，立刻。", "targets": ["crimen", "tantus", "confestim"]},
+    {"latin": "creator vitem accendit", "chinese": "造物主點燃了那葡萄樹。", "targets": ["creator", "vitis", "accendo"]}
+  ]
+}
