@@ -1,0 +1,13 @@
+{
+  "volume": 2, "lesson": 35, "author": "opus-5-hand-written",
+  "note": "continenter 只認詞幹。institutum 在語料裡只剩複數奪格。",
+  "sentences": [
+    {"latin": "institutis radix professionis", "chinese": "諸制度中職業的根基。", "targets": ["institutum", "radix", "professio"]},
+    {"latin": "quotquot late administrationem", "chinese": "凡多少人都廣泛地行政。", "targets": ["quotquot", "late", "administratio"]},
+    {"latin": "sempiternum nominatim sedulo", "chinese": "永恆的，逐一地，殷勤地。", "targets": ["sempiternus", "nominatim", "sedulo"]},
+    {"latin": "distinxit clare obsequium", "chinese": "他清楚地區分了那順從。", "targets": ["distinguo", "clare", "obsequium"]},
+    {"latin": "continentur dominium sortem", "chinese": "統治權與命運被連續地包含著。", "targets": ["continenter", "dominium", "sors"]},
+    {"latin": "secus quominus radices", "chinese": "沿著那些根，免得如此。", "targets": ["secus", "quominus", "radix"]},
+    {"latin": "professiones sedulo distinxit", "chinese": "他殷勤地區分了那些職業。", "targets": ["professio", "sedulo", "distinguo"]}
+  ]
+}

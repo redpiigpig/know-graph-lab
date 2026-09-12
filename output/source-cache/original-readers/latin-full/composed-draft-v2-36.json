@@ -1,0 +1,13 @@
+{
+  "volume": 2, "lesson": 36, "author": "opus-5-hand-written",
+  "note": "aeque 在語料裡只有句首大寫的 Æque；creatio 沒有主格、gravitas 沒有主格進語料。",
+  "sentences": [
+    {"latin": "limites conversionem evangelica", "chinese": "福音的界限與皈依。", "targets": ["limes", "conversio", "evangelicus"]},
+    {"latin": "servitio insertus comprehendit", "chinese": "他被植入服事，並且領會了。", "targets": ["servitium", "insero", "comprehendo"]},
+    {"latin": "relatione generationem Æque", "chinese": "同樣地以那報告論及世代。", "targets": ["relatio", "generatio", "aeque"]},
+    {"latin": "dominabitur limitibus evangelicis", "chinese": "他要在福音的界限中掌權。", "targets": ["dominor", "limes", "evangelicus"]},
+    {"latin": "creationis mutatio campo", "chinese": "田野中創造的變化。", "targets": ["creatio", "mutatio", "campus"]},
+    {"latin": "familiaris censet fortasse", "chinese": "那親近的人或許如此認為。", "targets": ["familiaris", "censeo", "fortasse"]},
+    {"latin": "gravitate Æque dominatus", "chinese": "同樣地，以莊嚴被統治。", "targets": ["gravitas", "aeque", "dominor"]}
+  ]
+}

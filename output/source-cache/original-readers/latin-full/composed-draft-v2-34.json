@@ -1,0 +1,13 @@
+{
+  "volume": 2, "lesson": 34, "author": "opus-5-hand-written",
+  "note": "Martius 只剩 Martio，pactum 只剩 pacto。",
+  "sentences": [
+    {"latin": "perspicis regularis particularia", "chinese": "你看透那些規律而個別的事。", "targets": ["perspicio", "regularis", "particularis"]},
+    {"latin": "sana efficaciter pacto", "chinese": "以協議有效而健全地。", "targets": ["sanus", "efficaciter", "pactum"]},
+    {"latin": "juvenes innititur servitutis", "chinese": "青年們倚靠那奴役之事。", "targets": ["juvenis", "innitor", "servitus"]},
+    {"latin": "fideliter commodis sacerdotali", "chinese": "忠誠地以司祭的利益。", "targets": ["fideliter", "commodum", "sacerdotalis"]},
+    {"latin": "tractans Profectus quamquam", "chinese": "他一面論述一面啟程，儘管如此。", "targets": ["tracto", "proficiscor", "quamquam"]},
+    {"latin": "præclara Martio perspecta", "chinese": "三月裡所察明的那些卓越之事。", "targets": ["praeclarus", "Martius", "perspicio"]},
+    {"latin": "servitute juvenum tractare", "chinese": "要處理青年們的奴役。", "targets": ["servitus", "juvenis", "tracto"]}
+  ]
+}
