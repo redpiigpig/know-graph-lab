@@ -74,3 +74,18 @@
 {"key": "dg-husserl-krisis-zh", "query": "歐洲科學的危機與超越論的現象學 胡塞爾", "expect": "歐洲科學的危機", "who": "Edmund Husserl", "source": "denominational-genealogy", "zh": "胡塞爾《歐洲科學的危機》——〈幾何學的起源〉即其附錄三，沉澱概念出處"}
 {"key": "dg-smith-imagining-religion", "query": "Jonathan Z. Smith Imagining Religion", "expect": "Imagining Religion", "who": "Jonathan Z. Smith", "source": "denominational-genealogy", "zh": "史密斯《想像宗教》——「宗教是學者書房的創造物」出處"}
 {"key": "dg-eliade-sacred-profane-zh", "query": "神聖與世俗 伊利亞德", "expect": "神聖與世俗", "who": "Mircea Eliade", "source": "denominational-genealogy", "zh": "伊利亞德《神聖與世俗》中譯（館內英文本僅 2 段，等於沒有）"}
+{"key": "dg-gadamer-truth-method-zh", "query": "真理與方法 高達美", "expect": "真理與方法", "who": "高達美", "source": "denominational-genealogy", "zh": "高達美《真理與方法》（洪漢鼎譯，簡體亦可，第1章第六節效果歷史所本）"}
+{"key": "dg-gadamer-truth-method-en", "query": "Gadamer Truth and Method", "expect": "Truth and Method", "who": "Gadamer", "source": "denominational-genealogy", "zh": "Gadamer, Truth and Method（原文備援）"}
+{"key": "dg-barth-ethnic-boundaries", "query": "Fredrik Barth Ethnic Groups and Boundaries", "expect": "Ethnic Groups and Boundaries", "who": "Fredrik Barth", "source": "denominational-genealogy", "zh": "巴斯《族群與邊界》（1969，邊界建構論）"}
+{"key": "dg-lindbeck-nature-doctrine", "query": "Lindbeck The Nature of Doctrine", "expect": "Nature of Doctrine", "who": "Lindbeck", "source": "denominational-genealogy", "zh": "林德貝克《教義的本質》（文化—語言模型）"}
+{"key": "dg-lindbeck-nature-doctrine-zh", "query": "教義的本質 林德貝克", "expect": "教義的本質", "who": "林德貝克", "source": "denominational-genealogy", "zh": "林德貝克《教義的本質》中譯"}
+{"key": "dg-luhrmann-god-talks-back", "query": "Luhrmann When God Talks Back", "expect": "When God Talks Back", "who": "T. M. Luhrmann", "source": "denominational-genealogy", "zh": "魯爾曼《當上帝回話》（認知人類學處理宗教經驗）"}
+{"key": "dg-schutz-social-world", "query": "Schutz Phenomenology of the Social World", "expect": "Phenomenology of the Social World", "who": "Alfred Schutz", "source": "denominational-genealogy", "zh": "舒茨《社會世界的意義建構》（類型化與間主體性）"}
+{"key": "dg-taylor-social-imaginaries", "query": "Charles Taylor Modern Social Imaginaries", "expect": "Modern Social Imaginaries", "who": "Charles Taylor", "source": "denominational-genealogy", "zh": "泰勒《現代社會想像》"}
+{"key": "dg-wittgenstein-investigations-zh", "query": "哲學研究 維根斯坦", "expect": "哲學研究", "who": "維根斯坦", "source": "denominational-genealogy", "zh": "維根斯坦《哲學研究》（家族相似性、語言遊戲）"}
+{"key": "dg-orsi-between-heaven-earth", "query": "Orsi Between Heaven and Earth", "expect": "Between Heaven and Earth", "who": "Robert Orsi", "source": "denominational-genealogy", "zh": "奧爾西《在天地之間》（活生生的宗教）"}
+{"key": "dg-mcguire-lived-religion", "query": "McGuire Lived Religion Faith and Practice", "expect": "Lived Religion", "who": "Meredith McGuire", "source": "denominational-genealogy", "zh": "麥奎爾《活生生的宗教》"}
+{"key": "dg-merleau-ponty-perception-zh", "query": "知覺現象學 梅洛龐蒂", "expect": "知覺現象學", "who": "梅洛龐蒂", "source": "denominational-genealogy", "zh": "梅洛龐蒂《知覺現象學》（具身現象學所本）"}
+{"key": "dg-kuhn-scientific-revolutions-zh", "query": "科學革命的結構 孔恩", "expect": "科學革命的結構", "who": "孔恩", "source": "denominational-genealogy", "zh": "孔恩《科學革命的結構》（孔漢思典範論的上游，已引於第1章第五節）"}
+{"key": "dg-mccutcheon-manufacturing", "query": "McCutcheon Manufacturing Religion", "expect": "Manufacturing Religion", "who": "McCutcheon", "source": "denominational-genealogy", "zh": "麥卡琴《製造宗教》（對古典現象學最系統的批判；館內已有他另三本）"}
+{"key": "dg-sperber-explaining-culture", "query": "Sperber Explaining Culture Naturalistic Approach", "expect": "Explaining Culture", "who": "Dan Sperber", "source": "denominational-genealogy", "zh": "斯珀伯《解釋文化》（迷因論失效的標準批評）"}

@@ -142,6 +142,29 @@ python scripts/contemporary_theology_index.py --wanted  # 另外吐缺書獵表
    而 Acta Theologica 其實有 1355 篇。解法是用 `bibjson.year:[lo TO hi]` 遞迴二分
    把查詢切小，寫檔後再與整刊總數對帳。
 
+### Crossref：補 IxTheo 補不到的那一塊（2026-09-12 新增）
+
+`scripts/crossref_harvest.py`，三段式與 doaj_harvest.py 同型（`--journals` /
+`--articles` / `--index`）。中繼資料 CC0、不綁 IP，而且**題名／作者／卷／期／起訖頁／
+年份一次到齊**——做註腳要的那三個欄位，華藝之外只有它有。德語神學的主要出版社
+（Mohr Siebeck、Vandenhoeck & Ruprecht、De Gruyter、Brill、Peeters）都繳 DOI。
+
+🚨 與 DOAJ 正好相反的三個坑：
+
+1. **不要用 offset 分頁。** offset 超過 10000 直接失敗，而大刊輕易破萬。`cursor=*`
+   沒有這個上限（DOAJ 是 1000 筆硬上限、只能靠年份二分切小）。**翻頁時每一次都要把
+   原查詢參數一起送**，只送 cursor 會退回第一頁——那樣抓出來的檔案筆數會是 rows 的
+   整數倍，好看且不報錯。寫檔後一定要跟 total-results 對帳。
+2. **`select` 不吃 `language`**（回 400 `select-not-available`），但**不帶 select 時
+   完整紀錄裡有 language 欄**。非英語比重是這一批存在的理由，寧可傳整包也別 select
+   掉語言。
+3. **`type` 要過濾**：一刊的 works 裡混著 journal-issue、book-review、editorial。
+   只留 `journal-article`，並把被濾掉的數量記進對帳，否則 total-results 永遠對不上
+   而看不出是正常的還是漏抓。
+
+polite pool 要靠 UA 裡的 mailto，腳本讀環境變數 `CROSSREF_MAILTO`，**沒設就走匿名池**
+（不把私人信箱寫死在版控裡）。
+
 DOAJ 每週一 05:00 由 `KGL_DOAJ_Weekly` 自動刷新（`scripts/run_doaj_refresh.ps1`）。
 **每週不是每天**——DOAJ 的刊按期出版，每天跑會花三百次請求找不到東西；抓取端本來就會
 跳過已有 jsonl 的刊，所以刷新只花在新刊上。腳本開頭先驗 `G:` 掛著沒有，沒掛就跳過
@@ -174,8 +197,20 @@ Once＋重複（重複期用盡後再也不觸發，而 State 仍是 Ready）、
 
 * **ATLA Religion Database** —— 宗教研究的標準索引庫（1,700 餘種期刊回溯到十九世紀），
   玄奘**沒訂**。這是本研究最大的一個缺口，要走圖書館資料庫推薦或 NDDS 館際調件。
-* **Index Theologicus（IxTheo，圖賓根）** —— 德語神學索引最完整，而且**本身免費開放**，
-  優先度高於多數 tier B。
+* **Index Theologicus（IxTheo，圖賓根）** —— 德語神學索引最完整（四百萬筆），
+  🚨 **2026-09-12 實測：抓不到，而且不是技術問題，別再走一次。**
+  `ixtheo.de` **整站**擋在一道 proof-of-work 瀏覽器驗證後面——17-bit SHA-256 挑戰、
+  openresty 前端、回應帶 `X-Robots-Tag: noindex`。`robots.txt` 本身、OAI-PMH 的
+  `/OAI/Server?verb=Identify`、VuFind 的 `/api/v1/search`、`/Search/Results`
+  全部一視同仁回那張「Verifying your browser…」，換 UA 沒用。這是站方**刻意設來擋
+  自動抓取**的閘門，不是設定失誤，所以不繞。
+  往底層追也不通：IxTheo 自 2013 年起把單篇著錄直接建在 K10plus（原 SWB）的 PICA CBS，
+  再匯出到自己的 Solr。K10plus 的公開 SRU（`sru.k10plus.de/opac-de-627`）確實沒有閘門，
+  但**只有書刊層沒有單篇層**——拿《Zeitschrift für Theologie und Kirche》的 ISSN
+  0044-3549 去查只回 3 筆，全是刊物本身；帶單篇的 `sru.k10plus.de/k10plus` 回
+  `info:srw/diagnostic/1/236 Access to specified database denied`。也查不到公開的
+  資料 dump。要這批資料只剩一條路：**寫信給圖賓根 UB 的 FID Theologie 要。**
+  在那之前，非英語神學期刊這個缺口改由 **Crossref** 補（見下一節）。
 * **JSTOR** —— 清單裡沒看到，要確認有無其他聯盟管道。
 
 ## 還沒做的事
@@ -190,4 +225,6 @@ Once＋重複（重複期用盡後再也不觸發，而 State 仍是 Ready）、
    才真的是「著作清單」。
 4. **華藝那 1,073 筆候選要人工複核**，現在只是候選。
 5. **tier B 的抓取程式一個都還沒寫**——要等 `KGL_Campus_Probe` 帶回實測結果，
-   才知道該先寫哪一個。IxTheo 不必等（免費開放）。
+   才知道該先寫哪一個。⚠️ IxTheo 已確認走不通（見上節），不要再排進來。
+6. **`scripts/crossref_harvest.py` 已寫好但還沒跑過。** 先 `--journals` 建刊物清單，
+   抽查刊名過濾有沒有誤收，再 `--articles --limit 5` 試抓，最後全跑並 `--index`。
