@@ -23,6 +23,7 @@
   N 出處要印完整書目                印成「EoR 8761-8767」，查不到是哪一本書
   O 各個位置的檔要一致              只更新課程夾、送印那疊還是舊的（檔名一模一樣）
   P 附加符號要合進字母              來源把梵文轉寫的附標編成獨立字元：A´soka／bra¯hman:
+  Q 書背要跟這一本一樣厚            頁數變了書背寬度就錯了，而它是另一支腳本產的
 """
 from __future__ import annotations
 
@@ -290,6 +291,37 @@ def check_copies(path: Path) -> int:
     return bad
 
 
+def check_spine(path: Path, pages: int) -> int:
+    """Q 書背要跟現在這一本一樣厚。
+
+    書背寬度是按頁數算的，所以頁數一變舊書背就是錯的——而它是另一支腳本產的，
+    很容易忘了重出。有這條之後就**不必每次重排都順手重跑書背**（2026-09-13
+    使用者：「書背已經好了幹嘛一直重出」）：頁數沒變就不用動，變了這裡會報。
+    低於 100 頁的不做書背（太薄貼不上），所以那種情況下有書背才是錯的。
+    """
+    spine = path.with_name(path.stem + "_書背.pdf")
+    if pages < 100:
+        if spine.exists():
+            print(f"  ★ Q {pages} 頁不該有書背（太薄），卻有 {spine.name}")
+            return 1
+        return 0
+    if not spine.exists():
+        print(f"  ★ Q 缺書背 {spine.name}（{pages} 頁）")
+        return 1
+    doc = fitz.open(spine)
+    note = norm(doc[0].get_text())
+    doc.close()
+    m = re.search(r"(\d+)\s*頁", note)
+    if not m:
+        print(f"  ★ Q 書背上讀不到頁數 {spine.name}")
+        return 1
+    if int(m.group(1)) != pages:
+        print(f"  ★ Q 書背過期 {spine.name}：書背記 {m.group(1)} 頁／實際 {pages} 頁"
+              f"——跑 build_reader_spine.py 重出")
+        return 1
+    return 0
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--book", help="只查這一本（檔名）")
@@ -303,8 +335,10 @@ def main() -> None:
             print(f"★ 找不到 {path}")
             total += 1
             continue
+        n_pages = fitz.open(path).page_count
         total += check(path)
         total += check_copies(path)
+        total += check_spine(path, n_pages)
     print("\n總結：", "全數通過" if total == 0 else f"{total} 項要看")
     sys.exit(1 if total else 0)
 

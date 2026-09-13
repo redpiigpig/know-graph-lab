@@ -221,6 +221,32 @@ RANGE_NOTE = {
 }
 
 
+# 掃描檔文字層壞掉、而且**逐頁核對過印刷頁**才寫進來的修正。2026-09-13 掃過四本
+# 全書，這種損壞總共只有 10 處、集中在四個來源頁；整本重跑 Vision OCR 不划算
+# （《Understanding Religion》48 頁只換得回兩個字），所以逐條修。
+#
+# 規矩：**每一條都要對著印刷頁看過再寫**。這些字串是「看起來像壞字、其實我猜的」
+# 的高風險區——`pro` 就差點被當成損壞（它是拉丁文 pro/con 的 pro，原書就這樣印）。
+# 鍵是 `clean()` 之後的樣子（空白已收斂），改 clean() 要重算。
+#
+#   來源                                     壞在哪
+#   Insider/Outsider 切片 p6                 整段字母散開，兩行讀不出來
+#   Insider/Outsider 切片 p21                註 12 的散字
+#   Understanding Religion 切片 p1           alli→all、razson d @tre→raison d'être
+#   Theory and Method 切片 p53               w i l l→will
+OCR_FIXES = {
+    "m ille n a r ia n m o v e m e n ts a m o n g c o lo n ia l p e o p le s "
+    "(c a rg o -c u lts , e tc .). Y e t":
+        "millenarian movements among colonial peoples (cargo-cults, etc.). Yet",
+    "O n the practice of Verstehen sociology see, pro, above all "
+    "G arfinkel, R o y T u rn er,":
+        "On the practice of Verstehen sociology see, pro, above all Garfinkel, Roy Turner,",
+    "its only razson d @tre has to": "its only raison d’être has to",
+    "Among alli the subjects": "Among all the subjects",
+    "and itself w i l l . . . observe": "and itself will . . . observe",
+}
+
+
 # OCR 把字母拆開的白名單。只修這幾組——通用規則會把「a book」接成「abook」。
 SPLIT_FIX = [
     (r"\bo f\b", "of"), (r"\bi n\b", "in"), (r"\bi s\b", "is"), (r"\bi t\b", "it"),
@@ -510,7 +536,11 @@ def clean(text: str) -> str:
     # 句點後面直接接大寫字母＝來源掉了那個空白（「…and.Valuable」「…again.This」）。
     # 只補這一種：前面是小寫字母＋句讀，後面是大寫開頭的字，縮寫（U.S.A.）不受影響。
     text = re.sub(r"([a-z][.,;:])([A-Z][a-z])", r"\1 \2", text)
-    return re.sub(r"\s+", " ", text).strip()
+    text = re.sub(r"\s+", " ", text).strip()
+    for bad, good in OCR_FIXES.items():      # 逐頁核對過印刷頁的掃描損壞
+        if bad in text:
+            text = text.replace(bad, good)
+    return text
 
 
 # 篇末書目的標題。使用者定案：印本不收書目（要查出處回頭看 Drive 上那份切片，
