@@ -1,3 +1,10 @@
+<!--
+  🚨 這份地圖有三份副本，改任何一份都要三份一起更新（見 feedback_deliverable_all_copies）：
+     1. 本檔 /phd-map                                    ← 正本
+     2. G:\我的雲端硬碟\玄奘\博班修課與畢業地圖.html      ← 離線副本
+     3. artifact ffecd8df-09b1-4c2f-a3b3-aa9d591a9d67    ← 免登入手機版
+  2 與 3 是同一份 HTML（2 只是多了 doctype/head/body 外殼）。
+-->
 <template>
   <div class="min-h-screen bg-slate-50">
     <AppHeader title="博班修業地圖" :back="{ to: '/', label: '返回主頁' }" container-class="max-w-4xl" />
@@ -10,7 +17,7 @@
           玄奘大學宗教與文化學系博士班　115 級
         </p>
         <h1 class="text-2xl sm:text-3xl font-bold text-gray-900 leading-tight mb-1.5">博班修業地圖</h1>
-        <p class="text-sm text-gray-500">以三年畢業為規劃　·　整理於 2026-09-12</p>
+        <p class="text-sm text-gray-500">以三年畢業為規劃　·　更新於 2026-09-13</p>
       </header>
 
       <!-- 基本資料 -->
