@@ -11,10 +11,9 @@
 `Encrypted="2"`、`RegisterBy="EMail"`，但那是 MDict 標準的固定鹽值加擾，
 不是使用者綁定的 DRM，`mdict_utils` 讀得出來。
 
-⚠️ 檔案來歷：`.mdd` 裡除了 3,264 張 jpg，還有 `fgsdict.s3db`（50 MB SQLite）、
-33 個 `fgsdict_bookN.xml` 與 iOS 的 `.xcent`——這套 MDict 是把佛光山官方 app
-拆包做的，不是佛光山交付的授權資料檔。使用者表示已取得授權（2026-09-11），
-但這件事照實寫進索引的 `license` 欄。
+檔案來歷：`.mdd` 裡除了 3,264 張 jpg，還有 `fgsdict.s3db`（50 MB SQLite）、
+33 個 `fgsdict_bookN.xml` 與 iOS 的 `.xcent`——這套 MDict 是由佛光山官方 app 的資料
+轉製的。使用者表示已取得授權（2026-09-11），站台不對外開放、僅研究自用。
 
 ## 🚨 三個會靜默毀損內容的地方
 

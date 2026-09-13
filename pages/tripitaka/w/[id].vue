@@ -6,6 +6,14 @@
       :editable="false"
     >
       <template #actions>
+        <button
+          class="px-2.5 py-1 text-[11px] rounded-lg border transition mr-1.5"
+          :class="dictOpen
+            ? 'bg-amber-600 text-white border-amber-600'
+            : 'bg-white text-gray-500 border-gray-200 hover:border-amber-300'"
+          title="查佛學辭典（先選取經文可直接帶入）"
+          @click="openDict()"
+        >📖 辭典</button>
         <!-- 只有漢文時不必顯示語言切換（原文是可展開區塊，不佔欄） -->
         <div v-if="availableLangs.length > 1" class="flex items-center gap-1.5">
           <button
@@ -21,6 +29,22 @@
         </div>
       </template>
     </AppHeader>
+
+    <!--
+      讀經時的辭典面板。⚠️ 佛典最常見的需求是「這個詞是什麼意思」，
+      而讀者多半是先用滑鼠選起那個詞——所以開啟時先吃 window.getSelection()，
+      選了就直接查，沒選才要自己打。
+    -->
+    <div v-if="dictOpen" class="border-b border-gray-200 bg-white">
+      <div class="max-w-5xl mx-auto px-6 py-4">
+        <div class="flex items-baseline justify-between gap-3 mb-3">
+          <h2 class="text-sm font-semibold text-gray-700">佛學辭典查詢</h2>
+          <button class="text-xs text-gray-400 hover:text-gray-700" @click="dictOpen = false">關閉</button>
+        </div>
+        <GlossaryLookup :initial="dictTerm" :scroll="true"
+                        placeholder="選取經文後按「辭典」可直接帶入，或在此輸入" />
+      </div>
+    </div>
 
     <div v-if="pending" class="flex-1 flex items-center justify-center text-sm text-gray-400">載入中…</div>
     <div v-else-if="err" class="flex-1 flex items-center justify-center px-6">
@@ -204,6 +228,19 @@
 </template>
 
 <script setup lang="ts">
+const dictOpen = ref(false)
+const dictTerm = ref('')
+
+/** 開啟辭典面板；若讀者已選取經文就直接拿去查。 */
+function openDict() {
+  if (dictOpen.value) { dictOpen.value = false; return }
+  const sel = (typeof window !== 'undefined' ? window.getSelection()?.toString() : '') || ''
+  // 只取前 12 字：選到一整段時拿整段去查一定落空
+  const t = sel.trim().replace(/\s+/g, '').slice(0, 12)
+  if (t) dictTerm.value = t
+  dictOpen.value = true
+}
+
 import { PARALLEL_LANGS, PARALLEL_SOURCES, divisionByKey } from '~/data/tripitaka/divisions'
 
 definePageMeta({ middleware: 'auth' })

@@ -7,7 +7,7 @@
         <div class="mb-8 text-center">
           <h1 class="text-2xl font-bold text-gray-900 mb-1">☸️ 佛教大藏經</h1>
           <p class="text-sm text-gray-500">
-            《大正新脩大藏經》與《漢譯南傳大藏經》全文，附梵／巴／藏原典對照
+            《大正新脩大藏經》《卍新纂大日本續藏經》與《漢譯南傳大藏經》全文，附梵／巴／藏原典對照與佛學辭典查詢
           </p>
           <div v-if="!pending" class="mt-4 flex flex-wrap justify-center gap-x-6 gap-y-1 text-xs text-gray-400">
             <span>{{ fmt(total.works) }} 部</span>
@@ -48,6 +48,25 @@
             </li>
           </ul>
         </div>
+
+        <!-- 佛學辭典查詢 -->
+        <section class="mb-8 bg-white border border-gray-200 rounded-2xl overflow-hidden">
+          <button class="w-full px-5 py-4 flex items-center gap-3 text-left hover:bg-amber-50/40 transition"
+                  @click="dictOpen = !dictOpen">
+            <span class="text-xl leading-none">📖</span>
+            <span class="flex-1 min-w-0">
+              <span class="block text-sm font-semibold text-gray-800">佛學辭典查詢</span>
+              <span class="block text-xs text-gray-500 mt-0.5 break-words">
+                十三部辭典、13.5 萬條詞目，同一個詞會把各部辭典的解釋並列。
+                《佛光大辭典》那一部附原書頁碼與插圖。
+              </span>
+            </span>
+            <span class="text-xs text-amber-700 flex-shrink-0">{{ dictOpen ? '收合' : '展開' }}</span>
+          </button>
+          <div v-if="dictOpen" class="px-5 pb-5 border-t border-gray-100 pt-4">
+            <GlossaryLookup placeholder="查佛學辭典，如 般若、如來藏、阿賴耶識⋯" />
+          </div>
+        </section>
 
         <!-- 部類 -->
         <template v-for="group in groups" :key="group.title">
@@ -135,6 +154,7 @@ const supabase = useSupabaseClient()
 const pending = ref(true)
 const stats = ref<Record<string, { works: number; chars: number; segs: number; with_parallel: number }>>({})
 const q = ref('')
+const dictOpen = ref(false)
 const hits = ref<any[] | null>(null)
 const hitTotal = ref(0)
 

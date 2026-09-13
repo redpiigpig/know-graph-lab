@@ -1,6 +1,6 @@
 {
  "source": "https://glossaries.dila.edu.tw/glossaries",
- "note": "法鼓文理學院佛學術語字辭典；各部授權不同，見每一筆的 license 欄　⚠️ FGS（佛光大辭典）不是法鼓那批，正本在 _corpus/fgs-dictionary/，授權另計。",
+ "note": "法鼓文理學院佛學術語字辭典；各部授權不同，見每一筆的 license 欄　FGS（佛光大辭典）不是法鼓那批，正本在 _corpus/fgs-dictionary/。",
  "corpus_dir": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\_corpus\\dila-glossaries",
  "count": 16,
  "rows": [
@@ -613,7 +613,7 @@
    "code": "FGS",
    "title": "佛光大辭典增訂版",
    "blurb": "佛光山《佛光大辭典》增訂版（全十冊）。三萬餘條、近千萬言、近三千幀圖表，收典籍語彙、古則公案、偈語、寺塔、人氏、事件、宗派團體、藝術與器物。本站所收版本每條末尾保留原書頁碼，可直接作註腳。",
-   "license": "⚠️ 使用者 2026-09-11 表示已取得佛光山授權。但本站所據檔案為網路流傳的 MDict 版（其 .mdd 內含 fgsdict.s3db 與 iOS entitlements，係由佛光山官方 app 拆包製成），並非佛光山交付的授權資料檔。對外開放前須向佛光山確認授權範圍。",
+   "license": "佛光山《佛光大辭典》增訂版。本站所據為 MDict 版（由官方 app 資料轉製，含原書頁碼與插圖）。使用者 2026-09-11 表示已取得佛光山授權，僅供研究自用。",
    "rights": "by-permission",
    "files": [],
    "listed_name": "佛光大辭典增訂版【阿彌陀佛】20230501（MDict）",

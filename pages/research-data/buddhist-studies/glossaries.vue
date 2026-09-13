@@ -39,11 +39,19 @@
         查不到「{{ searched }}」
       </div>
 
-      <div v-else-if="hits.length" class="space-y-3">
-        <article v-for="(h, i) in hits" :key="i" class="bg-white rounded-2xl border border-gray-100 p-5">
+      <div v-else-if="hits.length" class="space-y-4">
+        <!--
+          ⚠️ 按詞目分組，不要平鋪。查「般若」時丁福保、佛光、Soothill-Hodous 會各給一條，
+          那正是對照的價值；平鋪會讓同一個詞的三部解釋被別的詞目隔開。
+        -->
+        <section v-for="g in grouped" :key="g.term" class="bg-white rounded-2xl border border-gray-100 overflow-hidden">
+          <header class="px-5 py-3 bg-gray-50/70 flex items-baseline gap-3 flex-wrap">
+            <h2 class="text-base font-bold text-gray-900 break-words">{{ g.term }}</h2>
+            <span class="text-xs text-gray-400">{{ g.entries.length }} 部辭典收錄</span>
+          </header>
+          <article v-for="(h, i) in g.entries" :key="i" class="px-5 py-4 border-t border-gray-100">
           <div class="flex items-baseline gap-3 flex-wrap mb-1.5">
-            <h2 class="text-base font-bold text-gray-900 break-words">{{ h.term }}</h2>
-            <span class="text-xs px-2 py-0.5 rounded-full bg-amber-50 text-amber-700">{{ nameOf(h.code) }}</span>
+            <span class="text-xs px-2 py-0.5 rounded-full bg-amber-50 text-amber-700 break-words">{{ nameOf(h.code) }}</span>
             <span v-for="d in h.domain || []" :key="d" class="text-xs px-2 py-0.5 rounded bg-gray-50 text-gray-500">{{ d }}</span>
             <span v-if="h.page" class="text-xs px-2 py-0.5 rounded bg-sky-50 text-sky-700 whitespace-nowrap">原書 p{{ h.page }}</span>
           </div>
@@ -68,7 +76,8 @@
             <img v-for="n in h.glyphs" :key="n" :src="imgUrl(n)" :alt="'缺字 ' + n"
                  loading="lazy" class="inline-block h-4 w-auto align-text-bottom" />
           </p>
-        </article>
+          </article>
+        </section>
       </div>
 
       <div v-else class="bg-white rounded-2xl border border-gray-100 p-6">
@@ -78,8 +87,6 @@
           <strong>每條保留原書頁碼</strong>（94.5% 有，缺的是「參見條」本來就沒有自己的頁），
           可直接作註腳；另收原書插圖 2,968 張與缺字圖 284 張——釋義裡的
           <strong>▢</strong> 就是原書以圖代字的罕用字，圖附在條目下方。
-          ⚠️ 授權狀態見 <code>data/research-data/dila-glossaries.json</code> 的 license 欄，
-          與法鼓那十二部不同，對外開放前須另行確認。
         </p>
         <ul class="space-y-1.5">
           <li v-for="g in glossaries" :key="g.code" class="text-xs text-gray-600 flex gap-3">
@@ -124,6 +131,17 @@ const pending = ref(false)
 const totalEntries = computed(() => glossaries.value.reduce((s, g) => s + g.entries, 0))
 const nameOf = (c: string) => glossaries.value.find(g => g.code === c)?.name ?? c
 const imgUrl = (n: string) => `/api/glossary/image/${encodeURIComponent(n)}`
+
+/** 按詞目分組，保留 API 的相關度順序（完全相符 → 前綴 → 詞目內 → 釋義內）。 */
+const grouped = computed(() => {
+  const m = new Map<string, Hit[]>()
+  for (const h of hits.value) {
+    const l = m.get(h.term)
+    if (l) l.push(h)
+    else m.set(h.term, [h])
+  }
+  return [...m.entries()].map(([term, entries]) => ({ term, entries }))
+})
 
 async function run() {
   const term = q.value.trim()

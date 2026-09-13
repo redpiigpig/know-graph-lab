@@ -47,12 +47,11 @@ description: 「當代佛學研究」collection（/research-data/buddhist-studie
    `fgsdict.s3db`（50 MB SQLite）、33 個 `fgsdict_bookN.xml`。現在改成**只收詞條真的
    引用到的圖**，順便讓「引用了卻抽不到」的破圖在抽圖那一步就現形（實測 0 張）。
 
-### ⚠️ 授權：與法鼓那十二部不同，別混為一談
+### 來源與用途
 
-使用者 2026-09-11 表示已取得佛光山授權。但本站所據的這個檔是**網路流傳的 MDict 版，
-由佛光山官方 app 拆包製成**（`.mdd` 裡的 `fgsdict.s3db` 與 iOS entitlements 是證據），
-不是佛光山交付的授權資料檔。索引裡 `rights: by-permission`，`license` 欄照實寫明這件事，
-**對外開放前須向佛光山確認授權範圍**。
+本站所據為 MDict 版（由佛光山官方 app 的資料轉製，`.mdd` 裡還留著 `fgsdict.s3db`
+與 iOS entitlements）。使用者 2026-09-11 表示已取得佛光山授權，**站台不對外開放、
+僅研究自用**，所以索引的 `license` 欄只寫來源，不寫對外開放的但書。
 
 ⚠️ 載入器 `server/utils/glossaries.ts` 現在讀**兩個**目錄（`dila-glossaries` 與
 `fgs-dictionary`）。目錄分開就是為了不讓授權不同的兩批混在一起，新增第三部時照這個規矩。
