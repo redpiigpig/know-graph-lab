@@ -335,10 +335,15 @@
             </tbody>
           </table>
         </div>
-        <div v-else class="rounded-xl border border-dashed border-amber-300 bg-amber-50 px-4 py-3.5">
+        <div v-else class="rounded-xl border border-amber-200 bg-amber-50 px-4 py-3.5">
+          <p class="text-[13px] text-amber-900 leading-relaxed mb-2">
+            <b>目前 0 場。</b>這與研討會是<b>分開計算</b>的兩條門檻（第五條第二款算研討會、第三款算演講），
+            已參加的三場研討會不折抵這一欄。
+          </p>
           <p class="text-[13px] text-amber-900 leading-relaxed">
-            <b>尚無紀錄，待補。</b>每一場請給我五個欄位：<b>日期、講題、主講人、主辦單位、時數</b>，
-            並註明是否為本系舉辦。有研習證明的話一併記下編號。
+            🚨 可爭取的空間：研討會裡的<b>專題演講／主題演講</b>（例如印順學那場 Peter Singer 的場次）
+            能否另計為演講場次，辦法沒寫。若可以，已參加的五天裡就能撈出好幾場。
+            <b>值得跟系辦問清楚</b>，答案是「可以」的話這一欄的壓力會小很多。
           </p>
         </div>
 
@@ -457,8 +462,8 @@ const sections = [
 
 const eventStats = [
   { k: '研討會日數', v: '5', note: '證明已備齊' },
-  { k: '本系主辦', v: '2', note: '需 3 場' },
-  { k: '參加演講', v: '0', note: '需 10 或 20 場' },
+  { k: '本系主辦', v: '3', note: '需 3 場 ✓' },
+  { k: '參加演講', v: '0', note: '與研討會分開計' },
   { k: '審稿論文', v: '3', note: '門檻需 2 篇' },
 ]
 
@@ -479,13 +484,13 @@ const eventsDone = [
     date: '2026/9/3–4',
     days: '2 天',
     presented: false,
-    ownDept: false,
+    ownDept: true,
     name: '臺灣藏傳佛教論壇（屆次待補）',
     place: '待補',
-    host: '待查證 — 首屆（113.1.18–19）由玄奘大學藏傳佛教研究中心舉辦，與達賴喇嘛西藏宗教基金會合作',
+    host: '玄奘大學藏傳佛教研究中心（首屆 113.1.18–19，與達賴喇嘛西藏宗教基金會合作）',
     url: 'https://www.hcu.edu.tw/tbrc/',
     cert: '參與證明已開立（2 天）',
-    todo: '官網查不到本屆公告，正式名稱與屆次待補。主辦是「藏傳佛教研究中心」而非本系，能否認列為「本系舉辦」要問系辦。',
+    todo: '正式名稱與屆次待補（官網查不到本屆公告）。',
   },
   {
     date: '2026/9/18',
