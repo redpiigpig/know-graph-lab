@@ -46,6 +46,7 @@ import json
 import os
 import re
 import sys
+import unicodedata
 from pathlib import Path
 
 import fitz
@@ -467,10 +468,39 @@ def pua_ratio(text: str) -> float:
     return len(PUA.findall(t)) / len(t) if t else 0.0
 
 
+# 梵文／巴利轉寫的附加符號，在來源文字層是**獨立的間隔字元**，不是組合附標：
+#   `A´soka`（´ 在 s 前）／`bra¯hman:`（¯ 標前一個母音、`:` 是字母下面那一點）
+# 印出來就是「A´soka」「bra¯hman:」，符號全飄在旁邊（使用者 2026-09-13 指出
+# 上冊第 4、5 頁）。Times New Roman 其實 ā ś ṇ ṭ ṃ ḥ 十八個字全畫得出來，
+# 所以不是缺字，是要把符號**合回**基底字母。
+SPACING_MARK = {"\u00af": "\u0304", "\u00b4": "\u0301", ":": "\u0323"}
+# 🚨 `:` 只在「這個詞已經有 ¯ 或 ´」時才當附標，否則會把正常的冒號
+#    （as follows:／ratio 3:1）當成點下符號吃掉。下面的正規式就是這道閘：
+#    整串裡至少要有一個 ¯ 或 ´ 才會進 `_compose`。
+SPACING_WORD = re.compile(r"[A-Za-z]*[\u00af\u00b4][A-Za-z:\u00af\u00b4]*")
+
+
+def _compose(m: re.Match) -> str:
+    w, out, i = m.group(), [], 0
+    while i < len(w):
+        ch = w[i]
+        if ch == "\u00b4" and i + 1 < len(w) and w[i + 1].isalpha():
+            out.append(unicodedata.normalize("NFC", w[i + 1] + "\u0301"))
+            i += 2
+        elif ch in SPACING_MARK and ch != "\u00b4" and out and out[-1][-1:].isalpha():
+            out[-1] = unicodedata.normalize("NFC", out[-1] + SPACING_MARK[ch])
+            i += 1
+        else:
+            out.append(ch)
+            i += 1
+    return "".join(out)
+
+
 def clean(text: str) -> str:
     text = re.sub(r"([a-z])-\s*\n\s*([a-z])", r"\1\2", text)   # 行末斷字，只接小寫
     text = re.sub(r"([a-z])-\s+([a-z])", r"\1\2", text)
     text = text.replace("\n", " ")
+    text = SPACING_WORD.sub(_compose, text)
     for pat, rep in SPLIT_FIX:
         text = re.sub(pat, rep, text)
     text = PUA.sub("", text)
@@ -712,6 +742,13 @@ def extract_pdf(path: str) -> tuple[list[tuple[str, str]], list[str]]:
             if (letters and sum(c.isupper() for c in letters) / len(letters) > 0.7
                     and re.search(r"\b\d{3,4}\s*$", t)):
                 continue
+            # 🚨 來源自己的篇名行不要：讀本篇首已經印過作者與篇名，再印一次只是
+            #    重複，而掃描本的那一行還常常是壞的——康德那篇印出來是
+            #    「Im man u e l K an t , What is Enlightenment」（使用者 2026-09-12
+            #    指出）。只查**開頭三段**，而且要整個篇名都在裡面才算。
+            if (len(paras) < 3 and len(t) < 120 and len(_own) >= 8
+                    and _own in re.sub(r"[\W_]+", "", t).lower()):
+                continue
             # 前一塊沒收尾 → 多半是同一段被跨欄跨頁切開了。但小標題也沒有句末
             # 標點（「“Religion” as Specter」），所以再看長度：夠長才是被切斷的
             # 正文，短的當標題，不接。
@@ -834,8 +871,14 @@ def extract_md(path: str) -> tuple[dict, list[str]]:
     h1 = re.search(r"^# (.+)$", raw, re.M)      # 篇名要用讀本檔的 H1，
     meta["_h1"] = h1.group(1).strip() if h1 else ""   # 用「作品」會讓四篇同名
     body = raw.split("## 本文", 1)[1] if "## 本文" in raw else raw
-    paras = [p.strip() for p in body.split("\n") if p.strip() and not p.startswith(("#", ">"))]
-    return meta, paras
+    # 泛讀自成一節（`japanese_self_study_plan` 寫的「## 泛讀」）。兩邊的標題文字
+    # 要一致，改了這裡也要改那裡。
+    body, _, ext = body.partition("## 泛讀")
+
+    def lines(t: str) -> list[str]:
+        return [p.strip() for p in t.split("\n") if p.strip() and not p.startswith(("#", ">"))]
+
+    return meta, lines(body), lines(ext)
 
 
 # ── 排版 ────────────────────────────────────────────────────────────────
@@ -1532,7 +1575,7 @@ def build(reader: str, mode: str, only: int | None, want_guide: bool,
                 meta = None
                 note_n = len(notes)
             else:
-                meta, paras = extract_md(path)
+                meta, paras, ext_paras = extract_md(path)
                 author = ""
                 title = meta.get("_h1") or meta.get("作品", os.path.basename(path))
                 # 🚨 出處由下面那段連同「節錄」一起印，這裡留空；兩邊都印會在
@@ -1599,8 +1642,27 @@ def build(reader: str, mode: str, only: int | None, want_guide: bool,
                 bk.flow(f"出處：{origin}", size=9.0, gap=8, color=(0.35,) * 3)
                 bk.flow(f"節錄：{meta.get('節錄範圍', '')}　實質 {meta.get('實質字數', '?')}",
                         size=9.0, gap=10, color=(0.35,) * 3)
-                bk.flow_paragraphs([("p", re.sub(r"\*\*(\d+)\*\*　", r"\1　", t)) for t in paras],
-                                   size=11.2, gap=8, indent=INDENT)
+                def jp(ts):     # 文語訳的節號寫成 **12**　，印本不要星號
+                    return [("p", re.sub(r"\*\*(\d+)\*\*　", r"\1　", t)) for t in ts]
+
+                bk.flow_paragraphs(jp(paras), size=11.2, gap=8, indent=INDENT)
+                # 泛讀：不逐詞注解，所以**不留下半頁的譯文欄**，排滿版省紙。
+                if ext_paras:
+                    bk.half_page = False
+                    bk.head_r = f"{title}・泛讀"
+                    bk.new_page()
+                    bk.y = M_TOP + 8
+                    bk.flow("泛讀", size=13.0, gap=4, bold=True)
+                    bk.flow("不逐詞注解，讀完寫三句中文摘要。", size=9.4, gap=6,
+                            color=(0.35,) * 3)
+                    bk.flow(f"範圍：{meta.get('泛讀範圍', '')}　"
+                            f"{meta.get('泛讀字數', '?')}",
+                            size=9.0, gap=10, color=(0.35,) * 3)
+                    bk.page.draw_line(fitz.Point(BODY_X0, bk.y - 5),
+                                      fitz.Point(BODY_X1, bk.y - 5),
+                                      color=(0.75,) * 3, width=0.6)
+                    bk.y += 8
+                    bk.flow_paragraphs(jp(ext_paras), size=11.2, gap=8, indent=INDENT)
             print(f"  ✓ {disp[:52]}"
                   + (f"（接回散字 {spaced} 處）" if spaced else "")
                   + (f"（剔掉假小標 {badhead} 條）" if badhead else "")

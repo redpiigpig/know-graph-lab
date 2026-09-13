@@ -22,6 +22,7 @@
   M 不可竄進隔壁文章                〈… IN AUSTRALIA AND OCEANIA〉整段跑進來
   N 出處要印完整書目                印成「EoR 8761-8767」，查不到是哪一本書
   O 各個位置的檔要一致              只更新課程夾、送印那疊還是舊的（檔名一模一樣）
+  P 附加符號要合進字母              來源把梵文轉寫的附標編成獨立字元：A´soka／bra¯hman:
 """
 from __future__ import annotations
 
@@ -150,6 +151,20 @@ def check(path: Path) -> int:
         dup = [k for k, v in tally.items() if v >= 3]
         if dup:
             bad.append(f"D 疑似頁眉殘骸 {norm(title)[:30]}：{dup[:3]}")
+
+    # P 附加符號要合進字母，不能飄在旁邊。來源文字層把梵文轉寫的附標編成獨立
+    #   字元（`A´soka`／`bra¯hman:`），印出來符號就散在字旁（使用者 2026-09-13
+    #   指出上冊第 4、5 頁）。
+    # 🚨 不要一併查 U+00AD（軟連字號）與 U+037E（希臘問號）：那兩個是 PyMuPDF
+    #    產生 ToUnicode 時挑錯碼位，**印出來是正常的 `-` 與 `;`**（2026-09-13 把
+    #    目錄那一行渲染成圖確認過），只有複製貼上會拿到怪字元。列進來只會每次
+    #    報四千筆假警報。
+    stray = [(i + 1, m.group()) for i in range(front, doc.page_count)
+             for m in re.finditer(r"[A-Za-z][¯´˚˙˘ˇ¸]"
+                                  r"|[¯´][A-Za-z]", doc[i].get_text())]
+    if stray:
+        bad.append(f"P 附加符號沒合進字母 {len(stray)} 處：{[s[1] for s in stray[:6]]}"
+                   f"（頁 {[s[0] for s in stray[:6]]}）")
 
     # I 每頁份量
     counts = []

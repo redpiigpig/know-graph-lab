@@ -244,10 +244,15 @@ def paras(text: str) -> list[str]:
 
 
 def fit(ps: list[str], lo: int, target: int) -> tuple[str, int, int]:
-    """從第 lo 段起，取到實質字數達 target 為止。
+    """從第 lo 段起，取到實質字數最接近 target 的那個段界。
 
     回傳 (內文, 結束段索引(不含), 實質字數)。段落區間會寫進讀本檔，
     上下篇有沒有疊到肉眼就看得出來。
+
+    🚨 取「跨過 target 就停」會嚴重超標。這批文獻的段落極不均勻——《デンマルク
+    国の話》與《後世への最大遺物》一段常一千多字，目標 1,600 會切出 2,249、
+    目標 1,800 會切出 2,902（2026-09-12 實測）。所以跨過之後要回頭比一次：
+    **少一段更接近目標就少一段**。段落完整性不破，量才控得住。
     """
     i, run = lo, 0
     while i < len(ps) and run < target:
@@ -255,6 +260,10 @@ def fit(ps: list[str], lo: int, target: int) -> tuple[str, int, int]:
         i += 1
     if i == lo:
         raise KeyError(f"從第 {lo} 段取不到東西")
+    if i - 1 > lo:                       # 至少留一段
+        before = run - net_len(ps[i - 1])
+        if abs(before - target) < abs(run - target):
+            i, run = i - 1, before
     return "\n\n".join(ps[lo:i]), i, run
 
 
@@ -283,8 +292,32 @@ def verses(chapter_text: str, lo: int, hi: int) -> str:
 #   W06–08  文語，六到八百（有振假名、內容又熟，比看起來好啃）
 #   W10–13  一千到一千三（講演體長句）
 #   W14     文語與口語對照，兩篇合計約一千五
-TARGET = {3: 600, 4: 700, 5: 700, 7: 800, 10: 1000, 11: 1100, 12: 1200, 13: 1300,
-          15: 1200}   # W15 是期末自選文獻，學術日文比原典密，量壓在 1,200
+# 🚨 級距**按文體分**，不是齊頭式一個數字（2026-09-12 定案）。文語逐詞查的時間
+#    是現代口語的兩倍上下，所以現代文加碼、文語維持甚至下降：拉平了只是把難度
+#    加在最痛的那幾週。中文母語者的漢字紅利也只在現代文生效——矢內原的「である」
+#    體漢字詞八成看得懂，真正要查的是助詞與活用；文語的「なり／べし／係り結び」
+#    沒有漢字可以扶。
+TARGET = {
+    3: 700,                      # 起步不動
+    4: 1300, 5: 1300,            # 現代口語，文法上手後加碼
+    6: 800,                      # 文語訳（附振假名）
+    7: 1400,
+    8: 1000,                     # 文語訳
+    10: 1600, 11: 1600, 12: 1600,
+    13: 1100,                    # 舊字舊假名的文語體，比現代文降一階
+    14: 1800,                    # 口語講演（另有文語序 400 字對照）
+    15: 1500,                    # 學術日文
+}
+
+# 泛讀：**不逐詞注解**，讀完寫三句中文摘要。博士班文獻選讀的常規是精讀＋泛讀
+# 兩軌；只有精讀的話，「一週讀多少日文」會被逐詞注解的成本綁死（使用者 2026-09-12
+# 問「份量是不是太少」時的實況是精讀平均 1,172 字、語料只用掉 12%）。
+# 泛讀段緊接在同一篇的精讀段之後，各週依序往下推，**與任何一週的精讀都不重疊**。
+EXTENSIVE = {
+    3: 1500, 4: 1800, 5: 1800, 7: 2000,
+    10: 2000, 11: 2000, 13: 1500, 14: 2200, 15: 2000,
+    # W06／W08 的泛讀是「把那一章讀完」，W12 是「把那一篇讀完」，不用字數控制
+}
 
 
 def build_readings() -> dict[int, list[dict]]:
@@ -311,64 +344,85 @@ def build_readings() -> dict[int, list[dict]]:
 
     r: dict[int, list[dict]] = {}
 
-    t, e, n = fit(jo, 0, TARGET[3])
+    def band(ps, lo, week, label):
+        """從第 lo 段起切出「精讀段＋泛讀段」，回傳 (dict 的三個欄位, 下一個起點)。
+
+        兩段前後相接、不重疊：精讀讀完的下一段就是泛讀的起點，泛讀讀完的下一段
+        就是下一週（或下一塊）的起點。段落區間都寫進檔案，疊到與否肉眼可查。
+        """
+        t, e1, n1 = fit(ps, lo, TARGET[week])
+        ext, e2, n2 = fit(ps, e1, EXTENSIVE[week]) if week in EXTENSIVE else ("", e1, 0)
+        return dict(
+            body=t, net=n1, ext=ext, ext_net=n2,
+            extent=f"{label}之第 {lo + 1}–{e1} 段",
+            ext_extent=f"{label}之第 {e1 + 1}–{e2} 段（接續精讀，不重疊）" if ext else "",
+        ), e2
+
+    b, nxt = band(jo, 0, 3, f"全書序（共 {len(jo)} 段／約 {whole(jo)} 字）")
     r[3] = [dict(stem="矢內原忠雄_キリスト教入門_序", title="矢內原忠雄《キリスト教入門》序",
-                 src="nyumon", extent=f"全書序（共 {len(jo)} 段／約 {whole(jo)} 字）之第 1–{e} 段",
-                 net=n, body=t)]
+                 src="nyumon", **b)]
 
-    t, e1, n = fit(ch1, 0, TARGET[4])
-    r[4] = [dict(stem="矢內原忠雄_キリスト教入門_第一章上", title="矢內原忠雄《キリスト教入門》第一章　人生と宗教（上）",
-                 src="nyumon", extent=f"第一章（共 {len(ch1)} 段／約 {whole(ch1)} 字）之第 1–{e1} 段",
-                 net=n, body=t)]
-    t, e2, n = fit(ch1, e1, TARGET[5])
-    r[5] = [dict(stem="矢內原忠雄_キリスト教入門_第一章下", title="矢內原忠雄《キリスト教入門》第一章　人生と宗教（下）",
-                 src="nyumon", extent=f"第一章之第 {e1 + 1}–{e2} 段（接續上週，不重疊）",
-                 net=n, body=t)]
+    ch1_label = f"第一章（共 {len(ch1)} 段／約 {whole(ch1)} 字）"
+    b, nxt = band(ch1, 0, 4, ch1_label)
+    r[4] = [dict(stem="矢內原忠雄_キリスト教入門_第一章上",
+                 title="矢內原忠雄《キリスト教入門》第一章　人生と宗教（上）",
+                 src="nyumon", **b)]
+    b, _ = band(ch1, nxt, 5, ch1_label)
+    r[5] = [dict(stem="矢內原忠雄_キリスト教入門_第一章下",
+                 title="矢內原忠雄《キリスト教入門》第一章　人生と宗教（下）",
+                 src="nyumon", **b)]
 
-    body = verses(mt5, 1, 20)
-    r[6] = [dict(stem="文語訳_マタイ伝五章_八福", title="文語訳聖書　マタイ伝福音書 第五章 1–20（八福・地の鹽世の光・律法）",
-                 src="bungo", extent="第五章第 1–20 節（全章 48 節）", net=net_len(body), body=body)]
+    # 文語訳這兩章的泛讀就是「把那一章讀完」——章界是天然的收束，用字數切反而
+    # 會停在一節中間。
+    body, ext = verses(mt5, 1, 20), verses(mt5, 21, 48)
+    r[6] = [dict(stem="文語訳_マタイ伝五章_八福",
+                 title="文語訳聖書　マタイ伝福音書 第五章 1–20（八福・地の鹽世の光・律法）",
+                 src="bungo", extent="第五章第 1–20 節（全章 48 節）", net=net_len(body), body=body,
+                 ext=ext, ext_net=net_len(ext), ext_extent="第五章第 21–48 節（把這一章讀完）")]
 
-    t, _, n = fit(ch2, 0, TARGET[7])
-    r[7] = [dict(stem="矢內原忠雄_キリスト教入門_第二章", title="矢內原忠雄《キリスト教入門》第二章　いかにしてキリスト教を学ぶか",
-                 src="nyumon", extent=f"第二章（共 {len(ch2)} 段／約 {whole(ch2)} 字）開頭",
-                 net=n, body=t)]
+    b, _ = band(ch2, 0, 7, f"第二章（共 {len(ch2)} 段／約 {whole(ch2)} 字）")
+    r[7] = [dict(stem="矢內原忠雄_キリスト教入門_第二章",
+                 title="矢內原忠雄《キリスト教入門》第二章　いかにしてキリスト教を学ぶか",
+                 src="nyumon", **b)]
 
-    body = verses(mt6, 1, 24)
-    r[8] = [dict(stem="文語訳_マタイ伝六章_主の祈り", title="文語訳聖書　マタイ伝福音書 第六章 1–24（施濟・主の祈り・斷食・天の財寶）",
-                 src="bungo", extent="第六章第 1–24 節（全章 34 節）", net=net_len(body), body=body)]
+    body, ext = verses(mt6, 1, 24), verses(mt6, 25, 34)
+    r[8] = [dict(stem="文語訳_マタイ伝六章_主の祈り",
+                 title="文語訳聖書　マタイ伝福音書 第六章 1–24（施濟・主の祈り・斷食・天の財寶）",
+                 src="bungo", extent="第六章第 1–24 節（全章 34 節）", net=net_len(body), body=body,
+                 ext=ext, ext_net=net_len(ext), ext_extent="第六章第 25–34 節（把這一章讀完）")]
 
     # デンマルク：全篇 43 段約 9,000 字，N5 兩週讀不完。取「導入」與「結論三教訓」
     # 兩塊精讀；中間ダルガス植林敘事留作行有餘力再讀。
-    t, e, n = fit(denmark, 12, TARGET[10])
+    b, _ = band(denmark, 12, 10, f"全篇 {len(denmark)} 段（約 {whole(denmark)} 字）")
     r[10] = [dict(stem="內村鑑三_デンマルク国の話_導入", title="內村鑑三《デンマルク国の話》導入",
-                  src="denmark", extent=f"全篇 43 段（約 {whole(denmark)} 字）之第 13–{e} 段",
-                  net=n, body=t)]
+                  src="denmark", **b)]
     # W11 本來是《デンマルク国の話》的下半，跟 W10 同一篇；W13 本來是〈終講の辞〉
     # 的下半，跟 W12 同一篇。兩週都換成別的作者（使用者 2026-09-12：選文太單一）。
     # 🚨 不從第 3 段起。開頭四段是講演的寒暄與鋪陳，而第 6 段一段就 1,313 字
     #    （這篇的段落極不均勻），照字數湊會湊出 2,239 字、剛好是一週該有的兩倍。
     #    改從第 10 段〈ヨハネ伝十五章〉起——那是這篇的正題「キリストの愛」。
-    t, e, n = fit(nitobe, 9, TARGET[11])
+    b, _ = band(nitobe, 9, 11,
+                f"全篇 {len(nitobe)} 段（約 {whole(nitobe)} 字，前九段是講演的導入不列入）")
     r[11] = [dict(stem="新渡戸稲造_イエスキリストの友誼", title="新渡戸稲造〈イエスキリストの友誼〉",
-                  src="nitobe",
-                  extent=f"全篇 {len(nitobe)} 段（約 {whole(nitobe)} 字）之第 10–{e} 段"
-                         "（ヨハネ伝十五章を引く本論。前九段は講演の導入で本週不列入精讀）",
-                  net=n, body=t)]
+                  src="nitobe", **b)]
 
+    # 〈終講の辞〉全篇只有 3,939 字：精讀 1,600＋泛讀讀到底，這一篇**整篇讀完**。
+    # 它是無教會史上的關鍵文獻，能整篇讀完比只讀一段有價值。
     t, e1, n = fit(shukou, 2, TARGET[12])
+    ext = "\n\n".join(shukou[e1:])
     r[12] = [dict(stem="矢內原忠雄_帝大聖書研究会終講の辞", title="矢內原忠雄〈帝大聖書研究会終講の辞〉",
-                  src="shukou", extent=f"全篇 {len(shukou)} 段（約 {whole(shukou)} 字）之第 3–{e1} 段",
-                  net=n, body=t)]
+                  src="shukou",
+                  extent=f"全篇 {len(shukou)} 段（約 {whole(shukou)} 字）之第 3–{e1} 段",
+                  net=n, body=t, ext=ext, ext_net=net_len(ext),
+                  ext_extent=f"第 {e1 + 1}–{len(shukou)} 段（讀到篇末，本週把這一篇整篇讀完）")]
 
     # 舊字舊假名的文語體，正好接在 W12 的現代口語之後當文語收尾；題材又是
     # 景教與弘法大師，是這門課少見的「基督宗教×日本佛教」比較宗教學文本。
-    t, e, n = fit(takakusu, 8, TARGET[13])
+    b, _ = band(takakusu, 8, 13,
+                f"全篇 {len(takakusu)} 段（約 {whole(takakusu)} 字，譯者序與題辭不計）")
     r[13] = [dict(stem="高楠順次郎訳_弘法大師と景教との関係",
                   title="E・A・ゴルドン／高楠順次郎訳〈弘法大師と景教との關係〉",
-                  src="takakusu",
-                  extent=f"全篇 {len(takakusu)} 段（約 {whole(takakusu)} 字）之第 9–{e} 段（譯者序與題辭不計）",
-                  net=n, body=t)]
+                  src="takakusu", **b)]
 
     # 《後世への最大遺物》文體分界（段落索引，逐段核對過，不可用字數推）：
     #   2–7   はしがき（1897）                  → 文語體
@@ -376,30 +430,28 @@ def build_readings() -> dict[int, list[dict]]:
     #   13–17 改版に附する序（1925）＋標題      → 已是口語，本計畫不用
     #   18–   夏期演説 第一回                    → 口語講演體
     bungo_part = "\n\n".join(isan[2:13])
-    kougo_part, kougo_end, _ = fit(isan, 18, 1100)   # 段落很大，用字數收斂不用固定段數
+    b, _ = band(isan, 18, 14, "全書（約 38,500 字）")
     r[14] = [
         dict(stem="內村鑑三_後世への最大遺物_序_文語", title="內村鑑三《後世への最大遺物》はしがき・再版に附する序言〔文語體〕",
              src="isan", extent="全書第 3–13 段（1897 與 1899 兩篇序，全篇約 38,500 字）",
-             net=net_len(bungo_part), body=bungo_part),
+             net=net_len(bungo_part), body=bungo_part, ext="", ext_net=0, ext_extent=""),
         dict(stem="內村鑑三_後世への最大遺物_講演冒頭_口語", title="內村鑑三《後世への最大遺物》夏期演説 第一回 冒頭〔口語體〕",
-             src="isan", extent=f"全書第 19–{kougo_end} 段（1894 年講演本體開頭）",
-             net=net_len(kougo_part), body=kougo_part),
+             src="isan", **b),
     ]
 
     # W15 的作業是「自選文獻逐詞注解＋繁中翻譯」，那份自選文獻就定這一篇：
     # 現代學術日文、正面處理內村的無教會主義與植村正久的教會主義之爭，而且
     # 大量引用政池仁《内村鑑三伝》——使用者點名的兩個人在這一篇裡都碰得到。
     i0 = next(i for i, p in enumerate(koga) if p.startswith("はじめに"))
-    t, e, n = fit(koga, i0, TARGET[15])
+    b, _ = band(koga, i0, 15, f"全文 {len(koga)} 段（約 {whole(koga)} 字，〈はじめに〉起）")
     r[15] = [dict(stem="古賀敬太_内村の無教会主義対植村の教会主義",
                   title="古賀敬太〈内村鑑三とその時代（５）―内村の無教会主義対植村の教会主義―〉",
-                  src="koga",
-                  extent=f"全文 {len(koga)} 段（約 {whole(koga)} 字）之第 {i0 + 1}–{e} 段（〈はじめに〉起）",
-                  net=n, body=t)]
+                  src="koga", **b)]
     return r
 
 
-def source_block(key: str, extent: str, net: int) -> str:
+def source_block(key: str, extent: str, net: int,
+                 ext_extent: str = "", ext_net: int = 0) -> str:
     s = SRC[key]
     return "\n".join([
         "## 出處", "",
@@ -414,7 +466,12 @@ def source_block(key: str, extent: str, net: int) -> str:
         "## 本週讀量", "",
         f"- **節錄範圍**：{extent}",
         f"- **實質字數**：約 {net} 字（已扣振假名）",
-    ])
+    ] + ([
+        f"- **泛讀範圍**：{ext_extent}",
+        # 「不逐詞注解」那句寫在下面「## 泛讀」那一節的引言裡，這裡不重複——讀本
+        # 那一支會把這個欄位原樣印出來，寫兩次就變成「約 約 1438 字（不逐詞…）」。
+        f"- **泛讀字數**：約 {ext_net} 字",
+    ] if ext_extent else []))
 
 
 def plan_text(readings: dict[int, list[dict]]) -> str:
@@ -450,7 +507,9 @@ def plan_text(readings: dict[int, list[dict]]) -> str:
         c = "＋".join(i["title"].split("》")[-1] or i["title"] for i in items) if items else "—"
         c = "＋".join(i["title"] for i in items)
         total = sum(i["net"] for i in items)
-        rows.append(f"| {w:02d} | {a} | {b} | {c} | 約 {total} 字 |")
+        ext = sum(i.get("ext_net", 0) for i in items)
+        vol = f"精 {total}／泛 {ext}" if ext else f"精 {total}"
+        rows.append(f"| {w:02d} | {a} | {b} | {c} | {vol} |")
     table = "\n".join(rows)
 
     return f"""# 個人課程目標與十五週自學計畫
@@ -610,13 +669,19 @@ def main() -> None:
         os.makedirs(d, exist_ok=True)
         for it in items:
             dst = os.path.join(d, f"W{week:02d}_自訂_{it['stem']}.html")
+            # 泛讀自成一節：讀本那一支（build_course_reader.extract_md）就是按
+            # 「## 本文」與「## 泛讀」兩個標題拆的，標題文字改了兩邊都要改。
+            ext = (f"\n\n## 泛讀\n\n"
+                   f"> 不逐詞注解，讀完寫三句中文摘要。\n\n{it['ext']}\n"
+                   if it.get("ext") else "")
             write_html(dst, it["title"],
                        f"# {it['title']}\n\n"
                        f"> 自訂讀本——本課程為個別化自學，讀本由學生依個人目標自選。\n\n"
-                       f"{source_block(it['src'], it['extent'], it['net'])}\n\n"
-                       f"---\n\n## 本文\n\n{it['body']}\n")
+                       f"{source_block(it['src'], it['extent'], it['net'], it.get('ext_extent', ''), it.get('ext_net', 0))}\n\n"
+                       f"---\n\n## 本文\n\n{it['body']}\n{ext}")
             n += 1
-            print(f"  ✓ W{week:02d} {it['title'][:40]}　實質 {it['net']} 字")
+            print(f"  ✓ W{week:02d} {it['title'][:38]}　精讀 {it['net']}"
+                  + (f"／泛讀 {it['ext_net']}" if it.get("ext_net") else "") + " 字")
     print(f"\n讀本 {n} 篇")
 
 

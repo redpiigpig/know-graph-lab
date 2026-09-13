@@ -20,6 +20,7 @@ from __future__ import annotations
 import argparse
 import math
 import os
+import re
 import shutil
 import sys
 from pathlib import Path
@@ -74,17 +75,54 @@ def make_spine(src: Path, course: str, volume: str, gsm: int) -> tuple[Path, flo
 
     x0 = (PAGE[0] - w) / 2
     y0 = (PAGE[1] - B5_H) / 2
-    rect = fitz.Rect(x0, y0, x0 + w, y0 + B5_H)
-    page.draw_rect(rect, color=(0.6,) * 3, width=0.4)
 
-    # 🚨 轉 **270** 度不是 90：書立在架上、書背朝外時，中文書名要由**上往下**讀。
-    #    轉 90 度會變成由下往上，整排書擺在一起只有這本是倒的。
+    # 🚨 **逐字直排，不要把橫排整段轉 90 度**，也**不畫裁切框**（使用者 2026-09-12：
+    #    「書背要是直行的，你去看無境界者雜誌的書背，也不需要有框」）。對照過
+    #    `資料\無境界者\雜誌\07-第七期\7-書背.pdf`：漢字一個一個正著寫、由上往下
+    #    堆，字距等於字級（14pt/14pt），整張只有白底，一條線都沒有。
+    #    轉 90/270 度的字是**側躺**的，跟真正的直排是兩件事。
     label = f"{SEMESTER}　{course}" + (f"　{volume}" if volume else "")
-    size = min(16.0, max(7.0, w * 0.5))          # 字級跟著書背寬度走
-    while size > 6 and fitz.Font(fontfile=CJK).text_length(label, size) > B5_H - 20 * MM:
+    font = fitz.Font(fontfile=CJK)
+    # 字級：以書背寬度為上限（字要塞得進書背），再跟參考檔對齊在 14pt 附近。
+    size = max(7.0, min(14.0, w - 4))
+    # 直排的總高＝字數×字距；太長就縮字級（字距跟著字級走）。
+    runs = [(m.group(), bool(re.fullmatch(r"[\x00-\x7f]+", m.group())))
+            for m in re.finditer(r"[\x00-\x7f]+|[^\x00-\x7f]", label)]
+
+    # 🚨 半形字串（「115-1」）要**橫著、正著**排成一格，不是轉 90 度側躺
+    #    （使用者 2026-09-12：「115-1 仍要是橫的」）。這是直排裡的「縱中橫」：
+    #    那一串維持橫寫，整串縮到書背寬度以內，佔直排的一格高度。
+    latin_font = fitz.Font(fontfile=LATIN)
+
+    def inline_size(t: str, sz: float) -> float:
+        """讓半形串橫著塞進書背寬度所需的字級。
+
+        先打 0.82 折：拉丁數字跟漢字同字級時，橫排那一串會比漢字那一欄寬出一截，
+        看起來比漢字大。縱中橫本來就會把那一串縮一點。
+        """
+        room = w - 3
+        s = sz * 0.82
+        while s > 4 and latin_font.text_length(t, s) > room:
+            s -= 0.25
+        return s
+
+    def column_height(sz: float) -> float:
+        return sum(sz for _ in runs)             # 漢字一格一字，縱中橫也佔一格
+
+    while size > 6 and column_height(size) > B5_H:
         size -= 0.5
-    page.insert_textbox(rect, label, fontname="CJK", fontsize=size,
-                        align=fitz.TEXT_ALIGN_CENTER, rotate=270)
+
+    cx = x0 + w / 2                              # 書背中線
+    y = y0 + (B5_H - column_height(size)) / 2    # 上下置中
+    for t, latin in runs:
+        if latin:
+            s = inline_size(t, size)
+            page.insert_text((cx - latin_font.text_length(t, s) / 2, y + size * 0.78),
+                             t, fontname="TNR", fontsize=s)
+        elif t.strip():                          # 全形空白只佔位不畫
+            page.insert_text((cx - size / 2, y + size * 0.86), t,
+                             fontname="CJK", fontsize=size)
+        y += size
 
     note = f"{src.stem}　{pages} 頁　書背寬 {w_mm:.1f} mm（{gsm}g 紙，雙面）"
     page.insert_text((28, PAGE[1] - 16), note, fontname="CJK", fontsize=9, color=(0.45,) * 3)
