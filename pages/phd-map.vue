@@ -369,8 +369,8 @@
 
       <!-- 拾 投稿目標 -->
       <section id="journals" class="mb-12 scroll-mt-16">
-        <SectionHeading num="拾" title="期刊投稿目標"
-          lede="畢業門檻為兩篇以上具審稿制度之研討會或期刊論文。以下依與論文題目的相關度排序。" />
+        <SectionHeading num="拾" title="投稿地圖"
+          lede="依四個研究面向整理的國內外期刊與研討會。面向標記：基＝台灣基督教，佛＝佛教，對＝宗教對話與比較宗教，倫＝宗教倫理學與哲學。" />
 
         <h3 class="sub-h">進行中</h3>
         <ul class="space-y-2.5 mb-5">
@@ -383,22 +383,63 @@
           </li>
         </ul>
 
-        <h3 class="sub-h">候選名單</h3>
+        <h3 class="sub-h">國內期刊</h3>
         <div class="tbl-wrap">
           <table class="tbl">
-            <thead><tr><th>期刊</th><th>出版單位</th><th>相關度</th></tr></thead>
+            <thead><tr><th>刊名</th><th>出版單位</th><th class="whitespace-nowrap">面向</th><th>規定與週期</th></tr></thead>
             <tbody>
-              <tr v-for="j in journalsTargets" :key="j.name">
-                <td class="font-semibold text-gray-900 break-words">{{ j.name }}</td>
+              <tr v-for="j in journalsTW" :key="j.n">
+                <td class="font-semibold text-gray-900 break-words">{{ j.n }}</td>
                 <td class="text-gray-600 break-words">{{ j.pub }}</td>
-                <td class="text-gray-600 break-words">{{ j.fit }}</td>
+                <td class="whitespace-nowrap"><span v-for="k in j.f.split(' ')" :key="k" :class="['inline-block text-[10px] font-bold rounded px-1 mr-0.5', fociClass(k)]">{{ FOCI[k] }}</span></td>
+                <td class="text-gray-600 break-words">{{ j.rule }}</td>
               </tr>
             </tbody>
           </table>
         </div>
-        <p class="mt-2 text-xs text-gray-400 leading-relaxed">
-          THCI 收錄狀態與各刊徵稿格式逐年變動，投稿前務必到該刊官網或華藝頁面重新查證。
-        </p>
+
+        <h3 class="sub-h">國際期刊</h3>
+        <div class="tbl-wrap">
+          <table class="tbl">
+            <thead><tr><th>刊名</th><th>出版單位</th><th class="whitespace-nowrap">面向</th><th>規定與特點</th></tr></thead>
+            <tbody>
+              <tr v-for="j in journalsIntl" :key="j.n">
+                <td class="font-semibold text-gray-900 break-words">{{ j.n }}</td>
+                <td class="text-gray-600 break-words">{{ j.pub }}</td>
+                <td class="whitespace-nowrap"><span v-for="k in j.f.split(' ')" :key="k" :class="['inline-block text-[10px] font-bold rounded px-1 mr-0.5', fociClass(k)]">{{ FOCI[k] }}</span></td>
+                <td class="text-gray-600 break-words">{{ j.rule }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="sub-h">研討會年度循環</h3>
+        <div class="tbl-wrap">
+          <table class="tbl">
+            <thead><tr><th>研討會</th><th class="whitespace-nowrap">面向</th><th class="whitespace-nowrap">時間</th><th>徵稿時程</th></tr></thead>
+            <tbody>
+              <tr v-for="c in confCycle" :key="c.n">
+                <td class="break-words">
+                  <span class="font-semibold text-gray-900">{{ c.n }}</span>
+                  <span :class="['ml-1 inline-block text-[10px] font-bold rounded px-1', c.where === '國際' ? 'bg-indigo-50 text-indigo-700' : 'bg-gray-100 text-gray-500']">{{ c.where }}</span>
+                  <span class="block text-gray-500 mt-0.5">{{ c.host }}</span>
+                  <span v-if="c.note" class="block text-gray-400 mt-0.5">{{ c.note }}</span>
+                </td>
+                <td class="whitespace-nowrap"><span v-for="k in c.f.split(' ')" :key="k" :class="['inline-block text-[10px] font-bold rounded px-1 mr-0.5', fociClass(k)]">{{ FOCI[k] }}</span></td>
+                <td class="text-gray-600 whitespace-nowrap">{{ c.when }}</td>
+                <td class="text-gray-600 break-words">{{ c.cfp }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="rounded-xl border border-amber-200 bg-amber-50 px-4 py-3.5">
+          <h3 class="text-sm font-bold text-amber-800 mt-0 mb-1">查證提醒</h3>
+          <p class="text-xs text-amber-900/85 leading-relaxed">
+            上表的徵稿時程除已標明年份者外，都是<b>依往年慣例</b>推估的月份，各單位逐年會動。THCI 收錄狀態也逐年調整。
+            投稿前務必到該刊官網、華藝頁面或主辦單位公告重新查證截稿日與格式。
+          </p>
+        </div>
       </section>
 
       <!-- 拾壹 待確認 -->
@@ -455,7 +496,7 @@ const sections = [
   { id: 'defense', nav: '論文口試' },
   { id: 'activity', nav: '學術活動' },
   { id: 'events', nav: '研討會紀錄' },
-  { id: 'journals', nav: '投稿目標' },
+  { id: 'journals', nav: '投稿地圖' },
   { id: 'todo', nav: '待確認' },
   { id: 'sources', nav: '法源' },
 ]
@@ -578,17 +619,57 @@ const journalsActive = [
   },
 ]
 
-const journalsTargets = [
-  { name: '《臺灣宗教研究》', pub: '台灣宗教學會', fit: '最對口 — 佛耶跨傳統比較與宗教公共性正是該刊守備範圍' },
-  { name: '《華人宗教研究》', pub: '國立政治大學華人宗教研究中心', fit: '華人社會的宗教與公共領域，適合第五章的議題結盟材料' },
-  { name: '《台灣神學論刊》', pub: '台灣神學研究學院', fit: '基督教那一線的本土神學系譜（黃彰輝—宋泉盛—王憲治—黃伯和）' },
-  { name: '《神學與教會》', pub: '台南神學院', fit: '王憲治與台灣鄉土神學的核心場域，史料與人脈都在這裡' },
-  { name: '《法鼓佛學學報》', pub: '法鼓文理學院', fit: '人間佛教思想史，明列歡迎博士生投稿' },
-  { name: '《臺大佛學研究》', pub: '國立臺灣大學文學院佛學研究中心', fit: '佛教思想史，審查嚴謹、能見度高' },
-  { name: '《新世紀宗教研究》', pub: '宗教文化研究中心', fit: '當代宗教現象與社會參與，接受跨傳統比較' },
-  { name: '《輔仁宗教研究》', pub: '輔仁大學宗教學系', fit: '宗教對話與比較研究，天主教背景但收非基督宗教題材' },
-  { name: '《臺灣史研究》', pub: '中央研究院臺灣史研究所', fit: '若把第二、三章的日治到戰後段落寫成史學論文，這是最高規格的出口' },
-  { name: '《道風：基督教文化評論》', pub: '漢語基督教文化研究所（香港）', fit: '漢語神學與處境化神學，適合方法論那一章的理論部分' },
+const FOCI = { c: '基', b: '佛', d: '對', e: '倫' }
+
+const journalsTW = [
+  { n: '《臺灣宗教研究》', pub: '台灣宗教學會', f: 'd c b', rule: '研究論文 15,000–25,000 字／研究紀要 10,000–20,000 字／書評 3,000 字以內。隨到隨審' },
+  { n: '《華人宗教研究》', pub: '政治大學華人宗教研究中心', f: 'd c b', rule: '半年刊。華人社會宗教與公共領域' },
+  { n: '《玄奘佛學研究》', pub: '玄奘大學宗教與文化學系', f: 'b', rule: '半年刊。本系刊物，已錄取待刊' },
+  { n: '《法印學報》', pub: '財團法人弘誓文教基金會', f: 'b', rule: '年刊。已發表過兩篇，流程熟悉' },
+  { n: '《法鼓佛學學報》', pub: '法鼓文理學院', f: 'b', rule: '半年刊。明列歡迎佛教學系與文史哲相關系所博士生賜稿' },
+  { n: '《中華佛學學報》', pub: '中華佛學研究所', f: 'b', rule: '年刊。老牌佛學學報' },
+  { n: '《臺大佛學研究》', pub: '臺灣大學文學院佛學研究中心', f: 'b', rule: '半年刊。審查嚴、能見度高' },
+  { n: '《福嚴佛學研究》', pub: '福嚴佛學院', f: 'b', rule: '年刊。印順學系譜的自家刊物' },
+  { n: '《正觀》', pub: '正觀雜誌社', f: 'b', rule: '季刊。出刊頻率高，週轉快' },
+  { n: '《台灣神學論刊》', pub: '台灣神學研究學院', f: 'c', rule: '年刊。長老教會本土神學系譜的主場' },
+  { n: '《神學與教會》', pub: '台南神學院', f: 'c', rule: '半年刊。王憲治與鄉土神學的史料所在' },
+  { n: '《輔仁宗教研究》', pub: '輔仁大學宗教學系', f: 'd e', rule: '半年刊。宗教對話與比較研究' },
+  { n: '《宗教哲學》', pub: '中華民國宗教哲學研究社', f: 'e', rule: '季刊。宗教哲學與倫理學專門' },
+  { n: '《新世紀宗教研究》', pub: '宗教文化研究中心', f: 'd e', rule: '季刊。當代宗教現象與社會參與' },
+  { n: '《臺灣史研究》', pub: '中央研究院臺灣史研究所', f: 'c', rule: '季刊。史學論文的最高規格出口' },
+  { n: '《道風：基督教文化評論》', pub: '漢語基督教文化研究所（香港）', f: 'c e', rule: '半年刊。漢語神學與處境化神學' },
+]
+
+const journalsIntl = [
+  { n: 'Buddhist-Christian Studies', pub: 'Univ. of Hawai’i Press／Society for Buddhist-Christian Studies', f: 'd b c', rule: '年刊，英文，匿名審查。開放比較神學與宗教學兩種方法，不限作者宗教背景 —— 與論文題目最貼合的國際刊' },
+  { n: 'Journal of Buddhist Ethics', pub: 'Penn State University Press（開放取用）', f: 'b e', rule: '5,000–7,500 字；投兩版（具名與匿名各一）Word 檔寄總編輯；約兩個月內完成審查，週轉最快' },
+  { n: 'Journal of Global Buddhism', pub: '開放取用', f: 'b', rule: '當代與跨國佛教，人間佛教研究常見出口' },
+  { n: 'Contemporary Buddhism', pub: 'Routledge', f: 'b e', rule: '當代佛教與入世實踐' },
+  { n: 'Journal of Chinese Religions', pub: 'Society for the Study of Chinese Religions／Routledge', f: 'b c', rule: '華人宗教史，收台灣個案' },
+  { n: 'Numen', pub: 'Brill（IAHR 機關刊）', f: 'd', rule: '宗教史學與比較宗教的旗艦刊，門檻高' },
+  { n: 'Religion', pub: 'Routledge', f: 'd', rule: '宗教學理論與方法' },
+  { n: 'Method & Theory in the Study of Religion', pub: 'Brill（NAASR）', f: 'd', rule: '方法論專門，適合第六章的理論總結' },
+  { n: 'Journal of Ecumenical Studies', pub: 'Temple University', f: 'd c', rule: '普世運動與跨宗教對話，老牌對話刊物' },
+  { n: 'International Bulletin of Mission Research', pub: 'SAGE', f: 'c', rule: '宣教史與處境化，長老教會那一線的國際出口' },
+  { n: 'Journal of Religious Ethics', pub: 'Wiley', f: 'e', rule: '宗教倫理學旗艦刊，收比較倫理' },
+  { n: 'Sophia', pub: 'Springer', f: 'e', rule: '宗教哲學與跨文化哲學，對亞洲傳統友善' },
+  { n: 'International Journal for Philosophy of Religion', pub: 'Springer', f: 'e', rule: '宗教哲學專門' },
+  { n: 'Ching Feng 景風', pub: '漢語基督教文化研究所（香港）', f: 'c d', rule: '英文，華人基督教研究，對亞洲題材接受度高' },
+]
+
+const confCycle = [
+  { n: '印順導師思想之理論與實踐國際學術會議', host: '玄奘大學臺灣佛教研究中心、玄奘大學宗教與文化學系、慈濟慈善基金會、弘誓文教基金會', where: '國內', when: '每年 8 月', cfp: '徵稿約前一年底至當年上半年公布', f: 'b', note: '本系主辦系列，第二十四屆已發表' },
+  { n: '全國佛學論文聯合發表會', host: '全國佛學院所輪值主辦（本系為輪值單位之一）', where: '國內', when: '每年 9 月', cfp: '徵稿約 4–6 月', f: 'b', note: '第三十七屆 2026/9/18–20 由本系籌備' },
+  { n: '台灣宗教學會年會', host: '台灣宗教學會', where: '國內', when: '每年 10 月', cfp: '摘要約 4 月底截止（2026 年為 4/30）', f: 'd c b e', note: '本系為團體會員；2026 年會 10/23–24 於輔大濟時樓' },
+  { n: '輔仁大學宗教學系國際學術研討會', host: '輔仁大學宗教學系', where: '國內', when: '每年 11 月', cfp: '摘要約 5 月中截止，全文約 10 月中繳交', f: 'd e', note: '2026 主題「宗教理論的傳承與創新」' },
+  { n: '中華國際佛學會議', host: '法鼓山中華佛學研究所', where: '國內', when: '非年度（第六屆 2025/10/30–11/1）', cfp: '下屆時程待公布', f: 'b e', note: '第六屆已發表' },
+  { n: '臺灣佛教論壇', host: '玄奘大學臺灣佛教研究中心', where: '國內', when: '不定期（第三屆 2024/11）', cfp: '待公布', f: 'b', note: '本系系統' },
+  { n: '臺灣藏傳佛教論壇', host: '玄奘大學藏傳佛教研究中心', where: '國內', when: '不定期', cfp: '待公布', f: 'b', note: '2026/9/3–4 已參加' },
+  { n: 'AAR Annual Meeting（美國宗教學會年會）', host: 'American Academy of Religion', where: '國際', when: '每年 11 月', cfp: 'CFP 約 1 月開放、3 月初截止', f: 'd b c e', note: '有 Buddhism、Christianity、Comparative Studies in Religion、Religion and Ethics 等 program unit；Society for Buddhist-Christian Studies 亦依附年會辦場次' },
+  { n: 'EASR 年會（歐洲宗教學會）', host: 'European Association for the Study of Religions', where: '國際', when: '每年 9 月', cfp: '約前一年 11 月開放、當年 3 月底截止', f: 'd', note: '第 22 屆 2026/9/20–25 布加勒斯特，與 IAHR 合辦「Religions 360º」；2027 由荷蘭主辦，CFP 未公布' },
+  { n: 'IAHR World Congress（國際宗教史學會世界大會）', host: 'International Association for the History of Religions', where: '國際', when: '五年一次', cfp: '下屆時程待公布', f: 'd', note: '宗教史學界最高層級' },
+  { n: 'IABS Congress（國際佛學研究協會）', host: 'International Association of Buddhist Studies', where: '國際', when: '約三年一次', cfp: '下屆時程待公布', f: 'b', note: '' },
+  { n: 'AAS Annual Conference（亞洲研究協會）', host: 'Association for Asian Studies', where: '國際', when: '每年 3 月', cfp: 'CFP 約前一年 8 月截止', f: 'b c d', note: '台灣宗教史個案的主要國際場合' },
 ]
 
 const gates = [
@@ -599,6 +680,15 @@ const gates = [
   { n: '05', t: '發表兩篇審稿論文', p: '3 篇進行中', s: 'run', d: '具審稿制度之研討會或專業學術期刊　·　第五條「在學期間」' },
   { n: '06', t: '通過博士論文口試', p: '未開始', s: 'todo', d: '公開口試，70 分及格　·　第七條' },
 ]
+
+function fociClass(k: string) {
+  return ({
+    c: 'bg-sky-50 text-sky-700',
+    b: 'bg-amber-50 text-amber-800',
+    d: 'bg-violet-50 text-violet-700',
+    e: 'bg-emerald-50 text-emerald-700',
+  } as Record<string, string>)[k] ?? 'bg-gray-100 text-gray-500'
+}
 
 function pillClass(s: string) {
   if (s === 'done') return 'text-emerald-700 border-emerald-300 bg-emerald-50'
