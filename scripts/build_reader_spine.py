@@ -55,6 +55,17 @@ BOOKS = [
 ]
 THICKNESS = {60: 0.08, 70: 0.09, 80: 0.104, 100: 0.13, 120: 0.15}
 
+# 直排要用的**縱書字形**。橫排的括號直接堆在直排裡，開口是朝左右的，看起來像躺著
+# （使用者 2026-09-14：「（）要變成上下的…不然這樣方向很奇怪」）。Unicode 的
+# U+FE3x 區就是為此設的，細明體有這幾個字形。
+# 🚨 只列**細明體真的有字形**的：︓︑︒（冒號、頓號、句號的縱書形）在細明體是空的，
+#    硬換會印出空白。課名裡也用不到那幾個。
+VERTICAL = {
+    "（": "︵", "）": "︶", "〈": "︿", "〉": "﹀",
+    "《": "︽", "》": "︾", "「": "﹁", "」": "﹂",
+    "『": "﹃", "』": "﹄", "—": "︱", "─": "︱",
+}
+
 
 def spine_width_mm(pages: int, gsm: int) -> float:
     sheets = math.ceil(pages / 2)
@@ -120,7 +131,7 @@ def make_spine(src: Path, course: str, volume: str, gsm: int) -> tuple[Path, flo
             page.insert_text((cx - latin_font.text_length(t, s) / 2, y + size * 0.78),
                              t, fontname="TNR", fontsize=s)
         elif t.strip():                          # 全形空白只佔位不畫
-            page.insert_text((cx - size / 2, y + size * 0.86), t,
+            page.insert_text((cx - size / 2, y + size * 0.86), VERTICAL.get(t, t),
                              fontname="CJK", fontsize=size)
         y += size
 
