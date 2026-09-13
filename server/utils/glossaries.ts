@@ -2,8 +2,10 @@ import fs from "node:fs";
 import path from "node:path";
 
 /**
- * 佛學辭典的查詢後端。十二部、10.3 萬條、28.6 MB JSONL，正本在 Drive
- * `_corpus/dila-glossaries/`（抓取與解析見 scripts/dila_glossaries_fetch.py）。
+ * 佛學辭典的查詢後端。十三部、13.5 萬條，正本在 Drive 的兩個目錄：
+ *   `_corpus/dila-glossaries/`  法鼓十二部（scripts/dila_glossaries_fetch.py）
+ *   `_corpus/fgs-dictionary/`   佛光大辭典增訂版（scripts/fgs_dictionary_ingest.py）
+ * ⚠️ 兩批的授權不同，別當成同一批——見 data/research-data/dila-glossaries.json 的 license 欄。
  *
  * 為什麼不進 DB：10 萬列帶釋義約 30 MB 文字，而這個專案的 Supabase 曾因大表超量
  * 把整站鎖掉（2026-07-08，bible_verses 已 DROP 搬 Drive）。規矩是新的大內容表一律
@@ -19,6 +21,12 @@ export interface GlossaryEntry {
   domain?: string[];
   definition?: string;
   langs?: Record<string, string>;
+  /** 原書頁碼。目前只有 FGS（佛光大辭典）有，可直接作註腳。 */
+  page?: number;
+  /** 插圖檔名。由 /api/glossary/image/<name> 串流（正本在 Drive，服務用副本在 R2）。 */
+  images?: string[];
+  /** 缺字圖檔名。⚠️ 這些是「當成一個字用」的小圖，釋義裡對應位置是 ▢。 */
+  glyphs?: string[];
 }
 export interface GlossaryHit extends GlossaryEntry {
   code: string;
@@ -38,13 +46,21 @@ export const GLOSSARY_NAMES: Record<string, string> = {
   KLS: "辛嶋靜志《道行般若經詞典》",
   DAT: "辛嶋靜志《「長阿含経」の原語の研究》",
   PTG: "《五譯合璧集要》",
+  FGS: "佛光山《佛光大辭典》增訂版",
 };
+
+/**
+ * 語料目錄。歷史上只有法鼓那批，所以目錄叫 dila-glossaries；佛光大辭典不是法鼓的，
+ * 正本另放 fgs-dictionary/，不要混進去（授權也不同，見
+ * data/research-data/dila-glossaries.json 的 license 欄）。
+ */
+const CORPUS_DIRS = ["dila-glossaries", "fgs-dictionary"];
 
 let cache: Map<string, GlossaryEntry[]> | null = null;
 
-function dir(): string {
+function dirs(): string[] {
   const root = useRuntimeConfig().corpusRoot as string;
-  return path.join(root, "dila-glossaries");
+  return CORPUS_DIRS.map((d) => path.join(root, d));
 }
 
 /** 首次呼叫才載入；之後直接用記憶體那一份。 */
