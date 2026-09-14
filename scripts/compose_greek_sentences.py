@@ -126,14 +126,22 @@ class Attestation:
 # --------------------------------------------------------------------------
 
 def verify_sentence(
-    sentence: str, known: set[str], attestation: Attestation
+    sentence: str,
+    known: set[str],
+    attestation: Attestation,
+    taught_forms: frozenset[str] | set[str] = frozenset(),
 ) -> dict[str, Any]:
-    """閘一與閘二。回傳的 `words` 是原樣字形，不是正規化過的。"""
+    """閘一與閘二。回傳的 `words` 是原樣字形，不是正規化過的。
+
+    `taught_forms` 是「生字自己印出來的那個形」那一層，只在詞位那一層答不出來
+    時才問：`εἶπεν` 的詞位是 λέγω，照詞位比對會把本課自己教的詞判成沒教過。
+    """
     words = split_words(sentence)
     unattested: list[str] = []
     untaught: list[str] = []
     accent_variants: list[str] = []
     lemmas: set[str] = set()
+    forms: set[str] = set()
     for word in words:
         found, how = attestation.look_up(word)
         if found is None:
@@ -144,6 +152,10 @@ def verify_sentence(
         taught = found & known
         if taught:
             lemmas |= taught
+            continue
+        written = fold_key(bare(word))
+        if written in taught_forms:
+            forms.add(written)
             continue
         components = crasis_components(word)
         if components and all(fold_key(part) in known for part in components):
@@ -157,6 +169,7 @@ def verify_sentence(
         "untaught": untaught,
         "accentVariants": accent_variants,
         "lemmas": sorted(lemmas),
+        "forms": sorted(forms),
         "lengthOk": length_ok,
         "passed": not unattested and not untaught and len(words) >= MIN_WORDS,
     }
@@ -167,10 +180,16 @@ def coverage_report(
 ) -> dict[str, Any]:
     """閘三：十題合起來把本課二十詞都用到了沒有。"""
     seen: set[str] = set()
+    seen_forms: set[str] = set()
     for report in reports:
         seen |= set(report["lemmas"])
-    practised = [item for item in lesson_items if item.keys & seen]
-    missing = [item for item in lesson_items if not (item.keys & seen)]
+        seen_forms |= set(report.get("forms") or ())
+
+    def hit(item) -> bool:
+        return bool(item.keys & seen) or bool(item.written_keys & seen_forms)
+
+    practised = [item for item in lesson_items if hit(item)]
+    missing = [item for item in lesson_items if not hit(item)]
     return {
         "lessonWords": len(lesson_items),
         "practised": len(practised),
@@ -186,6 +205,22 @@ def load_check_file(path: Path) -> dict[str, Any]:
     return payload
 
 
+def taught_forms_through(
+    vocabulary: dict[int, dict[int, list[VocabItem]]], volume: int, lesson: int
+) -> frozenset[str]:
+    """每個生字自己印出來的那個形，累積到這一課為止（下冊含上冊）。"""
+    keys: set[str] = set()
+    for earlier in sorted(vocabulary):
+        if earlier > volume:
+            break
+        for number in sorted(vocabulary[earlier]):
+            if earlier == volume and number > lesson:
+                break
+            for item in vocabulary[earlier][number]:
+                keys |= item.written_keys
+    return frozenset(keys)
+
+
 def review(
     volume: int,
     lesson: int,
@@ -193,11 +228,12 @@ def review(
     lesson_items: Sequence[VocabItem],
     known: set[str],
     attestation: Attestation,
+    taught_forms: frozenset[str] = frozenset(),
 ) -> dict[str, Any]:
     rows: list[dict[str, Any]] = []
     for index, entry in enumerate(payload.get("sentences", []), start=1):
         written = entry.get("greek", "")
-        report = verify_sentence(written, known, attestation)
+        report = verify_sentence(written, known, attestation, taught_forms)
         rows.append(
             {
                 "no": index,
@@ -291,7 +327,10 @@ def main() -> None:
         if lesson != args.lesson:
             continue
         print(f"檢查 {args.check.name}，{len(payload['sentences'])} 句；已教詞位 {len(known)}")
-        result = review(args.volume, lesson, payload, items, known, attestation)
+        result = review(
+            args.volume, lesson, payload, items, known, attestation,
+            taught_forms_through(vocabulary, args.volume, lesson),
+        )
         print("\n".join(report_lines(result)))
         if args.write:
             path = output_path(args.volume, lesson)

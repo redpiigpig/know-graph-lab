@@ -70,15 +70,20 @@ def load_drafts(volume: int, lesson: int) -> tuple[list[dict[str, Any]], str]:
     return payload.get("sentences", []), payload.get("author", "")
 
 
-def target_words_in(text: str, items, known, attestation) -> list[dict[str, Any]]:
+def target_words_in(text: str, items, known, attestation, taught_forms) -> list[dict[str, Any]]:
     """Which of the lesson's twenty words a sentence actually practises.
 
     Delegated to the gate's own lookup, so the book and the gate can never
     disagree about what a sentence covers.
     """
-    report = checker.verify_sentence(text, known, attestation)
+    report = checker.verify_sentence(text, known, attestation, taught_forms)
     seen = set(report["lemmas"])
-    return [item.public_record() for item in items if item.keys & seen]
+    seen_forms = set(report.get("forms") or ())
+    return [
+        item.public_record()
+        for item in items
+        if (item.keys & seen) or (item.written_keys & seen_forms)
+    ]
 
 
 def build_volume(volume: int) -> dict[str, Any]:
@@ -98,6 +103,7 @@ def build_volume(volume: int) -> dict[str, Any]:
     thin: list[int] = []
     missing: list[int] = []
     for lesson, items, known in cumulative_sets(vocabulary, volume):
+        taught_forms = checker.taught_forms_through(vocabulary, volume, lesson)
         anchors = pick_anchors((mined_by_lesson.get(lesson) or {}).get("items", []))
         if len(anchors) < QUOTED_PER_LESSON:
             thin.append(lesson)
@@ -115,8 +121,8 @@ def build_volume(volume: int) -> dict[str, Any]:
                 "answerKeyRef": row["ref"],
                 "answerKeyEdition": ANSWER_KEY_EDITION,
                 "answerKeyScope": "verse-containing-clause" if row.get("clause") else "verse",
-                "targetWords": target_words_in(text, items, known, attestation),
-                "verification": checker.verify_sentence(text, known, attestation),
+                "targetWords": target_words_in(text, items, known, attestation, taught_forms),
+                "verification": checker.verify_sentence(text, known, attestation, taught_forms),
                 "reviewedBy": "corpus",
             })
         for row in drafts:
@@ -124,8 +130,8 @@ def build_volume(volume: int) -> dict[str, Any]:
             rows.append({
                 "kind": "composed",
                 "text": text,
-                "targetWords": target_words_in(text, items, known, attestation),
-                "verification": checker.verify_sentence(text, known, attestation),
+                "targetWords": target_words_in(text, items, known, attestation, taught_forms),
+                "verification": checker.verify_sentence(text, known, attestation, taught_forms),
                 "reviewedBy": row.get("reviewedBy", "author" if author else "draft"),
             })
         for number, item in enumerate(rows, start=1):

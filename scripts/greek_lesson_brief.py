@@ -81,10 +81,11 @@ def main() -> None:
 
     rows = {row[0]: row for row in cumulative_sets(vocabulary, args.volume)}
     for number in range(args.lesson, (args.through or args.lesson) + 1):
-        brief_one(number, args, rows, attestation, forms_by_lemma)
+        brief_one(number, args, rows, attestation, forms_by_lemma,
+                  checker.taught_forms_through(vocabulary, args.volume, number))
 
 
-def brief_one(lesson, args, rows, attestation, forms_by_lemma) -> None:
+def brief_one(lesson, args, rows, attestation, forms_by_lemma, taught_forms) -> None:
     if lesson not in rows:
         raise SystemExit(f"第 {args.volume} 冊沒有第 {lesson} 課")
     _number, items, known = rows[lesson]
@@ -93,13 +94,18 @@ def brief_one(lesson, args, rows, attestation, forms_by_lemma) -> None:
     print(f"=== 第 {args.volume} 冊第 {lesson} 課 ===")
     print(f"定錨 {len(anchors)} 題，還要寫 {ITEMS_PER_LESSON - len(anchors)} 句")
     practised: set[str] = set()
+    practised_forms: set[str] = set()
     for row in anchors:
         text = row.get("text") or row.get("clause") or ""
         print(f"  [{row.get('ref', '')}] {text}")
-        report = checker.verify_sentence(text, known, attestation)
+        report = checker.verify_sentence(text, known, attestation, taught_forms)
         practised |= set(report["lemmas"])
+        practised_forms |= set(report.get("forms") or ())
 
-    needed = [item for item in items if not (item.keys & practised)]
+    needed = [
+        item for item in items
+        if not (item.keys & practised) and not (item.written_keys & practised_forms)
+    ]
     print(f"\n本課 {len(items)} 詞，定錨已練到 {len(items) - len(needed)} 個，還缺 {len(needed)}：")
     for item in needed:
         pool: Counter = Counter()
@@ -112,10 +118,20 @@ def brief_one(lesson, args, rows, attestation, forms_by_lemma) -> None:
             # whether that lemma has been taught.  A form whose lemma resolves
             # to something else is attested and still refused, so it must not be
             # offered here.
-            if keys and (keys & item.keys) and (keys <= known or keys & known):
+            if keys and (keys & item.keys) and (keys & known):
                 usable.append(form)
             if len(usable) >= args.forms:
                 break
+        if not usable:
+            # The second route: a headword that is itself an inflected form or a
+            # pair of variants (εἶπεν, οὐ (οὐκ)) is reachable only as itself.
+            for written in sorted(item.written_keys & set(attestation.folded)):
+                for printed in sorted(p for p in attestation.exact if fold_key(bare(p)) == written):
+                    usable.append(printed)
+                    if len(usable) >= args.forms:
+                        break
+                if len(usable) >= args.forms:
+                    break
         shown = "、".join(usable) if usable else "🚨 本冊語料中沒有可用的形，這一課練不到它"
         print(f"  {item.headword}　{item.gloss_zh}　[{item.pos}]")
         print(f"      可用的形：{shown}")

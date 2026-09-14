@@ -111,6 +111,27 @@ class VocabItem:
         """這個生字認得的詞位鍵：詞條形與詞位形各折一次。"""
         return frozenset(key for key in (fold_key(self.lemma), fold_key(self.headword)) if key)
 
+    @property
+    def written_keys(self) -> frozenset[str]:
+        """這個生字自己的寫法——詞條印出來的那個形，含括號裡的變體。
+
+        十六個生字的詞條本身就是變化形或一組變體：`εἶπεν` 的詞位是 λέγω，
+        `οὐ (οὐκ` 與 `ἐκ (ἐξ)` 把變體寫進了詞條字串。照詞位比對，這些詞會被
+        判成「沒教過」——而它們正是本課要教的詞，於是一句正確的句子被退回，
+        而那個詞永遠練不到。拉丁那邊是同一個坑（`collaudate`）。
+
+        只認詞條自己印出來的形，不含它的其他變化形：那條路要走詞位。
+        """
+        keys: set[str] = set()
+        for piece in re.split(r"[()（）,，/]| ", self.headword):
+            piece = piece.strip()
+            if not piece:
+                continue
+            key = fold_key(piece)
+            if key:
+                keys.add(key)
+        return frozenset(keys)
+
     def public_record(self) -> dict[str, Any]:
         return {
             "volume": self.volume,
