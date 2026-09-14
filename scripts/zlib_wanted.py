@@ -60,10 +60,20 @@ PRIORITY = {
     "biblio-sinographic-literature": 3,
     "relstudy-course-hcu": 5,          # 12/12 已清空，留著給下學期換書用
     "biblio-hcu-phd": 10,              # 115/251，送件有期限，維持原級
+    # 使用者當面點名的單本書擺最前面 —— 這一層永遠只有個位數筆，不會擋到別人。
+    # 整位作家要收的走 FOCUS_AUTHORS，不要往這裡塞。
+    "user-named": 2,
     # 內村鑑三／矢內原忠雄那條全集線正在跑（10 卷有 8 卷過九成），缺的是研究它們
     # 的上游專書。兩份加起來只有 11 筆，一天就消化完，卻原本排在第 1,700／4,081
     # 本——等於永遠拿不到。這種「量小但正擋著工作」的清單就該提到最前面。
     "panikkar-originals": 12,            # 9 卷已上架但原文欄空，使用者 2026-09-11 點名
+    # 2026-09-14 裝上的兩份宗教學者獵表（交接文件待辦 3）。
+    "contemporary-socrel": 12,           # 當代宗教社會學 13 位，140 筆
+    # 🚨 這裡的鍵比對的是每一筆資料裡的 `source` 欄，**不是檔名**。
+    # 檔名叫 classical-religious-studies-2.jsonl，裡面的 source 卻是
+    # classical-religion-scholars —— 照檔名寫的話這一層完全不會生效，
+    # 而且不會報錯，那 6 筆會靜靜地掉回最低層 60。
+    "classical-religion-scholars": 12,   # 古典期找不到的 6 筆補漏
     "hick-originals": 12,                # hub 五筆全 copyright，原著與中譯都缺
     "religious-studies-originals": 12,   # 宗教學者原著缺口，使用者 2026-09-11 點名優先
     "uchimura-biography": 15,
@@ -100,15 +110,38 @@ DEFAULT_PRIORITY = 60
 # 所以插隊的單位是**作家**不是來源。填 who 欄位會出現的字串（中文名或英文姓皆可，
 # 大小寫不拘、比對用包含）。做完一位就把他移掉，不要放著累積——留著等於沒有優先序。
 FOCUS_AUTHORS = [
-    "伊利亞德",   # 2026-09-08 宗教學全集主打；09-10 已下 6 本，剩下的多是同書異名
-    "Eliade",
+    # 2026-09-14 使用者當面點名：「盧克曼《無形的宗教》也要收」「彼得‧伯格的書
+    # 也都要收」。兩位都在 contemporary-socrel 那 140 筆裡，但那一層排下來，
+    # 伯格最前的一筆在第 596 名、盧克曼在第 1,631 名 —— 照一天十本等於沒收。
+    # 🚨 伯格的中譯名有四種：伯格／柏格／貝格爾／貝爾格，站上現有的兩本掛在
+    # 「貝格爾」名下。四種都要列，否則中譯本整批比對不到。
+    "Berger", "伯格", "柏格", "貝格爾", "贝格尔",
+    "Luckmann", "盧克曼", "卢克曼",
+    # 伊利亞德：2026-09-08 主打，09-10 已下 6 本；09-14《世界宗教理念史 卷一》
+    # 的繁體中譯本已由 djvu 轉檔入庫，剩下的多是同書異名，先撤出插隊。
     # 赤江達也：2026-09-10 兩筆都回「沒有對得上的版本」，站上就是沒有，留著只會
     # 每天白花兩次搜尋。要它得走別的來源（NDL／日本古書店），不是 z-lib。
 ]
 
 
+# 🚨 比對是子字串包含，短的中文譯名會咬到別人。指定「伯格」時，**潘能伯格**
+# （Wolfhart Pannenberg，德國神學家）與**斯邦伯格**（Alan Sponberg）都會被一起
+# 提到最前面 —— 插隊名額本來就少，被別人佔走等於點名的那位還是拿不到。
+# 這裡列的字串只要出現，該筆就不算插隊對象。
+FOCUS_EXCLUDE = [
+    "潘能伯格", "Pannenberg",      # ≠ 彼得·伯格
+    "斯邦伯格", "Sponberg",
+    "奧登伯格", "奥登伯格", "Oldenberg",
+    "林德伯格", "Lindberg",
+    "柏格森", "Bergson",           # ≠ 柏格（Berger 的另一種譯名）
+    "海德格", "Heidegger",
+]
+
+
 def _is_focus(it: dict) -> bool:
     hay = f"{it.get('who', '')} {it.get('zh', '')} {it.get('query', '')}".lower()
+    if any(x.lower() in hay for x in FOCUS_EXCLUDE):
+        return False
     return any(a.lower() in hay for a in FOCUS_AUTHORS)
 
 

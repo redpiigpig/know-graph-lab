@@ -1,0 +1,3 @@
+{"key": "named-keltner-awe-orig", "query": "Dacher Keltner Awe The New Science of Everyday Wonder", "expect": "Awe", "who": "Dacher Keltner", "lang": "orig", "source": "user-named", "zh": "克特納《敬畏：帶來生命驚奇的情緒新科學》原著"}
+{"key": "named-keltner-awe-zh-tw", "query": "敬畏 帶來生命驚奇的情緒新科學 克特納", "expect": "敬畏", "who": "達契爾·克特納", "lang": "zh", "source": "user-named", "zh": "克特納《敬畏：帶來生命驚奇的情緒新科學》繁中（商業周刊）"}
+{"key": "named-keltner-awe-zh-cn", "query": "敬畏 达契尔 凯尔特纳", "expect": "敬畏", "who": "达契尔·凯尔特纳", "lang": "zh", "source": "user-named", "zh": "克特納《敬畏》簡中（另一種音譯：凱爾特納）"}
