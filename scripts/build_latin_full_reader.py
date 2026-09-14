@@ -420,8 +420,16 @@ def exercise_section(document, block: dict | None, lesson: int) -> None:
         H.set_run_font(head.add_run(f"{item['no']:02d}　"), H.FONT_UI, H.LABEL_PT,
                        bold=True, color=H.ACCENT)
         if item["kind"] == "quoted":
-            H.set_run_font(head.add_run(item["ref"]), H.FONT_TRANSLIT,
-                           H.CAPTION_PT, color=H.MUTED)
+            # 🚨 上冊的出處是 EST.4.12 這種書卷代碼，下冊的是《本篤十六：天主是愛》
+            # 這種中文篇名。整串設成轉寫字體，漢字就全部回退到 LibreOffice 自己
+            # 挑的字型——實測是沒有內嵌的 NotoSansJP-Thin，送印會被換掉。按字種分。
+            for piece in re.split(r"([　-鿿＀-￯]+)", item["ref"]):
+                if not piece:
+                    continue
+                cjk = bool(re.match(r"[　-鿿＀-￯]", piece))
+                H.set_run_font(head.add_run(piece),
+                               H.FONT_ZH if cjk else H.FONT_TRANSLIT,
+                               H.CAPTION_PT, color=H.MUTED)
         else:
             H.set_run_font(head.add_run("自撰"), H.FONT_ZH,
                            H.CAPTION_PT - 0.4, color=H.MUTED)
