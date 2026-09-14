@@ -1882,8 +1882,11 @@ def build(reader: str, mode: str, only: int | None, want_guide: bool,
                 # 上那份原始切片。抽出來的用途只剩一個：不讓它混進正文。
             else:
                 bk.flow(f"出處：{origin}", size=9.0, gap=8, color=(0.35,) * 3)
-                bk.flow(f"節錄：{meta.get('節錄範圍', '')}　實質 {meta.get('實質字數', '?')}",
-                        size=9.0, gap=10, color=(0.35,) * 3)
+                # 只有泛讀、沒有精讀的篇（〈門をたたけ〉）不印這一行，
+                # 不然會是「節錄：　實質 約 0 字」（使用者 2026-09-14 指出）。
+                if meta.get("節錄範圍"):
+                    bk.flow(f"節錄：{meta['節錄範圍']}　實質 {meta.get('實質字數', '?')}",
+                            size=9.0, gap=10, color=(0.35,) * 3)
                 def jp(ts):     # 文語訳的節號寫成 **12**　，印本不要星號
                     return [("p", re.sub(r"\*\*(\d+)\*\*　", r"\1　", t)) for t in ts]
 
