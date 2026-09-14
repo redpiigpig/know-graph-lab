@@ -1,0 +1,13 @@
+{
+  "volume": 2, "lesson": 48, "author": "opus-5-hand-written",
+  "note": "Februarius 兩層語料都沒有字形。",
+  "sentences": [
+    {"latin": "adversantur consentaneum occupavit", "chinese": "他們反對，他卻佔據了那相宜之事。", "targets": ["adversor", "consentaneus", "occupo"]},
+    {"latin": "impulsu ubera repetit", "chinese": "他在衝擊中重返那豐饒。", "targets": ["impulsus", "uber", "repeto"]},
+    {"latin": "consummata eget sapienter", "chinese": "那完成之事明智地有所需。", "targets": ["consummo", "egeo", "sapienter"]},
+    {"latin": "solutio consentaneae adversatur", "chinese": "那償還與相符之事相抵。", "targets": ["solutio", "consentaneus", "adversor"]},
+    {"latin": "intuetur promovet prospectum", "chinese": "他注視著，並推進那展望。", "targets": ["intueor", "promoveo", "prospectus"]},
+    {"latin": "notitiam redigit egregius", "chinese": "那卓越的人把那知識收攏起來。", "targets": ["notitia", "redigo", "egregius"]},
+    {"latin": "sapienter solutio occupaverunt", "chinese": "他們明智地佔據了那償還。", "targets": ["sapienter", "solutio", "occupo"]}
+  ]
+}

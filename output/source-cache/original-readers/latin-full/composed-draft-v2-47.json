@@ -1,0 +1,13 @@
+{
+  "volume": 2, "lesson": 47, "author": "opus-5-hand-written",
+  "note": "morbus 只剩奪格 morbo，Utinam 只有句首大寫那一形。",
+  "sentences": [
+    {"latin": "tertio commode Ordinario", "chinese": "第三，恰當地按常規。", "targets": ["tertio", "commode", "ordinarius"]},
+    {"latin": "centrum manat unctionis", "chinese": "那傅油的中心湧流出來。", "targets": ["centrum", "mano", "unctio"]},
+    {"latin": "dubitatione morbo illuc", "chinese": "在疑惑與疾病中往那裡去。", "targets": ["dubitatio", "morbus", "illuc"]},
+    {"latin": "patrocinium designat eximia", "chinese": "那庇護標示出非凡之事。", "targets": ["patrocinium", "designo", "eximius"]},
+    {"latin": "hactenus fas mercatus", "chinese": "至此，那合乎神旨的交易。", "targets": ["hactenus", "fas", "mercor"]},
+    {"latin": "Utinam mendacium designavit", "chinese": "但願他已指明那謊言。", "targets": ["utinam", "mendacium", "designo"]},
+    {"latin": "unctio commodius manare", "chinese": "那傅油要更合宜地湧流。", "targets": ["unctio", "commode", "mano"]}
+  ]
+}
