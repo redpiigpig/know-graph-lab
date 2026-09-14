@@ -1,0 +1,13 @@
+{
+  "volume": 2, "lesson": 37, "author": "opus-5-hand-written",
+  "note": "necessitudo 只認字形。",
+  "sentences": [
+    {"latin": "obiectum structura nonne", "chinese": "那對象、那結構，難道不是嗎。", "targets": ["objectum", "structura", "nonne"]},
+    {"latin": "indicavit considerationem paupertatis", "chinese": "他指出了對貧窮的審思。", "targets": ["indico", "consideratio", "paupertas"]},
+    {"latin": "supernaturali eventus acquirere", "chinese": "要以超性的方式獲得那結果。", "targets": ["supernaturalis", "eventus", "acquiro"]},
+    {"latin": "nimia denuo robur", "chinese": "過度的，再一次，那堅固。", "targets": ["nimius", "denuo", "robur"]},
+    {"latin": "evenit congruum necessitudine", "chinese": "那相稱之事在關係中發生了。", "targets": ["evenio", "congruus", "necessitudo"]},
+    {"latin": "inanis constanter structuræ", "chinese": "那結構恆常地虛空。", "targets": ["inanis", "constanter", "structura"]},
+    {"latin": "roboris eventu acquisivit", "chinese": "他藉那結果取得了堅固。", "targets": ["robur", "eventus", "acquiro"]}
+  ]
+}
