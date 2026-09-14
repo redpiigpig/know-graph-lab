@@ -85,6 +85,7 @@ def target_words_in(text: str, items, known, attestation, taught_forms) -> list[
         for item in items
         if (item.keys & seen)
         or (item.written_keys & seen_forms)
+        or (item.written_keys & written)
         or (len(item.written_keys) > 1 and item.written_keys <= written)
     ]
 

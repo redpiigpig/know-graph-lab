@@ -197,6 +197,12 @@ def coverage_report(
     def hit(item) -> bool:
         if item.keys & seen or item.written_keys & seen_forms:
             return True
+        # The entry's own spelling, wherever it stands.  ``ἦν`` is this reader's
+        # word and εἰμί is the corpus's lemma for it, so a sentence containing
+        # ἦν resolves through the lemma route and never reaches the form one --
+        # the word is written on the page and still counted as unpractised.
+        if item.written_keys & {key for written in per_sentence for key in written}:
+            return True
         # A phrase is practised only when all of it stands in one sentence --
         # crediting ``εἰ μή`` to any sentence containing μή would make the
         # coverage gate stop meaning anything for it.
