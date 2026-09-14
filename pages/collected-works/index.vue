@@ -149,7 +149,7 @@ useHead({ title: '全集 — Know Graph Lab' })
 const store = useCollectedWorksStore()
 
 // 學科顯示順序；未列出的學科接在最後（按字母序），空組不顯示。
-const DISCIPLINE_ORDER = ['哲學', '宗教學', '宗教社會學', '神學', '基督宗教研究', '佛學', '心理學', '社會學', '人類學']
+const DISCIPLINE_ORDER = ['哲學', '宗教學', '宗教社會學', '神學', '基督宗教研究', '佛學', '佛學研究', '心理學', '社會學', '人類學']
 // 某些傘狀學科的次領域（era 層）要固定順序，不依生年（如基督宗教研究：新約→舊約→教會史）
 const ERA_ORDER: Record<string, string[]> = {
   基督宗教研究: ['新約研究', '舊約研究', '教會史'],
@@ -286,7 +286,19 @@ const regionChips = computed(() => {
 /** 一個學科的作家 → 年代／地域小節（沿用原本「年代大標印一次、地域小標縮排」的版面）。 */
 function sectionsFor(discipline: string, list: CwAuthor[]): CwSection[] {
   const hasEra = list.some((a) => a.era)
+  const hasRegion = list.some((a) => a.region)
   if (!hasEra) {
+    // 只有地域沒有年代分層（如佛學研究：漢傳／日本／西方）。
+    // 🚨 少了這一段，region 會被整個忽略、三區攤平成一片。
+    if (hasRegion) {
+      return groupSorted(list, (a) => a.region || '其他').map(([region, regionList]) => ({
+        key: `${discipline}|${region}`,
+        showEra: false,
+        era: '',
+        region: region === '其他' ? '' : region,
+        authors: byYear(regionList),
+      }))
+    }
     return [{ key: discipline, showEra: false, era: '', region: '', authors: byYear(list) }]
   }
   let eraEntries = groupSorted(list, (a) => a.era || '其他')
