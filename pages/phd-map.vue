@@ -442,9 +442,70 @@
         </div>
       </section>
 
-      <!-- 拾壹 待確認 -->
+      <!-- 拾壹 獎助 -->
+      <section id="grants" class="mb-12 scroll-mt-16">
+        <SectionHeading num="拾壹" title="獎助"
+          lede="兩筆互不衝突：助學金看的是論文計畫與進度，研究獎勵看的是已發表的成果。" />
+
+        <h3 class="sub-h">研究生助學金（研究助學金類）</h3>
+        <div class="tbl-wrap">
+          <table class="tbl">
+            <tbody>
+              <tr v-for="r in grantRules" :key="r.k">
+                <th class="w-20 sm:w-24 bg-gray-50 font-normal text-gray-500 text-xs whitespace-nowrap align-top">{{ r.k }}</th>
+                <td v-html="r.v" />
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="rounded-xl border border-red-200 bg-red-50 px-4 py-3.5">
+          <h3 class="text-sm font-bold text-red-800 mt-0 mb-1">🚨 領取期間每月都有動作</h3>
+          <p class="text-xs text-red-900/85 leading-relaxed">
+            每月須與指導教授進行<b>二次以上</b>研究進度討論，並於<b>次月五日前</b>把〈研究生論文指導紀錄表〉送交研發處；
+            學期補助結束後繳論文計畫進度審查表，<b>審查通過才核發次學期</b>。未依規定繳交者，
+            <b>自次學期起喪失各類助學金之申請資格</b>。
+          </p>
+        </div>
+
+        <h3 class="sub-h">學生研究獎勵（論文發表獎勵）</h3>
+        <div class="tbl-wrap">
+          <table class="tbl">
+            <tbody>
+              <tr v-for="r in awardRules" :key="r.k">
+                <th class="w-20 sm:w-24 bg-gray-50 font-normal text-gray-500 text-xs whitespace-nowrap align-top">{{ r.k }}</th>
+                <td v-html="r.v" />
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="sub-h">我的成果對應的申請年度</h3>
+        <div class="tbl-wrap">
+          <table class="tbl">
+            <thead><tr><th>發表</th><th class="whitespace-nowrap">日期</th><th class="whitespace-nowrap">成果年度</th><th class="whitespace-nowrap">送件時間</th></tr></thead>
+            <tbody>
+              <tr v-for="a in awardSchedule" :key="a.t">
+                <td class="break-words">{{ a.t }}</td>
+                <td class="text-gray-600 whitespace-nowrap">{{ a.d }}</td>
+                <td class="text-gray-600 whitespace-nowrap">{{ a.y }}</td>
+                <td :class="['whitespace-nowrap', a.now ? 'text-red-800 font-semibold' : 'text-gray-600']">{{ a.when }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="rounded-xl border border-amber-200 bg-amber-50 px-4 py-3.5">
+          <h3 class="text-sm font-bold text-amber-800 mt-0 mb-1">印順學那篇下個月就能送，但先確認署名</h3>
+          <p class="text-xs text-amber-900/85 leading-relaxed">
+            辦法第二條要求「<b>作者之單位註明為玄奘大學</b>」。8/28 發表時是 9/7 才開學的準新生，
+            若論文上的單位署名不是玄奘，這一條可能卡住。先翻
+            <code>投稿\2026.08.28-29 印順學研討會\</code> 那份 docx 的署名，或直接問研發處。
+          </p>
+        </div>
+      </section>
+
+      <!-- 拾貳 待確認 -->
       <section id="todo" class="mb-12 scroll-mt-16">
-        <SectionHeading num="拾壹" title="待確認事項" />
+        <SectionHeading num="拾貳" title="待確認事項" />
         <div v-for="blk in todos" :key="blk.who" class="mb-4 rounded-xl border border-red-200 bg-red-50 px-4 py-4">
           <h3 class="text-sm font-bold text-red-800 mb-2">{{ blk.who }}</h3>
           <ol class="pl-5 list-decimal space-y-1.5 marker:text-red-800/50">
@@ -453,15 +514,17 @@
         </div>
       </section>
 
-      <!-- 拾貳 法源 -->
+      <!-- 拾參 法源 -->
       <section id="sources" class="mb-10 scroll-mt-16">
-        <SectionHeading num="拾貳" title="法源出處" />
+        <SectionHeading num="拾參" title="法源出處" />
         <ul class="bullets">
           <li><b>系《宗教與文化學系博士班修業辦法》</b>（113.10.21 系務會議通過；115.4.13 修正；115.5.6 第 84 次教務會議通過）—— 未單獨公布，<b>全文夾在系網「本系課程 → 課程規劃 → 博士班 → 114／115 級博士班課程科目表、地圖」PDF 的後半段</b>。</li>
           <li>校《研究生學位考試辦法》（114.02.04 教育部核備）</li>
           <li>校《學生選課辦法》（114.4.30 第 80 次教務會議修正）</li>
           <li>校《學生抵免學分辦法》</li>
           <li>校《校際選課實施辦法》</li>
+          <li>校《研究生助學金實施要點》（114.9.3 第 339 次行政會議修正）</li>
+          <li>校《學生研究獎勵辦法》（111.12.14 第 308 次行政會議修正）</li>
           <li>《玄奘大學 115 級日間學制博士班學生修業規定》（115.5.6 第 84 次教務會議）—— 教務處「各級別修業規定」頁</li>
         </ul>
       </section>
@@ -497,6 +560,7 @@ const sections = [
   { id: 'activity', nav: '學術活動' },
   { id: 'events', nav: '研討會紀錄' },
   { id: 'journals', nav: '投稿地圖' },
+  { id: 'grants', nav: '獎助' },
   { id: 'todo', nav: '待確認' },
   { id: 'sources', nav: '法源' },
 ]
@@ -672,6 +736,35 @@ const confCycle = [
   { n: 'AAS Annual Conference（亞洲研究協會）', host: 'Association for Asian Studies', where: '國際', when: '每年 3 月', cfp: 'CFP 約前一年 8 月截止', f: 'b c d', note: '台灣宗教史個案的主要國際場合' },
 ]
 
+const grantRules = [
+  { k: '依據', v: '校《研究生助學金實施要點》（114.9.3 第 339 次行政會議修正）' },
+  { k: '資格', v: '已註冊在學、<b>未有專職工作</b>、未獲學雜費全額減免或獎助；博士生一至五年級，並須提出學位論文計畫書' },
+  { k: '次數', v: '<b>限申請一次</b>；博士班補助期間最長不得逾<b>二年</b>（碩士班一年）' },
+  { k: '發放', v: '按月發放，研究助學金以<b>十個月</b>為限' },
+  { k: '申請期限', v: '由研發處逐年公告，要點未訂' },
+  { k: '審查', v: '召開學生學術發展專案審查小組會議 → 報請校長核定 → 公告' },
+  { k: '公告時程', v: '<b>要點沒有規定日期</b>。研發處網頁、學校公告區與信箱都查不到 115-1 的通知，只能直接問研發處' },
+  { k: '停發', v: '未完成規範項目、被記小過以上、非在學身分，或通過重點計畫的論文題目未經審查即中止或變更研究題目' },
+]
+
+const awardRules = [
+  { k: '依據', v: '校《學生研究獎勵辦法》（111.12.14 第 308 次行政會議修正）' },
+  { k: '申請時間', v: '<b>每年 10 月</b>向研發處提出' },
+  { k: '成果期間', v: '<b>前一年 10 月 1 日至當年 9 月 30 日</b>' },
+  { k: '適用項目', v: '第三類　發表於具審查機制之<b>學術期刊</b>論文<br>第四類　發表於具審查機制之<b>學術研討會</b>論文' },
+  { k: '前提', v: '以玄奘大學身分發表，<b>作者之單位須註明為玄奘大學</b>' },
+  { k: '金額', v: '按獎勵點數換算，由學術發展委員會在預算額度內審定。<b>點數附表未公開</b>，須向研發處索取' },
+  { k: '分配', v: '獨立著作全額；兩位以上學生合著由合著者自行分配；<b>合著人含教師且教師為第一作者，只給 50%</b>' },
+  { k: '限制', v: '不得以同一成果<b>重複申請校內相關獎勵</b>；經查抄襲或違反學術倫理則取消所有獎勵' },
+  { k: '表單', v: '研發處「表單下載 → 學生研究獎勵」，依類別分為 1、2、3、4、5-1、5-2、6 類申請書' },
+]
+
+const awardSchedule = [
+  { t: '聖嚴法師與法鼓系統對「印順學派之成立」的影響與歷史交織（研討會‧第四類）', d: '2026/8/28–29', y: '2025/10/1–2026/9/30', when: '2026 年 10 月', now: true },
+  { t: '龐君華會督的衛斯理神學實踐與「新修道主義」願景（研討會‧第四類）', d: '2026/10/23–24', y: '2026/10/1–2027/9/30', when: '2027 年 10 月', now: false },
+  { t: '信仰與學術的交互作用：近半世紀印順學與印順學派歷史發展回顧（期刊‧第三類）', d: '2027 年該期', y: '2026/10/1–2027/9/30', when: '2027 年 10 月', now: false },
+]
+
 const gates = [
   { n: '01', t: '修滿 24 學分', p: '7 / 24', s: 'run', d: '專業必修 9 ＋ 專業選修 15　·　第二條' },
   { n: '02', t: '完成語言要求', p: '辦理中', s: 'run', d: '中／英文檢定 ＋ 一門研究語言　·　第三條' },
@@ -769,6 +862,15 @@ const quals = [
 ]
 
 const todos = [
+  {
+    who: '研發處　分機 2232、2236、2238（白聖長老大樓 1 樓）',
+    items: [
+      '115-1 研究生助學金的審查與公告時程？（要點未訂，由研發處公告）',
+      '學生研究獎勵 115 年度的收件起訖日？（辦法只寫「每年 10 月」）',
+      '期刊與研討會論文的<b>獎勵點數表</b>能否提供？（網頁上只掛各系競賽展演分級表）',
+      '入學前（2026/8/28）發表、但當時已錄取本校的成果，單位署名要怎麼認定？',
+    ],
+  },
   {
     who: '教務處註冊課務組　分機 1227、1228',
     items: [
