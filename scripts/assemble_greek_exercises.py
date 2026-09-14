@@ -32,7 +32,7 @@ from typing import Any, Sequence
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from build_greek_lemma_corpus import CACHE  # noqa: E402
+from build_greek_lemma_corpus import CACHE, bare, fold_key  # noqa: E402
 from build_greek_exercises import (  # noqa: E402
     VOLUME_CORPORA,
     cumulative_sets,
@@ -90,6 +90,35 @@ def target_words_in(text: str, items, known, attestation, taught_forms) -> list[
     ]
 
 
+def unreachable_words(items, known, attestation, taught_forms) -> set[int]:
+    """Ordinals of words no sentence could ever practise.
+
+    Gate one refuses a form the corpus never wrote, gate two refuses a word the
+    lessons never taught, and gate three demands all twenty of a lesson's words.
+    For a word with no writable form the three contradict, and the lesson is
+    unsatisfiable rather than merely hard: ``πτελέα`` (the elm) is in the
+    vocabulary and in neither corpus this volume checks against.
+
+    Reachability is decided by running the real gates -- a word is reachable
+    when some attested spelling both credits it and passes the taught-words
+    gate.  Deciding it any other way leaves a lesson holding a word it can
+    neither practise nor excuse; the Latin set had exactly that.
+    """
+    out: set[int] = set()
+    for item in items:
+        reachable = False
+        for printed, keys in attestation.exact.items():
+            if not ((keys & item.keys) or (fold_key(bare(printed)) in item.written_keys)):
+                continue
+            report = checker.verify_sentence(printed, known, attestation, taught_forms)
+            if not report["untaught"] and not report["unattested"]:
+                reachable = True
+                break
+        if not reachable:
+            out.add(item.ordinal)
+    return out
+
+
 def build_volume(volume: int) -> dict[str, Any]:
     mined_path = CACHE / f"exercises-greek-vol{volume}.json"
     if not mined_path.exists():
@@ -142,10 +171,21 @@ def build_volume(volume: int) -> dict[str, Any]:
             item["no"] = number
 
         practised = {word["ordinal"] for item in rows for word in item["targetWords"]}
-        not_practised = [item.public_record() for item in items if item.ordinal not in practised]
+        unreachable_ordinals = unreachable_words(items, known, attestation, taught_forms)
+        unreachable = [item for item in items if item.ordinal in unreachable_ordinals]
+        not_practised = [
+            item.public_record()
+            for item in items
+            if item.ordinal not in practised and item.ordinal not in unreachable_ordinals
+        ]
         notes = []
         if len(anchors) < QUOTED_PER_LESSON:
             notes.append("本課無可用經典原句，十題全由自撰題補")
+        if unreachable:
+            notes.append(
+                "本冊語料中無可用字形，因而無法入題："
+                + "、".join(item.headword for item in unreachable)
+            )
         lessons_out.append({
             "lesson": lesson,
             "id": f"grc-v{volume}-lesson-{lesson:02d}",
@@ -153,8 +193,9 @@ def build_volume(volume: int) -> dict[str, Any]:
             "items": rows,
             "coverage": {
                 "lessonWords": len(items),
-                "practised": len(items) - len(not_practised),
+                "practised": len(items) - len(not_practised) - len(unreachable),
                 "notPractised": not_practised,
+                "notAttested": [item.public_record() for item in unreachable],
             },
         })
 
