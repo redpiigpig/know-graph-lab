@@ -310,26 +310,26 @@ def verses(chapter_text: str, lo: int, hi: int) -> str:
 #    體漢字詞八成看得懂，真正要查的是助詞與活用；文語的「なり／べし／係り結び」
 #    沒有漢字可以扶。
 TARGET = {
-    3: 700,                      # 起步不動
-    4: 1300, 5: 1300,            # 現代口語，文法上手後加碼
+    3: 700,                      # 起步
+    4: 1200, 5: 1200,            # 現代口語
     6: 800,                      # 文語訳（附振假名）
-    7: 1400,
+    7: 1200,
     8: 1000,                     # 文語訳
-    10: 1600, 11: 1600, 12: 1600,
+    10: 1200, 11: 1200, 12: 1200,
     13: 1100,                    # 舊字舊假名的文語體，比現代文降一階
-    14: 1800,                    # 口語講演（另有文語序 400 字對照）
-    15: 1500,                    # 學術日文
+    14: 1200,                    # 口語講演（另有文語序 400 字對照）
+    15: 1200,                    # 學術日文
 }
 
 # 泛讀：**不逐詞注解**，讀完寫三句中文摘要。博士班文獻選讀的常規是精讀＋泛讀
 # 兩軌；只有精讀的話，「一週讀多少日文」會被逐詞注解的成本綁死（使用者 2026-09-12
 # 問「份量是不是太少」時的實況是精讀平均 1,172 字、語料只用掉 12%）。
 # 泛讀段緊接在同一篇的精讀段之後，各週依序往下推，**與任何一週的精讀都不重疊**。
-EXTENSIVE = {
-    3: 1500, 4: 1800, 5: 1800, 7: 2000,
-    10: 2000, 11: 2000, 13: 1500, 14: 2200, 15: 2000,
-    # W06／W08 的泛讀是「把那一章讀完」，W12 是「把那一篇讀完」，不用字數控制
-}
+EXTENSIVE = {w: t * 2 for w, t in TARGET.items()}
+# W06／W08 的泛讀是「把那一章讀完」，W12 是「把那一篇讀完」，不用字數控制
+for _w in (6, 8, 12):
+    EXTENSIVE.pop(_w, None)
+_ = {"註": "使用者 2026-09-14 定案：精讀 600–1200 字，泛讀約兩倍"}
 
 
 def build_readings() -> dict[int, list[dict]]:
@@ -386,17 +386,21 @@ def build_readings() -> dict[int, list[dict]]:
     # 〈門をたたけ〉是序與第一章之間那個沒有編號的卷頭章，學生與先生的對話體，
     # 對 N5 比論說文好讀。**只取開頭約 1,200 字當泛讀**（使用者 2026-09-14 定案）：
     # 整章 4,240 字會讓 W03 變 6,137 字，比任何一週都重，而它是最早的一週。
-    mon_ext, mon_e, mon_n = fit(mon, 0, 1200)
+    # 🚨 **每一篇都要有精讀**：精讀是正式功課，泛讀是額外加的（使用者 2026-09-14：
+    #    「哪有人沒有正式功課只有多的功課」）。所以這一篇也切精讀＋泛讀兩段，
+    #    總量仍維持約 1,200 字。
+    mon_body, mon_e1, mon_n1 = fit(mon, 0, 600)
+    mon_ext, mon_e, mon_n = fit(mon, mon_e1, 1200)
     r[3] = [dict(stem="矢內原忠雄_キリスト教入門_序", title="矢內原忠雄《キリスト教入門》序",
                  src="nyumon", body=t, net=n1, ext=ext, ext_net=net_len(ext),
                  extent=f"全書序（共 {len(jo)} 段／約 {whole(jo)} 字）之第 1–{e1} 段",
                  ext_extent=f"序之第 {e1 + 1}–{len(jo)} 段（讀到序末，本週把序整篇讀完）"),
             dict(stem="矢內原忠雄_キリスト教入門_門をたたけ",
                  title="矢內原忠雄《キリスト教入門》門をたたけ（卷頭章・對話體）",
-                 src="nyumon", body="", net=0, ext=mon_ext, ext_net=mon_n,
-                 extent="",
-                 ext_extent=f"卷頭章〈門をたたけ〉（共 {len(mon)} 段／約 {whole(mon)} 字）"
-                            f"之第 1–{mon_e} 段（本週只泛讀開頭）")]
+                 src="nyumon", body=mon_body, net=mon_n1, ext=mon_ext, ext_net=mon_n,
+                 extent=f"卷頭章〈門をたたけ〉（共 {len(mon)} 段／約 {whole(mon)} 字）"
+                        f"之第 1–{mon_e1} 段",
+                 ext_extent=f"〈門をたたけ〉之第 {mon_e1 + 1}–{mon_e} 段（接續精讀，不重疊）")]
 
     ch1_label = f"第一章（共 {len(ch1)} 段／約 {whole(ch1)} 字）"
     b, nxt = band(ch1, 0, 4, ch1_label)
@@ -713,6 +717,13 @@ BLEED = {
 
 def check_bleed(readings: dict[int, list[dict]]) -> int:
     bad = 0
+    # 🚨 每一篇都要有精讀。精讀是正式功課，泛讀是額外加的——沒有精讀只有泛讀的篇
+    #    不成立（使用者 2026-09-14）。
+    for week, items in sorted(readings.items()):
+        for it in items:
+            if not it.get("net"):
+                print(f"  ★ W{week:02d} {it['title'][:34]} 沒有精讀，只有泛讀")
+                bad += 1
     for week, items in sorted(readings.items()):
         for it in items:
             marks = BLEED.get(it["stem"], ())
