@@ -1,0 +1,13 @@
+{
+  "volume": 2, "lesson": 50, "author": "opus-5-hand-written",
+  "note": "Aprilis 兩層語料都沒有字形。primarius 只認字形，Atqui 只有句首大寫那一形。",
+  "sentences": [
+    {"latin": "certitudine Attende custodiam", "chinese": "你要以確信留心那看守。", "targets": ["certitudo", "attendo", "custodia"]},
+    {"latin": "subditi vindicare conceptionem", "chinese": "臣民們要聲張那構想。", "targets": ["subditus", "vindico", "conceptio"]},
+    {"latin": "convenienter Atqui primarium", "chinese": "然而，適切地是那首要的。", "targets": ["convenienter", "atqui", "primarius"]},
+    {"latin": "intelligentiam prudens profectum", "chinese": "那聰慧者的理智與進步。", "targets": ["intellegentia", "prudens", "profectus"]},
+    {"latin": "manifestatione fame foveat", "chinese": "願他在飢餓中以彰顯來培育。", "targets": ["manifestatio", "fames", "foveo"]},
+    {"latin": "custodia potior defensio", "chinese": "那看守是更重要的防衛。", "targets": ["custodia", "potior", "defensio"]},
+    {"latin": "prudentes intelligentia vindicat", "chinese": "聰慧的人以理智聲張。", "targets": ["prudens", "intellegentia", "vindico"]}
+  ]
+}
