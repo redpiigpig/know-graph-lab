@@ -243,6 +243,12 @@ def paras(text: str) -> list[str]:
     return [p.strip() for p in text.splitlines() if p.strip()]
 
 
+def _looks_like_heading(p: str) -> str | bool:
+    """短、又不以句讀收尾＝標題（「第一章　人生と宗教」「１．４　第三期」「第二回」）。"""
+    s = p.strip()
+    return len(s) <= 24 and not s.endswith(("。", "」", "）", "、", "？", "！"))
+
+
 def fit(ps: list[str], lo: int, target: int) -> tuple[str, int, int]:
     """從第 lo 段起，取到實質字數最接近 target 的那個段界。
 
@@ -264,6 +270,12 @@ def fit(ps: list[str], lo: int, target: int) -> tuple[str, int, int]:
         before = run - net_len(ps[i - 1])
         if abs(before - target) < abs(run - target):
             i, run = i - 1, before
+    # 🚨 不要停在標題上。W15 的泛讀本來剛好收在小標「１．４　第三期」，整段讀完
+    #    最後一行是個沒有內文的標題（2026-09-14 逐篇核對時抓到）。**後面還有段落**
+    #    時才退（讀到文末的那種，末段是署名「矢内原忠雄」，那是該留的）。
+    while i - 1 > lo and i < len(ps) and _looks_like_heading(ps[i - 1]):
+        i -= 1
+        run -= net_len(ps[i])
     return "\n\n".join(ps[lo:i]), i, run
 
 
@@ -335,7 +347,17 @@ def build_readings() -> dict[int, list[dict]]:
     mt5 = read_scripture("マタイ伝福音書_第五章__文語訳_.txt")
     mt6 = read_scripture("マタイ伝福音書_第六章__文語訳_.txt")
 
-    jo = paras(between(nyumon, r"^序$", r"^第一章"))
+    # 🚨 序的下一個標題**不是**第一章。《キリスト教入門》的順序是
+    #      序（段 2–11，末段是署名「矢内原忠雄」）
+    #      門をたたけ（段 12–36，沒有編號的卷頭章，學生與先生的對話體）
+    #      キリスト教入門＋マタイ伝七章經句（內題，段 37–38）
+    #      第一章　人生と宗教（段 39–）
+    #    舊版寫 `between(序, 第一章)`，把後面三塊全吃進來卻掛著「序」的標籤，
+    #    於是讀本第 5 頁印著「門をたたけ／学生Ａ「私は大学に入ってから…」」，
+    #    而標題仍寫《キリスト教入門》序（使用者 2026-09-14 問「這些仍是同一篇
+    #    文章嗎？」）。**邊界要抓「下一個標題」，不能猜它叫什麼。**
+    jo = paras(between(nyumon, r"^序$", r"^門をたたけ$"))
+    mon = paras(between(nyumon, r"^門をたたけ$", r"^キリスト教入門$"))
     ch1 = paras(between(nyumon, r"^第一章　人生と宗教", r"^第二章"))
     ch2 = paras(between(nyumon, r"^第二章　いかにしてキリスト教を学ぶか", r"^第三章"))
 
@@ -358,9 +380,23 @@ def build_readings() -> dict[int, list[dict]]:
             ext_extent=f"{label}之第 {e1 + 1}–{e2} 段（接續精讀，不重疊）" if ext else "",
         ), e2
 
-    b, nxt = band(jo, 0, 3, f"全書序（共 {len(jo)} 段／約 {whole(jo)} 字）")
+    # 序只有 10 段 1,897 字，精讀 700 之後剩下的全部當泛讀，這一週把序整篇讀完。
+    t, e1, n1 = fit(jo, 0, TARGET[3])
+    ext = "\n\n".join(jo[e1:])
+    # 〈門をたたけ〉是序與第一章之間那個沒有編號的卷頭章，學生與先生的對話體，
+    # 對 N5 比論說文好讀。**只取開頭約 1,200 字當泛讀**（使用者 2026-09-14 定案）：
+    # 整章 4,240 字會讓 W03 變 6,137 字，比任何一週都重，而它是最早的一週。
+    mon_ext, mon_e, mon_n = fit(mon, 0, 1200)
     r[3] = [dict(stem="矢內原忠雄_キリスト教入門_序", title="矢內原忠雄《キリスト教入門》序",
-                 src="nyumon", **b)]
+                 src="nyumon", body=t, net=n1, ext=ext, ext_net=net_len(ext),
+                 extent=f"全書序（共 {len(jo)} 段／約 {whole(jo)} 字）之第 1–{e1} 段",
+                 ext_extent=f"序之第 {e1 + 1}–{len(jo)} 段（讀到序末，本週把序整篇讀完）"),
+            dict(stem="矢內原忠雄_キリスト教入門_門をたたけ",
+                 title="矢內原忠雄《キリスト教入門》門をたたけ（卷頭章・對話體）",
+                 src="nyumon", body="", net=0, ext=mon_ext, ext_net=mon_n,
+                 extent="",
+                 ext_extent=f"卷頭章〈門をたたけ〉（共 {len(mon)} 段／約 {whole(mon)} 字）"
+                            f"之第 1–{mon_e} 段（本週只泛讀開頭）")]
 
     ch1_label = f"第一章（共 {len(ch1)} 段／約 {whole(ch1)} 字）"
     b, nxt = band(ch1, 0, 4, ch1_label)
@@ -649,8 +685,48 @@ Perplexity、DeepL、GoldenDict、OCR），拿真的論文練最實在。**題�
 """
 
 
+# 每一篇**不該**出現的字樣：隔壁章節的標題或其標誌性開頭。切過頭就會踩到。
+# 🚨 這條閘是 2026-09-14 補的：序的邊界寫成「到第一章為止」，但序與第一章之間
+#    還夾著一個沒有編號的卷頭章〈門をたたけ〉，於是「序」那一篇印出了
+#    「門をたたけ／学生Ａ「私は大学に入ってから…」」，標題卻仍寫《キリスト教入門》序。
+#    印出來每一頁都正常，只有讀內容才看得出換了一篇（[[feedback_reader_silent_failures]]）。
+# 🚨 比對的是「**整段就等於這個標題**」，不是「文中有沒有提到」。章名被提及很常見，
+#    而且正是序文會做的事：《キリスト教入門》的序裡就寫著「はしがきに当たる
+#    『門をたたけ』の一篇を書き上げ」，《後世への最大遺物》的はしがき也自述
+#    「第六夏期学校において述べし余の講話」。用 `in` 比對這兩筆都會誤報。
+BLEED = {
+    "矢內原忠雄_キリスト教入門_序": ("門をたたけ", "キリスト教入門", "第一章　人生と宗教"),
+    "矢內原忠雄_キリスト教入門_第一章上": ("第二章　いかにしてキリスト教を学ぶか", "門をたたけ"),
+    "矢內原忠雄_キリスト教入門_第一章下": ("第二章　いかにしてキリスト教を学ぶか", "門をたたけ"),
+    "矢內原忠雄_キリスト教入門_第二章": ("第三章　キリスト教の歴史",),
+    "內村鑑三_後世への最大遺物_序_文語": ("後世への最大遺物", "夏期演説　後世への最大遺物", "第一回"),
+    # 🚨《後世への最大遺物》的講演本體有**兩場**：第一回（段 19–34）、第二回（段 35–）。
+    #    這一篇的標題寫「第一回 冒頭」，跨進第二回就是換了一場講演。目前切到段 25，
+    #    還在第一回內，但目標字數一調就可能越界。
+    "內村鑑三_後世への最大遺物_講演冒頭_口語": ("第二回", "他の人の嫌がることをなせ"),
+}
+
+
+def check_bleed(readings: dict[int, list[dict]]) -> int:
+    bad = 0
+    for week, items in sorted(readings.items()):
+        for it in items:
+            marks = BLEED.get(it["stem"], ())
+            if not marks:
+                continue
+            for where, text in (("精讀", it["body"]), ("泛讀", it.get("ext", ""))):
+                for p in (x.strip() for x in text.split("\n") if x.strip()):
+                    if p in marks:
+                        print(f"  ★ W{week:02d} {it['title'][:30]} 的{where}裡出現獨立成段的"
+                              f"「{p}」——切過頭，吃到隔壁章了")
+                        bad += 1
+    print("  切分檢查：" + ("通過" if not bad else f"{bad} 項要看"))
+    return bad
+
+
 def main() -> None:
     readings = build_readings()
+    check_bleed(readings)
     plan = plan_text(readings)
 
     os.makedirs(DEST, exist_ok=True)

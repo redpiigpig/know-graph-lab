@@ -23,6 +23,7 @@ import os
 import re
 import shutil
 import sys
+import time
 from pathlib import Path
 
 import fitz
@@ -65,6 +66,19 @@ VERTICAL = {
     "《": "︽", "》": "︾", "「": "﹁", "」": "﹂",
     "『": "﹃", "』": "﹄", "—": "︱", "─": "︱",
 }
+
+
+def _copy(src: Path, dst: Path) -> None:
+    """🚨 Drive 上的檔案剛寫完會被 DriveFS 鎖住幾秒，`copy2` 直接拋 WinError 32，
+    整支腳本就停在第一本（2026-09-14：只出了上冊書背，其餘三本留著舊的）。
+    重試幾次就過；真的過不去也只報一行，不要讓其餘的書跟著不做。"""
+    for wait in (0.5, 1, 2, 4, 8):
+        try:
+            shutil.copy2(src, dst)
+            return
+        except PermissionError:
+            time.sleep(wait)
+    print(f"  ！複製不進去（檔案被鎖）：{dst}")
 
 
 def spine_width_mm(pages: int, gsm: int) -> float:
@@ -179,8 +193,8 @@ def main() -> None:
         #    只更新一邊就會拿著舊書背去貼新的書（2026-09-12 讀本本身就這樣過一次）。
         for d in SHARED_OUTS:
             d.mkdir(parents=True, exist_ok=True)
-            shutil.copy2(dst, d / dst.name)
-            shutil.copy2(src, d / src.name)
+            _copy(dst, d / dst.name)
+            _copy(src, d / src.name)
         made += 1
     if not made:
         sys.exit("一本都沒找到——先跑 build_course_reader.py")

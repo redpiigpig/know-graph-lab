@@ -24,6 +24,7 @@
   O 各個位置的檔要一致              只更新課程夾、送印那疊還是舊的（檔名一模一樣）
   P 附加符號要合進字母              來源把梵文轉寫的附標編成獨立字元：A´soka／bra¯hman:
   Q 書背要跟這一本一樣厚            頁數變了書背寬度就錯了，而它是另一支腳本產的
+  R 段落不該以小寫開頭            來源把一段切成兩塊，第二塊半句話被當成新段落還縮排
 """
 from __future__ import annotations
 
@@ -167,6 +168,23 @@ def check(path: Path) -> int:
         bad.append(f"P 附加符號沒合進字母 {len(stray)} 處：{[s[1] for s in stray[:6]]}"
                    f"（頁 {[s[0] for s in stray[:6]]}）")
 
+    # R 段落開頭不該是小寫字母。來源掃描把一段切成兩塊時，第二塊就是半句話，
+    #   讀本把它當成新的一段、還縮排兩格，印出來像是換了段落（使用者 2026-09-14：
+    #   「原本 pdf 當中是怎麼換行的，你都有正確換行並且空兩格嗎」）。
+    #   認法：**有首行縮排**、又以小寫開頭的行——縮排代表我們判它是新段落。
+    runon = []
+    for i in range(front, doc.page_count):
+        for b in doc[i].get_text("blocks"):
+            if abs(b[0] - INDENT_X) > 2:
+                continue                       # 不是段首，跳過
+            s = norm(b[4])
+            # 清單項目「a) …」「b) …」是正確的段首，雖然以小寫開頭（Otto 那篇
+            # 整篇都是字母清單，2026-09-14 誤報過 12 處）。
+            if s[:1].islower() and not re.match(r"[a-z][.)]\s", s):
+                runon.append((i + 1, s[:40]))
+    if runon:
+        bad.append(f"R 段落以小寫開頭（該接沒接）{len(runon)} 處：{runon[:4]}")
+
     # I 每頁份量
     counts = []
     thin_pages = []
@@ -188,7 +206,9 @@ def check(path: Path) -> int:
     # L 每一篇要真的收尾。🚨「印出來很正常但半途沒了」是這條線最貴的錯：
     #   Alles 那篇因為雙欄讀序錯亂，正文停在句子中間，接著竄進隔壁條目
     #   〈… IN AUSTRALIA AND OCEANIA〉（使用者 2026-09-12 指出）。
-    END_OK = ('.', '?', '!', '”', '’', '"', ')', ']', '。', '」', '』', '？', '！')
+    # 〕是課綱跳頁那兩篇的說明行結尾（build_course_reader.RANGE_NOTE），
+    # 不算斷句（2026-09-14 誤報過兩筆）。
+    END_OK = ('.', '?', '!', '”', '’', '"', ')', ']', '〕', '。', '」', '』', '？', '！')
     for i, (title, page) in enumerate(pieces):
         end = pieces[i + 1][1] - 1 if i + 1 < len(pieces) else doc.page_count
         last = ""
