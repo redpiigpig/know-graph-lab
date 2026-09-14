@@ -79,10 +79,13 @@ def target_words_in(text: str, items, known, attestation, taught_forms) -> list[
     report = checker.verify_sentence(text, known, attestation, taught_forms)
     seen = set(report["lemmas"])
     seen_forms = set(report.get("forms") or ())
+    written = set(report.get("written") or ())
     return [
         item.public_record()
         for item in items
-        if (item.keys & seen) or (item.written_keys & seen_forms)
+        if (item.keys & seen)
+        or (item.written_keys & seen_forms)
+        or (len(item.written_keys) > 1 and item.written_keys <= written)
     ]
 
 

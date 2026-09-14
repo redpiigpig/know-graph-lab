@@ -142,7 +142,9 @@ def verify_sentence(
     accent_variants: list[str] = []
     lemmas: set[str] = set()
     forms: set[str] = set()
+    written_all: set[str] = set()
     for word in words:
+        written_all.add(fold_key(bare(word)))
         found, how = attestation.look_up(word)
         if found is None:
             unattested.append(word)
@@ -170,6 +172,11 @@ def verify_sentence(
         "accentVariants": accent_variants,
         "lemmas": sorted(lemmas),
         "forms": sorted(forms),
+        # Every word's own spelling, whichever route vouched for it.  A
+        # two-word headword such as ``εἰ μή`` is only practised when both
+        # halves stand in one sentence, and each half has a lemma of its own,
+        # so neither the lemma route nor the form route can see the pair.
+        "written": sorted(written_all),
         "lengthOk": length_ok,
         "passed": not unattested and not untaught and len(words) >= MIN_WORDS,
     }
@@ -181,12 +188,21 @@ def coverage_report(
     """閘三：十題合起來把本課二十詞都用到了沒有。"""
     seen: set[str] = set()
     seen_forms: set[str] = set()
+    per_sentence: list[set[str]] = []
     for report in reports:
         seen |= set(report["lemmas"])
         seen_forms |= set(report.get("forms") or ())
+        per_sentence.append(set(report.get("written") or ()))
 
     def hit(item) -> bool:
-        return bool(item.keys & seen) or bool(item.written_keys & seen_forms)
+        if item.keys & seen or item.written_keys & seen_forms:
+            return True
+        # A phrase is practised only when all of it stands in one sentence --
+        # crediting ``εἰ μή`` to any sentence containing μή would make the
+        # coverage gate stop meaning anything for it.
+        return len(item.written_keys) > 1 and any(
+            item.written_keys <= written for written in per_sentence
+        )
 
     practised = [item for item in lesson_items if hit(item)]
     missing = [item for item in lesson_items if not hit(item)]
