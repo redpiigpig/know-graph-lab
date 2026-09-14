@@ -63,6 +63,44 @@ WANTED = [
          author="H. Richard Niebuhr", category="宗教學", sub="宗教社會學",
          why="第5章新教裂變的主要分析工具；1929 年出版，美國已入公有領域。"
              "原先用的 socialsourcesofd0000nieb_w7z0 是借閱制、回 401；改用 DLI 那份，明確標公有領域"),
+
+    # ── 宗教現象學的斷層：范德列烏的前輩與老師（2026-09-11 使用者批准補齊）
+    # 這兩位是「宗教學」成為獨立學科的奠基者，站上原本一本都沒有。
+    # 八個 identifier 都逐一驗過 access-restricted-item：全部可下載，非借閱館藏。
+    dict(key="tiele-elements-en-1897", ident="elementsofthesci01tieluoft",
+         title="Elements of the Science of Religion I（宗教學要義‧卷一）",
+         author="Cornelis Petrus Tiele", category="宗教學", sub="宗教學史",
+         why="蒂勒的吉福德講座；「宗教學」作為獨立學科的奠基文本之一"),
+    dict(key="tiele-outlines-en-1888", ident="outlinesofthehi00tieluoft",
+         title="Outlines of the History of Religion（宗教史綱要）",
+         author="Cornelis Petrus Tiele", category="宗教學", sub="宗教學史",
+         why="十九世紀流傳最廣的宗教史教本，各國譯本的母本"),
+    dict(key="tiele-geschichte-de-1896", ident="geschichtederrel02tieluoft",
+         title="Geschichte der Religion im Altertum II（古代宗教史‧卷二）",
+         author="Cornelis Petrus Tiele", category="宗教學", sub="宗教學史",
+         why="德文本；蒂勒的古代近東宗教史"),
+    dict(key="tiele-einleitung-de-1899", ident="einleitungindie00gehrgoog",
+         title="Einleitung in die Religionswissenschaft（宗教學導論）",
+         author="Cornelis Petrus Tiele", category="宗教學", sub="宗教學史",
+         why="書名本身就是這門學科的命名"),
+    dict(key="chantepie-lehrbuch-de-1905", ident="lehrbuchderreli00sausgoog",
+         title="Lehrbuch der Religionsgeschichte（宗教史教本）",
+         author="Pierre Daniël Chantepie de la Saussaye", category="宗教學", sub="宗教學史",
+         why="宗教現象學的第一部體系性著作；范德列烏的直接前身"),
+    dict(key="chantepie-manual-en-1891", ident="manualofscienceo00chan",
+         title="Manual of the Science of Religion（宗教學手冊）",
+         author="Pierre Daniël Chantepie de la Saussaye", category="宗教學", sub="宗教學史",
+         why="上書的英譯，1891"),
+    # 🚨 書名要帶年份：1887 初版與 1905 二版**同名**，目標檔名一樣，
+    # 下載器看到已存在就整本跳過（實測 1887 那本因此沒下到，而且真下了會蓋掉 1905）。
+    dict(key="chantepie-lehrbuch-de-1887", ident="MN40163ucmf_1",
+         title="Lehrbuch der Religionsgeschichte (1887 初版)（宗教史教本‧初版）",
+         author="Pierre Daniël Chantepie de la Saussaye", category="宗教學", sub="宗教學史",
+         why="初版 microform；與 1905 二版並存，看得出體系怎麼長出來"),
+    dict(key="chantepie-vierschetsen-nl-1883", ident="vierschetsenuitd00chan",
+         title="Vier Schetsen uit de Godsdienstgeschiedenis（宗教史四論）",
+         author="Pierre Daniël Chantepie de la Saussaye", category="宗教學", sub="宗教學史",
+         why="荷蘭文原著，1883；荷蘭宗教學派的起點"),
 ]
 
 # Patrologia Orientalis：東方諸教會原典的對照譯本（敘利亞／科普特／亞美尼亞／
@@ -98,10 +136,18 @@ def fetch_json(url: str) -> dict:
         return json.loads(r.read().decode("utf-8", "replace"))
 
 
-def pick_file(files: list[dict]) -> tuple[str, str, int] | None:
-    """挑一個可下載的內文檔。回傳 (檔名, 副檔名, 位元組)。"""
+def pick_file(files: list[dict], ident: str = "") -> tuple[str, str, int] | None:
+    """挑一個可下載的內文檔。回傳 (檔名, 副檔名, 位元組)。
+
+    🚨 Google 掃描的項目（identifier 以 `goog` 結尾）**PDF 沒有文字層**。
+    下載回來 527 頁的《Einleitung in die Religionswissenschaft》全書只有 3,467 字，
+    而且那些字全是 Google 的版權聲明（"This is a digital copy of a book…"）——
+    檔案大小、頁數、下載流程全部正常，只有內容是空的。同一個項目的 `_djvu.txt`
+    才有正文（1.1 MB）。所以這類項目把 djvu.txt 排到 PDF 前面。
+    """
+    prefer = ("_djvu.txt", ".pdf", ".epub") if ident.lower().endswith("goog") else PREFER
     best = None
-    for ext in PREFER:
+    for ext in prefer:
         for f in files:
             name = f.get("name", "")
             if not name.lower().endswith(ext):
@@ -230,7 +276,7 @@ def main() -> int:
             print("   ✕ 沒有可下載的檔（多半是借閱制項目）")
             failed += 1
             continue
-        pick = pick_file(files)
+        pick = pick_file(files, w["ident"])
         if not pick:
             print(f"   ✕ 沒有合用的內文檔（共 {len(files)} 個檔，可能是借閱制）")
             failed += 1
