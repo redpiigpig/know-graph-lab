@@ -1,0 +1,13 @@
+{
+  "volume": 2, "lesson": 42, "author": "opus-5-hand-written",
+  "note": "plene 只剩比較級與最高級。",
+  "sentences": [
+    {"latin": "Vix passim diffusa", "chinese": "幾乎沒有散布各處。", "targets": ["vix", "passim", "diffundo"]},
+    {"latin": "plenius diligentia neve", "chinese": "更充分地以勤勉，也不要如此。", "targets": ["plene", "diligentia", "neve"]},
+    {"latin": "extremis æquitate congruenter", "chinese": "在末端恰當地以公平。", "targets": ["extremum", "aequitas", "congruenter"]},
+    {"latin": "juventute consolatio diffusus", "chinese": "青年時期所傾注的安慰。", "targets": ["juventus", "consolatio", "diffundo"]},
+    {"latin": "satisfaciam tantopere inopia", "chinese": "我要在如此的貧乏中作出補償。", "targets": ["satisfacio", "tantopere", "inopia"]},
+    {"latin": "arguit nonnumquam validus", "chinese": "那強壯者有時加以指責。", "targets": ["arguo", "nonnumquam", "validus"]},
+    {"latin": "Vix plenissime consolatio", "chinese": "那安慰幾乎不是最完全的。", "targets": ["vix", "plene", "consolatio"]}
+  ]
+}

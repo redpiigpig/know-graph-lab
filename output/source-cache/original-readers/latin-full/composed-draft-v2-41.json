@@ -1,0 +1,13 @@
+{
+  "volume": 2, "lesson": 41, "author": "opus-5-hand-written",
+  "note": "cottidianus 只認詞幹，語料裡對得上的是 cotidianae。",
+  "sentences": [
+    {"latin": "respectu deinceps aditus", "chinese": "就那考慮而言，接著是進路。", "targets": ["respectus", "deinceps", "aditus"]},
+    {"latin": "occursum confirmatione insignis", "chinese": "以那顯著的堅固面對相遇。", "targets": ["occursus", "confirmatio", "insignis"]},
+    {"latin": "nexu lucrum cotidianae", "chinese": "日常束縛中的利益。", "targets": ["nexus", "lucrum", "cottidianus"]},
+    {"latin": "opportuno calamitas visionem", "chinese": "在合宜之時，災難與那異象。", "targets": ["opportunus", "calamitas", "visio"]},
+    {"latin": "excludere continuo pulchritudinem", "chinese": "要立即排除那美。", "targets": ["excludo", "continuo", "pulchritudo"]},
+    {"latin": "juvat reverentia aditu", "chinese": "敬畏在那進路上有所助益。", "targets": ["juvo", "reverentia", "aditus"]},
+    {"latin": "insigni visione juvent", "chinese": "願他們以那顯著的異象相助。", "targets": ["insignis", "visio", "juvo"]}
+  ]
+}

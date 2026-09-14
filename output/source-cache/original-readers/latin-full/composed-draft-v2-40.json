@@ -1,0 +1,13 @@
+{
+  "volume": 2, "lesson": 40, "author": "opus-5-hand-written",
+  "note": "imus 只剩 imo，Dec 只剩縮寫 dec。",
+  "sentences": [
+    {"latin": "justificationes congregationem felicitatem", "chinese": "那些成義、那團體、那幸福。", "targets": ["justificatio", "congregatio", "felicitas"]},
+    {"latin": "primates arbitrantur consecrationis", "chinese": "首要者們判斷那祝聖之事。", "targets": ["primas", "arbitror", "consecratio"]},
+    {"latin": "graviter conventu consortio", "chinese": "在集會與交誼中嚴厲地。", "targets": ["graviter", "conventus", "consortium"]},
+    {"latin": "imo amicitiam prolis", "chinese": "在最深處，子嗣的友誼。", "targets": ["imus", "amicitia", "proles"]},
+    {"latin": "evadere fortitudine dec", "chinese": "要以勇毅在十二月逃脫。", "targets": ["evado", "fortitudo", "Dec"]},
+    {"latin": "securitas novissima congregatione", "chinese": "在末後的團體中的安穩。", "targets": ["securitas", "novissimus", "congregatio"]},
+    {"latin": "amicitia prole evadat", "chinese": "願友誼藉子嗣而脫出。", "targets": ["amicitia", "proles", "evado"]}
+  ]
+}
