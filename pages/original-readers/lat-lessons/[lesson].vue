@@ -56,6 +56,43 @@
           </div>
         </section>
 
+        <section v-if="lesson.exercises" class="mt-8">
+          <div class="flex flex-wrap items-baseline justify-between gap-2">
+            <h2 class="font-serif text-xl font-semibold">翻譯練習（{{ lesson.exercises.itemCount }} 題）</h2>
+            <span class="rounded-full bg-stone-100 px-3 py-1 text-[11px] text-stone-500">
+              定錨 {{ lesson.exercises.quotedCount }}／自撰 {{ lesson.exercises.composedCount }}
+            </span>
+          </div>
+          <p class="mt-2 text-xs leading-6 text-stone-500 break-words">
+            把每一句譯成繁體中文。題目只印原文——標出處的是定錨題，可對照思高譯本自我校對；標「自撰」的句子每個詞都在本課或先前課次學過。
+          </p>
+          <p class="mt-1 text-xs leading-6 text-stone-500 break-words">
+            本課
+            <template v-if="lesson.exercises.coverage.practised === lesson.exercises.coverage.lessonWords">
+              {{ lesson.exercises.coverage.lessonWords }} 詞全數入題
+            </template>
+            <template v-else>
+              {{ lesson.exercises.coverage.practised }}／{{ lesson.exercises.coverage.lessonWords }} 詞入題
+            </template>
+            <template v-if="lesson.exercises.note">；{{ lesson.exercises.note }}</template>。
+          </p>
+          <ol class="mt-3 grid gap-3 lg:grid-cols-2">
+            <li
+              v-for="item in lesson.exercises.items"
+              :key="item.no"
+              class="rounded-2xl border border-stone-300 bg-white/80 px-5 py-4"
+            >
+              <div class="flex items-baseline justify-between gap-3">
+                <span class="font-mono text-xs font-semibold text-amber-800">{{ String(item.no).padStart(2, "0") }}</span>
+                <span v-if="item.kind === 'quoted'" class="text-[11px] text-stone-500 break-words text-right">{{ item.ref }}</span>
+                <span v-else class="shrink-0 rounded-full bg-stone-100 px-2 py-0.5 text-[11px] text-stone-500">自撰</span>
+              </div>
+              <p class="mt-2 font-serif text-[17px] leading-8 break-words">{{ item.text }}</p>
+            </li>
+          </ol>
+          <p class="mt-3 text-[11px] leading-5 text-stone-400">中譯不附在題旁；定錨題的出處可據以查對既有譯本。</p>
+        </section>
+
         <section v-if="lesson.memoryUnits.length" class="mt-8">
           <div class="flex flex-wrap items-baseline justify-between gap-2">
             <h2 class="font-serif text-xl font-semibold">背誦單元（{{ lesson.memoryUnits.length }}）</h2>

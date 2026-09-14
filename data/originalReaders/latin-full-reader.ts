@@ -1,5 +1,7 @@
 import masterJson from "../../output/source-cache/original-readers/latin-full/latin-reader-two-volumes.json";
 import interlinearJson from "../../output/source-cache/original-readers/latin-full/interlinear.json";
+import exerciseSetV1Json from "../../output/source-cache/original-readers/latin-full/exercise-set-v1.json";
+import exerciseSetV2Json from "../../output/source-cache/original-readers/latin-full/exercise-set-v2.json";
 
 import { groupAppendixEntries } from "./appendixGroups";
 
@@ -43,12 +45,34 @@ export interface LatinReadingRow {
   tokens?: LatinToken[];
 }
 
+/** One of the ten translation exercises of a lesson, as the reader shows it. */
+export interface LatinExerciseItem {
+  no: number;
+  kind: "quoted" | "composed";
+  /** Latin only.  A Chinese line here would be the answer to the question. */
+  text: string;
+  /** Where an anchored sentence comes from; null for a composed one. */
+  ref: string | null;
+  targetWords: Array<{ ordinal: number; headword: string }>;
+}
+
+export interface LatinLessonExercises {
+  itemCount: number;
+  quotedCount: number;
+  composedCount: number;
+  /** Why a lesson falls short: no quotable source, or words absent from the corpus. */
+  note: string;
+  coverage: { lessonWords: number; practised: number; notAttested: number };
+  items: LatinExerciseItem[];
+}
+
 export interface LatinLesson {
   lesson: number;
   title: string;
   note: string;
   vocabulary: LatinVocabularyEntry[];
   memoryUnits: LatinMemoryUnit[];
+  exercises: LatinLessonExercises;
   reading: LatinReadingRow[];
   readingWords: number;
 }
@@ -86,7 +110,118 @@ interface LatinMaster {
   };
 }
 
+interface RawExerciseItem {
+  no: number;
+  kind: string;
+  text: string;
+  ref?: string;
+  targetWords?: Array<{ ordinal: number; headword: string }>;
+}
+
+interface RawExerciseLesson {
+  lesson: number;
+  note?: string;
+  items: RawExerciseItem[];
+  coverage?: { lessonWords: number; practised: number; notAttested?: unknown[] };
+}
+
+interface ExerciseSetMaster {
+  direction: string;
+  itemsPerLesson: number;
+  volume: number;
+  lessons: RawExerciseLesson[];
+}
+
 const master = masterJson as unknown as LatinMaster;
+
+const exerciseSets: Record<number, ExerciseSetMaster> = {
+  1: exerciseSetV1Json as unknown as ExerciseSetMaster,
+  2: exerciseSetV2Json as unknown as ExerciseSetMaster,
+};
+
+const exerciseBlocks = new Map<string, RawExerciseLesson>();
+
+function fail(message: string): never {
+  throw new Error(`[latin-full-reader] ${message}`);
+}
+
+/**
+ * Bind each exercise block to the lesson whose words it practises.
+ *
+ * On vocabulary ordinal, never on the lesson number the exercise file carries.
+ * A lesson number is an output of the reading plan's sort; the ordinal is the
+ * word's own identity, and this reader has already been bitten once by keying
+ * on the former (see references/silent-failures.md §1).
+ */
+function bindExercises(): Map<string, RawExerciseLesson> {
+  if (exerciseBlocks.size) return exerciseBlocks;
+  const bound = new Map<string, RawExerciseLesson>();
+  for (const volume of master.volumes) {
+    const set = exerciseSets[volume.volume];
+    if (!set) fail(`第 ${volume.volume} 冊沒有練習題主檔`);
+    if (set.direction !== "original-to-chinese") fail(`第 ${volume.volume} 冊練習題不是原文譯中文`);
+    if (set.itemsPerLesson !== 10) fail(`第 ${volume.volume} 冊練習題不是每課十題`);
+    if (set.lessons.length !== volume.lessons.length) {
+      fail(`第 ${volume.volume} 冊練習題 ${set.lessons.length} 課，讀本 ${volume.lessons.length} 課`);
+    }
+    const byOrdinal = new Map<number, number>();
+    volume.lessons.forEach((lesson, index) => {
+      lesson.vocabulary.forEach((_entry, slot) => {
+        byOrdinal.set(index * 20 + slot + 1, lesson.lesson);
+      });
+    });
+    for (const block of set.lessons) {
+      const hosts = new Set<number>();
+      for (const item of block.items) {
+        for (const word of item.targetWords || []) {
+          const host = byOrdinal.get(word.ordinal);
+          if (host === undefined) {
+            fail(`第 ${volume.volume} 冊練習題的第 ${word.ordinal} 詞不在詞表內`);
+          }
+          hosts.add(host);
+        }
+      }
+      if (hosts.size !== 1) {
+        fail(`第 ${volume.volume} 冊練習題第 ${block.lesson} 課橫跨課次 ${[...hosts].sort().join("、")}`);
+      }
+      const key = latinLessonKey(volume.volume, [...hosts][0]);
+      if (bound.has(key)) fail(`${key} 被兩組練習題認領`);
+      bound.set(key, block);
+    }
+  }
+  for (const [key, block] of bound) exerciseBlocks.set(key, block);
+  return exerciseBlocks;
+}
+
+function exercisesFor(volume: number, lesson: number): LatinLessonExercises {
+  const block = bindExercises().get(latinLessonKey(volume, lesson));
+  if (!block) fail(`第 ${volume} 冊第 ${lesson} 課沒有練習題`);
+  const items: LatinExerciseItem[] = block.items.map((item) => ({
+    no: item.no,
+    kind: item.kind === "quoted" ? "quoted" : "composed",
+    text: item.text,
+    // Only the reference travels.  `answerKeyRef` and the composed drafts' own
+    // Chinese stay in the data layer, where an answer booklet can reach them;
+    // neither is sent to a page that prints the exercise.
+    ref: item.kind === "quoted" ? item.ref || null : null,
+    targetWords: (item.targetWords || []).map((word) => ({
+      ordinal: word.ordinal,
+      headword: word.headword,
+    })),
+  }));
+  return {
+    itemCount: items.length,
+    quotedCount: items.filter((item) => item.kind === "quoted").length,
+    composedCount: items.filter((item) => item.kind === "composed").length,
+    note: (block.note || "").trim(),
+    coverage: {
+      lessonWords: block.coverage?.lessonWords ?? 0,
+      practised: block.coverage?.practised ?? 0,
+      notAttested: (block.coverage?.notAttested || []).length,
+    },
+    items,
+  };
+}
 
 const interlinear = (interlinearJson as { units?: Record<string, { tokens: LatinToken[] }> }).units || {};
 
@@ -95,6 +230,7 @@ function withInterlinear(volume: number, lesson: LatinLesson): LatinLesson {
   const key = latinLessonKey(volume, lesson.lesson);
   return {
     ...lesson,
+    exercises: exercisesFor(volume, lesson.lesson),
     reading: lesson.reading.map((row, index) => ({
       ...row,
       tokens: interlinear[`reading:${key}:${index + 1}`]?.tokens || [],
@@ -136,6 +272,7 @@ export function listLatinVolumes() {
       title: lesson.title,
       words: lesson.vocabulary.length,
       memoryUnits: lesson.memoryUnits.length,
+      exercises: exercisesFor(volume.volume, lesson.lesson).itemCount,
       readingWords: lesson.readingWords,
       href: `/original-readers/lat-lessons/${latinLessonKey(volume.volume, lesson.lesson)}`,
     })),
