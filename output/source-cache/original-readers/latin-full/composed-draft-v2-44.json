@@ -1,0 +1,13 @@
+{
+  "volume": 2, "lesson": 44, "author": "opus-5-hand-written",
+  "note": "dioecesis 兩層語料都沒有字形。fraternitas 只剩屬格、hierarchia 只剩主格。",
+  "sentences": [
+    {"latin": "Quinto arcana brevi", "chinese": "第五，那些隱密之事，簡短地。", "targets": ["Quintus", "arcanus", "brevis"]},
+    {"latin": "mensuram immortalis duplici", "chinese": "以雙重的方式量度那不朽的。", "targets": ["mensura", "immortalis", "duplex"]},
+    {"latin": "promissionis stabilis fraternitatis", "chinese": "那穩固的兄弟情誼之應許。", "targets": ["promissio", "stabilis", "fraternitas"]},
+    {"latin": "incommoda honestatem Equidem", "chinese": "誠然，那些不便與廉正。", "targets": ["incommodus", "honestas", "equidem"]},
+    {"latin": "liquet adhæsit solatio", "chinese": "顯然他緊緊依附於那安慰。", "targets": ["liqueo", "adhaereo", "solacium"]},
+    {"latin": "hierarchia brevis mensura", "chinese": "聖統制那簡短的尺度。", "targets": ["hierarchia", "brevis", "mensura"]},
+    {"latin": "arcano stabilem promissionem", "chinese": "以隱密的方式面對那穩固的應許。", "targets": ["arcanus", "stabilis", "promissio"]}
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "volume": 2, "lesson": 45, "author": "opus-5-hand-written",
+  "note": "本課待練詞多為抽象名詞，兩層語料齊備。",
+  "sentences": [
+    {"latin": "contemplatione contextum dummodo", "chinese": "只要以默觀面對那脈絡。", "targets": ["contemplatio", "contextus", "dummodo"]},
+    {"latin": "instar interpretationem mentio", "chinese": "彷彿那解釋與那提及。", "targets": ["instar", "interpretatio", "mentio"]},
+    {"latin": "constantiam essentialibus constanti", "chinese": "以恆定面對那些本質之事。", "targets": ["constantia", "essentialis", "constans"]},
+    {"latin": "felle firmitas contextu", "chinese": "在那脈絡中以苦膽得堅固。", "targets": ["fel", "firmitas", "contextus"]},
+    {"latin": "certamen sustentat differt", "chinese": "他支撐那爭戰，卻又拖延。", "targets": ["certamen", "sustento", "differo"]},
+    {"latin": "diuturnum vulnus privatim", "chinese": "那長久的創傷，私下地。", "targets": ["diuturnus", "vulnus", "privatim"]},
+    {"latin": "instar constantia felle", "chinese": "彷彿以苦膽而有的恆心。", "targets": ["instar", "constantia", "fel"]}
+  ]
+}
