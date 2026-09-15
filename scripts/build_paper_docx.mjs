@@ -227,7 +227,8 @@ const { children, notes } = buildBody(md, omit)
 const footnotes = Object.fromEntries(Object.entries(notes).map(([n, text]) => [Number(n), {
   children: [new Paragraph({
     spacing: { after: 0, line: 240, lineRule: 'auto' },
-    children: [mkRun(' ' + text, { size: 20 })],
+    // 註文本身也吃 **粗體** / *斜體* / [文字](網址)（西文書名要斜體）
+    children: inlineRuns(' ' + text, {}, { size: 20 }),
   })],
 }]))
 
