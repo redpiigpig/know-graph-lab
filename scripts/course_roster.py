@@ -118,6 +118,36 @@ def collect():
     return out
 
 
+def live_counts():
+    """公開開課查詢的已選人數；連不到校網就回空 dict。
+
+    這支只是拿來對帳，**不是名單**——網路不通時整份名單照樣要產得出來，
+    所以連線失敗不讓它炸掉整個流程，只是對帳欄顯示「—」。
+    """
+    try:
+        import course_enrollment as CE
+        return CE.fetch()
+    except Exception as e:
+        print(f'⚠ 查不到系統已選人數（{type(e).__name__}），對帳欄留空', file=sys.stderr)
+        return {}
+
+
+def sessions(c):
+    """一門課要點名的場次。
+
+    取 `course_schedule` 的週次表，扣掉**不會發課程單**的兩種：
+    第 17、18 週的自主學習，以及國定假日本日停課那一次（PPA066 的 10/10）。
+    期末考那一週**留著**——那天照樣要點到人。
+    結果：週三兩門各 16 週、PPA001 八次、PPA066 七次。
+    """
+    out = []
+    for label, date, title, _extra, _chs in c['rows']:
+        if title == CS.SELF_STUDY or '休假' in title:
+            continue
+        out.append({'label': label, 'date': date, 'title': title})
+    return out
+
+
 def payload(rosters, live):
     """組成網頁與存檔共用的那一份資料。"""
     courses = []
@@ -139,6 +169,7 @@ def payload(rosters, live):
             'room': c['room'],
             'assessment': [{'item': i, 'pct': int(p.rstrip('%'))}
                            for i, p in c['assessment']],
+            'sessions': sessions(c),
             'source': r['source'],
             'source_file': r['source_file'],
             'snapshot': r['snapshot'],
@@ -159,10 +190,7 @@ def main():
     a = ap.parse_args()
     sys.stdout.reconfigure(encoding='utf-8')
 
-    live = {}
-    if not a.no_live:
-        import course_enrollment as CE
-        live = CE.fetch()
+    live = {} if a.no_live else live_counts()
 
     data = payload(collect(), live)
 
@@ -201,14 +229,19 @@ def main():
 
 
 def write_xlsx(path, data, c):
-    """一門課一張表：名單＋評量項目空欄，直接可以拿來登分。"""
+    """一門課一本活頁簿：`成績` 與 `點名` 兩張表。
+
+    - `成績`：評量項目空欄＋加權總分公式。
+    - `點名`：逐次一欄（課程單 1–5、加分 6、缺席 0），右邊自動換算出席分
+      （封頂 100，分母只算已經有人填的場次，跟網頁同一條公式）。
+    """
     from openpyxl import Workbook
     from openpyxl.styles import Alignment, Font, PatternFill
     from openpyxl.utils import get_column_letter
 
     wb = Workbook()
     ws = wb.active
-    ws.title = c['code']
+    ws.title = '成績'
     head = Font(bold=True, color='FFFFFF')
     fill = PatternFill('solid', fgColor='1E5A4C')
 
@@ -246,6 +279,52 @@ def write_xlsx(path, data, c):
     for i, w in enumerate(widths, 1):
         ws.column_dimensions[get_column_letter(i)].width = w
     ws.freeze_panes = f'A{r0 + 1}'
+
+    # ── 點名表 ──
+    at = wb.create_sheet('點名')
+    ss = c['sessions']
+    at.append([f'{c["name"]}（{c["code"]}）　課程單點名　{len(ss)} 次'])
+    at.append(['課程單一次 1–5 分，加分記 6，缺席記 0；空白＝該次尚未點名'])
+    at.append([])
+    at.append(['序', '學號', '姓名'] + [s['label'].replace(' ', '') for s in ss]
+              + ['合計', '已點次數', '出席分'])
+    at.append(['', '', ''] + [s['date'] for s in ss] + ['', '', '（滿分 100）'])
+    hdr = at.max_row - 1
+    for cell in at[hdr]:
+        cell.font = head
+        cell.fill = fill
+        cell.alignment = Alignment(horizontal='center', wrap_text=True)
+    for cell in at[hdr + 1]:
+        cell.alignment = Alignment(horizontal='center')
+
+    f = 4                       # 第一個場次欄（D）
+    l = f + len(ss) - 1
+    body0 = at.max_row + 1
+    for n, s in enumerate(c['students'], 1):
+        at.append([n, s['sid'], s['name']])
+        row = at.max_row
+        rng = f'{get_column_letter(f)}{row}:{get_column_letter(l)}{row}'
+        at.cell(row, l + 1).value = f'=IF(COUNT({rng})=0,"",SUM({rng}))'
+        # 已點名次數＝該欄整欄有人填過（跟網頁的 recordedSessions 同一個判準）
+        last_row = body0 + len(c['students']) - 1
+        held = '+'.join(
+            'IF(COUNT({0}${1}:{0}${2})>0,1,0)'.format(
+                get_column_letter(f + j), body0, last_row)
+            for j in range(len(ss)))
+        at.cell(row, l + 2).value = f'={held}'
+        at.cell(row, l + 3).value = (
+            f'=IF({get_column_letter(l + 2)}{row}=0,"",'
+            f'MIN(100,ROUND(SUM({rng})/(5*{get_column_letter(l + 2)}{row})*100,0)))')
+
+    at.column_dimensions['A'].width = 4
+    at.column_dimensions['B'].width = 12
+    at.column_dimensions['C'].width = 14
+    for j in range(len(ss)):
+        at.column_dimensions[get_column_letter(f + j)].width = 6
+    for j in range(3):
+        at.column_dimensions[get_column_letter(l + 1 + j)].width = 10
+    at.freeze_panes = f'D{body0}'
+
     wb.save(str(path))
 
 
