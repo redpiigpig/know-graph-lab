@@ -1,14 +1,16 @@
 # -*- coding: utf-8 -*-
 """把四門課的修課名單收成一份正規化 JSON，並寫進 Drive 各課程資料夾。
 
-名單有三個來源，優先序由高而低：
+名單有四個來源，優先序由高而低（都放在下載夾，掃內容認課不看檔名）：
 
-1. **教職員服務系統匯出的「課堂管理名冊」`.xls`**（BIFF，OLE2）——唯一逐個學生
-   都有的來源。系統匯出的檔名是 UUID，所以認檔靠讀內容的「科目代號:」而不是檔名。
-2. **Drive 各課程資料夾的 `*-點名表.docx`** —— 由上面那批產的快照，`PPA001`
-   目前只有這一份（那門是代課，沒拿到 xls）。
-3. **公開開課查詢的「已選人數」** —— 只有數字，拿來對帳，不能當名單。
-   🚨 三者不一致是常態：加退選結束前系統天天在動，而 xls／docx 是當天的快照。
+1. **教師網列印的「學生簽到表」PDF**（`tch.hcu.edu.tw/ABS/StdList_Print.asp`）——
+   最省事的一條：不必寫爬蟲，老師自己按列印就有。認課看頁面裡的
+   「科目名稱＋開課序號」，解析見 `from_signin_pdf`。
+2. **教職員服務系統匯出的「課堂管理名冊」`.xls`**（BIFF，OLE2）。系統匯出的檔名是
+   UUID，所以認檔靠讀內容的「科目代號:」而不是檔名。
+3. **Drive 各課程資料夾的 `*-點名表.docx`** —— 我們自己產的舊快照，墊底用。
+4. **公開開課查詢的「已選人數」** —— 只有數字，拿來對帳，不能當名單。
+   🚨 不一致是常態：加退選期間系統天天在動，而 PDF／xls／docx 都是當天的快照。
 
 🚨 名單含學生個資，**只寫 Drive 不進 git**（CLAUDE.md 第一條）。
 
@@ -95,17 +97,144 @@ def from_docx(path):
     }
 
 
+# 簽到表 PDF 認課：檔名不可信（使用者自己打的，出現過「世界宗教導論(日)」
+# 這種其實是日間部 BBE275 的寫法），一律讀頁面裡的「科目名稱＋開課序號」。
+# 兩門世界宗教文化導論同名，只有開課序號分得開。
+SIGNIN_KEY = {
+    ('世界宗教文化導論', '1'): 'BBE275',
+    ('基督宗教概論', '1'): 'BBE150',
+    ('世界宗教文化導論', '2'): 'PPA001',
+    ('國文', '4'): 'PPA066',
+}
+
+SID = re.compile(r'^[A-Z]{2}\d{7}$')
+# 級別長這樣：宗教與文化2A／餐旅1B／應日4A／宗教在職延A
+KLASS = re.compile(r'^(?P<name>.*?)(?P<klass>[一-鿿]{2,6}(?:\d+|延)[A-Z])$')
+KLASS_ONLY = re.compile(r'^[一-鿿]{2,6}(?:\d+|延)[A-Z]$')
+KLASS_TAIL = re.compile(r'^(?:\d+|延)[A-Z]$')
+CJK = re.compile(r'^[一-鿿]{2,6}$')
+
+
+def from_signin_pdf(path):
+    """讀教師網列印的「學生簽到表」PDF（`/ABS/StdList_Print.asp`）。
+
+    版面是雙欄（序號 1–16 在左、17–32 在右），但它是 HTML 表格列印出來的，
+    **文字流是照表格「列」走的**：序號L 學號L 姓名L 級別L 序號R 學號R 姓名R 級別R…
+    所以照 token 流走就對了。
+
+    🚨 **不要改用座標分左右欄**——試過，數量會對（32/12/16 全中）但姓名與級別
+    整批錯位：級別常換行成「宗教與文化」＋「2A」兩塊，而且最後一列的 y 範圍會
+    一路吃到頁尾，把「課程學生代表：___」收進姓名裡。數量對不等於內容對。
+
+    所以下面那道 `_gate` 一定要留著：姓名不得為空、不得含冒號或數字，
+    級別必須長得像級別，人數必須等於學號 token 數。過不了就丟例外，不要寫出去。
+    """
+    import fitz
+    doc = fitz.open(str(path))
+    page = doc[0]
+    text = page.get_text()
+    subj = re.search(r'科目名稱[：:]\s*(\S+)', text)
+    seq = re.search(r'開課序號[：:]\s*(\d+)', text)
+    if not subj or not seq:
+        return None
+    code = SIGNIN_KEY.get((subj.group(1), seq.group(1)))
+    if not code:
+        return None
+
+    toks = [x for x in re.split(r'[\s 　]+', text) if x]
+    first = next((i for i, x in enumerate(toks) if SID.match(x)), None)
+    if first is None:
+        return None
+
+    students, i = [], first
+    n_ids = sum(1 for x in toks if SID.match(x))
+    while i < len(toks):
+        if not SID.match(toks[i]):
+            i += 1
+            continue
+        # 序號就是緊貼在學號前面那一顆純數字（不能用「最近看過的數字」——
+        # 表頭的 115、學分數 2、頁碼 1 都會混進來）
+        prev = toks[i - 1] if i else ''
+        seq_no = int(prev) if re.fullmatch(r'\d{1,3}', prev) else None
+        sid, chunk, i = toks[i], [], i + 1
+        while i < len(toks):
+            x = toks[i]
+            # 下一個學號、下一個序號、或頁尾標籤 → 這一格收完了
+            if SID.match(x) or re.fullmatch(r'\d{1,2}', x) or '：' in x or ':' in x:
+                break
+            chunk.append(x)
+            i += 1
+        # 🚨 **不要把 token 併成一串再用正則切**——「郭智明宗教與文化4A」會被切成
+        # 姓名「郭智」＋級別「明宗教與文化4A」，而且過得了級別的格式檢查。
+        # 級別本來就自成 token：要嘛一顆（餐旅2A），要嘛兩顆（宗教與文化＋4A）。
+        chunk = [x for x in chunk if x not in ('(無)', '（無）')]
+        klass = ''
+        if chunk and KLASS_ONLY.match(chunk[-1]):
+            klass = chunk.pop()
+        elif len(chunk) >= 2 and KLASS_TAIL.match(chunk[-1]) and CJK.match(chunk[-2]):
+            klass = chunk[-2] + chunk[-1]
+            chunk = chunk[:-2]
+        name = ''.join(chunk)
+        nm, mark = _clean(name)
+        students.append({'sid': sid, 'name': nm, 'klass': klass, 'mark': mark,
+                         '_no': seq_no})
+
+    # 🚨 版面是雙欄，文字流是「左1 右17 左2 右18…」，要用表上的序號排回 1…N，
+    # 否則名單順序跟老師手上那張紙對不起來。
+    students.sort(key=lambda s: (s['_no'] is None, s['_no']))
+    nos = [s.pop('_no') for s in students]
+    _gate(path, students, n_ids, nos)
+    return {
+        'code': code,
+        'source': 'signin-pdf',
+        'source_file': path.name,
+        'snapshot': dt.date.fromtimestamp(path.stat().st_mtime).isoformat(),
+        'students': students,
+    }
+
+
+def _gate(path, students, n_ids, nos):
+    """簽到表解析的驗收閘。這條線的失敗長相是「人數對、內容錯」，所以逐欄驗。"""
+    bad = []
+    if len(students) != n_ids:
+        bad.append(f'解析出 {len(students)} 人，但頁面上有 {n_ids} 個學號')
+    if nos != list(range(1, len(students) + 1)):
+        bad.append(f'序號不是 1…{len(students)} 的連號：{nos}')
+    if len({s['sid'] for s in students}) != len(students):
+        bad.append('有重複的學號')
+    for s in students:
+        if not s['name']:
+            bad.append(f"{s['sid']} 姓名空白")
+        elif re.search(r'[：:\d]', s['name']):
+            bad.append(f"{s['sid']} 姓名含冒號或數字：{s['name']!r}")
+        if not KLASS_ONLY.match(s['klass']):
+            bad.append(f"{s['sid']} 級別不像級別：{s['klass']!r}")
+    if bad:
+        nl = chr(10) + '  '
+        raise ValueError(f'{path.name} 解析沒過閘：' + nl + nl.join(bad[:12]))
+
+
 def collect():
     """回傳 {課號: 名單 dict}。"""
     out = {}
+    for f in sorted(DOWNLOADS.glob('*.pdf')):
+        if '簽到表' not in f.name:
+            continue
+        try:
+            d = from_signin_pdf(f)
+        except Exception as e:
+            print(f'⚠ 讀不了 {f.name}：{type(e).__name__}', file=sys.stderr)
+            continue
+        if d and (d['code'] not in out or d['snapshot'] >= out[d['code']]['snapshot']):
+            out[d['code']] = d
     for f in sorted(DOWNLOADS.glob('*.xls')):
         try:
             d = from_xls(f)
         except Exception:
             continue
         if d and d['code'] in FOLDER:
-            # 同一門課有多份就取最新的快照
-            if d['code'] not in out or d['snapshot'] >= out[d['code']]['snapshot']:
+            # 同一門課有多份就取最新的快照（簽到表 PDF 通常比 xls 新）
+            if d['code'] not in out or d['snapshot'] > out[d['code']]['snapshot']:
                 out[d['code']] = d
     for code, (folder, docname) in FOLDER.items():
         if code in out:
@@ -250,12 +379,13 @@ def main():
             json.dumps(c, ensure_ascii=False, indent=2), encoding='utf-8')
         write_xlsx(folder / f'{stem}.xlsx', data, c)
         kinds = '.json / .xlsx'
-        # 系統匯出的原檔檔名是 UUID，留在下載夾等於丟了。連同原檔一起歸檔。
-        if c['source'] == 'xls':
-            src = DOWNLOADS / c['source_file']
-            if src.exists():
-                (folder / f'{stem}_課堂管理名冊.xls').write_bytes(src.read_bytes())
-                kinds += ' / .xls（系統原檔）'
+        # 來源原檔一起歸檔：xls 的檔名是 UUID、PDF 的檔名是隨手打的，
+        # 留在下載夾等於丟了，而它們是「校方那天長這樣」的唯一憑據。
+        src = DOWNLOADS / (c['source_file'] or '')
+        if c['source'] in ('xls', 'signin-pdf') and src.exists():
+            tag = '課堂管理名冊.xls' if c['source'] == 'xls' else '學生簽到表.pdf'
+            (folder / f'{stem}_{tag}').write_bytes(src.read_bytes())
+            kinds += f' / {tag}（校方原檔）'
         print(f'寫入 {folder / stem}{kinds}')
 
 
