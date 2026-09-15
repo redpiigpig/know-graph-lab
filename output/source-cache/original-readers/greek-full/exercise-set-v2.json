@@ -17,6 +17,7 @@
         {
           "kind": "quoted",
           "ref": "1Es.4:60",
+          "refLabel": "以斯拉續篇上卷 4:60",
           "text": "εὐλογητὸς εἶ, ὃς ἔδωκάς μοι σοφίαν· καὶ σοὶ ὁμολογῶ, δέσποτα τῶν πατέρων.",
           "answerKeyRef": "1Es.4:60",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -88,6 +89,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:16:8.1.3#1",
+          "refLabel": "黑馬牧人書：誡命一至四　8.1.3",
           "text": "ταῦτα οὖν ἀκούσας ἐγὼ ἔκλαυσα λίαν.",
           "answerKeyRef": "patristic-plan:16:8.1.3#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -135,6 +137,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:24:7#6",
+          "refLabel": "額我略‧納祥《神學講辭》第廿八篇 1–10：論神　7",
           "text": "τῆς ἐξουσίας· οὐ γὰρ αὕτη φύσις σωμάτων.",
           "answerKeyRef": "patristic-plan:24:7#6",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -623,6 +626,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:10:10.2#2",
+          "refLabel": "坡旅甲殉道記　10.2",
           "text": "Σὲ μὲν κἂν λόγου ἠξίωσα·",
           "answerKeyRef": "patristic-plan:10:10.2#2",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -668,6 +672,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:48:186#1",
+          "refLabel": "聖母讚頌詞（阿卡提斯托斯頌）　186",
           "text": "ἀλλ' ἐγνώσθης τούτω καὶ Θεὸς τέλειος·",
           "answerKeyRef": "patristic-plan:48:186#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -715,6 +720,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:7:9.1#2",
+          "refLabel": "依納爵致士每拿人書　9.1",
           "text": "καλῶς ἔχει, θεὸν καὶ ἐπίσκοπον εἰδέναι.",
           "answerKeyRef": "patristic-plan:7:9.1#2",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -1180,6 +1186,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:24:8#3",
+          "refLabel": "額我略‧納祥《神學講辭》第廿八篇 1–10：論神　8",
           "text": "ἢ σῶμα ἐν σώμασιν ἔσται, ὅπερ ἀδύνατον·",
           "answerKeyRef": "patristic-plan:24:8#3",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -1238,6 +1245,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:48:309#1",
+          "refLabel": "聖母讚頌詞（阿卡提斯托斯頌）　309",
           "text": "κραυγῇ δὲ τιμωμένη ταῦτα·",
           "answerKeyRef": "patristic-plan:48:309#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -1281,6 +1289,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:50:7#1",
+          "refLabel": "聖誕晨禱（12 月 25 日）　7",
           "text": "Ὅτι πρέπει σοι πᾶσα δόξα...",
           "answerKeyRef": "patristic-plan:50:7#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -1735,6 +1744,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:48:95#1",
+          "refLabel": "聖母讚頌詞（阿卡提斯托斯頌）　95",
           "text": "χαῖρε, θνητῶν πρὸς Θεὸν παρρησία.",
           "answerKeyRef": "patristic-plan:48:95#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -1780,6 +1790,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:24:10#9",
+          "refLabel": "額我略‧納祥《神學講辭》第廿八篇 1–10：論神　10",
           "text": "καὶ ποῦ πρὶν γενέσθαι τὸ πᾶν;",
           "answerKeyRef": "patristic-plan:24:10#9",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -1827,6 +1838,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:2:14.2#2",
+          "refLabel": "依納爵致以弗所人書　14.2",
           "text": "φανερὸν τὸ δένδρον ἀπὸ τοῦ καρποῦ αὐτοῦ.",
           "answerKeyRef": "patristic-plan:2:14.2#2",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -2296,6 +2308,7 @@
         {
           "kind": "quoted",
           "ref": "Isa.48:7",
+          "refLabel": "以賽亞書 48:7",
           "text": "Νῦν γίνεται καὶ οὐ πάλαι, καὶ οὐ προτέραις ἡμέραις ἤκουσας αὐτά·",
           "answerKeyRef": "Isa.48:7",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -2359,6 +2372,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:15:1.3.3#2",
+          "refLabel": "黑馬牧人書：第一異象　1.3.3",
           "text": "λέγω κἀγώ· Θέλω, κυρία.",
           "answerKeyRef": "patristic-plan:15:1.3.3#2",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -2402,6 +2416,7 @@
         {
           "kind": "quoted",
           "ref": "liturgy-chrysostom:56#2",
+          "refLabel": "金口約翰聖禮儀・三聖頌　第 56 則",
           "text": "Ἀμὴν Ἅγιος ἀθάνατος, ἐλέησον ἡμᾶς.",
           "answerKeyRef": "liturgy-chrysostom:56#2",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -2844,6 +2859,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:32:34#2",
+          "refLabel": "使徒教規（85 條）　34",
           "text": "Ἀλλὰ μηδὲ ἐκεῖνος ἄνευ τῆς πάντων γνώμης ποιείτω τι.",
           "answerKeyRef": "patristic-plan:32:34#2",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -2907,6 +2923,7 @@
         {
           "kind": "quoted",
           "ref": "liturgy-chrysostom:173#3",
+          "refLabel": "金口約翰聖禮儀・信經　第 173 則",
           "text": "Προσδοκῶ ἀνάστασιν νεκρῶν.",
           "answerKeyRef": "liturgy-chrysostom:173#3",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -2948,6 +2965,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:7:11.3#2",
+          "refLabel": "依納爵致士每拿人書　11.3",
           "text": "τέλειοι ὄντες τέλεια καὶ φρονεῖτε.",
           "answerKeyRef": "patristic-plan:7:11.3#2",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -3420,6 +3438,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:12:2.4#8",
+          "refLabel": "致丟格那妥書　2.4",
           "text": "οὐ πάντα φθειρόμενα;",
           "answerKeyRef": "patristic-plan:12:2.4#8",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -3461,6 +3480,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:48:178#1",
+          "refLabel": "聖母讚頌詞（阿卡提斯托斯頌）　178",
           "text": "χαῖρε, τρυφῆς ἁγίας διάκονε.",
           "answerKeyRef": "patristic-plan:48:178#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -3504,6 +3524,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:12:2.3#1",
+          "refLabel": "致丟格那妥書　2.3",
           "text": "οὐ φθαρτῆς ὕλης ταῦτα πάντα;",
           "answerKeyRef": "patristic-plan:12:2.3#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -3965,6 +3986,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:43:8#2",
+          "refLabel": "迦太基會議教規 1–20（希臘文傳本）　8",
           "text": "Τοὺς τοιούτους δεῖ προσδέχεσθαι.",
           "answerKeyRef": "patristic-plan:43:8#2",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -4008,6 +4030,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:48:291#1",
+          "refLabel": "聖母讚頌詞（阿卡提斯托斯頌）　291",
           "text": "χαῖρε, πιστοὺς Κυρίῳ ἁρμόζουσα.",
           "answerKeyRef": "patristic-plan:48:291#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -4051,6 +4074,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:17:1.6#1",
+          "refLabel": "巴拿巴書 1–5：新約與舊約的關係　1.6",
           "text": "Τρία οὖν δόγματά ἐστιν κυρίου·",
           "answerKeyRef": "patristic-plan:17:1.6#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -4529,6 +4553,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:21:2.2#3",
+          "refLabel": "亞他那修《論道成肉身》1–4：創造與敗壞　2.2",
           "text": "τὸ δὲ, σελήνην·",
           "answerKeyRef": "patristic-plan:21:2.2#3",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -4570,6 +4595,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:43:16#3",
+          "refLabel": "迦太基會議教規 1–20（希臘文傳本）　16",
           "text": "ἐὰν δὲ εἶδος, ὅσον δέδωκε λάβῃ.",
           "answerKeyRef": "patristic-plan:43:16#3",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -4617,6 +4643,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:11:14.2#1",
+          "refLabel": "革利免二書　14.2",
           "text": "Ἐποίησεν ὁ θεὸς τὸν ἄνθρωπον ἄρσεν καὶ θῆλυ·",
           "answerKeyRef": "patristic-plan:11:14.2#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -5091,6 +5118,7 @@
         {
           "kind": "quoted",
           "ref": "liturgy-chrysostom:255#1",
+          "refLabel": "金口約翰聖禮儀・領聖體前的預備禱　第 255 則",
           "text": "Θεοὶ τὸ πνεῦμα, τὸν δὲ νοῦν τρέφει ξένως.",
           "answerKeyRef": "liturgy-chrysostom:255#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -5141,6 +5169,7 @@
         {
           "kind": "quoted",
           "ref": "3Ma.3:30",
+          "refLabel": "馬加比三書 3:30",
           "text": "καὶ ὁ μὲν τῆς ἐπιστολῆς τύπος οὕτως ἐγέγραπτο.",
           "answerKeyRef": "3Ma.3:30",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -5191,6 +5220,7 @@
         {
           "kind": "quoted",
           "ref": "Matt.2.10",
+          "refLabel": "馬太福音 2:10",
           "text": "ἰδόντες δὲ τὸν ἀστέρα ἐχάρησαν χαρὰν μεγάλην σφόδρα.",
           "answerKeyRef": "Matt.2.10",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -5664,6 +5694,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:17:5.12#1",
+          "refLabel": "巴拿巴書 1–5：新約與舊約的關係　5.12",
           "text": "οὐκοῦν εἰς τοῦτο ὑπέμεινεν.",
           "answerKeyRef": "patristic-plan:17:5.12#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -5707,6 +5738,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:48:263#1",
+          "refLabel": "聖母讚頌詞（阿卡提斯托斯頌）　263",
           "text": "χαῖρε, πολλοὺς ἐν γνώσει φωτίζουσα.",
           "answerKeyRef": "patristic-plan:48:263#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -5752,6 +5784,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:26:2#1",
+          "refLabel": "尼西亞信經（325 原版）　2",
           "text": "πάντων ὁρατῶν τε καὶ ἀοράτων ποιητήν.",
           "answerKeyRef": "patristic-plan:26:2#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -6207,6 +6240,7 @@
         {
           "kind": "quoted",
           "ref": "liturgy-chrysostom:61#1",
+          "refLabel": "金口約翰聖禮儀・三聖頌　第 61 則",
           "text": "Εὐλόγησον, Δέσποτα, τὴν ἄνω καθέδραν.",
           "answerKeyRef": "liturgy-chrysostom:61#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -6262,6 +6296,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:24:9#9",
+          "refLabel": "額我略‧納祥《神學講辭》第廿八篇 1–10：論神　9",
           "text": "Ἢ τοῦτο μὲν παντὶ δῆλον.",
           "answerKeyRef": "patristic-plan:24:9#9",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -6307,6 +6342,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:23:7#10",
+          "refLabel": "額我略‧納祥《神學講辭》第廿七篇：論神學該由誰、何時、如何講　7",
           "text": "οὐ μελέτην θανάτου τὸν βίον ποιούμεθα;",
           "answerKeyRef": "patristic-plan:23:7#10",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -6752,6 +6788,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:5:4.1#1",
+          "refLabel": "依納爵致費拉德非人書　4.1",
           "text": "Σπουδάσατε οὖν μιᾷ εὐχαριστίᾳ χρῆσθαι·",
           "answerKeyRef": "patristic-plan:5:4.1#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -6807,6 +6844,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:11:11.4#1",
+          "refLabel": "革利免二書　11.4",
           "text": "ἔπειτα ἀπολήψεται τὰ ἀγαθά.",
           "answerKeyRef": "patristic-plan:11:11.4#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -6850,6 +6888,7 @@
         {
           "kind": "quoted",
           "ref": "Psa.68:18",
+          "refLabel": "詩篇 68:18",
           "text": "ὅτι θλίβομαι, ταχὺ ἐπάκουσόν μου.",
           "answerKeyRef": "Psa.68:18",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -7317,6 +7356,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:4:13.3#2",
+          "refLabel": "依納爵致特拉勒人書　13.3",
           "text": "ἔτι γὰρ ὑπὸ κίνδυνόν εἰμι·",
           "answerKeyRef": "patristic-plan:4:13.3#2",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -7362,6 +7402,7 @@
         {
           "kind": "quoted",
           "ref": "Rev.17.6",
+          "refLabel": "啟示錄 17:6",
           "text": "Καὶ ἐθαύμασα ἰδὼν αὐτὴν θαῦμα μέγα·",
           "answerKeyRef": "Rev.17.6",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -7409,6 +7450,7 @@
         {
           "kind": "quoted",
           "ref": "Tob.7:11",
+          "refLabel": "多比傳 7:11",
           "text": "ἀλλὰ τὸ νῦν ἔχων ἡδέως γίνου.",
           "answerKeyRef": "Tob.7:11",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -7889,6 +7931,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:10:3.2#1",
+          "refLabel": "坡旅甲殉道記　3.2",
           "text": "Αἶρε τοὺς ἀθέους·",
           "answerKeyRef": "patristic-plan:10:3.2#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -7930,6 +7973,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:48:122#1",
+          "refLabel": "聖母讚頌詞（阿卡提斯托斯頌）　122",
           "text": "χαῖρε, λαμπρὸν τῆς Χάριτος γνώρισμα.",
           "answerKeyRef": "patristic-plan:48:122#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -7975,6 +8019,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:31:53#1",
+          "refLabel": "第二次尼西亞大公會議教規（787）　53",
           "text": "ἢ χρυσίου, ἢ ἱματισμοῦ, οὐδενὸς ἐπεθύμησα·",
           "answerKeyRef": "patristic-plan:31:53#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -8450,6 +8495,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:50:37#1",
+          "refLabel": "聖誕晨禱（12 月 25 日）　37",
           "text": "Δεῦτε ἴδωμεν πιστοί,...",
           "answerKeyRef": "patristic-plan:50:37#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -8491,6 +8537,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:16:7.1.3#1",
+          "refLabel": "黑馬牧人書：誡命一至四　7.1.3",
           "text": "πονηρὰ ἡ καταλαλιά·",
           "answerKeyRef": "patristic-plan:16:7.1.3#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -8532,6 +8579,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:50:418#1",
+          "refLabel": "聖誕晨禱（12 月 25 日）　418",
           "text": "Μυστήριον ξένον ὁρῶ, καὶ παράδοξον!",
           "answerKeyRef": "patristic-plan:50:418#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -8981,6 +9029,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:12:5.7#1",
+          "refLabel": "致丟格那妥書　5.7",
           "text": "τράπεζαν κοινὴν παρατίθενται, ἀλλ’ οὐ κοίτην.",
           "answerKeyRef": "patristic-plan:12:5.7#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -9028,6 +9077,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:49:64#1",
+          "refLabel": "復活節晨禱正典（大馬士革的約翰）　64",
           "text": "Λαβὼν ἀνῆλθε πολλὰ τῆς νίκης σκῦλα.",
           "answerKeyRef": "patristic-plan:49:64#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -9075,6 +9125,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:16:9.1.5#1",
+          "refLabel": "黑馬牧人書：誡命一至四　9.1.5",
           "text": "Ἄχρι τῆς ἀγνοίας, φησίν, οὐχ ἁμαρτάνει·",
           "answerKeyRef": "patristic-plan:16:9.1.5#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -9528,6 +9579,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:4:10.1#2",
+          "refLabel": "依納爵致特拉勒人書　10.1",
           "text": "δωρεὰν οὖν ἀποθνήσκω.",
           "answerKeyRef": "patristic-plan:4:10.1#2",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -9569,6 +9621,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:50:116#2",
+          "refLabel": "聖誕晨禱（12 月 25 日）　116",
           "text": "Ἐλέει καὶ οἰκτιρμοῖς...",
           "answerKeyRef": "patristic-plan:50:116#2",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -9610,6 +9663,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:42:17#2",
+          "refLabel": "撒狄迦會議教規（343）　17",
           "text": "Ἅπαντες εἰρήκασιν· Ἤρεσε καὶ τοῦτο.",
           "answerKeyRef": "patristic-plan:42:17#2",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -10065,6 +10119,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:46:8#1",
+          "refLabel": "晨禱起始禱文（三聖頌組）　8",
           "text": "Δέσποτα, συγχώρησον τὰς ἀνομίας ἡμῖν.",
           "answerKeyRef": "patristic-plan:46:8#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -10111,6 +10166,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:50:92#2",
+          "refLabel": "聖誕晨禱（12 月 25 日）　92",
           "text": "Ὀρθοί, ἀκούσωμεν τοῦ ἁγίου Εὐαγγελίου.",
           "answerKeyRef": "patristic-plan:50:92#2",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -10156,6 +10212,7 @@
         {
           "kind": "quoted",
           "ref": "1Tim.5.3",
+          "refLabel": "提摩太前書 5:3",
           "text": "Χήρας τίμα τὰς ὄντως χήρας.",
           "answerKeyRef": "1Tim.5.3",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -10607,6 +10664,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:24:6#8",
+          "refLabel": "額我略‧納祥《神學講辭》第廿八篇 1–10：論神　6",
           "text": "τίς τοσούτου χαρίσματος ἠξιώθη ποτέ;",
           "answerKeyRef": "patristic-plan:24:6#8",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -10652,6 +10710,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:12:10.3#1",
+          "refLabel": "致丟格那妥書　10.3",
           "text": "ἐπιγνοὺς δὲ τίνος οἴει πληρωθήσεσθαι χαρᾶς;",
           "answerKeyRef": "patristic-plan:12:10.3#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -10699,6 +10758,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:14:18.1#3",
+          "refLabel": "巴拿巴書 18–21：兩道　18.1",
           "text": "διαφορὰ δὲ πολλὴ τῶν δύο ὁδῶν.",
           "answerKeyRef": "patristic-plan:14:18.1#3",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -11164,6 +11224,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:7:13.2#3",
+          "refLabel": "依納爵致士每拿人書　13.2",
           "text": "ἔρρωσθε ἐν χάριτι θεοῦ.",
           "answerKeyRef": "patristic-plan:7:13.2#3",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -11207,6 +11268,7 @@
         {
           "kind": "quoted",
           "ref": "liturgy-chrysostom:242#1",
+          "refLabel": "金口約翰聖禮儀・舉揚聖體：聖物給聖者　第 242 則",
           "text": "Πλήρωμα ποτηρίου πίστεως, Πνεύματος Ἁγίου.",
           "answerKeyRef": "liturgy-chrysostom:242#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -11252,6 +11314,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:10:10.1#1",
+          "refLabel": "坡旅甲殉道記　10.1",
           "text": "Ἐπιμένοντος δὲ πάλιν αὐτοῦ καὶ λέγοντος·",
           "answerKeyRef": "patristic-plan:10:10.1#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -11727,6 +11790,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:50:488#3",
+          "refLabel": "聖誕晨禱（12 月 25 日）　488",
           "text": "Μάγοι τῷ Δεσπότῃ δῶρα προσφέρουσιν.",
           "answerKeyRef": "patristic-plan:50:488#3",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -11772,6 +11836,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:12:7.2#1",
+          "refLabel": "致丟格那妥書　7.2",
           "text": "τῷ τῆς σελήνης ἀκολουθοῦντα δρόμῳ·",
           "answerKeyRef": "patristic-plan:12:7.2#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -11816,6 +11881,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:24:5#1",
+          "refLabel": "額我略‧納祥《神學講辭》第廿八篇 1–10：論神　5",
           "text": "Τοῦτο μὲν οὖν ἐνταῦθα κείσθω·",
           "answerKeyRef": "patristic-plan:24:5#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -12281,6 +12347,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:32:36#1",
+          "refLabel": "使徒教規（85 條）　36",
           "text": "ὠσαύτως καὶ πρεσβύτερος καὶ διάκονος.",
           "answerKeyRef": "patristic-plan:32:36#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -12324,6 +12391,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:40:7#1",
+          "refLabel": "安提阿會議教規（341）　7",
           "text": "Μηδένα ἄνευ εἰρηνικῶν δέχεσθαι τῶν ξένων.",
           "answerKeyRef": "patristic-plan:40:7#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -12371,6 +12439,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:2:14.2#1",
+          "refLabel": "依納爵致以弗所人書　14.2",
           "text": "οὐδεὶς πίστιν ἐπαγγελλόμενος ἁμαρτάνει, οὐδὲ ἀγάπην κεκτημένος μισεῖ.",
           "answerKeyRef": "patristic-plan:2:14.2#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -12846,6 +12915,7 @@
         {
           "kind": "quoted",
           "ref": "Luke.4.19",
+          "refLabel": "路加福音 4:19",
           "text": "κηρύξαι ἐνιαυτὸν κυρίου δεκτόν.",
           "answerKeyRef": "Luke.4.19",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -12889,6 +12959,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:11:14.1#2",
+          "refLabel": "革利免二書　14.1",
           "text": "Ἐγενήθη ὁ οἶκός μου σπήλαιον λῃστῶν.",
           "answerKeyRef": "patristic-plan:11:14.1#2",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -12937,6 +13008,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:36:16#7",
+          "refLabel": "特魯洛（五六）大公會議教規 1–20　16",
           "text": "ἀλλὰ τῶν πρεσβυτέρων ἐστὶν ἡ οἰκονομία;",
           "answerKeyRef": "patristic-plan:36:16#7",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -13403,6 +13475,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:12:2.4#2",
+          "refLabel": "致丟格那妥書　2.4",
           "text": "οὐ κωφὰ πάντα;",
           "answerKeyRef": "patristic-plan:12:2.4#2",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -13444,6 +13517,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:48:234#1",
+          "refLabel": "聖母讚頌詞（阿卡提斯托斯頌）　234",
           "text": "χαῖρε, δι' ἧς ἠνοίχθη παράδεισος.",
           "answerKeyRef": "patristic-plan:48:234#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -13489,6 +13563,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:24:8#4",
+          "refLabel": "額我略‧納祥《神學講辭》第廿八篇 1–10：論神　8",
           "text": "οὐδὲν γὰρ νῦν περὶ τούτου διοίσομαι.",
           "answerKeyRef": "patristic-plan:24:8#4",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -13969,6 +14044,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:24:10#2",
+          "refLabel": "額我略‧納祥《神學講辭》第廿八篇 1–10：論神　10",
           "text": "πότερον οὐδαμοῦ τοῦτο, ἢ ἔστιν ὅπου;",
           "answerKeyRef": "patristic-plan:24:10#2",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -14016,6 +14092,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:1:5.1#1",
+          "refLabel": "十二使徒遺訓　5.1",
           "text": "πρῶτον πάντων πονηρά ἐστι καὶ κατάρας μεστή·",
           "answerKeyRef": "patristic-plan:1:5.1#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -14065,6 +14142,7 @@
         {
           "kind": "quoted",
           "ref": "Matt.27.18",
+          "refLabel": "馬太福音 27:18",
           "text": "ᾔδει γὰρ ὅτι διὰ φθόνον παρέδωκαν αὐτόν.",
           "answerKeyRef": "Matt.27.18",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -14524,6 +14602,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:15:1.1.7#4",
+          "refLabel": "黑馬牧人書：第一異象　1.1.7",
           "text": "οὐ πάντοτέ σε ἐνετράπην ὡς ἀδελφήν;",
           "answerKeyRef": "patristic-plan:15:1.1.7#4",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -14572,6 +14651,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:38:1#1",
+          "refLabel": "新凱撒利亞會議教規（約 315）　1",
           "text": "Πρεσβύτερος, ἐὰν γήμῃ, τῆς τάξεως αὐτὸν μετατίθεσθαι·",
           "answerKeyRef": "patristic-plan:38:1#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -14621,6 +14701,7 @@
         {
           "kind": "quoted",
           "ref": "liturgy-chrysostom:119#1",
+          "refLabel": "金口約翰聖禮儀・革魯賓頌與大進堂　第 119 則",
           "text": "Δεῦτε, προσκυνήσωμεν καὶ προσπέσωμεν τῷ βασιλεῖ ἡμῶν Θεῷ.",
           "answerKeyRef": "liturgy-chrysostom:119#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -15084,6 +15165,7 @@
         {
           "kind": "quoted",
           "ref": "Psa.49:21",
+          "refLabel": "詩篇 49:21",
           "text": "ταῦτα ἐποίησας καὶ ἐσίγησα, ὑπέλαβες ἀνομίαν ὅτι ἔσομαί σοι ὅμοιος·",
           "answerKeyRef": "Psa.49:21",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -15150,6 +15232,7 @@
         {
           "kind": "quoted",
           "ref": "1Cor.6.17",
+          "refLabel": "哥林多前書 6:17",
           "text": "ὁ δὲ κολλώμενος τῷ κυρίῳ ἓν πνεῦμά ἐστιν.",
           "answerKeyRef": "1Cor.6.17",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -15200,6 +15283,7 @@
         {
           "kind": "quoted",
           "ref": "Pss.5:12",
+          "refLabel": "所羅門詩篇 5:12",
           "text": "καὶ ἐὰν πεινάσωσιν, πρὸς σὲ ἀροῦσιν πρόσωπον αὐτῶν.",
           "answerKeyRef": "Pss.5:12",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -15656,6 +15740,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:16:8.1.4#2",
+          "refLabel": "黑馬牧人書：誡命一至四　8.1.4",
           "text": "Οὐδέποτε, φημί, κύριε, τοιαῦτα ῥήματα ἀκριβῶς ἤκουσα.",
           "answerKeyRef": "patristic-plan:16:8.1.4#2",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -15705,6 +15790,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:5:9.2#2",
+          "refLabel": "依納爵致費拉德非人書　9.2",
           "text": "οἱ γὰρ ἀγαπητοὶ προφῆται κατήγγειλαν εἰς αὐτόν·",
           "answerKeyRef": "patristic-plan:5:9.2#2",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -15754,6 +15840,7 @@
         {
           "kind": "quoted",
           "ref": "Lam.3:2",
+          "refLabel": "耶利米哀歌 3:2",
           "text": "παρέλαβέν με καὶ ἀπήγαγεν εἰς σκότος καὶ οὐ φῶς.",
           "answerKeyRef": "Lam.3:2",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -16224,6 +16311,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:16:9.3.6#1",
+          "refLabel": "黑馬牧人書：誡命一至四　9.3.6",
           "text": "δυσκόλως γὰρ ζήσεται.",
           "answerKeyRef": "patristic-plan:16:9.3.6#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -16265,6 +16353,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:10:10.2#1",
+          "refLabel": "坡旅甲殉道記　10.2",
           "text": "ἔφη ὁ ἀνθύπατος· Πεῖσον τὸν δῆμον.",
           "answerKeyRef": "patristic-plan:10:10.2#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -16311,6 +16400,7 @@
         {
           "kind": "quoted",
           "ref": "Heb.13.9",
+          "refLabel": "希伯來書 13:9",
           "text": "διδαχαῖς ποικίλαις καὶ ξέναις μὴ παραφέρεσθε·",
           "answerKeyRef": "Heb.13.9",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -16767,6 +16857,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:23:7#5",
+          "refLabel": "額我略‧納祥《神學講辭》第廿七篇：論神學該由誰、何時、如何講　7",
           "text": "οὐ φιλοξενίαν ἐπαινοῦμεν ;",
           "answerKeyRef": "patristic-plan:23:7#5",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -16808,6 +16899,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:31:109#1",
+          "refLabel": "第二次尼西亞大公會議教規（787）　109",
           "text": "Τινῶν ἀνθρώπων αἱ ἁμαρτίαι πρόδηλοί εἰσι·",
           "answerKeyRef": "patristic-plan:31:109#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -16855,6 +16947,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:1:11.11#1",
+          "refLabel": "十二使徒遺訓　11.11",
           "text": "ὡσαύτως γὰρ ἐποίησαν καὶ οἱ ἀρχαῖοι προφῆται.",
           "answerKeyRef": "patristic-plan:1:11.11#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -17314,6 +17407,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:2:3.1#1",
+          "refLabel": "依納爵致以弗所人書　3.1",
           "text": "Οὐ διατάσσομαι ὑμῖν ὡς ὤν τις.",
           "answerKeyRef": "patristic-plan:2:3.1#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -17362,6 +17456,7 @@
         {
           "kind": "quoted",
           "ref": "Eph.5.10",
+          "refLabel": "以弗所書 5:10",
           "text": "δοκιμάζοντες τί ἐστιν εὐάρεστον τῷ κυρίῳ·",
           "answerKeyRef": "Eph.5.10",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -17409,6 +17504,7 @@
         {
           "kind": "quoted",
           "ref": "Wis.8:14",
+          "refLabel": "所羅門智訓 8:14",
           "text": "διοικήσω λαούς, καὶ ἔθνη ὑποταγήσεταί μοι·",
           "answerKeyRef": "Wis.8:14",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -17869,6 +17965,7 @@
         {
           "kind": "quoted",
           "ref": "liturgy-chrysostom:173#2",
+          "refLabel": "金口約翰聖禮儀・信經　第 173 則",
           "text": "Ὁμολογῶ ἕν Βάπτισμα εἰς ἄφεσιν ἁμαρτιῶν.",
           "answerKeyRef": "liturgy-chrysostom:173#2",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -17915,6 +18012,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:2:2.2#1",
+          "refLabel": "依納爵致以弗所人書　2.2",
           "text": "ὀναίμην ὑμῶν διὰ παντός, ἐάνπερ ἄξιος ὦ.",
           "answerKeyRef": "patristic-plan:2:2.2#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -17966,6 +18064,7 @@
         {
           "kind": "quoted",
           "ref": "Isa.43:21",
+          "refLabel": "以賽亞書 43:21",
           "text": "λαόν μου ὃν περιεποιησάμην τὰς ἀρετάς μου διηγεῖσθαι.",
           "answerKeyRef": "Isa.43:21",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -18430,6 +18529,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:24:4#2",
+          "refLabel": "額我略‧納祥《神學講辭》第廿八篇 1–10：論神　4",
           "text": "θεὸν νοῆσαι μὲν χαλεπόν·",
           "answerKeyRef": "patristic-plan:24:4#2",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -18473,6 +18573,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:7:7.2#2",
+          "refLabel": "依納爵致士每拿人書　7.2",
           "text": "τοὺς δὲ μερισμοὺς φεύγετε ὡς ἀρχὴν κακῶν.",
           "answerKeyRef": "patristic-plan:7:7.2#2",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -18522,6 +18623,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:8:6.1#2",
+          "refLabel": "依納爵致坡旅甲書　6.1",
           "text": "ἀντίψυχον ἐγὼ τῶν ὑποτασσομένων τῷ ἐπισκόπῳ, πρεσβυτέροις, διακόνοις·",
           "answerKeyRef": "patristic-plan:8:6.1#2",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -18984,6 +19086,7 @@
         {
           "kind": "quoted",
           "ref": "Psa.113:6",
+          "refLabel": "詩篇 113:6",
           "text": "τὰ ὄρη, ἐσκιρτήσατε ὡς κριοί;",
           "answerKeyRef": "Psa.113:6",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -19029,6 +19132,7 @@
         {
           "kind": "quoted",
           "ref": "Pro.14:11",
+          "refLabel": "箴言 14:11",
           "text": "οἰκίαι ἀσεβῶν ἀφανισθήσονται, σκηναὶ δὲ κατορθούντων στήσονται.",
           "answerKeyRef": "Pro.14:11",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -19078,6 +19182,7 @@
         {
           "kind": "quoted",
           "ref": "Wis.6:11",
+          "refLabel": "所羅門智訓 6:11",
           "text": "ἐπιθυμήσατε οὖν τῶν λόγων μου, ποθήσατε καὶ παιδευθήσεσθε.",
           "answerKeyRef": "Wis.6:11",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -19557,6 +19662,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:32:31#1",
+          "refLabel": "使徒教規（85 條）　31",
           "text": "τύραννος γάρ ἐστιν.",
           "answerKeyRef": "patristic-plan:32:31#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -19598,6 +19704,7 @@
         {
           "kind": "quoted",
           "ref": "liturgy-chrysostom:46#1",
+          "refLabel": "金口約翰聖禮儀・小進堂　第 46 則",
           "text": "Εὐλόγησον Δέσποτα, τὴν ἁγίαν εἴσοδον.",
           "answerKeyRef": "liturgy-chrysostom:46#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -19643,6 +19750,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:32:30#1",
+          "refLabel": "使徒教規（85 條）　30",
           "text": "καὶ οἱ κοινωνοῦντες αὐτῷ πάντες.",
           "answerKeyRef": "patristic-plan:32:30#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -20110,6 +20218,7 @@
         {
           "kind": "quoted",
           "ref": "Sir.27:17",
+          "refLabel": "便西拉智訓 27:17",
           "text": "στέρξον φίλον καὶ πιστώθητι μετ᾽ αὐτοῦ·",
           "answerKeyRef": "Sir.27:17",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -20167,6 +20276,7 @@
         {
           "kind": "quoted",
           "ref": "Psa.117:7",
+          "refLabel": "詩篇 117:7",
           "text": "Κύριος ἐμοὶ βοηθός, κἀγὼ ἐπόψομαι τοὺς ἐχθρούς μου.",
           "answerKeyRef": "Psa.117:7",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -20220,6 +20330,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:24:8#13",
+          "refLabel": "額我略‧納祥《神學講辭》第廿八篇 1–10：論神　8",
           "text": "καὶ πόσον ὑπὲρ ἄγγελον εἴη θεός, οὗ λειτουργὸς ἄγγελος;",
           "answerKeyRef": "patristic-plan:24:8#13",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -20694,6 +20805,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:16:9.1.3#1",
+          "refLabel": "黑馬牧人書：誡命一至四　9.1.3",
           "text": "ἀπέχου ἀπὸ τῆς ἐνθυμήσεως ταύτης·",
           "answerKeyRef": "patristic-plan:16:9.1.3#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -20739,6 +20851,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:48:317#1",
+          "refLabel": "聖母讚頌詞（阿卡提斯托斯頌）　317",
           "text": "χαῖρε, τῆς ἁμαρτίας ἀναιροῦσα τὸν ρύπον.",
           "answerKeyRef": "patristic-plan:48:317#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -20785,6 +20898,7 @@
         {
           "kind": "quoted",
           "ref": "Sir.17:9",
+          "refLabel": "便西拉智訓 17:9",
           "text": "ἵνα διηγῶνται τὰ μεγαλεῖα τῶν ἔργων αὐτοῦ.",
           "answerKeyRef": "Sir.17:9",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -21257,6 +21371,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:17:4.12#2",
+          "refLabel": "巴拿巴書 1–5：新約與舊約的關係　4.12",
           "text": "ἕκαστος καθὼς ἐποίησεν κομιεῖται.",
           "answerKeyRef": "patristic-plan:17:4.12#2",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -21300,6 +21415,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:9:4.1#1",
+          "refLabel": "坡旅甲致腓立比人書　4.1",
           "text": "Ἀρχὴ δὲ πάντων χαλεπῶν φιλαργυρία.",
           "answerKeyRef": "patristic-plan:9:4.1#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -21345,6 +21461,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:11:16.4#1",
+          "refLabel": "革利免二書　16.4",
           "text": "καλὸν οὖν ἐλεημοσύνη ὡς μετάνοια ἁμαρτίας·",
           "answerKeyRef": "patristic-plan:11:16.4#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -21829,6 +21946,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:8:3.2#1",
+          "refLabel": "依納爵致坡旅甲書　3.2",
           "text": "πλέον σπουδαῖος γίνου οὗ εἶ.",
           "answerKeyRef": "patristic-plan:8:3.2#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -21875,6 +21993,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:1:6.3#1",
+          "refLabel": "十二使徒遺訓　6.3",
           "text": "λατρεία γάρ ἐστι θεῶν νεκρῶν.",
           "answerKeyRef": "patristic-plan:1:6.3#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -21920,6 +22039,7 @@
         {
           "kind": "quoted",
           "ref": "Matt.5.27",
+          "refLabel": "馬太福音 5:27",
           "text": "Ἠκούσατε ὅτι ἐρρέθη· Οὐ μοιχεύσεις.",
           "answerKeyRef": "Matt.5.27",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -22398,6 +22518,7 @@
         {
           "kind": "quoted",
           "ref": "1Sa.2:4",
+          "refLabel": "撒母耳記上 2:4",
           "text": "τόξον δυνατῶν ἠσθένησεν, καὶ ἀσθενοῦντες περιεζώσαντο δύναμιν·",
           "answerKeyRef": "1Sa.2:4",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -22446,6 +22567,7 @@
         {
           "kind": "quoted",
           "ref": "Rom.11.35",
+          "refLabel": "羅馬書 11:35",
           "text": "ἢ τίς προέδωκεν αὐτῷ, καὶ ἀνταποδοθήσεται αὐτῷ;",
           "answerKeyRef": "Rom.11.35",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -22493,6 +22615,7 @@
         {
           "kind": "quoted",
           "ref": "Tbs.14:14",
+          "refLabel": "多比傳（西奈抄本） 14:14",
           "text": "καὶ ἀπέθανεν ἐτῶν ἑκατὸν δέκα ἑπτὰ ἐνδόξως.",
           "answerKeyRef": "Tbs.14:14",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -22986,6 +23109,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:50:482#3",
+          "refLabel": "聖誕晨禱（12 月 25 日）　482",
           "text": "Σοὶ πρέπει ὕμνος τῷ Θεῷ.",
           "answerKeyRef": "patristic-plan:50:482#3",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -23031,6 +23155,7 @@
         {
           "kind": "quoted",
           "ref": "Pro.27:5",
+          "refLabel": "箴言 27:5",
           "text": "κρείσσους ἔλεγχοι ἀποκεκαλυμμένοι κρυπτομένης φιλίας.",
           "answerKeyRef": "Pro.27:5",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -23076,6 +23201,7 @@
         {
           "kind": "quoted",
           "ref": "Luke.23.22",
+          "refLabel": "路加福音 23:22",
           "text": "οὐδὲν αἴτιον θανάτου εὗρον ἐν αὐτῷ·",
           "answerKeyRef": "Luke.23.22",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -23556,6 +23682,7 @@
         {
           "kind": "quoted",
           "ref": "liturgy-chrysostom:127#1",
+          "refLabel": "金口約翰聖禮儀・革魯賓頌與大進堂　第 127 則",
           "text": "Ὁ Θεὸς ἱλάσθητί μοι τῷ ἁμαρτωλῷ, καὶ ἐλέησόν με.",
           "answerKeyRef": "liturgy-chrysostom:127#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -23610,6 +23737,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:45:9#1",
+          "refLabel": "大榮耀頌（晨禱）　9",
           "text": "Καταξίωσον, Κύριε, ἐν τῇ ἡμέρᾳ ταύτῃ, ἀναμαρτήτους φυλαχθῆναι ἡμᾶς.",
           "answerKeyRef": "patristic-plan:45:9#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -23664,6 +23792,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:20:64#5",
+          "refLabel": "猶斯定《第一護教辭》61–67：洗禮與感恩祭　64",
           "text": "ὅπερ γελοιότατον ἡγούμεθα εἶναι, τῆς ἐννοίας εἰκόνα παραφέρειν θηλειῶν μορφήν.",
           "answerKeyRef": "patristic-plan:20:64#5",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -24165,6 +24294,7 @@
         {
           "kind": "quoted",
           "ref": "1Cor.10.15",
+          "refLabel": "哥林多前書 10:15",
           "text": "ὡς φρονίμοις λέγω· κρίνατε ὑμεῖς ὅ φημι.",
           "answerKeyRef": "1Cor.10.15",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -24216,6 +24346,7 @@
         {
           "kind": "quoted",
           "ref": "4Ma.17:15",
+          "refLabel": "馬加比四書 17:15",
           "text": "θεοσέβεια δὲ ἐνίκα, τοὺς ἑαυτῆς ἀθλητὰς στεφανοῦσα.",
           "answerKeyRef": "4Ma.17:15",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -24265,6 +24396,7 @@
         {
           "kind": "quoted",
           "ref": "Lam.3:26",
+          "refLabel": "耶利米哀歌 3:26",
           "text": "καὶ ὑπομενεῖ καὶ ἡσυχάσει εἰς τὸ σωτήριον Κυρίου.",
           "answerKeyRef": "Lam.3:26",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -24749,6 +24881,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:24:8#10",
+          "refLabel": "額我略‧納祥《神學講辭》第廿八篇 1–10：論神　8",
           "text": "καὶ τοῦτο εἰς ἄπειρον.",
           "answerKeyRef": "patristic-plan:24:8#10",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -24792,6 +24925,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:48:255#1",
+          "refLabel": "聖母讚頌詞（阿卡提斯托斯頌）　255",
           "text": "χαῖρε, προνοίας αὐτοῦ ταμεῖον.",
           "answerKeyRef": "patristic-plan:48:255#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -24835,6 +24969,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:11:11.3#1",
+          "refLabel": "革利免二書　11.3",
           "text": "ἀνόητοι, συμβάλετε ἑαυτοὺς ξύλῳ·",
           "answerKeyRef": "patristic-plan:11:11.3#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -25320,6 +25455,7 @@
         {
           "kind": "quoted",
           "ref": "Exo.23:6",
+          "refLabel": "出埃及記 23:6",
           "text": "Οὐ διαστρέψεις κρίμα πένητος ἐν κρίσει αὐτοῦ.",
           "answerKeyRef": "Exo.23:6",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -25369,6 +25505,7 @@
         {
           "kind": "quoted",
           "ref": "Heb.10.31",
+          "refLabel": "希伯來書 10:31",
           "text": "φοβερὸν τὸ ἐμπεσεῖν εἰς χεῖρας θεοῦ ζῶντος.",
           "answerKeyRef": "Heb.10.31",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -25418,6 +25555,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:9:7.2#1",
+          "refLabel": "坡旅甲致腓立比人書　7.2",
           "text": "Τὸ μὲν πνεῦμα πρόθυμον, ἡ δὲ σὰρξ ἀσθενής.",
           "answerKeyRef": "patristic-plan:9:7.2#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -25906,6 +26044,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:24:6#7",
+          "refLabel": "額我略‧納祥《神學講辭》第廿八篇 1–10：論神　6",
           "text": "τίς οὕτως εἰς ἔσχατον σοφίας ἀφίκετο;",
           "answerKeyRef": "patristic-plan:24:6#7",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -25953,6 +26092,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:11:2.2#1",
+          "refLabel": "革利免二書　2.2",
           "text": "Βόησον, ἡ οὐκ ὠδίνουσα, τοῦτο λέγει·",
           "answerKeyRef": "patristic-plan:11:2.2#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -26000,6 +26140,7 @@
         {
           "kind": "quoted",
           "ref": "liturgy-chrysostom:118#4",
+          "refLabel": "金口約翰聖禮儀・革魯賓頌與大進堂　第 118 則",
           "text": "Σταυρὸν γὰρ ὑπομείνας δι' ἡμᾶς, θανάτῳ θάνατον ὤλεσεν.",
           "answerKeyRef": "liturgy-chrysostom:118#4",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -26484,6 +26625,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:23:6#8",
+          "refLabel": "額我略‧納祥《神學講辭》第廿七篇：論神學該由誰、何時、如何講　6",
           "text": "οὐχ ὡς εἴωθεν ;",
           "answerKeyRef": "patristic-plan:23:6#8",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -26525,6 +26667,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:8:3.2#2",
+          "refLabel": "依納爵致坡旅甲書　3.2",
           "text": "τοὺς καιροὺς καταμάνθανε.",
           "answerKeyRef": "patristic-plan:8:3.2#2",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -26566,6 +26709,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:25:16#1",
+          "refLabel": "金口若望《復活節教理講道》　16",
           "text": "Ἔσβεσεν αὐτόν, ὑπ’ αὐτοῦ κατεχόμενος.",
           "answerKeyRef": "patristic-plan:25:16#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -27042,6 +27186,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:43:13#1",
+          "refLabel": "迦太基會議教規 1–20（希臘文傳本）　13",
           "text": "Πολλοὶ ἐπίσκοποι συναχθέντες, Ἐπίσκοπον χειροτονήσουσιν.",
           "answerKeyRef": "patristic-plan:43:13#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -27086,6 +27231,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:5:9.1#2",
+          "refLabel": "依納爵致費拉德非人書　9.1",
           "text": "πάντα ταῦτα εἰς ἑνότητα θεοῦ.",
           "answerKeyRef": "patristic-plan:5:9.1#2",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -27131,6 +27277,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:7:13.1#3",
+          "refLabel": "依納爵致士每拿人書　13.1",
           "text": "ἀσπάζεται ὑμᾶς Φίλων σὺν ἐμοὶ ὤν.",
           "answerKeyRef": "patristic-plan:7:13.1#3",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -27617,6 +27764,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:17:2.5#6",
+          "refLabel": "巴拿巴書 1–5：新約與舊約的關係　2.5",
           "text": "τὰς νεομηνίας ὑμῶν καὶ τὰ σάββατα οὐκ ἀνέχομαι.",
           "answerKeyRef": "patristic-plan:17:2.5#6",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -27668,6 +27816,7 @@
         {
           "kind": "quoted",
           "ref": "Sir.25:25",
+          "refLabel": "便西拉智訓 25:25",
           "text": "μὴ δῷς ὕδατι διέξοδον, μηδὲ γυναικὶ πονηρᾷ ἐξουσίαν·",
           "answerKeyRef": "Sir.25:25",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -27719,6 +27868,7 @@
         {
           "kind": "quoted",
           "ref": "patristic-plan:15:1.3.3#3",
+          "refLabel": "黑馬牧人書：第一異象　1.3.3",
           "text": "λέγει μοι· Γενοῦ ἀκροατὴς καὶ ἄκουε τὰς δόξας τοῦ θεοῦ.",
           "answerKeyRef": "patristic-plan:15:1.3.3#3",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",

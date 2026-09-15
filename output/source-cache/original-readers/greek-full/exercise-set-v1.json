@@ -684,6 +684,7 @@
         {
           "kind": "quoted",
           "ref": "Sir.42:15",
+          "refLabel": "便西拉智訓 42:15",
           "text": "ἐν λόγοις Κυρίου τὰ ἔργα αὐτοῦ.",
           "answerKeyRef": "Sir.42:15",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -771,6 +772,7 @@
         {
           "kind": "quoted",
           "ref": "Psa.23:1",
+          "refLabel": "詩篇 23:1",
           "text": "τῆς μιᾶς σαββάτων.",
           "answerKeyRef": "Psa.23:1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -822,6 +824,7 @@
         {
           "kind": "quoted",
           "ref": "1Ki.18:39",
+          "refLabel": "列王紀上 18:39",
           "text": "αὐτὸς ὁ θεός·",
           "answerKeyRef": "1Ki.18:39",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -1268,6 +1271,7 @@
         {
           "kind": "quoted",
           "ref": "Matt.6.25",
+          "refLabel": "馬太福音 6:25",
           "text": "Διὰ τοῦτο λέγω ὑμῖν·",
           "answerKeyRef": "Matt.6.25",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -1341,6 +1345,7 @@
         {
           "kind": "quoted",
           "ref": "Matt.27.43",
+          "refLabel": "馬太福音 27:43",
           "text": "εἶπεν γὰρ ὅτι Θεοῦ εἰμι υἱός.",
           "answerKeyRef": "Matt.27.43",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -1408,6 +1413,7 @@
         {
           "kind": "quoted",
           "ref": "John.11.11",
+          "refLabel": "約翰福音 11:11",
           "text": "ταῦτα εἶπεν, καὶ μετὰ τοῦτο λέγει αὐτοῖς·",
           "answerKeyRef": "John.11.11",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -1865,6 +1871,7 @@
         {
           "kind": "quoted",
           "ref": "Luke.24.32",
+          "refLabel": "路加福音 24:32",
           "text": "καὶ εἶπαν πρὸς ἀλλήλους·",
           "answerKeyRef": "Luke.24.32",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -1918,6 +1925,7 @@
         {
           "kind": "quoted",
           "ref": "Luke.14.23",
+          "refLabel": "路加福音 14:23",
           "text": "καὶ εἶπεν ὁ κύριος πρὸς τὸν δοῦλον·",
           "answerKeyRef": "Luke.14.23",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -1976,6 +1984,7 @@
         {
           "kind": "quoted",
           "ref": "Luke.15.3",
+          "refLabel": "路加福音 15:3",
           "text": "εἶπεν δὲ πρὸς αὐτοὺς τὴν παραβολὴν ταύτην λέγων·",
           "answerKeyRef": "Luke.15.3",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -2417,6 +2426,7 @@
         {
           "kind": "quoted",
           "ref": "Luke.18.19",
+          "refLabel": "路加福音 18:19",
           "text": "οὐδεὶς ἀγαθὸς εἰ μὴ εἷς ὁ θεός.",
           "answerKeyRef": "Luke.18.19",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -2496,6 +2506,7 @@
         {
           "kind": "quoted",
           "ref": "Gen.27:18",
+          "refLabel": "創世記 27:18",
           "text": "τίς εἶ σύ, τέκνον;",
           "answerKeyRef": "Gen.27:18",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -2579,6 +2590,7 @@
         {
           "kind": "quoted",
           "ref": "Luke.14.18",
+          "refLabel": "路加福音 14:18",
           "text": "ὁ πρῶτος εἶπεν αὐτῷ·",
           "answerKeyRef": "Luke.14.18",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -3017,6 +3029,7 @@
         {
           "kind": "quoted",
           "ref": "Matt.17.4",
+          "refLabel": "馬太福音 17:4",
           "text": "Κύριε, καλόν ἐστιν ἡμᾶς ὧδε εἶναι·",
           "answerKeyRef": "Matt.17.4",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -3073,6 +3086,7 @@
         {
           "kind": "quoted",
           "ref": "Mark.3.34",
+          "refLabel": "馬可福音 3:34",
           "text": "Ἴδε ἡ μήτηρ μου καὶ οἱ ἀδελφοί μου·",
           "answerKeyRef": "Mark.3.34",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -3132,6 +3146,7 @@
         {
           "kind": "quoted",
           "ref": "Luke.22.11",
+          "refLabel": "路加福音 22:11",
           "text": "Λέγει σοι ὁ διδάσκαλος·",
           "answerKeyRef": "Luke.22.11",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -3551,6 +3566,7 @@
         {
           "kind": "quoted",
           "ref": "4Ma.18:9",
+          "refLabel": "馬加比四書 18:9",
           "text": "μακάριος μὲν ἐκεῖνος·",
           "answerKeyRef": "4Ma.18:9",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -3612,6 +3628,7 @@
         {
           "kind": "quoted",
           "ref": "John.20.25",
+          "refLabel": "約翰福音 20:25",
           "text": "ἔλεγον οὖν αὐτῷ οἱ ἄλλοι μαθηταί·",
           "answerKeyRef": "John.20.25",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -3669,6 +3686,7 @@
         {
           "kind": "quoted",
           "ref": "1Cor.12.15",
+          "refLabel": "哥林多前書 12:15",
           "text": "ἐὰν εἴπῃ ὁ πούς·",
           "answerKeyRef": "1Cor.12.15",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -4090,6 +4108,7 @@
         {
           "kind": "quoted",
           "ref": "Gen.10:12",
+          "refLabel": "創世記 10:12",
           "text": "αὕτη ἡ πόλις ἡ μεγάλη.",
           "answerKeyRef": "Gen.10:12",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -4143,6 +4162,7 @@
         {
           "kind": "quoted",
           "ref": "John.16.17",
+          "refLabel": "約翰福音 16:17",
           "text": "Τί ἐστιν τοῦτο ὃ λέγει ἡμῖν·",
           "answerKeyRef": "John.16.17",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -4190,6 +4210,7 @@
         {
           "kind": "quoted",
           "ref": "Matt.22.25",
+          "refLabel": "馬太福音 22:25",
           "text": "ἦσαν δὲ παρ’ ἡμῖν ἑπτὰ ἀδελφοί·",
           "answerKeyRef": "Matt.22.25",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -4663,6 +4684,7 @@
         {
           "kind": "quoted",
           "ref": "2Cor.10.7",
+          "refLabel": "哥林多後書 10:7",
           "text": "Τὰ κατὰ πρόσωπον βλέπετε.",
           "answerKeyRef": "2Cor.10.7",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -4716,6 +4738,7 @@
         {
           "kind": "quoted",
           "ref": "John.8.30",
+          "refLabel": "約翰福音 8:30",
           "text": "ταῦτα αὐτοῦ λαλοῦντος πολλοὶ ἐπίστευσαν εἰς αὐτόν.",
           "answerKeyRef": "John.8.30",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -4774,6 +4797,7 @@
         {
           "kind": "quoted",
           "ref": "Jas.2.18",
+          "refLabel": "雅各書 2:18",
           "text": "Σὺ πίστιν ἔχεις κἀγὼ ἔργα ἔχω.",
           "answerKeyRef": "Jas.2.18",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -5200,6 +5224,7 @@
         {
           "kind": "quoted",
           "ref": "Jdg.8:3",
+          "refLabel": "士師記 8:3",
           "text": "καὶ τί ἠδυνήθην ποιῆσαι ὡς ὑμεῖς;",
           "answerKeyRef": "Jdg.8:3",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -5268,6 +5293,7 @@
         {
           "kind": "quoted",
           "ref": "Psa.47:5",
+          "refLabel": "詩篇 47:5",
           "text": "ὅτι ἰδοὺ οἱ βασιλεῖς συνήχθησαν, ἤλθοσαν ἐπὶ τὸ αὐτό·",
           "answerKeyRef": "Psa.47:5",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -5340,6 +5366,7 @@
         {
           "kind": "quoted",
           "ref": "Jdg.9:55",
+          "refLabel": "士師記 9:55",
           "text": "καὶ ἐπορεύθησαν ἀνὴρ εἰς τὸν τόπον αὐτοῦ.",
           "answerKeyRef": "Jdg.9:55",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -5809,6 +5836,7 @@
         {
           "kind": "quoted",
           "ref": "Luke.9.11",
+          "refLabel": "路加福音 9:11",
           "text": "οἱ δὲ ὄχλοι γνόντες ἠκολούθησαν αὐτῷ.",
           "answerKeyRef": "Luke.9.11",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -5866,6 +5894,7 @@
         {
           "kind": "quoted",
           "ref": "Mark.16.7",
+          "refLabel": "馬可福音 16:7",
           "text": "ἐκεῖ αὐτὸν ὄψεσθε, καθὼς εἶπεν ὑμῖν.",
           "answerKeyRef": "Mark.16.7",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -5923,6 +5952,7 @@
         {
           "kind": "quoted",
           "ref": "Exo.18:22",
+          "refLabel": "出埃及記 18:22",
           "text": "καὶ κρινοῦσιν τὸν λαὸν πᾶσαν ὥραν·",
           "answerKeyRef": "Exo.18:22",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -6344,6 +6374,7 @@
         {
           "kind": "quoted",
           "ref": "1Ma.1:24",
+          "refLabel": "馬加比一書 1:24",
           "text": "καὶ λαβὼν πάντα ἀπῆλθεν εἰς τὴν γῆν αὐτοῦ.",
           "answerKeyRef": "1Ma.1:24",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -6415,6 +6446,7 @@
         {
           "kind": "quoted",
           "ref": "Rom.6.2",
+          "refLabel": "羅馬書 6:2",
           "text": "μὴ γένοιτο· οἵτινες ἀπεθάνομεν τῇ ἁμαρτίᾳ, πῶς ἔτι ζήσομεν ἐν αὐτῇ;",
           "answerKeyRef": "Rom.6.2",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -6492,6 +6524,7 @@
         {
           "kind": "quoted",
           "ref": "Exo.21:3",
+          "refLabel": "出埃及記 21:3",
           "text": "ἐὰν αὐτὸς μόνος εἰσέλθῃ, καὶ μόνος ἐξελεύσεται·",
           "answerKeyRef": "Exo.21:3",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -6929,6 +6962,7 @@
         {
           "kind": "quoted",
           "ref": "Matt.5.1",
+          "refLabel": "馬太福音 5:1",
           "text": "Ἰδὼν δὲ τοὺς ὄχλους ἀνέβη εἰς τὸ ὄρος·",
           "answerKeyRef": "Matt.5.1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -6989,6 +7023,7 @@
         {
           "kind": "quoted",
           "ref": "1Ch.11:19",
+          "refLabel": "歷代志上 11:19",
           "text": "εἰ αἷμα ἀνδρῶν τούτων πίομαι ἐν ψυχαῖς αὐτῶν;",
           "answerKeyRef": "1Ch.11:19",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -7050,6 +7085,7 @@
         {
           "kind": "quoted",
           "ref": "Gal.1.24",
+          "refLabel": "加拉太書 1:24",
           "text": "καὶ ἐδόξαζον ἐν ἐμοὶ τὸν θεόν.",
           "answerKeyRef": "Gal.1.24",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -7497,6 +7533,7 @@
         {
           "kind": "quoted",
           "ref": "Luke.3.18",
+          "refLabel": "路加福音 3:18",
           "text": "Πολλὰ μὲν οὖν καὶ ἕτερα παρακαλῶν εὐηγγελίζετο τὸν λαόν·",
           "answerKeyRef": "Luke.3.18",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -7570,6 +7607,7 @@
         {
           "kind": "quoted",
           "ref": "Jer.12:5",
+          "refLabel": "耶利米書 12:5",
           "text": "καὶ ἐν γῇ εἰρήνης οὐ πέποιθας·",
           "answerKeyRef": "Jer.12:5",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -7627,6 +7665,7 @@
         {
           "kind": "quoted",
           "ref": "Mark.4.14",
+          "refLabel": "馬可福音 4:14",
           "text": "ὁ σπείρων τὸν λόγον σπείρει.",
           "answerKeyRef": "Mark.4.14",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -8063,6 +8102,7 @@
         {
           "kind": "quoted",
           "ref": "Matt.26.15",
+          "refLabel": "馬太福音 26:15",
           "text": "Τί θέλετέ μοι δοῦναι κἀγὼ ὑμῖν παραδώσω αὐτόν;",
           "answerKeyRef": "Matt.26.15",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -8124,6 +8164,7 @@
         {
           "kind": "quoted",
           "ref": "John.4.33",
+          "refLabel": "約翰福音 4:33",
           "text": "ἔλεγον οὖν οἱ μαθηταὶ πρὸς ἀλλήλους· Μή τις ἤνεγκεν αὐτῷ φαγεῖν;",
           "answerKeyRef": "John.4.33",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -8191,6 +8232,7 @@
         {
           "kind": "quoted",
           "ref": "Heb.11.2",
+          "refLabel": "希伯來書 11:2",
           "text": "ἐν ταύτῃ γὰρ ἐμαρτυρήθησαν οἱ πρεσβύτεροι.",
           "answerKeyRef": "Heb.11.2",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -8642,6 +8684,7 @@
         {
           "kind": "quoted",
           "ref": "Acts.26.16",
+          "refLabel": "使徒行傳 26:16",
           "text": "ἀλλὰ ἀνάστηθι καὶ στῆθι ἐπὶ τοὺς πόδας σου·",
           "answerKeyRef": "Acts.26.16",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -8703,6 +8746,7 @@
         {
           "kind": "quoted",
           "ref": "Pss.9:14",
+          "refLabel": "所羅門詩篇 9:14",
           "text": "καὶ τίνι ἀφήσει ἁμαρτίας, εἰ μὴ τοῖς ἡμαρτηκόσι;",
           "answerKeyRef": "Pss.9:14",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -8764,6 +8808,7 @@
         {
           "kind": "quoted",
           "ref": "2Cor.5.11",
+          "refLabel": "哥林多後書 5:11",
           "text": "Εἰδότες οὖν τὸν φόβον τοῦ κυρίου ἀνθρώπους πείθομεν, θεῷ δὲ πεφανερώμεθα·",
           "answerKeyRef": "2Cor.5.11",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -9196,6 +9241,7 @@
         {
           "kind": "quoted",
           "ref": "1Ma.6:36",
+          "refLabel": "馬加比一書 6:36",
           "text": "οὗτοι πρὸ καιροῦ, οὗ ἂν ᾖ τὸ θηρίον, ἦσαν·",
           "answerKeyRef": "1Ma.6:36",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -9259,6 +9305,7 @@
         {
           "kind": "quoted",
           "ref": "John.11.34",
+          "refLabel": "約翰福音 11:34",
           "text": "καὶ εἶπεν· Ποῦ τεθείκατε αὐτόν; λέγουσιν αὐτῷ· Κύριε, ἔρχου καὶ ἴδε.",
           "answerKeyRef": "John.11.34",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -9323,6 +9370,7 @@
         {
           "kind": "quoted",
           "ref": "Rom.2.6",
+          "refLabel": "羅馬書 2:6",
           "text": "ὃς ἀποδώσει ἑκάστῳ κατὰ τὰ ἔργα αὐτοῦ·",
           "answerKeyRef": "Rom.2.6",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -9786,6 +9834,7 @@
         {
           "kind": "quoted",
           "ref": "Isa.41:3",
+          "refLabel": "以賽亞書 41:3",
           "text": "καὶ διώξεται αὐτούς, διελεύσεται ἐν εἰρήνῃ ἡ ὁδὸς τῶν ποδῶν αὐτοῦ.",
           "answerKeyRef": "Isa.41:3",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -9851,6 +9900,7 @@
         {
           "kind": "quoted",
           "ref": "Col.4.4",
+          "refLabel": "歌羅西書 4:4",
           "text": "ἵνα φανερώσω αὐτὸ ὡς δεῖ με λαλῆσαι.",
           "answerKeyRef": "Col.4.4",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -9900,6 +9950,7 @@
         {
           "kind": "quoted",
           "ref": "Mark.14.42",
+          "refLabel": "馬可福音 14:42",
           "text": "ἐγείρεσθε ἄγωμεν· ἰδοὺ ὁ παραδιδούς με ἤγγικεν.",
           "answerKeyRef": "Mark.14.42",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -10375,6 +10426,7 @@
         {
           "kind": "quoted",
           "ref": "Phil.4.4",
+          "refLabel": "腓立比書 4:4",
           "text": "Χαίρετε ἐν κυρίῳ πάντοτε· πάλιν ἐρῶ, χαίρετε.",
           "answerKeyRef": "Phil.4.4",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -10422,6 +10474,7 @@
         {
           "kind": "quoted",
           "ref": "John.15.23",
+          "refLabel": "約翰福音 15:23",
           "text": "ὁ ἐμὲ μισῶν καὶ τὸν πατέρα μου μισεῖ.",
           "answerKeyRef": "John.15.23",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -10471,6 +10524,7 @@
         {
           "kind": "quoted",
           "ref": "1Thess.5.11",
+          "refLabel": "帖撒羅尼迦前書 5:11",
           "text": "διὸ παρακαλεῖτε ἀλλήλους καὶ οἰκοδομεῖτε εἷς τὸν ἕνα, καθὼς καὶ ποιεῖτε.",
           "answerKeyRef": "1Thess.5.11",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -10933,6 +10987,7 @@
         {
           "kind": "quoted",
           "ref": "Isa.53:6",
+          "refLabel": "以賽亞書 53:6",
           "text": "πάντες ὡς πρόβατα ἐπλανήθημεν, ἄνθρωπος τῇ ὁδῷ αὐτοῦ ἐπλανήθη·",
           "answerKeyRef": "Isa.53:6",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -10995,6 +11050,7 @@
         {
           "kind": "quoted",
           "ref": "1Cor.14.17",
+          "refLabel": "哥林多前書 14:17",
           "text": "σὺ μὲν γὰρ καλῶς εὐχαριστεῖς, ἀλλ’ ὁ ἕτερος οὐκ οἰκοδομεῖται.",
           "answerKeyRef": "1Cor.14.17",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -11060,6 +11116,7 @@
         {
           "kind": "quoted",
           "ref": "Eph.4.27",
+          "refLabel": "以弗所書 4:27",
           "text": "μηδὲ δίδοτε τόπον τῷ διαβόλῳ.",
           "answerKeyRef": "Eph.4.27",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -11509,6 +11566,7 @@
         {
           "kind": "quoted",
           "ref": "Matt.16.23",
+          "refLabel": "馬太福音 16:23",
           "text": "Ὕπαγε ὀπίσω μου, Σατανᾶ·",
           "answerKeyRef": "Matt.16.23",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -11563,6 +11621,7 @@
         {
           "kind": "quoted",
           "ref": "Mark.4.23",
+          "refLabel": "馬可福音 4:23",
           "text": "εἴ τις ἔχει ὦτα ἀκούειν ἀκουέτω.",
           "answerKeyRef": "Mark.4.23",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -11609,6 +11668,7 @@
         {
           "kind": "quoted",
           "ref": "Rom.14.16",
+          "refLabel": "羅馬書 14:16",
           "text": "μὴ βλασφημείσθω οὖν ὑμῶν τὸ ἀγαθόν.",
           "answerKeyRef": "Rom.14.16",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -12078,6 +12138,7 @@
         {
           "kind": "quoted",
           "ref": "2Cor.12.10",
+          "refLabel": "哥林多後書 12:10",
           "text": "ὅταν γὰρ ἀσθενῶ, τότε δυνατός εἰμι.",
           "answerKeyRef": "2Cor.12.10",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -12135,6 +12196,7 @@
         {
           "kind": "quoted",
           "ref": "1Tim.4.11",
+          "refLabel": "提摩太前書 4:11",
           "text": "Παράγγελλε ταῦτα καὶ δίδασκε.",
           "answerKeyRef": "1Tim.4.11",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -12178,6 +12240,7 @@
         {
           "kind": "quoted",
           "ref": "Mark.3.30",
+          "refLabel": "馬可福音 3:30",
           "text": "ὅτι ἔλεγον· Πνεῦμα ἀκάθαρτον ἔχει.",
           "answerKeyRef": "Mark.3.30",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -12628,6 +12691,7 @@
         {
           "kind": "quoted",
           "ref": "1Cor.7.23",
+          "refLabel": "哥林多前書 7:23",
           "text": "τιμῆς ἠγοράσθητε· μὴ γίνεσθε δοῦλοι ἀνθρώπων.",
           "answerKeyRef": "1Cor.7.23",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -12675,6 +12739,7 @@
         {
           "kind": "quoted",
           "ref": "1Cor.8.7",
+          "refLabel": "哥林多前書 8:7",
           "text": "Ἀλλ’ οὐκ ἐν πᾶσιν ἡ γνῶσις·",
           "answerKeyRef": "1Cor.8.7",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -12722,6 +12787,7 @@
         {
           "kind": "quoted",
           "ref": "Acts.28.17",
+          "refLabel": "使徒行傳 28:17",
           "text": "συνελθόντων δὲ αὐτῶν ἔλεγεν πρὸς αὐτούς·",
           "answerKeyRef": "Acts.28.17",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -13178,6 +13244,7 @@
         {
           "kind": "quoted",
           "ref": "Nah.3:7",
+          "refLabel": "那鴻書 3:7",
           "text": "πόθεν ζητήσω παράκλησιν αὐτῇ;",
           "answerKeyRef": "Nah.3:7",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -13231,6 +13298,7 @@
         {
           "kind": "quoted",
           "ref": "1Cor.6.7",
+          "refLabel": "哥林多前書 6:7",
           "text": "διὰ τί οὐχὶ μᾶλλον ἀδικεῖσθε;",
           "answerKeyRef": "1Cor.6.7",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -13276,6 +13344,7 @@
         {
           "kind": "quoted",
           "ref": "John.16.1",
+          "refLabel": "約翰福音 16:1",
           "text": "Ταῦτα λελάληκα ὑμῖν ἵνα μὴ σκανδαλισθῆτε.",
           "answerKeyRef": "John.16.1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -13749,6 +13818,7 @@
         {
           "kind": "quoted",
           "ref": "1Tim.3.9",
+          "refLabel": "提摩太前書 3:9",
           "text": "ἔχοντας τὸ μυστήριον τῆς πίστεως ἐν καθαρᾷ συνειδήσει.",
           "answerKeyRef": "1Tim.3.9",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -13799,6 +13869,7 @@
         {
           "kind": "quoted",
           "ref": "Matt.7.20",
+          "refLabel": "馬太福音 7:20",
           "text": "ἄρα γε ἀπὸ τῶν καρπῶν αὐτῶν ἐπιγνώσεσθε αὐτούς.",
           "answerKeyRef": "Matt.7.20",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -13849,6 +13920,7 @@
         {
           "kind": "quoted",
           "ref": "Rev.2.25",
+          "refLabel": "啟示錄 2:25",
           "text": "πλὴν ὃ ἔχετε κρατήσατε ἄχρι οὗ ἂν ἥξω.",
           "answerKeyRef": "Rev.2.25",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -14312,6 +14384,7 @@
         {
           "kind": "quoted",
           "ref": "2Ch.28:10",
+          "refLabel": "歷代志下 28:10",
           "text": "οὐκ ἰδοὺ ὑμῖν μεθ᾽ ὑμῶν μαρτυρῆσαι Κυρίῳ θεῷ ἡμῶν;",
           "answerKeyRef": "2Ch.28:10",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -14387,6 +14460,7 @@
         {
           "kind": "quoted",
           "ref": "Sir.23:5",
+          "refLabel": "便西拉智訓 23:5",
           "text": "καὶ ἐπιθυμίαν ἀπόστρεψον ἀπ᾽ ἐμοῦ·",
           "answerKeyRef": "Sir.23:5",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -14444,6 +14518,7 @@
         {
           "kind": "quoted",
           "ref": "Psa.55:4",
+          "refLabel": "詩篇 55:4",
           "text": "φοβηθήσονται, ἐγὼ δὲ ἐπὶ σοὶ ἐλπιῶ.",
           "answerKeyRef": "Psa.55:4",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -14935,6 +15010,7 @@
         {
           "kind": "quoted",
           "ref": "1Sa.25:15",
+          "refLabel": "撒母耳記上 25:15",
           "text": "καὶ οἱ ἄνδρες ἀγαθοὶ ἡμῖν σφόδρα·",
           "answerKeyRef": "1Sa.25:15",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -14993,6 +15069,7 @@
         {
           "kind": "quoted",
           "ref": "1Sa.21:5",
+          "refLabel": "撒母耳記上 21:5",
           "text": "διότι ἁγιασθήσεται σήμερον διὰ τὰ σκεύη μου.",
           "answerKeyRef": "1Sa.21:5",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -15053,6 +15130,7 @@
         {
           "kind": "quoted",
           "ref": "Jos.21:40",
+          "refLabel": "約書亞記 21:40",
           "text": "καὶ ἐγενήθη τὰ ὅρια αἱ πόλεις δέκα δύο.",
           "answerKeyRef": "Jos.21:40",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -15516,6 +15594,7 @@
         {
           "kind": "quoted",
           "ref": "Psa.11:9",
+          "refLabel": "詩篇 11:9",
           "text": "κύκλῳ οἱ ἀσεβεῖς περιπατοῦσιν·",
           "answerKeyRef": "Psa.11:9",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -15569,6 +15648,7 @@
         {
           "kind": "quoted",
           "ref": "Num.3:13",
+          "refLabel": "民數記 3:13",
           "text": "ἀπὸ ἀνθρώπου ἕως κτήνους ἐμοὶ ἔσονται·",
           "answerKeyRef": "Num.3:13",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -15628,6 +15708,7 @@
         {
           "kind": "quoted",
           "ref": "Jer.2:16",
+          "refLabel": "耶利米書 2:16",
           "text": "οὐχὶ ταῦτα ἐποίησέν σοι τὸ καταλιπεῖν σε ἐμέ;",
           "answerKeyRef": "Jer.2:16",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -16091,6 +16172,7 @@
         {
           "kind": "quoted",
           "ref": "1Ki.15:14",
+          "refLabel": "列王紀上 15:14",
           "text": "τὰ δὲ ὑψηλὰ οὐκ ἐξῆρεν·",
           "answerKeyRef": "1Ki.15:14",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -16146,6 +16228,7 @@
         {
           "kind": "quoted",
           "ref": "Exo.15:3",
+          "refLabel": "出埃及記 15:3",
           "text": "Κύριος συντρίβων πολέμους, Κύριος ὄνομα αὐτῷ.",
           "answerKeyRef": "Exo.15:3",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -16191,6 +16274,7 @@
         {
           "kind": "quoted",
           "ref": "Exo.22:19",
+          "refLabel": "出埃及記 22:19",
           "text": "Πᾶν κοιμώμενον μετὰ κτήνους, θανάτῳ ἀποκτενεῖτε αὐτούς.",
           "answerKeyRef": "Exo.22:19",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -16652,6 +16736,7 @@
         {
           "kind": "quoted",
           "ref": "2Sa.11:21",
+          "refLabel": "撒母耳記下 11:21",
           "text": "ἵνα τί προσηγάγετε πρὸς τὸ τεῖχος;",
           "answerKeyRef": "2Sa.11:21",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -16709,6 +16794,7 @@
         {
           "kind": "quoted",
           "ref": "1Ma.16:5",
+          "refLabel": "馬加比一書 16:5",
           "text": "καὶ ἀναστάντες τὸ πρωὶ ἐπορεύοντο εἰς τὸ πεδίον·",
           "answerKeyRef": "1Ma.16:5",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -16768,6 +16854,7 @@
         {
           "kind": "quoted",
           "ref": "Heb.8.3",
+          "refLabel": "希伯來書 8:3",
           "text": "πᾶς γὰρ ἀρχιερεὺς εἰς τὸ προσφέρειν δῶρά τε καὶ θυσίας καθίσταται·",
           "answerKeyRef": "Heb.8.3",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -17234,6 +17321,7 @@
         {
           "kind": "quoted",
           "ref": "2Ch.17:14",
+          "refLabel": "歷代志下 17:14",
           "text": "καὶ οὗτος ἀριθμὸς αὐτῶν κατ᾽ οἴκους πατριῶν αὐτῶν·",
           "answerKeyRef": "2Ch.17:14",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -17293,6 +17381,7 @@
         {
           "kind": "quoted",
           "ref": "Psa.89:15",
+          "refLabel": "詩篇 89:15",
           "text": "ἀνθ᾽ ὧν ἡμερῶν ἐταπείνωσας ἡμᾶς, ἐτῶν ὧν εἴδομεν κακά.",
           "answerKeyRef": "Psa.89:15",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -17355,6 +17444,7 @@
         {
           "kind": "quoted",
           "ref": "Sir.4:13",
+          "refLabel": "便西拉智訓 4:13",
           "text": "ὁ κρατῶν αὐτῆς κληρονομήσει δόξαν, καὶ οὗ εἰσπορεύεται, εὐλογήσει Κύριος·",
           "answerKeyRef": "Sir.4:13",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -17807,6 +17897,7 @@
         {
           "kind": "quoted",
           "ref": "Dan.6:15",
+          "refLabel": "但以理書 6:15",
           "text": "καὶ οὐκ ἠδύνατο ἐξελέσθαι αὐτὸν ἀπ᾽ αὐτῶν.",
           "answerKeyRef": "Dan.6:15",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -17855,6 +17946,7 @@
         {
           "kind": "quoted",
           "ref": "Psa.100:4",
+          "refLabel": "詩篇 100:4",
           "text": "ἐκκλίνοντος ἀπ᾽ ἐμοῦ τοῦ πονηροῦ οὐκ ἐγίνωσκον.",
           "answerKeyRef": "Psa.100:4",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -17906,6 +17998,7 @@
         {
           "kind": "quoted",
           "ref": "Pss.17:40",
+          "refLabel": "所羅門詩篇 17:40",
           "text": "εὐλογήσει λαὸν Κυρίου ἐν σοφίᾳ μετ᾽ εὐφροσύνης.",
           "answerKeyRef": "Pss.17:40",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -18365,6 +18458,7 @@
         {
           "kind": "quoted",
           "ref": "2Ki.2:8",
+          "refLabel": "列王紀下 2:8",
           "text": "καὶ διέβησαν ἀμφότεροι ἐν ἐρήμῳ.",
           "answerKeyRef": "2Ki.2:8",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -18420,6 +18514,7 @@
         {
           "kind": "quoted",
           "ref": "Psa.121:9",
+          "refLabel": "詩篇 121:9",
           "text": "ἕνεκα τοῦ οἴκου Κυρίου τοῦ θεοῦ ἡμῶν ἐξεζήτησά σοι.",
           "answerKeyRef": "Psa.121:9",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -18483,6 +18578,7 @@
         {
           "kind": "quoted",
           "ref": "Job.36:24",
+          "refLabel": "約伯記 36:24",
           "text": "μνήσθητι ὅτι μεγάλα ἐστὶν αὐτοῦ τὰ ἔργα ὧν ἦρξαν ἄνδρες·",
           "answerKeyRef": "Job.36:24",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -18958,6 +19054,7 @@
         {
           "kind": "quoted",
           "ref": "Deu.14:3",
+          "refLabel": "申命記 14:3",
           "text": "Οὐ φάγεσθε πᾶν βδέλυγμα.",
           "answerKeyRef": "Deu.14:3",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -19001,6 +19098,7 @@
         {
           "kind": "quoted",
           "ref": "Sir.33:7",
+          "refLabel": "便西拉智訓 33:7",
           "text": "δόξασον χεῖρα καὶ βραχίονα δεξιόν·",
           "answerKeyRef": "Sir.33:7",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -19046,6 +19144,7 @@
         {
           "kind": "quoted",
           "ref": "Psa.66:4",
+          "refLabel": "詩篇 66:4",
           "text": "ἐξομολογησάσθωσαν λαοί, ὁ θεός, ἐξομολογησάσθωσαν λαοὶ πάντες.",
           "answerKeyRef": "Psa.66:4",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -19513,6 +19612,7 @@
         {
           "kind": "quoted",
           "ref": "1En.14:8",
+          "refLabel": "以諾一書 14:8",
           "text": "Καὶ ἐμοὶ ἐφ᾽ ὁράσει οὕτως ἐδείχθη·",
           "answerKeyRef": "1En.14:8",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -19572,6 +19672,7 @@
         {
           "kind": "quoted",
           "ref": "Neh.7:40",
+          "refLabel": "尼希米記 7:40",
           "text": "υἱοὶ χίλιοι πεντήκοντα δύο·",
           "answerKeyRef": "Neh.7:40",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -19615,6 +19716,7 @@
         {
           "kind": "quoted",
           "ref": "Num.31:33",
+          "refLabel": "民數記 31:33",
           "text": "καὶ βόες, δύο καὶ ἑβδομήκοντα χιλιάδες·",
           "answerKeyRef": "Num.31:33",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -20080,6 +20182,7 @@
         {
           "kind": "quoted",
           "ref": "Pro.29:47",
+          "refLabel": "箴言 29:47",
           "text": "Πολλαὶ θυγατέρες ἐκτήσαντο πλοῦτον, πολλαὶ ἐποίησαν δυνατά·",
           "answerKeyRef": "Pro.29:47",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -20137,6 +20240,7 @@
         {
           "kind": "quoted",
           "ref": "Pss.5:4",
+          "refLabel": "所羅門詩篇 5:4",
           "text": "οὐ γὰρ λήψεται σκῦλα παρὰ ἀνδρὸς δυνατοῦ.",
           "answerKeyRef": "Pss.5:4",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -20186,6 +20290,7 @@
         {
           "kind": "quoted",
           "ref": "1Sa.10:13",
+          "refLabel": "撒母耳記上 10:13",
           "text": "καὶ συνετέλεσεν προφητεύων, καὶ ἔρχεται εἰς τὸν βουνόν.",
           "answerKeyRef": "1Sa.10:13",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -20655,6 +20760,7 @@
         {
           "kind": "quoted",
           "ref": "Isa.42:11",
+          "refLabel": "以賽亞書 42:11",
           "text": "εὐφρανθήσονται οἱ κατοικοῦντες πέτραν, ἀπ᾽ ἄκρου τῶν ὀρέων βοήσουσιν·",
           "answerKeyRef": "Isa.42:11",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -20717,6 +20823,7 @@
         {
           "kind": "quoted",
           "ref": "Hos.8:13",
+          "refLabel": "何西阿書 8:13",
           "text": "νῦν μνησθήσεται τὰς ἀδικίας αὐτῶν καὶ ἐκδικήσει τὰς ἁμαρτίας αὐτῶν·",
           "answerKeyRef": "Hos.8:13",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -20778,6 +20885,7 @@
         {
           "kind": "quoted",
           "ref": "Jer.41:11",
+          "refLabel": "耶利米書 41:11",
           "text": "αὐτοὺς εἰς παῖδας καὶ παιδίσκας.",
           "answerKeyRef": "Jer.41:11",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -21239,6 +21347,7 @@
         {
           "kind": "quoted",
           "ref": "Neh.4:6",
+          "refLabel": "尼希米記 4:6",
           "text": "καὶ μὴ καλύψῃς ἐπὶ ἀνομίαν.",
           "answerKeyRef": "Neh.4:6",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -21284,6 +21393,7 @@
         {
           "kind": "quoted",
           "ref": "Pro.13:21",
+          "refLabel": "箴言 13:21",
           "text": "ἁμαρτάνοντας καταδιώξεται κακά, τοὺς δὲ δικαίους καταλήμψεται ἀγαθά.",
           "answerKeyRef": "Pro.13:21",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -21335,6 +21445,7 @@
         {
           "kind": "quoted",
           "ref": "Lam.3:41",
+          "refLabel": "耶利米哀歌 3:41",
           "text": "ἀναλάβωμεν καρδίας ἡμῶν ἐπὶ χειρῶν πρὸς Ὑψηλὸν ἐν οὐρανῷ·",
           "answerKeyRef": "Lam.3:41",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -21841,6 +21952,7 @@
         {
           "kind": "quoted",
           "ref": "Psa.91:1",
+          "refLabel": "詩篇 91:1",
           "text": "Ψαλμὸς ᾠδῆς, εἰς τὴν ἡμέραν τοῦ σαββάτου.",
           "answerKeyRef": "Psa.91:1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -21899,6 +22011,7 @@
         {
           "kind": "quoted",
           "ref": "Eze.32:25",
+          "refLabel": "以西結書 32:25",
           "text": "ἐν μέσῳ τραυματιῶν.",
           "answerKeyRef": "Eze.32:25",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -21940,6 +22053,7 @@
         {
           "kind": "quoted",
           "ref": "1En.24:1",
+          "refLabel": "以諾一書 24:1",
           "text": "Καὶ ἔδειξέν μοι ὄρη πυρὸς καιόμενα νυκτός.",
           "answerKeyRef": "1En.24:1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -22406,6 +22520,7 @@
         {
           "kind": "quoted",
           "ref": "Exo.23:3",
+          "refLabel": "出埃及記 23:3",
           "text": "καὶ πένητα οὐκ ἐλεήσεις ἐν κρίσει.",
           "answerKeyRef": "Exo.23:3",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -22453,6 +22568,7 @@
         {
           "kind": "quoted",
           "ref": "Psa.125:3",
+          "refLabel": "詩篇 125:3",
           "text": "ἐμεγάλυνεν Κύριος τοῦ ποιῆσαι μεθ᾽ ἡμῶν, ἐγενήθημεν εὐφραινόμενοι.",
           "answerKeyRef": "Psa.125:3",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -22505,6 +22621,7 @@
         {
           "kind": "quoted",
           "ref": "Psa.60:2",
+          "refLabel": "詩篇 60:2",
           "text": "Εἰσάκουσον τῆς δεήσεώς μου, πρόσχες τῆς προσευχῆς μου.",
           "answerKeyRef": "Psa.60:2",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -22979,6 +23096,7 @@
         {
           "kind": "quoted",
           "ref": "Neh.12:42",
+          "refLabel": "尼希米記 12:42",
           "text": "καὶ ἠκούσθησαν οἱ ᾄδοντες, καὶ ἐπεσκέπησαν.",
           "answerKeyRef": "Neh.12:42",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -23024,6 +23142,7 @@
         {
           "kind": "quoted",
           "ref": "Psa.47:6",
+          "refLabel": "詩篇 47:6",
           "text": "αὐτοὶ ἰδόντες οὕτως ἐθαύμασαν, ἐταράχθησαν, ἐσαλεύθησαν·",
           "answerKeyRef": "Psa.47:6",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -23071,6 +23190,7 @@
         {
           "kind": "quoted",
           "ref": "Psa.88:53",
+          "refLabel": "詩篇 88:53",
           "text": "εὐλογητὸς Κύριος εἰς τὸν αἰῶνα. γένοιτο, γένοιτο.",
           "answerKeyRef": "Psa.88:53",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -23530,6 +23650,7 @@
         {
           "kind": "quoted",
           "ref": "Tob.6:1",
+          "refLabel": "多比傳 6:1",
           "text": "καὶ ἐπαύσατο κλαίουσα.",
           "answerKeyRef": "Tob.6:1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -23571,6 +23692,7 @@
         {
           "kind": "quoted",
           "ref": "Job.27:15",
+          "refLabel": "約伯記 27:15",
           "text": "χήρας δὲ αὐτῶν οὐθεὶς ἐλεήσει.",
           "answerKeyRef": "Job.27:15",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -23616,6 +23738,7 @@
         {
           "kind": "quoted",
           "ref": "Psa.13:6",
+          "refLabel": "詩篇 13:6",
           "text": "βουλὴν πτωχοῦ κατῃσχύνατε, ὅτι Κύριος ἐλπὶς αὐτοῦ ἐστιν.",
           "answerKeyRef": "Psa.13:6",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -24083,6 +24206,7 @@
         {
           "kind": "quoted",
           "ref": "1Ma.1:42",
+          "refLabel": "馬加比一書 1:42",
           "text": "καὶ ἐγκαταλείπειν ἕκαστον τὰ νόμιμα αὐτοῦ·",
           "answerKeyRef": "1Ma.1:42",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -24140,6 +24264,7 @@
         {
           "kind": "quoted",
           "ref": "Neh.7:12",
+          "refLabel": "尼希米記 7:12",
           "text": "υἱοὶ Αἰλάμ, χίλιοι διακόσιοι πεντήκοντα τέσσαρες·",
           "answerKeyRef": "Neh.7:12",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -24187,6 +24312,7 @@
         {
           "kind": "quoted",
           "ref": "Job.27:12",
+          "refLabel": "約伯記 27:12",
           "text": "ἰδοὺ πάντες οἴδατε ὅτι κενὰ κενοῖς ἐπιβάλλετε.",
           "answerKeyRef": "Job.27:12",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -24657,6 +24783,7 @@
         {
           "kind": "quoted",
           "ref": "Job.7:3",
+          "refLabel": "約伯記 7:3",
           "text": "οὕτως κἀγὼ ὑπέμεινα μῆνας κενούς, νύκτες δὲ ὀδυνῶν δεδομέναι μοί εἰσιν.",
           "answerKeyRef": "Job.7:3",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -24725,6 +24852,7 @@
         {
           "kind": "quoted",
           "ref": "Neh.7:10",
+          "refLabel": "尼希米記 7:10",
           "text": "υἱοὶ Ἠρά, ἑξακόσιοι πεντήκοντα δύο·",
           "answerKeyRef": "Neh.7:10",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -24770,6 +24898,7 @@
         {
           "kind": "quoted",
           "ref": "Num.31:34",
+          "refLabel": "民數記 31:34",
           "text": "ὄνοι, μία καὶ ἑξήκοντα χιλιάδες·",
           "answerKeyRef": "Num.31:34",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -25217,6 +25346,7 @@
         {
           "kind": "quoted",
           "ref": "Bar.4:19",
+          "refLabel": "巴錄書 4:19",
           "text": "βαδίζετε, τέκνα, βαδίζετε, ἐγὼ γὰρ κατελείφθην ἔρημος.",
           "answerKeyRef": "Bar.4:19",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -25264,6 +25394,7 @@
         {
           "kind": "quoted",
           "ref": "Lam.3:31",
+          "refLabel": "耶利米哀歌 3:31",
           "text": "ὅτι οὐκ εἰς τὸν αἰῶνα ἀπώσεται Κύριος.",
           "answerKeyRef": "Lam.3:31",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -25313,6 +25444,7 @@
         {
           "kind": "quoted",
           "ref": "Psa.69:2",
+          "refLabel": "詩篇 69:2",
           "text": "Ὁ θεός, εἰς τὴν βοήθειάν μου πρόσχες·",
           "answerKeyRef": "Psa.69:2",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -25776,6 +25908,7 @@
         {
           "kind": "quoted",
           "ref": "Gen.24:16",
+          "refLabel": "創世記 24:16",
           "text": "ἡ δὲ παρθένος ἦν καλὴ τῇ ὄψει σφόδρα·",
           "answerKeyRef": "Gen.24:16",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -25836,6 +25969,7 @@
         {
           "kind": "quoted",
           "ref": "Job.32:20",
+          "refLabel": "約伯記 32:20",
           "text": "λαλήσω, ἵνα ἀναπαύσωμαι, ἀνοίξας τὰ χείλη·",
           "answerKeyRef": "Job.32:20",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -25883,6 +26017,7 @@
         {
           "kind": "quoted",
           "ref": "Exo.25:39",
+          "refLabel": "出埃及記 25:39",
           "text": "πάντα τὰ σκεύη ταῦτα τάλαντον χρυσίου καθαροῦ.",
           "answerKeyRef": "Exo.25:39",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -26359,6 +26494,7 @@
         {
           "kind": "quoted",
           "ref": "Num.15:10",
+          "refLabel": "民數記 15:10",
           "text": "κάρπωμα ὀσμὴν εὐωδίας Κυρίῳ.",
           "answerKeyRef": "Num.15:10",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -26412,6 +26548,7 @@
         {
           "kind": "quoted",
           "ref": "Sir.4:15",
+          "refLabel": "便西拉智訓 4:15",
           "text": "ὁ ὑπακούων αὐτῆς κρινεῖ ἔθνη, καὶ ὁ προσελθὼν αὐτῇ κατασκηνώσει πεποιθώς.",
           "answerKeyRef": "Sir.4:15",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -26476,6 +26613,7 @@
         {
           "kind": "quoted",
           "ref": "1Ma.1:46",
+          "refLabel": "馬加比一書 1:46",
           "text": "καὶ μιᾶναι ἁγίασμα καὶ ἁγίους·",
           "answerKeyRef": "1Ma.1:46",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -26943,6 +27081,7 @@
         {
           "kind": "quoted",
           "ref": "Psa.115:8",
+          "refLabel": "詩篇 115:8",
           "text": "σοὶ θύσω θυσίαν αἰνέσεως·",
           "answerKeyRef": "Psa.115:8",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -26987,6 +27126,7 @@
         {
           "kind": "quoted",
           "ref": "Job.8:5",
+          "refLabel": "約伯記 8:5",
           "text": "σὺ δὲ ὄρθριζε πρὸς Κύριον Παντοκράτορα δεόμενος.",
           "answerKeyRef": "Job.8:5",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -27036,6 +27176,7 @@
         {
           "kind": "quoted",
           "ref": "Pro.6:12",
+          "refLabel": "箴言 6:12",
           "text": "Ἀνὴρ ἄφρων καὶ παράνομος πορεύεται ὁδοὺς οὐκ ἀγαθάς·",
           "answerKeyRef": "Pro.6:12",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -27529,6 +27670,7 @@
         {
           "kind": "quoted",
           "ref": "Ecc.6:11",
+          "refLabel": "傳道書 6:11",
           "text": "ὅτι εἰσὶν λόγοι πολλοὶ πληθύνοντες ματαιότητα.",
           "answerKeyRef": "Ecc.6:11",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -27576,6 +27718,7 @@
         {
           "kind": "quoted",
           "ref": "1Ma.2:8",
+          "refLabel": "馬加比一書 2:8",
           "text": "ἐγένετο ὁ ναὸς αὐτῆς ὡς ἀνὴρ ἔνδοξος·",
           "answerKeyRef": "1Ma.2:8",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -27625,6 +27768,7 @@
         {
           "kind": "quoted",
           "ref": "Gen.26:23",
+          "refLabel": "創世記 26:23",
           "text": "ἀνέβη δὲ ἐκεῖθεν ἐπὶ τὸ φρέαρ τοῦ ὅρκου.",
           "answerKeyRef": "Gen.26:23",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -28099,6 +28243,7 @@
         {
           "kind": "quoted",
           "ref": "Psa.93:6",
+          "refLabel": "詩篇 93:6",
           "text": "χήραν καὶ ὀρφανὸν ἀπέκτειναν, καὶ προσήλυτον ἐφόνευσαν·",
           "answerKeyRef": "Psa.93:6",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -28156,6 +28301,7 @@
         {
           "kind": "quoted",
           "ref": "Pro.29:8",
+          "refLabel": "箴言 29:8",
           "text": "ἄνδρες ἄνομοι ἐξέκαυσαν πόλιν, σοφοὶ δὲ ἀπέστρεψαν ὀργήν.",
           "answerKeyRef": "Pro.29:8",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
@@ -28207,6 +28353,7 @@
         {
           "kind": "quoted",
           "ref": "Sir.12:7",
+          "refLabel": "便西拉智訓 12:7",
           "text": "δὸς τῷ ἀγαθῷ, καὶ μὴ ἀντιλάβῃ τοῦ ἁμαρτωλοῦ.",
           "answerKeyRef": "Sir.12:7",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",

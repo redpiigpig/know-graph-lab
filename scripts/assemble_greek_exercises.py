@@ -40,6 +40,7 @@ from build_greek_exercises import (  # noqa: E402
     load_vocabulary,
 )
 import compose_greek_sentences as checker  # noqa: E402
+from greek_reference_labels import anchor_label  # noqa: E402
 from validate_reader_exercises import failures_for_payload, report  # noqa: E402
 
 QUOTED_PER_LESSON = 3
@@ -150,6 +151,9 @@ def build_volume(volume: int) -> dict[str, Any]:
             rows.append({
                 "kind": "quoted",
                 "ref": row["ref"],
+                # 書上與網頁印的是這一行，不是 patristic-plan:21:2.2#3。組題時
+                # 就翻好，兩邊才不會各自維護一份書卷對照表。
+                "refLabel": anchor_label(row["ref"]),
                 "text": text,
                 "answerKeyRef": row["ref"],
                 "answerKeyEdition": ANSWER_KEY_EDITION,
