@@ -35,7 +35,9 @@ EBOOK_ID = "c4a01957-0000-4000-8000-000000000002"
 TITLE = "初期唯識思想——瑜伽行派形成之脈絡"
 AUTHOR = "釋昭慧"
 PUBLISHER_YEAR = 2001
-CACHE = "c:/tmp/chaohwei_vijnapti/ocr"
+# 前面的快取優先，後面的只補前面沒跑到的頁（load_cache 的規矩）。
+# ocr2 是 2026-09-15 為了修註號而用加強 prompt 重跑的那一批。
+CACHE = ["c:/tmp/chaohwei_vijnapti/ocr2", "c:/tmp/chaohwei_vijnapti/ocr"]
 WORK = "c:/tmp/chaohwei_vijnapti/work.pdf"
 
 BODY_START_WP = 18  # 掃描頁 18 ＝ 正文印刷頁 1（前面是前言／自序／目次）
@@ -270,7 +272,7 @@ def build_chunks(chapters: list[dict]) -> list[dict]:
 # ── I/O ────────────────────────────────────────────────────────────────────
 
 def assemble() -> tuple[list[dict], dict]:
-    records = cb.load_cache([Path(CACHE)], Path(WORK))
+    records = cb.load_cache([Path(c) for c in CACHE], Path(WORK))
     if not records:
         raise SystemExit(f"快取是空的：{CACHE}")
     # 先修頁碼再加前綴再記帳 —— 反過來的話 wp114 的 97 還掛著誤讀的 17，
@@ -296,7 +298,7 @@ def main() -> None:
     a = ap.parse_args()
 
     if a.audit:
-        recs = [r for r in cb.load_cache([Path(CACHE)], Path(WORK)) if r["work_page"] not in SKIP_WP]
+        recs = [r for r in cb.load_cache([Path(c) for c in CACHE], Path(WORK)) if r["work_page"] not in SKIP_WP]
         records = prefix_front_matter(cb.prepare_records(recs))
         rep = cb.audit_pages(records, [c["title"] for c in CHAPTERS])
         rng = rep["printed_range"]
