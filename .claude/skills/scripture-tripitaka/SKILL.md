@@ -91,6 +91,7 @@ scripts/tripitaka_original_text.py  平行經目的「指標」→ 巴利原典�
 scripts/tripitaka_sanskrit.py       梵文原典（GRETIL）逐品掛上，含品數對齊閘
 scripts/tripitaka_nanchuan.py      漢譯南傳（元亨寺版）掛成對照欄，含經數硬閘
 scripts/tripitaka_tibetan.py       藏譯原典（84000 TMX）逐章掛上，含章數對齊閘
+scripts/tripitaka_derge.py         德格版甘珠爾 TEI → 逐部 JSONL（藏經代號 DK）
 scripts/tripitaka_db.py             建表 SQL／目錄入庫／Drive 同步／R2 上傳
 scripts/sql/tripitaka_schema.sql    DDL（Management API token 掛掉時手動貼 Dashboard）
 scripts/tests/test_tripitaka_*.py   純函式測試（88 個，鎖住下列所有陷阱）
@@ -371,6 +372,87 @@ python scripts/tripitaka_db.py --sync-drive --push-r2
 32. **CBETA 的 X 是「選錄」不是全帙。**
     站方自書「卍新纂續藏經選錄」：經號到 1671，實際只有 **1,230 部**有 XML。
     少掉的四百多部不是本站漏抓，凡例須註明。
+
+## 德格版甘珠爾 DK（2026-09-15 收，資料層）
+
+藏文大藏經前半（甘珠爾）**全帙**，與上面 84000 那三部的對照層**是兩層，別搞混**：
+84000 那層是「藏文掛到漢譯品上」（`tripitaka_tibetan.py`，3 部，TMX）；
+這層是德格版全帙自成一藏（`tripitaka_derge.py`，藏經代號 **DK**）。
+
+| | |
+|---|---|
+| 來源 | Drive `_corpus/tibetan-canon/src/derge-kangyur-UT4CZ5369-200106.zip`（Esukhia/derge-kangyur TEI，103 冊一冊一檔）→ 解壓本機快取 `C:/tmp/derge/` |
+| 規模 | **1,124 筆・461,210 段・96,951,784 藏文字**（1,123 部有 Toh 號 ＋ 目錄冊 1 筆） |
+| 段的鍵 | **冊＋葉碼＋行**（藏學界慣例）`DKtoh0001_v1_1b1`。一段＝一行；藏文原典沒有標點分段，行是唯一的原書結構 |
+| 分部 | 10 部類（律／般若／華嚴／寶積／經／續／舊譯續／時輪釋／陀羅尼集／目錄），**按冊號區間**，一部的部類取其起始冊 |
+| 存放 | Drive `_tripitaka_tibetan/`（368 MB，2,249 檔）。**刻意與 `_tripitaka/` 分開** |
+| 上線 | ❌ 尚未接站（本輪只做資料層，沒碰任何 .vue） |
+
+```bash
+python scripts/tripitaka_derge.py --unzip          # 從 Drive 解壓來源
+python scripts/tripitaka_derge.py --audit          # 全掃不寫檔，印對帳
+python scripts/tripitaka_derge.py --build          # 寫 JSONL＋toc＋catalog（可續跑）
+python scripts/tripitaka_derge.py --catalog-only   # 只重出目錄，免重寫 368 MB
+python scripts/tripitaka_derge.py --inspect 113    # 看某部
+```
+
+### 🚨 DK 的踩坑（與 CBETA 那批並列，程式碼裡逐條標了註解）
+
+34. **一部經會跨冊，而且 26 冊完全沒有 milestone。** milestone 只在起點出現一次。
+    逐檔各自為政的話般若十萬頌（Toh 8，橫跨 12 冊、1,292 萬字）只會拿到第一冊
+    那一截，**而檔案看起來完全正常**。解析必須是跨冊的單一串流。
+
+35. **`toh="1-1"` 不是獨立的一部**，是該部底下的節（全帙 75 個）。照它切會生出
+    75 個假的「部」。只用不含連字號的 toh 切部；子編號記進 toc。
+    （Toh 1 的 1-1…1-17 恰是律事的十七事，可用來驗這一段對不對。）
+
+36. **帶字母的 Toh 是真條目**（7a・359a・460a・505a・539a–539h・673a・841a・
+    842a・846a・1059a）。`int()` 會直接炸，排序鍵一律 (數字, 字母)。
+
+37. **🚨 書名不在 TEI 裡 —— `<tei:title>` 只有冊名。**
+    「འདུལ་བ་ཀ་བཞུགས་སོ།」是架上題（律部第 KA 函），不是書名。拿它去填會讓
+    一千多部裡一大半掛著同一個假書名而且看起來很正常。書名只能從正文抽，
+    三個取法各自記 `title_source`，不混為一談：
+    `bilingual-formula` 866（梵藏對照題名句式 རྒྱ་གར་སྐད་དུ།…བོད་སྐད་དུ།…）／
+    `opening-title` 96（開頭直接是藏文題名）／`colophon` 113（卷尾題
+    「…ཞེས་བྱ་བ…རྫོགས་སོ།」，短陀羅尼多屬此類）／**留空 49（4.4%），不填**。
+    ⚠ 其中一個靜默錯：禮敬文「…ལ་ཕྱག་འཚལ་ལོ」常和書名**連寫、中間沒有 shad**，
+    一律排除含「ཕྱག་འཚལ」者會把 100 多部書名整批丟掉；但《二十一度母禮讚》的
+    書名本身就有「ཕྱག་འཚལ」。故只在**結尾**是禮敬文時才切，切在最後一個
+    題名標記上，找不到就留空。
+
+38. **🚨 目錄冊（第 103 冊 dkar chag）會製造兩個看起來完全正常的錯。**
+    ① 它裡面的 milestone 是「目錄提到某部經」不是「某部經從這裡開始」——
+       全帙 1,208 個 milestone 的 toh 值在文件順序上嚴格遞增，只有第 103 冊
+       147b 那 10 個例外（1108→538→539→539a…539h 擠在同一葉兩行內）。
+       照收的話 Toh 539h 會默默吞掉目錄後面四十幾葉。
+       定規：toh 值比作用中的部小 ＝ 回溯提及，記成 `mentions`，不切部不換部。
+       副作用：539g／539h 只在目錄裡被提到、全帙無正文，故部數是 **1,123 不是
+       1,125**；`--audit` 會明列，那不是漏抓。
+    ② 目錄自己**沒有 milestone**，會整冊（469,657 字）被併進前一個 Toh 1108 ——
+       但 Toh 1108 是《三寶吉祥偈》（梵題 ratna-tri-svasti-gāthā，抽出的題名
+       可證），全帙最後一部短偈，自己只有 926 字。不處理的話 Toh 1108「很長」、
+       目錄「不存在」，兩邊都看不出異狀。故目錄獨立成 `DKkarchag`，
+       **不給 Toh 號**（TEI 沒給就不自編）。
+
+39. **字數對帳閘（這條是這批程式唯一擋得住全部靜默錯的東西）。**
+    各部合計 96,951,784 ＋ 冊題 2,674（103 冊首葉 1a 的架上題）
+    ＋ teiHeader 2,674 ＝ **96,957,132 ＝ 原檔總計，差額 0**。
+    上面 34–38 任何一條做錯，這個數字就對不上。**對不上不宣告完成。**
+    另外：24 個「沒有行 milestone」的葉面實測**全是空白葉**（印本空頁，0 字），
+    所以不會生出 line=0 的假行號 —— 有字卻沒有行 milestone 才報錯。
+
+### DK 尚未做的（誠實列出）
+
+- **沒接站**：`/tripitaka` 的 reader／目錄頁／DB 都還沒有 DK 這一層。
+- **漢譯書名 `title_zh` 全部留空**，沒有 Toh→大正藏經號的對照表。
+  接站前要補這張表（法華 Toh 113＝T0262、心經 Toh 21＝T0251、
+  藥師 Toh 504＝T0450 已由 `tripitaka_tibetan.REGISTRY` 對過三部）。
+- **49 部無書名**（多是 107–300 字的極短陀羅尼，題名只在鄰近的卷尾題裡或根本沒有）。
+- **丹珠爾（bstan 'gyur）沒收**，來源 zip 就在旁邊
+  （`derge-tengyur-UT23703-200106.zip`），同一支腳本改冊表即可。
+- **沒有品／章層**：TEI 只標到葉與行，`le'u` 沒有標記，所以跨語言主對齊層
+  （品）在 DK 這側目前無從對起。
 
 ## 交接：正在跑的事
 
