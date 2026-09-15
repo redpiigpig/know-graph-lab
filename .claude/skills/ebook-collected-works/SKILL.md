@@ -511,6 +511,35 @@ registry：`azegami_build.py`／`kagawa_build.py`；測試 `test_ndl_build.py` 1
 
 - **昭慧法師**（`chao-hwei`，rose 🕊️，2026-09-10 開）：**本區第一個「紙本掃描本」來源**——前三位都有現成的數位全文（CBETA／法鼓／佛光官網），昭慧法師沒有，只能從掃描檔做起。上游那一整段（2-up 拆頁轉正、頁碼帳、逐頁 OCR、腳註）獨立成 [[ebook-scan-transcribe]]，本 skill 只接下游。**✅《心靈的交會：山間對話》**（與彼得‧辛格對談，法界出版 2021，**作者授權製作電子版**）13 chunks／11.3 萬字，`genre:'dialogue'`，每一段掛原書印刷頁碼當引用號；**⏳《初期唯識思想》**轉錄中。**🔑 教訓：掃描本的失敗全是「靜默」型**——章別判錯、整頁被清理清光、去重留下爛的那一份，頁面都照常出現。細節見 [chaohwei_collected_works.md](../ebook-scan-transcribe/chaohwei_collected_works.md)。
 
+## C4b 佛學研究：漢傳‧日本‧西方（2026-09-14 開卡，hub 骨架）
+
+案例檔 → **[buddhology_collected_works.md](buddhology_collected_works.md)**（選人判準／
+肖像查證表／取捨紀錄／下一步）。
+
+**與 C4「佛學」的分工**：C4 收**宗教家**（太虛、印順、聖嚴、星雲、昭慧、性廣——
+使用者 2026-09-15 定調「性廣法師是宗教家」，不歸研究者區）；本區收**學術研究者**，
+`disciplineGroup: '佛學研究'`，再以 `region` 分漢傳／日本／西方。
+
+- **漢傳（8）**：呂澂、湯用彤、陳垣、歐陽竟無、季羨林、方立天、藍吉富、冉雲華
+- **日本（13）**：木村泰賢、高楠順次郎、宇井伯壽、常盤大定、鈴木大拙、中村元、
+  水野弘元、平川彰、柳田聖山、高崎直道、松本史朗、袴谷憲昭、下田正弘
+- **西方（14）**：Burnouf、Rhys Davids 夫婦、La Vallée Poussin、Stcherbatsky、
+  Lamotte、Conze、Gombrich、Schopen、McMahan、Lopez、Batchelor、Varela、Thompson
+
+🚨 **portal 的 region 分層本來是壞的**：`sectionsFor()` 原本只在有 `era` 時才分小節，
+**沒有 era 時 `region` 會被整個忽略**。既有學科都同時有 era 與 region 所以一直沒現形；
+本區只有 region，照原樣三區會靜默攤平成一片、而畫面看起來完全正常。已補分支。
+**新增只有 region 的學科時要記得這件事。**
+
+🚨 **肖像檔名同音不等於同一個人**：`Chen_Yuan.jpg` 查 Commons 說明寫
+「Chen Yuan (1880-1971)」、生卒年與陳垣相符才敢用。組裝端
+（`scripts/cw_assemble_buddhology.py`）一律自己 curl 複驗，不信研究端自陳；
+驗不過就清成空字串靠 emoji，**寧可沒有肖像也不掛破圖或來路不明的圖**。當代學者
+Commons 上要嘛沒有、要嘛是 CC BY-SA 不是 PD，一律留空。
+
+研究文獻那一層見 [[research-data-buddhology]] 的《印度學佛教學研究》全文庫
+（14,747 篇，1952–2024，零 OCR）。
+
 ## C5 心理學：榮格全集＋河合隼雄（REFERENCE 六冊）
 
 **✅ 河合隼雄六冊繁中譯本上架（2026-07-23，REFERENCE／單一語言）**：來源＝讀客熊貓君版《河合隼雄心理學經典》套裝 EPUB（**簡體既有中譯本**、乾淨電子書非掃描），拆六冊各一 `ebooks` row（`ca7a1928-0000-4000-8000-00000000000{1..6}`）：讀幻想文學／原來如此的對談／長大成人的難處／故事與神奇／貓魂／青春就是夢和遊戲，共 **199 chunks / ~555K 繁中字**。做法＝`scripts/kawai_build.py`（6 純函式測試綠）：EPUB part→章節樹（toc.ncx 兩層 navMap）→ 每 xhtml part 一 chunk → `standardize_ebook.to_traditional`（opencc s2tw + TRAD_FIXES）→ **零 LLM、不寫 source_text（reader 退化單欄）**。hub `hayao-kawai` works[] 六筆 `status='done'`＋`ebookId`；`collection='collected-works'`。**教訓**：既有中譯本套書＝最省力路徑，判 REFERENCE-first（[[feedback_collected_works_reference_first]]）後直接 s2tw 轉錄即可，不必碰翻譯引擎。
