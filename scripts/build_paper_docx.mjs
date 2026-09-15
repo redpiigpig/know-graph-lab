@@ -1,14 +1,17 @@
 /**
  * /works 論文計畫的改寫草稿 markdown → 交付用 Word（歷史論文格式）
  *
- * 與 server/api/works/draft-docx.get.ts 同版式，但多支援這三種草稿裡真的會出現、
- * 而端點會原樣印成亂碼的語法：
+ * 與 server/api/works/draft-docx.get.ts 同版式，但多支援這幾件草稿裡真的會出現、
+ * 而端點會原樣印成亂碼或排錯的情形：
  *   - markdown 表格 → 真 Word 表格（附錄年表）
  *   - [文字](網址) → 真超連結（書目的典藏／全文連結）
  *   - 1. 數字清單 → 保留編號的懸掛縮排
+ *   - 參考書目區的條目 → 懸掛縮排（端點會誤套成正文的首行縮排）
+ *   - --omit=<節標題>：把某個 `## ` 小節整段排除（工作用清單不進交付檔）
  *
- * 跑法：node scripts/build_paper_docx.mjs <ref> "<輸出路徑.docx>"
+ * 跑法：node scripts/build_paper_docx.mjs <ref> "<輸出路徑.docx>" [--omit=<節標題>]...
  *   ref 指 public/content/works/<ref>-revision-draft.md
+ *   --omit 可重複；用 includes 比對，給關鍵字即可
  */
 import { readFileSync, writeFileSync } from 'node:fs'
 import {
@@ -21,6 +24,8 @@ const BODY_CJK = '新細明體'
 const QUOTE_CJK = '標楷體'
 const EN = 'Times New Roman'
 const L = { line: 360, lineRule: 'auto' }
+/** 這些 `## ` 小節底下的段落一律當書目條目排（懸掛縮排、不首行縮排） */
+const BIB_SECTION = /參考書目|參考文獻|徵引書目/
 
 const mkRun = (text, o = {}) => new TextRun({
   text,
@@ -57,6 +62,19 @@ function inlineRuns(text, notes, o = {}) {
   return out.length ? out : [mkRun('', o)]
 }
 
+/** 把 `## <標題>` 起、到下一個同級 `## ` 為止的整段抽掉 */
+function omitSections(lines, titles) {
+  if (!titles.length) return lines
+  const out = []
+  let skipping = false
+  for (const l of lines) {
+    const h = l.trim().match(/^##\s+(.+?)\s*$/)
+    if (h) skipping = titles.some(t => h[1].includes(t))
+    if (!skipping) out.push(l)
+  }
+  return out
+}
+
 /** 文末「## 註釋」段 → {N: 註文}，正文去掉該段 */
 function extractNotes(lines) {
   const idx = lines.findIndex(l => /^##\s+註釋\s*$/.test(l.trim()))
@@ -91,10 +109,11 @@ function buildTable(rows, notes) {
   })
 }
 
-function buildBody(md) {
-  const { notes, body } = extractNotes(md.split(/\r?\n/))
+function buildBody(md, omit = []) {
+  const { notes, body } = extractNotes(omitSections(md.split(/\r?\n/), omit))
   const out = []
   let seenAbstract = false
+  let inBib = false
   for (let i = 0; i < body.length; i++) {
     const t = body[i].trim()
 
@@ -129,13 +148,14 @@ function buildBody(md) {
       if (/^摘要/.test(inner)) seenAbstract = true
       const isSubsection = /^（[一二三四五六七八九十]+）/.test(inner)
       out.push(new Paragraph({
-        alignment: isSubsection ? undefined : AlignmentType.CENTER,
-        spacing: { before: isSubsection ? 200 : 60, after: isSubsection ? 100 : 60, ...L },
-        children: inlineRuns(inner, notes, { size: isSubsection ? 24 : 22, bold: true }),
+        alignment: (isSubsection || inBib) ? undefined : AlignmentType.CENTER,
+        spacing: { before: (isSubsection || inBib) ? 200 : 60, after: (isSubsection || inBib) ? 100 : 60, ...L },
+        children: inlineRuns(inner, notes, { size: (isSubsection || inBib) ? 24 : 22, bold: true }),
       }))
       continue
     }
     if (t.startsWith('## ')) {
+      inBib = BIB_SECTION.test(t)
       out.push(new Paragraph({
         spacing: { before: 280, after: 140, ...L },
         children: inlineRuns(t.slice(3), notes, { size: 28, bold: true }),
@@ -167,7 +187,16 @@ function buildBody(md) {
       }))
       continue
     }
-    // 摘要前的短行（英文題名／作者）置中；書目段不縮排
+    // 書目條目：懸掛縮排
+    if (inBib) {
+      out.push(new Paragraph({
+        indent: { left: 480, hanging: 480 },
+        spacing: { after: 60, ...L },
+        children: inlineRuns(t, notes),
+      }))
+      continue
+    }
+    // 摘要前的短行（英文題名／作者）置中；其餘正文首行縮排
     if (!seenAbstract && t.length <= 30 && !/[。，、；：？！]/.test(t)) {
       out.push(new Paragraph({
         alignment: AlignmentType.CENTER,
@@ -185,14 +214,16 @@ function buildBody(md) {
   return { children: out, notes }
 }
 
-const [ref, outPath] = process.argv.slice(2)
+const argv = process.argv.slice(2)
+const omit = argv.filter(a => a.startsWith('--omit=')).map(a => a.slice(7))
+const [ref, outPath] = argv.filter(a => !a.startsWith('--'))
 if (!ref || !outPath) {
-  console.error('usage: node scripts/build_paper_docx.mjs <ref> <out.docx>')
+  console.error('usage: node scripts/build_paper_docx.mjs <ref> <out.docx> [--omit=<節標題>]...')
   process.exit(1)
 }
 const md = readFileSync(`public/content/works/${ref}-revision-draft.md`, 'utf-8')
 const title = md.match(/^#\s+(.+)$/m)?.[1]?.trim() || ref
-const { children, notes } = buildBody(md)
+const { children, notes } = buildBody(md, omit)
 const footnotes = Object.fromEntries(Object.entries(notes).map(([n, text]) => [Number(n), {
   children: [new Paragraph({
     spacing: { after: 0, line: 240, lineRule: 'auto' },
@@ -221,4 +252,4 @@ const doc = new Document({
 
 const buf = await Packer.toBuffer(doc)
 writeFileSync(outPath, buf)
-console.log('written:', outPath, buf.length, 'bytes')
+console.log('written:', outPath, buf.length, 'bytes', omit.length ? `(omitted: ${omit.join(', ')})` : '')
