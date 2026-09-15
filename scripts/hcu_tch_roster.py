@@ -55,6 +55,9 @@ def alert_of(text):
 
 
 def _post_login(user, pw, years, term):
+    # 🚨 玄奘的 DNS 會整段解不出來而主機還活著，先把 IP 釘上去（見 course_roster）。
+    import course_roster
+    course_roster.pin_hcu_dns()
     s = requests.Session()
     s.headers.update(UA)
     s.get(f'{BASE}/tch/prof/default.asp', timeout=40, verify=False)

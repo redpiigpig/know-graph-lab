@@ -504,10 +504,20 @@ ics 那兩支是「四個日曆」方案的遺留物。現在走 API 直接寫�
 `acdyyy` / `acdtype`（FIRST/SECOND/THIRD）/ `loginname` / `loginpassword`，**整站 Big5，
 表單值也要 big5 編碼**。沒有 reCAPTCHA。
 
-🚨 **這組帳號不是 I-Learn 那組**。登入頁自己寫著「請使用 mail 帳號登入，如無 mail 帳號者
-請使用原教師代號」——使用者的 I-Learn 帳號是**學生**身分那組（他同時是博士生），
-拿去打教職員系統一律回 `alert('無法取得教職員基本資料！')`。
-帳密另存 `.env` 的 `HCU_TCH_USER` / `HCU_TCH_PASS`。
+🚨 **這組帳號不是 I-Learn 那組**，而且**帳號要帶 `@hcu.edu.tw`**。
+登入頁寫著「請使用 mail 帳號登入」——`redpiigpig` 不行，`redpiigpig@hcu.edu.tw` 才行。
+帳密存 `.env` 的 `HCU_TCH_USER` / `HCU_TCH_PASS`。
+
+🚨 **兩種失敗訊息要分清楚，它直接告訴你問題在哪一半**：
+
+| alert | 意思 | 怎麼辦 |
+|---|---|---|
+| `無法取得教職員基本資料！` | **帳號**這一關就沒過（格式錯或查無此人） | 換帳號寫法，別換密碼 |
+| `密碼錯誤！` | **帳號是對的**，密碼不對 | 帳號別動，去問密碼 |
+
+2026-09-15 實測：`redpiigpig` → 前者，`redpiigpig@hcu.edu.tw` → 後者。
+🚨 **看到「密碼錯誤」就停手問人，不要再試第二組密碼**——校務系統多半有鎖帳號機制，
+鎖掉的代價遠大於多等一輪。
 
 ### 登分簿 artifact
 
