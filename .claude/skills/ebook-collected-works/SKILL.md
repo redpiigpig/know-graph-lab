@@ -943,6 +943,36 @@ OCR 跑完才輪到翻譯：`python scripts/uchimura_auto.py --author husserl --
 ——單節最大 355 段，一節跑完才印一行，所以 `STALL_PER_LANE` 要放寬，否則 keeper 會把
 正在跑的工作當成卡死殺掉（philo-queue 踩過）。
 
+### ⏳ 翻譯現況（2026-09-15 08:09 交接點）
+
+**1,106 / 1,646 段＝67.2%**，21 節裡 **17 節已整節完成**（sec0–15、sec17），剩四節：
+
+| 節 | 進度 | 章名 |
+|---|---|---|
+| sec16 | 87/355 | 第四章　能思—所思結構論：問題的展開 |
+| sec18 | 2/78 | 第一章　所思意義與對象關係 |
+| sec19 | 2/104 | 第二章　理性的現象學 |
+| sec20 | 2/96 | 第三章　理論理性問題編排的普遍性層級 |
+
+（未開跑的節顯示 `2/N` 是正常的——那兩段是章標題與副標，不是譯壞。）
+
+查進度一律讀 **JSONL 的 `zh` 非空計數**，不要看 lane log：一節跑完才印一行，
+中途看不出有沒有在動。lane 還活著、keeper 也照常每 30 分接手（實測 worker pid 會換），
+要停就 `Stop-Process` 掉 `scripts/state/fleet_husserl.pid` 裡那支並把 lane 從 keeper 名單移掉，
+否則 30 分內會被重新拉起來。
+
+**🚨 慢的原因不是卡死，是三個引擎同時節流**（09-14 夜實測：11 小時只前進 20 段）：
+Gemini 免費層日額度用完（[[reference_gemini_free_tier_quotas]]）→ 斷路器切 NVIDIA-only 六小時 →
+NVIDIA 對六把 key 全回 **503**（不是 410，模型名沒問題）→ 救急層 Haiku 回 429／APIConnectionError。
+🚨 **單發呼叫成功不等於引擎可用**：同一支模組直接試譯 NVIDIA 是通的，
+連續跑就整排 503——像是節流而不是壞掉，所以「我手動試一下發現好的」不能當作 worker 有問題的證據。
+配額隔天回補後會自己前進，這條線設計成可續跑，不必從頭。
+
+**接手要做的（依序）**：①等四節補完（或換時段讓 Gemini 額度回補再跑）②`--dry` 的
+`check_structure` 20 項要再全 ✓ ③逐節抽驗譯文落地閘（[[feedback_translation_output_gate]]）
+④入庫上架、`stores/collectedWorks.ts` 的 `husserl` 掛上 done＋ebookId
+⑤這本是 [[project_western_phenomenology_history]] 第 4–6 章的底本，上架後那邊才動得了。
+
 **其餘現象學原典的取源現況**（2026-09-10 探過）：奧托德英兩版、胡塞爾 LU 1900 德文全開放且有 djvu.xml；
 **范德列烏《宗教的本質與表現》archive.org 是借閱限制**（`access-restricted-item: true`）要另找來源。
 

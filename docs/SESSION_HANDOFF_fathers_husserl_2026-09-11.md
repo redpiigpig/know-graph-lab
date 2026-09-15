@@ -9,7 +9,7 @@
 | 排程 | 狀態 | 判準 |
 |---|---|---|
 | `KGL_Husserl_OCR` | ✅ **已完成並自我停用**（59/59 批） | — |
-| `KGL_Fathers_Retranslate` | 🔄 進行中，**剩 1,666 段**（2026-09-12 08:05 量） | `python scripts/fathers_retranslate_untranslated.py --count` |
+| `KGL_Fathers_Retranslate` | 🔄 進行中，**剩 1,322 段**（2026-09-15 08:14 量） | `python scripts/fathers_retranslate_untranslated.py --count` |
 
 補譯跑完會自己 Disable。**完工判準看 `--count` 的輸出，不要看排程狀態。**
 
@@ -23,6 +23,17 @@
 退件是對的（壞輸出不該入庫），但也代表**這批剩下的段落特別難**——引擎一再交出推理外洩或
 整段回抄。下一個人要加速，方向是換引擎或分批降難度，不是重開排程。
 🚨 判準永遠是 `--count` 的數字有沒有動，不是排程狀態、也不是 pid 還在不在。
+
+**2026-09-15 再查**：1,322 段（三天補掉 346 段，約每天 115 段）。照這個速度還要十一天左右。
+
+🚨 **排程「State=Running」也不能信**（同日踩到）：`KGL_Fleet_Keeper` 有一輪卡在 kernel
+Executive wait（`Stop-Process` 與 `taskkill` 都殺不掉，taskkill 還回「There is no running
+instance of the task」＝行程已死只是沒被回收），而排程設定是 `MultipleInstances=IgnoreNew`
+＋ `ExecutionTimeLimit=PT0S`（無上限），於是**後面十小時每一班都被靜默跳過**、所有 lane 停擺，
+而 State 一直顯示 Running、LastRunTime 照樣往前跳、log 一行未寫。已給它 `PT10M` 上限
+（健康的一輪只要幾秒），指令寫在 `scripts/fleet_keeper.ps1` 檔頭。
+**`KGL_Fathers_Retranslate` 與 `KGL_Translation_Supervisor` 仍是 PT0S，同一個陷阱，還沒處理。**
+見 [[feedback_scheduled_task_wedge]]。
 
 ---
 
@@ -46,6 +57,13 @@
 
 翻譯掛在 `fleet_keeper.ps1` 的 `husserl` lane（backend auto＝Gemini→NVIDIA，**不可用 haiku**）。
 複驗指令：`python scripts/husserl_build.py --dry`（末段是目次對帳）／`--gates`（逐批複驗）。
+
+**翻譯進度（2026-09-15 08:09）：1,106 / 1,646 段＝67.2%**，21 節裡 17 節整節完成，
+剩 sec16（87/355）／sec18（2/78）／sec19（2/104）／sec20（2/96）＝540 段。
+逐節明細、查進度的正確方式、以及「三個引擎同時節流」那一節寫在
+`.claude/skills/ebook-collected-works/SKILL.md` 的〈翻譯現況〉——**那份是權威，這裡只留數字**。
+🚨 一晚（11 小時）只前進 20 段：Gemini 日額度耗盡→NVIDIA 六把 key 全 503→Haiku 429。
+**單發呼叫成功不等於引擎可用**，別拿「我手動試一下是好的」當作 worker 壞掉的證據。
 
 <details><summary>原始交辦內容（保留備查）</summary>
 
