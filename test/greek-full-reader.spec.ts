@@ -16,6 +16,57 @@ describe("complete two-volume Koine Greek private reader", () => {
   const volumeOne = volumes.find((volume) => volume.volume === 1)!;
   const volumeTwo = volumes.find((volume) => volume.volume === 2)!;
 
+  it("serves ten translation exercises per lesson, bound by word ordinal and carrying no Chinese", () => {
+    let total = 0;
+    for (const volume of volumes) {
+      for (const row of volume.lessons) {
+        const lesson = getGreekLesson(volume.volume, row.lesson)!;
+        const exercises = lesson.exercises;
+        expect(exercises.items, `v${volume.volume} lesson ${row.lesson}`).toHaveLength(10);
+        expect(exercises.itemCount).toBe(row.exerciseCount);
+        total += exercises.items.length;
+
+        // The join is the one thing that can be wrong while every page still
+        // looks finished: ten sentences printed under a lesson whose words they
+        // do not practise.  A lesson number is computed by the reading plan's
+        // difficulty sort, so check the words themselves.
+        const headwords = new Set(lesson.vocabulary.map((word) => word.headword));
+        for (const item of exercises.items) {
+          expect(item.text.trim(), `v${volume.volume} lesson ${row.lesson} item ${item.no}`).toBeTruthy();
+          // A Chinese line beside the exercise would answer it.
+          expect(Object.keys(item)).not.toContain("chinese");
+          expect(Object.keys(item)).not.toContain("answerKeyRef");
+          expect(item.text).not.toMatch(/[一-鿿]/);
+          expect(item.targetWords.length).toBeGreaterThan(0);
+          for (const word of item.targetWords) {
+            expect(headwords, `v${volume.volume} lesson ${row.lesson} word ${word.ordinal}`)
+              .toContain(word.headword);
+          }
+          if (item.kind === "quoted") {
+            expect(item.ref, `v${volume.volume} lesson ${row.lesson} item ${item.no}`).toBeTruthy();
+            // The reference is what the printed book prints, not the plan's own
+            // identifier: "patristic-plan:21:2.2#3" is not an出處 anyone can look up.
+            expect(item.ref).not.toMatch(/^(patristic-plan|liturgy-chrysostom):/);
+          } else {
+            expect(item.ref).toBeNull();
+          }
+        }
+        // Falling short is allowed; saying nothing about it is not.  Both
+        // shortfalls this reader has -- fewer than three anchors, and words with
+        // no attested form at all -- have to reach the page as a sentence.
+        if (exercises.quotedCount < 3 || exercises.coverage.notAttested > 0) {
+          expect(
+            exercises.note,
+            `v${volume.volume} lesson ${row.lesson} falls short and says nothing`,
+          ).toBeTruthy();
+        }
+        expect(exercises.coverage.practised + exercises.coverage.notAttested)
+          .toBe(exercises.coverage.lessonWords);
+      }
+    }
+    expect(total).toBe(1000);
+  });
+
   it("carries the frozen release counts", () => {
     expect(overview.counts.volumes).toBe(2);
     expect(overview.counts.lessons).toBe(100);

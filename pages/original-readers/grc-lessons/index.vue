@@ -75,6 +75,7 @@
                 <dl class="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-[11px] text-stone-500">
                   <div><dt class="inline">生詞 </dt><dd class="inline font-semibold text-stone-700">{{ lesson.vocabularyCount }}</dd></div>
                   <div><dt class="inline">背誦 </dt><dd class="inline font-semibold text-stone-700">{{ lesson.memoryUnitCount }}</dd></div>
+                  <div><dt class="inline">練習 </dt><dd class="inline font-semibold text-stone-700">{{ lesson.exerciseCount }}</dd></div>
                   <div><dt class="inline">讀文 </dt><dd class="inline font-semibold text-stone-700">{{ lesson.reading.wordCount }} 詞</dd></div>
                   <div v-if="lesson.reading.completeness === 'excerpt'"><dd class="inline text-amber-700">節錄</dd></div>
                 </dl>
@@ -99,6 +100,7 @@ interface LessonSummary {
   vocabularyCount: number;
   memoryUnitCount: number;
   memoryUnitKind: string;
+  exerciseCount: number;
   glossedCount: number;
   reading: { kind: string; titleZh: string; titleGrc: string; difficulty: number; label: string; completeness: string; wordCount: number };
   href: string;

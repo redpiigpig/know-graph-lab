@@ -1,6 +1,8 @@
 import masterJson from "../../output/source-cache/original-readers/greek-full/greek-reader-two-volumes.json";
 import liturgyJson from "../../output/source-cache/original-readers/greek-full/liturgy-chrysostom.json";
 import interlinearJson from "../../output/source-cache/original-readers/greek-full/interlinear.json";
+import exerciseSetV1Json from "../../output/source-cache/original-readers/greek-full/exercise-set-v1.json";
+import exerciseSetV2Json from "../../output/source-cache/original-readers/greek-full/exercise-set-v2.json";
 
 import { groupAppendixEntries } from "./appendixGroups";
 
@@ -112,6 +114,27 @@ export interface GreekLessonReading {
   canonTotal?: number;
 }
 
+/** One of the ten translation exercises of a lesson, as the reader shows it. */
+export interface GreekExerciseItem {
+  no: number;
+  kind: "quoted" | "composed";
+  /** Greek only.  A Chinese line here would be the answer to the question. */
+  text: string;
+  /** Where an anchored sentence comes from, already in Chinese; null if composed. */
+  ref: string | null;
+  targetWords: Array<{ ordinal: number; headword: string }>;
+}
+
+export interface GreekLessonExercises {
+  itemCount: number;
+  quotedCount: number;
+  composedCount: number;
+  /** Why a lesson falls short: no quotable source, or words absent from the corpus. */
+  note: string;
+  coverage: { lessonWords: number; practised: number; notAttested: number };
+  items: GreekExerciseItem[];
+}
+
 export interface GreekLesson {
   volume: number;
   lesson: number;
@@ -121,6 +144,7 @@ export interface GreekLesson {
   vocabularyCount: number;
   vocabulary: GreekVocabularyEntry[];
   memoryUnits: GreekMemoryUnit[];
+  exercises: GreekLessonExercises;
   reading: GreekLessonReading;
 }
 
@@ -134,6 +158,7 @@ export interface GreekLessonSummary {
   vocabularyCount: number;
   memoryUnitCount: number;
   memoryUnitKind: string;
+  exerciseCount: number;
   glossedCount: number;
   reading: {
     kind: GreekLessonReading["kind"];
@@ -266,6 +291,124 @@ function attachTokens(unitId: string, segment: GreekReadingSegment): GreekReadin
   };
 }
 
+interface RawExerciseItem {
+  no: number;
+  kind: string;
+  text: string;
+  ref?: string;
+  refLabel?: string;
+  targetWords?: Array<{ ordinal: number; headword: string }>;
+}
+
+interface RawExerciseLesson {
+  lesson: number;
+  note?: string;
+  items: RawExerciseItem[];
+  coverage?: { lessonWords: number; practised: number; notAttested?: unknown[] };
+}
+
+interface ExerciseSetMaster {
+  direction: string;
+  itemsPerLesson: number;
+  volume: number;
+  lessons: RawExerciseLesson[];
+}
+
+const exerciseSets: Record<number, ExerciseSetMaster> = {
+  1: exerciseSetV1Json as unknown as ExerciseSetMaster,
+  2: exerciseSetV2Json as unknown as ExerciseSetMaster,
+};
+
+const exerciseBlocks = new Map<string, RawExerciseLesson>();
+
+function fail(message: string): never {
+  throw new Error(`[greek-full-reader] ${message}`);
+}
+
+/**
+ * Bind each exercise block to the lesson whose words it practises.
+ *
+ * On vocabulary ordinal, never on the lesson number the exercise file carries.
+ * A lesson number is an output of the reading plan's difficulty sort; the
+ * ordinal is the word's own identity, and a resort would silently move every
+ * block one lesson without changing a single count.  The headword is checked
+ * too, so a block cannot bind to a lesson that merely has the same numbers.
+ * Same rule and same reason as the printed books and the other two languages
+ * (see references/silent-failures.md §1).
+ */
+function bindExercises(): Map<string, RawExerciseLesson> {
+  if (exerciseBlocks.size) return exerciseBlocks;
+  for (const volume of master.volumes) {
+    const set = exerciseSets[volume.volume];
+    if (!set) fail(`第 ${volume.volume} 冊沒有練習題主檔`);
+    if (set.direction !== "original-to-chinese") fail(`第 ${volume.volume} 冊練習題不是原文譯中文`);
+    if (set.itemsPerLesson !== 10) fail(`第 ${volume.volume} 冊練習題不是每課十題`);
+    if (set.lessons.length !== volume.lessons.length) {
+      fail(`第 ${volume.volume} 冊練習題 ${set.lessons.length} 課，讀本 ${volume.lessons.length} 課`);
+    }
+    const byOrdinal = new Map<number, { lesson: number; headword: string }>();
+    for (const lesson of volume.lessons) {
+      for (const entry of lesson.vocabulary) {
+        byOrdinal.set(entry.ordinal, { lesson: lesson.lesson, headword: entry.headword });
+      }
+    }
+    for (const block of set.lessons) {
+      const hosts = new Set<number>();
+      for (const item of block.items) {
+        for (const word of item.targetWords || []) {
+          const found = byOrdinal.get(word.ordinal);
+          if (!found) fail(`第 ${volume.volume} 冊練習題的第 ${word.ordinal} 詞不在詞表內`);
+          if (found.headword !== word.headword) {
+            fail(
+              `第 ${volume.volume} 冊練習題的第 ${word.ordinal} 詞寫作 ${word.headword}，` +
+                `詞表寫作 ${found.headword}：兩邊對的不是同一個詞`,
+            );
+          }
+          hosts.add(found.lesson);
+        }
+      }
+      if (hosts.size !== 1) {
+        fail(`第 ${volume.volume} 冊練習題第 ${block.lesson} 課橫跨課次 ${[...hosts].sort().join("、")}`);
+      }
+      const key = greekLessonKey(volume.volume, [...hosts][0]);
+      if (exerciseBlocks.has(key)) fail(`${key} 被兩組練習題認領`);
+      exerciseBlocks.set(key, block);
+    }
+  }
+  return exerciseBlocks;
+}
+
+function exercisesFor(volume: number, lesson: number): GreekLessonExercises {
+  const block = bindExercises().get(greekLessonKey(volume, lesson));
+  if (!block) fail(`第 ${volume} 冊第 ${lesson} 課沒有練習題`);
+  const items: GreekExerciseItem[] = block.items.map((item) => ({
+    no: item.no,
+    kind: item.kind === "quoted" ? "quoted" : "composed",
+    text: item.text,
+    // Only the reference travels, and in the same wording the printed book
+    // uses.  `answerKeyRef` and the composed drafts' own Chinese stay in the
+    // data layer, where an answer booklet can reach them; neither is sent to a
+    // page that prints the question.
+    ref: item.kind === "quoted" ? item.refLabel || item.ref || null : null,
+    targetWords: (item.targetWords || []).map((word) => ({
+      ordinal: word.ordinal,
+      headword: word.headword,
+    })),
+  }));
+  return {
+    itemCount: items.length,
+    quotedCount: items.filter((item) => item.kind === "quoted").length,
+    composedCount: items.filter((item) => item.kind === "composed").length,
+    note: (block.note || "").trim(),
+    coverage: {
+      lessonWords: block.coverage?.lessonWords ?? 0,
+      practised: block.coverage?.practised ?? 0,
+      notAttested: (block.coverage?.notAttested || []).length,
+    },
+    items,
+  };
+}
+
 function memoryUnitId(unit: GreekMemoryUnit): string {
   return unit.kind === "sentence" ? `sentence:${unit.ref}` : `memory:${unit.ref}`;
 }
@@ -284,6 +427,7 @@ function withInterlinear(lesson: GreekLesson): GreekLesson {
   );
   return {
     ...lesson,
+    exercises: exercisesFor(lesson.volume, lesson.lesson),
     memoryUnits: lesson.memoryUnits.map((unit) => ({
       ...unit,
       tokens: interlinear[memoryUnitId(unit)]?.tokens || [],
@@ -320,6 +464,7 @@ function summarise(volume: GreekVolume): GreekLessonSummary[] {
     vocabularyCount: lesson.vocabularyCount,
     memoryUnitCount: lesson.memoryUnits.length,
     memoryUnitKind: volume.memoryUnitKind,
+    exerciseCount: exercisesFor(volume.volume, lesson.lesson).itemCount,
     glossedCount: lesson.vocabulary.filter((word) => word.glossZh.trim()).length,
     reading: {
       kind: lesson.reading.kind,
