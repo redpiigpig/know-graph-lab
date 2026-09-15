@@ -162,6 +162,49 @@
         </section>
       </div>
 
+
+      <section v-if="dlmbs.records" class="mt-5 bg-white rounded-2xl border border-gray-100 p-6">
+        <div class="flex items-start gap-4 mb-3">
+          <div class="text-2xl leading-none mt-0.5">🗂️</div>
+          <div class="flex-1 min-w-0">
+            <div class="flex items-baseline gap-2 flex-wrap">
+              <h2 class="text-lg font-bold text-gray-900">臺大佛學數位圖書館書目</h2>
+              <span class="text-xs px-2 py-0.5 rounded-full bg-amber-50 text-amber-700">全庫書目</span>
+            </div>
+            <p class="text-sm text-gray-500 leading-relaxed mt-1 break-words">
+              臺大佛學數位圖書館（DLMBS）的書目資料庫全收。欄位比華藝厚——除了卷期、起訖頁、
+              正式作者署名，還帶<strong>摘要、目次、關鍵詞、研究時代、研究地點</strong>。
+              其中「目次」等於 {{ dlmbs.with_toc.toLocaleString() }} 筆專書與論文的
+              <strong>章節層索引</strong>，是這個庫最獨特的地方。
+            </p>
+          </div>
+          <div class="text-right flex-shrink-0 text-xs text-gray-400 leading-relaxed">
+            <div class="text-base font-semibold text-gray-700">{{ dlmbs.records.toLocaleString() }} 筆</div>
+            <div>目次 {{ Math.round(dlmbs.with_toc / dlmbs.records * 100) }}%</div>
+          </div>
+        </div>
+        <div class="flex flex-wrap gap-2 mb-3">
+          <span v-for="(n, k) in dlmbs.doctypes" :key="k"
+                class="text-xs px-2 py-0.5 rounded bg-gray-50 text-gray-600 break-words">
+            {{ k }} {{ n.toLocaleString() }}
+          </span>
+        </div>
+        <button @click="open = open === 'dlmbs' ? '' : 'dlmbs'" class="text-xs text-amber-700 hover:underline">
+          {{ open === 'dlmbs' ? '收合' : '列出收錄最多的四十種出處' }}
+        </button>
+        <ul v-if="open === 'dlmbs'" class="mt-3 space-y-1.5">
+          <li v-for="(n, k) in topSources" :key="k" class="text-xs text-gray-600 flex gap-3">
+            <span class="text-gray-400 tabular-nums w-16 text-right flex-shrink-0">{{ n.toLocaleString() }}</span>
+            <span class="break-words">{{ k }}</span>
+          </li>
+        </ul>
+        <p class="mt-3 text-xs text-gray-400 leading-relaxed break-words">
+          資料來源：<a href="https://dlbs.liberal.ntu.edu.tw" target="_blank" rel="noopener"
+             class="text-amber-700 hover:underline">臺大佛學數位圖書館</a>。
+          依其版權聲明，引用本站轉錄的書目時請一併註明該館為來源。
+        </p>
+      </section>
+
       <p class="mt-8 text-xs text-gray-400 leading-relaxed">
         ⚠️「已入館／缺」是把書目題名（原文與中譯都比、破折號副標先切掉）拿去對電子圖書館，
         再要求作者對得上才算數——館裡《印度佛教史》就有拉莫特、沃德爾、聖嚴三種，光比題名會誤判。
@@ -200,6 +243,11 @@ interface ArtArea {
 }
 const areas = ref<Area[]>([])
 const langs = ref<Record<string, number> | null>(null)
+const dlmbs = ref<{ records: number; with_toc: number; with_abstract: number
+                    doctypes: Record<string, number>; top_sources: Record<string, number> }>(
+  { records: 0, with_toc: 0, with_abstract: 0, doctypes: {}, top_sources: {} })
+const topSources = computed(() =>
+  Object.fromEntries(Object.entries(dlmbs.value.top_sources ?? {}).slice(0, 40)))
 const arts = ref<Record<string, ArtArea>>({})
 const pending = ref(true)
 const open = ref('')
@@ -235,6 +283,10 @@ onMounted(async () => {
         '/content/research-data/buddhist-studies/articles.json', { responseType: 'json' })
       arts.value = a?.areas ?? {}
     } catch { arts.value = {} }
+    try {
+      dlmbs.value = await $fetch('/content/research-data/buddhist-studies/dlmbs.json',
+                                 { responseType: 'json' })
+    } catch { /* 沒抓過就不顯示這一區 */ }
   } catch { areas.value = [] } finally { pending.value = false }
 })
 

@@ -106,17 +106,35 @@ TXT_LABELS = {
     "資料類型", "使用語文", "附註項", "ISBN/ISSN/ISRC", "關鍵字", "摘要",
     "目次", "研究時代", "研究地點", "叢書名", "版本項", "稽核項", "學位類別",
     "校院名稱", "系所名稱", "指導教授", "畢業年度", "點閱次數", "建檔日期",
-    "更新日期", "出版者網址", "備註",
+    "更新日期", "出版者網址", "備註", "叢書號", "冊次", "集叢號", "版本",
 }
+# 長得像標籤但不在上表裡的，計次記下來，跑完印出現「出現很多次」的那些——
+# 那才可能是真的新欄位。只出現一兩次的幾乎都是目次的內容行。
+UNKNOWN_LABELS: dict[str, int] = {}
 
 
 def txt_label(line: str) -> tuple[str, str] | None:
-    """一行是不是「標籤：值」。不是就回 None（交給呼叫端當續行處理）。"""
+    """一行是不是「標籤：值」。
+
+    回 `(label, value)`＝認得的欄位；回 `None`＝當成續行。
+
+    🚨 `叢書號` 一開始不在清單裡，於是「叢 書 號：0」整行被當成題名的續行
+    吞進去，題名變成「測試書目(請勿刪除)\n叢 書 號：0」，害合併閘擋掉整批。
+    補進白名單就解決了。
+
+    ⚠️ **但不可以因此改成「認不得就中止續接」**——實測那樣會把目次從第一個
+    含冒號的條目（「第一章：空」「練習一：…」）處整個截斷，換來更大的資料損失，
+    而且目次少一半在頁面上完全看不出來。認不得一律當續行，只把它計次記下來，
+    跑完看哪些出現得夠頻繁——那才可能是真的新欄位。
+    """
     i = line.find("：")
     if i <= 0 or i > 20:
         return None
     label = re.sub(r"\s", "", line[:i])
+    if not label:
+        return None
     if label not in TXT_LABELS:
+        UNKNOWN_LABELS[label] = UNKNOWN_LABELS.get(label, 0) + 1
         return None
     return label, line[i + 1:].strip()
 
@@ -180,8 +198,18 @@ def parse_enw(t: str) -> list[dict]:
 def parse_txt(t: str) -> list[dict]:
     """站方的純文字匯出 → 逐筆。紀錄以「只有數字的一行」分隔。"""
     recs, cur, last = [], None, None
+    seen = 0          # 已經看過幾個分隔號（＝目前正在讀第幾筆）
     for line in t.splitlines():
-        if re.fullmatch(r"\d+", line.strip()):
+        # 🚨 紀錄分隔是「批次內的流水號」，但不能只判「整行都是數字」——
+        #    目次或摘要裡出現單獨一行的數字（年份、頁碼）就會被誤判成分隔，
+        #    多切出一筆空紀錄。實測 seq 270,001– 那批就是這樣：原始只有 254 個
+        #    「題名：」，卻被切成 255 筆，害合併閘擋掉整批（27 批全是這個原因）。
+        #    流水號嚴格遞增 1,2,3…，所以只在「剛好等於下一號」時才算分隔。
+        #    ⚠️ 要用獨立計數器，不能用 len(recs)——看到「2」時第 1 筆還在 cur 裡
+        #    沒進 recs，len(recs)+1 會算成 1 而永遠對不上。
+        s = line.strip()
+        if s.isdigit() and int(s) == seen + 1:
+            seen += 1
             if cur:
                 recs.append(cur)
             cur, last = {}, None
@@ -307,6 +335,15 @@ def harvest(limit: int | None, start_at: int | None) -> None:
                   f"（本次累計 {got:,}／總計 {st['records']:,}）")
     save_state(st)
     print(f"\n本次新增 {got:,} 筆；空批 {empty}；待重跑 {len(st.get('failed', []))} 批")
+    hot = sorted((v, k) for k, v in UNKNOWN_LABELS.items() if v >= 20)
+    if hot:
+        print(f"⚠️ 有 {len(hot)} 個沒見過、但出現 20 次以上的「標籤：」前綴，"
+              f"可能是真的新欄位（目前當續行處理）：")
+        for v, k in sorted(hot, reverse=True)[:15]:
+            print(f"     {k}  ×{v}")
+        print("   確認是欄位就補進 TXT_LABELS 再重跑相關批次")
+    elif UNKNOWN_LABELS:
+        print(f"（{len(UNKNOWN_LABELS)} 個一次性的「X：」前綴，都是目次內容行，已當續行）")
 
 
 def probe() -> None:
