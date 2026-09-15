@@ -608,7 +608,14 @@ def page_paragraphs(page: fitz.Page, body_size: float | None = None,
             #    （2026-09-14）。清單標記本身就是段首的訊號。
             listed = bool(re.match(r"(\d{1,2}[.)]|[a-z][.)])\s", head))
             opens = head[:1].isupper() or head[:1] in "“‘\"'" or listed
-            if chunk and closed and opens and (listed or 6 < ln["bbox"][0] - left < 40):
+            # 🚨 篇末註的標題跟正文最後一段在**同一個區塊**裡，不切開的話
+            #    「砍篇末書目」那一步只認「整段開頭是 Notes」就永遠看不到它——
+            #    Segal 那篇印出「…presuppose it. Notes this means that Eliade…」
+            #    （2026-09-15 逐段忠實度稽核抓到）。獨立成行的就強制斷開。
+            tail_head = bool(re.fullmatch(r"(Notes?|Bibliography|References|Works Cited)"
+                                          r"\s*", s.strip(), re.I))
+            if chunk and (tail_head or (closed and opens
+                                        and (listed or 6 < ln["bbox"][0] - left < 40))):
                 body.append(("\n".join(chunk), False, first))
                 chunk, first = [], True      # 切出來的後續每一塊都是段首
             chunk.append(s)
@@ -748,10 +755,23 @@ def cut_bibliography(paras: list[tuple[str, str]]) -> tuple[list[tuple[str, str]
     只從**後三分之一**開始找：導論段落就寫過 "References" 這個詞，從頭找會把
     整篇正文砍掉——而砍掉不會報錯，印出來也像一篇完整的文章。
     """
+    kept, cut = paras, 0
     for i, (_, t) in enumerate(paras):
         if i > len(paras) * 0.35 and _biblio_start(t):
-            return paras[:i], len(paras) - i
-    return paras, 0
+            kept, cut = paras[:i], len(paras) - i
+            break
+    # 🚨 `_biblio_start` 要求標題字後面接大寫或數字，那是為了不把正文裡的
+    #    「references to…」當成書目起點。但註釋跟正文黏在一起時會變成
+    #    「Notes this means th at Eliade…」——小寫開頭，於是那一段留了下來
+    #    （2026-09-15 逐段忠實度稽核抓到 Segal 那篇）。**砍完之後**再看結尾
+    #    三段，只要以標題字起頭就砍——那個位置不會是正文。
+    #    （🚨 要看「砍完之後」的結尾，不是原始清單的結尾：第一輪已經切掉七十段，
+    #      那一段在原始清單裡離結尾還很遠。）
+    for i in range(max(0, len(kept) - 3), len(kept)):
+        flat = re.sub(r"[\W_]+", "", kept[i][1]).lower()
+        if any(flat.startswith(w) for w in BIBLIO_WORDS):
+            return kept[:i], cut + len(kept) - i
+    return kept, cut
 
 
 # 小標：一整串大寫字之後直接接一個正常大小寫的字。掃描本常把小標跟後面那段
