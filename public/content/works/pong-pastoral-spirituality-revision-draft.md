@@ -161,33 +161,33 @@ The study divides his ministry into three periods: before 2001, marked by theolo
 
 ### 龐君華一手材料
 
-龐君華，1992，《臺灣本土神學中政治主題的探討》，B.D. 論文，香港中文大學崇基學院神學組／東南亞神學研究院香港分院。[龐會督典藏](https://nonchurch2025.com/pong-archive/writings/47)。
+龐君華，1992，《臺灣本土神學中政治主題的探討》，B.D. 論文（未出版），香港中文大學崇基學院神學組／東南亞神學研究院香港分院。[龐會督典藏](https://nonchurch2025.com/pong-archive/writings/47)。
 
-龐君華，1999，《處境神學的處境反省：戰後臺灣新教本土神學的建構與發展》，M.Theol. 論文，東南亞神學研究院香港分院。[龐會督典藏](https://nonchurch2025.com/pong-archive/writings/48)。
+龐君華，1999，《處境神學的處境反省：戰後臺灣新教本土神學的建構與發展》，M.Theol. 論文（未出版），東南亞神學研究院香港分院。[龐會督典藏](https://nonchurch2025.com/pong-archive/writings/48)。
 
 龐君華，2012a，〈內尋靈性深度 外展事奉服務〉，《衛神院訊》22。[龐會督典藏](https://nonchurch2025.com/pong-archive/writings/40)。
 
 龐君華，2012b，〈成聖之道：循道衛理宗的靈修觀〉，《神學論集》174：591–612。[龐會督典藏](https://nonchurch2025.com/pong-archive/writings/1)。
 
-龐君華，2015，〈主共同體的成聖：約翰衛斯理小組和教會更新運動〉，衛斯理學術研討會講座及逐字稿，3 月 24 日。[龐會督典藏](https://nonchurch2025.com/pong-archive/media/32)。
+龐君華，2015，〈主共同體的成聖：約翰衛斯理小組和教會更新運動〉，衛斯理學術研討會講座及逐字稿（未出版），3 月 24 日。[龐會督典藏](https://nonchurch2025.com/pong-archive/media/32)。
 
-龐君華，2018，〈負責的恩典：當代門徒與受苦的世界〉，2018 苦難神學研討會講座及逐字稿，11 月 22 日。[龐會督典藏](https://nonchurch2025.com/pong-archive/media/30)。
+龐君華，2018，〈負責的恩典：當代門徒與受苦的世界〉，2018 苦難神學研討會講座及逐字稿（未出版），11 月 22 日。[龐會督典藏](https://nonchurch2025.com/pong-archive/media/30)。
 
-龐君華，2019，〈門徒：有別於世界的信仰群體〉，聖光神學院講座及逐字稿，10 月 1 日。[龐會督典藏](https://nonchurch2025.com/pong-archive/media/31)。
+龐君華，2019，〈門徒：有別於世界的信仰群體〉，聖光神學院講座及逐字稿（未出版），10 月 1 日。[龐會督典藏](https://nonchurch2025.com/pong-archive/media/31)。
 
 龐君華，2020，〈循道衛理門徒運動的特色與實踐〉，《中華衛訊》108。[龐會督典藏](https://nonchurch2025.com/pong-archive/writings/32)。
 
-龐君華，2021，〈學習成為門徒的信仰群體：廿年來牧養的心路歷程〉，城中教會六十週年堂慶材料。[龐會督典藏](https://nonchurch2025.com/pong-archive/writings/43)。
+龐君華，2021，〈學習成為門徒的信仰群體：廿年來牧養的心路歷程〉，《衛理公會城中教會六十週年紀念特刊》。[龐會督典藏](https://nonchurch2025.com/pong-archive/writings/43)。
 
 龐君華，2022a，〈《中華基督教衛理公會聖餐禮文（試行本）》序文（一）〉，4 月 14 日。[龐會督典藏](https://nonchurch2025.com/pong-archive/writings/49)。
 
 龐君華，2022b，〈我是在修的人〉，《衛理神學研究院電子報》，2022 年 11 月號。[龐會督典藏](https://nonchurch2025.com/pong-archive/writings/28)。
 
-龐君華，2023a，〈走在張力重重的路上：傳統建制教會在現代臺灣社會中的契機〉，臺灣聖公會工作坊講座及逐字稿，5 月 10 日。[龐會督典藏](https://nonchurch2025.com/pong-archive/media/494)。
+龐君華，2023a，〈走在張力重重的路上：傳統建制教會在現代臺灣社會中的契機〉，臺灣聖公會工作坊講座及逐字稿（未出版），5 月 10 日。[龐會督典藏](https://nonchurch2025.com/pong-archive/media/494)。
 
-龐君華，2023b，〈現代門徒的日常：新修道主義芻議〉，聖公會聖約翰座堂男輔團公開講座及逐字稿，10 月 15 日。[龐會督典藏](https://nonchurch2025.com/pong-archive/media/2)。
+龐君華，2023b，〈現代門徒的日常：新修道主義芻議〉，聖公會聖約翰座堂男輔團公開講座及逐字稿（未出版），10 月 15 日。[龐會督典藏](https://nonchurch2025.com/pong-archive/media/2)。
 
-龐君華，2024，〈從新修道主義來看我們的服事〉，校園福音團契講座及逐字稿，3 月 5 日。[龐會督典藏](https://nonchurch2025.com/pong-archive/media/73)。
+龐君華，2024，〈從新修道主義來看我們的服事〉，校園福音團契講座及逐字稿（未出版），3 月 5 日。[龐會督典藏](https://nonchurch2025.com/pong-archive/media/73)。
 
 ### 訪談與二手材料
 

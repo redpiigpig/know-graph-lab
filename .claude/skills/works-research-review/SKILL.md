@@ -39,6 +39,10 @@ description: 「論文寫作」計畫的研究回顧／文獻綜述工具（/wor
   - 🚨 **抓不到就留 NULL，不可用段序頂替**——見 [[feedback_transcribe_page_numbers]]。全集那條線就是把 `page_number` 填成 `chunk_index+1`，465 頁的書長出 152 個假頁碼，比沒有更糟。
   - 🚨 `sections.page_number` 只有 **PDF 來源**才有真值；HTML 來源（無版面）一律 NULL。
   - migration 一律走 `node scripts/apply-sql.mjs <file.sql>`（Management API；psycopg2 直連是 IPv6-only 跑不通的）。這支取代了九份只差檔名的 `apply-*-schema.mjs`。
+- ✅ **第三案 pong-pastoral-spirituality〈龐君華會督的衛斯理神學實踐與「新修道主義」願景〉（2026-09-15）** — 台灣宗教學會 2026 年會（10/23-24，輔大濟時樓，主題「靈性運動、療癒與諮詢」）投稿。`public/content/papers/pong-pastoral-spirituality.txt` 只存**摘要層**工作文本，全文論證在 `public/content/works/pong-pastoral-spirituality-revision-draft.md`（v0.4，47KB，含兩個 markdown 表格與大量 `[龐會督典藏](url)` 連結）。
+  - **通用產檔器＝[scripts/build_paper_docx.mjs](../../../scripts/build_paper_docx.mjs)**（`node scripts/build_paper_docx.mjs <ref> "<out.docx>"`）：版式與 `server/api/works/draft-docx.get.ts` 相同（A4/25mm、新細明體+Times 12pt、首行縮排、`>` 引文標楷體、〔註N〕→真腳註），但**多認三種端點會原樣印成亂碼的語法**——markdown 表格→真 Word 表格、`[文字](網址)`→真超連結、`1.` 數字清單→保留編號的懸掛縮排。任何草稿 md 通用。
+  - 🚨 **端點與腳本是兩份實作**：改版式要兩邊一起改，否則網站「⬇ 下載 Word」與交付檔會長得不一樣（見 [[feedback_deliverable_all_copies]]）。
+  - **交付位置**：`G:\我的雲端硬碟\玄奘\博一上\投稿6.10.23-24 台灣宗教學年會\`（成品不進 git）。同夾有大會徵稿公告與個別論文提交資料表；**公告未規定撰稿體例與附錄位置**，本文依《臺灣宗教研究》作者—年份制、採「參考文獻→附錄」序。
 - ✅ **/works 分區** — [pages/works/index.vue](../../../pages/works/index.vue) 拆「書籍寫作 / 論文寫作」兩區（依 `kind`）
 - ✅ **reader + API** — [pages/works/[slug]/index.vue](../../../pages/works/[slug]/index.vue) 論文計畫頁底「研究回顧」分頁（按主題列書目）＋ [pages/works/[slug]/review/[ref].vue](../../../pages/works/) 原文/中譯兩欄逐段 reader；[server/api/lit-review/*.get.ts](../../../server/api/lit-review/)（entries / entry）
 - ✅ **ingest 驅動腳本** — [scripts/ingest_lit_review.py](../../../scripts/ingest_lit_review.py)（`--seed` 入書目；`--fetch-fulltext --resume` 過夜抓全文＋翻譯）；報告原文存 [scripts/data/lit_review_eight_garudhammas.md](../../../scripts/data/)
