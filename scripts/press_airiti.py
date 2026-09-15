@@ -323,6 +323,31 @@ def issue_html_all(s, pid, publisher_id, year, issue_id, max_pages=40):
     return chr(10).join(out)
 
 
+# 連線層的瞬斷。這些都不是「這一篇有問題」，是網路抖了一下，重試就好。
+_TRANSIENT = (requests.exceptions.ChunkedEncodingError,
+              requests.exceptions.ConnectionError,
+              requests.exceptions.Timeout)
+
+
+def post_with_retry(s, url, tries=4, sleep=time.sleep, **kw):
+    """POST 遇到網路瞬斷要重試，而且不可以讓整輪崩掉。
+
+    🚨 與 `write_with_retry` 同一個道理，只是在**下載**這一層 —— 寫檔那一層
+    早就補過了，這一層沒有。2026-09-15 實測：要下 1200 篇，跑到第 148 篇時
+    `ChunkedEncodingError: IncompleteRead(4007 bytes read, 6233 more expected)`
+    把整個迴圈炸掉、程序直接結束。而使用者在校網的時間有限，重跑要從頭排隊。
+
+    只重試連線層的例外；程式錯誤（TypeError 之類）照樣拋出來，不要被藏住。
+    """
+    for i in range(tries):
+        try:
+            return s.post(url, **kw)
+        except _TRANSIENT:
+            if i == tries - 1:
+                raise
+            sleep(2 ** i)
+
+
 def fetch_pdf(s, pid, publisher_id, year, issue_id, doc_id, issue_html=None):
     """兩段式下載。回傳 (bytes, 檔名) 或 (None, 錯誤訊息)。"""
     url = info_url(pid, issueYear=year, issueID=issue_id, publisherID=publisher_id)
@@ -333,7 +358,7 @@ def fetch_pdf(s, pid, publisher_id, year, issue_id, doc_id, issue_html=None):
         return None, "此篇在卷期頁上沒有全文下載鈕"
     obj = {"文章代碼": doc_id, "文章篇名": "", "需扣除點數": "",
            "文獻類型代碼": "P001", "ActionName": "TextDownload", "OrderID": None}
-    w = s.post(f"{BASE}/Article/TextDownloadWindowNew",
+    w = post_with_retry(s, f"{BASE}/Article/TextDownloadWindowNew",
                data={"jsString": urllib.parse.quote(json.dumps(obj, ensure_ascii=False))},
                headers={"AjaxRequestVerificationToken": tok,
                         "X-Requested-With": "XMLHttpRequest",
@@ -343,7 +368,7 @@ def fetch_pdf(s, pid, publisher_id, year, issue_id, doc_id, issue_html=None):
     key = re.search(r"lan_下載編號 = '([^']*)'", w)
     if not (t2 and key):
         return None, "取不到下載編號（多半是 IP 認證掉了）"
-    r = s.post(f"{BASE}/Article/TextDownloadNew",
+    r = post_with_retry(s, f"{BASE}/Article/TextDownloadNew",
                data={"docID": doc_id, "token": "", "key": key.group(1)},
                headers={"AjaxRequestVerificationToken": t2.group(1),
                         "X-Requested-With": "XMLHttpRequest",

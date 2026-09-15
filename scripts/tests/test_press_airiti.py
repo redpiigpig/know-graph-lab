@@ -190,3 +190,78 @@ def test_spent_is_counted_per_article_not_per_batch(tmp_path, monkeypatch):
     assert "add_spent(1)" in src, "download() 沒有逐篇記帳"
     # 而且 batch() 收尾不可以再加一次，否則會重複計
     assert "add_spent(spent)" not in inspect.getsource(pa.batch), "batch() 重複記帳"
+
+
+class TestPostWithRetry:
+    """🚨 一次網路瞬斷不可以帶走整批。
+
+    2026-09-15 實測：批次要下 1200 篇，跑到第 148 篇時
+    `ChunkedEncodingError: IncompleteRead(4007 bytes read, 6233 more expected)`
+    直接把整個迴圈炸掉、程序結束。而使用者在校網的時間有限，重跑要從頭排。
+
+    這支腳本早就為**寫檔**學過同一課（`write_with_retry` 的註解寫著「原本沒有
+    任何保護，一次打嗝就把整批 300 篇的迴圈整個帶走」），但**下載**這一層沒有。
+    """
+
+    def test_returns_the_response_when_it_works(self):
+        calls = []
+
+        class S:
+            def post(self, url, **kw):
+                calls.append(url)
+                return "OK"
+
+        assert pa.post_with_retry(S(), "u", tries=3, sleep=lambda _: None) == "OK"
+        assert len(calls) == 1
+
+    def test_retries_a_broken_connection_then_succeeds(self):
+        import requests
+        seq = [requests.exceptions.ChunkedEncodingError("boom"), "OK"]
+
+        class S:
+            def post(self, url, **kw):
+                x = seq.pop(0)
+                if isinstance(x, Exception):
+                    raise x
+                return x
+
+        assert pa.post_with_retry(S(), "u", tries=3, sleep=lambda _: None) == "OK"
+
+    def test_retries_timeouts_and_connection_errors(self):
+        import requests
+        for exc in (requests.exceptions.ConnectionError,
+                    requests.exceptions.Timeout,
+                    requests.exceptions.ChunkedEncodingError):
+            seq = [exc("x"), "OK"]
+
+            class S:
+                def post(self, url, **kw):
+                    x = seq.pop(0)
+                    if isinstance(x, Exception):
+                        raise x
+                    return x
+
+            assert pa.post_with_retry(S(), "u", tries=2, sleep=lambda _: None) == "OK"
+
+    def test_gives_up_after_the_last_try_and_raises(self):
+        import requests
+
+        class S:
+            def post(self, url, **kw):
+                raise requests.exceptions.ChunkedEncodingError("always")
+
+        with pytest.raises(requests.exceptions.ChunkedEncodingError):
+            pa.post_with_retry(S(), "u", tries=2, sleep=lambda _: None)
+
+    def test_a_non_network_error_is_not_retried(self):
+        # 程式錯誤要立刻浮出來，不要被重試藏起來
+        calls = []
+
+        class S:
+            def post(self, url, **kw):
+                calls.append(1)
+                raise ValueError("bug in caller")
+
+        with pytest.raises(ValueError):
+            pa.post_with_retry(S(), "u", tries=4, sleep=lambda _: None)
+        assert len(calls) == 1
