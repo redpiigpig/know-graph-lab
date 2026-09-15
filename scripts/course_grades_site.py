@@ -190,6 +190,23 @@ td.total{text-align:center; width:96px}
 .chip.fail{background:var(--fail-bg); color:var(--fail)}
 .chip.empty{background:transparent; color:var(--off)}
 .chip.derived{background:var(--accent-soft); color:var(--accent); min-width:40px; font-size:13px}
+button.drop{
+  appearance:none; font:inherit; font-size:11px; cursor:pointer; color:var(--off);
+  border:1px solid transparent; background:none; border-radius:5px; padding:1px 6px;
+}
+tbody tr:hover button.drop{border-color:var(--line-strong); color:var(--muted)}
+button.drop:hover{color:var(--fail); border-color:var(--fail)}
+button.drop:focus-visible{outline:2px solid var(--accent); outline-offset:1px}
+.dropbar{padding:10px 20px 0; display:flex; flex-wrap:wrap; gap:6px; align-items:baseline}
+.dropbar .k{font-size:12px; color:var(--muted)}
+button.undrop{
+  appearance:none; font:inherit; font-size:12px; cursor:pointer;
+  color:var(--muted); background:var(--sunk); border:1px solid var(--line);
+  border-radius:99px; padding:1px 9px;
+}
+button.undrop:hover{color:var(--accent); border-color:var(--accent)}
+button.undrop:focus-visible{outline:2px solid var(--accent); outline-offset:1px}
+tbody tr[hidden]{display:none}
 
 /* ── 點名表 ─────────────────────────────── */
 .att table{min-width:max-content}
@@ -269,11 +286,11 @@ input.at.bad{border-color:var(--fail); box-shadow:0 0 0 3px var(--fail-bg)}
   var DATA = JSON.parse(document.getElementById('seed').textContent);
   var PASS = 60, WARN = 70;      // 及格線 60；60–69 標邊緣
   var FULL = 5;                  // 課程單一次滿分 5，6 是加分
-  var scores = {}, attend = {}, manual = {};
+  var scores = {}, attend = {}, manual = {}, dropped = {};
   var db = null, queue = {}, timers = {}, dirty = {}, view = {};
 
   DATA.courses.forEach(function(c){
-    scores[c.code] = {}; attend[c.code] = {}; manual[c.code] = false;
+    scores[c.code] = {}; attend[c.code] = {}; manual[c.code] = false; dropped[c.code] = {};
     view[c.code] = 'grade';
     c.attIdx = -1;
     c.assessment.forEach(function(a, i){ if (a.item === '出席') c.attIdx = i; });
@@ -286,13 +303,22 @@ input.at.bad{border-color:var(--fail); box-shadow:0 0 0 3px var(--fail-bg)}
     return n;
   }
 
+  /** 還在課堂上的人。名單是快照，第二週退掉的人系統上看得到人數、看不到名字，
+   *  所以由老師在頁面上自己標退選——標掉的列整列收起來，統計與分母都不算他。 */
+  function roster(c){
+    return c.students.filter(function(s){ return !dropped[c.code][s.sid]; });
+  }
+  function droppedList(c){
+    return c.students.filter(function(s){ return dropped[c.code][s.sid]; });
+  }
+
   // ── 出席分由點名換算 ────────────────────
   // 分母只算「已經點過的場次」（該場有任何一個人有記號），
   // 否則學期中還沒點的那幾週會把全班拖低。
   function recordedSessions(c){
     var out = [];
     c.sessions.forEach(function(_, j){
-      var any = c.students.some(function(s){
+      var any = roster(c).some(function(s){
         var a = attend[c.code][s.sid];
         return a && typeof a[j] === 'number';
       });
@@ -349,7 +375,7 @@ input.at.bad{border-color:var(--fail); box-shadow:0 0 0 3px var(--fail-bg)}
     setSave('busy', '儲存中…');
     db.doc('grades/' + code).set({
       scores: scores[code], attend: attend[code], manual: manual[code],
-      updated: new Date().toISOString()
+      dropped: dropped[code], updated: new Date().toISOString()
     }).then(function(){
       queue[code] = false;
       setSave('ok', dirtyAny() ? '儲存中…'
@@ -376,23 +402,38 @@ input.at.bad{border-color:var(--fail); box-shadow:0 0 0 3px var(--fail-bg)}
       nm.appendChild(el('span', 'rc-code', c.code));
       d.appendChild(nm);
       var n = el('div', 'rc-n num');
-      n.appendChild(document.createTextNode(String(c.active)));
-      var small = el('small', null, c.excluded.length
-        ? '　人可登分　已剔除學籍註記 ' + c.excluded.length + ' 人'
-        : '　人可登分');
-      if (c.excluded.length) {
-        small.title = c.excluded.map(function(s){ return s.name + '（' + s.mark + '）'; }).join('、');
-      }
-      n.appendChild(small);
+      n.id = 'rc-n-' + c.code;
       d.appendChild(n);
-      var stale = c.system != null && c.system !== c.active;
-      var note = el('div', 'rc-note' + (stale ? ' stale' : ''));
-      note.textContent = stale
-        ? '⚠ 系統現在是 ' + c.system + ' 人，這份名單是 ' + c.snapshot + ' 的快照'
-        : '系統已選 ' + (c.system == null ? '—' : c.system) + ' 人，與名單一致（' + c.snapshot + '）';
+      var note = el('div', 'rc-note');
+      note.id = 'rc-note-' + c.code;
       d.appendChild(note);
       box.appendChild(d);
     });
+    DATA.courses.forEach(updateRecon);
+  }
+
+  /** 對帳條那一格：可登分人數、剔除了誰、跟系統已選對不對得上。 */
+  function updateRecon(c){
+    var n = document.getElementById('rc-n-' + c.code);
+    var note = document.getElementById('rc-note-' + c.code);
+    if (!n || !note) return;
+    var live = roster(c).length, out = droppedList(c).length;
+    n.textContent = String(live);
+    var small = el('small', null, '　人可登分'
+      + (c.excluded.length ? '　學籍註記 ' + c.excluded.length : '')
+      + (out ? '　退選 ' + out : ''));
+    var tips = c.excluded.map(function(s){ return s.name + '（' + s.mark + '）'; })
+      .concat(droppedList(c).map(function(s){ return s.name + '（退選）'; }));
+    if (tips.length) small.title = tips.join('、');
+    n.appendChild(small);
+    var stale = c.system != null && c.system !== live;
+    note.className = 'rc-note' + (stale ? ' stale' : '');
+    note.textContent = c.system == null
+      ? '查不到系統已選人數（' + c.snapshot + ' 名單）'
+      : stale
+        ? '⚠ 系統已選 ' + c.system + ' 人，這裡是 ' + live + ' 人——差 '
+          + Math.abs(c.system - live) + ' 個，把退掉的人標一標'
+        : '✔ 與系統已選 ' + c.system + ' 人一致';
   }
 
   // ── 成績表 ──────────────────────────────
@@ -427,12 +468,14 @@ input.at.bad{border-color:var(--fail); box-shadow:0 0 0 3px var(--fail-bg)}
     tht.appendChild(document.createTextNode('總成績'));
     tht.appendChild(el('span', 'w', '100%'));
     tr.appendChild(tht);
+    tr.appendChild(el('th', 'score', ''));
     thead.appendChild(tr);
     table.appendChild(thead);
 
     var tbody = el('tbody');
     c.students.forEach(function(s, n){
       var row = el('tr');
+      row.id = 'row-' + c.code + '-' + s.sid;
       row.appendChild(el('td', 'idx num', String(n + 1)));
       row.appendChild(el('td', 'sid', s.sid));
       row.appendChild(el('td', 'sname', s.name));
@@ -445,12 +488,62 @@ input.at.bad{border-color:var(--fail); box-shadow:0 0 0 3px var(--fail-bg)}
       var tt = el('td', 'total');
       tt.appendChild(el('span', 'chip empty num', '—'));
       row.appendChild(tt);
+      var dd = el('td', 'score');
+      var x = el('button', 'drop', '退選');
+      x.type = 'button';
+      x.title = s.name + ' 已經退選，從名單收起來（分數留著，隨時可以復原）';
+      x.addEventListener('click', function(){ setDropped(c, s.sid, true); });
+      dd.appendChild(x);
+      row.appendChild(dd);
       tbody.appendChild(row);
     });
     table.appendChild(tbody);
     wrap.appendChild(table);
     v.appendChild(wrap);
+
+    var bar = el('div', 'dropbar');
+    bar.id = 'dropbar-' + c.code;
+    v.appendChild(bar);
     return v;
+  }
+
+  /** 標一個人退選／復原。分數與點名都留著，只是不計入統計也不顯示。 */
+  function setDropped(c, sid, on){
+    if (on) dropped[c.code][sid] = true; else delete dropped[c.code][sid];
+    applyDropped(c);
+    refreshAttend(c);
+    save(c.code);
+  }
+
+  /** 把退選的列收起來、重編可見列的序號、重畫下方的已退選清單與對帳條。 */
+  function applyDropped(c){
+    var n = 0;
+    c.students.forEach(function(s){
+      var out = !!dropped[c.code][s.sid];
+      if (!out) n++;
+      [document.getElementById('row-' + c.code + '-' + s.sid),
+       document.getElementById('arow-' + c.code + '-' + s.sid)].forEach(function(tr){
+        if (!tr) return;
+        tr.hidden = out;
+        if (!out) tr.querySelector('td.idx').textContent = String(n);
+      });
+    });
+    var bar = document.getElementById('dropbar-' + c.code);
+    if (bar) {
+      bar.textContent = '';
+      var out = droppedList(c);
+      if (out.length) {
+        bar.appendChild(el('span', 'k', '已退選 ' + out.length + ' 人：'));
+        out.forEach(function(s){
+          var b = el('button', 'undrop', s.name + ' ↩');
+          b.type = 'button';
+          b.title = '把 ' + s.name + ' 放回名單';
+          b.addEventListener('click', function(){ setDropped(c, s.sid, false); });
+          bar.appendChild(b);
+        });
+      }
+    }
+    updateRecon(c);
   }
 
   /** 出席欄在自動模式下是唯讀徽章，其餘欄位都是輸入格。 */
@@ -513,7 +606,7 @@ input.at.bad{border-color:var(--fail); box-shadow:0 0 0 3px var(--fail-bg)}
     if (raw === '') return;
     var v = Number(raw);
     if (!/^\d{1,3}(\.\d)?$/.test(raw) || v < 0 || v > 100) { window.alert('請輸入 0–100 的分數。'); return; }
-    c.students.forEach(function(s){
+    roster(c).forEach(function(s){
       var g = scores[c.code][s.sid] || (scores[c.code][s.sid] = {});
       if (typeof g[i] === 'number') return;
       g[i] = v;
@@ -531,7 +624,7 @@ input.at.bad{border-color:var(--fail); box-shadow:0 0 0 3px var(--fail-bg)}
     btn.textContent = manual[c.code] ? '改回自動' : '手動輸入';
     // 從自動切到手動時，把換算出來的分數先寫進去當起點。
     if (manual[c.code]) {
-      c.students.forEach(function(s){
+      roster(c).forEach(function(s){
         var v = attendScore(c, s.sid);
         if (v == null) return;
         var g = scores[c.code][s.sid] || (scores[c.code][s.sid] = {});
@@ -585,6 +678,7 @@ input.at.bad{border-color:var(--fail); box-shadow:0 0 0 3px var(--fail-bg)}
     var tbody = el('tbody');
     c.students.forEach(function(s, n){
       var row = el('tr');
+      row.id = 'arow-' + c.code + '-' + s.sid;
       row.appendChild(el('td', 'idx num stick c-idx', String(n + 1)));
       row.appendChild(el('td', 'sname stick c-name', s.name));
       c.sessions.forEach(function(_, j){
@@ -642,11 +736,14 @@ input.at.bad{border-color:var(--fail); box-shadow:0 0 0 3px var(--fail-bg)}
       if (!ok) return;
       a[j] = absent ? 0 : Number(raw);
       if (advance) {
-        // 老師是拿著一疊課程單一路往下打，所以跳到同一欄的下一位，不是右邊那格。
-        var nx = c.students[Number(inp.dataset.row) + 1];
-        if (nx) {
+        // 老師是拿著一疊課程單一路往下打，所以跳到同一欄的下一位，不是右邊那格；
+        // 已退選的列是收起來的，要跳過去。
+        for (var k = Number(inp.dataset.row) + 1; k < c.students.length; k++) {
+          var nx = c.students[k];
+          if (dropped[c.code][nx.sid]) continue;
           var e = document.getElementById('at-' + c.code + '-' + nx.sid + '-' + j);
-          if (e) e.focus();
+          if (e) { e.focus(); }
+          break;
         }
       }
     }
@@ -657,7 +754,7 @@ input.at.bad{border-color:var(--fail); box-shadow:0 0 0 3px var(--fail-bg)}
   }
 
   function fillSession(c, j, val){
-    c.students.forEach(function(s){
+    roster(c).forEach(function(s){
       var a = attend[c.code][s.sid] || (attend[c.code][s.sid] = {});
       if (typeof a[j] === 'number') return;   // 只補空白的，不覆蓋已經打好的
       a[j] = val;
@@ -682,7 +779,7 @@ input.at.bad{border-color:var(--fail); box-shadow:0 0 0 3px var(--fail-bg)}
   /** 點名表的小計、欄底統計，以及成績表裡跟著動的出席欄與總成績。 */
   function refreshAttend(c){
     var rec = recordedSessions(c);
-    c.students.forEach(function(s){
+    roster(c).forEach(function(s){
       var cell = document.getElementById('atsum-' + c.code + '-' + s.sid);
       if (cell) {
         var r = attendRaw(c, s.sid), v = attendScore(c, s.sid);
@@ -697,7 +794,7 @@ input.at.bad{border-color:var(--fail); box-shadow:0 0 0 3px var(--fail-bg)}
       var td = document.getElementById('atcol-' + c.code + '-' + j);
       if (!td) return;
       if (rec.indexOf(j) < 0) { td.textContent = '—'; return; }
-      var marks = c.students.map(function(s){
+      var marks = roster(c).map(function(s){
         var a = attend[c.code][s.sid] || {};
         return typeof a[j] === 'number' ? a[j] : 0;
       });
@@ -729,13 +826,14 @@ input.at.bad{border-color:var(--fail); box-shadow:0 0 0 3px var(--fail-bg)}
       btn.setAttribute('aria-pressed', manual[c.code] ? 'true' : 'false');
       btn.textContent = manual[c.code] ? '改回自動' : '手動輸入';
     }
+    applyDropped(c);
     refreshAttend(c);
   }
 
   function refreshFoot(c){
     var foot = document.getElementById('foot-' + c.code);
     if (!foot) return;
-    var act = c.students;
+    var act = roster(c);
     var done = act.filter(function(s){ return complete(c, s.sid); });
     var vals = done.map(function(s){ return total(c, s.sid); });
     var avg = vals.length ? Math.round(vals.reduce(function(a, b){ return a + b; }, 0) / vals.length) : null;
@@ -802,7 +900,7 @@ input.at.bad{border-color:var(--fail); box-shadow:0 0 0 3px var(--fail-bg)}
     var rows = [['序', '學號', '姓名', '班級']
       .concat(c.assessment.map(function(a){ return a.item + ' ' + a.pct + '%'; }))
       .concat(['總成績'])];
-    c.students.forEach(function(s, n){
+    roster(c).forEach(function(s, n){
       var v = total(c, s.sid);
       rows.push([n + 1, s.sid, s.name, s.klass]
         .concat(c.assessment.map(function(_, i){
@@ -819,7 +917,7 @@ input.at.bad{border-color:var(--fail); box-shadow:0 0 0 3px var(--fail-bg)}
       .concat(c.sessions.map(function(ss){ return ss.label.replace(/\s/g, '') + ' ' + ss.date; }))
       .concat(['課程單合計', '已點次數', '出席分'])];
     var rec = recordedSessions(c);
-    c.students.forEach(function(s, n){
+    roster(c).forEach(function(s, n){
       var a = attend[c.code][s.sid] || {};
       var r = attendRaw(c, s.sid);
       rows.push([n + 1, s.sid, s.name, s.klass]
@@ -893,7 +991,7 @@ input.at.bad{border-color:var(--fail); box-shadow:0 0 0 3px var(--fail-bg)}
       t.setAttribute('aria-controls', 'panel-' + c.code);
       t.setAttribute('aria-selected', idx === 0 ? 'true' : 'false');
       t.appendChild(document.createTextNode(c.name + '　' + c.code));
-      var pill = el('span', 'pill num', '0/' + c.students.length);
+      var pill = el('span', 'pill num', '0/' + roster(c).length);
       pill.id = 'pill-' + c.code;
       t.appendChild(pill);
       t.addEventListener('click', function(){ select(c.code); });
@@ -911,6 +1009,9 @@ input.at.bad{border-color:var(--fail); box-shadow:0 0 0 3px var(--fail-bg)}
       '加分的 6 分會把分數往上推，但登記不超過 100。分母只算已經點過的場次，' +
       '所以學期中看到的數字就是當下的實況。要自己填就按出席欄的「手動輸入」。<br>' +
       '及格線 60；60–69 標琥珀、70 以上綠。改任何一格都自動存，換裝置開同一個連結是同一份。<br>' +
+      '<b>退選</b>：名單是匯出當天的快照，第二週退掉的人校方系統只給人數不給名字——' +
+      '在該列右邊按「退選」就收起來，人數與分母立刻跟著改，對帳條會告訴你還差幾個。' +
+      '分數與點名都留著，按下面的名字可以放回來。<br>' +
       '名單與週次都由 <code>scripts/course_roster.py</code> 供給——換名單重跑它與 ' +
       '<code>scripts/course_grades_site.py</code> 再重新發佈，已打好的分數與點名不會被洗掉' +
       '（存在 <code>grades/&lt;課號&gt;</code>，不在頁面裡）。';
@@ -941,6 +1042,7 @@ input.at.bad{border-color:var(--fail); box-shadow:0 0 0 3px var(--fail-bg)}
         scores[c.code] = clone(body && body.scores);
         attend[c.code] = clone(body && body.attend);
         manual[c.code] = !!(body && body.manual);
+        dropped[c.code] = clone(body && body.dropped);
         refreshAll(c);
       }, function(e){
         setSave('bad', '同步斷了（' + e.code + '）——重新整理這頁');
