@@ -175,16 +175,6 @@ def build(write: bool, only: range | None = None) -> int:
                 )
             return checked[text]
 
-        anchors = pick_anchors(
-            mined_by_lesson[lesson].get("items", []),
-            keep=lambda row: check(row["text"])["passed"],
-        )
-        if len(anchors) < QUOTED_PER_LESSON:
-            thin.append(lesson)
-        drafts, author = load_drafts(lesson)
-        if not drafts:
-            missing.append(lesson)
-
         def practised_in(verification: dict[str, Any]) -> list[dict[str, Any]]:
             """Which of the lesson's twenty words a sentence practises.
 
@@ -193,6 +183,25 @@ def build(write: bool, only: range | None = None) -> int:
             """
             seen = dict.fromkeys(verification["vocabulary"])
             return [public_record(by_key[key]) for key in seen if key in by_key]
+
+        def usable_anchor(row: dict[str, Any]) -> bool:
+            """Passes the gate today, and still practises a word of this lesson.
+
+            The second half is not redundant.  The miner chose these under an
+            older reading of what each sentence covers; re-verified now, a few
+            credit nothing from their own lesson, and an item that practises
+            none of the twenty words is not an anchor for that lesson — the
+            shared gate refuses it, and rightly.
+            """
+            report = check(row["text"])
+            return report["passed"] and bool(practised_in(report))
+
+        anchors = pick_anchors(mined_by_lesson[lesson].get("items", []), keep=usable_anchor)
+        if len(anchors) < QUOTED_PER_LESSON:
+            thin.append(lesson)
+        drafts, author = load_drafts(lesson)
+        if not drafts:
+            missing.append(lesson)
 
         items: list[dict[str, Any]] = []
         for row in anchors:
