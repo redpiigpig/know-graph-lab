@@ -8,7 +8,7 @@
 `grades/<課號>`，body 是：
 
     {scores: {學號: {項次: 分數}},        # 各評量項目 0–100
-     attend: {學號: {場次: 1–6}},         # 逐次點名，0／空白＝缺席
+     attend: {學號: {場次: 0–6}},         # 逐次點名；0＝沒出席（畫面打／顯示 X）
      manual: bool}                        # 出席分改手動輸入
 
 所以重新發佈換名單不會把已經打好的分數洗掉。
@@ -198,10 +198,10 @@ td.total{text-align:center; width:96px}
 .att th.stick{z-index:4}
 .att .c-idx{left:0; width:34px}
 .att .c-name{left:34px; width:108px; box-shadow:1px 0 0 var(--line)}
-.att th.wk{text-align:center; padding:6px 3px; min-width:38px; line-height:1.3}
+.att th.wk{text-align:center; padding:6px 3px; min-width:44px; line-height:1.3}
 .att th.wk b{display:block; font-weight:500; color:var(--ink); font-size:12px}
 .att th.wk span{display:block; font-size:10.5px; color:var(--off); font-variant-numeric:tabular-nums}
-.att th.wk .tool{margin-top:2px}
+.att th.wk .tool{margin-top:2px; padding:0 4px}
 .att th.wk.exam b{color:var(--fail)}
 .att td.wk{text-align:center; padding:3px 3px}
 .att td.sum{text-align:center; white-space:nowrap}
@@ -549,11 +549,11 @@ input.at.bad{border-color:var(--fail); box-shadow:0 0 0 3px var(--fail-bg)}
     v.hidden = true;
 
     var lg = el('div', 'legend');
-    lg.appendChild(el('b', null, '課程單：1–5 分，加分記 6；缺席記 0 或留空。'));
-    var a1 = el('span'); a1.innerHTML = '<span class="sw" style="background:var(--fail-bg);border:1px solid var(--fail)"></span>0＝缺席';
+    lg.appendChild(el('b', null, '課程單：1–5 分，加分打 6；沒出席打 X。'));
+    var a1 = el('span'); a1.innerHTML = '<span class="sw" style="background:var(--fail-bg);border:1px solid var(--fail)"></span>X＝沒出席（算 0 分）';
     var a2 = el('span'); a2.innerHTML = '<span class="sw" style="background:var(--bonus-bg);border:1px solid var(--bonus)"></span>6＝加分';
     lg.appendChild(a1); lg.appendChild(a2);
-    lg.appendChild(el('span', null, '打完一格自動跳到同一欄的下一位——照著課程單那疊一路往下打。'));
+    lg.appendChild(el('span', null, '留空＝那一次還沒點到他。打完一格自動跳到同一欄的下一位——照著課程單那疊一路往下打，剩下的按欄頭「餘 X」一次補完。'));
     v.appendChild(lg);
 
     var wrap = el('div', 'tablewrap');
@@ -566,11 +566,16 @@ input.at.bad{border-color:var(--fail); box-shadow:0 0 0 3px var(--fail-bg)}
       th.appendChild(el('b', null, ss.label.replace(/第\s*/, '').replace(/\s/g, '')));
       th.appendChild(el('span', null, ss.date.replace(/（.）/, '')));
       th.title = ss.label + '　' + ss.date + '　' + ss.title;
-      var f = el('button', 'tool', '全 5');
-      f.type = 'button';
-      f.title = '把這一次還沒填的人全部記 5 分';
-      f.addEventListener('click', function(){ fillSession(c, j); });
-      th.appendChild(f);
+      var f5 = el('button', 'tool', '全 5');
+      f5.type = 'button';
+      f5.title = '把這一次還沒填的人全部記 5 分（全到就先按這個，再改例外）';
+      f5.addEventListener('click', function(){ fillSession(c, j, FULL); });
+      th.appendChild(f5);
+      var fx = el('button', 'tool', '餘 X');
+      fx.type = 'button';
+      fx.title = '課程單那疊打完了，剩下沒填的就是沒出席——一次補成 X';
+      fx.addEventListener('click', function(){ fillSession(c, j, 0); });
+      th.appendChild(fx);
       tr.appendChild(th);
     });
     tr.appendChild(el('th', 'score', '出席分'));
@@ -586,7 +591,8 @@ input.at.bad{border-color:var(--fail); box-shadow:0 0 0 3px var(--fail-bg)}
         var td = el('td', 'wk');
         var inp = el('input', 'at');
         inp.type = 'text';
-        inp.inputMode = 'numeric';
+        // 不設 inputMode="numeric"：那樣手機只跳出數字鍵盤，就打不出 X 了。
+        inp.autocapitalize = 'off';
         inp.maxLength = 1;
         inp.id = 'at-' + c.code + '-' + s.sid + '-' + j;
         inp.dataset.row = String(n);
@@ -629,11 +635,12 @@ input.at.bad{border-color:var(--fail); box-shadow:0 0 0 3px var(--fail-bg)}
       delete a[j];
       inp.classList.remove('bad');
     } else {
-      var v = Number(raw);
-      var ok = /^[0-6]$/.test(raw);
+      // X＝沒出席，跟 0 同一件事。半形全形、大小寫、打叉符號都收。
+      var absent = /^[xXｘＸ×✕✖✗✘╳]$/.test(raw);
+      var ok = absent || /^[0-6]$/.test(raw);
       inp.classList.toggle('bad', !ok);
       if (!ok) return;
-      a[j] = v;
+      a[j] = absent ? 0 : Number(raw);
       if (advance) {
         // 老師是拿著一疊課程單一路往下打，所以跳到同一欄的下一位，不是右邊那格。
         var nx = c.students[Number(inp.dataset.row) + 1];
@@ -649,11 +656,11 @@ input.at.bad{border-color:var(--fail); box-shadow:0 0 0 3px var(--fail-bg)}
     save(c.code);
   }
 
-  function fillSession(c, j){
+  function fillSession(c, j, val){
     c.students.forEach(function(s){
       var a = attend[c.code][s.sid] || (attend[c.code][s.sid] = {});
-      if (typeof a[j] === 'number') return;
-      a[j] = FULL;
+      if (typeof a[j] === 'number') return;   // 只補空白的，不覆蓋已經打好的
+      a[j] = val;
       paintAttend(c, s, j);
     });
     refreshAttend(c);
@@ -665,7 +672,8 @@ input.at.bad{border-color:var(--fail); box-shadow:0 0 0 3px var(--fail-bg)}
     if (!inp) return;
     var a = attend[c.code][s.sid] || {};
     var v = a[j];
-    inp.value = typeof v === 'number' ? String(v) : '';
+    // 0 一律顯示成 X——缺席就是缺席，看到一整欄的 0 不如看到一整欄的 X。
+    inp.value = v === 0 ? 'X' : (typeof v === 'number' ? String(v) : '');
     inp.classList.toggle('absent', v === 0);
     inp.classList.toggle('bonus', v > FULL);
     inp.classList.remove('bad');
@@ -815,7 +823,10 @@ input.at.bad{border-color:var(--fail); box-shadow:0 0 0 3px var(--fail-bg)}
       var a = attend[c.code][s.sid] || {};
       var r = attendRaw(c, s.sid);
       rows.push([n + 1, s.sid, s.name, s.klass]
-        .concat(c.sessions.map(function(_, j){ return typeof a[j] === 'number' ? a[j] : ''; }))
+        .concat(c.sessions.map(function(_, j){
+        // 匯出跟畫面一致：0 寫 X。合計那三欄已經算好，不必靠儲存格加總。
+        return typeof a[j] === 'number' ? (a[j] === 0 ? 'X' : a[j]) : '';
+      }))
         .concat([r ? r.sum : '', rec.length, attendScore(c, s.sid) == null ? '' : attendScore(c, s.sid)]));
     });
     offer(c.code + '_' + c.name + '_點名_' + today() + '.csv', csvText(rows));
@@ -895,7 +906,8 @@ input.at.bad{border-color:var(--fail); box-shadow:0 0 0 3px var(--fail-bg)}
     DATA.courses.forEach(refreshAll);
 
     document.getElementById('foot').innerHTML =
-      '<b>出席分預設由點名換算</b>：課程單總分 ÷（5 × 已點名次數）× 100，封頂 100；' +
+      '<b>點名：課程單 1–5 分，加分打 6，沒出席打 X</b>（存成 0）。留空表示那一次還沒點到他。<br>' +
+      '<b>出席分由點名換算</b>：課程單總分 ÷（5 × 已點名次數）× 100，封頂 100；' +
       '加分的 6 分會把分數往上推，但登記不超過 100。分母只算已經點過的場次，' +
       '所以學期中看到的數字就是當下的實況。要自己填就按出席欄的「手動輸入」。<br>' +
       '及格線 60；60–69 標琥珀、70 以上綠。改任何一格都自動存，換裝置開同一個連結是同一份。<br>' +

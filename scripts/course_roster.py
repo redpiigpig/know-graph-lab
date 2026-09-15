@@ -232,7 +232,7 @@ def write_xlsx(path, data, c):
     """一門課一本活頁簿：`成績` 與 `點名` 兩張表。
 
     - `成績`：評量項目空欄＋加權總分公式。
-    - `點名`：逐次一欄（課程單 1–5、加分 6、缺席 0），右邊自動換算出席分
+    - `點名`：逐次一欄（課程單 1–5、加分 6、沒出席打 X），右邊自動換算出席分
       （封頂 100，分母只算已經有人填的場次，跟網頁同一條公式）。
     """
     from openpyxl import Workbook
@@ -284,7 +284,8 @@ def write_xlsx(path, data, c):
     at = wb.create_sheet('點名')
     ss = c['sessions']
     at.append([f'{c["name"]}（{c["code"]}）　課程單點名　{len(ss)} 次'])
-    at.append(['課程單一次 1–5 分，加分記 6，缺席記 0；空白＝該次尚未點名'])
+    at.append(['課程單一次 1–5 分，加分記 6，沒出席打 X（SUM 會略過文字，等於 0 分）；'
+               '空白＝該次尚未點名'])
     at.append([])
     at.append(['序', '學號', '姓名'] + [s['label'].replace(' ', '') for s in ss]
               + ['合計', '已點次數', '出席分'])
@@ -304,11 +305,11 @@ def write_xlsx(path, data, c):
         at.append([n, s['sid'], s['name']])
         row = at.max_row
         rng = f'{get_column_letter(f)}{row}:{get_column_letter(l)}{row}'
-        at.cell(row, l + 1).value = f'=IF(COUNT({rng})=0,"",SUM({rng}))'
+        at.cell(row, l + 1).value = f'=IF(COUNTA({rng})=0,"",SUM({rng}))'
         # 已點名次數＝該欄整欄有人填過（跟網頁的 recordedSessions 同一個判準）
         last_row = body0 + len(c['students']) - 1
         held = '+'.join(
-            'IF(COUNT({0}${1}:{0}${2})>0,1,0)'.format(
+            'IF(COUNTA({0}${1}:{0}${2})>0,1,0)'.format(
                 get_column_letter(f + j), body0, last_row)
             for j in range(len(ss)))
         at.cell(row, l + 2).value = f'={held}'
