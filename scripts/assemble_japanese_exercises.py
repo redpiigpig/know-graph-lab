@@ -94,6 +94,31 @@ def load_drafts(lesson: int) -> tuple[list[dict[str, Any]], str]:
     return payload.get("sentences", []), payload.get("author", "")
 
 
+def creditable(entry: dict[str, Any], check) -> bool:
+    """Could any sentence of this lesson ever credit this word?
+
+    Japanese has no word the corpus cannot write — its first gate checks the
+    base form and treats the textbook as authoritative where the corpus is
+    merely old-fashioned (朝ご飯 against 朝飯).  What it does have is a word the
+    *segmenter* will never hand back under its own identity: 人 is two entries
+    in lesson one, ひと the noun and じん the suffix, and every spelling of the
+    second is read as the first unless a country name precedes it — and lesson
+    one teaches no country name.  The word is then unpractisable in that lesson
+    however the sentence is written, exactly the way ``πτελέα`` is in Greek, and
+    belongs in ``notAttested`` with a note rather than in a coverage gap that
+    can never be closed.
+
+    Deciding that by running the real gate on the word standing alone, rather
+    than by a rule about suffixes: the question is whether *the checker* will
+    credit it, and only the checker answers that.  The length rule is ignored
+    here — a bare word is not a sentence and is not being offered as one.
+    """
+    report = check(f"{checker.headword(entry)}です。")
+    if report["untaught"] or report["unattested"]:
+        return False
+    return checker.entry_key(entry) in report["vocabulary"]
+
+
 def public_record(entry: dict[str, Any]) -> dict[str, Any]:
     return {
         "ordinal": entry["ordinal"],
@@ -104,7 +129,7 @@ def public_record(entry: dict[str, Any]) -> dict[str, Any]:
     }
 
 
-def build(write: bool) -> int:
+def build(write: bool, only: range | None = None) -> int:
     if not MINED.is_file():
         raise SystemExit(f"缺 {MINED.name}，先跑 scripts/build_japanese_exercises.py")
     mined = json.loads(MINED.read_text(encoding="utf-8"))
@@ -125,6 +150,8 @@ def build(write: bool) -> int:
     thin: list[int] = []
     missing: list[int] = []
     for lesson in sorted(mined_by_lesson):
+        if only is not None and lesson not in only:
+            continue
         targets = checker.lesson_targets(vocabulary, lesson)
         by_key = {checker.entry_key(entry): entry for entry in targets}
         checked: dict[str, dict[str, Any]] = {}
@@ -183,12 +210,24 @@ def build(write: bool) -> int:
             item["no"] = number
 
         practised = {word["ordinal"] for item in items for word in item["targetWords"]}
+        unreachable = [
+            entry for entry in targets
+            if entry["ordinal"] not in practised and not creditable(entry, check)
+        ]
+        unreachable_ordinals = {entry["ordinal"] for entry in unreachable}
         not_practised = [
-            public_record(entry) for entry in targets if entry["ordinal"] not in practised
+            public_record(entry) for entry in targets
+            if entry["ordinal"] not in practised
+            and entry["ordinal"] not in unreachable_ordinals
         ]
         notes = []
         if len(anchors) < QUOTED_PER_LESSON:
             notes.append("本課無可用經典原句，十題全由自撰題補")
+        if unreachable:
+            notes.append(
+                "本課教過的詞寫不出能記到它的句子，因而無法入題："
+                + "、".join(checker.headword(entry) for entry in unreachable)
+            )
         lessons_out.append({
             "lesson": lesson,
             "volume": (lesson - 1) // LESSONS_PER_VOLUME + 1,
@@ -197,13 +236,9 @@ def build(write: bool) -> int:
             "items": items,
             "coverage": {
                 "lessonWords": len(targets),
-                "practised": len(targets) - len(not_practised),
+                "practised": len(targets) - len(not_practised) - len(unreachable),
                 "notPractised": not_practised,
-                # Japanese has no third category.  Its first gate checks the base
-                # form and treats the textbook as authoritative where the corpus
-                # is merely old-fashioned (朝ご飯 against 朝飯), so no word of the
-                # two thousand is unwritable the way ``πτελέα`` and ``Kyrie`` are.
-                "notAttested": [],
+                "notAttested": [public_record(entry) for entry in unreachable],
             },
         })
 
@@ -236,8 +271,14 @@ def build(write: bool) -> int:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--write", action="store_true")
+    # 寫稿時只組幾課來看覆蓋率：整本要讀一遍一千四百萬詞的語料，一輪十分鐘，
+    # 而改一句話只需要知道那一課的聯集。--only 產的檔不可寫出去。
+    parser.add_argument("--only", type=int, nargs=2, metavar=("FIRST", "LAST"))
     args = parser.parse_args()
-    return build(args.write)
+    if args.only and args.write:
+        raise SystemExit("--only 是寫稿時看覆蓋率用的，不可與 --write 併用")
+    only = range(args.only[0], args.only[1] + 1) if args.only else None
+    return build(args.write, only)
 
 
 if __name__ == "__main__":

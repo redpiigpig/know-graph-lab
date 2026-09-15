@@ -239,6 +239,21 @@ def sort_key(meta: dict) -> tuple:
     return (no, sfx, meta["id"])
 
 
+def _merge_kept(fresh: dict, old: dict | None) -> dict:
+    """本次解析的欄位為準，舊目錄裡「別的腳本併進來的」欄位原樣留著。
+
+    見 Builder.PARSED_FIELDS 的註解：不這樣做，`--catalog-only` 會把
+    84000 的梵／英題名與東北目錄的漢譯對照整批洗成沒有，而輸出看起來正常。
+    """
+    out = {k: fresh[k] for k in Builder.PARSED_FIELDS}
+    for k, v in (old or {}).items():
+        if k not in Builder.PARSED_FIELDS:
+            out[k] = v
+    for k, v in fresh.items():          # 舊目錄沒有的，用本次的預設值補上
+        out.setdefault(k, v)
+    return out
+
+
 def seg_id(wid: str, vol: int, folio: str, line: int) -> str:
     """段的定址＝冊＋葉碼＋行（藏學界慣例）。例 `DKtoh0001_v1_1b1`。
 
@@ -820,9 +835,33 @@ class Builder:
         if self.write:
             self._write_catalog()
 
+    # 本檔重跑就算得回來的欄位。這些以本次解析為準，舊值不留。
+    PARSED_FIELDS = (
+        "id", "toh", "toh_no", "toh_suffix", "label_zh", "vol", "vols",
+        "cross_volume", "title_bo", "title_src", "src_lang", "title_source",
+        "division_key", "division_label", "folio_start",
+        "folio_end", "sub_count", "seg_count", "char_count")
+    # title_zh 不在上面：本檔只會把它寫成空字串，真正的值是
+    # tripitaka_derge_zh.py 從東北目錄併進來的，重跑算不回來。
+
     def _write_catalog(self):
         OUT_DIR.mkdir(parents=True, exist_ok=True)
         rows = sorted(self.works, key=sort_key)
+        # 🚨 下面的 works 是「本次解析算得出來的欄位」白名單。後面還有別的腳本
+        #    往同一份目錄裡併東西——tripitaka_derge_titles.py 補 title_sa／
+        #    title_en／translator_en／title_bo_short（84000），
+        #    tripitaka_derge_zh.py 補 title_zh／zh_parallels／title_zh_source
+        #    （東北目錄）。那些欄位重跑本檔是算不回來的，白名單一濾就沒了，
+        #    而且目錄照樣完整、部數照樣 1,124，從輸出上完全看不出來。
+        #    所以重出前先把舊目錄讀進來，非本次產出的欄位一律原樣帶回去。
+        keep: dict[str, dict] = {}
+        old = OUT_DIR / f"{CANON}.catalog.json"
+        if old.exists():
+            try:
+                for m in json.loads(old.read_text(encoding="utf-8"))["works"]:
+                    keep[m["id"]] = m
+            except (ValueError, KeyError):
+                pass
         cat = {
             "canon": CANON,
             "canon_label": CANON_LABEL,
@@ -837,13 +876,7 @@ class Builder:
                                              if r["division_key"] == k)}
                           for k, zh, bo, lo, hi in DERGE_DIVISIONS],
             "work_count": len(rows),
-            "works": [{k: m[k] for k in
-                       ("id", "toh", "toh_no", "toh_suffix", "label_zh",
-                        "vol", "vols", "cross_volume", "title_bo", "title_src",
-                        "src_lang", "title_source", "title_zh", "division_key",
-                        "division_label", "folio_start", "folio_end",
-                        "sub_count", "seg_count", "char_count")}
-                      for m in rows],
+            "works": [_merge_kept(m, keep.get(m["id"])) for m in rows],
         }
         tmp = OUT_DIR / f"{CANON}.catalog.json.tmp"
         tmp.write_text(json.dumps(cat, ensure_ascii=False, indent=1),

@@ -1,0 +1,66 @@
+{
+  "lesson": 1,
+  "volume": 1,
+  "author": "opus-5-hand-written",
+  "note": "",
+  "sentences": [
+    {
+      "japanese": "私達は学生です。",
+      "chinese": "我們是學生。",
+      "targets": [
+        "私達",
+        "学生"
+      ]
+    },
+    {
+      "japanese": "あなたは先生ですか。",
+      "chinese": "你是老師嗎？",
+      "targets": [
+        "貴方",
+        "先生"
+      ]
+    },
+    {
+      "japanese": "皆さんの名前は。",
+      "chinese": "各位的名字呢？",
+      "targets": [
+        "皆さん",
+        "名前"
+      ]
+    },
+    {
+      "japanese": "どなたが大学の先生ですか。",
+      "chinese": "哪一位是大學的老師？",
+      "targets": [
+        "どなた",
+        "大学",
+        "先生"
+      ]
+    },
+    {
+      "japanese": "会社員ですか、病院の人ですか。",
+      "chinese": "是公司職員，還是醫院的人？",
+      "targets": [
+        "会社員",
+        "病院",
+        "人"
+      ]
+    },
+    {
+      "japanese": "先生は何歳ですか。",
+      "chinese": "老師幾歲？",
+      "targets": [
+        "何歳",
+        "先生"
+      ]
+    },
+    {
+      "japanese": "歳はおいくつですか。",
+      "chinese": "年紀有多大？",
+      "targets": [
+        "歳",
+        "おいくつ"
+      ]
+    }
+  ]
+}
