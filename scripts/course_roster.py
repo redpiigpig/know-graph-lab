@@ -118,14 +118,45 @@ def collect():
     return out
 
 
+# 🚨 玄奘的 DNS 會整段解不出來（`gaierror`）而主機其實活著——2026-09-15 實測
+# hcu.edu.tw 全部查不到、8.8.8.8 也被擋，但直接連 IP 是通的。查不到名字時就
+# 把這張表釘上去重試一次。IP 換了這裡要跟著換（`nslookup` 在別的網路下查）。
+HCU_IPS = {
+    'tch.hcu.edu.tw': '210.60.55.59',
+    'www.hcu.edu.tw': '210.60.55.219',
+    'ilearn.hcu.edu.tw': '210.60.62.46',
+}
+
+
+def pin_hcu_dns():
+    """DNS 解不出玄奘的主機時，用寫死的 IP 頂替（TLS 的 SNI 仍用原本的主機名）。"""
+    import socket
+    if getattr(socket, '_hcu_pinned', False):
+        return
+    real = socket.getaddrinfo
+
+    def patched(host, port, *a, **kw):
+        try:
+            return real(host, port, *a, **kw)
+        except socket.gaierror:
+            ip = HCU_IPS.get(host)
+            if not ip:
+                raise
+            return real(ip, port, *a, **kw)
+
+    socket.getaddrinfo = patched
+    socket._hcu_pinned = True
+
+
 def live_counts():
     """公開開課查詢的已選人數；連不到校網就回空 dict。
 
     這支只是拿來對帳，**不是名單**——網路不通時整份名單照樣要產得出來，
     所以連線失敗不讓它炸掉整個流程，只是對帳欄顯示「—」。
     """
+    import course_enrollment as CE
+    pin_hcu_dns()
     try:
-        import course_enrollment as CE
         return CE.fetch()
     except Exception as e:
         print(f'⚠ 查不到系統已選人數（{type(e).__name__}），對帳欄留空', file=sys.stderr)
