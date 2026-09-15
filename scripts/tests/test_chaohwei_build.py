@@ -184,6 +184,35 @@ class TestNotes:
         assert notes[0][1].endswith("（大正三一‧一三九上）")
         assert [u[1] for u in units if not is_note(u[1])][-1] == "頁 143 的正文。"
 
+    def test_body_rejoins_across_a_page_ending_with_a_note(self):
+        """頁末有註時，下一頁的續句要接回**正文**，不是因為 out[-1] 是註就放棄。
+
+        實測《初期唯識思想》有 58 處這樣斷開，連詞都被切兩半（境｜界果）。
+        """
+        pages = tag_chapters(_pages(
+            (1, "59", ["故語言所代表的意涵，與實際有很大的差",
+                       "[^17]: 《摩訶般若波羅蜜經》卷二（大正八・二三一上）。"]),
+            (2, "60", ["距，吾人必須看透語文這樣的特性。"]),
+        ), CHS)
+        units = stitch_pages(pages)
+        body = [u for u in units if not is_note(u[1])]
+        assert len(body) == 1, [u[1] for u in units]
+        # 跨頁處照慣例插行內頁碼標記，所以句子中間會夾一個【頁 60】
+        assert "與實際有很大的差【頁 60】距，吾人必須" in body[0][1]
+        assert body[0][0] == "59"          # 引用號留在段落起始頁
+        assert any(is_note(u[1]) for u in units)   # 註本身沒被吃掉
+
+    def test_body_does_not_attach_to_a_note_when_there_is_no_body_to_join(self):
+        """整頁都是註時仍不可把下一頁正文接到註尾巴上。"""
+        pages = tag_chapters(_pages(
+            (1, "59", ["[^17]: 《摩訶般若波羅蜜經》卷二（大正八・二三一上）"]),
+            (2, "60", ["這是新的一段正文。"]),
+        ), CHS)
+        units = stitch_pages(pages)
+        assert len(units) == 2
+        assert is_note(units[0][1])
+        assert units[1][1] == "這是新的一段正文。"
+
     def test_orphan_continuation_does_not_invent_a_note_number(self):
         pages = tag_chapters(_pages((1, "59", ["[^續]: 找不到前一條註"])), CHS)
         units = stitch_pages(pages)

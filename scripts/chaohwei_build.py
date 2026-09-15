@@ -321,22 +321,28 @@ def stitch_pages(pages: list[dict]) -> list[tuple[str, str, int]]:
                     out[-1] = (anchor, prev + sep + tail, prev_ch)
                     continue
                 para = _CONT_RE.sub("", para)
-            if (i == 0 and out
-                    and ch == out[-1][2]          # 跨章不接：章末殘句不該吃掉下一章的開頭
-                    and not is_note(out[-1][1])   # 前一段是註文時，下一頁正文不可接上去
+            # 🚨 頁末有註時，正文的續句被夾在註**後面**。只看 out[-1] 會判成
+            # 「前一段是註」而拒接，整句就斷成兩段 ——《初期唯識思想》實測 58 處，
+            # 連詞都被切開（「境｜界果」「彌｜勒菩薩」「認｜識論」）。所以往回
+            # 跳過註，找最後一段正文來接；接不到（全是註）才放棄。
+            j = len(out) - 1
+            while j >= 0 and is_note(out[j][1]):
+                j -= 1
+            if (i == 0 and j >= 0
+                    and ch == out[j][2]           # 跨章不接：章末殘句不該吃掉下一章的開頭
                     and not is_note(para)
                     and not _SPEAKER_RE.match(para)
                     and not para.startswith("#")
-                    and out[-1][1]
-                    and out[-1][1][-1] not in _SENT_END):
-                anchor, prev, prev_ch = out[-1]
+                    and out[j][1]
+                    and out[j][1][-1] not in _SENT_END):
+                anchor, prev, prev_ch = out[j]
                 sep = " " if prev[-1].isascii() and para[0].isascii() else ""
                 # 🚨 整頁都是上一段的續文時，那一頁的頁碼沒有任何一段掛得到，
                 # 讀者就完全看不到它（唯識實測有 7 頁這樣、心靈 1 頁）。引用號
                 # 仍留在段落**起始**頁（學術慣例），跨進去的頁改用行內標記表示。
                 mark = (f"【頁 {printed}】"
                         if printed and printed != _last_page_mark(prev, anchor) else "")
-                out[-1] = (anchor, prev + sep + mark + para, prev_ch)
+                out[j] = (anchor, prev + sep + mark + para, prev_ch)
             else:
                 out.append((printed, para, ch))
     return out
