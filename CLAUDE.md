@@ -23,6 +23,27 @@ Nuxt 3 網站 + Python／Node 資料管線。網站原始碼在 `pages/ server/ 
 - 大檔存放策略（Drive canonical／R2 只放小衍生物）見 `docs/r2-policy.md`。
 - 完成一項工作流後，同步更新對應的 `SKILL.md`。
 
+## 姊妹專案：nonchurch-nuxt（無境界者雜誌＋龐會督典藏）
+
+`C:\Users\user\Desktop\nonchurch-nuxt` 是另一個獨立 repo，兩邊互相引用：
+
+- **本 repo 的論文用那邊的史料**。`/works` 的〈龐君華會督的衛斯理神學實踐與「新修道主義」願景〉
+  （`public/content/works/pong-pastoral-spirituality-revision-draft.md`）一手材料全部出自
+  **龐君華會督數位典藏**，資料在 nonchurch 的 Supabase，憑證在**那邊的 `.env`**
+  （`VITE_SUPABASE_URL` ＋ `SUPABASE_SECRET_KEY`；本 repo 的 .env 連不到那個專案）。
+- **表**：`pong_writings`(43 著作，有 `page_range`／`publication`／`supervisor`／`provider`)、
+  `pong_sermons`(705 講道)、`pong_media`(236 講座影音，含 `transcript`)、`pong_reports`(21 相關報導)、
+  `pong_remembrance`、`pong_daily_office`。`pong_manuscripts` 與 `pong_photos` **是空表**。
+- **《無境界者》各期 PDF**在 `issues.pdf_link`（Cloudinary `Vol.N.pdf`）。引用篇目頁碼時
+  下載該 PDF 讀目次與印刷頁碼，**不要用 Drive `雜誌\09-第九期\9-0目次.docx`**——那份目次是空的
+  （頁碼在排版時才生成）。
+- 🚨 **典藏尚未公開**（等著作權授權處理完），站上 `/pong-archive` 有登入牆；論文書目一律寫
+  「龐君華會督數位典藏（尚未公開），文稿／影音編號 N」，**不可掛 URL**。
+- 🚨 **年議會事工報告只有掃描、沒有文字層**：Drive `資料\無境界者\龐君華檔案\事工報告\`
+  2008–2022 共 110 張照片（頁面有屆次書眉與真頁碼，如「第四十五屆年議會第一次會議，頁 172」），
+  但 **DB 任何一表都查不到**（`年議會第`／`事工報告` 全庫零命中）。要引用得先自己 OCR。
+
+
 ## 🚨 `G:` 不見了＝Drive 卡住，不是掛掉
 
 Drive 路徑報「找不到檔案」時，**第一件事是 `Test-Path 'G:\我的雲端硬碟'`**。
