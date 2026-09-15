@@ -147,8 +147,6 @@ thead th .fillcol{
 thead th .fillcol:hover{color:var(--accent); border-color:var(--accent)}
 tbody td{border-bottom:1px solid var(--line); padding:5px 10px; font-size:14px}
 tbody tr:hover td{background:var(--sunk)}
-tbody tr.off td{color:var(--off)}
-tbody tr.off td.sname::after{content:attr(data-mark); font-size:11px; margin-left:6px; color:var(--fail); border:1px solid currentColor; border-radius:4px; padding:0 4px}
 td.idx{color:var(--off); font-size:12px; width:34px}
 td.sid{font-variant-numeric:tabular-nums; letter-spacing:.02em; width:104px; color:var(--muted)}
 td.sname{font-weight:500; white-space:nowrap}
@@ -233,7 +231,9 @@ td.total{text-align:center; width:96px}
     if (text != null) n.textContent = text;
     return n;
   }
-  function activeStudents(c){ return c.students.filter(function(s){ return !s.mark; }); }
+  // 名單在產生時就把學籍註記（休學／退學／刪除／保留／W）的人濾掉了，
+  // 所以 c.students 全部都是可以登分的人。
+  function activeStudents(c){ return c.students; }
   function total(c, sid){
     var g = scores[c.code][sid] || {}, sum = 0, any = false;
     c.assessment.forEach(function(a, i){
@@ -295,9 +295,12 @@ td.total{text-align:center; width:96px}
       d.appendChild(nm);
       var n = el('div', 'rc-n num');
       n.appendChild(document.createTextNode(String(c.active)));
-      var small = el('small', null, c.listed !== c.active
-        ? '　人　名單 ' + c.listed + '、扣學籍註記 ' + (c.listed - c.active)
-        : '　人在籍');
+      var small = el('small', null, c.excluded.length
+        ? '　人可登分　已剔除學籍註記 ' + c.excluded.length + ' 人'
+        : '　人可登分');
+      if (c.excluded.length) {
+        small.title = c.excluded.map(function(s){ return s.name + '（' + s.mark + '）'; }).join('、');
+      }
       n.appendChild(small);
       d.appendChild(n);
       var stale = c.system != null && c.system !== c.active;
@@ -354,12 +357,9 @@ td.total{text-align:center; width:96px}
     var tbody = el('tbody');
     c.students.forEach(function(s, n){
       var row = el('tr');
-      if (s.mark) row.className = 'off';
       row.appendChild(el('td', 'idx num', String(n + 1)));
       row.appendChild(el('td', 'sid', s.sid));
-      var nameCell = el('td', 'sname', s.name);
-      if (s.mark) nameCell.dataset.mark = s.mark;
-      row.appendChild(nameCell);
+      row.appendChild(el('td', 'sname', s.name));
       row.appendChild(el('td', 'klass', s.klass));
       c.assessment.forEach(function(a, i){
         var td = el('td', 'score');
@@ -368,7 +368,6 @@ td.total{text-align:center; width:96px}
         inp.inputMode = 'numeric';
         inp.id = 'sc-' + c.code + '-' + s.sid + '-' + i;
         inp.setAttribute('aria-label', s.name + ' ' + a.item);
-        if (s.mark) { inp.disabled = true; inp.placeholder = '—'; }
         inp.addEventListener('input', function(){ onInput(c, s, i, inp); });
         inp.addEventListener('blur', function(){ inp.value = inp.value.trim(); });
         td.appendChild(inp);
@@ -507,14 +506,14 @@ td.total{text-align:center; width:96px}
 
   // ── 匯出 ────────────────────────────────
   function exportCsv(c){
-    var head = ['序', '學號', '姓名', '班級', '學籍註記']
+    var head = ['序', '學號', '姓名', '班級']
       .concat(c.assessment.map(function(a){ return a.item + ' ' + a.pct + '%'; }))
       .concat(['總成績']);
     var lines = [head];
     c.students.forEach(function(s, n){
       var g = scores[c.code][s.sid] || {};
       var v = total(c, s.sid);
-      lines.push([n + 1, s.sid, s.name, s.klass, s.mark || '']
+      lines.push([n + 1, s.sid, s.name, s.klass]
         .concat(c.assessment.map(function(_, i){ return typeof g[i] === 'number' ? g[i] : ''; }))
         .concat([v == null ? '' : v]));
     });

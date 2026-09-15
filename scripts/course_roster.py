@@ -125,7 +125,11 @@ def payload(rosters, live):
         code = c['code']
         r = rosters.get(code, {'students': [], 'source': None,
                                'source_file': None, 'snapshot': None})
+        # 🚨 休學／退學／刪除／保留學籍／期中退選的人**不進 students**。
+        # 使用者：「休學的就不要再放上來了，我也無法給他們打分數」。
+        # 他們只留在 excluded，供對帳交代 49 人怎麼變 40 人。
         active = [s for s in r['students'] if not s['mark']]
+        excluded = [s for s in r['students'] if s['mark']]
         courses.append({
             'key': key,
             'code': code,
@@ -141,7 +145,8 @@ def payload(rosters, live):
             'listed': len(r['students']),
             'active': len(active),
             'system': live.get(code),
-            'students': r['students'],
+            'students': active,
+            'excluded': excluded,
         })
     return {'year': '115', 'term': '1', 'teacher': CS.TEACHER,
             'generated': dt.date.today().isoformat(), 'courses': courses}
@@ -206,16 +211,18 @@ def write_xlsx(path, data, c):
     ws.title = c['code']
     head = Font(bold=True, color='FFFFFF')
     fill = PatternFill('solid', fgColor='1E5A4C')
-    grey = PatternFill('solid', fgColor='EDEFEE')
 
     ws.append([f'{data["year"]}-{data["term"]}　{c["name"]}（{c["code"]}）'])
     ws.append([f'{c["klass"]}　{c["time"]}　{c["room"]}　授課：{data["teacher"]}'])
-    ws.append([f'名單 {c["listed"]} 人、扣學籍註記 {c["active"]} 人、'
-               f'系統已選 {c["system"]}　來源 {c["source_file"]}'
-               f'（{c["snapshot"]} 快照）　產生於 {data["generated"]}'])
+    ws.append([f'在籍可登分 {c["active"]} 人（原名單 {c["listed"]} 人、'
+               f'扣學籍註記 {c["listed"] - c["active"]} 人）、系統已選 {c["system"]}　'
+               f'來源 {c["source_file"]}（{c["snapshot"]} 快照）　產生於 {data["generated"]}'])
+    if c['excluded']:
+        ws.append(['不列入（學籍註記）：' + '、'.join(
+            f'{s["name"]}（{s["mark"]}）' for s in c['excluded'])])
     ws.append([])
 
-    cols = ['序', '學號', '姓名', '班級', '學籍註記'] + \
+    cols = ['序', '學號', '姓名', '班級'] + \
            [f'{i["item"]} {i["pct"]}%' for i in c['assessment']] + ['總成績']
     ws.append(cols)
     r0 = ws.max_row
@@ -224,21 +231,18 @@ def write_xlsx(path, data, c):
         cell.fill = fill
         cell.alignment = Alignment(horizontal='center', wrap_text=True)
 
-    first = 6  # 評量項目的第一欄（F）
+    first = 5  # 評量項目的第一欄（E）
     last = first + len(c['assessment']) - 1
     for n, s in enumerate(c['students'], 1):
-        ws.append([n, s['sid'], s['name'], s['klass'], s['mark'] or ''])
+        ws.append([n, s['sid'], s['name'], s['klass']])
         row = ws.max_row
         terms = '+'.join(
             f'{get_column_letter(first + i)}{row}*{it["pct"]}/100'
             for i, it in enumerate(c['assessment']))
         ws.cell(row, last + 1).value = f'=IF(COUNT({get_column_letter(first)}{row}:' \
                                        f'{get_column_letter(last)}{row})=0,"",ROUND({terms},0))'
-        if s['mark']:
-            for cell in ws[row]:
-                cell.fill = grey
 
-    widths = [4, 12, 14, 14, 9] + [11] * len(c['assessment']) + [9]
+    widths = [4, 12, 14, 14] + [11] * len(c['assessment']) + [9]
     for i, w in enumerate(widths, 1):
         ws.column_dimensions[get_column_letter(i)].width = w
     ws.freeze_panes = f'A{r0 + 1}'
