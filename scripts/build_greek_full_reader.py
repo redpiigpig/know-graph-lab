@@ -9,8 +9,10 @@ Greek runs left to right, and its face is Palatino Linotype, which carries the
 full polytonic repertoire and installs as a conventional TrueType file that
 LibreOffice resolves without substituting.
 
-Each lesson prints its vocabulary table, its two memory units and its whole
-reading with a Traditional-Chinese gloss under every Greek word.  The five
+Each lesson prints its vocabulary table, its ten translation exercises and
+its whole reading with a Traditional-Chinese gloss under every Greek word.
+The exercises stand where the two memory units used to; the units are still
+in the data and still print online.  The five
 reference tables print at the back of **both** volumes: they are a cross-index
 of the whole work, and each volume has to be usable on its own.  The liturgy
 belongs to 下冊 alone, in celebration order, each utterance labelled with who
@@ -40,6 +42,7 @@ from build_hebrew_full_reader import (  # noqa: E402  - shared typesetting machi
     cover_colors,
     GOLD,
     CAPTION_PT,
+    FONT_TRANSLIT,
     FONT_UI,
     FONT_ZH,
     H1_SIZE_PT,
@@ -78,6 +81,7 @@ ROOT = Path(__file__).resolve().parents[1]
 CACHE = ROOT / "output" / "source-cache" / "original-readers" / "greek-full"
 MASTER_PATH = CACHE / "greek-reader-two-volumes.json"
 INTERLINEAR_PATH = CACHE / "interlinear.json"
+PATRISTIC_PLAN_PATH = CACHE / "patristic-plan.json"
 OUTPUT_DIR = ROOT / "output" / "original-readers"
 OUTPUT_STEM = "greek-original-reader-vol"
 
@@ -91,6 +95,7 @@ INTERLINEAR_GLOSS_PT = 9.4
 INTERLINEAR_GUTTER_MM = 3.2
 INTERLINEAR_LINE_GAP_PT = 3.5
 MEMORY_GREEK_PT = 14
+EXERCISE_GREEK_PT = 13
 SENSE_PT = 10.4
 
 _greek_metrics = None
@@ -248,7 +253,9 @@ def add_vocabulary(document: Document, lesson: dict) -> None:
         f"生詞　{lesson['vocabularyCount']} 個　{lesson['vocabularySource']}", level=2)
     rows = lesson["vocabulary"]
     table = document.add_table(rows=1, cols=4)
-    widths = [8.0, 46.0, 24.0, USABLE_WIDTH_MM - 78.0]
+    # 序號欄要放得下四位數：下冊編到 1000，8 mm 會把 992 折成兩行，整本詞表
+    # 每一列都矮半截。
+    widths = [12.0, 46.0, 24.0, USABLE_WIDTH_MM - 82.0]
     set_table_geometry(table, widths)
     set_borders(table, color=RULE)
     header = table.rows[0]
@@ -279,48 +286,184 @@ def add_vocabulary(document: Document, lesson: dict) -> None:
                 add_mixed_script_text(paragraph, entry["glossZh"] or "—", FONT_ZH, TABLE_SIZE_PT, color=INK)
 
 
-CORPUS_LABELS = {
-    "new-testament": "新約",
-    "septuagint": "七十士譯本",
-    "deuterocanonical": "次經",
-    "pseudepigrapha": "偽經",
+# 52 種書卷代碼 → 繁體書名。定錨題的出處橫跨新約、七十士譯本、次經與偽經，
+# 而語料用的是 Swete 的代碼（Pss 是《所羅門詩篇》不是詩篇，Tbs 是西奈抄本的
+# 多比傳），對照表只能一條一條寫。查不到就在排版時報錯——書上印一串
+# 「Pss.15:14」不是出處，是沒做完。
+BOOK_ZH = {
+    "Gen": "創世記", "Exo": "出埃及記", "Num": "民數記", "Deu": "申命記",
+    "Jos": "約書亞記", "Jdg": "士師記", "1Sa": "撒母耳記上", "2Sa": "撒母耳記下",
+    "1Ki": "列王紀上", "2Ki": "列王紀下", "1Ch": "歷代志上", "2Ch": "歷代志下",
+    "Neh": "尼希米記", "Job": "約伯記", "Psa": "詩篇", "Pro": "箴言",
+    "Ecc": "傳道書", "Isa": "以賽亞書", "Jer": "耶利米書", "Lam": "耶利米哀歌",
+    "Eze": "以西結書", "Dan": "但以理書", "Hos": "何西阿書", "Nah": "那鴻書",
+    "Tob": "多比傳", "Tbs": "多比傳（西奈抄本）", "Wis": "所羅門智訓",
+    "Sir": "便西拉智訓", "Bar": "巴錄書", "1Es": "以斯拉續篇上卷",
+    "1Ma": "馬加比一書", "3Ma": "馬加比三書", "4Ma": "馬加比四書",
+    "Pss": "所羅門詩篇", "1En": "以諾一書",
+    "Matt": "馬太福音", "Mark": "馬可福音", "Luke": "路加福音", "John": "約翰福音",
+    "Acts": "使徒行傳", "Rom": "羅馬書", "1Cor": "哥林多前書", "2Cor": "哥林多後書",
+    "Gal": "加拉太書", "Eph": "以弗所書", "Phil": "腓立比書", "Col": "歌羅西書",
+    "1Thess": "帖撒羅尼迦前書", "1Tim": "提摩太前書", "Heb": "希伯來書",
+    "Jas": "雅各書", "Rev": "啟示錄",
 }
 
-
-def memory_source_label(unit: dict) -> str:
-    """Where a memory unit came from, in Chinese.
-
-    上冊's units carry a corpus code; 下冊's carry the reading they were cut
-    from.  Printing the raw code put "new-testament" on the page.
-    """
-    corpus = unit.get("corpus")
-    if corpus:
-        return CORPUS_LABELS.get(corpus, corpus)
-    return unit.get("readingTitleZh") or ""
+GREEK_PIECE = re.compile(
+    "([\u0370-\u03ff\u1f00-\u1fff][\u0370-\u03ff\u1f00-\u1fff\u0300-\u036f\u2019']*)"
+)
 
 
-def add_memory(document: Document, lesson: dict) -> None:
-    kind = lesson["memoryUnits"][0].get("kind") if lesson["memoryUnits"] else "verse"
-    document.add_heading("背誦　兩句" if kind == "sentence" else "背誦　兩節", level=2)
-    for verse in lesson["memoryUnits"]:
-        caption = document.add_paragraph()
-        caption.paragraph_format.space_before = Pt(5)
-        caption.paragraph_format.space_after = Pt(2)
-        set_run_font(caption.add_run(verse["ref"]), FONT_UI, LABEL_PT, bold=True, color=ACCENT)
-        set_run_font(
-            caption.add_run(
-                f"　{memory_source_label(verse)}　命中本課生詞 {verse['matchCount']}"
-            ),
-            FONT_UI, LABEL_PT, color=MUTED,
-        )
-        set_keep(caption, next_paragraph=True)
-        tokens = verse.get("tokens") or []
-        if tokens:
-            add_interlinear(document, tokens, sense=verse.get("translationZh", ""), greek_pt=MEMORY_GREEK_PT)
+def add_mixed_greek(paragraph, text: str, size: float) -> None:
+    """中文一段話裡夾希臘詞：希臘的部分用希臘字體排，其餘照中文排。"""
+    for piece in GREEK_PIECE.split(text):
+        if not piece:
+            continue
+        if GREEK_PIECE.match(piece):
+            add_greek_run(paragraph, piece, size, color=MUTED)
         else:
-            add_plain_greek(document, verse["text"], MEMORY_GREEK_PT)
-            if verse.get("translationZh"):
-                add_body(document, verse["translationZh"], size=TRANSLATION_PT, color=INK)
+            set_run_font(paragraph.add_run(piece), FONT_ZH, size, color=MUTED)
+
+
+def _plan_titles() -> dict[int, str]:
+    plan = json.loads(PATRISTIC_PLAN_PATH.read_text(encoding="utf-8"))
+    return {row["ordinal"]: row["titleZh"] for row in plan["readings"]}
+
+
+def _liturgy_steps() -> dict[int, dict]:
+    payload = json.loads((CACHE / "liturgy-chrysostom.json").read_text(encoding="utf-8"))
+    return {step["ordinal"]: step for step in payload["steps"]}
+
+
+_REF_CACHE: dict[str, dict] = {}
+
+
+def anchor_label(ref: str) -> str:
+    """把定錨題的內部代碼翻成書上印得出來的出處。
+
+    `patristic-plan:21:2.2#3` 與 `liturgy-chrysostom:127#1` 是讀本計畫自己的
+    識別碼，不是任何人查得到的出處；照印就等於沒標。經文那一側用的是書卷代碼，
+    查表翻成繁體書名，章節之間一律用冒號——語料裡 Matt.5.27 與 1Sa.2:4 是同
+    一種東西，兩種寫法而已。
+    """
+    if ref.startswith("patristic-plan:"):
+        _, ordinal, rest = ref.split(":", 2)
+        titles = _REF_CACHE.setdefault("patristic", _plan_titles())
+        title = titles.get(int(ordinal))
+        if title is None:
+            raise SystemExit(f"練習題出處 {ref} 對不到教父讀本計畫的第 {ordinal} 篇")
+        return f"{title}　{rest.split('#')[0]}"
+    if ref.startswith("liturgy-chrysostom:"):
+        ordinal = int(ref.split(":", 1)[1].split("#")[0])
+        steps = _REF_CACHE.setdefault("liturgy", _liturgy_steps())
+        step = steps.get(ordinal)
+        if step is None:
+            raise SystemExit(f"練習題出處 {ref} 對不到聖禮儀的第 {ordinal} 則")
+        return f"金口約翰聖禮儀・{step['sectionLabel']}　第 {ordinal} 則"
+    book, _, locus = ref.partition(".")
+    if book not in BOOK_ZH:
+        raise SystemExit(f"練習題出處 {ref} 的書卷代碼 {book} 不在對照表裡")
+    return f"{BOOK_ZH[book]} {locus.replace('.', ':')}"
+
+
+def exercise_blocks(volume_number: int, volume: dict) -> dict[int, dict]:
+    """本冊的十題練習，照課次收好。
+
+    綁定用的是詞彙序號，不是練習檔自己寫的課次編號：課次是難度排序的產物，
+    重排一次就會讓每一組題目整體平移一課，而任何一個數字都不會變。兩邊真正
+    共有的是那一千個詞——每一題都記下它練到的詞的序號與詞條，就照那個綁，
+    詞條對不上就報錯，不要略過。希伯來與拉丁那兩本同一條規則、同一個理由。
+    """
+    path = CACHE / f"exercise-set-v{volume_number}.json"
+    if not path.exists():
+        raise SystemExit(
+            f"缺 {path.name}；先跑 scripts/assemble_greek_exercises.py "
+            f"--volume {volume_number} --write"
+        )
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    if payload.get("direction") != "original-to-chinese":
+        raise SystemExit(f"{path.name} 的 direction 不是 original-to-chinese")
+    ordinals = {
+        entry["ordinal"]: (lesson["lesson"], entry["headword"])
+        for lesson in volume["lessons"]
+        for entry in lesson["vocabulary"]
+    }
+    bound: dict[int, dict] = {}
+    for block in payload["lessons"]:
+        hosts: set[int] = set()
+        for item in block["items"]:
+            for word in item.get("targetWords") or []:
+                found = ordinals.get(word["ordinal"])
+                if found is None:
+                    raise SystemExit(
+                        f"練習題第 {block['lesson']} 課的第 {word['ordinal']} 詞不在本冊詞表內"
+                    )
+                host, headword = found
+                hosts.add(host)
+                if word["headword"] != headword:
+                    raise SystemExit(
+                        f"練習題第 {block['lesson']} 課的第 {word['ordinal']} 詞寫作 "
+                        f"{word['headword']}，詞表寫作 {headword}：兩邊對的不是同一個詞"
+                    )
+        if len(hosts) != 1:
+            raise SystemExit(f"練習題第 {block['lesson']} 課橫跨課次 {sorted(hosts)}")
+        host = hosts.pop()
+        if host in bound:
+            raise SystemExit(f"第 {host} 課被兩組練習題認領")
+        bound[host] = block
+    return bound
+
+
+def add_exercises(document: Document, block: dict | None, lesson: int) -> None:
+    """十題翻譯練習，站在原本兩則背誦的位置。
+
+    只印希臘文。題旁若有中譯，就等於把答案印在題目旁邊，所以定錨題印出處、
+    自撰題印「自撰」，兩種都不印譯文。見 references/exercise-sets.md。
+    """
+    if block is None:
+        raise SystemExit(f"第 {lesson} 課沒有練習題：exercise-set 對不上本課詞表")
+    document.add_heading(f"本課翻譯練習（{len(block['items'])}題）", level=2)
+    intro = add_body(
+        document,
+        "把每一句譯成繁體中文。題目只印原文——標出處的是定錨題，可對照既有譯本自我校對；"
+        "標「自撰」的句子每個詞都在本課或先前課次學過。",
+        size=CAPTION_PT,
+        color=MUTED,
+    )
+    intro.paragraph_format.space_after = Pt(3)
+    set_keep(intro, next_paragraph=True)
+    coverage = block.get("coverage") or {}
+    practised, total = coverage.get("practised"), coverage.get("lessonWords")
+    note_text = (f"本課 {total} 詞全數入題。" if practised == total
+                 else f"本課 {practised}／{total} 詞入題。")
+    note = document.add_paragraph()
+    note.paragraph_format.space_after = Pt(5)
+    set_run_font(note.add_run(note_text), FONT_ZH, CAPTION_PT - 0.4, color=MUTED)
+    if (block.get("note") or "").strip():
+        # note 裡夾著希臘文詞條，整串交給中文字體會逐字回退到 LibreOffice 自己
+        # 挑的字型，送印時那幾個詞會被換掉。按字種分，希臘的部分照希臘字體排。
+        add_mixed_greek(note, block["note"].strip() + "。", CAPTION_PT - 0.4)
+    set_keep(note, next_paragraph=True)
+    for item in block["items"]:
+        head = document.add_paragraph()
+        head.paragraph_format.space_before = Pt(3)
+        head.paragraph_format.space_after = Pt(1)
+        set_run_font(head.add_run(f"{item['no']:02d}　"), FONT_UI, LABEL_PT,
+                     bold=True, color=ACCENT)
+        if item["kind"] == "quoted":
+            add_mixed_script_text(head, anchor_label(item["ref"]), FONT_ZH,
+                                  CAPTION_PT, color=MUTED)
+        else:
+            set_run_font(head.add_run("自撰"), FONT_ZH, CAPTION_PT - 0.4, color=MUTED)
+        set_keep(head, next_paragraph=True)
+        greek = document.add_paragraph()
+        greek.paragraph_format.left_indent = Mm(4)
+        greek.paragraph_format.space_after = Pt(2)
+        greek.paragraph_format.line_spacing = 1.4
+        add_greek_run(greek, item["text"], EXERCISE_GREEK_PT)
+        set_keep(greek, next_paragraph=True)
+        answer = document.add_paragraph(" ")
+        answer.paragraph_format.space_after = Pt(5)
+        paragraph_rule(answer, color=RULE, size="3")
 
 
 def add_reading(document: Document, lesson: dict, interlinear: dict) -> None:
@@ -329,7 +472,7 @@ def add_reading(document: Document, lesson: dict, interlinear: dict) -> None:
     label = "讀文　" + (reading.get("corpusLabel") or reading.get("categoryLabel") or "")
     if reading.get("completeness") == "excerpt":
         label += f"　節錄・{reading.get('extent', '')}"
-    # 每一課的讀物另起一頁：詞表與背誦是準備，讀物是這一課的正事，
+    # 每一課的讀物另起一頁：詞表與練習題是準備，讀物是這一課的正事，
     # 讓它從頁首開始，翻到就是整篇。
     page_break(document)
     document.add_heading(label, level=2)
@@ -358,7 +501,8 @@ def add_reading(document: Document, lesson: dict, interlinear: dict) -> None:
         add_body(document, f"{absent['ref']}：{absent['note']}", size=CAPTION_PT, color=MUTED)
 
 
-def add_lesson(document: Document, lesson: dict, interlinear: dict, *, page_break_before=True) -> None:
+def add_lesson(document: Document, lesson: dict, interlinear: dict, exercises: dict,
+               *, page_break_before=True) -> None:
     # 版式比照希伯來那本：眉標（另起一頁）→ 課次 → Heading 1 課題 → 金線。
     kind = "scripture chapter" if lesson["reading"]["kind"] == "scripture_chapter" else "church reading"
     add_label(document, f"Lesson {lesson['lesson']:02d}  ·  {kind}", page_break_before=page_break_before)
@@ -371,7 +515,7 @@ def add_lesson(document: Document, lesson: dict, interlinear: dict, *, page_brea
     greek_title.paragraph_format.space_after = Pt(6)
     add_greek_run(greek_title, lesson["reading"]["titleGrc"], TRANSLATION_PT, color=MUTED)
     add_vocabulary(document, lesson)
-    add_memory(document, lesson)
+    add_exercises(document, exercises.get(lesson["lesson"]), lesson["lesson"])
     add_reading(document, lesson, interlinear)
 
 
@@ -506,28 +650,30 @@ def add_cover(document: Document, master: dict, volume: dict, part: dict) -> Non
     add_latin_and_cjk(textbook, line, CAPTION_PT)
 
 
-def add_front_matter(document: Document, master: dict, volume: dict, part: dict) -> None:
+def add_front_matter(document: Document, master: dict, volume: dict, part: dict,
+                     exercises: dict) -> None:
     add_cover(document, master, volume, part)
     page_break(document)
     document.add_heading("體例與來源", level=1)
     for key, value in master["textPolicy"].items():
         add_body(document, f"{key}：{value}", size=CAPTION_PT, color=INK)
     counts = volume["counts"]
-    unit_word = "句背誦" if volume["memoryUnitKind"] == "sentence" else "節背誦"
     lessons = part_lessons(volume, part)
     add_body(
         document,
         f"本冊為{volume['subtitle']}的第 {part['first']:02d}–{part['last']:02d} 課，共 {len(lessons)} 課・"
         f"{sum(lesson['vocabularyCount'] for lesson in lessons)} 詞・"
-        f"{sum(len(lesson['memoryUnits']) for lesson in lessons)} {unit_word}・{len(lessons)} 篇讀文。"
+        f"{sum(len(exercises.get(lesson['lesson'], {}).get('items', [])) for lesson in lessons)} 題翻譯練習・"
+        f"{len(lessons)} 篇讀文。"
         "課次編號與線上讀本一致，分冊只是印刷單位（一本不超過 500 頁），不改變課的次序。",
         size=CAPTION_PT,
         color=MUTED,
     )
     add_body(
         document,
-        f"這一部分全 {counts['vocabulary']} 詞、{counts['memoryUnits']} 則背誦、{counts['readings']} 篇讀文；"
-        f"全書合計 {master['counts']['vocabulary']} 詞、{master['counts']['memoryUnits']} 則背誦、"
+        f"這一部分全 {counts['vocabulary']} 詞、{counts['readings']} 篇讀文，"
+        f"每課十題翻譯練習；"
+        f"全書合計 {master['counts']['vocabulary']} 詞、1,000 題翻譯練習、"
         f"連續正文 {master['counts']['totalRunningWords']} 詞。",
         size=CAPTION_PT,
         color=MUTED,
@@ -639,12 +785,13 @@ def build(book_number: int) -> Path:
     # header and document title.  Retitle both, or every page of the Greek
     # reader says it is the Hebrew one.
     retitle(document, master, volume, part)
-    add_front_matter(document, master, volume, part)
+    exercises = exercise_blocks(volume["volume"], volume)
+    add_front_matter(document, master, volume, part, exercises)
 
     running = running_title(master, part)
     start_section(document, running, lesson_tag=True)
     for index, lesson in enumerate(part_lessons(volume, part)):
-        add_lesson(document, lesson, interlinear, page_break_before=index > 0)
+        add_lesson(document, lesson, interlinear, exercises, page_break_before=index > 0)
 
     if part["appendix"]:
         start_section(document, f"{running}  ·  附錄")

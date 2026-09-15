@@ -1,0 +1,224 @@
+#!/usr/bin/env python3
+"""Read the printed books back and check every exercise landed on its own lesson.
+
+The failure this exists to catch is the one this series keeps producing: a page
+that looks perfectly typeset and carries the wrong lesson's content.  Rendering
+without error proves nothing about pairing, and neither does the builder's own
+binding — the builder can bind correctly and still print the block somewhere
+else.  So this reads the PDFs, not the DOCX and not the JSON:
+
+* every lesson in the book prints exactly ten items;
+* the ten items on the page are the ten the exercise set holds for the lesson
+  the page itself says it is;
+* no item line carries Chinese — the translation is the answer, and printing it
+  beside the question is the one thing the owner ruled out;
+* across the whole set, every item is printed exactly once.
+
+Run it after ``render_and_check_reader_pdfs.py``, which checks the physical page
+(size, fonts, blanks) and knows nothing about what is on it.
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+import re
+import sys
+import unicodedata
+from collections import Counter
+from pathlib import Path
+
+import fitz
+
+ROOT = Path(__file__).resolve().parents[1]
+PDF_DIR = ROOT / "output" / "print-masters"
+CACHE = ROOT / "output" / "source-cache" / "original-readers"
+
+CJK = re.compile(r"[㐀-䶿一-鿿]")
+LESSON_TAG = re.compile(r"第\s*(\d{1,2})\s*課")
+HEADING = re.compile(r"本課翻譯練習（\s*(\d+)\s*題）")
+ITEM_NUMBER = re.compile(r"^(\d{2})\s")
+
+# stem -> (exercise set, the lessons that book prints)
+BOOKS: dict[str, list[tuple[str, str, range]]] = {
+    "grc": [
+        ("greek-original-reader-vol1", "greek-full/exercise-set-v1.json", range(1, 25)),
+        ("greek-original-reader-vol2", "greek-full/exercise-set-v1.json", range(25, 51)),
+        ("greek-original-reader-vol3", "greek-full/exercise-set-v2.json", range(1, 14)),
+        ("greek-original-reader-vol4", "greek-full/exercise-set-v2.json", range(14, 32)),
+        ("greek-original-reader-vol5", "greek-full/exercise-set-v2.json", range(32, 46)),
+        ("greek-original-reader-vol6", "greek-full/exercise-set-v2.json", range(46, 51)),
+    ],
+    "lat": [
+        ("latin-original-reader-vol1", "latin-full/exercise-set-v1.json", range(1, 51)),
+        ("latin-original-reader-vol2", "latin-full/exercise-set-v2.json", range(1, 33)),
+        ("latin-original-reader-vol3", "latin-full/exercise-set-v2.json", range(33, 51)),
+    ],
+    "heb": [
+        ("hebrew-original-reader-50-lessons", "hebrew-full/exercise-set.json", range(1, 51)),
+    ],
+}
+
+
+def normalise(text: str) -> str:
+    """Compare on letters alone.
+
+    A PDF extractor returns what the renderer laid down, which is not always
+    what the source string held: decomposed accents, hyphenation at a line
+    break, a space where the line wrapped.  None of those are pairing errors,
+    and comparing raw strings would report fifty of them.
+    """
+    text = unicodedata.normalize("NFD", text)
+    return "".join(
+        ch for ch in text.lower()
+        if ch.isalpha() and not unicodedata.combining(ch)
+    )
+
+
+def bag(text: str) -> Counter:
+    return Counter(normalise(text))
+
+
+def similarity(a: Counter, b: Counter) -> float:
+    if not a or not b:
+        return 0.0
+    shared = sum((a & b).values())
+    return shared / max(sum(a.values()), sum(b.values()))
+
+
+def best_match(printed: Counter, candidates: list[tuple[str, Counter]]) -> str:
+    return max(candidates, key=lambda row: similarity(printed, row[1]))[0]
+
+
+def printed_blocks(pdf: Path) -> list[dict]:
+    """Every exercise section the book prints, with the lesson its page claims.
+
+    The lesson comes from the running head, which every page of a lesson
+    carries, rather than from the order the blocks appear in: a block that
+    started on the wrong lesson's page is exactly the failure being looked for,
+    and counting blocks would not see it.  A block that runs over onto the next
+    page keeps collecting, because the next page's head still names the lesson.
+    """
+    document = fitz.open(pdf)
+    blocks: list[dict] = []
+    current: dict | None = None
+    for number, page in enumerate(document, start=1):
+        lines = [line.strip() for line in page.get_text().splitlines()]
+        tag = next((LESSON_TAG.search(line) for line in lines[:2]
+                    if LESSON_TAG.search(line)), None)
+        lesson = int(tag.group(1)) if tag else None
+        if current is not None and lesson != current["lesson"]:
+            current = None
+        for index, line in enumerate(lines):
+            found = HEADING.search(line)
+            if found:
+                current = {"lesson": lesson, "page": number, "items": [],
+                           "claimed": int(found.group(1))}
+                blocks.append(current)
+                continue
+            if current is None or len(current["items"]) >= current["claimed"]:
+                continue
+            match = ITEM_NUMBER.match(line)
+            if not match:
+                continue
+            # The item number and its reference share a line; the sentence is
+            # the run of non-empty lines under it, which is more than one
+            # whenever it wrapped.
+            text: list[str] = []
+            for row in lines[index + 1:]:
+                if not row:
+                    break
+                text.append(row)
+            current["items"].append({"no": int(match.group(1)), "text": " ".join(text),
+                                     "head": line, "page": number})
+    return blocks
+
+
+def audit(language: str) -> list[str]:
+    """Check what the books print against what the exercise sets hold.
+
+    Two routes, because right-to-left cannot be read back the same way.  For
+    Greek and Latin the printed line is the source line, so the comparison is
+    the string itself.  PyMuPDF hands back a Hebrew line in visual runs and
+    sometimes twice over — ``יוֹנֵק`` comes out ``ויֹוֹוֵנק`` — so neither the order
+    nor the letter counts survive extraction, and comparing them reports every
+    Hebrew item as mispaired: 377 false alarms and no true one.  What does
+    survive is which sentence it is.  So each printed Hebrew item is matched
+    against every item in the book and has to come out closest to the one the
+    page is supposed to be carrying, which is exactly the failure being looked
+    for — a page holding another lesson's content.
+    """
+    problems: list[str] = []
+    seen: dict[str, str] = {}
+    exact = language != "heb"
+    for stem, relative, lessons in BOOKS[language]:
+        pdf = PDF_DIR / f"{stem}.pdf"
+        if not pdf.is_file():
+            problems.append(f"{stem}：找不到 PDF，先跑 render_and_check_reader_pdfs.py")
+            continue
+        payload = json.loads((CACHE / relative).read_text(encoding="utf-8"))
+        expected = {row["lesson"]: row for row in payload["lessons"]}
+        catalogue = [
+            (f"{row['lesson']}:{item['no']}", bag(item["text"]))
+            for row in payload["lessons"] if row["lesson"] in lessons
+            for item in row["items"]
+        ]
+        blocks = printed_blocks(pdf)
+        if len(blocks) != len(lessons):
+            problems.append(
+                f"{stem}：印出 {len(blocks)} 組練習題，本冊應有 {len(lessons)} 課")
+        printed_lessons = [block["lesson"] for block in blocks]
+        if printed_lessons != list(lessons):
+            problems.append(f"{stem}：課次順序印成 {printed_lessons}，應為 {list(lessons)}")
+        for block in blocks:
+            row = expected.get(block["lesson"])
+            if row is None:
+                problems.append(f"{stem} 第 {block['lesson']} 課：練習題檔裡沒有這一課")
+                continue
+            if len(block["items"]) != len(row["items"]):
+                problems.append(
+                    f"{stem} 第 {block['lesson']} 課（p.{block['page']}）："
+                    f"印出 {len(block['items'])} 題，應有 {len(row['items'])} 題")
+            for index, (got, want) in enumerate(zip(block["items"], row["items"]), start=1):
+                if exact:
+                    paired = normalise(got["text"]) == normalise(want["text"])
+                else:
+                    paired = best_match(bag(got["text"]), catalogue) == \
+                        f"{block['lesson']}:{want['no']}"
+                if not paired:
+                    problems.append(
+                        f"{stem} 第 {block['lesson']} 課第 {index} 題（p.{block['page']}）"
+                        f"印的不是本課的題目：\n        印出 {got['text']}"
+                        f"\n        應為 {want['text']}")
+            for item in block["items"]:
+                if CJK.search(item["text"]):
+                    problems.append(
+                        f"{stem} 第 {block['lesson']} 課第 {item['no']} 題（p.{item['page']}）"
+                        f"題目旁印出漢字：{item['text']}")
+                key = normalise(item["text"]) if exact else \
+                    best_match(bag(item["text"]), catalogue)
+                where = f"{stem} 第 {block['lesson']} 課第 {item['no']} 題"
+                if key and key in seen:
+                    problems.append(f"{where} 與 {seen[key]} 印出同一句")
+                seen[key] = where
+        print(f"  {stem}：{len(blocks)} 課、"
+              f"{sum(len(block['items']) for block in blocks)} 題")
+    return problems
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("language", choices=sorted(BOOKS))
+    args = parser.parse_args()
+    problems = audit(args.language)
+    for line in problems:
+        print(f"      ✘ {line}")
+    if problems:
+        print(f"{len(problems)} 項不合")
+        return 1
+    print("每一課十題，題目都落在自己的課上，題旁零漢字　✔")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
