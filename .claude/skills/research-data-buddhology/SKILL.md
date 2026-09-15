@@ -305,6 +305,13 @@ python scripts/buddhist_studies_index.py --wanted   # 另外吐出缺書獵表
    `article_link` 卻是純文字。第一版解析器只認 CDATA，十五頁分頁**全部跑完、
    一路印著 `14001–14747 / 14747`，最後寫進去 0 行**。是因為最後印了分母才抓到
    （見 [[feedback_silent_zero_is_a_bug]]）。
+3. **694 篇（4.7%）沒有日文標題**——IBK 本來就收英文論文，那些條目的 `title_ja`
+   是空的（例：藤吉慈海 "The spirit of criticism in Buddhism"）。**只認 `title_ja`
+   的檢索或翻譯批次會靜默漏掉這 694 篇**，一律要 `title_ja or title_en` 回退。
+   反向的 69 篇沒有英文標題；兩者皆空的 0 篇，所以回退一定取得到值。
+4. **抽字品質的判準不可用「CJK 佔比」。**實測 349 份裡有 29 份 CJK 低於 15%，
+   查下去全是**正常的英文論文**，不是亂碼。要驗亂碼請看有沒有連續的
+   `\x8x\x9x` 區段，不要拿語種比例當健康指標。
 
 ### 待辦
 
