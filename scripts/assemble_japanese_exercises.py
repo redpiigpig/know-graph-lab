@@ -108,15 +108,26 @@ def creditable(entry: dict[str, Any], check) -> bool:
     belongs in ``notAttested`` with a note rather than in a coverage gap that
     can never be closed.
 
-    Deciding that by running the real gate on the word standing alone, rather
-    than by a rule about suffixes: the question is whether *the checker* will
-    credit it, and only the checker answers that.  The length rule is ignored
-    here — a bare word is not a sentence and is not being offered as one.
+    Deciding that by running the real gate rather than by a rule about parts of
+    speech: the question is whether *the checker* will credit the word, and only
+    the checker answers that.  It is asked twice, in two frames that use nothing
+    past lesson one, and a word counts as reachable only if **both** credit it.
+    One frame is not enough, because a lone frame turns a particle into a noun
+    by accident and each does it to a different particle: ``からです`` puts から at
+    the head of an utterance and the segmenter reads it as a noun, ``私のまでです``
+    does the same to まで, and 「学校から美術館まで」 — the sentence a learner would
+    actually meet — counts both as grammar and credits neither.  Trusting either
+    frame alone leaves that lesson holding a coverage gap that cannot be closed.
+
+    The length rule is ignored here: the frames are probes, not exercises.
     """
-    report = check(f"{checker.headword(entry)}です。")
-    if report["untaught"] or report["unattested"]:
-        return False
-    return checker.entry_key(entry) in report["vocabulary"]
+    for frame in (f"私の{checker.headword(entry)}です。", f"私は{checker.headword(entry)}です。"):
+        report = check(frame)
+        if report["untaught"] or report["unattested"]:
+            return False
+        if checker.entry_key(entry) not in report["vocabulary"]:
+            return False
+    return True
 
 
 def public_record(entry: dict[str, Any]) -> dict[str, Any]:
