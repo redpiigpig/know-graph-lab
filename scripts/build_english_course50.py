@@ -676,8 +676,16 @@ def validate_overlap(ex: dict) -> list[str]:
         q = _txt(item.get("q"))
         if "___" not in q:
             continue
-        if len(re.findall(r"[A-Za-z]+", q)) < MIN_EN_WORDS:
-            errs.append(f"mcq 第 {i} 題是中文句子夾一個英文空格，題幹要用英文句：{q[:24]}")
+        # 🚨 判準看「括號外有沒有中文」，不是「英文字夠不夠多」。要擋的是
+        # 「我 ___ 學生。」這種整句中文夾一個英文空格；括號裡的中文是提示，是
+        # 必要的。第一版數英文字數，把「______ oval. (一個橢圓形)」也誤殺了
+        # ——那題題幹本來就是英文，只是短。
+        stem = re.sub(r"[（(][^）)]*[）)]", "", q)
+        if HAS_ZH.search(stem):
+            errs.append(f"mcq 第 {i} 題是中文句子夾一個英文空格，中文只能放在括號裡"
+                        f"當提示：{q[:24]}")
+        elif not re.search(r"[A-Za-z]", stem):
+            errs.append(f"mcq 第 {i} 題題幹沒有英文：{q[:24]}")
         # 挖空題沒有中文提示時答案常常不只一個。L41 的「He ______ jump.」選項
         # 有 can 也有 can't，兩個填進去都是通順的英文，標準答案卻只認一個。
         elif not HAS_ZH.search(q):

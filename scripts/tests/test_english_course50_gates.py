@@ -207,6 +207,17 @@ def test_english_stem_with_blank_passes(gen):
     assert gen.validate_overlap(ex) == []
 
 
+def test_short_english_stem_is_not_a_false_positive(gen):
+    """🚨 判準看「括號外有沒有中文」，不是「英文字夠不夠多」。
+
+    第一版數英文字數，把 L07 的「______ oval. (一個橢圓形)」誤殺了——
+    那題題幹本來就是英文，只是短，整課因此連退兩輪。
+    """
+    ex = {"mcq": [{"q": "______ oval. (一個橢圓形)",
+                   "opts": ["an", "a", "the", "is"], "ans": "an"}]}
+    assert gen.validate_overlap(ex) == []
+
+
 # ---------------------------------------------------------------- 答案位置
 
 def test_answer_positions_are_spread(gen):
