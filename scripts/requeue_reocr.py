@@ -63,8 +63,33 @@ def load_ledger() -> dict:
 
 
 def save_ledger(led: dict) -> None:
+    """存檔前先把磁碟上的新狀態併進來，別把別人的進度蓋掉。
+
+    🚨 這支會同時有兩個人在寫：手動跑的批次，和 02:30 的 KGLab-Quality-Sweep
+    （`run_quality_sweep.bat` 裡 `requeue_reocr run --limit 5`）。原本是無鎖的
+    讀-改-寫 —— 後開始的那個載入舊快照、跑完整份覆寫，先開始的那個做了幾小時
+    的進度就這樣消失，而且兩邊的 log 都顯示一切正常。
+
+    合併規則：磁碟上比較「前面」的狀態不覆蓋我手上比較「後面」的，反之亦然；
+    同一本以推進得比較遠的為準。不是完美的鎖，但足以擋掉整份蓋掉那種災難。
+    """
+    ORDER = {"pending": 0, "ocr_failed": 0, "rejected": 0, "ocr_staged": 1,
+             "validated": 2, "swapped": 3, "restandardized": 4, "done": 5}
+    disk = load_ledger()
+    merged = dict(disk)
+    for bid, mine in led.items():
+        theirs = merged.get(bid)
+        if not theirs:
+            merged[bid] = mine
+            continue
+        if ORDER.get(mine.get("state"), 0) >= ORDER.get(theirs.get("state"), 0):
+            merged[bid] = mine
     LEDGER.parent.mkdir(parents=True, exist_ok=True)
-    LEDGER.write_text(json.dumps(led, ensure_ascii=False, indent=1), encoding="utf-8")
+    tmp = LEDGER.with_suffix(".json.tmp")
+    tmp.write_text(json.dumps(merged, ensure_ascii=False, indent=1), encoding="utf-8")
+    tmp.replace(LEDGER)          # 原子換檔：別讓對方讀到寫到一半的 JSON
+    led.clear()
+    led.update(merged)
 
 
 def set_state(led: dict, bid: str, state: str, **extra) -> None:
