@@ -109,6 +109,24 @@ def test_fill_with_one_repeated_answer_is_rejected(gen):
     assert any("9/10 題答案都是「is」" in e for e in errs)
 
 
+def test_translate_all_ending_in_same_word_is_rejected(gen):
+    """重出的 L01 造句八題有七題是「X is fine.」，句型指紋看不出來（第二個字
+    分散在 am/is/are），看結尾那個字才看得出來。"""
+    ex = {"translate": [{"q": "中文", "ans": f"{s} fine."} for s in
+                        ("I am", "He is", "She is", "It is", "We are",
+                         "You are", "They are")]
+                       + [{"q": "謝謝。", "ans": "Thank you."}]}
+    errs = gen.validate_overlap(ex)
+    assert any("7/8 句都以「fine」結尾" in e for e in errs)
+
+
+def test_varied_sentence_endings_pass(gen):
+    ex = {"translate": [{"q": "中文", "ans": s} for s in
+                        ("I am fine.", "He is a student.", "She is kind.",
+                         "We are here.", "They are my friends.", "Thank you.")]}
+    assert gen.validate_overlap(ex) == []
+
+
 def test_chinese_sentence_with_english_blank_is_rejected(gen):
     """L23 與 L42 各有 20 題長這樣，學生看不出要填什麼詞類。"""
     ex = {"mcq": [{"q": "請選擇正確的英文動詞來完成句子：我 ___ 學生。",

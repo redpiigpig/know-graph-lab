@@ -243,7 +243,9 @@ def prompt_drills(lesson: dict, body: dict) -> str:
 - **unscramble 的八個答案，不可以跟 translate 的答案重複**。50 課裡有 24 課
   兩區答案 100% 相同，等於整區白放。換人物、換動詞、換情境另外寫。
 - **fill 十題不可以十題都填同一個字**。L43 有九題答案都一樣、L21 有八題。
-  十題要涵蓋至少四個不同的考點（動詞、名詞、介系詞、形容詞…）。
+  十題要涵蓋至少五個不同的答案（動詞、名詞、介系詞、形容詞…）。
+- **translate 與 unscramble 各自也不可以整區只換主詞**。「I am fine. ／ He is fine. ／
+  She is fine. ／ We are fine.」這樣八句七個 fine 不行，每一區的結尾詞要分散。
 - fill 的題幹要是**英文句子**挖空，中文只放在括號裡當提示。
   「我 ___ 學生。」這種整句中文夾一個英文空格不行，學生看不出要填什麼詞類。
 
@@ -521,6 +523,7 @@ def validate_direction(ex: dict) -> list[str]:
 MAX_OVERLAP = 1 / 3
 MAX_SAME_FILL = 0.4
 MIN_DISTINCT_FILL = 5
+MAX_SAME_TAIL = 0.4
 MIN_EN_WORDS = 2
 
 
@@ -559,6 +562,19 @@ def validate_overlap(ex: dict) -> list[str]:
         q = item.get("q") or ""
         if "___" in q and len(re.findall(r"[A-Za-z]+", q)) < MIN_EN_WORDS:
             errs.append(f"mcq 第 {i} 題是中文句子夾一個英文空格，題幹要用英文句：{q[:24]}")
+
+    # 造句與重組各自也不可以整區只換主詞。重出的 L01 造句八題有七題是
+    # 「X is fine.」、重組六題只有 OK 與 sure 兩個結尾。句型指紋看不出來
+    # （長度與第二個字都分散在 am/is/are），看結尾那個字才看得出來。
+    for key, label in (("translate", "造句翻譯"), ("unscramble", "句子重組")):
+        tails = [w[-1] for w in ((x.get("ans") or "").rstrip(".?!").lower().split()
+                                 for x in ex.get(key) or []) if w]
+        if len(tails) < 4:
+            continue
+        word, hits = collections.Counter(tails).most_common(1)[0]
+        if hits / len(tails) > MAX_SAME_TAIL:
+            errs.append(f"{label}有 {hits}/{len(tails)} 句都以「{word}」結尾，"
+                        f"等於只換主詞，請換句型與內容")
     return errs
 
 
