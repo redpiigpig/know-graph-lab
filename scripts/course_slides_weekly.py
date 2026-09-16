@@ -13,7 +13,12 @@
 用法：
   python scripts/course_slides_weekly.py                    # 四門全出
   python scripts/course_slides_weekly.py wr-day             # 只出某一門
-  python scripts/course_slides_weekly.py wr-day 1 2         # 只出某門的第 1、2 週
+  python scripts/course_slides_weekly.py wr-day 1 2         # 只出某門的第 1、2 個「單元」
+
+🚨 **命令列的數字是「第幾個授課單元」，不是週次。** `units()` 會跳過演講與參訪那幾週，
+   所以基督宗教概論的 5 是第 6 週、6 是第 7 週。想確認對應關係就先跑
+   `python scripts/course_schedule.py`，或者乾脆整門重出——反正只差幾秒。
+   2026-09-17 照週次傳 6 進去，出到的是第 7 週那一份，而且不會有任何警告。
 """
 import re
 import sys

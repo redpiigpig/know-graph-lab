@@ -18,6 +18,20 @@ IMAGES_CH = {
     'josephus': 'Flavius Josephus engraving',
     'crucifixion-icon': 'Crucifixion icon Byzantine',
 
+    # ── 耶穌生平十二幅（查詢詞只是佔位，實際走 EXACT_CH 指名）──
+    'jesus-annunciation': 'Annunciation Fra Angelico Prado',
+    'jesus-nativity': 'Giotto Nativity Scrovegni',
+    'jesus-baptism': 'Piero della Francesca Baptism of Christ',
+    'jesus-temptation': 'Duccio Temptation on the Mount',
+    'jesus-calling': 'Caravaggio Calling of Saint Matthew',
+    'jesus-sermon': 'Bloch Sermon on the Mount',
+    'jesus-healing': 'Rembrandt Hundred Guilder Print',
+    'jesus-transfiguration': 'Raphael Transfiguration',
+    'jesus-entry': 'Giotto Entry into Jerusalem',
+    'jesus-lastsupper': 'Leonardo Last Supper',
+    'jesus-arrest': 'Giotto Kiss of Judas',
+    'jesus-ascension': 'Giotto Ascension Scrovegni',
+
     # ── 第 2 次：初代教會；正典的形成 ──
     'catacomb-fresco': 'Catacomb of Priscilla fresco',
     'ichthys-symbol': 'Ichthys early Christian symbol',
@@ -167,4 +181,23 @@ EXACT_CH = {
     'origen': 'File:Origen.jpg',
     'justin-martyr': 'File:Justin Martir. Menaion. Russia, XVI.jpg',
     'christ-pantocrator-ch': 'File:Christ Icon Sinai 6th century.jpg',
+
+    # ── 耶穌生平十二幅（使用者 2026-09-16：「用 8-12 張圖來講耶穌生平的故事」）──
+    # 🚨 全部指名，不走搜尋。「Nativity」「Baptism」這種詞在 Commons 有成千上萬張，
+    #    評分挑出來的多半是十九世紀的三流複製畫或現代教堂彩窗；名畫要指定到檔案。
+    #    釘十架與空墳墓沿用既有的 crucifixion-icon／empty-tomb-icon，不另配。
+    'jesus-annunciation': 'File:La Anunciación (Fra Angelico-Prado).jpg',
+    'jesus-nativity': 'File:Giotto - Scrovegni - -17- - Nativity, Birth of Jesus.jpg',
+    'jesus-baptism': 'File:Piero della Francesca - Baptism of Christ - WGA17595.jpg',
+    'jesus-temptation': 'File:Duccio - The Temptation on the Mount.jpg',
+    'jesus-calling': 'File:The Calling of Saint Matthew-Caravaggo (1599-1600).jpg',
+    'jesus-sermon': 'File:Bloch-SermonOnTheMount.jpg',
+    'jesus-healing': ('File:Rembrandt van Rijn - Christ Preaching '
+                      '(The Hundred Guilder Print) - Google Art Project.jpg'),
+    'jesus-transfiguration': 'File:Transfiguration Raphael.jpg',
+    'jesus-entry': 'File:Giotto - Scrovegni - -26- - Entry into Jerusalem.jpg',
+    'jesus-lastsupper': ('File:Leonardo da Vinci (1452-1519) - '
+                         'The Last Supper (1495-1498).jpg'),
+    'jesus-arrest': 'File:Giotto - Scrovegni - -31- - Kiss of Judas.jpg',
+    'jesus-ascension': 'File:Giotto - Scrovegni - -38- - Ascension.jpg',
 }
