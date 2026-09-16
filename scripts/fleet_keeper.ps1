@@ -105,14 +105,20 @@ function WorkerAlive($label) {
     Remove-Item -LiteralPath $pidFile -Force -ErrorAction SilentlyContinue
     return $false
 }
-function Launch($label, $argv) {
+function LaunchExe($label, $exe, $argv, $hidden = $true) {
     $lane = LaneName $label
     $out = "$ROOT\scripts\logs\fleet_$lane.out.log"
     $err = "$ROOT\scripts\logs\fleet_$lane.err.log"
-    $proc = Start-Process $py -ArgumentList $argv -WindowStyle Hidden -WorkingDirectory $ROOT `
+    # z-lib needs a VISIBLE Chrome (DiamWall refuses headless), so that lane passes
+    # $hidden=$false. Hiding the launcher does not hide Chrome, but keep it explicit.
+    $style = if ($hidden) { 'Hidden' } else { 'Normal' }
+    $proc = Start-Process $exe -ArgumentList $argv -WindowStyle $style -WorkingDirectory $ROOT `
         -RedirectStandardOutput $out -RedirectStandardError $err -PassThru
     Set-Content -LiteralPath "$ROOT\scripts\state\fleet_$lane.pid" -Value $proc.Id -Encoding ascii
     Note "started $label pid=$($proc.Id)"
+}
+function Launch($label, $argv) {
+    LaunchExe $label $py $argv
 }
 function Ensure($label, $pat, $argv) {
     if (LanePaused $label) {
@@ -122,6 +128,25 @@ function Ensure($label, $pat, $argv) {
     if (WorkerAlive $label) { return }
     Note "relaunch $label"
     Launch $label $argv
+}
+# A lane for a FINITE job must be able to retire itself, or it spins forever
+# ([[feedback_disable_finished_schedules]] - the ACCS lane above was relaunched every
+# 30 min doing nothing). The worker prints an ASCII marker when there is nothing left;
+# seeing it, we drop the pause file so later ticks skip the lane, and say so in the log.
+# The marker is the worker's own verdict - do NOT re-derive "is it done" here, or the
+# keeper and the worker can disagree and neither is obviously wrong.
+function EnsureUntil($label, $exe, $argv, $marker, $hidden = $true) {
+    $lane = LaneName $label
+    if (LanePaused $label) { return }
+    $out = "$ROOT\scripts\logs\fleet_$lane.out.log"
+    if ((Test-Path -LiteralPath $out) -and (Select-String -LiteralPath $out -SimpleMatch $marker -Quiet)) {
+        Set-Content -LiteralPath "$ROOT\scripts\state\fleet_$lane.pause" -Value $marker -Encoding ascii
+        Note "lane finished, retiring: $label ($marker)"
+        return
+    }
+    if (WorkerAlive $label) { return }
+    Note "relaunch $label"
+    LaunchExe $label $exe $argv $hidden
 }
 
 # Batch size 2, not 4 (2026-08-19): four 1800px pages is a ~2.6 MB base64 payload and
@@ -222,4 +247,15 @@ Ensure 'panikkar-vedic' 'panikkar_auto' @('-X','utf8','scripts\panikkar_auto.py'
 # and confirm --no-upload is actually honoured. Audit with
 #   python scripts/audit_llm_meta_replies.py --root mueller_data
 # Ensure 'sbe-gemini' 'sbe_translate' @('-X','utf8','scripts\sbe_translate.py','--loop','--only','sbe-04-zend-avesta-1,sbe-06-quran-1,sbe-10-dhammapada,sbe-16-yi-king,sbe-22-jaina-1','--backend','cloud','--no-upload')
+# z-lib probe: verify the WHOLE wanted list against the site (user asked 2026-09-16).
+# Finite job - measured 4 titles/min, ~1,600 left, so roughly 7 hours. Too long to
+# survive in one run: this laptop sleeps on the commute, and the #1 failure mode is
+# the VISIBLE Chrome window being closed (DiamWall refuses headless), which kills the
+# run with "Target page, context or browser has been closed". The 30-min tick is the
+# retry. Retires itself on ZLIB-PROBE-COMPLETE.
+#
+# --max-tries 6000 covers the remainder in one go; the worker skips anything already
+# in the ledger (probe mode counts even 'dry' as seen), so relaunching never redoes work.
+$node = 'C:\Program Files\nodejs\node.exe'
+EnsureUntil 'zlib-probe' $node @('scripts\zlib_fetch.mjs','--probe','--list','output\zlib_wanted_all.jsonl','--max-tries','6000') 'ZLIB-PROBE-COMPLETE' $false
 Note "keeper tick done"

@@ -320,7 +320,14 @@ async function main() {
   const todo = wanted.filter((w) => !skip.has(w.key))
   console.log(`清單 ${wanted.length} 筆，${PROBE ? '已探過' : '已處理'} ${skip.size}，` +
     `本輪${PROBE ? `探勘上限 ${MAX_TRIES} 筆` : `目標 ${LIMIT} 本／最多試 ${MAX_TRIES} 筆`}${DRY && !PROBE ? '（只查）' : ''}`)
-  if (!todo.length) return
+  // 🚨 「沒有待探的了」要印一個機器認得的標記，否則從外面看不出這一輪是
+  //    「做完整份了」還是「只是又跑了一輪」——fleet_keeper 靠它決定要不要收掉
+  //    這條 lane（沒有它就會照 feedback_disable_finished_schedules 那樣無限空轉）。
+  //    標記刻意用 ASCII：keeper 是 PS 5.1 的純 ASCII 腳本，grep 中文會出事。
+  if (!todo.length) {
+    if (PROBE) console.log('ZLIB-PROBE-COMPLETE 清單每一筆都有帳本紀錄，沒有待探的了')
+    return
+  }
 
   mkdirSync(DROP, { recursive: true })
   mkdirSync(dirname(LEDGER), { recursive: true })
