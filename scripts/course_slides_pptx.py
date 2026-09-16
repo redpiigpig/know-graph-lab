@@ -185,13 +185,25 @@ CM_PT = 28.35
 FIT_FLOOR = 0.72
 SPLIT_AT = 0.78
 
+# 字最多放大到幾倍（使用者 2026-09-16：「盡量滿版，不要留太多空格，字要盡可能大」）。
+# 1.55 ≒ 內文 31pt 放大到 48pt；條目少的頁才走得到上限，密的頁本來就 k≈1。
+# 🚨 這個值只影響「畫得多大」，不影響「拆不拆頁」——拆頁看的是 fit(raw=True)。
+GROW = 1.55
+# 放大時保留的安全邊際（見 fit() 裡的說明）。
+GROW_MARGIN = 0.92
+
 
 def fit(items, width_cm, height_cm, sizes, spaces, line=1.3, indent_cm=(0, 0.9, 1.6),
-        raw=False):
-    """估算這批條目實際佔幾行，回傳縮放係數（最小 FIT_FLOOR）。
+        raw=False, grow=1.0):
+    """估算這批條目實際佔幾行，回傳縮放係數（最小 FIT_FLOOR、最大 grow）。
 
     中日文一個字約等於一個字級的寬度，因此每行字數 ≈ 可用寬度 ÷ 字級。
-    只縮小、不放大——版面預設就是給內容少的頁看的。
+
+    🚨 `grow` 是 2026-09-16 加的。原本寫死「只縮小、不放大」，於是條目少的頁
+    照 31pt 排完只用掉半頁，下半片空白——使用者：「盡量滿版，不要留太多空格，
+    字要盡可能大」。現在內容少的頁會把字放大到填滿版面為止。
+    🚨 `raw=True` **不跟著放大**：它是給 split_long／split_quotes 判斷「裝不裝得下」
+    用的，放大之後那個判斷就沒有意義了（>1 一律代表裝得下）。
     """
     # PowerPoint 的中文行高＝字級 × 段落行距 × 字型係數。
     # 🚨 2026-09-09 拿 PDF 實量：18.7pt 的行、行距 1.3，行高 28.6pt → 係數 1.20，
@@ -214,7 +226,16 @@ def fit(items, width_cm, height_cm, sizes, spaces, line=1.3, indent_cm=(0, 0.9, 
     v = height_cm * CM_PT / total
     # 🚨 raw=False 的下限是「夾住」不是「保證裝得下」：內容超量時它照樣回下限，
     #    字縮到下限仍然溢出。要判斷該不該拆頁，必須看沒被夾過的 raw 值。
-    return min(1.0, v if raw else max(FIT_FLOOR, v))
+    if raw:
+        return min(1.0, v)
+    # 🚨 **放大時要留安全邊際。** 舊版 k 上限是 1.0，估算與實際之間天然有餘裕；
+    #    開放放大之後，k 會剛好落在估算值上，估算一樂觀就溢出——2026-09-16
+    #    第 3 週那份的「本單元重點（續）」就是這樣：三條長條目被放到 32.8pt，
+    #    算出來剛好 13.3 cm＝框高，實際排出來掉到頁尾線下面。
+    #    只有「放大」這一側加邊際；縮小那一側的行為完全不動。
+    if v > 1.0:
+        v = max(1.0, v * GROW_MARGIN)
+    return min(grow, max(FIT_FLOOR, v))
 
 
 def band(slide, color, x, y, w, h):
@@ -301,18 +322,35 @@ def footer(slide, n, label):
 
 
 # ── 各種投影片 ──────────────────────────────────────────────────────────────
+# 封面配圖（使用者 2026-09-16：「每一張簡報第一頁就要有相關的圖片」）。
+# 有圖時文字收到左半邊，圖擺右半邊；沒圖就維持原本的整片文字版。
+COVER_TEXT_W = 16.4       # 有圖時左欄文字寬（cm）
+COVER_IMG_X = 20.4        # 圖的左緣（cm）
+
+
 def s_cover(prs, d):
     s = blank(prs)
     band(s, GOLD, Cm(0), Cm(0), W, H)
-    tf = textbox(s, Cm(3.0), Cm(4.2), W - Cm(6.0), Cm(1.0))
+    # 🚨 圖不在時**照樣要出得來**：Drive 沒掛或 key 打錯就退回原本的整片文字版，
+    #    不要讓封面變成一個「缺圖：xxx」的方框。缺圖本身由 build() 那道閘擋。
+    key = d.get('image')
+    has = bool(key) and _has_image(key)
+    if has:
+        x = Cm(COVER_IMG_X)
+        place_image(s, key, x, Cm(2.7), W - x - Cm(2.2), H - Cm(5.4))
+    x0 = Cm(2.6 if has else 3.0)
+    tw = Cm(COVER_TEXT_W) if has else W - Cm(6.0)
+    tf = textbox(s, x0, Cm(4.2), tw, Cm(1.0))
     put(tf, d['kicker'], 19, color=MINT, first=True, space_after=0)
-    tf = textbox(s, Cm(3.0), Cm(5.5), W - Cm(6.0), Cm(2.4))
-    put(tf, d['title'], 54, font=KAI, bold=True, color=CREAM, first=True, space_after=0)
-    band(s, CREAM, Cm(3.0), Cm(8.5), Cm(4.6), Cm(0.06))
-    tf2 = textbox(s, Cm(3.0), Cm(9.5), W - Cm(6.0), Cm(6.0))
-    put(tf2, d['subtitle'], 26, font=KAI, color=CREAM, first=True, space_after=24)
+    tf = textbox(s, x0, Cm(5.5), tw, Cm(2.4))
+    put(tf, d['title'], 54 if not has else 44, font=KAI, bold=True, color=CREAM,
+        first=True, space_after=0)
+    band(s, CREAM, x0, Cm(8.5), Cm(4.6), Cm(0.06))
+    tf2 = textbox(s, x0, Cm(9.5), tw, Cm(6.0))
+    put(tf2, d['subtitle'], 26 if not has else 22, font=KAI, color=CREAM,
+        first=True, space_after=24)
     for line in d['meta']:
-        put(tf2, line, 18, color=MINT, space_after=6)
+        put(tf2, line, 18 if not has else 16, color=MINT, space_after=6)
     return s
 
 
@@ -370,9 +408,9 @@ def s_bullets(prs, title, bullets, sub=None):
     w, h = BOX_W, BODY_BOTTOM - top
     tf = textbox(s, Cm(1.5), Cm(top), Cm(w), Cm(h))
     base, sp = BULLET_SZ, BULLET_SP
-    k = fit(bullets, w, h * FIT_MARGIN, base, sp)
-    # 內容明顯偏少（六成高度就裝得下）就垂直置中，不要下半頁整片空白
-    if k >= 1.0 and fit(bullets, w, h * 0.80, base, sp) >= 1.0:
+    k = fit(bullets, w, h * FIT_MARGIN, base, sp, grow=GROW)
+    # 放大到上限仍填不滿（條目真的很少）才垂直置中，免得下半頁整片空白
+    if k >= GROW:
         tf.vertical_anchor = MSO_ANCHOR.MIDDLE
     firstdone = False
     for b in bullets:
@@ -407,7 +445,7 @@ def s_two(prs, title, left, right, sub=None):
         base = {0: 24.0, 1: 20.0, 2: 20.0}
         # 雙欄頁不能拆頁，只能縮字；框底離頁尾只有 0.2 cm，餘裕要吃滿
         k = max(0.62, fit(items, cw, (TWO_BOTTOM - (top + 1.5)) * FIT_MARGIN,
-                          base, {0: 10, 1: 8, 2: 8}))
+                          base, {0: 10, 1: 8, 2: 8}, grow=GROW))
         tf = textbox(s, x + Cm(0.35), Cm(top + 1.5), colw - Cm(0.7),
                      Cm(TWO_BOTTOM - (top + 1.5)))
         for j, it in enumerate(items):
@@ -419,7 +457,82 @@ def s_two(prs, title, left, right, sub=None):
     return s
 
 
-def s_table(prs, title, headers, rows, sub=None, note=None, widths=None):
+# ── 原文／範文頁 ────────────────────────────────────────────────────────────
+# 課堂上要學生真的讀到的那一段：範文、經文、經典引言。與其他版型的差別是
+# **這一頁的字不是我編過的重點，是原文**，因此三條規矩跟著它走：
+#   1. `course_slides_weekly._walk` 整張跳過——引文裡的「本書」「第十四章」
+#      是原文用字，照 BOOK_SELF／CH_REF 改下去就是竄改材料，而且改完完全看不出來。
+#   2. `fold_bigs` 不把別的條目倒進來（quote 不在 BULLETY 裡，天然成立）。
+#   3. 張數上限不計入（使用者 2026-09-16 定）——讀原文的節奏與講述不同，
+#      一張範文頁停留久，但不佔講述的份量。
+#
+# 資料長相：('quote', 標題, [原文行...], {'source': 出處, 'sub': 副標,
+#                                        'alt': (並列本名稱, [並列行...])})
+QUOTE_SZ = {0: 30.0, 1: 23.0}
+QUOTE_SP = {0: 13, 1: 8}
+QUOTE_LINE = 1.5          # 原文行距放寬——課堂上要讓學生跟著一行一行讀
+QUOTE_FLOOR = 0.60        # 縮到約 18pt 為止，再小投影看不清
+QUOTE_SPLIT_AT = 0.68     # 低於此就分頁，而不是繼續縮字
+SRC_SZ = 16
+PANEL_PAD = 0.95          # 引文框的左右內距
+SRC_H = 0.95              # 出處那一行佔的高度
+
+
+def _quote_items(lines, alt=None):
+    """交給 fit() 估行數用的條目表。並列本算第二層。"""
+    items = [(0, ln) for ln in lines]
+    if alt:
+        items.append((1, alt[0]))
+        items += [(1, ln) for ln in alt[1]]
+    return items
+
+
+def quote_fit(title, lines, alt=None, sub=None, source=None):
+    """回傳 (未夾住的縮放係數, 文字欄寬 cm, 引文框高 cm)。純函式，好驗算。
+
+    🚨 raw 值——`s_quote` 與 `split_quotes` 必須看同一個數字，
+    否則「該分頁的沒分」會靜靜擠成小字（跟 split_long 踩過的是同一個坑）。
+    """
+    h = BODY_BOTTOM - title_block(title, sub)[2] - (SRC_H if source else 0)
+    w = BOX_W - 2 * PANEL_PAD
+    k = fit(_quote_items(lines, alt), w, h * FIT_MARGIN, QUOTE_SZ, QUOTE_SP,
+            line=QUOTE_LINE, indent_cm=(0, 0.6, 0.6), raw=True)
+    return k, w, h
+
+
+def s_quote(prs, title, lines, source=None, sub=None, alt=None):
+    s = blank(prs)
+    top = slide_title(s, title, sub)
+    raw, w, h = quote_fit(title, lines, alt, sub, source)
+    k = max(QUOTE_FLOOR, min(1.0, raw))
+    band(s, MINT, Cm(1.5), Cm(top), Cm(BOX_W), Cm(h))
+    band(s, GOLD, Cm(1.5), Cm(top), Cm(0.14), Cm(h))
+    # 裝得下就垂直置中；被下限夾住（內容超量）就靠上，讓它往下滿出去而不是上下都溢
+    anchor = MSO_ANCHOR.MIDDLE if raw >= 1.0 else MSO_ANCHOR.TOP
+    tf = textbox(s, Cm(1.5 + PANEL_PAD), Cm(top + 0.4), Cm(w), Cm(h - 0.8),
+                 anchor=anchor)
+    first = True
+    for ln in lines:
+        if not ln:
+            put(tf, ' ', 10 * k, first=first, space_after=0)
+        else:
+            put(tf, ln, QUOTE_SZ[0] * k, font=KAI, color=INK, first=first,
+                space_after=QUOTE_SP[0] * k, line=QUOTE_LINE)
+        first = False
+    if alt:
+        put(tf, alt[0], QUOTE_SZ[1] * k * 0.85, bold=True, color=GOLD,
+            first=first, space_after=5, line=1.3)
+        for ln in alt[1]:
+            put(tf, ln, QUOTE_SZ[1] * k, font=KAI, color=GRAY,
+                space_after=QUOTE_SP[1] * k, line=1.35)
+    if source:
+        tfs = textbox(s, Cm(1.5), Cm(top + h + 0.15), Cm(BOX_W), Cm(SRC_H - 0.2))
+        put(tfs, source, SRC_SZ, color=GRAY, first=True, space_after=0,
+            align=PP_ALIGN.RIGHT)
+    return s
+
+
+def s_table(prs, title, headers, rows, sub=None, widths=None):
     s = blank(prs)
     top_cm = slide_title(s, title, sub)
     top = Cm(top_cm)
@@ -456,18 +569,9 @@ def s_table(prs, title, headers, rows, sub=None, note=None, widths=None):
             total += max(0.85 * CM_PT, lines * size * 1.5 + 6)
         return total
 
-    # 附註跟表格搶同一段空間：先算附註要幾行、佔多高，剩下的才是表格的。
-    note_size, note_h = 15, 0.0
-    if note:
-        while note_size > 10:
-            per = max(8, int((33.87 - 3.0) * CM_PT / note_size))
-            nl = -(-len(note) // per)
-            note_h = (nl * note_size * 1.45 + 4) / CM_PT
-            if note_h <= 1.6:
-                break
-            note_size -= 1
-    note_top = 17.5 - note_h
-    limit = (note_top - (0.3 if note else 0.0) - top_cm) * CM_PT
+    # 🚨 表格下的灰色附註已整批移除（使用者 2026-09-16：「那都刪掉，我都不需要」），
+    #    因此整段高度都歸表格用——表格連帶可以排得更大、更滿版。
+    limit = (17.5 - top_cm) * CM_PT
 
     tsize = 19 if len(rows) <= 5 else (17 if len(rows) <= 7 else 15)
     while tsize > 10 and table_h(tsize) > limit:
@@ -483,9 +587,6 @@ def s_table(prs, title, headers, rows, sub=None, note=None, widths=None):
             tf = c.text_frame; tf.word_wrap = True
             put(tf, str(val), tsize, color=INK, first=True, space_after=0,
                 line=1.15)
-    if note:
-        tf = textbox(s, Cm(1.5), Cm(note_top), W - Cm(3.0), Cm(max(1.3, note_h)))
-        put(tf, note, note_size, color=GRAY, first=True, space_after=0)
     return s
 
 
@@ -618,7 +719,7 @@ def s_imgbullets(prs, title, bullets, key, sub=None, cap=None):
     imgw = W - Cm(1.5) - imgx
     tf = textbox(s, Cm(1.5), Cm(top), textw, Cm(h))
     base, sp = IMG_SZ, IMG_SP
-    k = fit(bullets, tw, h * FIT_MARGIN, base, sp)
+    k = fit(bullets, tw, h * FIT_MARGIN, base, sp, grow=GROW)
     firstdone = False
     for b in bullets:
         lvl, txt = (b if isinstance(b, tuple) else (0, b))
@@ -741,7 +842,8 @@ def s_refs(prs, nums):
 
 RENDER = {'cover': s_cover, 'section': s_section, 'big': s_big,
           'bullets': s_bullets, 'two': s_two, 'table': s_table,
-          'photo': s_photo, 'gallery': s_gallery, 'imgbullets': s_imgbullets}
+          'photo': s_photo, 'gallery': s_gallery, 'imgbullets': s_imgbullets,
+          'quote': s_quote}
 
 
 
@@ -853,6 +955,36 @@ def split_long(slides):
     return out
 
 
+def split_quotes(slides):
+    """整段原文太長就分頁，不要把字縮到看不清。
+
+    🚨 **有並列譯本時不拆**——並列的兩段必須留在同一頁才對得起來，
+    拆開之後兩頁各看一半，並列就失去意義了。
+    """
+    out = []
+    for it in slides:
+        if it[0] != 'quote':
+            out.append(it)
+            continue
+        queue, guard = [it], 0
+        while queue and guard < 8:
+            guard += 1
+            cur = queue.pop(0)
+            kw = dict(cur[3]) if len(cur) > 3 and isinstance(cur[3], dict) else {}
+            lines = list(cur[2])
+            raw = quote_fit(cur[1], lines, kw.get('alt'), kw.get('sub'),
+                            kw.get('source'))[0]
+            if raw >= QUOTE_SPLIT_AT or kw.get('alt') or len(lines) < 4:
+                out.append(cur)
+                continue
+            half = len(lines) // 2
+            head = cur[1].split('（續）')[0]
+            queue.insert(0, ('quote', cur[1], lines[:half], kw))
+            queue.insert(1, ('quote', head + '（續）', lines[half:], kw))
+        out.extend(queue)
+    return out
+
+
 def _has_image(key):
     m = MANIFEST.get(key)
     return bool(m) and (IMGDIR / m['file']).exists()
@@ -882,7 +1014,7 @@ def prepare(slides, course='wr'):
     2026-09-09 量過：wr 五十五個配圖點只有一個過得了關。拆完再配，
     第一半留著原標題、對得上表，圖就掛在第一半上，而且不多生投影片。
     """
-    out = split_long(fold_bigs(slides))
+    out = split_quotes(split_long(fold_bigs(slides)))
     try:
         import course_slide_illustrate as ILL
         out = ILL.apply(out, course, _has_image, _fits_narrow)[0]

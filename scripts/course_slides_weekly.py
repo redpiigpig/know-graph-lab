@@ -105,7 +105,41 @@ def chapter_slides(src):
             if item[0] == 'bullets' and '這門課怎麼上' in str(item[1]):
                 continue
             out.setdefault(cur, []).append(_clean_subs(item))
-    return out
+    return inject_quotes(out, src)
+
+
+def inject_quotes(pool, src):
+    """把 course_slides_quotes 的範文／經文頁插進各章。
+
+    🚨 **錨點對不上就丟例外。** 標題打錯一個字就靜靜不插入，投影片照樣出得來、
+       張數正常、稽核全過，只是那一段原文不見了——跟配圖對照表踩過的是同一個坑。
+    """
+    try:
+        from course_slides_quotes import QUOTES
+    except ImportError:
+        return pool
+    for (course, ch), items in QUOTES.items():
+        if course != src:
+            continue
+        slides = pool.get(ch)
+        if not slides:
+            raise KeyError(f'範文表指到 {course} 第 {ch} 章，但那一章沒有投影片可掛')
+        for anchor, quote in items:
+            if anchor is None:
+                slides.append(quote)
+                continue
+            hit = [i for i, s in enumerate(slides)
+                   if len(s) > 1 and str(s[1]) == anchor]
+            if not hit:
+                raise KeyError(
+                    f'{course} 第 {ch} 章找不到錨點「{anchor}」——'
+                    f'標題必須與投影片逐字相符')
+            # 同一個錨點掛好幾張時，要接在已插入的那幾張後面，順序才不會顛倒
+            i = hit[-1] + 1
+            while i < len(slides) and slides[i][0] == 'quote':
+                i += 1
+            slides.insert(i, quote)
+    return pool
 
 
 CH_REF = re.compile(r'第[一二三四五六七八九十]+(、[一二三四五六七八九十]+)*章[‧·]?')
@@ -150,8 +184,11 @@ BOOK_SELF = re.compile(r'(?<![一那這同日])本書(?!紀)')
 #    以前這裡有個 intro_slide()，第一次上課會插兩三頁課程說明，已整段移除。
 
 
-def cover_for(c, label, date, title):
+def cover_for(c, label, date, title, src=None, chs=()):
+    """封面。image＝該單元頭一章的配圖（使用者 2026-09-16：第一頁要有相關的圖）。"""
+    from course_slide_covers import cover_key
     return {
+        'image': cover_key(src, chs) if src else None,
         'kicker': f"玄奘大學　{c['klass']}　{c['code']}",
         'title': c['name'],
         'subtitle': f'{label}　{title}',
@@ -192,6 +229,12 @@ def _derefer(text, chs):
 
 
 def _walk(node, chs):
+    # 🚨 原文頁整張不改寫。引文裡的「本書」「第十四章」是**原文的用字**，
+    #    照 BOOK_SELF／CH_REF 改下去就是竄改材料，而且改完的投影片看起來
+    #    完全正常——這正是 [[feedback_reader_silent_failures]] 那一類的錯。
+    #    範文頁的標題因此也不准寫章號（寫了不會被清掉）。
+    if isinstance(node, tuple) and node and node[0] == 'quote':
+        return node
     if isinstance(node, str):
         return _derefer(node, chs)
     if isinstance(node, tuple):
@@ -240,14 +283,18 @@ def build_course(key, only=None):
         deck = {
             'filename': f'{c["code"]}_{label.replace(" ", "")}_{title[:14]}.pptx',
             'footer': f'{c["name"]}　{label}　{title}',
-            'slides': ([('cover', cover_for(c, label, date, title))]
+            'slides': ([('cover', cover_for(c, label, date, title, src, chs))]
                        + [g for g in [guest_slide(c, label)] if g] + slides),
         }
         # 內容頁超過上限就一階一階調降，讓密的頁改用縮字而不是再拆一頁。
+        # 🚨 範文／原文頁不計入上限（使用者 2026-09-16 定）。讀原文的節奏與
+        #    講述不同：一張範文頁停留很久，但不佔講述的份量。照舊全算的話，
+        #    加了原文就會把講述內容擠掉，正好與「要有範文」的用意相反。
         cap = CAP[key]
         for split_at, floor in LADDER:
             R.SPLIT_AT, R.FIT_FLOOR = split_at, floor
-            n = len(R.prepare(slides, src))
+            prepared = R.prepare(slides, src)
+            n = sum(1 for s in prepared if s[0] != 'quote')
             if n <= cap:
                 break
         if n > cap:
