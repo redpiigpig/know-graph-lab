@@ -69,6 +69,7 @@
 /scripts/state/translation_supervisor.json
 /scripts/state/translation_cloud_supervisor.json
 /scripts/state/ocr_gemini_cooldown.json
+/scripts/state/cyberleninka_blocked_until.txt
 
 # Nuxt
 .nuxt

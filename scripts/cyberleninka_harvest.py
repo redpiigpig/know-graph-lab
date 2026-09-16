@@ -35,6 +35,7 @@
 from __future__ import annotations
 
 import argparse
+import datetime as dt
 import json
 import re
 import sys
@@ -62,6 +63,8 @@ SEARCH_SLEEP = 0.8
 FETCH_SLEEP = 1.5     # 抓全文更客氣：這是別人免費開放的東西
 MIN_CHARS = 1000      # 低於此視為沒抽到全文
 BLOCK_STREAK = 25     # 連續這麼多篇抓不到正文容器就判定被擋、停止本輪
+BLOCK_COOLDOWN_H = 6  # 判定被擋之後，這麼多小時內不要再來敲
+BLOCKED_UNTIL = Path(__file__).resolve().parent / "state" / "cyberleninka_blocked_until.txt"
 # 相關度停止條件（見檔頭）
 MIN_HIT_RATE = 0.15   # 該頁標題／摘要含查詢詞的比例
 STOP_PAGES = 3        # 連續幾頁低於門檻就收工
@@ -222,6 +225,20 @@ def cmd_search(args) -> None:
 
 
 def cmd_fetch(args) -> None:
+    # 上一輪判定被擋的話，冷卻期內直接不跑（--force 可繞過，用來手動試探）
+    if BLOCKED_UNTIL.exists() and not getattr(args, "force", False):
+        try:
+            until = float(BLOCKED_UNTIL.read_text(encoding="utf-8").strip())
+        except ValueError:
+            until = 0.0
+        left = until - time.time()
+        if left > 0:
+            print(f"上一輪被站方擋住，冷卻中：還有 {left / 3600:.1f} 小時"
+                  f"（到 {dt.datetime.fromtimestamp(until):%m-%d %H:%M}）。"
+                  f"\n要現在試探加 --force。")
+            return
+        BLOCKED_UNTIL.unlink(missing_ok=True)
+
     TEXT_DIR.mkdir(parents=True, exist_ok=True)
     LEDGER.parent.mkdir(parents=True, exist_ok=True)
     toc = load_toc()
@@ -265,9 +282,18 @@ def cmd_fetch(args) -> None:
                 # 不停下來的話，一輪會白打一萬多次請求、淨得不到一千篇，還持續敲一個
                 # 已經在擋我們的站。停下來，下一輪再續（todo 是按 .txt 算的，不會漏）。
                 if streak >= BLOCK_STREAK:
+                    # 🚨 冷卻期要寫下來。keeper 每 30 分重拉一次，沒有這個檔的話
+                    #    一天會白打 1,200 次請求去敲一個正在擋我們的站——而這是
+                    #    別人免費開放的東西（見 FETCH_SLEEP 的註解），不能這樣。
+                    until = time.time() + BLOCK_COOLDOWN_H * 3600
+                    BLOCKED_UNTIL.parent.mkdir(parents=True, exist_ok=True)
+                    BLOCKED_UNTIL.write_text(str(until), encoding="utf-8")
                     print(f"\n🚨 連續 {streak} 篇抓不到正文容器——判定被站方擋住，本輪停止。"
                           f"\n   已成功 {ok:,}／本輪處理 {i:,}／帳本另記 no-body {blocked:,}。"
-                          f"\n   不是『這些篇沒全文』，下一輪會重試。", flush=True)
+                          f"\n   不是『這些篇沒全文』，下一輪會重試。"
+                          f"\n   冷卻 {BLOCK_COOLDOWN_H} 小時（到 "
+                          f"{dt.datetime.fromtimestamp(until):%m-%d %H:%M}）才會再試。",
+                          flush=True)
                     break
                 time.sleep(FETCH_SLEEP)
                 continue
@@ -322,6 +348,8 @@ def main() -> None:
     ap.add_argument("--status", action="store_true")
     ap.add_argument("--only", help="只跑這一個查詢詞")
     ap.add_argument("--limit", type=int, help="--fetch 本輪上限")
+    ap.add_argument("--force", action="store_true",
+                    help="無視「被擋冷卻」硬跑一輪（用來手動試探封鎖解了沒）")
     a = ap.parse_args()
     if a.search:
         cmd_search(a)
