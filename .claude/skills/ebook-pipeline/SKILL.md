@@ -1051,6 +1051,58 @@ python scripts/fix_book_structure.py recover [--dry-run] [--ids a,b] [--limit N]
 
 ---
 
+## Workflow I — OCR 引擎評測（2026-09-16）
+
+**要換 OCR 引擎之前，先量現在這支準不準。** `requeue_reocr.staged_gate()` 是**相對**
+判準（新的要贏舊的），擋得住退步，但回答不了「這個引擎到底準不準」。
+[`scripts/ocr_bench.py`](../../../scripts/ocr_bench.py) 補上絕對量測。
+
+```bash
+# 1. 出考卷：文字層當標準答案，頁面 render 成無文字層影像
+python scripts/ocr_bench.py make --pdf <路徑> --pages 150-161 --out c:/tmp/bench_x
+# 2. 把 c:/tmp/bench_x/exam.pdf 餵給要評的引擎
+# 3. 閱卷
+python scripts/ocr_bench.py score --bench c:/tmp/bench_x --hyp <輸出> --label mineru -v
+```
+
+### 🚨 標準答案不能是 OCR 產物
+
+第一版拿掃描書的文字層當答案，結果那份文字層**本身就是 OCR 跑出來的**，帶著自己的錯字：
+
+| 「標準答案」 | Gemini 輸出 | 實際上誰對 |
+|---|---|---|
+| `元漏種子` | `無漏種子` | **Gemini**（無漏 anāsrava 是佛教術語） |
+| `~0<`、`尋1` | `》。《`、`引《` | **Gemini**（答案是亂碼） |
+| `vãsanã` | `vāsanā` | **Gemini**（梵文長音 ā） |
+
+於是引擎答對的地方被判成錯，分數看起來有模有樣、量到的卻是另一回事
+（[[feedback_reader_silent_failures]] 那一類）。`make` 現在會偵測「頁面鋪滿整頁影像」
+並直接擋下，硬要做得加 `--allow-scanned`，且分數只能當參考。
+**能用的答案來源**：原生數位排版 PDF（`--pages` 那幾頁沒有整頁影像、有嵌入字型），
+或拿語料庫文字自己排一份 PDF（零誤差，但沒有掃描雜訊，只量得到上限）。
+
+正規化只抹平「不該算錯」的差異：NFKC 全半形、所有空白、opencc 簡繁、引號破折號樣式。
+書眉頁碼仍會算進去（引擎多半主動剝掉、答案卻留著），所以 CER 約被高估 1–2%；
+配 `len_ratio` 一起讀：**len_ratio 明顯 <1 而 CER 不高 → 是漏家具不是認錯字**。
+
+### 實測基準線（gemini-2.5-flash，production 的 prompt 與 schema）
+
+| 考卷 | 答案品質 | 字元正確率 | 備註 |
+|---|---|---|---|
+| 合成排版中文 10 頁 | 零誤差 | **98.07%** | 3 頁 `0.00%`、中位數 0.20% |
+| 真實掃描《佛教的概念與方法》12 頁 | 有雜訊 | 97.23% | 長度比 1.003，一字未漏；實際更高 |
+
+合成卷那 1.93% **幾乎全來自兩頁 ASCII 製表符畫的表解**（`┌┐└┘├┤`），引擎把 2D 圖的
+閱讀順序重排 —— 那本來就沒有唯一正解。扣掉圖表，純中文散文是 0.00–0.23%。
+
+**結論：辨識準確度不是瓶頸。** 重轉錄帳本（`scripts/logs/reocr_ledger.json`）50 本裡
+**32 本 `ocr_failed`**（引擎根本沒回來）、**6 本 `page coverage lost`**（130<355、9<287，
+分批頁碼崩掉）、只有 12 本 done。2026-09-16 當天實測就撞到兩次：一次 **7 把 key 全 503**，
+一次 key#1 額度耗盡。所以要改善轉錄品質，**該修的是可用性與分批，不是換更準的模型**；
+本機引擎的價值在「不會被 429／503 擋下來」，不在認得更準。
+
+---
+
 ## Decision tree for "this book looks broken in the reader"
 
 ```
