@@ -127,8 +127,9 @@ def prompt_intro(lesson: dict) -> str:
 **上面列的 20 個單字，至少要用掉 16 個在課文裡**——這是本課唯一一篇課文，
 沒被用到的字學生整課都不會再遇到。寧可句子多一點，也不要漏字。
 
-🚨 課文要有人物、地點與情節。**平均一句至少 6 個字**，要有幾句用 and／but／
-because 串成兩個子句。不可以寫成「He is fine. ／ She is sure. ／ It is OK.」
+🚨 課文要有人物、地點與情節。**一半以上的句子要 6 個字以上**，要有幾句用
+and／but／because 串成兩個子句；但**單句不可以超過 18 個字**，不要為了湊長度
+把好幾件事硬塞進同一句。不可以寫成「He is fine. ／ She is sure. ／ It is OK.」
 這種把句型換主詞抄十遍——那不是課文，是代名詞表換行印出來。
 🚨 `You are welcome.` 譯「不客氣」，不是「你很受歡迎」。
 
@@ -184,7 +185,9 @@ _EX_HEAD = """你是台灣國小英語教材的資深編寫者，正在替第 {n
    那題整題沒有一個英文字，考不到任何東西。
 2. 考單字意思時**一律「中文題幹→選英文」**：「士兵 的英文是？」選項 soldier / king…。
    **不可以**寫成「soldier 的英文是？」——題幹已經把答案寫出來了。
-3. 文法題的題幹是英文句子挖空，中文提示放在括號裡。
+3. 文法題的題幹是英文句子挖空，**中文提示一定要放在括號裡**。
+   沒有提示答案就不只一個——「He ______ jump.」選項有 can 也有 can't，
+   兩個填進去都是通順的英文，標準答案卻只認一個，學生填對了也被算錯。
 """
 
 
@@ -388,6 +391,7 @@ def validate_intro(body: dict) -> list[str]:
 
 
 MIN_AVG_TOKENS = 6.0
+MAX_SENTENCE_TOKENS = 18
 MAX_SAME_SHAPE = 0.5
 
 
@@ -402,11 +406,17 @@ def validate_reading(sentences: list[dict]) -> list[str]:
     if not sentences:
         return []
     errs = []
-    counts = [len((s.get("en") or "").split()) for s in sentences]
-    avg = sum(counts) / len(counts)
-    if avg < MIN_AVG_TOKENS:
-        errs.append(f"課文平均一句只有 {avg:.1f} 個字，太短不成故事"
-                    f"（要 {MIN_AVG_TOKENS:.0f} 個字以上）")
+    counts = sorted(len((s.get("en") or "").split()) for s in sentences)
+    # 🚨 用中位數不用平均。L41 就是拿最後一句 39 個字的長句把平均撐過門檻的
+    #（「…and she can stand on one foot for a few seconds, but she cannot break
+    # the glass window.」），前面九句照樣短。中位數塞長句沒有用。
+    mid = counts[len(counts) // 2]
+    if mid < MIN_AVG_TOKENS:
+        errs.append(f"課文一半以上的句子只有 {mid} 個字，太短不成故事"
+                    f"（中位數要 {MIN_AVG_TOKENS:.0f} 個字以上）")
+    if counts[-1] > MAX_SENTENCE_TOKENS:
+        errs.append(f"課文有句子長達 {counts[-1]} 個字，國小生讀不動"
+                    f"（單句上限 {MAX_SENTENCE_TOKENS} 個字），請拆成兩句")
     # 句型骨架：把每句的字數與第二個字（多半是動詞）當指紋
     shapes = collections.Counter(
         (len(w), w[1].lower().rstrip(".,!?") if len(w) > 1 else "")
@@ -560,8 +570,15 @@ def validate_overlap(ex: dict) -> list[str]:
 
     for i, item in enumerate(ex.get("mcq") or [], 1):
         q = item.get("q") or ""
-        if "___" in q and len(re.findall(r"[A-Za-z]+", q)) < MIN_EN_WORDS:
+        if "___" not in q:
+            continue
+        if len(re.findall(r"[A-Za-z]+", q)) < MIN_EN_WORDS:
             errs.append(f"mcq 第 {i} 題是中文句子夾一個英文空格，題幹要用英文句：{q[:24]}")
+        # 挖空題沒有中文提示時答案常常不只一個。L41 的「He ______ jump.」選項
+        # 有 can 也有 can't，兩個填進去都是通順的英文，標準答案卻只認一個。
+        elif not HAS_ZH.search(q):
+            errs.append(f"mcq 第 {i} 題挖空卻沒有中文提示，答案會不只一個："
+                        f"{q[:24]}　請在括號裡補中文")
 
     # 造句與重組各自也不可以整區只換主詞。重出的 L01 造句八題有七題是
     # 「X is fine.」、重組六題只有 OK 與 sure 兩個結尾。句型指紋看不出來

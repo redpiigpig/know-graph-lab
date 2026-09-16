@@ -135,6 +135,14 @@ def test_chinese_sentence_with_english_blank_is_rejected(gen):
     assert any("中文句子夾一個英文空格" in e for e in errs)
 
 
+def test_blank_stem_without_chinese_hint_is_rejected(gen):
+    """L41：「He ______ jump.」選項有 can 也有 can't，兩個填進去都是通順的英文。"""
+    ex = {"mcq": [{"q": "He ______ jump.", "opts": ["go", "can", "can't", "hit"],
+                   "ans": "can"}]}
+    errs = gen.validate_overlap(ex)
+    assert any("答案會不只一個" in e for e in errs)
+
+
 def test_english_stem_with_blank_passes(gen):
     ex = {"mcq": [{"q": "I ___ a student.（我是學生）",
                    "opts": ["am", "is", "are", "be"], "ans": "am"}]}
@@ -172,6 +180,24 @@ def test_fill_with_only_three_distinct_answers_is_rejected(gen):
 
 
 # ---------------------------------------------------------------- 課文要是故事
+
+def test_one_padded_sentence_cannot_rescue_the_average(gen):
+    """🚨 L41 拿最後一句 39 個字把平均撐過門檻，前面九句照樣短。
+
+    所以門檻看中位數不看平均——塞一句長的沒有用。
+    """
+    short = ["She can climb.", "She can jump.", "She can skate.",
+             "She can hide.", "She can swing.", "She can rest."]
+    padded = ("She feels slow when she is tired, but she gets quick after a rest, "
+              "and she can stand on one foot for a few seconds, but she cannot "
+              "break the glass window.")
+    sentences = [{"en": s, "zh": ""} for s in short + [padded]]
+    counts = [len(s["en"].split()) for s in sentences]
+    assert sum(counts) / len(counts) > 6, "這組的平均本來就過得了關"
+    errs = gen.validate_reading(sentences)
+    assert any("一半以上的句子" in e for e in errs)
+    assert any("國小生讀不動" in e for e in errs)
+
 
 def test_reading_of_three_word_sentences_is_rejected(gen):
     """重出的 L01：十句都是「He is fine.」，句數夠、單字覆蓋 100%，但那不是課文。"""
