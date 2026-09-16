@@ -899,9 +899,12 @@ def _build_once(lesson: dict) -> tuple[dict | None, list[str]]:
             return None, [f"選擇題第 {batch + 1} 批：" + "；".join(errs)]
         questions.extend(part["mcq"])
     mcq = {"mcq": questions[:N_MCQ]}
-    # 選項多樣性要整課一起看。三批是分開出的，每批各自都合格，合起來仍可能
-    # 十題共用 am/is/are/be——批次內的檢查抓不到跨批重複。
-    cross = validate_variety(mcq)
+    # 整課一起再驗一次。三批是分開出的，每批各自都合格，合起來仍可能十題共用
+    # am/is/are/be，或者同一題出現兩次——批次內的檢查都抓不到。
+    # 🚨 這裡要跑完整的 validate_exercises，不是只跑 validate_variety：
+    # 「選擇題重複」那一條在批次內比對，跨批的重複題目會整個漏掉，L01、L17、
+    # L19、L31、L41 都是這樣帶著重複題落地的。
+    cross = validate_exercises(mcq, {"mcq": N_MCQ})
     if cross:
         return None, ["選擇題跨批重複：" + "；".join(cross)]
 

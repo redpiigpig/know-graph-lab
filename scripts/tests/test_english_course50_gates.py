@@ -76,6 +76,19 @@ def test_repeated_option_set_is_rejected(gen):
     assert errs and "3 題共用同一組選項" in errs[0]
 
 
+def test_duplicate_questions_across_batches_are_caught(gen):
+    """🚨 「選擇題重複」原本只在單一批次內比對。
+
+    三批是分開呼叫的，同一題在第一批與第三批各出現一次時，兩批各自都合格，
+    合起來才是重複——L01、L17、L19、L31、L41 都是這樣帶著重複題落地的。
+    整課組好之後要再跑一次完整的 validate_exercises。
+    """
+    mcq = {"mcq": [{"q": "She ______ sure. (她很確定)", "opts": list(o), "ans": o[0]}
+                   for o in (("is", "am", "are", "be"), ("is", "am", "was", "has"))]}
+    errs = gen.validate_exercises(mcq, {"mcq": 2})
+    assert any("選擇題重複" in e for e in errs)
+
+
 def test_distinct_option_sets_pass(gen):
     ex = {"mcq": [{"q": "a", "opts": ["am", "is", "are", "be"], "ans": "is"},
                   {"q": "b", "opts": ["cat", "dog", "pig", "hen"], "ans": "cat"}]}
