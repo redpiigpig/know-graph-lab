@@ -19,6 +19,7 @@
 from __future__ import annotations
 
 import argparse
+import collections
 import concurrent.futures as futures
 import json
 import random
@@ -233,6 +234,14 @@ def prompt_drills(lesson: dict, body: dict) -> str:
 3. unscramble：**剛好 {N_UNSCRAMBLE} 題**句子重組，題幹是打散的單字用 " / " 隔開
    （含最後的標點），答案是正確句子。
 
+🚨 三區要考不同的東西，不可以同一批句子寫兩遍：
+- **unscramble 的八個答案，不可以跟 translate 的答案重複**。50 課裡有 24 課
+  兩區答案 100% 相同，等於整區白放。換人物、換動詞、換情境另外寫。
+- **fill 十題不可以十題都填同一個字**。L43 有九題答案都一樣、L21 有八題。
+  十題要涵蓋至少四個不同的考點（動詞、名詞、介系詞、形容詞…）。
+- fill 的題幹要是**英文句子**挖空，中文只放在括號裡當提示。
+  「我 ___ 學生。」這種整句中文夾一個英文空格不行，學生看不出要填什麼詞類。
+
 JSON 格式：
 {{
   "fill": [{{"q": "I ____ a student.（我是學生）", "ans": "am"}}],
@@ -385,6 +394,7 @@ def validate_exercises(ex: dict, keys: dict[str, int] | None = None) -> list[str
         errs.append(f"選擇題重複 {len(dupes)} 題：{next(iter(dupes))}")
     errs += validate_direction(ex)
     errs += validate_variety(ex)
+    errs += validate_overlap(ex)
     bad = check_simplified(ex)
     if bad:
         errs.append("簡體字：" + "".join(bad))
@@ -425,6 +435,44 @@ def validate_direction(ex: dict) -> list[str]:
         for i, item in enumerate(ex.get(key) or [], 1):
             if HAS_ZH.search(item.get("ans") or ""):
                 errs.append(f"{key} 第 {i} 題答案不是英文：{(item.get('ans') or '')[:24]}")
+    return errs
+
+
+MAX_OVERLAP = 1 / 3
+MAX_SAME_FILL = 0.4
+MIN_EN_WORDS = 2
+
+
+def validate_overlap(ex: dict) -> list[str]:
+    """擋掉「四個練習區其實在考同一件事」。
+
+    2026-09-16 量出來：50 課裡有 24 課的「句子重組」與「造句翻譯」答案 **100% 重疊**
+    ——同樣六到八個句子寫兩遍，等於整區白放。L43 有 90% 的填空答案是同一個字，
+    L21 是 80%、L14 與 L42 是 70%。另外 L23 與 L42 各有 20 題選擇題的題幹是
+    「我 ___ 學生。」這種整句中文夾一個英文空格，學生看不出要填什麼詞類。
+    """
+    errs = []
+    norm = lambda s: re.sub(r"[^a-z ]", "", (s or "").lower()).strip()
+    trans = {norm(x.get("ans")) for x in ex.get("translate") or []}
+    unscr = {norm(x.get("ans")) for x in ex.get("unscramble") or []}
+    trans.discard("")
+    unscr.discard("")
+    if trans and unscr:
+        share = len(trans & unscr) / min(len(trans), len(unscr))
+        if share > MAX_OVERLAP:
+            errs.append(f"造句翻譯與句子重組有 {share:.0%} 的答案是同一句，"
+                        f"請把重組題換成不同的句子")
+
+    fills = [(x.get("ans") or "").strip().lower() for x in ex.get("fill") or []]
+    if fills:
+        word, hits = collections.Counter(fills).most_common(1)[0]
+        if hits / len(fills) > MAX_SAME_FILL:
+            errs.append(f"填空有 {hits}/{len(fills)} 題答案都是「{word}」，請換考點")
+
+    for i, item in enumerate(ex.get("mcq") or [], 1):
+        q = item.get("q") or ""
+        if "___" in q and len(re.findall(r"[A-Za-z]+", q)) < MIN_EN_WORDS:
+            errs.append(f"mcq 第 {i} 題是中文句子夾一個英文空格，題幹要用英文句：{q[:24]}")
     return errs
 
 

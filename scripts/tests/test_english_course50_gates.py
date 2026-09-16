@@ -82,6 +82,47 @@ def test_distinct_option_sets_pass(gen):
     assert gen.validate_variety(ex) == []
 
 
+# ---------------------------------------------------------------- 四區不可以考同一件事
+
+def test_translate_and_unscramble_sharing_answers_is_rejected(gen):
+    """50 課裡有 24 課兩區答案 100% 相同——同樣幾句話寫兩遍，整區白放。"""
+    same = ["I am fine.", "You are sure.", "He is OK.", "She is welcome."]
+    ex = {"translate": [{"q": "中文", "ans": s} for s in same],
+          "unscramble": [{"q": "打散", "ans": s} for s in same]}
+    errs = gen.validate_overlap(ex)
+    assert any("100% 的答案是同一句" in e for e in errs)
+
+
+def test_different_sentences_in_each_section_pass(gen):
+    ex = {"translate": [{"q": "中文", "ans": s} for s in
+                        ("I am fine.", "You are sure.", "He is OK.")],
+          "unscramble": [{"q": "打散", "ans": s} for s in
+                         ("We are here.", "They are happy.", "It is a cat.")]}
+    assert gen.validate_overlap(ex) == []
+
+
+def test_fill_with_one_repeated_answer_is_rejected(gen):
+    """L43 有九題填空答案都一樣、L21 有八題。"""
+    ex = {"fill": [{"q": f"q{i} ____", "ans": "is"} for i in range(9)]
+                  + [{"q": "q9 ____", "ans": "are"}]}
+    errs = gen.validate_overlap(ex)
+    assert any("9/10 題答案都是「is」" in e for e in errs)
+
+
+def test_chinese_sentence_with_english_blank_is_rejected(gen):
+    """L23 與 L42 各有 20 題長這樣，學生看不出要填什麼詞類。"""
+    ex = {"mcq": [{"q": "請選擇正確的英文動詞來完成句子：我 ___ 學生。",
+                   "opts": ["am", "is", "are", "be"], "ans": "am"}]}
+    errs = gen.validate_overlap(ex)
+    assert any("中文句子夾一個英文空格" in e for e in errs)
+
+
+def test_english_stem_with_blank_passes(gen):
+    ex = {"mcq": [{"q": "I ___ a student.（我是學生）",
+                   "opts": ["am", "is", "are", "be"], "ans": "am"}]}
+    assert gen.validate_overlap(ex) == []
+
+
 # ---------------------------------------------------------------- 答案位置
 
 def test_answer_positions_are_spread(gen):
