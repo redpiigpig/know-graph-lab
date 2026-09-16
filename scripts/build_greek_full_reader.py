@@ -407,7 +407,7 @@ def add_exercises(document: Document, block: dict | None, lesson: int) -> None:
 def add_reading(document: Document, lesson: dict, interlinear: dict) -> None:
     reading = lesson["reading"]
     is_scripture = reading["kind"] == "scripture_chapter"
-    label = "讀文　" + (reading.get("corpusLabel") or reading.get("categoryLabel") or "")
+    label = "讀本　" + (reading.get("corpusLabel") or reading.get("categoryLabel") or "")
     if reading.get("completeness") == "excerpt":
         label += f"　節錄・{reading.get('extent', '')}"
     # 每一課的讀物另起一頁：詞表與練習題是準備，讀物是這一課的正事，

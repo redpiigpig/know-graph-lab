@@ -234,7 +234,7 @@ def title_page(document, volume: str, spec: dict, counts: str, part: dict):
 
 
 def vocabulary_table(document, rows: list[dict]):
-    heading(document, "本課詞彙", H.H2_SIZE_PT, space_before=6, space_after=4)
+    heading(document, f"生詞　{len(rows)} 個", H.H2_SIZE_PT, space_before=6, space_after=4)
     table = document.add_table(rows=1, cols=3)
     widths = [H.USABLE_WIDTH_MM * 0.46, H.USABLE_WIDTH_MM * 0.14, H.USABLE_WIDTH_MM * 0.40]
     H.set_table_geometry(table, widths)

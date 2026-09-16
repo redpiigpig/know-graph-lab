@@ -137,6 +137,27 @@ Two failures recur across languages and are worth carrying into any new reader:
      🚨 Detect Simplified **by character**, never by round-tripping OpenCC: that
      calls 祢 Simplified. And Japanese shinjitai (国・学・会・点) are not
      Simplified Chinese — counting them reports four hundred clean pages as dirty.
+   - **Four books, one set of words.** The owner ruled on 2026-09-16 that every
+     lesson in every reader carries a 「生詞」 heading and a 「讀本」 heading —
+     not 讀文, not 完整主讀文, not an English `Reading` label and nothing else,
+     which is what the four of them used to say. Same for the gloss column:
+     keep a grammatical note when it names a **construction** (受詞記號,
+     虛擬語氣標記, 不定詞標記, 完成式助動詞, 關係代詞, 意志·推量, 被·可能·敬),
+     drop it when it names a **slot** (冠詞 and every dress of it, 主格／受格／
+     賓格／與格／屬格, 單數／複數). `scripts/prune_gloss_terms.py` holds the table.
+     🚨 Japanese is the exception, and the owner made it deliberately: there the
+     case label *is* the whole gloss — は「（主題）」 against が「（主格）」 — so
+     dropping them would blank 21,172 glosses and make the two particles
+     identical in the interlinear. Japanese keeps its particle markers.
+   - **Every volume needs a spine, in the course reader's format**
+     (`scripts/build_reader_spines.py`, which follows `build_reader_spine.py`):
+     a B5 carrier sheet, the strip drawn at its true width in the middle, 247 mm
+     tall so the printer's own margin cannot clip it, characters set upright one
+     per cell top to bottom (a rotated line is lying on its side, which is not
+     vertical setting), half-width runs kept horizontal inside one cell, no crop
+     frame, and one grey line outside it giving the page count and the computed
+     width for the copy shop. Under 100 pages, no spine — it would be a few
+     millimetres wide and could not be trimmed or glued.
    - **Then move the books to Drive.** `output/` is scratch, not the products'
      home. Re-render changes the page count, the page count changes the spine
      width, and a book left in `output/` is a book the owner cannot open:

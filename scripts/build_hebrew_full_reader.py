@@ -908,7 +908,7 @@ def add_lesson_opener(document: Document, lesson: dict, *, page_break_before=Tru
 
 
 def add_vocabulary(document: Document, lesson: dict) -> None:
-    document.add_heading(f"本課 {len(lesson['vocabulary'])} 詞", level=2)
+    document.add_heading(f"生詞　{len(lesson['vocabulary'])} 個", level=2)
     table = document.add_table(rows=1, cols=5)
     widths = [9, 29, 30, 42, 31]
     set_table_geometry(table, widths)
@@ -1064,7 +1064,7 @@ def add_exercises(document: Document, block: dict) -> None:
 def add_bible_reading(document: Document, reading: dict) -> None:
     # 每一課的讀物另起一頁：詞表與背誦是準備，讀物是這一課的正事。
     add_label(document, reading["ref"], page_break_before=True)
-    document.add_heading("完整主讀文", level=1)
+    document.add_heading("讀本", level=1)
     add_hebrew(document, reading["titleHe"], size=17, color=ACCENT, bold=True)
     add_body(
         document,
@@ -1104,7 +1104,7 @@ def clean_title_from_text(text: str, title_he: str) -> str:
 def add_prayer_reading(document: Document, reading: dict) -> None:
     # 每一課的讀物另起一頁：詞表與背誦是準備，讀物是這一課的正事。
     add_label(document, reading["ref"], page_break_before=True)
-    document.add_heading("完整主讀文", level=1)
+    document.add_heading("讀本", level=1)
     add_hebrew(document, reading["title_he"], size=17, color=ACCENT, bold=True)
     add_body(document, reading["summaryZh"], size=CAPTION_PT + 0.6, color=MUTED)
     for segment in reading["segments"]:

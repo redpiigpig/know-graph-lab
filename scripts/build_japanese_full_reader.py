@@ -129,7 +129,7 @@ def accent_marks(entry: dict) -> str:
 
 
 def add_vocabulary(document: Document, rows: list[dict]) -> None:
-    document.add_heading(f"本課 {len(rows)} 詞", level=2)
+    document.add_heading(f"生詞　{len(rows)} 個", level=2)
     table = document.add_table(rows=1, cols=5)
     widths = [8, 34, 34, 18, 47]
     H.set_table_geometry(table, widths)
@@ -281,6 +281,7 @@ def add_reading(document: Document, lesson: dict, interlinear: dict) -> None:
     # 讀文自己起一頁：生詞與練習題是預備，讀文才是這一課。
     H.page_break(document)
     H.add_label(document, "Reading")
+    document.add_heading("讀本", level=1)
     heading = document.add_heading(lesson["title"], level=2)
     H.paragraph_rule(heading, color=H.GOLD, size="8")
     for unit in lesson["units"]:

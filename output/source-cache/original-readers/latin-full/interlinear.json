@@ -26694,7 +26694,7 @@
     {
      "word": "ei",
      "trailing": "",
-     "glossZh": "他（與格）"
+     "glossZh": "他"
     },
     {
      "word": "Nathanaël",
@@ -26709,7 +26709,7 @@
     {
      "word": "me",
      "trailing": "",
-     "glossZh": "我（賓格）"
+     "glossZh": "我"
     },
     {
      "word": "nosti",
@@ -26739,7 +26739,7 @@
     {
      "word": "ei",
      "trailing": ":",
-     "glossZh": "他（與格）"
+     "glossZh": "他"
     },
     {
      "word": "Priusquam",
@@ -26749,7 +26749,7 @@
     {
      "word": "te",
      "trailing": "",
-     "glossZh": "你（賓格）"
+     "glossZh": "你"
     },
     {
      "word": "Philippus",
@@ -26789,7 +26789,7 @@
     {
      "word": "te",
      "trailing": ".",
-     "glossZh": "你（賓格）"
+     "glossZh": "你"
     }
    ],
    "engine": "claude-haiku-4-5-20251001"
@@ -87336,7 +87336,7 @@
     {
      "word": "mensium",
      "trailing": "",
-     "glossZh": "月（複數屬格）"
+     "glossZh": "月"
     },
     {
      "word": "tempore",
@@ -134093,7 +134093,7 @@
     {
      "word": "episcopo",
      "trailing": "",
-     "glossZh": "主教（賓格）"
+     "glossZh": "主教"
     },
     {
      "word": "de",
@@ -134128,7 +134128,7 @@
     {
      "word": "ei",
      "trailing": "",
-     "glossZh": "他（與格）"
+     "glossZh": "他"
     },
     {
      "word": "accedunt",
@@ -134143,12 +134143,12 @@
     {
      "word": "ille",
      "trailing": "",
-     "glossZh": "他（主格）"
+     "glossZh": "他"
     },
     {
      "word": "eos",
      "trailing": "",
-     "glossZh": "他們（賓格）"
+     "glossZh": "他們"
     },
     {
      "word": "uno",
@@ -134350,7 +134350,7 @@
     {
      "word": "intra",
      "trailing": "",
-     "glossZh": "進入（介）"
+     "glossZh": "進入"
     },
     {
      "word": "cancellos",
@@ -134360,7 +134360,7 @@
     {
      "word": "intra",
      "trailing": "",
-     "glossZh": "進入（介）"
+     "glossZh": "進入"
     },
     {
      "word": "Anastasim",
@@ -134380,7 +134380,7 @@
     {
      "word": "intra",
      "trailing": "",
-     "glossZh": "進入（介）"
+     "glossZh": "進入"
     },
     {
      "word": "speluncam",
@@ -135077,7 +135077,7 @@
     {
      "word": "episcopo",
      "trailing": "",
-     "glossZh": "主教（與格）"
+     "glossZh": "主教"
     },
     {
      "word": "ad",
@@ -178345,7 +178345,7 @@
     {
      "word": "episcopi",
      "trailing": "",
-     "glossZh": "主教（屬格）"
+     "glossZh": "主教"
     },
     {
      "word": "Ambrosii",
@@ -178400,7 +178400,7 @@
     {
      "word": "erroris",
      "trailing": "",
-     "glossZh": "謬誤（屬格）"
+     "glossZh": "謬誤"
     },
     {
      "word": "mei",
@@ -193759,7 +193759,7 @@
     {
      "word": "illo",
      "trailing": "",
-     "glossZh": "他（賓格）"
+     "glossZh": "他"
     },
     {
      "word": "aestus",
@@ -193789,7 +193789,7 @@
     {
      "word": "me",
      "trailing": "",
-     "glossZh": "我（賓格）"
+     "glossZh": "我"
     },
     {
      "word": "intuens",
@@ -223140,7 +223140,7 @@
     {
      "word": "Domino",
      "trailing": "",
-     "glossZh": "主（賓格）"
+     "glossZh": "主"
     },
     {
      "word": "confido",
@@ -223170,7 +223170,7 @@
     {
      "word": "voluntati",
      "trailing": "",
-     "glossZh": "意願（與格）"
+     "glossZh": "意願"
     },
     {
      "word": "subripitur",
@@ -223195,7 +223195,7 @@
     {
      "word": "virtutem",
      "trailing": ",",
-     "glossZh": "德能（賓格）"
+     "glossZh": "德能"
     },
     {
      "word": "quos",
@@ -223210,7 +223210,7 @@
     {
      "word": "corde",
      "trailing": "",
-     "glossZh": "心（與格）"
+     "glossZh": "心"
     },
     {
      "word": "et",
@@ -240069,7 +240069,7 @@
     {
      "word": "Huic",
      "trailing": "",
-     "glossZh": "他（與格）"
+     "glossZh": "他"
     },
     {
      "word": "ergo",
@@ -240109,7 +240109,7 @@
     {
      "word": "eis",
      "trailing": "",
-     "glossZh": "他們（與格）"
+     "glossZh": "他們"
     },
     {
      "word": "requiem",
@@ -427064,7 +427064,7 @@
     {
      "word": "ei",
      "trailing": "",
-     "glossZh": "他（賓格）"
+     "glossZh": "他"
     },
     {
      "word": "humanitatem",
@@ -441560,7 +441560,7 @@
     {
      "word": "scalae",
      "trailing": "",
-     "glossZh": "梯子（複數屬格）"
+     "glossZh": "梯子"
     },
     {
      "word": "omne",
@@ -441575,7 +441575,7 @@
     {
      "word": "ferramentorum",
      "trailing": "",
-     "glossZh": "鐵器（複數屬格）"
+     "glossZh": "鐵器"
     },
     {
      "word": "infixum",
