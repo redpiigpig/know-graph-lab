@@ -141,8 +141,8 @@ def _ahead_note(no: int) -> str:
     later = sorted({f"{m}（第 {n} 課）" for m, n in FUTURE_MARKERS.items() if no < n})
     if not later:
         return ""
-    return ("\n🚨 下面這幾個是**後面的課**才教的，本課的課文、例句、對話與題目"
-            "都不可以出現：\n" + "、".join(later) + "\n")
+    return ("\n🚨 下面這幾個是**後面的課**才教的，本課的**題目**不可以拿來考"
+            "（課文裡偶爾出現、有中譯可以）：\n" + "、".join(later) + "\n")
 
 
 def _body_head(lesson: dict) -> str:
@@ -472,7 +472,12 @@ def _common_errs(obj) -> list[str]:
     bad = check_simplified(obj)
     if bad:
         errs.append("簡體字：" + "".join(bad))
-    return errs + check_usage(obj) + validate_syllabus_order(CURRENT_LESSON, obj)
+    # 🚨 超綱文法只查題目，不查課文。故事裡出現學生還沒正式學過的字沒關係——
+    # 旁邊就有中譯，家教帶讀時順口補一句；但拿沒教過的文法去**考**學生不行，
+    # 學生會在考卷上遇到整課都沒教過的東西。
+    # 第一版連課文一起查，L21 與 L31 都因為課文寫了 can 被退——要模型連寫 40 課
+    # 都不用 can 不切實際，而每退一次要重跑整段、花十分鐘。
+    return errs + check_usage(obj)
 
 
 def validate_grammar(body: dict) -> list[str]:
