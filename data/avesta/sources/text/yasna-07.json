@@ -1,0 +1,261 @@
+{
+  "slug": "yasna-07",
+  "siglum": "Y 7",
+  "title_zh": "亞斯納 第 7 章",
+  "title_en": "Yasna 7",
+  "canon": "avestan",
+  "volume": "yasna",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/yasna/y0to8.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "米爾斯（L. H. Mills）",
+  "en_url": "https://www.avesta.org/yasna/yasna.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "Vohu Mano": "沃胡‧馬納",
+    "Asha Vahishta": "阿沙‧瓦希什塔",
+    "Khshathra Vairya": "赫沙特拉‧瓦伊里亞",
+    "Spenta Armaiti": "斯彭塔‧阿爾邁提",
+    "Haurvatat": "豪爾瓦塔特",
+    "Ameretat": "阿梅雷塔特",
+    "Haoma": "豪麻",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 7,
+      "verse": 1,
+      "ref": "Y 7.1",
+      "orig": "(zôt u râspî,) ashem vohû vahishtem\nastî ... (3)! (zôt,) ashaya dadhãmi hvarethem\nmyazdem haurvata ameretâta gâush hudå xshnûmaine\nahurahe mazdå ameshanãm speñtanãm,\nxshnûmaine sraoshahe ashyehe ashivatô verethrâjanô\nfrâdat-gaêthahe.",
+      "en": "With a complete and sacred offering [Ashi] I offer and I give\nthis meat-offering, and (with it) Haurvatat (who guards the water),\nand Ameretatat (who guards the plants and the wood), and the flesh\nof the Kine of blessed gift, for the propitiation of Ahura Mazda,\nand of the Bountiful Immortals (all, and) for the propitiation\nof Sraosha (Obedience) the blessed, endowed with sanctity, who\nsmites with the blow of victory, and who causes the settlements\nto advance.",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 2,
+      "ref": "Y 7.2",
+      "orig": "ashaya dadhãmi haomemca para-haomemca xshnûmaine\nzarathushtrahe spitâmahe ashaonô fravashêe,\nashaya dadhãmi aêsmã baoidhi xshnûmaine\ntava âthrô ahurahe mazdå puthra.",
+      "en": "And I offer the Haoma and Haoma-juice with a complete and\nsacred offering for the propitiation of the Fravashi of Zarathushtra\nSpitama the saint, and I offer the wood-billets with the perfume\nfor Thy propitiation, the Fire's, O Ahura Mazda's son!",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 3,
+      "ref": "Y 7.3",
+      "orig": "ashaya dadhãmi haomi xshnûmaine aiwyô vanguhibyô\napãm vanguhînãm mazdadhâtanãm,\nashaya dadhãmi âpem haomyãm, ashaya dadhãmi\ngãm jîvyãm, ashaya dadhãmi urvarãm\nhadhânaêpatãm ashaya uzdâtãm xshnûmaine\napãm mazdadhâtanãm.",
+      "en": "And I offer the Haomas with a complete and sacred offering\nfor propitiation [to the good waters] for the good waters Mazda-made.\nAnd I offer this Haoma-water with scrupulous exactness and with\nsanctity, and this fresh milk, and the plant Hadhanaepata uplifted\nwith a complete and sacred offering for the propitiation of the\nwaters which are Mazda-made.",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 4,
+      "ref": "Y 7.4",
+      "orig": "ashaya dadhãmi imat baresma hadha-zaothrem hadha-aiwyånghanem\nashaya frastaretem xshnûmaine ameshanãm speñtanãm,\nashaya dadhãmi vâca humata hûxta hvarshta,\nashaya dadhãmi gâthanãmca sraothrem, ashaya\ndadhãmi hvarshtå mãthrå, ashaya dadhãmi\nimãm anghuyãmca ashayãmca rathwãmca\nratufritîmca xshnûmaine ýazatanãm ashaonãm\nmainyavanãm gaêthyanãm xshnûmaine havaheca\nurunô!",
+      "en": "And I offer this Baresman with its Zaothra (and with its binding)\nfor a girdle spread with complete sanctity and order for the propitiation\nof the Bountiful Immortals, and I offer with my voice the thoughts\nwell-thought, the words well-spoken, and the deeds well-done,\nand the heard recital of the Gathas, the Mathras well-composed\nand well-delivered, and this Lordship, and this Sanctity, and\nthis ritual mastership, and the timely Prayer for blessings, with\na complete and sacred offering for the propitiation of the holy\nYazads, heavenly and earthly, and for the contentment of the individual\nsoul!",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 5,
+      "ref": "Y 7.5",
+      "orig": "ashaya dadhãmi asnyaêibyô ashahe ratubyô,\nhâvanêe ashaone ashahe rathwe, ashaya dadhãmi\nsâvanghêe vîsyâica ashaone ashahe rathwe,\nashaya dadhãmi mithrahe vouru-gaoyaotôish hazangrô-\ngaoshahe baêvare-cashmanô aoxtô-nâmanô\nýazatahe râmanô hvâstrahe.",
+      "en": "And I offer to the Asnya with a complete and sacred offering,\nas lords of the ritual order, and to Havani, and to Savanghi and\nVisya, holy lords of the ritual order, and to Mithra of the wide\npastures, of the thousand ears, and myriad eyes, the Yazad of\nthe spoken name, and to Raman Hvastra.",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 6,
+      "ref": "Y 7.6",
+      "orig": "ashaya dadhãmi rapithwinâi ashaone ashahe rathwe,\nashaya dadhãmi frâdat-fshave zañtumâica\nashaone ashahe rathwe, ashaya dadhãmi ashahe vahishtahe\nâthrasca ahurahe mazdå.",
+      "en": "And I offer with a complete and sacred offering to Rapithwina,\nthe holy lord of the ritual order; and I offer to Fradat-fshu\nand to the Zantuma, and to Asha Vahishta (who is Righteousness\nthe Best) and to Ahura Mazda's Fire.",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 7,
+      "ref": "Y 7.7",
+      "orig": "ashaya dadhãmi uzayeirinâi ashaone ashahe rathwe,\nashaya dadhãmi frâdat-vîrâi dâh'yumâica\nashaone ashahe rathwe, ashaya dadhãmi berezatô ahurahe\nnafedhrô apãm apasca mazdadhâtayå.",
+      "en": "And I offer with a complete and sacred offering to Uzayeirina,\nFradat-vira, and to the Dahvyuma*, the holy lord of the ritual\norder, and to that lofty Ahura Napat-apam, and to the waters which\nMazda created.",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 8,
+      "ref": "Y 7.8",
+      "orig": "ashaya dadhãmi aiwisrûthrimâi aibigayâi\nashaone ashahe rathwe, ashaya dadhãmi frâdat-vîspãm-hujyâtêe\nzarathushtrôtemâica ashaone ashahe rathwe, ashaya\ndadhãmi ashâunãm fravashinãm khenãnãmca\nvîrô-vãthwanãm ýâiryayåsca\nhushitôish amaheca hutâshtahe huraodhahe verethrakhnaheca\nahuradhâtahe vanaiñtyåsca uparatâtô.",
+      "en": "And I offer with a complete and sacred offering to Aiwisruthrima,\nthe life-furtherer, and to Fradat-vispam-hujyaiti, and to the\nZarathushtrotema, and to the Fravashis of the saints, and to the\nwomen who have many sons, and to the Prosperous home-life which\nendures (without reverse) throughout the year, and to Force, the\nwell-shaped and stately, and to the Blow which smites with victory\nAhura-given, and to the Victorious Ascendency (which it secures).",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 9,
+      "ref": "Y 7.9",
+      "orig": "ashaya dadhãmi ushahinâi ashaone ashahe rathwe,\nashaya dadhãmi berejyâi nmânyâica ashaone\nashahe rathwe, ashaya dadhãmi sraoshahe ashyehe ashivatô\nverethrâjanô frâdat-gaêthahe rashnaosh\nrazishtahe arshtâtasca frâdat-gaêthayå\nvaredat-gaêthayå!",
+      "en": "And I offer with a complete and sacred offering to Ushahina,\nthe holy lord of the ritual order, and to Berejya, and Nmanya,\nand to Sraosha (Obedience) the blessed, endowed with sanctity,\nwho smites with the blow of victory, and makes the settlements\nadvance, and to Rashnu the most just, and to Arshtat who furthers\nthe settlements and causes them to increase.",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 10,
+      "ref": "Y 7.10",
+      "orig": "ashaya dadhãmi mâhyaêibyô ashahe\nratubyô, añtaremånghâi ashaone ashahe\nrathwe, ashaya dadhãmi perenô-månghâi\nvîshaptathâica ashaone ashahe rathwe!",
+      "en": "And I offer with a complete and sacred offering to the Mahya,\nlords of the ritual order, to the new and the waning moon (the\nmoon within), and to the full moon which scatters night, holy\nlords of the ritual order.",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 11,
+      "ref": "Y 7.11",
+      "orig": "ashaya dadhãmi ýâiryaêibyô\nashahe ratubyô, maidhyôizaremayâi ashaone ashahe\nrathwe, ashaya dadhãmi maidhyôishemâi ashaone\nashahe rathwe, ashaya dadhãmi paitishhahyâi ashaone\nashahe rathwe, ashaya dadhãmi ayâthrimâi fraourvaêshtrimâi\nvarshniharshtâica ashaone ashahe rathwe, ashaya dadhãmi\nmaidhyâiryâi ashaone ashahe rathwe, ashaya dadhãmi\nhamaspathmaêdayâi ashaone ashahe rathwe, ashaya dadhãmi\nsaredhaêibyô ashahe ratubyô.",
+      "en": "And I offer with a complete and sacred offering to the Yearly\nfestivals, the lords of the ritual order, to Maidhyo-zaremaya,\nand Maidhyo-shema, to Paitishahya, and to Ayathrima the furtherer\n(the breeder), the spender of the strength of males, and to Maidhyairya\nand Hamaspathmaedhaya, holy lords of the ritual order, and I offer\nwith sanctity to the several seasons, the lords of the ritual\norder.",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 12,
+      "ref": "Y 7.12",
+      "orig": "ashaya dadhãmi vîspaêibyô aêibyô\nratubyô ýôi heñti ashahe ratavô\nthrayasca thrisãsca nazdishta pairishhâvanayô\nýôi heñti ashahe ýat vahishtahe mazdô-frasâsta\nzarathushtrô-fraoxta!",
+      "en": "And I offer with a complete and sacred offering to all those\nlords who are the thirty and three, who approach the nearest round\nabout our Havani, and who are the lords of Asha (the ritual by-eminence),\nof Righteousness who is (the Best), whose observances are inculcated\nas precepts by Mazda, and uttered forth by Zarathushtra.",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 13,
+      "ref": "Y 7.13",
+      "orig": "ashaya dadhãmi ahuraêibya mithraêibya berezañbya\naithyajanghaêibya ashavanaêibya stârãmca\nspeñtô-mainyavanãm dâmanãm tishtryeheca\nstârô raêvatô hvarenanguhatô månghaheca\ngaocithrahe hvareca xshaêtahe aurvat-aspahe dôithrahe\nahurahe mazdå mithrahe dah'yunãm dainghupatôish,\nashaya dadhãmi (...rôz...) ahurahe mazdå raêvatô\nhvarenanguhatô, ashaya dadhãmi ( ... mâh ...\n) ashâunãm fravashinãm!",
+      "en": "And\nI offer with a complete and sacred offering to Ahura and Mithra,\nthe lofty and imperishable, and holy two, and to the stars which\nare the creatures of Spenta Mainyu, and to the star Tishtrya,\nthe radiant, the glorious, and to the Moon which contains the\nseed of cattle in its beams, and to the resplendent Sun of the\nfleet horses, the eye of Ahura Mazda, and to Mithra, the lord\nof the provinces. And I offer with a complete and sacred offering\nto Ahura Mazda, the resplendent, the glorious, (who rules this\nday), and to the Fravashis of the saints (who name the month).",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 14,
+      "ref": "Y 7.14",
+      "orig": "ashaya dadhãmi tava âthrô ahurahe mazdå\nputhra mat vîspaêibyô âterebyô,\nashaya dadhãmi aiwyô vanguhibyô vîspanãmca\napãm mazdadhâtanãm vîspanãmca\nurvaranãm mazdadhâtanãm!",
+      "en": "And I offer with a complete and sacred offering to thee, the\nFire, O Ahura Mazda's son! together with all the fires, and to\nthe good waters, even to the waters which are Mazda-made, and\nto all the plants which Mazda made.",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 15,
+      "ref": "Y 7.15",
+      "orig": "ashaya dadhãmi mãthrahe speñtahe ashaonô\nverezyanguhahe dâtahe vîdaêvahe dâtahe\nzarathushtrôish darekhayå upayanayå daênayå\nvanghuyå mâzdayasnôish.",
+      "en": "And I offer with a complete and sacred offering to the Mathra\nSpenta, the holy, the effective, revealed against the Daevas,\nthe Zarathushtrian law, and to the long descent of the good Religion,\nof the Mazdayasnian faith.",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 16,
+      "ref": "Y 7.16",
+      "orig": "ashaya dadhãmi garôish ushidarenahe mazdadhâtahe\nashahvâthrahe vîspaêshãmca gairinãm\nashahvâthranãm pouru-hvâthranãm mazdadhâtanãm\nkâvayeheca hvarenanghô mazdadhâtahe ahvaretaheca\nhvarenanghô mazdadhâtahe, ashaya dadhãmi ashôish\nvanghuyå cistôish vanghuyå erethê vanghuyå\nrasãstâtô vanghuyå hvarenanghô\nsavanghô mazdadhâtahe.",
+      "en": "And I offer with a complete and sacred offering to Mount Ushi-darena,\nthe Mazda-made, brilliant with holiness, and to all the mountains\nshining with holiness, of abundant brightness, and which Mazda\nmade, and to the Royal glory unconsumed and Mazda-made. And I\noffer with a complete and sacred offering to Ashi Vanguhi, and\nto Chishti Vanguhi, and to Erethe, and to Rasastat, and to the\nGlory (and the) Benefit which Mazda made.",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 17,
+      "ref": "Y 7.17",
+      "orig": "ashaya dadhãmi dahmayå vanghuyå âfritôish\ndahmaheca narsh ashaonô ukhraheca taxmahe dâmôish\nupamanahe ýazatahe!",
+      "en": "And I offer with a complete and sacred offering to the good\nand pious Prayer for blessings of the pious man, and to that Yazad,\nthe swift and dreadful Curse of the wise.",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 18,
+      "ref": "Y 7.18",
+      "orig": "ashaya dadhãmi ånghãm asanghãmca\nshôithranãmca gaoyaoitinãmca maêthananãmca\navô-hvarenanãmca apãmca zemãmca urvaranãmca\nainghåsca zemô avaingheca ashnô vâtaheca\nashaonô strãm månghô hûrô\nanakhranãm raocanghãm hvadhâtanãm vîspanãmca\nspeñtahe mainyêush dâmanãm ashaonãm\nashaoninãmca ashahe rathwãm.",
+      "en": "And I offer with a complete and sacred blessing to these places, \ndistricts, pastures, and abodes with their springs of water, and\nto the waters and the lands, and the plants, and to this earth\nand yon heaven, and to the holy wind, and to the stars, and the\nmoon, even to the stars without beginning (to their course), the\nself-appointed, and to all the holy creatures of Spenta Mainyu,\nbe they male or female, regulators (as they are) of the ritual\norder.",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 19,
+      "ref": "Y 7.19",
+      "orig": "ashaya dadhãmi rathwô berezatô ýô\nashahe, rathwãm ayaranãmca asnyanãmca mâhyanãmca\nýâiryanãmca saredhanãmca ýôi\nheñti ashahe ratavô, hâvanôish rathwô!",
+      "en": "And I offer with a complete and sacred blessing to that lofty\nlord who is Righteousness (the Best) and the Day-lords, the lords\nof the days during their duration, and to those of the days during\ndaylight, and to the Month-lords, and the Year-lords, and to those\nof the seasons, the lords who are lords of the ritual, and at\nthe time of Havani.",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 20,
+      "ref": "Y 7.20",
+      "orig": "ashaya dadhãmi (zôt u râspî,) hvarethem\nmyazdem haurvata ameretâta gâush hudå xshnûmaine\nsraoshahe ashyehe taxmahe tanumãthrahe darshi-draosh âhûiryehe\naoxtô-nâmanô ýazatahe.",
+      "en": "And I offer the Myazda meat-offering with a complete and sacred\noffering, and Haurvatat (who guards the water), and Ameretatat\n(who guards the wood), and the flesh of the Kine of blessed gift,\nfor the propitiation of Sraosha (Obedience) the blessed, whose\nbody is the Mathra, him of the daring spear, the lordly, the Yazad\nof the spoken name.",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 21,
+      "ref": "Y 7.21",
+      "orig": "ashaya dadhãmi haomemca para-haomemca xshnûmaine\nzarathushtrahe spitâmahe ashaonô fravashêe aoxtô-nâmanô\nýazatahe, ashaya dadhãmi aêsma baoidhi xshnûmaine\ntava âthrô ahurahe mazdå puthra aoxtô-nâmanô\nýazatahe. (ashaya dadhãmi hvarethem myazdem ...\nýazatahe (2).)",
+      "en": "And I offer the Haoma and the Haoma-juice for the propitiation\nof the Fravashi of Zarathushtra Spitama the saint, the Yazad of\nthe spoken name.\nAnd I offer the wood-billets with the perfume for Thy propitiation,\nthe Fire's, Ahura Mazda's son, the Yazad of the spoken name.",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 22,
+      "ref": "Y 7.22",
+      "orig": "ashaya dadhãmi ashâunãm fravashinãm\nukhranãm aiwithûranãm paoiryô-tkaêshanãm\nfravashinãm nabânazdishtanãm fravashinãm.",
+      "en": "And I offer with a complete and sacred offering to the Fravashis\nof the saints, the mighty and overwhelming, to those of the saints\nof the ancient lore, and to those of the next of kin.",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 23,
+      "ref": "Y 7.23",
+      "orig": "ashaya dadhãmi vîspaêibyô ashahe\nratubyô, ashaya dadhãmi vîspaêibyô\nvanghudhâbyô ýazataêibyô mainyaoibyascâ\ngaêthyaêibyascâ ýôi heñti\nýasnyâca vahmyâca ashât haca ýat\nvahishtât!",
+      "en": "And I offer with a complete and sacred offering to all the\nlords of the ritual order, and to all the good Yazads heavenly\nand earthly who are (meet) for sacrifice and homage because of\nAsha who is Vahishta (of Righteousness who is the Best).",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 24,
+      "ref": "Y 7.24",
+      "orig": "ashaya-nô paitî jamyât ýehyâ\nsavâ ishåñtî râdanghô, thwôi\nstaotarascâ mãthranascâ ahura-mazdâ aogemadaêcâ\nusmahicâ vîsâmadaêcâ, hyat mîzhdem\nmavaêthem fradadâthâ daênâbyô\nmazdâ ahurâ, (thwôi staotarascâ ... mazdâ\nahurâ (2).)",
+      "en": "May that approach to us, and with a sacred blessing (O Lord!)\nwhose benefits the offerers are seeking for. Thy praisers and\nMathra-speakers, O Ahura Mazda! may we be named; we desire it,\nand such may we be. What reward, O Ahura Mazda! adapted to myself\nThou hast appointed unto souls,",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 25,
+      "ref": "Y 7.25",
+      "orig": "ahyâ hvô nê dâidî ahmâicâ\nahuyê manah'yâica, tat ahyâ ýâ\ntat upâ jamyâmâ tavâcâ sarem ashah'yâcâ\nvîspâi ýavê. ýathâ ahû\nvairyô athâ ratush ashâtcît hacâ\n... (2)!",
+      "en": "Of this do Thou Thyself bestow upon us for this world and\nfor that of mind; (yea, do Thou bestow) so much of this as that\nwe may attain to Thy ruling protection and to that of Righteousness\nfor ever.",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 26,
+      "ref": "Y 7.26",
+      "orig": "ahunem vairîm ýazamaide, arshuxdhem vâcim\nýazamaide, dahmãm vanguhîm âfritîm\nýazamaide, ukhrem taxmem dâmôish upamanem ýazatem\nýazamaide, haurvata ameretâta ýazamaide, gâush\nhudå ýazamaide, haomemca para-haomemca ýazamaide,\naêsmãsca baoidhîmca ýazamaide, frasasti\ndahmayå vanghuyå âfritôish!",
+      "en": "We sacrifice to the Ahuna-vairya and to the veracious word\ncorrectly uttered, and to the good and pious prayer for blessings,\nand to the dreadful curse of the wise, the Yazad, and to Haurvatat\nand Ameretatat, and to the flesh of the Kine of blessed gift,\nand to the Haoma and Haoma-juice, and to the wood-billets, and\nthe perfume, for the praise of the pious and good prayer for blessings.\n(The Yenghe hatam:)",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 27,
+      "ref": "Y 7.27",
+      "orig": "ýenghê hâtãm âat ýesnê\npaitî vanghô mazdå ahurô vaêthâ\nashât hacâ ýånghãmcâ tãscâ\ntåscâ ýazamaide.",
+      "en": "(To that one) of beings do we sacrifice whose superior (fidelity)\nin the sacrifice Ahura Mazda knows through his Righteousness (within\nhim, yea, even to those female saints do we sacrifice) whose (superior\nsanctity is thus known. We sacrifice to all) both males and females\nwhose (superiority is such).\n(The Ratu speaks.) As an Ahu (revered and) to be chosen, he who is the Zaotar speaks\nforth to me.\n(The Zaotar.) So let the Ratu from his Righteousness, holy and learned, speak\nforth!\n<H2 id=y8",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 28,
+      "ref": "Y 7.28",
+      "orig": "(râspî,) ýathâ ahû vairyô\nýô zaotâ frâ-mê mrûtê,\n(zôt,) athâ ratush ashâtcît haca frâ\nashava vîdhvå mraotû!!",
+      "en": "",
+      "zh": ""
+    }
+  ]
+}

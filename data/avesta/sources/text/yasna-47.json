@@ -1,0 +1,93 @@
+{
+  "slug": "yasna-47",
+  "siglum": "Y 47",
+  "title_zh": "亞斯納 第 47 章‧伽薩‧豐饒之靈",
+  "title_en": "Yasna 47",
+  "canon": "avestan",
+  "volume": "yasna",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/yasna/y47to50.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "米爾斯（L. H. Mills）",
+  "en_url": "https://www.avesta.org/yasna/yasna.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "Vohu Mano": "沃胡‧馬納",
+    "Asha Vahishta": "阿沙‧瓦希什塔",
+    "Khshathra Vairya": "赫沙特拉‧瓦伊里亞",
+    "Spenta Armaiti": "斯彭塔‧阿爾邁提",
+    "Haurvatat": "豪爾瓦塔特",
+    "Ameretat": "阿梅雷塔特",
+    "Haoma": "豪麻",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 47,
+      "verse": 1,
+      "ref": "Y 47.1",
+      "orig": "speñtâ mainyû vahishtâcâ mananghâ\nhacâ ashât shyaothanâcâ vacanghâcâ\nahmâi dãn haurvâtâ ameretâtâ\nmazdå xshathrâ ârmaitî ahurô (2).\n(zôt,)",
+      "en": "For his holy Spirit and for Best Thought, deed, and word,\nin accordance with Right Mazda Ahura with Dominion and Piety shall\ngive us Welfare and Immortality.",
+      "zh": ""
+    },
+    {
+      "chapter": 47,
+      "verse": 2,
+      "ref": "Y 47.2",
+      "orig": "ahyâ manyêush spênishtahyâ vahishtem\nhizvâ uxdhâish vanghêush êeânû\nmananghô dà ârmatôish zastôibyâ\nshyaothanâ verezyat ôyâ cistî, hvô\npatâ ashahyâ mazdå.",
+      "en": "The best (work) of this most holy Spirit he fulfills with\nthe tongue through words of Good Thought, with work of his hands\nthrough the action of Piety, by virtue of this knowledge: he,\neven Mazda, is the Father of Right.",
+      "zh": ""
+    },
+    {
+      "chapter": 47,
+      "verse": 3,
+      "ref": "Y 47.3",
+      "orig": "ahyâ manyêush tvêm ahî tâ speñtô\nýê ahmâi gãm rânyô-skeretîm\nhêm-tashat at hôi vâstrâi râmâ-då\nârmaitîm hyat hêm vohû mazdâ hême-frashtâ\nmananghâ.",
+      "en": "Thou art the holy Father of this Spirit, which has created\nfor us the luck-bringing cattle, and for its pasture to give it\npeace (has created) Piety, when he had taken counsel, O Mazda,\nwith Good Thought.",
+      "zh": ""
+    },
+    {
+      "chapter": 47,
+      "verse": 4,
+      "ref": "Y 47.4",
+      "orig": "ahmât manyêush râreshyeiñtî\ndregvañtô mazdâ speñtât nôit\nithâ ashâunô kasêushcît nâ\nashâunê kâthê anghat isvâcît\nhãs paraosh akô dregvâitê.",
+      "en": "From this Spirit have Liars fallen away, O Mazda, but not\nthe Righteous. Whether one is lord of little or of much, he is\nto show love to the righteous, but be ill unto the Liar.",
+      "zh": ""
+    },
+    {
+      "chapter": 47,
+      "verse": 5,
+      "ref": "Y 47.5",
+      "orig": "tâcâ speñtâ mainyû mazdâ\nahurâ ashâunê côish ýâ-zhî\ncîcâ vahishtâ hanare thwahmât zaoshât\ndregvå baxshaitî ahyâ shyaothanâish akât\nâshyãs mananghô.",
+      "en": "And all the best things which by this Holy Spirit thou hast\npromised to the righteous, O Mazda Ahura, shall the Liar partake\nof them without thy will, who by his actions is on the side of\nIll Thought?",
+      "zh": ""
+    },
+    {
+      "chapter": 47,
+      "verse": 6,
+      "ref": "Y 47.6",
+      "orig": "tâ då speñtâ mainyû mazdâ\nahurâ âthrâ vanghâu vîdâitîm\nrânôibyâ ârmatôish debãzanghâ\nashah'yâcâ hâ-zî pourûsh isheñtô\nvâurâitê!",
+      "en": "Through this holy Spirit, Mazda Ahura, and through the Fire\nthou wilt give the division of good to the two parties, with support\nof Piety and Right. This verily will convert many who are ready\nto hear.\n<H2 id=y48",
+      "zh": ""
+    },
+    {
+      "chapter": 47,
+      "verse": 7,
+      "ref": "Y 47.7",
+      "orig": "(zôt u râspî,) speñtâ mainyû\n... ârmaitî ahurô (2). ashem vohû ...\n(3). speñtâ-mainyûm hâitîm ýazamaide.\nýenghê hâtãm ... tåscâ ýazamaide!!",
+      "en": "",
+      "zh": ""
+    }
+  ]
+}

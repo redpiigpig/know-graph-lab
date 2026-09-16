@@ -1,0 +1,61 @@
+{
+  "slug": "yasna-69",
+  "siglum": "Y 69",
+  "title_zh": "亞斯納 第 69 章",
+  "title_en": "Yasna 69",
+  "canon": "avestan",
+  "volume": "yasna",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/yasna/y54to72.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "米爾斯（L. H. Mills）",
+  "en_url": "https://www.avesta.org/yasna/yasna.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": "米爾斯的《東方聖書》譯本未另譯本章，原書註明 (This chapter is composed of fragments: see Y15.2 and Y51.1\nand 22.)。英譯欄因此從缺——這是譯本的處理方式，不是本站漏抓。",
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "Vohu Mano": "沃胡‧馬納",
+    "Asha Vahishta": "阿沙‧瓦希什塔",
+    "Khshathra Vairya": "赫沙特拉‧瓦伊里亞",
+    "Spenta Armaiti": "斯彭塔‧阿爾邁提",
+    "Haurvatat": "豪爾瓦塔特",
+    "Ameretat": "阿梅雷塔特",
+    "Haoma": "豪麻",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 69,
+      "verse": 1,
+      "ref": "Y 69.1",
+      "orig": "ýenghê mê ashât hacâ vahishtem\nýesnê paitî vaêdâ mazdå ahurô\nýôi ångharecâ heñticâ tã\nýazâi hvâish nâmênîsh pairicâ\njasâi vañtâ, vohu manô vahishtem.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 69,
+      "verse": 2,
+      "ref": "Y 69.2",
+      "orig": "ýenghê mê ... vañtâ, ashem\nvohû vahishtem astî (2).",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 69,
+      "verse": 3,
+      "ref": "Y 69.3",
+      "orig": "ýenghê mê ... vañtâ, vohû\nxshathrem vairîm bâgem aibî-bairishtem (3)!!",
+      "en": "",
+      "zh": ""
+    }
+  ]
+}

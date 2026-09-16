@@ -1,0 +1,77 @@
+{
+  "slug": "yasna-14",
+  "siglum": "Y 14",
+  "title_zh": "亞斯納 第 14 章",
+  "title_en": "Yasna 14",
+  "canon": "avestan",
+  "volume": "yasna",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/yasna/y13to27.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "米爾斯（L. H. Mills）",
+  "en_url": "https://www.avesta.org/yasna/yasna.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "Vohu Mano": "沃胡‧馬納",
+    "Asha Vahishta": "阿沙‧瓦希什塔",
+    "Khshathra Vairya": "赫沙特拉‧瓦伊里亞",
+    "Spenta Armaiti": "斯彭塔‧阿爾邁提",
+    "Haurvatat": "豪爾瓦塔特",
+    "Ameretat": "阿梅雷塔特",
+    "Haoma": "豪麻",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 14,
+      "verse": 1,
+      "ref": "Y 14.1",
+      "orig": "(zôt,) vîsâi vê ameshâ speñtâ\nstaotâ zaotâ zbâtâ ýashtâ\nframaretâ aibijaretâ ýûshmâkem\nýasnâica vahmâica ýat ameshanãm\nspeñtanãm ahmâkem havanguhâica ashavastâica\nýat saoshyañtãm ashaonãm.",
+      "en": "I will come to You, O Ye Bountiful Immortals! as a praiser\nand a priest, and an invoker and sacrificer, as a memorizing reciter\nand a chanter, for Your sacrifice and homage, which are to be\noffered to You, the Bountiful Immortals, and for our dedication\nand sanctification; (yea, for ours) who are the holy prophets\n(destined to benefit the saints).",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 2,
+      "ref": "Y 14.2",
+      "orig": "pairî vê ameshâ speñtâ huxshathrâ\nhudhånghô dadhãmi tanvascît hvah'yå\nushtanem pairî vîspå hujîtayô!",
+      "en": "And to You, O Ye Bountiful Immortals! would I dedicate the\nflesh of my very body, and all the blessings of a prospered life.",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 3,
+      "ref": "Y 14.3",
+      "orig": "ahmya zaothre baresmanaêca vîspe ashavanô\nýazata âyese ýeshti, vîspe ashahe ratavô\nâyese ýeshti, hâvanîm paiti ratûm\nsâvanghaêm vîsîmca paiti ratûm ratavô\nvîspe mazishta paiti ratûm! (zôt u râspî,)",
+      "en": "In this Zaothra with this Baresman, I desire to approach the\nholy Yazads with my praise, and all the holy lords of the ritual\norder at their times, Havani at his time, and Savanghi and Visya\nat their times.",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 4,
+      "ref": "Y 14.4",
+      "orig": "fravarâne mazdayasnô zarathushtrish vîdaêvô\nahura-tkaêshô, hâvanêe ashaone ashahe\nrathwe ýasnâica vahmâica xshnaothrâica\nfrasastayaêca, sâvanghêe vîsyâica\nashaone ashahe rathwe ýasnâica vahmâica xshnaothrâica\nfrasastayaêca, rathwãm ayaranãmca asnyanãmca\nmâhyanãmca ýâiryanãmca saredhanãmca\nýasnâica vahmâica xshnaothrâica (râspî,)\nfrasastayaêca.",
+      "en": "I confess myself a Mazdayasnian, and of Zarathushtra's\norder.",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 5,
+      "ref": "Y 14.5",
+      "orig": "(zôt,) ýathâ ahû vairyô zaotâ\nfrâ-mê mrûtê, (râspî,) ýathâ\nahû vairyô ýô zaotâ frâ-mê\nmrûtê, (zôt,) athâ ratush ashâtcît\nhaca frâ ashava vîdhvå mraotû!!",
+      "en": "The Zaotar speaks: As an Ahu (revered and) chosen, the Zaotar\n(?) speaks forth to me (?).\nThe Ratu speaks: As an Ahu (revered and) to be chosen, the Zaotar\nspeaks forth to me.\nThe Zaotar: So let the Ratu from his Righteousness, holy and learned,\nspeak forth!\n<H2 id=y15",
+      "zh": ""
+    }
+  ]
+}

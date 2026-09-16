@@ -1,0 +1,253 @@
+{
+  "slug": "yasna-22",
+  "siglum": "Y 22",
+  "title_zh": "亞斯納 第 22 章",
+  "title_en": "Yasna 22",
+  "canon": "avestan",
+  "volume": "yasna",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/yasna/y13to27.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "米爾斯（L. H. Mills）",
+  "en_url": "https://www.avesta.org/yasna/yasna.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "Vohu Mano": "沃胡‧馬納",
+    "Asha Vahishta": "阿沙‧瓦希什塔",
+    "Khshathra Vairya": "赫沙特拉‧瓦伊里亞",
+    "Spenta Armaiti": "斯彭塔‧阿爾邁提",
+    "Haurvatat": "豪爾瓦塔特",
+    "Ameretat": "阿梅雷塔特",
+    "Haoma": "豪麻",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 22,
+      "verse": 1,
+      "ref": "Y 22.1",
+      "orig": "ashem vohû vahishtem astî ... (3). baresmana paiti-bereta\nhadha-zaothra dathushô ahurahe mazdå raêvatô\nhvarenanguhatô ameshanãm speñtanãm,\nimem haomem ashaya uzdâtem âyese ýeshti, imãmcâ\ngãm jîvyãm ashaya uzdâtãm âyese\nýeshti, imãmcâ urvarãm hadhânaêpatãm\nashaya uzdâtãm âyese ýeshti,",
+      "en": "With the Baresman brought hither together with the Zaothra,\nfor the worship of the Creator Ahura Mazda, the resplendent, the\nglorious, and for that of the Bountiful Immortals, I desire to\napproach this Haoma with my praise, offered (as it is) with punctilious\nsanctity (or, for a blessing), and this fresh milk, and this plant\nHadhanaepata.",
+      "zh": ""
+    },
+    {
+      "chapter": 22,
+      "verse": 2,
+      "ref": "Y 22.2",
+      "orig": "aiwyô vanguhibyô imå zaothrå haomavaitîsh\ngaomavaitîsh hadhânaêpatavaitîsh ashaya\nuzdâtå âyese ýeshti, aiwyô vanguhibyô\napemca haomyãm âyese ýeshti, asmanaca hâvana\nâyese ýeshti, ayanghaênaca hâvana âyese\nýeshti.",
+      "en": "And, as an act of worship to the beneficent waters,\nI desire to approach these Zaothras with (my) praise offered (as\nthey are) with punctilious sanctity, having the Haoma with them,\nand the flesh, with the Hadhanaepata. And I desire to approach\nthe Haoma-water with my praise for the beneficent waters; and\nI desire to approach the stone mortar and the iron mortar with\nmy praise.",
+      "zh": ""
+    },
+    {
+      "chapter": 22,
+      "verse": 3,
+      "ref": "Y 22.3",
+      "orig": "imãmcâ urvarãm baresmanîm jakhmûshîmca\nratufritîm marethremca varezîmca daênayå\nvanghuyå mâzdayasnôish gâthanãmca\nsraothrem jakhmûshîmca ashaonô ashahe rathwô\nratufritîm imã aêsmãsca baoidhîmca\nâyese ýeshti tava âthrô ahurahe mazdå\nputhra vîspaca vohu mazdadhâta ashacithra âyese\nýeshti,",
+      "en": "And I desire to approach this plant for the Baresman\nwith my praise, and the well-timed prayer for blessings, that\nwhich has approached (to accept our homage), and the memorized\nrecital and the fulfillment of the good Mazdayasnian Faith, and\nthe heard recital of the Gathas, and the well-timed and successful\nprayer for blessings, that of the holy lord of the ritual order.\nAnd I desire to approach these wood-billets and their perfume\nwith my praise, - thine, the Fire's, O Ahura Mazda's son! Yea,\nI desire to approach all good things with my praise, those which\nMazda made, and which have the seed of sanctity (within them),\n(4) for the propitiation of Ahura Mazda and of the Bountiful Immortals,\nand of Sraosha the blessed, and of Ahura Mazda's Fire, the lofty\nritual lord!\n5-19.\n(=Y3.5-19; 20-23=Y3.1-4)",
+      "zh": ""
+    },
+    {
+      "chapter": 22,
+      "verse": 4,
+      "ref": "Y 22.4",
+      "orig": "xshnûmaine ahurahe mazdå ameshanãm speñtanãm\nsraoshahe ashyehe âthrô ahurahe mazdå rathwô\nberezatô ýô ashahe!",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 22,
+      "verse": 5,
+      "ref": "Y 22.5",
+      "orig": "âyese ýeshti asnyaêibyô ashahe ratubyô,\nhâvanêe ashaone ashahe rathwe, âyese ýeshti\nsâvanghêe vîsyâica ashaone ashahe rathwe\nâyese ýeshti mithrahe vouru-gaoyaotôish hazangrô-gaoshahe\nbaêvare-cashmanô aoxtô-nâmanô ýazatahe\nrâmanô hvâstrahe.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 22,
+      "verse": 6,
+      "ref": "Y 22.6",
+      "orig": "(zôt,) âyese ýeshti rapithwinâi ashaone\nashahe rathwe, âyese ýeshti frâdat-fshave zañtumâica\nashaone ashahe rathwe, âyese ýeshti ashahe vahishtahe\nâthrasca ahurahe mazdå.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 22,
+      "verse": 7,
+      "ref": "Y 22.7",
+      "orig": "âyese ýeshti uzayeirinâi ashaone ashahe\nrathwe, âyese ýeshti frâdat-vîrâi\ndâh'yumâica ashaone ashahe rathwe, âyese ýeshti\nberezatô ahurahe nafedhrô apãm apasca mazdadhâtayå.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 22,
+      "verse": 8,
+      "ref": "Y 22.8",
+      "orig": "âyese ýeshti aiwisrûthrimâi aibigayâi\nashaone ashahe rathwe, âyese ýeshti frâdat-vîspãm-hujyâtêe\nzarathushtrôtemâica ashaone ashahe rathwe, âyese\nýeshti ashâunãm fravashinãm khenãnãmca\nvîrô-vãthwanãm ýâiryayåsca\nhushitôish amaheca hutâshtahe huraodhahe verethrakhnaheca\nahuradhâtahe vanaiñtyåsca uparatâtô.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 22,
+      "verse": 9,
+      "ref": "Y 22.9",
+      "orig": "âyese ýeshti ushahinâi ashaone ashahe rathwe,\nâyese ýeshti berejyâi nmânyâica\nashaone ashahe rathwe, âyese ýeshti sraoshahe ashyehe\nashivatô verethrâjanô frâdat-gaêthahe\nrashnaosh razishtahe arshtâtasca frâdat-gaêthayå\nvaredat-gaêthayå!",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 22,
+      "verse": 10,
+      "ref": "Y 22.10",
+      "orig": "âyese ýeshti mâhyaêibyô ashahe\nratubyô, añtaremånghâi ashaone ashahe\nrathwe, âyese ýeshti perenô-månghâi\nvîshaptathâica ashaone ashahe rathwe!",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 22,
+      "verse": 11,
+      "ref": "Y 22.11",
+      "orig": "âyese ýeshti ýâiryaêibyô\nashahe ratubyô, maidhyôizaremayâi ashaone ashahe\nrathwe, âyese ýeshti maidhyôishemâi ashaone\nashahe rathwe, âyese ýeshti paitishhahyâi ashaone\nashahe rathwe, âyese ýeshti ayâthrimâi\nfraourvaêshtrimâi varshniharshtâica ashaone\nashahe rathwe, âyese ýeshti maidhyâiryâi\nashaone ashahe rathwe, âyese ýeshti hamaspathmaêdayâi\nashaone ashahe rathwe, âyese ýeshti saredhaêibyô\nashahe ratubyô.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 22,
+      "verse": 12,
+      "ref": "Y 22.12",
+      "orig": "âyese ýeshti vîspaêibyô aêibyô\nratubyô ýôi heñti ashahe ratavô\nthrayasca thrisãsca nazdishta pairishhâvanayô\nýôi heñti ashahe ýat vahishtahe mazdô-frasâsta\nzarathushtrô-fraoxta!",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 22,
+      "verse": 13,
+      "ref": "Y 22.13",
+      "orig": "âyese ýeshti ahuraêibya mithraêibya\nberezañbya aithyajanghaêibya ashavanaêibya\nstârãmca speñtô-mainyavanãm dâmanãm\ntishtryeheca stârô raêvatô hvarenanguhatô\nmånghaheca gaocithrahe hvareca xshaêtahe aurvat-aspahe\ndôithrahe ahurahe mazdå mithrahe dah'yunãm\ndainghupatôish, âyese ýeshti (...rôz...)\nahurahe mazdå raêvatô hvarenanguhatô,\nâyese ýeshti (... mâh ... ) ashâunãm\nfravashinãm!",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 22,
+      "verse": 14,
+      "ref": "Y 22.14",
+      "orig": "âyese ýeshti tava âthrô ahurahe mazdå\nputhra mat vîspaêibyô âterebyô,\nâyese ýeshti aiwyô vanguhibyô vîspanãmca\napãm mazdadhâtanãm vîspanãmca\nurvaranãm mazdadhâtanãm!",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 22,
+      "verse": 15,
+      "ref": "Y 22.15",
+      "orig": "âyese ýeshti mãthrahe speñtahe\nashaonô verezyanguhahe dâtahe vîdaêvahe\ndâtahe zarathushtrôish darekhayå upayanayå\ndaênayå vanghuyå mâzdayasnôish.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 22,
+      "verse": 16,
+      "ref": "Y 22.16",
+      "orig": "âyese ýeshti garôish ushi-darenahe mazdadhâtahe\nashahvâthrahe vîspaêshãmca gairinãm\nashahvâthranãm pouru-hvâthranãm mazdadhâtanãm\nkâvayeheca hvarenanghô mazdadhâtahe ahvaretaheca\nhvarenanghô mazdadhâtahe, âyese ýeshti\nashôish vanghuyå cistôish vanghuyå erethê\nvanghuyå rasãstâtô vanghuyå hvarenanghô\nsavanghô mazdadhâtahe.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 22,
+      "verse": 17,
+      "ref": "Y 22.17",
+      "orig": "âyese ýeshti dahmayå vanghuyå âfritôish\ndahmaheca narsh ashaonô ukhraheca taxmahe dâmôish\nupamanahe ýazatahe!",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 22,
+      "verse": 18,
+      "ref": "Y 22.18",
+      "orig": "âyese ýeshti ånghãm asanghãmca\nshôithranãmca gaoyaoitinãmca maêthananãmca\navô-hvarenanãmca apãmca zemãmca urvaranãmca\nainghåsca zemô avaingheca ashnô vâtaheca\nashaonô strãm månghô hûrô\nanakhranãm raocanghãm hvadhâtanãm vîspanãmca\nspeñtahe mainyêush dâmanãm ashaonãm\nashaoninãmca ashahe rathwãm.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 22,
+      "verse": 19,
+      "ref": "Y 22.19",
+      "orig": "âyese ýeshti rathwô berezatô ýô\nashahe, rathwãm ayaranãmca asnyanãmca mâhyanãmca\nýâiryanãmca saredhanãmca ýôi\nheñti ashahe ratavô, hâvanôish rathwô!",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 22,
+      "verse": 20,
+      "ref": "Y 22.20",
+      "orig": "(zôt u râspî,) imem haomem ashaya uzdâtem\nâyese ýeshti, imãmcâ gãm jîvyãm\nashaya uzdâtãm âyese ýeshti, imãmcâ\nurvarãm hadhânaêpatãm ashaya uzdâtãm\nâyese ýeshti.",
+      "en": "And I desire to approach this Haoma with (my) praise, that\nwhich is thus lifted up with sanctity, and this milk (fresh as\nit is, and as if) living and lifted up with sanctity, and this\nplant the Hadhanaepata lifted up with sanctity.",
+      "zh": ""
+    },
+    {
+      "chapter": 22,
+      "verse": 21,
+      "ref": "Y 22.21",
+      "orig": "aiwyô vanguhibyô imå zaothrå haomavaitîsh\ngaomavaitîsh hadhânaêpatavaitîsh ashaya\nuzdâtå âyese ýeshti, aiwyô vanguhibyô\napemca haomyãm âyese ýeshti, asmanaca hâvana\nâyese ýeshti, ayanghaênaca hâvana âyese\nýeshti.",
+      "en": "And I desire\nto approach these Zaothras with (my) praise for the beneficial\nwaters, these Zaothras which have the Haoma with them and the\nmilk with them, and the Hadhanaepata, and which are lifted up\nwith sanctity. And I desire to approach the Haoma-water with (my)\npraise for the beneficial waters, and the two mortars, the stone\none and the iron one, (22) and I desire to, approach this branch\nfor the Baresman with my praise, and the memorized recital and\nfulfillment of the Mazdayasnian law, and the heard recital of\nthe Gathas, and the well-timed and persistent prayer for blessings(uttered)\nby the holy lords of the ritual order, and this wood and perfume,\neven thine, O Fire, Ahura Mazda's son, and all good objects Mazda-made\n(23) for the propitiation of Ahura Mazda, the resplendent, the\nglorious, and of the Bountiful Immortals, and of Mithra of the\nwide pastures, and of Raman Hvastra, (24) and of the resplendent\nsun, immortal, radiant, of the fleet horses, and of Vayu, (of\npredominant influence and) working on high, set over the other\nbeings in the creation [(Pazand); that is for thee thus (O Vayu)\nwhen thine influence is that which appertains to Spenta Mainyu],\nand for the propitiation of the most just knowledge Mazda-given,\nand of the holy and good Religion, the Mazdayasnian Faith; (25)\nfor the propitiation of the Mathra Spenta, (the bounteous) and\nholy, and the effective, instituted against the Daevas, the Zarathushtrian\nlaw, and of the long descent of the good Mazdayasnian Faith [the\nholding in mind and devotion to the Mathra Spenta, and knowledge\nof the Mazdayasnian Religion] for the propitiation of the understanding\nwhich is innate and Mazda-made, and of that which is heard by\nthe ear; (26) and for thy propitiation, the Fire's, O Ahura Mazda's\nson! [(Pazand); (yea) thine, the Fire's, O Ahura Mazda's son]\nwith all the fires, and for the propitiation of Mount Ushi-darena,\nthe Mazda-made, radiant with sanctity; (27) and of all the holy\nYazads, spiritual and earthly, and of the holy Fravashis, the\nredoubted and overwhelming, those of the ancient lore, and those\nof the next of kin and of the Yazad of the spoken name!\n<H2 id=y23",
+      "zh": ""
+    },
+    {
+      "chapter": 22,
+      "verse": 22,
+      "ref": "Y 22.22",
+      "orig": "imãmcâ urvarãm baresmanîm jakhmûshîmca\nratufritîm marethremca varezîmca daênayå\nvanghuyå mâzdayasnôish gâthanãmca\nsraothrem jakhmûshîmca ashaonô ashahe rathwô\nratufritîm imã aêsmãsca baoidhîmca\nâyese ýeshti tava âthrô ahurahe mazdå\nputhra, vîspaca vohu mazdadhâta ashacithra âyese\nýeshti,",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 22,
+      "verse": 23,
+      "ref": "Y 22.23",
+      "orig": "xshnûmaine ahurahe mazdå raêvatô hvarenanguhatô\nameshanãm speñtanãm mithrahe vouru-gaoyaotôish\nrâmanasca hvâstrahe,",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 22,
+      "verse": 24,
+      "ref": "Y 22.24",
+      "orig": "hvarexshaêtahe ameshahe raêvahe aurvat-aspahe,\nvayaosh uparô-kairyehe taradhâtô anyâish\ndâmãn, aêtat tê vayô ýat\ntê asti speñtô-mainyaom, razishtayå cistayå\nmazdadhâtayå ashaonyå daênayå vanghuyå\nmâzdayasnôish,",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 22,
+      "verse": 25,
+      "ref": "Y 22.25",
+      "orig": "mãthrahe speñtahe ashaonô verezyanguhahe\ndâtahe vîdaêvahe dâtahe zarathushtrôish\ndarekhayå upayanayå daênayå vanghuyå\nmâzdayasnôish zarazdâtôish mãthrahe\nspeñtahe ushi-darethrem daênayå mâzdayasnôish\nvaêdhîm mãthrahe speñtahe, âsnahe\nxrathwô mazdadhâtahe gaoshô-srûtahe xrathwô\nmazdadhâtahe,",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 22,
+      "verse": 26,
+      "ref": "Y 22.26",
+      "orig": "âthrô ahurahe mazdå puthra tava âtarsh\nputhra ahurahe mazdå mat vîspaêibyô âterebyô,\ngarôish ushi-darenahe mazdadhâtahe ashahvâthrahe,",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 22,
+      "verse": 27,
+      "ref": "Y 22.27",
+      "orig": "vîspaêshãm ýazatanãm ashaonãm\nmainyavanãm gaêthyanãm, ashâunãm\nfravashinãm ukhranãm aiwithûranãm paoiryô-tkaêshanãm\nfravashinãm nabânazdishtanãm fravashinãm,\naoxtô-nâmanô ýazatahe. (imem haomem ...\nýazatahe (2)!!)",
+      "en": "",
+      "zh": ""
+    }
+  ]
+}

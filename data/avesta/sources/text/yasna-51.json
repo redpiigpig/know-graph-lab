@@ -1,0 +1,221 @@
+{
+  "slug": "yasna-51",
+  "siglum": "Y 51",
+  "title_zh": "亞斯納 第 51 章‧伽薩‧善的王權",
+  "title_en": "Yasna 51",
+  "canon": "avestan",
+  "volume": "yasna",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/yasna/y51.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "米爾斯（L. H. Mills）",
+  "en_url": "https://www.avesta.org/yasna/yasna.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "Vohu Mano": "沃胡‧馬納",
+    "Asha Vahishta": "阿沙‧瓦希什塔",
+    "Khshathra Vairya": "赫沙特拉‧瓦伊里亞",
+    "Spenta Armaiti": "斯彭塔‧阿爾邁提",
+    "Haurvatat": "豪爾瓦塔特",
+    "Ameretat": "阿梅雷塔特",
+    "Haoma": "豪麻",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 51,
+      "verse": 1,
+      "ref": "Y 51.1",
+      "orig": "vohû xshathrem vairîm bâgem aibî-bairishtem\nvîdîshemnâish îzhâcît ashâ\nañtare-caraitî shyaothanâish mazdâ vahishtem\ntat nê nûcît vareshânê (2). (zôt,)",
+      "en": "The good, the precious Dominion, as a most surpassing portion,\nshall Right achieve for him that with zeal accomplishes what is\nbest through his actions, O Mazda. This will I now work out for\nus.",
+      "zh": ""
+    },
+    {
+      "chapter": 51,
+      "verse": 2,
+      "ref": "Y 51.2",
+      "orig": "tâ-vê mazdâ paourvîm ahurâ ashâ\nýecâ taibyâcâ ârmaitê dôishâ-môi\nishtôish xshathrem xshmâkem vohû mananghâ\nvahmâi dâidî savanghô.",
+      "en": "Before all, O Mazda Ahura, assure me the Dominion of your\npossession, O Right, and what is thine, O Piety. Your (Dominion)\nof blessing give through Good Thought to him that prays.",
+      "zh": ""
+    },
+    {
+      "chapter": 51,
+      "verse": 3,
+      "ref": "Y 51.3",
+      "orig": "â-vê gêushâ hêmyañtû\nýôi vê shyaothanâish sâreñtê\nahurô ashâ-hizvå uxdhâish vanghêush\nmananghô ýaêshãm tû pouruyô\nmazdâ fradaxshtâ apî.",
+      "en": "Let your ears attend to those who in their deeds and utterances\nhold to your words, Ahura and Right, to those of Good Thought,\nfor whom thou, Mazda, art the first teacher.",
+      "zh": ""
+    },
+    {
+      "chapter": 51,
+      "verse": 4,
+      "ref": "Y 51.4",
+      "orig": "kuthrâ ârôish âfseratush kuthrâ\nmerezhdikâ axshtat kuthrâ ýasô h'yên\nashem kû speñtâ ârmaitish kuthrâ\nmanô vahishtem kuthrâ thwâ xshathrâ mazdâ.",
+      "en": "Where is the recompense for wrong to be found, where pardon\nfor the same? Where shall they attain the Right? Where is the\nholy Piety, where Best Thought? Thy Dominions, where are they,\nO Mazda?",
+      "zh": ""
+    },
+    {
+      "chapter": 51,
+      "verse": 5,
+      "ref": "Y 51.5",
+      "orig": "vîspâ-tâ peresãs ýathâ\nashât hacâ gãm vîdat vâstryô\nshyaothanâish ereshvô hãs huxratush nemanghâ\nýê dâthaêibyô eresh-ratûm\nxshayãs ashivå cistâ.",
+      "en": "All this (I) ask, whether the husbandman shall find cattle\nin accordance with Right, he that is perfect in action, a man\nof understanding, when he prays to him, who hath promised unto\nthe Wise the true Judge, in that he is Lord of the two destinies...",
+      "zh": ""
+    },
+    {
+      "chapter": 51,
+      "verse": 6,
+      "ref": "Y 51.6",
+      "orig": "ýê vahyô vanghêush dazdê ýascâ\nhôi vârâi râdat ahurô xshathrâ\nmazdå at ahmâi akât ashyô dà\nýê hôi nôit vîdâitî\napêmê anghêush urvaêsê.",
+      "en": "Even he, Ahura Mazda, who through his Dominion appoints what\nis better than good to him that is attached to his will, but what\nis worse than evil to him that obeys him not, at the last end\nof life.",
+      "zh": ""
+    },
+    {
+      "chapter": 51,
+      "verse": 7,
+      "ref": "Y 51.7",
+      "orig": "dâidî-môi ýê gãm tashô\napascâ urvaråscâ ameretâtâ haurvâtâ\nspênishtâ mainyû mazdâ tevîshî\nutayûitî mananghâ vohû sêñnghê.",
+      "en": "Give me, O thou that didst create the Ox and Waters and Plants,\nWelfare and Immortality, by the Highest Spirit, O Mazda, strength\nand continuance through Good Thought at the (Judge's) sentence.",
+      "zh": ""
+    },
+    {
+      "chapter": 51,
+      "verse": 8,
+      "ref": "Y 51.8",
+      "orig": "at zî tôi vaxshyâ mazdâ vîdushê\nzî-nâ mruyât hyat akôyâ dregvâitê\nushtâ ýê ashem dâdrê hvô\nzî mãthrâ shyâtô ýê\nvîdushê mravaitî.",
+      "en": "Of these two things will I speak, O Mazda, - for one may speak\nto the wise, - the ill that is threatened to the Liar, and the\nhappiness of him who clings to the Right. For he, the Prophet,\nis glad of every one who says this to the wise.",
+      "zh": ""
+    },
+    {
+      "chapter": 51,
+      "verse": 9,
+      "ref": "Y 51.9",
+      "orig": "ýãm xshnûtem rânôibyâ\ndå thwâ âthrâ suxrâ mazdâ\nayanghâ xshustâ aibî ahvâhû daxshtem\ndâvôi râshayenghê dregvañtem savayô\nashavanem.",
+      "en": "What recompense thou wilt give to the two parties by thy red\nFire, by the molten metal, give us a sign of it in our souls -\neven the bringing of ruin to the Liar, of blessing to the Righteous.",
+      "zh": ""
+    },
+    {
+      "chapter": 51,
+      "verse": 10,
+      "ref": "Y 51.10",
+      "orig": "at ýê mâ-nâ marexshaitê anyâthâ\nahmât mazdâ hvô dâmôish drûjô\nhunush tâ duzhdå ýôi heñtî\nmaibyô zbayâ ashem vanghuyâ ashî gat tê.",
+      "en": "Whoso, other than this one, seeks to kill me, Mazda, he is\na son of the Lie's creation, ill-willed thus towards all that\nlive. I call the Right to come to me with good destiny.",
+      "zh": ""
+    },
+    {
+      "chapter": 51,
+      "verse": 11,
+      "ref": "Y 51.11",
+      "orig": "kê urvathô spitamâi zarathushtrâi\nnâ mazdâ kê vâ ashâ âfrashtâ\nkâ speñtâ ârmaitish kê vâ\nvanghêush mananghô acistâ magâi ereshvô.",
+      "en": "What man is friend to Spitama Zarathushtra, O Mazda? Who will\nlet himself be counseled by Right? With whom is holy Piety? Or\nwho as an upright man is intent on the brotherhood of Good Thought?",
+      "zh": ""
+    },
+    {
+      "chapter": 51,
+      "verse": 12,
+      "ref": "Y 51.12",
+      "orig": "nôit tâ-îm xshnâush vaêpyô\nkevînô peretô zemô zarathushtrem spitâmem\nhyat ahmî urûraost ashtô hyat hôi îm\ncaratascâ aodereshcâ zôishenû vâzâ.",
+      "en": "The Kavi's wanton did not please Zarathushtra Spitama at the\nWinter Gate, in that he stayed him from taking refuge with him,\nand when there came to him also (Zarathushtra's) two steeds shivering\nwith cold.",
+      "zh": ""
+    },
+    {
+      "chapter": 51,
+      "verse": 13,
+      "ref": "Y 51.13",
+      "orig": "tâ dregvatô maredaitî daênâ\nerezâush haithîm ýehyâ urvâ xraodaitî\ncinvatô peretå âkå h'âish shyaothanâish\nhizvascâ ashahyâ nãsvå pathô.",
+      "en": "Thus the Self of the Liar destroys for himself the assurance\nof the right Way; whose soul shall tremble at the Revelation on\nthe Bridge of the Separator, having turned aside with deeds and\ntongue from the Path of Right.",
+      "zh": ""
+    },
+    {
+      "chapter": 51,
+      "verse": 14,
+      "ref": "Y 51.14",
+      "orig": "nôit urvâtâ dâtôibyascâ\nkarapanô vâstrât arêm gavôi ârôish\nâsêñdâ hvâish shyaothanâishcâ\nsêñghâishcâ ýê-îsh\nsêñghô apêmem drûjô demânê\nâdât.",
+      "en": "The Karapans will not obey the statutes and ordinances concerning\nhusbandry. For the pain they inflict upon the cattle, fulfill\nupon them through their actions and judgments that judgment which\nat the last shall bring them to the House of the Lie.",
+      "zh": ""
+    },
+    {
+      "chapter": 51,
+      "verse": 15,
+      "ref": "Y 51.15",
+      "orig": "hyat mîzhdem zarathushtrô magavabyô côisht\nparâ garô demânê ahurô mazdå\njasat pouruyô tâ vê vohû mananghâ\nashâicâ savâish civîshî.",
+      "en": "When Zarathushtra hath promised to the men of his brotherhood,\n(which) in the House of Song Ahura Mazda hath first attained,\nfor all this I have looked through your blessings, Good Thought,\nand those of Right.",
+      "zh": ""
+    },
+    {
+      "chapter": 51,
+      "verse": 16,
+      "ref": "Y 51.16",
+      "orig": "tãm kavâ vîshtâspô magahyâ\nxshathrâ nãsat vanghêush padebîsh mananghô\nýãm cistîm ashâ mañtâ speñtô\nmazdå ahurô athâ-nê sazdyâi ushtâ.",
+      "en": "Kavi Vishtaspa hath the creed which the holy Mazda Ahura with\nRight hath devised, together with the dominion of the Brotherhood,\nand the path of Good Thought. So be it accomplished after our\ndesire.",
+      "zh": ""
+    },
+    {
+      "chapter": 51,
+      "verse": 17,
+      "ref": "Y 51.17",
+      "orig": "berexdhãm môi ferashaoshtrô hvô-gvô\ndaêdôisht kehrpêm daênayâi vanghuyâi\nýãm hôi ishyãm dâtû xshayãs\nmazdå ahurô ashahyâ âzhdyâi gerezdîm.",
+      "en": "The fair form of one that is dear hath Frashaoshtra Hvogva\npromised unto me: may sovereign Mazda Ahura grant that she attain\npossession of the Right for her good Self.",
+      "zh": ""
+    },
+    {
+      "chapter": 51,
+      "verse": 18,
+      "ref": "Y 51.18",
+      "orig": "tãm cistîm dêjâmâspô\nhvô-gvô ishtôish hvarenå ashâ vereñtê\ntat xshathrem mananghô vanguhîsh vîdô\ntat môi dâidî ahurâ hyat mazdâ rapên\ntavâ.",
+      "en": "This creed Jamaspa Hvogva chooses through Right, lordly in\nsubstance. This Dominion they (choose) who have part in Good Thought.\nThis grant me, Ahura, that they may find in thee, Mazda, their\nprotection.",
+      "zh": ""
+    },
+    {
+      "chapter": 51,
+      "verse": 19,
+      "ref": "Y 51.19",
+      "orig": "hvô tat nâ maidyôi-månghâ spitamâ\nahmâi dazdê daênayâ vaêdemnô\nýê ahûm ishasãs aibî mazdå\ndâtâ mraot gayehyâ shyaothanâish vahyô.",
+      "en": "The man himself, O Maidyoi-Maungha Spitama, hath set this\nbefore him after conceiving it in his own self. He that would\nsee life indeed, to him will he make known what in actions by\nMazda's ordinance is better during (this) existence.",
+      "zh": ""
+    },
+    {
+      "chapter": 51,
+      "verse": 20,
+      "ref": "Y 51.20",
+      "orig": "tat vê-nê hazaoshånghô vîspånghô\ndaidyâi savô ashem vohû mananghâ uxdhâ\nýâish ârmaitish ýazemnånghô\nnemanghâ mazdå rafedhrem cagedô.",
+      "en": "Your blessings shall ye give us, all that are one in will,\nwith whom Right, Good Thought, Piety, and Mazda (are one) according\nto promise, giving your aid when worshipped with reverence.",
+      "zh": ""
+    },
+    {
+      "chapter": 51,
+      "verse": 21,
+      "ref": "Y 51.21",
+      "orig": "ârmatôish nâ speñtô hvô\ncistî uxdhâish shyaothanâ daênâ\nashem spênvat vohû xshathrem mananghâ mazdå\ndadât ahurô têm vanguhîm ýâsâ\nashîm.",
+      "en": "By Piety the man becomes Holy. Such person advances Right\nthrough his thinking, his words, his action, his Self. By Good\nThought Mazda Ahura will give the Dominion. For this good Destiny\nI long.",
+      "zh": ""
+    },
+    {
+      "chapter": 51,
+      "verse": 22,
+      "ref": "Y 51.22",
+      "orig": "ýehyâ môi ashât hacâ vahishtem\nýesnê paitî vaêdâ mazdå ahurô\nýôi ångharecâ heñticâ tã\nýazâi hvâish nâmênîsh pairicâ\njasâi vañtâ!",
+      "en": "He, I ween, that Mazda Ahura knoweth among all that have been\nand are, as one to whom in accordance with Right the best portion\nfalls for his prayer, these will I reverence by their own names\nand go before them with honor.\n<H2 id=y52",
+      "zh": ""
+    },
+    {
+      "chapter": 51,
+      "verse": 23,
+      "ref": "Y 51.23",
+      "orig": "(zôt u râspî,) vohû xshathrem vairîm\n ... vareshânê (2). ashem vohû ... (3). vohuxshathrãm\nhâitîm ýazamaide. vohuxshathrãm gâthãm\nashaonîm ashahe ratûm ýazamaide, vohuxshathrayå\ngâthayå hañdâtâ ýazamaide.\nýenghê hâtãm ... tåscâ\nýazamaide!!!",
+      "en": "",
+      "zh": ""
+    }
+  ]
+}

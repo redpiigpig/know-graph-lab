@@ -1,0 +1,69 @@
+{
+  "slug": "yasna-15",
+  "siglum": "Y 15",
+  "title_zh": "亞斯納 第 15 章",
+  "title_en": "Yasna 15",
+  "canon": "avestan",
+  "volume": "yasna",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/yasna/y13to27.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "米爾斯（L. H. Mills）",
+  "en_url": "https://www.avesta.org/yasna/yasna.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "Vohu Mano": "沃胡‧馬納",
+    "Asha Vahishta": "阿沙‧瓦希什塔",
+    "Khshathra Vairya": "赫沙特拉‧瓦伊里亞",
+    "Spenta Armaiti": "斯彭塔‧阿爾邁提",
+    "Haurvatat": "豪爾瓦塔特",
+    "Ameretat": "阿梅雷塔特",
+    "Haoma": "豪麻",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 15,
+      "verse": 1,
+      "ref": "Y 15.1",
+      "orig": "(zôt u râspî,) sastica (zôt,) vañtâca\nrafnanghâca ameshê speñtê vanghûsh\nsrîrâish nâmãn âzbaya, frâyeze\nbereja vanghêush ashahe bereja daênayå vanghuyå\nmâzdayasnôish! (zôt u râspî,)",
+      "en": "With precept, praise, and with delight produced by grace,\nI call upon the Bountiful Immortals the good, and also therewith\nthe beautiful by name; and I sacrifice to them with the blessing\nof the good ritual, with the earnest blessings of the good Mazdayasnian\nFaith.",
+      "zh": ""
+    },
+    {
+      "chapter": 15,
+      "verse": 2,
+      "ref": "Y 15.2",
+      "orig": "ýenghê mê ashât hacâ (zôt,)\nvahishtem ýesnê paitî vaêdâ mazdå\nahurô ýôi ångharecâ heñticâ\ntã ýazâi hvâish nâmênîsh\npairicâ jasâi vañtâ. vohû xshathrem\nvairîm bâgem aibîbairishtem!",
+      "en": "Whose best gift from his Righteousness is mine in the offering\nAhura this knoweth; who have lived, and live ever, by their names\nthese I worship, while I draw near with praises. The Good Kingdom\nis to be chosen, that lot which most of all bears on (our blessings).",
+      "zh": ""
+    },
+    {
+      "chapter": 15,
+      "verse": 3,
+      "ref": "Y 15.3",
+      "orig": "seraoshô idhâ astû ahurahe mazdå ýasnâi\nsevîshtahe ashaonô ýê-nå ishtô\nhyat paourvîm tat ustememcît, avathât idhâ\nseraoshô astû ahurahe mazdå ýasnâi\nsevîshtahe ashaonô ýê-nå ishtô.",
+      "en": "Let Sraosha (Obedience) be here present for the sacrifice\nof Ahura Mazda, the most beneficent, the holy, who is so dear\nto us as at the first, so at the last; yea, let him be present\nhere.",
+      "zh": ""
+    },
+    {
+      "chapter": 15,
+      "verse": 4,
+      "ref": "Y 15.4",
+      "orig": "ýathâ ahû vairyô âterevaxshô\nfrâ-mê mrûtê, (zôt,) athâ\nratush ashâtcît haca frâ ashava vîdhvå\nmraotû!!",
+      "en": "As the Ahu (revered and) to be chosen, the Atarevakhsha thus\nspeaks forth to me.\n(Response): So let the Ratu from his righteousness, holy and learned,\nspeak forth!\n<H2 id=y16",
+      "zh": ""
+    }
+  ]
+}

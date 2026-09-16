@@ -1,0 +1,157 @@
+{
+  "slug": "yasna-27",
+  "siglum": "Y 27",
+  "title_zh": "亞斯納 第 27 章",
+  "title_en": "Yasna 27",
+  "canon": "avestan",
+  "volume": "yasna",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/yasna/y13to27.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "米爾斯（L. H. Mills）",
+  "en_url": "https://www.avesta.org/yasna/yasna.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "Vohu Mano": "沃胡‧馬納",
+    "Asha Vahishta": "阿沙‧瓦希什塔",
+    "Khshathra Vairya": "赫沙特拉‧瓦伊里亞",
+    "Spenta Armaiti": "斯彭塔‧阿爾邁提",
+    "Haurvatat": "豪爾瓦塔特",
+    "Ameretat": "阿梅雷塔特",
+    "Haoma": "豪麻",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 27,
+      "verse": 1,
+      "ref": "Y 27.1",
+      "orig": "aêtat dim vîspanãm mazishtem dazdyâi\nahûmca ratûmca ýim ahurem mazdãm snathâi\nangrahe mainyêush drvatô snathâi aêshmahe\nxrvîm-draosh snathâi mâzainyanãm daêvanãm\nsnathâi vîspanãm daêvanãm varenyanãmca\ndrvatãm.",
+      "en": "This is to render Him who is of all the greatest, our lord\nand master (even) Ahura Mazda. And this to smite the wicked Angra\nMainyu, and to smite Aeshma of the bloody spear, and the Mazainya\nDaevas, and to smite all the wicked Varenya Daevas.",
+      "zh": ""
+    },
+    {
+      "chapter": 27,
+      "verse": 2,
+      "ref": "Y 27.2",
+      "orig": "fradathâi ahurahe mazdå raêvatô hvarenanguhatô\nfradathâi ameshanãm speñtanãm fradathâi\ntishtryehe stârô raêvatô hvarenanguhatô\nfradathâi narsh ashaonô fradathâi vîspanãm\nspeñtahe mainyêush dâmanãm ashaonãm.",
+      "en": "And this is to further Ahura Mazda, the resplendent, the glorious,\nto further the Bountiful Immortals, and the influences of the\nstar Tishtrya, the resplendent, the glorious, (and) to the furtherance\nof the holy man, and of all the (bountiful and) holy creatures\nof the Bounteous Spirit.\n3-5.\n(The Ahunwar appears here with Y34.5, the Airyema Ishyo, and\nthe Ashem Vohu.)",
+      "zh": ""
+    },
+    {
+      "chapter": 27,
+      "verse": 3,
+      "ref": "Y 27.3",
+      "orig": "ýathâ ahû vairyô athâ ratush\nashâtcît hacâ ... (4)!",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 27,
+      "verse": 4,
+      "ref": "Y 27.4",
+      "orig": "mazdâ at môi vahishtâ sravåscâ\nshyaothanâcâ vaocâ tâ-tû vohû\nmananghâ ashâcâ ishudem stûtô xshmâkâ\nxshathrâ ahurâ ferashêm vasnâ haithyêm\ndå ahûm (4).",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 27,
+      "verse": 5,
+      "ref": "Y 27.5",
+      "orig": "â airyêmâ ishyô rafedhrâi jañtû\nnerebyascâ nâiribyascâ zarathushtrahê\nvanghêush rafedhrâi mananghô, ýâ\ndaênâ vairîm hanât mîzhdem ashahyâ\nýâsâ ashîm ýãm ishyãm\nahurô masatâ mazdå (4).",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 27,
+      "verse": 6,
+      "ref": "Y 27.6",
+      "orig": "haoma pairi-hareshyeñte mazda-xshathra asha-ratavô,\nvanghush sraoshô ýô ashahe hacaite mãzaraya\nhêca idha ýôithwâ astu.",
+      "en": "The Haomas are crushed, O Mazda, Khshathra, and Asha, O ye\nLords! Good is Sraosha who accompanies the sacrifice with the\ngreat glory, and may he be present affording strenuous help.",
+      "zh": ""
+    },
+    {
+      "chapter": 27,
+      "verse": 7,
+      "ref": "Y 27.7",
+      "orig": "humaya upanghå cîshmaide ahunahe vairyehe ashaya\nfrasrûtahe hâvanayåsca ashaya frashûtayå\narshuxdhanãmcâ vacãm, athâ-zî-nê\nhumâyôtarâ anghen. ýathâ ahû\nvairyô athâ ratush ashâtcît hacâ\n... (4)!",
+      "en": "We are offering saving acts of wisdom and of worship with\nthe sacred gift of the Ahuna-Vairya intoned with sanctity, and\nof the two mortars here brought forward with holy act, and with\nthat of the correctly uttered words likewise; and therefore may\nthey be to us the more saving in their wise significance.\n8-12.\n(See Y33.11-14; and Y1.23, and Y12.)",
+      "zh": ""
+    },
+    {
+      "chapter": 27,
+      "verse": 8,
+      "ref": "Y 27.8",
+      "orig": "ýê sevishtô ahurô mazdåscâ\nârmaitishcâ ashemcâ frâdat-gaêthem\nmanascâ vohû xshathremcâ sraotâ-môi\nmerezhdâtâ-môi âdâi kahyâicît\npaitî (3).",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 27,
+      "verse": 9,
+      "ref": "Y 27.9",
+      "orig": "us-môi uzâreshvâ ahurâ ârmaitî\ntevîshîm dasvâ spênishtâ mainyû\nmazdâ vanghuyâ zavô âdâ ashâ\nhazô êmavat vohû mananghâ feseratûm.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 27,
+      "verse": 10,
+      "ref": "Y 27.10",
+      "orig": "rafedhrâi vourucashânê dôishî-môi\nýâ-vê abifrâ tâ xshathrahyâ\nahurâ ýâ vanghêush ashish mananghô\nfrô speñtâ ârmaitê ashâ daênå\nfradaxshayâ.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 27,
+      "verse": 11,
+      "ref": "Y 27.11",
+      "orig": "at râtãm zarathushtrô tanvascît hvah'yå\nushtanem dadâitî paurvatâtem mananghascâ\nvanghêush mazdâi shyaothanahyâ ashâi ýâcâ\nuxdhah'yâcâ seraoshem xshathremcâ. ashem vohû\n... (3).",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 27,
+      "verse": 12,
+      "ref": "Y 27.12",
+      "orig": "fravarâne mazdayasnô zarathushtrish vîdaêvô\nahura-tkaêshô, hâvanêe ashaone ashahe\nrathwe ýasnâica vahmâica xshnaothrâica\nfrasastayaêca, sâvanghêe vîsyâica\nashaone ashahe rathwe ýasnâica vahmâica xshnaothrâica\nfrasastayaêca, rathwãm ayaranãmca asnyanãmca\nmâhyanãmca ýâiryanãmca saredhanãmca\nýasnâica vahmâica xshnaothrâica (râspî,)\nfrasastayaêca!",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 27,
+      "verse": 13,
+      "ref": "Y 27.13",
+      "orig": "ýathâ ahû vairyô athâ ratush\nashâtcît hacâ vanghêush dazdâ mananghô\nshyaothananãm anghêush mazdâi xshathremcâ\nahurâi â ýim drigubyô dadat vâstârem\n(4).",
+      "en": "As the Ahu is excellent, so is the Ratu (one who rules) from\n(his) sanctity, a creator of mental goodness, and of life's actions\ndone for Mazda; and the Kingdom (is) for Ahura, which to the poor\nmay offer a nurturer.",
+      "zh": ""
+    },
+    {
+      "chapter": 27,
+      "verse": 14,
+      "ref": "Y 27.14",
+      "orig": "ashem vohû vahishtem astî, ushtâ astî\nushtâ ahmâi hyat ashâi vahishtâi ashem\n(3).",
+      "en": "(What is Your Kingdom, Your riches;\nhow may I be Your own in my actions, to nourish Your poor, O Mazda?\nBeyond; yea, beyond all we declare You, far from Daevas and Khrafstra-accursed\nmortals!)",
+      "zh": ""
+    },
+    {
+      "chapter": 27,
+      "verse": 15,
+      "ref": "Y 27.15",
+      "orig": "ahunem vairîm ýazamaide, ashem vahishtem sraêshtem\nameshem speñtem ýazamaide. ýenghê hâtãm\nâat ýesnê paitî vanghô mazdå\nahurô vaêthâ ashât hacâ ýånghãmcâ\ntãscâ tåscâ ýazamaide!!!",
+      "en": "We worship the Ahuna-vairya. We worship Asha Vahishta, the\nmost beautiful, the Bountiful Immortal.\nAHUNAVAITI GATHA (Y28-34).\n<H2 id=y28",
+      "zh": ""
+    }
+  ]
+}

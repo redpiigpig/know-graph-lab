@@ -1,0 +1,173 @@
+{
+  "slug": "yasna-59",
+  "siglum": "Y 59",
+  "title_zh": "亞斯納 第 59 章‧互祝",
+  "title_en": "Yasna 59",
+  "canon": "avestan",
+  "volume": "yasna",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/yasna/y54to72.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "米爾斯（L. H. Mills）",
+  "en_url": "https://www.avesta.org/yasna/yasna.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "Vohu Mano": "沃胡‧馬納",
+    "Asha Vahishta": "阿沙‧瓦希什塔",
+    "Khshathra Vairya": "赫沙特拉‧瓦伊里亞",
+    "Spenta Armaiti": "斯彭塔‧阿爾邁提",
+    "Haurvatat": "豪爾瓦塔特",
+    "Ameretat": "阿梅雷塔特",
+    "Haoma": "豪麻",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 59,
+      "verse": 1,
+      "ref": "Y 59.1",
+      "orig": "ahurem mazdãm ashavanem ashahe ratûm ýazamaide,\nameshâ speñtâ huxshathrâ hudhånghô\nýazamaide.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 59,
+      "verse": 2,
+      "ref": "Y 59.2",
+      "orig": "asnya ashavana ashahe ratavô ýazamaide, hâvanîm\nashavanem ashahe ratûm ýazamaide, sâvanghaêm\nvîsîmca ashavanem ashahe ratûm ýazamaide,\nmithrem vouru-gaoyaoitîm hazangra-gaoshem baêvare-cashmanem\naoxtô-nâmanem ýazatem ýazamaide, râma\nhvâstrem ýazamaide.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 59,
+      "verse": 3,
+      "ref": "Y 59.3",
+      "orig": "rapithwinem ashavanem ashahe ratûm ýazamaide,\nfrâdat-fshâum zañtumemca ashavanem ashahe ratûm\nýazamaide, ashem vahishtem âtremca ahurahe mazdå\nputhrem ýazamaide.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 59,
+      "verse": "4-10",
+      "ref": "Y 59.4-10",
+      "orig": "uzayeirinem ashavanem ashahe ratûm ýazamaide,\nfrâdat-vîrem dâh'yumemca ... mithrem vîspanãm\ndah'yunãm dainghupaitîm ýazamaide, (...rôz...)\nahurem mazdãm raêvañtem hvarenanguhañtem\nýazamaide, ( ... mâh ... ) ashâunãm\nvanguhîsh sûrå speñtå fravashayô\nýazamaide!",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 59,
+      "verse": 11,
+      "ref": "Y 59.11",
+      "orig": "thwãm âtrem ahurahe mazdå puthrem ýazamaide,\nâtrem berezisavanghem ýazamaide, âtrem vohu-fryânem\nýazamaide, âtrem urvâzishtem ýazamaide,\nâtrem vâzishtem ýazamaide, âtrem spênishtem\nýazamaide, xshathrem nafedhrem nairyô-sanghem ýazatem\nýazamaide, âtrem vîspanãm nmânanãm\nnmânô- paitîm mazdadhâtem ahurahe mazdå\nputhrem ashavanem ashahe ratûm ýazamaide mat vîspaêibyô\nâterebyô.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 59,
+      "verse": "12-17",
+      "ref": "Y 59.12-17",
+      "orig": "âpô vanguhîsh vahishtå mazdadhâtå\nashaonîsh ýazamaide, ... ratavô vîspe\nmazishta ýazamaide ayara asnya mâhya ýâirya\nsaredha.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 59,
+      "verse": "18-20",
+      "ref": "Y 59.18-20",
+      "orig": "ashâunãm vanguhîsh sûrå speñtå\nfravashayô staomi zbayemi ufyemi, ýazamaide nmânyå\nvîsyå zañtumå dâh'yumå ...\nýôi aithyajanghô ashavanô.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 59,
+      "verse": "21-23",
+      "ref": "Y 59.21-23",
+      "orig": "paoiryanãm tkaêshanãm ... mat vîspâbyô\nashaonibyô fravashibyô ýå irîrithushãm\nashaonãm ýåsca jvañtãm ashaonãm\nýåsca narãm azâtanãm frashô-carethrãm\nsaoshyañtãm.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 59,
+      "verse": "24-26",
+      "ref": "Y 59.24-26",
+      "orig": "idha iristanãm urvãnô ýazamaide\n... uzdâh'yunãmca ashaonãm fravashayô\nýazamaide.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 59,
+      "verse": 27,
+      "ref": "Y 59.27",
+      "orig": "narãmca ashaonãm fravashayô ýazamaide,\nnâirinãmca ashaoninãm fravashayô ýazamaide,\nvîspå ashâunãm vanguhîsh sûrå\nspeñtå fravashayô ýazamaide ýå\nhaca gayât marethnat â-saoshyañtât verethrakhnat.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 59,
+      "verse": 28,
+      "ref": "Y 59.28",
+      "orig": "verethrakhnem ahuradhâtem ýazamaide, saoshyañtem\nverethrâjanem ýazamaide, (zôt u râspî,)\nimat baresma hadha-zaothrem hadha-aiwyånghanem ashaya frastaretem\nýazamaide, haom urvânem ýazamaide, havãm\nfravashîm ýazamaide.",
+      "en": "We worship Verethraghna, the Ahura-made, the victorious blow;\nand we worship the Saoshyant, who smites with victory; and we\nsacrifice to this Baresman with its Zaothra and its girdle (which\nis its band) and which is spread with sanctity. And we sacrifice\nto (our) own soul(s), and to (our) own Fravashi(s).",
+      "zh": ""
+    },
+    {
+      "chapter": 59,
+      "verse": 29,
+      "ref": "Y 59.29",
+      "orig": "vîspe ashavanô ýazata ýazamaide,\nvîspe ashahe ratavô ýazamaide hâvanîm\npaiti ratûm sâvanghaêm vîsîmca paiti\nratûm ratavô vîspe mazishta paiti ratûm.\nýenghê hâtãm ... tåscâ ýazamaide!",
+      "en": "(See Y17.19.)",
+      "zh": ""
+    },
+    {
+      "chapter": 59,
+      "verse": 30,
+      "ref": "Y 59.30",
+      "orig": "(râspî,) vanghu-tû-tê vanghaot vanghô\nbuyât hvâvôya ýat zaothre hanaêsha\ntû-tûm tat mîzhdem ýat zaota hanayamnô\nångha frâyô-humatô frâyô-hûxtô\nfrayô-hvarshtô.",
+      "en": "(The Ratu speaks): O thou good (servant of the Lord)! may\nthat be thine which is better than the good; may'st thou acquire\nthat which is (thine) own in the Zaothra; may'st thou attain to\nthat reward which the Zaotar has been obtaining, who is far advanced\nin his good thoughts, and words, and deeds.",
+      "zh": ""
+    },
+    {
+      "chapter": 59,
+      "verse": 31,
+      "ref": "Y 59.31",
+      "orig": "(zôt,) jamyât vô vanghaot vanghô mâ-vô\njamyât akât ashô mâ-mê jamyât\nakât ashô!",
+      "en": "(The Zaotar speaks): May that happen to you (likewise) which\nis better than the good, and may that not happen which is worse\nthan the evil, and may that likewise not be my lot.",
+      "zh": ""
+    },
+    {
+      "chapter": 59,
+      "verse": 32,
+      "ref": "Y 59.32",
+      "orig": "(zôt u râspî,) ýathâ ahû\nvairyô athâ ratush ashâtcît hacâ\n... (10). ashem vohû vahishtem astî ... (10).",
+      "en": "As (our)\nAhu (is) excellent, so (is our) Ratu (one who rules) from his\nRighteousness, a creator of mental goodness, and of life's actions\ndone for Mazda, and the Kingdom (is) to Ahura which to the poor\nwill offer a nurturer. A blessing is Asha called the Best, &c.\nWe sacrifice to the Ahuna-vairya; we sacrifice to Asha Vahishta\nthe most beautiful, the Bountiful Immortal. And we sacrifice to\nthe Fshusho-mathra, the by-spoken. And we sacrifice to the entire\ncollection of the Praises of the Yasna; (yea), to the Yasna Praises\nwhich were instituted in the world of yore.\n<H2 id=y60",
+      "zh": ""
+    },
+    {
+      "chapter": 59,
+      "verse": 33,
+      "ref": "Y 59.33",
+      "orig": "ahunem vairîm ýazamaide, ashem vahishtem sraêshtem\nameshem speñtem ýazamaide, fshûshô mãthrem\nhadhaoxtem ýazamaide, haurvãm hañdâitîm\nstaotanãm ýesnyanãm ýazamaide, staota\nýesnya ýazamaide ýâ dâtâ\nanghêush paouruyehyâ. ýenghê hâtãm....\nýathâ ahû vairyô ... (2).",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 59,
+      "verse": 34,
+      "ref": "Y 59.34",
+      "orig": "(zôt,) ýathâ ahû vairyô zaotâ\nfrâ-mê mrûtê, (râspî,) ýathâ\nahû vairyô ýô zaotâ frâ-mê\nmrûtê, (zôt,) athâ ratush ashâtcît\nhaca frâ ashava vîdhvå mraotû!!",
+      "en": "",
+      "zh": ""
+    }
+  ]
+}

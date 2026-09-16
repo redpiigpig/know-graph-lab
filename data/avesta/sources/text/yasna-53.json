@@ -1,0 +1,117 @@
+{
+  "slug": "yasna-53",
+  "siglum": "Y 53",
+  "title_zh": "亞斯納 第 53 章‧伽薩‧最好的願望",
+  "title_en": "Yasna 53",
+  "canon": "avestan",
+  "volume": "yasna",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/yasna/y53.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "米爾斯（L. H. Mills）",
+  "en_url": "https://www.avesta.org/yasna/yasna.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "Vohu Mano": "沃胡‧馬納",
+    "Asha Vahishta": "阿沙‧瓦希什塔",
+    "Khshathra Vairya": "赫沙特拉‧瓦伊里亞",
+    "Spenta Armaiti": "斯彭塔‧阿爾邁提",
+    "Haurvatat": "豪爾瓦塔特",
+    "Ameretat": "阿梅雷塔特",
+    "Haoma": "豪麻",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 53,
+      "verse": 1,
+      "ref": "Y 53.1",
+      "orig": "vahishtâ îshtish srâvî zarathushtrahê\ndà spitâmahyâ ýezî\nhôi dât âyaptâ ashât hacâ\nahurô mazdå ýavôi vîspâi\nâ hvanghevîm ýaêcâ hôi daben\nsasheñcâ daênayå vanghuyå uxdhâ\nshyaothanâcâ (2). (zôt,)",
+      "en": "(Zarathushtra) - The best possession known is of Zarathushtra\nSpitama, which is that Mazda Ahura will give him through Right\nthe glories of blessed life unto all time, and likewise to them\nthat practice and learn the words and actions of his Good Religion.",
+      "zh": ""
+    },
+    {
+      "chapter": 53,
+      "verse": 2,
+      "ref": "Y 53.2",
+      "orig": "atcâ hôi scañtû mananghâ uxdhâish\nshyaothanâishcâ xshnûm mazdå vahmâi\nâ fraoret ýasnãscâ kavacâ vîshtâspô\nzarathushtrish spitâmô ferashaoshtrascâ dånghô\nerezûsh pathô ýãm daênãm\nahurô saoshyañtô dadât.",
+      "en": "Then let them seek the pleasure of Mazda with thoughts, words,\nand actions, unto him praise gladly, and seek his worship, even\nKava Vishtaspa, and Zarathushtra's son, the Spitamid, with Frashaoshtra,\nmaking straight the paths for the Religion of the future Deliverer\nwhich Ahura ordained.",
+      "zh": ""
+    },
+    {
+      "chapter": 53,
+      "verse": 3,
+      "ref": "Y 53.3",
+      "orig": "têmcâ-tû pourucistâ haêcat-\naspânâ spitâmî ýezivî dugedrãm\nzarathushtrahê vanghêush paityâstêm mananghô\nashahyâ mazdåscâ taibyô dât sarem\nathâ hêm ferashvâ thwâ xrathwâ spênishtâ\nârmatôish hudânvareshvâ.",
+      "en": "Him, O Pouruchista, thou scion of Haechataspa and Spitama,\nyoungest of Zarathushtra's daughters, hath (Zarathushtra) appointed\nas one to enjoin on them the fellowship with Good Thought, Right,\nand Mazda. So take counsel with thine own understanding, with\ngood insight practice the holiest works of Piety.",
+      "zh": ""
+    },
+    {
+      "chapter": 53,
+      "verse": 4,
+      "ref": "Y 53.4",
+      "orig": "têm zî vê speredânî varânî\nýâ fedhrôi vîdât paithyaêcâ\nvâstryaêibyô atcâ hvaêtaovê\nashâunî ashavabyô mananghô vanghêush\nhvênvat hanghush mêm bêedush mazdå dadât\nahurô daênayâi vanghuyâi ýavôi\nvîspâi â.",
+      "en": "(Jamaspa): Earnestly will I lead her to the Faith, that she\nmay serve her father and her husband, the farmers and the nobles,\nas a righteous woman (serving) the righteous. The glorious heritage\nof Good Thought ... shall Mazda Ahura give to her for all time.",
+      "zh": ""
+    },
+    {
+      "chapter": 53,
+      "verse": 5,
+      "ref": "Y 53.5",
+      "orig": "sâhvênî vazyamnâbyô kainibyô\nmraomî xshmaibyâcâ vademnô mêñcâ-î\nmãzdazdûm vaêdôdûm daênâbîsh\nabyascâ ahûm ýê vanghêush mananghô\nashâ vê anyô ainîm vîvêñghatû\ntat zî hôi hushênem anghat.",
+      "en": "(Zarathushtra): Teachings address I to maidens marrying, and\nto you (bridegrooms) giving counsel. Lay them to heart and learn\nto get them within your Selves in earnest attention to the Life\nof Good Thought. Let each of you strive to excel the other in\nthe Right, for it will be a prize for that one.",
+      "zh": ""
+    },
+    {
+      "chapter": 53,
+      "verse": 6,
+      "ref": "Y 53.6",
+      "orig": "ithâ-î haithyâ narô athâ jênayô\ndrûjô hacâ râthemô ýême\nspashuthâ frâidîm drûjô âyesê\nhôish pithâ tanvô parâ vayû-beredubyô\ndush-hvarethêm nãsat hvâthrem dregvôdebyô\ndêjît-aretaêibyô anâish â\nmanahîm ahûm mereñgeduyê.",
+      "en": "So is it in fact, ye men and women! Whatever happiness ye\nlook for in the follower of the (...) that will be snatched away\nfrom his person. To them the Liars, crying 'woe', shall be ill-food,\nparadise shall be lost to them that despite righteousness. In\nsuch wise ye destroy for yourselves the Spiritual Life.",
+      "zh": ""
+    },
+    {
+      "chapter": 53,
+      "verse": 7,
+      "ref": "Y 53.7",
+      "orig": "atcâ vê mîzhdem anghat ahyâ magahyâ\nýavat âzhush zarazdishtô bûnôi\nhaxtayå paracâ mraocãs aorâcâ ýathrâ\nmainyush dregvatô anãsat parâ\nivîzayathâ magêm têm at vê\nvayôi anghaitî apêmem vacô.",
+      "en": "And to you shall accrue the reward of the Brotherhood - in\nso far as the most faithful zeal is in your flesh and blood -\nthere where the spirit of the Liar, cringing and cowering, shall\nfall down into destruction. If you separate yourselves from the\nBrotherhood, then will 'woe!' be your word at the end of things.",
+      "zh": ""
+    },
+    {
+      "chapter": 53,
+      "verse": 8,
+      "ref": "Y 53.8",
+      "orig": "anâish â duzhvareshnanghô dafshnyâ\nhêñtû zah'yâcâ vîspånghô\nxraoseñtãm upâ huxshathrâish jênerãm\nxrûnerãmcâ râmãmcâ âish\ndadâtû shyeitibyô vîzhibyô îratû\nîsh dvafshô hvô derezâ merethyâush\nmazishtô moshucâ astû. (zôt u râspî,)",
+      "en": "So they whose deeds are evil, let them be deceived, and let\nthem all howl, abandoned to ruin. Through good rulers let him\nbring death and bloodshed upon them and peace from these (their\nassaults) unto the happy villagers. Grief let him bring on those,\nhe that is the greatest, with the lord of death; and soon let\nit be.",
+      "zh": ""
+    },
+    {
+      "chapter": 53,
+      "verse": 9,
+      "ref": "Y 53.9",
+      "orig": "duzhvarenâish vaêshô râstî tôi\nnarepîsh rajîsh aêshasâ dêjît-aretâ\npeshô-tanvô, kû ashavâ ahurô ýê\nîsh jyâtêush hêmithyât vasê-itôishcâ\ntat mazdâ tavâ xshathrem ýâ erezhejyôi\ndâhî drigaovê vahyô (3)!",
+      "en": "To men of evil creed belongs the place of corruption. They\nthat set themselves to contemn the worthy, despising righteousness,\nforfeiting their own body. - Where is the Righteous Lord who shall\nrob them of life and freedom? Thine Mazda is the Dominion, whereby\nthou canst give to the right-living poor man the better portion.",
+      "zh": ""
+    },
+    {
+      "chapter": 53,
+      "verse": 10,
+      "ref": "Y 53.10",
+      "orig": "(zôt u râspî,) vahishtâ îshtish\nsrâvî zarathushtrahê ... uxdhâ shyaothanâcâ\n(2). ashem vohû ... (3). vahishtôishtîm hâitîm\nýazamaide. vahishtôishtîm gâthãm\nashaonîm ashahe ratûm ýazamaide, vahishtôishtôish\ngâthayå hañdâtâ ýazamaide.\nýenghê hâtãm ... tåscâ\nýazamaide!!!",
+      "en": "",
+      "zh": ""
+    }
+  ]
+}

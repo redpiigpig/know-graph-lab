@@ -1,0 +1,205 @@
+{
+  "slug": "yasna-10",
+  "siglum": "Y 10",
+  "title_zh": "亞斯納 第 10 章‧豪麻讚（中）",
+  "title_en": "Yasna 10",
+  "canon": "avestan",
+  "volume": "yasna",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/yasna/y9to11.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "米爾斯（L. H. Mills）",
+  "en_url": "https://www.avesta.org/yasna/yasna.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "Vohu Mano": "沃胡‧馬納",
+    "Asha Vahishta": "阿沙‧瓦希什塔",
+    "Khshathra Vairya": "赫沙特拉‧瓦伊里亞",
+    "Spenta Armaiti": "斯彭塔‧阿爾邁提",
+    "Haurvatat": "豪爾瓦塔特",
+    "Ameretat": "阿梅雷塔特",
+    "Haoma": "豪麻",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 10,
+      "verse": 1,
+      "ref": "Y 10.1",
+      "orig": "vish apãm idha pateñtu vî daêvånghô\nvî daêvayô, vanghush sraoshô mitayatu\nashish vanguhi idha mithnatu ashish vanguhi râmyat idha\nupa imat nmânem ýat âhûiri ýat\nhaomahe ashavazanghô.",
+      "en": "Let the Demon-gods and Goddesses fly far away from hence,\nand let the good Sraosha make here his home! [And may the good\nBlessedness here likewise dwell], and may she here spread delight\nand peace within this house, Ahura's, which is sanctified by Haoma,\nbringing righteousness (to all).",
+      "zh": ""
+    },
+    {
+      "chapter": 10,
+      "verse": 2,
+      "ref": "Y 10.2",
+      "orig": "frataremcit tê havanem vaca upa-staomi huxratvô\nýô ãsush hañgeurvayeiti, uparemcit\ntê havanem vaca upa-staomi huxratvô ýahmi nikhne\nnarsh aojangha.",
+      "en": "At the first force of thy pressure, O intelligent! I praise\nthee with my voice, while I grasp at first thy shoots. At thy\nnext pressure, O intelligent! I praise thee with my voice, when\nas with full force of a man I crush thee down.",
+      "zh": ""
+    },
+    {
+      "chapter": 10,
+      "verse": 3,
+      "ref": "Y 10.3",
+      "orig": "staomi maêkhemca vâremca ýâ-tê\nkehrpem vaxshayatô barshnush paiti gairinãm, staomi\ngarayô berezañtô ýathra haoma urûrudhusha.",
+      "en": "I praise the cloud that waters thee, and the rains which make\nthee grow on the summits of the mountains; and I praise thy lofty\nmountains where the Haoma branches spread.",
+      "zh": ""
+    },
+    {
+      "chapter": 10,
+      "verse": 4,
+      "ref": "Y 10.4",
+      "orig": "staomi zãm perethwîm pathanãm verezyanghvãm\nhvâparãm barethrîm tê haoma ashâum,\nstaomi zemô ýatha raodhahe hubaoidhish aurvô\ncarânem uta mazdå huruthma, haoma raose gara paiti\nuta frâdhaêsha vishpatha haithîmca ashahe xå\nahi.",
+      "en": "This wide earth do I praise, expanded far (with paths), the\nproductive, the full bearing, thy mother, holy plant! Yea, I praise\nthe lands where thou dost grow, sweet-scented, swiftly spreading,\nthe good growth of the Lord. O Haoma, thou growest on the mountains,\napart on many paths, and there still may'st thou flourish. The\nsprings of Righteousness most verily thou art, (and the fountains\nof the ritual find their source in thee)!",
+      "zh": ""
+    },
+    {
+      "chapter": 10,
+      "verse": 5,
+      "ref": "Y 10.5",
+      "orig": "varedhayanguha (râspî,) mana vaca vîspêsca\npaiti varshajîsh vîspêsca paiti frasparekhê\nvîspêsca paiti fravâxshê. (vispêsca\n... fravâxshê (2)!)",
+      "en": "Grow (then) because I pray to thee on all thy stems and branches,\nin all thy shoots (and tendrils) increase thou through my word!",
+      "zh": ""
+    },
+    {
+      "chapter": 10,
+      "verse": 6,
+      "ref": "Y 10.6",
+      "orig": "(zôt,) haomô uxshyeiti stavanô, atha nâ\nýô dim staoiti verethrajãstarô bavaiti,\nnitemacit haoma hûitish nitemacit haoma stûitish nitemacit\nhaoma hvareitish hazangrakhnyâi asti daêvanãm.",
+      "en": "Haoma grows while he is praised, and the man who praises him\nis therewith more victorious. The lightest pressure of thee, Haoma,\nthy feeblest praise, the slightest tasting of thy juice, avails\nto the thousand-smiting of the Daevas.",
+      "zh": ""
+    },
+    {
+      "chapter": 10,
+      "verse": 7,
+      "ref": "Y 10.7",
+      "orig": "nasyeiti hathra frâkeresta ahmat haca nmânât\nâhitish ýathra bâdha upâzaiti ýathra\nbâdha upastaoiti haomahe baêshazyehe cithrem dasvare\nbaêshazem ahe vîse uta maêthanem.",
+      "en": "Wasting doth vanish from that house, and-with it foulness,\nwhither in verity they bear thee, and where thy praise in truth\nis sung, the drink of Haoma, famed, health-bringing (as thou art).\n[(Pazand) to his village and abode they bear him.]",
+      "zh": ""
+    },
+    {
+      "chapter": 10,
+      "verse": 8,
+      "ref": "Y 10.8",
+      "orig": "vîspe zî anyê maidhyånghô aêshma\nhaciñte xrvîm-drvô âat hô ýô\nhaomahe madhô asha hacaite urvâsmana, reñjaiti\nhaomahe madhô, ýô ýatha puthrem taurunem\nhaomem vañdaêta mashyô frâ âbyô\ntanubyô haomô vîsâite baêshazâi.",
+      "en": "All other toxicants go hand in hand with Rapine of the bloody\nspear, but Haoma's stirring power goes hand in hand with friendship.\n[Light is the drunkenness of Haoma (Pazand).]\nWho as a tender son caresses Haoma, forth to the bodies of such\npersons Haoma comes to heal.",
+      "zh": ""
+    },
+    {
+      "chapter": 10,
+      "verse": 9,
+      "ref": "Y 10.9",
+      "orig": "haoma dazdi-mê baêshazanãm ýâbyô\nahi baêshazadhå, haoma dazdi-mê vârethrakhninãm\nýâbyô ahi verethra-taurvå, frâ-tê\nvîsâi urvathô staota, urvathem staotârem\nvanghanghem dadhô aoxta ahurô mazdå ýatha\nashem ýat vahishtem!",
+      "en": "Of all the healing virtues, Haoma, whereby thou art a healer,\ngrant me some. Of all the victorious powers, whereby thou art\na victor, grant me some. A faithful praiser will I be to thee,\nO Haoma, and a faithful praiser (is) a better (thing) than Righteousness\nthe Best; so hath the Lord, declaring (it), decreed.",
+      "zh": ""
+    },
+    {
+      "chapter": 10,
+      "verse": 10,
+      "ref": "Y 10.10",
+      "orig": "aurvañtem thwâ dâmidhâtem bakhô\ntatashat hvâpå, aurvañtem thwâ dâmidhâtem\nbakhô nidathat hvâpå haraithyô paiti barezayå.",
+      "en": "Swift and wise hath the well-skilled Deity created thee; swift\nand wise on high Haraiti did He, the well-skilled, plant thee.",
+      "zh": ""
+    },
+    {
+      "chapter": 10,
+      "verse": 11,
+      "ref": "Y 10.11",
+      "orig": "âat thwâ athra speñta fradaxshta merekha\nvîzhvañca vîbaren avi ishata upâiri-saêna\navi staêra starô-sâra avi kusrâdha kusrô-patâdha\navi pawrâna vishpatha avi spita-gaona gairi.",
+      "en": "And taught (by implanted instinct) on every side, the bounteous\nbirds have carried thee to the Peaks-above-the-eagles, to the\nmount's extremest summit, to the gorges and abysses, to the heights\nof many pathways, to the snow-peaks ever whitened.",
+      "zh": ""
+    },
+    {
+      "chapter": 10,
+      "verse": 12,
+      "ref": "Y 10.12",
+      "orig": "âat âhva paurvatâhva pouru-saredhô\nvîraodhahe haomô gaoma zairi-gaonô, â-tê\nbaêshaza irîrathare vanghêush mananghô\nmayâbyô, âat mê ahe dushsanghahe parâca\nvaêpaya manô, âat ahe manô manô\nýô mê dushsanghô hishtaite!",
+      "en": "There, Haoma, on the ranges dost thou grow of many kinds.\nNow thou growest of milky whiteness, and now thou growest golden;\nand forth thine healing liquors flow for the inspiring of the\npious. So terrify away from me the (death's) aim of the curser.\nSo terrify and crush his thought who stands as my maligner.",
+      "zh": ""
+    },
+    {
+      "chapter": 10,
+      "verse": 13,
+      "ref": "Y 10.13",
+      "orig": "nemô haomâi ýat kerenaoiti drikhaosh havat-masô\nmanô ýatha raêvastemahecit, nemô haomâi\nýat kerenaoiti drikhaosh havat-masô manô ýat\nusnãm aêiti vaêdhya, pourunarem tûm kerenûshi\nspainyanghem cistivastarem ýase-tê bâdha haoma\nzâire gava iristahe baxshaite.",
+      "en": "Praise be to thee, O Haoma, (for he makes the poor man's thoughts\nas great as any of the richest whomsoever.) Praise be to Haoma,\n(for he makes the poor man's thoughts as great as when mind reacheth\nculmination.) With manifold retainers dost thou, O Haoma, endow\nthe man who drinks thee mixed with milk; yea, more prosperous\nthou makest him, and more endowed with mind.",
+      "zh": ""
+    },
+    {
+      "chapter": 10,
+      "verse": 14,
+      "ref": "Y 10.14",
+      "orig": "mâ-mê ýatha gâush drafshô âsitô\nvârema caire, frasha frayañtu tê madhô\nverezyanguhånghô jaseñtu, pairi-tê haoma\nashâum ashavâzô dadhãmi imãm tanûm\nýâ mê vaênaite huraodha!",
+      "en": "Do not vanish from me suddenly like milk-drops in the rain;\nlet thine exhilarations go forth ever vigorous and fresh; and\nlet them come to me with strong effect. Before thee, holy Haoma,\nthou bearer of the ritual truth, and around thee would I cast\nthis body, a body which (as all) may see (is fit for gift and)\ngrown.",
+      "zh": ""
+    },
+    {
+      "chapter": 10,
+      "verse": 15,
+      "ref": "Y 10.15",
+      "orig": "avangherezâmi janyaosh ûnãm mairyayå\nevîtô-xaredhayå ýâ mainyeiñti\ndavayeiñti âthravanemca haomemca hâ ýâ\ndapta apanasyeiti, ýâ tat ýat haomahe draonô\nnigångheñti nishhadhaiti nôit tãm âthravô-puthrîm\nnaêdha dasti huputhrîm!",
+      "en": "I renounce with vehemence the murderous woman's emptiness,\nthe Jaini's, hers, with intellect dethroned. She vainly thinks\nto foil us, and would beguile both Fire-priest and Haoma; but\nshe herself, deceived therein, shall perish. And when she sits\nat home, and wrongly eats of Haoma's offering, priest's mother\nwill that never make her, nor give her holy sons!",
+      "zh": ""
+    },
+    {
+      "chapter": 10,
+      "verse": 16,
+      "ref": "Y 10.16",
+      "orig": "pañcanãm ahmi pañcanãm nôit\nahmi, humatahe ahmi dushmatahe nôit ahmi, hûxtahe\nahmi duzhûxtahe nôit ahmi, hvarshtahe ahmi duzhvarshtahe\nnôit ahmi, sraoshahe ahmi asrushtôish nôit ahmi,\nashaonô ahmi drvatô nôit ahmi atcit ahmât\nýatha apemem manivå anghat nivâitish!",
+      "en": "To five do I belong, to five others do I not; of the good\nthought am I, of the evil am I not; of the good word am I, of\nthe evil am I not; of the good deed am I, and of the evil, not.\nTo Obedience am I given, and to deaf disobedience, not; to the\nsaint do I belong, and to the wicked, not; and so from this on\ntill the ending shall be the spirits' parting. (The two shall\nhere divide.)",
+      "zh": ""
+    },
+    {
+      "chapter": 10,
+      "verse": 17,
+      "ref": "Y 10.17",
+      "orig": "âat aoxta zarathushtrô, nemô haomâi\nmazdadhâtâi, vanghush haomô mazdadhâtô,\nnemô haomâi, vîspe haoma upastaomi ýatcit\nbarshnushva gairinãm ýatcit jãfnushva raonãm\nýaêcit ãzahu deretånghô jaininãm\nupadarezâhu, erezataêna haca tashta zaranaênem\naoi taxshe, mâ-tê nîre zemi paiti itha raêvañtô\narejahe!",
+      "en": "Thereupon spake Zarathushtra: Praise to Haoma, Mazda-made.\nGood is Haoma, Mazda-made. All the plants of Haoma praise I, on\nthe heights of lofty mountains, in the gorges of the valleys,\nin the clefts (of sundered hill-sides) cut for the bundles bound\nby women. From the silver cup I pour Thee to the golden chalice\nover. Let me not thy (sacred) liquor spill to earth, of precious\ncost.",
+      "zh": ""
+    },
+    {
+      "chapter": 10,
+      "verse": 18,
+      "ref": "Y 10.18",
+      "orig": "imåse-tê haoma gâthå imå heñti\nstaomâyô imå heñti cîcashânå\nime heñti arshuxdha vâcô dâsmainish vârethrakhnish\npaiti-bishish baêshazya.",
+      "en": "These are thy Gathas, holy Haoma, these thy songs, and these\nthy teachings, and these thy truthful ritual words, health-imparting,\nvictory-giving, from harmful hatred healing giving.",
+      "zh": ""
+    },
+    {
+      "chapter": 10,
+      "verse": 19,
+      "ref": "Y 10.19",
+      "orig": "imåse tûmcit mâvôya, frasha frayañtu\ntê madhô raoxshna frayañtu tê madhô,\nreñjyô vazaiti madhô vârethrakhnish heñtem\nâstaoite hathra ana gâthwya vaca,",
+      "en": "These and thou art mine, and forth let thine exhilarations\nflow; bright and sparkling let them hold on their (steadfast)\nway; for light are thine exhilaration(s), and flying lightly come\nthey here. Victory-giving smiteth Haoma, victory-giving is it\nworshipped; with this Gathic word we praise it.",
+      "zh": ""
+    },
+    {
+      "chapter": 10,
+      "verse": 20,
+      "ref": "Y 10.20",
+      "orig": "gave nemô gave nemô gave uxdhem gave verethrem\ngave hvarethem gave vastrem, gavê verezyâtãm\ntãm nê hvarethâi fshuyô!",
+      "en": "Praise to the Kine; praise and victory (be) spoken to her!\nFood for the Kine, and pasture! 'For the Kine let thrift use toil;\nyield thou us food.'",
+      "zh": ""
+    },
+    {
+      "chapter": 10,
+      "verse": 21,
+      "ref": "Y 10.21",
+      "orig": "haomem zâirîm berezañtem ýazamaide,\nhaomem frâshmîm frâdat-gaêthem ýazamaide,\nhaomem dûraoshem ýazamaide, vîspe haoma ýazamaide,\nzarathushtrahe spitâmahe idha ashaonô ashîmca\nfravashîmca ýazamaide. ýenghê hâtãm\nâat ýesnê paitî ... !!",
+      "en": "We worship the yellow lofty one; we worship Haoma who causes\nprogress, who makes the settlements advance; we worship Haoma\nwho drives death afar; yea, we worship all the Haoma plants. And\nwe worship (their) blessedness, and the Fravashi of Zarathushtra\nSpitama, the saint.\n<H2 id=y11",
+      "zh": ""
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "slug": "yasna-28",
+  "siglum": "Y 28",
+  "title_zh": "亞斯納 第 28 章‧伽薩‧祈求聆聽",
+  "title_en": "Yasna 28",
+  "canon": "avestan",
+  "volume": "yasna",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/yasna/y28to34.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "米爾斯（L. H. Mills）",
+  "en_url": "https://www.avesta.org/yasna/yasna.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "Vohu Mano": "沃胡‧馬納",
+    "Asha Vahishta": "阿沙‧瓦希什塔",
+    "Khshathra Vairya": "赫沙特拉‧瓦伊里亞",
+    "Spenta Armaiti": "斯彭塔‧阿爾邁提",
+    "Haurvatat": "豪爾瓦塔特",
+    "Ameretat": "阿梅雷塔特",
+    "Haoma": "豪麻",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 28,
+      "verse": 0,
+      "ref": "Y 28.0",
+      "orig": "ýânîm manô ýânîm\nvacô ýânîm shyaothnem ashaonô zarathushtrahe,\nferâ ameshâ speñtâ gâthå\ngêurvâin! nemô vê gâthå ashaonîsh,",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 28,
+      "verse": 1,
+      "ref": "Y 28.1",
+      "orig": "ahyâ ýâsâ nemanghâ ustânazastô\nrafedhrahyâ manyêush mazdâ pourvîm speñtahyâ\nashâ vîspêñg shyaothanâ vanghêush\nxratûm mananghô ýâ xshnevîshâ\ngêushcâ urvânem (2).",
+      "en": "With outspread hands in petition for that help, O Mazda, I\nwill pray for the works of the holy spirit, O thou the Right,\nwhereby I may please the will of Good Thought and the Ox-Soul.",
+      "zh": ""
+    },
+    {
+      "chapter": 28,
+      "verse": 2,
+      "ref": "Y 28.2",
+      "orig": "(zôt,) ýê vå mazdâ ahurâ\npairî-jasâi vohû mananghâ maibyô\ndâvôi ahvå astvatascâ hyatcâ mananghô\nâyaptâ ashât hacâ ýâish rapañtô\ndaidît hvâthrê.",
+      "en": "I who would serve you, O Mazda Ahura and Vohu Mano, do ye\ngive through Asha the blessings of both worlds, the bodily and\nthat of the Spirit, which set the faithful in felicity.",
+      "zh": ""
+    },
+    {
+      "chapter": 28,
+      "verse": 3,
+      "ref": "Y 28.3",
+      "orig": "ýê vå ashâ ufyânî manascâ\nvohû apaourvîm mazdãmcâ ahurem ýaêibyô\nxshathremcâ akhzhaonvamnem varedaitî ârmaitish\nâ-môi rafedhrâi zavêñg jasatâ.",
+      "en": "I who would praise ye as never before, Right and Good Thought\nand Mazda Ahura, and those for whom Piety makes an imperishable\nDominion to grow; come ye to me help at my call.",
+      "zh": ""
+    },
+    {
+      "chapter": 28,
+      "verse": 4,
+      "ref": "Y 28.4",
+      "orig": "ýê urvânem mêñ gairê\nvohû dadê hathrâ mananghâ ashîshcâ\nshyaothananãm vîdush mazdå ahurahyâ ýavat\nisâi tavâcâ avat xsâi aêshê\nashahyâ.",
+      "en": "I who have set my heart on watching over the soul, in union\nwith Good Thought, and as knowing the rewards of Mazda Ahura for\nour works, will, while I have power and strength, teach men to\nseek after Right.",
+      "zh": ""
+    },
+    {
+      "chapter": 28,
+      "verse": 5,
+      "ref": "Y 28.5",
+      "orig": "ashâ kat thwâ daresânî manascâ\nvohû vaêdemnô gâtûmcâ ahurâi\nsevîshtâi seraoshem mazdâi anâ mãthrâ\nmazishtem vâurôimaidî xrafstrâ hizvâ.",
+      "en": "O Asha, shall I see thee and Good Thought, as one that knows?\n(Shall I see) the throne of the mightiest Ahura and the following\nof Mazda? Through this word (of promise) on our tongue will we\nturn the robber horde unto the Greatest.",
+      "zh": ""
+    },
+    {
+      "chapter": 28,
+      "verse": 6,
+      "ref": "Y 28.6",
+      "orig": "vohû gaidî mananghâ dâidî ashâ-\ndå daregâyû ereshvâish tû uxdhâish\nmazdâ zarathushtrâi aojôñghvat rafenô\nahmaibyâcâ ahurâ ýâ daibishvatô\ndvaêshå taurvayâmâ.",
+      "en": "Come thou with Good Thought, give through Asha, O Mazda, as\nthe gift to Zarathushtra, according to thy sure words, long enduring\nmighty help, and to us, O Ahura, whereby we may overcome the enmity\nof our foes.",
+      "zh": ""
+    },
+    {
+      "chapter": 28,
+      "verse": 7,
+      "ref": "Y 28.7",
+      "orig": "dâidî ashâ tãm ashîm vanghêush\nâyaptâ mananghô dâidî tû ârmaitê\nvîshtâspâi îshem maibyâcâ\ndåstû mazdâ xshayâcâ ýâ\nvê mãthrâ srevîm ârâdå.",
+      "en": "Grant, O thou Asha, the reward, the blessing of Good Thought;\nO Piety, give our desire to Vishtaspa and to me; O thou Mazda\nand King, grant that your Prophet may command a hearing.",
+      "zh": ""
+    },
+    {
+      "chapter": 28,
+      "verse": 8,
+      "ref": "Y 28.8",
+      "orig": "vahishtem thwâ vahishtâ ýêm ashâ\nvahishtâ hazaoshem ahurem ýâsâ vâunush\nnarôi ferashaoshtrâi maibyâcâ ýaêibyascâ\nît rånghanghôi vîspâi ýavê\nvanghêush mananghô.",
+      "en": "The best I ask of Thee, O Best, Ahura (Lord) of one will with\nthe Best Asha, desiring (it) for the hero Frashaostra and for\nthose (others) to whom thou wilt give (it), (the best gift) of\nGood Mind through all time.",
+      "zh": ""
+    },
+    {
+      "chapter": 28,
+      "verse": 9,
+      "ref": "Y 28.9",
+      "orig": "anâish vå nôit ahurâ mazdâ ashemcâ\nýânâish zaranaêmâ manascâ\nhyat vahishtem ýôi vê ýôithemâ\ndasemê stûtãm, ýûzhêm zevîshtyånghô\nîshô xshathremcâ savanghãm.",
+      "en": "With these bounties, O Ahura, may we never provoke your wrath,\nO Mazda and Right and Best Thought, we who have been eager in\nbringing you songs of praise. Ye are they that are the mightiest\nto advance desire and the Dominion of Blessings.",
+      "zh": ""
+    },
+    {
+      "chapter": 28,
+      "verse": 10,
+      "ref": "Y 28.10",
+      "orig": "at ýêñg ashâatcâ vôistâ\nvanghêushcâ dâthêñg mananghô\nerethwêñg mazdâ ahurâ aêibyô\nperenâ âpanâish kâmem, at vê xshmaibyâ\nasûnâ vaêdâ hvaraithyâ vaiñtyâ\nsravå.",
+      "en": "The wise whom thou knowest as worthy, for their right (doing)\nand their good thought, for them do thou fulfill their longing\nfor attainment. For I know words of prayer are effective with\nYe, which tend to a good object.",
+      "zh": ""
+    },
+    {
+      "chapter": 28,
+      "verse": 11,
+      "ref": "Y 28.11",
+      "orig": "ýê âish ashem nipånghê manascâ\nvohû ýavaêtâitê tvêm mazdâ\nahurâ frô-mâ sîshâ thwahmât\nvaocanghê manyêush hacâ thwâ êeånghâ\nýâish â anghush pouruyô bavat!",
+      "en": "I would thereby preserve Right and Good Thought for evermore,\nthat I may instruct, do thou teach me, O Mazda Ahura, from thy\nspirit by thy mouth how it will be with the First Life.\n<H2 id=y29",
+      "zh": ""
+    },
+    {
+      "chapter": 28,
+      "verse": 12,
+      "ref": "Y 28.12",
+      "orig": "(zôt u râspî,) ahyâ ýâsâ\n... gêushcâ urvânem (2). ýathâ\nahû vairyô ... (4). ashem vohû ... (3). ahyâsãm\nhâitîm ýazamaide. ýenghê hâtãm\nâat ýesnê paitî vanghô mazdå\nahurô vaêthâ ashât hacâ ýånghãmcâ\ntãscâ tåscâ ýazamaide!!",
+      "en": "",
+      "zh": ""
+    }
+  ]
+}

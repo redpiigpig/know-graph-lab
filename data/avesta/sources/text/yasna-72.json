@@ -1,0 +1,125 @@
+{
+  "slug": "yasna-72",
+  "siglum": "Y 72",
+  "title_zh": "亞斯納 第 72 章‧結祭",
+  "title_en": "Yasna 72",
+  "canon": "avestan",
+  "volume": "yasna",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/yasna/y54to72.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "米爾斯（L. H. Mills）",
+  "en_url": "https://www.avesta.org/yasna/yasna.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": "米爾斯的《東方聖書》譯本未另譯本章，原書註明 (See Y61.)。英譯欄因此從缺——這是譯本的處理方式，不是本站漏抓。",
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "Vohu Mano": "沃胡‧馬納",
+    "Asha Vahishta": "阿沙‧瓦希什塔",
+    "Khshathra Vairya": "赫沙特拉‧瓦伊里亞",
+    "Spenta Armaiti": "斯彭塔‧阿爾邁提",
+    "Haurvatat": "豪爾瓦塔特",
+    "Ameretat": "阿梅雷塔特",
+    "Haoma": "豪麻",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 72,
+      "verse": 1,
+      "ref": "Y 72.1",
+      "orig": "(zôt,) ahunemca vairîm fraêshyâmahî\nañtareca zãm añtareca asmanem ashemca vahishtem\nfraêshyâmahî añtareca zãm añtareca\nasmanem ýenghê-hâtãmca hufrâyashtãm\nfraêshyâmahî añtareca zãm añtareca\nasmanem dahmaheca narsh ashaonô dahmãmca vanguhîm\nâfritîm fraêshyâmahî añtareca\nzãm añtareca asmanem,",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 72,
+      "verse": 2,
+      "ref": "Y 72.2",
+      "orig": "hamistayaêca nizhberetayaêca añgrahe manyêush\nmat-dâmanô duzhdâmanô pouru-mahrkahe hamistayaêca\nnizhberetayaêca kahvaredhanãmca kahvareidhinãmca\nhamistayaêca nizhberetayaêca kahvaredhaheca kahvareidhyåsca",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 72,
+      "verse": 3,
+      "ref": "Y 72.3",
+      "orig": "hamistayaêca nizhberetayaêca kayadhanãmca\nkayeidhinãmca hamistayaêca nizhberetayaêca\nkayadhaheca kâidhyåsca hamistayaêca nizhberetayaêca\ntâyunãmca hazasnãmca hamistayaêca nizhberetayaêca\nzañdãmca ýâtumatãmca hamistayaêca\nnizhberetayaêca mithrô-zyãmca mithrô-drujemca",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 72,
+      "verse": 4,
+      "ref": "Y 72.4",
+      "orig": "hamistayaêca nizhberetayaêca ashavakhnãmca\nashava-tbaêshãmca hamistayaêca nizhberetayaêca\nashemaokhaheca anashaonô sâstraheca pouru-mahrkahe\nhamistayaêca nizhberetayaêca kahe kahyâcît\ndrvatãm arathwyô-mananghãm arathwyô-vacanghãm\narathwyô-shyaothenanãm spitama zarathushtra.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 72,
+      "verse": 5,
+      "ref": "Y 72.5",
+      "orig": "katha drujem nîsh ahmat â nîsh-nâshâma,\nnîsh-nâshâma saoshyañtô drujem,\nkatha nîsh-nâshâma ýatha hîm janâma\nxshayamnô axshayamanãm vîspâish haca\nkarshvãn ýâish hapta hamistêe nizhberetêe\nvîspayå drvatô stôish, stavas ashâ\nýê hudå ýôi heñtî!!\nýathâ ahû vairyô ashâtcît\nhacâ ... (2)!!!!",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 72,
+      "verse": 6,
+      "ref": "Y 72.6",
+      "orig": "ýasnemca vahmemca aojasca zavareca âfrînâmi,\nahurahe mazdå raêvatô hvarenanguhatô ameshanãm\nspeñtanãm mithrahe vouru-gaoyaotôish râmanasca\nhvâstrahe,",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 72,
+      "verse": 7,
+      "ref": "Y 72.7",
+      "orig": "hvarexshaêtahe ameshahe ... vîspaêshãm\nýazatanãm ... nabânazdishtanãm fravashinãm.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 72,
+      "verse": 8,
+      "ref": "Y 72.8",
+      "orig": "ýasnemca vahmemca aojasca zavareca âfrînâmi,\ntava âtarsh puthra ahurahe mazdå. ashem vohû\n... (3). (zôt u râspî,) ýathâ ahû\nvairyô ... (2). ýasnemca ... âfrînâmi,\nahurahe mazdå ... nabânazdishtanãm fravashinãm.\n(zôt,) ýasnemca ... âfrînâmi, tava\nâtarsh puthra ahurahe mazdå. (zôt u râspî,)\nashem vohû....",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 72,
+      "verse": 9,
+      "ref": "Y 72.9",
+      "orig": "ahmâi raêshca ... vîspô-hvâthrem.\nashem vohû.... hazangrem baêshazanãm baêvare\nbaêshazanãm (3). ashem vohû.... jasa-mê\navanghe mazda (3). amahe hutâshtahe huraodhahe verethrakhnahe\nahuradhâtahe vanaiñtyåsca uparatâtô.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 72,
+      "verse": 10,
+      "ref": "Y 72.10",
+      "orig": "râmanasca hvâstrahe vayaosh uparô-kairyehe\ntaradhâtô anyâish dâmãn, aêtat\ntê vayô ýat tê asti speñtô-\nmainyaom, thwâshahe hvadhâtahe zrvânahe akaranahe\nzrvânahe darekhô-hvadhâtahe. ashem vohû\n... !\n! ! ! ! !",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 72,
+      "verse": 11,
+      "ref": "Y 72.11",
+      "orig": "aêvô pañtå ýô ashahe\nvîspe anyaêshãm apañtãm angrahe\nmainyêush nasishtãm daênãm daêvayasnanãm\nparâjîtîm mashyânãm frâkereitîm!\n! !",
+      "en": "",
+      "zh": ""
+    }
+  ]
+}

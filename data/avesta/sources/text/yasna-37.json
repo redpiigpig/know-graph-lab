@@ -1,0 +1,77 @@
+{
+  "slug": "yasna-37",
+  "siglum": "Y 37",
+  "title_zh": "亞斯納 第 37 章‧七章禱‧向聖造與弗拉瓦希",
+  "title_en": "Yasna 37",
+  "canon": "avestan",
+  "volume": "yasna",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/yasna/y35to42.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "米爾斯（L. H. Mills）",
+  "en_url": "https://www.avesta.org/yasna/yasna.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "Vohu Mano": "沃胡‧馬納",
+    "Asha Vahishta": "阿沙‧瓦希什塔",
+    "Khshathra Vairya": "赫沙特拉‧瓦伊里亞",
+    "Spenta Armaiti": "斯彭塔‧阿爾邁提",
+    "Haurvatat": "豪爾瓦塔特",
+    "Ameretat": "阿梅雷塔特",
+    "Haoma": "豪麻",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 37,
+      "verse": 1,
+      "ref": "Y 37.1",
+      "orig": "ithâ ât ýazamaidê ahurem mazdãm\nýê gãmcâ ashemcâ dât apascâ\ndât urvaråscâ vanguhîsh raocåscâ\ndât bûmîmcâ vîspâcâ\nvohû.",
+      "en": "Thus therefore do we worship Ahura Mazda, who made the Kine\n(the living creation), and the (embodied) Righteousness (which\nis incarnate in the clean), and the waters, and the wholesome\nplants, the stars, and the earth, and all (existing) objects that\nare good.",
+      "zh": ""
+    },
+    {
+      "chapter": 37,
+      "verse": 2,
+      "ref": "Y 37.2",
+      "orig": "ahyâ xshathrâcâ mazênâcâ\nhavapanghâishcâ têm at ýasnanãm\npaurvatâtâ ýazamaidê ýôi\ngêush hacâ shyeiñtî.",
+      "en": "Yea, we worship Him for His Sovereign Power and His\ngreatness, beneficent (as they are), and with priority among the\nYazads who abide beside the Kine (and care for her protection\nand support).",
+      "zh": ""
+    },
+    {
+      "chapter": 37,
+      "verse": 3,
+      "ref": "Y 37.3",
+      "orig": "têm at âhûiryâ nâmênî\nmazdâ-varâ speñtôtêmâ ýazamaidê,\ntêm ahmâkâish azdibîshcâ ushtânâishcâ\nýazamaidê, têm ashâunãm fravashîsh\nnarãmcâ nâirinãmcâ ýazamaidê.",
+      "en": "And we worship Him under His name as Lord, to Mazda dear,\nthe most beneficent (of names). We worship him with our bones,\nand with our flesh, (with our bodies and our life). And we worship\nthe Fravashis of the saints, of holy men, and holy women; (4)\nand Righteousness the Best do we worship, the most beauteous,\nthe Bountiful Immortal and that which is endowed with light in\nall things good.",
+      "zh": ""
+    },
+    {
+      "chapter": 37,
+      "verse": 4,
+      "ref": "Y 37.4",
+      "orig": "ashem at vahishtem ýazamaidê hyat sraêshtem\nhyat speñtem ameshem hyat raocôñnghvat hyat\nvîspâ vohû.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 37,
+      "verse": 5,
+      "ref": "Y 37.5",
+      "orig": "vohucâ manô ýazamaidê vohucâ\nxshathrem vanguhîmcâ daênãm vanguhîmcâ\nfseratûm vanguhîmcâ ârmaitîm. ýenghê\nhâtãm ... tåscâ ýazamaide!!",
+      "en": "And we worship the Good Mind (of the Lord), and His Sovereign\nPower, and the Good Faith, the good law of our thrift, and Piety\nthe ready mind (within Thy folk)!\n<H2 id=y38",
+      "zh": ""
+    }
+  ]
+}

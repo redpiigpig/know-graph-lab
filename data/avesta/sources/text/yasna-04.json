@@ -1,0 +1,245 @@
+{
+  "slug": "yasna-04",
+  "siglum": "Y 4",
+  "title_zh": "亞斯納 第 4 章",
+  "title_en": "Yasna 4",
+  "canon": "avestan",
+  "volume": "yasna",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/yasna/y0to8.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "米爾斯（L. H. Mills）",
+  "en_url": "https://www.avesta.org/yasna/yasna.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "Vohu Mano": "沃胡‧馬納",
+    "Asha Vahishta": "阿沙‧瓦希什塔",
+    "Khshathra Vairya": "赫沙特拉‧瓦伊里亞",
+    "Spenta Armaiti": "斯彭塔‧阿爾邁提",
+    "Haurvatat": "豪爾瓦塔特",
+    "Ameretat": "阿梅雷塔特",
+    "Haoma": "豪麻",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 4,
+      "verse": 1,
+      "ref": "Y 4.1",
+      "orig": "ima humatâca hûxtâca hvarshtâca (zôt,)\nimã haomãsca myazdãsca zaothråsca baresmaca\nashaya frastaretem gãmca hudhånghem haurvata ameretâta\ngãmca hudhånghem haomemca para-haomemca aêsmãsca\nbaoidhîmca imãm anghuyãmca ashayãmca\nrathwãmca ratufritîmca gâthanãmca sraothrem\nhvarshtå mãthrå pairica dademahî âca\nvaêdhayamahî.",
+      "en": "These good thoughts, good words, and good deeds, these Haomas,\nmeat-offerings, and Zaothras, this Baresman spread with sanctity,\nthis flesh, and the two, Haurvatat (who guards the water) and\nAmeretatat (who guards the plants and wood), even the flesh, the\nHaoma and Haoma-juice, the wood-billets, and their perfume, this\nsacred lordship and chieftainship, and the timely prayer with\nblessing, and the heard recital of the Gathas, and the well-said\nMathras, these all we offer, and make known with celebrations\n(here).",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 2,
+      "ref": "Y 4.2",
+      "orig": "âat dîsh âvaêdhayamahî ahurâica\nmazdâi sraoshâica ashyâi ameshaêibyasca\nspeñtaêibyô ashâunãmca fravashibyô\nashâunãmca urvôibyô âthraêca\nahurahe mazdå rathwaêca berezaite vîspayå\nsãcatca ashaonô stôish ýasnâica\nvahmâica xshnaothrâica frasastayaêca.",
+      "en": "Yea, these do we announce with celebrations, and we present\nthem to Ahura Mazda, and to Sraosha (Obedience) the blessed, and\nto the Bountiful Immortals, and to the Fravashis of the saints,\nand to their souls, and to the Fire of Ahura Mazda, the lofty\nlord of the entire creation of the holy, for sacrifice, homage,\npropitiation, and praise.",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 3,
+      "ref": "Y 4.3",
+      "orig": "âat dîsh âvaêdhayamahî ima humatâca\nhûxtâca hvarshtâca imã haomãsca\nmyazdãsca zaothråsca baresmaca ashaya frastaretem\ngãmca hudhånghem haurvata ameretâta gãmca\nhudhånghem haomemca para-haomemca aêsmãsca\nbaoidhîmca imãm anghuyãmca ashayãmca\nrathwãmca ratufritîmca gâthanãmca sraothrem\nhvarshtå mãthrå pairica dademahî âca\nvaêdhayamahî.",
+      "en": "Yea, further, we present (them to the Bountiful Immortals\nwith an especial gift) these thoughts well thought, these words\nwell spoken, these deeds well done, these Haomas, Myazdas, Zaothras,\nand this Baresman spread with sanctity, the flesh, and Haurvatat\n(who guards the water), and Ameretatat (who guards the plants\nand wood), even the flesh, Haoma and Parahaoma, the wood-billets,\nthe perfume, and this their lordship and their sanctity, and this\nchieftainship, this prayer for blessing, the heard recital of\nthe Gathas, and the well-said Mathras.",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 4,
+      "ref": "Y 4.4",
+      "orig": "âat dîsh âvaêdhayamahî ameshaêibyô\nspeñtaêibyô huxshathraêibyô hudhâbyô\nýavaêjibyô ýavaêsubyô ýôi\nvanghêush â mananghô shyeiñti ýåsca\nuiti.",
+      "en": "We offer with our celebrations, and we announce them (of a\nverity) to the Bountiful Immortals, those who exercise their rule\naright, and who dispose (of all) aright, the ever-living, ever-helpful,\nthe male divinities among their number who dwell with the Good\nMind, [and the female ones as well].",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 5,
+      "ref": "Y 4.5",
+      "orig": "âat dîsh âvaêdhayamahî frâyehîsh\nahe nmânahe fradathâi ahe nmânahe pasvãmca\nnarãmca zâtanãmca zãhyamnanãmca\nashaonãm ýenghe aêm heñti.",
+      "en": "And we announce them in our celebrations as more propitious\nfor this house, and for the furtherance of this house, of its\nherds, and of its men, of those now born, and of those yet to\nbe born, the holy, yea, for the furtherance of that house of which\nthese (men) are thus.",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 6,
+      "ref": "Y 4.6",
+      "orig": "âat dîsh âvaêdhayamahî ashâunãm\nvanguhibyô fravashibyô ýå ukhråsca\naiwithûråsca ashaonãm avanghe.",
+      "en": "And we present these offerings to the good Fravashis of the\nsaints who are mighty and overwhelming for the succor of the saints.",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 7,
+      "ref": "Y 4.7",
+      "orig": "âat dîsh âvaêdhayamahî dathushô\nahurahe mazdå raêvatô hvarenanguhatô mainyêush\nmainyaoyehe ameshanãm speñtanãm ýasnâica\nvahmâica xshnaothrâica frasastayaêca!",
+      "en": "Yea, we present these hereby to the Creator Ahura Mazda, the\nradiant, the glorious, and the heavenly spirit, for the sacrifice,\nhomage, propitiation, and praise of the Bountiful Immortals (all).",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 8,
+      "ref": "Y 4.8",
+      "orig": "âat dîsh âvaêdhayamahî asnyaêibyô\nashahe ratubyô, hâvanêe ashaone ashahe rathwe\nýasnâica vahmâica xshnaothrâica frasastayaêca,\nâat dîsh âvaêdhayamahî sâvanghêe\nvîsyâica ashaone ashahe rathwe ýasnâica\nvahmâica xshnaothrâica frasastayaêca, âat\ndîsh âvaêdhayamahî mithrahe vouru-gaoyaotôish\nhazangrô-gaoshahe baêvare-cashmanô aoxtô-nâmanô\nýazatahe râmanô hvâstrahe ýasnâica\nvahmâica xshnaothrâica frasastayaêca.",
+      "en": "And we present these hereby to the Day-lords of the ritual\norder, to Havani, to Savanghi, and to Visya, the holy lords of\nthe ritual order, for sacrifice, homage, propitiation, and for\npraise, and to Mithra of the wide pastures, and the thousand ears,\nand the myriad eyes, the Yazad of the spoken name,",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 9,
+      "ref": "Y 4.9",
+      "orig": "âat dîsh âvaêdhayamahî rapithwinâi\nashaone ashahe rathwe ýasnâica vahmâica xshnaothrâica\nfrasastayaêca, âat dîsh âvaêdhayamahî\nfrâdat-fshave zañtumâica ashaone ashahe rathwe\nýasnâica vahmâica xshnaothrâica frasastayaêca,\nâat dîsh âvaêdhayamahî ashahe vahishtahe\nâthrasca ahurahe mazdå ýasnâica vahmâica\nxshnaothrâica frasastayaêca.",
+      "en": "And to Rapithwina, Fradat-fshu, and Zantuma, the holy lords\nof the ritual order, and to Righteousness the Best, and to Ahura\nMazda's Fire,",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 10,
+      "ref": "Y 4.10",
+      "orig": "âat dîsh âvaêdhayamahî uzayeirinâi\nashaone ashahe rathwe ýasnâica vahmâica xshnaothrâica\nfrasastayaêca, âat dîsh âvaêdhayamahî\nfrâdat- vîrâi dâh'yumâica ashaone\nashahe rathwe ýasnâica vahmâica xshnaothrâica\nfrasastayaêca, âat dîsh âvaêdhayamahî\nberezatô ahurahe nafedhrô apãm apasca mazdadhâtayå\nýasnâica vahmâica xshnaothrâica frasastayaêca.",
+      "en": "And to Uzayeirina, Fradat-vira, and Dahvyuma, the holy lords\nof the ritual order, and to that lofty lord Napat-apam, and to\nthe water Mazda-made,",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 11,
+      "ref": "Y 4.11",
+      "orig": "âat dîsh âvaêdhayamahî aiwisrûthrimâi\naibigayâi ashaone ashahe rathwe ýasnâica vahmâica\nxshnaothrâica frasastayaêca, âat dîsh\nâvaêdhayamahî frâdat-vîspãm-hujyâtêe\nzarathushtrôtemâica ashaone ashahe rathwe ýasnâica\nvahmâica xshnaothrâica frasastayaêca, âat\ndîsh âvaêdhayamahî ashâunãm\nfravashinãm khenãnãmca vîrô-\nvãthwanãm ýâiryayåsca hushitôish,\namaheca hutâshtahe huraodhahe verethrakhnaheca ahuradhâtahe\nvanaiñtyåsca uparatâtô ýasnâica\nvahmâica xshnaothrâica frasastayaêca.",
+      "en": "And to Aiwisruthrima, the life-furtherer, and to Fradat-vispam-hujyaiti \nand Zarathushtrotema, the holy lords of the ritual order, and\nto the Fravashis of the saints, and to the women who bring forth\nmany sons, and to the Prosperous home-life which endures without\nreverse throughout the year, and to Force, well-shaped and stately,\nand to the Blow of victory which Mazda gives, and to the Victorious\nAscendency which it secures, for their sacrifice, homage, their\npropitiation, and their praise,",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 12,
+      "ref": "Y 4.12",
+      "orig": "âat dîsh âvaêdhayamahî ushahinâi\nashaone ashahe rathwe ýasnâica vahmâica xshnaothrâica\nfrasastayaêca, âat dîsh âvaêdhayamahî\nberejyâi nmânyâica ashaone ashahe rathwe ýasnâica\nvahmâica xshnaothrâica frasastayaêca, âat\ndîsh âvaêdhayamahî sraoshahe ashyehe ashivatô\nverethrâjanô frâdat-gaêthahe, rashnaosh\nrazishtahe arshtâtasca frâdat-gaêthayå\nvaredat-gaêthayå ýasnâica vahmâica\nxshnaothrâica frasastayaêca!",
+      "en": "And to Ushahina, with Berejya and Nmanya, and Sraosha (Obedience)\nthe blessed, smiting with the blow of victory and furthering the\nsettlements, and to Rashnu, the most just, and to Arstat, furthering\nthe settlements, and causing them to increase.",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 13,
+      "ref": "Y 4.13",
+      "orig": "âat dîsh âvaêdhayamahî mâhyaêibyô\nashahe ratubyô, añtaremånghâi ashaone\nashahe rathwe ýasnâica vahmâica xshnaothrâica\nfrasastayaêca, âat dîsh âvaêdhayamahî\nperenô- månghâi vîshaptathâica ashaone\nashahe rathwe ýasnâica vahmâica xshnaothrâica\nfrasastayaêca!",
+      "en": "And these we announce and we present hereby to the Month-lords\nof the ritual order, to the new moon and the waning moon (the\nmoon within), and to the full moon which scatters night, the holy\nlord of the ritual order, for (their) sacrifice, homage, their\npropitiation, and their praise.",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 14,
+      "ref": "Y 4.14",
+      "orig": "âat dîsh âvaêdhayamahî ýâiryaêibyô\nashahe ratubyô, maidhyôizaremayâi ashaone ashahe\nrathwe ýasnâica vahmâica xshnaothrâica\nfrasastayaêca, âat dîsh âvaêdhayamahî\nmaidhyôishemâi ashaone ashahe rathwe ýasnâica\nvahmâica xshnaothrâica frasastayaêca, âat\ndîsh âvaêdhayamahî paitishhahyâi\nashaone ashahe rathwe ýasnâica vahmâica xshnaothrâica\nfrasastayaêca, âat dîsh âvaêdhayamahî\nayâthrimâi fraourvaêshtrimâi varshniharshtâica\nashaone ashahe rathwe ýasnâica vahmâica xshnaothrâica\nfrasastayaêca, âat dîsh âvaêdhayamahî\nmaidhyâiryâi ashaone ashahe rathwe ýasnâica\nvahmâica xshnaothrâica frasastayaêca, âat\ndîsh âvaêdhayamahî hamaspathmaêdayâi\nashaone ashahe rathwe ýasnâica vahmâica xshnaothrâica\nfrasastayaêca, âat dîsh âvaêdhayamahî\nsaredhaêibyô ashahe ratubyô ýasnâica\nvahmâica xshnaothrâica frasastayaêca.",
+      "en": "And these we announce hereby and we present to the Yearly \nfestivals, to Maidhyo-zaremaya, Maidhyo-shema, Patishahya, and\nto Ayathrima, to Maidhyairya, Hamaspathmaedhaya, and to the Seasons\nas holy lords of the ritual order, for sacrifice, homage, propitiation,\nand for praise.",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 15,
+      "ref": "Y 4.15",
+      "orig": "âat dîsh âvaêdhayamahî vîspaêibyô\naêibyô ratubyô ýôi heñti\nashahe ratavô thrayasca thrisãsca nazdishta pairishhâvanayô\nýôi heñti ashahe ýat vahishtahe mazdô-frasâsta\nzarathushtrô- fraoxta, ýasnâica vahmâica\nxshnaothrâica frasastayaêca!",
+      "en": "And these we announce and we present hereby to all those lords\nwho are the three and thirty lords of the ritual order, who approach\nthe nearest around about our Havani, and which are the festivals\nof Righteousness the Best, inculcated by Mazda, and uttered forth\nby Zarathushtra for their sacrifice, homage, propitiation, and\npraise.",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 16,
+      "ref": "Y 4.16",
+      "orig": "âat dîsh âvaêdhayamahî ahuraêibya\nmithraêibya berezañbya aithyajanghaêibya ashavanaêibya\nstârãmca speñtô-mainyavanãm dâmanãm\ntishtryeheca stârô raêvatô hvarenanguhatô\nmånghaheca gaocithrahe hvareca xshaêtahe aurvat-aspahe\ndôithrahe ahurahe mazdå mithrahe dâh'yunãm\ndainghupatôish, ýasnâica vahmâica xshnaothrâica\nfrasastayaêca, âat dîsh âvaêdhayamahî\n(...rôz...) ahurahe mazdå raêvatô hvarenanguhatô\nýasnâica vahmâica xshnaothrâica frasastayaêca,\nâat dîsh âvaêdhayamahî (...mâh...)\nashâunãm fravashinãm ýasnâica\nvahmâica xshnaothrâica frasastayaêca!",
+      "en": "And these we announce and we present to Ahura and to Mithra, \nthe lofty, and imperishable, and holy two, to the stars, the creatures\nof Spenta Mainyu, and to the star Tistrya, the radiant, the glorious,\nand to the Moon which contains the seed of cattle, and to the\nresplendent Sun, of the swift horses, Ahura Mazda's eye, and to\nMithra, the lord of provinces, for their sacrifice, homage, their\npropitiation and their praise; yea, these we present hereby to\nAhura Mazda (as he rules this day) and to the Fravashis of the\nsaints (as they rule this month), for their sacrifice, homage,\ntheir propitiation and their praise.",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 17,
+      "ref": "Y 4.17",
+      "orig": "âat dîsh âvaêdhayamahî tava\nâthrô ahurahe mazdå puthra mat vîspaêibyô\nâterebyô ýasnâica vahmâica xshnaothrâica\nfrasastayaêca, âat dîsh âvaêdhayamahî\naiwyô vanguhibyô vîspanãmca apãm\nmazdadhâtanãm vîspanãmca urvaranãm\nmazdadhâtanãm ýasnâica vahmâica\nxshnaothrâica frasastayaêca!",
+      "en": "And these we announce hereby to thee, the Fire, O Ahura Mazda's \nson! with all the fires for thy sacrifice, homage, propitiation,\nand praise, and to the good waters for the sacrifice, homage,\npropitiation, and praise of all the waters Mazda-made, and to\nall the plants which Mazda made,",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 18,
+      "ref": "Y 4.18",
+      "orig": "âat dîsh âvaêdhayamahî mãthrahe\nspeñtahe ashaonô verezyanguhahe dâtahe vîdaêvahe\ndâtahe zarathushtrôish darekhayå upayanayå\ndaênayå vanghuyå mâzdayasnôish ýasnâica\nvahmâica xshnaothrâica frasastayaêca.",
+      "en": "And to the Mathra Spenta, the holy, the effective, the law \nagainst the Daevas, the Zarathushtrian statute, and to the long\ndescent of the good Mazdayasnian religion.",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 19,
+      "ref": "Y 4.19",
+      "orig": "âat dîsh âvaêdhayamahî garôish\nushidarenahe mazdadhâtahe ashahvâthrahe vîspaêshãmca\ngairinãm ashahvâthranãm pouru-hvâthranãm\nmazdadhâtanãm kâvayeheca hvarenanghô\nmazdadhâtahe ahvaretaheca hvarenanghô mazdadhâtahe\nýasnâica vahmâica xshnaothrâica frasastayaêca,\nâat dîsh âvaêdhayamahî ashôish\nvanghuyå cistôish vanghuyå erethê vanghuyå\nrasãstâtô vanghuyå hvarenanghô\nsavanghô mazdadhâtahe ýasnâica vahmâica\nxshnaothrâica frasastayaêca.",
+      "en": "And these we announce and we present hereby to Mount Ushi-darena, \nMazda-made, brilliant with sanctity, and to all the mountains\nshining with their holiness, abundantly luminous, and Mazda-made,\nand to the Kingly glory, the unconsumed glory Mazda-made, and\nto the good Blessedness, and the good Religious-knowledge, and\nthe good Rectitude, and to the good Rasastat, and to the Glory\nand the Benefit which Mazda created.",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 20,
+      "ref": "Y 4.20",
+      "orig": "âat dîsh âvaêdhayamahî dahmayå\nvanghuyå âfritôish dahmaheca narsh ashaonô\nukhraheca taxmahe dâmôish upamanahe ýazatahe\nýasnâica vahmâica xshnaothrâica frasastayaêca!",
+      "en": "And these we offer and present to the pious and good Blessing \nof the pious, and to the swift and dreadful Yazad, the Curse of\nwisdom.",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 21,
+      "ref": "Y 4.21",
+      "orig": "âat dîsh âvaêdhayamahî ånghãm\nasanghãmca shôithranãmca gaoyaoitinãmca\nmaêthananãmca avô-hvarenanãmca apãmca\nzemãmca urvaranãmca ainghåsca zemô avaingheca\nashnô vâtaheca ashaonô strãm månghô\nhûrô anakhranãm raocanghãm hvadhâtanãm\nvîspanãmca speñtahe mainyêush dâmanãm\nashaonãm ashaoninãmca ashahe rathwãm ýasnâica\nvahmâica xshnaothrâica frasastayaêca.",
+      "en": "And to these places, pastures, and dwellings with their springs\nof water, their rivers, to the lands and to the plants, to this\nearth and yon heaven, to the holy wind, to the stars, moon, and\nsun, to the stars without beginning, self-disposed, and to all\nthe holy creatures of the Spenta Mainyu, male and female (the\nrulers as they are of the ritual order).",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 22,
+      "ref": "Y 4.22",
+      "orig": "âat dîsh âvaêdhayamahî rathwô\nberezatô ýô ashahe, rathwãm ayaranãmca\nasnyanãmca mâhyanãmca ýâiryanãmca\nsaredhanãmca ýôi heñti ashahe ratavô,\nhâvanôish rathwô ýasnâica vahmâica\nxshnaothrâica frasastayaêca!",
+      "en": "And these we announce and we present hereby to that lofty\nlord who is Asha, the ritual righteousness itself, to the Day-lords,\nand the Month-lords, the Year-lords, and the Seasons who are the\nlords of the ritual at the time of Havani, and for their sacrifice,\nhomage, their propitiation and their praise.",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 23,
+      "ref": "Y 4.23",
+      "orig": "âat dîsh âvaêdhayamahî (râspî,)\nsraoshahe ashyehe taxmahe tanumãthrahe darshi- draosh âhûiryehe\nxshnaothra ýasnâica vahmâica xshnaothrâica\nfrasastayaêca, âat dîsh âvaêdhayamahî\nzarathushtrahe spitâmahe ashaonô fravashêe xshnaothra\nýasnâica vahmâica xshnaothrâica frasastayaêca,\nâat dîsh âvaêdhayamahî tava âtarsh\nputhra ahurahe mazdå xshnaothra ýasnâica vahmâica\nxshnaothrâica frasastayaêca.",
+      "en": "Yea, these we announce and we present to Sraosha, the blessed\nand mighty, whose body is the Mathra, him of the daring spear,\nthe lordly one, and to the holy Fravashi of Zarathushtra Spitama,\nthe saint.\nAnd these we announce and we present to thee, the Fire, O Ahura\nMazda's son! for thy sacrifice, homage, thy propitiation, and\nthy praise.",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 24,
+      "ref": "Y 4.24",
+      "orig": "âat dîsh âvaêdhayamahî ashâunãm\nfravashinãm ukhranãm aiwithûranãm paoiryô-tkaêshanãm\nfravashinãm nabânazdishtanãm fravashinãm\nýasnâica vahmâica xshnaothrâica frasastayaêca.",
+      "en": "And these we announce and we present to the Fravashis of the\nsaints, the mighty and overwhelming, of the saints of the ancient\nlore, and of the next of kin.",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 25,
+      "ref": "Y 4.25",
+      "orig": "âat dîsh âvaêdhayamahî vîspaêibyô\nashahe ratubyô ýasnâica vahmâica xshnaothrâica\nfrasastayaêca, âat dîsh âvaêdhayamahî\nvîspaêibyô vanghudhâbyô ýazataêibyô\nmainyaoibyascâ gaêthyaêibyascâ ýôi\nheñti ýasnyâca vahmyâca ashât\nhaca ýat vahishtât!\nameshâ speñtâ huxshathrâ hudhånghô\nýazamaide,",
+      "en": "And these we announce and we present hereby to all the good\nYazads, earthly and heavenly, who are (meet) for sacrifice, homage,\npropitiation, and for praise, because of Asha Vahishta (who is\nRighteousness the Best).\nWe worship the Bountiful Immortals who rule aright, and who dispose\nof all aright.",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 26,
+      "ref": "Y 4.26",
+      "orig": "ýenghê hâtãm âat ýesnê\npaitî vanghô mazdå ahurô vaêthâ\nashât hacâ ýånghãmcâ tãscâ\ntåscâ ýazamaide!!",
+      "en": "And that one of beings (do we worship) whose superior (service)\nin the sacrifice Ahura Mazda knows, and from his righteousness\n(which he maintains, and those of all female beings do we worship)\nwhose (higher service is thus likewise known; yea, all) male and\nfemale beings do we worship (who are such)!\n<H2 id=y5",
+      "zh": ""
+    }
+  ]
+}

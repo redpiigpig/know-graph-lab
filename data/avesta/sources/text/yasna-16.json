@@ -1,0 +1,117 @@
+{
+  "slug": "yasna-16",
+  "siglum": "Y 16",
+  "title_zh": "亞斯納 第 16 章",
+  "title_en": "Yasna 16",
+  "canon": "avestan",
+  "volume": "yasna",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/yasna/y13to27.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "米爾斯（L. H. Mills）",
+  "en_url": "https://www.avesta.org/yasna/yasna.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "Vohu Mano": "沃胡‧馬納",
+    "Asha Vahishta": "阿沙‧瓦希什塔",
+    "Khshathra Vairya": "赫沙特拉‧瓦伊里亞",
+    "Spenta Armaiti": "斯彭塔‧阿爾邁提",
+    "Haurvatat": "豪爾瓦塔特",
+    "Ameretat": "阿梅雷塔特",
+    "Haoma": "豪麻",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 16,
+      "verse": 1,
+      "ref": "Y 16.1",
+      "orig": "ahurem mazdãm ashavanem ashahe ratûm ýazamaide\nhudhånghem mazishtem ýazatem ýim sevishtem\nfrâdat-gaêthem dâtârem vohunãm\ndâmanãm, âbyô râtâbyô\nzaothrâbyô arshuxdhaêibyasca vâkhzhibyô\nvîspemca ashavanem mainyaom ýazatem ýazamaide.",
+      "en": "We worship Ahura Mazda, the holy lord of the ritual order,\nwho disposes (all) aright, the greatest Yazad, who is also the\nmost beneficent, and the one who causes the settlements to advance,\nthe creator of good creatures; yea, we worship Him with these\noffered Zaothras and with truthfully and scrupulously delivered\nwords; and we worship every holy Yazad of the heaven (as well)!",
+      "zh": ""
+    },
+    {
+      "chapter": 16,
+      "verse": 2,
+      "ref": "Y 16.2",
+      "orig": "zarathushtrem ashavanem ashahe ratûm ýazamaide,\nâbyô râtâbyô zaothrâbyô\narshuxdhaêibyasca vâkhzhibyô vîspemca\nashavanem gaêthîm ýazatem ýazamaide,\nzarathushtrahe ashaonô fravashîm ýazamaide,\nzarathushtrahe sravå ýazamaide, zarathushtrahe daênãm\nýazamaide, zarathushtrahe varenemca tkaêshemca ýazamaide!",
+      "en": "And we worship Zarathushtra Spitama in our sacrifice, the\nholy lord of the ritual order with these Zaothras and with faithfully\ndelivered words; and we worship every holy earthly Yazad as we\nworship him; and we worship also the Fravashi of Zarathushtra\nSpitama, the saint. And we worship the utterances of Zarathushtra\nand his religion, his faith and his lore.",
+      "zh": ""
+    },
+    {
+      "chapter": 16,
+      "verse": 3,
+      "ref": "Y 16.3",
+      "orig": "anghuyaosh ashacinanghô paurvå dâtå\ndâmãn ashaonîsh, dathushô ahurahe mazdå\nraêvatô hvarenanguhatô ýazamaide, vohu\nmanô ýazamaide, ashem vahishtem ýazamaide,\nxshathrem vairîm ýazamaide, speñtãm\nvanguhîm ârmaitîm ýazamaide, haurvatâtem\nýazamaide, ameretatâtem ýazamaide.",
+      "en": "And we worship the former religions of the world devoted to\nRighteousness which were instituted at the creation, the holy\nreligions of the Creator Ahura Mazda, the resplendent and glorious.\nAnd we worship Vohu Manah (the Good Mind), and Asha Vahishta (who\nis Righteousness the Best), and Khshathra-vairya, the Kingdom\nto be desired, and the good and bountiful Armaiti (true piety\nin the believers), and Haurvatat and Ameretat (our Weal and Immortality).",
+      "zh": ""
+    },
+    {
+      "chapter": 16,
+      "verse": 4,
+      "ref": "Y 16.4",
+      "orig": "dadhvånghem ahurem mazdãm ýazamaide, âtrem\nahurahe mazdå puthrem ýazamaide, âpô\nvanguhîsh mazdadhâtå ashaonîsh ýazamaide,\nhvarexshaêtem aurvat-aspem ýazamaide, månghem\ngaocithrem ýazamaide, tishtrîm stârem raêvañtem\nhvarenanguhañtem ýazamaide, gêush hudhånghô\nurvânem ýazamaide.",
+      "en": "Yea, we worship the Creator Ahura Mazda and the Fire, Ahura\nMazda's son, and the good waters which are Mazda-made and holy,\nand the resplendent sun of the swift horses, and the moon with\nthe seed of cattle (in his beams); and we worship the star Tishtrya,\nthe lustrous and glorious; and we worship the soul of the Kine\nof blessed endowment, (5) and its Creator Ahura Mazda; and we\nworship Mithra of the wide pastures, and Sraosha (Obedience) the\nblessed, and Rashnu the most just, and the good, heroic, bountiful\nFravashis of the saints, and the Blow-of-victory Ahura-given (as\nit is). And we worship Raman Hvastra, and the bounteous Wind of\nblessed gift, (6) and (its) Creator Ahura Mazda, and the good\nMazdayasnian Religion, and the good Blessedness and Arshtat.\nAnd we worship the heaven and the earth of blessed gift, and the\nbounteous Mathra, and the stars without beginning (to their course),\nself-disposing as they are.",
+      "zh": ""
+    },
+    {
+      "chapter": 16,
+      "verse": 5,
+      "ref": "Y 16.5",
+      "orig": "dadhvånghem ahurem mazdãm ýazamaide, mithrem\nvouru-gaoyaoitîm ýazamaide, sraoshem ashîm\nýazamaide, rashnûm razishtem ýazamaide, ashâunãm\nvanguhîsh sûrå speñtå fravashayô\nýazamaide, verethrakhnem ahuradhâtem ýazamaide,\nrâma hvâstrem ýazamaide, vâtem speñtem\nhudhånghem ýazamaide.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 16,
+      "verse": 6,
+      "ref": "Y 16.6",
+      "orig": "dadhvånghem ahurem mazdãm ýazamaide, daênãm\nvanguhîm mâzdayasnîm ýazamaide, ashîm\nvanguhîm ýazamaide, arshtâtem ýazamaide,\nasmanem ýazamaide, zãm hudhånghem ýazamaide,\nmãthrem speñtem ýazamaide, anakhra raocå\nhvadhâtå ýazamaide!",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 16,
+      "verse": 7,
+      "ref": "Y 16.7",
+      "orig": "hvanvaitîsh ashahe verezô ýazamaide ýâhu\niristanãm urvãnô shâyeñti ýå\nashâunãm fravashayô, vahishtem ahûm ashaonãm\nýazamaide raocanghem vîspô-hvâthrem.",
+      "en": "And we worship the glorious works of Righteousness in which\nthe souls of the dead find satisfaction and delight [(Pazand)\nwhich are the Fravashis of the saints], and we worship (Heaven)\nthe best world of the saints, shining, all glorious.",
+      "zh": ""
+    },
+    {
+      "chapter": 16,
+      "verse": 8,
+      "ref": "Y 16.8",
+      "orig": "xshvîdha âzûiti ýazamaide tacat-âpa\nuxshyat-urvara âzôish daêvô-dâtahe\nhamôistri avainghå mûsh avainghå pairikayâi\npaitishtâtayaêca paitiscaptayaêca paititaretayaêca\npaityaoget-tbaêshahyâica ashemaokhaheca anashaonô\nsâstraheca pouru-mahrkahe!",
+      "en": "And we worship the two, the milk-offering and the libation,\nthe two which cause the waters to flow forth, and the plants to\nflourish, the two foes who meet the Dragon demon-made; and who\nare set to meet, to defeat, and to put to flight, that cheat,\nthe Pairika, and to contradict the insulting malice of the Ashemaogha\n(the persecuting heretic) and that of the unholy tyrant full of\ndeath.",
+      "zh": ""
+    },
+    {
+      "chapter": 16,
+      "verse": 9,
+      "ref": "Y 16.9",
+      "orig": "ýazamaide vîspå âpô ýazamaide\nvîspå urvarå, ýazamaide vîspå\nvanghavô ýazamaide vîspå vanguhîsh,\nýazamaide vîspå mainyavaca ýazata gaêthyâica\nýôi vanghudhånghô ashavanô.",
+      "en": "And we worship all waters and all plants, and all good men\nand all good women. And we worship all these Yazads, heavenly\nand earthly, who are beneficent and holy.",
+      "zh": ""
+    },
+    {
+      "chapter": 16,
+      "verse": 10,
+      "ref": "Y 16.10",
+      "orig": "ýazamaide thwãm maêthanem ýãm\nârmaitîm speñtãm, ýazamaide thwãm\nmaêthanahe paiti ashâum ahura mazda drvafshaosh drvô-vîrahe\ndrva-ashacithrahe ýahmi zî kâcit tanunãm\ndrâjishtem hâme maêthaine mithnât at hama\nat zayene!!",
+      "en": "And we worship thee (our) dwelling-place who art the (earth,\nour) bounteous Armaiti, and Thee, O Ahura Mazda, O holy Lord of\nthis abode! which is the home of healthy herds and healthy men,\nand of those who are both endowed with health and lover(s) of\nthe ritual right.\n(Response of the individual worshipper (?).) Wherefore whichever\nof persons, or whatever of bodily influences, is most helpful\nand preserving in that abode (thus owned by Mazda) let this meet\nme in mine abode, and there may it abide for summer and for winter.\n(Or let that one meet me in all my house, in whom are what of\ninfluences are the most mighty power for the body and the person's\nlife; yea, let that one meet me there, and there abide for summer\nand for winter (for my help)!)\n<H2 id=y17",
+      "zh": ""
+    }
+  ]
+}

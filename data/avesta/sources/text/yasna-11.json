@@ -1,0 +1,189 @@
+{
+  "slug": "yasna-11",
+  "siglum": "Y 11",
+  "title_zh": "亞斯納 第 11 章‧豪麻讚（下）",
+  "title_en": "Yasna 11",
+  "canon": "avestan",
+  "volume": "yasna",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/yasna/y9to11.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "米爾斯（L. H. Mills）",
+  "en_url": "https://www.avesta.org/yasna/yasna.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "Vohu Mano": "沃胡‧馬納",
+    "Asha Vahishta": "阿沙‧瓦希什塔",
+    "Khshathra Vairya": "赫沙特拉‧瓦伊里亞",
+    "Spenta Armaiti": "斯彭塔‧阿爾邁提",
+    "Haurvatat": "豪爾瓦塔特",
+    "Ameretat": "阿梅雷塔特",
+    "Haoma": "豪麻",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 11,
+      "verse": 1,
+      "ref": "Y 11.1",
+      "orig": "thrâyô haithîm ashavanô âfrivacanghô\nzavaiñti gâushca aspasca haomasca, gâush zaotârem\nzavaiti, uta buyå afrazaiñtish uta dêush-sravå\nhacimnô ýô mãm hvâstãm\nnôit baxshahe, âat mãm tûm fshaonayehe\nnâiryå vâ puthrahe vâ haoyå vâ\nmarshuyå.",
+      "en": "Three clean creatures (full of blessings) curse betimes while\nyet invoking, the cow, the horse, and then Haoma. The cow cries\nto her driver thus: Childless be thou, shorn of offspring evil-famed,\nand slander-followed, who foddered fairly dost not use me, but\nfattenest me for wife or children, and for thy niggard selfish\nmeal.",
+      "zh": ""
+    },
+    {
+      "chapter": 11,
+      "verse": 2,
+      "ref": "Y 11.2",
+      "orig": "aspô bâshârem zavaiti, mâ buyå\naurvatãm ýûxta mâ aurvatãm aiwishasta\nmâ aurvatãm nithaxta ýô mãm zâvare\nnôit jaidhyehi pourumaiti hañjamaine pouru-narayå\nkarshuyå.",
+      "en": "The horse cries to his rider thus: Be not spanner of the racers;\nstretch no coursers to full-speed; do not stride across the fleetest,\nthou, who dost not pray me swiftness in the meeting thick with\nnumbers, in the circuit thronged with men.",
+      "zh": ""
+    },
+    {
+      "chapter": 11,
+      "verse": 3,
+      "ref": "Y 11.3",
+      "orig": "haomô hvâshârem zavaiti, uta buyå\nafrazaiñtish uta dêush-sravå hacimnô\nýô mãm aiwishhutem dârayehi ýatha\ntâyûm peshô-sârem, nava ahmi peshô-sârô\nazem ýô haomô ashava dûraoshô!",
+      "en": "Haoma speaks his drinker thus: Childless be thou, shorn of\noffspring, evil-famed, and slander-followed, who holdest me from\nfull outpouring, as a robber, skulls in-crushing. No head-smiter\nam I ever, holy Haoma, far from death.",
+      "zh": ""
+    },
+    {
+      "chapter": 11,
+      "verse": 4,
+      "ref": "Y 11.4",
+      "orig": "us-mê pita haomâi draonô frêrenaot\nahurô mazdå ashava hanguharene mat-hizvô hôyûmca\ndôithrem.",
+      "en": "Forth my father gave an offering, tongue and left eye chose\nAhura, set apart for Haoma's meal.",
+      "zh": ""
+    },
+    {
+      "chapter": 11,
+      "verse": 5,
+      "ref": "Y 11.5",
+      "orig": "ýô mãm tat draonô zinât vâ\ntrefyât vâ apa vâ ýâsâiti\nýat mê dathat ahurô mazdå ashava hanguharene\nmat-hizvô hôyûmca dôithrem,",
+      "en": "Who this offering would deny me, eats himself, or prays it\nfrom me, this which Mazda gave to bless me, tongue with left eye\n(as my portion).",
+      "zh": ""
+    },
+    {
+      "chapter": 11,
+      "verse": 6,
+      "ref": "Y 11.6",
+      "orig": "nôit ahmi nmâne zânâite âthrava\nnaêdha rathaêshtå naêdha vâstryô\nfshuyãs, âat ahmi nmâne zayåñte\ndahakâca mûrakâca pouru-saredha varshnâca.",
+      "en": "In his house is born no fire-priest, warrior ne'er in chariot\nstanding, never more the thrifty tiller. In his home be born Dahakas,\nMurakas of evil practice, doing deeds of double nature.",
+      "zh": ""
+    },
+    {
+      "chapter": 11,
+      "verse": 7,
+      "ref": "Y 11.7",
+      "orig": "thwâshem â gêush frâthweresô\ntañcishtâi haomâi draonô, mâ-thwâ\nhaomô bañdayât ýatha mairîm bañdayat\nýim tûirîm frangrasyânem madheme thrishve\nainghå zemô pairishhvaxtem ayanghahe!",
+      "en": "Quick, cut off then Haoma's portion, gift of flesh for doughty\nHaoma! Heed lest Haoma bind thee fettered, as he bound the fell\nTuranian Frangrasyan (the murderous robber) fast in iron close-surrounded\nin the mid-third of this earth!",
+      "zh": ""
+    },
+    {
+      "chapter": 11,
+      "verse": 8,
+      "ref": "Y 11.8",
+      "orig": "âat aoxta zarathushtrô, nemô haomâi\nmazdadhâtâi, vanghush haomô mazdadhâtô,\nnemô haomâi!",
+      "en": "Thereupon spake Zarathushtra: Praise to Haoma made by Mazda,\ngood is Haoma Mazda-made.",
+      "zh": ""
+    },
+    {
+      "chapter": 11,
+      "verse": 9,
+      "ref": "Y 11.9",
+      "orig": "(râspî,) ýô nô aêvô\nat tê uyê thrâyôidyâi tûrahe\nmañdâidyâi xshvîdem haptâzhdyâi\nnava dasme ýôi vê ýaêthma!",
+      "en": "Who to us is one hereupon to thee (becomes) two, to be made\nto three, for the five-making of the four, for the seven-making\nof the sixth, who are your nine in the decade (?), who serve you\nand with zeal.",
+      "zh": ""
+    },
+    {
+      "chapter": 11,
+      "verse": 10,
+      "ref": "Y 11.10",
+      "orig": "pairi-tê haoma ashâum ashavâzô dadhãmi\nimãm tanûm ýâ mê vaênaite\nhuraodha thwaxshâi haomâi madhâi havanguhâi\nashavastâi, pairi-mê tûmcit dayå haoma\nashava dûraosha vahishtem ahûm ashaonãm raocanghem\nvîspô-hvâthrem!",
+      "en": "To thee, O holy Haoma! bearer of the ritual sanctity, I offer\nthis my person which is seen (by all to be) mature, (and fit for\ngift); to Haoma the effective do I offer it, and to the sacred\nexhilaration which he bestows; and do thou grant to me (for this),\nO holy Haoma! thou that drivest death afar, (Heaven) the best\nworld of the saints, shining, all brilliant.",
+      "zh": ""
+    },
+    {
+      "chapter": 11,
+      "verse": 11,
+      "ref": "Y 11.11",
+      "orig": "ashem vohû vahishtem astî ... (3). (râspî,)\nashem vohû ... (2 u 2 u 2)!",
+      "en": "(The Ashem Vohu, &c.)\n12-15.\n May'st Thou rule at Thy will, O Lord....(Repeat Y8.5-7)!",
+      "zh": ""
+    },
+    {
+      "chapter": 11,
+      "verse": 12,
+      "ref": "Y 11.12",
+      "orig": "(zôt,) ashem vohû vahishtem astî ... (4).\nýathâ ahû vairyô athâ ratush ashâtcît\nhacâ ... (2). vasasca tû ahura-mazda ushtâca\nxshaêsha havanãm dâmanãm, vasô\nâpô vasô urvarå vasô vîspa\nvohû ashacithra xshayamnem ashavanem dâyata axshayamnem\ndrvañtem.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 11,
+      "verse": 13,
+      "ref": "Y 11.13",
+      "orig": "vasô-xshathrô hyât ashava, avasô-xshathrô\nhyât drvå gatô hamistô nizhberetô\nhaca speñtahe mainyêush dâmabyô varatô\navasô-xshathrô.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 11,
+      "verse": 14,
+      "ref": "Y 11.14",
+      "orig": "haxshaya azemcit ýô zarathushtrô fratemã\nnmânanãmca vîsãmca zañtunãmca\ndah'yunãmca ainghå daênayå anumatayaêca\nanuxtayaêca anvarshtayaêca ýâ âhûirish\nzarathushtrish.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 11,
+      "verse": 15,
+      "ref": "Y 11.15",
+      "orig": "(râspî,) ravasca hvâthremca âfrînâmi\nvîspayå ashaonô stôish, ãzasca\nduzhâthremca âfrînâmi vîspayå\ndrvatô stôish!",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 11,
+      "verse": 16,
+      "ref": "Y 11.16",
+      "orig": "ashem vohû vahishtem astî ... (3). fravarâne\nmazdayasnô zarathushtrish vîdaêvô ahura-tkaêshô,\nhâvanêe ashaone ashahe rathwe ýasnâica\nvahmâica xshnaothrâica frasastayaêca, sâvanghêe\nvîsyâica ashaone ashahe rathwe ýasnâica\nvahmâica xshnaothrâica frasastayaêca, rathwãm\nayaranãmca asnyanãmca mâhyanãmca ýâiryanãmca\nsaredhanãmca ýasnâica vahmâica xshnaothrâica\n(râspî,) frasastayaêca. (zôt,) ýathâ\nahû vairyô zaotâ frâ-mê mrûtê,\n(râspî,) ýathâ ahû vairyô\nýô zaotâ frâ-mê mrûtê,\n(zôt,) athâ ratush ashâtcît haca frâ\nashava vîdhvå mraotû!",
+      "en": "I confess myself a Mazdayasnian of Zarathushtra's order.",
+      "zh": ""
+    },
+    {
+      "chapter": 11,
+      "verse": 17,
+      "ref": "Y 11.17",
+      "orig": "(zôt u râspî,) frastuyê humatôibyascâ\nhûxtôibyascâ hvarshtôibyascâ mãthwôibyascâ\nvaxedhwôibyascâ varshtvôibyascâ, aibigairyâ\ndaithê vîspâ humatâcâ hûxtâcâ\nhvarshtâcâ, paitiricyâ daithê vîspâ\ndushmatâcâ duzhûxtâcâ duzhvarshtâcâ.",
+      "en": "I celebrate my praises for good thoughts, good words, and\ngood deeds for my thoughts, my speeches, and (my) actions. With\nchanting praises I present all good thoughts, good words, and\ngood deeds, and with rejection I repudiate all evil thoughts,\nand words, and deeds.",
+      "zh": ""
+    },
+    {
+      "chapter": 11,
+      "verse": 18,
+      "ref": "Y 11.18",
+      "orig": "ferâ vê râhî ameshâ speñtâ\nýasnemcâ vahmemcâ ferâ mananghâ\nferâ vacanghâ ferâ shyaothanâ ferâ\nanghuyâ ferâ tanvascît hvah'yå ushtanem.",
+      "en": "Here I give to you, O ye Bountiful Immortals!\nsacrifice and homage with the mind, with words, deeds, and my\nentire person; yea, (I offer) to you the flesh of my very body\n(as your own). And I praise Righteousness. A blessing is Righteousness\n(called) the Best, &c.",
+      "zh": ""
+    },
+    {
+      "chapter": 11,
+      "verse": 19,
+      "ref": "Y 11.19",
+      "orig": "staomî ashem, ashem vohû vahishtem astî\nushtâ astî ushtâ ahmâi hyat ashâi\nvahishtâi ashem (3)!",
+      "en": "",
+      "zh": ""
+    }
+  ]
+}

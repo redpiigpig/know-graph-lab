@@ -1,0 +1,77 @@
+{
+  "slug": "yasna-38",
+  "siglum": "Y 38",
+  "title_zh": "亞斯納 第 38 章‧七章禱‧向大地與聖水",
+  "title_en": "Yasna 38",
+  "canon": "avestan",
+  "volume": "yasna",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/yasna/y35to42.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "米爾斯（L. H. Mills）",
+  "en_url": "https://www.avesta.org/yasna/yasna.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "Vohu Mano": "沃胡‧馬納",
+    "Asha Vahishta": "阿沙‧瓦希什塔",
+    "Khshathra Vairya": "赫沙特拉‧瓦伊里亞",
+    "Spenta Armaiti": "斯彭塔‧阿爾邁提",
+    "Haurvatat": "豪爾瓦塔特",
+    "Ameretat": "阿梅雷塔特",
+    "Haoma": "豪麻",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 38,
+      "verse": 1,
+      "ref": "Y 38.1",
+      "orig": "imãm âat zãm genâbîsh hathrâ\nýazamaidê ýâ-nå baraitî\nýåscâ tôi genå ahuramazdâ\nashât hacâ vairyå tå ýazamaidê.",
+      "en": "And now we worship this earth which bears us, together with\nThy wives, O Ahura Mazda! yea, those Thy wives do we worship which\nare so desired from their sanctity.",
+      "zh": ""
+    },
+    {
+      "chapter": 38,
+      "verse": 2,
+      "ref": "Y 38.2",
+      "orig": "îzhå ýaoshtayô ferashtayô ârmatayô\nvanguhîm âbîsh ashîm vanguhîm îshem\nvanguhîm âzûitîm vanguhîm frasastîm\nvanguhîm parêñdîm ýazamaidê.",
+      "en": "We sacrifice to their zealous\nwishes, and their capabilities, their inquiries (as to duty),\nand their wise acts of pious reverence, and with these their blessedness,\ntheir full vigor and good portions, their good fame and ample\nwealth.",
+      "zh": ""
+    },
+    {
+      "chapter": 38,
+      "verse": 3,
+      "ref": "Y 38.3",
+      "orig": "apô at ýazamaidê maêkaiñtîshcâ\nhêbvaiñtîshcâ fravazanghô ahurânîsh\nahurahyâ havapanghå huperethwåscâ vå\nhvôkhzhathåscâ hûshnâthråscâ\nubôibyâ ahubyâ cagemâ.",
+      "en": "O ye waters! now we worship you, you that are showered\ndown, and you that stand in pools and vats, and you that bear\nforth. (our loaded vessels?) ye female Ahuras of Ahura, you that\nserve us (all) in helpful ways, well forded and full-flowing,\nand effective for the bathings, we will seek you and for both\nthe worlds!",
+      "zh": ""
+    },
+    {
+      "chapter": 38,
+      "verse": 4,
+      "ref": "Y 38.4",
+      "orig": "ûitî ýâ vê vanguhîsh\nahurô mazdå nâmã dadât vanghudå\nhyat vå dadât tâish vå ýazamaidê\ntâish fryãnmahî tâish nemah'yâmahî\ntâish ishûidyâmahî.",
+      "en": "Therefore did Ahura Mazda give you names, O ye\nbeneficent ones! when He who made the good bestowed you. And by\nthese names we worship you, and by them we would ingratiate ourselves\nwith you, and with them would we bow before you, and direct our\nprayers to you with free confessions of our debt. O waters, ye\nwho are productive, and ye maternal ones, ye with heat that suckles\nthe (frail and) needy (before birth), ye waters (that have once\nbeen) rulers of (us) all, we will now address you as the best,\nand the most beautiful; those (are) yours, those good (objects)\nof our offerings, ye long of arm to reach our sickness, or misfortune,\nye mothers of our life!\n<H2 id=y39",
+      "zh": ""
+    },
+    {
+      "chapter": 38,
+      "verse": 5,
+      "ref": "Y 38.5",
+      "orig": "apascâ vå azîshcâ vå mâterãshcâ\nvå agenyå drigudâyanghô vîspô-paitîsh\navaocâmâ vahishtå sraêshtå avâ\nvê vanguhîsh râtôish daregô-bâzâush\nnâshû paitî-vyâdå paitî-sêñdå\nmâtarô jîtayô. ýenghê hâtãm\n... tåscâ ýazamaide!!",
+      "en": "",
+      "zh": ""
+    }
+  ]
+}

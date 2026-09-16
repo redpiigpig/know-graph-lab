@@ -1,0 +1,117 @@
+{
+  "slug": "yasna-12",
+  "siglum": "Y 12",
+  "title_zh": "亞斯納 第 12 章‧信仰宣示",
+  "title_en": "Yasna 12",
+  "canon": "avestan",
+  "volume": "yasna",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/yasna/y12.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "米爾斯（L. H. Mills）",
+  "en_url": "https://www.avesta.org/yasna/yasna.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "Vohu Mano": "沃胡‧馬納",
+    "Asha Vahishta": "阿沙‧瓦希什塔",
+    "Khshathra Vairya": "赫沙特拉‧瓦伊里亞",
+    "Spenta Armaiti": "斯彭塔‧阿爾邁提",
+    "Haurvatat": "豪爾瓦塔特",
+    "Ameretat": "阿梅雷塔特",
+    "Haoma": "豪麻",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 12,
+      "verse": 1,
+      "ref": "Y 12.1",
+      "orig": "nâismî daêvô, fravarânê\nmazdayasnô zarathushtrish vîdaêvô ahura-tkaêshô\nstaotâ ameshanãm speñtanãm ýashtâ\nameshanãm speñtanãm, ahurâi mazdâi\nvanghavê vohumaitê vîspâ vohû cinahmî\nashâunê raêvaitê hvarenanguhaitê\nýâ-zî cîcâ vahishtâ ýenghê\ngâush ýenghê ashem ýenghê raocå\nýenghê raocêbîsh rôithwen hvâthrâ.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": 2,
+      "ref": "Y 12.2",
+      "orig": "speñtãm ârmaitîm vanguhîm\nverenê, hâ-môi astû, us gêush stuyê\ntâyâatcâ hazanghatcâ, us mazdayasnanãm\nvîsãm zyânayaêcâ vîvâpatcâ.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": 3,
+      "ref": "Y 12.3",
+      "orig": "ferâ manyaêibyô rånghê vasê-\nýâitîm vasê-sheitîm ýâish\nupairî âya-zemâ gaobîsh shyeñtî,\nnemanghâ ashâi uzdâtå paitî avat\nstuyê, nôit ahmât âzyånîm\nnôit vîvâpem xshtâ mâzdayasnîsh\naoi vîsô nôit astô nôit ushtânahê\ncinmânî.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": 4,
+      "ref": "Y 12.4",
+      "orig": "vî daêvâish akhâish avanghûsh\nanaretâish akô-dâbîsh sarem mruyê\nhâtãm draojishtâish hâtãm paoshishtâish\nhâtãm avanghutemâish vî daêvâish\nvî daêvavatbîsh vî ýâtush\nvî ýâtumatbîsh vî kahyâcît\nhâtãm âtarâish vî manêbîsh\nvî vacêbîsh vî shyaothanâish vî\ncithrâish, vî zî anâ sarem mruyê\nýathanâ dregvâtâ rãxshayañtâ.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": 5,
+      "ref": "Y 12.5",
+      "orig": "athâ athâ côit ahurô mazdå zarathushtrem\nadhaxshayaêtâ vîspaêshû ferashnaêshû\nvîspaêshû hañjamanaêshû ýâish\naperesaêtem mazdåscâ zarathushtrascâ,",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": 6,
+      "ref": "Y 12.6",
+      "orig": "athâ athâ côit zarathushtrô daêvâish\nsarem vyâmrvîtâ vîspaêshû\nferashnaêshû vîspaêshû hañjamanaêshû\nýâish aperesaêtem mazdåscâ zarathushtrascâ,\nathâ azêmcît ýô mazdayasnô\nzarathushtrish daêvâish sarem vîmruyê\nýathâ anâish vyâmrvîtâ ýê\nashavâ zarathushtrô.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": 7,
+      "ref": "Y 12.7",
+      "orig": "ýâ-varanâ âpô ýâ-\nvaranâ urvarå ýâ-varanâ gâush\nhudå ýâvaranô ahurô mazdå\nýê gãm dadâ ýê narem ashavanem\nýâvaranô as zarathushtrô ýâvaranô\nkavâ vîshtâspô ýâvaranâ\nferashaoshtrâ jâmâspâ ýâvaranô\nkascît saoshyañtãm haithyâvarezãm\nashâunãm tâ varenâcâ tkaêshâcâ\n(râspî,) mazdayasnô ahmî!",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": 8,
+      "ref": "Y 12.8",
+      "orig": "mazdayasnô zarathushtrish fravarânê âstûtascâ\nfravaretascâ, âstuyê humatem manô âstuyê\nhûxtem vacô âstuyê hvarshtem shyaothanem.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": 9,
+      "ref": "Y 12.9",
+      "orig": "âstuyê daênãm mâzdayasnîm\nfraspâyaoxedhrãm nidhâsnaithishem hvaêtvadathãm\nashaonîm ýâ hâitinãmcâ bûshyeiñtinãmcâ\nmazishtâcâ vahishtâcâ sraêshtâcâ\nýâ âhûirish zarathushtrish, ahurâi\nmazdâi vîspâ vohû cinahmî. aêshâ\nastî daênayå mâzdayasnôish âstûitish!!",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": 12,
+      "ref": "Y 12.12",
+      "orig": "",
+      "en": "The Zoroastrian Creed. 1. I curse the Daevas.\nI declare myself a Mazda-worshipper, a supporter of Zarathushtra,\nhostile to the Daevas, fond of Ahura's teaching, a praiser of\nthe Amesha Spentas, a worshipper of the Amesha Spentas. I ascribe\nall good to Ahura Mazda, 'and all the best,' Asha-endowed,\nsplendid, xwarena-endowed, whose is the cow, whose is Asha, whose\nis the light, 'may whose blissful areas be filled with light'. 2. I choose the good Spenta Armaiti for myself; let her be mine.\nI renounce the theft and robbery of the cow, and the damaging\nand plundering of the Mazdayasnian settlements. 3. I want freedom of movement and freedom of dwelling for those\nwith homesteads, to those who dwell upon this earth with their\ncattle. With reverence for Asha, and (offerings) offered up, I\nvow this: I shall nevermore damage or plunder the Mazdayasnian\nsettlements, even if I have to risk life and limb. 4. I reject the authority of the Daevas, the wicked, no-good,\nlawless, evil-knowing, the most druj-like of beings, the foulest\nof beings, the most damaging of beings. I reject the Daevas and\ntheir comrades, I reject the demons (yatu) and their comrades;\nI reject any who harm beings. I reject them with my thoughts,\nwords, and deeds. I reject them publicly.\n Even as I reject the head (authorities), so too do I reject\nthe hostile followers of the druj. 5. As Ahura Mazda taught Zarathushtra at all discussions, at\nall meetings, at which Mazda and Zarathushtra conversed; 6. as Ahura Mazda taught Zarathushtra at all discussions, at\nall meetings, at which Mazda and Zarathushtra conversed — even\nas Zarathushtra rejected the authority of the Daevas, so I also\nreject, as Mazda-worshipper and supporter of Zarathushtra, the\nauthority of the Daevas, even as he, the Asha-endowed Zarathushtra,\nhas rejected them. 7. As the belief of the waters, the belief of the plants, the\nbelief of the well-made (Original) Cow; as the belief of Ahura\nMazda who created the cow and the Asha-endowed Man; as the belief\nof Zarathushtra, the belief of Kavi Vishtaspa, the belief of both\nFrashaostra and Jamaspa; as the belief of each of the Saoshyants\n(saviors) — fulfilling destiny and Asha-endowed — \nso I am a Mazda-worshipper\nof this belief and teaching. 8. I profess myself a Mazda-worshipper, a Zoroastrian, having\nvowed it and professed it. I pledge myself to the well-thought\nthought, I pledge myself to the well-spoken word, I pledge myself\nto the well-done action. 9. I pledge myself to the Mazdayasnian religion, which causes\nthe attack to be put off and weapons put down; [which upholds khvaetvadatha],\nAsha-endowed; which of all religions that exist or shall be, is the greatest,\nthe best, and the most beautiful: Ahuric, Zoroastrian. I ascribe all good to\nAhura Mazda.\nThis is the creed of the Mazdayasnian religion.\n<H2 id=y13",
+      "zh": ""
+    }
+  ]
+}

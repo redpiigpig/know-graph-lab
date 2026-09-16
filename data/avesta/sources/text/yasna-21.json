@@ -1,0 +1,77 @@
+{
+  "slug": "yasna-21",
+  "siglum": "Y 21",
+  "title_zh": "亞斯納 第 21 章‧燕赫‧哈坦釋義",
+  "title_en": "Yasna 21",
+  "canon": "avestan",
+  "volume": "yasna",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/yasna/y13to27.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "米爾斯（L. H. Mills）",
+  "en_url": "https://www.avesta.org/yasna/yasna.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "Vohu Mano": "沃胡‧馬納",
+    "Asha Vahishta": "阿沙‧瓦希什塔",
+    "Khshathra Vairya": "赫沙特拉‧瓦伊里亞",
+    "Spenta Armaiti": "斯彭塔‧阿爾邁提",
+    "Haurvatat": "豪爾瓦塔特",
+    "Ameretat": "阿梅雷塔特",
+    "Haoma": "豪麻",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 21,
+      "verse": 1,
+      "ref": "Y 21.1",
+      "orig": "ýesnîm vacô ashaonô zarathushtrahe,\nýenghê hâtãm âat ýesnê\npaitî, ýenghe idha mazdå ýasnem cinasti\nýatha dâta ahurahe hâtãm ýasnem\ncinasti",
+      "en": "A word for the Yasna by Zarathushtra, the saint, Yenhe, &c.\nHere the worshipper indicates and offers the Yasna (which is the\nsacrificial worship) of Mazda as by the command (or as the institution)\nof Ahura. Hatam. Here the worshipper offers the sacrificial worship\nas if with the beings who are among those who are destined to\nlive.",
+      "zh": ""
+    },
+    {
+      "chapter": 21,
+      "verse": 2,
+      "ref": "Y 21.2",
+      "orig": "ýatha hadhbîsh jîjishãm ýånghãm\nidha ashaoninãm ârmaiti-paoiryanãm ýasnem\npara-cinasti ýatha vahmem ameshaêibyô, thrâyô\ntkaêsha, vîspem vacô ýesnîm, cîm\naoi ýasnô, ameshê speñtê paiti\nýasnahe!",
+      "en": "Yaungham. Here he indicates and offers the sacrificial\nworship of those holy females who have Aramaiti at their head,\nas homage to the Immortals. These are the three sentences which\ncomprehend all the Yasnian speech. (Question.) To whom is this\nYasna addressed? (Answer.) To the Bountiful Immortals (in the\ncourse of the Yasna).",
+      "zh": ""
+    },
+    {
+      "chapter": 21,
+      "verse": 3,
+      "ref": "Y 21.3",
+      "orig": "âat mraot mazdå, ushta ahmâi ýahmâi\nushta kahmâicit vasa-xshayãs mazdå dâyât\nahurô.",
+      "en": "Thereupon spake Mazda: Salvation to this\none, whosoever he may be! May the absolute ruler Ahura grant it.\n(Question.) 4. Whom did He answer with this answer? (Answer.)\nHe answered: The state of salvation; and with this answer, 'the\nstate of salvation,' he answered every saint who exists, every\none who is coming into existence, and every one who shall exist\nin the future. (Question. Who answered thus? Answer.) The best\nOne. (Question. What did He answer?) (Answer.) The best thing.\n(That is,) the best One, Mazda, answered the best and the holy\n(answer) for the better and the holy man. 5. We sacrifice to this\npiece, the Yenhe hatam, the prominent and holy Yasht.\n<H2 id=y22",
+      "zh": ""
+    },
+    {
+      "chapter": 21,
+      "verse": 4,
+      "ref": "Y 21.4",
+      "orig": "cîm aêtaya paiti-vaca paityâmraot, ushtatâtem\npaityâmraot ushtatâityaca vîspem ashavanem heñtemca\nbavañtemca bûshyañtemca, vahishtem vahishtô\npaityâmraot, vahishtô mazdå paityâmraot\nvahishtem ashavanem vahishtâi ashaone!",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 21,
+      "verse": 5,
+      "ref": "Y 21.5",
+      "orig": "bakhãm ýenghê-hâtãm hufrâyashtãm\nashaonîm ýazamaide. ýenghê hâtãm\nâat ýesnê paiti ... !!",
+      "en": "",
+      "zh": ""
+    }
+  ]
+}

@@ -1,0 +1,269 @@
+{
+  "slug": "yasna-71",
+  "siglum": "Y 71",
+  "title_zh": "亞斯納 第 71 章‧祭典將畢",
+  "title_en": "Yasna 71",
+  "canon": "avestan",
+  "volume": "yasna",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/yasna/y54to72.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "米爾斯（L. H. Mills）",
+  "en_url": "https://www.avesta.org/yasna/yasna.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "Vohu Mano": "沃胡‧馬納",
+    "Asha Vahishta": "阿沙‧瓦希什塔",
+    "Khshathra Vairya": "赫沙特拉‧瓦伊里亞",
+    "Spenta Armaiti": "斯彭塔‧阿爾邁提",
+    "Haurvatat": "豪爾瓦塔特",
+    "Ameretat": "阿梅雷塔特",
+    "Haoma": "豪麻",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 71,
+      "verse": 1,
+      "ref": "Y 71.1",
+      "orig": "peresat frashaoshtrô ashava ashavanem zarathushtrem,\npaiti-mrûidhi paurvatare zarathushtra, kat asti rathwãm\nframeretish kat gâthanãm hañkeretish.",
+      "en": "Frashaoshtra, the holy, asked the saintly Zarathushtra: Answer\nme, O thou most eminent Zarathushtra, what is (in very truth)\nthe memorized recital of the rites?\nWhat is the completed delivery of the Gathas?",
+      "zh": ""
+    },
+    {
+      "chapter": 71,
+      "verse": 2,
+      "ref": "Y 71.2",
+      "orig": "âat aoxta zarathushtrô, ahurem mazdãm ashavanem\nashahe ratûm ýazamaide, zarathushtrem ashavanem ashahe\nratûm ýazamaide, zarathushtrahe ashaonô fravashîm\nýazamaide, ameshê speñtê ashaonãm\nýazamaide.",
+      "en": "Upon this Zarathushtra said: (It is as follows.) We worship\nAhura Mazda with our sacrifice (as) the holy lord of the ritual\norder; and we sacrifice to Zarathushtra likewise as to a holy\nlord of the ritual order; and we sacrifice also to the Fravashi\nof Zarathushtra, the saint. And we sacrifice to the Bountiful\nImmortals, (the guardians) of the saints.",
+      "zh": ""
+    },
+    {
+      "chapter": 71,
+      "verse": 3,
+      "ref": "Y 71.3",
+      "orig": "ashâunãm vanguhîsh sûrå speñtå\nfravashayô ýazamaide astvatô manahyâca,\napanôtemem rathwãm ýazamaide ýaêtushtemem\nýazatanãm hanghanushtemem ashahe rathwãm\naiwinasãstemem, jakhmûshtemãm ashaonô\nashahe rathwô ratufritîm ýazamaide.",
+      "en": "And we sacrifice\nto (all) the good heroic and bounteous Fravashis of the saints,\nof the bodily (world on earth), and of the mental (those in Heaven).\nAnd we worship that one of ritual lords who attains the most his\nends; and we sacrifice to that one of the Yazads, lords of the\nritual order, who is the most strenuous, who gains the most, who\nreaches most to what he seeks, even that well-timed Prayer which\nis the prayer of that holy ritual lord, and which has approached\nthe nearest (to us for our help).",
+      "zh": ""
+    },
+    {
+      "chapter": 71,
+      "verse": 4,
+      "ref": "Y 71.4",
+      "orig": "ahurem mazdãm ashavanem ashahe ratûm ýazamaide,\nvîspemca kerefsh ahurahe mazdå ýazamaide, vîspêsca\nameshê speñtê ýazamaide, vîspaêca\nashahe ratavô ýazamaide, vîspãmca daênãm\nmâzdayasnîm ýazamaide, vîspemca afsmanem\nýazamaide.",
+      "en": "We sacrifice to Ahura Mazda, the holy lord of the ritual order,\nand we worship His entire body, and we worship the Bountiful Immortals\nall; and we worship all the ritual lords. And we sacrifice to\nthe entire Mazdayasnian Faith. And we worship all the sacred metres.",
+      "zh": ""
+    },
+    {
+      "chapter": 71,
+      "verse": 5,
+      "ref": "Y 71.5",
+      "orig": "vîspemca mãthrem speñtem ýazamaide,\nvîspemca dâtem vîdôyûm ýazamaide,\nvîspãmca darekhãm upayanãm ýazamaide,\nvîspaêca ashavanô mainyavaca ýazata gaêthyâca\nýazamaide, vîspåsca ashâunãm vanguhîsh\nsûrå speñtå fravashayô ýazamaide.",
+      "en": "And we worship the entire bounteous Mathra, even the entire\nsystem of the Faith set up against the Daevas; and we worship\nits complete and long descent. And we sacrifice to all the holy\nYazads, heavenly and earthly; and we worship all the good, heroic,\nand bountiful Fravashis of the saints.",
+      "zh": ""
+    },
+    {
+      "chapter": 71,
+      "verse": 6,
+      "ref": "Y 71.6",
+      "orig": "vîspâca dâma mazdadhâta ashaonîsh\nýazamaide ýâ ashava-dâta ashava-frathwarshta\nashava-tkaêsha ashava-frâyashta ashaoni ashavabyô\nýahmyâca ashavabyô, vîspaêca pañca\ngâthå ashaonîsh ýazamaide, vîspemca\nýasnem frâitîmca paititîmca aibijaretîmca\nýazamaide.",
+      "en": "And we worship all the holy creatures which Mazda created,\nand which possess the holy institutions, which were established\nholy in their nature, which possess the holy lore, and the holy\nsacrifice, which are holy, and for the holy, and to be worshipped\nby the holy. And we worship all the five Gathas, the holy ones,\nand the entire Yasna [its flow and its ebb, and the sounding (of\nits chants)].",
+      "zh": ""
+    },
+    {
+      "chapter": 71,
+      "verse": 7,
+      "ref": "Y 71.7",
+      "orig": "vîspâca staota ýesnya ýazamaide,\nvîspaêca vâcô mazdô-fraoxta ýazamaide\nýôi heñti dushmatem jakhnishta ýôi\nheñti duzhûxtem jakhnishta ýôi heñti\nduzhvarshtem jakhnishta ýôi heñti aiwi-kareta\ndushmatahe ýôi heñti aiwi-kareta duzhûxtahe\nýôi heñti aiwi-kareta duzhvarshtahe,",
+      "en": "And we sacrifice to all the Praises of the Yasna,\nand to all the words which Mazda spake, which are the most fatal\nto evil thoughts, and words, and deeds; (8) and which designate\nthe evil thought, and word, and deed, and which then cut down\nand fell every evil thought, and word, and deed. [(Pazand.) One\nwould think of it as when the fire cuts, sucks out, and consumes\nthe dry wood which has been sanctified and carefully selected\n(for its flame).] And we sacrifice to the strength, the victory,\nthe glory, and the speed of all these words (as they go forth\nfor their work). 9. And we sacrifice to all the springs of water,\nand to the water-streams as well, and to growing plants, and forest-trees,\nand to the entire land and heaven, and to all the stars, and to\nthe moon and sun, even to all the lights without beginning (to\ntheir course). And we sacrifice to all cattle, and to the aquatic\nbeasts, and to the beasts that live on land, and to all that strike\nthe wing, and to the beasts that roam the plains, and to those\nof cloven hoof. 10. And to all Thy good and holy female (creatures)\nin the creation do we sacrifice, (O Thou who art) Ahura Mazda\nthe skillful maker! on account of which Thou hast made many things\nand good things (in Thy world). And we sacrifice to those male\ncreatures in the creation which are Thine and which are meet for\nsacrifice because of Asha Vahishta (of Righteousness the Best).\nAnd we sacrifice to all the mountains brilliant with holiness,\nand to all the lakes which Mazda created, and to all fires]. And\nwe sacrifice to all the truthful and correctly spoken words, (11)\neven those which have both rewards and Piety within them. Yea,\nwe worship (you) for protection and shielding, for guarding and\nwatching; and may ye be to me for preparation.\nI call upon the Gathas here, the bountiful holy ones, ruling in\nthe ritual order; yea, we sacrifice to you, (O ye Gathas!) for\nprotection and shielding, for guarding and watching. Mine may\nye be as a preparation. For me, for (mine) own soul I call on\n(you), and we would worship (you) for protection and for shielding,\nfor guarding and for watching. 12. And we sacrifice to Weal, the\ncomplete welfare, holy and ruling in its course in the ritual\norder; and we sacrifice to Deathlessness (the immortal being of\nthe good), holy, and ruling in the ritual order. And we sacrifice\nto the question of the Lord; and to His lore, the holy chiefs,\nand to the heroic Haptanghaiti, the holy lord of the ritual order.",
+      "zh": ""
+    },
+    {
+      "chapter": 71,
+      "verse": 8,
+      "ref": "Y 71.8",
+      "orig": "ýôi aipi-kereñteñti vîspem\ndushmatem ýôi aipi-kereñteñti vîspem\nduzhûxtem ýôi aipi-kereñteñti\nvîspem duzhvarshtem mãnayen ahe ýatha âtarsh\nhushem aêsmem ýaozhdâtem hupairîshtem\naipi-kereñtaiti hâvayeiti dazhaiti, vîspanãmca\naêtaêshãm vacãm aojasca verethremca\nhvarenasca zavareca ýazamaide.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 71,
+      "verse": 9,
+      "ref": "Y 71.9",
+      "orig": "vîspå âpô xå paiti thraotô-\nstâtasca ýazamaide, vîspå urvarå\nuruthmîshca paiti varshajîshca ýazamaide, vîspãmca\nzãm ýazamaide, vîspemca asmanem ýazamaide,\nvîspêsca strêushca månghemca hvareca ýazamaide,\nvîspa anakhra raocå ýazamaide, vîspãmca\ngãm upâpãmca upasmãmca frapterejâtãmca\nravascarâtãmca cangranghâcasca ýazamaide.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 71,
+      "verse": 10,
+      "ref": "Y 71.10",
+      "orig": "vîspe tê ahurô mazdå hvapô vanguhîsh\ndâmãn ashaonîsh ýazamaide ýâish\ndadâtha pouruca vohuca ýôi tê heñti\nýasnyâca vahmyâca ashât haca ýat\nvahishtât, vîspåsca garayô ashahvâthrå\nýazamaide, vîspåsca varayô mazdadhâtå\nýazamaide, vîspaêca âtarô ýazamaide,\nvîspaêca vâcô arshuxdha ýazamaide.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 71,
+      "verse": 11,
+      "ref": "Y 71.11",
+      "orig": "vîspaêca aête ashish-hâget ârmaitish-\nhâget ýazamadaêca nipâtayaêca nishangharetayaêca\nharethrâica aiwyâxshtrâica havanghum mê\nbuyata, gâthâbyô speñtâbyô\nratuxshathrâbyô ashaonibyô zbayemi ýazamadaêca\nnipâtayaêca nishangharetayaêca harethrâica\naiwyâxshtrâica havanghum mê buyata, mâvôya\nhavâi urune zbayemi ýazamadaêca nipâtayaêca\nnishangharetayaêca harethrâica aiwyâxshtrâica.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 71,
+      "verse": 12,
+      "ref": "Y 71.12",
+      "orig": "haurvatâtem ashavanem ashahe ratûm ýazamaide,\nameretatâtem ashavanem ashahe ratûm ýazamaide,\nâhûirîm frashnem ashavanem ashahe ratûm\nýazamaide, âhûirîm tkaêshem ashavanem\nashahe ratûm ýazamaide, ýasnem sûrem\nhaptanghâitîm ashavanem ashahe ratûm ýazamaide!",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 71,
+      "verse": 13,
+      "ref": "Y 71.13",
+      "orig": "hvô ashava zarathushtrô urvathem thrâtârem\nisôit ashavanem tê ashaonat âfyeidhyâi\nmraomi urvathem urvathât tat zî vanghô, hvô\nzî drvå ýê drvâite vahishtô\nhvô ashava ýahmâi ashava fryô.",
+      "en": "(Frasha.) Let the holy Zarathushtra himself seek out a friend\nand a protector. And I say to thee (O Zarathushtra!) to make to\nthee a friend holy beyond the holy, and truer than the true, for\nthat is the better thing; for he is evil who is the best to the\nevil, and he is holy to whom the holy is a friend, (14) for these\nare the best of words, those which Ahura Mazda spoke to Zarathushtra.\nAnd do thou, O Zarathushtra! pronounce these words at the last\nending of (thy) life. 15. For if, O Zarathushtra! thou shalt pronounce\nthese words at the last ending of (thy) life I, Ahura Mazda, will\nkeep your soul away from Hell. Yea, so far away shall I hold it\nas is the breadth and extension of the earth [(Pazand) and the\nearth is as wide as it is long].",
+      "zh": ""
+    },
+    {
+      "chapter": 71,
+      "verse": 14,
+      "ref": "Y 71.14",
+      "orig": "aête-zî vâcô vahishta ahurô\nmazdå frâmraot zarathushtrâi, aête-zî\nzarathushtra usteme urvaêse gayehe framrûidhi.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 71,
+      "verse": 15,
+      "ref": "Y 71.15",
+      "orig": "ýeidhi-zî zarathushtra aête vâcô\nusteme urvaêse gayehe framravâi pairi-tê tanava\nazem ýô ahurô mazdå urvânem haca\nacishtât anghaot avavaitya bãzasca frathasca pairi-tanuya\nýatha îm zå, astica îm zå avaiti\nbãzô ýavaiti frathascit.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 71,
+      "verse": 16,
+      "ref": "Y 71.16",
+      "orig": "ýatha vashi ashâum idha anghô ashava frapârayånghe\nurvânem tarô cinvatô peretûm vahishtahe\nanghêush ashava jasô ushtavaitîm gâthãm\nsrâvayô ushtatâtem nimraomnô, (zôt\nu râspî,) ushtâ ahmâi ... gaêm mananghô!",
+      "en": "As thou dost desire, O holy (one)! so shalt thou be, holy\nshalt thou-cause (thy) soul to pass over the Chinvat Bridge; holy\nshalt thou come into Heaven. Thou shalt intone the Gatha Ushtavaiti,\nreciting the salvation hail.",
+      "zh": ""
+    },
+    {
+      "chapter": 71,
+      "verse": 17,
+      "ref": "Y 71.17",
+      "orig": "varezemca haomananghemca ýazamaide haomananghemca varezemca\nýazamaide, paitishtâtêe temanghãm paitishtâtêe\nxshayasca amayavayåsca, (varezemca ... amayavayåsca\n(3),) (zôt,) dasvareca baêshazemca ýazamaide,\nfradathemca varedathemca ýazamaide, paitishtâtêe\naxtinãmca astaremanãmca.",
+      "en": "We sacrifice to the active man, and to the man of good intent,\nfor the hindrance of darkness, of wasting of the strength and\nlife, and of distraction. And we sacrifice to health and healing,\nto progress and to growth, for the hindrance of impurity, and\nof the diseases of the skin.",
+      "zh": ""
+    },
+    {
+      "chapter": 71,
+      "verse": 18,
+      "ref": "Y 71.18",
+      "orig": "vâca hañkeretha ýazamaide, gâthanãm\navâurusta ýazamaide, gâthå speñtå\nratuxshathrå ashaonîsh ýazamaide, staota ýesnya\nýazamaide ýâ dâtâ anghêush\npaouruyehyâ, haurvãm hañdâitîm\nstaotanãm ýesnyanãm ýazamaide, haom\nurvânem ýazamaide, havãm fravashîm ýazamaide.",
+      "en": "And we sacrifice to the (Yasna's) ending words, to those which\nend the Gathas. And we sacrifice to the bounteous Hymns themselves\nwhich rule in the ritual course, the holy ones.\nAnd we sacrifice to the Praise-songs of the Yasna which were the\nproducts of the world of yore; yea, we sacrifice to all the Staota-Yesnya\nhymns. And we sacrifice to (our) own soul and to (our) Fravashi.\n19-21.\n (See Y6.14-16.)",
+      "zh": ""
+    },
+    {
+      "chapter": 71,
+      "verse": 19,
+      "ref": "Y 71.19",
+      "orig": "dahmãm vanguhîm âfritîm ýazamaide,\ndahmemca narem ashavanem ýazamaide, ukhrem taxmem dâmôish\nupamanem ýazatem ýazamaide.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 71,
+      "verse": 20,
+      "ref": "Y 71.20",
+      "orig": "imå apasca zemasca urvaråsca ýazamaide,\nimå asåsca shôithråsca gaoyaoitîshca\nmaêthanyåsca avô-hvarenåsca ýazamaide,\nimemca shôithrahe paitîm ýazamaide ýim\nahurem mazdãm.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 71,
+      "verse": 21,
+      "ref": "Y 71.21",
+      "orig": "ratavô vîspe mazishta ýazamaide ayara asnya\nmâhya ýâirya saredha.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 71,
+      "verse": 22,
+      "ref": "Y 71.22",
+      "orig": "ashâunãm vanguhîsh sûrå speñtå\nfravashayô staomi zbayemi ufyemi, ýazamaide nmânyå\nvîsyå zañtumå dâh'yumå zarathushtrôtemå.",
+      "en": "I praise, invoke, and I weave my song to the good, heroic,\nbountiful Fravashis of the saints, to those of the house, and\nof the village, the district and the province, and to those of\nthe Zarathushtrotemas.",
+      "zh": ""
+    },
+    {
+      "chapter": 71,
+      "verse": 23,
+      "ref": "Y 71.23",
+      "orig": "âtrem ahurahe mazdå puthrem ashavanem ashahe ratûm\nýazamaide, hadha-zaothrem hadha-aiwyånghanem imat\nbaresma ashaya frastaretem ashavanem ashahe ratûm ýazamaide,\napãm naptârem ýazamaide, nairîm sanghem\nýazamaide, taxmem dâmôish upamanem ýazatem\nýazamaide, iristanãm urvãnô ýazamaide,\nýå ashaonãm fravashayô.",
+      "en": "And we sacrifice to the Fire, Ahura\nMazda's son, the holy ritual chief.\nAnd we sacrifice to this Baresman haying the Zaothra with it,\nand its girdle with it, and spread with sanctity, the holy ritual\nchief. And we sacrifice to Apam-napat, and to Nairya-sangha, and\nto that Yazad, the wise man's swift Curse.\nAnd we sacrifice to the souls of the dead, [which are the Fravashis\nof the saints] 24. And we sacrifice to that lofty Lord who is\nAhura Mazda Himself.",
+      "zh": ""
+    },
+    {
+      "chapter": 71,
+      "verse": 24,
+      "ref": "Y 71.24",
+      "orig": "ratûm berezañtem ýazamaide, ýim\nahurem mazdãm ýô ashahe apanôtemô\nýô ashahe jakhmûshtemô, vîspa sravå\nzarathushtri ýazamaide, vîspaca hvarshta shyaothna\nýazamaide varshtaca vareshyamnaca. ýenghê\nhâtãm ... tåscâ ýazamaide. (zôt\nu râspî,) ýathâ ahû vairyô\n... (2)!",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 71,
+      "verse": 25,
+      "ref": "Y 71.25",
+      "orig": "(zôt,) gave adhâish tâish shyaothanâish\nýâish vahishtâish fraêshyâmahî,\nat ah'yâi ashâ mazdå urvarå vaxshat.",
+      "en": "And we pray (again) for the Kine (once more) with these gifts\nand (ceremonial) actions which are the best.\n26-28.\n (See Y8.5-7.)\n29-31.\n (See Y60.11-13.)\n<H2 id=y72",
+      "zh": ""
+    },
+    {
+      "chapter": 71,
+      "verse": "26-28",
+      "ref": "Y 71.26-28",
+      "orig": "vasasca-tû ahura mazda ... (zôt u râspî,)\nýâ âhûirish zarathushtrish.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 71,
+      "verse": 29,
+      "ref": "Y 71.29",
+      "orig": "ýatha-nô ånghãm shyâtô\nmanå vahishtô urvãnô hvâthravaitîsh\ntanvô heñti vahishtô anghush âkåscôit\nâhûire mazda jaseñtãm.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 71,
+      "verse": 30,
+      "ref": "Y 71.30",
+      "orig": "asha vahishta asha sraêshta daresâma thwâ\npairi thwâ jamyama hamem thwâ haxma. ashem vohû....\n(asha vahishta ... vahishtâi ashem (3).)",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 71,
+      "verse": 31,
+      "ref": "Y 71.31",
+      "orig": "ýathâ ahû vairyô ... (4). ashem vohû\n... (3). ahunem vairîm ýazamaide, ashem vahishtem\nsraêshtem ameshem speñtem ýazamaide. ýenghê\nhâtãm ... tåscâ ýazamaide!!",
+      "en": "",
+      "zh": ""
+    }
+  ]
+}

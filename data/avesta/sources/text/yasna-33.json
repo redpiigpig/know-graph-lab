@@ -1,0 +1,157 @@
+{
+  "slug": "yasna-33",
+  "siglum": "Y 33",
+  "title_zh": "亞斯納 第 33 章‧伽薩‧先知的獻身",
+  "title_en": "Yasna 33",
+  "canon": "avestan",
+  "volume": "yasna",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/yasna/y28to34.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "米爾斯（L. H. Mills）",
+  "en_url": "https://www.avesta.org/yasna/yasna.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "Vohu Mano": "沃胡‧馬納",
+    "Asha Vahishta": "阿沙‧瓦希什塔",
+    "Khshathra Vairya": "赫沙特拉‧瓦伊里亞",
+    "Spenta Armaiti": "斯彭塔‧阿爾邁提",
+    "Haurvatat": "豪爾瓦塔特",
+    "Ameretat": "阿梅雷塔特",
+    "Haoma": "豪麻",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 33,
+      "verse": 1,
+      "ref": "Y 33.1",
+      "orig": "ýathâish ithâ vareshaitê ýâ\ndâtâ anghêush paouruyehyâ ratûsh\nshyaothanâ razishtâ dregvataêcâ hyatcâ\nashâunê ýeh'yâcâ hêmemyâsaitê\nmithahyâ ýâcâ hôi ârezvâ.",
+      "en": "According as it is with the laws that belong to the present\nlife, so shall the Judge act with most just deed towards the man\nof the Lie and the man of the Right, and him whose false things\nand good things balance (in equal measure).",
+      "zh": ""
+    },
+    {
+      "chapter": 33,
+      "verse": 2,
+      "ref": "Y 33.2",
+      "orig": "at ýê akem dregvâitê vacanghâ\nvâ at vâ mananghâ zastôibyâ vâ\nvareshaitî vanghâu vâ côithaitê\nastîm tôi vârâi râdeñtî\nahurahyâ zaoshê mazdå.",
+      "en": "Whoso worketh ill for the liar by word or thought or hands,\nor converts his dependent to the good — such men meet the will\nof Ahura Mazda to his satisfaction.",
+      "zh": ""
+    },
+    {
+      "chapter": 33,
+      "verse": 3,
+      "ref": "Y 33.3",
+      "orig": "ýê ashâunê vahishtô hvaêtû\nvâ at vâ verezênyô airyamnâ vâ\nahurâ vîdãs vâ thwaxshanghâ gavôi\nat hvô ashahyâ anghat vanghêushcâ vâstrê\nmananghô.",
+      "en": "Whose is most good to the righteous man, be he noble or member\nof the community or the brotherhood, Ahura — or with diligence\ncares for the cattle, he shall be hereafter in the pasture of\nRight and Good Thought [Asha and Vohu Manah].",
+      "zh": ""
+    },
+    {
+      "chapter": 33,
+      "verse": 4,
+      "ref": "Y 33.4",
+      "orig": "ýê thwat mazdâ asrushtîm akemcâ\nmanô ýazâi apâ hvaêtêushcâ\ntarêmaitîm verezênah'yâcâ nazdishtãm\ndrujem airyamanascâ nadeñtô gêushcâ\nvâstrât acishtem mañtûm.",
+      "en": "I who by worship would keep far from Thee, O Mazda, disobedience\nand Bad Thought, heresy from the nobles, and from the community\nthe Lie, that is most near, and from the brotherhood the slanderers,\nand the worst herdsmen from the pastures of the cattle; --",
+      "zh": ""
+    },
+    {
+      "chapter": 33,
+      "verse": 5,
+      "ref": "Y 33.5",
+      "orig": "ýastê vîspê-mazishtem seraoshem zbayâ\navanghânê apânô daregô-jyâitîm\nâ-xshathrem vanghêush mananghô ashât â\nerezûsh pathô ýaêshû mazdå\nahurô shaêtî.",
+      "en": "I who would invoke thy Obedience as the greatest of all at\nthe Consummation, attaining long life, and the Dominion of Good\nThought, and the straight ways into Right, wherein Mazda Ahura\ndwells.",
+      "zh": ""
+    },
+    {
+      "chapter": 33,
+      "verse": 6,
+      "ref": "Y 33.6",
+      "orig": "ýê zaotâ ashâ erezûsh hvô\nmanyêush â vahishtât kayâ ahmât\navâ mananghâ ýâ verezyeidyâi mañtâ\nvâstryâ dà tâ-tôi izyâi ahurâ\nmazdâ darshtôishcâ hêm-parshtôishcâ.",
+      "en": "I, as a priest, who would learn the straight (paths) by the\nRight, would learn by the Best Spirit how to practice husbandry\nby that thought in which it is thought of; these Twain of Thine,\nO Ahura Mazda, I strive to see and take counsel with them.",
+      "zh": ""
+    },
+    {
+      "chapter": 33,
+      "verse": 7,
+      "ref": "Y 33.7",
+      "orig": "â-mâ âidûm vahishtâ â-\nhvaithyâcâ mazdâ dareshatcâ ashâ\nvohû mananghâ ýâ sruyê parê\nmagâunô, âvish-nå añtare hêñtû\nnemahvaitîsh cithrå râtayô.",
+      "en": "Come hither to me, O ye Best Ones, hither, O Mazda, in Thine\nown person and visibly, O Right and Good Thought, that I may be\nheard beyond the limits of the people. Let the august duties be\nmanifest among us and clearly viewed.",
+      "zh": ""
+    },
+    {
+      "chapter": 33,
+      "verse": 8,
+      "ref": "Y 33.8",
+      "orig": "frô-môi fravôizdûm arethâ tâ\nýâ vohû shyavâi mananghâ ýasnem\nmazdâ xshmâvatô at vâ ashâ staomyâ\nvacå dâtâ vê ameretåscâ utayûitî\nhaurvatâs draonô.",
+      "en": "Consider ye my matters whereon I am active, O Good Thought,\nmy worship, O Mazda, towards one like you, and O Right, the words\nof my praise. Grant, O Welfare and Immortality, your own everlasting\nblessing.",
+      "zh": ""
+    },
+    {
+      "chapter": 33,
+      "verse": 9,
+      "ref": "Y 33.9",
+      "orig": "at tôi mazdâ têm mainyûm ashaoxshayañtå\nsaredyayå hvâthrâ maêthâ mayâ\nvahishtâ baretû mananghâ ayå arôi\nhâkurenem ýayå haciñtê urvãnô.",
+      "en": "That Spirit of Thine, Mazda, together with the comfort of\nthe Comrades Twain, who advance the Right, let the Best Thought\nbring through the Reform wrought by me. Sure is the support of\nthose twain, whose souls are one.",
+      "zh": ""
+    },
+    {
+      "chapter": 33,
+      "verse": 10,
+      "ref": "Y 33.10",
+      "orig": "vîspå-stôi hujîtayô ýå-zî\nångharê ýåscâ heñtî\nýåscâ mazdâ bavaiñtî thwahmî\nhîsh zaoshê âbaxshôhvâ vohû\nuxshyâ mananghâ xshathrâ ashâcâ\nushtâ tanûm.",
+      "en": "All the pleasures of life which thou holdest, those that were,\nthat are, and that shall be O Mazda, according to thy good will\napportion them. Through Good Thought advance thou the body, through\nDominion and Right at will.",
+      "zh": ""
+    },
+    {
+      "chapter": 33,
+      "verse": 11,
+      "ref": "Y 33.11",
+      "orig": "ýê sevishtô ahurô mazdåscâ\nârmaitishcâ ashemcâ frâdat-gaêthem\nmanascâ vohû xshathremcâ sraotâ-môi\nmerezhdâtâ-môi âdâi kahyâicît\npaitî.",
+      "en": "The most mighty Ahura Mazda, and Piety, and Right that blesses\nour substance, and Good Thought and Dominion, hearken unto me,\nbe merciful to me, when to each man the recompense comes.",
+      "zh": ""
+    },
+    {
+      "chapter": 33,
+      "verse": 12,
+      "ref": "Y 33.12",
+      "orig": "us-môi uzâreshvâ ahurâ ârmaitî\ntevîshîm dasvâ spênishtâ mainyû\nmazdâ vanghuyâ zavô âdâ ashâ\nhazô êmavat vohû mananghâ feseratûm.",
+      "en": "Rise up for me, O Ahura, through Armaiti give strength, through\nthe holiest Spirit give might, O Mazda, through the good Recompense\n[ âdâ , offering],\nthrough the Right give powerful prowess, through Good Thought\ngive the reward.",
+      "zh": ""
+    },
+    {
+      "chapter": 33,
+      "verse": 13,
+      "ref": "Y 33.13",
+      "orig": "rafedhrâi vourucashânê dôishî-môi\nýâ-vê abifrâ tâ xshathrahyâ\nahurâ ýâ vanghêush ashish mananghô\nfrô speñtâ ârmaitê ashâ daênå\nfradaxshayâ.",
+      "en": "To support me, O Thou that seest far onward, do ye assure\nme the incomparable things in your Dominion, O Ahura, as the Destiny\nof Good Thought. O Holy Armaiti, teach the Daenas about the Right.",
+      "zh": ""
+    },
+    {
+      "chapter": 33,
+      "verse": 14,
+      "ref": "Y 33.14",
+      "orig": "at râtãm zarathushtrô tanvascît hvah'yå\nushtanem dadâitî paurvatâtem mananghascâ\nvanghêush mazdâi shyaothanahyâ ashâi ýâcâ\nuxdhah'yâcâ seraoshem xshathremcâ!",
+      "en": "As an offering Zarathushtra brings the life of his own body,\nthe choiceness of good thought, action, and speech, unto Mazda,\nunto the Right, Obedience, and Dominion.\n<H2 id=y34",
+      "zh": ""
+    },
+    {
+      "chapter": 33,
+      "verse": 15,
+      "ref": "Y 33.15",
+      "orig": "(zôt u râspî,) ahyâ ýâsâ\n... gêushcâ urvânem (2). dà ýathâ\nahû vairyô ... (4). ashem vohû ... (3). ýathâishithãm\nhâitîm ýazamaide. ýenghê hâtãm\n... tåscâ ýazamaide!!",
+      "en": "",
+      "zh": ""
+    }
+  ]
+}

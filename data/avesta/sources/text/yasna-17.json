@@ -1,0 +1,189 @@
+{
+  "slug": "yasna-17",
+  "siglum": "Y 17",
+  "title_zh": "亞斯納 第 17 章",
+  "title_en": "Yasna 17",
+  "canon": "avestan",
+  "volume": "yasna",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/yasna/y13to27.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "米爾斯（L. H. Mills）",
+  "en_url": "https://www.avesta.org/yasna/yasna.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "Vohu Mano": "沃胡‧馬納",
+    "Asha Vahishta": "阿沙‧瓦希什塔",
+    "Khshathra Vairya": "赫沙特拉‧瓦伊里亞",
+    "Spenta Armaiti": "斯彭塔‧阿爾邁提",
+    "Haurvatat": "豪爾瓦塔特",
+    "Ameretat": "阿梅雷塔特",
+    "Haoma": "豪麻",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 17,
+      "verse": 1,
+      "ref": "Y 17.1",
+      "orig": "ahurem mazdãm ashavanem ashahe ratûm ýazamaide,\nameshâ speñtâ huxshathrâ hudhånghô\nýazamaide!",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 2,
+      "ref": "Y 17.2",
+      "orig": "asnya ashavana ashahe ratavô ýazamaide, hâvanîm\nashavanem ashahe ratûm ýazamaide, sâvanghaêm\nvîsîmca ashavanem ashahe ratûm ýazamaide,\nmithrem vouru-gaoyaoitîm hazangra-gaoshem baêvare-cashmanem\naoxtô-nâmanem ýazatem ýazamaide, râma\nhvâstrem ýazamaide.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 3,
+      "ref": "Y 17.3",
+      "orig": "rapithwinem ashavanem ashahe ratûm ýazamaide,\nfrâdat-fshâum zañtumemca ashavanem ashahe ratûm\nýazamaide, ashem vahishtem âtremca ahurahe mazdå\nputhrem ýazamaide.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 4,
+      "ref": "Y 17.4",
+      "orig": "uzayeirinem ashavanem ashahe ratûm ýazamaide,\nfrâdat-vîrem dâh'yumemca ashavanem ashahe ratûm\nýazamaide, berezañtem ahurem xshathrîm xshaêtem\napãm napâtem aurvat-aspem ýazamaide, apemca\nmazdadhâtãm ashaonîm ýazamaide.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 5,
+      "ref": "Y 17.5",
+      "orig": "aiwisrûthrimem aibigâim ashavanem ashahe ratûm\nýazamaide, frâdat-vîspãm-hujyâitîm\nzarathushtrôtememca ashavanem ashahe ratûm ýazamaide,\nashâunãm vanguhîsh sûrå speñtå\nfravashayô ýazamaide, khnåsca vîrô-vãthwå\nýazamaide, ýâiryãmca hushitîm\nýazamaide, amemca hutashtem huraodhem ýazamaide,\nverethrakhnemca ahuradhâtem ýazamaide, vanaiñtîmca\nuparatâtem ýazamaide.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 6,
+      "ref": "Y 17.6",
+      "orig": "ushahinem ashavanem ashahe ratûm ýazamaide, berejîm\nnmânîmca ashavanem ashahe ratûm ýazamaide,\nsraoshem ashîm huraodhem verethrâjanem frâdat-\ngaêthem ashavanem ashahe ratûm ýazamaide, rashnûm\nrazishtem ýazamaide, arshtâtemca frâdat-gaêthãm\nvaredat-gaêthãm ýazamaide!",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 7,
+      "ref": "Y 17.7",
+      "orig": "mâhya ashavana ashahe ratavô ýazamaide,\nañtaremånghem ashavanem ashahe ratûm ýazamaide,\nperenô-månghem vîshaptathem ashavanem ashahe\nratûm ýazamaide!",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 8,
+      "ref": "Y 17.8",
+      "orig": "ýâirya ashavana ashahe ratavô ýazamaide,\nmaidhyôizaremaêm ashavanem ashahe ratûm ýazamaide,\nmaidhyôishemem ashavanem ashahe ratûm ýazamaide,\npaitishhahîm ashavanem ashahe ratûm ýazamaide,\nayâthrimem fraourvaêshtrimem varshniharshtem ashavanem\nashahe ratûm ýazamaide, maidhyâirîm ashavanem\nashahe ratûm ýazamaide, hamaspathmaêdaêm\nashavanem ashahe ratûm ýazamaide, saredha ashavana\nashahe ratavô ýazamaide.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 9,
+      "ref": "Y 17.9",
+      "orig": "vîspe ashahe ratavô ýazamaide ýôi\nheñti ashahe ratavô thrayasca thrisãsca nazdishta\npairishhâvanayô ýôi heñti ashahe\nýat vahishtahe mazdô-frasâsta zarathushtrô-fraoxta!",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 10,
+      "ref": "Y 17.10",
+      "orig": "ahura mithra berezañta aithyajangha ashavana ýazamaide,\nstrêushca månghemca hvareca urvarâhu paiti baresmanyâhu\nmithrem vîspanãm dah'yunãm dainghupaitîm\nýazamaide, (...rôz...) ahurem mazdãm raêvañtem\nhvarenanguhañtem ýazamaide, ( ... mâh ...\n) ashâunãm vanguhîsh sûrå speñtå\nfravashayô ýazamaide!",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 11,
+      "ref": "Y 17.11",
+      "orig": "thwãm âtrem ahurahe mazdå puthrem ýazamaide,\nâtrem berezisavanghem ýazamaide, âtrem vohu-fryânem\nýazamaide, âtrem urvâzishtem ýazamaide,\nâtrem vâzishtem ýazamaide, âtrem spênishtem\nýazamaide, xshathrem nafedhrem nairyô-sanghem ýazatem\nýazamaide, âtrem vîspanãm nmânanãm\nnmânô-paitîm mazdadhâtem ahurahe mazdå\nputhrem ashavanem ashahe ratûm ýazamaide mat vîspaêibyô\nâterebyô.",
+      "en": "We worship thee, the Fire, O Ahura Mazda's son! We worship\nthe fire Berezi-savangha (of the lofty use), and the fire Vohu-fryana\n(the good and friendly), and the fire Urvazishta (the most beneficial\nand most helpful), and the fire Vazishta (the most supporting),\nand the fire Spenishta (the most bountiful), and Nairya-sangha\nthe Yazad of the royal lineage, and that fire which is the house-lord\nof all houses and Mazda-made, even the son of Ahura Mazda, the\nholy lord of the ritual order, with all the fires.",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 12,
+      "ref": "Y 17.12",
+      "orig": "âpô vanguhîsh vahishtå mazdadhâtå\nashaonîsh ýazamaide, vîspå âpô\nmazdadhâtå ashaonîsh ýazamaide, vîspå\nurvarå mazdadhâtå ashaonîsh ýazamaide!",
+      "en": "And we worship the good and best waters Mazda-made, holy,\nall the waters Mazda-made and holy, and all the plants which Mazda\nmade, and which are holy.",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 13,
+      "ref": "Y 17.13",
+      "orig": "mãthrem speñtem ashhvarenanghem ýazamaide,\ndâtem vîdôyûm ýazamaide, dâtem\nzarathushtri ýazamaide, darekhãm upayanãm\nýazamaide, daênãm vanguhîm mâzdayasnîm\nýazamaide.",
+      "en": "And we worship the Mathra-spenta (the bounteous word-of-reason),\nthe Zarathushtrian law against the Daevas, and its long descent.",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 14,
+      "ref": "Y 17.14",
+      "orig": "gairîm ushidarenem mazdadhâtem ashahvâthrem\nýazatem ýazamaide, vîspå garayô\nashahvâthrå pouru-hvâthrå mazdadhâta\nashavana ashahe ratavô ýazamaide, ukhrem kavaêm\nhvarenô mazdadhâtem ýazamaide, ukhrem ahvaretem\nhvarenô mazdadhâtem ýazamaide, ashîm\nvanguhîm ýazamaide, xshôithnîm berezaitîm\namavaitîm huraodhãm hvâparãm, hvarenô\nmazdadhâtem ýazamaide, savô mazdadhâtem\nýazamaide.",
+      "en": "And we worship Mount Ushi-darena which is Mazda-made and shining\nwith its holiness, and all the mountains shining with holiness,\nand of abundant glory, and which Mazda made ---.",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 15,
+      "ref": "Y 17.15",
+      "orig": "dahmãm vanguhîm âfritîm ýazamaide,\ndahmemca narem ashavanem ýazamaide, ukhrem taxmem dâmôish\nupamanem ýazatem ýazamaide!",
+      "en": "And we worship the good and pious prayer for blessings, (16)\nand these waters and (these lands), (17) and all the greatest\nchieftains, lords of the ritual order;",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 16,
+      "ref": "Y 17.16",
+      "orig": "imå apasca zemasca urvaråsca ýazamaide,\nimå asåsca shôithråsca gaoyaoitîshca\nmaêthanyåsca avô-hvarenåsca ýazamaide,\nimemca shôithrahe paitîm ýazamaide ýim\nahurem mazdãm.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 17,
+      "ref": "Y 17.17",
+      "orig": "ratavô vîspe mazishta ýazamaide ayara asnya\nmâhya ýâirya saredha!",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 18,
+      "ref": "Y 17.18",
+      "orig": "ashâunãm vanguhîsh sûrå speñtå\nfravashayô staomi zbayemi ufyemi, ýazamaide nmânyå\nvîsyå zañtumå dâh'yumå zarathushtrôtemå.",
+      "en": "And I praise, invoke, and glorify the good, heroic, bountiful\nFravashis of the saints, those of the house, the Vis, the Zantuma,\nthe Dahvyuma, and the Zarathushtrotema, and all the holy Yazads!\n<H2 id=y18",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 19,
+      "ref": "Y 17.19",
+      "orig": "vîspe ashavanô ýazata ýazamaide,\nvîspe ashahe ratavô ýazamaide, hâvanîm\npaiti ratûm sâvanghaêm vîsîmca paiti\nratûm ratavô vîspe mazishta paiti ratûm.\nýenghê hâtãm âat ýesnê\npaitî ... !!",
+      "en": "",
+      "zh": ""
+    }
+  ]
+}

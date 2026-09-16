@@ -85,8 +85,25 @@ def parse_sbe_chapter(page: str) -> dict[int, str]:
     # 起始給 0 的話第 0 節會被 _absorb_verses 的「節號不得倒退」規則當成
     # 重複而丟掉——少一節，而頁面完全正常。
     last = -1
+
+    # 🚨 **第一個 <TD> 之前的那一段也是經文，不可以跳過。**
+    #    整書頁把章標題與接下來的頭幾節放在同一個 <TD> 裡，
+    #    而本函式收到的章塊是從標題錨點之後切起的——於是那個 <TD> 的開頭
+    #    落在章塊之外，只認 <TD> 的話開頭幾節整段消失。
+    #    實測：亞斯納第 31 章（伽薩‧道路的詰問）23 節只抓到 1 節，
+    #    第 1–3 節就是這樣掉的；全書有 18 章中招，而每一章都照樣寫出檔案。
+    head = re.split(r"<TD\b", page, maxsplit=1, flags=re.I)[0]
+    head_text = strip_tags(head)
+    if head_text:
+        last = _absorb_verses(head_text, verses, last)
+
     # 逐個 TD 切；經文欄的特徵是不帶 CLASS="NOTE"
-    for m in re.finditer(r"<TD\b([^>]*)>(.*?)(?=<TD\b|</TR>|</TABLE>)", page, re.I | re.S):
+    # 🚨 結尾的 `|$` 不可省。章塊是從標題錨點切到下一個標題錨點，
+    #    最後一個 <TD> 的 </TD></TR> 往往落在切點之外——沒有 $ 這個出口，
+    #    那一格**整格比對失敗而被跳過**，不是少幾個字而是少一整段。
+    #    實測：亞斯納第 31 章的第 5–22 節（23 節裡的 18 節）就這樣不見，
+    #    而檔案照寫、前 4 節好端端的，看起來只像「後面沒譯」。
+    for m in re.finditer(r"<TD\b([^>]*)>(.*?)(?=<TD\b|</TR>|</TABLE>|$)", page, re.I | re.S):
         attrs, body = m.group(1), m.group(2)
         if re.search(r'CLASS\s*=\s*"?NOTE', attrs, re.I):
             continue
@@ -160,9 +177,30 @@ def _absorb_verses(text: str, verses: dict[int, str], last: int) -> int:
             if last in verses:
                 verses[last] = f"{verses[last]} {parts[i]}. {chunk}".strip()
             continue
+        # 🚨 同一段裡還可能藏著**排在句中**的節號。米爾斯把亞斯納的儀節章
+        #    排成連續散文，第 2 節接在第 1 節句末後面（「…Hadhanaepata. 2. And, as…」），
+        #    不換行。只認行首的話，27 節的一章只會抓到 2 節——
+        #    而檔案照寫、頁面照常顯示，看起來像「這一章大半沒譯」。
+        n, chunk = _split_inline_verses(n, chunk, verses)
         verses[n] = f"{verses[n]}\n{chunk}" if n in verses else chunk
         last = n
     return last
+
+
+def _split_inline_verses(n: int, chunk: str, verses: dict[int, str]) -> tuple[int, str]:
+    """把一段裡句中出現的後續節號切出來，塞進 verses，回 (最後節號, 該節正文)。
+
+    🚨 **只認「剛好是下一號」的**。句中的數字太多了（年份、數量、互見），
+       放寬成「任何比目前大的數字」會把正文切得七零八落，而且看不出來。
+       限定 n+1 等於是要求它接得上序列，誤判的機會極低。
+    """
+    while True:
+        m = re.search(rf"(?<=[.!?])\s+{n + 1}\.\s+", chunk)
+        if not m:
+            return n, chunk.strip()
+        verses[n] = chunk[:m.start()].strip()
+        chunk = chunk[m.end():]
+        n += 1
 
 
 def parse_sbe_book(page: str, chapter_anchor: str = "chapt") -> dict[int, dict[int, str]]:
@@ -185,6 +223,34 @@ def parse_sbe_book(page: str, chapter_anchor: str = "chapt") -> dict[int, dict[i
             verses = {}
             _absorb_verses(strip_tags(chunk), verses, 0)
         out[chap] = verses
+    return out
+
+
+# 互見有兩種寫法，兩種都要認：
+#   (See Y61.)                                   ← 多數章
+#   (This chapter is identical with Yasna 37. )   ← 第 5 章
+# 只認第一種的話，第 5 章的英譯欄會空著而且沒有任何說明，
+# 看起來就是抓取失敗。
+XREF = re.compile(
+    r"\([^)]*(?:see|identical with)\s+Y(?:asna)?[\s.]*\d[^)]*\)", re.I)
+
+
+def parse_sbe_xrefs(page: str, chapter_anchor: str = "chapt") -> dict[int, str]:
+    """抓出英譯整書頁裡「本章不另譯，見某章」的互見說明，回 {章: 說明}。
+
+    🚨 這不是可有可無的裝飾。米爾斯的《東方聖書》譯本對亞斯納後段
+       （63、64、67、69、72 等）根本沒有另譯，原頁面只寫一句「(See Y61.)」。
+       不收的話那幾章的英譯欄是空的，看起來像**抓取失敗**；
+       收了才看得出那是**譯本本來就沒有**，而且指得出去哪裡找。
+       兩者在版面上長得一模一樣，差別只在讀者會不會以為站壞了。
+    """
+    out: dict[int, str] = {}
+    marks = _chapter_marks(page, chapter_anchor)
+    for i, (start, chap) in enumerate(marks):
+        end = marks[i + 1][0] if i + 1 < len(marks) else len(page)
+        hits = XREF.findall(strip_tags(page[start:end]))
+        if hits:
+            out[chap] = " ".join(dict.fromkeys(hits))
     return out
 
 
@@ -253,9 +319,25 @@ def _chapter_marks(page: str, chapter_anchor: str) -> list[tuple[int, int]]:
         found.append((m.end(), int(m.group(1))))
     # 標題：只認出現在 <H1>–<H4> 裡的，避免把正文或註解中的互見（「參 Fargard 13」）
     # 當成章界——那會把前一章從互見處硬生生截斷，而頁面照常顯示。
+    #
+    # 🚨 標題的寫法在同一個站上有四種，四種都要認：
+    #      <H3>Fargard 1.</H3>                              萬迪達德
+    #      <H3>YASNA - Chapter 1. </H3>                      亞斯納轉寫（書名 - 章）
+    #      <H3><A NAME="chapter3">YASNA - Chapter 3. </A></H3>  同上但包在錨點裡
+    #      <H3>0. Introduction </H3>                          亞斯納第 0 章
+    #    只認第一種時，亞斯納 12 個轉寫頁會「解析出 0 章」——
+    #    而腳本不報錯、照樣把英譯欄寫滿，只是轉寫欄全空（維斯帕拉德就是這樣）。
     for m in re.finditer(
-        r"<H[1-4]\b[^>]*>\s*(?:Fargard|Yasna|Yasht|Visperad|Chapter)\s+(\d+)\s*\.?\s*</H[1-4]>",
+        r"<H[1-4]\b[^>]*>(?:\s*<A\b[^>]*>)?\s*"
+        r"(?:[A-Z]{3,10}\s*[-–—]\s*)?"
+        r"(?:Fargard|Yasna|Yasht|Visperad|Chapter|Ha)\s+(\d+)\s*\.?\s*",
         page, re.I,
+    ):
+        found.append((m.start(), int(m.group(1))))
+    # 「0. Introduction」這種「數字＋句點＋詞」的章標題，只在 <H2>/<H3> 裡認，
+    # 且數字必須是行首——否則正文裡的節號會被當成章界。
+    for m in re.finditer(
+        r"<H[23]\b[^>]*>(?:\s*<A\b[^>]*>)?\s*(\d{1,2})\.\s+[A-Z]", page, re.I,
     ):
         found.append((m.start(), int(m.group(1))))
 
@@ -324,6 +406,10 @@ class BookSpec:
     # 猜錯頁型的後果不是報錯，是抓到空的或抓到別章的內容，而版面完全正常。
     translit_per_chapter: bool = False
     en_whole_book: bool = False
+    # 第四種頁型：轉寫**散在多頁、每頁涵蓋一段章次**（亞斯納是這一型：
+    # y0to8.htm、y9to11.htm、y28to34.htm…共 12 頁涵蓋 0–72 章）。
+    # 設了這個就不讀 translit_url，改逐頁抓、各自切章後合併。
+    translit_pages: list[str] = field(default_factory=list)
     # 篇章的量詞。祆教各書的單位不同：萬迪達德分「章」（法爾迦爾德）、
     # 亞什特分「首」。寫死成「章」會讓亞什特的篇名變成「亞什特 第 10 章」，
     # 與書目頁的「第 10 首」對不起來。
@@ -353,6 +439,58 @@ BOOKS: dict[str, BookSpec] = {
             "Yima": "伊瑪",
             "Nasu": "納蘇",
             "daeva": "迭瓦",
+        },
+    ),
+    "yasna": BookSpec(
+        key="yasna",
+        canon="avestan",
+        volume="yasna",
+        slug_prefix="yasna",
+        siglum_prefix="Y",
+        title_zh="亞斯納",
+        title_en="Yasna",
+        chapters=range(1, 73),
+        # 🚨 英譯**整本都在 yasna.htm 這一頁**（米爾斯譯，表格版型，錨點 id=yN）。
+        #    舊的逐段英譯頁（y0to8s.htm 等）現在只剩一句「LINK MOVED.」的殼——
+        #    抓它會得到 1,184 bytes 的空頁而不報錯。
+        en_url=f"{BASE}/yasna/yasna.htm",
+        en_whole_book=True,
+        chapter_anchor="y",
+        # 轉寫散在 12 頁，每頁涵蓋一段章次。
+        translit_url=f"{BASE}/yasna/y0to8.htm",
+        translit_pages=[
+            f"{BASE}/yasna/y0to8.htm",
+            f"{BASE}/yasna/y9to11.htm",
+            f"{BASE}/yasna/y12.htm",
+            f"{BASE}/yasna/y13to27.htm",
+            f"{BASE}/yasna/y28to34.htm",
+            f"{BASE}/yasna/y35to42.htm",
+            f"{BASE}/yasna/y43to46.htm",
+            f"{BASE}/yasna/y47to50.htm",
+            f"{BASE}/yasna/y51.htm",
+            f"{BASE}/yasna/y52.htm",
+            f"{BASE}/yasna/y53.htm",
+            f"{BASE}/yasna/y54to72.htm",
+        ],
+        en_translator="米爾斯（L. H. Mills）",
+        en_source="《東方聖書》第 31 卷，1887；公有領域",
+        names={
+            "Ahura Mazda": "阿胡拉‧馬茲達",
+            "Angra Mainyu": "安格拉‧曼紐",
+            "Zarathushtra": "查拉圖斯特拉",
+            "Spitama": "斯皮塔瑪",
+            "Amesha Spenta": "阿姆沙‧斯彭塔",
+            "Vohu Mano": "沃胡‧馬納",
+            "Asha Vahishta": "阿沙‧瓦希什塔",
+            "Khshathra Vairya": "赫沙特拉‧瓦伊里亞",
+            "Spenta Armaiti": "斯彭塔‧阿爾邁提",
+            "Haurvatat": "豪爾瓦塔特",
+            "Ameretat": "阿梅雷塔特",
+            "Haoma": "豪麻",
+            "Sraosha": "斯勞沙",
+            "fravashi": "弗拉瓦希",
+            "daeva": "迭瓦",
+            "yazata": "雅扎塔",
         },
     ),
     "yasht": BookSpec(
@@ -428,6 +566,20 @@ CHAPTER_TITLES: dict[str, dict[int, str]] = {
         19: "誘惑查拉圖斯特拉", 20: "特里塔與醫術之始", 21: "雲、雨與諸水",
         22: "阿胡拉求治於曼特拉‧斯彭塔",
     },
+    # 🚨 這些名字必須與 data/avesta/avestan.ts 書目裡的一致。
+    #    書目那邊未命名的章一律作「亞斯納 第 N 章」，build_chapter 會自動產生同樣的字串，
+    #    所以這裡只列有專名的 46 章。
+    "yasna": {
+        1: "呼名獻祭", 8: "肉供與信眾分食", 9: "豪麻讚（上）", 10: "豪麻讚（中）", 11: "豪麻讚（下）", 12: "信仰宣示",
+        19: "阿胡納‧瓦伊里亞釋義", 20: "阿舍姆‧沃胡釋義", 21: "燕赫‧哈坦釋義", 28: "伽薩‧祈求聆聽", 29: "伽薩‧牛魂的哀訴",
+        30: "伽薩‧兩靈", 31: "伽薩‧道路的詰問", 32: "伽薩‧斥迭瓦與其祭司", 33: "伽薩‧先知的獻身", 34: "伽薩‧求得永生",
+        35: "七章禱‧讚阿胡拉與不朽聖者", 36: "七章禱‧向阿胡拉與火", 37: "七章禱‧向聖造與弗拉瓦希", 38: "七章禱‧向大地與聖水",
+        39: "七章禱‧向牛魂", 40: "七章禱‧求助佑", 41: "七章禱‧向阿胡拉為王", 42: "七章禱補遺", 43: "伽薩‧幸福歸於",
+        44: "伽薩‧二十問", 45: "伽薩‧我要宣講", 46: "伽薩‧我往何處去", 47: "伽薩‧豐饒之靈", 48: "伽薩‧真理勝虛妄",
+        49: "伽薩‧斥敵者", 50: "伽薩‧我魂何依", 51: "伽薩‧善的王權", 52: "求聖潔與其果報", 53: "伽薩‧最好的願望", 54: "艾里亞曼禱",
+        56: "斯勞沙讚前引", 57: "斯勞沙讚", 58: "繁盛頌詞", 59: "互祝", 62: "火讚", 65: "向阿爾德維‧蘇拉‧阿娜希塔與諸水",
+        66: "向阿胡拉之女（水）", 70: "向不朽聖者與教制", 71: "祭典將畢", 72: "結祭",
+    },
     # 🚨 這 21 個名字必須與 data/avesta/avestan.ts 書目裡的一致。
     #    兩邊不一致時，書目頁與 reader 會顯示不同的篇名——而兩邊都不會報錯。
     "yasht": {
@@ -465,7 +617,8 @@ def _normalise_units(orig: dict) -> list[tuple[int, int, str]]:
 
 
 def build_chapter(spec: BookSpec, chap: int, en: dict[int, str],
-                  orig: dict[tuple[int, int], str] | dict[int, str]) -> dict:
+                  orig: dict[tuple[int, int], str] | dict[int, str],
+                  en_xref: str = "") -> dict:
     """把一章的兩欄併成 reader 吃的 JSON。對不齊時留空，不猜。
 
     轉寫的節號可以是區間（蓋爾德納把數節合成一段）。區間會把它涵蓋的英譯
@@ -501,17 +654,42 @@ def build_chapter(spec: BookSpec, chap: int, en: dict[int, str],
         "volume": spec.volume,
         "orig_scheme": "geldner-roman",
         "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
-        "orig_url": spec.translit_url.format(n=chap) if spec.translit_per_chapter else spec.translit_url,
+        "orig_url": (spec.translit_url.format(n=chap) if spec.translit_per_chapter
+                     else _translit_page_of(spec, chap)),
         "en_source": spec.en_source,
         "en_translator": spec.en_translator,
         "en_url": spec.en_url if spec.en_whole_book else spec.en_url.format(n=chap),
         "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；"
                    "英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
         "pivot": "sbe-eng",
-        "pivot_note": None,
+        # 本章英譯只有互見、沒有正文時，把那句互見寫在版面上。
+        # 空白的英譯欄看起來像抓取失敗，「見 Y 61」才看得出是譯本本來就沒有。
+        "pivot_note": (
+            f"米爾斯的《東方聖書》譯本未另譯本章，原書註明 {en_xref}。"
+            f"英譯欄因此從缺——這是譯本的處理方式，不是本站漏抓。"
+            if en_xref and not en else None
+        ),
         "names": spec.names,
         "segments": segments,
     }
+
+
+def _translit_page_of(spec: "BookSpec", chap: int) -> str:
+    """多頁轉寫時，回傳這一章所屬的那一頁網址；單頁書就回本來的 translit_url。
+
+    網址裡的 yNtoM 就是它涵蓋的章次區間，直接讀出來用，不另外維護一張對照表
+    （對照表會跟網址不同步，而不同步時看不出來）。
+    """
+    if not spec.translit_pages:
+        return spec.translit_url
+    for url in spec.translit_pages:
+        name = url.rsplit("/", 1)[-1].removesuffix(".htm")
+        m = re.fullmatch(r"y(\d+)to(\d+)", name)
+        if m and int(m.group(1)) <= chap <= int(m.group(2)):
+            return url
+        if re.fullmatch(rf"y{chap}", name):
+            return url
+    return spec.translit_pages[0]
 
 
 def _carry_over_zh(path: Path, doc: dict) -> int:
@@ -547,16 +725,31 @@ def run(spec: BookSpec, only: list[int] | None) -> int:
     session = requests.Session()
 
     translit_all: dict[int, dict] = {}
-    if not spec.translit_per_chapter:
+    if spec.translit_pages:
+        for url in spec.translit_pages:
+            part = parse_translit_book(get(session, url), spec.chapter_anchor)
+            # 🚨 各頁的章次不重疊；真重疊代表切章規則抓錯了，要吵出來而不是靜靜覆蓋。
+            dupes = sorted(set(part) & set(translit_all))
+            if dupes:
+                print(f"  ⚠ {url} 與前面各頁章次重疊：{dupes}（切章規則可能有誤）")
+            translit_all.update(part)
+            print(f"  · {url.rsplit('/', 1)[-1]:16s} 解析出 {len(part)} 章 {sorted(part)}")
+            time.sleep(SLEEP)
+        print(f"[{spec.key}] 轉寫共 {len(translit_all)} 章")
+    elif not spec.translit_per_chapter:
         print(f"[{spec.key}] 抓轉寫整書：{spec.translit_url}")
         translit_all = parse_translit_book(get(session, spec.translit_url), spec.chapter_anchor)
         print(f"[{spec.key}] 轉寫解析出 {len(translit_all)} 章")
 
     en_all: dict[int, dict[int, str]] = {}
+    en_xrefs: dict[int, str] = {}
     if spec.en_whole_book:
         print(f"[{spec.key}] 抓英譯整書：{spec.en_url}")
-        en_all = parse_sbe_book(get(session, spec.en_url), spec.chapter_anchor)
-        print(f"[{spec.key}] 英譯解析出 {len(en_all)} 章")
+        en_page = get(session, spec.en_url)
+        en_all = parse_sbe_book(en_page, spec.chapter_anchor)
+        en_xrefs = parse_sbe_xrefs(en_page, spec.chapter_anchor)
+        print(f"[{spec.key}] 英譯解析出 {len(en_all)} 章"
+              + (f"，其中 {sum(1 for c, v in en_all.items() if not v and en_xrefs.get(c))} 章只有互見" if en_xrefs else ""))
 
     chapters = [c for c in spec.chapters if not only or c in only]
     written = 0
@@ -597,7 +790,7 @@ def run(spec: BookSpec, only: list[int] | None) -> int:
         if only_en or only_orig:
             flag = f"  ⚠ 僅英譯有 {only_en or '—'}／僅轉寫有 {only_orig or '—'}"
 
-        doc = build_chapter(spec, chap, en, orig)
+        doc = build_chapter(spec, chap, en, orig, en_xrefs.get(chap, ""))
         path = OUT_DIR / f"{doc['slug']}.json"
         kept = _carry_over_zh(path, doc)
         if kept:

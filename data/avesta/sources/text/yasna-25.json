@@ -1,0 +1,101 @@
+{
+  "slug": "yasna-25",
+  "siglum": "Y 25",
+  "title_zh": "亞斯納 第 25 章",
+  "title_en": "Yasna 25",
+  "canon": "avestan",
+  "volume": "yasna",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/yasna/y13to27.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "米爾斯（L. H. Mills）",
+  "en_url": "https://www.avesta.org/yasna/yasna.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "Vohu Mano": "沃胡‧馬納",
+    "Asha Vahishta": "阿沙‧瓦希什塔",
+    "Khshathra Vairya": "赫沙特拉‧瓦伊里亞",
+    "Spenta Armaiti": "斯彭塔‧阿爾邁提",
+    "Haurvatat": "豪爾瓦塔特",
+    "Ameretat": "阿梅雷塔特",
+    "Haoma": "豪麻",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 25,
+      "verse": 1,
+      "ref": "Y 25.1",
+      "orig": "ameshâ speñtâ huxshathrâ hudhånghô\nýazamaide, imem haomem ashaya uzdâtem ýazamaide,\nimãmcâ gãm jîvyãm ashaya uzdâtãm\nýazamaide, imãmcâ urvarãm hadhânaêpatãm\nashaya uzdâtãm ýazamaide.",
+      "en": "And we worship the Bountiful Immortals with our sacrifice,\nwho rule aright, and who dispose of all aright; and we worship\nthis Haoma, this flesh and branch, (2) and these Zaothras for\nthe good waters, having the Haoma with them, and the flesh with\nthem, and Hadhanaepata, and lifted up with sanctity, and we worship\nthe Haoma-water for the beneficial waters; and we worship the\ntwo, the stone mortar and the iron mortar; (3) and we worship\nthis plant for the Baresman and the well-timed prayer for blessings\nwhich has approached (in its proper place within the ritual course),\nand also both the remembrance and the practice of the good Mazdayasnian\nReligion, and the heard recital of the Gathas, and the well-timed\nprayer for blessings of the holy lord of the ritual order which\nhas approached, and these wood-billets with the perfume, (even)\nthine, the Fire's, O Ahura Mazda's son! and we worship all good\nobjects which are Mazda-made, and which contain (and are) the\nseed of Righteousness.",
+      "zh": ""
+    },
+    {
+      "chapter": 25,
+      "verse": 2,
+      "ref": "Y 25.2",
+      "orig": "aiwyô vanguhibyô imå zaothrå haomavaitîsh\ngaomavaitîsh hadhânaêpatavaitîsh ashaya\nuzdâtå ýazamaide, aiwyô vanguhibyô\napemca haomyãm ýazamaide, asmanaca hâvana\nýazamaide, ayanghaênaca hâvana ýazamaide.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 25,
+      "verse": 3,
+      "ref": "Y 25.3",
+      "orig": "imãmcâ urvarãm baresmanîm jakhmûshîmca\nratufritîm marethremca varezîmca daênayå\nvanghuyå mâzdayasnôish gâthanãmca\nsraothrem jakhmûshîmca ashaonô ashahe rathwô\nratufritîm imã aêsmãsca baoidhîmca\nýazamaide tava âthrô ahurahe mazdå puthra\nvîspaca vohu mazdadhâta ashacithra ýazamaide!",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 25,
+      "verse": 4,
+      "ref": "Y 25.4",
+      "orig": "ahurem mazdãm raêvañtem hvarenanguhañtem\nýazamaide, ameshâ speñtâ huxshathrâ\nhudhånghô ýazamaide, mithrem vouru-gaoyaoitîm\nýazamaide, râma hvâstrem ýazamaide,\nhvarexshaêtem ameshem raêm aurvat-aspem ýazamaide.",
+      "en": "And we worship Ahura Mazda with our sacrifice, the resplendent,\nthe glorious, and the Bountiful Immortals who rule aright, and\nwho dispose (of all) aright, and Mithra of the wide pastures and\nRaman Hvastra; and we worship the shining sun, the resplendent,\nthe immortal, of the fleet horses.",
+      "zh": ""
+    },
+    {
+      "chapter": 25,
+      "verse": 5,
+      "ref": "Y 25.5",
+      "orig": "vaêm ashavanem ýazamaide vaêm uparô-\nkairîm ýazamaide taradhâtem anyâish dâmãn,\naêtat tê vayô ýazamaide ýat tê\nasti speñtô-mainyaom, razishtãm cistãm\nmazdadhâtãm ashaonîm ýazamaide, daênãm\nvanguhîm mâzdayasnîm ýazamaide.",
+      "en": "And we worship the holy wind which works on high, placed higher\nthan the other creatures in the creation; and we worship this\nwhich is thine, O Vayu! and which appertains to the Spenta Mainyu\nwithin thee; and we worship the most true religious Knowledge,\nMazda-made and holy, and the good Mazdayasnian law.",
+      "zh": ""
+    },
+    {
+      "chapter": 25,
+      "verse": 6,
+      "ref": "Y 25.6",
+      "orig": "mãthrem speñtem ashhvarenanghem ýazamaide,\ndâtem vîdôyûm ýazamaide, dâtem\nzarathushtri ýazamaide, darekhãm upayanãm\nýazamaide, daênãm vanguhîm mâzdayasnîm\nýazamaide, zarazdâitîm mãthrem speñtem\nýazamaide, ushi-darethrem daênãm mâzdayasnîm\nýazamaide, vaêdhîm mãthrem speñtem\nýazamaide, âsnem xratûm mazdadhâtem ýazamaide,\ngaoshô-srûtem xratûm mazdadhâtem ýazamaide.",
+      "en": "And we worship the Mathra Spenta verily glorious (as it is),\neven the law pronounced against the Daevas, the Zarathushtrian\nlaw, and its long descent; yea, we worship the good Mazdayasnian\nReligion, and the Mathra which is heart-devoted and bounteous\n(imparting heart's devotion to the saint); yea, we worship the\nMazdayasnian Religion maintained in the understanding of the saint;\nand we honor that science which is the Mathra Spenta, and the\ninnate understanding Mazda-made, and the derived understanding,\nheard with ear, and Mazda-made.",
+      "zh": ""
+    },
+    {
+      "chapter": 25,
+      "verse": 7,
+      "ref": "Y 25.7",
+      "orig": "âtrem ahurahe mazdå puthrem ýazamaide,\nthwãm âtrem ahurahe mazdå puthrem ashavanem\nashahe ratûm ýazamaide, vîspe âtarô\nýazamaide, gairîm ushi-darenem mazdadhâtem\nashahvâthrem ýazatem ýazamaide.",
+      "en": "Yea, we worship thee, the Fire, Ahura Mazda's son I the holy\nlord of the ritual order; and we worship all the Fires, and Mount\nUshi-darena (which holds the light) Mazda-made and holy, the Yazad\nmount, brilliant with sanctity.",
+      "zh": ""
+    },
+    {
+      "chapter": 25,
+      "verse": 8,
+      "ref": "Y 25.8",
+      "orig": "vîspemca ashavanem mainyaom ýazatem ýazamaide,\nvîspemca ashavanem gaêthîm ýazatem ýazamaide!!",
+      "en": "And we worship every holy spiritual\nYazad; and every holy earthly Yazad (who exists)!\n<H2 id=y26",
+      "zh": ""
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "slug": "yasna-50",
+  "siglum": "Y 50",
+  "title_zh": "亞斯納 第 50 章‧伽薩‧我魂何依",
+  "title_en": "Yasna 50",
+  "canon": "avestan",
+  "volume": "yasna",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/yasna/y47to50.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "米爾斯（L. H. Mills）",
+  "en_url": "https://www.avesta.org/yasna/yasna.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "Vohu Mano": "沃胡‧馬納",
+    "Asha Vahishta": "阿沙‧瓦希什塔",
+    "Khshathra Vairya": "赫沙特拉‧瓦伊里亞",
+    "Spenta Armaiti": "斯彭塔‧阿爾邁提",
+    "Haurvatat": "豪爾瓦塔特",
+    "Ameretat": "阿梅雷塔特",
+    "Haoma": "豪麻",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 50,
+      "verse": 1,
+      "ref": "Y 50.1",
+      "orig": "kat môi urvâ isê cahyâ avanghô\nkê-môi pasêush kê-mê-nâ-thrâtâ\nvistô dà anyô ashât thwatcâ mazdâ\nahurâ azdâ zûtâ vahishtâatcâ\nmananghô.",
+      "en": "(Zarathushtra:) Can my soul count on any one for help? Who\nis there found for my herd, who for myself a protector, indeed,\nat my call other than the Right and thyself. O Mazda Ahura, and\nthe Best Thought?",
+      "zh": ""
+    },
+    {
+      "chapter": 50,
+      "verse": 2,
+      "ref": "Y 50.2",
+      "orig": "kathâ mazdâ rânyô-skeretîm gãm\nishasôit ýê-hîm ahmâi vâstravaitîm\nstôi usyât erezhejîsh ashâ pourushû\nhvarê pishyasû âkâstêñg mâ\nnishãsyâ dâthêm dâhvâ.",
+      "en": "How, O Mazda, should one desire the luck-bringing cattle,\none who would fain it would come to him with the pasture?\n(Mazda:) They that live uprightly according to the Right among\nthe many that look upon the sun, those whom they stand in judgment,\nI will settle in the dwellings of the wise.",
+      "zh": ""
+    },
+    {
+      "chapter": 50,
+      "verse": 3,
+      "ref": "Y 50.3",
+      "orig": "atcît ahmâi mazdâ ashâ anghaitî\nýãm hôi xshathrâ vohucâ côisht\nmananghâ ýê-nâ ashôish aojanghâ\nvaredayaêtâ ýãm nazdishtãm gaêthãm\ndregvå baxshaitî.",
+      "en": "(Zarathushtra:) So this (reward) shall come to him through\nthe Right, O Mazda, (this reward) which by the Dominion and Good\nThought he promised, whomsoever by the power of his Destiny prospers\nthe neighboring possession that now the Liar holds.",
+      "zh": ""
+    },
+    {
+      "chapter": 50,
+      "verse": 4,
+      "ref": "Y 50.4",
+      "orig": "at vå ýazâi stavas mazdâ ahurâ\nhadâ ashâ vahishtâcâ mananghâ xshathrâcâ\nýâ îshô stånghat â-paithî\nâkå aredrêñg demânê garô\nseraoshânê.",
+      "en": "I will worship you with praise, O Mazda Ahura, joined with\nRight and Best Thought and Dominion, that they, desired of pious\nmen, may stand as Judges on the path of the obedient unto the\nHouse of Song.",
+      "zh": ""
+    },
+    {
+      "chapter": 50,
+      "verse": 5,
+      "ref": "Y 50.5",
+      "orig": "ârôi-zî xshmâ mazdâ ashâ\nahurâ hyat ýûshmâkâi mãthrânê\nvaorâzathâ aibî-dereshtâ âvîshyâ\navanghâ zastâishtâ ýâ-nå\nhvâthrê dâyât.",
+      "en": "Assured by you, O Mazda Ahura and Right, are the pointings\nof the hand - since you are well-disposed to your prophet - which\nshall bring us to bliss, together with visible manifest help.",
+      "zh": ""
+    },
+    {
+      "chapter": 50,
+      "verse": 6,
+      "ref": "Y 50.6",
+      "orig": "ýê mãthrâ vâcem mazdâ\nbaraitî urvathô ashâ nemanghâ zarathushtrô\ndâtâ xratêush hizvô raithîm stôi\nmahyâ râzêñg vohû sâhît\nmananghâ.",
+      "en": "The prophet Zarathushtra, O Mazda, who lifts up his voice\nin worship, as friend of Asha - may the Creator of Wisdom teach\nme his ordinances through Good Thought, that my tongue may have\na pathway.",
+      "zh": ""
+    },
+    {
+      "chapter": 50,
+      "verse": 7,
+      "ref": "Y 50.7",
+      "orig": "at vê ýaojâ zevîshtyêñg\naurvatô jayâish perethûsh vahmahyâ ýûshmâkahyâ\nmazdâ ashâ ugrêñg vohû mananghâ\nýâish azâthâ mahmâi h'yâtâ\navanghê.",
+      "en": "For you I will harness the swiftest steeds, stout and strong,\nby the promptings of your praise, that ye may come hither, O Mazda,\nRight, and Good thought.",
+      "zh": ""
+    },
+    {
+      "chapter": 50,
+      "verse": 8,
+      "ref": "Y 50.8",
+      "orig": "mat vå padâish ýâ frasrûtâ\nîzhayå pairijasâi mazdâ ustânazastô\nat vå ashâ aredrah'yâcâ nemanghâ\nat vå vanghêush mananghô hunaretâtâ.",
+      "en": "Ever with verses that are recognized as those of pious zeal\nI will come before you with outstretched hands, O Mazda, before\nyou, O thou Right, with worship of the faithful man, before you\nwith all the capacity of Good Thought.",
+      "zh": ""
+    },
+    {
+      "chapter": 50,
+      "verse": 9,
+      "ref": "Y 50.9",
+      "orig": "tâish vå ýasnâish paitî stavas\nayenî mazdâ ashâ vanghêush shyaothanâish\nmananghô ýadâ ashôish mah'yå vasê\nxshayâ at hudânâush ishayãs gerezdâ\nh'yêm.",
+      "en": "With those prayers I would come and praise you, O Mazda and\nthou Right, with actions of Good Thought. If I be master of my\nown destiny as I will, then will I take thought for the portion\nof the wise in the same.",
+      "zh": ""
+    },
+    {
+      "chapter": 50,
+      "verse": 10,
+      "ref": "Y 50.10",
+      "orig": "at ýâ vareshâ ýâcâ pairî\nâish shyaothanâ ýâcâ vohû\ncashmãm arejat mananghâ raocå hvêñg\nasnãm uxshâ aêurush dà xshmâkâi\nashâ vahmâi mazdâ ahurâ.",
+      "en": "Those actions that I shall achieve and those done aforetime,\nand those, O Good Thought, that are precious in thy sight, the\nrays of the sun, the shimmering uprisings of the days, all is\nfor your praise, O thou Right and Mazda Ahura.",
+      "zh": ""
+    },
+    {
+      "chapter": 50,
+      "verse": 11,
+      "ref": "Y 50.11",
+      "orig": "at vê staotâ aojâi mazdâ anghâcâ\nýavat ashâ tavâcâ isâicâ\ndâtâ anghêush aredat vohû mananghâ\nhaithyâvareshtãm hyat vasnâ ferashôtemem!",
+      "en": "Your praiser, Mazda, will I declare myself and be, so long,\nO Right, as I have strength and power. May the Creator of the\nworld accomplish through Good Thought its fulfillment of all that\nmost perfectly answers to his will.\n<H2 id=y51",
+      "zh": ""
+    },
+    {
+      "chapter": 50,
+      "verse": 12,
+      "ref": "Y 50.12",
+      "orig": "(zôt u râspî,) speñtâ mainyû\n... ârmaitî ahurô (2). ashem vohû ...\n(3). kat-môi-urvãm hâitîm ýazamaide.\nspeñtâ-mainyûm gâthãm ashaonîm\nashahe ratûm ýazamaide, speñtâ-mainyêush\ngâthayå hañdâtâ ýazamaide.\nýenghê hâtãm ... tåscâ ýazamaide!!!",
+      "en": "",
+      "zh": ""
+    }
+  ]
+}

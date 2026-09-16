@@ -1,0 +1,181 @@
+{
+  "slug": "yasna-24",
+  "siglum": "Y 24",
+  "title_zh": "亞斯納 第 24 章",
+  "title_en": "Yasna 24",
+  "canon": "avestan",
+  "volume": "yasna",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/yasna/y13to27.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "米爾斯（L. H. Mills）",
+  "en_url": "https://www.avesta.org/yasna/yasna.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "Vohu Mano": "沃胡‧馬納",
+    "Asha Vahishta": "阿沙‧瓦希什塔",
+    "Khshathra Vairya": "赫沙特拉‧瓦伊里亞",
+    "Spenta Armaiti": "斯彭塔‧阿爾邁提",
+    "Haurvatat": "豪爾瓦塔特",
+    "Ameretat": "阿梅雷塔特",
+    "Haoma": "豪麻",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 24,
+      "verse": 1,
+      "ref": "Y 24.1",
+      "orig": "(zôt u râspî,) ahurâi mazdâi\nhaomã âvaêdhayamahî, (zôt,) imã\nhaomãsca myazdãsca zaothråsca baresmaca ashaya\nfrastaretem gãmca hudhånghem imãmcâ\ngãm jîvyãm ashaya uzdâtãm imãmcâ\nurvarãm hadhânaêpatãm ashaya uzdâtãm.",
+      "en": "(And having approached these Haomas with our worship), we\npresent them to Ahura Mazda; (yea, we present) these Haomas, Myazdas,\nZaothras, and the Baresman spread with punctilious sanctity, and\nthe flesh, and the milk, fresh as if living, and lifted up with\npunctilious sanctity, and this branch the Hadhanaepata likewise\nlifted up with-sanctity.",
+      "zh": ""
+    },
+    {
+      "chapter": 24,
+      "verse": 2,
+      "ref": "Y 24.2",
+      "orig": "aiwyô vanguhibyô imå zaothrå haomavaitîsh\ngaomavaitîsh hadhânaêpatavaitîsh ashaya\nuzdâtå aiwyô vanguhibyô apemca haomyãm\nasmanaca hâvana ayanghaênaca hâvana,",
+      "en": "(And having approached these Zaothras in our worship), we\npresent them to the good waters having the Haoma with them, and\nthe milk, and the Hadhanaepata, and lifted up with scrupulous\nsanctity; and (with them) we present the Haoma-water to the good\nwaters, and both the stone and the iron mortar.",
+      "zh": ""
+    },
+    {
+      "chapter": 24,
+      "verse": 3,
+      "ref": "Y 24.3",
+      "orig": "imãmcâ urvarãm baresmanîm jakhmûshîmca\nratufritîm marethremca varezîmca daênayå\nvanghuyå mâzdayasnôish gâthanãmca\nsraothrem jakhmûshîmca ashaonô ashahe rathwô\nratufritîm imã aêsmãsca baoidhîmca\ntava âthrô ahurahe mazdå puthra vîspaca\nvohu mazdadhâta ashacithra pairica dademahî âca\nvaêdhayamahî âat dîsh âvaêdhayamahî,",
+      "en": "And we present this plant of the Baresman! and the timely\nprayer for blessings, which has approached in the due course of\nthe ritual, and the recollection and practice of the good Mazdayasnian\nReligion, and the heard recital of the Gathas, and the timely\nprayer for blessings which has approached as the prayer of the\nholy lord of the ritual order; and these wood-billets, and the\nperfume, (even) thine, the Fire's, O Ahura Mazda's son! and all\ngood objects Mazda-made, which have the seed of righteousness,\nwe offer and present.",
+      "zh": ""
+    },
+    {
+      "chapter": 24,
+      "verse": 4,
+      "ref": "Y 24.4",
+      "orig": "ahurâica mazdâi sraoshâica ashyâi\nameshaêibyasca speñtaêibyô ashâunãmca\nfravashibyô ashâunãmca urvôibyô\nâthraêca ahurahe mazdå rathwaêca berezaite\nvîspayå sãcatca ashaonô stôish\nýasnâica vahmâica xshnaothrâica frasastayaêca.",
+      "en": "And these we present hereby to Ahura\nMazda, and to Sraosha (Obedience) the blessed (and Righteous),\nand to the Bountiful Immortals; and to the Fravashis of the saints,\neven to the souls of the saints, and to the Fire of Ahura Mazda,\nthe lofty lord of entire holy creation, for sacrifice, homage,\npropitiation, and for praise.",
+      "zh": ""
+    },
+    {
+      "chapter": 24,
+      "verse": 5,
+      "ref": "Y 24.5",
+      "orig": "âat dîsh âvaêdhayamahî zarathushtrahe\nspitâmahe ashaonô fravashêe ýasnâica\nvahmâica xshnaothrâica frasastayaêca anghuyaosh\nashacinanghô mat vîspâbyô ashaonibyô\nfravashibyô ýå irîrithushãm ashaonãm\nýåsca jvañtãm ashaonãm ýåsca\nnarãm azâtanãm frashô-carethrãm\nsaoshyañtãm!",
+      "en": "And these we present hereby to the Fravashi of Zarathushtra\nSpitama, the saint, for sacrifice, propitiation, and for praise,\nand to that of the people who love Righteousness, with all the\nholy Fravashis of the saints who are dead and who are living,\nand to those of men who are as yet unborn, and to those of the\nprophets who will serve us, and will labor to complete the progress\nand renovation of the world.",
+      "zh": ""
+    },
+    {
+      "chapter": 24,
+      "verse": 6,
+      "ref": "Y 24.6",
+      "orig": "imã haomãsca myazdãsca zaothråsca\nbaresmaca ashaya frastaretem gãmca hudhånghem imãmcâ\ngãm jîvyãm ashaya uzdâtãm imãmcâ\nurvarãm hadhânaêpatãm ashaya uzdâtãm,",
+      "en": "And we present these Haomas, Myazdas, Zaothras, and the Baresman\nspread with sanctity, and the flesh, and the milk (fresh as if)\nliving, and lifted up with sanctity, and the Hadhanaepata branch.",
+      "zh": ""
+    },
+    {
+      "chapter": 24,
+      "verse": 7,
+      "ref": "Y 24.7",
+      "orig": "aiwyô vanguhibyô imå zaothrå haomavaitîsh\ngaomavaitîsh hadhânaêpatavaitîsh ashaya\nuzdâtå aiwyô vanguhibyô apemca haomyãm\nasmanaca hâvana ayanghaênaca hâvana,",
+      "en": "And we present these Zaothras to the beneficial waters having\nthe Haoma with them, and the flesh, and the Hadhanaepata lifted\nup with sanctity, and the Haoma-water, to the good waters, with\nthe stone and iron mortars, (8) and this plant of the Baresman,\n(and) the tirnely Prayer and the recollection and practice of\nthe good Mazdayasnian Faith, and these wood-billets, and the perfume,\nthine, the Fire's, O Ahura Mazda's son! and all objects which\nare Mazda-made, and which have, and are, the seed of Righteousness,\nthese we offer and present.",
+      "zh": ""
+    },
+    {
+      "chapter": 24,
+      "verse": 8,
+      "ref": "Y 24.8",
+      "orig": "imãmcâ urvarãm baresmanîm jakhmûshîmca\nratufritîm marethremca varezîmca daênayå\nvanghuyå mâzdayasnôish gâthanãmca\nsraothrem jakhmûshîmca ashaonô ashahe rathwô\nratufritîm imã aêsmãsca baoidhîmca\ntava âthrô ahurahe mazdå puthra vîspaca\nvohu mazdadhâta ashacithra pairica dademahî âca\nvaêdhayamahî âat dîsh âvaêdhayamahî,",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 24,
+      "verse": 9,
+      "ref": "Y 24.9",
+      "orig": "ameshaêibyô speñtaêibyô huxshathraêibyô\nhudhåbyô ýavaêjibyô ýavaêsubyô\nýôi vanghêush â-mananghô shyeiñti\nýåsca uiti.",
+      "en": "(Yea,) we present these hereby to the Bountiful Immortals\nwho rule aright, and who dispose of all aright, the ever-living,\never-helpful, who abide with the Good Mind (of the Lord and of\nHis folk)!\n<H2 id=y25",
+      "zh": ""
+    },
+    {
+      "chapter": 24,
+      "verse": 10,
+      "ref": "Y 24.10",
+      "orig": "âat dîsh âvaêdhayamahî frâyehîsh\nahe nmânahe fradathâi ahe nmânahe pasvãmca\nnarãmca zâtanãmca zãhyamnanãmca\nashaonãm ýenghe aêm heñti.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 24,
+      "verse": 11,
+      "ref": "Y 24.11",
+      "orig": "âat dîsh âvaêdhayamahî ashâunãm\nvanguhibyô fravashibyô ýå ukhråsca\naiwithûråsca ashaonãm avanghe.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 24,
+      "verse": 12,
+      "ref": "Y 24.12",
+      "orig": "âat dîsh âvaêdhayamahî dathushô\nahurahe mazdå raêvatô hvarenanguhatô mainyêush\nmainyaoyehe ameshanãm speñtanãm ýasnâica\nvahmâica xshnaothrâica frasastayaêca.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 24,
+      "verse": 13,
+      "ref": "Y 24.13",
+      "orig": "âat dîsh âvaêdhayamahî asnyaêibyô\nashahe ratubyô, hâvanêe ashaone ashahe rathwe\nýasnâica vahmâica xshnaothrâica frasastayaêca,\nâat dîsh âvaêdhayamahî sâvanghêe\nvîsyâica ... ...",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 24,
+      "verse": 27,
+      "ref": "Y 24.27",
+      "orig": "... hâvanôish rathwô ýasnâica\nvahmâica xshnaothrâica frasastayaêca!",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 24,
+      "verse": 28,
+      "ref": "Y 24.28",
+      "orig": "âat dîsh âvaêdhayamahî (zôt\nu râspî,) ahurahe mazdå raêvatô\nhvarenanguhatô ameshanãm speñtanãm\n... ...",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 24,
+      "verse": 32,
+      "ref": "Y 24.32",
+      "orig": "... nabânazdishtanãm fravashinãm xshnaothra\nýasnâica vahmâica xshnaothrâica frasastayaêca!",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 24,
+      "verse": 33,
+      "ref": "Y 24.33",
+      "orig": "âat dîsh âvaêdhayamahî ashâunãm\nfravashinãm ukhranãm aiwithûranãm paoiryô-tkaêshanãm\nfravashinãm nabânazdishtanãm fravashinãm\nhavahe urunô fravashêe ýasnâica vahmâica\nxshnaothrâica frasastayaêca.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 24,
+      "verse": 34,
+      "ref": "Y 24.34",
+      "orig": "âat dîsh âvaêdhayamahî vîspaêibyô\nashahe ratubyô ýasnâica vahmâica xshnaothrâica\nfrasastayaêca, âat dîsh âvaêdhayamahî\nvîspaêibyô vanghudhâbyô ýazataêibyô\nmainyaoibyascâ gaêthyaêibyascâ ýôi\nheñti ýasnyâca vahmyâca ashât\nhaca ýat vahishtât!!",
+      "en": "",
+      "zh": ""
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "slug": "yasna-13",
+  "siglum": "Y 13",
+  "title_zh": "亞斯納 第 13 章",
+  "title_en": "Yasna 13",
+  "canon": "avestan",
+  "volume": "yasna",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/yasna/y13to27.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "米爾斯（L. H. Mills）",
+  "en_url": "https://www.avesta.org/yasna/yasna.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "Vohu Mano": "沃胡‧馬納",
+    "Asha Vahishta": "阿沙‧瓦希什塔",
+    "Khshathra Vairya": "赫沙特拉‧瓦伊里亞",
+    "Spenta Armaiti": "斯彭塔‧阿爾邁提",
+    "Haurvatat": "豪爾瓦塔特",
+    "Ameretat": "阿梅雷塔特",
+    "Haoma": "豪麻",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 13,
+      "verse": 1,
+      "ref": "Y 13.1",
+      "orig": "(zôt,) ahurem mazdãm âmruyê nmânahê\nnmânô-patôish ratûm â vîsô\nvîspatôish ratûm â zañtêush\nzañtupatôish ratûm â dainghêush\ndainghupatôish ratûm â, khênãnãm\nratûm âmruyê daênãm mâzdayesnîm\nashîm vanguhîm parêñdîm ýãmcâ\nbipaitishtanãm ashaonîm imãmcâ zãm\nýâ-nå baraitî.",
+      "en": "I address (my invocation to) Ahura Mazda. And I invoke (among\nguardian beings) the chief of the house-lord, and the chief of\nthe Vis-lord, and the chief of the Zantu-lord. And I invoke the\nchief of the province-lord. And the chief of women I invoke, the\nMazdayasnian Faith, the blessed and good Parendi, her who is the\nholy one of human-kind. And I invoke this (holy) earth which bears\nus.",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 2,
+      "ref": "Y 13.2",
+      "orig": "fryehê vâzishtahê astôish ratûm\nâmruyê âtrêm ahurahe mazdå, ashethwôzgatemã\ngavâstryâvarshtemã narãm ashâunãm\nvâstryehê fshuyañtô ratûm âmruyê,\nhastemã ashahe amã rathaêshtå ratûm\nâmruyê.",
+      "en": "And I invoke the friendly and most helpful person's lord,\nthe Fire of Ahura Mazda, and also the most energetic lords of\nholy men, those who are most strenuous in their care of cattle\nand the fields, and the chief of the thrifty tiller of the earth.\nAnd I invoke the steady settler of sanctity, (and) the chief of\nthe charioteer.",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 3,
+      "ref": "Y 13.3",
+      "orig": "mazishtâish vaêdyâish daênayå\nmazdayasnôish athaurunô ratûm âmruyê,\ncashânãscâ aêshãmcît ratûsh\nâmruyê ratûsh âstâyâ ameshãscâ\nspeñtã saoshyañtascâ dãhishtã\narshvacastemã aiwyâmatemã ashxrâhvanutemã,\nmazishtã amã âmruyê daênayå\nmâzdayasnôish athaurunãscâ rathaêshtåscâ\nvâstryãscâ fshuyañtô!",
+      "en": "And I invoke the chief of the fire-priest by means of the\nmost imposing sciences of the Mazdayasnian Faith. And I invoke\nthe chief of the Atharvan, and his pupils I invoke; yea, the lords\nof each of them. I invoke these lords, and I summon the Bountiful\nImmortals here, and the Prophets who shall serve us, the wisest\nas they are, the most scrupulous in their exactness (as) they\nutter words (of doctrine and of service), the most devoted (to\ntheir duties likewise), and the most glorious in their thoughts(?).\nAnd I invoke the most imposing forces of the Mazdayasnian Faith,\nand the fire-priests I invoke, and the charioteers, the warriors,\nand the thrifty tillers of the soil.",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 4,
+      "ref": "Y 13.4",
+      "orig": "pairî vê ameshâ speñtâ huxshathrâ\nhudhånghô dadhãmi tanvascît hvah'yå\nushtanem pairî vîspå hujîtayô, (râspî,)\nithâ mainyû mamanâitê ithâ vaocâtarê\nithâ vâverezâtarê!",
+      "en": "And to You, O Ye Bountiful Immortals! Ye who rule aright,\nand dispose (of all) aright, I offer the flesh of my very frame,\nand all the blessings of my life.\n \nThus the two spirits thought, thus they spoke, and thus they did;",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 5,
+      "ref": "Y 13.5",
+      "orig": "âat, ýathâ tû-î ahura-mazdâ\nmêñghâcâ vaocascâ dåscâ\nvareshcâ ýâ vohû athâ tôi\ndademahî athâ cîshmahî athâ thwâ\nâish ýazamaide athâ nemah'yâmahî\nathâ ishûidyâmahî thwâ mazdâ\nahurâ. (ýathâ tû-î ahura-mazdâ\n... thwâ mazdâ ahurâ (2).)",
+      "en": "And therefore as Thou, O Ahura Mazda! didst think, speak,\ndispose, and do all things good (for us), so to Thee would we\ngive, so would we assign to Thee our homage; so would we worship\nThee with our sacrifices. So would we bow before Thee with these\ngifts, and so direct our prayers to Thee with confessions of our\ndebt.",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 6,
+      "ref": "Y 13.6",
+      "orig": "(zôt,) vanghêush hvaêtêush hvaêtâtâ\nvanghêush ashahyâ thwâ pairijasâmaidê\nvanghuyå fseratvô vanghuyå ârmatôish!",
+      "en": "By the kinship of the good kindred, by that of Righteousness\nthe good (Thy righteous servant's nature) would we approach Thee,\nand by that of the good thrift-law, and of Piety the good.",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 7,
+      "ref": "Y 13.7",
+      "orig": "gêushcâ hudånghô gayeh'yâcâ\nmarathnô ashaonô fravashîm ýazamaide,\nzarathushtrahe spitâmahe idha ashaonô ashîmca\nfravashîmca ýazamaide. ýenghê hâtãm\nâat ýesnê paiti.... (zôt u râspî,)\nýathâ ahû vairyô athâ ratush ashâtcît\nhacâ ... (4). ashem vohû vahishtem astî ...\n(3)!",
+      "en": "And we would worship the Fravashi of the Kine of blessed gift,\nand that of the holy Gaya Mareyan [Gayomard], and we would worship the holy\nFravashi of Zarathushtra Spitama, the saint. Yea, that one of\nbeings do we worship whose better (service) in the sacrifice Ahura\nMazda knows; (even those women do we worship) whose (better service\nthus is known). Yea, both (holy) men and women (do we worship\nwhom Ahura Mazda knows).\nAs the Ahu is excelling....\nA blessing is the Right called the best....",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 8,
+      "ref": "Y 13.8",
+      "orig": "ahunem vairîm ýazamaide, ashem vahishtem sraêshtem\nameshem speñtem ýazamaide, fraoreitîm hâitîm\nýazamaide, fraoreitîmcâ âstaothwanemcâ\ndaênayå mazdayasnôish ýazamaide. ýenghê\nhâtãm âat ýesnê paitî ...\n!!",
+      "en": "We worship the Ahuna-vairya; and we worship Asha Vahishta\nthe best(?), the bountiful Immortal. And we sacrifice to the Ha\nfraoreti, even to the confession and laudation of the Mazdayasnian\nFaith!\n<H2 id=y14",
+      "zh": ""
+    }
+  ]
+}

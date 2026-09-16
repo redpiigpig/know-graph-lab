@@ -1,0 +1,85 @@
+{
+  "slug": "yasna-36",
+  "siglum": "Y 36",
+  "title_zh": "亞斯納 第 36 章‧七章禱‧向阿胡拉與火",
+  "title_en": "Yasna 36",
+  "canon": "avestan",
+  "volume": "yasna",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/yasna/y35to42.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "米爾斯（L. H. Mills）",
+  "en_url": "https://www.avesta.org/yasna/yasna.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "Vohu Mano": "沃胡‧馬納",
+    "Asha Vahishta": "阿沙‧瓦希什塔",
+    "Khshathra Vairya": "赫沙特拉‧瓦伊里亞",
+    "Spenta Armaiti": "斯彭塔‧阿爾邁提",
+    "Haurvatat": "豪爾瓦塔特",
+    "Ameretat": "阿梅雷塔特",
+    "Haoma": "豪麻",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 36,
+      "verse": 1,
+      "ref": "Y 36.1",
+      "orig": "ahyâ thwâ âthrô verezênâ\npaouruyê pairî-jasâmaidê mazdâ ahurâ\nthwâ thwâ mainyû spênishtâ ýê\nâ axtish ahmâi ýêm axtôyôi\ndånghê.",
+      "en": "We would approach You two, O (Ye) primeval ones in the house\nof this Thy holy Fire, O Ahura Mazda, Thou most bounteous Spirit!\nWho brings pollutions to this (Thy flame) him wilt Thou cover\nwith pollutions (in his turn).",
+      "zh": ""
+    },
+    {
+      "chapter": 36,
+      "verse": 2,
+      "ref": "Y 36.2",
+      "orig": "urvâzishtô hvô nå ýâtâyâ\npaitî-jamyå âtare mazdå ahurahyâ\nurvâzishtahyâ urvâzyâ nãmishtahyâ\nnemanghâ-nå mazishtâi ýånghãm\npaitî jamyå.",
+      "en": "But as the most friendly do\nThou give us zeal, O Fire of the Lord! and approach us, and with\nthe loving blessing of the most friendly, with the praise of the\nmost adored. Yea, may'st thou approach to aid us in this our greatest\n(undertaking) among the efforts of our zeal.",
+      "zh": ""
+    },
+    {
+      "chapter": 36,
+      "verse": 3,
+      "ref": "Y 36.3",
+      "orig": "âtarsh vôi mazdå ahurahyâ ahî\nmainyush vôi ahyâ spênishtô ahî\nhyat vâ-tôi nâmanãm vâzishtem âtare\nmazdå ahurahyâ tâ-thwâ pairijasâmaidê.",
+      "en": "The Fire of Ahura Mazda art thou verily; yea, the most bounteous\none of His Spirit, wherefore Thine is the most potent of all names\n(for grace), O Fire of the Lord!",
+      "zh": ""
+    },
+    {
+      "chapter": 36,
+      "verse": 4,
+      "ref": "Y 36.4",
+      "orig": "vohû thwâ mananghâ vohû thwâ\nashâ vanghuyå thwâ cistôish shyaothanâishcâ\nvacêbîshcâ pairijasâmaidê.",
+      "en": "And therefore we would approach\nThee, (O Ahura!) with the help of Thy Good Mind (which Thou dost\nimplant within us), with Thy (good) Righteousness, and with the\nactions and the words inculcated by Thy good wisdom!",
+      "zh": ""
+    },
+    {
+      "chapter": 36,
+      "verse": 5,
+      "ref": "Y 36.5",
+      "orig": "nemah'yâmahî ishûidyâmahî thwâ\nmazdâ ahurâ, vîspâish thwâ humatâish\nvîspâish hûxtâish vîspâish\nhvarshtâish pairijasâmaidê.",
+      "en": "We therefore bow before Thee, and we direct our prayers to\nThee with confessions of our guilt, O Ahura Mazda! with all the\ngood thoughts (which Thou dost inspire), with all the words well\nsaid, and the deeds well done, with these would we approach Thee.",
+      "zh": ""
+    },
+    {
+      "chapter": 36,
+      "verse": 6,
+      "ref": "Y 36.6",
+      "orig": "sraêshtãm at tôi kehrpêm kehrpãm\nâvaêdayamahî mazdâ ahurâ imâ\nraocå barezishtem barezimanãm avat ýât\nhvarê avâcî. ýenghê hâtãm\n... tåscâ ýazamaide!!",
+      "en": "And to Thy most beauteous body do we make our deep acknowledgments,\nO Ahura Mazda! to those stars (which are Thy body); and to that\none, the highest of the high, [such as the sun was called]!\n<H2 id=y37",
+      "zh": ""
+    }
+  ]
+}

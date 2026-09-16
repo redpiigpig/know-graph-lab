@@ -263,14 +263,18 @@ describe('已上架正文與書目的對應', () => {
     // 只認一種時，另兩種版型的篇章會寫出「轉寫滿的、英譯全空」的檔，
     // 而檔案照樣產生、頁面照樣顯示，看起來只像「這幾首剛好沒英譯」。
     const { TEXT_REFS, loadText, filledCount } = await import('~/data/avesta/sources')
-    const knownNoEnglish = new Set([
-      'yasht-20', // 韋斯特的《東方聖書》未收
-      'visperad-24', // SBE 英譯只到第 23 章
-    ])
     for (const ref of TEXT_REFS) {
       const doc = (await loadText(ref.slug))!
       expect(filledCount(doc, 'orig'), `${ref.slug} 轉寫欄整篇空`).toBeGreaterThan(0)
-      if (!knownNoEnglish.has(ref.slug)) {
+
+      // 例外清單不手寫，直接問書目：標了 en: 'none' 的才准是空的。
+      // 手寫清單會與書目脫節，而脫節時兩邊都不會報錯。
+      const loc = findText(ref.slug)!
+      const claimed = loc.text.columns?.en ?? loc.division.columns?.en
+      if (claimed === 'none') {
+        // 宣稱沒有英譯的，就必須真的沒有——否則是白白浪費一欄現成的內容。
+        expect(filledCount(doc, 'en'), `${ref.slug} 標 none 卻有英譯`).toBe(0)
+      } else {
         expect(filledCount(doc, 'en'), `${ref.slug} 英譯欄整篇空`).toBeGreaterThan(0)
       }
     }

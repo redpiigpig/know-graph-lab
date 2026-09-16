@@ -14,6 +14,16 @@ import { override, series } from './types'
 
 const AE = '阿維斯陀語'
 
+/** 米爾斯的《東方聖書》譯本**沒有另譯**的六章。
+ *
+ *  🚨 這不是本站漏抓，也不是原文沒有——這六章的阿維斯陀語轉寫都在，
+ *     只是米爾斯認為內容與別章重複，於是在譯本裡寫一句互見就帶過
+ *     （如第 72 章只寫「(See Y61.)」）。
+ *     若讓它們跟著整卷標成「英譯已上架」，書目頁會宣稱有英譯而 reader 打開是空的。
+ *     reader 會顯示該章的互見說明，見 scripts/avesta_fetch.py 的 parse_sbe_xrefs。
+ */
+const YASNA_NO_ENGLISH = new Set([5, 63, 64, 67, 69, 72])
+
 /** 亞斯納 72 章。名稱只在傳統有專名者給專名，其餘作「第 N 章」，待管線回填。 */
 function yasna(from: number, to: number, named: Record<number, [string, string?]> = {}): ZoroText[] {
   const rows: Array<[number, string, string?]> = []
@@ -21,7 +31,12 @@ function yasna(from: number, to: number, named: Record<number, [string, string?]
     const hit = named[n]
     rows.push([n, hit ? hit[0] : `亞斯納 第 ${n} 章`, hit?.[1]])
   }
-  return series({ slug: 'yasna', siglum: 'Y', orig: 'Yasna', language: AE }, rows)
+  return series({ slug: 'yasna', siglum: 'Y', orig: 'Yasna', language: AE }, rows).map(t => {
+    const n = Number(t.slug.split('-')[1])
+    return YASNA_NO_ENGLISH.has(n)
+      ? { ...t, columns: { orig: 'ready' as const, en: 'none' as const, zh: 'none' as const } }
+      : t
+  })
 }
 
 export const AVESTAN_CANON: ZoroCanon = {
@@ -69,13 +84,13 @@ export const AVESTAN_CANON: ZoroCanon = {
         {
           key: 'y-open', label: '開祭段（1–8）', label_en: 'Opening of the Sacrifice',
           desc: '呼名、奠獻、進食祝禱。祭司逐一唱名所要祭獻的對象，再獻上餅與肉。',
-          columns: { orig: 'available', en: 'available', zh: 'none' },
+          columns: { orig: 'ready', en: 'ready', zh: 'none' },
           texts: yasna(1, 8, { 1: ['呼名獻祭'], 8: ['肉供與信眾分食'] }),
         },
         {
           key: 'y-hom', label: '豪麻讚（9–11）', label_en: 'Hōm Yasht',
           desc: '獻給豪麻（榨汁飲用的神聖植物，即印度的蘇摩）。豪麻現身向查拉圖斯特拉自陳來歷，是全書敘事性最強的段落之一。',
-          columns: { orig: 'available', en: 'available', zh: 'none' },
+          columns: { orig: 'ready', en: 'ready', zh: 'none' },
           texts: yasna(9, 11, {
             9: ['豪麻讚（上）', '豪麻現身，自述歷代榨汁者及其所得之子。'],
             10: ['豪麻讚（中）'],
@@ -85,18 +100,18 @@ export const AVESTAN_CANON: ZoroCanon = {
         {
           key: 'y-creed', label: '信仰宣示（12）', label_en: 'The Zoroastrian Creed',
           desc: '祆教的信經。入教與日常均誦，開頭一句「我宣認自己為敬拜馬茲達者、查拉圖斯特拉的信徒，棄絕迭瓦、奉阿胡拉之教」。',
-          columns: { orig: 'available', en: 'available', zh: 'none' },
+          columns: { orig: 'ready', en: 'ready', zh: 'none' },
           texts: yasna(12, 12, { 12: ['信仰宣示', '祆教的信經（Frauuarānē）；比尼西亞信經早約九百年。'] }),
         },
         {
           key: 'y-prelim', label: '前段誦文（13–18）', label_en: 'Preliminary Invocations',
-          columns: { orig: 'available', en: 'available', zh: 'none' },
+          columns: { orig: 'ready', en: 'ready', zh: 'none' },
           texts: yasna(13, 18),
         },
         {
           key: 'y-bagan', label: '三禱詞釋義（19–21）', label_en: 'Bagān Yasht',
           desc: '對全教三句最短禱詞——阿胡納‧瓦伊里亞、阿舍姆‧沃胡、燕赫‧哈坦——的逐句解說。這三句在祆教的地位相當於主禱文，而這三章是阿維斯陀語文本裡罕見的自我註釋。',
-          columns: { orig: 'available', en: 'available', zh: 'none' },
+          columns: { orig: 'ready', en: 'ready', zh: 'none' },
           texts: yasna(19, 21, {
             19: ['阿胡納‧瓦伊里亞釋義', '解說全教第一禱詞；文中稱此禱在創世之前即已存在。'],
             20: ['阿舍姆‧沃胡釋義'],
@@ -105,13 +120,13 @@ export const AVESTAN_CANON: ZoroCanon = {
         },
         {
           key: 'y-prep', label: '獻祭續段（22–27）', label_en: 'The Sacrifice Continues',
-          columns: { orig: 'available', en: 'available', zh: 'none' },
+          columns: { orig: 'ready', en: 'ready', zh: 'none' },
           texts: yasna(22, 27),
         },
         {
           key: 'y-gatha1', label: '阿胡納瓦提伽薩（28–34）', label_en: 'Ahunavaitī Gāthā',
           desc: '五組伽薩的第一組，七章。查拉圖斯特拉自述蒙召、詰問阿胡拉‧馬茲達、宣告二元抉擇。第 30 章「兩靈」是全教教義的源頭。',
-          columns: { orig: 'available', en: 'available', zh: 'none' },
+          columns: { orig: 'ready', en: 'ready', zh: 'none' },
           texts: yasna(28, 34, {
             28: ['伽薩‧祈求聆聽', '查拉圖斯特拉舉手祈禱，求見善念之靈。'],
             29: ['伽薩‧牛魂的哀訴', '被虐待的牛之魂向天控訴，天庭指派查拉圖斯特拉為其牧者。'],
@@ -125,7 +140,7 @@ export const AVESTAN_CANON: ZoroCanon = {
         {
           key: 'y-hapt', label: '七章禱（35–42）', label_en: 'Yasna Haptaŋhāiti',
           desc: '古阿維斯陀語的散文體祈禱，語言與伽薩同層而文體全異。學界多認為它出自查拉圖斯特拉的直系門徒團體，是現存最古老的祆教集體禮拜文。第 42 章為後補。',
-          columns: { orig: 'available', en: 'available', zh: 'none' },
+          columns: { orig: 'ready', en: 'ready', zh: 'none' },
           texts: yasna(35, 42, {
             35: ['七章禱‧讚阿胡拉與不朽聖者'],
             36: ['七章禱‧向阿胡拉與火'],
@@ -140,7 +155,7 @@ export const AVESTAN_CANON: ZoroCanon = {
         {
           key: 'y-gatha2', label: '烏什塔瓦提伽薩（43–46）', label_en: 'Uštavaitī Gāthā',
           desc: '第二組伽薩，四章。第 44 章連續以「這我要問你，請據實告我，阿胡拉」開頭發問二十次，是宗教文獻裡罕見的詰問體。',
-          columns: { orig: 'available', en: 'available', zh: 'none' },
+          columns: { orig: 'ready', en: 'ready', zh: 'none' },
           texts: yasna(43, 46, {
             43: ['伽薩‧幸福歸於'],
             44: ['伽薩‧二十問', '連續二十次「這我要問你，請據實告我」——誰立定大地？誰使日月行走？'],
@@ -151,7 +166,7 @@ export const AVESTAN_CANON: ZoroCanon = {
         {
           key: 'y-gatha3', label: '斯彭塔‧曼紐伽薩（47–50）', label_en: 'Spəntā.mainyū Gāthā',
           desc: '第三組伽薩，四章。以「豐饒之靈」（斯彭塔‧曼紐）為名。',
-          columns: { orig: 'available', en: 'available', zh: 'none' },
+          columns: { orig: 'ready', en: 'ready', zh: 'none' },
           texts: yasna(47, 50, {
             47: ['伽薩‧豐饒之靈'],
             48: ['伽薩‧真理勝虛妄'],
@@ -162,30 +177,30 @@ export const AVESTAN_CANON: ZoroCanon = {
         {
           key: 'y-gatha4', label: '沃胡‧赫沙特拉伽薩（51）', label_en: 'Vohu.xšaθrā Gāthā',
           desc: '第四組伽薩，僅一章。以「善的王權」為名。',
-          columns: { orig: 'available', en: 'available', zh: 'none' },
+          columns: { orig: 'ready', en: 'ready', zh: 'none' },
           texts: yasna(51, 51, { 51: ['伽薩‧善的王權'] }),
         },
         {
           key: 'y-bless', label: '祝聖（52）', label_en: 'A Prayer for Sanctity',
-          columns: { orig: 'available', en: 'available', zh: 'none' },
+          columns: { orig: 'ready', en: 'ready', zh: 'none' },
           texts: yasna(52, 52, { 52: ['求聖潔與其果報'] }),
         },
         {
           key: 'y-gatha5', label: '瓦希什托‧伊什提伽薩（53）', label_en: 'Vahištōišti Gāthā',
           desc: '第五組伽薩，僅一章，為查拉圖斯特拉之女普魯查絲塔的婚禮致辭。是否出自先知本人，學界有爭議。',
-          columns: { orig: 'available', en: 'available', zh: 'none' },
+          columns: { orig: 'ready', en: 'ready', zh: 'none' },
           texts: yasna(53, 53, { 53: ['伽薩‧最好的願望', '先知幼女的婚禮致辭；祆教的婚姻觀出自此章。'] }),
         },
         {
           key: 'y-airyaman', label: '艾里亞曼禱（54）', label_en: 'Airyaman Išya',
           desc: '古阿維斯陀語的第四塊——與伽薩、七章禱同層。全教最有力的驅病與祝福禱詞，末世時將由救世主誦唸以完成復活。',
-          columns: { orig: 'available', en: 'available', zh: 'none' },
+          columns: { orig: 'ready', en: 'ready', zh: 'none' },
           texts: yasna(54, 54, { 54: ['艾里亞曼禱', '古阿維斯陀語四塊之一；末世復活時所誦。'] }),
         },
         {
           key: 'y-staota', label: '讚頌段（55–61）', label_en: 'Staota Yesnya',
           desc: '伽薩誦畢後的讚頌，含斯勞沙讚與繁盛頌詞。',
-          columns: { orig: 'available', en: 'available', zh: 'none' },
+          columns: { orig: 'ready', en: 'ready', zh: 'none' },
           texts: yasna(55, 61, {
             56: ['斯勞沙讚前引'],
             57: ['斯勞沙讚', '獻給聽禱之神斯勞沙；亞什特第 11 首之外的另一篇。'],
@@ -196,13 +211,13 @@ export const AVESTAN_CANON: ZoroCanon = {
         {
           key: 'y-fire', label: '火讚（62）', label_en: 'Ātaš Niyāyišn',
           desc: '向聖火祝禱。同一篇亦收入小阿維斯陀的五讚頌，是祆教最廣為人知的段落。',
-          columns: { orig: 'available', en: 'available', zh: 'none' },
+          columns: { orig: 'ready', en: 'ready', zh: 'none' },
           texts: yasna(62, 62, { 62: ['火讚', '亦見於小阿維斯陀‧火讚頌。'] }),
         },
         {
           key: 'y-water', label: '水奠段（63–69）', label_en: 'Āb-Zōhr',
           desc: '長祭典的高潮：祭司將豪麻汁奠入水中，象徵把祭典的功效交還給諸水。',
-          columns: { orig: 'available', en: 'available', zh: 'none' },
+          columns: { orig: 'ready', en: 'ready', zh: 'none' },
           texts: yasna(63, 69, {
             65: ['向阿爾德維‧蘇拉‧阿娜希塔與諸水'],
             66: ['向阿胡拉之女（水）'],
@@ -210,7 +225,7 @@ export const AVESTAN_CANON: ZoroCanon = {
         },
         {
           key: 'y-close', label: '結祭（70–72）', label_en: 'Concluding',
-          columns: { orig: 'available', en: 'available', zh: 'none' },
+          columns: { orig: 'ready', en: 'ready', zh: 'none' },
           texts: yasna(70, 72, { 70: ['向不朽聖者與教制'], 71: ['祭典將畢'], 72: ['結祭'] }),
         },
       ],
@@ -230,9 +245,16 @@ export const AVESTAN_CANON: ZoroCanon = {
             + '第 24 章僅有轉寫——《東方聖書》英譯只到第 23 章。',
           // 2026-09-16 上架：24 章轉寫全有，英譯 23 章（第 24 章 SBE 未收）。
           columns: { orig: 'ready', en: 'ready', zh: 'none' },
-          texts: series(
-            { slug: 'visperad', siglum: 'Vr', orig: 'Visperad', language: AE },
-            Array.from({ length: 24 }, (_, i) => [i + 1, `維斯帕拉德 第 ${i + 1} 章`] as [number, string]),
+          texts: override(
+            series(
+              { slug: 'visperad', siglum: 'Vr', orig: 'Visperad', language: AE },
+              Array.from({ length: 24 }, (_, i) => [i + 1, `維斯帕拉德 第 ${i + 1} 章`] as [number, string]),
+            ),
+            {
+              // 達梅斯特的《東方聖書》英譯只到第 23 章。轉寫有、英譯沒有。
+              // 不覆寫的話書目頁會宣稱第 24 章有英譯，而 reader 打開是空的。
+              'visperad-24': { columns: { orig: 'ready', en: 'none', zh: 'none' } },
+            },
           ),
         },
       ],

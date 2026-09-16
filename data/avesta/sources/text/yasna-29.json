@@ -1,0 +1,133 @@
+{
+  "slug": "yasna-29",
+  "siglum": "Y 29",
+  "title_zh": "亞斯納 第 29 章‧伽薩‧牛魂的哀訴",
+  "title_en": "Yasna 29",
+  "canon": "avestan",
+  "volume": "yasna",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/yasna/y28to34.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "米爾斯（L. H. Mills）",
+  "en_url": "https://www.avesta.org/yasna/yasna.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "Vohu Mano": "沃胡‧馬納",
+    "Asha Vahishta": "阿沙‧瓦希什塔",
+    "Khshathra Vairya": "赫沙特拉‧瓦伊里亞",
+    "Spenta Armaiti": "斯彭塔‧阿爾邁提",
+    "Haurvatat": "豪爾瓦塔特",
+    "Ameretat": "阿梅雷塔特",
+    "Haoma": "豪麻",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 29,
+      "verse": 1,
+      "ref": "Y 29.1",
+      "orig": "xshmaibyâ gêush urvâ gerezhdâ, kahmâi\nmâ thwarôzhdûm kê-mâ tashat, â-mâ\naêshemô hazascâ remô âhishâyâ\ndereshcâ tevishcâ, nôit môi vâstâ\nxshmat anyô athâ môi sãstâ vohû\nvâstryâ.",
+      "en": "Unto you wailed the Ox-soul, \"For whom did ye fashion\nme? Who created me? Violence and rapine (and) savagery hath oppressed\nme, and outrage and might. I have no other herdsman than you;\nprepare for me then the blessings of pasture.\"",
+      "zh": ""
+    },
+    {
+      "chapter": 29,
+      "verse": 2,
+      "ref": "Y 29.2",
+      "orig": "adâ tashâ gêush peresat ashem kathâ\ntôi gavôi ratush hyat hîm dâtâ xshayañtô\nhadâ vâstrâ gaodâyô thwaxshô,\nkêm hôi ushtâ ahurem ýê dregvôdebîsh\naêshemem vâdâyôit.",
+      "en": "Then the Ox-Creator asked of the Right: \"Hast thou a\njudge for the Ox, that ye may be able to appoint him zealous tendance\nas well as fodder? Whom do ye will to be his lord, who may drive\noff violence together with the followers of the Lie?\"",
+      "zh": ""
+    },
+    {
+      "chapter": 29,
+      "verse": 3,
+      "ref": "Y 29.3",
+      "orig": "ahmâi ashâ nôit sarejâ advaêshô\ngavôi paitî-mravat avaêshãm nôit\nvîduyê ýâ shavaitê âdrêñg\nereshvånghô, hâtãm hvô aojishtô\nýahmâi zavêñg jimâ keredushâ.",
+      "en": "To him the Right replied: \"There is for the Ox no helper\nthat can keep him away. Those yonder have no knowledge how right-doers\nact towards the lowly\".\n(The Ox-Creator): \"Strongest of beings is he to whose help\nI come at call\".",
+      "zh": ""
+    },
+    {
+      "chapter": 29,
+      "verse": 4,
+      "ref": "Y 29.4",
+      "orig": "mazdå sahvârê mairishtô ýâ-zî\nvâverezôi pairî-cithît daêvâishcâ\nmashyâishcâ ýâcâ vareshaitê\naipî-cithît, hvô vîcirô ahurô\nathâ-nê anghat ýathâ hvô vasat.",
+      "en": "(Asha) \"Mazda knoweth best the purposes that have been\nwrought already by demons and by mortals, and that shall be wrought\nhereafter. He, Ahura, is the decider. So shall it be as he shall\nwill.\"",
+      "zh": ""
+    },
+    {
+      "chapter": 29,
+      "verse": 5,
+      "ref": "Y 29.5",
+      "orig": "at vâ ustânâish ahvâ zastâish\nfrînemnâ ahurâi â mê urvâ\ngêushcâ azyå hyat mazdãm dvaidî\nferasâbyô nôit erezhejyôi frajyâitish\nnôit fshuyeñtê dregvasû pairî.",
+      "en": "(The Ox-Creator) \"To Ahura with outspread hands we twain\nwould pray, my soul and that of the pregnant cow, so that we twain\nurge Mazda with entreaties. Destruction is not for the right-living,\nnor for the cattle-tender at the hands of Liars.\"",
+      "zh": ""
+    },
+    {
+      "chapter": 29,
+      "verse": 6,
+      "ref": "Y 29.6",
+      "orig": "at ê vaocat ahurô mazdå vîdvå\nvafûsh vyânayâ, nôit aêvâ\nahû vistô naêdâ ratush ashâtcît\nhacâ, at zî thwâ fshuyañtaêcâ\nvâstryâicâ thwôreshtâ tatashâ.",
+      "en": "Then spake Ahura Mazda himself, who knows the law with wisdom:\n\"There is found no lord or judge according to the Right Order\nfor the Creator hath formed thee for the cattle-tender and the\nfarmer.\"",
+      "zh": ""
+    },
+    {
+      "chapter": 29,
+      "verse": 7,
+      "ref": "Y 29.7",
+      "orig": "têm âzûtôish ahurô mãthrem\ntashat ashâ hazaoshô mazdå gavôi xshvîdemcâ\nhvô urushaêibyô speñtô sâsnayâ,\nkastê vohû mananghâ ýê-î\ndâyât êeâvâ maretaêibyô.",
+      "en": "This ordinance about the fat hath Ahura Mazda, one in will\nwith Right, created for cattle, and the milk for them that crave\nnourishment, by his command, the holy one.\n(The Ox and Cow:) \"Whom hast thou, O Good Thought, among\nmen, who may care for us twain?\"",
+      "zh": ""
+    },
+    {
+      "chapter": 29,
+      "verse": 8,
+      "ref": "Y 29.8",
+      "orig": "aêm môi idâ vistô ýê-nê\naêvô sâsnå gûshatâ zarathushtrô\nspitâmô, hvô nê mazdâ vashtî\nashâicâ carekerethrâ srâvayenghê\nhyat hôi hudemêm dyâi vaxedhrahyâ.",
+      "en": "(Vohu Manah:) He is known to me here who alone hath heard\nour commands, even Zarathushtra Spitama; he willeth to make known\nour thoughts, O Mazda, and those of the Right. So let us bestow\non him charm of speech.",
+      "zh": ""
+    },
+    {
+      "chapter": 29,
+      "verse": 9,
+      "ref": "Y 29.9",
+      "orig": "atcâ gêush urvâ raostâ ýê\nanaêshem xshãnmênê râdem vâcem\nneresh asûrahyâ ýêm â vasemî\nîshâ xshathrîm, kadâ ýavâ\nhvô anghat ýê hôi dadat zastavat avô.",
+      "en": "Then the Ox-Soul lamented: \"That I must be content with\nthe ineffectual word of an impotent man for my protector, when\nI wish for one that commands mightily! When ever shall there be\none who shall give him (the Ox) effective help?\"",
+      "zh": ""
+    },
+    {
+      "chapter": 29,
+      "verse": 10,
+      "ref": "Y 29.10",
+      "orig": "ýûzhêm aêibyô ahurâ aogô\ndâtâ ashâ xshathremcâ avat vohû\nmananghâ ýâ husheitîsh râmãmcâ\ndât, azêmcît ahyâ mazdâ thwãm\nmênghî paourvîm vaêdem. dà",
+      "en": "(Zarathushtra:) Do ye, O Ahura, grant them strength, and O\nAsha, and O Good Thought, that dominion, whereby he (the Savior)\ncould produce good dwellings and peace. I also have realized thee,\nMazda, as the first to accomplish this.",
+      "zh": ""
+    },
+    {
+      "chapter": 29,
+      "verse": 11,
+      "ref": "Y 29.11",
+      "orig": "kudâ ashem vohucâ manô xshathremcâ,at\nmâ mashâ ýûzhêm mazdâ frâxshnenê\nmazôi magâi â paitî-zânatâ\nahurâ nû-nå avarê êhmâ râtôish\nýûshmâvatãm!",
+      "en": "\"Where are Right and Good Thought and Dominion? So, ye\nmen, acknowledge me, for instruction, Mazda, for the great society.\"\n(The Ox and Cow:) \"O Ahura, now is help ours, we will be\nready to serve those that are of you.\"\n<H2 id=y30",
+      "zh": ""
+    },
+    {
+      "chapter": 29,
+      "verse": 12,
+      "ref": "Y 29.12",
+      "orig": "(zôt u râspî,) ahyâ ýâsâ\n... gêushcâ urvânem (2). ýathâ\nahû vairyô ... (4). ashem vohû ... (3). xshmâvya-gêush-urvãm\nhâitîm ýazamaide. ýenghê hâtãm\n... tåscâ ýazamaide!!",
+      "en": "",
+      "zh": ""
+    }
+  ]
+}

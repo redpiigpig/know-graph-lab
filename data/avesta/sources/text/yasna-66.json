@@ -1,0 +1,77 @@
+{
+  "slug": "yasna-66",
+  "siglum": "Y 66",
+  "title_zh": "亞斯納 第 66 章‧向阿胡拉之女（水）",
+  "title_en": "Yasna 66",
+  "canon": "avestan",
+  "volume": "yasna",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/yasna/y54to72.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "米爾斯（L. H. Mills）",
+  "en_url": "https://www.avesta.org/yasna/yasna.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "Vohu Mano": "沃胡‧馬納",
+    "Asha Vahishta": "阿沙‧瓦希什塔",
+    "Khshathra Vairya": "赫沙特拉‧瓦伊里亞",
+    "Spenta Armaiti": "斯彭塔‧阿爾邁提",
+    "Haurvatat": "豪爾瓦塔特",
+    "Ameretat": "阿梅雷塔特",
+    "Haoma": "豪麻",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 66,
+      "verse": 1,
+      "ref": "Y 66.1",
+      "orig": "ashem vohû ... (3). ashaya dadhãmi imãm\nzaothrãm haomavaitîm gaomavaitîm hadhânaêpatavaitîm\nashaya uzdâtãm tava ahurâne ahurahe xshnûmaine\nahurahe mazdå ameshanãm speñtanãm sraoshahe\nashyehe âthrô ahurahe mazdå rathwô berezatô\nýô ashahe.",
+      "en": "I am now offering this Zaothra here with sanctity, together\nwith the Haoma and the flesh, and the Hadhanaepata lifted up with\nsacred regularity as to thee, O Ahurian One, for the propitiation\nof Ahura Mazda, of the Bountiful Immortals, of Sraosha (Obedience)\nthe blessed, and of the Fire of Ahura Mazda, the ritual's lofty\nlord.",
+      "zh": ""
+    },
+    {
+      "chapter": 66,
+      "verse": "2-16",
+      "ref": "Y 66.2-16",
+      "orig": "ashaya dadhãmi asnyaêibyô ashahe ratubyô\nhâvanêe ashaone ashahe rathwe, ashaya dadhãmi\nsâvanghêe vîsyâica ashaone ashahe rathwe,\nashaya dadhãmi mithrahe vouru-gaoyaotôish hazangrô-gaoshahe\nbaêvare-cashmanô aoxtô-nâmanô ýazatahe\nrâmanô hvâstrahe, (zôt,) ashaya ... ýôi\nheñti ashahe ratavô hâvanôish rathwô.",
+      "en": "(=Y7,5-19.)\n(=Y22, Y28.24-27.)\n<H2 id=y67",
+      "zh": ""
+    },
+    {
+      "chapter": 66,
+      "verse": 17,
+      "ref": "Y 66.17",
+      "orig": "ashaya dadhãmi (zôt u râspî,) imãm\nzaothrãm ... uzdâtãm tava ahurâne ahurahe\nxshnûmaine ahurahe mazdå raêvatô hvarenanguhatô\nameshanãm speñtanãm mithrahe vouru-gaoyaotôish\nrâmanasca hvâstrahe,",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 66,
+      "verse": 18,
+      "ref": "Y 66.18",
+      "orig": "hvarexshaêtahe ... ashahvâthrahe.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 66,
+      "verse": 19,
+      "ref": "Y 66.19",
+      "orig": "vîspaêshãm ... nabânazdishtanãm\nfravashinãm aoxtô-nâmanô ýazatahe!!",
+      "en": "",
+      "zh": ""
+    }
+  ]
+}

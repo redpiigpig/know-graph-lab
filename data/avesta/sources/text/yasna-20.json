@@ -1,0 +1,77 @@
+{
+  "slug": "yasna-20",
+  "siglum": "Y 20",
+  "title_zh": "亞斯納 第 20 章‧阿舍姆‧沃胡釋義",
+  "title_en": "Yasna 20",
+  "canon": "avestan",
+  "volume": "yasna",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/yasna/y13to27.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "米爾斯（L. H. Mills）",
+  "en_url": "https://www.avesta.org/yasna/yasna.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "Vohu Mano": "沃胡‧馬納",
+    "Asha Vahishta": "阿沙‧瓦希什塔",
+    "Khshathra Vairya": "赫沙特拉‧瓦伊里亞",
+    "Spenta Armaiti": "斯彭塔‧阿爾邁提",
+    "Haurvatat": "豪爾瓦塔特",
+    "Ameretat": "阿梅雷塔特",
+    "Haoma": "豪麻",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 20,
+      "verse": 1,
+      "ref": "Y 20.1",
+      "orig": "frâmraot ahurô mazdå, ashem vohû vahishtem\nastî, para ahmâi vohû vahishtem cinasti ýatha\nhvaêtave hvaêtâtem vohu vahishtem asti atha\ntkaêshem kârayeiti,",
+      "en": "A blessing is Righteousness (called) the best; there is weal,\nthere is weal to this man when the Right (helps) the Righteousness\nbest, (when the pious man serves it in truth). Ahura Mazda spake\nforth: Ashem vohu vahishtem asti. To this Asha, the holy ritual\nsanctity, one attributes the qualities of 'good' and 'best,' as\none attributes property to an owner; thus this sentence vohu vahishtem\nasti is substantiated (at once).",
+      "zh": ""
+    },
+    {
+      "chapter": 20,
+      "verse": 2,
+      "ref": "Y 20.2",
+      "orig": "ushtâ astî ushtâ ahmâi, ushtatâitya\nvîspem ashavanem vîspâi ashaone para-cinasti\nýatha nâ stâitya vîspem ashavanem vîspâi\nashaone para-cinasti,",
+      "en": "Ushta asti ushta ahmai; by this attribution of blessedness\n(the praiser) assigns every person (or thing) of a sacred nature\nto every holy person, and as one usually (?) and regularly (?)\nassigns every person or thing (?) that is holy to every holy man.",
+      "zh": ""
+    },
+    {
+      "chapter": 20,
+      "verse": 3,
+      "ref": "Y 20.3",
+      "orig": "ýat ashâi vahishtâi ashem para-cinasti,\nvîspem mãthrem vîspem mãthrâi,\nýatha ashâi xshathrem cinasti ýathaca zbayeñte\nashaone ashem cinasti ýathaca xshmâvôya ashem\ncinasti ýat saoshyañtaêbyô, thrâyô\ntkaêsha, vîspem vacô fravâkem haurum vacô\nahurahe mazdå.",
+      "en": "Hyat ashai vahishtai; by these words the worshipper ascribes\nthe entire Mathra (to Asha Vahishta), and ascribes all to the\nMathra, as one ascribes the kingdom to Righteousness, and as one\nascribes righteousness to the invoking saint; yea, as one ascribes\nrighteousness to us who are the prophets (who shall help and bless\nthe people). The three maxims of the sentences (are thus fulfilled).\nAnd every word (in its detail), and the entire utterance in its\nproclamation, is the word of Ahura Mazda.",
+      "zh": ""
+    },
+    {
+      "chapter": 20,
+      "verse": 4,
+      "ref": "Y 20.4",
+      "orig": "mazdå frâmraot, cîm frâmraot, ashavanem\nmainyaomca gaêthîmca, cvãs frâmraot fravâkem,\nvahishtô xshayamnô, cvañtem, ashavanem vahishtemca\navasô-xshathremca!",
+      "en": "Mazda has made a proclamation. (Question.) Whom did He announce?\n(Answer.) That holy one who is both heavenly and earthly. (Question.)\nOf what character is He who has thus announced Him? (Answer.)\nHe is the best, and the one who is exercising sovereign power.\n(Question.) Of what character is the man whom He announced? (Answer.)\nThe holy and the best, the one who rules with no capricious tyranny.\nWe sacrifice to the (several) part(s) of the Asha Vahishta (prayer).\nWe sacrifice to the heard-recital of the Asha Vahishta, to its\nmemorizing, its chanting, and its sacrificial use!\n<H2 id=y21",
+      "zh": ""
+    },
+    {
+      "chapter": 20,
+      "verse": 5,
+      "ref": "Y 20.5",
+      "orig": "bakhãm ashahe vahishtahe ýazamaide, ashahe vahishtahe\nýazamaide frasraothremca framarethremca fragâthremca\nfrâyashtîmca. ýenghê hâtãm\nâat ýesnê paitî ... !!",
+      "en": "",
+      "zh": ""
+    }
+  ]
+}

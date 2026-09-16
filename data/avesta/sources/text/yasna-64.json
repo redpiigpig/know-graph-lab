@@ -1,0 +1,93 @@
+{
+  "slug": "yasna-64",
+  "siglum": "Y 64",
+  "title_zh": "亞斯納 第 64 章",
+  "title_en": "Yasna 64",
+  "canon": "avestan",
+  "volume": "yasna",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/yasna/y54to72.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "米爾斯（L. H. Mills）",
+  "en_url": "https://www.avesta.org/yasna/yasna.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": "米爾斯的《東方聖書》譯本未另譯本章，原書註明 (See Y46.3; Y50.6-11.)。英譯欄因此從缺——這是譯本的處理方式，不是本站漏抓。",
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "Vohu Mano": "沃胡‧馬納",
+    "Asha Vahishta": "阿沙‧瓦希什塔",
+    "Khshathra Vairya": "赫沙特拉‧瓦伊里亞",
+    "Spenta Armaiti": "斯彭塔‧阿爾邁提",
+    "Haurvatat": "豪爾瓦塔特",
+    "Ameretat": "阿梅雷塔特",
+    "Haoma": "豪麻",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 64,
+      "verse": 1,
+      "ref": "Y 64.1",
+      "orig": "(zôt,) anghêush darethrâi frô ashahyâ\nfrâreñtê.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 64,
+      "verse": 2,
+      "ref": "Y 64.2",
+      "orig": "ýê mãthrâ vâcem mazdâ\nbaraitî urvathô ashâ nemanghâ zarathushtrô\ndâtâ xratêush hizvô raithîm stôi\nmahyâ râzêñg vohû sâhît\nmananghâ.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 64,
+      "verse": 3,
+      "ref": "Y 64.3",
+      "orig": "at vê ýaojâ zevîshtyêñg\naurvatô jayâish perethûsh vahmahyâ ýûshmâkahyâ\nmazdâ ashâ ugrêñg vohû mananghâ\nýâish azâthâ mahmâi h'yâtâ\navanghê. (zôt u râspî,)",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 64,
+      "verse": 4,
+      "ref": "Y 64.4",
+      "orig": "mat vå padâish (zôt,) ýâ frasrûtâ\nîzhayå pairijasâi mazdâ ustânazastô\nat vå ashâ aredrah'yâcâ nemanghâ\nat vå vanghêush mananghô hunaretâtâ.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 64,
+      "verse": 5,
+      "ref": "Y 64.5",
+      "orig": "tâish vå ýasnâish paitî stavas\nayenî mazdâ ashâ vanghêush shyaothanâish\nmananghô ýadâ ashôish mah'yå vasê\nxshayâ at hudânâush ishayãs gerezdâ\nh'yêm.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 64,
+      "verse": 6,
+      "ref": "Y 64.6",
+      "orig": "at ýâ vareshâ ýâcâ pairî\nâish shyaothanâ ýâcâ vohû\ncashmãm arejat mananghâ raocå hvêñg\nasnãm uxshâ aêurush xshmâkâi ashâ\nvahmâi mazdâ ahurâ.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 64,
+      "verse": 7,
+      "ref": "Y 64.7",
+      "orig": "at vê staotâ aojâi mazdâ anghâcâ\nýavat ashâ tavâcâ isâicâ\ndâtâ anghêush aredat vohû mananghâ\nhaithyâvareshtãm hyat vasnâ ferashôtemem!!",
+      "en": "",
+      "zh": ""
+    }
+  ]
+}

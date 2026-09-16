@@ -1,0 +1,85 @@
+{
+  "slug": "yasna-42",
+  "siglum": "Y 42",
+  "title_zh": "亞斯納 第 42 章‧七章禱補遺",
+  "title_en": "Yasna 42",
+  "canon": "avestan",
+  "volume": "yasna",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/yasna/y35to42.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "米爾斯（L. H. Mills）",
+  "en_url": "https://www.avesta.org/yasna/yasna.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "Vohu Mano": "沃胡‧馬納",
+    "Asha Vahishta": "阿沙‧瓦希什塔",
+    "Khshathra Vairya": "赫沙特拉‧瓦伊里亞",
+    "Spenta Armaiti": "斯彭塔‧阿爾邁提",
+    "Haurvatat": "豪爾瓦塔特",
+    "Ameretat": "阿梅雷塔特",
+    "Haoma": "豪麻",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 42,
+      "verse": 1,
+      "ref": "Y 42.1",
+      "orig": "ýazamaidê vê ameshâ speñtâ\nýasnahê haptanghâtôish hañdâtâ,\napãmcâ xå ýazamaidê apãmcâ\nperetûsh ýazamaidê, pathãmcâ vîcaranå\nýazamaidê pathãmcâ hañjamanå\nýazamaidê,",
+      "en": "We worship You, O Ye Bountiful Immortals! the entire collection\nof this Yasna, Haptanghaiti (as we sum up all). And we sacrifice\nto the fountains of the waters, and to the fordings of the rivers,\nto the forkings of the highways, and to the meetings of the roads.",
+      "zh": ""
+    },
+    {
+      "chapter": 42,
+      "verse": 2,
+      "ref": "Y 42.2",
+      "orig": "gairîshcâ afshtacinô ýazamaidê\nvairîshcâ awezhdânånghô ýazamaidê,\naspenâcâ ýevînô ýazamaidê\npâyûshcâ thwôreshtârâ ýazamaidê,\nmazdãmcâ zarathushtremcâ ýazamaidê.",
+      "en": "And we sacrifice to the hills that run with torrents, and\nthe lakes that brim with waters! and to the corn that fills the\ncorn-fields; and we sacrifice to both the protector and the Creator,\nto both Zarathushtra and the Lord.",
+      "zh": ""
+    },
+    {
+      "chapter": 42,
+      "verse": 3,
+      "ref": "Y 42.3",
+      "orig": "zãmcâ asmanemcâ ýazamaidê,\nvâtemcâ darshîm mazdadâtem ýazamaidê\ntaêremcâ haraithyå berezô ýazamaidê,\ndà bûmîmcâ vîspâcâ\nvohû ýazamaidê.",
+      "en": "And we sacrifice to both earth and heaven, and to the stormy\nwind that Mazda made, and to the peak of high Haraiti, and to\nthe land, and all things good.",
+      "zh": ""
+    },
+    {
+      "chapter": 42,
+      "verse": 4,
+      "ref": "Y 42.4",
+      "orig": "manô vohû urunascâ ashâunãm\nýazamaidê, vâsîmcâ ýãm\npañcâ-sadvarãm ýazamaidê, xaremcâ\nýim ashavanem ýazamaidê ýô hishtaitê\nmaidim zrayanghô vourukashahê, zarayô vourukashem\nýazamaidê.",
+      "en": "And we worship the Good Mind (in the living) and the spirits\nof the saints. And we sacrifice to the fish of fifty-fins, and\nto that sacred beast the Unicorn (?) which stands in Vouru-kasha,\nand we sacrifice to that sea of Vouru-kasha where he stands, (5)\nand to the Haoma, golden-flowered, growing on the heights; yea,\nto the Haoma that restores us, and aids this world's advance.\nWe sacrifice to Haoma that driveth death afar, (6) and to the\nflood-streams of the waters, and to the great flights of the birds,\nand to the approaches of the Fire-priests, as they approach us\nfrom afar, and seek to gain the provinces, and spread the ritual\nlore. And we sacrifice to the Bountiful Immortals all!\nUshtavaiti Gatha\n<H2 id=y43",
+      "zh": ""
+    },
+    {
+      "chapter": 42,
+      "verse": 5,
+      "ref": "Y 42.5",
+      "orig": "haomemcâ zâirîm berezañtem ýazamaidê,\nhaomem frâshmîm frâdat-gaêthem ýazamaidê,\nhaomem dûraoshem ýazamaidê.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 42,
+      "verse": 6,
+      "ref": "Y 42.6",
+      "orig": "apãmcâ feraxshaostrem ýazamaidê\nvayãmcâ ferafraothrem ýazamaidê, athaurunãmcâ\npaitî-ajãthrem ýazamaidê ýôi\nyeyã dûrât ashô-îshô dah'yunãm,\nvîspãscâ ameshã speñtã\nýazamaidê. ýenghê hâtãm\n... tåscâ ýazamaide!!!",
+      "en": "",
+      "zh": ""
+    }
+  ]
+}

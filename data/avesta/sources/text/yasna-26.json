@@ -1,0 +1,125 @@
+{
+  "slug": "yasna-26",
+  "siglum": "Y 26",
+  "title_zh": "亞斯納 第 26 章",
+  "title_en": "Yasna 26",
+  "canon": "avestan",
+  "volume": "yasna",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/yasna/y13to27.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "米爾斯（L. H. Mills）",
+  "en_url": "https://www.avesta.org/yasna/yasna.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "Vohu Mano": "沃胡‧馬納",
+    "Asha Vahishta": "阿沙‧瓦希什塔",
+    "Khshathra Vairya": "赫沙特拉‧瓦伊里亞",
+    "Spenta Armaiti": "斯彭塔‧阿爾邁提",
+    "Haurvatat": "豪爾瓦塔特",
+    "Ameretat": "阿梅雷塔特",
+    "Haoma": "豪麻",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 26,
+      "verse": 1,
+      "ref": "Y 26.1",
+      "orig": "ashâunãm vanguhîsh sûrå speñtå\nfravashayô (zôt,) staomi zbayemi ufyemi, ýazamaide\nnmânyå vîsyå zañtumå dâh'yumå\nzarathushtôtemå.",
+      "en": "I praise, invoke, and weave my hymn to the good, heroic, and\nbountiful Fravashis of the saints; (and having invoked these,\nthen) we worship the Nmanyas, and the Visyas, and the Zantumas,\nand the Dahvyumas, and the Zarathushtrotemas.",
+      "zh": ""
+    },
+    {
+      "chapter": 26,
+      "verse": 2,
+      "ref": "Y 26.2",
+      "orig": "vîspanãmca ånghãm paoiryanãm\nfravashinãm idha ýazamaide fravashîm avãm\nýãm ahurahe mazdå mazishtãmca vahishtãmca\nsraêshtãmca xraozhdishtãmca xrathwishtãmca\nhukereptemãmca ashât apanôtemãmca.",
+      "en": "And of all these prior Fravashis, we worship here the Fravashi\nof Ahura Mazda, which is the greatest and the best, the most beautiful\nand the firmest, the most wise and the best in form, and the one\nthat attains the most its ends because of Righteousness.",
+      "zh": ""
+    },
+    {
+      "chapter": 26,
+      "verse": 3,
+      "ref": "Y 26.3",
+      "orig": "ashâunãm vanguhîsh sûrå speñtå\nfravashayô ýazamaide ýå ameshanãm\nspeñtanãm xshaêtanãm verezi-dôithranãm\nberezatãm aiwyâmanãm taxmanãm âhûiryanãm\nýôi aithyajanghô ashavanô.",
+      "en": "And\n(having invoked them) hither, we worship the good, heroic, bountiful\nFravashis of the holy ones, those of the Bountiful Immortals,\nthe brilliant, of effective glance, the lofty, the devoted, the\nswift ones of the creatures of Ahura who are imperishable and\nholy.",
+      "zh": ""
+    },
+    {
+      "chapter": 26,
+      "verse": 4,
+      "ref": "Y 26.4",
+      "orig": "paoiryanãm tkaêshanãm paoiryanãm\nsâsnô-gûshãm idha ashaonãm ashaoninãmca\nahûmca daênãmca baodhasca urvânemca fravashîmca\nýazamaide ýôi ashâi vaonare, gêush\nhudhånghô urvânem ýazamaide.",
+      "en": "And (having invoked them) hither, we worship the spirit and\nconscience, the intelligence and soul and Fravashi of those holy\nmen and women who early heard the lore and commands (of God),\nand loved and strove after Righteousness, the ritual truth; and\nwe worship the soul of the Kine of blessed gift.",
+      "zh": ""
+    },
+    {
+      "chapter": 26,
+      "verse": 5,
+      "ref": "Y 26.5",
+      "orig": "ýôi ashâi vaonare gayehe marethnô\nashaonô fravashîm ýazamaide, zarathushtrahe\nspitâmahe idha ashaonô ashîmca fravashîmca\nýazamaide, kavôish vîshtâspahe ashaonô\nfravashîm ýazamaide, isat-vâstrahe zarathushtrôish\nashaonô fravashîm ýazamaide.",
+      "en": "And (having\ninvoked it) hither, we worship the Fravashi of Gaya Maretan [Gayomard] the\nholy, and the sanctity and Fravashi of Zarathushtra Spitama the\nsaint; and we worship the Fravashi of Kavi Vishtasp the holy,\nand that of Isat-vastra the Zarathushtrian, the saint.",
+      "zh": ""
+    },
+    {
+      "chapter": 26,
+      "verse": 6,
+      "ref": "Y 26.6",
+      "orig": "nabânazdishtanãm idha ashaonãm ashaoninãmca\nahûmca daênãmca baodhasca urvânemca fravashîmca\nýazamaide ýôi ashâi vaonare mat vîspâbyô\nashaonibyô fravashibyô ýå irîrithushãm\nashaonãm ýåsca jvañtãm ashaonãm\nýåsca narãm azâtanãm frashô-carethrãm\nsaoshyañtãm.",
+      "en": "And (having invoked them) hither, we worship the life, conscience,\nintelligence, soul and Fravashi of the next of kin, of the saints\nmale and female who have striven after the ritual truth, which\nare those of the dead and living saints, and which are those also\nof men as yet unborn, of the future prophets who will help on\nthe renovation, and complete the human progress, with them all.",
+      "zh": ""
+    },
+    {
+      "chapter": 26,
+      "verse": 7,
+      "ref": "Y 26.7",
+      "orig": "idha iristanãm urvãnô ýazamaide\nýå ashaonãm fravashayô, vîspanãm\nahmya nmâne nabânazdishtanãm para-iristanãm\naêthrapaitinãm aêthryanãm narãm\nnâirinãm idha ashaonãm ashaoninãm fravashayô\nýazamaide.",
+      "en": "And (having invoked them) hither, we worship the souls of\nthe dead [(Pazand) which are the Fravashis of the saints]; and\nof all the next of kin who have passed away in this house, of\nthe Aethra-paitis (the teachers) and of the disciples; yea, of\nall holy men and women; (8) and we worship the Fravashis of all\nthe holy teachers and disciples; and of all the saints both male\nand female.",
+      "zh": ""
+    },
+    {
+      "chapter": 26,
+      "verse": 8,
+      "ref": "Y 26.8",
+      "orig": "vîspanãm aêthrapaitinãm ashaonãm\nfravashayô ýazamaide, vîspanãm aêthryanãm\nashaonãm fravashayô ýazamaide, vîspanãm\nnarãm ashaonãm fravashayô ýazamaide,\nvîspanãm nâirinãm ashaoninãm\nfravashayô ýazamaide.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 26,
+      "verse": 9,
+      "ref": "Y 26.9",
+      "orig": "vîspanãm aperenâyûkanãm dahmô-\nkeretanãm ashaonãm fravashayô ýazamaide,\nâdah'yunãmca ashaonãm fravashayô ýazamaide,\nuzdâh'yunãmca ashaonãm fravashayô ýazamaide.",
+      "en": "(And having invoked them) hither we worship the Fravashis\nof all the holy children who fulfill the deeds of piety; and we\nworship the Fravashis of the saints within the province; and those\nof the saints without the province.",
+      "zh": ""
+    },
+    {
+      "chapter": 26,
+      "verse": 10,
+      "ref": "Y 26.10",
+      "orig": "narãmca ashaonãm fravashayô ýazamaide,\nnâirinãmca ashaoninãm fravashayô ýazamaide,\nvîspå ashâunãm vanguhîsh sûrå\nspeñtå fravashayô ýazamaide ýå\nhaca gayât marethnat â-saoshyañtât verethrakhnat.",
+      "en": "We worship the Fravashis\nof (those) holy men and holy women; we worship all the good, heroic,\nbountiful Fravashis of the saints from Gaya Maretan [Gayomard] (the first\ncreated) to the Saoshyant, the victorious.",
+      "zh": ""
+    },
+    {
+      "chapter": 26,
+      "verse": 11,
+      "ref": "Y 26.11",
+      "orig": "(zôt u râspî,) vîspå fravashayô\nashâunãm ýazamaide, iristanãm urvãnô\nýazamaide ýå ashaonãm fravashayô.\nýenghê hâtãm âat ýesnê\npaitî.... (râspî,) ýathâ ahû\nvairyô ýô zaotâ frâ-mê mrûtê,\n(zôt,) athâ ratush ashâtcît haca frâ\nashava vîdhvå mraotû!!",
+      "en": "Yea, we worship all the Fravashis of the saints, and we worship\nthe souls of the dead [(Pazand) which are the Fravashis of the\nsaints]!\n<H2 id=y27",
+      "zh": ""
+    }
+  ]
+}

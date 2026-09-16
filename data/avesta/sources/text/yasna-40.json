@@ -1,0 +1,69 @@
+{
+  "slug": "yasna-40",
+  "siglum": "Y 40",
+  "title_zh": "亞斯納 第 40 章‧七章禱‧求助佑",
+  "title_en": "Yasna 40",
+  "canon": "avestan",
+  "volume": "yasna",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/yasna/y35to42.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "米爾斯（L. H. Mills）",
+  "en_url": "https://www.avesta.org/yasna/yasna.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "Vohu Mano": "沃胡‧馬納",
+    "Asha Vahishta": "阿沙‧瓦希什塔",
+    "Khshathra Vairya": "赫沙特拉‧瓦伊里亞",
+    "Spenta Armaiti": "斯彭塔‧阿爾邁提",
+    "Haurvatat": "豪爾瓦塔特",
+    "Ameretat": "阿梅雷塔特",
+    "Haoma": "豪麻",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 40,
+      "verse": 1,
+      "ref": "Y 40.1",
+      "orig": "âhû at paitî adâhû mazdâ\nahurâ mazdãmcâ bûiricâ kereshvâ\nrâitî tôi xrapaitî ahmat hyat aibî,\nhyat mîzhdem mavaêthem fradadâthâ daênâbyô\nmazdâ ahurâ",
+      "en": "And now in these Thy dispensations, O Ahura Mazda! do Thou\nwisely act for us, and with abundance with Thy bounty and Thy\ntenderness as touching us; and grant that reward which Thou hast\nappointed to our souls, O Ahura Mazda!",
+      "zh": ""
+    },
+    {
+      "chapter": 40,
+      "verse": 2,
+      "ref": "Y 40.2",
+      "orig": "ahyâ hvô nê dâidî ahmâicâ\nahuyê manah'yâicâ tat ahyâ ýâ\ntat upâ-jamyâmâ tavacâ huxemâ ashah'yâcâ\nvîspâi ýavê.",
+      "en": "Of this do Thou Thyself\nbestow upon us for this world and the spiritual; and now as part\nthereof (do Thou grant) that we may attain to fellowship with\nThee, and Thy Righteousness for all duration.",
+      "zh": ""
+    },
+    {
+      "chapter": 40,
+      "verse": 3,
+      "ref": "Y 40.3",
+      "orig": "dâidî at nerãsh mazdâ ahurâ\nashâunô ashacinanghô aidyûsh vâstryêñg\ndaregâi îzhyâi bezvaitê haxmainê\nahmaibyâ ahmâ-rafenanghô.",
+      "en": "And do Thou grant us, O Ahura! men who are righteous, and\nboth lovers and producers of the Right as well. And give us trained\nbeasts for the pastures, broken in for riding, and for bearing,\n(that they may be) in helpful companionship with us, and as a\nsource of long enduring vigor, and a means of rejoicing grace\nto us for this.",
+      "zh": ""
+    },
+    {
+      "chapter": 40,
+      "verse": 4,
+      "ref": "Y 40.4",
+      "orig": "athâ hvaêtûsh athâ verezênâ\nathâ haxêmã h'yât ýâish\nhishcamaidê athâ vê utâ h'yâmâ\nmazdâ ahurâ ashavanô ereshyâ ishtêm\nrâitî. ýenghê hâtãm ...\ntåscâ ýazamaide!!",
+      "en": "So let there be a kinsman lord for us, with the laborers of\nthe village, and so likewise let there be the clients (or the\npeers). And by the help of those may we arise.\nSo may we be to You, O Mazda Ahura! holy and true, and with free\ngiving of our gifts.\n<H2 id=y41",
+      "zh": ""
+    }
+  ]
+}

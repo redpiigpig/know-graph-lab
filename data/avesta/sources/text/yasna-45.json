@@ -1,0 +1,133 @@
+{
+  "slug": "yasna-45",
+  "siglum": "Y 45",
+  "title_zh": "亞斯納 第 45 章‧伽薩‧我要宣講",
+  "title_en": "Yasna 45",
+  "canon": "avestan",
+  "volume": "yasna",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/yasna/y43to46.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "米爾斯（L. H. Mills）",
+  "en_url": "https://www.avesta.org/yasna/yasna.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "Vohu Mano": "沃胡‧馬納",
+    "Asha Vahishta": "阿沙‧瓦希什塔",
+    "Khshathra Vairya": "赫沙特拉‧瓦伊里亞",
+    "Spenta Armaiti": "斯彭塔‧阿爾邁提",
+    "Haurvatat": "豪爾瓦塔特",
+    "Ameretat": "阿梅雷塔特",
+    "Haoma": "豪麻",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 45,
+      "verse": 1,
+      "ref": "Y 45.1",
+      "orig": "at fravaxshyâ nû gûshôdûm nû\nsraotâ ýaêcâ asnât ýaêcâ\ndûrât ishathâ nû îm vîspâ\ncithrê zî mazdånghô-dûm nôit\ndaibitîm dush-sastish ahûm merãshyât\nakâ varanâ dregvå hizvå âveretô.",
+      "en": "I will speak forth: hear now and hearken now, ye from near\nand ye from far that desire (instruction). Now observe this in\nyour mind, all of you, for he is revealed. Never shall the false\nTeacher destroy the Second Life, the Liar, in perversion by his\ntongue into evil belief.",
+      "zh": ""
+    },
+    {
+      "chapter": 45,
+      "verse": 2,
+      "ref": "Y 45.2",
+      "orig": "at fravaxshyâ anghêush mainyû pouruyê\nýayå spanyå ûitî mravat ýêm\nañgrem, nôit nâ manå nôit sêñghâ\nnôit xratavô naêdâ varanâ nôit\nuxdhâ naêdâ shyaothanâ nôit daênå\nnôit urvãnô hacaiñtê.",
+      "en": "I will speak of the Spirits twain at the first beginning of\nthe world, of whom the holier spoke thus to the enemy: \"Neither\nthought, nor teachings, nor wills, nor beliefs, nor words, nor\ndeeds, nor selfs, nor souls of us twain agree\".",
+      "zh": ""
+    },
+    {
+      "chapter": 45,
+      "verse": 3,
+      "ref": "Y 45.3",
+      "orig": "at fravaxshyâ anghêush ahyâ pourvîm\nýãm môi vîdvå mazdå vaocat\nahurô ýôi îm vê nôit ithâ\nmãthrem varesheñtî ýathâ îm\nmênâicâ vaocacâ aêibyô anghêush\navôi anghat apêmem.",
+      "en": "I will speak of that which Mazda Ahura, the all-knowing, revealed\nto me first in this (earthly) life. Those of you that put not\nin practice this word as I think and utter it, to them shall be\nwoe at the end of life.",
+      "zh": ""
+    },
+    {
+      "chapter": 45,
+      "verse": 4,
+      "ref": "Y 45.4",
+      "orig": "at fravaxshyâ anghêush ahyâ vahishtem ashât\nhacâ mazdâ vaêdâ ýê îm\ndât patarêm vanghêush varezayañtô\nmananghô at hôi dugedâ hushyaothanâ ârmaitish\nnôit diwzhaidyâi vîspâ-hishas ahurô.",
+      "en": "I will speak of what is best for the life. Through Asha I\nhave come to know, O Mazda, who created it (the life), the father\nof active Good Thought: but his daughter is the good-working Armaiti.\nThe all-observant Ahura is not to be deceived.",
+      "zh": ""
+    },
+    {
+      "chapter": 45,
+      "verse": 5,
+      "ref": "Y 45.5",
+      "orig": "at fravaxshyâ hyat môi mraot speñtôtemô\nvacê srûidyâi hyat maretaêibyô vahishtem\nýôi môi ahmâi seraoshem dãn cayascâ\nupâ-jimen haurvâtâ ameretâtâ vanghêush\nmanyêush shyaothanâish mazdå ahurô.",
+      "en": "I will speak of that which (he), the Holiest declared to me\nas the word that is best for mortals to obey; while he said: \"they\nwho for my sake render him obedience, shall all attain unto Welfare\nand Immortality by the actions of the Good Spirit [Spenta Mainyu -JHP]\" - (he)\nMazda Ahura.",
+      "zh": ""
+    },
+    {
+      "chapter": 45,
+      "verse": 6,
+      "ref": "Y 45.6",
+      "orig": "at fravaxshyâ vîspanãm mazishtem stavas\nashâ ýê hudå ýôi heñtî\nspeñtâ mainyû sraotû mazdå ahurô\nýehyâ vahmê vohû frashî mananghâ\nahyâ xratû frô-mâ sâstû vahishtâ.",
+      "en": "I will speak of him who is the greatest of all, praising him,\nO Right, who is bounteous to all that live. By the holy spirit\nlet Mazda Ahura hearken, in whose Adoration I have been instructed\nby Good Thought. By his wisdom let him teach me what is best,",
+      "zh": ""
+    },
+    {
+      "chapter": 45,
+      "verse": 7,
+      "ref": "Y 45.7",
+      "orig": "ýehyâ savâ ishåñtî râdanghô\nýôi-zî jvâ ångharecâ bvañticâ\nameretâitî ashâunô urvâ aêshô\nutayûtâ ýâ nerãsh sâdrâ\ndregvatô tâcâ xshathrâ mazdå dãmish\nahurô. dà",
+      "en": "Even he whose two awards, whereof he ordains, men shall attain,\nwho so are living or have been or shall be. In immortality shall\nthe soul of the righteous be joyful, in perpetuity shall be the\ntorment of Liars. All this doth Mazda Ahura appoint by his Dominion.",
+      "zh": ""
+    },
+    {
+      "chapter": 45,
+      "verse": 8,
+      "ref": "Y 45.8",
+      "orig": "têm nê staotâish nemanghô â\nvîvareshô nû-zît cashmainî vyâdaresem\nvanghêush manyêush shyaothanahyâ uxdhah'yâcâ\nvîdush ashâ ýêm mazdãm ahurem\nat hôi vahmêñg demânê garô\nnidâmâ.",
+      "en": "Him thou shouldst seek to win for us by hymns of adoration\n(in thy mind): \"Now indeed have I seen it with mine eye,\n(the Kingdom) of the good spirit [Spenta Mainyu -JHP] and of (good) action and word,\nsince I have learnt to know Mazda Ahura through Right\". Let\nus offer him homage in the House of Song [Heaven].",
+      "zh": ""
+    },
+    {
+      "chapter": 45,
+      "verse": 9,
+      "ref": "Y 45.9",
+      "orig": "têm nê vohû mat mananghâ cixshnushô\nýê-nê usên côret spêncâ\naspêncâ mazdå xshathrâ verezênyå\ndyât ahurô pasûsh vîrêñg\nahmâkêñg fradathâi â vanghêush\nashâ haozãthwât â mananghô.",
+      "en": "Him thou shouldst seek to propitiate for us together with\nGood Thought, who at his will maketh us weal or woe. May Mazda\nAhura by his Dominion bring us to work, for prospering our beasts\nand our men, so that we may through Right have familiarity with\nGood Thought.",
+      "zh": ""
+    },
+    {
+      "chapter": 45,
+      "verse": 10,
+      "ref": "Y 45.10",
+      "orig": "têm nê ýasnâish ârmatôish\nmimakhzhô ýê ãnmênî mazdå\nsrâvî ahurô hyat hôi ashâ vohucâ\ncôisht mananghâ xshathrôi hôi haurvâtâ\nameretâtâ ahmâi stôi dãn tevîshî\nutayûitî.",
+      "en": "Him thou shouldst seek to exalt with prayers of piety, him\nthat is called Mazda Ahura for ever, for that he hath promised\nthrough his own Right and Good Thought that Welfare and Immortality\nshall be for us in his Dominion strength and perpetuity in his\nhouse.",
+      "zh": ""
+    },
+    {
+      "chapter": 45,
+      "verse": 11,
+      "ref": "Y 45.11",
+      "orig": "ýastâ daêvêñg aparô\nmashyãscâ tarê-mãstâ ýôi\nîm tarê-manyañtâ anyêñg\nahmât ýê hôi arêm manyâtâ\nsaoshyañtô dêñg patôish speñtâ\ndaênâ urvathô barâtâ patâ\nvâ mazdâ ahurâ!",
+      "en": "Whoso therefore in the future lightly esteemeth the Daeva\nand those mortals that lightly esteem him - even all others save\nthat one who highly esteemeth him, - unto his shall the holy Daena\nof the future deliverer, as lord of the house, be friend, brother\nor father, O Mazda Ahura.\n<H2 id=y46",
+      "zh": ""
+    },
+    {
+      "chapter": 45,
+      "verse": 12,
+      "ref": "Y 45.12",
+      "orig": "(zôt u râspî,) ushtâ ahmâi ...\ngaêm mananghô (2). ashem vohû ... (3). at-fravaxshyãm\nhâitîm ýazamaide. ýenghê hâtãm\n... tåscâ ýazamaide!!",
+      "en": "",
+      "zh": ""
+    }
+  ]
+}

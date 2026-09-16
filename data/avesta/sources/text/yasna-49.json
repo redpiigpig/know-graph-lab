@@ -1,0 +1,141 @@
+{
+  "slug": "yasna-49",
+  "siglum": "Y 49",
+  "title_zh": "亞斯納 第 49 章‧伽薩‧斥敵者",
+  "title_en": "Yasna 49",
+  "canon": "avestan",
+  "volume": "yasna",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/yasna/y47to50.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "米爾斯（L. H. Mills）",
+  "en_url": "https://www.avesta.org/yasna/yasna.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "Vohu Mano": "沃胡‧馬納",
+    "Asha Vahishta": "阿沙‧瓦希什塔",
+    "Khshathra Vairya": "赫沙特拉‧瓦伊里亞",
+    "Spenta Armaiti": "斯彭塔‧阿爾邁提",
+    "Haurvatat": "豪爾瓦塔特",
+    "Ameretat": "阿梅雷塔特",
+    "Haoma": "豪麻",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 49,
+      "verse": 1,
+      "ref": "Y 49.1",
+      "orig": "at mâ ýavâ bêñdvô pafrê\nmazishtô ýê dusherethrîsh cixshnushâ\nashâ mazdâ vanguhî âdâ gaidî\nmôi â-môi arapâ ahyâ vohû\naoshô vîdâ mananghâ.",
+      "en": "Ever has Bendva been for me the greatest obstacle, I who desire\nto give satisfaction to those who are neglected, O Right, O Mazda.\nWith good Ada come to me, support me firmly. Prepare for him (his)\nruin, O Good Thought.",
+      "zh": ""
+    },
+    {
+      "chapter": 49,
+      "verse": 2,
+      "ref": "Y 49.2",
+      "orig": "at ahyâ-mâ bêñdvahyâ mânayeitî\ntkaêshô dregvå daibitâ ashât râreshô\nnôit speñtãm dôresht ahmâi stôi\nârmaitîm naêdâ vohû mazdâ\nfrashtâ mananghâ.",
+      "en": "The perverter of this Bendva has long time impeded me, the\nLiar who has fallen away from Right. He cares not that holy Piety\nshould be his, nor takes the counsel with Good Thought, O Mazda.",
+      "zh": ""
+    },
+    {
+      "chapter": 49,
+      "verse": 3,
+      "ref": "Y 49.3",
+      "orig": "atcâ ahmâi varenâi mazdâ nidâtem\nashem sûidyâi tkaêshâi râshayenghê\ndruxsh tâ vanghêush sarê izyâi mananghô\nañtarê vîspêñg dregvatô\nhaxmêñg añtarê mruyê.",
+      "en": "And in this belief (of ours), O Mazda, Right is laid down,\nfor blessing, in the heresy the Lie, for ruin. Therefore I strive\nfor the fellowship of Good Thought, I forbid all intercourse with\nthe Liar.",
+      "zh": ""
+    },
+    {
+      "chapter": 49,
+      "verse": 4,
+      "ref": "Y 49.4",
+      "orig": "ýôi dush-xrathwâ aêshemem vareden\nrâmemcâ hvâish hizubîsh fshuyasû\nafshuyañtô ýaêshãm nôit\nhvarshtâish vãs duzhvarshtâ tôi daêvêñg\ndãn ýâ dregvatô daênâ.",
+      "en": "They who make the increase of violence and cruelty with their\ntongues, the foes of cattle-nurture among its friends; whose ill\ndeeds prevail, not their good deeds: these (shall be) in the house\nof the Daevas, (the place for) the Self of the Liar.",
+      "zh": ""
+    },
+    {
+      "chapter": 49,
+      "verse": 5,
+      "ref": "Y 49.5",
+      "orig": "at hvô mazdâ îzhâcâ âzûitishcâ\nýê daênãm vohû sârshtâ\nmananghâ ârmatôish kascît ashâ huzêñtush\ntâishcâ vîspâish thwahmî xshathrôi\nahurâ.",
+      "en": "But he, O Mazda, - happiness and satiety be his who links\nhis own Self with Good Thought, being through Right an intimate\nof Piety. And with all these (may I be) in Thy Dominion, Ahura.",
+      "zh": ""
+    },
+    {
+      "chapter": 49,
+      "verse": 6,
+      "ref": "Y 49.6",
+      "orig": "frô vå fraêshyâ mazdâ ashemcâ\nmrûitê dà ýâ vê xratêush\nxshmâkahyâ â-mananghâ eresh vîcidyâi\nýathâ-î srâvayaêmâ tãm\ndaênãm ýâ xshmâvatô ahurâ.",
+      "en": "I beseech you twain, O Mazda and the Right, to say what are\nthe plans of your will, that we may discern how we might teach\nthe Religion of such as you, O Ahura.",
+      "zh": ""
+    },
+    {
+      "chapter": 49,
+      "verse": 7,
+      "ref": "Y 49.7",
+      "orig": "tatcâ vohû mazdâ sraotû mananghâ\nsraotû ashâ gûshahvâ-tû ahurâ\nkê airyamâ kê hvaêtush dâtâish\nanghat ýê verezênâi vanguhîm dât\nfrasastîm.",
+      "en": "And this let Good Thought hear, O Mazda, let the Right hear,\ndo thou also listen, O Ahura, which men of the brotherhood, what\nnoble is it according to the Law who brings to the community fame.",
+      "zh": ""
+    },
+    {
+      "chapter": 49,
+      "verse": 8,
+      "ref": "Y 49.8",
+      "orig": "ferashaoshtrâi urvâzishtãm ashahyâ\ndå sarêm tat thwâ mazdâ ýâsâ\nahurâ maibyâcâ ýãm vanghâu\nthwahmî â-xshathrôi ýavôi vîspâi\nfraêshtånghô ånghâmâ.",
+      "en": "On Frashaoshtra do thou bestow the most gladsome fellowship\nwith the Right - this I ask thee, O Mazda Ahura - and on myself\nthe hold on what is good in thy Dominion. To all eternity we would\nbe thy messengers.",
+      "zh": ""
+    },
+    {
+      "chapter": 49,
+      "verse": 9,
+      "ref": "Y 49.9",
+      "orig": "sraotû sâsnå fshêñghyô\nsuyê tashtô nôit eresh-vacå sarêm\ndidãs dregvâtâ hyat daênå vahishtê\nýûjên mîzhdê ashâ ýuxtâ\nýâhî dêjâmâspâ.",
+      "en": "Let the helper hear the ordinance, he that is created to bring\ndeliverance. The man of right words is no regarder of fellowship\nwith the Liar, if they that are partakers of Right are to make\ntheir Selves partake in the best reward at the Judgment, O Jamaspa.",
+      "zh": ""
+    },
+    {
+      "chapter": 49,
+      "verse": 10,
+      "ref": "Y 49.10",
+      "orig": "tatcâ mazdâ thwahmî âdãm nipånghê\nmanô vohû urunascâ ashâunãm nemascâ\nýâ ârmaitish îzhâcâ mãzâ\nxshathrâ vazdanghâ avêmîrâ.",
+      "en": "And this, O Mazda, will I put in thy care within thy House\n- the Good Thought and the souls of the Righteous, their worship,\ntheir Piety and zeal, that thou mayst guard it, O thou mighty\nDominion, with abiding power.",
+      "zh": ""
+    },
+    {
+      "chapter": 49,
+      "verse": 11,
+      "ref": "Y 49.11",
+      "orig": "at dushexshathrêñg dush-shyaothanêñg\nduzhvacanghô duzhdaênêñg dush-mananghô\ndregvatô akâish hvarethâish paitî urvãnô\npaityeiñtî drûjô demânê haithyâ\nanghen astayô.",
+      "en": "But these that are of an evil dominion, of evil deeds, evil\nwords, evil Self, and evil thought, Liars, the Souls go to meet\nthem with evil food; in the House of the Lie they shall be meet\ninhabitants.",
+      "zh": ""
+    },
+    {
+      "chapter": 49,
+      "verse": 12,
+      "ref": "Y 49.12",
+      "orig": "kat tôi ashâ zbayeñtê avanghô\nzarathushtrâi kat tôi vohû mananghâ ýê-vê\nstaotâish mazdâ frînâi ahurâ avat\nýâsãs hyat vê îshtâ vahishtem!",
+      "en": "What help hast thou, O Right, for Zarathushtra that calls\nupon me? What hast thou, Good Thought? — for me who with praises\nseeks your favor, O Mazda Ahura, longing for that which is best\nin your possession.\n<H2 id=y50",
+      "zh": ""
+    },
+    {
+      "chapter": 49,
+      "verse": 13,
+      "ref": "Y 49.13",
+      "orig": "(zôt u râspî,) speñtâ mainyû\n... ârmaitî ahurô (2). ashem vohû ...\n(3). at-mâyavãm hâitîm ýazamaide.\nýenghê hâtãm ... tåscâ ýazamaide!!",
+      "en": "",
+      "zh": ""
+    }
+  ]
+}

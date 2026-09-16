@@ -1,0 +1,101 @@
+{
+  "slug": "yasna-67",
+  "siglum": "Y 67",
+  "title_zh": "亞斯納 第 67 章",
+  "title_en": "Yasna 67",
+  "canon": "avestan",
+  "volume": "yasna",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/yasna/y54to72.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "米爾斯（L. H. Mills）",
+  "en_url": "https://www.avesta.org/yasna/yasna.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": "米爾斯的《東方聖書》譯本未另譯本章，原書註明 (See Y23.1-4, replacing 'I desire to approach with sanctity'\nby 'I offer with sanctity;' see also Y7.24.) (See Y38.3-5.)。英譯欄因此從缺——這是譯本的處理方式，不是本站漏抓。",
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "Vohu Mano": "沃胡‧馬納",
+    "Asha Vahishta": "阿沙‧瓦希什塔",
+    "Khshathra Vairya": "赫沙特拉‧瓦伊里亞",
+    "Spenta Armaiti": "斯彭塔‧阿爾邁提",
+    "Haurvatat": "豪爾瓦塔特",
+    "Ameretat": "阿梅雷塔特",
+    "Haoma": "豪麻",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 67,
+      "verse": 1,
+      "ref": "Y 67.1",
+      "orig": "ashaya dadhãmi (zôt,) avanghå fravashayô\nýå paoirya ånghare ... ýå barethrishva\nputhre vîdhârayen paiti-verete apara-iritheñtô.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 67,
+      "verse": 2,
+      "ref": "Y 67.2",
+      "orig": "ashaya dadhãmi âfravashi ahurahe mazdå\nameshanãm speñtanãm mat vîspâbyô\nashaonibyô fravashibyô ýå mainyavanãm\nýazatanãm, ashaya dadhãmi âfravashi\ngayehe marethnô zarathushtrahe spitâmahe kavôish\nvîshtâspahe isat-vâstrahe zarathushtrahe mat\nvîspâbyô ashaonibyô fravashibyô\nýå paoiryanãm tkaêshanãm.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 67,
+      "verse": 3,
+      "ref": "Y 67.3",
+      "orig": "ashaya dadhãmi vîspaya ashavane fravashe ke asti\nkvacit anghå zemô para-iristi dahma nâirike\naperenâyûke kainike vâstryâvarezi upashaêti\nhaca ahmât nmânât izyeiñti ýå\npaitishmareñti ýå aiwinâseñti\nvanghûsh ýasnãsca vahmãsca.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 67,
+      "verse": 4,
+      "ref": "Y 67.4",
+      "orig": "ashaya dadhãmi ashâunãm fravashinãm\n... urunô fravashêe, ashaya dadhãmi vîspaêibyô\nashahe ratubyô, ashaya dadhãmi vîspaêibyô\nvanghudhâbyô ... ýôi heñti ýesnyâca\nvahmyâca ashât haca ýat vahishtât.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 67,
+      "verse": 5,
+      "ref": "Y 67.5",
+      "orig": "ashaya-nô paitî-jamyât.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 67,
+      "verse": 6,
+      "ref": "Y 67.6",
+      "orig": "(zôt u râspî,) apô at ýazamaidê\n(zôt,) maêkaiñtîshcâ hêbvaiñtîshcâ\nfravazanghô ahurânîsh ahurahyâ havapanghå\nhuperethwåscâ vå hvôkhzhathåscâ\nhûshnâthråscâ ubôibyâ ahubyâ\ncagemâ.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 67,
+      "verse": 7,
+      "ref": "Y 67.7",
+      "orig": "ûitî ýâ vê vanguhîsh\nahurô mazdå nâmã dadât vanghudå\nhyat vå dadât tâish vå ýazamaidê\ntâish fryãnmahî tâish nemah'yâmahî\ntâish ishûidyâmahî.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 67,
+      "verse": 8,
+      "ref": "Y 67.8",
+      "orig": "apascâ vå azîshcâ vå mâterãshcâ\nvå agenyå drigudâyanghô vîspô-paitîsh\navaocâmâ vahishtå sraêshtå avâ\nvê vanguhîsh râtôish daregô-bâzâush\nnâshû paitî-vyâdå paitî-sêñdå\nmâtarô jîtayô. ýenghê hâtãm\n... tåscâ ýazamaide!!",
+      "en": "",
+      "zh": ""
+    }
+  ]
+}

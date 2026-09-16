@@ -1,0 +1,125 @@
+{
+  "slug": "yasna-60",
+  "siglum": "Y 60",
+  "title_zh": "亞斯納 第 60 章",
+  "title_en": "Yasna 60",
+  "canon": "avestan",
+  "volume": "yasna",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/yasna/y54to72.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "米爾斯（L. H. Mills）",
+  "en_url": "https://www.avesta.org/yasna/yasna.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "Vohu Mano": "沃胡‧馬納",
+    "Asha Vahishta": "阿沙‧瓦希什塔",
+    "Khshathra Vairya": "赫沙特拉‧瓦伊里亞",
+    "Spenta Armaiti": "斯彭塔‧阿爾邁提",
+    "Haurvatat": "豪爾瓦塔特",
+    "Ameretat": "阿梅雷塔特",
+    "Haoma": "豪麻",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 60,
+      "verse": 1,
+      "ref": "Y 60.1",
+      "orig": "at hvô vanghêush vahyô nâ aibî-\njamyât ýê nå erezûsh savanghô\npathô sîshôit ahyâ anghêush astvatô\nmananghascâ haithyêñg âstîsh ýêñg\nâ-shaêtî ahurô aredrô thwâvãs\nhuzêñtushe speñtô mazdâ.",
+      "en": "Thus that better than the good may he approach, who shows\nto us straight paths of profit appertaining to this bodily life\nand to the mental likewise, in the eternal (?) realms where dwells\nAhura; yea, may he approach it, who is Thy worthy servant, and\ngood citizen, O Great giver Lord!",
+      "zh": ""
+    },
+    {
+      "chapter": 60,
+      "verse": 2,
+      "ref": "Y 60.2",
+      "orig": "tå ahmi nmâne jamyâresh ýå\nashaonãm xshnûtasca ashayasca vyâdaibishca\npaiti-zañtayasca, us-nû ainghâi vîse\njamyât ashemca xshathremca savasca hvarenasca hvâthremca\ndarekhô-fratemathwemca ainghå daênayå\nýat âhurôish zarathushtrôish.",
+      "en": "May these blessings approach this house, which are the wise\nperceptions of the saints, the sacred blessings bestowed through\nthe ritual, their guileless characteristics, together with their\nrecognition of what is due; and may the Righteous Order appear\nfor this village, and the Divine Sovereign Power, together with\nthe benefit and glorious welfare (which ensues),",
+      "zh": ""
+    },
+    {
+      "chapter": 60,
+      "verse": 3,
+      "ref": "Y 60.3",
+      "orig": "asista-nû ainghat haca vîsat gâush buyât\nasistem ashem asistem narsh ashaonô aojô asistô\nâhûirish tkaêshô.",
+      "en": "And with these the long enduring prominence of this Religion\nof Ahura's, the Zarathushtrian Faith. And may the Kine be now\nwith greatest speed within (the farm-yard of) this house, most\nspeedily may the rewarded sanctity and the strength of the holy\nman be here, most speedily as well Ahura's lore.",
+      "zh": ""
+    },
+    {
+      "chapter": 60,
+      "verse": 4,
+      "ref": "Y 60.4",
+      "orig": "jamyãn ithra ashâunãm vanguhîsh\nsûrå speñtå fravashayô ashôish\nbaêshaza hacimnå zem-frathangha dânu-drâjangha\nhvare-barezangha ishtêe vanghanghãm paitishtâtêe\nâtaranãm frasha-vaxshyâi rayãmca hvarenanghãmca.",
+      "en": "And may the\ngood and heroic and bountiful Fravashis of the saints come here,\nand may they go hand in hand with us with the healing virtues\nof (their) blessed gifts as wide-spread as the earth, as far-spread\nas the rivers, as high-reaching as the sun, for the furtherance\nof the better men, for the hindrance of the hostile, and for the\nabundant growth of riches and of glory.",
+      "zh": ""
+    },
+    {
+      "chapter": 60,
+      "verse": 5,
+      "ref": "Y 60.5",
+      "orig": "vainît ahmi nmâne sraoshô asrushtîm\nâxshtish anâxshtîm râitish arâitîm\nârmaitish tarômaitîm arshuxdhô vâxsh\nmithaoxtem vâcim asha-drujem.",
+      "en": "May Sraosha (Obedience) conquer disobedience within this house,\nand may peace triumph over discord here, and generous giving over\navarice, reverence over contempt, speech with truthful words over\nlying utterance. May the Righteous Order gain the victory over\nthe Demon of the Lie.",
+      "zh": ""
+    },
+    {
+      "chapter": 60,
+      "verse": 6,
+      "ref": "Y 60.6",
+      "orig": "ýatha ahmya ameshå speñta sraoshâdha\nashyâdha paitishãn vanghûsh ýasnãsca\nvahmãsca vohû ýasnemca vahmemca huberetîmca\nushtaberetîmca vañtaberetîmca â-darekhât\nhvâ-bairyât.",
+      "en": "As in this (house) the Bountiful Immortals seek for good Yasnas\nand good praises from the blessed Sraosha (who governs here),\nand as they seek for (one) good sacrifice and act of homage (more\nespecially their own) which is a good offering (to them) for (our)\nsalvation, and a good offering in praise, together with a long\ncontinued offering of the entire self, (7) let not then (their)\nbrilliant glory ever desert this house, nor the bright abundance,\nnor an illustrious offspring legitimately born, nor that long\ncontinued companionship which is the furtherance of that good\nblessedness which teaches concerning glory.\n8-10.\n (= Y8.5-7).",
+      "zh": ""
+    },
+    {
+      "chapter": 60,
+      "verse": 7,
+      "ref": "Y 60.7",
+      "orig": "mâ ýave imat nmânem hvâthravat hvarenô\nfrazahît mâ hvâthravaiti îshtish mâ\nhvâthravaiti âsna frazaiñtish hvâthrô-disyehe\npaiti ashôishca vanghuyå darekhem haxma.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 60,
+      "verse": "8-10",
+      "ref": "Y 60.8-10",
+      "orig": "(zôt,) vasasca-tû ahura-mazda ushtâca xshaêsha\nhavanãm dâmanãm ... (zôt u râspî,)\nýâ âhûirish zarathushtrish!",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 60,
+      "verse": 11,
+      "ref": "Y 60.11",
+      "orig": "ýatha-nô ånghãm shyâtô\nmanå vahishtô urvãnô hvâthravaitîsh\ntanvô heñti vahishtô anghush âkåscôit\nâhûire mazda jaseñtãm.",
+      "en": "In order that our minds may be delighted, and our souls the\nbest, let our bodies be glorified as well, and let them; O Mazda!\ngo likewise openly (unto Heaven) as the best world of the saints\nas devoted to Ahura, (12) and accompanied by Asha Vahishta (who\nis Righteousness the Best), and the most beautiful! And may we\nsee Thee, and may we, approaching, come around about Thee, and\nattain to entire companionship with Thee! And we sacrifice to\nthe Righteous Order, the best, the most beautiful, the bounteous\nImmortal!\n<H2 id=y61",
+      "zh": ""
+    },
+    {
+      "chapter": 60,
+      "verse": 12,
+      "ref": "Y 60.12",
+      "orig": "asha vahishta asha sraêshta daresâma thwâ\npairi thwâ jamyama hamem thwâ haxma. ashem vohû....\n(asha vahishta ... vahishtâi ashem (3).)",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 60,
+      "verse": 13,
+      "ref": "Y 60.13",
+      "orig": "ýathâ ahû vairyô ... (4). ashem vohû\n... (3). ahunem vairîm ýazamaide, ashem vahishtem\nsraêshtem ameshem speñtem ýazamaide. ýenghê\nhâtãm ... tåscâ ýazamaide!!",
+      "en": "",
+      "zh": ""
+    }
+  ]
+}

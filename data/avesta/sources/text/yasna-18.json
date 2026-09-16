@@ -1,0 +1,109 @@
+{
+  "slug": "yasna-18",
+  "siglum": "Y 18",
+  "title_zh": "亞斯納 第 18 章",
+  "title_en": "Yasna 18",
+  "canon": "avestan",
+  "volume": "yasna",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/yasna/y13to27.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "米爾斯（L. H. Mills）",
+  "en_url": "https://www.avesta.org/yasna/yasna.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "Vohu Mano": "沃胡‧馬納",
+    "Asha Vahishta": "阿沙‧瓦希什塔",
+    "Khshathra Vairya": "赫沙特拉‧瓦伊里亞",
+    "Spenta Armaiti": "斯彭塔‧阿爾邁提",
+    "Haurvatat": "豪爾瓦塔特",
+    "Ameretat": "阿梅雷塔特",
+    "Haoma": "豪麻",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 18,
+      "verse": 1,
+      "ref": "Y 18.1",
+      "orig": "ashem vohû vahishtem astî ... (3)! dâidî\nmôi ýê gãm tashô apascâ\nurvaråscâ ameretâtâ haurvâtâ\nspênishtâ mainyû mazdâ tevîshî\nutayûitî mananghâ vohû sênghê!",
+      "en": "Grant me, Thou who art maker of the Kine, plants and waters,\nImmortality, Mazda! Grant, too, Weal, Spirit bounteous.... (See\nY51.7 and Y47).\n<H2 id=y19",
+      "zh": ""
+    },
+    {
+      "chapter": 18,
+      "verse": 2,
+      "ref": "Y 18.2",
+      "orig": "speñtâ mainyû vahishtâcâ mananghâ\nhacâ ashât shyaothanâcâ vacanghâcâ\nahmâi dãn haurvâtâ ameretâtâ\nmazdå xshathrâ ârmaitî ahurô. (speñtâ\nmainyû ... ârmaitî ahurô (2).)",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 18,
+      "verse": 3,
+      "ref": "Y 18.3",
+      "orig": "(zôt,) ahyâ manyêush spênishtahyâ\nvahishtem hizvâ uxdhâish vanghêush êeânû\nmananghô ârmatôish zastôibyâ shyaothanâ\nverezyat ôyâ cistî, hvô ptâ ashahyâ\nmazdå.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 18,
+      "verse": 4,
+      "ref": "Y 18.4",
+      "orig": "ahyâ manyêush tvêm ahî tâ speñtô\nýê ahmâi gãm rânyô-skeretîm\nhêm-tashat at hôi vâstrâi râmâ-\ndå ârmaitîm hyat hêm vohû mazdâ\nhême-frashtâ mananghâ.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 18,
+      "verse": 5,
+      "ref": "Y 18.5",
+      "orig": "ahmât manyêush râreshyeiñtî\ndregvañtô mazdâ speñtât nôit\nathâ ashâunô kasêushcît nâ\nashâunê kâthê anghat isvâcît\nhãs paraosh akô dregvâitê.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 18,
+      "verse": 6,
+      "ref": "Y 18.6",
+      "orig": "tâcâ speñtâ mainyû mazdâ\nahurâ ashâunê côish ýâ-zî\ncîcâ vahishtâ hanare thwahmât zaoshât\ndregvå baxshaitî ahyâ shyaothanâish akât\nâshyãs mananghô.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 18,
+      "verse": 7,
+      "ref": "Y 18.7",
+      "orig": "tâ då speñtâ mainyû mazdâ\nahurâ âthrâ vanghâu vîdâitîm\nrânôibyâ ârmatôish debãzanghâ\nashah'yâcâ hâ-zî pourûsh isheñtô\nvâurâitê!",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 18,
+      "verse": 8,
+      "ref": "Y 18.8",
+      "orig": "(râspî,) speñtâ mainyû vahishtâcâ\nmananghâ hacâ ashât shyaothanâcâ\nvacanghâcâ ahmâi dãn haurvâtâ\nameretâtâ mazdå xshathrâ ârmaitî\nahurô (2). ashem vohû vahishtem astî ... (3).\nspeñtâ-mainyûm hâitîm ýazamaide.\nýenghê hâtãm âat ýesnê\npaitî ... !",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 18,
+      "verse": 9,
+      "ref": "Y 18.9",
+      "orig": "ýathâ ahû vairyô athâ ratush\nashâtcît hacâ ... (4). ashem vohû vahishtem\nastî ... (3). ahunem vairîm ýazamaide, ashem\nvahishtem sraêshtem ameshem speñtem ýazamaide.\nýenghê hâtãm âat ýesnê\npaitî ... !!",
+      "en": "",
+      "zh": ""
+    }
+  ]
+}

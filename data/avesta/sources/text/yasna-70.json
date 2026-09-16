@@ -1,0 +1,93 @@
+{
+  "slug": "yasna-70",
+  "siglum": "Y 70",
+  "title_zh": "亞斯納 第 70 章‧向不朽聖者與教制",
+  "title_en": "Yasna 70",
+  "canon": "avestan",
+  "volume": "yasna",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/yasna/y54to72.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "米爾斯（L. H. Mills）",
+  "en_url": "https://www.avesta.org/yasna/yasna.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "Vohu Mano": "沃胡‧馬納",
+    "Asha Vahishta": "阿沙‧瓦希什塔",
+    "Khshathra Vairya": "赫沙特拉‧瓦伊里亞",
+    "Spenta Armaiti": "斯彭塔‧阿爾邁提",
+    "Haurvatat": "豪爾瓦塔特",
+    "Ameretat": "阿梅雷塔特",
+    "Haoma": "豪麻",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 70,
+      "verse": 1,
+      "ref": "Y 70.1",
+      "orig": "(zôt,) tã ýazâi tem pairi-jasâi\nvañtâ ýã ameshê speñtê\nhuxshathrê hudhånghô aêsha aibi-gereñte,\ntem bakhem tem ratûm ýazamaide ýim ahurem\nmazdãm dadhvånghem rapañtem tarshvånghem\nvîspa vohu, tem ratûm ýazamaide ýim\nzarathushtrem spitâmem.",
+      "en": "I would worship these (the Bountiful Immortals) with my sacrifice,\nthose who rule aright, and who dispose (of all) aright, and this\none (especially) I would approach with my praise, (Ahura Mazda).\nHe is thus hymned (in our praise-songs). Yea, we worship in our\nsacrifice that deity and lord, who is Ahura Mazda, the Creator,\nthe gracious helper, the maker of all good things; and we worship\nin our sacrifice Zarathushtra Spitama, that chieftain (of the\nrite).",
+      "zh": ""
+    },
+    {
+      "chapter": 70,
+      "verse": 2,
+      "ref": "Y 70.2",
+      "orig": "tâ-nô dâta tâ erezvâna fravaocâma\nfraca vaocâma ýâ ahurahe mazdå ýâ\nvanghêush mananghô ýâ ashahe vahishtahe\nýâ xshathrahe vairyehe ýâ speñtayå\nârmatôish ýâ haurvatå ameretâtå\nýâ gêush tashne gêush urune ýâ\nâthre ahurahe mazdå",
+      "en": "And we would declare those institutions established for us,\nexact (and undeviating as they are). And I would declare forth\nthose of Ahura Mazda, those of the Good Mind, and of Asha Vahishta\n(who is Righteousness the Best), and those of Khshatra-vairya\n(the Realm to be desired), and those of the Bountiful Aramaiti\n(the Piety within us), and those of Weal and Immortality, and\nthose which appertain to the body of the Kine, and to the Kine's\nsoul, and those which appertain to Ahura Mazda's Fire, (3) and\nthose of Sraosha (Obedience) the blessed, and of Rashnu the most\njust, and those of Mithra of the wide pastures, and of (the good\nand) holy Wind, and of the good Mazdayasnian Religion, and of\nthe good and pious Prayer for blessings, and those of the good\nand pious Prayer which frees one from belying, and the good and\npious Prayer for blessing against unbelieving words. 4. (And these\nwe would declare) in order that we may attain unto that speech\nwhich is uttered with (true) religious zeal, or that we may be\nas prophets of the provinces, that we may succor him who lifts\nhis voice (for Mazda), that we may be as prophets who smite with\nvictory, the befriended of Ahura Mazda, and persons the most useful\nto Him, holy men (indeed) who think good thoughts, and speak good\nwords, and do good deeds. 5. That he may approach us with the\nGood Mind, and that (our souls) may advance in good, let it thus\ncome; yea, 'how may my soul advance in good? let it thus advance.'",
+      "zh": ""
+    },
+    {
+      "chapter": 70,
+      "verse": 3,
+      "ref": "Y 70.3",
+      "orig": "ýâ sraoshahe ashyehe ýâ rashnaosh\nrazishtahe ýâ mithrahe vouru-gaoyaotôish ýâ\nvâtahe ashaonô ýâ daênayå\nvanghuyå mâzdayasnôish ýâ dahmayå\nvanghuyå âfritôish ýâ dahmayå\nvanghuyå anâdruxtôish ýâ dahmayå\nvanghuyå anavauruxtôish.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 70,
+      "verse": 4,
+      "ref": "Y 70.4",
+      "orig": "ýatha îzha vâcim nâshîma ýatha\nvâ saoshyañtô dah'yunãm suyamna vâcim\nbareñtû, buyama saoshyañtô buyama verethrâjanô\nbuyama ahurahe mazdå frya vâzishta astayô ýôi\nnarô ashavanô humatâish mainimna hûxtâish\nmrvatô hvarshtâish verezyañtô.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 70,
+      "verse": 5,
+      "ref": "Y 70.5",
+      "orig": "ýathâ-nê â vohû jimat mananghâ,\nâ vohû urvâshat âgemat tâ, kâ-mê\nurvâ vohû urvâshat âgemat tâ!",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 70,
+      "verse": 6,
+      "ref": "Y 70.6",
+      "orig": "apãm vanguhînãm ýazamaide frâitîmca\npaititîmca aibijaretîmca berezañtem ahurem\nxshathrîm xshaêtem apãm napâtem aurvat-aspem\nýazamaide, vîspayå ashaonô stôish\nýasnâica vahmâica xshnaothrâica frasastayaêca\nsraoshô astu.",
+      "en": "We praise the flood and ebb of the good waters, and their\nroar, and that high Ahura, the royal Apam-napat, the glittering\none, of the fleet horses; and this for the sacrifice, and homage,\nand propitiation, and praise of the entire holy creation; and\nmay Sraosha (Obedience) be here (to aid us).",
+      "zh": ""
+    },
+    {
+      "chapter": 70,
+      "verse": 7,
+      "ref": "Y 70.7",
+      "orig": "sraoshem ashîm ýazamaide, ratûm berezañtem\nýazamaide ýim ahurem mazdãm ýô\nashahe apanôtemô ýô ashahe jakhmûshtemô,\nvîspa sravå zarathushtri ýazamaide, vîspaca\nhvarshta shyaothna ýazamaide varshtaca vareshyamnaca. ýenghê\nhâtãm ... tåscâ ýazamaide!!",
+      "en": "(Yea), we sacrifice to Sraosha, Obedience the blessed.\n<H2 id=y71",
+      "zh": ""
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "slug": "yasna-61",
+  "siglum": "Y 61",
+  "title_zh": "亞斯納 第 61 章",
+  "title_en": "Yasna 61",
+  "canon": "avestan",
+  "volume": "yasna",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/yasna/y54to72.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "米爾斯（L. H. Mills）",
+  "en_url": "https://www.avesta.org/yasna/yasna.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "Vohu Mano": "沃胡‧馬納",
+    "Asha Vahishta": "阿沙‧瓦希什塔",
+    "Khshathra Vairya": "赫沙特拉‧瓦伊里亞",
+    "Spenta Armaiti": "斯彭塔‧阿爾邁提",
+    "Haurvatat": "豪爾瓦塔特",
+    "Ameretat": "阿梅雷塔特",
+    "Haoma": "豪麻",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 61,
+      "verse": 1,
+      "ref": "Y 61.1",
+      "orig": "(zôt,) ahunemca vairîm fraêshyâmahî\nañtareca zãm añtareca asmanem ashemca vahishtem\nfraêshyâmahî añtareca zãm añtareca\nasmanem ýenghê-hâtãmca hufrâyashtãm\nfraêshyâmahî añtareca zãm añtareca\nasmanem dahmaheca narsh ashaonô dahmãmca vanguhîm\nâfritîm fraêshyâmahî añtareca\nzãm añtareca asmanem,",
+      "en": "Let us peal forth the Ahuna-vairya in our liturgy between\nthe heaven and earth, and let us send forth the Asha Vahishta\nin our prayer the same, and the Yenhe hatam. And let us send forth\nin our liturgies between the heaven and earth the pious and good\nprayer of the pious man for blessings, (2) for the encounter with,\nand for the displacement of Angra Mainyu with his creatures which\nare likewise evil as he is, for he is filled with death (for those\nwhom he has made). Aye, let us send that petition forth for the\nencounter with, and for the dislodgment of the Kahvaredhas and\nof the individual Kahvaredha the male, and the female (to the\nlast individual of each), (3) and for the encounter with, and\nthe dislodgment of the Kayadhas, and of the individual Kayadhians,\nmale and female, and of the thieves and robbers, of the Zandas,\nand the sorcerers, of the covenant breakers, and of those who\ntamper with the covenants. 4. Yea, we send it forth for the encounter\nwith, and for the overthrow of the murderers of the saints, and\nof those who hate and torment us for our Faith, and of those who\npersecute the ritual, and the tyrant full of death. Yea, let us\npeal them forth for the encounter with and the overthrow of the\nwicked, O Zarathushtra Spitama! whoever they may be, whose thoughts,\nand words, and works are not congenial to the holy ritual laws.",
+      "zh": ""
+    },
+    {
+      "chapter": 61,
+      "verse": 2,
+      "ref": "Y 61.2",
+      "orig": "hamistayaêca nizhberetayaêca añgrahe manyêush\nmat-dâmanô duzhdâmanô pouru-mahrkahe hamistayaêca\nnizhberetayaêca kahvaredhanãmca kahvareidhinãmca\nhamistayaêca nizhberetayaêca kahvaredhaheca kahvareidhyåsca",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 61,
+      "verse": 3,
+      "ref": "Y 61.3",
+      "orig": "hamistayaêca nizhberetayaêca kayadhanãmca\nkayeidhinãmca hamistayaêca nizhberetayaêca\nkayadhaheca kâidhyåsca hamistayaêca nizhberetayaêca\ntâyunãmca hazasnãmca hamistayaêca nizhberetayaêca\nzañdãmca ýâtumatãmca hamistayaêca\nnizhberetayaêca mithrô-zyãmca mithrô-drujemca",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 61,
+      "verse": 4,
+      "ref": "Y 61.4",
+      "orig": "hamistayaêca nizhberetayaêca ashavakhnãmca\nashava-tbaêshãmca hamistayaêca nizhberetayaêca\nashemaokhaheca anashaonô sâstraheca pouru-mahrkahe\nhamistayaêca nizhberetayaêca kahe kahyâcît\ndrvatãm arathwyô-mananghãm arathwyô-vacanghãm\narathwyô-shyaothenanãm spitama zarathushtra.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 61,
+      "verse": 5,
+      "ref": "Y 61.5",
+      "orig": "katha drujem nîsh ahmat â nîsh-nâshâma,\nnîsh-nâshâma saoshyañtô drujem,\nkatha nîsh-nâshâma ýatha hîm janâma\nxshayamnô axshayamanãm vîspâish haca\nkarshvãn ýâish hapta hamistêe nizhberetêe\nvîspayå drvatô stôish, stavas ashâ\nýê hudå ýôi heñtî!!",
+      "en": "And how shall we drive the Demon of the Lie from hence from\nus? Aye, how shall we, the prophets who are yet to serve and save\n(thy people), drive the Druj from hence, so that we, having power\nover her as being utterly without power, may drive her hence with\nblow from the seven Karshvars, for the encounter with, and for\nthe dislodgment of the entire evil world?\n<H2 id=y62",
+      "zh": ""
+    }
+  ]
+}

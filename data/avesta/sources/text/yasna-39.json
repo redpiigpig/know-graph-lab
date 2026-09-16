@@ -1,0 +1,77 @@
+{
+  "slug": "yasna-39",
+  "siglum": "Y 39",
+  "title_zh": "亞斯納 第 39 章‧七章禱‧向牛魂",
+  "title_en": "Yasna 39",
+  "canon": "avestan",
+  "volume": "yasna",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/yasna/y35to42.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "米爾斯（L. H. Mills）",
+  "en_url": "https://www.avesta.org/yasna/yasna.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "Vohu Mano": "沃胡‧馬納",
+    "Asha Vahishta": "阿沙‧瓦希什塔",
+    "Khshathra Vairya": "赫沙特拉‧瓦伊里亞",
+    "Spenta Armaiti": "斯彭塔‧阿爾邁提",
+    "Haurvatat": "豪爾瓦塔特",
+    "Ameretat": "阿梅雷塔特",
+    "Haoma": "豪麻",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 39,
+      "verse": 1,
+      "ref": "Y 39.1",
+      "orig": "ithâ ât ýazamaidê gêush urvânemcâ\ntashânemcâ ahmâkêñg âat urunô\npasukanãmcâ ýôi nå jîjisheñtî\nýaêibyascâ tôi â ýaêcâ\naêibyô â dà anghen.",
+      "en": "And now we sacrifice to the Kine's soul, and to her created\nbody, and we sacrifice to the souls of cattle who are fit to live\n(for us), and whose (we?) are, such as are the same to them.",
+      "zh": ""
+    },
+    {
+      "chapter": 39,
+      "verse": 2,
+      "ref": "Y 39.2",
+      "orig": "daitikanãmcâ aidyûnãm hyat urunô\nýazamaidê, ashâunãm âat urunô\nýazamaidê kudô-zâtanãmcît\nnarãmcâ nâirinãmcâ ýaêshãm\nvahehîsh daênå vanaiñtî vâ\nvêñghen vâ vaonarê vâ.",
+      "en": "And we worship the souls of those beasts which are tame and\nbroken in, and of wild herds, and the souls of the saints wherever\nthey were born, both of men and of women, whose good consciences\nare conquering in the strife against the Daevas, or will conquer,\nor have conquered.",
+      "zh": ""
+    },
+    {
+      "chapter": 39,
+      "verse": 3,
+      "ref": "Y 39.3",
+      "orig": "ât ithâ ýazamaidê vanghûshcâ\nît vanguhîshcâ ît speñtêñg\nameshêñg ýavaêjyô ýavaêsvô\nýôi vanghêush â-mananghô shyeiñtî\nýåscâ ûitî.",
+      "en": "And now we worship the Bountiful Immortals (all) the good,\nand both those male, and those female (by their names). The males\namong them do we worship, ever living, and ever helpful, who dwell\nbeside the pious, and the females thus the same.",
+      "zh": ""
+    },
+    {
+      "chapter": 39,
+      "verse": 4,
+      "ref": "Y 39.4",
+      "orig": "ýathâ tû-î ahuramazdâ mêñghâcâ\nvaocascâ dåscâ vareshcâ ýâ\nvohû athâ tôi dademahî athâ cîshmahî\nathâ thwâ âish ýazamaidê athâ\nnemah'yâmahî athâ ishûidyâmahî\nthwâ mazdâ ahurâ. (ýathâ tû-î\n... mazdâ ahurâ (2).)",
+      "en": "As Thou, O\nAhura Mazda! hast thought and spoken, as thou hast determined,\nand hast done these things (effecting) what is good, therefore\ndo we offer to Thee, therefore do we ascribe to Thee our praises,\nand worship Thee, and bow ourselves before Thee; and therefore\nwould we direct our prayers to Thee, Ahura! with confessions of\nour sin.",
+      "zh": ""
+    },
+    {
+      "chapter": 39,
+      "verse": 5,
+      "ref": "Y 39.5",
+      "orig": "vanghêush hvaêtêush hvaêtâtâ\nvanghêush ashahyâ thwâ pairijasâmaidê\nvanghuyå feseratvô vanghuyå ârmatôish.\nýenghê hâtãm ... tåscâ ýazamaide\n(2)!!",
+      "en": "And we thus draw near to Thee together with the good kinship\nof our kindred, with that of Righteousness the blessed, and the\ngood law of thrift and energy and the good Piety, the ready mind\n(within Thy folk)!\n<H2 id=y40",
+      "zh": ""
+    }
+  ]
+}

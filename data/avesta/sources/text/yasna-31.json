@@ -1,0 +1,221 @@
+{
+  "slug": "yasna-31",
+  "siglum": "Y 31",
+  "title_zh": "亞斯納 第 31 章‧伽薩‧道路的詰問",
+  "title_en": "Yasna 31",
+  "canon": "avestan",
+  "volume": "yasna",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/yasna/y28to34.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "米爾斯（L. H. Mills）",
+  "en_url": "https://www.avesta.org/yasna/yasna.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "Vohu Mano": "沃胡‧馬納",
+    "Asha Vahishta": "阿沙‧瓦希什塔",
+    "Khshathra Vairya": "赫沙特拉‧瓦伊里亞",
+    "Spenta Armaiti": "斯彭塔‧阿爾邁提",
+    "Haurvatat": "豪爾瓦塔特",
+    "Ameretat": "阿梅雷塔特",
+    "Haoma": "豪麻",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 31,
+      "verse": 1,
+      "ref": "Y 31.1",
+      "orig": "tâ vê urvâtâ mareñtô\nagushtâ vacå sêñghâmahî aêibyô\nýôi urvâtâish drûjô ashahyâ\ngaêthå vîmereñcaitê atcît\naêibyô vahishtâ ýôi zarazdå\nanghen mazdâi.",
+      "en": "Mindful of your commands, we proclaim words unpleasant for\nthem to hear that after the commands of the Lie destroy the creatures\nof Right, but most welcome to those that give their heart to Mazda.",
+      "zh": ""
+    },
+    {
+      "chapter": 31,
+      "verse": 2,
+      "ref": "Y 31.2",
+      "orig": "ýezî âish nôit urvânê\nadvå aibî-dereshtâ vah'yå at vå\nvîspêñg âyôi ýathâ\nratûm ahurô vaêdâ mazdå ayå\nãsayå ýâ ashât hacâ jvâmahî.",
+      "en": "If by reason of these things the better path is not in sight\nfor choosing, then will I come to you all as judge of the parties\ntwain whom Ahura Mazda knoweth, that we may live according to\nthe Right.",
+      "zh": ""
+    },
+    {
+      "chapter": 31,
+      "verse": 3,
+      "ref": "Y 31.3",
+      "orig": "ýãm då mainyû athrâcâ\nashâcâ côish rânôibyâ xshnûtem\ndà hyat urvatem cazdôñnghvadebyô tat\nnê mazdâ vîdvanôi vaocâ hizvâ\nthwahyâ ånghô ýâ jvañtô\nvîspêñg vâurayâ.",
+      "en": "What award Thou givest through the (holy) Spirit and through\nthe Fire and hast taught through Asha, to both the parties, and\nwhat the decision is for the wise, this do Thou tell us, Mazda,\nthat we may know, even with the tongue of Thine own mouth, that\nI may convert all living men.",
+      "zh": ""
+    },
+    {
+      "chapter": 31,
+      "verse": 4,
+      "ref": "Y 31.4",
+      "orig": "ýadâ ashem zevîm anghen mazdåscâ\nahurånghô ashicâ ârmaitî vahishtâ\nishasâ mananghâ maibyô xshathrem aojôñghvat\nýehyâ veredâ vanaêmâ drujem.",
+      "en": "If Asha is to be invoked and Mazda and the other Ahuras and\nAshi and Armaiti, do thou seek for me, O Vohu Manah, the mighty\nDominion, by the increase of which we might vanquish the Lie.",
+      "zh": ""
+    },
+    {
+      "chapter": 31,
+      "verse": 5,
+      "ref": "Y 31.5",
+      "orig": "tat môi vîcidyâi vaocâ hyat môi\nashâ dâtâ vahyô vîduyê vohû\nmananghâ mêñcâ daidyâi ýehyâ-mâ\nereshish tâcît mazdâ ahurâ ýâ\nnôit vâ anghat anghaitî vâ.",
+      "en": "Tell me therefore what ye, O thou Right, have appointed me\nas the better portion, for me to determine, to know and to keep\nin mind, O thou Good Thought — which portion they envy me. Tell\nme of all these things. O Mazda Ahura, that shall not or shall\nbe.",
+      "zh": ""
+    },
+    {
+      "chapter": 31,
+      "verse": 6,
+      "ref": "Y 31.6",
+      "orig": "ahmâi anghat vahishtem ýê môi vîdvå\nvaocât haithîm mãthrem ýim haurvatâtô\nashahyâ ameretâtascâ, mazdâi avat xshathrem\nhyat hôi vohû vaxshat mananghâ.",
+      "en": "To him shall the best befall, who, as one that knows, speaks\nto me Right's truthful word of Welfare and of Immortality; even\nthe Dominion of Mazda which Good Thought shall increase for him.",
+      "zh": ""
+    },
+    {
+      "chapter": 31,
+      "verse": 7,
+      "ref": "Y 31.7",
+      "orig": "ýastâ mañtâ pouruyô raocêbîsh\nrôithwen hvâthrâ hvô xrathwâ dãmish\nashem ýâ dârayat vahishtem manô, tâ\nmazdâ mainyû uxshyô ýê â\nnûrêmcît ahurâ hâmô.",
+      "en": "About which he in the beginning thus thought, \"let the\nblessed realms be filled with Light\", he it is that by his\nwisdom created Right. (Those realms) that the Best Thought shall\npossess those dost Thou exalt, O Mazda, through the Spirit, which,\nO Ahura, is ever the same.",
+      "zh": ""
+    },
+    {
+      "chapter": 31,
+      "verse": 8,
+      "ref": "Y 31.8",
+      "orig": "at thwâ mêñghî pourvîm mazdâ\nýezîm stôi mananghâ vanghêush patarêm\nmananghô hyat thwâ hêm cashmainî hêñgrabem\nhaithîm ashahyâ dãmîm anghêush\nahurem shyaothanaêshû.",
+      "en": "I recognize Thee, O Mazda, in my thought, that Thou the First\nart (also) the Last — that Thou art Father of Vohu Manah; --\nwhen I apprehend Thee with mine eye, that Thou art the true Creator\nof Right [Asha], and art the Lord to judge the actions of life.",
+      "zh": ""
+    },
+    {
+      "chapter": 31,
+      "verse": 9,
+      "ref": "Y 31.9",
+      "orig": "thwôi as ârmaitîsh thwê â gêush\ntashâ as xratûsh manyêush mazdâ ahurâ\nhyat ah'yâi dadå pathãm vâstryât\nvâ âitê ýê vâ nôit\nanghat vâstryô.",
+      "en": "Thine was Armaiti, Thine the Ox-Creator, (namely) the Wisdom\nof the Spirit, O Mazda Ahura, because Thou didst give (the cattle)\nchoice whether to depend on a husbandman or one who is no husbandman.",
+      "zh": ""
+    },
+    {
+      "chapter": 31,
+      "verse": 10,
+      "ref": "Y 31.10",
+      "orig": "at hî ayå fravaretâ vâstrîm\nah'yâi fshuyañtem ahurem ashavanem vanghêush\nfshêñghîm mananghô, nôit mazdâ\navâstryô davãscinâ humeretôish\nbaxshtâ.",
+      "en": "So she chose for herself out of the two the cattle-tending\nhusbandman as her lord to guard the Right, the man that advances\nGood Thought. He that is no-husbandman, O Mazda, however eager\nhe be, has no part in this good message.",
+      "zh": ""
+    },
+    {
+      "chapter": 31,
+      "verse": 11,
+      "ref": "Y 31.11",
+      "orig": "hyat nê mazdâ paourvîm gaêthåscâ\ntashô daênåscâ thwâ mananghâ\nxratûshcâ hyat astvañtem dadå ushtanem\nhyat shyaothanâcâ sêñghãscâ\nýathrâ varenêñg vaså dâyetê.",
+      "en": "When Thou, O Mazda, in the beginning didst create the Individual\nand the Individuality, through Thy Spirit, and powers of understanding\n- when Thou didst make life clothed with the body, when (Thou\nmadest) actions and teachings, whereby one may exercise one's\nconvictions at one's free-will;",
+      "zh": ""
+    },
+    {
+      "chapter": 31,
+      "verse": 12,
+      "ref": "Y 31.12",
+      "orig": "athrâ vâcem baraitî mithahvacå vâ\nereshvacå vâ dà vîdvå vâ\nevîdvå vâ ahyâ zeredâcâ mananghâcâ,\nânush-haxsh ârmaitîsh mainyû peresâitê\nýathrâ maêthâ.",
+      "en": "Then lifts up his voice the false speaker or the true speaker,\nhe that knows or he that knows not, (each) according to his own\nheart and mind. Passing from one to another Armaiti confers with\nthe spirit in whom there is wavering.",
+      "zh": ""
+    },
+    {
+      "chapter": 31,
+      "verse": 13,
+      "ref": "Y 31.13",
+      "orig": "ýâ frasâ âvîshyâ ýâ\nvâ mazdâ peresâitê tayâ ýê\nvâ kasêush aênanghô â mazishtãm\nayamaitê bûjem tâ cashmêñg thwisrâ\nhârô aibî ashâ aibî vaênahî\nvîspâ.",
+      "en": "Whatever open or whatever secret (acts) may be visited with\npunishment, or whether a person for a little sin demands the highest\npunishment, — of all this through Asha Thou art aware, observing\nit with Thy flashing eye.",
+      "zh": ""
+    },
+    {
+      "chapter": 31,
+      "verse": 14,
+      "ref": "Y 31.14",
+      "orig": "tâ-thwâ peresâ ahurâ ýâ-zî\nâitî jêñghaticâ ýå\nishudô dadeñtê dâthranãm hacâ\nashâunô ýåscâ mazdâ dregvôdebyô\nýathâ tå anghen hêñkeretâ\nhyat.",
+      "en": "These things I ask Thee, O Ahura, how will these come and\nhappen — the dues, that in accord with the records are appointed\nfor the righteous, and those, O Mazda, for the followers of the\nDruj, — how shall these be when they come to the reckoning.",
+      "zh": ""
+    },
+    {
+      "chapter": 31,
+      "verse": 15,
+      "ref": "Y 31.15",
+      "orig": "peresâ avat ýâ mainish ýê\ndregvâitê xshathrem hunâitî dush-shyaothanâi\nahurâ ýê nôit jyôtûm hanare\nvînastî vâstryehyâ aênanghô\npasêush vîrâatcâ adrujyañtô.",
+      "en": "This I ask, what penalty is for him who seeks to achieve kingdom\nfor a liar, for a man of ill deeds, O Ahura, who finds not his\nliving without injury to the husbandman's cattle and men, though\nhe does him no injury.",
+      "zh": ""
+    },
+    {
+      "chapter": 31,
+      "verse": 16,
+      "ref": "Y 31.16",
+      "orig": "peresâ avat ýathâ hvô ýê\nhudânush demanahyâ xshathrem shôithrahyâ\nvâ dah'yêush vâ ashâ fradathâi asperezatâ\nthwâvãs mazdâ ahurâ ýadâ\nhvô anghat ýâ-shyaothanascâ.",
+      "en": "This I ask, whether the understanding man, who strives to\nadvance the Dominion over the house, or district, or land through\nAsha, shall become like Thee, O Mazda Ahura, when will he be and\nhow will he act?",
+      "zh": ""
+    },
+    {
+      "chapter": 31,
+      "verse": 17,
+      "ref": "Y 31.17",
+      "orig": "katârêm ashavâ vâ dregvå vâ\nverenvaitê mazyô, vîdvå vîdushê\nmraotû mâ evîdvå aipî-dêbâvayat,\nzdî-nê mazdâ ahurâ vanghêush fradaxshtâ\nmananghô.",
+      "en": "Which is the greater — what the follower of Asha or what\nthe follower of Druj believe? Let him that knows inform the wise;\nno longer let him that knows nothing deceive. Be to us, O Mazda\nAhura, the Teacher of Good Thought.",
+      "zh": ""
+    },
+    {
+      "chapter": 31,
+      "verse": 18,
+      "ref": "Y 31.18",
+      "orig": "mâ-cish at vê dregvatô mãthrãscâ\ngûshtâ sâsnåscâ, âzî\ndemânem vîsem vâ shôithrem vâ dah'yûm\nvâ âdât dushitâcâ marakaêcâ\nathâ îsh sâzdûm snaithishâ.",
+      "en": "Let none of you listen to the words and commands of the follower\nof the Druj; for he brings house and clan and district and land\ninto misery and destruction. Resist them with weapon!",
+      "zh": ""
+    },
+    {
+      "chapter": 31,
+      "verse": 19,
+      "ref": "Y 31.19",
+      "orig": "gûshtâ ýê mañtâ ashem\nahûmbish vîdvå ahurâ erezhuxdhâi\nvacanghãm xshayamnô hizvô vasô thwâ\nâthrâ suxrâ mazdâ vanghâu vîdâtâ\nrãnayå.",
+      "en": "To him should we listen who has understood Asha, to the wise\nHealer of Life O Ahura, who can or will establish the truth of\nthe words of his tongue, when through Thy red Fire, O Mazda, the\nassignment (of rewards) is made to the two parties.",
+      "zh": ""
+    },
+    {
+      "chapter": 31,
+      "verse": 20,
+      "ref": "Y 31.20",
+      "orig": "ýê âyat ashavanem divamnem hôi aparem\nxshyô daregêm âyû temanghô dushhvarethêm\navaêtâs vacô têm vâ ahûm dregvañtô\nshyaothanâish hvâish daênâ naêshat.",
+      "en": "Whosoever cometh over to the Righteous, far from him hereafter\nshall be long age of misery (and) darkness, ill-food, and crying\nof woe. To such an existence, ye followers of the Lie, shall your\nown Self bring you through your (own) action.",
+      "zh": ""
+    },
+    {
+      "chapter": 31,
+      "verse": 21,
+      "ref": "Y 31.21",
+      "orig": "mazdå dadât ahurô haurvatô ameretâtascâ\ndà bûrôish â ashah'yâcâ hvâpaithyât\nxshathrahyâ sarô vanghêush vazdvarê mananghô\nýê hôi mainyû shyaothanâishcâ\nurvathô.",
+      "en": "Mazda Ahura by virtue of His absolute Lordship will grant\na perpetuity of communion with Haurvatat and Ameretat, and with\nAsha, with Khshathra, and with Vohu Manah, to him that in spirit\nand in action is his friend.",
+      "zh": ""
+    },
+    {
+      "chapter": 31,
+      "verse": 22,
+      "ref": "Y 31.22",
+      "orig": "cithrâ î hudånghê ýathanâ\nvaêdemnâi mananghâ vohû hvô xshathrâ\nashem vacanghâ shyaothanâcâ haptî hvô\ntôi mazdâ ahurâ vâzishtô anghaitî\nastish!",
+      "en": "Clear it is to the man of understanding, as one who has realized\nit with his thought. He upholds Asha together with good Dominion\nby his word and deed. He will be, O Mazda Ahura, the most helpful\nhelper to Thee.\n<H2 id=y32",
+      "zh": ""
+    },
+    {
+      "chapter": 31,
+      "verse": 23,
+      "ref": "Y 31.23",
+      "orig": "(zôt u râspî,) ahyâ ýâsâ\n... gêushcâ urvânem (2). ýathâ\nahû vairyô ... (4). ashem vohû ... (3). tâ-vê-urvâtãm\nhâitîm ýazamaide. ýenghê hâtãm\n... tåscâ ýazamaide!!",
+      "en": "",
+      "zh": ""
+    }
+  ]
+}

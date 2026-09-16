@@ -1,0 +1,221 @@
+{
+  "slug": "yasna-01",
+  "siglum": "Y 1",
+  "title_zh": "亞斯納 第 1 章‧呼名獻祭",
+  "title_en": "Yasna 1",
+  "canon": "avestan",
+  "volume": "yasna",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/yasna/y0to8.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "米爾斯（L. H. Mills）",
+  "en_url": "https://www.avesta.org/yasna/yasna.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "Vohu Mano": "沃胡‧馬納",
+    "Asha Vahishta": "阿沙‧瓦希什塔",
+    "Khshathra Vairya": "赫沙特拉‧瓦伊里亞",
+    "Spenta Armaiti": "斯彭塔‧阿爾邁提",
+    "Haurvatat": "豪爾瓦塔特",
+    "Ameretat": "阿梅雷塔特",
+    "Haoma": "豪麻",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 1,
+      "verse": 1,
+      "ref": "Y 1.1",
+      "orig": "nivaêdhayemi hañkârayemi dathushô\nahurahe mazdå raêvatô hvarenanguhatô mazishtaheca\nvahishtaheca sraêshtaheca xraozhdishtaheca xrathwishtaheca\nhukereptemaheca ashât apanôtemaheca hudhâmanô\nvouru-rafnanghô ýô nô dadha ýô\ntatasha ýô tuthruyê ýô mainyush\nspeñtôtemô.",
+      "en": "I announce (and) carry out (this Yasna) for the creator Ahura\nMazda, the radiant and glorious, the greatest and the best, the\nmost beautiful (?) (to our conceptions), the most firm, the wisest,\nand the one of all whose body is the most perfect, who attains\nHis ends the most infallibly, because of his Asha, to him who\ndisposes our minds aright, who sends His joy-creating grace afar;\nwho made us, and has fashioned us, and who has nourished and protected\nus, who is the most bounteous Spirit!",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 2,
+      "ref": "Y 1.2",
+      "orig": "nivaêdhayemi hañkârayemi vanghave mananghe\nashâi vahishtâi xshathrâi vairyâi speñtayâi\nârmatêe haurvatbya ameretatbya gêush tashne\ngêush urune âthre ahurahe mazdå ýaêtushtemâi\nameshanãm speñtanãm!",
+      "en": "I announce (and) carry out (this Yasna) to Vohu Mano, and \nto the Highest Asha, and to Khshathra Vairya, and to Spenta Armaiti,\nand to the two, the Haurvatat and Ameretat, to the body of the\nKine, and to the Kine's Soul, and to the Fire of Ahura Mazda,\nthat one who more than (all) the Amesha Spentas has made most\neffort (for our succor)!",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 3,
+      "ref": "Y 1.3",
+      "orig": "nivaêdhayemi hañkârayemi asnyaêibyô\nashahe ratubyô, hâvanêe ashaone ashahe rathwe,\nnivaêdhayemi hañkârayemi sâvanghêe\nvîsyâica ashaone ashahe rathwe, nivaêdhayemi\nhañkârayemi mithrahe vouru-gaoyaotôish hazangrô-gaoshahe\nbaêvare-cashmanô aoxtô-nâmanô ýazatahe\nrâmanô hvâstrahe!",
+      "en": "I announce (and) carry out (this Yasna) for Asnya, the masters \nof Asha, to Hawan, Asha-sanctified, master of Asha; and I celebrate,\nand I carry out (this Yasna) for Savanghi and for Visya, Asha-sanctified,\nmaster(s) of Asha.\nI announce (and) carry out (this Yasna) for Mithra of wide pastures,\nof the thousand ears, and of the myriad eyes, the Yazad of the\nspoken name, and for Raman Khwastra.",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 4,
+      "ref": "Y 1.4",
+      "orig": "(zôt,) nivaêdhayemi hañkârayemi rapithwinâi\nashaone ashahe rathwe, nivaêdhayemi hañkârayemi\nfrâdat-fshave zañtumâica ashaone ashahe rathwe,\nnivaêdhayemi hañkârayemi ashahe vahishtahe\nâthrasca ahurahe mazdå.",
+      "en": "I announce (and) carry out (this Yasna) for Rapithwin, the\nAsha-sanctified master of Asha, and for Fradat-fshu, and for Zangtuma,\nthe holy master(s) of Asha; and I celebrate and carry out (this\nYasna) to Asha the Best, and to the Fire of Ahura Mazda.",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 5,
+      "ref": "Y 1.5",
+      "orig": "nivaêdhayemi hañkârayemi uzayeirinâi\nashaone ashahe rathwe, nivaêdhayemi hañkârayemi\nfrâdat-vîrâi dâh'yumâica ashaone\nashahe rathwe, nivaêdhayemi hañkârayemi berezatô\nahurahe nafedhrô apãm apasca mazdadhâtayå.",
+      "en": "I announce (and) carry out (this Yasna) for Uzerin the Asha-sanctified \nmaster of Asha, and for Fradat-vira and Dakhyuma, the Asha-sanctified\nmaster(s) of Asha, and for that lofty Ahura Napat-apam (the son\nof waters), and for the waters which Ahura Mazda made.",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 6,
+      "ref": "Y 1.6",
+      "orig": "nivaêdhayemi hañkârayemi aiwisrûthrimâi\naibigayâi ashaone ashahe rathwe, nivaêdhayemi hañkârayemi\nfrâdat-vîspãm- hujyâtêe zarathushtrôtemâica\nashaone ashahe rathwe, nivaêdhayemi hañkârayemi\nashâunãm fravashinãm khenãnãmca\nvîrô-vãthwanãm ýâiryayåsca\nhushitôish, amaheca hutâshtahe huraodhahe verethrakhnaheca\nahuradhâtahe vanaiñtyåsca uparatâtô.",
+      "en": "I announce (and) carry out (this Yasna) for Aiwisruthrem (and) \nAibigaya, the Asha-sanctified master(s) of Asha, and for the Zarathushtrotema,\nand for him who possesses and who gives that prosperity in life\nwhich furthers all. And I celebrate and carry out (this Yasna)\nfor the fravashis of the saints, and for those of the women who\nhave many sons, and for a prosperous\nhome life which continues without reverse throughout the year,\nand for that Might which is well-shaped and stately,\nwhich strikes victoriously, Ahura-made, and for that Victorious\nAscendency (which it secures).",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 7,
+      "ref": "Y 1.7",
+      "orig": "nivaêdhayemi hañkârayemi ushahinâi\nashaone ashahe rathwe, nivaêdhayemi hañkârayemi\nberejyâi nmânyâica ashaone ashahe rathwe, nivaêdhayemi\nhañkârayemi sraoshahe ashyehe ashivatô verethrâjanô\nfrâdat-gaêthahe, rashnaosh razishtahe arshtâtasca\nfrâdat-gaêthayå varedat-gaêthayå!",
+      "en": "I announce (and) carry out (this Yasna) for Ushahin, the Asha-sanctified \nmaster of Asha, and for Berejya (and) Nmanya, the Asha-sanctified\nmaster(s) of Asha, and for Sraosha, companion of Ashi, possessing\nrewards, victorious, who furthers the world, and the very straight\nRashnu and Arshtad, who further the world, who augment the world.",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 8,
+      "ref": "Y 1.8",
+      "orig": "nivaêdhayemi hañkârayemi mâhyaêibyô\nashahe ratubyô, añtaremånghâi ashaone\nashahe rathwe, nivaêdhayemi hañkârayemi perenô-månghâi\nvîshaptathâica ashaone ashahe rathwe!",
+      "en": "I announce (and) carry out (this Yasna) for the Mahya, the\nmonthly festivals, masters of Asha, for the new and the later \nmoon, the Asha-sanctified\nmaster of Asha, and for the full moon which scatters night.",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 9,
+      "ref": "Y 1.9",
+      "orig": "nivaêdhayemi hañkârayemi ýâiryaêibyô\nashahe ratubyô, maidhyôizaremayâi ashaone ashahe\nrathwe, nivaêdhayemi hañkârayemi maidhyôishemâi\nashaone ashahe rathwe, nivaêdhayemi hañkârayemi\npaitishhahyâi ashaone ashahe rathwe, nivaêdhayemi\nhañkârayemi ayâthrimâi fraourvaêshtrimâi\nvarshniharshtâica ashaone ashahe rathwe, nivaêdhayemi\nhañkârayemi maidhyâiryâi ashaone ashahe\nrathwe, nivaêdhayemi hañkârayemi hamaspathmaêdayâi\nashaone ashahe rathwe, nivaêdhayemi hañkârayemi\nsaredhaêibyô ashahe ratubyô.",
+      "en": "I announce (and) carry out (this Yasna) for the Yairya, yearly \nfeasts, the Asha-sanctified masters of Asha. I celebrate and carry\nout (this Yasna) for Maidyozarem, the Asha-sanctified master of\nAsha, and for Maidyoshahem, the Asha-sanctified master of Asha,\nand for Paitishahem, and for Ayathrem the advancer, and the spender\nof the strength of males, the Asha-sanctified master of Asha,\nand for Maidyarem, the Asha-sanctified master of Asha, and for\nHamaspathmaidyem, the Asha-sanctified master of Asha; yea, I celebrate\nand carry out this Yasna for the seasons, masters of Asha.",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 10,
+      "ref": "Y 1.10",
+      "orig": "nivaêdhayemi hañkârayemi vîspaêibyô\naêibyô ratubyô ýôi heñti\nashahe ratavô thrayasca thrisãsca nazdishta pairishhâvanayô\nýôi heñti ashahe ýat vahishtahe mazdô-frasâsta\nzarathushtrô- fraoxta!",
+      "en": "I announce (and) carry out (this Yasna) for all those who\nare the thirty three masters of Asha, which, coming the nearest,\nare around about Hawan, and which (as in their festivals) were\ninstituted by Ahura Mazda, and were promulgated by Zarathushtra,\nas the masters of Asha Vahishta.",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 11,
+      "ref": "Y 1.11",
+      "orig": "nivaêdhayemi hañkârayemi ahuraêibya\nmithraêibya berezañbya aithyajanghaêibya ashavanaêibya\nstârãmca speñtô-mainyavanãm dâmanãm\ntishtryeheca stârô raêvatô hvarenanguhatô\nmånghaheca gaocithrahe hvareca xshaêtahe aurvat-aspahe\ndôithrahe ahurahe mazdå mithrahe dâh'yunãm\ndainghupatôish, nivaêdhayemi hañkârayemi\n(...rôz...) ahurahe mazdå raêvatô hvarenanguhatô,\nnivaêdhayemi hañkârayemi ( ...mâh...)\nashâunãm fravashinãm!",
+      "en": "I announce (and) carry out (this Yasna) for the two, for Ahura \nand Mithra, the lofty, and the everlasting, and the Asha-sanctified,\nand for all the stars which are Spenta Mainyu's creatures, and\nfor the star Tishtrya, the resplendent and glorious, and for the\nMoon which contains the seed of the Kine, and for the resplendent\nSun, the swift-horsed, the eye of Ahura Mazda, and for Mithra\nthe province ruler. And I celebrate and carry out this Yasna for\nAhura Mazda (once again, and as to him who rules the month), the\nradiant, the glorious, and for the Fravashis of the saints.",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 12,
+      "ref": "Y 1.12",
+      "orig": "nivaêdhayemi hañkârayemi tava âthrô\nahurahe mazdå puthra mat vîspaêibyô âterebyô,\nnivaêdhayemi hañkârayemi aiwyô vanguhibyô\nvîspanãmca apãm mazdadhâtanãm\nvîspanãmca urvaranãm mazdadhâtanãm!",
+      "en": "I announce (and) carry out (this Yasna) for you, o Fire, son \nof Ahura Mazda, together with all the fires, and for the good\nwaters, even for all the waters made by Mazda, and for all the\nplants which Mazda made.",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 13,
+      "ref": "Y 1.13",
+      "orig": "nivaêdhayemi hañkârayemi mãthrahe\nspeñtahe ashaonô verezyanguhahe dâtahe vîdaêvahe\ndâtahe zarathushtrôish darekhayå upayanayå\ndaênayå vanghuyå mâzdayasnôish.",
+      "en": "I announce (and) carry out (this Yasna) for the Bounteous \nManthra, the Asha-sanctified and effective, the revelation given\nagainst the Daevas; the Zoroastrian revelation, and for the long\ndescent of the good Mazdayasnian Faith.",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 14,
+      "ref": "Y 1.14",
+      "orig": "nivaêdhayemi hañkârayemi garôish\nushidarenahe mazdadhâtahe ashahvâthrahe vîspaêshãmca\ngairinãm ashahvâthranãm pouru-hvâthranãm\nmazdadhâtanãm kâvayeheca hvarenanghô\nmazdadhâtahe ahvaretaheca hvarenanghô mazdadhâtahe,\nnivaêdhayemi hañkârayemi ashôish vanghuyå\ncistôish vanghuyå erethê vanghuyå rasãstâtô\nvanghuyå hvarenanghô savanghô mazdadhâtahe.",
+      "en": "I announce (and) carry out (this Yasna) for the mountain Ushi-darena, \nthe Mazda-made, with its sacred brilliance, and for all the mountains\nglorious with sanctity, with their\nabundant Glory Mazda-made, and for that majestic Glory Mazda-made,\nthe unconsumed Glory which Mazda made. And I announce and carry out (this Yasna)\nfor Ashi the good, the blessedness (of the reward), and for Chisti,\nthe good religious Knowledge, for the good Erethe (Rectitude?),\nand for the good Rasastat (persisting zeal?), and to the Glory\nand the Benefit which are Mazda-made.",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 15,
+      "ref": "Y 1.15",
+      "orig": "nivaêdhayemi hañkârayemi dahmayå\nvanghuyå âfritôish dahmaheca narsh ashaonô\nukhraheca taxmahe dâmôish upamanahe ýazatahe!",
+      "en": "I announce (and) carry out (this Yasna) for the pious and \ngood Blessing of the religious man, the Asha-sanctified, and for\nthe curse of wisdom, the swift and redoubted Yazad of potency\n(to blight).",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 16,
+      "ref": "Y 1.16",
+      "orig": "nivaêdhayemi hañkârayemi ånghãm\nasanghãmca shôithranãmca gaoyaoitinãmca\nmaêthananãmca avô- hvarenanãmca apãmca\nzemãmca urvaranãmca ainghåsca zemô avaingheca\nashnô vâtaheca ashaonô strãm månghô\nhûrô anakhranãm raocanghãm hvadhâtanãm\nvîspanãmca speñtahe mainyêush dâmanãm\nashaonãm ashaoninãmca ashahe rathwãm.",
+      "en": "I announce (and) carry out (this Yasna) for these places and\nthese lands, and for these pastures, and these abodes with their\nsprings of water(?), and for the waters, land, and plants, and for\nthis earth and for yon heaven, and for the Asha-sanctified wind,\nand for the stars, moon, and sun, and for the eternal stars without\nbeginning, and self-disposing, and for all the Asha-sanctified\ncreatures of Spenta Mainyu, male and female, the regulators of\nAsha.",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 17,
+      "ref": "Y 1.17",
+      "orig": "nivaêdhayemi hañkârayemi rathwô berezatô\nýô ashahe, rathwãm ayaranãmca asnyanãmca\nmâhyanãmca ýâiryanãmca saredhanãmca\nýôi heñti ashahe ratavô, hâvanôish\nrathwô!",
+      "en": "I announce (and) carry out (this Yasna) for that lofty lord \nwho is the Asha (itself), and for the masters of the days in their\nduration, and of the days during daylight, for the moons, the\nyears, and the seasons which are masters of Asha at the time of\nHawan.",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 18,
+      "ref": "Y 1.18",
+      "orig": "nivaêdhayemi hañkârayemi ashâunãm\nfravashinãm ukhranãm aiwithûranãm paoiryô-tkaêshanãm\nfravashinãm nabânazdishtanãm fravashinãm\nhavahe urunô fravashêe.",
+      "en": "I announce (and) carry out (this Yasna) for the fravashis \nof the saints, the redoubted, which overwhelm (the evil), for\nthose of the saints of the ancient lore, for those of the next\nof kin, and for the fravashi of (my) own soul!",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 19,
+      "ref": "Y 1.19",
+      "orig": "nivaêdhayemi hañkârayemi vîspaêibyô\nashahe ratubyô, nivaêdhayemi hañkârayemi\nvîspaêibyô vanghudhâbyô ýazataêibyô\nmainyaoibyascâ gaêthyaêibyascâ ýôi\nheñti ýasnyâca vahmyâca ashât\nhaca ýat vahishtât!",
+      "en": "I announce (and) carry out (this Yasna) for all the masters\nof Asha, and for all the yazads, the beneficent, who dispose (of\nall) aright, for those both heavenly and earthly, who are (meet)\nfor our sacrifice and homage because of Asha Vahishta.",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 20,
+      "ref": "Y 1.20",
+      "orig": "havane ashâum ashahe ratvô savanghe ashâum\nashahe ratvô rapithwina ashâum ashahe ratvô\nuzayeirina ashâum ashahe ratvô aiwisrûthrima\naibigaya ashâum ashahe ratvô ushahina ashâum\nashahe ratvô.",
+      "en": "O Hawan, Asha-sanctified master of Asha, and Savanghi, Rapithwin,\nand Uzerin, and Aiwisruthrem, (and) Aibigaya, (you who aids life!)\nif I have offended you, and you, o Ushahin, Asha-sanctified master\nof Asha!",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 21,
+      "ref": "Y 1.21",
+      "orig": "ýezi thwâ didvaêsha ýezi manangha\nýezi vacangha ýezi shyaothna ýezi zaosha\nýezi azaosha, â-tê ainghe fraca stuyê\nnî-tê vaêdhayemi ýezi tê ainghe\navâ-urûraodha ýat ýasnaheca vahmaheca.",
+      "en": "If I have offended you, whether by thought, or word, or deed,\nwhether by act of will, or without intent or wish, I earnestly\nmake up the deficiency of this in praise to you. If I have caused\ndecrease in that which is your Yasna, and your homage, I announce\n(and carry out) to you (the more for this)!",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 22,
+      "ref": "Y 1.22",
+      "orig": "ratavô vîspe mazishta ashâum ashahe ratavô\nýezi vô didvaêsha ýezi manangha ýezi\nvacangha ýezi shyaothna ýezi zaosha ýezi\nazaosha, â-vô ainghe fraca stuyê nî-vô\nvaêdhayemi ýezi vô ainghe avâ-urûraodha\nýat ýasnaheca vahmaheca!",
+      "en": "Yea, all ye masters, the greatest ones, Asha-sanctified masters\nof Asha, if I have offended you by thought, or word, or deed,\nwhether with my will, or without intending error, I praise you\n(now the more) for this. I announce to you (the more) if I have\ncaused decrease in this which is your Yasna, and your praise.",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 23,
+      "ref": "Y 1.23",
+      "orig": "fravarâne mazdayasnô zarathushtrish vîdaêvô\nahura-tkaêshô hâvanêe ashaone ashahe rathwe\nýasnâica vahmâica xshnaothrâica frasastayaêca,\nsâvanghêe vîsyâica ashaone ashahe rathwe\nýasnâica vahmâica xshnaothrâica frasastayaêca,\nrathwãm ayaranãmca asnyanãmca mâhyanãmca\nýâiryanãmca saredhanãmca ýasnâica\nvahmâica xshnaothrâica (râspî,) frasastayaêca!!",
+      "en": "I would confess myself a Mazda-worshipper, of Zarathushtra's \norder, a foe to the Daevas, devoted to the lore of Ahura, for\nHawan, the Asha-sanctified master of Asha, for (his) sacrifice,\nhomage, propitiation, and praise, for Savanghi and for Visya,\nthe Asha-sanctified master of Asha, for (his) sacrifice, homage,\npropitiation and praise, and for the sacrifice, homage, propitiation\nand praise of the masters of the days in their duration, and of\nthe days during daylight, for those of the monthly festivals,\nand for those of the yearly ones, and for those of the seasons!\n<H2 id=y2",
+      "zh": ""
+    }
+  ]
+}

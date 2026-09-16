@@ -1,0 +1,133 @@
+{
+  "slug": "yasna-30",
+  "siglum": "Y 30",
+  "title_zh": "亞斯納 第 30 章‧伽薩‧兩靈",
+  "title_en": "Yasna 30",
+  "canon": "avestan",
+  "volume": "yasna",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/yasna/y28to34.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "米爾斯（L. H. Mills）",
+  "en_url": "https://www.avesta.org/yasna/yasna.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "Vohu Mano": "沃胡‧馬納",
+    "Asha Vahishta": "阿沙‧瓦希什塔",
+    "Khshathra Vairya": "赫沙特拉‧瓦伊里亞",
+    "Spenta Armaiti": "斯彭塔‧阿爾邁提",
+    "Haurvatat": "豪爾瓦塔特",
+    "Ameretat": "阿梅雷塔特",
+    "Haoma": "豪麻",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 30,
+      "verse": 1,
+      "ref": "Y 30.1",
+      "orig": "at tâ vaxshyâ isheñtô ýâ\nmazdâthâ hyatcît vîdushê staotâcâ\nahurâi ýesnyâcâ vanghêush mananghô\nhumãzdrâ ashâ ýecâ ýâ\nraocêbîsh daresatâ urvâzâ.",
+      "en": "Now I will proclaim to those who will hear the things that\nthe understanding man should remember, for hymns unto Ahura and\nprayers to Good Thought; also the felicity that is with the heavenly\nlights, which through Right shall be beheld by him who wisely\nthinks.",
+      "zh": ""
+    },
+    {
+      "chapter": 30,
+      "verse": 2,
+      "ref": "Y 30.2",
+      "orig": "sraotâ gêushâish vahishtâ avaênatâ\nsûcâ mananghâ âvarenå vîcithahyâ\nnarêm narem hvah'yâi tanuyê parâ mazê\nýånghô ahmâi nê sazdyâi baodañtô\npaitî.",
+      "en": "Hear with your ears the best things; look upon them with clear-seeing\nthought, for decision between the two Beliefs, each man for himself\nbefore the Great consummation, bethinking you that it be accomplished\nto our pleasure.",
+      "zh": ""
+    },
+    {
+      "chapter": 30,
+      "verse": 3,
+      "ref": "Y 30.3",
+      "orig": "at tâ mainyû pouruyê ýâ ýêmâ\nhvafenâ asrvâtem manahicâ vacahicâ shyaothanôi\nhî vahyô akemcâ åscâ hudånghô\neresh vîshyâtâ nôit duzhdånghô.",
+      "en": "Now the two primal Spirits, who reveal themselves in vision\nas Twins, are the Better and the Bad, in thought and word and\naction. And between these two the wise ones chose aright, the\nfoolish not so.",
+      "zh": ""
+    },
+    {
+      "chapter": 30,
+      "verse": 4,
+      "ref": "Y 30.4",
+      "orig": "atcâ hyat tâ hêm mainyû jasaêtem\npaourvîm dazdê gaêmcâ ajyâitîmcâ\nýathâcâ anghat apêmem anghush acishtô\ndregvatãm at ashâunê vahishtem manô.",
+      "en": "And when these twain Spirits came together in the beginning,\nthey created Life and Not-Life, and that at the last Worst Existence\nshall be to the followers of the Lie, but the Best Existence to\nhim that follows Right.",
+      "zh": ""
+    },
+    {
+      "chapter": 30,
+      "verse": 5,
+      "ref": "Y 30.5",
+      "orig": "ayå manivå varatâ ýê dregvå\nacishtâ verezyô ashem mainyush spênishtô\nýê xraozhdishtêñg asênô\nvastê ýaêcâ xshnaoshen ahurem haithyâish\nshyaothanâish fraoret mazdãm.",
+      "en": "Of these twain Spirits he that followed the Lie chose doing\nthe worst things; the holiest Spirit chose Right, he that clothes\nhim with the massy heavens as a garment. So likewise they that\nare fain to please Ahura Mazda by dutiful actions.",
+      "zh": ""
+    },
+    {
+      "chapter": 30,
+      "verse": 6,
+      "ref": "Y 30.6",
+      "orig": "ayå nôit eresh vîshyâtâ daêvâcinâ\nhyat îsh â-debaomâ peresmanêñg\nupâ-jasat hyat verenâtâ acishtem manô,\nat aêshemem hêñdvâreñtâ\nýâ bãnayen ahûm maretânô.",
+      "en": "Between these twain the Daevas also chose not aright, for\ninfatuation came upon them as they took counsel together, so that\nthey chose the Worst Thought. Then they rushed together to Violence,\nthat they might enfeeble the world of men.",
+      "zh": ""
+    },
+    {
+      "chapter": 30,
+      "verse": 7,
+      "ref": "Y 30.7",
+      "orig": "ahmâicâ xshathrâ jasat mananghâ vohû\nashâcâ dà at kehrpêm utayûitîsh\ndadât ârmaitish ãnmâ aêshãm\ntôi â anghat ýathâ ayanghâ âdânâish\npouruyô.",
+      "en": "And to him (i.e. mankind) came Dominion, and Good Mind, and\nRight and Piety gave continued life to their bodies and indestructibility,\nso that by thy retributions through (molten) metal he may gain\nthe prize over the others.",
+      "zh": ""
+    },
+    {
+      "chapter": 30,
+      "verse": 8,
+      "ref": "Y 30.8",
+      "orig": "atcâ ýadâ aêshãm kaênâ\njamaitî aênanghãm at mazdâ taibyô\nxshathrem vohû mananghâ vôivîdâitî\naêibyô sastê ahurâ ýôi ashâi\ndaden zastayô drujem.",
+      "en": "So when there cometh their punishment for their sins, then,\nO Mazda, at Thy command shall Good Thought establish the Dominion\nin the Consummation, for those who deliver the Lie, O Ahura, into\nthe hands of Right.",
+      "zh": ""
+    },
+    {
+      "chapter": 30,
+      "verse": 9,
+      "ref": "Y 30.9",
+      "orig": "atcâ tôi vaêm h'yâmâ ýôi\nîm ferashêm kerenâun ahûm, mazdåscâ\nahurånghô â-môyastrâ baranâ\nashâcâ hyat hathrâ manå bavat ýathrâ\ncistish anghat maêthâ.",
+      "en": "So may we be those that make this world advance, O Mazda and\nye other Ahuras, come hither, vouchsafing (to us) admission into\nyour company and Asha, in order that (our) thought may gather\ntogether while reason is still shaky.",
+      "zh": ""
+    },
+    {
+      "chapter": 30,
+      "verse": 10,
+      "ref": "Y 30.10",
+      "orig": "adâ-zî avâ drûjô avô bavaitî\nskeñdô spayathrahyâ at asishtâ ýaojañtê\nâ-hushitôish vanghêush mananghô mazdå\nashah'yâcâ ýôi zazeñtî vanghâu\nsravahî.",
+      "en": "Then truly on the (world of) Lie shall come the destruction\nof delight; but they who get themselves good name shall be partakers\nin the promised reward in the fair abode of Good Thought, of Mazda,\nand of Right.",
+      "zh": ""
+    },
+    {
+      "chapter": 30,
+      "verse": 11,
+      "ref": "Y 30.11",
+      "orig": "hyat tâ urvâtâ sashathâ ýâ\nmazdå dadât mashyånghô hvîticâ\nêneitî hyatcâ daregêm dregvôdebyô\nrashô savacâ ashavabyô at aipî tâish\nanghaitî ushtâ!",
+      "en": "If, O ye mortals, ye mark those commandments which Mazda hath\nordained — of happiness and pain, the long punishment for the\nfollower of the Druj, and blessings for the followers of the Right\n-- then hereafter shall it be well.\n<H2 id=y31",
+      "zh": ""
+    },
+    {
+      "chapter": 30,
+      "verse": 12,
+      "ref": "Y 30.12",
+      "orig": "(zôt u râspî,) ahyâ ýâsâ\n... gêushcâ urvânem (2). ýathâ\nahû vairyô ... (4). ashem vohû ... (3). at-tâvaxshyãm\nhâitîm ýazamaide. ýenghê hâtãm\n... tåscâ ýazamaide!!",
+      "en": "",
+      "zh": ""
+    }
+  ]
+}

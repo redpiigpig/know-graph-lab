@@ -1,0 +1,141 @@
+{
+  "slug": "yasna-48",
+  "siglum": "Y 48",
+  "title_zh": "亞斯納 第 48 章‧伽薩‧真理勝虛妄",
+  "title_en": "Yasna 48",
+  "canon": "avestan",
+  "volume": "yasna",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/yasna/y47to50.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "米爾斯（L. H. Mills）",
+  "en_url": "https://www.avesta.org/yasna/yasna.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "Vohu Mano": "沃胡‧馬納",
+    "Asha Vahishta": "阿沙‧瓦希什塔",
+    "Khshathra Vairya": "赫沙特拉‧瓦伊里亞",
+    "Spenta Armaiti": "斯彭塔‧阿爾邁提",
+    "Haurvatat": "豪爾瓦塔特",
+    "Ameretat": "阿梅雷塔特",
+    "Haoma": "豪麻",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 48,
+      "verse": 1,
+      "ref": "Y 48.1",
+      "orig": "ýezî adâish ashâ drujem vêñnghaitî\nhyat ãsashutâ ýâ daibitânâ\nfraoxtâ ameretâitî daêvâishcâ\nmashyâishcâ at tôi savâish vahmem vaxshat\nahurâ.",
+      "en": "When at the Recompensings the Right shall smite the Liar,\nso that what was long since made known shall be assigned to eternity\nto Daevas and men, then will it exalt with thy blessings, Ahura,\nhim who prays to thee.",
+      "zh": ""
+    },
+    {
+      "chapter": 48,
+      "verse": 2,
+      "ref": "Y 48.2",
+      "orig": "vaocâ-môi ýâ tvêm vîdvå\nahurâ parâ hyat mâ ýâ mêñg\nperethâ jimaitî kat ashavâ mazdâ vêñghat\ndregvañtem hâ-zî anghêush vanguhî\nvistâ âkeretish.",
+      "en": "Tell me, for thou art he that knows, O Ahura: - shall the\nRighteous smite the Liar before the retributions come which thou\nhast conceived? That were indeed a message to bless the world.",
+      "zh": ""
+    },
+    {
+      "chapter": 48,
+      "verse": 3,
+      "ref": "Y 48.3",
+      "orig": "at vaêdemnâi vahishtâ sâsnanãm\nýãm hudå sâstî ashâ ahurô\ndà speñtô vîdvå ýaêcît\ngûzrâ sêñghånghô thwâvãs\nmazdâ vanghêush xrathwâ mananghô.",
+      "en": "For him that knows, that is the best of teachings which the\nbeneficent Ahura teaches through the Right, he the holy one, even\nthyself, O Mazda, that knows the secret lore through the wisdom\nof Good Thought.",
+      "zh": ""
+    },
+    {
+      "chapter": 48,
+      "verse": 4,
+      "ref": "Y 48.4",
+      "orig": "ýê dât manô vahyô mazdâ\nashyascâ hvô daênãm shyaothanâcâ\nvacanghâcâ ahyâ zaoshêñg ushtish\nvarenêñg hacaitê thwahmî xratå\napêmem nanâ anghat.",
+      "en": "Whoso, O Mazda, makes his thought (now) better, (now) worse,\nand likewise his Self by action and by word, and follows his own\ninclinations, wishes, and choices, he shall in thy purpose be\nin a separate place at last.",
+      "zh": ""
+    },
+    {
+      "chapter": 48,
+      "verse": 5,
+      "ref": "Y 48.5",
+      "orig": "huxshathrâ xshêñtãm mâ-nê\ndushe-xshathrâ xshêñtâ vanghuyå\ncistôish shyaothanâish ârmaitê ýaozhdå\nmashyâi aipî zãthem vahishtâ gavôi\nverezyâtãm tãm nê hvarethâi fshuyô.",
+      "en": "Let good rulers rule us, not evil rulers with the actions\nof the Good Lore, O Piety! Perfect thou for man, O thou most good,\nthe future birth, and for the cow skilled husbandry. Let her grow\nfat for our nourishing.",
+      "zh": ""
+    },
+    {
+      "chapter": 48,
+      "verse": 6,
+      "ref": "Y 48.6",
+      "orig": "hâ-zî-nê hushôithemâ hâ-nê\nutayûitîm dât tevîshîm vanghêush\nmananghô berexdhê at ah'yâi ashâ mazdå\nurvarå vaxshat ahurô anghêush zãthôi\npaouruyehyâ.",
+      "en": "She (Armaiti) will give us peaceful dwelling, she will give\nlasting life and strength, she the beloved of Good Thought. For\nit (the cattle) Mazda Ahura made the plants to grow at the birth\nof the First Life, through Right.",
+      "zh": ""
+    },
+    {
+      "chapter": 48,
+      "verse": 7,
+      "ref": "Y 48.7",
+      "orig": "nî aêshemô nî dyâtãm\npaitî remem paitî syôzdûm ýôi\nâ vanghêush mananghô dîdrakhzhôduyê\nashâ vyãm ýehyâ hithâush nâ\nspeñtô at hôi dâmãm thwahmî\nâ-dãm ahurâ.",
+      "en": "Violence must be put down! against cruelty make a stand, ye\nwho would make sure of the reward of Good Thought through Right,\nto whose company the holy man belongs. His dwelling place shall\nbe in thy House, O Ahura.",
+      "zh": ""
+    },
+    {
+      "chapter": 48,
+      "verse": 8,
+      "ref": "Y 48.8",
+      "orig": "kâ-tôi vanghêush mazdâ xshathrahyâ\nîshtish kâ-tôi ashôish thwah'yå\nmaibyô ahurâ kâ-thwôi ashâ âkå\naredrêñg ishyâ vanghêush manyêush\nshyaothananãm javarô.",
+      "en": "Is the possession of thy good Dominion, Mazda, is that of\nthy Destiny assured to me Ahura? Will thy manifestation, O thou\nRight, be welcome to the pious, even the weighing of actions by\nthe Good Spirit [Spenta Mainyu -JHP]?",
+      "zh": ""
+    },
+    {
+      "chapter": 48,
+      "verse": 9,
+      "ref": "Y 48.9",
+      "orig": "kadâ vaêdâ ýezî cahyâ\nxshayathâ mazdâ ashâ ýehyâ-mâ\nâithish dvaêthâ eresh-môi erezhûcãm\nvanghêush vafush mananghô vîdyât saoshyãs\nýathâ hôi ashish anghat.",
+      "en": "When shall I know whether ye have power, O Mazda and Right,\nover everyone whose destructiveness is a menace to me? Let the\nrevelation of Good Thought be confirmed unto me; the future deliverer\nshould know how his own destiny shall be.",
+      "zh": ""
+    },
+    {
+      "chapter": 48,
+      "verse": 10,
+      "ref": "Y 48.10",
+      "orig": "kadâ mazdâ mãnarôish narô vîseñtê\nkadâ ajên mûthrem ahyâ magahyâ ýâ\nañgrayâ karapanô urûpayeiñtî\nýâcâ xratû dushe-xshathrâ dah'yunãm.",
+      "en": "When, O Mazda, will the nobles understand the message? When\nwill thou smite the filthiness of this intoxicant, through which\nthe Karapans evilly deceive, and the wicked lords of the lands\nwith purpose fell?",
+      "zh": ""
+    },
+    {
+      "chapter": 48,
+      "verse": 11,
+      "ref": "Y 48.11",
+      "orig": "kadâ mazdâ ashâ mat ârmaitish dà\njimat xshathrâ husheitish vâstravaitî kôi\ndregvôdebîsh xrûrâish râmãm\ndåñtê kêñg â vanghêush\njimat mananghô cistish.",
+      "en": "When, O Mazda, shall Piety come with Right, with Dominion\nthe happy dwelling rich with pasture? Who are they that will make\npeace with the bloodthirsty Liars? To whom will the Lore of Good\nThought come?",
+      "zh": ""
+    },
+    {
+      "chapter": 48,
+      "verse": 12,
+      "ref": "Y 48.12",
+      "orig": "at tôi anghen saoshyañtô dah'yunãm\nýôi xshnûm vohû mananghâ hacåñtê\nshyaothanâish ashâ thwahyâ mazdâ sêñghahyâ\ntôi-zî dâtâ hamaêstârô\naêshem mahyâ!",
+      "en": "These shall be the deliverers [Saoshyants -JHP] of the provinces, who exert\nthemselves, O Good Thought in their action, O Asha, to fulfill\ntheir duty, face to face with thy command, O Mazda. For these\nare the appointed smiters of Violence.\n<H2 id=y49",
+      "zh": ""
+    },
+    {
+      "chapter": 48,
+      "verse": 13,
+      "ref": "Y 48.13",
+      "orig": "(zôt u râspî,) speñtâ mainyû\n... ârmaitî ahurô (2). ashem vohû ...\n(3). ýezidhãm hâitîm ýazamaide.\nýenghê hâtãm ... tåscâ ýazamaide!!",
+      "en": "",
+      "zh": ""
+    }
+  ]
+}
