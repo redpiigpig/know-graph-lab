@@ -533,6 +533,17 @@ def main() -> int:
     # check 不碰 GPU，不用排隊
     if args.cmd == "check":
         return args.func(args)
+
+    # 🚨 這台是 S0 Modern Standby 筆電：一進待機，掛在主控台的行程會同時收到
+    #    STATUS_CONTROL_C_EXIT（0xC000013A）—— 2026-09-08 稽核 30 小時的排程事件
+    #    抓到 40 次這種死法。而 `powercfg /requests` 顯示沒有任何行程在阻止睡眠，
+    #    管線跑再久 Windows 都認為機器閒著。一本幾百頁的書要跑十幾分鐘，
+    #    整夜作業更是幾十小時，沒有這一格闔上蓋子就全沒了。
+    try:
+        from keep_awake import keep_awake
+        keep_awake()
+    except Exception:
+        pass
     if not acquire_lock(getattr(args, "wait_gpu_minutes", 0)):
         return 4
     try:
