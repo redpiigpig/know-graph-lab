@@ -59,6 +59,52 @@ DIVINE = {"dominus", "deus", "christus", "iesus", "spiritus sanctus", "altissimu
           "emmanuel", "messias", "sabaoth", "adonai", "pater", "agnus"}
 CAPITAL_RATIO = 0.8
 
+# 辭典把這些收成「大寫開頭的名詞」——Graecus 是「一個希臘人」、Biblia 是「聖經」——
+# 所以辭典那一關放行了它們，但一張**專名表**不是它們該待的地方：族稱形容詞
+# （Graecus／Italus／Siculus／Parthus／Hebraeus／Afer／Atheniensis）、地名形容詞
+# （Alexandrinus／Antiochenus）、教派形容詞（Arianus）、普通名詞（Biblia）
+# 與稱號（Deipara 天主之母）。它們的中文屬於課內詞表或既有的職分表。
+NOT_A_NAME = {
+    "graecus", "italus", "siculus", "parthus", "hebraeus", "afer", "atheniensis",
+    "alexandrinus", "antiochenus", "arianus", "biblia", "deipara",
+}
+
+# 聖經人名不進譯名詞庫：這本讀本的聖經譯名權威是思高譯本，與上冊那張表走同一條路
+# （上冊是逐節對位讀出來的）。這五個沒出現在讀本的五十章裡，對位讀不到，所以照
+# 思高的定名列在這裡，路徑一樣記成「思高譯本」。
+# 🚨 鍵一定要經過 L.fold：它把 v 折成 u，Eva 的鍵是 eua 不是 eva，寫死字面
+# 會永遠對不上而且看起來像「思高也沒有這個名字」。
+SIGAO_NAMES = {
+    L.fold(latin): zh
+    for latin, zh in (
+        ("Eva", "厄娃"), ("Emmanuel", "厄瑪奴耳"), ("Ezechiel", "厄則克耳"),
+        ("Saulus", "掃祿"), ("Cornelius", "科爾乃略"),
+    )
+}
+
+# 同名者的裁決：這批語料裡「Theophilus」指的是誰。
+# 🚨 只記**哪一列**，不記譯名——譯名的權威在詞庫，不在這支腳本。詞庫有三位
+# Theophilus（安提阿、凱撒利亞、亞歷山大），而語料二十五次全部標明
+# episcopus Alexandrinus。沒有這張表，歧義閘會把它留白；留白比指錯人好，但
+# 有證據時就該填對的那一位。
+CORPUS_REFERENT = {
+    L.fold("Theophilus"): "Theophilus of Alexandria",
+}
+
+# 真的是好幾個人共用的羅馬名，指認任何一位都是錯的：
+#   Julianus  語料至少六人——背教者尤利安、埃克拉努姆的猶利安、科斯的猶利安、
+#             佩特拉總主教、欽戈利主教、蒙科尼永的真福茱莉安娜。
+#   Saturninus 語料至少七人——佩爾佩圖亞同伴的殉道者、亞爾勒主教、梅南德派的
+#             諾斯底教師、法學家克勞狄烏斯、森提烏斯、處死西利丘殉道者的總督
+#             維革利烏斯，以及一座聖撒圖爾尼努斯堂。
+# 這種只給音譯。附錄在這裡的職責是告訴讀者這個字怎麼念，不是替他認人。
+# 🚨 Saturninus 詞庫兩列的寫法本身就不一致（薩圖爾努斯／撒圖爾尼努（非洲總督）），
+# 前者看起來是漏掉了 -in-；這裡取貼合拉丁的 撒圖爾尼努斯，待擁有者裁定後再回寫詞庫。
+SHARED_NAME = {
+    L.fold("Julianus"): "尤利安",
+    L.fold("Saturninus"): "撒圖爾尼努斯",
+}
+
 CURATED_UPPER = {
     "numerals": {
         "title": "數字、羅馬數字與度量衡",
@@ -237,46 +283,99 @@ def proper_noun_keys() -> set[str]:
     }
 
 
+GLOSS_CACHE = (ROOT / "output" / "source-cache" / "original-readers" / "latin-full"
+               / "appendix-gloss-zh.json")
+
+
+def reapply_gloss_cache(payload: dict) -> int:
+    """把 gloss_latin_appendices_zh.py 存下來的中文貼回剛重建的表。
+
+    🚨 這一步不是最佳化，是防止重建變成退步。這支腳本重算的是**字形與語料佐證**，
+    中文是另一支問模型問出來的；重建一次，數字、親屬、曆法、動詞主要部分那幾張表
+    的一千一百九十二條中文就全部歸零，而版面照排、稽核照過，印出來是一千兩百條
+    「（中文待補）」——書本身看起來完全正常。已經發生過兩次。
+    快取的鍵與那支相同（去長音、I/J 與 U/V 同字），所以這裡零模型呼叫就能補回。
+    補不回來的才留白：那是真的還沒問過，不是被自己洗掉的。
+    """
+    if not GLOSS_CACHE.exists():
+        return 0
+    # 🚨 快取的鍵是**原樣的詞條**，不是折疊過的字形（gloss_latin_appendices_zh
+    # 那支就是 cache.get(headword)）。自作主張套一個 fold 會補回一千零六十二條、
+    # 漏掉一百三十條帶長音與逗號的——而漏掉的長相與「本來就沒有中文」一模一樣。
+    cache = json.loads(GLOSS_CACHE.read_text(encoding="utf-8"))
+    restored = 0
+    for section in ("upper", "lower"):
+        for table in payload.get(section, {}).values():
+            for entry in table.get("entries", []):
+                if (entry.get("zh") or "").strip():
+                    continue
+                hit = cache.get(entry.get("headword", ""))
+                if hit and (hit.get("zh") or "").strip():
+                    entry["zh"] = hit["zh"]
+                    entry.setdefault("zhRoute", hit.get("route", "gloss 快取"))
+                    restored += 1
+    return restored
+
+
 def latin_register_zh() -> dict[str, tuple[str, str]]:
     """折疊後的拉丁字形 → （已定的中文名，哪一份登錄說的）。
 
     專名的中文一律從登錄取，不從模型取——這一條是這系列付過代價才立的：信望愛
     那條路徑把字典釋義當成名字，四十九筆錯的印在紙上，每一筆看起來都正常。
-    所以這裡只認登錄的推薦名，查不到就留白，讓缺口看得見。
+
+    一列只出一個中文（依該表的欄位優先序），再拿**跨列**的結果比對：
+    同一個拉丁字形對到兩個不同的人就不填。詞庫裡有兩位 Saturninus（迦太基
+    殉道者、非洲總督）、兩位 Julianus（背教者、埃克拉努姆的）、兩位 Theophilus
+    （凱撒利亞的、亞歷山卓的）——挑一個等於在附錄裡指認錯人，而印出來完全看不
+    出來。留白再問。
+    🚨 比對要以「列」為單位，不是以「欄」：同一列的 name_catholic_sgs 與
+    name_recommended 本來就可能寫法不同（奧利振／俄利根），照欄位比會把一個
+    人判成兩個人，Origenes 就是這樣被判成歧義而空掉的。
     """
     from proper_name_categories import fold as fold_zh, fold_latin, load_registers  # noqa: PLC0415
 
-    out: dict[str, tuple[str, str]] = {}
+    # 表 → （取中文的欄位優先序，提供字形的欄位）
+    SOURCES = (
+        ("deities", ("name_recommended",), ("name_original", "name_english")),
+        ("place_names", ("name_recommended",), ("name_original", "name_english")),
+        ("rulers", ("name_recommended",), ("name_original", "name_english")),
+        ("philosophers", ("name_recommended",), ("name_original", "name_english")),
+        ("scientists", ("name_recommended",), ("name_original", "name_english")),
+        ("theologians", ("name_catholic_sgs", "name_recommended", "name_protestant"),
+         ("name_original", "name_latin_std", "name_english")),
+    )
+    candidates: dict[str, set[tuple[str, str]]] = {}
     registers = load_registers()
-    # 先問拉丁／原文欄，再問英文欄。英文欄放在後面是因為它只在**拼法剛好相同**時
-    # 才會命中——Alexandria、Africa、India、Arabia 拉丁英文同形，Italia／Italy、
-    # Europa／Europe 就不會對上，所以這一步不會把不同的名字湊在一起。它仍然是
-    # 「從登錄取」，只是換一欄查；路徑照實記在 zhRoute，日後查得出來是哪一欄說的。
-    for group, forms_fields, zh_field, note in (
-        ("deities", ("name_original",), "name_recommended", ""),
-        ("place_names", ("name_original",), "name_recommended", ""),
-        ("rulers", ("name_original",), "name_recommended", ""),
-        ("theologians", ("name_original", "name_latin_std"), "name_catholic_sgs", ""),
-        ("philosophers", ("name_original",), "name_recommended", ""),
-        ("scientists", ("name_original",), "name_recommended", ""),
-        ("deities", ("name_english",), "name_recommended", "（英文欄同形）"),
-        ("place_names", ("name_english",), "name_recommended", "（英文欄同形）"),
-        ("rulers", ("name_english",), "name_recommended", "（英文欄同形）"),
-        ("theologians", ("name_english",), "name_catholic_sgs", "（英文欄同形）"),
-        ("philosophers", ("name_english",), "name_recommended", "（英文欄同形）"),
-        ("scientists", ("name_english",), "name_recommended", "（英文欄同形）"),
-    ):
+    for group, zh_fields, form_fields in SOURCES:
         for row in registers.get(group, []):
-            zh = (row.get(zh_field) or "").strip()
+            zh = next((v for v in ((row.get(f) or "").strip() for f in zh_fields) if v), "")
             if not zh:
                 continue
-            for field in forms_fields:
-                value = (row.get(field) or "").strip()
+            english = (row.get("name_english") or "").strip()
+            forms = [(row.get(field) or "").strip() for field in form_fields]
+            # 同一個實體的拉丁拼法常常掛在變體欄（Ἰταλία 那一列的變體是 Italia）。
+            forms += [part.strip() for part in (row.get("name_variants") or "").split("／")]
+            for value in forms:
                 if not value:
                     continue
                 for key in {fold_zh(value), fold_latin(value), L.fold(value)}:
                     if key:
-                        out.setdefault(key, (zh, group + note))
+                        candidates.setdefault(key, set()).add((zh, group, english))
+
+    out: dict[str, tuple[str, str]] = {}
+    for key, rows in candidates.items():
+        wanted = CORPUS_REFERENT.get(key)
+        if wanted:
+            picked = [(zh, group) for zh, group, english in rows if english == wanted]
+            if len(picked) == 1:
+                out[key] = picked[0]
+                continue
+            # 指名的那一列不在詞庫裡（或有兩列同名）——別退回去隨便挑一列，
+            # 那正是這張表要防的事。留白，讓缺口看得見。
+            continue
+        if len({zh for zh, _, _ in rows}) == 1:
+            zh, group, _ = next(iter(rows))
+            out[key] = (zh, group)
     return out
 
 
@@ -365,7 +464,12 @@ def align_chinese(latin_names: set[str], lm) -> dict[str, dict]:
 
     resolved: dict[str, dict] = {}
     for name, counts in by_latin.items():
-        best, hits = counts.most_common(1)[0]
+        # 🚨 平手不能交給 most_common 決定。候選是從 `properNames` 的 **set** 累進
+        # 來的，set of str 的走訪順序每個行程都不一樣（PYTHONHASHSEED），同分的
+        # 兩個候選誰先進 Counter 就跟著變。實測同一份輸入連跑兩次，附錄的中文會
+        # 漂五筆左右——有的換人，有的因為換到的候選過不了下面那兩道閘而整格變空。
+        # 靠字面排序把它釘死：同分時取哪一個可以再議，但不能每次都不一樣。
+        best, hits = min(counts.items(), key=lambda kv: (-kv[1], kv[0]))
         appearances = latin_verse_total[name]
         # Two guards: the candidate must follow this name through most of its
         # verses, and it must not be a name that follows everything.
@@ -505,13 +609,17 @@ def main() -> None:
     biblical_zh = {row["folded"]: row for row in name_rows if row.get("zh")}
     modern_rows = []
     for folded, count in sorted(modern_names.items(), key=lambda kv: -kv[1]):
-        if folded in biblical_names or folded not in vouched:
+        if folded in biblical_names or folded not in vouched or folded in NOT_A_NAME:
             continue
         zh, route = "", ""
-        if folded in biblical_zh:
+        if folded in SIGAO_NAMES:
+            zh, route = SIGAO_NAMES[folded], "思高譯本"
+        elif folded in biblical_zh:
             zh, route = biblical_zh[folded]["zh"], "上冊專名表"
         elif folded in register_zh:
             zh, route = register_zh[folded]
+        elif folded in SHARED_NAME:
+            zh, route = SHARED_NAME[folded], "音譯（語料中數人同名）"
         modern_rows.append(
             {"headword": display_form(church_forms, folded), "folded": folded,
              "churchFrequency": count, "zh": zh, "zhRoute": route}
@@ -564,6 +672,9 @@ def main() -> None:
             attested = sum(1 for e in entries if e.get("attested", True))
             print(f"  {section:5s} {table['title']:<28s} {len(entries):>5} 條"
                   f"{'' if 'attested' not in (entries[0] if entries else {}) else f'，語料佐證 {attested}'}")
+    restored = reapply_gloss_cache(payload)
+    if restored:
+        print(f"由 gloss 快取還原中文 {restored} 條")
     if args.write:
         OUTPUT.write_text(json.dumps(payload, ensure_ascii=False, indent=1), encoding="utf-8")
         print("->", OUTPUT.relative_to(ROOT))

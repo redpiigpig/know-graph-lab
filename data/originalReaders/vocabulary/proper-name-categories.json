@@ -3986,8 +3986,8 @@
         "route": ""
       },
       "Italia": {
-        "category": "地名",
-        "route": "Strong 釋義：G2482 a region"
+        "category": "民族與國名",
+        "route": "place_names"
       },
       "Joan": {
         "category": "待歸類",
@@ -4002,8 +4002,8 @@
         "route": ""
       },
       "Caesar": {
-        "category": "待歸類",
-        "route": ""
+        "category": "君王",
+        "route": "historical_rulers"
       },
       "Anglorum": {
         "category": "待歸類",
@@ -4014,8 +4014,8 @@
         "route": ""
       },
       "Cyrillus": {
-        "category": "待歸類",
-        "route": ""
+        "category": "教父與聖人",
+        "route": "theologians"
       },
       "Gallia": {
         "category": "地名",
@@ -4027,7 +4027,7 @@
       },
       "Hierosolyma": {
         "category": "地名",
-        "route": "希臘↔拉丁字形橋"
+        "route": "place_names"
       },
       "Latin": {
         "category": "待歸類",
@@ -4046,8 +4046,8 @@
         "route": ""
       },
       "Carolus": {
-        "category": "待歸類",
-        "route": ""
+        "category": "君王",
+        "route": "historical_rulers"
       },
       "Romanam": {
         "category": "待歸類",
@@ -4078,8 +4078,8 @@
         "route": ""
       },
       "Europa": {
-        "category": "待歸類",
-        "route": ""
+        "category": "地名",
+        "route": "place_names"
       },
       "Encyclicae": {
         "category": "待歸類",
@@ -4174,12 +4174,12 @@
         "route": ""
       },
       "Germania": {
-        "category": "待歸類",
-        "route": ""
+        "category": "地名",
+        "route": "place_names"
       },
       "Hercules": {
-        "category": "待歸類",
-        "route": ""
+        "category": "神名與稱號",
+        "route": "deities"
       },
       "Vaticani": {
         "category": "待歸類",
@@ -4198,16 +4198,16 @@
         "route": "deities"
       },
       "Constantinopolis": {
-        "category": "待歸類",
-        "route": ""
+        "category": "地名",
+        "route": "place_names"
       },
       "Saxonum": {
         "category": "待歸類",
         "route": ""
       },
       "Antonius": {
-        "category": "待歸類",
-        "route": ""
+        "category": "君王",
+        "route": "historical_rulers"
       },
       "Socrates": {
         "category": "待歸類",
@@ -4254,8 +4254,8 @@
         "route": ""
       },
       "Eva": {
-        "category": "待歸類",
-        "route": ""
+        "category": "族長與先知",
+        "route": "手列族長先知"
       },
       "Constantini": {
         "category": "待歸類",
@@ -4290,8 +4290,8 @@
         "route": ""
       },
       "Africa": {
-        "category": "待歸類",
-        "route": ""
+        "category": "地名",
+        "route": "place_names"
       },
       "Genesis": {
         "category": "待歸類",
@@ -4434,8 +4434,8 @@
         "route": ""
       },
       "Sicilia": {
-        "category": "待歸類",
-        "route": ""
+        "category": "地名",
+        "route": "place_names"
       },
       "Tullius": {
         "category": "待歸類",
@@ -4482,16 +4482,16 @@
         "route": "deities"
       },
       "Anglia": {
-        "category": "待歸類",
-        "route": ""
+        "category": "民族與國名",
+        "route": "place_names"
       },
       "Basileensis": {
         "category": "待歸類",
         "route": ""
       },
       "Ezechiel": {
-        "category": "待歸類",
-        "route": ""
+        "category": "族長與先知",
+        "route": "手列族長先知"
       },
       "Scottorum": {
         "category": "待歸類",
@@ -4646,8 +4646,8 @@
         "route": ""
       },
       "Hibernia": {
-        "category": "待歸類",
-        "route": ""
+        "category": "民族與國名",
+        "route": "place_names"
       },
       "Cato": {
         "category": "待歸類",
@@ -4674,8 +4674,8 @@
         "route": ""
       },
       "Tiberis": {
-        "category": "其他人名",
-        "route": "Strong 釋義（字幹）：G5085 the name of"
+        "category": "地名",
+        "route": "place_names"
       },
       "Iubilaei": {
         "category": "待歸類",
@@ -5118,8 +5118,8 @@
         "route": ""
       },
       "Vulcanus": {
-        "category": "待歸類",
-        "route": ""
+        "category": "神名與稱號",
+        "route": "deities"
       },
       "Seville": {
         "category": "待歸類",
@@ -5194,7 +5194,7 @@
         "route": ""
       },
       "Carthago": {
-        "category": "地名",
+        "category": "民族與國名",
         "route": "place_names"
       },
       "France": {
@@ -5202,8 +5202,8 @@
         "route": "place_names"
       },
       "Lucina": {
-        "category": "待歸類",
-        "route": ""
+        "category": "地名",
+        "route": "place_names"
       },
       "Londonensi": {
         "category": "待歸類",
@@ -5310,8 +5310,8 @@
         "route": ""
       },
       "Pompeius": {
-        "category": "待歸類",
-        "route": ""
+        "category": "君王",
+        "route": "historical_rulers"
       },
       "Flaccus": {
         "category": "待歸類",
@@ -5319,7 +5319,7 @@
       },
       "Aethiopia": {
         "category": "民族與國名",
-        "route": "登錄"
+        "route": "place_names"
       },
       "Cosmedin": {
         "category": "待歸類",
@@ -5430,8 +5430,8 @@
         "route": "Strong 釋義：G3496 a place"
       },
       "Bononia": {
-        "category": "待歸類",
-        "route": ""
+        "category": "地名",
+        "route": "place_names"
       },
       "Paschatis": {
         "category": "待歸類",
@@ -5526,8 +5526,8 @@
         "route": ""
       },
       "Justinianus": {
-        "category": "待歸類",
-        "route": ""
+        "category": "君王",
+        "route": "historical_rulers"
       },
       "Massonum": {
         "category": "待歸類",
@@ -5564,6 +5564,46 @@
       "Arsiensis": {
         "category": "待歸類",
         "route": ""
+      },
+      "Arcadius": {
+        "category": "君王",
+        "route": "historical_rulers"
+      },
+      "Sabinus": {
+        "category": "君王",
+        "route": "historical_rulers"
+      },
+      "Romulus": {
+        "category": "君王",
+        "route": "historical_rulers"
+      },
+      "Libya": {
+        "category": "民族與國名",
+        "route": "place_names"
+      },
+      "Valerius": {
+        "category": "君王",
+        "route": "historical_rulers"
+      },
+      "Illyricum": {
+        "category": "地名",
+        "route": "place_names"
+      },
+      "Ceres": {
+        "category": "神名與稱號",
+        "route": "deities"
+      },
+      "Iuno": {
+        "category": "神名與稱號",
+        "route": "deities"
+      },
+      "Afer": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Nero": {
+        "category": "君王",
+        "route": "historical_rulers"
       }
     },
     "hbo": {
@@ -6047,7 +6087,7 @@
   },
   "counts": {
     "grc": 405,
-    "la": 985,
+    "la": 995,
     "hbo": 119
   }
 }

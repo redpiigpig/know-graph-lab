@@ -192,6 +192,46 @@ Two failures recur across languages and are worth carrying into any new reader:
 18. Run `scripts/hash_release_artifacts.py` after all artifacts pass. Store the resulting hash manifest beside the QA report.
 19. Report exact paths, counts, versions, hashes, QA results, and audio status. Do not deploy, publish, or call the release complete without explicit authority and every required gate passing.
 
+### Proper names: identity is the qualified name, never the spelling
+
+A name register holds homonyms on purpose. Three men named Theophilus, two named
+Saturninus, two named Julianus. So:
+
+- **`name_original` is a spelling, not an identity.** Deduplicating a seed against it
+  made "Theophilus of Alexandria" collide with the Caesarean's Latin spelling and be
+  skipped as already present — while the appendix went on printing the Caesarean's
+  Chinese for a man the corpus calls *episcopus Alexandrinus* 25 times out of 25.
+  Key identity on `name_english`; that is the column carrying the qualifier.
+- **The ambiguity guard compares rows, not fields.** One row offering a Catholic form
+  and a recommended form that differ is still one person. Comparing field by field
+  read Origen as two people and blanked him.
+- **Blank beats a guess, and a cited decision beats blank.** Where the corpus really
+  does show several bearers (Julianus: six; Saturninus: seven), print a
+  transliteration, not a person. Where it shows one, record *which register row* in a
+  referent table and let the register keep supplying the Chinese — never copy the
+  Chinese into the builder, or the reader grows a second glossary nobody knows about.
+
+### A rebuild must not be a regression
+
+`build_latin_appendices.py` recomputes spellings and corpus attestation; the Chinese
+for the numeral, kinship, calendar, principal-part and terminology tables comes from a
+separate model-backed pass. Rebuilding therefore zeroed 1,192 glosses — twice — and the
+book still paginated, still passed every gate, and printed 1,205 「（中文待補）」.
+
+The builder now re-applies `appendix-gloss-zh.json` itself, so a bare rebuild is
+lossless. Two things about that cache: it is keyed on the **raw headword**, not a folded
+form (inventing a fold silently restored 1,062 of 1,192 and the 130 misses looked
+exactly like "never glossed"), and what it cannot restore is genuinely unglossed rather
+than self-inflicted. Check the count it prints, not just that it ran.
+
+### Alignment tie-breaks must be deterministic
+
+Candidate Chinese accumulated from a `set` of strings, so `Counter.most_common` broke
+ties by `PYTHONHASHSEED`. Two builds of identical inputs disagreed on about five names
+— some swapping referent, some going blank when the newly-chosen candidate failed a
+frequency guard. Sort ties explicitly. **Build the same data twice and compare bytes**;
+a pipeline that cannot reproduce itself cannot be audited.
+
 ## Invalidate downstream work
 
 Any change to vocabulary, glosses, source text, translation, crosswalk, readings, appendix data, name categories, styles, fonts, or audio invalidates all downstream artifacts and their prior QA. Rebuild and re-inspect; never reuse an old PDF or page-QA result after an upstream change.
