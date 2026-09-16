@@ -1095,10 +1095,48 @@ python scripts/ocr_bench.py score --bench c:/tmp/bench_x --hyp <輸出> --label 
 合成卷那 1.93% **幾乎全來自兩頁 ASCII 製表符畫的表解**（`┌┐└┘├┤`），引擎把 2D 圖的
 閱讀順序重排 —— 那本來就沒有唯一正解。扣掉圖表，純中文散文是 0.00–0.23%。
 
-### MinerU（本機 GPU）對照結果 —— 讀對輸出層就贏過 Gemini
+### 🚩 MinerU（本機 GPU）＝ OCR 主力引擎（2026-09-16 使用者定調）
 
-腳本：[`scripts/mineru_ocr.py`](../../../scripts/mineru_ocr.py)（`check` 自檢／`run` 轉錄，
-支援 `--staging` 接 `requeue_reocr` 的 staged gate）。
+腳本：[`scripts/mineru_ocr.py`](../../../scripts/mineru_ocr.py)
+
+```bash
+python scripts/mineru_ocr.py check                        # 環境自檢
+python scripts/mineru_ocr.py queue --limit 8 --max-minutes 90   # 吃 OCR 佇列（每日排程用）
+python scripts/mineru_ocr.py run --book <id> --staging    # 單本，接 staged gate
+python scripts/requeue_reocr.py run --from-ledger --limit 40    # 重轉錄（預設已是 mineru）
+```
+
+- `run_ocr_daily.bat` 的 step 3 現在**先跑 MinerU**（limit 8／90 分鐘上限）。跑完（exit 0）
+  或 GPU 忙（exit 4）就**跳過 Gemini**，把免費額度留給翻譯那條線；只有本機出環境問題
+  （exit 3）才退回雲端，原本的 `gemini_probe` 與配額分支原封不動留著。
+- `queue` 吃的是 `ocr_with_gemini.fetch_ocr_targets()` **同一個佇列**、用的是**同一組發布
+  函式**（`write_jsonl`／`push_to_r2`／`insert_chunk_previews`／`update_book_done`）——
+  兩條引擎不各養一套，才不會久了對不起來。
+
+**離開碼**（呼叫端一定要分辨，不然會燒掉整個佇列）：
+
+| 碼 | 意思 | 呼叫端該做什麼 |
+|---|---|---|
+| 0 | 成功 | 繼續 |
+| 1 | 這本的問題（PDF 不在、DB 沒這筆） | 跳過這本 |
+| 2 | 重複幻覺判準擋下 | 跳過這本，留在佇列 |
+| **3** | **環境問題**（DNS／Supabase／Drive／MinerU 掛了） | **整場停**，ledger 不動 |
+| **4** | **GPU 被另一個 MinerU 佔著** | **整場停**，什麼都沒做，不是失敗 |
+
+🚨 **GPU 只有 6 GB，同時只准跑一個**（`scripts/state/mineru_gpu.lock`，持有者死掉會被接收）。
+bat 裡記著 `qwen2.5vl:3b` 光視覺計算圖就要 ~6.7 GiB、掉 CPU 後約 1 tok/min 完全不能用 ——
+**那正是當年棄用本機 OCR 的原因**。MinerU 的 pipeline 後端只吃 **~1.1 GB** 所以這次塞得下，
+但兩個一起跑仍會互相擠爆。每日排程與手動批次必定會撞，所以一定要靠這把鎖。
+
+🚨 **一次短暫斷網可以在幾秒內燒掉整個佇列**：2026-09-16 實測，`getaddrinfo failed`
+讓 30 本在數秒內全被標成 `ocr_failed`。`requeue_reocr` 現在有三層防護：離開碼 3/4 → `"env"`
+整場停；外加斷路器「連續 3 本在 30 秒內失敗就停並退回 pending」——
+幾百頁的書正常要跑好幾分鐘，秒殺只會是環境壞了。
+
+🚨 **ledger 是兩個人在寫**（手動批次＋02:30 的 `KGLab-Quality-Sweep`）。`save_ledger()`
+已改成存檔前先重讀合併、`.tmp` 原子換檔；同一本以推進得較遠的狀態為準，同階以呼叫者
+手上的為準（`--from-ledger` 刻意把 `ocr_failed` 退回 `pending` 才不會被擋）。
+原本的無鎖讀-改-寫會讓後開始的那個把先開始的幾小時進度整份蓋掉，而兩邊 log 都正常。
 
 同一份考卷（《孔子大歷史》p150–161，原生數位排版、標準答案零誤差），RTX 4050 6GB：
 
@@ -1131,7 +1169,7 @@ Gemini 的分數要**抹平「」引號樣式**才看得準：97.95% → 98.83%�
 都正確改回來卻被判錯），而且 MinerU 主動剝掉書眉（正確行為）被算成漏字 1.4%。
 
 **定位**：0.55 秒/頁、零配額、可整晚跑（約 6,500 頁/小時；Gemini 約 350 頁/小時
-還要抽 503／429 的籤）。準度與頁碼都站得住，可以當重轉錄的主力。
+還要抽 503／429 的籤）。準度與頁碼都站得住，2026-09-16 起已是 OCR 主力。
 
 安裝現況：`_mineru_venv/`（python 3.12 + torch 2.11.0+cu128，已 gitignore）。
 🚨 `~/mineru.json` 會把 `model-source` 與 `models-dir` **寫死**，環境變數
