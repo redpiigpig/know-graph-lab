@@ -171,6 +171,23 @@ export function isBlacklisted(...fields) {
   return BLACKLIST.some((n) => hay.includes(n))
 }
 
+/** 把 z-library 的 `filesize` 字串解析成 MB。
+ *
+ * 🚨 站方給的是帶單位的字串（實測帳本裡 `"661 KB"` 129 筆、`"11.02 MB"` 974 筆），
+ *    原本的 `parseFloat(hit.filesize)` 會把 `"661 KB"` 讀成 661，當成 661 MB，
+ *    於是**最小的那批檔反而拿不到小檔加分**——跟原意正好相反。
+ */
+export function sizeMB(filesize) {
+  const m = String(filesize || '').match(/([\d.]+)\s*(KB|MB|GB)/i)
+  if (!m) return 0
+  const n = parseFloat(m[1])
+  if (!Number.isFinite(n)) return 0
+  const u = m[2].toUpperCase()
+  if (u === 'KB') return n / 1024
+  if (u === 'GB') return n * 1024
+  return n
+}
+
 export function rank(hit, query = '', expect = '', who = '', wantLang = '', wantExt = '',
                      expectS = '', whoS = '') {
   const lang = (hit.language || '').toLowerCase()
@@ -220,8 +237,23 @@ export function rank(hit, query = '', expect = '', who = '', wantLang = '', want
   if (ext === 'epub') s += 20
   else if (ext === 'azw3' || ext === 'mobi') s += 12
   else if (ext === 'pdf') s += 8
-  const mb = parseFloat(hit.filesize) || 0
-  if (mb > 0 && mb < 60) s += 4          // 動輒上百 MB 的多半是掃描
+  // 使用者的容量規矩（2026-09-16）：能選就選小的，盡量不要超過 30 MB。
+  // 理由是 Drive 那 5 TB 不是先撞到的牆——本機 C: 只剩不到 100 GB，而 DriveFS
+  // 是先寫本機快取再上傳，大檔會先把筆電的硬碟吃掉。
+  //
+  // 🚨 分級只加分、不扣到負的。`rank` 的回傳值要 > 0 才進候選
+  //    （呼叫端 `scored.filter(([r]) => r > 0)`），一扣成負數就等於把「站上有貨
+  //    但檔案大」記成 probe-miss／no-usable-hit，而那在帳本裡是半永久的
+  //    （見 ebook-zlib-harvest SKILL「probe-miss 是規則判的」）。寧可排在後面，
+  //    也不要讓它從「有」變成「沒有」。
+  const mb = sizeMB(hit.filesize)
+  if (mb > 0) {
+    if (mb <= 30) s += 8                 // 首選
+    else if (mb <= 60) s += 2            // 勉強
+    // > 60 MB 不加分：動輒上百 MB 的多半是掃描
+  }
+  // 同語言同格式時讓小的勝出；上限 3 分，壓不過語言（40/25）與格式（20/8）的差距。
+  if (mb > 0) s -= Math.min(mb, 300) / 100
   return s
 }
 
