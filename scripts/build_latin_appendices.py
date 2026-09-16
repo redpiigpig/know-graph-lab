@@ -237,18 +237,26 @@ def harvest_names(units, lm, minimum: int) -> dict[str, int]:
     }
 
 
-def surface_forms(corpus_words) -> dict[str, Counter]:
+def surface_forms(corpus_words, lm=None) -> dict[str, Counter]:
     """Every capitalised spelling seen for each folded key, counted once.
 
     Built in a single pass on purpose.  Asking for one name's commonest spelling
     by re-scanning the corpus is fine; asking it five hundred times over three
     million words is a quarter of a billion comparisons, and it is why the first
     version of this script never finished.
+
+    🚨 索引必須與 `harvest_names` 用同一把鍵，也就是**詞形還原後**的折疊。原本
+    這裡按原樣詞形折疊，詞條卻按 lemma 折疊，兩邊對不上時 `display_form` 就把
+    lemma 本身當詞條印出去——書上因此印過 `iohannes`、`iordanes`、`zebedaeus`
+    這種小寫又 I/U 化的怪拼法（武加大印的是 Joannes、Jordanes、Zebedæus），
+    最糟的一條是 `aelius`：辭典收了羅馬氏族名 Aelius，詞形還原就把 `Eliam`
+    （厄里亞，二十六次）認成它的變化形，於是聖經專名表裡多出一個羅馬人。
     """
     forms: dict[str, Counter] = defaultdict(Counter)
     for word in corpus_words:
         if word[:1].isupper():
-            forms[L.fold(word)][word] += 1
+            lemma = lm.lemma(word) if lm else None
+            forms[L.fold(lemma) if lemma else L.fold(word)][word] += 1
     return forms
 
 
@@ -281,6 +289,72 @@ def proper_noun_keys() -> set[str]:
         for entry in W.load()
         if entry.pos == "N" and entry.lemma[:1].isupper()
     }
+
+
+# 思高逐節對位搆不到的，依思高譯本體例人工補上。
+# 擁有者 2026-09-16：「思高無法就你自己翻譯啊，不能沒有中文。」
+#
+# 🚨 這些的 zhRoute 一律標「思高體例（人工補）」，與逐節對位來的分得開。
+# 對位有證據、這裡沒有；混在同一個標籤底下，日後就沒有人能重驗哪一條是查出來的、
+# 哪一條是寫上去的。括號裡記的是它為什麼補得出來——變格還原，或哪一節定的順序。
+VULGATE_NAMES_ZH: dict[str, tuple[str, str]] = {
+    "Pharaonis": ("法郎", "Pharao 的屬格"),
+    "Pharaonem": ("法郎", "Pharao 的賓格"),
+    "Simon": ("西滿", "新約作西滿；瑪加伯上下作息孟"),
+    "Manasse": ("默納協", "Manasses 的奪格"),
+    "Galaad": ("基肋阿得", ""),
+    "Tobias": ("多俾亞", "多俾亞傳；父子同名，思高父作托彼特、子作多俾亞"),
+    "Jerosolymis": ("耶路撒冷", "Jerosolyma 的複數奪格"),
+    "Jerosolymam": ("耶路撒冷", "Jerosolyma 的賓格"),
+    "Israëli": ("以色列", "Israel 的與格"),
+    "Ananias": ("阿納尼雅", ""),
+    "Satanas": ("撒殫", ""),
+    "Libano": ("黎巴嫩", "Libanus 的奪格"),
+    "Medorum": ("瑪待人", "Medi 的屬格複數"),
+    "Maacha": ("瑪阿加", ""),
+    "Nathanaël": ("納塔乃耳", ""),
+    "Ægyptiis": ("埃及人", "Ægyptii 的與格／奪格複數"),
+    "Capharnaum": ("葛法翁", ""),
+    "Sidrach": ("沙得辣客", "達 1:7 三人順序：Sidrach、Misach、Abdenago"),
+    "Misach": ("默沙客", "達 1:7 三人順序：Sidrach、Misach、Abdenago"),
+    "Abdenago": ("阿貝得乃哥", "達 1:7 三人順序：Sidrach、Misach、Abdenago"),
+    "Israëlitæ": ("以色列人", "Israëlita 的複數"),
+    "Chananæi": ("客納罕人", "Chananæus 的複數"),
+    "Nahasson": ("納赫雄", ""),
+    "Zebedæi": ("載伯德", "Zebedæus 的屬格"),
+    "Galilæus": ("加里肋亞人", ""),
+    "Hevæi": ("希威人", "Hevæus 的複數"),
+    "Saphat": ("沙法特", ""),
+    "Rages": ("辣革斯", "多俾亞傳的瑪待城邑"),
+}
+
+
+LOOKUP_NAME_MINIMUM = 50
+"""讀本沒出現的名字要多常見才收進附錄。
+
+擁有者 2026-09-16：「名字除了聖經和教會常見的其他不用。」原本這張表收五百
+八十五條，其中四百七十七條讀本五十章根本不出現，末端是 Jeroham、Machir、
+Beor 這種只在系譜裡出現一兩次的人——查閱價值近乎零，卻佔掉一半篇幅，而且
+正是這批補不出中文。門檻只管這一批：讀本實際出現的一律全留，不論多罕見。
+"""
+
+
+def printable_names(rows: list[dict]) -> list[dict]:
+    """讀本所見的全留；只作查閱的，武加大頻次夠高才留。再把人工譯名補上。"""
+    kept = [
+        row for row in rows
+        if row.get("tier") == "讀本所見"
+        or row.get("vulgateFrequency", 0) >= LOOKUP_NAME_MINIMUM
+    ]
+    for row in kept:
+        if (row.get("zh") or "").strip():
+            continue
+        hit = VULGATE_NAMES_ZH.get(row["headword"])
+        if hit:
+            row["zh"], row["zhRoute"] = hit[0], "思高體例（人工補）"
+            if hit[1]:
+                row["zhEvidence"] = hit[1]
+    return kept
 
 
 GLOSS_CACHE = (ROOT / "output" / "source-cache" / "original-readers" / "latin-full"
@@ -469,13 +543,29 @@ def align_chinese(latin_names: set[str], lm) -> dict[str, dict]:
         # 兩個候選誰先進 Counter 就跟著變。實測同一份輸入連跑兩次，附錄的中文會
         # 漂五筆左右——有的換人，有的因為換到的候選過不了下面那兩道閘而整格變空。
         # 靠字面排序把它釘死：同分時取哪一個可以再議，但不能每次都不一樣。
-        best, hits = min(counts.items(), key=lambda kv: (-kv[1], kv[0]))
+        ranked = sorted(counts.items(), key=lambda kv: (-kv[1], kv[0]))
+        best, hits = ranked[0]
         appearances = latin_verse_total[name]
-        # Two guards: the candidate must follow this name through most of its
-        # verses, and it must not be a name that follows everything.
+        runner_up = ranked[1][1] if len(ranked) > 1 else 0
+        # 三道閘，各擋一種假對位：
+        #   1. 候選要跟著這個名字走過它大部分的節。
+        #   2. 候選不能是「到處都跟著」的陪襯詞（以色列、耶穌、耶路撒冷）。
+        #   3. 候選要**明顯**贏過第二名，不能只是並列出現的同伴。
+        #
+        # 🚨 倍率 2.5 太緊，誤殺的正好是最常見的名字：Judas 八十節裡七十六節
+        # 跟著「猶大」，卻因為猶大全書出現兩百四十一次而被擋（241 > 76×2.5）；
+        # 厄里叟十四節全中也一樣被擋。書上因此 Judas（語料 319 次）整格空白。
+        # 放寬到 8 之後，以色列（612 次）那種陪襯詞照樣擋得住。
+        #
+        # 🚨 第三道閘是新加的，擋的是另一種錯：達尼爾書那三個人總是並列出現，
+        # Sidrach、Misach、Abdenago 的候選完全相同（阿貝得乃哥 12、沙得辣客 12、
+        # 默沙客 11），原本三個都判成「沙得辣客」——三條裡有兩條是印錯的人名，
+        # 而印出來完全看不出來。分不出來就該留白。
         if hits < max(2, appearances * 0.6):
             continue
-        if chinese_verse_total[best] > hits * 2.5:
+        if chinese_verse_total[best] > hits * 8:
+            continue
+        if hits < runner_up * 1.3:
             continue
         resolved[name] = {
             "zh": best, "sharedVerses": hits, "latinVerses": appearances,
@@ -553,8 +643,8 @@ def main() -> None:
     vulgate_counts = Counter(L.fold(w) for w in vulgate_words)
     church_counts = Counter(L.fold(w) for w in church_words)
 
-    vulgate_forms = surface_forms(vulgate_words)
-    church_forms = surface_forms(church_words)
+    vulgate_forms = surface_forms(vulgate_words, lm)
+    church_forms = surface_forms(church_words, lm)
 
     biblical_names = harvest_names(L.vulgate_verses().values(), lm, NAME_MINIMUM)
     chinese = align_chinese(set(biblical_names), lm)
@@ -636,7 +726,8 @@ def main() -> None:
         "schemaVersion": "1.0.0",
         "generatedOn": date.today().isoformat(),
         "upper": {
-            "names": {"title": "人名、地名、民族與國名（武加大）", "entries": name_rows},
+            "names": {"title": "人名、地名、民族與國名（武加大）",
+                      "entries": printable_names(name_rows)},
             **{key: curated_table(spec, vulgate_counts, words_index)
                for key, spec in CURATED_UPPER.items()},
             "principalParts": {"title": "動詞主要部分與不規則變化",
@@ -650,19 +741,15 @@ def main() -> None:
         },
     }
 
-    reader_rows = [r for r in name_rows if r["tier"] == "讀本所見"]
-    named = sum(1 for r in reader_rows if r["zh"])
-    print(f"聖經專名共 {len(name_rows)}；其中讀本五十章實際出現 {len(reader_rows)}，"
-          f"已由思高逐節對位定出中文 {named}"
-          f"（{named / max(len(reader_rows), 1) * 100:.0f}%）")
-    # Say what came out, not what the first design planned. The lookup-only
-    # names are no longer all blank: fetching the chapters where they occur
-    # gives most of them a Chinese too, and this line went on reporting them as
-    # 中文從缺 long after that stopped being true.
-    lookup = [r for r in name_rows if r["tier"] != "讀本所見"]
-    lookup_named = sum(1 for r in lookup if r["zh"])
-    print(f"其餘 {len(lookup)} 個只作查閱，其中 {lookup_named} 個另抓所在章定出中文")
-    print(f"專名中文合計 {named + lookup_named}/{len(name_rows)}")
+    # 🚨 報實際印出來的那張表，不報過濾前的池子。這一行曾經寫「讀本所見 108，
+    # 已由思高逐節對位定出中文 108（100%）」——其中二十八條是人工補的，而且分母
+    # 報的是砍表前的 585。數字全對，講的卻是另一張表。
+    printed = printable_names(name_rows)
+    routes = Counter(r.get("zhRoute") or "（無）" for r in printed)
+    print(f"聖經專名：語料採得 {len(name_rows)}，實際印出 {len(printed)}"
+          f"（讀本所見全留；只作查閱的要武加大 ≥{LOOKUP_NAME_MINIMUM} 次）")
+    for route, count in routes.most_common():
+        print(f"    {route}：{count}")
     named_modern = sum(1 for row in modern_rows if row["zh"])
     print(f"近現代專名 {len(modern_rows)}（登錄或辭典作證過的才收），"
           f"其中 {named_modern} 條由登錄定出中文")

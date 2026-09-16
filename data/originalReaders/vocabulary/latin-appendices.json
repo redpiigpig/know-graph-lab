@@ -36,7 +36,7 @@
      "zhEvidence": "136/162 節同現"
     },
     {
-     "headword": "Ægyptus",
+     "headword": "Ægypti",
      "folded": "aegyptus",
      "vulgateFrequency": 613,
      "type": "",
@@ -56,7 +56,7 @@
      "zhEvidence": "114/122 節同現"
     },
     {
-     "headword": "Judæi",
+     "headword": "Judæorum",
      "folded": "iudaei",
      "vulgateFrequency": 370,
      "type": "",
@@ -91,12 +91,12 @@
      "vulgateFrequency": 319,
      "type": "",
      "tier": "讀本所見",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
+     "zh": "猶大",
+     "zhRoute": "sigao-underline-alignment",
+     "zhEvidence": "76/80 節同現"
     },
     {
-     "headword": "Babylon",
+     "headword": "Babylonis",
      "folded": "babylon",
      "vulgateFrequency": 277,
      "type": "",
@@ -186,14 +186,14 @@
      "zhEvidence": "45/53 節同現"
     },
     {
-     "headword": "Pharao",
+     "headword": "Pharaonis",
      "folded": "pharao",
      "vulgateFrequency": 157,
      "type": "",
      "tier": "讀本所見",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
+     "zh": "法郎",
+     "zhRoute": "思高體例（人工補）",
+     "zhEvidence": "Pharao 的屬格"
     },
     {
      "headword": "Petrus",
@@ -206,7 +206,7 @@
      "zhEvidence": "8/11 節同現"
     },
     {
-     "headword": "iohannes",
+     "headword": "Joannes",
      "folded": "iohannes",
      "vulgateFrequency": 150,
      "type": "",
@@ -241,19 +241,19 @@
      "vulgateFrequency": 147,
      "type": "",
      "tier": "讀本所見",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
+     "zh": "西滿",
+     "zhRoute": "思高體例（人工補）",
+     "zhEvidence": "新約作西滿；瑪加伯上下作息孟"
     },
     {
-     "headword": "Manasses",
+     "headword": "Manasse",
      "folded": "manasses",
      "vulgateFrequency": 146,
      "type": "",
      "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
+     "zh": "默納協",
+     "zhRoute": "思高體例（人工補）",
+     "zhEvidence": "Manasses 的奪格"
     },
     {
      "headword": "Joab",
@@ -291,8 +291,8 @@
      "vulgateFrequency": 130,
      "type": "",
      "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
+     "zh": "基肋阿得",
+     "zhRoute": "思高體例（人工補）",
      "zhEvidence": ""
     },
     {
@@ -306,7 +306,7 @@
      "zhEvidence": "24/28 節同現"
     },
     {
-     "headword": "Jeremias",
+     "headword": "Jeremiam",
      "folded": "ieremias",
      "vulgateFrequency": 126,
      "type": "",
@@ -346,14 +346,14 @@
      "zhEvidence": "27/28 節同現"
     },
     {
-     "headword": "Syria",
+     "headword": "Syriæ",
      "folded": "syria",
      "vulgateFrequency": 111,
      "type": "",
      "tier": "讀本所見",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
+     "zh": "阿蘭",
+     "zhRoute": "sigao-underline-alignment",
+     "zhEvidence": "20/28 節同現"
     },
     {
      "headword": "Nabuchodonosor",
@@ -366,14 +366,14 @@
      "zhEvidence": "33/34 節同現"
     },
     {
-     "headword": "Levites",
+     "headword": "Levitis",
      "folded": "leuites",
      "vulgateFrequency": 108,
      "type": "",
      "tier": "讀本所見",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
+     "zh": "肋未",
+     "zhRoute": "sigao-underline-alignment",
+     "zhEvidence": "17/23 節同現"
     },
     {
      "headword": "Judæa",
@@ -381,12 +381,12 @@
      "vulgateFrequency": 106,
      "type": "",
      "tier": "讀本所見",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
+     "zh": "猶太",
+     "zhRoute": "sigao-underline-alignment",
+     "zhEvidence": "17/25 節同現"
     },
     {
-     "headword": "assirus",
+     "headword": "Assyriorum",
      "folded": "assirus",
      "vulgateFrequency": 106,
      "type": "",
@@ -451,9 +451,9 @@
      "vulgateFrequency": 89,
      "type": "",
      "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
+     "zh": "肋未",
+     "zhRoute": "sigao-underline-alignment",
+     "zhEvidence": "12/15 節同現"
     },
     {
      "headword": "Achab",
@@ -501,9 +501,9 @@
      "vulgateFrequency": 76,
      "type": "",
      "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
+     "zh": "肋未",
+     "zhRoute": "sigao-underline-alignment",
+     "zhEvidence": "16/22 節同現"
     },
     {
      "headword": "Ruben",
@@ -546,14 +546,14 @@
      "zhEvidence": "22/27 節同現"
     },
     {
-     "headword": "iordanes",
+     "headword": "Jordanis",
      "folded": "iordanes",
      "vulgateFrequency": 69,
      "type": "",
      "tier": "讀本所見",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
+     "zh": "約但",
+     "zhRoute": "sigao-underline-alignment",
+     "zhEvidence": "9/10 節同現"
     },
     {
      "headword": "Dan",
@@ -606,7 +606,7 @@
      "zhEvidence": "19/21 節同現"
     },
     {
-     "headword": "Chaldæi",
+     "headword": "Chaldæorum",
      "folded": "chaldaei",
      "vulgateFrequency": 62,
      "type": "",
@@ -616,7 +616,7 @@
      "zhEvidence": "8/9 節同現"
     },
     {
-     "headword": "Damascus",
+     "headword": "Damasci",
      "folded": "damascus",
      "vulgateFrequency": 62,
      "type": "",
@@ -641,9 +641,9 @@
      "vulgateFrequency": 62,
      "type": "",
      "tier": "讀本所見",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
+     "zh": "多俾亞",
+     "zhRoute": "思高體例（人工補）",
+     "zhEvidence": "多俾亞傳；父子同名，思高父作托彼特、子作多俾亞"
     },
     {
      "headword": "Philisthinorum",
@@ -651,12 +651,12 @@
      "vulgateFrequency": 60,
      "type": "",
      "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
+     "zh": "培肋舍特",
+     "zhRoute": "sigao-underline-alignment",
+     "zhEvidence": "21/22 節同現"
     },
     {
-     "headword": "Isaia",
+     "headword": "Isaias",
      "folded": "isaia",
      "vulgateFrequency": 60,
      "type": "",
@@ -691,9 +691,9 @@
      "vulgateFrequency": 58,
      "type": "",
      "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
+     "zh": "約納堂",
+     "zhRoute": "sigao-underline-alignment",
+     "zhEvidence": "9/9 節同現"
     },
     {
      "headword": "Edom",
@@ -771,19 +771,9 @@
      "vulgateFrequency": 50,
      "type": "",
      "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Adam",
-     "folded": "adam",
-     "vulgateFrequency": 49,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
+     "zh": "亞巴郎",
+     "zhRoute": "sigao-underline-alignment",
+     "zhEvidence": "16/16 節同現"
     },
     {
      "headword": "Madian",
@@ -806,64 +796,14 @@
      "zhEvidence": "12/14 節同現"
     },
     {
-     "headword": "Gabaa",
-     "folded": "gabaa",
-     "vulgateFrequency": 48,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "基貝亞",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "16/23 節同現"
-    },
-    {
-     "headword": "Semei",
-     "folded": "semei",
-     "vulgateFrequency": 47,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "史米",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "15/20 節同現"
-    },
-    {
-     "headword": "Joram",
-     "folded": "ioram",
-     "vulgateFrequency": 47,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "耶曷蘭",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "15/23 節同現"
-    },
-    {
-     "headword": "Antiochus",
-     "folded": "antiochus",
-     "vulgateFrequency": 47,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "安提約古",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "10/16 節同現"
-    },
-    {
      "headword": "Jerosolymis",
      "folded": "ierosolymis",
      "vulgateFrequency": 47,
      "type": "",
      "tier": "讀本所見",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Noë",
-     "folded": "noe",
-     "vulgateFrequency": 46,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "諾厄",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "12/13 節同現"
+     "zh": "耶路撒冷",
+     "zhRoute": "思高體例（人工補）",
+     "zhEvidence": "Jerosolyma 的複數奪格"
     },
     {
      "headword": "Bethlehem",
@@ -876,27 +816,7 @@
      "zhEvidence": "9/13 節同現"
     },
     {
-     "headword": "Roboam",
-     "folded": "roboam",
-     "vulgateFrequency": 46,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "勒哈貝罕",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "9/9 節同現"
-    },
-    {
-     "headword": "Asaph",
-     "folded": "asaph",
-     "vulgateFrequency": 46,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "阿撒夫",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "8/9 節同現"
-    },
-    {
-     "headword": "symeon",
+     "headword": "Simeon",
      "folded": "symeon",
      "vulgateFrequency": 45,
      "type": "",
@@ -904,26 +824,6 @@
      "zh": "西默盎",
      "zhRoute": "sigao-underline-alignment",
      "zhEvidence": "12/15 節同現"
-    },
-    {
-     "headword": "tyros",
-     "folded": "tyros",
-     "vulgateFrequency": 45,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "提洛",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "4/6 節同現"
-    },
-    {
-     "headword": "Joakim",
-     "folded": "ioakim",
-     "vulgateFrequency": 45,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "約雅金",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "16/16 節同現"
     },
     {
      "headword": "Philippus",
@@ -941,29 +841,9 @@
      "vulgateFrequency": 45,
      "type": "",
      "tier": "讀本所見",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Sichem",
-     "folded": "sichem",
-     "vulgateFrequency": 44,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "舍根",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "22/22 節同現"
-    },
-    {
-     "headword": "Eleazar",
-     "folded": "eleazar",
-     "vulgateFrequency": 44,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
+     "zh": "耶路撒冷",
+     "zhRoute": "思高體例（人工補）",
+     "zhEvidence": "Jerosolyma 的賓格"
     },
     {
      "headword": "Aser",
@@ -976,16 +856,6 @@
      "zhEvidence": "6/9 節同現"
     },
     {
-     "headword": "Zabulon",
-     "folded": "zabulon",
-     "vulgateFrequency": 43,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "則步隆",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "7/9 節同現"
-    },
-    {
      "headword": "Nathan",
      "folded": "nathan",
      "vulgateFrequency": 43,
@@ -994,126 +864,6 @@
      "zh": "納堂",
      "zhRoute": "sigao-underline-alignment",
      "zhEvidence": "3/3 節同現"
-    },
-    {
-     "headword": "Aman",
-     "folded": "aman",
-     "vulgateFrequency": 43,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "哈曼",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "9/9 節同現"
-    },
-    {
-     "headword": "Balaam",
-     "folded": "balaam",
-     "vulgateFrequency": 42,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "巴郎",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "8/9 節同現"
-    },
-    {
-     "headword": "Herodes",
-     "folded": "herodes",
-     "vulgateFrequency": 42,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "黑落德",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "2/2 節同現"
-    },
-    {
-     "headword": "Phase",
-     "folded": "phase",
-     "vulgateFrequency": 41,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Levitarum",
-     "folded": "leuitarum",
-     "vulgateFrequency": 41,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Caleb",
-     "folded": "caleb",
-     "vulgateFrequency": 41,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "加肋布",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "14/15 節同現"
-    },
-    {
-     "headword": "persa",
-     "folded": "persa",
-     "vulgateFrequency": 41,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "波斯",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "9/9 節同現"
-    },
-    {
-     "headword": "Amalec",
-     "folded": "amalec",
-     "vulgateFrequency": 40,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "阿瑪肋克",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "10/11 節同現"
-    },
-    {
-     "headword": "Seir",
-     "folded": "seir",
-     "vulgateFrequency": 39,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "色依爾",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "16/16 節同現"
-    },
-    {
-     "headword": "Issachar",
-     "folded": "issachar",
-     "vulgateFrequency": 39,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "依撒加爾",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "6/8 節同現"
-    },
-    {
-     "headword": "Caath",
-     "folded": "caath",
-     "vulgateFrequency": 39,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "刻哈特",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "13/19 節同現"
-    },
-    {
-     "headword": "Achaz",
-     "folded": "achaz",
-     "vulgateFrequency": 39,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "阿哈次",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "5/5 節同現"
     },
     {
      "headword": "Timotheus",
@@ -1126,74 +876,14 @@
      "zhEvidence": "7/10 節同現"
     },
     {
-     "headword": "Assur",
-     "folded": "assur",
-     "vulgateFrequency": 38,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Hesebon",
-     "folded": "hesebon",
-     "vulgateFrequency": 38,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "赫市朋",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "10/12 節同現"
-    },
-    {
      "headword": "Eliseus",
      "folded": "eliseus",
      "vulgateFrequency": 38,
      "type": "",
      "tier": "讀本所見",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Merari",
-     "folded": "merari",
-     "vulgateFrequency": 37,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "默辣黎",
+     "zh": "厄里叟",
      "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "10/16 節同現"
-    },
-    {
-     "headword": "Nun",
-     "folded": "nun",
-     "vulgateFrequency": 37,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Esther",
-     "folded": "esther",
-     "vulgateFrequency": 37,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "艾斯德爾",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "12/12 節同現"
-    },
-    {
-     "headword": "Isai",
-     "folded": "isai",
-     "vulgateFrequency": 36,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "葉瑟",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "11/12 節同現"
+     "zhEvidence": "14/14 節同現"
     },
     {
      "headword": "Israëli",
@@ -1201,59 +891,9 @@
      "vulgateFrequency": 35,
      "type": "",
      "tier": "讀本所見",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Libani",
-     "folded": "libani",
-     "vulgateFrequency": 35,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "黎巴嫩",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "3/3 節同現"
-    },
-    {
-     "headword": "Gabaon",
-     "folded": "gabaon",
-     "vulgateFrequency": 35,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "基貝紅",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "18/19 節同現"
-    },
-    {
-     "headword": "Geth",
-     "folded": "geth",
-     "vulgateFrequency": 35,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "加特",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "13/13 節同現"
-    },
-    {
-     "headword": "Sidon",
-     "folded": "sidon",
-     "vulgateFrequency": 34,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "漆冬",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "6/7 節同現"
-    },
-    {
-     "headword": "Sinai",
-     "folded": "sinai",
-     "vulgateFrequency": 34,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "西乃",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "2/2 節同現"
+     "zh": "以色列",
+     "zhRoute": "思高體例（人工補）",
+     "zhEvidence": "Israel 的與格"
     },
     {
      "headword": "Ananias",
@@ -1261,19 +901,9 @@
      "vulgateFrequency": 34,
      "type": "",
      "tier": "讀本所見",
-     "zh": "",
-     "zhRoute": "",
+     "zh": "阿納尼雅",
+     "zhRoute": "思高體例（人工補）",
      "zhEvidence": ""
-    },
-    {
-     "headword": "Lot",
-     "folded": "lot",
-     "vulgateFrequency": 33,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "羅特",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "16/17 節同現"
     },
     {
      "headword": "Pharaonem",
@@ -1281,89 +911,9 @@
      "vulgateFrequency": 33,
      "type": "",
      "tier": "讀本所見",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Silo",
-     "folded": "silo",
-     "vulgateFrequency": 33,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "史羅",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "7/8 節同現"
-    },
-    {
-     "headword": "hieremias",
-     "folded": "hieremias",
-     "vulgateFrequency": 33,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Alexander",
-     "folded": "alexander",
-     "vulgateFrequency": 33,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "亞歷山大",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "10/11 節同現"
-    },
-    {
-     "headword": "Sodoma",
-     "folded": "sodoma",
-     "vulgateFrequency": 32,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "索多瑪",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "8/8 節同現"
-    },
-    {
-     "headword": "Gedeon",
-     "folded": "gedeon",
-     "vulgateFrequency": 32,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "基德紅",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "10/10 節同現"
-    },
-    {
-     "headword": "Abia",
-     "folded": "abia",
-     "vulgateFrequency": 32,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "阿彼雅",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "6/9 節同現"
-    },
-    {
-     "headword": "Johanan",
-     "folded": "iohanan",
-     "vulgateFrequency": 32,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "約哈南",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "9/11 節同現"
-    },
-    {
-     "headword": "Demetrius",
-     "folded": "demetrius",
-     "vulgateFrequency": 32,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "德默特琉",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "12/12 節同現"
+     "zh": "法郎",
+     "zhRoute": "思高體例（人工補）",
+     "zhEvidence": "Pharao 的賓格"
     },
     {
      "headword": "Rachel",
@@ -1376,53 +926,13 @@
      "zhEvidence": "15/15 節同現"
     },
     {
-     "headword": "Sehon",
-     "folded": "sehon",
-     "vulgateFrequency": 31,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "息紅",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "9/9 節同現"
-    },
-    {
-     "headword": "Heli",
-     "folded": "heli",
-     "vulgateFrequency": 31,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "厄里",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "7/7 節同現"
-    },
-    {
-     "headword": "antiochea",
-     "folded": "antiochea",
-     "vulgateFrequency": 31,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "安提約基雅",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "7/8 節同現"
-    },
-    {
      "headword": "Satanas",
      "folded": "satanas",
      "vulgateFrequency": 31,
      "type": "",
      "tier": "讀本所見",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Sara",
-     "folded": "sara",
-     "vulgateFrequency": 30,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
+     "zh": "撒殫",
+     "zhRoute": "思高體例（人工補）",
      "zhEvidence": ""
     },
     {
@@ -1436,224 +946,14 @@
      "zhEvidence": "7/7 節同現"
     },
     {
-     "headword": "Laban",
-     "folded": "laban",
-     "vulgateFrequency": 30,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "拉班",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "17/18 節同現"
-    },
-    {
-     "headword": "Jonathæ",
-     "folded": "ionathae",
-     "vulgateFrequency": 30,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Abiathar",
-     "folded": "abiathar",
-     "vulgateFrequency": 30,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "厄貝雅塔爾",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "15/15 節同現"
-    },
-    {
-     "headword": "Sedecias",
-     "folded": "sedecias",
-     "vulgateFrequency": 30,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Josiæ",
-     "folded": "iosiae",
-     "vulgateFrequency": 30,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Mardochæus",
-     "folded": "mardochaeus",
-     "vulgateFrequency": 30,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
      "headword": "Amorrhæi",
      "folded": "amorrhaei",
      "vulgateFrequency": 29,
      "type": "",
      "tier": "讀本所見",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Judith",
-     "folded": "iudith",
-     "vulgateFrequency": 29,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Balac",
-     "folded": "balac",
-     "vulgateFrequency": 29,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "巴拉克",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "15/15 節同現"
-    },
-    {
-     "headword": "Ramoth",
-     "folded": "ramoth",
-     "vulgateFrequency": 29,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "辣摩特基肋阿得",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "12/15 節同現"
-    },
-    {
-     "headword": "Barnabas",
-     "folded": "barnabas",
-     "vulgateFrequency": 29,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "巴爾納伯",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "3/3 節同現"
-    },
-    {
-     "headword": "Samson",
-     "folded": "samson",
-     "vulgateFrequency": 28,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "三松",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "13/13 節同現"
-    },
-    {
-     "headword": "Jezrahel",
-     "folded": "iezrahel",
-     "vulgateFrequency": 28,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "依次勒耳",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "11/11 節同現"
-    },
-    {
-     "headword": "Urias",
-     "folded": "urias",
-     "vulgateFrequency": 28,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "烏黎雅",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "14/14 節同現"
-    },
-    {
-     "headword": "Ismahel",
-     "folded": "ismahel",
-     "vulgateFrequency": 28,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "依市瑪耳",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "15/15 節同現"
-    },
-    {
-     "headword": "Hai",
-     "folded": "hai",
-     "vulgateFrequency": 27,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "哈依",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "2/3 節同現"
-    },
-    {
-     "headword": "Phinees",
-     "folded": "phinees",
-     "vulgateFrequency": 27,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "丕乃哈斯",
+     "zh": "阿摩黎",
      "zhRoute": "sigao-underline-alignment",
      "zhEvidence": "4/6 節同現"
-    },
-    {
-     "headword": "Baasa",
-     "folded": "baasa",
-     "vulgateFrequency": 27,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "巴厄沙",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "22/22 節同現"
-    },
-    {
-     "headword": "Jojada",
-     "folded": "ioiada",
-     "vulgateFrequency": 27,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "約雅達",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "8/8 節同現"
-    },
-    {
-     "headword": "babylo",
-     "folded": "babylo",
-     "vulgateFrequency": 27,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Saphan",
-     "folded": "saphan",
-     "vulgateFrequency": 27,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "沙番",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "5/5 節同現"
-    },
-    {
-     "headword": "Baruch",
-     "folded": "baruch",
-     "vulgateFrequency": 27,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "巴路克",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "12/14 節同現"
     },
     {
      "headword": "Libano",
@@ -1661,129 +961,19 @@
      "vulgateFrequency": 26,
      "type": "",
      "tier": "讀本所見",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
+     "zh": "黎巴嫩",
+     "zhRoute": "思高體例（人工補）",
+     "zhEvidence": "Libanus 的奪格"
     },
     {
-     "headword": "Jabes",
-     "folded": "iabes",
-     "vulgateFrequency": 26,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Amnon",
-     "folded": "amnon",
-     "vulgateFrequency": 26,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "阿默農",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "20/20 節同現"
-    },
-    {
-     "headword": "aelius",
+     "headword": "Eliam",
      "folded": "aelius",
      "vulgateFrequency": 26,
      "type": "",
      "tier": "讀本所見",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Nabat",
-     "folded": "nabat",
-     "vulgateFrequency": 26,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "乃巴特",
+     "zh": "厄里亞",
      "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "13/13 節同現"
-    },
-    {
-     "headword": "Zorobabel",
-     "folded": "zorobabel",
-     "vulgateFrequency": 26,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "則魯巴貝耳",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "6/6 節同現"
-    },
-    {
-     "headword": "Nicanor",
-     "folded": "nicanor",
-     "vulgateFrequency": 26,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "尼加諾爾",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "9/10 節同現"
-    },
-    {
-     "headword": "Joppe",
-     "folded": "ioppe",
-     "vulgateFrequency": 25,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "約培",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "2/3 節同現"
-    },
-    {
-     "headword": "Booz",
-     "folded": "booz",
-     "vulgateFrequency": 25,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "波阿次",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "10/10 節同現"
-    },
-    {
-     "headword": "Abisai",
-     "folded": "abisai",
-     "vulgateFrequency": 25,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "阿彼瑟",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "15/15 節同現"
-    },
-    {
-     "headword": "Sarviæ",
-     "folded": "saruiae",
-     "vulgateFrequency": 25,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "責魯雅",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "10/10 節同現"
-    },
-    {
-     "headword": "Jojadæ",
-     "folded": "ioiadae",
-     "vulgateFrequency": 25,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "約雅達",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "7/7 節同現"
-    },
-    {
-     "headword": "Zacharia",
-     "folded": "zacharia",
-     "vulgateFrequency": 25,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
+     "zhEvidence": "11/12 節同現"
     },
     {
      "headword": "Ozias",
@@ -1806,114 +996,14 @@
      "zhEvidence": "5/6 節同現"
     },
     {
-     "headword": "Amorrhæorum",
-     "folded": "amorrhaeorum",
-     "vulgateFrequency": 24,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Philisthæos",
-     "folded": "philisthaeos",
-     "vulgateFrequency": 24,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Benadad",
-     "folded": "benadad",
-     "vulgateFrequency": 24,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "本哈達得",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "5/5 節同現"
-    },
-    {
-     "headword": "Joachaz",
-     "folded": "ioachaz",
-     "vulgateFrequency": 24,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "約阿哈次",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "5/6 節同現"
-    },
-    {
-     "headword": "Amasias",
-     "folded": "amasias",
-     "vulgateFrequency": 24,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "阿瑪責雅",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "13/13 節同現"
-    },
-    {
      "headword": "Medorum",
      "folded": "medorum",
      "vulgateFrequency": 24,
      "type": "",
      "tier": "讀本所見",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Ælam",
-     "folded": "aelam",
-     "vulgateFrequency": 23,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "厄藍",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "9/10 節同現"
-    },
-    {
-     "headword": "Pharaone",
-     "folded": "pharaone",
-     "vulgateFrequency": 23,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Lachis",
-     "folded": "lachis",
-     "vulgateFrequency": 23,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "拉基士",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "11/11 節同現"
-    },
-    {
-     "headword": "Baalim",
-     "folded": "baalim",
-     "vulgateFrequency": 23,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Mosollam",
-     "folded": "mosollam",
-     "vulgateFrequency": 23,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "默叔藍",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "2/3 節同現"
+     "zh": "瑪待人",
+     "zhRoute": "思高體例（人工補）",
+     "zhEvidence": "Medi 的屬格複數"
     },
     {
      "headword": "Jonas",
@@ -1931,99 +1021,9 @@
      "vulgateFrequency": 22,
      "type": "",
      "tier": "讀本所見",
-     "zh": "",
-     "zhRoute": "",
+     "zh": "瑪阿加",
+     "zhRoute": "思高體例（人工補）",
      "zhEvidence": ""
-    },
-    {
-     "headword": "Machir",
-     "folded": "machir",
-     "vulgateFrequency": 22,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Chananæum",
-     "folded": "chananaeum",
-     "vulgateFrequency": 22,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Arnon",
-     "folded": "arnon",
-     "vulgateFrequency": 22,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "阿爾農",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "8/8 節同現"
-    },
-    {
-     "headword": "Og",
-     "folded": "og",
-     "vulgateFrequency": 22,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "敖格",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "7/7 節同現"
-    },
-    {
-     "headword": "idumea",
-     "folded": "idumea",
-     "vulgateFrequency": 22,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Maspha",
-     "folded": "maspha",
-     "vulgateFrequency": 22,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "米茲帕",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "8/8 節同現"
-    },
-    {
-     "headword": "Accaron",
-     "folded": "accaron",
-     "vulgateFrequency": 22,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "厄刻龍",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "8/8 節同現"
-    },
-    {
-     "headword": "Cis",
-     "folded": "cis",
-     "vulgateFrequency": 22,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "克士",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "2/2 節同現"
-    },
-    {
-     "headword": "Achis",
-     "folded": "achis",
-     "vulgateFrequency": 22,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "阿基士",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "8/9 節同現"
     },
     {
      "headword": "Jezabel",
@@ -2036,37 +1036,7 @@
      "zhEvidence": "16/16 節同現"
     },
     {
-     "headword": "Amos",
-     "folded": "amos",
-     "vulgateFrequency": 22,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "亞毛斯",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "5/6 節同現"
-    },
-    {
-     "headword": "Darius",
-     "folded": "darius",
-     "vulgateFrequency": 22,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "達理阿",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "4/4 節同現"
-    },
-    {
-     "headword": "Macedonia",
-     "folded": "macedonia",
-     "vulgateFrequency": 22,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "馬其頓",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "5/5 節同現"
-    },
-    {
-     "headword": "Euphrates",
+     "headword": "Euphraten",
      "folded": "euphrates",
      "vulgateFrequency": 21,
      "type": "",
@@ -2076,164 +1046,14 @@
      "zhEvidence": "3/4 節同現"
     },
     {
-     "headword": "Thamar",
-     "folded": "thamar",
-     "vulgateFrequency": 21,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "塔瑪爾",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "14/14 節同現"
-    },
-    {
-     "headword": "Ithamar",
-     "folded": "ithamar",
-     "vulgateFrequency": 21,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Masphath",
-     "folded": "masphath",
-     "vulgateFrequency": 21,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Nabal",
-     "folded": "nabal",
-     "vulgateFrequency": 21,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "納巴耳",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "16/17 節同現"
-    },
-    {
-     "headword": "Adarezer",
-     "folded": "adarezer",
-     "vulgateFrequency": 21,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "哈達德則爾",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "5/5 節同現"
-    },
-    {
-     "headword": "Josias",
-     "folded": "iosias",
-     "vulgateFrequency": 21,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "約史雅",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "11/11 節同現"
-    },
-    {
-     "headword": "Naboth",
-     "folded": "naboth",
-     "vulgateFrequency": 21,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "納波特",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "18/18 節同現"
-    },
-    {
-     "headword": "Græci",
-     "folded": "graeci",
-     "vulgateFrequency": 21,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Mesopotamia",
-     "folded": "mesopotamia",
-     "vulgateFrequency": 20,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Raguel",
-     "folded": "raguel",
-     "vulgateFrequency": 20,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "辣古耳",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "5/7 節同現"
-    },
-    {
-     "headword": "Nadab",
-     "folded": "nadab",
-     "vulgateFrequency": 20,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "納達布",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "5/6 節同現"
-    },
-    {
      "headword": "Nathanaël",
      "folded": "nathanael",
      "vulgateFrequency": 20,
      "type": "",
      "tier": "讀本所見",
-     "zh": "",
-     "zhRoute": "",
+     "zh": "納塔乃耳",
+     "zhRoute": "思高體例（人工補）",
      "zhEvidence": ""
-    },
-    {
-     "headword": "Helciæ",
-     "folded": "helciae",
-     "vulgateFrequency": 20,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "希耳克雅",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "6/8 節同現"
-    },
-    {
-     "headword": "Holofernis",
-     "folded": "holofernis",
-     "vulgateFrequency": 20,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Sem",
-     "folded": "sem",
-     "vulgateFrequency": 19,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "閃",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "8/11 節同現"
-    },
-    {
-     "headword": "Gaza",
-     "folded": "gaza",
-     "vulgateFrequency": 19,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "迦薩",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "9/9 節同現"
     },
     {
      "headword": "Nachor",
@@ -2246,56 +1066,6 @@
      "zhEvidence": "15/15 節同現"
     },
     {
-     "headword": "Elcana",
-     "folded": "elcana",
-     "vulgateFrequency": 19,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Galgala",
-     "folded": "galgala",
-     "vulgateFrequency": 19,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "基耳加耳",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "7/7 節同現"
-    },
-    {
-     "headword": "Cariathiarim",
-     "folded": "cariathiarim",
-     "vulgateFrequency": 19,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "克黎雅特耶阿陵",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "4/4 節同現"
-    },
-    {
-     "headword": "Joatham",
-     "folded": "ioatham",
-     "vulgateFrequency": 19,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "約堂",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "10/10 節同現"
-    },
-    {
-     "headword": "Obededom",
-     "folded": "obededom",
-     "vulgateFrequency": 19,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "敖貝得厄東",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "7/7 節同現"
-    },
-    {
      "headword": "Hazaël",
      "folded": "hazael",
      "vulgateFrequency": 19,
@@ -2306,84 +1076,24 @@
      "zhEvidence": "11/12 節同現"
     },
     {
-     "headword": "Ahicam",
-     "folded": "ahicam",
-     "vulgateFrequency": 19,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "乃塔尼雅",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "6/6 節同現"
-    },
-    {
-     "headword": "Godoliam",
-     "folded": "godoliam",
-     "vulgateFrequency": 19,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "乃塔尼雅",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "6/7 節同現"
-    },
-    {
-     "headword": "Nathaniæ",
-     "folded": "nathaniae",
-     "vulgateFrequency": 19,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "乃塔尼雅",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "12/12 節同現"
-    },
-    {
-     "headword": "Cain",
-     "folded": "cain",
-     "vulgateFrequency": 18,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "加音",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "12/12 節同現"
-    },
-    {
-     "headword": "Tharsis",
-     "folded": "tharsis",
-     "vulgateFrequency": 18,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "塔爾史士",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "2/2 節同現"
-    },
-    {
      "headword": "Syrus",
      "folded": "syrus",
      "vulgateFrequency": 18,
      "type": "",
      "tier": "讀本所見",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
+     "zh": "阿蘭",
+     "zhRoute": "sigao-underline-alignment",
+     "zhEvidence": "10/10 節同現"
     },
     {
-     "headword": "Roma",
+     "headword": "Romam",
      "folded": "roma",
      "vulgateFrequency": 18,
      "type": "",
      "tier": "讀本所見",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Syri",
-     "folded": "syri",
-     "vulgateFrequency": 18,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
+     "zh": "羅馬",
+     "zhRoute": "sigao-underline-alignment",
+     "zhEvidence": "3/5 節同現"
     },
     {
      "headword": "Horeb",
@@ -2396,56 +1106,6 @@
      "zhEvidence": "2/2 節同現"
     },
     {
-     "headword": "Eliab",
-     "folded": "eliab",
-     "vulgateFrequency": 18,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "厄里雅布",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "7/11 節同現"
-    },
-    {
-     "headword": "Asor",
-     "folded": "asor",
-     "vulgateFrequency": 18,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "哈祚爾",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "9/11 節同現"
-    },
-    {
-     "headword": "Carmeli",
-     "folded": "carmeli",
-     "vulgateFrequency": 18,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "加爾默耳",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "4/4 節同現"
-    },
-    {
-     "headword": "Amon",
-     "folded": "amon",
-     "vulgateFrequency": 18,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Jephte",
-     "folded": "iephte",
-     "vulgateFrequency": 18,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "依弗大",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "12/12 節同現"
-    },
-    {
      "headword": "Joël",
      "folded": "ioel",
      "vulgateFrequency": 18,
@@ -2454,36 +1114,6 @@
      "zh": "約厄耳",
      "zhRoute": "sigao-underline-alignment",
      "zhEvidence": "4/5 節同現"
-    },
-    {
-     "headword": "Achitophel",
-     "folded": "achitophel",
-     "vulgateFrequency": 18,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "阿希托費耳",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "12/12 節同現"
-    },
-    {
-     "headword": "Amri",
-     "folded": "amri",
-     "vulgateFrequency": 18,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "敖默黎",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "11/11 節同現"
-    },
-    {
-     "headword": "Zachariæ",
-     "folded": "zachariae",
-     "vulgateFrequency": 18,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
     },
     {
      "headword": "Sennacherib",
@@ -2496,96 +1126,6 @@
      "zhEvidence": "3/4 節同現"
     },
     {
-     "headword": "Sedeciam",
-     "folded": "sedeciam",
-     "vulgateFrequency": 18,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Baltassar",
-     "folded": "baltassar",
-     "vulgateFrequency": 18,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "貝耳特沙匝",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "3/3 節同現"
-    },
-    {
-     "headword": "Jason",
-     "folded": "iason",
-     "vulgateFrequency": 18,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "雅松",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "7/7 節同現"
-    },
-    {
-     "headword": "Amorrhæum",
-     "folded": "amorrhaeum",
-     "vulgateFrequency": 17,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Eliezer",
-     "folded": "eliezer",
-     "vulgateFrequency": 17,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "厄里厄則爾",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "4/5 節同現"
-    },
-    {
-     "headword": "Adar",
-     "folded": "adar",
-     "vulgateFrequency": 17,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Thersa",
-     "folded": "thersa",
-     "vulgateFrequency": 17,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "提爾匝",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "12/12 節同現"
-    },
-    {
-     "headword": "Rama",
-     "folded": "rama",
-     "vulgateFrequency": 17,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Obed",
-     "folded": "obed",
-     "vulgateFrequency": 17,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
      "headword": "Anna",
      "folded": "anna",
      "vulgateFrequency": 17,
@@ -2596,164 +1136,14 @@
      "zhEvidence": "9/12 節同現"
     },
     {
-     "headword": "Michol",
-     "folded": "michol",
-     "vulgateFrequency": 17,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "米加耳",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "7/7 節同現"
-    },
-    {
-     "headword": "Ner",
-     "folded": "ner",
-     "vulgateFrequency": 17,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Abigail",
-     "folded": "abigail",
-     "vulgateFrequency": 17,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "阿彼蓋耳",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "13/13 節同現"
-    },
-    {
-     "headword": "Idithun",
-     "folded": "idithun",
-     "vulgateFrequency": 17,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "耶杜通",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "4/4 節同現"
-    },
-    {
-     "headword": "Susan",
-     "folded": "susan",
-     "vulgateFrequency": 17,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "穌撒",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "6/6 節同現"
-    },
-    {
-     "headword": "Bel",
-     "folded": "bel",
-     "vulgateFrequency": 17,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Holofernes",
-     "folded": "holofernes",
-     "vulgateFrequency": 17,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Cæsarea",
-     "folded": "caesarea",
-     "vulgateFrequency": 17,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "凱撒勒雅",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "3/3 節同現"
-    },
-    {
-     "headword": "Chananæus",
-     "folded": "chananaeus",
-     "vulgateFrequency": 16,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
      "headword": "Ægyptiis",
      "folded": "aegyptiis",
      "vulgateFrequency": 16,
      "type": "",
      "tier": "讀本所見",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Oziel",
-     "folded": "oziel",
-     "vulgateFrequency": 16,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Rubrum",
-     "folded": "rubrum",
-     "vulgateFrequency": 16,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "紅海",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "3/3 節同現"
-    },
-    {
-     "headword": "Jephone",
-     "folded": "iephone",
-     "vulgateFrequency": 16,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Osee",
-     "folded": "osee",
-     "vulgateFrequency": 16,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "曷舍亞",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "4/4 節同現"
-    },
-    {
-     "headword": "Jerimoth",
-     "folded": "ierimoth",
-     "vulgateFrequency": 16,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "厄革隆",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "3/4 節同現"
-    },
-    {
-     "headword": "Anathoth",
-     "folded": "anathoth",
-     "vulgateFrequency": 16,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
+     "zh": "埃及人",
+     "zhRoute": "思高體例（人工補）",
+     "zhEvidence": "Ægyptii 的與格／奪格複數"
     },
     {
      "headword": "Noëmi",
@@ -2766,77 +1156,17 @@
      "zhEvidence": "10/10 節同現"
     },
     {
-     "headword": "Achitob",
-     "folded": "achitob",
-     "vulgateFrequency": 16,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Achimelech",
-     "folded": "achimelech",
-     "vulgateFrequency": 16,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "阿希默肋客",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "6/7 節同現"
-    },
-    {
-     "headword": "Azariæ",
-     "folded": "azariae",
-     "vulgateFrequency": 16,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Chaldæos",
-     "folded": "chaldaeos",
-     "vulgateFrequency": 16,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Eliasib",
-     "folded": "eliasib",
-     "vulgateFrequency": 16,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "厄肋雅史布",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "4/4 節同現"
-    },
-    {
-     "headword": "Esdras",
-     "folded": "esdras",
-     "vulgateFrequency": 16,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "厄斯德拉",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "4/4 節同現"
-    },
-    {
      "headword": "Capharnaum",
      "folded": "capharnaum",
      "vulgateFrequency": 16,
      "type": "",
      "tier": "讀本所見",
-     "zh": "",
-     "zhRoute": "",
+     "zh": "葛法翁",
+     "zhRoute": "思高體例（人工補）",
      "zhEvidence": ""
     },
     {
-     "headword": "ephesus",
+     "headword": "Ephesi",
      "folded": "ephesus",
      "vulgateFrequency": 16,
      "type": "",
@@ -2844,56 +1174,6 @@
      "zh": "厄弗所",
      "zhRoute": "sigao-underline-alignment",
      "zhEvidence": "5/5 節同現"
-    },
-    {
-     "headword": "Cham",
-     "folded": "cham",
-     "vulgateFrequency": 15,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "含",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "4/5 節同現"
-    },
-    {
-     "headword": "Jebusæum",
-     "folded": "iebusaeum",
-     "vulgateFrequency": 15,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Sarai",
-     "folded": "sarai",
-     "vulgateFrequency": 15,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "撒辣依",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "8/10 節同現"
-    },
-    {
-     "headword": "Ela",
-     "folded": "ela",
-     "vulgateFrequency": 15,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "厄拉",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "8/9 節同現"
-    },
-    {
-     "headword": "Naaman",
-     "folded": "naaman",
-     "vulgateFrequency": 15,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "納阿曼",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "11/11 節同現"
     },
     {
      "headword": "Jebusæi",
@@ -2906,194 +1186,14 @@
      "zhEvidence": "5/5 節同現"
     },
     {
-     "headword": "Hur",
-     "folded": "hur",
-     "vulgateFrequency": 15,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "胡爾",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "3/3 節同現"
-    },
-    {
-     "headword": "Cilicia",
-     "folded": "cilicia",
-     "vulgateFrequency": 15,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "基里基雅",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "3/3 節同現"
-    },
-    {
-     "headword": "Michaël",
-     "folded": "michael",
-     "vulgateFrequency": 15,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Aroër",
-     "folded": "aroer",
-     "vulgateFrequency": 15,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "阿洛厄爾",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "5/5 節同現"
-    },
-    {
-     "headword": "Siceleg",
-     "folded": "siceleg",
-     "vulgateFrequency": 15,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Jerobaal",
-     "folded": "ierobaal",
-     "vulgateFrequency": 15,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "耶魯巴耳",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "11/11 節同現"
-    },
-    {
-     "headword": "Ramatha",
-     "folded": "ramatha",
-     "vulgateFrequency": 15,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "辣瑪",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "7/7 節同現"
-    },
-    {
-     "headword": "Achimaas",
-     "folded": "achimaas",
-     "vulgateFrequency": 15,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "阿希瑪茲",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "9/11 節同現"
-    },
-    {
-     "headword": "Miphiboseth",
-     "folded": "miphiboseth",
-     "vulgateFrequency": 15,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "默黎巴耳",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "3/3 節同現"
-    },
-    {
-     "headword": "Jonadab",
-     "folded": "ionadab",
-     "vulgateFrequency": 15,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "約納達布",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "4/4 節同現"
-    },
-    {
-     "headword": "Satan",
-     "folded": "satan",
-     "vulgateFrequency": 15,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Eliæ",
-     "folded": "eliae",
-     "vulgateFrequency": 15,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Ochozias",
-     "folded": "ochozias",
-     "vulgateFrequency": 15,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "阿哈齊雅",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "11/12 節同現"
-    },
-    {
-     "headword": "Ninive",
-     "folded": "niniue",
-     "vulgateFrequency": 15,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Sedeciæ",
-     "folded": "sedeciae",
-     "vulgateFrequency": 15,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Nabuzardan",
-     "folded": "nabuzardan",
-     "vulgateFrequency": 15,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "乃步匝辣當",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "4/6 節同現"
-    },
-    {
-     "headword": "Jehiel",
-     "folded": "iehiel",
-     "vulgateFrequency": 15,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "耶希耳",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "5/8 節同現"
-    },
-    {
-     "headword": "Mathathias",
-     "folded": "mathathias",
-     "vulgateFrequency": 15,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "瑪塔提雅",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "8/11 節同現"
-    },
-    {
      "headword": "Sidrach",
      "folded": "sidrach",
      "vulgateFrequency": 15,
      "type": "",
      "tier": "讀本所見",
      "zh": "沙得辣客",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "12/12 節同現"
+     "zhRoute": "思高體例（人工補）",
+     "zhEvidence": "達 1:7 三人順序：Sidrach、Misach、Abdenago"
     },
     {
      "headword": "Misach",
@@ -3101,9 +1201,9 @@
      "vulgateFrequency": 15,
      "type": "",
      "tier": "讀本所見",
-     "zh": "沙得辣客",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "12/12 節同現"
+     "zh": "默沙客",
+     "zhRoute": "思高體例（人工補）",
+     "zhEvidence": "達 1:7 三人順序：Sidrach、Misach、Abdenago"
     },
     {
      "headword": "Abdenago",
@@ -3111,129 +1211,9 @@
      "vulgateFrequency": 15,
      "type": "",
      "tier": "讀本所見",
-     "zh": "沙得辣客",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "12/12 節同現"
-    },
-    {
-     "headword": "Achior",
-     "folded": "achior",
-     "vulgateFrequency": 15,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Lysias",
-     "folded": "lysias",
-     "vulgateFrequency": 15,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "里息雅",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "5/6 節同現"
-    },
-    {
-     "headword": "Menelaus",
-     "folded": "menelaus",
-     "vulgateFrequency": 15,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "默乃勞",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "8/9 節同現"
-    },
-    {
-     "headword": "Titus",
-     "folded": "titus",
-     "vulgateFrequency": 15,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Lazarus",
-     "folded": "lazarus",
-     "vulgateFrequency": 15,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "拉匝祿",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "6/6 節同現"
-    },
-    {
-     "headword": "Abel",
-     "folded": "abel",
-     "vulgateFrequency": 14,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "亞伯爾",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "5/7 節同現"
-    },
-    {
-     "headword": "Hethæum",
-     "folded": "hethaeum",
-     "vulgateFrequency": 14,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Raphaim",
-     "folded": "raphaim",
-     "vulgateFrequency": 14,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Ephron",
-     "folded": "ephron",
-     "vulgateFrequency": 14,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "厄斐龍",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "5/6 節同現"
-    },
-    {
-     "headword": "Eliphaz",
-     "folded": "eliphaz",
-     "vulgateFrequency": 14,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "厄里法次",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "7/7 節同現"
-    },
-    {
-     "headword": "Israëlem",
-     "folded": "israelem",
-     "vulgateFrequency": 14,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Elisama",
-     "folded": "elisama",
-     "vulgateFrequency": 14,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "厄里沙瑪",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "4/5 節同現"
+     "zh": "阿貝得乃哥",
+     "zhRoute": "思高體例（人工補）",
+     "zhEvidence": "達 1:7 三人順序：Sidrach、Misach、Abdenago"
     },
     {
      "headword": "Israëlitæ",
@@ -3241,149 +1221,9 @@
      "vulgateFrequency": 14,
      "type": "",
      "tier": "讀本所見",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Jair",
-     "folded": "iair",
-     "vulgateFrequency": 14,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "雅依爾",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "4/4 節同現"
-    },
-    {
-     "headword": "Bethsames",
-     "folded": "bethsames",
-     "vulgateFrequency": 14,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "貝特舍默士",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "4/4 節同現"
-    },
-    {
-     "headword": "Dagon",
-     "folded": "dagon",
-     "vulgateFrequency": 14,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "達貢",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "2/2 節同現"
-    },
-    {
-     "headword": "Caree",
-     "folded": "caree",
-     "vulgateFrequency": 14,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Zachariam",
-     "folded": "zachariam",
-     "vulgateFrequency": 14,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Josedec",
-     "folded": "iosedec",
-     "vulgateFrequency": 14,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "約匝達克",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "4/6 節同現"
-    },
-    {
-     "headword": "Ptolemæus",
-     "folded": "ptolemaeus",
-     "vulgateFrequency": 14,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "仆托肋米",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "7/8 節同現"
-    },
-    {
-     "headword": "Antiochi",
-     "folded": "antiochi",
-     "vulgateFrequency": 14,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Alcimus",
-     "folded": "alcimus",
-     "vulgateFrequency": 14,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "阿耳基慕",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "6/6 節同現"
-    },
-    {
-     "headword": "Assyrios",
-     "folded": "assyrios",
-     "vulgateFrequency": 13,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Aram",
-     "folded": "aram",
-     "vulgateFrequency": 13,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Thara",
-     "folded": "thara",
-     "vulgateFrequency": 13,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "特辣黑",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "8/8 節同現"
-    },
-    {
-     "headword": "Ismaël",
-     "folded": "ismael",
-     "vulgateFrequency": 13,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Saram",
-     "folded": "saram",
-     "vulgateFrequency": 13,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
+     "zh": "以色列人",
+     "zhRoute": "思高體例（人工補）",
+     "zhEvidence": "Israëlita 的複數"
     },
     {
      "headword": "Rebecca",
@@ -3401,19 +1241,9 @@
      "vulgateFrequency": 13,
      "type": "",
      "tier": "讀本所見",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Cedar",
-     "folded": "cedar",
-     "vulgateFrequency": 13,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
+     "zh": "赫特",
+     "zhRoute": "sigao-underline-alignment",
+     "zhEvidence": "5/5 節同現"
     },
     {
      "headword": "Chananæi",
@@ -3421,188 +1251,18 @@
      "vulgateFrequency": 13,
      "type": "",
      "tier": "讀本所見",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
+     "zh": "客納罕人",
+     "zhRoute": "思高體例（人工補）",
+     "zhEvidence": "Chananæus 的複數"
     },
     {
-     "headword": "Ægyptios",
-     "folded": "aegyptios",
-     "vulgateFrequency": 13,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Naasson",
+     "headword": "Nahasson",
      "folded": "naasson",
      "vulgateFrequency": 13,
      "type": "",
      "tier": "讀本所見",
      "zh": "納赫雄",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "4/5 節同現"
-    },
-    {
-     "headword": "Astaroth",
-     "folded": "astaroth",
-     "vulgateFrequency": 13,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "阿市托勒特",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "2/2 節同現"
-    },
-    {
-     "headword": "Hermon",
-     "folded": "hermon",
-     "vulgateFrequency": 13,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "赫爾孟",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "2/2 節同現"
-    },
-    {
-     "headword": "Belial",
-     "folded": "belial",
-     "vulgateFrequency": 13,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Eglon",
-     "folded": "eglon",
-     "vulgateFrequency": 13,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "厄革隆",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "6/6 節同現"
-    },
-    {
-     "headword": "Bethoron",
-     "folded": "bethoron",
-     "vulgateFrequency": 13,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "貝特曷龍",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "4/4 節同現"
-    },
-    {
-     "headword": "Remmon",
-     "folded": "remmon",
-     "vulgateFrequency": 13,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "黎孟",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "6/6 節同現"
-    },
-    {
-     "headword": "Barac",
-     "folded": "barac",
-     "vulgateFrequency": 13,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "巴辣克",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "8/8 節同現"
-    },
-    {
-     "headword": "Jonatha",
-     "folded": "ionatha",
-     "vulgateFrequency": 13,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Isboseth",
-     "folded": "isboseth",
-     "vulgateFrequency": 13,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "依市巴耳",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "12/12 節同現"
-    },
-    {
-     "headword": "Asaël",
-     "folded": "asael",
-     "vulgateFrequency": 13,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "阿撒耳",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "9/10 節同現"
-    },
-    {
-     "headword": "Rechab",
-     "folded": "rechab",
-     "vulgateFrequency": 13,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "勒加布",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "4/5 節同現"
-    },
-    {
-     "headword": "Romeliæ",
-     "folded": "romeliae",
-     "vulgateFrequency": 13,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "勒瑪里雅",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "5/5 節同現"
-    },
-    {
-     "headword": "Salathiel",
-     "folded": "salathiel",
-     "vulgateFrequency": 13,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "則魯巴貝耳",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "4/4 節同現"
-    },
-    {
-     "headword": "Gog",
-     "folded": "gog",
-     "vulgateFrequency": 13,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "哥格",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "4/5 節同現"
-    },
-    {
-     "headword": "Tobiam",
-     "folded": "tobiam",
-     "vulgateFrequency": 13,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Silas",
-     "folded": "silas",
-     "vulgateFrequency": 13,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
+     "zhRoute": "思高體例（人工補）",
      "zhEvidence": ""
     },
     {
@@ -3616,174 +1276,14 @@
      "zhEvidence": "4/4 節同現"
     },
     {
-     "headword": "Arphaxad",
-     "folded": "arphaxad",
-     "vulgateFrequency": 12,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "阿帕革沙得",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "6/6 節同現"
-    },
-    {
-     "headword": "Pharan",
-     "folded": "pharan",
-     "vulgateFrequency": 12,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Sur",
-     "folded": "sur",
-     "vulgateFrequency": 12,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "叔爾",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "3/4 節同現"
-    },
-    {
-     "headword": "Zara",
-     "folded": "zara",
-     "vulgateFrequency": 12,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "則辣黑",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "5/7 節同現"
-    },
-    {
-     "headword": "Sobal",
-     "folded": "sobal",
-     "vulgateFrequency": 12,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "芍巴耳",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "5/5 節同現"
-    },
-    {
      "headword": "Hebræorum",
      "folded": "hebraeorum",
      "vulgateFrequency": 12,
      "type": "",
      "tier": "讀本所見",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Zechri",
-     "folded": "zechri",
-     "vulgateFrequency": 12,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "齊革黎",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "2/2 節同現"
-    },
-    {
-     "headword": "Abiu",
-     "folded": "abiu",
-     "vulgateFrequency": 12,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Moloch",
-     "folded": "moloch",
-     "vulgateFrequency": 12,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "摩肋客",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "3/5 節同現"
-    },
-    {
-     "headword": "Rohob",
-     "folded": "rohob",
-     "vulgateFrequency": 12,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Gazer",
-     "folded": "gazer",
-     "vulgateFrequency": 12,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "革則爾",
+     "zh": "希伯來",
      "zhRoute": "sigao-underline-alignment",
      "zhEvidence": "3/3 節同現"
-    },
-    {
-     "headword": "Azotum",
-     "folded": "azotum",
-     "vulgateFrequency": 12,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Jether",
-     "folded": "iether",
-     "vulgateFrequency": 12,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "耶特爾",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "5/6 節同現"
-    },
-    {
-     "headword": "Bethsan",
-     "folded": "bethsan",
-     "vulgateFrequency": 12,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "貝特商",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "3/3 節同現"
-    },
-    {
-     "headword": "Jemini",
-     "folded": "iemini",
-     "vulgateFrequency": 12,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Salmana",
-     "folded": "salmana",
-     "vulgateFrequency": 12,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "則巴黑",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "8/8 節同現"
-    },
-    {
-     "headword": "Manue",
-     "folded": "manue",
-     "vulgateFrequency": 12,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "瑪諾亞",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "11/11 節同現"
     },
     {
      "headword": "Ruth",
@@ -3796,36 +1296,6 @@
      "zhEvidence": "7/8 節同現"
     },
     {
-     "headword": "Abinadab",
-     "folded": "abinadab",
-     "vulgateFrequency": 12,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "阿彼納達布",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "3/3 節同現"
-    },
-    {
-     "headword": "Soba",
-     "folded": "soba",
-     "vulgateFrequency": 12,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "祚巴",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "3/4 節同現"
-    },
-    {
-     "headword": "Philisthæus",
-     "folded": "philisthaeus",
-     "vulgateFrequency": 12,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
      "headword": "Bethsabee",
      "folded": "bethsabee",
      "vulgateFrequency": 12,
@@ -3836,104 +1306,14 @@
      "zhEvidence": "5/5 節同現"
     },
     {
-     "headword": "Berzellai",
-     "folded": "berzellai",
-     "vulgateFrequency": 12,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
      "headword": "Eliseum",
      "folded": "eliseum",
      "vulgateFrequency": 12,
      "type": "",
      "tier": "讀本所見",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Ochoziæ",
-     "folded": "ochoziae",
-     "vulgateFrequency": 12,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Giezi",
-     "folded": "giezi",
-     "vulgateFrequency": 12,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "革哈齊",
+     "zh": "厄里叟",
      "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "5/5 節同現"
-    },
-    {
-     "headword": "Azariam",
-     "folded": "azariam",
-     "vulgateFrequency": 12,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Eliacim",
-     "folded": "eliacim",
-     "vulgateFrequency": 12,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "厄里雅金",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "5/5 節同現"
-    },
-    {
-     "headword": "Helcias",
-     "folded": "helcias",
-     "vulgateFrequency": 12,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Hanan",
-     "folded": "hanan",
-     "vulgateFrequency": 12,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Jahiel",
-     "folded": "iahiel",
-     "vulgateFrequency": 12,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "則加黎雅",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "4/4 節同現"
-    },
-    {
-     "headword": "Assueri",
-     "folded": "assueri",
-     "vulgateFrequency": 12,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "薛西斯",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "6/6 節同現"
+     "zhEvidence": "9/9 節同現"
     },
     {
      "headword": "Nazareth",
@@ -3946,17 +1326,17 @@
      "zhEvidence": "7/7 節同現"
     },
     {
-     "headword": "zebedaeus",
+     "headword": "Zebedæi",
      "folded": "zebedaeus",
      "vulgateFrequency": 12,
      "type": "",
      "tier": "讀本所見",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
+     "zh": "載伯德",
+     "zhRoute": "思高體例（人工補）",
+     "zhEvidence": "Zebedæus 的屬格"
     },
     {
-     "headword": "Bethania",
+     "headword": "Bethaniam",
      "folded": "bethania",
      "vulgateFrequency": 12,
      "type": "",
@@ -3966,223 +1346,13 @@
      "zhEvidence": "4/4 節同現"
     },
     {
-     "headword": "Galilæi",
+     "headword": "Galilæus",
      "folded": "galilaei",
      "vulgateFrequency": 12,
      "type": "",
      "tier": "讀本所見",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Magdalene",
-     "folded": "magdalene",
-     "vulgateFrequency": 12,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "瑪利亞瑪達肋納",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "3/3 節同現"
-    },
-    {
-     "headword": "Martha",
-     "folded": "martha",
-     "vulgateFrequency": 12,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "瑪爾大",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "7/8 節同現"
-    },
-    {
-     "headword": "Æthiopiæ",
-     "folded": "aethiopiae",
-     "vulgateFrequency": 11,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Lamech",
-     "folded": "lamech",
-     "vulgateFrequency": 11,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "拉默客",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "8/8 節同現"
-    },
-    {
-     "headword": "Seth",
-     "folded": "seth",
-     "vulgateFrequency": 11,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "舍特",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "7/7 節同現"
-    },
-    {
-     "headword": "Japheth",
-     "folded": "iapheth",
-     "vulgateFrequency": 11,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "耶斐特",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "5/7 節同現"
-    },
-    {
-     "headword": "Haran",
-     "folded": "haran",
-     "vulgateFrequency": 11,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "哈蘭",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "3/5 節同現"
-    },
-    {
-     "headword": "Mambre",
-     "folded": "mambre",
-     "vulgateFrequency": 11,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "瑪默勒",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "4/4 節同現"
-    },
-    {
-     "headword": "Agar",
-     "folded": "agar",
-     "vulgateFrequency": 11,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "哈加爾",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "5/5 節同現"
-    },
-    {
-     "headword": "Moabitarum",
-     "folded": "moabitarum",
-     "vulgateFrequency": 11,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Cenez",
-     "folded": "cenez",
-     "vulgateFrequency": 11,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "刻納次",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "4/4 節同現"
-    },
-    {
-     "headword": "Adad",
-     "folded": "adad",
-     "vulgateFrequency": 11,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "哈達得",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "6/6 節同現"
-    },
-    {
-     "headword": "Eleazari",
-     "folded": "eleazari",
-     "vulgateFrequency": 11,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Cadesbarne",
-     "folded": "cadesbarne",
-     "vulgateFrequency": 11,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "卡德士巴爾乃亞",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "2/2 節同現"
-    },
-    {
-     "headword": "Galgalis",
-     "folded": "galgalis",
-     "vulgateFrequency": 11,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "基耳加耳",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "6/6 節同現"
-    },
-    {
-     "headword": "Dabir",
-     "folded": "dabir",
-     "vulgateFrequency": 11,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "德彼爾",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "6/7 節同現"
-    },
-    {
-     "headword": "Mageddo",
-     "folded": "mageddo",
-     "vulgateFrequency": 11,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "默基多",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "5/5 節同現"
-    },
-    {
-     "headword": "Zebee",
-     "folded": "zebee",
-     "vulgateFrequency": 11,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "則巴黑",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "7/7 節同現"
-    },
-    {
-     "headword": "Baana",
-     "folded": "baana",
-     "vulgateFrequency": 11,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "勒加布",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "4/5 節同現"
-    },
-    {
-     "headword": "Siba",
-     "folded": "siba",
-     "vulgateFrequency": 11,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "漆巴",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "4/4 節同現"
-    },
-    {
-     "headword": "Uriam",
-     "folded": "uriam",
-     "vulgateFrequency": 11,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
+     "zh": "加里肋亞人",
+     "zhRoute": "思高體例（人工補）",
      "zhEvidence": ""
     },
     {
@@ -4196,517 +1366,17 @@
      "zhEvidence": "6/7 節同現"
     },
     {
-     "headword": "Chusai",
-     "folded": "chusai",
-     "vulgateFrequency": 11,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "胡瑟",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "10/10 節同現"
-    },
-    {
-     "headword": "Hanani",
-     "folded": "hanani",
-     "vulgateFrequency": 11,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "哈納尼",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "3/3 節同現"
-    },
-    {
-     "headword": "Michæas",
-     "folded": "michaeas",
-     "vulgateFrequency": 11,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "米加雅",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "6/6 節同現"
-    },
-    {
-     "headword": "Beelzebub",
-     "folded": "beelzebub",
-     "vulgateFrequency": 11,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "厄刻龍",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "4/4 節同現"
-    },
-    {
-     "headword": "Phacee",
-     "folded": "phacee",
-     "vulgateFrequency": 11,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "培卡黑",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "7/7 節同現"
-    },
-    {
-     "headword": "Oziæ",
-     "folded": "oziae",
-     "vulgateFrequency": 11,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "勒瑪里雅",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "2/2 節同現"
-    },
-    {
-     "headword": "Joachin",
-     "folded": "ioachin",
-     "vulgateFrequency": 11,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Jechonias",
-     "folded": "iechonias",
-     "vulgateFrequency": 11,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "耶苛尼雅",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "4/4 節同現"
-    },
-    {
-     "headword": "Barachias",
-     "folded": "barachias",
-     "vulgateFrequency": 11,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Aggæus",
-     "folded": "aggaeus",
-     "vulgateFrequency": 11,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "哈蓋",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "4/4 節同現"
-    },
-    {
-     "headword": "Nehemias",
-     "folded": "nehemias",
-     "vulgateFrequency": 11,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "乃赫米雅",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "6/7 節同現"
-    },
-    {
-     "headword": "Mardochæum",
-     "folded": "mardochaeum",
-     "vulgateFrequency": 11,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Demetrium",
-     "folded": "demetrium",
-     "vulgateFrequency": 11,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Thomas",
-     "folded": "thomas",
-     "vulgateFrequency": 11,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "多默",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "4/4 節同現"
-    },
-    {
-     "headword": "Sodomam",
-     "folded": "sodomam",
-     "vulgateFrequency": 10,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Segor",
-     "folded": "segor",
-     "vulgateFrequency": 10,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "左哈爾",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "6/6 節同現"
-    },
-    {
-     "headword": "Melchisedech",
-     "folded": "melchisedech",
-     "vulgateFrequency": 10,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Theman",
-     "folded": "theman",
-     "vulgateFrequency": 10,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "特曼",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "5/5 節同現"
-    },
-    {
-     "headword": "Samma",
-     "folded": "samma",
-     "vulgateFrequency": 10,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "沙瑪",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "3/4 節同現"
-    },
-    {
-     "headword": "Ana",
-     "folded": "ana",
-     "vulgateFrequency": 10,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "漆貝紅",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "3/4 節同現"
-    },
-    {
-     "headword": "Beor",
-     "folded": "beor",
-     "vulgateFrequency": 10,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Gessen",
-     "folded": "gessen",
-     "vulgateFrequency": 10,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "哥笙",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "7/7 節同現"
-    },
-    {
-     "headword": "Elisabeth",
-     "folded": "elisabeth",
-     "vulgateFrequency": 10,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "依撒伯爾",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "7/8 節同現"
-    },
-    {
-     "headword": "oliuetum",
-     "folded": "oliuetum",
-     "vulgateFrequency": 10,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "橄欖山",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "2/2 節同現"
-    },
-    {
-     "headword": "Pherezæum",
-     "folded": "pherezaeum",
-     "vulgateFrequency": 10,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "培黎齊",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "3/3 節同現"
-    },
-    {
-     "headword": "Ammiud",
-     "folded": "ammiud",
-     "vulgateFrequency": 10,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "阿米胡得",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "2/3 節同現"
-    },
-    {
-     "headword": "Dathan",
-     "folded": "dathan",
-     "vulgateFrequency": 10,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "達堂",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "5/5 節同現"
-    },
-    {
-     "headword": "Abiron",
-     "folded": "abiron",
-     "vulgateFrequency": 10,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "達堂",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "5/5 節同現"
-    },
-    {
-     "headword": "Eleazaro",
-     "folded": "eleazaro",
-     "vulgateFrequency": 10,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Dibon",
-     "folded": "dibon",
-     "vulgateFrequency": 10,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "狄朋",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "2/2 節同現"
-    },
-    {
-     "headword": "Jazer",
-     "folded": "iazer",
-     "vulgateFrequency": 10,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Agag",
-     "folded": "agag",
-     "vulgateFrequency": 10,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "阿加格",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "6/6 節同現"
-    },
-    {
-     "headword": "leuiticus",
-     "folded": "leuiticus",
-     "vulgateFrequency": 10,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Cariath",
-     "folded": "cariath",
-     "vulgateFrequency": 10,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "克黎雅特色費爾",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "2/3 節同現"
-    },
-    {
-     "headword": "Ennom",
-     "folded": "ennom",
-     "vulgateFrequency": 10,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "本希農",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "3/3 節同現"
-    },
-    {
-     "headword": "Ziph",
-     "folded": "ziph",
-     "vulgateFrequency": 10,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "齊弗",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "4/4 節同現"
-    },
-    {
-     "headword": "Thabor",
-     "folded": "thabor",
-     "vulgateFrequency": 10,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "大博爾",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "4/4 節同現"
-    },
-    {
-     "headword": "Mello",
-     "folded": "mello",
-     "vulgateFrequency": 10,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Jeroham",
-     "folded": "ieroham",
-     "vulgateFrequency": 10,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Eliu",
-     "folded": "eliu",
-     "vulgateFrequency": 10,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Naas",
-     "folded": "naas",
-     "vulgateFrequency": 10,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "納哈士",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "4/5 節同現"
-    },
-    {
-     "headword": "Machmas",
-     "folded": "machmas",
-     "vulgateFrequency": 10,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "米革瑪斯",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "5/5 節同現"
-    },
-    {
-     "headword": "Philisthæi",
-     "folded": "philisthaei",
-     "vulgateFrequency": 10,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Chusi",
-     "folded": "chusi",
-     "vulgateFrequency": 10,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "雇士",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "5/6 節同現"
-    },
-    {
-     "headword": "Idumææ",
-     "folded": "idumaeae",
-     "vulgateFrequency": 10,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Rasin",
-     "folded": "rasin",
-     "vulgateFrequency": 10,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Topheth",
-     "folded": "topheth",
-     "vulgateFrequency": 10,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "托斐特",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "6/6 節同現"
-    },
-    {
      "headword": "Chaldæis",
      "folded": "chaldaeis",
      "vulgateFrequency": 10,
      "type": "",
      "tier": "讀本所見",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Semeia",
-     "folded": "semeia",
-     "vulgateFrequency": 10,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Elioënai",
-     "folded": "elioenai",
-     "vulgateFrequency": 10,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "厄里約乃",
+     "zh": "加色丁",
      "zhRoute": "sigao-underline-alignment",
      "zhEvidence": "2/2 節同現"
     },
     {
-     "headword": "Eliel",
-     "folded": "eliel",
-     "vulgateFrequency": 10,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Arabs",
+     "headword": "Arabes",
      "folded": "arabs",
      "vulgateFrequency": 10,
      "type": "",
@@ -4716,564 +1386,14 @@
      "zhEvidence": "4/5 節同現"
     },
     {
-     "headword": "Cyri",
-     "folded": "cyri",
-     "vulgateFrequency": 10,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Cyrus",
-     "folded": "cyrus",
-     "vulgateFrequency": 10,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "居魯士",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "4/4 節同現"
-    },
-    {
-     "headword": "Samaritani",
-     "folded": "samaritani",
-     "vulgateFrequency": 10,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Idumæam",
-     "folded": "idumaeam",
-     "vulgateFrequency": 10,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Jesse",
-     "folded": "iesse",
-     "vulgateFrequency": 10,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Bacchides",
-     "folded": "bacchides",
-     "vulgateFrequency": 10,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "巴基德",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "2/2 節同現"
-    },
-    {
-     "headword": "Nicanoris",
-     "folded": "nicanoris",
-     "vulgateFrequency": 10,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Ptolemaidam",
-     "folded": "ptolemaidam",
-     "vulgateFrequency": 10,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "仆托肋買",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "2/2 節同現"
-    },
-    {
-     "headword": "Oniam",
-     "folded": "oniam",
-     "vulgateFrequency": 10,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "敖尼雅",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "6/8 節同現"
-    },
-    {
-     "headword": "Achaia",
-     "folded": "achaia",
-     "vulgateFrequency": 10,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "阿哈雅",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "2/2 節同現"
-    },
-    {
-     "headword": "Apollo",
-     "folded": "apollo",
-     "vulgateFrequency": 10,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "阿頗羅",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "4/4 節同現"
-    },
-    {
-     "headword": "Ophir",
-     "folded": "ophir",
-     "vulgateFrequency": 9,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "敖非爾",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "2/2 節同現"
-    },
-    {
-     "headword": "Jobab",
-     "folded": "iobab",
-     "vulgateFrequency": 9,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "約巴布",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "4/4 節同現"
-    },
-    {
-     "headword": "Lia",
-     "folded": "lia",
-     "vulgateFrequency": 9,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Hemor",
-     "folded": "hemor",
-     "vulgateFrequency": 9,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "哈摩爾",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "6/6 節同現"
-    },
-    {
      "headword": "Hevæi",
      "folded": "heuaei",
      "vulgateFrequency": 9,
      "type": "",
      "tier": "讀本所見",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Sela",
-     "folded": "sela",
-     "vulgateFrequency": 9,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "舍拉",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "6/6 節同現"
-    },
-    {
-     "headword": "Charmi",
-     "folded": "charmi",
-     "vulgateFrequency": 9,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "加爾米",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "3/3 節同現"
-    },
-    {
-     "headword": "Gera",
-     "folded": "gera",
-     "vulgateFrequency": 9,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "革辣",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "3/3 節同現"
-    },
-    {
-     "headword": "Isaar",
-     "folded": "isaar",
-     "vulgateFrequency": 9,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Musi",
-     "folded": "musi",
-     "vulgateFrequency": 9,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Enan",
-     "folded": "enan",
-     "vulgateFrequency": 9,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "厄南",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "2/2 節同現"
-    },
-    {
-     "headword": "Hethæus",
-     "folded": "hethaeus",
-     "vulgateFrequency": 9,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Zambri",
-     "folded": "zambri",
-     "vulgateFrequency": 9,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "齊默黎",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "8/8 節同現"
-    },
-    {
-     "headword": "Salphaad",
-     "folded": "salphaad",
-     "vulgateFrequency": 9,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "責羅斐哈得",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "4/5 節同現"
-    },
-    {
-     "headword": "Soccoth",
-     "folded": "soccoth",
-     "vulgateFrequency": 9,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "穌苛特",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "8/8 節同現"
-    },
-    {
-     "headword": "Enacim",
-     "folded": "enacim",
-     "vulgateFrequency": 9,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "阿納克",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "5/5 節同現"
-    },
-    {
-     "headword": "Rabbath",
-     "folded": "rabbath",
-     "vulgateFrequency": 9,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "辣巴",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "4/4 節同現"
-    },
-    {
-     "headword": "Rahab",
-     "folded": "rahab",
-     "vulgateFrequency": 9,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "辣哈布",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "3/3 節同現"
-    },
-    {
-     "headword": "Maresa",
-     "folded": "maresa",
-     "vulgateFrequency": 9,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Cedes",
-     "folded": "cedes",
-     "vulgateFrequency": 9,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "刻德士",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "4/5 節同現"
-    },
-    {
-     "headword": "Saraa",
-     "folded": "saraa",
-     "vulgateFrequency": 9,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "祚辣",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "6/6 節同現"
-    },
-    {
-     "headword": "Gaal",
-     "folded": "gaal",
-     "vulgateFrequency": 9,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "加阿耳",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "9/9 節同現"
-    },
-    {
-     "headword": "Philisthæum",
-     "folded": "philisthaeum",
-     "vulgateFrequency": 9,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Ceilam",
-     "folded": "ceilam",
-     "vulgateFrequency": 9,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "刻依拉",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "9/9 節同現"
-    },
-    {
-     "headword": "Jerameel",
-     "folded": "ierameel",
-     "vulgateFrequency": 9,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "耶辣默耳",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "7/7 節同現"
-    },
-    {
-     "headword": "Hanon",
-     "folded": "hanon",
-     "vulgateFrequency": 9,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "哈農",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "8/8 節同現"
-    },
-    {
-     "headword": "Ethai",
-     "folded": "ethai",
-     "vulgateFrequency": 9,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "依泰",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "6/6 節同現"
-    },
-    {
-     "headword": "Banaiam",
-     "folded": "banaiam",
-     "vulgateFrequency": 9,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Ethan",
-     "folded": "ethan",
-     "vulgateFrequency": 9,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "厄堂",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "4/6 節同現"
-    },
-    {
-     "headword": "Michæam",
-     "folded": "michaeam",
-     "vulgateFrequency": 9,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Reblatha",
-     "folded": "reblatha",
-     "vulgateFrequency": 9,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Phassur",
-     "folded": "phassur",
-     "vulgateFrequency": 9,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "帕市胡爾",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "5/5 節同現"
-    },
-    {
-     "headword": "Emmer",
-     "folded": "emmer",
-     "vulgateFrequency": 9,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "依默爾",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "2/2 節同現"
-    },
-    {
-     "headword": "Ornan",
-     "folded": "ornan",
-     "vulgateFrequency": 9,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "敖爾難",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "7/7 節同現"
-    },
-    {
-     "headword": "Raphaël",
-     "folded": "raphael",
-     "vulgateFrequency": 9,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Bani",
-     "folded": "bani",
-     "vulgateFrequency": 9,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "巴尼",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "4/5 節同現"
-    },
-    {
-     "headword": "Sanaballat",
-     "folded": "sanaballat",
-     "vulgateFrequency": 9,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "桑巴拉特",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "5/5 節同現"
-    },
-    {
-     "headword": "Maasiæ",
-     "folded": "maasiae",
-     "vulgateFrequency": 9,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Vasthi",
-     "folded": "uasthi",
-     "vulgateFrequency": 9,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "瓦市提",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "3/3 節同現"
-    },
-    {
-     "headword": "Neriæ",
-     "folded": "neriae",
-     "vulgateFrequency": 9,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "乃黎雅",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "4/4 節同現"
-    },
-    {
-     "headword": "Jared",
-     "folded": "iared",
-     "vulgateFrequency": 8,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "耶勒得",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "5/5 節同現"
-    },
-    {
-     "headword": "Mosoch",
-     "folded": "mosoch",
-     "vulgateFrequency": 8,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "突巴耳",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "3/3 節同現"
-    },
-    {
-     "headword": "Sale",
-     "folded": "sale",
-     "vulgateFrequency": 8,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Phaleg",
-     "folded": "phaleg",
-     "vulgateFrequency": 8,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "培肋格",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "5/5 節同現"
-    },
-    {
-     "headword": "Aran",
-     "folded": "aran",
-     "vulgateFrequency": 8,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "哈郎",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "5/5 節同現"
+     "zh": "希威人",
+     "zhRoute": "思高體例（人工補）",
+     "zhEvidence": "Hevæus 的複數"
     },
     {
      "headword": "Melcha",
@@ -5286,26 +1406,6 @@
      "zhEvidence": "6/6 節同現"
     },
     {
-     "headword": "Gomorrhæ",
-     "folded": "gomorrhae",
-     "vulgateFrequency": 8,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "哈摩辣",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "4/4 節同現"
-    },
-    {
-     "headword": "Liæ",
-     "folded": "liae",
-     "vulgateFrequency": 8,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
      "headword": "Phanuel",
      "folded": "phanuel",
      "vulgateFrequency": 8,
@@ -5316,324 +1416,24 @@
      "zhEvidence": "2/3 節同現"
     },
     {
-     "headword": "Oolibama",
-     "folded": "oolibama",
-     "vulgateFrequency": 8,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "敖曷里巴瑪",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "5/5 節同現"
-    },
-    {
-     "headword": "Sebeon",
-     "folded": "sebeon",
-     "vulgateFrequency": 8,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "漆貝紅",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "5/5 節同現"
-    },
-    {
-     "headword": "Rahuel",
-     "folded": "rahuel",
-     "vulgateFrequency": 8,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "勒烏耳",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "4/4 節同現"
-    },
-    {
-     "headword": "Thamna",
-     "folded": "thamna",
-     "vulgateFrequency": 8,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "提默納",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "3/3 節同現"
-    },
-    {
-     "headword": "Jachin",
-     "folded": "iachin",
-     "vulgateFrequency": 8,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
      "headword": "Saphat",
      "folded": "saphat",
      "vulgateFrequency": 8,
      "type": "",
      "tier": "讀本所見",
-     "zh": "",
-     "zhRoute": "",
+     "zh": "沙法特",
+     "zhRoute": "思高體例（人工補）",
      "zhEvidence": ""
     },
     {
-     "headword": "Enac",
-     "folded": "enac",
-     "vulgateFrequency": 8,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Amorrhæus",
-     "folded": "amorrhaeus",
-     "vulgateFrequency": 8,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Hor",
-     "folded": "hor",
-     "vulgateFrequency": 8,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "曷爾",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "3/3 節同現"
-    },
-    {
-     "headword": "Eleazarum",
-     "folded": "eleazarum",
-     "vulgateFrequency": 8,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Chamos",
-     "folded": "chamos",
-     "vulgateFrequency": 8,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "革摩士",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "6/7 節同現"
-    },
-    {
-     "headword": "Edrai",
-     "folded": "edrai",
-     "vulgateFrequency": 8,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "厄德勒",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "2/2 節同現"
-    },
-    {
-     "headword": "Lebna",
-     "folded": "lebna",
-     "vulgateFrequency": 8,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "里貝納",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "6/7 節同現"
-    },
-    {
-     "headword": "Maceda",
-     "folded": "maceda",
-     "vulgateFrequency": 8,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "瑪刻達",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "6/6 節同現"
-    },
-    {
-     "headword": "Ajalon",
-     "folded": "aialon",
-     "vulgateFrequency": 8,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "阿雅隆",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "3/3 節同現"
-    },
-    {
-     "headword": "Dor",
-     "folded": "dor",
-     "vulgateFrequency": 8,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "多爾",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "2/3 節同現"
-    },
-    {
-     "headword": "Aphec",
-     "folded": "aphec",
-     "vulgateFrequency": 8,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Sina",
-     "folded": "sina",
-     "vulgateFrequency": 8,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "西乃",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "2/2 節同現"
-    },
-    {
-     "headword": "Socho",
-     "folded": "socho",
-     "vulgateFrequency": 8,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Sisaram",
-     "folded": "sisaram",
-     "vulgateFrequency": 8,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Michæ",
-     "folded": "michae",
-     "vulgateFrequency": 8,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Annas",
+     "headword": "Annam",
      "folded": "annas",
      "vulgateFrequency": 8,
      "type": "",
      "tier": "讀本所見",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Carmelo",
-     "folded": "carmelo",
-     "vulgateFrequency": 8,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Gelboë",
-     "folded": "gelboe",
-     "vulgateFrequency": 8,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Cerethi",
-     "folded": "cerethi",
-     "vulgateFrequency": 8,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "培肋提",
+     "zh": "亞納",
      "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "2/2 節同現"
-    },
-    {
-     "headword": "Gessur",
-     "folded": "gessur",
-     "vulgateFrequency": 8,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "革叔爾",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "4/5 節同現"
-    },
-    {
-     "headword": "Seba",
-     "folded": "seba",
-     "vulgateFrequency": 8,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "彼革黎",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "8/8 節同現"
-    },
-    {
-     "headword": "Bochri",
-     "folded": "bochri",
-     "vulgateFrequency": 8,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "彼革黎",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "8/8 節同現"
-    },
-    {
-     "headword": "Ahiæ",
-     "folded": "ahiae",
-     "vulgateFrequency": 8,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Semeiam",
-     "folded": "semeiam",
-     "vulgateFrequency": 8,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Sesac",
-     "folded": "sesac",
-     "vulgateFrequency": 8,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "史沙克",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "4/4 節同現"
-    },
-    {
-     "headword": "Jozabad",
-     "folded": "iozabad",
-     "vulgateFrequency": 8,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
+     "zhEvidence": "3/3 節同現"
     },
     {
      "headword": "Jonam",
@@ -5646,204 +1446,14 @@
      "zhEvidence": "3/3 節同現"
     },
     {
-     "headword": "Manahem",
-     "folded": "manahem",
-     "vulgateFrequency": 8,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "默納恒",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "8/8 節同現"
-    },
-    {
-     "headword": "Rabsaces",
-     "folded": "rabsaces",
-     "vulgateFrequency": 8,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Zabad",
-     "folded": "zabad",
-     "vulgateFrequency": 8,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "匝巴得",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "4/4 節同現"
-    },
-    {
-     "headword": "Æthiopes",
-     "folded": "aethiopes",
-     "vulgateFrequency": 8,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Cedmihel",
-     "folded": "cedmihel",
-     "vulgateFrequency": 8,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Artaxerxis",
-     "folded": "artaxerxis",
-     "vulgateFrequency": 8,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "阿塔薛西斯",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "2/2 節同現"
-    },
-    {
-     "headword": "Maasia",
-     "folded": "maasia",
-     "vulgateFrequency": 8,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Casleu",
-     "folded": "casleu",
-     "vulgateFrequency": 8,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Mardochæo",
-     "folded": "mardochaeo",
-     "vulgateFrequency": 8,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Macedo",
-     "folded": "macedo",
-     "vulgateFrequency": 8,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Tyrus",
-     "folded": "tyrus",
-     "vulgateFrequency": 8,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Assyriis",
-     "folded": "assyriis",
-     "vulgateFrequency": 8,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Græcia",
-     "folded": "graecia",
-     "vulgateFrequency": 8,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Chobar",
-     "folded": "chobar",
-     "vulgateFrequency": 8,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "革巴爾",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "3/3 節同現"
-    },
-    {
-     "headword": "Susanna",
-     "folded": "susanna",
-     "vulgateFrequency": 8,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "蘇撒納",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "7/7 節同現"
-    },
-    {
      "headword": "Rages",
      "folded": "rages",
      "vulgateFrequency": 8,
      "type": "",
      "tier": "讀本所見",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Oniæ",
-     "folded": "oniae",
-     "vulgateFrequency": 8,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Modin",
-     "folded": "modin",
-     "vulgateFrequency": 8,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "摩丁",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "3/3 節同現"
-    },
-    {
-     "headword": "Bethsuram",
-     "folded": "bethsuram",
-     "vulgateFrequency": 8,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "",
-     "zhRoute": "",
-     "zhEvidence": ""
-    },
-    {
-     "headword": "Bacchidem",
-     "folded": "bacchidem",
-     "vulgateFrequency": 8,
-     "type": "",
-     "tier": "武加大其餘",
-     "zh": "巴基德",
-     "zhRoute": "sigao-underline-alignment",
-     "zhEvidence": "2/2 節同現"
+     "zh": "辣革斯",
+     "zhRoute": "思高體例（人工補）",
+     "zhEvidence": "多俾亞傳的瑪待城邑"
     },
     {
      "headword": "Cephas",
@@ -18035,7 +13645,7 @@
    "title": "近現代教廷拉丁的地名、機構名與專名",
    "entries": [
     {
-     "headword": "Iuppiter",
+     "headword": "Iovis",
      "folded": "iuppiter",
      "churchFrequency": 341,
      "zh": "朱庇特",
@@ -18049,42 +13659,42 @@
      "zhRoute": "place_names"
     },
     {
-     "headword": "Caesar",
+     "headword": "Caesaris",
      "folded": "caesar",
      "churchFrequency": 256,
      "zh": "凱撒",
      "zhRoute": "rulers"
     },
     {
-     "headword": "Cyrillus",
+     "headword": "Cyrilli",
      "folded": "cyrillus",
      "churchFrequency": 191,
      "zh": "濟利祿",
      "zhRoute": "theologians"
     },
     {
-     "headword": "Gallia",
+     "headword": "Galliae",
      "folded": "gallia",
      "churchFrequency": 190,
      "zh": "高盧",
      "zhRoute": "place_names"
     },
     {
-     "headword": "Hierosolyma",
+     "headword": "Hierusalem",
      "folded": "hierosolyma",
      "churchFrequency": 182,
      "zh": "耶路撒冷",
      "zhRoute": "place_names"
     },
     {
-     "headword": "Carolus",
+     "headword": "Caroli",
      "folded": "carolus",
      "churchFrequency": 155,
      "zh": "查理",
      "zhRoute": "rulers"
     },
     {
-     "headword": "Nestorius",
+     "headword": "Nestorium",
      "folded": "nestorius",
      "churchFrequency": 146,
      "zh": "聶斯脫里",
@@ -18098,7 +13708,7 @@
      "zhRoute": "rulers"
     },
     {
-     "headword": "Europa",
+     "headword": "Europae",
      "folded": "europa",
      "churchFrequency": 121,
      "zh": "歐洲",
@@ -18119,7 +13729,7 @@
      "zhRoute": "place_names"
     },
     {
-     "headword": "Origenes",
+     "headword": "Origenis",
      "folded": "origenes",
      "churchFrequency": 115,
      "zh": "奧利振",
@@ -18133,7 +13743,7 @@
      "zhRoute": "philosophers"
     },
     {
-     "headword": "Saturnus",
+     "headword": "Saturno",
      "folded": "saturnus",
      "churchFrequency": 96,
      "zh": "薩圖恩",
@@ -18147,7 +13757,7 @@
      "zhRoute": "philosophers"
     },
     {
-     "headword": "Germania",
+     "headword": "Germaniae",
      "folded": "germania",
      "churchFrequency": 76,
      "zh": "日耳曼尼亞",
@@ -18161,14 +13771,14 @@
      "zhRoute": "deities"
     },
     {
-     "headword": "Venus",
+     "headword": "Venerem",
      "folded": "uenus",
      "churchFrequency": 72,
      "zh": "維納斯",
      "zhRoute": "deities"
     },
     {
-     "headword": "Constantinopolis",
+     "headword": "Constantinopolim",
      "folded": "constantinopolis",
      "churchFrequency": 72,
      "zh": "君士坦丁堡",
@@ -18210,14 +13820,14 @@
      "zhRoute": "place_names"
     },
     {
-     "headword": "Mars",
+     "headword": "Martis",
      "folded": "mars",
      "churchFrequency": 54,
      "zh": "瑪爾斯",
      "zhRoute": "deities"
     },
     {
-     "headword": "Julianus",
+     "headword": "Iuliani",
      "folded": "iulianus",
      "churchFrequency": 52,
      "zh": "尤利安",
@@ -18259,21 +13869,21 @@
      "zhRoute": "place_names"
     },
     {
-     "headword": "Alexandria",
+     "headword": "Alexandriam",
      "folded": "alexandria",
      "churchFrequency": 42,
      "zh": "亞歷山卓",
      "zhRoute": "place_names"
     },
     {
-     "headword": "Minerva",
+     "headword": "Minervam",
      "folded": "minerua",
      "churchFrequency": 42,
      "zh": "米娜瓦",
      "zhRoute": "deities"
     },
     {
-     "headword": "Anglia",
+     "headword": "Angliae",
      "folded": "anglia",
      "churchFrequency": 41,
      "zh": "英格蘭",
@@ -18315,7 +13925,7 @@
      "zhRoute": "philosophers"
     },
     {
-     "headword": "Tiberis",
+     "headword": "Tiberim",
      "folded": "tiberis",
      "churchFrequency": 33,
      "zh": "台伯河",
@@ -18350,7 +13960,7 @@
      "zhRoute": "theologians"
     },
     {
-     "headword": "Diana",
+     "headword": "Dianae",
      "folded": "diana",
      "churchFrequency": 29,
      "zh": "黛安娜",
@@ -18378,21 +13988,21 @@
      "zhRoute": "theologians"
     },
     {
-     "headword": "Saulus",
+     "headword": "Saule",
      "folded": "saulus",
      "churchFrequency": 23,
      "zh": "掃祿",
      "zhRoute": "思高譯本"
     },
     {
-     "headword": "Vulcanus",
+     "headword": "Vulcanum",
      "folded": "uulcanus",
      "churchFrequency": 23,
      "zh": "伏爾甘",
      "zhRoute": "deities"
     },
     {
-     "headword": "Tiberius",
+     "headword": "Tiberii",
      "folded": "tiberius",
      "churchFrequency": 22,
      "zh": "提庇留",
@@ -18448,14 +14058,14 @@
      "zhRoute": "philosophers"
     },
     {
-     "headword": "Sabellius",
+     "headword": "Sabellium",
      "folded": "sabellius",
      "churchFrequency": 19,
      "zh": "撒伯流",
      "zhRoute": "theologians"
     },
     {
-     "headword": "Bononia",
+     "headword": "Bononiae",
      "folded": "bononia",
      "churchFrequency": 18,
      "zh": "波隆那",
@@ -18483,7 +14093,7 @@
      "zhRoute": "rulers"
     },
     {
-     "headword": "Sabinus",
+     "headword": "Sabino",
      "folded": "sabinus",
      "churchFrequency": 17,
      "zh": "薩比努斯",

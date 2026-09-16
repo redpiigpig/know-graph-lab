@@ -211,6 +211,47 @@ Saturninus, two named Julianus. So:
   referent table and let the register keep supplying the Chinese — never copy the
   Chinese into the builder, or the reader grows a second glossary nobody knows about.
 
+### Index the display spelling under the same key as the entry
+
+`harvest_names` keys names by **lemma**, so the table of surface spellings must be
+built by lemma too. Built by raw word form instead, the lookup missed and the builder
+printed the fold key itself — `iohannes`, `iordanes`, `zebedaeus`, lowercase and with
+J/V flattened, where the edition prints `Joannes`, `Jordanes`, `Zebedæus`. The worst
+one was `aelius`: the Latin dictionary lists the Roman gens *Aelius*, so lemmatising
+`Eliam` (Elijah, 26 occurrences) produced it, and a Roman appeared in a table of
+biblical names with a plausible-looking entry. **A lowercase headword in a proper-name
+table is a bug, never a name** — assert on it.
+
+### Alignment guards: three, and each catches a different lie
+
+Matching a Latin name to its Chinese by shared verses needs all three, and the numbers
+matter:
+
+1. the candidate follows the name through most of its verses (`hits ≥ 0.6 × appearances`);
+2. the candidate is not a word that follows everything (`corpus total ≤ 8 × hits`);
+3. the candidate clearly beats the runner-up (`hits ≥ 1.3 × runner-up`).
+
+Guard 2 at 2.5 killed exactly the commonest names: *Judas* followed 「猶大」 through 76
+of 80 verses and was rejected because 猶大 occurs 241 times overall. The book printed a
+blank for a name appearing 319 times. Guard 3 catches the opposite lie — Daniel's three
+companions always appear together, so Sidrach, Misach and Abdenago had *identical*
+candidate lists and all three were resolved to 沙得辣客. Two of the three were wrong on
+the page and nothing showed it. **When the evidence cannot separate them, leave it
+blank and say so.**
+
+### Filling gaps by hand: label the route, never blend it
+
+Where verse alignment cannot reach, writing the name yourself is correct — but the
+route field must distinguish 「思高體例（人工補）」 from `sigao-underline-alignment`.
+Blend them and nobody can ever re-verify which entries were *found* and which were
+*written*. Record why each hand-filled entry is fillable (a case ending resolved, or
+the verse that fixes an order, e.g. Dan 1:7 for those three companions).
+
+And report the table that prints, not the pool it came from: this report once read
+「讀本所見 108，已由思高逐節對位定出中文 108（100%）」 when 28 of them were hand-filled
+and the denominator was the 585 names before the table was cut to 146. Every figure was
+correct and the sentence described a different table.
+
 ### A rebuild must not be a regression
 
 `build_latin_appendices.py` recomputes spellings and corpus attestation; the Chinese
