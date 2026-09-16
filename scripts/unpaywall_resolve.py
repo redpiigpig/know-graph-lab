@@ -62,7 +62,10 @@ EMAIL = "redpiigpig@gmail.com"
 API = "https://api.unpaywall.org/v2/"
 UA = f"know-graph-lab/1.0 (academic research; {EMAIL})"
 
-RESOLVE_SLEEP = 0.12     # 官方請求每日 ≤100k；這個速度一天約 70 萬次的上限內留餘裕
+# 官方請求每日不超過 100k 次。實測請求本身約 0.63 秒，所以整個週期要
+# 湊到 0.86 秒才會落在 ~99k/日。先前設 0.12 實測跑出 1.33 筆/秒＝11.5 萬/日，
+# **超過人家的請求**，改成 0.23。
+RESOLVE_SLEEP = 0.23
 FETCH_SLEEP = 2.0        # 下載對各家 OJS 站客氣點
 MAX_PDF_MB = 60
 
@@ -86,11 +89,10 @@ def get(url: str, timeout: int = 30, tries: int = 3) -> bytes | None:
     return None
 
 
-def crossref_rows():
-    """逐刊讀 Crossref 收成。821 個檔、45 萬列，不要一次全載進記憶體。"""
-    for f in sorted(CORPUS.glob("*.jsonl")):
-        issn = f.stem
-        for line in f.open(encoding="utf-8"):
+def _one_journal(f: Path):
+    issn = f.stem
+    with f.open(encoding="utf-8") as fh:
+        for line in fh:
             if not line.strip():
                 continue
             try:
@@ -100,6 +102,29 @@ def crossref_rows():
             if r.get("doi"):
                 r["issn"] = issn
                 yield r
+
+
+def crossref_rows():
+    """逐刊讀 Crossref 收成，但**輪流**不是一刊跑完再下一刊。
+
+    821 個檔、45 萬列，不要一次全載進記憶體。
+
+    🚨 為什麼要輪流：檔案是按 ISSN 排序的，開頭幾刊剛好是 JAAR 這種
+       老牌封閉期刊，一路跑下去前一萬筆的 OA 命中率只有 1%——整整幾小時
+       查下來一篇都下載不了，而且會讓人以為「Unpaywall 對這個領域沒用」。
+       輪流查的話每一刊都會早早被碰到，OA 豐富的那些小型學報立刻現形，
+       `--fetch` 也才有東西可下。全部查完的總量一樣，只是次序不同。
+    """
+    gens = [_one_journal(f) for f in sorted(CORPUS.glob("*.jsonl"))]
+    while gens:
+        alive = []
+        for g in gens:
+            try:
+                yield next(g)
+                alive.append(g)
+            except StopIteration:
+                pass
+        gens = alive
 
 
 def done_dois() -> set[str]:
