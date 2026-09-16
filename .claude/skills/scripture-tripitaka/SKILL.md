@@ -20,7 +20,8 @@ description: 佛教大藏經（/tripitaka）—— 把 CBETA 的《大正新脩�
 |---|---|
 | `title_bo` | 本站從 TEI 正文抽的**全名** |
 | `title_bo_short` | 84000 的**通行略稱**（兩者並存，不互相覆蓋） |
-| `title_sa` `title_en` `translator_en` | 84000 |
+| `title_sa` `title_en` | 84000 |
+| `translator_en` | 84000 的**現代英譯者**（Gareth Sparham…），**不是**九世紀的藏譯譯師。別填進 `byline`／`translator` |
 | `title_zh` `zh_parallels` | **東北目錄**（`tripitaka_derge_zh.py`），見下 |
 
 #### 🚨 這一步踩到的四個坑
@@ -117,6 +118,49 @@ id ＝ `1501001` ＋ 7 位流水號，甘珠爾是 1–1109。
 * **快取寫 Drive 會慢五倍。** 同樣 1,140 個 46KB 檔，寫 `G:` 只跑 8 頁／分
   （請求本身 0.3–1 秒，其餘全耗在 DriveFS 逐檔同步），寫 `C:/tmp` 是 28 頁／分。
   照 repo-hygiene 判準這本來就是快取。
+
+### DK 上線（2026-09-16）：入庫、R2、頁面
+
+| | |
+|---|---|
+| 目錄 | `tripitaka_works` **1,124 列**（`canon='DK'`，`display_order` 從 10,001 起跳與漢文那 3,784 部錯開）|
+| 正文 | Drive `_tripitaka_tibetan/`（正本，352 MB）→ R2 `tripitaka/*.jsonl.gz` **2,248 檔**。藏文壓縮率 5–11%，最大一檔 gz 2.6 MB，沒有超過 10 MB 的 |
+| 頁面 | `/tripitaka` 多一個「藏文大藏經・德格版甘珠爾」區（10 部類）；列表與 reader 都走既有那兩支 |
+| 指令 | `tripitaka_db.py --schema --push-dk` ／ `--push-r2 --dk` |
+
+#### 🚨 接上網站時踩到的五個坑
+
+1. **`isValidWorkId` 只認 T 與 N，卍續藏那 1,230 部全部打不開。** 這是既有的洞，
+   加 DK 時才發現：`/api/tripitaka/work?id=X0001` 一律回 400，而首頁照樣列得出
+   1,230 部與字數，**只有點進去才壞**。這個函式同時是路徑注入的唯一防線，
+   加代號一定要連它一起改並補測試（`test/tripitaka-work-id.spec.ts`）。
+
+2. **reader 的預設欄寫死 `'lzh'`。** 甘珠爾只有 `bo` 一欄，`cols` 會算成空陣列，
+   於是整部經一個字都不顯示——而頁框、段號、側欄全都正常出得來，
+   看起來像「這部經是空的」而不是「欄位選錯了」。改成「留下有資料的，
+   一個都不剩就取第一個」。
+
+3. **甘珠爾沒有「卷」，不能靠 `juan` 分頁。** 它的段只有 `vol`／`folio`／`line`，
+   `juans` 會是空陣列、`juan` 為 null，於是**整部一次送出**：Toh 8 有 65,897 行、
+   1,290 萬字，瀏覽器直接卡死，而回應是 200、資料也都對。
+   改用 `dkPages()`：先按函切，函內再按 1,200 行切，頁名用起訖葉碼。
+   單函最多 5,737 行（Toh 8 第 24 函），所以函內一定要再切。
+
+4. **`translator_en` 是 84000 的現代英譯者，不是藏譯譯師。** 值長這樣：
+   Gareth Sparham、Gyurme Dorje、Andreas Doctor。填進 `byline`／`translator`
+   的話，頁面會在一部九世紀藏譯經旁邊寫「譯者：Gareth Sparham」，
+   完全看不出不對。那兩欄對 DK 留空，英譯者另標「84000 英譯」。
+
+5. **正文 LRU 的上限要按位元組算，不能按筆數算。** 原本是「最多 12 筆」，
+   在漢文是安全的（一部幾 MB），但甘珠爾一部到 47 MB JSONL／65,897 段，
+   解析成 JS 物件單部上看 150 MB，12 筆能吃掉 1–2 GB。改成 256 MB 上限。
+
+#### ⚠️ 尚未目視驗證
+
+上面的頁面改動**沒有跑過瀏覽器截圖**：本機 dev server 在編譯階段就 8 GB 堆 OOM
+（機器 15.6 GB 只剩 5.4 GB 可用，Chrome 佔 1.7 GB）。資料層已用 DB 查詢與
+單元測試（408 passed）驗過，呈現層待下次機器閒時跑 `scripts/_tripitaka_shot.mjs`
+（已加 DK 與 X0001 的目標）。
 
 #### 🚨 為什麼不能拿藏文題名直譯當 `title_zh`
 

@@ -9,6 +9,7 @@
 
   python scripts/tripitaka_db.py --schema          # 建表（冪等）
   python scripts/tripitaka_db.py --push            # catalog.json → tripitaka_works
+  python scripts/tripitaka_db.py --push-dk         # DK.catalog.json（德格版甘珠爾）
   python scripts/tripitaka_db.py --sync-drive      # 本機 out/ → Drive _tripitaka/
   python scripts/tripitaka_db.py --push-r2 [--only T0262]
 """
@@ -25,6 +26,10 @@ import sys
 import time
 import urllib.request
 from pathlib import Path
+
+# 主控台若是 cp950，印 ✓ 或藏文會炸 UnicodeEncodeError——而且是在工作
+# 做完之後才炸，看起來像失敗其實已經寫進去了。
+sys.stdout.reconfigure(encoding="utf-8")
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(SCRIPT_DIR))
@@ -95,6 +100,22 @@ create index if not exists tripitaka_works_canon_idx
 create index if not exists tripitaka_works_title_idx
   on tripitaka_works using gin (to_tsvector('simple', title_zh));
 
+-- 藏文大藏經（德格版甘珠爾，canon='DK'）專用欄。
+-- 🚨 甘珠爾是藏譯，`title_zh` 對它而言是「漢譯對照本的書名」而不是本名，
+--    而且 661 部根本沒有漢譯對照 → 那一欄是空字串。顯示與搜尋都必須
+--    退到 title_bo／title_en，不然目錄會列出一整片沒有標題的列。
+alter table tripitaka_works add column if not exists toh            text;
+alter table tripitaka_works add column if not exists title_bo       text;
+alter table tripitaka_works add column if not exists title_bo_short text;
+alter table tripitaka_works add column if not exists title_sa       text;
+alter table tripitaka_works add column if not exists title_en       text;
+alter table tripitaka_works add column if not exists translator_en  text;
+alter table tripitaka_works add column if not exists folio_start    text;
+alter table tripitaka_works add column if not exists folio_end      text;
+-- 漢譯對照本清單 [{id,t,title,checked?}]，來源見 tripitaka_derge_zh.py
+alter table tripitaka_works add column if not exists zh_parallels   jsonb;
+create index if not exists tripitaka_works_toh_idx on tripitaka_works (canon, toh);
+
 -- 逐段的跨語對照。段本身在檔案裡，這裡只記「哪一段對到什麼」。
 -- src: taisho-equiv（大正藏原註）/ suttacentral / gretil / 84000 / manual
 create table if not exists tripitaka_parallels (
@@ -133,8 +154,22 @@ def series_of(row: dict) -> str:
 
 
 def cmd_schema():
-    pg_exec(SCHEMA)
-    print("✓ tripitaka_works / tripitaka_parallels 已就緒")
+    """DDL 走直連；直連不通就退回 Management API。
+
+    🚨 兩條路都會壞，而且壞法不一樣，所以兩條都要留著：
+       直連 `db.{ref}.supabase.co` 有時候連 DNS 都解不到
+       （`could not translate host name`，換網路環境就會出現）；
+       Management API 則是那把 personal access token 會過期。
+    """
+    try:
+        pg_exec(SCHEMA)
+        print("✓ tripitaka_works / tripitaka_parallels 已就緒（直連）")
+        return
+    except Exception as e:                      # noqa: BLE001
+        print(f"直連不通（{type(e).__name__}: {str(e).strip().splitlines()[-1]}），"
+              f"改走 Management API")
+    sql(SCHEMA)
+    print("✓ tripitaka_works / tripitaka_parallels 已就緒（Management API）")
 
 
 COLS = ["id", "canon", "vol", "work_no", "work_suffix", "title_zh", "series", "byline",
@@ -203,6 +238,79 @@ def cmd_push():
     print(f"✓ tripitaka_works 已寫入 {len(payload)} 列")
 
 
+DK_CATALOG = Path(os.environ.get(
+    "DK_CATALOG",
+    "G:/我的雲端硬碟/資料/知識圖工作室/_tripitaka_tibetan/DK.catalog.json"))
+# DK 的 display_order 從一萬起跳，與 CBETA 那 3,784 部錯開。
+# 兩邊是分開推的，`--push` 只會把 CBETA 重編成 1…3,784；留出空檔，
+# 重推任一邊都不會把另一邊的次序打亂。
+DK_ORDER_BASE = 10_000
+
+
+def cmd_push_dk():
+    """德格版甘珠爾目錄 → tripitaka_works（canon='DK'）。
+
+    🚨 `title_zh` 在這裡的意思與漢文藏經不同：它是**漢譯對照本**的書名，
+       不是這部經自己的名字（甘珠爾是藏譯，沒有漢文本名）。661 部沒有
+       對照本，那一欄就是空字串。`series` 一律填得出東西（漢譯對照 →
+       英譯題名 → 藏文題名），列表與搜尋要靠它，不要靠 title_zh。
+    """
+    if not DK_CATALOG.exists():
+        raise SystemExit(f"✗ 找不到 {DK_CATALOG}（先跑 tripitaka_derge.py --build）")
+    doc = json.loads(DK_CATALOG.read_text(encoding="utf-8"))
+    works = doc["works"]
+
+    payload = []
+    for n, w in enumerate(works, start=1):
+        zh = w.get("title_zh") or ""
+        folio = f'{w.get("folio_start") or ""}–{w.get("folio_end") or ""}'.strip("–")
+        payload.append({
+            "id": w["id"],
+            "canon": "DK",
+            "vol": w["vol"],
+            # 目錄冊沒有 Toh 號，但 work_no 是 not null；排最後。
+            "work_no": w["toh_no"] if w["toh_no"] is not None else 9999,
+            "work_suffix": w.get("toh_suffix") or "",
+            "title_zh": zh,
+            "series": zh or w.get("title_en") or w.get("title_bo") or w["id"],
+            # 🚨 `translator_en` 是 **84000 的現代英譯者**（Gareth Sparham、
+            #    Gyurme Dorje…），不是九世紀把它譯成藏文的譯師。塞進
+            #    byline／translator 的話，頁面會在一部藏文經旁邊寫
+            #    「譯者：Gareth Sparham」，看起來完全正常而且沒人會察覺。
+            #    這兩欄對甘珠爾留空，英譯者只放在自己的欄位、由 UI 標明來歷。
+            "byline": "",
+            "translator": "",
+            # 藏文大藏經的單位是「函」（帙）不是「冊」
+            "extent": f"{folio}（第 {w['vol']} 函）" if folio else f"第 {w['vol']} 函",
+            "division_key": w["division_key"],
+            "japanese": False,
+            "seg_count": w.get("seg_count") or 0,
+            "char_count": w.get("char_count") or 0,
+            "toc_count": w.get("sub_count") or 0,
+            "term_langs": [],
+            "parallel_langs": ["zh"] if zh else [],
+            "parallel_count": len(w.get("zh_parallels") or []),
+            "display_order": DK_ORDER_BASE + n,
+            "toh": w.get("toh") or None,
+            "tibetan_toh": w.get("toh") or None,
+            "title_bo": w.get("title_bo") or None,
+            "title_bo_short": w.get("title_bo_short") or None,
+            "title_sa": w.get("title_sa") or None,
+            "title_en": w.get("title_en") or None,
+            "translator_en": w.get("translator_en") or None,
+            "folio_start": w.get("folio_start") or None,
+            "folio_end": w.get("folio_end") or None,
+            "zh_parallels": w.get("zh_parallels") or [],
+        })
+
+    for i in range(0, len(payload), 300):
+        postgrest("tripitaka_works?on_conflict=id", payload[i:i + 300])
+        print(f"  … {min(i + 300, len(payload))}/{len(payload)}", flush=True)
+    withzh = sum(1 for r in payload if r["title_zh"])
+    print(f"✓ tripitaka_works 寫入 DK {len(payload)} 列"
+          f"（{withzh} 部有漢譯對照、{len(payload) - withzh} 部只有藏文）")
+
+
 def cmd_sync_drive():
     dst = tc.OUT_DIR
     dst.mkdir(parents=True, exist_ok=True)
@@ -244,15 +352,19 @@ def _r2_existing(s3, bucket: str) -> set[str]:
         token = r["NextContinuationToken"]
 
 
-def cmd_push_r2(only: str | None, force: bool = False, suffix: str | None = None):
+def cmd_push_r2(only: str | None, force: bool = False, suffix: str | None = None,
+                dk: bool = False):
     s3, bucket = _r2(), _env("R2_BUCKET")
     # 🚨 來源必須是 Drive（正本），不是本機 out/。
     # 原本寫成「本機目錄存在就用本機」，但 tripitaka_cbeta 是**建到 Drive** 的，
     # 而 tripitaka_sanskrit／vernacular 建到本機 —— 兩邊內容不一樣。
     # 於是推 X 那 2,480 個檔時，它去掃本機（沒有 X）、發現本機的檔 R2 都已有，
     # 印出「✓ R2 0 檔」當作成功，X 一個都沒上去。見 SKILL 踩坑 25。
-    src = tc.OUT_DIR if tc.OUT_DIR.exists() else LOCAL_OUT
-    files = sorted(src.glob(f"{only}.*" if only else "*"))
+    # 藏文大藏經在另一個 Drive 夾（_tripitaka_tibetan），R2 的 key 前綴共用。
+    # 檔名 DKtoh0113.jsonl 與漢文那批不會撞。
+    src = DK_CATALOG.parent if dk else (tc.OUT_DIR if tc.OUT_DIR.exists() else LOCAL_OUT)
+    files = sorted(f for f in src.glob(f"{only}.*" if only else "*")
+                   if f.is_file() and f.name != "DK.catalog.json")
     print(f"來源 {src}（{len(files)} 檔）", flush=True)
     if suffix:
         # 只重推某一類檔（例：對照層重建後只有 *.orig.json 變了，
@@ -265,7 +377,14 @@ def cmd_push_r2(only: str | None, force: bool = False, suffix: str | None = None
         files = [f for f in files if f"{R2_PREFIX}{f.name}.gz" not in have]
     big, failed = [], []
     for i, f in enumerate(files, 1):
-        raw = f.read_bytes()
+        # 🚨 讀檔要自己擋。來源在 Drive，DriveFS 抖一下就回 OSError 22，
+        #    而這一行原本在重試圈外——2,248 檔推到 1,200 檔時整批 traceback 中止。
+        #    上傳失敗只記一筆繼續跑，讀檔失敗卻會炸掉整支，不合理。
+        try:
+            raw = f.read_bytes()
+        except OSError as e:
+            failed.append((f.name, f"讀檔 {type(e).__name__}"))
+            continue
         buf = io.BytesIO()
         with gzip.GzipFile(fileobj=buf, mode="wb", mtime=0) as g:
             g.write(raw)
@@ -300,8 +419,12 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--schema", action="store_true")
     ap.add_argument("--push", action="store_true")
+    ap.add_argument("--push-dk", action="store_true",
+                    help="德格版甘珠爾目錄 → tripitaka_works")
     ap.add_argument("--sync-drive", action="store_true")
     ap.add_argument("--push-r2", action="store_true")
+    ap.add_argument("--dk", action="store_true",
+                    help="--push-r2 改推藏文大藏經那一夾")
     ap.add_argument("--only", type=str)
     ap.add_argument("--force", action="store_true", help="不管 R2 已有，全部重傳")
     ap.add_argument("--suffix", type=str, help="只推指定後綴的檔，如 .orig.json")
@@ -310,11 +433,13 @@ def main():
         cmd_schema()
     if a.push:
         cmd_push()
+    if a.push_dk:
+        cmd_push_dk()
     if a.sync_drive:
         cmd_sync_drive()
     if a.push_r2:
-        cmd_push_r2(a.only, a.force, a.suffix)
-    if not any([a.schema, a.push, a.sync_drive, a.push_r2]):
+        cmd_push_r2(a.only, a.force, a.suffix, a.dk)
+    if not any([a.schema, a.push, a.push_dk, a.sync_drive, a.push_r2]):
         ap.print_help()
 
 

@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col bg-slate-50 min-h-dvh">
     <AppHeader
-      :title="work?.title_zh || id"
+      :title="displayTitle"
       :back="{ to: backTo, label: divLabel }"
       :editable="false"
     >
@@ -55,10 +55,54 @@
       <!-- 側欄：卷 + 目錄樹 -->
       <aside class="hidden lg:block w-64 flex-shrink-0 border-r border-gray-200 bg-white overflow-y-auto max-h-[calc(100dvh-3.5rem)] sticky top-14">
         <div class="p-4 border-b border-gray-100">
-          <div class="text-sm font-semibold text-gray-800 leading-snug">{{ work.title_zh }}</div>
+          <div class="text-sm font-semibold text-gray-800 leading-snug"
+               :class="work.canon === 'DK' ? 'font-serif' : ''">{{ displayTitle }}</div>
+          <div v-if="work.canon === 'DK' && work.title_en"
+               class="text-[11px] text-gray-500 italic mt-1 leading-snug">{{ work.title_en }}</div>
+          <div v-if="work.canon === 'DK' && work.title_sa"
+               class="text-[11px] text-gray-400 italic mt-0.5 leading-snug">{{ work.title_sa }}</div>
+          <!-- 漢譯對照本。標題寫「對照」不寫「漢譯書名」——它不是這部經的名字，
+               是同一部印度原典另外譯成漢文的那幾部經。 -->
+          <div v-if="zhParallels.length" class="mt-2 pt-2 border-t border-gray-100">
+            <div class="text-[10px] text-gray-400 mb-1">漢譯對照（東北目錄）</div>
+            <NuxtLink
+              v-for="pl in zhParallels"
+              :key="pl.id"
+              :to="`/tripitaka/w/${pl.id}`"
+              class="block text-[11px] text-amber-700 hover:underline truncate"
+              :title="pl.checked === false ? '東北目錄的書名與經號對不上，待判讀' : ''"
+            >{{ pl.title }}<span class="text-gray-400 font-mono"> {{ pl.id }}</span><span
+              v-if="pl.checked === false" class="text-gray-400"> ⚠</span></NuxtLink>
+          </div>
           <div class="text-[11px] text-gray-400 mt-1 leading-relaxed">
             <div v-if="work.byline">{{ work.byline }}</div>
-            <div class="font-mono mt-0.5">{{ work.id }} · {{ work.extent }}</div>
+            <!-- 🚨 這是 84000 的**現代英譯者**，不是把它譯成藏文的九世紀譯師。
+                 標籤一定要寫清楚，否則等於在一部藏文經旁邊掛錯譯者。 -->
+            <div v-if="work.canon === 'DK' && work.translator_en" class="mt-0.5">
+              84000 英譯：{{ work.translator_en }}
+            </div>
+            <div class="font-mono mt-0.5">
+              <span v-if="work.canon === 'DK' && work.toh">Toh {{ work.toh }} · </span>{{ work.id }} · {{ work.extent }}
+            </div>
+          </div>
+        </div>
+
+        <!-- 甘珠爾：函 ＋ 函內葉碼區段。藏文佛典沒有「卷」。 -->
+        <div v-if="pages.length > 1" class="p-3 border-b border-gray-100">
+          <div class="text-[11px] text-gray-400 mb-1.5">函・葉</div>
+          <div v-for="v in pageVols" :key="v.vol" class="mb-2 last:mb-0">
+            <div class="text-[10px] text-gray-400 mb-0.5">第 {{ v.vol }} 函</div>
+            <div class="flex flex-wrap gap-1">
+              <NuxtLink
+                v-for="pg in v.items"
+                :key="pg.key"
+                :to="`/tripitaka/w/${id}?page=${pg.key}`"
+                class="px-2 py-0.5 text-[11px] rounded border transition font-mono"
+                :class="pg.key === page
+                  ? 'bg-amber-600 text-white border-amber-600'
+                  : 'border-gray-200 text-gray-600 hover:border-amber-300'"
+              >{{ pg.label }}</NuxtLink>
+            </div>
           </div>
         </div>
 
@@ -94,10 +138,16 @@
       <main class="flex-1 min-w-0 px-6 py-8">
         <div class="max-w-4xl mx-auto">
           <div class="mb-6 pb-4 border-b border-gray-200">
-            <h1 class="text-xl font-bold text-gray-900">
-              {{ work.title_zh }}
+            <h1 class="text-xl font-bold text-gray-900" :class="work.canon === 'DK' ? 'font-serif' : ''">
+              {{ displayTitle }}
               <span v-if="juan" class="text-base font-normal text-gray-400">卷第 {{ juan }}</span>
+              <span v-else-if="curPage" class="text-base font-normal text-gray-400 font-sans">
+                第 {{ curPage.vol }} 函 {{ curPage.label }}
+              </span>
             </h1>
+            <div v-if="work.canon === 'DK' && work.title_zh"
+                 class="mt-1 text-sm text-amber-800">漢譯對照《{{ work.title_zh }}》<span
+                   v-if="zhParallels.length > 1" class="text-gray-400"> 等 {{ zhParallels.length }} 部</span></div>
             <div class="mt-1.5 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-400">
               <span class="font-mono">{{ work.id }}</span>
               <span v-if="work.byline">{{ work.byline }}</span>
@@ -113,7 +163,7 @@
                 class="font-mono text-[10px] text-gray-300 group-hover:text-amber-600 transition mb-0.5"
                 :title="`複製引用式 ${s.seg}`"
                 @click="copy(s.seg)"
-              >{{ s.seg.replace(/^.*_p/, '') }}</button>
+              >{{ segCite(s) }}</button>
 
               <div v-if="s.kind === 'head'" class="text-base font-semibold text-gray-800 pt-2">
                 {{ s.sources.lzh }}
@@ -256,10 +306,20 @@ const parallels = ref<any[]>([])
 const originals = ref<Record<string, any[]>>({})
 const juans = ref<number[]>([])
 const juan = ref<number | null>(null)
+const pages = ref<any[]>([])
+const page = ref<string | null>(null)
 const pending = ref(true)
 const err = ref<string | null>(null)
 
-useHead(() => ({ title: `${work.value?.title_zh ?? id.value} — 佛教大藏經` }))
+/** 甘珠爾的 `title_zh` 是「漢譯對照本的書名」而不是這部經自己的名字，
+ *  而且 677 部是空的。標題一律退到藏文題名。 */
+const displayTitle = computed(() => {
+  const w = work.value
+  if (!w) return id.value
+  if (w.canon === 'DK') return w.title_bo || w.title_en || w.id
+  return w.title_zh || w.id
+})
+useHead(() => ({ title: `${displayTitle.value} — 佛教大藏經` }))
 
 const divLabel = computed(() => divisionByKey(work.value?.division_key)?.label ?? '佛教大藏經')
 const backTo = computed(() => work.value ? `/tripitaka/${work.value.division_key}` : '/tripitaka')
@@ -273,11 +333,16 @@ const availableLangs = computed(() => {
 })
 const shown = ref<Set<string>>(new Set(['lzh']))
 // 有白話就預設打開 —— 文言與白話並排正是這一欄存在的理由，
-// 不該讓使用者自己去點才看得到
+// 不該讓使用者自己去點才看得到。
+//
+// 🚨 預設欄不能寫死 'lzh'。甘珠爾只有 bo 一欄，硬寫 lzh 會讓 cols 算出空陣列，
+//    於是整部經一個字都不顯示——而且頁面框架、段號、側欄全都正常出得來，
+//    看起來像「這部經是空的」而不是「欄位選錯了」。
 watch(availableLangs, (langs) => {
-  if (langs.includes('zh-mod') && !shown.value.has('zh-mod')) {
-    shown.value = new Set([...shown.value, 'zh-mod'])
-  }
+  const next = new Set([...shown.value].filter(l => langs.includes(l)))
+  if (langs.includes('zh-mod')) next.add('zh-mod')
+  if (!next.size && langs.length) next.add(langs[0])
+  shown.value = next
 }, { immediate: true })
 const cols = computed(() => availableLangs.value.filter(l => shown.value.has(l)))
 const gridStyle = computed(() =>
@@ -289,6 +354,19 @@ function toggle(l: string) {
   else next.add(l)
   shown.value = next
 }
+
+/** 分頁按鈕按函分組。Toh 8 有 12 函 55 段，攤平成一排認不出在哪一函。 */
+const pageVols = computed(() => {
+  const out: { vol: number; items: any[] }[] = []
+  for (const pg of pages.value) {
+    const last = out[out.length - 1]
+    if (last && last.vol === pg.vol) last.items.push(pg)
+    else out.push({ vol: pg.vol, items: [pg] })
+  }
+  return out
+})
+const curPage = computed(() => pages.value.find(p => p.key === page.value) ?? null)
+const zhParallels = computed<any[]>(() => work.value?.zh_parallels ?? [])
 
 const tocInJuan = computed(() =>
   toc.value.filter(n => juan.value == null || n.juan === juan.value),
@@ -327,6 +405,16 @@ const parallelsBySeg = computed(() => {
 })
 function parallelsOf(uid: string) { return parallelsBySeg.value.get(uid) ?? [] }
 function originalsOf(uid: string) { return originals.value[uid] ?? [] }
+
+/** 段首的引用式。漢文是大正藏頁欄行（`…_p0008a13` → `0008a13`）；
+ *  甘珠爾是函．葉．行（`DKtoh0113_v51_1b1` → `51.1b1`）——藏學界的定址就是
+ *  這個，不要套漢文那一套。 */
+function segCite(s: any) {
+  const id = String(s.seg ?? '')
+  if (id.includes('_p')) return id.replace(/^.*_p/, '')
+  const m = id.match(/_v(\d+)_(.+)$/)
+  return m ? `${m[1]}.${m[2]}` : id
+}
 
 /** 原文的行號標籤。SuttaCentral 是 `sn22.12:1.3`（取冒號後），
  *  GRETIL 是 `MMK 1.1`（原書頌號，整串就是引用式）；抓不到頌號的行留空 ——
@@ -372,6 +460,8 @@ async function load() {
     originals.value = r.originals ?? {}
     juans.value = r.juans
     juan.value = r.juan
+    pages.value = r.pages ?? []
+    page.value = r.page ?? null
   } catch (e: any) {
     err.value = e?.data?.message || e?.message || '載入失敗'
   } finally {
@@ -379,5 +469,5 @@ async function load() {
   }
 }
 onMounted(load)
-watch(() => [route.params.id, route.query.juan], load)
+watch(() => [route.params.id, route.query.juan, route.query.page], load)
 </script>

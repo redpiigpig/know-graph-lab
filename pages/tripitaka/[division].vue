@@ -34,8 +34,23 @@
                 :to="`/tripitaka/w/${g.items[0].id}`"
                 class="flex items-baseline gap-3 px-5 py-3 hover:bg-amber-50/50 transition"
               >
-                <span class="font-mono text-[11px] text-gray-400 w-24 flex-shrink-0">{{ g.items[0].id }}</span>
-                <div class="min-w-0 flex-1">
+                <span class="font-mono text-[11px] text-gray-400 w-24 flex-shrink-0">
+                  {{ g.items[0].canon === 'DK' ? `Toh ${g.items[0].toh || '—'}` : g.items[0].id }}
+                </span>
+                <!-- 藏文大藏經：主標題是藏文題名，漢文書名是對照本另外掛標籤 -->
+                <div v-if="g.items[0].canon === 'DK'" class="min-w-0 flex-1">
+                  <div class="flex items-baseline gap-2">
+                    <span class="text-sm text-gray-900 font-serif truncate">{{ boTitle(g.items[0]) }}</span>
+                    <span v-if="g.items[0].title_zh"
+                          class="text-[10px] text-amber-700 border border-amber-200 bg-amber-50 rounded px-1 flex-shrink-0">漢譯《{{ g.items[0].title_zh }}》</span>
+                  </div>
+                  <div class="text-xs text-gray-400 mt-0.5 truncate">
+                    <span v-if="g.items[0].title_en">{{ g.items[0].title_en }}</span>
+                    <span v-if="g.items[0].extent"> · {{ g.items[0].extent }}</span>
+                    <span v-if="g.items[0].char_count"> · {{ g.items[0].char_count.toLocaleString('en-US') }} 字</span>
+                  </div>
+                </div>
+                <div v-else class="min-w-0 flex-1">
                   <div class="text-sm text-gray-900 truncate">{{ g.series }}</div>
                   <div class="text-xs text-gray-400 mt-0.5 truncate">
                     <span v-if="g.items[0].byline">{{ g.items[0].byline }}</span>
@@ -106,17 +121,28 @@ const filtered = computed(() =>
     : works.value,
 )
 
-/** 南傳「長部經典(第1卷-第14卷)」×3 冊、大正藏 T0220a/b/c —— 同一部書歸一群。 */
+/** 南傳「長部經典(第1卷-第14卷)」×3 冊、大正藏 T0220a/b/c —— 同一部書歸一群。
+ *
+ *  🚨 甘珠爾不歸群。它的跨函本已經在切經時合成一部（一列就是一部），
+ *     而且 `series` 對它而言是「漢譯對照本的書名」——Toh 8／9／10／12…
+ *     十二部不同的般若經共用《大般若波羅蜜多經》這個對照書名，而且在
+ *     目錄裡相鄰，照上面的規則會被黏成一群「分 12 冊」，看起來完全正常。 */
 const grouped = computed(() => {
   const out: { series: string; items: any[] }[] = []
   for (const w of filtered.value) {
     const s = w.series || w.title_zh
     const last = out[out.length - 1]
-    if (last && last.series === s) last.items.push(w)
+    if (w.canon !== 'DK' && last && last.series === s) last.items.push(w)
     else out.push({ series: s, items: [w] })
   }
   return out
 })
+
+/** 甘珠爾一列的主標題＝**藏文題名**，那才是這部經自己的名字。
+ *  漢文書名是對照本，另外掛成標籤，不能拿來當它的名字。 */
+function boTitle(w: any) {
+  return w.title_bo || w.title_bo_short || w.title_en || w.id
+}
 
 function volLabel(w: any) {
   const m = String(w.title_zh).match(/[（(](第.*?)[)）]\s*$/)

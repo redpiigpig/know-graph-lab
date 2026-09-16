@@ -7,7 +7,7 @@
         <div class="mb-8 text-center">
           <h1 class="text-2xl font-bold text-gray-900 mb-1">☸️ 佛教大藏經</h1>
           <p class="text-sm text-gray-500">
-            《大正新脩大藏經》《卍新纂大日本續藏經》與《漢譯南傳大藏經》全文，附梵／巴／藏原典對照與佛學辭典查詢
+            《大正新脩大藏經》《卍新纂大日本續藏經》《漢譯南傳大藏經》與<strong class="text-gray-600">德格版甘珠爾</strong>全文，附梵／巴／藏原典對照與佛學辭典查詢
           </p>
           <div v-if="!pending" class="mt-4 flex flex-wrap justify-center gap-x-6 gap-y-1 text-xs text-gray-400">
             <span>{{ fmt(total.works) }} 部</span>
@@ -42,7 +42,9 @@
             <li v-for="w in hits" :key="w.id">
               <NuxtLink :to="`/tripitaka/w/${w.id}`" class="flex items-baseline gap-3 px-5 py-2.5 hover:bg-amber-50/50 transition">
                 <span class="font-mono text-[11px] text-gray-400 w-20 flex-shrink-0">{{ w.id }}</span>
-                <span class="text-sm text-gray-800 truncate">{{ w.title_zh }}</span>
+                <span class="text-sm text-gray-800 truncate">{{ workTitle(w) }}</span>
+                <span v-if="w.canon === 'DK' && w.title_zh"
+                      class="text-[10px] text-amber-700 border border-amber-200 bg-amber-50 rounded px-1 flex-shrink-0">漢譯《{{ w.title_zh }}》</span>
                 <span class="text-xs text-gray-400 ml-auto flex-shrink-0 truncate max-w-[10rem]">{{ w.byline }}</span>
               </NuxtLink>
             </li>
@@ -123,11 +125,15 @@
             大正藏兩千餘部中，梵本存世不到一成，巴利對應集中於四阿含，藏譯對應主要在般若、密教與論部。沒有對照欄不代表本站漏做，而是該經的原典已佚。
           </p>
           <p>
+            <strong class="text-gray-700">藏文大藏經的定址與「漢譯對照」。</strong>
+            甘珠爾不用大正藏頁欄行，段的識別碼是<strong class="text-gray-700">函＋葉碼＋行</strong>（<code class="font-mono">DKtoh0113_v51_1b1</code> ＝ 第 51 函第 1 葉背面第 1 行），一行即一段——藏文原典沒有標點分段，行是原書唯一的結構。列表上的漢文書名是<strong class="text-gray-700">漢譯對照本</strong>，即同一部印度原典另外譯成漢文的那一部經，不是藏文題名的翻譯；對照關係取自東北目錄，沒有列的就留空。
+          </p>
+          <p>
             <strong class="text-gray-700">未收部分。</strong>
             大正藏第 56–84 冊（日本撰述部）CBETA 未提供 XML，故續經疏部、續諸宗部、悉曇部等不在此處。
           </p>
           <p class="pt-1 text-gray-400">
-            文本來源：中華電子佛典協會（CBETA）TEI P5 XML，非商業用途。
+            文本來源：漢文三藏為中華電子佛典協會（CBETA）TEI P5 XML；德格版甘珠爾為 Esukhia／OpenPecha 的 TEI 轉錄本，題名與譯者補自 84000 的 Linked Open Data（CC0），漢譯對照取自東北大學《西藏大藏經總目錄》數位版。非商業用途。
           </p>
         </div>
       </div>
@@ -137,7 +143,7 @@
 
 <script setup lang="ts">
 import {
-  TAISHO_TRANSLATED, TAISHO_CHINESE, NANCHUAN, XUZANG, COLOR_CLASS,
+  TAISHO_TRANSLATED, TAISHO_CHINESE, NANCHUAN, XUZANG, DERGE, COLOR_CLASS,
 } from '~/data/tripitaka/divisions'
 
 definePageMeta({ middleware: 'auth' })
@@ -148,6 +154,7 @@ const groups = [
   { title: '大正藏 · 中土撰述', desc: '漢地祖師的注疏、宗論、史傳與經錄（T33–T55、T85）', divisions: TAISHO_CHINESE },
   { title: '卍新纂續藏經 · 中土撰述補遺', desc: '大正藏略掉的那一半：宋元明清的疏鈔、各宗語錄、禮懺儀軌與寺志僧傳（X01–X88）', divisions: XUZANG },
   { title: '漢譯南傳大藏經 · 元亨寺版', desc: '巴利三藏的完整現代漢譯，與上列漢譯阿含互為對照（N01–N70）', divisions: NANCHUAN },
+  { title: '藏文大藏經 · 德格版甘珠爾', desc: '藏譯佛說部全帙 103 函，藏文原文逐行呈現。分部與 Toh 編號依東北目錄；四成的部有漢譯對照本可對讀', divisions: DERGE },
 ]
 
 const supabase = useSupabaseClient()
@@ -167,6 +174,13 @@ const total = computed(() => {
     parallel: vals.reduce((a, b) => a + b.with_parallel, 0),
   }
 })
+
+/** 甘珠爾是藏譯，`title_zh` 對它而言是「漢譯對照本的書名」而非本名，
+ *  而且 661 部根本沒有對照本 → 那一欄是空字串。顯示一律退到藏文／英譯，
+ *  否則列表會出現一整排空白標題，而且看起來像資料沒抓到。 */
+function workTitle(w: any) {
+  return w.title_zh || w.title_bo || w.title_en || w.id
+}
 
 function stat(key: string) {
   return stats.value[key] ?? { works: 0, chars: 0, segs: 0, with_parallel: 0 }

@@ -113,8 +113,33 @@ export const XUZANG: Division[] = [
     desc: '燈錄、僧傳、編年史、寺志、居士傳、感應記。禪宗燈史的主體在此不在大正藏。', color: 'orange' },
 ]
 
+/** 德格版甘珠爾（藏文大藏經・佛說部）。103 函，分部依東北目錄。
+ *  label_alt 放藏文部名而非梵／英——這一藏的本位語言是藏文。 */
+export const DERGE: Division[] = [
+  { key: 'dk-dulwa', label: '律部', label_alt: 'འདུལ་བ  ʼDul ba', vols: '函 1–13',
+    desc: '根本說一切有部律全帙。漢譯只零星譯出數事，藏譯是完整的一套。', color: 'stone' },
+  { key: 'dk-sherphyin', label: '般若部', label_alt: 'ཤེར་ཕྱིན  Sher phyin', vols: '函 14–34',
+    desc: '十萬頌、二萬五千頌、一萬八千頌等般若全系。漢譯《大般若經》六百卷的藏文對應在此。', color: 'yellow' },
+  { key: 'dk-phalchen', label: '華嚴部', label_alt: 'ཕལ་ཆེན  Phal chen', vols: '函 35–38',
+    desc: '《華嚴經》藏譯本，獨立成部。梵本只餘〈入法界品〉與〈十地品〉，全本僅存此藏譯。', color: 'violet' },
+  { key: 'dk-konzek', label: '寶積部', label_alt: 'དཀོན་བརྩེགས  dKon brtsegs', vols: '函 39–44',
+    desc: '寶積四十九會，藏譯逐會獨立編號。四十九部全部對得上漢譯《大寶積經》各會。', color: 'indigo' },
+  { key: 'dk-dode', label: '經部', label_alt: 'མདོ་སྡེ  mDo sde', vols: '函 45–76',
+    desc: '不入前列諸部的大乘經總彙，法華、涅槃、楞伽、維摩詰皆在此。全藏部數第二多。', color: 'emerald' },
+  { key: 'dk-gyu', label: '續部', label_alt: 'རྒྱུད་འབུམ  rGyud ʼbum', vols: '函 77–96',
+    desc: '新譯密續與儀軌，部數全藏之冠。多數無漢譯——漢地未傳的無上瑜伽部集中在這裡。', color: 'purple' },
+  { key: 'dk-nyinggyu', label: '舊譯續部', label_alt: 'རྙིང་རྒྱུད  rNying rgyud', vols: '函 97–99',
+    desc: '寧瑪派前弘期所譯的密續。後弘期諸家目錄多不承認，德格版仍收，是本藏特色。全無漢譯。', color: 'rose' },
+  { key: 'dk-dukhor', label: '時輪釋', label_alt: 'དུས་འཁོར་འགྲེལ་བཤད  Dus ʼkhor', vols: '函 100',
+    desc: '《時輪本續》的大疏《無垢光》單獨成函。體例上屬論疏而編在甘珠爾，是德格版的特殊安排。', color: 'cyan' },
+  { key: 'dk-zungdu', label: '陀羅尼集', label_alt: 'གཟུངས་འདུས  gZungs ʼdus', vols: '函 101–102',
+    desc: '短篇陀羅尼與明咒的彙編，多與續部、經部重出。篇幅雖短，部數僅次於續部。', color: 'teal' },
+  { key: 'dk-karchag', label: '目錄', label_alt: 'དཀར་ཆག  dKar chag', vols: '函 103',
+    desc: '德格版自身的刊刻目錄（dkar chag），記全藏編次、譯師與刻經緣起。無 Toh 編號。', color: 'slate' },
+]
+
 export const ALL_DIVISIONS = [
-  ...TAISHO_TRANSLATED, ...TAISHO_CHINESE, ...NANCHUAN, ...XUZANG,
+  ...TAISHO_TRANSLATED, ...TAISHO_CHINESE, ...NANCHUAN, ...XUZANG, ...DERGE,
 ]
 
 export function divisionByKey(key: string): Division | undefined {

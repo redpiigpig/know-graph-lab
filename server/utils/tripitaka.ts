@@ -26,6 +26,11 @@ export interface TripSegment {
   /** 引用式 ＝ 大正藏行號，允許重複，只作顯示與引用之用 */
   seg: string;
   juan?: number;
+  /** 德格版甘珠爾用的定址：函（vol）＋葉碼（folio）＋行（line）。
+   *  葉碼原樣保留不轉數字——全帙有重出葉（33xa／33xb），轉數字就對不回原書。 */
+  vol?: number;
+  folio?: string;
+  line?: number;
   /** 目錄樹索引（-1 = 不屬任何卷品）。整串路徑存在 toc，不逐段重複。 */
   d: number;
   kind: "prose" | "verse" | "head" | "byline" | "item";
@@ -72,24 +77,145 @@ function getR2(): S3Client | null {
   return _r2;
 }
 
-// ── LRU（一部大經可達數 MB，別無上限地留著）──────────────
-const CACHE_MAX = 12;
-const cache = new Map<string, unknown>();
-function cacheGet<T>(key: string): T | undefined {
-  if (!cache.has(key)) return undefined;
-  const v = cache.get(key) as T;
-  cache.delete(key);
-  cache.set(key, v); // 移到最新
-  return v;
+/**
+ * 正文的 LRU。
+ *
+ * 🚨 上限必須按**位元組**算，不能按筆數算。原本寫成「最多留 12 筆」，
+ *    在漢文藏經是安全的（一部最多幾 MB），但德格版甘珠爾一部可以到
+ *    47 MB JSONL、65,897 段——解析成 JS 物件後單部就上看 150 MB，
+ *    12 筆能吃掉 1–2 GB，dev server 實測就是這樣 8 GB 堆用滿當掉。
+ *    而且症狀是整個 server 掛掉，不是某一頁壞掉，從頁面上完全看不出根因。
+ */
+const CACHE_MAX_BYTES = 256 * 1024 * 1024;
+const CACHE_MAX_ENTRIES = 24;
+const cache = new Map<string, { value: unknown; bytes: number }>();
+let cacheBytes = 0;
+
+/** 粗估佔多少記憶體。只要量級對就夠了，不必精確。 */
+function roughBytes(v: unknown): number {
+  if (typeof v === "string") return v.length * 2 + 16;
+  if (Array.isArray(v)) {
+    // 逐筆量會把 6.5 萬段掃一遍，抽樣估即可
+    const n = v.length;
+    if (!n) return 32;
+    const step = Math.max(1, Math.floor(n / 50));
+    let sample = 0;
+    let taken = 0;
+    for (let i = 0; i < n; i += step) { sample += roughBytes(v[i]); taken++; }
+    return (sample / taken) * n + 32;
+  }
+  if (v && typeof v === "object") {
+    let t = 40;
+    for (const [k, val] of Object.entries(v as Record<string, unknown>)) {
+      t += k.length * 2 + 24 + roughBytes(val);
+    }
+    return t;
+  }
+  return 16;
 }
+
+function cacheGet<T>(key: string): T | undefined {
+  const e = cache.get(key);
+  if (!e) return undefined;
+  cache.delete(key);
+  cache.set(key, e); // 移到最新
+  return e.value as T;
+}
+
 function cachePut(key: string, value: unknown) {
-  cache.set(key, value);
-  while (cache.size > CACHE_MAX) cache.delete(cache.keys().next().value as string);
+  const old = cache.get(key);
+  if (old) cacheBytes -= old.bytes;
+  const bytes = roughBytes(value);
+  cache.set(key, { value, bytes });
+  cacheBytes += bytes;
+  while (cache.size > 1 && (cacheBytes > CACHE_MAX_BYTES || cache.size > CACHE_MAX_ENTRIES)) {
+    const oldest = cache.keys().next().value as string;
+    cacheBytes -= cache.get(oldest)!.bytes;
+    cache.delete(oldest);
+  }
 }
 
 /** 作品 id 只允許 CBETA 的形狀，擋掉路徑穿越。 */
+/**
+ * 作品代號的白名單。這個函式同時是**路徑注入的唯一防線**（代號會直接拼成
+ * 檔名去讀 Drive 與 R2），所以只放行已知的四種藏經代號，不要放寬成通配。
+ *
+ *   T0262 / T0220a / T1005A   大正藏（分卷用小寫 a–p 或大寫 A–F）
+ *   X0001                     卍新纂續藏
+ *   N01n0001                  漢譯南傳（冊號 ＋ 經號）
+ *   DKtoh0113 / DKtoh0539a    德格版甘珠爾（Toh 編號，後綴本小寫）
+ *   DKkarchag                 德格版甘珠爾的目錄冊，沒有 Toh 號
+ *
+ * 🚨 2026-09-16 修：原本只寫 `T…|N…`，**卍續藏那 1,230 部全部打不開**
+ *    （`/api/tripitaka/work?id=X0001` 一律回 400 invalid work id）。
+ *    症狀在首頁完全看不出來——目錄照樣列出 1,230 部、字數統計照樣有，
+ *    只有點進去才會壞。加代號時務必連這裡一起改，並補測試。
+ */
 export function isValidWorkId(id: string): boolean {
-  return /^(T\d{4}[A-Za-z]?|N\d{2}n\d{4}[A-Za-z]?)$/.test(id);
+  return /^(?:[TX]\d{4}[A-Za-z]?|N\d{2}n\d{4}[A-Za-z]?|DK(?:toh\d{4}[a-z]?|karchag))$/
+    .test(id);
+}
+
+/** 甘珠爾一頁最多幾行。單函最多 5,737 行、110 萬字（Toh 8 第 24 函），
+ *  整函一次送瀏覽器會卡住，所以函底下再按葉碼切段。 */
+export const DK_PAGE_LINES = 1200;
+
+export interface DkPage {
+  key: string;
+  label: string;
+  vol: number;
+  from: string;
+  to: string;
+  n: number;
+  /** 這一頁在整部段落陣列裡的起點與長度。存下來，切片時不要再回頭推算
+   *  ——葉碼會重出（33xa／33xb），照葉碼找起點會找錯。 */
+  start: number;
+  count: number;
+}
+
+/**
+ * 甘珠爾的分頁 —— 藏文佛典沒有「卷」，定址單位是**函＋葉碼**。
+ *
+ * 先按函分，函內再按 DK_PAGE_LINES 切段，每段以起訖葉碼命名
+ * （`51:1` → 「第 51 函 1b–42a」）。葉碼原樣保留不轉數字：全帙有重出葉
+ * （33xa／33xb 之類），轉成數字就對不回原書。
+ */
+export function dkPages(segs: TripSegment[]): DkPage[] {
+  const out: DkPage[] = [];
+  let start = 0;
+  let vol: number | null = null;
+  const flush = (end: number) => {
+    if (end <= start || vol == null) return;
+    const n = out.filter((p) => p.vol === vol).length + 1;
+    out.push({
+      key: `${vol}:${n}`,
+      label: `${segs[start].folio ?? ""}–${segs[end - 1].folio ?? ""}`,
+      vol,
+      from: segs[start].folio ?? "",
+      to: segs[end - 1].folio ?? "",
+      n,
+      start,
+      count: end - start,
+    });
+    start = end;
+  };
+  for (let i = 0; i < segs.length; i++) {
+    if (segs[i].vol !== vol) {
+      flush(i);
+      vol = segs[i].vol ?? null;
+      start = i;
+    } else if (i - start >= DK_PAGE_LINES) {
+      flush(i);
+    }
+  }
+  flush(segs.length);
+  return out;
+}
+
+/** 某一頁包含哪些段。頁鍵不認得時回空陣列而不是整部 —— 整部會拖垮瀏覽器。 */
+export function dkSlice(segs: TripSegment[], pages: DkPage[], key: string): TripSegment[] {
+  const p = pages.find((x) => x.key === key);
+  return p ? segs.slice(p.start, p.start + p.count) : [];
 }
 
 async function readLocal(name: string): Promise<string | null> {

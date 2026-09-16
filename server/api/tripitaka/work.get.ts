@@ -3,6 +3,8 @@
 // 一部經的閱讀資料：目錄樹 + 指定卷的段落 + 該卷的漢梵巴詞條。
 // 大般若經一部近 190 萬字，整部一次送會拖垮瀏覽器 —— 一律按卷取。
 import {
+  dkPages,
+  dkSlice,
   isValidWorkId,
   loadSegments,
   loadToc,
@@ -52,9 +54,22 @@ export default defineEventHandler(async (event) => {
     }
   }
 
-  const juans = [...new Set(allSegs.map((s) => s.juan).filter(Boolean))] as number[];
-  const juan = q.juan === "all" ? null : Number(q.juan) || juans[0] || null;
-  const segments = juan == null ? allSegs : allSegs.filter((s) => s.juan === juan);
+  // 漢文藏經按「卷」分頁；甘珠爾沒有卷，按「函＋葉碼區段」分頁。
+  // 🚨 不能只靠 juan：甘珠爾的段沒有 juan，`juans` 會是空陣列而 juan 為 null，
+  //    於是整部一次送出——Toh 8 有 65,897 行、1,290 萬字，瀏覽器直接卡死，
+  //    而回應本身是 200、資料也都對，從外面完全看不出哪裡不對。
+  const isDk = work.canon === "DK";
+  const pages = isDk ? dkPages(allSegs) : [];
+  const page = isDk
+    ? (pages.some((x) => x.key === String(q.page)) ? String(q.page) : pages[0]?.key ?? null)
+    : null;
+  const juans = isDk
+    ? []
+    : ([...new Set(allSegs.map((s) => s.juan).filter(Boolean))] as number[]);
+  const juan = isDk ? null : (q.juan === "all" ? null : Number(q.juan) || juans[0] || null);
+  const segments = isDk
+    ? (page ? dkSlice(allSegs, pages, page) : [])
+    : (juan == null ? allSegs : allSegs.filter((s) => s.juan === juan));
 
   // 詞條只送這一卷用得到的（長阿含 402 條，全送也還好；密教部可上千）
   const segIds = new Set(segments.map((s) => s.uid));
@@ -88,6 +103,8 @@ export default defineEventHandler(async (event) => {
     original_total: Object.keys(originals).length,
     juans,
     juan,
+    pages,
+    page,
     segments,
     terms: juanTerms,
     parallels,
