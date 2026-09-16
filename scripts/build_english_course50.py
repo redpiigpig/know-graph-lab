@@ -286,6 +286,12 @@ def prompt_drills(lesson: dict, body: dict) -> str:
   十題要涵蓋至少五個不同的答案（動詞、名詞、介系詞、形容詞…）。
 - **translate 與 unscramble 各自也不可以整區只換主詞**。「I am fine. ／ He is fine. ／
   She is fine. ／ We are fine.」這樣八句七個 fine 不行，每一區的結尾詞要分散。
+- 🚨 但**不可以靠把句子縮短來閃避**。unscramble 的答案至少 4 個字、translate 至少
+  3 個字，而且要是完整通順的句子。「Sorry.」「I have.」不算題目，
+  「Thank you please.」根本不是英文。
+- 🚨 **括號裡的中文提示要是通順的中文**，不是逐字對譯。
+  `I am fine.` 提示寫「我很好」不是「我是好」；`He is sorry.` 寫「他很抱歉」
+  不是「他是抱歉」；`She is welcome.` 這種硬湊的句子乾脆不要出。
 - fill 的題幹要是**英文句子**挖空，中文只放在括號裡當提示。
   「我 ___ 學生。」這種整句中文夾一個英文空格不行，學生看不出要填什麼詞類。
 
@@ -576,6 +582,10 @@ MAX_OVERLAP = 1 / 3
 MAX_SAME_FILL = 0.4
 MIN_DISTINCT_FILL = 5
 MAX_SAME_TAIL = 0.4
+# 造句放到 2 是為了「Thank you.」「Good morning.」這類本來就兩個字的固定說法；
+# 重組要 3 個字以上（加標點就是 4 張牌），一兩個字的排列組合太少不成題目。
+MIN_TRANSLATE_TOKENS = 2
+MIN_UNSCRAMBLE_TOKENS = 3
 MIN_EN_WORDS = 2
 
 
@@ -625,9 +635,18 @@ def validate_overlap(ex: dict) -> list[str]:
     # 造句與重組各自也不可以整區只換主詞。重出的 L01 造句八題有七題是
     # 「X is fine.」、重組六題只有 OK 與 sure 兩個結尾。句型指紋看不出來
     # （長度與第二個字都分散在 am/is/are），看結尾那個字才看得出來。
-    for key, label in (("translate", "造句翻譯"), ("unscramble", "句子重組")):
-        tails = [w[-1] for w in ((x.get("ans") or "").rstrip(".?!").lower().split()
-                                 for x in ex.get(key) or []) if w]
+    for key, label, floor in (("translate", "造句翻譯", MIN_TRANSLATE_TOKENS),
+                              ("unscramble", "句子重組", MIN_UNSCRAMBLE_TOKENS)):
+        words = [(x, (x.get("ans") or "").rstrip(".?!").split())
+                 for x in ex.get(key) or []]
+        # 🚨 「結尾詞要分散」那道閘會被用「把句子縮短」繞過去：L01 重出時
+        # 重組題變成「. / Sorry」→「Sorry.」、「I / . / have」→「I have.」，
+        # 甚至「please / . / Thank / you」→「Thank you please.」。先要求是完整句子。
+        short = [x for x, w in words if len(w) < floor]
+        if short:
+            errs.append(f"{label}有 {len(short)} 題不是完整句子（少於 {floor} 個字），"
+                        f"例如「{short[0].get('ans')}」")
+        tails = [w[-1].lower() for _x, w in words if w]
         if len(tails) < 4:
             continue
         word, hits = collections.Counter(tails).most_common(1)[0]

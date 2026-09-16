@@ -120,6 +120,21 @@ def test_translate_all_ending_in_same_word_is_rejected(gen):
     assert any("7/8 句都以「fine」結尾" in e for e in errs)
 
 
+def test_degenerate_unscramble_items_are_rejected(gen):
+    """🚨 「結尾詞要分散」那道閘會被用「把句子縮短」繞過去。
+
+    L01 重出時重組題變成「Sorry.」「I have.」，甚至「Thank you please.」。
+    """
+    ex = {"unscramble": [{"q": ". / Sorry", "ans": "Sorry."},
+                         {"q": ". / Hello", "ans": "Hello."},
+                         {"q": "I / . / have", "ans": "I have."},
+                         {"q": "We / . / have", "ans": "We have."},
+                         {"q": "am / I / fine / .", "ans": "I am fine."},
+                         {"q": "are / . / We / here", "ans": "We are here."}]}
+    errs = gen.validate_overlap(ex)
+    assert any("不是完整句子" in e for e in errs)
+
+
 def test_varied_sentence_endings_pass(gen):
     ex = {"translate": [{"q": "中文", "ans": s} for s in
                         ("I am fine.", "He is a student.", "She is kind.",
