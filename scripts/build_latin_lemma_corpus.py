@@ -220,6 +220,7 @@ def comma_pieces(text: str) -> list[str]:
 # vocabulary
 # ---------------------------------------------------------------------------
 
+HEADWORD_NOTE = re.compile(r"\s*\([^)]*\)\s*$")
 STEM_FLOOR = 6
 
 
@@ -243,7 +244,10 @@ class VocabEntry:
         # them.  Left alone, ``in saecula`` counts as practised by any sentence
         # containing ``in`` -- which is most of them -- and the twenty-word
         # coverage gate stops meaning anything.
-        words = tokenise(self.headword.lstrip("-"))
+        # 詞頭後面的括號是文法註記，不是詞的一部分：`satis (+ partitive gen.)`
+        # 這一條若整串拿去斷詞，會被當成片語，於是要句子裡同時出現 partitive
+        # 與 gen 才算練到——那三個字沒有一個是拉丁文，這個詞就永遠練不到。
+        words = tokenise(HEADWORD_NOTE.sub("", self.headword).lstrip("-"))
         self.phrase = len(words) > 1
         self.headword_key = fold(words[0]) if len(words) == 1 else ""
         self.lemmas = set() if self.phrase else lemmas
@@ -353,6 +357,7 @@ ALT_SPLIT = re.compile(r"[,;()/]| \.\. | \. \. ")
 # 只換開頭、只換這幾條，兩個方向都認。每一條的驗證方式相同：那個拼法確實在
 # 語料裡出現，而課本教的詞確實是同一個詞。
 STEM_VARIANTS: tuple[tuple[str, str], ...] = (
+    ("exspir", "expir"),   # exspīrō／expiravit，clementine 省掉 s
     ("cen", "coen"),        # cēna／cēnāculum／cēnō，克萊孟版一律 cœ-
     ("cotidi", "quotidi"),  # cotidie／quotidie／cottidie 三種寫法並存
     ("cotidi", "cottidi"),

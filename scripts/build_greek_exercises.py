@@ -273,8 +273,12 @@ def tagged_units(corpus: str) -> Iterator[CorpusUnit]:
         )
 
 
+# 兩冊都對整套讀本的語料驗證。上冊原本只驗新約與七十士，理由是上冊讀的就是
+# 那兩批；但這一關問的是「有沒有人這樣寫過」，不是「本冊讀不讀得到」。範圍
+# 收窄的代價是一課二十個詞裡有幾個永遠寫不進任何句子，而那幾個詞這套讀本
+# 自己的下冊就整篇印著（2026-09-16，與拉丁同一條裁定）。
 VOLUME_CORPORA = {
-    1: ("new-testament", "septuagint"),
+    1: ("new-testament", "septuagint", "patristic"),
     2: ("new-testament", "septuagint", "patristic"),
 }
 

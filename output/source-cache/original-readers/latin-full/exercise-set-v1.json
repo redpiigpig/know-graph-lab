@@ -3,7 +3,7 @@
   "language": "Ecclesiastical Latin",
   "languageCode": "lat",
   "volume": 1,
-  "generatedOn": "2026-09-12",
+  "generatedOn": "2026-09-16",
   "direction": "original-to-chinese",
   "itemsPerLesson": 10,
   "quotedPerLesson": 3,
@@ -755,6 +755,7 @@
             "enclitics": [],
             "lemmas": [
               "ad",
+              "e",
               "ecclesia",
               "ex",
               "familia"
@@ -881,7 +882,7 @@
     {
       "lesson": 2,
       "id": "lat-v1-lesson-02",
-      "note": "本冊語料中無任何字形，因而無法入題：pāpa",
+      "note": "",
       "items": [
         {
           "kind": "quoted",
@@ -1226,8 +1227,23 @@
         },
         {
           "kind": "composed",
-          "text": "apostoli et discipuli in agro",
+          "text": "papa, apostoli et discipuli in agro",
           "targetWords": [
+            {
+              "volume": 1,
+              "lesson": 2,
+              "ordinal": 24,
+              "headword": "pāpa",
+              "glossZh": "教宗",
+              "lemmas": [
+                "papa"
+              ],
+              "creditLemmas": [
+                "papa"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
             {
               "volume": 1,
               "lesson": 2,
@@ -1275,7 +1291,7 @@
             }
           ],
           "verification": {
-            "words": 5,
+            "words": 6,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
@@ -1285,7 +1301,8 @@
               "discipulus",
               "et",
               "in",
-              "invicem"
+              "invicem",
+              "papa"
             ],
             "lengthOk": true,
             "passed": true
@@ -1348,6 +1365,7 @@
               "satisdo",
               "satisfacio",
               "satum",
+              "uita",
               "vita"
             ],
             "lengthOk": true,
@@ -1466,25 +1484,9 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
+        "practised": 20,
         "notPractised": [],
-        "notAttested": [
-          {
-            "volume": 1,
-            "lesson": 2,
-            "ordinal": 24,
-            "headword": "pāpa",
-            "glossZh": "教宗",
-            "lemmas": [
-              "papa"
-            ],
-            "creditLemmas": [
-              "papa"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ]
+        "notAttested": []
       }
     },
     {
@@ -2022,6 +2024,7 @@
             "enclitics": [],
             "lemmas": [
               "donum",
+              "euangelium",
               "evangelium",
               "servus"
             ],
@@ -2277,6 +2280,7 @@
             "lemmas": [
               "hic",
               "sum",
+              "uerbum",
               "verbum"
             ],
             "lengthOk": true,
@@ -2661,6 +2665,7 @@
             "lemmas": [
               "donum",
               "et",
+              "uinum",
               "universus",
               "vinum"
             ],
@@ -3267,6 +3272,7 @@
               "in",
               "invicem",
               "mundus",
+              "uita",
               "vita"
             ],
             "lengthOk": true,
@@ -3286,7 +3292,7 @@
     {
       "lesson": 6,
       "id": "lat-v1-lesson-06",
-      "note": "本冊語料中無任何字形，因而無法入題：documentum",
+      "note": "",
       "items": [
         {
           "kind": "quoted",
@@ -3595,6 +3601,7 @@
             "enclitics": [],
             "lemmas": [
               "canto",
+              "nouus",
               "novus",
               "populus",
               "psalmus"
@@ -3697,7 +3704,7 @@
         },
         {
           "kind": "composed",
-          "text": "conserva sacramentum divinum",
+          "text": "conserva sacramentum et documentum divinum",
           "targetWords": [
             {
               "volume": 1,
@@ -3748,10 +3755,25 @@
               ],
               "resolved": true,
               "phrase": false
+            },
+            {
+              "volume": 1,
+              "lesson": 6,
+              "ordinal": 120,
+              "headword": "documentum",
+              "glossZh": "例證、文件",
+              "lemmas": [
+                "documentum"
+              ],
+              "creditLemmas": [
+                "documentum"
+              ],
+              "resolved": true,
+              "phrase": false
             }
           ],
           "verification": {
-            "words": 3,
+            "words": 5,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
@@ -3759,6 +3781,8 @@
               "conservo",
               "divinum",
               "divinus",
+              "documentum",
+              "et",
               "sacramentum"
             ],
             "lengthOk": true,
@@ -3830,25 +3854,9 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
+        "practised": 20,
         "notPractised": [],
-        "notAttested": [
-          {
-            "volume": 1,
-            "lesson": 6,
-            "ordinal": 120,
-            "headword": "documentum",
-            "glossZh": "例證、文件",
-            "lemmas": [
-              "documentum"
-            ],
-            "creditLemmas": [
-              "documentum"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ]
+        "notAttested": []
       }
     },
     {
@@ -4010,6 +4018,7 @@
               "libero",
               "nunc",
               "peccatum",
+              "uero",
               "vero",
               "verus"
             ],
@@ -4423,7 +4432,7 @@
     {
       "lesson": 8,
       "id": "lat-v1-lesson-08",
-      "note": "本冊語料中無任何字形，因而無法入題：sacrō",
+      "note": "",
       "items": [
         {
           "kind": "quoted",
@@ -4711,6 +4720,7 @@
             "lemmas": [
               "audio",
               "dominus",
+              "uerbum",
               "verbum"
             ],
             "lengthOk": true,
@@ -4721,8 +4731,24 @@
         },
         {
           "kind": "composed",
-          "text": "adhuc advenit christianus",
+          "text": "adhuc advenit christianus sacratus",
           "targetWords": [
+            {
+              "volume": 1,
+              "lesson": 8,
+              "ordinal": 141,
+              "headword": "sacrō",
+              "glossZh": "祝聖、使神聖",
+              "lemmas": [
+                "sacer",
+                "sacro"
+              ],
+              "creditLemmas": [
+                "sacro"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
             {
               "volume": 1,
               "lesson": 8,
@@ -4774,14 +4800,15 @@
             }
           ],
           "verification": {
-            "words": 3,
+            "words": 4,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
             "lemmas": [
               "Christianus",
               "adhuc",
-              "advenio"
+              "advenio",
+              "sacro"
             ],
             "lengthOk": true,
             "passed": true
@@ -5006,26 +5033,9 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
+        "practised": 20,
         "notPractised": [],
-        "notAttested": [
-          {
-            "volume": 1,
-            "lesson": 8,
-            "ordinal": 141,
-            "headword": "sacrō",
-            "glossZh": "祝聖、使神聖",
-            "lemmas": [
-              "sacer",
-              "sacro"
-            ],
-            "creditLemmas": [
-              "sacro"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ]
+        "notAttested": []
       }
     },
     {
@@ -5070,6 +5080,7 @@
               "dominus",
               "gratia",
               "invenio",
+              "uero",
               "vero",
               "verus"
             ],
@@ -5394,6 +5405,7 @@
               "in",
               "induco",
               "invicem",
+              "seruus",
               "servus",
               "terra"
             ],
@@ -5576,6 +5588,7 @@
               "misceo",
               "moneo",
               "sum",
+              "uinum",
               "vinum"
             ],
             "lengthOk": true,
@@ -5595,7 +5608,7 @@
     {
       "lesson": 10,
       "id": "lat-v1-lesson-10",
-      "note": "本冊語料中無任何字形，因而無法入題：concelebrō",
+      "note": "本讀本語料中無任何字形，因而無法入題：concelebrō",
       "items": [
         {
           "kind": "quoted",
@@ -6163,7 +6176,7 @@
     {
       "lesson": 11,
       "id": "lat-v1-lesson-11",
-      "note": "本冊語料中無任何字形，因而無法入題：liturgia、maestus",
+      "note": "",
       "items": [
         {
           "kind": "quoted",
@@ -6474,7 +6487,7 @@
         },
         {
           "kind": "composed",
-          "text": "lætitia propter responsum Domini",
+          "text": "liturgia et lætitia propter responsum Domini",
           "targetWords": [
             {
               "volume": 1,
@@ -6489,6 +6502,17 @@
                 "laetitia"
               ],
               "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 1,
+              "lesson": 11,
+              "ordinal": 208,
+              "headword": "liturgia",
+              "glossZh": "禮儀、神聖祭儀",
+              "lemmas": [],
+              "creditLemmas": [],
+              "resolved": false,
               "phrase": false
             },
             {
@@ -6524,12 +6548,13 @@
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 6,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
             "lemmas": [
               "dominus",
+              "et",
               "laetitia",
               "propter",
               "respondeo",
@@ -6624,8 +6649,23 @@
         },
         {
           "kind": "composed",
-          "text": "maledictus est servus",
+          "text": "maledictus est servus maestusque",
           "targetWords": [
+            {
+              "volume": 1,
+              "lesson": 11,
+              "ordinal": 209,
+              "headword": "maestus",
+              "glossZh": "憂傷、悲哀",
+              "lemmas": [
+                "maestus"
+              ],
+              "creditLemmas": [
+                "maestus"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
             {
               "volume": 1,
               "lesson": 11,
@@ -6643,11 +6683,12 @@
             }
           ],
           "verification": {
-            "words": 3,
+            "words": 4,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
             "lemmas": [
+              "maestus",
               "maledico",
               "servus",
               "sum"
@@ -6798,42 +6839,15 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 18,
+        "practised": 20,
         "notPractised": [],
-        "notAttested": [
-          {
-            "volume": 1,
-            "lesson": 11,
-            "ordinal": 208,
-            "headword": "liturgia",
-            "glossZh": "禮儀、神聖祭儀",
-            "lemmas": [],
-            "creditLemmas": [],
-            "resolved": false,
-            "phrase": false
-          },
-          {
-            "volume": 1,
-            "lesson": 11,
-            "ordinal": 209,
-            "headword": "maestus",
-            "glossZh": "憂傷、悲哀",
-            "lemmas": [
-              "maestus"
-            ],
-            "creditLemmas": [
-              "maestus"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ]
+        "notAttested": []
       }
     },
     {
       "lesson": 12,
       "id": "lat-v1-lesson-12",
-      "note": "本冊語料中無任何字形，因而無法入題：-pleō",
+      "note": "本讀本語料中無任何字形，因而無法入題：-pleō",
       "items": [
         {
           "kind": "quoted",
@@ -7109,6 +7123,7 @@
               "gratus",
               "populus",
               "sum",
+              "uoueo",
               "votum"
             ],
             "lengthOk": true,
@@ -7385,7 +7400,7 @@
     {
       "lesson": 13,
       "id": "lat-v1-lesson-13",
-      "note": "本冊語料中無任何字形，因而無法入題：sacrosānctus、salūtifer",
+      "note": "",
       "items": [
         {
           "kind": "quoted",
@@ -7657,7 +7672,7 @@
         },
         {
           "kind": "composed",
-          "text": "mira in supernis",
+          "text": "mira sacrosancta in supernis",
           "targetWords": [
             {
               "volume": 1,
@@ -7670,6 +7685,21 @@
               ],
               "creditLemmas": [
                 "mirus"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 1,
+              "lesson": 13,
+              "ordinal": 254,
+              "headword": "sacrosānctus",
+              "glossZh": "至聖的、莊嚴的",
+              "lemmas": [
+                "sacrosanctus"
+              ],
+              "creditLemmas": [
+                "sacrosanctus"
               ],
               "resolved": true,
               "phrase": false
@@ -7691,7 +7721,7 @@
             }
           ],
           "verification": {
-            "words": 3,
+            "words": 4,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
@@ -7709,7 +7739,7 @@
         },
         {
           "kind": "composed",
-          "text": "mundus est per gratiam",
+          "text": "mundus est per gratiam salutifera",
           "targetWords": [
             {
               "volume": 1,
@@ -7741,10 +7771,25 @@
               ],
               "resolved": true,
               "phrase": false
+            },
+            {
+              "volume": 1,
+              "lesson": 13,
+              "ordinal": 255,
+              "headword": "salūtifer",
+              "glossZh": "救恩的、拯救的",
+              "lemmas": [
+                "salutifer"
+              ],
+              "creditLemmas": [
+                "salutifer"
+              ],
+              "resolved": true,
+              "phrase": false
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 5,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
@@ -7753,6 +7798,7 @@
               "mundus",
               "per",
               "pervenio",
+              "salutifer",
               "sum"
             ],
             "lengthOk": true,
@@ -7820,6 +7866,7 @@
               "post",
               "quando",
               "silentium",
+              "uenio",
               "venio"
             ],
             "lengthOk": true,
@@ -7941,6 +7988,7 @@
             "lemmas": [
               "iterum",
               "quoniam",
+              "uenio",
               "venio"
             ],
             "lengthOk": true,
@@ -7952,46 +8000,15 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 18,
+        "practised": 20,
         "notPractised": [],
-        "notAttested": [
-          {
-            "volume": 1,
-            "lesson": 13,
-            "ordinal": 254,
-            "headword": "sacrosānctus",
-            "glossZh": "至聖的、莊嚴的",
-            "lemmas": [
-              "sacrosanctus"
-            ],
-            "creditLemmas": [
-              "sacrosanctus"
-            ],
-            "resolved": true,
-            "phrase": false
-          },
-          {
-            "volume": 1,
-            "lesson": 13,
-            "ordinal": 255,
-            "headword": "salūtifer",
-            "glossZh": "救恩的、拯救的",
-            "lemmas": [
-              "salutifer"
-            ],
-            "creditLemmas": [
-              "salutifer"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ]
+        "notAttested": []
       }
     },
     {
       "lesson": 14,
       "id": "lat-v1-lesson-14",
-      "note": "本冊語料中無任何字形，因而無法入題：apostolicus、catholicus、cēreus",
+      "note": "",
       "items": [
         {
           "kind": "quoted",
@@ -8290,8 +8307,38 @@
         },
         {
           "kind": "composed",
-          "text": "causa magna est",
+          "text": "causa catholica et apostolica magna est",
           "targetWords": [
+            {
+              "volume": 1,
+              "lesson": 14,
+              "ordinal": 262,
+              "headword": "apostolicus",
+              "glossZh": "宗徒的、屬於宗徒的",
+              "lemmas": [
+                "apostolicus"
+              ],
+              "creditLemmas": [
+                "apostolicus"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 1,
+              "lesson": 14,
+              "ordinal": 264,
+              "headword": "catholicus",
+              "glossZh": "普遍的、公教的",
+              "lemmas": [
+                "catholicus"
+              ],
+              "creditLemmas": [
+                "catholicus"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
             {
               "volume": 1,
               "lesson": 14,
@@ -8324,12 +8371,15 @@
             }
           ],
           "verification": {
-            "words": 3,
+            "words": 6,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
             "lemmas": [
+              "apostolicus",
+              "catholicus",
               "causa",
+              "et",
               "magnus",
               "sum"
             ],
@@ -8445,8 +8495,19 @@
         },
         {
           "kind": "composed",
-          "text": "socii separati sunt inter turbam",
+          "text": "cerei et socii separati sunt inter turbam",
           "targetWords": [
+            {
+              "volume": 1,
+              "lesson": 14,
+              "ordinal": 267,
+              "headword": "cēreus",
+              "glossZh": "蠟燭",
+              "lemmas": [],
+              "creditLemmas": [],
+              "resolved": false,
+              "phrase": false
+            },
             {
               "volume": 1,
               "lesson": 14,
@@ -8494,11 +8555,12 @@
             }
           ],
           "verification": {
-            "words": 5,
+            "words": 7,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
             "lemmas": [
+              "et",
               "inter",
               "separatus",
               "separo",
@@ -8569,57 +8631,15 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 17,
+        "practised": 20,
         "notPractised": [],
-        "notAttested": [
-          {
-            "volume": 1,
-            "lesson": 14,
-            "ordinal": 262,
-            "headword": "apostolicus",
-            "glossZh": "宗徒的、屬於宗徒的",
-            "lemmas": [
-              "apostolicus"
-            ],
-            "creditLemmas": [
-              "apostolicus"
-            ],
-            "resolved": true,
-            "phrase": false
-          },
-          {
-            "volume": 1,
-            "lesson": 14,
-            "ordinal": 264,
-            "headword": "catholicus",
-            "glossZh": "普遍的、公教的",
-            "lemmas": [
-              "catholicus"
-            ],
-            "creditLemmas": [
-              "catholicus"
-            ],
-            "resolved": true,
-            "phrase": false
-          },
-          {
-            "volume": 1,
-            "lesson": 14,
-            "ordinal": 267,
-            "headword": "cēreus",
-            "glossZh": "蠟燭",
-            "lemmas": [],
-            "creditLemmas": [],
-            "resolved": false,
-            "phrase": false
-          }
-        ]
+        "notAttested": []
       }
     },
     {
       "lesson": 15,
       "id": "lat-v1-lesson-15",
-      "note": "本冊語料中無任何字形，因而無法入題：eléison",
+      "note": "本讀本語料中無任何字形，因而無法入題：eléison",
       "items": [
         {
           "kind": "quoted",
@@ -9181,7 +9201,7 @@
     {
       "lesson": 16,
       "id": "lat-v1-lesson-16",
-      "note": "本冊語料中無任何字形，因而無法入題：Kyrie、perenniter、-clīnō、aggregō",
+      "note": "本讀本語料中無任何字形，因而無法入題：Kyrie、-clīnō、aggregō",
       "items": [
         {
           "kind": "quoted",
@@ -9560,6 +9580,7 @@
               "postea",
               "posteaquam",
               "subito",
+              "uenio",
               "venio"
             ],
             "lengthOk": true,
@@ -9661,8 +9682,19 @@
         },
         {
           "kind": "composed",
-          "text": "perpetua lætitia postea",
+          "text": "perpetua lætitia et perennitas postea",
           "targetWords": [
+            {
+              "volume": 1,
+              "lesson": 16,
+              "ordinal": 305,
+              "headword": "perenniter",
+              "glossZh": "恆久地、常年地",
+              "lemmas": [],
+              "creditLemmas": [],
+              "resolved": false,
+              "phrase": false
+            },
             {
               "volume": 1,
               "lesson": 16,
@@ -9696,11 +9728,12 @@
             }
           ],
           "verification": {
-            "words": 3,
+            "words": 5,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
             "lemmas": [
+              "et",
               "laetitia",
               "perpetuus",
               "postea",
@@ -9715,7 +9748,7 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 16,
+        "practised": 17,
         "notPractised": [],
         "notAttested": [
           {
@@ -9724,17 +9757,6 @@
             "ordinal": 303,
             "headword": "Kyrie",
             "glossZh": "主啊",
-            "lemmas": [],
-            "creditLemmas": [],
-            "resolved": false,
-            "phrase": false
-          },
-          {
-            "volume": 1,
-            "lesson": 16,
-            "ordinal": 305,
-            "headword": "perenniter",
-            "glossZh": "恆久地、常年地",
             "lemmas": [],
             "creditLemmas": [],
             "resolved": false,
@@ -9772,7 +9794,7 @@
     {
       "lesson": 17,
       "id": "lat-v1-lesson-17",
-      "note": "本冊語料中無任何字形，因而無法入題：dolōrōsus、gregō",
+      "note": "本讀本語料中無任何字形，因而無法入題：gregō",
       "items": [
         {
           "kind": "quoted",
@@ -10293,7 +10315,7 @@
         },
         {
           "kind": "composed",
-          "text": "flamma columnæ in aula",
+          "text": "flamma dolorosa columnæ in aula",
           "targetWords": [
             {
               "volume": 1,
@@ -10328,6 +10350,17 @@
             {
               "volume": 1,
               "lesson": 17,
+              "ordinal": 328,
+              "headword": "dolōrōsus",
+              "glossZh": "哀傷的、痛苦的",
+              "lemmas": [],
+              "creditLemmas": [],
+              "resolved": false,
+              "phrase": false
+            },
+            {
+              "volume": 1,
+              "lesson": 17,
               "ordinal": 330,
               "headword": "flamma",
               "glossZh": "火焰、烈火",
@@ -10342,7 +10375,7 @@
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 5,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
@@ -10361,20 +10394,9 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 18,
+        "practised": 19,
         "notPractised": [],
         "notAttested": [
-          {
-            "volume": 1,
-            "lesson": 17,
-            "ordinal": 328,
-            "headword": "dolōrōsus",
-            "glossZh": "哀傷的、痛苦的",
-            "lemmas": [],
-            "creditLemmas": [],
-            "resolved": false,
-            "phrase": false
-          },
           {
             "volume": 1,
             "lesson": 17,
@@ -10392,7 +10414,7 @@
     {
       "lesson": 18,
       "id": "lat-v1-lesson-18",
-      "note": "本冊語料中無任何字形，因而無法入題：resultō",
+      "note": "本讀本語料中無任何字形，因而無法入題：resultō",
       "items": [
         {
           "kind": "quoted",
@@ -12114,7 +12136,7 @@
     {
       "lesson": 21,
       "id": "lat-v1-lesson-21",
-      "note": "本冊語料中無任何字形，因而無法入題：incarno",
+      "note": "",
       "items": [
         {
           "kind": "quoted",
@@ -12590,8 +12612,23 @@
         },
         {
           "kind": "composed",
-          "text": "Pelli debet a templo",
+          "text": "Pelli debet incarnatum a templo",
           "targetWords": [
+            {
+              "volume": 1,
+              "lesson": 21,
+              "ordinal": 406,
+              "headword": "incarno",
+              "glossZh": "成肉身、使具肉身",
+              "lemmas": [
+                "incarno"
+              ],
+              "creditLemmas": [
+                "incarno"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
             {
               "volume": 1,
               "lesson": 21,
@@ -12609,7 +12646,7 @@
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 5,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
@@ -12618,6 +12655,7 @@
               "ab",
               "calendar",
               "debeo",
+              "incarno",
               "pello",
               "templum"
             ],
@@ -12732,31 +12770,15 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
+        "practised": 20,
         "notPractised": [],
-        "notAttested": [
-          {
-            "volume": 1,
-            "lesson": 21,
-            "ordinal": 406,
-            "headword": "incarno",
-            "glossZh": "成肉身、使具肉身",
-            "lemmas": [
-              "incarno"
-            ],
-            "creditLemmas": [
-              "incarno"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ]
+        "notAttested": []
       }
     },
     {
       "lesson": 22,
       "id": "lat-v1-lesson-22",
-      "note": "本冊語料中無任何字形，因而無法入題：dētergeō",
+      "note": "本讀本語料中無任何字形，因而無法入題：dētergeō",
       "items": [
         {
           "kind": "quoted",
@@ -12859,6 +12881,7 @@
               "exaudio",
               "meus",
               "quoniam",
+              "uox",
               "voco",
               "vox"
             ],
@@ -13760,6 +13783,7 @@
               "et",
               "munus",
               "pax",
+              "uirgo",
               "virgo"
             ],
             "lengthOk": true,
@@ -13830,6 +13854,7 @@
               "aptus",
               "pater",
               "sum",
+              "uoluntas",
               "voluntas"
             ],
             "lengthOk": true,
@@ -14052,6 +14077,7 @@
               "lumen",
               "mater",
               "pax",
+              "uirgo",
               "virgo"
             ],
             "lengthOk": true,
@@ -14071,7 +14097,7 @@
     {
       "lesson": 24,
       "id": "lat-v1-lesson-24",
-      "note": "本冊語料中無任何字形，因而無法入題：lector",
+      "note": "",
       "items": [
         {
           "kind": "quoted",
@@ -14479,7 +14505,7 @@
         },
         {
           "kind": "composed",
-          "text": "lectionem legit in aula",
+          "text": "lector lectionem legit in aula",
           "targetWords": [
             {
               "volume": 1,
@@ -14495,10 +14521,25 @@
               ],
               "resolved": true,
               "phrase": false
+            },
+            {
+              "volume": 1,
+              "lesson": 24,
+              "ordinal": 470,
+              "headword": "lector",
+              "glossZh": "誦讀者、讀經員",
+              "lemmas": [
+                "lector"
+              ],
+              "creditLemmas": [
+                "lector"
+              ],
+              "resolved": true,
+              "phrase": false
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 5,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
@@ -14507,6 +14548,7 @@
               "in",
               "invicem",
               "lectio",
+              "lector",
               "lego"
             ],
             "lengthOk": true,
@@ -14630,31 +14672,15 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
+        "practised": 20,
         "notPractised": [],
-        "notAttested": [
-          {
-            "volume": 1,
-            "lesson": 24,
-            "ordinal": 470,
-            "headword": "lector",
-            "glossZh": "誦讀者、讀經員",
-            "lemmas": [
-              "lector"
-            ],
-            "creditLemmas": [
-              "lector"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ]
+        "notAttested": []
       }
     },
     {
       "lesson": 25,
       "id": "lat-v1-lesson-25",
-      "note": "本冊語料中無任何字形，因而無法入題：satis (+ partitive gen.)、ācer",
+      "note": "",
       "items": [
         {
           "kind": "quoted",
@@ -14860,7 +14886,7 @@
         },
         {
           "kind": "composed",
-          "text": "salvus est et felix",
+          "text": "salvus est et felix et acer",
           "targetWords": [
             {
               "volume": 1,
@@ -14875,6 +14901,21 @@
               "creditLemmas": [
                 "saluus",
                 "salvus"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 1,
+              "lesson": 25,
+              "ordinal": 488,
+              "headword": "ācer",
+              "glossZh": "尖銳的、猛烈的、激烈的",
+              "lemmas": [
+                "acer"
+              ],
+              "creditLemmas": [
+                "acer"
               ],
               "resolved": true,
               "phrase": false
@@ -14898,12 +14939,13 @@
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 6,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
             "lemmas": [
               "Felix",
+              "acer",
               "et",
               "felix",
               "salvus",
@@ -14971,8 +15013,27 @@
         },
         {
           "kind": "composed",
-          "text": "Ascendit et Descendit",
+          "text": "satis Ascendit et Descendit",
           "targetWords": [
+            {
+              "volume": 1,
+              "lesson": 25,
+              "ordinal": 487,
+              "headword": "satis (+ partitive gen.)",
+              "glossZh": "足夠、充分",
+              "lemmas": [
+                "sata",
+                "satis",
+                "satisdo",
+                "satisfacio",
+                "satum"
+              ],
+              "creditLemmas": [
+                "satis"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
             {
               "volume": 1,
               "lesson": 25,
@@ -15005,14 +15066,19 @@
             }
           ],
           "verification": {
-            "words": 3,
+            "words": 4,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
             "lemmas": [
               "ascendo",
               "descendo",
-              "et"
+              "et",
+              "sata",
+              "satis",
+              "satisdo",
+              "satisfacio",
+              "satum"
             ],
             "lengthOk": true,
             "passed": true
@@ -15192,42 +15258,15 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 18,
+        "practised": 20,
         "notPractised": [],
-        "notAttested": [
-          {
-            "volume": 1,
-            "lesson": 25,
-            "ordinal": 487,
-            "headword": "satis (+ partitive gen.)",
-            "glossZh": "足夠、充分",
-            "lemmas": [],
-            "creditLemmas": [],
-            "resolved": false,
-            "phrase": true
-          },
-          {
-            "volume": 1,
-            "lesson": 25,
-            "ordinal": 488,
-            "headword": "ācer",
-            "glossZh": "尖銳的、猛烈的、激烈的",
-            "lemmas": [
-              "acer"
-            ],
-            "creditLemmas": [
-              "acer"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ]
+        "notAttested": []
       }
     },
     {
       "lesson": 26,
       "id": "lat-v1-lesson-26",
-      "note": "本冊語料中無任何字形，因而無法入題：genuflectō、paschālis、refundō、scandō",
+      "note": "本讀本語料中無任何字形，因而無法入題：genuflectō、scandō",
       "items": [
         {
           "kind": "quoted",
@@ -15548,7 +15587,7 @@
         },
         {
           "kind": "composed",
-          "text": "Infunde ritum Paschæ",
+          "text": "Infunde ritum et paschale",
           "targetWords": [
             {
               "volume": 1,
@@ -15583,6 +15622,23 @@
             {
               "volume": 1,
               "lesson": 26,
+              "ordinal": 513,
+              "headword": "paschālis",
+              "glossZh": "逾越節的、復活節的",
+              "lemmas": [
+                "Paschalis",
+                "paschalis"
+              ],
+              "creditLemmas": [
+                "Paschalis",
+                "paschalis"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 1,
+              "lesson": 26,
               "ordinal": 518,
               "headword": "ritus",
               "glossZh": "禮儀、儀式",
@@ -15597,13 +15653,13 @@
             }
           ],
           "verification": {
-            "words": 3,
+            "words": 4,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
             "lemmas": [
+              "et",
               "infundo",
-              "pascha",
               "ritus"
             ],
             "lengthOk": true,
@@ -15655,6 +15711,7 @@
             "lemmas": [
               "omnipotens",
               "quapropter",
+              "uenio",
               "venio"
             ],
             "lengthOk": true,
@@ -15734,7 +15791,7 @@
         },
         {
           "kind": "composed",
-          "text": "fregit calicem et fudit potum",
+          "text": "refudit potum et fregit calicem",
           "targetWords": [
             {
               "volume": 1,
@@ -15754,22 +15811,6 @@
             {
               "volume": 1,
               "lesson": 26,
-              "ordinal": 503,
-              "headword": "fundō",
-              "glossZh": "傾注、傾倒、流出",
-              "lemmas": [
-                "fundo",
-                "fundus"
-              ],
-              "creditLemmas": [
-                "fundo"
-              ],
-              "resolved": true,
-              "phrase": false
-            },
-            {
-              "volume": 1,
-              "lesson": 26,
               "ordinal": 515,
               "headword": "pōtus",
               "glossZh": "飲料",
@@ -15778,6 +15819,21 @@
               ],
               "creditLemmas": [
                 "potus"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 1,
+              "lesson": 26,
+              "ordinal": 517,
+              "headword": "refundō",
+              "glossZh": "回倒、退還、償還",
+              "lemmas": [
+                "refundo"
+              ],
+              "creditLemmas": [
+                "refundo"
               ],
               "resolved": true,
               "phrase": false
@@ -15792,7 +15848,6 @@
               "calix",
               "et",
               "frango",
-              "fundo",
               "poto",
               "potus"
             ],
@@ -15805,7 +15860,7 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 16,
+        "practised": 18,
         "notPractised": [],
         "notAttested": [
           {
@@ -15817,38 +15872,6 @@
             "lemmas": [],
             "creditLemmas": [],
             "resolved": false,
-            "phrase": false
-          },
-          {
-            "volume": 1,
-            "lesson": 26,
-            "ordinal": 513,
-            "headword": "paschālis",
-            "glossZh": "逾越節的、復活節的",
-            "lemmas": [
-              "Paschalis",
-              "paschalis"
-            ],
-            "creditLemmas": [
-              "Paschalis",
-              "paschalis"
-            ],
-            "resolved": true,
-            "phrase": false
-          },
-          {
-            "volume": 1,
-            "lesson": 26,
-            "ordinal": 517,
-            "headword": "refundō",
-            "glossZh": "回倒、退還、償還",
-            "lemmas": [
-              "refundo"
-            ],
-            "creditLemmas": [
-              "refundo"
-            ],
-            "resolved": true,
             "phrase": false
           },
           {
@@ -15868,7 +15891,7 @@
     {
       "lesson": 27,
       "id": "lat-v1-lesson-27",
-      "note": "本冊語料中無任何字形，因而無法入題：episcopālis",
+      "note": "",
       "items": [
         {
           "kind": "quoted",
@@ -16025,7 +16048,7 @@
         },
         {
           "kind": "composed",
-          "text": "vultus similis et clemens",
+          "text": "vultus episcopalis similis et clemens",
           "targetWords": [
             {
               "volume": 1,
@@ -16075,15 +16098,31 @@
               ],
               "resolved": true,
               "phrase": false
+            },
+            {
+              "volume": 1,
+              "lesson": 27,
+              "ordinal": 539,
+              "headword": "episcopālis",
+              "glossZh": "主教的、聖階的",
+              "lemmas": [
+                "episcopalis"
+              ],
+              "creditLemmas": [
+                "episcopalis"
+              ],
+              "resolved": true,
+              "phrase": false
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 5,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
             "lemmas": [
               "clemens",
+              "episcopalis",
               "et",
               "similis",
               "vultus"
@@ -16443,25 +16482,9 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
+        "practised": 20,
         "notPractised": [],
-        "notAttested": [
-          {
-            "volume": 1,
-            "lesson": 27,
-            "ordinal": 539,
-            "headword": "episcopālis",
-            "glossZh": "主教的、聖階的",
-            "lemmas": [
-              "episcopalis"
-            ],
-            "creditLemmas": [
-              "episcopalis"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ]
+        "notAttested": []
       }
     },
     {
@@ -17026,7 +17049,7 @@
     {
       "lesson": 29,
       "id": "lat-v1-lesson-29",
-      "note": "本冊語料中無任何字形，因而無法入題：tellus",
+      "note": "本讀本語料中無任何字形，因而無法入題：tellus",
       "items": [
         {
           "kind": "quoted",
@@ -17230,6 +17253,7 @@
             "enclitics": [],
             "lemmas": [
               "benignus",
+              "saluator",
               "salvator",
               "sum"
             ],
@@ -17629,7 +17653,7 @@
     {
       "lesson": 30,
       "id": "lat-v1-lesson-30",
-      "note": "本冊語料中無任何字形，因而無法入題：cōtīdiānus、intentus",
+      "note": "",
       "items": [
         {
           "kind": "quoted",
@@ -17910,8 +17934,37 @@
         },
         {
           "kind": "composed",
-          "text": "devota humanitas evangelizavit",
+          "text": "devota humanitas cotidianae evangelizavit",
           "targetWords": [
+            {
+              "volume": 1,
+              "lesson": 30,
+              "ordinal": 583,
+              "headword": "cōtīdiānus",
+              "glossZh": "每日的、日常的",
+              "lemmas": [
+                "cottidianus"
+              ],
+              "creditLemmas": [],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 1,
+              "lesson": 30,
+              "ordinal": 584,
+              "headword": "cōtīdiē",
+              "glossZh": "每日、日常地",
+              "lemmas": [
+                "cotidie",
+                "cottidie"
+              ],
+              "creditLemmas": [
+                "cotidie"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
             {
               "volume": 1,
               "lesson": 30,
@@ -17963,7 +18016,7 @@
             }
           ],
           "verification": {
-            "words": 3,
+            "words": 4,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
@@ -18233,39 +18286,9 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 18,
+        "practised": 20,
         "notPractised": [],
-        "notAttested": [
-          {
-            "volume": 1,
-            "lesson": 30,
-            "ordinal": 583,
-            "headword": "cōtīdiānus",
-            "glossZh": "每日的、日常的",
-            "lemmas": [
-              "cottidianus"
-            ],
-            "creditLemmas": [],
-            "resolved": true,
-            "phrase": false
-          },
-          {
-            "volume": 1,
-            "lesson": 30,
-            "ordinal": 597,
-            "headword": "intentus",
-            "glossZh": "伸展的、緊張的",
-            "lemmas": [
-              "intendo",
-              "intentus"
-            ],
-            "creditLemmas": [
-              "intentus"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ]
+        "notAttested": []
       }
     },
     {
@@ -18325,6 +18348,7 @@
               "invicem",
               "is",
               "quando",
+              "uero",
               "vero",
               "verus",
               "vivo"
@@ -18535,6 +18559,7 @@
             "lemmas": [
               "et",
               "perficio",
+              "peruenio",
               "pervenio"
             ],
             "lengthOk": true,
@@ -19478,7 +19503,7 @@
     {
       "lesson": 33,
       "id": "lat-v1-lesson-33",
-      "note": "本冊語料中無任何字形，因而無法入題：cōnsubstantiālis",
+      "note": "本讀本語料中無任何字形，因而無法入題：cōnsubstantiālis",
       "items": [
         {
           "kind": "quoted",
@@ -19998,6 +20023,7 @@
               "opus",
               "oriens",
               "orior",
+              "uideo",
               "video"
             ],
             "lengthOk": true,
@@ -20033,7 +20059,7 @@
     {
       "lesson": 34,
       "id": "lat-v1-lesson-34",
-      "note": "本冊語料中無任何字形，因而無法入題：caelicola、collaetor",
+      "note": "本讀本語料中無任何字形，因而無法入題：caelicola、collaetor",
       "items": [
         {
           "kind": "quoted",
@@ -20303,6 +20329,7 @@
             "lemmas": [
               "peccator",
               "scelus",
+              "uero",
               "vero",
               "verus"
             ],
@@ -20625,6 +20652,7 @@
               "potens",
               "potestas",
               "sum",
+              "uero",
               "vero",
               "verus"
             ],
@@ -20804,6 +20832,7 @@
               "sanctor",
               "sanctus",
               "semita",
+              "seruo",
               "servo",
               "via"
             ],
@@ -21060,6 +21089,7 @@
               "liber",
               "libero",
               "neque",
+              "ouis",
               "ovis"
             ],
             "lengthOk": true,
@@ -21261,7 +21291,7 @@
     {
       "lesson": 36,
       "id": "lat-v1-lesson-36",
-      "note": "本冊語料中無任何字形，因而無法入題：solor、dēdignor",
+      "note": "本讀本語料中無任何字形，因而無法入題：solor、dēdignor",
       "items": [
         {
           "kind": "quoted",
@@ -21403,6 +21433,7 @@
             "enclitics": [],
             "lemmas": [
               "David",
+              "ciuitas",
               "civitas",
               "in",
               "invicem",
@@ -21845,7 +21876,7 @@
     {
       "lesson": 37,
       "id": "lat-v1-lesson-37",
-      "note": "本冊語料中無任何字形，因而無法入題：intercessio",
+      "note": "",
       "items": [
         {
           "kind": "quoted",
@@ -22170,8 +22201,23 @@
         },
         {
           "kind": "composed",
-          "text": "persecutus est et petiit",
+          "text": "persecutus est et petiit intercessione",
           "targetWords": [
+            {
+              "volume": 1,
+              "lesson": 37,
+              "ordinal": 721,
+              "headword": "intercessio",
+              "glossZh": "代禱、轉求",
+              "lemmas": [
+                "intercessio"
+              ],
+              "creditLemmas": [
+                "intercessio"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
             {
               "volume": 1,
               "lesson": 37,
@@ -22204,12 +22250,13 @@
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 5,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
             "lemmas": [
               "et",
+              "intercessio",
               "persequor",
               "peto",
               "sum"
@@ -22394,25 +22441,9 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
+        "practised": 20,
         "notPractised": [],
-        "notAttested": [
-          {
-            "volume": 1,
-            "lesson": 37,
-            "ordinal": 721,
-            "headword": "intercessio",
-            "glossZh": "代禱、轉求",
-            "lemmas": [
-              "intercessio"
-            ],
-            "creditLemmas": [
-              "intercessio"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ]
+        "notAttested": []
       }
     },
     {
@@ -23710,6 +23741,7 @@
               "multus",
               "paucus",
               "sum",
+              "uero",
               "vero",
               "verus",
               "voco"
@@ -24384,7 +24416,7 @@
     {
       "lesson": 41,
       "id": "lat-v1-lesson-41",
-      "note": "本冊語料中無任何字形，因而無法入題：dēposcō",
+      "note": "",
       "items": [
         {
           "kind": "quoted",
@@ -24840,8 +24872,23 @@
         },
         {
           "kind": "composed",
-          "text": "dolor et effusione",
+          "text": "deposcimus dolorem et effusione",
           "targetWords": [
+            {
+              "volume": 1,
+              "lesson": 41,
+              "ordinal": 812,
+              "headword": "dēposcō",
+              "glossZh": "懇求、要求",
+              "lemmas": [
+                "deposco"
+              ],
+              "creditLemmas": [
+                "deposco"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
             {
               "volume": 1,
               "lesson": 41,
@@ -24874,7 +24921,7 @@
             }
           ],
           "verification": {
-            "words": 3,
+            "words": 4,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
@@ -24978,31 +25025,15 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
+        "practised": 20,
         "notPractised": [],
-        "notAttested": [
-          {
-            "volume": 1,
-            "lesson": 41,
-            "ordinal": 812,
-            "headword": "dēposcō",
-            "glossZh": "懇求、要求",
-            "lemmas": [
-              "deposco"
-            ],
-            "creditLemmas": [
-              "deposco"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ]
+        "notAttested": []
       }
     },
     {
       "lesson": 42,
       "id": "lat-v1-lesson-42",
-      "note": "本冊語料中無任何字形，因而無法入題：succurrō、venia",
+      "note": "本讀本語料中無任何字形，因而無法入題：venia",
       "items": [
         {
           "kind": "quoted",
@@ -25289,7 +25320,7 @@
         },
         {
           "kind": "composed",
-          "text": "Salve, imperate perpetuo",
+          "text": "Salve, succurre, imperate perpetuo",
           "targetWords": [
             {
               "volume": 1,
@@ -25334,14 +25365,30 @@
               "creditLemmas": [],
               "resolved": true,
               "phrase": false
+            },
+            {
+              "volume": 1,
+              "lesson": 42,
+              "ordinal": 835,
+              "headword": "succurrō",
+              "glossZh": "援助、救濟、幫助",
+              "lemmas": [
+                "succurro"
+              ],
+              "creditLemmas": [
+                "succurro"
+              ],
+              "resolved": true,
+              "phrase": false
             }
           ],
           "verification": {
-            "words": 3,
+            "words": 4,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
             "lemmas": [
+              "perpetuo",
               "perpetuus",
               "salveo"
             ],
@@ -25425,6 +25472,7 @@
             "enclitics": [],
             "lemmas": [
               "an",
+              "siue",
               "sive",
               "solemnis",
               "unitas"
@@ -25639,24 +25687,9 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 18,
+        "practised": 19,
         "notPractised": [],
         "notAttested": [
-          {
-            "volume": 1,
-            "lesson": 42,
-            "ordinal": 835,
-            "headword": "succurrō",
-            "glossZh": "援助、救濟、幫助",
-            "lemmas": [
-              "succurro"
-            ],
-            "creditLemmas": [
-              "succurro"
-            ],
-            "resolved": true,
-            "phrase": false
-          },
           {
             "volume": 1,
             "lesson": 42,
@@ -25680,7 +25713,7 @@
     {
       "lesson": 43,
       "id": "lat-v1-lesson-43",
-      "note": "本冊語料中無任何字形，因而無法入題：exspīrō、patrōnus",
+      "note": "",
       "items": [
         {
           "kind": "quoted",
@@ -26035,7 +26068,7 @@
         },
         {
           "kind": "composed",
-          "text": "martyrum peregrinantes quid",
+          "text": "martyrum patronum peregrinantes quid",
           "targetWords": [
             {
               "volume": 1,
@@ -26048,6 +26081,21 @@
               ],
               "creditLemmas": [
                 "martyr"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 1,
+              "lesson": 43,
+              "ordinal": 853,
+              "headword": "patrōnus",
+              "glossZh": "保護者、辯護人",
+              "lemmas": [
+                "patronus"
+              ],
+              "creditLemmas": [
+                "patronus"
               ],
               "resolved": true,
               "phrase": false
@@ -26096,12 +26144,13 @@
             }
           ],
           "verification": {
-            "words": 3,
+            "words": 4,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
             "lemmas": [
               "martyr",
+              "quid",
               "quis"
             ],
             "lengthOk": true,
@@ -26112,8 +26161,19 @@
         },
         {
           "kind": "composed",
-          "text": "præstolatur et spirat",
+          "text": "præstolatur et spirat et expiravit",
           "targetWords": [
+            {
+              "volume": 1,
+              "lesson": 43,
+              "ordinal": 845,
+              "headword": "exspīrō",
+              "glossZh": "呼出、死亡",
+              "lemmas": [],
+              "creditLemmas": [],
+              "resolved": false,
+              "phrase": false
+            },
             {
               "volume": 1,
               "lesson": 43,
@@ -26146,7 +26206,7 @@
             }
           ],
           "verification": {
-            "words": 3,
+            "words": 5,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
@@ -26234,6 +26294,7 @@
             "enclitics": [],
             "lemmas": [
               "doctor",
+              "quid",
               "quis",
               "spiro"
             ],
@@ -26315,42 +26376,15 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 18,
+        "practised": 20,
         "notPractised": [],
-        "notAttested": [
-          {
-            "volume": 1,
-            "lesson": 43,
-            "ordinal": 845,
-            "headword": "exspīrō",
-            "glossZh": "呼出、死亡",
-            "lemmas": [],
-            "creditLemmas": [],
-            "resolved": false,
-            "phrase": false
-          },
-          {
-            "volume": 1,
-            "lesson": 43,
-            "ordinal": 853,
-            "headword": "patrōnus",
-            "glossZh": "保護者、辯護人",
-            "lemmas": [
-              "patronus"
-            ],
-            "creditLemmas": [
-              "patronus"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ]
+        "notAttested": []
       }
     },
     {
       "lesson": 44,
       "id": "lat-v1-lesson-44",
-      "note": "本冊語料中無任何字形，因而無法入題：genitus",
+      "note": "",
       "items": [
         {
           "kind": "quoted",
@@ -26505,7 +26539,7 @@
         },
         {
           "kind": "composed",
-          "text": "ut quid triumphabit",
+          "text": "ut quid genitus triumphabit",
           "targetWords": [
             {
               "volume": 1,
@@ -26532,14 +26566,29 @@
               "creditLemmas": [],
               "resolved": false,
               "phrase": true
+            },
+            {
+              "volume": 1,
+              "lesson": 44,
+              "ordinal": 869,
+              "headword": "genitus",
+              "glossZh": "所生的、被生的",
+              "lemmas": [
+                "gigno"
+              ],
+              "creditLemmas": [],
+              "resolved": true,
+              "phrase": false
             }
           ],
           "verification": {
-            "words": 3,
+            "words": 4,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
             "lemmas": [
+              "gigno",
+              "quid",
               "quis",
               "ut"
             ],
@@ -26940,23 +26989,9 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
+        "practised": 20,
         "notPractised": [],
-        "notAttested": [
-          {
-            "volume": 1,
-            "lesson": 44,
-            "ordinal": 869,
-            "headword": "genitus",
-            "glossZh": "所生的、被生的",
-            "lemmas": [
-              "gigno"
-            ],
-            "creditLemmas": [],
-            "resolved": true,
-            "phrase": false
-          }
-        ]
+        "notAttested": []
       }
     },
     {
@@ -27401,6 +27436,7 @@
               "alius",
               "alter",
               "et",
+              "uirtus",
               "virtus"
             ],
             "lengthOk": true,
@@ -28963,7 +28999,7 @@
     {
       "lesson": 48,
       "id": "lat-v1-lesson-48",
-      "note": "本冊語料中無任何字形，因而無法入題：omissiō、psalmista、struō",
+      "note": "本讀本語料中無任何字形，因而無法入題：omissiō、psalmista、struō",
       "items": [
         {
           "kind": "quoted",
@@ -29614,7 +29650,7 @@
     {
       "lesson": 49,
       "id": "lat-v1-lesson-49",
-      "note": "本冊語料中無任何字形，因而無法入題：ineffābilis、liquō",
+      "note": "本讀本語料中無任何字形，因而無法入題：liquō",
       "items": [
         {
           "kind": "quoted",
@@ -30023,7 +30059,7 @@
         },
         {
           "kind": "composed",
-          "text": "illucescat inæstimabilis monumentum",
+          "text": "illucescat inæstimabilis ineffabile monumentum",
           "targetWords": [
             {
               "volume": 1,
@@ -30054,6 +30090,21 @@
             {
               "volume": 1,
               "lesson": 49,
+              "ordinal": 974,
+              "headword": "ineffābilis",
+              "glossZh": "不可言喻、無法表達、玄妙",
+              "lemmas": [
+                "ineffabilis"
+              ],
+              "creditLemmas": [
+                "ineffabilis"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 1,
+              "lesson": 49,
               "ordinal": 978,
               "headword": "monumentum",
               "glossZh": "紀念碑、墳墓、遺跡",
@@ -30068,7 +30119,7 @@
             }
           ],
           "verification": {
-            "words": 3,
+            "words": 4,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
@@ -30218,24 +30269,9 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 18,
+        "practised": 19,
         "notPractised": [],
         "notAttested": [
-          {
-            "volume": 1,
-            "lesson": 49,
-            "ordinal": 974,
-            "headword": "ineffābilis",
-            "glossZh": "不可言喻、無法表達、玄妙",
-            "lemmas": [
-              "ineffabilis"
-            ],
-            "creditLemmas": [
-              "ineffabilis"
-            ],
-            "resolved": true,
-            "phrase": false
-          },
           {
             "volume": 1,
             "lesson": 49,
@@ -30299,6 +30335,7 @@
               "qui",
               "quis",
               "suus",
+              "uel",
               "vel"
             ],
             "lengthOk": true,
@@ -30372,6 +30409,7 @@
             "enclitics": [],
             "lemmas": [
               "deus",
+              "e",
               "ego",
               "ex",
               "puto",
@@ -30689,6 +30727,7 @@
             "enclitics": [],
             "lemmas": [
               "appropinquo",
+              "conuerto",
               "converto",
               "daemonium",
               "et"

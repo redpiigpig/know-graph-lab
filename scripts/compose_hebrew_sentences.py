@@ -38,6 +38,15 @@ OUTPUT = ROOT / "output/source-cache/original-readers/hebrew-full/composed-sente
 HEBREW_RE = re.compile(r"[א-ת]")
 
 
+# 擁有者 2026-09-16 的裁定：**「已教過」不再是退回的理由**。
+# 「按照程度來看，簡單的都可以先練習，沒有限制一定要本課教過的才行。」
+# 一個詞排在第幾課是難度排序的結果，不是它本身難不難；把課次當成硬牆，會讓
+# 一課的二十個詞裡有幾個永遠寫不進任何句子（拉丁 86、希臘 6、日文 34），
+# 而那些缺口補不起來的理由是排序，不是語言。
+#
+# 這一關沒有刪掉，只是不再擋人：`untaught` 仍照實記錄哪些詞超出本課進度，
+# 供日後要標注或分級時取用；`passed` 不再看它。語料那一關（第一道）沒有動——
+# 捏一個語料裡不存在的形，仍然是錯的。
 def bare(word: str) -> str:
     """Strip accents and formatting, keep consonants and vowel points."""
     cleaned = CANTILLATION_RE.sub("", unicodedata.normalize("NFC", word))
@@ -188,7 +197,8 @@ def verify(
         "unattested": unattested,
         "untaught": untaught,
         "lemmas": sorted(lemmas),
-        "passed": not unattested and not untaught and len(words) >= 3,
+        # 「已教過」不再擋人（見檔頭 2026-09-16 的裁定）；untaught 照記不照擋。
+        "passed": not unattested and len(words) >= 3,
     }
 
 

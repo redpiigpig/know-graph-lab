@@ -3,7 +3,7 @@
   "language": "Ecclesiastical Latin",
   "languageCode": "lat",
   "volume": 2,
-  "generatedOn": "2026-09-14",
+  "generatedOn": "2026-09-16",
   "direction": "original-to-chinese",
   "itemsPerLesson": 10,
   "quotedPerLesson": 3,
@@ -627,7 +627,7 @@
     {
       "lesson": 2,
       "id": "lat-v2-lesson-02",
-      "note": "本冊語料中無任何字形，因而無法入題：dēvincō",
+      "note": "本讀本語料中無任何字形，因而無法入題：dēvincō",
       "items": [
         {
           "kind": "quoted",
@@ -4206,7 +4206,7 @@
     {
       "lesson": 8,
       "id": "lat-v2-lesson-08",
-      "note": "本冊語料中無任何字形，因而無法入題：exspoliō、irradio",
+      "note": "本讀本語料中無任何字形，因而無法入題：exspoliō、irradio",
       "items": [
         {
           "kind": "quoted",
@@ -5444,7 +5444,7 @@
     {
       "lesson": 10,
       "id": "lat-v2-lesson-10",
-      "note": "本冊語料中無任何字形，因而無法入題：presbyter",
+      "note": "",
       "items": [
         {
           "kind": "quoted",
@@ -6138,25 +6138,9 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
+        "practised": 20,
         "notPractised": [],
-        "notAttested": [
-          {
-            "volume": 2,
-            "lesson": 10,
-            "ordinal": 196,
-            "headword": "presbyter",
-            "glossZh": "長老、司鐸；古典：長者",
-            "lemmas": [
-              "presbyter"
-            ],
-            "creditLemmas": [
-              "presbyter"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ]
+        "notAttested": []
       }
     },
     {
@@ -6793,7 +6777,7 @@
     {
       "lesson": 12,
       "id": "lat-v2-lesson-12",
-      "note": "本冊語料中無任何字形，因而無法入題：medius",
+      "note": "",
       "items": [
         {
           "kind": "quoted",
@@ -7445,25 +7429,9 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
+        "practised": 20,
         "notPractised": [],
-        "notAttested": [
-          {
-            "volume": 2,
-            "lesson": 12,
-            "ordinal": 226,
-            "headword": "medius",
-            "glossZh": "中間的、中部的；平凡的、普通的",
-            "lemmas": [
-              "medius"
-            ],
-            "creditLemmas": [
-              "medius"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ]
+        "notAttested": []
       }
     },
     {
@@ -8751,7 +8719,7 @@
     {
       "lesson": 15,
       "id": "lat-v2-lesson-15",
-      "note": "本冊語料中無任何字形，因而無法入題：longus",
+      "note": "",
       "items": [
         {
           "kind": "quoted",
@@ -9367,31 +9335,15 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
+        "practised": 20,
         "notPractised": [],
-        "notAttested": [
-          {
-            "volume": 2,
-            "lesson": 15,
-            "ordinal": 297,
-            "headword": "longus",
-            "glossZh": "長、高；冗長、費時；遠",
-            "lemmas": [
-              "longus"
-            ],
-            "creditLemmas": [
-              "longus"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ]
+        "notAttested": []
       }
     },
     {
       "lesson": 16,
       "id": "lat-v2-lesson-16",
-      "note": "本冊語料中無任何字形，因而無法入題：exhibeo、diu、saecularis",
+      "note": "",
       "items": [
         {
           "kind": "quoted",
@@ -9973,61 +9925,15 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 17,
+        "practised": 20,
         "notPractised": [],
-        "notAttested": [
-          {
-            "volume": 2,
-            "lesson": 16,
-            "ordinal": 303,
-            "headword": "exhibeo",
-            "glossZh": "呈現、提供、展示",
-            "lemmas": [
-              "exhibeo"
-            ],
-            "creditLemmas": [
-              "exhibeo"
-            ],
-            "resolved": true,
-            "phrase": false
-          },
-          {
-            "volume": 2,
-            "lesson": 16,
-            "ordinal": 318,
-            "headword": "diu",
-            "glossZh": "長久地、很久",
-            "lemmas": [
-              "diu"
-            ],
-            "creditLemmas": [
-              "diu"
-            ],
-            "resolved": true,
-            "phrase": false
-          },
-          {
-            "volume": 2,
-            "lesson": 16,
-            "ordinal": 319,
-            "headword": "saecularis",
-            "glossZh": "世俗的、非教會的",
-            "lemmas": [
-              "saecularis"
-            ],
-            "creditLemmas": [
-              "saecularis"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ]
+        "notAttested": []
       }
     },
     {
       "lesson": 17,
       "id": "lat-v2-lesson-17",
-      "note": "本冊語料中無任何字形，因而無法入題：taliter、archidiaconus",
+      "note": "本讀本語料中無任何字形，因而無法入題：archidiaconus",
       "items": [
         {
           "kind": "quoted",
@@ -10627,24 +10533,9 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 18,
+        "practised": 19,
         "notPractised": [],
         "notAttested": [
-          {
-            "volume": 2,
-            "lesson": 17,
-            "ordinal": 332,
-            "headword": "taliter",
-            "glossZh": "如此方式、這樣",
-            "lemmas": [
-              "taliter"
-            ],
-            "creditLemmas": [
-              "taliter"
-            ],
-            "resolved": true,
-            "phrase": false
-          },
           {
             "volume": 2,
             "lesson": 17,
@@ -10666,7 +10557,7 @@
     {
       "lesson": 18,
       "id": "lat-v2-lesson-18",
-      "note": "本冊語料中無任何字形，因而無法入題：subicio",
+      "note": "",
       "items": [
         {
           "kind": "quoted",
@@ -11297,25 +11188,9 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
+        "practised": 20,
         "notPractised": [],
-        "notAttested": [
-          {
-            "volume": 2,
-            "lesson": 18,
-            "ordinal": 346,
-            "headword": "subicio",
-            "glossZh": "置於下、使屈從、暴露",
-            "lemmas": [
-              "subicio"
-            ],
-            "creditLemmas": [
-              "subicio"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ]
+        "notAttested": []
       }
     },
     {
@@ -13147,7 +13022,7 @@
     {
       "lesson": 22,
       "id": "lat-v2-lesson-22",
-      "note": "本冊語料中無任何字形，因而無法入題：adhibeo",
+      "note": "",
       "items": [
         {
           "kind": "quoted",
@@ -13745,25 +13620,9 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
+        "practised": 20,
         "notPractised": [],
-        "notAttested": [
-          {
-            "volume": 2,
-            "lesson": 22,
-            "ordinal": 433,
-            "headword": "adhibeo",
-            "glossZh": "徵召、邀請；應用、採用、發動",
-            "lemmas": [
-              "adhibeo"
-            ],
-            "creditLemmas": [
-              "adhibeo"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ]
+        "notAttested": []
       }
     },
     {
@@ -15003,7 +14862,7 @@
     {
       "lesson": 25,
       "id": "lat-v2-lesson-25",
-      "note": "本冊語料中無任何字形，因而無法入題：nequaquam、interdico",
+      "note": "本讀本語料中無任何字形，因而無法入題：interdico",
       "items": [
         {
           "kind": "quoted",
@@ -15602,24 +15461,9 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 18,
+        "practised": 19,
         "notPractised": [],
         "notAttested": [
-          {
-            "volume": 2,
-            "lesson": 25,
-            "ordinal": 487,
-            "headword": "nequaquam",
-            "glossZh": "絕非、決不",
-            "lemmas": [
-              "nequaquam"
-            ],
-            "creditLemmas": [
-              "nequaquam"
-            ],
-            "resolved": true,
-            "phrase": false
-          },
           {
             "volume": 2,
             "lesson": 25,
@@ -15641,7 +15485,7 @@
     {
       "lesson": 26,
       "id": "lat-v2-lesson-26",
-      "note": "本冊語料中無任何字形，因而無法入題：haud、specto",
+      "note": "",
       "items": [
         {
           "kind": "quoted",
@@ -16306,40 +16150,9 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 18,
+        "practised": 20,
         "notPractised": [],
-        "notAttested": [
-          {
-            "volume": 2,
-            "lesson": 26,
-            "ordinal": 505,
-            "headword": "haud",
-            "glossZh": "不、毫不",
-            "lemmas": [
-              "haud"
-            ],
-            "creditLemmas": [
-              "haud"
-            ],
-            "resolved": true,
-            "phrase": false
-          },
-          {
-            "volume": 2,
-            "lesson": 26,
-            "ordinal": 520,
-            "headword": "specto",
-            "glossZh": "觀看、注視、審視、考慮",
-            "lemmas": [
-              "specto"
-            ],
-            "creditLemmas": [
-              "specto"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ]
+        "notAttested": []
       }
     },
     {
@@ -17563,7 +17376,7 @@
     {
       "lesson": 29,
       "id": "lat-v2-lesson-29",
-      "note": "本冊語料中無任何字形，因而無法入題：cottidie",
+      "note": "",
       "items": [
         {
           "kind": "quoted",
@@ -18158,31 +17971,15 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
+        "practised": 20,
         "notPractised": [],
-        "notAttested": [
-          {
-            "volume": 2,
-            "lesson": 29,
-            "ordinal": 564,
-            "headword": "cottidie",
-            "glossZh": "每天、日日、通常、尋常",
-            "lemmas": [
-              "cottidie"
-            ],
-            "creditLemmas": [
-              "cottidie"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ]
+        "notAttested": []
       }
     },
     {
       "lesson": 30,
       "id": "lat-v2-lesson-30",
-      "note": "本冊語料中無任何字形，因而無法入題：December",
+      "note": "本讀本語料中無任何字形，因而無法入題：December",
       "items": [
         {
           "kind": "quoted",
@@ -20079,7 +19876,7 @@
     {
       "lesson": 33,
       "id": "lat-v2-lesson-33",
-      "note": "本冊語料中無任何字形，因而無法入題：absolutus",
+      "note": "",
       "items": [
         {
           "kind": "quoted",
@@ -20677,32 +20474,15 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
+        "practised": 20,
         "notPractised": [],
-        "notAttested": [
-          {
-            "volume": 2,
-            "lesson": 33,
-            "ordinal": 644,
-            "headword": "absolutus",
-            "glossZh": "完美的、完整的；純淨的、絕對的",
-            "lemmas": [
-              "absolutus",
-              "absolvo"
-            ],
-            "creditLemmas": [
-              "absolutus"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ]
+        "notAttested": []
       }
     },
     {
       "lesson": 34,
       "id": "lat-v2-lesson-34",
-      "note": "本冊語料中無任何字形，因而無法入題：inquisitio、quamquam",
+      "note": "",
       "items": [
         {
           "kind": "quoted",
@@ -21307,46 +21087,15 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 18,
+        "practised": 20,
         "notPractised": [],
-        "notAttested": [
-          {
-            "volume": 2,
-            "lesson": 34,
-            "ordinal": 676,
-            "headword": "inquisitio",
-            "glossZh": "搜尋、查究、調查、偵查",
-            "lemmas": [
-              "inquisitio"
-            ],
-            "creditLemmas": [
-              "inquisitio"
-            ],
-            "resolved": true,
-            "phrase": false
-          },
-          {
-            "volume": 2,
-            "lesson": 34,
-            "ordinal": 678,
-            "headword": "quamquam",
-            "glossZh": "雖然、儘管、然而",
-            "lemmas": [
-              "quamquam"
-            ],
-            "creditLemmas": [
-              "quamquam"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ]
+        "notAttested": []
       }
     },
     {
       "lesson": 35,
       "id": "lat-v2-lesson-35",
-      "note": "本冊語料中無任何字形，因而無法入題：continenter",
+      "note": "本讀本語料中無任何字形，因而無法入題：continenter",
       "items": [
         {
           "kind": "quoted",
@@ -21962,7 +21711,7 @@
     {
       "lesson": 36,
       "id": "lat-v2-lesson-36",
-      "note": "本冊語料中無任何字形，因而無法入題：apte、familiaris",
+      "note": "",
       "items": [
         {
           "kind": "quoted",
@@ -22568,40 +22317,9 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 18,
+        "practised": 20,
         "notPractised": [],
-        "notAttested": [
-          {
-            "volume": 2,
-            "lesson": 36,
-            "ordinal": 703,
-            "headword": "apte",
-            "glossZh": "緊密地、恰當地、適宜地",
-            "lemmas": [
-              "apte"
-            ],
-            "creditLemmas": [
-              "apte"
-            ],
-            "resolved": true,
-            "phrase": false
-          },
-          {
-            "volume": 2,
-            "lesson": 36,
-            "ordinal": 717,
-            "headword": "familiaris",
-            "glossZh": "家庭的、親密的、家產的",
-            "lemmas": [
-              "familiaris"
-            ],
-            "creditLemmas": [
-              "familiaris"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ]
+        "notAttested": []
       }
     },
     {
@@ -23244,7 +22962,7 @@
     {
       "lesson": 38,
       "id": "lat-v2-lesson-38",
-      "note": "本冊語料中無任何字形，因而無法入題：admodum",
+      "note": "本讀本語料中無任何字形，因而無法入題：admodum",
       "items": [
         {
           "kind": "quoted",
@@ -25739,7 +25457,7 @@
     {
       "lesson": 42,
       "id": "lat-v2-lesson-42",
-      "note": "本冊語料中無任何字形，因而無法入題：arguo",
+      "note": "",
       "items": [
         {
           "kind": "quoted",
@@ -26355,31 +26073,15 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
+        "practised": 20,
         "notPractised": [],
-        "notAttested": [
-          {
-            "volume": 2,
-            "lesson": 42,
-            "ordinal": 838,
-            "headword": "arguo",
-            "glossZh": "證明、指控、譴責、駁斥",
-            "lemmas": [
-              "arguo"
-            ],
-            "creditLemmas": [
-              "arguo"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ]
+        "notAttested": []
       }
     },
     {
       "lesson": 43,
       "id": "lat-v2-lesson-43",
-      "note": "本冊語料中無任何字形，因而無法入題：fortuna",
+      "note": "",
       "items": [
         {
           "kind": "quoted",
@@ -26984,31 +26686,15 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
+        "practised": 20,
         "notPractised": [],
-        "notAttested": [
-          {
-            "volume": 2,
-            "lesson": 43,
-            "ordinal": 845,
-            "headword": "fortuna",
-            "glossZh": "命運、幸運、財富、境遇",
-            "lemmas": [
-              "fortuna"
-            ],
-            "creditLemmas": [
-              "fortuna"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ]
+        "notAttested": []
       }
     },
     {
       "lesson": 44,
       "id": "lat-v2-lesson-44",
-      "note": "本冊語料中無任何字形，因而無法入題：dioecesis",
+      "note": "本讀本語料中無任何字形，因而無法入題：dioecesis",
       "items": [
         {
           "kind": "quoted",
@@ -28270,7 +27956,7 @@
     {
       "lesson": 46,
       "id": "lat-v2-lesson-46",
-      "note": "本冊語料中無任何字形，因而無法入題：amanter",
+      "note": "本讀本語料中無任何字形，因而無法入題：amanter",
       "items": [
         {
           "kind": "quoted",
@@ -29524,7 +29210,7 @@
     {
       "lesson": 48,
       "id": "lat-v2-lesson-48",
-      "note": "本冊語料中無任何字形，因而無法入題：Februarius、impulsus、consummo、sapienter",
+      "note": "本讀本語料中無任何字形，因而無法入題：Februarius",
       "items": [
         {
           "kind": "quoted",
@@ -30127,7 +29813,7 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 16,
+        "practised": 19,
         "notPractised": [],
         "notAttested": [
           {
@@ -30146,51 +29832,6 @@
             ],
             "resolved": true,
             "phrase": false
-          },
-          {
-            "volume": 2,
-            "lesson": 48,
-            "ordinal": 945,
-            "headword": "impulsus",
-            "glossZh": "衝擊、震盪；激勵、驅使",
-            "lemmas": [
-              "impulsus"
-            ],
-            "creditLemmas": [
-              "impulsus"
-            ],
-            "resolved": true,
-            "phrase": false
-          },
-          {
-            "volume": 2,
-            "lesson": 48,
-            "ordinal": 948,
-            "headword": "consummo",
-            "glossZh": "合計、算總；完成、終結；達成、實現",
-            "lemmas": [
-              "consummo"
-            ],
-            "creditLemmas": [
-              "consummo"
-            ],
-            "resolved": true,
-            "phrase": false
-          },
-          {
-            "volume": 2,
-            "lesson": 48,
-            "ordinal": 951,
-            "headword": "sapienter",
-            "glossZh": "智慧地、明智地",
-            "lemmas": [
-              "sapienter"
-            ],
-            "creditLemmas": [
-              "sapienter"
-            ],
-            "resolved": true,
-            "phrase": false
           }
         ]
       }
@@ -30198,7 +29839,7 @@
     {
       "lesson": 49,
       "id": "lat-v2-lesson-49",
-      "note": "本冊語料中無任何字形，因而無法入題：ethica",
+      "note": "",
       "items": [
         {
           "kind": "quoted",
@@ -30803,31 +30444,15 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
+        "practised": 20,
         "notPractised": [],
-        "notAttested": [
-          {
-            "volume": 2,
-            "lesson": 49,
-            "ordinal": 977,
-            "headword": "ethica",
-            "glossZh": "倫理學、道德哲學",
-            "lemmas": [
-              "ethica"
-            ],
-            "creditLemmas": [
-              "ethica"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ]
+        "notAttested": []
       }
     },
     {
       "lesson": 50,
       "id": "lat-v2-lesson-50",
-      "note": "本冊語料中無任何字形，因而無法入題：Aprilis",
+      "note": "本讀本語料中無任何字形，因而無法入題：Aprilis",
       "items": [
         {
           "kind": "quoted",

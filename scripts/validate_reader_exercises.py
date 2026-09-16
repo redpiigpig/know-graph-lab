@@ -51,10 +51,11 @@ def failures_for_item(item: dict[str, Any]) -> list[str]:
     verification = item.get("verification") or {}
     if not verification.get("passed"):
         problems.append(f"第 {number} 題沒有通過語料驗證")
-    for field, label in (("unattested", "語料中查無此形"), ("untaught", "尚未教過")):
-        offenders = verification.get(field) or []
-        if offenders:
-            problems.append(f"第 {number} 題{label}：{'、'.join(offenders)}")
+    # 只剩「語料中查無此形」是硬錯。超出本課進度的詞（verification.untaught）
+    # 照記不照擋——擁有者 2026-09-16 裁定：簡單的詞可以先練，課次不是硬牆。
+    offenders = verification.get("unattested") or []
+    if offenders:
+        problems.append(f"第 {number} 題語料中查無此形：{'、'.join(offenders)}")
     if not (item.get("targetWords") or []):
         problems.append(f"第 {number} 題沒有標出練到的本課詞")
     return problems

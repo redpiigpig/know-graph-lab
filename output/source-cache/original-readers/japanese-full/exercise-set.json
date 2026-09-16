@@ -17,7 +17,7 @@
       "lesson": 1,
       "volume": 1,
       "id": "ja-lesson-001",
-      "note": "本課教過的詞寫不出能記到它的句子，因而無法入題：人",
+      "note": "斷詞器無法把這個詞單獨還原出來（同形異讀或助詞），因而無法入題：人",
       "items": [
         {
           "kind": "quoted",
@@ -457,6 +457,57 @@
       "items": [
         {
           "kind": "quoted",
+          "ref": "内藤湖南〈大阪の町人学者富永仲基〉",
+          "text": "それはこの本でございます。",
+          "answerKeyRef": "内藤湖南〈大阪の町人学者富永仲基〉",
+          "answerKeyEdition": "無既有中譯，解答本需自譯",
+          "answerKeyScope": "sentence",
+          "targetWords": [
+            {
+              "ordinal": 33,
+              "headword": "それ",
+              "kana": "それ",
+              "glossZh": "那個（近聽者）",
+              "pos": "連体詞"
+            },
+            {
+              "ordinal": 35,
+              "headword": "この",
+              "kana": "この",
+              "glossZh": "這個、這樣的",
+              "pos": "連体詞"
+            },
+            {
+              "ordinal": 38,
+              "headword": "本",
+              "kana": "ほん",
+              "glossZh": "書、冊",
+              "pos": "名詞"
+            }
+          ],
+          "verification": {
+            "tokenCount": 8,
+            "words": 5,
+            "unattested": [],
+            "untaught": [
+              "でございます"
+            ],
+            "unseenForms": [],
+            "grammar": [
+              "は"
+            ],
+            "vocabulary": [
+              "それ|",
+              "この|",
+              "ほん|本"
+            ],
+            "passed": true
+          },
+          "reviewedBy": "corpus",
+          "no": 1
+        },
+        {
+          "kind": "quoted",
           "ref": "菊池寛〈貞操問答〉",
           "text": "これは失礼！",
           "answerKeyRef": "菊池寛〈貞操問答〉",
@@ -494,7 +545,7 @@
             "passed": true
           },
           "reviewedBy": "corpus",
-          "no": 1
+          "no": 2
         },
         {
           "kind": "quoted",
@@ -524,39 +575,6 @@
             "vocabulary": [
               "この|",
               "ひと|人"
-            ],
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 2
-        },
-        {
-          "kind": "quoted",
-          "ref": "菊池寛〈貞操問答〉",
-          "text": "あの人、誰？",
-          "answerKeyRef": "菊池寛〈貞操問答〉",
-          "answerKeyEdition": "無既有中譯，解答本需自譯",
-          "answerKeyScope": "sentence",
-          "targetWords": [
-            {
-              "ordinal": 37,
-              "headword": "あの",
-              "kana": "あの",
-              "glossZh": "那個、那樣的",
-              "pos": "連体詞"
-            }
-          ],
-          "verification": {
-            "tokenCount": 5,
-            "words": 3,
-            "unattested": [],
-            "untaught": [],
-            "unseenForms": [],
-            "grammar": [],
-            "vocabulary": [
-              "あの|",
-              "ひと|人",
-              "だれ|誰"
             ],
             "passed": true
           },
@@ -971,9 +989,9 @@
         },
         {
           "kind": "quoted",
-          "ref": "楠山正雄〈幸福のうわおいぐつ〉",
-          "text": "それはなんだ。",
-          "answerKeyRef": "楠山正雄〈幸福のうわおいぐつ〉",
+          "ref": "喜田貞吉〈震災後記〉",
+          "text": "それに何だ！",
+          "answerKeyRef": "喜田貞吉〈震災後記〉",
           "answerKeyEdition": "無既有中譯，解答本需自譯",
           "answerKeyScope": "sentence",
           "targetWords": [
@@ -987,16 +1005,16 @@
           ],
           "verification": {
             "tokenCount": 5,
-            "words": 4,
+            "words": 3,
             "unattested": [],
-            "untaught": [],
+            "untaught": [
+              "それに"
+            ],
             "unseenForms": [],
             "grammar": [
-              "は",
               "だ"
             ],
             "vocabulary": [
-              "それ|",
               "なん|何"
             ],
             "passed": true
@@ -3571,7 +3589,7 @@
       "lesson": 9,
       "volume": 1,
       "id": "ja-lesson-009",
-      "note": "本課教過的詞寫不出能記到它的句子，因而無法入題：から、まで",
+      "note": "斷詞器無法把這個詞單獨還原出來（同形異讀或助詞），因而無法入題：から、まで",
       "items": [
         {
           "kind": "quoted",
@@ -5846,6 +5864,54 @@
         },
         {
           "kind": "quoted",
+          "ref": "与謝野晶子〈源氏物語〉",
+          "text": "ちょっとした紙の端なのである。",
+          "answerKeyRef": "与謝野晶子〈源氏物語〉",
+          "answerKeyEdition": "無既有中譯，解答本需自譯",
+          "answerKeyScope": "sentence",
+          "targetWords": [
+            {
+              "ordinal": 279,
+              "headword": "紙",
+              "kana": "かみ",
+              "glossZh": "紙",
+              "pos": "名詞"
+            },
+            {
+              "ordinal": 275,
+              "headword": "箸",
+              "kana": "はし",
+              "glossZh": "筷子",
+              "pos": "名詞"
+            }
+          ],
+          "verification": {
+            "tokenCount": 11,
+            "words": 9,
+            "unattested": [],
+            "untaught": [
+              "した"
+            ],
+            "unseenForms": [],
+            "grammar": [
+              "の",
+              "だ",
+              "の",
+              "だ"
+            ],
+            "vocabulary": [
+              "ちょっと|",
+              "かみ|紙",
+              "はし|箸",
+              "ございます|"
+            ],
+            "passed": true
+          },
+          "reviewedBy": "corpus",
+          "no": 2
+        },
+        {
+          "kind": "quoted",
           "ref": "菊池寛〈第二の接吻〉",
           "text": "わたしもらって来てあげましょうね。",
           "answerKeyRef": "菊池寛〈第二の接吻〉",
@@ -5884,40 +5950,6 @@
               "もらいます|貰います",
               "きます|来ます",
               "あげます|"
-            ],
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 2
-        },
-        {
-          "kind": "quoted",
-          "ref": "折口信夫〈「とこよ」と「まれびと」と〉",
-          "text": "神である。",
-          "answerKeyRef": "折口信夫〈「とこよ」と「まれびと」と〉",
-          "answerKeyEdition": "無既有中譯，解答本需自譯",
-          "answerKeyScope": "sentence",
-          "targetWords": [
-            {
-              "ordinal": 279,
-              "headword": "紙",
-              "kana": "かみ",
-              "glossZh": "紙",
-              "pos": "名詞"
-            }
-          ],
-          "verification": {
-            "tokenCount": 4,
-            "words": 3,
-            "unattested": [],
-            "untaught": [],
-            "unseenForms": [],
-            "grammar": [
-              "だ"
-            ],
-            "vocabulary": [
-              "かみ|紙",
-              "ございます|"
             ],
             "passed": true
           },
@@ -6675,7 +6707,7 @@
       "lesson": 16,
       "volume": 1,
       "id": "ja-lesson-016",
-      "note": "本課教過的詞寫不出能記到它的句子，因而無法入題：いらっしゃい",
+      "note": "斷詞器無法把這個詞單獨還原出來（同形異讀或助詞），因而無法入題：いらっしゃい",
       "items": [
         {
           "kind": "quoted",
@@ -8073,32 +8105,33 @@
         },
         {
           "kind": "quoted",
-          "ref": "作者不詳〈アイヌ神謡集〉",
-          "text": "それがわかります．",
-          "answerKeyRef": "作者不詳〈アイヌ神謡集〉",
+          "ref": "鈴木三重吉〈桑の実〉",
+          "text": "変な字だ。",
+          "answerKeyRef": "鈴木三重吉〈桑の実〉",
           "answerKeyEdition": "無既有中譯，解答本需自譯",
           "answerKeyScope": "sentence",
           "targetWords": [
             {
-              "ordinal": 365,
-              "headword": "分かります",
-              "kana": "わかります",
-              "glossZh": "明白、理解",
-              "pos": "動詞"
+              "ordinal": 377,
+              "headword": "字",
+              "kana": "じ",
+              "glossZh": "字、文字",
+              "pos": "名詞"
             }
           ],
           "verification": {
             "tokenCount": 5,
             "words": 3,
             "unattested": [],
-            "untaught": [],
+            "untaught": [
+              "変な"
+            ],
             "unseenForms": [],
             "grammar": [
-              "が"
+              "だ"
             ],
             "vocabulary": [
-              "それ|",
-              "わかります|分かります"
+              "じ|字"
             ],
             "passed": true
           },
@@ -8107,7 +8140,7 @@
         },
         {
           "kind": "composed",
-          "text": "お元気ですか。そろそろ結構です。",
+          "text": "お元気ですか。分かります。そろそろ結構です。",
           "targetWords": [
             {
               "ordinal": 361,
@@ -8115,6 +8148,13 @@
               "kana": "おげんきですか",
               "glossZh": "您好嗎",
               "pos": "表現"
+            },
+            {
+              "ordinal": 365,
+              "headword": "分かります",
+              "kana": "わかります",
+              "glossZh": "明白、理解",
+              "pos": "動詞"
             },
             {
               "ordinal": 364,
@@ -8132,14 +8172,15 @@
             }
           ],
           "verification": {
-            "tokenCount": 9,
-            "words": 3,
+            "tokenCount": 12,
+            "words": 4,
             "unattested": [],
             "untaught": [],
             "unseenForms": [],
             "grammar": [],
             "vocabulary": [
               "おげんきですか|お元気ですか",
+              "わかります|分かります",
               "そろそろ|",
               "けっこうです|結構です"
             ],
@@ -8438,7 +8479,7 @@
       "lesson": 20,
       "volume": 1,
       "id": "ja-lesson-020",
-      "note": "本課教過的詞寫不出能記到它的句子，因而無法入題：すみません",
+      "note": "斷詞器無法把這個詞單獨還原出來（同形異讀或助詞），因而無法入題：すみません",
       "items": [
         {
           "kind": "quoted",
@@ -9436,32 +9477,44 @@
         },
         {
           "kind": "quoted",
-          "ref": "菊池寛〈奇巌城〉",
-          "text": "読みたまえ！",
-          "answerKeyRef": "菊池寛〈奇巌城〉",
+          "ref": "楠山正雄〈幸福のうわおいぐつ〉",
+          "text": "上の窓はあいているぞ。",
+          "answerKeyRef": "楠山正雄〈幸福のうわおいぐつ〉",
           "answerKeyEdition": "無既有中譯，解答本需自譯",
           "answerKeyScope": "sentence",
           "targetWords": [
             {
-              "ordinal": 435,
-              "headword": "前",
-              "kana": "まえ",
-              "glossZh": "前、前面",
+              "ordinal": 433,
+              "headword": "上",
+              "kana": "うえ",
+              "glossZh": "上、上面",
+              "pos": "名詞"
+            },
+            {
+              "ordinal": 429,
+              "headword": "窓",
+              "kana": "まど",
+              "glossZh": "窗、窗戶",
               "pos": "名詞"
             }
           ],
           "verification": {
-            "tokenCount": 4,
-            "words": 3,
+            "tokenCount": 9,
+            "words": 7,
             "unattested": [],
-            "untaught": [],
+            "untaught": [
+              "あいて"
+            ],
             "unseenForms": [],
             "grammar": [
-              "た"
+              "の",
+              "は",
+              "ぞ"
             ],
             "vocabulary": [
-              "よみます|読みます",
-              "まえ|前"
+              "うえ|上",
+              "まど|窓",
+              "います|"
             ],
             "passed": true
           },
@@ -9808,13 +9861,20 @@
         },
         {
           "kind": "composed",
-          "text": "窓の外は木と公園です。",
+          "text": "窓の前と外は木と公園です。",
           "targetWords": [
             {
               "ordinal": 429,
               "headword": "窓",
               "kana": "まど",
               "glossZh": "窗、窗戶",
+              "pos": "名詞"
+            },
+            {
+              "ordinal": 435,
+              "headword": "前",
+              "kana": "まえ",
+              "glossZh": "前、前面",
               "pos": "名詞"
             },
             {
@@ -9840,19 +9900,21 @@
             }
           ],
           "verification": {
-            "tokenCount": 9,
-            "words": 8,
+            "tokenCount": 11,
+            "words": 10,
             "unattested": [],
             "untaught": [],
             "unseenForms": [],
             "grammar": [
               "の",
+              "と",
               "は",
               "と",
               "です"
             ],
             "vocabulary": [
               "まど|窓",
+              "まえ|前",
               "そと|外",
               "き|木",
               "こうえん|公園"
@@ -10336,7 +10398,7 @@
       "lesson": 24,
       "volume": 1,
       "id": "ja-lesson-024",
-      "note": "本課教過的詞寫不出能記到它的句子，因而無法入題：つ、人",
+      "note": "斷詞器無法把這個詞單獨還原出來（同形異讀或助詞），因而無法入題：つ、人",
       "items": [
         {
           "kind": "quoted",
@@ -10817,7 +10879,7 @@
       "lesson": 25,
       "volume": 1,
       "id": "ja-lesson-025",
-      "note": "本課無可用經典原句，十題全由自撰題補；本課教過的詞寫不出能記到它的句子，因而無法入題：だけ",
+      "note": "本課無可用經典原句，十題全由自撰題補；斷詞器無法把這個詞單獨還原出來（同形異讀或助詞），因而無法入題：だけ",
       "items": [
         {
           "kind": "quoted",
@@ -11732,7 +11794,7 @@
       "lesson": 27,
       "volume": 1,
       "id": "ja-lesson-027",
-      "note": "本課教過的詞寫不出能記到它的句子，因而無法入題：でも",
+      "note": "斷詞器無法把這個詞單獨還原出來（同形異讀或助詞），因而無法入題：でも",
       "items": [
         {
           "kind": "quoted",
@@ -13894,7 +13956,7 @@
       "lesson": 32,
       "volume": 1,
       "id": "ja-lesson-032",
-      "note": "本課教過的詞寫不出能記到它的句子，因而無法入題：降ります",
+      "note": "斷詞器無法把這個詞單獨還原出來（同形異讀或助詞），因而無法入題：降ります",
       "items": [
         {
           "kind": "quoted",
@@ -15682,7 +15744,7 @@
       "lesson": 36,
       "volume": 1,
       "id": "ja-lesson-036",
-      "note": "本課教過的詞寫不出能記到它的句子，因而無法入題：ですから",
+      "note": "斷詞器無法把這個詞單獨還原出來（同形異讀或助詞），因而無法入題：ですから",
       "items": [
         {
           "kind": "quoted",
@@ -16992,7 +17054,7 @@
       "lesson": 39,
       "volume": 1,
       "id": "ja-lesson-039",
-      "note": "本課教過的詞寫不出能記到它的句子，因而無法入題：君",
+      "note": "斷詞器無法把這個詞單獨還原出來（同形異讀或助詞），因而無法入題：君",
       "items": [
         {
           "kind": "quoted",
@@ -17030,6 +17092,41 @@
         },
         {
           "kind": "quoted",
+          "ref": "与謝野晶子〈巴里より〉",
+          "text": "僕は日本人。",
+          "answerKeyRef": "与謝野晶子〈巴里より〉",
+          "answerKeyEdition": "無既有中譯，解答本需自譯",
+          "answerKeyScope": "sentence",
+          "targetWords": [
+            {
+              "ordinal": 765,
+              "headword": "僕",
+              "kana": "ぼく",
+              "glossZh": "我、僕",
+              "pos": "名詞"
+            }
+          ],
+          "verification": {
+            "tokenCount": 5,
+            "words": 3,
+            "unattested": [],
+            "untaught": [
+              "日本人"
+            ],
+            "unseenForms": [],
+            "grammar": [
+              "は"
+            ],
+            "vocabulary": [
+              "ぼく|僕"
+            ],
+            "passed": true
+          },
+          "reviewedBy": "corpus",
+          "no": 2
+        },
+        {
+          "kind": "quoted",
           "ref": "菊池寛〈義民甚兵衛〉",
           "text": "ええ気味じゃ。",
           "answerKeyRef": "菊池寛〈義民甚兵衛〉",
@@ -17055,40 +17152,6 @@
               "ええ|",
               "きみ|君",
               "じゃ|"
-            ],
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 2
-        },
-        {
-          "kind": "quoted",
-          "ref": "幸田露伴〈蘆声〉",
-          "text": "ウン、いるよ。",
-          "answerKeyRef": "幸田露伴〈蘆声〉",
-          "answerKeyEdition": "無既有中譯，解答本需自譯",
-          "answerKeyScope": "sentence",
-          "targetWords": [
-            {
-              "ordinal": 768,
-              "headword": "うん",
-              "kana": "うん",
-              "glossZh": "嗯、是",
-              "pos": "感嘆詞"
-            }
-          ],
-          "verification": {
-            "tokenCount": 5,
-            "words": 3,
-            "unattested": [],
-            "untaught": [],
-            "unseenForms": [],
-            "grammar": [
-              "よ"
-            ],
-            "vocabulary": [
-              "うん|",
-              "います|"
             ],
             "passed": true
           },
@@ -17177,8 +17240,15 @@
         },
         {
           "kind": "composed",
-          "text": "僕と君です。ううん。",
+          "text": "うん、僕と君です。ううん。",
           "targetWords": [
+            {
+              "ordinal": 768,
+              "headword": "うん",
+              "kana": "うん",
+              "glossZh": "嗯、是",
+              "pos": "感嘆詞"
+            },
             {
               "ordinal": 765,
               "headword": "僕",
@@ -17202,8 +17272,8 @@
             }
           ],
           "verification": {
-            "tokenCount": 7,
-            "words": 5,
+            "tokenCount": 9,
+            "words": 6,
             "unattested": [],
             "untaught": [],
             "unseenForms": [],
@@ -17212,6 +17282,7 @@
               "です"
             ],
             "vocabulary": [
+              "うん|",
               "ぼく|僕",
               "きみ|君",
               "ううん|"
@@ -18305,7 +18376,7 @@
       "lesson": 42,
       "volume": 1,
       "id": "ja-lesson-042",
-      "note": "本課教過的詞寫不出能記到它的句子，因而無法入題：時",
+      "note": "斷詞器無法把這個詞單獨還原出來（同形異讀或助詞），因而無法入題：時",
       "items": [
         {
           "kind": "quoted",
@@ -20523,7 +20594,7 @@
       "lesson": 47,
       "volume": 1,
       "id": "ja-lesson-047",
-      "note": "本課教過的詞寫不出能記到它的句子，因而無法入題：しか",
+      "note": "斷詞器無法把這個詞單獨還原出來（同形異讀或助詞），因而無法入題：しか",
       "items": [
         {
           "kind": "quoted",
@@ -20570,6 +20641,51 @@
         },
         {
           "kind": "quoted",
+          "ref": "楠山正雄〈舌切りすずめ〉",
+          "text": "という声が聞こえました。",
+          "answerKeyRef": "楠山正雄〈舌切りすずめ〉",
+          "answerKeyEdition": "無既有中譯，解答本需自譯",
+          "answerKeyScope": "sentence",
+          "targetWords": [
+            {
+              "ordinal": 933,
+              "headword": "声",
+              "kana": "こえ",
+              "glossZh": "聲音、嗓音",
+              "pos": "名詞"
+            },
+            {
+              "ordinal": 926,
+              "headword": "聞こえます",
+              "kana": "きこえます",
+              "glossZh": "聽得見、聞得到",
+              "pos": "動詞"
+            }
+          ],
+          "verification": {
+            "tokenCount": 8,
+            "words": 6,
+            "unattested": [],
+            "untaught": [
+              "という"
+            ],
+            "unseenForms": [],
+            "grammar": [
+              "が",
+              "ます",
+              "た"
+            ],
+            "vocabulary": [
+              "こえ|声",
+              "きこえます|聞こえます"
+            ],
+            "passed": true
+          },
+          "reviewedBy": "corpus",
+          "no": 2
+        },
+        {
+          "kind": "quoted",
           "ref": "倉田百三〈生活と一枚の宗教〉",
           "text": "見えている。",
           "answerKeyRef": "倉田百三〈生活と一枚の宗教〉",
@@ -20596,40 +20712,6 @@
             "vocabulary": [
               "みえます|見えます",
               "います|"
-            ],
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 2
-        },
-        {
-          "kind": "quoted",
-          "ref": "鈴木三重吉〈赤い鳥〉",
-          "text": "そして鳥は？",
-          "answerKeyRef": "鈴木三重吉〈赤い鳥〉",
-          "answerKeyEdition": "無既有中譯，解答本需自譯",
-          "answerKeyScope": "sentence",
-          "targetWords": [
-            {
-              "ordinal": 932,
-              "headword": "鳥",
-              "kana": "とり",
-              "glossZh": "鳥",
-              "pos": "名詞"
-            }
-          ],
-          "verification": {
-            "tokenCount": 4,
-            "words": 3,
-            "unattested": [],
-            "untaught": [],
-            "unseenForms": [],
-            "grammar": [
-              "は"
-            ],
-            "vocabulary": [
-              "そして|",
-              "とり|鳥"
             ],
             "passed": true
           },
@@ -20966,7 +21048,7 @@
       "lesson": 48,
       "volume": 1,
       "id": "ja-lesson-048",
-      "note": "本課教過的詞寫不出能記到它的句子，因而無法入題：家",
+      "note": "斷詞器無法把這個詞單獨還原出來（同形異讀或助詞），因而無法入題：家",
       "items": [
         {
           "kind": "quoted",
@@ -22279,7 +22361,7 @@
       "lesson": 51,
       "volume": 2,
       "id": "ja-lesson-051",
-      "note": "本課教過的詞寫不出能記到它的句子，因而無法入題：開きます",
+      "note": "斷詞器無法把這個詞單獨還原出來（同形異讀或助詞），因而無法入題：開きます",
       "items": [
         {
           "kind": "quoted",
@@ -24026,7 +24108,7 @@
       "lesson": 55,
       "volume": 2,
       "id": "ja-lesson-055",
-      "note": "本課教過的詞寫不出能記到它的句子，因而無法入題：月",
+      "note": "斷詞器無法把這個詞單獨還原出來（同形異讀或助詞），因而無法入題：月",
       "items": [
         {
           "kind": "quoted",
@@ -24877,7 +24959,7 @@
       "lesson": 57,
       "volume": 2,
       "id": "ja-lesson-057",
-      "note": "本課教過的詞寫不出能記到它的句子，因而無法入題：ひきます",
+      "note": "斷詞器無法把這個詞單獨還原出來（同形異讀或助詞），因而無法入題：ひきます",
       "items": [
         {
           "kind": "quoted",
@@ -25709,7 +25791,7 @@
       "lesson": 59,
       "volume": 2,
       "id": "ja-lesson-059",
-      "note": "本課教過的詞寫不出能記到它的句子，因而無法入題：遅く",
+      "note": "斷詞器無法把這個詞單獨還原出來（同形異讀或助詞），因而無法入題：遅く",
       "items": [
         {
           "kind": "quoted",
@@ -26555,7 +26637,7 @@
       "lesson": 61,
       "volume": 2,
       "id": "ja-lesson-061",
-      "note": "本課教過的詞寫不出能記到它的句子，因而無法入題：明日",
+      "note": "斷詞器無法把這個詞單獨還原出來（同形異讀或助詞），因而無法入題：明日",
       "items": [
         {
           "kind": "quoted",
@@ -26594,6 +26676,43 @@
         },
         {
           "kind": "quoted",
+          "ref": "柳田国男〈山の人生〉",
+          "text": "その跡であるという。",
+          "answerKeyRef": "柳田国男〈山の人生〉",
+          "answerKeyEdition": "無既有中譯，解答本需自譯",
+          "answerKeyScope": "sentence",
+          "targetWords": [
+            {
+              "ordinal": 1205,
+              "headword": "あと",
+              "kana": "あと",
+              "glossZh": "後、以後",
+              "pos": "名詞"
+            }
+          ],
+          "verification": {
+            "tokenCount": 7,
+            "words": 5,
+            "unattested": [],
+            "untaught": [
+              "という"
+            ],
+            "unseenForms": [],
+            "grammar": [
+              "だ"
+            ],
+            "vocabulary": [
+              "その|",
+              "あと|",
+              "ございます|"
+            ],
+            "passed": true
+          },
+          "reviewedBy": "corpus",
+          "no": 2
+        },
+        {
+          "kind": "quoted",
           "ref": "賀川豊彦〈空中征服〉",
           "text": "警察を呼ぶものがある。",
           "answerKeyRef": "賀川豊彦〈空中征服〉",
@@ -26623,43 +26742,6 @@
               "よびます|呼びます",
               "もの|物",
               "ございます|"
-            ],
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 2
-        },
-        {
-          "kind": "quoted",
-          "ref": "楠山正雄〈家なき子〉",
-          "text": "規則は知っているだろう。",
-          "answerKeyRef": "楠山正雄〈家なき子〉",
-          "answerKeyEdition": "無既有中譯，解答本需自譯",
-          "answerKeyScope": "sentence",
-          "targetWords": [
-            {
-              "ordinal": 1214,
-              "headword": "規則",
-              "kana": "きそく",
-              "glossZh": "規則",
-              "pos": "名詞"
-            }
-          ],
-          "verification": {
-            "tokenCount": 7,
-            "words": 6,
-            "unattested": [],
-            "untaught": [],
-            "unseenForms": [],
-            "grammar": [
-              "は",
-              "て",
-              "だ"
-            ],
-            "vocabulary": [
-              "きそく|規則",
-              "しります|知ります",
-              "います|"
             ],
             "passed": true
           },
@@ -26724,8 +26806,15 @@
         },
         {
           "kind": "composed",
-          "text": "あとは以内です。できるだけです。",
+          "text": "規則のあとは以内です。できるだけです。",
           "targetWords": [
+            {
+              "ordinal": 1214,
+              "headword": "規則",
+              "kana": "きそく",
+              "glossZh": "規則",
+              "pos": "名詞"
+            },
             {
               "ordinal": 1205,
               "headword": "あと",
@@ -26749,17 +26838,19 @@
             }
           ],
           "verification": {
-            "tokenCount": 9,
-            "words": 6,
+            "tokenCount": 11,
+            "words": 8,
             "unattested": [],
             "untaught": [],
             "unseenForms": [],
             "grammar": [
+              "の",
               "は",
               "です",
               "です"
             ],
             "vocabulary": [
+              "きそく|規則",
               "あと|",
               "いない|以内",
               "できるだけ|"
@@ -26998,7 +27089,7 @@
       "lesson": 62,
       "volume": 2,
       "id": "ja-lesson-062",
-      "note": "本課教過的詞寫不出能記到它的句子，因而無法入題：短く",
+      "note": "斷詞器無法把這個詞單獨還原出來（同形異讀或助詞），因而無法入題：短く",
       "items": [
         {
           "kind": "quoted",
@@ -27425,7 +27516,7 @@
       "lesson": 63,
       "volume": 2,
       "id": "ja-lesson-063",
-      "note": "本課教過的詞寫不出能記到它的句子，因而無法入題：か",
+      "note": "斷詞器無法把這個詞單獨還原出來（同形異讀或助詞），因而無法入題：か",
       "items": [
         {
           "kind": "quoted",
@@ -27894,7 +27985,7 @@
       "lesson": 64,
       "volume": 2,
       "id": "ja-lesson-064",
-      "note": "本課教過的詞寫不出能記到它的句子，因而無法入題：たてます、分",
+      "note": "斷詞器無法把這個詞單獨還原出來（同形異讀或助詞），因而無法入題：たてます",
       "items": [
         {
           "kind": "quoted",
@@ -27966,34 +28057,34 @@
         },
         {
           "kind": "quoted",
-          "ref": "与謝野晶子〈晶子詩篇全集〉",
-          "text": "材料に由りません。",
-          "answerKeyRef": "与謝野晶子〈晶子詩篇全集〉",
+          "ref": "与謝野晶子〈源氏物語〉",
+          "text": "という文である。",
+          "answerKeyRef": "与謝野晶子〈源氏物語〉",
           "answerKeyEdition": "無既有中譯，解答本需自譯",
           "answerKeyScope": "sentence",
           "targetWords": [
             {
-              "ordinal": 1272,
-              "headword": "材料",
-              "kana": "ざいりょう",
-              "glossZh": "材料",
+              "ordinal": 1276,
+              "headword": "分",
+              "kana": "ぶん",
+              "glossZh": "份",
               "pos": "名詞"
             }
           ],
           "verification": {
             "tokenCount": 6,
-            "words": 5,
+            "words": 4,
             "unattested": [],
-            "untaught": [],
+            "untaught": [
+              "という"
+            ],
             "unseenForms": [],
             "grammar": [
-              "に",
-              "ます",
-              "ぬ"
+              "だ"
             ],
             "vocabulary": [
-              "ざいりょう|材料",
-              "よる|夜"
+              "ぶん|分",
+              "ございます|"
             ],
             "passed": true
           },
@@ -28171,8 +28262,15 @@
         },
         {
           "kind": "composed",
-          "text": "調味料と丼と親子丼です。",
+          "text": "材料と調味料と丼と親子丼です。",
           "targetWords": [
+            {
+              "ordinal": 1272,
+              "headword": "材料",
+              "kana": "ざいりょう",
+              "glossZh": "材料",
+              "pos": "名詞"
+            },
             {
               "ordinal": 1273,
               "headword": "調味料",
@@ -28196,17 +28294,19 @@
             }
           ],
           "verification": {
-            "tokenCount": 9,
-            "words": 6,
+            "tokenCount": 11,
+            "words": 8,
             "unattested": [],
             "untaught": [],
             "unseenForms": [],
             "grammar": [
               "と",
               "と",
+              "と",
               "です"
             ],
             "vocabulary": [
+              "ざいりょう|材料",
               "ちょうみりょう|調味料",
               "どんぶり|丼",
               "おやこどんぶり|親子丼"
@@ -28304,7 +28404,7 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 18,
+        "practised": 19,
         "notPractised": [],
         "notAttested": [
           {
@@ -28313,13 +28413,6 @@
             "kana": "たてます",
             "glossZh": "建立、豎起",
             "pos": "動詞"
-          },
-          {
-            "ordinal": 1276,
-            "headword": "分",
-            "kana": "ぶん",
-            "glossZh": "份",
-            "pos": "名詞"
           }
         ]
       }
@@ -28328,7 +28421,7 @@
       "lesson": 65,
       "volume": 2,
       "id": "ja-lesson-065",
-      "note": "本課教過的詞寫不出能記到它的句子，因而無法入題：ネクタイを します",
+      "note": "斷詞器無法把這個詞單獨還原出來（同形異讀或助詞），因而無法入題：ネクタイを します",
       "items": [
         {
           "kind": "quoted",
@@ -32644,7 +32737,7 @@
       "lesson": 75,
       "volume": 2,
       "id": "ja-lesson-075",
-      "note": "本課教過的詞寫不出能記到它的句子，因而無法入題：号",
+      "note": "斷詞器無法把這個詞單獨還原出來（同形異讀或助詞），因而無法入題：号",
       "items": [
         {
           "kind": "quoted",
@@ -33933,7 +34026,7 @@
       "lesson": 78,
       "volume": 2,
       "id": "ja-lesson-078",
-      "note": "本課教過的詞寫不出能記到它的句子，因而無法入題：伯父/叔父さん、伯母/叔母さん",
+      "note": "斷詞器無法把這個詞單獨還原出來（同形異讀或助詞），因而無法入題：伯父/叔父さん、伯母/叔母さん",
       "items": [
         {
           "kind": "quoted",
@@ -34403,7 +34496,7 @@
       "lesson": 79,
       "volume": 2,
       "id": "ja-lesson-079",
-      "note": "本課教過的詞寫不出能記到它的句子，因而無法入題：楽しく",
+      "note": "斷詞器無法把這個詞單獨還原出來（同形異讀或助詞），因而無法入題：楽しく",
       "items": [
         {
           "kind": "quoted",
@@ -35731,7 +35824,7 @@
       "lesson": 82,
       "volume": 2,
       "id": "ja-lesson-082",
-      "note": "本課教過的詞寫不出能記到它的句子，因而無法入題：巧い/上手い",
+      "note": "斷詞器無法把這個詞單獨還原出來（同形異讀或助詞），因而無法入題：巧い/上手い",
       "items": [
         {
           "kind": "quoted",
@@ -36609,7 +36702,7 @@
       "lesson": 84,
       "volume": 2,
       "id": "ja-lesson-084",
-      "note": "本課教過的詞寫不出能記到它的句子，因而無法入題：(濃度が)薄い",
+      "note": "斷詞器無法把這個詞單獨還原出來（同形異讀或助詞），因而無法入題：(濃度が)薄い",
       "items": [
         {
           "kind": "quoted",
@@ -38305,7 +38398,7 @@
       "lesson": 88,
       "volume": 2,
       "id": "ja-lesson-088",
-      "note": "本課教過的詞寫不出能記到它的句子，因而無法入題：でしょうか",
+      "note": "斷詞器無法把這個詞單獨還原出來（同形異讀或助詞），因而無法入題：でしょうか",
       "items": [
         {
           "kind": "quoted",
@@ -40844,7 +40937,7 @@
       "lesson": 94,
       "volume": 2,
       "id": "ja-lesson-094",
-      "note": "本課教過的詞寫不出能記到它的句子，因而無法入題：頃、私",
+      "note": "斷詞器無法把這個詞單獨還原出來（同形異讀或助詞），因而無法入題：頃、私",
       "items": [
         {
           "kind": "quoted",

@@ -112,7 +112,9 @@ def unreachable_words(items, known, attestation, taught_forms) -> set[int]:
             if not ((keys & item.keys) or (fold_key(bare(printed)) in item.written_keys)):
                 continue
             report = checker.verify_sentence(printed, known, attestation, taught_forms)
-            if not report["untaught"] and not report["unattested"]:
+            # 只問語料寫不寫得出來。「已教過」自 2026-09-16 起不再是退回的理由，
+            # 也就不再是「練不到」的理由。
+            if not report["unattested"]:
                 reachable = True
                 break
         if not reachable:
@@ -187,7 +189,7 @@ def build_volume(volume: int) -> dict[str, Any]:
             notes.append("本課無可用經典原句，十題全由自撰題補")
         if unreachable:
             notes.append(
-                "本冊語料中無可用字形，因而無法入題："
+                "本讀本語料中無可用字形，因而無法入題："
                 + "、".join(item.headword for item in unreachable)
             )
         lessons_out.append({

@@ -123,7 +123,8 @@ def creditable(entry: dict[str, Any], check) -> bool:
     """
     for frame in (f"私の{checker.headword(entry)}です。", f"私は{checker.headword(entry)}です。"):
         report = check(frame)
-        if report["untaught"] or report["unattested"]:
+        # 只問斷詞器認不認得這個詞。「已教過」自 2026-09-16 起不再是退回的理由。
+        if report["unattested"]:
             return False
         if checker.entry_key(entry) not in report["vocabulary"]:
             return False
@@ -245,7 +246,7 @@ def build(write: bool, only: range | None = None) -> int:
             notes.append("本課無可用經典原句，十題全由自撰題補")
         if unreachable:
             notes.append(
-                "本課教過的詞寫不出能記到它的句子，因而無法入題："
+                "斷詞器無法把這個詞單獨還原出來（同形異讀或助詞），因而無法入題："
                 + "、".join(checker.headword(entry) for entry in unreachable)
             )
         lessons_out.append({

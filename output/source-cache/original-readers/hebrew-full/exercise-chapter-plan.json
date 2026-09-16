@@ -1,0 +1,926 @@
+{
+  "note": "由 exercises.json 的出處合成",
+  "chapters": [
+    {
+      "osisBook": "Job",
+      "chapter": 1
+    },
+    {
+      "osisBook": "1Chr",
+      "chapter": 22
+    },
+    {
+      "osisBook": "1Kgs",
+      "chapter": 10
+    },
+    {
+      "osisBook": "Gen",
+      "chapter": 24
+    },
+    {
+      "osisBook": "1Sam",
+      "chapter": 2
+    },
+    {
+      "osisBook": "1Kgs",
+      "chapter": 1
+    },
+    {
+      "osisBook": "2Chr",
+      "chapter": 14
+    },
+    {
+      "osisBook": "Ezra",
+      "chapter": 6
+    },
+    {
+      "osisBook": "Neh",
+      "chapter": 10
+    },
+    {
+      "osisBook": "2Kgs",
+      "chapter": 17
+    },
+    {
+      "osisBook": "2Chr",
+      "chapter": 17
+    },
+    {
+      "osisBook": "Zeph",
+      "chapter": 1
+    },
+    {
+      "osisBook": "1Kgs",
+      "chapter": 18
+    },
+    {
+      "osisBook": "1Chr",
+      "chapter": 29
+    },
+    {
+      "osisBook": "Mic",
+      "chapter": 7
+    },
+    {
+      "osisBook": "1Chr",
+      "chapter": 9
+    },
+    {
+      "osisBook": "Deut",
+      "chapter": 17
+    },
+    {
+      "osisBook": "1Sam",
+      "chapter": 12
+    },
+    {
+      "osisBook": "Esth",
+      "chapter": 1
+    },
+    {
+      "osisBook": "Exod",
+      "chapter": 14
+    },
+    {
+      "osisBook": "1Kgs",
+      "chapter": 7
+    },
+    {
+      "osisBook": "Zech",
+      "chapter": 5
+    },
+    {
+      "osisBook": "1Kgs",
+      "chapter": 19
+    },
+    {
+      "osisBook": "1Chr",
+      "chapter": 28
+    },
+    {
+      "osisBook": "1Chr",
+      "chapter": 16
+    },
+    {
+      "osisBook": "2Sam",
+      "chapter": 13
+    },
+    {
+      "osisBook": "1Sam",
+      "chapter": 5
+    },
+    {
+      "osisBook": "Hag",
+      "chapter": 1
+    },
+    {
+      "osisBook": "1Kgs",
+      "chapter": 13
+    },
+    {
+      "osisBook": "1Kgs",
+      "chapter": 15
+    },
+    {
+      "osisBook": "Ps",
+      "chapter": 37
+    },
+    {
+      "osisBook": "Gen",
+      "chapter": 7
+    },
+    {
+      "osisBook": "1Kgs",
+      "chapter": 11
+    },
+    {
+      "osisBook": "Prov",
+      "chapter": 16
+    },
+    {
+      "osisBook": "2Kgs",
+      "chapter": 6
+    },
+    {
+      "osisBook": "Ps",
+      "chapter": 119
+    },
+    {
+      "osisBook": "1Kgs",
+      "chapter": 14
+    },
+    {
+      "osisBook": "1Chr",
+      "chapter": 17
+    },
+    {
+      "osisBook": "Deut",
+      "chapter": 32
+    },
+    {
+      "osisBook": "Exod",
+      "chapter": 18
+    },
+    {
+      "osisBook": "Ps",
+      "chapter": 77
+    },
+    {
+      "osisBook": "Zeph",
+      "chapter": 2
+    },
+    {
+      "osisBook": "Exod",
+      "chapter": 16
+    },
+    {
+      "osisBook": "Isa",
+      "chapter": 41
+    },
+    {
+      "osisBook": "1Sam",
+      "chapter": 25
+    },
+    {
+      "osisBook": "1Sam",
+      "chapter": 21
+    },
+    {
+      "osisBook": "Amos",
+      "chapter": 3
+    },
+    {
+      "osisBook": "1Sam",
+      "chapter": 20
+    },
+    {
+      "osisBook": "Jer",
+      "chapter": 48
+    },
+    {
+      "osisBook": "Ezek",
+      "chapter": 20
+    },
+    {
+      "osisBook": "Job",
+      "chapter": 12
+    },
+    {
+      "osisBook": "Ezek",
+      "chapter": 43
+    },
+    {
+      "osisBook": "Esth",
+      "chapter": 2
+    },
+    {
+      "osisBook": "1Chr",
+      "chapter": 21
+    },
+    {
+      "osisBook": "Dan",
+      "chapter": 11
+    },
+    {
+      "osisBook": "Josh",
+      "chapter": 24
+    },
+    {
+      "osisBook": "2Sam",
+      "chapter": 17
+    },
+    {
+      "osisBook": "Deut",
+      "chapter": 24
+    },
+    {
+      "osisBook": "2Kgs",
+      "chapter": 25
+    },
+    {
+      "osisBook": "Num",
+      "chapter": 25
+    },
+    {
+      "osisBook": "Deut",
+      "chapter": 13
+    },
+    {
+      "osisBook": "Neh",
+      "chapter": 13
+    },
+    {
+      "osisBook": "Gen",
+      "chapter": 32
+    },
+    {
+      "osisBook": "Gen",
+      "chapter": 18
+    },
+    {
+      "osisBook": "Hos",
+      "chapter": 8
+    },
+    {
+      "osisBook": "Deut",
+      "chapter": 22
+    },
+    {
+      "osisBook": "Ezek",
+      "chapter": 27
+    },
+    {
+      "osisBook": "Ps",
+      "chapter": 106
+    },
+    {
+      "osisBook": "Gen",
+      "chapter": 43
+    },
+    {
+      "osisBook": "Gen",
+      "chapter": 44
+    },
+    {
+      "osisBook": "Exod",
+      "chapter": 1
+    },
+    {
+      "osisBook": "Deut",
+      "chapter": 29
+    },
+    {
+      "osisBook": "Isa",
+      "chapter": 19
+    },
+    {
+      "osisBook": "Isa",
+      "chapter": 58
+    },
+    {
+      "osisBook": "Ps",
+      "chapter": 116
+    },
+    {
+      "osisBook": "Ps",
+      "chapter": 115
+    },
+    {
+      "osisBook": "Ezek",
+      "chapter": 33
+    },
+    {
+      "osisBook": "Deut",
+      "chapter": 12
+    },
+    {
+      "osisBook": "Eccl",
+      "chapter": 9
+    },
+    {
+      "osisBook": "Job",
+      "chapter": 21
+    },
+    {
+      "osisBook": "Prov",
+      "chapter": 17
+    },
+    {
+      "osisBook": "Ps",
+      "chapter": 26
+    },
+    {
+      "osisBook": "Judg",
+      "chapter": 3
+    },
+    {
+      "osisBook": "Prov",
+      "chapter": 31
+    },
+    {
+      "osisBook": "Jer",
+      "chapter": 21
+    },
+    {
+      "osisBook": "Ps",
+      "chapter": 89
+    },
+    {
+      "osisBook": "Lev",
+      "chapter": 11
+    },
+    {
+      "osisBook": "Ps",
+      "chapter": 33
+    },
+    {
+      "osisBook": "Joel",
+      "chapter": 1
+    },
+    {
+      "osisBook": "Gen",
+      "chapter": 39
+    },
+    {
+      "osisBook": "Hos",
+      "chapter": 14
+    },
+    {
+      "osisBook": "Num",
+      "chapter": 2
+    },
+    {
+      "osisBook": "Deut",
+      "chapter": 8
+    },
+    {
+      "osisBook": "Prov",
+      "chapter": 11
+    },
+    {
+      "osisBook": "Ps",
+      "chapter": 21
+    },
+    {
+      "osisBook": "Exod",
+      "chapter": 12
+    },
+    {
+      "osisBook": "1Kgs",
+      "chapter": 3
+    },
+    {
+      "osisBook": "2Sam",
+      "chapter": 11
+    },
+    {
+      "osisBook": "Ps",
+      "chapter": 34
+    },
+    {
+      "osisBook": "Job",
+      "chapter": 23
+    },
+    {
+      "osisBook": "Lev",
+      "chapter": 17
+    },
+    {
+      "osisBook": "Num",
+      "chapter": 9
+    },
+    {
+      "osisBook": "2Kgs",
+      "chapter": 9
+    },
+    {
+      "osisBook": "Ezek",
+      "chapter": 46
+    },
+    {
+      "osisBook": "2Kgs",
+      "chapter": 4
+    },
+    {
+      "osisBook": "Deut",
+      "chapter": 20
+    },
+    {
+      "osisBook": "Prov",
+      "chapter": 18
+    },
+    {
+      "osisBook": "Ps",
+      "chapter": 78
+    },
+    {
+      "osisBook": "Ezek",
+      "chapter": 7
+    },
+    {
+      "osisBook": "Joel",
+      "chapter": 3
+    },
+    {
+      "osisBook": "Hab",
+      "chapter": 3
+    },
+    {
+      "osisBook": "Job",
+      "chapter": 13
+    },
+    {
+      "osisBook": "Lam",
+      "chapter": 3
+    },
+    {
+      "osisBook": "2Kgs",
+      "chapter": 19
+    },
+    {
+      "osisBook": "2Chr",
+      "chapter": 25
+    },
+    {
+      "osisBook": "2Chr",
+      "chapter": 31
+    },
+    {
+      "osisBook": "Ezek",
+      "chapter": 11
+    },
+    {
+      "osisBook": "Ezek",
+      "chapter": 34
+    },
+    {
+      "osisBook": "Prov",
+      "chapter": 29
+    },
+    {
+      "osisBook": "Ezek",
+      "chapter": 24
+    },
+    {
+      "osisBook": "Judg",
+      "chapter": 16
+    },
+    {
+      "osisBook": "Prov",
+      "chapter": 23
+    },
+    {
+      "osisBook": "Ps",
+      "chapter": 118
+    },
+    {
+      "osisBook": "Ezek",
+      "chapter": 16
+    },
+    {
+      "osisBook": "Job",
+      "chapter": 31
+    },
+    {
+      "osisBook": "Dan",
+      "chapter": 10
+    },
+    {
+      "osisBook": "Job",
+      "chapter": 7
+    },
+    {
+      "osisBook": "Eccl",
+      "chapter": 5
+    },
+    {
+      "osisBook": "1Chr",
+      "chapter": 27
+    },
+    {
+      "osisBook": "Prov",
+      "chapter": 30
+    },
+    {
+      "osisBook": "Job",
+      "chapter": 14
+    },
+    {
+      "osisBook": "Josh",
+      "chapter": 2
+    },
+    {
+      "osisBook": "Hos",
+      "chapter": 9
+    },
+    {
+      "osisBook": "Lev",
+      "chapter": 3
+    },
+    {
+      "osisBook": "Lam",
+      "chapter": 2
+    },
+    {
+      "osisBook": "2Kgs",
+      "chapter": 20
+    },
+    {
+      "osisBook": "Ezek",
+      "chapter": 44
+    },
+    {
+      "osisBook": "2Chr",
+      "chapter": 35
+    },
+    {
+      "osisBook": "Dan",
+      "chapter": 12
+    },
+    {
+      "osisBook": "Job",
+      "chapter": 5
+    },
+    {
+      "osisBook": "Gen",
+      "chapter": 31
+    },
+    {
+      "osisBook": "Ezek",
+      "chapter": 39
+    },
+    {
+      "osisBook": "Neh",
+      "chapter": 7
+    },
+    {
+      "osisBook": "Num",
+      "chapter": 7
+    },
+    {
+      "osisBook": "Ezek",
+      "chapter": 42
+    },
+    {
+      "osisBook": "Num",
+      "chapter": 19
+    },
+    {
+      "osisBook": "Ezek",
+      "chapter": 19
+    },
+    {
+      "osisBook": "Ps",
+      "chapter": 3
+    },
+    {
+      "osisBook": "Job",
+      "chapter": 11
+    },
+    {
+      "osisBook": "Num",
+      "chapter": 15
+    },
+    {
+      "osisBook": "Mic",
+      "chapter": 6
+    },
+    {
+      "osisBook": "Gen",
+      "chapter": 23
+    },
+    {
+      "osisBook": "Job",
+      "chapter": 22
+    },
+    {
+      "osisBook": "Ps",
+      "chapter": 105
+    },
+    {
+      "osisBook": "Lev",
+      "chapter": 23
+    },
+    {
+      "osisBook": "1Sam",
+      "chapter": 30
+    },
+    {
+      "osisBook": "Isa",
+      "chapter": 26
+    },
+    {
+      "osisBook": "Exod",
+      "chapter": 23
+    },
+    {
+      "osisBook": "Prov",
+      "chapter": 7
+    },
+    {
+      "osisBook": "2Sam",
+      "chapter": 22
+    },
+    {
+      "osisBook": "2Chr",
+      "chapter": 12
+    },
+    {
+      "osisBook": "Ezek",
+      "chapter": 14
+    },
+    {
+      "osisBook": "Num",
+      "chapter": 29
+    },
+    {
+      "osisBook": "Ps",
+      "chapter": 66
+    },
+    {
+      "osisBook": "Job",
+      "chapter": 16
+    },
+    {
+      "osisBook": "Job",
+      "chapter": 19
+    },
+    {
+      "osisBook": "1Sam",
+      "chapter": 15
+    },
+    {
+      "osisBook": "Ezek",
+      "chapter": 28
+    },
+    {
+      "osisBook": "Lev",
+      "chapter": 18
+    },
+    {
+      "osisBook": "Ps",
+      "chapter": 71
+    },
+    {
+      "osisBook": "Isa",
+      "chapter": 5
+    },
+    {
+      "osisBook": "Ezek",
+      "chapter": 40
+    },
+    {
+      "osisBook": "2Sam",
+      "chapter": 15
+    },
+    {
+      "osisBook": "Prov",
+      "chapter": 1
+    },
+    {
+      "osisBook": "Job",
+      "chapter": 15
+    },
+    {
+      "osisBook": "Job",
+      "chapter": 35
+    },
+    {
+      "osisBook": "Gen",
+      "chapter": 37
+    },
+    {
+      "osisBook": "Job",
+      "chapter": 33
+    },
+    {
+      "osisBook": "Ps",
+      "chapter": 111
+    },
+    {
+      "osisBook": "Deut",
+      "chapter": 21
+    },
+    {
+      "osisBook": "Isa",
+      "chapter": 55
+    },
+    {
+      "osisBook": "Lev",
+      "chapter": 22
+    },
+    {
+      "osisBook": "Prov",
+      "chapter": 2
+    },
+    {
+      "osisBook": "Prov",
+      "chapter": 4
+    },
+    {
+      "osisBook": "Ps",
+      "chapter": 107
+    },
+    {
+      "osisBook": "Ps",
+      "chapter": 104
+    },
+    {
+      "osisBook": "Lev",
+      "chapter": 5
+    },
+    {
+      "osisBook": "Job",
+      "chapter": 10
+    },
+    {
+      "osisBook": "Lam",
+      "chapter": 5
+    },
+    {
+      "osisBook": "Jer",
+      "chapter": 49
+    },
+    {
+      "osisBook": "Deut",
+      "chapter": 3
+    },
+    {
+      "osisBook": "Job",
+      "chapter": 27
+    },
+    {
+      "osisBook": "Jer",
+      "chapter": 11
+    },
+    {
+      "osisBook": "Prov",
+      "chapter": 3
+    },
+    {
+      "osisBook": "Exod",
+      "chapter": 38
+    },
+    {
+      "osisBook": "Ps",
+      "chapter": 109
+    },
+    {
+      "osisBook": "Job",
+      "chapter": 38
+    },
+    {
+      "osisBook": "Isa",
+      "chapter": 49
+    },
+    {
+      "osisBook": "Ps",
+      "chapter": 31
+    },
+    {
+      "osisBook": "Isa",
+      "chapter": 10
+    },
+    {
+      "osisBook": "Exod",
+      "chapter": 22
+    },
+    {
+      "osisBook": "Isa",
+      "chapter": 43
+    },
+    {
+      "osisBook": "Isa",
+      "chapter": 1
+    },
+    {
+      "osisBook": "Num",
+      "chapter": 10
+    },
+    {
+      "osisBook": "Gen",
+      "chapter": 27
+    },
+    {
+      "osisBook": "Mic",
+      "chapter": 4
+    },
+    {
+      "osisBook": "Ps",
+      "chapter": 49
+    },
+    {
+      "osisBook": "Job",
+      "chapter": 29
+    },
+    {
+      "osisBook": "Ps",
+      "chapter": 76
+    },
+    {
+      "osisBook": "Job",
+      "chapter": 39
+    },
+    {
+      "osisBook": "Hab",
+      "chapter": 1
+    },
+    {
+      "osisBook": "Ps",
+      "chapter": 103
+    },
+    {
+      "osisBook": "Isa",
+      "chapter": 28
+    },
+    {
+      "osisBook": "Nah",
+      "chapter": 1
+    },
+    {
+      "osisBook": "Job",
+      "chapter": 40
+    },
+    {
+      "osisBook": "Prov",
+      "chapter": 14
+    },
+    {
+      "osisBook": "Isa",
+      "chapter": 42
+    },
+    {
+      "osisBook": "Isa",
+      "chapter": 63
+    },
+    {
+      "osisBook": "Ezek",
+      "chapter": 25
+    },
+    {
+      "osisBook": "Ezek",
+      "chapter": 23
+    },
+    {
+      "osisBook": "Prov",
+      "chapter": 21
+    },
+    {
+      "osisBook": "Ps",
+      "chapter": 83
+    },
+    {
+      "osisBook": "Prov",
+      "chapter": 20
+    },
+    {
+      "osisBook": "Prov",
+      "chapter": 27
+    },
+    {
+      "osisBook": "Deut",
+      "chapter": 11
+    },
+    {
+      "osisBook": "Ps",
+      "chapter": 102
+    },
+    {
+      "osisBook": "Ps",
+      "chapter": 69
+    },
+    {
+      "osisBook": "Joel",
+      "chapter": 2
+    },
+    {
+      "osisBook": "Lev",
+      "chapter": 27
+    },
+    {
+      "osisBook": "Job",
+      "chapter": 36
+    }
+  ],
+  "memoryVerses": []
+}

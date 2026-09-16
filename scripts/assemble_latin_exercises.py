@@ -133,8 +133,10 @@ def unreachable_words(
                 lemmaless_by_prefix.setdefault(key[:length], set()).add(key)
 
     def writable(key: str) -> bool:
-        part = {"key": key, "lemmas": corpus.lemmas(key) | tagger.lemmas_for_key(key)}
-        return checker.part_is_taught(part, taught_lemmas, taught_keys, taught_stems)
+        # 語料寫得出這個形就算數。「已教過」自 2026-09-16 起不再是退回的理由，
+        # 也就不再是「練不到」的理由——下冊三十六個詞裡多數是「字形在、詞位欄
+        # 是空的」，卡住它們的一直是這一關而不是語料。
+        return key in corpus.keys
 
     out: set[int] = set()
     for entry in entries:
@@ -172,8 +174,12 @@ def build_volume(volume: int) -> dict[str, Any]:
     for keys in appendix.values():
         appendix_all |= keys
 
+    # 🚨 只收本冊的詞條。序號是每冊各自從 1 數起的，收兩冊就會讓上冊第 n 個詞
+    # 的「練不到」蓋到下冊第 n 個詞頭上——下冊因此在書上印過
+    # 「本冊語料中無任何字形：medius」，而 medius 在武加大裡到處都是。二十二個
+    # 假的、十二個真的，混在同一行註記裡，每一頁看起來都正常。
     unreachable_ordinals = unreachable_words(
-        [entry for entry in entries if entry.volume <= volume], corpus, tagger, appendix_all
+        [entry for entry in entries if entry.volume == volume], corpus, tagger, appendix_all
     )
     lessons_out: list[dict[str, Any]] = []
     thin: list[int] = []
@@ -239,7 +245,7 @@ def build_volume(volume: int) -> dict[str, Any]:
             notes.append("本課無可用經典原句，十題全由自撰題補")
         if unreachable:
             notes.append(
-                "本冊語料中無任何字形，因而無法入題："
+                "本讀本語料中無任何字形，因而無法入題："
                 + "、".join(entry.headword for entry in unreachable)
             )
         lessons_out.append({

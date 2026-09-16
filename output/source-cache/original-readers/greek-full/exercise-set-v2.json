@@ -3,7 +3,7 @@
   "language": "Koine Greek",
   "languageCode": "grc",
   "volume": 2,
-  "generatedOn": "2026-09-15",
+  "generatedOn": "2026-09-16",
   "direction": "original-to-chinese",
   "itemsPerLesson": 10,
   "quotedPerLesson": 3,
@@ -7351,7 +7351,7 @@
     {
       "lesson": 14,
       "id": "grc-v2-lesson-14",
-      "note": "本冊語料中無可用字形，因而無法入題：πτελέα",
+      "note": "本讀本語料中無可用字形，因而無法入題：πτελέα",
       "items": [
         {
           "kind": "quoted",
@@ -13470,7 +13470,7 @@
     {
       "lesson": 25,
       "id": "grc-v2-lesson-25",
-      "note": "本冊語料中無可用字形，因而無法入題：ἀδίστακτος",
+      "note": "本讀本語料中無可用字形，因而無法入題：ἀδίστακτος",
       "items": [
         {
           "kind": "quoted",
@@ -16306,7 +16306,7 @@
     {
       "lesson": 30,
       "id": "grc-v2-lesson-30",
-      "note": "本冊語料中無可用字形，因而無法入題：μείρομαι",
+      "note": "本讀本語料中無可用字形，因而無法入題：μείρομαι",
       "items": [
         {
           "kind": "quoted",
@@ -19081,7 +19081,7 @@
     {
       "lesson": 35,
       "id": "grc-v2-lesson-35",
-      "note": "本冊語料中無可用字形，因而無法入題：πολυτέλεια",
+      "note": "本讀本語料中無可用字形，因而無法入題：πολυτέλεια",
       "items": [
         {
           "kind": "quoted",
@@ -22513,7 +22513,7 @@
     {
       "lesson": 41,
       "id": "grc-v2-lesson-41",
-      "note": "本冊語料中無可用字形，因而無法入題：μέλω",
+      "note": "本讀本語料中無可用字形，因而無法入題：μέλω",
       "items": [
         {
           "kind": "quoted",
@@ -27759,7 +27759,7 @@
     {
       "lesson": 50,
       "id": "grc-v2-lesson-50",
-      "note": "本冊語料中無可用字形，因而無法入題：βιβλάριον",
+      "note": "本讀本語料中無可用字形，因而無法入題：βιβλάριον",
       "items": [
         {
           "kind": "quoted",

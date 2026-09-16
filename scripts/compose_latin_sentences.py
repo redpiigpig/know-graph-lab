@@ -58,6 +58,15 @@ from build_latin_lemma_corpus import (  # noqa: E402
 CACHE = ROOT / "output" / "source-cache" / "original-readers" / "latin-full"
 COMPOSED = CACHE / "composed-sentences.json"
 
+# 擁有者 2026-09-16 的裁定：**「已教過」不再是退回的理由**。
+# 「按照程度來看，簡單的都可以先練習，沒有限制一定要本課教過的才行。」
+# 一個詞排在第幾課是難度排序的結果，不是它本身難不難；把課次當成硬牆，會讓
+# 一課的二十個詞裡有幾個永遠寫不進任何句子（拉丁 86、希臘 6、日文 34），
+# 而那些缺口補不起來的理由是排序，不是語言。
+#
+# 這一關沒有刪掉，只是不再擋人：`untaught` 仍照實記錄哪些詞超出本課進度，
+# 供日後要標注或分級時取用；`passed` 不再看它。語料那一關（第一道）沒有動——
+# 捏一個語料裡不存在的形，仍然是錯的。
 MIN_WORDS = 3
 MAX_WORDS = 8
 ITEMS_PER_LESSON = 10
@@ -196,7 +205,8 @@ def verify(
             lemma for row in readings for part in row["parts"] for lemma in part["lemmas"]
         }),
         "lengthOk": length_ok,
-        "passed": not unattested and not untaught and length_ok,
+        # 「已教過」不再擋人（見檔頭 2026-09-16 的裁定）；untaught 照記不照擋。
+        "passed": not unattested and length_ok,
     }
 
 
@@ -251,13 +261,23 @@ def practised(
 
 
 def corpora_for(volume: int) -> list[str]:
-    """Which corpus a volume's sentences are checked against.
+    """Which corpus a volume's sentences are checked against: both, either way.
 
-    The upper volume prints the Vulgate and nothing else, so a form must be in
-    the Vulgate.  The lower volume reads fifteen centuries of church Latin on
-    top of it, and its learner has the Vulgate behind them, so both count.
+    This used to be the Vulgate alone for the upper volume, on the reasoning
+    that the volume prints the Vulgate and nothing else.  That reasoning was
+    about what the volume *reads*; the gate is asking something else — did
+    anyone ever write this form, or did the sentence invent it.  For a
+    vocabulary that comes from Collins and an upper corpus that is Jerome, the
+    narrow scope put fifty of the thousand words out of reach permanently:
+    pāpa, liturgia, apostolicus, catholicus, episcopālis, psalmista — church
+    Latin, absent from the Vulgate, and printed at length in this very reader's
+    lower volume.  Forty-nine of those fifty are attested once the church corpus
+    counts, and none of them is a word the learner has no business meeting.
+
+    So the scope is the whole reader's corpus.  Gate one is unchanged in what it
+    refuses — a form nobody wrote is still refused — only in where it looks.
     """
-    return ["vulgate"] if volume == 1 else ["vulgate", "church"]
+    return ["vulgate", "church"]
 
 
 def main() -> None:
