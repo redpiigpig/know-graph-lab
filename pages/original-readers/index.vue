@@ -5,7 +5,7 @@
     <main class="mx-auto w-full max-w-6xl px-5 py-10 sm:px-8">
       <section class="overflow-hidden rounded-[2rem] border border-stone-300 bg-[#17231f] px-6 py-10 text-[#f7f0df] shadow-xl sm:px-10">
         <p class="mb-3 text-xs font-semibold tracking-[0.28em] text-amber-300">PRIVATE ORIGINAL-LANGUAGE LIBRARY</p>
-        <h1 class="max-w-3xl font-serif text-3xl font-semibold leading-tight sm:text-5xl">希伯來文・希臘文・拉丁文<br>三冊 B5 原文讀本</h1>
+        <h1 class="max-w-3xl font-serif text-3xl font-semibold leading-tight sm:text-5xl">希伯來文・希臘文・拉丁文・日文<br>四套 B5 原文讀本</h1>
         <p class="mt-5 max-w-2xl text-sm leading-7 text-stone-300">紙本採 JIS B5 直式鏡像邊界；線上版逐段對照原文、中文、詞形與校訂音訊。此區只供登入後私人使用，搜尋引擎不收錄。</p>
         <div class="mt-6 flex flex-wrap gap-2 text-xs">
           <span class="rounded-full border border-stone-500 px-3 py-1.5">182 × 257 mm</span>
@@ -14,7 +14,7 @@
         </div>
       </section>
 
-      <div v-if="pending" class="py-16 text-center text-sm text-stone-500">載入三冊目錄…</div>
+      <div v-if="pending" class="py-16 text-center text-sm text-stone-500">載入目錄…</div>
       <div v-else-if="error" class="my-8 rounded-xl border border-red-200 bg-red-50 p-5 text-sm text-red-700">{{ error }}</div>
       <section v-else class="mt-8 grid gap-5 lg:grid-cols-3">
         <article
@@ -81,6 +81,18 @@
       </section>
 
       <NuxtLink
+        to="/original-readers/ja-lessons"
+        class="mt-8 flex items-center justify-between gap-4 rounded-3xl border border-stone-300 bg-[#fffdf7] px-6 py-5 shadow-sm transition hover:-translate-y-0.5 hover:border-stone-500 hover:shadow-md"
+      >
+        <div>
+          <p class="text-[11px] font-bold tracking-[0.2em] text-stone-400">JAPANESE · 2 VOLUMES · 100 LESSONS</p>
+          <h2 class="mt-1 font-serif text-xl font-semibold">日文宗教學讀本</h2>
+          <p class="mt-1 text-sm text-stone-500">第一冊現代語、第二冊文語與舊字舊假名，各五十課、每課二十詞；逐詞對譯與十題翻譯練習。</p>
+        </div>
+        <span class="text-xl text-stone-400">→</span>
+      </NuxtLink>
+
+      <NuxtLink
         to="/original-readers/flashcards"
         class="mt-8 flex items-center justify-between gap-4 rounded-3xl border border-stone-300 bg-[#fffdf7] px-6 py-5 shadow-sm transition hover:-translate-y-0.5 hover:border-stone-500 hover:shadow-md"
       >
@@ -94,7 +106,7 @@
 
       <section class="mt-8 rounded-3xl border border-stone-300 bg-white/70 p-6 text-sm leading-7 text-stone-600">
         <h2 class="font-serif text-lg font-semibold text-stone-900">製作原則</h2>
-        <p class="mt-2">三冊正文保持各語言的歷史字形與校訂本標記。希伯來文完整保留馬所拉母音點，不以現代無母音拼法代替；希伯來文與希臘文以官方參考及校訂音軌承擔正式發音，拉丁文裝置語音也只作明確標示的臨時試聽。</p>
+        <p class="mt-2">四套正文都保持各語言的歷史字形與校訂本標記。希伯來文完整保留馬所拉母音點，不以現代無母音拼法代替；希伯來文與希臘文以官方參考及校訂音軌承擔正式發音，拉丁文裝置語音也只作明確標示的臨時試聽。</p>
       </section>
     </main>
   </div>
