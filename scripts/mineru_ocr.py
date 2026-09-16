@@ -231,20 +231,37 @@ def _pid_alive(pid: int) -> bool:
         return True          # 判不出來就當它還活著，寧可多等一輪
 
 
-def acquire_lock() -> bool:
-    """拿到 GPU 就回 True。持有者已經死掉的話接收這把鎖。"""
+def acquire_lock(wait_minutes: int = 0) -> bool:
+    """拿到 GPU 就回 True。持有者已經死掉的話接收這把鎖。
+
+    `wait_minutes > 0` 會等對方讓出來再上 —— 整夜跑的場合該等，不該因為
+    現在剛好有人在用就整晚什麼都不做。每日排程那種短班則維持不等（直接跳過）。
+    """
     LOCK.parent.mkdir(parents=True, exist_ok=True)
-    if LOCK.exists():
-        try:
-            old = int(LOCK.read_text(encoding="utf-8").strip().split()[0])
-        except Exception:
-            old = None
-        if old and old != os.getpid() and _pid_alive(old):
-            print(f"⛔ 另一個 MinerU 正在跑（PID {old}），這次跳過 —— GPU 只有 6GB，不能兩個一起擠")
+    deadline = time.time() + wait_minutes * 60
+    announced = False
+    while True:
+        old = None
+        if LOCK.exists():
+            try:
+                old = int(LOCK.read_text(encoding="utf-8").strip().split()[0])
+            except Exception:
+                old = None
+        if not (old and old != os.getpid() and _pid_alive(old)):
+            if old:
+                print(f"  （接收前一個已結束的 lock：PID {old}）")
+            LOCK.write_text(f"{os.getpid()} {time.strftime('%Y-%m-%d %H:%M:%S')}",
+                            encoding="utf-8")
+            return True
+        if time.time() >= deadline:
+            print(f"⛔ 另一個 MinerU 正在跑（PID {old}）"
+                  f"{'，等了 %d 分鐘仍沒讓出來' % wait_minutes if wait_minutes else '，這次跳過'}"
+                  f" —— GPU 只有 6GB，不能兩個一起擠")
             return False
-        print(f"  （接收前一個已結束的 lock：PID {old}）")
-    LOCK.write_text(f"{os.getpid()} {time.strftime('%Y-%m-%d %H:%M:%S')}", encoding="utf-8")
-    return True
+        if not announced:
+            print(f"  ⏳ GPU 被 PID {old} 佔著，最多等 {wait_minutes} 分鐘…", flush=True)
+            announced = True
+        time.sleep(60)
 
 
 def release_lock() -> None:
@@ -503,6 +520,9 @@ def main() -> int:
     q.add_argument("--max-minutes", type=int, default=0,
                    help="時間上限，到了就把其餘留給下一班（0＝不限）")
     q.add_argument("--lang", default="ch")
+    q.add_argument("--wait-gpu-minutes", type=int, default=0,
+                   help="GPU 被別的 MinerU 佔著時最多等幾分鐘（預設 0＝不等，直接回 4）。"
+                        "整夜跑該給大一點，別因為現在剛好有人在用就整晚什麼都不做")
     q.add_argument("--exclude", nargs="*", default=[], help="要跳過的 ebook id")
     q.add_argument("--max-db-mb", type=int, default=1100,
                    help="DB 超過這個大小就停（預設 1100 MB）。"
@@ -513,7 +533,7 @@ def main() -> int:
     # check 不碰 GPU，不用排隊
     if args.cmd == "check":
         return args.func(args)
-    if not acquire_lock():
+    if not acquire_lock(getattr(args, "wait_gpu_minutes", 0)):
         return 4
     try:
         return args.func(args)
