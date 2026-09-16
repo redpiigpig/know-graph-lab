@@ -429,6 +429,20 @@ python scripts/build_flashcards.py --deck eng --offset 500 --no-cover \
 
 🚨 `--no-cover` 時第一張正面前面不可以再插分頁，否則整份多一張空白頁在最前面。
 
+🚨 **`--no-cover` 出來的 docx，Word COM 轉不了 PDF**。2026-09-17 重出兩副五百張時，
+`scripts/office_to_pdf.py` 兩副都回「檔案似乎已毀損」（`pywintypes.com_error`），
+但檔案本身是好的——zip 完整、python-docx 開得起來、`render_and_check_reader_pdfs.py`
+對整副 1000 張那份（有說明頁）轉得成功。差別在 `--no-cover` 讓 document body 以
+**表格開頭**而不是段落。改用 LibreOffice 就過：
+
+```bash
+"C:/Program Files/LibreOffice/program/soffice.exe" --headless --convert-to pdf     --outdir output/flashcards output/flashcards/english-flashcards-001-500.docx
+```
+
+另外 `render_and_check_reader_pdfs.py --only` 只認它設定檔裡那幾副，
+`english-flashcards-001-500` 不在清單裡，**跑起來不報錯也不做事**（輸出全空）。
+
+
 ## 加下一副（新語言）時
 
 1. 詞表要先在 [data/originalReaders/vocabulary/](../../../data/originalReaders/vocabulary/) 定案（含繁中詞義與詞性），單字卡不負責補資料層。
