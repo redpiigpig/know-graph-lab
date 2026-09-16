@@ -13,9 +13,19 @@
 gate 不過 → {id}.jsonl.new 改名 .rejected 留查，原檔原封不動。
 
 Usage:
-  python scripts/requeue_reocr.py run [--limit 5] [--tier REOCR]
+  python scripts/requeue_reocr.py run [--limit 5] [--tier REOCR] [--engine gemini|mineru]
+  python scripts/requeue_reocr.py run --from-ledger --engine mineru --limit 40
   python scripts/requeue_reocr.py status
   python scripts/requeue_reocr.py retry-rejected   # 清 rejected 狀態重排
+
+--engine mineru 走本機 GPU（scripts/mineru_ocr.py），不吃配額、不會 429/503，
+適合把 Gemini 失敗掉的那批補回來；開跑前會先自檢環境，壞掉就整場跳過而不是
+把每一本都誤標成 ocr_failed。預設仍是 gemini，排程行為不變。
+
+🚨 --from-ledger 改從 ledger 取「曾經失敗的書」，不看 quality_tiers.json。
+那份 tier 檔是某一次 sweep 的快照，重新分類之後就對不上：2026-09-16 實測
+ledger 有 38 本 ocr_failed／rejected，而當時 REOCR tier 只剩 1 本，照 tier 跑
+會處理 0 本卻一路綠燈跑完。要重跑失敗的那批一律用 --from-ledger。
 Ledger: scripts/logs/reocr_ledger.json
 """
 from __future__ import annotations
@@ -119,8 +129,19 @@ def run_cmd(argv: list[str]) -> int:
     return subprocess.run(argv, cwd=str(SCRIPTS.parent)).returncode
 
 
-def step_ocr(bid: str) -> str:
-    """回傳 'staged' | 'quota' | 'env' | 'fail'。"""
+def step_ocr(bid: str, engine: str = "gemini") -> str:
+    """回傳 'staged' | 'quota' | 'env' | 'fail'。
+
+    engine='mineru' 走本機 GPU（`mineru_ocr.py`），不吃配額所以沒有 'quota' 這一路；
+    它的 exit 2 是「重複幻覺判準擋下來」＝這一本的問題，不該停整場。
+    """
+    if engine == "mineru":
+        rc = run_cmd([PY, str(SCRIPTS / "mineru_ocr.py"), "run",
+                      "--book", bid, "--staging"])
+        if (CHUNKS_DIR / f"{bid}.jsonl.new").exists():
+            return "staged"
+        return "fail"          # 含 rc==2（幻覺擋下）與 rc==1（這本讀不了）
+
     rc = run_cmd([PY, str(SCRIPTS / "ocr_with_gemini.py"), "run",
                   "--book", bid, "--staging"])
     if (CHUNKS_DIR / f"{bid}.jsonl.new").exists():
@@ -150,7 +171,7 @@ def swap_and_publish(bid: str) -> bool:
     return True
 
 
-def process_book(led: dict, bid: str, title: str) -> str:
+def process_book(led: dict, bid: str, title: str, engine: str = "gemini") -> str:
     """推進一本書的狀態機；回傳最終狀態。"""
     st = led.get(bid, {}).get("state", "pending")
     live = CHUNKS_DIR / f"{bid}.jsonl"
@@ -163,7 +184,7 @@ def process_book(led: dict, bid: str, title: str) -> str:
     if st == "pending":
         if live.exists() and not bak.exists():
             bak.write_bytes(live.read_bytes())
-        r = step_ocr(bid)
+        r = step_ocr(bid, engine)
         if r == "quota":
             print("  ⛔ quota — 停在 pending，明日排程續跑", flush=True)
             return "pending"
@@ -208,7 +229,8 @@ def process_book(led: dict, bid: str, title: str) -> str:
 
 # ── CLI ──────────────────────────────────────────────────────────────────
 
-def cmd_run(limit: int, tier: str) -> None:
+def cmd_run(limit: int, tier: str, engine: str = "gemini",
+            from_ledger: bool = False) -> None:
     # 前置檢查：REST 被 quota 鎖（402）時 OCR 子行程必炸，會把整批書誤標
     # ocr_failed。環境不可用就整場跳過、ledger 原封不動，明晚再試。
     from quality_sweep import rest_available
@@ -216,19 +238,53 @@ def cmd_run(limit: int, tier: str) -> None:
     if not rest_available(_le()):
         print("⛔ Supabase REST 不可用（quota 鎖定？）— 本輪跳過，佇列不動")
         return
-    tiers = json.loads(TIERS_FILE.read_text(encoding="utf-8"))
-    books = [b for b in tiers["tiers"].get(tier, [])
-             if "PATH_BROKEN" not in b.get("flags", [])]
+    if engine == "mineru":
+        # 本機引擎的「環境壞掉」會讓每一本都失敗，先驗一次再開跑，
+        # 免得整批書被誤標成 ocr_failed（Gemini 那路是靠 exit code 分辨）。
+        if subprocess.run([PY, str(SCRIPTS / "mineru_ocr.py"), "check"]).returncode != 0:
+            print("⛔ MinerU 環境自檢不過 — 本輪跳過，佇列不動")
+            return
     led = load_ledger()
-    todo = [b for b in books if led.get(b["id"], {}).get("state", "pending")
-            not in ("done", "rejected", "ocr_failed")]
-    print(f"{tier} tier：{len(books)} 本，其中 {len(todo)} 本待處理；本輪 limit={limit}")
+    if from_ledger:
+        # 🚨 別拿 quality_tiers.json 當「誰失敗了」的來源 —— 它是某一次 sweep 的快照，
+        # 之後重新分類過就對不上了。2026-09-16 實測：帳本裡 38 本 ocr_failed／rejected，
+        # 而當時的 REOCR tier 只剩 1 本，照 tier 跑會處理 0 本卻回報成功。
+        # 帳本才是「哪些書失敗過」的權威來源。
+        books = [{"id": bid, "title": e.get("title") or ""}
+                 for bid, e in led.items()
+                 if e.get("state") in ("ocr_failed", "rejected", "pending")]
+        # process_book 對 done/rejected 會直接回傳不做事，所以這裡明白地把狀態退回
+        # pending 讓狀態機重跑。原本的失敗理由留在 ledger 的其他欄位裡。
+        reset = 0
+        for b in books:
+            if led.get(b["id"], {}).get("state") in ("ocr_failed", "rejected"):
+                led[b["id"]]["state"] = "pending"
+                reset += 1
+        if reset:
+            save_ledger(led)
+        print(f"從 ledger 取待重跑清單：{len(books)} 本（重設 {reset} 本為 pending）")
+        todo = books
+    else:
+        tiers = json.loads(TIERS_FILE.read_text(encoding="utf-8"))
+        books = [b for b in tiers["tiers"].get(tier, [])
+                 if "PATH_BROKEN" not in b.get("flags", [])]
+        todo = [b for b in books if led.get(b["id"], {}).get("state", "pending")
+                not in ("done", "rejected", "ocr_failed")]
+        if books and not todo:
+            print(f"⚠ {tier} tier {len(books)} 本全都處理過了 —— 要重跑失敗的那批"
+                  f"請加 --from-ledger（tier 快照不含它們）")
+    src = "ledger" if from_ledger else f"{tier} tier"
+    print(f"{src}：{len(books)} 本，其中 {len(todo)} 本待處理；"
+          f"本輪 limit={limit}　引擎={engine}")
+    if not todo:
+        print("⛔ 待處理 0 本 —— 先確認清單來源對不對，不要當成「跑完了」")
+        return
     done = 0
     for b in todo:
         if done >= limit:
             break
         print(f"\n▶ {b['id']}  {(b.get('title') or '')[:40]}", flush=True)
-        final = process_book(led, b["id"], b.get("title") or "")
+        final = process_book(led, b["id"], b.get("title") or "", engine)
         if final == "pending":   # quota — 全場停
             break
         done += 1
@@ -258,7 +314,10 @@ if __name__ == "__main__":
     if cmd == "run":
         limit = int(args[args.index("--limit") + 1]) if "--limit" in args else 5
         tier = args[args.index("--tier") + 1] if "--tier" in args else "REOCR"
-        cmd_run(limit, tier)
+        engine = args[args.index("--engine") + 1] if "--engine" in args else "gemini"
+        if engine not in ("gemini", "mineru"):
+            sys.exit(f"--engine 只接受 gemini 或 mineru，收到 {engine}")
+        cmd_run(limit, tier, engine, from_ledger="--from-ledger" in args)
     elif cmd == "status":
         cmd_status()
     elif cmd == "retry-rejected":
