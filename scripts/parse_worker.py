@@ -364,8 +364,10 @@ def _parse_book(path, file_type):
     elif ft == 'txt':
         return parse_txt(path)
     else:
-        # .doc（舊二進位）、.mobi、.azw3、.chm 仍未支援，需先轉檔
-        raise NotImplementedError(f"format not supported: {ft}")
+        # .doc（舊二進位）、.mobi、.azw3、.rtf 先用 scripts/convert_legacy_formats.py
+        # 轉成 docx／epub 再進來；.chm 目前無解。
+        # 訊息刻意固定成 `unsupported file_type: <ext>`，方便稽核與再處理時 grep。
+        raise NotImplementedError(f"unsupported file_type: {ft}")
 
 
 # ── checklist ──────────────────────────────────────────────────
@@ -476,7 +478,14 @@ def cmd_run(limit=None, only_ids=None):
     # own default (1000) and says nothing about it, so `run` with no --limit was
     # silently a 1000-book batch, not "the whole queue" -- which is how a 5,000
     # book backlog looked like it was being drained in one pass.
-    params = 'select=id,title,file_type,file_path&parsed_at=is.null&parse_error=is.null&file_type=in.(pdf,epub,docx,txt)&order=id'
+    # 🚨 不要在這裡濾 file_type。原本寫 `file_type=in.(pdf,epub,docx,txt)`，
+    # 於是 .doc／.mobi／.chm／.azw3／.rtf 這些книг**既不會被解析、也不會留下
+    # parse_error** —— 不在佇列、不在錯誤清單、稽核也看不到，等於憑空消失。
+    # 2026-09-16 查出 315 本這樣卡著（doc 189／mobi 63／chm 56／azw3 6／rtf 1），
+    # 檔案都好好在 Drive 上。`_parse_book` 本來就會對不支援的格式丟
+    # NotImplementedError，讓它丟、被下面的 except 標成 parse_error，
+    # 才看得見。能轉檔的用 scripts/convert_legacy_formats.py 先轉。
+    params = 'select=id,title,file_type,file_path&parsed_at=is.null&parse_error=is.null&order=id'
     if only_ids:
         # 佇列照 id 排，急著要的某幾本可能排在幾千本後面。--book 讓它插隊，
         # 不必為了三本書把整個 backlog 跑一遍。
