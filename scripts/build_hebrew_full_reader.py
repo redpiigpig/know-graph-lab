@@ -124,7 +124,7 @@ def cover_colors(language: str) -> dict:
 
 
 def add_contents(document, rows: list[tuple[str, str, str]], *, title: str,
-                 headers: tuple[str, str, str] = ("課", "主讀文", "類型"),
+                 headers: tuple[str, str, str] = ("課", "讀本", "類型"),
                  accent: str | None = None) -> None:
     """三欄目錄，希伯來那本用的就是這一張表。
 
@@ -831,7 +831,7 @@ def add_cover(document: Document, data: dict) -> None:
 def add_front_matter(document: Document, data: dict) -> None:
     add_label(document, "Reader architecture")
     document.add_heading("這一本怎麼使用", level=1)
-    add_body(document, "全書五十課。每課固定收二十個詞、十題翻譯練習與一篇完整主讀文；第1–25課讀二十五章《希伯來聖經》，第26–50課讀二十五篇禱文或拉比文章。冊末另附完整逾越節 Haggadah 流程。")
+    add_body(document, "全書五十課。每課固定收二十個詞、十題翻譯練習與一篇完整讀本；第1–25課讀二十五章《希伯來聖經》，第26–50課讀二十五篇禱文或拉比文章。冊末另附完整逾越節 Haggadah 流程。")
     cards = [
         ("1", "先學本課詞表", "第1–33課就是 BBH2 第3–35章的原章詞表，詞數依課本而定；第34–50課以頻率與專名延伸補足一千詞。"),
         ("2", "做十題翻譯", "原文譯繁中，每課十題、本課二十詞全數入題；定錨題取自經典原句，其餘依已學詞彙自撰，早期課次可用原句不足時全部自撰。"),
@@ -1164,7 +1164,7 @@ def add_practice(document: Document, lesson: dict, *, page_break_before=False) -
     prompts = (
         "不看中文，準確朗讀二十個附點詞；說出每個詞的主要義。",
         "做完本課十題翻譯練習；定錨題譯完後對照既有譯本，自撰題圈出沒把握的詞形。",
-        f"讀完〈{reading_title}〉全文；在主讀文中標出本課詞彙。",
+        f"讀完〈{reading_title}〉全文；在讀本中標出本課詞彙。",
         "選三個動詞辨認詞幹／時式，或選三個名詞辨認性、數、狀態。",
         "登入線上讀本跟讀；沒有校訂音檔時只按課本音標自讀，不啟用現代希伯來文 TTS。",
         "用一句繁中寫出本篇主旨，再以一個希伯來關鍵詞作標題。",

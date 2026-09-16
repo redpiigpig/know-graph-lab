@@ -602,14 +602,14 @@ def add_front_matter(document: Document, master: dict, volume: dict, part: dict,
         f"本冊為{volume['subtitle']}的第 {part['first']:02d}–{part['last']:02d} 課，共 {len(lessons)} 課・"
         f"{sum(lesson['vocabularyCount'] for lesson in lessons)} 詞・"
         f"{sum(len(exercises.get(lesson['lesson'], {}).get('items', [])) for lesson in lessons)} 題翻譯練習・"
-        f"{len(lessons)} 篇讀文。"
+        f"{len(lessons)} 篇讀本。"
         "課次編號與線上讀本一致，分冊只是印刷單位（一本不超過 500 頁），不改變課的次序。",
         size=CAPTION_PT,
         color=MUTED,
     )
     add_body(
         document,
-        f"這一部分全 {counts['vocabulary']} 詞、{counts['readings']} 篇讀文，"
+        f"這一部分全 {counts['vocabulary']} 詞、{counts['readings']} 篇讀本，"
         f"每課十題翻譯練習；"
         f"全書合計 {master['counts']['vocabulary']} 詞、1,000 題翻譯練習、"
         f"連續正文 {master['counts']['totalRunningWords']} 詞。",
@@ -627,7 +627,7 @@ def add_front_matter(document: Document, master: dict, volume: dict, part: dict,
             (
                 f"{lesson['lesson']:02d}",
                 lesson["reading"]["titleZh"],
-                "完整章" if lesson["reading"]["kind"] == "scripture_chapter" else "教父讀文",
+                "完整章" if lesson["reading"]["kind"] == "scripture_chapter" else "教父讀本",
             )
             for lesson in part_lessons(volume, part)
         ],

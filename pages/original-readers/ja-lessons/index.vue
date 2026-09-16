@@ -58,7 +58,7 @@
                   <div><dt class="inline">生詞 </dt><dd class="inline font-semibold text-stone-700">{{ lesson.vocabularyCount }}</dd></div>
                   <div><dt class="inline">練習 </dt><dd class="inline font-semibold text-stone-700">{{ lesson.exerciseCount }}</dd></div>
                   <div><dt class="inline">背誦 </dt><dd class="inline font-semibold text-stone-700">{{ lesson.memoryUnitCount }}</dd></div>
-                  <div><dt class="inline">讀文 </dt><dd class="inline font-semibold text-stone-700">{{ lesson.chars }} 字</dd></div>
+                  <div><dt class="inline">讀本 </dt><dd class="inline font-semibold text-stone-700">{{ lesson.chars }} 字</dd></div>
                 </dl>
                 <p class="mt-2 truncate text-[11px] text-stone-400">{{ lesson.extent }}</p>
               </NuxtLink>
@@ -116,7 +116,7 @@ const stats = computed(() => {
     { label: "課數", value: counts.lessons },
     { label: "生詞", value: counts.vocabulary.toLocaleString() },
     { label: "翻譯練習", value: counts.exercises.toLocaleString() },
-    { label: "讀文字數", value: counts.chars.toLocaleString() },
+    { label: "讀本字數", value: counts.chars.toLocaleString() },
   ];
 });
 

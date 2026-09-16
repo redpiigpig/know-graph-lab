@@ -39,7 +39,11 @@ from build_latin_full_reader import BOOK_LABELS as LATIN_LABELS, PARTS as LATIN_
 
 ROOT = Path(__file__).resolve().parents[1]
 MASTERS = ROOT / "output" / "print-masters"
-OUT_DIR = ROOT / "output" / "original-readers"
+# 書背跟印刷母版放在一起，不是放 output/original-readers。
+# `sync_reader_artifacts.py` 是拿 output/print-masters/*.pdf 當權威去同步三處的，
+# 書背若不在那一夾，Drive 上留著的就永遠是舊版式那一張，而且不會有人被通知。
+OUT_DIR = ROOT / "output" / "print-masters"
+LEGACY_DIR = ROOT / "output" / "original-readers"
 
 CJK = r"C:\Windows\Fonts\mingliu.ttc"
 LATIN = r"C:\Windows\Fonts\times.ttf"
@@ -158,7 +162,7 @@ def main() -> int:
     args = parser.parse_args()
 
     # 舊版的書背是自己一套版式（裸書背＋SVG），格式換了就不該留著混在同一夾。
-    for stale in sorted(OUT_DIR.glob("*-spine.svg")):
+    for stale in sorted(LEGACY_DIR.glob("*-spine.svg")):
         stale.unlink()
         print(f"－ 刪掉舊格式 {stale.name}")
 

@@ -278,7 +278,7 @@ def add_exercises(document: Document, block: dict | None, lesson: dict) -> None:
 
 
 def add_reading(document: Document, lesson: dict, interlinear: dict) -> None:
-    # 讀文自己起一頁：生詞與練習題是預備，讀文才是這一課。
+    # 讀本自己起一頁：生詞與練習題是預備，讀本才是這一課。
     H.page_break(document)
     H.add_label(document, "Reading")
     document.add_heading("讀本", level=1)
@@ -349,7 +349,7 @@ def add_cover(document: Document, spec: dict, part: dict, counts: dict) -> None:
     counts_line = H.add_body(
         document,
         f"{counts['lessons']} 課．{counts['words']} 詞．翻譯練習 {counts['exercises']} 題．"
-        f"讀文 {counts['chars']:,} 字",
+        f"讀本 {counts['chars']:,} 字",
         size=H.CAPTION_PT, color=H.MUTED)
     counts_line.alignment = WD_ALIGN_PARAGRAPH.CENTER
 
@@ -367,7 +367,7 @@ def add_front_matter(document: Document, spec: dict, part: dict, lessons: list[d
     for line in (
         "詞序依《大家的日本語》課次，經 u-biq 逐課頁重建；專名不佔課內詞額，另立附錄專名表。",
         "重音欄印的是來源頁面自己的斷點（は・や・い），不是重音型編號——斷點是抓得到的事實，編號是推論。",
-        "讀文一律取宗教學、宗教史或宗教典籍；詞照課本，文照領域。背誦句仍在資料與線上讀本，紙本改印十題翻譯練習。",
+        "讀本一律取宗教學、宗教史或宗教典籍；詞照課本，文照領域。背誦句仍在資料與線上讀本，紙本改印十題翻譯練習。",
         "聖書用文語訳（明治元訳舊約、大正改訳新約，公有領域），不用口語訳或新共同訳。",
         "逐詞對譯：本課詞表的譯法優先，其次是助詞助動詞表，再其次才是模型；查不到的留白，不用別的語言頂替。",
         "佛典尚未收入。素材抓得到，但訓読者與年份查不到，且混著漢文與梵文轉寫；依合約寧缺勿濫。",

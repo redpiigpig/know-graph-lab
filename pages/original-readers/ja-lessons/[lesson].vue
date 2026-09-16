@@ -106,7 +106,7 @@
         </section>
 
         <section class="mt-8">
-          <h2 class="font-serif text-xl font-semibold">讀文</h2>
+          <h2 class="font-serif text-xl font-semibold">讀本</h2>
           <div class="mt-3 space-y-4">
             <div v-for="unit in lesson.reading" :key="unit.id" class="rounded-2xl border border-stone-300 bg-[#fffdf7] px-5 py-4">
               <p v-if="unit.label" class="text-[11px] font-semibold text-stone-400">{{ unit.label }}</p>
