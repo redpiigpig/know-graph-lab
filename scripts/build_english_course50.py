@@ -127,6 +127,16 @@ def prompt_intro(lesson: dict) -> str:
 **上面列的 20 個單字，至少要用掉 16 個在課文裡**——這是本課唯一一篇課文，
 沒被用到的字學生整課都不會再遇到。寧可句子多一點，也不要漏字。
 
+🚨 課文要有**人物、地點與情節**，不可以只是把句型換主詞抄十遍。
+反例（不合格）：「Hello! I am OK. ／ He is fine. ／ She is sure. ／ It is OK. ／
+We are fine. ／ They are welcome.」——這不是課文，是代名詞表換行印出來。
+- 平均一句至少 6 個字，其中要有幾句用 and／but／because 串成兩個子句。
+- 給人物名字（Mei、Tom、Lily…），讓他們在某個場景裡做某件事。
+
+🚨 慣用語要照台灣課本的譯法，不可以逐字硬翻：
+- `You are welcome.` ＝「不客氣」（**不是**「你很受歡迎」）
+- `How are you?` ＝「你好嗎？」　`Excuse me.` ＝「不好意思」
+
 JSON 格式：
 {
   "title_en": "英文課名（3～5 個字）",
@@ -321,6 +331,10 @@ def check_usage(obj) -> list[str]:
     # 橡皮單用是中國說法，橡皮擦才是台灣說法
     if re.search(r"橡皮(?!擦)", text):
         bad.append("中國用語「橡皮」要改成「橡皮擦」")
+    # 慣用語逐字硬翻。You are welcome 是「不客氣」，重出的 L01 譯成「你很受歡迎」，
+    # 連 fill 的中文提示都寫「你歡迎」。
+    if re.search(r"(?:You|you|They|they|We|we)\s+are\s+welcome", text) and "不客氣" not in text:
+        bad.append("You are welcome. 要譯成「不客氣」，不是「你很受歡迎」")
     return bad
 
 
@@ -331,9 +345,42 @@ def validate_intro(body: dict) -> list[str]:
         if not body.get(key):
             errs.append(f"缺 {key}")
     reading = body.get("reading") or {}
-    if len(reading.get("sentences") or []) < 6:
+    sentences = reading.get("sentences") or []
+    if len(sentences) < 6:
         errs.append("課文少於 6 句")
+    errs += validate_reading(sentences)
     return errs + _common_errs(body)
+
+
+MIN_AVG_TOKENS = 6.0
+MAX_SAME_SHAPE = 0.5
+
+
+def validate_reading(sentences: list[dict]) -> list[str]:
+    """課文要是有情節的短文，不是同一個句型抄十遍。
+
+    2026-09-16 重出的 L01 十句是：Hello! I am OK. ／ Hi! You are welcome. ／
+    He is fine. ／ She is sure. ／ It is OK. ／ We are fine. ／ They are welcome. …
+    每一項既有檢查都綠（句數夠、單字覆蓋 100%），但它不是課文，是人稱代名詞表
+    換行印出來。平均 3.7 個字一句。
+    """
+    if not sentences:
+        return []
+    errs = []
+    counts = [len((s.get("en") or "").split()) for s in sentences]
+    avg = sum(counts) / len(counts)
+    if avg < MIN_AVG_TOKENS:
+        errs.append(f"課文平均一句只有 {avg:.1f} 個字，太短不成故事"
+                    f"（要 {MIN_AVG_TOKENS:.0f} 個字以上）")
+    # 句型骨架：把每句的字數與第二個字（多半是動詞）當指紋
+    shapes = collections.Counter(
+        (len(w), w[1].lower().rstrip(".,!?") if len(w) > 1 else "")
+        for w in ((s.get("en") or "").split() for s in sentences))
+    shape, hits = shapes.most_common(1)[0]
+    if hits / len(sentences) > MAX_SAME_SHAPE:
+        errs.append(f"課文有 {hits}/{len(sentences)} 句是同一個句型（{shape[0]} 個字、"
+                    f"第二個字都是 {shape[1]}），請換句型與情節")
+    return errs
 
 
 def _common_errs(obj) -> list[str]:
@@ -440,6 +487,7 @@ def validate_direction(ex: dict) -> list[str]:
 
 MAX_OVERLAP = 1 / 3
 MAX_SAME_FILL = 0.4
+MIN_DISTINCT_FILL = 5
 MIN_EN_WORDS = 2
 
 
@@ -468,6 +516,11 @@ def validate_overlap(ex: dict) -> list[str]:
         word, hits = collections.Counter(fills).most_common(1)[0]
         if hits / len(fills) > MAX_SAME_FILL:
             errs.append(f"填空有 {hits}/{len(fills)} 題答案都是「{word}」，請換考點")
+        # 只看「最多的那個」不夠：重出的 L01 是 is 四題、are 四題、am 兩題，
+        # 最多的只佔 40% 剛好過關，但十題其實只考了三個字。
+        if len(set(fills)) < MIN_DISTINCT_FILL:
+            errs.append(f"填空十題只有 {len(set(fills))} 個不同答案"
+                        f"（{'、'.join(sorted(set(fills)))}），至少要 {MIN_DISTINCT_FILL} 個")
 
     for i, item in enumerate(ex.get("mcq") or [], 1):
         q = item.get("q") or ""

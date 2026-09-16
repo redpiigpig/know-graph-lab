@@ -145,6 +145,43 @@ def test_shuffle_is_deterministic(gen):
     assert one == two
 
 
+def test_fill_with_only_three_distinct_answers_is_rejected(gen):
+    """最多的那個只佔 40% 剛好過關，但十題其實只考了 am/are/is 三個字。"""
+    ex = {"fill": [{"q": f"q{i} ____", "ans": a} for i, a in enumerate(
+        ["is", "is", "is", "is", "are", "are", "are", "are", "am", "am"])]}
+    errs = gen.validate_overlap(ex)
+    assert any("只有 3 個不同答案" in e for e in errs)
+
+
+# ---------------------------------------------------------------- 課文要是故事
+
+def test_reading_of_three_word_sentences_is_rejected(gen):
+    """重出的 L01：十句都是「He is fine.」，句數夠、單字覆蓋 100%，但那不是課文。"""
+    sentences = [{"en": s, "zh": ""} for s in (
+        "Hello! I am OK.", "Hi! You are welcome.", "He is fine.", "She is sure.",
+        "It is OK.", "We are fine.", "They are welcome.", "No, I am fine.")]
+    errs = gen.validate_reading(sentences)
+    assert any("太短不成故事" in e for e in errs)
+
+
+def test_reading_with_one_repeated_shape_is_rejected(gen):
+    sentences = [{"en": f"{s} is a very kind and happy person.", "zh": ""}
+                 for s in ("He", "She", "Tom", "Mei", "Lily", "Ann")]
+    errs = gen.validate_reading(sentences)
+    assert any("同一個句型" in e for e in errs)
+
+
+def test_real_story_reading_passes(gen):
+    sentences = [{"en": s, "zh": ""} for s in (
+        "Mei walks into the classroom and sees a new guest.",
+        "Hello! I am Mei, and this is my neighbor Tom.",
+        "The guest smiles because she knows his nickname.",
+        "Tom is not shy, so he shakes hands with her.",
+        "Are you our new teacher? Yes, I am.",
+        "Everyone claps, and the lesson begins with a warm greeting.")]
+    assert gen.validate_reading(sentences) == []
+
+
 # ---------------------------------------------------------------- 台灣用語
 
 @pytest.mark.parametrize("bad, good", [
@@ -161,6 +198,13 @@ def test_mainland_usage_is_rejected(gen, bad, good):
 
 def test_eraser_with_proper_suffix_passes(gen):
     assert gen.check_usage({"q": "黑板下有一塊橡皮擦。"}) == []
+
+
+def test_youre_welcome_must_not_be_literal(gen):
+    """重出的 L01 把 You are welcome. 譯成「你很受歡迎」，fill 的提示還寫「你歡迎」。"""
+    errs = gen.check_usage({"en": "You are welcome.", "zh": "你很受歡迎。"})
+    assert any("不客氣" in e for e in errs)
+    assert gen.check_usage({"en": "You are welcome.", "zh": "不客氣。"}) == []
 
 
 # ---------------------------------------------------------------- 文法大綱
