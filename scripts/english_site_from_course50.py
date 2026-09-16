@@ -64,15 +64,37 @@ def code_for(en: str, codes: dict[str, str]) -> str | None:
     return None
 
 
+# 二十個主題的圖示（OpenMoji 碼位）。
+# 🚨 不要再從 lessons.json 讀回來。原本的作法是拿舊檔的 title_en 當鍵去查
+# theme_emoji，但這支腳本自己就會覆寫 lessons.json——課名一改，下次查就對不到，
+# 每重出一次就掉更多圖示。2026-09-17 重出 50 課之後，50 課裡有 35 課沒有圖示，
+# 而且完全不報錯。主題只有二十個而且穩定，直接寫死。
+THEME_EMOJI = {
+    "Hello & Me": "1F44B",
+    "Numbers & How Many": "1F522",
+    "Colors & Shapes": "1F3A8",
+    "My Body": "1F9B6",
+    "My Family & Friends": "1F46A",
+    "Animals & Pets": "1F436",
+    "Food & Meals": "1F35C",
+    "Drinks, Fruits & Snacks": "1F95B",
+    "At School": "1F3EB",
+    "Classroom Actions": "1F4DD",
+    "My House": "1F3E0",
+    "Days, Months & Time": "1F551",
+    "Weather, Seasons & Nature": "26C5",
+    "Clothes & How I Look": "1F455",
+    "Feelings & Thoughts": "1F60A",
+    "Sports & Hobbies": "26BD",
+    "Things I Can Do": "1F3C3",
+    "Jobs & People": "1F454",
+    "My Town & Country": "1F3D9",
+    "Travel, Countries & Festivals": "2708",
+}
+
+
 def theme_emojis() -> dict[str, str]:
-    """沿用舊 20 課那份的主題圖示（course50 的 theme 就是舊課的 title_en）。"""
-    if not SITE_LESSONS.exists():
-        return {}
-    try:
-        old = json.loads(SITE_LESSONS.read_text(encoding="utf-8"))
-    except json.JSONDecodeError:
-        return {}
-    return {l.get("title_en"): l.get("theme_emoji") for l in old if l.get("theme_emoji")}
+    return dict(THEME_EMOJI)
 
 
 def to_site(lesson: dict, codes: dict[str, str], themes: dict[str, str]) -> dict:
