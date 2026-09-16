@@ -1032,6 +1032,43 @@ Reader-side: open `/ebook/<id>` (restart dev server first to clear LRU cache):
 
 ---
 
+## Workflow J — 舊格式轉檔（doc/rtf/mobi/azw3/chm → docx/epub）
+
+`scripts/convert_legacy_formats.py run --types chm --limit 20`。轉出的檔放**原檔旁邊**、
+原檔保留，成功才 PATCH `file_path`／`file_type`／清 `parse_error`，`parsed_at` 留 null
+讓 parse_worker 下一輪撈走。`--retry-failed` 連上次 `convert failed:` 的也再試一次。
+
+### CHM：calibre 直轉吃不下的那三本（2026-09-17）
+
+56 本 CHM 裡有 3 本 calibre 直轉必爆，錯誤是
+`UnicodeDecodeError: 'gbk' codec can't decode byte 0xaf in position 3509`。
+根因是 **calibre 的 `chm_input` 拿「CHM 宣告的那一個 codec」去解全部檔案**，而這三本：
+
+| 書 | 長相 | 真編碼 |
+|---|---|---|
+| 神護理的奧秘 | 一個 CHM 裡同時放 `big5/` 與 `gb/` **兩份同一本書** | big5（取繁體那份） |
+| 馬丁路德文集 | `0.htm`–`23.htm` 24 個編號檔，**完全沒宣告 charset** | gbk |
+| 巴文克：基督教神學 | 28 個編號檔，同樣沒宣告 | gb18030 |
+
+fallback 在 `scripts/chm_to_epub.py`：用 calibre 自帶的 `CHMReader` 解開（把它逐檔
+重編碼那步 monkeypatch 短路掉）→ 判編碼 → 轉 UTF-8 → 再交回 calibre 出 epub。
+`convert_legacy_formats.py` 的 `convert()` 在 calibre 直轉沒產出且來源是 `.chm` 時自動改走它。
+
+🚨 **編碼不可以用「解得開就算」判。** `big5hkscs` 能把 GBK 位元組解成一堆罕用字
+而**完全不報錯**。第一版就這樣替巴文克產出 443,887 字、1.3 MB 的漂亮 epub，
+內容全是 `誘燴 菴坋媼梒` ——大小、篇數、退出碼四項全綠，只有讀內容才看得出來。
+現在改用**常用字密度**判：真中文 ≥0.08 落在最常用字表，亂碼 <0.01（實測三本 0.35–0.56）。
+這一條同時適用繁簡，字表在 `chm_to_epub.COMMON`。
+
+🚨 **進入點不可以只挑一個檔。** 沒有目次的 CHM，calibre 從單一 htm 只跟得到有連結的
+那幾篇——馬丁路德那本 24 個正文檔只出了 **2 篇、11,867 字**（真值 27 篇、590,568 字），
+一樣是「轉檔成功、檔案正常」的長相。現在一律自己生一份涵蓋全部正文檔的目次當進入點。
+
+轉完現況：`file_type=chm` 歸零（56/56），三本都已進 parse_worker 佇列。
+**馬丁路德文集與巴文克是簡體**，要走簡→繁那條（見 [[ebook-translate]] 的 pipeline B）。
+
+---
+
 ## Workflow H — Structure audit & NO_TOC recovery (2026-05-31)
 
 針對「文字 OCR 沒問題、但**側欄目錄空白／標題正文不分**」的書。診斷顯示**髒書 100% 是 PDF，EPUB 結構乾淨**（EPUB 只有少數目錄項異常，走 audit）；主病是 **712 本 NO_TOC**（chapter_path 全空），且其中 189 本**已 standardize 仍無目錄** → standardize 對「無內嵌書籤的掃描/論文 PDF」無能為力，需新能力。

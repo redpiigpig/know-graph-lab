@@ -111,7 +111,7 @@ def _try_patch(book_id: str, body: dict) -> bool:
         return False
 
 
-def pending(types: list[str] | None = None) -> list[dict]:
+def pending(types: list[str] | None = None, retry_failed: bool = False) -> list[dict]:
     """還沒轉錄、而且是我們會轉的格式。
 
     同時收兩種狀態：`parse_error` 是 null（還沒被碰過，佇列修好之前的舊狀態），
@@ -124,7 +124,10 @@ def pending(types: list[str] | None = None) -> list[dict]:
     out = []
     for r in rows:
         pe = r.get("parse_error")
-        if pe and "unsupported file_type" not in pe:
+        ok_err = ("unsupported file_type",)
+        if retry_failed:
+            ok_err += ("convert failed:",)    # 上次轉壞的，換了作法可以再試
+        if pe and not any(k in pe for k in ok_err):
             continue                     # 有別的錯（檔案不在之類），先別碰
         out.append(r)
     return out
@@ -157,6 +160,19 @@ def convert(src: Path, dst_ext: str, tool: str) -> Path | None:
             print("    ✗ 轉檔逾時（10 分鐘）")
             return None
         made = list(tmp.glob(f"*.{dst_ext}"))
+        if not made and src.suffix.lower() == ".chm":
+            # calibre 直轉吃不下的 CHM（混編碼／沒宣告 charset／一本裡兩份），
+            # 改走自己解開再組的那條。見 scripts/chm_to_epub.py。
+            print("    calibre 直轉失敗，改走 chm_to_epub fallback…")
+            try:
+                sys.path.insert(0, str(Path(__file__).resolve().parent))
+                import chm_to_epub
+                target = tmp / (src.stem + "." + dst_ext)
+                n = chm_to_epub.convert(str(src), str(target))
+                print(f"    fallback 收進 {n} 篇")
+                made = [target]
+            except Exception as e:
+                print(f"    ✗ fallback 也失敗：{str(e)[:160]}")
         if not made:
             tail = ((p.stdout or "") + (p.stderr or ""))[-200:].replace("\n", " ")
             print(f"    ✗ 沒有產出（exit {p.returncode}）{tail}")
@@ -190,7 +206,7 @@ def cmd_run(args) -> int:
         if bad:
             print(f"⛔ 不會轉這些格式：{bad}（會的有 {list(PLAN)}）")
             return 1
-    rows = pending(types)
+    rows = pending(types, retry_failed=args.retry_failed)
     print(f"待轉 {len(rows)} 本，本輪做 {min(args.limit, len(rows))} 本")
 
     ok = fail = dupes = 0
@@ -258,6 +274,8 @@ def main() -> int:
     r.add_argument("--limit", type=int, default=20)
     r.add_argument("--types", help="只轉某些格式，逗號分隔，例如 doc,rtf")
     r.add_argument("--dry-run", action="store_true")
+    r.add_argument("--retry-failed", action="store_true",
+                   help="連上次 convert failed 的也再試一次")
     r.set_defaults(func=cmd_run)
     args = ap.parse_args()
     return args.func(args)
