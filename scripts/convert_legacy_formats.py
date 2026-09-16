@@ -59,6 +59,12 @@ def env():
     return os.environ["SUPABASE_URL"].rstrip("/"), os.environ["SUPABASE_SERVICE_ROLE_KEY"]
 
 
+class RestError(Exception):
+    def __init__(self, code, text):
+        super().__init__(f"HTTP {code}: {text[:160]}")
+        self.code = code
+
+
 def rest(path: str, method: str = "GET", body=None):
     url, key = env()
     data = json.dumps(body).encode() if body is not None else None
@@ -66,8 +72,40 @@ def rest(path: str, method: str = "GET", body=None):
         f"{url}/rest/v1/{path}", data=data, method=method,
         headers={"apikey": key, "Authorization": f"Bearer {key}",
                  "Content-Type": "application/json", "Prefer": "return=representation"})
-    raw = urllib.request.urlopen(req, timeout=60).read()
+    try:
+        raw = urllib.request.urlopen(req, timeout=60).read()
+    except urllib.error.HTTPError as e:
+        raise RestError(e.code, e.read().decode("utf-8", "replace")) from None
     return json.loads(raw) if raw else []
+
+
+def path_taken_by_other(target: Path, my_id: str) -> str | None:
+    """目標路徑是不是已經被別筆 ebook 佔著。
+
+    `ebooks_file_path_uniq` 是 file_path 的部分唯一索引，所以 X.azw3 轉成 X.epub
+    之後，如果館裡本來就有一筆指著 X.epub（同一本書重複收了兩種格式），
+    PATCH 會回 409。先查比事後接例外好：轉檔要花好幾秒，白轉划不來。
+    """
+    q = urllib.parse.quote(str(target), safe="")
+    rows = rest(f"ebooks?file_path=eq.{q}&select=id,title&limit=2")
+    for r in rows:
+        if r["id"] != my_id:
+            return r["id"]
+    return None
+
+
+def _try_patch(book_id: str, body: dict) -> bool:
+    """PATCH 一筆，失敗只報告不中斷。
+
+    一本書寫不回去不該讓整批停下 —— 前一版就因為一個 409（重複 file_path）
+    整場 traceback 掛掉，後面 250 本一本都沒動到。
+    """
+    try:
+        rest(f"ebooks?id=eq.{book_id}", "PATCH", body)
+        return True
+    except RestError as e:
+        print(f"    ✗ 寫回 DB 失敗：{e}")
+        return False
 
 
 def pending(types: list[str] | None = None) -> list[dict]:
@@ -156,7 +194,7 @@ def cmd_run(args) -> int:
     rows = pending(types)
     print(f"待轉 {len(rows)} 本，本輪做 {min(args.limit, len(rows))} 本")
 
-    ok = fail = 0
+    ok = fail = dupes = 0
     for r in rows[: args.limit]:
         src = Path(r.get("file_path") or "")
         ft = r["file_type"]
@@ -169,29 +207,43 @@ def cmd_run(args) -> int:
                 print(f"  ⛔ {src.drive} 掛不上 —— Drive 卡住，整場停")
                 return 3
             print("  ✗ 檔案不在")
-            rest(f"ebooks?id=eq.{r['id']}", "PATCH", {"parse_error": f"file not found: {src}"})
+            _try_patch(r["id"], {"parse_error": f"file not found: {src}"})
             fail += 1
             continue
 
+        target = src.with_suffix("." + dst_ext)
         if args.dry_run:
-            print(f"  （dry-run）會轉成 {src.with_suffix('.' + dst_ext).name}")
+            print(f"  （dry-run）會轉成 {target.name}")
+            continue
+
+        # 先查目標路徑有沒有被別筆佔著 —— 轉檔要好幾秒，白轉划不來
+        try:
+            dup = path_taken_by_other(target, r["id"])
+        except RestError as e:
+            print(f"  ⛔ 查 DB 失敗，整場停：{e}")
+            return 3
+        if dup:
+            print(f"  ⊘ 館裡已有另一筆指向同一個檔（{dup}）—— 這本是重複，跳過")
+            _try_patch(r["id"], {"parse_error": f"duplicate of {dup} (same file_path after convert)"})
+            dupes += 1
             continue
 
         t0 = time.time()
         out = convert(src, dst_ext, tool)
         if not out:
-            rest(f"ebooks?id=eq.{r['id']}", "PATCH",
-                 {"parse_error": f"convert failed: {ft}->{dst_ext}"})
+            _try_patch(r["id"], {"parse_error": f"convert failed: {ft}->{dst_ext}"})
             fail += 1
             continue
 
         # 轉好了才改指向；parse_error 清掉讓 parse_worker 下一輪撈得到
-        rest(f"ebooks?id=eq.{r['id']}", "PATCH",
-             {"file_path": str(out), "file_type": dst_ext, "parse_error": None})
+        if not _try_patch(r["id"], {"file_path": str(out), "file_type": dst_ext,
+                                    "parse_error": None}):
+            fail += 1
+            continue
         ok += 1
         print(f"  ✓ {out.name}（{out.stat().st_size / 1024:.0f} KB，{time.time() - t0:.0f}s）")
 
-    print(f"\n完成 {ok} 本、失敗 {fail} 本")
+    print(f"\n完成 {ok} 本、重複 {dupes} 本、失敗 {fail} 本")
     if ok:
         print("→ 下一輪 parse_worker 會自動撈到它們（parsed_at 仍是 null）")
     return 0
