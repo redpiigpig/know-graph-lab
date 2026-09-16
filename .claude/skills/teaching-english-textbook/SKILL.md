@@ -5,7 +5,9 @@ description: 媽媽（julia5868）家教用的《Happy English 快樂學英語�
 
 # 國小英語課本（Happy English）
 
-> 分課詞表：[data/originalReaders/vocabulary/english-1000.json](../../../data/originalReaders/vocabulary/english-1000.json)（50 課 × 20 字，人工校過）
+> 分課詞表：[data/originalReaders/vocabulary/english-1000.json](../../../data/originalReaders/vocabulary/english-1000.json)（50 課 × 20 字，人工校過；2026-09-16 依難易重排）
+> **文法大綱**：[data/english/course50-syllabus.json](../../../data/english/course50-syllabus.json)（一課一個文法點，50 個全相異）
+> 重排單字：[scripts/reorder_english_vocab.py](../../../scripts/reorder_english_vocab.py)
 > 課程資料：[public/content/english/course50/](../../../public/content/english/course50/)　`L01.json` … `L50.json`
 > 生成：[scripts/build_english_course50.py](../../../scripts/build_english_course50.py)
 > 排版：[scripts/build_english_textbook.py](../../../scripts/build_english_textbook.py)
@@ -46,11 +48,18 @@ python scripts/english_site_from_course50.py     # course50 -> 網站 lessons.js
 ## 出書
 
 ```bash
-python scripts/build_english_course50.py            # 生成沒做過的課
-python scripts/build_english_course50.py --check    # 只驗現有產出
-python scripts/build_english_course50.py --fix      # 修重組題題幹、去重選擇題
-python scripts/build_english_textbook.py --split --publish   # 出上下兩冊 + PDF + 送 Drive
+PY="C:/Users/user/AppData/Local/Python/bin/python.exe"
+"$PY" -u scripts/build_english_course50.py            # 生成沒做過的課
+"$PY" -u scripts/build_english_course50.py --check    # 只驗現有產出
+"$PY" -u scripts/build_english_course50.py --fix      # 修重組題題幹、去重選擇題、洗選項
+"$PY" -u scripts/build_english_textbook.py --split --publish   # 出上下兩冊 + PDF + 送 Drive
 ```
+
+🚨 **一定要寫明解譯器路徑**。背景跑的時候裸 `python` 會解析到 `_whisper_venv`，
+那支沒有 `requests`，而且**不會報錯**——程序活著、CPU 0、記憶體 4.6MB，卡在 import。
+從外面看跟「模型很慢」一模一樣，我在這上面白等了五分鐘才用
+`Get-CimInstance Win32_Process` 看出來是 `_whisper_venv\Scripts\python.exe`。
+另外加 `-u`，不然背景工作的 log 會整段被緩衝住看不到進度。
 
 生成很慢（一課 6–15 分鐘），要並行就開幾條 `--range 20-29`，逐課寫檔可續跑。
 
@@ -68,7 +77,8 @@ python scripts/build_english_textbook.py --split --publish   # 出上下兩冊 +
 
 ## 這批材料特有的「看起來成功的失敗」
 
-結構檢查全綠不代表東西是對的。踩過這五個：
+結構檢查全綠不代表東西是對的。踩過這十個（6–10 是 2026-09-16 使用者翻紙本才發現的，
+每一個當時都通過了所有自動檢查）：
 
 1. **覆蓋率是我自己量錯的**。詞表把複數寫成 `apple(s)`、`peach(es)`、`mango(es)`，
    比對只切 `/` 和 `、` 的話永遠對不到課文裡的 apple／peaches。L19 因此被判成
@@ -83,6 +93,29 @@ python scripts/build_english_textbook.py --split --publish   # 出上下兩冊 +
 5. **句子重組的打散字詞排不出答案**。引擎會漏字或多字（`eight / and / four /
    equals / plus / .` 的答案是 `Four plus eight equals twelve.`——twelve 不見了、
    and 是多的）。答案才是權威，題幹一律由答案機械重排。
+6. 🚨 **50 課只有 17 個文法點**。生成器把文法按**主題**抓（舊 20 課版的
+   `lessons.json` 一個主題只有一條 grammar），同主題的 2–3 課就全部共用它：
+   L01/02/03 都在教 be 動詞、L06/07/08 都是 `What color/shape`、L16/17/18 連字面
+   都幾乎一樣。提示詞裡那句「同主題第 2 課以後文法要往下推進」模型根本不理。
+   現在文法由 [data/english/course50-syllabus.json](../../../data/english/course50-syllabus.json)
+   **按課**綁定，一課一個點、50 個全相異，並把「前面已教過什麼」列進提示當禁區。
+   **要加課或改主題，先改這份大綱，不要讓模型自己想 grammar。**
+7. 🚨 **題目中英顛倒**，三種長相，`validate_direction` 三種都擋：
+   - 題幹是英文卻問「的英文是？」——答案直接寫在題目上（L03 前十題全中，
+     而且「whisper 的英文是？」的標準答案還填成 `wink`，直接是錯的）
+   - 題幹與選項全中文（L08/10/27/45），整題沒有一個英文字，考不到任何東西
+   - 題幹英文、選項中文（L25 的 `not easy`）
+8. 🚨 **正確答案 74% 排在第一個選項**。全書 1355 題裡 1005 題答案是 (A)，而排版
+   與網站兩邊都**沒有洗牌**，於是原樣印到紙上，學生一路猜 A 就有七成分。
+   `shuffle_options` 用課號當種子把答案打散到 A–D（同種子重跑結果一樣，diff 乾淨）。
+9. 🚨 **選項重複要在生成端擋，不是排版端**。`am / is / are / be` 這一組全書出現
+   27 次、橫跨 5 課；`pick_mcq` 的「同組選項最多收兩題」只是在爛牌裡挑。現在
+   `validate_variety` 規定一課裡同一組選項只准出現一次，而且三批 MCQ 是分開呼叫的，
+   **要把前面用過的選項組寫進下一批的提示**，否則每批各自合格、合起來仍是十題長一樣。
+10. 🚨 **繁體字對了不等於台灣用語對了**。`check_simplified` 逐字比對抓不到
+    「早上好／下午好／晚上好」（L02 整課）、「土豆」（L18；台灣的土豆是花生，
+    而同一批單字裡剛好就有 peanut）、「橡皮」「尺子」——每個字本身都是正體。
+    另立 `check_usage` 用詞表比對。
 
 ## 引擎（2026-09-07 實測）
 

@@ -101,7 +101,8 @@ _BODY_HEAD = """你是台灣國小英語教材的資深編寫者。請替一本�
 {taught}
 
 共同要求：
-1. 全部中文一律「繁體中文」（台灣用字，例如「裡」不寫「里」）。
+1. 全部中文一律「繁體中文」，而且要**台灣用語**。寫早安／午安／晚安不寫早上好／
+   下午好／晚上好；馬鈴薯不寫土豆（台灣的土豆是花生）；橡皮擦不寫橡皮；尺不寫尺子。
 2. 讀者是台灣國小中高年級學生，句子要短、具體、生活化。**絕對不要加 KK 音標或任何音標**。
 3. 只輸出 JSON，不要任何說明文字，不要包在程式碼區塊裡。
 """
@@ -287,6 +288,33 @@ def check_simplified(obj) -> list[str]:
     return sorted(found)
 
 
+# 繁體字對了不等於台灣用語對了。這些是實際踩到的：L02 整課用「早上好／下午好／
+# 晚上好」（台灣說早安／午安／晚安）、L18 把 potato 譯成「土豆」（台灣的土豆是花生，
+# 而這批單字裡剛好也有 peanut）、L06/L21 的「橡皮」「尺子」。
+# 檢查簡體字的那支抓不到這一類，因為每個字本身都是正體。
+MAINLAND_TERMS = {
+    "早上好": "早安", "下午好": "午安", "晚上好": "晚安",
+    "土豆": "馬鈴薯", "西紅柿": "番茄", "尺子": "尺",
+    "自行車": "腳踏車", "公交車": "公車", "出租車": "計程車",
+    "視頻": "影片", "信息": "訊息", "質量": "品質", "網絡": "網路",
+    "軟件": "軟體", "屏幕": "螢幕", "打印": "列印", "冰箱": "冰箱",
+}
+
+
+def check_usage(obj) -> list[str]:
+    text = json.dumps(obj, ensure_ascii=False)
+    bad = []
+    for term, good in MAINLAND_TERMS.items():
+        if term == good:
+            continue
+        if term in text:
+            bad.append(f"中國用語「{term}」要改成「{good}」")
+    # 橡皮單用是中國說法，橡皮擦才是台灣說法
+    if re.search(r"橡皮(?!擦)", text):
+        bad.append("中國用語「橡皮」要改成「橡皮擦」")
+    return bad
+
+
 def validate_intro(body: dict) -> list[str]:
     errs = []
     # grammar 不再由模型自己想，改由 course50-syllabus.json 綁定，所以不列在這裡
@@ -306,7 +334,7 @@ def _common_errs(obj) -> list[str]:
     bad = check_simplified(obj)
     if bad:
         errs.append("簡體字：" + "".join(bad))
-    return errs
+    return errs + check_usage(obj)
 
 
 def validate_grammar(body: dict) -> list[str]:
@@ -360,7 +388,7 @@ def validate_exercises(ex: dict, keys: dict[str, int] | None = None) -> list[str
     bad = check_simplified(ex)
     if bad:
         errs.append("簡體字：" + "".join(bad))
-    return errs
+    return errs + check_usage(ex)
 
 
 HAS_ZH = re.compile(r"[一-鿿]")
