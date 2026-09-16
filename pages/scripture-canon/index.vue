@@ -73,6 +73,13 @@ const religions = [
     enabled: true,
   },
   {
+    path: '/scripture-canon/manichaeism',
+    icon: '☀️',
+    title: '摩尼教',
+    desc: '摩尼教經典五藏 —— 摩尼親撰的正典書目（七經＋沙卜爾干＋圖經）＋埃及與北非的科普特文與希臘文抄本＋吐魯番的中古伊朗語與回鷘語寫本＋敦煌三經與霎浦文書＋敵證與外部記述（附錄）；原文轉寫／英譯／繁中三欄對照',
+    enabled: true,
+  },
+  {
     path: '/scripture-canon/islam',
     icon: '☪️',
     title: '伊斯蘭教',
