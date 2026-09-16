@@ -222,6 +222,41 @@ one was `aelius`: the Latin dictionary lists the Roman gens *Aelius*, so lemmati
 biblical names with a plausible-looking entry. **A lowercase headword in a proper-name
 table is a bug, never a name** — assert on it.
 
+### Reconciling a re-render: compare the text layer, not the bytes
+
+A PDF carries its own conversion timestamp, so the byte hash changes on every render
+even when nothing else did. Reconciling eleven re-rendered volumes by SHA-1 reported
+all eleven as "content changed" — for books whose data and scripts had not been touched
+at all. Hash `"
+".join(page.get_text() for page in doc)` instead; that was stable
+across two renders of the same DOCX to the character.
+
+### Orphaned closing punctuation is a real defect; fixing it by moving the split is not
+
+Japanese readings split after 。！？」』, so `…だもの。」` breaks at the full stop and
+the closing 」 becomes its own fragment. Landing on a unit boundary, it prints as a line
+containing nothing but 」. Four such places across four volumes (the others opened with
+）).
+
+The tempting fix — don't split where a sentence-final mark is followed by a closing
+mark — was tried and is wrong: it cuts 「…一層端厳な、「仏」」 into its own unit, because
+that 」 closes a quoted *word*, not a sentence, and a mid-sentence （？） is equally
+indistinguishable. Worse, changing the split rule re-flows every paragraph in the book,
+and the sentence translations are attached **by hash of the text** — they all come
+unstuck at once.
+
+Normalise the result instead: after packing, move leading closing marks back onto the
+previous unit. Nothing else moves. Then carry the few translations across to the new
+hashes explicitly, and check the attachment count before and after.
+
+### Count the numerator and denominator over the same set
+
+The Japanese sentence-translation report sat at 826／832 forever, because the six
+units that are 「＊」「×」「１」「２」 — the original's own scene breaks and section
+numbers — have nothing to translate. Excluding them from the denominator alone then
+printed 817／813: a numerator larger than its denominator. Derive both from one filtered
+list, and say in the line itself what was excluded.
+
 ### Alignment guards: three, and each catches a different lie
 
 Matching a Latin name to its Chinese by shared verses needs all three, and the numbers

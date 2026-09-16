@@ -77,6 +77,33 @@ def sentences(paragraph: str) -> list[str]:
     return parts or ([paragraph.strip()] if paragraph.strip() else [])
 
 
+CLOSERS = "」』）)〉》】］"
+
+
+def reunite_closers(chunks: list[str]) -> list[str]:
+    """把跑到下一段開頭的收尾標點搬回前一段。
+
+    🚨 切點在「。！？」』」之後，所以「…だもの。」」會在句號處先斷一次，收尾的
+    「」」自成一片；剛好落在單元邊界時，讀本上就印出孤零零一行「」」。全書四處
+    （另外三處是以「）」開頭的行）。
+
+    修的是結果不是切點。改切點的版本試過：不在句末標點後面緊跟的收尾標點處斷，
+    孤兒是沒了，卻把「…一層端厳な、「仏」」切成獨立一段——因為那個「」」是詞中
+    的引號不是句末，而句中的「（？）」括號同樣分不出來。切點規則動一下，全書段落
+    的分配就跟著重排，中譯是照文字雜湊接的，會整批脫鉤。這裡只搬標點，其他段落
+    的邊界一個字都不動。
+    """
+    out: list[str] = []
+    for chunk in chunks:
+        lead = len(chunk) - len(chunk.lstrip(CLOSERS))
+        if lead and out:
+            out[-1] += chunk[:lead]
+            chunk = chunk[lead:]
+        if chunk:
+            out.append(chunk)
+    return out
+
+
 def pack(paragraph: str) -> list[str]:
     """把一段拆成不超過 UNIT_MAX 字的句群，句子本身絕不切開。"""
     out: list[str] = []
@@ -89,7 +116,7 @@ def pack(paragraph: str) -> list[str]:
             current += sentence
     if current:
         out.append(current)
-    return out
+    return reunite_closers(out)
 
 
 def units_from_prose(text: str) -> list[dict]:

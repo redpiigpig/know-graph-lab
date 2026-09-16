@@ -557,8 +557,18 @@ def build(book: int) -> Path:
     lessons = lessons_for(part, readings, vocabulary)
     exercises = exercise_blocks(vocabulary)
     attached = attach_sense(lessons, sense)
-    units = sum(len(l["units"]) + len(l["memoryUnits"]) for l in lessons)
-    print(f"  整句中譯 {attached:,}／{units:,} 段", flush=True)
+    # 🚨 分母要扣掉不是句子的段。原文用「＊」「×」分場、用「一」「二」「１」
+    # 「２」起章節，它們自成一段是原書的排法，但沒有東西可譯。算進分母，統計就
+    # 永遠停在 826／832，每次看到都要重新判斷一次那六段是不是真的漏譯。
+    # 🚨 分子分母要算同一批。只從分母扣記號段，分子還帶著有譯文的那幾段，
+    # 第一冊就報成 817／813——分子大於分母。
+    every = [u for l in lessons for u in l["units"] + l["memoryUnits"]]
+    marks = [u for u in every if not any(ch.isalpha() for ch in u["text"])]
+    body = [u for u in every if any(ch.isalpha() for ch in u["text"])]
+    done = sum(1 for u in body if (u.get("senseZh") or "").strip())
+    print(f"  整句中譯 {done:,}／{len(body):,} 段"
+          + (f"（另有 {len(marks)} 段是分場記號或章節序號，不譯）" if marks else ""),
+          flush=True)
 
     document = Document()
     H.configure(document)
