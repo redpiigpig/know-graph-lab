@@ -1,0 +1,50 @@
+{
+ "slug": "psalms-and-prayers",
+ "siglum": "七 7",
+ "title_zh": "詩篇與祈禱",
+ "canon": "canon",
+ "volume": "seven-treatises",
+ "script": "manichaean-translit",
+ "orig_source": "IAMS《東方摩尼教選輯》第 2 冊，pp. 54–59",
+ "orig_url": "https://www.manichaeism.de/other-resources-2/",
+ "en_source": "同上（原文轉寫與英譯逐行並排刊出）。",
+ "en_url": "https://www.manichaeism.de/other-resources-2/",
+ "licence": "原文轉寫與英譯取自國際摩尼教研究學會（IAMS）開放取用的《東方摩尼教選輯》(Anthologia Manichaica Orientalia, Samuel N. C. Lieu 編，Ancient India and Iran Trust, Cambridge)。各篇的原校訂者與譯者見每段出處。繁中為本站自譯。",
+ "pivot": "iams-eng",
+ "scheme": "locator",
+ "pivot_note": "本篇原文轉寫與英譯同出 IAMS 開放取用的《東方摩尼教選輯》，兩欄是同一份校訂本的並排刊文，段號沿用該書的抄本定位符與行號，本站不自編。",
+ "segments": [
+  {
+   "chapter": "P25a",
+   "verse": "M790/R/Hd.",
+   "ref": "P25a M790/R/Hd.",
+   "orig": "{ ʾʾfrʿywn {",
+   "en": "Blesseing",
+   "zh": ""
+  },
+  {
+   "chapter": "P25a",
+   "verse": "M790/V/Hd.",
+   "ref": "P25a M790/V/Hd.",
+   "orig": "{ qšwd{?})gʾn { {Composite text} {lines missing} (§360b) [•••• •••• •••• •••• ••••]yddkṯ [•••• •••• •••• •••• ••](.) bwd [•••• •••• •••• •••• ••](ʾd) ° ʾwd pd [•••• •••• •••• ••••]t Òhr ° zmyg ẅ [•••• •••• •••• ••••]ʾgʾn ° pd hwʿyn [•••• ••••] (§361b) [nmʾc brʾ ](m) ° ẅ ʾfrynʾm [•••• •••• •••• •••• mnw](h)myd rwšn ° (k)[y] [•••• •••• •••• ••••](.n) ʾbryn ʾ[••] [•••• •••• •••• •••• ]",
+   "en": "of the small ones {Composite text} {lines missing} (§360b) ‘.... .... .... .... .... was .... .... .... and in .... .... ... land, earth and .... .... in them .... ....’ (§361b) I worship and bless .... ..... .... the light-nous, who .... .... .... above ..... .... ... these .... he revealed .... .... . ..... he taught ...",
+   "zh": ""
+  },
+  {
+   "chapter": "P25a",
+   "verse": "P 25b",
+   "ref": "P25a P 25b",
+   "orig": "1/ (§359c-2) nm(ʾ)cβrʾm ZY ʾʾβryn-ʾʾm pr ʾwsγwty pʾz-n ZY pr rštw 2/ [z]βʾk ZK<n> βγʾn xšyδ RBkw xšywny z- rwʾβγy ky ZY 3/ {[ʾ]XYw}<(ʾB)Yw> ZY ny<ʾ>k xʾcy sʾt rwxšntʾc βγyšty γwβty ZY ʾʾ<β>ryty ʾyš 4/ tγw δnn RBkw rwxš(nʾ) βcʾnpδ ZKh ʾwtʾkt ʾʾβryty<t> ʾyš M194 I + M790 + Pa.: Ed. and tr.",
+   "en": "(§359c-2) I worship and bless with a pure mind and with a true tongue the great ruler of the gods, king God Zurwa who is the father and ancestor of all the luminous gods. Praised and blessed are you with the great luminous world the blessed places. You are ... M8050 + M8531 MPs. 108-09.",
+   "zh": ""
+  },
+  {
+   "chapter": "P25a",
+   "verse": "P25a",
+   "ref": "P25a P25a",
+   "orig": "1/ (§359c-1) nmʾcβrʾm /ZY/ ʾʾβr<y>n<ʾm> pr ʾwswγty pʾz-n ZY pr rštw zβʾk ZKn βγʾnw xšyδ RBkw ky ZY {ʾXYw}<(ʾB)Yw> 2/ (§359c-2) ny<ʾ>k xcy sʾt rxwš(ʾ)nt βγyšty ky ZY {text breaks off in mid-line} {empty lines}",
+   "en": "((§359c-1) I worship and bless with a pure mind and with a true tongue the great ruler of the gods who is the father, (§359c-2) the ancestor of all the luminous gods who <>. {text breaks off in mid-line} {empty lines}",
+   "zh": ""
+  }
+ ]
+}

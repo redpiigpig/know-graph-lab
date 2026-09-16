@@ -189,6 +189,7 @@ export const CANON_CANON: ManiCanon = {
               via: '吐魯番中古波斯語、帕提亞語、粟特語、回鶻語殘卷（Henning 1943 綴輯）',
               provenance: '柏林吐魯番藏品；另有科普特文與阿拉伯文引文',
               extent: '存可讀的成段敘事，篇幅不明',
+              columns: { orig: 'ready', en: 'ready', zh: 'none' },
               note: '漢名《俱緩部》，意譯《大力士經》。Kawān 即敘利亞語「巨人」。',
               intro:
                 '七經中今日**讀得最多**的一部，而且來歷特別：它不是摩尼原創，'
@@ -211,6 +212,7 @@ export const CANON_CANON: ManiCanon = {
               via: '奧古斯丁《駁基要書信》逐句引錄；都柏林科普特文書信抄本（未全刊）；《群書類述》列七十六封',
               provenance: '科普特文抄本存都柏林切斯特‧比替圖書館',
               extent: '《群書類述》列七十六封；今存《基要書信》開頭數段與科普特殘葉',
+              columns: { orig: 'ready', en: 'ready', zh: 'none' },
               note: '🚨 漢名比定有爭議，或作《泥萬部》（律藏經／藥藏經）。',
               intro:
                 '摩尼寫給各地教團的信，性質近於保羅書信——這個相似不是巧合，是刻意的模仿。'
@@ -233,6 +235,7 @@ export const CANON_CANON: ManiCanon = {
               via: '科普特文《詩篇集》中署名摩尼的數首；《群書類述》',
               provenance: '無敘利亞語抄本；科普特譯本部分存梅迪奈特馬迪',
               extent: '原書全佚；科普特《詩篇集》中若干首或出自本書',
+              columns: { orig: 'ready', en: 'ready', zh: 'none' },
               note: '漢名《阿拂胤部》，意譯《讚願經》。阿拂胤即中古波斯語 āfrīn（讚祝）。',
               intro:
                 '摩尼親撰的禮儀詩歌。這一部的處境與其他六部不同：原書雖佚，'

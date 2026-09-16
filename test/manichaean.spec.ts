@@ -170,16 +170,31 @@ describe('摩尼教經典 — 取源現況要誠實', () => {
     }
   })
 
-  it('吐魯番那一藏的原文與英譯都標 available（IAMS 選輯開放取用）', () => {
+  it('吐魯番那一藏的原文與英譯非 available 即 ready（IAMS 選輯開放取用）', () => {
+    // 這一藏的取源條件是五藏中最好的：IAMS 選輯把原文轉寫與英譯逐行並排刊出，
+    // 所以不該有 copyright 或 none。已抓下來的轉成 ready，其餘維持 available。
     const iranian = findCanon('iranian')!
     for (const v of iranian.volumes) {
       for (const d of v.divisions) {
         for (const text of d.texts) {
           const c = columnsOf(text, d)
-          expect(c.orig, `${text.slug} 原文欄`).toBe('available')
-          expect(c.en, `${text.slug} 英譯欄`).toBe('available')
+          expect(['available', 'ready'], `${text.slug} 原文欄`).toContain(c.orig)
+          expect(['available', 'ready'], `${text.slug} 英譯欄`).toContain(c.en)
         }
       }
+    }
+  })
+
+  it('IAMS 選輯已抓下來的四篇標 ready，且正文檔真的在', async () => {
+    // 🚨 這四篇是過了配對率閘（≥65%）的。沒過閘的不得標 ready——
+    //    對齊鍵挑錯時不會報錯，只會產出「兩欄都有東西但錯開一格」的檔。
+    const { hasText } = await import('~/data/manichaean/sources')
+    for (const slug of ['sabuhragan-turfan', 'book-of-giants', 'epistles', 'psalms-and-prayers']) {
+      const loc = findText(slug)!
+      const c = columnsOf(loc.text, loc.division)
+      expect(c.orig, `${slug} 原文欄`).toBe('ready')
+      expect(c.en, `${slug} 英譯欄`).toBe('ready')
+      expect(hasText(slug), `${slug} 標了 ready 卻沒有正文 JSON`).toBe(true)
     }
   })
 

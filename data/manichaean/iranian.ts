@@ -120,6 +120,7 @@ export const IRANIAN_CANON: ManiCanon = {
               provenance: '柏林吐魯番藏品',
               status: 'fragment',
               extent: '存末世論部分成段文字',
+              columns: { orig: 'ready', en: 'ready', zh: 'none' },
               note: 'IAMS《東方摩尼教選輯》第三冊全冊處理此書。',
               intro:
                 '摩尼獻給沙普爾一世那部書的實際殘片。'
