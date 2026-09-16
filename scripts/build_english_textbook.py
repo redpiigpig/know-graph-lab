@@ -10,6 +10,11 @@
 排版規格沿用使用者定案：B5、不要 KK 音標、英文 >= 13pt、中文 >= 12pt、
 課內不分頁（換下一課才換頁）、課文在單字前。超過 300 頁就分上下兩冊。
 
+一課的順序是：學習目標 → 課文（故事）→ 單字 → 文法 → 情境對話 → 練習 → 解答。
+2026-09-16 砍掉原本夾在文法與練習之間的「例句」八句——那八句沒有情節也沒有
+說話人，排起來跟課文一樣，使用者翻紙本的第一個反應是「為何單字之前和之後都有
+課文」。課程資料仍保留 sentences，網站 /english 有自己的版面在用。
+
 用法：
     python scripts/build_english_textbook.py              # 單冊
     python scripts/build_english_textbook.py --split      # 強制分上下冊
@@ -211,7 +216,7 @@ def add_cover(doc, lessons, volume: str):
     total = sum(len(l["words"]) for l in lessons)
     text(doc, f"國小英語 1000 字　‧　全 50 課", 15,
          align=WD_ALIGN_PARAGRAPH.CENTER, space_after=6, color="6B6B6B")
-    text(doc, "課文 ‧ 單字 ‧ 文法 ‧ 例句 ‧ 練習 ‧ 解答", 13,
+    text(doc, "課文 ‧ 單字 ‧ 文法 ‧ 對話 ‧ 練習 ‧ 解答", 13,
          align=WD_ALIGN_PARAGRAPH.CENTER, space_after=40, color="6B6B6B")
     text(doc, "家教講義用書", 14, align=WD_ALIGN_PARAGRAPH.CENTER,
          space_after=4, color="8E7CC3")
@@ -344,28 +349,22 @@ def add_grammar(doc, lesson, color):
             stick(p)
 
 
-def add_sentences(doc, lesson, color):
-    # 例句區偶爾整段照抄上面文法點的例句（L01 是八句全中），印出來就是同一頁
-    # 重複兩次。文法那邊先出現，這裡把已經看過的濾掉。
-    seen = {ex["en"].strip().lower()
-            for point in lesson["grammar_points"]
-            for ex in point.get("examples") or []}
-    sentences = [s for s in lesson["sentences"]
-                 if s["en"].strip().lower() not in seen]
-    if not sentences and not lesson.get("dialogue"):
-        return
-    section_head(doc, "例句與對話", color)
-    for s in sentences:
-        p = para(doc, space_after=1, indent=0.4)
-        style_run(p.add_run("‧ "), 13, color=color)
-        style_run(p.add_run(s["en"]), 13)
-        stick(p)
-        p = para(doc, space_after=4, indent=0.8)
-        style_run(p.add_run(s["zh"]), 12, color="6B6B6B")
+def add_dialogue(doc, lesson, color):
+    """單字之後只印「情境對話」。
+
+    2026-09-16 使用者翻紙本：「課文似乎有點多？為何單字之前和之後都有課文」。
+    一課原本有四段英中對照共 27 句——課文 9.4、文法例句 4.2、例句 8.0、對話 5.5。
+    那 8 句「例句」沒有情節也沒有說話人，排起來跟課文長得一模一樣，所以看起來
+    像單字後面又來一篇課文。砍掉整段之後單字後面只剩「文法」與「情境對話」，
+    兩者都有明確身分，一課 27→19 句。
+
+    課程資料仍然保留 sentences（網站 /english 有自己的版面在用），這裡只是不印。
+    """
     dialogue = lesson.get("dialogue")
     if dialogue:
+        section_head(doc, "情境對話", color)
         stick(text(doc, dialogue["title_zh"], 13, bold=True,
-                           color="264653", space_before=6, space_after=4))
+                   color="264653", space_after=4))
         for line in dialogue["lines"]:
             p = para(doc, space_after=1, indent=0.4)
             style_run(p.add_run(f"{line['sp']}："), 12, bold=True, color=color)
@@ -455,7 +454,7 @@ def add_lesson(doc, lesson, first, images, stats):
     add_reading(doc, lesson, color)
     add_words(doc, lesson, color, images, stats)
     add_grammar(doc, lesson, color)
-    add_sentences(doc, lesson, color)
+    add_dialogue(doc, lesson, color)
     add_exercises(doc, lesson, color)
     add_answers(doc, lesson, color)
 
