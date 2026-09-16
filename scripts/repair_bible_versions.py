@@ -309,8 +309,12 @@ def fhl_chapter(version, code, ch, sess):
     out = {}
     for x in recs:
         t = x.get('bible_text') or ''
-        # 🚨 有些版本（高連茨基聖詠經）的 bible_text 裡夾著 <p>/<h1> 標籤與
-        #    章題，不剝掉會把標記當經文存進去。
+        # 🚨 **分段標題要整塊丟掉，不能只剝標籤。** 施約瑟／正教文理／聖詠經的
+        #    bible_text 裡有 `<h2>天主創造天地</h2>` 這種編者所加的段落標題；
+        #    只做 `<[^>]+>` → '' 會把標題文字留在經文開頭，變成
+        #    「言耶穌基督即天主即人為世間真光 太初有道、…」。
+        #    實測施約瑟 1,189 章裡有 411 章中招，而且稽核的五項都抓不到它。
+        t = re.sub(r'<h[1-6][^>]*>.*?</h[1-6]>', ' ', t, flags=re.S)
         t = re.sub(r'<[^>]+>', ' ', t)
         # 只收斂真正的 ASCII 空白，不要用 \s——那會連 NBSP 一起吃掉，
         # 正是恢復本整本壞掉的第二層原因。
@@ -572,6 +576,42 @@ def scrape_psalter():
 
 
 # ════════════════════════════════════════════════════════════════════════
+# 信望愛上的歷史天主教中文譯本（思高以外）
+#
+# 名稱一律照信望愛自己的 cname，不自行推斷譯者——這批的譯者歸屬有爭議，
+# 猜錯會變成書目上的錯誤而且看不出來。
+#
+# 🚨 這批多半只有部分書卷（有的只譯了四福音、有的只有保祿書信），
+#    所以一律讓 scrape_fhl 自己試：抓得到就收，連續抓不到就跳下一卷。
+# 🚨 好幾部的**第 1 節裝的是序言不是經文**（德如瑟「若望序略」、馬相伯
+#    「若望宗徒之紀聖史也年已邁」、卜士傑「羅瑪人書切要序」）。
+#    入庫後要跑 audit 的「首節」那一項，被標出來的再逐部處理。
+# ════════════════════════════════════════════════════════════════════════
+
+FHL_CATHOLIC = [
+    # (信望愛版本碼, 我方代碼, 名稱, 出版年或 None)
+    ('basset',     'basset_zh',  '白日昇徐約翰文理譯本', 1707),
+    ('cmxuhsb',    'xuhui_gosp', '徐匯官話新譯福音', 1913),
+    ('cwjdsb',     'dejoseph',   '德如瑟四史聖經譯註', 1897),
+    ('cwmxb',      'maxiangbo',  '馬相伯救世福音', 1913),
+    ('cwangdmm',   'wangduomo',  '王多默聖史宗徒行實', 1923),
+    ('cwliwysb',   'xinjingyiyi', '宗徒大事錄和新經譯義', 1949),
+    ('cwfaubsb',   'paulepistle', '聖保祿書翰並數位宗徒涵牘', 1946),
+    ('cwplbsb',    'boshijie',   '卜士傑新經公函與默示錄', 1909),
+    ('cxubinwsb',  'xubin',      '許彬文四史全編', 1949),
+    ('cwhsiaosb',  'xiaoshunhua', '蕭舜華官話', 1956),
+]
+
+
+def scrape_catholic(only=None):
+    for ver, code, name, year in FHL_CATHOLIC:
+        if only and code != only:
+            continue
+        print(f'==== {name}（{ver} → {code}）', flush=True)
+        scrape_fhl(ver, code, nt_only=True)
+
+
+# ════════════════════════════════════════════════════════════════════════
 # 併回卷檔 / 上傳
 # ════════════════════════════════════════════════════════════════════════
 
@@ -659,6 +699,8 @@ if __name__ == '__main__':
         scrape_rcuv(arg)
     elif cmd == 'rcv':
         scrape_rcv(arg)
+    elif cmd == 'catholic':
+        scrape_catholic(arg)
     elif cmd == 'psalter':
         scrape_psalter()
     elif cmd == 'nwt':

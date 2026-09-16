@@ -26,6 +26,9 @@ r"""聖經語料入庫閘 —— 任何譯本進 R2 之前都要過這一關。
 4. **夾註混入**——「原文作」「或作」等註解語混進正文
 5. **疊字**——開頭重複（註解被貼在被註的詞後面的指紋）
 6. **空節**——有節號沒內容
+7. **分段標題混入**——編者所加的章節標題被留在每章第 1 節開頭
+   （它沒有任何殘留標記，前六項全抓不到；只膨脹第 1 節，所以用
+   「第 1 節長度比中位數 ÷ 全書長度比中位數」抓）
 
 ## 用法
 
@@ -73,6 +76,7 @@ TRUNC_REL = 0.55        # 低於「自己的中位數 × 這個比例」＝疑�
 TRUNC_FAIL = 0.10       # 截斷率超過一成＝不合格
 MOJI_FAIL = 0.01        # 亂碼率超過 1%＝不合格（正常應該是 0）
 NOTE_FAIL = 0.02        # 夾註混入超過 2%＝不合格
+HEAD_FAIL = 130         # 第 1 節長度比達全書中位數的 1.3 倍＝疑似分段標題混入
 
 # 🚨 亂碼指紋：UTF-8 被當成單位元組編碼解出來，會產生一串拉丁補充區字元。
 #    中文譯本正常情況下這個區段的字元應該是 0。
@@ -101,6 +105,7 @@ def audit(only=None):
     """
     stat = collections.defaultdict(lambda: collections.Counter())
     ratios = collections.defaultdict(list)
+    firsts = collections.defaultdict(list)     # 每章第 1 節的長度比
     # 先取樣判定哪些版本是中文（不寫死清單，新版本自動納入）
     sample = collections.defaultdict(list)
     for doc in load_books():
@@ -133,14 +138,29 @@ def audit(only=None):
                         if DUP_RE.match(s):
                             st['dup'] += 1
                         if base and code != BASELINE['zh']:
-                            ratios[code].append(len(s) / len(base))
+                            r = len(s) / len(base)
+                            ratios[code].append(r)
+                            # 🚨 第六項：分段標題混進正文。編者所加的
+                            #    `<h2>天主創造天地</h2>` 若只剝標籤、沒整塊丟掉，
+                            #    標題文字就留在**每章第 1 節**開頭（施約瑟 1,189 章
+                            #    裡有 411 章中招）。它沒有任何殘留標記，前五項全抓不到。
+                            #    但它只膨脹第 1 節，所以比「第 1 節的長度比中位數」
+                            #    與「全部節的中位數」就看得出來。
+                            if v['v'] == 1:
+                                firsts[code].append(r)
+
+    def _med(xs):
+        xs = sorted(xs)
+        return xs[len(xs) // 2] if xs else 1.0
 
     med = {}
     for code, rs in ratios.items():
-        rs_sorted = sorted(rs)
-        med[code] = rs_sorted[len(rs_sorted) // 2] if rs_sorted else 1.0
+        med[code] = _med(rs)
         stat[code]['comparable'] = len(rs)
         stat[code]['trunc'] = sum(1 for r in rs if r < med[code] * TRUNC_REL)
+        # 第 1 節明顯比其他節「胖」＝分段標題被黏在正文開頭
+        if len(firsts[code]) >= 50 and med[code]:
+            stat[code]['head_x100'] = int(_med(firsts[code]) / med[code] * 100)
 
     for doc in load_books():
         seen = {c for vs in doc['chapters'].values() for v in vs for c in v['t']
@@ -154,7 +174,7 @@ def audit(only=None):
 def report(stat, med, strict=False):
     rows = sorted(stat.items(), key=lambda kv: -kv[1]['verses'])
     print(f"{'版本':14}{'節數':>8}{'卷':>4}{'長度比':>7}{'截斷':>14}{'亂碼':>14}"
-          f"{'夾註':>13}{'空節':>6}  判定")
+          f"{'夾註':>13}{'首節':>6}  判定")
     print('─' * 92)
     failed = []
     for code, s in rows:
@@ -168,6 +188,8 @@ def report(stat, med, strict=False):
             flags.append('亂碼')
         if no > NOTE_FAIL:
             flags.append('夾註')
+        if s['head_x100'] and s['head_x100'] >= HEAD_FAIL:
+            flags.append('標題混入')
         verdict = ('✖ ' + '／'.join(flags)) if flags else '✔'
         if flags:
             failed.append(code)
@@ -176,7 +198,7 @@ def report(stat, med, strict=False):
         ncol = f"{s['note']:,}({no:.1%})" if s['note'] else '—'
         mcol2 = f'{med.get(code, 1):.2f}' if code in med else '—'
         print(f'{code:14}{s["verses"]:8,}{s["books"]:4}{mcol2:>7}{tcol:>14}{mcol:>14}'
-              f'{ncol:>13}{s["empty"]:6,}  {verdict}')
+              f'{ncol:>13}{(str(s["head_x100"]) + "%") if s["head_x100"] else "—":>6}  {verdict}')
     print('─' * 92)
     print(f'{len(rows)} 個版本，{len(failed)} 個不合格'
           + (f'：{"、".join(failed)}' if failed else ''))

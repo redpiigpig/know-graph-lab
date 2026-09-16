@@ -457,6 +457,36 @@ CREATE INDEX bible_commentary_verse ON bible_commentary (verse_ref);
 
 **Schema**：[database/bible-schema.sql](../../../database/bible-schema.sql) — `bible_books` (86 卷 × 8 教會 canon flags) / `bible_versions` (32 版本 + `pub_year` 欄) / `bible_verses` (book+ch+v+version PK + GIN FTS)。`display_order` 按 category 內 pub_year DESC 排（新→舊）。**⚠️ 2026-07-08 起 `bible_verses` 已搬出 DB**（file-backed：Drive `_verses/` gz + R2，經 `server/utils/bible-verses.ts` 讀取；`bible_books`/`bible_versions` 小表仍在 DB）。
 
+#### 🚨 2026-09-16 語料稽核：三個版本原本是壞的，而且看不出來
+
+盤點全部版本時抓到三種**節數對得上、卷數對得上、網站打得開、看起來完全正常**的壞法。
+之後任何譯本進 R2 之前都要跑 `python scripts/audit_bible_versions.py --strict`。
+
+| 版本 | 毛病 | 規模 | 根因 |
+|---|---|---|---|
+| `cuv2010` | 詩體只存了對句第一行 | 7,208 節（23.3%）；詩篇 88.5%、箴言 91% | 爬蟲只取節號後第一個 `<span>`，而 RCUV 的詩體續行是獨立的 `<p class="p2">`、沒有節號 |
+| `rcv_zh` | 整本亂碼 | **31,081 節（100%）** | 來源站不宣告 charset → requests 退回 ISO-8859-1 |
+| `cuv1919e` | 夾註混進正文 | 3,188 節（10.3%） | YouVersion 註解 span 的巢狀層數與 regex 假設不符 |
+
+修法與踩過的坑全部寫在 [`scripts/repair_bible_versions.py`](../../../scripts/repair_bible_versions.py)。
+幾條會重複踩到的：
+
+- **恢復本不能用程式還原**：`re.sub(r'\s+',' ')` 把 `0xA0` 與 `0x85` 吃成同一個空白，
+  資訊已遺失；硬還原只救得回 98%，且會產出「恩堸」這種假字。一律重抓。
+- **RCUV 有合併節號** `<b>18-19</b>`，只認 `<b>(\d+)</b>` 會讓那段默默黏到前一節（65 章 100 節中招）。
+- **信望愛 API 的 `engs=` 參數會靜靜回傳別的書卷**（HTTP 200、status success）。
+  一律用 `chineses=`，並逐次核對回應的 `chineses` 欄。
+- **東正教聖詠經把詩題算成經節**，各篇長短不同（詩 9 差 1 節、詩 50 差 2 節、詩 113 不差）；
+  寫死偏移會讓詩篇 10 整篇錯一節。用各篇實際起始節號推算，再逐篇比對節數驗證。
+- **分段標題會混進每章第 1 節**：信望愛把 `<h2>天主創造天地</h2>` 放在 bible_text 裡，
+  只剝標籤不整塊丟掉，標題就留在經文開頭（施約瑟 1,189 章裡 411 章中招）。
+- **庫裡原本把「施約瑟淺文理譯本」與「淺文理和合本」當成同一部**——那是兩部書：
+  施約瑟是個人譯的全本；淺文理和合本是和合本委員會的淺文理版，只出過新約就停辦。
+
+稽核閘自己也修過兩次誤報，兩次都是同一個教訓（**判準要自我校準，不要拿別的版本當尺、
+也不要寫死名單**）：拿官話長度量文言，把乾淨的文理和合本判成「截斷 16.6%」；
+中文版本清單寫死，新加的版本整個不檢查還印 ✔。
+
 #### 中文 13 版（display_order 10-22）
 | code | 版本 | 年代 | 節數 | 來源 | 版權 |
 |---|---|---|---|---|---|
