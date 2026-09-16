@@ -36,6 +36,22 @@ HUNT_FILES = [
     (SKILL / "基督宗教研究_中譯獵表.txt", "christianity-studies-hunt"),
 ]
 OUT = ROOT / "output" / "zlib_wanted_all.jsonl"
+# 濾掉的單篇另存一份，好交給收文章的那幾條線（華藝／弘誓典藏／Unpaywall…）
+ARTICLES_OUT = ROOT / "output" / "zlib_wanted_articles.jsonl"
+
+# 🚨 z-library 是**書**站，期刊上的單篇它沒有。獵表是從論文參考文獻抄來的，
+#    所以夾著訪談記、報導、側記這類單篇；把它們排進去只會白跑，而且落空會記成
+#    `probe-miss`——那在帳本裡是半永久的（見 ebook-zlib-harvest SKILL）。
+#
+#    判準刻意只認「幾乎不可能是專書」的文體名。試過用頁碼範圍、期刊名、「初探」
+#    這些訊號，誤判高得不能用（2026-09-16 實測 140 筆裡大半是書）：
+#      · 頁碼範圍會抓到書名裡的年代與章節
+#        —— Brubaker《Byzantium in the Iconoclast Era, c. 680-850》、《創世記 1-11 註釋》
+#      · 「Studies in…」是書名的一部分 —— J. Z. Smith《Map Is Not Territory》
+#      · 「初探」照樣是書名 —— 容世誠《戲曲人類學初探》
+#    寧可漏濾（頂多白搜一次），也不要錯濾（一本書從此不再被獵）。
+ARTICLE_FORMS = re.compile(
+    r"訪談記|訪談錄|口述、筆者訪問|側記|書評|評介|報導|蒞院記")
 
 # 一天只抓得到十本，六千多筆照雜湊亂序排等於永遠輪不到正在寫的那幾本。
 # 排序依據是「為什麼現在需要這本書」——有時程壓力的排前面：
@@ -388,7 +404,7 @@ def main() -> None:
     # 抓完而把它自己的名額用光，下一本新書要等到第 346 順位。fetch 端本來就會
     # 跳過它們（不花額度），所以濾掉純粹是讓配額對「還沒抓的」生效。
     done = ledger_done()
-    seen, merged, banned = set(), [], []
+    seen, merged, banned, articles = set(), [], [], []
     for it in items:
         if it["key"] in seen or it["key"] in done:
             continue
@@ -398,7 +414,23 @@ def main() -> None:
         if hit:
             banned.append((hit["name"], it.get("zh") or it.get("query", "")))
             continue
+        # 期刊上的單篇不進書站的獵表，另存一份交給收文章的那幾條線
+        if ARTICLE_FORMS.search(f"{it.get('zh', '')} {it.get('query', '')}"):
+            articles.append(it)
+            continue
         merged.append(it)
+
+    if articles:
+        ARTICLES_OUT.parent.mkdir(parents=True, exist_ok=True)
+        with ARTICLES_OUT.open("w", encoding="utf-8") as f:
+            for it in articles:
+                f.write(json.dumps(it, ensure_ascii=False) + "\n")
+        print(f"\n  期刊單篇濾掉 {len(articles)} 筆（z-lib 是書站，這些要走華藝／"
+              f"弘誓典藏／Unpaywall）→ {ARTICLES_OUT.name}")
+        for it in articles[:10]:
+            print(f"    {(it.get('zh') or it.get('query', ''))[:56]}")
+        if len(articles) > 10:
+            print(f"    …另 {len(articles) - 10} 筆")
 
     by_source: dict[str, int] = {}
     for it in merged:
