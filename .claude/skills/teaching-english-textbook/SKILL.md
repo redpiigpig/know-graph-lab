@@ -33,6 +33,12 @@ python scripts/english_site_from_course50.py     # course50 -> 網站 lessons.js
 讀單字卡人工校過的對照表（749/1000 有 OpenMoji 碼位），**不要再拿英文名去猜**，
 課本與網站原本那批 order→獅子、summer→啤酒就是猜出來的。
 
+🚨 **主題圖示不可以從 `lessons.json` 讀回來**。原本 `theme_emojis()` 是拿舊檔的
+`title_en` 當鍵去查，但這支腳本自己就會覆寫 `lessons.json`——課名一改下次就對不到，
+每重出一次掉更多圖示，而且只印一行「缺主題圖示的課」不當錯誤。2026-09-17 重出
+50 課之後 35 課沒有圖示。二十個主題是穩定的，碼位寫死在 `THEME_EMOJI`，
+查詢用 `lesson.theme` 不是課名。
+
 網站那邊還有兩個地方跟課數綁著：`pages/english/index.vue` 的 `LESSON_COUNT`
 （段考每 5 課一組，會自己長出 10 組）與 `pages/english/review/[range].vue` 的
 總複習上限。測驗題庫走 `utils/englishQuiz.ts`，靠 exercises 的 `type` 挑題
@@ -48,12 +54,19 @@ python scripts/english_site_from_course50.py     # course50 -> 網站 lessons.js
 ## 出書
 
 ```bash
-PY="C:/Users/user/AppData/Local/Python/bin/python.exe"
-"$PY" -u scripts/build_english_course50.py            # 生成沒做過的課
-"$PY" -u scripts/build_english_course50.py --check    # 只驗現有產出
-"$PY" -u scripts/build_english_course50.py --fix      # 修重組題題幹、去重選擇題、洗選項
-"$PY" -u scripts/build_english_textbook.py --split --publish   # 出上下兩冊 + PDF + 送 Drive
+GEN="C:/Users/user/AppData/Local/Python/bin/python.exe"          # 有 requests
+PDF="C:/Users/user/AppData/Local/Microsoft/WindowsApps/python.exe" # 有 pywin32
+
+"$GEN" -u scripts/build_english_course50.py            # 生成沒做過的課
+"$GEN" -u scripts/build_english_course50.py --check    # 只驗現有產出
+"$GEN" -u scripts/build_english_course50.py --fix      # 修重組題題幹、去重選擇題、洗選項
+"$PDF" -u scripts/build_english_textbook.py --split --publish   # 出上下兩冊 + PDF + 送 Drive
 ```
+
+🚨 **出書那支要換另一個解譯器**。`to_pdf()` 走 Word COM（`scripts/office_to_pdf.py`
+`import pythoncom`），而生成用的 `AppData/Local/Python` 那支沒裝 pywin32——
+docx 會正常寫出來，**轉 PDF 那一步才炸**，等於整本排完才失敗。
+`WindowsApps/python.exe` 三個套件（python-docx／PIL／pywin32）都有。
 
 🚨 **一定要寫明解譯器路徑**。背景跑的時候裸 `python` 會解析到 `_whisper_venv`，
 那支沒有 `requests`，而且**不會報錯**——程序活著、CPU 0、記憶體 4.6MB，卡在 import。
@@ -68,17 +81,25 @@ PY="C:/Users/user/AppData/Local/Python/bin/python.exe"
 - **B5**（JIS 18.2×25.7cm）、英文 ≥13pt、中文 ≥12pt、**不要 KK 音標**
 - 課內不硬插分頁（換下一課才換頁），課文排在單字前
 - 每課練習：選擇 10、填空 10、重組 6、造句 8
-- **超過 300 頁分上下兩冊**（目前 228＋231 頁）
+- **超過 300 頁分上下兩冊**
 - 配圖用單字卡那份人工校過的 `english-card-images.json`，紙本 500/500 全中
   （網站走 OpenMoji 碼位，749/1000）
 
-`MCQ_PER_LESSON` 在排版腳本裡。**資料檔存的是 30 題、出書時分層挑 10 題**
-（4 題單字義＋3 題文法＋3 題句意），要改印幾題只改這個數字，不必重跑生成。
+**一課的順序**：學習目標 → 課文（故事）→ 單字 → 文法 → 情境對話 → 練習 → 解答。
+2026-09-17 砍掉原本夾在文法與練習之間的「例句」八句：使用者翻紙本的第一個反應是
+「課文似乎有點多？**為何單字之前和之後都有課文**」。一課原本有四段英中對照共 27 句
+（課文 9.4／文法例句 4.2／例句 8.0／對話 5.5），那八句「例句」沒有情節也沒有說話人，
+版面上就是一串編號的英中對照，跟課文長得一模一樣。砍掉之後單字後面只剩「文法」
+（有表格）與「情境對話」（有說話人），兩者都有明確身分，一課 27→19 句。
+**課程資料仍保留 `sentences`**，網站 `/english` 有自己的版面在用。
+
+`MCQ_PER_LESSON` 在排版腳本裡。早期那批資料檔存 30 題、出書時分層挑 10 題；
+2026-09-17 重出之後一課就是 10 題，`pick_mcq` 直接全收。
 
 ## 這批材料特有的「看起來成功的失敗」
 
-結構檢查全綠不代表東西是對的。踩過這十個（6–10 是 2026-09-16 使用者翻紙本才發現的，
-每一個當時都通過了所有自動檢查）：
+結構檢查全綠不代表東西是對的。踩過這十九個：1–5 是最早那批，6–10 是 2026-09-16
+使用者翻紙本才發現的（每一個當時都通過了所有自動檢查），11–19 是加了閘之後才長出來的。
 
 1. **覆蓋率是我自己量錯的**。詞表把複數寫成 `apple(s)`、`peach(es)`、`mango(es)`，
    比對只切 `/` 和 `、` 的話永遠對不到課文裡的 apple／peaches。L19 因此被判成
@@ -116,6 +137,41 @@ PY="C:/Users/user/AppData/Local/Python/bin/python.exe"
     「早上好／下午好／晚上好」（L02 整課）、「土豆」（L18；台灣的土豆是花生，
     而同一批單字裡剛好就有 peanut）、「橡皮」「尺子」——每個字本身都是正體。
     另立 `check_usage` 用詞表比對。
+
+### 加了閘之後才出現的那一批（每加一道，模型就找一條新捷徑繞過去）
+
+11. **要求課文句子長一點 → 它在最後塞一句 39 個字的**。L41 末句把好幾件事串成
+    一句，前面九句照樣短，平均就過關了。門檻改看**中位數**（塞長句沒有用），
+    另加單句上限 18 個字。
+12. **要求結尾詞分散 → 它把重組題縮成一兩個字**：「Sorry.」「I have.」，
+    甚至「Thank you please.」。加最小長度（重組 3 字、造句 2 字）。
+13. 🚨 **但那道閘套在前五課根本是錯的**。L01 的 20 個字全是代名詞與招呼語，
+    整課的重點就是操練 am／is／are，「I am fine. ／ He is fine.」重複結尾本來
+    就是對的。硬套的結果是模型拿 Hi／OK／Hello 墊句首，寫出「OK She is sorry.」
+    這種句中大寫的東西。`DRILL_LESSONS = 5` 豁免。
+    **問題在閘不在模型——先想清楚這一課該練什麼，再決定要不要套。**
+14. **挖空題沒有中文提示時答案不只一個**。「He ______ jump.」選項有 can 也有
+    can't，兩個填進去都通順，標準答案卻只認一個，學生填對了也被算錯。
+15. **大綱訂了進程，題目會往兩邊偷**。往回偷是使用者原本報的（前三課都教 be
+    動詞）；往前偷是 L31 出「It ______ rainy yesterday.」答案 was，而過去式是
+    第 49、50 課才教。`FUTURE_MARKERS` 擋。🚨 **只查題目不查課文**——故事裡出現
+    還沒學的字沒關係（旁邊有中譯），但拿沒教過的文法去考人不行；第一版連課文
+    一起查，L21 與 L31 都因為課文寫了 can 被退，要模型連寫 40 課都不用 can 不切實際。
+16. 🚨 **判準要跟意圖對齊，不要用代理指標**。「中文句夾英文空格」第一版拿
+    「英文字少於 2 個」當代理，把 `______ oval. (一個橢圓形)` 誤殺，L07 連退兩輪。
+    改成剝掉括號後看剩下有沒有中文——括號裡的中文是提示，是必要的。
+17. 🚨 **檢查的範圍要跟產出的範圍一致**。「選擇題重複」只在單一批次內比對，
+    但題目分三批出，同一題出現在第一批與第三批時兩批各自都合格。L01／L17／L19／
+    L31／L41 五課都這樣帶著重複題落地。整課組好之後要**再跑一次完整的**
+    `validate_exercises`，不是只跑 `validate_variety`。
+18. 🚨 **驗證函式吃到怪形狀不可以當機**。模型偶爾把 fill 回成字串陣列，
+    `item.get` 直接 AttributeError，例外穿過 `build_lesson` 打到 `main`，
+    **整條工人連同剩下的八課一起沒了**，而從外面看只是「這條比較慢」。
+    驗證函式的職責是回報「哪裡不對」給上層重試，形狀不對本身就是一種不對。
+19. **一次要 24 題會撞額度**。填空 10＋造句 8＋重組 6 放同一次呼叫，第一輪有
+    四成的課掛在這一段。拆成 `prompt_fill` 與 `prompt_unscramble` 兩次，
+    重組那次順便把造句用過的句子列進去——「兩區不可以考同一批句子」從事後退件
+    變成事前迴避。
 
 ## 引擎（2026-09-07 實測）
 
