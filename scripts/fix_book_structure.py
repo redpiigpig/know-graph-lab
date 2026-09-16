@@ -379,26 +379,9 @@ def write_book(eid: str, chunks: list[dict]):
         se.push_to_r2(eid, jsonl_path)
     except Exception as e:
         print(f"    R2 push warn: {str(e)[:60]}", flush=True)
-    # rebuild DB previews (net() rides brief blips; sustained outage -> RetryLater)
-    net(requests.delete, f"{URL}/rest/v1/ebook_chunks?ebook_id=eq.{eid}", headers=H_GET, timeout=30)
-    rows = []
-    for c in chunks:
-        row = {
-            "ebook_id": eid, "chunk_index": c["chunk_index"],
-            "chunk_type": c.get("chunk_type", "page"), "page_number": c.get("page_number"),
-            "chapter_path": c.get("chapter_path"),
-            "content": (c.get("content") or "")[:200], "char_count": len(c.get("content") or ""),
-        }
-        for opt in ("source_text", "source_lang", "section_type", "dh_number", "page_numbers"):
-            if c.get(opt) is not None:
-                row[opt] = c[opt]
-        rows.append(row)
-    for i in range(0, len(rows), 25):
-        batch = rows[i:i + 25]
-        rr = net(requests.post, f"{URL}/rest/v1/ebook_chunks", headers=H_JSON, json=batch, timeout=40)
-        if rr.status_code not in (200, 201):
-            for row in batch:
-                net(requests.post, f"{URL}/rest/v1/ebook_chunks", headers=H_JSON, json=row, timeout=30)
+    # 2026-09-16：不再重建 DB preview。ebook_chunks 已退場 ——
+    # 1,005,032 列在 Supabase 免費層（上限 500 MB）獨自佔掉 503 MB。
+    # 上面剛寫好的 JSONL＋R2 是正本，搜尋與 reader 都讀那一份。
 
 
 # ── JOB A — recover ──────────────────────────────────────────────────────────
@@ -467,9 +450,23 @@ def recover_book(eid: str, dry_run: bool = False, rich: bool = False) -> dict:
 
 # ── JOB B — audit (rules only, report) ───────────────────────────────────────
 def audit_book(eid: str, title: str) -> dict | None:
-    r = requests.get(f"{URL}/rest/v1/ebook_chunks?ebook_id=eq.{eid}"
-                     f"&select=chapter_path&limit=800", headers=H_GET, timeout=40)
-    paths = [c.get("chapter_path") or "" for c in r.json()]
+    # 2026-09-16：改讀 JSONL（ebook_chunks 已退場，見
+    # database/drop-ebook-chunks-2026-09-16.sql）
+    jsonl_path = CHUNKS_DIR / f"{eid}.jsonl"
+    if not jsonl_path.exists():
+        return None
+    chunks = []
+    with jsonl_path.open(encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                chunks.append(json.loads(line))
+            except Exception:
+                continue
+
+    paths = [c.get("chapter_path") or "" for c in chunks]
     nn = [p for p in paths if p]
     if not nn:
         return None  # no TOC -> a recover target, not an audit target

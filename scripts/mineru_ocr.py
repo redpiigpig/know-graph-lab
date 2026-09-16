@@ -61,6 +61,8 @@ VENV_PY = REPO / "_mineru_venv" / "Scripts" / "python.exe"
 MINERU_EXE = REPO / "_mineru_venv" / "Scripts" / "mineru.exe"
 CHUNKS_DIR = Path(os.environ.get(
     "EBOOK_CHUNKS_DIR", r"G:\我的雲端硬碟\資料\知識圖工作室\_chunks"))
+# 空間不夠時欠下的 DB preview，日後用 repopulate_chunk_previews.py 補
+PENDING_PREVIEWS = REPO / "scripts" / "state" / "pending_previews.txt"
 
 
 # ── MinerU 產物 → 逐頁文字 ────────────────────────────────────────────────
@@ -333,6 +335,30 @@ def cmd_run(args) -> int:
     return 0
 
 
+def db_size_mb() -> float | None:
+    """資料庫現在多大（MB）。量不到回 None —— 量不到不該擋住流程，但要說出來。
+
+    走 Management API：psycopg2 直連是 IPv6-only，這台跑不通
+    （見 [[reference_supabase_management_api]]）。
+    """
+    import urllib.request
+    token = os.environ.get("SUPABASE_ACCESS_TOKEN")
+    url = os.environ.get("SUPABASE_URL", "")
+    if not token or not url:
+        return None
+    ref = url.split("//")[-1].split(".")[0]
+    try:
+        req = urllib.request.Request(
+            f"https://api.supabase.com/v1/projects/{ref}/database/query",
+            data=json.dumps({"query": "select pg_database_size(current_database()) b"}).encode(),
+            headers={"Authorization": f"Bearer {token}", "Content-Type": "application/json"},
+            method="POST")
+        rows = json.loads(urllib.request.urlopen(req, timeout=45).read())
+        return rows[0]["b"] / 1024 / 1024
+    except Exception:
+        return None
+
+
 def cmd_queue(args) -> int:
     """吃既有的 OCR 佇列（`parse_error` 含 'no extractable text' 的書）。
 
@@ -357,8 +383,36 @@ def cmd_queue(args) -> int:
     if not targets:
         return 0
 
+    # 🚨 DB 空間閘。整夜跑一次會塞進十幾萬列 preview；2026-07-08 曾因超量被鎖站
+    #    （1,313 MB → 救回 359 MB）。2026-09-16 量到已經回到 872 MB，
+    #    370 本估計再加 81 MB。沒有這道閘，一個沒人看著的夜班就可能把站鎖掉。
+    db_mb = db_size_mb()
+    if args.max_db_mb:
+        if db_mb is None:
+            print("  ⚠ 量不到 DB 大小（Management API 不通），空間閘跳過")
+        else:
+            print(f"  DB 目前 {db_mb:,.0f} MB（硬上限 {args.max_db_mb:,} MB）")
+            if db_mb >= args.max_db_mb:
+                print("⛔ 已達硬上限，不開跑。先清空間或調高 --max-db-mb 再說。")
+                return 1
+
+    # preview 要不要寫。全文一律進 Drive＋R2，reader 讀的是那份，所以不寫 preview
+    # 書照樣能看，只是暫時搜尋不到 —— 空間緊的時候這是最划算的取捨。
+    if args.previews == "on":
+        write_previews = True
+    elif args.previews == "off":
+        write_previews = False
+    else:                                   # auto
+        write_previews = db_mb is not None and db_mb < args.preview_ceiling_mb
+    if not write_previews:
+        print(f"  ⏸ 不寫 DB preview（DB {db_mb:,.0f} MB ≥ {args.preview_ceiling_mb} MB）"
+              if db_mb else "  ⏸ 不寫 DB preview")
+        print(f"     書照樣能讀（reader 讀 Drive 的 JSONL），只是暫時搜尋不到；"
+              f"欠帳記在 {PENDING_PREVIEWS}")
+
     deadline = time.time() + args.max_minutes * 60 if args.max_minutes else None
     done = fail = 0
+    checked_at = time.time()
     for t in targets[: args.limit]:
         if deadline and time.time() > deadline:
             print(f"  ⏱ 已達 {args.max_minutes} 分鐘上限，其餘留給下一班")
@@ -409,7 +463,14 @@ def cmd_queue(args) -> int:
             path = og.write_jsonl(bid, pub)
             og.push_to_r2(bid, path)
             non_empty = [c for c in pub if c["text"].strip()]
-            og.insert_chunk_previews(bid, non_empty)
+            if write_previews:
+                og.insert_chunk_previews(bid, non_empty)
+            else:
+                # 全文已經在 Drive＋R2，reader 讀的就是那份，所以書照樣看得到；
+                # DB 的 preview 只服務 SQL 搜尋。空間不夠時先欠著，
+                # 記下來日後用 repopulate_chunk_previews.py 補。
+                with PENDING_PREVIEWS.open("a", encoding="utf-8") as f:
+                    f.write(f"{bid}\n")
             og.update_book_done(bid,
                                 total_chars=sum(len(c["text"]) for c in non_empty),
                                 chunk_count=len(non_empty),
@@ -423,6 +484,16 @@ def cmd_queue(args) -> int:
             continue
         done += 1
         print("  ✓ 已入庫")
+
+        # 每 10 分鐘複查一次空間，別等跑完才發現滿了
+        if args.max_db_mb and time.time() - checked_at > 600:
+            checked_at = time.time()
+            size = db_size_mb()
+            if size is not None:
+                print(f"  （DB {size:,.0f} / {args.max_db_mb:,} MB）")
+                if size >= args.max_db_mb:
+                    print("⛔ 跑到一半達到空間上限，停在這裡。已完成的都已入庫，其餘留在佇列。")
+                    break
 
     print(f"\n本輪完成 {done} 本、失敗 {fail} 本")
     return 0
@@ -453,6 +524,14 @@ def main() -> int:
                    help="時間上限，到了就把其餘留給下一班（0＝不限）")
     q.add_argument("--lang", default="ch")
     q.add_argument("--exclude", nargs="*", default=[], help="要跳過的 ebook id")
+    q.add_argument("--previews", choices=["auto", "on", "off"], default="auto",
+                   help="要不要寫 DB preview。auto＝DB 還有餘裕才寫（預設）。"
+                        "不寫也不影響閱讀，reader 讀的是 Drive 上的 JSONL，只影響搜尋")
+    q.add_argument("--preview-ceiling-mb", type=int, default=480,
+                   help="auto 模式下，DB 超過這個大小就不再寫 preview（免費層上限 500 MB）")
+    q.add_argument("--max-db-mb", type=int, default=1100,
+                   help="DB 超過這個大小就停（預設 1100 MB）。"
+                        "2026-07-08 曾在 1,313 MB 被鎖站，這道閘是為了別讓沒人看著的夜班撞上去")
     q.set_defaults(func=cmd_queue)
 
     args = ap.parse_args()

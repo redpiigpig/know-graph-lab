@@ -1511,23 +1511,10 @@ def update_db(book_id, chunks):
         timeout=30,
     )
 
-    # Also refresh ebook_chunks preview rows so search still works.
-    requests.delete(f"{URL}/rest/v1/ebook_chunks?ebook_id=eq.{book_id}", headers=H_GET, timeout=30)
-    rows = [{
-        "ebook_id": book_id,
-        "chunk_index": c["chunk_index"],
-        "chunk_type": c["chunk_type"],
-        "page_number": c["page_number"],
-        "chapter_path": c["chapter_path"],
-        "content": c["content"][:PREVIEW_LEN],
-        "char_count": len(c["content"]),
-    } for c in chunks]
-    BATCH = 50
-    for i in range(0, len(rows), BATCH):
-        r = requests.post(f"{URL}/rest/v1/ebook_chunks", headers=H_JSON, json=rows[i:i+BATCH], timeout=60)
-        if not r.ok:
-            print(f"  ⚠ chunk preview insert failed: {r.status_code} {r.text[:120]}", file=sys.stderr)
-            return
+    # 2026-09-16：不再寫 ebook_chunks preview。那張表已退場 ——
+    # 1,005,032 列在 Supabase 免費層（上限 500 MB）獨自佔掉 503 MB，而它只存每段
+    # 前 100 字。JSONL（＋R2 鏡像）是正本，搜尋與 reader 都已改讀那一份。
+    # 見 database/drop-ebook-chunks-2026-09-16.sql。
 
 
 def fetch_books_by_category(category: str = None, subcategory: str = None, limit: int = None,

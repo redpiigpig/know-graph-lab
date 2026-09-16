@@ -187,35 +187,14 @@ def delete_r2(book_id: str) -> None:
 
 
 def insert_chunk_previews(ebook_id: str, chunks: list[dict]) -> None:
-    def _clean(v):
-        return v.replace("\x00", "") if isinstance(v, str) else v
-    rows = [{
-        "ebook_id": ebook_id,
-        "chunk_index": c.get("chunk_index", i),
-        "chunk_type": c.get("chunk_type") or "chapter",
-        "page_number": c.get("page_number"),
-        "chapter_path": _clean(c.get("chapter_path")),
-        "content": _clean(c.get("content") or "")[:se.PREVIEW_LEN],
-        "char_count": len(_clean(c.get("content") or "")),
-    } for i, c in enumerate(chunks)]
-    BATCH_SIZES = [50, 20, 5, 1]
-    i = 0
-    while i < len(rows):
-        for bs in BATCH_SIZES:
-            batch = rows[i:i + bs]
-            r = requests.post(f"{se.URL}/rest/v1/ebook_chunks",
-                              headers=se.H_JSON, json=batch, timeout=120)
-            if r.status_code in (200, 201):
-                i += len(batch)
-                break
-            text = r.text[:300]
-            if "57014" in text or "timeout" in text.lower() or r.status_code >= 500:
-                if bs > BATCH_SIZES[-1]:
-                    continue
-            raise RuntimeError(f"preview insert failed: {r.status_code} {text[:120]}")
-        else:
-            raise RuntimeError(f"preview insert failed at batch_size=1, row {i}")
+    """2026-09-16 起是 no-op：ebook_chunks 已退場。
 
+    那張表 1,005,032 列在 Supabase 免費層（上限 500 MB）獨自佔掉 503 MB，
+    存的只是每段前 100 字。JSONL＋R2 是正本，搜尋與 reader 都改讀那一份。
+    保留函式簽名是為了不用改所有呼叫端。
+    見 database/drop-ebook-chunks-2026-09-16.sql。
+    """
+    return
 
 def insert_new_ebook(parent: dict, volume: str, chunk_count: int, total_chars: int) -> str:
     """Create a new ebook row for one volume of a 套書. Returns new ebook_id."""
@@ -242,8 +221,7 @@ def insert_new_ebook(parent: dict, volume: str, chunk_count: int, total_chars: i
 def delete_original(ebook_id: str) -> None:
     """Remove the original 套書 row, its chunk previews, local JSONL, R2 obj."""
     # 1. DB: ebook_chunks
-    requests.delete(f"{se.URL}/rest/v1/ebook_chunks?ebook_id=eq.{ebook_id}",
-                    headers=se.H_GET, timeout=30)
+    # 2026-09-16：ebook_chunks 已退場，不必再清 DB 列。
     # 2. DB: ebooks row
     requests.delete(f"{se.URL}/rest/v1/ebooks?id=eq.{ebook_id}",
                     headers=se.H_GET, timeout=30)

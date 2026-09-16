@@ -106,21 +106,9 @@ export default defineEventHandler(async (event) => {
   lines[lineIdx] = JSON.stringify(chunk);
   await fs.writeFile(jsonlPath, lines.join("\n"), "utf8");
 
-  // Update DB preview row (best-effort; failure shouldn't block the edit)
-  try {
-    const supabase = getAdminClient();
-    await supabase
-      .from("ebook_chunks")
-      .update({
-        content: (chunk.content || "").slice(0, 200),
-        char_count: (chunk.content || "").length,
-        chapter_path: chunk.chapter_path,
-      })
-      .eq("ebook_id", ebookId)
-      .eq("chunk_index", chunkIdx);
-  } catch (err: any) {
-    console.warn(`[chunks.put] preview update failed: ${err.message ?? err}`);
-  }
+  // 2026-09-16：不再同步 DB preview。`ebook_chunks` 已退場 —— 它 1,005,032 列
+  // 在 Supabase 免費層（上限 500 MB）獨自佔掉 503 MB，而它存的只是每段前 100 字。
+  // JSONL（上面剛寫好）＋ R2（下面推）才是正本，搜尋也改讀那一份了。
 
   // Push JSONL to R2 in the background — don't block the response.
   // We shell out to standardize_ebook's push_to_r2 via a tiny Python

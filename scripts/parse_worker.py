@@ -176,40 +176,11 @@ def insert_chunks(ebook_id, chunks):
                 'content': c['content'],
             }, ensure_ascii=False) + '\n')
 
-    # 2. Build DB rows with truncated content (preview only)
-    rows = []
-    for i, c in enumerate(chunks):
-        rows.append({
-            'ebook_id': ebook_id,
-            'chunk_index': i,
-            'chunk_type': c['type'],
-            'page_number': c.get('page'),
-            'chapter_path': c.get('chapter_path'),
-            'content': c['content'][:PREVIEW_LEN],  # 200 char preview only
-            'char_count': len(c['content']),  # full length for stats
-        })
-
-    # 3. Adaptive batch insert (smaller batches retry on timeout)
-    BATCH_SIZES = [50, 20, 5, 1]
-    i = 0
-    while i < len(rows):
-        succeeded = False
-        for batch_size in BATCH_SIZES:
-            batch = rows[i:i+batch_size]
-            r = _http('post', f"{URL}/rest/v1/ebook_chunks", headers=H, json=batch, timeout=120)
-            if r.status_code in (200, 201):
-                i += len(batch)
-                succeeded = True
-                break
-            text = r.text[:300]
-            if '57014' in text or 'timeout' in text.lower() or r.status_code >= 500:
-                if batch_size > 1:
-                    continue
-            raise RuntimeError(f"chunk insert failed: HTTP {r.status_code} {text}")
-        if not succeeded:
-            raise RuntimeError(f"chunk insert failed even at batch_size=1")
-    return len(rows)
-
+    # 2026-09-16：不再寫 DB preview。ebook_chunks 已退場 —— 1,005,032 列在
+    # Supabase 免費層（上限 500 MB）獨自佔掉 503 MB，而它只存每段前 100 字。
+    # 上面那份 JSONL（會同步到 Drive）＋ R2 鏡像才是正本，搜尋與 reader 都讀那一份。
+    # 見 database/drop-ebook-chunks-2026-09-16.sql。
+    return len(chunks)
 
 def mark_parsed(ebook_id, chunk_count, total_chars):
     body = {
@@ -234,8 +205,10 @@ def mark_error(ebook_id, error_msg):
 
 
 def delete_existing_chunks(ebook_id):
-    """Used when re-parsing — clear old chunks first."""
-    _http('delete', f"{URL}/rest/v1/ebook_chunks?ebook_id=eq.{ebook_id}", headers=H, timeout=30)
+    """Used when re-parsing — 現在只是 no-op。"""
+    # 2026-09-16：ebook_chunks 已退場，不必再清 DB 列。JSONL＋R2 是正本。
+    return
+
 
 
 # ── parsers ────────────────────────────────────────────────────

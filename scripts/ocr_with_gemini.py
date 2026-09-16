@@ -276,72 +276,18 @@ def update_book_error(book_id, msg):
 
 
 def insert_chunk_previews(book_id, chunks):
-    """Bulk-insert preview-only rows into ebook_chunks. Adaptive batching
-    (50→20→5→1) survives Supabase 57014 statement-timeout spikes — without
-    it, a transient IO blip after a 30-minute Haiku OCR run discards the
-    book entirely."""
-    if not chunks:
-        return
-    rows = [
-        {
-            "ebook_id": book_id,
-            "chunk_index": i,
-            "chunk_type": "page",
-            "page_number": c["page"],
-            "chapter_path": None,
-            "content": c["text"][:PREVIEW_LEN],
-            "char_count": len(c["text"]),
-        }
-        for i, c in enumerate(chunks)
-    ]
-    # Delete existing chunks for this book first (in case of retry)
-    requests.delete(
-        f"{URL}/rest/v1/ebook_chunks?ebook_id=eq.{book_id}",
-        headers={"apikey": KEY, "Authorization": f"Bearer {KEY}"},
-        timeout=30,
-    )
-    BATCH_SIZES = [50, 20, 5, 1]
-    i = 0
-    while i < len(rows):
-        for bs in BATCH_SIZES:
-            batch = rows[i:i + bs]
-            r = requests.post(
-                f"{URL}/rest/v1/ebook_chunks",
-                headers=H,
-                json=batch,
-                timeout=120,
-            )
-            if r.status_code in (200, 201):
-                i += len(batch)
-                break
-            text = r.text[:300]
-            if "57014" in text or "timeout" in text.lower() or r.status_code >= 500:
-                if bs > BATCH_SIZES[-1]:
-                    continue
-            raise RuntimeError(f"chunk insert failed: {r.status_code} {text[:200]}")
-        else:
-            raise RuntimeError(f"chunk insert failed at batch_size=1, row {i}")
+    """2026-09-16 起是 no-op：ebook_chunks 已退場。
 
+    那張表 1,005,032 列在 Supabase 免費層（上限 500 MB）獨自佔掉 503 MB，
+    而它存的只是每個 chunk 的前 100 字 —— 全站搜尋因此從來只搜得到每段開頭。
+    JSONL（Drive 正本）＋ R2 鏡像才是全文所在，reader 本來就只讀那一份，
+    搜尋也已改成掃 JSONL 全文（server/utils/ebook-chunks.searchBookFulltext）。
 
-# ── Gemini cooldown：對齊額度真正重置的時刻 ─────────────────────
-# 全部 key 耗盡 → 寫 cooldown 檔，之後的排程 run 不再白打 Gemini、直接走 Haiku。
-#
-# 🚨 這裡原本是「固定 6 小時」，而 Gemini 免費層是**每日**額度、在美西午夜重置
-#    （台灣時間 15:00）。固定 6 小時跟那個邊界對不上，兩個方向都會虧：
-#      2026-09-06 14:27 耗盡 → 擋到 20:27，但額度 15:00 就回來了，17:31 那輪
-#      明明有額度卻被自己擋掉、整輪退去 Haiku。
-#      2026-09-07 08:05 耗盡 → 擋到 14:05，14:05–15:00 之間又會再白打一輪。
-#    改成一律擋到「下一個美西午夜」。
-#
-# 時區得自己算：Windows 沒有 IANA tzdata，zoneinfo 對 America/Los_Angeles 直接
-# 丟 ZoneInfoNotFoundError，所以不能用。美國 DST 規則（2007 起）是確定的，
-# 用 UTC 表示的邊界剛好落在整點上：三月第二個週日 10:00 UTC 進入 PDT，
-# 十一月第一個週日 09:00 UTC 回到 PST。
-#
-# 差一小時的代價不對稱，所以寧可算準：算早了，腳本會在額度還沒回來時試一次、
-# 失敗後把 cooldown 重寫到「再下一個午夜」—— 直接跳掉一整天。
-_COOLDOWN_FILE = Path(__file__).parent / "state" / "ocr_gemini_cooldown.json"
-
+    保留函式簽名是刻意的：requeue_reocr、mineru_ocr 等多處都在呼叫它，
+    改成 no-op 比改所有呼叫端安全。
+    見 database/drop-ebook-chunks-2026-09-16.sql。
+    """
+    return
 
 def _nth_weekday_utc(year: int, month: int, weekday: int, n: int, hour: int) -> float:
     """該年月第 n 個 weekday（0=週一）的 UTC 時戳。"""

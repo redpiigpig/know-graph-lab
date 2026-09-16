@@ -223,6 +223,88 @@ export async function chunksExist(ebookId: string): Promise<boolean> {
 }
 
 /**
+ * [{ chunk_index, page_number }] —— 原版 PDF reader 用來把 pdf.js 正在顯示的
+ * 實體頁對到 OCR 文字（chunk_index ≠ 實體頁，OCR 會跳過空白與封面）。
+ *
+ * 以前這是查 `ebook_chunks` 來的。那張表 2026-09-16 起要退場：它在
+ * Supabase 免費層（500 MB）佔了 503 MB，而**同樣的資料 JSONL 本來就有**，
+ * reader 的其他部分也早就只讀 JSONL。
+ */
+export async function loadPageMap(
+  ebookId: string
+): Promise<{ chunk_index: number; page_number: number | null }[]> {
+  const lines = await loadLines(ebookId);
+  if (!lines) return [];
+  const out: { chunk_index: number; page_number: number | null }[] = [];
+  for (let i = 0; i < lines.length; i++) {
+    try {
+      const c = JSON.parse(lines[i]) as ChunkData;
+      out.push({
+        chunk_index: typeof c.chunk_index === "number" ? c.chunk_index : i,
+        page_number: c.page_number ?? null,
+      });
+    } catch {
+      out.push({ chunk_index: i, page_number: null });
+    }
+  }
+  return out;
+}
+
+export interface FulltextHit {
+  ebook_id: string;
+  chunk_index: number;
+  page_number: number | null;
+  chapter_path: string | null;
+  content: string;          // 命中處的上下文片段
+}
+
+/**
+ * 在一本書的**全文**裡找片語，回傳命中處前後的上下文。
+ *
+ * 跟被取代的 DB 查詢差在哪：那個是 `ilike` 打在 `ebook_chunks.content` 上，
+ * 而那個欄位只存每個 chunk 的**前 100 字** —— 也就是說全館搜尋從來只搜得到
+ * 每段開頭那一小截，中後段寫什麼都搜不到，而且沒有支援索引，
+ * 每次搜尋都是 100 萬列全表掃描。改讀 JSONL 之後搜的是整段文字。
+ */
+export async function searchBookFulltext(
+  ebookId: string,
+  needle: string,
+  opts: { limit?: number; context?: number } = {}
+): Promise<FulltextHit[]> {
+  const limit = opts.limit ?? 20;
+  const ctx = opts.context ?? 60;
+  const lines = await loadLines(ebookId);
+  if (!lines || !needle) return [];
+  const lower = needle.toLowerCase();
+  const hits: FulltextHit[] = [];
+  for (let i = 0; i < lines.length && hits.length < limit; i++) {
+    const raw = lines[i];
+    // 先在原始那一行上便宜地篩掉不可能命中的，再花錢 JSON.parse
+    if (!raw || raw.toLowerCase().indexOf(lower) === -1) continue;
+    let c: ChunkData;
+    try {
+      c = JSON.parse(raw) as ChunkData;
+    } catch {
+      continue;
+    }
+    const text = c.content ?? "";
+    const at = text.toLowerCase().indexOf(lower);
+    if (at === -1) continue;               // 只命中在 metadata 欄位，不算
+    hits.push({
+      ebook_id: ebookId,
+      chunk_index: typeof c.chunk_index === "number" ? c.chunk_index : i,
+      page_number: c.page_number ?? null,
+      chapter_path: c.chapter_path ?? null,
+      content:
+        (at > ctx ? "…" : "") +
+        text.slice(Math.max(0, at - ctx), at + needle.length + ctx).replace(/\s+/g, " ") +
+        (at + needle.length + ctx < text.length ? "…" : ""),
+    });
+  }
+  return hits;
+}
+
+/**
  * TOC entry for sidebar nav. Level is derived from the first heading in
  * the chunk's markdown content (## → 2, ### → 3, #### → 4). Falls back
  * to chapter_path metadata when content has no heading (e.g. cover page).

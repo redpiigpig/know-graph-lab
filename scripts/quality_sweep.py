@@ -332,16 +332,69 @@ CHUNK_SELECT = "id,ebook_id,chunk_type,chapter_path,char_count,content,source_la
 
 
 def fetch_chunks(env: dict, book_ids: set[str], use_rest: bool) -> dict[str, list[dict]]:
-    """全館分頁掃 ebook_chunks（含 preview），按書分桶。
+    """讀每本書的 JSONL，按書分桶。
 
-    🚨 分頁的終止條件不可以是「拿回來的比要求的少」。PostgREST 有 max-rows 硬上限
-    （這個專案是 1000），所以 `limit=10000` 永遠只回 1000 列，`len(c) < step` 第一頁
-    就成立、迴圈立刻 break —— 全館 255,951 個 chunk 只掃到前 1000 個（0.4%）。其餘每
-    一本都變成 n==0，被 harvest_signals 當成 blank/no_toc/tiny 全 100%，一律判 15 分
-    並掛上 BLANK_BODY+NO_TOC+OVER_FRAGMENTED 三個 flag。2026-09-04 之前那份「1,334 本
-    低於 40 分」的全館評分就是這樣來的，不是書真的爛。
-    終止條件改成「這一頁回 0 列」，並用實際回傳筆數推進 offset，跟伺服器上限脫鉤。
+    2026-09-16 從 `ebook_chunks` 改讀 Drive 上的 JSONL。那張表退場了
+    （1,005,032 列、在 500 MB 的免費層佔 503 MB），而它存的只是每段前 100 字；
+    JSONL 是正本，而且評分改用**全文**反而更準 —— 重複幻覺本來就藏在段落尾段，
+    100 字 preview 判不出來（見 [[feedback_ocr_repetition_hallucination]]）。
+
+    🚨 **讀不到檔案不可以等於「這本是空的」。** harvest_signals 對 n==0 會判
+    blank/no_toc/tiny 全 100%、15 分、掛三個 flag。以前 PostgREST 分頁寫錯就這樣
+    誤殺過 1,334 本。現在的對應風險是 G: 沒掛：那會讓**每一本**都讀到 0 個 chunk。
+    所以先驗目錄，不通就直接拋例外中止整場，絕不繼續評分。
     """
+    if not CHUNKS_DIR.exists():
+        raise RuntimeError(
+            f"讀不到 {CHUNKS_DIR} —— Drive 卡住了（先 Test-Path 'G:\\我的雲端硬碟'，"
+            f"不通就重啟 GoogleDriveFS）。中止，不繼續評分：讀不到檔案會讓全館被判成空白。")
+
+    buckets: dict[str, list[dict]] = defaultdict(list)
+    missing = 0
+    for bid in book_ids:
+        p = CHUNKS_DIR / f"{bid}.jsonl"
+        if not p.exists():
+            missing += 1
+            continue
+        rows = []
+        try:
+            with p.open(encoding="utf-8") as f:
+                for i, line in enumerate(f):
+                    line = line.strip()
+                    if not line:
+                        continue
+                    try:
+                        c = json.loads(line)
+                    except Exception:
+                        continue
+                    content = c.get("content") or ""
+                    rows.append({
+                        "id": f"{bid}:{i}",
+                        "ebook_id": bid,
+                        "chunk_type": c.get("chunk_type"),
+                        "chapter_path": c.get("chapter_path"),
+                        "char_count": len(content),
+                        "content": content,
+                        "source_lang": c.get("source_lang"),
+                    })
+        except Exception as e:
+            print(f"  ⚠ 讀不了 {bid}.jsonl：{str(e)[:80]}", flush=True)
+            missing += 1
+            continue
+        if rows:
+            buckets[bid] = rows
+
+    got = len(buckets)
+    print(f"  讀了 {got}/{len(book_ids)} 本的 JSONL（{missing} 本沒有檔案）", flush=True)
+    # 全軍覆沒＝環境問題，不是全館真的壞了。
+    if book_ids and got == 0:
+        raise RuntimeError(
+            f"{len(book_ids)} 本一本都讀不到 JSONL —— 這是環境問題不是書的問題，中止。")
+    return buckets
+
+
+def _fetch_chunks_from_db(env: dict, book_ids: set[str], use_rest: bool) -> dict[str, list[dict]]:
+    """舊路徑：從 `ebook_chunks` 讀。表已退場，留著只為了對照歷史行為。"""
     buckets: dict[str, list[dict]] = defaultdict(list)
     off, step = 0, 1000
     if not use_rest:

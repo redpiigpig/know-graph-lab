@@ -387,45 +387,11 @@ def update_db(book_id: str, chunks: list[dict], metadata: dict) -> None:
         timeout=30,
     )
 
-    # Refresh ebook_chunks previews
-    requests.delete(f"{se.URL}/rest/v1/ebook_chunks?ebook_id=eq.{book_id}", headers=se.H_GET, timeout=30)
-    # PostgreSQL JSONB rejects U+0000; scrub before insert. PyMuPDF TOC entries
-    # often carry a trailing NUL on certain PDFs (e.g. "封面\x00"); the OCR text
-    # path can also produce NULs when Haiku encounters undecodable glyphs.
-    def _clean(v):
-        return v.replace("\x00", "") if isinstance(v, str) else v
-    rows = [{
-        "ebook_id": book_id,
-        "chunk_index": c["chunk_index"],
-        "chunk_type": c.get("chunk_type") or "chapter",
-        "page_number": c.get("page_number"),
-        "chapter_path": _clean(c.get("chapter_path")),
-        "content": _clean(c.get("content") or "")[:se.PREVIEW_LEN],
-        "char_count": len(_clean(c.get("content") or "")),
-    } for c in chunks]
-    # Adaptive batch — see standardize_pdf_lite.update_db comment.
-    BATCH_SIZES = [50, 20, 5, 1]
-    i = 0
-    while i < len(rows):
-        succeeded = False
-        for bs in BATCH_SIZES:
-            batch = rows[i:i+bs]
-            r = requests.post(f"{se.URL}/rest/v1/ebook_chunks",
-                              headers=se.H_JSON, json=batch, timeout=120)
-            if r.status_code in (200, 201):
-                i += len(batch)
-                succeeded = True
-                break
-            text = r.text[:300]
-            if "57014" in text or "timeout" in text.lower() or r.status_code >= 500:
-                if bs > BATCH_SIZES[-1]:
-                    continue
-            raise RuntimeError(f"chunk preview insert failed: {r.status_code} {text}")
-        if not succeeded:
-            raise RuntimeError(f"chunk preview insert failed at batch_size=1, row {i}")
+    # 2026-09-16：ebook_chunks preview 已退場（1,005,032 列在 500 MB 免費層佔 503 MB，
+    # 而它只存每段前 100 字）。JSONL＋R2 是正本，搜尋與 reader 都改讀那一份。
+    # 見 database/drop-ebook-chunks-2026-09-16.sql。
+    return
 
-
-# ── Entry points ───────────────────────────────────────────────
 def standardize_one(ebook_id: str, dry_run: bool = False, no_r2: bool = False, force: bool = False):
     try:
         book = se.fetch_book(ebook_id)
