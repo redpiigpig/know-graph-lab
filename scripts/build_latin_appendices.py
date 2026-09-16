@@ -98,11 +98,11 @@ CORPUS_REFERENT = {
 #             諾斯底教師、法學家克勞狄烏斯、森提烏斯、處死西利丘殉道者的總督
 #             維革利烏斯，以及一座聖撒圖爾尼努斯堂。
 # 這種只給音譯。附錄在這裡的職責是告訴讀者這個字怎麼念，不是替他認人。
-# 🚨 Saturninus 詞庫兩列的寫法本身就不一致（薩圖爾努斯／撒圖爾尼努（非洲總督）），
-# 前者看起來是漏掉了 -in-；這裡取貼合拉丁的 撒圖爾尼努斯，待擁有者裁定後再回寫詞庫。
+# Saturninus 詞庫兩列寫法不一致（薩圖爾努斯／撒圖爾尼努（非洲總督）），
+# 擁有者 2026-09-16 裁定：「就用 薩圖爾努斯」。
 SHARED_NAME = {
     L.fold("Julianus"): "尤利安",
-    L.fold("Saturninus"): "撒圖爾尼努斯",
+    L.fold("Saturninus"): "薩圖爾努斯",
 }
 
 CURATED_UPPER = {
@@ -271,7 +271,14 @@ def display_form(forms: dict[str, Counter], folded: str) -> str:
     if not seen:
         return folded
     mixed = [form for form, _ in seen.most_common() if not form.isupper()]
-    return mixed[0] if mixed else seen.most_common(1)[0][0]
+    if not mixed:
+        return seen.most_common(1)[0][0]
+    # 🚨 詞條要印主格。拼法表改成按詞形還原的鍵之後，一個鍵底下裝的是這個名字
+    # 的**所有格位**，取最常見的就會印出 Caesaris、Iovis、Martis、Venerem —— 屬格
+    # 與賓格當詞條，五十一條中鏢。先挑折疊後與鍵相同的那些（那就是主格），沒有
+    # 才退回最常見的。
+    upright = [form for form in mixed if L.fold(form) == folded]
+    return (upright or mixed)[0]
 
 
 def proper_noun_keys() -> set[str]:
@@ -297,35 +304,39 @@ def proper_noun_keys() -> set[str]:
 # 🚨 這些的 zhRoute 一律標「思高體例（人工補）」，與逐節對位來的分得開。
 # 對位有證據、這裡沒有；混在同一個標籤底下，日後就沒有人能重驗哪一條是查出來的、
 # 哪一條是寫上去的。括號裡記的是它為什麼補得出來——變格還原，或哪一節定的順序。
+#
+# 🚨 鍵用 folded，不要用 headword。headword 是**顯示用**的字串，會隨 display_form
+# 的實作而變（同一次修正裡 Pharaonis 變 Pharao、Manasse 變 Manasses），拿它當跨表
+# 的鍵，附錄就會無聲無息掉幾格中文——這系列一再踩的同一個坑。
 VULGATE_NAMES_ZH: dict[str, tuple[str, str]] = {
-    "Pharaonis": ("法郎", "Pharao 的屬格"),
-    "Pharaonem": ("法郎", "Pharao 的賓格"),
-    "Simon": ("西滿", "新約作西滿；瑪加伯上下作息孟"),
-    "Manasse": ("默納協", "Manasses 的奪格"),
-    "Galaad": ("基肋阿得", ""),
-    "Tobias": ("多俾亞", "多俾亞傳；父子同名，思高父作托彼特、子作多俾亞"),
-    "Jerosolymis": ("耶路撒冷", "Jerosolyma 的複數奪格"),
-    "Jerosolymam": ("耶路撒冷", "Jerosolyma 的賓格"),
-    "Israëli": ("以色列", "Israel 的與格"),
-    "Ananias": ("阿納尼雅", ""),
-    "Satanas": ("撒殫", ""),
-    "Libano": ("黎巴嫩", "Libanus 的奪格"),
-    "Medorum": ("瑪待人", "Medi 的屬格複數"),
-    "Maacha": ("瑪阿加", ""),
-    "Nathanaël": ("納塔乃耳", ""),
-    "Ægyptiis": ("埃及人", "Ægyptii 的與格／奪格複數"),
-    "Capharnaum": ("葛法翁", ""),
-    "Sidrach": ("沙得辣客", "達 1:7 三人順序：Sidrach、Misach、Abdenago"),
-    "Misach": ("默沙客", "達 1:7 三人順序：Sidrach、Misach、Abdenago"),
-    "Abdenago": ("阿貝得乃哥", "達 1:7 三人順序：Sidrach、Misach、Abdenago"),
-    "Israëlitæ": ("以色列人", "Israëlita 的複數"),
-    "Chananæi": ("客納罕人", "Chananæus 的複數"),
-    "Nahasson": ("納赫雄", ""),
-    "Zebedæi": ("載伯德", "Zebedæus 的屬格"),
-    "Galilæus": ("加里肋亞人", ""),
-    "Hevæi": ("希威人", "Hevæus 的複數"),
-    "Saphat": ("沙法特", ""),
-    "Rages": ("辣革斯", "多俾亞傳的瑪待城邑"),
+    "abdenago": ("阿貝得乃哥", "達 1:7 三人順序：Sidrach、Misach、Abdenago"),  # Abdenago
+    "aegyptiis": ("埃及人", "Ægyptii 的與格／奪格複數"),  # Ægyptiis
+    "ananias": ("阿納尼雅", ""),  # Ananias
+    "capharnaum": ("葛法翁", ""),  # Capharnaum
+    "chananaei": ("客納罕人", "Chananæus 的複數"),  # Chananæi
+    "galaad": ("基肋阿得", ""),  # Galaad
+    "galilaei": ("加里肋亞人", "Galilæus 的複數"),  # Galilæi
+    "heuaei": ("希威人", "Hevæus 的複數"),  # Hevæi
+    "ierosolymam": ("耶路撒冷", "Jerosolyma 的賓格"),  # Jerosolymam
+    "ierosolymis": ("耶路撒冷", "Jerosolyma 的複數奪格"),  # Jerosolymis
+    "israeli": ("以色列", "Israel 的與格"),  # Israëli
+    "israelitae": ("以色列人", "Israëlita 的複數"),  # Israëlitæ
+    "libano": ("黎巴嫩", "Libanus 的奪格"),  # Libano
+    "maacha": ("瑪阿加", ""),  # Maacha
+    "manasses": ("默納協", ""),  # Manasses
+    "medorum": ("瑪待人", "Medi 的屬格複數"),  # Medorum
+    "misach": ("默沙客", "達 1:7 三人順序：Sidrach、Misach、Abdenago"),  # Misach
+    "naasson": ("納赫雄", ""),  # Naasson
+    "nathanael": ("納塔乃耳", ""),  # Nathanaël
+    "pharao": ("法郎", ""),  # Pharao
+    "pharaonem": ("法郎", "Pharao 的賓格"),  # Pharaonem
+    "rages": ("辣革斯", "多俾亞傳的瑪待城邑"),  # Rages
+    "saphat": ("沙法特", ""),  # Saphat
+    "satanas": ("撒殫", ""),  # Satanas
+    "sidrach": ("沙得辣客", "達 1:7 三人順序：Sidrach、Misach、Abdenago"),  # Sidrach
+    "simon": ("西滿", "新約作西滿；瑪加伯上下作息孟"),  # Simon
+    "tobias": ("多俾亞", "多俾亞傳；父子同名，思高父作托彼特、子作多俾亞"),  # Tobias
+    "zebedaeus": ("載伯德", "Zebedæus 的屬格"),  # Zebedæi
 }
 
 
@@ -349,7 +360,7 @@ def printable_names(rows: list[dict]) -> list[dict]:
     for row in kept:
         if (row.get("zh") or "").strip():
             continue
-        hit = VULGATE_NAMES_ZH.get(row["headword"])
+        hit = VULGATE_NAMES_ZH.get(row["folded"])
         if hit:
             row["zh"], row["zhRoute"] = hit[0], "思高體例（人工補）"
             if hit[1]:

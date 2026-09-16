@@ -36,7 +36,7 @@
      "zhEvidence": "136/162 節同現"
     },
     {
-     "headword": "Ægypti",
+     "headword": "Ægyptus",
      "folded": "aegyptus",
      "vulgateFrequency": 613,
      "type": "",
@@ -56,7 +56,7 @@
      "zhEvidence": "114/122 節同現"
     },
     {
-     "headword": "Judæorum",
+     "headword": "Judæi",
      "folded": "iudaei",
      "vulgateFrequency": 370,
      "type": "",
@@ -96,7 +96,7 @@
      "zhEvidence": "76/80 節同現"
     },
     {
-     "headword": "Babylonis",
+     "headword": "Babylon",
      "folded": "babylon",
      "vulgateFrequency": 277,
      "type": "",
@@ -186,14 +186,14 @@
      "zhEvidence": "45/53 節同現"
     },
     {
-     "headword": "Pharaonis",
+     "headword": "Pharao",
      "folded": "pharao",
      "vulgateFrequency": 157,
      "type": "",
      "tier": "讀本所見",
      "zh": "法郎",
      "zhRoute": "思高體例（人工補）",
-     "zhEvidence": "Pharao 的屬格"
+     "zhEvidence": ""
     },
     {
      "headword": "Petrus",
@@ -246,14 +246,14 @@
      "zhEvidence": "新約作西滿；瑪加伯上下作息孟"
     },
     {
-     "headword": "Manasse",
+     "headword": "Manasses",
      "folded": "manasses",
      "vulgateFrequency": 146,
      "type": "",
      "tier": "武加大其餘",
      "zh": "默納協",
      "zhRoute": "思高體例（人工補）",
-     "zhEvidence": "Manasses 的奪格"
+     "zhEvidence": ""
     },
     {
      "headword": "Joab",
@@ -306,7 +306,7 @@
      "zhEvidence": "24/28 節同現"
     },
     {
-     "headword": "Jeremiam",
+     "headword": "Jeremias",
      "folded": "ieremias",
      "vulgateFrequency": 126,
      "type": "",
@@ -346,7 +346,7 @@
      "zhEvidence": "27/28 節同現"
     },
     {
-     "headword": "Syriæ",
+     "headword": "Syria",
      "folded": "syria",
      "vulgateFrequency": 111,
      "type": "",
@@ -366,7 +366,7 @@
      "zhEvidence": "33/34 節同現"
     },
     {
-     "headword": "Levitis",
+     "headword": "Levites",
      "folded": "leuites",
      "vulgateFrequency": 108,
      "type": "",
@@ -606,7 +606,7 @@
      "zhEvidence": "19/21 節同現"
     },
     {
-     "headword": "Chaldæorum",
+     "headword": "Chaldæi",
      "folded": "chaldaei",
      "vulgateFrequency": 62,
      "type": "",
@@ -616,7 +616,7 @@
      "zhEvidence": "8/9 節同現"
     },
     {
-     "headword": "Damasci",
+     "headword": "Damascus",
      "folded": "damascus",
      "vulgateFrequency": 62,
      "type": "",
@@ -656,7 +656,7 @@
      "zhEvidence": "21/22 節同現"
     },
     {
-     "headword": "Isaias",
+     "headword": "Isaia",
      "folded": "isaia",
      "vulgateFrequency": 60,
      "type": "",
@@ -1036,7 +1036,7 @@
      "zhEvidence": "16/16 節同現"
     },
     {
-     "headword": "Euphraten",
+     "headword": "Euphrates",
      "folded": "euphrates",
      "vulgateFrequency": 21,
      "type": "",
@@ -1086,7 +1086,7 @@
      "zhEvidence": "10/10 節同現"
     },
     {
-     "headword": "Romam",
+     "headword": "Roma",
      "folded": "roma",
      "vulgateFrequency": 18,
      "type": "",
@@ -1256,7 +1256,7 @@
      "zhEvidence": "Chananæus 的複數"
     },
     {
-     "headword": "Nahasson",
+     "headword": "Naasson",
      "folded": "naasson",
      "vulgateFrequency": 13,
      "type": "",
@@ -1336,7 +1336,7 @@
      "zhEvidence": "Zebedæus 的屬格"
     },
     {
-     "headword": "Bethaniam",
+     "headword": "Bethania",
      "folded": "bethania",
      "vulgateFrequency": 12,
      "type": "",
@@ -1346,14 +1346,14 @@
      "zhEvidence": "4/4 節同現"
     },
     {
-     "headword": "Galilæus",
+     "headword": "Galilæi",
      "folded": "galilaei",
      "vulgateFrequency": 12,
      "type": "",
      "tier": "讀本所見",
      "zh": "加里肋亞人",
      "zhRoute": "思高體例（人工補）",
-     "zhEvidence": ""
+     "zhEvidence": "Galilæus 的複數"
     },
     {
      "headword": "Cedron",
@@ -1376,7 +1376,7 @@
      "zhEvidence": "2/2 節同現"
     },
     {
-     "headword": "Arabes",
+     "headword": "Arabs",
      "folded": "arabs",
      "vulgateFrequency": 10,
      "type": "",
@@ -1426,7 +1426,7 @@
      "zhEvidence": ""
     },
     {
-     "headword": "Annam",
+     "headword": "Annas",
      "folded": "annas",
      "vulgateFrequency": 8,
      "type": "",
@@ -13645,7 +13645,7 @@
    "title": "近現代教廷拉丁的地名、機構名與專名",
    "entries": [
     {
-     "headword": "Iovis",
+     "headword": "Iuppiter",
      "folded": "iuppiter",
      "churchFrequency": 341,
      "zh": "朱庇特",
@@ -13659,42 +13659,42 @@
      "zhRoute": "place_names"
     },
     {
-     "headword": "Caesaris",
+     "headword": "Caesar",
      "folded": "caesar",
      "churchFrequency": 256,
      "zh": "凱撒",
      "zhRoute": "rulers"
     },
     {
-     "headword": "Cyrilli",
+     "headword": "Cyrillus",
      "folded": "cyrillus",
      "churchFrequency": 191,
      "zh": "濟利祿",
      "zhRoute": "theologians"
     },
     {
-     "headword": "Galliae",
+     "headword": "Gallia",
      "folded": "gallia",
      "churchFrequency": 190,
      "zh": "高盧",
      "zhRoute": "place_names"
     },
     {
-     "headword": "Hierusalem",
+     "headword": "Hierosolyma",
      "folded": "hierosolyma",
      "churchFrequency": 182,
      "zh": "耶路撒冷",
      "zhRoute": "place_names"
     },
     {
-     "headword": "Caroli",
+     "headword": "Carolus",
      "folded": "carolus",
      "churchFrequency": 155,
      "zh": "查理",
      "zhRoute": "rulers"
     },
     {
-     "headword": "Nestorium",
+     "headword": "Nestorius",
      "folded": "nestorius",
      "churchFrequency": 146,
      "zh": "聶斯脫里",
@@ -13708,7 +13708,7 @@
      "zhRoute": "rulers"
     },
     {
-     "headword": "Europae",
+     "headword": "Europa",
      "folded": "europa",
      "churchFrequency": 121,
      "zh": "歐洲",
@@ -13729,7 +13729,7 @@
      "zhRoute": "place_names"
     },
     {
-     "headword": "Origenis",
+     "headword": "Origenes",
      "folded": "origenes",
      "churchFrequency": 115,
      "zh": "奧利振",
@@ -13743,7 +13743,7 @@
      "zhRoute": "philosophers"
     },
     {
-     "headword": "Saturno",
+     "headword": "Saturnus",
      "folded": "saturnus",
      "churchFrequency": 96,
      "zh": "薩圖恩",
@@ -13757,7 +13757,7 @@
      "zhRoute": "philosophers"
     },
     {
-     "headword": "Germaniae",
+     "headword": "Germania",
      "folded": "germania",
      "churchFrequency": 76,
      "zh": "日耳曼尼亞",
@@ -13771,14 +13771,14 @@
      "zhRoute": "deities"
     },
     {
-     "headword": "Venerem",
+     "headword": "Venus",
      "folded": "uenus",
      "churchFrequency": 72,
      "zh": "維納斯",
      "zhRoute": "deities"
     },
     {
-     "headword": "Constantinopolim",
+     "headword": "Constantinopolis",
      "folded": "constantinopolis",
      "churchFrequency": 72,
      "zh": "君士坦丁堡",
@@ -13820,14 +13820,14 @@
      "zhRoute": "place_names"
     },
     {
-     "headword": "Martis",
+     "headword": "Mars",
      "folded": "mars",
      "churchFrequency": 54,
      "zh": "瑪爾斯",
      "zhRoute": "deities"
     },
     {
-     "headword": "Iuliani",
+     "headword": "Julianus",
      "folded": "iulianus",
      "churchFrequency": 52,
      "zh": "尤利安",
@@ -13869,21 +13869,21 @@
      "zhRoute": "place_names"
     },
     {
-     "headword": "Alexandriam",
+     "headword": "Alexandria",
      "folded": "alexandria",
      "churchFrequency": 42,
      "zh": "亞歷山卓",
      "zhRoute": "place_names"
     },
     {
-     "headword": "Minervam",
+     "headword": "Minerva",
      "folded": "minerua",
      "churchFrequency": 42,
      "zh": "米娜瓦",
      "zhRoute": "deities"
     },
     {
-     "headword": "Angliae",
+     "headword": "Anglia",
      "folded": "anglia",
      "churchFrequency": 41,
      "zh": "英格蘭",
@@ -13925,7 +13925,7 @@
      "zhRoute": "philosophers"
     },
     {
-     "headword": "Tiberim",
+     "headword": "Tiberis",
      "folded": "tiberis",
      "churchFrequency": 33,
      "zh": "台伯河",
@@ -13960,7 +13960,7 @@
      "zhRoute": "theologians"
     },
     {
-     "headword": "Dianae",
+     "headword": "Diana",
      "folded": "diana",
      "churchFrequency": 29,
      "zh": "黛安娜",
@@ -13988,21 +13988,21 @@
      "zhRoute": "theologians"
     },
     {
-     "headword": "Saule",
+     "headword": "Saulus",
      "folded": "saulus",
      "churchFrequency": 23,
      "zh": "掃祿",
      "zhRoute": "思高譯本"
     },
     {
-     "headword": "Vulcanum",
+     "headword": "Vulcanus",
      "folded": "uulcanus",
      "churchFrequency": 23,
      "zh": "伏爾甘",
      "zhRoute": "deities"
     },
     {
-     "headword": "Tiberii",
+     "headword": "Tiberius",
      "folded": "tiberius",
      "churchFrequency": 22,
      "zh": "提庇留",
@@ -14026,7 +14026,7 @@
      "headword": "Saturninus",
      "folded": "saturninus",
      "churchFrequency": 21,
-     "zh": "撒圖爾尼努斯",
+     "zh": "薩圖爾努斯",
      "zhRoute": "音譯（語料中數人同名）"
     },
     {
@@ -14058,14 +14058,14 @@
      "zhRoute": "philosophers"
     },
     {
-     "headword": "Sabellium",
+     "headword": "Sabellius",
      "folded": "sabellius",
      "churchFrequency": 19,
      "zh": "撒伯流",
      "zhRoute": "theologians"
     },
     {
-     "headword": "Bononiae",
+     "headword": "Bononia",
      "folded": "bononia",
      "churchFrequency": 18,
      "zh": "波隆那",
@@ -14093,7 +14093,7 @@
      "zhRoute": "rulers"
     },
     {
-     "headword": "Sabino",
+     "headword": "Sabinus",
      "folded": "sabinus",
      "churchFrequency": 17,
      "zh": "薩比努斯",
