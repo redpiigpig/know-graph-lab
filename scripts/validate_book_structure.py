@@ -48,6 +48,11 @@ from pathlib import Path
 from typing import Optional
 
 import requests
+
+# Windows 主控台預設 cp950，印書名／✓✗ 這些字元會整支炸掉。
+if sys.platform == "win32":
+    sys.stdout.reconfigure(encoding="utf-8")
+    sys.stderr.reconfigure(encoding="utf-8")
 from dotenv import load_dotenv
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -151,7 +156,9 @@ def validate(ebook_id: str) -> list[Issue]:
 
     # ── R010 chapter_path length ──
     for c in chunks:
-        cp = c.get("chapter_path", "")
+        # 🚨 不能寫 .get(k, "")：key 在、值是 None 的時候預設值不會生效。
+        # 剛 OCR 完的逐頁 PDF chapter_path 全是 None，整支會炸在 len(None)。
+        cp = c.get("chapter_path") or ""
         if len(cp) > 35:
             issues.append(Issue("R010", "WARN", c.get("chunk_index"),
                 f"chapter_path is {len(cp)} chars (>35): {cp[:60]}…"))
@@ -159,7 +166,7 @@ def validate(ebook_id: str) -> list[Issue]:
     # ── R011 chapter_path matches volume ──
     for c in chunks:
         vol = c.get("volume")
-        cp = c.get("chapter_path", "")
+        cp = c.get("chapter_path") or ""
         if not vol or not cp:
             continue
         if not (cp.startswith(vol) or cp == vol):
@@ -172,7 +179,7 @@ def validate(ebook_id: str) -> list[Issue]:
         vol = c.get("volume")
         if not vol:
             continue
-        cp = c.get("chapter_path", "")
+        cp = c.get("chapter_path") or ""
         rng = parse_range(cp, vol)
         by_vol[vol].append((c.get("chunk_index"), cp, rng))
 
