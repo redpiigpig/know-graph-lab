@@ -125,6 +125,14 @@ Two failures recur across languages and are worth carrying into any new reader:
      item line carries Chinese, and that nothing is printed twice. `ja` is a
      fourth language there; it skips the Chinese-character test, because
      Japanese is written in kanji, and relies on the exact line match instead.
+   - **Then move the books to Drive.** `output/` is scratch, not the products'
+     home. Re-render changes the page count, the page count changes the spine
+     width, and a book left in `output/` is a book the owner cannot open:
+     `build_reader_spines.py`, then `sync_reader_artifacts.py --write`, which
+     makes the local working copy and both Drive folders match
+     `output/print-masters/` and files the superseded render under
+     `_superseded/`. Reader PDFs and DOCX never go to R2 — see
+     `docs/repo-hygiene.md`.
 8. Build full readings, not summaries disguised as readings. Preserve the approved order. The default release contract is 25 complete Scripture chapters plus 25 complete prayers or articles; appendices do not silently replace those 50 readings.
    - **Every reading is a complete chapter or a complete piece.** Where a work is too long to print entire, cut at *its own* divisions — whole chapters, numbered sections, canons — and let the budget decide how many fit, never how much of one. A word-count excerpt stops mid-argument. Record what was printed: 「第 1–4 節（完整，共 33 節）」.
    - Divisions are not always punctuated (`1 Excitatio mentis…`), section numbers are not always tight against their point (`2 . Haec…`), and the edition's own headings sit inside the OCR — including the title of the *next* reading, which is where this one ends.

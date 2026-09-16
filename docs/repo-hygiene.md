@@ -42,6 +42,29 @@ Drive 根 `G:\我的雲端硬碟\資料\知識圖工作室\`
 
 沒有對應夾就新增一層，**不要塞進最像的那一夾**，也不要放 repo 裡等之後再說。
 
+### 排完就搬，不要留在 `output/`
+
+`output/original-readers/`、`output/print-masters/`、`output/flashcards/` 是**中繼**，
+不是成品的家。每一次重排、重算頁數之後，收尾的最後一步是
+
+```bash
+python -X utf8 scripts/build_reader_spines.py        # 頁數變了，書背寬度就變了
+python -X utf8 scripts/sync_reader_artifacts.py      # 先看報告
+python -X utf8 scripts/sync_reader_artifacts.py --write
+```
+
+`output/print-masters/` 是權威，其餘三處（本機 `output/original-readers/`、
+Drive `讀本`、Drive `印刷母版`）一律被改成與它相同；被取代的版次搬進
+`_superseded/` 而不是刪掉。少跑這一步的後果不是「檔案還沒上去」，是使用者翻到
+的是上一版——這一系列已經發生過一次，三本書的頁數與 Drive 上的對不起來，
+而每一份單獨看都正常（見 `scripts/sync_reader_artifacts.py` 的檔頭）。
+
+### 🚨 PDF 與 Word 一律不進 R2
+
+R2 只有 10 GB，而且只該放**網站要即時取用的小衍生物**（縮圖、預覽、音檔片段）。
+讀本、單字卡、印刷母版、電子書原檔這些幾十 MB 的 PDF／DOCX 沒有一個是網頁
+即時要的，全部留在 Drive（Drive 有 5 TB）。詳見 `r2-policy.md`。
+
 ---
 
 ## 三、根目錄禁令
