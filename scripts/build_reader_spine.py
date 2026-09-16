@@ -34,7 +34,9 @@ if sys.platform == "win32":
 BASE = Path(r"G:\我的雲端硬碟\玄奘\博一上\上課")
 # 讀本與書背的其他擺放位置，跟 build_course_reader.SHARED_OUTS 對齊。
 SHARED_OUTS = (
-    Path(r"G:\我的雲端硬碟") / "115-1 課程讀本",                          # 送印那一疊
+    # 送印那一疊（2026-09-16 從磁碟根目錄搬進 玄奘\博一上\上課\，
+    # 與 build_course_reader.SHARED_OUTS 同步；只改一邊會兩處產物不一致）
+    Path(r"G:\我的雲端硬碟\玄奘\博一上\上課") / "115-1 課程讀本",
     Path(r"G:\我的雲端硬碟\資料\知識圖工作室\教學") / "115-1_修課讀本",     # 工作室歸檔
 )
 CJK = r"C:\Windows\Fonts\mingliu.ttc"

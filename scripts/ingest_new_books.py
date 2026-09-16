@@ -43,6 +43,9 @@ import author_blacklist
 import book_classifier
 
 
+# drop 夾。預設是本機 repo 的 z-lib/，但 `--src` 可以指到別的夾——
+# `電子圖書館/_待入庫/` 那 173 檔（1.9 GB）就不必先拉回本機再送回 Drive，
+# 原地處理最後只做 Drive 內的搬移。
 NEW_BOOK_DIR = Path(__file__).resolve().parent.parent / "z-lib"
 DRIVE_ROOT = Path("G:/我的雲端硬碟/資料/知識圖工作室/電子圖書館")
 EBOOK_EXTS = {".pdf", ".epub", ".mobi", ".azw3", ".azw"}
@@ -743,12 +746,24 @@ def cmd_run(limit: int | None, dry_run: bool):
     return ok
 
 
+def set_source_dir(path: str) -> None:
+    """換掉 drop 夾。隔離夾要跟著搬——不然壞檔會被丟回 repo 的 z-lib/，
+    而這次處理的檔根本不在那裡，下次看那個夾會以為是別批的殘留。"""
+    global NEW_BOOK_DIR, CORRUPT_DIR, BLACKLIST_DIR
+    NEW_BOOK_DIR = Path(path)
+    CORRUPT_DIR = NEW_BOOK_DIR / "_corrupt"
+    BLACKLIST_DIR = NEW_BOOK_DIR / "_blacklisted"
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("cmd", choices=["status", "run"])
     ap.add_argument("--limit", type=int)
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--src", help="改用別的 drop 夾（預設 repo 的 z-lib/）")
     args = ap.parse_args()
+    if args.src:
+        set_source_dir(args.src)
     if args.cmd == "status":
         cmd_status()
     else:
