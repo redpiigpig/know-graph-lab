@@ -11,7 +11,7 @@
     .mobi  63 本   →  .epub   calibre（ebook-convert）
     .azw3   6 本   →  .epub   calibre
     .rtf    1 本   →  .docx   LibreOffice
-    .chm   56 本   →  目前無解（需要 7-Zip 或 chmlib，兩個都沒裝）
+    .chm   56 本   →  .epub   calibre（原以為要裝 7-Zip，實測 calibre 就吃得下）
 
 作法：轉出來的檔放在**原檔旁邊、同檔名不同副檔名**，原檔保留不動
 （Drive 是正本，見 CLAUDE.md）。成功才改 `ebooks.file_path` 與 `file_type`，
@@ -48,7 +48,10 @@ PLAN = {
     "rtf": ("docx", "soffice"),
     "mobi": ("epub", "calibre"),
     "azw3": ("epub", "calibre"),
-    # chm 沒有可用工具，刻意不列 —— 列了只會產生一堆失敗紀錄
+    # chm：原本以為要裝 7-Zip 或 chmlib，實測 calibre 本來就吃得下。
+    # 驗過《教會治理問答》：轉出 EPUB 解析得到 88,738 字、62% 中文，
+    # 序言與各章結構都在，不是空殼。
+    "chm": ("epub", "calibre"),
 }
 MIN_BYTES = 2_000          # 轉出來小於這個就是失敗，別拿去騙後面的流程
 
@@ -175,10 +178,6 @@ def cmd_status(args) -> int:
     for ft, n in sorted(c.items()):
         dst, tool = PLAN[ft]
         print(f"  .{ft:<5} {n:>4} 本  → .{dst}（{tool}）")
-    # 順帶報一下轉不了的
-    blocked = rest("ebooks?parsed_at=is.null&file_type=eq.chm&select=id&limit=2000")
-    if blocked:
-        print(f"\n  .chm   {len(blocked):>4} 本  → 目前無解（需要 7-Zip 或 chmlib，都沒裝）")
     print(f"\n工具：LibreOffice {'✓' if SOFFICE.exists() else '✗'}　"
           f"calibre {'✓' if EBOOK_CONVERT.exists() else '✗'}")
     return 0
