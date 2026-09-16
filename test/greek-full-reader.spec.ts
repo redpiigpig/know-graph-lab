@@ -60,8 +60,18 @@ describe("complete two-volume Koine Greek private reader", () => {
             `v${volume.volume} lesson ${row.lesson} falls short and says nothing`,
           ).toBeTruthy();
         }
-        expect(exercises.coverage.practised + exercises.coverage.notAttested)
-          .toBe(exercises.coverage.lessonWords);
+        // 覆蓋率不再要求滿分。擁有者 2026-09-17：「覆蓋率下降沒關係，有到 50-75%
+        // 就好」「可以用前面的造句來補，選文就沒有一定要覆蓋」。教父讀文改成節錄
+        // 之後，有些生詞在讀本裡不再出現，十題再怎麼挑也練不到。
+        // 語料中無任何字形的詞不算在分母裡——那是閘一與閘三本來就打架的部分。
+        const denominator = Math.max(
+          1,
+          exercises.coverage.lessonWords - exercises.coverage.notAttested,
+        );
+        expect(
+          exercises.coverage.practised / denominator,
+          `v${volume.volume} lesson ${row.lesson} 覆蓋過低`,
+        ).toBeGreaterThanOrEqual(0.5);
       }
     }
     expect(total).toBe(1000);

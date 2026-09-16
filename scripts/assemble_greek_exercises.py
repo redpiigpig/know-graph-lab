@@ -56,6 +56,13 @@ def pick_anchors(items: Sequence[dict[str, Any]]) -> list[dict[str, Any]]:
     how much of the lesson each one practises, and then brevity: a learner
     translating a first sentence wants the short one.
     """
+    # 引錨挑的是「讀者在讀本裡讀過、又適合當第一句練習的原句」：練到的詞多一點
+    # 好，但句子短更重要。
+    #
+    # 🚨 不要讓引錨去湊生詞覆蓋。擁有者 2026-09-17：「可以用前面的造句來補，選文
+    # 就沒有一定要覆蓋。」十題裡七題是自撰的，補覆蓋是那七題的事；把引錨改成貪心
+    # 互補之後，它會為了多涵蓋一個詞而挑更長的句子，覆蓋只多一兩個百分點，讀起來
+    # 卻更難——職責放錯了地方。
     usable = sorted(
         items,
         key=lambda item: (-len(item.get("targetWords") or []), item.get("tokenCount", 99)),

@@ -3,7 +3,7 @@
   "language": "Koine Greek",
   "languageCode": "grc",
   "volume": 2,
-  "generatedOn": "2026-09-16",
+  "generatedOn": "2026-09-17",
   "direction": "original-to-chinese",
   "itemsPerLesson": 10,
   "quotedPerLesson": 3,
@@ -136,47 +136,49 @@
         },
         {
           "kind": "quoted",
-          "ref": "patristic-plan:24:7#6",
-          "refLabel": "額我略‧納祥《神學講辭》第廿八篇 1–10：論神　7",
-          "text": "τῆς ἐξουσίας· οὐ γὰρ αὕτη φύσις σωμάτων.",
-          "answerKeyRef": "patristic-plan:24:7#6",
+          "ref": "Luke.5.32",
+          "refLabel": "路加福音 5:32",
+          "text": "οὐκ ἐλήλυθα καλέσαι δικαίους ἀλλὰ ἁμαρτωλοὺς εἰς μετάνοιαν.",
+          "answerKeyRef": "Luke.5.32",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
           "answerKeyScope": "verse",
           "targetWords": [
             {
               "volume": 2,
               "lesson": 1,
-              "slot": 3,
-              "ordinal": 3,
-              "headword": "φύσις",
-              "lemma": "φύσις",
-              "glossZh": "本性；本質；天性",
+              "slot": 6,
+              "ordinal": 6,
+              "headword": "μετάνοια",
+              "lemma": "μετάνοια",
+              "glossZh": "悔改；心意更新",
               "pos": "名詞"
             }
           ],
           "verification": {
-            "words": 7,
+            "words": 8,
             "unattested": [],
             "untaught": [],
             "accentVariants": [],
             "lemmas": [
-              "γαρ",
-              "εξουσια",
-              "ο",
-              "ου",
-              "ουτοσ",
-              "σωμα",
-              "φυσισ"
+              "αλλα",
+              "αμαρτωλοσ",
+              "δικαιοσ",
+              "εισ",
+              "ερχομαι",
+              "καλεω",
+              "μετανοια",
+              "ου"
             ],
             "forms": [],
             "written": [
-              "αυτη",
-              "γαρ",
-              "εξουσιασ",
-              "ου",
-              "σωματων",
-              "τησ",
-              "φυσισ"
+              "αλλα",
+              "αμαρτωλουσ",
+              "δικαιουσ",
+              "εισ",
+              "εληλυθα",
+              "καλεσαι",
+              "μετανοιαν",
+              "ουκ"
             ],
             "lengthOk": true,
             "passed": true
@@ -613,8 +615,19 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 20,
-        "notPractised": [],
+        "practised": 19,
+        "notPractised": [
+          {
+            "volume": 2,
+            "lesson": 1,
+            "slot": 3,
+            "ordinal": 3,
+            "headword": "φύσις",
+            "lemma": "φύσις",
+            "glossZh": "本性；本質；天性",
+            "pos": "名詞"
+          }
+        ],
         "notAttested": []
       }
     },
@@ -623,100 +636,6 @@
       "id": "grc-v2-lesson-02",
       "note": "",
       "items": [
-        {
-          "kind": "quoted",
-          "ref": "patristic-plan:10:10.2#2",
-          "refLabel": "坡旅甲殉道記　10.2",
-          "text": "Σὲ μὲν κἂν λόγου ἠξίωσα·",
-          "answerKeyRef": "patristic-plan:10:10.2#2",
-          "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
-          "answerKeyScope": "verse-containing-clause",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 2,
-              "slot": 16,
-              "ordinal": 36,
-              "headword": "ἀξιόω",
-              "lemma": "ἀξιόω",
-              "glossZh": "認為…相配；視為值得",
-              "pos": "動詞"
-            }
-          ],
-          "verification": {
-            "words": 5,
-            "unattested": [],
-            "untaught": [],
-            "accentVariants": [],
-            "lemmas": [
-              "αξιοω",
-              "καν",
-              "λογοσ",
-              "μεν",
-              "συ"
-            ],
-            "forms": [],
-            "written": [
-              "ηξιωσα",
-              "καν",
-              "λογου",
-              "μεν",
-              "σε"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 1
-        },
-        {
-          "kind": "quoted",
-          "ref": "patristic-plan:48:186#1",
-          "refLabel": "聖母讚頌詞（阿卡提斯托斯頌）　186",
-          "text": "ἀλλ' ἐγνώσθης τούτω καὶ Θεὸς τέλειος·",
-          "answerKeyRef": "patristic-plan:48:186#1",
-          "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
-          "answerKeyScope": "verse",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 2,
-              "slot": 20,
-              "ordinal": 40,
-              "headword": "τέλειος",
-              "lemma": "τέλειος",
-              "glossZh": "完全的；成熟的",
-              "pos": "形容詞"
-            }
-          ],
-          "verification": {
-            "words": 6,
-            "unattested": [],
-            "untaught": [],
-            "accentVariants": [],
-            "lemmas": [
-              "αλλα",
-              "γινωσκω",
-              "θεοσ",
-              "και",
-              "ουτοσ",
-              "τελειοσ"
-            ],
-            "forms": [],
-            "written": [
-              "αλλ’",
-              "εγνωσθησ",
-              "θεοσ",
-              "και",
-              "τελειοσ",
-              "τουτω"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 2
-        },
         {
           "kind": "quoted",
           "ref": "patristic-plan:7:9.1#2",
@@ -760,6 +679,112 @@
               "καλωσ"
             ],
             "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "corpus",
+          "no": 1
+        },
+        {
+          "kind": "quoted",
+          "ref": "Job.9:29",
+          "refLabel": "約伯記 9:29",
+          "text": "ἐπειδὴ δέ εἰμι ἀσεβής, διὰ τί οὐκ ἀπέθανον;",
+          "answerKeyRef": "Job.9:29",
+          "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
+          "answerKeyScope": "verse",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 2,
+              "slot": 1,
+              "ordinal": 21,
+              "headword": "ἐπειδή",
+              "lemma": "ἐπειδή",
+              "glossZh": "既然；因為",
+              "pos": "連接詞"
+            }
+          ],
+          "verification": {
+            "words": 8,
+            "unattested": [],
+            "untaught": [],
+            "accentVariants": [],
+            "lemmas": [
+              "αποθνησκω",
+              "ασεβησ",
+              "δε",
+              "δια",
+              "ειμι",
+              "επειδη",
+              "ου",
+              "τισ"
+            ],
+            "forms": [],
+            "written": [
+              "απεθανον",
+              "ασεβησ",
+              "δε",
+              "δια",
+              "ειμι",
+              "επειδη",
+              "ουκ",
+              "τι"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "corpus",
+          "no": 2
+        },
+        {
+          "kind": "quoted",
+          "ref": "patristic-plan:14:19.5#4",
+          "refLabel": "巴拿巴書 18–21：兩道　19.5",
+          "text": "οὐ φονεύσεις τέκνον ἐν φθορᾷ, οὐδὲ πάλιν γεννηθὲν ἀποκτενεῖς.",
+          "answerKeyRef": "patristic-plan:14:19.5#4",
+          "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
+          "answerKeyScope": "verse",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 2,
+              "slot": 4,
+              "ordinal": 24,
+              "headword": "φθορά",
+              "lemma": "φθορά",
+              "glossZh": "敗壞；朽壞",
+              "pos": "名詞"
+            }
+          ],
+          "verification": {
+            "words": 9,
+            "unattested": [],
+            "untaught": [],
+            "accentVariants": [],
+            "lemmas": [
+              "αποκτεινω",
+              "γενναω",
+              "εν",
+              "ου",
+              "ουδε",
+              "παλιν",
+              "τεκνον",
+              "φθορα",
+              "φονευω"
+            ],
+            "forms": [],
+            "written": [
+              "αποκτενεισ",
+              "γεννηθεν",
+              "εν",
+              "ου",
+              "ουδε",
+              "παλιν",
+              "τεκνον",
+              "φθορα",
+              "φονευσεισ"
+            ],
+            "lengthOk": false,
             "passed": true
           },
           "reviewedBy": "corpus",
@@ -1173,8 +1198,29 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 20,
-        "notPractised": [],
+        "practised": 18,
+        "notPractised": [
+          {
+            "volume": 2,
+            "lesson": 2,
+            "slot": 16,
+            "ordinal": 36,
+            "headword": "ἀξιόω",
+            "lemma": "ἀξιόω",
+            "glossZh": "認為…相配；視為值得",
+            "pos": "動詞"
+          },
+          {
+            "volume": 2,
+            "lesson": 2,
+            "slot": 20,
+            "ordinal": 40,
+            "headword": "τέλειος",
+            "lemma": "τέλειος",
+            "glossZh": "完全的；成熟的",
+            "pos": "形容詞"
+          }
+        ],
         "notAttested": []
       }
     },
@@ -1183,109 +1229,6 @@
       "id": "grc-v2-lesson-03",
       "note": "",
       "items": [
-        {
-          "kind": "quoted",
-          "ref": "patristic-plan:24:8#3",
-          "refLabel": "額我略‧納祥《神學講辭》第廿八篇 1–10：論神　8",
-          "text": "ἢ σῶμα ἐν σώμασιν ἔσται, ὅπερ ἀδύνατον·",
-          "answerKeyRef": "patristic-plan:24:8#3",
-          "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
-          "answerKeyScope": "verse-containing-clause",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 3,
-              "slot": 10,
-              "ordinal": 50,
-              "headword": "ὅσπερ",
-              "lemma": "ὅσπερ",
-              "glossZh": "正是那個；恰好是",
-              "pos": "代名詞"
-            },
-            {
-              "volume": 2,
-              "lesson": 3,
-              "slot": 19,
-              "ordinal": 59,
-              "headword": "ἀδύνατος",
-              "lemma": "ἀδύνατος",
-              "glossZh": "無能的；不可能的；軟弱的",
-              "pos": "形容詞"
-            }
-          ],
-          "verification": {
-            "words": 7,
-            "unattested": [],
-            "untaught": [],
-            "accentVariants": [],
-            "lemmas": [
-              "αδυνατοσ",
-              "ειμι",
-              "εν",
-              "η",
-              "οσπερ",
-              "σωμα"
-            ],
-            "forms": [],
-            "written": [
-              "αδυνατον",
-              "εν",
-              "εσται",
-              "η",
-              "οπερ",
-              "σωμα",
-              "σωμασιν"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 1
-        },
-        {
-          "kind": "quoted",
-          "ref": "patristic-plan:48:309#1",
-          "refLabel": "聖母讚頌詞（阿卡提斯托斯頌）　309",
-          "text": "κραυγῇ δὲ τιμωμένη ταῦτα·",
-          "answerKeyRef": "patristic-plan:48:309#1",
-          "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
-          "answerKeyScope": "verse",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 3,
-              "slot": 15,
-              "ordinal": 55,
-              "headword": "τιμάω",
-              "lemma": "τιμάω",
-              "glossZh": "估價；尊敬；看重",
-              "pos": "動詞"
-            }
-          ],
-          "verification": {
-            "words": 4,
-            "unattested": [],
-            "untaught": [],
-            "accentVariants": [],
-            "lemmas": [
-              "δε",
-              "κραυγη",
-              "ουτοσ",
-              "τιμαω"
-            ],
-            "forms": [],
-            "written": [
-              "δε",
-              "κραυγη",
-              "ταυτα",
-              "τιμωμενη"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 2
-        },
         {
           "kind": "quoted",
           "ref": "patristic-plan:50:7#1",
@@ -1326,6 +1269,99 @@
               "πασα",
               "πρεπει",
               "σοι"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "corpus",
+          "no": 1
+        },
+        {
+          "kind": "quoted",
+          "ref": "Deu.15:1",
+          "refLabel": "申命記 15:1",
+          "text": "Δι᾽ ἑπτὰ ἐτῶν ποιήσεις ἄφεσιν.",
+          "answerKeyRef": "Deu.15:1",
+          "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
+          "answerKeyScope": "verse",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 3,
+              "slot": 2,
+              "ordinal": 42,
+              "headword": "ἄφεσις",
+              "lemma": "ἄφεσις",
+              "glossZh": "赦免；寬恕；完全的饒恕",
+              "pos": "名詞"
+            }
+          ],
+          "verification": {
+            "words": 5,
+            "unattested": [],
+            "untaught": [],
+            "accentVariants": [],
+            "lemmas": [
+              "αφεσισ",
+              "δια",
+              "επτα",
+              "ετοσ",
+              "ποιεω"
+            ],
+            "forms": [],
+            "written": [
+              "αφεσιν",
+              "δι’",
+              "επτα",
+              "ετων",
+              "ποιησεισ"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "corpus",
+          "no": 2
+        },
+        {
+          "kind": "quoted",
+          "ref": "patristic-plan:7:9.1#3",
+          "refLabel": "依納爵致士每拿人書　9.1",
+          "text": "ὁ τιμῶν ἐπίσκοπον ὑπὸ θεοῦ τετίμηται·",
+          "answerKeyRef": "patristic-plan:7:9.1#3",
+          "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
+          "answerKeyScope": "verse-containing-clause",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 3,
+              "slot": 15,
+              "ordinal": 55,
+              "headword": "τιμάω",
+              "lemma": "τιμάω",
+              "glossZh": "估價；尊敬；看重",
+              "pos": "動詞"
+            }
+          ],
+          "verification": {
+            "words": 6,
+            "unattested": [],
+            "untaught": [],
+            "accentVariants": [],
+            "lemmas": [
+              "επισκοποσ",
+              "θεοσ",
+              "ο",
+              "τιμαω",
+              "υπο"
+            ],
+            "forms": [],
+            "written": [
+              "επισκοπον",
+              "θεου",
+              "ο",
+              "τετιμηται",
+              "τιμων",
+              "υπο"
             ],
             "lengthOk": true,
             "passed": true
@@ -1731,8 +1767,29 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 20,
-        "notPractised": [],
+        "practised": 18,
+        "notPractised": [
+          {
+            "volume": 2,
+            "lesson": 3,
+            "slot": 10,
+            "ordinal": 50,
+            "headword": "ὅσπερ",
+            "lemma": "ὅσπερ",
+            "glossZh": "正是那個；恰好是",
+            "pos": "代名詞"
+          },
+          {
+            "volume": 2,
+            "lesson": 3,
+            "slot": 19,
+            "ordinal": 59,
+            "headword": "ἀδύνατος",
+            "lemma": "ἀδύνατος",
+            "glossZh": "無能的；不可能的；軟弱的",
+            "pos": "形容詞"
+          }
+        ],
         "notAttested": []
       }
     },
@@ -1789,45 +1846,43 @@
         },
         {
           "kind": "quoted",
-          "ref": "patristic-plan:24:10#9",
-          "refLabel": "額我略‧納祥《神學講辭》第廿八篇 1–10：論神　10",
-          "text": "καὶ ποῦ πρὶν γενέσθαι τὸ πᾶν;",
-          "answerKeyRef": "patristic-plan:24:10#9",
+          "ref": "patristic-plan:21:2.6#2",
+          "refLabel": "亞他那修《論道成肉身》1–4：創造與敗壞　2.6",
+          "text": "εἶτα σημαίνων τὸν κτίσαντά φησιν·",
+          "answerKeyRef": "patristic-plan:21:2.6#2",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
-          "answerKeyScope": "verse",
+          "answerKeyScope": "verse-containing-clause",
           "targetWords": [
             {
               "volume": 2,
               "lesson": 4,
-              "slot": 4,
-              "ordinal": 64,
-              "headword": "πρίν",
-              "lemma": "πρίν",
-              "glossZh": "曾經；以前；之前",
-              "pos": "連接詞"
+              "slot": 13,
+              "ordinal": 73,
+              "headword": "σημαίνω",
+              "lemma": "σημαίνω",
+              "glossZh": "表示；指示；預示；說明",
+              "pos": "動詞"
             }
           ],
           "verification": {
-            "words": 6,
+            "words": 5,
             "unattested": [],
             "untaught": [],
             "accentVariants": [],
             "lemmas": [
-              "γινομαι",
-              "και",
+              "ειτα",
+              "κτιζω",
               "ο",
-              "πασ",
-              "που",
-              "πριν"
+              "σημαινω",
+              "φημι"
             ],
             "forms": [],
             "written": [
-              "γενεσθαι",
-              "και",
-              "παν",
-              "που",
-              "πριν",
-              "το"
+              "ειτα",
+              "κτισαντα",
+              "σημαινων",
+              "τον",
+              "φησιν"
             ],
             "lengthOk": true,
             "passed": true
@@ -1837,46 +1892,49 @@
         },
         {
           "kind": "quoted",
-          "ref": "patristic-plan:2:14.2#2",
-          "refLabel": "依納爵致以弗所人書　14.2",
-          "text": "φανερὸν τὸ δένδρον ἀπὸ τοῦ καρποῦ αὐτοῦ.",
-          "answerKeyRef": "patristic-plan:2:14.2#2",
+          "ref": "Heb.9.16",
+          "refLabel": "希伯來書 9:16",
+          "text": "ὅπου γὰρ διαθήκη, θάνατον ἀνάγκη φέρεσθαι τοῦ διαθεμένου·",
+          "answerKeyRef": "Heb.9.16",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
           "answerKeyScope": "verse",
           "targetWords": [
             {
               "volume": 2,
               "lesson": 4,
-              "slot": 18,
-              "ordinal": 78,
-              "headword": "φανερός",
-              "lemma": "φανερός",
-              "glossZh": "明顯的；清楚的；可見的；顯然",
-              "pos": "形容詞"
+              "slot": 20,
+              "ordinal": 80,
+              "headword": "ἀνάγκη",
+              "lemma": "ἀνάγκη",
+              "glossZh": "必需；迫切；強制",
+              "pos": "名詞"
             }
           ],
           "verification": {
-            "words": 7,
+            "words": 8,
             "unattested": [],
             "untaught": [],
             "accentVariants": [],
             "lemmas": [
-              "απο",
-              "αυτοσ",
-              "δενδρον",
-              "καρποσ",
+              "αναγκη",
+              "γαρ",
+              "διαθηκη",
+              "διατιθεμαι",
+              "θανατοσ",
               "ο",
-              "φανεροσ"
+              "οπου",
+              "φερω"
             ],
             "forms": [],
             "written": [
-              "απο",
-              "αυτου",
-              "δενδρον",
-              "καρπου",
-              "το",
+              "αναγκη",
+              "γαρ",
+              "διαθεμενου",
+              "διαθηκη",
+              "θανατον",
+              "οπου",
               "του",
-              "φανερον"
+              "φερεσθαι"
             ],
             "lengthOk": true,
             "passed": true
@@ -2295,8 +2353,29 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 20,
-        "notPractised": [],
+        "practised": 18,
+        "notPractised": [
+          {
+            "volume": 2,
+            "lesson": 4,
+            "slot": 4,
+            "ordinal": 64,
+            "headword": "πρίν",
+            "lemma": "πρίν",
+            "glossZh": "曾經；以前；之前",
+            "pos": "連接詞"
+          },
+          {
+            "volume": 2,
+            "lesson": 4,
+            "slot": 18,
+            "ordinal": 78,
+            "headword": "φανερός",
+            "lemma": "φανερός",
+            "glossZh": "明顯的；清楚的；可見的；顯然",
+            "pos": "形容詞"
+          }
+        ],
         "notAttested": []
       }
     },
@@ -2858,70 +2937,6 @@
       "items": [
         {
           "kind": "quoted",
-          "ref": "patristic-plan:32:34#2",
-          "refLabel": "使徒教規（85 條）　34",
-          "text": "Ἀλλὰ μηδὲ ἐκεῖνος ἄνευ τῆς πάντων γνώμης ποιείτω τι.",
-          "answerKeyRef": "patristic-plan:32:34#2",
-          "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
-          "answerKeyScope": "verse",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 6,
-              "slot": 9,
-              "ordinal": 109,
-              "headword": "ἄνευ",
-              "lemma": "ἄνευ",
-              "glossZh": "（配所有格）沒有；不帶",
-              "pos": "介系詞"
-            },
-            {
-              "volume": 2,
-              "lesson": 6,
-              "slot": 20,
-              "ordinal": 120,
-              "headword": "γνώμη",
-              "lemma": "γνώμη",
-              "glossZh": "意見；想法；旨意",
-              "pos": "名詞"
-            }
-          ],
-          "verification": {
-            "words": 9,
-            "unattested": [],
-            "untaught": [],
-            "accentVariants": [],
-            "lemmas": [
-              "αλλα",
-              "ανευ",
-              "γνωμη",
-              "εκεινοσ",
-              "μηδε",
-              "ο",
-              "πασ",
-              "ποιεω",
-              "τισ"
-            ],
-            "forms": [],
-            "written": [
-              "αλλα",
-              "ανευ",
-              "γνωμησ",
-              "εκεινοσ",
-              "μηδε",
-              "παντων",
-              "ποιειτω",
-              "τησ",
-              "τι"
-            ],
-            "lengthOk": false,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 1
-        },
-        {
-          "kind": "quoted",
           "ref": "liturgy-chrysostom:173#3",
           "refLabel": "金口約翰聖禮儀・信經　第 173 則",
           "text": "Προσδοκῶ ἀνάστασιν νεκρῶν.",
@@ -2960,14 +2975,65 @@
             "passed": true
           },
           "reviewedBy": "corpus",
+          "no": 1
+        },
+        {
+          "kind": "quoted",
+          "ref": "patristic-plan:4:5.1#1",
+          "refLabel": "依納爵致特拉勒人書　5.1",
+          "text": "Μὴ οὐ δύναμαι ὑμῖν τὰ ἐπουράνια γράψαι;",
+          "answerKeyRef": "patristic-plan:4:5.1#1",
+          "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
+          "answerKeyScope": "verse",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 6,
+              "slot": 13,
+              "ordinal": 113,
+              "headword": "ἐπουράνιος",
+              "lemma": "ἐπουράνιος",
+              "glossZh": "天上的；屬靈的",
+              "pos": "形容詞"
+            }
+          ],
+          "verification": {
+            "words": 7,
+            "unattested": [],
+            "untaught": [],
+            "accentVariants": [],
+            "lemmas": [
+              "γραφω",
+              "δυναμαι",
+              "επουρανιοσ",
+              "μη",
+              "ο",
+              "ου",
+              "συ",
+              "υμιν"
+            ],
+            "forms": [],
+            "written": [
+              "γραψαι",
+              "δυναμαι",
+              "επουρανια",
+              "μη",
+              "ου",
+              "τα",
+              "υμιν"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "corpus",
           "no": 2
         },
         {
           "kind": "quoted",
-          "ref": "patristic-plan:7:11.3#2",
-          "refLabel": "依納爵致士每拿人書　11.3",
-          "text": "τέλειοι ὄντες τέλεια καὶ φρονεῖτε.",
-          "answerKeyRef": "patristic-plan:7:11.3#2",
+          "ref": "patristic-plan:7:5.2#1",
+          "refLabel": "依納爵致士每拿人書　5.2",
+          "text": "καὶ γὰρ περὶ ἡμῶν τὸ αὐτὸ φρονοῦσιν.",
+          "answerKeyRef": "patristic-plan:7:5.2#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
           "answerKeyScope": "verse",
           "targetWords": [
@@ -2983,23 +3049,29 @@
             }
           ],
           "verification": {
-            "words": 5,
+            "words": 7,
             "unattested": [],
             "untaught": [],
             "accentVariants": [],
             "lemmas": [
-              "ειμι",
+              "αυτοσ",
+              "γαρ",
+              "εγω",
+              "ημων",
               "και",
-              "τελειοσ",
+              "ο",
+              "περι",
               "φρονεω"
             ],
             "forms": [],
             "written": [
+              "αυτο",
+              "γαρ",
+              "ημων",
               "και",
-              "οντεσ",
-              "τελεια",
-              "τελειοι",
-              "φρονειτε"
+              "περι",
+              "το",
+              "φρονουσιν"
             ],
             "lengthOk": true,
             "passed": true
@@ -3425,8 +3497,29 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 20,
-        "notPractised": [],
+        "practised": 18,
+        "notPractised": [
+          {
+            "volume": 2,
+            "lesson": 6,
+            "slot": 9,
+            "ordinal": 109,
+            "headword": "ἄνευ",
+            "lemma": "ἄνευ",
+            "glossZh": "（配所有格）沒有；不帶",
+            "pos": "介系詞"
+          },
+          {
+            "volume": 2,
+            "lesson": 6,
+            "slot": 20,
+            "ordinal": 120,
+            "headword": "γνώμη",
+            "lemma": "γνώμη",
+            "glossZh": "意見；想法；旨意",
+            "pos": "名詞"
+          }
+        ],
         "notAttested": []
       }
     },
@@ -4029,50 +4122,6 @@
         },
         {
           "kind": "quoted",
-          "ref": "patristic-plan:48:291#1",
-          "refLabel": "聖母讚頌詞（阿卡提斯托斯頌）　291",
-          "text": "χαῖρε, πιστοὺς Κυρίῳ ἁρμόζουσα.",
-          "answerKeyRef": "patristic-plan:48:291#1",
-          "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
-          "answerKeyScope": "verse",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 8,
-              "slot": 7,
-              "ordinal": 147,
-              "headword": "ἁρμόζω",
-              "lemma": "ἁρμόζω",
-              "glossZh": "相配；適合",
-              "pos": "動詞"
-            }
-          ],
-          "verification": {
-            "words": 4,
-            "unattested": [],
-            "untaught": [],
-            "accentVariants": [],
-            "lemmas": [
-              "αρμοζω",
-              "κυριοσ",
-              "πιστοσ",
-              "χαιρω"
-            ],
-            "forms": [],
-            "written": [
-              "αρμοζουσα",
-              "κυριω",
-              "πιστουσ",
-              "χαιρε"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 2
-        },
-        {
-          "kind": "quoted",
           "ref": "patristic-plan:17:1.6#1",
           "refLabel": "巴拿巴書 1–5：新約與舊約的關係　1.6",
           "text": "Τρία οὖν δόγματά ἐστιν κυρίου·",
@@ -4110,6 +4159,52 @@
               "κυριου",
               "ουν",
               "τρια"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "corpus",
+          "no": 2
+        },
+        {
+          "kind": "quoted",
+          "ref": "patristic-plan:25:10#3",
+          "refLabel": "金口若望《復活節教理講道》　10",
+          "text": "Νηστεύσαντες καὶ μὴ νηστεύσαντες, εὐφράνθητε σήμερον.",
+          "answerKeyRef": "patristic-plan:25:10#3",
+          "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
+          "answerKeyScope": "verse",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 8,
+              "slot": 6,
+              "ordinal": 146,
+              "headword": "νηστεύω",
+              "lemma": "νηστεύω",
+              "glossZh": "禁食；齋戒",
+              "pos": "動詞"
+            }
+          ],
+          "verification": {
+            "words": 6,
+            "unattested": [],
+            "untaught": [],
+            "accentVariants": [],
+            "lemmas": [
+              "ευφραινω",
+              "και",
+              "μη",
+              "νηστευω",
+              "σημερον"
+            ],
+            "forms": [],
+            "written": [
+              "ευφρανθητε",
+              "και",
+              "μη",
+              "νηστευσαντεσ",
+              "σημερον"
             ],
             "lengthOk": true,
             "passed": true
@@ -4540,8 +4635,19 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 20,
-        "notPractised": [],
+        "practised": 19,
+        "notPractised": [
+          {
+            "volume": 2,
+            "lesson": 8,
+            "slot": 7,
+            "ordinal": 147,
+            "headword": "ἁρμόζω",
+            "lemma": "ἁρμόζω",
+            "glossZh": "相配；適合",
+            "pos": "動詞"
+          }
+        ],
         "notAttested": []
       }
     },
@@ -4552,54 +4658,12 @@
       "items": [
         {
           "kind": "quoted",
-          "ref": "patristic-plan:21:2.2#3",
-          "refLabel": "亞他那修《論道成肉身》1–4：創造與敗壞　2.2",
-          "text": "τὸ δὲ, σελήνην·",
-          "answerKeyRef": "patristic-plan:21:2.2#3",
+          "ref": "1Thess.5.22",
+          "refLabel": "帖撒羅尼迦前書 5:22",
+          "text": "ἀπὸ παντὸς εἴδους πονηροῦ ἀπέχεσθε.",
+          "answerKeyRef": "1Thess.5.22",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
-          "answerKeyScope": "verse-containing-clause",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 9,
-              "slot": 6,
-              "ordinal": 166,
-              "headword": "σελήνη",
-              "lemma": "σελήνη",
-              "glossZh": "月亮",
-              "pos": "名詞"
-            }
-          ],
-          "verification": {
-            "words": 3,
-            "unattested": [],
-            "untaught": [],
-            "accentVariants": [],
-            "lemmas": [
-              "δε",
-              "ο",
-              "σεληνη"
-            ],
-            "forms": [],
-            "written": [
-              "δε",
-              "σεληνην",
-              "το"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 1
-        },
-        {
-          "kind": "quoted",
-          "ref": "patristic-plan:43:16#3",
-          "refLabel": "迦太基會議教規 1–20（希臘文傳本）　16",
-          "text": "ἐὰν δὲ εἶδος, ὅσον δέδωκε λάβῃ.",
-          "answerKeyRef": "patristic-plan:43:16#3",
-          "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
-          "answerKeyScope": "verse-containing-clause",
+          "answerKeyScope": "verse",
           "targetWords": [
             {
               "volume": 2,
@@ -4613,26 +4677,76 @@
             }
           ],
           "verification": {
-            "words": 6,
+            "words": 5,
             "unattested": [],
             "untaught": [],
             "accentVariants": [],
             "lemmas": [
-              "δε",
-              "διδωμι",
-              "εαν",
+              "απεχω",
+              "απο",
               "ειδοσ",
-              "λαμβανω",
-              "οσοσ"
+              "πασ",
+              "πονηροσ"
             ],
             "forms": [],
             "written": [
-              "δε",
-              "δεδωκε",
-              "εαν",
-              "ειδοσ",
-              "λαβη",
-              "οσον"
+              "απεχεσθε",
+              "απο",
+              "ειδουσ",
+              "παντοσ",
+              "πονηρου"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "corpus",
+          "no": 1
+        },
+        {
+          "kind": "quoted",
+          "ref": "Pro.4:1",
+          "refLabel": "箴言 4:1",
+          "text": "Ἀκούσατε, παῖδες, παιδείαν πατρός, καὶ προσέχετε γνῶναι ἔννοιαν.",
+          "answerKeyRef": "Pro.4:1",
+          "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
+          "answerKeyScope": "verse",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 9,
+              "slot": 7,
+              "ordinal": 167,
+              "headword": "ἔννοια",
+              "lemma": "ἔννοια",
+              "glossZh": "觀念；思想；意念",
+              "pos": "名詞"
+            }
+          ],
+          "verification": {
+            "words": 8,
+            "unattested": [],
+            "untaught": [],
+            "accentVariants": [],
+            "lemmas": [
+              "ακουω",
+              "γινωσκω",
+              "εννοια",
+              "και",
+              "παιδεια",
+              "παισ",
+              "πατηρ",
+              "προσεχω"
+            ],
+            "forms": [],
+            "written": [
+              "ακουσατε",
+              "γνωναι",
+              "εννοιαν",
+              "και",
+              "παιδειαν",
+              "παιδεσ",
+              "πατροσ",
+              "προσεχετε"
             ],
             "lengthOk": true,
             "passed": true
@@ -4642,50 +4756,53 @@
         },
         {
           "kind": "quoted",
-          "ref": "patristic-plan:11:14.2#1",
-          "refLabel": "革利免二書　14.2",
-          "text": "Ἐποίησεν ὁ θεὸς τὸν ἄνθρωπον ἄρσεν καὶ θῆλυ·",
-          "answerKeyRef": "patristic-plan:11:14.2#1",
+          "ref": "patristic-plan:19:3#4",
+          "refLabel": "猶斯定《第一護教辭》1–8：向皇帝陳情　3",
+          "text": "ὑμέτερον δὲ, ὡς αἱρεῖ λόγος, ἀκούοντας ἀγαθοὺς εὑρίσκεσθαι κριτάς.",
+          "answerKeyRef": "patristic-plan:19:3#4",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
           "answerKeyScope": "verse-containing-clause",
           "targetWords": [
             {
               "volume": 2,
               "lesson": 9,
-              "slot": 11,
-              "ordinal": 171,
-              "headword": "θῆλυς",
-              "lemma": "θῆλυς",
-              "glossZh": "女性的；雌性的；女人",
-              "pos": "形容詞"
+              "slot": 14,
+              "ordinal": 174,
+              "headword": "ὑμέτερος",
+              "lemma": "ὑμέτερος",
+              "glossZh": "你們的；你們所有的",
+              "pos": "代名詞"
             }
           ],
           "verification": {
-            "words": 8,
+            "words": 9,
             "unattested": [],
             "untaught": [],
             "accentVariants": [],
             "lemmas": [
-              "ανθρωποσ",
-              "αρσην",
-              "θεοσ",
-              "θηλυσ",
-              "και",
-              "ο",
-              "ποιεω"
+              "αγαθοσ",
+              "αιρω",
+              "ακουω",
+              "δε",
+              "ευρισκω",
+              "κριτησ",
+              "λογοσ",
+              "υμετεροσ",
+              "ωσ"
             ],
             "forms": [],
             "written": [
-              "ανθρωπον",
-              "αρσεν",
-              "εποιησεν",
-              "θεοσ",
-              "θηλυ",
-              "και",
-              "ο",
-              "τον"
+              "αγαθουσ",
+              "αιρει",
+              "ακουοντασ",
+              "δε",
+              "ευρισκεσθαι",
+              "κριτασ",
+              "λογοσ",
+              "υμετερον",
+              "ωσ"
             ],
-            "lengthOk": true,
+            "lengthOk": false,
             "passed": true
           },
           "reviewedBy": "corpus",
@@ -5105,8 +5222,29 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 20,
-        "notPractised": [],
+        "practised": 18,
+        "notPractised": [
+          {
+            "volume": 2,
+            "lesson": 9,
+            "slot": 6,
+            "ordinal": 166,
+            "headword": "σελήνη",
+            "lemma": "σελήνη",
+            "glossZh": "月亮",
+            "pos": "名詞"
+          },
+          {
+            "volume": 2,
+            "lesson": 9,
+            "slot": 11,
+            "ordinal": 171,
+            "headword": "θῆλυς",
+            "lemma": "θῆλυς",
+            "glossZh": "女性的；雌性的；女人",
+            "pos": "形容詞"
+          }
+        ],
         "notAttested": []
       }
     },
@@ -5693,93 +5831,45 @@
       "items": [
         {
           "kind": "quoted",
-          "ref": "patristic-plan:17:5.12#1",
-          "refLabel": "巴拿巴書 1–5：新約與舊約的關係　5.12",
-          "text": "οὐκοῦν εἰς τοῦτο ὑπέμεινεν.",
-          "answerKeyRef": "patristic-plan:17:5.12#1",
+          "ref": "Tbs.10:3",
+          "refLabel": "多比傳（西奈抄本） 10:3",
+          "text": "καὶ ἤρξατο λυπεῖσθαι.",
+          "answerKeyRef": "Tbs.10:3",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
           "answerKeyScope": "verse",
           "targetWords": [
             {
               "volume": 2,
               "lesson": 11,
-              "slot": 6,
-              "ordinal": 206,
-              "headword": "οὐκοῦν",
-              "lemma": "οὐκοῦν",
-              "glossZh": "那麼；因此；所以",
-              "pos": "連接詞"
+              "slot": 11,
+              "ordinal": 211,
+              "headword": "λυπέω",
+              "lemma": "λυπέω",
+              "glossZh": "使悲傷；使煩惱",
+              "pos": "動詞"
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 3,
             "unattested": [],
             "untaught": [],
             "accentVariants": [],
             "lemmas": [
-              "εισ",
-              "ουκουν",
-              "ουτοσ",
-              "υπομενω"
+              "αρχω",
+              "και",
+              "λυπεω"
             ],
             "forms": [],
             "written": [
-              "εισ",
-              "ουκουν",
-              "τουτο",
-              "υπεμεινεν"
+              "ηρξατο",
+              "και",
+              "λυπεισθαι"
             ],
             "lengthOk": true,
             "passed": true
           },
           "reviewedBy": "corpus",
           "no": 1
-        },
-        {
-          "kind": "quoted",
-          "ref": "patristic-plan:48:263#1",
-          "refLabel": "聖母讚頌詞（阿卡提斯托斯頌）　263",
-          "text": "χαῖρε, πολλοὺς ἐν γνώσει φωτίζουσα.",
-          "answerKeyRef": "patristic-plan:48:263#1",
-          "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
-          "answerKeyScope": "verse",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 11,
-              "slot": 9,
-              "ordinal": 209,
-              "headword": "φωτίζω",
-              "lemma": "φωτίζω",
-              "glossZh": "照亮；光照；啟蒙",
-              "pos": "動詞"
-            }
-          ],
-          "verification": {
-            "words": 5,
-            "unattested": [],
-            "untaught": [],
-            "accentVariants": [],
-            "lemmas": [
-              "γνωσισ",
-              "εν",
-              "πολυσ",
-              "φωτιζω",
-              "χαιρω"
-            ],
-            "forms": [],
-            "written": [
-              "γνωσει",
-              "εν",
-              "πολλουσ",
-              "φωτιζουσα",
-              "χαιρε"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 2
         },
         {
           "kind": "quoted",
@@ -5822,6 +5912,56 @@
               "παντων",
               "ποιητην",
               "τε"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "corpus",
+          "no": 2
+        },
+        {
+          "kind": "quoted",
+          "ref": "1Cor.4.16",
+          "refLabel": "哥林多前書 4:16",
+          "text": "παρακαλῶ οὖν ὑμᾶς, μιμηταί μου γίνεσθε.",
+          "answerKeyRef": "1Cor.4.16",
+          "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
+          "answerKeyScope": "verse",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 11,
+              "slot": 16,
+              "ordinal": 216,
+              "headword": "μιμητής",
+              "lemma": "μιμητής",
+              "glossZh": "模仿者；效法者；追隨者",
+              "pos": "名詞"
+            }
+          ],
+          "verification": {
+            "words": 6,
+            "unattested": [],
+            "untaught": [],
+            "accentVariants": [],
+            "lemmas": [
+              "γινομαι",
+              "εγω",
+              "μιμητησ",
+              "μου",
+              "ουν",
+              "παρακαλεω",
+              "συ",
+              "υμασ"
+            ],
+            "forms": [],
+            "written": [
+              "γινεσθε",
+              "μιμηται",
+              "μου",
+              "ουν",
+              "παρακαλω",
+              "υμασ"
             ],
             "lengthOk": true,
             "passed": true
@@ -6227,8 +6367,29 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 20,
-        "notPractised": [],
+        "practised": 18,
+        "notPractised": [
+          {
+            "volume": 2,
+            "lesson": 11,
+            "slot": 6,
+            "ordinal": 206,
+            "headword": "οὐκοῦν",
+            "lemma": "οὐκοῦν",
+            "glossZh": "那麼；因此；所以",
+            "pos": "連接詞"
+          },
+          {
+            "volume": 2,
+            "lesson": 11,
+            "slot": 9,
+            "ordinal": 209,
+            "headword": "φωτίζω",
+            "lemma": "φωτίζω",
+            "glossZh": "照亮；光照；啟蒙",
+            "pos": "動詞"
+          }
+        ],
         "notAttested": []
       }
     },
@@ -6295,43 +6456,39 @@
         },
         {
           "kind": "quoted",
-          "ref": "patristic-plan:24:9#9",
-          "refLabel": "額我略‧納祥《神學講辭》第廿八篇 1–10：論神　9",
-          "text": "Ἢ τοῦτο μὲν παντὶ δῆλον.",
-          "answerKeyRef": "patristic-plan:24:9#9",
+          "ref": "liturgy-chrysostom:293#1",
+          "refLabel": "金口約翰聖禮儀・散堂　第 293 則",
+          "text": "Ἐν εἰρήνῃ προέλθωμεν.",
+          "answerKeyRef": "liturgy-chrysostom:293#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
           "answerKeyScope": "verse",
           "targetWords": [
             {
               "volume": 2,
               "lesson": 12,
-              "slot": 7,
-              "ordinal": 227,
-              "headword": "δῆλος",
-              "lemma": "δῆλος",
-              "glossZh": "明顯的；清楚的",
-              "pos": "形容詞"
+              "slot": 12,
+              "ordinal": 232,
+              "headword": "προέρχομαι",
+              "lemma": "προέρχομαι",
+              "glossZh": "前進；出來；產生",
+              "pos": "動詞"
             }
           ],
           "verification": {
-            "words": 5,
+            "words": 3,
             "unattested": [],
             "untaught": [],
             "accentVariants": [],
             "lemmas": [
-              "δηλοσ",
-              "η",
-              "μεν",
-              "ουτοσ",
-              "πασ"
+              "ειρηνη",
+              "εν",
+              "προερχομαι"
             ],
             "forms": [],
             "written": [
-              "δηλον",
-              "η",
-              "μεν",
-              "παντι",
-              "τουτο"
+              "ειρηνη",
+              "εν",
+              "προελθωμεν"
             ],
             "lengthOk": true,
             "passed": true
@@ -6341,21 +6498,21 @@
         },
         {
           "kind": "quoted",
-          "ref": "patristic-plan:23:7#10",
-          "refLabel": "額我略‧納祥《神學講辭》第廿七篇：論神學該由誰、何時、如何講　7",
-          "text": "οὐ μελέτην θανάτου τὸν βίον ποιούμεθα;",
-          "answerKeyRef": "patristic-plan:23:7#10",
+          "ref": "patristic-plan:50:89#1",
+          "refLabel": "聖誕晨禱（12 月 25 日）　89",
+          "text": "Διάκονος: Καὶ ὑπέρ τοῦ καταξιωθῆναι ἡμᾶς...",
+          "answerKeyRef": "patristic-plan:50:89#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
           "answerKeyScope": "verse",
           "targetWords": [
             {
               "volume": 2,
               "lesson": 12,
-              "slot": 11,
-              "ordinal": 231,
-              "headword": "μελετάω",
-              "lemma": "μελετάω",
-              "glossZh": "默想；思考；預先思量",
+              "slot": 14,
+              "ordinal": 234,
+              "headword": "καταξιόω",
+              "lemma": "καταξιόω",
+              "glossZh": "看作配得；認為值得",
               "pos": "動詞"
             }
           ],
@@ -6365,21 +6522,22 @@
             "untaught": [],
             "accentVariants": [],
             "lemmas": [
-              "βιοσ",
-              "θανατοσ",
-              "μελεταω",
+              "διακονοσ",
+              "εγω",
+              "ημασ",
+              "και",
+              "καταξιοω",
               "ο",
-              "ου",
-              "ποιεω"
+              "υπερ"
             ],
             "forms": [],
             "written": [
-              "βιον",
-              "θανατου",
-              "μελετην",
-              "ου",
-              "ποιουμεθα",
-              "τον"
+              "διακονοσ",
+              "ημασ",
+              "και",
+              "καταξιωθηναι",
+              "του",
+              "υπερ"
             ],
             "lengthOk": true,
             "passed": true
@@ -6775,8 +6933,29 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 20,
-        "notPractised": [],
+        "practised": 18,
+        "notPractised": [
+          {
+            "volume": 2,
+            "lesson": 12,
+            "slot": 7,
+            "ordinal": 227,
+            "headword": "δῆλος",
+            "lemma": "δῆλος",
+            "glossZh": "明顯的；清楚的",
+            "pos": "形容詞"
+          },
+          {
+            "volume": 2,
+            "lesson": 12,
+            "slot": 11,
+            "ordinal": 231,
+            "headword": "μελετάω",
+            "lemma": "μελετάω",
+            "glossZh": "默想；思考；預先思量",
+            "pos": "動詞"
+          }
+        ],
         "notAttested": []
       }
     },
@@ -6843,50 +7022,6 @@
         },
         {
           "kind": "quoted",
-          "ref": "patristic-plan:11:11.4#1",
-          "refLabel": "革利免二書　11.4",
-          "text": "ἔπειτα ἀπολήψεται τὰ ἀγαθά.",
-          "answerKeyRef": "patristic-plan:11:11.4#1",
-          "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
-          "answerKeyScope": "verse-containing-clause",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 13,
-              "slot": 16,
-              "ordinal": 256,
-              "headword": "ἔπειτα",
-              "lemma": "ἔπειτα",
-              "glossZh": "然後；其後；隨後",
-              "pos": "副詞"
-            }
-          ],
-          "verification": {
-            "words": 4,
-            "unattested": [],
-            "untaught": [],
-            "accentVariants": [],
-            "lemmas": [
-              "αγαθοσ",
-              "απολαμβανω",
-              "επειτα",
-              "ο"
-            ],
-            "forms": [],
-            "written": [
-              "αγαθα",
-              "αποληψεται",
-              "επειτα",
-              "τα"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 2
-        },
-        {
-          "kind": "quoted",
           "ref": "Psa.68:18",
           "refLabel": "詩篇 68:18",
           "text": "ὅτι θλίβομαι, ταχὺ ἐπάκουσόν μου.",
@@ -6926,6 +7061,57 @@
               "μου",
               "οτι",
               "ταχυ"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "corpus",
+          "no": 2
+        },
+        {
+          "kind": "quoted",
+          "ref": "Sir.12:4",
+          "refLabel": "便西拉智訓 12:4",
+          "text": "δὸς τῷ εὐσεβεῖ, καὶ μὴ ἀντιλάβῃ τοῦ ἁμαρτωλοῦ.",
+          "answerKeyRef": "Sir.12:4",
+          "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
+          "answerKeyScope": "verse",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 13,
+              "slot": 3,
+              "ordinal": 243,
+              "headword": "εὐσεβής",
+              "lemma": "εὐσεβής",
+              "glossZh": "虔誠的；敬畏神的",
+              "pos": "形容詞"
+            }
+          ],
+          "verification": {
+            "words": 8,
+            "unattested": [],
+            "untaught": [],
+            "accentVariants": [],
+            "lemmas": [
+              "αμαρτωλοσ",
+              "αντιλαμβανω",
+              "διδωμι",
+              "ευσεβησ",
+              "και",
+              "μη",
+              "ο"
+            ],
+            "forms": [],
+            "written": [
+              "αμαρτωλου",
+              "αντιλαβη",
+              "δοσ",
+              "ευσεβει",
+              "και",
+              "μη",
+              "του",
+              "τω"
             ],
             "lengthOk": true,
             "passed": true
@@ -7343,8 +7529,19 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 20,
-        "notPractised": [],
+        "practised": 19,
+        "notPractised": [
+          {
+            "volume": 2,
+            "lesson": 13,
+            "slot": 16,
+            "ordinal": 256,
+            "headword": "ἔπειτα",
+            "lemma": "ἔπειτα",
+            "glossZh": "然後；其後；隨後",
+            "pos": "副詞"
+          }
+        ],
         "notAttested": []
       }
     },
@@ -7355,21 +7552,21 @@
       "items": [
         {
           "kind": "quoted",
-          "ref": "patristic-plan:4:13.3#2",
-          "refLabel": "依納爵致特拉勒人書　13.3",
-          "text": "ἔτι γὰρ ὑπὸ κίνδυνόν εἰμι·",
-          "answerKeyRef": "patristic-plan:4:13.3#2",
+          "ref": "Acts.1.20",
+          "refLabel": "使徒行傳 1:20",
+          "text": "γέγραπται γὰρ ἐν βίβλῳ ψαλμῶν·",
+          "answerKeyRef": "Acts.1.20",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
           "answerKeyScope": "verse-containing-clause",
           "targetWords": [
             {
               "volume": 2,
               "lesson": 14,
-              "slot": 15,
-              "ordinal": 275,
-              "headword": "κίνδυνος",
-              "lemma": "κίνδυνος",
-              "glossZh": "危險；危害",
+              "slot": 19,
+              "ordinal": 279,
+              "headword": "βίβλος",
+              "lemma": "βίβλος",
+              "glossZh": "書卷；書籍",
               "pos": "名詞"
             }
           ],
@@ -7379,19 +7576,19 @@
             "untaught": [],
             "accentVariants": [],
             "lemmas": [
+              "βιβλοσ",
               "γαρ",
-              "ειμι",
-              "ετι",
-              "κινδυνοσ",
-              "υπο"
+              "γραφω",
+              "εν",
+              "ψαλμοσ"
             ],
             "forms": [],
             "written": [
+              "βιβλω",
               "γαρ",
-              "ειμι",
-              "ετι",
-              "κινδυνον",
-              "υπο"
+              "γεγραπται",
+              "εν",
+              "ψαλμων"
             ],
             "lengthOk": true,
             "passed": true
@@ -7907,8 +8104,19 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
-        "notPractised": [],
+        "practised": 18,
+        "notPractised": [
+          {
+            "volume": 2,
+            "lesson": 14,
+            "slot": 15,
+            "ordinal": 275,
+            "headword": "κίνδυνος",
+            "lemma": "κίνδυνος",
+            "glossZh": "危險；危害",
+            "pos": "名詞"
+          }
+        ],
         "notAttested": [
           {
             "volume": 2,
@@ -8578,43 +8786,47 @@
         },
         {
           "kind": "quoted",
-          "ref": "patristic-plan:50:418#1",
-          "refLabel": "聖誕晨禱（12 月 25 日）　418",
-          "text": "Μυστήριον ξένον ὁρῶ, καὶ παράδοξον!",
-          "answerKeyRef": "patristic-plan:50:418#1",
+          "ref": "patristic-plan:14:19.4#3",
+          "refLabel": "巴拿巴書 18–21：兩道　19.4",
+          "text": "οὐ λήμψῃ πρόσωπον ἐλέγξαι τινὰ ἐπὶ παραπτώματι.",
+          "answerKeyRef": "patristic-plan:14:19.4#3",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
           "answerKeyScope": "verse",
           "targetWords": [
             {
               "volume": 2,
               "lesson": 16,
-              "slot": 9,
-              "ordinal": 309,
-              "headword": "παράδοξος",
-              "lemma": "παράδοξος",
-              "glossZh": "奇妙的；出人意料的；矛盾的",
-              "pos": "形容詞"
+              "slot": 1,
+              "ordinal": 301,
+              "headword": "παράπτωμα",
+              "lemma": "παράπτωμα",
+              "glossZh": "過犯；罪愆",
+              "pos": "名詞"
             }
           ],
           "verification": {
-            "words": 5,
+            "words": 7,
             "unattested": [],
             "untaught": [],
             "accentVariants": [],
             "lemmas": [
-              "και",
-              "μυστηριον",
-              "ξενοσ",
-              "οραω",
-              "παραδοξοσ"
+              "ελεγχω",
+              "επι",
+              "λαμβανω",
+              "ου",
+              "παραπτωμα",
+              "προσωπον",
+              "τισ"
             ],
             "forms": [],
             "written": [
-              "και",
-              "μυστηριον",
-              "ξενον",
-              "ορω",
-              "παραδοξον"
+              "ελεγξαι",
+              "επι",
+              "λημψη",
+              "ου",
+              "παραπτωματι",
+              "προσωπον",
+              "τινα"
             ],
             "lengthOk": true,
             "passed": true
@@ -9016,8 +9228,19 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 20,
-        "notPractised": [],
+        "practised": 19,
+        "notPractised": [
+          {
+            "volume": 2,
+            "lesson": 16,
+            "slot": 9,
+            "ordinal": 309,
+            "headword": "παράδοξος",
+            "lemma": "παράδοξος",
+            "glossZh": "奇妙的；出人意料的；矛盾的",
+            "pos": "形容詞"
+          }
+        ],
         "notAttested": []
       }
     },
@@ -9028,22 +9251,22 @@
       "items": [
         {
           "kind": "quoted",
-          "ref": "patristic-plan:12:5.7#1",
-          "refLabel": "致丟格那妥書　5.7",
-          "text": "τράπεζαν κοινὴν παρατίθενται, ἀλλ’ οὐ κοίτην.",
-          "answerKeyRef": "patristic-plan:12:5.7#1",
+          "ref": "patristic-plan:19:4#7",
+          "refLabel": "猶斯定《第一護教辭》1–8：向皇帝陳情　4",
+          "text": "Οὐκ ὀρθῶς μὲν οὐδὲ τοῦτο πράττεται·",
+          "answerKeyRef": "patristic-plan:19:4#7",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
-          "answerKeyScope": "verse",
+          "answerKeyScope": "verse-containing-clause",
           "targetWords": [
             {
               "volume": 2,
               "lesson": 17,
-              "slot": 4,
-              "ordinal": 324,
-              "headword": "παρατίθημι",
-              "lemma": "παρατίθημι",
-              "glossZh": "擺在…前面；供應；交託",
-              "pos": "動詞"
+              "slot": 20,
+              "ordinal": 340,
+              "headword": "ὀρθῶς",
+              "lemma": "ὀρθῶς",
+              "glossZh": "正確地；恰當地；直正地",
+              "pos": "副詞"
             }
           ],
           "verification": {
@@ -9052,21 +9275,21 @@
             "untaught": [],
             "accentVariants": [],
             "lemmas": [
-              "αλλα",
-              "κοινοσ",
-              "κοιτη",
+              "μεν",
+              "ορθωσ",
               "ου",
-              "παρατιθημι",
-              "τραπεζα"
+              "ουδε",
+              "ουτοσ",
+              "πρασσω"
             ],
             "forms": [],
             "written": [
-              "αλλ’",
-              "κοινην",
-              "κοιτην",
-              "ου",
-              "παρατιθενται",
-              "τραπεζαν"
+              "μεν",
+              "ορθωσ",
+              "ουδε",
+              "ουκ",
+              "πραττεται",
+              "τουτο"
             ],
             "lengthOk": true,
             "passed": true
@@ -9076,45 +9299,44 @@
         },
         {
           "kind": "quoted",
-          "ref": "patristic-plan:49:64#1",
-          "refLabel": "復活節晨禱正典（大馬士革的約翰）　64",
-          "text": "Λαβὼν ἀνῆλθε πολλὰ τῆς νίκης σκῦλα.",
-          "answerKeyRef": "patristic-plan:49:64#1",
+          "ref": "Matt.24.11",
+          "refLabel": "馬太福音 24:11",
+          "text": "καὶ πολλοὶ ψευδοπροφῆται ἐγερθήσονται καὶ πλανήσουσιν πολλούς·",
+          "answerKeyRef": "Matt.24.11",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
           "answerKeyScope": "verse",
           "targetWords": [
             {
               "volume": 2,
               "lesson": 17,
-              "slot": 18,
-              "ordinal": 338,
-              "headword": "νίκη",
-              "lemma": "νίκη",
-              "glossZh": "勝利；得勝",
+              "slot": 10,
+              "ordinal": 330,
+              "headword": "ψευδοπροφήτης",
+              "lemma": "ψευδοπροφήτης",
+              "glossZh": "假先知",
               "pos": "名詞"
             }
           ],
           "verification": {
-            "words": 6,
+            "words": 7,
             "unattested": [],
             "untaught": [],
             "accentVariants": [],
             "lemmas": [
-              "ανερχομαι",
-              "λαμβανω",
-              "νικη",
-              "ο",
+              "εγειρω",
+              "και",
+              "πλαναω",
               "πολυσ",
-              "σκυλον"
+              "ψευδοπροφητησ"
             ],
             "forms": [],
             "written": [
-              "ανηλθε",
-              "λαβων",
-              "νικησ",
-              "πολλα",
-              "σκυλα",
-              "τησ"
+              "εγερθησονται",
+              "και",
+              "πλανησουσιν",
+              "πολλοι",
+              "πολλουσ",
+              "ψευδοπροφηται"
             ],
             "lengthOk": true,
             "passed": true
@@ -9124,45 +9346,48 @@
         },
         {
           "kind": "quoted",
-          "ref": "patristic-plan:16:9.1.5#1",
-          "refLabel": "黑馬牧人書：誡命一至四　9.1.5",
-          "text": "Ἄχρι τῆς ἀγνοίας, φησίν, οὐχ ἁμαρτάνει·",
-          "answerKeyRef": "patristic-plan:16:9.1.5#1",
+          "ref": "Wis.6:25",
+          "refLabel": "所羅門智訓 6:25",
+          "text": "ὥστε παιδεύεσθε τοῖς ῥήμασίν μου, καὶ ὠφεληθήσεσθε.",
+          "answerKeyRef": "Wis.6:25",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
-          "answerKeyScope": "verse-containing-clause",
+          "answerKeyScope": "verse",
           "targetWords": [
             {
               "volume": 2,
               "lesson": 17,
-              "slot": 3,
-              "ordinal": 323,
-              "headword": "ἄγνοια",
-              "lemma": "ἄγνοια",
-              "glossZh": "無知；愚昧",
-              "pos": "名詞"
+              "slot": 5,
+              "ordinal": 325,
+              "headword": "ὠφελέω",
+              "lemma": "ὠφελέω",
+              "glossZh": "幫助；有益；行善",
+              "pos": "動詞"
             }
           ],
           "verification": {
-            "words": 6,
+            "words": 7,
             "unattested": [],
             "untaught": [],
             "accentVariants": [],
             "lemmas": [
-              "αγνοια",
-              "αμαρτανω",
-              "αχρι",
+              "εγω",
+              "και",
+              "μου",
               "ο",
-              "ου",
-              "φημι"
+              "παιδευω",
+              "ρημα",
+              "ωστε",
+              "ωφελεω"
             ],
             "forms": [],
             "written": [
-              "αγνοιασ",
-              "αμαρτανει",
-              "αχρι",
-              "ουχ",
-              "τησ",
-              "φησιν"
+              "και",
+              "μου",
+              "παιδευεσθε",
+              "ρημασιν",
+              "τοισ",
+              "ωστε",
+              "ωφεληθησεσθε"
             ],
             "lengthOk": true,
             "passed": true
@@ -9566,8 +9791,39 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 20,
-        "notPractised": [],
+        "practised": 17,
+        "notPractised": [
+          {
+            "volume": 2,
+            "lesson": 17,
+            "slot": 3,
+            "ordinal": 323,
+            "headword": "ἄγνοια",
+            "lemma": "ἄγνοια",
+            "glossZh": "無知；愚昧",
+            "pos": "名詞"
+          },
+          {
+            "volume": 2,
+            "lesson": 17,
+            "slot": 4,
+            "ordinal": 324,
+            "headword": "παρατίθημι",
+            "lemma": "παρατίθημι",
+            "glossZh": "擺在…前面；供應；交託",
+            "pos": "動詞"
+          },
+          {
+            "volume": 2,
+            "lesson": 17,
+            "slot": 18,
+            "ordinal": 338,
+            "headword": "νίκη",
+            "lemma": "νίκη",
+            "glossZh": "勝利；得勝",
+            "pos": "名詞"
+          }
+        ],
         "notAttested": []
       }
     },
@@ -9620,52 +9876,10 @@
         },
         {
           "kind": "quoted",
-          "ref": "patristic-plan:50:116#2",
-          "refLabel": "聖誕晨禱（12 月 25 日）　116",
-          "text": "Ἐλέει καὶ οἰκτιρμοῖς...",
-          "answerKeyRef": "patristic-plan:50:116#2",
-          "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
-          "answerKeyScope": "verse",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 18,
-              "slot": 3,
-              "ordinal": 343,
-              "headword": "οἰκτιρμός",
-              "lemma": "οἰκτιρμός",
-              "glossZh": "憐憫；同情",
-              "pos": "名詞"
-            }
-          ],
-          "verification": {
-            "words": 3,
-            "unattested": [],
-            "untaught": [],
-            "accentVariants": [],
-            "lemmas": [
-              "ελεοσ",
-              "και",
-              "οικτιρμοσ"
-            ],
-            "forms": [],
-            "written": [
-              "ελεει",
-              "και",
-              "οικτιρμοισ"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 2
-        },
-        {
-          "kind": "quoted",
-          "ref": "patristic-plan:42:17#2",
-          "refLabel": "撒狄迦會議教規（343）　17",
-          "text": "Ἅπαντες εἰρήκασιν· Ἤρεσε καὶ τοῦτο.",
-          "answerKeyRef": "patristic-plan:42:17#2",
+          "ref": "patristic-plan:42:6#7",
+          "refLabel": "撒狄迦會議教規（343）　6",
+          "text": "Εἰ πᾶσιν ἀρέσκει τοῦτο;",
+          "answerKeyRef": "patristic-plan:42:6#7",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
           "answerKeyScope": "verse",
           "targetWords": [
@@ -9681,24 +9895,69 @@
             }
           ],
           "verification": {
+            "words": 4,
+            "unattested": [],
+            "untaught": [],
+            "accentVariants": [],
+            "lemmas": [
+              "αρεσκω",
+              "ει",
+              "ουτοσ",
+              "πασ"
+            ],
+            "forms": [],
+            "written": [
+              "αρεσκει",
+              "ει",
+              "πασιν",
+              "τουτο"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "corpus",
+          "no": 2
+        },
+        {
+          "kind": "quoted",
+          "ref": "patristic-plan:50:14#1",
+          "refLabel": "聖誕晨禱（12 月 25 日）　14",
+          "text": "Θεὸς Κύριος, καὶ ἐπέφανεν ἡμῖν...",
+          "answerKeyRef": "patristic-plan:50:14#1",
+          "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
+          "answerKeyScope": "verse",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 18,
+              "slot": 15,
+              "ordinal": 355,
+              "headword": "ἐπιφαίνω",
+              "lemma": "ἐπιφαίνω",
+              "glossZh": "顯現；照耀",
+              "pos": "動詞"
+            }
+          ],
+          "verification": {
             "words": 5,
             "unattested": [],
             "untaught": [],
             "accentVariants": [],
             "lemmas": [
-              "απασ",
-              "αρεσκω",
+              "εγω",
+              "επιφαινω",
+              "ημιν",
+              "θεοσ",
               "και",
-              "λεγω",
-              "ουτοσ"
+              "κυριοσ"
             ],
             "forms": [],
             "written": [
-              "απαντεσ",
-              "ειρηκασιν",
-              "ηρεσε",
+              "επεφανεν",
+              "ημιν",
+              "θεοσ",
               "και",
-              "τουτο"
+              "κυριοσ"
             ],
             "lengthOk": true,
             "passed": true
@@ -10106,8 +10365,19 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 20,
-        "notPractised": [],
+        "practised": 19,
+        "notPractised": [
+          {
+            "volume": 2,
+            "lesson": 18,
+            "slot": 3,
+            "ordinal": 343,
+            "headword": "οἰκτιρμός",
+            "lemma": "οἰκτιρμός",
+            "glossZh": "憐憫；同情",
+            "pos": "名詞"
+          }
+        ],
         "notAttested": []
       }
     },
@@ -10663,100 +10933,6 @@
       "items": [
         {
           "kind": "quoted",
-          "ref": "patristic-plan:24:6#8",
-          "refLabel": "額我略‧納祥《神學講辭》第廿八篇 1–10：論神　6",
-          "text": "τίς τοσούτου χαρίσματος ἠξιώθη ποτέ;",
-          "answerKeyRef": "patristic-plan:24:6#8",
-          "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
-          "answerKeyScope": "verse",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 20,
-              "slot": 19,
-              "ordinal": 399,
-              "headword": "χάρισμα",
-              "lemma": "χάρισμα",
-              "glossZh": "恩賜；屬靈的恩賜",
-              "pos": "名詞"
-            }
-          ],
-          "verification": {
-            "words": 5,
-            "unattested": [],
-            "untaught": [],
-            "accentVariants": [],
-            "lemmas": [
-              "αξιοω",
-              "ποτε",
-              "τισ",
-              "τοσουτοσ",
-              "χαρισμα"
-            ],
-            "forms": [],
-            "written": [
-              "ηξιωθη",
-              "ποτε",
-              "τισ",
-              "τοσουτου",
-              "χαρισματοσ"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 1
-        },
-        {
-          "kind": "quoted",
-          "ref": "patristic-plan:12:10.3#1",
-          "refLabel": "致丟格那妥書　10.3",
-          "text": "ἐπιγνοὺς δὲ τίνος οἴει πληρωθήσεσθαι χαρᾶς;",
-          "answerKeyRef": "patristic-plan:12:10.3#1",
-          "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
-          "answerKeyScope": "verse",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 20,
-              "slot": 14,
-              "ordinal": 394,
-              "headword": "οἴομαι",
-              "lemma": "οἴομαι",
-              "glossZh": "以為；想；認為",
-              "pos": "動詞"
-            }
-          ],
-          "verification": {
-            "words": 6,
-            "unattested": [],
-            "untaught": [],
-            "accentVariants": [],
-            "lemmas": [
-              "δε",
-              "επιγινωσκω",
-              "οιομαι",
-              "πληροω",
-              "τισ",
-              "χαρα"
-            ],
-            "forms": [],
-            "written": [
-              "δε",
-              "επιγνουσ",
-              "οιει",
-              "πληρωθησεσθαι",
-              "τινοσ",
-              "χαρασ"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 2
-        },
-        {
-          "kind": "quoted",
           "ref": "patristic-plan:14:18.1#3",
           "refLabel": "巴拿巴書 18–21：兩道　18.1",
           "text": "διαφορὰ δὲ πολλὴ τῶν δύο ὁδῶν.",
@@ -10796,6 +10972,106 @@
               "οδων",
               "πολλη",
               "των"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "corpus",
+          "no": 1
+        },
+        {
+          "kind": "quoted",
+          "ref": "Mark.15.3",
+          "refLabel": "馬可福音 15:3",
+          "text": "καὶ κατηγόρουν αὐτοῦ οἱ ἀρχιερεῖς πολλά.",
+          "answerKeyRef": "Mark.15.3",
+          "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
+          "answerKeyScope": "verse",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 20,
+              "slot": 12,
+              "ordinal": 392,
+              "headword": "κατηγορέω",
+              "lemma": "κατηγορέω",
+              "glossZh": "控告；起訴；譴責",
+              "pos": "動詞"
+            }
+          ],
+          "verification": {
+            "words": 6,
+            "unattested": [],
+            "untaught": [],
+            "accentVariants": [],
+            "lemmas": [
+              "αρχιερευσ",
+              "αυτοσ",
+              "και",
+              "κατηγορεω",
+              "ο",
+              "πολυσ"
+            ],
+            "forms": [],
+            "written": [
+              "αρχιερεισ",
+              "αυτου",
+              "και",
+              "κατηγορουν",
+              "οι",
+              "πολλα"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "corpus",
+          "no": 2
+        },
+        {
+          "kind": "quoted",
+          "ref": "Heb.10.18",
+          "refLabel": "希伯來書 10:18",
+          "text": "ὅπου δὲ ἄφεσις τούτων, οὐκέτι προσφορὰ περὶ ἁμαρτίας.",
+          "answerKeyRef": "Heb.10.18",
+          "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
+          "answerKeyScope": "verse",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 20,
+              "slot": 16,
+              "ordinal": 396,
+              "headword": "προσφορά",
+              "lemma": "προσφορά",
+              "glossZh": "獻祭；祭品；供獻",
+              "pos": "名詞"
+            }
+          ],
+          "verification": {
+            "words": 8,
+            "unattested": [],
+            "untaught": [],
+            "accentVariants": [],
+            "lemmas": [
+              "αμαρτια",
+              "αφεσισ",
+              "δε",
+              "οπου",
+              "ουκετι",
+              "ουτοσ",
+              "περι",
+              "προσφορα"
+            ],
+            "forms": [],
+            "written": [
+              "αμαρτιασ",
+              "αφεσισ",
+              "δε",
+              "οπου",
+              "ουκετι",
+              "περι",
+              "προσφορα",
+              "τουτων"
             ],
             "lengthOk": true,
             "passed": true
@@ -11211,8 +11487,29 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 20,
-        "notPractised": [],
+        "practised": 18,
+        "notPractised": [
+          {
+            "volume": 2,
+            "lesson": 20,
+            "slot": 14,
+            "ordinal": 394,
+            "headword": "οἴομαι",
+            "lemma": "οἴομαι",
+            "glossZh": "以為；想；認為",
+            "pos": "動詞"
+          },
+          {
+            "volume": 2,
+            "lesson": 20,
+            "slot": 19,
+            "ordinal": 399,
+            "headword": "χάρισμα",
+            "lemma": "χάρισμα",
+            "glossZh": "恩賜；屬靈的恩賜",
+            "pos": "名詞"
+          }
+        ],
         "notAttested": []
       }
     },
@@ -11223,10 +11520,10 @@
       "items": [
         {
           "kind": "quoted",
-          "ref": "patristic-plan:7:13.2#3",
-          "refLabel": "依納爵致士每拿人書　13.2",
-          "text": "ἔρρωσθε ἐν χάριτι θεοῦ.",
-          "answerKeyRef": "patristic-plan:7:13.2#3",
+          "ref": "patristic-plan:8:8.3#3",
+          "refLabel": "依納爵致坡旅甲書　8.3",
+          "text": "ἔρρωσθε ἐν κυρίῳ.",
+          "answerKeyRef": "patristic-plan:8:8.3#3",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
           "answerKeyScope": "verse",
           "targetWords": [
@@ -11242,22 +11539,20 @@
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 3,
             "unattested": [],
             "untaught": [],
             "accentVariants": [],
             "lemmas": [
               "εν",
-              "θεοσ",
-              "ρωννυμι",
-              "χαρισ"
+              "κυριοσ",
+              "ρωννυμι"
             ],
             "forms": [],
             "written": [
               "εν",
               "ερρωσθε",
-              "θεου",
-              "χαριτι"
+              "κυριω"
             ],
             "lengthOk": true,
             "passed": true
@@ -11313,22 +11608,22 @@
         },
         {
           "kind": "quoted",
-          "ref": "patristic-plan:10:10.1#1",
-          "refLabel": "坡旅甲殉道記　10.1",
-          "text": "Ἐπιμένοντος δὲ πάλιν αὐτοῦ καὶ λέγοντος·",
-          "answerKeyRef": "patristic-plan:10:10.1#1",
+          "ref": "patristic-plan:1:1.4#1",
+          "refLabel": "十二使徒遺訓　1.4",
+          "text": "ἀπέχου τῶν σαρκικῶν καὶ σωματικῶν ἐπιθυμιῶν·",
+          "answerKeyRef": "patristic-plan:1:1.4#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
           "answerKeyScope": "verse-containing-clause",
           "targetWords": [
             {
               "volume": 2,
               "lesson": 21,
-              "slot": 5,
-              "ordinal": 405,
-              "headword": "ἐπιμένω",
-              "lemma": "ἐπιμένω",
-              "glossZh": "停留；逗留；堅持",
-              "pos": "動詞"
+              "slot": 11,
+              "ordinal": 411,
+              "headword": "σωματικός",
+              "lemma": "σωματικός",
+              "glossZh": "身體的；肉體的；物質的",
+              "pos": "形容詞"
             }
           ],
           "verification": {
@@ -11337,21 +11632,21 @@
             "untaught": [],
             "accentVariants": [],
             "lemmas": [
-              "αυτοσ",
-              "δε",
-              "επιμενω",
+              "αντεχω",
+              "επιθυμια",
               "και",
-              "λεγω",
-              "παλιν"
+              "ο",
+              "σαρκικοσ",
+              "σωματικοσ"
             ],
             "forms": [],
             "written": [
-              "αυτου",
-              "δε",
-              "επιμενοντοσ",
+              "απεχου",
+              "επιθυμιων",
               "και",
-              "λεγοντοσ",
-              "παλιν"
+              "σαρκικων",
+              "σωματικων",
+              "των"
             ],
             "lengthOk": true,
             "passed": true
@@ -11777,8 +12072,19 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 20,
-        "notPractised": [],
+        "practised": 19,
+        "notPractised": [
+          {
+            "volume": 2,
+            "lesson": 21,
+            "slot": 5,
+            "ordinal": 405,
+            "headword": "ἐπιμένω",
+            "lemma": "ἐπιμένω",
+            "glossZh": "停留；逗留；堅持",
+            "pos": "動詞"
+          }
+        ],
         "notAttested": []
       }
     },
@@ -11789,22 +12095,22 @@
       "items": [
         {
           "kind": "quoted",
-          "ref": "patristic-plan:50:488#3",
-          "refLabel": "聖誕晨禱（12 月 25 日）　488",
-          "text": "Μάγοι τῷ Δεσπότῃ δῶρα προσφέρουσιν.",
-          "answerKeyRef": "patristic-plan:50:488#3",
+          "ref": "2Cor.12.9",
+          "refLabel": "哥林多後書 12:9",
+          "text": "Ἀρκεῖ σοι ἡ χάρις μου·",
+          "answerKeyRef": "2Cor.12.9",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
-          "answerKeyScope": "verse",
+          "answerKeyScope": "verse-containing-clause",
           "targetWords": [
             {
               "volume": 2,
               "lesson": 22,
-              "slot": 7,
-              "ordinal": 427,
-              "headword": "μάγος",
-              "lemma": "μάγος",
-              "glossZh": "術士；巫士；東方博士",
-              "pos": "名詞"
+              "slot": 13,
+              "ordinal": 433,
+              "headword": "ἀρκέω",
+              "lemma": "ἀρκέω",
+              "glossZh": "足夠；滿足；守住",
+              "pos": "動詞"
             }
           ],
           "verification": {
@@ -11813,19 +12119,21 @@
             "untaught": [],
             "accentVariants": [],
             "lemmas": [
-              "δεσποτησ",
-              "δωρον",
-              "μαγοσ",
+              "αρκεω",
+              "εγω",
+              "μου",
               "ο",
-              "προσφερω"
+              "σοι",
+              "συ",
+              "χαρισ"
             ],
             "forms": [],
             "written": [
-              "δεσποτη",
-              "δωρα",
-              "μαγοι",
-              "προσφερουσιν",
-              "τω"
+              "αρκει",
+              "η",
+              "μου",
+              "σοι",
+              "χαρισ"
             ],
             "lengthOk": true,
             "passed": true
@@ -11835,21 +12143,21 @@
         },
         {
           "kind": "quoted",
-          "ref": "patristic-plan:12:7.2#1",
-          "refLabel": "致丟格那妥書　7.2",
-          "text": "τῷ τῆς σελήνης ἀκολουθοῦντα δρόμῳ·",
-          "answerKeyRef": "patristic-plan:12:7.2#1",
+          "ref": "John.9.16",
+          "refLabel": "約翰福音 9:16",
+          "text": "καὶ σχίσμα ἦν ἐν αὐτοῖς.",
+          "answerKeyRef": "John.9.16",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
           "answerKeyScope": "verse-containing-clause",
           "targetWords": [
             {
               "volume": 2,
               "lesson": 22,
-              "slot": 17,
-              "ordinal": 437,
-              "headword": "δρόμος",
-              "lemma": "δρόμος",
-              "glossZh": "跑道；路程；方式",
+              "slot": 14,
+              "ordinal": 434,
+              "headword": "σχίσμα",
+              "lemma": "σχίσμα",
+              "glossZh": "分裂；分派；裂口",
               "pos": "名詞"
             }
           ],
@@ -11859,18 +12167,19 @@
             "untaught": [],
             "accentVariants": [],
             "lemmas": [
-              "ακολουθεω",
-              "δρομοσ",
-              "ο",
-              "σεληνη"
+              "αυτοσ",
+              "ειμι",
+              "εν",
+              "και",
+              "σχισμα"
             ],
             "forms": [],
             "written": [
-              "ακολουθουντα",
-              "δρομω",
-              "σεληνησ",
-              "τησ",
-              "τω"
+              "αυτοισ",
+              "εν",
+              "ην",
+              "και",
+              "σχισμα"
             ],
             "lengthOk": true,
             "passed": true
@@ -11880,43 +12189,49 @@
         },
         {
           "kind": "quoted",
-          "ref": "patristic-plan:24:5#1",
-          "refLabel": "額我略‧納祥《神學講辭》第廿八篇 1–10：論神　5",
-          "text": "Τοῦτο μὲν οὖν ἐνταῦθα κείσθω·",
-          "answerKeyRef": "patristic-plan:24:5#1",
+          "ref": "Wis.4:7",
+          "refLabel": "所羅門智訓 4:7",
+          "text": "δίκαιος δὲ ἐὰν φθάσῃ τελευτῆσαι, ἐν ἀναπαύσει ἔσται.",
+          "answerKeyRef": "Wis.4:7",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
-          "answerKeyScope": "verse-containing-clause",
+          "answerKeyScope": "verse",
           "targetWords": [
             {
               "volume": 2,
               "lesson": 22,
-              "slot": 5,
-              "ordinal": 425,
-              "headword": "ἐνταῦθα",
-              "lemma": "ἐνταῦθα",
-              "glossZh": "在那裡；此時",
-              "pos": "副詞"
+              "slot": 4,
+              "ordinal": 424,
+              "headword": "φθάνω",
+              "lemma": "φθάνω",
+              "glossZh": "達到；趕到；超過",
+              "pos": "動詞"
             }
           ],
           "verification": {
-            "words": 5,
+            "words": 8,
             "unattested": [],
             "untaught": [],
             "accentVariants": [],
             "lemmas": [
-              "ενταυθα",
-              "κειμαι",
-              "μεν",
-              "ουν",
-              "ουτοσ"
+              "αναπαυσισ",
+              "δε",
+              "δικαιοσ",
+              "εαν",
+              "ειμι",
+              "εν",
+              "τελευταω",
+              "φθανω"
             ],
             "forms": [],
             "written": [
-              "ενταυθα",
-              "κεισθω",
-              "μεν",
-              "ουν",
-              "τουτο"
+              "αναπαυσει",
+              "δε",
+              "δικαιοσ",
+              "εαν",
+              "εν",
+              "εσται",
+              "τελευτησαι",
+              "φθαση"
             ],
             "lengthOk": true,
             "passed": true
@@ -12334,8 +12649,39 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 20,
-        "notPractised": [],
+        "practised": 17,
+        "notPractised": [
+          {
+            "volume": 2,
+            "lesson": 22,
+            "slot": 5,
+            "ordinal": 425,
+            "headword": "ἐνταῦθα",
+            "lemma": "ἐνταῦθα",
+            "glossZh": "在那裡；此時",
+            "pos": "副詞"
+          },
+          {
+            "volume": 2,
+            "lesson": 22,
+            "slot": 7,
+            "ordinal": 427,
+            "headword": "μάγος",
+            "lemma": "μάγος",
+            "glossZh": "術士；巫士；東方博士",
+            "pos": "名詞"
+          },
+          {
+            "volume": 2,
+            "lesson": 22,
+            "slot": 17,
+            "ordinal": 437,
+            "headword": "δρόμος",
+            "lemma": "δρόμος",
+            "glossZh": "跑道；路程；方式",
+            "pos": "名詞"
+          }
+        ],
         "notAttested": []
       }
     },
@@ -12344,50 +12690,6 @@
       "id": "grc-v2-lesson-23",
       "note": "",
       "items": [
-        {
-          "kind": "quoted",
-          "ref": "patristic-plan:32:36#1",
-          "refLabel": "使徒教規（85 條）　36",
-          "text": "ὠσαύτως καὶ πρεσβύτερος καὶ διάκονος.",
-          "answerKeyRef": "patristic-plan:32:36#1",
-          "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
-          "answerKeyScope": "verse-containing-clause",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 23,
-              "slot": 14,
-              "ordinal": 454,
-              "headword": "ὡσαύτως",
-              "lemma": "ὡσαύτως",
-              "glossZh": "同樣地；照樣",
-              "pos": "副詞"
-            }
-          ],
-          "verification": {
-            "words": 5,
-            "unattested": [],
-            "untaught": [],
-            "accentVariants": [],
-            "lemmas": [
-              "διακονοσ",
-              "και",
-              "πρεσβυτεροσ",
-              "ωσαυτωσ"
-            ],
-            "forms": [],
-            "written": [
-              "διακονοσ",
-              "και",
-              "πρεσβυτεροσ",
-              "ωσαυτωσ"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 1
-        },
         {
           "kind": "quoted",
           "ref": "patristic-plan:40:7#1",
@@ -12434,55 +12736,113 @@
             "passed": true
           },
           "reviewedBy": "corpus",
-          "no": 2
+          "no": 1
         },
         {
           "kind": "quoted",
-          "ref": "patristic-plan:2:14.2#1",
-          "refLabel": "依納爵致以弗所人書　14.2",
-          "text": "οὐδεὶς πίστιν ἐπαγγελλόμενος ἁμαρτάνει, οὐδὲ ἀγάπην κεκτημένος μισεῖ.",
-          "answerKeyRef": "patristic-plan:2:14.2#1",
+          "ref": "Mark.16.11",
+          "refLabel": "馬可福音 16:11",
+          "text": "κἀκεῖνοι ἀκούσαντες ὅτι ζῇ καὶ ἐθεάθη ὑπ’ αὐτῆς ἠπίστησαν.",
+          "answerKeyRef": "Mark.16.11",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
           "answerKeyScope": "verse",
           "targetWords": [
             {
               "volume": 2,
               "lesson": 23,
-              "slot": 11,
-              "ordinal": 451,
-              "headword": "ἐπαγγέλλω",
-              "lemma": "ἐπαγγέλλω",
-              "glossZh": "應許；宣佈；承諾",
+              "slot": 18,
+              "ordinal": 458,
+              "headword": "θεάομαι",
+              "lemma": "θεάομαι",
+              "glossZh": "看見；觀看；注視",
               "pos": "動詞"
             }
           ],
           "verification": {
-            "words": 8,
+            "words": 9,
             "unattested": [],
             "untaught": [],
             "accentVariants": [],
             "lemmas": [
-              "αγαπη",
-              "αμαρτανω",
-              "επαγγελλω",
-              "κταομαι",
-              "μισεω",
-              "ουδε",
-              "ουδεισ",
-              "πιστισ"
+              "ακουω",
+              "απιστεω",
+              "αυτοσ",
+              "ζαω",
+              "θεαομαι",
+              "και",
+              "κακεινοσ",
+              "οτι",
+              "υπο"
             ],
             "forms": [],
             "written": [
-              "αγαπην",
-              "αμαρτανει",
-              "επαγγελλομενοσ",
-              "κεκτημενοσ",
-              "μισει",
-              "ουδε",
-              "ουδεισ",
-              "πιστιν"
+              "ακουσαντεσ",
+              "αυτησ",
+              "εθεαθη",
+              "ζη",
+              "ηπιστησαν",
+              "και",
+              "κακεινοι",
+              "οτι",
+              "υπ’"
             ],
-            "lengthOk": true,
+            "lengthOk": false,
+            "passed": true
+          },
+          "reviewedBy": "corpus",
+          "no": 2
+        },
+        {
+          "kind": "quoted",
+          "ref": "Psa.24:21",
+          "refLabel": "詩篇 24:21",
+          "text": "ἄκακοι καὶ εὐθεῖς ἐκολλῶντό μοι, ὅτι ὑπέμεινά σε, Κύριε.",
+          "answerKeyRef": "Psa.24:21",
+          "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
+          "answerKeyScope": "verse",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 23,
+              "slot": 2,
+              "ordinal": 442,
+              "headword": "ἄκακος",
+              "lemma": "ἄκακος",
+              "glossZh": "無惡意的；純樸的",
+              "pos": "形容詞"
+            }
+          ],
+          "verification": {
+            "words": 9,
+            "unattested": [],
+            "untaught": [],
+            "accentVariants": [],
+            "lemmas": [
+              "ακακοσ",
+              "εγω",
+              "ευθυσ",
+              "και",
+              "κολλαω",
+              "κυριοσ",
+              "μοι",
+              "οτι",
+              "σε",
+              "συ",
+              "υπομενω"
+            ],
+            "forms": [],
+            "written": [
+              "ακακοι",
+              "εκολλωντο",
+              "ευθεισ",
+              "και",
+              "κυριε",
+              "μοι",
+              "οτι",
+              "σε",
+              "υπεμεινα"
+            ],
+            "lengthOk": false,
             "passed": true
           },
           "reviewedBy": "corpus",
@@ -12902,8 +13262,29 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 20,
-        "notPractised": [],
+        "practised": 18,
+        "notPractised": [
+          {
+            "volume": 2,
+            "lesson": 23,
+            "slot": 11,
+            "ordinal": 451,
+            "headword": "ἐπαγγέλλω",
+            "lemma": "ἐπαγγέλλω",
+            "glossZh": "應許；宣佈；承諾",
+            "pos": "動詞"
+          },
+          {
+            "volume": 2,
+            "lesson": 23,
+            "slot": 14,
+            "ordinal": 454,
+            "headword": "ὡσαύτως",
+            "lemma": "ὡσαύτως",
+            "glossZh": "同樣地；照樣",
+            "pos": "副詞"
+          }
+        ],
         "notAttested": []
       }
     },
@@ -12958,46 +13339,50 @@
         },
         {
           "kind": "quoted",
-          "ref": "patristic-plan:11:14.1#2",
-          "refLabel": "革利免二書　14.1",
-          "text": "Ἐγενήθη ὁ οἶκός μου σπήλαιον λῃστῶν.",
-          "answerKeyRef": "patristic-plan:11:14.1#2",
+          "ref": "patristic-plan:1:1.5#1",
+          "refLabel": "十二使徒遺訓　1.5",
+          "text": "παντὶ τῷ αἰτοῦντί σε δίδου καὶ μὴ ἀπαίτει·",
+          "answerKeyRef": "patristic-plan:1:1.5#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
           "answerKeyScope": "verse-containing-clause",
           "targetWords": [
             {
               "volume": 2,
               "lesson": 24,
-              "slot": 1,
-              "ordinal": 461,
-              "headword": "λῃστής",
-              "lemma": "λῃστής",
-              "glossZh": "盜賊；強盜",
-              "pos": "名詞"
+              "slot": 12,
+              "ordinal": 472,
+              "headword": "ἀπαιτέω",
+              "lemma": "ἀπαιτέω",
+              "glossZh": "要求回還；索取",
+              "pos": "動詞"
             }
           ],
           "verification": {
-            "words": 6,
+            "words": 8,
             "unattested": [],
             "untaught": [],
             "accentVariants": [],
             "lemmas": [
-              "γινομαι",
-              "εγω",
-              "ληστησ",
-              "μου",
+              "αιτεω",
+              "απαιτεω",
+              "διδωμι",
+              "και",
+              "μη",
               "ο",
-              "οικοσ",
-              "σπηλαιον"
+              "πασ",
+              "σε",
+              "συ"
             ],
             "forms": [],
             "written": [
-              "εγενηθη",
-              "ληστων",
-              "μου",
-              "ο",
-              "οικοσ",
-              "σπηλαιον"
+              "αιτουντι",
+              "απαιτει",
+              "διδου",
+              "και",
+              "μη",
+              "παντι",
+              "σε",
+              "τω"
             ],
             "lengthOk": true,
             "passed": true
@@ -13007,46 +13392,52 @@
         },
         {
           "kind": "quoted",
-          "ref": "patristic-plan:36:16#7",
-          "refLabel": "特魯洛（五六）大公會議教規 1–20　16",
-          "text": "ἀλλὰ τῶν πρεσβυτέρων ἐστὶν ἡ οἰκονομία;",
-          "answerKeyRef": "patristic-plan:36:16#7",
+          "ref": "Acts.15.15",
+          "refLabel": "使徒行傳 15:15",
+          "text": "καὶ τούτῳ συμφωνοῦσιν οἱ λόγοι τῶν προφητῶν, καθὼς γέγραπται·",
+          "answerKeyRef": "Acts.15.15",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
-          "answerKeyScope": "verse-containing-clause",
+          "answerKeyScope": "verse",
           "targetWords": [
             {
               "volume": 2,
               "lesson": 24,
-              "slot": 8,
-              "ordinal": 468,
-              "headword": "οἰκονομία",
-              "lemma": "οἰκονομία",
-              "glossZh": "家務；經營；教會體制；救恩計畫",
-              "pos": "名詞"
+              "slot": 6,
+              "ordinal": 466,
+              "headword": "συμφωνέω",
+              "lemma": "συμφωνέω",
+              "glossZh": "一致；協議；和諧",
+              "pos": "動詞"
             }
           ],
           "verification": {
-            "words": 6,
+            "words": 9,
             "unattested": [],
             "untaught": [],
             "accentVariants": [],
             "lemmas": [
-              "αλλα",
-              "ειμι",
+              "γραφω",
+              "καθωσ",
+              "και",
+              "λογοσ",
               "ο",
-              "οικονομια",
-              "πρεσβυτεροσ"
+              "ουτοσ",
+              "προφητησ",
+              "συμφωνεω"
             ],
             "forms": [],
             "written": [
-              "αλλα",
-              "εστιν",
-              "η",
-              "οικονομια",
-              "πρεσβυτερων",
+              "γεγραπται",
+              "καθωσ",
+              "και",
+              "λογοι",
+              "οι",
+              "προφητων",
+              "συμφωνουσιν",
+              "τουτω",
               "των"
             ],
-            "lengthOk": true,
+            "lengthOk": false,
             "passed": true
           },
           "reviewedBy": "corpus",
@@ -13462,8 +13853,29 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 20,
-        "notPractised": [],
+        "practised": 18,
+        "notPractised": [
+          {
+            "volume": 2,
+            "lesson": 24,
+            "slot": 1,
+            "ordinal": 461,
+            "headword": "λῃστής",
+            "lemma": "λῃστής",
+            "glossZh": "盜賊；強盜",
+            "pos": "名詞"
+          },
+          {
+            "volume": 2,
+            "lesson": 24,
+            "slot": 8,
+            "ordinal": 468,
+            "headword": "οἰκονομία",
+            "lemma": "οἰκονομία",
+            "glossZh": "家務；經營；教會體制；救恩計畫",
+            "pos": "名詞"
+          }
+        ],
         "notAttested": []
       }
     },
@@ -13516,22 +13928,22 @@
         },
         {
           "kind": "quoted",
-          "ref": "patristic-plan:48:234#1",
-          "refLabel": "聖母讚頌詞（阿卡提斯托斯頌）　234",
-          "text": "χαῖρε, δι' ἧς ἠνοίχθη παράδεισος.",
-          "answerKeyRef": "patristic-plan:48:234#1",
+          "ref": "4Ma.8:2",
+          "refLabel": "馬加比四書 8:2",
+          "text": "εἰ δὲ ἀντιλέγοιεν, πικρότερον βασανίζειν.",
+          "answerKeyRef": "4Ma.8:2",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
-          "answerKeyScope": "verse",
+          "answerKeyScope": "verse-containing-clause",
           "targetWords": [
             {
               "volume": 2,
               "lesson": 25,
-              "slot": 16,
-              "ordinal": 496,
-              "headword": "παράδεισος",
-              "lemma": "παράδεισος",
-              "glossZh": "樂園；天堂；伊甸園",
-              "pos": "名詞"
+              "slot": 3,
+              "ordinal": 483,
+              "headword": "πικρός",
+              "lemma": "πικρός",
+              "glossZh": "苦的；痛苦的；激烈的",
+              "pos": "形容詞"
             }
           ],
           "verification": {
@@ -13540,19 +13952,19 @@
             "untaught": [],
             "accentVariants": [],
             "lemmas": [
-              "ανοιγω",
-              "δια",
-              "οσ",
-              "παραδεισοσ",
-              "χαιρω"
+              "αντιλεγω",
+              "βασανιζω",
+              "δε",
+              "ει",
+              "πικροσ"
             ],
             "forms": [],
             "written": [
-              "δι’",
-              "ηνοιχθη",
-              "ησ",
-              "παραδεισοσ",
-              "χαιρε"
+              "αντιλεγοιεν",
+              "βασανιζειν",
+              "δε",
+              "ει",
+              "πικροτερον"
             ],
             "lengthOk": true,
             "passed": true
@@ -13562,45 +13974,43 @@
         },
         {
           "kind": "quoted",
-          "ref": "patristic-plan:24:8#4",
-          "refLabel": "額我略‧納祥《神學講辭》第廿八篇 1–10：論神　8",
-          "text": "οὐδὲν γὰρ νῦν περὶ τούτου διοίσομαι.",
-          "answerKeyRef": "patristic-plan:24:8#4",
+          "ref": "Job.15:30",
+          "refLabel": "約伯記 15:30",
+          "text": "οὐδὲ μὴ ἐκφύγῃ τὸ σκότος·",
+          "answerKeyRef": "Job.15:30",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
           "answerKeyScope": "verse-containing-clause",
           "targetWords": [
             {
               "volume": 2,
               "lesson": 25,
-              "slot": 11,
-              "ordinal": 491,
-              "headword": "διαφέρω",
-              "lemma": "διαφέρω",
-              "glossZh": "運載；不同；超越",
+              "slot": 2,
+              "ordinal": 482,
+              "headword": "ἐκφεύγω",
+              "lemma": "ἐκφεύγω",
+              "glossZh": "逃脫；逃避",
               "pos": "動詞"
             }
           ],
           "verification": {
-            "words": 6,
+            "words": 5,
             "unattested": [],
             "untaught": [],
             "accentVariants": [],
             "lemmas": [
-              "γαρ",
-              "διαφερω",
-              "νυν",
-              "ουδεισ",
-              "ουτοσ",
-              "περι"
+              "εκφευγω",
+              "μη",
+              "ο",
+              "ουδε",
+              "σκοτοσ"
             ],
             "forms": [],
             "written": [
-              "γαρ",
-              "διοισομαι",
-              "νυν",
-              "ουδεν",
-              "περι",
-              "τουτου"
+              "εκφυγη",
+              "μη",
+              "ουδε",
+              "σκοτοσ",
+              "το"
             ],
             "lengthOk": true,
             "passed": true
@@ -14020,8 +14430,29 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
-        "notPractised": [],
+        "practised": 17,
+        "notPractised": [
+          {
+            "volume": 2,
+            "lesson": 25,
+            "slot": 11,
+            "ordinal": 491,
+            "headword": "διαφέρω",
+            "lemma": "διαφέρω",
+            "glossZh": "運載；不同；超越",
+            "pos": "動詞"
+          },
+          {
+            "volume": 2,
+            "lesson": 25,
+            "slot": 16,
+            "ordinal": 496,
+            "headword": "παράδεισος",
+            "lemma": "παράδεισος",
+            "glossZh": "樂園；天堂；伊甸園",
+            "pos": "名詞"
+          }
+        ],
         "notAttested": [
           {
             "volume": 2,
@@ -14043,12 +14474,12 @@
       "items": [
         {
           "kind": "quoted",
-          "ref": "patristic-plan:24:10#2",
-          "refLabel": "額我略‧納祥《神學講辭》第廿八篇 1–10：論神　10",
-          "text": "πότερον οὐδαμοῦ τοῦτο, ἢ ἔστιν ὅπου;",
-          "answerKeyRef": "patristic-plan:24:10#2",
+          "ref": "patristic-plan:32:27#1",
+          "refLabel": "使徒教規（85 條）　27",
+          "text": "οὐδαμοῦ γὰρ ὁ Κύριος τοῦτο ἡμᾶς ἐδίδαξε·",
+          "answerKeyRef": "patristic-plan:32:27#1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
-          "answerKeyScope": "verse",
+          "answerKeyScope": "verse-containing-clause",
           "targetWords": [
             {
               "volume": 2,
@@ -14062,25 +14493,28 @@
             }
           ],
           "verification": {
-            "words": 6,
+            "words": 7,
             "unattested": [],
             "untaught": [],
             "accentVariants": [],
             "lemmas": [
-              "ειμι",
-              "η",
-              "οπου",
+              "γαρ",
+              "διδασκω",
+              "εγω",
+              "ημασ",
+              "κυριοσ",
+              "ο",
               "ουδαμου",
-              "ουτοσ",
-              "ποτεροσ"
+              "ουτοσ"
             ],
             "forms": [],
             "written": [
-              "εστιν",
-              "η",
-              "οπου",
+              "γαρ",
+              "εδιδαξε",
+              "ημασ",
+              "κυριοσ",
+              "ο",
               "ουδαμου",
-              "ποτερον",
               "τουτο"
             ],
             "lengthOk": true,
@@ -14088,56 +14522,6 @@
           },
           "reviewedBy": "corpus",
           "no": 1
-        },
-        {
-          "kind": "quoted",
-          "ref": "patristic-plan:1:5.1#1",
-          "refLabel": "十二使徒遺訓　5.1",
-          "text": "πρῶτον πάντων πονηρά ἐστι καὶ κατάρας μεστή·",
-          "answerKeyRef": "patristic-plan:1:5.1#1",
-          "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
-          "answerKeyScope": "verse-containing-clause",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 26,
-              "slot": 12,
-              "ordinal": 512,
-              "headword": "μεστός",
-              "lemma": "μεστός",
-              "glossZh": "充滿的；盈滿的",
-              "pos": "形容詞"
-            }
-          ],
-          "verification": {
-            "words": 7,
-            "unattested": [],
-            "untaught": [],
-            "accentVariants": [],
-            "lemmas": [
-              "ειμι",
-              "και",
-              "καταρα",
-              "μεστοσ",
-              "πασ",
-              "πονηροσ",
-              "πρωτοσ"
-            ],
-            "forms": [],
-            "written": [
-              "εστι",
-              "και",
-              "καταρασ",
-              "μεστη",
-              "παντων",
-              "πονηρα",
-              "πρωτον"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 2
         },
         {
           "kind": "quoted",
@@ -14184,6 +14568,60 @@
               "φθονον"
             ],
             "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "corpus",
+          "no": 2
+        },
+        {
+          "kind": "quoted",
+          "ref": "4Ma.17:11",
+          "refLabel": "馬加比四書 17:11",
+          "text": "ἀληθῶς γὰρ ἦν ἀγὼν θεῖος ὁ δι᾽ αὐτῶν γεγενημένος.",
+          "answerKeyRef": "4Ma.17:11",
+          "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
+          "answerKeyScope": "verse",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 26,
+              "slot": 14,
+              "ordinal": 514,
+              "headword": "ἀγών",
+              "lemma": "ἀγών",
+              "glossZh": "競爭；爭戰；苦難",
+              "pos": "名詞"
+            }
+          ],
+          "verification": {
+            "words": 9,
+            "unattested": [],
+            "untaught": [],
+            "accentVariants": [],
+            "lemmas": [
+              "αγων",
+              "αληθωσ",
+              "αυτοσ",
+              "γαρ",
+              "γινομαι",
+              "δια",
+              "ειμι",
+              "θειοσ",
+              "ο"
+            ],
+            "forms": [],
+            "written": [
+              "αγων",
+              "αληθωσ",
+              "αυτων",
+              "γαρ",
+              "γεγενημενοσ",
+              "δι’",
+              "ην",
+              "θειοσ",
+              "ο"
+            ],
+            "lengthOk": false,
             "passed": true
           },
           "reviewedBy": "corpus",
@@ -14589,8 +15027,19 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 20,
-        "notPractised": [],
+        "practised": 19,
+        "notPractised": [
+          {
+            "volume": 2,
+            "lesson": 26,
+            "slot": 12,
+            "ordinal": 512,
+            "headword": "μεστός",
+            "lemma": "μεστός",
+            "glossZh": "充滿的；盈滿的",
+            "pos": "形容詞"
+          }
+        ],
         "notAttested": []
       }
     },
@@ -15231,6 +15680,58 @@
         },
         {
           "kind": "quoted",
+          "ref": "patristic-plan:42:6#1",
+          "refLabel": "撒狄迦會議教規（343）　6",
+          "text": "ἡγοῦμαι καλῶς ἔχειν καὶ τοῦτον ἐκδέχεσθαι, ἵνα παραγένηται.",
+          "answerKeyRef": "patristic-plan:42:6#1",
+          "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
+          "answerKeyScope": "verse-containing-clause",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 28,
+              "slot": 17,
+              "ordinal": 557,
+              "headword": "ἐκδέχομαι",
+              "lemma": "ἐκδέχομαι",
+              "glossZh": "期待；等候",
+              "pos": "動詞"
+            }
+          ],
+          "verification": {
+            "words": 8,
+            "unattested": [],
+            "untaught": [],
+            "accentVariants": [],
+            "lemmas": [
+              "εκδεχομαι",
+              "εχω",
+              "ηγεομαι",
+              "ινα",
+              "και",
+              "καλωσ",
+              "ουτοσ",
+              "παραγινομαι"
+            ],
+            "forms": [],
+            "written": [
+              "εκδεχεσθαι",
+              "εχειν",
+              "ηγουμαι",
+              "ινα",
+              "και",
+              "καλωσ",
+              "παραγενηται",
+              "τουτον"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "corpus",
+          "no": 2
+        },
+        {
+          "kind": "quoted",
           "ref": "1Cor.6.17",
           "refLabel": "哥林多前書 6:17",
           "text": "ὁ δὲ κολλώμενος τῷ κυρίῳ ἓν πνεῦμά ἐστιν.",
@@ -15273,59 +15774,6 @@
               "ο",
               "πνευμα",
               "τω"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 2
-        },
-        {
-          "kind": "quoted",
-          "ref": "Pss.5:12",
-          "refLabel": "所羅門詩篇 5:12",
-          "text": "καὶ ἐὰν πεινάσωσιν, πρὸς σὲ ἀροῦσιν πρόσωπον αὐτῶν.",
-          "answerKeyRef": "Pss.5:12",
-          "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
-          "answerKeyScope": "verse",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 28,
-              "slot": 13,
-              "ordinal": 553,
-              "headword": "πεινάω",
-              "lemma": "πεινάω",
-              "glossZh": "飢餓；缺乏",
-              "pos": "動詞"
-            }
-          ],
-          "verification": {
-            "words": 8,
-            "unattested": [],
-            "untaught": [],
-            "accentVariants": [],
-            "lemmas": [
-              "αιρω",
-              "αυτοσ",
-              "εαν",
-              "και",
-              "πειναω",
-              "προσ",
-              "προσωπον",
-              "σε",
-              "συ"
-            ],
-            "forms": [],
-            "written": [
-              "αρουσιν",
-              "αυτων",
-              "εαν",
-              "και",
-              "πεινασωσιν",
-              "προσ",
-              "προσωπον",
-              "σε"
             ],
             "lengthOk": true,
             "passed": true
@@ -15727,8 +16175,19 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 20,
-        "notPractised": [],
+        "practised": 19,
+        "notPractised": [
+          {
+            "volume": 2,
+            "lesson": 28,
+            "slot": 13,
+            "ordinal": 553,
+            "headword": "πεινάω",
+            "lemma": "πεινάω",
+            "glossZh": "飢餓；缺乏",
+            "pos": "動詞"
+          }
+        ],
         "notAttested": []
       }
     },
@@ -15789,56 +16248,6 @@
         },
         {
           "kind": "quoted",
-          "ref": "patristic-plan:5:9.2#2",
-          "refLabel": "依納爵致費拉德非人書　9.2",
-          "text": "οἱ γὰρ ἀγαπητοὶ προφῆται κατήγγειλαν εἰς αὐτόν·",
-          "answerKeyRef": "patristic-plan:5:9.2#2",
-          "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
-          "answerKeyScope": "verse-containing-clause",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 29,
-              "slot": 6,
-              "ordinal": 566,
-              "headword": "καταγγέλλω",
-              "lemma": "καταγγέλλω",
-              "glossZh": "公開宣揚；傳講",
-              "pos": "動詞"
-            }
-          ],
-          "verification": {
-            "words": 7,
-            "unattested": [],
-            "untaught": [],
-            "accentVariants": [],
-            "lemmas": [
-              "αγαπητοσ",
-              "αυτοσ",
-              "γαρ",
-              "εισ",
-              "καταγγελλω",
-              "ο",
-              "προφητησ"
-            ],
-            "forms": [],
-            "written": [
-              "αγαπητοι",
-              "αυτον",
-              "γαρ",
-              "εισ",
-              "κατηγγειλαν",
-              "οι",
-              "προφηται"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 2
-        },
-        {
-          "kind": "quoted",
           "ref": "Lam.3:2",
           "refLabel": "耶利米哀歌 3:2",
           "text": "παρέλαβέν με καὶ ἀπήγαγεν εἰς σκότος καὶ οὐ φῶς.",
@@ -15883,6 +16292,62 @@
               "παρελαβεν",
               "σκοτοσ",
               "φωσ"
+            ],
+            "lengthOk": false,
+            "passed": true
+          },
+          "reviewedBy": "corpus",
+          "no": 2
+        },
+        {
+          "kind": "quoted",
+          "ref": "Job.21:25",
+          "refLabel": "約伯記 21:25",
+          "text": "ὁ δὲ τελευτᾷ ὑπὸ πικρίας ψυχῆς, οὐ φαγὼν οὐδὲν ἀγαθόν·",
+          "answerKeyRef": "Job.21:25",
+          "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
+          "answerKeyScope": "verse",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 29,
+              "slot": 12,
+              "ordinal": 572,
+              "headword": "πικρία",
+              "lemma": "πικρία",
+              "glossZh": "苦毒；苦澀",
+              "pos": "名詞"
+            }
+          ],
+          "verification": {
+            "words": 10,
+            "unattested": [],
+            "untaught": [],
+            "accentVariants": [],
+            "lemmas": [
+              "αγαθοσ",
+              "δε",
+              "εσθιω",
+              "ο",
+              "ου",
+              "ουδεισ",
+              "πικρια",
+              "τελευταω",
+              "υπο",
+              "ψυχη"
+            ],
+            "forms": [],
+            "written": [
+              "αγαθον",
+              "δε",
+              "ο",
+              "ου",
+              "ουδεν",
+              "πικριασ",
+              "τελευτα",
+              "υπο",
+              "φαγων",
+              "ψυχησ"
             ],
             "lengthOk": false,
             "passed": true
@@ -16298,8 +16763,19 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 20,
-        "notPractised": [],
+        "practised": 19,
+        "notPractised": [
+          {
+            "volume": 2,
+            "lesson": 29,
+            "slot": 6,
+            "ordinal": 566,
+            "headword": "καταγγέλλω",
+            "lemma": "καταγγέλλω",
+            "glossZh": "公開宣揚；傳講",
+            "pos": "動詞"
+          }
+        ],
         "notAttested": []
       }
     },
@@ -16308,95 +16784,6 @@
       "id": "grc-v2-lesson-30",
       "note": "本讀本語料中無可用字形，因而無法入題：μείρομαι",
       "items": [
-        {
-          "kind": "quoted",
-          "ref": "patristic-plan:16:9.3.6#1",
-          "refLabel": "黑馬牧人書：誡命一至四　9.3.6",
-          "text": "δυσκόλως γὰρ ζήσεται.",
-          "answerKeyRef": "patristic-plan:16:9.3.6#1",
-          "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
-          "answerKeyScope": "verse-containing-clause",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 30,
-              "slot": 8,
-              "ordinal": 588,
-              "headword": "δυσκόλως",
-              "lemma": "δυσκόλως",
-              "glossZh": "困難地；不容易地",
-              "pos": "副詞"
-            }
-          ],
-          "verification": {
-            "words": 3,
-            "unattested": [],
-            "untaught": [],
-            "accentVariants": [],
-            "lemmas": [
-              "γαρ",
-              "δυσκολωσ",
-              "ζαω"
-            ],
-            "forms": [],
-            "written": [
-              "γαρ",
-              "δυσκολωσ",
-              "ζησεται"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 1
-        },
-        {
-          "kind": "quoted",
-          "ref": "patristic-plan:10:10.2#1",
-          "refLabel": "坡旅甲殉道記　10.2",
-          "text": "ἔφη ὁ ἀνθύπατος· Πεῖσον τὸν δῆμον.",
-          "answerKeyRef": "patristic-plan:10:10.2#1",
-          "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
-          "answerKeyScope": "verse",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 30,
-              "slot": 13,
-              "ordinal": 593,
-              "headword": "ἀνθύπατος",
-              "lemma": "ἀνθύπατος",
-              "glossZh": "執政官；總督",
-              "pos": "名詞"
-            }
-          ],
-          "verification": {
-            "words": 6,
-            "unattested": [],
-            "untaught": [],
-            "accentVariants": [],
-            "lemmas": [
-              "ανθυπατοσ",
-              "δημοσ",
-              "ο",
-              "πειθω",
-              "φημι"
-            ],
-            "forms": [],
-            "written": [
-              "ανθυπατοσ",
-              "δημον",
-              "εφη",
-              "ο",
-              "πεισον",
-              "τον"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 2
-        },
         {
           "kind": "quoted",
           "ref": "Heb.13.9",
@@ -16438,6 +16825,104 @@
               "ξεναισ",
               "παραφερεσθε",
               "ποικιλαισ"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "corpus",
+          "no": 1
+        },
+        {
+          "kind": "quoted",
+          "ref": "Ecc.4:4",
+          "refLabel": "傳道書 4:4",
+          "text": "καί γε τοῦτο ματαιότης καὶ προαίρεσις πνεύματος.",
+          "answerKeyRef": "Ecc.4:4",
+          "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
+          "answerKeyScope": "verse-containing-clause",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 30,
+              "slot": 20,
+              "ordinal": 600,
+              "headword": "προαίρεσις",
+              "lemma": "προαίρεσις",
+              "glossZh": "選擇；意志；決定",
+              "pos": "名詞"
+            }
+          ],
+          "verification": {
+            "words": 7,
+            "unattested": [],
+            "untaught": [],
+            "accentVariants": [],
+            "lemmas": [
+              "γε",
+              "και",
+              "ματαιοτησ",
+              "ουτοσ",
+              "πνευμα",
+              "προαιρεσισ"
+            ],
+            "forms": [],
+            "written": [
+              "γε",
+              "και",
+              "ματαιοτησ",
+              "πνευματοσ",
+              "προαιρεσισ",
+              "τουτο"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "corpus",
+          "no": 2
+        },
+        {
+          "kind": "quoted",
+          "ref": "Gen.4:9",
+          "refLabel": "創世記 4:9",
+          "text": "μὴ φύλαξ τοῦ ἀδελφοῦ μού εἰμι ἐγώ;",
+          "answerKeyRef": "Gen.4:9",
+          "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
+          "answerKeyScope": "verse-containing-clause",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 30,
+              "slot": 14,
+              "ordinal": 594,
+              "headword": "φύλαξ",
+              "lemma": "φύλαξ",
+              "glossZh": "守衛；看守者",
+              "pos": "名詞"
+            }
+          ],
+          "verification": {
+            "words": 7,
+            "unattested": [],
+            "untaught": [],
+            "accentVariants": [],
+            "lemmas": [
+              "αδελφοσ",
+              "εγω",
+              "ειμι",
+              "μη",
+              "μου",
+              "ο",
+              "φυλαξ"
+            ],
+            "forms": [],
+            "written": [
+              "αδελφου",
+              "εγω",
+              "ειμι",
+              "μη",
+              "μου",
+              "του",
+              "φυλαξ"
             ],
             "lengthOk": true,
             "passed": true
@@ -16833,8 +17318,29 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
-        "notPractised": [],
+        "practised": 17,
+        "notPractised": [
+          {
+            "volume": 2,
+            "lesson": 30,
+            "slot": 8,
+            "ordinal": 588,
+            "headword": "δυσκόλως",
+            "lemma": "δυσκόλως",
+            "glossZh": "困難地；不容易地",
+            "pos": "副詞"
+          },
+          {
+            "volume": 2,
+            "lesson": 30,
+            "slot": 13,
+            "ordinal": 593,
+            "headword": "ἀνθύπατος",
+            "lemma": "ἀνθύπατος",
+            "glossZh": "執政官；總督",
+            "pos": "名詞"
+          }
+        ],
         "notAttested": [
           {
             "volume": 2,
@@ -16856,39 +17362,44 @@
       "items": [
         {
           "kind": "quoted",
-          "ref": "patristic-plan:23:7#5",
-          "refLabel": "額我略‧納祥《神學講辭》第廿七篇：論神學該由誰、何時、如何講　7",
-          "text": "οὐ φιλοξενίαν ἐπαινοῦμεν ;",
-          "answerKeyRef": "patristic-plan:23:7#5",
+          "ref": "Jer.5:7",
+          "refLabel": "耶利米書 5:7",
+          "text": "ποίᾳ τούτων ἵλεως γένωμαί σοι;",
+          "answerKeyRef": "Jer.5:7",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
-          "answerKeyScope": "verse",
+          "answerKeyScope": "verse-containing-clause",
           "targetWords": [
             {
               "volume": 2,
               "lesson": 31,
-              "slot": 6,
-              "ordinal": 606,
-              "headword": "φιλοξενία",
-              "lemma": "φιλοξενία",
-              "glossZh": "好客；款待",
-              "pos": "名詞"
+              "slot": 10,
+              "ordinal": 610,
+              "headword": "ἵλεως",
+              "lemma": "ἵλεως",
+              "glossZh": "寬恕的；樂意幫助的",
+              "pos": "形容詞"
             }
           ],
           "verification": {
-            "words": 3,
+            "words": 5,
             "unattested": [],
             "untaught": [],
             "accentVariants": [],
             "lemmas": [
-              "επαινεω",
-              "ου",
-              "φιλοξενια"
+              "γινομαι",
+              "ιλεωσ",
+              "ουτοσ",
+              "ποιοσ",
+              "σοι",
+              "συ"
             ],
             "forms": [],
             "written": [
-              "επαινουμεν",
-              "ου",
-              "φιλοξενιαν"
+              "γενωμαι",
+              "ιλεωσ",
+              "ποια",
+              "σοι",
+              "τουτων"
             ],
             "lengthOk": true,
             "passed": true
@@ -16898,58 +17409,10 @@
         },
         {
           "kind": "quoted",
-          "ref": "patristic-plan:31:109#1",
-          "refLabel": "第二次尼西亞大公會議教規（787）　109",
-          "text": "Τινῶν ἀνθρώπων αἱ ἁμαρτίαι πρόδηλοί εἰσι·",
-          "answerKeyRef": "patristic-plan:31:109#1",
-          "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
-          "answerKeyScope": "verse-containing-clause",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 31,
-              "slot": 20,
-              "ordinal": 620,
-              "headword": "πρόδηλος",
-              "lemma": "πρόδηλος",
-              "glossZh": "明顯的；顯然的",
-              "pos": "形容詞"
-            }
-          ],
-          "verification": {
-            "words": 6,
-            "unattested": [],
-            "untaught": [],
-            "accentVariants": [],
-            "lemmas": [
-              "αμαρτια",
-              "ανθρωποσ",
-              "ειμι",
-              "ο",
-              "προδηλοσ",
-              "τισ"
-            ],
-            "forms": [],
-            "written": [
-              "αι",
-              "αμαρτιαι",
-              "ανθρωπων",
-              "εισι",
-              "προδηλοι",
-              "τινων"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 2
-        },
-        {
-          "kind": "quoted",
-          "ref": "patristic-plan:1:11.11#1",
-          "refLabel": "十二使徒遺訓　11.11",
-          "text": "ὡσαύτως γὰρ ἐποίησαν καὶ οἱ ἀρχαῖοι προφῆται.",
-          "answerKeyRef": "patristic-plan:1:11.11#1",
+          "ref": "Matt.5.33",
+          "refLabel": "馬太福音 5:33",
+          "text": "Πάλιν ἠκούσατε ὅτι ἐρρέθη τοῖς ἀρχαίοις·",
+          "answerKeyRef": "Matt.5.33",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
           "answerKeyScope": "verse-containing-clause",
           "targetWords": [
@@ -16965,28 +17428,75 @@
             }
           ],
           "verification": {
+            "words": 6,
+            "unattested": [],
+            "untaught": [],
+            "accentVariants": [],
+            "lemmas": [
+              "ακουω",
+              "αρχαιοσ",
+              "λεγω",
+              "ο",
+              "οτι",
+              "παλιν"
+            ],
+            "forms": [],
+            "written": [
+              "αρχαιοισ",
+              "ερρεθη",
+              "ηκουσατε",
+              "οτι",
+              "παλιν",
+              "τοισ"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "corpus",
+          "no": 2
+        },
+        {
+          "kind": "quoted",
+          "ref": "2Cor.7.10",
+          "refLabel": "哥林多後書 7:10",
+          "text": "ἡ δὲ τοῦ κόσμου λύπη θάνατον κατεργάζεται.",
+          "answerKeyRef": "2Cor.7.10",
+          "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
+          "answerKeyScope": "verse-containing-clause",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 31,
+              "slot": 13,
+              "ordinal": 613,
+              "headword": "κατεργάζομαι",
+              "lemma": "κατεργάζομαι",
+              "glossZh": "作成；實行；完成",
+              "pos": "動詞"
+            }
+          ],
+          "verification": {
             "words": 7,
             "unattested": [],
             "untaught": [],
             "accentVariants": [],
             "lemmas": [
-              "αρχαιοσ",
-              "γαρ",
-              "και",
-              "ο",
-              "ποιεω",
-              "προφητησ",
-              "ωσαυτωσ"
+              "δε",
+              "θανατοσ",
+              "κατεργαζομαι",
+              "κοσμοσ",
+              "λυπη",
+              "ο"
             ],
             "forms": [],
             "written": [
-              "αρχαιοι",
-              "γαρ",
-              "εποιησαν",
-              "και",
-              "οι",
-              "προφηται",
-              "ωσαυτωσ"
+              "δε",
+              "η",
+              "θανατον",
+              "κατεργαζεται",
+              "κοσμου",
+              "λυπη",
+              "του"
             ],
             "lengthOk": true,
             "passed": true
@@ -17394,8 +17904,29 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 20,
-        "notPractised": [],
+        "practised": 18,
+        "notPractised": [
+          {
+            "volume": 2,
+            "lesson": 31,
+            "slot": 6,
+            "ordinal": 606,
+            "headword": "φιλοξενία",
+            "lemma": "φιλοξενία",
+            "glossZh": "好客；款待",
+            "pos": "名詞"
+          },
+          {
+            "volume": 2,
+            "lesson": 31,
+            "slot": 20,
+            "ordinal": 620,
+            "headword": "πρόδηλος",
+            "lemma": "πρόδηλος",
+            "glossZh": "明顯的；顯然的",
+            "pos": "形容詞"
+          }
+        ],
         "notAttested": []
       }
     },
@@ -18528,41 +19059,45 @@
       "items": [
         {
           "kind": "quoted",
-          "ref": "patristic-plan:24:4#2",
-          "refLabel": "額我略‧納祥《神學講辭》第廿八篇 1–10：論神　4",
-          "text": "θεὸν νοῆσαι μὲν χαλεπόν·",
-          "answerKeyRef": "patristic-plan:24:4#2",
+          "ref": "Acts.18.16",
+          "refLabel": "使徒行傳 18:16",
+          "text": "καὶ ἀπήλασεν αὐτοὺς ἀπὸ τοῦ βήματος.",
+          "answerKeyRef": "Acts.18.16",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
-          "answerKeyScope": "verse-containing-clause",
+          "answerKeyScope": "verse",
           "targetWords": [
             {
               "volume": 2,
               "lesson": 34,
-              "slot": 8,
-              "ordinal": 668,
-              "headword": "χαλεπός",
-              "lemma": "χαλεπός",
-              "glossZh": "困難的；艱辛的",
-              "pos": "形容詞"
+              "slot": 9,
+              "ordinal": 669,
+              "headword": "βῆμα",
+              "lemma": "βῆμα",
+              "glossZh": "腳步；講臺、審判臺",
+              "pos": "名詞"
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 6,
             "unattested": [],
             "untaught": [],
             "accentVariants": [],
             "lemmas": [
-              "θεοσ",
-              "μεν",
-              "νοεω",
-              "χαλεποσ"
+              "απελαυνω",
+              "απο",
+              "αυτοσ",
+              "βημα",
+              "και",
+              "ο"
             ],
             "forms": [],
             "written": [
-              "θεον",
-              "μεν",
-              "νοησαι",
-              "χαλεπον"
+              "απηλασεν",
+              "απο",
+              "αυτουσ",
+              "βηματοσ",
+              "και",
+              "του"
             ],
             "lengthOk": true,
             "passed": true
@@ -19073,8 +19608,19 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 20,
-        "notPractised": [],
+        "practised": 19,
+        "notPractised": [
+          {
+            "volume": 2,
+            "lesson": 34,
+            "slot": 8,
+            "ordinal": 668,
+            "headword": "χαλεπός",
+            "lemma": "χαλεπός",
+            "glossZh": "困難的；艱辛的",
+            "pos": "形容詞"
+          }
+        ],
         "notAttested": []
       }
     },
@@ -20275,6 +20821,54 @@
         },
         {
           "kind": "quoted",
+          "ref": "Psa.36:7",
+          "refLabel": "詩篇 36:7",
+          "text": "ὑποτάγηθι τῷ κυρίῳ καὶ ἱκέτευσον αὐτόν·",
+          "answerKeyRef": "Psa.36:7",
+          "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
+          "answerKeyScope": "verse-containing-clause",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 37,
+              "slot": 9,
+              "ordinal": 729,
+              "headword": "ἱκετεύω",
+              "lemma": "ἱκετεύω",
+              "glossZh": "哀求；懇求",
+              "pos": "動詞"
+            }
+          ],
+          "verification": {
+            "words": 6,
+            "unattested": [],
+            "untaught": [],
+            "accentVariants": [],
+            "lemmas": [
+              "αυτοσ",
+              "ικετευω",
+              "και",
+              "κυριοσ",
+              "ο",
+              "υποτασσω"
+            ],
+            "forms": [],
+            "written": [
+              "αυτον",
+              "ικετευσον",
+              "και",
+              "κυριω",
+              "τω",
+              "υποταγηθι"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "corpus",
+          "no": 2
+        },
+        {
+          "kind": "quoted",
           "ref": "Psa.117:7",
           "refLabel": "詩篇 117:7",
           "text": "Κύριος ἐμοὶ βοηθός, κἀγὼ ἐπόψομαι τοὺς ἐχθρούς μου.",
@@ -20322,60 +20916,6 @@
               "τουσ"
             ],
             "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 2
-        },
-        {
-          "kind": "quoted",
-          "ref": "patristic-plan:24:8#13",
-          "refLabel": "額我略‧納祥《神學講辭》第廿八篇 1–10：論神　8",
-          "text": "καὶ πόσον ὑπὲρ ἄγγελον εἴη θεός, οὗ λειτουργὸς ἄγγελος;",
-          "answerKeyRef": "patristic-plan:24:8#13",
-          "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
-          "answerKeyScope": "verse",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 37,
-              "slot": 14,
-              "ordinal": 734,
-              "headword": "λειτουργός",
-              "lemma": "λειτουργός",
-              "glossZh": "事奉者；執事；侍奉者",
-              "pos": "名詞"
-            }
-          ],
-          "verification": {
-            "words": 9,
-            "unattested": [],
-            "untaught": [],
-            "accentVariants": [],
-            "lemmas": [
-              "αγγελοσ",
-              "ειμι",
-              "θεοσ",
-              "και",
-              "λειτουργοσ",
-              "οσ",
-              "ου",
-              "ποσοσ",
-              "υπερ"
-            ],
-            "forms": [],
-            "written": [
-              "αγγελον",
-              "αγγελοσ",
-              "ειη",
-              "θεοσ",
-              "και",
-              "λειτουργοσ",
-              "ου",
-              "ποσον",
-              "υπερ"
-            ],
-            "lengthOk": false,
             "passed": true
           },
           "reviewedBy": "corpus",
@@ -20792,8 +21332,19 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 20,
-        "notPractised": [],
+        "practised": 19,
+        "notPractised": [
+          {
+            "volume": 2,
+            "lesson": 37,
+            "slot": 14,
+            "ordinal": 734,
+            "headword": "λειτουργός",
+            "lemma": "λειτουργός",
+            "glossZh": "事奉者；執事；侍奉者",
+            "pos": "名詞"
+          }
+        ],
         "notAttested": []
       }
     },
@@ -20804,96 +21355,45 @@
       "items": [
         {
           "kind": "quoted",
-          "ref": "patristic-plan:16:9.1.3#1",
-          "refLabel": "黑馬牧人書：誡命一至四　9.1.3",
-          "text": "ἀπέχου ἀπὸ τῆς ἐνθυμήσεως ταύτης·",
-          "answerKeyRef": "patristic-plan:16:9.1.3#1",
-          "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
-          "answerKeyScope": "verse-containing-clause",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 38,
-              "slot": 4,
-              "ordinal": 744,
-              "headword": "ἐνθύμησις",
-              "lemma": "ἐνθύμησις",
-              "glossZh": "思想；默念；懷念",
-              "pos": "名詞"
-            }
-          ],
-          "verification": {
-            "words": 5,
-            "unattested": [],
-            "untaught": [],
-            "accentVariants": [],
-            "lemmas": [
-              "αντεχω",
-              "απο",
-              "ενθυμησισ",
-              "ο",
-              "ουτοσ"
-            ],
-            "forms": [],
-            "written": [
-              "απεχου",
-              "απο",
-              "ενθυμησεωσ",
-              "ταυτησ",
-              "τησ"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 1
-        },
-        {
-          "kind": "quoted",
-          "ref": "patristic-plan:48:317#1",
-          "refLabel": "聖母讚頌詞（阿卡提斯托斯頌）　317",
-          "text": "χαῖρε, τῆς ἁμαρτίας ἀναιροῦσα τὸν ρύπον.",
-          "answerKeyRef": "patristic-plan:48:317#1",
+          "ref": "Heb.13.1",
+          "refLabel": "希伯來書 13:1",
+          "text": "Ἡ φιλαδελφία μενέτω.",
+          "answerKeyRef": "Heb.13.1",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
           "answerKeyScope": "verse",
           "targetWords": [
             {
               "volume": 2,
               "lesson": 38,
-              "slot": 1,
-              "ordinal": 741,
-              "headword": "ῥύπος",
-              "lemma": "ῥύπος",
-              "glossZh": "污垢；骯髒",
+              "slot": 18,
+              "ordinal": 758,
+              "headword": "φιλαδελφία",
+              "lemma": "φιλαδελφία",
+              "glossZh": "弟兄姊妹之愛；兄弟相愛",
               "pos": "名詞"
             }
           ],
           "verification": {
-            "words": 6,
+            "words": 3,
             "unattested": [],
             "untaught": [],
             "accentVariants": [],
             "lemmas": [
-              "αμαρτια",
-              "αναιρεω",
+              "μενω",
               "ο",
-              "ρυποσ",
-              "χαιρω"
+              "φιλαδελφια"
             ],
             "forms": [],
             "written": [
-              "αμαρτιασ",
-              "αναιρουσα",
-              "ρυπον",
-              "τησ",
-              "τον",
-              "χαιρε"
+              "η",
+              "μενετω",
+              "φιλαδελφια"
             ],
             "lengthOk": true,
             "passed": true
           },
           "reviewedBy": "corpus",
-          "no": 2
+          "no": 1
         },
         {
           "kind": "quoted",
@@ -20939,6 +21439,58 @@
               "των"
             ],
             "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "corpus",
+          "no": 2
+        },
+        {
+          "kind": "quoted",
+          "ref": "1Cor.7.20",
+          "refLabel": "哥林多前書 7:20",
+          "text": "ἕκαστος ἐν τῇ κλήσει ᾗ ἐκλήθη ἐν ταύτῃ μενέτω.",
+          "answerKeyRef": "1Cor.7.20",
+          "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
+          "answerKeyScope": "verse",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 38,
+              "slot": 17,
+              "ordinal": 757,
+              "headword": "κλῆσις",
+              "lemma": "κλῆσις",
+              "glossZh": "呼召；召喚",
+              "pos": "名詞"
+            }
+          ],
+          "verification": {
+            "words": 9,
+            "unattested": [],
+            "untaught": [],
+            "accentVariants": [],
+            "lemmas": [
+              "εκαστοσ",
+              "εν",
+              "καλεω",
+              "κλησισ",
+              "μενω",
+              "ο",
+              "οσ",
+              "ουτοσ"
+            ],
+            "forms": [],
+            "written": [
+              "εκαστοσ",
+              "εκληθη",
+              "εν",
+              "η",
+              "κλησει",
+              "μενετω",
+              "ταυτη",
+              "τη"
+            ],
+            "lengthOk": false,
             "passed": true
           },
           "reviewedBy": "corpus",
@@ -21358,8 +21910,29 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 20,
-        "notPractised": [],
+        "practised": 18,
+        "notPractised": [
+          {
+            "volume": 2,
+            "lesson": 38,
+            "slot": 1,
+            "ordinal": 741,
+            "headword": "ῥύπος",
+            "lemma": "ῥύπος",
+            "glossZh": "污垢；骯髒",
+            "pos": "名詞"
+          },
+          {
+            "volume": 2,
+            "lesson": 38,
+            "slot": 4,
+            "ordinal": 744,
+            "headword": "ἐνθύμησις",
+            "lemma": "ἐνθύμησις",
+            "glossZh": "思想；默念；懷念",
+            "pos": "名詞"
+          }
+        ],
         "notAttested": []
       }
     },
@@ -21368,50 +21941,6 @@
       "id": "grc-v2-lesson-39",
       "note": "",
       "items": [
-        {
-          "kind": "quoted",
-          "ref": "patristic-plan:17:4.12#2",
-          "refLabel": "巴拿巴書 1–5：新約與舊約的關係　4.12",
-          "text": "ἕκαστος καθὼς ἐποίησεν κομιεῖται.",
-          "answerKeyRef": "patristic-plan:17:4.12#2",
-          "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
-          "answerKeyScope": "verse",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 39,
-              "slot": 10,
-              "ordinal": 770,
-              "headword": "κομίζω",
-              "lemma": "κομίζω",
-              "glossZh": "攜帶；運送；領取",
-              "pos": "動詞"
-            }
-          ],
-          "verification": {
-            "words": 4,
-            "unattested": [],
-            "untaught": [],
-            "accentVariants": [],
-            "lemmas": [
-              "εκαστοσ",
-              "καθωσ",
-              "κομιζω",
-              "ποιεω"
-            ],
-            "forms": [],
-            "written": [
-              "εκαστοσ",
-              "εποιησεν",
-              "καθωσ",
-              "κομιειται"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 1
-        },
         {
           "kind": "quoted",
           "ref": "patristic-plan:9:4.1#1",
@@ -21456,26 +21985,26 @@
             "passed": true
           },
           "reviewedBy": "corpus",
-          "no": 2
+          "no": 1
         },
         {
           "kind": "quoted",
-          "ref": "patristic-plan:11:16.4#1",
-          "refLabel": "革利免二書　16.4",
-          "text": "καλὸν οὖν ἐλεημοσύνη ὡς μετάνοια ἁμαρτίας·",
-          "answerKeyRef": "patristic-plan:11:16.4#1",
+          "ref": "1Cor.15.30",
+          "refLabel": "哥林多前書 15:30",
+          "text": "τί καὶ ἡμεῖς κινδυνεύομεν πᾶσαν ὥραν;",
+          "answerKeyRef": "1Cor.15.30",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
-          "answerKeyScope": "verse-containing-clause",
+          "answerKeyScope": "verse",
           "targetWords": [
             {
               "volume": 2,
               "lesson": 39,
-              "slot": 14,
-              "ordinal": 774,
-              "headword": "ἐλεημοσύνη",
-              "lemma": "ἐλεημοσύνη",
-              "glossZh": "施捨；慈善",
-              "pos": "名詞"
+              "slot": 3,
+              "ordinal": 763,
+              "headword": "κινδυνεύω",
+              "lemma": "κινδυνεύω",
+              "glossZh": "處於危險中；冒險",
+              "pos": "動詞"
             }
           ],
           "verification": {
@@ -21484,21 +22013,70 @@
             "untaught": [],
             "accentVariants": [],
             "lemmas": [
-              "αμαρτια",
-              "ελεημοσυνη",
-              "καλοσ",
-              "μετανοια",
-              "ουν",
-              "ωσ"
+              "εγω",
+              "ημεισ",
+              "και",
+              "κινδυνευω",
+              "πασ",
+              "τισ",
+              "ωρα"
             ],
             "forms": [],
             "written": [
-              "αμαρτιασ",
-              "ελεημοσυνη",
-              "καλον",
-              "μετανοια",
-              "ουν",
-              "ωσ"
+              "ημεισ",
+              "και",
+              "κινδυνευομεν",
+              "πασαν",
+              "τι",
+              "ωραν"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "corpus",
+          "no": 2
+        },
+        {
+          "kind": "quoted",
+          "ref": "Matt.5.7",
+          "refLabel": "馬太福音 5:7",
+          "text": "μακάριοι οἱ ἐλεήμονες, ὅτι αὐτοὶ ἐλεηθήσονται.",
+          "answerKeyRef": "Matt.5.7",
+          "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
+          "answerKeyScope": "verse",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 39,
+              "slot": 8,
+              "ordinal": 768,
+              "headword": "ἐλεήμων",
+              "lemma": "ἐλεήμων",
+              "glossZh": "慈悲的；富有同情心的",
+              "pos": "形容詞"
+            }
+          ],
+          "verification": {
+            "words": 6,
+            "unattested": [],
+            "untaught": [],
+            "accentVariants": [],
+            "lemmas": [
+              "αυτοσ",
+              "ελεαω",
+              "ελεημων",
+              "μακαριοσ",
+              "ο",
+              "οτι"
+            ],
+            "forms": [],
+            "written": [
+              "αυτοι",
+              "ελεηθησονται",
+              "ελεημονεσ",
+              "μακαριοι",
+              "οι",
+              "οτι"
             ],
             "lengthOk": true,
             "passed": true
@@ -21933,8 +22511,29 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 20,
-        "notPractised": [],
+        "practised": 18,
+        "notPractised": [
+          {
+            "volume": 2,
+            "lesson": 39,
+            "slot": 10,
+            "ordinal": 770,
+            "headword": "κομίζω",
+            "lemma": "κομίζω",
+            "glossZh": "攜帶；運送；領取",
+            "pos": "動詞"
+          },
+          {
+            "volume": 2,
+            "lesson": 39,
+            "slot": 14,
+            "ordinal": 774,
+            "headword": "ἐλεημοσύνη",
+            "lemma": "ἐλεημοσύνη",
+            "glossZh": "施捨；慈善",
+            "pos": "名詞"
+          }
+        ],
         "notAttested": []
       }
     },
@@ -21992,52 +22591,6 @@
         },
         {
           "kind": "quoted",
-          "ref": "patristic-plan:1:6.3#1",
-          "refLabel": "十二使徒遺訓　6.3",
-          "text": "λατρεία γάρ ἐστι θεῶν νεκρῶν.",
-          "answerKeyRef": "patristic-plan:1:6.3#1",
-          "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
-          "answerKeyScope": "verse-containing-clause",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 40,
-              "slot": 15,
-              "ordinal": 795,
-              "headword": "λατρεία",
-              "lemma": "λατρεία",
-              "glossZh": "侍奉；敬拜；祭祀",
-              "pos": "名詞"
-            }
-          ],
-          "verification": {
-            "words": 5,
-            "unattested": [],
-            "untaught": [],
-            "accentVariants": [],
-            "lemmas": [
-              "γαρ",
-              "ειμι",
-              "θεοσ",
-              "λατρεια",
-              "νεκροσ"
-            ],
-            "forms": [],
-            "written": [
-              "γαρ",
-              "εστι",
-              "θεων",
-              "λατρεια",
-              "νεκρων"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 2
-        },
-        {
-          "kind": "quoted",
           "ref": "Matt.5.27",
           "refLabel": "馬太福音 5:27",
           "text": "Ἠκούσατε ὅτι ἐρρέθη· Οὐ μοιχεύσεις.",
@@ -22075,6 +22628,55 @@
               "μοιχευσεισ",
               "οτι",
               "ου"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "corpus",
+          "no": 2
+        },
+        {
+          "kind": "quoted",
+          "ref": "1Ma.2:21",
+          "refLabel": "馬加比一書 2:21",
+          "text": "ἵλεως ἡμῖν καταλείπειν νόμον καὶ δικαιώματα.",
+          "answerKeyRef": "1Ma.2:21",
+          "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
+          "answerKeyScope": "verse",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 40,
+              "slot": 7,
+              "ordinal": 787,
+              "headword": "καταλιμπάνω",
+              "lemma": "καταλιμπάνω",
+              "glossZh": "遺棄；拋棄；離開",
+              "pos": "動詞"
+            }
+          ],
+          "verification": {
+            "words": 6,
+            "unattested": [],
+            "untaught": [],
+            "accentVariants": [],
+            "lemmas": [
+              "δικαιωμα",
+              "εγω",
+              "ημιν",
+              "ιλεωσ",
+              "και",
+              "καταλιμπανω",
+              "νομοσ"
+            ],
+            "forms": [],
+            "written": [
+              "δικαιωματα",
+              "ημιν",
+              "ιλεωσ",
+              "και",
+              "καταλειπειν",
+              "νομον"
             ],
             "lengthOk": true,
             "passed": true
@@ -22505,8 +23107,19 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 20,
-        "notPractised": [],
+        "practised": 19,
+        "notPractised": [
+          {
+            "volume": 2,
+            "lesson": 40,
+            "slot": 15,
+            "ordinal": 795,
+            "headword": "λατρεία",
+            "lemma": "λατρεία",
+            "glossZh": "侍奉；敬拜；祭祀",
+            "pos": "名詞"
+          }
+        ],
         "notAttested": []
       }
     },
@@ -23108,52 +23721,6 @@
       "items": [
         {
           "kind": "quoted",
-          "ref": "patristic-plan:50:482#3",
-          "refLabel": "聖誕晨禱（12 月 25 日）　482",
-          "text": "Σοὶ πρέπει ὕμνος τῷ Θεῷ.",
-          "answerKeyRef": "patristic-plan:50:482#3",
-          "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
-          "answerKeyScope": "verse",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 42,
-              "slot": 17,
-              "ordinal": 837,
-              "headword": "ὕμνος",
-              "lemma": "ὕμνος",
-              "glossZh": "讚美詩；聖歌",
-              "pos": "名詞"
-            }
-          ],
-          "verification": {
-            "words": 5,
-            "unattested": [],
-            "untaught": [],
-            "accentVariants": [],
-            "lemmas": [
-              "θεοσ",
-              "ο",
-              "πρεπω",
-              "συ",
-              "υμνοσ"
-            ],
-            "forms": [],
-            "written": [
-              "θεω",
-              "πρεπει",
-              "σοι",
-              "τω",
-              "υμνοσ"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 1
-        },
-        {
-          "kind": "quoted",
           "ref": "Pro.27:5",
           "refLabel": "箴言 27:5",
           "text": "κρείσσους ἔλεγχοι ἀποκεκαλυμμένοι κρυπτομένης φιλίας.",
@@ -23196,7 +23763,7 @@
             "passed": true
           },
           "reviewedBy": "corpus",
-          "no": 2
+          "no": 1
         },
         {
           "kind": "quoted",
@@ -23239,6 +23806,56 @@
               "ευρον",
               "θανατου",
               "ουδεν"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "corpus",
+          "no": 2
+        },
+        {
+          "kind": "quoted",
+          "ref": "Job.26:7",
+          "refLabel": "約伯記 26:7",
+          "text": "ἐκτείνων βορέαν ἐπ᾽ οὐδέν, κρεμάζων γῆν ἐπὶ οὐδενός.",
+          "answerKeyRef": "Job.26:7",
+          "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
+          "answerKeyScope": "verse",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 42,
+              "slot": 5,
+              "ordinal": 825,
+              "headword": "κρεμάννυμι",
+              "lemma": "κρεμάννυμι",
+              "glossZh": "懸掛；吊起",
+              "pos": "動詞"
+            }
+          ],
+          "verification": {
+            "words": 8,
+            "unattested": [],
+            "untaught": [],
+            "accentVariants": [],
+            "lemmas": [
+              "βορρασ",
+              "γη",
+              "εκτεινω",
+              "επι",
+              "κρεμαννυμι",
+              "ουδεισ"
+            ],
+            "forms": [],
+            "written": [
+              "βορεαν",
+              "γην",
+              "εκτεινων",
+              "επι",
+              "επ’",
+              "κρεμαζων",
+              "ουδεν",
+              "ουδενοσ"
             ],
             "lengthOk": true,
             "passed": true
@@ -23669,8 +24286,19 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 20,
-        "notPractised": [],
+        "practised": 19,
+        "notPractised": [
+          {
+            "volume": 2,
+            "lesson": 42,
+            "slot": 17,
+            "ordinal": 837,
+            "headword": "ὕμνος",
+            "lemma": "ὕμνος",
+            "glossZh": "讚美詩；聖歌",
+            "pos": "名詞"
+          }
+        ],
         "notAttested": []
       }
     },
@@ -23791,22 +24419,22 @@
         },
         {
           "kind": "quoted",
-          "ref": "patristic-plan:20:64#5",
-          "refLabel": "猶斯定《第一護教辭》61–67：洗禮與感恩祭　64",
-          "text": "ὅπερ γελοιότατον ἡγούμεθα εἶναι, τῆς ἐννοίας εἰκόνα παραφέρειν θηλειῶν μορφήν.",
-          "answerKeyRef": "patristic-plan:20:64#5",
+          "ref": "Job.13:7",
+          "refLabel": "約伯記 13:7",
+          "text": "πότερον οὐκ ἔναντι Κυρίου λαλεῖτε, ἔναντι δὲ αὐτοῦ φθέγγεσθε δόλον;",
+          "answerKeyRef": "Job.13:7",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
-          "answerKeyScope": "verse-containing-clause",
+          "answerKeyScope": "verse",
           "targetWords": [
             {
               "volume": 2,
               "lesson": 43,
-              "slot": 4,
-              "ordinal": 844,
-              "headword": "γελοῖος",
-              "lemma": "γελοῖος",
-              "glossZh": "可笑的；荒謬的",
-              "pos": "形容詞"
+              "slot": 3,
+              "ordinal": 843,
+              "headword": "φθέγγομαι",
+              "lemma": "φθέγγομαι",
+              "glossZh": "發聲；說話",
+              "pos": "動詞"
             }
           ],
           "verification": {
@@ -23815,29 +24443,27 @@
             "untaught": [],
             "accentVariants": [],
             "lemmas": [
-              "γελοιοσ",
-              "εικων",
-              "ειμι",
-              "εννοια",
-              "ηγεομαι",
-              "θηλυσ",
-              "μορφη",
-              "ο",
-              "οσπερ",
-              "παραφερω"
+              "αυτοσ",
+              "δε",
+              "δολοσ",
+              "εναντι",
+              "κυριοσ",
+              "λαλεω",
+              "ου",
+              "ποτεροσ",
+              "φθεγγομαι"
             ],
             "forms": [],
             "written": [
-              "γελοιοτατον",
-              "εικονα",
-              "ειναι",
-              "εννοιασ",
-              "ηγουμεθα",
-              "θηλειων",
-              "μορφην",
-              "οπερ",
-              "παραφερειν",
-              "τησ"
+              "αυτου",
+              "δε",
+              "δολον",
+              "εναντι",
+              "κυριου",
+              "λαλειτε",
+              "ουκ",
+              "ποτερον",
+              "φθεγγεσθε"
             ],
             "lengthOk": false,
             "passed": true
@@ -24281,8 +24907,19 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 20,
-        "notPractised": [],
+        "practised": 19,
+        "notPractised": [
+          {
+            "volume": 2,
+            "lesson": 43,
+            "slot": 4,
+            "ordinal": 844,
+            "headword": "γελοῖος",
+            "lemma": "γελοῖος",
+            "glossZh": "可笑的；荒謬的",
+            "pos": "形容詞"
+          }
+        ],
         "notAttested": []
       }
     },
@@ -24880,41 +25517,49 @@
       "items": [
         {
           "kind": "quoted",
-          "ref": "patristic-plan:24:8#10",
-          "refLabel": "額我略‧納祥《神學講辭》第廿八篇 1–10：論神　8",
-          "text": "καὶ τοῦτο εἰς ἄπειρον.",
-          "answerKeyRef": "patristic-plan:24:8#10",
+          "ref": "Pro.21:28",
+          "refLabel": "箴言 21:28",
+          "text": "μάρτυς ψευδὴς ἀπολεῖται, ἀνὴρ δὲ ὑπήκοος φυλασσόμενος λαλήσει.",
+          "answerKeyRef": "Pro.21:28",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
           "answerKeyScope": "verse",
           "targetWords": [
             {
               "volume": 2,
               "lesson": 45,
-              "slot": 11,
-              "ordinal": 891,
-              "headword": "ἄπειρος",
-              "lemma": "ἄπειρος",
-              "glossZh": "無經驗的；不熟悉的",
+              "slot": 1,
+              "ordinal": 881,
+              "headword": "ὑπήκοος",
+              "lemma": "ὑπήκοος",
+              "glossZh": "順從的；服從的",
               "pos": "形容詞"
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 8,
             "unattested": [],
             "untaught": [],
             "accentVariants": [],
             "lemmas": [
-              "απειροσ",
-              "εισ",
-              "και",
-              "ουτοσ"
+              "ανηρ",
+              "απολλυμι",
+              "δε",
+              "λαλεω",
+              "μαρτυσ",
+              "υπηκοοσ",
+              "φυλασσω",
+              "ψευδησ"
             ],
             "forms": [],
             "written": [
-              "απειρον",
-              "εισ",
-              "και",
-              "τουτο"
+              "ανηρ",
+              "απολειται",
+              "δε",
+              "λαλησει",
+              "μαρτυσ",
+              "υπηκοοσ",
+              "φυλασσομενοσ",
+              "ψευδησ"
             ],
             "lengthOk": true,
             "passed": true
@@ -24924,43 +25569,58 @@
         },
         {
           "kind": "quoted",
-          "ref": "patristic-plan:48:255#1",
-          "refLabel": "聖母讚頌詞（阿卡提斯托斯頌）　255",
-          "text": "χαῖρε, προνοίας αὐτοῦ ταμεῖον.",
-          "answerKeyRef": "patristic-plan:48:255#1",
+          "ref": "1Thess.4.7",
+          "refLabel": "帖撒羅尼迦前書 4:7",
+          "text": "οὐ γὰρ ἐκάλεσεν ἡμᾶς ὁ θεὸς ἐπὶ ἀκαθαρσίᾳ ἀλλ’ ἐν ἁγιασμῷ.",
+          "answerKeyRef": "1Thess.4.7",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
           "answerKeyScope": "verse",
           "targetWords": [
             {
               "volume": 2,
               "lesson": 45,
-              "slot": 14,
-              "ordinal": 894,
-              "headword": "ταμεῖον",
-              "lemma": "ταμεῖον",
-              "glossZh": "庫房；儲藏室",
+              "slot": 20,
+              "ordinal": 900,
+              "headword": "ἁγιασμός",
+              "lemma": "ἁγιασμός",
+              "glossZh": "聖潔；成聖",
               "pos": "名詞"
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 11,
             "unattested": [],
             "untaught": [],
             "accentVariants": [],
             "lemmas": [
-              "αυτοσ",
-              "προνοια",
-              "ταμειον",
-              "χαιρω"
+              "αγιασμοσ",
+              "ακαθαρσια",
+              "αλλα",
+              "γαρ",
+              "εγω",
+              "εν",
+              "επι",
+              "ημασ",
+              "θεοσ",
+              "καλεω",
+              "ο",
+              "ου"
             ],
             "forms": [],
             "written": [
-              "αυτου",
-              "προνοιασ",
-              "ταμειον",
-              "χαιρε"
+              "αγιασμω",
+              "ακαθαρσια",
+              "αλλ’",
+              "γαρ",
+              "εκαλεσεν",
+              "εν",
+              "επι",
+              "ημασ",
+              "θεοσ",
+              "ο",
+              "ου"
             ],
-            "lengthOk": true,
+            "lengthOk": false,
             "passed": true
           },
           "reviewedBy": "corpus",
@@ -24968,43 +25628,59 @@
         },
         {
           "kind": "quoted",
-          "ref": "patristic-plan:11:11.3#1",
-          "refLabel": "革利免二書　11.3",
-          "text": "ἀνόητοι, συμβάλετε ἑαυτοὺς ξύλῳ·",
-          "answerKeyRef": "patristic-plan:11:11.3#1",
+          "ref": "Gal.1.20",
+          "refLabel": "加拉太書 1:20",
+          "text": "ἃ δὲ γράφω ὑμῖν, ἰδοὺ ἐνώπιον τοῦ θεοῦ ὅτι οὐ ψεύδομαι.",
+          "answerKeyRef": "Gal.1.20",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
-          "answerKeyScope": "verse-containing-clause",
+          "answerKeyScope": "verse",
           "targetWords": [
             {
               "volume": 2,
               "lesson": 45,
-              "slot": 15,
-              "ordinal": 895,
-              "headword": "συμβάλλω",
-              "lemma": "συμβάλλω",
-              "glossZh": "聚合；結合；貢獻",
+              "slot": 18,
+              "ordinal": 898,
+              "headword": "ψεύδομαι",
+              "lemma": "ψεύδομαι",
+              "glossZh": "說謊；欺騙",
               "pos": "動詞"
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 11,
             "unattested": [],
             "untaught": [],
             "accentVariants": [],
             "lemmas": [
-              "ανοητοσ",
-              "εαυτου",
-              "ξυλον",
-              "συμβαλλω"
+              "γραφω",
+              "δε",
+              "ενωπιον",
+              "ενωπιοσ",
+              "θεοσ",
+              "ιδου",
+              "ο",
+              "οσ",
+              "οτι",
+              "ου",
+              "συ",
+              "υμιν",
+              "ψευδομαι"
             ],
             "forms": [],
             "written": [
-              "ανοητοι",
-              "εαυτουσ",
-              "ξυλω",
-              "συμβαλετε"
+              "α",
+              "γραφω",
+              "δε",
+              "ενωπιον",
+              "θεου",
+              "ιδου",
+              "οτι",
+              "ου",
+              "του",
+              "υμιν",
+              "ψευδομαι"
             ],
-            "lengthOk": true,
+            "lengthOk": false,
             "passed": true
           },
           "reviewedBy": "corpus",
@@ -25442,8 +26118,39 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 20,
-        "notPractised": [],
+        "practised": 17,
+        "notPractised": [
+          {
+            "volume": 2,
+            "lesson": 45,
+            "slot": 11,
+            "ordinal": 891,
+            "headword": "ἄπειρος",
+            "lemma": "ἄπειρος",
+            "glossZh": "無經驗的；不熟悉的",
+            "pos": "形容詞"
+          },
+          {
+            "volume": 2,
+            "lesson": 45,
+            "slot": 14,
+            "ordinal": 894,
+            "headword": "ταμεῖον",
+            "lemma": "ταμεῖον",
+            "glossZh": "庫房；儲藏室",
+            "pos": "名詞"
+          },
+          {
+            "volume": 2,
+            "lesson": 45,
+            "slot": 15,
+            "ordinal": 895,
+            "headword": "συμβάλλω",
+            "lemma": "συμβάλλω",
+            "glossZh": "聚合；結合；貢獻",
+            "pos": "動詞"
+          }
+        ],
         "notAttested": []
       }
     },
@@ -25554,50 +26261,53 @@
         },
         {
           "kind": "quoted",
-          "ref": "patristic-plan:9:7.2#1",
-          "refLabel": "坡旅甲致腓立比人書　7.2",
-          "text": "Τὸ μὲν πνεῦμα πρόθυμον, ἡ δὲ σὰρξ ἀσθενής.",
-          "answerKeyRef": "patristic-plan:9:7.2#1",
+          "ref": "Psa.70:7",
+          "refLabel": "詩篇 70:7",
+          "text": "ὡσεὶ τέρας ἐγενήθην τοῖς πολλοῖς, καὶ σὺ βοηθὸς κραταιός.",
+          "answerKeyRef": "Psa.70:7",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
-          "answerKeyScope": "verse-containing-clause",
+          "answerKeyScope": "verse",
           "targetWords": [
             {
               "volume": 2,
               "lesson": 46,
-              "slot": 1,
-              "ordinal": 901,
-              "headword": "πρόθυμος",
-              "lemma": "πρόθυμος",
-              "glossZh": "樂意的；積極主動的",
-              "pos": "形容詞"
+              "slot": 20,
+              "ordinal": 920,
+              "headword": "τέρας",
+              "lemma": "τέρας",
+              "glossZh": "奇蹟；異兆",
+              "pos": "名詞"
             }
           ],
           "verification": {
-            "words": 8,
+            "words": 9,
             "unattested": [],
             "untaught": [],
             "accentVariants": [],
             "lemmas": [
-              "ασθενησ",
-              "δε",
-              "μεν",
+              "βοηθοσ",
+              "γινομαι",
+              "και",
+              "κραταιοσ",
               "ο",
-              "πνευμα",
-              "προθυμοσ",
-              "σαρξ"
+              "πολυσ",
+              "συ",
+              "τερασ",
+              "ωσει"
             ],
             "forms": [],
             "written": [
-              "ασθενησ",
-              "δε",
-              "η",
-              "μεν",
-              "πνευμα",
-              "προθυμον",
-              "σαρξ",
-              "το"
+              "βοηθοσ",
+              "εγενηθην",
+              "και",
+              "κραταιοσ",
+              "πολλοισ",
+              "συ",
+              "τερασ",
+              "τοισ",
+              "ωσει"
             ],
-            "lengthOk": true,
+            "lengthOk": false,
             "passed": true
           },
           "reviewedBy": "corpus",
@@ -26031,8 +26741,19 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 20,
-        "notPractised": [],
+        "practised": 19,
+        "notPractised": [
+          {
+            "volume": 2,
+            "lesson": 46,
+            "slot": 1,
+            "ordinal": 901,
+            "headword": "πρόθυμος",
+            "lemma": "πρόθυμος",
+            "glossZh": "樂意的；積極主動的",
+            "pos": "形容詞"
+          }
+        ],
         "notAttested": []
       }
     },
@@ -26041,54 +26762,6 @@
       "id": "grc-v2-lesson-47",
       "note": "",
       "items": [
-        {
-          "kind": "quoted",
-          "ref": "patristic-plan:24:6#7",
-          "refLabel": "額我略‧納祥《神學講辭》第廿八篇 1–10：論神　6",
-          "text": "τίς οὕτως εἰς ἔσχατον σοφίας ἀφίκετο;",
-          "answerKeyRef": "patristic-plan:24:6#7",
-          "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
-          "answerKeyScope": "verse",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 47,
-              "slot": 5,
-              "ordinal": 925,
-              "headword": "ἀφικνέομαι",
-              "lemma": "ἀφικνέομαι",
-              "glossZh": "到達；抵達",
-              "pos": "動詞"
-            }
-          ],
-          "verification": {
-            "words": 6,
-            "unattested": [],
-            "untaught": [],
-            "accentVariants": [],
-            "lemmas": [
-              "αφικνεομαι",
-              "εισ",
-              "εσχατοσ",
-              "ουτωσ",
-              "σοφια",
-              "τισ"
-            ],
-            "forms": [],
-            "written": [
-              "αφικετο",
-              "εισ",
-              "εσχατον",
-              "ουτωσ",
-              "σοφιασ",
-              "τισ"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 1
-        },
         {
           "kind": "quoted",
           "ref": "patristic-plan:11:2.2#1",
@@ -26130,6 +26803,54 @@
               "ουκ",
               "τουτο",
               "ωδινουσα"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "corpus",
+          "no": 1
+        },
+        {
+          "kind": "quoted",
+          "ref": "1Cor.11.24",
+          "refLabel": "哥林多前書 11:24",
+          "text": "τοῦτο ποιεῖτε εἰς τὴν ἐμὴν ἀνάμνησιν.",
+          "answerKeyRef": "1Cor.11.24",
+          "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
+          "answerKeyScope": "verse-containing-clause",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 47,
+              "slot": 1,
+              "ordinal": 921,
+              "headword": "ἀνάμνησις",
+              "lemma": "ἀνάμνησις",
+              "glossZh": "紀念；回憶",
+              "pos": "名詞"
+            }
+          ],
+          "verification": {
+            "words": 6,
+            "unattested": [],
+            "untaught": [],
+            "accentVariants": [],
+            "lemmas": [
+              "αναμνησισ",
+              "εισ",
+              "εμοσ",
+              "ο",
+              "ουτοσ",
+              "ποιεω"
+            ],
+            "forms": [],
+            "written": [
+              "αναμνησιν",
+              "εισ",
+              "εμην",
+              "ποιειτε",
+              "την",
+              "τουτο"
             ],
             "lengthOk": true,
             "passed": true
@@ -26612,8 +27333,19 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 20,
-        "notPractised": [],
+        "practised": 19,
+        "notPractised": [
+          {
+            "volume": 2,
+            "lesson": 47,
+            "slot": 5,
+            "ordinal": 925,
+            "headword": "ἀφικνέομαι",
+            "lemma": "ἀφικνέομαι",
+            "glossZh": "到達；抵達",
+            "pos": "動詞"
+          }
+        ],
         "notAttested": []
       }
     },
@@ -26622,48 +27354,6 @@
       "id": "grc-v2-lesson-48",
       "note": "",
       "items": [
-        {
-          "kind": "quoted",
-          "ref": "patristic-plan:23:6#8",
-          "refLabel": "額我略‧納祥《神學講辭》第廿七篇：論神學該由誰、何時、如何講　6",
-          "text": "οὐχ ὡς εἴωθεν ;",
-          "answerKeyRef": "patristic-plan:23:6#8",
-          "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
-          "answerKeyScope": "verse",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 48,
-              "slot": 13,
-              "ordinal": 953,
-              "headword": "ἔθω",
-              "lemma": "ἔθω",
-              "glossZh": "習慣；風俗；慣例",
-              "pos": "動詞"
-            }
-          ],
-          "verification": {
-            "words": 3,
-            "unattested": [],
-            "untaught": [],
-            "accentVariants": [],
-            "lemmas": [
-              "εθω",
-              "ου",
-              "ωσ"
-            ],
-            "forms": [],
-            "written": [
-              "ειωθεν",
-              "ουχ",
-              "ωσ"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 1
-        },
         {
           "kind": "quoted",
           "ref": "patristic-plan:8:3.2#2",
@@ -26704,7 +27394,7 @@
             "passed": true
           },
           "reviewedBy": "corpus",
-          "no": 2
+          "no": 1
         },
         {
           "kind": "quoted",
@@ -26744,6 +27434,53 @@
               "εσβεσεν",
               "κατεχομενοσ",
               "υπ’"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "corpus",
+          "no": 2
+        },
+        {
+          "kind": "quoted",
+          "ref": "patristic-plan:4:7.2#1",
+          "refLabel": "依納爵致特拉勒人書　7.2",
+          "text": "ὁ ἐντὸς θυσιαστηρίου ὢν καθαρός ἐστιν·",
+          "answerKeyRef": "patristic-plan:4:7.2#1",
+          "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
+          "answerKeyScope": "verse-containing-clause",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 48,
+              "slot": 11,
+              "ordinal": 951,
+              "headword": "ἐντός",
+              "lemma": "ἐντός",
+              "glossZh": "（配屬格）在…之內；內部",
+              "pos": "副詞"
+            }
+          ],
+          "verification": {
+            "words": 6,
+            "unattested": [],
+            "untaught": [],
+            "accentVariants": [],
+            "lemmas": [
+              "ειμι",
+              "εντοσ",
+              "θυσιαστηριον",
+              "καθαροσ",
+              "ο"
+            ],
+            "forms": [],
+            "written": [
+              "εντοσ",
+              "εστιν",
+              "θυσιαστηριου",
+              "καθαροσ",
+              "ο",
+              "ων"
             ],
             "lengthOk": true,
             "passed": true
@@ -27173,8 +27910,19 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 20,
-        "notPractised": [],
+        "practised": 19,
+        "notPractised": [
+          {
+            "volume": 2,
+            "lesson": 48,
+            "slot": 13,
+            "ordinal": 953,
+            "headword": "ἔθω",
+            "lemma": "ἔθω",
+            "glossZh": "習慣；風俗；慣例",
+            "pos": "動詞"
+          }
+        ],
         "notAttested": []
       }
     },
@@ -27183,6 +27931,50 @@
       "id": "grc-v2-lesson-49",
       "note": "",
       "items": [
+        {
+          "kind": "quoted",
+          "ref": "Jdg.15:14",
+          "refLabel": "士師記 15:14",
+          "text": "καὶ ἦλθον ἕως Σιαγόνος·",
+          "answerKeyRef": "Jdg.15:14",
+          "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
+          "answerKeyScope": "verse-containing-clause",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 49,
+              "slot": 20,
+              "ordinal": 980,
+              "headword": "σιαγών",
+              "lemma": "σιαγών",
+              "glossZh": "頷部；下巴",
+              "pos": "名詞"
+            }
+          ],
+          "verification": {
+            "words": 4,
+            "unattested": [],
+            "untaught": [],
+            "accentVariants": [],
+            "lemmas": [
+              "ερχομαι",
+              "εωσ",
+              "και",
+              "σιαγων"
+            ],
+            "forms": [],
+            "written": [
+              "εωσ",
+              "ηλθον",
+              "και",
+              "σιαγονοσ"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "corpus",
+          "no": 1
+        },
         {
           "kind": "quoted",
           "ref": "patristic-plan:43:13#1",
@@ -27226,98 +28018,51 @@
             "passed": true
           },
           "reviewedBy": "corpus",
-          "no": 1
-        },
-        {
-          "kind": "quoted",
-          "ref": "patristic-plan:5:9.1#2",
-          "refLabel": "依納爵致費拉德非人書　9.1",
-          "text": "πάντα ταῦτα εἰς ἑνότητα θεοῦ.",
-          "answerKeyRef": "patristic-plan:5:9.1#2",
-          "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
-          "answerKeyScope": "verse",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 49,
-              "slot": 8,
-              "ordinal": 968,
-              "headword": "ἑνότης",
-              "lemma": "ἑνότης",
-              "glossZh": "合一；統一",
-              "pos": "名詞"
-            }
-          ],
-          "verification": {
-            "words": 5,
-            "unattested": [],
-            "untaught": [],
-            "accentVariants": [],
-            "lemmas": [
-              "εισ",
-              "ενοτησ",
-              "θεοσ",
-              "ουτοσ",
-              "πασ"
-            ],
-            "forms": [],
-            "written": [
-              "εισ",
-              "ενοτητα",
-              "θεου",
-              "παντα",
-              "ταυτα"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
           "no": 2
         },
         {
           "kind": "quoted",
-          "ref": "patristic-plan:7:13.1#3",
-          "refLabel": "依納爵致士每拿人書　13.1",
-          "text": "ἀσπάζεται ὑμᾶς Φίλων σὺν ἐμοὶ ὤν.",
-          "answerKeyRef": "patristic-plan:7:13.1#3",
+          "ref": "Pro.22:10",
+          "refLabel": "箴言 22:10",
+          "text": "ὅταν γὰρ καθίσῃ ἐν συνεδρίῳ πάντας ἀτιμάζει.",
+          "answerKeyRef": "Pro.22:10",
           "answerKeyEdition": "和合本修訂版（2010）／教父文獻另計",
-          "answerKeyScope": "verse",
+          "answerKeyScope": "verse-containing-clause",
           "targetWords": [
             {
               "volume": 2,
               "lesson": 49,
-              "slot": 13,
-              "ordinal": 973,
-              "headword": "φιλέω",
-              "lemma": "φιλέω",
-              "glossZh": "愛；親吻",
-              "pos": "動詞"
+              "slot": 2,
+              "ordinal": 962,
+              "headword": "συνέδριον",
+              "lemma": "συνέδριον",
+              "glossZh": "議會；公會；猶太人最高法院",
+              "pos": "名詞"
             }
           ],
           "verification": {
-            "words": 6,
+            "words": 7,
             "unattested": [],
             "untaught": [],
             "accentVariants": [],
             "lemmas": [
-              "ασπαζομαι",
-              "εγω",
-              "ειμι",
-              "εμοι",
-              "εμοσ",
-              "συ",
-              "συν",
-              "υμασ",
-              "φιλεω"
+              "ατιμαζω",
+              "γαρ",
+              "εν",
+              "καθιζω",
+              "οταν",
+              "πασ",
+              "συνεδριον"
             ],
             "forms": [],
             "written": [
-              "ασπαζεται",
-              "εμοι",
-              "συν",
-              "υμασ",
-              "φιλων",
-              "ων"
+              "ατιμαζει",
+              "γαρ",
+              "εν",
+              "καθιση",
+              "οταν",
+              "παντασ",
+              "συνεδριω"
             ],
             "lengthOk": true,
             "passed": true
@@ -27751,8 +28496,29 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 20,
-        "notPractised": [],
+        "practised": 18,
+        "notPractised": [
+          {
+            "volume": 2,
+            "lesson": 49,
+            "slot": 8,
+            "ordinal": 968,
+            "headword": "ἑνότης",
+            "lemma": "ἑνότης",
+            "glossZh": "合一；統一",
+            "pos": "名詞"
+          },
+          {
+            "volume": 2,
+            "lesson": 49,
+            "slot": 13,
+            "ordinal": 973,
+            "headword": "φιλέω",
+            "lemma": "φιλέω",
+            "glossZh": "愛；親吻",
+            "pos": "動詞"
+          }
+        ],
         "notAttested": []
       }
     },

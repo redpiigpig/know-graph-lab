@@ -320,7 +320,9 @@ def patristic_units() -> Iterator[dict[str, Any]]:
     if PATRISTIC_PLAN.exists():
         plan = json.loads(PATRISTIC_PLAN.read_text(encoding="utf-8"))
         for reading in plan.get("readings", []):
-            for segment in reading.get("segments", []):
+            # 語料驗證要看全文，不是讀本印出來的那幾章——見 build_greek_patristic_plan
+            # 的 clip_to_limit。引錨要限制在讀本範圍內，那是挖掘那一端的事。
+            for segment in reading.get("fullSegments") or reading.get("segments", []):
                 text = segment.get("displayText") or segment.get("sourceText") or ""
                 for index, sentence in enumerate(split_sentences(text), start=1):
                     yield {

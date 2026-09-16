@@ -254,14 +254,14 @@ def select(by_lesson: dict[int, list[dict]], pool: list[dict]) -> tuple[list[dic
         lesson_keys = lesson_key_sets[lesson]
         half = lesson_half(lesson)
 
-        def collect(restrict_to_half: bool) -> list[tuple[dict, dict]]:
+        def collect(restrict_to_half: bool, require_vocab: bool = True) -> list[tuple[dict, dict]]:
             rows = []
             for candidate in pool:
                 if candidate["ref"] in used_refs or candidate["text"] in used_texts:
                     continue
                 if restrict_to_half and candidate["half"] != half:
                     continue
-                if not candidate["keys"] & lesson_keys:
+                if require_vocab and not candidate["keys"] & lesson_keys:
                     continue
                 candidate["_lesson"] = lesson
                 rows.append((score(candidate, lesson_keys, known_keys), candidate))
@@ -274,6 +274,16 @@ def select(by_lesson: dict[int, list[dict]], pool: list[dict]) -> tuple[list[dic
         # is the case: its twenty words are γάλα, ἰχθύς, χοῖρος and the like,
         # which the canons and hymns simply never use.
         widened = collect(False) if len(scored) < PER_LESSON else []
+        # 第三層放寬：連全冊都湊不出含本課生詞的句子時，收下不含生詞的好句。
+        # 讀文改成節錄之後（每篇上限 800 詞），候選池從全文縮到三萬詞，第 37、41、
+        # 42、43 課——都是教規彙編——就湊不滿兩句了。擁有者 2026-09-16 裁定放寬
+        # 背誦句規則，而不是為這幾課把讀文加長。
+        # 🚨 收下的句子一律標 vocabularyMatch: false。「這一句不含本課生詞」如果
+        # 不標出來，往後沒有人能分辨哪幾課的背誦與生詞是脫鉤的。
+        # 🚨 不能用「候選數不足」當觸發條件。候選數夠、但那幾句的文字已經被前面的
+        # 課取走，取用時照樣濾掉——第 41、42、43 課就是這樣，明明有候選卻湊不滿，
+        # 而且完全不會觸發放寬。備好就好，取用迴圈取滿兩句自然就不會用到它。
+        loosened = collect(False, False)
         review_rows.append(
             {
                 "lesson": lesson,
@@ -286,7 +296,7 @@ def select(by_lesson: dict[int, list[dict]], pool: list[dict]) -> tuple[list[dic
         )
 
         taken = 0
-        for sentence_score, candidate in scored + widened:
+        for sentence_score, candidate in scored + widened + loosened:
             if taken >= PER_LESSON:
                 break
             if candidate["text"] in used_texts:
@@ -311,6 +321,12 @@ def select(by_lesson: dict[int, list[dict]], pool: list[dict]) -> tuple[list[dic
                     "text": candidate["text"],
                     "translationZh": "",
                     "reviewStatus": "pending_human_review",
+                    "vocabularyMatch": bool(candidate["keys"] & lesson_keys),
+                    "vocabularyExceptionNote": (
+                        ""
+                        if candidate["keys"] & lesson_keys
+                        else "全冊都湊不出含本課生詞的句子，改收不含生詞的句子並標明。"
+                    ),
                     "halfException": off_half,
                     "halfExceptionNote": (
                         f"本課所屬的{half}語料湊不出第二句（本課生詞在該語料未出現），"

@@ -56,7 +56,18 @@ SUPERSEDED_NAMES = {
     "latin-original-reader-sample.docx",
     "original-reader-vocabulary-inspect.ndjson",
     "original-reader-vocabulary-master.xlsx.inspect.ndjson",
+    # 2026-09-17：教父半部改成節錄後，希臘從六冊收成四冊（build_greek_full_reader.PARTS）。
+    # 🚨 第五、六冊在本機刪掉就沒了，Drive 上卻還躺著——使用者翻到的是一本已經
+    # 不存在的冊次，而且它自己看起來完全正常。
+    "greek-original-reader-vol5.docx",
+    "greek-original-reader-vol5.pdf",
+    "greek-original-reader-vol5-spine.pdf",
+    "greek-original-reader-vol6.docx",
+    "greek-original-reader-vol6.pdf",
+    "greek-original-reader-vol6-spine.pdf",
 }
+# 2026-09-16 書背改走課程讀本那一套版式，舊的裸書背 SVG 全部作廢。
+SUPERSEDED_SUFFIXES = ("-spine.svg",)
 SUPERSEDED_DIRS = {"rebuild-v2", "rebuild-v3"}
 
 
@@ -121,6 +132,13 @@ def retire(write: bool) -> int:
             if write:
                 attic.mkdir(parents=True, exist_ok=True)
                 shutil.move(str(source), str(attic / name))
+        for source in sorted(folder.glob("*")):
+            if source.is_file() and source.name.endswith(SUPERSEDED_SUFFIXES):
+                moved += 1
+                print(f"  作廢：{source}")
+                if write:
+                    attic.mkdir(parents=True, exist_ok=True)
+                    shutil.move(str(source), str(attic / source.name))
         for name in sorted(SUPERSEDED_DIRS):
             source = folder / name
             if not source.is_dir():

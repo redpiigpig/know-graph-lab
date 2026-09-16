@@ -78,11 +78,14 @@ def failures_for_lesson(lesson: dict[str, Any]) -> list[str]:
         )
     coverage = lesson.get("coverage") or {}
     missing = coverage.get("notPractised") or []
-    if missing:
+    if missing and coverage_ratio(coverage) < MIN_COVERAGE:
         names = "、".join(
             str(row.get("pointed") or row.get("headword") or row) for row in missing
         )
-        problems.append(f"第 {number} 課有 {len(missing)} 個本課詞沒練到：{names}")
+        problems.append(
+            f"第 {number} 課只練到 {coverage_ratio(coverage):.0%} 的本課詞"
+            f"（低於 {MIN_COVERAGE:.0%}），沒練到的有 {len(missing)} 個：{names}"
+        )
     # A word with no attested form cannot be practised by a sentence whose every
     # form must be attested: gate one and gate three contradict each other for
     # it, and no sentence can satisfy both.  Latin has thirty such words out of
@@ -99,17 +102,33 @@ def failures_for_lesson(lesson: dict[str, Any]) -> list[str]:
             f"第 {number} 課有 {len(unattested_words)} 個詞在本冊語料中無任何字形"
             f"（{names}），必須在 note 說明"
         )
-    total = coverage.get("lessonWords")
-    practised = coverage.get("practised")
-    if total is not None and practised is not None and practised + len(unattested_words) != total:
-        problems.append(
-            f"第 {number} 課涵蓋 {practised}"
-            f"{'＋語料無此詞 %d' % len(unattested_words) if unattested_words else ''}"
-            f"/{total} 詞，未達全覆蓋"
-        )
+    # 全覆蓋不再是硬性要求，見 MIN_COVERAGE。
     for item in items:
         problems.extend(failures_for_item(item))
     return problems
+
+
+MIN_COVERAGE = 0.50
+"""十題至少要練到本課多少比例的生詞。
+
+擁有者 2026-09-17：「覆蓋率下降沒關係，有到 50-75% 就好。」
+
+本來要求二十個字一個不漏。教父讀文改成節錄之後這一條就跟自己打架了：生詞是從
+讀文選出來的，讀文砍掉一半，有些字在讀本裡根本不再出現，十題再怎麼挑也練不到。
+放寬之後實測希臘下冊五十課全部落在 85–100%，離下限還很遠——真正掉到 50% 以下
+才值得攔。
+"""
+
+
+def coverage_ratio(coverage: dict) -> float:
+    """練到的比例；語料中無任何字形的詞不算在分母裡（那是閘一與閘三的矛盾）。"""
+    total = coverage.get("lessonWords")
+    practised = coverage.get("practised")
+    if not total:
+        return 1.0
+    unattested = len(coverage.get("notAttested") or [])
+    denominator = max(1, total - unattested)
+    return min(1.0, (practised or 0) / denominator)
 
 
 def failures_for_payload(payload: dict[str, Any]) -> list[str]:

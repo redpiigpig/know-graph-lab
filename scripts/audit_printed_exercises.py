@@ -47,10 +47,9 @@ BOOKS: dict[str, list[tuple[str, str, range, int]]] = {
     "grc": [
         ("greek-original-reader-vol1", "greek-full/exercise-set-v1.json", range(1, 25), 0),
         ("greek-original-reader-vol2", "greek-full/exercise-set-v1.json", range(25, 51), 0),
-        ("greek-original-reader-vol3", "greek-full/exercise-set-v2.json", range(1, 14), 0),
-        ("greek-original-reader-vol4", "greek-full/exercise-set-v2.json", range(14, 32), 0),
-        ("greek-original-reader-vol5", "greek-full/exercise-set-v2.json", range(32, 46), 0),
-        ("greek-original-reader-vol6", "greek-full/exercise-set-v2.json", range(46, 51), 0),
+        # 教父半部改節錄後從四冊收成兩冊，見 build_greek_full_reader.PARTS。
+        ("greek-original-reader-vol3", "greek-full/exercise-set-v2.json", range(1, 32), 0),
+        ("greek-original-reader-vol4", "greek-full/exercise-set-v2.json", range(32, 51), 0),
     ],
     "lat": [
         ("latin-original-reader-vol1", "latin-full/exercise-set-v1.json", range(1, 51), 0),

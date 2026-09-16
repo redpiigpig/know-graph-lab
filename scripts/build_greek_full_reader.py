@@ -512,15 +512,16 @@ def add_latin_and_cjk(paragraph, text: str, size: float, *, color=MUTED) -> None
 # 過頭。冊數是這樣挑的：同一種語言的各冊要差不多厚，所以前半 524 頁切 2、後半
 # 1187 頁切 4，六冊落在 264–304 頁，而不是 2+3 的 264–409。頁數是 2026-09-08
 # 版面的實測值。
+# 教父半部改成節錄（每篇上限 800 詞）之後，那五十課從 1,208 頁降到 711 頁，
+# 原本的四冊就只用到三百頁上下——上限是 500。收成兩冊。
+# 新約半部 549 頁，合成一冊會超過上限，維持兩冊。
 PARTS = [
-    {"book": 1, "source": 1, "first": 1, "last": 24, "appendix": False},   # 約 264 頁
-    {"book": 2, "source": 1, "first": 25, "last": 50, "appendix": True},   # 約 267 頁
-    {"book": 3, "source": 2, "first": 1, "last": 13, "appendix": False},   # 約 301 頁
-    {"book": 4, "source": 2, "first": 14, "last": 31, "appendix": False},  # 約 303 頁
-    {"book": 5, "source": 2, "first": 32, "last": 45, "appendix": False},  # 約 304 頁
-    {"book": 6, "source": 2, "first": 46, "last": 50, "appendix": True},   # 約 298 頁
+    {"book": 1, "source": 1, "first": 1, "last": 24, "appendix": False},   # 約 271 頁
+    {"book": 2, "source": 1, "first": 25, "last": 50, "appendix": True},   # 約 278 頁
+    {"book": 3, "source": 2, "first": 1, "last": 31, "appendix": False},   # 約 349 頁
+    {"book": 4, "source": 2, "first": 32, "last": 50, "appendix": True},   # 約 362 頁
 ]
-BOOK_LABELS = ("第一冊", "第二冊", "第三冊", "第四冊", "第五冊", "第六冊")
+BOOK_LABELS = ("第一冊", "第二冊", "第三冊", "第四冊")
 
 COVER_GREEK = {
     1: "Ἡ ΚΑΙΝΗ ΔΙΑΘΗΚΗ",

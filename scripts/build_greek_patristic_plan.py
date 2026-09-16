@@ -18,6 +18,7 @@ from __future__ import annotations
 
 import argparse
 import json
+from collections import OrderedDict
 import re
 import sys
 import unicodedata
@@ -481,6 +482,47 @@ def load(spec: dict) -> tuple[list[src.Segment], dict]:
     raise ValueError(f"unknown loader {kind}")
 
 
+READING_WORD_LIMIT = 800
+"""一篇讀文的篇幅上限（詞）。
+
+擁有者 2026-09-16：「大約抓個 500-800 字左右就好」「但要是自然段落的選集喔，
+不要是語意沒講完就中斷」。所以裁的單位是**篇章**，不是詞數——從篇首連續取整章，
+取到再加一章就會超過上限為止。這樣讀者拿到的一定是從頭讀起的完整幾章，而不是
+一段從半途開始、又在半途斷掉的文字。
+"""
+
+
+def clip_to_limit(spec: dict, segments: list) -> tuple[list, str, str]:
+    """超過上限就從篇首連續取整章；回傳（段落、完整度、範圍）。
+
+    🚨 裁完一定要把 completeness 改成 excerpt、extent 寫出實際範圍。這一系列的
+    停止條件之一就是「宣告為全篇的讀文其實是節錄」——裁了卻仍標「全篇」，書上
+    看起來一切正常，而讀者以為自己讀完了一整篇。
+    """
+    words = sum(len(segment.text.split()) for segment in segments)
+    if words <= READING_WORD_LIMIT:
+        return segments, spec["completeness"], spec.get("extent", "全篇")
+
+    chapters: "OrderedDict[str, list]" = OrderedDict()
+    for segment in segments:
+        chapters.setdefault((segment.ref or "").split(".")[0] or "0", []).append(segment)
+
+    kept: list[tuple[str, list]] = []
+    running = 0
+    for key, group in chapters.items():
+        size = sum(len(x.text.split()) for x in group)
+        # 第一章就超過上限時仍然收下：寧可長一點，也不要交出半章。
+        if kept and running + size > READING_WORD_LIMIT:
+            break
+        kept.append((key, group))
+        running += size
+
+    picked = [segment for _, group in kept for segment in group]
+    first, last = kept[0][0], kept[-1][0]
+    span = f"第 {first} 章" if first == last else f"第 {first}–{last} 章"
+    return picked, "excerpt", f"{span}（全篇 {len(chapters)} 章）"
+
+
 def build() -> dict:
     if len(READINGS) != READING_COUNT:
         raise ValueError(f"讀文應為 {READING_COUNT} 篇，實得 {len(READINGS)}")
@@ -506,6 +548,12 @@ def build() -> dict:
                 f"{spec['titleZh']}：{words} 詞不在預期的 {low}–{high} 詞範圍，"
                 "多半是段落邊界抓錯"
             )
+        # 🚨 全文要留著。節選決定的是「讀者讀到什麼」，不是「這個字形是不是真的
+        # 希臘文」。兩者混成同一份檔案之後，語料驗證的池子跟著縮水一半，自撰練習
+        # 題裡四十二個本來合法的字形被判成「語料中查無此形」。
+        full_segments = list(segments)
+        segments, completeness, extent = clip_to_limit(spec, segments)
+        words = sum(len(segment.text.split()) for segment in segments)
         reading = {
             "ordinal": index + 1,
             "volume": VOLUME,
@@ -515,10 +563,14 @@ def build() -> dict:
             "titleZh": spec["titleZh"],
             "titleGrc": spec["titleGrc"],
             "author": spec["author"],
-            "completeness": spec["completeness"],
-            "extent": spec.get("extent", "全篇"),
+            "completeness": completeness,
+            "extent": extent,
             "difficulty": spec["difficulty"],
             "learningGoals": spec["goals"],
+            "fullSegments": [
+                {"ref": segment.ref, "sourceText": segment.text, "displayText": nfc(segment.text)}
+                for segment in full_segments
+            ],
             "segmentCount": len(segments),
             "wordCount": words,
             "translationPlan": "self-translated",

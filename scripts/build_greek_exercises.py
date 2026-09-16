@@ -253,7 +253,22 @@ def nt_units() -> Iterator[CorpusUnit]:
             )
 
 
-def tagged_units(corpus: str) -> Iterator[CorpusUnit]:
+def printed_segment_refs() -> set[str]:
+    """讀本實際印出來的教父段落（「篇序號:段ref」）。"""
+    if not READER.exists():
+        return set()
+    data = json.loads(READER.read_text(encoding="utf-8"))
+    refs: set[str] = set()
+    for volume in data.get("volumes", []):
+        for lesson in volume.get("lessons", []):
+            reading = lesson.get("reading") or {}
+            ordinal = reading.get("ordinal")
+            for segment in reading.get("segments", []) or []:
+                refs.add(f"{ordinal}:{segment.get('ref')}")
+    return refs
+
+
+def tagged_units(corpus: str, printed_only: bool = False) -> Iterator[CorpusUnit]:
     """七十士與教父：讀 build_greek_lemma_corpus.py 產出的詞位標記語料。"""
     path = CORPUS_OUTPUT[corpus]
     if not path.exists():
@@ -261,7 +276,16 @@ def tagged_units(corpus: str) -> Iterator[CorpusUnit]:
             f"缺少 {path.name}；先跑 build_greek_lemma_corpus.py --corpus {corpus} --write"
         )
     payload = json.loads(path.read_text(encoding="utf-8"))
+    printed = printed_segment_refs() if printed_only else None
     for unit in payload["units"]:
+        # 🚨 只有挖引錨時才過濾。引錨要引讀者讀得到的句子，但**語料驗證要看全文**
+        # ——「這個字形是不是真的希臘文」跟「讀本印了哪幾章」是兩回事。一開始我把
+        # 過濾寫死在這裡，assemble 的驗證跟著縮水，四十二個本來合法的自撰字形被判
+        # 成「語料中查無此形」，其中 συνέχοντος 就在被砍掉的那幾章裡。
+        if printed is not None and unit.get("source") == "patristic-plan":
+            key = unit["ref"].split("patristic-plan:", 1)[1].rsplit("#", 1)[0]
+            if key not in printed:
+                continue
         yield CorpusUnit(
             ref=unit["ref"],
             corpus=corpus,
@@ -289,10 +313,12 @@ VOLUME_HALVES = {
 }
 
 
-def load_units(names: Sequence[str]) -> list[CorpusUnit]:
+def load_units(names: Sequence[str], printed_only: bool = False) -> list[CorpusUnit]:
+    """語料單位。`printed_only` 只給挖引錨用；驗證一律拿全語料。"""
     units: list[CorpusUnit] = []
     for name in names:
-        units.extend(nt_units() if name == "new-testament" else tagged_units(name))
+        units.extend(nt_units() if name == "new-testament"
+                     else tagged_units(name, printed_only=printed_only))
     return units
 
 
@@ -489,7 +515,7 @@ def item_record(index: int, scored: Scored) -> dict[str, Any]:
 
 def build(volume: int, allow_unresolved: bool) -> dict[str, Any]:
     vocabulary = load_vocabulary()
-    units = load_units(VOLUME_CORPORA[volume])
+    units = load_units(VOLUME_CORPORA[volume], printed_only=True)
     pool, rejected = build_candidates(units)
 
     lessons_out: list[dict[str, Any]] = []
