@@ -33,6 +33,7 @@ from __future__ import annotations
 import json
 import subprocess
 import sys
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -140,7 +141,13 @@ def step_ocr(bid: str, engine: str = "gemini") -> str:
                       "--book", bid, "--staging"])
         if (CHUNKS_DIR / f"{bid}.jsonl.new").exists():
             return "staged"
-        return "fail"          # 含 rc==2（幻覺擋下）與 rc==1（這本讀不了）
+        # 🚨 exit 3 ＝環境問題（DNS／網路／Supabase／Drive／MinerU 自己掛了），
+        #    不是這本書的失敗。2026-09-16 踩過：第一版把所有非 staged 都當成
+        #    書的失敗，一次短暫斷網在幾秒內把 30 本標成 ocr_failed、佇列整個燒掉。
+        #    Gemini 那一路本來就有這道分辨（見下），MinerU 這路當初漏了。
+        if rc == 3:
+            return "env"
+        return "fail"          # rc==1 這本讀不了、rc==2 重複幻覺被擋下
 
     rc = run_cmd([PY, str(SCRIPTS / "ocr_with_gemini.py"), "run",
                   "--book", bid, "--staging"])
@@ -280,13 +287,33 @@ def cmd_run(limit: int, tier: str, engine: str = "gemini",
         print("⛔ 待處理 0 本 —— 先確認清單來源對不對，不要當成「跑完了」")
         return
     done = 0
+    # 斷路器：離開碼有可能判不準，但「連續幾本都在幾秒內失敗」本身就說明
+    # 不是書的問題。一本幾百頁的書正常要跑好幾分鐘，秒殺只會是環境壞了。
+    fast_fails = 0
     for b in todo:
         if done >= limit:
             break
         print(f"\n▶ {b['id']}  {(b.get('title') or '')[:40]}", flush=True)
+        t0 = time.time()
         final = process_book(led, b["id"], b.get("title") or "", engine)
-        if final == "pending":   # quota — 全場停
+        elapsed = time.time() - t0
+
+        if final == "pending":   # quota / 環境錯 — 全場停
             break
+
+        if final == "ocr_failed" and elapsed < 30:
+            fast_fails += 1
+            if fast_fails >= 3:
+                print(f"\n⛔ 連續 {fast_fails} 本在 30 秒內失敗 —— 這不像書的問題，"
+                      f"整場停下。把它們退回 pending，修好環境再跑：")
+                for x in todo[max(0, todo.index(b) - fast_fails + 1):todo.index(b) + 1]:
+                    if led.get(x["id"], {}).get("state") == "ocr_failed":
+                        led[x["id"]]["state"] = "pending"
+                        print(f"     退回 pending：{(x.get('title') or x['id'])[:40]}")
+                save_ledger(led)
+                break
+        else:
+            fast_fails = 0
         done += 1
     print("\nledger →", LEDGER)
 

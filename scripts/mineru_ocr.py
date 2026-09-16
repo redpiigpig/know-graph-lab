@@ -25,6 +25,14 @@ p157 開頭一段 93 字的古文引文（司馬光論孔氏出妻）被搬到 p
     python scripts/mineru_ocr.py run --pdf <路徑> --out <輸出.jsonl>
     python scripts/mineru_ocr.py run --book <id> --staging   # 寫 .jsonl.new，不動 DB/R2
     python scripts/mineru_ocr.py check                       # 環境自檢
+
+離開碼（呼叫端要靠它分辨「這本書不行」和「環境壞了」）：
+    0  成功
+    1  這一本的問題（PDF 不存在、DB 沒這筆）—— 可以跳過繼續下一本
+    2  重複幻覺判準擋下來 —— 也是這一本的問題
+    3  🚨 環境問題（DNS／網路／Supabase 不通、MinerU 自己掛了）——
+       **整場要停**，不可以當成書的失敗。2026-09-16 踩過：一次短暫斷網讓
+       `getaddrinfo failed`，30 本在幾秒內全被標成 ocr_failed，佇列整個燒掉。
 """
 from __future__ import annotations
 
@@ -199,6 +207,20 @@ def cmd_check(args) -> int:
     return 0 if ok else 1
 
 
+ENV_SIGNS = ("getaddrinfo", "URLError", "ConnectionError", "Connection refused",
+             "Temporary failure", "timed out", "Max retries", "SSLError",
+             "Remote end closed", "Connection aborted")
+
+
+def looks_like_env_failure(msg: str) -> bool:
+    """這個錯是「環境壞了」還是「這本書不行」。
+
+    分錯的代價不對稱：把環境錯當成書的失敗，會在幾秒內燒掉整個佇列
+    （2026-09-16 實測 30 本）；反過來只是多停一次、下次再跑。所以寧可誤判成環境錯。
+    """
+    return any(s.lower() in (msg or "").lower() for s in ENV_SIGNS)
+
+
 def cmd_run(args) -> int:
     if args.pdf:
         pdf = Path(args.pdf)
@@ -213,7 +235,12 @@ def cmd_run(args) -> int:
         req = urllib.request.Request(
             f"{url}/rest/v1/ebooks?id=eq.{args.book}&select=id,title,file_path,total_pages",
             headers={"apikey": key, "Authorization": f"Bearer {key}"})
-        rows = json.loads(urllib.request.urlopen(req, timeout=30).read())
+        try:
+            rows = json.loads(urllib.request.urlopen(req, timeout=30).read())
+        except Exception as e:
+            # 查不到書名 ≠ 這本書壞了。DNS／連線問題要讓呼叫端整場停下來。
+            print(f"⛔ 查 DB 失敗：{str(e)[:160]}")
+            return 3 if looks_like_env_failure(str(e)) else 1
         if not rows:
             print(f"DB 查不到 {args.book}")
             return 1
@@ -224,12 +251,22 @@ def cmd_run(args) -> int:
         out_jsonl = CHUNKS_DIR / (f"{book_id}.jsonl.new" if args.staging else f"{book_id}.jsonl")
 
     if not pdf.exists():
-        print(f"找不到 PDF：{pdf}（G: 沒掛？）")
+        # G: 整個不見了是環境問題（Drive 卡住），單一檔案不見才是這本的問題。
+        drive_root = Path(str(pdf.drive) + os.sep) if pdf.drive else None
+        if drive_root is not None and not drive_root.exists():
+            print(f"⛔ {pdf.drive} 掛不上 —— Drive 卡住了，先重啟 GoogleDriveFS")
+            return 3
+        print(f"找不到 PDF：{pdf}")
         return 1
 
-    with tempfile.TemporaryDirectory(prefix="mineru_") as td:
-        pages = run_mineru(pdf, Path(td), lang=args.lang, start=args.start, end=args.end)
-        chunks = to_chunks(pages, page_offset=(args.start or 0))
+    try:
+        with tempfile.TemporaryDirectory(prefix="mineru_") as td:
+            pages = run_mineru(pdf, Path(td), lang=args.lang, start=args.start, end=args.end)
+            chunks = to_chunks(pages, page_offset=(args.start or 0))
+    except Exception as e:
+        msg = str(e)
+        print(f"⛔ MinerU 執行失敗：{msg[:200]}")
+        return 3 if looks_like_env_failure(msg) else 1
 
     rep = quality_report(chunks)
     print(f"  頁數 {rep['pages']}　空白 {rep['blank_pages']}（{rep['blank_rate']:.1%}）"
