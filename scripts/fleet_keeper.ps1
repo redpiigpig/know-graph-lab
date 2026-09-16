@@ -258,4 +258,20 @@ Ensure 'panikkar-vedic' 'panikkar_auto' @('-X','utf8','scripts\panikkar_auto.py'
 # in the ledger (probe mode counts even 'dry' as seen), so relaunching never redoes work.
 $node = 'C:\Program Files\nodejs\node.exe'
 EnsureUntil 'zlib-probe' $node @('scripts\zlib_fetch.mjs','--probe','--list','output\zlib_wanted_all.jsonl','--max-tries','6000') 'ZLIB-PROBE-COMPLETE' $false
+
+# The three foreign-database lines (added 2026-09-17). They had been started by hand,
+# so they stayed dead whenever a run ended - CyberLeninka died on HTTP 521 and nobody
+# relaunched it. All three are resumable and cheap on memory (18-30 MB each; the RAM
+# hogs on this box are the LLM/OCR lanes), so the 30-min tick is the right mechanism.
+#
+# No completion marker yet on purpose: all three are nowhere near done (Unpaywall 12.2%,
+# CyberLeninka 4.8%, J-Stage text 18.1%), so a plain Ensure is right. When one gets
+# close, give it a marker and switch to EnsureUntil - do NOT leave a finished lane
+# relaunching every 30 min doing nothing ([[feedback_disable_finished_schedules]]).
+Ensure 'unpaywall-resolve' 'unpaywall_resolve' @('scripts\unpaywall_resolve.py','--resolve')
+Ensure 'cyberleninka-fetch' 'cyberleninka_harvest' @('scripts\cyberleninka_harvest.py','--fetch')
+# J-Stage PDFs are DONE (14,731/14,747 = 99.9%, finished 2026-09-17), so no fetch lane.
+# What is left is text extraction: 12,060 PDFs downloaded but not extracted. This is the
+# one line that needs NO network - the PDFs are on Drive - so it also runs on the commute.
+Ensure 'jstage-text' 'jstage_ibk_harvest --text' @('scripts\jstage_ibk_harvest.py','--text')
 Note "keeper tick done"

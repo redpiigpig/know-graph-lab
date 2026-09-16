@@ -30,6 +30,7 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 DRIVE = pathlib.Path("G:/我的雲端硬碟/資料/知識圖工作室")
 AIRITI_DIR = DRIVE / "研究資料" / "華藝期刊全文"
 CW_DIR = DRIVE / "全集"
+CORPUS = DRIVE / "_corpus"        # 外文電子資料庫各線的落地處（第四節）
 ZLIB_LEDGER = ROOT / "scripts/state/zlib_ledger.jsonl"
 ZLIB_WANTED = ROOT / "output/zlib_wanted_all.jsonl"
 ZLIB_DROP = ROOT / "z-lib"
@@ -411,6 +412,104 @@ def section_ocr(tasks: dict) -> None:
             warn(f"fleet_keeper 已 {age.total_seconds() / 3600:.1f} 小時沒動作")
 
 
+def section_foreign_db() -> None:
+    """四、外文電子資料庫（2026-09-16 新接的三條線 + z-lib 探勘）。
+
+    🚨 一律印分母。這一頁存在的理由就是「看起來正常的失敗」——這三條線
+    2026-09-17 同時示範了三種：J-Stage 是真的跑完了、CyberLeninka 把被站方
+    擋住記成「這篇沒內容」、而 z-lib 的進度分母曾經拿「剩餘」去除。
+    """
+    print("\n━━ 四、外文電子資料庫 ━━━━━━━━━━━━━━━━━━━━━━━━━━")
+
+    # --- Unpaywall：Crossref 母體 → 查 OA → 下載
+    up = CORPUS / "unpaywall" / "resolved.jsonl"
+    cr = CORPUS / "crossref"
+    if up.exists():
+        n = sum(1 for _ in up.open(encoding="utf-8"))
+        tot = 452_459
+        print(f"  Unpaywall：已查 {n:,}／{tot:,}（{n / tot * 100:.1f}%）；已下載 0")
+        age = dt.datetime.now() - dt.datetime.fromtimestamp(up.stat().st_mtime)
+        if age.total_seconds() > 6 * 3600:
+            warn(f"Unpaywall resolve 已 {age.total_seconds() / 3600:.1f} 小時沒寫入")
+    else:
+        print("  Unpaywall：還沒開始")
+
+    # --- CyberLeninka：俄文 OA
+    cl_toc = CORPUS / "cyberleninka" / "toc.jsonl"
+    cl_txt = CORPUS / "cyberleninka" / "text"
+    cl_led = ROOT / "scripts/state/cyberleninka_ledger.jsonl"
+    if cl_toc.exists():
+        tot = sum(1 for _ in cl_toc.open(encoding="utf-8"))
+        got = len(list(cl_txt.glob("*.txt"))) if cl_txt.exists() else 0
+        print(f"  CyberLeninka：全文 {got:,}／篇目 {tot:,}（{got / tot * 100:.1f}%）")
+        if cl_led.exists():
+            c = collections.Counter()
+            for line in cl_led.read_text(encoding="utf-8").splitlines():
+                if line.strip():
+                    try:
+                        c[json.loads(line).get("status", "?")] += 1
+                    except ValueError:
+                        pass
+            print(f"    {dict(c)}")
+            # 🚨 status=thin 且 chars=0 是「被擋」不是「沒內容」，見 cyberleninka_harvest
+            #    的斷路器註解。舊帳本裡有 11,700 筆這種，別把它們當成已判定。
+            if c.get("thin"):
+                warn(f"CyberLeninka 帳本有 {c['thin']:,} 筆舊 thin（多是被擋誤記，"
+                     f"不是沒內容）；新版改記 no-body 並在連續 25 筆時停輪")
+
+    # --- J-Stage：日文佛學
+    js_toc = CORPUS / "jstage-ibk" / "toc.jsonl"
+    js_pdf = CORPUS / "jstage-ibk" / "pdf"
+    js_txt = CORPUS / "jstage-ibk" / "text"
+    if js_toc.exists():
+        tot = sum(1 for _ in js_toc.open(encoding="utf-8"))
+        npdf = len(list(js_pdf.glob("*.pdf"))) if js_pdf.exists() else 0
+        ntxt = len(list(js_txt.glob("*.txt"))) if js_txt.exists() else 0
+        print(f"  J-Stage：PDF {npdf:,}／{tot:,}（{npdf / tot * 100:.1f}%）"
+              f"、抽字 {ntxt:,}（{ntxt / tot * 100:.1f}%）")
+        if npdf - ntxt > 0:
+            print(f"    ↳ 待抽字 {npdf - ntxt:,} 篇（不吃網路，PDF 在 Drive 上就能跑）")
+
+    # --- z-lib 探勘：分母見 section_downloads 的註解
+    zl_led = ROOT / "scripts/state/zlib_ledger.jsonl"
+    if zl_led.exists() and ZLIB_WANTED.exists():
+        seen = set()
+        for line in zl_led.read_text(encoding="utf-8").splitlines():
+            if line.strip():
+                try:
+                    k = json.loads(line).get("key")
+                except ValueError:
+                    continue
+                if k:
+                    seen.add(k)
+        todo = []
+        for line in ZLIB_WANTED.read_text(encoding="utf-8").splitlines():
+            if line.strip():
+                k = json.loads(line).get("key")
+                if k:
+                    todo.append(k)
+        unprobed = sum(1 for k in todo if k not in seen)
+        print(f"  z-lib 探勘：清單 {len(todo):,}，其中還沒探的 {unprobed:,}"
+              f"（4 筆／分 → 約 {unprobed / 4 / 60:.1f} 小時）")
+
+    # --- keeper 有沒有在管這四條
+    fk = ROOT / "scripts/logs/fleet_keeper.log"
+    lanes = ("zlib-probe", "unpaywall-resolve", "cyberleninka-fetch", "jstage-text")
+    for lane in lanes:
+        pidf = ROOT / "scripts/state" / f"fleet_{lane}.pid"
+        paused = (ROOT / "scripts/state" / f"fleet_{lane}.pause").exists()
+        alive = "—"
+        if pidf.exists():
+            try:
+                alive = pidf.read_text(encoding="utf-8").strip()
+            except OSError:
+                pass
+        state = "已退場(pause)" if paused else f"pid {alive}"
+        print(f"    lane {lane:20} {state}")
+    if not fk.exists():
+        warn("fleet_keeper 還沒有日誌——這四條線沒人自動重拉")
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--author", help="併看某位全集作家（hub slug，如 mircea-eliade）")
@@ -425,11 +524,13 @@ def main() -> int:
             section_collected_works(a.author)
             section_downloads(tasks)
             section_ocr(tasks)
+            section_foreign_db()
     else:
         print(f"◆ 管線對帳 {dt.datetime.now():%Y-%m-%d %H:%M}\n")
         section_collected_works(a.author)
         section_downloads(tasks)
         section_ocr(tasks)
+        section_foreign_db()
 
     print("\n━━ 警訊 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
     if warnings:

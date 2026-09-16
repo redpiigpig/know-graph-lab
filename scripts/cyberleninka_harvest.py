@@ -61,6 +61,7 @@ PAGE = 100            # API 單次上限實測可到 100
 SEARCH_SLEEP = 0.8
 FETCH_SLEEP = 1.5     # 抓全文更客氣：這是別人免費開放的東西
 MIN_CHARS = 1000      # 低於此視為沒抽到全文
+BLOCK_STREAK = 25     # 連續這麼多篇抓不到正文容器就判定被擋、停止本輪
 # 相關度停止條件（見檔頭）
 MIN_HIT_RATE = 0.15   # 該頁標題／摘要含查詢詞的比例
 STOP_PAGES = 3        # 連續幾頁低於門檻就收工
@@ -231,7 +232,7 @@ def cmd_fetch(args) -> None:
     if args.limit:
         todo = todo[: args.limit]
     print(f"篇目 {len(toc):,}，已抽 {len(have):,}，本輪 {len(todo):,}")
-    ok = thin = miss = 0
+    ok = thin = miss = blocked = streak = 0
     with LEDGER.open("a", encoding="utf-8") as lg:
         for i, r in enumerate(todo, 1):
             h = get(SITE + r["link"])
@@ -247,6 +248,30 @@ def cmd_fetch(args) -> None:
             #    正文整個是 <p>，直接把容器之後的 <p> 全撈出來最穩。
             paras = [clean(x) for x in PARA.findall(m.group(1))] if m else []
             text = "\n\n".join(p for p in paras if p)
+            # 🚨 「找不到正文容器」不是「正文很短」。2026-09-17 抓到：帳本裡 11,700 筆
+            #    status=thin **每一筆 chars 都剛好是 0**（ok 那 1,989 筆是 1,456–221,358），
+            #    而同一輪的「成功」數卡在 999 不動、最後死在 HTTP 521。合起來就是站方在
+            #    約一千次請求後開始擋，而被擋的頁面沒有 articleBody 容器，於是全被記成
+            #    「這篇沒內容」——把抓取失敗寫成了內容判決。
+            #    分開記：沒容器／零字＝可重試的 no-body，有容器但字數不足才算 thin。
+            if m is None or not text:
+                blocked += 1
+                streak += 1
+                lg.write(json.dumps({"slug": r["slug"], "status": "no-body"},
+                                    ensure_ascii=False) + "\n")
+                lg.flush()
+                # 斷路器（同 [[feedback_ocr_strategy]] 連續兩次 quota 就退的道理）：
+                # 連續這麼多篇都沒正文容器，就不是「這些篇剛好沒全文」而是我們被擋了。
+                # 不停下來的話，一輪會白打一萬多次請求、淨得不到一千篇，還持續敲一個
+                # 已經在擋我們的站。停下來，下一輪再續（todo 是按 .txt 算的，不會漏）。
+                if streak >= BLOCK_STREAK:
+                    print(f"\n🚨 連續 {streak} 篇抓不到正文容器——判定被站方擋住，本輪停止。"
+                          f"\n   已成功 {ok:,}／本輪處理 {i:,}／帳本另記 no-body {blocked:,}。"
+                          f"\n   不是『這些篇沒全文』，下一輪會重試。", flush=True)
+                    break
+                time.sleep(FETCH_SLEEP)
+                continue
+            streak = 0
             if len(text) < MIN_CHARS:
                 thin += 1
                 lg.write(json.dumps({"slug": r["slug"], "status": "thin",
@@ -258,9 +283,9 @@ def cmd_fetch(args) -> None:
                                      "chars": len(text)}, ensure_ascii=False) + "\n")
             lg.flush()
             if i % 50 == 0:
-                print(f"   …{i}/{len(todo)}　成功 {ok}／薄 {thin}／缺 {miss}", flush=True)
+                print(f"   …{i}/{len(todo)}　成功 {ok}／薄 {thin}／缺 {miss}／無正文 {blocked}", flush=True)
             time.sleep(FETCH_SLEEP)
-    print(f"✓ 抽出 {ok:,} 篇（正文太薄 {thin}、頁面不在 {miss}）→ {TEXT_DIR}")
+    print(f"✓ 抽出 {ok:,} 篇（正文太薄 {thin}、頁面不在 {miss}、抓不到正文容器 {blocked}）→ {TEXT_DIR}")
 
 
 def cmd_status(args) -> None:
