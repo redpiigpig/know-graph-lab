@@ -582,6 +582,13 @@ MAX_OVERLAP = 1 / 3
 MAX_SAME_FILL = 0.4
 MIN_DISTINCT_FILL = 5
 MAX_SAME_TAIL = 0.4
+
+# 🚨 「結尾詞要分散」不套用在最前面幾課。那幾課的 20 個字全是代名詞與招呼語
+#（I、you、he、she、yes、no、hello、fine、sure、OK…），整課的重點就是操練
+# am／is／are，「I am fine. ／ He is fine. ／ We are fine.」重複結尾本來就是對的。
+# 硬套的結果是模型改用 Hi／OK／Hello 墊在句首湊變化，寫出「OK She is sorry.」
+# 「Hello We are fine.」這種句中大寫、根本不是英文的東西。
+DRILL_LESSONS = 5
 # 造句放到 2 是為了「Thank you.」「Good morning.」這類本來就兩個字的固定說法；
 # 重組要 3 個字以上（加標點就是 4 張牌），一兩個字的排列組合太少不成題目。
 MIN_TRANSLATE_TOKENS = 2
@@ -647,7 +654,8 @@ def validate_overlap(ex: dict) -> list[str]:
             errs.append(f"{label}有 {len(short)} 題不是完整句子（少於 {floor} 個字），"
                         f"例如「{short[0].get('ans')}」")
         tails = [w[-1].lower() for _x, w in words if w]
-        if len(tails) < 4:
+        # CURRENT_LESSON 為 0 代表「不知道是第幾課」，那就照常檢查，不要放行
+        if len(tails) < 4 or 0 < CURRENT_LESSON <= DRILL_LESSONS:
             continue
         word, hits = collections.Counter(tails).most_common(1)[0]
         if hits / len(tails) > MAX_SAME_TAIL:
@@ -982,6 +990,8 @@ def main():
             if not path.exists():
                 continue
             data = json.loads(path.read_text(encoding="utf-8"))
+            global CURRENT_LESSON
+            CURRENT_LESSON = lesson["no"]
             errs = (validate_intro(data) + validate_grammar(data)
                     + validate_exercises(data.get("exercises") or {}))
             done += 1

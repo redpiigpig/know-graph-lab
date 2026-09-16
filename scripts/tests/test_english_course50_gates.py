@@ -109,6 +109,24 @@ def test_fill_with_one_repeated_answer_is_rejected(gen):
     assert any("9/10 題答案都是「is」" in e for e in errs)
 
 
+def test_drill_lessons_are_exempt_from_tail_variety(gen):
+    """🚨 最前面幾課本來就該重複結尾。
+
+    那幾課的 20 個字全是代名詞與招呼語，整課的重點就是操練 am／is／are。
+    硬套「結尾詞要分散」的結果是模型用 Hi／OK／Hello 墊句首湊變化，
+    寫出「OK She is sorry.」「Hello We are fine.」這種句中大寫的東西。
+    """
+    ex = {"translate": [{"q": "中文", "ans": f"{s} fine."} for s in
+                        ("I am", "He is", "She is", "We are", "They are", "You are")]}
+    gen.CURRENT_LESSON = 1
+    try:
+        assert gen.validate_overlap(ex) == []
+        gen.CURRENT_LESSON = 20
+        assert any("都以「fine」結尾" in e for e in gen.validate_overlap(ex))
+    finally:
+        gen.CURRENT_LESSON = 0
+
+
 def test_translate_all_ending_in_same_word_is_rejected(gen):
     """重出的 L01 造句八題有七題是「X is fine.」，句型指紋看不出來（第二個字
     分散在 am/is/are），看結尾那個字才看得出來。"""
