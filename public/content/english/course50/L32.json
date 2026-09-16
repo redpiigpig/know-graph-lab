@@ -1,195 +1,174 @@
 {
-  "title_en": "Weather & Nature",
-  "title_zh": "天氣與自然",
-  "grammar": "What's the weather like? It's sunny.",
-  "intro_zh": "本課讓學生學會描述天氣與自然景觀，練習用「天氣怎麼樣？」來問答，並認識常見的自然詞彙。透過圖片與故事，學生能感受四季變化與自然的美麗。",
+  "title_en": "Exploring Weather and Nature",
+  "title_zh": "探索天氣與自然",
+  "intro_zh": "本課學習在世界上只有一個的事物前面加 the，例如 the sun、the moon、the earth。透過觀察天氣、季節與自然景象，學生能正確使用這個規則。並能描述自己看到的景色。",
   "can_do": [
-    "能用「天氣怎麼樣？」詢問天氣",
-    "能描述不同季節的自然景象",
-    "能說出課本中學到的自然詞彙"
+    "能說出 the sun、the moon、the earth 的正確用法。",
+    "能描述天氣與自然的簡單句子。",
+    "能閱讀短篇故事並找出其中的 the 結構。"
   ],
   "reading": {
-    "title_en": "A Day in Nature",
-    "title_zh": "一天的自然之旅",
+    "title_en": "A Day in the Countryside",
+    "title_zh": "鄉村裡的美好一天",
     "sentences": [
       {
-        "en": "We start our day at the sandy beach, feeling the warm wind blow.",
-        "zh": "我們一天從沙灘開始，感受溫暖的風吹拂。"
+        "en": "Lily lives in a small town near a hill and a lake.",
+        "zh": "莉莉住在山丘與湖泊附近的小鎮。"
       },
       {
-        "en": "The sun shines in the blue sky above us.",
-        "zh": "太陽照耀在我們頭上的藍天。"
+        "en": "Every morning she sees the sun rise over the hill.",
+        "zh": "每天早上她都看見太陽從山丘升起。"
       },
       {
-        "en": "We walk onto the soft grass and see many flowers.",
-        "zh": "我們踩在柔軟的草地上，看到許多花朵。"
+        "en": "The sun warms the air and makes the grass green.",
+        "zh": "陽光溫暖空氣，也讓草地變綠。"
       },
       {
-        "en": "A small hill rises nearby, perfect for a view.",
-        "zh": "不遠處有一座小山，適合觀賞風景。"
+        "en": "She walks to the lake and sees a river flowing into it.",
+        "zh": "她走到湖邊，看見一條河流進入湖中。"
       },
       {
-        "en": "Beyond the hill lies a calm lake where ducks swim.",
-        "zh": "小山後面是一個寧靜的湖，鴨子在裡面游泳。"
+        "en": "On the land beside the river there are many trees and a big mountain.",
+        "zh": "河邊的土地上有很多樹和一座大山。"
       },
       {
-        "en": "Past the lake, a tall mountain rises from the earth, covering the land.",
-        "zh": "湖的另一側，一座高山從土地上升起，覆蓋著大地。"
+        "en": "She picks a red rose and smells the flower.",
+        "zh": "她摘了一朵紅玫瑰，聞到花香。"
       },
       {
-        "en": "A river flows from the mountain down to the sea.",
-        "zh": "河流從山上流下，注入大海。"
+        "en": "She feels the wind blow and hears the leaves shake.",
+        "zh": "她感覺風在吹，也聽見葉子搖動。"
       },
       {
-        "en": "On an island in the sea, we discover a rose garden.",
-        "zh": "海中的一座島上，我們發現了一片玫瑰花園。"
+        "en": "When a typhoon comes, dark clouds hide the moon and the sun.",
+        "zh": "颱風來臨時，烏雲遮住了月亮和太陽。"
       },
       {
-        "en": "The fresh air fills our lungs as we rest under the trees.",
-        "zh": "清新的空氣充滿我們的肺部，我們在樹下休息。"
-      },
-      {
-        "en": "At night, the moon shines bright while we sit by a campfire, watching the ice melt in our drinks.",
-        "zh": "夜晚，月亮明亮照耀，我們圍坐在營火旁，看着飲料裡的冰慢慢融化。"
+        "en": "After the storm, a rainbow appears over the beach and children open their umbrellas.",
+        "zh": "雨後，彩虹出現在海灘上，孩子們打開雨傘。"
       }
     ]
   },
   "grammar_points": [
     {
-      "title_zh": "① What's the weather like? 詢問天氣",
-      "explain_zh": "使用 What's the weather like? 來問現在的天氣，答案用 It's + 天氣形容詞。",
+      "title_zh": "① a/an 與 the 的分工",
+      "explain_zh": "第一次提到不特定的事物用 a/an；第二次或以後已經知道是哪一個時用 the。",
       "table": [
         [
-          "問句",
-          "答句",
-          "天氣詞"
+          "使用時機",
+          "例句",
+          "中文"
         ],
         [
-          "What's the weather like?",
-          "It's sunny.",
-          "sunny"
+          "第一次提到，不特定",
+          "I see a flower.",
+          "我看見一朵花。"
         ],
         [
-          "What's the weather like?",
-          "It's cloudy.",
-          "cloudy"
-        ],
-        [
-          "What's the weather like?",
-          "It's rainy.",
-          "rainy"
-        ],
-        [
-          "What's the weather like?",
-          "It's windy.",
-          "windy"
-        ],
-        [
-          "What's the weather like?",
-          "It's snowy.",
-          "snowy"
-        ],
-        [
-          "What's the weather like?",
-          "It's hot.",
-          "hot"
-        ],
-        [
-          "What's the weather like?",
-          "It's cold.",
-          "cold"
+          "已經知道是哪一個",
+          "The flower is red.",
+          "這朵花是紅色的。"
         ]
       ]
     },
     {
-      "title_zh": "② 用副詞修飾天氣描述",
-      "explain_zh": "可以在 It's 前面加上 very、a little、really 等副詞，說明天氣的程度。",
+      "title_zh": "② 獨一無二的自然物加 the，專有名詞不加",
+      "explain_zh": "世界上只有一個的太陽、月亮、地球等前面要加 the；湖泊、山峰、島嶼等專有名詞則不加 the。",
       "examples": [
         {
-          "en": "It's very sunny today.",
-          "zh": "今天天氣非常晴朗。"
+          "en": "The sun rises in the morning.",
+          "zh": "太陽早上升起。"
         },
         {
-          "en": "It's a little cloudy.",
-          "zh": "天氣有點陰。"
+          "en": "The moon is round tonight.",
+          "zh": "今晚月亮是圓的。"
         },
         {
-          "en": "It's really windy.",
-          "zh": "天氣真的很風。"
+          "en": "We live on the earth.",
+          "zh": "我們住在地球上。"
         },
         {
-          "en": "It's quite cold.",
-          "zh": "天氣相当冷。"
+          "en": "Lake Sun Moon is beautiful.",
+          "zh": "日月潭很美。"
         },
         {
-          "en": "It's extremely hot.",
-          "zh": "天氣極其炎熱。"
+          "en": "Mount Jade is tall.",
+          "zh": "玉山很高。"
+        },
+        {
+          "en": "Green Island is small.",
+          "zh": "綠島很小。"
         }
       ]
     }
   ],
   "dialogue": {
-    "title_zh": "在操場上聊天氣",
+    "title_zh": "在公園聊天",
     "lines": [
       {
-        "sp": "小明",
-        "en": "What's the weather like?",
-        "zh": "今天天氣怎麼樣？"
+        "sp": "Anna",
+        "en": "I see a flower.",
+        "zh": "我看見一朵花。"
       },
       {
-        "sp": "小華",
-        "en": "It's sunny and warm.",
-        "zh": "今天天氣晴朗而且暖和。"
+        "sp": "Bob",
+        "en": "The flower is yellow.",
+        "zh": "這朵花是黃色的。"
       },
       {
-        "sp": "小明",
-        "en": "Let's go to the beach after school.",
-        "zh": "放學後我們去海灘吧。"
+        "sp": "Anna",
+        "en": "I see the sun.",
+        "zh": "我看見太陽。"
       },
       {
-        "sp": "小華",
-        "en": "Good idea! I love playing in the sand.",
-        "zh": "好主意！我喜歡在沙子裡玩。"
+        "sp": "Bob",
+        "en": "The sun is bright.",
+        "zh": "太陽很亮。"
       },
       {
-        "sp": "小明",
-        "en": "Don't forget your hat and sunscreen.",
-        "zh": "別忘了帶帽子和防曬乳。"
+        "sp": "Anna",
+        "en": "I hear the wind.",
+        "zh": "我聽見風聲。"
+      },
+      {
+        "sp": "Bob",
+        "en": "The wind is strong.",
+        "zh": "風很大。"
       }
     ]
   },
   "sentences": [
     {
-      "en": "The sun is shining in the blue sky.",
-      "zh": "太陽在藍天裡發光。"
+      "en": "I see a tree.",
+      "zh": "我看見一棵樹。"
     },
     {
-      "en": "We can see the moon at night.",
-      "zh": "我們晚上可以看到月亮。"
+      "en": "The tree is green.",
+      "zh": "這棵樹是綠色的。"
     },
     {
-      "en": "Children play on the grass near the beach.",
-      "zh": "孩子們在海灘附近的草地上玩耍。"
+      "en": "I see a lake.",
+      "zh": "我看見一個湖。"
     },
     {
-      "en": "A red rose grows in the garden.",
-      "zh": "一朵紅玫瑰在花園裡生長。"
+      "en": "The lake is calm.",
+      "zh": "這個湖很平靜。"
     },
     {
-      "en": "We climbed the hill and saw the lake below.",
-      "zh": "我們爬上小山，看見下面的湖泊。"
+      "en": "I see a hill.",
+      "zh": "我看見一座小山。"
     },
     {
-      "en": "The island is surrounded by the sea.",
-      "zh": "這個島被海洋環繞。"
+      "en": "The hill is high.",
+      "zh": "這座小山很高。"
     },
     {
-      "en": "Mountains are covered with trees and fresh air.",
-      "zh": "山上長滿樹木，空氣清新。"
+      "en": "I see a rainbow.",
+      "zh": "我看見一道彩虹。"
     },
     {
-      "en": "When the wind blows, the waves on the river move.",
-      "zh": "風吹時，河流的波浪會移動。"
+      "en": "The rainbow is colourful.",
+      "zh": "這道彩虹很美麗。"
     }
   ],
   "no": 32,
@@ -197,36 +176,20 @@
   "theme_zh": "天氣‧季節與自然",
   "words": [
     {
-      "en": "sun",
-      "zh": "太陽"
+      "en": "air",
+      "zh": "空氣"
     },
     {
-      "en": "sky",
-      "zh": "天空"
+      "en": "ice",
+      "zh": "冰"
     },
     {
       "en": "moon",
       "zh": "月亮"
     },
     {
-      "en": "beach",
-      "zh": "海灘"
-    },
-    {
-      "en": "flower",
-      "zh": "花"
-    },
-    {
-      "en": "grass",
-      "zh": "草地"
-    },
-    {
       "en": "hill",
       "zh": "小山"
-    },
-    {
-      "en": "island",
-      "zh": "島"
     },
     {
       "en": "lake",
@@ -237,18 +200,6 @@
       "zh": "陸地"
     },
     {
-      "en": "mountain",
-      "zh": "山"
-    },
-    {
-      "en": "river",
-      "zh": "河流"
-    },
-    {
-      "en": "sea",
-      "zh": "海洋"
-    },
-    {
       "en": "tree",
       "zh": "樹"
     },
@@ -257,429 +208,259 @@
       "zh": "玫瑰花"
     },
     {
-      "en": "air",
-      "zh": "空氣"
+      "en": "fire",
+      "zh": "火"
+    },
+    {
+      "en": "blow",
+      "zh": "刮風"
+    },
+    {
+      "en": "beach",
+      "zh": "海灘"
+    },
+    {
+      "en": "grass",
+      "zh": "草地"
+    },
+    {
+      "en": "river",
+      "zh": "河流"
     },
     {
       "en": "earth",
       "zh": "地球"
     },
     {
-      "en": "fire",
-      "zh": "火"
+      "en": "flower",
+      "zh": "花"
     },
     {
-      "en": "ice",
-      "zh": "冰"
+      "en": "island",
+      "zh": "島"
     },
     {
-      "en": "blow",
-      "zh": "刮風"
+      "en": "typhoon",
+      "zh": "颱風"
+    },
+    {
+      "en": "rainbow",
+      "zh": "彩虹"
+    },
+    {
+      "en": "umbrella",
+      "zh": "雨傘"
+    },
+    {
+      "en": "mountain",
+      "zh": "山"
     }
   ],
+  "focus": "定冠詞 the",
+  "grammar": "世界上獨一無二的東西前面加 the（the sun, the moon, the earth），專有名詞則不加。",
   "exercises": {
     "mcq": [
       {
-        "q": "花的英文是什麼?",
+        "q": "月亮",
         "opts": [
-          "flower",
-          "tree",
-          "grass",
-          "river"
-        ],
-        "ans": "flower"
-      },
-      {
-        "q": "山的英文是什麼?",
-        "opts": [
-          "mountain",
-          "river",
-          "sea",
+          "moon",
+          "lake",
+          "earth",
           "tree"
         ],
-        "ans": "mountain"
+        "ans": "moon"
       },
       {
-        "q": "海的英文是什麼?",
+        "q": "河流",
         "opts": [
-          "sea",
-          "lake",
           "river",
-          "island"
-        ],
-        "ans": "sea"
-      },
-      {
-        "q": "river 的中文是什麼?",
-        "opts": [
-          "河流",
-          "山",
-          "海",
-          "島"
-        ],
-        "ans": "河流"
-      },
-      {
-        "q": "mountain 的中文是什麼?",
-        "opts": [
-          "山",
-          "河流",
-          "海",
-          "島"
-        ],
-        "ans": "山"
-      },
-      {
-        "q": "flower 的中文是什麼?",
-        "opts": [
-          "花",
-          "樹",
-          "草",
-          "河"
-        ],
-        "ans": "花"
-      },
-      {
-        "q": "看中文選英文：樹",
-        "opts": [
-          "tree",
+          "ice",
           "flower",
+          "beach"
+        ],
+        "ans": "river"
+      },
+      {
+        "q": "樹木",
+        "opts": [
+          "hill",
+          "air",
           "grass",
-          "rose"
+          "tree"
         ],
         "ans": "tree"
       },
       {
-        "q": "看中文選英文：天空",
+        "q": "彩虹",
         "opts": [
-          "sky",
-          "sun",
-          "moon",
-          "earth"
+          "typhoon",
+          "rainbow",
+          "fire",
+          "umbrella"
         ],
-        "ans": "sky"
+        "ans": "rainbow"
       },
       {
-        "q": "看中文選英文：火",
+        "q": "___ sun rises in the east. (獨一無二的東西)",
         "opts": [
-          "fire",
-          "ice",
-          "air",
-          "earth"
+          "This",
+          "A",
+          "The",
+          "An"
         ],
-        "ans": "fire"
+        "ans": "The"
       },
       {
-        "q": "看中文選英文：冰",
+        "q": "___ Taiwan is an island. (專有名詞則不加)",
         "opts": [
-          "ice",
+          "The",
+          "None",
+          "A",
+          "An"
+        ],
+        "ans": "None"
+      },
+      {
+        "q": "冰 的英文是？",
+        "opts": [
+          "lake",
           "fire",
-          "air",
-          "earth"
+          "earth",
+          "ice"
         ],
         "ans": "ice"
       },
       {
-        "q": "今天天氣怎麼樣？它是___。",
+        "q": "草 的英文是？",
         "opts": [
-          "sun",
-          "sky",
-          "moon",
-          "sunny"
-        ],
-        "ans": "sunny"
-      },
-      {
-        "q": "外面的天氣如何？它是___。",
-        "opts": [
-          "sunny",
-          "sea",
-          "tree",
-          "flower"
-        ],
-        "ans": "sunny"
-      },
-      {
-        "q": "天氣狀況是什麼？它是___。",
-        "opts": [
-          "sunny",
-          "hill",
-          "island",
-          "lake"
-        ],
-        "ans": "sunny"
-      },
-      {
-        "q": "現在的天氣怎麼樣？它是___。",
-        "opts": [
-          "sunny",
-          "earth",
-          "air",
-          "fire"
-        ],
-        "ans": "sunny"
-      },
-      {
-        "q": "吹的英文是什麼？",
-        "opts": [
-          "blow",
-          "flower",
-          "tree",
-          "sea"
-        ],
-        "ans": "blow"
-      },
-      {
-        "q": "草的英文是什麼？",
-        "opts": [
+          "lake",
           "grass",
-          "flower",
-          "tree",
-          "sea"
+          "hill",
+          "rose"
         ],
         "ans": "grass"
       },
       {
-        "q": "島的英文是什麼？",
-        "opts": [
-          "island",
-          "ice",
-          "earth",
-          "air"
-        ],
-        "ans": "island"
-      },
-      {
-        "q": "湖的英文是什麼？",
-        "opts": [
-          "lake",
-          "land",
-          "hill",
-          "island"
-        ],
-        "ans": "lake"
-      },
-      {
-        "q": "陸地的英文是什麼？",
-        "opts": [
-          "land",
-          "lake",
-          "hill",
-          "island"
-        ],
-        "ans": "land"
-      },
-      {
-        "q": "山丘的英文是什麼？",
-        "opts": [
-          "hill",
-          "lake",
-          "land",
-          "island"
-        ],
-        "ans": "hill"
-      },
-      {
-        "q": "晴天時，你會在天空中看到什麼？",
-        "opts": [
-          "sun",
-          "moon",
-          "flower",
-          "beach"
-        ],
-        "ans": "sun"
-      },
-      {
-        "q": "晚上，你可能會看到什麼在天空中？",
-        "opts": [
-          "moon",
-          "sun",
-          "tree",
-          "grass"
-        ],
-        "ans": "moon"
-      },
-      {
-        "q": "如果你去海邊玩，你會踩在什麼上面？",
+        "q": "你想去哪裡玩水？",
         "opts": [
           "beach",
-          "mountain",
-          "river",
-          "lake"
+          "hill",
+          "tree",
+          "flower"
         ],
         "ans": "beach"
       },
       {
-        "q": "如果你想坐在公園裡的草地上，你會坐在什麼上面？",
+        "q": "Wind will ____ leaves. (動詞表示風吹動)",
         "opts": [
-          "grass",
-          "beach",
-          "mountain",
-          "lake"
-        ],
-        "ans": "grass"
-      },
-      {
-        "q": "你會在哪裡找到鹹水？",
-        "opts": [
-          "sea",
-          "lake",
-          "river",
-          "land"
-        ],
-        "ans": "sea"
-      },
-      {
-        "q": "你會在哪裡找到被陸地包圍的淡水？",
-        "opts": [
-          "lake",
-          "river",
-          "sea",
-          "island"
-        ],
-        "ans": "lake"
-      },
-      {
-        "q": "你會在哪裡找到被水完全包圍的陸地？",
-        "opts": [
-          "island",
-          "mountain",
-          "hill",
-          "beach"
-        ],
-        "ans": "island"
-      },
-      {
-        "q": "你會在哪裡找到最高的自然地形？",
-        "opts": [
-          "mountain",
-          "hill",
-          "beach",
-          "sea"
-        ],
-        "ans": "mountain"
-      },
-      {
-        "q": "你會在哪裡找到可以種植玫瑰的土壤？",
-        "opts": [
+          "rose",
           "earth",
-          "grass",
-          "beach",
-          "flower"
+          "blow",
+          "fire"
         ],
-        "ans": "earth"
-      },
-      {
-        "q": "你會用什麼來吹起風筝？",
-        "opts": [
-          "air",
-          "earth",
-          "fire",
-          "ice"
-        ],
-        "ans": "air"
+        "ans": "blow"
       }
     ],
     "fill": [
       {
-        "q": "This is a ____.（這是太陽）",
-        "ans": "sun"
+        "q": "I ____ a student.（我是學生）",
+        "ans": "am"
       },
       {
-        "q": "This is a ____.（這是天空）",
-        "ans": "sky"
+        "q": "The moon ____ in the sky.（月亮在天空裡）",
+        "ans": "is"
       },
       {
-        "q": "This is a ____.（這是月亮）",
-        "ans": "moon"
+        "q": "We ____ to the beach every summer.（我們每年夏天去海灘）",
+        "ans": "go"
       },
       {
-        "q": "This is a ____.（這是海灘）",
-        "ans": "beach"
+        "q": "The book is ____ the table.（書在桌子上）",
+        "ans": "on"
       },
       {
-        "q": "This is a ____.（這是花）",
-        "ans": "flower"
+        "q": "I have ____ apple.（我有一個蘋果）",
+        "ans": "an"
       },
       {
-        "q": "This is a ____.（這是草）",
-        "ans": "grass"
+        "q": "She ____ a red dress.（她有一件紅色的裙子）",
+        "ans": "has"
       },
       {
-        "q": "This is a ____.（這是山丘）",
-        "ans": "hill"
+        "q": "The flower is ____.（花是紅色的）",
+        "ans": "red"
       },
       {
-        "q": "This is a ____.（這是島嶼）",
-        "ans": "island"
+        "q": "____ is my brother.（他是我的兄弟）",
+        "ans": "He"
       },
       {
-        "q": "This is a ____.（這是湖泊）",
-        "ans": "lake"
+        "q": "I ____ the fire.（我吹火）",
+        "ans": "blow"
       },
       {
-        "q": "This is a ____.（這是土地）",
-        "ans": "land"
+        "q": "The water is ____.（水很冷）",
+        "ans": "cold"
       }
     ],
     "translate": [
       {
-        "q": "山是山。",
-        "ans": "The mountain is the mountain."
+        "q": "我是學生。",
+        "ans": "I am a student."
       },
       {
-        "q": "河是河。",
-        "ans": "The river is the river."
+        "q": "我有一個蘋果。",
+        "ans": "I have an apple."
       },
       {
-        "q": "海是海。",
-        "ans": "The sea is the sea."
+        "q": "她是我的朋友。",
+        "ans": "She is my friend."
       },
       {
-        "q": "樹是樹。",
-        "ans": "The tree is the tree."
+        "q": "我們去公園。",
+        "ans": "We go to the park."
       },
       {
-        "q": "玫瑰是玫瑰。",
-        "ans": "The rose is the rose."
+        "q": "貓在桌子上。",
+        "ans": "The cat is on the table."
       },
       {
-        "q": "空氣是空氣。",
-        "ans": "The air is the air."
+        "q": "花是紅色的。",
+        "ans": "The flower is red."
       },
       {
-        "q": "大地是大地。",
-        "ans": "The earth is the earth."
+        "q": "我吹火。",
+        "ans": "I blow the fire."
       },
       {
-        "q": "火是火。",
-        "ans": "The fire is the fire."
+        "q": "水很冷。",
+        "ans": "The water is cold."
       }
     ],
     "unscramble": [
       {
-        "q": "is / . / the / ice / ice / The",
-        "ans": "The ice is the ice."
+        "q": "is / . / a / rose / flower / The",
+        "ans": "The flower is a rose."
       },
       {
-        "q": "is / blow / . / blow / The / the",
-        "ans": "The blow is the blow."
+        "q": "island / . / is / The / land",
+        "ans": "The island is land."
       },
       {
-        "q": "the / hill / . / The / is / hill",
-        "ans": "The hill is the hill."
+        "q": ". / mountain / earth / is / The",
+        "ans": "The mountain is earth."
       },
       {
-        "q": "island / the / . / The / island / is",
-        "ans": "The island is the island."
+        "q": "the / . / blow / grass / We",
+        "ans": "We blow the grass."
       },
       {
-        "q": "lake / . / is / the / The / lake",
-        "ans": "The lake is the lake."
+        "q": "umbrella / She / an / has / .",
+        "ans": "She has an umbrella."
       },
       {
-        "q": ". / river / The / the / river / is",
-        "ans": "The river is the river."
+        "q": "is / The / . / typhoon / air",
+        "ans": "The typhoon is air."
       }
     ]
   },

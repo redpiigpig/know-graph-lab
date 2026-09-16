@@ -1,171 +1,167 @@
 {
   "title_en": "Feelings and Thoughts",
-  "title_zh": "探索心情與想法",
-  "grammar": "我們學習用 How do you feel? 和 I feel…because… 來表達感受與原因。",
-  "intro_zh": "在這堂課裡，我們會學習用英文說出自己的感受，並說明為什麼會有這種心情。透過生活情境，練習問答和描述，讓英語表達更自然吧。",
+  "title_zh": "感受與想法課程",
+  "intro_zh": "本課學習用 -ing 與 -ed 形容詞描述事物本身和個人感受，例如 boring 與 bored、exciting 與 excited，讓學生能正確說出心情與想法。",
   "can_do": [
-    "能用 How do you feel? 問別人的感受",
-    "能用 I feel…because… 說出自己的感受和原因",
-    "能在簡短對話中描述運動、興趣和習慣時使用本課單字"
+    "能用 -ing 形容詞描述事物的特徵",
+    "能用 -ed 形容詞說出自己的感受",
+    "能閱讀簡短故事並找出其中的感受詞"
   ],
   "reading": {
-    "title_en": "Game Day Feelings",
-    "title_zh": "比賽日的感受",
+    "title_en": "A Fun Sports Day",
+    "title_zh": "有趣的運動日",
     "sentences": [
       {
-        "en": "Today is Saturday, and Lily feels nervous because she has a baseball game.",
-        "zh": "今天是星期六，莉莉感到緊張，因為她有一場棒球比賽。"
+        "en": "The tennis match is exciting, and I am excited.",
+        "zh": "網球賽很令人興奮，我也很興奮。"
       },
       {
-        "en": "She warms up with her team, and they cheer each other.",
-        "zh": "她和隊友一起熱身，互相加油。"
+        "en": "Our team is polite and we cheer for each other.",
+        "zh": "我們的隊伍很有禮貌，互相加油。"
       },
       {
-        "en": "Lily is a polite player, and she always listens to her coach.",
-        "zh": "莉莉是個有禮貌的運動員，她總是聽從教練的指示。"
+        "en": "The baseball game looks funny, but I feel a little nervous.",
+        "zh": "棒球賽看起來很有趣，但我有點緊張。"
       },
       {
-        "en": "During the game, she feels shy when the crowd laughs at her funny mistake.",
-        "zh": "比賽進行時，當觀眾笑她的有趣錯誤時，莉莉感到害羞。"
+        "en": "Playing ball in the quiet gym makes me feel shy.",
+        "zh": "在安靜的體育館裡打球讓我感到害羞。"
       },
       {
-        "en": "But her friend Tom says, “Don’t worry, it’s just fun!” and gives her a ball.",
-        "zh": "但她的朋友湯姆說：「別擔心，這只是很有趣！」並給她一個球。"
+        "en": "I try to be careful when I throw the ball.",
+        "zh": "我投球時會盡量小心。"
       },
       {
-        "en": "After the game, they go to the park to play basketball and tennis for exercise.",
-        "zh": "比賽結束後，他們去公園打籃球和網球來運動。"
+        "en": "My hobby is art, and I like to draw pictures of sport.",
+        "zh": "我的嗜好是藝術，我喜歡畫運動的圖畫。"
       },
       {
-        "en": "Lily thinks sport is her hobby, and she makes it a habit to practice every week.",
-        "zh": "莉莉認為運動是她的嗜好，她養成每週練習的習慣。"
+        "en": "Drawing helps me relax, so I am not bored.",
+        "zh": "畫畫幫我放鬆，所以我不覺得無聊。"
       },
       {
-        "en": "Sometimes she feels bored when it rains, but she reads a quiet book to stay calm.",
-        "zh": "有時候下雨時她會感到無聊，但她會讀一本安靜的書來保持平靜。"
+        "en": "After practice, we talk about our habit of exercising and sometimes we have trouble finding the ball.",
+        "zh": "練習結束後，我們會聊運動的習慣，有時候會找不到球而感到麻煩。"
       },
       {
-        "en": "At the end of the day, Lily feels happy because she was careful and did her best.",
-        "zh": "一天結束時，莉莉感到開心，因為她很小心，並且盡力而為。"
+        "en": "The player feels bored.",
+        "zh": "該選手感到無聊。"
       },
       {
-        "en": "When Lily forgot her baseball glove, she was in trouble, but her teammate lent her one.",
-        "zh": "當莉莉忘記帶棒球手套時，她陷入麻煩，但隊友借給她一個。"
+        "en": "Watching the boring game is still fun for him.",
+        "zh": "即使觀看無聊的比賽，他仍然覺得很有趣。"
       }
     ]
   },
   "grammar_points": [
     {
-      "title_zh": "① How do you feel? – 用來問感覺",
-      "explain_zh": "用這個句型詢問對方現在的感受，答案通常是 I feel + 形容詞。",
+      "title_zh": "① -ing 與 -ed 形容詞對照表",
+      "explain_zh": "-ing 形容詞用來形容事物本身的特性，-ed 形容詞用來形容人的感受或反應。",
       "table": [
         [
-          "問句",
-          "回答結構",
-          "例句"
+          "-ing 形容詞",
+          "-ed 形容詞",
+          "中文說明"
         ],
         [
-          "How do you feel?",
-          "I feel + 形容詞。",
-          "I feel happy."
+          "boring",
+          "bored",
+          "無聊的 / 感到無聊"
         ],
         [
-          "How do you feel?",
-          "I feel + 形容詞。",
-          "I feel bored."
+          "exciting",
+          "excited",
+          "令人興奮的 / 感到興奮"
         ],
         [
-          "How do you feel?",
-          "I feel + 形容詞。",
-          "I feel nervous."
+          "interesting",
+          "interested",
+          "有趣的 / 感到有興趣"
         ]
       ]
     },
     {
-      "title_zh": "② I feel…because… – 說明感覺的原因",
-      "explain_zh": "在 I feel … 後面加 because + 原因句子，說明為什麼有這種感覺。",
+      "title_zh": "② 說人無聊要用 I am bored，說 I am boring 是『我很無趣』",
+      "explain_zh": "當想表達自己感到無聊時，用 bored；若說自己讓人覺得無聊，則用 boring。",
       "examples": [
         {
-          "en": "I feel excited because today we have a baseball game.",
-          "zh": "我感到興奮，因為今天我們有棒球賽。"
+          "en": "I am bored during the long lecture.",
+          "zh": "我在長長的講座裡感到無聊。"
         },
         {
-          "en": "I feel shy because I have to speak in front of the class.",
-          "zh": "我感到害羞，因為我必須在全班面前說話。"
-        },
-        {
-          "en": "I feel tired because I exercised for an hour.",
-          "zh": "我感到疲倦，因為我運動了一個小時。"
-        },
-        {
-          "en": "I feel happy because my team won the match.",
-          "zh": "我感到開心，因為我的隊伍贏得了比賽。"
+          "en": "He is boring because he never talks.",
+          "zh": "他很無趣，因為他從不說話。"
         }
       ]
     }
   ],
   "dialogue": {
-    "title_zh": "情境對話：準備棒球賽前的感覺",
+    "title_zh": "課間聊天：談論運動課",
     "lines": [
       {
-        "sp": "Amy",
-        "en": "How do you feel before the baseball game?",
-        "zh": "艾米，你在棒球賽前感覺怎麼樣？"
+        "sp": "小明",
+        "en": "The tennis match is exciting!",
+        "zh": "網球賽很令人興奮！"
       },
       {
-        "sp": "Jack",
-        "en": "I feel nervous because I am the player.",
-        "zh": "我感到緊張，因為我是運動員。"
+        "sp": "小華",
+        "en": "I am excited to watch it.",
+        "zh": "我很期待觀看。"
       },
       {
-        "sp": "Amy",
-        "en": "I feel excited because I get to cheer for the team.",
-        "zh": "我感到興奮，因為我可以為隊伍加油。"
+        "sp": "小明",
+        "en": "But the baseball practice is boring.",
+        "zh": "不過棒球練習很無聊。"
       },
       {
-        "sp": "Jack",
-        "en": "Do you feel shy when you stand in front of the crowd?",
-        "zh": "你站在人群前會感到害羞嗎？"
+        "sp": "小華",
+        "en": "I feel bored when we just throw the ball.",
+        "zh": "我只是投球時會感到無聊。"
       },
       {
-        "sp": "Amy",
-        "en": "A little, but I feel happy when we play sport together.",
-        "zh": "有一點，但我們一起做運動時我感到很開心。"
+        "sp": "小明",
+        "en": "Let's try something interesting after class.",
+        "zh": "下課後我們來試試有趣的事吧。"
+      },
+      {
+        "sp": "小華",
+        "en": "Sounds good! I will be interested.",
+        "zh": "好主意！我會感到有興趣。"
       }
     ]
   },
   "sentences": [
     {
-      "en": "How do you feel after school?",
-      "zh": "放學後你感覺怎麼樣？"
+      "en": "The movie is funny, and I am amused.",
+      "zh": "這部電影很有趣，我感到好笑。"
     },
     {
-      "en": "I feel bored because the lesson is too boring.",
-      "zh": "我感到無聊，因為課堂太無聊。"
+      "en": "Reading books is interesting; I am interested in stories.",
+      "zh": "看書很有趣，我對故事感到有興趣。"
     },
     {
-      "en": "She feels shy when she has to speak in front of the class.",
-      "zh": "她在全班面前說話時會感到害羞。"
+      "en": "The roller coaster is exciting; I am excited to ride it.",
+      "zh": "過山車很刺激，我很期待乘坐。"
     },
     {
-      "en": "He feels nervous before the tennis match.",
-      "zh": "他在網球賽前感到緊張。"
+      "en": "Waiting for the bus is boring, so I am bored.",
+      "zh": "等公車很無聊，所以我感到無聊。"
     },
     {
-      "en": "We feel excited because we get to play basketball, have fun, exercise our hobby, and practice our habit of teamwork.",
-      "zh": "我們感到興奮，因為我們可以打籃球、玩得開心、練習嗜好，並培養團隊合作的習慣。"
+      "en": "Painting pictures is fun; I am pleased when I create art.",
+      "zh": "畫畫很有趣，我創作藝術時感到開心。"
     },
     {
-      "en": "I feel troubled because I lost my ball, but it's funny to look for it.",
-      "zh": "我感到困擾，因為我遺失了球，但找球的過程很有趣。"
+      "en": "The math test was difficult; I am nervous about the results.",
+      "zh": "數學考試很難，我對結果感到緊張。"
     },
     {
-      "en": "She feels polite when she says thank you to her teacher.",
-      "zh": "她在對老師說謝謝時感到有禮貌。"
+      "en": "Listening to music is relaxing; I am calm while I listen.",
+      "zh": "聽音樂很放鬆，我聽時感到平靜。"
     },
     {
-      "en": "He feels careful when he crosses the busy street.",
-      "zh": "他在過繁忙的街道時感到小心。"
+      "en": "Playing soccer is tiring, but I am happy after the game.",
+      "zh": "踢足球很累，但比賽後我感到開心。"
     }
   ],
   "no": 38,
@@ -177,20 +173,12 @@
       "zh": "樂趣"
     },
     {
-      "en": "trouble",
-      "zh": "麻煩"
+      "en": "shy",
+      "zh": "害羞的"
     },
     {
       "en": "cheer",
       "zh": "加油"
-    },
-    {
-      "en": "boring",
-      "zh": "無聊的"
-    },
-    {
-      "en": "shy",
-      "zh": "害羞的"
     },
     {
       "en": "quiet",
@@ -201,8 +189,16 @@
       "zh": "有趣的"
     },
     {
+      "en": "boring",
+      "zh": "無聊的"
+    },
+    {
       "en": "polite",
       "zh": "有禮貌的"
+    },
+    {
+      "en": "trouble",
+      "zh": "麻煩"
     },
     {
       "en": "careful",
@@ -213,12 +209,20 @@
       "zh": "緊張的"
     },
     {
-      "en": "sport",
-      "zh": "體育活動"
+      "en": "art",
+      "zh": "藝術"
     },
     {
-      "en": "exercise",
-      "zh": "運動"
+      "en": "ball",
+      "zh": "球"
+    },
+    {
+      "en": "team",
+      "zh": "隊"
+    },
+    {
+      "en": "sport",
+      "zh": "體育活動"
     },
     {
       "en": "hobby",
@@ -229,18 +233,6 @@
       "zh": "習慣"
     },
     {
-      "en": "ball",
-      "zh": "球"
-    },
-    {
-      "en": "baseball",
-      "zh": "棒球"
-    },
-    {
-      "en": "basketball",
-      "zh": "籃球"
-    },
-    {
       "en": "tennis",
       "zh": "網球"
     },
@@ -249,413 +241,219 @@
       "zh": "運動員"
     },
     {
-      "en": "team",
-      "zh": "隊"
+      "en": "baseball",
+      "zh": "棒球"
+    },
+    {
+      "en": "exercise",
+      "zh": "運動"
     }
   ],
+  "focus": "-ing 與 -ed 形容詞",
+  "grammar": "-ing 形容詞形容「事物本身」，-ed 形容詞形容「人的感受」。",
   "exercises": {
     "mcq": [
       {
-        "q": "以下哪個單字的意思是 '害羞'?",
+        "q": "funny 的意思是？",
         "opts": [
+          "boring",
           "shy",
-          "fun",
-          "trouble",
-          "cheer"
-        ],
-        "ans": "shy"
-      },
-      {
-        "q": "以下哪個單字的意思是 '麻煩'?",
-        "opts": [
-          "trouble",
           "quiet",
-          "polite",
-          "careful"
+          "funny"
         ],
-        "ans": "trouble"
+        "ans": "funny"
       },
       {
-        "q": "以下哪個單字的意思是 '開心'?",
+        "q": "exercise 的意思是？",
         "opts": [
-          "cheer",
+          "hobby",
+          "team",
+          "exercise",
+          "sport"
+        ],
+        "ans": "exercise"
+      },
+      {
+        "q": "I feel ______. (我感到開心。)",
+        "opts": [
+          "nervous",
+          "cheered",
+          "shy",
+          "cheering"
+        ],
+        "ans": "cheered"
+      },
+      {
+        "q": "The exercise is ______. (這項練習很麻煩。)",
+        "opts": [
+          "quiet",
+          "troubled",
+          "careful",
+          "troubling"
+        ],
+        "ans": "troubling"
+      },
+      {
+        "q": "The game is ______ (這個遊戲很無聊。)",
+        "opts": [
+          "quiet",
+          "funny",
+          "boring",
+          "polite"
+        ],
+        "ans": "boring"
+      },
+      {
+        "q": "She feels ______ (她感到緊張。)",
+        "opts": [
           "nervous",
           "boring",
+          "quiet",
           "shy"
         ],
-        "ans": "cheer"
+        "ans": "nervous"
       },
       {
-        "q": "以下哪個單字的意思是 '無聊的'?",
+        "q": "The lesson is ______ (這堂課很有趣。)",
         "opts": [
+          "funny",
           "boring",
-          "funny",
-          "polite",
-          "quiet"
-        ],
-        "ans": "boring"
-      },
-      {
-        "q": "以下哪個單字的意思是 '有趣的'?",
-        "opts": [
-          "funny",
-          "shy",
-          "trouble",
-          "habit"
+          "exercise",
+          "shy"
         ],
         "ans": "funny"
       },
       {
-        "q": "以下哪個單字的意思是 '有禮貌的'?",
+        "q": "cheer 的意思是？",
         "opts": [
-          "polite",
-          "careful",
-          "nervous",
-          "sport"
-        ],
-        "ans": "polite"
-      },
-      {
-        "q": "以下哪個單字的意思是 '小心的'?",
-        "opts": [
-          "careful",
-          "quiet",
-          "fun",
-          "team"
-        ],
-        "ans": "careful"
-      },
-      {
-        "q": "以下哪個單字的意思是 '緊張的'?",
-        "opts": [
-          "nervous",
-          "hobby",
-          "ball",
-          "player"
-        ],
-        "ans": "nervous"
-      },
-      {
-        "q": "以下哪個單字的意思是 '鍛煉'?",
-        "opts": [
-          "exercise",
-          "sport",
-          "hobby",
-          "habit"
-        ],
-        "ans": "exercise"
-      },
-      {
-        "q": "以下哪個單字的意思是 '興趣'?",
-        "opts": [
-          "hobby",
-          "habit",
-          "team",
-          "player"
-        ],
-        "ans": "hobby"
-      },
-      {
-        "q": "I feel ___ because I play baseball every day.",
-        "opts": [
-          "nervous",
-          "funny",
-          "quiet",
-          "sport"
-        ],
-        "ans": "nervous"
-      },
-      {
-        "q": "I feel sad because I do not have my ball.",
-        "opts": [
-          "because",
-          "and",
-          "but",
-          "or"
-        ],
-        "ans": "because"
-      },
-      {
-        "q": "I like to ___ after school.",
-        "opts": [
-          "exercise",
-          "habit",
-          "hobby",
-          "trouble"
-        ],
-        "ans": "exercise"
-      },
-      {
-        "q": "The game was ___; I had fun.",
-        "opts": [
-          "funny",
-          "boring",
+          "cheer",
           "shy",
-          "polite"
-        ],
-        "ans": "funny"
-      },
-      {
-        "q": "She is very ___; she does not talk in class.",
-        "opts": [
           "quiet",
-          "nervous",
-          "careful",
-          "sport"
-        ],
-        "ans": "quiet"
-      },
-      {
-        "q": "He is always ___; he says thank you and please.",
-        "opts": [
-          "polite",
-          "shy",
-          "trouble",
-          "ball"
-        ],
-        "ans": "polite"
-      },
-      {
-        "q": "I felt ___ before the baseball game.",
-        "opts": [
-          "nervous",
-          "fun",
-          "exercise",
-          "team"
-        ],
-        "ans": "nervous"
-      },
-      {
-        "q": "A ___ throws the ball.",
-        "opts": [
-          "player",
-          "team",
-          "ball",
-          "sport"
-        ],
-        "ans": "player"
-      },
-      {
-        "q": "Our school has a good ___.",
-        "opts": [
-          "team",
-          "sport",
-          "hobby",
-          "habit"
-        ],
-        "ans": "team"
-      },
-      {
-        "q": "I have a hobby of playing baseball.",
-        "opts": [
-          "hobby",
-          "habit",
-          "trouble",
           "fun"
         ],
-        "ans": "hobby"
-      },
-      {
-        "q": "你今天看起來很___，因為你剛剛跑完步。",
-        "opts": [
-          "fun",
-          "trouble",
-          "shy",
-          "quiet"
-        ],
-        "ans": "fun"
-      },
-      {
-        "q": "當你忘記帶球時，你可能會感到___。",
-        "opts": [
-          "trouble",
-          "boring",
-          "shy",
-          "quiet"
-        ],
-        "ans": "trouble"
-      },
-      {
-        "q": "看見朋友笑，你會感到___。",
-        "opts": [
-          "cheer",
-          "boring",
-          "shy",
-          "quiet"
-        ],
         "ans": "cheer"
       },
       {
-        "q": "這堂課很___，我想睡覺。",
+        "q": "I feel ______. (我感到緊張。)",
         "opts": [
-          "boring",
           "fun",
-          "funny",
-          "polite"
-        ],
-        "ans": "boring"
-      },
-      {
-        "q": "他很___，不喜歡在眾人面前說話。",
-        "opts": [
-          "shy",
-          "quiet",
-          "polite",
-          "careful"
-        ],
-        "ans": "shy"
-      },
-      {
-        "q": "她在課堂上很___，老師喜歡她。",
-        "opts": [
-          "polite",
-          "funny",
           "nervous",
-          "trouble"
-        ],
-        "ans": "polite"
-      },
-      {
-        "q": "你過馬路時要___。",
-        "opts": [
-          "careful",
-          "boring",
           "shy",
           "quiet"
-        ],
-        "ans": "careful"
-      },
-      {
-        "q": "比賽前，我很___。",
-        "opts": [
-          "nervous",
-          "fun",
-          "cheer",
-          "polite"
         ],
         "ans": "nervous"
       },
       {
-        "q": "我每天都會___，以保持健康。",
-        "opts": [
-          "exercise",
-          "hobby",
-          "habit",
-          "sport"
-        ],
-        "ans": "exercise"
-      },
-      {
-        "q": "我喜歡和朋友一起打___。",
+        "q": "habit 的意思是？",
         "opts": [
           "ball",
-          "baseball",
-          "basketball",
-          "tennis"
+          "habit",
+          "art",
+          "hobby"
         ],
-        "ans": "baseball"
+        "ans": "habit"
       }
     ],
     "fill": [
       {
-        "q": "I feel ____.（因為我緊張）",
-        "ans": "nervous"
+        "q": "They play ____ every weekend.（他們每週末都打____。）",
+        "ans": "tennis"
       },
       {
-        "q": "I feel ____.（因為我害羞）",
-        "ans": "shy"
+        "q": "She is a ____ on the school team.（她是校隊的____。）",
+        "ans": "player"
       },
       {
-        "q": "I feel ____.（因為我安靜）",
-        "ans": "quiet"
+        "q": "Our ____ meets on Fridays.（我們的____在星期五開會。）",
+        "ans": "team"
       },
       {
-        "q": "I feel ____.（因為我有趣）",
+        "q": "The movie is ____。（這部電影很有趣。）",
         "ans": "funny"
       },
       {
-        "q": "I feel ____.（因為我有禮貌）",
-        "ans": "polite"
-      },
-      {
-        "q": "I feel ____.（因為我小心）",
-        "ans": "careful"
-      },
-      {
-        "q": "I feel ____.（因為我開心）",
-        "ans": "fun"
-      },
-      {
-        "q": "I feel ____.（因為我麻煩）",
-        "ans": "trouble"
-      },
-      {
-        "q": "I feel ____.（因為我高興）",
-        "ans": "cheer"
-      },
-      {
-        "q": "I feel ____.（因為我無聊）",
+        "q": "The lecture is ____。（這堂課很無聊。）",
         "ans": "boring"
+      },
+      {
+        "q": "They feel ____ before the exam.（他們考試前感到緊張。）",
+        "ans": "nervous"
+      },
+      {
+        "q": "I ____ to read books。（我喜歡看書。）",
+        "ans": "like"
+      },
+      {
+        "q": "They sing ____ .（他們唱得很好。）",
+        "ans": "well"
+      },
+      {
+        "q": "The ball is ____ the box.（球在盒子裡。）",
+        "ans": "in"
+      },
+      {
+        "q": "They are good ____ drawing.（他們畫畫很厲害。）",
+        "ans": "at"
       }
     ],
     "translate": [
       {
-        "q": "我感到緊張。",
-        "ans": "I feel nervous."
+        "q": "他很害羞。",
+        "ans": "He is shy."
       },
       {
-        "q": "我感到害羞。",
-        "ans": "I feel shy."
+        "q": "這項運動很有趣。",
+        "ans": "The sport is fun."
       },
       {
-        "q": "我感到安靜。",
-        "ans": "I feel quiet."
+        "q": "她很安靜。",
+        "ans": "She is quiet."
       },
       {
-        "q": "我感到有趣。",
-        "ans": "I feel funny."
+        "q": "他很有禮貌。",
+        "ans": "He is polite."
       },
       {
-        "q": "我感到有禮貌。",
-        "ans": "I feel polite."
+        "q": "他很小心。",
+        "ans": "He is careful."
       },
       {
-        "q": "我感到小心。",
-        "ans": "I feel careful."
+        "q": "他很緊張。",
+        "ans": "He is nervous."
       },
       {
-        "q": "我感到開心。",
-        "ans": "I feel fun."
+        "q": "他喜歡打網球。",
+        "ans": "He likes to play tennis."
       },
       {
-        "q": "我感到麻煩。",
-        "ans": "I feel trouble."
+        "q": "他們每天做運動。",
+        "ans": "They exercise every day."
       }
     ],
     "unscramble": [
       {
-        "q": "nervous / I / feel / .",
-        "ans": "I feel nervous."
+        "q": "sport / The / is / . / boring",
+        "ans": "The sport is boring."
       },
       {
-        "q": ". / shy / feel / I",
-        "ans": "I feel shy."
+        "q": ". / shy / are / They",
+        "ans": "They are shy."
       },
       {
-        "q": "feel / . / I / quiet",
-        "ans": "I feel quiet."
+        "q": "art / funny / . / The / is",
+        "ans": "The art is funny."
       },
       {
-        "q": "I / . / feel / funny",
-        "ans": "I feel funny."
+        "q": "We / . / are / quiet",
+        "ans": "We are quiet."
       },
       {
-        "q": "I / feel / . / polite",
-        "ans": "I feel polite."
+        "q": "You / are / . / polite",
+        "ans": "You are polite."
       },
       {
-        "q": ". / I / cheer / feel",
-        "ans": "I feel cheer."
+        "q": ". / She / careful / is",
+        "ans": "She is careful."
       }
     ]
   },

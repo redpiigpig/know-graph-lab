@@ -1,95 +1,104 @@
 {
-  "title_en": "Hello & Me",
+  "title_en": "Hello Me",
   "title_zh": "問候與自我介紹",
-  "grammar": "本課重點是 be 動詞 (am/is/are) 與人稱代名詞的基本用法。",
-  "intro_zh": "本課學習基本的問禮與自我介紹，透過簡單的對話練習使用 be 動詞與人稱代名詞，讓學生能夠用英文打招呼、說出自己的名字，並詢問對方的情況。",
+  "intro_zh": "本課將學習 be 動詞的肯定形（am/is/are）搭配人稱代名詞 I, you, he, she, it, we, they，說出自我狀態與問候語。",
   "can_do": [
-    "能以正確的 be 動詞說出 I am… / You are…",
-    "能以 hello, hi, please, sorry, thank you 等用語進行簡單問候與禮貌表達",
-    "能以短句介紹自己與他人的姓名與狀態"
+    "能用 am/is/are 與人稱代名詞造肯定句。",
+    "能以正確的問候語和自我介紹進行簡單對話。",
+    "能閱讀並理解含有 be 動詞的短篇故事。"
   ],
   "reading": {
-    "title_en": "Greetings and Introductions",
-    "title_zh": "問候與介紹",
+    "title_en": "A Friendly Day",
+    "title_zh": "友好的一天",
     "sentences": [
       {
-        "en": "Hello, hi! I am Mei.",
-        "zh": "你好，嗨！我是梅。"
+        "en": "Hi, I am fine and you are OK today.",
+        "zh": "今天，嗨，我很好，而且你也很好。"
       },
       {
-        "en": "You are in my class, and she is Lily, he is Tom.",
-        "zh": "你在我班裡，她是莉莉，他是湯姆。"
+        "en": "Hello, we are here because it is OK.",
+        "zh": "你好，我們在這裡因為這是可以的。"
       },
       {
-        "en": "It is a nice day, and we have a new book.",
-        "zh": "今天天氣很好，而且我們有一本新書。"
+        "en": "Please, I am fine.",
+        "zh": "請，我很好。"
       },
       {
-        "en": "Do you like it? Yes, I like it.",
-        "zh": "你喜歡它嗎？是的，我喜歡它。"
+        "en": "No, I am sorry but I am sure.",
+        "zh": "不，我很抱歉，但我很確定。"
       },
       {
-        "en": "No, I do not have a pen.",
-        "zh": "不，我沒有筆。"
+        "en": "He is OK and she is sure because they are here.",
+        "zh": "他很好，而且她很確定，因為他們在這裡。"
       },
       {
-        "en": "Please give me the book, sorry I am late.",
-        "zh": "請把書給我，抱歉我遲到了。"
+        "en": "We are fine and they are sure because we have OK.",
+        "zh": "我們很好，而且他們很確定，因為我們有可以的。"
       },
       {
-        "en": "Thank you, welcome, we are fine and sure.",
-        "zh": "謝謝，歡迎，我們很好，當然。"
+        "en": "It is a book and it is OK.",
+        "zh": "這是一本書，而且這是可以的。"
       },
       {
-        "en": "They are my friends, okay?",
-        "zh": "他們是我的朋友，好嗎？"
+        "en": "Thank you, yes I am fine because I have OK.",
+        "zh": "謝謝，是的，我很好，因為我有可以的。"
       },
       {
-        "en": "Goodbye, see you tomorrow.",
-        "zh": "再見，明天見。"
+        "en": "Goodbye, you are welcome and we are sure.",
+        "zh": "再見，不客氣，而且我們很確定。"
       }
     ]
   },
   "grammar_points": [
     {
-      "title_zh": "① be 動詞與人稱代名詞對應表",
-      "explain_zh": "說明 am、is、are 的使用規則，依據主詞的人稱與數選擇正確的 be 動詞。",
+      "title_zh": "① 人稱代名詞主格與 be 動詞的配對表",
+      "explain_zh": "在肯定句中，be 動詞會依據人稱代名詞的不同而變化：I 用 am，you 用 are，he/she/it 用 is，we/they 用 are。",
       "table": [
         [
           "人稱代名詞",
           "be 動詞",
-          "中文說明"
+          "例句"
         ],
         [
           "I",
           "am",
-          "我"
+          "I am fine."
         ],
         [
           "you",
           "are",
-          "你（單數或複數）"
+          "You are OK."
         ],
         [
-          "he/she/it",
+          "he",
           "is",
-          "他/她/它"
+          "He is here."
+        ],
+        [
+          "she",
+          "is",
+          "She is happy."
+        ],
+        [
+          "it",
+          "is",
+          "It is a book."
         ],
         [
           "we",
           "are",
-          "我們"
+          "We are ready."
         ],
         [
           "they",
           "are",
-          "他們/她們/它們"
+          "They are students."
         ]
       ]
     },
     {
-      "title_zh": "② 基本句型 I am / You are / He is …",
-      "explain_zh": "說明如何用 be 動詞造簡單的自我介紹句子。",
+      "title_zh": "② I am／You are／He is 造句",
+      "explain_zh": "根據人稱選擇正確的 be 動詞，就能造出簡單的肯定句。",
       "examples": [
         {
           "en": "I am a student.",
@@ -100,90 +109,74 @@
           "zh": "你是我的朋友。"
         },
         {
-          "en": "He is tall.",
-          "zh": "他很高。"
-        },
-        {
-          "en": "She is kind.",
-          "zh": "她很親切。"
-        },
-        {
-          "en": "It is a cat.",
-          "zh": "這是一隻貓。"
-        },
-        {
-          "en": "We are ready.",
-          "zh": "我們準備好了。"
-        },
-        {
-          "en": "They are happy.",
-          "zh": "他們很高興。"
+          "en": "He is at school.",
+          "zh": "他在學校。"
         }
       ]
     }
   ],
   "dialogue": {
-    "title_zh": "第一天見面",
+    "title_zh": "情境對話：見面與自我介紹",
     "lines": [
       {
-        "sp": "Anna",
-        "en": "Hello! I am Anna.",
-        "zh": "你好！我是安娜。"
+        "sp": "小明",
+        "en": "Hi, I am Xiao Ming.",
+        "zh": "嗨，我是小明。"
       },
       {
-        "sp": "Jack",
-        "en": "Hi, Anna. You are in my class.",
-        "zh": "嗨，安娜。你在我班。"
+        "sp": "小華",
+        "en": "Hello, I am Xiao Hua.",
+        "zh": "你好，我是小華。"
       },
       {
-        "sp": "Anna",
-        "en": "Thank you. Are you Jack?",
-        "zh": "謝謝。你是杰克嗎？"
+        "sp": "小明",
+        "en": "You are my classmate.",
+        "zh": "你是我的同學。"
       },
       {
-        "sp": "Jack",
-        "en": "Yes, I am Jack. We are in Grade 5.",
-        "zh": "是的，我是杰克。我們是五年級。"
+        "sp": "小華",
+        "en": "We are in the same class.",
+        "zh": "我們在同一個班級。"
       },
       {
-        "sp": "Anna",
-        "en": "Nice to meet you. Let's be friends.",
-        "zh": "很高興認識你。讓我們成為朋友吧。"
+        "sp": "小明",
+        "en": "It is nice to meet you.",
+        "zh": "很高興認識你。"
       }
     ]
   },
   "sentences": [
     {
-      "en": "Hello! I am Li Ming.",
-      "zh": "你好！我是李明。"
+      "en": "I am ready for class.",
+      "zh": "我準備好上課了。"
     },
     {
-      "en": "Hi, you are in class 4.",
-      "zh": "嗨，你在四年級。"
+      "en": "You are very kind.",
+      "zh": "你很友善。"
     },
     {
-      "en": "It is sunny today.",
-      "zh": "今天天氣晴朗。"
+      "en": "He is at the park.",
+      "zh": "他在公園。"
     },
     {
-      "en": "We are excited for the field trip.",
-      "zh": "我們對郊遊感到興奮。"
+      "en": "She is reading a book.",
+      "zh": "她在看書。"
     },
     {
-      "en": "They are playing soccer after school.",
-      "zh": "他們放學後在踢足球。"
+      "en": "It is a sunny day.",
+      "zh": "今天是晴天。"
     },
     {
-      "en": "I am fine, thank you.",
-      "zh": "我很好，謝謝。"
+      "en": "We are playing soccer.",
+      "zh": "我們在踢足球。"
     },
     {
-      "en": "You are welcome to join us.",
-      "zh": "歡迎你加入我們。"
+      "en": "They are happy today.",
+      "zh": "他們今天很開心。"
     },
     {
-      "en": "Sorry, I am late.",
-      "zh": "對不起，我遲到了。"
+      "en": "You are welcome.",
+      "zh": "不客氣。"
     }
   ],
   "no": 1,
@@ -195,16 +188,8 @@
       "zh": "我"
     },
     {
-      "en": "you",
-      "zh": "你；你們"
-    },
-    {
       "en": "he",
       "zh": "他"
-    },
-    {
-      "en": "she",
-      "zh": "她"
     },
     {
       "en": "it",
@@ -215,24 +200,8 @@
       "zh": "我們"
     },
     {
-      "en": "they",
-      "zh": "她/他/它們"
-    },
-    {
-      "en": "have",
-      "zh": "有"
-    },
-    {
-      "en": "yes/yeah",
-      "zh": "是的"
-    },
-    {
       "en": "no",
       "zh": "沒有"
-    },
-    {
-      "en": "hello",
-      "zh": "你好"
     },
     {
       "en": "hi",
@@ -243,12 +212,36 @@
       "zh": "可以的"
     },
     {
-      "en": "goodbye",
-      "zh": "再見"
+      "en": "you",
+      "zh": "你；你們"
     },
     {
-      "en": "please",
-      "zh": "請"
+      "en": "she",
+      "zh": "她"
+    },
+    {
+      "en": "yes/yeah",
+      "zh": "是的"
+    },
+    {
+      "en": "they",
+      "zh": "她/他/它們"
+    },
+    {
+      "en": "have",
+      "zh": "有"
+    },
+    {
+      "en": "fine",
+      "zh": "好的"
+    },
+    {
+      "en": "sure",
+      "zh": "確定的"
+    },
+    {
+      "en": "hello",
+      "zh": "你好"
     },
     {
       "en": "sorry",
@@ -259,122 +252,152 @@
       "zh": "感謝"
     },
     {
+      "en": "please",
+      "zh": "請"
+    },
+    {
+      "en": "goodbye",
+      "zh": "再見"
+    },
+    {
       "en": "welcome",
       "zh": "歡迎"
-    },
-    {
-      "en": "fine",
-      "zh": "好的"
-    },
-    {
-      "en": "sure",
-      "zh": "確定的"
     }
   ],
+  "focus": "be 動詞肯定句",
+  "grammar": "be 動詞 am／is／are 的肯定句，搭配人稱代名詞主格 I, you, he, she, it, we, they。",
   "exercises": {
     "mcq": [
       {
-        "q": "請選擇正確的英文動詞來完成句子：我 ___ 學生。",
+        "q": "你好 的英文是？",
         "opts": [
-          "am",
-          "is",
+          "goodbye",
+          "hello",
+          "thank",
+          "please"
+        ],
+        "ans": "hello"
+      },
+      {
+        "q": "謝謝 的英文是？",
+        "opts": [
+          "welcome",
+          "sorry",
+          "thank",
+          "fine"
+        ],
+        "ans": "thank"
+      },
+      {
+        "q": "I ______ a student. (我是一名學生。)",
+        "opts": [
           "are",
+          "is",
+          "am",
           "have"
         ],
         "ans": "am"
       },
       {
-        "q": "請選擇正確的英文代名詞來完成句子：___ 你們是朋友。",
+        "q": "He ______ happy. (他很開心。)",
         "opts": [
-          "I",
-          "you",
-          "we",
-          "they"
-        ],
-        "ans": "we"
-      },
-      {
-        "q": "有人說 'Hello'，你應該回答：",
-        "opts": [
-          "hi",
-          "goodbye",
-          "please",
-          "sorry"
-        ],
-        "ans": "hi"
-      },
-      {
-        "q": "當有人幫助你時，你說：",
-        "opts": [
-          "thank",
-          "welcome",
-          "fine",
-          "sure"
-        ],
-        "ans": "thank"
-      },
-      {
-        "q": "請選擇正確的英文代名詞來完成句子：___ am fine.",
-        "opts": [
-          "I",
-          "You",
-          "He",
-          "She"
-        ],
-        "ans": "I"
-      },
-      {
-        "q": "請選擇正確的英文動詞來完成句子：We ___ sure.",
-        "opts": [
-          "am",
+          "yes",
           "is",
           "are",
-          "have"
-        ],
-        "ans": "are"
-      },
-      {
-        "q": "當有人說 'Thank you'，你應該回答：",
-        "opts": [
-          "welcome",
-          "sorry",
-          "please",
-          "fine"
-        ],
-        "ans": "welcome"
-      },
-      {
-        "q": "請選擇正確的英文動詞來完成句子：She ___ OK.",
-        "opts": [
-          "am",
-          "is",
-          "are",
-          "have"
+          "am"
         ],
         "ans": "is"
       },
       {
-        "q": "請選擇正確的英文代名詞來完成句子：___ are OK.",
+        "q": "I ____ OK. (我很好。)",
         "opts": [
-          "I",
-          "you",
-          "we",
-          "they"
+          "are",
+          "is",
+          "OK",
+          "am"
         ],
-        "ans": "we"
+        "ans": "am"
       },
       {
-        "q": "當有人說 'Sorry'，你應該回答：",
+        "q": "She ____ sure. (她很確定。)",
         "opts": [
-          "It is OK.",
-          "You are welcome.",
-          "I am fine.",
-          "We are sure."
+          "is",
+          "are",
+          "am",
+          "sure"
         ],
-        "ans": "It is OK."
+        "ans": "is"
+      },
+      {
+        "q": "They ____ sorry. (他們很抱歉。)",
+        "opts": [
+          "are",
+          "is",
+          "sorry",
+          "am"
+        ],
+        "ans": "are"
+      },
+      {
+        "q": "請 的英文是？",
+        "opts": [
+          "sorry",
+          "please",
+          "fine",
+          "welcome"
+        ],
+        "ans": "please"
+      },
+      {
+        "q": "You ______ my friend. (你是我的朋友。)",
+        "opts": [
+          "is",
+          "am",
+          "no",
+          "are"
+        ],
+        "ans": "are"
+      },
+      {
+        "q": "好的 的英文是？",
+        "opts": [
+          "OK",
+          "please",
+          "thank",
+          "sorry"
+        ],
+        "ans": "OK"
       }
     ],
     "fill": [
+      {
+        "q": "I am ____.（我很好）",
+        "ans": "fine"
+      },
+      {
+        "q": "You are ____.（你很確定）",
+        "ans": "sure"
+      },
+      {
+        "q": "He is ____.（他很抱歉）",
+        "ans": "sorry"
+      },
+      {
+        "q": "She is ____.（她很受歡迎）",
+        "ans": "welcome"
+      },
+      {
+        "q": "It is ____.（它很好）",
+        "ans": "OK"
+      },
+      {
+        "q": "We are ____.（我們打招呼）",
+        "ans": "hello"
+      },
+      {
+        "q": "They are ____.（他們說再見）",
+        "ans": "goodbye"
+      },
       {
         "q": "I ____ fine.（我很好）",
         "ans": "am"
@@ -384,63 +407,11 @@
         "ans": "are"
       },
       {
-        "q": "He ____ OK.（他很好）",
-        "ans": "is"
-      },
-      {
-        "q": "She ____ welcome.（她很受歡迎）",
-        "ans": "is"
-      },
-      {
-        "q": "It ____ OK.（它很好）",
-        "ans": "is"
-      },
-      {
-        "q": "We ____ fine.（我們很好）",
-        "ans": "are"
-      },
-      {
-        "q": "They ____ sure.（他們很確定）",
-        "ans": "are"
-      },
-      {
-        "q": "I ____ sure.（我很確定）",
-        "ans": "am"
-      },
-      {
-        "q": "You ____ fine.（你很好）",
-        "ans": "are"
-      },
-      {
-        "q": "He ____ welcome.（他很受歡迎）",
+        "q": "He ____ sorry.（他很抱歉）",
         "ans": "is"
       }
     ],
     "translate": [
-      {
-        "q": "你好。",
-        "ans": "Hello."
-      },
-      {
-        "q": "再見。",
-        "ans": "Goodbye."
-      },
-      {
-        "q": "請。",
-        "ans": "Please."
-      },
-      {
-        "q": "謝謝。",
-        "ans": "Thank you."
-      },
-      {
-        "q": "對不起。",
-        "ans": "Sorry."
-      },
-      {
-        "q": "是的。",
-        "ans": "Yes."
-      },
       {
         "q": "我很好。",
         "ans": "I am fine."
@@ -448,32 +419,56 @@
       {
         "q": "你很確定。",
         "ans": "You are sure."
+      },
+      {
+        "q": "他很抱歉。",
+        "ans": "He is sorry."
+      },
+      {
+        "q": "她很受歡迎。",
+        "ans": "She is welcome."
+      },
+      {
+        "q": "它很好。",
+        "ans": "It is OK."
+      },
+      {
+        "q": "我們打招呼。",
+        "ans": "We are hello."
+      },
+      {
+        "q": "他們說再見。",
+        "ans": "They are goodbye."
+      },
+      {
+        "q": "我說謝謝。",
+        "ans": "I am thank."
       }
     ],
     "unscramble": [
       {
-        "q": ". / I / fine / am",
-        "ans": "I am fine."
+        "q": ". / You / OK / are",
+        "ans": "You are OK."
       },
       {
-        "q": ". / are / You / sure",
-        "ans": "You are sure."
+        "q": ". / is / He / sure",
+        "ans": "He is sure."
       },
       {
-        "q": "He / OK / is / .",
-        "ans": "He is OK."
+        "q": "She / fine / is / .",
+        "ans": "She is fine."
       },
       {
-        "q": "welcome / . / She / is",
-        "ans": "She is welcome."
+        "q": "sorry / . / It / is",
+        "ans": "It is sorry."
       },
       {
-        "q": ". / fine / are / We",
-        "ans": "We are fine."
+        "q": ". / welcome / are / We",
+        "ans": "We are welcome."
       },
       {
-        "q": ". / are / sure / They",
-        "ans": "They are sure."
+        "q": ". / are / hello / They",
+        "ans": "They are hello."
       }
     ]
   },

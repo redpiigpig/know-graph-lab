@@ -1,206 +1,182 @@
 {
-  "title_en": "Jobs Around Us",
-  "title_zh": "我們身邊的工作",
-  "grammar": "本課重點是使用第三人稱單數的 present simple 來問答職業，以及學習 want to be… 的結構。",
-  "intro_zh": "這一課教我們用「What does he/she do?」問答不同職業，並練習「want to be...」表達未來願望。認識士兵、郵差、推銷員等，了解各種工作的特色與態度。",
+  "title_en": "Job",
+  "title_zh": "職業與人物探索",
+  "intro_zh": "本課學生將學會使用 want to be + 職業來表達未來想當什麼職業，並學習用 be + 形容詞描述人的性格，例如誠實、智慧、忙碌等。透過簡單的句子練習，學生能說出自己的志願並評論朋友的特點。",
   "can_do": [
-    "能用 What does he/she do? 問他人的職業",
-    "能用 want to be… 說出自己未來想成為的職業",
-    "能描述不同職業的人具有哪些特質（如 smart、hard‑working 等）"
+    "能用 want to be + 職業說出自己的未來職業。",
+    "能用 be + 形容詞描述人的性格特質。",
+    "能在簡短對話中正確使用 and、but、because 連接兩個子句。"
   ],
   "reading": {
-    "title_en": "A Day in the Town",
-    "title_zh": "鎮上的一天",
+    "title_en": "Plan",
+    "title_zh": "未來的職業夢想",
     "sentences": [
       {
-        "en": "What does he do? He is a soldier who guards the town, and it is possible for anyone to join the army with courage.",
-        "zh": "他做什麼工作？他是守護鎮上的士兵，而且任何人只要有勇氣都有可能加入軍隊。"
+        "en": "Alex wants to be a soldier because he loves his country.",
+        "zh": "Alex 想當士兵，因為他愛他的國家。"
       },
       {
-        "en": "She works as a mailman and delivers letters every morning, even when the weather is rainy.",
-        "zh": "她是郵差，每天早上都送信，即使天氣下雨也不例外。"
+        "en": "He is honest and wise, and he helps everyone.",
+        "zh": "他誠實又智慧，而且他幫助每個人。"
       },
       {
-        "en": "The salesman at the store is friendly, popular, and always honest with his customers.",
-        "zh": "商店裡的推銷員很友善、受歡迎，而且對顧客總是誠實的。"
+        "en": "His friend Maya wants to be famous as a singer.",
+        "zh": "他的朋友 Maya 想當有名的歌手。"
       },
       {
-        "en": "He is smart and able to fix broken bikes quickly, but he never calls anyone stupid.",
-        "zh": "他很聰明，能夠快速修好壞掉的腳踏車，但他從不叫別人笨。"
+        "en": "She is smart but lazy, so she practices only sometimes.",
+        "zh": "她聰明但懶惰，所以她只偶爾練習。"
       },
       {
-        "en": "Although she is poor, she is hard‑working and dreams of being successful one day.",
-        "zh": "雖然她很貧窮，但她很勤勉，夢想有一天能夠成功。"
+        "en": "Alex is busy helping the mailman deliver letters each morning.",
+        "zh": "Alex 忙著幫助郵差每天早上送信。"
       },
       {
-        "en": "The rich businessman is busy, yet he finds time to help the poor and is known for being wise.",
-        "zh": "那位有錢的商人很忙，但他仍會抽出時間幫助貧窮的人，並以智慧著稱。"
+        "en": "Maya is able to sing well and dreams of big stages, she is hard-working.",
+        "zh": "Maya 能唱得很好，並夢想登上大舞台，她很用功。"
       },
       {
-        "en": "Some people think his ideas are strange, but he is crazy about inventions and wants to be famous.",
-        "zh": "有些人覺得他的想法很奇怪，但他對發明很著迷，並且想要出名。"
+        "en": "The mailman is serious and popular, and he knows all the families.",
+        "zh": "郵差很嚴肅又受歡迎，而且他認識所有家庭。"
       },
       {
-        "en": "The lazy student never does homework, yet he hopes to be a popular video‑game streamer someday.",
-        "zh": "那個懶惰的學生從不做功課，但他希望將來能成為受歡迎的電子遊戲主播。"
+        "en": "They are rich in kindness but poor in money, yet they share what they have.",
+        "zh": "他們在善良上很富有，但在金錢上很貧窮，然而他們會分享擁有的一切。"
       },
       {
-        "en": "In the end, everyone agrees that being kind, serious, and honest makes a person truly admirable.",
-        "zh": "最後，大家都同意善良、認真和誠實才能讓一個人真正令人敬佩。"
+        "en": "The town is strange but possible to improve, and everyone works hard together.",
+        "zh": "這個鎮子很奇怪但有可能改善，大家一起努力工作。"
       }
     ]
   },
   "grammar_points": [
     {
-      "title_zh": "① 第三人稱單數現在簡單式 - 問職業與描述",
-      "explain_zh": "詢問別人的職業時，用 What does he/she do? 來提問。回答時，動詞要加 -s 或 -es。例如：He works as a teacher. She teaches English. 我們也可以用形容詞來描述這個人的特點。",
+      "title_zh": "① want to be 的三單變化 wants to be",
+      "explain_zh": "當主語是第三人稱單數（he/she/it）時，want 變成 wants，結構為 wants to be + 職業。",
       "table": [
         [
-          "人稱",
-          "動詞型態",
-          "例子"
+          "主語",
+          "動詞形式",
+          "例句"
         ],
         [
-          "He (他)",
-          "works / teaches / sells",
-          "He works as a doctor."
+          "I",
+          "want to be",
+          "I want to be a teacher."
         ],
         [
-          "She (她)",
-          "works / teaches / sells",
-          "She is a nurse."
+          "You",
+          "want to be",
+          "You want to be a doctor."
         ],
         [
-          "I/You/We/They (我/你/我們/他們)",
-          "work / teach / sell",
-          "I want to be a pilot."
+          "He/She/It",
+          "wants to be",
+          "He wants to be a soldier."
+        ],
+        [
+          "We",
+          "want to be",
+          "We want to be artists."
+        ],
+        [
+          "They",
+          "want to be",
+          "They want to be scientists."
         ]
       ]
     },
     {
-      "title_zh": "② 想要成為某種職業 - want to be...",
-      "explain_zh": "當想表達未來想從事的職業時，使用 want to be + 職業 的句型。主詞可以是 I、He、She 等，動詞 want 會根據主詞改變。I want to be... / He wants to be... / She wants to be...",
+      "title_zh": "② 描述人的形容詞怎麼用 and／but 串起來",
+      "explain_zh": "用 be + 形容詞描述性格，多個形容詞可以用 and 連接相似特質，用 but 連接相反或轉折的特質。",
       "examples": [
         {
-          "en": "I want to be a teacher.",
-          "zh": "我想成為一位老師。"
+          "en": "She is kind and helpful.",
+          "zh": "她很友善且樂於助人。"
         },
         {
-          "en": "He wants to be a famous actor.",
-          "zh": "他想成為一位有名的演員。"
+          "en": "He is smart but lazy.",
+          "zh": "他很聰明卻很懶惰。"
         },
         {
-          "en": "She wants to be a successful businesswoman.",
-          "zh": "她想成為一位成功的女商人。"
+          "en": "They are honest and wise.",
+          "zh": "他們誠實又有智慧。"
         },
         {
-          "en": "They want to be soldiers.",
-          "zh": "他們想成為軍人。"
-        },
-        {
-          "en": "My brother wants to be a rich businessman.",
-          "zh": "我的哥哥想成為一位有錢的商人。"
+          "en": "The mailman is busy but friendly.",
+          "zh": "郵差很忙但很友善。"
         }
       ]
     }
   ],
   "dialogue": {
-    "title_zh": "情境對話：談論職業夢想",
+    "title_zh": "未來職業討論",
     "lines": [
       {
-        "sp": "Amy",
-        "en": "Hi, Tom! What does your father do?",
-        "zh": "嗨，湯姆！你爸爸做什麼工作？"
+        "sp": "Anna",
+        "en": "I want to be a pilot.",
+        "zh": "我想當飛行員。"
       },
       {
-        "sp": "Tom",
-        "en": "My father is a hard-working mailman. He delivers letters every day.",
-        "zh": "我爸爸是一位勤勉的郵差。他每天送信。"
+        "sp": "Ben",
+        "en": "She wants to be a famous singer.",
+        "zh": "她想當有名的歌手。"
       },
       {
-        "sp": "Amy",
-        "en": "That's great! What do you want to be in the future?",
-        "zh": "太棒了！你將來想成為什麼？"
+        "sp": "Anna",
+        "en": "He is honest and wise.",
+        "zh": "他誠實又有智慧。"
       },
       {
-        "sp": "Tom",
-        "en": "I want to be a famous doctor. I think doctors are smart and helpful.",
-        "zh": "我想成為一位有名的醫生。我認為醫生聰明又樂於助人。"
+        "sp": "Ben",
+        "en": "I am busy but happy.",
+        "zh": "我很忙但很開心。"
       },
       {
-        "sp": "Amy",
-        "en": "Me too! I want to be a successful teacher.",
-        "zh": "我也是！我想成為一位成功的老師。"
-      },
-      {
-        "sp": "Tom",
-        "en": "That's wonderful! You will be a great teacher.",
-        "zh": "太好了！你會成為一位很棒的老師。"
+        "sp": "Anna",
+        "en": "We want to be successful and hard‑working.",
+        "zh": "我們想當成功且勤勉的人。"
       }
     ]
   },
   "sentences": [
     {
-      "en": "What does she do? She is a salesman.",
-      "zh": "她做什麼工作？她是一位推銷員。"
+      "en": "I want to be a mail carrier.",
+      "zh": "我想當郵差。"
     },
     {
-      "en": "He works as a soldier. He is smart and serious.",
-      "zh": "他的職業是軍人。他聰明又嚴肅。"
+      "en": "She wants to be a salesman.",
+      "zh": "她想當推銷員。"
     },
     {
-      "en": "I want to be a rich businessman. It is possible!",
-      "zh": "我想成為一位有錢的商人。這是可能的！"
+      "en": "He is strong and brave.",
+      "zh": "他很強壯又勇敢。"
     },
     {
-      "en": "She wants to be a famous singer. She is hard-working.",
-      "zh": "她想成為一位有名的歌手。她很勤勉。"
+      "en": "They are lazy but funny.",
+      "zh": "他們很懶惰但很有趣。"
     },
     {
-      "en": "He is a lazy worker. He doesn't want to work hard.",
-      "zh": "他是一個懶惰的工人。他不想努力工作。"
+      "en": "The teacher is patient and kind.",
+      "zh": "老師很有耐心且友善。"
     },
     {
-      "en": "My brother wants to be a popular actor. He is not stupid.",
-      "zh": "我弟弟想成為一位受歡迎的演員。他不笨。"
+      "en": "My brother wants to be a soldier.",
+      "zh": "我哥哥想當軍人。"
     },
     {
-      "en": "The mailman is busy every day. He is honest and wise.",
-      "zh": "郵差每天都很忙碌。他誠實又有智慧。"
+      "en": "She is smart and possible.",
+      "zh": "她很聰明且有可能。"
     },
     {
-      "en": "She wants to be a successful doctor. Her dream is not strange.",
-      "zh": "她想成為一位成功的醫生。她的夢想不奇怪。"
+      "en": "We are honest and popular.",
+      "zh": "我們誠實又受歡迎。"
     }
   ],
   "no": 45,
   "theme": "Jobs & People",
   "theme_zh": "職業與人物",
   "words": [
-    {
-      "en": "possible",
-      "zh": "可能的"
-    },
-    {
-      "en": "soldier",
-      "zh": "軍人"
-    },
-    {
-      "en": "salesman",
-      "zh": "推銷員店員"
-    },
-    {
-      "en": "mailman/mail carrier",
-      "zh": "郵差"
-    },
-    {
-      "en": "smart",
-      "zh": "聰明的"
-    },
-    {
-      "en": "stupid",
-      "zh": "笨的"
-    },
     {
       "en": "rich",
       "zh": "有錢的"
@@ -210,8 +186,48 @@
       "zh": "貧窮的；可憐的"
     },
     {
-      "en": "successful",
-      "zh": "成功的"
+      "en": "able",
+      "zh": "能夠的"
+    },
+    {
+      "en": "busy",
+      "zh": "忙碌的"
+    },
+    {
+      "en": "lazy",
+      "zh": "懶惰的"
+    },
+    {
+      "en": "wise",
+      "zh": "有智慧的"
+    },
+    {
+      "en": "smart",
+      "zh": "聰明的"
+    },
+    {
+      "en": "crazy",
+      "zh": "瘋狂的"
+    },
+    {
+      "en": "stupid",
+      "zh": "笨的"
+    },
+    {
+      "en": "famous",
+      "zh": "有名的"
+    },
+    {
+      "en": "honest",
+      "zh": "誠實的"
+    },
+    {
+      "en": "soldier",
+      "zh": "軍人"
+    },
+    {
+      "en": "mailman/mail carrier",
+      "zh": "郵差"
     },
     {
       "en": "popular",
@@ -222,395 +238,231 @@
       "zh": "奇怪的"
     },
     {
-      "en": "able",
-      "zh": "能夠的"
-    },
-    {
-      "en": "famous",
-      "zh": "有名的"
-    },
-    {
-      "en": "busy",
-      "zh": "忙碌的"
-    },
-    {
-      "en": "hard-working",
-      "zh": "勤勉的"
-    },
-    {
-      "en": "crazy",
-      "zh": "瘋狂的"
-    },
-    {
-      "en": "lazy",
-      "zh": "懶惰的"
-    },
-    {
       "en": "serious",
       "zh": "嚴肅的"
     },
     {
-      "en": "wise",
-      "zh": "有智慧的"
+      "en": "possible",
+      "zh": "可能的"
     },
     {
-      "en": "honest",
-      "zh": "誠實的"
+      "en": "salesman",
+      "zh": "推銷員店員"
+    },
+    {
+      "en": "successful",
+      "zh": "成功的"
+    },
+    {
+      "en": "hard-working",
+      "zh": "勤勉的"
     }
   ],
+  "focus": "want to be 表志願",
+  "grammar": "用 want to be + 職業說將來想當什麼，用 be + 形容詞描述人的性格。",
   "exercises": {
     "mcq": [
       {
-        "q": "他______一名士兵。",
+        "q": "富有 的英文是？",
         "opts": [
-          "is",
-          "are",
-          "am",
-          "be"
-        ],
-        "ans": "is"
-      },
-      {
-        "q": "她______一名郵差。",
-        "opts": [
-          "is",
-          "are",
-          "am",
-          "be"
-        ],
-        "ans": "is"
-      },
-      {
-        "q": "他______一名推銷員。",
-        "opts": [
-          "is",
-          "are",
-          "am",
-          "be"
-        ],
-        "ans": "is"
-      },
-      {
-        "q": "她想成為富有的。",
-        "opts": [
+          "lazy",
           "rich",
           "poor",
-          "busy",
-          "lazy"
+          "busy"
         ],
         "ans": "rich"
       },
       {
-        "q": "他想成為忙碌的。",
+        "q": "聰明 的英文是？",
         "opts": [
-          "rich",
-          "poor",
-          "busy",
-          "lazy"
-        ],
-        "ans": "busy"
-      },
-      {
-        "q": "他很聰明。",
-        "opts": [
-          "smart",
           "stupid",
-          "rich",
-          "poor"
+          "crazy",
+          "smart",
+          "famous"
         ],
         "ans": "smart"
       },
       {
-        "q": "她很認真。",
+        "q": "I ______ to be a soldier. (我想當)",
         "opts": [
-          "serious",
-          "crazy",
-          "lazy",
-          "wise"
+          "want",
+          "wanting",
+          "wants",
+          "wanted"
         ],
-        "ans": "serious"
+        "ans": "want"
       },
       {
-        "q": "他很誠實。",
+        "q": "He ______ honest. (他是誠實的)",
+        "opts": [
+          "are",
+          "is",
+          "be",
+          "am"
+        ],
+        "ans": "is"
+      },
+      {
+        "q": "誠實 的英文是？",
         "opts": [
           "honest",
-          "wise",
-          "strange",
-          "able"
-        ],
-        "ans": "honest"
-      },
-      {
-        "q": "她很有名。",
-        "opts": [
-          "famous",
-          "popular",
-          "strange",
-          "able"
-        ],
-        "ans": "famous"
-      },
-      {
-        "q": "他能夠成功。",
-        "opts": [
-          "able",
-          "smart",
-          "stupid",
-          "rich"
-        ],
-        "ans": "able"
-      },
-      {
-        "q": "她______一名士兵。",
-        "opts": [
-          "是",
-          "不是",
-          "會",
-          "能"
-        ],
-        "ans": "是"
-      },
-      {
-        "q": "他______一名郵差。",
-        "opts": [
-          "是",
-          "不是",
-          "會",
-          "能"
-        ],
-        "ans": "是"
-      },
-      {
-        "q": "她______一名推銷員。",
-        "opts": [
-          "是",
-          "不是",
-          "會",
-          "能"
-        ],
-        "ans": "是"
-      },
-      {
-        "q": "她想成為______。",
-        "opts": [
-          "聰明",
-          "笨",
-          "富有",
-          "貧窮"
-        ],
-        "ans": "聰明"
-      },
-      {
-        "q": "他想成為______。",
-        "opts": [
-          "成功",
-          "奇怪",
-          "能夠",
-          "有名"
-        ],
-        "ans": "成功"
-      },
-      {
-        "q": "他很______。",
-        "opts": [
-          "認真",
-          "聰明",
-          "富有",
-          "貧窮"
-        ],
-        "ans": "認真"
-      },
-      {
-        "q": "她很______。",
-        "opts": [
-          "聰明",
-          "認真",
-          "富有",
-          "貧窮"
-        ],
-        "ans": "聰明"
-      },
-      {
-        "q": "她不想成為______。",
-        "opts": [
-          "聰明",
-          "富有",
-          "貧窮",
-          "成功"
-        ],
-        "ans": "貧窮"
-      },
-      {
-        "q": "他是誰？",
-        "opts": [
           "soldier",
-          "salesman",
-          "mailman",
-          "possible"
-        ],
-        "ans": "soldier"
-      },
-      {
-        "q": "她是誰？",
-        "opts": [
-          "salesman",
-          "soldier",
-          "mailman",
-          "smart"
-        ],
-        "ans": "salesman"
-      },
-      {
-        "q": "她想當______？",
-        "opts": [
-          "rich",
-          "poor",
-          "successful",
-          "famous"
-        ],
-        "ans": "rich"
-      },
-      {
-        "q": "他想當______？",
-        "opts": [
-          "busy",
-          "lazy",
-          "hard-working",
-          "crazy"
-        ],
-        "ans": "hard-working"
-      },
-      {
-        "q": "他很______？",
-        "opts": [
-          "smart",
-          "stupid",
-          "serious",
-          "wise"
-        ],
-        "ans": "wise"
-      },
-      {
-        "q": "她很______？",
-        "opts": [
-          "honest",
-          "famous",
           "popular",
           "strange"
         ],
         "ans": "honest"
       },
       {
-        "q": "這件事很______？",
+        "q": "She ______ to be a mailman. (她想當郵差)",
         "opts": [
-          "strange",
-          "smart",
-          "stupid",
-          "serious"
+          "wanted",
+          "wants",
+          "want",
+          "to"
         ],
-        "ans": "strange"
+        "ans": "wants"
+      },
+      {
+        "q": "They ______ serious. (他們很認真)",
+        "opts": [
+          "honest",
+          "am",
+          "is",
+          "are"
+        ],
+        "ans": "are"
+      },
+      {
+        "q": "可能 的英文是？",
+        "opts": [
+          "soldier",
+          "popular",
+          "serious",
+          "possible"
+        ],
+        "ans": "possible"
+      },
+      {
+        "q": "They ______ to be a salesman. (他們想當推銷員)",
+        "opts": [
+          "am",
+          "are",
+          "want",
+          "is"
+        ],
+        "ans": "want"
+      },
+      {
+        "q": "She ______ wise. (她很聰明)",
+        "opts": [
+          "is",
+          "soldier",
+          "honest",
+          "popular"
+        ],
+        "ans": "is"
       }
     ],
     "fill": [
       {
-        "q": "He ____ a soldier.（他是士兵）",
-        "ans": "is"
+        "q": "I ____ a student.（我是學生）",
+        "ans": "am"
       },
       {
-        "q": "She ____ a salesman.（她是推銷員）",
-        "ans": "is"
-      },
-      {
-        "q": "It ____ a mailman.（它是郵差）",
-        "ans": "is"
-      },
-      {
-        "q": "They ____ soldiers.（他們是士兵）",
-        "ans": "are"
-      },
-      {
-        "q": "We ____ salesmen.（我們是推銷員）",
-        "ans": "are"
-      },
-      {
-        "q": "I ____ to be a soldier.（我想成為士兵）",
-        "ans": "want"
-      },
-      {
-        "q": "He ____ to be a salesman.（他想成為推銷員）",
-        "ans": "wants"
-      },
-      {
-        "q": "She ____ to be a mailman.（她想成為郵差）",
-        "ans": "wants"
-      },
-      {
-        "q": "It ____ possible.（它是可能的）",
+        "q": "She ____ rich.（她很富有）",
         "ans": "is"
       },
       {
         "q": "They ____ busy.（他們很忙）",
         "ans": "are"
+      },
+      {
+        "q": "He wants ____ be a soldier.（他想當兵）",
+        "ans": "to"
+      },
+      {
+        "q": "I am ____ mailman.（我是郵差）",
+        "ans": "a"
+      },
+      {
+        "q": "She is ____.（她很誠實）",
+        "ans": "honest"
+      },
+      {
+        "q": "It is ____.（這是可能的）",
+        "ans": "possible"
+      },
+      {
+        "q": "He wants to be a ____.（他想當兵）",
+        "ans": "soldier"
+      },
+      {
+        "q": "She is ____.（她很有名）",
+        "ans": "famous"
+      },
+      {
+        "q": "I am ____.（我很懶）",
+        "ans": "lazy"
       }
     ],
     "translate": [
       {
-        "q": "他是士兵。",
-        "ans": "He is a soldier."
+        "q": "我想當兵。",
+        "ans": "I want to be a soldier."
       },
       {
-        "q": "她想成為推銷員。",
-        "ans": "She wants to be a salesman."
+        "q": "她很富有。",
+        "ans": "She is rich."
       },
       {
-        "q": "它是郵差。",
-        "ans": "It is a mailman."
+        "q": "他很忙。",
+        "ans": "He is busy."
       },
       {
-        "q": "他們很忙。",
-        "ans": "They are busy."
+        "q": "我很誠實。",
+        "ans": "I am honest."
       },
       {
-        "q": "我們是推銷員。",
-        "ans": "We are salesmen."
-      },
-      {
-        "q": "他很聰明。",
-        "ans": "He is smart."
-      },
-      {
-        "q": "她很誠實。",
-        "ans": "She is honest."
-      },
-      {
-        "q": "它可能。",
+        "q": "這是可能的。",
         "ans": "It is possible."
+      },
+      {
+        "q": "他是郵差。",
+        "ans": "He is a mailman."
+      },
+      {
+        "q": "她很有名。",
+        "ans": "She is famous."
+      },
+      {
+        "q": "我很懶。",
+        "ans": "I am lazy."
       }
     ],
     "unscramble": [
       {
-        "q": "He / . / is / soldier / a",
-        "ans": "He is a soldier."
+        "q": "a / want / I / . / mailman / be / to",
+        "ans": "I want to be a mailman."
       },
       {
-        "q": "a / wants / be / . / salesman / to / She",
-        "ans": "She wants to be a salesman."
+        "q": "is / . / She / wise",
+        "ans": "She is wise."
       },
       {
-        "q": "a / mailman / is / . / It",
-        "ans": "It is a mailman."
-      },
-      {
-        "q": "are / They / . / busy",
+        "q": "are / busy / They / .",
         "ans": "They are busy."
       },
       {
-        "q": "salesmen / are / . / We",
-        "ans": "We are salesmen."
+        "q": ". / is / That / possible",
+        "ans": "That is possible."
       },
       {
-        "q": "smart / . / He / is",
-        "ans": "He is smart."
+        "q": "is / . / honest / She",
+        "ans": "She is honest."
+      },
+      {
+        "q": "hard-working / We / . / are",
+        "ans": "We are hard-working."
       }
     ]
   },

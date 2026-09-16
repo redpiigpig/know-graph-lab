@@ -1,189 +1,171 @@
 {
   "title_en": "Clothes & Look",
-  "title_zh": "衣著與外表",
-  "grammar": "使用 I'm wearing … 描述正在穿著的衣物，以及 He/She has … 描述髮型或外觀特徵。",
-  "intro_zh": "本課將學生帶入校園生活，學習描述自己和同學的穿著與外觀。透過圖片與情境，練習使用 I'm wearing … 和 He/She has … 的句型，並認識常見的衣物與配件。",
+  "title_zh": "衣著與外觀介紹",
+  "intro_zh": "本課學習如何用a pair of來數量只能以複數形出現的名詞，例如shoes、socks、boots、glasses、pants等，並練習說出自己的穿著與外觀。",
   "can_do": [
-    "能用 I'm wearing … 描述自己現在穿著的衣物",
-    "能用 He/She has … 描述別人的髮型或外觀特徵",
-    "能閱讀簡短的衣著描述並回答相關問題"
+    "能正確使用 a pair of 描述鞋子、襪子等成雙的物品。",
+    "能描述自己穿著的衣服與配件。",
+    "能閱讀簡短的衣著描述故事並理解主要意思。"
   ],
   "reading": {
     "title_en": "Getting Ready for School",
-    "title_zh": "上學前的準備",
+    "title_zh": "準備上學的早晨",
     "sentences": [
       {
-        "en": "Lily puts on her uniform and buttons the front pocket.",
-        "zh": "莉莉穿上制服，並扣上前面的口袋。"
+        "en": "Tom puts on his uniform and a red cap.",
+        "zh": "湯姆穿上制服並戴上紅色的鴨舌帽。"
       },
       {
-        "en": "She wears a white shirt, a navy skirt, and black shoes with white socks.",
-        "zh": "她穿著白色襯衫、深藍色裙子，以及黑色鞋子配白色襪子。"
+        "en": "He wears a pair of black shoes and white socks.",
+        "zh": "他穿著一雙黑色鞋子和白色襪子。"
       },
       {
-        "en": "On her head she has a red cap and sometimes a warm hat when it's cold.",
-        "zh": "她頭上戴著紅色鴨舌帽，天氣冷時還會戴上暖和的帽子。"
+        "en": "His shoes are old, but his socks are new.",
+        "zh": "他的鞋子很舊，但他的襪子很新。"
       },
       {
-        "en": "She puts on a blue backpack and carries a small bag for her lunch.",
-        "zh": "她背上藍色背包，並提著一個小袋子裝午餐。"
+        "en": "He also puts on a blue belt and a silver ring.",
+        "zh": "他也系上藍色皮帶並戴上銀色戒指。"
       },
       {
-        "en": "In winter she adds a gray scarf, a pair of gloves, and a brown belt around her waist.",
-        "zh": "冬天她會加上灰色圍巾、一雙手套，以及繫在腰間的棕色皮帶。"
+        "en": "Tom likes to wear a scarf and gloves when it is cold.",
+        "zh": "湯姆喜歡在天氣冷時圍上圍巾並戴上手套。"
       },
       {
-        "en": "When it rains, she puts on a yellow raincoat and black boots.",
-        "zh": "下雨時，她穿上黃色雨衣和黑色靴子。"
+        "en": "He puts on his backpack and checks his pocket for a button.",
+        "zh": "他背上背包，檢查口袋裡有沒有鈕扣。"
       },
       {
-        "en": "On sunny days she likes to wear sandals and sometimes slippers at home.",
-        "zh": "晴天她喜歡穿涼鞋，在家裡有時會穿拖鞋。"
+        "en": "Today he wears his glasses and a shiny necklace.",
+        "zh": "今天他戴上眼鏡並佩戴閃亮的項鍊。"
       },
       {
-        "en": "She also likes to wear glasses, a silver necklace, and a shiny ring.",
-        "zh": "她也喜歡戴眼鏡、銀色項鍊和閃亮的戒指。"
+        "en": "When it rains, he puts on a yellow raincoat and brown boots.",
+        "zh": "下雨時，他穿上黃色雨衣和棕色靴子。"
       },
       {
-        "en": "Today she looks happy because her hair is short and neat.",
-        "zh": "今天她看起來很開心，因為她的頭髮很短又整齊。"
+        "en": "He has two pairs of socks in his bag for gym class.",
+        "zh": "他背包裡有兩雙襪子，備課體育用。"
       },
       {
-        "en": "Lily feels ready for school and waves to her friends.",
-        "zh": "莉莉感到自己已經準備好上學，並向朋友揮手。"
+        "en": "At the end of the day, he takes off his cap and hangs it on a hook.",
+        "zh": "一天結束時，他脫下鴨舌帽並掛在鉤子上。"
       }
     ]
   },
   "grammar_points": [
     {
-      "title_zh": "① I'm wearing … 描述正在穿著的衣物",
-      "explain_zh": "用 I'm wearing + 名詞來說明現在穿著什麼衣物，主語可以是 I、He、She、We、They 等。",
+      "title_zh": "① 只有複數形的衣物清單，以及它們配 are 不配 is",
+      "explain_zh": "只有複數形的名詞（例如鞋子、襪子、靴子、眼鏡）永遠當複數使用，因此搭配動詞 are，不能用 is。",
       "table": [
         [
-          "主語",
-          "I'm wearing",
-          "衣物例"
+          "英文單詞",
+          "中文",
+          "是否用 are"
         ],
         [
-          "I",
-          "I'm wearing",
-          "a red hat"
+          "shoes",
+          "鞋子",
+          "Yes"
         ],
         [
-          "He",
-          "He is wearing",
-          "blue shoes"
+          "socks",
+          "襪子",
+          "Yes"
         ],
         [
-          "She",
-          "She is wearing",
-          "a white shirt"
+          "boots",
+          "靴子",
+          "Yes"
         ],
         [
-          "We",
-          "We are wearing",
-          "uniforms"
-        ],
-        [
-          "They",
-          "They are wearing",
-          "jackets"
+          "glasses",
+          "眼鏡",
+          "Yes"
         ]
       ]
     },
     {
-      "title_zh": "② He/She has … 描述髮型或外觀特徵",
-      "explain_zh": "用 He/She has + 形容詞 + 名詞（如 short hair）來說明髮長、髮型或其他外觀特徵。",
+      "title_zh": "② a pair of 的用法與複數 pairs",
+      "explain_zh": "用 a pair of 表示一雙，後面接只有複數形的名詞；若要數多雙，用數字 + pairs of + 複數名詞。",
       "examples": [
         {
-          "en": "He has short hair.",
-          "zh": "他有短髮。"
+          "en": "a pair of shoes",
+          "zh": "一雙鞋子"
         },
         {
-          "en": "She has long hair.",
-          "zh": "她有長髮。"
+          "en": "two pairs of socks",
+          "zh": "兩雙襪子"
         },
         {
-          "en": "He has curly hair.",
-          "zh": "他有捲髮。"
-        },
-        {
-          "en": "She has straight hair.",
-          "zh": "她有直髮。"
-        },
-        {
-          "en": "He has black hair.",
-          "zh": "他有黑髮。"
-        },
-        {
-          "en": "She has brown hair.",
-          "zh": "她有棕髮。"
+          "en": "My glasses are new.",
+          "zh": "我的眼鏡是新的。"
         }
       ]
     }
   ],
   "dialogue": {
-    "title_zh": "在教室裡談論今天的穿著",
+    "title_zh": "情境對話：在教室裡談論今天的穿著",
     "lines": [
       {
-        "sp": "小明",
-        "en": "I'm wearing a blue cap today.",
-        "zh": "我今天戴著藍色鴨舌帽。"
+        "sp": "Amy",
+        "en": "My glasses are clean.",
+        "zh": "我的眼鏡很乾淨。"
       },
       {
-        "sp": "小華",
-        "en": "He is wearing new sneakers.",
-        "zh": "他穿著新運動鞋。"
+        "sp": "Ben",
+        "en": "I wear a pair of black shoes.",
+        "zh": "我穿著一雙黑色的鞋子。"
       },
       {
-        "sp": "老師",
-        "en": "She has long hair and wears glasses.",
-        "zh": "她有長髮而且戴眼鏡。"
+        "sp": "Amy",
+        "en": "My socks are white and I own two pairs of socks.",
+        "zh": "我的襪子是白色的，我擁有兩雙襪子。"
       },
       {
-        "sp": "小美",
-        "en": "We are wearing our school uniforms.",
-        "zh": "我們穿著校服。"
+        "sp": "Ben",
+        "en": "I also own a pair of boots for rainy days.",
+        "zh": "我也擁有一雙適合雨天的靴子。"
       },
       {
-        "sp": "小林",
-        "en": "They have backpacks and raincoats.",
-        "zh": "他們背著背包並穿著雨衣。"
+        "sp": "Amy",
+        "en": "My backpack is heavy.",
+        "zh": "我的背包很重。"
       }
     ]
   },
   "sentences": [
     {
-      "en": "I'm wearing a hat and sunglasses.",
-      "zh": "我戴著帽子和太陽眼鏡。"
+      "en": "My glasses are shiny.",
+      "zh": "我的眼鏡很亮亮的。"
     },
     {
-      "en": "He is wearing gloves and a scarf.",
-      "zh": "他戴著手套和圍巾。"
+      "en": "My shoes are old.",
+      "zh": "我的鞋子很舊。"
     },
     {
-      "en": "She has short hair and a red ribbon.",
-      "zh": "她有短髮並繫著紅色髮帶。"
+      "en": "My socks are short.",
+      "zh": "我的襪子很短。"
     },
     {
-      "en": "We are wearing sandals because it's hot.",
-      "zh": "我們穿著涼鞋，因為天氣熱。"
+      "en": "My boots are brown.",
+      "zh": "我的靴子是棕色的。"
     },
     {
-      "en": "They have boots and backpacks for the hike.",
-      "zh": "他們穿著靴子並背著背包去遠足。"
+      "en": "My pants are blue.",
+      "zh": "我的褲子是藍色的。"
     },
     {
-      "en": "I'm wearing a belt with my jeans.",
-      "zh": "我穿著牛仔褲並繫著皮帶。"
+      "en": "I wear a pair of shoes.",
+      "zh": "我穿著一雙鞋子。"
     },
     {
-      "en": "He has a necklace and a ring.",
-      "zh": "他戴著項鍊和戒指。"
+      "en": "I own two pairs of socks.",
+      "zh": "我擁有兩雙襪子。"
     },
     {
-      "en": "She is carrying a bag with her books.",
-      "zh": "她提著裝著書的袋子。"
+      "en": "My belt is black.",
+      "zh": "我的皮帶是黑色的。"
     }
   ],
   "no": 34,
@@ -197,6 +179,26 @@
     {
       "en": "cap",
       "zh": "鴨舌帽"
+    },
+    {
+      "en": "old",
+      "zh": "老的"
+    },
+    {
+      "en": "bag",
+      "zh": "袋子"
+    },
+    {
+      "en": "wear",
+      "zh": "穿著"
+    },
+    {
+      "en": "belt",
+      "zh": "皮帶"
+    },
+    {
+      "en": "ring",
+      "zh": "戒指"
     },
     {
       "en": "shoes",
@@ -215,16 +217,8 @@
       "zh": "圍巾"
     },
     {
-      "en": "glasses",
-      "zh": "眼鏡"
-    },
-    {
-      "en": "uniform",
-      "zh": "制服"
-    },
-    {
-      "en": "wear",
-      "zh": "穿著"
+      "en": "boots",
+      "zh": "靴子"
     },
     {
       "en": "button",
@@ -235,32 +229,20 @@
       "zh": "口袋"
     },
     {
-      "en": "boots",
-      "zh": "靴子"
+      "en": "uniform",
+      "zh": "制服"
     },
     {
       "en": "sandals",
       "zh": "涼鞋"
     },
     {
-      "en": "slippers",
-      "zh": "拖鞋"
-    },
-    {
-      "en": "belt",
-      "zh": "皮帶"
-    },
-    {
-      "en": "ring",
-      "zh": "戒指"
+      "en": "glasses",
+      "zh": "眼鏡"
     },
     {
       "en": "necklace",
       "zh": "項鍊"
-    },
-    {
-      "en": "bag",
-      "zh": "袋子"
     },
     {
       "en": "backpack",
@@ -271,409 +253,211 @@
       "zh": "雨衣"
     }
   ],
+  "focus": "a pair of 與只有複數形的名詞",
+  "grammar": "成雙的東西（shoes, socks, boots, glasses, pants）一律用複數，要數就用 a pair of。",
   "exercises": {
     "mcq": [
       {
-        "q": "以下哪個英文單字是「鞋子」的意思？",
+        "q": "帽子 的英文是？",
         "opts": [
+          "belt",
+          "bag",
+          "hat",
+          "cap"
+        ],
+        "ans": "hat"
+      },
+      {
+        "q": "雨衣 的英文是？",
+        "opts": [
+          "raincoat",
+          "uniform",
+          "backpack",
+          "necklace"
+        ],
+        "ans": "raincoat"
+      },
+      {
+        "q": "She has ___ (一雙) shoes.",
+        "opts": [
+          "an",
+          "a pair of",
+          "the",
+          "a"
+        ],
+        "ans": "a pair of"
+      },
+      {
+        "q": "He always ___ (穿) a uniform to school.",
+        "opts": [
+          "wear",
+          "wore",
+          "wearing",
+          "wears"
+        ],
+        "ans": "wears"
+      },
+      {
+        "q": "I need to buy a pair of ___ (用來看東西) to see clearly.",
+        "opts": [
+          "socks",
+          "shoes",
+          "glasses",
+          "boots"
+        ],
+        "ans": "glasses"
+      },
+      {
+        "q": "She ___ (有一雙) glasses.",
+        "opts": [
+          "have",
+          "do",
+          "does",
+          "has"
+        ],
+        "ans": "has"
+      },
+      {
+        "q": "These glasses ___ (是) broken.",
+        "opts": [
+          "am",
+          "are",
+          "be",
+          "is"
+        ],
+        "ans": "are"
+      },
+      {
+        "q": "手套 的英文是？",
+        "opts": [
+          "glove",
+          "hat",
+          "belt",
+          "sandals"
+        ],
+        "ans": "glove"
+      },
+      {
+        "q": "She needs a pair of ___ (用來走路的) to go hiking.",
+        "opts": [
+          "boots",
           "shoes",
           "socks",
-          "glove",
           "hat"
         ],
         "ans": "shoes"
       },
       {
-        "q": "以下哪個英文單字是「襪子」的意思？",
-        "opts": [
-          "socks",
-          "shoes",
-          "scarf",
-          "glasses"
-        ],
-        "ans": "socks"
-      },
-      {
-        "q": "以下哪個英文單字是「手套」的意思？",
+        "q": "The boy is wearing a ___ (手套) on his hands.",
         "opts": [
           "glove",
+          "cap",
           "hat",
-          "belt",
-          "backpack"
+          "belt"
         ],
         "ans": "glove"
-      },
-      {
-        "q": "以下哪個英文單字是「圍巾」的意思？",
-        "opts": [
-          "scarf",
-          "sandals",
-          "slippers",
-          "raincoat"
-        ],
-        "ans": "scarf"
-      },
-      {
-        "q": "以下哪個英文單字是「眼鏡」的意思？",
-        "opts": [
-          "glasses",
-          "uniform",
-          "wear",
-          "button"
-        ],
-        "ans": "glasses"
-      },
-      {
-        "q": "以下哪個英文單字是「制服」的意思？",
-        "opts": [
-          "uniform",
-          "pocket",
-          "boots",
-          "necklace"
-        ],
-        "ans": "uniform"
-      },
-      {
-        "q": "以下哪個英文單字是「穿著」的意思？",
-        "opts": [
-          "wear",
-          "ring",
-          "bag",
-          "raincoat"
-        ],
-        "ans": "wear"
-      },
-      {
-        "q": "以下哪個英文單字是「鈕扣」的意思？",
-        "opts": [
-          "button",
-          "cap",
-          "socks",
-          "sandals"
-        ],
-        "ans": "button"
-      },
-      {
-        "q": "以下哪個英文單字是「袋口」的意思？",
-        "opts": [
-          "pocket",
-          "hat",
-          "glove",
-          "scarf"
-        ],
-        "ans": "pocket"
-      },
-      {
-        "q": "以下哪個英文單字是「靴子」的意思？",
-        "opts": [
-          "boots",
-          "belt",
-          "backpack",
-          "raincoat"
-        ],
-        "ans": "boots"
-      },
-      {
-        "q": "Choose the correct sentence to describe what I am wearing.",
-        "opts": [
-          "I'm wearing hat.",
-          "I'm wearing a hat.",
-          "I'm wearing hats.",
-          "I'm wear a hat."
-        ],
-        "ans": "I'm wearing a hat."
-      },
-      {
-        "q": "Choose the correct sentence to describe what she has.",
-        "opts": [
-          "She has glasses.",
-          "She have glasses.",
-          "She has glass.",
-          "She is having glasses."
-        ],
-        "ans": "She has glasses."
-      },
-      {
-        "q": "Choose the correct sentence to describe what he is wearing.",
-        "opts": [
-          "He is wearing uniform.",
-          "He is wearing a uniform.",
-          "He wearing a uniform.",
-          "He is wear a uniform."
-        ],
-        "ans": "He is wearing a uniform."
-      },
-      {
-        "q": "Choose the correct sentence to describe what they have.",
-        "opts": [
-          "They have backpack.",
-          "They have a backpack.",
-          "They has a backpack.",
-          "They are having backpack."
-        ],
-        "ans": "They have a backpack."
-      },
-      {
-        "q": "Choose the correct sentence to describe what I am wearing on my feet.",
-        "opts": [
-          "I'm wearing shoes.",
-          "I'm wearing a shoes.",
-          "I'm wear shoes.",
-          "I'm wearing shoe."
-        ],
-        "ans": "I'm wearing shoes."
-      },
-      {
-        "q": "Choose the correct sentence to describe what she has around her neck.",
-        "opts": [
-          "She has necklace.",
-          "She has a necklace.",
-          "She have a necklace.",
-          "She is having necklace."
-        ],
-        "ans": "She has a necklace."
-      },
-      {
-        "q": "Choose the correct sentence to describe what he is wearing on his hands.",
-        "opts": [
-          "He is wearing glove.",
-          "He is wearing a glove.",
-          "He is wearing gloves.",
-          "He wear a glove."
-        ],
-        "ans": "He is wearing a glove."
-      },
-      {
-        "q": "Choose the correct sentence to describe what she is wearing around her neck.",
-        "opts": [
-          "She is wearing scarf.",
-          "She is wearing a scarf.",
-          "She is wearing scarfs.",
-          "She wear a scarf."
-        ],
-        "ans": "She is wearing a scarf."
-      },
-      {
-        "q": "Choose the correct sentence to describe what he has on his wrist.",
-        "opts": [
-          "He has ring.",
-          "He has a ring.",
-          "He have a ring.",
-          "He is having ring."
-        ],
-        "ans": "He has a ring."
-      },
-      {
-        "q": "Choose the correct sentence to describe what they are wearing when it rains.",
-        "opts": [
-          "They are wearing raincoat.",
-          "They are wearing a raincoat.",
-          "They are wearing raincoats.",
-          "They wear raincoat."
-        ],
-        "ans": "They are wearing a raincoat."
-      },
-      {
-        "q": "圖中男孩頭上戴著帽子，腳沒穿鞋子。哪句正確描述他現在穿著什麼？",
-        "opts": [
-          "He is wearing a hat.",
-          "He has a hat.",
-          "He is wearing shoes.",
-          "He has shoes."
-        ],
-        "ans": "He is wearing a hat."
-      },
-      {
-        "q": "圖中女孩戴著項鍊，沒戴眼鏡。哪句正確描述她的外觀？",
-        "opts": [
-          "She has glasses.",
-          "She is wearing glasses.",
-          "She has a necklace.",
-          "She is wearing a necklace."
-        ],
-        "ans": "She has a necklace."
-      },
-      {
-        "q": "圖中男孩雙手戴著手套。哪句正確描述他手上穿著什麼？",
-        "opts": [
-          "He is wearing gloves.",
-          "He has gloves.",
-          "He is wearing a hat.",
-          "He has a hat."
-        ],
-        "ans": "He is wearing gloves."
-      },
-      {
-        "q": "圖中女孩手裡提著一個袋子。哪句正確描述她手上的物品？",
-        "opts": [
-          "She has a bag.",
-          "She is wearing a bag.",
-          "She has a backpack.",
-          "She is wearing a backpack."
-        ],
-        "ans": "She has a bag."
-      },
-      {
-        "q": "圖中男孩腳穿著涼鞋。哪句正確描述他腳上的穿著？",
-        "opts": [
-          "He is wearing sandals.",
-          "He has sandals.",
-          "He is wearing shoes.",
-          "He has shoes."
-        ],
-        "ans": "He is wearing sandals."
-      },
-      {
-        "q": "圖中女孩腳穿著襪子。哪句正確描述她腳上的穿著？",
-        "opts": [
-          "She is wearing socks.",
-          "She has socks.",
-          "She is wearing shoes.",
-          "She has shoes."
-        ],
-        "ans": "She is wearing socks."
-      },
-      {
-        "q": "圖中男孩頭上戴著棒球帽。哪句正確描述他頭上的穿著？",
-        "opts": [
-          "He is wearing a cap.",
-          "He has a cap.",
-          "He is wearing a hat.",
-          "He has a hat."
-        ],
-        "ans": "He is wearing a cap."
-      },
-      {
-        "q": "圖中女孩脖子圍著圍巾。哪句正確描述她脖子上的穿著？",
-        "opts": [
-          "She is wearing a scarf.",
-          "She has a scarf.",
-          "She is wearing a necklace.",
-          "She has a necklace."
-        ],
-        "ans": "She is wearing a scarf."
-      },
-      {
-        "q": "圖中男孩腳穿著雨鞋。哪句正確描述他腳上的穿著？",
-        "opts": [
-          "He is wearing boots.",
-          "He has boots.",
-          "He is wearing sandals.",
-          "He has sandals."
-        ],
-        "ans": "He is wearing boots."
-      },
-      {
-        "q": "下雨天時，孩子們穿著什麼來防雨？",
-        "opts": [
-          "They are wearing raincoats.",
-          "They have raincoats.",
-          "They are wearing hats.",
-          "They have hats."
-        ],
-        "ans": "They are wearing raincoats."
       }
     ],
     "fill": [
       {
-        "q": "I ____ wearing a hat.（我正在戴著一頂帽子）",
-        "ans": "am"
+        "q": "I ____ a hat.（我戴帽子）",
+        "ans": "wear"
       },
       {
-        "q": "She ____ wearing shoes.（她正在穿著鞋子）",
-        "ans": "is"
-      },
-      {
-        "q": "He ____ a cap.（他有一頂棒球帽）",
+        "q": "He ____ a bag.（他有一個背包）",
         "ans": "has"
       },
       {
-        "q": "They ____ wearing uniforms.（他們正在穿著制服）",
+        "q": "The shoes ____ in the backpack.（鞋子在背包裡）",
         "ans": "are"
       },
       {
-        "q": "I ____ a backpack.（我有一個背包）",
-        "ans": "have"
+        "q": "I ____ a cap.（我需要一頂帽子）",
+        "ans": "need"
       },
       {
-        "q": "We ____ wearing gloves.（我們正在戴著手套）",
-        "ans": "are"
+        "q": "The bag is ____ .（背包是____）",
+        "ans": "old"
       },
       {
-        "q": "He ____ wearing glasses.（他正在戴著眼鏡）",
-        "ans": "is"
+        "q": "This is a ____ .（這是一個____）",
+        "ans": "bag"
       },
       {
-        "q": "She ____ a necklace.（她有一條項鍊）",
-        "ans": "has"
+        "q": "This is a ____ .（這是一條圍巾）",
+        "ans": "scarf"
       },
       {
-        "q": "He ____ wearing a belt.（他正在繫著皮帶）",
-        "ans": "is"
+        "q": "This is a ____ .（這是一隻手套）",
+        "ans": "glove"
       },
       {
-        "q": "They ____ wearing sandals.（他們正在穿著涼鞋）",
-        "ans": "are"
+        "q": "The ____ is on the backpack.（帽子在背包上）",
+        "ans": "hat"
+      },
+      {
+        "q": "The ____ are in the backpack.（鞋子在背包裡）",
+        "ans": "shoes"
       }
     ],
     "translate": [
       {
-        "q": "我正在戴著一頂帽子",
-        "ans": "I am wearing a hat."
+        "q": "我戴帽子。",
+        "ans": "I wear a hat."
       },
       {
-        "q": "她正在穿著鞋子",
-        "ans": "She is wearing shoes."
+        "q": "他有一個背包。",
+        "ans": "He has a bag."
       },
       {
-        "q": "他有一頂棒球帽",
-        "ans": "He has a cap."
+        "q": "鞋子在背包裡。",
+        "ans": "The shoes are in the backpack."
       },
       {
-        "q": "他們正在穿著制服",
-        "ans": "They are wearing uniforms."
+        "q": "我需要一頂帽子。",
+        "ans": "I need a cap."
       },
       {
-        "q": "我有一個背包",
-        "ans": "I have a backpack."
+        "q": "背包是舊的。",
+        "ans": "The bag is old."
       },
       {
-        "q": "我們正在戴著手套",
-        "ans": "We are wearing gloves."
+        "q": "這是一條皮帶。",
+        "ans": "This is a belt."
       },
       {
-        "q": "他正在戴著眼鏡",
-        "ans": "He is wearing glasses."
+        "q": "這是一條圍巾。",
+        "ans": "This is a scarf."
       },
       {
-        "q": "她有一條項鍊",
-        "ans": "She has a necklace."
+        "q": "這是一隻手套。",
+        "ans": "This is a glove."
       }
     ],
     "unscramble": [
       {
-        "q": "am / . / a / I / wearing / hat",
-        "ans": "I am wearing a hat."
+        "q": "wear / I / . / socks",
+        "ans": "I wear socks."
       },
       {
-        "q": ". / is / She / wearing / shoes",
-        "ans": "She is wearing shoes."
+        "q": "boots / . / He / wears",
+        "ans": "He wears boots."
       },
       {
-        "q": "has / cap / He / . / a",
-        "ans": "He has a cap."
+        "q": "backpack / . / has / She / a",
+        "ans": "She has a backpack."
       },
       {
-        "q": "uniforms / . / are / wearing / They",
-        "ans": "They are wearing uniforms."
+        "q": "wear / . / They / glasses",
+        "ans": "They wear glasses."
       },
       {
-        "q": "a / . / backpack / I / have",
-        "ans": "I have a backpack."
+        "q": "old / . / uniform / is / The",
+        "ans": "The uniform is old."
       },
       {
-        "q": ". / gloves / are / We / wearing",
-        "ans": "We are wearing gloves."
+        "q": "a / . / necklace / This / is",
+        "ans": "This is a necklace."
       }
     ]
   },

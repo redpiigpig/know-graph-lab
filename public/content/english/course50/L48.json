@@ -1,172 +1,208 @@
 {
-  "title_en": "My Town Trip",
-  "title_zh": "我的城鎮之旅",
-  "grammar": "We practice asking and answering questions with Is there a…? and Where do you live?",
-  "intro_zh": "本課我們將學習描述自己的居住地點，詢問城鎮裡有什麼設施，以及使用不同交通工具去各地。透過故事練習 Is there a…? 和 Where do you live? 的句型，增強生活英語表達。",
+  "title_en": "My Town and Country",
+  "title_zh": "我的城鎮與國家",
+  "intro_zh": "本課將學習用 by + 交通工具表示搭乘方式，走路則說 on foot。透過鎮裡的生活情境，練習說出去學校、去商店或旅行的交通方式。同時也會看到不同的車輛，如公共汽車、火車和船隻，了解它們在日常生活中的角色。",
   "can_do": [
-    "能用 Is there a…? 詢問城鎮裡的設施",
-    "能用 Where do you live? 說出自己的居住地",
-    "能說出常見的交通工具名稱並描述出行方式"
+    "能用 by + 交通工具說出去學校或去其他地方的方式",
+    "能用 on foot 描述走路去某地的情況",
+    "能在簡單對話中說出自己常用的交通工具及其目的地"
   ],
   "reading": {
-    "title_en": "My Town Trip",
-    "title_zh": "我的城鎮之旅",
+    "title_en": "A Day in Lily's Town",
+    "title_zh": "莉莉的小鎮生活",
     "sentences": [
       {
-        "en": "I live in Hualien, a beautiful town on the east coast of Taiwan.",
-        "zh": "我住在花蓮，那是台灣東部海岸的一個美麗城鎮。"
+        "en": "Lily lives in a quiet town near the old bridge.",
+        "zh": "莉莉住在老橋附近的安靜小鎮。"
       },
       {
-        "en": "My life is busy but I like to stay healthy and take medicine when I am sick.",
-        "zh": "我的生活很忙碌，但我喜歡保持健康，生病時會吃藥。"
+        "en": "She rides her bike to school every day, enjoying the fresh air for health.",
+        "zh": "她每天騎腳踏車去上學，享受新鮮空氣來保持健康。"
       },
       {
-        "en": "Every weekend my family goes to the public market where there is a big sale of fresh fruit.",
-        "zh": "每個週末，我的家人會去公共市場，那裡有新鮮水果的大特賣。"
+        "en": "On rainy mornings she takes the train, but she walks on foot when the sun shines.",
+        "zh": "雨天早上她會搭火車，但太陽出來時她會步行。"
       },
       {
-        "en": "We often travel by car or bus to visit relatives in other cities.",
-        "zh": "我們常常開車或搭公車去拜訪其他城市的親戚。"
+        "en": "After school, she goes to the public library to read about medicine.",
+        "zh": "放學後，她去公共圖書館閱讀有關藥物的書。"
       },
       {
-        "en": "I ride my bicycle to school, my sister likes her scooter, and my brother rides his motorcycle.",
-        "zh": "我騎腳踏車上學，我姐姐喜歡她的輕型機車，我哥哥則騎重型機車。"
+        "en": "Inside the library, she finds a book about America and the wide world.",
+        "zh": "在圖書館裡，她找到一本關於美國和廣闊世界的書。"
       },
       {
-        "en": "When we go to the beach, we see many boats and a big ship that brings goods from America and China.",
-        "zh": "我們去海灘時，會看到很多小船和一艘載運美國和中國貨物的大船。"
+        "en": "She dreams of traveling by ship to China to study life there.",
+        "zh": "她夢想坐船去中國，在那裡研究生活。"
       },
       {
-        "en": "If we need to go far, we can take the train or a taxi to the airport.",
-        "zh": "如果我們需要遠行，可以搭火車或計程車去機場。"
+        "en": "One summer, she will take a boat across the lake to visit her grandparents.",
+        "zh": "有一天夏天，她將乘小船過湖去看望祖父母。"
       },
       {
-        "en": "Trucks carry medicine and food across the island, helping everyone stay well.",
-        "zh": "卡車運送藥物和食物遍布全島，幫助大家保持健康。"
+        "en": "On her way, she sees a truck, a taxi, and a motorcycle stuck in heavy traffic.",
+        "zh": "在路上，她看到卡車、計程車和重型機車被堵在塞車中。"
       },
       {
-        "en": "I dream of seeing the whole world one day, learning about different cultures and languages.",
-        "zh": "我夢想有一天能看到整個世界，學習不同的文化和語言。"
+        "en": "She also likes to ride her scooter over the bridge when the weather is nice.",
+        "zh": "她也喜歡在天氣好時騎輕型機車過橋。"
       },
       {
-        "en": "Learning English helps me talk to friends from other countries and share my town’s stories.",
-        "zh": "學習英語讓我能夠與其他國家的朋友交談，並分享我家鄉的故事。"
+        "en": "At the weekend, she visits the department store and buys snacks at the convenient store.",
+        "zh": "週末，她會去百貨公司，並在便利商店買零食。"
       }
     ]
   },
   "grammar_points": [
     {
-      "title_zh": "① Is there a …? 的問答方式",
-      "explain_zh": "用來詢問某個地點是否存在某樣東西，答句用 Yes, there is. 或 No, there isn't.",
+      "title_zh": "① by + 交通工具，中間不加冠詞",
+      "explain_zh": "說明怎麼去某個地方時，用 by + 交通工具。交通工具前面不可以加 a、an 或 the。例如：by bus（坐公車）、by train（坐火車）、by taxi（坐計程車）。特別注意：走路要用 on foot，不用 by。",
       "table": [
         [
-          "問句",
-          "肯定答句",
-          "否定答句"
+          "交通工具",
+          "用法",
+          "例句"
         ],
         [
-          "Is there a hospital?",
-          "Yes, there is.",
-          "No, there isn't."
+          "bus（公車）",
+          "by bus",
+          "I go to the department store by bus."
         ],
         [
-          "Is there a park?",
-          "Yes, there is.",
-          "No, there isn't."
+          "train（火車）",
+          "by train",
+          "She travels by train."
         ],
         [
-          "Is there a museum?",
-          "Yes, there is.",
-          "No, there isn't."
+          "taxi（計程車）",
+          "by taxi",
+          "We go home by taxi."
+        ],
+        [
+          "bike（腳踏車）",
+          "by bike",
+          "He goes to school by bike."
+        ],
+        [
+          "boat（小船）",
+          "by boat",
+          "They go to the island by boat."
+        ],
+        [
+          "motorcycle（重型機車）",
+          "by motorcycle",
+          "My father goes to work by motorcycle."
+        ],
+        [
+          "scooter（輕型機車）",
+          "by scooter",
+          "You go by scooter."
+        ],
+        [
+          "foot（走路）",
+          "on foot",
+          "I go to the convenient store on foot."
         ]
       ]
     },
     {
-      "title_zh": "② Where do you live? 的答句與介系詞",
-      "explain_zh": "用來問某人住在哪裡，答句常用 I live in … 、 I live on … 、 I live near … 。",
+      "title_zh": "② take a bus 與 by bus 的差別",
+      "explain_zh": "\"take a bus\" 和 \"by bus\" 都表示「坐公車」，但用法不同。\"take a bus\" 用動詞 take，後面要加冠詞 a。\"by bus\" 是介系詞用法，中間不加冠詞。兩種都正確，但在「怎麼去」的句子裡，用 by 更常見。",
       "examples": [
         {
-          "en": "Where do you live?",
-          "zh": "你住在哪裡？"
+          "en": "I take a bus to school every day.",
+          "zh": "我每天坐一班公車上學。（強調坐上哪一班公車）"
         },
         {
-          "en": "I live in Hualien.",
-          "zh": "我住在花蓮。"
+          "en": "I go to school by bus every day.",
+          "zh": "我每天搭公車上學。（說明交通方式）"
         },
         {
-          "en": "I live near the train station.",
-          "zh": "我住在火車站附近。"
+          "en": "She takes a train to Taipei.",
+          "zh": "她搭一班火車去台北。"
+        },
+        {
+          "en": "She travels to Taipei by train.",
+          "zh": "她用火車去台北。（強調方式）"
+        },
+        {
+          "en": "Do you take a taxi to the hospital?",
+          "zh": "你坐計程車去醫院嗎？"
+        },
+        {
+          "en": "Do you go to the hospital by taxi?",
+          "zh": "你怎麼去醫院？（你搭計程車去醫院嗎？）"
         }
       ]
     }
   ],
   "dialogue": {
-    "title_zh": "情境對話：在鎮上詢問設施與居住地",
+    "title_zh": "情境對話：朋友問我怎麼去公園",
     "lines": [
       {
-        "sp": "老師",
-        "en": "Is there a post office in your town?",
-        "zh": "你們鎮裡有郵局嗎？"
+        "sp": "Amy",
+        "en": "How do you go to the park?",
+        "zh": "你怎麼去公園？"
       },
       {
-        "sp": "小明",
-        "en": "Yes, there is a post office near the market.",
-        "zh": "有，郵局在市場附近。"
+        "sp": "Tom",
+        "en": "I go to the park by bike.",
+        "zh": "我騎腳踏車去公園。"
       },
       {
-        "sp": "老師",
-        "en": "Where do you live,小明?",
-        "zh": "小明，你住在哪裡？"
+        "sp": "Amy",
+        "en": "That's healthy! How about your sister?",
+        "zh": "那很健康！你妹妹呢？"
       },
       {
-        "sp": "小明",
-        "en": "I live in Hualien, on Zhongshan Road.",
-        "zh": "我住在花蓮，中山路上。"
+        "sp": "Tom",
+        "en": "She goes by bus. It's more convenient.",
+        "zh": "她搭公車。比較方便。"
       },
       {
-        "sp": "老師",
-        "en": "Is there a bicycle shop near your home?",
-        "zh": "你家附近有腳踏車店嗎？"
+        "sp": "Amy",
+        "en": "Can I go with you?",
+        "zh": "我可以跟你一起去嗎？"
       },
       {
-        "sp": "小明",
-        "en": "No, there isn't a bicycle shop, but there is a scooter shop.",
-        "zh": "沒有腳踏車店，但有輕型機車店。"
+        "sp": "Tom",
+        "en": "Of course! Let's go by bike together.",
+        "zh": "當然可以！我們一起騎腳踏車去。"
       }
     ]
   },
   "sentences": [
     {
-      "en": "Is there a hospital in your town?",
-      "zh": "你們鎮裡有醫院嗎？"
+      "en": "My grandmother lives in the country. She goes to town by truck.",
+      "zh": "我奶奶住在鄉下。她坐卡車去鎮上。"
     },
     {
-      "en": "Yes, there is a hospital on River Street.",
-      "zh": "有，醫院在河邊街。"
+      "en": "The bridge is very long. People cross it by motorcycle.",
+      "zh": "這座橋很長。人們騎重型機車過橋。"
     },
     {
-      "en": "Where do you live?",
-      "zh": "你住在哪裡？"
+      "en": "To have good health, I go to the convenient store on foot.",
+      "zh": "為了健康，我走路去便利商店。"
     },
     {
-      "en": "I live in Taichung, near the bus station.",
-      "zh": "我住在台中，靠近公車站。"
+      "en": "The children travel around the world by ship.",
+      "zh": "孩子們搭船周遊世界。"
     },
     {
-      "en": "Is there a park close to your school?",
-      "zh": "你學校附近有公園嗎？"
+      "en": "In America, many people go to the department store by car.",
+      "zh": "在美國，很多人開車去百貨公司。"
     },
     {
-      "en": "No, there isn't a park, but there is a playground.",
-      "zh": "沒有公園，但有遊樂場。"
+      "en": "My uncle lives in China. He takes the train to work by train.",
+      "zh": "我叔叔住在中國。他搭火車去工作。"
     },
     {
-      "en": "Do you go to the market by taxi?",
-      "zh": "你會搭計程車去市場嗎？"
+      "en": "The traffic in the city is busy. It's better to go by bike.",
+      "zh": "城市的交通很擁擠。騎腳踏車比較好。"
     },
     {
-      "en": "I usually go to the market by bicycle.",
-      "zh": "我通常騎腳踏車去市場。"
+      "en": "When I have medicine to deliver, I go by scooter.",
+      "zh": "當我要送藥時，我騎輕型機車去。"
     }
   ],
   "no": 48,
@@ -174,12 +210,12 @@
   "theme_zh": "城鎮與國家",
   "words": [
     {
-      "en": "Hualien",
-      "zh": "花蓮"
+      "en": "live",
+      "zh": "生活"
     },
     {
-      "en": "America",
-      "zh": "美國"
+      "en": "life",
+      "zh": "生命"
     },
     {
       "en": "China",
@@ -190,60 +226,40 @@
       "zh": "世界"
     },
     {
+      "en": "public",
+      "zh": "公共的"
+    },
+    {
       "en": "health",
       "zh": "健康"
+    },
+    {
+      "en": "America",
+      "zh": "美國"
     },
     {
       "en": "medicine",
       "zh": "藥物"
     },
     {
-      "en": "live",
-      "zh": "生活"
+      "en": "department store",
+      "zh": "百貨公司"
     },
     {
-      "en": "life",
-      "zh": "生命"
-    },
-    {
-      "en": "sale",
-      "zh": "拍賣"
-    },
-    {
-      "en": "public",
-      "zh": "公共的"
-    },
-    {
-      "en": "car",
-      "zh": "汽車"
-    },
-    {
-      "en": "bus",
-      "zh": "公車"
-    },
-    {
-      "en": "bicycle/bike",
-      "zh": "腳踏車"
-    },
-    {
-      "en": "motorcycle",
-      "zh": "重型機車"
-    },
-    {
-      "en": "scooter",
-      "zh": "輕型機車"
+      "en": "convenient store",
+      "zh": "便利商店"
     },
     {
       "en": "ship",
       "zh": "船"
     },
     {
-      "en": "boat",
-      "zh": "小船"
-    },
-    {
       "en": "taxi",
       "zh": "計程車"
+    },
+    {
+      "en": "boat",
+      "zh": "小船"
     },
     {
       "en": "train",
@@ -252,411 +268,233 @@
     {
       "en": "truck",
       "zh": "卡車"
+    },
+    {
+      "en": "bridge",
+      "zh": "橋"
+    },
+    {
+      "en": "bicycle/bike",
+      "zh": "腳踏車"
+    },
+    {
+      "en": "scooter",
+      "zh": "輕型機車"
+    },
+    {
+      "en": "traffic",
+      "zh": "交通"
+    },
+    {
+      "en": "motorcycle",
+      "zh": "重型機車"
     }
   ],
+  "focus": "by + 交通工具",
+  "grammar": "說怎麼去用 by + 交通工具（中間不加冠詞），走路是 on foot。",
   "exercises": {
     "mcq": [
       {
-        "q": "花蓮的英文是什麼?",
+        "q": "公共的英文是？",
         "opts": [
-          "Hualien",
-          "America",
-          "China",
-          "world"
-        ],
-        "ans": "Hualien"
-      },
-      {
-        "q": "美國的英文是什麼?",
-        "opts": [
-          "Hualien",
-          "America",
-          "China",
-          "world"
-        ],
-        "ans": "America"
-      },
-      {
-        "q": "中國的英文是什麼?",
-        "opts": [
-          "Hualien",
-          "America",
-          "China",
-          "world"
-        ],
-        "ans": "China"
-      },
-      {
-        "q": "世界的英文是什麼?",
-        "opts": [
-          "Hualien",
-          "America",
-          "China",
-          "world"
-        ],
-        "ans": "world"
-      },
-      {
-        "q": "健康的英文是什麼?",
-        "opts": [
-          "health",
+          "department store",
           "medicine",
-          "life",
-          "sale"
-        ],
-        "ans": "health"
-      },
-      {
-        "q": "醫藥的英文是什麼?",
-        "opts": [
           "health",
-          "medicine",
-          "life",
-          "sale"
+          "public"
         ],
-        "ans": "medicine"
+        "ans": "public"
       },
       {
-        "q": "生活的英文是什麼?",
-        "opts": [
-          "health",
-          "medicine",
-          "life",
-          "sale"
-        ],
-        "ans": "life"
-      },
-      {
-        "q": "賣的英文是什麼?",
-        "opts": [
-          "health",
-          "medicine",
-          "life",
-          "sale"
-        ],
-        "ans": "sale"
-      },
-      {
-        "q": "汽車的英文是什麼?",
-        "opts": [
-          "car",
-          "bus",
-          "bicycle",
-          "motorcycle"
-        ],
-        "ans": "car"
-      },
-      {
-        "q": "公車的英文是什麼?",
-        "opts": [
-          "car",
-          "bus",
-          "bicycle",
-          "motorcycle"
-        ],
-        "ans": "bus"
-      },
-      {
-        "q": "哪一個是 Hualien？",
-        "opts": [
-          "Hualien",
-          "America",
-          "China",
-          "world"
-        ],
-        "ans": "Hualien"
-      },
-      {
-        "q": "哪一個是 America？",
-        "opts": [
-          "America",
-          "Hualien",
-          "China",
-          "world"
-        ],
-        "ans": "America"
-      },
-      {
-        "q": "哪一個是 China？",
-        "opts": [
-          "China",
-          "Hualien",
-          "America",
-          "world"
-        ],
-        "ans": "China"
-      },
-      {
-        "q": "哪一個是 world？",
+        "q": "生活的英文是？",
         "opts": [
           "world",
-          "Hualien",
-          "America",
+          "live",
+          "life",
           "China"
-        ],
-        "ans": "world"
-      },
-      {
-        "q": "哪一個是 health？",
-        "opts": [
-          "health",
-          "medicine",
-          "life",
-          "sale"
-        ],
-        "ans": "health"
-      },
-      {
-        "q": "哪一個是 medicine？",
-        "opts": [
-          "medicine",
-          "health",
-          "life",
-          "sale"
-        ],
-        "ans": "medicine"
-      },
-      {
-        "q": "哪一個是 life？",
-        "opts": [
-          "life",
-          "health",
-          "medicine",
-          "sale"
         ],
         "ans": "life"
       },
       {
-        "q": "哪一個是 sale？",
+        "q": "I go to school ___ bus. (用巴士去學校)",
         "opts": [
-          "sale",
-          "health",
-          "medicine",
-          "life"
+          "by",
+          "with",
+          "in",
+          "on"
         ],
-        "ans": "sale"
+        "ans": "by"
       },
       {
-        "q": "哪一個是 car？",
+        "q": "便利商店的英文是？",
         "opts": [
-          "car",
-          "bus",
-          "bicycle/bike",
-          "motorcycle"
-        ],
-        "ans": "car"
-      },
-      {
-        "q": "哪一個是 bus？",
-        "opts": [
-          "bus",
-          "car",
-          "train",
-          "truck"
-        ],
-        "ans": "bus"
-      },
-      {
-        "q": "如果有人問：Is there a ___? 正確的答案是：Yes, there is a bus. 請問空格應該填什麼?",
-        "opts": [
-          "car",
-          "bus",
-          "train",
-          "truck"
-        ],
-        "ans": "bus"
-      },
-      {
-        "q": "如果有人問：Where do you live? 正確的答案是：I live in ___. 請問空格應該填什麼?",
-        "opts": [
-          "Hualien",
-          "America",
-          "China",
-          "world"
-        ],
-        "ans": "Hualien"
-      },
-      {
-        "q": "如果有人問：Is there a ___? 正確的答案是：Yes, there is medicine. 請問空格應該填什麼?",
-        "opts": [
-          "health",
-          "medicine",
-          "life",
-          "sale"
-        ],
-        "ans": "medicine"
-      },
-      {
-        "q": "如果有人問：Is there a ___? 正確的答案是：Yes, there is a sale. 請問空格應該填什麼?",
-        "opts": [
-          "health",
-          "medicine",
-          "life",
-          "sale"
-        ],
-        "ans": "sale"
-      },
-      {
-        "q": "如果你住在美國，你會說：I live in ___.",
-        "opts": [
-          "Hualien",
-          "America",
-          "China",
-          "world"
-        ],
-        "ans": "America"
-      },
-      {
-        "q": "如果有人問：Is there a ___? 正確的答案是：Yes, there is a car. 請問空格應該填什麼?",
-        "opts": [
-          "car",
-          "bus",
-          "bicycle",
-          "motorcycle"
-        ],
-        "ans": "car"
-      },
-      {
-        "q": "如果你住在地球上，你會說：I live in ___.",
-        "opts": [
-          "Hualien",
-          "America",
-          "China",
-          "world"
-        ],
-        "ans": "world"
-      },
-      {
-        "q": "如果有人問：Is there a ___? 正確的答案是：Yes, there is a train. 請問空格應該填什麼?",
-        "opts": [
-          "train",
-          "truck",
-          "ship",
-          "boat"
-        ],
-        "ans": "train"
-      },
-      {
-        "q": "如果你住在中國，你會說：I live in ___.",
-        "opts": [
-          "Hualien",
-          "America",
-          "China",
-          "world"
-        ],
-        "ans": "China"
-      },
-      {
-        "q": "如果有人問：Is there a ___? 正確的答案是：Yes, there is a truck. 請問空格應該填什麼?",
-        "opts": [
-          "truck",
           "taxi",
-          "scooter",
+          "ship",
+          "department store",
+          "convenient store"
+        ],
+        "ans": "convenient store"
+      },
+      {
+        "q": "She goes to work ___ bicycle. (使用腳踏車去上班)",
+        "opts": [
+          "on",
+          "by",
+          "taxi",
+          "in"
+        ],
+        "ans": "by"
+      },
+      {
+        "q": "live 的名詞形式是？",
+        "opts": [
+          "life",
+          "health",
+          "live",
+          "public"
+        ],
+        "ans": "life"
+      },
+      {
+        "q": "bicycle 的另一種說法是？",
+        "opts": [
+          "truck",
+          "bike",
+          "boat",
+          "train"
+        ],
+        "ans": "bike"
+      },
+      {
+        "q": "橋樑的英文是？",
+        "opts": [
+          "taxi",
+          "train",
+          "bridge",
           "ship"
         ],
-        "ans": "truck"
+        "ans": "bridge"
+      },
+      {
+        "q": "He goes to school ___ taxi. (他計程車去學校)",
+        "opts": [
+          "on",
+          "by",
+          "in",
+          "at"
+        ],
+        "ans": "by"
+      },
+      {
+        "q": "她怎麼去上班？",
+        "opts": [
+          "She goes to work by taxi.",
+          "She goes to work with taxi.",
+          "She goes to work in taxi.",
+          "She goes to work on taxi."
+        ],
+        "ans": "She goes to work by taxi."
       }
     ],
     "fill": [
       {
-        "q": "Is there a ____ here?（這裡有____嗎？）",
-        "ans": "bus"
+        "q": "I ____ by taxi.（我搭計程車）",
+        "ans": "go"
       },
       {
-        "q": "Where do you ____?（你住在哪裡？）",
+        "q": "She ____ in China.（她住在中國）",
         "ans": "live"
       },
       {
-        "q": "There is a ____ there?（那裡有____嗎？）",
-        "ans": "ship"
+        "q": "The ____ is long.（這座橋很長）",
+        "ans": "bridge"
       },
       {
-        "q": "Do you have a ____?（你有一____嗎？）",
-        "ans": "bicycle"
+        "q": "He goes ____ taxi.（他坐計程車）",
+        "ans": "by"
       },
       {
-        "q": "Is there a ____ here?（這裡有____嗎？）",
-        "ans": "taxi"
+        "q": "____ health is important for everyone.（公共衛生對每個人很重要）",
+        "ans": "Public"
       },
       {
-        "q": "Is there a ____ there?（那裡有____嗎？）",
-        "ans": "train"
+        "q": "Life ____ medicine are important.（生命和醫藥都很重要）",
+        "ans": "and"
       },
       {
-        "q": "Is there a ____ here?（這裡有____嗎？）",
-        "ans": "truck"
+        "q": "We ____ the world by ship.（我們坐船看世界）",
+        "ans": "see"
       },
       {
-        "q": "Is there a ____ here?（這裡有____嗎？）",
-        "ans": "scooter"
+        "q": "The ____ is very busy today.（今天交通非常繁忙）",
+        "ans": "traffic"
       },
       {
-        "q": "Is there a ____ there?（那裡有____嗎？）",
-        "ans": "motorcycle"
+        "q": "____ and motorcycle are two kinds of bikes.（腳踏車和機車是兩種腳踏車類交通工具）",
+        "ans": "Bicycle"
       },
       {
-        "q": "Is there a ____ here?（這裡有____嗎？）",
-        "ans": "boat"
+        "q": "I ____ here.（我在這裡）",
+        "ans": "am"
       }
     ],
     "translate": [
       {
-        "q": "我住在花蓮。",
-        "ans": "I live in Hualien."
+        "q": "我住在中國。",
+        "ans": "I live in China."
       },
       {
-        "q": "你住在哪裡？",
-        "ans": "Where do you live?"
+        "q": "他坐計程車。",
+        "ans": "He goes by taxi."
       },
       {
-        "q": "這裡有一輛公車。",
-        "ans": "There is a bus here."
+        "q": "我們走路。",
+        "ans": "We go on foot."
       },
       {
-        "q": "那裡有一艘船。",
-        "ans": "There is a ship there."
+        "q": "這座橋很長。",
+        "ans": "The bridge is long."
       },
       {
-        "q": "你有一腳踏車嗎？",
-        "ans": "Do you have a bicycle?"
+        "q": "公共衛生很重要。",
+        "ans": "Public health is important."
       },
       {
-        "q": "這裡有特賣。",
-        "ans": "There is a sale here."
+        "q": "生命和醫藥都很重要。",
+        "ans": "Life and medicine are important."
       },
       {
-        "q": "我在這裡。",
-        "ans": "I am here."
+        "q": "我們坐船看世界。",
+        "ans": "We see the world by ship."
       },
       {
-        "q": "你在那裡。",
-        "ans": "You are there."
+        "q": "今天交通很繁忙。",
+        "ans": "Traffic is busy today."
       }
     ],
     "unscramble": [
       {
-        "q": ". / am / I / here",
-        "ans": "I am here."
+        "q": "taxi / go / I / by / .",
+        "ans": "I go by taxi."
       },
       {
-        "q": "You / . / there / are",
-        "ans": "You are there."
+        "q": "We / bicycle / by / go / .",
+        "ans": "We go by bicycle."
       },
       {
-        "q": "Hualien / I / in / . / live",
-        "ans": "I live in Hualien."
+        "q": "ship / They / by / . / go",
+        "ans": "They go by ship."
       },
       {
-        "q": ". / There / a / here / is / bus",
-        "ans": "There is a bus here."
+        "q": ". / by / She / goes / boat",
+        "ans": "She goes by boat."
       },
       {
-        "q": "have / bicycle / ? / Do / you / a",
-        "ans": "Do you have a bicycle?"
+        "q": ". / by / He / goes / truck",
+        "ans": "He goes by truck."
       },
       {
-        "q": "there / . / a / ship / is / There",
-        "ans": "There is a ship there."
+        "q": "by / go / . / We / motorcycle",
+        "ans": "We go by motorcycle."
       }
     ]
   },

@@ -1,163 +1,162 @@
 {
-  "title_en": "Night Market Fun",
-  "title_zh": "夜市美食之旅",
-  "grammar": "本課練習 Would you like…? 與 How much…? 的句型。",
-  "intro_zh": "本課我們學習點飲料、小食的禮貌用語，以及詢問價格的方式。透過夜市故事，學生練習 Would you like…? 和 How much…?，並認識常見台灣小吃。",
+  "title_en": "Drinks Fruits Snacks",
+  "title_zh": "飲料水果小吃介紹",
+  "intro_zh": "本課將教導學生使用 How much is…? 與 How much are…? 來問價格，並以 It is … dollars. 作答。透過夜市買飲料、水果與小吃的對話練習，學會真實生活中的購物用語。",
   "can_do": [
-    "能用 Would you like…? 提供飲料或小吃。",
-    "能用 How much…? 詢問食物的價格。",
-    "能說出至少十種台灣小吃的英文名稱。"
+    "能用 How much is…? 問單一食物的價格。",
+    "能用 How much are…? 問多個食物的價格。",
+    "能以 It is … dollars. 正確回答價格。"
   ],
   "reading": {
-    "title_en": "Night Market Adventure",
-    "title_zh": "夜市探險小故事",
+    "title_en": "At the Night Market",
+    "title_zh": "夜市採購小故事",
     "sentences": [
       {
-        "en": "On Saturday, Lily and her parents go to the night market to enjoy Taiwanese Snacks.",
-        "zh": "週六，莉莉和父母去夜市享受台灣小吃。"
+        "en": "Today I go to the night market to buy a bowl of congee and a meatball.",
+        "zh": "今天我去夜市買一碗稀飯和一個肉圓。"
       },
       {
-        "en": "First, they drink a cup of soy milk, eat an egg pancake, and have some fried chicken.",
-        "zh": "首先，他們喝一杯豆漿，吃一個蛋餅，還有炸雞排。"
+        "en": "I also want to buy an egg pancake and soy milk.",
+        "zh": "我也想買蛋餅和豆漿。"
       },
       {
-        "en": "Then they try stinky tofu with pickle and a side of fried bread sticks.",
-        "zh": "接著他們吃臭豆腐，加上醬菜，還有油條。"
+        "en": "The stall also has squid soup, stinky tofu, and oyster.",
+        "zh": "攤位還有魷魚羮、臭豆腐和牡蠣。"
       },
       {
-        "en": "Lily loves the meatball soup and asks for extra peanut sprinkles.",
-        "zh": "莉莉很愛肉圓湯，並請加多一些花生。"
+        "en": "I like to eat kiwi, apple, and guava.",
+        "zh": "我喜歡吃奇異果、蘋果和芭樂。"
       },
       {
-        "en": "Dad asks, \"How much is the beef noodle with handmade noodles and oyster?\" then he orders a big bowl.",
-        "zh": "爸爸問，「手工麵線牛肉麵加牡蠣多少錢？」然後他點了一大碗。"
+        "en": "There are peanuts, pickles, and a garbage bin nearby.",
+        "zh": "旁邊有花生、醬菜和垃圾桶。"
       },
       {
-        "en": "Mom prefers a light congee with squid soup and a few oyster noodles.",
-        "zh": "媽媽喜歡清淡的稀飯，加上魷魚羮和幾條蚵仔麵線。"
+        "en": "I also want to buy beef noodle, handmade noodle, and tofu pudding.",
+        "zh": "我也要買牛肉麵、手工麵線和豆花。"
       },
       {
-        "en": "For dessert, they share brown sugar cake, tofu pudding, and a pearl milk tea.",
-        "zh": "作為甜點，他們分享黑糖糕、豆花和珍珠奶茶。"
+        "en": "I use a fork to eat.",
+        "zh": "我用叉子吃東西。"
       },
       {
-        "en": "After eating, they put their garbage in the bin and keep the market clean.",
-        "zh": "吃完後，他們把垃圾放進垃圾桶，保持夜市乾淨。"
+        "en": "How much is the congee? It is thirty dollars.",
+        "zh": "這碗稀飯多少錢？它是三十美元。"
       },
       {
-        "en": "Lily feels happy and asks her brother, \"Would you like another snack?\"",
-        "zh": "莉莉感到很開心，她問弟弟：「你想再吃一點小吃嗎？」"
+        "en": "How much are the meatballs? It is twenty dollars.",
+        "zh": "這些肉圓多少錢？它是二十美元。"
       }
     ]
   },
   "grammar_points": [
     {
-      "title_zh": "① Would you like…? 的延伸用法：提供選擇與數量",
-      "explain_zh": "在 Would you like…? 後可以加名詞、some + 不可數名詞或數量詞 + 名詞，以提供完整物品、部分或指定數量。",
+      "title_zh": "① How much is／are 隨東西的單複數變化",
+      "explain_zh": "根據名詞是單數還是複數選擇 is 或 are 來問價錢，回答一律用 It is … dollars。",
       "table": [
         [
-          "句型",
-          "功能",
-          "例句"
+          "名詞",
+          "疑問句",
+          "回答"
         ],
         [
-          "Would you like + 名詞？",
-          "提供完整的東西",
-          "Would you like a soy milk?"
+          "congee (單數)",
+          "How much is the congee?",
+          "It is thirty dollars."
         ],
         [
-          "Would you like some + 不可數名詞？",
-          "提供部分或適量",
-          "Would you like some pearl milk tea?"
-        ],
-        [
-          "Would you like + 數量詞 + 名詞？",
-          "指定具體數量",
-          "Would you like two meatballs?"
+          "meatballs (複數)",
+          "How much are the meatballs?",
+          "It is twenty dollars."
         ]
       ]
     },
     {
-      "title_zh": "② How much…? 用法：詢問價格與數量",
-      "explain_zh": "How much…? 用來詢問不可數名詞的價格或數量（例如飲料、湯、醬等）。若是可數名詞則用 How many…?，但本課著重在不可數名詞的應用。",
+      "title_zh": "② How much（不可數、價錢）與 How many（可數）的分工",
+      "explain_zh": "How much 用來詢問不可數名詞的價格或數量；How many 用來詢問可數名詞的數量。",
       "examples": [
         {
-          "en": "How much is the beef noodle?",
-          "zh": "這碗牛肉麵多少錢？"
+          "en": "How much is the soup?",
+          "zh": "這湯多少錢？"
         },
         {
-          "en": "How much soy milk would you like?",
+          "en": "How many apples are there?",
+          "zh": "有幾個蘋果？"
+        },
+        {
+          "en": "How much soy milk do you want?",
           "zh": "你想要多少豆漿？"
-        },
-        {
-          "en": "How much does the fried chicken cost?",
-          "zh": "這塊炸雞排多少錢？"
         }
       ]
     }
   ],
   "dialogue": {
-    "title_zh": "夜市攤位的點餐對話",
+    "title_zh": "在學校小賣部詢問價格",
     "lines": [
       {
-        "sp": "攤販",
-        "en": "Welcome! Would you like to try our pearl milk tea?",
-        "zh": "歡迎！你想要嘗試一下我們的珍珠奶茶嗎？"
+        "sp": "小明",
+        "en": "How much is the egg pancake?",
+        "zh": "蛋餅多少錢？"
       },
       {
-        "sp": "梅",
-        "en": "Yes, please. How much is one cup?",
-        "zh": "好的，請給我一杯。一杯多少錢？"
+        "sp": "店員",
+        "en": "It is twenty-five dollars.",
+        "zh": "二十五塊錢。"
       },
       {
-        "sp": "攤販",
-        "en": "It's fifty dollars.",
-        "zh": "五十元。"
+        "sp": "小華",
+        "en": "How much are the guavas?",
+        "zh": "芭樂多少錢？"
       },
       {
-        "sp": "強",
-        "en": "I would like some stinky tofu. How much for three pieces?",
-        "zh": "我想要一些臭豆腐。三塊多少錢？"
+        "sp": "店員",
+        "en": "It is eight dollars each.",
+        "zh": "每個八塊錢。"
       },
       {
-        "sp": "攤販",
-        "en": "Thirty dollars for three pieces.",
-        "zh": "三塊三十元。"
+        "sp": "小明",
+        "en": "How much is the pearl milk tea?",
+        "zh": "珍珠奶茶多少錢？"
+      },
+      {
+        "sp": "店員",
+        "en": "It is thirty dollars.",
+        "zh": "三十塊錢。"
       }
     ]
   },
   "sentences": [
     {
-      "en": "Would you like some stinky tofu?",
-      "zh": "你想要一些臭豆腐嗎？"
+      "en": "How much is the apple?",
+      "zh": "蘋果多少錢？"
     },
     {
-      "en": "How much is the oyster noodle?",
-      "zh": "這碗蚵仔麵線多少錢？"
+      "en": "How much are the kiwis?",
+      "zh": "奇異果多少錢？"
     },
     {
-      "en": "Would you like a handmade noodle?",
-      "zh": "你想要一碗手工麵線嗎？"
+      "en": "How much is the soy milk?",
+      "zh": "豆漿多少錢？"
     },
     {
-      "en": "How much peanut do you want?",
-      "zh": "你想要多少花生？"
+      "en": "How much is the guava?",
+      "zh": "芭樂多少錢？"
     },
     {
-      "en": "Would you like to try the brown sugar cake?",
-      "zh": "你想嘗試一下黑糖糕嗎？"
+      "en": "How much are the pearl milk teas?",
+      "zh": "珍珠奶茶多少錢？"
     },
     {
       "en": "How much is the squid soup?",
-      "zh": "這碗魷魚羮多少錢？"
+      "zh": "魷魚羮多少錢？"
     },
     {
-      "en": "Would you like some pickle with your meal?",
-      "zh": "你想要一些醬菜作為配菜嗎？"
+      "en": "How much are the handmade noodles?",
+      "zh": "手工麵線多少錢？"
     },
     {
-      "en": "How much does the fried bread stick cost?",
-      "zh": "這根油條多少錢？"
+      "en": "How much is the stinky tofu?",
+      "zh": "臭豆腐多少錢？"
     }
   ],
   "no": 20,
@@ -165,36 +164,28 @@
   "theme_zh": "飲料‧水果與小吃",
   "words": [
     {
-      "en": "soy milk",
-      "zh": "豆漿"
+      "en": "kiwi(s)",
+      "zh": "奇異果"
     },
     {
-      "en": "stinky tofu",
-      "zh": "臭豆腐"
+      "en": "fork",
+      "zh": "叉子"
     },
     {
-      "en": "meatball",
-      "zh": "肉圓"
+      "en": "bowl",
+      "zh": "碗"
     },
     {
-      "en": "egg pancake",
-      "zh": "蛋餅"
+      "en": "apple(s)",
+      "zh": "蘋果"
     },
     {
-      "en": "fried chicken",
-      "zh": "炸雞排"
+      "en": "guava(s)",
+      "zh": "芭樂"
     },
     {
-      "en": "pearl milk tea",
-      "zh": "珍珠奶茶"
-    },
-    {
-      "en": "beef noodle(s)",
-      "zh": "牛肉麵"
-    },
-    {
-      "en": "tofu pudding",
-      "zh": "豆花"
+      "en": "squid",
+      "zh": "小管"
     },
     {
       "en": "congee",
@@ -205,249 +196,259 @@
       "zh": "花生"
     },
     {
-      "en": "brown sugar cake",
-      "zh": "黑糖糕"
-    },
-    {
-      "en": "oyster noodle(s)",
-      "zh": "蚵仔麵線"
-    },
-    {
-      "en": "squid soup",
-      "zh": "魷魚羮"
-    },
-    {
       "en": "pickle",
       "zh": "醬菜"
-    },
-    {
-      "en": "fried bread stick(s)",
-      "zh": "油條"
-    },
-    {
-      "en": "handmade noodle(s)",
-      "zh": "手工麵線"
-    },
-    {
-      "en": "squid",
-      "zh": "小管"
     },
     {
       "en": "oyster",
       "zh": "牡蠣"
     },
     {
-      "en": "Taiwanese Snacks",
-      "zh": "台灣小吃"
-    },
-    {
       "en": "garbage",
       "zh": "垃圾"
+    },
+    {
+      "en": "meatball",
+      "zh": "肉圓"
+    },
+    {
+      "en": "soy milk",
+      "zh": "豆漿"
+    },
+    {
+      "en": "squid soup",
+      "zh": "魷魚羮"
+    },
+    {
+      "en": "stinky tofu",
+      "zh": "臭豆腐"
+    },
+    {
+      "en": "egg pancake",
+      "zh": "蛋餅"
+    },
+    {
+      "en": "beef noodle(s)",
+      "zh": "牛肉麵"
+    },
+    {
+      "en": "tofu pudding",
+      "zh": "豆花"
+    },
+    {
+      "en": "handmade noodle(s)",
+      "zh": "手工麵線"
+    },
+    {
+      "en": "pearl milk tea",
+      "zh": "珍珠奶茶"
     }
   ],
+  "focus": "How much 問價錢",
+  "grammar": "用 How much is…?／How much are…? 問價錢，回答用 It is … dollars.",
   "exercises": {
     "mcq": [
       {
-        "q": "你想要喝豆漿嗎？",
+        "q": "奇異果 的英文是？",
         "opts": [
-          "Would you like soy milk?",
-          "How much soy milk?",
-          "Would you like stinky tofu?",
-          "How much stinky tofu?"
+          "fork",
+          "bowl",
+          "kiwi",
+          "apple"
         ],
-        "ans": "Would you like soy milk?"
+        "ans": "kiwi"
       },
       {
-        "q": "珍珠奶茶多少錢？",
+        "q": "A tool used for eating, with prongs.",
         "opts": [
-          "How much is the pearl milk tea?",
-          "Would you like pearl milk tea?",
-          "How much is the soy milk?",
-          "Would you like the beef noodle?"
+          "fork",
+          "bowl",
+          "guava",
+          "apple"
         ],
-        "ans": "How much is the pearl milk tea?"
+        "ans": "fork"
       },
       {
-        "q": "你想吃炸雞嗎？",
+        "q": "這個碗多少錢？ (How much is the bowl?)",
         "opts": [
-          "Would you like fried chicken?",
-          "How much fried chicken?",
-          "Would you like egg pancake?",
-          "How much egg pancake?"
+          "It are 20 dollars.",
+          "It is 20 dollars.",
+          "It is 20 dollar.",
+          "It are 20 dollar."
         ],
-        "ans": "Would you like fried chicken?"
+        "ans": "It is 20 dollars."
       },
       {
-        "q": "這碗牛肉麵多少錢？",
+        "q": "花生 的英文是？",
         "opts": [
-          "How much is the beef noodle?",
-          "Would you like the beef noodle?",
-          "How much is the tofu pudding?",
-          "Would you like the tofu pudding?"
-        ],
-        "ans": "How much is the beef noodle?"
-      },
-      {
-        "q": "Would you like ______?",
-        "opts": [
-          "soy milk",
-          "stinky tofu",
-          "meatball",
-          "egg pancake"
-        ],
-        "ans": "stinky tofu"
-      },
-      {
-        "q": "How much is a ______?",
-        "opts": [
+          "pickle",
           "peanut",
-          "brown sugar cake",
-          "oyster noodle(s)",
-          "squid soup"
-        ],
-        "ans": "brown sugar cake"
-      },
-      {
-        "q": "How much are the ______?",
-        "opts": [
-          "fried bread stick(s)",
-          "handmade noodle(s)",
-          "squid",
+          "garbage",
           "oyster"
         ],
-        "ans": "handmade noodle(s)"
+        "ans": "peanut"
       },
       {
-        "q": "Would you like a cup of soy milk?",
+        "q": "肉丸 的英文是？",
         "opts": [
-          "a cup of soy milk",
-          "a bowl of stinky tofu",
-          "a plate of meatball",
-          "a glass of pearl milk tea"
+          "meatball",
+          "guava",
+          "bowl",
+          "fork"
         ],
-        "ans": "a cup of soy milk"
+        "ans": "meatball"
       },
       {
-        "q": "How much is this piece of fried chicken?",
+        "q": "How much ___ the apple? (問單個蘋果的價格)",
         "opts": [
-          "this piece of fried chicken",
-          "this bowl of oyster noodles",
-          "this bag of peanut",
-          "this slice of brown sugar cake"
+          "am",
+          "be",
+          "are",
+          "is"
         ],
-        "ans": "this piece of fried chicken"
+        "ans": "is"
       },
       {
-        "q": "Would you like some tofu pudding?",
+        "q": "蘋果 的複數形式是？",
         "opts": [
-          "some tofu pudding",
-          "some squid soup",
-          "some pickle",
-          "some fried bread stick(s)"
+          "apple",
+          "kiwi",
+          "apples",
+          "fork"
         ],
-        "ans": "some tofu pudding"
+        "ans": "apples"
+      },
+      {
+        "q": "豆漿的英文是？",
+        "opts": [
+          "egg pancake",
+          "stinky tofu",
+          "squid soup",
+          "soy milk"
+        ],
+        "ans": "soy milk"
+      },
+      {
+        "q": "How much ___ the beef noodle? (問單碗牛肉麵的價格)",
+        "opts": [
+          "is",
+          "do",
+          "are",
+          "does"
+        ],
+        "ans": "is"
+      },
+      {
+        "q": "這些蘋果多少錢？",
+        "opts": [
+          "It is 10 dollars.",
+          "They are 10 dollars.",
+          "It are 10 dollars.",
+          "They is 10 dollars."
+        ],
+        "ans": "They are 10 dollars."
       }
     ],
     "fill": [
       {
-        "q": "Would you like ____ ? (你想要什麼？)",
-        "ans": "congee"
+        "q": "How much ____ the apple？（這個蘋果多少錢？）",
+        "ans": "is"
       },
       {
-        "q": "How much is the ____ ? (這個____多少錢？)",
-        "ans": "peanut"
+        "q": "How much ____ the guavas？（這些番石榴多少錢？）",
+        "ans": "are"
       },
       {
-        "q": "I ____ soy milk every morning. (我每天早上都喜歡豆漿。)",
-        "ans": "like"
+        "q": "I have a ____。（我有一個蘋果。）",
+        "ans": "apple"
       },
       {
-        "q": "We ____ fried chicken on Fridays. (我們星期五都喜歡炸雞。)",
-        "ans": "like"
+        "q": "She puts the ____ on the table。（她把碗放在桌子上。）",
+        "ans": "bowl"
       },
       {
-        "q": "They ____ pearl milk tea after school. (他們放學後都喜歡珍珠奶茶。)",
-        "ans": "like"
-      },
-      {
-        "q": "Would you like ____ ? (你想要酸菜？)",
-        "ans": "pickle"
-      },
-      {
-        "q": "How much is the ____ ? (這個____多少錢？)",
+        "q": "He likes to eat ____。（他喜歡吃魷魚。）",
         "ans": "squid"
       },
       {
-        "q": "I ____ oyster noodles for lunch. (我午餐都喜歡蚵仔麵。)",
-        "ans": "like"
+        "q": "We put the garbage ____ the bin。（我們把垃圾放在垃圾桶裡。）",
+        "ans": "in"
       },
       {
-        "q": "She ____ stinky tofu at night. (她晚上都喜歡臭豆腐。)",
-        "ans": "like"
+        "q": "The fork is ____ the plate。（叉子在盤子上。）",
+        "ans": "on"
       },
       {
-        "q": "We ____ handmade noodles on weekends. (我們週末都喜歡手工麵。)",
-        "ans": "like"
+        "q": "The cat sleeps ____ the table。（貓睡在桌子下面。）",
+        "ans": "under"
+      },
+      {
+        "q": "She bought some ____ at the market。（她在市場買了一些花生。）",
+        "ans": "peanuts"
+      },
+      {
+        "q": "He ordered ____ for lunch。（他點了酸菜當午餐。）",
+        "ans": "pickle"
       }
     ],
     "translate": [
       {
-        "q": "你想要豆漿嗎？",
-        "ans": "Would you like soy milk?"
+        "q": "這個蘋果多少錢？",
+        "ans": "How much is the apple?"
       },
       {
-        "q": "這個花生多少錢？",
-        "ans": "How much is the peanut?"
+        "q": "這些番石榴多少錢？",
+        "ans": "How much are the guavas?"
       },
       {
-        "q": "我喜歡炸雞。",
-        "ans": "I like fried chicken."
+        "q": "我想喝豆漿。",
+        "ans": "I want to drink soy milk."
       },
       {
-        "q": "他們喜歡珍珠奶茶。",
-        "ans": "They like pearl milk tea."
+        "q": "我想吃肉丸。",
+        "ans": "I want to eat meatball."
       },
       {
-        "q": "我們喜歡蚵仔麵。",
-        "ans": "We like oyster noodles."
+        "q": "我想吃手工麵。",
+        "ans": "I want to eat handmade noodles."
       },
       {
-        "q": "她喜歡臭豆腐。",
-        "ans": "She likes stinky tofu."
+        "q": "我想吃珍珠奶茶。",
+        "ans": "I want to drink pearl milk tea."
       },
       {
-        "q": "我想要酸菜。",
-        "ans": "I would like pickle."
+        "q": "我想吃臭豆腐。",
+        "ans": "I want to eat stinky tofu."
       },
       {
-        "q": "這個魷魚多少錢？",
-        "ans": "How much is the squid?"
+        "q": "我想吃牛肉麵。",
+        "ans": "I want to eat beef noodles."
       }
     ],
     "unscramble": [
       {
-        "q": "milk / Would / soy / like / you / ?",
-        "ans": "Would you like soy milk?"
+        "q": "kiwi / How / the / is / much / ?",
+        "ans": "How much is the kiwi?"
       },
       {
-        "q": "? / the / How / much / peanut / is",
-        "ans": "How much is the peanut?"
+        "q": "? / the / How / much / meatballs / are",
+        "ans": "How much are the meatballs?"
       },
       {
-        "q": "like / fried / . / I / chicken",
-        "ans": "I like fried chicken."
+        "q": "squid / to / . / want / soup / I / drink",
+        "ans": "I want to drink squid soup."
       },
       {
-        "q": ". / They / like / tea / milk / pearl",
-        "ans": "They like pearl milk tea."
+        "q": "to / . / I / want / pancake / eat / egg",
+        "ans": "I want to eat egg pancake."
       },
       {
-        "q": "We / . / noodles / oyster / like",
-        "ans": "We like oyster noodles."
+        "q": "dollars / It / is / . / ten",
+        "ans": "It is ten dollars."
       },
       {
-        "q": ". / likes / She / tofu / stinky",
-        "ans": "She likes stinky tofu."
+        "q": "want / to / I / . / eat / tofu / pudding",
+        "ans": "I want to eat tofu pudding."
       }
     ]
   },

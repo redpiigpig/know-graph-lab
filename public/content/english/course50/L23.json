@@ -1,167 +1,168 @@
 {
-  "title_en": "English Test at School",
-  "title_zh": "學校裡的英語小測驗",
-  "grammar": "學習使用 There is / There are 與介系詞 in、on、under 描述教室裡的物品位置。",
-  "intro_zh": "歡迎來到學校主題的最後一課！今天班上要進行英語小測驗。快走進教室準備好文具，跟著老師的引導認真作答並仔細檢查。讓我們一起活用文具單字、學習動作與位置句型吧！",
+  "title_en": "At School",
+  "title_zh": "第 23 課　在學校",
+  "intro_zh": "同學們，你有沒有看過別人正在做功課？本課我們要學「現在進行式」，用 be 動詞 + 動詞 -ing 來說「正在做」的動作。例如：I am reading.（我正在讀書）、She is writing.（她正在寫）。學完這課，你就能描述教室裡每個人現在正在做什麼！",
   "can_do": [
-    "能使用 There is / There are 搭配介系詞 in、on、under 清楚描述教室物品的位置",
-    "能聽懂、讀懂並運用課堂上常見的學習與考試相關動詞",
-    "能看懂描述校園測驗情境的簡易英文短文"
+    "能用 be 動詞 + 動詞 -ing 說出正在進行的動作",
+    "能描述教室裡同學們正在做的事",
+    "能用 and、but、because 串連兩個關於正在進行的動作的句子"
   ],
   "reading": {
-    "title_en": "A Good Day for a Test",
-    "title_zh": "測驗的好日子",
+    "title_en": "Reading Test Day",
+    "title_zh": "課文　考試日",
     "sentences": [
       {
-        "en": "We enter the classroom and prepare for the English test.",
-        "zh": "我們走進教室，為英語測驗做準備。"
+        "en": "Today is reading test day.",
+        "zh": "今天是英文考試日。"
       },
       {
-        "en": "There are markers and colored pencils on the teacher's desk.",
-        "zh": "老師的講桌上有麥克筆和色鉛筆。"
+        "en": "The teacher is preparing the test papers.",
+        "zh": "老師正在準備考卷。"
       },
       {
-        "en": "There is a crayon under my chair, so I pick it up.",
-        "zh": "我的椅子下有一支蠟筆，於是我把它撿起來。"
+        "en": "Tom is studying his dictionary because he wants to pass the test.",
+        "zh": "湯姆正在查字典，因為他想考試及格。"
       },
       {
-        "en": "Mr. Lin teaches us every day, and we learn a lot from him.",
-        "zh": "林老師每天教導我們，我們從他身上學到很多。"
+        "en": "Amy is writing and repeating new words with her colored pencils.",
+        "zh": "艾美正在用色鉛筆寫字和重複念新單字。"
       },
       {
-        "en": "\"Read the questions, write carefully, and do not copy or cheat,\" says Mr. Lin.",
-        "zh": "「閱讀題目，小心書寫，絕對不要抄襲或作弊。」林老師說。"
+        "en": "Some students are copying words from the board, but they are not cheating.",
+        "zh": "有些學生正在從黑板上抄單字，但他們不是作弊。"
       },
       {
-        "en": "I know how to spell every word, and I finish the test quickly.",
-        "zh": "我知道如何拼寫每一個單字，而且很快就完成測驗。"
+        "en": "The teacher is asking students to spell difficult words and check their answers.",
+        "zh": "老師正在請學生拼難字並檢查答案。"
       },
       {
-        "en": "I check my paper to make sure all answers are correct.",
-        "zh": "我檢查考卷，確認所有答案都是正確的。"
+        "en": "Now the students are entering the classroom and they are learning very hard.",
+        "zh": "現在學生們正在走進教室，他們正在很認真地學習。"
       },
       {
-        "en": "Leo asks a question, and the teacher repeats it for the class.",
-        "zh": "里歐提出一個問題，老師為全班重複了一次。"
+        "en": "The test is starting, and everyone is reading the questions carefully.",
+        "zh": "考試正在開始，每個人都正在仔細地讀題目。"
       },
       {
-        "en": "We study hard together, so we all pass the test today!",
-        "zh": "我們一起認真研讀，所以今天大家考試都及格了！"
+        "en": "After the test, the teacher is correcting the papers and all students are waiting.",
+        "zh": "考試之後，老師正在批改考卷，所有學生都在等待。"
       }
     ]
   },
   "grammar_points": [
     {
-      "title_zh": "① There is / There are + 介系詞 in / on / under（肯定句）",
-      "explain_zh": "用來說明教室裡某樣東西的位置，單數用 There is，複數用 There are，後面接介系詞和地點。",
+      "title_zh": "① -ing 的拼字規則",
+      "explain_zh": "當動詞加 -ing 時，需注意兩種拼寫變化：1) 如果動詞以無聲的 e 結尾，去掉 e 再加 -ing；2) 如果動詞是重音閉音節且以單一子音結尾，則重複該子音再加 -ing。以下表格列出常見例子。",
       "table": [
         [
-          "英文結構",
-          "中文說明",
-          "範例句"
+          "原形",
+          "去 e",
+          "重複字尾子音",
+          "-ing 形"
         ],
         [
-          "There is + 單數名詞 + in/on/under + 地點",
-          "說明單數物品位置",
-          "There is a crayon on the desk."
+          "make",
+          "make",
+          "",
+          "making"
         ],
         [
-          "There are + 複數名詞 + in/on/under + 地點",
-          "說明複數物品位置",
-          "There are markers under the chair."
+          "write",
+          "write",
+          "",
+          "writing"
         ],
         [
-          "There is + 單數名詞 + in/on/under + 地點 + 和 + 其他",
-          "可以加和連接兩個以上的物品",
-          "There is a book and a pencil in the bag."
+          "run",
+          "run",
+          "r",
+          "running"
+        ],
+        [
+          "begin",
+          "begin",
+          "n",
+          "beginning"
         ]
       ]
     },
     {
-      "title_zh": "② There is / There are 的否定與疑問句",
-      "explain_zh": "用來詢問或否定教室裡某物是否存在，否定用 There isn't / There aren't，疑問用 Is there? / Are there?，後面同樣接介系詞和地點。",
+      "title_zh": "② 現在進行式（正在做）與現在簡單式（習慣）的差別",
+      "explain_zh": "現在進行式用 be 動詞 + 動詞 -ing，表示話語時刻正在發生的動作。現在簡單式用動詞原形（三人稱單數加 -s），表示習慣、經常發生或事實。以下例句說明兩者的意思差異。",
       "examples": [
         {
-          "en": "There isn't any eraser on the desk.",
-          "zh": "桌子上沒有橡皮擦。"
+          "en": "She is reading a story.",
+          "zh": "她正在閱讀一個故事。"
         },
         {
-          "en": "Are there any markers in the drawer?",
-          "zh": "抽屜裡有麥克筆嗎？"
-        },
-        {
-          "en": "There aren't any crayons under the chair.",
-          "zh": "椅子底下沒有蠟筆。"
-        },
-        {
-          "en": "Is there a notebook on the table?",
-          "zh": "桌子上有筆記本嗎？"
+          "en": "They are studying English.",
+          "zh": "他們正在學習英語。"
         }
       ]
     }
   ],
   "dialogue": {
-    "title_zh": "課堂上的小討論",
+    "title_zh": "在教室裡",
     "lines": [
       {
         "sp": "小明",
-        "en": "Is there a marker on the teacher's desk?",
-        "zh": "老師的桌子上有麥克筆嗎？"
+        "en": "I am drawing a picture.",
+        "zh": "我正在畫一張圖。"
       },
       {
         "sp": "小華",
-        "en": "Yes, there is a red marker on the desk.",
-        "zh": "有，桌子上有一支紅色的麥克筆。"
-      },
-      {
-        "sp": "小明",
-        "en": "Are there any crayons under the chair?",
-        "zh": "椅子下面有蠟筆嗎？"
-      },
-      {
-        "sp": "小華",
-        "en": "No, there aren't any crayons under the chair, but there are some colored pencils in the bag.",
-        "zh": "沒有，椅子下面沒有蠟筆，但書包裡有一些色鉛筆。"
+        "en": "We are coloring with crayons.",
+        "zh": "我們正在用蠟筆上色。"
       },
       {
         "sp": "老師",
-        "en": "Please check if the colored pencils are correct and repeat the spelling.",
-        "zh": "請檢查色鉛筆是否正確，並重複拼寫。"
+        "en": "I am teaching the lesson.",
+        "zh": "我正在上課。"
+      },
+      {
+        "sp": "小美",
+        "en": "They are studying English now.",
+        "zh": "他們現在正在學習英語。"
+      },
+      {
+        "sp": "小林",
+        "en": "I am preparing my homework.",
+        "zh": "我正在準備功課。"
       }
     ]
   },
   "sentences": [
     {
-      "en": "There is a crayon on the desk, and I can write with it.",
-      "zh": "桌子上有一支蠟筆，我可以用它來寫字。"
+      "en": "I am writing a sentence.",
+      "zh": "我正在寫一個句子。"
     },
     {
-      "en": "There are colored pencils in the box, so we can learn to draw.",
-      "zh": "盒子裡有色鉛筆，我們可以學習畫畫。"
+      "en": "He is learning new words.",
+      "zh": "他正在學習新單字。"
     },
     {
-      "en": "There is a marker under the chair; please check if it works.",
-      "zh": "椅子底下有一支麥克筆，請檢查它是否能用。"
+      "en": "The teacher is teaching math.",
+      "zh": "老師正在教數學。"
     },
     {
-      "en": "There are many books on the shelf; students often read them during break.",
-      "zh": "書架上有很多書，學生常在課間閱讀。"
+      "en": "We are spelling the word together.",
+      "zh": "我們一起正在拼寫這個單字。"
     },
     {
-      "en": "There isn't any cheating paper under the desk; the teacher knows everyone is honest.",
-      "zh": "桌子下面沒有作弊的紙張，老師知道大家都很誠實。"
+      "en": "They are copying the picture.",
+      "zh": "他們正在複製圖畫。"
     },
     {
-      "en": "Are there any markers in the drawer? If yes, please prepare them for the art class.",
-      "zh": "抽屜裡有麥克筆嗎？如果有，請為美術課準備它們。"
+      "en": "You are asking a question.",
+      "zh": "你正在問問題。"
     },
     {
-      "en": "There is a spelling list on the board; let's repeat the words together.",
-      "zh": "黑板上有一份拼寫清單，讓我們一起重複這些單字。"
+      "en": "She is checking her answers.",
+      "zh": "她正在檢查她的答案。"
     },
     {
-      "en": "There are two students who finished their work early; they can help teach the others.",
-      "zh": "有兩個學生提前完成作業，他們可以幫忙教導其他同學。"
+      "en": "The class is preparing for the test.",
+      "zh": "全班正在為考試做準備。"
     }
   ],
   "no": 23,
@@ -169,24 +170,12 @@
   "theme_zh": "在學校",
   "words": [
     {
-      "en": "crayon",
-      "zh": "蠟筆"
-    },
-    {
-      "en": "colored pencil",
-      "zh": "色鉛筆"
-    },
-    {
-      "en": "marker",
-      "zh": "麥克筆"
+      "en": "pass",
+      "zh": "考試及格"
     },
     {
       "en": "study",
       "zh": "研讀"
-    },
-    {
-      "en": "read",
-      "zh": "閱讀"
     },
     {
       "en": "write",
@@ -205,24 +194,20 @@
       "zh": "拼單字"
     },
     {
-      "en": "pass",
-      "zh": "考試及格"
+      "en": "crayon",
+      "zh": "蠟筆"
     },
     {
-      "en": "cheat",
-      "zh": "作弊"
+      "en": "marker",
+      "zh": "麥克筆"
     },
     {
-      "en": "check",
-      "zh": "檢查"
+      "en": "dictionary",
+      "zh": "字典"
     },
     {
-      "en": "enter",
-      "zh": "進入"
-    },
-    {
-      "en": "finish",
-      "zh": "完成"
+      "en": "colored pencil",
+      "zh": "色鉛筆"
     },
     {
       "en": "ask",
@@ -233,425 +218,243 @@
       "zh": "複製"
     },
     {
-      "en": "prepare",
-      "zh": "準備"
-    },
-    {
       "en": "know",
       "zh": "知道"
     },
     {
-      "en": "correct",
-      "zh": "正確的"
+      "en": "check",
+      "zh": "檢查"
+    },
+    {
+      "en": "enter",
+      "zh": "進入"
+    },
+    {
+      "en": "cheat",
+      "zh": "作弊"
+    },
+    {
+      "en": "finish",
+      "zh": "完成"
     },
     {
       "en": "repeat",
       "zh": "重複"
+    },
+    {
+      "en": "prepare",
+      "zh": "準備"
+    },
+    {
+      "en": "correct",
+      "zh": "正確的"
     }
   ],
+  "focus": "現在進行式",
+  "grammar": "be 動詞 + 動詞 -ing，表示「正在做」。",
   "exercises": {
     "mcq": [
       {
-        "q": "請選擇意思為『蠟筆』的英文單字。",
+        "q": "彩鉛筆 的英文是？",
         "opts": [
           "crayon",
           "colored pencil",
-          "marker",
-          "study"
-        ],
-        "ans": "crayon"
-      },
-      {
-        "q": "請選擇意思為『彩色鉛筆』的英文單字。",
-        "opts": [
-          "colored pencil",
-          "crayon",
-          "marker",
-          "read"
+          "dictionary",
+          "marker"
         ],
         "ans": "colored pencil"
       },
       {
-        "q": "請選擇意思為『記號筆』的英文單字。",
+        "q": "哪個單字意思是 'to learn'？",
         "opts": [
-          "marker",
-          "crayon",
-          "colored pencil",
-          "write"
-        ],
-        "ans": "marker"
-      },
-      {
-        "q": "請選擇意思為『學習』的英文單字。",
-        "opts": [
+          "pass",
+          "spell",
           "study",
-          "teach",
-          "read",
-          "write"
+          "teach"
         ],
         "ans": "study"
       },
       {
-        "q": "請選擇意思為『讀』的英文單字。",
+        "q": "He ______ the dictionary. (他正在查字典。)",
         "opts": [
-          "read",
-          "write",
+          "is checking",
+          "are checking",
+          "be checking",
+          "am checking"
+        ],
+        "ans": "is checking"
+      },
+      {
+        "q": "哪個單字意思是 'to prepare'？",
+        "opts": [
+          "prepare",
+          "correct",
           "study",
-          "teach"
-        ],
-        "ans": "read"
-      },
-      {
-        "q": "請選擇意思為『寫』的英文單字。",
-        "opts": [
-          "write",
-          "read",
-          "study",
-          "teach"
-        ],
-        "ans": "write"
-      },
-      {
-        "q": "請選擇意思為『教』的英文單字。",
-        "opts": [
-          "teach",
-          "study",
-          "read",
-          "write"
-        ],
-        "ans": "teach"
-      },
-      {
-        "q": "請選擇意思為『拼寫』的英文單字。",
-        "opts": [
-          "spell",
-          "study",
-          "read",
-          "teach"
-        ],
-        "ans": "spell"
-      },
-      {
-        "q": "請選擇意思為『及格』的英文單字。",
-        "opts": [
-          "pass",
-          "study",
-          "read",
-          "teach"
-        ],
-        "ans": "pass"
-      },
-      {
-        "q": "請選擇意思為『作弊』的英文單字。",
-        "opts": [
-          "cheat",
-          "study",
-          "read",
-          "teach"
-        ],
-        "ans": "cheat"
-      },
-      {
-        "q": "我每天 ___ (study) 英文。",
-        "opts": [
-          "studies",
-          "studying",
-          "studied",
-          "study"
-        ],
-        "ans": "studies"
-      },
-      {
-        "q": "她昨天 ___ (write) 一封信。",
-        "opts": [
-          "wrote",
-          "writing",
-          "writes",
-          "write"
-        ],
-        "ans": "wrote"
-      },
-      {
-        "q": "他每天 ___ (learn) 新單字。",
-        "opts": [
-          "learns",
-          "learning",
-          "learned",
-          "learn"
-        ],
-        "ans": "learns"
-      },
-      {
-        "q": "老師 ___ (teach) 我們數學。",
-        "opts": [
-          "teaches",
-          "teaching",
-          "taught",
-          "teach"
-        ],
-        "ans": "teaches"
-      },
-      {
-        "q": "請你 ___ (spell) 這個單字。",
-        "opts": [
-          "spells",
-          "spelling",
-          "spelled",
-          "spell"
-        ],
-        "ans": "spell"
-      },
-      {
-        "q": "如果你努力，你就會 ___ (pass) 考試。",
-        "opts": [
-          "passes",
-          "passing",
-          "passed",
           "pass"
         ],
-        "ans": "pass"
+        "ans": "prepare"
       },
       {
-        "q": "老師每天 ___ (check) 學生的作業。",
+        "q": "She ______ (正在學) the dictionary.",
         "opts": [
-          "checks",
-          "checking",
-          "checked",
-          "check"
+          "be studying",
+          "are studying",
+          "is studying",
+          "am studying"
         ],
-        "ans": "checks"
+        "ans": "is studying"
       },
       {
-        "q": "我會在五點前 ___ (finish) 工作。",
+        "q": "『抄寫』的英文是？",
         "opts": [
-          "finishes",
-          "finishing",
-          "finished",
+          "know",
+          "ask",
+          "enter",
+          "copy"
+        ],
+        "ans": "copy"
+      },
+      {
+        "q": "They ______ (正在傳遞) the marker.",
+        "opts": [
+          "am passing",
+          "are passing",
+          "be passing",
+          "is passing"
+        ],
+        "ans": "are passing"
+      },
+      {
+        "q": "準備 的英文是？",
+        "opts": [
+          "prepare",
+          "cheat",
+          "repeat",
+          "finish"
+        ],
+        "ans": "prepare"
+      },
+      {
+        "q": "They ______ (正在學) the dictionary.",
+        "opts": [
+          "am learning",
+          "are learning",
+          "is learning",
+          "be learning"
+        ],
+        "ans": "are learning"
+      },
+      {
+        "q": "完成 的英文是？",
+        "opts": [
+          "repeat",
+          "pass",
+          "cheat",
           "finish"
         ],
         "ans": "finish"
-      },
-      {
-        "q": "如果你不明白，請 ___ (ask) 老師。",
-        "opts": [
-          "asks",
-          "asking",
-          "asked",
-          "ask"
-        ],
-        "ans": "ask"
-      },
-      {
-        "q": "請 ___ (repeat) 這句話。",
-        "opts": [
-          "repeats",
-          "repeating",
-          "repeated",
-          "repeat"
-        ],
-        "ans": "repeat"
-      },
-      {
-        "q": "我每天 ___ (read) 英文。",
-        "opts": [
-          "read",
-          "study",
-          "write",
-          "learn"
-        ],
-        "ans": "read"
-      },
-      {
-        "q": "我昨天 ___ (write) 一封電子郵件。",
-        "opts": [
-          "write",
-          "read",
-          "study",
-          "learn"
-        ],
-        "ans": "write"
-      },
-      {
-        "q": "他每天 ___ (learn) 英文句子。",
-        "opts": [
-          "learn",
-          "study",
-          "read",
-          "write"
-        ],
-        "ans": "learn"
-      },
-      {
-        "q": "老師 ___ (teach) 我們科學。",
-        "opts": [
-          "teach",
-          "check",
-          "ask",
-          "copy"
-        ],
-        "ans": "teach"
-      },
-      {
-        "q": "請你 ___ (spell) 你的名字。",
-        "opts": [
-          "spell",
-          "pass",
-          "cheat",
-          "check"
-        ],
-        "ans": "spell"
-      },
-      {
-        "q": "如果你努力，你就會 ___ (pass) 英文考試。",
-        "opts": [
-          "pass",
-          "study",
-          "read",
-          "write"
-        ],
-        "ans": "pass"
-      },
-      {
-        "q": "老師每天 ___ (check) 學生的筆記。",
-        "opts": [
-          "check",
-          "teach",
-          "ask",
-          "copy"
-        ],
-        "ans": "check"
-      },
-      {
-        "q": "我會在五點前 ___ (finish) 我的作業。",
-        "opts": [
-          "finish",
-          "prepare",
-          "know",
-          "correct"
-        ],
-        "ans": "finish"
-      },
-      {
-        "q": "如果你不明白，請 ___ (ask) 同學。",
-        "opts": [
-          "ask",
-          "copy",
-          "prepare",
-          "know"
-        ],
-        "ans": "ask"
-      },
-      {
-        "q": "請 ___ (repeat) 這個問題。",
-        "opts": [
-          "repeat",
-          "read",
-          "write",
-          "learn"
-        ],
-        "ans": "repeat"
       }
     ],
     "fill": [
       {
-        "q": "There ____ a crayon on the desk.（有一支蠟筆在桌子上）",
-        "ans": "is"
-      },
-      {
-        "q": "There ____ three markers under the chair.（有三支記號筆在椅子下面）",
-        "ans": "are"
-      },
-      {
-        "q": "There ____ two colored pencils in the box.（有兩支彩色鉛筆在盒子裡）",
-        "ans": "are"
-      },
-      {
-        "q": "I ____ English every day.（我每天學習英文）",
+        "q": "I ____ English every day.（我每天學英語）",
         "ans": "study"
       },
       {
-        "q": "I ____ my homework after school.（放學後我完成我的功課）",
+        "q": "We ____ our homework after school.（我們放學後完成作業）",
         "ans": "finish"
       },
       {
-        "q": "She ____ the answer on the board.（她在黑板上寫下答案）",
-        "ans": "write"
+        "q": "They ____ the same song again.（他們再唱一次同一首歌）",
+        "ans": "repeat"
       },
       {
-        "q": "They ____ the new words loudly.（他們大聲讀新單字）",
-        "ans": "read"
-      },
-      {
-        "q": "Please ____ your paper before you hand it in.（請在交上去前檢查你的試卷）",
+        "q": "You ____ the answer before writing it down.（你寫下答案前先確認）",
         "ans": "check"
       },
       {
-        "q": "Can you ____ the teacher a question？（你能問老師一個問題嗎？）",
-        "ans": "ask"
+        "q": "Please give me a ____ to colour the picture。（請給我一支蠟筆為圖上色）",
+        "ans": "crayon"
       },
       {
-        "q": "We ____ for the test tomorrow.（我們明天為考試做準備）",
+        "q": "Please ____ the room before speaking。（請先進入房間再說話）",
+        "ans": "enter"
+      },
+      {
+        "q": "We ____ for the test tomorrow。（我們明天為考試做準備）",
         "ans": "prepare"
+      },
+      {
+        "q": "We ____ how to spell the word。（我們學怎麼拼寫這個詞）",
+        "ans": "learn"
+      },
+      {
+        "q": "You ____ your name at the top of the paper。（你在紙上寫下你的名字）",
+        "ans": "write"
+      },
+      {
+        "q": "The answer is ____。（答案是正確的）",
+        "ans": "correct"
       }
     ],
     "translate": [
       {
-        "q": "桌子上有一支蠟筆。",
-        "ans": "There is a crayon on the desk."
+        "q": "我每天學英語。",
+        "ans": "I study English every day."
       },
       {
-        "q": "椅子下面有三支記號筆。",
-        "ans": "There are three markers under the chair."
+        "q": "我們放學後完成作業。",
+        "ans": "We finish our homework after school."
       },
       {
-        "q": "盒子裡有兩支彩色鉛筆。",
-        "ans": "There are two colored pencils in the box."
+        "q": "他們再唱一次同一首歌。",
+        "ans": "They repeat the same song again."
       },
       {
-        "q": "我每天讀書。",
-        "ans": "I read a book every day."
+        "q": "你寫下答案前先確認。",
+        "ans": "You check the answer before writing it down."
       },
       {
-        "q": "她寫作業在教室裡。",
-        "ans": "She writes her homework in the classroom."
+        "q": "請給我一支蠟筆為圖上色。",
+        "ans": "Please give me a crayon to colour the picture."
       },
       {
-        "q": "他們大聲重複單字。",
-        "ans": "They repeat the words loudly."
+        "q": "請先進入房間再說話。",
+        "ans": "Please enter the room before speaking."
       },
       {
-        "q": "請檢查你的答案。",
-        "ans": "Please check your answer."
-      },
-      {
-        "q": "我們明天準備考試。",
+        "q": "我們明天為考試做準備。",
         "ans": "We prepare for the test tomorrow."
+      },
+      {
+        "q": "我們學怎麼拼寫這個詞。",
+        "ans": "We learn how to spell the word."
       }
     ],
     "unscramble": [
       {
-        "q": ". / crayon / is / a / the / There / desk / on",
-        "ans": "There is a crayon on the desk."
+        "q": "every / study / . / day / Please / English",
+        "ans": "Please study English every day."
       },
       {
-        "q": "markers / There / under / three / chair / . / are / the",
-        "ans": "There are three markers under the chair."
+        "q": "finish / now / Please / your / . / homework",
+        "ans": "Please finish your homework now."
       },
       {
-        "q": "two / pencils / are / . / in / the / There / box / colored",
-        "ans": "There are two colored pencils in the box."
+        "q": ". / repeat / twice / Please / instruction / the",
+        "ans": "Please repeat the instruction twice."
       },
       {
-        "q": "read / . / I / a / book / day / every",
-        "ans": "I read a book every day."
+        "q": "answer / check / the / carefully / . / Please",
+        "ans": "Please check the answer carefully."
       },
       {
-        "q": ". / homework / the / classroom / writes / her / in / She",
-        "ans": "She writes her homework in the classroom."
+        "q": "for / tomorrow / prepare / . / test / Please / the",
+        "ans": "Please prepare for the test tomorrow."
       },
       {
-        "q": "They / repeat / words / . / the / loudly",
-        "ans": "They repeat the words loudly."
+        "q": ". / quickly / new / the / words / Please / learn",
+        "ans": "Please learn the new words quickly."
       }
     ]
   },

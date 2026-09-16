@@ -1,167 +1,190 @@
 {
-  "title_en": "My House 2",
-  "title_zh": "我的家（二）",
-  "grammar": "練習使用 Where is…? 與介系詞 in、on、under、near、behind 描述物品位置。",
-  "intro_zh": "本課讓學生描述家中物品位置，練習使用 Where is…? 與介系詞 in、on、under、near、behind。學生會說出自己房間的擺設，並能描述簡單的日常情境。",
+  "title_en": "House",
+  "title_zh": "我的家庭生活",
+  "intro_zh": "本課教所有格代名詞 mine、yours、his、hers、ours、theirs，它們取代「所有格＋名詞」，句尾不加名詞。透過家具例句，學生能正確說出「This desk is mine。」等句子。",
   "can_do": [
-    "能用 Where is…? 詢問物品位置",
-    "能正確使用 in、on、under、near、behind 描述位置",
-    "能以完整句子描述自己家中的常見物品"
+    "能用 mine/yours/his/hers/ours/theirs 正確說出所有格代名詞句子。",
+    "能辨識句子中是否需要所有格代名詞而不加名詞。",
+    "能以描述家具與房間的方式使用目標句型。"
   ],
   "reading": {
-    "title_en": "A Day at Home",
-    "title_zh": "在家的一天",
+    "title_en": "Home",
+    "title_zh": "在家裡",
     "sentences": [
       {
-        "en": "In the morning, I turn on the light and make my bed.",
-        "zh": "早上，我打開燈並整理我的床。"
+        "en": "This desk is mine, and I use it every day.",
+        "zh": "這張書桌是我的，我每天都用它。"
       },
       {
-        "en": "Then I take a warm bath and dry myself with a soft towel.",
-        "zh": "然後我洗個溫水澡，用柔軟的毛巾擦乾身體。"
+        "en": "That sofa is yours, but you rarely sit on it.",
+        "zh": "那張沙發是你的，但你很少坐在上面。"
       },
       {
-        "en": "After the bath, I sit on the sofa, turn on the television and watch the news.",
-        "zh": "洗完澡後，我坐在沙發上，打開電視看新聞。"
+        "en": "The chair is his, because he likes to read there.",
+        "zh": "這把椅子是他的，因為他喜歡在那裡閱讀。"
       },
       {
-        "en": "While watching TV, I sit on the chair and listen to the radio.",
-        "zh": "看電視時，我坐在椅子上聽收音機。"
+        "en": "The light is hers, and she turns it off at night.",
+        "zh": "這盞燈是她的，她晚上會把它關掉。"
       },
       {
-        "en": "Sometimes I watch a funny video on the computer.",
-        "zh": "有時我在電腦上看有趣的影片。"
+        "en": "The television is ours, but we watch it only on weekends.",
+        "zh": "這台電視是我們的，但我們只在週末看。"
       },
       {
-        "en": "I do my homework at the desk, using the computer to type and the printer machine to print my work.",
-        "zh": "我在書桌上做功課，用電腦打字，並用印表機這台機器列印作業。"
+        "en": "The computer is theirs, and they play games after school.",
+        "zh": "這台電腦是他們的，他們放學後會玩遊戲。"
       },
       {
-        "en": "When the room gets hot, I switch on the fan to feel comfortable.",
-        "zh": "當房間變熱時，我開啟電風扇感到舒適。"
+        "en": "In the bedroom, the bed is soft and the light is bright.",
+        "zh": "在臥室裡，床很柔軟，燈光很亮。"
       },
       {
-        "en": "In the afternoon, I practice piano for twenty minutes before dinner.",
-        "zh": "下午，我在晚飯前練習鋼琴二十分鐘。"
+        "en": "In the dining room, the table is long and the fridge is white.",
+        "zh": "在飯廳裡，桌子很長，冰箱是白色的。"
       },
       {
-        "en": "My mother calls me on the telephone to tell me dinner is ready.",
-        "zh": "媽媽用電話打給我，告訴我晚餐準備好了。"
+        "en": "After a bath, she wraps herself in a soft towel.",
+        "zh": "洗完澡後，她用柔軟的毛巾包住自己。"
       },
       {
-        "en": "We eat together at the table, and I put the leftovers in the refrigerator; later we relax on the couch and talk.",
-        "zh": "我們一起在桌子上吃飯，我把剩菜放進冰箱；之後我們在睡椅上放鬆聊天。"
+        "en": "She watches a video on the couch while she listens to the radio and plays the piano.",
+        "zh": "她在沙發上看影片，同時聽收音機並彈鋼琴。"
       }
     ]
   },
   "grammar_points": [
     {
-      "title_zh": "① Where is…? 與 in / on 的復習",
-      "explain_zh": "說明如何用 Where is…? 問物品位置，並用 in 表示「在…裡面」，on 表示「在…上面」。",
+      "title_zh": "① 所有格形容詞與所有格代名詞對照表",
+      "explain_zh": "所有格形容詞放在名詞前面修飾名詞；所有格代名詞取代「所有格＋名詞」，後面不再接名詞。",
       "table": [
         [
-          "介系詞",
-          "意思",
-          "例句"
+          "主語",
+          "所有格形容詞",
+          "所有格代名詞"
         ],
         [
-          "in",
-          "在…裡面",
-          "The cat is in the box."
+          "I",
+          "my",
+          "mine"
         ],
         [
-          "on",
-          "在…上面",
-          "The book is on the table."
+          "you",
+          "your",
+          "yours"
+        ],
+        [
+          "he",
+          "his",
+          "his"
+        ],
+        [
+          "she",
+          "her",
+          "hers"
+        ],
+        [
+          "it",
+          "its",
+          "its"
+        ],
+        [
+          "we",
+          "our",
+          "ours"
+        ],
+        [
+          "they",
+          "their",
+          "theirs"
         ]
       ]
     },
     {
-      "title_zh": "② 新增介系詞 under / near / behind",
-      "explain_zh": "學習用 under 表示「在…下面」，near 表示「在…旁邊」，behind 表示「在…後面」。",
+      "title_zh": "② Whose…? 的問答",
+      "explain_zh": "用 Whose 詢問所有權，答句使用所有格代名詞，不需要再加名詞。",
       "examples": [
         {
-          "en": "The shoe is under the bed.",
-          "zh": "鞋子在床下。"
+          "en": "Whose radio is this? It's hers.",
+          "zh": "這個收音機是誰的？是她的。"
         },
         {
-          "en": "The lamp is near the sofa.",
-          "zh": "燈在沙發旁邊。"
+          "en": "Whose desk is that? It's mine.",
+          "zh": "那張書桌是誰的？是我的。"
         },
         {
-          "en": "The dog is behind the curtain.",
-          "zh": "狗在窗簾後面。"
+          "en": "Whose computer are these? They're theirs.",
+          "zh": "這些電腦是誰的？是他們的。"
+        },
+        {
+          "en": "Whose sofa is this? It's ours.",
+          "zh": "這張沙發是誰的？是我們的。"
         }
       ]
     }
   ],
   "dialogue": {
-    "title_zh": "找找看！在客廳裡",
+    "title_zh": "客厅裡找東西",
     "lines": [
       {
-        "sp": "Mom",
-        "en": "Where is the remote control?",
-        "zh": "媽媽：遙控器在哪裡？"
+        "sp": "小明",
+        "en": "Whose desk is this? It's mine.",
+        "zh": "這張書桌是誰的？是我的。"
       },
       {
-        "sp": "Kai",
-        "en": "It is on the coffee table.",
-        "zh": "凱：它在咖啡桌上。"
+        "sp": "小華",
+        "en": "Whose sofa is that? It's yours.",
+        "zh": "那張沙發是誰的？是你的。"
       },
       {
-        "sp": "Mom",
-        "en": "Where is the blanket?",
-        "zh": "媽媽：毛毯在哪裡？"
+        "sp": "小美",
+        "en": "Whose television is on the table? It's hers.",
+        "zh": "這台放在桌上的電視是誰的？是她的。"
       },
       {
-        "sp": "Kai",
-        "en": "It is behind the sofa.",
-        "zh": "凱：它在沙發後面。"
+        "sp": "小明",
+        "en": "Whose computer is on the desk? It's theirs.",
+        "zh": "這台放在書桌上的電腦是誰的？是他們的。"
       },
       {
-        "sp": "Mom",
-        "en": "Where are your shoes?",
-        "zh": "媽媽：你的鞋子在哪裡？"
-      },
-      {
-        "sp": "Kai",
-        "en": "They are under the chair.",
-        "zh": "凱：它們在椅子下面。"
+        "sp": "小華",
+        "en": "Whose lamp is beside the sofa? It's ours.",
+        "zh": "這盞放在沙發旁的燈是誰的？是我們的。"
       }
     ]
   },
   "sentences": [
     {
-      "en": "The light is on the ceiling.",
-      "zh": "燈在天花板上。"
+      "en": "This bed is mine.",
+      "zh": "這張床是我的。"
     },
     {
-      "en": "The bed is near the window.",
-      "zh": "床靠近窗戶。"
+      "en": "That sofa is yours.",
+      "zh": "那張沙發是你的。"
     },
     {
-      "en": "The towel is on the rack.",
-      "zh": "毛巾在毛巾架上。"
+      "en": "The lamp is his.",
+      "zh": "這盞燈是他的。"
     },
     {
-      "en": "The chair is under the table.",
-      "zh": "椅子在桌子下面。"
+      "en": "The picture is hers.",
+      "zh": "這張畫是她的。"
     },
     {
-      "en": "The sofa is behind the TV.",
-      "zh": "沙發在電視後面。"
+      "en": "These chairs are ours.",
+      "zh": "這些椅子是我們的。"
     },
     {
-      "en": "The desk is in the room.",
-      "zh": "書桌在房間裡。"
+      "en": "Those toys are theirs.",
+      "zh": "那些玩具是他們的。"
     },
     {
-      "en": "The computer is on the desk.",
-      "zh": "電腦在書桌上。"
+      "en": "This telephone is yours.",
+      "zh": "這部電話是你的。"
     },
     {
-      "en": "The refrigerator is near the kitchen door.",
-      "zh": "冰箱靠近廚房門。"
+      "en": "The refrigerator is theirs.",
+      "zh": "這個冰箱是他們的。"
     }
   ],
   "no": 27,
@@ -169,16 +192,32 @@
   "theme_zh": "我的家",
   "words": [
     {
-      "en": "light",
-      "zh": "燈光"
-    },
-    {
       "en": "bed",
       "zh": "床"
     },
     {
+      "en": "sofa",
+      "zh": "沙發"
+    },
+    {
+      "en": "desk",
+      "zh": "書桌"
+    },
+    {
+      "en": "call",
+      "zh": "打電話"
+    },
+    {
+      "en": "news",
+      "zh": "新聞"
+    },
+    {
       "en": "bath",
       "zh": "洗澡"
+    },
+    {
+      "en": "light",
+      "zh": "燈光"
     },
     {
       "en": "towel",
@@ -189,10 +228,6 @@
       "zh": "椅子"
     },
     {
-      "en": "sofa",
-      "zh": "沙發"
-    },
-    {
       "en": "couch",
       "zh": "睡椅"
     },
@@ -201,40 +236,8 @@
       "zh": "桌子"
     },
     {
-      "en": "desk",
-      "zh": "書桌"
-    },
-    {
-      "en": "machine",
-      "zh": "機器"
-    },
-    {
-      "en": "telephone",
-      "zh": "電話機"
-    },
-    {
-      "en": "call",
-      "zh": "打電話"
-    },
-    {
-      "en": "television/TV",
-      "zh": "電視"
-    },
-    {
-      "en": "news",
-      "zh": "新聞"
-    },
-    {
       "en": "video",
       "zh": "錄影機"
-    },
-    {
-      "en": "computer",
-      "zh": "電腦"
-    },
-    {
-      "en": "fan",
-      "zh": "電風扇"
     },
     {
       "en": "piano",
@@ -245,413 +248,235 @@
       "zh": "收音機"
     },
     {
+      "en": "machine",
+      "zh": "機器"
+    },
+    {
+      "en": "computer",
+      "zh": "電腦"
+    },
+    {
+      "en": "telephone",
+      "zh": "電話機"
+    },
+    {
+      "en": "television/TV",
+      "zh": "電視"
+    },
+    {
       "en": "refrigerator/fridge",
       "zh": "冰箱"
+    },
+    {
+      "en": "dining room",
+      "zh": "飯廳"
     }
   ],
+  "focus": "所有格代名詞",
+  "grammar": "mine／yours／his／hers／ours／theirs 用來代替「所有格 + 名詞」，後面不再接名詞。",
   "exercises": {
     "mcq": [
       {
-        "q": "毛巾在哪裡？",
+        "q": "冰箱 的英文是？",
         "opts": [
-          "on the chair",
-          "under the bed",
-          "in the fridge",
-          "near the TV"
+          "desk",
+          "refrigerator",
+          "sofa",
+          "light"
         ],
-        "ans": "on the chair"
+        "ans": "refrigerator"
       },
       {
-        "q": "燈在哪裡？",
+        "q": "沙發 的英文是？",
         "opts": [
-          "on the table",
-          "under the sofa",
-          "behind the desk",
-          "near the piano"
+          "towel",
+          "bed",
+          "sofa",
+          "radio"
         ],
-        "ans": "on the table"
+        "ans": "sofa"
       },
       {
-        "q": "椅子在哪裡？",
+        "q": "This book is ______ . (這本書是我的。)",
         "opts": [
-          "near the desk",
-          "under the table",
-          "in the fridge",
-          "behind the TV"
+          "yours",
+          "his",
+          "mine",
+          "hers"
         ],
-        "ans": "near the desk"
+        "ans": "mine"
       },
       {
-        "q": "沙發在哪裡？",
+        "q": "She ______ television every night. (她每晚都看電視。)",
         "opts": [
-          "near the TV",
-          "under the bed",
-          "on the desk",
-          "in the machine"
+          "watch",
+          "watches",
+          "watching",
+          "watched"
         ],
-        "ans": "near the TV"
+        "ans": "watches"
       },
       {
-        "q": "桌子在哪裡？",
+        "q": "This sofa is ______ . (這張沙發是我的。)",
         "opts": [
-          "near the chair",
-          "under the bed",
-          "in the fridge",
-          "behind the TV"
+          "theirs",
+          "yours",
+          "ours",
+          "mine"
         ],
-        "ans": "near the chair"
+        "ans": "mine"
       },
       {
-        "q": "書桌在哪裡？",
+        "q": "There are two ______ in the dining room. (餐廳裡有兩張椅子。)",
         "opts": [
-          "near the chair",
-          "under the sofa",
-          "in the news",
-          "behind the radio"
+          "chairs'",
+          "chair",
+          "chair's",
+          "chairs"
         ],
-        "ans": "near the chair"
+        "ans": "chairs"
       },
       {
-        "q": "電話在哪裡？",
+        "q": "She ______ the telephone. (她用電話。)",
         "opts": [
-          "on the desk",
-          "under the bed",
-          "in the fridge",
-          "behind the sofa"
+          "calls",
+          "called",
+          "call",
+          "calling"
         ],
-        "ans": "on the desk"
+        "ans": "calls"
       },
       {
-        "q": "電視在哪裡？",
+        "q": "浴缸 的英文是？",
         "opts": [
-          "near the sofa",
-          "under the table",
-          "in the fridge",
-          "behind the chair"
+          "bath",
+          "sofa",
+          "bed",
+          "desk"
         ],
-        "ans": "near the sofa"
+        "ans": "bath"
       },
       {
-        "q": "電腦在哪裡？",
+        "q": "This desk is ______ . (這張書桌是我的。)",
         "opts": [
-          "on the desk",
-          "under the bed",
-          "in the fridge",
-          "near the piano"
+          "yours",
+          "mine",
+          "his",
+          "ours"
         ],
-        "ans": "on the desk"
+        "ans": "mine"
       },
       {
-        "q": "風扇在哪裡？",
+        "q": "A: Is this your computer? B: No, it is ______ . (那是男同學的。)",
         "opts": [
-          "on the table",
-          "under the chair",
-          "in the fridge",
-          "near the radio"
+          "his",
+          "hers",
+          "ours",
+          "theirs"
         ],
-        "ans": "on the table"
-      },
-      {
-        "q": "請問毛巾現在在哪裡？",
-        "opts": [
-          "in the bath",
-          "on the bed",
-          "under the chair",
-          "near the desk"
-        ],
-        "ans": "in the bath"
-      },
-      {
-        "q": "請問燈現在在哪裡？",
-        "opts": [
-          "on the table",
-          "under the chair",
-          "near the sofa",
-          "behind the fridge"
-        ],
-        "ans": "on the table"
-      },
-      {
-        "q": "請問椅子現在在哪裡？",
-        "opts": [
-          "near the desk",
-          "in the bath",
-          "on the sofa",
-          "under the table"
-        ],
-        "ans": "near the desk"
-      },
-      {
-        "q": "請問沙發現在在哪裡？",
-        "opts": [
-          "behind the fridge",
-          "in the bath",
-          "on the bed",
-          "under the chair"
-        ],
-        "ans": "behind the fridge"
-      },
-      {
-        "q": "請問躺椅現在在哪裡？",
-        "opts": [
-          "under the table",
-          "on the sofa",
-          "near the fridge",
-          "in the bath"
-        ],
-        "ans": "under the table"
-      },
-      {
-        "q": "請問桌子現在在哪裡？",
-        "opts": [
-          "near the fridge",
-          "in the bath",
-          "on the sofa",
-          "under the chair"
-        ],
-        "ans": "near the fridge"
-      },
-      {
-        "q": "請問書桌現在在哪裡？",
-        "opts": [
-          "in the bed",
-          "on the sofa",
-          "under the chair",
-          "near the fridge"
-        ],
-        "ans": "in the bed"
-      },
-      {
-        "q": "請問機器現在在哪裡？",
-        "opts": [
-          "on the bed",
-          "in the bath",
-          "under the chair",
-          "near the desk"
-        ],
-        "ans": "on the bed"
-      },
-      {
-        "q": "請問電話現在在哪裡？",
-        "opts": [
-          "under the table",
-          "on the sofa",
-          "near the fridge",
-          "in the bath"
-        ],
-        "ans": "under the table"
-      },
-      {
-        "q": "請問冰箱現在在哪裡？",
-        "opts": [
-          "near the desk",
-          "in the bath",
-          "on the sofa",
-          "under the chair"
-        ],
-        "ans": "near the desk"
-      },
-      {
-        "q": "毛巾現在放在哪裡？",
-        "opts": [
-          "在床上",
-          "在椅子下面",
-          "在桌子上",
-          "在沙發旁邊"
-        ],
-        "ans": "在桌子上"
-      },
-      {
-        "q": "燈現在放在哪裡？",
-        "opts": [
-          "在床下",
-          "在椅子上",
-          "在電視旁邊",
-          "在冰箱後面"
-        ],
-        "ans": "在椅子上"
-      },
-      {
-        "q": "椅子現在放在哪裡？",
-        "opts": [
-          "在床旁邊",
-          "在桌子下面",
-          "在沙發後面",
-          "在冰箱旁邊"
-        ],
-        "ans": "在桌子下面"
-      },
-      {
-        "q": "沙發現在放在哪裡？",
-        "opts": [
-          "在電視旁邊",
-          "在床下",
-          "在桌子上",
-          "在冰箱後面"
-        ],
-        "ans": "在電視旁邊"
-      },
-      {
-        "q": "桌子現在放在哪裡？",
-        "opts": [
-          "在床上",
-          "在椅子下面",
-          "在沙發旁邊",
-          "在冰箱上"
-        ],
-        "ans": "在沙發旁邊"
-      },
-      {
-        "q": "書桌現在放在哪裡？",
-        "opts": [
-          "在床下",
-          "在椅子上",
-          "在電視後面",
-          "在冰箱旁邊"
-        ],
-        "ans": "在椅子上"
-      },
-      {
-        "q": "電話現在放在哪裡？",
-        "opts": [
-          "在床旁邊",
-          "在桌子下面",
-          "在沙發上",
-          "在冰箱後面"
-        ],
-        "ans": "在桌子下面"
-      },
-      {
-        "q": "電視現在放在哪裡？",
-        "opts": [
-          "在床上",
-          "在椅子旁邊",
-          "在桌子下面",
-          "在沙發後面"
-        ],
-        "ans": "在椅子旁邊"
-      },
-      {
-        "q": "電腦現在放在哪裡？",
-        "opts": [
-          "在床下",
-          "在桌子上",
-          "在沙發旁邊",
-          "在冰箱後面"
-        ],
-        "ans": "在桌子上"
-      },
-      {
-        "q": "風扇現在放在哪裡？",
-        "opts": [
-          "在床上",
-          "在椅子下面",
-          "在電視旁邊",
-          "在冰箱上"
-        ],
-        "ans": "在電視旁邊"
+        "ans": "his"
       }
     ],
     "fill": [
       {
-        "q": "The light is ____ the desk.(燈在書桌上)",
-        "ans": "on"
+        "q": "It is ____.（這是我的）",
+        "ans": "mine"
       },
       {
-        "q": "The towel is ____ the sofa.(毛巾在沙發下)",
-        "ans": "under"
+        "q": "It is ____.（這是你的）",
+        "ans": "yours"
       },
       {
-        "q": "The telephone is ____ the TV.(電話在電視旁)",
-        "ans": "near"
+        "q": "It is ____.（這是他的）",
+        "ans": "his"
       },
       {
-        "q": "The light is ____ the bed.(燈在床上)",
-        "ans": "on"
+        "q": "It is ____.（這是她的）",
+        "ans": "hers"
       },
       {
-        "q": "The towel is ____ the chair.(毛巾在椅子下)",
-        "ans": "under"
+        "q": "It is ____.（這是我們的）",
+        "ans": "ours"
       },
       {
-        "q": "The fan is ____ the desk.(風扇在書桌上)",
-        "ans": "on"
+        "q": "It is ____.（這是他們的）",
+        "ans": "theirs"
       },
       {
-        "q": "The radio is ____ the desk.(收音機在書桌旁)",
-        "ans": "near"
+        "q": "Please ____ me.（請給我打電話）",
+        "ans": "call"
       },
       {
-        "q": "The telephone is ____ the desk.(電話在書桌裡)",
+        "q": "I sit on a ____.（我坐在椅子上）",
+        "ans": "chair"
+      },
+      {
+        "q": "The cat is ____ the box.（貓在盒子裡）",
         "ans": "in"
       },
       {
-        "q": "The video is ____ the desk.(影片在書桌裡)",
-        "ans": "in"
-      },
-      {
-        "q": "The towel is ____ the desk.(毛巾在書桌上)",
-        "ans": "on"
+        "q": "The box is ____.（盒子很輕）",
+        "ans": "light"
       }
     ],
     "translate": [
       {
-        "q": "燈在哪裡?",
-        "ans": "Where is the light?"
+        "q": "這是我的椅子。",
+        "ans": "This is my chair."
       },
       {
-        "q": "毛巾在哪裡?",
-        "ans": "Where is the towel?"
+        "q": "那是你的電話。",
+        "ans": "That is your telephone."
       },
       {
-        "q": "電話在哪裡?",
-        "ans": "Where is the telephone?"
+        "q": "那是他的桌子。",
+        "ans": "That is his desk."
       },
       {
-        "q": "收音機在哪裡?",
-        "ans": "Where is the radio?"
+        "q": "那是她的沙發。",
+        "ans": "That is her sofa."
       },
       {
-        "q": "影片在哪裡?",
-        "ans": "Where is the video?"
+        "q": "這是我們的電視。",
+        "ans": "This is our television."
       },
       {
-        "q": "風扇在哪裡?",
-        "ans": "Where is the fan?"
+        "q": "那是他們的冰箱。",
+        "ans": "That is their refrigerator."
       },
       {
-        "q": "書桌在哪裡?",
-        "ans": "Where is the desk?"
+        "q": "請給我打電話。",
+        "ans": "Please call me."
       },
       {
-        "q": "沙發在哪裡?",
-        "ans": "Where is the sofa?"
+        "q": "貓在盒子裡。",
+        "ans": "The cat is in the box."
       }
     ],
     "unscramble": [
       {
-        "q": "light / . / The / the / is / on / desk",
-        "ans": "The light is on the desk."
+        "q": ". / This / sofa / is / mine",
+        "ans": "This sofa is mine."
       },
       {
-        "q": ". / under / towel / sofa / the / is / The",
-        "ans": "The towel is under the sofa."
+        "q": "yours / is / desk / . / That",
+        "ans": "That desk is yours."
       },
       {
-        "q": "is / TV / The / the / telephone / near / .",
-        "ans": "The telephone is near the TV."
+        "q": "his / The / chair / . / is",
+        "ans": "The chair is his."
       },
       {
-        "q": "near / radio / is / desk / the / The / .",
-        "ans": "The radio is near the desk."
+        "q": "is / The / hers / . / couch",
+        "ans": "The couch is hers."
       },
       {
-        "q": "is / the / video / desk / The / in / .",
-        "ans": "The video is in the desk."
+        "q": "theirs / television / is / Their / .",
+        "ans": "Their television is theirs."
       },
       {
-        "q": "the / fan / The / is / on / desk / .",
-        "ans": "The fan is on the desk."
+        "q": ". / news / is / The / ours",
+        "ans": "The news is ours."
       }
     ]
   },

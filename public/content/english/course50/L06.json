@@ -1,178 +1,204 @@
 {
-  "title_en": "Colors & Shapes",
-  "title_zh": "基本顏色與形狀",
-  "grammar": "用 What color is it? 和 What shape is it? 來詢問顏色與形狀。",
-  "intro_zh": "本課將帶領學生認識常見的顏色與基本的圖形，透過生活中的物品，練習用「What color is it?」和「What shape is it?」來描述顏色與形狀。",
+  "title_en": "Colors and Shapes",
+  "title_zh": "顏色與形狀學習",
+  "intro_zh": "本課學習形容詞放在名詞前面（如紅色的緞帶）或放在是動詞後面（緞帶是紅色的），讓你能正確描述顏色與形狀。在日常生活中，你會看到很多顏色和形狀的組合。",
   "can_do": [
-    "能說出常見顏色的英文單字。",
-    "能說出基本形狀的英文單字。",
-    "能用 What color is it? 和 What shape is it? 來詢問並回答顏色與形狀。"
+    "能說出物件的顏色和形狀。",
+    "能用形容詞正確放在名詞前或是動詞後。",
+    "能回答「What color is it?」的問題。"
   ],
   "reading": {
     "title_en": "The Colorful Classroom",
-    "title_zh": "彩色的教室",
+    "title_zh": "彩繪教室的故事",
     "sentences": [
       {
-        "en": "The classroom is big and colorful.",
-        "zh": "教室很大而且色彩繽紛。"
+        "en": "Today we decorate the classroom with a red ribbon and a blue brick.",
+        "zh": "今天我們用一條紅色緞帶和一塊藍色磚塊來裝飾教室。"
       },
       {
-        "en": "On the wall there is a red circle and a blue square.",
-        "zh": "牆上有一個紅色的圓圈和一個藍色的正方形。"
+        "en": "The ribbon is red and the brick is blue.",
+        "zh": "緞帶是紅色的，磚塊是藍色的。"
       },
       {
-        "en": "A yellow line runs across the board.",
-        "zh": "一條黃色的線穿過黑板。"
+        "en": "We also hang a yellow ribbon and a green brick.",
+        "zh": "我們也掛起一條黃色緞帶和一塊綠色磚塊。"
       },
       {
-        "en": "A green round clock hangs on the wall.",
-        "zh": "一個綠色的圓形時鐘掛在牆上。"
+        "en": "The yellow ribbon is bright, but the green brick is dull.",
+        "zh": "黃色緞帶很亮，但綠色磚塊有點暗。"
       },
       {
-        "en": "An orange book sits on the desk.",
-        "zh": "一本橘色的書放在桌子上。"
+        "en": "In the corner, we place a purple box and a pink ball.",
+        "zh": "在角落裡，我們放了一個紫色盒子和一個粉紅色球。"
       },
       {
-        "en": "A purple bag hangs from the chair.",
-        "zh": "一個紫色的書包掛在椅子上。"
+        "en": "The purple box is small, and the pink ball is round.",
+        "zh": "紫色盒子很小，粉紅色球很圓。"
       },
       {
-        "en": "A pink pencil case is open.",
-        "zh": "一個粉紅色的筆盒打開著。"
+        "en": "We talk about size, shape, and color of each part.",
+        "zh": "我們討論每個部分的大小、形狀和顏色。"
       },
       {
-        "en": "A brown ruler lies next to a black eraser, while a white paper and a gray ruler show different sizes.",
-        "zh": "一支棕色的尺子躺在黑色的橡皮旁邊，而一張白色的紙和一支灰色的尺子顯示不同的大小。"
+        "en": "The space feels colorful with orange, gray, white, black, and gold items.",
+        "zh": "這個空間放有橙色、灰色、白色、黑色和金色的物品，看起來很色彩繽紛。"
       },
       {
-        "en": "A gold star sticker shines in the corner, and we talk about its shape and color.",
-        "zh": "一顆金色的星星貼紙閃爍在角落裡，我們討論它的形狀和顏色。"
+        "en": "What color is it?",
+        "zh": "這是什麼顏色？"
+      },
+      {
+        "en": "It is gold.",
+        "zh": "它是金色的。"
       }
     ]
   },
   "grammar_points": [
     {
-      "title_zh": "① What color is it?",
-      "explain_zh": "用來詢問物件的顏色，答句結構為 It's + 顏色詞。",
+      "title_zh": "① 形容詞放在名詞前面與放在 be 動詞後面",
+      "explain_zh": "形容詞可以放在名詞前面來直接修飾名詞，例如 a red ribbon；也可以放在 be 動詞後面，例如 The ribbon is red。兩種意思相同，只是詞序不同。",
       "table": [
         [
-          "Question",
-          "Answer",
-          "中文翻譯"
+          "形容詞 + 名詞",
+          "名詞 + be + 形容詞",
+          "中文說明"
         ],
         [
-          "What color is it?",
-          "It's red.",
-          "這是什麼顏色？它是紅色。"
+          "a red ribbon",
+          "The ribbon is red.",
+          "紅色的緞帶"
         ],
         [
-          "What color is it?",
-          "It's blue.",
-          "這是什麼顏色？它是藍色。"
-        ],
-        [
-          "What color is it?",
-          "It's yellow.",
-          "這是什麼顏色？它是黃色。"
+          "a blue brick",
+          "The brick is blue.",
+          "藍色的磚塊"
         ]
       ]
     },
     {
-      "title_zh": "② What shape is it?",
-      "explain_zh": "用來詢問物件的形狀，答句結構為 It's + 形狀詞。",
+      "title_zh": "② 詢問顏色的句型 What color is it?",
+      "explain_zh": "用 What color is it? 來問某件事物的顏色，回答用 It is + 顏色。",
       "examples": [
         {
-          "en": "What shape is it? It's a circle.",
-          "zh": "這是什麼形狀？它是圓形。"
+          "en": "What color is it? It is red.",
+          "zh": "這是什麼顏色？它是紅色。"
         },
         {
-          "en": "What shape is it? It's a square.",
-          "zh": "這是什麼形狀？它是正方形。"
+          "en": "What color is it? It is yellow.",
+          "zh": "這是什麼顏色？它是黃色。"
         },
         {
-          "en": "What shape is it? It's round.",
-          "zh": "這是什麼形狀？它是圓的。"
-        },
-        {
-          "en": "What shape is it? It's a line.",
-          "zh": "這是什麼形狀？它是一條線。"
+          "en": "What color is it? It is green.",
+          "zh": "這是什麼顏色？它是綠色。"
         }
       ]
     }
   ],
   "dialogue": {
-    "title_zh": "在教室裡討論文具",
+    "title_zh": "美術課討論顏色",
     "lines": [
       {
-        "sp": "Anna",
-        "en": "What color is your pencil?",
-        "zh": "你的鉛筆是什麼顏色？"
+        "sp": "老師",
+        "en": "What color is it?",
+        "zh": "這是什麼顏色？"
       },
       {
-        "sp": "Bob",
-        "en": "It's blue.",
-        "zh": "它是藍色。"
+        "sp": "學生A",
+        "en": "It is pink.",
+        "zh": "它是粉紅色。"
       },
       {
-        "sp": "Anna",
-        "en": "What shape is the eraser?",
-        "zh": "橡皮擦是什麼形狀？"
+        "sp": "老師",
+        "en": "What color is it?",
+        "zh": "這是什麼顏色？"
       },
       {
-        "sp": "Bob",
-        "en": "It's a square.",
-        "zh": "它是正方形。"
+        "sp": "學生B",
+        "en": "It is brown.",
+        "zh": "它是棕色的。"
       },
       {
-        "sp": "Anna",
-        "en": "What color is the notebook?",
-        "zh": "筆記本是什麼顏色？"
+        "sp": "老師",
+        "en": "What color is it?",
+        "zh": "這是什麼顏色？"
       },
       {
-        "sp": "Bob",
-        "en": "It's yellow.",
-        "zh": "它是黃色。"
+        "sp": "學生C",
+        "en": "It is purple.",
+        "zh": "它是紫色的。"
       }
     ]
   },
   "sentences": [
     {
-      "en": "The apple is red.",
-      "zh": "蘋果是紅色的。"
+      "en": "A red ribbon is on the desk.",
+      "zh": "一條紅色的緞帶放在桌上。"
     },
     {
-      "en": "The sky is blue.",
-      "zh": "天空是藍色的。"
+      "en": "The brick is gray.",
+      "zh": "這塊磚是灰色的。"
     },
     {
-      "en": "The banana is yellow.",
-      "zh": "香蕉是黃色的。"
+      "en": "She has a yellow ribbon.",
+      "zh": "她有一條黃色的緞帶。"
     },
     {
-      "en": "The leaf is green.",
-      "zh": "葉子是綠色的。"
+      "en": "The space looks colorful.",
+      "zh": "這個空間看起來很色彩繽紛。"
     },
     {
-      "en": "The ball is round.",
-      "zh": "球是圓的。"
+      "en": "What color is it? It is purple.",
+      "zh": "這是什麼顏色？它是紫色的。"
     },
     {
-      "en": "The book is a square.",
-      "zh": "書是正方形的。"
+      "en": "The part is orange.",
+      "zh": "這個部分是橘色的。"
     },
     {
-      "en": "The road is a line.",
-      "zh": "道路是一條線。"
+      "en": "He sees a black brick.",
+      "zh": "他看到一塊黑色的磚。"
     },
     {
-      "en": "The rainbow is colorful.",
-      "zh": "彩虹是色彩繽紛的。"
+      "en": "The ribbon is white.",
+      "zh": "這條緞帶是白色的。"
     }
   ],
   "no": 6,
   "theme": "Colors & Shapes",
   "theme_zh": "顏色與形狀",
   "words": [
+    {
+      "en": "size",
+      "zh": "尺寸"
+    },
+    {
+      "en": "part",
+      "zh": "部分"
+    },
+    {
+      "en": "color",
+      "zh": "顏色"
+    },
+    {
+      "en": "shape",
+      "zh": "形狀"
+    },
+    {
+      "en": "space",
+      "zh": "空間"
+    },
+    {
+      "en": "brick",
+      "zh": "磚塊"
+    },
+    {
+      "en": "ribbon",
+      "zh": "緞帶"
+    },
+    {
+      "en": "colorful",
+      "zh": "色彩繽紛的"
+    },
     {
       "en": "red",
       "zh": "紅色"
@@ -220,445 +246,215 @@
     {
       "en": "gold",
       "zh": "金色"
-    },
-    {
-      "en": "color",
-      "zh": "顏色"
-    },
-    {
-      "en": "colorful",
-      "zh": "色彩繽紛的"
-    },
-    {
-      "en": "size",
-      "zh": "尺寸"
-    },
-    {
-      "en": "shape",
-      "zh": "形狀"
-    },
-    {
-      "en": "circle",
-      "zh": "圓圈"
-    },
-    {
-      "en": "line",
-      "zh": "線"
-    },
-    {
-      "en": "round",
-      "zh": "圓的"
-    },
-    {
-      "en": "square",
-      "zh": "正方形"
     }
   ],
+  "focus": "形容詞修飾名詞的位置",
+  "grammar": "形容詞放在名詞前面（a red ribbon），也可以放在 be 動詞後面（The ribbon is red.）。",
   "exercises": {
     "mcq": [
       {
-        "q": "紅色的英文是什麼？",
+        "q": "紅色的英文是？",
         "opts": [
           "red",
-          "blue",
           "yellow",
-          "green"
+          "green",
+          "blue"
         ],
         "ans": "red"
       },
       {
-        "q": "藍色的英文是什麼？",
+        "q": "形狀的英文是？",
         "opts": [
-          "blue",
-          "red",
-          "yellow",
-          "green"
+          "part",
+          "shape",
+          "size",
+          "color"
         ],
-        "ans": "blue"
+        "ans": "shape"
       },
       {
-        "q": "黃色的英文是什麼？",
-        "opts": [
-          "yellow",
-          "red",
-          "blue",
-          "green"
-        ],
-        "ans": "yellow"
-      },
-      {
-        "q": "綠色的英文是什麼？",
+        "q": "The ribbon is ___. (紅色)",
         "opts": [
           "green",
-          "red",
           "blue",
-          "yellow"
-        ],
-        "ans": "green"
-      },
-      {
-        "q": "橙色的英文是什麼？",
-        "opts": [
-          "orange",
           "red",
-          "blue",
-          "yellow"
-        ],
-        "ans": "orange"
-      },
-      {
-        "q": "圓形的英文是什麼？",
-        "opts": [
-          "circle",
-          "line",
-          "round",
-          "square"
-        ],
-        "ans": "circle"
-      },
-      {
-        "q": "方形的英文是什麼？",
-        "opts": [
-          "square",
-          "circle",
-          "line",
-          "round"
-        ],
-        "ans": "square"
-      },
-      {
-        "q": "線條的英文是什麼？",
-        "opts": [
-          "line",
-          "circle",
-          "square",
-          "round"
-        ],
-        "ans": "line"
-      },
-      {
-        "q": "圓的（形容詞）英文是什麼？",
-        "opts": [
-          "round",
-          "circle",
-          "line",
-          "square"
-        ],
-        "ans": "round"
-      },
-      {
-        "q": "大小的英文是什麼？",
-        "opts": [
-          "size",
-          "shape",
-          "color",
           "colorful"
         ],
-        "ans": "size"
-      },
-      {
-        "q": "What color is red?",
-        "opts": [
-          "red",
-          "blue",
-          "green",
-          "yellow"
-        ],
         "ans": "red"
       },
       {
-        "q": "What color is blue?",
+        "q": "She has a ___ ribbon. (紅色)",
         "opts": [
-          "blue",
-          "purple",
           "pink",
-          "brown"
-        ],
-        "ans": "blue"
-      },
-      {
-        "q": "What color is yellow?",
-        "opts": [
           "yellow",
-          "orange",
-          "green",
-          "black"
-        ],
-        "ans": "yellow"
-      },
-      {
-        "q": "What color is green?",
-        "opts": [
-          "green",
-          "gray",
-          "white",
-          "red"
-        ],
-        "ans": "green"
-      },
-      {
-        "q": "What color is orange?",
-        "opts": [
-          "orange",
-          "purple",
-          "pink",
-          "brown"
-        ],
-        "ans": "orange"
-      },
-      {
-        "q": "What color is purple?",
-        "opts": [
-          "purple",
-          "blue",
-          "yellow",
-          "black"
-        ],
-        "ans": "purple"
-      },
-      {
-        "q": "What color is pink?",
-        "opts": [
-          "pink",
           "red",
-          "white",
-          "gray"
-        ],
-        "ans": "pink"
-      },
-      {
-        "q": "What color is brown?",
-        "opts": [
-          "brown",
-          "black",
-          "orange",
-          "green"
-        ],
-        "ans": "brown"
-      },
-      {
-        "q": "What color is black?",
-        "opts": [
-          "black",
-          "white",
-          "gray",
-          "red"
-        ],
-        "ans": "black"
-      },
-      {
-        "q": "What color is white?",
-        "opts": [
-          "white",
-          "yellow",
-          "blue",
-          "green"
-        ],
-        "ans": "white"
-      },
-      {
-        "q": "圖片顯示一個藍色的正方形，請問它的形狀是什麼？",
-        "opts": [
-          "circle",
-          "line",
-          "square",
-          "round"
-        ],
-        "ans": "square"
-      },
-      {
-        "q": "圖片顯示一個綠色的圓形，請問它的顏色是什麼？",
-        "opts": [
-          "red",
-          "blue",
-          "green",
-          "yellow"
-        ],
-        "ans": "green"
-      },
-      {
-        "q": "圖片顯示一個紫色的線條，請問它的形狀是什麼？",
-        "opts": [
-          "line",
-          "circle",
-          "square",
-          "round"
-        ],
-        "ans": "line"
-      },
-      {
-        "q": "圖片顯示一個棕色的圓形，請問它的顏色是什麼？",
-        "opts": [
-          "brown",
-          "black",
-          "white",
-          "gray"
-        ],
-        "ans": "brown"
-      },
-      {
-        "q": "圖片顯示一個金色的方形，請問它的形狀是什麼？",
-        "opts": [
-          "square",
-          "circle",
-          "line",
-          "round"
-        ],
-        "ans": "square"
-      },
-      {
-        "q": "圖片顯示一個灰色的線條，請問它的顏色是什麼？",
-        "opts": [
-          "gray",
-          "gold",
-          "pink",
           "purple"
         ],
-        "ans": "gray"
+        "ans": "red"
       },
       {
-        "q": "圖片顯示一個粉紅色的圓形，請問它的形狀是什麼？",
+        "q": "She has a ___ box. (紅色)",
         "opts": [
-          "round",
-          "circle",
-          "square",
-          "line"
-        ],
-        "ans": "round"
-      },
-      {
-        "q": "圖片顯示一個彩色的線條，請問它的顏色是什麼？",
-        "opts": [
-          "colorful",
+          "pink",
           "red",
-          "blue",
-          "green"
+          "orange",
+          "purple"
         ],
-        "ans": "colorful"
+        "ans": "red"
       },
       {
-        "q": "圖片顯示一個大小不同的兩個方形，請問它們的大小是什麼？",
+        "q": "The sky is ___. (藍色)",
         "opts": [
+          "blue",
           "size",
           "shape",
-          "color",
-          "colorful"
+          "part"
         ],
-        "ans": "size"
+        "ans": "blue"
       },
       {
-        "q": "圖片顯示一個金色的圓形，請問它的顏色是什麼？",
+        "q": "He bought a ___ ball. (紅色)",
         "opts": [
-          "gold",
-          "red",
-          "blue",
-          "green"
+          "color",
+          "size",
+          "part",
+          "red"
         ],
-        "ans": "gold"
+        "ans": "red"
+      },
+      {
+        "q": "空間 的英文是？",
+        "opts": [
+          "shape",
+          "part",
+          "color",
+          "space"
+        ],
+        "ans": "space"
+      },
+      {
+        "q": "He has a ___ brick. (紅色)",
+        "opts": [
+          "red",
+          "pink",
+          "blue",
+          "purple"
+        ],
+        "ans": "red"
+      },
+      {
+        "q": "The brick is ___. (紅色)",
+        "opts": [
+          "white",
+          "red",
+          "black",
+          "brown"
+        ],
+        "ans": "red"
       }
     ],
     "fill": [
       {
-        "q": "It is ____.（它是什麼顏色？）",
+        "q": "The ribbon is ____.（這條絲帶是_____的）",
         "ans": "red"
       },
       {
-        "q": "It is ____.（它是什麼顏色？）",
+        "q": "This is a ____ ribbon.（這是一條_____的絲帶）",
         "ans": "blue"
       },
       {
-        "q": "It is ____.（它是什麼顏色？）",
-        "ans": "green"
+        "q": "The brick is ____.（這塊磚是_____的）",
+        "ans": "gray"
       },
       {
-        "q": "It is ____.（它是什麼顏色？）",
-        "ans": "yellow"
+        "q": "The ____ is red.（這個_____是紅色的）",
+        "ans": "brick"
       },
       {
-        "q": "It is ____.（它是什麼顏色？）",
-        "ans": "purple"
+        "q": "This is a ____ space.（這是一個_____的空間）",
+        "ans": "blue"
       },
       {
-        "q": "It is ____.（它是什麼形狀？）",
-        "ans": "circle"
+        "q": "The ____ of the ribbon is red.（絲帶的_____是紅色的）",
+        "ans": "part"
       },
       {
-        "q": "It is ____.（它是什麼形狀？）",
-        "ans": "square"
+        "q": "The ____ is colourful.（這個_____是多彩的）",
+        "ans": "shape"
       },
       {
-        "q": "It is ____.（它是什麼形狀？）",
-        "ans": "round"
+        "q": "The ____ is orange.（這個顏色是橙色的）",
+        "ans": "color"
       },
       {
-        "q": "It is ____.（它是什麼形狀？）",
-        "ans": "line"
+        "q": "The ____ is gold.（這個空間是金色的）",
+        "ans": "space"
       },
       {
-        "q": "It is ____.（它是什麼顏色？）",
-        "ans": "colorful"
+        "q": "The ____ is white.（這個絲帶是白色的）",
+        "ans": "ribbon"
       }
     ],
     "translate": [
       {
-        "q": "這是紅色的。",
-        "ans": "This is red."
+        "q": "這條絲帶是紅色的。",
+        "ans": "The ribbon is red."
       },
       {
-        "q": "那是藍色的。",
-        "ans": "That is blue."
+        "q": "這是一條藍色的絲帶。",
+        "ans": "This is a blue ribbon."
       },
       {
-        "q": "這是綠色的。",
-        "ans": "This is green."
+        "q": "這塊磚是灰色的。",
+        "ans": "The brick is gray."
       },
       {
-        "q": "那是黃色的。",
-        "ans": "That is yellow."
+        "q": "這是一塊黃色的磚。",
+        "ans": "This is a yellow brick."
       },
       {
-        "q": "這是紫色的。",
-        "ans": "This is purple."
+        "q": "這個部分是紫色的。",
+        "ans": "The part is purple."
       },
       {
-        "q": "這是圓形的。",
-        "ans": "This is round."
+        "q": "這是一個紫色的部分。",
+        "ans": "This is a purple part."
       },
       {
-        "q": "那是方形的。",
-        "ans": "That is square."
+        "q": "這個形狀是多彩的。",
+        "ans": "The shape is colorful."
       },
       {
-        "q": "這是彩色的。",
-        "ans": "This is colorful."
+        "q": "這是一個金色的形狀。",
+        "ans": "This is a gold shape."
       }
     ],
     "unscramble": [
       {
-        "q": "it / is / color / What / ?",
-        "ans": "What color is it?"
+        "q": "red / is / color / The / .",
+        "ans": "The color is red."
       },
       {
-        "q": "is / shape / it / ? / What",
-        "ans": "What shape is it?"
+        "q": "is / shape / purple / . / The",
+        "ans": "The shape is purple."
       },
       {
-        "q": ". / It / is / red",
-        "ans": "It is red."
+        "q": "pink / is / This / ribbon / a / .",
+        "ans": "This is a pink ribbon."
       },
       {
-        "q": ". / It / is / blue",
-        "ans": "It is blue."
+        "q": "The / . / is / brick / brown",
+        "ans": "The brick is brown."
       },
       {
-        "q": "is / It / round / .",
-        "ans": "It is round."
+        "q": "is / part / orange / The / .",
+        "ans": "The part is orange."
       },
       {
-        "q": "It / . / square / is",
-        "ans": "It is square."
+        "q": "white / is / space / The / .",
+        "ans": "The space is white."
       }
     ]
   },
-  "engine": "gemini:gemini-flash-latest"
+  "engine": "nvidia:nemotron(json)"
 }

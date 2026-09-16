@@ -1,172 +1,184 @@
 {
-  "title_en": "Feelings and Thoughts",
-  "title_zh": "心情與想法入門",
-  "grammar": "How do you feel? I feel…because…",
-  "intro_zh": "在這一課，我們將學習用英文描述自己的心情和想法，並練習使用「How do you feel? I feel…because…」的句型來說明感覺的原因。透過日常生活的情境，讓學生能夠自然表達喜怒哀樂，並了解不同情緒背後的想法。",
+  "title_en": "Feeling and Looking",
+  "title_zh": "感覺與觀察的一天",
+  "intro_zh": "本課學習感官動詞後面直接接形容詞，例如 feel sad、look tired，不加副詞。並練習用 How do you feel? 來問對方的心情，讓學生能描述自己的感受與觀察他人的表情。",
   "can_do": [
-    "能用英文說出自己的感覺並說明原因",
-    "能聽懂並回應別人對感覺的描述",
-    "能閱讀短文並回答關於情緒的問題"
+    "能用 feel/look 描述自己的心情",
+    "能用 How do you feel? 問別人的感受",
+    "能在短對話中正確使用感官動詞+形容詞"
   ],
   "reading": {
-    "title_en": "A Day of Feelings",
-    "title_zh": "一天的情感故事",
+    "title_en": "Feeling and Looking",
+    "title_zh": "感覺與觀察的一天",
     "sentences": [
       {
-        "en": "This morning Xiao Ming felt excited because he was going to the school science fair.",
-        "zh": "今天早上小明感到興奮，因為他要去參加學校科學展。"
+        "en": "Lily feels sad because she cannot find her puppy.",
+        "zh": "莉莉感到難過，因為她找不到她的小狗。"
       },
       {
-        "en": "When he arrived, he noticed the crowd was loud and he felt a little afraid, but he was also surprised to see his friends, and he felt angry when someone bumped into him.",
-        "zh": "他到達時，注意到人群很吵，他感到有點害怕，但看到朋友也感到驚訝，當有人撞到他時他感到生氣。"
+        "en": "She looks tired and wants to cry, but she is not angry.",
+        "zh": "她看起來很疲倦，想哭，但她不生氣。"
       },
       {
-        "en": "During the fair, he felt proud when his project won a prize, and he felt happy about his hard work.",
-        "zh": "在展覽期間，他的項目獲獎時他感到驕傲，並且對自己的努力感到快樂。"
+        "en": "Her brother notices she is weak and sick.",
+        "zh": "她的哥哥注意到她很虛弱而且生病。"
       },
       {
-        "en": "After the fair, Xiao Ming felt tired and a bit weak because he had walked all day.",
-        "zh": "展覽結束後，小明感到疲倦且有點虛弱，因為他整天走路。"
+        "en": "He feels glad to help her, but she still feels lonely.",
+        "zh": "他很高興能幫她，但她仍然感到孤單。"
       },
       {
-        "en": "He felt bored on the bus ride home, and he wished he could do something more fun.",
-        "zh": "回家的公車上他感到無聊，願意做更有趣的事。"
+        "en": "Lily is free after school, yet she feels bored.",
+        "zh": "莉莉放學後很自由，但她感到無聊。"
       },
       {
-        "en": "When he got home, he noticed his little sister was sick and looked unhappy.",
-        "zh": "回到家時，他注意到妹妹生病了，看起來不高興。"
+        "en": "She sees a happy dog and feels excited.",
+        "zh": "她看到一隻快樂的狗，感到興奮。"
       },
       {
-        "en": "He felt sad and lonely because he could not play with her, but he stayed to keep her company.",
-        "zh": "他感到悲傷且孤單，因為不能和她玩，但他留下來陪她。"
+        "en": "The dog looks great and makes her feel lucky.",
+        "zh": "那隻狗看起來很棒，讓她感到幸運。"
       },
       {
-        "en": "Later, his mom gave him a free snack and said he was lucky to have such a caring family.",
-        "zh": "媽媽給他一份免費的點心，並說他很幸運擁有這樣關心的家庭。"
+        "en": "She feels proud when the dog wags its tail.",
+        "zh": "當狗搖尾巴時，她感到驕傲。"
       },
       {
-        "en": "Finally, Xiao Ming felt comfortable and glad as he rested, knowing tomorrow would be another great day.",
-        "zh": "最後，小明感到舒適且高興，因為他知道明天又會是美好的一天。"
+        "en": "Later she feels afraid of the dark and stays inside.",
+        "zh": "之後她害怕黑暗，待在室內。"
+      },
+      {
+        "en": "Her mother notices she is unhappy and makes her feel surprised.",
+        "zh": "她的媽媽注意到她不開心，讓她感到驚訝。"
       }
     ]
   },
   "grammar_points": [
     {
-      "title_zh": "① How do you feel? I feel + 形容詞",
-      "explain_zh": "用來詢問對方的感覺，並以形容詞回答。",
+      "title_zh": "① feel／look 後面接形容詞",
+      "explain_zh": "說明感官動詞 feel 和 look 後面直接接形容詞，表示感覺或外觀，不加副詞。",
       "table": [
         [
-          "問句",
-          "答句結構",
-          "例句"
+          "主語",
+          "動詞",
+          "形容詞",
+          "中文翻譯"
         ],
         [
-          "How do you feel?",
-          "I feel + 形容詞",
-          "I feel happy."
+          "I",
+          "feel",
+          "sad",
+          "我感到悲傷。"
         ],
         [
-          "How do you feel?",
-          "I feel + 形容詞",
-          "I feel tired."
+          "You",
+          "look",
+          "tired",
+          "你看起來很疲倦。"
         ],
         [
-          "How do you feel?",
-          "I feel + 形容詞",
-          "I feel bored."
+          "We",
+          "feel",
+          "great",
+          "我們感到極好。"
+        ],
+        [
+          "They",
+          "look",
+          "lonely",
+          "他們看起來很孤單。"
+        ],
+        [
+          "I",
+          "feel",
+          "angry",
+          "我感到生氣。"
+        ],
+        [
+          "You",
+          "look",
+          "bored",
+          "你看起來很無聊。"
         ]
       ]
     },
     {
-      "title_zh": "② 加上原因：I feel … because …",
-      "explain_zh": "在感覺後加上 because 來說明產生這種感覺的原因。",
+      "title_zh": "② How do you feel? 與 How are you? 的回答方式",
+      "explain_zh": "How do you feel? 用來問心情，回答用 I feel + 形容詞。How are you? 用來問狀態，回答用 I am + 形容詞。",
       "examples": [
         {
-          "en": "I feel excited because I have a birthday party today.",
-          "zh": "我感到興奮，因為今天有生日派對。"
+          "en": "How do you feel? I feel happy.",
+          "zh": "你感覺怎麼樣？我感到高興。"
         },
         {
-          "en": "I feel sad because I lost my favourite toy.",
-          "zh": "我感到難過，因為我遺失了最喜歡的玩具。"
-        },
-        {
-          "en": "I feel angry because my brother took my book without asking.",
-          "zh": "我感到生氣，因為我的兄弟未經同意拿走了我的書。"
-        },
-        {
-          "en": "I feel proud because I got a good grade on the test.",
-          "zh": "我感到驕傲，因為我在考試中得到好成績。"
+          "en": "How are you? I am tired.",
+          "zh": "你好嗎？我感到疲倦。"
         }
       ]
     }
   ],
   "dialogue": {
-    "title_zh": "放學後的聊天",
+    "title_zh": "放學後的對話",
     "lines": [
       {
-        "sp": "Anna",
-        "en": "How do you feel after school?",
-        "zh": "安娜，放學後你感覺怎麼樣？"
+        "sp": "小明",
+        "en": "How do you feel?",
+        "zh": "你感覺怎麼樣？"
       },
       {
-        "sp": "Ben",
-        "en": "I feel tired because we had a long math class.",
-        "zh": "本：我感到疲倦，因為我們上了很長的數學課。"
+        "sp": "小華",
+        "en": "I feel tired.",
+        "zh": "我感到疲倦。"
       },
       {
-        "sp": "Anna",
-        "en": "I feel happy because we played soccer at recess.",
-        "zh": "安娜：我感到高興，因為在課間休息時我們踢了足球。"
+        "sp": "小美",
+        "en": "You look bored.",
+        "zh": "你看起來很無聊。"
       },
       {
-        "sp": "Ben",
-        "en": "I feel a little bored when it rains and we stay inside.",
-        "zh": "本：當下雨且我們待在教室時，我會感到有點無聊。"
+        "sp": "小明",
+        "en": "How are you?",
+        "zh": "你好嗎？"
       },
       {
-        "sp": "Anna",
-        "en": "How do you feel now?",
-        "zh": "安娜：你現在感覺怎麼樣？"
-      },
-      {
-        "sp": "Ben",
-        "en": "I feel great because we just finished our homework.",
-        "zh": "本：我感到極好，因為我們剛剛完成功課。"
+        "sp": "老師",
+        "en": "I am great.",
+        "zh": "我很好。"
       }
     ]
   },
   "sentences": [
     {
-      "en": "How do you feel?",
-      "zh": "你感覺怎麼樣？"
+      "en": "I feel sad.",
+      "zh": "我感到悲傷。"
     },
     {
-      "en": "I feel sad because I missed the bus.",
-      "zh": "我感到難過，因為我錯過了公車。"
+      "en": "You look tired.",
+      "zh": "你看起來很疲倦。"
     },
     {
-      "en": "She feels excited because she got a new book.",
-      "zh": "她感到興奮，因為她得到一本新書。"
+      "en": "She feels great.",
+      "zh": "她感到極好。"
     },
     {
-      "en": "He feels angry because his friend broke his toy.",
-      "zh": "他感到生氣，因為他的朋友弄壞了他的玩具。"
+      "en": "They look lonely.",
+      "zh": "他們看起來很孤單。"
     },
     {
-      "en": "We feel lonely when we have no one to play with.",
-      "zh": "我們感到孤單，因為沒有人可以一起玩。"
+      "en": "How do you feel? I feel bored.",
+      "zh": "你感覺怎麼樣？我感到無聊。"
     },
     {
-      "en": "They feel proud because they won the game.",
-      "zh": "他們感到驕傲，因為他們贏得了比賽。"
+      "en": "How are you? I am angry.",
+      "zh": "你好嗎？我感到生氣。"
     },
     {
-      "en": "I feel sick because I ate too much candy.",
-      "zh": "我感到不舒服，因為我吃了太多糖果。"
+      "en": "We feel excited.",
+      "zh": "我們感到興奮。"
     },
     {
-      "en": "You feel free when you ride your bike in the park.",
-      "zh": "你感到自由，當你在公園騎腳踏車時。"
+      "en": "He looks sick.",
+      "zh": "他看起來生病。"
     }
   ],
   "no": 36,
@@ -174,32 +186,12 @@
   "theme_zh": "心情與想法",
   "words": [
     {
-      "en": "afraid",
-      "zh": "害怕的"
-    },
-    {
       "en": "sad",
       "zh": "悲傷的"
     },
     {
-      "en": "angry",
-      "zh": "生氣的"
-    },
-    {
-      "en": "bored",
-      "zh": "感到無聊的"
-    },
-    {
-      "en": "lonely",
-      "zh": "孤單的"
-    },
-    {
-      "en": "unhappy",
-      "zh": "不高興的"
-    },
-    {
-      "en": "tired",
-      "zh": "疲倦的"
+      "en": "cry",
+      "zh": "哭泣"
     },
     {
       "en": "sick",
@@ -210,28 +202,36 @@
       "zh": "虛弱的"
     },
     {
-      "en": "excited",
-      "zh": "感到興奮的"
-    },
-    {
       "en": "glad",
       "zh": "高興的"
+    },
+    {
+      "en": "free",
+      "zh": "自由的"
+    },
+    {
+      "en": "feel",
+      "zh": "感覺"
+    },
+    {
+      "en": "angry",
+      "zh": "生氣的"
+    },
+    {
+      "en": "bored",
+      "zh": "感到無聊的"
+    },
+    {
+      "en": "tired",
+      "zh": "疲倦的"
     },
     {
       "en": "happy",
       "zh": "快樂的"
     },
     {
-      "en": "surprised",
-      "zh": "感到驚訝的"
-    },
-    {
       "en": "great",
       "zh": "極好的"
-    },
-    {
-      "en": "free",
-      "zh": "自由的"
     },
     {
       "en": "lucky",
@@ -242,331 +242,235 @@
       "zh": "驕傲的"
     },
     {
-      "en": "comfortable",
-      "zh": "舒適的"
+      "en": "afraid",
+      "zh": "害怕的"
     },
     {
-      "en": "feel",
-      "zh": "感覺"
+      "en": "lonely",
+      "zh": "孤單的"
     },
     {
       "en": "notice",
       "zh": "注意"
+    },
+    {
+      "en": "unhappy",
+      "zh": "不高興的"
+    },
+    {
+      "en": "excited",
+      "zh": "感到興奮的"
+    },
+    {
+      "en": "surprised",
+      "zh": "感到驚訝的"
     }
   ],
+  "focus": "感官動詞 + 形容詞",
+  "grammar": "feel／look 後面接形容詞不接副詞；How do you feel? 用來問心情。",
   "exercises": {
     "mcq": [
       {
-        "q": "當你很開心時，你會說什麼？",
+        "q": "悲傷 的英文是？",
         "opts": [
-          "I feel sad.",
-          "I feel happy.",
-          "I feel angry.",
-          "I feel tired."
-        ],
-        "ans": "I feel happy."
-      },
-      {
-        "q": "「害怕的」英文怎麼說？",
-        "opts": [
-          "afraid",
-          "excited",
-          "proud",
-          "comfortable"
-        ],
-        "ans": "afraid"
-      },
-      {
-        "q": "他因為贏得比賽而感到驕傲。他會說什麼？",
-        "opts": [
-          "I feel sad because I won.",
-          "I feel proud because I won.",
-          "I feel bored because I won.",
-          "I feel sick because I won."
-        ],
-        "ans": "I feel proud because I won."
-      },
-      {
-        "q": "「感到孤獨」英文是什麼？",
-        "opts": [
-          "feel tired",
-          "feel lonely",
-          "feel weak",
-          "feel angry"
-        ],
-        "ans": "feel lonely"
-      },
-      {
-        "q": "當你生病時，你感到___。",
-        "opts": [
-          "excited",
-          "great",
-          "sick",
-          "lucky"
-        ],
-        "ans": "sick"
-      },
-      {
-        "q": "「感到驚訝」的英文動詞片語是什麼？",
-        "opts": [
-          "feel surprised",
-          "feel free",
-          "feel weak",
-          "feel unhappy"
-        ],
-        "ans": "feel surprised"
-      },
-      {
-        "q": "她因為沒有功課而感到自由。正確的說法是？",
-        "opts": [
-          "She feel free because she has no homework.",
-          "She feels free because she has no homework.",
-          "She feel happy because she has homework.",
-          "She feels sad because she has homework."
-        ],
-        "ans": "She feels free because she has no homework."
-      },
-      {
-        "q": "「虛弱的」英文是___。",
-        "opts": [
-          "great",
+          "cry",
           "weak",
-          "comfortable",
-          "lucky"
-        ],
-        "ans": "weak"
-      },
-      {
-        "q": "你因為無事可做而感到厭倦。你會說什麼？",
-        "opts": [
-          "I feel bored because I have nothing to do.",
-          "I feel excited because I have nothing to do.",
-          "I feel happy because I have nothing to do.",
-          "I feel afraid because I have nothing to do."
-        ],
-        "ans": "I feel bored because I have nothing to do."
-      },
-      {
-        "q": "「注意到」英文怎麼說？",
-        "opts": [
-          "notice",
-          "feel",
-          "sad",
-          "uncomfortable"
-        ],
-        "ans": "notice"
-      },
-      {
-        "q": "我因為看見老鼠而感到___。",
-        "opts": [
-          "afraid",
-          "happy",
-          "sad",
-          "tired"
-        ],
-        "ans": "afraid"
-      },
-      {
-        "q": "她因為得到禮物而感到___。",
-        "opts": [
-          "excited",
-          "angry",
-          "bored",
-          "weak"
-        ],
-        "ans": "excited"
-      },
-      {
-        "q": "他因為沒有朋友而感到___。",
-        "opts": [
-          "lonely",
-          "glad",
-          "great",
-          "comfortable"
-        ],
-        "ans": "lonely"
-      },
-      {
-        "q": "你因為考試不及格而感到___。",
-        "opts": [
-          "unhappy",
-          "happy",
-          "free",
-          "lucky"
-        ],
-        "ans": "unhappy"
-      },
-      {
-        "q": "我因為整天跑步而感到___。",
-        "opts": [
-          "tired",
-          "surprised",
-          "proud",
-          "free"
-        ],
-        "ans": "tired"
-      },
-      {
-        "q": "她因為聽到好消息而感到___。",
-        "opts": [
-          "surprised",
-          "sad",
-          "angry",
-          "weak"
-        ],
-        "ans": "surprised"
-      },
-      {
-        "q": "他因為完成作業而感到___。",
-        "opts": [
-          "proud",
-          "bored",
           "sick",
-          "afraid"
+          "sad"
         ],
-        "ans": "proud"
+        "ans": "sad"
       },
       {
-        "q": "你因為在公園裡玩耍而感到___。",
-        "opts": [
-          "free",
-          "sick",
-          "weak",
-          "angry"
-        ],
-        "ans": "free"
-      },
-      {
-        "q": "我因為吃太多糖果而感到___。",
-        "opts": [
-          "sick",
-          "happy",
-          "lonely",
-          "tired"
-        ],
-        "ans": "sick"
-      },
-      {
-        "q": "她因為得到讚美而感到___。",
+        "q": "開心 的英文是？",
         "opts": [
           "glad",
-          "afraid",
-          "sad",
-          "weak"
+          "angry",
+          "free",
+          "bored"
         ],
         "ans": "glad"
       },
       {
-        "q": "How do you feel?",
+        "q": "You ______ strong.(看起來很強壯)",
         "opts": [
-          "I feel afraid.",
-          "I feel happy.",
-          "I feel tired.",
-          "I feel bored."
+          "feel",
+          "look",
+          "be",
+          "go"
         ],
-        "ans": "I feel happy."
+        "ans": "look"
+      },
+      {
+        "q": "驚訝 的英文是？",
+        "opts": [
+          "tired",
+          "excited",
+          "happy",
+          "surprised"
+        ],
+        "ans": "surprised"
+      },
+      {
+        "q": "You ______ tired. (看起來很疲倦)",
+        "opts": [
+          "am",
+          "is",
+          "look",
+          "feel"
+        ],
+        "ans": "look"
+      },
+      {
+        "q": "How ______ you feel? (你現在感覺如何？)",
+        "opts": [
+          "are",
+          "do",
+          "is",
+          "does"
+        ],
+        "ans": "do"
+      },
+      {
+        "q": "He ______ glad. (他覺得很開心)",
+        "opts": [
+          "feels",
+          "are",
+          "is",
+          "looks"
+        ],
+        "ans": "feels"
+      },
+      {
+        "q": "She ______ happy. (她看起來很開心。)",
+        "opts": [
+          "looks",
+          "look",
+          "looked",
+          "looking"
+        ],
+        "ans": "looks"
+      },
+      {
+        "q": "He ______ sick. (他現在感覺不舒服。)",
+        "opts": [
+          "look",
+          "feels",
+          "felt",
+          "feel"
+        ],
+        "ans": "feels"
+      },
+      {
+        "q": "How are you ______? (你現在感覺如何。)",
+        "opts": [
+          "feels",
+          "feel",
+          "feeling",
+          "felt"
+        ],
+        "ans": "feeling"
       }
     ],
     "fill": [
       {
-        "q": "I feel ____.（我很開心）",
+        "q": "I feel ____.（我感到開心）",
         "ans": "happy"
       },
       {
-        "q": "I feel ____.（我很悲傷）",
+        "q": "You look ____.（你看起來很悲傷）",
         "ans": "sad"
       },
       {
-        "q": "I feel ____.（我很生氣）",
-        "ans": "angry"
+        "q": "We feel ____.（我們覺得很興奮）",
+        "ans": "excited"
       },
       {
-        "q": "I feel ____.（我很無聊）",
-        "ans": "bored"
-      },
-      {
-        "q": "I feel ____.（我很孤單）",
-        "ans": "lonely"
-      },
-      {
-        "q": "I feel ____。（我不開心）",
-        "ans": "unhappy"
-      },
-      {
-        "q": "I feel ____。（我很累）",
+        "q": "They look ____.（他們看起來很疲倦）",
         "ans": "tired"
       },
       {
-        "q": "I feel ____。（我很不舒服）",
-        "ans": "sick"
+        "q": "I feel ____.（我感到很無聊）",
+        "ans": "bored"
       },
       {
-        "q": "I feel ____。（我很虛弱）",
-        "ans": "weak"
+        "q": "You feel ____.（你覺得很幸運）",
+        "ans": "lucky"
       },
       {
-        "q": "I feel ____。（我很興奮）",
-        "ans": "excited"
+        "q": "We look ____.（我們看起來很驕傲）",
+        "ans": "proud"
+      },
+      {
+        "q": "They feel ____。（他們覺得很害怕）",
+        "ans": "afraid"
+      },
+      {
+        "q": "I feel ____.（我感到很孤單）",
+        "ans": "lonely"
+      },
+      {
+        "q": "You look ____.（你看起來很生氣）",
+        "ans": "angry"
       }
     ],
     "translate": [
       {
-        "q": "我很開心。",
-        "ans": "I am happy."
+        "q": "我感到很開心。",
+        "ans": "I feel happy."
       },
       {
-        "q": "我很悲傷。",
-        "ans": "I am sad."
+        "q": "你看起來很悲傷。",
+        "ans": "You look sad."
       },
       {
-        "q": "我很生氣。",
-        "ans": "I am angry."
+        "q": "我們覺得很興奮。",
+        "ans": "We feel excited."
       },
       {
-        "q": "我很無聊。",
-        "ans": "I am bored."
+        "q": "他們看起來很疲倦。",
+        "ans": "They look tired."
       },
       {
-        "q": "我很孤單。",
-        "ans": "I am lonely."
+        "q": "我感到很無聊。",
+        "ans": "I feel bored."
       },
       {
-        "q": "我不開心。",
-        "ans": "I am unhappy."
+        "q": "你覺得很幸運。",
+        "ans": "You feel lucky."
       },
       {
-        "q": "我很累。",
-        "ans": "I am tired."
+        "q": "我們看起來很驕傲。",
+        "ans": "We look proud."
       },
       {
-        "q": "我很興奮。",
-        "ans": "I am excited."
+        "q": "他們覺得很害怕。",
+        "ans": "They feel afraid."
       }
     ],
     "unscramble": [
       {
-        "q": "am / . / I / happy",
-        "ans": "I am happy."
+        "q": "feel / . / I / sad",
+        "ans": "I feel sad."
       },
       {
-        "q": "are / . / You / sad",
-        "ans": "You are sad."
+        "q": "look / . / You / angry",
+        "ans": "You look angry."
       },
       {
-        "q": "angry / . / He / is",
-        "ans": "He is angry."
+        "q": "lonely / . / We / feel",
+        "ans": "We feel lonely."
       },
       {
-        "q": "She / bored / is / .",
-        "ans": "She is bored."
+        "q": "They / free / look / .",
+        "ans": "They look free."
       },
       {
-        "q": ". / are / excited / We",
-        "ans": "We are excited."
+        "q": "feel / do / you / How / ?",
+        "ans": "How do you feel?"
       },
       {
-        "q": "They / tired / are / .",
-        "ans": "They are tired."
+        "q": "I / great / am / .",
+        "ans": "I am great."
       }
     ]
   },

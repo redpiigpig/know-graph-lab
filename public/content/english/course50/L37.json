@@ -1,171 +1,195 @@
 {
-  "title_en": "Feelings & Reasons",
-  "title_zh": "心情與原因——我的感受與想法",
-  "grammar": "用 How do you feel? 和 I feel... because... 來表達心情和原因",
-  "intro_zh": "每個人每天都有不同的心情。有時候開心，有時候難過，有時候擔心。你知道嗎？我們的心情都有原因的。這一課裡，我們要學會用英文表達自己的感受，也要學會解釋為什麼會有這些感受。一起來認識更多關於心情的英文單字吧！",
+  "title_en": "Feel",
+  "title_zh": "感受與想法的一天",
+  "intro_zh": "本課學習動詞後面加 to + 原形，如 want to try、hope to enjoy、need to decide，幫助學生表達願望與需求。透過練習，讓學生使用此句型說出感受與想法。",
   "can_do": [
-    "能用英文說出自己現在的心情",
-    "能用『because』解釋心情的原因",
-    "能聽懂別人問『你感覺如何』並做出回應"
+    "能使用 want/hope/need/decide/try 後面接 to + 原形說出自己的願望。",
+    "能閱讀簡短情境故事並識出人物的感受與想法。",
+    "能透過圖片或情境說出自己的希望與需求。"
   ],
   "reading": {
-    "title_en": "My Week",
-    "title_zh": "我的一週",
+    "title_en": "Story",
+    "title_zh": "感受與想法故事",
     "sentences": [
       {
-        "en": "On Monday, I felt worried because I had a big test.",
-        "zh": "星期一，我感到擔心，因為我有一場大考。"
+        "en": "I want to try a new game.",
+        "zh": "我想試一個新遊戲。"
       },
       {
-        "en": "I tried hard to study, and I hoped I could do well.",
-        "zh": "我努力讀書，希望能考得好。"
+        "en": "She hopes to feel joy today.",
+        "zh": "她希望今天感到喜悅。"
       },
       {
-        "en": "On Wednesday, I got my test back and felt joy because I got 95 points!",
-        "zh": "星期三，我拿到考卷，感到開心，因為我得到 95 分！"
+        "en": "We need to decide to enjoy the day.",
+        "zh": "我們需要決定享受今天。"
       },
       {
-        "en": "I love playing soccer, so on Friday I felt excited to play with my friends.",
-        "zh": "我熱愛踢足球，所以星期五和朋友踢球時，我感到興奮。"
+        "en": "They agree to kiss goodbye.",
+        "zh": "他們同意親吻告別。"
       },
       {
-        "en": "But then my friend got hurt, and I felt sad because he had to cry a little.",
-        "zh": "但是我的朋友受傷了，他哭了，我感到難過。"
+        "en": "He wishes to travel someday.",
+        "zh": "他希望有一天能旅行。"
       },
       {
-        "en": "I decided to help him feel better, so we sat down and talked.",
-        "zh": "我決定幫他感覺更好，所以我們坐下來聊天。"
+        "en": "I love to read books that calm my mind and make me happy.",
+        "zh": "我愛閱讀能讓我心靈平靜並讓我快樂的書。"
       },
       {
-        "en": "He smiled and said he believed I was a good friend.",
-        "zh": "他笑了，說他相信我是個好朋友。"
+        "en": "She hates to wait in long lines.",
+        "zh": "她討厭在長長的隊伍中等待。"
       },
       {
-        "en": "On Saturday, I enjoyed playing games with my whole family.",
-        "zh": "星期六，我欣賞和全家人一起玩遊戲。"
+        "en": "I guess it means we should worry less because stress is bad.",
+        "zh": "我猜這代表我們應該少擔心，因為壓力不好。"
       },
       {
-        "en": "My little sister gave me a kiss and said she wished every day could be like this.",
-        "zh": "我妹妹親吻我，說她希望每一天都能這樣。"
-      },
-      {
-        "en": "I agree with her—happy moments with family mean the most to me!",
-        "zh": "我同意她——和家人在一起的快樂時光對我來說最重要！"
+        "en": "We dream to become artists one day.",
+        "zh": "我們有一天夢想成為藝術家。"
       }
     ]
   },
   "grammar_points": [
     {
-      "title_zh": "① How do you feel? I feel... because...",
-      "explain_zh": "用來詢問對方的心情，並說明產生這種心情的原因。",
+      "title_zh": "① 常接 to + 原形的動詞清單",
+      "explain_zh": "英文中有一些動詞，後面必須接 to + 動詞原形。這些動詞常常表示心情、想法或計畫。想想看，你想做什麼事？你希望什麼？你需要什麼？就用這些動詞加上 to + 動詞原形來表達。",
       "table": [
         [
-          "問句",
-          "回答 (感覺)",
-          "原因 (because ...)"
+          "動詞",
+          "中文意思",
+          "例句"
         ],
         [
-          "How do you feel?",
-          "I feel happy.",
-          "because I got a new book."
+          "want",
+          "想要",
+          "I want to play."
         ],
         [
-          "How do you feel?",
-          "I feel sad.",
-          "because I lost my pencil."
+          "hope",
+          "希望",
+          "She hopes to win."
         ],
         [
-          "How do you feel?",
-          "I feel excited.",
-          "because we will go on a field trip tomorrow."
+          "need",
+          "需要",
+          "We need to study."
+        ],
+        [
+          "decide",
+          "決定",
+          "He decides to try."
+        ],
+        [
+          "try",
+          "嘗試",
+          "They try to help."
+        ],
+        [
+          "wish",
+          "希望",
+          "I wish to visit."
+        ],
+        [
+          "dream",
+          "夢想",
+          "She dreams to fly."
+        ],
+        [
+          "agree",
+          "同意",
+          "We agree to go."
         ]
       ]
     },
     {
-      "title_zh": "② 用動詞說明原因",
-      "explain_zh": "在 because 後面可以接動詞原形或動名詞，說明讓你產生這種感覺的動作或狀況。",
+      "title_zh": "② to 後面一定是動詞原形（不加 s，不加 ing）",
+      "explain_zh": "記住！to 後面的動詞一定要用「原形」。不能寫 to enjoys（加 s 錯誤），也不能寫 to enjoying（加 ing 錯誤）。一定是 to enjoy。就像一個規則：to 後面永遠是乾乾淨淨的動詞原形。",
       "examples": [
         {
-          "en": "I feel bored because I have nothing to do.",
-          "zh": "我感到無聊，因為我什麼事都沒做。"
+          "en": "She wants to dance.",
+          "zh": "她想要跳舞。（to dance 是原形，不是 to dances 或 to dancing）"
         },
         {
-          "en": "She feels proud because she tried her best in the race.",
-          "zh": "她感到驕傲，因為她在比賽中盡了全力。"
+          "en": "I hope to meet you.",
+          "zh": "我希望見到你。（to meet 是原形）"
         },
         {
-          "en": "They feel surprised because the gift was a kiss from their friend.",
-          "zh": "他們感到驚訝，因為禮物是朋友的親吻。"
+          "en": "We need to sleep.",
+          "zh": "我們需要睡覺。（to sleep 是原形，不是 to sleeps）"
         },
         {
-          "en": "He feels worried because he needs to finish his homework before dinner.",
-          "zh": "他感到擔心，因為他需要在晚餐前完成功課。"
+          "en": "They decide to eat lunch.",
+          "zh": "他們決定吃午餐。（to eat 是原形）"
+        },
+        {
+          "en": "He tries to understand.",
+          "zh": "他嘗試理解。（to understand 是原形，不是 to understands）"
         }
       ]
     }
   ],
   "dialogue": {
-    "title_zh": "放學後的感覺",
+    "title_zh": "小安和小美聊暑假計畫",
     "lines": [
       {
-        "sp": "小明",
-        "en": "How do you feel after school?",
-        "zh": "你放學後感覺怎麼樣？"
+        "sp": "小安",
+        "en": "I want to go to the beach this summer.",
+        "zh": "我想今年暑假去海灘。"
       },
       {
-        "sp": "小華",
-        "en": "I feel tired because I had a math test.",
-        "zh": "我感到疲倦，因為我考了數學試。"
+        "sp": "小美",
+        "en": "That sounds fun! I hope to swim there.",
+        "zh": "聽起來很好玩！我希望在那裡游泳。"
       },
       {
-        "sp": "小明",
-        "en": "I feel happy because I enjoyed playing soccer with my friends.",
-        "zh": "我感到開心，因為我和朋友一起踢足球很享受。"
+        "sp": "小安",
+        "en": "Do you need to ask your parents?",
+        "zh": "你需要問你的父母嗎？"
       },
       {
-        "sp": "小華",
-        "en": "I feel a little worried because I need to finish my project tonight.",
-        "zh": "我有點擔心，因為我今晚需要完成專案。"
+        "sp": "小美",
+        "en": "Yes. I decide to tell them this weekend.",
+        "zh": "是的。我決定這個週末告訴他們。"
       },
       {
-        "sp": "小明",
-        "en": "Don't worry, I believe you can do it!",
-        "zh": "別擔心，我相信你可以做到！"
+        "sp": "小安",
+        "en": "Great! Let's try to make it happen together!",
+        "zh": "太好了！我們一起努力讓它實現吧！"
       }
     ]
   },
   "sentences": [
     {
-      "en": "I try to learn new words every day.",
-      "zh": "我每天都試著學新單字。"
+      "en": "My brother wants to become a soccer player.",
+      "zh": "我哥哥想要成為足球選手。"
     },
     {
-      "en": "She loves to give her mom a kiss before bed.",
-      "zh": "她喜歡睡前親媽媽一口。"
+      "en": "Grandma hopes to enjoy a comfortable day.",
+      "zh": "奶奶希望享受舒適的一天。"
     },
     {
-      "en": "He hates watching scary movies because they make him cry.",
-      "zh": "他討厭看恐怖電影，因為會讓他哭。"
+      "en": "You need to believe in yourself.",
+      "zh": "你需要相信自己。"
     },
     {
-      "en": "They agreed to decide on a game to play together.",
-      "zh": "他們同意決定一起玩什麼遊戲。"
+      "en": "They decide to surprise their friends.",
+      "zh": "他們決定給朋友一個驚喜。"
     },
     {
-      "en": "I guess the surprise party will make everyone feel surprised.",
-      "zh": "我猜驚喜派對會讓每個人感到驚訝。"
+      "en": "I try to guess the answer.",
+      "zh": "我嘗試猜答案。"
     },
     {
-      "en": "We hope to win the class competition and feel joy when we do.",
-      "zh": "我們希望贏得班級競賽，贏了時會感到歡樂。"
+      "en": "Does she wish to travel to Europe?",
+      "zh": "她希望去歐洲旅行嗎？"
     },
     {
-      "en": "The word \"quiet\" means you should keep your mind calm.",
-      "zh": "「安靜」的意思是你應該讓心靈保持平靜。"
+      "en": "We dream to build our own house.",
+      "zh": "我們夢想蓋自己的房子。"
     },
     {
-      "en": "I dream of becoming a scientist and wish to belong to a team that explores space.",
-      "zh": "我夢想成為科學家，並希望屬於一個探索太空的團隊。"
+      "en": "He agrees to help us with the project.",
+      "zh": "他同意幫助我們做這個計畫。"
     }
   ],
   "no": 37,
@@ -177,8 +201,8 @@
       "zh": "嘗試"
     },
     {
-      "en": "enjoy",
-      "zh": "欣賞"
+      "en": "joy",
+      "zh": "歡樂"
     },
     {
       "en": "love",
@@ -193,40 +217,12 @@
       "zh": "恨"
     },
     {
-      "en": "cry",
-      "zh": "哭泣"
-    },
-    {
-      "en": "worry",
-      "zh": "擔心"
-    },
-    {
-      "en": "agree",
-      "zh": "同意"
-    },
-    {
-      "en": "believe",
-      "zh": "相信"
-    },
-    {
-      "en": "decide",
-      "zh": "決定"
-    },
-    {
-      "en": "guess",
-      "zh": "猜想"
-    },
-    {
       "en": "hope",
       "zh": "希望"
     },
     {
       "en": "mean",
       "zh": "意思"
-    },
-    {
-      "en": "dream",
-      "zh": "夢想"
     },
     {
       "en": "mind",
@@ -241,421 +237,251 @@
       "zh": "希望"
     },
     {
+      "en": "enjoy",
+      "zh": "欣賞"
+    },
+    {
+      "en": "worry",
+      "zh": "擔心"
+    },
+    {
+      "en": "agree",
+      "zh": "同意"
+    },
+    {
+      "en": "guess",
+      "zh": "猜想"
+    },
+    {
+      "en": "dream",
+      "zh": "夢想"
+    },
+    {
+      "en": "decide",
+      "zh": "決定"
+    },
+    {
       "en": "belong",
       "zh": "屬於"
+    },
+    {
+      "en": "believe",
+      "zh": "相信"
     },
     {
       "en": "surprise",
       "zh": "驚訝"
     },
     {
-      "en": "joy",
-      "zh": "歡樂"
+      "en": "comfortable",
+      "zh": "舒適的"
     }
   ],
+  "focus": "動詞 + to + 原形",
+  "grammar": "want／hope／need／decide／try 這些動詞後面要接 to + 動詞原形。",
   "exercises": {
     "mcq": [
       {
-        "q": "請選擇中文「試試看」的英文是？",
-        "opts": [
-          "try",
-          "enjoy",
-          "love",
-          "hate"
-        ],
-        "ans": "try"
-      },
-      {
-        "q": "哪個英文單字的意思是「從某件事中感到快樂或滿足」？",
-        "opts": [
-          "enjoy",
-          "worry",
-          "cry",
-          "belong"
-        ],
-        "ans": "enjoy"
-      },
-      {
-        "q": "請選擇中文「親吻」的英文是？",
+        "q": "「開心」的英文是？",
         "opts": [
           "kiss",
           "hate",
-          "dream",
-          "mind"
-        ],
-        "ans": "kiss"
-      },
-      {
-        "q": "哪個英文單字的意思是「非常喜歡某人或某事」？",
-        "opts": [
-          "love",
-          "need",
-          "wish",
-          "surprise"
-        ],
-        "ans": "love"
-      },
-      {
-        "q": "請選擇中文「討厭」的英文是？",
-        "opts": [
-          "hate",
-          "agree",
-          "believe",
-          "decide"
-        ],
-        "ans": "hate"
-      },
-      {
-        "q": "哪個英文單字的意思是「流眼淚」？",
-        "opts": [
-          "cry",
-          "worry",
-          "guess",
-          "hope"
-        ],
-        "ans": "cry"
-      },
-      {
-        "q": "請選擇中文「擔心」的英文是？",
-        "opts": [
-          "worry",
-          "mean",
-          "dream",
-          "belong"
-        ],
-        "ans": "worry"
-      },
-      {
-        "q": "哪個英文單字的意思是「有相同的意見」？",
-        "opts": [
-          "agree",
-          "decide",
-          "guess",
-          "mean"
-        ],
-        "ans": "agree"
-      },
-      {
-        "q": "請選擇中文「相信」的英文是？",
-        "opts": [
-          "believe",
-          "hope",
-          "wish",
-          "surprise"
-        ],
-        "ans": "believe"
-      },
-      {
-        "q": "哪個英文單字的意思是「在思考後做出選擇」？",
-        "opts": [
-          "decide",
           "try",
-          "kiss",
           "joy"
-        ],
-        "ans": "decide"
-      },
-      {
-        "q": "請選擇正確完成句子：我感到___因為我收到了禮物。",
-        "opts": [
-          "joy",
-          "try",
-          "mean",
-          "belong"
         ],
         "ans": "joy"
       },
       {
-        "q": "請選擇正確完成句子：我感到___因為我考試及格。",
+        "q": "「擔心」的英文是？",
         "opts": [
-          "hope",
-          "worry",
-          "kiss",
-          "decide"
-        ],
-        "ans": "hope"
-      },
-      {
-        "q": "請選擇正確完成句子：我感到___因為我必須在全班面前說話。",
-        "opts": [
-          "worry",
+          "mean",
           "love",
-          "surprise",
-          "joy"
+          "worry",
+          "belong"
         ],
         "ans": "worry"
       },
       {
-        "q": "請選擇正確完成句子：我感到___因為我看到了有趣的卡通。",
+        "q": "He ______ to go traveling tomorrow. (他計畫明天去旅行)",
         "opts": [
-          "love",
-          "hate",
-          "cry",
-          "mean"
+          "needs",
+          "decides",
+          "hopes",
+          "tries"
         ],
-        "ans": "love"
+        "ans": "decides"
       },
       {
-        "q": "請選擇正確完成句子：我感到___因為我的朋友搬走了。",
+        "q": "They ______ to help clean the classroom. (他們願意幫忙清潔教室)",
         "opts": [
-          "cry",
           "agree",
-          "believe",
-          "dream"
+          "need",
+          "hope",
+          "try"
         ],
-        "ans": "cry"
+        "ans": "agree"
       },
       {
-        "q": "請選擇正確完成句子：我感到___因為我收到了驚喜派對。",
+        "q": "I ______ to read a book. (我想要讀一本書)",
         "opts": [
-          "surprise",
           "hope",
-          "worry",
+          "need",
+          "want",
           "try"
+        ],
+        "ans": "want"
+      },
+      {
+        "q": "She ______ to join the club. (她決定加入社團)",
+        "opts": [
+          "decide",
+          "hope",
+          "need",
+          "want"
+        ],
+        "ans": "decide"
+      },
+      {
+        "q": "We ______ to play soccer after school. (我們同意放學後踢足球)",
+        "opts": [
+          "want",
+          "agree",
+          "need",
+          "hope"
+        ],
+        "ans": "agree"
+      },
+      {
+        "q": "I ______ to try. (我希望嘗試)",
+        "opts": [
+          "hope",
+          "hate",
+          "love",
+          "try"
+        ],
+        "ans": "hope"
+      },
+      {
+        "q": "驚訝 的英文是？",
+        "opts": [
+          "joy",
+          "hate",
+          "love",
+          "surprise"
         ],
         "ans": "surprise"
       },
       {
-        "q": "請選擇正確完成句子：我感到___因為我幫助了一位老人過馬路。",
+        "q": "She ______ to belong. (她希望屬於)",
         "opts": [
-          "joy",
-          "hate",
-          "worry",
-          "cry"
-        ],
-        "ans": "joy"
-      },
-      {
-        "q": "請選擇正確完成句子：我感到___因為我必須吃西蘭花。",
-        "opts": [
-          "hate",
-          "love",
+          "belong",
           "hope",
-          "mean"
+          "hate",
+          "love"
         ],
-        "ans": "hate"
-      },
-      {
-        "q": "請選擇正確完成句子：我感到___因為我認為明天會下雨。",
-        "opts": [
-          "worry",
-          "joy",
-          "surprise",
-          "kiss"
-        ],
-        "ans": "worry"
-      },
-      {
-        "q": "請選擇正確完成句子：我感到___因為我聽到了我最喜歡的歌曲。",
-        "opts": [
-          "joy",
-          "try",
-          "mean",
-          "belong"
-        ],
-        "ans": "joy"
-      },
-      {
-        "q": "你必須試著吃西蘭花，你覺得怎麼樣？",
-        "opts": [
-          "I feel joy because I try.",
-          "I feel worry because I try.",
-          "I feel hate because I try.",
-          "I feel love because I try."
-        ],
-        "ans": "I feel worry because I try."
-      },
-      {
-        "q": "你猜到朋友會送你禮物，你覺得怎麼樣？",
-        "opts": [
-          "I feel joy because I guess.",
-          "I feel surprise because I guess.",
-          "I feel worry because I guess.",
-          "I feel hate because I guess."
-        ],
-        "ans": "I feel joy because I guess."
-      },
-      {
-        "q": "你必須親吻一個你不喜歡的人，你覺得怎麼樣？",
-        "opts": [
-          "I feel hate because I kiss.",
-          "I feel love because I kiss.",
-          "I feel joy because I kiss.",
-          "I feel worry because I kiss."
-        ],
-        "ans": "I feel hate because I kiss."
-      },
-      {
-        "q": "你看到一段有趣的卡通，你覺得怎麼樣？",
-        "opts": [
-          "I feel joy because I enjoy.",
-          "I feel surprise because I enjoy.",
-          "I feel worry because I enjoy.",
-          "I feel hate because I enjoy."
-        ],
-        "ans": "I feel joy because I enjoy."
-      },
-      {
-        "q": "你必須在全班面前說話，你覺得怎麼樣？",
-        "opts": [
-          "I feel worry because I need.",
-          "I feel joy because I need.",
-          "I feel hate because I need.",
-          "I feel love because I need."
-        ],
-        "ans": "I feel worry because I need."
-      },
-      {
-        "q": "你幫助了一位老人過馬路，你覺得怎麼樣？",
-        "opts": [
-          "I feel joy because I wish.",
-          "I feel surprise because I wish.",
-          "I feel worry because I wish.",
-          "I feel hate because I wish."
-        ],
-        "ans": "I feel joy because I wish."
-      },
-      {
-        "q": "你認為明天會下雨，你覺得怎麼樣？",
-        "opts": [
-          "I feel worry because I guess.",
-          "I feel joy because I guess.",
-          "I feel hate because I guess.",
-          "I feel love because I guess."
-        ],
-        "ans": "I feel worry because I guess."
-      },
-      {
-        "q": "你聽到了你最喜歡的歌曲，你覺得怎麼樣？",
-        "opts": [
-          "I feel joy because I love.",
-          "I feel surprise because I love.",
-          "I feel worry because I love.",
-          "I feel hate because I love."
-        ],
-        "ans": "I feel joy because I love."
-      },
-      {
-        "q": "你必須吃西蘭花，你覺得怎麼樣？",
-        "opts": [
-          "I feel hate because I need.",
-          "I feel joy because I need.",
-          "I feel worry because I need.",
-          "I feel love because I need."
-        ],
-        "ans": "I feel hate because I need."
-      },
-      {
-        "q": "你覺得自己屬於一個團隊，你覺得怎麼樣？",
-        "opts": [
-          "I feel joy because I belong.",
-          "I feel surprise because I belong.",
-          "I feel worry because I belong.",
-          "I feel hate because I belong."
-        ],
-        "ans": "I feel joy because I belong."
+        "ans": "hope"
       }
     ],
     "fill": [
       {
-        "q": "I ____ to try the new game.（我想嘗試新遊戲）",
-        "ans": "wish"
+        "q": "I ____ to eat breakfast.（我想吃早餐）",
+        "ans": "want"
       },
       {
-        "q": "She ____ chocolate.（她喜歡巧克力）",
-        "ans": "love"
+        "q": "She ____ to become a doctor.（她希望成為醫生）",
+        "ans": "hopes"
       },
       {
-        "q": "They ____ watching movies.（他們喜歡看電影）",
-        "ans": "enjoy"
+        "q": "They ____ to finish the project.（他們需要完成專案）",
+        "ans": "need"
       },
       {
-        "q": "He ____ to go home early.（他希望早點回家）",
-        "ans": "hope"
+        "q": "He ____ to join the club.（他決定加入社團）",
+        "ans": "decides"
       },
       {
-        "q": "We ____ that the story is true.（我們相信故事是真的）",
+        "q": "We ____ to swim tomorrow.（我們試著明天去游泳）",
+        "ans": "try"
+      },
+      {
+        "q": "I feel ____ when I see my friend.（我看到朋友時感到快樂）",
+        "ans": "joy"
+      },
+      {
+        "q": "She ____ her little brother.（她親吻她的弟弟）",
+        "ans": "kisses"
+      },
+      {
+        "q": "He ____ loud noises.（他討厭大聲噪音）",
+        "ans": "hates"
+      },
+      {
+        "q": "I ____ that you are right.（我認為你是對的）",
         "ans": "believe"
       },
       {
-        "q": "Please ____ the door gently.（請輕輕親吻門）",
-        "ans": "kiss"
-      },
-      {
-        "q": "I ____ to be a teacher when I grow up.（我長大後想成為老師）",
-        "ans": "dream"
-      },
-      {
-        "q": "She ____ that the answer is correct.（她認為答案是正確的）",
-        "ans": "agree"
-      },
-      {
-        "q": "They ____ to go to the park after school.（他們放學後想去公園）",
-        "ans": "decide"
-      },
-      {
-        "q": "He ____ his homework before dinner.（他晚餐前做作業）",
-        "ans": "try"
+        "q": "We ____ to go home after school.（我們希望放學後回家）",
+        "ans": "wish"
       }
     ],
     "translate": [
       {
-        "q": "我希望明天天氣好。",
-        "ans": "I hope the weather will be good tomorrow."
+        "q": "我希望愛你。",
+        "ans": "I hope to love you."
       },
       {
-        "q": "她喜歡看電影。",
-        "ans": "She enjoys watching movies."
+        "q": "她想親吻他。",
+        "ans": "She wants to kiss him."
       },
       {
-        "q": "他討厭吃蔬菜。",
-        "ans": "He hates eating vegetables."
+        "q": "他們需要嘗試。",
+        "ans": "They need to try."
       },
       {
-        "q": "我擔心考試。",
-        "ans": "I worry about the exam."
+        "q": "他決定同意。",
+        "ans": "He decides to agree."
       },
       {
-        "q": "我同意你的看法。",
-        "ans": "I agree with your opinion."
+        "q": "我們享受快樂。",
+        "ans": "We enjoy the joy."
       },
       {
-        "q": "我相信他會來。",
-        "ans": "I believe he will come."
+        "q": "我討厭驚喜。",
+        "ans": "I hate the surprise."
       },
       {
-        "q": "我決定明天去圖書館。",
-        "ans": "I decide to go to the library tomorrow."
+        "q": "她相信夢想。",
+        "ans": "She believes the dream."
       },
       {
-        "q": "我想成為醫生。",
-        "ans": "I wish to become a doctor."
+        "q": "他意味著要屬於。",
+        "ans": "He means to belong."
       }
     ],
     "unscramble": [
       {
-        "q": "try / . / to / I / game / new / the / wish",
-        "ans": "I wish to try the new game."
+        "q": "hope / try / to / I / .",
+        "ans": "I hope to try."
       },
       {
-        "q": ". / enjoys / watching / She / movies",
-        "ans": "She enjoys watching movies."
+        "q": "needs / She / . / love / to",
+        "ans": "She needs to love."
       },
       {
-        "q": "He / vegetables / hates / eating / .",
-        "ans": "He hates eating vegetables."
+        "q": "They / . / decide / to / enjoy",
+        "ans": "They decide to enjoy."
       },
       {
-        "q": "about / exam / . / I / worry / the",
-        "ans": "I worry about the exam."
+        "q": ". / to / He / wants / worry",
+        "ans": "He wants to worry."
       },
       {
-        "q": ". / your / agree / with / opinion / We",
-        "ans": "We agree with your opinion."
+        "q": ". / try / to / We / agree",
+        "ans": "We try to agree."
       },
       {
-        "q": "tomorrow / go / to / decide / . / to / library / I / the",
-        "ans": "I decide to go to the library tomorrow."
+        "q": "She / hopes / . / belong / to",
+        "ans": "She hopes to belong."
       }
     ]
   },

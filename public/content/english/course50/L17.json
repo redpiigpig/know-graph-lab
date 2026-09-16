@@ -1,186 +1,191 @@
 {
-  "title_en": "Food and Meals",
-  "title_zh": "食物與三餐課",
-  "grammar": "我們學習用 I like… 和 Do you like…? 來談論喜好，並區分可數與不可數名詞。",
-  "intro_zh": "在這一課，我們學會說 I like… 和 Do you like…? 談論食物喜好，並練習區分可數與不可數名詞，例如蛋餅、餅乾、糖和鹽等。",
+  "title_en": "Food Talk",
+  "title_zh": "食物聊天",
+  "intro_zh": "本課重點是學習用 Do 或 Does 開頭構成一般動詞的 Yes/No 問句，並熟練使用 Yes, I do. / No, he doesn't. 等簡短回答方式。透過日常對話練習，學生能自然詢問飲食喜好與習慣，並正確作答。",
   "can_do": [
-    "能用 I like… 說出自己喜歡的食物",
-    "能用 Do you like…? 問朋友的喜好",
-    "能分辨可數名詞與不可數名詞並正確使用"
+    "能用 Do/Does 詢問別人的喜好或習慣",
+    "能用 Yes, I do. / No, he doesn't. 回答 Yes/No 問題",
+    "能閱讀短文並找出課本重點單字"
   ],
   "reading": {
-    "title_en": "My Food Day",
-    "title_zh": "我的美食一天",
+    "title_en": "Mealtime Talk",
+    "title_zh": "餐桌對話",
     "sentences": [
       {
-        "en": "I like to eat cheese and egg for breakfast.",
-        "zh": "我喜歡早餐吃起士和雞蛋。"
+        "en": "Tom likes to eat ham and egg for breakfast.",
+        "zh": "湯姆喜歡早餐吃火腿和雞蛋。"
       },
       {
-        "en": "Do you like ham with salt?",
-        "zh": "你喜歡吃火腿加鹽嗎？"
+        "en": "He adds a little salt to make it taste better.",
+        "zh": "他會加一點鹽讓味道更好。"
       },
       {
-        "en": "Mom cooks soup with vegetables and a little oil.",
-        "zh": "媽媽煮湯時會加蔬菜和少量油。"
+        "en": "Does he cook soup with vegetables?",
+        "zh": "他會煮湯加蔬菜嗎？"
       },
       {
-        "en": "For lunch, I order a salad and some soup.",
-        "zh": "午餐時，我點了一份沙拉和湯。"
+        "en": "Yes, he does.",
+        "zh": "是的，他會。"
       },
       {
-        "en": "The salad tastes fresh, and the soup tastes warm.",
-        "zh": "沙拉味道清新，湯味溫暖。"
+        "en": "He also orders a salad and some cheese.",
+        "zh": "他也會點沙拉和起士。"
       },
       {
-        "en": "After school, I have a snack: cookie, candy, or chocolate.",
-        "zh": "放學後，我會吃點心：餅乾、糖果或巧克力。"
+        "en": "For a snack, he eats popcorn and candy.",
+        "zh": "當點心時，他會吃爆米花和糖果。"
       },
       {
-        "en": "Sometimes I eat popcorn while watching TV.",
-        "zh": "有時我看電視時會吃爆米花。"
+        "en": "He likes the sweet taste of sugar and chocolate.",
+        "zh": "他喜歡糖和巧克力的甜味。"
       },
       {
-        "en": "On weekends, we bake a cake and add sugar.",
-        "zh": "週末我們會烤蛋糕並加糖。"
+        "en": "Does she like cookie or ice cream?",
+        "zh": "她喜歡餅乾還是冰淇淋？"
       },
       {
-        "en": "I also like ice cream, especially on hot days.",
-        "zh": "我也很喜歡冰淇淋，尤其是天氣熱的日子。"
+        "en": "No, she doesn't.",
+        "zh": "她不喜歡。"
       }
     ]
   },
   "grammar_points": [
     {
-      "title_zh": "① 可數名詞與 I like… / Do you like…?",
-      "explain_zh": "說明如何用 I like… 和 Do you like…? 談論可數名詞，單數用 a/an，複數直接用複數形。",
+      "title_zh": "① Do／Does + 主詞 + 動詞原形 的語序",
+      "explain_zh": "在一般現在時的疑問句，用 Do 或 Does 放在句首，主詞放在後面，動詞用原形。第三人稱單數 (he/she/it) 用 Does，其餘主詞用 Do。",
       "table": [
         [
-          "名詞",
-          "單數形",
-          "複數形"
+          "主詞",
+          "助動詞",
+          "動詞原形",
+          "完整疑問句"
         ],
         [
-          "egg",
-          "an egg",
-          "eggs"
+          "I",
+          "Do",
+          "like",
+          "Do you like cheese?"
         ],
         [
-          "snack",
-          "a snack",
-          "snacks"
+          "you",
+          "Do",
+          "like",
+          "Do you like cheese?"
         ],
         [
-          "cake",
-          "a cake",
-          "cakes"
+          "we",
+          "Do",
+          "like",
+          "Do we like cheese?"
         ],
         [
-          "candy",
-          "a candy",
-          "candies"
+          "they",
+          "Do",
+          "like",
+          "Do they like cheese?"
         ],
         [
-          "cookie",
-          "a cookie",
-          "cookies"
+          "he",
+          "Does",
+          "like",
+          "Does he like cheese?"
         ],
         [
-          "vegetable",
-          "a vegetable",
-          "vegetables"
+          "she",
+          "Does",
+          "like",
+          "Does she like cheese?"
+        ],
+        [
+          "it",
+          "Does",
+          "like",
+          "Does it like cheese?"
         ]
       ]
     },
     {
-      "title_zh": "② 不可數名詞與 I like… / Do you like…?",
-      "explain_zh": "說明如何用 I like… 和 Do you like…? 談論不可數名詞，不加 a/an，複數形不變，可用 some/any 來表示量。",
+      "title_zh": "② 簡答要跟著問句用 do／does，不可用 be 動詞",
+      "explain_zh": "回答 Yes/No 時，助動詞要和問句中的 Do/Does 一致，不能用 am/is/are。正面回答用 Yes, I/you/we/they/he/she/it do. 或 Does.；負面回答用 No, I/you/we/they/he/she/it don't. 或 doesn't.",
       "examples": [
         {
-          "en": "I like cheese.",
-          "zh": "我喜歡起士。"
+          "en": "Do you like cheese? → Yes, I do.",
+          "zh": "你喜歡起士嗎？→是的，我喜歡。"
         },
         {
-          "en": "Do you like sugar?",
-          "zh": "你喜歡糖嗎？"
-        },
-        {
-          "en": "I like some soup.",
-          "zh": "我喜歡一些湯。"
-        },
-        {
-          "en": "Do you like any oil?",
-          "zh": "你喜歡任何油嗎？"
-        },
-        {
-          "en": "I like chocolate.",
-          "zh": "我喜歡巧克力。"
+          "en": "Does she cook? → No, she doesn't.",
+          "zh": "她會煮飯嗎？→不，她不會。"
         }
       ]
     }
   ],
   "dialogue": {
-    "title_zh": "學餐廳的對話",
+    "title_zh": "學校餐廳點餐",
     "lines": [
       {
-        "sp": "Amy",
-        "en": "What do you like for lunch?",
-        "zh": "你喜歡吃什麼當午餐？"
+        "sp": "小明",
+        "en": "Do you like soup for lunch?",
+        "zh": "你喜歡喝湯當午餐嗎？"
       },
       {
-        "sp": "Ben",
-        "en": "I like a sandwich with cheese and ham.",
-        "zh": "我喜歡一個夾起士和火腿的三明治。"
+        "sp": "小華",
+        "en": "Yes, I do. I also like salad.",
+        "zh": "是的，我喜歡。我也喜歡沙拉。"
       },
       {
-        "sp": "Amy",
-        "en": "Do you like soup?",
-        "zh": "你喜歡湯嗎？"
+        "sp": "小明",
+        "en": "Does Mom cook hot dogs at home?",
+        "zh": "媽媽在家會煮熱狗嗎？"
       },
       {
-        "sp": "Ben",
-        "en": "Yes, I like some soup.",
-        "zh": "是的，我喜歡一些湯。"
+        "sp": "小華",
+        "en": "No, she doesn't. She usually makes sandwiches.",
+        "zh": "不，她不會。她通常會做三明治。"
       },
       {
-        "sp": "Amy",
-        "en": "I like candy and cookies for snack.",
-        "zh": "我喜歡點心吃糖果和餅乾。"
+        "sp": "小明",
+        "en": "Do we order cookies after school?",
+        "zh": "我們放學後會點餅乾嗎？"
+      },
+      {
+        "sp": "小華",
+        "en": "Yes, we do. They are sweet.",
+        "zh": "是的，我們會。它們很甜。"
       }
     ]
   },
   "sentences": [
     {
-      "en": "I like to eat egg.",
-      "zh": "我喜歡吃雞蛋。"
+      "en": "Do you eat soup for lunch?",
+      "zh": "你午餐會吃湯嗎？"
     },
     {
-      "en": "Do you like to eat cake?",
-      "zh": "你喜歡吃蛋糕嗎？"
+      "en": "Does he like popcorn?",
+      "zh": "他喜歡爆米花嗎？"
     },
     {
-      "en": "I like to eat some salad.",
-      "zh": "我喜歡吃一些沙拉。"
+      "en": "Do they order candy after school?",
+      "zh": "他們放學後會點糖果嗎？"
     },
     {
-      "en": "I like to order popcorn.",
-      "zh": "我喜歡點爆米花。"
+      "en": "Does Mei like salad?",
+      "zh": "梅喜歡沙拉嗎？"
     },
     {
-      "en": "Do you like to order ice cream?",
-      "zh": "你喜歡點冰淇淋嗎？"
+      "en": "Do we need salt for the cake?",
+      "zh": "我們做蛋糕需要鹽嗎？"
     },
     {
-      "en": "The soup tastes good.",
-      "zh": "這湯味道很好。"
+      "en": "Does Tom cook hot dogs?",
+      "zh": "湯姆會煮熱狗嗎？"
     },
     {
-      "en": "Does the candy taste sweet?",
-      "zh": "這糖果味道甜嗎？"
+      "en": "Do you like chocolate ice cream?",
+      "zh": "你喜歡巧克力冰淇淋嗎？"
     },
     {
-      "en": "I like to cook vegetables with salt and oil.",
-      "zh": "我喜歡用鹽和油煮蔬菜。"
+      "en": "Does the teacher like cookies?",
+      "zh": "老師喜歡餅乾嗎？"
     }
   ],
   "no": 17,
@@ -188,76 +193,48 @@
   "theme_zh": "食物與三餐",
   "words": [
     {
-      "en": "cheese",
-      "zh": "起士"
+      "en": "ham",
+      "zh": "火腿"
     },
     {
       "en": "egg",
       "zh": "雞蛋"
     },
     {
-      "en": "ham",
-      "zh": "火腿"
+      "en": "eat",
+      "zh": "吃"
     },
     {
       "en": "salt",
       "zh": "鹽巴"
     },
     {
-      "en": "sugar",
-      "zh": "糖"
-    },
-    {
-      "en": "oil",
-      "zh": "油"
-    },
-    {
-      "en": "snack",
-      "zh": "點心"
-    },
-    {
       "en": "cake",
       "zh": "蛋糕"
-    },
-    {
-      "en": "candy",
-      "zh": "糖果"
-    },
-    {
-      "en": "chocolate",
-      "zh": "巧克力"
-    },
-    {
-      "en": "cookie",
-      "zh": "餅乾"
-    },
-    {
-      "en": "ice cream",
-      "zh": "冰淇淋"
-    },
-    {
-      "en": "popcorn",
-      "zh": "爆米花"
     },
     {
       "en": "soup",
       "zh": "湯"
     },
     {
-      "en": "salad",
-      "zh": "沙拉"
-    },
-    {
-      "en": "vegetable",
-      "zh": "蔬菜"
-    },
-    {
-      "en": "eat",
-      "zh": "吃"
-    },
-    {
       "en": "cook",
       "zh": "煮飯；烹飪"
+    },
+    {
+      "en": "snack",
+      "zh": "點心"
+    },
+    {
+      "en": "candy",
+      "zh": "糖果"
+    },
+    {
+      "en": "sugar",
+      "zh": "糖"
+    },
+    {
+      "en": "salad",
+      "zh": "沙拉"
     },
     {
       "en": "order",
@@ -266,333 +243,243 @@
     {
       "en": "taste",
       "zh": "嚐起來"
+    },
+    {
+      "en": "cookie",
+      "zh": "餅乾"
+    },
+    {
+      "en": "cheese",
+      "zh": "起士"
+    },
+    {
+      "en": "popcorn",
+      "zh": "爆米花"
+    },
+    {
+      "en": "vegetable",
+      "zh": "蔬菜"
+    },
+    {
+      "en": "chocolate",
+      "zh": "巧克力"
+    },
+    {
+      "en": "hot dog",
+      "zh": "熱狗"
+    },
+    {
+      "en": "ice cream",
+      "zh": "冰淇淋"
     }
   ],
+  "focus": "Do／Does 問句與簡答",
+  "grammar": "一般動詞的疑問句用 Do／Does 開頭，簡答用 Yes, I do.／No, he doesn't.",
   "exercises": {
     "mcq": [
       {
-        "q": "cheese 的英文是？",
+        "q": "鹽的英文是？",
         "opts": [
-          "cheese",
-          "egg",
-          "ham",
-          "salt"
-        ],
-        "ans": "cheese"
-      },
-      {
-        "q": "egg 的英文是？",
-        "opts": [
-          "egg",
+          "soup",
           "salt",
           "sugar",
-          "oil"
-        ],
-        "ans": "egg"
-      },
-      {
-        "q": "ham 的英文是？",
-        "opts": [
-          "ham",
-          "snack",
-          "cake",
-          "candy"
-        ],
-        "ans": "ham"
-      },
-      {
-        "q": "salt 的英文是？",
-        "opts": [
-          "salt",
-          "sugar",
-          "oil",
-          "snack"
+          "cake"
         ],
         "ans": "salt"
       },
       {
-        "q": "sugar 的英文是？",
+        "q": "What does the word 'cake' mean?",
         "opts": [
-          "sugar",
-          "oil",
-          "snack",
-          "cake"
-        ],
-        "ans": "sugar"
-      },
-      {
-        "q": "oil 的英文是？",
-        "opts": [
-          "oil",
-          "snack",
+          "soup",
           "cake",
-          "candy"
-        ],
-        "ans": "oil"
-      },
-      {
-        "q": "snack 的英文是？",
-        "opts": [
-          "snack",
-          "cake",
-          "candy",
-          "chocolate"
-        ],
-        "ans": "snack"
-      },
-      {
-        "q": "cake 的英文是？",
-        "opts": [
-          "cake",
-          "candy",
-          "chocolate",
+          "salad",
           "cookie"
         ],
         "ans": "cake"
       },
       {
-        "q": "candy 的英文是？",
+        "q": "零食的英文是？",
         "opts": [
           "candy",
-          "chocolate",
-          "cookie",
-          "ice cream"
-        ],
-        "ans": "candy"
-      },
-      {
-        "q": "chocolate 的英文是？",
-        "opts": [
-          "chocolate",
-          "cookie",
-          "ice cream",
-          "popcorn"
-        ],
-        "ans": "chocolate"
-      },
-      {
-        "q": "I like ___.",
-        "opts": [
-          "cheese",
-          "cheeses",
-          "a cheese",
-          "the cheese"
-        ],
-        "ans": "cheese"
-      },
-      {
-        "q": "Do you like ___?",
-        "opts": [
-          "egg",
-          "eggs",
-          "an egg",
-          "the egg"
-        ],
-        "ans": "eggs"
-      },
-      {
-        "q": "以下哪個是可數名詞？",
-        "opts": [
-          "cheese",
-          "egg",
-          "salt",
-          "sugar"
-        ],
-        "ans": "egg"
-      },
-      {
-        "q": "以下哪個是不可數名詞？",
-        "opts": [
-          "egg",
           "snack",
-          "cake",
-          "cheese"
+          "popcorn",
+          "cookie"
         ],
-        "ans": "cheese"
+        "ans": "snack"
       },
       {
-        "q": "哪個詞表示『吃』的動詞？",
+        "q": "______ you like chocolate? (你喜歡巧克力嗎？)",
         "opts": [
+          "Do",
+          "Does",
+          "Is",
+          "Are"
+        ],
+        "ans": "Do"
+      },
+      {
+        "q": "______ you like soup? (你喜歡湯嗎？)",
+        "opts": [
+          "Does",
+          "Is",
+          "Do",
+          "Am"
+        ],
+        "ans": "Do"
+      },
+      {
+        "q": "______ she like ice cream? (她喜歡冰淇淋嗎？)",
+        "opts": [
+          "Does",
+          "Do",
+          "Am",
+          "Are"
+        ],
+        "ans": "Does"
+      },
+      {
+        "q": "蔬菜 的英文是？",
+        "opts": [
+          "vegetable",
           "cheese",
-          "egg",
-          "eat",
-          "salt"
-        ],
-        "ans": "eat"
-      },
-      {
-        "q": "哪個詞表示『烹飪』的動詞？",
-        "opts": [
-          "sugar",
-          "oil",
-          "cook",
-          "snack"
-        ],
-        "ans": "cook"
-      },
-      {
-        "q": "哪個詞表示『點餐』的動詞？",
-        "opts": [
-          "order",
-          "taste",
-          "cake",
-          "candy"
-        ],
-        "ans": "order"
-      },
-      {
-        "q": "哪個詞表示『品嚐』的動詞？",
-        "opts": [
-          "taste",
-          "vegetable",
-          "soup",
-          "popcorn"
-        ],
-        "ans": "taste"
-      },
-      {
-        "q": "以下哪個詞是餅乾的英文？",
-        "opts": [
-          "cookie",
-          "cake",
           "candy",
-          "chocolate"
+          "soup"
         ],
-        "ans": "cookie"
+        "ans": "vegetable"
       },
       {
-        "q": "以下哪個詞是冰淇淋的英文？",
+        "q": "火腿 的英文是？",
         "opts": [
-          "ice cream",
-          "popcorn",
-          "soup",
-          "salad"
-        ],
-        "ans": "ice cream"
-      },
-      {
-        "q": "以下哪個詞是爆米花的英文？",
-        "opts": [
-          "popcorn",
-          "vegetable",
-          "oil",
+          "salt",
+          "eat",
+          "egg",
           "ham"
         ],
-        "ans": "popcorn"
+        "ans": "ham"
       },
       {
-        "q": "以下哪個詞是湯的英文？",
+        "q": "______ she like hot dog? (她喜歡熱狗嗎？)",
         "opts": [
-          "soup",
-          "salad",
-          "vegetable",
-          "cheese"
+          "order",
+          "cook",
+          "Does",
+          "taste"
         ],
-        "ans": "soup"
+        "ans": "Does"
+      },
+      {
+        "q": "熱狗 的英文是？",
+        "opts": [
+          "egg",
+          "soup",
+          "ham",
+          "hot dog"
+        ],
+        "ans": "hot dog"
       }
     ],
     "fill": [
       {
-        "q": "I like ____ for breakfast.（起司）",
-        "ans": "cheese"
-      },
-      {
-        "q": "Do you like this chocolate ____?（蛋糕）",
-        "ans": "cake"
-      },
-      {
-        "q": "I want an ____, please.（蛋）",
-        "ans": "egg"
-      },
-      {
-        "q": "We ____ dinner at home.（煮）",
-        "ans": "cook"
-      },
-      {
-        "q": "The soup has too much ____.（鹽）",
-        "ans": "salt"
-      },
-      {
-        "q": "Do you want some ____?（爆米花）",
-        "ans": "popcorn"
-      },
-      {
-        "q": "I like sweet ____.（糖果）",
-        "ans": "candy"
-      },
-      {
-        "q": "Can we ____ the food now?（點餐）",
-        "ans": "order"
-      },
-      {
-        "q": "They ____ apples every day.（吃）",
+        "q": "Do you ____ egg?（你吃蛋嗎？）",
         "ans": "eat"
       },
       {
-        "q": "This is a fresh vegetable ____.（沙拉）",
-        "ans": "salad"
+        "q": "Does he ____ soup?（他煮湯嗎？）",
+        "ans": "cook"
+      },
+      {
+        "q": "Do they ____ candy?（他們嘗糖果嗎？）",
+        "ans": "taste"
+      },
+      {
+        "q": "Does she ____ cookie?（她點餅乾嗎？）",
+        "ans": "order"
+      },
+      {
+        "q": "Do we ____ candy?（我們吃糖果當點心嗎？）",
+        "ans": "snack"
+      },
+      {
+        "q": "I ____ egg.（我是蛋）",
+        "ans": "am"
+      },
+      {
+        "q": "He ____ soup.（他是湯）",
+        "ans": "is"
+      },
+      {
+        "q": "We ____ candy.（我們是糖果）",
+        "ans": "are"
+      },
+      {
+        "q": "She ____ eat soup?（她真的吃湯嗎？）",
+        "ans": "does"
+      },
+      {
+        "q": "He ____ eat egg.（他不吃蛋）",
+        "ans": "doesn't"
       }
     ],
     "translate": [
       {
-        "q": "你喜歡起司嗎？",
-        "ans": "Do you like cheese?"
+        "q": "我吃蛋。",
+        "ans": "I eat egg."
       },
       {
-        "q": "我喜歡爆米花。",
-        "ans": "I like popcorn."
+        "q": "我們煮湯。",
+        "ans": "We cook soup."
       },
       {
-        "q": "你喜歡蔬菜嗎？",
-        "ans": "Do you like vegetables?"
+        "q": "他們吃糖果。",
+        "ans": "They eat candy."
       },
       {
-        "q": "我喜歡巧克力。",
-        "ans": "I like chocolate."
+        "q": "你點餅乾。",
+        "ans": "You order cookie."
       },
       {
-        "q": "你喜歡餅乾嗎？",
-        "ans": "Do you like cookies?"
+        "q": "我們吃沙拉。",
+        "ans": "We eat salad."
       },
       {
-        "q": "我喜歡沙拉。",
-        "ans": "I like salad."
+        "q": "他們吃起司。",
+        "ans": "They eat cheese."
       },
       {
-        "q": "你喜歡蛋嗎？",
-        "ans": "Do you like eggs?"
+        "q": "我們吃爆米花。",
+        "ans": "We eat popcorn."
       },
       {
-        "q": "我喜歡湯。",
-        "ans": "I like soup."
+        "q": "他們吃蔬菜。",
+        "ans": "They eat vegetable."
       }
     ],
     "unscramble": [
       {
-        "q": "I / cheese / like / .",
-        "ans": "I like cheese."
+        "q": "I / ham / eat / .",
+        "ans": "I eat ham."
       },
       {
-        "q": "Do / popcorn / ? / you / like",
-        "ans": "Do you like popcorn?"
+        "q": ". / eat / We / cake",
+        "ans": "We eat cake."
       },
       {
-        "q": "like / cookies / . / We",
-        "ans": "We like cookies."
+        "q": "order / soup / . / They",
+        "ans": "They order soup."
       },
       {
-        "q": "How / does / taste / the / ? / soup",
-        "ans": "How does the soup taste?"
+        "q": "He / eats / . / cookie",
+        "ans": "He eats cookie."
       },
       {
-        "q": ". / They / ice / like / cream",
-        "ans": "They like ice cream."
+        "q": "eats / salad / He / .",
+        "ans": "He eats salad."
       },
       {
-        "q": "cake / like / Do / ? / you",
-        "ans": "Do you like cake?"
+        "q": ". / popcorn / He / eats",
+        "ans": "He eats popcorn."
       }
     ]
   },
-  "engine": "gemini:gemini-flash-latest"
+  "engine": "nvidia:nemotron(json)"
 }

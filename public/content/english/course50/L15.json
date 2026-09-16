@@ -1,181 +1,153 @@
 {
-  "title_en": "A Day at the Zoo",
-  "title_zh": "動物園的快樂一天",
-  "grammar": "本課學習使用 There is / There are 來說明事物的存在，並練習複數名詞的形式。",
-  "intro_zh": "這一課我們將認識各種動物與寵物，學習用 There is / There are 描述它們的數量，並練習說出牠們的英文名稱，還能說出牠們的特徵。",
+  "title_en": "Zoo",
+  "title_zh": "動物與寵物樂園",
+  "intro_zh": "本課學習現在簡單式否定句，學習在一般動詞前加 do not 或 does not，動詞還原為原形。透過描述各種動物不能做的事，練習正確的否定句型。讓學生能說出像 'A shark does not fly.' 這樣的句子。",
   "can_do": [
-    "能用 There is / There are 說出動物的數量。",
-    "能正確說出並拼寫本課的 20 個動物單字。",
-    "能簡單描述自己喜歡的寵物或見過的動物。"
+    "能說出動物不能做的事的否定句。",
+    "能正確使用 do not 和 does not。",
+    "能閱讀簡短的動物故事並理解意思。"
   ],
   "reading": {
-    "title_en": "A Day at the Zoo",
-    "title_zh": "動物園的快樂一天",
+    "title_en": "Zoo",
+    "title_zh": "動物與寵物樂園",
     "sentences": [
       {
-        "en": "There is a fox sneaking near a tree where a squirrel is gathering nuts.",
-        "zh": "有一隻狐狸在樹旁悄悄靠近，而一隻松鼠正在樹下收集堅果。"
+        "en": "A shark does not fly, and a dolphin does not walk on land.",
+        "zh": "鯊魚不會飛，海豚也不會在陸地上行走。"
       },
       {
-        "en": "There are giraffes stretching their necks to eat leaves, while zebras graze nearby.",
-        "zh": "有幾隻長頸鹿伸長脖子吃樹葉，附近有斑馬在吃草。"
+        "en": "Owls do not sleep at night, and penguins do not fly in the sky.",
+        "zh": "貓頭鷹晚上不睡覺，企鵝也不會在天空中飛行。"
       },
       {
-        "en": "There is a hippo wallowing in the mud, and a crocodile lies still at the water's edge.",
-        "zh": "有一隻河馬在泥巴裡打滾，而一隻鱷魚靜靜地躺在水邊。"
+        "en": "I do not like spiders, and I do not chase butterflies in the garden.",
+        "zh": "我不喜歡蜘蛛，我也不會在花園裡追逐蝴蝶。"
       },
       {
-        "en": "There are penguins waddling on the ice, and a whale spouts far away in the ocean.",
-        "zh": "有幾隻企鵝在冰上搖搖晃晃地走，遠處的海裡有一條鯨魚噴水。"
+        "en": "A fox does not swim in the sea, and a crab does not climb tall trees.",
+        "zh": "狐狸不會在海裡游泳，螃蟹也不會爬高樹。"
       },
       {
-        "en": "There are dolphins leaping beside a boat, and a shark circles slowly underneath.",
-        "zh": "有幾隻海豚在船旁躍出水面，下方有一條鯊魚緩緩地繞圈。"
+        "en": "An ant does not eat meat, a squirrel does not swim, and a chick does not lay eggs.",
+        "zh": "螞蟻不吃肉，松鼠不會游泳，小雞也不會下蛋。"
       },
       {
-        "en": "There is a crab crawling over shells, while butterflies flutter above the flowers.",
-        "zh": "有一隻螃蟹在貝殼上爬來爬去，花上方有蝴蝶在飛舞。"
+        "en": "A zebra does not have wings, and a giraffe does not eat meat.",
+        "zh": "斑馬沒有翅膀，長頸鹿也不吃肉。"
       },
       {
-        "en": "There are ants marching in a line, and a spider weaves its web between two branches.",
-        "zh": "有一排螞蟻一字排開地前進，而一隻蜘蛛正在兩根樹枝間結網。"
+        "en": "A hippo does not climb trees, and a crocodile does not fly.",
+        "zh": "河馬不會爬樹，鱷魚也不會飛。"
       },
       {
-        "en": "There is an owl hooting from a branch, and an eagle soars high in the sky.",
-        "zh": "有一隻貓頭鷹在樹枝上叫喊，而一隻老鷹在高空中盤旋。"
+        "en": "A whale does not walk on land, and an eagle does not live underwater.",
+        "zh": "鯨魚不會在陸地上行走，老鷹也不會生活在水下。"
       },
       {
-        "en": "There are parrots chattering in a cage, a chick pecks at the ground, and a dragon statue stands beside a dinosaur model.",
-        "zh": "有幾隻鸚鵡在籠子裡喋喋不休，一隻小雞在地上啄食，恐龍模型旁邊站著一條龍的雕像。"
+        "en": "A parrot does not talk, a dragon does not breathe fire, and a dinosaur does not eat meat.",
+        "zh": "鸚鵡不會說話，龍也不會噴火，恐龍也不吃肉。"
       }
     ]
   },
   "grammar_points": [
     {
-      "title_zh": "① There is / There are 的基本用法",
-      "explain_zh": "用來說明某件事物的存在。單數名詞用 There is，複數名詞用 There are。",
+      "title_zh": "① do not / does not 的選擇與縮寫",
+      "explain_zh": "主語為第三人稱單數（he/she/it）時使用 does not，其餘主語使用 do not；可縮寫為 doesn't / don't。",
       "table": [
         [
-          "主語數量",
-          "動詞形式",
-          "例句英文",
-          "例句中文"
+          "主語類型",
+          "完整形式",
+          "縮寫"
         ],
         [
-          "單數名詞",
-          "There is",
-          "There is a dog.",
-          "有一隻狗。"
+          "I / you / we / they",
+          "do not",
+          "don't"
         ],
         [
-          "複數名詞",
-          "There are",
-          "There are dogs.",
-          "有狗。"
-        ],
-        [
-          "未指定數量",
-          "There are",
-          "There are some birds.",
-          "有一些鳥。"
-        ],
-        [
-          "零數量",
-          "There are",
-          "There are no cats.",
-          "沒有貓。"
+          "he / she / it",
+          "does not",
+          "doesn't"
         ]
       ]
     },
     {
-      "title_zh": "② 複數名詞的變化規則",
-      "explain_zh": "大多數名詞直接加 -s；以 s, x, z, ch, sh 結尾加 -es；以 y 結尾且前面為子音時，改 y 為 i 再加 -es；有些名詞有不規則變化。",
+      "title_zh": "② does not 後動詞要回到原形",
+      "explain_zh": "在 does not 後面，主要動詞必須使用原形，不能加 -s 或 -ed。",
       "examples": [
         {
-          "en": "fox -> foxes",
-          "zh": "狐狸 -> 狐狸們"
+          "en": "A shark does not fly.",
+          "zh": "鯊魚不會飛。"
         },
         {
-          "en": "giraffe -> giraffes",
-          "zh": "長頸鹿 -> 長頸鹿們"
-        },
-        {
-          "en": "butterfly -> butterflies",
-          "zh": "蝴蝶 -> 蝴蝶們"
-        },
-        {
-          "en": "ant -> ants",
-          "zh": "螞蟻 -> 螞蟻們"
-        },
-        {
-          "en": "spider -> spiders",
-          "zh": "蜘蛛 -> 蜘蛛們"
+          "en": "Owls do not sleep at night.",
+          "zh": "貓頭鷹不會在晚上睡覺。"
         }
       ]
     }
   ],
   "dialogue": {
-    "title_zh": "在動物園裡",
+    "title_zh": "在動物園參觀",
     "lines": [
       {
         "sp": "小明",
-        "en": "Look! There are many animals in the zoo.",
-        "zh": "看！動物園裡有很多動物。"
+        "en": "I don't like spiders.",
+        "zh": "我不喜歡蜘蛛。"
       },
       {
         "sp": "小華",
-        "en": "There is a giraffe eating leaves.",
-        "zh": "有隻長頸鹿在吃葉子。"
+        "en": "A dolphin does not live in the desert.",
+        "zh": "海豚不會住在沙漠裡。"
       },
       {
         "sp": "老師",
-        "en": "There are zebras and hippos near the water.",
-        "zh": "水邊有斑馬和河馬。"
+        "en": "Penguins do not fly.",
+        "zh": "企鵝不會飛。"
       },
       {
         "sp": "小明",
-        "en": "I see a penguin swimming.",
-        "zh": "我看見一隻企鵝在游泳。"
+        "en": "A fox does not eat leaves.",
+        "zh": "狐狸不吃葉子。"
       },
       {
         "sp": "小華",
-        "en": "There are dolphins jumping!",
-        "zh": "有海豚在跳躍！"
+        "en": "We do not see dinosaurs today.",
+        "zh": "我們今天看不到恐龍。"
       }
     ]
   },
   "sentences": [
     {
-      "en": "There is a fox in the forest.",
-      "zh": "森林裡有一隻狐狸。"
+      "en": "A crab does not climb trees.",
+      "zh": "螃蟹不會爬樹。"
     },
     {
-      "en": "There are giraffes eating leaves.",
-      "zh": "有長頸鹿在吃葉子。"
+      "en": "Ants do not eat meat.",
+      "zh": "螞蟻不吃肉。"
     },
     {
-      "en": "There is a zebra standing near the tree.",
-      "zh": "有隻斑馬站在樹旁。"
+      "en": "A giraffe does not live in the ocean.",
+      "zh": "長頸鹿不住在海裡。"
     },
     {
-      "en": "There are hippos in the river.",
-      "zh": "河裡有河馬。"
+      "en": "Butterflies do not make honey.",
+      "zh": "蝴蝶不會製造蜂蜜。"
     },
     {
-      "en": "There is a penguin sliding on the ice.",
-      "zh": "有隻企鵝在冰上滑行。"
+      "en": "A zebra does not have stripes on its belly.",
+      "zh": "斑馬的肚子上沒有條紋。"
     },
     {
-      "en": "There are dolphins playing in the sea.",
-      "zh": "海裡有海豚在玩耍。"
+      "en": "Hippos do not like cold weather.",
+      "zh": "河馬不喜歡寒冷的天氣。"
     },
     {
-      "en": "There is a shark swimming nearby.",
-      "zh": "有條鯊魚在附近游泳。"
+      "en": "Eagles do not swim.",
+      "zh": "老鷹不會游泳。"
     },
     {
-      "en": "There are crabs walking on the sand.",
-      "zh": "沙灘上有螃蟹在爬行。"
+      "en": "Squirrels do not hibernate in summer.",
+      "zh": "松鼠不會在夏天冬眠。"
     }
   ],
   "no": 15,
@@ -187,8 +159,16 @@
       "zh": "狐狸"
     },
     {
-      "en": "giraffe",
-      "zh": "長頸鹿"
+      "en": "ant",
+      "zh": "螞蟻"
+    },
+    {
+      "en": "owl",
+      "zh": "貓頭鷹"
+    },
+    {
+      "en": "crab",
+      "zh": "螃蟹"
     },
     {
       "en": "zebra",
@@ -199,473 +179,267 @@
       "zh": "河馬"
     },
     {
-      "en": "penguin",
-      "zh": "企鵝"
-    },
-    {
       "en": "whale",
       "zh": "鯨魚"
-    },
-    {
-      "en": "dolphin",
-      "zh": "海豚"
     },
     {
       "en": "shark",
       "zh": "鯊魚"
     },
     {
-      "en": "crab",
-      "zh": "螃蟹"
+      "en": "eagle",
+      "zh": "老鷹"
     },
     {
-      "en": "butterfly",
-      "zh": "蝴蝶"
-    },
-    {
-      "en": "ant",
-      "zh": "螞蟻"
+      "en": "chick",
+      "zh": "小雞"
     },
     {
       "en": "spider",
       "zh": "蜘蛛"
     },
     {
-      "en": "owl",
-      "zh": "貓頭鷹"
-    },
-    {
-      "en": "eagle",
-      "zh": "老鷹"
-    },
-    {
       "en": "parrot",
       "zh": "鸚鵡"
-    },
-    {
-      "en": "dinosaur",
-      "zh": "恐龍"
     },
     {
       "en": "dragon",
       "zh": "龍"
     },
     {
+      "en": "giraffe",
+      "zh": "長頸鹿"
+    },
+    {
+      "en": "penguin",
+      "zh": "企鵝"
+    },
+    {
+      "en": "dolphin",
+      "zh": "海豚"
+    },
+    {
+      "en": "dinosaur",
+      "zh": "恐龍"
+    },
+    {
       "en": "squirrel",
       "zh": "松鼠"
     },
     {
-      "en": "crocodile",
-      "zh": "鱷魚"
+      "en": "butterfly",
+      "zh": "蝴蝶"
     },
     {
-      "en": "chick",
-      "zh": "小雞"
+      "en": "crocodile",
+      "zh": "鱷魚"
     }
   ],
+  "focus": "現在簡單式否定句",
+  "grammar": "一般動詞的否定要借助 do not／does not，後面動詞回到原形。",
   "exercises": {
     "mcq": [
       {
-        "q": "中文意思是 \"長頸鹿\" 的英文單字是？",
+        "q": "狐狸 的英文是？",
         "opts": [
           "fox",
-          "giraffe",
-          "zebra",
-          "hippo"
+          "crab",
+          "ant",
+          "owl"
         ],
-        "ans": "giraffe"
+        "ans": "fox"
       },
       {
-        "q": "中文意思是 \"企鵝\" 的英文單字是？",
+        "q": "螞蟻 的英文是？",
         "opts": [
-          "penguin",
-          "whale",
+          "hippo",
+          "zebra",
+          "ant",
+          "whale"
+        ],
+        "ans": "ant"
+      },
+      {
+        "q": "企鵝 的英文是？",
+        "opts": [
           "dolphin",
-          "shark"
+          "penguin",
+          "squirrel",
+          "dinosaur"
         ],
         "ans": "penguin"
       },
       {
-        "q": "中文意思是 \"螃蟹\" 的英文單字是？",
+        "q": "蝴蝶 的英文是？",
         "opts": [
-          "crab",
+          "crocodile",
+          "chick",
           "butterfly",
-          "ant",
-          "spider"
-        ],
-        "ans": "crab"
-      },
-      {
-        "q": "中文意思是 \"恐龍\" 的英文單字是？",
-        "opts": [
-          "dinosaur",
-          "dragon",
-          "squirrel",
-          "crocodile"
-        ],
-        "ans": "dinosaur"
-      },
-      {
-        "q": "中文意思是 \"老鷹\" 的英文單字是？",
-        "opts": [
-          "owl",
-          "eagle",
-          "parrot",
-          "chick"
-        ],
-        "ans": "eagle"
-      },
-      {
-        "q": "中文意思是 \"蝴蝶\" 的英文單字是？",
-        "opts": [
-          "fox",
-          "giraffe",
-          "butterfly",
-          "ant"
+          "eagle"
         ],
         "ans": "butterfly"
       },
       {
-        "q": "中文意思是 \"海豚\" 的英文單字是？",
+        "q": "The fox ______ run. (使用 does not / do not)",
         "opts": [
-          "dolphin",
-          "shark",
+          "is not",
+          "do not",
+          "are not",
+          "does not"
+        ],
+        "ans": "does not"
+      },
+      {
+        "q": "They ______ jump. (使用 do not / does not)",
+        "opts": [
+          "am not",
+          "do not",
+          "does not",
+          "is not"
+        ],
+        "ans": "do not"
+      },
+      {
+        "q": "I ______ swim. (使用 do not / does not)",
+        "opts": [
+          "do not",
+          "are not",
+          "does not",
+          "am not"
+        ],
+        "ans": "do not"
+      },
+      {
+        "q": "鯊魚 的英文是？",
+        "opts": [
           "crab",
-          "whale"
-        ],
-        "ans": "dolphin"
-      },
-      {
-        "q": "中文意思是 \"鯨魚\" 的英文單字是？",
-        "opts": [
-          "whale",
           "dolphin",
-          "shark",
-          "penguin"
+          "whale",
+          "shark"
         ],
-        "ans": "whale"
+        "ans": "shark"
       },
       {
-        "q": "中文意思是 \"蜘蛛\" 的英文單字是？",
+        "q": "The owl ______ fly at night. (使用 does not / do not)",
+        "opts": [
+          "does not fly",
+          "does not flies",
+          "do not fly",
+          "do not flies"
+        ],
+        "ans": "does not fly"
+      },
+      {
+        "q": "長頸鹿 的英文是？",
         "opts": [
           "spider",
-          "ant",
-          "butterfly",
-          "crab"
+          "giraffe",
+          "hippo",
+          "zebra"
         ],
-        "ans": "spider"
-      },
-      {
-        "q": "中文意思是 \"小雞\" 的英文單字是？",
-        "opts": [
-          "chick",
-          "parrot",
-          "owl",
-          "eagle"
-        ],
-        "ans": "chick"
-      },
-      {
-        "q": "請選擇正確的詞彙完成句子：There ___ 三隻長頸鹿。",
-        "opts": [
-          "is",
-          "are",
-          "a",
-          "an"
-        ],
-        "ans": "are"
-      },
-      {
-        "q": "請選擇正確的詞彙完成句子：There ___ 一隻狐狸。",
-        "opts": [
-          "is",
-          "are",
-          "a",
-          "an"
-        ],
-        "ans": "is"
-      },
-      {
-        "q": "請選擇正確的詞彙完成句子：There ___ 兩隻斑馬。",
-        "opts": [
-          "is",
-          "are",
-          "a",
-          "an"
-        ],
-        "ans": "are"
-      },
-      {
-        "q": "請選擇正確的詞彙完成句子：There ___ 一隻貓頭鷹。",
-        "opts": [
-          "is",
-          "are",
-          "a",
-          "an"
-        ],
-        "ans": "is"
-      },
-      {
-        "q": "請選擇正確的詞彙完成句子：There ___ 五隻蝴蝶。",
-        "opts": [
-          "is",
-          "are",
-          "a",
-          "an"
-        ],
-        "ans": "are"
-      },
-      {
-        "q": "請選擇正確的詞彙完成句子：There ___ 一條鯨魚。",
-        "opts": [
-          "is",
-          "are",
-          "a",
-          "an"
-        ],
-        "ans": "is"
-      },
-      {
-        "q": "請選擇正確的詞彙完成句子：There ___ 六隻企鵝。",
-        "opts": [
-          "is",
-          "are",
-          "a",
-          "an"
-        ],
-        "ans": "are"
-      },
-      {
-        "q": "請選擇正確的詞彙完成句子：There ___ 一隻河馬。",
-        "opts": [
-          "is",
-          "are",
-          "a",
-          "an"
-        ],
-        "ans": "is"
-      },
-      {
-        "q": "請選擇正確的詞彙完成句子：There ___ 八隻螞蟻。",
-        "opts": [
-          "is",
-          "are",
-          "a",
-          "an"
-        ],
-        "ans": "are"
-      },
-      {
-        "q": "請選擇正確的詞彙完成句子：There ___ 一隻蜘蛛。",
-        "opts": [
-          "is",
-          "are",
-          "a",
-          "an"
-        ],
-        "ans": "is"
-      },
-      {
-        "q": "請選擇正確的詞彙完成句子：There are ___ giraffes.",
-        "opts": [
-          "two",
-          "three",
-          "four",
-          "five"
-        ],
-        "ans": "three"
-      },
-      {
-        "q": "請選擇正確的詞彙完成句子：There are ___ eagles.",
-        "opts": [
-          "two",
-          "three",
-          "four",
-          "five"
-        ],
-        "ans": "three"
-      },
-      {
-        "q": "請選擇正確的詞彙完成句子：There are ___ butterflies.",
-        "opts": [
-          "five",
-          "six",
-          "seven",
-          "eight"
-        ],
-        "ans": "six"
-      },
-      {
-        "q": "請選擇正確的詞彙完成句子：There are ___ sharks.",
-        "opts": [
-          "two",
-          "three",
-          "four",
-          "five"
-        ],
-        "ans": "three"
-      },
-      {
-        "q": "請選擇正確的詞彙完成句子：There are ___ ants.",
-        "opts": [
-          "six",
-          "seven",
-          "eight",
-          "nine"
-        ],
-        "ans": "seven"
-      },
-      {
-        "q": "請選擇正確的詞彙完成句子：There are ___ owls.",
-        "opts": [
-          "two",
-          "three",
-          "four",
-          "five"
-        ],
-        "ans": "four"
-      },
-      {
-        "q": "請選擇正確的詞彙完成句子：There are ___ crocodiles.",
-        "opts": [
-          "three",
-          "four",
-          "five",
-          "six"
-        ],
-        "ans": "five"
-      },
-      {
-        "q": "請選擇正確的詞彙完成句子：There are ___ dragons.",
-        "opts": [
-          "two",
-          "three",
-          "four",
-          "five"
-        ],
-        "ans": "three"
-      },
-      {
-        "q": "請選擇正確的詞彙完成句子：There are ___ foxes.",
-        "opts": [
-          "two",
-          "three",
-          "four",
-          "five"
-        ],
-        "ans": "two"
-      },
-      {
-        "q": "請選擇正確的詞彙完成句子：There are ___ squirrels.",
-        "opts": [
-          "three",
-          "four",
-          "five",
-          "six"
-        ],
-        "ans": "four"
+        "ans": "giraffe"
       }
     ],
     "fill": [
       {
-        "q": "There ____ a fox.（有一隻狐狸）",
-        "ans": "is"
+        "q": "He does not ____ apples.（他不喜歡蘋果）",
+        "ans": "like"
       },
       {
-        "q": "There ____ three giraffes.（有三隻長頸鹿）",
-        "ans": "are"
+        "q": "She does not ____ meat.（她不吃肉）",
+        "ans": "eat"
       },
       {
-        "q": "There ____ many zebras.（有很多斑馬）",
-        "ans": "are"
+        "q": "They do not ____ in the park.（他們不在公園裡跑步）",
+        "ans": "run"
       },
       {
-        "q": "There ____ a hippo.（有一隻河馬）",
-        "ans": "is"
+        "q": "It does not ____ water.（它不需要水）",
+        "ans": "need"
       },
       {
-        "q": "There ____ two penguins.（有兩隻企鵝）",
-        "ans": "are"
+        "q": "I do not ____ Chinese.（我不會說中文）",
+        "ans": "speak"
       },
       {
-        "q": "There ____ a whale.（有一條鯨魚）",
-        "ans": "is"
+        "q": "The bird does not ____ at night.（鳥不在夜裡唱歌）",
+        "ans": "sing"
       },
       {
-        "q": "There ____ five dolphins.（有五隻海豚）",
-        "ans": "are"
+        "q": "We do not ____ TV after dinner.（我們晚餐後不看電視）",
+        "ans": "watch"
       },
       {
-        "q": "There ____ some sharks.（有幾條鯊魚）",
-        "ans": "are"
+        "q": "The cat does not ____ milk.（貓不喝牛奶）",
+        "ans": "drink"
       },
       {
-        "q": "There ____ a crab.（有一隻螃蟹）",
-        "ans": "is"
+        "q": "He does not ____ his homework.（他不做功課）",
+        "ans": "do"
       },
       {
-        "q": "There ____ butterflies。（有蝴蝶）",
-        "ans": "are"
+        "q": "She does not ____ to school by bus.（她不搭公車去學校）",
+        "ans": "go"
       }
     ],
     "translate": [
       {
-        "q": "有一隻狐狸。",
-        "ans": "There is a fox."
+        "q": "狐狸不吃肉。",
+        "ans": "The fox does not eat meat."
       },
       {
-        "q": "有三隻長頸鹿。",
-        "ans": "There are three giraffes."
+        "q": "螞蟻很小。",
+        "ans": "The ant is small."
       },
       {
-        "q": "有很多斑馬。",
-        "ans": "There are many zebras."
+        "q": "貓頭鷹晚上會叫。",
+        "ans": "The owl sings at night."
       },
       {
-        "q": "有一隻河馬。",
-        "ans": "There is a hippo."
+        "q": "螃蟹有八條腿。",
+        "ans": "The crab has eight legs."
       },
       {
-        "q": "有兩隻企鵝。",
-        "ans": "There are two penguins."
+        "q": "斑馬有黑白條紋。",
+        "ans": "The zebra has black and white stripes."
       },
       {
-        "q": "有一條鯨魚。",
-        "ans": "There is a whale."
+        "q": "河馬很重。",
+        "ans": "The hippo is heavy."
       },
       {
-        "q": "有五隻海豚。",
-        "ans": "There are five dolphins."
+        "q": "鯨魚很大。",
+        "ans": "The whale is big."
       },
       {
-        "q": "有幾條鯊魚。",
-        "ans": "There are some sharks."
+        "q": "企鵝不會飛。",
+        "ans": "The penguin does not fly."
       }
     ],
     "unscramble": [
       {
-        "q": ". / fox / a / There / is",
-        "ans": "There is a fox."
+        "q": ". / fox / a / I / have",
+        "ans": "I have a fox."
       },
       {
-        "q": "giraffes / three / There / . / are",
-        "ans": "There are three giraffes."
+        "q": "ant / an / I / . / have",
+        "ans": "I have an ant."
       },
       {
-        "q": ". / zebras / There / many / are",
-        "ans": "There are many zebras."
+        "q": ". / owl / I / an / have",
+        "ans": "I have an owl."
       },
       {
-        "q": "There / is / . / hippo / a",
-        "ans": "There is a hippo."
+        "q": "I / have / . / crab / a",
+        "ans": "I have a crab."
       },
       {
-        "q": "There / . / are / penguins / two",
-        "ans": "There are two penguins."
+        "q": "I / . / have / zebra / a",
+        "ans": "I have a zebra."
       },
       {
-        "q": "There / a / whale / . / is",
-        "ans": "There is a whale."
+        "q": "I / a / hippo / . / have",
+        "ans": "I have a hippo."
       }
     ]
   },

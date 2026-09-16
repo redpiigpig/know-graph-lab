@@ -1,167 +1,182 @@
 {
-  "title_en": "My Body Parts",
-  "title_zh": "我的身體與動作",
-  "grammar": "使用 I have… 與 He has… 描述身體部位",
-  "intro_zh": "在這一課，我們將學會說出手臂、手、手指、心臟、胃、腿、膝蓋、腳等身體部位的英文，並練習用 I have… 和 He has… 描述自己和同學的身體特徵。",
+  "title_en": "Body",
+  "title_zh": "我的身體遊戲",
+  "intro_zh": "本課學習使用 have 與 has 來表示「有」，當主詞是 he、she 或 it 時必須用 has，其他主詞用 have。透過描述身體部位和動作，讓學生練習正確的句型。",
   "can_do": [
-    "能說出身體部位的英文",
-    "能用 I have… 說自己的身體",
-    "能用 He has… 描述他人的身體"
+    "能用 have/has 說出自己身體的部位。",
+    "能描述他人身體特徵使用正確的動詞。",
+    "能閱讀簡短故事並找出其中的 have/has 句子。"
   ],
   "reading": {
-    "title_en": "My Body Story",
-    "title_zh": "我的身體小故事",
+    "title_en": "My Body Adventure",
+    "title_zh": "我的身體冒險",
     "sentences": [
       {
-        "en": "I have two arms, two hands, and ten fingers.",
-        "zh": "我有兩隻手臂、兩隻手和十根手指。"
+        "en": "Lily has two arms and two legs.",
+        "zh": "莉莉有兩隻手臂和兩條腿。"
       },
       {
-        "en": "I have a heart that beats fast when I run.",
-        "zh": "我有一顆心臟，跑步時會跳得很快。"
+        "en": "She uses her hand to wave and her finger to count.",
+        "zh": "她用手揮手，用手指數數。"
       },
       {
-        "en": "My stomach feels full after lunch.",
-        "zh": "吃完午餐後，我的胃會感到飽滿。"
+        "en": "She bends her knee and puts her foot on the ball.",
+        "zh": "她彎曲膝蓋，把腳放在球上。"
       },
       {
-        "en": "I have strong legs, and I can walk to school.",
-        "zh": "我有結實的腿，可以走路去學校。"
+        "en": "She feels her heart beat fast and her stomach growl when she runs.",
+        "zh": "她跑步時感覺心跳加快，肚子咕咕叫。"
       },
       {
-        "en": "When I jump, I bend my knees.",
-        "zh": "我跳起來時會彎曲膝蓋。"
+        "en": "She nods when she agrees and looks at the picture.",
+        "zh": "她同意時點頭，並看著圖片。"
       },
       {
-        "en": "My feet are inside my shoes.",
-        "zh": "我的腳放在鞋子裡。"
+        "en": "She hears the bell ring and speaks to her friend.",
+        "zh": "她聽到鈴聲響起，對朋友說話。"
       },
       {
-        "en": "I nod when I agree, and I can see the blue sky, hear the birds, and smell the flowers.",
-        "zh": "我同意時會點頭，同時我看見藍天、聽見鳥叫、聞到花香。"
+        "en": "She talks with her classmates and tells a funny story.",
+        "zh": "她與同學聊天，講了一個有趣的故事。"
       },
       {
-        "en": "I look at my picture, listen to the music, and then say hello.",
-        "zh": "我看著自己的照片，聽音樂，然後說你好。"
+        "en": "She walks to the library, smells the flowers, and touches the soft rabbit.",
+        "zh": "她走到圖書館，聞到花香，摸到軟軟的兔子。"
       },
       {
-        "en": "We speak English, talk about our day, tell each other stories, and touch the book together.",
-        "zh": "我們說英語，談論今天的事情，互相講故事，並一起觸摸書本。"
+        "en": "She listens to the teacher and sees the blue sky through the window.",
+        "zh": "她聽老師講課，透過窗戶看到藍天。"
       }
     ]
   },
   "grammar_points": [
     {
-      "title_zh": "① I have… 描述自己的身體部位",
-      "explain_zh": "用 I have + 身體部位來說明自己擁有哪些部位，單數用 a/an，複數直接加 s。",
+      "title_zh": "① have／has 隨主詞變化的對照表",
+      "explain_zh": "主詞不同，have 或 has 的形式會變化。I、you、we、they 用 have；he、she、it 用 has。",
       "table": [
         [
-          "Subject",
-          "Verb",
-          "Body part",
-          "Chinese"
+          "主詞",
+          "have/has",
+          "例句"
         ],
         [
           "I",
           "have",
-          "an arm",
-          "我有一隻手臂"
+          "I have two arms."
         ],
         [
-          "I",
+          "you",
           "have",
-          "two hands",
-          "我有兩隻手"
+          "You have ten fingers."
         ],
         [
-          "I",
+          "we",
           "have",
-          "five fingers on each hand",
-          "我每隻手有五根手指"
+          "We have healthy hearts."
+        ],
+        [
+          "they",
+          "have",
+          "They have strong legs."
+        ],
+        [
+          "he",
+          "has",
+          "He has short hair."
+        ],
+        [
+          "she",
+          "has",
+          "She has a big smile."
+        ],
+        [
+          "it",
+          "has",
+          "The robot has shiny eyes."
         ]
       ]
     },
     {
-      "title_zh": "② He has… 描述他人的身體部位",
-      "explain_zh": "用 He has + 身體部位來說明男性朋友或角色擁有哪些部位，單數用 a/an，複數直接加 s。",
+      "title_zh": "② I have…／She has… 描述身體與擁有物",
+      "explain_zh": "用 I have… 描述自己身體或擁有的東西；用 She has… 描述女生的身體特徵或物品。",
       "examples": [
         {
-          "en": "He has a strong heart.",
-          "zh": "他有一顆強壯的心臟。"
+          "en": "I have two eyes and a nose.",
+          "zh": "我有兩隻眼睛和一個鼻子。"
         },
         {
-          "en": "He has short legs.",
-          "zh": "他有短腿。"
+          "en": "She has long black hair.",
+          "zh": "她有長長的黑髮。"
         },
         {
-          "en": "He has a sore stomach after lunch.",
-          "zh": "他午餐後胃有點不舒服。"
+          "en": "I have a red backpack.",
+          "zh": "我有一個紅色的背包。"
         }
       ]
     }
   ],
   "dialogue": {
-    "title_zh": "在操場上聊聊身體",
+    "title_zh": "在教室裡談論身體",
     "lines": [
       {
-        "sp": "Anna",
-        "en": "Hi, Ben! I have two arms and I can wave.",
-        "zh": "嗨，Ben！我有兩隻手臂，我可以揮手。"
+        "sp": "小明",
+        "en": "I have two arms and two legs.",
+        "zh": "我有兩隻手臂和兩條腿。"
       },
       {
-        "sp": "Ben",
-        "en": "I have strong legs and I can run fast.",
-        "zh": "我有強壯的腿，我可以跑得很快。"
+        "sp": "小華",
+        "en": "I have ten fingers.",
+        "zh": "我有十根手指。"
       },
       {
-        "sp": "Anna",
-        "en": "Do you have a sore knee after soccer?",
-        "zh": "你踢完足球後膝蓋會痛嗎？"
+        "sp": "小明",
+        "en": "She has long hair.",
+        "zh": "她有長髮。"
       },
       {
-        "sp": "Ben",
-        "en": "Yes, I have a little pain, but I can still walk.",
-        "zh": "是的，我有一點疼痛，但我還能走路。"
+        "sp": "小華",
+        "en": "He has a big heart.",
+        "zh": "他有一顆大大的心臟。"
       },
       {
-        "sp": "Anna",
-        "en": "Let’s touch our heads and nod together.",
-        "zh": "我們一起觸碰頭部然後點頭吧。"
+        "sp": "小明",
+        "en": "We have healthy stomachs.",
+        "zh": "我們有健康的胃。"
       }
     ]
   },
   "sentences": [
     {
-      "en": "I have a nose and I can smell the flowers.",
-      "zh": "我有一個鼻子，我可以聞到花香。"
+      "en": "I have a small nose.",
+      "zh": "我有一個小鼻子。"
     },
     {
-      "en": "I have ears and I can hear the bell.",
-      "zh": "我有耳朵，我可以聽到鐘聲。"
+      "en": "She has curly hair.",
+      "zh": "她有捲髮。"
     },
     {
-      "en": "I have eyes and I can see the bird.",
-      "zh": "我有眼睛，我可以看到鳥兒。"
+      "en": "He has a blue shirt.",
+      "zh": "他有一件藍色的襯衫。"
     },
     {
-      "en": "I have a mouth and I can say hello.",
-      "zh": "我有一張嘴，我可以說哈囉。"
+      "en": "We have clean hands.",
+      "zh": "我們有乾淨的手。"
     },
     {
-      "en": "He has a loud voice and he can speak clearly.",
-      "zh": "他有一個響亮的聲音，他可以清晰地講話。"
+      "en": "They have big feet.",
+      "zh": "他們有大腳。"
     },
     {
-      "en": "He has friendly eyes and he can look at me.",
-      "zh": "他有友善的眼睛，他可以看著我。"
+      "en": "The cat has soft fur.",
+      "zh": "貓咪有柔軟的毛髮。"
     },
     {
-      "en": "I have hands and I can touch the soft cat.",
-      "zh": "我有雙手，我可以觸碰柔軟的貓咪。"
+      "en": "I have a happy heart.",
+      "zh": "我有一顆快樂的心臟。"
     },
     {
-      "en": "He has strong legs and he can walk to school.",
-      "zh": "他有強壯的腿，他可以走路去學校。"
+      "en": "She has a kind smile.",
+      "zh": "她有一個友善的笑容。"
     }
   ],
   "no": 9,
@@ -173,32 +188,8 @@
       "zh": "手臂"
     },
     {
-      "en": "hand",
-      "zh": "手"
-    },
-    {
-      "en": "finger",
-      "zh": "手指"
-    },
-    {
-      "en": "heart",
-      "zh": "心臟"
-    },
-    {
-      "en": "stomach",
-      "zh": "胃"
-    },
-    {
       "en": "leg",
       "zh": "腿"
-    },
-    {
-      "en": "knee",
-      "zh": "膝蓋"
-    },
-    {
-      "en": "foot",
-      "zh": "腳"
     },
     {
       "en": "nod",
@@ -209,28 +200,28 @@
       "zh": "看見"
     },
     {
+      "en": "say",
+      "zh": "說"
+    },
+    {
+      "en": "hand",
+      "zh": "手"
+    },
+    {
+      "en": "knee",
+      "zh": "膝蓋"
+    },
+    {
+      "en": "foot",
+      "zh": "腳"
+    },
+    {
       "en": "look",
       "zh": "看起來"
     },
     {
       "en": "hear",
       "zh": "聽見"
-    },
-    {
-      "en": "listen",
-      "zh": "聆聽"
-    },
-    {
-      "en": "smell",
-      "zh": "聞"
-    },
-    {
-      "en": "say",
-      "zh": "說"
-    },
-    {
-      "en": "speak",
-      "zh": "講話"
     },
     {
       "en": "talk",
@@ -241,417 +232,243 @@
       "zh": "告訴"
     },
     {
+      "en": "walk",
+      "zh": "走路"
+    },
+    {
+      "en": "heart",
+      "zh": "心臟"
+    },
+    {
+      "en": "smell",
+      "zh": "聞"
+    },
+    {
+      "en": "speak",
+      "zh": "講話"
+    },
+    {
       "en": "touch",
       "zh": "觸碰"
     },
     {
-      "en": "walk",
-      "zh": "走路"
+      "en": "finger",
+      "zh": "手指"
+    },
+    {
+      "en": "listen",
+      "zh": "聆聽"
+    },
+    {
+      "en": "stomach",
+      "zh": "胃"
     }
   ],
+  "focus": "have 與 has",
+  "grammar": "用 have／has 表示「有」，主詞是 he／she／it 時要用 has。",
   "exercises": {
     "mcq": [
       {
-        "q": "以下哪個單字的意思是 'arm'?",
+        "q": "手臂的英文是？",
         "opts": [
-          "arm",
-          "leg",
           "hand",
-          "finger"
+          "arm",
+          "finger",
+          "leg"
         ],
         "ans": "arm"
       },
       {
-        "q": "以下哪個單字的意思是 'hand'?",
+        "q": "聽見的英文是？",
         "opts": [
-          "hand",
-          "arm",
-          "foot",
-          "knee"
-        ],
-        "ans": "hand"
-      },
-      {
-        "q": "以下哪個單字的意思是 'finger'?",
-        "opts": [
-          "finger",
-          "hand",
-          "arm",
-          "leg"
-        ],
-        "ans": "finger"
-      },
-      {
-        "q": "以下哪個單字的意思是 'heart'?",
-        "opts": [
-          "heart",
-          "stomach",
-          "leg",
-          "foot"
-        ],
-        "ans": "heart"
-      },
-      {
-        "q": "以下哪個單字的意思是 'stomach'?",
-        "opts": [
-          "stomach",
-          "heart",
-          "arm",
-          "leg"
-        ],
-        "ans": "stomach"
-      },
-      {
-        "q": "以下哪個單字的意思是 'leg'?",
-        "opts": [
-          "leg",
-          "arm",
-          "hand",
-          "foot"
-        ],
-        "ans": "leg"
-      },
-      {
-        "q": "以下哪個單字的意思是 'knee'?",
-        "opts": [
-          "knee",
-          "leg",
-          "foot",
-          "arm"
-        ],
-        "ans": "knee"
-      },
-      {
-        "q": "以下哪個單字的意思是 'foot'?",
-        "opts": [
-          "foot",
-          "leg",
-          "hand",
-          "arm"
-        ],
-        "ans": "foot"
-      },
-      {
-        "q": "以下哪個單字的意思是 'nod'?",
-        "opts": [
-          "nod",
           "see",
-          "look",
-          "hear"
+          "hear",
+          "smell",
+          "listen"
+        ],
+        "ans": "hear"
+      },
+      {
+        "q": "She ______ a book. (她有一本書。)",
+        "opts": [
+          "walk",
+          "talk",
+          "has",
+          "have"
+        ],
+        "ans": "has"
+      },
+      {
+        "q": "說話的英文是？",
+        "opts": [
+          "tell",
+          "talk",
+          "say",
+          "speak"
+        ],
+        "ans": "speak"
+      },
+      {
+        "q": "He ______ a hand. (他有一隻手。)",
+        "opts": [
+          "has",
+          "have",
+          "arm",
+          "leg"
+        ],
+        "ans": "has"
+      },
+      {
+        "q": "點頭的英文是？",
+        "opts": [
+          "leg",
+          "nod",
+          "hand",
+          "arm"
         ],
         "ans": "nod"
       },
       {
-        "q": "以下哪個單字的意思是 'see'?",
+        "q": "看見的英文是？",
         "opts": [
           "see",
           "look",
-          "hear",
-          "listen"
+          "listen",
+          "hear"
         ],
         "ans": "see"
       },
       {
-        "q": "哪個句子正確地使用 \"I have\" 來描述你的手臂？",
+        "q": "膝蓋的英文是？",
         "opts": [
-          "I have arm.",
-          "I have arms.",
-          "He has arms.",
-          "I have legs."
+          "arm",
+          "leg",
+          "foot",
+          "knee"
         ],
-        "ans": "I have arms."
+        "ans": "knee"
       },
       {
-        "q": "哪個句子正確地使用 \"He has\" 來描述你的手？",
+        "q": "They ______ two cats. (他們有兩隻貓。)",
         "opts": [
-          "He has hand.",
-          "He has hands.",
-          "I have hands.",
-          "He has fingers."
+          "have",
+          "walk",
+          "has",
+          "tell"
         ],
-        "ans": "He has hands."
+        "ans": "have"
       },
       {
-        "q": "哪個句子正確地使用 \"I have\" 來描述你的手指？",
+        "q": "圖片顯示一個女孩在聽音樂。她在做什麼？",
         "opts": [
-          "I have finger.",
-          "I have fingers.",
-          "He has fingers.",
-          "I have hearts."
+          "talk",
+          "walk",
+          "listen",
+          "nod"
         ],
-        "ans": "I have fingers."
-      },
-      {
-        "q": "哪個句子正確地使用 \"He has\" 來描述你的腿？",
-        "opts": [
-          "He has leg.",
-          "He has legs.",
-          "I have legs.",
-          "He has knees."
-        ],
-        "ans": "He has legs."
-      },
-      {
-        "q": "哪個句子正確地使用 \"I have\" 來描述你的膝蓋？",
-        "opts": [
-          "I have knee.",
-          "I have knees.",
-          "He has knees.",
-          "I have arms."
-        ],
-        "ans": "I have knees."
-      },
-      {
-        "q": "哪個句子正確地使用 \"He has\" 來描述你的手臂？",
-        "opts": [
-          "He has arm.",
-          "He has arms.",
-          "I have arms.",
-          "He has legs."
-        ],
-        "ans": "He has arms."
-      },
-      {
-        "q": "哪個句子正確地使用 \"I have\" 來描述你的手？",
-        "opts": [
-          "I have hand.",
-          "I have hands.",
-          "He has hands.",
-          "I have fingers."
-        ],
-        "ans": "I have hands."
-      },
-      {
-        "q": "哪個句子正確地使用 \"He has\" 來描述你的手指？",
-        "opts": [
-          "He has finger.",
-          "He has fingers.",
-          "I have fingers.",
-          "He has hands."
-        ],
-        "ans": "He has fingers."
-      },
-      {
-        "q": "哪個句子正確地使用 \"I have\" 來描述你的腿？",
-        "opts": [
-          "I have leg.",
-          "I have legs.",
-          "He has legs.",
-          "I have arms."
-        ],
-        "ans": "I have legs."
-      },
-      {
-        "q": "哪個句子正確地使用 \"He has\" 來描述你的膝蓋？",
-        "opts": [
-          "He has knee.",
-          "He has knees.",
-          "I have knees.",
-          "He has legs."
-        ],
-        "ans": "He has knees."
-      },
-      {
-        "q": "哪個句子正確地使用 \"I have\" 來描述你的心臟？",
-        "opts": [
-          "I have a heart.",
-          "I have a hand.",
-          "I have a foot.",
-          "I have a leg."
-        ],
-        "ans": "I have a heart."
-      },
-      {
-        "q": "哪個句子正確地使用 \"I have\" 來描述你的胃？",
-        "opts": [
-          "I have a stomach.",
-          "I have a hand.",
-          "I have a foot.",
-          "I have a leg."
-        ],
-        "ans": "I have a stomach."
-      },
-      {
-        "q": "哪個句子正確地使用 \"I have\" 來描述你的腳？",
-        "opts": [
-          "I have a foot.",
-          "I have a hand.",
-          "I have a heart.",
-          "I have a stomach."
-        ],
-        "ans": "I have a foot."
-      },
-      {
-        "q": "哪個句子正確地使用 \"He has\" 來描述他的心臟？",
-        "opts": [
-          "He has a heart.",
-          "He has a hand.",
-          "He has a foot.",
-          "He has a leg."
-        ],
-        "ans": "He has a heart."
-      },
-      {
-        "q": "哪個句子正確地使用 \"He has\" 來描述他的胃？",
-        "opts": [
-          "He has a stomach.",
-          "He has a hand.",
-          "He has a foot.",
-          "He has a leg."
-        ],
-        "ans": "He has a stomach."
-      },
-      {
-        "q": "哪個句子正確地使用 \"He has\" 來描述他的腳？",
-        "opts": [
-          "He has a foot.",
-          "He has a hand.",
-          "He has a heart.",
-          "He has a stomach."
-        ],
-        "ans": "He has a foot."
-      },
-      {
-        "q": "哪個句子正確地使用 \"I have\" 來描述你能觸摸？",
-        "opts": [
-          "I have a hand to touch.",
-          "I have a foot to touch.",
-          "I have a heart to touch.",
-          "I have a stomach to touch."
-        ],
-        "ans": "I have a hand to touch."
-      },
-      {
-        "q": "哪個句子正確地使用 \"I have\" 來描述你能走路？",
-        "opts": [
-          "I have a leg to walk.",
-          "I have a hand to walk.",
-          "I have a heart to walk.",
-          "I have a stomach to walk."
-        ],
-        "ans": "I have a leg to walk."
-      },
-      {
-        "q": "哪個句子正確地使用 \"He has\" 來描述他能觸摸？",
-        "opts": [
-          "He has a hand to touch.",
-          "He has a foot to touch.",
-          "He has a heart to touch.",
-          "He has a stomach to touch."
-        ],
-        "ans": "He has a hand to touch."
-      },
-      {
-        "q": "哪個句子正確地使用 \"He has\" 來描述他能走路？",
-        "opts": [
-          "He has a leg to walk.",
-          "He has a hand to walk.",
-          "He has a heart to walk.",
-          "He has a stomach to walk."
-        ],
-        "ans": "He has a leg to walk."
+        "ans": "listen"
       }
     ],
     "fill": [
       {
-        "q": "I ____ an arm.（我有一隻手臂）",
-        "ans": "have"
-      },
-      {
-        "q": "He ____ a heart.（他有一顆心臟）",
-        "ans": "has"
+        "q": "I ____ a student.（我是學生）",
+        "ans": "am"
       },
       {
         "q": "She ____ a hand.（她有一隻手）",
         "ans": "has"
       },
       {
-        "q": "We ____ a leg.（我們有一條腿）",
-        "ans": "have"
-      },
-      {
-        "q": "They ____ a foot.（他們有一隻腳）",
-        "ans": "have"
-      },
-      {
-        "q": "I ____ a finger.（我觸碰一根手指）",
+        "q": "I ____ my arm.（我觸碰我的手臂）",
         "ans": "touch"
       },
       {
-        "q": "He ____ a knee.（他碰一下膝蓋）",
-        "ans": "touch"
+        "q": "I ____ my leg.（我看我的腿）",
+        "ans": "see"
       },
       {
-        "q": "She ____ a stomach.（她觸碰肚子）",
-        "ans": "touch"
+        "q": "I have an ____.（我有一個手臂）",
+        "ans": "arm"
       },
       {
-        "q": "I ____ .（我點頭）",
-        "ans": "nod"
+        "q": "I have an ____.（我有一個腿）",
+        "ans": "leg"
       },
       {
-        "q": "He ____ .（他聽見聲音）",
+        "q": "We ____.（我們走路）",
+        "ans": "walk"
+      },
+      {
+        "q": "They ____ the heart.（他們聽見心臟）",
         "ans": "hear"
+      },
+      {
+        "q": "You ____ the hand.（你聞手）",
+        "ans": "smell"
+      },
+      {
+        "q": "I ____ the hand.（我看手）",
+        "ans": "see"
       }
     ],
     "translate": [
       {
+        "q": "我有一隻手臂。",
+        "ans": "I have an arm."
+      },
+      {
+        "q": "她有一條腿。",
+        "ans": "She has a leg."
+      },
+      {
+        "q": "我觸碰我的手。",
+        "ans": "I touch my hand."
+      },
+      {
+        "q": "我看見我的腳。",
+        "ans": "I see my foot."
+      },
+      {
+        "q": "我聽見我的心臟。",
+        "ans": "I hear my heart."
+      },
+      {
+        "q": "我聞到我的手。",
+        "ans": "I smell my hand."
+      },
+      {
+        "q": "我看見我的腿。",
+        "ans": "I see my leg."
+      },
+      {
         "q": "我點頭。",
         "ans": "I nod."
-      },
-      {
-        "q": "我們看見一隻手。",
-        "ans": "We see a hand."
-      },
-      {
-        "q": "我們聽見一顆心臟。",
-        "ans": "We hear a heart."
-      },
-      {
-        "q": "我們觸碰一隻腳。",
-        "ans": "We touch a foot."
-      },
-      {
-        "q": "我們走路。",
-        "ans": "We walk."
-      },
-      {
-        "q": "我說話。",
-        "ans": "I speak."
-      },
-      {
-        "q": "他們談話。",
-        "ans": "They talk."
-      },
-      {
-        "q": "我聞到一隻手。",
-        "ans": "I smell a hand."
       }
     ],
     "unscramble": [
       {
-        "q": "I / . / nod",
-        "ans": "I nod."
+        "q": ". / He / has / a / hand",
+        "ans": "He has a hand."
       },
       {
-        "q": "hand / . / We / see / a",
-        "ans": "We see a hand."
+        "q": "foot / a / . / It / has",
+        "ans": "It has a foot."
       },
       {
-        "q": "hear / We / . / heart / a",
-        "ans": "We hear a heart."
+        "q": "a / heart / have / We / .",
+        "ans": "We have a heart."
       },
       {
-        "q": "foot / touch / . / We / a",
-        "ans": "We touch a foot."
+        "q": "They / . / a / have / stomach",
+        "ans": "They have a stomach."
       },
       {
-        "q": ". / walk / We",
-        "ans": "We walk."
+        "q": ". / a / She / has / finger",
+        "ans": "She has a finger."
       },
       {
-        "q": ". / a / I / smell / hand",
-        "ans": "I smell a hand."
+        "q": "have / a / knee / . / You",
+        "ans": "You have a knee."
       }
     ]
   },

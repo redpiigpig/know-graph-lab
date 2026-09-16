@@ -1,183 +1,166 @@
 {
-  "title_en": "Colors & Shapes",
-  "title_zh": "顏色與形狀探索",
-  "grammar": "使用 What color is it? 和 What shape is it? 來詢問顏色與形狀。",
-  "intro_zh": "在這堂課裡，我們會學習說出不同顏色和形狀的英文，並練習用 What color is it? 和 What shape is it? 來問答。我們也會描述物體的大小、厚薄以及身體部位，讓句子更豐富。",
+  "title_en": "Colors and Shapes",
+  "title_zh": "顏色與形狀",
+  "intro_zh": "本課學習不規則複數名詞，例如 tooth→teeth、foot→feet、eye→eyes，並練習說 two eyes、two ears、my teeth 等表達。",
   "can_do": [
-    "能用英文說出物體的顏色和形狀。",
-    "能用 What color is it? 和 What shape is it? 提問並回答。",
-    "能描述物體的大小、厚薄以及身體部位。"
+    "能正確說出 tooth→teeth、foot→feet、eye→eyes 等不規則複數名詞。",
+    "能用顏色和形狀的單字描述圖片或物件。",
+    "能在句子中使用 and、but、because 連接兩個子句。"
   ],
   "reading": {
-    "title_en": "The Colorful Classroom",
-    "title_zh": "彩色的教室角落",
+    "title_en": "Lily's Puzzle Adventure",
+    "title_zh": "莉莉的拼圖冒險",
     "sentences": [
       {
-        "en": "In the classroom, there is a bright red arrow on the wall pointing to the corner.",
-        "zh": "教室牆上有一支亮紅色的箭頭，指向角落。"
+        "en": "Lily stands in the corner of the room holding a silver balloon.",
+        "zh": "莉莉站在房間的角落裡，手裡拿著一個銀色的氣球。"
       },
       {
-        "en": "On the desk, a silver cube sits next to a dark blue heart shape sticker.",
-        "zh": "書桌上有一個銀色的立方體，旁邊貼著深藍色的心形貼紙。"
+        "en": "She looks at her wide eyes and narrow nose in the mirror.",
+        "zh": "她看著鏡子裡自己寬寬的眼睛和窄窄的鼻子。"
       },
       {
-        "en": "The sticker is oval and feels thick when you touch it.",
-        "zh": "貼紙是橢圓形的，摸起來很厚。"
+        "en": "Her two eyes are bright, and her two ears listen to the soft music.",
+        "zh": "她的兩隻眼睛很亮，兩隻耳朵聽著輕柔的音樂。"
       },
       {
-        "en": "A wide white paper lies narrow at the top, making a nice frame for a drawing.",
-        "zh": "一張寬寬的白紙在上面很窄，畫出一個很好看的框架。"
+        "en": "She touches her head, feeling her thick hair and warm neck.",
+        "zh": "她觸摸自己的頭，感覺濃濃的頭髮和溫暖的脖子。"
       },
       {
-        "en": "In the drawing, a boy’s head has brown hair, two blue eyes, and a small nose.",
-        "zh": "畫中的男孩頭有棕色頭髮，兩隻藍眼睛，還有一個小鼻子。"
+        "en": "Her mouth smiles, showing her white teeth, but she remembers to brush them.",
+        "zh": "她的嘴巴笑著，露出白白的牙齒，但她記得要刷牙。"
       },
       {
-        "en": "His mouth shows a white tooth when he smiles, and his ears are covered by a silver headband.",
-        "zh": "他笑時嘴巴露出白牙齒，耳朵被一條銀色頭帶蓋住。"
+        "en": "She counts her fingers and toes, noting she has ten fingers and ten feet.",
+        "zh": "她數著手指和腳趾，發現自己有十根手指和十隻腳。"
       },
       {
-        "en": "His neck is long, and his shoulders are wide, making him look strong.",
-        "zh": "他的脖子很長，肩膀很寬，看起來很強壯。"
+        "en": "She picks up a dark puzzle piece from the wide package on the table.",
+        "zh": "她從桌上寬闊的包裹裡拿起一塊深色的拼圖塊。"
       },
       {
-        "en": "The boy’s body is wearing a dark green shirt that feels thick and warm.",
-        "zh": "男孩的身體穿著深綠色的厚襯衫，很暖和。"
+        "en": "The puzzle shows a narrow path leading to a bright balloon in the dark sky.",
+        "zh": "這張拼圖顯示一條窄窄的小路，通往暗黑天空裡的一個亮色氣球。"
       },
       {
-        "en": "All these colors and shapes make the classroom a fun place to learn.",
-        "zh": "這些顏色和形狀讓教室變成一個有趣的學習場所。"
+        "en": "She feels happy because the puzzle is thick and the balloon is silver.",
+        "zh": "她感到開心，因為拼圖很厚，氣球是銀色的。"
+      },
+      {
+        "en": "She moves her shoulders, feeling her strong body and checking her tooth for any crack.",
+        "zh": "她擺動肩膀，感覺自己身體強壯，並檢查牙齒有沒有裂縫。"
       }
     ]
   },
   "grammar_points": [
     {
-      "title_zh": "① 詢問顏色：What color is it?",
-      "explain_zh": "用 What color is it? 來問物件的顏色，答句用 It's + 顏色詞。可加深色詞 dark 或金屬色 silver 等。",
+      "title_zh": "① 不規則複數對照表",
+      "explain_zh": "不規則複數名詞不遵守 -s 規則，必須特別記憶。常見的身體部位如 tooth→teeth、foot→feet、eye→eyes 就是例子。",
       "table": [
         [
-          "問句",
-          "答句",
-          "例句"
+          "單數",
+          "複數",
+          "中文"
         ],
         [
-          "What color is the arrow?",
-          "It's silver.",
-          "What color is the arrow? It's silver."
+          "tooth",
+          "teeth",
+          "牙齒"
         ],
         [
-          "What color is the heart shape?",
-          "It's red.",
-          "What color is the heart shape? It's red."
+          "foot",
+          "feet",
+          "腳"
+        ],
+        [
+          "eye",
+          "eyes",
+          "眼睛"
         ]
       ]
     },
     {
-      "title_zh": "② 詢問形狀與大小：What shape is it?",
-      "explain_zh": "用 What shape is it? 來問物件的形狀，答句用 It's a + 形狀名詞。可搭配寬、窄、厚等形容詞描述大小。",
+      "title_zh": "② 身體部位成雙成對時一定要用複數",
+      "explain_zh": "當談論身體上成對出現的部位（眼睛、耳朵、腳、手等）時，必須使用複數形式，否則會聽起來不自然。",
       "examples": [
         {
-          "en": "What shape is the box? It's a cube.",
-          "zh": "這個盒子什麼形狀？是立方體。"
+          "en": "I have two eyes.",
+          "zh": "我有兩隻眼睛。"
         },
         {
-          "en": "What shape is the sticker? It's an oval.",
-          "zh": "這張貼紙什麼形狀？是橢圓形。"
+          "en": "She washes her feet every night.",
+          "zh": "她每晚洗腳。"
         },
         {
-          "en": "What shape is the ribbon? It's wide and thin.",
-          "zh": "這條絲帶寬且薄。"
+          "en": "He brushes his teeth after meals.",
+          "zh": "他飯後刷牙。"
         }
       ]
     }
   ],
   "dialogue": {
-    "title_zh": "在美術課裡",
+    "title_zh": "教室裡的小討論",
     "lines": [
       {
-        "sp": "老師",
-        "en": "What color is the arrow on the board?",
-        "zh": "老師：黑板上的箭頭是什麼顏色？"
+        "sp": "小明",
+        "en": "I see two red balloons.",
+        "zh": "我看見兩個紅色氣球。"
       },
       {
-        "sp": "學生A",
-        "en": "It's silver.",
-        "zh": "學生A：是銀色。"
+        "sp": "小華",
+        "en": "I have two feet and I like to jump.",
+        "zh": "我有兩隻腳，我很喜歡跳。"
       },
       {
-        "sp": "老師",
-        "en": "What shape is the heart sticker?",
-        "zh": "老師：這張心形貼紙是什麼形狀？"
+        "sp": "小明",
+        "en": "I brush my teeth every day.",
+        "zh": "我每天刷牙。"
       },
       {
-        "sp": "學生B",
-        "en": "It's a heart shape.",
-        "zh": "學生B：是心形。"
+        "sp": "小華",
+        "en": "We need two eyes to see the puzzle.",
+        "zh": "我們需要兩隻眼睛才能看拼圖。"
       },
       {
-        "sp": "老師",
-        "en": "What color is your hair?",
-        "zh": "老師：你的頭髮是什麼顏色？"
-      },
-      {
-        "sp": "學生C",
-        "en": "It's dark.",
-        "zh": "學生C：是深色。"
-      },
-      {
-        "sp": "老師",
-        "en": "What shape is the box on the desk?",
-        "zh": "老師：桌子上的盒子是什麼形狀？"
-      },
-      {
-        "sp": "學生A",
-        "en": "It's a cube.",
-        "zh": "學生A：是立方體。"
-      },
-      {
-        "sp": "老師",
-        "en": "What shape is the ribbon?",
-        "zh": "老師：這條絲帶是什麼形狀？"
-      },
-      {
-        "sp": "學生B",
-        "en": "It's wide and thin.",
-        "zh": "學生B：寬且薄。"
+        "sp": "小明",
+        "en": "The puzzle has many pieces.",
+        "zh": "這個拼圖有很多塊。"
       }
     ]
   },
   "sentences": [
     {
-      "en": "What color is the arrow? It's silver.",
-      "zh": "箭頭是什麼顏色？是銀色。"
+      "en": "I have two eyes and I see the blue sky.",
+      "zh": "我有兩隻眼睛，我看見藍天。"
     },
     {
-      "en": "What color is the heart shape? It's red.",
-      "zh": "心形是什麼顏色？是紅色。"
+      "en": "She washes her feet after playing soccer.",
+      "zh": "她踢完足球後洗腳。"
     },
     {
-      "en": "What shape is the box? It's a cube.",
-      "zh": "盒子是什麼形狀？是立方體。"
+      "en": "He brushes his teeth before bedtime.",
+      "zh": "他睡前刷牙。"
     },
     {
-      "en": "What shape is the sticker? It's an oval.",
-      "zh": "貼紙是什麼形狀？是橢圓形。"
+      "en": "We need two feet to ride a bicycle.",
+      "zh": "我們需要兩隻腳才能騎腳踏車。"
     },
     {
-      "en": "What color is your hair? It's dark.",
-      "zh": "你的頭髮是什麼顏色？是深色。"
+      "en": "The artist draws two eyes on the mask.",
+      "zh": "畫家在面具上畫兩隻眼睛。"
     },
     {
-      "en": "What shape is the ribbon? It's wide and thin.",
-      "zh": "絲帶是什麼形狀？寬且薄。"
+      "en": "My brother has big feet.",
+      "zh": "我弟弟腳很大。"
     },
     {
-      "en": "What color is the car? It's silver.",
-      "zh": "汽車是什麼顏色？是銀色。"
+      "en": "The dentist checks our teeth twice a year.",
+      "zh": "牙醫一年檢查兩次我們的牙齒。"
     },
     {
-      "en": "What shape is the sign? It's an arrow.",
-      "zh": "標誌是什麼形狀？是箭頭。"
+      "en": "Children need two eyes to read books.",
+      "zh": "孩子們需要兩隻眼睛才能讀書。"
     }
   ],
   "no": 8,
@@ -185,52 +168,44 @@
   "theme_zh": "顏色與形狀",
   "words": [
     {
-      "en": "arrow",
-      "zh": "箭頭"
-    },
-    {
-      "en": "heart shape",
-      "zh": "心形"
-    },
-    {
-      "en": "oval",
-      "zh": "橢圓形"
-    },
-    {
-      "en": "cube",
-      "zh": "立方體"
-    },
-    {
       "en": "dark",
       "zh": "深色的；暗的"
-    },
-    {
-      "en": "silver",
-      "zh": "銀色"
     },
     {
       "en": "wide",
       "zh": "寬的"
     },
     {
-      "en": "narrow",
-      "zh": "窄的"
+      "en": "piece",
+      "zh": "一片"
     },
     {
       "en": "thick",
       "zh": "厚的；粗的"
     },
     {
+      "en": "puzzle",
+      "zh": "拼圖"
+    },
+    {
+      "en": "silver",
+      "zh": "銀色"
+    },
+    {
+      "en": "narrow",
+      "zh": "窄的"
+    },
+    {
       "en": "corner",
       "zh": "角落"
     },
     {
-      "en": "head",
-      "zh": "頭"
+      "en": "package",
+      "zh": "包裹"
     },
     {
-      "en": "hair",
-      "zh": "頭髮"
+      "en": "balloon",
+      "zh": "氣球"
     },
     {
       "en": "eye(s)",
@@ -241,16 +216,16 @@
       "zh": "耳朵"
     },
     {
+      "en": "head",
+      "zh": "頭"
+    },
+    {
+      "en": "hair",
+      "zh": "頭髮"
+    },
+    {
       "en": "nose",
       "zh": "鼻子"
-    },
-    {
-      "en": "mouth",
-      "zh": "嘴巴"
-    },
-    {
-      "en": "tooth",
-      "zh": "牙齒"
     },
     {
       "en": "body",
@@ -261,413 +236,223 @@
       "zh": "脖子"
     },
     {
+      "en": "mouth",
+      "zh": "嘴巴"
+    },
+    {
+      "en": "tooth",
+      "zh": "牙齒"
+    },
+    {
       "en": "shoulder",
       "zh": "肩膀"
     }
   ],
+  "focus": "不規則複數名詞",
+  "grammar": "不照 -s 規則的複數名詞：tooth→teeth、foot→feet、eye→eyes 這類成對身體部位的說法。",
   "exercises": {
     "mcq": [
       {
-        "q": "心形的英文是什麼？",
+        "q": "眼睛的英文是？",
         "opts": [
-          "arrow",
-          "heart shape",
-          "oval",
-          "cube"
+          "nose",
+          "eye",
+          "ear",
+          "mouth"
         ],
-        "ans": "heart shape"
+        "ans": "eye"
       },
       {
-        "q": "橢圓形的英文是什麼？",
+        "q": "牙齒的英文是？",
         "opts": [
-          "arrow",
-          "heart shape",
-          "oval",
-          "cube"
+          "teeth",
+          "nose",
+          "mouth",
+          "tooth"
         ],
-        "ans": "oval"
+        "ans": "tooth"
       },
       {
-        "q": "立方體的英文是什麼？",
+        "q": "She has two ______. (牙齒)",
         "opts": [
-          "arrow",
-          "heart shape",
-          "oval",
-          "cube"
+          "eye",
+          "tooth",
+          "teeth",
+          "ear"
         ],
-        "ans": "cube"
+        "ans": "teeth"
       },
       {
-        "q": "箭的英文是什麼？",
+        "q": "The river is very ______. (寬)",
         "opts": [
-          "arrow",
-          "heart shape",
-          "oval",
-          "cube"
-        ],
-        "ans": "arrow"
-      },
-      {
-        "q": "銀色的東西，什麼顏色？",
-        "opts": [
-          "dark",
-          "silver",
           "wide",
-          "narrow"
-        ],
-        "ans": "silver"
-      },
-      {
-        "q": "深色的東西，什麼顏色？",
-        "opts": [
-          "dark",
-          "silver",
-          "wide",
-          "narrow"
-        ],
-        "ans": "dark"
-      },
-      {
-        "q": "這個形狀是心形，什麼形狀？",
-        "opts": [
-          "arrow",
-          "heart shape",
-          "oval",
-          "cube"
-        ],
-        "ans": "heart shape"
-      },
-      {
-        "q": "這個形狀是橢圓形，什麼形狀？",
-        "opts": [
-          "arrow",
-          "heart shape",
-          "oval",
-          "cube"
-        ],
-        "ans": "oval"
-      },
-      {
-        "q": "頭髮的英文是什麼？",
-        "opts": [
-          "head",
-          "hair",
-          "eye(s)",
-          "ear(s)"
-        ],
-        "ans": "hair"
-      },
-      {
-        "q": "耳朵的英文是什麼？",
-        "opts": [
-          "head",
-          "hair",
-          "eye(s)",
-          "ear(s)"
-        ],
-        "ans": "ear(s)"
-      },
-      {
-        "q": "The arrow is silver. What color is it?",
-        "opts": [
-          "silver",
-          "dark",
-          "wide",
-          "narrow"
-        ],
-        "ans": "silver"
-      },
-      {
-        "q": "The cube is dark. What color is it?",
-        "opts": [
-          "dark",
-          "silver",
-          "thick",
-          "narrow"
-        ],
-        "ans": "dark"
-      },
-      {
-        "q": "This is a heart shape. What shape is it?",
-        "opts": [
-          "heart shape",
-          "arrow",
-          "oval",
-          "cube"
-        ],
-        "ans": "heart shape"
-      },
-      {
-        "q": "This is an oval. What shape is it?",
-        "opts": [
-          "oval",
-          "arrow",
-          "heart shape",
-          "cube"
-        ],
-        "ans": "oval"
-      },
-      {
-        "q": "This is a cube. What shape is it?",
-        "opts": [
-          "cube",
-          "arrow",
-          "heart shape",
-          "oval"
-        ],
-        "ans": "cube"
-      },
-      {
-        "q": "This is an arrow. What shape is it?",
-        "opts": [
-          "arrow",
-          "heart shape",
-          "oval",
-          "cube"
-        ],
-        "ans": "arrow"
-      },
-      {
-        "q": "The body is dark. What color is it?",
-        "opts": [
-          "dark",
-          "silver",
-          "wide",
-          "thick"
-        ],
-        "ans": "dark"
-      },
-      {
-        "q": "The neck is silver. What color is it?",
-        "opts": [
-          "silver",
-          "dark",
           "narrow",
+          "dark",
           "thick"
         ],
-        "ans": "silver"
+        "ans": "wide"
       },
       {
-        "q": "眼的複數形式是什麼？",
+        "q": "肩膀 的英文是？",
+        "opts": [
+          "nose",
+          "head",
+          "shoulder",
+          "hair"
+        ],
+        "ans": "shoulder"
+      },
+      {
+        "q": "He hurt his ______. (腳)",
+        "opts": [
+          "teeth",
+          "foot",
+          "feet",
+          "tooth"
+        ],
+        "ans": "foot"
+      },
+      {
+        "q": "She washed her ______. (眼睛)",
         "opts": [
           "eyes",
+          "ear",
           "eye",
-          "ears",
-          "head"
+          "ears"
         ],
         "ans": "eyes"
       },
       {
-        "q": "耳朵的複數形式是什麼？",
+        "q": "謎題 的英文是？",
         "opts": [
-          "ears",
+          "wide",
+          "puzzle",
+          "dark",
+          "silver"
+        ],
+        "ans": "puzzle"
+      },
+      {
+        "q": "He has ______. (兩隻耳朵)",
+        "opts": [
+          "eye",
           "ear",
-          "eyes",
-          "hair"
+          "nose",
+          "ears"
         ],
         "ans": "ears"
       },
       {
-        "q": "這個銀色的心形，它的顏色是什麼？",
+        "q": "The ______ is in the corner. (包裝)",
         "opts": [
-          "銀色",
-          "深色",
-          "寬",
-          "窄"
+          "package",
+          "dark",
+          "hair",
+          "head"
         ],
-        "ans": "銀色"
-      },
-      {
-        "q": "這個深色的立方體，它的顏色是什麼？",
-        "opts": [
-          "深色",
-          "銀色",
-          "厚",
-          "角"
-        ],
-        "ans": "深色"
-      },
-      {
-        "q": "這個銀色的箭，它的顏色是什麼？",
-        "opts": [
-          "銀色",
-          "深色",
-          "寬",
-          "窄"
-        ],
-        "ans": "銀色"
-      },
-      {
-        "q": "這個心形的形狀是什麼？",
-        "opts": [
-          "心形",
-          "橢圓形",
-          "立方體",
-          "箭"
-        ],
-        "ans": "心形"
-      },
-      {
-        "q": "這個橢圓形的形狀是什麼？",
-        "opts": [
-          "橢圓形",
-          "心形",
-          "立方體",
-          "箭"
-        ],
-        "ans": "橢圓形"
-      },
-      {
-        "q": "這個立方體的形狀是什麼？",
-        "opts": [
-          "立方體",
-          "心形",
-          "橢圓形",
-          "箭"
-        ],
-        "ans": "立方體"
-      },
-      {
-        "q": "這個箭的形狀是什麼？",
-        "opts": [
-          "箭",
-          "心形",
-          "橢圓形",
-          "立方體"
-        ],
-        "ans": "箭"
-      },
-      {
-        "q": "這個心形的英文是什麼？",
-        "opts": [
-          "heart shape",
-          "oval",
-          "cube",
-          "arrow"
-        ],
-        "ans": "heart shape"
-      },
-      {
-        "q": "這個橢圓形的英文是什麼？",
-        "opts": [
-          "heart shape",
-          "oval",
-          "cube",
-          "arrow"
-        ],
-        "ans": "oval"
-      },
-      {
-        "q": "這個立方體的英文是什麼？",
-        "opts": [
-          "heart shape",
-          "oval",
-          "cube",
-          "arrow"
-        ],
-        "ans": "cube"
+        "ans": "package"
       }
     ],
     "fill": [
       {
-        "q": "The ____ is silver.",
-        "ans": "arrow"
+        "q": "I ____ a student.（我是學生）",
+        "ans": "am"
       },
       {
-        "q": "The ____ is silver.",
-        "ans": "ear"
+        "q": "She ____ dark hair.（她有深色的頭髮）",
+        "ans": "has"
       },
       {
-        "q": "The ____ is dark.",
-        "ans": "hair"
+        "q": "The cat is ____ the table.（貓在桌子上）",
+        "ans": "on"
       },
       {
-        "q": "The ____ is dark.",
-        "ans": "corner"
+        "q": "We ____ to school every day.（我們每天去學校）",
+        "ans": "go"
       },
       {
-        "q": "The ____ is wide.",
-        "ans": "mouth"
+        "q": "My brother ____ apples.（我哥哥喜歡蘋果）",
+        "ans": "likes"
       },
       {
-        "q": "The ____ is wide.",
-        "ans": "shoulder"
+        "q": "These are my ____ .（這些是我的眼睛）",
+        "ans": "eyes"
       },
       {
-        "q": "The ____ is narrow.",
-        "ans": "nose"
+        "q": "His ____ hurt every morning.（他每天早上牙齒都疼）",
+        "ans": "teeth"
       },
       {
-        "q": "The ____ is narrow.",
-        "ans": "eye"
+        "q": "The balloon is ____ .（氣球是銀色的）",
+        "ans": "silver"
       },
       {
-        "q": "The ____ is thick.",
-        "ans": "hair"
+        "q": "The room is ____ .（房間很寬）",
+        "ans": "wide"
       },
       {
-        "q": "The ____ is thick.",
-        "ans": "tooth"
+        "q": "Put the ____ on the shelf.（請把盒子放在架子上）",
+        "ans": "package"
       }
     ],
     "translate": [
       {
-        "q": "這支箭是銀色的。",
-        "ans": "The arrow is silver."
+        "q": "我有一個銀色的氣球。",
+        "ans": "I have a silver balloon."
       },
       {
-        "q": "這個角落是深色的。",
-        "ans": "The corner is dark."
+        "q": "她的頭髮很暗。",
+        "ans": "Her hair is dark."
       },
       {
-        "q": "這張嘴是寬的。",
-        "ans": "The mouth is wide."
+        "q": "我們的房間很寬。",
+        "ans": "Our room is wide."
       },
       {
-        "q": "這個鼻子是窄的。",
-        "ans": "The nose is narrow."
+        "q": "這個盒子很厚。",
+        "ans": "This box is thick."
       },
       {
-        "q": "這頭髮是厚的。",
-        "ans": "The hair is thick."
+        "q": "把拼圖放在角落。",
+        "ans": "Put the puzzle in the corner."
       },
       {
-        "q": "這是一支箭。",
-        "ans": "This is an arrow."
+        "q": "我有牙齒。",
+        "ans": "I have teeth."
       },
       {
-        "q": "這是一個橢圓形。",
-        "ans": "This is an oval."
+        "q": "他的肩膀很寬。",
+        "ans": "His shoulder is wide."
       },
       {
-        "q": "這是一個立方體。",
-        "ans": "This is a cube."
+        "q": "這是一個謎題。",
+        "ans": "This is a puzzle."
       }
     ],
     "unscramble": [
       {
-        "q": "silver / The / . / is / arrow",
-        "ans": "The arrow is silver."
+        "q": "silver / The / . / is / balloon",
+        "ans": "The balloon is silver."
       },
       {
-        "q": ". / is / dark / The / corner",
-        "ans": "The corner is dark."
+        "q": ". / is / wide / The / puzzle",
+        "ans": "The puzzle is wide."
       },
       {
-        "q": "is / The / wide / . / mouth",
-        "ans": "The mouth is wide."
+        "q": "is / The / thick / . / package",
+        "ans": "The package is thick."
       },
       {
-        "q": "This / an / is / . / oval",
-        "ans": "This is an oval."
+        "q": "His / are / eyes / . / dark",
+        "ans": "His eyes are dark."
       },
       {
-        "q": "a / This / . / is / cube",
-        "ans": "This is a cube."
+        "q": "is / The / . / shoulder / narrow",
+        "ans": "The shoulder is narrow."
       },
       {
-        "q": "is / . / The / hair / thick",
-        "ans": "The hair is thick."
+        "q": "the / corner / . / is / The / balloon / in",
+        "ans": "The balloon is in the corner."
       }
     ]
   },

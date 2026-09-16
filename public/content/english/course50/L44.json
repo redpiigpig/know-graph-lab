@@ -1,172 +1,162 @@
 {
-  "title_en": "Jobs & People",
-  "title_zh": "職業與人物",
-  "grammar": "使用第三人稱單數的現在簡單式詢問與回答職業，以及使用 want to be… 表達未來願望。",
-  "intro_zh": "這一課我們會認識不同的職業，學會用 What does he/she do? 詢問別人的工作，並練習說出自己想成為什麼樣的人，例如老師、醫生或消防員。",
+  "title_en": "Jobs and People",
+  "title_zh": "職業與人物介紹",
+  "intro_zh": "本課將學習用 What does he do? 詢問他人的職業，並以 He is a… 作答。透過小故事練習句型與職業詞彙，讓學生能自然說出自己或他人的工作。",
   "can_do": [
-    "能用第三人稱單數說出他/她的職業",
-    "能用 want to be… 說出自己未來想從事的工作",
-    "能閱讀簡短對話並找出關鍵職業單字"
+    "能用 What does he do? 問職業",
+    "能以 He is a… 回答職業問題",
+    "能在簡短對話中正確使用 job、work、boss 等詞彙"
   ],
   "reading": {
-    "title_en": "A Day at Work",
-    "title_zh": "工作日的故事",
+    "title_en": "A Day at the Station",
+    "title_zh": "消防站的一天",
     "sentences": [
       {
-        "en": "In our town, Mr. Lin is a fisherman who goes out to sea every morning.",
-        "zh": "在我們的鎮子裡，林先生是個漁夫，每天早上都出海捕魚。"
+        "en": "What does he do?",
+        "zh": "他做什麼工作？"
       },
       {
-        "en": "Ms. Chen works as a writer and writes stories for children.",
-        "zh": "陳小姐是作家，她寫兒童故事。"
+        "en": "He is a fireman.",
+        "zh": "他是消防員。"
       },
       {
-        "en": "At the hospital, Nurse Lee takes care of patients with kindness.",
-        "zh": "在醫院裡，李護士用愛心照顧病人。"
+        "en": "He likes his job because he helps people, and his boss owns the station.",
+        "zh": "他喜歡自己的工作，因為他幫助人們，而且他的老闆擁有這個車站。"
       },
       {
-        "en": "Officer Wang is a police man who keeps the streets safe.",
-        "zh": "王警官是警察，負責維持街道安全。"
+        "en": "Tom dreams of being a king one day.",
+        "zh": "湯姆夢想有一天成為國王。"
       },
       {
-        "en": "The boss of the factory, Mr. Huang, likes to hear new ideas from his workers and says everyone should love their own job.",
-        "zh": "工廠老闆黃先生喜歡聽工人們的新點子，並說每個人應該熱愛自己的工作。"
+        "en": "He shares his idea with his friend Lily.",
+        "zh": "他把他的主意告訴他的朋友莉莉。"
       },
       {
-        "en": "Sometimes the king and queen visit the town to see the local business.",
-        "zh": "國王和皇后偶爾會來鎮子參觀當地的商業。"
+        "en": "Lily works as a nurse and helps with a case at the hospital.",
+        "zh": "莉莉在醫院工作，是一名護士，並協助處理一個個案。"
       },
       {
-        "en": "A businessman named Mr. Li shared his experience at the meeting.",
-        "zh": "一位名叫李先生的商人在會議上分享了他的經驗。"
+        "en": "She thinks her work matters a lot and writes notes for a writer.",
+        "zh": "她覺得她的工作很重要，並為一位作家寫筆記。"
       },
       {
-        "en": "He said that every case is different and every chance to learn matters.",
-        "zh": "他說每個個案都不同，每一次學習的機會都很重要。"
+        "en": "Lily also meets the queen during a charity meeting with a businessman.",
+        "zh": "莉莉也在一次慈善會議中遇見女王，並有一位商人在場。"
       },
       {
-        "en": "After work, the fireman practices his plan to stay ready for emergencies.",
-        "zh": "下班後，消防員會練習他的計畫，以便隨時應對緊急狀況。"
+        "en": "They talk about chance, business, and their future plans.",
+        "zh": "他們談論機會、商業以及他們未來的計畫。"
+      },
+      {
+        "en": "A fisherman and a police man tell them about their experience at sea.",
+        "zh": "一位漁夫和一位警察告訴他們他們在海上的經驗。"
       }
     ]
   },
   "grammar_points": [
     {
-      "title_zh": "① What does he/she do? – 第三人稱單數現在簡單式詢問職業",
-      "explain_zh": "用來問別人現在的職業，答案通常是 He/She is a … 或 He/She works as a … 。動詞 do 在第三人稱單數變成 does，後面接動詞原形。",
+      "title_zh": "① What do you do? / What does he do? 隨主詞換助動詞",
+      "explain_zh": "當詢問職業時，根據主詞選擇助動詞 do 或 does。第一人稱單數 I 與第二人稱單數 you 使用 do；第三人稱單數 he/she/it 使用 does。",
       "table": [
         [
-          "Subject",
-          "Question",
-          "Answer"
+          "主詞",
+          "助動詞",
+          "問句範例"
         ],
         [
-          "He",
-          "What does he do?",
-          "He is a fisherman."
+          "I",
+          "do",
+          "What do you do?"
         ],
         [
-          "She",
-          "What does she do?",
-          "She is a nurse."
+          "He/She/It",
+          "does",
+          "What does he do?"
         ],
         [
-          "He",
-          "What does he do?",
-          "He works as a police man."
-        ],
-        [
-          "She",
-          "What does she do?",
-          "She works as a writer."
+          "We/You/They",
+          "do",
+          "What do you do?"
         ]
       ]
     },
     {
-      "title_zh": "② want to be … – 表達未來願望",
-      "explain_zh": "用 want to be + 職業名詞，表示將來想成為某種職業。主語可以是 I, you, he, she, we, they。",
+      "title_zh": "② 回答職業時單數前面要加 a／an",
+      "explain_zh": "當用 He is a … 或 She is an … 回答職業時，單數職業名詞前必須加不定冠詞 a 或 an。以元音音開頭的職業用 an，輔音音開頭用 a。",
       "examples": [
         {
-          "en": "I want to be a businessman when I grow up.",
-          "zh": "我長大後想當商人。"
+          "en": "He is a teacher.",
+          "zh": "他是老師。"
         },
         {
-          "en": "She wants to be a queen someday.",
-          "zh": "她總有一天想當皇后。"
-        },
-        {
-          "en": "They want to be firemen to help people.",
-          "zh": "他們想當消防員來幫助人們。"
-        },
-        {
-          "en": "He wants to be a writer and write stories.",
-          "zh": "他想當作家，寫故事。"
+          "en": "She is an artist.",
+          "zh": "她是藝術家。"
         }
       ]
     }
   ],
   "dialogue": {
-    "title_zh": "職業日對話",
+    "title_zh": "職業日互相詢問",
     "lines": [
       {
-        "sp": "Amy",
+        "sp": "小明",
         "en": "What does your father do?",
-        "zh": "你爸爸的職業是什麼？"
+        "zh": "你爸爸的工作是什麼？"
       },
       {
-        "sp": "Bob",
-        "en": "He is a police man. He keeps the town safe.",
-        "zh": "他是警察，負責保護鎮上的安全。"
+        "sp": "小華",
+        "en": "He is a teacher.",
+        "zh": "他是老師。"
       },
       {
-        "sp": "Amy",
-        "en": "What do you want to be when you grow up?",
-        "zh": "你長大後想成為什麼？"
+        "sp": "小明",
+        "en": "What does your mother do?",
+        "zh": "你媽媽的工作是什麼？"
       },
       {
-        "sp": "Bob",
-        "en": "I want to be a fireman. I want to help people in danger.",
-        "zh": "我想當消防員，幫助有危險的人。"
+        "sp": "老師",
+        "en": "She is a doctor.",
+        "zh": "她是醫生。"
       },
       {
-        "sp": "Amy",
-        "en": "That’s a great job! I want to be a nurse and take care of sick people.",
-        "zh": "這是很棒的工作！我想當護士，照顧生病的人。"
+        "sp": "小明",
+        "en": "What do you do?",
+        "zh": "你的工作是什麼？"
       }
     ]
   },
   "sentences": [
     {
-      "en": "What does she do? She is a writer.",
-      "zh": "她的職業是什麼？她是作家。"
+      "en": "He is a boss.",
+      "zh": "他是老闆。"
     },
     {
-      "en": "What does he do? He works as a businessman.",
-      "zh": "他的職業是什麼？他是商人。"
+      "en": "She is a nurse.",
+      "zh": "她是護士。"
     },
     {
-      "en": "She wants to be a queen one day.",
-      "zh": "她總有一天想當皇后。"
+      "en": "He is a king.",
+      "zh": "他是國王。"
     },
     {
-      "en": "He wants to be a fireman to save lives.",
-      "zh": "他想當消防員來救生命。"
+      "en": "She is a queen.",
+      "zh": "她是皇后。"
     },
     {
-      "en": "What does your mother do? She is a nurse.",
-      "zh": "你媽媽的職業是什麼？她是護士。"
+      "en": "He is a fisherman.",
+      "zh": "他是漁夫。"
     },
     {
-      "en": "They want to be teachers and share knowledge.",
-      "zh": "他們想當老師，分享知識。"
+      "en": "She is a police man.",
+      "zh": "她是警察。"
     },
     {
-      "en": "What does the king do? He rules the country.",
-      "zh": "國王的職業是什麼？他統治國家。"
+      "en": "He is a businessman.",
+      "zh": "他是商人。"
     },
     {
-      "en": "I want to be a writer and write interesting stories.",
-      "zh": "我想當作家，寫有趣的故事。"
+      "en": "She is a fireman.",
+      "zh": "她是消防員。"
     }
   ],
   "no": 44,
@@ -174,20 +164,12 @@
   "theme_zh": "職業與人物",
   "words": [
     {
-      "en": "fisherman",
-      "zh": "漁夫"
+      "en": "job",
+      "zh": "職業"
     },
     {
-      "en": "writer",
-      "zh": "作家"
-    },
-    {
-      "en": "nurse",
-      "zh": "護士"
-    },
-    {
-      "en": "police man",
-      "zh": "警察"
+      "en": "own",
+      "zh": "擁有"
     },
     {
       "en": "boss",
@@ -198,32 +180,8 @@
       "zh": "國王"
     },
     {
-      "en": "queen",
-      "zh": "皇后"
-    },
-    {
       "en": "case",
       "zh": "個案"
-    },
-    {
-      "en": "businessman",
-      "zh": "商人"
-    },
-    {
-      "en": "business",
-      "zh": "商業"
-    },
-    {
-      "en": "experience",
-      "zh": "經驗"
-    },
-    {
-      "en": "matter",
-      "zh": "事情"
-    },
-    {
-      "en": "chance",
-      "zh": "機會"
     },
     {
       "en": "work",
@@ -234,431 +192,265 @@
       "zh": "主意"
     },
     {
-      "en": "job",
-      "zh": "職業"
-    },
-    {
       "en": "plan",
       "zh": "計畫"
+    },
+    {
+      "en": "nurse",
+      "zh": "護士"
+    },
+    {
+      "en": "queen",
+      "zh": "皇后"
+    },
+    {
+      "en": "writer",
+      "zh": "作家"
+    },
+    {
+      "en": "matter",
+      "zh": "事情"
+    },
+    {
+      "en": "chance",
+      "zh": "機會"
     },
     {
       "en": "meeting",
       "zh": "會議"
     },
     {
-      "en": "own",
-      "zh": "擁有"
-    },
-    {
       "en": "fireman",
       "zh": "消防員"
+    },
+    {
+      "en": "business",
+      "zh": "商業"
+    },
+    {
+      "en": "fisherman",
+      "zh": "漁夫"
+    },
+    {
+      "en": "experience",
+      "zh": "經驗"
+    },
+    {
+      "en": "businessman",
+      "zh": "商人"
+    },
+    {
+      "en": "police man",
+      "zh": "警察"
     }
   ],
+  "focus": "What does he do?",
+  "grammar": "問職業用 What does he do?，回答用 He is a…；does 是第三人稱單數的助動詞。",
   "exercises": {
     "mcq": [
       {
-        "q": "「漁夫」的英文是什麼？",
+        "q": "護士 的英文是？",
         "opts": [
-          "fisherman",
-          "fireman",
-          "businessman",
-          "police man"
-        ],
-        "ans": "fisherman"
-      },
-      {
-        "q": "「作家」的英文是什麼？",
-        "opts": [
-          "nurse",
           "writer",
-          "boss",
-          "king"
-        ],
-        "ans": "writer"
-      },
-      {
-        "q": "「護士」的英文是什麼？",
-        "opts": [
-          "queen",
           "nurse",
-          "police man",
-          "fireman"
+          "businessman",
+          "king"
         ],
         "ans": "nurse"
       },
       {
-        "q": "「警察」的英文是什麼？",
+        "q": "He ___ as a nurse. (問職業)",
         "opts": [
-          "police man",
-          "businessman",
-          "fisherman",
-          "boss"
-        ],
-        "ans": "police man"
-      },
-      {
-        "q": "「老闆」的英文是什麼？",
-        "opts": [
-          "king",
           "boss",
-          "nurse",
-          "writer"
+          "plans",
+          "works",
+          "owns"
         ],
-        "ans": "boss"
+        "ans": "works"
       },
       {
-        "q": "「國王」的英文是什麼？",
+        "q": "職業 的英文是？",
         "opts": [
-          "queen",
-          "king",
-          "fireman",
-          "businessman"
-        ],
-        "ans": "king"
-      },
-      {
-        "q": "「消防員」的英文是什麼？",
-        "opts": [
-          "fireman",
-          "police man",
-          "fisherman",
-          "boss"
-        ],
-        "ans": "fireman"
-      },
-      {
-        "q": "「商人」的英文是什麼？",
-        "opts": [
-          "businessman",
-          "writer",
-          "nurse",
-          "king"
-        ],
-        "ans": "businessman"
-      },
-      {
-        "q": "「工作」的英文是什麼？",
-        "opts": [
-          "idea",
           "job",
-          "plan",
-          "case"
+          "chance",
+          "meeting",
+          "work"
         ],
         "ans": "job"
       },
       {
-        "q": "「想法」的英文是什麼？",
+        "q": "會議 的英文是？",
         "opts": [
           "meeting",
-          "work",
-          "idea",
-          "chance"
+          "chance",
+          "experience",
+          "matter"
         ],
-        "ans": "idea"
+        "ans": "meeting"
       },
       {
-        "q": "______ she a writer?",
+        "q": "He ___ a fireman. (問職業)",
         "opts": [
-          "Is",
-          "Are",
-          "Am",
-          "Be"
-        ],
-        "ans": "Is"
-      },
-      {
-        "q": "He ______ want to be a fireman.",
-        "opts": [
-          "wants",
-          "want",
-          "wanting",
-          "wanted"
-        ],
-        "ans": "wants"
-      },
-      {
-        "q": "What ______ he want to be?",
-        "opts": [
-          "does",
-          "do",
-          "is",
-          "are"
-        ],
-        "ans": "does"
-      },
-      {
-        "q": "She ______ a nurse.",
-        "opts": [
-          "is",
           "are",
-          "am",
-          "be"
+          "is",
+          "be",
+          "am"
         ],
         "ans": "is"
       },
       {
-        "q": "They ______ businessmen.",
+        "q": "What ___ he do? (問職業)",
         "opts": [
-          "are",
-          "is",
-          "am",
-          "be"
+          "does",
+          "do",
+          "did",
+          "done"
         ],
-        "ans": "are"
+        "ans": "does"
       },
       {
-        "q": "______ you want to be a king?",
+        "q": "經驗 的英文是？",
         "opts": [
-          "Do",
-          "Does",
-          "Is",
-          "Are"
-        ],
-        "ans": "Do"
-      },
-      {
-        "q": "______ she want to be a queen?",
-        "opts": [
-          "Does",
-          "Do",
-          "Is",
-          "Are"
-        ],
-        "ans": "Does"
-      },
-      {
-        "q": "He has a ______ to start his own business.",
-        "opts": [
-          "plan",
-          "job",
-          "work",
-          "meeting"
-        ],
-        "ans": "plan"
-      },
-      {
-        "q": "She has a ______ as a fisherman.",
-        "opts": [
-          "job",
-          "work",
-          "case",
-          "chance"
-        ],
-        "ans": "job"
-      },
-      {
-        "q": "The meeting is for an ______.",
-        "opts": [
-          "idea",
-          "matter",
+          "queen",
+          "fireman",
           "experience",
-          "chance"
+          "business"
         ],
-        "ans": "idea"
+        "ans": "experience"
       },
       {
-        "q": "Tom likes to help people and wants to work in a hospital. What does he want to be?",
+        "q": "老闆 的英文是？",
         "opts": [
-          "He wants to be a nurse.",
-          "He wants to be a writer.",
-          "He wants to be a fisherman.",
-          "He wants to be a king."
+          "king",
+          "queen",
+          "job",
+          "boss"
         ],
-        "ans": "He wants to be a nurse."
+        "ans": "boss"
       },
       {
-        "q": "Lily loves stories and writes books every day. What does she want to be?",
+        "q": "He ______ his own store. (問動詞)",
         "opts": [
-          "She wants to be a boss.",
-          "She wants to be a writer.",
-          "She wants to be a queen.",
-          "She wants to be a fireman."
+          "owned",
+          "owns",
+          "owning",
+          "own"
         ],
-        "ans": "She wants to be a writer."
+        "ans": "owns"
       },
       {
-        "q": "Mr. Chen enjoys catching fish at sea. What is his job?",
+        "q": "她在醫院照顧病人。她的職業是什麼？",
         "opts": [
-          "He is a fisherman.",
-          "He is a businessman.",
-          "He is a king.",
-          "He is a queen."
+          "writer",
+          "businessman",
+          "queen",
+          "nurse"
         ],
-        "ans": "He is a fisherman."
-      },
-      {
-        "q": "Ms. Lin works in an office and manages a company. What is her job?",
-        "opts": [
-          "She is a boss.",
-          "She is a nurse.",
-          "She is a writer.",
-          "She is a fireman."
-        ],
-        "ans": "She is a boss."
-      },
-      {
-        "q": "The class is planning a project and they need to talk about it. What is the meeting for?",
-        "opts": [
-          "The meeting is for a plan.",
-          "The meeting is for a chance.",
-          "The meeting is for a case.",
-          "The meeting is for a matter."
-        ],
-        "ans": "The meeting is for a plan."
-      },
-      {
-        "q": "Sarah wants to start her own store someday. What does she have?",
-        "opts": [
-          "She has an idea.",
-          "She has a chance.",
-          "She has an experience.",
-          "She has a case."
-        ],
-        "ans": "She has an idea."
-      },
-      {
-        "q": "John worked on a fishing boat last summer. What does he have?",
-        "opts": [
-          "He has experience as a fisherman.",
-          "He has experience as a writer.",
-          "He has experience as a nurse.",
-          "He has experience as a king."
-        ],
-        "ans": "He has experience as a fisherman."
-      },
-      {
-        "q": "The teacher asks: \"Do you want to be a king?\" Tom answers: \"Yes, I do.\" What is the correct question form?",
-        "opts": [
-          "Do you want to be a king?",
-          "Does you want to be a king?",
-          "Is you want to be a king?",
-          "Are you want to be a king?"
-        ],
-        "ans": "Do you want to be a king?"
-      },
-      {
-        "q": "Lisa dreams of living in a palace. What does she want to be?",
-        "opts": [
-          "She wants to be a queen.",
-          "She wants to be a boss.",
-          "She wants to be a writer.",
-          "She wants to be a fireman."
-        ],
-        "ans": "She wants to be a queen."
-      },
-      {
-        "q": "The manager holds a gathering to discuss sales. What is it?",
-        "opts": [
-          "It is a meeting.",
-          "It is a case.",
-          "It is a chance.",
-          "It is an idea."
-        ],
-        "ans": "It is a meeting."
+        "ans": "nurse"
       }
     ],
     "fill": [
       {
-        "q": "My father is a ____. He works in a hospital.（我父親是護士。他在醫院工作。）",
-        "ans": "nurse"
+        "q": "He ____ a nurse.（他是護士）",
+        "ans": "is"
       },
       {
-        "q": "She ____ to be a writer when she grows up.（她長大後想當作家。）",
-        "ans": "wants"
+        "q": "What ____ he do?（他做什麼工作？）",
+        "ans": "does"
       },
       {
-        "q": "The ____ helps people. He puts out fires.（消防員幫助人們。他滅火。）",
+        "q": "This is my ____ idea.（這是我的主意）",
+        "ans": "own"
+      },
+      {
+        "q": "She works ____ a hospital.（她在醫院工作）",
+        "ans": "in"
+      },
+      {
+        "q": "I like tea ____ coffee.（我喜歡茶和咖啡）",
+        "ans": "and"
+      },
+      {
+        "q": "His ____ is a teacher.（他的職業是老師）",
+        "ans": "job"
+      },
+      {
+        "q": "We need a ____ for the project.（我們需要一個計畫）",
+        "ans": "plan"
+      },
+      {
+        "q": "The ____ saved the child.（消防員救了孩子）",
         "ans": "fireman"
       },
       {
-        "q": "Does he want to be a ____? Yes, he does.（他想當警察嗎？是的。）",
-        "ans": "policeman"
+        "q": "She wants to be a ____.（她想成為作家）",
+        "ans": "writer"
       },
       {
-        "q": "My uncle is a ____. He catches fish every day.（我叔叔是漁夫。他每天捕魚。）",
-        "ans": "fisherman"
-      },
-      {
-        "q": "The ____ makes decisions in the company.（老闆在公司裡做決定。）",
-        "ans": "boss"
-      },
-      {
-        "q": "A ____ owns a business and makes money.（商人擁有生意並賺錢。）",
-        "ans": "businessman"
-      },
-      {
-        "q": "The ____ lives in a palace and rules the country.（國王住在宮殿裡並統治國家。）",
-        "ans": "king"
-      },
-      {
-        "q": "She has a good ____ for a new project.（她對新計畫有好想法。）",
-        "ans": "idea"
-      },
-      {
-        "q": "This is an important ____ for you. You should take it.（這對你是個重要的機會。你應該把握它。）",
+        "q": "Do you have any ____ to try?（你有什麼機會嘗試？）",
         "ans": "chance"
       }
     ],
     "translate": [
       {
-        "q": "他是一名警察。",
-        "ans": "He is a policeman."
+        "q": "他是護士。",
+        "ans": "He is a nurse."
       },
       {
-        "q": "她想當護士。",
-        "ans": "She wants to be a nurse."
+        "q": "他的工作是老師。",
+        "ans": "His job is a teacher."
       },
       {
-        "q": "你的工作是什麼？",
-        "ans": "What is your job?"
+        "q": "她在醫院工作。",
+        "ans": "She works in a hospital."
       },
       {
-        "q": "我想成為一名消防員。",
-        "ans": "I want to be a fireman."
+        "q": "我喜歡茶和咖啡。",
+        "ans": "I like tea and coffee."
       },
       {
-        "q": "他是一名商人。",
-        "ans": "He is a businessman."
+        "q": "我們需要一個計畫。",
+        "ans": "We need a plan."
       },
       {
-        "q": "女王擁有這個國家。",
-        "ans": "The queen owns this country."
+        "q": "消防員救了孩子。",
+        "ans": "The fireman saved the child."
       },
       {
-        "q": "這個計畫很重要。",
-        "ans": "This plan is important."
+        "q": "她想成為作家。",
+        "ans": "She wants to be a writer."
       },
       {
-        "q": "他在公司工作。",
-        "ans": "He works in a company."
+        "q": "你有什麼機會嘗試？",
+        "ans": "Do you have any chance to try?"
       }
     ],
     "unscramble": [
       {
-        "q": "a / is / . / He / fisherman",
+        "q": "a / is / . / He / king",
+        "ans": "He is a king."
+      },
+      {
+        "q": ". / queen / She / a / is",
+        "ans": "She is a queen."
+      },
+      {
+        "q": "is / a / fireman / . / He",
+        "ans": "He is a fireman."
+      },
+      {
+        "q": "She / is / writer / a / .",
+        "ans": "She is a writer."
+      },
+      {
+        "q": "businessman / . / is / He / a",
+        "ans": "He is a businessman."
+      },
+      {
+        "q": "fisherman / a / He / is / .",
         "ans": "He is a fisherman."
-      },
-      {
-        "q": "be / writer / a / . / She / to / wants",
-        "ans": "She wants to be a writer."
-      },
-      {
-        "q": "? / job / your / is / What",
-        "ans": "What is your job?"
-      },
-      {
-        "q": "I / want / to / a / be / . / fireman",
-        "ans": "I want to be a fireman."
-      },
-      {
-        "q": "the / business / queen / . / The / owns",
-        "ans": "The queen owns the business."
-      },
-      {
-        "q": "is / important / an / . / meeting / There",
-        "ans": "There is an important meeting."
       }
     ]
   },
-  "engine": "claude-haiku-4-5-20251001"
+  "engine": "nvidia:nemotron(json)"
 }

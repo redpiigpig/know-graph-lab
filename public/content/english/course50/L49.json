@@ -1,168 +1,172 @@
 {
-  "title_en": "Traveling Across Asia",
-  "title_zh": "亞洲旅行小冒險",
-  "grammar": "本課學習用 How do you go …? by bus 詢問交通方式，並初步接觸過去式動詞。",
-  "intro_zh": "本課帶你認識不同的交通工具和亞洲國家，學會用 How do you go …? by bus 詢問路線，並初步練習過去式說出自己曾經去過的地方。",
+  "title_en": "Trip",
+  "title_zh": "一年的旅行與節慶",
+  "intro_zh": "本課學習過去簡單式的規則動詞，動詞加 ed 表示過去做過的事，常見時間詞有 last year、yesterday 等。透過旅行、國家與節慶的情境，練習說出自己做過的事。",
   "can_do": [
-    "能用 How do you go …? by bus 問別人怎麼去某地。",
-    "能用過去式說出自己曾經做過的旅行經驗。",
-    "能說出亞洲國家的名字並描述常見的交通工具。"
+    "能使用過去簡單式說明自己去年做過的事。",
+    "能描述參加節慶的經驗，使用 -ed 動詞。",
+    "能閱讀簡短的旅行故事並回答相關問題。"
   ],
   "reading": {
-    "title_en": "Traveling Across Asia",
-    "title_zh": "亞洲旅行小冒險",
+    "title_en": "A Year of Trips",
+    "title_zh": "一年的旅行與節慶",
     "sentences": [
       {
-        "en": "Last summer, I went on a trip to Japan, Korea, Singapore, Hong Kong, Vietnam, Thailand and the Philippines.",
-        "zh": "去年夏天，我去日本、韓國、新加坡、香港、越南、泰國和菲律賓旅行。"
+        "en": "Last year, Lily visited her grandmother in Taipei by MRT.",
+        "zh": "去年，莉莉搭捷運去台北拜訪她的祖母。"
       },
       {
-        "en": "First, I flew from Taipei to Tokyo by airplane.",
-        "zh": "首先，我從台北飛到東京，搭乘飛機。"
+        "en": "She took a bus to the museum and waited for the Dragon Boat Festival parade.",
+        "zh": "她搭公車去博物館，等待端午節遊行。"
       },
       {
-        "en": "At Narita Airport, I took the MRT to my hotel.",
-        "zh": "在成田機場，我搭捷運去飯店。"
+        "en": "During the trip, she saw a red envelope gift for Chinese New Year.",
+        "zh": "在旅行中，她看到紅包禮物，為中國新年準備。"
       },
       {
-        "en": "The next day, I visited a famous bridge and saw heavy traffic.",
-        "zh": "第二天，我參觀了一座著名的橋樑，看到很多車流。"
+        "en": "She celebrated the Moon Festival with her family and ate moon cake.",
+        "zh": "她和家人一起慶祝中秋節，吃了月餅。"
       },
       {
-        "en": "Then I rode a bike along a scenic way near the river.",
-        "zh": "之後，我騎腳踏車沿著河邊風景好的道路前進。"
+        "en": "Last Halloween, Lily drove a car to a farm to pick a pumpkin.",
+        "zh": "去年萬聖節，莉莉開汽車去農場挑南瓜。"
       },
       {
-        "en": "After Japan, I drove to Korea and waited for a bus at the station.",
-        "zh": "離開日本後，我開車去韓國，並在車站等公車。"
+        "en": "On the way home, she saw a big pumpkin and decided to fly a kite.",
+        "zh": "在回家的路上，她看到大南瓜，決定放風箏。"
       },
       {
-        "en": "In Korea, I visited a palace and tried the local food.",
-        "zh": "在韓國，我參觀了宮殿，嘗試了當地美食。"
+        "en": "She waited in line for a ride on the carousel.",
+        "zh": "她排隊等待旋轉木馬的遊樂設施。"
       },
       {
-        "en": "Later, I took a plane to Singapore and rode the MRT again.",
-        "zh": "之後，我搭飛機去新加坡，又搭一次捷運。"
+        "en": "On Christmas Eve, she visited Santa Claus at the mall and got a gift.",
+        "zh": "聖誕前夕，她在商場拜訪聖誕老人，收到禮物。"
       },
       {
-        "en": "Finally, I flew home, remembering the wonderful trip across Asia.",
-        "zh": "最後，我飛回家，回憶起這次亞洲之旅的美好時光。"
+        "en": "She hopes to travel again next year.",
+        "zh": "她希望明年再度旅行。"
       }
     ]
   },
   "grammar_points": [
     {
-      "title_zh": "① How do you go …? by bus（詢問交通方式）",
-      "explain_zh": "用 How do you go …? 詢問某人前往某地的交通方式，答案通常用「by + 交通工具」來回答，例如 by bus、by MRT、by plane 等。",
+      "title_zh": "① -ed 的拼字規則",
+      "explain_zh": "規則動詞的過去式通常在動詞原形後加 -ed。依據詞尾的不同，有四種常見的拼寫方式：直接加 -ed、詞尾有 e 去掉 e 再加 -d、子音 + y 改為 i 再加 -ed、以及重音閉音節需雙寫最後一個子音再加 -ed。",
       "table": [
         [
-          "問句",
-          "答案（使用 by ...）"
+          "原形",
+          "規則",
+          "過去式"
         ],
         [
-          "How do you go to the airport?",
-          "I go by bus."
+          "play",
+          "直接加 -ed",
+          "played"
         ],
         [
-          "How do you go to the station?",
-          "We go by MRT."
+          "live",
+          "詞尾有 e，去掉 e 再加 -d",
+          "lived"
         ],
         [
-          "How do you go to the hotel?",
-          "They go by taxi."
+          "study",
+          "子音 + y 改為 i 再加 -ed",
+          "studied"
+        ],
+        [
+          "plan",
+          "重音閉音節，雙寫最後一個子音再加 -ed",
+          "planned"
         ]
       ]
     },
     {
-      "title_zh": "② 過去式初探（規則動詞 -ed）",
-      "explain_zh": "規則動詞在過去式時，動詞尾部加 -ed，表示動作已經發生。例如 walk → walked，visit → visited。",
+      "title_zh": "② 過去式的時間詞",
+      "explain_zh": "過去簡單式常搭配表示過去的時間詞，例如 yesterday（昨天）、last year（去年）、last week（上週）。這些時間詞放在句子的開頭或結尾，幫助說明動作發生的時間。",
       "examples": [
         {
-          "en": "Yesterday we visited the museum.",
-          "zh": "昨天我們參觀了博物館。"
+          "en": "I visited my grandmother last year.",
+          "zh": "我去年拜訪了我的祖母。"
         },
         {
-          "en": "She waited for the bus for ten minutes.",
-          "zh": "她等了十分鐘公車。"
+          "en": "We waited for the parade yesterday.",
+          "zh": "我們昨天等了遊行。"
         },
         {
-          "en": "They flew to Thailand last summer.",
-          "zh": "他們去年夏天飛到泰國。"
-        },
-        {
-          "en": "He drove his sister to the airport.",
-          "zh": "他開車送妹妹去機場。"
+          "en": "She celebrated Christmas last week.",
+          "zh": "她上週慶祝了聖誕節。"
         }
       ]
     }
   ],
   "dialogue": {
-    "title_zh": "規劃去日本的旅行",
+    "title_zh": "情境對話：去年參加節慶",
     "lines": [
       {
-        "sp": "Anna",
-        "en": "How do you go to Tokyo from Taipei?",
-        "zh": "Anna：你從台北怎麼去東京？"
+        "sp": "Amy",
+        "en": "Last year, I traveled to Taipei to visit the Dragon Boat Festival.",
+        "zh": "去年，我去台北參觀端午節。"
       },
       {
         "sp": "Ben",
-        "en": "I go by airplane. It takes about four hours.",
-        "zh": "Ben：我坐飛機，大約四個小時。"
+        "en": "We waited for the parade for two hours.",
+        "zh": "我們等了兩小時看遊行。"
       },
       {
-        "sp": "Anna",
-        "en": "Do you ride the MRT from the airport to your hotel?",
-        "zh": "Anna：你會從機場搭捷運去飯店嗎？"
-      },
-      {
-        "sp": "Ben",
-        "en": "Yes, I take the MRT to the station near my hotel.",
-        "zh": "Ben：對，我搭捷運到靠近飯店的車站。"
-      },
-      {
-        "sp": "Anna",
-        "en": "What did you do yesterday in Tokyo?",
-        "zh": "Anna：你昨天在東京做了什麼？"
+        "sp": "Amy",
+        "en": "I cycled along the riverbank and watched the boat race.",
+        "zh": "我沿著河邊騎腳踏車並觀看了龍舟賽。"
       },
       {
         "sp": "Ben",
-        "en": "I visited a temple and waited for the train.",
-        "zh": "Ben：我參觀了一座寺廟，然後等火車。"
+        "en": "After the race, we enjoyed zongzi and smiled a lot.",
+        "zh": "賽後，我們享受了粽子並笑得很開心。"
+      },
+      {
+        "sp": "Amy",
+        "en": "Last week, I traveled to Kaohsiung to celebrate the Moon Festival.",
+        "zh": "上週，我飛往高雄慶祝中秋節。"
+      },
+      {
+        "sp": "Ben",
+        "en": "We walked around the night market and liked the lanterns.",
+        "zh": "我們在夜市走走走，喜歡了那些燈籠。"
       }
     ]
   },
   "sentences": [
     {
-      "en": "How do you go to the beach?",
-      "zh": "你怎麼去海灘？"
+      "en": "Yesterday, she waited for the bus at the station.",
+      "zh": "昨天，她在車站等公車。"
     },
     {
-      "en": "We go by bus to the night market.",
-      "zh": "我們坐公車去夜市。"
+      "en": "Last year, they celebrated Christmas with their family.",
+      "zh": "去年，他們與家人一起慶祝聖誕節。"
     },
     {
-      "en": "She flew to Korea last month.",
-      "zh": "她上個月飛到韓國。"
+      "en": "Last week, he visited his grandparents in Tainan.",
+      "zh": "上週，他拜訪了台南的祖父母。"
     },
     {
-      "en": "They waited for the MRT for five minutes.",
-      "zh": "他們等了五分鐘捷運。"
+      "en": "Yesterday, we walked around the night market and liked the lights.",
+      "zh": "昨天，我們在夜景市場走走走，喜歡了那些燈光。"
     },
     {
-      "en": "He visited his grandparents in Vietnam.",
-      "zh": "他拜訪了在越南的祖父母。"
+      "en": "Last year, the school organized a trip to the museum.",
+      "zh": "去年，學校組織了一次參觀博物館的旅行。"
     },
     {
-      "en": "The children rode their bikes to the park.",
-      "zh": "孩子們騎腳踏車去公園。"
+      "en": "Last week, she cleaned her room and looked for an old gift.",
+      "zh": "上週，她打掃了房間並尋找了一份舊禮物。"
     },
     {
-      "en": "I drove to the airport early this morning.",
-      "zh": "我今天早上早早開車去機場。"
+      "en": "Yesterday, they played soccer in the park after school.",
+      "zh": "昨天，他們在放學後在公園踢足球。"
     },
     {
-      "en": "We will travel to Thailand next summer.",
-      "zh": "我們明年夏天將去泰國旅行。"
+      "en": "Last year, I received a red envelope during Chinese New Year.",
+      "zh": "去年，我在中國新年期間收到了一個紅包。"
     }
   ],
   "no": 49,
@@ -170,36 +174,40 @@
   "theme_zh": "旅行‧國家與節慶",
   "words": [
     {
-      "en": "airplane/plane",
-      "zh": "飛機"
-    },
-    {
       "en": "MRT",
       "zh": "大眾捷運"
     },
     {
-      "en": "station",
-      "zh": "車站"
+      "en": "car",
+      "zh": "汽車"
     },
     {
-      "en": "airport",
-      "zh": "機場"
-    },
-    {
-      "en": "bridge",
-      "zh": "橋"
-    },
-    {
-      "en": "traffic",
-      "zh": "交通"
+      "en": "bus",
+      "zh": "公車"
     },
     {
       "en": "way",
       "zh": "道路"
     },
     {
+      "en": "fly",
+      "zh": "飛行"
+    },
+    {
+      "en": "gift",
+      "zh": "禮物"
+    },
+    {
       "en": "trip",
       "zh": "旅行"
+    },
+    {
+      "en": "wait",
+      "zh": "等待"
+    },
+    {
+      "en": "ride",
+      "zh": "搭乘；騎車"
     },
     {
       "en": "visit",
@@ -210,429 +218,247 @@
       "zh": "開車"
     },
     {
-      "en": "ride",
-      "zh": "搭乘；騎車"
+      "en": "Chinese New Year",
+      "zh": "中國新年"
     },
     {
-      "en": "fly",
-      "zh": "飛行"
+      "en": "red envelope",
+      "zh": "紅包"
     },
     {
-      "en": "wait",
-      "zh": "等待"
+      "en": "Dragon Boat Festival",
+      "zh": "端午節"
     },
     {
-      "en": "Japan",
-      "zh": "日本"
+      "en": "Moon Festival",
+      "zh": "中秋節"
     },
     {
-      "en": "Korea",
-      "zh": "韓國"
+      "en": "moon cake",
+      "zh": "月餅"
     },
     {
-      "en": "Singapore",
-      "zh": "新加坡"
+      "en": "Halloween",
+      "zh": "萬聖節"
     },
     {
-      "en": "Hong Kong",
-      "zh": "香港"
+      "en": "pumpkin",
+      "zh": "南瓜"
     },
     {
-      "en": "Vietnam",
-      "zh": "越南"
+      "en": "Christmas",
+      "zh": "聖誕節"
     },
     {
-      "en": "Thailand",
-      "zh": "泰國"
-    },
-    {
-      "en": "the Philippines",
-      "zh": "菲律賓"
+      "en": "Santa Claus",
+      "zh": "聖誕老人"
     }
   ],
+  "focus": "過去簡單式（規則動詞）",
+  "grammar": "動詞加 -ed 表示過去做過的事，常搭配 last year、yesterday 這類時間詞。",
   "exercises": {
     "mcq": [
       {
-        "q": "以下哪個英文單字的意思是「飛機」？",
+        "q": "搭乘捷運的英文是？",
         "opts": [
-          "airplane",
+          "bus",
+          "way",
           "MRT",
-          "station",
-          "airport"
-        ],
-        "ans": "airplane"
-      },
-      {
-        "q": "以下哪個英文單字的意思是「捷運」？",
-        "opts": [
-          "airplane",
-          "MRT",
-          "station",
-          "airport"
+          "car"
         ],
         "ans": "MRT"
       },
       {
-        "q": "以下哪個英文單字的意思是「車站」？",
+        "q": "紅包的英文是？",
         "opts": [
-          "airplane",
-          "MRT",
-          "station",
-          "airport"
-        ],
-        "ans": "station"
-      },
-      {
-        "q": "以下哪個英文單字的意思是「機場」？",
-        "opts": [
-          "airplane",
-          "MRT",
-          "station",
-          "airport"
-        ],
-        "ans": "airport"
-      },
-      {
-        "q": "以下哪個英文單字的意思是「橋」？",
-        "opts": [
-          "bridge",
-          "traffic",
-          "way",
-          "trip"
-        ],
-        "ans": "bridge"
-      },
-      {
-        "q": "以下哪個英文單字的意思是「交通」？",
-        "opts": [
-          "bridge",
-          "traffic",
-          "way",
-          "trip"
-        ],
-        "ans": "traffic"
-      },
-      {
-        "q": "以下哪個英文單字的意思是「方式」？",
-        "opts": [
-          "bridge",
-          "traffic",
-          "way",
-          "trip"
-        ],
-        "ans": "way"
-      },
-      {
-        "q": "以下哪個英文單字的意思是「旅行」？",
-        "opts": [
-          "bridge",
-          "traffic",
-          "way",
-          "trip"
-        ],
-        "ans": "trip"
-      },
-      {
-        "q": "以下哪個英文單字的意思是「參觀」？",
-        "opts": [
-          "visit",
-          "drive",
-          "ride",
-          "fly"
-        ],
-        "ans": "visit"
-      },
-      {
-        "q": "以下哪個英文單字的意思是「開車」？",
-        "opts": [
-          "visit",
-          "drive",
-          "ride",
-          "fly"
-        ],
-        "ans": "drive"
-      },
-      {
-        "q": "How do you go to the airport? I ____ by bus.",
-        "opts": [
-          "go",
-          "fly",
-          "drive",
-          "ride"
-        ],
-        "ans": "go"
-      },
-      {
-        "q": "How do you go to the station? I ____ by MRT.",
-        "opts": [
-          "go",
-          "fly",
-          "drive",
-          "ride"
-        ],
-        "ans": "go"
-      },
-      {
-        "q": "How do you go to Japan? I ____ to Japan.",
-        "opts": [
-          "fly",
-          "drive",
-          "ride",
-          "wait"
-        ],
-        "ans": "fly"
-      },
-      {
-        "q": "How did you go to the airport? I ____ by bus.",
-        "opts": [
-          "went",
-          "go",
-          "goes",
-          "going"
-        ],
-        "ans": "went"
-      },
-      {
-        "q": "How did you go to the station? I ____ the MRT.",
-        "opts": [
-          "took",
-          "take",
-          "takes",
-          "taking"
-        ],
-        "ans": "took"
-      },
-      {
-        "q": "How did you go to Japan? I ____ to Japan.",
-        "opts": [
-          "flew",
-          "fly",
-          "flies",
-          "flying"
-        ],
-        "ans": "flew"
-      },
-      {
-        "q": "How do you go to the station? I ____ the MRT.",
-        "opts": [
-          "ride",
-          "drive",
-          "fly",
-          "wait"
-        ],
-        "ans": "ride"
-      },
-      {
-        "q": "How do you go to the airport? I ____ for the bus.",
-        "opts": [
+          "red envelope",
+          "trip",
           "wait",
-          "fly",
-          "drive",
-          "ride"
+          "gift"
         ],
-        "ans": "wait"
+        "ans": "red envelope"
       },
       {
-        "q": "How did you go to the airport? I ____ for the bus.",
+        "q": "Yesterday I ______ for the bus. (等待)",
         "opts": [
+          "gift",
           "waited",
           "wait",
-          "waits",
           "waiting"
         ],
         "ans": "waited"
       },
       {
-        "q": "How do you go to the bridge? I ____ by bus.",
+        "q": "Last year they ______ Chinese New Year. (拜訪)",
         "opts": [
-          "go",
-          "went",
-          "ride",
-          "fly"
+          "visited",
+          "visiting",
+          "visits",
+          "visit"
         ],
-        "ans": "go"
+        "ans": "visited"
       },
       {
-        "q": "How did you go to the bridge? I ____ by bus.",
+        "q": "Yesterday we ______ for the MRT. (等待)",
         "opts": [
-          "go",
-          "went",
-          "ride",
-          "fly"
-        ],
-        "ans": "went"
-      },
-      {
-        "q": "How did you go to the station? I ____ by MRT.",
-        "opts": [
-          "go",
-          "went",
-          "ride",
-          "fly"
-        ],
-        "ans": "went"
-      },
-      {
-        "q": "How do you go to Japan? I ____ by airplane.",
-        "opts": [
-          "go",
-          "went",
-          "visit",
+          "waiting",
+          "waits",
+          "waited",
           "wait"
         ],
-        "ans": "go"
+        "ans": "waited"
       },
       {
-        "q": "How did you go to Japan? I ____ by airplane.",
+        "q": "Last year they ______ the Dragon Boat Festival. (拜訪)",
         "opts": [
-          "go",
-          "went",
           "visit",
+          "visits",
+          "gift",
+          "visited"
+        ],
+        "ans": "visited"
+      },
+      {
+        "q": "Yesterday she ______ for the bus. (等待)",
+        "opts": [
+          "visit",
+          "waited",
+          "wait",
+          "waiting"
+        ],
+        "ans": "waited"
+      },
+      {
+        "q": "聖誕老人的英文是？",
+        "opts": [
+          "Santa Claus",
+          "Halloween",
+          "gift",
+          "pumpkin"
+        ],
+        "ans": "Santa Claus"
+      },
+      {
+        "q": "Last year they ______ the Moon Festival. (參觀)",
+        "opts": [
+          "visit",
+          "gift",
+          "trip",
+          "visited"
+        ],
+        "ans": "visited"
+      },
+      {
+        "q": "Last year they ______ for the MRT. (等待)",
+        "opts": [
+          "waiting",
+          "waited",
+          "trip",
           "wait"
-        ],
-        "ans": "went"
-      },
-      {
-        "q": "How do you go to Vietnam? I ____ the MRT.",
-        "opts": [
-          "ride",
-          "rode",
-          "drive",
-          "drove"
-        ],
-        "ans": "ride"
-      },
-      {
-        "q": "How did you go to Vietnam? I ____ the MRT.",
-        "opts": [
-          "ride",
-          "rode",
-          "drive",
-          "drove"
-        ],
-        "ans": "rode"
-      },
-      {
-        "q": "How do you go to Thailand? I ____ for the MRT.",
-        "opts": [
-          "wait",
-          "waited",
-          "visit",
-          "visited"
-        ],
-        "ans": "wait"
-      },
-      {
-        "q": "How did you go to Thailand? I ____ for the MRT.",
-        "opts": [
-          "wait",
-          "waited",
-          "visit",
-          "visited"
         ],
         "ans": "waited"
       }
     ],
     "fill": [
       {
-        "q": "How do you go to school? I ____ by bus.（我搭公車去學校）",
-        "ans": "go"
+        "q": "I ____ the MRT yesterday.（我昨天參觀了捷運）",
+        "ans": "visited"
       },
       {
-        "q": "We ____ to the airport yesterday.（我們昨天去了機場）",
-        "ans": "went"
+        "q": "She gave me a ____ for my birthday.（她送我一份禮物作為生日禮物）",
+        "ans": "gift"
       },
       {
-        "q": "She ____ a plane to Japan last summer.（她去年夏天搭飛機去日本）",
-        "ans": "flew"
-      },
-      {
-        "q": "They ____ the MRT station every day.（他們每天去車站）",
-        "ans": "visit"
-      },
-      {
-        "q": "The bridge is a good ____ to cross the river.（這座橋是過河的好方法）",
+        "q": "This is the ____ to the station.（這是去車站的路徑）",
         "ans": "way"
       },
       {
-        "q": "We often ____ in traffic on the way to the airport.（我們在去機場的路上常常在塞車中等待）",
+        "q": "Please ____ here for five minutes.（請在此等候五分鐘）",
         "ans": "wait"
       },
       {
-        "q": "He ____ his homework before dinner.（他晚餐前做完功課）",
-        "ans": "did"
+        "q": "We went to the park ____.（我們昨天去了公園）",
+        "ans": "yesterday"
       },
       {
-        "q": "They ____ to Vietnam last year.（他們去年去越南）",
-        "ans": "went"
+        "q": "The cat is ____ the box.（貓在盒子裡）",
+        "ans": "in"
       },
       {
-        "q": "I ____ to Singapore next month for a trip.（我下個月將去新加坡旅行）",
-        "ans": "go"
+        "q": "She sat ____ the chair.（她坐在椅子上）",
+        "ans": "on"
       },
       {
-        "q": "The Philippines ____ many islands.（菲律賓有很多島嶼）",
-        "ans": "has"
+        "q": "He bought a present ____ his friend.（他為朋友買了禮物）",
+        "ans": "for"
+      },
+      {
+        "q": "They went ____ the museum.（他們去了博物館）",
+        "ans": "to"
+      },
+      {
+        "q": "The gift is ____ the table.（禮物在桌子旁）",
+        "ans": "at"
       }
     ],
     "translate": [
       {
-        "q": "你怎麼去日本？",
-        "ans": "How do you go to Japan?"
+        "q": "我昨天參觀了捷運。",
+        "ans": "I visited the MRT yesterday."
       },
       {
-        "q": "我們乘搭捷運去車站。",
-        "ans": "We go to the station by MRT."
+        "q": "她送我一份禮物作為生日禮物。",
+        "ans": "She gave me a gift for my birthday."
       },
       {
-        "q": "他們去了機場。",
-        "ans": "They went to the airport."
+        "q": "這是去車站的路徑。",
+        "ans": "This is the way to the station."
       },
       {
-        "q": "她飛去泰國。",
-        "ans": "She flew to Thailand."
+        "q": "請在此等候五分鐘。",
+        "ans": "Please wait here for five minutes."
       },
       {
-        "q": "我等公車。",
-        "ans": "I wait for the bus."
+        "q": "我們昨天去了公園。",
+        "ans": "We went to the park yesterday."
       },
       {
-        "q": "我們參觀香港。",
-        "ans": "We visit Hong Kong."
+        "q": "貓在盒子裡。",
+        "ans": "The cat is in the box."
       },
       {
-        "q": "他開車去越南。",
-        "ans": "He drove to Vietnam."
+        "q": "她坐在椅子上。",
+        "ans": "She sat on the chair."
       },
       {
-        "q": "菲律賓有很多旅行。",
-        "ans": "The Philippines has many trips."
+        "q": "他為朋友買了禮物。",
+        "ans": "He bought a present for his friend."
       }
     ],
     "unscramble": [
       {
-        "q": "Japan / to / do / ? / go / you / How",
-        "ans": "How do you go to Japan?"
+        "q": "yesterday / visited / . / bus / the / I",
+        "ans": "I visited the bus yesterday."
       },
       {
-        "q": "station / . / the / go / to / by / MRT / We",
-        "ans": "We go to the station by MRT."
+        "q": "waited / the / for / She / . / gift",
+        "ans": "She waited for the gift."
       },
       {
-        "q": "They / the / to / went / airport / .",
-        "ans": "They went to the airport."
+        "q": ". / wait / Please / here",
+        "ans": "Please wait here."
       },
       {
-        "q": "Thailand / She / flew / to / .",
-        "ans": "She flew to Thailand."
+        "q": ". / way / the / is / This",
+        "ans": "This is the way."
       },
       {
-        "q": "the / for / bus / I / . / wait",
-        "ans": "I wait for the bus."
+        "q": "visited / . / We / MRT / the / today",
+        "ans": "We visited the MRT today."
       },
       {
-        "q": "We / Kong / visit / . / Hong",
-        "ans": "We visit Hong Kong."
+        "q": "Christmas / . / We / liked",
+        "ans": "We liked Christmas."
       }
     ]
   },
