@@ -1,0 +1,50 @@
+{
+  "slug": "visperad-05",
+  "siglum": "Vr 5",
+  "title_zh": "維斯帕拉德 第 5 章",
+  "title_en": "Visperad 5",
+  "canon": "avestan",
+  "volume": "visperad",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/visperad/visperad.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "達梅斯特（James Darmesteter）",
+  "en_url": "https://www.avesta.org/visperad/vrsbe.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "ratu": "拉圖",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 5,
+      "verse": 1,
+      "ref": "Vr 5.1",
+      "orig": "vîse vô amesha speñta staota zaota zbâta\nýashta framareta aibijareta ýûshmâkem\nýasnâica vahmâica xshnaothrâica frasastayaêca\nýat ameshanãm speñtanãm ahmâkem\nhavanghâica ratufritayaêca ashavastâica verethrakhnyâica\nhurunyâica ýat saoshyañtãm ashaonãm.",
+      "en": "I come to You, O Ye Bountiful Immortals! as a praiser priest,\nand invoker, as a memoriser, reciting (Your ritual), and as a\nchanter for Your sacrifice and homage, Your propitiation, and\nYour praise; (yea, for Yours) the Bountiful Immortals, and for\nour preparation, (O ye holy Saoshyants!) and for your well-timed\nprayer for blessings, and your sanctification, and for our victorious\nsmiting of our foes, beneficial (as it is) for our souls, for\nours, the Saoshyants, (with you), and holy. 2. And I make my offering\nto You, O Ye Bountiful Immortals, who rule aright, and who dispose\n(of all) aright! (Yea), I offer You the flesh of my very body,\nand all the blessings of my life as well. 1. This piece should be read after Yasna 14, with which it is \n nearly identical. The language of the translation is slightly varied \n to relieve the effect of sameness.",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 2,
+      "ref": "Vr 5.2",
+      "orig": "pairî-vê ameshâ speñtâ huxshathrâ\nhudhånghô dadhãmi tanvascît hvah'yå\nushtanem pairî vîspå hujîtayô.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 3,
+      "ref": "Vr 5.3",
+      "orig": "frâ-tê verene ahe daênaya ashâum ahura\nmazda mazdayasnô zarathushtrish vîdaêvô\n... mraotû!!",
+      "en": "And I confess my belief in Thee, O Ahura Mazda! and as a Mazdayasnian\nof the order of Zarathushtra, and in accordance with this Faith.\n<H3 ID=chap6",
+      "zh": ""
+    }
+  ]
+}

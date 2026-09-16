@@ -1,0 +1,100 @@
+{
+  "slug": "yasht-07",
+  "siglum": "Yt 7",
+  "title_zh": "亞什特 第 7 首‧月讚",
+  "title_en": "Yasht 7",
+  "canon": "avestan",
+  "volume": "yasht",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/ka/yt7.htm",
+  "en_source": "《東方聖書》第 23 卷，1883；公有領域",
+  "en_translator": "達梅斯特（James Darmesteter）",
+  "en_url": "https://www.avesta.org/ka/yt7sbe.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Mithra": "密特拉",
+    "Anahita": "阿娜希塔",
+    "Tishtrya": "提什特里亞",
+    "Verethraghna": "韋雷特拉格納",
+    "Vayu": "瓦尤",
+    "Rashnu": "拉什努",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "khvarenah": "赫瓦雷納",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 7,
+      "verse": 0,
+      "ref": "Yt 7.0",
+      "orig": "(pa nãm i ýazdã, hôrmezd i hvadâe\ni awazûnî gurz hvarahe awazâyât,\nmâh i buxtâr mâh ýazat bê rasât,\n ezh hamâ gunâh ... pa patit hôm!) \nxshnaothra ahurahe mazdå, tarôidîti angrahe\nmainyêush, haithyâvarshtãm hyat vasnâ\nferashôtemem. staomî ashem,\nashem vohû...(3).\nfravarâne mazdayasnô zarathushtrish vîdaêvô\nahura-tkaêshô,",
+      "en": "May Ahura Mazda be rejoiced!....\nAshem Vohu: Holiness is the best of all good....\nI confess myself a worshipper of Mazda, a follower of Zarathushtra,\none who hates the Daevas and obeys the laws of Ahura;\nFor sacrifice,prayer, propitiation, and glorification unto [Havani],\nthe holy and master of holiness....\nUnto the Moon that keeps in it the seed of the Bull; unto the\nonly-created Bull and unto the Bull of many species;\nBe propitiation, with sacrifice, prayer, propitiation, and glorification.\nYatha ahu vairyo: The will of the Lord is the law of holiness....",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 1,
+      "ref": "Yt 7.1",
+      "orig": "nemô ahurâi mazdâi nemô ameshaêibyô\nspeñtaêibyô nemô månghâi\ngaocithrâi nemô paiti-dîtâi nemô\npaiti-dîti.",
+      "en": "Hail to Ahura Mazda! Hail to the Amesha-Spentas! Hail to the\nMoon that keeps in it the seed of the Bull! Hail to thee when\nwe look at thee! Hail to thee when thou lookest at us!",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 2,
+      "ref": "Yt 7.2",
+      "orig": "kat må uxshyeiti kat må nerefsaiti, pañca-dasa\nmå uxshyeiti pañca-dasa må nerefsaiti, ýå\nhê uxshyãstâtô tå nerefsãstâtô\ntå nerefsãstâtô ýå hê\nuxshyãstâtascit, kê ýâ må\nuxshyeiti nerefsaiti thwat.",
+      "en": "How does the moon wax? How does the moon wane?\nFor fifteen days does the moon wax; for fifteen days does the\nmoon wane. As long as her waxing, so long is the waning; as long\nas her waning, so long is the waxing.\n'Who is there but thee who makes the moon wax and wane?'",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 3,
+      "ref": "Yt 7.3",
+      "orig": "månghem gaocithrem ashavanem ashahe ratûm ýazamaide,\ntat månghem paiti-vaênem tat månghem paiti-vîsem\nraoxshnem månghem aiwi-vaênem raoxshnem månghem\naiwi- vîsem, hishteñti ameshå speñta\nhvarenô dârayeiñti hishteñti ameshå\nspeñta hvarenô baxsheñti zãm paiti\nahuradhâtãm.",
+      "en": "We sacrifice unto the Moon that keeps in it the seed of the\nBull, the holy and master of holiness.\nHere I look at the moon, here I perceive the moon; here I look\nat the light of the moon, here I perceive the light of the moon.\nThe Amesha-Spentas stand up holding its glory; the Amesha-Spentas\nstand up, pouring its glory upon the earth, made by Mazda.",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 4,
+      "ref": "Yt 7.4",
+      "orig": "âat ýat månghem raoxshne tâpayeiti\nmishti urvaranãm zairi-gaonanãm zaramaêm paiti\nzemâdha uzuxshyeiti, añtaremånghåsca\nperenô-månghåsca vîshaptathåsca,\nañtaremånghem ashavanem ashahe ratûm ýazamaide,\nperenô-månghem ashavanem ashahe ratûm ýazamaide.\nvîshaptathem ashavanem ashahe ratûm ýazamaide.",
+      "en": "And when the light of the moon waxes warmer, golden-hued plants\ngrow on from the earth during the spring.\nWe sacrifice unto the new moons, the full moons, and the Vishaptathas.\nWe sacrifice unto the new moon, the holy and master of holiness;\nWe sacrifice unto the full moon, the holy and master of holiness;\nWe sacrifice unto the Vishaptatha, the holy and master of holiness.",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 5,
+      "ref": "Yt 7.5",
+      "orig": "ýazâi månghem gaocithrem bakhem raêvañtem\nhvarenanguhañtem afnanguhañtem tafnanguhañtem\nvarecanguhañtem xshtâvañtem îshtavañtem\nýaoxshtavañtem saokavañtem zairimyâvañtem\nvohvâvañtem bakhem baêshazem.",
+      "en": "I will sacrifice unto the Moon, that keeps in it the seed\nof the Bull, the liberal, bright, glorious, water-giving, warmth-giving,\nwisdom-giving, wealth-giving, riches-giving, thoughtfulness-giving,\nweal-giving, freshness-giving, prosperity-giving, the liberal,\nthe healing.",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 6,
+      "ref": "Yt 7.6",
+      "orig": "ahe raya hvarenanghaca\ntem ýazâi surunvata ýasna\nmånghem gaocithrem zaothrâbyô,\nmånghem gaocithrem ashavanem ashahe ratûm ýazamaide\nhaomayô gava baresmana, hizvô danghangha mãthraca,\nvacaca shyaothnaca zaothrâbyasca, arshuxdhaêibyasca\nvâkhzhibyô.\nýenghê hâtãm âat ýesnê\npaitî vanghô mazdå ahurô vaêthâ\nashât hacâ ýånghãmcâ tãscâ\ntåscâ ýazamaide!",
+      "en": "For its brightness and glory, I will offer unto it a sacrifice\nworth being heard, namely, unto the Moon that keeps in it the\nseed of the Bull.\nUnto the Moon that keeps in it the seed of the Bull, we offer\nup the libations, the Haoma and meat, the baresma, the wisdom\nof the tongue, the holy spells, the speech, the deeds, the libations,\nand the rightly-spoken words.\nYenghe hatam: All those beings of whom Ahura Mazda....",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 7,
+      "ref": "Yt 7.7",
+      "orig": "ýathâ ahû vairyô...(2).\nýasnemca vahmemca aojasca zavareca âfrînâmi\nmånghahe gaocithrahe gêushca aêvô- dâtayå\ngêushca pouru-saredhayå.\nashem vohû....\n ahmâi raêshca ... hazangrem ... jasa-mê ... (kerba mazhd...) atha jamyât ýatha âfrînâmi. \nashem vohû...!!",
+      "en": "Yatha ahu vairyo: The will of the Lord is the law of holiness....\nI bless the sacrifice and prayer, and the strength and vigour\nof the Moon, that keeps in it the seed of the Bull, and of the\nonly-created Bull, and of the Bull of many species.\nAshem Vohu: Holiness is the best of all good.\nGive unto that man brightness and glory, give him health of body,\n.... give him the bright, all-happy, blissful abode of the holy\nOnes.",
+      "zh": ""
+    }
+  ]
+}

@@ -1,0 +1,364 @@
+{
+  "slug": "yasht-12",
+  "siglum": "Yt 12",
+  "title_zh": "亞什特 第 12 首‧拉什努讚",
+  "title_en": "Yasht 12",
+  "canon": "avestan",
+  "volume": "yasht",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/ka/yt12.htm",
+  "en_source": "《東方聖書》第 23 卷，1883；公有領域",
+  "en_translator": "達梅斯特（James Darmesteter）",
+  "en_url": "https://www.avesta.org/ka/yt12sbe.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Mithra": "密特拉",
+    "Anahita": "阿娜希塔",
+    "Tishtrya": "提什特里亞",
+    "Verethraghna": "韋雷特拉格納",
+    "Vayu": "瓦尤",
+    "Rashnu": "拉什努",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "khvarenah": "赫瓦雷納",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 12,
+      "verse": 0,
+      "ref": "Yt 12.0",
+      "orig": "(pa nãm i ýazdã, hôrmezd i hvadâe\ni awazûnî gurz hvarahe awazâyât,\nrashn i râst i ýazat bê rasât,\n ezh hamâ gunâh ... pa patit hôm!) \nxshnaothra ahurahe mazdå, tarôidîti angrahe\nmainyêush, haithyâvarshtãm hyat vasnâ\nferashôtemem. staomî ashem,\nashem vohû...(3).\nfravarâne mazdayasnô zarathushtrish vîdaêvô\nahura-tkaêshô,\n (Here recite the appropriate Gah dedication.)",
+      "en": "May Ahura Mazda be rejoiced!....\nAshem Vohu: Holiness is the best of all good....\nI confess myself a worshipper of Mazda, a follower of Zarathushtra,\none who hates the Daevas and obeys the laws of Ahura;\nFor sacrifice, prayer, propitiation, and glorification unto [Havani],\nthe holy and master of holiness.\nUnto Rashnu Razishta; unto Arshtat, who makes the world grow,\nwho makes the world increase; unto the true-spoken speech, that\nmakes the world grow;\nBe propitiation, with sacrifice, prayer, propitiation, and glorification.\nYatha ahu vairyo: The will of the Lord is the law of holiness....",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": 1,
+      "ref": "Yt 12.1",
+      "orig": "paiti dim peresat ashava,\nashâum ahura mazda\nise thwãm ahura mazda\nperese thwãm rashnya uxdhahe\npaiti mê vîdhvå mrûidhi,\nadhaoyô ahi adhaoyô-xratush adhaoyô vîspô-\nvîdhvå, kat asti mãthrahe speñtahe arsh-dâtem\nkat frazhdâtem kat vîcithem kat thamnanghuñtem\nkat varecanghuñtem kat ýaoxshtivañtem\ntaradhâtem anyâish dâmãn.",
+      "en": "The holy (Zarathushtra) asked him: 'O holy Ahura Mazda! I\nask thee; answer me with words of truth, thou who knowest the\ntruth. Thou art undeceivable, thou hast an undeceivable understanding;\nthou art undeceivable, as thou knowest everything.\n'What of the Holy Word is created true? what is created progress-making?\nwhat is fit to discern? what is healthful? what is wise? what\nis happy and more powerful to destroy than all other creatures?'",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": 2,
+      "ref": "Yt 12.2",
+      "orig": "âat mraot ahurô mazdå,\nazem bâ-tê tat framravâni\nerezvô ashâum spitama,\nmãthrô speñtô ýô ash-hvarenå\ntat asti mãthrahe speñtahe arsh-dâtem tat\nfrazhdâtem tat vîcithem tat thamnanghuñtem\ntat varecanghuñtem tat ýaoxshtivañtem\ntaradhâtem anyâish dâmãn.",
+      "en": "Ahura Mazda answered: 'I will declare that unto thee, O pure,\nholy Spitama!\n'The most glorious Holy Word (itself), this is what in the Holy\nWord is created true, what is created progress making, what is\nfit to discern, what is healthful, wise, and happy, what is more\npowerful to destroy than all other creatures.'",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": 3,
+      "ref": "Yt 12.3",
+      "orig": "âat mraot ahurô mazdå,\nthrishum baresma frasterenuyå\npaitisha hû adhwanem,\nzbayamahi frînâmahi mãm ýim ahurem mazdãm,\nurvathãmcit zbayemi\navi imat varô uzdâtem\navi âtremca baresmâca\navi perenãm vîkhzhârayeiñtîm\navi raokhnyãm varanghem\nâzuitîmca urvaranãm.",
+      "en": "Ahura Mazda said: 'Bind up a three-twigged baresma against\nthe way of the sun. [Address] unto me, Ahura Mazda, these words:\n\"We invoke, we bless [Ahura]; I invoke the friendship [of\nAhura] towards this var (ordeal) prepared, towards the fire and\nthe baresma, towards the full boiling [milk], towards the var\nof oil and the sap of the plants.\"",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": 4,
+      "ref": "Yt 12.4",
+      "orig": "aêtat tê jasâni avanghe\nazem ýô ahurô mazdå\navi avat varô uzdâtem\navi âtremca baresmâca\navi perenãm vîkhzhârayeiñtîm\navi raokhnyãm varanghem\nâzuitîmca urvaranãm\nhathra vâta verethrâjanô\nhathra dâmôish upamanô\nhathra kavaêm hvarenô\nhathra saoke mazdadhâite.",
+      "en": "'Then I, Ahura Mazda, shall come for help unto thee, towards\nthis var prepared, towards the fire and the baresma, towards the\nfull boiling [milk], towards the var of oil and the sap of the\nplants;\n'Along with the fiend-smiting Wind, along with the cursing thought\nof the wise, along with the kingly Glory, along with Saoka, made\nby Mazda.",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": 5,
+      "ref": "Yt 12.5",
+      "orig": "zbayamahi frînâmahi rashnûm ýim amavañtem,\nurvathãmcit zbayemi avi imat varô uzdâtem avi\nâtremca baresmâca avi perenãm vîkhzhârayeiñtîm\navi raokhnyãm varanghem âzuitîmca urvaranãm.",
+      "en": "'We invoke, we bless Rashnu, the strong; I invoke his friendship\ntowards this var prepared, towards the fire and the baresma, towards\nthe full boiling [milk], towards the var of oil and the sap of:\nthe plants.",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": 6,
+      "ref": "Yt 12.6",
+      "orig": "aêtat tê jasâiti avanghe rashnush berezô\nýô amavå avi imat varô uzdâtem\navi âtremca baresmâca avi perenãm vîkhzhârayeiñtîm\navi raokhnyãm varanghem âzuitîmca urvaranãm\nhathra vâta verethrâjanô hathra dâmôish\nupamanô hathra kavaêm hvarenô hathra saoke mazdadhâite.",
+      "en": "'Then Rashnu the tall, the strong, will come for help unto\nthee, towards this var prepared, towards the fire and the baresma,\ntowards the full boiling [milk], towards the var of oil and the\nsap of the plants:\n'Along with the fiend-smiting Wind, along with the cursing thought\nof the wise, along with the kingly Glory, along with Saoka, made\nby Mazda.",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": 7,
+      "ref": "Yt 12.7",
+      "orig": "rashnvô ashâum rashnvô razishta rashnvô\nspênishta rashnvô vaêdhishta rashnvô vidhcôishta\nrashnvô parakavistema rashnvô dûraêdareshtema\nrashnvô arethamat bairishta\nrashnvô tâyûm nijakhnishta.",
+      "en": "'O thou, holy Rashnu! O most true Rashnu! most beneficent\nRashnu! most knowing Rashnu! most discerning Rashnu I most fore-knowing\nRashnu! most far-seeing Rashnu I Rashnu, the best doer of justice!\nRashnu, the best smiter of thieves;",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": 8,
+      "ref": "Yt 12.8",
+      "orig": "atbishta hâidhishta jakhnishta nasishta tâyûmca\nhazanguhanemca ahmi arethe ýahmi gaêthe kesha vashta\nhadha nara tadha mara hadha nâ-tanasush.",
+      "en": "'The uninjured, the best killer, smiter, destroyer of thieves\nand bandits! in whatever part of the world thou art watching the\ndoings of men and making the account... (obscure).",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": 9,
+      "ref": "Yt 12.9",
+      "orig": "ýatcit ahi rashnvô ashâum upa karshvare\nýat arezahi\nzbayamahi ... rashnûm ýim amavañtem ... nâ-\ntanasush. (Repeat verses 5-8.)",
+      "en": "'Whether thou, O hoIy Rashnu! art in the Karshvare Arezahi,\nwe invoke, we bless Rashnu, the strong. I invoke his friendship\ntowards this var prepared .... in whatever part of the world thou\nart.",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": 10,
+      "ref": "Yt 12.10",
+      "orig": "ýatcit ahi rashnvô ashâum upa karshvare\nýat savahi\nzbayamahi .... (Repeat verses 5-8.)",
+      "en": "'Whether thou, O holy Rashnu! art in the Karshvare Savahi,\nwe invoke, we bless Rashnu. I invoke his friendship towards this\nvar prepared ... in whatever part of the world thou art.",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": 11,
+      "ref": "Yt 12.11",
+      "orig": "ýatcit ahi rashnvô ashâum upa karshvare\nýat fradadhafshu\nzbayamahi .... (Repeat verses 5-8.)",
+      "en": "'Whether thou, O holy Rashnu! art in the Karshvare Fradadhafshu,\nwe invoke, we bless Rashnu, the strong. I invoke his friendship\ntowards this var prepared .... in whatever part of the world thou\nart.",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": 12,
+      "ref": "Yt 12.12",
+      "orig": "ýatcit ahi rashnvô ashâum upa karshvare\nýat vîdadhafshu\nzbayamahi .... (Repeat verses 5-8.)",
+      "en": "'Whether thou, O holy Rashnu! art in the Karshvare Vidadhafshu,\nwe invoke, we bless Rashnu, the strong. I invoke his friendship\ntowards this var prepared .... in whatever part of the world thou\nart.",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": 13,
+      "ref": "Yt 12.13",
+      "orig": "ýatcit ahi rashnvô ashâum upa karshvare\nýat vouru-bareshti\nzbayamahi .... (Repeat verses 5-8.)",
+      "en": "'Whether thou, O holy Rashnu! art in the Karshvare Vouru-bareshti,\nwe invoke, we bless Rashnu, the strong. I invoke his friendship\ntowards this var prepared .... in whatever part of the world thou\nart.",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": 14,
+      "ref": "Yt 12.14",
+      "orig": "ýatcit ahi rashnvô ashâum upa karshvare\nýat vouru-jareshti\nzbayamahi .... (Repeat verses 5-8.)",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": 15,
+      "ref": "Yt 12.15",
+      "orig": "ýatcit ahi rashnvô ashâum imat karshvare\nýat hvanirathem bâmîm\nzbayamahi .... (Repeat verses 5-8.)",
+      "en": "'Whether thou, O holy Rashnu! art in this Karshvare, the bright\nHvaniratha, we invoke, we bless Rashnu, the strong. I invoke his\nfriendship towards this var prepared .... in whatever part of\nthe world thou art.",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": 16,
+      "ref": "Yt 12.16",
+      "orig": "ýatcit ahi rashnvô ashâum upa zrayô\nvourukashem\nzbayamahi .... (Repeat verses 5-8.)",
+      "en": "'Whether thou, O holy Rashnu! art in the sea Vouru-Kasha,\nwe invoke, we bless Rashnu, the strong. I invoke his friendship\ntowards this var prepared .... in whatever part of the world thou\nart.",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": 17,
+      "ref": "Yt 12.17",
+      "orig": "ýatcit ahi rashnvô ashâum upa avãm\nvanãm ýãm saênahe ýâ hishtaite\nmaidhîm zrayanghô vourukashahe ýâ hubish\neredhwô-bish ýâ vaoce vîspô-bish\nnãma\nýãm upairi urvaranãm\nvîspanãm taoxma nidhayat\nzbayamahi .... (Repeat verses 5-8.)",
+      "en": "'Whether thou, O holy Rashnu! art on the tree of the eagle,\nthat stands in the middle of the sea Vouru-Kasha, that is called\nthe tree of good remedies, the tree of powerful remedies, the\ntree of all remedies, and on which rest the seeds of all plants;\nwe invoke, we bless Rashnu, the strong. I invoke his friendship\ntowards this var prepared....",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": 18,
+      "ref": "Yt 12.18",
+      "orig": "ýatcit ahi rashnvô ashâum upa aodhaêshu\nranghayå\nzbayamahi .... (Repeat verses 5-8.)",
+      "en": "'Whether thou, O holy Rashnu! art on the Aodhas of the Rangha,\nwe invoke, we bless Rashnu, the strong. I invoke his friendship\ntowards this var prepared....",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": 19,
+      "ref": "Yt 12.19",
+      "orig": "ýatcit ahi rashnvô ashâum upa sanake ranghayå\nzbayamahi .... (Repeat verses 5-8.)",
+      "en": "'Whether thou, O holy Rashnu! art on the Sanaka of the Rangha,\nwe invoke, we bless Rashnu, the strong. I invoke his friendship\ntowards this var prepared....",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": 20,
+      "ref": "Yt 12.20",
+      "orig": "ýatcit ahi rashnvô ashâum upa karanem ainghå\nzemô\nzbayamahi .... (Repeat verses 5-8.)",
+      "en": "'Whether thou, O holy Rashnu! art at one of the angles of\nthis earth, we invoke we bless Rashnu. I invoke his friendship\ntowards this var prepared....",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": 21,
+      "ref": "Yt 12.21",
+      "orig": "ýatcit ahi rashnvô ashâum upa vîmaidhîm\nainghå zemô\nzbayamahi .... (Repeat verses 5-8.)",
+      "en": "'Whether thou, O holy Rashnu! art at the boundary of this\nearth, we invoke, we bless Rashnu. I invoke his friendship towards\nthis var prepared....",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": 22,
+      "ref": "Yt 12.22",
+      "orig": "ýatcit ahi rashnvô ashâum upa kvacit ainghå\nzemô\nzbayamahi .... (Repeat verses 5-8.)",
+      "en": "'Whether thou, O holy Rashnu! art in any place of this earth,\nwe invoke, we bless Rashnu. I invoke his friendship towards this\nvar prepared....",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": 23,
+      "ref": "Yt 12.23",
+      "orig": "ýatcit ahi rashnvô ashâum upa harãm\nberezaitîm paouru-fraourvaêsãm bâmyãm\nýathra nôit xshapa nôit temå\nnôit aotô vâtô nôit garemô\nnôit axtish paouru-mahrkô\nnôit âhitish daêvô-dâta\nnaêdha dunmãn uzjasaiti\nharaithyô paiti barezayå\nzbayamahi .... (Repeat verses 5-8.)",
+      "en": "'Whether thou, O holy Rashnu! art on the Hara Berezaiti, the\nbright mountain around which the many (stars) revolve, where come\nneither night nor darkness, no cold wind and no hot wind, no deathful\nsickness, no uncleanness made by the Daevas, and the clouds cannot\nreach up unto the Haraiti Bareza; we invoke, we bless Rashnu.\nI invoke his friendship towards this var prepared....",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": 24,
+      "ref": "Yt 12.24",
+      "orig": "ýatcit ahi rashnvô ashâum\nupa hukairîm barezô\nvîspôvamem zaranaênem\nýahmat mê haca frazgadhaite\naredvî sûra anâhita\nhazangrâi bareshna vîranãm\nzbayamahi .... (Repeat verses 5-8.)",
+      "en": "'Whether thou, O holy Rashnu! art upon the highest Hukairya,\nof the deep precipices, made of gold, where from this river of\nmine, Ardvi Sura Anahita, leaps from a thousand times the height\nof a man, we invoke, we bless Rashnu, the strong. I invoke his\nfriendship towards this var prepared....",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": 25,
+      "ref": "Yt 12.25",
+      "orig": "ýatcit ahi rashnvô ashâum\nupa taêrem haraithyå barezô\nýat mê aiwitô urviseñti\nstarasca måsca hvareca\nzbayamahi .... (Repeat verses 5-8.)",
+      "en": "'Whether thou, O holy Rashnu! art upon the Taera of the height\nHaraiti, around which the stars, the moon, and the sun revolve,\nwe invoke, we bless Rashnu, the strong. I invoke his friendship\ntowards this var prepared....",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": 26,
+      "ref": "Yt 12.26",
+      "orig": "ýatcit ahi rashnvô ashâum upa vanañtem\nstârem mazdadhâtem\nzbayamahi .... (Repeat verses 5-8.)",
+      "en": "'Whether thou, O holy Rashnu! art in the star Vanant, made\nby Mazda, we invoke, we bless Rashnu, the strong. I invoke his\nfriendship towards this var prepared....",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": 27,
+      "ref": "Yt 12.27",
+      "orig": "ýatcit ahi rashnvô ashâum upa tishtrîm\nstârem raêvañtem hvarenanguhañtem\nzbayamahi .... (Repeat verses 5-8.)",
+      "en": "'Whether thou, O holy Rashnu! art in the bright and glorious\nstar Tishtrya, we invoke, we bless Rashnu, the strong. I invoke\nhis friendship towards the var prepared....",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": 28,
+      "ref": "Yt 12.28",
+      "orig": "ýatcit ahi rashnvô ashâum upa ave stârô\nýôi haptôiriñga\nzbayamahi .... (Repeat verses 5-8.)",
+      "en": "'Whether thou, O holy Rashnu! art in the group of the Haptoiringa\nstars, we invoke, we bless Rashnu, the strong. I invoke his friendship\ntowards this var prepared....",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": 29,
+      "ref": "Yt 12.29",
+      "orig": "ýatcit ahi rashnvô ashâum upa ave stârô\nýôi afsh-cithra\nzbayamahi .... (Repeat verses 5-8.)",
+      "en": "'Whether thou, O holy Rashnu! art in those stars that have\nthe seed of the waters in them, we invoke, we bless Rashnu, the\nstrong. I invoke his friendship towards this var prepared....",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": 30,
+      "ref": "Yt 12.30",
+      "orig": "ýatcit ahi rashnvô ashâum upa ave stârô\nýôi zemascithra\nzbayamahi .... (Repeat verses 5-8.)",
+      "en": "'Whether thou, O holy Rashnu! art in those stars that have\nthe seed of the earth in them, we invoke, we bless Rashnu, the\nstrong. I invoke his friendship towards this var prepared....",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": 31,
+      "ref": "Yt 12.31",
+      "orig": "ýatcit ahi rashnvô ashâum upa ave stârô\nýôi urvarô-cithra\nzbayamahi .... (Repeat verses 5-8.)",
+      "en": "'Whether thou, O holy Rashnu! art in those stars that have\nthe seed of the plants in them, we invoke, we bless Rashnu, the\nstrong. I invoke his friendship towards this var prepared....",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": 32,
+      "ref": "Yt 12.32",
+      "orig": "ýatcit ahi rashnvô ashâum upa ave stârô\nýôi speñtô-mainyava\nzbayamahi .... (Repeat verses 5-8.)",
+      "en": "'Whether thou, O holy Rashnu! art in the stars that belong\nto the Good Spirit, we invoke, we bless Rashnu, the strong. I\ninvoke his friendship towards this var prepared....",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": 33,
+      "ref": "Yt 12.33",
+      "orig": "ýatcit ahi rashnvô ashâum upa aom månghem\ngaocithrem\nzbayamahi .... (Repeat verses 5-8.)",
+      "en": "'Whether thou, O holy Rashnu! art in the moon which has the\nseed of the Bull in it, we invoke, we bless Rashnu, the strong.\nI invoke his friendship towards this var prepared....",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": 34,
+      "ref": "Yt 12.34",
+      "orig": "ýatcit ahi rashnvô ashâum upa hvarexshaêtem\naurvat-aspem\nzbayamahi .... (Repeat verses 5-8.)",
+      "en": "'Whether thou, O holy Rashnu! art in the swift-horsed sun,\nwe invoke, we bless Rashnu, the strong. I invoke his friendship\ntowards this var prepared....",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": 35,
+      "ref": "Yt 12.35",
+      "orig": "ýatcit ahi rashnvô ashâum upa anakhra raocå\nhvadhâtå\nzbayamahi .... (Repeat verses 5-8.)",
+      "en": "'Whether thou, O holy Rashnu! art in the sovereign endless\nLight, we invoke, we bless Rashnu, the strong. I invoke his friendship\ntowards this var prepared....",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": 36,
+      "ref": "Yt 12.36",
+      "orig": "ýatcit ahi rashnvô ashâum upa vahishtem\nahûm ashaonãm raocanghem vîspô-hvâthrem\nzbayamahi .... (Repeat verses 5-8.)",
+      "en": "'Whether thou, O holy Rashnu! art in the bright, all-happy,\nblissful abode of the holy Ones, we invoke, we bless Rashnu, the\nstrong. I invoke his friendship towards this var prepared....",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": 37,
+      "ref": "Yt 12.37",
+      "orig": "ýatcit ahi rashnvô ashâum upa raoxshnahe\ngarô- nmânahe\nzbayamahi ... hadha nâ-tanasush. (Repeat verses 5-8.)",
+      "en": "'Whether thou, O holy Rashnu! art in the shining Garo-demana,\nwe invoke, we bless Rashnu, the strong. I invoke his friendship\ntowards this var prepared....",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": 38,
+      "ref": "Yt 12.38",
+      "orig": "",
+      "en": "'Whether thou, O holy Rashnu! art, ... (obscure) we invoke,\nwe bless Rashnu, the strong. I invoke his friendship towards this\nvar prepared....",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": 39,
+      "ref": "Yt 12.39",
+      "orig": "",
+      "en": "'For his brightness and glory, I will offer unto him a sacrifice\nworth being heard....\n'Yenhe hatam: All those beings of whom Ahura Mazda....",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": 40,
+      "ref": "Yt 12.40",
+      "orig": "",
+      "en": "'Yatha ahu vairyo: The will of the Lord is the law of holiness....\n'I bless the sacrifice and prayer, and the strength and vigour\nof Rashnu Razishta; of Arshtat, who makes the world grow, who\nmakes the world increase; and of the true-spoken speech that makes\nthe world grow.\n'Ashem Vohu: Holiness is the best of all good....\n'[Give] unto that man brightness and glory, give him health of\nbody, .... give him the bright, all-happy, blissful abode of the\nholy Ones.'",
+      "zh": ""
+    }
+  ]
+}

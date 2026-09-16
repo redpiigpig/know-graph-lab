@@ -1,0 +1,196 @@
+{
+  "slug": "yasht-03",
+  "siglum": "Yt 3",
+  "title_zh": "亞什特 第 3 首‧阿沙‧瓦希什塔讚",
+  "title_en": "Yasht 3",
+  "canon": "avestan",
+  "volume": "yasht",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/ka/yt3.htm",
+  "en_source": "《東方聖書》第 23 卷，1883；公有領域",
+  "en_translator": "達梅斯特（James Darmesteter）",
+  "en_url": "https://www.avesta.org/ka/yt3sbe.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Mithra": "密特拉",
+    "Anahita": "阿娜希塔",
+    "Tishtrya": "提什特里亞",
+    "Verethraghna": "韋雷特拉格納",
+    "Vayu": "瓦尤",
+    "Rashnu": "拉什努",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "khvarenah": "赫瓦雷納",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 3,
+      "verse": 0,
+      "ref": "Yt 3.0",
+      "orig": "(pa nãm i ýazdã, hôrmezd i hvadâe\ni awazûnî gurz hvarahe awazâyât, ardabahisht\nameshâspeñd bê rasât,\n ezh hamâ gunâh ... pa patit hôm!) \nxshnaothra ahurahe mazdå, tarôidîti angrahe\nmainyêush, haithyâvarshtãm hyat vasnâ\nferashôtemem. staomî ashem,\nashem vohû...(3).\nfravarâne mazdayasnô zarathushtrish vîdaêvô\nahura-tkaêshô,\n (Here recite the appropriate Gah dedication.) \nashahe vahishtahe sraêshtahe airyamanô ishyehe sûrahe\nmazdadhâtahe saokayå vanghuyå vouru-dôithrayå\nmazdadhâtayå ashaonyå\nxshnaothra ýasnâica vahmâica xshnaothrâica\nfrasastayaêca,\nýathâ ahû vairyô zaotâ frâ-mê\nmrûtê,\nathâ ratush ashâtcît haca frâ ashava vîdhvå\nmraotû!",
+      "en": "May Ahura Mazda be rejoiced! ....\nAshem Vohu: Holiness is the best of all good....\nI confess myself a worshipper of Mazda, a follower of Zarathushtra,\none who hates the Daevas and obeys the laws of Ahura;\nFor sacrifice, prayer, propitiation, and glorification unto [Havani],\nthe holy and master of holiness....\nUnto Asha-Vahishta, the fairest; unto the much-desired Airyaman,\nmade by Mazda, and unto the good Saoka, with eyes of love, made\nby Mazda and holy;\nBe propitiation, with sacrifice, prayer, propitiation, and glorification.\nYatha ahu vairyo: The will of the Lord is the law of holiness....",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 1,
+      "ref": "Yt 3.1",
+      "orig": "mraot ahurô mazdå spitamâi zarathushtrâi,\nâat ýat asha vahishta fradaithîsha spitama\nzarathushtra staotareca zaotareca zbâtareca mãthranaca\nýashtareca âfrîtareca aibijaretareca vanghâna\nxshaêta raocå hvanvaitîshca verezô ahmâkem\nýasnâica vahmâica ýat ameshanãm\nspeñtanãm.",
+      "en": "Ahura Mazda spake unto Spitama Zarathushtra, saying: 'That\nthou mayest increase Asha-Vahishta, O Spitama Zarathushtra! with\nhymns of praise, with performance of the office, with invocations,\nholy words, sacrifice, blessings, and adoration - once to abide\nin the shining luminous space, in the beautiful abodes - for the\nsacrifice and invocation of us, the Amesha-Spentas'....",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 2,
+      "ref": "Yt 3.2",
+      "orig": "âat aoxta zarathushtrô, mrûidhi bâ\nvacô arsh-vacô ahura mazda, ýatha tê\nanghen ýat asha vahishta frâdâhîsh spitama\nzarathushtra staotareca zaotareca zbâtareca mãthranaca\nýashtareca âfrîtareca aibijaretareca vanghâna\nxshaêta raocå hvanvaitîshca verezô ýûshmâkem\nýasnâica vahmâica ýat ameshanãm\nspeñtanãm.",
+      "en": "Zarathushtra said: 'Say unto me the right words, such as they\nare, O Ahura Mazda! that I may increase Asha-Vahishta, with hymns\nof praise, with performance of the office, with invocations, holy\nwords, sacrifice, blessings, and adoration, - once to abide in\nthe shining luminous space, in the beautiful abodes, - for the\nsacrifice and invocation of you, the Amesha-Spentas.",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 3,
+      "ref": "Yt 3.3",
+      "orig": "âdim framraomi ashem vahishtem, ýezi framraomi\nashem vahishtem âat anyaêshãm ýat ameshanãm\nspeñtanãm hvâyaonem ýim pâiti\nmazdå humatâish ýim pâiti mazdå\nhûxtâish ýim pâiti mazdå hvarshtâish,\ngarô-nmâne ahurahe hvâyaonem.",
+      "en": "'.... I proclaim Asha-Vahishta: if I proclaim Asha-Vahishta,\nthen easy is the way to the abode of the other Amesha-Spentas,\nwhich Ahura Mazda keeps with Good Thoughts, which Ahura Mazda\nkeep with Good Words, which Ahura Mazda keeps with Good Deeds;",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 4,
+      "ref": "Yt 3.4",
+      "orig": "garô nmânem nereyô asti ashâvaoyô\nnaêcish drvatãm ayene paitish garô nmânem\nravôhu ashâyaonem cithrem ahurem mazdãm.",
+      "en": "'(Easy is the way to the Garo-nmana of Ahura Mazda): the Garo-nmana\nis for the holy souls, and no one of the wicked can enter the\nGaro-nmana and its bright, wide, holy ways; (no one of them can\ngo) to Ahura Mazda.",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 5,
+      "ref": "Yt 3.5",
+      "orig": "janaiti vîspaêshãm angrô mainyush\nahmâi ýâthwãm pairikanãmca airyamanem\nmãthranãm mazishtem mãthranãm vahishtem\nmãthranãm sraêshtem mãthranãm\nsraêshtôtemem mãthranãm ukhrem mãthranãm\nukhrôtemem mãthranãm derezrem mãthranãm\nderezrôtemem mãthranãm vârethrakhni\nmãthranãm vârethrakhnyôtemem mãthranãm\nbaêshazem mãthranãm baêshazyôtemem.",
+      "en": "'The Airyaman prayer smites down the strength of all the creatures\nof Angra Mainyu, of the Yatus and Pairikas. It is the greatest\nof spells, the best of spells, the very best of all spells; the\nfairest of spells, the very fairest of all spells; the fearful\none amongst spells, the most fearful of all spells; the firm one\namongst spells, the firmest of all spells; the victorious one\namongst spells, the most victorious of all spells; the healing\none amongst spells, the best-healing of all spells.",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 6,
+      "ref": "Yt 3.6",
+      "orig": "mãthranãm ashô-baêshazô dâtô-baêshazô\nkaretô-baêshazô urvarô-baêshazô\nmãthrô-baêshazô baêshazanãm\nbaêshazyôtemô ýat mãthrem speñtem\nbaêshazyô, ýô narsh ashaonô haca\nuruthwãn baêshazyât, aêshô-zî\nasti baêshazanãm baêshazyôtemô.",
+      "en": "'One may heal with Holiness, one may heal with the Law, one\nmay heal with the knife, one may heal with herbs, one may heal\nwith the Holy Word: amongst all remedies this one is the healing\none that heals with the Holy Word; this one it is at will best\ndrive away sickness from the body of the faithful: for this one\nis the best-healing of all remedies.",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 7,
+      "ref": "Yt 3.7",
+      "orig": "ýaska apa-dvarata mahrka apa-dvarata daêva apa-dvarata\npaityâra apa-dvarata, ashemaokhô anashava apa-dvarata\nmashyô sâsta apa-dvarata,",
+      "en": "'Sickness fled away [before it], Death fled away; the Daeva\nfled away, the Daeva's counter-work fled away; the unholy Ashemaogha\nfled away, the oppressor of men fled away.",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 8,
+      "ref": "Yt 3.8",
+      "orig": "azhicithra apa-dvarata vehrkô-cithra apa-dvarata bizeñgrô-cithra\napa-dvarata, tarô-mata apa-dvarata pairi-mata apa-dvarata\ntafnu apa-dvarata spazga apa-dvarata anâxshta apa-dvarata\nduzhdôithra apa-dvarata,",
+      "en": "'The brood of the Snake fled away; the brood of the Wolf fled\naway; the brood of the Two-legged fled away. Pride fled away;\nScorn fled away; Hot Fever fled away; Slander fled away; Discord\nfled away; the Evil Eye fled away.",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 9,
+      "ref": "Yt 3.9",
+      "orig": "draokhô vâxsh draojishta apa-dvarata, jahi ýâtumaiti\napa-dvarata jahi kahvaredhaine apa-dvarata, vâtô paourvô-apâxtara\napa-dvarata vâtô paourvô-apâxtara apa-nasyata\nýasca-mê aêtaêshãm ýat\nazhicithranãm.",
+      "en": "'The most lying words of falsehood fled away; the Jahi, addicted\nto the Yatu, fled away; the Jahi, who makes one pine, fled away;\nthe wind that blows from the North fled away; the wind that blows\nfrom the North vanished away.",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 10,
+      "ref": "Yt 3.10",
+      "orig": "ýô janat aêshãm daêvanãm\nhazangrâi hazangrô pairi baêvarâi baêvanô\npaiti ýaska jaiñti mahrka jaiñti daêva\njaiñti paityâra jaiñti ashemaokhô anashava\njaiñti mashyô sâsta jaiñti,",
+      "en": "'He it is who smites me that brood of the Snake, and who might\nsmite those Daevas by thousands of thousands, by ten thousands\nof ten thousands; he smites sickness, he smites death, he smites\nthe Daevas, he smites the Daeva's counter-work, he smites the\nunholy Ashemaogha, he smites the oppressor of men.",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 11,
+      "ref": "Yt 3.11",
+      "orig": "azhicithra jaiñti vehrkô-cithra jaiñti\nbizeñgrô-cithra jaiñti tarô-mata jaiñti\npairi-mata jaiñti tafnu jaiñti spazga jaiñti\nanâxshta jaiñti duzhdôithra jaiñti,",
+      "en": "'He smites the brood of the Snake; he smites the brood of\nthe Wolf; he smites the brood of the Two-legged. He smites Pride;\nhe smites Scorn; he smites Hot Fever; he smites Slander; he smites\nDiscord; he smites the Evil Eye.",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 12,
+      "ref": "Yt 3.12",
+      "orig": "draokhô vâxsh draojishta jaiñti jahi ýâtumaiti\njaiñti jahi kahvaredhaine jaiñti vâtô\npaourvô-apâxtara jaiñti vâtô paourvô-apâxtara\napa-nasyata ýasca-mê aêtaêshãm\nýat bizeñgrô-cithranãm.",
+      "en": "'He smites the most lying words of falsehood; he smites the\nJahi, addicted to the Yatu; he smites the Jahi, who makes one\npine. He smites the wind that blows from the North; the wind that\nblows from the North vanished away.",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 13,
+      "ref": "Yt 3.13",
+      "orig": "ýô janat aêshãm daêvanãm\nhazangrâi hazangrô pairi baêvarâi baêvanô\npairi paourva-naêmât patat\ndyaosh daêvanãm draojishtô\nangrô mainyush pouru-mahrkô.",
+      "en": "'He it is who smites me that brood of the Two-legged, and\nwho might smite those Daevas, by thousands of thousands, by ten\nthousands of ten thousands. Angra Mainyu, who is all death, the\nworst-lying of all Daevas, rushed from before him:",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 14,
+      "ref": "Yt 3.14",
+      "orig": "adavata angrô mainyush pouru-mahrkô, âvôya-mê\nbâvôya asha vahishta ýaskanãm ýaskôtemem\njanât ýaskanãm ýaskôtemem tbaêshayât,\nmahrkanãm mahrkôtemem janât mahrkanãm\nmahrkôtemem tbaêshayât, daêvanãm\ndaêvôtemem janât daêvanãm daêvôtemem\ntbaêshayât, paityâranãm paityârôtemem\njanât paityâranãm paityârôtemem\ntbaêshayât, ashemaokhô anashava janât\nashemaokhô anashava tbaêshayât, mashyô-sâsta-sâstôtemem\njanât mashyô-sâsta-sâstôtemem tbaêshayât.",
+      "en": "'He exclaimed, did Angra Mainyu: \"Woe is me! Here is\nthe god Asha-Vahishta, who will smite the sickliest of all sicknesses,\nwho will afflict the sickliest of all sicknesses;\n'\"He will smite the deadliest of all deaths, he will afflict\nthe deadliest of all deaths;\n'\"He will smite the most fiendish of all fiends, he will\nafflict the most fiendish of all fiends;\n'\"He will smite the most counter-working of all counter-works,\nhe will afflict the most counter-working of all counter-works;\n'\"He will smite the unholy Ashemaogha, he will afflict the\nunholy Ashemaogha;\n'\"He will smite the most oppressive of the oppressors of\nmen, he will afflict most oppressive of the oppressors of men.",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 15,
+      "ref": "Yt 3.15",
+      "orig": "azhicithra-azhicithrôtemem janât azhicithra- azhicithrôtemem\ntbaêshayât vehrkô-cithra-vehrkô-cithrôtemem\njanât vehrkô-cithra-vehrkô-cithrôtemem\ntbaêshayât bizeñgrô-cithra-bizeñgrô-cithrôtemem\njanât bizeñgrô-cithra-bizeñgrô-cithrôtemem\ntbaêshayât tarô-mata janât tarô-mata\ntbaêshayât pairi-mata janât pairi-mata tbaêshayât\ntafnu-tafnôtemem janât tafnu-tafnôtemem tbaêshayât\nspazga-spazgôtemem janât spazga-spazgôtemem\ntbaêshayât anâxshta-anâxshtôtemem\njanât anâxshta- anâxshtôtemem tbaêshayât\nduzhdôithra-duzhdôithrôtemem janât duzhdôithra-\nduzhdôithrôtemem tbaêshayât.",
+      "en": "'\"He will smite the snakiest of the Snake's brood, he\nwill afflict the snakiest of the Snake's brood;\n'\"He will smite the most wolfish of the Wolf's brood, he\nwill afflict the most wolfish of the Wolf's brood;\n'\"He will smite the worst of the two-legged brood, he will\nafflict the worst of the two-legged brood;\n'\"He will smite Pride, he will afflict Pride;\n'\"He will smite Scorn, he will afflict Scorn;\n'\"He will smite the hottest of hot fevers, he will afflict\nthe hottest of hot fevers;\n'\"He will smite the most slanderous of slanders, he will\nafflict the most slanderous of slanders;\n'\"He will smite the most discordant of discords, he will\nafflict the most discordant of discords;\n'\"He will smite the worst of the Evil Eye, he will afflict\nthe worst of the Evil Eye.",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 16,
+      "ref": "Yt 3.16",
+      "orig": "draokhô vâxsh-draojishtô janât draokhô\nvâxsh-draojishtô tbaêshayât jahi ýâtumaiti\njanât jahi ýâtumaiti tbaêshayât\njahi kahvaredhaine janât jahi kahvaredhaine tbaêshayât\nvâtô paourvô-apâxtara janât vâtô\npaourvô-apâxtara tbaêshayât.",
+      "en": "'\"He will smite the most lying words of falsehood, he\nwill afflict the most lying words of falsehood;\n'\"He will smite the Jahi, addicted to the Yatu, he will afflict\nthe Jahi, addicted to the Yatu;\n'\"He will smite the Jahi, who makes one pine, he will afflict\nthe Jahi, who makes one pine;\n'\"He will smite the wind that blows from the North, he will\nafflict the wind that blows from the North.\"",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 17,
+      "ref": "Yt 3.17",
+      "orig": "apanasyât druxsh nasyât druxsh dvârât\ndruxsh vînasyât apâxedhre apa-nasyehe mâ\nmereñcainîsh gaêthå astvaitîsh\nashahe!",
+      "en": "'The Druj will perish away, the Druj will perish; the Druj\nwill rush, the Druj will vanish. Thou perishest away to the regions\nof the North, never more to give unto death the living world of\nthe holy spirit.",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 18,
+      "ref": "Yt 3.18",
+      "orig": "ahe raya hvarenanghaca\ntem ýazâi surunvata ýasna ashem vahishtem\nsraêshtem ameshem speñtem zaothrâbyô,\nashem vahishtem sraêshtem ameshem speñtem ýazamaide\nhaomayô gava baresmana, hizvô danghangha mãthraca,\nvacaca shyaothnaca zaothrâbyasca, arshuxdhaêibyasca\nvâkhzhibyô.\nýenghê hâtãm âat ýesnê\npaitî vanghô mazdå ahurô vaêthâ\nashât hacâ ýånghãmcâ tãscâ\ntåscâ ýazamaide.",
+      "en": "'For his brightness and glory I will offer unto him a sacrifice\nworth being heard, namely, unto Asha-Vahishta, the fairest - the\nAmesha-Spenta. Unto Asha-Vahishta, the fairest, the Amesha-Spenta,\nwe offer up the libations, the Haoma and meat, the baresma, the\nwisdom of the tongue, the holy spells, the speech, the deeds,\nthe libations, and the rightly-spoken words.\n'Yenhe hatam: All those beings of whom Ahura Mazda knows the goodness....",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 19,
+      "ref": "Yt 3.19",
+      "orig": "",
+      "en": "'Yatha ahu vairyo: The will of the Lord is the law of holiness....\n'I bless the sacrifice and prayer and the strength and vigour\nof Asha-Vahishta, the fairest; of the much-desired Airyaman, made\nby Mazda; and of the good Saoka, with eyes of love, made by Mazda\nand holy.\n'Ashem Vohu: Holiness is the best of all good....\n'[Give] unto that man brightness and glory, give him health of\nbody; .... give him the bright, all-happy, blissful abode of the\nholy Ones.'",
+      "zh": ""
+    }
+  ]
+}

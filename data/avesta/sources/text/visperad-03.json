@@ -1,0 +1,82 @@
+{
+  "slug": "visperad-03",
+  "siglum": "Vr 3",
+  "title_zh": "維斯帕拉德 第 3 章",
+  "title_en": "Visperad 3",
+  "canon": "avestan",
+  "volume": "visperad",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/visperad/visperad.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "達梅斯特（James Darmesteter）",
+  "en_url": "https://www.avesta.org/visperad/vrsbe.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "ratu": "拉圖",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 3,
+      "verse": 1,
+      "ref": "Vr 3.1",
+      "orig": "(zôt,) hâvanânem âstâya, (râspî,)\nazem vîsâi, (zôt,) âtravaxshem âstâya,\n(râspî,) azem vîsâi, (zôt,) fraberetârem\nâstâya, (râspî,) azem vîsâi,\n(zôt,) âberetem âstâya, (râspî,)\nazem vîsâi, (zôt,) âsnatârem âstâya,\n(râspî,) azem vîsâi, (zôt,) raêthwishkarem\nâstâya, (râspî,) azem vîsâi,\n(zôt,) sraoshâvarezem âstâya dãhishtem\narshvacastemem, (râspî,) azem vîsâi. ýathâ\nahû vairyô ýô zaotâ frâ-mê\nmrûtê (zôt,) athâ ratush ... mraotû.",
+      "en": "(The Zaotar speaks.) (I call for) the Havanan, and would have\nhim here.\n (The Ratu answers.) I will come (and fulfill his duties).\n (The Zaotar speaks.) I would have the Atarevakhsha here.\n (The Ratu answers.) I will come (and fulfill the services which \nfall to his charge).\n (The Zaotar.) I would have the Frabaretar.\n (The Ratu.) I will come (and fulfill the services which fall to\nhis charge).\n (The Zaotar.) I would have the Aberet present.\n (The Ratu.) I will come (for him).\n (The Zaotar.) I would have the Asnatar.\n (The Ratu.) I will come (and do the duties which he serves).\n (The Zaotar.) I would have the Raethwishkar to be here.\n (The Ratu.) I will come (for him).\n (The Zaotar.) I would have the Sraoshavareza present, the wisest\none, the most correct and veracious in his speech\n (The Ratu.) I will come.",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 2,
+      "ref": "Vr 3.2",
+      "orig": "(zôt u râspî,) âthravanem âstâya,\nrathaêshtârem âstâya, vâstrîm\nfshuyañtem âstâya, nmânahe nmânô-paitîm\nâstâya, vîsô vîspaitîm âstâya,\nzañtêush zañtupaitîm âstâya,\ndainghêush dainghupaitîm âstâya.",
+      "en": "(The Zaotar.) I would have the Fire-priest \nto be here, and the warrior, and the thrifty tiller of the earth,\nand the house-lord, and the lords of the Vis and the Zantu.",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 3,
+      "ref": "Vr 3.3",
+      "orig": "ývânem humananghem hvacanghem hushyaothnem hudaênem\nâstâya. ývânem uxdhô-vacanghem\nâstâya, hvaêtvadathem âstâya, dainghâurvaêsem\nâstâya, humâim pairijathnem âstâya,\nnmânahe nmânô-pathnîm âstâya.",
+      "en": "And I summon the youth of holy thoughts, words and works,\nand of good conscience; (yea), the youth of good speech, given\n(in marriage) to his kin. And I summon the province-ranger, and\nthe itinerant of many arts, and the house-mistress.",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 4,
+      "ref": "Vr 3.4",
+      "orig": "nâirikãmca âstâya frâyô-\nhumatãm frâyô-hûxtãm frâyô-\nhvarshtãm hush-hãm-sâstãm ratuxshathrãm\nashaonîm ýãm ârmaitîm speñtãm\nýåsca tê khenå ahura mazda, naremca ashavanem\nâstâya frâyô-humatem frâyô-hûxtem\nfrâyô-hvarshtem vistô-fraoreitîm evistô-kayadhem\nýenghe shyaothnâish gaêthå asha frâdeñte.",
+      "en": "And I summon the woman advanced in her holy thoughts, and\nwords, and deeds, and well subordinated, whose ruler is her lord,\nthe holy one, who is (as) the bounteous Armaiti; (yea), I summon\neven Thy wives, O Ahura ! And I summon likewise the holy man advanced\nin his good thoughts, and words, and deeds, who is learned in\npious lore, and innocent of the Kayadha, and by whose deeds the\nsettlements are furthered in the righteous order.",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 5,
+      "ref": "Vr 3.5",
+      "orig": "âat vô kascit mazdayasnanãm ratûsh\nâmrûmaide ratûsh âstâyamaide ameshêsca\nspeñtê saoshyañtasca dãhishtê\narshvacastemã aiwyâmatemã ashxrâhvanutemã,\nmazishtê amã âmrûmaide daênayå\nmâzdayasnôish athaurunãsca rathaêshtârêsca\nvâstryãsca fshuyañtô!",
+      "en": "Yea, we summon you, whoever you may be, if only chiefs of\nthe Mazdayasnians; and we summon the Bounteous Immortals, and\nthe pious Saoshyants (the prophets for our help), the most correct\nand truthful in their speech, the most zealous, the most glorious\nin their thoughts, the greatest ones, and the powerful; and we\nsummon the Fire-priests, and the warriors, and the diligent husbandman\nof the Mazdayasnian faith.",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 6,
+      "ref": "Vr 3.6",
+      "orig": "(zôt,) ýathâ ahû vairyô ýô\nâtravaxshô frâ-mê mrûtê, (râspî,)\nathâ ratush ... mraotû, ýathâ ahû\nvairyô ýô zaotâ frâ-mê mrûtê,\n(zôt,) athâ ratush ... mraotû.",
+      "en": "(The Zaotar.) As an Ahu to be (revered and) chosen, the Atarevakhsha\n(announcing) speaks forth to me.\n(The Ratu [?].) So let the Ratu from his righteousness, holy and\nlearned, speak forth.\n(The Ratu.) As an Ahu to be (revered and) chosen, the Zaotar (announcing)\nspeaks forth to me.\n(The Zaotar.) So let the Ratu from (his) righteousness, holy and\nlearned, speak forth.\n(The Ratu.) Thou art the announcer for us, O \nFire-priest! [(Pazand.) It is the Zaotar (who is meant).]\n(The Zaotar.) I will come as this Zaotar, and recite the Staota\nYesnya with memorized intoning, chanting, and praise.",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 7,
+      "ref": "Vr 3.7",
+      "orig": "(râspî,) tûm nô âthraom zaotastê.\n(zôt,) ýathâ ahû vairyô ýô\nâtravaxshô frâ-mê mrûtê, (râspî,)\nathâ ratush ... mraotû. (zôt,) azem aêta\nzaota vîsâi staotanãm ýesnyanãm\nfrasraothremca framarethremca fragâthremca frâyashtîmca!!",
+      "en": "",
+      "zh": ""
+    }
+  ]
+}

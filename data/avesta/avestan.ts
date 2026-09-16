@@ -1,5 +1,5 @@
 import type { ZoroCanon, ZoroText } from './types'
-import { series } from './types'
+import { override, series } from './types'
 
 // 阿維斯陀（正藏）— 阿維斯陀語原典
 //
@@ -226,8 +226,10 @@ export const AVESTAN_CANON: ZoroCanon = {
       divisions: [
         {
           key: 'vr-all', label: '全書（1–24）', label_en: 'Visperad 1–24',
-          desc: '各章的插入位置依帕西祭司傳統固定，本站於篇首標注其對應的亞斯納章次。',
-          columns: { orig: 'available', en: 'available', zh: 'none' },
+          desc: '各章的插入位置依帕西祭司傳統固定，本站於篇首標注其對應的亞斯納章次。'
+            + '第 24 章僅有轉寫——《東方聖書》英譯只到第 23 章。',
+          // 2026-09-16 上架：24 章轉寫全有，英譯 23 章（第 24 章 SBE 未收）。
+          columns: { orig: 'ready', en: 'ready', zh: 'none' },
           texts: series(
             { slug: 'visperad', siglum: 'Vr', orig: 'Visperad', language: AE },
             Array.from({ length: 24 }, (_, i) => [i + 1, `維斯帕拉德 第 ${i + 1} 章`] as [number, string]),
@@ -299,8 +301,10 @@ export const AVESTAN_CANON: ZoroCanon = {
       divisions: [
         {
           key: 'yt-all', label: '二十一讚', label_en: 'Yashts 1–21',
-          columns: { orig: 'available', en: 'available', zh: 'none' },
-          texts: series({ slug: 'yasht', siglum: 'Yt', orig: 'Yasht', language: AE }, [
+          desc: '第 20 首僅有轉寫——韋斯特的《東方聖書》未收該首，線上查無公有領域英譯。',
+          // 2026-09-16 上架：21 首轉寫全有，英譯 20 首（第 20 首無 SBE 英譯）。
+          columns: { orig: 'ready', en: 'ready', zh: 'none' },
+          texts: override(series({ slug: 'yasht', siglum: 'Yt', orig: 'Yasht', language: AE }, [
             [1, '阿胡拉‧馬茲達讚', '主神的二十個名號。'],
             [2, '七不朽聖者讚'],
             [3, '阿沙‧瓦希什塔讚', '至上真理／最勝之義。'],
@@ -322,7 +326,11 @@ export const AVESTAN_CANON: ZoroCanon = {
             [19, '扎姆亞德讚（王者神光讚）', '長篇。敘「赫瓦雷納」（王者神光）在歷代君王與英雄間的轉移與逃逸——伊朗王權神授觀的根本文本，末段預告救世主的降臨。'],
             [20, '瓦南特讚'],
             [21, '豪麻讚（亞什特本）'],
-          ]),
+          ]), {
+            // 韋斯特的《東方聖書》未收第 20 首，線上查無公有領域英譯。
+            // 不覆寫的話書目頁會宣稱它有英譯，而 reader 打開是空的。
+            'yasht-20': { columns: { orig: 'ready', en: 'none', zh: 'none' } },
+          }),
         },
       ],
     },

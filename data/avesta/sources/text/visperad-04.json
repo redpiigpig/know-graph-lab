@@ -1,0 +1,42 @@
+{
+  "slug": "visperad-04",
+  "siglum": "Vr 4",
+  "title_zh": "維斯帕拉德 第 4 章",
+  "title_en": "Visperad 4",
+  "canon": "avestan",
+  "volume": "visperad",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/visperad/visperad.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "達梅斯特（James Darmesteter）",
+  "en_url": "https://www.avesta.org/visperad/vrsbe.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "ratu": "拉圖",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 4,
+      "verse": 1,
+      "ref": "Vr 4.1",
+      "orig": "âca manô mata âca ýazamaide vanguhîmca\nâdãm vanguhîmca ashîm vanguhîmca\ncistîm vanguhîmca drvatâtem avi ratûsh\navi rathwya gereñte.",
+      "en": "(Yea,) we sacrifice to the thoughts of the mind, and to the\ngood wisdom, and to the good and blessed sanctity, and to the\ngood religious knowledge, and to good health (of soul and body).\n[At their (several) seasons, and with the presence of seasonable\ncircumstances, they are hymned.] 2. Confession is to be made for\nthe Kine; we, Zarathushtrian Mazdayasnians, celebrate at the sacrificial\ntime for the Myazda-offering, at the time for the Ratufriti, the\nprayer for blessings, for the sacrificial worship, homage, propitiation,\nand praise of the entire creation of the holy (and the clean). 1. This section, preceding Y. 11, closed in the B.V.S., seems to me \n to belong properly after Yasna 8, and the Myazda offering with \n the Ratufrîti.",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 2,
+      "ref": "Vr 4.2",
+      "orig": "frâ gave vereñdyâi mazdayasna zarathushtrayô\nâ-hîm vaêdhayamahî rathwaêca myazdaêca\nrathwaêca ratufritayaêca vîspayå sãcatca\nashaonô stôish ýasnâica vahmâica\nxshnaothrâica frasastayaêca sraoshô astu, sraoshem\nashîm ... tåscâ ýazamaide!!",
+      "en": "Pazand.\n \n \n<H3 id=chap5",
+      "zh": ""
+    }
+  ]
+}

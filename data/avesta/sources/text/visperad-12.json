@@ -1,0 +1,66 @@
+{
+  "slug": "visperad-12",
+  "siglum": "Vr 12",
+  "title_zh": "維斯帕拉德 第 12 章",
+  "title_en": "Visperad 12",
+  "canon": "avestan",
+  "volume": "visperad",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/visperad/visperad.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "達梅斯特（James Darmesteter）",
+  "en_url": "https://www.avesta.org/visperad/vrsbe.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "ratu": "拉圖",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 12,
+      "verse": 1,
+      "ref": "Vr 12.1",
+      "orig": "haomanãmca hareshyamnanãm ýôi hareshyeñte\nrathwe berezaite ýat ahurâi mazdâi ashaone\nýat zarathushtrâi spitamâi frafshu frâvîra\ntâca hâ vanghush sraoshô ashyô ýô\nashahe hacaite mãzaraya hêca idha ýôithwâ\nastu.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": 2,
+      "ref": "Vr 12.2",
+      "orig": "humaya upanghå cîshmaide ahunahe vairyehe ashaya\nfrasrûtahe frasrâvayamnahe hâvanayåsca\nhaomã hunvaiñtyå ashaya frashûtayå\nfrashâvayamnayå",
+      "en": "We offer the wise offerings of the Ahuna-vairya [ Ahunwar ] intoned with\nsanctity and yet to be intoned, possessing their many teachings\nof religious wisdom (as they to), and those of the two mortars\nwhich pour the Haomas out, and which are pushed forward with precision,\nand are now in the course of being thus advanced once more. 3.\n(And so we teach as well the many teachings of the religious wisdom)\ncontained in the words correctly spoken, in the Zarathushtrian\nutterances, and in the ceremonies correctly practiced, and the\nBaresmans spread exactly, and the Haomas pressed correctly, and\nthe praise, Yasnas, and the doctrines of the Mazdayasnian Religion\nwith their recitations, and their movements. 4. For thus they\nmay become to us more full of devices and of wisdom, and so we\noffer these wise ritual deeds in the creation, so we impart them\nwith their many points of meaning while we (ourselves) still ponder\nthem as those which Ahura Mazda, the holy One, delivered, which\nhave (as if) their nourishment from Vohu Manah and their growth\nfrom the Righteous Order, which are the greatest of all beings,\nthe best, and the most beautiful; for thus shall these be to us\nthe more full of wisest meaning, and more full of incitation and\nmay we be among those (who are) of Spenta Mainyu's world in that\nwe are imparting (to the chosen) these precepts of the wisest\nmeaning and these incitations which are contained therein. 5.\nAnd full of wisest meaning be ye two to us, O (thou) stone mortar,\nand (thou) the iron one, as ye are now turned, and as ye are now\nbeing advanced, ye two mortars of the house, [and of the village,\nof the tribe, and of the province, and ye who are in this house\n(itself), this village, tribe, and province]; yea, in those which\nare ours, Mazdayasnians, who are steadfast in our worship, who\nappear with our wood-billets and our perfumes, and with our supplicated\nblessings [(Pazand) for so may they be to us, the more full of\nwisest teaching].",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": 3,
+      "ref": "Vr 12.3",
+      "orig": "arshuxdhanãmca vacanghãm sravanghãmca\nzarathushtrinãm hvarshtanãmca shyaothnanãm\nbaresmanãmca ashaya frastaretanãm haomanãmca\nashaya hutanãm staotanãmca ýesnyanãm\ndaênayåsca mâzdayasnôish mãthwanãmca\nvaxedhwanãmca varshtvanãmca.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": 4,
+      "ref": "Vr 12.4",
+      "orig": "atha-zî-nê humâyôtara anghen, humaya\naêta dâmãn dademaide humaya cîshmaide\nhumaya mainyâmaide ýã dathat ahurô mazdå\nashava thraoshta vohu manangha vaxsht asha ýâ hâtãm\nmazishtaca vahishtaca sraêshtaca, atha-zî-nê\nhumâyôtaraca îzhyôtaraca ånghâma\nýâish speñtahe mainyêush dâmãn\nýat hîsh humayaca îzhyâca cinathâmaide.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": 5,
+      "ref": "Vr 12.5",
+      "orig": "humaya-nô buyata asmana hâvana ayanghaêna\nhâvana fraoirisimna frashâvayamna nmânayaca\nvîsyaca zañtavaca dainghavaca ahmi nmâne ainghe\nvîsi ahmi zañtvô ainghe dainghô ahmâkemca\nmazdayasnanãm frâyazemnanãm hadha-aêsmanãm\nhadha-baoidhinãm hadha-ratufritinãm, atha-zî-nê\nhumâyôtara anghen. (râspî,) ýathâ\nahû vairyô ýô zaotâ ... mraotû.\nýathâ ahû vairyô...(4). ashem vohû...!!",
+      "en": "",
+      "zh": ""
+    }
+  ]
+}

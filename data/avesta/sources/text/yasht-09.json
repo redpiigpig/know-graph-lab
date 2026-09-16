@@ -1,0 +1,308 @@
+{
+  "slug": "yasht-09",
+  "siglum": "Yt 9",
+  "title_zh": "亞什特 第 9 首‧德爾瓦斯帕讚（牲畜守護讚）",
+  "title_en": "Yasht 9",
+  "canon": "avestan",
+  "volume": "yasht",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/ka/yt9.htm",
+  "en_source": "《東方聖書》第 23 卷，1883；公有領域",
+  "en_translator": "達梅斯特（James Darmesteter）",
+  "en_url": "https://www.avesta.org/ka/yt9sbe.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Mithra": "密特拉",
+    "Anahita": "阿娜希塔",
+    "Tishtrya": "提什特里亞",
+    "Verethraghna": "韋雷特拉格納",
+    "Vayu": "瓦尤",
+    "Rashnu": "拉什努",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "khvarenah": "赫瓦雷納",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 9,
+      "verse": 0,
+      "ref": "Yt 9.0",
+      "orig": "(pa nãm i ýazdã, hôrmezd i hvadâe\ni awazûnî gurz hvarahe awazâyât,\ngêush urve darvâsp hvarahe bê rasât,\n ezh hamâ gunâh ... pa patit hôm!) \nxshnaothra ahurahe mazdå , tarôidîti angrahe\nmainyêush, haithyâvarshtãm hyat vasnâ\nferashôtemem. staomî ashem,\nashem vohû...(3).\nfravarâne mazdayasnô zarathushtrish vîdaêvô\nahura-tkaêshô,\n (Here recite the appropriate Gah dedication.)",
+      "en": "May Ahura Mazda be rejoiced! May Angra Mainyu be afflicted!....\nAshem Vohu: Holiness is the best of all good....\nI confess myself a worshipper of Mazda, a follower of Zarathushtra,\none who hates the Daevas and obeys the laws of Ahura;\nFor sacrifice, prayer, satisfaction, and glorification unto Havani,\nthe holy and master of holiness.\nUnto the powerful Drvaspa, made by Mazda and holy,\nBe propitiation, with sacrifice, prayer, propitiation, and glorification.\nYatha ahu vairyo: The will of the Lord is the law of holiness....\n [1]",
+      "zh": ""
+    },
+    {
+      "chapter": 9,
+      "verse": 1,
+      "ref": "Yt 9.1",
+      "orig": "drvâspãm sûrãm mazdadhâtãm\nashaonîm ýazamaide drvô-pasvãm drvô-staorãm\ndrvô-urvathãm drvô- aperenâyukãm\npouru-spaxshti dûrât pithana hvâthravana darekhô-haxedhrayana",
+      "en": "We sacrifice unto the powerful Drvaspa, made by Mazda and\nholy, who heeps the flocks in health, the herds in health, the\ngrown-up (cattle) in health, the young ones in health; who watches\nwell from afar, with a wide-spread and long-continued welfare-giving\nfriendship;",
+      "zh": ""
+    },
+    {
+      "chapter": 9,
+      "verse": 2,
+      "ref": "Yt 9.2",
+      "orig": "ýuxta-aspãm varetô-rathãm\nhvanat-caxrãm fshaonîm marezãm amavaitîm\nhuraodhãm hvâsaokãm baêshazyãm\ndrvô-stâitîm drvô- varetãm\navanghe narãm ashaonãm.",
+      "en": "Who yokes teams of horses, who makes her chariot turn and\nits wheels sound, fat and glistening, strong, tall-formed, weal-possessing,\nhealth-giving, powerful to stand and powerful to turn for assistance\nto the faithful.",
+      "zh": ""
+    },
+    {
+      "chapter": 9,
+      "verse": 3,
+      "ref": "Yt 9.3",
+      "orig": "tãm ýazata\nhaoshyanghô paradhâtô\nupa upa-bdi harayå berezô\nsrîrayå mazdadhâtayå satem aspanãm\nhazangrem gavãm baêvare anumayanãm uta zaothrãm\nfrabarô,",
+      "en": "To her did Haoshyangha, the Paradhata, offer up a sacrifice\non the enclosure of the Hara, the beautiful height, made by Mazda,\nwith a hundred male horses, a thousand oxen, and ten thousand\nlambs, and with an offering of libations:",
+      "zh": ""
+    },
+    {
+      "chapter": 9,
+      "verse": 4,
+      "ref": "Yt 9.4",
+      "orig": "dazdi-mê vanguhi sevishte\ndrvâspe tat âyaptem\nýat bavâni aiwi-vanyå\nvîspe daêva mâzanya\nýatha azem nôit tarshtô frâ-nmâne\nthwaêshât parô daêvaêibyô\nfrâ ahmât parô vîspe daêva\nanusô tarshta nemåñte\ntarshta temanghô dvâråñte.",
+      "en": "'Grant me this boon, O good, most beneficent Drvaspa! that\nI may overcome all the Daevas of Mazana; that I may never fear\nand bow through terror before the Daevas, but that all the Daevas\nmay fear and bow in spite of themselves before me, that they may\nfear and flee down to darkness.'",
+      "zh": ""
+    },
+    {
+      "chapter": 9,
+      "verse": 5,
+      "ref": "Yt 9.5",
+      "orig": "dathat ahmâi tat avat âyaptem drvâspa sûra\nmazdadhâta ashaoni thrâthri zaothrô-barâi\naredrâi ýazemnâi\njaidhyañtâi dâthrish âyaptem.",
+      "en": "The powerful Drvaspa, made by Mazda, the holy Drvaspa, the\nmaintainer, granted him that boon, as he was offering libations,\ngiving gifts, sacrificing, and entreating that she would grant\nhim that boon.",
+      "zh": ""
+    },
+    {
+      "chapter": 9,
+      "verse": 6,
+      "ref": "Yt 9.6",
+      "orig": "ahe raya hvarenanghaca\ntãm ýazâi surunvata ýasna\ntãm ýazâi huyashta ýasna\ndrvâspãm sûrãm mazdadhâtãm\nashaonîm zaothrâbyô,\ndrvâspãm sûrãm mazdadhâtãm\nashaonîm ýazamaide\nhaomayô gava baresmana, hizvô danghangha mãthraca,\nvacaca shyaothnaca zaothrâbyasca, arshuxdhaêibyasca\nvâkhzhibyô.\nýenghê hâtãm âat ýesnê\npaitî vanghô mazdå ahurô vaêthâ\nashât hacâ ýånghãmcâ tãscâ\ntåscâ ýazamaide!",
+      "en": "For her brightness and glory, I will offer her a sacrifice\nworth being heard; I will offer her a sacrifice well performed,\nnamely, unto the powerful Drvaspa, made by Mazda and holy. We\noffer up libations to the powerful Drvaspa, made by Mazda and\nholy; we offer her the Haoma and meat, the baresma, the wisdom\nof the tongue, the holy spells, the speech, the deeds, the libations,\nand the rightly-spoken words.\nYenghe hatam: All those beings of whom Ahura Mazda....\n [2]",
+      "zh": ""
+    },
+    {
+      "chapter": 9,
+      "verse": 7,
+      "ref": "Yt 9.7",
+      "orig": "drvâspãm ... avanghe narãm ashaonãm.\n(Repeat verses 1-2.)",
+      "en": "We offer up a sacrifice unto the powerful Drvaspa, made by\nMazda and holy, who keeps the flocks in health....\nWho yokes teams of horses .... for assistance to the faithful.",
+      "zh": ""
+    },
+    {
+      "chapter": 9,
+      "verse": 8,
+      "ref": "Yt 9.8",
+      "orig": "tãm ýazata\nýô ýimô xshaêtô hvãthwô\nhukairyât haca barezanghat satem aspanãm hazangrem\ngavãm baêvare anumayanãm uta zaothrãm\nfrabarô,",
+      "en": "To her did Yima Khshaeta, the good shepherd, offer up a sacrifice\nfrom the height Hukairya, with a hundred male horses, a thousand\noxen, ten thousand lambs, and with an offering of libations:",
+      "zh": ""
+    },
+    {
+      "chapter": 9,
+      "verse": 9,
+      "ref": "Yt 9.9",
+      "orig": "dazdi-mê vanguhi sevishte\ndrvâspe tat âyaptem\nýatha azem fshaoni vãthwa\nava-barâni avi mazdå dâmabyô\nýatha azem amerextîm\navi-barâni avi mazdå dâmabyô,",
+      "en": "'Grant me this boon, O good, most beneficent Drvaspa! that\nI may bring fatness and flocks down to the world created by Mazda;\nthat I may bring immortality down to the world created by Mazda;",
+      "zh": ""
+    },
+    {
+      "chapter": 9,
+      "verse": 10,
+      "ref": "Yt 9.10",
+      "orig": "uta azem apa-barâni\nva shudhemca tarshnemca\nhaca mazdå dâmabyô\nuta azem apa-barâni\nva zaourvãmca merethyûmca\nhaca mazdå dâmabyô\nuta azem apa-barâni\nva garememca vâtem aotemca\nhaca mazdå dâmabyô\nhazangrem aiwi-gâmanãm.",
+      "en": "'That I may take away both hunger and thirst, from the world\ncreated by Mazda; that I may take away both old age and death,\nfrom the world created by Mazda; that I may take away both hot\nwind and cold wind, from the world created by Mazda, for a thousand\nyears.'",
+      "zh": ""
+    },
+    {
+      "chapter": 9,
+      "verse": 11,
+      "ref": "Yt 9.11",
+      "orig": "dathat ahmâi tat avat âyaptem drvâspa sûra\nmazdadhâta ashaoni thrâthri zaothrô-barâi\naredrâi ýazemnâi\njaidhyañtâi dâthrish âyaptem.\nahe raya ... tåscâ ýazamaide! (Repeat verse\n6.)",
+      "en": "The powerful Drvaspa, made by Mazda, the holy Drvaspa, the\nmaintainer, granted him that boon, as he was offering lipbations,\ngiving gifts, sacrificing, and entreating that she would grant\nhim that boon.\nFor her brightness and glory, I will offer her a sacrifice worth\nbeing heard....\n [3]",
+      "zh": ""
+    },
+    {
+      "chapter": 9,
+      "verse": 12,
+      "ref": "Yt 9.12",
+      "orig": "drvâspãm ... avanghe narãm ashaonãm.\n(Repeat verses 1-2.)",
+      "en": "We offer up a sacrifice unto the powerful Drvaspa, made by\nMazda and holy, who keeps the flocks in health....\nWho yokes teams of horses .... for assistance to the faithful.",
+      "zh": ""
+    },
+    {
+      "chapter": 9,
+      "verse": 13,
+      "ref": "Yt 9.13",
+      "orig": "tãm ýazata\nvîsô puthrô âthwyânôish\nvîsô sûrayå thraêtaonô\nupa varenem cathru-gaoshem satem aspanãm hazangrem gavãm\nbaêvare anumayanãm uta zaothrãm frabarô,",
+      "en": "To her did Thraetaona, the heir of the valiant Athwya clan,\noffer up a sacrifice in the four-cornered Varena, with a hundred\nmale horses, a thousand oxen, ten thousand lambs, and with an\noffering of libations:",
+      "zh": ""
+    },
+    {
+      "chapter": 9,
+      "verse": 14,
+      "ref": "Yt 9.14",
+      "orig": "dazdi-mê vanguhi sevishte\ndrvâspe tat âyaptem\nýat bavâni aiwi-vanyå azhîm dahâkem\nthrizafanem thrikameredhem xshvash-ashîm hazangrâ-ýaoxshtîm\nashaojanghem daêvîm drujem akhem gaêthâvyô\ndrvañtem ýãm ashaojastemãm drujem\nfraca kereñtat angrô mainyush aoi ýãm\nastvaitîm gaêthãm mahrkâi ashahe gaêthanãm,\nuta-hê vañta azâni\nsanghavâci arenavâci\nýôi hen kehrpa sraêshta zazâtêe\ngaêthyâi tê ýôi abdôteme.",
+      "en": "'Grant me this boon, O good, most beneficent Drvaspa! that\nI may overcome Azhi Dahaka, the three-mouthed, the three-headed,\nthe six-eyed, who has a thousand senses, that most powerful, fiendish\nDruj, that demon, baleful to the world, the strongest Druj that\nAngra Mainyu created against the material world, to destroy the\nworld of the good principle; and that I may deliver his two wives,\nSavanghavack and Erenavach, who are the fairest of body amongst\nwomen, and the most wonderful creatures in the world.'",
+      "zh": ""
+    },
+    {
+      "chapter": 9,
+      "verse": 15,
+      "ref": "Yt 9.15",
+      "orig": "dathat ahmâi ... tåscâ ýazamaide!\n(Repeat verses 5-6).",
+      "en": "The powerful Drvaspa, made by Mazda, the holy Drvasya, the\nmaintainer, granted him that boon, as he was offering up libations,\ngiving gifts, sacrificing, and entreating that she would grant\nhim that boon.\nFor her brightness and glory, I will offer her a sacrifice worth\nbeing heard....\n [4]",
+      "zh": ""
+    },
+    {
+      "chapter": 9,
+      "verse": 16,
+      "ref": "Yt 9.16",
+      "orig": "drvâspãm ... avanghe narãm ashaonãm.\n(Repeat verses 1-2.)",
+      "en": "We offer up a sacrifice unto the powerful Drvaspa, made by\nMazda and holy, who keeps flocks in health....\nWho yokes teams of horses .... for assistance to the faithful.",
+      "zh": ""
+    },
+    {
+      "chapter": 9,
+      "verse": 17,
+      "ref": "Yt 9.17",
+      "orig": "tãm ýazata\nhaomô frâshmish baêshazyô\nsrîrô xshathryô zairi-dôithrô\nbarezishte paiti barezahi\nharaithyô paiti barezayå, âat hîm jaidhyat\navat âyaptem,",
+      "en": "To her did Haoma offer up a sacrifice, Haoma, the enlivening,\nthe healing, the beautiful, the lordly, with golden eyes, upon\nthe highest height of the Haraiti Bareza. He begged of her a boon\nsaying:",
+      "zh": ""
+    },
+    {
+      "chapter": 9,
+      "verse": 18,
+      "ref": "Yt 9.18",
+      "orig": "dazdi-mê vanguhi sevishte\ndrvâspe tat âyaptem\nýatha azem bañdayeni\nmairîm tûirîm frangrasyânem\nuta bastem vâdhayeni\nuta bastem upanayeni bastem kavôish haosravanghahe\njanât tem kava haosrava\npasne varôish caêcastahe\njafrahe uruyâpahe\nputhrô kaêna syâvarshânâi\nzûrô-jatahe narahe\nakhraêrathaheca naravahe.",
+      "en": "'Grant me this boon, O good, most beneficent Drvaspa! that\nI may bind the Turanian murderer Franghrasyan, that I may drag\nhim bound, that may bring him bound unto king Husravah, that king\nHusravah may kill him, behind the Chaechasta lake, the deep lake\nof salt waters, to avenge the murder of his father Syavarshana,\na man, and of Aghraeratha, a semi-man.'",
+      "zh": ""
+    },
+    {
+      "chapter": 9,
+      "verse": 19,
+      "ref": "Yt 9.19",
+      "orig": "dathat ahmâi ... tåscâ ýazamaide!\n(Repeat verses 5-6.)",
+      "en": "The powerful Drvaspa, made by Mazda, the holy Drvaspa, the\nmaintainer, granted him that boon, as he was offering up libations,\ngiving gifts, sacrificing, and entreating that she would give\nhim that boon.\nFor her brightness and glory, I will offer her a sacrifice worth\nbeing heard....\n [5]",
+      "zh": ""
+    },
+    {
+      "chapter": 9,
+      "verse": 20,
+      "ref": "Yt 9.20",
+      "orig": "drvâspãm ... avanghe narãm ashaonãm.\n(Repeat verses 1-2.)",
+      "en": "We offer up a sacrifice unto the powerful Drvaspa, made by\nMazda and holy, who keeps the flocks in health....\nWho yokes teams of horses .... for assistance to the faithful.",
+      "zh": ""
+    },
+    {
+      "chapter": 9,
+      "verse": 21,
+      "ref": "Yt 9.21",
+      "orig": "tãm ýazata\narsha airyanãm dah'yunãm\nxshathrâi hañkeremô haosrava\npasne varôish caêcastahe\njafrahe urvyâpahe satem aspanãm hazangrem gavãm\nbaêvare anumayanãm uta zaothrãm frabarô,",
+      "en": "To her did the gallant Husravah, he who united the Arya nations\ninto one kingdom, offer up a sacrifice, behind the Chaechasta\nlake, the deep lake of salt waters, with a hundred male horses,\na thousand oxen, ten thousand lambs, and an offering of libations:",
+      "zh": ""
+    },
+    {
+      "chapter": 9,
+      "verse": 22,
+      "ref": "Yt 9.22",
+      "orig": "dazdi-mê vanguhi sevishte\ndrvâspe tat âyaptem\nýatha azem nijanâni\nmairîm tûirîm frangrasyânem\npasne varôish caêcastahe\njafrahe urvyâpahe\nputhrô kaêna syâvarshânâi\nzûrô-jatahe narahe akhraêrathaheca naravahe.",
+      "en": "'Grant me this boon, O good, most beneficent Drvaspa! that\nI may kill the Turanian murderer, Franghrasyan, behind the Chaechasta\nlake, the deep lake of salt waters, to avenge the murder of my\nfather Syavarshana, a man, and of Aghraeratha, a semi-man.'",
+      "zh": ""
+    },
+    {
+      "chapter": 9,
+      "verse": 23,
+      "ref": "Yt 9.23",
+      "orig": "dathat ahmâi ... tåscâ ýazamaide!\n(Repeat verses 5-6.)",
+      "en": "The powerful Drvaspa, made by Mazda, the holy Drvaspa, the\nmaintainer, granted him that boon, as he was offering up libations,\ngiving gifts, sacrificing, and entreating that she would grant\nhim that boon.\nFor her brightness and glory, I will offer her a sacrifice worth\nbeing heard....\n [6]",
+      "zh": ""
+    },
+    {
+      "chapter": 9,
+      "verse": 24,
+      "ref": "Yt 9.24",
+      "orig": "drvâspãm ... avanghe narãm ashaonãm.\n(Repeat verses 1-2.)",
+      "en": "We offer up a sacrifice unlo the powerful Drvaspa, made by\nMazda and holy, who keeps the flocks in health....\nWho yokes teams of horses .... for assistance to the faithful,",
+      "zh": ""
+    },
+    {
+      "chapter": 9,
+      "verse": 25,
+      "ref": "Yt 9.25",
+      "orig": "tãm ýazata\nýô ashava zarathushtrô airyene vaêjahi\nvanghuyå dâityayå\nhaomayô gava baresmana, hizvô danghangha mãthraca,\nvacaca shyaothnaca zaothrâbyasca, arshuxdhaêibyasca\nvâkhzhibyô, âat hîm jaidhyat avat âyaptem,",
+      "en": "To her did the holy Zarathushtra offer up a sacrifice in the\nAiryana Vaejah, by the good river Daitya, with the Haoma and meat,\nwith the baresma, with the wisdom of the tongue, with the holy\nspells, with the speech, with the deeds, with the libations, and\nwith the rightly-spoken words. He begged of her a boon, saying:",
+      "zh": ""
+    },
+    {
+      "chapter": 9,
+      "verse": 26,
+      "ref": "Yt 9.26",
+      "orig": "dazdi-mê vanguhi sevishte\ndrvâspe tat âyaptem\nýatha azem hâcayene\nvanguhîm âzâtãm hutaosãm\nanumatêe daênayâi\nanûxtêe daênayâi\nanu-varshtêe daênayâi\nýâ-mê daênãm mâzdayasnîm\nzrasca dât apica aotât\nýâ-mê varezânâi vanguhîm\ndât frasastîm.",
+      "en": "'O good, most beneficent Drvaspa! grant me this boon, that\nI may bring the good and noble Hutaosa to think according to the\nlaw, to speak according to the law, to do according to the law,\nthat she may spread my Mazdean law and make it known, and that\nshe may bestow beautiful praises upon my deeds.'",
+      "zh": ""
+    },
+    {
+      "chapter": 9,
+      "verse": 27,
+      "ref": "Yt 9.27",
+      "orig": "dathat ahmâi ... tåscâ ýazamaide!\n(Repeat verses 5-6.)",
+      "en": "The strong Drvaspa, made by Mazda, the holy Drvaspa, the maintainer,\ngranted him that boon, as he was offering up libations, giving\ngifts, sacrificing, and entreating that she would grant him that\nboon.\nFor her brightness and glory, I wiII offer her a sacrifice worth\nbeing heard....\n [7]",
+      "zh": ""
+    },
+    {
+      "chapter": 9,
+      "verse": 28,
+      "ref": "Yt 9.28",
+      "orig": "drvâspãm ... avanghe narãm ashaonãm.\n(Repeat verses 1-2.)",
+      "en": "We offer up a sacrifice unto the powerful Drvaspa, made by\nMazda and holy, who keeps the flocks in health....\nWho yokes teams of horses .... for assistance to the faithful.",
+      "zh": ""
+    },
+    {
+      "chapter": 9,
+      "verse": 29,
+      "ref": "Yt 9.29",
+      "orig": "tãm ýazata\nberezaidhish kava vîshtâspô\npasne âpô dâityayå satem aspanãm\nhazangrem gavãm baêvare anumayanãm uta zaothrãm\nfrabarô,",
+      "en": "To her did the tall Kavi Vistaspa offer up a sacrifice behind\nthe waters of the river Daitya, with a hundred male horses, a\nthousand oxen, ten thousand lambs, and with an offering of libations:",
+      "zh": ""
+    },
+    {
+      "chapter": 9,
+      "verse": 30,
+      "ref": "Yt 9.30",
+      "orig": "dazdi-mê vanguhi sevishte\ndrvâspe tat âyaptem\nýatha azâni peshana ashta aurvañtô vîspa-thaurvô\nashtôish puthrô vîspa-thaurvô urvi-xaodhô\nurvi-verethrô stvî-manaothrish ýenghe hapta\nsata ushtranãm jainyâvarat pasca hvîdhahe,\nýatha azâni peshana mairyehe h'yaonahe arejat-aspahe,\nýatha azâni peshana darshinikahe daêvayasnahe.",
+      "en": "'Grant me this boon, O good, most beneficent Drvaspa! that\nI may put to flight Ashta-aurvant, the son of Vispa-thaurvo-asti,\nthe all-afflicting, of the brazen helmet, of the brazen armour,\nof the thick neck, behind whom seven hundred camels ....; that\nI may put to flight the Hvyaona murderer, Arejat-aspa; that I\nmay put to flight Darshinika, the worshipper of the Daevas;",
+      "zh": ""
+    },
+    {
+      "chapter": 9,
+      "verse": 31,
+      "ref": "Yt 9.31",
+      "orig": "uta azem nijanâni\ntãthryâvañtem duzhdaênem\nuta azem nijanâi\nspinjaurushem daêvayasnem,\nuta azem fraourvaêsayeni\nhumaya varedhakanãmca\nh'yaonya haca dainghâvô,\nuta azem nijanâni\nh'yaonînãm dah'yunãm\npañcasakhnâi satakhnâishca\nsatakhnâi hazangrakhnâishca\nhazangrakhnâi baêvarekhnâishca\nbaêvarekhnâi ahãxshtakhnâishca.",
+      "en": "And that I may smite Tathravant of the bad law; that I may\nsmite Spinjaurushka, the worshipper of the Daevas; and that I\nmay bring unto the good law the nations of the Varedhakas and\nof the Hvyaonas; and that I may smite of the Huyaona nations their\nfifties and their hundreds, their hundreds and their thousands,\ntheir thousands and their tens of thousands, their tens of thousands\nand their myriads of myriads.",
+      "zh": ""
+    },
+    {
+      "chapter": 9,
+      "verse": 32,
+      "ref": "Yt 9.32",
+      "orig": "dathat ahmâi tãm avat âyaptem drvâspa\nsûra mazdadhâta ashaoni thrâthri zaothrô-barâi\naredrâi ýazemnâi\njaidhyañtâi dâthrish âyaptem.\nahe raya ... tåscâ ýazamaide! (Repeat verse\n6.)",
+      "en": "The strong Drvaspa, made by Mazda, the holy Drvaspa, the maintainer,\ngranted him that boon, as he was offering up libations, giving\ngifts, sacrificing, and entreating that she would grant him that\nboon.\nFor her brightness and glory, I will offer her a sacrifice worth\nbeing heard; I will offer her a sacrifice well performed, namely,\nunto the powerful Drvaspa made by Mazda and holy. We offer up\nlibations to the powerful Drvaspa, made by Mazda and holy; we\noffer her the Haoma and meat, the baresma, the wisdom of the tongue,\nthe holy spells, the speech, the deeds, the libations, and the\nrightly-spoken words.\nYatha ahu vairyo: The will of the Lord is the law of holiness....\nI bless the sacrifice and prayer, and the strength and vigour\nof the powerful Drvaspa, made by Mazda and holy.\nAshem Vohu: Holiness is the best of all good....\n[Give] unto that man brightness and glory, give him health of\nbody,.... give him the bright, all-happy, blissful abode of the\nholy Ones.\n \n \n Home \n Contents \n Prev \n yt9sbe \n Next \n Avestan",
+      "zh": ""
+    },
+    {
+      "chapter": 9,
+      "verse": 33,
+      "ref": "Yt 9.33",
+      "orig": "(hôrmezd i hvadâe i awazûnî mardum\nmardum sardagã hamâ sardagã ham bâ ýasht\ni vahã vaem vahe dîn i mâzdayasnã âgâhî\nâstvãnî nêkî rasãnât\nêduñ bât.)",
+      "en": "",
+      "zh": ""
+    }
+  ]
+}

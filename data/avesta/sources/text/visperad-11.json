@@ -1,0 +1,162 @@
+{
+  "slug": "visperad-11",
+  "siglum": "Vr 11",
+  "title_zh": "維斯帕拉德 第 11 章",
+  "title_en": "Visperad 11",
+  "canon": "avestan",
+  "volume": "visperad",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/visperad/visperad.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "達梅斯特（James Darmesteter）",
+  "en_url": "https://www.avesta.org/visperad/vrsbe.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "ratu": "拉圖",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 11,
+      "verse": 1,
+      "ref": "Vr 11.1",
+      "orig": "ahurâi mazdâi haomã âvaêdhayamahî\nýat uzdâtem sevishtem verethrakhne frâdat-gaêthâi\nýat huxshathrâi ashaone ýat ratuxshathrâi\nashaone, ameshaêibyô speñtaêibyô\nhaomã âvaêdhayamahî, aiwyô vanguhibyô\nhaomã âvaêdhayamahî, havahe urunô\nhaomã âvaêdhayamahî, vîspayå\nashaonô stôish haomã âvaêdhayamahî.",
+      "en": "To Ahura Mazda would we present our offered Haomas and that\nwhich is lifted up, as the most beneficial to Verethraghna (the\nblow of victory) which furthers the settlements; and that which\nis offered to the good and holy king, and that which is offered\nto the holy ruler which rules according to, or in the ritual,\nand we make known our Haomas to the Bountiful Immortals, and to\nthe good waters; and we present our Haomas each to (our) own soul;\nand we announce our Haomas in our celebration to the entire creation\nof the holy (and the clean).",
+      "zh": ""
+    },
+    {
+      "chapter": 11,
+      "verse": 2,
+      "ref": "Vr 11.2",
+      "orig": "imã haomã ima haomya ima stareta ima myazda\nima asma paoirya dâmãn ima asmana hâvana avi-bereta\nhaoma zâire ima ayanghaêna hâvana avi-bereta\nhaoma zâire imãm âpem haomyãm imat baresma\nashaya frastaretem",
+      "en": "Yea, we present these Haomas and Haoma implements, and these\nspread mats, and these Myazdas, these stones, the first in the\ncreation, the stone mortar brought here with the yellow Haoma\nin it, and the iron mortar brought here with the yellow Haoma\nin it, this Haoma-water, and this Baresman spread with sanctity,\n(3) these bodies, and (their) forces, these striving Zaothras\n(that seek to find Thy grace), this holy Haoma, and the flesh,\nand the holy man, and the saint's innate thoughts, even the Saoshyants'\ninnate thoughts.\nAnd we present this fresh milk as an offering, now lifted up with\nsanctity, and this Hadhanaepata plant, lifted up with sanctity;\n(4) and we offer, and present these Zaothras with our celebration,\nhaving the Haoma with them, and the milk, and the Hadhanaepata,\nto the good waters and offered up with piety. And we present the\nHaoma-water in our celebrations to the good waters, and both the\nstone and the iron mortar, (5) and this branch for the Baresman,\nand the prayer for blessings uttered at the fitting moment which\nhas approached (for our help in its order with the prayers), and\nthe recollection and practice of the good Mazdayasnian law, and\nthe heard recital of the Gathas, the well-timed prayer for blessings\nas it comes uttered by the saint (and for our help), and ruling\n(while it is spoken) as a ritual lord, and these wood-billets,\nand the perfume even Thine, the Fire's, O Ahura Mazda's son! and\nall good objects (which are ours), and Mazda-made, and which have\nthe seed of sanctity (or are that seed).",
+      "zh": ""
+    },
+    {
+      "chapter": 11,
+      "verse": 3,
+      "ref": "Vr 11.3",
+      "orig": "imå kehrpasca tevîshîshca imå ýaêtushîsh\nzaothrå imem haomem ashavanem gãmca hudhånghem\nnaremca ashavanem âsnaca manå ashaonãm âsnaca\nmanå saoshyañtãm imãmcâ gãm\njîvyãm ashaya uzdâtãm imãmcâ\nurvarãm hadhânaêpatãm ashaya uzdâtãm,",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 11,
+      "verse": 4,
+      "ref": "Vr 11.4",
+      "orig": "aiwyô vanguhibyô imå zaothrå haomavaitîsh\ngaomavaitîsh hadhânaêpatavaitîsh ashaya\nuzdâtå aiwyô vanguhibyô apemca haomyãm\nasmanaca hâvana ayanghaênaca hâvana,",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 11,
+      "verse": 5,
+      "ref": "Vr 11.5",
+      "orig": "imãmcâ urvarãm baresmanîm jakhmûshîmca\nratufritîm marethremca varezîmca daênayå\nvanghuyå mâzdayasnôish gâthanãmca\nsraothrem jakhmûshîmca ashaonô ashahe rathwô\nratufritîm imã aêsmãsca baoidhîmca\ntava âthrô ahurahe mazdå puthra vîspaca\nvohu mazdadhâta ashacithra pairica dademahî âca\nvaêdhayamahî âat dîsh âvaêdhayamahî,",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 11,
+      "verse": 6,
+      "ref": "Vr 11.6",
+      "orig": "ahurâica mazdâi sraoshâica ashyâi\nrashnvaêca razishtâi mithrâica vouru-gaoyaotêe\nameshaêibyasca speñtaêibyô ashâunãmca\nfravashibyô ashâunãmca urvôibyô\nâthraêca ahurahe mazdå rathwaêca berezaite\nrathwaêca myazdaêca rathwaêca ratufritayaêca\nvîspayå sãcatca ashaonô stôish\nýasnâica vahmâica xshnaothrâica frasastayaêca.",
+      "en": "Yea, these we make known and we announce in this our celebration\nto Ahura Mazda (as our gift), and to Sraosha (Obedience) the blessed,\nand to Ashi (who is the recompense),and to Rashnu the most just,\nand to Mithra of the wide pastures, and to the Bountiful Immortals,\nand the Fravashis of the saints, and to their souls, and to the\nFire of Ahura Mazda, the lord, and to the lofty lord (the Apam-napat?),\nand to the Myazda, the lord, and to the well-timed prayer for\nblessings as it rules in the order of our prayers, for the sacrifice,\nhomage, propitiation, and adoration of the entire creation of\nthe holy (and the clean).",
+      "zh": ""
+    },
+    {
+      "chapter": 11,
+      "verse": 7,
+      "ref": "Vr 11.7",
+      "orig": "âat dîsh âvaêdhayamahî zarathushtrahe\nspitâmahe ashaonô fravashêe ýasnâica\nvahmâica xshnaothrâica frasastayaêca anghuyaosh\nashacinanghô mat vîspâbyô ashaonibyô\nfravashibyô ýå irîrithushãm ashaonãm\nýåsca jvañtãm ashaonãm ýåsca\nnarãm azâtanãm frashô-carethrãm\nsaoshyañtãm!",
+      "en": "Yea, these we make known in this our celebration hereby for\nthe Fravashi of Zarathushtra Spitama, the saint, for its sacrifice,\nhomage, propitiation, and praise, and to the (Fravashi) of Anghuyu (?) \nwho hath loved righteousness, together with all the holy Fravashis\nof the saints, of those now dead, and of those of the living,\nand of those of men unborn, of the prophets that shall serve us,\nbringing on the renovation of the completed world.\n8-11. (See verses 2-5.)",
+      "zh": ""
+    },
+    {
+      "chapter": 11,
+      "verse": "8-11",
+      "ref": "Vr 11.8-11",
+      "orig": "imã haomã ... ashacithra pairica dademahî\nâca vaêdhayamahî âat dîsh âvaêdhayamahî,",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 11,
+      "verse": 12,
+      "ref": "Vr 11.12",
+      "orig": "ameshaêibyô speñtaêibyô huxshathraêibyô\nhudhâbyô ýavaêjibyô ýavaêsubyô\nýôi vohu ýôi vohunãm dâtârô\nýôi vanghêush â-mananghô shyeiñti,\nvanghêush â-zî â-mananghô shyeiñti\nýôi ameshå speñta huxshathra hudhånghô\nadhât mâta adhât bûta haca vanghaot mananghat.",
+      "en": "Yea, we would make these known hereby in our celebrations\nto the Bountiful Immortals, who rule \naright, and who dispose (of\nall) aright, the ever-living, ever-helpful, who are good (?),\nand bestowers of the good, who dwell with the Good Mind: [(Pazand)\nfor they who are the Bountiful Immortals abide with the Good Mind,\nthey who rule aright, and dispose (of all) aright, for thence\nthey are regulated, and thence they arose, (namely,) from the\nGood Mind].",
+      "zh": ""
+    },
+    {
+      "chapter": 11,
+      "verse": 13,
+      "ref": "Vr 11.13",
+      "orig": "âat dîsh âvaêdhayamahî frâyehîsh\nahe nmânahe fradathâi ahe nmânahe savanghô\nahe nmânahe vaxshat ahe nmânahe vîtarãzô\nahe nmânahe vîtare-tbaêshô ahe nmânahe\npasvãmca narãmca zâtanãmca zãhyamnanãmca\nashaonãm ýenghe aêm anghen ýenghe aêm\nheñti ýenghe vaêm mahi ýôi saoshyañtô\ndah'yunãm",
+      "en": "And we make known these our celebrations as \nthe more promotive for this house, for the furtherance \nof this house, and as benefits for this house, \nbecause of the increase of this household, as overcoming \nthe restrictions which impede this household, \nand as overcoming the harmful malice which may \nmar this house, to bless its herds, and its retainers, \nborn, and yet to be born, for the saints of the house \nas it was aforetime, of it as it stands here now, and \nto which we likewise now belong as the Saoshyants of \nthe provinces, (14) [which (is that we are Saoshyants) \nfor the saints who do good deeds, and of the female \nsaints who do good deeds, and of the saints who do \nthe deeds conspicuously good, and of the females \nlikewise thus, of the saints who do good deeds upon \ngood deeds, and of the females thus the same].",
+      "zh": ""
+    },
+    {
+      "chapter": 11,
+      "verse": 14,
+      "ref": "Vr 11.14",
+      "orig": "ýat vohvarezãm ashaonãm ýat vohvarezinãm\nashaoninãm ýat haithyâvarezãm ashaonãm\nýat haithyâvarezinãm ashaoninãm ýat\nhvarshtâvarezãm ashaonãm ýat hvarshtâvarezinãm\nashaoninãm.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 11,
+      "verse": 15,
+      "ref": "Vr 11.15",
+      "orig": "âat dîsh âvaêdhayamahî ashâunãm\nvanguhibyô fravashibyô ýå ukhråsca\naiwithûråsca ashaonãm avanghe.",
+      "en": "And we make these known in our celebrations to the good Fravashis\nof the saints which are formidable and overwhelming in their aid.",
+      "zh": ""
+    },
+    {
+      "chapter": 11,
+      "verse": 16,
+      "ref": "Vr 11.16",
+      "orig": "âat dîsh âvaêdhayamahî sraoshahe\nashyehe ashôishca vanghuyå nairyeheca sanghahe âxshtibyâca\nhãm-vaiñtibya âthraêca ahurahe mazdå\nrathwaêca berezaite vîspayå sãcatca ashaonô\nstôish ýasnâica vahmâica xshnaothrâica\nfrasastayaêca, âat dîsh âvaêdhayamahî\nahurâi mazdâi vanghave mananghe ... ýôi\nheñti ashahe ratavô hâvanôish rathwô\nýasnâica vahmâica xshnaothrâica frasastayaêca,\nâat dîsh âvaêdhayamahî ahurahe mazdå\nraêvatô hvarenanguhatô xshnaothra ýasnâica\nvahmâica xshnaothrâica frasastayaêca.",
+      "en": "And we make these known in our celebrations hereby to Sraosha\n(Obedience) the blessed, and to the good Blessedness, and to Nairya-sangha,\nand to the victorious Peace, and to Ahura Mazda's Fire, and to\nthe lofty lord, for sacrifice, homage, propitiation, and for praise,\nto the entire creation of the holy and the clean.\n17-18.\n(=Vr10.1-2.)",
+      "zh": ""
+    },
+    {
+      "chapter": 11,
+      "verse": "17-18",
+      "ref": "Vr 11.17-18",
+      "orig": "âat dîsh âvaêdhayamahî arezahibyô\n... stitâtasca daênayå mâzdayasnôish!",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 11,
+      "verse": 19,
+      "ref": "Vr 11.19",
+      "orig": "ýat uzdâtem ýat âvistem ýatha\ndîsh âvaêdhayat ahurô mazdå ashava\nýatha dîsh âvaêdhayat ýô\nashava zarathushtrô ýatha dîsh azem ýô\nzaota âvaêdhayemi vîdhvå aêshãm\nýasnemca vahmemca vîdhvå dâityãm\nâvistîm vîdhvå rathwyãm âvistîm",
+      "en": "Yea, we make that known which is lifted up in offering, and\nwhich is the Avesta as the holy Ahura Mazda directed that it should\nbe said, and as Zarathushtra, the holy, directed, and as I, the\npriest, who am acquainted with their sacrifice and homage, am\nnow letting it be known. I who understand the lawful and legitimate\nAvesta, and the ritual prescripts (20) for Your sacrifice, homage,\nand propitiation, O Ye who are the Bountiful Immortals, and for\nour preparation (?), and for the success of our well-uttered prayer\nfor blessings, for victory, sanctification, and the well-being\nof our souls, (of ours), for (we are) the holy Saoshyants.",
+      "zh": ""
+    },
+    {
+      "chapter": 11,
+      "verse": 20,
+      "ref": "Vr 11.20",
+      "orig": "ýûshmâkem ýasnâica vahmâica\nxshnaothrâica frasastayaêca ýat ameshanãm\nspeñtanãm ahmâkem havanghâica ratufritayaêca\nashavastâica verethrakhnyâica hurunyâica ýat\nsaoshyañtãm ashaonãm.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 11,
+      "verse": 21,
+      "ref": "Vr 11.21",
+      "orig": "âat idha dim vîspanãm mazishtem dademahi\nahûmca ratûmca ýim ahurem mazdãm ýasnâica\nvahmâica xshnaothrâica frasastayaêca, âat\ndîsh âvaêdhayamahî ashâunãm\nfravashinãm ... ashât haca ýat vahishtât!!",
+      "en": "Yea, we make these known in our celebrations here, and we\noffer them to Him who is Ahura Mazda, of all the greatest, the\nmaster and the Lord.",
+      "zh": ""
+    }
+  ]
+}

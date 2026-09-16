@@ -1,0 +1,66 @@
+{
+  "slug": "visperad-07",
+  "siglum": "Vr 7",
+  "title_zh": "維斯帕拉德 第 7 章",
+  "title_en": "Visperad 7",
+  "canon": "avestan",
+  "volume": "visperad",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/visperad/visperad.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "達梅斯特（James Darmesteter）",
+  "en_url": "https://www.avesta.org/visperad/vrsbe.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "ratu": "拉圖",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 7,
+      "verse": 1,
+      "ref": "Vr 7.1",
+      "orig": "vaca arshuxdha ýazamaide, sraoshem ashîm ýazamaide,\nashîm vanguhîm ýazamaide, nairîm sanghem\nýazamaide, âxshtîm hãm-vaiñtîm\nýazamaide, asteretaca amuyamna ýazamaide, ashâunãmca\nfravashayô ýazamaide, cinvatô peretûm\nýazamaide, garô nmânem ahurahe mazdå\nýazamaide, vahishtem ahûm ashaonãm ýazamaide\nraocanghem vîspô-hvâthrem. (... vaca arshuxdha\n... vîspô-hvâthrem(3).)",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 2,
+      "ref": "Vr 7.2",
+      "orig": "vahishtahe anghêush vahishtãm ayanãm ýazamaide,\narshtâtem ýazamaide vanguhîm frâdat-\ngaêthãm varedat-gaêthãm savô-gaêthãm\nýãm daênãm mâzdayasnîm,\nrashnûm razishtem ýazamaide, mithrem vouru-gaoyaoitîm\nýazamaide, revîm pareñdîm ýazamaide\nrevîm ravô-mananghãm revîm ravô-vacanghãm\nrevîm ravô-shyaothenanãm\nfrâ tanvô reñjayeiti.",
+      "en": "And we sacrifice to that better path that leads to that Best\nWorld (as well). And we worship Arshtat (Justice) the good, which\nhelps the settlements to advance and flourish, benefiting them\nthereby, that Arshtat which is the Mazdayasnian Faith; and (with\nher) we worship Rashnu the most just, and Mithra of the wide pastures.\nAnd we worship Parendi the wealthy, wealthy with a wealth of thoughts,\nwith a throng of words, and with a breadth of actions, [for she\nmakes our persons agile (for good thoughts and words and actions)]",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 3,
+      "ref": "Vr 7.3",
+      "orig": "nairyãm hãm-vareitîm ýazamaide\nframen-narãm\nframen-narô-vîrãm ýâ âsaot\nâsyå ýâ taxmô-tãshyå\nýâ dim jasaiti bakhô-baxtemcit\nýâ narãm vîgereptâcit\ntanvô baoxtârem dadhâiti, hvafnem mazdadhâtem\nýazamaide shâitîm pasvå vîrayå.",
+      "en": "And we worship that virile defensive Heroism which possesses\nmen who think beforehand, and heroic men, which is fleeter a than\nthe fleet, stronger than the strong, which comes to him who is\nendowed by God, which, when especially made theirs by men, produces\none who is a freer of the body. And we worship Sleep, the Mazda-made,\nthe gladdener of the herd and men. 4. And we worship those things\nin the creation of the holy which are the ancient institutions,\nthose formed before the sky, the water, the land, the plants,\nand the Kine of blessed gift. And we worship the sea Vouru-kasha,\nand the stormy wind which is made by Mazda, and the shining heaven,\nof old created, the first-made earthly object of (all) the earthly\nworld.",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 4,
+      "ref": "Vr 7.4",
+      "orig": "avå dâmãn ashavanô ýazamaide\nýå heñti paoiryô-dâta paoiryô-frathwarshta\nashnâatca apâatca zemâatca urvarayâatca\ngaotca hudhånghat, zrayô vourukashem ýazamaide,\nvâtem darshîm mazdadhâtem ýazamaide,\nasmanem hvanvañtem ýazamaide paoiryô-dâtem\npaoiryô-frathwarshtem gaêthîm gaêthyayå\nstôish.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 5,
+      "ref": "Vr 7.5",
+      "orig": "thwãm âtrem ahurahe mazdå puthrem ashavanem\nashahe ratûm ýazamaide, hadha-zaothrem hadha-aiwyånghanem\nimat baresma ashaya frastaretem ashavanem ashahe ratûm ýazamaide,\napãm naptârem ýazamaide, nairîm sanghem\n... tåscâ ýazamaide. (râspî,) ýathâ\nahû vairyô ýô zaotâ frâ-mê\nmrûtê, (zôt,) athâ ratush ... mraotû!!",
+      "en": "",
+      "zh": ""
+    }
+  ]
+}

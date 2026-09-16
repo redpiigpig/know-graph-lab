@@ -1,0 +1,58 @@
+{
+  "slug": "visperad-13",
+  "siglum": "Vr 13",
+  "title_zh": "維斯帕拉德 第 13 章",
+  "title_en": "Visperad 13",
+  "canon": "avestan",
+  "volume": "visperad",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/visperad/visperad.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "達梅斯特（James Darmesteter）",
+  "en_url": "https://www.avesta.org/visperad/vrsbe.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "ratu": "拉圖",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 13,
+      "verse": 0,
+      "ref": "Vr 13.0",
+      "orig": "ahurem mazdãm ashavanem ashahe ratûm ýazamaide,\nzarathushtrem ashavanem ashahe ratûm ýazamaide, zarathushtrahe\nashaonô fravashîm ýazamaide, ameshê speñtê\nashaonãm ýazamaide, ashâunãm vanguhîsh\nsûrå speñtå fravashayô ýazamaide\nastvatô manahyâca, apanôtemem rathwãm\nýazamaide ýaêtushtemem ýazatanãm\nhanghanushtemem ashahe rathwãm aiwinasãstemem jakhmûshtemãm\nashaonô ashahe rathwô ratufritîm ýazamaide!",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 1,
+      "ref": "Vr 13.1",
+      "orig": "ashem ahurem mazdãm ýazamaide, ashem ameshê\nspeñtê ýazamaide, ashem arshuxdhem ýazamaide,\nashem vîspem mãthrem ýazamaide, zarathushtrem\nhadha-mãthrem ýazamaide, sava ashavabyô ýazamaide\nushta ameshaêibyô speñtaêibyô ýazamaide,\ntishrô paoiryô ýazamaide anapyûxdhô\nanapishûtô.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 2,
+      "ref": "Vr 13.2",
+      "orig": "ashem ahurem mazdãm ýazamaide ... anapishûtô,\ntishra paoirya ýazamaide anapyûxdha anapishûta.",
+      "en": "Also we worship the three principal (chapters) \nuttered (in the Yasna) without addition or omission; \nand we worship the three principal ones without \naddition or omission; we worship the three commencing \nones entire without addition or omission. \nAnd we worship the entirety of the three principal \nones without addition or omission; and their Has , \ntheir metrical lines, their words, and their word-structure \n[and their recital, memorizing, chanting, and \ntheir steadfast offering].",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 3,
+      "ref": "Vr 13.3",
+      "orig": "ashem ahurem mazdãm ... tishrô paoiryô\nýazamaide anapyûxdhô anapishûtô,\ntishra paoirya ýazamaide anapyûxdha anapishûta.\ntishra haurva-paoirya ýazamaide anapyûxdha anapishûta,\ntishranãm haurva-paoiryanãm ýazamaide anapyûxdhanãm\nanapishûtanãm hâitishca afsmanâca vacasca\nvacastashtîmca frasraothremca framarethremca fragâthremca\nfrâyashtîmca, thwãm âtrem ahurahe mazdå\nputhrem ... tåscâ ýazamaide!!",
+      "en": "",
+      "zh": ""
+    }
+  ]
+}

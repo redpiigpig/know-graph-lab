@@ -1,0 +1,34 @@
+{
+  "slug": "visperad-17",
+  "siglum": "Vr 17",
+  "title_zh": "維斯帕拉德 第 17 章",
+  "title_en": "Visperad 17",
+  "canon": "avestan",
+  "volume": "visperad",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/visperad/visperad.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "達梅斯特（James Darmesteter）",
+  "en_url": "https://www.avesta.org/visperad/vrsbe.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "ratu": "拉圖",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 17,
+      "verse": 1,
+      "ref": "Vr 17.1",
+      "orig": "ashem vohû...(3). aiwi-geredhmahi ýasnahe haptanghâtôish\nhumataca hûxtaca hvarshtaca, aiwi-geredhmahi ashem vohû....\n(...aiwi-geredhmahi ... ashem vohû...(3)!!)",
+      "en": "And we strive after the good thoughts, words, and deeds inculcated\nin the Yasna Haptanghaiti. A blessing is the Right (called) the\nBest, (there is) weal; (there is) weal for this (man) when toward\nRighteousness Best (there is) right.",
+      "zh": ""
+    }
+  ]
+}

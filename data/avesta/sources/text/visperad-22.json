@@ -1,0 +1,42 @@
+{
+  "slug": "visperad-22",
+  "siglum": "Vr 22",
+  "title_zh": "維斯帕拉德 第 22 章",
+  "title_en": "Visperad 22",
+  "canon": "avestan",
+  "volume": "visperad",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/visperad/visperad.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "達梅斯特（James Darmesteter）",
+  "en_url": "https://www.avesta.org/visperad/vrsbe.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "ratu": "拉圖",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 22,
+      "verse": 1,
+      "ref": "Vr 22.1",
+      "orig": "ashem vohû...(3).\nava aibigara ava aibijareta ýâ ameshanãm speñtanãm\nsaoshyañtãmca ashaonãm gave adhâish\ntâish shyaothnâish ýâish vahishtâish\nfraêshyâmahi,",
+      "en": "With this chant (fully) chanted, and which is for the Bountiful\nImmortals and the holy Saoshyants (who are the prophets who shall\nserve us), and by means of these (ceremonial) actions, which are\n(of all) \nthe best, we desire to utter our supplications for the \nKine. It is that chant which the saint has recognized \nas good and fruitful of blessed gifts, and which the \nsinner does not know.\nMay we never reach that (ill-luck that the sinner) may outstrip\nus (in our chanting), not in the matter of a plan (thought out),\nor of words (delivered), or ceremonies (done), nor yet in any\noffering whatever when he (?) approaches (us for harm).",
+      "zh": ""
+    },
+    {
+      "chapter": 22,
+      "verse": 2,
+      "ref": "Vr 22.2",
+      "orig": "ýãm ashava vanguhîm ashayãm vaêdha\ntãm drvå evîdhvå, mâ apaêma\npaourvå vayôit mâ manangha mâ vacangha\nmâ shyaothna mâ adha kathacina paiti jime. ashem vohû....\n(aya aibigara ... paiti jime. ashem vohû....(3))!!",
+      "en": "",
+      "zh": ""
+    }
+  ]
+}

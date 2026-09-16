@@ -1,0 +1,540 @@
+{
+  "slug": "yasht-14",
+  "siglum": "Yt 14",
+  "title_zh": "亞什特 第 14 首‧韋雷特拉格納讚（勝利神讚）",
+  "title_en": "Yasht 14",
+  "canon": "avestan",
+  "volume": "yasht",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/ka/yt14.htm",
+  "en_source": "《東方聖書》第 23 卷，1883；公有領域",
+  "en_translator": "達梅斯特（James Darmesteter）",
+  "en_url": "https://www.avesta.org/ka/yt14sbe.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Mithra": "密特拉",
+    "Anahita": "阿娜希塔",
+    "Tishtrya": "提什特里亞",
+    "Verethraghna": "韋雷特拉格納",
+    "Vayu": "瓦尤",
+    "Rashnu": "拉什努",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "khvarenah": "赫瓦雷納",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 14,
+      "verse": 0,
+      "ref": "Yt 14.0",
+      "orig": "(pa nãm i ýazdã, hôrmezd i hvadâe\ni awazûnî gurz hvarahe awazâyât,\nbahirâm ýazat i pêrôzhgar i dushman zadâr\namahe hutâshtahe bê rasât,\n ezh hamâ gunâh ... pa patit hôm!) \nxshnaothra ahurahe mazdå, tarôidîti angrahe\nmainyêush, haithyâvarshtãm hyat vasnâ\nferashôtemem. staomî ashem,\nashem vohû...(3).\nfravarâne mazdayasnô zarathushtrish vîdaêvô\nahura-tkaêshô,\n (Here recite the appropriate Gah dedication.) \nverethrakhnahe ahuradhâtahe vanaiñtyåsca uparatâtô\nxshnaothra ýasnâica vahmâica xshnaothrâica\nfrasastayaêca,\nýathâ ahû vairyô zaotâ frâ-mê\nmrûtê,\nathâ ratush ashâtcît haca frâ ashava vîdhvå\nmraotû!",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 1,
+      "ref": "Yt 14.1",
+      "orig": "verethrakhnem ahuradhâtem ýazamaide, peresat\nzarathushtrô ahurem mazdãm, ahura mazda mainyô\nspênishta dâtare gaêthanãm astvaitinãm\nashâum kô asti mainyavanãm ýazatanãm\nzayôtemô, âat mraot ahurô mazdå,\nverethrakhnô ahuradhâtô spitama zarathushtra.",
+      "en": "We sacrifice unto Verethraghna, made by Ahura.\nZarathushtra asked Ahura Mazda: 'Ahura Mazda, most beneficent\nSpirit, Maker of the material world, thou Holy One! \n'Who is the best-armed of the heavenly gods?'\nAhura Mazda answered: 'It is Verethraghna, made by Ahura, O Spitama\nZarathushtra!'",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 2,
+      "ref": "Yt 14.2",
+      "orig": "ahmâi paoiryô âjasat vazemnô\nverethrakhnô ahuradhâtô\nvâtahe kehrpa darshyôish\nsrîrahe mazdadhâtahe\nvohu hvarenô mazdadhâtem\nbarat hvarenô mazdadhâtem\nbaêshazem uta amemca.",
+      "en": "Verethraghna, made by Ahura, came to him first, running in\nthe shape of a strong, beautiful wind, made by Mazda; he bore\nthe good Glory, made by Mazda, the Glory made by Mazda, that is\nboth health and strength.",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 3,
+      "ref": "Yt 14.3",
+      "orig": "âat ahmâi amavastemô, ama ahmi amavastemô\nverethra ahmi verethravastemô hvarenangha ahmi hvarenanguhastemô\nýâna ahmi ýânavastemô saoka ahmi\nsaokavastemô baêshaza ahmi baêshazyôtemô.",
+      "en": "Then he, who is the strongest, said unto him:\n 'I am the strongest\nin strength; I am the most victorious in victory; I am the most\nglorious in glory; I am the most favouring in favour; I am the\nbest giver of welfare: I am the best-healing in health-giving.",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 4,
+      "ref": "Yt 14.4",
+      "orig": "âat tbaêshå taurvayeni vîspanãm\ntbishvatãm tbaêshå daêvanãm mashyânãmca\nýâthwãm pairikanãmca sâthrãm\nkaoyãm karafnãmca.",
+      "en": "'And I shall destroy the malice of all the malicious, the\nmalice of Daevas and men, of the 'Yatus and Pairikas, of the oppressors,\nthe blind, and the deaf.",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 5,
+      "ref": "Yt 14.5",
+      "orig": "ahe raya hvarenanghaca\ntem ýazâi surunvata ýasna verethrakhnem ahuradhâtem\nzaothrâbyô, verethrakhnem ahuradhâtem ýazamaide\nýâish dâtâish paoiryâish ahurahe\nhaomayô gava baresmana hizvô danghangha mãthraca\nvacaca shyaothnaca zaothrâbyasca arshuxdhaêibyasca\nvâkhzhibyô.\nýenghê hâtãm âat ýesnê\npaitî vanghô mazdå ahurô vaêthâ\nashât hacâ ýånghãmcâ tãscâ\ntåscâ ýazamaide!",
+      "en": "'For his brightness and glory, I will offer unto him a sacrifice\nworth being heard; namely, unto Verethraghna, made by Ahura. We\nworship Verethraghna, made by Ahura, with an offering of libations,\naccording to the primitive ordinances of Ahura; with the Haoma\nand meat, the baresma, the wisdom of the tongue, the holy spells,\nthe speech, the deeds, the libations, and the rightly-spoken words.\n'Yenhe hatam: All those beings of whom Ahura Mazda....\n II.",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 6,
+      "ref": "Yt 14.6",
+      "orig": "verethrakhnem ahuradhâtem ýazamaide, peresat\nzarathushtrô ... spitama zarathushtra. (cf. verse 1.)",
+      "en": "'We sacrifice unto Verethraghna, made by Ahura.'\nZarathushtra asked Ahura Mazda: 'Ahura Mazda, most beneficent\nSpirit, Maker of the material world, thou Holy One!\nWho is the best-armed of the heavenly gods?'\nAhura Mazda answered: 'It is Verethraghna, made by Ahura, O Spitama\nZarathushtra!'",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 7,
+      "ref": "Yt 14.7",
+      "orig": "ahmâi bityô âjasat vazemnô\nverethrakhnô ahuradhâtô\ngêush kehrpa arshânahe\nsrîrahe zaranyô-srvahe\nýim upairi sruye sanat\namô hutashtô huraodhô\nverethrakhnô ahuradhâtô, avatha âjasat.\nahe raya ... tåscâ ýazamaide! (Repeat verse\n5.)",
+      "en": "Verethraghna, made by Ahura, came to him the second time,\nrunning in the shape of a beautiful bull, with yellow ears and\ngolden horns; upon whose horns floated the well-shapen Strength,\nand Victory, beautiful of form, made by Ahura: thus did he come,\nbearing the good Glory, made by Mazda, the Glory made by Mazda,\nthat is both health and strength.\nThen he, who is the strongest, said unto him: 'I am the strongest\nin strength....,\n'And I shall destroy the malice of all malicious....\nFor his brightness and glory, I will offer unto him a sacrifice\nworth being heard....",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 8,
+      "ref": "Yt 14.8",
+      "orig": "verethrakhnem ahuradhâtem ýazamaide,\nperesat zarathushtrô ... spitama zarathushtra. (cf. verse\n1.)",
+      "en": "We sacrifice unto Verethraghna, made by Ahura.\nZarathushtra asked Ahura Mazda: 'Ahura Mazda, most beneficent\nSpirit, Maker of the material world, thou Holy One!\n'Who is the best-armed of the heavenly gods?'\nAhura Mazda answered: 'It is Verethraghna, made by Ahura, O Spitama\nZarathushtra!'",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 9,
+      "ref": "Yt 14.9",
+      "orig": "ahmâi thrityô âjasat vazemnô\nverethrakhnô ahuradhâtô\naspahe kehrpa aurushahe\nsrîrahe zairi-gaoshahe\nzaranyô-aiwidhânahe\nýim upairi ainikem sanat\namô hutashtô huraodhô\nverethrakhnô ahuradhâtô,\navatha âjasat.\nahe raya ... tåscâ ýazamaide! (Repeat verse\n5.)",
+      "en": "Verethraghna, made by Ahura, came to him the third time, running\nin the shape of a white, beautiful horse, with yellow ears and\na golden caparison; upon whose forehead floated the well-shapen\nStrength, and Victory, beautiful of form, made by Ahura: thus\ndid he come, bearing the good Glory, made by Mazda, that is both\nhealth and strength.\nThen he, who is the strongest, said unto him: 'I am the strongest\nin strength....\n'And I shall destroy the malice of all malicious....'\nFor his brightness and glory, I will offer unto him a sacrifice\nworth being heard....",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 10,
+      "ref": "Yt 14.10",
+      "orig": "verethrakhnem ahuradhâtem ýazamaide,\nperesat zarathushtrô ... spitama zarathushtra. (cf. verse\n1.)",
+      "en": "We sacrifice unto Verethraghna, made by Ahura.\nZarathushtra asked Ahura Mazda: 'Ahura Mazda, most beneficent\nSpirit, Maker of the material world, 'Who is the best-armed of\nthe heavenly gods?'\nAhura Mazda answered: 'It is Verethraghna, made by Ahura, O Spitama\nZarathushtra!'",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 11,
+      "ref": "Yt 14.11",
+      "orig": "ahmâi tûiryô âjasat vazemnô\nverethrakhnô ahuradhâtô\nushtrahe kehrpa vadharyaosh\ndadãsaosh aiwi-tacinahe\nurvatô frasparanahe\ngaêthâush mashyô-vanghahe,",
+      "en": "Verethraghna, made by Ahura, came to him the fourth time,\nrunning in the shape of a burden-bearing camel, \nsharp-toothed,\nswift ...., stamping forwards, long-haired, and living in the\nabodes of men;",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 12,
+      "ref": "Yt 14.12",
+      "orig": "ýô arshnãm franghereziñtãm\nmazishtem aojô âbaraiti\nmazishtemca âmananghem\nýô xshathrishva avâiti\navå zî xshathrîsh hupâtôtemå\nýå ushtrô pâiti vadharish\nash-bâzâush stvi-kaofô smarshnô-daêma\njîrô-sârô raêva berezô amavå,",
+      "en": "Who of all males in rut shows greatest strength and greatest\nfire, when he goes to his females. Of all females those are best\nkept whom a burden-bearing camel keeps, who has thick forelegs\nand large humps, ...., quick-eyed, long-headed, bright, tall,\nand strong;",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 13,
+      "ref": "Yt 14.13",
+      "orig": "ýãm hê dûraêsûkem\ndûire fravâiti aêtahe\ntãthryãm aipi xshapanem,\nýô kafem aipi-spayeiti\nspaêititem upa vakhdhanem\nhuxshnaothre hupaitishtâne\nýô hishtaite vîdidhvå\nýatha sâsta hamô-xshathrô,\navatha âjasat.\nahe raya ... tåscâ ýazamaide! (Repeat verse\n5.)",
+      "en": "Whose piercing look goes afar ...., \neven in the dark of the night; who throws white foam \nalong his mouth; well-kneed, well-footed,\nstanding with the countenance of an all-powerful master:\nThus did Verethraghna come, bearing the good Glory made by Mazda, the\nGlory made by Mazda....",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 14,
+      "ref": "Yt 14.14",
+      "orig": "verethrakhnem ahuradhâtem ýazamaide,\nperesat zarathushtrô ... spitama zarathushtra. (cf. verse\n1.)",
+      "en": "We sacrifice unto Verethraghna, made by Ahura.\nZarathushtra asked Ahura Mazda: 'Ahura Mazda, most beneficent\nSpirit, Maker of the material world, thou Holy One!\n'Who is the\nbest-armed of the heavenly gods?'\nAhura Mazda answered: 'It is\nVerethraghna, made by Ahura, O Spitama Zarathushtra!'",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 15,
+      "ref": "Yt 14.15",
+      "orig": "ahmâi puxdhô âjasat vazemnô\nverethrakhnô ahuradhâtô\nhû kehrpa varâzahe\npaiti-erenô tizhi-dãstrahe\narshnô tizhi-asûrahe\nhakeret-janô varâzahe\nanupôithwahe grañtahe\nparshvanikahe taxmahe\nýûxdhahe pâirivâzahe,\navatha âjasat.\nahe raya ... tåscâ ýazamaide! (Repeat verse\n5.)",
+      "en": "'Verethraghna, made by Ahura, came to him the fifth time,\nrunning in the shape of a boar, opposing the foes, a sharp-toothed\nhe-boar, a sharp-jawed boar, that kills at one stroke, pursuing,\nwrathful, with a dripping face, strong, and swift to run, and\nrushing all around.\nThus did Verethraghna come, bearing the good Glory made by Mazda,\nthe Glory made by Mazda.",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 16,
+      "ref": "Yt 14.16",
+      "orig": "verethrakhnem ahuradhâtem ýazamaide,\nperesat zarathushtrô ... spitama zarathushtra. (cf. verse\n1.)",
+      "en": "We sacrifice unto Verethragna, made by Ahura.\nZarathushtra asked Ahura Mazda: 'Ahura Mazda, \nmost beneficent Spirit, Maker of the material world, \nthou Holy One!\n'Who is the best-armed of the heavenly gods?'\nAhura Mazda answered: 'It is Verethraghna, \nmade by Ahura, O Spitama Zarathushtra!'",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 17,
+      "ref": "Yt 14.17",
+      "orig": "ahmâi xshtvô âjasat vazemnô\nverethrakhnô ahuradhâtô\nnarsh kehrpa pañca-dasanghô\nxshaêtahe spiti-dôithrahe\nkasu-pâshnahe srîrahe, avatha âjasat.\nahe raya ... tåscâ ýazamaide! (Repeat verse\n5.)",
+      "en": "Verethraghna, made by Ahura, came to him the sixth time, running\nin the shape of a beautiful youth of fifteen, shining, clear-eyed,\nthin-heeled.\nThus did Verethraghna come, bearing the good Glory made by Mazda,\nthe Glory made by Mazda....",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 18,
+      "ref": "Yt 14.18",
+      "orig": "verethrakhnem ahuradhâtem ýazamaide,\nperesat zarathushtrô ... spitama zarathushtra. (cf. verse\n1.)",
+      "en": "We sacrifice unto Verethraghna, made by Ahura.\nZarathushtra asked Ahura Mazda: 'Ahura Mazda, most beneficent\nSpirit, Maker of the material world, thou Holy One!\n'Who is the best-armed of the heavenly gods?'\nAhura Mazda answered: 'It is Verethraghna, made by Ahura, O Spitama\nZarathushtra!'",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 19,
+      "ref": "Yt 14.19",
+      "orig": "ahmâi haptathô âjasat vazemnô\nverethrakhnô ahuradhâtô\nmerekhahe kehrpa vârekhnahe\nurvatô adhara-naêmât\npishatô upara-naêmât\nýô vayãm asti âsishtô\nreñjishtô fravazemnanãm.",
+      "en": "Verethraghna, made by Ahura, came to him the seventh time,\nrunning in the shape of a raven \nthat ... below and ... above,\nand that is the swiftest of all birds, the lightest of the flying\ncreatures.",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 20,
+      "ref": "Yt 14.20",
+      "orig": "hô aêvô ushtanavatãm\nishva-vasma apayeiti\n[hascit vâ nôit vâ]\nýatcit vazaite hvastem,\nýô vazaite zarshayamnô\nakhrãm usaitîm ushånghem\naxshafni xshafnîm isemnô\nasûiri sûirîm isemnô,",
+      "en": "He alone of living things, — he or none, — \novertakes the flight \nof an arrow, however well it has been shot. He flies up joyfully\nat the first break of dawn, wishing the night to be no more, wishing\nthe dawn, that has not yet come, to come.",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 21,
+      "ref": "Yt 14.21",
+      "orig": "vîgâthô marezat kaofanãm\nbareshnavô marezat gairinãm\njãfnavô marezat raonãm\nsaênish marezat urvaranãm\nvayãm vâcim susrushemnô,\navatha âjasat.\nahe raya ... tåscâ ýazamaide! (Repeat verse\n5.)",
+      "en": "He grazes the hidden ways \nof the mountains, he grazes the\ntops of the mountains, he grazes the depths of the vales, he grazes\nthe summits of the trees, listening to the voices of the birds.\nThus did Verethraghna come, bearing the good Glory made by Mazda,\nthe Glory made by Mazda.",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 22,
+      "ref": "Yt 14.22",
+      "orig": "verethrakhnem ahuradhâtem ýazamaide,\nperesat zarathushtrô ... spitama zarathushtra. (cf. verse\n1.)",
+      "en": "We sacrifice unto Verethraghna, made by Ahura.\nZarathushtra asked Ahura Mazda: 'Ahura Mazda, most beneficent\nSpirit, Maker of the material world. thou Holy One! \nWho is the\nbest-armed of the heavenly gods?'\nAhura Mazda answered: 'It is Verethraghna, made by Ahura, O Spitama\nZarathushtra!'",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 23,
+      "ref": "Yt 14.23",
+      "orig": "ahmâi ashtemô âjasat vazemnô\nverethrakhnô ahuradhâtô\nmaêshahe kehrpa aurunahe\nsrîrahe nivashtakô-srvahe,\navatha âjasat.\nahe raya ... tåscâ ýazamaide! (Repeat verse\n5.)",
+      "en": "Verethraghna, made by Ahura, came to him the eighth time,\nrunning in the shape of a wild, beautiful ram, with horns bent\nround.\nThus did Verethraghna come, bearing the good Glory made by Mazda,\nthe Glory made by Mazda....",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 24,
+      "ref": "Yt 14.24",
+      "orig": "verethrakhnem ahuradhâtem ýazamaide,\nperesat zarathushtrô ... spitama zarathushtra. (cf. verse\n1.)",
+      "en": "We sacrifice unto Verethraghna, made by Ahura.\nZarathushtra asked Ahura Mazda: 'Ahura Mazda, most beneficent\nSpirit, Maker of the material world, thou Holy One!\n'Who is the best-armed of the heavenly gods?'\nAhura Mazda answered: 'It is Verethraghna, made by Ahura, O Spitama Zarathushtra!'",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 25,
+      "ref": "Yt 14.25",
+      "orig": "ahmâi naomô âjasat vazemnô\nverethrakhnô ahuradhâtô\nbûzahe kehrpa rênahe\nsrîrahe tizhi-srvahe,\navatha âjasat.\nahe raya ... tåscâ ýazamaide! (Repeat verse\n5.)",
+      "en": "Verethraghna, made by Ahura, came to him the ninth time, running\nin the shape of a beautiful, fighting buck, with sharp horns.\nThus did Verethraghna come, bearing the good Glory made by Mazda,\nthe Glory made by Mazda....\n X.",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 26,
+      "ref": "Yt 14.26",
+      "orig": "verethrakhnem ahuradhâtem ýazamaide,\nperesat zarathushtrô ... spitama zarathushtra. (cf. verse\n1.)",
+      "en": "We sacrifice unto Verethraghna, made by Ahura.\nZarathushtra asked Ahura Mazda: 'Ahura Mazda, most beneficent\nSpirit, Maker of the material world, thou Holy One!\n'Who is the best-armed of the heavenly gods?'\nAhura Mazda answered: 'It is Verethraghna, made by Ahura, O Spitama\nZarathushtra!'",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 27,
+      "ref": "Yt 14.27",
+      "orig": "ahmâi dasemô âjasat vazemnô\nverethrakhnô ahuradhâtô\nvîrahe kehrpa raêvatô\nsrîrahe mazdadhâtahe,\nbarat karetem zaranyô-saorem\nfrapixshtem vîspô-paêsanghem,\navatha âjasat.\nahe raya ... tåscâ ýazamaide! (Repeat verse\n5.)",
+      "en": "Verethraghna, made by Ahura, came to him the tenth time, running\nin the shape of a man, bright and beautiful, made by Mazda: he\nheld a sword with a golden blade, inlaid with all sorts of ornaments.\nThus did Verethraghna come, bearing the good Glory made by Mazda,\nthe Glory made by Mazda.",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 28,
+      "ref": "Yt 14.28",
+      "orig": "verethrakhnem ahuradhâtem ýazamaide arshô-karem\nmarshô-karem frashô-karem hvâxshtem hvâyaonem,\ntem ýazata ýô ashava zarathushtrô verethrakhnahe\npaiti manahi verethrakhnahe paiti vacahi verethrakhnahe paiti\nshyaothne verethrakhnahe paiti fravâke verethrakhnahe paiti\npâitivâke.",
+      "en": "We sacrifice unto Verethraghna, made by Ahura, who makes virility,\nwho makes death, who makes resurrection, who possesses peace,\nwho has a free way.\nUnto him did the holy Zarathushtra offer up a sacrifice, [asking]\nfor victorious thinking, victorious speaking, victorious doing,\nvictorious addressing, and victorious answering.",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 29,
+      "ref": "Yt 14.29",
+      "orig": "ahmâi dathat verethrakhnô ahuradhâtô\nerezôish xå bâzvå aojô tanvô\nvîspayå drvatâtem tanvô vîspayå\nvazdvare aomca sûkem ýim baraiti karô masyô\nupâpô ýô ranghayå dûraêpârayå\njafrayå hazangrô-vîrayå varesô-stavanghem\nâpô urvaêsem mârayeite.\nahe raya ... tåscâ ýazamaide! (Repeat verse\n5.)",
+      "en": "Verethraghna, made by Ahura, gave him the fountains of manliness,\nthe strength of the arms, the health of the whole body, the sturdiness\nof the whole body, and the eye-sight of the Kara fish, that lives\nbeneath the waters and can measure a rippling of the water, not\nthicker than a hair, in the Rangha whose ends lie afar, whose\ndepth is a thousand times the height of a man.\nFor his brightness and glory, I will offer unto him a sacrifice\nworth being heard....",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": "30-31",
+      "ref": "Yt 14.30-31",
+      "orig": "verethrakhnem ahuradhâtem ýazamaide arshô-karem\n(cf. verse 28 sehv.) ... aomca sûkem ýim baraiti\naspô arsha ýô tãthryascit haca xshafnô\navashaithyå aipi-awrayå aspaêm varesem zemâdha\nsayanem vaênaiti katârô akhravô vâ\nbûnavô vâ.\nahe raya ... tåscâ ýazamaide! (Repeat verse\n5.)",
+      "en": "We sacrifice unto Verethraghna, made by Ahura, who makes virility,\nwho makes death, who makes resurrection, who possesses peace,\nwho has a free way.\nUnto him did the holy Zarathushtra offer up a sacrifice, [asking]\nfor victorious thinking, victorious speaking, victorious doing,\nvictorious addressing, and victorious answering.\nVerethraghna, made by Ahura, gave him the fountains of manliness,\nthe strength of the arms, the health of the whole body, the sturdiness\nof the whole body, and the eye-sight of the male horse, that,\nin the dark of the night, in its first half \nand through the rain,\ncan perceive a horse's hair lying on the ground and knows whether\nit is from the head or from the tail.\nFor his brightness and glory, I will offer unto him a sacrifice\nworth being heard....",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": "32-33",
+      "ref": "Yt 14.32-33",
+      "orig": "verethrakhnem ahuradhâtem ýazamaide arshô-karem\n(cf. verse 28.) ... aomca sûkem ýim baraiti kahrkâsô\nzarenumainish ýô naomyâcit haca dainghaot mushti-masanghem\nxrûm aiwi-vaênaiti avavatcit ýatha sûkayå\nbrâzayå brâzem avavatcit ýatha sûkayå\nnaêzem.\nahe raya ... tåscâ ýazamaide! (Repeat verse\n5.)",
+      "en": "We sacrifice unto Verethraghna, made by Ahura, who makes virility,\nwho makes death, who makes resurrection, who possesses peace,\nwho has a free way.\nUnto him did the holy Zarathushtra sacrifice, [asking] for victorious\nthinking, victorious speaking, victorious doing, victorious addressing,\nand victorious answering.\nVerethraghna, made by Ahura, gave him the fountains of virility,\nthe strength of the arms, the health of the whole body, the sturdiness\nof the whole body, and the eye-sight of the vulture with a golden\ncollar, that, from as far as nine districts, \ncan perceive a piece\nof flesh not thicker than the fist, giving just as much light\nas a needle gives, as the point of a needle gives.\nFor his brightness and glory, I will offer unto him a sacrifice\nworth being heard....",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 34,
+      "ref": "Yt 14.34",
+      "orig": "verethrakhnem ahuradhâtem ýazamaide,\nperesat zarathushtrô ahurem mazdãm,\nahura mazda mainyô\nspênishta dâtare gaêthanãm\nastvaitinãm ashâum\nýat bavâni aiwi-sastô aiwi-shmaretô\npouru-narãm tbishyañtãm\ncish ainghe asti baêshazô.",
+      "en": "We sacrifice unto Verethraghna, made by Ahura.\nZarathushtra asked Ahura Mazda: 'Ahura Mazda, most beneficent\nSpirit, Maker of the material world, thou Holy One!\n'If I have a curse thrown upon me, a spell told upon me by the\nmany men who hate me, what is the remedy for it?'",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 35,
+      "ref": "Yt 14.35",
+      "orig": "âat mraot ahurô mazdå, merekhahe peshô-parenahe\nvâreñjinahe parenem ayasaêsha spitama zarathushtra,\nana parena tanûm aiwi-sifôish ana parena hamerethem\npaiti-sanghaêsha.",
+      "en": "Ahura Mazda answered: 'Take thou a feather of that \nbird with ... feathers, the Varenjana, \nO Spitama Zarathushtra! With that feather thou shalt \nrub thy own body, with that feather thou shalt \ncurse back thy enemies.",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 36,
+      "ref": "Yt 14.36",
+      "orig": "ýânå baraiti astavô vâ taxmahe\nmerekhahe parenavô vâ taxmahe merekhahe,\nnaêdha-cish raêva mashya\njaiñti naêdha fraêshyeiti\npaourva-hê nemô baraiti paourva hvarenå,\nvîdhârayeiti upastãm\nmerekhahe parenô merekhanãm.",
+      "en": "'If a man holds a bone of that strong bird, or a feather of\nthat strong bird, no one can smite or turn to flight that fortunate\nman. The feather of that bird of birds brings him help; it brings\nunto him the homage of men, it maintains in him his glory.",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 37,
+      "ref": "Yt 14.37",
+      "orig": "tå ahurô sâstranãm dainghupaitish\nnôit satem jaiñti vîraja\nnôit hakeret jaiñti vaêsaêpa\nôim jaiñti frasha aêiti.",
+      "en": "'Then the sovereign, the lord of countries, will no longer\nkill his hundreds, though he is a killer of men; \nthe .... will\nnot kill at one stroke; he alone smites and goes forwards.",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 38,
+      "ref": "Yt 14.38",
+      "orig": "vîspe tereseñti perenine\navatha mâvayacit tanuye\nvîspe tereseñtu aurvatha\nvîspe tereseñtu dush-mainyush\namemca verethrakhnemca\nnidhâtem tanuye manô,",
+      "en": "'All tremble before him who holds the feather, they tremble\ntherefore before me; all my enemies tremble before me and fear\nmy strength and victorious force and the fierceness established\nin my body.",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 39,
+      "ref": "Yt 14.39",
+      "orig": "ýim vashåñte ahurånghô\nvashåñte âhûiryånghô\nvashåñte haosravanghanô\ntem vashata kava usa,\nýim aspô arsha baraiti\nýim ushtrô vadhairish baraiti\nýim âfsh nâvaya baraiti,",
+      "en": "'He carries the chariot of the lords; he carries the chariots\nof the lordly ones, the chariots of the sovereigns. He carried\nthe chariot of Kavi Usa; upon his wings runs \nthe male horse, \nruns the burden-bearing camel, runs the water of the river.",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 40,
+      "ref": "Yt 14.40",
+      "orig": "ýim thraêtaonô taxmô barat ýô\njanat azhîm dahâkem thrizafanem thrikameredhem xshvash-ashîm\nhazangrâ-ýaoxshtîm ashaojanghem daêvîm\ndrujem akhem gaêthâvyô drvañtem ýãm\nashaojastemãm drujem fraca kereñtat angrô\nmainyush aoi ýãm astvaitîm gaêthãm\nmahrkâi ashahe gaêthanãm.\nahe raya ... tåscâ ýazamaide! (Repeat verse\n5.)",
+      "en": "'Him rode the gallant Thraetaona, who smote Azhi Dahaka, the\nthree-mouthed, the three-headed, the six-eyed, who had a thousand\nsenses; that most powerful, fiendish Druj, that demon, baleful\nto the world, the strongest Druj that Angra Mainyu created against\nthe material world, to destroy the world of the good principle.\n'For his brightness and glory, I will offer unto him a sacrifice\nworth being heard....",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 41,
+      "ref": "Yt 14.41",
+      "orig": "verethrakhnem ahuradhâtem ýazamaide, verethrakhnô\navi imat nmânem gaosurâbyô hvarenô pairi-verenavaiti\nýatha hâu maza merekhô saênô ýatha\nave awrå upâpå masitô gairîsh nivâneñti.\nahe raya ... tåscâ ýazamaide! (Repeat verse\n5.)",
+      "en": "'We sacrifice to Verethraghna, made by Ahura.\n'Verethraghna confounds the glory of this house with its wealth\nin cattle. He is like that great bird, the Saena; \nhe is like the big clouds, full of water, that beat the mountains.\n'For his brightness and glory, I will offer unto him a sacrifice\nworth being heard....",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 42,
+      "ref": "Yt 14.42",
+      "orig": "verethrakhnem ahuradhâtem ýazamaide, peresat\nzarathushtrô ahurem mazdãm,\nahura mazda mainyô\nspênishta dâtare gaêthanãm\nastvaitinãm ashâum\nkva asti verethrakhnahe ahuradhâtahe nãma-azbâitish\nkva upa-stûitish kva nishtûitish.",
+      "en": "'We sacrifice to Verethraghna, made by Ahura.'\nZarathushtra asked Ahura Mazda: 'Ahura Mazda, most beneficent\nSpirit, Maker of the material world thou Holy One!\n'Where is it \nthat we must invoke the name of Verethraghna, made by Ahura? Where\nis it that we must praise him? That we must humbly praise him?'",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 43,
+      "ref": "Yt 14.43",
+      "orig": "âat mraot ahurô mazdå,\nýat spâdha hañjasåñte\nspitama zarathushtra\nrashtem rasma katarascit\nvashtånghô ahmya nôit vazyåñte\njatånghô ahmya nôit janyåñte.",
+      "en": "Ahura Mazda answered: 'When armies meet together in full array,\nO Spitama Zarathushtra! (asking) which of the two is the party\nthat conquers and is not crushed, that smites and is not smitten;",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 44,
+      "ref": "Yt 14.44",
+      "orig": "catangrô perenå vîdhârayôish\navi pathãm katarascit,\nýatârô pourvô frâyazâite\namô hutashtô huraodhô\nverethrakhnô ahuradhâtô\natârô verethra hacaite.",
+      "en": "'Do thou throw four feathers in the way. \nWhichever of the \ntwo will first worship the well-shapen Strength, and Verethraghna,\nbeautiful of form. made by Mazda, on his side will victory stand.",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 45,
+      "ref": "Yt 14.45",
+      "orig": "amemca verethrakhnemca âfrînâmi dva apâtâra\ndva nipâtâra dva nishharetâra dva adhwôzhen\ndva vîdhwôzhen dva fradhwôzhen dva âmarezen\ndva vîmarezen dva framarezen.",
+      "en": "'I will bless Strength and Victory, the two keepers, the two\ngood keepers, the two maintainers; the two who ..., the two who\n... the two who ...; \nthe two who forgive, the two who strike off,\nthe two who forget.",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 46,
+      "ref": "Yt 14.46",
+      "orig": "zarathushtra aêtem mãthrem mâ fradaêsayôish\nainyat pithre vâ puthrâi brâthre vâ hadhô-zâtâi\nâthravanâi vâ thrâyaone, aêtaêca-tê\nvâcô ýôi ukhra âs derezra âs\nukhra âs vyâxaine âs ukhra âs verethrakhne\nâs ukhra âs baêshazya âs, aêtaêca-tê\nvâcô ýôi peshemcit sârem buñjaiñti\nuzgereptemcit snathem apasha apa-hvanvaiñti.\nahe raya ... tåscâ ýazamaide! (Repeat verse\n5.)",
+      "en": "'O Zarathushtra! let not that spell be shown to any one, except\nby the father to his son, or by the brother to his brother from\nthe same womb, or by the Athravan to his pupil. \nThese are words\nthat are awful and powerful, awful and assembly-ruling, awful\nand victorious, awful and healing: these are words that save the\nhead that was lost and chant away the uplifted weapon.'",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 47,
+      "ref": "Yt 14.47",
+      "orig": "verethrakhnem ahuradhâtem ýazamaide ýô\nvîrâzaiti añtare râshta rasmana\nâca paraca peresaite\nhadha mithra hadha rashnvô,\nkô mithrem aiwi-druzhaiti\nkô rashnûm paiti-irinaxti\nkahmâi ýaskemca mahrkemca\nazem baxshâni xshayamnô.",
+      "en": "We sacrifice to Verethraghna, made by Ahura: who goes along\nthe armies arrayed, and goes here and there asking, along with\nMithra and Rashnu: \n'Who is it who lies unto Mithra? Who is it who \nthrusts [his oath] against Rashnu? \nTo whom shall I, in my might, impart illness and death?'",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 48,
+      "ref": "Yt 14.48",
+      "orig": "âat mraot ahurô mazdå,\nýat mashyâka frâyazåñte verethrakhnô\nahuradhâtô dâtahe ýim shyeiti dâityôtema\nýasnasca vahmasca ashât haca ýat vahishtât\nnôit ithra airyå dainghâvô frãsh\nhyât haêna nôit vôikhna nôit pâma\nnôit kapastish nôit haênyô rathô\nnôit uzgereptô drafshô.",
+      "en": "Ahura Mazda said: 'If men sacrifice unto \nVerethraghna, made by Ahura, if the due sacrifice \nand prayer is offered unto him\njust as it ought to be performed in the perfection of holiness,\nnever will a hostile horde enter the Aryan countries, nor any\nplague, nor leprosy, nor venomous plants, nor the chariot of a\nfoe, nor the uplifted spear of a foe.",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 49,
+      "ref": "Yt 14.49",
+      "orig": "paiti dim peresat zarathushtrô, kat zî asti ahura\nmazda verethrakhnahe ahuradhâtahe dâityôtema\nýasnasca vahmasca ashât haca ýat vahishtât.",
+      "en": "Zarathushtra asked: 'What is then, O Ahura Mazda! the sacrifice\nand invocation in honour of Verethraghna, made by Ahura, as it\nought to be performed in the perfection of holiness?'",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 50,
+      "ref": "Yt 14.50",
+      "orig": "âat mraot ahurô mazdå, zaothrå hê\nuzbârayen airyå dainghâvô baresma hê\nsterenayen airyå dainghâvô, pasûm hê\npacayen airyå dainghâvô aurushem vâ vohu-gaonem\nvâ kâcit vâ gaonanãm hamô-gaonem.",
+      "en": "Ahura Mazda answered: 'Let the Aryan nations bring libations\nunto him; let the Aryan nations tie bundles of baresma for him;\nlet the Aryan nations cook for him a head of cattle, either white,\nor black, or of any other colour, but all of one and the same\ncolour.",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 51,
+      "ref": "Yt 14.51",
+      "orig": "mâ-hê mairyô geurvayôit mâ jahika\nmâ ashâvô asrâvayat-gâthô\nahumerexsh paityârenô imãm daênãm\nýãm âhûirîm zarathushtrîm.",
+      "en": "'Let not a murderer take of those offerings, nor a whore,\nnor a ...., who does not sing the Gathas, who spreads death in\nthe world and withstands the law of Mazda, the law of Zarathushtra.",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 52,
+      "ref": "Yt 14.52",
+      "orig": "ýezi-shê mairyô geurvayât jahika\nvâ ashâvô vâ asrâvayat-gâthô\nahumerexsh paityârenô imãm daênãm\nýãm âhûirîm zarathushtrîm\npara baêshaza hacaite\nverethrakhnô ahuradhâtô.",
+      "en": "'If a murderer take of those offerings, or a whore, or a ....,\nwho does not sing the Gathas, then Verethraghna, made by Ahura,\ntakes back his healing virtues.",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 53,
+      "ref": "Yt 14.53",
+      "orig": "hamatha airyâbyô dainghubyô vôikhnå\njasåñti, hamatha airyâbyô dainghubyô\nhaêna frapatåñti, hamatha airyâbyô\ndainghubyô janyåñte pañcasakhnâi\nsatakhnâishca satakhnâi hazangrakhnâishca hazangrakhnâi\nbaêvarekhnâishca baêvarekhnâi ahãxshtakhnâishca.",
+      "en": "'Plagues will ever pour upon the Aryan nations; hostile hordes\nwill ever fall upon the Aryan nations; the Aryans will be smitten\nby their fifties and their hundreds, by their hundreds and their\nthousands, by their thousands and their tens of thousands, by\ntheir tens of thousands and their myriads of myriads.'",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 54,
+      "ref": "Yt 14.54",
+      "orig": "adhât uiti fravashata,\nverethrakhnô ahuradhâtô\nnôit narô ýesnyô vahmyô\ngêushca urva dâmi-dâtô\nýat nûrem vyâmbura daêva\nmashyâka daêvayâzô\nvohunîm vâ tâcayeiñti\nfrashaêkem vâ frashicañti,",
+      "en": "There Verethraghna, made by Ahura, proclaimed thus: 'The Soul\nof the Bull, the wise creature, does not receive from man due\nsacrifice and prayer; for now the Daevas and the worshippers of\nthe Daevas make blood flow and spill it like water;",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 55,
+      "ref": "Yt 14.55",
+      "orig": "ýat nûrem vyâmbura daêva\nmashyâka daêvayâzô\navi âtrem âbareñti aêtayå urvarayå\nýâ vaoce haperesi nãma aêtem aêsmem\nýô vaoce nemedhka nãma.",
+      "en": "'For now the Vyambura Daevas and the worshippers of the Daevas\nbring to the fire the plant that is called Haperesi, the wood\nthat is called Nemetka;",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 56,
+      "ref": "Yt 14.56",
+      "orig": "ýat nûrem vyâmbura daêva\nmashyâka daêvayâzô\nfrâ parshtîm nâmayeiñti\nvî maidhyãnem fshânayeiñti\nvîspa hañdâma râzayeiñti\njana hô saidhin nôit janen\nhadha hô saidhin nôit hadhen,\nýat nûrem vyâmbura daêva\nmashyâka daêvayâzô\nushi pairi-dârayeiñti\ndaêma hô pairi-urvaêsayeiñti.\nahe raya ... tåscâ ýazamaide! (Repeat verse\n5.)",
+      "en": "'(Therefore) when the Vyambura Daevas and the worshippers\nof the Daevas bow their backs, bend their waists, and arrange\nall their limbs, they think they will smite and smite not, they\nthink they will kill and kill not; and then the (?Vyambura) Daevas\nand the worshippers of the Daevas have their minds confounded\nand their eyes made giddy.'\nFor his brightness and glory, I will offer unto him a sacrifice\nworth being heard....",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 57,
+      "ref": "Yt 14.57",
+      "orig": "verethrakhnem ahuradhâtem ýazamaide,\nhaomem baire sâiri baokhem\nhaomem verethrâcanem baire\nnipâtârem vohu baire\npâtârem tanuye baire haomem ýim nivizaiti nivañdât\napayeiti dushmainyaot peshana haca,",
+      "en": "We sacrifice to Verethraghna, made by Ahura.\nI offer up Haoma, who saves one's head; \nI offer up the victorious Haoma; I offer him up, the good \nprotector; I offer up Haoma, who is a protector to my \nbody, as a man who shall drink of him shall\nwin and prevail over his enemies in battle;",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 58,
+      "ref": "Yt 14.58",
+      "orig": "ýatha azem aom spâdhem vanâni ýatha\nazem aom spâdhem nivanâni ýatha azem aom spâdhem\nnijanâni ýô mê paskât vazaite.\nahe raya ... tåscâ ýazamaide! (Repeat verse\n5.)",
+      "en": "That I may smite this army, that I may smite down this army,\nthat I may cut in pieces this army that is coming behind me.\nFor his brightness and glory, I will offer unto him a sacrifice\nworth being heard....",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 59,
+      "ref": "Yt 14.59",
+      "orig": "verethrakhnem ahuradhâtem ýazamaide,\nasânem sikhûire cithrem\nabare ahurô puthrô\nputhrånghô baêvare-patayô, amava âs\nverethrava nãma verethrava âs amava nãma.",
+      "en": "We sacrifice to Verethraghna, made by Ahura.\nThe prince and his son and his sons who are chiefs of myriads \noffer him up a bright ... [saying]: 'He is strong, and Victorious\nis his name; he is victorious, and Strong is his name;'",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 60,
+      "ref": "Yt 14.60",
+      "orig": "ýatha azem avata verethra hacâne\nýatha vîspe anye aire ýatha azem aom spâdhem\nvanâni ýatha azem aom spâdhem nivanâni\nýatha azem aom spâdhem nijanâni ýô\nmê paskât vazaite.\nahe raya ... tåscâ ýazamaide! (Repeat verse\n5.)",
+      "en": "That I may be as constantly victorious as any one of all the\nAryans; that I may smite this army, that I may smite down this\narmy, that I may cut in pieces this army that is coming behind\nme.\nFor his brightness and glory, I will offer unto him a sacrifice\nworth being heard....",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 61,
+      "ref": "Yt 14.61",
+      "orig": "verethrakhnem ahuradhâtem ýazamaide.\nýathâ ahû vairyô....\ngave amem gave nemem\ngave uxdhem gave verethrem\ngave hvarethem gave vastrem\ngave verezyâtãm\ntãm nê hvarethâi fshuyô.\nahe raya ... tåscâ ýazamaide! (Repeat verse\n5.)",
+      "en": "We sacrifice to Verethraghna, made by Ahura.\nYatha ahu vairyo: The will of the Lord is the law of holiness....\nIn the ox is our strength, in the ox is our need; \nin the ox is\nour speech, in the ox is our victory; in the ox is our food, in\nthe ox is our clothing; in the ox is tillage, that makes food\ngrow for us.\nFor his brightness and glory, I will offer unto him a sacrifice\nworth being heard....",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 62,
+      "ref": "Yt 14.62",
+      "orig": "verethrakhnem ahuradhâtem ýazamaide,\nýô rasmanô sciñdayeiti\nýô rasmanô kereñtayeiti\nýô rasmanô hvanghayeiti\nýô rasmanô ýaozayeiti\navi rasmanô sciñdayeiti avi rasmanô kereñtayeiti\navi rasmanô hvanghayeiti avi rasmanô ýaozayeiti\nverethrakhnô ahuradhâtô\ndaêvanãm mashyânãmca\nýâthwãm pairikanãmca\nsâthrãm kaoyãm karafnãmca.\nahe raya ... tåscâ ýazamaide! (Repeat verse\n5.)",
+      "en": "We sacrifice to Verethraghna, made by Ahura;\nWho breaks the columns asunder, who cuts the columns to pieces,\nwho wounds the columns, who makes the columns shake; who comes\nand breaks the columns asunder, who comes and cuts the columns\nto pieces, who comes and wounds the columns, who comes and makes\nthe columns shake, both of Daevas and men, of the Yatus and Pairikas,\nof the oppressors, the blind, and the deaf.\nFor his brightness and glory, I will offer unto him a sacrifice\nworth being heard....",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 63,
+      "ref": "Yt 14.63",
+      "orig": "verethrakhnem ahuradhâtem ýazamaide, âat\nýat verethrakhnô ahuradhâtô thaxtanãm\nrasmanãm ýûxtanãm shôithranãm\nmithrô-drujãm mashyânãm\napãsh gavô darezayeiti\npairi daêma vârayeiti\napa gaosha taoshayeiti\nnôit pâdha vîdhârayeiti\nnôit paiti-tavå bavaiti.\nahe raya ... tåscâ ýazamaide! (Repeat verse\n5.)",
+      "en": "We sacrifice to Verethraghna, made by Ahura.\nWhen Verethraghna, made by Ahura, binds the hands, confounds the\neye-sight, takes the hearing from the ears of the Mithradrujes\nmarching in columns, allied by cities, they can no longer move\ntheir feet, they can no longer-withstand.\nFor his brightness and glory I will offer unto him a sacrifice\nworth being heard....",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 64,
+      "ref": "Yt 14.64",
+      "orig": "(hôrmezd i hvadâe i awazûnî mardum\nmardum sardagã hamâ sardagã ham bâ ýasht\ni vahã vaem vahe dîn i mâzdayasnã âgâhî\nâstvãnî nêkî rasãnât\nêduñ bât.)",
+      "en": "Yatha ahu vairyo: The will of the Lord is the law of holiness....\nI bless the sacrifice and prayer, and the strength and vigour\nof Verethraghna, made by Mazda; and of the crushing Ascendant.\nAshem Vohu: Holiness is the best of all good....\n[Give] unto that man brightness and glory, .... give him the bright,\nall-happy, blissful abode of the holy Ones.\nAvesta -- Zoroastrian Archives\nContents\nPrev\nyt14sbe\nNext\nGlossary\nAvestan",
+      "zh": ""
+    }
+  ]
+}

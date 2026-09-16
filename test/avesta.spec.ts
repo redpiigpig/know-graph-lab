@@ -239,4 +239,44 @@ describe('已上架正文與書目的對應', () => {
       expect(doc.orig_scheme).toBe('geldner-roman')
     }
   })
+
+  it('亞什特 21 首與維斯帕拉德 24 章全數上架，引用式合規', async () => {
+    const { TEXT_REFS, loadText } = await import('~/data/avesta/sources')
+    for (const [prefix, count, pattern] of [
+      ['yasht-', 21, /^Yt \d+\.\d+(-\d+)?$/],
+      ['visperad-', 24, /^Vr \d+\.\d+(-\d+)?$/],
+    ] as const) {
+      const refs = TEXT_REFS.filter(r => r.slug.startsWith(prefix))
+      expect(refs, `${prefix} 篇數不對`).toHaveLength(count)
+      for (const ref of refs) {
+        const doc = (await loadText(ref.slug))!
+        expect(doc.segments.length, `${ref.slug} 無段落`).toBeGreaterThan(0)
+        for (const seg of doc.segments) {
+          expect(seg.ref, `${ref.slug} 有段落缺引用式`).toMatch(pattern)
+        }
+      }
+    }
+  })
+
+  it('🚨 上架的篇章不得有整篇空的欄——那是解析器沒認出版型，不是來源沒有', async () => {
+    // 實測踩過三次：avesta.org 的英譯頁有三種版型（兩欄表格／定義列表／純段落），
+    // 只認一種時，另兩種版型的篇章會寫出「轉寫滿的、英譯全空」的檔，
+    // 而檔案照樣產生、頁面照樣顯示，看起來只像「這幾首剛好沒英譯」。
+    const { TEXT_REFS, loadText, filledCount } = await import('~/data/avesta/sources')
+    const knownNoEnglish = new Set([
+      'yasht-20', // 韋斯特的《東方聖書》未收
+      'visperad-24', // SBE 英譯只到第 23 章
+    ])
+    for (const ref of TEXT_REFS) {
+      const doc = (await loadText(ref.slug))!
+      expect(filledCount(doc, 'orig'), `${ref.slug} 轉寫欄整篇空`).toBeGreaterThan(0)
+      if (!knownNoEnglish.has(ref.slug)) {
+        expect(filledCount(doc, 'en'), `${ref.slug} 英譯欄整篇空`).toBeGreaterThan(0)
+      }
+    }
+  })
+
+  it('已知缺英譯的兩篇標得出來（不得默默宣稱有）', () => {
+    expect(findText('yasht-20')!.text.columns?.en).toBe('none')
+  })
 })

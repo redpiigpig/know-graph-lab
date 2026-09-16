@@ -1,0 +1,308 @@
+{
+  "slug": "yasht-01",
+  "siglum": "Yt 1",
+  "title_zh": "亞什特 第 1 首‧阿胡拉‧馬茲達讚",
+  "title_en": "Yasht 1",
+  "canon": "avestan",
+  "volume": "yasht",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/ka/yt1.htm",
+  "en_source": "《東方聖書》第 23 卷，1883；公有領域",
+  "en_translator": "達梅斯特（James Darmesteter）",
+  "en_url": "https://www.avesta.org/ka/yt1sbe.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Mithra": "密特拉",
+    "Anahita": "阿娜希塔",
+    "Tishtrya": "提什特里亞",
+    "Verethraghna": "韋雷特拉格納",
+    "Vayu": "瓦尤",
+    "Rashnu": "拉什努",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "khvarenah": "赫瓦雷納",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 1,
+      "verse": 0,
+      "ref": "Yt 1.0",
+      "orig": "(pa nãm i ýazdã, hôrmezd i hvadâe\ni awazûnî gurz hvarahe awazâyât, dâdâr\nhôrmezd i raemañd i hvarahemañd mainyuã\nmainyô i bêtum bê rasât,\nezh hamâ gunâh patit pashêmãnôm,\nezh haravistîn dushmat duzhûxt duzhvaresht men pa\ngêthî minît vaem guft vaem kard vaem jast vaem\nbun bût estet ezh ã gunâhihâ manishnî\ngaweshnî kunishnî tanî rvãnî gêthî\nmainyuãnî ôxe awaxsh pashêmã pa\nse gaweshnî pa patit hôm!)\nxshnaothra ahurahe mazdå tarôidîti angrahe mainyêush,\nhaithyâvarshtãm hyat vasnâ ferashôtemem.\nferastuyê humatôibyascâ hûxtôibyascâ\nhvarshtôibyascâ mãthwôibyascâ vaxedhwôibyascâ\nvarshtvôibyascâ, aibigairyâ daithê vîspâ\nhumatâcâ hûxtâcâ hvarshtâcâ,\npaitiricyâ daithê vîspâ dushmatâcâ\nduzhûxtâcâ duzhvarshtâcâ.\nferâ vê râhî ameshâ speñtâ\nýasnemcâ vahmemcâ ferâ mananghâ\nferâ vacanghâ ferâ shyaothanâ ferâ\nanghuyâ ferâ tanvascît hvah'yå ushtanem.\nstaomî ashem,\nashem vohû...(3). fravarâne mazdayasnô zarathushtrish\nvîdaêvô ahura-tkaêshô,\n (Here recite the appropriate Gah dedication.) \nahurahe mazdå raêvatô hvarenanguhatô xshnaothra\nýasnâica vahmâica xshnaothrâica frasastayaêca.\nýathâ ahû vairyô, zaotâ frâ\nmê mrûtê\nathâ ratush ashâtcît haca, frâ ashava\nvîdhvå mraotû.",
+      "en": "May Ahura Mazda be rejoiced! May Angra Mainyu be destroyed\nby those who do truly what is the foremost wish (of God).\nI praise well-thought, well-spoken, and well-done thoughts, words,\nand deeds. I embrace all good thoughts, good words, and good deeds;\nI reject all evil thoughts, evil words, and evil deeds.\nI give sacrifice and prayer unto you, O Amesha-Spentas! even with\nthe fullness of my thoughts, of my words, of my deeds, and of\nmy heart: I give unto you even my own life.\nI recite the 'Praise of Holiness:'\n'Ashem Vohu: Holiness is the best of all good. Well is it for\nit, well is it for that holiness which is perfection of holiness!'\nI confess myself a worshipper of Mazda, a follower of Zarathushtra,\none who hates the Daevas and obeys the laws of Ahura;\nFor sacrifice, prayer, propitiation, and glorification unto [Havani],\nthe holy and master of holiness;\nFor sacrifice, prayer, propitiation, and glorification unto [Savanghi\nand Visya], the holy and masters of holiness;\nFor sacrifice, prayer, propitiation, and glorification unto the\nMasters of the days, of the periods of the day, of the months,\nof the seasons, and of the years;\nUnto AHURA MAZDA, bright and glorious, be propitiation, with sacrifice,\nprayer, propitiation, and glorification.\nYatha ahu vairyo: The will of the Lord is the law of holiness:\nthe riches of Vohu-Mano shall he given to him who works in this\nworld for Mazda, and wields according to the will of Ahura the\npower he gave him to relieve the poor.",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 1,
+      "ref": "Yt 1.1",
+      "orig": "peresat zarathushtrô ahurem mazdãm,\nahura mazda mainyô\nspênishta dâtare gaêthanãm\nastvaitinãm ashâum kat asti mãthrahe speñtahe\namavastemem kat verethravastemem kat hvarenanguhastemem kat ýâskerestemem",
+      "en": "Zarathushtra asked Ahura Mazda: 'O Ahura Mazda, most beneficent\nSpirit, Maker of the material world, thou Holy One!\n'What of the Holy Word is the strongest? What is the most victorious?\nWhat is the most glorious? What is the most effective?",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 2,
+      "ref": "Yt 1.2",
+      "orig": "kat vârethrakhnyôtemem kat baêshazyôtemem\nkat tbaêshô-taurvayãstemem daêvanãm\nmashyânãmca, kat vîspahe anghêush astvatô\nmana asti vîjakhmishtem kat vîspahe anghêush\nastvatô anghvãm asti vîmarezishtem.",
+      "en": "'What is the most fiend-smiting? What is the best-healing?\nWhat destroyeth best the malice of Daevas and Men? What maketh\nthe material world best come to the fulfillment of its wishes?\nWhat freeth the material world best from the anxieties of the\nheart?'",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 3,
+      "ref": "Yt 1.3",
+      "orig": "âat mraot ahurô mazdå, ahmâkem nãma\nspitama zarathushtra ýat ameshanãm speñtanãm,\ntat asti mãthrahe speñtahe amavastemem tat verethravastemem\ntat hvarenanguhastemem tat ýâskerestemem",
+      "en": "Ahura Mazda answered: 'Our Name, O Spitama Zarathushtra! who\nare the Amesha-Spentas, that is the strongest part of the Holy\nWord; that is the most victorious; that is the most glorious;\nthat is the most effective;",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 4,
+      "ref": "Yt 1.4",
+      "orig": "tat vârethrakhnyôtemem tat baêshazyôtemem\ntat tbaêshô-taurvayãstemem daêvanãm\nmashyânãmca, tat vîspahe anghêush astvatô\nmana asti vîjakhmishtem tat vîspahe anghêush\nastvatô anghvãm asti vîmarezishtem.",
+      "en": "'That is the most fiend-smiting; that is the best-healing;\nthat destroyeth best the malice of Daevas and Men: that maketh\nthe material world best come to the fulfillment of its wishes;\nthat freeth the material World best from the anxieties of the\nheart.'",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 5,
+      "ref": "Yt 1.5",
+      "orig": "âat aoxta zarathushtrô,\nfrôit mê tat nãma framrûidhi\nashâum ahura mazda ýat tê asti mazishtemca\nvahishtemca sraêshtemca ýâskerestememca vârethrakhnyôtememca\nbaêshazyôtememca tbaêshô-taurvayãstememca\ndaêvanãm mashyânãmca,",
+      "en": "Then Zarathushtra said: 'Reveal unto me that name of thine,\nO Ahura Mazda! that is the greatest, the best, the fairest, the\nmost effective, the most fiend-smiting, the best-healing, that\ndestroyeth best the malice of Daevas and Men;",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 6,
+      "ref": "Yt 1.6",
+      "orig": "ýatha azem taurvayeni\nvîspe daêva mashyãsca\nýatha azem taurvayeni\nvîspe ýâtavô pairikåsca\nýat mãm naêcish taurvayât\nnôit daêvô naêdha mashyô\nnôit ýâtavô naêdha pairikå.",
+      "en": "'That I may afflict all Daevas and Men; that I may afflict\nall Yatus and Pairikas; that neither Daevas nor Men may be able\nto afflict me; neither Yatus nor Pairikas.'",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 7,
+      "ref": "Yt 1.7",
+      "orig": "âat mraot ahurô mazdå, fraxshtya nãma\nahmi ashâum zarathushtra bityô vãthwyô\nthrityô ava-tanuyô tûirya asha vahishta puxdha\nvîspa vohu mazdadhâta ashacithra xshtvô ýat\nahmi xratush haptathô xratumå ashtemô ýat\nahmi cistish nâumô cistivå,",
+      "en": "Ahura Mazda replied unto him: 'My name is the One of whom\nquestions are asked, O holy Zarathushtra!\n'My second name is the Herd-giver\n'My third name is the Strong One \n'My fourth name is Perfect Holiness .\n'My fifth name is All good things created by Mazda, the offspring\nof the holy principle.\n'My sixth name is Understanding;\n'My seventh name is the One with understanding.\n'My eighth name is Knowledge;\n'My ninth name is the One with Knowledge.",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 8,
+      "ref": "Yt 1.8",
+      "orig": "dasemô ýat ahmi spânô aêvañdasô\nspananguhå dvadasô ahurô thridasô sevishtô\ncathrudasô imat vîdvaêshtvô pañcadasa\navanemna xshvash-dasa hâta-marenish haptadasa vîspa-hishas\nashtadasa baêshazya navadasa ýat ahmi dâtô\nvîsãstemô ahmi ýat ahmi mazdå\nnãma.",
+      "en": "'My tenth name is Weal;\n'My eleventh name is He who produces weal.\n'My twelfth name is AHURA (the Lord).\n'My thirteenth name is the most Beneficent.\n'My fourteenth name is He in whom there is no harm.\n'My fifteenth name is the unconquerable One.\n'My sixteenth name is He who makes the true account.\n'My seventeenth name is the All-seeing One.\n'My eighteenth name is the healing One.\n'My nineteenth name is the Creator.\n'My twentieth name is MAZDA (the All-knowing One).",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 9,
+      "ref": "Yt 1.9",
+      "orig": "ýazaêsha mãm zarathushtra\npaiti asni paiti xshafne\nýasô-beretâbyô zaothrâbyô,\njasâni-tê avanghaêca rafnanghaêca\nazem ýô ahurô mazdå\njasâiti-tê avanghaêca rafnanghaêca\nýô vanghush sraoshô ashyô jasåñti-tê\navanghaêca rafnanghaêca\nýå âpô ýåsca urvarå\nýåsca ashâunãm fravashayô!",
+      "en": "Worship me, O Zarathushtra, by day and by night, with offerings\nof libations well accepted I will come unto thee for help and\njoy, I, Ahura Mazda; the good, holy Sraosha will come unto thee\nfor help and joy; the waters, the plants, and the Fravashis of\nthe holy ones will come unto thee for help and joy.",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 10,
+      "ref": "Yt 1.10",
+      "orig": "ýezi vashi zarathushtra\navå tbaêshå taurvayô\ndaêvanãm mashyânãmca\nýâthwãm pairikanãmca\nsâthrãm kaoyãm karafnãmca\nmairyanãmca bizañgranãm\nashemaokhanãmca bizañgranãm\nvehrkanãmca cathware-zañgranãm",
+      "en": "'If thou wantest, O Zarathushtra, to destroy the malice of\nDaevas and Men, of the Yatus and Pairikas, of the oppressors,\nof the blind and of the deaf, of the two-legged ruffians, of the\ntwo-legged Ashemaoghas, of the four-legged wolves;",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 11,
+      "ref": "Yt 1.11",
+      "orig": "haênayåsca perethvainikayå perethu-drafshayå\neredhwô-drafshayå uzegereptô- drafshayå\nxrûrem drafshem bareñtayå atha imå nâmênîsh\ndreñjayô framrava\nvîspâish ayãnca xshafnasca,",
+      "en": "'And of the hordes with the wide front, with the many spears,\nwith the straight spears, with the spears uplifted, bearing the\nspear of havock; then, recite thou these my names every day and\nevery night.",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 12,
+      "ref": "Yt 1.12",
+      "orig": "pâyushca ahmi dâtâca thrâtâca\nahmi zhnâtâca mainyushca ahmi speñtôtemô\nbaêshazya nãma ahmi baêshazyôtema nãma\nahmi âthrava nãma ahmi âthravatema nãma\nahmi ahura nãma ahmi mazdå nãma ahmi ashava\nnãma ahmi ashavastema nãma ahmi hvarenangha nãma\nahmi hvarenanguhastema nãma ahmi pouru-darshta nãma\nahmi pouru-darshtema nãma ahmi dûraêdarshta\nnãma ahmi dûraêdarshtema nãma ahmi.",
+      "en": "'I am the Keeper; I am the Creator and the Maintainer; I am\nthe Discerner; I am the most beneficent Spirit.\n'My name is the bestower of health; my name is the best bestower\nof health.\n'My name is the Athravan; my name is the most Athravan-like of\nall Athravans.\n'My name is Ahura (the Lord)\n'My name is Mazdau (the all-knowing).\n'My name is the Holy; my name is the most Holy.\n'My name is the Glorious; my name is the most Glorious.\n'My name is the Full-seeing; my name is the Fullest-seeing.\n'My name is the Far-seeing; my name is the Farthest-seeing.",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 13,
+      "ref": "Yt 1.13",
+      "orig": "spashta nãma ahmi vîta nãma ahmi dâta\nnãma ahmi pâta nãma ahmi thrâta nãma\nahmi zhnâta nãma ahmi zhnôishta nãma\nahmi fshûmå nãma ahmi fshûshe-mãthra\nnãma ahmi ise-xshathra nãma ahmi ise-xshathryôtemô\nnãma ahmi nãmô-xshathrô nãma\nahmi nãmô-xshathryôtemô nãma ahmi.",
+      "en": "'My name is the Protector; my name is the Well-wisher; my\nname is the Creator; my name is the Keeper; my name is the Maintainer.\n'My name is the Discerner; my name is the Best Discerner.\n'My name is the Prosperity-producer; my name is the Word of Prosperity.\n'My name is the King who rules at his will; my name is the King\nwho rules most at his will.\n'My name is the liberal King; my name is the most liberal King.",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 14,
+      "ref": "Yt 1.14",
+      "orig": "adhavish nãma ahmi vîdhavish nãma ahmi\npaiti-pâyush nãma ahmi tbaêshô-taurvå\nnãma ahmi hathravane nãma ahmi vîspavane nãma\nahmi vîspatashe nãma ahmi vîspa-hvâthra\nnãma ahmi pouru-hvâthra nãma ahmi hvâthravå\nnãma ahmi.",
+      "en": "'My name is He who does not deceive; my name is He who is\nnot deceived.\n'My name is the good Keeper; my name is He who destroys malice;\nmy name is He Who conquers at once; my name is He who conquers\neverything; my name is He who has shaped everything.\n'My name is All weal; my name is full weal; my name is the Master\nof weal.",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 15,
+      "ref": "Yt 1.15",
+      "orig": "verezi-saoka nãma ahmi verezi-savå nãma\nahmi sevî nãma ahmi sûrå nãma\nahmi sevishta nãma ahmi asha nãma ahmi bereza nãma\nahmi xshathrya nãma ahmi xshathryôtema nãma\nahmi hudânush nãma ahmi hudânushtemô\nnãma ahmi dûraê-sûka nãma ahmi,\ntåsca imå nâmênîsh.",
+      "en": "'My name is He who can benefit at his wish; my name is He\nwho can best benefit at his wish.\n'My name is the Beneficent One; my name is the Energetic One;\nmy name is the most Beneficent.\n'My name is Holiness; my name is the Great One; my name is the\ngood Sovereign; my name is the Best of Sovereigns.\n'My name is the Wise One; my name is the Wisest of the Wise; my\nname is He who does good for a long time.",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 16,
+      "ref": "Yt 1.16",
+      "orig": "ýasca-mê aêtahmi anghvô ýat\nastvaiñti spitama zarathushtra imå nâmênîsh\ndreñjayô framrava paiti vâ asni paiti vâ\nxshafne",
+      "en": "'These are my names.\n'And he who in this material world, O Spitama Zarathushtra! shall\nrecite and pronounce those names of mine either by day or by night;",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 17,
+      "ref": "Yt 1.17",
+      "orig": "framrava us-vâ hishtô nî-vâ paidhyamnô\nnî-vâ paidhyamnô us-vâ hishtô aiwyånghanem\nvâ aiwyånghayamnô aiwyånghanem vâ\nbûjayamnô frâ-vâ shûsa haca gâtaot\nfrâ-vâ shûsa haca zañtaot frâ-vâ\nshûsa haca dainghaot ava-jasa dah'yûm-â",
+      "en": "'He who shall pronounce them, when he rises up or when he\nlays him down; when he lays him down or when he rises up; when\nhe binds on the sacred girdle [[kusti]] or when he unbinds the sacred girdle;\nwhen he goes out of his dwelling-place, or when he goes out of\nhis town, or when he goes out of his country and comes into another\ncountry:",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 18,
+      "ref": "Yt 1.18",
+      "orig": "nôit dim nara ainghe ayãn nôit ainghå\nxshapô aêshmô-drûtahe druxshmananghô\navasyât nôit akavô nôit cakavô nôit\nishavô nôit kareta nôit vazra nôit vîseñte\nasânô avasyât.",
+      "en": "'That man, neither in that day nor in that night, shall be\nwounded by the weapons of the foe who rushes Aeshma-like and is\nDruj-minded; not the knife, not the cross-bow, not the arrow,\nnot the sword, not the club, not the sling-stone shall reach and\nwound him.",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 19,
+      "ref": "Yt 1.19",
+      "orig": "vîsãstaca imå nâmênîsh\nparshtasca pairivârasca\nvîseñte pairi mainyaoyât\ndrujat varenyayâatca drvãithyât\nzîzi-ýûshatca kayadhât\nvîspô-mahrkâatca pairi\ndrvatat ýat angrât mainyaot\nmãnayen ahe ýatha hazangrem narãm\nôyum narem aiwyâxshayôit!",
+      "en": "'But those names shall come in to keep him from behind and\nto keep him in front, from the Druj unseen, from the female Varenya\nfiend, from the evil-doer bent on mischief, and from that fiend\nwho is all death, Angra Mainyu. It will be as if there were a\nthousand men watching over one man.",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 20,
+      "ref": "Yt 1.20",
+      "orig": "kê verethrem jâ thwâ pôi sêñghâ\nýôi heñtî\ncithrâ môi dãm ahûmbish ratûm cîzhdî\nat hôi vohû seraoshô jañtû mananghâ\nmazdâ ahmâi ýahmâi vashî kahmâicît!",
+      "en": "'\"Who is he who will smite the fiend in order to maintain\nthy ordinances? Teach me clearly thy rules for this world and\nfor the next, that Sraosha may come with Vohu-Mano and help whomsoever\nthou pleasest.\"",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 21,
+      "ref": "Yt 1.21",
+      "orig": "nemem kavaêm hvarenô nemô airyene vaêjahi\nnemô saoke mazdadhâite nemô ape dâityayå\nnemô areduyå âpô anâhitayå\nnemem vîspayå ashaonô stôish.\nýathâ ahû vairyô...(10).\nashem vohû...(10).",
+      "en": "'Hail to the Glory of the Kavis! Hail to the Airyanem Vaejah!\nHail to the Saoka, made by Mazda! Hail to the waters of the Daitya!\nHail to Ardvi, the undefiled well! Hail to the whole world of\nthe holy Spirit!\n'Yatha ahu vairyo: The will of the Lord...\n'Ashem Vohu: Holiness is the best of all good....",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 22,
+      "ref": "Yt 1.22",
+      "orig": "ahunem vairîm ýazamaide, ashem vahishtem sraêshtem\nameshem speñtem ýazamaide, amemca thrememca aojasca\nverethremca hvarenasca zavareca ýazamaide, ahurem mazdãm\nraêvañtem hvarenanguhañtem ýazamaide,\nýenghê hâtãm âat ýesne\npaitî vanghô mazdå ahurô vaêthâ\nashât hacâ ýånghãmcâ tãscâ\ntåscâ ýazamaide.",
+      "en": "'We worship the Ahuna Vairya. We worship Asha-Vahishta, most\nfair, undying, and beneficent. We worship Strength and Prosperity\nand Might and Victory and Glory and Vigour. We worship Ahura Mazda,\nbright and glorious.\n'Yenghe hatam: All those beings of whom Ahura Mazda knows the\ngoodness for a sacrifice [performed] in holiness, all those beings,\nmales and females, do we worship.",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 23,
+      "ref": "Yt 1.23",
+      "orig": "ýathâ ahû vairyô...(2).\nýasnemca vahmemca aojasca zavareca âfrînâmi\nahurahe mazdå raêvatô hvarenanguhatô.\nashem vohû...!\n______________________________",
+      "en": "'Yatha ahu vairyo: The will of the Lord is the law of holiness....\n'I bless the sacrifice and the prayer unto Ahura Mazda, bright\nand glorious, and his strength and vigour.'",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 24,
+      "ref": "Yt 1.24",
+      "orig": "nipâyôish mashîm urvathem\nýavaêtâite zarathushtra\naurvathât parô dushmainyaot,\nmâ-tem urvathem frâyavayôish snathâi\nmâ duzhberetêe zyânãm\napayatêe mâ ýasôish\naom narem dâitîm ýô-nâ\nmazishtem ýasnem ýazâite\nkasishtem ýasnyât frâyatât\nvahmyã ameshê speñtê.",
+      "en": "'O Zarathushtra! keep thou for ever that man who is friendly\n[to me] from the foe unfriendly [to me]! Do not give up that friend\nunto the stroke (of the foe), unto vexations to be borne; wish\nno harm unto that man who would offer me a sacrifice, be it ever\nso great or ever so small, if it has reached unto us, the Amesha-Spentas.",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 25,
+      "ref": "Yt 1.25",
+      "orig": "idha asti vohu manô\nmana dãmi zarathushtra\nidha ashem ýat vahishtem\nmana dãmi zarathushtra\nidha xshathrem vairîm\nmana dãmi zarathushtra\nidha speñta ârmaitish\nmana dãmi zarathushtra\nidha haurvata ameretâta\nýôi stô mizhdem ashaonãm\nparô-asti jaseñtãm\nmana dãmi zarathushtra.",
+      "en": "'Here is Vohu-Mano, my creature, O Zarathushtra! here is Asha-Vahishta,\nmy creature, O Zarathushtra! here is Khshathra-Vairya, my creature,\nO Zarathushtra! here is Spenta-Armaiti, my creature, O Zarathushtra!\nhere are Haurvatat and Ameretat, who are the reward of the holy\nones, when freed from their bodies, my creatures, O Zarathushtra!",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 26,
+      "ref": "Yt 1.26",
+      "orig": "vaêthâca tatca kaêthica\nâi ashâum zarathushtra\nmana xrathwâca cistica, ýâish â anghush\npouruyô bavat ýathâca anghat apêmem anghush.",
+      "en": "'Thou knowest this, and how it is, O holy Zarathushtra! from\nmy understanding and from my knowledge; namely, how the world\nfirst began, and how it will end.\n'A thousand remedies, ten thousand remedies!\n'A thousand remedies, ten thousand remedies!\n'A thousand remedies, ten thousand remedies!",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 27,
+      "ref": "Yt 1.27",
+      "orig": "hazangrem baêshazanãm baêvare baêshazanãm\n(3), speñtaheca ârmatôish,\nârmaitica speñtaya\naêshãm tbaêshô sciñdayadhwem\npairi ushi vârayadhwem\nhãm gava nidarezayadhwem\nhãm zanva zembayadhwem\naipi derezvanem derezayadhwem!",
+      "en": "'[We worship] the well-shapen, tall-formed Strength; Verethraghna,\nmade by Ahura; the crushing Ascendant, and Spenta-Armaiti.",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 28,
+      "ref": "Yt 1.28",
+      "orig": "kat ashava mazda vanat drvañtem, ashava vanat drujim\nashava vanat drvañtem. ushi ahurahe mazdå ýazamaide\ndarethrâi mãthrahe speñtahe, xratûm\nahurahe mazdå ýazamaide marethrâi mãthrahe\nspeñtahe, hizvãm ahurahe mazdå ýazamaide\nfravâkâi mãthrahe speñtahe, aom gairîm\nýazamaide ýim ushi-dãm ushi-darenem paiti\nasni paiti xshafne ýasô-beretâbyô zaothrâbyô.",
+      "en": "'And with the help of Spenta-Armaiti, break ye asunder their\nmalice, turn their minds astray, bind their hands, make their\nknees quake against one another, bind their tongues.\n'When, O Mazda! shall the faithful smite the wicked? When shall\nthe faithful smite the Druj? When shall the faithful smite the\nwicked?'",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 29,
+      "ref": "Yt 1.29",
+      "orig": "âat aoxta zarathushtrô, upa thwâ azem maire\nanu- dadhayat speñtayå ârmatôish dôithrâbya\navâstryata mairyô.",
+      "en": "Then Zarathushtra said: 'I threw you back into the earth,\nand by the eyes of Spenta-Armaiti the ruffian was made powerless.",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 30,
+      "ref": "Yt 1.30",
+      "orig": "hazangrem baêshazanãm baêvare baêshazanãm,",
+      "en": "'We worship the powerful Gaokerena, made by Mazda; the powerful\nGaokerena, made by Mazda.",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 31,
+      "ref": "Yt 1.31",
+      "orig": "ushi ahurahe mazdå ýazamaide darethrâi\nmãthrahe speñtahe, xratûm ahurahe mazdå\nýazamaide marethrâi mãthrahe speñtahe,\nhizvãm ahurahe mazdå ýazamaide fravâkâi\nmãthrahe speñtahe, aom gairîm ýazamaide\nýim ushi-dãm ushi-darenem paiti asni paiti xshafne\n ýasô-beretâbyô zaothrâbyô.\n ashem vohû....\n(ahe narsh ... ýasô-beretâbyô zaothrâbyô\n(3).)\nashem vohû....",
+      "en": "'We worship the memory of Ahura Mazda to keep the Holy Word.\n'We worship the understanding of Ahura Mazda, to study the Holy\nWord.\n'We worship the tongue of Ahura Mazda, to speak forth the Holy\nWord.\n'We worship the mountain that gives understanding, that preserves\nunderstanding; [we worship it] by day and by night, with offerings\nof libations well-accepted.",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 32,
+      "ref": "Yt 1.32",
+      "orig": "dâmîm ýazamaide ýãm ârmaitîm\nspeñtãm ýehe dâthre ashaheca ashaonãmca\nasha-paoiryanãm dâmanãm, aêtat dim vîspanãm\nmazishtem ... dâmanãm ashaonãm.",
+      "en": "'We worship that creation [of Ahura's], Spenta-Armaiti; and\nthe holy creations of that creature and of Asha [Vahishta], that\nare foremost in holiness.\n'Here I take as lord and master the greatest of all, Ahura Mazda;\nto smite the fiend Angra Mainyu; to smite Aeshma of the wounding\nspear; to smite the Mazainya fiends; to smite all the Daevas and\nthe Varenya fiends; to increase Ahura Mazda, bright and glorious;\nto increase the Amesha-Spentas; to increase the star Tishtrya,\nthe bright and glorious; to increase the faithful men; to increase\nall the holy creatures of the beneficent Spirit.\n'Ashem Vohu: Holiness is the best of all good....",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 33,
+      "ref": "Yt 1.33",
+      "orig": "ashem vohû....\n ahmâi raêshca ... hazangrem ... jasa-mê ... (kerba mazhd...) atha jamyât ýatha âfrînâmi. \nashem vohû...!!",
+      "en": "'[Give] unto that man brightness and glory, give him health\nof body, give him sturdiness of body, give him victorious strength\nof body, give him full welfare of wealth, give him a virtuous\noffspring, give him long, long life, give him the bright, all-happy,\nblissful abode of the holy Ones.\nMay it come according to my blessing!\n'A thousand remedies, ten thousand remedies! (three times.)\n'Come to me for help, O Mazda!\n'We worship the well-shapen, tall-formed Strength, and Verethraghna,\nmade by Mazda, and the crushing Ascendant.\n'We worship Rama Hvastra, and Vayu who works highly and is more\npowerful to destroy than all other creatures. That part of thee\ndo we worship, O Vayu, that belongs to Spenta Mainyu. We worship\nthe sovereign Sky, the boundless Time, and the sovereign Time\nof the long Period.\n'Ashem Vohu: Holiness is the best of all good....'",
+      "zh": ""
+    }
+  ]
+}

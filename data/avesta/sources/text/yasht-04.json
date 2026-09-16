@@ -1,0 +1,140 @@
+{
+  "slug": "yasht-04",
+  "siglum": "Yt 4",
+  "title_zh": "亞什特 第 4 首‧豪爾瓦塔特讚",
+  "title_en": "Yasht 4",
+  "canon": "avestan",
+  "volume": "yasht",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/ka/yt4.htm",
+  "en_source": "《東方聖書》第 23 卷，1883；公有領域",
+  "en_translator": "達梅斯特（James Darmesteter）",
+  "en_url": "https://www.avesta.org/ka/yt4sbe.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Mithra": "密特拉",
+    "Anahita": "阿娜希塔",
+    "Tishtrya": "提什特里亞",
+    "Verethraghna": "韋雷特拉格納",
+    "Vayu": "瓦尤",
+    "Rashnu": "拉什努",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "khvarenah": "赫瓦雷納",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 4,
+      "verse": 0,
+      "ref": "Yt 4.0",
+      "orig": "(pa nãm i ýazdã, hôrmezd i hvadâe\ni awazûnî gurz hvarahe awazâyât, awerdât\nameshâspeñd bê rasât,\n ezh hamâ gunâh ... pa patit hôm!) \nxshnaothra ahurahe mazdå, tarôidîti angrahe\nmainyêush, haithyâvarshtãm hyat vasnâ\nferashôtemem. staomî ashem,\nashem vohû...(3).\nfravarâne mazdayasnô zarathushtrish vîdaêvô\nahura-tkaêshô,\n (Here recite the appropriate Gah dedication.) \nhaurvatâtô rathwô ýâiryayå\nhushitôish saredhaêibyô ashahe ratubyô\nxshnaothra ýasnâica vahmâica xshnaothrâica\nfrasastayaêca,\nýathâ ahû vairyô zaotâ frâ-mê\nmrûtê,\nathâ ratush ashâtcît haca frâ ashava vîdhvå\nmraotû!",
+      "en": "May Ahura Mazda be rejoiced! ....\nAshem Vohu: Holiness is the best of all good....\nI confess myself a worshipper of Mazda, a follower of\nZarathushtra, one who hates the Daevas and obeys the laws of\nAhura;\nFor sacrifice, prayer, propitiation, and glorification unto\n[Hawan], the holy and master of holiness ....\nUnto Haurvatat, the master; unto the prosperity of the\nseasons and unto the years, the masters of holiness,\nBe propitiation, with sacrifice, prayer, propitiation, and\nglorification.\nYatha ahu vairyo: The will of the Lord is the law of\nholiness....\nWe sacrifice unto Haurvatat, the Amesha-Spenta; we sacrifice\nunto the prosperity of the seasons; we sacrifice unto the years,\nthe holy and masters of holiness.",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 1,
+      "ref": "Yt 4.1",
+      "orig": "mraot ahurô mazdå spitamâi zarathushtrâi,\nazem dadhãm haurvatâtô narãm ashaonãm\navåsca rafnåsca baoshnåsca hvîtåsca\navôi fraca ýaoxmaide ýô-tê jasâiti\nameshanãm speñtanãm ýatha jasâiti\nameshanãm speñtanãm vohû manô\nashem vahishtem xshathrem vairîm speñtãm ârmaitîm\nhaurvatåsca ameretatåsca.",
+      "en": "Ahura Mazda spake unto Spitama Zarathushtra, saying: 'I\ncreated for the faithful the help, the enjoyments, the comforts,\nand the pleasures of Haurvatat. We unite them with him who would\ncome up to thee as one of the Amesha-Spentas, as he would come to\nany of the Amesha-Spentas, Vohu-Mano, Asha-Vahishta,\nKhshathra-Vairya, Spenta-Armaiti, Haurvatat, and Ameretat.",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 2,
+      "ref": "Yt 4.2",
+      "orig": "ýô aêshãm daêvanãm\nhazangrâi hazangrô paitish baêvarâi baêvanô\nahãxshtâi ahãxshtayô paitish nâmêni\nameshanãm speñtanãm haurvatâtô\nzbayôit nasûm janat hashi janat khashi janat saêne\njanat bûji janat.",
+      "en": "'He who against the thousands of thousands of those Daevas,\nagainst their ten thousands of ten thousands, against their\nnumberless myriads would invoke the name of Haurvatat, as one of\nthe Amesha-Spentas, he would smite the Nasu, he would smite\nHashi, he would smite Bashi, he would smite Saeni, he would\nsmite Buji.",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 3,
+      "ref": "Yt 4.3",
+      "orig": "âat paoirîm framraomi narem ashavanem imat rashnvô\nrazishta imat ameshaêibyô speñtaêibyô\nýô asti mainyavanãm ýazatanãm\nrayô-nâmanå tå bûjat narem ashavanem\nhaca nasûm haca hashi haca khashi haca saêne haca\nbûji haca haênayå perethu- ainikayå haca\ndrafshayå perethu-uzgereptayå haca mashyâi drvaityâi\nsâstayâi haca ustrâi vairyâi haca narô\nsâstayâi haca ýâtâi haca pairikâi\nhaca urusta.",
+      "en": "'I proclaim the faithful man as the first [of men]; if I\nproclaim the faithful man as the first [of men], then Rashnu\nRazishta, then every heavenly Yazata of male nature in company\nwith the Amesha-Spentas will free the faithful man",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 4,
+      "ref": "Yt 4.4",
+      "orig": "kutha para ashaonãm patha urvashaiti kutha drvatãm,\nâat mraot ahurô mazdå, ýezi-mê\nmãthrem framrava marå-vâ dreñjayå-vâ\nfrâ-vâ mrava karshâim kârayeiti haom tanûm\nguzaêta,",
+      "en": "'From the Nasu, from Hashi, from Gashi, from Saeni, from\nBuji; from the hordes with the wide front, from the hordes with\nthe many spears uplifted, from the evil man who oppresses, from\nthe willful sinner, from the oppressor of men, from the Yatu,\nfrom the Pairika, from the straying way.",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 5,
+      "ref": "Yt 4.5",
+      "orig": "kãmcit thwãmca drujemca\nhaithyô-ayanãm heñtîm kãmcit\nvâ aipyaênãm heñtîm kãmcit\nvâ raêthwanãm\nkãmcit thwãmca drujemca\nairyâbyô pâdhaêibyô janâni\nthwãmca drujemca bañdâmi\nthwãmca drujemca nikhne\nthwãmca drujemca nizhbarem adhairi-naêmemca.",
+      "en": "'How does the way of the faithful turn and part from the way\nof the wicked?'\nAhura Mazda answered: 'It is when a man pronouncing my\nspell, either reading or reciting it by heart, draws the furrows\nand hides there himself, [saying]:",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 6,
+      "ref": "Yt 4.6",
+      "orig": "thri-karshem frakârayeiti frâ-mraomi narem ashavanem,\nxshvash-karshem frakârayeiti xshvash frâ-mraomi narem\nashavanem, nava-karshem frakârayeiti nava frâ-mraomi\nnarem ashavanem.",
+      "en": "'\"I will smite thee, O Druj! whomsoever thou art, whomsoever\nthou art amongst the Drujes that come in an open way, whomsoever\nthou art amongst the Drujes that come by hidden way, whomsoever\nthou art amongst the Drujes that defile by contact; whatsoever\nDruj thou art, I smite thee away from the Aryan countries;\nwhatsoever Druj thou art, I bind thee; I smite thee down, O Druj!\nI throw thee down below, O Druj!\"",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 7,
+      "ref": "Yt 4.7",
+      "orig": "nâmêni aêshãm drujinãm\nnasûm-kereta paiti janaiti\njata karapanô cithrîm\njâmâca meretô saoca\nýê zaota zarathushtrô\nerekhatat haca daozhavât\nhvãm anu ushtîm zaoshemca\nýatha kathaca-hê zaoshô.",
+      "en": "'He draws [then] three furrows: I proclaim him one of the\nfaithful; he draws six furrow: I proclaim him one of the\nfaithful; he draws nine furrows: I proclaim him one of the\nfaithful.",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 8,
+      "ref": "Yt 4.8",
+      "orig": "pasca hû frâshmô-dâitîm\napâxedhra-naêmem janaiti\npasca hvô nôit uzuxshyamnô\nnasûm sterethwata snaithisha vîxrûmañtem\nmaire nâshaite\nmainyavanãm ýazatanãm\nxshnaothrâica frasastayaêca.",
+      "en": "'The names of those (Amesha-Spentas) smite the men turned to\nNasus by the Drujes: the seed and kin of the deaf are smitten,\nthe scornful are dead, as the Zaotar Zarathushtra blows them\naway to woe, however fierce, at his will and wish, as many as he\nwishes.",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 9,
+      "ref": "Yt 4.9",
+      "orig": "zarathushtra aêtem mãthrem\nmâ fradaxshayô anyât\npithre vâ puthrâi brâthre vâ hadhô-\nzâtâi\nâthravanâi vâ thrâyaone\nhaosraogaonô hudaênô\nýô hudaênô ashava aurvô\nvîspa kareshô râdhayeiti!",
+      "en": "'From the time when the sun is down he smites them with\nbruising blows; from the time when the sun is no longer up, he\ndeals deadly blows on the Nasu with his club struck down, for the\npropitiation and glorification of the heavenly gods.",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 10,
+      "ref": "Yt 4.10",
+      "orig": "ahe raya hvarenanghaca\ntem ýazâi surunvata ýasna haurvatâtem\nameshem speñtem zaothrâbyô, haurvatâtem\nameshem speñtem ýazamaide",
+      "en": "'O Zarathushtra! let not that spell be shown to any one,\nexcept by the father to his son, or by the brother to his brother\nfrom the same womb, or by the Athravan to his pupil in black\nhair, devoted to the good law, who, devoted to the good law,\nholy and brave, stills all the Drujes.",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 11,
+      "ref": "Yt 4.11",
+      "orig": "ýathâ ahû vairyô...(2).\nýasnemca vahmemca aojasca zavareca âfrînâmi\nhaurvatâtô rathwô ýâiryayå\nhushitôish saredhaêibyô ashahe ratubyô.\nashem vohû....",
+      "en": "'For his brightness and glory, I will offer unto him a\nsacrifice worth being heard, namely, unto Haurvatat, the\nAmesha-Spenta. Unto Haurvatat, the Amesha-Spenta, we offer up the\nlibations, the Haoma and meat, the baresma, the wisdom of the\ntongue, the holy spells, the speech, the deeds, the libations,\nand the rightly-spoken words.",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 12,
+      "ref": "Yt 4.12",
+      "orig": "",
+      "en": "'Yatha ahu vairyo: The will of the Lord is the law of\nholiness....\n'I bless the sacrifice and prayer, and the strength and\nvigour of Haurvatat, the master; of the prosperity of the seasons\nand of the years, the masters of holiness.\n'Ashem Vohu: Holiness is the best of all good....\n'[Give] unto that man brightness and glory, .... give him\nthe bright, all happy, blissful abode of the holy Ones.'",
+      "zh": ""
+    }
+  ]
+}

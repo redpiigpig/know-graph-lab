@@ -187,6 +187,25 @@ export function columnsOf(text: ZoroText, division: ZoroDivision): ColumnStatus 
 
 /** 建 division 用的小工具：把 [siglum 尾碼, 中文名, 註] 的緊湊表展開成 ZoroText[]。
  *  亞斯納 72 章、萬迪達德 22 章這類規則序列用它，避免手打 72 個物件字面量出錯。 */
+/** 把 series() 產出的清單裡指定幾篇的三欄狀態覆寫掉。
+ *
+ *  🚨 用途：整部都上架了，但其中一兩篇的某一欄其實沒有來源。
+ *     例如亞什特第 20 首——韋斯特的《東方聖書》未收，線上查無公有領域英譯。
+ *     若讓它跟著整部標「已上架」，書目頁會宣稱有英譯而 reader 打開是空的，
+ *     兩邊都不會報錯。這是本專案最常見的一類錯（見 [[feedback_reader_silent_failures]]）。
+ */
+export function override(
+  texts: ZoroText[],
+  patches: Record<string, Partial<ZoroText>>,
+): ZoroText[] {
+  const unknown = Object.keys(patches).filter(k => !texts.some(t => t.slug === k))
+  if (unknown.length) {
+    // 打錯 slug 會讓覆寫靜靜地沒有生效——寧可擲錯。
+    throw new Error(`override(): 找不到要覆寫的篇章 ${unknown.join(', ')}`)
+  }
+  return texts.map(t => (patches[t.slug] ? { ...t, ...patches[t.slug] } : t))
+}
+
 export function series(
   opts: {
     /** slug 前綴，如 'yasna' → yasna-01 */

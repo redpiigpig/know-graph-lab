@@ -1,0 +1,68 @@
+{
+  "slug": "yasht-20",
+  "siglum": "Yt 20",
+  "title_zh": "亞什特 第 20 首‧瓦南特讚",
+  "title_en": "Yasht 20",
+  "canon": "avestan",
+  "volume": "yasht",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/ka/yt20.htm",
+  "en_source": "《東方聖書》第 23 卷，1883；公有領域",
+  "en_translator": "達梅斯特（James Darmesteter）",
+  "en_url": "https://www.avesta.org/ka/yt20sbe.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Mithra": "密特拉",
+    "Anahita": "阿娜希塔",
+    "Tishtrya": "提什特里亞",
+    "Verethraghna": "韋雷特拉格納",
+    "Vayu": "瓦尤",
+    "Rashnu": "拉什努",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "khvarenah": "赫瓦雷納",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 20,
+      "verse": 0,
+      "ref": "Yt 20.0",
+      "orig": "(pa nãm i ýazdã, hôrmezd i hvadâe\ni awazûnî gurz hvarahe awazâyât.\nhôm ýazat bê rasât,\n ezh hamâ gunâh ... pa patit hôm!) \nxshnaothra ahurahe mazdå, tarôidîti angrahe\nmainyêush, haithyâvarshtãm hyat vasnâ\nferashôtemem. staomî ashem,\nashem vohû...(3).\nfravarâne mazdayasnô zarathushtrish vîdaêvô\nahura-tkaêshô,\n (Here recite the appropriate Gah dedication.) \nhaomahe ashavazanghô\nxshnaothra ýasnâica vahmâica xshnaothrâica\nfrasastayaêca,\nýathâ ahû vairyô zaotâ frâ-mê\nmrûtê,\nathâ ratush ashâtcît haca frâ ashava vîdhvå\nmraotû!",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 20,
+      "verse": 1,
+      "ref": "Yt 20.1",
+      "orig": "haomem zâirîm berezañtem ýazamaide,\nhaomem frâshmîm frâdat-gaêthem ýazamaide,\nhaomem dûraoshem ýazamaide.\nnî-tê zâire madhem mruye nî amem nî\nverethrakhnem nî dasvare nî baêshazem nî\nfradathem nî varedathem nî aojô vîspô-tanûm\nnî mastîm vîspô-paêsanghem, nî\ntat ýatha gaêthâhva vasô-xshathrô\nfracarâne tbaêshô taurvå drujem vanô,\nnî tat ýatha taurvayeni.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 20,
+      "verse": 2,
+      "ref": "Yt 20.2",
+      "orig": "haomem zâirîm berezañtem ýazamaide,\nhaomem frâshmîm frâdat-gaêthem ýazamaide,\nhaomem dûraoshem ýazamaide, vîspe haoma ýazamaide,\nzarathushtrahe spitâmahe idha ashaonô ashîmca\nfravashîmca ýazamaide.\nýenghê hâtãm âat ýesnê\npaitî vanghô mazdå ahurô vaêthâ\nashât hacâ ýånghãmcâ tãscâ\ntåscâ ýazamaide!",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 20,
+      "verse": 3,
+      "ref": "Yt 20.3",
+      "orig": "(hôrmezd i hvadâe i awazûnî mardum\nmardum sardagã hamâ sardagã ham bâ ýasht\ni vahã vaem vahe dîn i mâzdayasnã âgâhî\nâstvãnî nêkî rasãnât\nêduñ bât,)",
+      "en": "",
+      "zh": ""
+    }
+  ]
+}

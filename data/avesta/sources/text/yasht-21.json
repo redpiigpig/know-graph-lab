@@ -1,0 +1,60 @@
+{
+  "slug": "yasht-21",
+  "siglum": "Yt 21",
+  "title_zh": "亞什特 第 21 首‧豪麻讚（亞什特本）",
+  "title_en": "Yasht 21",
+  "canon": "avestan",
+  "volume": "yasht",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/ka/yt21.htm",
+  "en_source": "《東方聖書》第 23 卷，1883；公有領域",
+  "en_translator": "達梅斯特（James Darmesteter）",
+  "en_url": "https://www.avesta.org/ka/yt21sbe.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Mithra": "密特拉",
+    "Anahita": "阿娜希塔",
+    "Tishtrya": "提什特里亞",
+    "Verethraghna": "韋雷特拉格納",
+    "Vayu": "瓦尤",
+    "Rashnu": "拉什努",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "khvarenah": "赫瓦雷納",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 21,
+      "verse": 0,
+      "ref": "Yt 21.0",
+      "orig": "(pa nãm i ýazdã, hôrmezd i hvadâe\ni awazûnî gurz hvarahe awazâyât,\nvanañd star ýazat i hôrmezd dât i ashava\nashahe rat bê rasât,\n ezh hamâ gunâh ... pa patit hôm!) \nxshnaothra ahurahe mazdå, tarôidîti angrahe\nmainyêush, haithyâvarshtãm hyat vasnâ\nferashôtemem. staomî ashem,\nashem vohû...(3).\nfravarâne mazdayasnô zarathushtrish vîdaêvô\nahura-tkaêshô,\n (Here recite the appropriate Gah dedication.) \nvanañtô stârô mazdadhâtahe\nxshnaothra ýasnâica vahmâica xshnaothrâica\nfrasastayaêca,\nýathâ ahû vairyô zaotâ frâ-mê\nmrûtê,\nathâ ratush ashâtcît haca frâ ashava vîdhvå\nmraotû!",
+      "en": "May Ahura Mazda be rejoiced!....\nAshem Vohu: Holiness is the best of all good....\nI confess myself a worshipper of Mazda, a follower of Zarathushtra,\none who hates the Daevas and obeys the laws of Ahura;\nFor sacrifice, prayer, propitiation, and glorification unto [Havani],\nthe holy and master of holiness....\nUnto the star Vanant, made by Mazda,\nBe propitiation, with sacrifice, prayer, propitiation, and glorification.\nYatha ahu vairyo: The will of the Lord is the law of holiness....",
+      "zh": ""
+    },
+    {
+      "chapter": 21,
+      "verse": 1,
+      "ref": "Yt 21.1",
+      "orig": "vanañtem stârem mazdadhâtem ashavanem ashahe\nratûm ýazamaide, ýazâi vanañtem\namavañtem aoxtô-nâmanem baêshazem paitishtâtêe\najastaca zôizhdishtaca apayañtamaheca angrahe mainyêush\nxrafstra (vanañtem stârem ... xrafstra (1 u 2 u 3)!)",
+      "en": "We sacrifice unto the star Vanant, made by Mazda, the holy\nand master of holiness.\nI will sacrifice unto Vanant, strong, invoked by his own name,\nhealing, in order to withstand the accursed and most foul Khrafstras\nof the most abominable Angra Mainyu.",
+      "zh": ""
+    },
+    {
+      "chapter": 21,
+      "verse": 2,
+      "ref": "Yt 21.2",
+      "orig": "(hôrmezd i hvadâe i awazûnî mardum\nmardum sardagã hamâ sardagã ham bâ ýasht\ni vahã vaem vahe dîn i mâzdayasnã âgâhî\nâstvãnî nêkî rasãnât\nêduñ bât,)",
+      "en": "Yatha ahu vairyo: The will of the Lord is the law of holiness....\nI bless the sacrifice and prayer, and the strength and vigour\nof the star Vanant, made by Mazda.\nAshem Vohu: Holiness is the best of all good....\n[Give] unto that man brightness and glory, .... give him the bright,\nall-happy, blissful abode of the holy Ones.",
+      "zh": ""
+    }
+  ]
+}

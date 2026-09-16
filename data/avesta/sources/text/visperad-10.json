@@ -1,0 +1,42 @@
+{
+  "slug": "visperad-10",
+  "siglum": "Vr 10",
+  "title_zh": "維斯帕拉德 第 10 章",
+  "title_en": "Visperad 10",
+  "canon": "avestan",
+  "volume": "visperad",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/visperad/visperad.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "達梅斯特（James Darmesteter）",
+  "en_url": "https://www.avesta.org/visperad/vrsbe.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "ratu": "拉圖",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 10,
+      "verse": 1,
+      "ref": "Vr 10.1",
+      "orig": "(zôt,) âyese ýeshti arezahibyô savahibyô\nfradadhafshubyô vîdadhafshubyô vouru-bareshtibyô\nvouru-jareshtibyô aheca karshvanê ýat hvanirathahe.",
+      "en": "I desire to approach the Arezahi with my praise, and the\nSawahi, and Fradadhafshu, and Widadhafshu, and Wouru-bareshti,\nand Wourujareshti, and this Karshwar which is Xwaniratha. 2.\nAnd I desire to approach the stone mortar with my praise, and\nthe iron mortar, and the cup that holds the Zaothra, and the hair\n(which stays the spilling), and Thy Baresman spread with sanctity.\nAnd I desire to approach the Ahuna-vairya [ Ahunwar ] with my praise, and\nthe ritual prayers beside Ahuna, and the standing offices of the\nMazdayasnian Faith. 1. This section follows Y. 22.",
+      "zh": ""
+    },
+    {
+      "chapter": 10,
+      "verse": 2,
+      "ref": "Vr 10.2",
+      "orig": "âyese ýeshti asmanaêibya hâvanaêibya\nayanghaênaêibya hâvanaêibya tashtâi\nzaothrô-barenâi varesâi haomô-angharezânâi\ntavaca baresmanô ashaya frastaretahe, âyese ýeshti\nahunahe vairyehe anahunâca ratushca stitâtasca daênayå\nmâzdayasnôish, âyese ýeshti ashâunãm\nfravashinãm > mraotû!!",
+      "en": "The varesa consists (as used at present) of three, five, or seven \n hairs from the tail of a white bull, which are tied to a gold, silver, \n copper, or brass ring. This can be used as long as the bull lives, \n but as often as it is used it must be reconsecrated. (Haug.)",
+      "zh": ""
+    }
+  ]
+}

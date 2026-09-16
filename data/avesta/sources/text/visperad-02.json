@@ -1,0 +1,114 @@
+{
+  "slug": "visperad-02",
+  "siglum": "Vr 2",
+  "title_zh": "維斯帕拉德 第 2 章",
+  "title_en": "Visperad 2",
+  "canon": "avestan",
+  "volume": "visperad",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/visperad/visperad.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "達梅斯特（James Darmesteter）",
+  "en_url": "https://www.avesta.org/visperad/vrsbe.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "ratu": "拉圖",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 2,
+      "verse": 1,
+      "ref": "Vr 2.1",
+      "orig": "ahmya zaothre baresmanaêca ratavô mainyava âyese\nýeshti, ratavô gaêthya âyese ýeshti,\nratavô upâpa âyese ýeshti, ratavô\nupasma âyese ýeshti, ratavô frapterejâta\nâyese ýeshti, ratavô ravascarâta âyese\nýeshti, ratavô cangranghâca âyese ýeshti.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 2,
+      "ref": "Vr 2.2",
+      "orig": "ahmya zaothre baresmanaêca ýâirya ashavana\nashahe ratavô âyese ýeshti,\nmaidhyôizaremaêm payanghem ashavanem ashahe ratûm\nâyese ýeshti, ahmya zaothre baresmanaêca maidhyôishemem\nvâstrô-dâtainîm ashavanem ashahe ratûm\nâyese ýeshti, ahmya zaothre baresmanaêca paitishhahîm\nhahîm ashavanem ashahe ratûm âyese ýeshti,\nahmya zaothre baresmanaêca ayâthrimem fraourvaêshtrimem\nvarshniharshtem ashavanem ashahe ratûm âyese ýeshti,\nahmya zaothre baresmanaêca maidhyâirîm saredhem\nashavanem ashahe ratûm âyese ýeshti, ahmya\nzaothre baresmanaêca hamaspathmaêdaêm aretô-\nkarethnem ashavanem ashahe ratûm âyese ýeshti.",
+      "en": "In this Zaothra with this Baresman I desire to approach the\nholy Yearly festivals with my praise, the lords of the ritual\norder, Maidyozarem, the milk-giver, and Maidyoshahem, the pasture-giver,\nand Paitishahem, the corn-giver, and Ayathrem the breeder, the\nspender of the seed of males, Maidyarem, the cold, Hamaspathmaidyem,\nthe especial time for ritual duties, the holy lords of the ritual\norder.",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 3,
+      "ref": "Vr 2.3",
+      "orig": "ahmya zaothre baresmanaêca gaêthanãm ånghairîm\nashavanem ashahe ratûm âyese ýeshti ýat\nånghairyô zîzanen, ahmya zaothre baresmanaêca\nvîspe tê ratavô âyese ýeshti ýôi\naoxta ahurô mazdå zarathushtrâi ýasnyâca\nvahmyâca ashât haca ýat vahishtât.",
+      "en": "And in this Zaothra with this Baresman I desire to approach\nthe future one of the settlements with my praise, the holy lord\nof the ritual order, when the future one shall produce (them as\nit were anew).\nAnd in this Zaothra with this Baresman I desire to approach all\nthese chieftains of the ritual with my praise whom Ahura Mazda\nmentioned to Zarathushtra for sacrifice and homage because of\nAsha Vahishta (of Righteousness the Best).",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 4,
+      "ref": "Vr 2.4",
+      "orig": "ahmya zaothre baresmanaêca thwãm ratûm\nâyese ýeshti ýim ahurem mazdãm mainyaom\nmainyavanãm dâmanãm mainyaoyå stôish\nahûmca ratûmca,\nahmya zaothre baresmanaêca thwãm ratûm âyese\nýeshti ýim zarathushtrem spitâmem gaêthîm\ngaêthyanãm dâmanãm gaêthyayå\nstôish ahûmca ratûmca.",
+      "en": "And in this Zaothra with this Baresman I desire to approach\nThee, the lord, with my praise, Thou who art Ahura Mazda, the\nspiritual lord and regulator of the spiritual creatures [the lord\nand regulator of the spiritual creation].\nAnd in this Zaothra with this Baresman I desire to approach thee,\nZarathushtra Spitama, with my praise, the terrestrial (lord and\nregulator) of the terrestrial creation, [the lord and regulator\nof the terrestrial creation].",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 5,
+      "ref": "Vr 2.5",
+      "orig": "ahmya zaothre baresmanaêca rathwãm framaretârem\nâyese ýeshti ýim narem ashavanem dadhrânem\nhumatemca manô hûxtemca vacô hvarshtemca shyaothnem,\nspeñtãm ârmaitîm daretem ýôi\nmãthrem saoshyañtô ýenghe shyaothnâish\ngaêthå asha frâdeñte.",
+      "en": "And in this Zaothra with this Baresman I desire to approach\nthe man who recites the ritual rites with my praise, who is maintaining\nthus the thought well thought, and the word well spoken, and the\ndeed well done, and Piety the bountiful, even him who maintains\nthe Manthra of the Saoshyant, by whose actions the settlements\nare advanced in the righteous order.",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 6,
+      "ref": "Vr 2.6",
+      "orig": "ahmya zaothre baresmanaêca saredha ashavana ashahe ratavô\nâyese ýeshti, ahunem vairîm frasraothrem ashavanem\nashahe ratûm âyese ýeshti, ahmya zaothre baresmanaêca\nashem vahishtem staothwem ashavanem ashahe ratûm âyese\nýeshti, ahmya zaothre baresmanaêca ýenghê-hâtãm\nhufrâyashtãm ashaonîm ashahe ratûm âyese\nýeshti.",
+      "en": "And in this Zaothra with this Baresman I desire to approach\nthe (yearly) Seasons with my praise, the holy lords of the ritual\norder, and the Ahuna-vairya ( Ahunwar )as it is recited, and Asha Vahishta \nwhen he is lauded, and the Yenhe hatam, the frequent chant of\nsacrifice.",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 7,
+      "ref": "Vr 2.7",
+      "orig": "ahmya zaothre baresmanaêca ahunavaitîm gâthãm\nashaonîm ashahe ratûm âyese ýeshti, khenå\nhubakhå hufedhrîsh huraodhanghô âyese\nýeshti, ahmya zaothre baresmanaêca ahumeñtem\nratumeñtem ashavanem ashahe ratûm âyese ýeshti,\nhô-zî asti ahûmca ratûmca ýô\nahurô mazdå, ahmya zaothre baresmanaêca ýasnem\nsûrem haptanghâitîm ashavanem ashahe ratûm\nâyese ýeshti, aredvîm sûrãm anâhitãm\nashaonîm ashahe ratûm âyese ýeshti.",
+      "en": "And in this Zaothra with this Baresman I desire to approach\nthe Gatha Ahunavaiti with my praise. And in this Zaothra with\nthis Baresman I desire to worship those women with my praise who\nare well portioned, and of good parentage, and who are stately\nin their growth; yea, I desire to approach that chant in my praise\nwhich has the Ahu and the Ratu, [for He is verily the one who\nhas the Ahu and the Ratu, that is, Ahura Mazda].\nAnd I desire to approach the heroic Yasna Haptanghaiti in my praise,\nthe holy, and ruling in the ritual order; and Ardvi Sura Anahita,\nthe holy, and ruling in the ritual order.",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 8,
+      "ref": "Vr 2.8",
+      "orig": "ahmya zaothre baresmanaêca ushtavaitîm gâthãm\nashaonîm ashahe ratûm âyese ýeshti. garayô\nashahvâthrå pouru-hvâthrå mazdadhâta\nashavana ashahe ratavô âyese ýeshti, ahmya\nzaothre baresmanaêca speñtâ-mainyûm gâthãm\nashaonîm ashahe ratûm âyese ýeshti. verethrakhnem\nahuradhâtem âyese ýeshti, vanaiñtîmca\nuparatâtem âyese ýeshti.",
+      "en": "And in this Zaothra with this Baresman I desire to approach\nthe Gatha Ushtavaiti with my praise, the holy, and ruling in the\nritual order; and I desire to approach those mountains with my\npraise which shine with holiness, abundantly glorious, Mazda-made,\nthe holy lords of the ritual order, and the Gatha Spenta-mainyu,\nand Verethraghna, the blow of victory, Mazda-given, the holy lord\nof the ritual order, and the Victorious Ascendancy (which it bestows).",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 9,
+      "ref": "Vr 2.9",
+      "orig": "ahmya zaothre baresmanaêca vohuxshathrãm gâthãm\nashaonîm ashahe ratûm âyese ýeshti. mithrem\nvouru-gaoyaoitîm âyese ýeshti, râma hvâstrem\nâyese ýeshti, ahmya zaothre baresmanaêca vahishtôishtîm\ngâthãm ashaonîm ashahe ratûm âyese\nýeshti. dahmãm vanguhîm âfritîm\nâyese ýeshti, dahmemca narem ashavanem âyese\nýeshti, ukhrem taxmem dâmôish upamanem ýazatem\nâyese ýeshti.",
+      "en": "And in this Zaothra with this Baresman I desire to approach\nthe Gatha Vohu-khshathra with my praise, the holy, and ruling\nin the ritual order, and Mithra of the wide pastures, and Raman\nHvastra, and the Gatha Vahishtoishti, and the pious and good prayer\nfor blessings, and the pious and holy man, and that Yazad, the\nredoubted and swift curse of the wise.",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 10,
+      "ref": "Vr 2.10",
+      "orig": "ahmya zaothre baresmanaêca airyamanem ishîm ashavanem\nashahe ratûm âyese ýeshti. ahmya zaothre baresmanaêca\nfshûshô-mãthrem ashavanem ashahe ratûm\nâyese ýeshti. ahmya zaothre baresmanaêca ratûm\nberezem hadhaoxtem ashavanem ashahe ratûm âyese ýeshti.",
+      "en": "And in this Zaothra with this Baresman I desire to approach\nthe Airyema-ishyo with my praise, and the Fshusho-manthra , and\nthat lofty lord, the Hadhaokhdha, holy lord(s) of the ritual order.",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 11,
+      "ref": "Vr 2.11",
+      "orig": "ahmya zaothre baresmanaêca âhûirîm\nfrashnem ashavanem ashahe ratûm âyese ýeshti.\nâhûirîm tkaêshem ashavanem ashahe ratûm\nâyese ýeshti. ahmya zaothre baresmanaêca hadish\nvâstravatô âyese ýeshti, vâstrem\nberetem gave hudhånghe âyese ýeshti, gaodâyûm\nnarem ashavanem âyese ýeshti!!",
+      "en": "And in this Zaothra with this Baresman I desire to approach\nthe question asked of Ahura, and the lore of the Lord (which he\nreveals in answer) and the farm-house of the man possessed of\npastures, and the pasture produced for the Kine of blessed gift,\nand the holy cattle-breeding man.",
+      "zh": ""
+    }
+  ]
+}

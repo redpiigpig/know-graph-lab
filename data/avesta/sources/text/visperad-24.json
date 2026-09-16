@@ -1,0 +1,58 @@
+{
+  "slug": "visperad-24",
+  "siglum": "Vr 24",
+  "title_zh": "維斯帕拉德 第 24 章",
+  "title_en": "Visperad 24",
+  "canon": "avestan",
+  "volume": "visperad",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/visperad/visperad.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "達梅斯特（James Darmesteter）",
+  "en_url": "https://www.avesta.org/visperad/vrsbe.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "ratu": "拉圖",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 24,
+      "verse": 0,
+      "ref": "Vr 24.0",
+      "orig": "ahurem mazdãm ashavanem ashahe ratûm ... ratufritîm\nýazamaide, airyamanem ishîm ashavanem ashahe ratûm\nýazamaide mat-afsmanem mat-vacastashtîm mat-âzaiñtîm\nmat-peresûm mat-paiti-peresûm mat vakhzhibyâca\npatbyasca huframeretem framaremnem hufrâyashtem frâyaêzyañtem\nhvahmi dãm ... fraxshne avi manô zrazdâtôit\nanghuyat haca. âtremca idha ahurahe ... urvaråsca\nýazamaide(2).",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 24,
+      "verse": 1,
+      "ref": "Vr 24.1",
+      "orig": "avat mizhdem ýazamaide, avat dasvare ýazamaide,\navat baêshazem ýazamaide, avat fradathem ýazamaide,\navat varedathem ýazamaide, avat verethrakhnem ýazamaide\nýat asti añtare ahuna airyamana framereiti humatanãmca\nhûxtanãmca hvarshtanãmca paitishtâtêe\ndushmatanãmca duzhûxtanãmca duzhvarshtanãmca\nuzvarezâi mâvôya mithô-matanãmca\nmithôxtanãmca mithôvarshtanãmca (avat\nmizhdem ... mithôvarshtanãmca(4).)",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 24,
+      "verse": 2,
+      "ref": "Vr 24.2",
+      "orig": "airyamanô ishyehe hañdâtâ ýazamaide,\nairyamanô ishyehe ýazamaide hâitishca afsmanâca\n> tåscâ ýazamaide!!!!\n! ! ! ! !",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 24,
+      "verse": 3,
+      "ref": "Vr 24.3",
+      "orig": "staomi ashem.... nâismî daêvô....\naêvô pañtå ýô ashahe\nvîspe anyaêshãm apañtãm!\n! ! \n!",
+      "en": "",
+      "zh": ""
+    }
+  ]
+}

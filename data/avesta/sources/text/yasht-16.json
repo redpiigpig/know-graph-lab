@@ -1,0 +1,204 @@
+{
+  "slug": "yasht-16",
+  "siglum": "Yt 16",
+  "title_zh": "亞什特 第 16 首‧奇斯塔讚（宗教女神讚）",
+  "title_en": "Yasht 16",
+  "canon": "avestan",
+  "volume": "yasht",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/ka/yt16.htm",
+  "en_source": "《東方聖書》第 23 卷，1883；公有領域",
+  "en_translator": "達梅斯特（James Darmesteter）",
+  "en_url": "https://www.avesta.org/ka/yt16sbe.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Mithra": "密特拉",
+    "Anahita": "阿娜希塔",
+    "Tishtrya": "提什特里亞",
+    "Verethraghna": "韋雷特拉格納",
+    "Vayu": "瓦尤",
+    "Rashnu": "拉什努",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "khvarenah": "赫瓦雷納",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 16,
+      "verse": 0,
+      "ref": "Yt 16.0",
+      "orig": "(pa nãm i ýazdã, hôrmezd i hvadâe\ni awazûnî gurz hvarahe awazâyât,\ndîn i vahe i mazdayasnã bê rasât,\n ezh hamâ gunâh ... pa patit hôm!) \nxshnaothra ahurahe mazdå, tarôidîti angrahe\nmainyêush, haithyâvarshtãm hyat vasnâ\nferashôtemem. staomî ashem,\nashem vohû...(3).\nfravarâne mazdayasnô zarathushtrish vîdaêvô\nahura-tkaêshô,\n (Here recite the appropriate Gah dedication.) \nrazishtayå cistayå mazdadhâtayå ashaonyå\nxshnaothra ýasnâica vahmâica xshnaothrâica\nfrasastayaêca,\nýathâ ahû vairyô zaotâ frâ-mê\nmrûtê,\nathâ ratush ashâtcît haca frâ ashava vîdhvå\nmraotû!",
+      "en": "May Ahura Mazda be rejoiced!....\nAshem Vohu: Holiness is the best of all good....\nI confess myself a worshipper of Mazda, a follower of Zarathushtra,\none who hates the Daevas and obeys the laws of Ahura;\nFor sacrifice, prayer, propitiation, and glorification unto [Havani],\nthe holy and master of holiness....\nTo the most right Chista, made by Mazda and holy, and to the good\nLaw of the worshippers of Mazda.\nBe propitiation from me, for sacrifice, prayer, propitiation,\nand glorification.\nYatha ahu vairyo: The will of the Lord is the law of holiness.....",
+      "zh": ""
+    },
+    {
+      "chapter": 16,
+      "verse": 1,
+      "ref": "Yt 16.1",
+      "orig": "razishtãm cistãm mazdadhâtãm ashaonîm\nýazamaide hupathmainyãm huaiwitacinãm nimarezishtãm\nbarat-zaothrãm ashaonîm hunaravaitîm frasrûtãm\nâsu-kairyãm moshu-kairyãm hvâyaonãm\nhvâyaozdãm ýãm vanguhîm daênãm\nmâzdayasnîm.",
+      "en": "We sacrifice to the most right Chista, made by Mazda and holy:\nwe sacrifice to the good Law of the worshippers of Mazda, the\nsupplier of good stores, who runs quickly to the goal and frees\none best from dangers, who brings libations, who is holy, clever,\nand renowned, speedy to work and quick of work; who goes quickly\nand cleanses well; the good Law of the worshippers of Mazda;",
+      "zh": ""
+    },
+    {
+      "chapter": 16,
+      "verse": 2,
+      "ref": "Yt 16.2",
+      "orig": "ýãm ýazata zarathushtrô, use-hishta\nhaca gâtvô frashûsa haca demânât\nrazishte ciste mazdadhâte ashaoni, ýezi ahi paurva-naêmât\nâat mãm avi nmânaya ýezi paskât\nâat mãm avi apaya.",
+      "en": "To whom Zarathushtra did sacrifice, saying: 'Rise up from\nthy seat, come forward from the Abode, thou most right Chista,\nmade by Mazda and holy. If thou art before me, stay for me; if\nthou art behind me, overtake me.",
+      "zh": ""
+    },
+    {
+      "chapter": 16,
+      "verse": 3,
+      "ref": "Yt 16.3",
+      "orig": "athanâ âxshta buyãn ýathanâ\nbuyât hvâyaonånghô pañtânô\nhvâpathana garayô hvâtacina razura huperethwe\nâfsh nâuya ahmâi saokâi frasastâi\nfravâkâi uta framânâi.",
+      "en": "'Let everything be as friendly to us as anything can be: may\nwe go smoothly along the roads, find good pathways in the mountains,\nrun easily through the forests, and cross happily the rivers!'",
+      "zh": ""
+    },
+    {
+      "chapter": 16,
+      "verse": 4,
+      "ref": "Yt 16.4",
+      "orig": "ahe raya hvarenanghaca\ntãm ýazâi surunvata ýasna\ntãm ýazâi huyashta ýasna razishtãm\ncistãm mazdadhâtãm ashaonîm zaothrâbyô,\nrazishtãm cistãm mazdadhâtãm ashaonîm\nýazamaide\nhaomayô gava baresmana hizvô danghangha mãthraca\nvacaca shyaothnaca zaothrâbyasca arshuxdhaêibyasca\nvâkhzhibyô.\nýenghê hâtãm âat ýesnê\npaitî vanghô mazdå ahurô vaêthâ\nashât hacâ ýånghãmcâ tãscâ\ntåscâ ýazamaide!",
+      "en": "For her brightness and glory, I will offer unto her a sacrifice\nworth being heard, namely, unto the most right Chista, made by\nMazda and holy. I will offer up a sacrifice unto the most right\nChista, made by Mazda and holy, with the libations, with the Haoma\nand meat, with the baresma, with the wisdom of the tongue, with\nthe holy spells, with the words and deeds, with the libations,\nwith the well spoken words.\nYenhe hatam: All those beings of whom Ahura Mazda....",
+      "zh": ""
+    },
+    {
+      "chapter": 16,
+      "verse": 5,
+      "ref": "Yt 16.5",
+      "orig": "razishtãm cistãm ... mâzdayasnîm,\n(Repeat verse 1.)",
+      "en": "We sacrifice to the most right Chista, made by Mazda and holy:\nwe sacrifice to the good Law of the worshippers of Mazda.... (repeat\nverse 1).",
+      "zh": ""
+    },
+    {
+      "chapter": 16,
+      "verse": 6,
+      "ref": "Yt 16.6",
+      "orig": "ýãm ýazata zarathushtrô humatahe\npaiti mananghô hûxtahe paiti vacanghô hvarshtahe\npaiti shyaothnahe avaheca paiti ýãnahe,",
+      "en": "To whom Zarathushtra did sacrifice for righteousness of thought,\nfor righteousness of speech, for righteousness of deed, and for\nthis boon,",
+      "zh": ""
+    },
+    {
+      "chapter": 16,
+      "verse": 7,
+      "ref": "Yt 16.7",
+      "orig": "ýat hê dathat razishta cista mazdadhâta\nashaoni pâdhave zâvare gaoshaêwe sraoma bâzuwe\naojô tanvô vîspayå drvatâtem tanvô\nvîspayå vazdvare aomca sûkem ýim baraiti\nkarô masyô upâpô ýô ranghayå\ndûraêpârayå jafrayå hazangrô-\nvîrayå varesô-stavanghem âpô urvaêsem\nmârayeiti.\nahe raya ... tåscâ ýazamaide! (Repeat verse\n4.)",
+      "en": "That the most right Chista, made by Mazda and holy, would\ngive him the swiftness of the feet, the quick hearing of the ears,\nthe strength of the arms, the health of the whole body, the sturdiness\nof the whole body, and the eye-sight of the Kara fish, that lives\nbeneath the waters, and can measure a rippling of the waters not\nthicker than a hair, in the Rangha, whose ends lie afar and whose\ndepth is a thousand times the height of a man.\nFor her brightness and glory, I will offer unto her a sacrifice\nworth being heard....",
+      "zh": ""
+    },
+    {
+      "chapter": 16,
+      "verse": 8,
+      "ref": "Yt 16.8",
+      "orig": "razishtãm cistãm ... mâzdayasnîm,\n(Repeat verse 1.)",
+      "en": "We sacrifice to the most right Chista, made by Mazda and holy:\nwe sacrifice to the good Law of the worshippers of Mazda....",
+      "zh": ""
+    },
+    {
+      "chapter": 16,
+      "verse": 9,
+      "ref": "Yt 16.9",
+      "orig": "ýãm ýazata zarathushtrô humatahe\npaiti mananghô hûxtahe paiti vacanghô hvarshtahe\npaiti shyaothnahe avaheca paiti ýãnahe,",
+      "en": "To whom Zarathushtra did sacrifice for righteousness of thought,\nfor righteousness of speech, for righteousness of deed, and for\nthis boon,",
+      "zh": ""
+    },
+    {
+      "chapter": 16,
+      "verse": 10,
+      "ref": "Yt 16.10",
+      "orig": "ýat hê dathat razishta cista mazdadhâta\nashaoni pâdhave zâvare gaoshaêwe sraoma bâzuwe\naojô tanvô vîspayå drvatâtem tanvô\nvîspayå vazdvare aomca sûkem ýim baraiti\naspô arsha ýô tãthryascit haca xshafnô\nvâreñtyå snaêzhiñtyå srasciñtyå\nfyanghvaityå ýô naomyâcit haca xshathryât\naspaêm varesem zemât avaoiritheñtem vaênaiti\nkatârô akhravô vâ bunavô vâ.\nahe raya ... tåscâ ýazamaide! (Repeat verse\n4.)",
+      "en": "That the most right Chista, made by Mazda and holy, would\ngive him the swiftness of the feet, the quick hearing of the ears,\nthe strength of the arms, the health of the whole body, the sturdiness\nof the whole body, and the eye-sight of the male horse, that,\nin the dark of the night, through the rain, the snow, the hail,\nor the sleet, from as far as nine districts, can perceive a horse's\nhair, mingled with the earth, and knows whether it is from the\nhead or from the tail.\nFor her brightness and glory, I will offer unto her a sacrifice\nworth being heard....",
+      "zh": ""
+    },
+    {
+      "chapter": 16,
+      "verse": 11,
+      "ref": "Yt 16.11",
+      "orig": "razishtãm cistãm ... mâzdayasnîm,\n(Repeat verse 1.)",
+      "en": "We sacrifice to the most right Chista, made by Mazda and holy:\nwe sacrifice to the good Law of the worshippers of Mazda....",
+      "zh": ""
+    },
+    {
+      "chapter": 16,
+      "verse": 12,
+      "ref": "Yt 16.12",
+      "orig": "ýãm ýazata zarathushtrô humatahe\npaiti mananghô hûxtahe paiti vacanghô hvarshtahe\npaiti shyaothnahe avaheca paiti ýãnahe,",
+      "en": "To whom Zarathushtra did sacrifice for righteousness of thought,\nfor righteousness of speech, for righteousness of deed, and for\nthis boon,",
+      "zh": ""
+    },
+    {
+      "chapter": 16,
+      "verse": 13,
+      "ref": "Yt 16.13",
+      "orig": "ýat hê dathat razishta cista mazdadhâta\nashaoni pâdhave zâvare gaoshaêwe sraoma bâzuwe\naojô tanvô vîspayå drvatâtem tanvô\nvîspayå vazdvare aomca sûkem ýim baraiti\nkahrkâsô zarenumainyush ýô naomyâcit\nhaca danghaot mushti-masanghem xrûm aiwi-vaênaiti\navavatcit ýatha sûkayå brâzayå\nbrâzem avavatcit ýatha sûkayå naêzem.\nahe raya ... tåscâ ýazamaide! (Repeat verse\n4.)",
+      "en": "That the most right Chista, made by Mazda and holy, would\ngive him the swiftness of the feet, the quick hearing of the ears,\nthe strength of the arms, the health of the whole body, the sturdiness\nof the whole body, and the eye-sight of the vulture with a golden\ncollar, that, from as far as nine districts, can perceive a piece\nof flesh, not thicker than a fist, giving just as much light as\na needle gives, as the point of a needle gives.\nFor her brightness and glory, I will offer unto her a sacrifice\nworth being heard....",
+      "zh": ""
+    },
+    {
+      "chapter": 16,
+      "verse": 14,
+      "ref": "Yt 16.14",
+      "orig": "razishtãm cistãm ... mâzdayasnîm,\n(Repeat verse 1.)",
+      "en": "We sacrifice to the most right Chista, made by Mazda and holy:\nwe sacrifice to the good Law of the worshippers of Mazda....",
+      "zh": ""
+    },
+    {
+      "chapter": 16,
+      "verse": 15,
+      "ref": "Yt 16.15",
+      "orig": "ýãm ýazata hvôvi ashaoni vîthushi\nvohu bakhem isemna ashavanem zarathushtrem anumatêe daênayâi\nanuxtêe daênayâi anvarshtêe daênayâi.\nahe raya ... tåscâ ýazamaide! (Repeat verse\n4.)",
+      "en": "To whom the holy Hvovi did sacrifice with full knowledge,\nwishing that the holy Zarathushtra would give her his good narcotic,\nthat she might think according to the law, speak according to\nthe law, and do according to the law.\nFor her brightness and glory, I will offer unto her a sacrifice\nworth being heard....",
+      "zh": ""
+    },
+    {
+      "chapter": 16,
+      "verse": 16,
+      "ref": "Yt 16.16",
+      "orig": "razishtãm cistãm ... mâzdayasnîm,\n(Repeat verse 1.)",
+      "en": "We sacrifice to the most right Chista, made by Mazda and holy:\nwe sacrifice to the good Law of the worshippers of Mazda....",
+      "zh": ""
+    },
+    {
+      "chapter": 16,
+      "verse": 17,
+      "ref": "Yt 16.17",
+      "orig": "ýãm ýazata âthrava dûraêfrakâtô\nmaremnem isemnô daênayâi amem isemnô tanuye.\nahe raya ... tåscâ ýazamaide! (Repeat verse\n4.)",
+      "en": "To whom the Athravans, sent afar, did sacrifice, wishing a\ngood memory to preach the law, and wishing strength for their\nown body.\nFor her brightness and glory, I will offer unto her a sacrifice\nworth being heard....",
+      "zh": ""
+    },
+    {
+      "chapter": 16,
+      "verse": 18,
+      "ref": "Yt 16.18",
+      "orig": "razishtãm cistãm ... mâzdayasnîm,\n(Repeat verse 1.)",
+      "en": "We sacrifice to the most right Chista, made by Mazda and holy:\nwe sacrifice to the good Law of the worshippers of Mazda....",
+      "zh": ""
+    },
+    {
+      "chapter": 16,
+      "verse": 19,
+      "ref": "Yt 16.19",
+      "orig": "ýãm ýazata sâsta danghêush\ndanghupaitish âxshti isemnô danghave amem isemnô\ntanuye.\nahe raya ... tåscâ ýazamaide! (Repeat verse\n4.)",
+      "en": "To whom the king of the country, the lord of the country does\nsacrifice, wishing peace for his country, wishing strength for\nhis own body.\nFor her brightness and glory, I will offer unto her a sacrifice\nworth being heard....",
+      "zh": ""
+    },
+    {
+      "chapter": 16,
+      "verse": 20,
+      "ref": "Yt 16.20",
+      "orig": "(hôrmezd i hvadâe i awazûnî mardum\nmardum sardagã hamâ sardagã ham bâ ýasht\ni vahã vaem vahe dîn i mâzdayasnã âgâhî\nâstvãnî nêkî rasãnât\nêduñ bât,)",
+      "en": "Yatha ahu vairyo: The will of the Lord is the law of holiness....\nI bless the sacrifice and prayer, and the strength and vigour\nof the most right Chista, made by Mazda and holy, and of the good\nLaw of the worshippers of Mazda.\nAshem Vohu: Holiness is the best of all good....\n[Give] unto that man brightness and glory, .... give him long,\nlong life, give him the bright, all-happy, blissful abode of the\nholy Ones.",
+      "zh": ""
+    }
+  ]
+}

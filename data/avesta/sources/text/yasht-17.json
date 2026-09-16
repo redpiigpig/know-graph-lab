@@ -1,0 +1,540 @@
+{
+  "slug": "yasht-17",
+  "siglum": "Yt 17",
+  "title_zh": "亞什特 第 17 首‧阿希讚（福運女神讚）",
+  "title_en": "Yasht 17",
+  "canon": "avestan",
+  "volume": "yasht",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/ka/yt17.htm",
+  "en_source": "《東方聖書》第 23 卷，1883；公有領域",
+  "en_translator": "達梅斯特（James Darmesteter）",
+  "en_url": "https://www.avesta.org/ka/yt17sbe.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Mithra": "密特拉",
+    "Anahita": "阿娜希塔",
+    "Tishtrya": "提什特里亞",
+    "Verethraghna": "韋雷特拉格納",
+    "Vayu": "瓦尤",
+    "Rashnu": "拉什努",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "khvarenah": "赫瓦雷納",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 17,
+      "verse": 0,
+      "ref": "Yt 17.0",
+      "orig": "(pa nãm i ýazdã, hôrmezd i hvadâe\ni awazûnî gurz hvarahe awazâyât,\nmainyô arshasañg bê rasât,\n ezh hamâ gunâh ... pa patit hôm!) \nxshnaothra ahurahe mazdå, tarôidîti angrahe\nmainyêush, haithyâvarshtãm hyat vasnâ\nferashôtemem. staomî ashem,\nashem vohû...(3).\nfravarâne mazdayasnô zarathushtrish vîdaêvô\nahura-tkaêshô,\n (Here recite the appropriate Gah dedication.) \nashôish vanghuyå cistôish vanghuyå erethê\nvanghuyå rasãstâtô vanghuyå hvarenanghô\nsavanghô mazdadhâtahe\nxshnaothra ýasnâica vahmâica xshnaothrâica\nfrasastayaêca,\nýathâ ahû vairyô zaotâ frâ-mê\nmrûtê,\nathâ ratush ashâtcît haca frâ ashava vîdhvå\nmraotû!",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 1,
+      "ref": "Yt 17.1",
+      "orig": "ashîm vanguhîm ýazamaide xshôithnîm\nberezaitîm huraodhãm huyazatãm hvanat-caxrãm\namavaitîm dâtô- saokãm baêshazyãm\nperethvîrãm sûrãm,",
+      "en": "ashîm vanguhîm ýazamaide xshôithnîm\nberezaitîm huraodhãm huyazatãm hvanat-caxrãm\namavaitîm dâtô-saokãm baêshazyãm\nperethvîrãm sûrãm, 1. We sacrifice to Ashi Vanguhi, who is shining, \nhigh, tall-formed, well worthy of sacrifice, with a \nloud-sounding chariot, strong, welfare-giving, healing, \nwith fulness of intellect, and powerful;",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 2,
+      "ref": "Yt 17.2",
+      "orig": "dukhdharem ahurahe mazdå hvangharem ameshanãm\nspeñtanãm ýâ vîspanãm\nsaoshyañtãm frasha xrathwa frathañjayeiti\nuta-hê âsnem xratûm ava-baraiti vârema\nuta-hê âsnaêca zbayañtâi dûraêca\nzbayañtâi jasaiti avanghe, ýô ashîm\nýazâite zaothrâbyô hô mithrem ýazâite\nzaothrâbyô.",
+      "en": "dukhdharem ahurahe mazdå hvangharem ameshanãm\nspeñtanãm ýâ vîspanãm\nsaoshyañtãm frasha xrathwa frathañjayeiti\nuta-hê âsnem xratûm ava-baraiti vârema\nuta-hê âsnaêca zbayañtâi dûraêca\nzbayañtâi jasaiti avanghe, ýô ashîm\nýazâite zaothrâbyô hô mithrem ýazâite\nzaothrâbyô. 2. The daughter of Ahura Mazda, the sister of \nthe Amesha-Spentas, who endows all the Saoshyants \nwith the enlivening intelligence; she also \nbrings heavenly wisdom at her wish, and comes to \nhelp him who invokes her from near and him who \ninvokes her from afar, and worships her with offerings \nof libations.",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 3,
+      "ref": "Yt 17.3",
+      "orig": "ahe raya hvarenanghaca\ntãm ýazâi surunvata ýasna\ntãm ýazâi huyashta ýasna\nashîm vanguhîm zaothrâbyô, ashîm\nvanguhîm ýazamaide\nhaomayô gava baresmana hizvô danghangha mãthraca\nvacaca shyaothnaca zaothrâbyasca arshuxdhaêibyasca\nvâkhzhibyô.\nýenghê hâtãm âat ýesnê\npaitî vanghô mazdå ahurô vaêthâ\nashât hacâ ýånghãmcâ tãscâ\ntåscâ ýazamaide!",
+      "en": "ahe raya hvarenanghaca\ntãm ýazâi surunvata ýasna\ntãm ýazâi huyashta ýasna\nashîm vanguhîm zaothrâbyô, ashîm\nvanguhîm ýazamaide\nhaomayô gava baresmana hizvô danghangha mãthraca\nvacaca shyaothnaca zaothrâbyasca arshuxdhaêibyasca\nvâkhzhibyô.\nýenghê hâtãm âat ýesnê\npaitî vanghô mazdå ahurô vaêthâ\nashât hacâ ýånghãmcâ tãscâ\ntåscâ ýazamaide! 3. For her brightness and glory, I will offer her \na sacrifice worth being heard; I will offer up unto \nAshi Vanguhi a good sacrifice with an offering of \nlibations. We sacrifice unto Ashi Vanguhi with \nthe libations, with the Haoma and meat, with the \nbaresma, with the wisdom of the tongue, with the \nholy spells, with the words, with the deeds, with \nthe libations, and with the rightly-spoken words.\nYenhe-hatam: All those beings of whom Ahura Mazda....",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 4,
+      "ref": "Yt 17.4",
+      "orig": "ashîm vanguhîm ýazamaide xshôithnîm\nberezaitîm huraodhãm huyazatãm hvanat-caxrãm\namavaitîm dâtô- saokãm baêshazyãm\nperethvîrãm sûrãm.",
+      "en": "ashîm vanguhîm ýazamaide xshôithnîm\nberezaitîm huraodhãm huyazatãm hvanat-caxrãm\namavaitîm dâtô-saokãm baêshazyãm\nperethvîrãm sûrãm. 4. We sacrifice to Ashi Vanguhi, who is shining, high, tall-formed,\nwell worthy of sacrifice, with a loud-sounding chariot, strong,\nwelfare-giving, healing, with fulness of intellect, and powerful.",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 5,
+      "ref": "Yt 17.5",
+      "orig": "haomaheca nemô mãthraheca ashaonaêca zarathushtrahe,\natcit bâ nemô haomâi\nýat vîspe anye madhånghô\naêshma haciñte xrvidrvô\nâat hô ýô haomahe madhô\nasha hacaite hvaê-paithe.",
+      "en": "haomaheca nemô mãthraheca ashaonaêca zarathushtrahe,\natcit bâ nemô haomâi\nýat vîspe anye madhånghô\naêshma haciñte xrvidrvô\nâat hô ýô haomahe madhô\nasha hacaite hvaê-paithe. 5. Homage unto Haoma, and unto the Mathra, \nand unto the holy Zarathushtra!\nHomage unto Haoma, because all other drinks \nare attended with Aeshma, the fiend of the wounding \nspear: but the drinking of Haoma is attended \nwith Asha and with Ashi Vanguhi herself.",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 6,
+      "ref": "Yt 17.6",
+      "orig": "ashish vanguhi ashi srîre ashi bânumaiti shâiti\nvyâvaiti bânubyô\nashi dâthre vohûm hvarenô\naêshãm narãm ýôi hacahi,\nhubaoidhish baodhaite nmânem\nýenghe nmâne ashish vanguhi\nsûra pâdha nidathaite\nâgremaitish darekhâi haxedhrâi.",
+      "en": "ashish vanguhi ashi srîre ashi bânumaiti shâiti\nvyâvaiti bânubyô\nashi dâthre vohûm hvarenô\naêshãm narãm ýôi hacahi,\nhubaoidhish baodhaite nmânem\nýenghe nmâne ashish vanguhi\nsûra pâdha nidathaite\nâgremaitish darekhâi haxedhrâi. 6. Ashi is fair; Ashi is radiant with joy; she is \nfar-piercing with her rays. Ashi gives good Glory \nunto those men whom thou dost follow, O Ashi! \nFull of perfumes is the house in which the good, \npowerful Ashi Vanguhi puts her .... feet, for long\nfriendship.",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 7,
+      "ref": "Yt 17.7",
+      "orig": "tê narô xshathra xshayeñte ash-baourva\nnidhâtô-pitu hubaoidhi\nýahmya staretasca gâtush\nanyåsca berexdhå avaretå\nýôi hacahi ashish vanguhi,\nushta bâ ýim hacahi\nuta mãm upanghacahi\nvouru-saredha amavaiti.",
+      "en": "tê narô xshathra xshayeñte ash-baourva\nnidhâtô-pitu hubaoidhi\nýahmya staretasca gâtush\nanyåsca berexdhå avaretå\nýôi hacahi ashish vanguhi,\nushta bâ ýim hacahi\nuta mãm upanghacahi\nvouru-saredha amavaiti. 7. Those men whom thou dost attend, O Ashi! \nare kings of kingdoms, that are rich in horses, with \nlarge tributes, with snorting horses, sounding chariots, \nflashing swords, rich in aliments and in stores of \nfood; well-scented where the beds are spread and \nfull of all the other riches that may be wished for. \nHappy the man whom thou dost attend! do thou \nattend me, thou rich in all sorts of desirable things \nand strong!",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 8,
+      "ref": "Yt 17.8",
+      "orig": "aêshãm nmânå hvidhâtå\ngaosûrånghô hishteñte\nash-paourvå darekhô-upastêe\nýôi hacahi ashish vanguhi,\nushta bâ ýim hacahi\nuta mãm upanghacahi\nvouru-saredha amavaiti.",
+      "en": "aêshãm nmânå hvidhâtå\ngaosûrånghô hishteñte\nash-paourvå darekhô-upastêe\nýôi hacahi ashish vanguhi,\nushta bâ ýim hacahi\nuta mãm upanghacahi\nvouru-saredha amavaiti. 8. Those men whom thou dost attend, O Ashi Vanguhi! \nhave houses that stand well laid up, rich in \ncattle, foremost in Asha, and long-supported. Happy \nthe man whom thou dost attend! Do thou attend \nme, thou rich in all sorts of desirable things and \nstrong!",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 9,
+      "ref": "Yt 17.9",
+      "orig": "aêshãm gâtava hishteñte\nhustareta hupô-busta\nhukereta barezish-havañtô\nzaranyapaxshta-pâdhånghô\nýôi hacahi ashish vanguhi, ushta bâ ýim\nhacahi uta mãm upanghacahi vouru-saredha amavaiti.",
+      "en": "aêshãm gâtava hishteñte\nhustareta hupô-busta\nhukereta barezish-havañtô\nzaranyapaxshta-pâdhånghô\nýôi hacahi ashish vanguhi, ushta bâ ýim\nhacahi uta mãm upanghacahi vouru-saredha amavaiti. 9. The men whom thou dost attend, O Ashi Vanguhi! \nhave beds that stand well-spread, well-adorned, \nwell-made, provided with cushions and with feet \ninlaid with gold. Happy the man whom thou dost \nattend! Do thou attend me, thou rich in all sorts \nof desirable things and strong!",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 10,
+      "ref": "Yt 17.10",
+      "orig": "aêshãm vañtånghô bât\nmainyånghô\ngâtush paiti ångheñti\nýôi srîra barezish-havañtô\nmerezyumnå añku-paêsemnå\nfrâ gaoshâvara sispimna\ncathru-karana minuca zaranyô-pisi. kadha nô avi âjasât\nnmânô-paitish kadha shâiti paitishâm fryâ\npaiti tanvi\nýôi hacahi ashish vanguhi, ushta bâ ýim\nhacahi uta mãm upanghacahi vouru-saredha amavaiti.",
+      "en": "aêshãm vañtånghô bât\nmainyånghô\ngâtush paiti ångheñti\nýôi srîra barezish-havañtô\nmerezyumnå añku-paêsemnå\nfrâ gaoshâvara sispimna\ncathru-karana minuca zaranyô-pisi. kadha nô avi âjasât\nnmânô-paitish kadha shâiti paitishâm fryâ\npaiti tanvi\nýôi hacahi ashish vanguhi, ushta bâ ýim\nhacahi uta mãm upanghacahi vouru-saredha amavaiti. 10. The men whom thou dost attend, O Ashi Vanguhi! \nhave their ladies that sit on their beds, \nwaiting for them: they lie on the cushions, adorning \nthemselves, ...., with square bored ear-rings and \na necklace of gold: 'When will our lord come? \nwhen shall we enjoy in our bodies the joys of love?' \nHappy the man whom thou dost attend! Do thou \nattend me, thou rich in all sorts of desirable things \nand strong!",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 11,
+      "ref": "Yt 17.11",
+      "orig": "aêshãm kaininô ångheñte\nãkhmô-paidhish urvizô-maidhyå\nsraotanvô darekhô-añgushtå\nkehrpa avavatãm sraya\nýatha didhayatãm zaoshô\nýôi hacahi ashish vanguhi, ushta bâ ýim\nhacahi uta mãm upanghacahi vouru-saredha amavaiti.",
+      "en": "aêshãm kaininô ångheñte\nãkhmô-paidhish urvizô-maidhyå\nsraotanvô darekhô-añgushtå\nkehrpa avavatãm sraya\nýatha didhayatãm zaoshô\nýôi hacahi ashish vanguhi, ushta bâ ýim\nhacahi uta mãm upanghacahi vouru-saredha amavaiti. 11. The men whom thou dost attend, O Ashi Vanguhi! \nhave daughters that sit ....; thin is \ntheir waist, beautiful is their body, long are their \nfingers; they are as fair of shape as those who look \non can wish. Happy the man whom thou dost \nattend! Do thou attend me, thou rich in all sorts \nof desirable things and strong!",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 12,
+      "ref": "Yt 17.12",
+      "orig": "aêshãm aspånghô bayeñte\nâsavô ravô-fraothemanô\nraom vâshem vâshayañte\nmrâtem carema thañjayeñte\ntaxmem staotârem vazeñti\nâsu-aspem derezi-rathem\ntizhi-arshtîm darekha-âreshtaêm\nxshviwi-ishûm parô-kevîdhem\nvîtârem paskât hamerethem\njañtârem parô dushmainyûm\nýôi hacahi ashish vanguhi, ushta bâ ýim\nhacahi uta mãm upanghacahi vouru-saredha amavaiti.",
+      "en": "aêshãm aspånghô bayeñte\nâsavô ravô-fraothemanô\nraom vâshem vâshayañte\nmrâtem carema thañjayeñte\ntaxmem staotârem vazeñti\nâsu-aspem derezi-rathem\ntizhi-arshtîm darekha-âreshtaêm\nxshviwi-ishûm parô-kevîdhem\nvîtârem paskât hamerethem\njañtârem parô dushmainyûm\nýôi hacahi ashish vanguhi, ushta bâ ýim\nhacahi uta mãm upanghacahi vouru-saredha amavaiti. 12. The men whom thou dost attend, O Ashi Vanguhi! \nhave horses swift and loud-neighing; \nthey drive the chariot lightly, they take it to the \nbattle, they bear a gallant praiser (of the gods), \nwho has many horses, a solid chariot, a sharp spear, \na long spear, and swift arrows, who hits his aim, \npursuing after his enemies, and smiting his foes. \nHappy the man whom thou dost attend! Do thou \nattend me, thou rich in all sorts of desirable things \nand strong!",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 13,
+      "ref": "Yt 17.13",
+      "orig": "aêshãm ushtrånghô bayeñte\nsaêni-kaofa ash-manangha aojayeni zemat peretamna vadhairyavô\nýôi hacahi ashish vanguhi, ushta bâ ýim\nhacahi uta mãm upanghacahi vouru-saredha amavaiti.",
+      "en": "aêshãm ushtrånghô bayeñte\nsaêni-kaofa ash-manangha aojayeni zemat peretamna vadhairyavô\nýôi hacahi ashish vanguhi, ushta bâ ýim\nhacahi uta mãm upanghacahi vouru-saredha amavaiti. 13. The men whom thou dost attend, O Ashi Vanguhi! \nhave large-humped, burden-bearing camels, \nflying from the ground or fighting with holy fieriness. \nHappy the man whom thou dost attend! \nDo thou attend me, thou rich in all sorts of desirable \nthings and strong!",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 14,
+      "ref": "Yt 17.14",
+      "orig": "aêshãm erezatem zaranim\nniberethi âbereta baraiti\naiwitarâbyô haca danghubyô\nvastråsca keshå bâmanivå\nýôi hacahi ashish vanguhi,\nushta bâ ýim hacahi\nuta mãm upanghacahi\nvouru-saredha amavaiti.",
+      "en": "aêshãm erezatem zaranim\nniberethi âbereta baraiti\naiwitarâbyô haca danghubyô\nvastråsca keshå bâmanivå\nýôi hacahi ashish vanguhi,\nushta bâ ýim hacahi\nuta mãm upanghacahi\nvouru-saredha amavaiti. 14. The men whom thou dost attend, O Ashi Vanguhi! \nhave hoards of silver and gold brought \ntogether from far distant regions; and garments of \nsplendid make. Happy the man whom thou dost \nattend! Do thou attend me, thou rich in all sorts \nof desirable things and strong!",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 15,
+      "ref": "Yt 17.15",
+      "orig": "apa mãm apa-daidhya\nfrâ-mãm aiwi-urvaêsayanguha\nmarzhdikem ashish berezaiti,\nhudhâta ahi hucithra\nvasatha ahi xshayamna\ntanuye hvarenanghe dâite.",
+      "en": "apa mãm apa-daidhya\nfrâ-mãm aiwi-urvaêsayanguha\nmarzhdikem ashish berezaiti,\nhudhâta ahi hucithra\nvasatha ahi xshayamna\ntanuye hvarenanghe dâite. 15. Do not turn thy look from me! turn thy \nmercy towards me, O great Ashi! thou art well-made \nand of a noble seed; thou art sovereign at \nthy wish; thou art Glory in a bodily form.",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 16,
+      "ref": "Yt 17.16",
+      "orig": "pita-tê ýô ahurô mazdå\nýô mazishtô ýazatanãm\nýô vahishtô ýazatanãm,\nmâta ârmaitish speñta\nbrâta tê ýô vanghush sraoshô ashyô\nrashnushca berezô amavå\nmithrasca vouru-gaoyaoitish ýô baêvare-spasanô\nhazangra-gaoshô hvangha daêna mâzdayesnish.",
+      "en": "pita-tê ýô ahurô mazdå\nýô mazishtô ýazatanãm\nýô vahishtô ýazatanãm,\nmâta ârmaitish speñta\nbrâta tê ýô vanghush sraoshô ashyô\nrashnushca berezô amavå\nmithrasca vouru-gaoyaoitish ýô baêvare-spasanô\nhazangra-gaoshô hvangha daêna mâzdayesnish. 16. Thy father is Ahura Mazda, the greatest of \nall gods, the best of all gods; thy mother is Armaiti Spenta; \nthy brothers are Sraosha, a god of Asha, \nand Rashnu, tall and strong, and Mithra, the lord\nof wide pastures, who has ten thousand spies and \na thousand ears; thy sister is the Law [Daena] of the worshippers \nof Mazda.",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 17,
+      "ref": "Yt 17.17",
+      "orig": "upa-staota ýazatanãm\namuyamna razishtanãm\npaiti-stayata raithya\nashish vanguhi ýâ berezaiti\nuiti vacêbish aojana,\nkô ahi ýô mãm zbayehi\nýenghe azem frâyô zbayeñtãm\nsraêshtem susruye vâcim.",
+      "en": "upa-staota ýazatanãm\namuyamna razishtanãm\npaiti-stayata raithya\nashish vanguhi ýâ berezaiti\nuiti vacêbish aojana,\nkô ahi ýô mãm zbayehi\nýenghe azem frâyô zbayeñtãm\nsraêshtem susruye vâcim. 17. Praised of the gods, unoffended by the righteous, \nthe great Ashi Vanguhi stood up on her \nchariot, thus speaking: 'Who art thou who dost \ninvoke me, whose voice is to my ear the sweetest \nof all that invoked me most?'",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 18,
+      "ref": "Yt 17.18",
+      "orig": "adhât uiti fravashata,\nýô spitâmô zarathushtrô\nýô paoiryô mashyâkô\nstaota ashem ýat vahishtem\nýazata ahurem mazdãm\nýazata ameshê speñtê\nýenghe zãthaêca vaxshaêca\nurvâsen âpô urvaråsca\nýenghe zãthaêca vaxshaêca\nuxshin âpô urvaråsca,",
+      "en": "adhât uiti fravashata,\nýô spitâmô zarathushtrô\nýô paoiryô mashyâkô\nstaota ashem ýat vahishtem\nýazata ahurem mazdãm\nýazata ameshê speñtê\nýenghe zãthaêca vaxshaêca\nurvâsen âpô urvaråsca\nýenghe zãthaêca vaxshaêca\nuxshin âpô urvaråsca, 18. And he said aloud: 'I am Spitama Zarathushtra, \nwho, first of mortals, recited the praise of \nthe excellent Asha and offered up sacrifice unto \nAhura Mazda and the Amesha-Spentas; in whose \nbirth and growth the waters and the plants rejoiced; \nin whose birth and growth the waters and the plants \ngrew; in whose birth and growth all the creatures \nof the good creation cried out, Hail!",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 19,
+      "ref": "Yt 17.19",
+      "orig": "ýehe zãthaêca vaxshaêca\napa-dvarat angrô mainyush\nhaca zemat ýat pathanayå\nskarenayå dûraêpârayå,\nuiti davata hô ýô duzhdå\nangrô mainyush pouru-mahrkô,\nnôit mãm vîspe ýazatånghô\nanuseñtem fraoreciñta\nâat mãm aêvô zarathushtrô\nanuseñtem apayeiti,",
+      "en": "ýehe zãthaêca vaxshaêca\napa-dvarat angrô mainyush\nhaca zemat ýat pathanayå\nskarenayå dûraêpârayå,\nuiti davata hô ýô duzhdå\nangrô mainyush pouru-mahrkô,\nnôit mãm vîspe ýazatånghô\nanuseñtem fraoreciñta\nâat mãm aêvô zarathushtrô\nanuseñtem apayeiti, 19. 'In whose birth and growth Angra Mainyu \nrushed away from this wide, round earth, whose \nends lie afar, and he, the evil-doing Angra Mainyu, \nwho is all death, said: \"All the gods together \nhave not been able to smite me down in spite \nof myself, and Zarathushtra alone can reach me in \nspite of myself.",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 20,
+      "ref": "Yt 17.20",
+      "orig": "jaiñti mãm ahuna vairya avavata snaithisha ýatha\nasma katô-maså, tâpayeiti mãm asha vahishta\nmãnayen ahe ýatha ayaoxshustem, raêkô\nmê haca anghå zemat vanghô kerenaoiti\nýô mãm aêvô jâmayeiti\nýô spitâmô zarathushtrô.",
+      "en": "jaiñti mãm ahuna vairya avavata snaithisha ýatha\nasma katô-maså, tâpayeiti mãm asha vahishta\nmãnayen ahe ýatha ayaoxshustem, raêkô\nmê haca anghå zemat vanghô kerenaoiti\nýô mãm aêvô jâmayeiti\nýô spitâmô zarathushtrô. 20. '\"He smites me with the Ahuna Vairya, as \nstrong a weapon as a stone big as a house; he \nburns me with Asha-Vahishta, as if it were melting \nbrass. He makes it better for me that I should \nleave this earth, he, Spitama Zarathushtra, the only \none who can daunt me.\"'",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 21,
+      "ref": "Yt 17.21",
+      "orig": "adhât uiti fravashata\nashish vanguhi ýâ berezaiti,\nnazdyô mãm upa-hishta\nerezvô ashâum spitama\nupa mê srayanguha vâshahe,\nnazdyô tãm upa-hishtat\nýô spitâmô zarathushtrô\nupa hê srayata vâshahe.",
+      "en": "adhât uiti fravashata\nashish vanguhi ýâ berezaiti,\nnazdyô mãm upa-hishta\nerezvô ashâum spitama\nupa mê srayanguha vâshahe,\nnazdyô tãm upa-hishtat\nýô spitâmô zarathushtrô\nupa hê srayata vâshahe. 21. And the great Ashi Vanguhi exclaimed: 'Come nearer unto me,\nthou pure, holy Spitama! lean against my chariot!'\nSpitama Zarathushtra came nearer unto her, he leant against her\nchariot.",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 22,
+      "ref": "Yt 17.22",
+      "orig": "â-dim usca pairi-marezat\nhâvôya bâzvô dashinaca\ndashina bâzvô hâvayaca\nuiti vacêbish aojana,\nsrîrô ahi zarathushtra\nhukeretô ahi spitama\nhvascvô darekhô-bâzâush\ndâtem tê tanuye hvarenô\nurunaêca darekhem havanghem\nýatha imat ýat tê frâvaocim.\nahe raya ... tåscâ ýazamaide!",
+      "en": "â-dim usca pairi-marezat\nhâvôya bâzvô dashinaca\ndashina bâzvô hâvayaca\nuiti vacêbish aojana,\nsrîrô ahi zarathushtra\nhukeretô ahi spitama\nhvascvô darekhô-bâzâush\ndâtem tê tanuye hvarenô\nurunaêca darekhem havanghem\nýatha imat ýat tê frâvaocim.\nahe raya ... tåscâ ýazamaide! 22. And she caressed him with the left arm and the right, with\nthe right arm and the left, thus speaking: 'Thou art beautiful,\nO Zarathushtra! thou art well-shapen, O Spitama! strong are thy\nlegs and long are thy arms: Glory is given to thy body and long\ncheerfulness to thy soul, as sure as I proclaim it unto thee.'",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 23,
+      "ref": "Yt 17.23",
+      "orig": "ashîm vanguhîm ýazamaide xshôithnîm\nberezaitîm huraodhãm huyazatãm hvanat-caxrãm\namavaitîm dâtô- saokãm baêshazyãm\nperethvîrãm sûrãm.",
+      "en": "ashîm vanguhîm ýazamaide xshôithnîm\nberezaitîm huraodhãm huyazatãm hvanat-caxrãm\namavaitîm dâtô-saokãm baêshazyãm\nperethvîrãm sûrãm. 23. We sacrifice to Ashi Vanguhi, who is shining, high, tall-formed,\nwell worthy of sacrifice, with a loud-sounding chariot, strong,\nwelfare-giving, healing, with fulness of intellect and powerful.",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 24,
+      "ref": "Yt 17.24",
+      "orig": "tãm ýazata\nhaoshyanghô paradhâtô\nupa upabdi harayå berezô\nsrîrayå mazdadhâtayå.",
+      "en": "tãm ýazata\nhaoshyanghô paradhâtô\nupa upabdi harayå berezô\nsrîrayå mazdadhâtayå. 24. To her did Haoshyangha, the Paradhata, offer up a sacrifice,\nupon the enclosure of the Hara, the beautiful height, made by\nMazda.",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 25,
+      "ref": "Yt 17.25",
+      "orig": "âat hîm jaidhyat,\navat âyaptem dazdi- mê\nashish vanguhi ýâ berezaiti\nýat bavâni aiwi-vanyå\nvîspe daêva mâzanya,\nýatha azem nôit tarshtô frânmâne\nthwaêshât parô daêvaêibyô\nfrâ ahmât parô vîspe daêva\nanusô tarshta nemåñte\ntarshta temanghô dvaråñti.",
+      "en": "âat hîm jaidhyat,\navat âyaptem dazdi-mê\nashish vanguhi ýâ berezaiti\nýat bavâni aiwi-vanyå\nvîspe daêva mâzanya,\nýatha azem nôit tarshtô frânmâne\nthwaêshât parô daêvaêibyô\nfrâ ahmât parô vîspe daêva\nanusô tarshta nemåñte\ntarshta temanghô dvaråñti. 25. He begged of her a boon, saying: 'Grant \nme this, O great Ashi Vanguhi! that I may overcome all the Daevas of Mazana; that I\nmay never fear and bow through terror before the Daevas, but that\nall the Daevas may fear and bow in spite of themselves before\nme, that they may fear and flee down to darkness.'",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 26,
+      "ref": "Yt 17.26",
+      "orig": "pairi-tacat pairi-jasat\nashish vanguhi ýâ berezaiti, vîñdât\ntem ýânem haoshyanghô paradhâtô.\nahe raya ... tåscâ ýazamaide!",
+      "en": "pairi-tacat pairi-jasat\nashish vanguhi ýâ berezaiti, vîñdât\ntem ýânem haoshyanghô paradhâtô.\nahe raya ... tåscâ ýazamaide! 26. The great Ashi Vanguhi ran and came to his side: Haoshyangha,\nthe Paradhata, obtained that boon.\nFor her brightness and glory, I will offer her a sacrifice....",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 27,
+      "ref": "Yt 17.27",
+      "orig": "ashîm vanguhîm ýazamaide xshôithnîm\nberezaitîm huraodhãm huyazatãm hvanat-caxrãm\namavaitîm dâtô- saokãm baêshazyãm\nperethvîrãm sûrãm.",
+      "en": "ashîm vanguhîm ýazamaide xshôithnîm\nberezaitîm huraodhãm huyazatãm hvanat-caxrãm\namavaitîm dâtô-saokãm baêshazyãm\nperethvîrãm sûrãm. 27. We sacrifice to Ashi Vanguhi, who is shining, high .... and\npowerful.",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 28,
+      "ref": "Yt 17.28",
+      "orig": "tãm ýazata\nýô ýimô xshaêtô hvãthwô\nhukairyât haca barezanghat.",
+      "en": "tãm ýazata\nýô ýimô xshaêtô hvãthwô\nhukairyât haca barezanghat. 28. To her did Yima Khshaeta, the good shepherd, offer up a sacrifice\nfrom the height Hukairya.",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 29,
+      "ref": "Yt 17.29",
+      "orig": "âat hîm jaidhyat,\navat âyaptem dazdi-mê\nashish vanguhi ýâ berezaiti\nýatha azem fshaoni vãthwa ava-barâni avi mazdå\ndâmabyô ýatha azem amerextîm avi-barâni\navi mazdå dâmabyô,",
+      "en": "âat hîm jaidhyat,\navat âyaptem dazdi-mê\nashish vanguhi ýâ berezaiti\nýatha azem fshaoni vãthwa ava-barâni avi mazdå\ndâmabyô ýatha azem amerextîm avi-barâni\navi mazdå dâmabyô, 29. He begged of her a boon, saying: 'Grant me this, O great Ashi\nVanguhi! that I may bring fatness and flocks down to the world\ncreated by Mazda; that I may bring immortality down to the world\ncreated by Mazda;",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 30,
+      "ref": "Yt 17.30",
+      "orig": "uta azem apa-barâni va shudhemca tarshnemca haca mazdå\ndâmabyô uta azem apa-barâni va zaourvãmca\nmerethyûmca haca mazdå dâmabyô uta azem\napa-barâni va garememca vâtem aotemca haca mazdå\ndâmabyô hazangrem aiwi-gâmanãm.",
+      "en": "uta azem apa-barâni va shudhemca tarshnemca haca mazdå\ndâmabyô uta azem apa-barâni va zaourvãmca\nmerethyûmca haca mazdå dâmabyô uta azem\napa-barâni va garememca vâtem aotemca haca mazdå\ndâmabyô hazangrem aiwi-gâmanãm. 30. 'That I may take away both hunger and thirst, from the world\ncreated by Mazda; that I may take away both old age and death,\nfrom the world created by Mazda; that I may take away both hot\nwind and cold wind, from the world created by Mazda, for a thousand\nyears.'",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 31,
+      "ref": "Yt 17.31",
+      "orig": "pairi-tacat pairi-jasat\nashish vanguhi ýâ berezaiti, viñdât\ntem ýânem ýô ýimô xshaêtô\nhvãthwô.\nahe raya ... tåscâ ýazamaide!",
+      "en": "pairi-tacat pairi-jasat\nashish vanguhi ýâ berezaiti, viñdât\ntem ýânem ýô ýimô xshaêtô\nhvãthwô.\nahe raya ... tåscâ ýazamaide! 31. Then great Ashi Vanguhi ran and came to his side: Yima Khshaeta,\nthe good shepherd, obtained that boon.\nFor her brightness and glory, I will offer her a sacrifice ....",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 32,
+      "ref": "Yt 17.32",
+      "orig": "ashîm vanguhîm ýazamaide xshôithnîm\nberezaitîm huraodhãm huyazatãm hvanat-caxrãm\namavaitîm dâtô- saokãm baêshazyãm\nperethvîrãm sûrãm.",
+      "en": "ashîm vanguhîm ýazamaide xshôithnîm\nberezaitîm huraodhãm huyazatãm hvanat-caxrãm\namavaitîm dâtô-saokãm baêshazyãm\nperethvîrãm sûrãm. 32. We sacrifice to Ashi Vanguhi, who is shining, high .... and\npowerful.",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 33,
+      "ref": "Yt 17.33",
+      "orig": "tãm ýazata\nvîsô puthrô âthwyânôish\nvîsô sûrayå thraêtaonô\nupa varenem cathru-gaoshem.",
+      "en": "tãm ýazata\nvîsô puthrô âthwyânôish\nvîsô sûrayå thraêtaonô\nupa varenem cathru-gaoshem. 33. To her did Thraetaona, the heir of the valiant Athwya clan,\noffer up a sacrifice in the four-cornered Varena.",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 34,
+      "ref": "Yt 17.34",
+      "orig": "âat hîm jaidhyat,\navat âyaptem dazdi-mê\nashish vanguhi ýâ berezaiti\nýat bavâni aiwi-vanyå azhîm dahâkem\nthrizafanem thrikameredhem xshvash-ashîm hazangrâ-ýaoxshtîm\nashaojanghem daêvîm drujem akhem gaêthâvyô\ndrvañtem ýãm ashaojastemãm drujem\nfraca kereñtat angrô mainyush aoi ýãm\nastvaitîm gaêthãm mahrkâi ashahe gaêthanãm,\nuta-hê vañta azâni sanghavâci arenavâci\nýôi hen kehrpa sraêshta zazâtêe\ngaêthyâi tê ýôi abdôteme.",
+      "en": "âat hîm jaidhyat,\navat âyaptem dazdi-mê\nashish vanguhi ýâ berezaiti\nýat bavâni aiwi-vanyå azhîm dahâkem\nthrizafanem thrikameredhem xshvash-ashîm hazangrâ-ýaoxshtîm\nashaojanghem daêvîm drujem akhem gaêthâvyô\ndrvañtem ýãm ashaojastemãm drujem\nfraca kereñtat angrô mainyush aoi ýãm\nastvaitîm gaêthãm mahrkâi ashahe gaêthanãm,\nuta-hê vañta azâni sanghavâci arenavâci\nýôi hen kehrpa sraêshta zazâtêe\ngaêthyâi tê ýôi abdôteme. 34. He begged of her a boon, saying: 'Grant me this, O great Ashi\nVanguhi! that I may overcome Azhi Dahaka, the three-mouthed, the\nthree-headed, the six-eyed, who has a thousand senses, that most\npowerful, fiendish Druj, that demon, baleful to the world, the\nstrongest Druj that Angra Mainyu created against the material\nworld, to destroy the world of the good principle; and that I\nmay deliver his two wives, Savanghavak and Erenavak, who are the\nfairest of body amongst women, and the most wonderful creatures\nin the world.'",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 35,
+      "ref": "Yt 17.35",
+      "orig": "pairi-tacat pairi-jasat\nashish vanguhi ýâ berezaiti, viñdât\ntem ýânem vîsô puthrô athwyânôish\nvîsô sûrayå thraêtaonô.\nahe raya ... tåscâ ýazamaide!",
+      "en": "pairi-tacat pairi-jasat\nashish vanguhi ýâ berezaiti, viñdât\ntem ýânem vîsô puthrô athwyânôish\nvîsô sûrayå thraêtaonô.\nahe raya ... tåscâ ýazamaide! 35. The great Ashi Vanguhi ran and came to his side. Thraetaona,\nthe heir of the valiant Athwya clan, obtained that boon.\nFor her brightness and glory, I will offer her a sacrifice ....",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 36,
+      "ref": "Yt 17.36",
+      "orig": "ashîm vanguhîm ýazamaide xshôithnîm\nberezaitîm huraodhãm huyazatãm hvanat-caxrãm\namavaitîm dâtô- saokãm baêshazyãm\nperethvîrãm sûrãm.",
+      "en": "ashîm vanguhîm ýazamaide xshôithnîm\nberezaitîm huraodhãm huyazatãm hvanat-caxrãm\namavaitîm dâtô-saokãm baêshazyãm\nperethvîrãm sûrãm. 36. We sacrifice to Ashi Vanguhi, who is shining, high .... and\npowerful.",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 37,
+      "ref": "Yt 17.37",
+      "orig": "tãm ýazata\nhaomô frâshmish baêshazyô\nsrîrô xshathryô zairi-dôithrô\nbarezishte paiti barezahi\nharaithyô paiti barezayå.",
+      "en": "tãm ýazata\nhaomô frâshmish baêshazyô\nsrîrô xshathryô zairi-dôithrô\nbarezishte paiti barezahi\nharaithyô paiti barezayå. 37. To her did Haoma offer up a sacrifice, Haoma, the enlivening,\nthe healing, the beautiful, the lordly, with golden eyes, upon\nthe highest height of the Haraiti Bareza.",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 38,
+      "ref": "Yt 17.38",
+      "orig": "âat hîm jaidhyat,\navat âyaptem dazdi- mê\nashish vanguhi ýâ berezaiti\nýatha azem bañdayeni mairîm tûirîm\nfrangrasyânem uta bastem vâdhayeni uta bastem upanayeni\nbastem kavôish haosravanghahe janât tem kava haosrava\npasne varôish caêcastahe jafrahe uruyâpahe puthrô\nkaêna syâvarshânâi zûrô-jatahe\nnarahe akhraêrathaheca naravahe.",
+      "en": "âat hîm jaidhyat,\navat âyaptem dazdi-mê\nashish vanguhi ýâ berezaiti\nýatha azem bañdayeni mairîm tûirîm\nfrangrasyânem uta bastem vâdhayeni uta bastem upanayeni\nbastem kavôish haosravanghahe janât tem kava haosrava\npasne varôish caêcastahe jafrahe uruyâpahe puthrô\nkaêna syâvarshânâi zûrô-jatahe\nnarahe akhraêrathaheca naravahe. 38. He begged of her a boon, saying: 'Grant me this, O great Ashi\nVanguhi! that I may bind the Turanian murderer, Franghrasyan,\nthat I may drag him bound, that I may bring him bound unto king\nHusravah, that king Husravah may kill him, behind the Chaechasta\nlake, the deep lake of salt waters, to avenge the murder of his\nfather Syavarshana, a man, and of Aghraeratha, a semi-man.'",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 39,
+      "ref": "Yt 17.39",
+      "orig": "pairi-tacat pairi-jasat\nashish vanguhi ýâ berezaiti, viñdât\ntem ýânem haomô frâshmish baêshazyô\nsrîrô xshathryô zairi-dôithrô.\nahe raya ... tåscâ ýazamaide!",
+      "en": "pairi-tacat pairi-jasat\nashish vanguhi ýâ berezaiti, viñdât\ntem ýânem haomô frâshmish baêshazyô\nsrîrô xshathryô zairi-dôithrô.\nahe raya ... tåscâ ýazamaide! 39. The great Ashi Vanguhi ran and came to his side. Haoma, the\nenlivening, the healing, the beautiful, the lordly, with golden\neyes, obtained that boon.\nFor her brightness and glory, I will offer her a sacrifice....",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 40,
+      "ref": "Yt 17.40",
+      "orig": "ashîm vanguhîm ýazamaide xshôithnîm\nberezaitîm huraodhãm huyazatãm hvanat-caxrãm\namavaitîm dâtô- saokãm baêshazyãm\nperethvîrãm sûrãm.",
+      "en": "ashîm vanguhîm ýazamaide xshôithnîm\nberezaitîm huraodhãm huyazatãm hvanat-caxrãm\namavaitîm dâtô-saokãm baêshazyãm\nperethvîrãm sûrãm. 40. We sacrifice to Ashi Vanguhi, who is shining, high .... and\npowerful.",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 41,
+      "ref": "Yt 17.41",
+      "orig": "tãm ýazata\narsha airyanãm dah'yunãm\nxshathrâi hañkeremô haosrava.",
+      "en": "tãm ýazata\narsha airyanãm dah'yunãm\nxshathrâi hañkeremô haosrava. 41. To her did the gallant Husravah, he who united the Aryan nations\ninto one kingdom, offer up a sacrifice, behind the Chaechasta\nlake, the deep lake of salt waters.",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 42,
+      "ref": "Yt 17.42",
+      "orig": "âat hîm jaidhyat,\navat âyaptem dazdi- mê\nashish vanguhi ýâ berezaiti\nýatha azem nijanâni mairîm tûirîm\nfrangrasyânem pasne varôish caêcastahe jafrahe\nurvyâpahe puthrô kaêna syâvarshânâi\nzûrô-jatahe narahe akhraêrathaheca naravahe.",
+      "en": "âat hîm jaidhyat,\navat âyaptem dazdi-mê\nashish vanguhi ýâ berezaiti\nýatha azem nijanâni mairîm tûirîm\nfrangrasyânem pasne varôish caêcastahe jafrahe\nurvyâpahe puthrô kaêna syâvarshânâi\nzûrô-jatahe narahe akhraêrathaheca naravahe. 42. He begged of her a boon, saying: 'Grant me this, O great Ashi\nVanguhi! that I may kill the Turanian murderer, Franghrasyan,\nbehind the Chaechasta lake, the deep lake of salt waters, to avenge\nthe murder of my father Syavarshana, a man, and of Aghraeratha,\na semi-man.'",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 43,
+      "ref": "Yt 17.43",
+      "orig": "pairi-tacat pairi-jasat\nashish vanguhi ýâ berezaiti, viñdât\ntem ýânem arsha airyanãm dah'yunãm\nxshathrâi hañkeremô haosrava.\nahe raya ... tåscâ ýazamaide!",
+      "en": "pairi-tacat pairi-jasat\nashish vanguhi ýâ berezaiti, viñdât\ntem ýânem arsha airyanãm dah'yunãm\nxshathrâi hañkeremô haosrava.\nahe raya ... tåscâ ýazamaide! 43. The great Ashi Vanguhi ran and came to his side. The gallant\nHusravah, he who united the Aryan nations into one kingdom, obtained\nthat boon.\nFor her brightness and glory, I will offer her a sacrifice worth\nbeing heard....",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 44,
+      "ref": "Yt 17.44",
+      "orig": "ashîm vanguhîm ýazamaide xshôithnîm\nberezaitîm huraodhãm huyazatãm hvanat-caxrãm\namavaitîm dâtô- saokãm baêshazyãm\nperethvîrãm sûrãm.",
+      "en": "ashîm vanguhîm ýazamaide xshôithnîm\nberezaitîm huraodhãm huyazatãm hvanat-caxrãm\namavaitîm dâtô-saokãm baêshazyãm\nperethvîrãm sûrãm. 44. We sacrifice to Ashi Vanguhi, who is shining, high .... and\npowerful.",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 45,
+      "ref": "Yt 17.45",
+      "orig": "tãm ýazata ýô ashava zarathushtrô\nairyene vaêjahi vanghuyå dâityayå.",
+      "en": "tãm ýazata ýô ashava zarathushtrô\nairyene vaêjahi vanghuyå dâityayå. 45. To her did the holy Zarathushtra offer up a sacrifice in the\nAiryana Vaejah, by the good river Daitya, with the Haoma and meat,\nwith the baresma, with the wisdom of the tongue, with the holy\nspells, with the speech, with the deeds, with the libations, and\nwith the rightly-spoken words.",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 46,
+      "ref": "Yt 17.46",
+      "orig": "âat hîm jaidhyat,\navat âyaptem dazdi- mê\nashish vanguhi ýâ berezaiti\nýatha azem hâcayene vanguhîm âzâtãm\nhutaosãm anumatêe daênayâi anûxtêe\ndaênayâi anu-varshtêe daênayâi ýâ-mê\ndaênãm mâzdayasnîm zrasca dât apica\naotât ýâ-mê varezânâi vanguhîm\ndât frasastîm.",
+      "en": "âat hîm jaidhyat,\navat âyaptem dazdi-mê\nashish vanguhi ýâ berezaiti\nýatha azem hâcayene vanguhîm âzâtãm\nhutaosãm anumatêe daênayâi anûxtêe\ndaênayâi anu-varshtêe daênayâi ýâ-mê\ndaênãm mâzdayasnîm zrasca dât apica\naotât ýâ-mê varezânâi vanguhîm\ndât frasastîm. 46. He begged of her a boon, saying: 'Grant me this, O great Ashi\nVanguhi! that I may bring the good and noble Hutaosa to think\naccording to the law, to speak according to the law, to do according\nto the law, that she may spread my law and make it known, that\nshe may bestow beautiful praises upon my deeds.'",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 47,
+      "ref": "Yt 17.47",
+      "orig": "pairi-tacat pairi-jasat\nashish vanguhi ýâ berezaiti, viñdât\ntem ýânem ýô ashava zarathushtrô.\nahe raya ... tåscâ ýazamaide!",
+      "en": "pairi-tacat pairi-jasat\nashish vanguhi ýâ berezaiti, viñdât\ntem ýânem ýô ashava zarathushtrô.\nahe raya ... tåscâ ýazamaide! 47. The great Ashi Vanguhi ran and came to his side: the holy\nZarathushtra obtained that boon.\nFor her brightness, and glory, I will offer her a sacrifice worth\nbeing heard....",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 48,
+      "ref": "Yt 17.48",
+      "orig": "ashîm vanguhîm ýazamaide xshôithnîm\nberezaitîm huraodhãm huyazatãm hvanat-caxrãm\namavaitîm dâtô- saokãm baêshazyãm\nperethvîrãm sûrãm.",
+      "en": "ashîm vanguhîm ýazamaide xshôithnîm\nberezaitîm huraodhãm huyazatãm hvanat-caxrãm\namavaitîm dâtô-saokãm baêshazyãm\nperethvîrãm sûrãm. 48. We sacrifice to Ashi Vanguhi, who is shining, high .... and\npowerful.",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 49,
+      "ref": "Yt 17.49",
+      "orig": "tãm ýazata\nberezaidhish kava vîshtâspô\npasne âpô dâityayå.",
+      "en": "tãm ýazata\nberezaidhish kava vîshtâspô\npasne âpô dâityayå. 49. To her did the tall Kavi Vishtaspa offer up a sacrifice behind\nthe waters of the river Daitya.",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 50,
+      "ref": "Yt 17.50",
+      "orig": "âat hîm jaidhyat,\navat âyaptem dazdi-mê\nashish vanguhi ýâ berezaiti\nýatha azâni peshana ashta aurvañtô vîspa-thaurvô\nashtôish puthrô vîspa-thaurvô urvi-xaodhô\nurvi-verethrô stvî-manaothrish ýenghe hapta\nsata ushtranãm jainyâvarat pasca hvîdhahe,\nýatha azâni peshana mairyehe h'yaonahe arejat-aspahe,\nýatha azâni peshana darshinikahe daêvayasnahe.",
+      "en": "âat hîm jaidhyat,\navat âyaptem dazdi-mê\nashish vanguhi ýâ berezaiti\nýatha azâni peshana ashta aurvañtô vîspa-thaurvô\nashtôish puthrô vîspa-thaurvô urvi-xaodhô\nurvi-verethrô stvî-manaothrish ýenghe hapta\nsata ushtranãm jainyâvarat pasca hvîdhahe,\nýatha azâni peshana mairyehe h'yaonahe arejat-aspahe,\nýatha azâni peshana darshinikahe daêvayasnahe. 50. He begged of her a boon, saying: 'Grant me this, O great Ashi\nVanguhi! that I may put to flight Ashta-aurvant, the son of Vispo-thaurvo-asti,\nthe all-afflicting, of the brazen helmet, of the brazen armour,\nof the thick neck, behind whom seven hundred \ncamels ....; that I may put to flight the \nHvyaona murderer, Arejat-aspa; that I may put to \nflight Darshinika, the worshipper of the Daevas;",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 51,
+      "ref": "Yt 17.51",
+      "orig": "uta azem nijanâni tãthryâvañtem\nduzhdaênem uta azem nijanâi spinjaurushem daêvayasnem,\nuta azem fraourvaêsayeni humaya varedhakanãmca h'yaonya\nhaca dainghâvô, uta azem nijanâni h'yaonînãm\ndah'yunãm pañcasakhnâi satakhnâishca\nsatakhnâi hazangrakhnâishca hazangrakhnâi baêvarekhnâishca\nbaêvarekhnâi ahãxshtakhnâishca.",
+      "en": "uta azem nijanâni tãthryâvañtem\nduzhdaênem uta azem nijanâi spinjaurushem daêvayasnem,\nuta azem fraourvaêsayeni humaya varedhakanãmca h'yaonya\nhaca dainghâvô, uta azem nijanâni h'yaonînãm\ndah'yunãm pañcasakhnâi satakhnâishca\nsatakhnâi hazangrakhnâishca hazangrakhnâi baêvarekhnâishca\nbaêvarekhnâi ahãxshtakhnâishca. 51. 'And that I may smite Tathravant of the bad law; that I may\nsmite Spinjaurushka, the worshipper of the Daevas; and that I\nmay bring unto the good law the nations of the Varedhakas and\nof the Hvyaonas; and that I may smite of the Hvyaona nations their\nfifties and their hundreds, their hundreds and their thousands,\ntheir thousands and their tens of thousands, their tens of thousands\nand their myriads of myriads.'",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 52,
+      "ref": "Yt 17.52",
+      "orig": "pairi-tacat pairi-jasat\nashish vanguhi ýâ berezaiti, viñdât\ntem ýânem berezaidhish kava vîshtâspô.\nahe raya ... tåscâ ýazamaide!",
+      "en": "pairi-tacat pairi-jasat\nashish vanguhi ýâ berezaiti, viñdât\ntem ýânem berezaidhish kava vîshtâspô.\nahe raya ... tåscâ ýazamaide! 52. The great Ashi Vanguhi ran and came to his side: the tall\nKavi Vishtaspa obtained that boon.\nFor her brightness and glory, I will offer her a sacrifice worth\nbeing heard ....",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 53,
+      "ref": "Yt 17.53",
+      "orig": "ashîm vanguhîm ýazamaide xshôithnîm\nberezaitîm huraodhãm huyazatãm hvanat-caxrãm\namavaitîm dâtô- saokãm baêshazyãm\nperethvîrãm sûrãm.",
+      "en": "ashîm vanguhîm ýazamaide xshôithnîm\nberezaitîm huraodhãm huyazatãm hvanat-caxrãm\namavaitîm dâtô-saokãm baêshazyãm\nperethvîrãm sûrãm. 53. We sacrifice to Ashi Vanguhi, who is shining, high .... and\npowerful.",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 54,
+      "ref": "Yt 17.54",
+      "orig": "âat aoxta ashish vanguhi ýâ berezaiti,\nmâ-cish mê ånghãm zaothranãm viñdita\nýâ mâvôya nipârayeiñti mâ\nnarô pairishtâ-xshudhrô mâ jahika para-daxshta\nmâ aperenâyu tauruna mâ kainina anupaêta\nmashyânãm.",
+      "en": "âat aoxta ashish vanguhi ýâ berezaiti,\nmâ-cish mê ånghãm zaothranãm viñdita\nýâ mâvôya nipârayeiñti mâ\nnarô pairishtâ-xshudhrô mâ jahika para-daxshta\nmâ aperenâyu tauruna mâ kainina anupaêta\nmashyânãm. 54. And the great Ashi Vanguhi said: 'None of \nthose libations will be accepted by me, which are \nsent to me either by a man whose seed is dried out, \nor by the courtezan who produces untimely issues,\nor by young boys, or by girls who have known no man.",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 55,
+      "ref": "Yt 17.55",
+      "orig": "ýat mãm tura pazdayañta\nâsu-aspa naotaraca\nâat azem tanûm aguze\nadhairi pâdhem gêush arshnô baremâyaonahe\nâat mãm fraguzayañta\nýôi aperenâyu tauruna\nýôi kainina anupaêta mashyânãm.",
+      "en": "ýat mãm tura pazdayañta\nâsu-aspa naotaraca\nâat azem tanûm aguze\nadhairi pâdhem gêush arshnô baremâyaonahe\nâat mãm fraguzayañta\nýôi aperenâyu tauruna\nýôi kainina anupaêta mashyânãm. 55. 'When the Turanians and the swift-horsed Naotaras, clapping their\nhands, ran after me,\nI hid myself under the foot of a bull walking under his burden;\nthen young boys, and girls who had known no man, discovered me,\neven while the Turanians and the swift-horsed Naotaras, clapping\ntheir hands, were running after me.",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 56,
+      "ref": "Yt 17.56",
+      "orig": "ýatcit mãm tura pazdayañta\nâsu-aspa naotaraca\natcit azem tanûm aguze\nadhairi maêshahe garô\nýat varshnôish satô-karahe\natcit mãm fraguzayañta\nýôi aperenâyu tauruna\nýôi kainina anupaêta mashyânãm\nýatcit mãm tura pazdayañta\nâsu-aspaêm naotaraca.",
+      "en": "ýatcit mãm tura pazdayañta\nâsu-aspa naotaraca\natcit azem tanûm aguze\nadhairi maêshahe garô\nýat varshnôish satô-karahe\natcit mãm fraguzayañta\nýôi aperenâyu tauruna\nýôi kainina anupaêta mashyânãm\nýatcit mãm tura pazdayañta\nâsu-aspaêm naotaraca. 56. 'Even I hid myself under the throat of a ram of hundredfold\nenergy: then again young boys, and girls who had known no man,\ndiscovered me, even while the Turanians and the swift-horsed Naotaras,\nclapping their hands, were running after me.'",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 57,
+      "ref": "Yt 17.57",
+      "orig": "paoiryãm gerezãm gerezaêta\nashish vanguhi ýâ berezaiti\nhaca aputhrô-zanyâi jahikayâi,\nmâ hê avi pâdhem ava-hishta\nmâ gâtûm nipaidhyanguha,\nkutha hîsh azem kerenavâni\nasmanem avi frashusâni\nzãm avi ni-urvisyâni.",
+      "en": "paoiryãm gerezãm gerezaêta\nashish vanguhi ýâ berezaiti\nhaca aputhrô-zanyâi jahikayâi,\nmâ hê avi pâdhem ava-hishta\nmâ gâtûm nipaidhyanguha,\nkutha hîsh azem kerenavâni\nasmanem avi frashusâni\nzãm avi ni-urvisyâni. 57. The first wailing of the great Ashi Vanguhi is her wailing\nabout the courtezan who destroys her fruit: 'Stand thou not near\nher, sit thou not on her bed!' — 'What shall I do? Shall I go\nback to the heavens? Shall I sink into the earth?'",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 58,
+      "ref": "Yt 17.58",
+      "orig": "bityãm gerezãm gerezaêta\nashish vanguhi ýâ berezaiti\nhaca avanghâi jahikayâi\nýâ aom puthrem baraiti\nanyahmâi arshânâi varshtem\npaithe upa-baraiti,\nkutha hîsh azem kerenavâni\nasmanem avi frashusâni\nzãm avi ni-urvisyâni.",
+      "en": "bityãm gerezãm gerezaêta\nashish vanguhi ýâ berezaiti\nhaca avanghâi jahikayâi\nýâ aom puthrem baraiti\nanyahmâi arshânâi varshtem\npaithe upa-baraiti,\nkutha hîsh azem kerenavâni\nasmanem avi frashusâni\nzãm avi ni-urvisyâni. 58. The second wailing of the great Ashi Vanguhi \nis her wailing about the courtezan who brings forth \na child conceived of a stranger and presents it to \nher husband: 'What shall I do? Shall I go back \nto the heavens? Shall I sink into the earth?'",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 59,
+      "ref": "Yt 17.59",
+      "orig": "thrityãm gerezãm gerezaêta\nashish vanguhi ýâ berezaiti,\nimat mê stâvishtem shyaothnem\nmashya vereziñti sâsta\nýat kainyô uzvâdhayeiñti\ndarekhem akhrvô nijâmayeiñti,\nkutha hîsh azem kerenavâni\nasmanem avi frashusâni\nzãm avi ni-urvisyâni.",
+      "en": "thrityãm gerezãm gerezaêta\nashish vanguhi ýâ berezaiti,\nimat mê stâvishtem shyaothnem\nmashya vereziñti sâsta\nýat kainyô uzvâdhayeiñti\ndarekhem akhrvô nijâmayeiñti,\nkutha hîsh azem kerenavâni\nasmanem avi frashusâni\nzãm avi ni-urvisyâni. 59. This is the third wailing of the great Ashi Vanguhi: 'This\nis the worst deed that men and tyrants do, namely, when they deprive\nmaids, that have been barren for a long time, of marrying and\nbringing forth children. What shall I do? Shall I go back to the\nheavens? Shall I sink into the earth?'",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 60,
+      "ref": "Yt 17.60",
+      "orig": "âat mraot ahurô mazdå,\nashi srîre dâmidhâite\nmâ avi asmanem frashusa\nmâ avi zãm ni-urvise\nitha mê tûm hãm-caranguha\nañtare aredhem nmânahe\nsrîrahe xshathrô-keretahe,",
+      "en": "âat mraot ahurô mazdå,\nashi srîre dâmidhâite\nmâ avi asmanem frashusa\nmâ avi zãm ni-urvise\nitha mê tûm hãm-caranguha\nañtare aredhem nmânahe\nsrîrahe xshathrô-keretahe, 60. Ahura Mazda answered: 'O fair and wise \nAshi, go not back to the heavens, sink not into the \nearth! Stay here and walk inside the fine kingly \npalace.'",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 61,
+      "ref": "Yt 17.61",
+      "orig": "ana thwâ ýasna ýazâne\nana ýasna frâyazâne\nýase-thwâ ýazata vîshtâspô\npasne âpô dâityayå,\nberezem barât zaota vâcim\nhishtemnô pasca baresma,\nana thwâ ýasna ýazâne\nana ýasna frâyazâne\nashi srîre dâmidhâite\nahe raya ... tåscâ ýazamaide!",
+      "en": "ana thwâ ýasna ýazâne\nana ýasna frâyazâne\nýase-thwâ ýazata vîshtâspô\npasne âpô dâityayå,\nberezem barât zaota vâcim\nhishtemnô pasca baresma,\nana thwâ ýasna ýazâne\nana ýasna frâyazâne\nashi srîre dâmidhâite\nahe raya ... tåscâ ýazamaide! 61. I shall worship thee with such a sacrifice, I \nshall worship and forward thee with such a sacrifice \nas Vishtaspa offered unto thee, behind the river Daitya. \nThe Zaotar lifted up a loud voice, with \nbaresma before him. With that sort of sacrifice \nshall I worship thee? With that sort of sacrifice \nshall I worship and forward thee, O fair and wise \nAshi?\nFor her brightness and glory, I will offer her a sacrifice worth\nbeing heard....\n(Recite silently:)",
+      "zh": ""
+    },
+    {
+      "chapter": 17,
+      "verse": 62,
+      "ref": "Yt 17.62",
+      "orig": "(hôrmezd i hvadâe i awazûnî mardum\nmardum sardagã hamâ sardagã ham bâ ýasht\ni vahã vaem vahe dîn i mâzdayasnã âgâhî\nâstvãnî nêkî rasãnât\nêduñ bât,)",
+      "en": "(hôrmezd i hvadâe i awazûnî mardum\nmardum sardagã hamâ sardagã ham bâ ýasht\ni vahã vaem vahe dîn i mâzdayasnã âgâhî\nâstvãnî nêkî rasãnât\nêduñ bât,)\n(Recite aloud:) \nýathâ ahû vairyô...(2).\nýasnemca vahmemca aojasca zavareca âfrînâmi\nashôish vanghuyå cistôish vanghuyå erethê\nvanghuyå rasãstâtô vanghuyå hvarenanghô\nsavanghô mazdadhâtahe.\nashem vohû....\n ahmâi raêshca ... hazangrem ... jasa-mê ... (kerba mazhd) ... ashem vohû...!! \n \n* *\n* 62. Yatha ahu vairyo: The will of the Lord is the law of holiness....\nI bless the sacrifice and prayer, and the strength \nand vigour of Ashi Vanguhi; of the good Chisti; of the good Erethe; of the\ngood Rasastat; of the Glory and Weal, made by Mazda.\nAshem Vohu: Holiness is the best of all good....\n[Give] unto that man brightness and glory, give him health of\nbody, .... give him the bright, all-happy, blissful abode of the\nholy Ones.\nAvesta -- Zoroastrian Archives\nContents\nPrev\nYt17\nNext\nAvestan\nGlossary",
+      "zh": ""
+    }
+  ]
+}

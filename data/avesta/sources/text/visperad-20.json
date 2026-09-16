@@ -1,0 +1,90 @@
+{
+  "slug": "visperad-20",
+  "siglum": "Vr 20",
+  "title_zh": "維斯帕拉德 第 20 章",
+  "title_en": "Visperad 20",
+  "canon": "avestan",
+  "volume": "visperad",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/visperad/visperad.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "達梅斯特（James Darmesteter）",
+  "en_url": "https://www.avesta.org/visperad/vrsbe.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "ratu": "拉圖",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 20,
+      "verse": 0,
+      "ref": "Vr 20.0",
+      "orig": "ahurem mazdãm ashavanem ashahe ratûm ... ratufritîm\nýazamaide, vohuxshathrãm gâthãm ashaonîm\nashahe ratûm ýazamaide mat-afsmanãm mat-vacastashtîm\nmat-âzaiñtîm mat-peresvîm mat-paiti-peresvîm\nmat vakhzhibyâca patbyasca huframeretãm framaremnãm\nhufrâyashtãm frâyaêzyañtãm\nhvahmi dãm ... fraxshne avi manô zrazdâtôit\nanghuyat haca!",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 20,
+      "verse": 1,
+      "ref": "Vr 20.1",
+      "orig": "vohu xshathrem ýazamaide, xshathrem vairîm ýazamaide,\nayôxshustem ýazamaide, vaca arshuxdha vârethrakhnish\ndaêvô-khnita ýazamaide, avat mizhdem ýazamaide,\navat dasvare ýazamaide, avat baêshazem ýazamaide,\navat fradathem ýazamaide, avat varedathem ýazamaide.",
+      "en": "(Homage to the Gatha Vohu-khshathra! We sacrifice to the Vohu-khshathra),\n(the good kingdom) even the Khshathra-vairya, the kingdom to be\ndesired; and we sacrifice to the iron-founding, and to the (sacrificial)\nwords correctly spoken which smite (the foe) with victory, and\nwhich hold the Daevas subject. 1. This piece from the later Avesta follows Y. 51, in the Vendidâd Sâdah.",
+      "zh": ""
+    },
+    {
+      "chapter": 20,
+      "verse": 2,
+      "ref": "Vr 20.2",
+      "orig": "avat verethrakhnem ýazamaide ýat asti añtareca\nvohuxshathrãm vahishtôishtîm framereiti humatanãmca\nhûxtanãmca hvarshtanãmca paitishtâtêe\ndushmatanãmca duzhûxtanãmca duzhvarshtanãmca\nuzvarezâi mâvôya mithô-matanãmca\nmithôxtanãmca mithôvarshtanãmca. (vohu\nxshathrem ... mithôvarshtanãmca(2).)",
+      "en": "From the Vendîdâd Sâdah.",
+      "zh": ""
+    },
+    {
+      "chapter": 20,
+      "verse": 3,
+      "ref": "Vr 20.3",
+      "orig": "vohuxshathrayå gâthayå hañdâtâ\nýazamaide, vohuxshathrayå gâthayå hâitishca\nafsmanâca > tåscâ ýazamaide!!",
+      "en": "Associated with this Gâtha from Y. 51.9.",
+      "zh": ""
+    },
+    {
+      "chapter": 20,
+      "verse": 4,
+      "ref": "Vr 20.4",
+      "orig": "",
+      "en": "Compare Y. 51.3.\n \n \nAnd we worship that reward and that health, that \nhealing and that progress, that growth and that \nvictorious smiting (2) which are between the \nVohu-khshathra and the Vahishtoishti, (and which are \nacquired by us) by the memorized recital of the good \nthoughts, good words, and good deeds, for the withstanding of evil thoughts,\nand words, and deeds; yea, for the undoing of all treacherous\nthoughts (directed) against me, and of all false words, and unfair\ndeeds. 3. [And we sacrifice to the later \nYasna, the heroic Haptanghaiti,\n(and which as it recurs becomes) the holy ritual chief.]",
+      "zh": ""
+    },
+    {
+      "chapter": 20,
+      "verse": 5,
+      "ref": "Vr 20.5",
+      "orig": "",
+      "en": "Y. 51.9; also perhaps Y. 53.8, 9.",
+      "zh": ""
+    },
+    {
+      "chapter": 20,
+      "verse": 6,
+      "ref": "Vr 20.6",
+      "orig": "",
+      "en": "Between; that is, described in the space between the Vohu-khshathra \n and the Vahishtôishti, i.e.in Y. 52. See hamisteę in \n Y. 52.4, and paitishtâteę in Visp. 20.2.",
+      "zh": ""
+    },
+    {
+      "chapter": 20,
+      "verse": 7,
+      "ref": "Vr 20.7",
+      "orig": "",
+      "en": "This would seem misplaced; perhaps Y. 42 is meant, \n which follows the Haptanghâiti.\n \n \n <A NAME=\"chap21\"",
+      "zh": ""
+    }
+  ]
+}

@@ -1,0 +1,1108 @@
+{
+  "slug": "yasht-05",
+  "siglum": "Yt 5",
+  "title_zh": "亞什特 第 5 首‧阿娜希塔讚（水神讚）",
+  "title_en": "Yasht 5",
+  "canon": "avestan",
+  "volume": "yasht",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/ka/yt5.htm",
+  "en_source": "《東方聖書》第 23 卷，1883；公有領域",
+  "en_translator": "達梅斯特（James Darmesteter）",
+  "en_url": "https://www.avesta.org/ka/yt5sbe.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Mithra": "密特拉",
+    "Anahita": "阿娜希塔",
+    "Tishtrya": "提什特里亞",
+    "Verethraghna": "韋雷特拉格納",
+    "Vayu": "瓦尤",
+    "Rashnu": "拉什努",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "khvarenah": "赫瓦雷納",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 5,
+      "verse": 0,
+      "ref": "Yt 5.0",
+      "orig": "(pa nãm i ýazdã, hôrmezd i hvadâe\ni awazûnî gurz hvarahe awazâyât, arduîsûr\nbãnô bê rasât,\n ezh hamâ gunâh ... pa patit hôm!) \nxshnaothra ahurahe mazdå, tarôidîti angrahe\nmainyêush, haithyâvarshtãm hyat vasnâ\nferashôtemem. staomî ashem, ashem vohû...(3).\nfravarâne mazdayasnô zarathushtrish vîdaêvô\nahura-tkaêshô,\n (Here recite the appropriate Gah dedication.) \nareduyå âpô anâhitayå ashaonyå\nvîspanãmca urvaranãm mazdadhâtanãm\nxshnaothra ýasnâica vahmâica xshnaothrâica\nfrasastayaêca,\nýathâ ahû vairyô zaotâ frâ-mê\nmrûtê,\nathâ ratush ashâtcît haca frâ ashava vîdhvå\nmraotû!",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 1,
+      "ref": "Yt 5.1",
+      "orig": "mraot ahurô mazdå spitamâi zarathushtrâi,\nýazaêsha-mê-hîm spitama zarathushtra\nýãm aredvîm sûrãm anâhitãm\nperethû-frâkãm baêshazyãm\nvîdaêvãm ahurô-tkaêshãm\nýesnyãm anguhe astvaite\nvahmyãm anguhe astvaite\nâdhû-frâdhanãm ashaonîm\nvãthwô-frâdhanãm ashaonîm\ngaêthô-frâdhanãm ashaonîm\nshaêtô-frâdhanãm ashaonîm\ndainghu-frâdhanãm ashaonîm.",
+      "en": "Ahura Mazda spake unto Spitama Zarathushtra, saying: 'Offer\nup a sacrifice, O Spitama Zarathushtra! unto this spring of mine,\nArdvi Sura Anahita, the wide-expanding and health-giving, who\nhates the Daevas and obeys the laws of Ahura, who is worthy of\nsacrifice in the material world, worthy of prayer in the material\nworld; the life-increasing and holy, the herd-increasing and holy,\nthe fold-increasing and holy, the wealth-increasing and holy,\nthe country-increasing and holy;",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 2,
+      "ref": "Yt 5.2",
+      "orig": "ýâ vîspanãm arshnãm xshudrå\nýaozhdadhâiti\nýâ vîspanãm hâirishinãm\nzãthâi garewãn ýaozhdadhâiti\nýâ vîspå hâirishîsh huzâmitô\ndadhâiti\nýâ vîspanãm hâirishinãm\ndâitîm rathwîm paêma ava-baraiti.",
+      "en": "'Who makes the seed of all males pure, who makes the womb\nof all females pure for bringing forth, who makes all females\nbring forth in safety, who puts milk into the breasts of all females\nin the right measure and the right quality;",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 3,
+      "ref": "Yt 5.3",
+      "orig": "masitãm dûrât frasrûtãm\nýâ asti avavaiti masô\nýatha vîspå imå âpô\nýå zemâ paiti frataciñti\nýâ amavaiti fratacaiti\nhukairyât haca barezanghat\naoi zrayô vouru-kashem.",
+      "en": "'The large river, known afar, that is as large as the whole\nof the waters that run along the earth; that runs powerfully from\nthe height Hukairya down to the sea Vouru-Kasha.",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 4,
+      "ref": "Yt 5.4",
+      "orig": "ýaozeñti vîspe karanô\nzrayâi vouru-kashaya\nâ-vîspô maidhyô ýaozaiti\nýat hîsh aoi fratacaiti\nýat hîsh aoi frazhgaraiti\naredvî sûra anâhita,\nýenghe hazangrem vairyanãm\nhazangrem apakhzhâranãm,\nkascitca aêshãm vairyanãm\nkascitca aêshãm apakhzhâranãm\ncathware-satem ayare-baranãm\nhvaspâi naire baremnâi.",
+      "en": "'All the shores of the sea Vouru-Kasha are boiling over, all\nthe middle of it is boiling over, when she runs down there, when\nshe streams down there, she, Ardvi Sura Anahita, who has a thousand\ncells and a thousand channels: the extent of each of those cells,\nof each of those channels is as much as a man can ride in forty\ndays, riding on a good horse.",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 5,
+      "ref": "Yt 5.5",
+      "orig": "ainghåsca mê aêvanghå âpô\napakhzhârô vî-jasâiti vîspâish\naoi karshvãn ýâish hapta, ainghåsca\nmê aêvanghå âpô\nhamatha ava-baraiti\nhãminemca zayanemca,\nhâ-mê âpô ýaozhdadhâiti hâ\narshnãm xshudrå hâ xshathrinãm garewãn\nhâ xshathrinãm paêma.",
+      "en": "'From this river of mine alone flow all the waters that spread\nall over the seven Karshvares; this river of mine alone goes on\nbringing waters, both in summer and in winter. This river of mine\npurifies the seed in males, the womb in females the milk in females'\nbreasts.",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 6,
+      "ref": "Yt 5.6",
+      "orig": "ýãm azem ýô ahurô mazdå\nhizvârena uzbaire fradathâi nmânaheca vîsaheca\nzañtêushca dainghêushca pâthrâica\nharethrâica aiwyâxshtrâica nipâtayaêca\nnishangharetayaêca.",
+      "en": "'I, Ahura Mazda, brought it down with mighty vigor, for the\nincrease of the house, of the borough of the town, of the country,\nto keep them, to maintain them, to look over them, to keep and\nmaintain them close.",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 7,
+      "ref": "Yt 5.7",
+      "orig": "âat frashûsat zarathushtra\naredvî sûra anâhita\nhaca dathushat mazdå,\nsrîra vâ anghen bâzava\naurusha aspô-staoyehîsh,\nfrâ srîra zusha sispata\naurvaiti bâzu-staoyehi\navat manangha mainimna,",
+      "en": "'Then Ardvi Sura Anahita, O Spitama Zarathushtra! proceeded\nforth from the Maker Mazda. Beautiful were her white arms, thick\nas a horse's shoulder or still thicker; beautiful was her ....,\nand thus came she, strong, with thick arms, thinking thus in her\nheart:",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 8,
+      "ref": "Yt 5.8",
+      "orig": "kô mãm stavât kô ýazâite\nhaomavaitibyô gaomavaitibyô zaothrâbyô\nýaozhdâtâbyô pairiangharshtâbyô,\nkahmâi azem upanghacayeni haca-manâica ana-manâica\nfrâranghâi haomananghâica.",
+      "en": "'\"Who will praise me? Who will offer me a sacrifice,\nwith libations cleanly prepared and well-strained, together with\nthe Haoma and meat? To whom shall I cleave, who cleaves unto me,\nand thinks with me, and bestows gifts upon me, and is of good\nwill unto me?\"",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 9,
+      "ref": "Yt 5.9",
+      "orig": "ahe raya hvarenanghaca\ntãm ýazâi surunvata ýasna\ntãm ýazâi huyashta ýasna aredvîm\nsûrãm anâhitãm ashaonîm zaothrâbyô,\nana buyå zavanô-sâsta ana buyå huyashtatara\naredvî sûre anâhite\nhaomayô gava baresmana, hizvô danghangha mãthraca,\nvacaca shyaothnaca zaothrâbyasca, arshuxdhaêibyasca\nvâkhzhibyô.\nýenghê hâtãm âat ýesnê\npaitî vanghô mazdå ahurô vaêthâ\nashât hacâ ýånghãmcâ tãscâ\ntåscâ ýazamaide!",
+      "en": "'For her brightness and glory, I will offer her a sacrifice\nworth being heard; I will offer up unto the holy Ardvi Sura Anahita\na good sacrifice with an offering of libations;- thus mayest thou\nadvise us when thou art appealed to! Mayest thou be most fully\nworshipped, O Ardvi Sura Anahita! with the Haoma and meat, with\nthe baresma, with the wisdom of the tongue, with the holy spells,\nwith the words with the deeds, with the libations, and with the\nrightly-spoken words.\n'Yenhe hatam: All those beings of whom Ahura Mazda....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 10,
+      "ref": "Yt 5.10",
+      "orig": "ýazaêsha-mê-hîm spitama zarathushtra\nýãm aredvîm anâhitãm ... dainghu-frâdhanãm\nashaonîm, [yt5.1 is repeated here and in the following Kardehs.]",
+      "en": "'Offer up a sacrifice, O Spitama Zarathushtra! unto this spring\nof mine, Ardvi Sura Anahita, the wide-expanding and health-giving,\nwho hates the Daevas and obeys the laws of Ahura, who is worthy\nof sacrifice in the material world, worthy of prayer in the material\nworld; the life-increasing and holy, the herd-increasing and holy,\nthe fold-increasing and holy, the wealth-increasing and holy,\nthe country-increasing and holy;",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 11,
+      "ref": "Yt 5.11",
+      "orig": "ýô paourva-vâshem vazâite\nãxnå drazhaite vâshahe\nahmya vâshe vazemna\nnarem paitishmaremna\navat manangha mainimna,\nkô mãm stavât ... haomananghâica. [yt5.8]\nahe raya ... tåsca ýazamaide! [yt5.9]",
+      "en": "'Who drives forwards on her chariot, holding the reins of\nthe chariot. She goes, driving, on this chariot, longing for men\nand thinking thus in her heart: \"Who will praise me? Who\nwill offer me a sacrifice, with libations cleanly prepared and\nwell-strained, together with the Haoma and meat? To whom shall\nI cleave, who cleaves unto me, and thinks with me, and bestows\ngifts unto me, and is of good will unto me?\"\n'For her brightness and glory, I will offer her a sacrifice, worth\nbeing heard....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 12,
+      "ref": "Yt 5.12",
+      "orig": "ýazaêsha-mê ... dainghu-frâdhanãm\nashaonîm,",
+      "en": "'Offer up a sacrifice, O Spitama Zarathushtra! unto this spring\nof mine, Ardvi Sura Anahita....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 13,
+      "ref": "Yt 5.13",
+      "orig": "ýenghe cathwârô vashtâra\nspaêta vîspa hama-gaonånghô\nhama-nâfaêni berezañta\ntaurvayañta vîspanãm tbishvatãm tbaêshå\ndaêvanãm mashyânãmca\nýâthwãm pairikanãmca\nsâthrãm kaoyãm karafnãmca.\nahe raya ... tåscâ ýazamaide!",
+      "en": "'Whom four horses carry, all white, of one and the same color,\nof the same blood, tall, crushing down the hates of all haters,\nof the Daevas and men, of the Yatus and Pairikas, of the oppressors,\nof the blind and of the deaf.\n'For her brightness and glory, I will offer her a sacrifice ....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 14,
+      "ref": "Yt 5.14",
+      "orig": "ýazaêsha-mê ... dainghu-frâdhanãm\nashaonîm,",
+      "en": "'Offer up a sacrifice, O Spitama Zarathushtra! unto this spring\nof mine, Ardvi Sura Anahita....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 15,
+      "ref": "Yt 5.15",
+      "orig": "amavaitîm xshôithnîm berezaitîm huraodhãm\nýenghe avavat asnâatca xshafnâatca\ntâtå âpô ava-bareñte\nýatha vîspå imå âpô\nýå zemâ paiti frataciñti\nýâ amavaiti fratacaiti.\nahe raya ... tåsca ýazamaide.",
+      "en": "'Strong and bright, tall and beautiful of form, who sends\ndown by day and by night a flow of motherly waters as large as\nthe whole of the waters that run along the earth, and who runs\npowerfully.\n'For her brightness and glory, I will offer her a sacrifice....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 16,
+      "ref": "Yt 5.16",
+      "orig": "ýazaêsha-mê ... dainghu-frâdhanãm\nashaonîm,",
+      "en": "'Offer up a sacrifice, O Spitama Zarathushtra! unto this spring\nof mine, Ardvi Sura Anahita....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 17,
+      "ref": "Yt 5.17",
+      "orig": "tãm ýazata\nýô dadhvå ahurô mazdå airyene vaêjahi\nvanghuyå dâityayå\nhaomayô gava baresmana hizvô danghangha mãthraca\nvacaca shyaothnaca zaothrâbyasca arshuxdhaêibyasca\nvâkhzhibyô.",
+      "en": "'To her did the Maker Ahura Mazda offer up a sacrifice to\nthe Airyana Vaejah, by the good river Daitya; with the Haoma and\nmeat, with the baresma, with the wisdom of the tongue, with the\nholy spells, with the words, with the deeds, with the libations,\nand with the rightly-spoken words.",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 18,
+      "ref": "Yt 5.18",
+      "orig": "âat hîm jaidhyat,\navat âyaptem dazdi-mê\nvanguhi sevishte aredvî sûre anâhite\nýatha azem hâcayene\nputhrem ýat pourushaspahe\nashavanem zarathushtrem\nanumatêe daênayâi\nanuxtêe daênayâi\nanu-varshtêe daênayâi.",
+      "en": "He begged of her a boon, saying: \"Grant me this, O good,\nmost beneficent Ardvi Sura Anahita! that I may bring the son of\nPourushaspa, the holy Zarathushtra, to think after my law, to\nspeak after my law, to do after my law!\"",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 19,
+      "ref": "Yt 5.19",
+      "orig": "dathat ahmâi tat avat âyaptem aredvî sûra\nanâhita hadha-zaothrô-barâi aredrâi ýazemnâi\njaidhyañtâi dâthrish âyaptem.\nahe raya ... tåscâ ýazamaide!",
+      "en": "'Ardvi Sura Anahita granted him that boon, as he was offering\nlibations, giving gifts, sacrificing, and begging that she would\ngrant him that boon.\n'For her brightness and glory, I will offer her a sacrifice....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 20,
+      "ref": "Yt 5.20",
+      "orig": "ýazaêsha-mê ... dainghu-frâdhanãm\nashaonîm,",
+      "en": "'Offer up a sacrifice, O Spitama Zarathushtra! unto this spring\nof mine, Ardvi Sura Anahita....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 21,
+      "ref": "Yt 5.21",
+      "orig": "tãm ýazata\nhaoshyanghô paradhâtô\nupa upa-bdi harayå satem aspanãm arshnãm hazangrem\ngavãm baêvare anumayanãm.",
+      "en": "'To her did Haoshyangha, the Paradhata, offer up a sacrifice\non the enclosure of the Hara, with a hundred male horses, a thousand\noxen, and ten thousand lambs.",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 22,
+      "ref": "Yt 5.22",
+      "orig": "âat hîm jaidhyat,\navat âyaptem dazdi-mê\nvanguhi sevishte aredvî sûre anâhite\nýatha azem upemem xshathrem\nbavâni vîspanãm dah'yunãm\ndaêvanãm mashyânãmca\nýâthwãm pairikanãmca\nsâthrãm kaoyãm karafnãmca,\nýatha azem nijanâni\ndva thrishva mâzanyanãm daêvanãm\nvarenyanãmca drvatãm.",
+      "en": "'He begged of her a boon, saying: \"Grant me this, O good,\nmost beneficent Ardvi Sura Anahita, that I may become the sovereign\nlord of all countries, of the Daevas and men, of the Yatus and\nPairikas, of the oppressors, the blind and the deaf; and that\nI may smite down two thirds of the Daevas of Mazana and of the\nfiends of Varena.\"",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 23,
+      "ref": "Yt 5.23",
+      "orig": "dathat ahmâi tat avat âyaptem aredvî sûra\nanâhita hadha-zaothrô-barâi aredrâi ýazemnâi\njaidhyañtâi dâthrish âyaptem.\nahe raya ... tåsca ýazamaide!",
+      "en": "'Ardvi Sura Anahita granted him that boon, as he was offering\nlibations, giving gifts, sacrificing, and entreating that she\nwould grant him that boon.\n'For her brightness and glory, I will offer her a sacrifice....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 24,
+      "ref": "Yt 5.24",
+      "orig": "ýazaêsha-mê ... dainghu-frâdhanãm\nashaonîm,",
+      "en": "'Offer up a sacrifice, O Spitama Zarathushtra! unto this spring\nof mine, Ardvi Sura Anahita....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 25,
+      "ref": "Yt 5.25",
+      "orig": "tãm ýazata\nýô ýimô xshaêtô hvãthwô\nhukairyât paiti barezanghat satem aspanãm arshnãm\nhazangrem gavãm baêvare anumayanãm.",
+      "en": "'To her did Yima Khshaeta, the good shepherd, offer up a sacrifice\nfrom the height Hukairya, with a hundred male horses, a thousand\noxen, ten thousand lambs.",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 26,
+      "ref": "Yt 5.26",
+      "orig": "âat hîm jaidhyat,\navat âyaptem dazdi-mê\nvanguhi sevishte aredvî sûre anâhite\nýatha azem upemem xshathrem\nbavâni vîspanãm dah'yunãm\ndaêvanãm mashyânãmca\nýâthwãm pairikanãmca\nsâthrãm kaoyãm karafnãmca,\nýatha azem uzbarâni haca daêvaêibyô\nuyê îshtishca saokâca\nuyê fshaonîshca vãthwâca\nuyê thrãfsca frasastishca.",
+      "en": "'He begged of her a boon, saying: \"Grant me this, O good,\nmost beneficent Ardvi Sura Anahita! that I may become the sovereign\nlord of all countries, of the Daevas and men, of the Yatus and\nPairikas, of the oppressors, the blind and the deaf; and that\nI may take from the Daevas both riches and welfare, both fatness\nand flocks, both weal and Glory.\"",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 27,
+      "ref": "Yt 5.27",
+      "orig": "dathat ahmâi tat avat âyaptem aredvî sûra\nanâhita hadha-zaothrô-barâi aredrâi ýazemnâi\njaidhyañtâi dâthrish âyaptem.\nahe raya ... tåscâ ýazamaide!",
+      "en": "'Ardvi Sura Anahita granted him that boon, as he was offering\nlibations, giving gifts, sacrificing, and entreating that she\nwould grant him that boon.\n'For her brightness and glory, I will offer her a sacrifice....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 28,
+      "ref": "Yt 5.28",
+      "orig": "ýazaêsha-mê ... dainghu-frâdhanãm\nashaonîm,",
+      "en": "'Offer up a sacrifice, O Spitama Zarathushtra! unto this spring\nof mine, Ardvi Sura Anahita....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 29,
+      "ref": "Yt 5.29",
+      "orig": "tãm ýazata\nazhish thrizafå dahâkô\nbawrôish paiti dainghaove satem aspanãm arshnãm\nhazangrem gavãm baêvare anumayanãm.",
+      "en": "'To her did Azi Dahaka, the three-mouthed, offer up a sacrifice\nin the land of Bawri, with a hundred male horses, a thousand oxen,\nand ten thousand lambs.",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 30,
+      "ref": "Yt 5.30",
+      "orig": "âat hîm jaidhyat,\navat âyaptem dazdi-mê vanguhi sevishte aredvî\nsûre anâhite ýatha azem amashyã kerenavâni\nvîspâish aoi karshvãn ýâish hapta.",
+      "en": "'He begged of her a boon, saying: \"Grant me this boon,\nO good, most beneficent Ardvi Sura Anahita! that I may make all\nthe seven Karshvares of the earth empty of men.\"",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 31,
+      "ref": "Yt 5.31",
+      "orig": "nôit ahmâi dathat tat avat âyaptem aredvî\nsûra anâhita.\nahe raya ... tåscâ ýazamaide!",
+      "en": "'Ardvi Sura Anahita did not grant him that boon, although\nhe was offering libations, giving gifts, sacrificing, and entreating\nher that she would grant him that boon.\n'For her brightness and glory, I will offer her a sacrifice....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 32,
+      "ref": "Yt 5.32",
+      "orig": "ýazaêsha-mê ... dainghu-frâdhanãm\nashaonîm,",
+      "en": "'Offer up a sacrifice, O Spitama Zarathushtra! unto Ardvi\nSura Anahita....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 33,
+      "ref": "Yt 5.33",
+      "orig": "tãm ýazata\nvîsô puthrô âthwyânôish\nvîsô sûrayå thraêtaonô\nupa varenem cathru-gaoshem satem aspanãm arshnãm\nhazangrem gavãm baêvare anumayanãm.",
+      "en": "'To her did Thraetaona, the heir of the valiant Athwya clan,\noffer up a sacrifice in the four-cornered Varena, with a hundred\nmale horses, a thousand oxen, ten thousand lambs.",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 34,
+      "ref": "Yt 5.34",
+      "orig": "âat hîm jaidhyat,\navat âyaptem dazdi-mê vanguhi sevishte aredvî\nsûre anâhite ýat bavâni aiwi-vanyå\nazhîm dahâkem thrizafanem thrikameredhem xshvash-ashîm\nhazangrâ-ýaoxshtîm ashaojanghem daêvîm\ndrujem akhem gaêthâvyô drvañtem ýãm\nashaojastemãm drujem fraca kereñtat angrô\nmainyush aoi ýãm astvaitîm gaêthãm\nmahrkâi ashahe gaêthanãm, [cf. y9.8; the good\nMss. abbreviate.]\nuta-hê vañta azâni\nsanghavâci arenavâci\nýôi hen kehrpa sraêshta zazâitêe\ngaêthyâi-tê ýôi abdôteme.",
+      "en": "'He begged of her a boon, saying: \"Grant me this, O good,\nmost beneficent Ardvi Sura Anahita! that I may overcome Azi Dahaka,\nthe three-mouthed, the three-headed, the six-eyed, who has a thousand\nsenses, that most powerful, fiendish Druj, that demon, baleful\nto the world, the strongest Druj that Angra Mainyu created against\nthe material world, to destroy the world of the good principle;\nand that I may deliver his two wives, Savanghavach and Erenavach,\nwho are the fairest of body amongst women, and the most wonderful\ncreatures in the world.\"",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 35,
+      "ref": "Yt 5.35",
+      "orig": "dathat ahmâi tat avat âyaptem aredvî sûra\nanâhita hadha-zaothrô-barâi aredrâi ýazemnâi\njaidhyañtâi dâthrish âyaptem.\nahe raya ... tåscâ ýazamaide!",
+      "en": "'Ardvi Sura Anahita granted him that boon, as he was offering\nlibations, giving gifts, sacrificing, and entreating that she\nwould grant him that boon.\n'For her brightness and glory, I will offer her a sacrifice....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 36,
+      "ref": "Yt 5.36",
+      "orig": "ýazaêsha-mê ... dainghu-frâdhanãm\nashaonîm,",
+      "en": "'Offer up a sacrifice, O Spitama Zarathushtra! unto Ardvi\nSura Anahita....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 37,
+      "ref": "Yt 5.37",
+      "orig": "tãm ýazata\nnaire-manå keresâspô\npasne varôish pishinanghô satem aspanãm arshnãm\nhazangrem gavãm baêvare anumayanãm.",
+      "en": "'To her did Keresaspa, the manly-hearted, offer up a sacrifice\nbehind the Vairi Pisanah, with a hundred male horses, a thousand\noxen, ten thousand lambs.",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 38,
+      "ref": "Yt 5.38",
+      "orig": "âat hîm jaidhyat,\navat âyaptem dazdi-mê\nvanguhi sevishte aredvî sûre anâhite\nýat bavâni aiwi-vanyå\ngañdarewem ýim zairi-pâshnem\nupa ýaozeñta karana\nzraya vouru-kashaya\nâtacâni sûrem nmânem\ndrvatô ýat pathanayå\nskarenayå dûraêpârayå.",
+      "en": "'He begged of her a boon, saying: \"Grant me this, O good,\nmost beneficent Ardvi Sura Anahita! that I may overcome the golden-heeled\nGandarewa, though all the shores of the sea Vouru-Kasha are boiling\nover; and that I may run up to the stronghold of the fiend on\nthe wide, round earth, whose ends lie afar.\"",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 39,
+      "ref": "Yt 5.39",
+      "orig": "dathat ahmâi tat avat âyaptem aredvî sûra\nanâhita hadha-zaothrô-barâi aredrâi ýazemnâi\njaidhyañtâi dâthrish âyaptem.\nahe raya ... tåscâ ýazamaide!",
+      "en": "'Ardvi Sura Anahita granted him that boon, as he was offering\nlibations, giving gifts, sacrificing, and entreating that she\nwould grant him that boon.\n'For her brightness and glory, I will offer her a sacrifice....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 40,
+      "ref": "Yt 5.40",
+      "orig": "ýazaêsha-mê ... dainghu-frâdhanãm\nashaonîm,",
+      "en": "'Offer up a sacrifice, O Spitama Zarathushtra! unto this spring\nof mine, Ardvi Sara Anahita....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 41,
+      "ref": "Yt 5.41",
+      "orig": "tãm ýazata\nmairyô tûiryô frangrase\nhañkaine paiti ainghå zemô satem aspanãm\narshnãm hazangrem gavãm baêvare anumayanãm.",
+      "en": "'To her did the Turanian murderer, Frangrasyan, offer up a\nsacrifice in his cave under the earth, with a hundred male horses,\na thousand oxen, ten thousand lambs.",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 42,
+      "ref": "Yt 5.42",
+      "orig": "âat hîm jaidhyat,\navat âyaptem dazdi-mê\nvanguhi sevishte aredvî sûre anâhite\nýatha azem avat hvarenô\napayemi ýim vazaite\nmaidhim zrayanghô vouru-kashahe\nýat asti airyanãm dah'yunãm\nzâtanãm azâtanãmca\nýatca ashaonô zarathushtrahe.",
+      "en": "'He begged of her a boon, saying: \"Grant me this, O good,\nmost beneficent Ardvi Sura Anahita! that I may seize hold of that\nGlory, that is waving in the middle of the sea Vouru-Kasha and\nthat belongs to the Aryan people, to those born and to those not\nyet born, and to the holy Zarathushtra.\"",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 43,
+      "ref": "Yt 5.43",
+      "orig": "nôit ahmâi dathat tat avat âyaptem aredvî\nsûra anâhita.\nahe raya ... tåscâ ýazamaide!",
+      "en": "'Ardvi Sura Anahita did not grant him that boon.\n'For her brightness and glory, I will offer her a sacrifice....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 44,
+      "ref": "Yt 5.44",
+      "orig": "ýazaêsha-mê ... dainghu-frâdhanãm\nashaonîm,",
+      "en": "'Offer up a sacrifice, O Spitama Zarathushtra! unto this spring\nof mine, Ardvi Sura Anahita....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 45,
+      "ref": "Yt 5.45",
+      "orig": "tãm ýazata\naurvô ash-varecô kava usa\nerezifyât paiti garôit\nsatem aspanãm arshnãm hazangrem gavãm baêvare\nanumayanãm.",
+      "en": "'To her did the great, most wise Kavi Usa offer up a sacrifice\nfrom Mount Erezifya, with a hundred male horses, a thousand oxen,\nten thousand lambs.",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 46,
+      "ref": "Yt 5.46",
+      "orig": "âat hîm jaidhyat,\navat âyaptem dazdi-mê\nvanguhi sevishte aredvî sûre anâhite\nýatha azem upemem xshathrem\nbavâni vîspanãm dah'yunãm\ndaêvanãm mashyânãmca ýâthwãm\npairikanãmca\nsâthrãm kaoyãm karafnãmca.",
+      "en": "'He begged of her a boon, saying: \"Grant me, this, O\ngood, most beneficent Ardvi Sura Anahita! that I may become the\nsovereign lord of all countries, of the Daevas and men, of the\nYatus and Pairikas, of the oppressors, the blind and the deaf.\"",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 47,
+      "ref": "Yt 5.47",
+      "orig": "dathat ahmâi tat avat âyaptem aredvî sûra\nanâhita hadha-zaothrô-barâi aredrâi ýazemnâi\njaidhyañtâi dâthrish âyaptem.\nahe raya ... tåscâ ýazamaide!",
+      "en": "'Ardvi Sura Anahita granted him that boon, as he was offering\nlibations, giving gifts, sacrificing, and entreating that she\nwould grant him that boon.\n'For her brightness and glory, I will offer her a sacrifice....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 48,
+      "ref": "Yt 5.48",
+      "orig": "ýazaêsha-mê ... dainghu-frâdhanãm\nashaonîm,",
+      "en": "'Offer up a sacrifice, O Spitama Zarathushtra! unto this spring\nof mine, Ardvi Sura Anahita....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 49,
+      "ref": "Yt 5.49",
+      "orig": "tãm ýazata\narsha airyanãm dah'yunãm\nxshathrâi haosrava\npasne varôish caêcastahe\njafrahe urvâpahe satem aspanãm arshnãm hazangrem\ngavãm baêvare anumayanãm.",
+      "en": "'To her did the gallant Husravah, he who united the Aryan\nnations into one kingdom, offer up a sacrifice behind the Chaechasta\nlake, the deep lake, of salt waters, with a hundred male horses,\na thousand oxen, ten thousand lambs.",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 50,
+      "ref": "Yt 5.50",
+      "orig": "âat hîm jaidhyat,\navat âyaptem dazdi-mê\nvanguhi sevishte aredvî sûre anâhite\nýatha azem upemem xshathrem\nbavâni vîspanãm dah'yunãm\ndaêvanãm mashyânãmca ... karafnãmca,\nýat vîspanãm ýuxtanãm\nazem fratemem thañjayeni\nana hvaretãm ýãm darekhãm\nnava-frâthweresât razurem\nýô mãm mairyô nurem manô\naspaêshu paiti paretata.",
+      "en": "'He begged of her a boon, saying: \"Grant me this, O good,\nmost beneficent Ardvi Sura Anahita! that I may become the sovereign\nlord of all countries, of Daevas and men, of the Yatus and Pairikas,\nof the oppressors, the blind and the deaf; and that I may have\nthe lead in front of all the teams and that he may not pass through\nthe forest , he, the murderer, who now is fiercely striving against\nme on horseback.\"",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 51,
+      "ref": "Yt 5.51",
+      "orig": "dathat ahmâi tat avat âyaptem aredvî sûra\nanâhita hadha-zaothrô-barâi aredrâi ýazemnâi\njaidhyañtâi dâthrish âyaptem.\nahe raya ... tåscâ ýazamaide!",
+      "en": "'Ardvi Sura Anahita granted him that boon, as he was offering\nlibations, giving gifts, sacrificing, and entreating that she\nwould grant him that boon.\n'For her brightness and glory, I will offer her a sacrifice....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 52,
+      "ref": "Yt 5.52",
+      "orig": "ýazaêsha-mê ... dainghu-frâdhanãm\nashaonîm,",
+      "en": "'Offer up a sacrifice, O Spitama Zarathushtra! unto this spring\nof mine, Ardvi Sura Anahita....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 53,
+      "ref": "Yt 5.53",
+      "orig": "tãm ýazata\ntaxmô tusô rathaêshtârô\nbarshaêshu paiti aspanãm\nzâvare jaidhyañtô hitaêibyô\ndrvatâtem tanubyô\npouru-spaxshtîm tbishyañtãm paiti-jaitîm\ndushmainyunãm\nhathrâ-nivâitîm hamerethanãm aurvathanãm\ntbishyañtãm. [y57.26]",
+      "en": "'To her did the valiant warrior Tusa offer \nworship on the\nback of his horse, begging swiftness for his teams, health for\nhis own body, and that he might watch with full success those\nwho hated him, smite down his foes, and destroy at one stroke\nhis adversaries, his enemies, and those who hated him.",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 54,
+      "ref": "Yt 5.54",
+      "orig": "âat hîm jaidhyat,\navat âyaptem dazdi-mê\nvanguhi sevishte aredvî sûre anâhite\nýat bavâni aiwi-vanyå\naurva hunavô vaêsakaya\nupa dvarem xshathrô-sukem\napanôtemem kanghaya\nberezañtaya ashavanaya,\nýatha azem nijanâni\ntûiryanãm dah'yunãm\npañcasakhnâi satakhnâishca\nsatakhnâi hazangrakhnâishca\nhazangrakhnâi baêvarekhnâishca\nbaêvarekhnâi ahãxshtakhnâishca.",
+      "en": "'He begged of her a boon, saying: \"Grant me this, O good,\nmost beneficent Ardvi Sura Anahita! that I may overcome the gallant\nsons of Vaesaka, by the castle Khshathro-saoka, that stands high\nup on the lofty, holy Kangha; that I may smite of the Turanian\npeople their fifties and their hundreds, their hundreds and their\nthousands, their thousands and their tens of thousands, their\ntens of thousands and their myriads of myriads.\"",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 55,
+      "ref": "Yt 5.55",
+      "orig": "dathat ahmâi tat avat âyaptem aredvî sûra\nanâhita hadha-zaothrô-barâi aredrâi ýazemnâi\njaidhyañtâi dâthrish âyaptem.\nahe raya ... tåsca ýazamaide!",
+      "en": "'Ardvi Sura Anahita granted him that boon, as he was offering\nlibations, giving gifts, sacrificing, and entreating that she\nwould grant him that boon.\n'For her brightness and glory, I will offer her a sacrifice....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 56,
+      "ref": "Yt 5.56",
+      "orig": "ýazaêsha-mê ... dainghu-frâdhanãm\nashaonîm,",
+      "en": "'Offer up a sacrifice, O Spitama Zarathushtra! unto this spring\nof mine, Ardvi Sura Anahita....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 57,
+      "ref": "Yt 5.57",
+      "orig": "tãm ýazeñta\naurva hunavô vaêsakaya\nupa dvarem xshathrô-sukem\napanôtemem kanghaya\nberezañtaya ashavanaya satem aspanãm arshnãm\nhazangrem gavãm baêvare anumayanãm.",
+      "en": "'To her did the gallant sons of Vaesaka offer up a sacrifice\nin the castle Khshathro-saoka, that stands high up on the lofty,\nholy Kangha, with a hundred male horses, a thousand oxen, ten\nthousand lambs.",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 58,
+      "ref": "Yt 5.58",
+      "orig": "âat hîm jaidhyen,\navat âyaptem dazdi-nô\nvanguhi sevishte aredvî sûre anâhite\nýat bavâma aiwi-vanyå\ntaxmem tusem rathaêshtârem\nýatha vaêm nijanâma\nairyanãm dah'yunãm\npañcasakhnâi satakhnâishca\nsatakhnâi hazangrakhnâishca\nhazangrakhnâi baêvarekhnâishca\nbaêvarekhnâi ahãxshtakhnâishca.",
+      "en": "'They begged of her a boon, saying: \"Grant us this, O\ngood, most beneficent Ardvi Sura Anahita! that we may overcome\nthe valiant warrior Tusa, and that we may smite of the Aryan people\ntheir fifties and their hundreds, their hundreds and their thousands,\ntheir thousands and their tens of thousands, their tens of thousands\nand their myriads of myriads.\"",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 59,
+      "ref": "Yt 5.59",
+      "orig": "nôit aêibyascit dathat tat avat âyaptem\naredvî sûra anâhita.\nahe raya ... tåscâ ýazamaide!",
+      "en": "'Ardvi Sura Anahita did not grant them that boon.\n'For her brightness and glory, I will offer her a sacrifice....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 60,
+      "ref": "Yt 5.60",
+      "orig": "ýazaêsha-mê ... dainghu-frâdhanãm\nashaonîm,",
+      "en": "'Offer up a sacrifice, O Spitama Zarathushtra! unto this spring\nof mine, Ardvi Sura Anahita....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 61,
+      "ref": "Yt 5.61",
+      "orig": "tãm ýazata\npâurvô ýô vifrô navâzô\nýat dim usca uzdvãnayat\nverethrajå taxmô thraêtaonô\nmerekhahe kehrpa kahrkâsahe.",
+      "en": "'The old Vafra Navaza worshipped her when the strong fiend-smiter,\nThraetaona, flung him up in the air in the shape of a bird, of\na vulture.",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 62,
+      "ref": "Yt 5.62",
+      "orig": "hô avatha vazata\nthri-ayarem thri-xshaparem\npaitish nmânem ýim hvâpaithîm\nnôit aora avôirisyât,\nthraoshta xshafnô thrityayå\nfrâkhmat ushånghem sûrayå vivaitîm\nupa ushånghem upa-zbayat\naredvîm sûrãm anâhitãm,",
+      "en": "'He went on flying, for three days and three nights, towards\nhis own house; but he could not, he could not turn down. At the\nend of the third night, when the beneficent dawn came dawning\nup, then he prayed unto Ardvi Sura Anahita, saying:",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 63,
+      "ref": "Yt 5.63",
+      "orig": "aredvî sûre anâhite\nmoshu mê java avanghe\nnûrem mê bara upastãm, hazangrem tê azem\nzaothranãm haomavaitinãm gaomavaitinãm ýaozhdâtanãm\npairiangharshtanãm barâni aoi âpem ýãm\nranghãm\nýezi jum frapayemi\naoi zãm ahuradhâtãm\naoi nmânem ýim hvaêpaithîm.",
+      "en": "'\"Ardvi Sura Anahita! do thou quickly hasten helpfully\nand bring me assistance at once. I will offer thee a thousand\nlibations, cleanly prepared and well strained, along with Haomas\nand meat, by the brink of the river Rangha, if I reach alive the\nearth made by Ahura and my own house.\"",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 64,
+      "ref": "Yt 5.64",
+      "orig": "upa-tacat aredvî sûra anâhita\nkainînô kehrpa srîrayå\nashamayå huraodhayå\nuskât ýâstayå erezvaithyô\nraêvat cithrem âzâtayå\nnizeñga aothra paitishmuxta\nzaranyôurvîxshna bâmya,",
+      "en": "'Ardvi Sura Anahita hastened unto him in the shape of a maid,\nfair of body, most strong, tall-formed, high-girdled, pure, nobly\nborn of a glorious race, wearing shoes up to the ankle wearing\na golden...., and radiant.",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 65,
+      "ref": "Yt 5.65",
+      "orig": "hâ-hê bâzava geurvayat\nmoshu tat âs nôit darekhem\nýat frâyatayat thwaxshemnô\naoi zãm ahuradhâtãm\naoi nmânem ýim hvaêpaithîm\ndrûm avañtem airishtem\nhamatha ýatha paracit",
+      "en": "'She seized him by the arm: quickly was it done, nor was it\nlong till, speeding, he arrived at the earth made by Mazda and\nat his own house, safe, unhurt, unwounded, just as he was before.\n[66.\n'Ardvi Sura Anahita granted him that boon, as he was offering\nup libations, giving gifts, sacrificing, entreating that she would\ngrant him that boon.]\n'For her brightness and glory, I will offer her a sacrifice....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 66,
+      "ref": "Yt 5.66",
+      "orig": "dathat ahmâi tat avat âyaptem aredvî sûra\nanâhita hadha-zaothrô-barâi aredrâi ýazemnâi\njaidhyañtâi dâthrish âyaptem.\nahe raya ... tåscâ ýazamaide!",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 67,
+      "ref": "Yt 5.67",
+      "orig": "ýazaêsha-mê ... dainghu-frâdhanãm\nashaonîm,",
+      "en": "'Offer up a sacrifice, O Spitama Zarathushtra! unto this spring\nof mine, Ardvi Sura Anahita....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 68,
+      "ref": "Yt 5.68",
+      "orig": "tãm ýazata jâmâspô\nýat spâdhem pairi-avaênat\ndûrât ayañtem rasmaoyô\ndrvatãm daêvayasnanãm satem aspanãm\narshnãm hazangrem gavãm baêvare anumayanãm.",
+      "en": "'To her did Jamaspa offer up a sacrifice, with a hundred horses,\na thousand oxen, ten thousand lambs, when he saw the army of the\nwicked, of the worshippers of the Daevas, coming from afar in\nbattle array.",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 69,
+      "ref": "Yt 5.69",
+      "orig": "âat hîm jaidhyat,\navat âyaptem dazdi-mê\nvanguhi sevishte aredvî sûre anâhite\nýatha azem avata verethra hacâne\nýatha vîspa anyê aire.",
+      "en": "'He asked of her a boon, saying: \"Grant me this, O good,\nmost beneficent Ardvi Sura Anahita! that I may be as constantly\nvictorious as any one of all the Aryans.\"",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 70,
+      "ref": "Yt 5.70",
+      "orig": "dathat ahmâi tat avat âyaptem aredvî sûra\nanâhita hadha-zaothrô-barâi aredrâi ýazemnâi\njaidhyañtâi dâthrish âyaptem.\nahe raya ... tåscâ ýazamaide!",
+      "en": "'Ardvi Sura Anahita granted him that boon, as he was offering\nup libations, giving gifts, sacrificing, and entreating that she\nwould grant him that boon.\n'For her brightness and glory, I will offer her a sacrifice....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 71,
+      "ref": "Yt 5.71",
+      "orig": "ýazaêsha-mê ... dainghu-frâdhanãm\nashaonîm,",
+      "en": "'Offer up a sacrifice, O Spitama Zarathushtra! unto this spring\nof mine, Ardvi Sura Anahita....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 72,
+      "ref": "Yt 5.72",
+      "orig": "tãm ýazeñta ashavazdå puthrô\npourudhâxshtôish ashavazdasca thritasca sâyuzhdrôish\nputhra upa berezañtem ahurem xshathrîm xshaêtem\napãm napâtem aurvat-aspem satem aspanãm arshnãm\nhazangrem gavãm baêvare anumayanãm.",
+      "en": "'To her did Ashavazdah, the son of Pouru-dhakhshti, and Ashavazdah\nand Thrita, the sons of Sayuzhdri, offer up a sacrifice, with\na hundred horses, a thousand oxen, ten thousand lambs, by Apam\nNapat, the tall lord, the lord of the females, the bright and\nswift-horsed.",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 73,
+      "ref": "Yt 5.73",
+      "orig": "âat hîm jaidhyen,\navat âyaptem dazdi-nô\nvanguhi sevishte aredvî sûre anâhite\nýat bavâma aiwi-vanyå\ndânavô sûra vyâxana karemca asabanem varemca\nasabanem\ntañcishtemca dûraêkaêtem\nahmi gaêthe peshanâhu.",
+      "en": "'They begged of her a boon, saying: \"Grant us this, O\ngood, most beneficent Ardvi Sura Anahita! that we may overcome\nthe assemblers of the Turanian Danus, Kara Asabana, and Vara Asabana,\nand the most mighty Duraekaeta, in the battles of this world.",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 74,
+      "ref": "Yt 5.74",
+      "orig": "dathat aêibyascit tat avat âyaptem aredvî\nsûra anâhita hadha-zaothrô-barâi aredrâi\nýazemnâi\njaidhyañtâi dâthrish âyaptem.\nahe raya ... tåscâ ýazamaide!",
+      "en": "'Ardvi Sura Anahita granted them that boon, as they were offering\nup libations, giving gifts, sacrificing, and entreating that she\nwould grant them that boon.\n'For her brightness and glory, l will offer her a sacrifice....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 75,
+      "ref": "Yt 5.75",
+      "orig": "ýazaêsha-mê ... dainghu-frâdhanãm\nashaonîm,",
+      "en": "'Offer up a sacrifice, O Spitama Zarathushtra! unto this spring\nof mine, Ardvi Sura Anahita....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 76,
+      "ref": "Yt 5.76",
+      "orig": "tãm ýazata\nvistaurush ýô naotairyãnô\nupa âpem ýãm vîtanguhaitîm\nerezhuxdhât paiti vacanghat\nuiti vacêbish aojanô,",
+      "en": "'Vistauru, the son of Naotara, worshipped her by the brink\nof the river Vitanghuhaiti, with well-spoken words, speaking thus:",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 77,
+      "ref": "Yt 5.77",
+      "orig": "tâ bâ asha tâ arshuxdha\naredvî sûre anâhite\nýat mê avavat daêvayasnanãm nijatem\nýatha sârem varsanãm barâmi,\nâat mê tûm aredvî sûre anâhite\nhushem peshum raêcaya\ntarô vanguhîm vîtanguhaitîm.",
+      "en": "'\"This is true, this is truly spoken, that I have smitten\nas many of the worshippers of the Daevas as the hairs I bear on\nmy head. Do thou then, O Ardvi Sura Anahita! leave me a dry passage,\nto pass over the good Vitanghuhaiti.\"",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 78,
+      "ref": "Yt 5.78",
+      "orig": "upa-tacat aredvî sûra anâhita\nkaininô kehrpa srîrayå\nashamayå huraodhayå\nuskât ýâstayå erezvaithyô\nraêvat cithrem âzâtayå\nzaranya aothra paitishmuxta\nýâ vîspô-pîsa bâmya\naremaêshtå anyå âpô kerenaot\nfrasha anyå fratacat\nhushem peshum raêcayat\ntarô vanguhîm vîtanguhaitîm.",
+      "en": "'Ardvi Sura Anahita hastened unto him in the shape of a maid,\nfair of body, most strong, tall-formed, high-girded, pure, nobly\nborn of a glorious race, wearing shoes up to the ankle, with all\nsorts of ornaments and radiant. A part of the waters she made\nstand still, a part of the waters she made flow forward, and she\nleft him a dry passage to pass over the good Vitanghuhaiti.\n[79.\n'Ardvi Sura Anahita granted him that boon, as he was offering\nup libations, giving gifts, sacrificing, and entreating that she\nwould grant him that boon.]\n'For her brightness and glory, I will offer her a sacrifice....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 79,
+      "ref": "Yt 5.79",
+      "orig": "dathat ahmâi tat avat âyaptem aredvî sûra\nanâhita hadha-zaothrô-barâi aredrâi ýazemnâi\njaidhyañtâi dâthrish âyaptem.\nahe raya ... tåscâ ýazamaide!",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 80,
+      "ref": "Yt 5.80",
+      "orig": "ýazaêsha-mê ... dainghu-frâdhanãm\nashaonîm,",
+      "en": "'Offer up a sacrifice, O Spitama Zarathushtra! unto this spring\nof mine, Ardvi Sura Anahita....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 81,
+      "ref": "Yt 5.81",
+      "orig": "tãm ýazata\nyôishtô ýô fryananãm\npaiti pêdvaêpê ranghayå satem aspanãm\narshnãm hazangrem gavãm baêvare anumayanãm.",
+      "en": "'To her did Yoishta, one of the Fryanas, offer up a sacrifice\nwith a hundred horses, a thousand oxen, ten thousand lambs on\nthe Pedvaepa of the Rangha.",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 82,
+      "ref": "Yt 5.82",
+      "orig": "âat hîm jaidhyat,\navat âyaptem dazdi-mê\nvanguhi sevishte aredvî sûre anâhite\nýat bavâni aiwi-vanyå\naxtîm duzhdem temanghuñtem uta-hê frashna paiti-mravâne\nnavaca navaitîmca xruzhdranãm tbaêshô-parshtanãm\nýat mãm peresat axtyô duzhdå temanguhå.",
+      "en": "'He begged of her a boon, saying: \"Grant me this, O good,\nmost beneficent Ardvi Sura Anahita! that I may overcome the evil-doing\nAkhtya, the offspring of darkness, and that I may answer the ninety-nine\nhard riddles that he asks me maliciously, the evil-doing Akhtya,\nthe offspring of darkness.\"",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 83,
+      "ref": "Yt 5.83",
+      "orig": "dathat ahmâi tat avat âyaptem aredvî sûra\nanâhita hadha-zaothrô-barâi aredrâi ýazemnâi\njaidhyañtâi dâthrish âyaptem.\nahe raya ... tåscâ ýazamaide!",
+      "en": "'Ardvi Sura Anahita granted him that boon, as he was offering\nup libations, giving gifts, sacrificing, and entreating that she\nwould grant him that boon.\n'For her brightness and glory, I will offer her a sacrifice....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 84,
+      "ref": "Yt 5.84",
+      "orig": "ýazaêsha-mê ... dainghu-frâdhanãm\nashaonîm,",
+      "en": "'Offer up a sacrifice, O Spitama Zarathushtra! unto this spring\nof mine, Ardvi Sura Anahita....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 85,
+      "ref": "Yt 5.85",
+      "orig": "ýahmya ahurô mazdå\nhvapô nivaêdhayat\nâidhi paiti ava-jasa\naredvî sûre anâhite\nhaca avatbyô sterebyô\naoi zãm ahuradhâtãm,\nthwãm ýazåñte aurvånghô\nahurånghô dainghu-patayô\nputhrånghô dainghu-paitinãm.",
+      "en": "'Whom Ahura Mazda the merciful ordered thus, saying: \"Come,\nO Ardvi Sura Anahita, come from those stars down to the earth\nmade by Ahura, that the great lords may worship thee, the masters\nof the countries, and their sons.",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 86,
+      "ref": "Yt 5.86",
+      "orig": "thwãm naracit ýôi taxma\njaidhyåñte âsu-aspîm\nhvarenanghasca uparatâtô,\nthwãm âthravanô maremnô\nâthravanô thrâyaonô\nmastîm jaidhyåñte spânemca\nverethrakhnemca ahuradhâtem\nvanaiñtîmca uparatâtem.",
+      "en": "'\"The men of strength will beg of thee swift horses and\nsupremacy of Glory.\n'\"The Athravans who read and the pupils of the Athravans\nwill beg of thee knowledge and prosperity, the Victory made by\nAhura, and the crushing Ascendant.",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 87,
+      "ref": "Yt 5.87",
+      "orig": "thwãm kaininô vadhre ýaona\nxshathra hvâpå jaidhyåñte\ntaxmemca nmânô-paitîm,\nthwãm carâitish zizanâitish\njaidhyåñte huzâmîm,\ntûm tâ aêibyô xshayamna\nnisirinavâhi aredvî sûre anâhite.",
+      "en": "'\"The maids of barren womb, longing for a lord, will\nbeg of thee a strong husband;\n'\"Women, on the point of bringing forth, will beg of thee\na good delivery.\n'\"All this wilt thou grant unto them, as it lies in thy power,\nO Ardvi Sura Anahita!\"",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 88,
+      "ref": "Yt 5.88",
+      "orig": "âat frashusat zarathushtra\naredvî sûra anâhita\nhaca avatbyô sterebyô\naoi zãm ahuradhâtãm,\nâat aoxta aredvî sûra anâhita,",
+      "en": "'Then Ardvi Sura Anahita came forth, O Zarathushtra! down\nfrom those stars to the earth made by Mazda; and Ardvi Sura Anahita\nspake thus:",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 89,
+      "ref": "Yt 5.89",
+      "orig": "erezvô ashâum spitama\nthwãm dathat ahurô mazdå\nratush astvaithyô gaêthayå\nmãm dathat ahurô mazdå\nnipâtâra vîspayå ashaonô stôish,\nmana raya hvarenangha pasvasca staorâca upairi zãm\nvîcareñta mashyâca bizeñgra, azem bôit\ntûm tâ nipayemi vîspa vohû mazdadhâta\nashacithra mãnayen ahe ýatha pasûm pasu-vastrem.",
+      "en": "'\"O pure, holy Zarathushtra! Ahura Mazda has established\nthee as the master of the material world: Ahura Mazda has established\nme to keep the whole of the holy creation.\n'\"Through my brightness and glory flocks and herds and two-legged\nmen go on, upon the earth: I, forsooth, keep all good things,\nmade by Mazda, the offspring of the holy principle, just as a\nshepherd keeps his flock.\"",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 90,
+      "ref": "Yt 5.90",
+      "orig": "paiti dim peresat zarathushtrô aredvîm sûrãm\nanâhitãm,\naredvî sûre anâhite\nkana thwãm ýasna ýazâne\nkana ýasna frâyazâne ýase-tava mazdå\nkerenaot tacare añtare arethem upairi hvarexshaêtem\nýase-thwâ nôit aiwi-druzhåñte\nazhishca arethnâishca vawzhakâishca\nvarenvâishca varenava-vîshâishca.",
+      "en": "'Zarathushtra asked Ardvi Sura Anahita: \"O Ardvi Sura\nAnahita! With what manner of sacrifice shall I worship thee? With\nwhat manner of sacrifice shall I worship and forward thee? So\nthat Mazda may make thee run down (to the earth), that he may\nnot make thee run up into the heavens, above the sun; and that\nthe Serpent may not injure thee with...., with...., with....,\nand.... poisons.\"",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 91,
+      "ref": "Yt 5.91",
+      "orig": "âat aoxta aredvî sûra anâhita,\nerezvô ashâum spitama\nana mãm ýasna ýazaêsha\nana ýasna frâyazaêsha haca hû vaxshât\nâ-hû frâshmô- dâtôit, â-tû-mê\naêtayå zaothrayå frangharôish âthravanô\nparshtô-vacanghô paiti-parshtô-sravanghô\nmãzdrô hadha-hunarô tanu-mãthrô.",
+      "en": "'Ardvi Sura Anahita answered: \"O pure, holy Spitama!\nthis is the sacrifice wherewith thou shalt worship me, this is\nthe sacrifice wherewith thou shalt worship and forward me, from\nthe time when the sun is rising to the time when the sun is setting.\n'\"Of this libation of mine thou shalt drink, thou who art\nan Athravan, who hast asked and learnt the revealed law, who art\nwise, clever, and the Word incarnate.",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 92,
+      "ref": "Yt 5.92",
+      "orig": "mâ-mê aêtayå zaothrayå franghareñtu\nharetô mataftô madrushtô masacish makasvîsh\nmastrî madahmô asrâvayat- gâthô\nmapaêsô ýô vîteretô-tanush.",
+      "en": "'\"Of this libation of mine let no foe drink, no man fever-sick,\nno liar, no coward, no jealous one, no woman, no faithful one\nwho does not sing the Gathas, no leper to be confined.",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 93,
+      "ref": "Yt 5.93",
+      "orig": "nôit avå zaothrå paiti-vîse ýå\nmâvôya franguhareñti añdåsca karenåsca\ndrvåsca mûråsca aråsca ranghåsca\nava daxshta daxshtavañta ýâ nôit pouru-jira\nfradaxshta vîspanãm anu mãthrem, mâ-mê\naêtayåscit zaothrayå franghareñtu frakavô\nmâ apakavô mâ drvå vîmîtô-dañtânô.",
+      "en": "'\"I do not accept those libations that are drunk in my\nhonor by the blind, by the deaf, by the wicked, by the destroyers,\nby the niggards, by the...., nor any of those stamped with those\ncharacters which have no strength for the holy Word.\n'\"Let no one drink of these my libations who is hump-backed\nor bulged forward; no fiend with decayed teeth.\"",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 94,
+      "ref": "Yt 5.94",
+      "orig": "paiti dim peresat zarathushtrô aredvîm sûrem\nanâhitãm, aredvî sûre anâhite kem\nidha tê zaothrå bavaiñti ýase-tava frabareñte\ndrvañtô daêvayasnånghô pasca hû\nfrâshmô-dâitîm.",
+      "en": "'Then Zarathushtra asked Ardvi Sura Anahita: \"O Ardvi\nSura Anahita! What becomes of those libations which the wicked\nworshippers of the Daevas bring unto thee after the sun has set?\"",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 95,
+      "ref": "Yt 5.95",
+      "orig": "âat aoxta aredvî sûra anâhita, erezvô\nashâum spitama zarathushtra nivayaka nipashnaka apa-skaraka\napa-xraosaka imå paiti-vîseñte ýå\nmâvôya pasca vazeñti xshvash-satâish\nhazangremca ýâ nôit haiti vîseñti\ndaêvanãm haiti ýasna.",
+      "en": "'Ardvi Sura Anahita answered: \"O pure, holy Spitama Zarathushtra!\nhowling, clapping, hopping, and shouting, six hundred and a thousand\nDaevas, who ought not to receive that sacrifice, receive those\nlibations that men bring unto me after [the sun has set].\"",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 96,
+      "ref": "Yt 5.96",
+      "orig": "ýazâi hukairîm barezô\nvîspô-vahmem zaranaênem\nýahmat mê haca frazgadhaite\naredvî sûra anâhita\nhazangrâi bareshna vîranãm\nmasô xshayete hvarenanghô\nýatha vîspå imå âpô\nýå zemâ paiti frataciñti\nýâ amavaiti fratacaiti.\nahe raya ... tåscâ ýazamaide!",
+      "en": "'I will worship the height Hukairya, of the deep precipices,\nmade of gold, wherefrom this mine Ardvi Sura Anahita leaps, from\na hundred times the height of a man, while she is possessed of\nas much Glory as the whole of the waters that run along the earth,\nand she runs powerfully.\n'For her brightness and glory, I will offer her a sacrifice....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 97,
+      "ref": "Yt 5.97",
+      "orig": "ýazaêsha-mê ... dainghu-frâdhanãm\nashaonîm,",
+      "en": "'Offer up a sacrifice, O Spitama Zarathushtra! unto this spring\nof mine, Ardvi Sura Anahita....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 98,
+      "ref": "Yt 5.98",
+      "orig": "ýim aiwitô mazdayasna\nhishteñta baresmô-zasta,\ntãm ýazeñta hvôvånghô\ntãm ýazeñta naotairyånghô,\nîshtîm jaidhyañta hvôvô\nâsu-aspîm naotaire,\nmoshu pascaêta hvôvô\nîshtîm baon sevishta\nmoshu pascaêta naotaire\nvîshtâspô ånghãm dah'yunãm\nâsu-aspôtemô bavat.",
+      "en": "'Before whom the worshippers of Mazda stand with baresma in\ntheir hands: the Hvovas did worship her, the Naotaras did worship\nher; the Hvovas asked for riches, the Naotaras asked for swift\nhorses. Quickly was Hvova blessed with riches an full prosperity;\nquickly became Vishtaspa, the Naotaride, the lord of the swiftest\nhorses in these countries.",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 99,
+      "ref": "Yt 5.99",
+      "orig": "dathat aêibyascit tat avat âyaptem aredvî\nsûra anâhita hadha-zaothrô-barâi aredrâi\nýazemnâi\njaidhyañtâi dâthrish âyaptem.\nahe raya ... tåscâ ýazamaide!",
+      "en": "['Ardvi Sura Anahita granted them that boon, as they were\noffering up libations, giving gifts, sacrificing, and entreating\nthat she would grant them that boon.]\n'For her brightness and glory, I will offer her a sacrifice....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 100,
+      "ref": "Yt 5.100",
+      "orig": "ýazaêsha-mê ... dainghu-frâdhanãm\nashaonîm,",
+      "en": "'Offer up a sacrifice, O Spitama Zarathushtra! unto this spring\nof mine, Ardvi Sura Anahita....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 101,
+      "ref": "Yt 5.101",
+      "orig": "ýenghe hazangrem vairyanãm hazangrem apakhzhâranãm,\nkascitca aêshãm vairyanãm kascitca aêshãm\napakhzhâranãm cathware-satem ayare-baranãm\nhvaspâi naire baremnâi,\nkanghe kanghe apakhzhâire\nnmânem hishtaite hudhâtem\nsatô-raocanem bâmîm\nhazangrô-stunem hukeretem\nbaêvare-fraskembem sûrem.",
+      "en": "'Who has a thousand cells and a thousand channels: the extent\nof each of those cells, of each of those channels, is as much\nas a man can ride in forty days, riding on a good horse. In each\nchannel there stands a palace, well-founded, shining with a hundred\nwindows, with a thousand columns, well-built, with ten thousand\nbalconies, and mighty.",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 102,
+      "ref": "Yt 5.102",
+      "orig": "kem kemcit aipi nmâne\ngâtu saite hvaêui-staretem\nhubaoidhîm barezish havañtem,\nâtacaiti zarathushtra\naredvî sûra anâhita\nhazangrâi bareshna vîranãm\nmasô xshayete hvarenanghô\nýatha vîspå imå âpô\nýå zemâ paiti frataciñti\nýâ amavaiti fratacaiti.\nahe raya ... tåscâ ýazamaide!",
+      "en": "'In each of those palaces there lies a well-laid, well-scented\nbed, covered with pillows, and Ardvi Sura Anahita, O Zarathushtra!\nruns down there from a thousand times the height of a man, and\nshe is possessed of as much Glory as the whole of the waters that\nrun along the earth, and she runs powerfully.",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 103,
+      "ref": "Yt 5.103",
+      "orig": "ýazaêsha-mê ... dainghu-frâdhanãm\nashaonîm,",
+      "en": "'Offer up a sacrifice, O Spitama Zarathushtra! unto this spring\nof mine, Ardvi Sura Anahita....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 104,
+      "ref": "Yt 5.104",
+      "orig": "tãm ýazata\nýô ashava zarathushtrô airyene vaêjahi\nvanghuyå dâityayå haomayô gava ... vâkhzhibyô.",
+      "en": "'Unto her did the holy Zarathushtra offer up a sacrifice in\nthe Airyana Vaejah, by the good river Daitya; with the Haoma and\nmeat, with the baresma, with the wisdom of the tongue, with the\nholy spells, with the speech, with the deeds, with the libations,\nand with the rightly-spoken words.",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 105,
+      "ref": "Yt 5.105",
+      "orig": "âat hîm jaidhyat,\navat âyaptem dazdi-mê\nvanguhi sevishte aredvî sûre anâhite,\nýatha azem hâcayene\nputhrem ýat aurvat-aspahe\ntaxmem kavaêm vîshtâspem\nanumatêe daênayâi\nanuxtêe daênayâi\nanu-varshtêe daênayâi.",
+      "en": "'He begged of her a boon, saying: \"Grant me this, O good,\nmost beneficent Ardvi Sura Anahita! that I may bring the son of\nAurvat-aspa, the valiant Kavi Vistaspa, to think according to\nthe law, to speak according to the law, to do according to the\nlaw.\"",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 106,
+      "ref": "Yt 5.106",
+      "orig": "dathat ahmâi tat avat âyaptem aredvî sûra\nanâhita hadha-zaothrô-barâi aredrâi ýazemnâi\njaidhyañtâi dâthrish âyaptem.\nahe raya ... tåscâ ýazamaide!",
+      "en": "'Ardvi Sura Anahita granted him that boon, as he was\noffering up libations, giving gifts, sacrificing, and entreating\nthat she would grant him that boon.\n'For her brightness and glory, I will offer her a sacrifice....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 107,
+      "ref": "Yt 5.107",
+      "orig": "ýazaêsha-mê ... dainghu-frâdhanãm\nashaonîm,",
+      "en": "'Offer up a sacrifice, O Spitama Zarathushtra! unto this spring\nof mine, Ardvi Sura Anahita....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 108,
+      "ref": "Yt 5.108",
+      "orig": "tãm ýazata\nberezaidhish kava vîshtâspô\npasne âpem frazdânaom satem aspanãm arshnãm\nhazangrem gavãm baêvare anumayanãm.",
+      "en": "'Unto her did the tall Kavi Vishtaspa offer up a sacrifice\nbehind Lake Frazdanava, with a hundred male horses, a thousand\noxen, ten thousand lambs.",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 109,
+      "ref": "Yt 5.109",
+      "orig": "âat hîm jaidhyat,\navat âyaptem dazdi-mê\nvanguhi sevishte aredvî sûre anâhite,\nýat bavâni aiwi-vanyå\ntãthryavañtem duzhdaênem\npeshanemca daêvayasnem\ndrvañtemca arejat-aspem\nahmi gaêthe peshanâhu.",
+      "en": "'He begged of her a boon, saying: \"Grant me this, O good,\nmost beneficent Ardvi Sura Anahita! that I may overcome Tathravant,\nof the bad law, and Peshana, the worshipper of the Daevas and\nthe wicked Arejat-aspa, in the battles of this world!\"",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 110,
+      "ref": "Yt 5.110",
+      "orig": "dathat ahmâi tat avat âyaptem aredvî sûra\nanâhita hadha-zaothrô-barâi aredrâi ýazemnâi\njaidhyañtâi dâthrish âyaptem.\nahe raya ... tåscâ ýazamaide!",
+      "en": "'Ardvi Sura Anahita granted him that boon, as he was offering\nup libations, giving gifts, sacrificing, and entreating that she\nwould grant him that boon.\n'For her brightness and glory, I will offer her a sacrifice....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 111,
+      "ref": "Yt 5.111",
+      "orig": "ýazaêsha-mê ... dainghu-frâdhanãm\nashaonîm,",
+      "en": "'Offer up a sacrifice, O Spitama Zarathushtra! unto this spring\nof mine, Ardvi Sura Anahita....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 112,
+      "ref": "Yt 5.112",
+      "orig": "tãm ýazata\naspâyaodhô zairi-vairish\npasne âpô dâityayå satem aspanãm\narshnãm hazangrem gavãm baêvare anumayanãm.",
+      "en": "'Unto her did Zairi-vairi, who fought on horseback, offer\nup a sacrifice behind the river Daitya, with a hundred male horses,\na thousand oxen, ten thousand lambs.",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 113,
+      "ref": "Yt 5.113",
+      "orig": "âat hîm jaidhyat,\navat âyaptem dazdi-mê\nvanguhi sevishte aredvî sûre anâhite\nýat bavâni aiwi-vanyå\npeshôciñghem ashtô-kânem\nhumayakem daêvayasnem\ndrvañtemca arejat-aspem\nahmi gaêthe peshanâhu.",
+      "en": "'He begged of her a boon, saying: \"Grant me this, O good,\nmost beneficent Ardvi Sura Anahita! that I may overcome Pesho-Changha\nthe corpse-burier, Humayaka the worshipper of the Daevas, and\nthe wicked Arejat-aspa, in the battles of this world.",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 114,
+      "ref": "Yt 5.114",
+      "orig": "dathat ahmâi tat avat âyaptem aredvî sûra\nanâhita hadha-zaothrô-barâi aredrâi ýazemnâi\njaidhyañtâi dâthrish âyaptem.\nahe raya ... tåscâ ýazamaide!",
+      "en": "'Ardvi Sura Anahita granted him that boon, as he was\noffering up libations, giving gifts, sacrificing, and entreating\nthat she would grant him that boon.\n'For her brightness and glory, I will offer her a sacrifice....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 115,
+      "ref": "Yt 5.115",
+      "orig": "ýazaêsha-mê ... dainghu-frâdhanãm\nashaonîm,",
+      "en": "'Offer up a sacrifice, O Spitama Zarathushtra! unto this spring\nof mine, Ardvi Sura Anahita....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 116,
+      "ref": "Yt 5.116",
+      "orig": "tãm ýazata\nvañdaremainish arejat-aspô\nupa zrayô vouru-kashem satem aspanãm arshnãm\nhazangrem gavãm baêvare anumayanãm.",
+      "en": "'Unto her did Arejat-aspa and Vandaremaini offer up a sacrifice\nby the sea Vouru-Kasha, with a hundred male horses, a thousand\noxen, ten thousand lambs.",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 117,
+      "ref": "Yt 5.117",
+      "orig": "âat hîm jaidhyat,\navat âyaptem dazdi-mê\nvanguhi sevishte aredvî sûre anahite\nýat bavâni aiwi-vanyå\ntaxmem kavaêm vîshtâspem\naspâyaodhô zairi-vairish,\nýatha azem nijanâni\nairyanãm dah'yunãm pañcasakhnâi satakhnâishca\nsatakhnâi hazangrakhnâishca hazangrakhnâi baêvarekhnâishca\nbaêvarekhnâi ahãxshtakhnâishca.",
+      "en": "'They begged of her a boon, saying: \"Grant us this, O\ngood, most beneficent Ardvi Sura Anahita! that we may conquer\nthe valiant Kavi Vishtaspa and Zairivairi who fights on horseback,\nand that we may smite of the Aryan people their fifties and their\nhundreds, their hundreds and their thousands, their thousands\nand their tens of thousands, their tens of thousands and their\nmyriads of myriads.\"",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 118,
+      "ref": "Yt 5.118",
+      "orig": "nôit ahmâi dathat tat avat âyaptem aredvî\nsûra anâhita.\nahe raya ... tåscâ ýazamaide!",
+      "en": "'Ardvi Sura Anahita did not grant them that favor, though\nthey were offering up libations, giving gifts, sacrificing, and\nentreating that she should grant them that favor.\n'For her brightness and glory, I will offer her a sacrifice....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 119,
+      "ref": "Yt 5.119",
+      "orig": "ýazaêsha-mê ... dainghu-frâdhanãm\nashaonîm,",
+      "en": "'Offer up a sacrifice, O Spitama Zarathushtra! unto this spring\nof mine, Ardvi Sura Anahita....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 120,
+      "ref": "Yt 5.120",
+      "orig": "ýenghe cathwârô arshâna\nhãm-tâshat ahurô mazdå\nvâtemca vâremca maêkhemca fyanghumca\nmîshti zî-mê hîm spitama zarathushtra\nvâreñtaêca snaêzhiñtaêca\nsrasciñtaêca fyanghuñtaêca,\nýenghe avavat haênanãm\nnava-satâish hazangremca.",
+      "en": "'For whom Ahura Mazda has made four horses -- the wind,\nthe rain, the cloud, and the sleet -- and thus ever a upon the\nearth it is raining, snowing, hailing, and sleeting; and whose\narmies are so many and numbered by nine-hundreds and thousands.",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 121,
+      "ref": "Yt 5.121",
+      "orig": "ýazâi hukairîm barezô\nvîspô-vahmem zaranaênem\nýahmât mê haca frazgadhaite\naredvî sûra anâhita\nhazangrâi bareshna vîranãm\nmasô xshayete hvarenanghô\nýatha vîspå imå âpô\nýå zemâ paiti frataciñti\nýâ amavaiti fratacaiti.\nahe raya ... tåscâ ýazamaide!",
+      "en": "'I will worship the height Hukairya, of the deep precipices,\nmade of gold, wherefrom this mine Ardvi Sura Anahita leaps, from\na hundred times the height of a man, while she is possessed of\nas much Glory as the whole of the waters that run along the earth,\nand she runs powerfully.\n'For her brightness and glory, I will offer her a sacrifice....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 122,
+      "ref": "Yt 5.122",
+      "orig": "ýazaêsha-mê ... dainghu-frâdhanãm\nashaonîm,",
+      "en": "'Offer up a sacrifice, O Spitama Zarathushtra! unto this spring\nof mine, Ardvi Sura Anahita....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 123,
+      "ref": "Yt 5.123",
+      "orig": "zaranaênem paiti-dânem\nvanguhi hishtaite drazhimnô\naredvî sûra anâhita\nzaothre vâcim paitishmaremna\navat manangha mainimna,",
+      "en": "'She stands, the good Ardvi Sura Anahita, wearing a golden\nmantle, waiting for a man who shall offer her libations and prayers,\nand thinking thus in her heart:",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 124,
+      "ref": "Yt 5.124",
+      "orig": "kô mãm stavât kô ýazâite\nhaomavaitibyô gaomavaitibyô zaothrâbyô\nýaozhdâtâbyô pairiangharshtâbyô,\nkahmâi azem upanghacayeni haca-manâica ana-manâica\nfrâranghâi humananghâica.\nahe raya ... tåscâ ýazamaide!",
+      "en": "\"'Who will praise me? Who will offer me a sacrifice,\nwith libations cleanly prepared and well-strained, together with\nthe Haoma and meat? To whom shall I cleave, who cleaves unto me,\nand thinks with me, and bestows gifts upon, me, and is of good\nwill unto me?\"\n'For her brightness and glory, I will offer her a sacrifice....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 125,
+      "ref": "Yt 5.125",
+      "orig": "ýazaêsha-mê ... dainghu-frâdhanãm\nashaonîm,",
+      "en": "'Offer up a sacrifice, O Spitama Zarathushtra! unto this spring\nof mine, Ardvi Sura Anahita....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 126,
+      "ref": "Yt 5.126",
+      "orig": "ýâ hishtaite fravaêdhemna\naredvî sûra anâhita\nkaininô kehrpa srîrayå\nashamayå huraodhayå\nuskât ýâstayå erezvaithyô\nraêvat cithrem âzâtayå\nfrazushem adhkem vanghânem\npouru-paxshtem zaranaênem",
+      "en": "'Ardvi Sura Anahita, who stands carried forth in the shape\nof a maid, fair of body, most strong, tall-formed, high-girded,\npure, nobly born of a glorious race, wearing along her.... a mantle\nfully embroidered with gold;",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 127,
+      "ref": "Yt 5.127",
+      "orig": "bâdha ýatha-mãm baresmô-zasta\nfrâ-gaoshâvara sîspemna\ncathru-karana zaranaêni,\nminum barat hvâzâta\naredvî sûra anâhita\nupa tãm srîrãm manaothrim,\nhâ-hê maidhim nyâzata\nýathaca hukerepta fshtâna\nýathaca anghen nivâzâna.",
+      "en": "'Ever holding the baresma in her hand, according to the rules,\nshe wears square golden earrings on her ears bored, and a golden\nnecklace around her beautiful neck, she, the nobly born Ardvi\nSura Anahita; and she girded her waist tightly, so that her breasts\nmay be well-shaped, that they may be tightly pressed.",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 128,
+      "ref": "Yt 5.128",
+      "orig": "upairi pusãm bañdayata\naredvî sûra anâhita\nsatô-stranghãm zaranaênîm\nashta-kaozhdãm ratha-kairyãm\ndrafshakavaitîm srîrãm\nanu-pôithwaitîm hukeretãm.",
+      "en": "'Upon her head Ardvi Sura Anahita bound a golden crown, with\na hundred stars, with eight rays, a fine ...., a well-made crown,\nin the shape of a ...., with fillets streaming down.",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 129,
+      "ref": "Yt 5.129",
+      "orig": "bawraini vastrå vanghata\naredvî sûra anâhita\nthrisatanãm bawranãm cature-zîzanatãm\nýat asti bawrish sraêshta ýatha ýat\nasti gaonôtema [bawrish bavaiti upâpô]\nýatha-keretem thwarshtâi zrûne\ncaremå vaênañtô brâzeñta\nfrêna erezatem zaranim.",
+      "en": "'She is clothed with garments of beaver, Ardvi Sura Anahita;\nwith the skin of thirty beavers of those that bear four young\nones, that are the finest kind of beavers; for the skin of the\nbeaver that lives in water is the finest-colored of all skins,\nand when worked at the right time it shines to the eye with full\nsheen of silver and gold.",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 130,
+      "ref": "Yt 5.130",
+      "orig": "âat vanguhi idha sevishte\naredvî sûre anâhite\navat âyaptem ýâsâmi\nýatha azem hvâfritô\nmasa xshathra nivânâni\nash-pacina stûi-baxedhra\nfraothat-aspa canat-caxra\nxshvaêwayat-ashtra ash-baourva\nnidhâtô-pitu hubaoidhi\nupa steremaêshu vârema daidhe\nparenanghuñtem vîspãm hujyâitîm\niritheñtem xshathrem zazâiti.",
+      "en": "'Here, O good, most beneficent Ardvi Sura Anahita! I beg of\nthee this favor: that I, fully blessed, may conquer large kingdoms,\nrich in horses, with high tributes, with snorting horses, sounding\nchariots, flashing swords, rich in aliments, with stores of food,\nwith well-scented beds; that I may have at my wish the fullness\nof the good things of life and whatever makes a kingdom thrive.",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 131,
+      "ref": "Yt 5.131",
+      "orig": "âat vanguhî idha aredvî sûre anâhite\ndva aurvañta ýâsâmi\nýimca bipaitishtânem aurvañtem\nýimca cathware-paitishtânem\naom bipaitishtânem arvañtem\nýô anghat âsush uzgastô\nhufraourvaêsô vâshå peshanaêshuca\naom cathware-paitishtânem\nýô haênayå perethu-ainikayå\nva urvaêsayat karana\nhôyûmca dashinemca\ndashinemca hôyûmca.",
+      "en": "'Here, O good, most beneficent Ardvi Sura Anahita! I beg of\nthee two gallant companions, one two-legged and one four-legged:\none two-legged, who is swift, quickly rushing, and clever in turning\na chariot round in battle; and one four-legged, who can quickly\nturn towards either wing of the host with a wide front, towards\nthe right wing or the left, towards the left wing or the right.",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 132,
+      "ref": "Yt 5.132",
+      "orig": "aêta ýasna aêta vahma\naêta paiti ava-jasa\naredvî sûre anâhite\nhaca avatbyô sterebyô\naoi zãm ahuradhâtãm\naoi zaotârem ýazemnem\naoi perenãm vîkhzhârayeiñtîm\navanghe zaothrô-barâi aredrâi ýazemnâi\njaidhyañtâi dâthrish âyaptem,\nýatha tê vîspe aurvañta\nzazvångha paiti-jasãn\nýatha kavôish vîshtâspahe.\nahe raya ... tåscâ ýazamaide!",
+      "en": "'Through the strength of this sacrifice, of this invocation,\nO Ardvi Sura Anahita! come down from those stars, towards the\nearth made by Ahura, towards the sacrificing priest, towards the\nfull boiling [milk]; come to help him who is offering up libations\ngiving gifts, sacrificing, and entreating that thou wouldst grant\nhim thy favors; that all those gallant warriors may be strong,\nlike king Vishtaspa.\n'For her brightness and glory, I will offer her a sacrifice....",
+      "zh": ""
+    },
+    {
+      "chapter": 5,
+      "verse": 133,
+      "ref": "Yt 5.133",
+      "orig": "(hôrmezd i hvadâe i awazûnî mardum\nmardum sardagã hamâ sardagã ham bâ ýasht\ni vahã vaem vahe dîn i mâzdayasnã âgâhî\nâstvãnî nêkî rasãnât\nêduñ bât.)",
+      "en": "'Yatha ahu vairya: The will of the Lord is the law of holiness....\n'I bless the sacrifice and prayer, and the strength and vigor\nof the holy water-spring Anahita.\n'Ashem Vohu: Holiness is the best of all good....\n'[Give] unto that man brightness and glory, .... give him the\nbright, all-happy, blissful abode of the holy Ones!'\nAvesta -- Zoroastrian Archives\nContents\nPrev\nYt5\nNext\nAvestan\nGlossary",
+      "zh": ""
+    }
+  ]
+}

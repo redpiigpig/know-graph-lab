@@ -1,0 +1,172 @@
+{
+  "slug": "yasht-02",
+  "siglum": "Yt 2",
+  "title_zh": "亞什特 第 2 首‧七不朽聖者讚",
+  "title_en": "Yasht 2",
+  "canon": "avestan",
+  "volume": "yasht",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/ka/yt2.htm",
+  "en_source": "《東方聖書》第 23 卷，1883；公有領域",
+  "en_translator": "達梅斯特（James Darmesteter）",
+  "en_url": "https://www.avesta.org/ka/yt2sbe.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Mithra": "密特拉",
+    "Anahita": "阿娜希塔",
+    "Tishtrya": "提什特里亞",
+    "Verethraghna": "韋雷特拉格納",
+    "Vayu": "瓦尤",
+    "Rashnu": "拉什努",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "khvarenah": "赫瓦雷納",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 2,
+      "verse": 0,
+      "ref": "Yt 2.0",
+      "orig": "(pa nãm i ýazdã, hôrmezd i hvadâe\ni awazûnî gurz hvarahe awazâyât, haft\nameshâspeñd bê rasât,\n ezh hamâ gunâh ... pa patit hôm!) \nxshnaothra ahurahe mazdå tarôidîti angrahe mainyêush,\nhaithyâvarshtãm hyat vasnâ ferashôtemem.\nstaomî ashem,\nashem vohû...(3).\nfravarâne mazdayasnô zarathushtrish vîdaêvô\nahura-tkaêshô,\n (Here recite the appropriate Gah dedication.)",
+      "en": "May Ahura Mazda be rejoiced!...\nAshem Vohu: Holiness is the best of all good....\nI confess myself a worshipper of Mazda, a follower of\nZarathushtra, one who hates the Daevas and obeys the laws of\nAhura;\nFor sacrifice, prayer, propitiation, and glorification unto\n[Havani], the holy and master of holiness....",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 1,
+      "ref": "Yt 2.1",
+      "orig": "ahurahe mazdå raêvatô hvarenanguhatô\nameshanãm speñtanãm, vanghave mananghe âxshtôish\nhãm-vaiñtyå taredhâtô anyâish\ndâmãn âsnahe xrathwô mazdadhâtahe\ngaoshô-srûtahe xrathwô mazdadhâtahe.",
+      "en": "To Ahura Mazda, bright and glorious, and to the\nAmesha-Spentas;\nTo Vohu-Mano; to Peace, whose breath is friendly, and who is\nmore powerful to destroy than all other creatures; to the\nheavenly Wisdom, made by Mazda, and to the Wisdom acquired\nthrough the ear, made by Mazda;",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 2,
+      "ref": "Yt 2.2",
+      "orig": "ashahe vahishtahe sraêshtahe airyamanô ishyehe\nsûrahe mazdadhâtahe saokayå vanghuyå vouru-dôithrayå\nmazdadhâtayå ashaonyå, xshathrahe vairyehe ayôxshustahe\nmarezhdikâi thrâyô- drikhaove.",
+      "en": "To Asha-Vahishta, the fairest; to the much-desired Airyaman;\nto the instrument made by Mazda: and to the good Saoka, with eyes\nof love, made by Mazda and holy;\nTo Khshathra-Vairya; to the metals; to Mercy and Charity.",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 3,
+      "ref": "Yt 2.3",
+      "orig": "speñtayå vanghuyå ârmatôish\nrâtayå vanghuyå vouru-dôithrayå\nmazdadhâtayå ashaonyå, haurvatâtô\nrathwô ýâiryayå hushitôish saredhaêibyô\nashahe ratubyô, ameretatâtô rathwô fshaonibya\nvãthwâbya aspanibya ýaonibya gaokerenahe sûrahe\nmazdadhâtahe.",
+      "en": "To the good Spenta-Armaiti, and to the good Rata, with eyes\nof love, made by Mazda and holy;\nTo Haurvatat, the master; to the prosperity of the seasons\nand to the years, the masters of holiness;\nAnd to Ameretat, the master; to fatness and flocks; to the\nplenty of corn; and to the powerful Gaokerena, made by Mazda.",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 4,
+      "ref": "Yt 2.4",
+      "orig": "",
+      "en": "(At the Gah Hawan): To Mithra, the lord of wide pastures and\nto Rama Hvastra.\n(At the Gah Rapithwin): To Asha-Vahishta and to Atar, the\nson of Ahura Mazda.\n(At the Gah, Uzerin): To Apam Napat, the tall lord, and to\nwater, made by Mazda.",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 5,
+      "ref": "Yt 2.5",
+      "orig": "",
+      "en": "(At the Gah Aiwisruthrem): To the Fravashis of the faithful\nand to the females that bring forth flocks of males; to the\nprosperity of the seasons; to the well-shapen and tall-formed\nStrength; to Verethraghna, made by Ahura, and to the crushing\nAscendant.\n(At the Gah Usahin): To the holy, devout, fiend-smiting\nSraosha, who makes the world grow; to Rashnu-Razishta and to\nArshtat, who makes the world grow, who makes the world increase;\nBe propitiation, with sacrifice, prayer, propitiation and\nglorification!\nYatha ahu vairyo: The will of the Lord is the law of\nholiness....",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 6,
+      "ref": "Yt 2.6",
+      "orig": "ahurem mazdãm raêvañtem hvarenanguhañtem\nýazamaide ameshâ speñtâ huxshathrâ\nhudhånghô ýazamaide, vohu manô ameshem\nspeñtem ýazamaide, âxshtîm hãm-vaiñtîm\nýazamaide taredhâtem anyâish dâmãn,\nâsnem xratûm mazdadhâtem ýazamaide, gaoshô-srûtem\nxratûm mazdadhâtem ýazamaide.",
+      "en": "We sacrifice unto Ahura Mazda, bright and glorious; we\nsacrifice unto the Amesha-Spentas, the all-ruling, the\nall-beneficent.\nWe sacrifice unto Vohu-Mano, the Amesha-Spenta; we sacrifice\nunto Peace, whose breath is friendly, and who is more powerful to\ndestroy than all other creatures; we sacrifice unto the heavenly\nWisdom, made by Mazda; we sacrifice unto the Wisdom acquired\nthrough the ear, made by Mazda.",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 7,
+      "ref": "Yt 2.7",
+      "orig": "ashem vahishtem sraêshtem ameshem speñtem ýazamaide,\nairyamanem ishîm ýazamaide, sûrem mazdadhâtem\nýazamaide, saokãm vanguhîm vouru-dôithrãm\nmazdadhâtãm ashaonîm ýazamaide, xshathrem\nvairîm ameshem speñtem ýazamaide, ayôxshustem\nýazamaide, marezhdikem thrâyô-drikhûm\nýazamaide.",
+      "en": "We sacrifice unto Asha-Vahishta, the fairest, the\nAmesha-Spenta; we sacrifice unto the much-desired Airyaman; we\nsacrifice unto the instrument made by Mazda; we sacrifice unto\nthe good Saoka, with eyes of love, made by Mazda and holy.\nWe sacrifice unto Khshathra-Vairya; we sacrifice unto the\nmetals; we sacrifice unto Mercy and Charity.",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 8,
+      "ref": "Yt 2.8",
+      "orig": "speñtãm vanguhîm ârmaitîm\nýazamaide, râtãm vanguhîm vouru-dôithrãm\nmazdadhâtãm ashaonîm ýazamaide, haurvatâtem\nameshem speñtem ýazamaide, ýâiryãm\nhushitîm ýazamaide, saredha ashavana ashahe ratavô\nýazamaide, ameretatâtem ameshem speñtem ýazamaide,\nfshaonîm vãthwãm ýazamaide, aspanâca\nýevînô ýazamaide, gaokerenem sûrem\nmazdadhâtem ýazamaide.",
+      "en": "We sacrifice unto the good Spenta-Armaiti; we sacrifice unto\nthe good Rata, with eyes of love, made by Mazda and holy.\nWe sacrifice unto Haurvatat, the Amesha-Spenta; we sacrifice\nunto the prosperity of the seasons; we sacrifice unto the years,\nthe holy and masters of holiness.\nWe sacrifice unto Ameretat, the Amesha-Spenta; we sacrifice\nunto fatness and flocks; we sacrifice unto the plenty of corn; we\nsacrifice unto the powerful Gaokerena, made by Mazda.",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 9,
+      "ref": "Yt 2.9",
+      "orig": "",
+      "en": "(At the Gah Hawan): We sacrifice unto Mithra, the lord of\nwide pastures; we sacrifice unto Rama Hvastra.\n(At the Gah Rapithwin): We sacrifice unto Asha-Vahishta and\nAtar, the son of Ahura Mazda.\n(At the Gah Uzerin): We sacrifice unto Apam Napat, the\nswift-horsed, the tall and shining lord, the lord of the females;\nwe sacrifice unto the holy waters, made by Mazda.",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 10,
+      "ref": "Yt 2.10",
+      "orig": "",
+      "en": "(At the Gah Aiwisruthrem): We sacrifice unto the good,\npowerful, beneficent Fravashis of the faithful; we sacrifice unto\nthe females who bring forth flocks of males; we sacrifice unto\nthe prosperity of the seasons; we sacrifice unto the well-shapen,\ntall-formed Strength; we sacrifice unto Verethraghna, made by\nMazda; we sacrifice unto the crushing Ascendant.\n(At the Gah Ushahin): We sacrifice unto the holy,\ntall-formed, fiend-smiting Sraosha; who makes the world grow, the\nholy an master of holiness; we sacrifice unto Rashnu-Razishta; we\nsacrifice unto Arshtat, who makes the world grow, who makes the\nworld increase",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 11,
+      "ref": "Yt 2.11",
+      "orig": "ýâtu-zî zarathushtra vanat daêvô\nmashyô kô nmânahe bâdha spitama zarathushtra\nvîspa druxsh janâiti vîspa druxsh nâshâiti\nýatha hô nô aêtaêshãm vacãm.",
+      "en": "Let the Yatus be crushed, O Zarathushtra! both Daevas and\nmen.\nWho is he in whose house, O Spitama Zarathushtra! every Druj\nis destroyed, every Druj perishes, when he pronounces these\nwords:",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 12,
+      "ref": "Yt 2.12",
+      "orig": "aoi-tê aoi tanvô dadhâiti aoi-tê aoi\nathaurunem janâiti athaurunem ýatha rathaêshtârem\nvîspa-nô asrushtêe nâshâtanãm\naojangha ýô hîm daste dârenem ýôi\nhapta ameshå speñta huxshathra hudhånghô\nhamarethanãmcit, daênãm mâzdayasnîm\naspô-kehrpãm âpem mazdadhâtãm\nashaonîm ýazamaide.",
+      "en": "........?",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 13,
+      "ref": "Yt 2.13",
+      "orig": "âtare-vitare-maibyâ vitare-maibyâ vîmraot\nzarathushtra âtare-vitare-maibyascit vitare-maibyascit vîmraot\nzarathushtra ýat vanghêush mananghô ýat\naithyejanghem vacãm fraspâvaresh frâca framerethwaca\nfrajãthwaca.",
+      "en": "It is he who takes the seven Amesha-Spentas, the all-ruling,\nthe all-beneficent, as a shield against his enemies.\nWe worship the Law of the worshippers of Mazda; we worship\nthe waters coming in the shape of a horse, made by Mazda.",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 14,
+      "ref": "Yt 2.14",
+      "orig": "satavata satê-vita utavata utê-vita uta uta apa-barenuta\nýatha bastem fravashnãm daênãm mâzdayasnîm\nnâshâtanãm aojangha.\nashem vohû....",
+      "en": "He has renounced trespasses and faults, O Zarathustra! he\nhas renounced all trespasses and faults, O Zarathustra! when he\nthrows down the destroyer of Vohu-Mano and his words, with a\nhundred times hundredfold, with a many times manifold preaching\nand smiting, and he takes away the Law of Mazda, that was carried\naway as a prisoner, from the hands of the [ungodly], who are\ndestroyed by his strength.\nAshem Vohu: Holiness is the best of all good....",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 15,
+      "ref": "Yt 2.15",
+      "orig": "(hôrmezd i hvadâe i awazûnî mardum\nmardum sardagã hamâ sardagã ham bâ ýasht\ni vahã vaem vahe dîn i mâzdayasnã âgâhî\nâstvãnî nêkî rasãnât\nêduñ bât.)",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 16,
+      "ref": "Yt 2.16",
+      "orig": "",
+      "en": "Yatha ahu vairyo: The will of the Lord is the law of\nholiness....\nI bless the sacrifice and the prayer, the strength and\nvigour\nOf Ahura Mazda, bright and glorious, and of the\nAmesha-Spentas;\nOf Vohu-Mano; of Peace, whose breath is friendly....\nOf Asha-Vahishta, the fairest; of the much-desired\nAiryaman....\nOf Khshathra-Vairya, of the metals....\nOf the good Spenta-Armaiti and of the good Rata....\nOf Haurvatat, the master....\nOf Ameretat, the master....\n(At the Gah Hawan): Of Mithra....\n(At the Gah Rapithwin): Of Asha-Vahishta....\n(At the Gah Uzerin): Of the high lord Apam Napat....\n(At the Gah Aiwisruthrem): Of the Fravashis of the\nfaithful....\n(At the Gah Ushahin): Of the holy, devout, fiend-smiting\nSraosha, who makes the world grow; of Rashnu-Razishta and of\nArshtat, who makes the world grow, who makes the world increase.\nAshem Vohu: Holiness is the best of all good....\nGive unto that man brightness and glory, give him health of\nbody, give him sturdiness of body, give him victorious strength\nof body, give him full welfare of wealth, give him a virtuous\noffspring,\ngive him long, long life, give him the bright, all-happy,\nblissful abode of the holy Ones.",
+      "zh": ""
+    }
+  ]
+}

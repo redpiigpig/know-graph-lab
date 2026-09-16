@@ -44,6 +44,12 @@ from pathlib import Path
 
 import requests
 
+# Windows 主控台預設 cp950，印 ✓ ✗ ⚠ 會讓整支在「已經抓完寫完」之後才炸掉——
+# 看起來像抓取失敗，其實檔案已經寫好了。這類假失敗最浪費時間，故一律先設好編碼。
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+
 ROOT = Path(__file__).resolve().parents[1]
 OUT_DIR = ROOT / "data" / "avesta" / "sources" / "text"
 BASE = "https://www.avesta.org"
@@ -75,7 +81,10 @@ def parse_sbe_chapter(page: str) -> dict[int, str]:
        <TD CLASS="NOTE"> 的腳註欄整個丟掉。
     """
     verses: dict[int, str] = {}
-    last = 0
+    # 起始值是 -1 不是 0。亞什特各首都有「第 0 節」（開誦前的禮儀引文），
+    # 起始給 0 的話第 0 節會被 _absorb_verses 的「節號不得倒退」規則當成
+    # 重複而丟掉——少一節，而頁面完全正常。
+    last = -1
     # 逐個 TD 切；經文欄的特徵是不帶 CLASS="NOTE"
     for m in re.finditer(r"<TD\b([^>]*)>(.*?)(?=<TD\b|</TR>|</TABLE>)", page, re.I | re.S):
         attrs, body = m.group(1), m.group(2)
@@ -88,7 +97,46 @@ def parse_sbe_chapter(page: str) -> dict[int, str]:
         #    只取每格第一節的話，55 節的一章只會抓到 30 節——而頁面完全正常，
         #    沒有任何地方看得出少了。故格內再按「行首的 N.」切一次。
         last = _absorb_verses(text, verses, last)
+
+    if not verses:
+        # 🚨 avesta.org 的英譯頁有**兩種版型**，這件事第一版沒發現：
+        #      萬迪達德  兩欄表格（經文欄＋ CLASS="NOTE" 腳註欄）
+        #      亞什特    <DL COMPACT><DT>N.<DD>正文  定義列表，沒有表格
+        #    只認表格的話，亞什特全部 21 首的英譯欄都會是空的——
+        #    而檔案照樣寫出、頁面照樣顯示、轉寫欄還好端端的，
+        #    看起來只是「這幾首剛好沒英譯」。實際上是解析器沒認出版型。
+        #    （實測：第 1 首轉寫 34 節、英譯 0 節，就是這個原因。）
+        for (start, _end), text in _parse_definition_list(page).items():
+            verses[start] = text
+
+    if not verses:
+        # 🚨 第三種版型：連定義列表都沒有，就是一連串 <P>N. 正文</P>
+        #    （第 9 首 Gosh Yasht 是這一型，那一頁還是改版過的新版面）。
+        #    三種版型都要試過才能說「這一首沒有英譯」——
+        #    只試一種就下結論，會把「解析器不認得」誤報成「來源沒有」。
+        #
+        # 🚨🚨 而且**必須先把大標題拿掉**。這一頁的 <H2> 是
+        #      「9. GOSH YASHT (Drvasp Yasht).」——它長得跟節號一模一樣。
+        #      不拿掉的話 _absorb_verses 會先讀到 n=9 把 last 推到 9，
+        #      接著真正的第 0–8 節因為「節號不得倒退」全部被併進第 9 節，
+        #      結果是 34 節的一首只剩 24 節，而且**開頭那幾節的內容還被黏在第 9 節裡**。
+        #      實測就是這樣掉了 9 節，頁面照樣好看。
+        _absorb_verses(strip_tags(_drop_page_headings(page)), verses, -1)
     return verses
+
+
+def _drop_page_headings(page: str) -> str:
+    """去掉 <TITLE> 與 <H1>／<H2> 大標題。
+
+    avesta.org 的篇名格式是「10. Mihr Yasht」——與節號同形，
+    留著會被當成節號。<H3> 不動：那是段落標記（[1]、[2] 的 karda 分節），
+    不含「數字＋句點」的形式，且拿掉會丟失章節分界資訊。
+
+    >>> _drop_page_headings('<H2>9. GOSH YASHT.</H2><P>0. May Ahura')
+    ' <P>0. May Ahura'
+    """
+    out = re.sub(r"<TITLE\b[^>]*>.*?</TITLE>", " ", page, flags=re.I | re.S)
+    return re.sub(r"<H[12]\b[^>]*>.*?</H[12]>", " ", out, flags=re.I | re.S)
 
 
 def _absorb_verses(text: str, verses: dict[int, str], last: int) -> int:
@@ -115,6 +163,29 @@ def _absorb_verses(text: str, verses: dict[int, str], last: int) -> int:
         verses[n] = f"{verses[n]}\n{chunk}" if n in verses else chunk
         last = n
     return last
+
+
+def parse_sbe_book(page: str, chapter_anchor: str = "chapt") -> dict[int, dict[int, str]]:
+    """解析 avesta.org 的英譯**整書**頁（維斯帕拉德 vrsbe.htm 是這一型），回 {章: {節: 英譯}}。
+
+    章界沿用 _chapter_marks（錨點與標題兩種都收）。切出章塊後先用表格解析
+    （SBE 頁多為經文欄＋腳註欄的兩欄表），表格解不出東西時退回裸文字切節。
+
+    🚨 為什麼不直接整頁切節：整書頁的節號**每章都從 1 重來**。
+       整頁一次切的話後面各章的第 1 節會覆蓋前面的，而總節數看起來仍然很多，
+       完全看不出內容錯位。一定要先切章。
+    """
+    out: dict[int, dict[int, str]] = {}
+    marks = _chapter_marks(page, chapter_anchor)
+    for i, (start, chap) in enumerate(marks):
+        end = marks[i + 1][0] if i + 1 < len(marks) else len(page)
+        chunk = page[start:end]
+        verses = parse_sbe_chapter(chunk)
+        if not verses:
+            verses = {}
+            _absorb_verses(strip_tags(chunk), verses, 0)
+        out[chap] = verses
+    return out
 
 
 def parse_translit_book(page: str, chapter_anchor: str = "chapt") -> dict[int, dict[tuple[int, int], str]]:
@@ -246,6 +317,17 @@ class BookSpec:
     en_source: str
     chapter_anchor: str = "chapt"
     names: dict[str, str] = field(default_factory=dict)
+    # avesta.org 的頁型不只一種，三個旗標對應三種實際存在的排法：
+    #   萬迪達德  轉寫整書一頁、英譯逐章一頁          （兩者皆 False）
+    #   亞什特    轉寫逐章一頁、英譯逐章一頁          （translit_per_chapter）
+    #   維斯帕拉德 轉寫整書一頁、英譯**整書一頁**      （en_whole_book）
+    # 猜錯頁型的後果不是報錯，是抓到空的或抓到別章的內容，而版面完全正常。
+    translit_per_chapter: bool = False
+    en_whole_book: bool = False
+    # 篇章的量詞。祆教各書的單位不同：萬迪達德分「章」（法爾迦爾德）、
+    # 亞什特分「首」。寫死成「章」會讓亞什特的篇名變成「亞什特 第 10 章」，
+    # 與書目頁的「第 10 首」對不起來。
+    unit: str = "章"
 
 
 BOOKS: dict[str, BookSpec] = {
@@ -273,6 +355,66 @@ BOOKS: dict[str, BookSpec] = {
             "daeva": "迭瓦",
         },
     ),
+    "yasht": BookSpec(
+        key="yasht",
+        canon="avestan",
+        volume="yasht",
+        slug_prefix="yasht",
+        siglum_prefix="Yt",
+        title_zh="亞什特",
+        title_en="Yasht",
+        unit="首",
+        chapters=range(1, 22),
+        en_url=f"{BASE}/ka/yt{{n}}sbe.htm",
+        translit_url=f"{BASE}/ka/yt{{n}}.htm",
+        translit_per_chapter=True,
+        en_translator="達梅斯特（James Darmesteter）",
+        en_source="《東方聖書》第 23 卷，1883；公有領域",
+        names={
+            "Ahura Mazda": "阿胡拉‧馬茲達",
+            "Angra Mainyu": "安格拉‧曼紐",
+            "Zarathushtra": "查拉圖斯特拉",
+            "Spitama": "斯皮塔瑪",
+            "Mithra": "密特拉",
+            "Anahita": "阿娜希塔",
+            "Tishtrya": "提什特里亞",
+            "Verethraghna": "韋雷特拉格納",
+            "Vayu": "瓦尤",
+            "Rashnu": "拉什努",
+            "Sraosha": "斯勞沙",
+            "fravashi": "弗拉瓦希",
+            "khvarenah": "赫瓦雷納",
+            "daeva": "迭瓦",
+            "yazata": "雅扎塔",
+        },
+    ),
+    "visperad": BookSpec(
+        key="visperad",
+        canon="avestan",
+        volume="visperad",
+        slug_prefix="visperad",
+        siglum_prefix="Vr",
+        title_zh="維斯帕拉德",
+        title_en="Visperad",
+        chapters=range(1, 25),
+        # 🚨 本書兩欄都是「整書一頁」，而且英譯頁的錨點是 chap 不是 chapt。
+        en_url=f"{BASE}/visperad/vrsbe.htm",
+        en_whole_book=True,
+        # 🚨 別用 vr_tc.htm——那是**目次頁**（Table of Contents），不是正文。
+        #    抓它不會報錯：頁面在、解析器跑完、寫出 23 個檔，只是轉寫欄全空。
+        #    正文在 visperad.htm（238 個 DT/DD 條目）。
+        translit_url=f"{BASE}/visperad/visperad.htm",
+        chapter_anchor="chap",
+        en_translator="達梅斯特（James Darmesteter）",
+        en_source="《東方聖書》第 31 卷，1887；公有領域",
+        names={
+            "Ahura Mazda": "阿胡拉‧馬茲達",
+            "Zarathushtra": "查拉圖斯特拉",
+            "Amesha Spenta": "阿姆沙‧斯彭塔",
+            "ratu": "拉圖",
+            "yazata": "雅扎塔",
+        },
+    ),
 }
 
 # 章題：書目那邊只給禮儀分部，逐章的中文名寫在這裡（本站擬定）
@@ -285,6 +427,18 @@ CHAPTER_TITLES: dict[str, dict[int, str]] = {
         15: "重罪與棄嬰", 16: "經期婦女", 17: "髮與甲的處置", 18: "假祭司與公雞",
         19: "誘惑查拉圖斯特拉", 20: "特里塔與醫術之始", 21: "雲、雨與諸水",
         22: "阿胡拉求治於曼特拉‧斯彭塔",
+    },
+    # 🚨 這 21 個名字必須與 data/avesta/avestan.ts 書目裡的一致。
+    #    兩邊不一致時，書目頁與 reader 會顯示不同的篇名——而兩邊都不會報錯。
+    "yasht": {
+        1: "阿胡拉‧馬茲達讚", 2: "七不朽聖者讚", 3: "阿沙‧瓦希什塔讚",
+        4: "豪爾瓦塔特讚", 5: "阿娜希塔讚（水神讚）", 6: "太陽讚", 7: "月讚",
+        8: "提什特里亞讚（天狼星讚）", 9: "德爾瓦斯帕讚（牲畜守護讚）",
+        10: "密特拉讚", 11: "斯勞沙讚", 12: "拉什努讚", 13: "弗拉瓦希讚",
+        14: "韋雷特拉格納讚（勝利神讚）", 15: "瓦尤讚（風神讚）",
+        16: "奇斯塔讚（宗教女神讚）", 17: "阿希讚（福運女神讚）",
+        18: "阿什塔德讚", 19: "扎姆亞德讚（王者神光讚）", 20: "瓦南特讚",
+        21: "豪麻讚（亞什特本）",
     },
 }
 
@@ -341,16 +495,16 @@ def build_chapter(spec: BookSpec, chap: int, en: dict[int, str],
     return {
         "slug": f"{spec.slug_prefix}-{chap:02d}",
         "siglum": f"{spec.siglum_prefix} {chap}",
-        "title_zh": f"{spec.title_zh} 第 {chap} 章" + (f"‧{title}" if title else ""),
+        "title_zh": f"{spec.title_zh} 第 {chap} {spec.unit}" + (f"‧{title}" if title else ""),
         "title_en": f"{spec.title_en} {chap}",
         "canon": spec.canon,
         "volume": spec.volume,
         "orig_scheme": "geldner-roman",
         "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
-        "orig_url": spec.translit_url,
+        "orig_url": spec.translit_url.format(n=chap) if spec.translit_per_chapter else spec.translit_url,
         "en_source": spec.en_source,
         "en_translator": spec.en_translator,
-        "en_url": spec.en_url.format(n=chap),
+        "en_url": spec.en_url if spec.en_whole_book else spec.en_url.format(n=chap),
         "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；"
                    "英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
         "pivot": "sbe-eng",
@@ -360,24 +514,76 @@ def build_chapter(spec: BookSpec, chap: int, en: dict[int, str],
     }
 
 
+def _carry_over_zh(path: Path, doc: dict) -> int:
+    """重抓時把既有的繁中譯文搬回新檔，回傳搬了幾段。
+
+    🚨 **沒有這一步，重抓一次就會洗掉全部譯文。**
+       build_chapter 產出的 zh 一律是空字串（它只管原文與英譯兩欄），
+       所以「為了修一個解析 bug 而重抓某一章」會靜靜地把那一章的中譯清空——
+       檔案照樣寫出、頁面照樣顯示，只是中文欄變成一排「—」。
+       萬迪達德 22 章 830 段的中譯就是這樣一次可以全丟掉。
+
+    以 ref 為鍵搬移，不以索引：重抓後節數可能變（正是重抓的理由），
+    按位置搬會讓譯文整段錯位——那比清空更糟，因為看不出來。
+    """
+    if not path.exists():
+        return 0
+    try:
+        old = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return 0
+    prev = {s.get("ref"): s.get("zh", "") for s in old.get("segments", [])}
+    kept = 0
+    for seg in doc["segments"]:
+        zh = prev.get(seg["ref"], "")
+        if zh:
+            seg["zh"] = zh
+            kept += 1
+    return kept
+
+
 def run(spec: BookSpec, only: list[int] | None) -> int:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     session = requests.Session()
 
-    print(f"[{spec.key}] 抓轉寫整書：{spec.translit_url}")
-    translit_all = parse_translit_book(get(session, spec.translit_url), spec.chapter_anchor)
-    print(f"[{spec.key}] 轉寫解析出 {len(translit_all)} 章")
+    translit_all: dict[int, dict] = {}
+    if not spec.translit_per_chapter:
+        print(f"[{spec.key}] 抓轉寫整書：{spec.translit_url}")
+        translit_all = parse_translit_book(get(session, spec.translit_url), spec.chapter_anchor)
+        print(f"[{spec.key}] 轉寫解析出 {len(translit_all)} 章")
+
+    en_all: dict[int, dict[int, str]] = {}
+    if spec.en_whole_book:
+        print(f"[{spec.key}] 抓英譯整書：{spec.en_url}")
+        en_all = parse_sbe_book(get(session, spec.en_url), spec.chapter_anchor)
+        print(f"[{spec.key}] 英譯解析出 {len(en_all)} 章")
 
     chapters = [c for c in spec.chapters if not only or c in only]
     written = 0
     for chap in chapters:
-        url = spec.en_url.format(n=chap)
-        try:
-            en = parse_sbe_chapter(get(session, url))
-        except requests.HTTPError as exc:
-            print(f"  ✗ 第 {chap} 章英譯抓不到：{exc}")
-            continue
-        orig = translit_all.get(chap, {})
+        if spec.en_whole_book:
+            en = en_all.get(chap, {})
+        else:
+            url = spec.en_url.format(n=chap)
+            try:
+                en = parse_sbe_chapter(get(session, url))
+            except requests.HTTPError as exc:
+                # 🚨 英譯缺一章不代表整章要放棄：亞什特第 20 首就是沒有 SBE 英譯的
+                #    （韋斯特未收）。轉寫仍然抓得到，照寫，英譯欄留空。
+                #    這裡若 continue，那一首會連書目都對不上而整章消失。
+                print(f"  · 第 {chap} 章無英譯（{exc.response.status_code if exc.response is not None else '?'}），只寫轉寫")
+                en = {}
+
+        if spec.translit_per_chapter:
+            turl = spec.translit_url.format(n=chap)
+            try:
+                orig = _parse_definition_list(get(session, turl))
+            except requests.HTTPError as exc:
+                print(f"  ✗ 第 {chap} 章轉寫抓不到：{exc}")
+                orig = {}
+            time.sleep(SLEEP)
+        else:
+            orig = translit_all.get(chap, {})
 
         if not en and not orig:
             print(f"  ✗ 第 {chap} 章兩欄都空，跳過")
@@ -393,6 +599,9 @@ def run(spec: BookSpec, only: list[int] | None) -> int:
 
         doc = build_chapter(spec, chap, en, orig)
         path = OUT_DIR / f"{doc['slug']}.json"
+        kept = _carry_over_zh(path, doc)
+        if kept:
+            flag += f"  ↻ 保留既有中譯 {kept} 段"
         path.write_text(json.dumps(doc, ensure_ascii=False, indent=2), encoding="utf-8")
         written += 1
         print(f"  ✓ 第 {chap:2d} 章：{len(doc['segments'])} 節"

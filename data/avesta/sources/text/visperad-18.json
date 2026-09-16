@@ -1,0 +1,58 @@
+{
+  "slug": "visperad-18",
+  "siglum": "Vr 18",
+  "title_zh": "維斯帕拉德 第 18 章",
+  "title_en": "Visperad 18",
+  "canon": "avestan",
+  "volume": "visperad",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/visperad/visperad.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "達梅斯特（James Darmesteter）",
+  "en_url": "https://www.avesta.org/visperad/vrsbe.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "ratu": "拉圖",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 18,
+      "verse": 0,
+      "ref": "Vr 18.0",
+      "orig": "ahurem mazdãm ashavanem ashahe ratûm ... ratufritîm\nýazamaide, ushtavaitîm gâthãm ashaonîm\nashahe ratûm ýazamaide mat-afsmanãm mat-vacastashtîm\nmat-âzaiñtîm mat-peresvîm mat-paiti-peresvîm\nmat vakhzhibyâca patbyasca huframeretãm framaremnãm\nhufrâyashtãm frâyaêzyañtãm\nhvahmi dãm ... fraxshne avi manô zrazdâtôit\nanghuyat haca,\nahunem vairîm ashavanem ashahe ratûm ýazamaide\nahumeñtem ... ahurô mazdå (4)!",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 18,
+      "verse": 1,
+      "ref": "Vr 18.1",
+      "orig": "ushta ahurem mazdãm ýazamaide, ushta ameshê\nspeñtê ýazamaide, ushta narem ashavanem ýazamaide,\nushta paoiryãm ashaonô stîm ýazamaide,\nushtatâtemca naire ashaone ýazamaide.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 18,
+      "verse": 2,
+      "ref": "Vr 18.2",
+      "orig": "vîspâyûmca ushtatâtem ýazamaide\nýâ narsh sâdra drvatô, ushtatâtem\nakaranem ýazamaide, ushtatâityaca vîspem ashavanem\nheñtemca bavañtemca bûshyañtemca ýazamaide.\n(...ushta ahurem ... bûshyañtemca ýazamaide(2).)",
+      "en": "And we worship that life-long state of blessedness (for the\nholy) which is the evil man's calamity; yea, we worship his eternal\nsalvation, and with the salvation prayer. And we sacrifice to\nevery saint who exists, who is now coming into existence, and\nwho shall exist in future.",
+      "zh": ""
+    },
+    {
+      "chapter": 18,
+      "verse": 3,
+      "ref": "Vr 18.3",
+      "orig": "ushtavaityå gâthayå hañdâtâ\nýazamaide, ushtavaityå gâthayå ýazamaide\nhâitishca afsmanâca ... tåscâ ýazamaide!!",
+      "en": "",
+      "zh": ""
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "slug": "visperad-14",
+  "siglum": "Vr 14",
+  "title_zh": "維斯帕拉德 第 14 章",
+  "title_en": "Visperad 14",
+  "canon": "avestan",
+  "volume": "visperad",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/visperad/visperad.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "達梅斯特（James Darmesteter）",
+  "en_url": "https://www.avesta.org/visperad/vrsbe.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "ratu": "拉圖",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 14,
+      "verse": 0,
+      "ref": "Vr 14.0",
+      "orig": "ahurem mazdãm ... ratufritîm ýazamaide,\nahunavaitîm gâthãm ashaonîm ashahe ratûm\nýazamaide",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 1,
+      "ref": "Vr 14.1",
+      "orig": "mat-afsmanãm mat-vacastashtîm mat-âzaiñtîm\nmat-peresvîm mat-paiti-peresvîm mat vakhzhibyâca\npatbyasca huframeretãm framaremnãm hufrâyashtãm\nfrâyaêzyañtãm",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 2,
+      "ref": "Vr 14.2",
+      "orig": "hvahmi dãm hvahmi cithre hvahmi zaoshe hvahmi xshathre\nhvahmi ratavô hvahmi âyaptem ýat ahurahe mazdå\nfraoret fraxshne avi manô zrazdâtôit anghuyat\nhaca.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 3,
+      "ref": "Vr 14.3",
+      "orig": "ahunem vairîm ashavanem ashahe ratûm ýazamaide,\nahumeñtem ratumeñtem ashavanem ashahe ratûm\nýazamaide, hô-zî asti ahûmca ratûmca\nýô ahurô mazdå(4).",
+      "en": "Also we worship the Ahuna-vairya, the holy lord of the ritual\norder, the holy lord with its Ahu and its Ratu [(Pazand); for\nHe is the one with the title Ahu and Ratu, who is Ahura Mazda].",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 4,
+      "ref": "Vr 14.4",
+      "orig": "ahunavaityå gâthayå hañdâtâ\nýazamaide, ahunavaityå gâthayå ýazamaide\nhâitishca afsmanâca vacasca vacastashtîmca frasraothremca\nframarethremca fragâthremca frâyashtîmca, thwãm\nâtrem ... tåscâ ýazamaide. ashem vohû...(3).\nýenghê mê ... ýê nå ishtô!!",
+      "en": "And we sacrifice to the constituent parts of the Gatha Ahunavaiti,\nto its chapters, and its metrical lines, its words, and word-structure,\n[and to its heard-recital, and memorized recital, its continuous\nand its steadfast offering].",
+      "zh": ""
+    }
+  ]
+}

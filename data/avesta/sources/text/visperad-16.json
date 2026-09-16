@@ -1,0 +1,66 @@
+{
+  "slug": "visperad-16",
+  "siglum": "Vr 16",
+  "title_zh": "維斯帕拉德 第 16 章",
+  "title_en": "Visperad 16",
+  "canon": "avestan",
+  "volume": "visperad",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/visperad/visperad.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "達梅斯特（James Darmesteter）",
+  "en_url": "https://www.avesta.org/visperad/vrsbe.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "ratu": "拉圖",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 16,
+      "verse": 0,
+      "ref": "Vr 16.0",
+      "orig": "ahurem mazdãm ashavanem ashahe ratûm ... ratufritîm\nýazamaide, ýasnem sûrem haptanghâitîm\nashavanem ashahe ratûm ýazamaide mat-afsmanem mat-vacastashtîm\nmat-âzaiñtîm mat-peresûm mat-paiti-peresûm\nmat vakhzhibyâca patbyasca huframeretem framaremnem hufrâyashtem\nfrâyaêzyañtem hvahmi dãm hvahmi cithre\n> fraxshne avi manô zrazdâtôit anghuyat haca!",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 16,
+      "verse": 1,
+      "ref": "Vr 16.1",
+      "orig": "âtremca idha ahurahe mazdå puthrem ýazamaide,\nâtarsh-cithrêsca ýazatê ýazamaide,\nâtarsh-cithrêsca rashnushca ýazamaide, ashâunãmca\nfravashayô ýazamaide, sraoshemca ýim verethrâjanem\nýazamaide, naremca ýim ashavanem ýazamaide,\nvîspãmca ýãm ashaonô stîm\nýazamaide.",
+      "en": "And we worship the Fire here, Ahura Mazda's son, and the Yazads\nhaving the seed of fire in them, and the Rashnus having the seed\nof fire in them; and we worship the Fravashis of the saints. And\nwe worship Sraosha who smites with victory, and the holy man,\nand the entire creation of the holy (and the clean). 2. And we\nworship the Blessedness and the Fravashi of Zarathushtra Spitama,\nthe saint. And we worship the saints and their blessed Fravashis\n(as of one). And we worship all their Fravashis (as considered\neach apart), and those of the saints within the Province, and\nthose of the saints without the Province, yea, we worship the\nFravashis of holy men and holy women (wherever they may be, those\ndevoted to the Order of the Faith). And we sacrifice to those\nwhose (service) \nfor us in the Yasna Ahura Mazda, the holy, has \nknown as the better, and of these Zarathushtra is the \nliving chief and master. And we sacrifice to the fields \nand the waters, the lands and the plants, and to the \nconstituent parts of the Yasna Haptanghaiti, its \nchapters, its metered lines, its words, and word structure. 1. This piece follows the Haptanghâiti in the Vendîdâd Sâdah; \n it was intended as a sequel to it.",
+      "zh": ""
+    },
+    {
+      "chapter": 16,
+      "verse": 2,
+      "ref": "Vr 16.2",
+      "orig": "zarathushtrahe spitâmahe idha ashaonô ashîmca\nfravashîmca ýazamaide, vîspaêca idha\nashaonô ashîmca fravashîmca ýazamaide,\nvîspå fravashayô ashâunãm ýazamaide,\nâdah'yunãmca ashaonãm fravashayô ýazamaide,\nuzdâh'yunãmca ashaonãm fravashayô ýazamaide,\nnarãmca ashaonãm fravashayô ýazamaide,\nnâirinãmca ashaoninãm fravashayô ýazamaide.",
+      "en": "Having the power to propagate its worship, maintaining it \n unextinguished. De Harlez makes the admirable suggestion,\n \"bright as flame\"; but the Pahlavi renders tokhmak .",
+      "zh": ""
+    },
+    {
+      "chapter": 16,
+      "verse": 3,
+      "ref": "Vr 16.3",
+      "orig": "ýaêshãm nô ahurô mazdå\nashava ýesne paiti vanghô vaêdha aêshãm\nzarathushtrô anghuca ratushca, shôithrya apasca zemasca\nurvaråsca ýazamaide. (...âtremca idha ahurahe\n... urvaråsca ýazamaide(2).)",
+      "en": "Comp. Y. 51.22.",
+      "zh": ""
+    },
+    {
+      "chapter": 16,
+      "verse": 4,
+      "ref": "Vr 16.4",
+      "orig": "ýasnahe haptanghâtôish hañdâtâ\nýazamaide, ýasnahe haptanghâtôish ýazamaide\nhâitishca afsmanâca vacasca vacastashtîmca ...\ntåscâ ýazamaide!!",
+      "en": "Anghushca ratushca here referred to the same person; comp. ahű .\n \n \n<H3 id=chap17",
+      "zh": ""
+    }
+  ]
+}

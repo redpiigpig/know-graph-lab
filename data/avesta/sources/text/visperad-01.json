@@ -1,0 +1,98 @@
+{
+  "slug": "visperad-01",
+  "siglum": "Vr 1",
+  "title_zh": "維斯帕拉德 第 1 章",
+  "title_en": "Visperad 1",
+  "canon": "avestan",
+  "volume": "visperad",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/visperad/visperad.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "達梅斯特（James Darmesteter）",
+  "en_url": "https://www.avesta.org/visperad/vrsbe.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "ratu": "拉圖",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 1,
+      "verse": 1,
+      "ref": "Vr 1.1",
+      "orig": "nivaêdhayemi hañkârayemi ratavô mainyavanãm\nratavô gaêthyanãm ratavô upâpanãm\nratavô upasmanãm ratavô frapterejâtãm\nratavô ravascarâtãm ratavô cangranghâcãm\nashaonãm ashahe rathwãm.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 2,
+      "ref": "Vr 1.2",
+      "orig": "nivaêdhayemi hañkârayemi ýâiryaêibyô\nashahe ratubyô, maidhyôizaremayehe payanghô\nashaonô ashahe rathwô, nivaêdhayemi hañkârayemi\nmaidhyôishemahe vâstrô-dâtainyehe ashaonô\nashahe rathwô, nivaêdhayemi hañkârayemi\npaitishhahyehe hahyehe ashaonô ashahe rathwô, nivaêdhayemi\nhañkârayemi ayâthrimahe fraourvaêshtrimahe\nvarshniharshtaheca ashaonô ashahe rathwô, nivaêdhayemi\nhañkârayemi maidhyâiryehe saredhahe ashaonô\nashahe rathwô, nivaêdhayemi hañkârayemi\nhamaspathmaêdayehe aretô-karethnahe ashaonô\nashahe rathwô.",
+      "en": "I announce, and I (will) complete (my Yasna) to the Yearly\nfestivals, the lords of the ritual order, to Maidyozarem, the\nmilk-giver, the holy lord of the ritual order, and to Maidyoshahem,\nthe pasture-giver, and to Paitishahem, the corn-giver, and to\nAyathrem, the furtherer or breeder, the spender of the seed of\nmales, and to Maidyarem the cold, the holy lord of the ritual\norder, and to Hamaspathmaidyem, the especial time for ritual deeds,\nholy lords of the ritual order.",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 3,
+      "ref": "Vr 1.3",
+      "orig": "nivaêdhayemi hañkârayemi gaêthanãm\nånghairyehe ashaonô ashahe rathwô ýat\nånghairyô zîzanen, nivaêdhayemi hañkârayemi\nstaotanãm ýesnyanãm hañdâtanãm\nhufrâyashtanãm ashaonô ashahe rathwô,\nnivaêdhayemi hañkârayemi staotanãm ýesnyanãm\nhañdâtanãm hufrâyashtanãm ashaonãm\nashaoninãmca ashahe myazdanãm.",
+      "en": "I announce, and I (will) complete (my Yasna) to the settlements\nof the future one, when the future shall produce them as it were\nanew, and I celebrate and will complete (my Yasna) to the Praises\nof the Yasna collected, completed, and much-offered, and to the\nMyazdas of the saints of the ritual, male and female.",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 4,
+      "ref": "Vr 1.4",
+      "orig": "nivaêdhayemi hañkârayemi saredhaêibyô\nashahe ratubyô ahunahe vairyehe frasraothrahe ashaonô\nashahe rathwô, nivaêdhayemi hañkârayemi\nashahe vahishtahe staothwahe ashaonô ashahe rathwô,\nnivaêdhayemi hañkârayemi ýenghê-\nhâtayå hufrâyashtayå ashaonyå ashahe\nrathwô.",
+      "en": "And I announce, and will complete (my Yasna) to the Seasons,\nthe lords of the ritual order, and to the heard recital of the\nAhuna-vairya, and to Righteousness the Best, to him who has (?)\nour praise, and to the Yenghe hatam , the frequent chant of sacrifice,\nthe holy, and ruling in the ritual order.",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 5,
+      "ref": "Vr 1.5",
+      "orig": "nivaêdhayemi hañkârayemi ahunavaityå\ngâthayå ashaonyå ashahe rathwô,\nnivaêdhayemi hañkârayemi khenãnãm\npouru-saredhô-vîrô-vãthwanãm\nmazdadhâtanãm ashaonãm ashahe rathwãm,\nnivaêdhayemi hañkârayemi ahumatô ratumatô\nashaonô ashahe rathwô, nivaêdhayemi hañkârayemi\nýasnahe haptanghâtôish ashaonô ashahe\nrathwô, nivaêdhayemi hañkârayemi areduyå\nâpô anâhitayå ashaonyå ashahe rathwô.",
+      "en": "And I announce and complete (my Yasna) to the Gatha Ahunavaiti,\nthe holy, ruling in the ritual order, and to those women who bring\nforth many sons of many talents, Mazda-given, and holy lords of\nthe ritual order, and to that (chant) which has its Ahu and its\nRatu (before it in the Yasna).\nAnd I celebrate, and will complete (my sacrifice) to the Yasna Haptanghaiti , \nholy, and ruling in the ritual order, [and to the\nwater Ardvi Anahita].",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 6,
+      "ref": "Vr 1.6",
+      "orig": "nivaêdhayemi hañkârayemi ushtavaityå\ngâthayå ashaonyå ashahe rathwô, nivaêdhayemi\nhañkârayemi gairinãm ashahvâthranãm\npouru-hvâthranãm mazdadhâtanãm ashaonãm\nashahe rathwãm, nivaêdhayemi hañkârayemi\nspeñtâ-manyêush gâthayå ashaonyå\nashahe rathwô, nivaêdhayemi hañkârayemi\nverethrakhnahe ahuradhâtahe vanaiñtyåsca uparatâtô\nashaonô ashahe rathwô.",
+      "en": "And I announce, and I (will) complete (my Yasna) to the Gatha\nUshtavaiti, the holy, ruling in the ritual order, and to the mountains\nwhich shine with holiness, the abundantly brilliant and Mazda-made,\nthe holy lords of the ritual order.\nAnd I announce, and (will) complete (my Yasna) to the Gatha Spenta-mainyu,\nthe holy, ruling in the ritual order; and I celebrate and will\ncomplete (my Yasna) to Verethraghna (the blow of victory) Ahura-given,\nthe holy lord of the ritual order.",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 7,
+      "ref": "Vr 1.7",
+      "orig": "nivaêdhayemi hañkârayemi vohuxshathrayå\ngâthayå ashaonyå ashahe rathwô, nivaêdhayemi\nhañkârayemi mithrahe vouru-gaoyaotôish râmanasca\nhvâstrahe ashaonô ashahe rathwô, nivaêdhayemi\nhañkârayemi vahishtôishtôish gâthayå\nashaonyå ashahe rathwô, nivaêdhayemi hañkârayemi\ndahmayå vanghuyå âfritôish dahmaheca narsh\nashaonô ukhraheca taxmahe dâmôish upamanahe\nýazatahe ashaonô ashahe rathwô.",
+      "en": "And I announce, and (will) complete (my Yasna) to the Gatha\nVohu-khshathra, holy, ruling in the ritual order, and to Mithra\nof the wide pastures, and to Raman Hvastra, the holy lords of\nthe ritual order. And I celebrate and will complete my Yasna to\nthe Gatha Vahishtoishti, the holy, ruling in the ritual order.\nAnd I celebrate and will complete my Yasna to the good and pious\nPrayer for blessings, the benediction of the pious, and to that\nYazad, the redoubted and swift Curse of the wise, the holy lord\nof the ritual order.",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 8,
+      "ref": "Vr 1.8",
+      "orig": "nivaêdhayemi hañkârayemi airyamanô\nishyehe ashaonô ashahe rathwô, nivaêdhayemi\nhañkârayemi fshûshô-mãthrahe\nashaonô ashahe rathwô, nivaêdhayemi hañkârayemi\nratêush berezô hadhaoxtahe ashaonô ashahe rathwô.",
+      "en": "And I announce, and (will) complete (my Yasna) to the Airyema-ishyo,\nthe holy lord of the ritual order, and to the Fshusho-mathra ,\nand to that lofty lord Hadhaokhdha , the holy lord of the ritual\norder.",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 9,
+      "ref": "Vr 1.9",
+      "orig": "nivaêdhayemi hañkârayemi âhurôish\nfrashnahe âhurôish tkaêshahe âhurôish\ndâh'yumahe âhurôish zarathushtrôtemahe\nashaonô ashahe rathwô, nivaêdhayemi hañkârayemi\nhadishaheca vâstravatô vâstrô-beretaheca\ngave hudhånghe gaoidyeheca narsh ashaonô!!",
+      "en": "And I announce, and (will) complete (my Yasna) to the questions\nasked of Ahura, and to the lore of Ahura, to the Ahurian Dahvyuma \n( Dahyuma ), and to the Ahurian Zarathushtrotema, holy lords of\nthe ritual order, and to the farm-house with its pastures \nwhich give pasture to the Kine of blessed gift, and to the holy cattle-breeding\nman.",
+      "zh": ""
+    }
+  ]
+}

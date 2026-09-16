@@ -1,0 +1,98 @@
+{
+  "slug": "visperad-19",
+  "siglum": "Vr 19",
+  "title_zh": "維斯帕拉德 第 19 章",
+  "title_en": "Visperad 19",
+  "canon": "avestan",
+  "volume": "visperad",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/visperad/visperad.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "達梅斯特（James Darmesteter）",
+  "en_url": "https://www.avesta.org/visperad/vrsbe.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "ratu": "拉圖",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 19,
+      "verse": 0,
+      "ref": "Vr 19.0",
+      "orig": "ahurem mazdãm ashavanem ashahe ratûm ... ratufritîm\nýazamaide, speñtâ-mainyûm gâthãm\nashaonîm ashahe ratûm ýazamaide mat-afsmanãm\nmat-vacastashtîm mat-âzaiñtîm mat-peresvîm\nmat-paiti-peresvîm mat vakhzhibyâca patbyasca huframeretãm\nframaremnãm hufrâyashtãm frâyaêzyañtãm\nhvahmi dãm ... fraxshne avi manô zrazdâtôit\nanghuyat haca!",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 19,
+      "verse": 1,
+      "ref": "Vr 19.1",
+      "orig": "speñtem ahurem mazdãm ýazamaide, speñtem\nameshê speñtê ýazamaide, speñtem\nnarem ashavanem ýazamaide, speñtem paras-xrathwem\nýazamaide, speñtãm vanguhîm ârmaitîm\nýazamaide, speñtô-dâtâish dâmãn\nashavanô ýazamaide, dâmãn manas-paoirya\nashavanô ýazamaide, xratûm vîspô-vîdhvånghem\nýazamaide ýim ahurem mazdãm.",
+      "en": "We worship Ahura Mazda the bountiful; and we worship the Bountiful\nImmortals (saying the Spenta). And we sacrifice to the bountiful\nsaint, and to the bountiful anticipative understanding. Also we\nsacrifice to the good and bountiful Armaiti (the ready mind).\nAnd we worship her together with the bountiful creatures in the\ncreation of the pure. And we sacrifice to the holy creatures who\nhave intelligence as their first, (to those foremost in their\nmind). And we worship the omniscient understanding, and Him who\nis Ahura Mazda (Himself).",
+      "zh": ""
+    },
+    {
+      "chapter": 19,
+      "verse": 2,
+      "ref": "Vr 19.2",
+      "orig": "hvare raocô ýazamaide, hvare barezishtem barezimanãm\nýazamaide, hvareca ameshê speñtê ýazamaide,\nhvarshtå mãthrå ýazamaide, hvanvaitîsh\nverezô ýazamaide, âtat hvarenô ýazamaide,\nâtaredâta vãthwa ýazamaide, ashava frathasvô\nýazamaide, dâmîm ýazamaide ýãm\nârmaitîm speñtãm ýehe dâthre\nashaheca ashaonãmca asha-paoiryanãm dâmanãm.\n(speñtem ahurem ... dâmanãm(2).)",
+      "en": "And we sacrifice to the shining sun,\nwhich is the highest of the high; yea, we worship the sun together\nwith the Bountiful Immortals, and the Manthras with their good\nceremonies. Also we sacrifice to the glorious achievements, and\nto this glory (which we have gained). And we sacrifice to the\nherds which have the Fire and its blessings. Also we worship the\nholy benefit which is so widely diffused, and that wisdom which\nis the bounteous Armaiti, whose are the laws of the Righteous\nOrder, and of those holy creatures who have Righteousness as their\nfirst. 1. The word spenta throughout alludes to the Gâtha Spentâmainyu, \n but it is of course not without grammatical application. 2. In the Bundahishm especially referred to Ahura.",
+      "zh": ""
+    },
+    {
+      "chapter": 19,
+      "verse": 3,
+      "ref": "Vr 19.3",
+      "orig": "speñtâ-mainyêush gâthayå hañdâtâ\nýazamaide, speñtâ-mainyêush gâthayå\nýazamaide hâitishca afsmanâca ... tåscâ\nýazamaide!!",
+      "en": "Or, \"together with the bountiful creatures we worship the holy creatures.\"",
+      "zh": ""
+    },
+    {
+      "chapter": 19,
+      "verse": 4,
+      "ref": "Vr 19.4",
+      "orig": "",
+      "en": "This expression may have been accidentally determined by \n the position of the word manô in the Ahuna vairya [Ahunwar] formula; \n see Y. 19.12.",
+      "zh": ""
+    },
+    {
+      "chapter": 19,
+      "verse": 5,
+      "ref": "Vr 19.5",
+      "orig": "",
+      "en": "Or, \"the well-fulfilled.\"",
+      "zh": ""
+    },
+    {
+      "chapter": 19,
+      "verse": 6,
+      "ref": "Vr 19.6",
+      "orig": "",
+      "en": "\"Fire-made\" is unintelligible; \"fire gifts-having\" may refer to \n the flocks and herds, as expressing the source of that prosperity \n which is represented by the holy Fire.",
+      "zh": ""
+    },
+    {
+      "chapter": 19,
+      "verse": 7,
+      "ref": "Vr 19.7",
+      "orig": "",
+      "en": "Pahl. fravaft sűd .",
+      "zh": ""
+    },
+    {
+      "chapter": 19,
+      "verse": 8,
+      "ref": "Vr 19.8",
+      "orig": "",
+      "en": "Dâthra with K4.\n \n \n<H3 id=chap20",
+      "zh": ""
+    }
+  ]
+}

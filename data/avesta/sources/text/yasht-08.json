@@ -1,0 +1,516 @@
+{
+  "slug": "yasht-08",
+  "siglum": "Yt 8",
+  "title_zh": "亞什特 第 8 首‧提什特里亞讚（天狼星讚）",
+  "title_en": "Yasht 8",
+  "canon": "avestan",
+  "volume": "yasht",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/ka/yt8.htm",
+  "en_source": "《東方聖書》第 23 卷，1883；公有領域",
+  "en_translator": "達梅斯特（James Darmesteter）",
+  "en_url": "https://www.avesta.org/ka/yt8sbe.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Mithra": "密特拉",
+    "Anahita": "阿娜希塔",
+    "Tishtrya": "提什特里亞",
+    "Verethraghna": "韋雷特拉格納",
+    "Vayu": "瓦尤",
+    "Rashnu": "拉什努",
+    "Sraosha": "斯勞沙",
+    "fravashi": "弗拉瓦希",
+    "khvarenah": "赫瓦雷納",
+    "daeva": "迭瓦",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 8,
+      "verse": 0,
+      "ref": "Yt 8.0",
+      "orig": "(pa nãm i ýazdã, hôrmezd i hvadâe\ni awazûnî gurz hvarahe awazâyât,\ntishtar i rayômañd i hvarahemañd bê\nrasât,\n ezh hamâ gunâh ... pa patit hôm!) \nxshnaothra ahurahe mazdå tarôidîti angrahe mainyêush,\nhaithyâvarshtãm hyat vasnâ ferashôtemem.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 1,
+      "ref": "Yt 8.1",
+      "orig": "mraot ahurô mazdå spitamâi zarathushtrâi,\npånghahe anghuthwemca ratuthwemca,\nmånghemca maêthanemca\nmyazdemca frâ-ýazamaide,\nýat mê stârô hvarenanguhañtô\nhacåñte paraca må\nnerebyô hvarenô baxsheñti,\nýazâi shôithrahe baxtârem\ntishtrîm stârem zaothrâbyô,",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 2,
+      "ref": "Yt 8.2",
+      "orig": "tishtrîm stârem raêvañtem\nhvarenanguhañtem ýazamaide\nrâma-shayanem hushayanem\naurushem raoxshnem frâderesrem\nvyâvañtem baêshazîm\nravô-fraothmanem berezañtem\ndûrât vyâvañtem bânubyô\nraoxshnibyô anâhitaêibyô,\napemca perethu-zrayanghem\nvanguhîmca dûrât frasrutãm\ngêushca nãma mazdadhâtem\nukhremca kavaêm hvarenô\nfravashîmca spitamahe\nashaonô zarathushtrahe.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 3,
+      "ref": "Yt 8.3",
+      "orig": "ahe raya hvarenanghaca\ntem ýazâi surunvata ýasna\ntishtrîm stârem zaothrâbyô,\ntishtrîm stârem raêvañtem\nhvarenanguhañtem ýazamaide\nhaomayô gava baresmana\nhizvô danghangha mãthraca\nvacaca shyaothnaca zaothrâbyasca\narshuxdhaêibyasca vâkhzhibyô.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 4,
+      "ref": "Yt 8.4",
+      "orig": "tishtrîm stârem raêvañtem\nhvarenanguhañtem ýazamaide\nafshcithrem sûrem berezañtem\namavañtem dûraêsûkem\nberezañtem uparô-kairîm\nýahmât haca berezât haosravanghem\napãm nafedhrat haca cithrem.\nahe raya ... tåscâ ýazamaide (See verse 3).",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 5,
+      "ref": "Yt 8.5",
+      "orig": "tishtrîm stârem raêvañtem\nhvarenanguhañtem ýazamaide\nýim paitishmareñte pasvasca staorâca\nmashyâca parô dareshvãnô\nkaêtaca parô druzhiñtô,\nkadha-nô aoi uzyarât\ntishtryô raêvå hvarenanguhå\nkadha xå aspô-staoyehîsh\napãm tacåñti nava,\nahe raya ... tåscâ ýazamaide (See verse 3).",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 6,
+      "ref": "Yt 8.6",
+      "orig": "tishtrîm stârem raêvañtem\nhvarenanguhañtem ýazamaide\nýô avavat xshvaêwô vazâite\navi zrayô vourukashem\nýatha tikhrish mainyavaså\nýim anghat erexshô xshviwi-ishush\nxshviwi-ishvatemô airyanãm\nairyô-xshuthat haca garôit\nhvanvañtem avi gairîm.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 7,
+      "ref": "Yt 8.7",
+      "orig": "tadha dim ahurô mazdå avãn dâta tat\nâpô urvaråsca\npairi-shê vouru-gaoyaoitish\nmithrô frâdhayat pañtãm.\nahe raya ... tåscâ ýazamaide (See verse 3)!",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 8,
+      "ref": "Yt 8.8",
+      "orig": "tishtrîm stârem raêvañtem\nhvarenanguhañtem ýazamaide\nýô pairikå taurvayeiti\nýô pairikå titârayeiti\nýå stârô keremå patañti\nañtare zãm asmanemca\nzraya vourukashaya\namavatô huraodhahe\njafrahe uruyâpahe,\nbâdha vairîm âcaraiti\naspô-kehrpãm ashaonîm upâca tå\nâpô ýaozayeiti aiwica vâta våñti\nýaoxtivañtô.",
+      "en": "TISHTAR YASHT (Hymn to Tishtrya) \n This digital edition copyright © 1995 by\nJoseph H. Peterson. All rights reserved. \nTranslated by James Darmesteter, From Sacred Books of the East , American Edition, 1898.\nTishtrya is the angel (Yazad) of the star Sirius. Tishtrya also presides over the\nfourth month and the thirteenth day of each month, and also directs the rain. 0. May Ahura Mazda be rejoiced!....\nAshem Vohu: Holiness is the best of all good....\nI confess myself a worshipper of Mazda, a follower of Zarathushtra,\none who hates the Daevas and obeys the laws of Ahura;\nFor sacrifice, prayer, propitiation, and glorification unto [Havani],\nthe holy and master of holiness....\nUnto Tishtrya, the bright and glorious star, and unto the powerful\nSatavaesa, made by Mazda, who pushes waters forward,\nBe propitiation, with sacrifice, prayer, propitiation, and glorification.\nYatha ahu vairyo: The will of the Lord is the law of holiness.... 1. Ahura Mazda spake unto Spitama Zarathushtra, saying: 'We worship\nthe lordship and mastership [of Tishtrya], whereby he protects\nthe Moon, the dwelling, the food, when my glorious stars come\nalong and impart their gifts to men. I will sacrifice unto the\nstar Tishtrya, that gives the fields their share [of waters]. 2. 'We offer up libations unto Tishtrya, the bright and glorious\nstar, that gives happy dwelling and good dwelling; the white,\nshining, seen afar, and piercing; the health-bringing, loud-snorting,\nand high, piercing from afar with its shining, undefiled rays;\nand unto the waters of the wide sea, the Vanguhi of wide renown,\nand the species of the Bull, made by Mazda, the awful kingly Glory,\nand the Fravashi of the holy Spitama Zarathushtra. 3. 'For his brightness and glory, I will offer unto him a sacrifice\nworth being heard, namely, unto the star Tishtrya.\n'Unto Tishtrya, the bright and glorious star, we offer up the\nlibations, the Haoma and meat, the baresma, the wisdom of the\ntongue, the holy spells, the speech, the deeds, the libations,\nand the rightly-spoken words.\n'Yenhe hatam: All those beings of whom Ahura Mazda.... 4. 'We sacrifice unto Tishtrya, the bright and glorious star,\nwho is the seed of the waters, powerful, tall, and strong, whose\nlight goes afar; powerful and highly working, through whom the\nbrightness and the seed of the waters come from the high Apam\nNapat.\n'For his brightness and glory, I will offer him a sacrifice worth\nbeing heard.... 5. 'We sacrifice unto Tishtrya, the bright and glorious star;\nfor whom long flocks and herds and men, looking forward for him\nand deceived in their hope: \"When shall we see him rise up,\nthe bright and glorious star Tishtrya? When will the springs run\nwith waves as thick as a horse's size and still thicker? Or will\nthey never come?\"\n'For his brightness and glory, I will offer him a sacrifice worth\nbeing heard.... 6. 'We sacrifice unto Tishtrya, the bright and glorious \nstar; who flies, towards the sea Vouru-Kasha, \nas swiftly as the arrow darted through the \nheavenly space, which Erekhsha, the swift archer,\nthe Arya amongst the Aryas whose arrow was the swiftest, shot\nfrom Mount Khshaotha to Mount Hvanvant. 7. 'For Ahura Mazda gave him assistance; so did the waters and\nthe plants; and Mithra, the lord of wide pastures, opened a wide\nway unto him.\n'For his brightness and glory, I will offer him a sacrifice worth\nbeing heard.... 8. 'We sacrifice unto Tishtrya, the bright and glorious star,\nthat afflicts the Pairikas, that vexes the Pairikas, who, in the\nshape of worm-stars, fly between the earth and the heavens, in\nthe sea Vouru-Kasha, the powerful sea, the large-sized, deep sea\nof salt waters. He goes to its lake in the shape of a horse, in\na holy shape; and down there he makes the waters boil over, and\nthe winds flow above powerfully all around.",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 9,
+      "ref": "Yt 8.9",
+      "orig": "âat tå âpô frashavayeiti satavaêsô\navi haptô-kareshvairîsh,\nvyâhva ýat jasaiti\nsrîrô hishtaiti râmanivå\nhuyâiryå avi dainghush,\nkadha airyå dainghâvô\nhuyâiryå bavåñti.\nahe raya ... tåscâ ýazamaide (See verse 3)!",
+      "en": "'Then Satavaesa makes those waters flow down to the seven\nKarshvares of the earth, and when he has arrived down there, he\nstands, beautiful, spreading ease and joy on the fertile countries\n(thinking in himself): \"How shall the countries of the Aryas\ngrow fertile?\"\n'For his brightness and glory, I will offer him a sacrifice worth\nbeing heard....",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 10,
+      "ref": "Yt 8.10",
+      "orig": "tishtrîm stârem raêvañtem hvarenanguhañtem\nýazamaide,\nýô aoxta ahurâi mazdâi uityaojanô,\nahura mazda mainyô\nspênishta dâtare gaêthanãm\nastvaitinãm ashâum",
+      "en": "'We sacrifice unto Tishtrya, the bright and glorious star,\nwho spoke unto Ahura Mazda, saying: \"Ahura Mazda, most beneficent\nSpirit, Maker of the material world, thou Holy One!",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 11,
+      "ref": "Yt 8.11",
+      "orig": "ýedhi-zî-mâ mashyâka aoxtô-nâmana\nýasna ýazayañta ýatha anye ýazatånghô\naoxtô-nâmana ýasna ýaziñti\nfrâ neruyô ashavaoyô\nthwarshtahe zrû âyu shushuyãm\nhvahe gayehe hvanvatô ameshahe\nupa thwarshtahe jakhmyãm\naêvãm vâ avi xshapanem\nduyê vâ pañcâsatem vâ.",
+      "en": "'\"If men would worship me with a sacrifice in which I\nwere invoked by my own name, as they worship the other Yazatas\nwith sacrifices in which they are invoked by their own names,\nthen I should have come to the faithful at the appointed time;\nI should have come in the appointed time of my beautiful, immortal\nlife, should it be one night, or two nights, or fifty, or a hundred\nnights.\"",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 12,
+      "ref": "Yt 8.12",
+      "orig": "tishtrîmca ýazamaide, tishtryaêinyasca\nýazamaide upa-paoirîmca ýazamaide paoiryaêinyasca\nýazamaide ave strêush ýã haptôiriñga\npaitishtâtêe ýâthwãm pairikanãmca,\nvanañtem stârem mazdadhâtem ýazamaide\namaheca paiti hutâshtahe verethrakhnaheca paiti ahuradhâtahe\nvanaiñtyåsca paiti uparatâtô vîtare-ãzahyehe\npaiti vîtare- tbaêshahyeheca, tishtrîm drvô-cashmanem\nýazamaide.",
+      "en": "'We sacrifice unto Tishtrya;\n'We sacrifice unto the rains of Tishtrya.\n'We sacrifice unto the first star; we sacrifice unto the rains\nof the first star.\n'I will sacrifice unto the stars Haptoiringa, to oppose the Yatus\nand Pairikas.\n'We sacrifice unto Vanant, the star made by Mazda; for the well-shapen\nstrength, for the Victory, made by Ahura, for the crushing Ascendant,\nfor the destruction of what distresses us, for the destruction\nof what persecutes us.\n'We sacrifice unto Tishtrya, whose eye-sight is sound.",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 13,
+      "ref": "Yt 8.13",
+      "orig": "paoiryå dasa xshapanô spitama zarathushtra tishtryô\nraêvå hvarenanguhå kehrpem raêthwayeiti\nraoxshnushva vazemnô\nnarsh kehrpa pañca-dasanghô\nxshaêtahe spiti-dôithrahe\nberezatô avi-amahe\namavatô hunairyåñcô",
+      "en": "'For ten nights, O Spitama Zarathushtra! Tishtrya, the bright\nand glorious star, mingles his shape with light, moving in the\nshape of a man of fifteen years of age, bright, with clear eyes,\ntall, full of strength, strong, and clever.",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 14,
+      "ref": "Yt 8.14",
+      "orig": "tadha ayaosh ýatha paoirîm\nvîrem avi ýå bavaiti\ntadha ayaosh ýatha paoirîm\nvîrem avi amô aêiti\ntadha ayaosh ýatha paoirîm\nvîrem erezushãm adaste.",
+      "en": "'He is active as the first man was; he goes on with the strength\nof the first man; he has the virility of the first man.",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 15,
+      "ref": "Yt 8.15",
+      "orig": "hô ithra vyâxmanyeiti\nhô ithra paresanyeiti,\nkô mãm nûrãm frâyazâite\ngaomavaitibyô haomavaitibyô zaothrâbyô,\nkahmâi azem dadhãm vîrayãm îshtîm\nvîrayãm vãthwãm havaheca urunô\nýaozhdâthrem,\nnûrãm ahmi ýesnyasca\nvahmyasca anguhe astvaite\nashât haca ýat vahishtât.",
+      "en": "'Here he calls for people to assemble, here he asks, saying:\n\"Who now will offer me the libations with the Haoma and the\nholy meat? To whom shall I give wealth of male children, a troop\nof male children, and the purification of his own soul? Now I\nought to receive sacrifice and prayer in the material world, by\nthe law of excellent holiness.\"",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 16,
+      "ref": "Yt 8.16",
+      "orig": "bityå dasa xshapanô spitama zarathushtra tishtryô\nraêvå hvarenanguhå kehrpem raêthwayeiti\nraoxshnushva vazemnô\ngêush kehrpa zaranyô-srvahe.",
+      "en": "'The next ten nights, O Spitama Zarathushtra! the bright and\nglorious Tishtrya mingles his shape with light, moving in the\nshape of a golden-horned bull.",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 17,
+      "ref": "Yt 8.17",
+      "orig": "hô ithra vyâxmanyeiti\nhô ithra paresanyeiti,\nkô mãm nûrãm frâyazâite\ngaomavaitibyô haomavaitibyô zaothrâbyô\nkahmâi azem dadhãm gaoyãm îshtîm\ngaoyãm vãthwãm havaheca urunô ýaozhdâthrem,\nnûrãm ahmi ýesnyasca\nvahmyasca anguhe astvaite\nashât haca ýat vahishtât.",
+      "en": "'Here he calls for people to assemble, here he asks, saying:\n\"Who now will offer me the libations with the Haoma and the\nholy meat? To whom shall I give wealth of oxen, a herd of oxen,\nand the purification of his own soul? Now I ought to receive sacrifice\nand prayer in the material world, by the law of excellent holiness.\"",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 18,
+      "ref": "Yt 8.18",
+      "orig": "thrityå dasa xshapanô spitama zarathushtra tishtryô\nraêvå hvarenanguhå kehrpem raêthwayeiti\nraoxshnushva vazemnô\naspahe kehrpa aurushahe\nsrîrahe zairi-gaoshahe\nzaranyô-aiwidhânahe.",
+      "en": "'The next ten nights, O Spitama Zarathushtra! the bright and\nglorious Tishtrya mingles his shape with light, moving in the\nshape of a white, beautiful horse, with golden ears and a golden\ncaparison.",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 19,
+      "ref": "Yt 8.19",
+      "orig": "hô ithra vyâxmanyeiti\nhô ithra paresanyeiti,\nkô mãm nûrãm frâyazâite\ngaomavaitibyô haomavaitibyô zaothrâbyô\nkahmâi azem dadhãm aspayãm îshtîm\naspayãm vãthwãm havaheca urunô ýaozhdâthrem,\nnûrãm ahmi ýesnyasca\nvahmyasca anguhe astvaite\nashât haca ýat vahishtât.",
+      "en": "'Here he calls for people to assemble, here he asks, saying:\n\"Who now will offer me the libations with the Haoma and the\nholy meat? To whom shall I give wealth of horses, a troop of horses,\nand the purification of his own soul? Now I ought to receive sacrifice\nand prayer in the material world, by the law of excellent holiness.\"",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 20,
+      "ref": "Yt 8.20",
+      "orig": "âat paiti avâiti spitama zarathushtra\ntishtryô raêvå hvarenanguhå\navi zrayô vourukashem\naspahe kehrpa aurushahe\nsrîrahe zairi-gaoshahe\nzaranyô-aiwidhânahe.",
+      "en": "'Then, O Spitama Zarathushtra! the bright and glorious Tishtrya\ngoes down to the sea Vouru-Kasha in the shape of a white, beautiful\nhorse, with golden ears and a golden caparison.",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 21,
+      "ref": "Yt 8.21",
+      "orig": "â-dim paiti-ýãsh nizhdvaraiti\ndaêvô ýô apaoshô\naspahe kehrpa sâmahe\nkaurvahe kaurvô-gaoshahe\nkaurvahe kaurvô-bareshahe\nkaurvahe kaurvô-dûmahe\ndakhahe aiwidhâtô-tarshtôish.",
+      "en": "'But there rushes down to meet him the Daeva Apaosha, in the\nshape of a dark horse, black with black ears, black with a black\nback, black with a black tail, stamped with brands of terror.",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 22,
+      "ref": "Yt 8.22",
+      "orig": "hãm tâcit bâzush baratô spitama zarathushtra\ntishtryasca raêvå hvarenanguhå daêvasca\nýô apaoshô\ntå ýûidhyathô spitama zarathushtra\nthri-ayarem thri-xshaparem, â-dim bavaiti aiwi-aojå\nâ-dim bavaiti aiwi-vanyå daêvô ýô\napaoshô tishtrîm raêvañtem hvarenanguhañtem.",
+      "en": "'They meet together, hoof against hoof, O Spitama Zarathushtra!\nthe bright and glorious Tishtrya and the Daeva Apaosha. They fight\ntogether, O Spitama Zarathushtra! for three days and three nights.\nAnd then the Daeva Apaosha proves stronger than the bright and\nglorious Tishtrya, he overcomes him.",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 23,
+      "ref": "Yt 8.23",
+      "orig": "apa-dim adhât vyeiti\nzrayanghat haca vourukashât\nhâthrô-masanghem adhwanem,\nsâdrem urvishtremca nimrûite\ntishtryô raêvå hvarenanguhå\nsâdrem mê ahura mazda\nurvishtrem âpô urvaråsca\nbaxtem daêne mâzdayesne, nôit mãm nûrãm\nmashyâka aoxtô- nâmana ýasna ýazeñte\nýatha anye ýazatånghô aoxtô- nâmana\nýasna ýazeñti.",
+      "en": "'And Tishtrya flees from the sea Vouru-Kasha, as far as a\nHathra's length. He cries out in woe and distress, the bright\nand glorious Tishtrya: \"Woe is me, O Ahura Mazda! I am in\ndistress, O Waters and Plants! O Fate and thou, Law of the worshippers\nof Mazda! Men do not worship me with a sacrifice in which I am\ninvoked by my own name, as they worship the other Yazatas with\nsacrifices in which they are invoked by their own names.",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 24,
+      "ref": "Yt 8.24",
+      "orig": "ýeidhi-zî-mâ mashyâka aoxtô-nâmana\nýasna ýazayañta ýatha anye ýazatånghô\naoxtô-nâmana ýasna ýazeñti\navi mãm avi-bawryãm\ndasanãm aspanãm aojô\ndasanãm ushtranãm aojô\ndasanãm gavãm aojô\ndasanãm gairinãm aojô\ndasanãm apãm nâvayanãm aojô.",
+      "en": "'\"If men had worshipped me with a sacrifice in which\nI had been invoked by my own name, as they worship the other Yazatas\nwith sacrifices in which they are invoked by their own names,\nI should have taken to me the strength of ten horses, the strength\nof ten camels, the strength of ten bulls, the strength of ten\nmountains, the strength of ten rivers.\"",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 25,
+      "ref": "Yt 8.25",
+      "orig": "azem ýô ahurô mazdå tishtrîm\nraêvañtem hvarenanguhañtem aoxtô-nâmana\nýasna ýaze,\navi dim avi-barâmi\ndasanãm aspanãm aojô\ndasanãm ushtranãm aojô\ndasanãm gavãm aojô\ndasanãm gairinãm aojô\ndasanãm apãm nâvayanãm aojô.",
+      "en": "'Then I, Ahura Mazda, offer up to the bright and glorious\nTishtrya a sacrifice in which he is invoked by his own name, and\nI bring him the strength of ten horses, the strength of ten camels,\nthe strength of ten bulls, the strength of ten mountains, the\nstrength of ten rivers.",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": "26-28",
+      "ref": "Yt 8.26-28",
+      "orig": "âat paiti avâiti spitama zarathushtra tishtryô\nraêvå hvarenanguhå avi zrayô vourukashem\n... (See verse 20)\ntå ýûidhyathô zarathushtra\nâ-rapithwinem zrvânem, â-dim bavaiti aiwi-aojå\nâ-dim bavaiti aiwi-vanyå tishtryô raêvå\nhvarenanguhå daêûm ýim apaoshem.",
+      "en": "'Then, O Spitama Zarathushtra! the bright and glorious Tishtrya\ngoes down to the sea Vouru-Kasha in the shape of a white, beautiful\nhorse, with golden ears and golden caparison.\n'But there rushes down to meet him the Daeva Apaosha in the\nshape of a dark horse, black with black ears, black with a black\nback, black with a black tail, stamped with brands of terror.\n'They meet together, hoof against hoof, O Spitama Zarathushtra!\nthe bright and glorious Tishtrya, and the Daeva Apaosha; they\nfight together, O Zarathushtra! till the time of noon. Then the\nbright and glorious Tishtrya proves stronger than the Daeva Apaosha,\nhe overcomes him.",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 29,
+      "ref": "Yt 8.29",
+      "orig": "apa-dim adhât vyeiti\nzrayanghat haca vourukashât\nhâthrô-masanghem adhwanem,\nushtatâtem nimravaite\ntishtryô raêvå hvarenanguhå\nushta-mê ahura mazda\nushta âpô urvaråsca\nushta daêne mâzdayesne\nushta â-bavât dainghavô\nus vô apãm adhavô\napaiti-eretå jasåñti\nash-dânunãmca ýavanãm\nkasu-dânunãmca vâstranãm\ngaêthanãmca astvaitinãm.",
+      "en": "'Then he goes from the sea Vouru-Kasha as far as a Hathra's\nlength: \"Hail!\" cries the bright and glorious Tishtrya.\n\"Hail unto me, O Ahura Mazda! Hail unto you, O waters and\nplants! Hail, O Law of the worshippers of Mazda! Hail will it\nbe unto you, O lands! The life of the waters will flow down unrestrained\nto the big-seeded corn fields, to the small-seeded pasture-fields,\nand to the whole of the material world!\"",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 30,
+      "ref": "Yt 8.30",
+      "orig": "âat paiti avâiti spitama zarathushtra tishtryô\nraêvå hvarenanguhå\navi zrayô vourukashem\naspahe kehrpa aurushahe\nsrîrahe zairi-gaoshahe\nzaranyô-aiwidhânahe.",
+      "en": "Then the bright and glorious Tishtrya goes back down to the\nsea Vouru-Kasha, in the shape of a white, beautiful horse, with\ngolden ears and a golden caparison.",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 31,
+      "ref": "Yt 8.31",
+      "orig": "hô zrayô âyaozayeiti\nhô zrayô vîvaozayeiti\nhô zrayô âkhzrâdhayeiti\nhô zrayô vîkhzrâdhayeiti\nhô zrayô âkhzhârayeiti\nhô zrayô vîkhzhârayeiti\nýaozeñti vîspe karanô\nzrayâi vourukashaya\nâ vîspô maidhyô ýaozaiti.",
+      "en": "'He makes the sea boil up and down; he makes the sea stream\nthis and that way; he makes the sea flow this and that way: all\nthe shores of the sea Vouru-Kasha are boiling over, all the middle\nof it is boiling over.",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 32,
+      "ref": "Yt 8.32",
+      "orig": "us paiti adhât hishtaiti spitama zarathushtra tishtryô\nraêvå hvarenanguhå zrayanghat haca vourukashât,\nus adhât hishtât satavaêsô raêvå\nhvarenanguhå zrayanghat haca vourukashât,\nâat tat dunmãn hãm-hishteñti\nus hiñdavat paiti garôit ýô hishtaite\nmaidhim zrayanghô vourukashahe.",
+      "en": "'And the bright and glorious Tishtrya rises up from the sea\nVouru-Kasha, O Spitama Zarathushtra! the bright and glorious Satavaesa\nrises up from the sea Vouru-Kasha; and vapours rise up above Mount\nUs-hindu, that stands in the middle of the sea Vouru-Kasha.",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 33,
+      "ref": "Yt 8.33",
+      "orig": "âat tat dunmãn frashâupayeiti\nmaêkhô-kara ashavanô\nfrâ pourvô vâtãm vazaiti ýãm\npathô âiti haomô frâshmish frâdat-\ngaêthô,\nathra pascaêta vazaite\nvâtô darshish mazdadhâtô\nvâremca maêkhemca fyanghumca\navi aså avi shôithrå\navi karshvãn ýâish hapta.",
+      "en": "'Then the vapours push forward, in the regular shape of clouds;\nthey go following the wind, along the ways which Haoma traverses,\nthe increaser of the world. Behind him travels the mighty wind,\nmade by Mazda, and the rain, and the cloud, and the sleet, down\nto the several places, down to the fields, down to the seven Karshvares\nof the earth.",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 34,
+      "ref": "Yt 8.34",
+      "orig": "apãm napåse-tå âpô spitama\nzarathushtra anguhe astvaite shôithrô-baxtå\nvî-baxshaiti vâtasca ýô darshish awzhdâtemca\nhvarenô ashaonãmca fravashayô.\nahe raya ... tåscâ ýazamaide (See verse 3)!",
+      "en": "'Apam Napat, O Spitama Zarathushtra! divides the waters amongst\nthe countries in the material world, in company with the mighty\nwind, the Glory, made by the waters, and the Fravashis of the\nfaithful.\n'For his brightness and glory, I will offer him a sacrifice worth\nbeing heard....",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 35,
+      "ref": "Yt 8.35",
+      "orig": "tishtrîm stârem raêvañtem hvarenanguhañtem\nýazamaide\nýô avadhât fravazâite\nxshôithnyât hish ushayât\ndûraêurvaêsem paiti pañtãm\nbakhô-baxtem paiti ýaonem\nfrathwarshtem paiti âfeñtem\nzaoshâi ahurahe mazdå\nzaoshâi ameshanãm speñtanãm.\nahe raya ... tåscâ ýazamaide (See verse 3)!",
+      "en": "'We sacrifice unto Tishtrya, the bright and glorious star,\nwho from the shining east, moves along his long winding course,\nalong the path made by the gods, along the way appointed for him\nthe watery way, at the will of Ahura Mazda, at the will of the\nAmesha-Spentas.\n'For his brightness and glory, I will offer him a sacrifice worth\nbeing heard....",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 36,
+      "ref": "Yt 8.36",
+      "orig": "tishtrîm stârem raêvañtem hvarenanguhañtem\nýazamaide\nýim ýâre-carshô mashyehe\nahuraca xratugûtô\naurunaca gairishâcô\nsizhdraca ravascarâtô\nuzyôreñtem hispôseñtem\nhuyâiryâca dainghave\nuzjaseñtem duzhyâiryâca,\nkadha airyå dainghâvô\nhuyâiryå bavåñti.\nahe raya ... tåscâ ýazamaide (See verse 3)!",
+      "en": "'We sacrifice unto Tishtrya, the bright and glorious star,\nwhose rising is watched by men who live on the fruits of the year,\nby the chiefs of deep understanding; by the wild beasts in the\nmountains, by the tame beasts that run in the plains; they watch\nhim, as he comes up to the country for a bad year, or for a good\nyear, (thinking in themselves): \"How shall the Aryan countries\nbe fertile?\"\n'For his brightness and glory, I will offer him a sacrifice worth\nbeing heard....",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 37,
+      "ref": "Yt 8.37",
+      "orig": "tishtrîm stârem raêvañtem hvarenanguhañtem\nýazamaide\nâsu-xshvaêwem xshviwi-vâzem\nýô avavat xshvaêwô vazaite\navi zrayô vourukashem\nýatha tikhrish mainyavaså\nýim anghat erexshô xshviwi-ishush\nxshviwi-ishvatemô airyanãm\nairyô-xshuthat haca garôit\nhvanvañtem avi gairîm.",
+      "en": "'We sacrifice unto Tishtrya, the bright and glorious star,\nswift-flying and swift-moving, who flies towards the sea Vouru-Kasha,\nas swiftly as the arrow darted through the heavenly space, which\nErekhsha, the swift archer, the Arya amongst the Aryas whose arrow\nwas the swiftest, shot from Mount Khshaotha to Mount Hvanvant.",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 38,
+      "ref": "Yt 8.38",
+      "orig": "avi dim ahurô mazdå\navãn ameshå speñta\nvouru-gaoyaoitish hê mithrô\npouru pañtãm fracaêshaêtem\nâ-dim paskât anumarezatem\nashishca vanguhi berezaiti\npâreñdica raoratha\nvîspem-â ahmât ýat aêm\npaiti-apayat vazemnô\nhvanvañtem avi gairîm\nhvanvata paiti nirat.\nahe raya ... tåscâ ýazamaide (See verse 3)!",
+      "en": "'Ahura Mazda gave him assistance, and the Amesha-Spentas and\nMithra, the lord of wide pastures, pointed him the way: behind\nhim went the tall Ashish Vanguhi and Parendi on her light chariot:\nalways till, in his course, he reached Mount Hvanvant on the shining\nwaters.\n'For his brightness and glory, I will offer him a sacrifice worth\nbeing heard....",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 39,
+      "ref": "Yt 8.39",
+      "orig": "tishtrîm stârem raêvañtem hvarenanguhañtem\nýazamaide\nýô pairikå taurvayeiti\nýô pairikå titârayeiti\nýå uzånghat angrô mainyush\nmamnûsh stârãm afshcithranãm\nvîspanãm paiti-eretêe.",
+      "en": "'We sacrifice unto Tishtrya, the bright and glorious star,\nwho afflicts the Pairikas, who destroys the Pairikas, that Angra\nMainyus flung to stop all the stars that have in them the seed\nof the waters.",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 40,
+      "ref": "Yt 8.40",
+      "orig": "tå tishtryô taurvayeiti vîvâiti hish\nzrayanghat haca vourukashât,\nâat maêkha us-fravåñte\nhuyâiryå âpô bareñtish\nýâhva urvâitish awrå\nperethu aipi vîjasâitîsh\navô urvaitîsh hapta karshvãn.\nahe raya ... tåscâ ýazamaide (See verse 3)!",
+      "en": "'Tishtrya afflicts them, he blows them away from the sea Vouru-Kasha;\nthen the wind blows the clouds forward, bearing the waters of\nfertility, so that the friendly showers spread wide over, they\nspread helpingly and friendly over the seven Karshvares.\n'For his brightness and glory, I will offer him a sacrifice worth\nbeing heard....",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 41,
+      "ref": "Yt 8.41",
+      "orig": "tishtrîm stârem raêvañtem hvarenanguhañtem\nýazamaide\nýim âpô paitishmareñte aremaêshtå\nfrâtat-caratasca xãyå thraotô- stâtasca\nparshuyå vairyåsca,",
+      "en": "'We sacrifice unto Tishtrya, the bright and glorious star,\nfor whom long the standing waters, and the running spring-waters,\nthe stream-waters, and the rain-waters:",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 42,
+      "ref": "Yt 8.42",
+      "orig": "kadha-nô avi vyarât\ntishtryô raêvå hvarenanguhå\nkadha xå aspô-staoyehîsh\napãm khzhârãm aiwikhzhârem\nsrîråsca asô-shôithråsca\ngaoyaoitîshca âtaciñtîsh\nâ-vareshajish urvaranãm\nsûra vaxshyeñte vaxsha.\nahe raya ... tåscâ ýazamaide (See verse 3)!",
+      "en": "'\"When will the bright and glorious Tishtrya rise up\nfor us? When will the springs with a flow and overflow of waters,\nthick as a horse's shoulder, run to the beautiful places and fields,\nand to the pastures, even to the roots of the plants, that they\nmay grow with a powerful growth?\"\n'For his brightness and glory, I will offer him a sacrifice worth\nbeing heard....",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 43,
+      "ref": "Yt 8.43",
+      "orig": "tishtrîm stârem raêvañtem hvarenanguhañtem\nýazamaide\nýô vîspâish naênizhaiti simå\napaya vazhedrish uxshyeiti vîspåse-tå dâmãn\nbaêshazyatica sevishtô\nýezi aêm bavaiti ýashtô\nxshnûtô frithô paiti-zañtô.\nahe raya ... tåscâ ýazamaide (See verse 3)!",
+      "en": "'We sacrifice unto Tishtrya, the bright and glorious star,\nwho washes away all things of fear, who stunts the growth of all\n...., and brings health to all these creations, being most beneficent,\nwhen he has been worshipped with a sacrifice and propitiated,\nrejoiced, and satisfied.\n'For his brightness and glory, I will offer him a sacrifice worth\nbeing heard....",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 44,
+      "ref": "Yt 8.44",
+      "orig": "tishtrîm stârem raêvañtem hvarenanguhañtem\nýazamaide\nýim ratûm paiti-daêmca\nvîspaêshãm stârãm\nfradathat ahurô mazdå\nýatha narãm zarathushtrem,\nýim nôit merekheñte angrô mainyush\nnôit ýâtavô pairikåsca\nnôit ýâtavô mashyânãm\nnaêdha vîspe hathra daêva\nmahrkathâi upadarzhnvaiñti.\nahe raya ... tåscâ ýazamaide (See verse 3)!",
+      "en": "'I will sacrifice unto Tishtrya, the bright and glorious star,\nwhom Ahura Mazda has established as a lord and overseer above\nall stars, in the same way as he has established Zarathushtra\nabove men; whom neither Angra Mainyu, nor the Yatus and the Pairikas,\nnor the men Yatus can deliver unto death, nor can all the Daevas\ntogether prevail for his death.\n'For his brightness and glory, I will offer him a sacrifice worth\nbeing heard....",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 45,
+      "ref": "Yt 8.45",
+      "orig": "tishtrîm stârem raêvañtem hvarenanguhañtem\nýazamaide\nýahmâi hazangrem ýaoxshtinãm\nfradathat ahurô mazdå\nafshcithraêshva sevishtâi ýô afshcithraêibyô\nâiti raoxshnushva vazemnô.",
+      "en": "'We sacrifice unto Tishtrya, the bright and glorious star,\nto whom Ahura Mazda has given a thousand senses, and who is the\nmost beneficent amongst the stars that have in them the seed of\nthe waters:",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 46,
+      "ref": "Yt 8.46",
+      "orig": "hô zrayanghô vourukashahe\namavatô huraodhahe\njafrahe uruyâpahe\nvîspê vairish âcaraiti\nvîspêsca srîrê nimraokê\nvîspêsca srîrê apakhzhâire\naspahe kehrpa aurushahe\nsrîrahe zairi-gaoshahe\nzaranyô-aiwidhânahe.",
+      "en": "'Who moves in light with the stars that have in them the seed\nof the waters: he, from the sea Vouru-Kasha, the powerful sea,\nthe large-sized, deep, and salt of waters, goes to all the lakes,\nand to all the beautiful caves, and to all the beautiful channels,\nin the shape of a white, beautiful horse, with golden ears and\na golden caparison.",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 47,
+      "ref": "Yt 8.47",
+      "orig": "âat âpô ava-bareñte spitama zarathushtra\nzrayanghadha haca vourukashât\ntâtå urvâthrå baêshazyå\ntå avadha vîbaxshaiti\nâbyô dainghubyô sevishtô\nýatha aêm bavaiti ýashtô\nxshnûtô frithô paiti-zañtô.\nahe raya ... tåscâ ýazamaide (See verse 3)!",
+      "en": "'Then, O Spitama Zarathushtra! the waters flow down from the\nsea Vouru-Kasha, mother-like, friendly, and healing: he divides\nthem amongst these countries, being most beneficent, when he has\nbeen worshipped with a sacrifice and propitiated rejoiced, and\nsatisfied. 'For his brigbtness and glory, I will offer him a sacrifice\nworth being heard....",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 48,
+      "ref": "Yt 8.48",
+      "orig": "tishtrîm stârem raêvañtem hvarenanguhañtem\nýazamaide\nýim vîspâish paitishmareñte\nýâish speñtahe mainyêush dâmãn\nadhairi-zemâishca upairi-zemâishca ýâca\nupâpa ýâca upasma ýâca frapterejãn\nýâca ravascarãn ýâca upairi tå\nakarana anakhra ashaonô stish âidhi.\nahe raya ... tåscâ ýazamaide (See verse 3)!",
+      "en": "'We sacrifice unto Tishtrya, the bright and glorious star,\nfor whom long all the creatures of Spenta-Mainyu, those that live\nunder the ground, and those that live above the ground; those\nthat live in the waters, and those that live on dry land; those\nthat fly, and those that run in the plains; and all those that\nlive within this boundless and endless world of the holy Spirit.\n'For his brightness and glory, I will offer him a sacrifice worth\nbeing heard....",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 49,
+      "ref": "Yt 8.49",
+      "orig": "tishtrîm stârem raêvañtem hvarenanguhañtem\nýazamaide\nthamananguhañtem varecanguhañtem\nýaoxshtivañtem xshayamnem\nisânem hazangrâi ayaptanãm\nýô dadhâiti kuxshnvãnâi\npaurush ayaptå jaidhyañtâi\najaidhyamnâi mashyâi.",
+      "en": "'We sacrifice unto Tishtrya, the bright and glorious star,\nthe healthful, wise, happy, and powerful, who is the lord of a\nthousand boons, and grants many boons to that man who has pleased\nhim, whether begging or not begging for them.",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 50,
+      "ref": "Yt 8.50",
+      "orig": "azem dadhãm spitama zarathushtra\naom stârem ýim tishtrîm\navåñtem ýesnyata\navåñtem vahmyata\navåñtem xshnaothwata\navåñtem frasastata\nýatha mãmcit ýim ahurem mazdãm.",
+      "en": "'I, O Spitama Zarathushtra! have created that star Tishtrya\nas worthy of sacrifice, as worthy of prayer, as worthy of propitiation,\nas worthy of glorification as myself, Ahura Mazda;",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 51,
+      "ref": "Yt 8.51",
+      "orig": "avainghâi pairikayâi paitishtâtayaêca\npaitiscaptayaêca paititaretayaêca paityaoget- tbaêshah'yâica\nýâ duzhyâirya ýãm mashyâka\navi duzhvacanghô huyâiryãm nãma aojaite.",
+      "en": "'In order to withstand, to break asunder, to afflict, to drive\nback the malice of that Pairika Duzyairya, whom evil-speaking\npeople call Huyairya.",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": "52-53",
+      "ref": "Yt 8.52-53",
+      "orig": "ýedhi-zî azem nôit daidhyãm spitama\nzarathushtra aom stârem ýim tishtrîm ... (See\nverses 50-51) huyâiryãm nãma aojaite",
+      "en": "'Had I not created that star Tishtrya as worthy of sacrifice,\nas worthy of prayer, as worthy of propitiation, as worthy of glorification\nas myself, Ahura Mazda;\n'In order to withstand, to break asunder, to afflict, to drive\nback the malice of that Pairika Duzyairya, whom evil-speaking\npeople call Huyairya;",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 54,
+      "ref": "Yt 8.54",
+      "orig": "hamahe zî-mê idha ayãn hamayå vâ\nxshapô\nxå pairika ýâ duzhyâirya\nvîspahe anghêush astvatô\nparôit pairithnem anghvãm ava-hisidhyât\nâca paraca dvaraiti.",
+      "en": "'Then all day long, all night long, that Pairika Duzyairya\nwould wage war against this material world of mine, wanting to\nextinguish its life, and she goes on, rushing upon and around\nit.",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 55,
+      "ref": "Yt 8.55",
+      "orig": "tishtryô zî raêvå hvarenanguhå\navãm pairikãm âdarezayeiti bibdâishca\nthribdâishca avanemnâishca vîspabdâishca\nmãnayen ahe\nýatha hazangrem narãm\nôim narem âdarezayôit\nýôi hyãn asti aojangha aojishta.",
+      "en": "'But the bright and glorious Tishtrya keeps that Pairika in\nbonds, with twofold bonds, with threefold bonds, that cannot be\novercome, with bonds all over the body: it is as if there were\na thousand men keeping one man in bonds, a thousand men of those\nwho are the strongest in strength.",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 56,
+      "ref": "Yt 8.56",
+      "orig": "ýat zî spitama zarathushtra airyå dainghâvô\ntishtryehe raêvatô hvarenanguhatô aiwi-sacyâresh\ndâitîm ýasnemca vahmemca ýatha-hê\nasti dâityôtemô ýasnasca vahmasca ashât\nhaca ýat vahishtât, nôit ithra airyå\ndainghâvô frãsh hyât haêna nôit\nvôikhna nôit pãma nôit kapastish nôit\nhaênyô rathô nôit uzgereptô drafshô.",
+      "en": "'If the Aryan countries, O Spitama Zarathushtra! would perform\nin honour of the bright and glorious Tishtrya the due sacrifice\nand invocation, just as that sacrifice and invocation ought to\nbe performed in the perfection of holiness; never should a hostile\nhorde enter these Aryan countries, nor any plague, nor leprosy,\nnor venomous plants, nor the chariot of a foe, nor the uplifted\nspear of a foe.'",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 57,
+      "ref": "Yt 8.57",
+      "orig": "paiti dim peresat zarathushtrô, kat zî asti ahura\nmazda tishtryehe raêvatô hvarenanguhatô dâityôtemô\nýasnasca vahmasca ashât haca ýat vahishtât.",
+      "en": "Zarathushtra asked: 'What is then, O Ahura Mazda! the sacrifice\nand invocation in honour of the bright and glorious Tishtrya,\nas it ought to be performed in the perfection of holiness?'",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 58,
+      "ref": "Yt 8.58",
+      "orig": "âat mraot ahurô mazdå, zaothrå hê\nuzbârayen airyå dainghâvô baresma hê\nsterenayen airyå dainghâvô pasûm hê\npacayen airyå dainghâvô aurushem vâ vohu-\ngaonem vâ kâcit vâ gaonanãm hamô-gaonem.",
+      "en": "Ahura Mazda answered: 'Let the Aryan nations bring libations\nunto him; let the Aryan nations tie bundles of baresma for him;\nlet the Aryan nations cook for him a head of cattle, either white,\nor black, or of any other colour, but all of one and the same\ncolour.",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 59,
+      "ref": "Yt 8.59",
+      "orig": "mâ-hê mairyô geurvayôit mâ jahika\nmâ ashâvô asrâvayat-gâthô\nahumerexsh paityârenô imãm daênãm\nýãm âhûirîm zarathushtrîm.",
+      "en": "'Let not a murderer take of these offerings, nor a whore,\nnor a .... who does not sing the Gathas, who spreads death in\nthe world and withstands the law of Mazda, the law of Zarathushtra.",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 60,
+      "ref": "Yt 8.60",
+      "orig": "ýezi-shê mairyô geurvayât jahika\nvâ ashâvô vâ asrâvayat-gâthô\nahumerexsh paityârenô imãm daênãm\nýãm âhûirîm zarathushtrîm\npara baêshaza hacaite\ntishtryô raêvå hvarenanguhå.",
+      "en": "'If a murderer take of these offerings, or a whore, or a ....\nwho does not sing the Gathas, who spreads death in the world and\nwithstands the law of Mazda, the law of Zarathushtra, then the\nbright and glorious Tishtrya takes back his healing virtues.",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 61,
+      "ref": "Yt 8.61",
+      "orig": "hamatha airyâbyô dainghubyô vôikhnå\njasåñti, hamatha airyâbyô dainghubyô\nhaêna frapatåñti,\nhamatha airyâbyô dainghubyô janyåñti\npañcasakhnâi satakhnâishca satakhnâi\nhazangrakhnâishca hazangrakhnâi baêvarekhnâishca\nbaêvarekhnâi ahãxshtakhnâishca.\nahe raya ... tåscâ ýazamaide (See verse 3)!",
+      "en": "'Plagues will ever pour upon the Aryan nations; hostile hordes\nwill ever fall upon the Aryan nations; the Aryans will be smitten,\nby their fifties and their hundreds, by their hundreds and their\nthousands, by thetr thousands and their tens of thousands, by\ntheir tens of thousands and their myriads of myriads.",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 62,
+      "ref": "Yt 8.62",
+      "orig": "ýathâ ahû vairyô...(2).\nýasnemca vahmemca aojasca zavareca âfrînâmi\ntishtryehe stârô raêvatô hvarenanguhatô\nsatavaêsahe frâpahe sûrahe mazdadhâtahe.\nashem vohû....\n ahmâi raêshca ... hazangrem ... jasa-mê ... (kerba mazhd...) atha jamyât ýatha âfrînâmi. \nashem vohû...!!",
+      "en": "'Yatha ahu vairyo: The will of the Lord is the law of holiness....\n'I bless the sacrifice and prayer, and the strength and vigour\nof Tishtrya, the bright and glorious star, and of the powerful\nSatavaesa, made by Mazda, who pushes waters forward.\n'Ashem Vohu: Holiness is the best of all good....\n'[Give] unto that man brightness and glory, .... give him the\nbright, all-happy, blissful abode of the holy Ones.'",
+      "zh": ""
+    }
+  ]
+}

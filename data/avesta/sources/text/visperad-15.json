@@ -1,0 +1,58 @@
+{
+  "slug": "visperad-15",
+  "siglum": "Vr 15",
+  "title_zh": "維斯帕拉德 第 15 章",
+  "title_en": "Visperad 15",
+  "canon": "avestan",
+  "volume": "visperad",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/visperad/visperad.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "達梅斯特（James Darmesteter）",
+  "en_url": "https://www.avesta.org/visperad/vrsbe.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "ratu": "拉圖",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 15,
+      "verse": 1,
+      "ref": "Vr 15.1",
+      "orig": "(râspî,) ava padhô ava zastê\nava ushi dârayadhwem mazdayasna zarathushtrayô dâityanãm\nrathwyanãm hvarshtanãm shyaothnanãm varezâi\npairi adhâityanãm arathwyanãm duzhvarshtanãm\nshyaothnanãm varezâi verezyâtãmca idha\nvohu vâstrya uyamna anuyamnâish daste.",
+      "en": "Hold your feet in readiness, and your two hands, and your\nunderstandings, O ye Zarathushtrian Mazdayasnians! for the well-doing\nof lawful deeds in accordance with the sacred Order, and for the\navoidance of the unlawful and evil deeds which are contrary to\nthe ritual. Let the good deeds for the furtherance of husbandry\nbe done here. Render ye the needy rich.",
+      "zh": ""
+    },
+    {
+      "chapter": 15,
+      "verse": 2,
+      "ref": "Vr 15.2",
+      "orig": "sraoshasca idhâ astû ahurahe mazdå ýasnâi\nsevîshtahe ashaonô ýê nå ishtô\nýasnaheca haptanghâtôish fravâkaêca\npaityâstayaêca mazdâtayaêca zarazdâtayaêca\nframeretayaêca fraoxtayaêca verethrakhne ashaone anapyûxdhe\nanapishûte,",
+      "en": "Let Sraosha (Obedience)\nbe present here for the worship of Ahura Mazda, \nthe most helpful,\nand the holy, who is so desired by us in the pronunciation, and\nfor the service, and the pondering of the Yasna Haptanghaiti,\nfor the heart's devotion to it, for its memorization, and its\nvictorious and holy recital (or for the victorious saint), without\naddition or omission, (3) which has been intoned, and which shall\nyet be uttered as great, powerful, smiting with victory, separate\nfrom harmful malice, for the pronunciation of victorious words\nfor Ahura Mazda's Fire. 1. This piece is a later composed prelude to the Haptanghâiti, \n which it precedes in the Vendîdâd Sâdah. 2. Sursum corda!",
+      "zh": ""
+    },
+    {
+      "chapter": 15,
+      "verse": 3,
+      "ref": "Vr 15.3",
+      "orig": "ýô fravaoce ýô fravaxshyeite maza\namava verethraja vîdvaêshtvô, vacãmca\nvârethrakhninãm fravâkâi âthrasca\nahurahe mazdå.",
+      "en": "Comp. gavôi verezyâtãm , Y. 48.5.",
+      "zh": ""
+    },
+    {
+      "chapter": 15,
+      "verse": "4-5",
+      "ref": "Vr 15.4-5",
+      "orig": "staotaca ýasnâica vahmâica frasastayaêca\nýat aêsha ahurahe mazdå ... ustememcît.\n(zôt,) ýathâ ahû vairyô ýô\nâtravaxshô ... ýê nå ishtô.\nava padhô ava zastê ... sraoshô astû,\nsraoshem ashîm ýazamaide ratûm ... tåscâ\nýazamaide!!",
+      "en": "\"Place the needy with those without need.\"\nPossibly mazdâtaêca .\n \n \n4-5. (=Vr9.6-7.)\n \n<H3 id=chap16",
+      "zh": ""
+    }
+  ]
+}

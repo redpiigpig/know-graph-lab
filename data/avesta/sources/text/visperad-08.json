@@ -1,0 +1,42 @@
+{
+  "slug": "visperad-08",
+  "siglum": "Vr 8",
+  "title_zh": "維斯帕拉德 第 8 章",
+  "title_en": "Visperad 8",
+  "canon": "avestan",
+  "volume": "visperad",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/visperad/visperad.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "達梅斯特（James Darmesteter）",
+  "en_url": "https://www.avesta.org/visperad/vrsbe.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "ratu": "拉圖",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 8,
+      "verse": 1,
+      "ref": "Vr 8.1",
+      "orig": "aêta vaca madhayangha\nahe vaca señdayangha\nahurô mazdå ashava hathra vanghubyô ýazataêibyô\nýat ameshaêibyô speñtaêibyô\nhuxshathraêibyô hudhâbyô pañcasatbîshca\nsatâishca hazangrâishca baêvarebîshca\nahãxshtâishca frâyebîshcatca ahmât.",
+      "en": "With this word be Thou approached, with the proper word be\nThou present here, Thou who art Ahura Mazda, the holy, together\nwith the good Yazads who are the Bountiful Immortals, who rule\naright, and dispose (of all) aright, together with fifty, and\na hundred, and a thousand, and ten thousand, and millions, and\nyet more.",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 2,
+      "ref": "Vr 8.2",
+      "orig": "huxshathrôtemâi bât xshathrem ahmat hyat\naibî dademahicâ ... ashâicâ vahishtâi.\n(...huxshathrôtemâi ... vahishtâi(3)!!)",
+      "en": "And to Him who rules the best let the Kingdom be!",
+      "zh": ""
+    }
+  ]
+}

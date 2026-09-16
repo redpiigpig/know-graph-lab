@@ -1,0 +1,66 @@
+{
+  "slug": "visperad-23",
+  "siglum": "Vr 23",
+  "title_zh": "維斯帕拉德 第 23 章",
+  "title_en": "Visperad 23",
+  "canon": "avestan",
+  "volume": "visperad",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/visperad/visperad.htm",
+  "en_source": "《東方聖書》第 31 卷，1887；公有領域",
+  "en_translator": "達梅斯特（James Darmesteter）",
+  "en_url": "https://www.avesta.org/visperad/vrsbe.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Amesha Spenta": "阿姆沙‧斯彭塔",
+    "ratu": "拉圖",
+    "yazata": "雅扎塔"
+  },
+  "segments": [
+    {
+      "chapter": 23,
+      "verse": 0,
+      "ref": "Vr 23.0",
+      "orig": "ahurem mazdãm ashavanem ashahe ratûm ... ratufritîm\nýazamaide, vahishtôishtîm gâthãm\nashaonîm ashahe ratûm ýazamaide mat-afsmanãm\n> anghuyat haca.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 23,
+      "verse": 1,
+      "ref": "Vr 23.1",
+      "orig": "vahishtem ahurem mazdãm ýazamaide, vahishtem\nameshê speñtê ýazamaide, vahishtem narem\nashavanem ýazamaide, vahishtem ashem ýazamaide,\nvahishta cithra ýazamaide ýâ staota ýesnya,\nvahishtãm îshtîm ýazamaide ýãm\nashahe vahishtahe, vahishtem ahûm ashaonãm ýazamaide\nraocanghem vîspô-hvâthrem, vahishtahe anghêush\nvahishtãm ayanãm ýazamaide. (vahishtem ahurem\nmazdãm ... vahishtãm ayanãm ýazamaide(2).)",
+      "en": "We worship Ahura Mazda as the best (worship to be offered\nin our gifts). We worship the Amesha Spenta (once more, and as)\nthe best. We worship Asha Vahishta (who is Righteousness the Best).\nAnd we sacrifice to those (prayers) which are evident as the best;\nthat is, the Praises of the Yasnas.\nAlso we sacrifice to that best wish, which is that of Asha Vahishta,\nand we worship Heaven, which is the best world of the saints,\nbright and all glorious; and we sacrifice likewise to that best\napproach which leads to it. 2. And we sacrifice to that reward, \nhealth, healing, furtherance, and increase, and to \nthat victory which is within the two, the Ahuna-vairya \nand the Airyema-ishyo, through the memorized \nrecital of the good thoughts, words, and deeds (which they enjoin). 1. This piece from the later Avesta follows Y 53, in the Vendîdâd Sâdah, \n and has reference to its expressions.",
+      "zh": ""
+    },
+    {
+      "chapter": 23,
+      "verse": 2,
+      "ref": "Vr 23.2",
+      "orig": "vahishtôishtôish gâthayå hañdâtâ\nýazamaide, vahishtôishtôish gâthayå\nýazamaide hâitishca afsmanâca ... tåscâ\nýazamaide!!",
+      "en": "It is an important suggestion which holds vahishtem as equal \n to \"saying vahishtem ,\" in allusion to the Vahishtâ îshtish ; but as the \n word is inflected further on (see vahishtahę ), and as it moreover \n once applies to Asha, as Asha Vahishta, it is better to render it \n as having adjective application throughout, being none the less, of \n course, an intentional echo of the first word of Y. 53.1.",
+      "zh": ""
+    },
+    {
+      "chapter": 23,
+      "verse": 3,
+      "ref": "Vr 23.3",
+      "orig": "",
+      "en": "Or, \"of it.\"",
+      "zh": ""
+    },
+    {
+      "chapter": 23,
+      "verse": 4,
+      "ref": "Vr 23.4",
+      "orig": "",
+      "en": "Possibly \"between them,\" meaning the Gâthas which are so placed.\n \n \n \n \n \n Home \n Contents \n Prev \n vrsbe \n Next \n Glossary",
+      "zh": ""
+    }
+  ]
+}
