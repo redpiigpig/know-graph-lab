@@ -82,7 +82,9 @@ def main() -> None:
     for eid, why in DROP.items():
         print(f"[刪 row]   {why}")
         if a.apply:
-            for path in (f"ebook_chunks?ebook_id=eq.{eid}", f"ebooks?id=eq.{eid}"):
+            # 2026-09-16：`ebook_chunks` 已退場，只剩 ebooks 那一列要刪。
+            # JSONL 留在 Drive（要連 chunks 一起清得自己刪 _chunks/{eid}.jsonl）。
+            for path in (f"ebooks?id=eq.{eid}",):
                 code, body = _req("DELETE", path)
                 print(f"           HTTP {code} {body if code >= 300 else ''}")
     for title in PENDING.values():

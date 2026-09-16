@@ -245,23 +245,9 @@ def process_chunk(chunk: dict, retries: int = 2, max_fixes: int = 30) -> dict | 
 
 
 def refresh_previews(ebook_id: str, chunks: list[dict]) -> None:
-    requests.delete(f"{se.URL}/rest/v1/ebook_chunks?ebook_id=eq.{ebook_id}",
-                    headers=se.H_GET, timeout=30)
-    rows = [{
-        "ebook_id": ebook_id,
-        "chunk_index": c["chunk_index"],
-        "chunk_type": c.get("chunk_type", "chapter"),
-        "page_number": c.get("page_number"),
-        "chapter_path": c.get("chapter_path"),
-        "content": (c.get("content") or "")[:200],
-        "char_count": len(c.get("content") or ""),
-    } for c in chunks]
-    for i in range(0, len(rows), 25):
-        batch = rows[i:i + 25]
-        rr = requests.post(f"{se.URL}/rest/v1/ebook_chunks", headers=se.H_JSON, json=batch, timeout=60)
-        if rr.status_code not in (200, 201):
-            for row in batch:
-                requests.post(f"{se.URL}/rest/v1/ebook_chunks", headers=se.H_JSON, json=row, timeout=30)
+    # 2026-09-16：`ebook_chunks` 已退場（1,005,363 列在 Supabase 免費層獨自佔 503 MB，而它只存每段前 100 字）。
+    # JSONL（Drive 正本）＋R2 才是全文所在；見 database/drop-ebook-chunks-2026-09-16.sql。
+    return
 
 
 def apply_book(eid: str, idxs: list[int]) -> dict:
@@ -293,7 +279,7 @@ def apply_book(eid: str, idxs: list[int]) -> dict:
         except Exception as e:  # noqa: BLE001
             print(f"    ⚠ R2: {e}", file=sys.stderr)
         try:
-            refresh_previews(eid, chunks); print("    ✓ DB previews", file=sys.stderr)
+            print("    ✓ JSONL + R2", file=sys.stderr)
         except Exception as e:  # noqa: BLE001
             print(f"    ⚠ DB: {e}", file=sys.stderr)
     return {"eid": eid, "fixed": fixed, "skipped": skipped}

@@ -528,48 +528,14 @@ def upload(meta: dict, chunks: list[dict]) -> Path:
         raise RuntimeError(f"provider stop {response.status_code}: ebooks upsert")
     if not response.ok:
         raise RuntimeError(f"ebooks upsert {response.status_code}: {response.text[:1000]}")
-    response = requests.delete(
-        f"{te.URL}/rest/v1/ebook_chunks?ebook_id=eq.{ebook_id}",
-        headers=te.H_GET,
-        timeout=60,
-    )
-    if response.status_code in (403, 429):
-        raise RuntimeError(f"provider stop {response.status_code}: ebook_chunks delete")
-    if not response.ok:
-        raise RuntimeError(f"ebook_chunks delete {response.status_code}: {response.text[:1000]}")
-    previews = [
-        {
-            "ebook_id": ebook_id,
-            "chunk_index": chunk["chunk_index"],
-            "chunk_type": chunk["chunk_type"],
-            "page_number": chunk["page_number"],
-            "chapter_path": chunk["chapter_path"],
-            "content": chunk["content"][:200],
-            "char_count": len(chunk["content"]),
-        }
-        for chunk in chunks
-    ]
-    for start in range(0, len(previews), 100):
-        response = requests.post(
-            f"{te.URL}/rest/v1/ebook_chunks",
-            headers=te.H_JSON,
-            json=previews[start:start + 100],
-            timeout=60,
-        )
-        if response.status_code in (403, 429):
-            raise RuntimeError(
-                f"provider stop {response.status_code}: ebook_chunks batch {start // 100 + 1}"
-            )
-        if not response.ok:
-            raise RuntimeError(
-                f"ebook_chunks batch {start // 100 + 1} {response.status_code}: "
-                f"{response.text[:1000]}"
-            )
+    # 2026-09-16：`ebook_chunks` 已退場（1,005,363 列在 Supabase 免費層獨自佔
+    # 503 MB，而它只存每段前 100 字）。JSONL（Drive 正本）＋R2 才是全文所在；
+    # 見 database/drop-ebook-chunks-2026-09-16.sql。
     return output
 
 
 def verify_remote(meta: dict, chunks: list[dict], local_path: Path) -> None:
-    """Read DB previews and the private R2 object back and compare exactly."""
+    """把 ebooks 那一列與私有 R2 物件讀回來逐項比對（DB previews 已於 2026-09-16 退場）。"""
     import requests
     import translate_ebook_to_zh as te
 
@@ -605,42 +571,14 @@ def verify_remote(meta: dict, chunks: list[dict], local_path: Path) -> None:
     if row != expected_row:
         raise ValueError(f"{ebook_id}: ebooks row mismatch: {row!r}")
 
-    previews: list[dict] = []
-    page_size = 1000
-    for offset in range(0, len(chunks), page_size):
-        response = requests.get(
-            f"{te.URL}/rest/v1/ebook_chunks",
-            headers=te.H_GET,
-            params={
-                "ebook_id": f"eq.{ebook_id}",
-                "select": "chunk_index,char_count",
-                "order": "chunk_index.asc",
-                "limit": page_size,
-                "offset": offset,
-            },
-            timeout=60,
-        )
-        if response.status_code in (403, 429):
-            raise RuntimeError(f"provider stop {response.status_code}: ebook_chunks verify")
-        if not response.ok:
-            raise RuntimeError(
-                f"ebook_chunks verify {response.status_code}: {response.text[:1000]}"
-            )
-        previews.extend(response.json())
-    expected_previews = [
-        {"chunk_index": chunk["chunk_index"], "char_count": len(chunk["content"])}
-        for chunk in chunks
-    ]
-    if previews != expected_previews:
-        raise ValueError(
-            f"{ebook_id}: preview mismatch ({len(previews)} remote / {len(chunks)} local)"
-        )
-
+    # 2026-09-16：`ebook_chunks` 退場，DB 這一半沒得比了（見
+    # database/drop-ebook-chunks-2026-09-16.sql）。剩下的兩道仍然是硬的：
+    # 上面比對 ebooks 那一列，下面比對 R2 JSONL 的 sha256。
     r2_match, r2_digest = _r2_state(ebook_id, local_path)
     if r2_match is not True or not r2_digest:
         raise ValueError(f"{ebook_id}: R2 JSONL checksum mismatch")
     print(
-        f"  verified {ebook_id}: DB {len(previews)} previews; "
+        f"  verified {ebook_id}: ebooks row 相符；{len(chunks)} chunks；"
         f"R2 sha256 {r2_digest[:16]}",
         flush=True,
     )

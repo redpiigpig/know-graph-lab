@@ -26,6 +26,8 @@ from pathlib import Path
 
 import requests
 
+import chunks_jsonl
+
 if sys.platform == "win32":
     sys.stdout.reconfigure(encoding="utf-8")
     sys.stderr.reconfigure(encoding="utf-8")
@@ -67,25 +69,17 @@ def main():
             break
         off += step
 
-    print(f"fetching chunk stats for {len(books)} books…")
+    # 2026-09-16：從 `ebook_chunks` 改讀 Drive 的 _chunks/*.jsonl（那張表退場了，見
+    # database/drop-ebook-chunks-2026-09-16.sql）。
+    print(f"讀 {len(books):,} 本的 JSONL 算 chunk 統計…")
     cnt = collections.Counter()
     headings = collections.defaultdict(set)
-    off = 0
-    step = 10000
-    while True:
-        c = requests.get(
-            f"{URL}/rest/v1/ebook_chunks?select=ebook_id,chapter_path"
-            f"&order=id&offset={off}&limit={step}", headers=H, timeout=180).json()
-        for ch in c:
-            eid = ch["ebook_id"]
+    for eid, chunks in chunks_jsonl.scan(books.keys()).items():
+        for ch in chunks:
             cnt[eid] += 1
             cp = (ch.get("chapter_path") or "").strip()
             if cp:
                 headings[eid].add(cp)
-        if len(c) < step:
-            break
-        off += step
-        print(f"  …{off} chunks scanned")
 
     candidates = []   # (confidence, reason, book)
     already = []

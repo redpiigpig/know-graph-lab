@@ -51,6 +51,7 @@ End-to-end pipeline from Drive folder → reader at `/ebook/[id]`. Single SKILL 
 
 **DB 超量救援（1,313 → 359 MB，free tier 500MB）**
 - 拆 7 支 idx_scan=0 死索引（定義備份 `database/dropped-fts-indexes-2026-07-08.sql`，含 411MB 的 ebook_chunks fts）。
+  2026-09-16 那張表整個退場，872 MB → 約 369 MB（`database/drop-ebook-chunks-2026-09-16.sql`）。
 - **DB preview 改 100 字**（原 200）：`PREVIEW_LEN=100`，六支寫 preview 的 script 已同步。
 - **bible_verses 整表搬出 DB**：每卷一 gz JSON（Drive canonical `G:/…/聖經/_verses/` + R2 `bible-verses/`），`server/utils/bible-verses.ts` local-first→R2 LRU；讀經 API 已改。遷移工具 `scripts/offload_bible_verses.py`（export/upload/verify/drop）。
 
@@ -190,7 +191,7 @@ schtasks /create /tn "KGLab-OCR-Daily-18" /tr "C:\Users\user\Desktop\know-graph-
 | `split_oversized_pdf_by_toc.py` | 3b — OCR rescue | Physically split a multi-volume PDF into per-volume PDFs using level-1 TOC bookmarks. For 套書 failing BOTH Gemini (>1000 pages) AND Haiku (content-filter). Children re-enter OCR queue |
 | `resplit_giant_chunks.py` | 4e — chunk refinement (v1) | Break oversized chunks (>400K chars) by internal `##`/`###` markdown headings only. EPUB-only. Annotation guard |
 | `resplit_giant_chunks_v2.py` | 4e — chunk refinement (v2) | Same as v1 + inline-text patterns (Chinese `第N章/卷/編/部/節`, English `Book N.` / `Chapter N`) + recursive iteration. Handles EPUB **and** PDF. 2026-05-21 dry-run: 37/67 books resplittable → +1468 chunks. Annotation guard |
-| `repopulate_chunk_previews.py` | 5 — DB | Back-fill `ebook_chunks` previews from local JSONL. `run` / `retry-failed` / `status` |
+| ~~`repopulate_chunk_previews.py`~~ | — | **2026-09-16 封存**（`scripts/_archive/`）：它回填的 `ebook_chunks` 整張退場了 |
 | `upload_chunks_to_r2.py` | 5 — R2 | One-shot bulk uploader for JSONL not yet on R2 |
 | `_download_direct_to_drive.py` | F — direct-to-Drive | One-off batch downloader bypassing z-lib/, writes straight to `G:/{category}/{sub}/` + INSERT. See Workflow F |
 | `_download_canon_law_creeds.py` | F — direct-to-Drive | CCEL Schaff Creeds 3 + History 8 → 世界宗教/基督教/教會法典與信條/ |
@@ -223,16 +224,20 @@ ebooks (
   display_mode                   -- 'standard'(預設文字 reader) | 'bilingual-parallel'(Denzinger 三欄) | 'page-image'(原頁模式)
 )
 
-ebook_chunks (
-  id uuid PK, ebook_id FK,
-  chunk_index INT, chunk_type,   -- 'page' for PDF Plan A, 'chapter' for EPUB / PDF Plan B
-  page_number, chapter_path,
-  content TEXT,                  -- ⚠ first 100 chars only (preview, 2026-07-08 起 PREVIEW_LEN=100；原 200); full text in JSONL
-  char_count
-)
-GIN index on to_tsvector('simple', content)
+~~ebook_chunks~~ —— **2026-09-16 整張 drop**（`database/drop-ebook-chunks-2026-09-16.sql`）。
+1,005,363 列在 500 MB 的免費層獨自佔 503 MB（固定欄位 87 MB＋兩個索引 114 MB 是
+per-row 硬成本，跟存不存文字無關；實測各種瘦身最好也只到 640 MB），而它存的只是
+每段前 100 字。**chunk 沒有 DB 表了**：一本書的 chunks 只在
+`_chunks/{ebook_id}.jsonl`（Drive 正本）＋ R2 鏡像。
 
-ebook_chunks（補）：source_text / sources / source_order — 對照書多語來源；有就代表是翻譯/對照書，OCR 清理一律跳過
+一行 JSONL 就是一個 chunk：`chunk_index / chunk_type / page_number / chapter_path /
+volume / format / content`，對照書另有 `source_text / sources / source_order`
+（有就代表是翻譯/對照書，OCR 清理一律跳過）。Python 端一律走
+`scripts/chunks_jsonl.py`（`load` / `scan` / `all_ids`），TS 端走
+`server/utils/ebook-chunks.ts`。
+
+🚨 `scan()` 一定印分母、讀不到 `_chunks` 目錄直接拋例外 —— 「Drive 卡住」與
+「這本還沒轉錄」是兩件事，混在一起會把全館判成空白。
 
 annotations (
   id uuid PK, ebook_id FK, chunk_index,
@@ -385,11 +390,15 @@ G:/我的雲端硬碟/資料/知識圖工作室/電子圖書館/神學/
   - G: is Drive sync mount → auto-backed up to Drive cloud
   - Configured via `EBOOK_CHUNKS_DIR` in `.env` (consumed by `nuxt.config.ts` → `runtimeConfig.ebookChunksDir`)
 - **R2 mirror**: `r2://{R2_BUCKET}/ebook-chunks/{ebook_id}.jsonl.gz` (gzipped). Read at runtime by `server/utils/ebook-chunks.ts` `loadLines()` when local file unreachable (production, Zeabur)
-- **DB previews**: `ebook_chunks.content` first 100 chars only（2026-07-08 起 `PREVIEW_LEN=100`）— for fast SQL `ilike` full-text search
+- ~~**DB previews**~~：2026-09-16 起沒有了。全文搜尋改掃 JSONL 全文
+  （`server/utils/ebook-chunks.ts` → `searchBookFulltext`），順帶變強 ——
+  舊的 `ilike` 只打在那 100 字上，每段中後段本來就搜不到，而且沒有支援索引，
+  查一次就是百萬列全表掃描
 
 ## Critical constraints
 
-- **Supabase free tier 500 MB** — never reload full chunk text into DB. JSONL-on-disk + 100-char preview to DB（2026-07-08 起 `PREVIEW_LEN=100`）.
+- **Supabase free tier 500 MB** — 任何形式的 chunk 都別再進 DB。2026-09-16 起連
+  100 字 preview 都不寫：百萬列光固定欄位＋索引就 200 MB。JSONL（Drive）＋R2 是唯一一份。
 - **Supabase IO budget on free tier** — bulk inserts (>1K/s) hit `57014` "canceling statement". `parse_worker.py`, `repopulate_chunk_previews.py`, `standardize_ebook.py`, `split_ebook_set.py` all use **adaptive batch sizes** (100 → 50 → 20 → 5 → 1).
 - **No Supabase Storage bucket** — user explicitly forbade it. Local files only.
 - **Service-role key in `.env`** — never hardcode.
@@ -775,7 +784,8 @@ Reader's [`server/utils/ebook-chunks.ts`](../../../server/utils/ebook-chunks.ts)
    - Images / `<sup>` footnote / decorative `<svg>` stripped
 5. **Drop / dedupe + s2tw + TRAD_FIXES** (see Shared rules).
 6. **Pick `chapter_path`** from first markdown heading; fallback filename.
-7. **Persist**: JSONL → gzip+PUT R2 → DELETE+INSERT `ebook_chunks` previews (adaptive batch) → update ebooks row.
+7. **Persist**: JSONL → gzip+PUT R2 → update ebooks row（chunk_count / total_chars / standardized_at）。
+   2026-09-16 起沒有 preview 那一步了。
 
 #### Hierarchical TOC support — `parse_toc_hierarchical`
 
@@ -966,9 +976,11 @@ Field-stop char class `_FIELD_STOP = "\n│|，,；;／/（(、"` keeps regexes 
 
 **Auto-copy to `books` on excerpt creation** — `server/api/annotations/index.post.ts` POST with `save_as_excerpt: true` reads rich columns from `ebooks` and copies into auto-created `books` row.
 
-#### DB previews (`ebook_chunks`)
+#### ~~DB previews~~（2026-09-16 退場）
 
-After writing JSONL + R2: DELETE existing → INSERT 100-char preview each chunk（2026-07-08 起 `PREVIEW_LEN=100`）. Adaptive batch (100 → 50 → 20 → 5 → 1) to ride out 57014 timeouts on 800+ chunk books.
+寫完 JSONL + R2 就結束，只再 PATCH `ebooks` 那一列。舊的 DELETE+INSERT 與那套
+adaptive batch（100→50→20→5→1，為了扛 57014 timeout）全部拆掉了；54 支腳本裡的
+preview 寫入一併清掉，見 `database/drop-ebook-chunks-2026-09-16.sql`。
 
 ### Idempotency + annotation safety
 
@@ -1009,18 +1021,14 @@ Reader-side: open `/ebook/<id>` (restart dev server first to clear LRU cache):
 
 ---
 
-## Workflow C — Back-fill `ebook_chunks` previews
+## ~~Workflow C — Back-fill `ebook_chunks` previews~~（2026-09-16 取消）
 
-Needed when full-text search must cover a book whose chunks are only on disk/R2 but not in DB previews.
+整個工作流沒有了。以前 DB preview 與 JSONL 會不同步（搜尋搜不到某本書），要靠
+`repopulate_chunk_previews.py` 回填；現在搜尋直接掃 JSONL，**只要 JSONL 在就搜得到**，
+沒有第二份可以不同步。腳本已封存到 `scripts/_archive/`。
 
-```bash
-python scripts/repopulate_chunk_previews.py status
-python scripts/repopulate_chunk_previews.py run                       # initial back-fill
-python scripts/repopulate_chunk_previews.py retry-failed              # adaptive batch 100→1
-python scripts/repopulate_chunk_previews.py run --book <ebook_id> --force
-```
-
-`retry-failed` is the safe re-run mode — finds books whose `ebook_chunks` count is below their expected `ebooks.chunk_count` and only retries those.
+對應的新問題是「JSONL 不在」——那是 Drive 沒掛或這本還沒轉錄，`chunks_jsonl.scan()`
+會分別報給你看。
 
 ---
 
@@ -1168,6 +1176,29 @@ Gemini 的分數要**抹平「」引號樣式**才看得準：97.95% → 98.83%�
 但**不具決定性**：那份標準答案自己就是 OCR 產物（「無漏」被寫成「元漏」28 次，兩個引擎
 都正確改回來卻被判錯），而且 MinerU 主動剝掉書眉（正確行為）被算成漏字 1.4%。
 
+### 劣化影本評測 —— 本機引擎在爛頁上反而拉開差距
+
+原本的疑慮是：Gemini 是大型 VLM，字跡破損時能靠上下文猜回來，MinerU 是專用 OCR
+沒有語意修復，**在泛黃歪斜的影本上應該會輸** —— 而館藏大宗正是那種書。
+用 `ocr_bench.py make --degrade {light,medium,heavy}` 把同一份原生數位排版的考卷
+人工劣化（灰階＋降對比＋gamma＋歪斜＋模糊＋雜訊＋重壓 JPEG，逐頁換 seed），
+標準答案不受影響，所以量得到「爛頁上誰比較會猜」：
+
+| 劣化 | gemini-3.6-flash | MinerU | 最差一頁（G／M） |
+|---|---|---|---|
+| 無 | 98.83% | **99.64%** | 4.46% ／ 0.92% |
+| light | 99.10% | **99.68%** | 1.75% ／ 0.61% |
+| medium | 98.78% | **99.69%** | 1.92% ／ 0.76% |
+| heavy | 99.24% | **99.73%** | 1.18% ／ 0.61% |
+
+**疑慮不成立，而且方向相反**：MinerU 四個等級全勝，劣化越重優勢越大；
+它的最差一頁始終壓在 0.8% 以下，Gemini 則在 1.2–4.5% 間跳動。
+兩邊都對這種劣化相當免疫 —— 也就是說**淡掉的碳粉不是難點**。
+
+⚠️ 這份劣化是合成的（均勻褪色＋輕微歪斜＋雜訊）。**還沒測到**的真實掃描問題：
+背面透印、裝訂陰影、手寫註記、照明不均、大角度歪斜、**直排**。
+skill 另一處記著直排中文兩個引擎都吃鱉，MinerU 尚未試過。
+
 **定位**：0.55 秒/頁、零配額、可整晚跑（約 6,500 頁/小時；Gemini 約 350 頁/小時
 還要抽 503／429 的籤）。準度與頁碼都站得住，2026-09-16 起已是 OCR 主力。
 
@@ -1195,7 +1226,7 @@ HuggingFace 4.2 MB/s（差 110 倍），用 HF。首次跑要下載模型約 1GB
 
 ```
 Book opens but no content?
-  → Check ebook_chunks count. If 0 → run repopulate_chunk_previews.py --book <id>
+  → 檢查 `_chunks/{id}.jsonl` 在不在、有幾行。不在＝沒轉錄；G: 整個不在＝Drive 卡住
   → If still missing, check local JSONL exists. If not → re-parse
 
 Reader sidebar shows "目錄/插頁" as fake volumes?
@@ -1211,7 +1242,7 @@ PDF chapter_path mostly null after Plan A?
   → Run standardize_pdf_lite.py <id> first to revert, then Plan B.
 
 Search returns no fulltext hits but title/author work?
-  → ebook_chunks doesn't have previews. Run repopulate_chunk_previews.py.
+  → JSONL 不在或是空的（2026-09-16 起搜尋讀的就是 JSONL，沒有 preview 表了）。
 
 A scanned PDF still shows "此頁無內容" 12+ hours after OCR scheduled?
   → Check scripts/logs/ocr_YYYY-MM-DD.log. If quota hit, tomorrow's run picks up.
@@ -1467,7 +1498,7 @@ Worked examples:
 
 The chunks already had `###` for subsections so they render correctly as h3 inside the parent's content.
 
-**Both recipes do**: write new JSONL atomically (`.tmp` → rename + `.bak`), DELETE all `ebook_chunks` rows, INSERT 100-char previews fresh（2026-07-08 起）, UPDATE `ebooks.chunk_count + total_pages`. The mtime-aware cache picks it up automatically.
+**Both recipes do**: write new JSONL atomically (`.tmp` → rename + `.bak`), push R2, UPDATE `ebooks.chunk_count + total_pages`（2026-09-16 起沒有 preview 那一步）. The mtime-aware cache picks it up automatically.
 
 ### When to apply each recipe to other books
 

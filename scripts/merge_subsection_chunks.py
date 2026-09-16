@@ -139,36 +139,11 @@ def run(ebook_id: str, dry_run: bool) -> None:
         "Content-Type": "application/json",
     }
     base = os.environ["SUPABASE_URL"] + "/rest/v1"
-    r = requests.delete(f"{base}/ebook_chunks?ebook_id=eq.{ebook_id}", headers=h, timeout=60)
-    print(f"DELETE ebook_chunks: {r.status_code}")
+    # 2026-09-16：`ebook_chunks` 已退場（1,005,363 列在 Supabase 免費層獨自佔 503 MB，而它只存每段前 100 字）。
+    # JSONL（Drive 正本）＋R2 才是全文所在；見 database/drop-ebook-chunks-2026-09-16.sql。
 
-    batch_size = 50
     inserted = 0
-    for i in range(0, len(merged), batch_size):
-        batch = merged[i : i + batch_size]
-        rows = [
-            {
-                "ebook_id": ebook_id,
-                "chunk_index": c["chunk_index"],
-                "chunk_type": c.get("chunk_type", "chapter"),
-                "page_number": c.get("page_number"),
-                "chapter_path": c.get("chapter_path"),
-                "content": (c["content"] or "")[:200],
-                "char_count": len(c.get("content") or ""),
-            }
-            for c in batch
-        ]
-        r = requests.post(
-            f"{base}/ebook_chunks",
-            headers={**h, "Prefer": "return=minimal"},
-            json=rows,
-            timeout=30,
-        )
-        if r.status_code not in (200, 201, 204):
-            print(f"INSERT batch {i} failed: {r.status_code} {r.text[:200]}")
-            sys.exit(1)
-        inserted += len(batch)
-    print(f"Inserted {inserted} chunk previews")
+    print(f"✓ 合併完成（{inserted} 段）——全文在 JSONL＋R2")
 
     r = requests.patch(
         f"{base}/ebooks?id=eq.{ebook_id}",

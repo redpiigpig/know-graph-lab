@@ -612,11 +612,8 @@ def split_chapters(units: list[tuple], chapters: list[dict]) -> list[dict]:
 
 
 def build_chunks(chapters: list[dict]) -> list[dict]:
-    """章 list → ebook_chunks（cover + 每章一 chunk）。
-
-    `page_number` 只在該章第一段讀得到印刷數字頁碼時才填，其餘留 None
-    （封面 chunk 例外，固定 0）—— 不用 chunk_index 充數。
-    """
+    # 2026-09-16：`ebook_chunks` 已退場（1,005,363 列在 Supabase 免費層獨自佔 503 MB，而它只存每段前 100 字）。
+    # JSONL（Drive 正本）＋R2 才是全文所在；見 database/drop-ebook-chunks-2026-09-16.sql。
     cover = (f"# {TITLE}\n\n{ORIGINAL_TITLE}\n\n"
              f"彼得‧辛格（Peter Singer）、釋昭慧　對談\n\n法界出版社，{PUBLISHER_YEAR}")
     chunks = [{
@@ -837,15 +834,7 @@ def _upload(chunks: list[dict]) -> None:
     }
     H = {**te.H_JSON, "Prefer": "resolution=merge-duplicates"}
     requests.post(f"{te.URL}/rest/v1/ebooks?on_conflict=id", headers=H, json=row, timeout=30)
-    requests.delete(f"{te.URL}/rest/v1/ebook_chunks?ebook_id=eq.{EBOOK_ID}", headers=te.H_GET, timeout=30)
-    rows = [{
-        "ebook_id": EBOOK_ID, "chunk_index": c["chunk_index"], "chunk_type": c["chunk_type"],
-        "page_number": c["page_number"], "chapter_path": c["chapter_path"],
-        "content": c["content"][:200], "char_count": len(c["content"]),
-    } for c in chunks]
-    for i in range(0, len(rows), 25):
-        requests.post(f"{te.URL}/rest/v1/ebook_chunks", headers=te.H_JSON, json=rows[i:i + 25], timeout=60)
-    print(f"  ✓ DB ebooks+previews  chunk_count={len(chunks)}  {EBOOK_ID}", flush=True)
+    print(f"  ✓ DB ebooks row  chunk_count={len(chunks)}  {EBOOK_ID}", flush=True)
 
 
 if __name__ == "__main__":

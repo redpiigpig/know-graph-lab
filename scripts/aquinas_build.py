@@ -445,34 +445,15 @@ def _upload(vol: int, chunks: list[dict]):
     }
     H = {**te.H_JSON, "Prefer": "resolution=merge-duplicates"}
     requests.post(f"{te.URL}/rest/v1/ebooks?on_conflict=id", headers=H, json=row, timeout=30)
-    requests.delete(f"{te.URL}/rest/v1/ebook_chunks?ebook_id=eq.{ebid}", headers=te.H_GET, timeout=30)
-    prows = [{
-        "ebook_id": ebid, "chunk_index": c["chunk_index"], "chunk_type": c["chunk_type"],
-        "page_number": c["page_number"], "chapter_path": c["chapter_path"],
-        "content": c["content"][:200], "char_count": len(c["content"]),
-    } for c in chunks]
-    # 🚨 一批是一句 SQL：一列違規整批被拒。以前這裡完全不看 status，於是每冊靜靜少掉
-    # 25 筆（封面 chunk_type='cover' 違反 CHECK，把同批 24 筆正文一起帶走）。
-    # 現在批次失敗就逐列重試，讓壞列只損失它自己，並回報實際寫入數。
-    failed = []
-    for i in range(0, len(prows), 25):
-        batch = prows[i:i + 25]
-        r = requests.post(f"{te.URL}/rest/v1/ebook_chunks", headers=te.H_JSON, json=batch, timeout=60)
-        if r.status_code < 300:
-            continue
-        for row in batch:
-            rr = requests.post(f"{te.URL}/rest/v1/ebook_chunks", headers=te.H_JSON, json=[row], timeout=60)
-            if rr.status_code >= 300:
-                failed.append((row["chunk_index"], row["chunk_type"], rr.text[:90]))
-    written = len(prows) - len(failed)
-    if failed:
-        print(f"    ⚠ {len(failed)} 列寫不進去（其餘 {written} 列已寫入）：", flush=True)
-        for idx, typ, err in failed[:3]:
-            print(f"        index={idx} type={typ!r} {err}", flush=True)
-    print(f"    {'✓' if not failed else '△'} DB ebooks+previews  "
-          f"written={written}/{len(prows)}  {ebid}", flush=True)
-    if not failed:
-        fp_file.write_text(fp, encoding="ascii")   # 真的全數寫入才記指紋
+    # 2026-09-16：不再寫 DB preview（見 database/drop-ebook-chunks-2026-09-16.sql）。
+    # `ebook_chunks` 已退場 —— 1,005,363 列在 Supabase 免費層（上限 500 MB）獨自
+    # 佔掉 503 MB，而它只存每段前 100 字。JSONL（Drive 正本）＋ R2 才是全文所在，
+    # 搜尋與 reader 都讀那一份。
+    #
+    # 舊碼在這裡有一段「批次失敗就逐列重試」的保險（封面 chunk_type='cover' 違反
+    # CHECK 會把同批 24 筆正文一起帶走）。表沒了，那段保險連同它要保的東西一起走。
+    print(f"    ✓ DB ebooks row  chunk_count={len(chunks)}  {ebid}", flush=True)
+    fp_file.write_text(fp, encoding="ascii")
 
 
 def main():

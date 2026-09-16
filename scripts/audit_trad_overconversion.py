@@ -165,8 +165,8 @@ def cmd_fix(args) -> int:
     print(f"\n{verb} {changed_files} 本、共 {changed_spots} 處"
           f"{'（--dry-run，沒有實際寫入）' if args.dry_run else '；原檔備份為 .jsonl.trad.bak'}")
     if not args.dry_run and changed_files:
-        print("🚨 JSONL 改了之後，DB 的 100 字 preview 要一起重建："
-              "python scripts/repopulate_chunk_previews.py run --book <id> --force")
+        print("🚨 JSONL 改了之後記得推 R2。DB 的 preview 表 `ebook_chunks` 已於 "
+              "2026-09-16 退場，不必再重建（repopulate_chunk_previews.py 已封存）。")
     return 0
 
 

@@ -1347,23 +1347,10 @@ def translate_book(ebook_id: str, limit: int | None, inspect: bool, dry_run: boo
     r.raise_for_status()
     print(f"  ✓ ebooks row updated  chunk_count={len(out_chunks)}  total_chars={total_chars:,}")
 
-    # Refresh ebook_chunks previews
-    requests.delete(f"{URL}/rest/v1/ebook_chunks?ebook_id=eq.{ebook_id}", headers=H_GET, timeout=30)
-    rows = [{
-        "ebook_id": ebook_id,
-        "chunk_index": c["chunk_index"],
-        "chunk_type": c["chunk_type"],
-        "page_number": c["page_number"],
-        "chapter_path": c["chapter_path"],
-        "content": c["content"][:200],
-        "char_count": len(c["content"]),
-    } for c in out_chunks]
-    BATCH = 25
-    for i in range(0, len(rows), BATCH):
-        rr = requests.post(f"{URL}/rest/v1/ebook_chunks", headers=H_JSON, json=rows[i:i+BATCH], timeout=60)
-        if not rr.ok:
-            print(f"  ⚠ chunk preview insert: {rr.status_code}: {rr.text[:200]}", file=sys.stderr)
-    print("  ✓ ebook_chunks previews refreshed")
+    # 2026-09-16：不再寫 DB preview（見 database/drop-ebook-chunks-2026-09-16.sql）。
+    # `ebook_chunks` 已退場 —— 1,005,363 列在 Supabase 免費層（上限 500 MB）獨自
+    # 佔掉 503 MB，而它只存每段前 100 字。JSONL（Drive 正本）＋ R2 才是全文所在，
+    # 搜尋與 reader 都讀那一份。
 
 
 def main():

@@ -222,8 +222,8 @@ def process_book(label: str, ebook_id: str, threshold: int, per_page: int,
     print("  pushed R2")
 
     # Refresh DB previews
-    requests.delete(f"{URL}/rest/v1/ebook_chunks?ebook_id=eq.{ebook_id}",
-                    headers=H_GET, timeout=60)
+    # 2026-09-16：`ebook_chunks` 已退場（1,005,363 列在 Supabase 免費層獨自佔 503 MB，而它只存每段前 100 字）。
+    # JSONL（Drive 正本）＋R2 才是全文所在；見 database/drop-ebook-chunks-2026-09-16.sql。
     insert_rows = [{
         "ebook_id": ebook_id,
         "chunk_index": c["chunk_index"],
@@ -233,14 +233,7 @@ def process_book(label: str, ebook_id: str, threshold: int, per_page: int,
         "content": (c.get("content") or "")[:200],
         "char_count": len(c.get("content") or ""),
     } for c in new_chunks]
-    BATCH = 25
-    for i in range(0, len(insert_rows), BATCH):
-        batch = insert_rows[i:i + BATCH]
-        rr = requests.post(f"{URL}/rest/v1/ebook_chunks", headers=H_JSON,
-                           json=batch, timeout=60)
-        if rr.status_code not in (200, 201):
-            print(f"    batch {i}: {rr.status_code} {rr.text[:200]}", file=sys.stderr)
-    print(f"  refreshed previews ({len(insert_rows)} rows)")
+    print(f"  ✓ JSONL + R2 已更新（{len(insert_rows)} 段）")
 
     # Update ebooks row
     new_chars = sum(len(c.get("content") or "") for c in new_chunks)

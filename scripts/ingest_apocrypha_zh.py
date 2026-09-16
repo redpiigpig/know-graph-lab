@@ -1,5 +1,5 @@
 """
-Map 基督教典外文獻 (黃根春主編) ebook_chunks → apocrypha_sections (cct_zh version).
+Map 基督教典外文獻 (黃根春主編) chunks JSONL → apocrypha_sections (cct_zh version).
 
 Strategy:
 1. Pull all chunks from the 10 main ebooks (OT 1-6 + NT 1-4).
@@ -18,6 +18,9 @@ from __future__ import annotations
 import os, sys, json, re, argparse, time
 import requests
 from dotenv import load_dotenv
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import chunks_jsonl
 
 load_dotenv()
 SUPABASE_URL = os.environ['SUPABASE_URL']
@@ -489,31 +492,26 @@ def classify_with_inheritance(chunks: list[dict]) -> list[str | None]:
 
 
 def fetch_chunks(ebook_id: str) -> list[dict]:
-    """Pull all chunks via Management API in pages of 500."""
-    rows = []
-    offset = 0
-    while True:
-        sql = f"""
-SELECT id::text AS id, chunk_index, page_number, chapter_path, content
-FROM ebook_chunks
-WHERE ebook_id = '{ebook_id}'
-ORDER BY chunk_index
-LIMIT 1000 OFFSET {offset}
-"""
-        r = requests.post(
-            f'https://api.supabase.com/v1/projects/{PROJECT_REF}/database/query',
-            headers={'Authorization': f'Bearer {ACCESS_TOKEN}', 'Content-Type': 'application/json'},
-            json={'query': sql},
-        )
-        r.raise_for_status()
-        batch = r.json()
-        if not batch:
-            break
-        rows.extend(batch)
-        if len(batch) < 1000:
-            break
-        offset += 1000
-    return rows
+    """一本書的 chunks，讀 Drive 的 `_chunks/{id}.jsonl`。
+
+    2026-09-16 從 `ebook_chunks` 改讀 JSONL（表退場了，見
+    database/drop-ebook-chunks-2026-09-16.sql）。順帶變準：DB 那份 `content`
+    只有每段前 100 字，底下 content[:200] 的關鍵字回退等於只看得到開頭。
+
+    🚨 `id` 一律 None —— 那是 `ebook_chunks` 的主鍵，表沒了就沒有 uuid 可填。
+    `apocrypha_sections.source_chunk_id` 可為 NULL 且沒有外鍵，所以照樣寫得進去，
+    但既有列裡那些舊 uuid 從此指不到任何東西。
+    """
+    rows = chunks_jsonl.load(ebook_id)
+    if rows is None:
+        raise SystemExit(f"✗ 找不到 {chunks_jsonl.path_for(ebook_id)}"
+                         " —— 這本還沒轉錄，或 Drive 沒掛。")
+    rows.sort(key=lambda c: c.get('chunk_index') if isinstance(c.get('chunk_index'), int) else 0)
+    return [{'id': None,
+             'chunk_index': c.get('chunk_index'),
+             'page_number': c.get('page_number'),
+             'chapter_path': c.get('chapter_path'),
+             'content': c.get('content') or ''} for c in rows]
 
 
 def upload_sections(rows: list[dict]) -> int:

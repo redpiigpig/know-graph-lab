@@ -303,7 +303,7 @@ def standardize(book: dict, dry_run: bool) -> None:
     except Exception as e:
         print(f"  ⚠ R2 push failed: {e}", file=sys.stderr)
 
-    # Update ebooks row + refresh ebook_chunks previews
+    # Update ebooks row
     total_chars = sum(len(c.get("content") or "") for c in chunks)
     from datetime import datetime
     now = datetime.utcnow().isoformat() + "Z"
@@ -321,25 +321,10 @@ def standardize(book: dict, dry_run: bool) -> None:
     else:
         print(f"  ⚠ ebooks patch: {r.status_code}", file=sys.stderr)
 
-    requests.delete(f"{URL}/rest/v1/ebook_chunks?ebook_id=eq.{book['id']}", headers=H_GET, timeout=30)
-    rows = [{
-        "ebook_id": book["id"],
-        "chunk_index": c["chunk_index"],
-        "chunk_type": c.get("chunk_type") or "chapter",
-        "page_number": c.get("page_number"),
-        "chapter_path": c.get("chapter_path"),
-        "content": (c.get("content") or "")[:200],
-        "char_count": len(c.get("content") or ""),
-    } for c in chunks]
-    BATCH = 25
-    for i in range(0, len(rows), BATCH):
-        rr = requests.post(f"{URL}/rest/v1/ebook_chunks",
-                           headers={**H_GET, "Content-Type": "application/json"},
-                           json=rows[i:i+BATCH], timeout=60)
-        if not rr.ok:
-            print(f"  ⚠ ebook_chunks insert {rr.status_code}: {rr.text[:200]}", file=sys.stderr)
-            return
-    print("  ✓ ebook_chunks previews refreshed")
+    # 2026-09-16：不再寫 DB preview（見 database/drop-ebook-chunks-2026-09-16.sql）。
+    # `ebook_chunks` 已退場 —— 1,005,363 列在 Supabase 免費層（上限 500 MB）獨自
+    # 佔掉 503 MB，而它只存每段前 100 字。JSONL（Drive 正本）＋ R2 才是全文所在，
+    # 搜尋與 reader 都讀那一份。
 
 
 def main():

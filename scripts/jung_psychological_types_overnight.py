@@ -244,45 +244,8 @@ def assemble_and_upload(chunks: list[dict], *, upload: bool) -> None:
 
     if not upload:
         return
-    url = os.environ["SUPABASE_URL"]
-    key = os.environ["SUPABASE_SERVICE_ROLE_KEY"]
-    h_json = {"apikey": key, "Authorization": f"Bearer {key}", "Content-Type": "application/json",
-              "Prefer": "resolution=merge-duplicates"}
-    h_get = {"apikey": key, "Authorization": f"Bearer {key}"}
-    now = dt.datetime.utcnow().isoformat() + "Z"
-    row = {
-        "id": EBID,
-        "title": TITLE,
-        "author": AUTHOR,
-        "author_en": "C. G. Jung",
-        "original_title": SOURCE_TITLE,
-        "file_type": "epub",
-        "file_path": "Internet Archive/psychological_types",
-        "category": "世界宗教",
-        "subcategory": "深層心理學",
-        "display_mode": "standard",
-        "translator": "Codex + 本地 Ollama（英譯本重譯繁中）",
-        "publication_year": 1923,
-        "chunk_count": len(out_chunks),
-        "total_pages": len(out_chunks),
-        "total_chars": sum(len(c["content"]) for c in out_chunks),
-        "parsed_at": now,
-        "standardized_at": now,
-    }
-    try:
-        requests.post(f"{url}/rest/v1/ebooks", headers=h_json, json=row, timeout=30).raise_for_status()
-        requests.delete(f"{url}/rest/v1/ebook_chunks?ebook_id=eq.{EBID}", headers=h_get, timeout=60).raise_for_status()
-        previews = [{"ebook_id": EBID, "chunk_index": c["chunk_index"], "chunk_type": c["chunk_type"],
-                     "page_number": c.get("page_number"), "chapter_path": c["chapter_path"],
-                     "content": c["content"][:200], "char_count": len(c["content"])} for c in out_chunks]
-        for i in range(0, len(previews), 10):
-            r = requests.post(f"{url}/rest/v1/ebook_chunks", headers=h_json, json=previews[i:i + 10], timeout=60)
-            if not r.ok:
-                print(f"  WARN preview upsert failed {r.status_code}: {r.text[:500]}", flush=True)
-                return
-        print(f"upserted ebook {EBID} previews={len(previews)}", flush=True)
-    except Exception as exc:  # noqa: BLE001
-        print(f"  WARN upload failed but continuing: {exc}", flush=True)
+    # 2026-09-16：`ebook_chunks` 已退場（1,005,363 列在 Supabase 免費層獨自佔 503 MB，而它只存每段前 100 字）。
+    # JSONL（Drive 正本）＋R2 才是全文所在；見 database/drop-ebook-chunks-2026-09-16.sql。
 
 
 def main() -> None:

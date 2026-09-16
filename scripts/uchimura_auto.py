@@ -379,13 +379,12 @@ def upload(slug: str, chunks: list[dict], out_path: Path):
     patch = {"chunk_count": len(chunks), "total_chars": sum(len(c["content"]) for c in chunks),
              "total_pages": len(chunks), "parsed_at": now, "standardized_at": now}
     requests.patch(f"{te.URL}/rest/v1/ebooks?id=eq.{eid}", headers=te.H_JSON, json=patch, timeout=30)
-    requests.delete(f"{te.URL}/rest/v1/ebook_chunks?ebook_id=eq.{eid}", headers=te.H_GET, timeout=30)
-    rows = [{"ebook_id": eid, "chunk_index": c["chunk_index"], "chunk_type": c["chunk_type"],
-             "page_number": c["page_number"], "chapter_path": c["chapter_path"],
-             "content": c["content"][:200], "char_count": len(c["content"])} for c in chunks]
-    for k in range(0, len(rows), 25):
-        requests.post(f"{te.URL}/rest/v1/ebook_chunks", headers=te.H_JSON, json=rows[k:k + 25], timeout=60)
-    print(f"  ✓ row + previews  chunk_count={len(chunks)}", flush=True)
+    # 2026-09-16：不再寫 DB preview（見 database/drop-ebook-chunks-2026-09-16.sql）。
+    # `ebook_chunks` 已退場 —— 1,005,363 列在 Supabase 免費層（上限 500 MB）獨自
+    # 佔掉 503 MB，而它只存每段前 100 字。JSONL（Drive 正本）＋ R2 才是全文所在，
+    # 搜尋與 reader 都讀那一份。
+    # 🚨 舊碼連 response 都不看：表退場後它會照印「✓ row + previews」而一列都沒寫。
+    print(f"  ✓ ebooks row  chunk_count={len(chunks)}", flush=True)
 
 
 def out_jsonl(slug: str) -> Path:

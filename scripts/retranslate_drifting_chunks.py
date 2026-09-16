@@ -177,25 +177,9 @@ def main():
     print("✓ ebooks row updated")
 
     # Refresh previews only for the chunks we actually changed.
-    for c in chunks:
-        if c.get("chunk_index") not in changed:
-            continue
-        ci = c["chunk_index"]
-        requests.delete(
-            f"{t.URL}/rest/v1/ebook_chunks?ebook_id=eq.{eid}&chunk_index=eq.{ci}",
-            headers=t.H_GET, timeout=30)
-        row = {
-            "ebook_id": eid, "chunk_index": ci,
-            "chunk_type": c.get("chunk_type"), "page_number": c.get("page_number"),
-            "chapter_path": c.get("chapter_path"),
-            "content": (c.get("content") or "")[:200],
-            "char_count": len(c.get("content") or ""),
-        }
-        rr = requests.post(f"{t.URL}/rest/v1/ebook_chunks", headers=t.H_JSON,
-                           json=[row], timeout=60)
-        if not rr.ok:
-            print(f"  ⚠ preview chunk {ci}: {rr.status_code} {rr.text[:120]}", file=sys.stderr)
-    print(f"✓ refreshed {len(changed)} preview row(s)")
+    # 2026-09-16：`ebook_chunks` 已退場（1,005,363 列在 Supabase 免費層獨自佔 503 MB，而它只存每段前 100 字）。
+    # JSONL（Drive 正本）＋R2 才是全文所在；見 database/drop-ebook-chunks-2026-09-16.sql。
+    print(f"✓ 重譯了 {len(changed)} 段（JSONL＋R2 已更新）")
 
 
 if __name__ == "__main__":

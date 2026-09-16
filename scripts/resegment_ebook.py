@@ -43,7 +43,6 @@ import requests
 from ingest_new_books import URL, SB_HEADERS
 
 CHUNKS_DIR = Path("G:/我的雲端硬碟/資料/知識圖工作室/_chunks")
-PREVIEW_LEN = 100
 
 # 🚨 偵測門檻與切分門檻是兩回事，別共用一個數字。
 # GIANT 是 quality_sweep 判 UNDER_SEGMENTED 的線；只切超過它的塊，會留下一堆
@@ -184,29 +183,19 @@ def _retry(fn, what: str, tries: int = 6):
 
 
 def push_previews(book_id: str, chunks: list[dict]) -> bool:
-    """DB 只存 100 字預覽，全文正本在 Drive。先刪光舊列再整批寫入。"""
-    _retry(lambda: requests.delete(f"{URL}/rest/v1/ebook_chunks?ebook_id=eq.{book_id}",
-                                   headers=SB_HEADERS, timeout=60), "delete chunks")
-    rows = [{
-        "ebook_id": book_id,
-        "chunk_index": c["chunk_index"],
-        "chunk_type": c.get("chunk_type"),
-        "page_number": c.get("page_number"),
-        "chapter_path": c.get("chapter_path"),
-        "content": (c.get("content") or "")[:PREVIEW_LEN],
-        "char_count": len(c.get("content") or ""),
-    } for c in chunks]
-    for i in range(0, len(rows), 50):
-        batch = rows[i:i + 50]
-        r = _retry(lambda b=batch: requests.post(f"{URL}/rest/v1/ebook_chunks",
-                                                 headers=SB_HEADERS, json=b, timeout=60),
-                   "insert previews")
-        if not r.ok:
-            print(f"    ⚠ preview insert 失敗: {r.status_code} {r.text[:120]}", file=sys.stderr)
-            return False
+    """只更新 `ebooks` 的 chunk_count／total_chars —— preview 那半段已退場。
+
+    2026-09-16：`ebook_chunks` 1,005,363 列在 Supabase 免費層（上限 500 MB）獨自
+    佔掉 503 MB，而它只存每段前 100 字。JSONL（Drive 正本）＋ R2 才是全文所在。
+    見 database/drop-ebook-chunks-2026-09-16.sql。
+
+    🚨 函式名與回傳值刻意不動：呼叫端把 False 當「這本失敗」，表沒了還回 False
+    會讓**每一本**都印 FAIL、done 不遞增 —— 明明 JSONL 與 R2 都寫對了。
+    """
     _retry(lambda: requests.patch(f"{URL}/rest/v1/ebooks?id=eq.{book_id}", headers=SB_HEADERS,
-                                  json={"chunk_count": len(rows),
-                                        "total_chars": sum(x["char_count"] for x in rows)},
+                                  json={"chunk_count": len(chunks),
+                                        "total_chars": sum(len(c.get("content") or "")
+                                                           for c in chunks)},
                                   timeout=30), "patch ebook")
     return True
 

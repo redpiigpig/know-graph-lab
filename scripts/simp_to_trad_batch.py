@@ -3,7 +3,8 @@
 For every ebook in the DB with chunks, sample a few chunks to decide whether
 the book is written in simplified Chinese. If so, run opencc s2tw +
 parse_drive_inventory.TRAD_FIXES on every chunk's `content` and rewrite the
-JSONL in place (also mirrors to R2 + refreshes ebook_chunks previews).
+JSONL in place (also mirrors to R2). `ebook_chunks` 已於 2026-09-16 退場，
+DB 不再存 preview。
 
 Unlike the English → Chinese pipeline this one does NOT preserve the source —
 the original simplified text is overwritten. (Drive keeps version history if
@@ -152,80 +153,14 @@ def convert_one(ebook_id: str, title: str) -> dict:
     except Exception as e:
         print(f"  ⚠ R2 push failed: {e}", file=sys.stderr)
 
-    # Refresh ebook_chunks previews (DELETE + INSERT)
-    requests.delete(f"{URL}/rest/v1/ebook_chunks?ebook_id=eq.{ebook_id}", headers=H_GET, timeout=30)
-    rows = [{
-        "ebook_id": ebook_id,
-        "chunk_index": c["chunk_index"],
-        "chunk_type": c.get("chunk_type", "chapter"),
-        "page_number": c.get("page_number"),
-        "chapter_path": c.get("chapter_path"),
-        "content": c["content"][:200],
-        "char_count": len(c["content"]),
-    } for c in chunks]
-    BATCH = 25
-    for i in range(0, len(rows), BATCH):
-        rr = requests.post(f"{URL}/rest/v1/ebook_chunks", headers=H_JSON, json=rows[i:i+BATCH], timeout=60)
-        if not rr.ok:
-            print(f"  ⚠ preview insert: {rr.status_code}: {rr.text[:200]}", file=sys.stderr)
+    # 2026-09-16：不再寫 DB preview（見 database/drop-ebook-chunks-2026-09-16.sql）。
+    # `ebook_chunks` 已退場 —— 1,005,363 列在 Supabase 免費層（上限 500 MB）獨自
+    # 佔掉 503 MB，而它只存每段前 100 字。JSONL（Drive 正本）＋ R2 才是全文所在，
+    # 搜尋與 reader 都讀那一份。
 
     return {"status": "converted", "chunks_changed": changed, "total_chunks": len(chunks),
             "r2_bytes": r2_size}
 
-
-def refresh_previews_only(ebook_id: str) -> dict:
-    """Re-do the DELETE + INSERT previews for one ebook (no s2tw rerun).
-    Uses smaller batches + retries to survive Supabase 8s statement timeout
-    on large books (e.g. 535-chunk 二思集 hit the wall on the first run)."""
-    chunks = load_jsonl_local(ebook_id)
-    if not chunks:
-        chunks = load_jsonl_r2(ebook_id)
-    if not chunks:
-        return {"status": "skip", "reason": "no-jsonl"}
-
-    # DELETE with explicit longer timeout + retry; 30s should comfortably
-    # cover a fresh statement_timeout even when the previews table is bloated.
-    for attempt in range(3):
-        try:
-            r = requests.delete(f"{URL}/rest/v1/ebook_chunks?ebook_id=eq.{ebook_id}",
-                                headers=H_GET, timeout=60)
-            if r.ok or r.status_code == 404:
-                break
-            print(f"  DELETE attempt {attempt+1}: {r.status_code}", file=sys.stderr)
-        except requests.exceptions.RequestException as e:
-            print(f"  DELETE attempt {attempt+1} conn-err: {e}", file=sys.stderr)
-        time.sleep(2 ** attempt)
-
-    rows = [{
-        "ebook_id": ebook_id,
-        "chunk_index": c["chunk_index"],
-        "chunk_type": c.get("chunk_type", "chapter"),
-        "page_number": c.get("page_number"),
-        "chapter_path": c.get("chapter_path"),
-        "content": c["content"][:200],
-        "char_count": len(c["content"]),
-    } for c in chunks]
-    BATCH = 10
-    failures = 0
-    inserted = 0
-    for i in range(0, len(rows), BATCH):
-        batch = rows[i:i+BATCH]
-        for attempt in range(3):
-            try:
-                rr = requests.post(f"{URL}/rest/v1/ebook_chunks",
-                                   headers=H_JSON, json=batch, timeout=60)
-                if rr.ok:
-                    inserted += len(batch)
-                    break
-                print(f"  INSERT batch {i//BATCH+1} attempt {attempt+1}: {rr.status_code}: {rr.text[:120]}",
-                      file=sys.stderr)
-            except requests.exceptions.RequestException as e:
-                print(f"  INSERT batch {i//BATCH+1} attempt {attempt+1} conn-err: {e}", file=sys.stderr)
-            time.sleep(2 ** attempt)
-        else:
-            failures += 1
-    return {"status": "previews-refreshed", "inserted": inserted, "failed_batches": failures,
-            "total_chunks": len(chunks)}
 
 
 def main():
@@ -234,13 +169,7 @@ def main():
     g.add_argument("--scan", action="store_true", help="Detect simplified books, no writes")
     g.add_argument("--id", help="Convert a single ebook_id (no detection)")
     g.add_argument("--run-all", action="store_true", help="Detect then convert all simplified books")
-    g.add_argument("--previews-only", help="Refresh ebook_chunks previews for one ebook_id (no s2tw)")
     args = ap.parse_args()
-
-    if args.previews_only:
-        print(f"Refreshing previews for {args.previews_only}")
-        print(f"  → {refresh_previews_only(args.previews_only)}")
-        return
 
     if args.id:
         # Force-convert by id (skip detection)

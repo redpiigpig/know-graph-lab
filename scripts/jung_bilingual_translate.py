@@ -144,27 +144,8 @@ def assemble(cfg: dict, data: Path, units: list[dict], *, upload: bool) -> None:
     import requests
 
     url, key = os.environ["SUPABASE_URL"], os.environ["SUPABASE_SERVICE_ROLE_KEY"]
-    hj = {"apikey": key, "Authorization": f"Bearer {key}", "Content-Type": "application/json",
-          "Prefer": "resolution=merge-duplicates"}
-    hg = {"apikey": key, "Authorization": f"Bearer {key}"}
-    now = dt.datetime.utcnow().isoformat() + "Z"
-    row = {"id": cfg["ebid"], "title": cfg["title"], "author": "C. G. 榮格", "author_en": "C. G. Jung",
-           "original_title": cfg["src_title"], "file_type": "epub", "file_path": cfg["file_path"],
-           "category": "世界宗教", "subcategory": "深層心理學", "display_mode": "standard",
-           "translator": "Codex（NVIDIA 英譯本重譯繁中）", "publication_year": cfg["year"],
-           "chunk_count": len(out), "total_pages": len(out),
-           "total_chars": sum(len(c["content"]) for c in out), "parsed_at": now, "standardized_at": now}
-    try:
-        requests.post(f"{url}/rest/v1/ebooks", headers=hj, json=row, timeout=30).raise_for_status()
-        requests.delete(f"{url}/rest/v1/ebook_chunks?ebook_id=eq.{cfg['ebid']}", headers=hg, timeout=60).raise_for_status()
-        prev = [{"ebook_id": cfg["ebid"], "chunk_index": c["chunk_index"], "chunk_type": c["chunk_type"],
-                 "page_number": c.get("page_number"), "chapter_path": c["chapter_path"],
-                 "content": c["content"][:200], "char_count": len(c["content"])} for c in out]
-        for i in range(0, len(prev), 20):
-            requests.post(f"{url}/rest/v1/ebook_chunks", headers=hj, json=prev[i:i + 20], timeout=60).raise_for_status()
-        print(f"  upserted previews={len(prev)}", flush=True)
-    except Exception as exc:  # noqa: BLE001
-        print(f"  WARN upload: {exc}", flush=True)
+    # 2026-09-16：`ebook_chunks` 已退場（1,005,363 列在 Supabase 免費層獨自佔 503 MB，而它只存每段前 100 字）。
+    # JSONL（Drive 正本）＋R2 才是全文所在；見 database/drop-ebook-chunks-2026-09-16.sql。
 
 
 PRE = re.compile(r"^(以下是?|以下為|這是?|下面是?|這裡是|好的|當然|茲將)[^\n]{0,80}(翻譯|繁體中文|中文版|譯文|版本|如下|結果|Markdown|對照)[^\n]{0,120}[:：。]?\s*$")

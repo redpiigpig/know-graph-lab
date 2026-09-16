@@ -350,21 +350,18 @@ def build(inspect: bool, upload: bool) -> None:
     key = os.environ["SUPABASE_SERVICE_ROLE_KEY"]
     h_json = {"apikey": key, "Authorization": f"Bearer {key}", "Content-Type": "application/json",
               "Prefer": "resolution=merge-duplicates"}
-    h_get = {"apikey": key, "Authorization": f"Bearer {key}"}
+    # 2026-09-16：`ebook_chunks` 已退場（1,005,363 列在 Supabase 免費層獨自佔 503 MB，而它只存每段前 100 字）。
+    # JSONL（Drive 正本）＋R2 才是全文所在；見 database/drop-ebook-chunks-2026-09-16.sql。
     now = dt.datetime.utcnow().isoformat() + "Z"
     row = {"id": EBID, "title": TITLE, "display_mode": "standard",
            "chunk_count": len(out_chunks), "total_pages": len(out_chunks),
            "total_chars": sum(len(c["content"]) for c in out_chunks),
            "standardized_at": now}
     requests.patch(f"{url}/rest/v1/ebooks?id=eq.{EBID}", headers=h_json, json=row, timeout=30).raise_for_status()
-    requests.delete(f"{url}/rest/v1/ebook_chunks?ebook_id=eq.{EBID}", headers=h_get, timeout=60).raise_for_status()
     previews = [{"ebook_id": EBID, "chunk_index": c["chunk_index"], "chunk_type": c["chunk_type"],
                  "page_number": c.get("page_number"), "chapter_path": c["chapter_path"],
                  "content": c["content"][:200], "char_count": len(c["content"])} for c in out_chunks]
-    for i in range(0, len(previews), 20):
-        r = requests.post(f"{url}/rest/v1/ebook_chunks", headers=h_json, json=previews[i:i + 20], timeout=60)
-        r.raise_for_status()
-    print(f"upserted ebook {EBID} previews={len(previews)}")
+    print(f"upserted ebook {EBID} chunks={len(previews)}（JSONL＋R2）")
 
 
 def main() -> None:

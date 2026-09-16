@@ -192,24 +192,8 @@ def assemble(vol, cfg_title: str, ebid: str, data: Path, units: list[str], *, up
     import requests
 
     url, key = os.environ["SUPABASE_URL"], os.environ["SUPABASE_SERVICE_ROLE_KEY"]
-    hj = {"apikey": key, "Authorization": f"Bearer {key}", "Content-Type": "application/json",
-          "Prefer": "resolution=merge-duplicates"}
-    hg = {"apikey": key, "Authorization": f"Bearer {key}"}
-    now = dt.datetime.utcnow().isoformat() + "Z"
-    row = {"id": ebid, "title": f"{cfg_title}（CW {vol}·英繁中）", "author": "C. G. 榮格",
-           "author_en": "C. G. Jung", "original_title": f"Collected Works vol. {vol} (Hull)",
-           "file_type": "epub",
-           # 全 16 卷同一個 file_path 會撞 ebooks_file_path_uniq：第一卷進得去，其餘
-           # 每次上傳都 409（2026-09 之前只有 CW11 上得了站就是這個原因）。卷號後綴
-           # 讓每卷唯一，仍指得回同一份 Drive 原檔。
-           "file_path": f"Drive/全集/心理學/榮格/CW-complete.epub#CW{vol}",
-           "category": "世界宗教", "subcategory": "深層心理學", "display_mode": "standard",
-           # 少了這一欄，卷子會以 collection=NULL 落進電子圖書館
-           # （[[feedback_collected_works_not_in_library]]）。
-           "collection": "collected-works",
-           "translator": "Codex（NVIDIA 英譯本重譯繁中）", "publication_year": 1960,
-           "chunk_count": len(out), "total_pages": len(out),
-           "total_chars": sum(len(c["content"]) for c in out), "parsed_at": now, "standardized_at": now}
+    # 2026-09-16：`ebook_chunks` 已退場（1,005,363 列在 Supabase 免費層獨自佔 503 MB，而它只存每段前 100 字）。
+    # JSONL（Drive 正本）＋R2 才是全文所在；見 database/drop-ebook-chunks-2026-09-16.sql。
     # raise_for_status() 只給狀態碼，PostgREST 把真正的原因（撞哪一條約束）放在 body，
     # 沒印出來就只能猜。
     def _ok(resp):
@@ -217,17 +201,6 @@ def assemble(vol, cfg_title: str, ebid: str, data: Path, units: list[str], *, up
             raise RuntimeError(f"{resp.status_code} {resp.text[:400]}")
         return resp
 
-    try:
-        _ok(requests.post(f"{url}/rest/v1/ebooks", headers=hj, json=row, timeout=30))
-        _ok(requests.delete(f"{url}/rest/v1/ebook_chunks?ebook_id=eq.{ebid}", headers=hg, timeout=60))
-        prev = [{"ebook_id": ebid, "chunk_index": c["chunk_index"], "chunk_type": c["chunk_type"],
-                 "page_number": c.get("page_number"), "chapter_path": c["chapter_path"],
-                 "content": c["content"][:200], "char_count": len(c["content"])} for c in out]
-        for i in range(0, len(prev), 20):
-            _ok(requests.post(f"{url}/rest/v1/ebook_chunks", headers=hj, json=prev[i:i + 20], timeout=60))
-        print(f"  upserted previews={len(prev)}", flush=True)
-    except Exception as exc:  # noqa: BLE001
-        print(f"  WARN upload: {exc}", flush=True)
 
 
 def run_vol(vol, cfg, bounds, args) -> None:

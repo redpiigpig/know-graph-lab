@@ -228,74 +228,21 @@ def consolidate(chunks: list[dict], entries: list[dict]) -> list[dict]:
 
 
 def push_db(chunks: list[dict]) -> None:
-    print(f"Deleting old rows…")
-    r = requests.delete(
-        f"{URL}/rest/v1/ebook_chunks?ebook_id=eq.{BOOK_ID}",
-        headers={**H, "Prefer": "return=minimal"},
-        timeout=120,
-    )
-    if r.status_code >= 300:
-        print(f"⚠ delete returned {r.status_code}: {r.text[:200]}")
+    """只更新 `ebooks` 那一列 —— 整本的 chunks 已經在 JSONL＋R2 了。
 
-    print(f"Inserting {len(chunks)} entry-merged rows…")
-    rows = []
-    for c in chunks:
-        content = c.get("content") or ""
-        rows.append({
-            "ebook_id": BOOK_ID,
-            "chunk_index": c["chunk_index"],
-            "chunk_type": c.get("chunk_type"),
-            "page_number": c.get("page_number"),
-            "chapter_path": c.get("chapter_path"),
-            "content": content,
-            "char_count": len(content) + len((c.get("source_text") or "")),
-            "section_type": c.get("section_type"),
-            "source_text": c.get("source_text"),
-            "source_lang": c.get("source_lang"),
-            "dh_number": c.get("dh_number"),
-            "page_numbers": c.get("page_numbers") or [],
-        })
-
-    # Adaptive batching — Supabase free tier hits statement timeout (57014)
-    # at 25-row batches when entries.json fold creates 100-200KB rows. Step
-    # down on timeout.
-    BATCH_SIZES = [25, 10, 5, 1]
-    i = 0
-    inserted = 0
-    while i < len(rows):
-        for bs in BATCH_SIZES:
-            batch = rows[i:i + bs]
-            r = requests.post(
-                f"{URL}/rest/v1/ebook_chunks",
-                headers={**H, "Prefer": "return=minimal"},
-                json=batch,
-                timeout=180,
-            )
-            if r.status_code in (200, 201, 204):
-                i += bs
-                inserted += len(batch)
-                if inserted % 100 < bs:
-                    print(f"  inserted {inserted}/{len(rows)}")
-                break
-            if r.status_code == 500 and "57014" in r.text:
-                continue
-            print(f"⚠ insert at {i} (bs={bs}) returned {r.status_code}: {r.text[:200]}")
-            i += bs
-            break
-        else:
-            print(f"⚠ row {i} failed even at batch size 1, skipping")
-            i += 1
-    print(f"✓ DB repopulated with {inserted}/{len(rows)} entry-merged rows")
-
+    2026-09-16：`ebook_chunks` 退場（1,005,363 列在 Supabase 免費層獨自佔 503 MB，
+    而它只存每段前 100 字）。見 database/drop-ebook-chunks-2026-09-16.sql。
+    """
     requests.patch(
         f"{URL}/rest/v1/ebooks?id=eq.{BOOK_ID}",
         headers=H,
         json={
-            "chunk_count": len(rows),
+            "chunk_count": len(chunks),
             "total_chars": sum(len((c.get("content") or "")) for c in chunks),
         },
         timeout=30,
     )
+    print(f"✓ ebooks row 更新（chunk_count={len(chunks)}）")
 
 
 def main() -> int:

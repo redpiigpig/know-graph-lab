@@ -61,8 +61,6 @@ VENV_PY = REPO / "_mineru_venv" / "Scripts" / "python.exe"
 MINERU_EXE = REPO / "_mineru_venv" / "Scripts" / "mineru.exe"
 CHUNKS_DIR = Path(os.environ.get(
     "EBOOK_CHUNKS_DIR", r"G:\我的雲端硬碟\資料\知識圖工作室\_chunks"))
-# 空間不夠時欠下的 DB preview，日後用 repopulate_chunk_previews.py 補
-PENDING_PREVIEWS = REPO / "scripts" / "state" / "pending_previews.txt"
 
 
 # ── MinerU 產物 → 逐頁文字 ────────────────────────────────────────────────
@@ -396,19 +394,9 @@ def cmd_queue(args) -> int:
                 print("⛔ 已達硬上限，不開跑。先清空間或調高 --max-db-mb 再說。")
                 return 1
 
-    # preview 要不要寫。全文一律進 Drive＋R2，reader 讀的是那份，所以不寫 preview
-    # 書照樣能看，只是暫時搜尋不到 —— 空間緊的時候這是最划算的取捨。
-    if args.previews == "on":
-        write_previews = True
-    elif args.previews == "off":
-        write_previews = False
-    else:                                   # auto
-        write_previews = db_mb is not None and db_mb < args.preview_ceiling_mb
-    if not write_previews:
-        print(f"  ⏸ 不寫 DB preview（DB {db_mb:,.0f} MB ≥ {args.preview_ceiling_mb} MB）"
-              if db_mb else "  ⏸ 不寫 DB preview")
-        print(f"     書照樣能讀（reader 讀 Drive 的 JSONL），只是暫時搜尋不到；"
-              f"欠帳記在 {PENDING_PREVIEWS}")
+    # 2026-09-16：這裡本來有一組「DB 空間不夠就先不寫 preview、記帳日後補」的閘。
+    # `ebook_chunks` 整張退場之後沒有 preview 可寫，也就沒有帳要欠 —— 全文一律進
+    # Drive＋R2，reader 與搜尋都讀那一份。見 database/drop-ebook-chunks-2026-09-16.sql。
 
     deadline = time.time() + args.max_minutes * 60 if args.max_minutes else None
     done = fail = 0
@@ -457,20 +445,12 @@ def cmd_queue(args) -> int:
             fail += 1
             continue
 
-        # 交給既有的發布路徑：JSONL(繁體) → R2 → DB preview → parsed_at
+        # 交給既有的發布路徑：JSONL(繁體) → R2 → parsed_at
         pub = [{"page": c["page_number"], "text": og._trad(c["content"])} for c in chunks]
         try:
             path = og.write_jsonl(bid, pub)
             og.push_to_r2(bid, path)
             non_empty = [c for c in pub if c["text"].strip()]
-            if write_previews:
-                og.insert_chunk_previews(bid, non_empty)
-            else:
-                # 全文已經在 Drive＋R2，reader 讀的就是那份，所以書照樣看得到；
-                # DB 的 preview 只服務 SQL 搜尋。空間不夠時先欠著，
-                # 記下來日後用 repopulate_chunk_previews.py 補。
-                with PENDING_PREVIEWS.open("a", encoding="utf-8") as f:
-                    f.write(f"{bid}\n")
             og.update_book_done(bid,
                                 total_chars=sum(len(c["text"]) for c in non_empty),
                                 chunk_count=len(non_empty),
@@ -524,11 +504,6 @@ def main() -> int:
                    help="時間上限，到了就把其餘留給下一班（0＝不限）")
     q.add_argument("--lang", default="ch")
     q.add_argument("--exclude", nargs="*", default=[], help="要跳過的 ebook id")
-    q.add_argument("--previews", choices=["auto", "on", "off"], default="auto",
-                   help="要不要寫 DB preview。auto＝DB 還有餘裕才寫（預設）。"
-                        "不寫也不影響閱讀，reader 讀的是 Drive 上的 JSONL，只影響搜尋")
-    q.add_argument("--preview-ceiling-mb", type=int, default=480,
-                   help="auto 模式下，DB 超過這個大小就不再寫 preview（免費層上限 500 MB）")
     q.add_argument("--max-db-mb", type=int, default=1100,
                    help="DB 超過這個大小就停（預設 1100 MB）。"
                         "2026-07-08 曾在 1,313 MB 被鎖站，這道閘是為了別讓沒人看著的夜班撞上去")

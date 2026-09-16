@@ -1,11 +1,14 @@
 # -*- coding: utf-8 -*-
-"""稽核 `ebook_chunks.page_number` 是不是**原書頁碼**——直接查 DB，不碰 Drive。
+"""稽核 chunk 的 `page_number` 是不是**原書頁碼**——全庫、不取樣。
 
-為什麼要有這一支：`audit_page_numbers.py` 讀 Drive 的 `_chunks/*.jsonl`，而
-Google Drive 沒掛載時它會安靜地掃到 0 個檔、印一行「掃描 0 個 JSONL」就結束
-（2026-09-10 連三次空手而回都是這個原因）。但判準要的兩個欄位——`page_number`
-與 `chunk_index`——本來就在 `ebook_chunks` 裡，一句 SQL 就夠了，而且是**全庫**
-而不是取樣。
+與 `audit_page_numbers.py` 的分工：那支只看 JSONL，分不出 serial-epub 與
+serial-pdf（那一刀要 `ebooks.file_type`，不分會把一千多本頁碼正確的 PDF 也
+打成假頁碼）。這支拿 DB 的書目 metadata ＋ Drive 的 chunks，兩邊合起來判。
+
+2026-09-16：chunk 那一半從 `ebook_chunks` 改讀 `_chunks/*.jsonl`（表退場了，見
+database/drop-ebook-chunks-2026-09-16.sql）。原本寫這支的理由是「Drive 沒掛時
+會安靜地掃到 0 個檔」——那個坑改由 chunks_jsonl.require_dir() 直接拋例外擋住，
+不再是默默回 0。
 
 判準與 `audit_page_numbers.py` 一致（[[feedback_transcribe_page_numbers]]）：
 
@@ -37,6 +40,8 @@ import json
 import os
 import sys
 from pathlib import Path
+
+import chunks_jsonl
 
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
@@ -90,16 +95,24 @@ SELECT e.id::text            AS ebook_id,
        coalesce(e.collection, '(圖書館)') AS collection,
        coalesce(e.file_type, '?')        AS file_type,
        e.title,
-       e.author,
-       count(*)              AS total,
-       count(c.page_number)  AS with_page,
-       sum(CASE WHEN c.page_number = c.chunk_index + 1 THEN 1 ELSE 0 END) AS serial
-FROM ebook_chunks c
-JOIN ebooks e ON e.id = c.ebook_id
+       e.author
+FROM ebooks e
 {where}
-GROUP BY e.id, e.collection, e.file_type, e.title, e.author
-ORDER BY count(*) DESC;
+ORDER BY e.title;
 """
+
+
+def tally_book(chunks: list[dict]) -> tuple[int, int, int]:
+    """一本書的 chunks → (total, with_page, serial)。判準同 classify()。"""
+    total = with_page = serial = 0
+    for c in chunks:
+        total += 1
+        pn, ci = c.get("page_number"), c.get("chunk_index")
+        if isinstance(pn, int):
+            with_page += 1
+            if isinstance(ci, int) and pn == ci + 1:
+                serial += 1
+    return total, with_page, serial
 
 
 def main() -> None:
@@ -117,16 +130,24 @@ def main() -> None:
     if not isinstance(rows, list):
         print("查詢失敗:", rows)
         raise SystemExit(1)
+    print(f"DB 書目 {len(rows):,} 本，開始讀 Drive 的 chunks …")
+
+    # 🚨 印分母：沒有 JSONL 的書會被排除，不說清楚就會以為「全庫只有這些」。
+    buckets = chunks_jsonl.scan([r["ebook_id"] for r in rows])
 
     out = []
     tally = {}
     for r in rows:
-        kind = classify(int(r["total"]), int(r["with_page"]),
-                        int(r["serial"] or 0), r.get("file_type", ""))
+        chunks = buckets.get(r["ebook_id"])
+        if chunks is None:
+            continue          # 這本還沒轉錄，不是頁碼問題
+        total, with_page, serial = tally_book(chunks)
+        kind = classify(total, with_page, serial, r.get("file_type", ""))
         tally[kind] = tally.get(kind, 0) + 1
-        out.append({**r, "kind": kind})
+        out.append({**r, "total": total, "with_page": with_page,
+                    "serial": serial, "kind": kind})
 
-    print(f"共 {len(out):,} 本書")
+    print(f"有 chunks 的共 {len(out):,} 本書（DB 書目 {len(rows):,} 本）")
     for k in ("serial-epub", "serial-pdf", "real", "none", "sparse", "empty"):
         if tally.get(k):
             print(f"  {k:7s} {tally[k]:5d}")

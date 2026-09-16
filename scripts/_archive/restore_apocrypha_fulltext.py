@@ -1,3 +1,6 @@
+# 2026-09-16 退場：這支的工作對象是 `ebook_chunks`，那張表已經 drop 掉了
+# （見 database/drop-ebook-chunks-2026-09-16.sql）。全文正本在 Drive 的
+# _chunks/*.jsonl ＋ R2，搜尋與 reader 都讀那一份。留檔只為了查歷史。
 """
 Re-import full Vision OCR text from JSONL → ebook_chunks for the 10 apocrypha books.
 

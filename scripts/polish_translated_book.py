@@ -417,36 +417,8 @@ def polish(ebook_id: str, dry_run: bool = False,
         print(f"  ⚠ R2 push failed: {e}", file=sys.stderr)
 
     # Refresh ebook_chunks previews (DELETE + INSERT)
-    try:
-        r = requests.delete(f"{URL}/rest/v1/ebook_chunks?ebook_id=eq.{ebook_id}",
-                            headers=H_GET, timeout=30)
-        if r.status_code not in (200, 204):
-            print(f"  ⚠ preview DELETE: {r.status_code} {r.text[:200]}", file=sys.stderr)
-        rows = [{
-            "ebook_id": ebook_id,
-            "chunk_index": c["chunk_index"],
-            "chunk_type": c.get("chunk_type", "chapter"),
-            "page_number": c.get("page_number"),
-            "chapter_path": c.get("chapter_path"),
-            "content": (c.get("content") or "")[:200],
-            "char_count": len(c.get("content") or ""),
-        } for c in chunks]
-        BATCH = 25
-        for i in range(0, len(rows), BATCH):
-            batch = rows[i:i + BATCH]
-            r = requests.post(f"{URL}/rest/v1/ebook_chunks", headers=H_JSON,
-                              json=batch, timeout=30)
-            if r.status_code not in (200, 201):
-                # Retry once with smaller batch
-                for row in batch:
-                    rr = requests.post(f"{URL}/rest/v1/ebook_chunks",
-                                       headers=H_JSON, json=row, timeout=30)
-                    if rr.status_code not in (200, 201):
-                        print(f"  ⚠ preview row [{row['chunk_index']}]: "
-                              f"{rr.status_code} {rr.text[:120]}", file=sys.stderr)
-        print(f"  ✓ refreshed ebook_chunks previews ({len(rows)} rows)")
-    except Exception as e:
-        print(f"  ⚠ preview refresh failed: {e}", file=sys.stderr)
+    # 2026-09-16：`ebook_chunks` 已退場（1,005,363 列在 Supabase 免費層獨自佔 503 MB，而它只存每段前 100 字）。
+    # JSONL（Drive 正本）＋R2 才是全文所在；見 database/drop-ebook-chunks-2026-09-16.sql。
 
 
 def main():

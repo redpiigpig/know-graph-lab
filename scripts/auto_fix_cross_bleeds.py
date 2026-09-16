@@ -444,25 +444,8 @@ def main():
             f.write(json.dumps(c, ensure_ascii=False) + "\n")
     print(f"✓ wrote {jsonl.name}")
 
-    if not args.no_push:
-        se.push_to_r2(args.ebook_id, jsonl)
-        print("✓ pushed R2")
-        # Refresh ALL previews — many chunks may have changed
-        requests.delete(f"{URL}/rest/v1/ebook_chunks?ebook_id=eq.{args.ebook_id}",
-                        headers=H_GET, timeout=30)
-        rows = [{
-            "ebook_id": args.ebook_id,
-            "chunk_index": c["chunk_index"],
-            "chunk_type": c.get("chunk_type", "chapter"),
-            "page_number": c.get("page_number"),
-            "chapter_path": c.get("chapter_path"),
-            "content": (c.get("content") or "")[:200],
-            "char_count": len(c.get("content") or ""),
-        } for c in chunks]
-        for i in range(0, len(rows), 25):
-            requests.post(f"{URL}/rest/v1/ebook_chunks",
-                          headers=H_JSON, json=rows[i:i + 25], timeout=30)
-        print(f"✓ refreshed previews ({len(rows)} rows)")
+    # 2026-09-16：`ebook_chunks` 已退場（1,005,363 列在 Supabase 免費層獨自佔 503 MB，而它只存每段前 100 字）。
+    # JSONL（Drive 正本）＋R2 才是全文所在；見 database/drop-ebook-chunks-2026-09-16.sql。
 
 
 if __name__ == "__main__":

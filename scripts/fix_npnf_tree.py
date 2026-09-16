@@ -318,12 +318,8 @@ def main(eid: str, dry_run=False):
     with open(src, "w", encoding="utf-8") as f:
         for r in rows: f.write(json.dumps(r, ensure_ascii=False) + "\n")
     se.push_to_r2(eid, src)
-    requests.delete(f"{URL}/rest/v1/ebook_chunks?ebook_id=eq.{eid}", headers=H_GET, timeout=60)
-    ins = [{"ebook_id": eid, "chunk_index": r["chunk_index"], "chunk_type": r.get("chunk_type","chapter"),
-            "page_number": r.get("page_number"), "chapter_path": r.get("chapter_path"),
-            "content": (r.get("content") or "")[:200], "char_count": len(r.get("content") or "")} for r in rows]
-    for i in range(0, len(ins), 25):
-        requests.post(f"{URL}/rest/v1/ebook_chunks", headers=H_JSON, json=ins[i:i+25], timeout=60)
+    # 2026-09-16：`ebook_chunks` 已退場（1,005,363 列在 Supabase 免費層獨自佔 503 MB，而它只存每段前 100 字）。
+    # JSONL（Drive 正本）＋R2 才是全文所在；見 database/drop-ebook-chunks-2026-09-16.sql。
     print(f"applied + synced ({len(rows)} chunks)")
 
 

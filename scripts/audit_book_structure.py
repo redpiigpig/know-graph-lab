@@ -3,8 +3,8 @@
 """Read-only transcription-structure audit (no writes).
 
 Answers the question "did standardization actually capture 目錄 / 分段分行 /
-小標題 for the existing books?" using signals already in the DB (char_count +
-chapter_path are stored per chunk even though full content lives in JSONL/R2).
+小標題 for the existing books?" using signals read straight from the JSONL
+(char_count 現算、chapter_path 逐段讀；`ebook_chunks` 已於 2026-09-16 退場).
 
 Per book it computes:
   - heading structure : # distinct non-empty chapter_path  → 小標題/目錄抓到沒
@@ -24,6 +24,8 @@ import sys
 from pathlib import Path
 
 import requests
+
+import chunks_jsonl
 
 if sys.platform == "win32":
     sys.stdout.reconfigure(encoding="utf-8")
@@ -70,21 +72,18 @@ def main():
         f"{URL}/rest/v1/ebooks", H,
         "id,title,file_type,total_pages,chunk_count,standardized_at,parse_error", 1000)}
 
-    print(f"fetching chunk stats for {len(books)} books (182K chunks, paginated)…")
-    # per-book accumulators
+    # 2026-09-16：從 `ebook_chunks` 改讀 Drive 的 _chunks/*.jsonl（那張表退場了，見
+    # database/drop-ebook-chunks-2026-09-16.sql）。char_count 直接由全文現算，
+    # 比原本那欄更可信：DB 裡存的是轉錄當下寫進去的值，中途修過的書不會回填。
+    print(f"讀 {len(books):,} 本的 JSONL 算 chunk 統計…")
     cnt = collections.Counter()
     tiny = collections.Counter()
     giant = collections.Counter()
     headings = collections.defaultdict(set)
-    off, step = 0, 10000
-    while True:
-        c = requests.get(
-            f"{URL}/rest/v1/ebook_chunks?select=ebook_id,char_count,chapter_path"
-            f"&order=id&offset={off}&limit={step}", headers=H, timeout=180).json()
-        for ch in c:
-            eid = ch["ebook_id"]
+    for eid, chunks in chunks_jsonl.scan(books.keys()).items():
+        for ch in chunks:
             cnt[eid] += 1
-            cc = ch.get("char_count") or 0
+            cc = len(ch.get("content") or "")
             if cc < TINY:
                 tiny[eid] += 1
             if cc > GIANT:
@@ -92,10 +91,6 @@ def main():
             cp = (ch.get("chapter_path") or "").strip()
             if cp:
                 headings[eid].add(cp)
-        if len(c) < step:
-            break
-        off += step
-        print(f"  …{off} chunks scanned")
 
     flags = collections.defaultdict(list)
     for eid, b in books.items():

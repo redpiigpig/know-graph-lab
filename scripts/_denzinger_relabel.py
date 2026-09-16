@@ -308,31 +308,10 @@ def relabel(dry_run: bool, skip_db: bool, push: bool) -> int:
     import requests
     from ocr_with_gemini import URL, KEY  # noqa: E402
 
-    H = {"apikey": KEY, "Authorization": f"Bearer {KEY}", "Content-Type": "application/json"}
+    # 2026-09-16：`ebook_chunks` 已退場（1,005,363 列在 Supabase 免費層獨自佔 503 MB，而它只存每段前 100 字）。
+    # JSONL（Drive 正本）＋R2 才是全文所在；見 database/drop-ebook-chunks-2026-09-16.sql。
     n = 0
     t0 = time.time()
-    for c in new_chunks:
-        idx = c["chunk_index"]
-        chap = c.get("chapter_path")
-        vol = c.get("volume")
-        parent = c.get("parent_volume")
-        payload = {"chapter_path": chap}
-        # volume / parent_volume columns may not exist; PostgREST silently
-        # 400s on unknown columns — we'd then fall back to chapter_path-only.
-        r = requests.patch(
-            f"{URL}/rest/v1/ebook_chunks?ebook_id=eq.{BOOK_ID}"
-            f"&chunk_index=eq.{idx}",
-            headers=H,
-            json=payload,
-            timeout=30,
-        )
-        if r.status_code not in (200, 204):
-            print(f"  ⚠ row {idx} patch {r.status_code}: {r.text[:100]}",
-                  file=sys.stderr)
-        else:
-            n += 1
-        if n and n % 200 == 0:
-            print(f"  patched {n}/{len(new_chunks)} ({time.time()-t0:.0f}s)")
     print(f"✓ patched {n}/{len(new_chunks)} DB rows in {time.time()-t0:.0f}s")
     return 0
 

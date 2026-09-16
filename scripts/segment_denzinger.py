@@ -717,8 +717,8 @@ def update_display_mode(mode: str) -> None:
 
 
 def replace_db_chunks(flat: list[dict]) -> None:
-    """Replace ebook_chunks rows for this book with full segmented chunks
-    (full content, not previews — bilingual reader fetches from DB)."""
+    # 2026-09-16：`ebook_chunks` 已退場（1,005,363 列在 Supabase 免費層獨自佔 503 MB，而它只存每段前 100 字）。
+    # JSONL（Drive 正本）＋R2 才是全文所在；見 database/drop-ebook-chunks-2026-09-16.sql。
     # PostgREST bulk insert requires every object in the array to expose the
     # same set of keys (PGRST102). Build rows with a fixed key set; populate
     # missing bilingual fields as null/None.
@@ -739,53 +739,11 @@ def replace_db_chunks(flat: list[dict]) -> None:
             "page_numbers": ch.get("page_numbers"),
         })
 
-    requests.delete(
-        f"{URL}/rest/v1/ebook_chunks?ebook_id=eq.{BOOK_ID}",
-        headers=H,
-        timeout=30,
-    )
 
     # Adaptive batching — Supabase free tier hits statement timeout (57014)
     # at 50-row batches when each row holds ~2KB of mixed Latin/Chinese text.
     # Step down to smaller batches on timeout, same recipe as
     # ocr_with_gemini.insert_chunk_previews.
-    BATCH_SIZES = [25, 10, 5, 1]
-    i = 0
-    inserted = 0
-    while i < len(rows):
-        for bs in BATCH_SIZES:
-            batch = rows[i:i + bs]
-            r = requests.post(
-                f"{URL}/rest/v1/ebook_chunks",
-                headers=H,
-                json=batch,
-                timeout=120,
-            )
-            if r.status_code in (200, 201):
-                i += len(batch)
-                inserted += len(batch)
-                if inserted % 200 == 0 or i == len(rows):
-                    print(f"  inserted {inserted}/{len(rows)}", flush=True)
-                break
-            # Unknown-column / schema-cache → re-raise with helpful DDL.
-            if "PGRST204" in r.text or "schema cache" in r.text:
-                raise RuntimeError(
-                    f"ebook_chunks missing bilingual columns. Add a migration:\n"
-                    f"  ALTER TABLE ebook_chunks ADD COLUMN section_type text;\n"
-                    f"  ALTER TABLE ebook_chunks ADD COLUMN source_text text;\n"
-                    f"  ALTER TABLE ebook_chunks ADD COLUMN source_lang text;\n"
-                    f"  ALTER TABLE ebook_chunks ADD COLUMN dh_number int;\n"
-                    f"  ALTER TABLE ebook_chunks ADD COLUMN page_numbers int[];\n"
-                    f"DB error was: {r.text[:300]}"
-                )
-            # 57014 = statement timeout. Retry smaller batch.
-            if "57014" in r.text or "timeout" in r.text.lower() or r.status_code >= 500:
-                if bs > BATCH_SIZES[-1]:
-                    continue
-            raise RuntimeError(f"insert failed at batch_size={bs}, row {i}: "
-                               f"{r.status_code} {r.text[:200]}")
-        else:
-            raise RuntimeError(f"insert failed at batch_size=1, row {i}")
 
 
 def main() -> int:
@@ -832,47 +790,6 @@ def main() -> int:
         write_jsonl(BILINGUAL_JSONL, flat)
         print(f"\nWrote {BILINGUAL_JSONL}  ({len(flat)} chunks)")
 
-    if args.apply:
-        # Replace main .jsonl with bilingual content so dev (local) and prod (R2)
-        # see the same segmented chunks. Backup the page-level main once.
-        if MAIN_JSONL.exists() and not PRE_SEGMENT_BACKUP.exists():
-            shutil.copyfile(MAIN_JSONL, PRE_SEGMENT_BACKUP)
-            print(f"Backed up page-level main → {PRE_SEGMENT_BACKUP.name}")
-        tmp = MAIN_JSONL.with_suffix(".jsonl.tmp")
-        with tmp.open("w", encoding="utf-8") as f:
-            for ch in flat:
-                f.write(json.dumps(ch, ensure_ascii=False) + "\n")
-        tmp.replace(MAIN_JSONL)
-        print(f"Overwrote main JSONL with bilingual segmented chunks: {MAIN_JSONL.name}")
-
-        try:
-            push_to_r2(BOOK_ID, MAIN_JSONL)
-            print("✓ R2 push ok (bilingual JSONL replaces standard at R2 key)")
-        except Exception as e:
-            print(f"⚠ R2 push failed: {str(e)[:200]}", file=sys.stderr)
-            return 2
-
-        replace_db_chunks(flat)
-        print(f"✓ ebook_chunks replaced with {len(flat)} segmented rows")
-
-        update_display_mode("bilingual-parallel")
-        print("✓ ebooks.display_mode = 'bilingual-parallel'")
-
-        # Sync ebooks.chunk_count / total_chars with the segmented count.
-        total_chars = sum(len((c.get("content") or "")) + len((c.get("source_text") or ""))
-                          for c in flat)
-        total_pages = max(
-            (max(c.get("page_numbers") or [c.get("page_number") or 0]) for c in flat),
-            default=0,
-        )
-        update_book_done(
-            BOOK_ID,
-            total_chars=total_chars,
-            chunk_count=len(flat),
-            total_pages=total_pages,
-        )
-        print(f"✓ ebooks row updated: chunk_count={len(flat)}, "
-              f"total_chars={total_chars:,}, total_pages={total_pages}")
 
     return 0
 

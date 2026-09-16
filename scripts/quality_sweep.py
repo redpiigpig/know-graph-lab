@@ -328,9 +328,6 @@ def fetch_books(env: dict, ids: list[str] | None, recent_days: int | None,
 
 
 # id 是 keyset 分頁的游標，必須選出來（見 fetch_chunks）。
-CHUNK_SELECT = "id,ebook_id,chunk_type,chapter_path,char_count,content,source_lang"
-
-
 def fetch_chunks(env: dict, book_ids: set[str], use_rest: bool) -> dict[str, list[dict]]:
     """讀每本書的 JSONL，按書分桶。
 
@@ -391,92 +388,6 @@ def fetch_chunks(env: dict, book_ids: set[str], use_rest: bool) -> dict[str, lis
         raise RuntimeError(
             f"{len(book_ids)} 本一本都讀不到 JSONL —— 這是環境問題不是書的問題，中止。")
     return buckets
-
-
-def _fetch_chunks_from_db(env: dict, book_ids: set[str], use_rest: bool) -> dict[str, list[dict]]:
-    """舊路徑：從 `ebook_chunks` 讀。表已退場，留著只為了對照歷史行為。"""
-    buckets: dict[str, list[dict]] = defaultdict(list)
-    off, step = 0, 1000
-    if not use_rest:
-        id_filter = ""
-        if len(book_ids) <= 200:
-            id_filter = ("where ebook_id in ("
-                         + ",".join(f"'{i}'::uuid" for i in sorted(book_ids)) + ") ")
-        while True:
-            c = mgmt_rows(env, f"select {CHUNK_SELECT} from ebook_chunks {id_filter}"
-                               f"order by id offset {off} limit {step}")
-            for ch in c:
-                if ch["ebook_id"] in book_ids:
-                    buckets[ch["ebook_id"]].append(ch)
-            if not c:
-                break
-            off += len(c)
-            print(f"  …{off} chunks scanned (mgmt)", flush=True)
-        return buckets
-    URL, KEY = env["SUPABASE_URL"], env["SUPABASE_SERVICE_ROLE_KEY"]
-    H = {"apikey": KEY, "Authorization": f"Bearer {KEY}"}
-    # 🚨 用 keyset 分頁（id > 上一頁最後一筆），不要用 OFFSET。
-    # OFFSET 在 Postgres 是「先數過前 N 列再丟掉」，深度越深越慢；2026-09-05 重分段
-    # 把 chunk 從 25.6 萬變成 45.2 萬之後，翻到 offset=272000 就開始回 500
-    # Internal Server Error —— 那是伺服器端逾時，重試再多次也沒用，因為每次都一樣慢。
-    # keyset 每一頁都走 id 索引，第一頁與第五百頁一樣快，也不怕中途有人插入資料。
-    # 🚨 只評幾本書時，不要為此掃完整張表。這個迴圈原本無論如何都是全表掃描，
-    # book_ids 只用在客戶端過濾 —— `--ids` 給 83 本，它照樣要抓 91.5 萬列
-    # （915 次請求）才回得來，實測跑十分鐘都還沒有輸出。書目少就下 in.() 讓
-    # 伺服器過濾；一批 40 個 uuid（約 1.7KB 網址）遠低於長度上限。
-    # 全館掃描（--all）維持原樣：那時 in.() 反而是負擔。
-    # 🚨 in.() 塞不了太多 uuid。2026-09-07 實測這個專案的 PostgREST：
-    #      30 個（網址 1,229 字）→ 200
-    #      40 個（網址 1,599 字）→ 500 Internal Server Error
-    #    所以拆成每批 25 個，留餘裕。一次全塞會拿到 500，而 500 走的是連線重試
-    #    那條路 —— 退避 5/15/30/60/120 秒重試五次都是同一個 500，白等四分鐘才拋。
-    #
-    #    拆批只發生在 scoped 這條路徑。全館掃描仍是單一 keyset 迴圈（拆批會讓游標
-    #    不再單調遞增，分頁測試釘住的正是那個性質）。
-    SCOPED_MAX, BATCH = 200, 25
-    if book_ids and len(book_ids) <= SCOPED_MAX:
-        ordered = sorted(book_ids)
-        for i in range(0, len(ordered), BATCH):
-            grp = ordered[i:i + BATCH]
-            _scan(URL, H, buckets, book_ids, step,
-                  "&ebook_id=in.(" + ",".join(grp) + ")")
-        return buckets
-
-    _scan(URL, H, buckets, book_ids, step, "")
-    return buckets
-
-
-def _scan(URL: str, H: dict, buckets: dict, book_ids: set[str],
-          step: int, extra_filter: str) -> None:
-    """keyset 分頁掃 ebook_chunks，把命中的 chunk 丟進 buckets。"""
-    last_id = ""
-    scanned = 0
-    while True:
-        cursor = f"&id=gt.{last_id}" if last_id else ""
-        for attempt in range(6):
-            try:
-                r = requests.get(f"{URL}/rest/v1/ebook_chunks?select={CHUNK_SELECT}"
-                                 f"{extra_filter}&order=id{cursor}&limit={step}",
-                                 headers=H, timeout=180)
-                r.raise_for_status()
-                break
-            except requests.exceptions.RequestException as exc:
-                if attempt == 5:
-                    raise
-                wait = (5, 15, 30, 60, 120)[attempt]
-                print(f"  ! 掃到 {scanned} 筆時連線失敗（{type(exc).__name__}），"
-                      f"{wait}s 後重試", flush=True)
-                time.sleep(wait)
-        c = r.json()
-        if not c:
-            break
-        for ch in c:
-            if ch["ebook_id"] in book_ids:
-                buckets[ch["ebook_id"]].append(ch)
-        last_id = c[-1]["id"]
-        scanned += len(c)
-        if scanned % 20000 < step:
-            print(f"  …{scanned} chunks scanned", flush=True)
 
 
 def write_back(env: dict, results: list[dict], batch: int = 200) -> None:

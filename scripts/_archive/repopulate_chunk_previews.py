@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+# 2026-09-16 退場：這支的工作對象是 `ebook_chunks`，那張表已經 drop 掉了
+# （見 database/drop-ebook-chunks-2026-09-16.sql）。全文正本在 Drive 的
+# _chunks/*.jsonl ＋ R2，搜尋與 reader 都讀那一份。留檔只為了查歷史。
 """
 Re-populate ebook_chunks with 100-char preview rows so /api/ebooks/search?mode=fulltext
 covers every parsed book (not just the standardized + OCR'd ones).

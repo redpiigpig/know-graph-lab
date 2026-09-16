@@ -96,24 +96,8 @@ def push_db(chunks: list[dict]) -> None:
     import time
     t0 = time.time()
     n = 0
-    for c in chunks:
-        idx = c["chunk_index"]
-        payload = {
-            "content": c.get("content") or "",
-            "source_text": c.get("source_text"),
-        }
-        r = requests.patch(
-            f"{URL}/rest/v1/ebook_chunks?ebook_id=eq.{BOOK_ID}&chunk_index=eq.{idx}",
-            headers=H,
-            json=payload,
-            timeout=60,
-        )
-        if r.status_code in (200, 204):
-            n += 1
-        else:
-            print(f"  ⚠ row {idx} → {r.status_code}: {r.text[:120]}")
-        if n and n % 100 == 0:
-            print(f"  patched {n}/{len(chunks)} ({time.time()-t0:.0f}s)")
+    # 2026-09-16：`ebook_chunks` 已退場（1,005,363 列在 Supabase 免費層獨自佔 503 MB，而它只存每段前 100 字）。
+    # JSONL（Drive 正本）＋R2 才是全文所在；見 database/drop-ebook-chunks-2026-09-16.sql。
     print(f"✓ patched {n}/{len(chunks)} DB rows in {time.time()-t0:.0f}s")
 
 

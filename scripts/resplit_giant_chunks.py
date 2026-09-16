@@ -61,9 +61,8 @@ PREVIEW_LEN = 200
 
 
 def fetch_oversized_books(threshold: int = GIANT_THRESHOLD) -> list[dict]:
-    """List books that have at least one chunk >= threshold.
-    Scans local JSONL files (source of truth) — the ebook_chunks DB scan
-    times out on Supabase free tier with `char_count > N` predicate."""
+    # 2026-09-16：`ebook_chunks` 已退場（1,005,363 列在 Supabase 免費層獨自佔 503 MB，而它只存每段前 100 字）。
+    # JSONL（Drive 正本）＋R2 才是全文所在；見 database/drop-ebook-chunks-2026-09-16.sql。
     from pathlib import Path
     chunks_dir = Path(os.environ.get("EBOOK_CHUNKS_DIR")
                       or r"G:\我的雲端硬碟\資料\知識圖工作室\_chunks")
@@ -216,35 +215,7 @@ def write_jsonl(ebook_id: str, chunks: list[dict]) -> Path:
 def refresh_db(ebook_id: str, chunks: list[dict]) -> None:
     """Delete old chunk previews + insert new ones + update ebooks counts."""
     # Delete old previews
-    requests.delete(f"{se.URL}/rest/v1/ebook_chunks?ebook_id=eq.{ebook_id}",
-                    headers=se.H_GET, timeout=30)
     # Insert new previews (preview-only — full content stays in JSONL/R2)
-    rows = [{
-        "ebook_id": ebook_id,
-        "chunk_index": c["chunk_index"],
-        "chunk_type": c.get("chunk_type") or "chapter",
-        "page_number": c.get("page_number"),
-        "chapter_path": (c.get("chapter_path") or "").replace("\x00", "") or None,
-        "content": (c.get("content") or "").replace("\x00", "")[:PREVIEW_LEN],
-        "char_count": len((c.get("content") or "").replace("\x00", "")),
-    } for c in chunks]
-    BATCH_SIZES = [50, 20, 5, 1]
-    i = 0
-    while i < len(rows):
-        for bs in BATCH_SIZES:
-            batch = rows[i:i + bs]
-            r = requests.post(f"{se.URL}/rest/v1/ebook_chunks",
-                              headers=se.H_JSON, json=batch, timeout=120)
-            if r.status_code in (200, 201):
-                i += len(batch)
-                break
-            text = r.text[:200]
-            if "57014" in text or "timeout" in text.lower() or r.status_code >= 500:
-                if bs > BATCH_SIZES[-1]:
-                    continue
-            raise RuntimeError(f"preview insert failed: {r.status_code} {text[:120]}")
-        else:
-            raise RuntimeError(f"preview insert failed at batch_size=1, row {i}")
 
     # Update ebook row counts
     total_chars = sum(len(c.get("content") or "") for c in chunks)

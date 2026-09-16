@@ -33,6 +33,10 @@ create table if not exists _dropped_table_notes (
   note         text
 );
 
+-- 新表放 public schema，Supabase 的 advisor 會抓沒開 RLS 的表。這張只給我自己
+-- 對帳，沒有任何 policy＝誰都讀不到（service_role 例外），正是要的狀態。
+alter table _dropped_table_notes enable row level security;
+
 insert into _dropped_table_notes (table_name, row_count, total_bytes, note)
 select 'ebook_chunks',
        (select count(*) from ebook_chunks),

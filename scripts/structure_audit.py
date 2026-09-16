@@ -29,6 +29,9 @@ from pathlib import Path
 import requests
 from dotenv import load_dotenv
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import chunks_jsonl
+
 ROOT = Path(__file__).resolve().parent.parent
 load_dotenv(ROOT / ".env")
 URL = os.environ["SUPABASE_URL"]
@@ -60,26 +63,19 @@ def fetch_all(path: str, select: str, page: int = 1000) -> list[dict]:
     return out
 
 
-CHUNK_SELECT = "chunk_index,chunk_type,page_number,chapter_path,char_count,content,source_lang"
-
-
 def fetch_book_chunks(bid: str, page: int = 1000) -> list[dict]:
-    """Fetch one book's chunk previews, paginated, ordered by chunk_index.
-    Per-book filter hits the ebook_id FK index — avoids the full-table sort
-    that 500s the server."""
-    out, offset = [], 0
-    while True:
-        r = requests.get(
-            f"{URL}/rest/v1/ebook_chunks?ebook_id=eq.{bid}&select={CHUNK_SELECT}&order=chunk_index",
-            headers={**H, "Range-Unit": "items", "Range": f"{offset}-{offset+page-1}"},
-            timeout=120)
-        r.raise_for_status()
-        rows = r.json()
-        out.extend(rows)
-        if len(rows) < page:
-            break
-        offset += page
-    return out
+    """一本書的 chunks，讀 Drive 的 `_chunks/{id}.jsonl`。
+
+    2026-09-16 從 `ebook_chunks` 改讀 JSONL（表退場了，見
+    database/drop-ebook-chunks-2026-09-16.sql）。這支的每一項訊號本來就註明
+    「all computable from the 200-char DB preview」—— 現在拿到的是全文，
+    S3 頁眉污染、S4 頁碼雜訊這類藏在段落尾端的毛病反而看得見了。
+    """
+    rows = chunks_jsonl.load(bid) or []
+    rows.sort(key=lambda c: c.get('chunk_index') if isinstance(c.get('chunk_index'), int) else 0)
+    for c in rows:
+        c.setdefault('char_count', len(c.get('content') or ''))
+    return rows
 
 
 def strip_md(s: str) -> str:
@@ -201,7 +197,7 @@ def main():
     bymeta = {b["id"]: b for b in books}
     print(f"  {len(books)} books with chunks", flush=True)
 
-    print("fetching chunk previews per-book (DB only, no Drive)…", flush=True)
+    print("讀每本書的 JSONL（Drive 正本；ebook_chunks 已退場）…", flush=True)
     from concurrent.futures import ThreadPoolExecutor, as_completed
     grouped: dict[str, list] = {}
     n_rows = 0

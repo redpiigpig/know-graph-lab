@@ -140,17 +140,8 @@ def update_book_error(book_id, msg):
 def insert_chunk_previews(book_id, chunks):
     if not chunks:
         return
-    rows = [{"ebook_id": book_id, "chunk_index": i, "chunk_type": "page",
-             "page_number": c["page"], "chapter_path": None,
-             "content": c["text"][:PREVIEW_LEN], "char_count": len(c["text"])}
-            for i, c in enumerate(chunks)]
-    requests.delete(f"{URL}/rest/v1/ebook_chunks?ebook_id=eq.{book_id}",
-                    headers={"apikey": KEY, "Authorization": f"Bearer {KEY}"}, timeout=30)
-    for i in range(0, len(rows), 50):
-        r = requests.post(f"{URL}/rest/v1/ebook_chunks", headers=H,
-                          json=rows[i:i + 50], timeout=60)
-        if not r.ok:
-            raise RuntimeError(f"chunk insert failed: {r.status_code} {r.text[:200]}")
+    # 2026-09-16：`ebook_chunks` 已退場（1,005,363 列在 Supabase 免費層獨自佔 503 MB，而它只存每段前 100 字）。
+    # JSONL（Drive 正本）＋R2 才是全文所在；見 database/drop-ebook-chunks-2026-09-16.sql。
 
 
 def write_jsonl(book_id, chunks):

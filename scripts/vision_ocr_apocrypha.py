@@ -153,27 +153,9 @@ def mgmt_query(sql: str):
 
 
 def insert_chunks(book_id: str, pages: list[dict]):
-    """Delete + insert ebook_chunks rows (preview only) for this book."""
-    H = {'apikey': SERVICE_KEY, 'Authorization': f'Bearer {SERVICE_KEY}',
-         'Content-Type': 'application/json', 'Prefer': 'return=minimal'}
-    requests.delete(f"{SUPABASE_URL}/rest/v1/ebook_chunks?ebook_id=eq.{book_id}",
-                    headers={'apikey': SERVICE_KEY, 'Authorization': f'Bearer {SERVICE_KEY}'},
-                    timeout=60)
-    rows = [{
-        'ebook_id': book_id,
-        'chunk_index': i,
-        'chunk_type': 'page',
-        'page_number': p['page'],
-        'chapter_path': None,
-        'content': p['text'][:PREVIEW_LEN],
-        'char_count': len(p['text']),
-    } for i, p in enumerate(pages)]
-    BATCH = 100
-    for i in range(0, len(rows), BATCH):
-        batch = rows[i:i + BATCH]
-        r = requests.post(f"{SUPABASE_URL}/rest/v1/ebook_chunks",
-                          headers=H, json=batch, timeout=120)
-        r.raise_for_status()
+    # 2026-09-16：`ebook_chunks` 已退場（1,005,363 列在 Supabase 免費層獨自佔 503 MB，而它只存每段前 100 字）。
+    # JSONL（Drive 正本）＋R2 才是全文所在；見 database/drop-ebook-chunks-2026-09-16.sql。
+    return
 
 
 def write_jsonl(book_id: str, pages: list[dict]) -> Path:

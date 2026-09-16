@@ -124,15 +124,15 @@ def requeue(book_id: str) -> bool:
     src = CHUNKS_DIR / f"{book_id}.jsonl"
     if src.exists():
         src.replace(src.with_suffix(".jsonl.bad-repetition"))
-    d = requests.delete(f"{URL}/rest/v1/ebook_chunks?ebook_id=eq.{book_id}",
-                        headers={**H, "Prefer": "return=minimal"}, timeout=90)
+    # 2026-09-16：`ebook_chunks` 已退場，不必再清 DB 列；上面把 JSONL 改名成
+    # .bad-repetition 就等於把這本退回待轉錄。
     u = requests.patch(f"{URL}/rest/v1/ebooks?id=eq.{book_id}",
                        headers={**H, "Prefer": "return=minimal"},
                        json={"parsed_at": None, "chunk_count": 0,
                              "parse_error": REQUEUE_MARKER,
                              "quality_score": None, "quality_checked_at": None},
                        timeout=60)
-    return d.ok and u.ok
+    return u.ok
 
 
 def main() -> int:
