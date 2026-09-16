@@ -127,15 +127,10 @@ def prompt_intro(lesson: dict) -> str:
 **上面列的 20 個單字，至少要用掉 16 個在課文裡**——這是本課唯一一篇課文，
 沒被用到的字學生整課都不會再遇到。寧可句子多一點，也不要漏字。
 
-🚨 課文要有**人物、地點與情節**，不可以只是把句型換主詞抄十遍。
-反例（不合格）：「Hello! I am OK. ／ He is fine. ／ She is sure. ／ It is OK. ／
-We are fine. ／ They are welcome.」——這不是課文，是代名詞表換行印出來。
-- 平均一句至少 6 個字，其中要有幾句用 and／but／because 串成兩個子句。
-- 給人物名字（Mei、Tom、Lily…），讓他們在某個場景裡做某件事。
-
-🚨 慣用語要照台灣課本的譯法，不可以逐字硬翻：
-- `You are welcome.` ＝「不客氣」（**不是**「你很受歡迎」）
-- `How are you?` ＝「你好嗎？」　`Excuse me.` ＝「不好意思」
+🚨 課文要有人物、地點與情節。**平均一句至少 6 個字**，要有幾句用 and／but／
+because 串成兩個子句。不可以寫成「He is fine. ／ She is sure. ／ It is OK.」
+這種把句型換主詞抄十遍——那不是課文，是代名詞表換行印出來。
+🚨 `You are welcome.` 譯「不客氣」，不是「你很受歡迎」。
 
 JSON 格式：
 {
@@ -331,11 +326,49 @@ def check_usage(obj) -> list[str]:
     # 橡皮單用是中國說法，橡皮擦才是台灣說法
     if re.search(r"橡皮(?!擦)", text):
         bad.append("中國用語「橡皮」要改成「橡皮擦」")
-    # 慣用語逐字硬翻。You are welcome 是「不客氣」，重出的 L01 譯成「你很受歡迎」，
-    # 連 fill 的中文提示都寫「你歡迎」。
-    if re.search(r"(?:You|you|They|they|We|we)\s+are\s+welcome", text) and "不客氣" not in text:
-        bad.append("You are welcome. 要譯成「不客氣」，不是「你很受歡迎」")
-    return bad
+    return bad + check_idioms(obj)
+
+
+# 慣用語逐字硬翻。重出的 L01 把 You are welcome. 譯成「你很受歡迎」，
+# fill 的中文提示還寫「你歡迎」。
+IDIOMS = {
+    "you are welcome": ("不客氣", "You are welcome. 要譯成「不客氣」，不是「你很受歡迎」"),
+    "you're welcome": ("不客氣", "You're welcome. 要譯成「不客氣」"),
+    "how are you": ("你好嗎", "How are you? 要譯成「你好嗎？」"),
+    "excuse me": ("不好意思", "Excuse me. 要譯成「不好意思」或「打擾一下」"),
+}
+
+
+def check_idioms(obj) -> list[str]:
+    """逐對 en／zh 比對慣用語。
+
+    🚨 不可以拿整份 JSON 當一個字串掃。第一版那樣寫，只要課文別處出現「歡迎」
+    就把整課判成合格，或者反過來——課文裡有一句合格的 You are welcome.，
+    卻因為題目區另一句不合格而整份被判過，兩種都錯。L01 連退四次就是這樣卡住的。
+    """
+    bad: list[str] = []
+
+    def pair(en: str, zh: str) -> None:
+        low = re.sub(r"[^a-z' ]", "", (en or "").lower()).strip()
+        for idiom, (want, message) in IDIOMS.items():
+            if low.startswith(idiom) and want not in (zh or ""):
+                bad.append(message)
+
+    def walk(node) -> None:
+        if isinstance(node, dict):
+            if "en" in node and "zh" in node:
+                pair(node.get("en"), node.get("zh"))
+            # translate 是反過來的：q 是中文、ans 是英文
+            if "q" in node and "ans" in node:
+                pair(node.get("ans"), node.get("q"))
+            for value in node.values():
+                walk(value)
+        elif isinstance(node, list):
+            for value in node:
+                walk(value)
+
+    walk(obj)
+    return sorted(set(bad))
 
 
 def validate_intro(body: dict) -> list[str]:
@@ -554,13 +587,16 @@ NVIDIA_MODEL = "nvidia/nemotron-3-super-120b-a12b"
 _keys = None
 
 
-def _nvidia_json(prompt: str, max_tokens: int = 8000, tries: int = 4) -> str:
+def _nvidia_json(prompt: str, max_tokens: int = 12000, tries: int = 4) -> str:
     """直接向 nemotron 要 JSON。
 
     共用模組那條路對這份工作有兩個問題：輸出上限寫死 4000，而 nemotron 是推理模型，
     長提示會把額度花在思考上，剝掉 think 標籤後常常一個字都不剩（「回應裡沒有 JSON」）；
     而且它不開 response_format，模型有時改用散文回答。這裡把上限放寬並開 JSON 模式，
     實測解析成功率從三分之一變成全中。真的失敗才回落共用鏈（Gemini/Haiku）。
+
+    2026-09-16 又從 8000 提到 12000：品質閘變多之後提示長了一截，第一次呼叫思考
+    209 秒還是「回應裡沒有 JSON」。思考吃掉的是同一份額度，提示每長一點就要多留一點。
     """
     global _keys
     if _keys is None:
@@ -716,7 +752,9 @@ def _build_once(lesson: dict) -> tuple[dict | None, list[str]]:
                        lambda d: validate_exercises(
                            d, {"fill": N_FILL, "translate": N_TRANSLATE,
                                "unscramble": N_UNSCRAMBLE}),
-                       stage="填空造句")
+                       # 這一批同時要過重疊、填空多樣性、題幹語言、台灣用語四道閘，
+                       # 是全課最容易被退的一段，多給幾次機會比整課重做便宜
+                       attempts=6, stage="填空造句")
     if drills is None:
         return None, ["填空造句：" + "；".join(errs)]
     ex = {**mcq, **drills}

@@ -207,6 +207,27 @@ def test_youre_welcome_must_not_be_literal(gen):
     assert gen.check_usage({"en": "You are welcome.", "zh": "不客氣。"}) == []
 
 
+def test_idiom_check_is_pair_scoped(gen):
+    """🚨 不可以拿整份 JSON 當一個字串掃——L01 連退四次就是這樣卡住的。
+
+    課文那句譯對了，就不該因為別處也出現 welcome 而整份被退；
+    反過來，別處出現「不客氣」也不該讓譯錯的那句蒙混過關。
+    """
+    ok = {"reading": {"sentences": [{"en": "You are welcome.", "zh": "不客氣。"},
+                                    {"en": "Welcome to my class!", "zh": "歡迎來到我的班級！"}]}}
+    assert gen.check_usage(ok) == []
+
+    bad = {"reading": {"sentences": [{"en": "You are welcome.", "zh": "你很受歡迎。"}]},
+           "exercises": {"translate": [{"q": "不客氣。", "ans": "You are welcome."}]}}
+    assert any("不客氣" in e for e in gen.check_usage(bad))
+
+
+def test_translate_pairs_are_checked_in_reverse(gen):
+    """translate 是 q 中文、ans 英文，方向跟課文相反。"""
+    bad = {"translate": [{"q": "你很受歡迎。", "ans": "You are welcome."}]}
+    assert any("不客氣" in e for e in gen.check_usage(bad))
+
+
 # ---------------------------------------------------------------- 文法大綱
 
 def test_syllabus_has_fifty_distinct_points(gen):
