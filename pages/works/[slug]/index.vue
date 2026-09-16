@@ -861,8 +861,14 @@ async function toggleText(f: MaterialFile) {
   if (st.open && !st.loaded && !st.loading) {
     st.loading = true
     try {
+      // 這支端點 2026-09-16 起要驗身分（先前完全沒擋）。沒帶 header 會 401，
+      // 而畫面只會顯示「沒有全文」，看起來像資料沒做而不是權限擋掉。
+      const { data: { session } } = await supabase.auth.getSession()
       const r = await $fetch<{ available: boolean; text: string | null; zh: string | null }>(
-        '/api/works/material-text', { query: { key: f.key } })
+        '/api/works/material-text', {
+          headers: session ? { Authorization: `Bearer ${session.access_token}` } : {},
+          query: { key: f.key },
+        })
       st.available = r.available
       st.text = r.text ?? null
       st.zh = r.zh ?? null

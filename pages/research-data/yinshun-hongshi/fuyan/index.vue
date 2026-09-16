@@ -44,6 +44,15 @@
 <script setup lang="ts">
 import { ref, reactive, onMounted } from 'vue';
 
+// `/api/works/material-text` 2026-09-16 起要驗身分（它本來完全沒擋，
+// 未登入就拿得到全文）。$fetch 預設不帶 Authorization，不補的話會 401，
+// 而畫面上只會顯示「沒有全文」——看起來像資料沒做，不像權限擋掉。
+const supabase = useSupabaseClient();
+async function authHeaders() {
+  const { data: { session } } = await supabase.auth.getSession();
+  return session ? { Authorization: `Bearer ${session.access_token}` } : {};
+}
+
 definePageMeta({ middleware: 'auth' });
 useHead({ title: '福嚴會訊 — 印順學派與弘誓研究資料' });
 
@@ -66,7 +75,7 @@ async function toggle(it: Issue) {
     st.loading = true;
     try {
       const r = await $fetch<{ available: boolean; text: string | null; zh: string | null }>(
-        '/api/works/material-text', { query: { key: it.key } });
+        '/api/works/material-text', { headers: await authHeaders(), query: { key: it.key } });
       st.text = r.zh || r.text || null;
     } catch { st.text = null; } finally { st.loading = false; st.loaded = true; }
   }
