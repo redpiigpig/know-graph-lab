@@ -1038,12 +1038,15 @@ def main():
     ap.add_argument("--check", action="store_true", help="只驗現有產出")
     ap.add_argument("--requiz", action="store_true",
                     help="只重出選擇題（配 --only 用），課文文法不動")
+    ap.add_argument("--reread", action="store_true",
+                    help="只重出課文（配 --only 用），題目文法不動；"
+                         "校讀判 rewrite 的課用這個")
     ap.add_argument("--fix", action="store_true",
                     help="修既有檔：重建重組題題幹、去除重複選擇題並補題")
     ap.add_argument("-v", "--verbose", action="store_true", help="印出每次呼叫的耗時與引擎")
     args = ap.parse_args()
 
-    global VERBOSE
+    global VERBOSE, CURRENT_LESSON
     VERBOSE = args.verbose
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -1056,7 +1059,6 @@ def main():
             if not path.exists():
                 continue
             data = json.loads(path.read_text(encoding="utf-8"))
-            global CURRENT_LESSON
             CURRENT_LESSON = lesson["no"]
             errs = (validate_intro(data) + validate_grammar(data)
                     + validate_exercises(data.get("exercises") or {}))
@@ -1067,6 +1069,35 @@ def main():
             else:
                 print(f"L{lesson['no']:02d} ✓ 單字覆蓋 {coverage(data):.0%}　{data.get('title_zh')}")
         print(f"\n{done}/50 課已產出，{bad} 課有問題")
+        return
+
+    if args.reread:
+        # 只重出課文，題目與文法都不動。
+        # 2026-09-17 把 PDF 印出來逐頁看，才發現十三道閘全綠的課文裡還有
+        # 「Please, I am fine.」「we have OK」「Dad works in Taichung, address in
+        # Taipei.」這種東西——那些閘量的是長度、重複、語言方向、字詞清單，
+        # 全是數得出來的；「這句是不是英文」數不出來。校讀走
+        # scripts/proofread_english_readings.py，判 rewrite 的課用這條路徑重出課文。
+        for lesson in lessons:
+            if args.only and lesson["no"] not in args.only:
+                continue
+            path = OUT_DIR / f"L{lesson['no']:02d}.json"
+            if not path.exists():
+                continue
+            data = json.loads(path.read_text(encoding="utf-8"))
+            CURRENT_LESSON = lesson["no"]
+            fresh, errs = ask(prompt_intro(lesson), validate_intro,
+                              attempts=6, stage="課文")
+            if fresh is None:
+                print(f"L{lesson['no']:02d} ✗ 課文：{'；'.join(errs)}", flush=True)
+                continue
+            for key in ("title_en", "title_zh", "intro_zh", "can_do", "reading"):
+                data[key] = fresh[key]
+            path.write_text(json.dumps(data, ensure_ascii=False, indent=2),
+                            encoding="utf-8")
+            got = coverage(data)
+            print(f"L{lesson['no']:02d} ✓ 課文重出 "
+                  f"{len(data['reading']['sentences'])} 句　覆蓋 {got:.0%}", flush=True)
         return
 
     if args.requiz:
