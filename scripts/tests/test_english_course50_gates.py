@@ -82,6 +82,31 @@ def test_distinct_option_sets_pass(gen):
     assert gen.validate_variety(ex) == []
 
 
+# ---------------------------------------------------------------- 形狀壞掉不可以當機
+
+def test_string_array_is_reported_not_crashed(gen):
+    """🚨 驗證函式當機會把整條工人打死，而不是讓那一課重試。
+
+    模型偶爾把 translate 回成字串陣列（["我很好。", …]）而不是物件陣列；
+    2026-09-17 夜裡 31-40 那條工人就是這樣整條沒了，其餘八課一個都沒跑。
+    """
+    errs = gen.validate_exercises({"fill": ["我很好。", "你好。"],
+                                   "translate": [], "unscramble": []},
+                                  {"fill": 10})
+    assert any("不是物件" in e for e in errs)
+
+
+def test_non_dict_payload_is_reported(gen):
+    assert gen.validate_exercises("oops") == ["輸出不是物件，而是 str"]
+
+
+def test_validators_survive_junk(gen):
+    junk = {"mcq": ["x", 3, None], "fill": "nope", "translate": [{"q": 1}],
+            "unscramble": [[]]}
+    for fn in (gen.validate_direction, gen.validate_variety, gen.validate_overlap):
+        fn(junk)          # 不可以拋例外
+
+
 # ---------------------------------------------------------------- 四區不可以考同一件事
 
 def test_translate_and_unscramble_sharing_answers_is_rejected(gen):

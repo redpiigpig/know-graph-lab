@@ -510,14 +510,28 @@ def validate_exercises(ex: dict, keys: dict[str, int] | None = None) -> list[str
     errs = []
     wanted = keys or {"mcq": N_MCQ, "fill": N_FILL, "translate": N_TRANSLATE,
                       "unscramble": N_UNSCRAMBLE}
+    # 🚨 驗證函式當機會把整條工人打死，而不是讓那一課重試。模型偶爾會把
+    # translate 回成字串陣列（["我很好。", …]）而不是物件陣列，原本這裡直接
+    # item.get 就 AttributeError，2026-09-17 夜裡 31-40 那條就是這樣整條沒了。
+    # 形狀不對一律當成「這一題壞掉」回報，交給上層重試。
+    if not isinstance(ex, dict):
+        return [f"輸出不是物件，而是 {type(ex).__name__}"]
     for key, n in wanted.items():
-        items = ex.get(key) or []
+        items = ex.get(key)
+        if not isinstance(items, list):
+            errs.append(f"{key} 不是陣列，實得 {type(items).__name__}")
+            ex[key] = items = []
+        bad = [i for i, item in enumerate(items, 1) if not isinstance(item, dict)]
+        if bad:
+            errs.append(f"{key} 第 {bad[0]} 題不是物件，每題要寫成 "
+                        f'{{"q": "…", "ans": "…"}}')
+            ex[key] = items = [item for item in items if isinstance(item, dict)]
         if len(items) < n:
             errs.append(f"{key} 應至少 {n} 題，實得 {len(items)}")
         for i, item in enumerate(items, 1):
             if not item.get("q") or not item.get("ans"):
                 errs.append(f"{key} 第 {i} 題缺 q/ans")
-    for i, item in enumerate(ex.get("mcq") or [], 1):
+    for i, item in enumerate(_dicts(ex, "mcq"), 1):
         opts = item.get("opts") or []
         if len(opts) != 4:
             errs.append(f"mcq 第 {i} 題選項不是 4 個")
@@ -525,10 +539,10 @@ def validate_exercises(ex: dict, keys: dict[str, int] | None = None) -> list[str
             errs.append(f"mcq 第 {i} 題答案不在選項裡")
         elif len(set(opts)) != 4:
             errs.append(f"mcq 第 {i} 題選項重複")
-    for i, item in enumerate(ex.get("fill") or [], 1):
-        if "____" not in (item.get("q") or ""):
+    for i, item in enumerate(_dicts(ex, "fill"), 1):
+        if "____" not in _txt(item.get("q")):
             errs.append(f"fill 第 {i} 題沒有空格")
-    questions = [item.get("q") for item in ex.get("mcq") or []]
+    questions = [item.get("q") for item in _dicts(ex, "mcq")]
     dupes = {q for q in questions if questions.count(q) > 1}
     if dupes:
         errs.append(f"選擇題重複 {len(dupes)} 題：{next(iter(dupes))}")
@@ -539,6 +553,18 @@ def validate_exercises(ex: dict, keys: dict[str, int] | None = None) -> list[str
     if bad:
         errs.append("簡體字：" + "".join(bad))
     return errs + check_usage(ex) + validate_syllabus_order(CURRENT_LESSON, ex)
+
+
+def _txt(value) -> str:
+    """把欄位當字串看。模型偶爾把 q 寫成數字，比對時會 TypeError。"""
+    return value if isinstance(value, str) else ""
+
+
+def _dicts(ex, key) -> list[dict]:
+    """只取形狀正確的題目。驗證函式一律不可以因為輸出形狀怪而當機。"""
+    if not isinstance(ex, dict):
+        return []
+    return [x for x in (ex.get(key) or []) if isinstance(x, dict)]
 
 
 HAS_ZH = re.compile(r"[一-鿿]")
@@ -556,8 +582,9 @@ def validate_direction(ex: dict) -> list[str]:
       ③ L25 題幹 not easy 是英文，選項卻是中文。
     """
     errs = []
-    for i, item in enumerate(ex.get("mcq") or [], 1):
-        q, opts, ans = item.get("q") or "", item.get("opts") or [], item.get("ans") or ""
+    for i, item in enumerate(_dicts(ex, "mcq"), 1):
+        q, ans = _txt(item.get("q")), _txt(item.get("ans"))
+        opts = [o for o in (item.get("opts") or []) if isinstance(o, str)]
         zh_opts = [o for o in opts if HAS_ZH.search(o)]
         if zh_opts:
             errs.append(f"mcq 第 {i} 題選項是中文：{zh_opts[0]}")
@@ -566,15 +593,15 @@ def validate_direction(ex: dict) -> list[str]:
             errs.append(f"mcq 第 {i} 題題幹是英文卻問「的英文是」，答案寫在題目上：{q[:24]}")
         elif ans and not HAS_ZH.search(q) and ans in q.split():
             errs.append(f"mcq 第 {i} 題答案出現在題幹裡：{q[:24]}")
-    for i, item in enumerate(ex.get("translate") or [], 1):
-        if not HAS_ZH.search(item.get("q") or ""):
-            errs.append(f"translate 第 {i} 題題幹不是中文：{(item.get('q') or '')[:24]}")
-        if HAS_ZH.search(item.get("ans") or ""):
-            errs.append(f"translate 第 {i} 題答案不是英文：{(item.get('ans') or '')[:24]}")
+    for i, item in enumerate(_dicts(ex, "translate"), 1):
+        if not HAS_ZH.search(_txt(item.get("q"))):
+            errs.append(f"translate 第 {i} 題題幹不是中文：{_txt(item.get('q'))[:24]}")
+        if HAS_ZH.search(_txt(item.get("ans"))):
+            errs.append(f"translate 第 {i} 題答案不是英文：{_txt(item.get('ans'))[:24]}")
     for key in ("fill", "unscramble"):
-        for i, item in enumerate(ex.get(key) or [], 1):
-            if HAS_ZH.search(item.get("ans") or ""):
-                errs.append(f"{key} 第 {i} 題答案不是英文：{(item.get('ans') or '')[:24]}")
+        for i, item in enumerate(_dicts(ex, key), 1):
+            if HAS_ZH.search(_txt(item.get("ans"))):
+                errs.append(f"{key} 第 {i} 題答案不是英文：{_txt(item.get('ans'))[:24]}")
     return errs
 
 
@@ -605,9 +632,9 @@ def validate_overlap(ex: dict) -> list[str]:
     「我 ___ 學生。」這種整句中文夾一個英文空格，學生看不出要填什麼詞類。
     """
     errs = []
-    norm = lambda s: re.sub(r"[^a-z ]", "", (s or "").lower()).strip()
-    trans = {norm(x.get("ans")) for x in ex.get("translate") or []}
-    unscr = {norm(x.get("ans")) for x in ex.get("unscramble") or []}
+    norm = lambda s: re.sub(r"[^a-z ]", "", _txt(s).lower()).strip()
+    trans = {norm(x.get("ans")) for x in _dicts(ex, "translate")}
+    unscr = {norm(x.get("ans")) for x in _dicts(ex, "unscramble")}
     trans.discard("")
     unscr.discard("")
     if trans and unscr:
@@ -616,7 +643,7 @@ def validate_overlap(ex: dict) -> list[str]:
             errs.append(f"造句翻譯與句子重組有 {share:.0%} 的答案是同一句，"
                         f"請把重組題換成不同的句子")
 
-    fills = [(x.get("ans") or "").strip().lower() for x in ex.get("fill") or []]
+    fills = [_txt(x.get("ans")).strip().lower() for x in _dicts(ex, "fill")]
     if fills:
         word, hits = collections.Counter(fills).most_common(1)[0]
         if hits / len(fills) > MAX_SAME_FILL:
@@ -627,8 +654,8 @@ def validate_overlap(ex: dict) -> list[str]:
             errs.append(f"填空十題只有 {len(set(fills))} 個不同答案"
                         f"（{'、'.join(sorted(set(fills)))}），至少要 {MIN_DISTINCT_FILL} 個")
 
-    for i, item in enumerate(ex.get("mcq") or [], 1):
-        q = item.get("q") or ""
+    for i, item in enumerate(_dicts(ex, "mcq"), 1):
+        q = _txt(item.get("q"))
         if "___" not in q:
             continue
         if len(re.findall(r"[A-Za-z]+", q)) < MIN_EN_WORDS:
@@ -644,8 +671,8 @@ def validate_overlap(ex: dict) -> list[str]:
     # （長度與第二個字都分散在 am/is/are），看結尾那個字才看得出來。
     for key, label, floor in (("translate", "造句翻譯", MIN_TRANSLATE_TOKENS),
                               ("unscramble", "句子重組", MIN_UNSCRAMBLE_TOKENS)):
-        words = [(x, (x.get("ans") or "").rstrip(".?!").split())
-                 for x in ex.get(key) or []]
+        words = [(x, _txt(x.get("ans")).rstrip(".?!").split())
+                 for x in _dicts(ex, key)]
         # 🚨 「結尾詞要分散」那道閘會被用「把句子縮短」繞過去：L01 重出時
         # 重組題變成「. / Sorry」→「Sorry.」、「I / . / have」→「I have.」，
         # 甚至「please / . / Thank / you」→「Thank you please.」。先要求是完整句子。
@@ -675,8 +702,8 @@ def validate_variety(ex: dict) -> list[str]:
     要在生成這一端就擋。
     """
     seen: dict[tuple, int] = {}
-    for item in ex.get("mcq") or []:
-        key = tuple(sorted(item.get("opts") or []))
+    for item in _dicts(ex, "mcq"):
+        key = tuple(sorted(o for o in (item.get("opts") or []) if isinstance(o, str)))
         seen[key] = seen.get(key, 0) + 1
     over = [(k, v) for k, v in seen.items() if v > MAX_SAME_OPTS]
     return [f"選擇題有 {v} 題共用同一組選項 {' / '.join(k)}" for k, v in over]
@@ -880,7 +907,7 @@ def rebuild_scrambles(ex: dict, seed: int = 0) -> int:
     """
     fixed = 0
     rng = random.Random(seed)
-    for i, item in enumerate(ex.get("unscramble") or []):
+    for i, item in enumerate(_dicts(ex, "unscramble")):
         answer = (item.get("ans") or "").strip()
         if not answer:
             continue
@@ -910,7 +937,7 @@ def shuffle_options(ex: dict, seed: int = 0) -> int:
     這裡用課號當種子，重跑結果一樣，改版時 diff 不會整本翻掉。
     """
     rng = random.Random(1000 + seed)
-    items = ex.get("mcq") or []
+    items = _dicts(ex, "mcq")
     slots = [i % 4 for i in range(len(items))]
     rng.shuffle(slots)
     for item, slot in zip(items, slots):
@@ -925,13 +952,13 @@ def shuffle_options(ex: dict, seed: int = 0) -> int:
 
 def dedupe_mcq(ex: dict) -> int:
     seen, kept = set(), []
-    for item in ex.get("mcq") or []:
+    for item in _dicts(ex, "mcq"):
         key = (item.get("q") or "").strip()
         if key in seen:
             continue
         seen.add(key)
         kept.append(item)
-    dropped = len(ex.get("mcq") or []) - len(kept)
+    dropped = len(_dicts(ex, "mcq")) - len(kept)
     ex["mcq"] = kept
     return dropped
 
