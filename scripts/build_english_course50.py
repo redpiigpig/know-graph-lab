@@ -270,37 +270,55 @@ JSON 格式：
 {{"mcq": [{{"q": "題目", "opts": ["A", "B", "C", "D"], "ans": "正確選項原文"}}]}}{dodge}"""
 
 
-def prompt_drills(lesson: dict, body: dict) -> str:
+def prompt_fill(lesson: dict, body: dict) -> str:
+    """填空 + 造句。
+
+    🚨 不要把填空、造句、重組三種放同一次呼叫。一次要 24 題（10+8+6）加上長長的
+    規則說明，nemotron 的輸出常常寫到一半被截斷（「JSON 無法解析也救不回來」）
+    或者把額度花在思考上而一個字都不剩（「回應裡沒有 JSON」）。2026-09-17 的
+    第一輪有四成的課掛在這一段。拆成兩次，每次的輸出量砍半。
+    """
     return _ex_head(lesson, body) + f"""
-請出三種題目：
+請出兩種題目：
 1. fill：**剛好 {N_FILL} 題**填空，題幹英文句挖一個空（用 ____ 表示），
    括號內給中文提示，答案是一個英文單字。
 2. translate：**剛好 {N_TRANSLATE} 題**造句翻譯，給中文句子，答案是英文句子。
-3. unscramble：**剛好 {N_UNSCRAMBLE} 題**句子重組，題幹是打散的單字用 " / " 隔開
-   （含最後的標點），答案是正確句子。
 
-🚨 三區要考不同的東西，不可以同一批句子寫兩遍：
-- **unscramble 的八個答案，不可以跟 translate 的答案重複**。50 課裡有 24 課
-  兩區答案 100% 相同，等於整區白放。換人物、換動詞、換情境另外寫。
-- **fill 十題不可以十題都填同一個字**。L43 有九題答案都一樣、L21 有八題。
-  十題要涵蓋至少五個不同的答案（動詞、名詞、介系詞、形容詞…）。
-- **translate 與 unscramble 各自也不可以整區只換主詞**。「I am fine. ／ He is fine. ／
-  She is fine. ／ We are fine.」這樣八句七個 fine 不行，每一區的結尾詞要分散。
-- 🚨 但**不可以靠把句子縮短來閃避**。unscramble 的答案至少 4 個字、translate 至少
-  3 個字，而且要是完整通順的句子。「Sorry.」「I have.」不算題目，
-  「Thank you please.」根本不是英文。
-- 🚨 **括號裡的中文提示要是通順的中文**，不是逐字對譯。
-  `I am fine.` 提示寫「我很好」不是「我是好」；`He is sorry.` 寫「他很抱歉」
-  不是「他是抱歉」；`She is welcome.` 這種硬湊的句子乾脆不要出。
-- fill 的題幹要是**英文句子**挖空，中文只放在括號裡當提示。
-  「我 ___ 學生。」這種整句中文夾一個英文空格不行，學生看不出要填什麼詞類。
+🚨 規矩：
+- **fill 十題不可以都填同一個字**，至少要有五個不同的答案（動詞、名詞、
+  介系詞、形容詞…）。
+- **translate 不可以整區只換主詞**。「I am fine. ／ He is fine. ／ She is fine.」
+  這樣八句七個 fine 不行，結尾詞要分散；但也不可以靠把句子縮短來閃避。
+- fill 的題幹要是**英文句子**挖空，中文只放在括號裡當提示。「我 ___ 學生。」
+  這種整句中文夾一個英文空格不行，學生看不出要填什麼詞類。
+- **括號裡的中文提示要是通順的中文**，不是逐字對譯：`I am fine.` 寫「我很好」
+  不是「我是好」；`He is sorry.` 寫「他很抱歉」不是「他是抱歉」。
 
 JSON 格式：
 {{
   "fill": [{{"q": "I ____ a student.（我是學生）", "ans": "am"}}],
-  "translate": [{{"q": "中文句子", "ans": "English sentence."}}],
-  "unscramble": [{{"q": "am / I / Leo / .", "ans": "I am Leo."}}]
+  "translate": [{{"q": "中文句子", "ans": "English sentence."}}]
 }}"""
+
+
+def prompt_unscramble(lesson: dict, body: dict, avoid: list[str]) -> str:
+    dodge = ""
+    if avoid:
+        dodge = ("\n\n🚨 下列句子已經在造句翻譯那一區出過，**這一區不可以再用**"
+                 "（50 課裡有 24 課兩區答案 100% 相同，等於整區白放）：\n"
+                 + "\n".join(f"- {a}" for a in avoid))
+    return _ex_head(lesson, body) + f"""
+請出 **剛好 {N_UNSCRAMBLE} 題**句子重組：題幹是打散的單字用 " / " 隔開
+（含最後的標點），答案是正確的句子。
+
+🚨 規矩：
+- 每題答案至少 3 個字，而且要是完整通順的句子。「Sorry.」「I have.」不算題目，
+  「Thank you please.」根本不是英文。
+- 六題的結尾詞要分散，不可以整區只換主詞。
+- 換人物、換動詞、換情境，寫跟造句翻譯那一區不同的句子。
+
+JSON 格式：
+{{"unscramble": [{{"q": "am / I / Leo / .", "ans": "I am Leo."}}]}}{dodge}"""
 
 
 def parse_json(raw: str) -> dict:
@@ -716,7 +734,7 @@ NVIDIA_MODEL = "nvidia/nemotron-3-super-120b-a12b"
 _keys = None
 
 
-def _nvidia_json(prompt: str, max_tokens: int = 12000, tries: int = 4) -> str:
+def _nvidia_json(prompt: str, max_tokens: int = 16000, tries: int = 4) -> str:
     """直接向 nemotron 要 JSON。
 
     共用模組那條路對這份工作有兩個問題：輸出上限寫死 4000，而 nemotron 是推理模型，
@@ -879,16 +897,26 @@ def _build_once(lesson: dict) -> tuple[dict | None, list[str]]:
     if cross:
         return None, ["選擇題跨批重複：" + "；".join(cross)]
 
-    drills, errs = ask(prompt_drills(lesson, body),
-                       lambda d: validate_exercises(
-                           d, {"fill": N_FILL, "translate": N_TRANSLATE,
-                               "unscramble": N_UNSCRAMBLE}),
-                       # 這一批同時要過重疊、填空多樣性、題幹語言、台灣用語四道閘，
-                       # 是全課最容易被退的一段，多給幾次機會比整課重做便宜
-                       attempts=6, stage="填空造句")
-    if drills is None:
+    # 填空造句與句子重組分兩次呼叫。合在一起要一口氣產 24 題（10+8+6），
+    # nemotron 常常寫到一半被截斷或把額度花在思考上；2026-09-17 第一輪有四成的課
+    # 掛在這一段。這兩批也是最容易被閘退的，各多給幾次機會比整課重做便宜。
+    fills, errs = ask(prompt_fill(lesson, body),
+                      lambda d: validate_exercises(
+                          d, {"fill": N_FILL, "translate": N_TRANSLATE}),
+                      attempts=6, stage="填空造句")
+    if fills is None:
         return None, ["填空造句：" + "；".join(errs)]
-    ex = {**mcq, **drills}
+
+    done = [x["ans"] for x in fills.get("translate") or [] if isinstance(x, dict)]
+    scram, errs = ask(prompt_unscramble(lesson, body, done),
+                      lambda d: validate_exercises(
+                          {**fills, **d},
+                          {"fill": N_FILL, "translate": N_TRANSLATE,
+                           "unscramble": N_UNSCRAMBLE}),
+                      attempts=6, stage="句子重組")
+    if scram is None:
+        return None, ["句子重組：" + "；".join(errs)]
+    ex = {**mcq, **fills, **scram}
     rebuild_scrambles(ex, seed=lesson["no"])
     shuffle_options(ex, seed=lesson["no"])
     body.update({"no": lesson["no"], "theme": lesson["theme"],
