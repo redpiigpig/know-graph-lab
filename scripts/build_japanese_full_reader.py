@@ -29,7 +29,7 @@ from pathlib import Path
 
 from docx import Document
 from docx.enum.text import WD_ALIGN_PARAGRAPH
-from docx.shared import Pt
+from docx.shared import Mm, Pt
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
@@ -42,6 +42,7 @@ READINGS = CACHE / "readings.json"
 INTERLINEAR = CACHE / "interlinear.json"
 SENSE = CACHE / "unit-sense.json"
 VOCAB = ROOT / "data/originalReaders/vocabulary/japanese-2000.json"
+EXERCISES = CACHE / "exercise-set.json"
 FORMULAS = ROOT / "data/originalReaders/vocabulary/japanese-formulas.json"
 NAMES = ROOT / "data/originalReaders/vocabulary/japanese-proper-names.json"
 CORPUS_TABLES = ROOT / "data/originalReaders/vocabulary/japanese-appendices.json"
@@ -50,6 +51,7 @@ OUT_DIR = ROOT / "output/original-readers"
 FONT_JA = "MS Mincho"
 FONT_JA_FILE = r"C:\Windows\Fonts\msmincho.ttc"
 JA_PT = 13.5
+EXERCISE_PT = 13
 JA_TITLE_PT = 15
 GLOSS_PT = 9.4
 
@@ -173,19 +175,110 @@ def add_interlinear_unit(document: Document, unit: dict, tokens: list[dict], *, 
     )
 
 
-def add_memory(document: Document, lesson: dict, interlinear: dict) -> None:
-    units = lesson.get("memoryUnits") or []
-    if not units:
-        return
-    document.add_heading(f"背誦 {len(units)} 句", level=2)
-    for index, unit in enumerate(units, start=1):
-        unit_id = f"v{lesson['volume']}-l{lesson['lesson']:02d}-m{index:03d}"
-        tokens = (interlinear.get(unit_id) or {}).get("tokens") or []
-        add_interlinear_unit(document, unit, tokens, lead=unit.get("label") or str(index))
+def exercise_blocks(vocabulary: list[dict]) -> dict[tuple[int, int], dict]:
+    """本書的十題練習，照（冊次、課次）收好。
+
+    綁定用的是詞彙序號，不是練習檔自己寫的課次編號：練習檔數的是 1–100 的通編，
+    書上印的是每冊 1–50，兩套編號之間換算一次就是一個出錯的機會，而換錯了每一頁
+    看起來都還是對的。兩邊真正共有的是那兩千個詞——每一題都記下它練到的詞的序號
+    與詞條，就照那個綁，詞條對不上就報錯。希伯來、拉丁、希臘那三本同一條規則。
+    """
+    if not EXERCISES.exists():
+        raise SystemExit(
+            f"缺 {EXERCISES.name}；先跑 scripts/assemble_japanese_exercises.py --write"
+        )
+    payload = json.loads(EXERCISES.read_text(encoding="utf-8"))
+    if payload.get("direction") != "original-to-chinese":
+        raise SystemExit(f"{EXERCISES.name} 的 direction 不是 original-to-chinese")
+    by_ordinal = {
+        entry["ordinal"]: (entry["volume"], entry["readerLesson"], headword_of(entry))
+        for entry in vocabulary
+    }
+    bound: dict[tuple[int, int], dict] = {}
+    for block in payload["lessons"]:
+        hosts: set[tuple[int, int]] = set()
+        for item in block["items"]:
+            for word in item.get("targetWords") or []:
+                found = by_ordinal.get(word["ordinal"])
+                if found is None:
+                    raise SystemExit(f"練習題的第 {word['ordinal']} 詞不在詞表內")
+                volume, lesson, headword = found
+                hosts.add((volume, lesson))
+                if word["headword"] != headword:
+                    raise SystemExit(
+                        f"練習題的第 {word['ordinal']} 詞寫作 {word['headword']}，"
+                        f"詞表寫作 {headword}：兩邊對的不是同一個詞"
+                    )
+        if len(hosts) != 1:
+            raise SystemExit(f"練習題第 {block['lesson']} 課橫跨課次 {sorted(hosts)}")
+        host = hosts.pop()
+        if host in bound:
+            raise SystemExit(f"第 {host[0]} 冊第 {host[1]} 課被兩組練習題認領")
+        bound[host] = block
+    return bound
+
+
+def headword_of(entry: dict) -> str:
+    return (entry.get("kanji") or "").strip() or (entry.get("kana") or "").strip()
+
+
+def add_exercises(document: Document, block: dict | None, lesson: dict) -> None:
+    """十題翻譯練習，站在原本背誦句的位置。
+
+    只印日文。題旁若有中譯，就等於把答案印在題目旁邊，所以引用題印出處、
+    自撰題印「自撰」，兩種都不印譯文。見 references/exercise-sets.md。
+    """
+    if block is None:
+        raise SystemExit(
+            f"第 {lesson['volume']} 冊第 {lesson['lesson']} 課沒有練習題："
+            "exercise-set 對不上本課詞表"
+        )
+    document.add_heading(f"本課翻譯練習（{len(block['items'])}題）", level=2)
+    intro = H.add_body(
+        document,
+        "把每一句譯成繁體中文。題目只印日文——標出處的是引用題，出處是青空文庫或"
+        "文語訳聖書；標「自撰」的句子每個詞都在本課或先前課次學過。",
+        size=H.CAPTION_PT, color=H.MUTED,
+    )
+    intro.paragraph_format.space_after = Pt(3)
+    H.set_keep(intro, next_paragraph=True)
+    coverage = block.get("coverage") or {}
+    practised, total = coverage.get("practised"), coverage.get("lessonWords")
+    note_text = (f"本課 {total} 詞全數入題。" if practised == total
+                 else f"本課 {practised}／{total} 詞入題。")
+    if (block.get("note") or "").strip():
+        note_text += block["note"].strip() + "。"
+    note = document.add_paragraph()
+    note.paragraph_format.space_after = Pt(5)
+    # note 裡夾著日文詞條，整串交給中文字體會逐字回退到 LibreOffice 自己挑的字型。
+    H.add_mixed_script_text(note, note_text, H.FONT_ZH, H.CAPTION_PT - 0.4, color=H.MUTED)
+    H.set_keep(note, next_paragraph=True)
+    for item in block["items"]:
+        head = document.add_paragraph()
+        head.paragraph_format.space_before = Pt(3)
+        head.paragraph_format.space_after = Pt(1)
+        H.set_run_font(head.add_run(f"{item['no']:02d}　"), H.FONT_UI, H.LABEL_PT,
+                       bold=True, color=H.ACCENT)
+        if item["kind"] == "quoted":
+            H.add_mixed_script_text(head, item["ref"], H.FONT_ZH, H.CAPTION_PT,
+                                    color=H.MUTED)
+        else:
+            H.set_run_font(head.add_run("自撰"), H.FONT_ZH, H.CAPTION_PT - 0.4,
+                           color=H.MUTED)
+        H.set_keep(head, next_paragraph=True)
+        line = document.add_paragraph()
+        line.paragraph_format.left_indent = Mm(4)
+        line.paragraph_format.space_after = Pt(2)
+        line.paragraph_format.line_spacing = 1.4
+        ja_run(line, item["text"], EXERCISE_PT)
+        H.set_keep(line, next_paragraph=True)
+        answer = document.add_paragraph(" ")
+        answer.paragraph_format.space_after = Pt(5)
+        H.paragraph_rule(answer, color=H.RULE, size="3")
 
 
 def add_reading(document: Document, lesson: dict, interlinear: dict) -> None:
-    # 讀文自己起一頁：生詞與背誦是預備，讀文才是這一課。
+    # 讀文自己起一頁：生詞與練習題是預備，讀文才是這一課。
     H.page_break(document)
     H.add_label(document, "Reading")
     heading = document.add_heading(lesson["title"], level=2)
@@ -196,7 +289,7 @@ def add_reading(document: Document, lesson: dict, interlinear: dict) -> None:
 
 
 def add_lesson(document: Document, lesson: dict, interlinear: dict, spec: dict,
-               *, page_break_before: bool = True) -> None:
+               exercises: dict, *, page_break_before: bool = True) -> None:
     H.add_label(document, f"Lesson {lesson['lesson']:02d}  ·  {spec['subtitle']}",
                 page_break_before=page_break_before)
     number = H.mark_running_tag(document.add_paragraph())
@@ -213,7 +306,7 @@ def add_lesson(document: Document, lesson: dict, interlinear: dict, spec: dict,
         H.FONT_ZH, H.CAPTION_PT, color=H.MUTED,
     )
     add_vocabulary(document, lesson["vocabulary"])
-    add_memory(document, lesson, interlinear)
+    add_exercises(document, exercises.get((lesson["volume"], lesson["lesson"])), lesson)
     add_reading(document, lesson, interlinear)
 
 
@@ -254,7 +347,7 @@ def add_cover(document: Document, spec: dict, part: dict, counts: dict) -> None:
                    8.5, color=H.MUTED)
     counts_line = H.add_body(
         document,
-        f"{counts['lessons']} 課．{counts['words']} 詞．背誦 {counts['memory']} 句．"
+        f"{counts['lessons']} 課．{counts['words']} 詞．翻譯練習 {counts['exercises']} 題．"
         f"讀文 {counts['chars']:,} 字",
         size=H.CAPTION_PT, color=H.MUTED)
     counts_line.alignment = WD_ALIGN_PARAGRAPH.CENTER
@@ -264,7 +357,7 @@ def add_front_matter(document: Document, spec: dict, part: dict, lessons: list[d
     counts = {
         "lessons": len(lessons),
         "words": sum(len(l["vocabulary"]) for l in lessons),
-        "memory": sum(len(l["memoryUnits"]) for l in lessons),
+        "exercises": len(lessons) * 10,
         "chars": sum(l["chars"] for l in lessons),
     }
     add_cover(document, spec, part, counts)
@@ -273,7 +366,7 @@ def add_front_matter(document: Document, spec: dict, part: dict, lessons: list[d
     for line in (
         "詞序依《大家的日本語》課次，經 u-biq 逐課頁重建；專名不佔課內詞額，另立附錄專名表。",
         "重音欄印的是來源頁面自己的斷點（は・や・い），不是重音型編號——斷點是抓得到的事實，編號是推論。",
-        "讀文與背誦一律取宗教學、宗教史或宗教典籍；詞照課本，文照領域。",
+        "讀文一律取宗教學、宗教史或宗教典籍；詞照課本，文照領域。背誦句仍在資料與線上讀本，紙本改印十題翻譯練習。",
         "聖書用文語訳（明治元訳舊約、大正改訳新約，公有領域），不用口語訳或新共同訳。",
         "逐詞對譯：本課詞表的譯法優先，其次是助詞助動詞表，再其次才是模型；查不到的留白，不用別的語言頂替。",
         "佛典尚未收入。素材抓得到，但訓読者與年份查不到，且混著漢文與梵文轉寫；依合約寧缺勿濫。",
@@ -461,6 +554,7 @@ def build(book: int) -> Path:
     interlinear = load(INTERLINEAR)["units"] if INTERLINEAR.exists() else {}
     sense = load(SENSE) if SENSE.exists() else {}
     lessons = lessons_for(part, readings, vocabulary)
+    exercises = exercise_blocks(vocabulary)
     attached = attach_sense(lessons, sense)
     units = sum(len(l["units"]) + len(l["memoryUnits"]) for l in lessons)
     print(f"  整句中譯 {attached:,}／{units:,} 段", flush=True)
@@ -476,7 +570,8 @@ def build(book: int) -> Path:
     add_front_matter(document, spec, part, lessons)
     H.start_section(document, running, lesson_tag=True)
     for index, lesson in enumerate(lessons):
-        add_lesson(document, lesson, interlinear, spec, page_break_before=index > 0)
+        add_lesson(document, lesson, interlinear, spec, exercises,
+                   page_break_before=index > 0)
 
     if part["appendix"]:
         H.start_section(document, f"{running}　附錄")

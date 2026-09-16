@@ -39,23 +39,32 @@ LESSON_TAG = re.compile(r"第\s*(\d{1,2})\s*課")
 HEADING = re.compile(r"本課翻譯練習（\s*(\d+)\s*題）")
 ITEM_NUMBER = re.compile(r"^(\d{2})\s")
 
-# stem -> (exercise set, the lessons that book prints)
-BOOKS: dict[str, list[tuple[str, str, range]]] = {
+# stem -> (exercise set, the lessons the book prints, offset to the set's own
+# numbering).  Japanese needs the offset: the exercise set counts 1–100 straight
+# through while each printed volume starts again at 1, and converting between
+# the two is exactly the join this whole script exists to check.
+BOOKS: dict[str, list[tuple[str, str, range, int]]] = {
     "grc": [
-        ("greek-original-reader-vol1", "greek-full/exercise-set-v1.json", range(1, 25)),
-        ("greek-original-reader-vol2", "greek-full/exercise-set-v1.json", range(25, 51)),
-        ("greek-original-reader-vol3", "greek-full/exercise-set-v2.json", range(1, 14)),
-        ("greek-original-reader-vol4", "greek-full/exercise-set-v2.json", range(14, 32)),
-        ("greek-original-reader-vol5", "greek-full/exercise-set-v2.json", range(32, 46)),
-        ("greek-original-reader-vol6", "greek-full/exercise-set-v2.json", range(46, 51)),
+        ("greek-original-reader-vol1", "greek-full/exercise-set-v1.json", range(1, 25), 0),
+        ("greek-original-reader-vol2", "greek-full/exercise-set-v1.json", range(25, 51), 0),
+        ("greek-original-reader-vol3", "greek-full/exercise-set-v2.json", range(1, 14), 0),
+        ("greek-original-reader-vol4", "greek-full/exercise-set-v2.json", range(14, 32), 0),
+        ("greek-original-reader-vol5", "greek-full/exercise-set-v2.json", range(32, 46), 0),
+        ("greek-original-reader-vol6", "greek-full/exercise-set-v2.json", range(46, 51), 0),
     ],
     "lat": [
-        ("latin-original-reader-vol1", "latin-full/exercise-set-v1.json", range(1, 51)),
-        ("latin-original-reader-vol2", "latin-full/exercise-set-v2.json", range(1, 33)),
-        ("latin-original-reader-vol3", "latin-full/exercise-set-v2.json", range(33, 51)),
+        ("latin-original-reader-vol1", "latin-full/exercise-set-v1.json", range(1, 51), 0),
+        ("latin-original-reader-vol2", "latin-full/exercise-set-v2.json", range(1, 33), 0),
+        ("latin-original-reader-vol3", "latin-full/exercise-set-v2.json", range(33, 51), 0),
+    ],
+    "ja": [
+        ("japanese-original-reader-vol1", "japanese-full/exercise-set.json", range(1, 31), 0),
+        ("japanese-original-reader-vol2", "japanese-full/exercise-set.json", range(31, 51), 0),
+        ("japanese-original-reader-vol3", "japanese-full/exercise-set.json", range(1, 33), 50),
+        ("japanese-original-reader-vol4", "japanese-full/exercise-set.json", range(33, 51), 50),
     ],
     "heb": [
-        ("hebrew-original-reader-50-lessons", "hebrew-full/exercise-set.json", range(1, 51)),
+        ("hebrew-original-reader-50-lessons", "hebrew-full/exercise-set.json", range(1, 51), 0),
     ],
 }
 
@@ -151,16 +160,21 @@ def audit(language: str) -> list[str]:
     problems: list[str] = []
     seen: dict[str, str] = {}
     exact = language != "heb"
-    for stem, relative, lessons in BOOKS[language]:
+    # Japanese is written in kanji, so "does the item line carry Chinese
+    # characters" is not a test that can be run on it.  What replaces it is the
+    # pairing check itself: the printed line has to equal the source sentence
+    # exactly, which no line with a translation appended can do.
+    check_cjk = language != "ja"
+    for stem, relative, lessons, offset in BOOKS[language]:
         pdf = PDF_DIR / f"{stem}.pdf"
         if not pdf.is_file():
             problems.append(f"{stem}：找不到 PDF，先跑 render_and_check_reader_pdfs.py")
             continue
         payload = json.loads((CACHE / relative).read_text(encoding="utf-8"))
-        expected = {row["lesson"]: row for row in payload["lessons"]}
+        expected = {row["lesson"] - offset: row for row in payload["lessons"]}
         catalogue = [
-            (f"{row['lesson']}:{item['no']}", bag(item["text"]))
-            for row in payload["lessons"] if row["lesson"] in lessons
+            (f"{row['lesson'] - offset}:{item['no']}", bag(item["text"]))
+            for row in payload["lessons"] if row["lesson"] - offset in lessons
             for item in row["items"]
         ]
         blocks = printed_blocks(pdf)
@@ -191,7 +205,7 @@ def audit(language: str) -> list[str]:
                         f"印的不是本課的題目：\n        印出 {got['text']}"
                         f"\n        應為 {want['text']}")
             for item in block["items"]:
-                if CJK.search(item["text"]):
+                if check_cjk and CJK.search(item["text"]):
                     problems.append(
                         f"{stem} 第 {block['lesson']} 課第 {item['no']} 題（p.{item['page']}）"
                         f"題目旁印出漢字：{item['text']}")
@@ -216,7 +230,8 @@ def main() -> int:
     if problems:
         print(f"{len(problems)} 項不合")
         return 1
-    print("每一課十題，題目都落在自己的課上，題旁零漢字　✔")
+    tail = "題旁零漢字" if args.language != "ja" else "題旁零中譯（逐句與原稿相同）"
+    print(f"每一課十題，題目都落在自己的課上，{tail}　✔")
     return 0
 
 
