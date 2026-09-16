@@ -89,13 +89,87 @@ def validate(payload: dict) -> list[str]:
     return []
 
 
+FIX_PROMPT = """你是台灣國小英語教材的審稿人，正在修第 {no} 課的課文。
+本課文法點是「{focus}」。下面是原課文，以及審稿挑出的問題。
+
+請把有問題的句子改掉，**沒被挑到的句子原樣保留**，句數不變（{count} 句）。
+改的時候要顧到：
+- 英文要通順正確；中譯要是通順的繁體中文（台灣用語），不是逐字對譯。
+- 這一課的學生只學到第 {no} 課，不要換上更難的字。
+- 整篇要讀得像一段有人物與情節的短文。
+
+只輸出 JSON，不要說明文字：
+{{"sentences": [{{"en": "英文句", "zh": "中文翻譯"}}]}}
+
+原課文：
+{body}
+
+審稿挑出的問題：
+{issues}
+"""
+
+
+def apply_fixes(report: list[dict]) -> None:
+    """把校讀挑出的零星問題改掉，句數不變。
+
+    🚨 不要拿審稿回傳的 fix 欄位直接做字串取代。那個欄位有時候給的是英文替換句、
+    有時候是中譯替換句、有時候是一句中文指示（「加入人物與情節」），三種混在一起，
+    機械取代會把課文改壞。改法是把問題清單餵回去讓它重寫那幾句，再驗一次。
+    """
+    lessons = {l["no"]: l for l in gen.load_lessons()}
+    for row in report:
+        no = row["no"]
+        if row["verdict"] != "ok" or not row["issues"]:
+            continue
+        path = OUT_DIR / f"L{no:02d}.json"
+        data = json.loads(path.read_text(encoding="utf-8"))
+        before = data["reading"]["sentences"]
+        gen.CURRENT_LESSON = no
+        issues = "\n".join(f"- 「{i['sentence']}」：{i['problem']}（建議：{i['fix']}）"
+                           for i in row["issues"])
+
+        def check(payload, n=len(before)):
+            if not isinstance(payload, dict):
+                return ["輸出不是物件"]
+            got = payload.get("sentences")
+            if not isinstance(got, list) or len(got) != n:
+                return [f"要剛好 {n} 句，實得 {len(got) if isinstance(got, list) else '非陣列'}"]
+            for i, s in enumerate(got, 1):
+                if not isinstance(s, dict) or not s.get("en") or not s.get("zh"):
+                    return [f"第 {i} 句缺 en/zh"]
+            return (gen.validate_reading(got)
+                    + gen._common_errs({"reading": {"sentences": got}}))
+
+        fixed, errs = gen.ask(
+            FIX_PROMPT.format(no=no, focus=lessons[no]["focus"],
+                              count=len(before), body=lesson_text(data),
+                              issues=issues),
+            check, attempts=4, stage=f"修訂 L{no:02d}")
+        if fixed is None:
+            print(f"L{no:02d} ⚠ 修訂失敗：{'；'.join(errs)}", flush=True)
+            continue
+        data["reading"]["sentences"] = fixed["sentences"]
+        changed = sum(1 for a, b in zip(before, fixed["sentences"]) if a["en"] != b["en"])
+        got = gen.coverage(data)
+        if got < gen.MIN_COVERAGE:
+            print(f"L{no:02d} ⚠ 改完覆蓋掉到 {got:.0%}，不落地", flush=True)
+            continue
+        path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+        print(f"L{no:02d} ✓ 改了 {changed}/{len(before)} 句　覆蓋 {got:.0%}", flush=True)
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--only", type=int, action="append", help="只校指定課次")
     ap.add_argument("--json", help="把結果寫成 JSON")
+    ap.add_argument("--apply", help="讀既有的校讀 JSON，把零星問題改掉")
     ap.add_argument("-v", "--verbose", action="store_true")
     args = ap.parse_args()
     gen.VERBOSE = args.verbose
+
+    if args.apply:
+        apply_fixes(json.loads(Path(args.apply).read_text(encoding="utf-8")))
+        return
 
     lessons = gen.load_lessons()
     report: list[dict] = []
