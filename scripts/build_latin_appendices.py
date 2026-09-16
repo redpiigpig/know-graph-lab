@@ -207,9 +207,103 @@ def surface_forms(corpus_words) -> dict[str, Counter]:
 
 
 def display_form(forms: dict[str, Counter], folded: str) -> str:
-    """Print the name the way the edition prints it, not the way we folded it."""
+    """Print the name the way the edition prints it, not the way we folded it.
+
+    An all-capital spelling is passed over while any other exists: the council
+    documents end in pages of signatures set in caps (``IOSEPHUS``,
+    ``FRANCISCUS``), and taking the commonest spelling made those the entry.
+    """
     seen = forms.get(folded)
-    return seen.most_common(1)[0][0] if seen else folded
+    if not seen:
+        return folded
+    mixed = [form for form, _ in seen.most_common() if not form.isupper()]
+    return mixed[0] if mixed else seen.most_common(1)[0][0]
+
+
+def proper_noun_keys() -> set[str]:
+    """Folded keys the Latin dictionary itself lists as a capitalised noun.
+
+    The test is the dictionary's own capitalisation, not its part-of-speech
+    code: ``Vergilius`` and ``Antonius`` are also listed as adjectives, and
+    refusing anything with an adjective reading would throw Virgil out of a
+    table of names.  What it does refuse is ``cardinalis``, ``redemptor``,
+    ``orientalis``, ``encyclicus`` -- common words that a capitalised sentence
+    position promoted to names.
+    """
+    return {
+        L.fold(entry.lemma)
+        for entry in W.load()
+        if entry.pos == "N" and entry.lemma[:1].isupper()
+    }
+
+
+def latin_register_zh() -> dict[str, tuple[str, str]]:
+    """折疊後的拉丁字形 → （已定的中文名，哪一份登錄說的）。
+
+    專名的中文一律從登錄取，不從模型取——這一條是這系列付過代價才立的：信望愛
+    那條路徑把字典釋義當成名字，四十九筆錯的印在紙上，每一筆看起來都正常。
+    所以這裡只認登錄的推薦名，查不到就留白，讓缺口看得見。
+    """
+    from proper_name_categories import fold as fold_zh, fold_latin, load_registers  # noqa: PLC0415
+
+    out: dict[str, tuple[str, str]] = {}
+    registers = load_registers()
+    # 先問拉丁／原文欄，再問英文欄。英文欄放在後面是因為它只在**拼法剛好相同**時
+    # 才會命中——Alexandria、Africa、India、Arabia 拉丁英文同形，Italia／Italy、
+    # Europa／Europe 就不會對上，所以這一步不會把不同的名字湊在一起。它仍然是
+    # 「從登錄取」，只是換一欄查；路徑照實記在 zhRoute，日後查得出來是哪一欄說的。
+    for group, forms_fields, zh_field, note in (
+        ("deities", ("name_original",), "name_recommended", ""),
+        ("place_names", ("name_original",), "name_recommended", ""),
+        ("rulers", ("name_original",), "name_recommended", ""),
+        ("theologians", ("name_original", "name_latin_std"), "name_catholic_sgs", ""),
+        ("philosophers", ("name_original",), "name_recommended", ""),
+        ("scientists", ("name_original",), "name_recommended", ""),
+        ("deities", ("name_english",), "name_recommended", "（英文欄同形）"),
+        ("place_names", ("name_english",), "name_recommended", "（英文欄同形）"),
+        ("rulers", ("name_english",), "name_recommended", "（英文欄同形）"),
+        ("theologians", ("name_english",), "name_catholic_sgs", "（英文欄同形）"),
+        ("philosophers", ("name_english",), "name_recommended", "（英文欄同形）"),
+        ("scientists", ("name_english",), "name_recommended", "（英文欄同形）"),
+    ):
+        for row in registers.get(group, []):
+            zh = (row.get(zh_field) or "").strip()
+            if not zh:
+                continue
+            for field in forms_fields:
+                value = (row.get(field) or "").strip()
+                if not value:
+                    continue
+                for key in {fold_zh(value), fold_latin(value), L.fold(value)}:
+                    if key:
+                        out.setdefault(key, (zh, group + note))
+    return out
+
+
+def latin_register_keys() -> set[str]:
+    """Folded name forms the registers vouch for, **from their Latin columns only**.
+
+    🚨 Not ``name_english``/``name_en``.  The episcopal register is English-only,
+    and letting it vouch put ``Peter``, ``France`` and ``Seneca`` into a table of
+    Latin names — the English spellings had leaked into the corpus from the
+    editions' own front matter and the register then confirmed them.
+    """
+    from proper_name_categories import fold as fold_zh, fold_latin, load_registers  # noqa: PLC0415
+
+    keys: set[str] = set()
+    registers = load_registers()
+    for group, fields in (
+        ("deities", ("name_original",)),
+        ("place_names", ("name_original",)),
+        ("rulers", ("name_original",)),
+        ("theologians", ("name_original", "name_latin_std")),
+    ):
+        for row in registers.get(group, []):
+            for field in fields:
+                value = (row.get(field) or "").strip()
+                if value:
+                    keys |= {fold_zh(value), fold_latin(value), L.fold(value)}
+    return {key for key in keys if key}
 
 
 def align_chinese(latin_names: set[str], lm) -> dict[str, dict]:
@@ -393,12 +487,35 @@ def main() -> None:
                      for path in sorted(CHURCH.rglob("*.txt"))]
     modern_names = harvest_names(modern_units, lm, NAME_MINIMUM * 2)
     modern_names = {k: v for k, v in modern_names.items() if k not in taught}
-    modern_rows = [
-        {"headword": display_form(church_forms, folded), "folded": folded,
-         "churchFrequency": count, "zh": "", "zhRoute": ""}
-        for folded, count in sorted(modern_names.items(), key=lambda kv: -kv[1])
-        if folded not in biblical_names
-    ]
+    # 🚨 大寫是線索，不是證據。只靠「句中大寫且夠常見」收下來的四百條裡，有三百
+    # 一十九條不是專名：縮寫（Psal、Joan、Virg、W）、副詞與形容詞（Graece、Latine、
+    # Cardinalis）、普通名詞的變化形（Redemptoris、Orientalium、Novembris、
+    # Encyclicae）、英文（God、Lord、Page），以及簽名頁的全大寫（IOSEPHUS）。
+    # 那張表因此四百條全部沒有中文，也沒有人能替它補中文——該修的是表本身。
+    #
+    # 一個詞要留下來，得有一份東西替它作證，兩條路擇一：
+    #   1. 專名登錄的**拉丁欄**認得它（英文欄不算，見 latin_register_keys）；
+    #   2. 拉丁辭典把它收成**大寫開頭的名詞**。
+    # 兩條都不過就不收。寧可表短而每一條都是名字，也不要四百條裡三百多條不是。
+    vouched = latin_register_keys() | proper_noun_keys()
+    # 中文也從登錄取，跟上冊那張表從思高逐節對位取是同一個原則：是證據，不是翻譯。
+    # 上冊那五百八十五條已經定出來的中文先用（同一個名字在兩張表必須讀起來一樣），
+    # 其次才問登錄；兩邊都沒有就留白。
+    register_zh = latin_register_zh()
+    biblical_zh = {row["folded"]: row for row in name_rows if row.get("zh")}
+    modern_rows = []
+    for folded, count in sorted(modern_names.items(), key=lambda kv: -kv[1]):
+        if folded in biblical_names or folded not in vouched:
+            continue
+        zh, route = "", ""
+        if folded in biblical_zh:
+            zh, route = biblical_zh[folded]["zh"], "上冊專名表"
+        elif folded in register_zh:
+            zh, route = register_zh[folded]
+        modern_rows.append(
+            {"headword": display_form(church_forms, folded), "folded": folded,
+             "churchFrequency": count, "zh": zh, "zhRoute": route}
+        )
 
     principal_parts = [
         {"headword": e.lemma, "forms": e.form, "glossEn": e.definition,
@@ -421,7 +538,7 @@ def main() -> None:
             **{key: curated_table(spec, church_counts, words_index)
                for key, spec in CURATED_LOWER.items()},
             "modernNames": {"title": "近現代教廷拉丁的地名、機構名與專名",
-                            "entries": modern_rows[:400]},
+                            "entries": modern_rows},
         },
     }
 
@@ -438,7 +555,9 @@ def main() -> None:
     lookup_named = sum(1 for r in lookup if r["zh"])
     print(f"其餘 {len(lookup)} 個只作查閱，其中 {lookup_named} 個另抓所在章定出中文")
     print(f"專名中文合計 {named + lookup_named}/{len(name_rows)}")
-    print(f"近現代專名 {len(modern_rows)}（表列前 400）")
+    named_modern = sum(1 for row in modern_rows if row["zh"])
+    print(f"近現代專名 {len(modern_rows)}（登錄或辭典作證過的才收），"
+          f"其中 {named_modern} 條由登錄定出中文")
     for section in ("upper", "lower"):
         for key, table in payload[section].items():
             entries = table["entries"]

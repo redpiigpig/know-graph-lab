@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedOn": "2026-08-27",
+  "generatedOn": "2026-09-16",
   "upper": {
     "names": {
       "title": "人名、地名、民族與國名（武加大）",
@@ -1411,9 +1411,9 @@
           "vulgateFrequency": 37,
           "type": "",
           "tier": "武加大其餘",
-          "zh": "",
-          "zhRoute": "",
-          "zhEvidence": "",
+          "zh": "農",
+          "zhRoute": "sigao-underline-alignment",
+          "zhEvidence": "5/5 節同現",
           "category": "其他人名",
           "categoryRoute": "biblical_people"
         },
@@ -1918,9 +1918,9 @@
           "vulgateFrequency": 27,
           "type": "",
           "tier": "武加大其餘",
-          "zh": "哈依",
-          "zhRoute": "sigao-underline-alignment",
-          "zhEvidence": "2/3 節同現",
+          "zh": "",
+          "zhRoute": "",
+          "zhEvidence": "",
           "category": "地名",
           "categoryRoute": "Strong 釋義：H5857 a place"
         },
@@ -2052,9 +2052,9 @@
           "vulgateFrequency": 26,
           "type": "",
           "tier": "武加大其餘",
-          "zh": "",
-          "zhRoute": "",
-          "zhEvidence": "",
+          "zh": "乃巴特",
+          "zhRoute": "sigao-underline-alignment",
+          "zhEvidence": "13/13 節同現",
           "category": "其他人名",
           "categoryRoute": "希臘↔拉丁字形橋",
           "zhProtestant": ""
@@ -2341,9 +2341,9 @@
           "vulgateFrequency": 22,
           "type": "",
           "tier": "武加大其餘",
-          "zh": "瑪基爾",
-          "zhRoute": "sigao-underline-alignment",
-          "zhEvidence": "5/5 節同現",
+          "zh": "",
+          "zhRoute": "",
+          "zhEvidence": "",
           "category": "其他人名",
           "categoryRoute": "biblical_people"
         },
@@ -2534,9 +2534,9 @@
           "vulgateFrequency": 21,
           "type": "",
           "tier": "武加大其餘",
-          "zh": "米茲帕",
-          "zhRoute": "sigao-underline-alignment",
-          "zhEvidence": "6/6 節同現",
+          "zh": "",
+          "zhRoute": "",
+          "zhEvidence": "",
           "category": "待歸類",
           "categoryRoute": ""
         },
@@ -2787,9 +2787,9 @@
           "vulgateFrequency": 19,
           "type": "",
           "tier": "武加大其餘",
-          "zh": "乃塔尼雅",
-          "zhRoute": "sigao-underline-alignment",
-          "zhEvidence": "6/6 節同現",
+          "zh": "",
+          "zhRoute": "",
+          "zhEvidence": "",
           "category": "待歸類",
           "categoryRoute": ""
         },
@@ -2799,9 +2799,9 @@
           "vulgateFrequency": 19,
           "type": "",
           "tier": "武加大其餘",
-          "zh": "乃塔尼雅",
-          "zhRoute": "sigao-underline-alignment",
-          "zhEvidence": "6/7 節同現",
+          "zh": "",
+          "zhRoute": "",
+          "zhEvidence": "",
           "category": "待歸類",
           "categoryRoute": ""
         },
@@ -3413,9 +3413,9 @@
           "vulgateFrequency": 16,
           "type": "",
           "tier": "讀本所見",
-          "zh": "葛法翁",
-          "zhRoute": "sigao-underline-alignment",
-          "zhEvidence": "2/2 節同現",
+          "zh": "",
+          "zhRoute": "",
+          "zhEvidence": "",
           "category": "地名",
           "categoryRoute": "希臘↔拉丁字形橋",
           "zhProtestant": "迦百農"
@@ -3955,9 +3955,9 @@
           "vulgateFrequency": 14,
           "type": "",
           "tier": "武加大其餘",
-          "zh": "",
-          "zhRoute": "",
-          "zhEvidence": "",
+          "zh": "卡勒亞",
+          "zhRoute": "sigao-underline-alignment",
+          "zhEvidence": "4/4 節同現",
           "category": "待歸類",
           "categoryRoute": ""
         },
@@ -4151,7 +4151,7 @@
           "vulgateFrequency": 13,
           "type": "",
           "tier": "讀本所見",
-          "zh": "阿米納達布",
+          "zh": "納赫雄",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "4/5 節同現",
           "category": "其他人名",
@@ -4297,7 +4297,7 @@
           "vulgateFrequency": 13,
           "type": "",
           "tier": "武加大其餘",
-          "zh": "培卡黑",
+          "zh": "勒瑪里雅",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "5/5 節同現",
           "category": "待歸類",
@@ -4309,7 +4309,7 @@
           "vulgateFrequency": 13,
           "type": "",
           "tier": "武加大其餘",
-          "zh": "則魯巴貝耳",
+          "zh": "沙耳提耳",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "4/4 節同現",
           "category": "其他人名",
@@ -4550,7 +4550,7 @@
           "vulgateFrequency": 12,
           "type": "",
           "tier": "武加大其餘",
-          "zh": "匝耳慕納",
+          "zh": "則巴黑",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "8/8 節同現",
           "category": "待歸類",
@@ -4730,7 +4730,7 @@
           "vulgateFrequency": 12,
           "type": "",
           "tier": "武加大其餘",
-          "zh": "耶希耳",
+          "zh": "則加黎雅",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "4/4 節同現",
           "category": "待歸類",
@@ -4766,9 +4766,9 @@
           "vulgateFrequency": 12,
           "type": "",
           "tier": "讀本所見",
-          "zh": "載伯德",
-          "zhRoute": "sigao-underline-alignment",
-          "zhEvidence": "2/2 節同現",
+          "zh": "",
+          "zhRoute": "",
+          "zhEvidence": "",
           "category": "其他人名",
           "categoryRoute": "Strong 釋義（字幹）：G2199 an Israelite"
         },
@@ -5006,7 +5006,7 @@
           "vulgateFrequency": 11,
           "type": "",
           "tier": "武加大其餘",
-          "zh": "匝耳慕納",
+          "zh": "則巴黑",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "7/7 節同現",
           "category": "待歸類",
@@ -5127,9 +5127,9 @@
           "vulgateFrequency": 11,
           "type": "",
           "tier": "武加大其餘",
-          "zh": "",
-          "zhRoute": "",
-          "zhEvidence": "",
+          "zh": "勒瑪里雅",
+          "zhRoute": "sigao-underline-alignment",
+          "zhEvidence": "2/2 節同現",
           "category": "待歸類",
           "categoryRoute": ""
         },
@@ -5355,9 +5355,9 @@
           "vulgateFrequency": 10,
           "type": "",
           "tier": "武加大其餘",
-          "zh": "",
-          "zhRoute": "",
-          "zhEvidence": "",
+          "zh": "培黎齊",
+          "zhRoute": "sigao-underline-alignment",
+          "zhEvidence": "3/3 節同現",
           "category": "民族與國名",
           "categoryRoute": "希臘↔拉丁字形橋",
           "zhProtestant": "比利洗人"
@@ -5512,9 +5512,9 @@
           "vulgateFrequency": 10,
           "type": "",
           "tier": "武加大其餘",
-          "zh": "",
-          "zhRoute": "",
-          "zhEvidence": "",
+          "zh": "貝特米羅",
+          "zhRoute": "sigao-underline-alignment",
+          "zhEvidence": "2/3 節同現",
           "category": "待歸類",
           "categoryRoute": ""
         },
@@ -5548,9 +5548,9 @@
           "vulgateFrequency": 10,
           "type": "",
           "tier": "武加大其餘",
-          "zh": "納哈士",
-          "zhRoute": "sigao-underline-alignment",
-          "zhEvidence": "4/5 節同現",
+          "zh": "",
+          "zhRoute": "",
+          "zhEvidence": "",
           "category": "待歸類",
           "categoryRoute": ""
         },
@@ -5861,9 +5861,9 @@
           "vulgateFrequency": 9,
           "type": "",
           "tier": "武加大其餘",
-          "zh": "哈摩爾",
-          "zhRoute": "sigao-underline-alignment",
-          "zhEvidence": "6/6 節同現",
+          "zh": "",
+          "zhRoute": "",
+          "zhEvidence": "",
           "category": "待歸類",
           "categoryRoute": ""
         },
@@ -5945,7 +5945,7 @@
           "vulgateFrequency": 9,
           "type": "",
           "tier": "武加大其餘",
-          "zh": "阿希辣",
+          "zh": "厄南",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "2/2 節同現",
           "category": "地名",
@@ -6102,9 +6102,9 @@
           "vulgateFrequency": 9,
           "type": "",
           "tier": "武加大其餘",
-          "zh": "刻依拉",
-          "zhRoute": "sigao-underline-alignment",
-          "zhEvidence": "9/9 節同現",
+          "zh": "",
+          "zhRoute": "",
+          "zhEvidence": "",
           "category": "待歸類",
           "categoryRoute": ""
         },
@@ -6186,9 +6186,9 @@
           "vulgateFrequency": 9,
           "type": "",
           "tier": "武加大其餘",
-          "zh": "黎貝拉",
-          "zhRoute": "sigao-underline-alignment",
-          "zhEvidence": "4/4 節同現",
+          "zh": "",
+          "zhRoute": "",
+          "zhEvidence": "",
           "category": "待歸類",
           "categoryRoute": ""
         },
@@ -6379,9 +6379,9 @@
           "vulgateFrequency": 8,
           "type": "",
           "tier": "武加大其餘",
-          "zh": "哈摩辣",
-          "zhRoute": "sigao-underline-alignment",
-          "zhEvidence": "4/4 節同現",
+          "zh": "",
+          "zhRoute": "",
+          "zhEvidence": "",
           "category": "待歸類",
           "categoryRoute": ""
         },
@@ -6439,9 +6439,9 @@
           "vulgateFrequency": 8,
           "type": "",
           "tier": "武加大其餘",
-          "zh": "",
-          "zhRoute": "",
-          "zhEvidence": "",
+          "zh": "勒烏耳",
+          "zhRoute": "sigao-underline-alignment",
+          "zhEvidence": "4/4 節同現",
           "category": "待歸類",
           "categoryRoute": ""
         },
@@ -6475,9 +6475,9 @@
           "vulgateFrequency": 8,
           "type": "",
           "tier": "讀本所見",
-          "zh": "沙法特",
-          "zhRoute": "sigao-underline-alignment",
-          "zhEvidence": "2/2 節同現",
+          "zh": "",
+          "zhRoute": "",
+          "zhEvidence": "",
           "category": "待歸類",
           "categoryRoute": ""
         },
@@ -6691,9 +6691,9 @@
           "vulgateFrequency": 8,
           "type": "",
           "tier": "武加大其餘",
-          "zh": "基耳波亞",
-          "zhRoute": "sigao-underline-alignment",
-          "zhEvidence": "2/2 節同現",
+          "zh": "",
+          "zhRoute": "",
+          "zhEvidence": "",
           "category": "待歸類",
           "categoryRoute": ""
         },
@@ -6703,7 +6703,7 @@
           "vulgateFrequency": 8,
           "type": "",
           "tier": "武加大其餘",
-          "zh": "培肋提",
+          "zh": "革勒提",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "2/2 節同現",
           "category": "待歸類",
@@ -6727,7 +6727,7 @@
           "vulgateFrequency": 8,
           "type": "",
           "tier": "武加大其餘",
-          "zh": "舍巴",
+          "zh": "彼革黎",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "8/8 節同現",
           "category": "其他人名",
@@ -6739,7 +6739,7 @@
           "vulgateFrequency": 8,
           "type": "",
           "tier": "武加大其餘",
-          "zh": "舍巴",
+          "zh": "彼革黎",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "8/8 節同現",
           "category": "待歸類",
@@ -6775,9 +6775,9 @@
           "vulgateFrequency": 8,
           "type": "",
           "tier": "武加大其餘",
-          "zh": "史沙克",
-          "zhRoute": "sigao-underline-alignment",
-          "zhEvidence": "4/4 節同現",
+          "zh": "",
+          "zhRoute": "",
+          "zhEvidence": "",
           "category": "待歸類",
           "categoryRoute": ""
         },
@@ -7748,8 +7748,8 @@
           "corpusFrequency": 68,
           "attested": true,
           "dictionaryRoute": "missing",
-          "zh": "辰時經、三分之一、第三",
-          "zhRoute": "gemini:gemini-flash-latest"
+          "zh": "第三時辰",
+          "zhRoute": "claude-haiku-4-5-20251001"
         },
         {
           "group": "分配數與數副詞",
@@ -8902,7 +8902,7 @@
           "corpusFrequency": 13,
           "attested": true,
           "dictionaryRoute": "whitakers-words",
-          "zh": "守夜、徹夜、警醒",
+          "zh": "守夜、夜間巡守",
           "zhRoute": "claude-haiku-4-5-20251001"
         },
         {
@@ -10975,7 +10975,7 @@
           "glossEn": "stir up, disturb; discharge/hurl (missile); flow rapidly/strong current; rush",
           "conjugation": "1 1",
           "kind": "TRANS",
-          "zh": "激動、掀起；迅速流動",
+          "zh": "激起、煽動、驅使",
           "zhRoute": "claude-haiku-4-5-20251001"
         },
         {
@@ -11470,7 +11470,7 @@
           "glossEn": "think little of; look down on, take poor view of; pay no heed/disregard/slight",
           "conjugation": "3 1",
           "kind": "TRANS",
-          "zh": "輕視、蔑視、忽略",
+          "zh": "輕視、蔑視、鄙棄",
           "zhRoute": "claude-haiku-4-5-20251001"
         },
         {
@@ -12046,7 +12046,7 @@
           "glossEn": "give notice, warn/foretell; threaten/enjoin/declare intent to injure; intimate",
           "conjugation": "1 1",
           "kind": "X",
-          "zh": "通知、警告、預告、威脅",
+          "zh": "公告、宣布；傳喚；遞交傳票",
           "zhRoute": "claude-haiku-4-5-20251001"
         },
         {
@@ -14260,7 +14260,7 @@
           "glossEn": "consider/contemplate/ponder; meditate, think about; reflect on; devise/plan",
           "conjugation": "1 1",
           "kind": "DEP",
-          "zh": "思考、沉思；策畫、計劃",
+          "zh": "意欲、準備；思考、構思；演練、誦讀",
           "zhRoute": "claude-haiku-4-5-20251001"
         },
         {
@@ -14953,7 +14953,7 @@
           "glossEn": "quickly move/run/travel/hasten/pass through/over; form continuous line; stroke",
           "conjugation": "3 1",
           "kind": "X",
-          "zh": "快速經過、奔馳、掠過；連貫成線",
+          "zh": "迅速通過；快速巡視",
           "zhRoute": "claude-haiku-4-5-20251001"
         },
         {
@@ -14962,7 +14962,7 @@
           "glossEn": "|review, run over (in thought/words), run through in sequence; skim over",
           "conjugation": "3 1",
           "kind": "X",
-          "zh": "快速經過、奔馳、掠過；連貫成線",
+          "zh": "迅速通過；快速巡視",
           "zhRoute": "claude-haiku-4-5-20251001"
         },
         {
@@ -14971,7 +14971,7 @@
           "glossEn": "||touch upon different points in quick succession; fill offices in succession",
           "conjugation": "3 1",
           "kind": "X",
-          "zh": "快速經過、奔馳、掠過；連貫成線",
+          "zh": "迅速通過；快速巡視",
           "zhRoute": "claude-haiku-4-5-20251001"
         },
         {
@@ -14980,7 +14980,7 @@
           "glossEn": "|||travel quickly from end to end; make rapid tour, visit in quick succession",
           "conjugation": "3 1",
           "kind": "X",
-          "zh": "快速經過、奔馳、掠過；連貫成線",
+          "zh": "迅速通過；快速巡視",
           "zhRoute": "claude-haiku-4-5-20251001"
         },
         {
@@ -14989,7 +14989,7 @@
           "glossEn": "quickly move/run/travel/hasten/pass through/over; form continuous line; stroke",
           "conjugation": "3 1",
           "kind": "X",
-          "zh": "快速經過、奔馳、掠過；連貫成線",
+          "zh": "迅速通過；快速巡視",
           "zhRoute": "claude-haiku-4-5-20251001"
         },
         {
@@ -14998,7 +14998,7 @@
           "glossEn": "|review, run over (in thought/words), run through in sequence; skim over",
           "conjugation": "3 1",
           "kind": "X",
-          "zh": "快速經過、奔馳、掠過；連貫成線",
+          "zh": "迅速通過；快速巡視",
           "zhRoute": "claude-haiku-4-5-20251001"
         },
         {
@@ -15007,7 +15007,7 @@
           "glossEn": "||touch upon different points in quick succession; fill offices in succession",
           "conjugation": "3 1",
           "kind": "X",
-          "zh": "快速經過、奔馳、掠過；連貫成線",
+          "zh": "迅速通過；快速巡視",
           "zhRoute": "claude-haiku-4-5-20251001"
         },
         {
@@ -17471,7 +17471,7 @@
           "corpusFrequency": 217,
           "attested": true,
           "dictionaryRoute": "whitakers-words",
-          "zh": "教士、聖堂參議員",
+          "zh": "聖堂主保、教律；聖堂參事、修會會士",
           "zhRoute": "claude-haiku-4-5-20251001"
         },
         {
@@ -19237,49 +19237,13 @@
       "title": "近現代教廷拉丁的地名、機構名與專名",
       "entries": [
         {
-          "headword": "W",
-          "folded": "w",
-          "churchFrequency": 1370,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Cardinalis",
-          "folded": "cardinalis",
-          "churchFrequency": 899,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Latinus",
-          "folded": "latinus",
-          "churchFrequency": 494,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
           "headword": "Iuppiter",
           "folded": "iuppiter",
           "churchFrequency": 341,
-          "zh": "",
-          "zhRoute": "",
+          "zh": "朱庇特",
+          "zhRoute": "deities",
           "category": "神名與稱號",
           "categoryRoute": "deities"
-        },
-        {
-          "headword": "Psal",
-          "folded": "psal",
-          "churchFrequency": 336,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
         },
         {
           "headword": "Italia",
@@ -19289,24 +19253,6 @@
           "zhRoute": "",
           "category": "地名",
           "categoryRoute": "Strong 釋義：G2482 a region"
-        },
-        {
-          "headword": "Joan",
-          "folded": "ioan",
-          "churchFrequency": 329,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Graece",
-          "folded": "graece",
-          "churchFrequency": 308,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
         },
         {
           "headword": "Graecus",
@@ -19327,24 +19273,6 @@
           "categoryRoute": ""
         },
         {
-          "headword": "Anglorum",
-          "folded": "anglorum",
-          "churchFrequency": 223,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Latine",
-          "folded": "latine",
-          "churchFrequency": 208,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
           "headword": "Cyrillus",
           "folded": "cyrillus",
           "churchFrequency": 191,
@@ -19357,19 +19285,10 @@
           "headword": "Gallia",
           "folded": "gallia",
           "churchFrequency": 190,
-          "zh": "",
-          "zhRoute": "",
+          "zh": "高盧",
+          "zhRoute": "place_names",
           "category": "地名",
           "categoryRoute": "place_names"
-        },
-        {
-          "headword": "Redemptoris",
-          "folded": "redemptoris",
-          "churchFrequency": 182,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
         },
         {
           "headword": "Hierosolyma",
@@ -19382,42 +19301,6 @@
           "zhProtestant": "耶路撒冷"
         },
         {
-          "headword": "Latin",
-          "folded": "latin",
-          "churchFrequency": 162,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Virg",
-          "folded": "uirg",
-          "churchFrequency": 162,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Vaticanum",
-          "folded": "uaticanum",
-          "churchFrequency": 162,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Hebraei",
-          "folded": "hebraei",
-          "churchFrequency": 158,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
           "headword": "Carolus",
           "folded": "carolus",
           "churchFrequency": 155,
@@ -19427,67 +19310,22 @@
           "categoryRoute": ""
         },
         {
-          "headword": "Romanam",
-          "folded": "romanam",
-          "churchFrequency": 153,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
           "headword": "Nestorius",
           "folded": "nestorius",
           "churchFrequency": 146,
-          "zh": "",
-          "zhRoute": "",
+          "zh": "聶斯脫里",
+          "zhRoute": "theologians",
           "category": "教宗與主教",
           "categoryRoute": "episcopal_succession"
-        },
-        {
-          "headword": "Orientalium",
-          "folded": "orientalium",
-          "churchFrequency": 136,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Franci",
-          "folded": "franci",
-          "churchFrequency": 135,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "IOSEPHUS",
-          "folded": "iosephus",
-          "churchFrequency": 134,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
         },
         {
           "headword": "Constantinus",
           "folded": "constantinus",
           "churchFrequency": 125,
-          "zh": "",
-          "zhRoute": "",
+          "zh": "君士坦丁一世",
+          "zhRoute": "rulers",
           "category": "君王",
           "categoryRoute": "historical_rulers"
-        },
-        {
-          "headword": "Novembris",
-          "folded": "nouembris",
-          "churchFrequency": 124,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
         },
         {
           "headword": "Europa",
@@ -19499,29 +19337,11 @@
           "categoryRoute": ""
         },
         {
-          "headword": "Encyclicae",
-          "folded": "encyclicae",
-          "churchFrequency": 120,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Osservatore",
-          "folded": "osseruatore",
-          "churchFrequency": 120,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
           "headword": "Plato",
           "folded": "plato",
           "churchFrequency": 118,
-          "zh": "",
-          "zhRoute": "",
+          "zh": "柏拉圖",
+          "zhRoute": "philosophers（英文欄同形）",
           "category": "待歸類",
           "categoryRoute": ""
         },
@@ -19529,8 +19349,8 @@
           "headword": "Hispania",
           "folded": "hispania",
           "churchFrequency": 116,
-          "zh": "",
-          "zhRoute": "",
+          "zh": "希斯帕尼亞",
+          "zhRoute": "place_names",
           "category": "地名",
           "categoryRoute": "place_names"
         },
@@ -19538,8 +19358,8 @@
           "headword": "Origenes",
           "folded": "origenes",
           "churchFrequency": 115,
-          "zh": "",
-          "zhRoute": "",
+          "zh": "奧利振",
+          "zhRoute": "theologians",
           "category": "教父與聖人",
           "categoryRoute": "theologians"
         },
@@ -19547,69 +19367,6 @@
           "headword": "Vergilius",
           "folded": "uergilius",
           "churchFrequency": 114,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Roman",
-          "folded": "roman",
-          "churchFrequency": 113,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Esaias",
-          "folded": "esaias",
-          "churchFrequency": 113,
-          "zh": "",
-          "zhRoute": "",
-          "category": "其他人名",
-          "categoryRoute": "Strong 釋義：G2268 an Israelite"
-        },
-        {
-          "headword": "FRANCISCUS",
-          "folded": "franciscus",
-          "churchFrequency": 112,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Chalcedonensis",
-          "folded": "chalcedonensis",
-          "churchFrequency": 111,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "God",
-          "folded": "god",
-          "churchFrequency": 110,
-          "zh": "",
-          "zhRoute": "",
-          "category": "神名與稱號",
-          "categoryRoute": "Strong 釋義：H433 a deity"
-        },
-        {
-          "headword": "Septembris",
-          "folded": "septembris",
-          "churchFrequency": 100,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Isa",
-          "folded": "isa",
-          "churchFrequency": 97,
           "zh": "",
           "zhRoute": "",
           "category": "待歸類",
@@ -19637,71 +19394,17 @@
           "headword": "Saturnus",
           "folded": "saturnus",
           "churchFrequency": 96,
-          "zh": "",
-          "zhRoute": "",
+          "zh": "薩圖恩",
+          "zhRoute": "deities",
           "category": "神名與稱號",
           "categoryRoute": "deities"
-        },
-        {
-          "headword": "Encyclicas",
-          "folded": "encyclicas",
-          "churchFrequency": 92,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Innocentii",
-          "folded": "innocentii",
-          "churchFrequency": 91,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Lateranensi",
-          "folded": "lateranensi",
-          "churchFrequency": 90,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Tridentina",
-          "folded": "tridentina",
-          "churchFrequency": 85,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Vigilius",
-          "folded": "uigilius",
-          "churchFrequency": 83,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
         },
         {
           "headword": "Cicero",
           "folded": "cicero",
           "churchFrequency": 81,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "PPO",
-          "folded": "ppo",
-          "churchFrequency": 81,
-          "zh": "",
-          "zhRoute": "",
+          "zh": "西塞羅",
+          "zhRoute": "philosophers",
           "category": "待歸類",
           "categoryRoute": ""
         },
@@ -19724,53 +19427,17 @@
           "categoryRoute": ""
         },
         {
-          "headword": "Vaticani",
-          "folded": "uaticani",
-          "churchFrequency": 75,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Brittaniam",
-          "folded": "brittaniam",
-          "churchFrequency": 74,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "APO",
-          "folded": "apo",
-          "churchFrequency": 73,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
           "headword": "Venus",
           "folded": "uenus",
           "churchFrequency": 72,
-          "zh": "",
-          "zhRoute": "",
+          "zh": "維納斯",
+          "zhRoute": "deities",
           "category": "神名與稱號",
           "categoryRoute": "deities"
         },
         {
           "headword": "Constantinopolis",
           "folded": "constantinopolis",
-          "churchFrequency": 72,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Saxonum",
-          "folded": "saxonum",
           "churchFrequency": 72,
           "zh": "",
           "zhRoute": "",
@@ -19790,98 +19457,8 @@
           "headword": "Socrates",
           "folded": "socrates",
           "churchFrequency": 72,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Decessoris",
-          "folded": "decessoris",
-          "churchFrequency": 70,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Ven",
-          "folded": "uen",
-          "churchFrequency": 69,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Paolo",
-          "folded": "paolo",
-          "churchFrequency": 69,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Redintegratio",
-          "folded": "redintegratio",
-          "churchFrequency": 69,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Anastase",
-          "folded": "anastase",
-          "churchFrequency": 69,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Adrianus",
-          "folded": "adrianus",
-          "churchFrequency": 68,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Exod",
-          "folded": "exod",
-          "churchFrequency": 68,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Constantinopoli",
-          "folded": "constantinopoli",
-          "churchFrequency": 66,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Israelis",
-          "folded": "israelis",
-          "churchFrequency": 66,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Gothorum",
-          "folded": "gothorum",
-          "churchFrequency": 66,
-          "zh": "",
-          "zhRoute": "",
+          "zh": "蘇格拉底",
+          "zhRoute": "philosophers（英文欄同形）",
           "category": "待歸類",
           "categoryRoute": ""
         },
@@ -19895,76 +19472,13 @@
           "categoryRoute": ""
         },
         {
-          "headword": "Constantini",
-          "folded": "constantini",
-          "churchFrequency": 64,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Langobardi",
-          "folded": "langobardi",
-          "churchFrequency": 64,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Helias",
-          "folded": "helias",
-          "churchFrequency": 64,
-          "zh": "",
-          "zhRoute": "",
-          "category": "其他人名",
-          "categoryRoute": "Strong 釋義：G2243 an Israelite"
-        },
-        {
-          "headword": "Apocalypsis",
-          "folded": "apocalypsis",
-          "churchFrequency": 63,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Vaticano",
-          "folded": "uaticano",
-          "churchFrequency": 60,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
           "headword": "Mercurius",
           "folded": "mercurius",
           "churchFrequency": 60,
-          "zh": "",
-          "zhRoute": "",
+          "zh": "墨丘利",
+          "zhRoute": "deities",
           "category": "神名與稱號",
           "categoryRoute": "deities"
-        },
-        {
-          "headword": "Corinthius",
-          "folded": "corinthius",
-          "churchFrequency": 59,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Lateranensis",
-          "folded": "lateranensis",
-          "churchFrequency": 59,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
         },
         {
           "headword": "Africa",
@@ -19976,135 +19490,27 @@
           "categoryRoute": ""
         },
         {
-          "headword": "Genesis",
-          "folded": "genesis",
-          "churchFrequency": 59,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Theodorum",
-          "folded": "theodorum",
-          "churchFrequency": 59,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "ATHALARICUS",
-          "folded": "athalaricus",
-          "churchFrequency": 59,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Varro",
-          "folded": "uarro",
-          "churchFrequency": 58,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Bullarium",
-          "folded": "bullarium",
-          "churchFrequency": 56,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Lateran",
-          "folded": "lateran",
-          "churchFrequency": 56,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Nordanhymbrorum",
-          "folded": "nordanhymbrorum",
-          "churchFrequency": 56,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Galli",
-          "folded": "galli",
-          "churchFrequency": 55,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
           "headword": "Mars",
           "folded": "mars",
           "churchFrequency": 54,
-          "zh": "",
-          "zhRoute": "",
+          "zh": "瑪爾斯",
+          "zhRoute": "deities",
           "category": "神名與稱號",
           "categoryRoute": "deities"
-        },
-        {
-          "headword": "Aristoteles",
-          "folded": "aristoteles",
-          "churchFrequency": 54,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Constantinopolitanum",
-          "folded": "constantinopolitanum",
-          "churchFrequency": 52,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
         },
         {
           "headword": "Julianus",
           "folded": "iulianus",
           "churchFrequency": 52,
-          "zh": "",
-          "zhRoute": "",
+          "zh": "背教者尤利安",
+          "zhRoute": "rulers",
           "category": "君王",
-          "categoryRoute": "登錄"
-        },
-        {
-          "headword": "Africae",
-          "folded": "africae",
-          "churchFrequency": 52,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "categoryRoute": "historical_rulers"
         },
         {
           "headword": "Valentinus",
           "folded": "ualentinus",
           "churchFrequency": 52,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Parisiis",
-          "folded": "parisiis",
-          "churchFrequency": 51,
           "zh": "",
           "zhRoute": "",
           "category": "待歸類",
@@ -20120,171 +19526,9 @@
           "categoryRoute": ""
         },
         {
-          "headword": "Deiparae",
-          "folded": "deiparae",
-          "churchFrequency": 51,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Bibliorum",
-          "folded": "bibliorum",
-          "churchFrequency": 51,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Merciorum",
-          "folded": "merciorum",
-          "churchFrequency": 51,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
           "headword": "Emmanuel",
           "folded": "emmanuel",
           "churchFrequency": 50,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Constantinopolitano",
-          "folded": "constantinopolitano",
-          "churchFrequency": 50,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Lucanus",
-          "folded": "lucanus",
-          "churchFrequency": 50,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Galliarum",
-          "folded": "galliarum",
-          "churchFrequency": 49,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Henricus",
-          "folded": "henricus",
-          "churchFrequency": 48,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Manichaeus",
-          "folded": "manichaeus",
-          "churchFrequency": 48,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "ENCYCLICA",
-          "folded": "encyclica",
-          "churchFrequency": 48,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Giovanni",
-          "folded": "giouanni",
-          "churchFrequency": 48,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "TOU",
-          "folded": "tou",
-          "churchFrequency": 48,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Constantinopolitanae",
-          "folded": "constantinopolitanae",
-          "churchFrequency": 47,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Occidentalium",
-          "folded": "occidentalium",
-          "churchFrequency": 47,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Christ",
-          "folded": "christ",
-          "churchFrequency": 45,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Clementis",
-          "folded": "clementis",
-          "churchFrequency": 45,
-          "zh": "",
-          "zhRoute": "",
-          "category": "其他人名",
-          "categoryRoute": "Strong 釋義（字幹）：G2815 a Christian"
-        },
-        {
-          "headword": "EFREM",
-          "folded": "efrem",
-          "churchFrequency": 45,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Iove",
-          "folded": "ioue",
-          "churchFrequency": 45,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Constantiensis",
-          "folded": "constantiensis",
-          "churchFrequency": 43,
           "zh": "",
           "zhRoute": "",
           "category": "待歸類",
@@ -20312,104 +19556,32 @@
           "headword": "India",
           "folded": "india",
           "churchFrequency": 43,
-          "zh": "",
-          "zhRoute": "",
+          "zh": "印度",
+          "zhRoute": "place_names（英文欄同形）",
           "category": "民族與國名",
           "categoryRoute": "place_names"
-        },
-        {
-          "headword": "Lord",
-          "folded": "lord",
-          "churchFrequency": 43,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Classics",
-          "folded": "classics",
-          "churchFrequency": 43,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Cant",
-          "folded": "cant",
-          "churchFrequency": 42,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Source",
-          "folded": "source",
-          "churchFrequency": 42,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Aquinas",
-          "folded": "aquinas",
-          "churchFrequency": 42,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
         },
         {
           "headword": "Alexandria",
           "folded": "alexandria",
           "churchFrequency": 42,
-          "zh": "",
-          "zhRoute": "",
+          "zh": "亞歷山卓",
+          "zhRoute": "place_names（英文欄同形）",
           "category": "地名",
           "categoryRoute": "place_names"
-        },
-        {
-          "headword": "librarius",
-          "folded": "librarius",
-          "churchFrequency": 42,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Mediolanensis",
-          "folded": "mediolanensis",
-          "churchFrequency": 42,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
         },
         {
           "headword": "Minerva",
           "folded": "minerua",
           "churchFrequency": 42,
-          "zh": "",
-          "zhRoute": "",
+          "zh": "米娜瓦",
+          "zhRoute": "deities",
           "category": "神名與稱號",
           "categoryRoute": "deities"
         },
         {
           "headword": "Anglia",
           "folded": "anglia",
-          "churchFrequency": 41,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Basileensis",
-          "folded": "basileensis",
           "churchFrequency": 41,
           "zh": "",
           "zhRoute": "",
@@ -20426,168 +19598,6 @@
           "categoryRoute": ""
         },
         {
-          "headword": "Scottorum",
-          "folded": "scottorum",
-          "churchFrequency": 41,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Redemptore",
-          "folded": "redemptore",
-          "churchFrequency": 40,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Damaso",
-          "folded": "damaso",
-          "churchFrequency": 40,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Constantio",
-          "folded": "constantio",
-          "churchFrequency": 40,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Brittania",
-          "folded": "brittania",
-          "churchFrequency": 40,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Classical",
-          "folded": "classical",
-          "churchFrequency": 39,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Florentinus",
-          "folded": "florentinus",
-          "churchFrequency": 39,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Latino",
-          "folded": "latino",
-          "churchFrequency": 39,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Siciliae",
-          "folded": "siciliae",
-          "churchFrequency": 39,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Africam",
-          "folded": "africam",
-          "churchFrequency": 39,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Theodosio",
-          "folded": "theodosio",
-          "churchFrequency": 39,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Unitarum",
-          "folded": "unitarum",
-          "churchFrequency": 38,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Pythagoras",
-          "folded": "pythagoras",
-          "churchFrequency": 38,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Appia",
-          "folded": "appia",
-          "churchFrequency": 38,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Germani",
-          "folded": "germani",
-          "churchFrequency": 37,
-          "zh": "",
-          "zhRoute": "",
-          "category": "民族與國名",
-          "categoryRoute": "place_names"
-        },
-        {
-          "headword": "saracenus",
-          "folded": "saracenus",
-          "churchFrequency": 37,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Alexandriae",
-          "folded": "alexandriae",
-          "churchFrequency": 37,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Sacrosancti",
-          "folded": "sacrosancti",
-          "churchFrequency": 37,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
           "headword": "Atheniensis",
           "folded": "atheniensis",
           "churchFrequency": 37,
@@ -20597,171 +19607,18 @@
           "categoryRoute": ""
         },
         {
-          "headword": "Servator",
-          "folded": "seruator",
-          "churchFrequency": 37,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Vigilio",
-          "folded": "uigilio",
-          "churchFrequency": 37,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Hebraice",
-          "folded": "hebraice",
-          "churchFrequency": 36,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Symmachus",
-          "folded": "symmachus",
-          "churchFrequency": 36,
-          "zh": "",
-          "zhRoute": "",
-          "category": "教宗與主教",
-          "categoryRoute": "episcopal_succession"
-        },
-        {
-          "headword": "Athenae",
-          "folded": "athenae",
-          "churchFrequency": 36,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Ephesius",
-          "folded": "ephesius",
-          "churchFrequency": 36,
-          "zh": "",
-          "zhRoute": "",
-          "category": "民族與國名",
-          "categoryRoute": "Strong 釋義（字幹）：G2180 inhabitant of"
-        },
-        {
           "headword": "Arabia",
           "folded": "arabia",
           "churchFrequency": 36,
-          "zh": "",
-          "zhRoute": "",
+          "zh": "阿拉伯",
+          "zhRoute": "place_names（英文欄同形）",
           "category": "地名",
           "categoryRoute": "place_names"
-        },
-        {
-          "headword": "Conferentiae",
-          "folded": "conferentiae",
-          "churchFrequency": 36,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Gothi",
-          "folded": "gothi",
-          "churchFrequency": 36,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Page",
-          "folded": "page",
-          "churchFrequency": 36,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
         },
         {
           "headword": "Cornelius",
           "folded": "cornelius",
           "churchFrequency": 36,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Turonensi",
-          "folded": "turonensi",
-          "churchFrequency": 35,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Augustino",
-          "folded": "augustino",
-          "churchFrequency": 35,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Constantinopolitana",
-          "folded": "constantinopolitana",
-          "churchFrequency": 35,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Basilii",
-          "folded": "basilii",
-          "churchFrequency": 35,
-          "zh": "",
-          "zhRoute": "",
-          "category": "君王",
-          "categoryRoute": "historical_rulers"
-        },
-        {
-          "headword": "Stoicus",
-          "folded": "stoicus",
-          "churchFrequency": 35,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Genesi",
-          "folded": "genesi",
-          "churchFrequency": 35,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Gothis",
-          "folded": "gothis",
-          "churchFrequency": 35,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Osuiu",
-          "folded": "osuiu",
-          "churchFrequency": 35,
           "zh": "",
           "zhRoute": "",
           "category": "待歸類",
@@ -20786,51 +19643,6 @@
           "categoryRoute": ""
         },
         {
-          "headword": "Siricii",
-          "folded": "siricii",
-          "churchFrequency": 34,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Brittaniae",
-          "folded": "brittaniae",
-          "churchFrequency": 34,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Eboracensis",
-          "folded": "eboracensis",
-          "churchFrequency": 33,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Innocentio",
-          "folded": "innocentio",
-          "churchFrequency": 33,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Ezech",
-          "folded": "ezech",
-          "churchFrequency": 33,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
           "headword": "Tiberis",
           "folded": "tiberis",
           "churchFrequency": 33,
@@ -20838,96 +19650,6 @@
           "zhRoute": "",
           "category": "其他人名",
           "categoryRoute": "Strong 釋義（字幹）：G5085 the name of"
-        },
-        {
-          "headword": "Iubilaei",
-          "folded": "iubilaei",
-          "churchFrequency": 33,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Servatoris",
-          "folded": "seruatoris",
-          "churchFrequency": 33,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Oecumenicorum",
-          "folded": "oecumenicorum",
-          "churchFrequency": 33,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Nativ",
-          "folded": "natiu",
-          "churchFrequency": 33,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "GUILLELMUS",
-          "folded": "guillelmus",
-          "churchFrequency": 33,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Arius",
-          "folded": "arius",
-          "churchFrequency": 33,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Ennius",
-          "folded": "ennius",
-          "churchFrequency": 33,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Saturnum",
-          "folded": "saturnum",
-          "churchFrequency": 33,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Vaticana",
-          "folded": "uaticana",
-          "churchFrequency": 32,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Tridentino",
-          "folded": "tridentino",
-          "churchFrequency": 32,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
         },
         {
           "headword": "Biblia",
@@ -20939,211 +19661,22 @@
           "categoryRoute": ""
         },
         {
-          "headword": "Tridentinum",
-          "folded": "tridentinum",
-          "churchFrequency": 32,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
           "headword": "Phrygia",
           "folded": "phrygia",
           "churchFrequency": 32,
-          "zh": "",
-          "zhRoute": "",
+          "zh": "弗呂家",
+          "zhRoute": "place_names（英文欄同形）",
           "category": "地名",
           "categoryRoute": "place_names"
-        },
-        {
-          "headword": "Methodii",
-          "folded": "methodii",
-          "churchFrequency": 32,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Paulinus",
-          "folded": "paulinus",
-          "churchFrequency": 32,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Photinus",
-          "folded": "photinus",
-          "churchFrequency": 32,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "HISPALENSIS",
-          "folded": "hispalensis",
-          "churchFrequency": 32,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Theodoro",
-          "folded": "theodoro",
-          "churchFrequency": 32,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Cantuariorum",
-          "folded": "cantuariorum",
-          "churchFrequency": 32,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Brettonum",
-          "folded": "brettonum",
-          "churchFrequency": 32,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Cisterciensis",
-          "folded": "cisterciensis",
-          "churchFrequency": 31,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Constantinopolitani",
-          "folded": "constantinopolitani",
-          "churchFrequency": 31,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Paracliti",
-          "folded": "paracliti",
-          "churchFrequency": 31,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "ALOISIUS",
-          "folded": "aloisius",
-          "churchFrequency": 31,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Valentiniani",
-          "folded": "ualentiniani",
-          "churchFrequency": 31,
-          "zh": "",
-          "zhRoute": "",
-          "category": "君王",
-          "categoryRoute": "historical_rulers"
-        },
-        {
-          "headword": "Albanus",
-          "folded": "albanus",
-          "churchFrequency": 31,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
         },
         {
           "headword": "Claudius",
           "folded": "claudius",
           "churchFrequency": 30,
-          "zh": "",
-          "zhRoute": "",
+          "zh": "革老丟",
+          "zhRoute": "rulers",
           "category": "君王",
           "categoryRoute": "historical_rulers"
-        },
-        {
-          "headword": "Enoch",
-          "folded": "enoch",
-          "churchFrequency": 30,
-          "zh": "",
-          "zhRoute": "",
-          "category": "其他人名",
-          "categoryRoute": "biblical_people"
-        },
-        {
-          "headword": "Deiparam",
-          "folded": "deiparam",
-          "churchFrequency": 30,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Lateranense",
-          "folded": "lateranense",
-          "churchFrequency": 30,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Athanasius",
-          "folded": "athanasius",
-          "churchFrequency": 30,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Anselmus",
-          "folded": "anselmus",
-          "churchFrequency": 30,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Cappadocia",
-          "folded": "cappadocia",
-          "churchFrequency": 30,
-          "zh": "",
-          "zhRoute": "",
-          "category": "地名",
-          "categoryRoute": "place_names"
-        },
-        {
-          "headword": "Americae",
-          "folded": "americae",
-          "churchFrequency": 30,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
         },
         {
           "headword": "Arianus",
@@ -21164,54 +19697,9 @@
           "categoryRoute": ""
         },
         {
-          "headword": "Pisanus",
-          "folded": "pisanus",
-          "churchFrequency": 30,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
           "headword": "Hermogenes",
           "folded": "hermogenes",
           "churchFrequency": 30,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Qd",
-          "folded": "qd",
-          "churchFrequency": 29,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Damiani",
-          "folded": "damiani",
-          "churchFrequency": 29,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Loth",
-          "folded": "loth",
-          "churchFrequency": 29,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Tuscia",
-          "folded": "tuscia",
-          "churchFrequency": 29,
           "zh": "",
           "zhRoute": "",
           "category": "待歸類",
@@ -21227,103 +19715,13 @@
           "categoryRoute": ""
         },
         {
-          "headword": "Armenius",
-          "folded": "armenius",
-          "churchFrequency": 29,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Ioachim",
-          "folded": "ioachim",
-          "churchFrequency": 29,
-          "zh": "",
-          "zhRoute": "",
-          "category": "其他人名",
-          "categoryRoute": "biblical_people"
-        },
-        {
-          "headword": "Anastasio",
-          "folded": "anastasio",
-          "churchFrequency": 29,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Atticus",
-          "folded": "atticus",
-          "churchFrequency": 29,
-          "zh": "",
-          "zhRoute": "",
-          "category": "教宗與主教",
-          "categoryRoute": "episcopal_succession"
-        },
-        {
           "headword": "Diana",
           "folded": "diana",
           "churchFrequency": 29,
-          "zh": "",
-          "zhRoute": "",
+          "zh": "黛安娜",
+          "zhRoute": "deities",
           "category": "神名與稱號",
           "categoryRoute": "deities"
-        },
-        {
-          "headword": "Arabiae",
-          "folded": "arabiae",
-          "churchFrequency": 29,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Franciae",
-          "folded": "franciae",
-          "churchFrequency": 28,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Alpes",
-          "folded": "alpes",
-          "churchFrequency": 28,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Calvaria",
-          "folded": "caluaria",
-          "churchFrequency": 28,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Radiomessaggi",
-          "folded": "radiomessaggi",
-          "churchFrequency": 28,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Cyrillo",
-          "folded": "cyrillo",
-          "churchFrequency": 28,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
         },
         {
           "headword": "Rufinus",
@@ -21335,278 +19733,17 @@
           "categoryRoute": ""
         },
         {
-          "headword": "Ephesinam",
-          "folded": "ephesinam",
-          "churchFrequency": 28,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Alberigo",
-          "folded": "alberigo",
-          "churchFrequency": 28,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Calisti",
-          "folded": "calisti",
-          "churchFrequency": 28,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Hiberniae",
-          "folded": "hiberniae",
-          "churchFrequency": 27,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Coelestini",
-          "folded": "coelestini",
-          "churchFrequency": 27,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Parisiensi",
-          "folded": "parisiensi",
-          "churchFrequency": 27,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Ephesinus",
-          "folded": "ephesinus",
-          "churchFrequency": 27,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Methodius",
-          "folded": "methodius",
-          "churchFrequency": 27,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Vigilium",
-          "folded": "uigilium",
-          "churchFrequency": 27,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Valentiniano",
-          "folded": "ualentiniano",
-          "churchFrequency": 27,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Genes",
-          "folded": "genes",
-          "churchFrequency": 27,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Vor",
-          "folded": "uor",
-          "churchFrequency": 27,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Ostiensis",
-          "folded": "ostiensis",
-          "churchFrequency": 27,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Laurentium",
-          "folded": "laurentium",
-          "churchFrequency": 27,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Lugdunensi",
-          "folded": "lugdunensi",
-          "churchFrequency": 26,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Africanus",
-          "folded": "africanus",
-          "churchFrequency": 26,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Martinum",
-          "folded": "martinum",
-          "churchFrequency": 26,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "ALBERTUS",
-          "folded": "albertus",
-          "churchFrequency": 26,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
           "headword": "Mediolanum",
           "folded": "mediolanum",
           "churchFrequency": 26,
-          "zh": "",
-          "zhRoute": "",
+          "zh": "米蘭",
+          "zhRoute": "place_names",
           "category": "地名",
           "categoryRoute": "place_names"
         },
         {
-          "headword": "Homerus",
-          "folded": "homerus",
-          "churchFrequency": 26,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Rufino",
-          "folded": "rufino",
-          "churchFrequency": 26,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Bethleem",
-          "folded": "bethleem",
-          "churchFrequency": 26,
-          "zh": "",
-          "zhRoute": "",
-          "category": "地名",
-          "categoryRoute": "Strong 釋義：G965 a place"
-        },
-        {
-          "headword": "Immaculatae",
-          "folded": "immaculatae",
-          "churchFrequency": 25,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Paulinum",
-          "folded": "paulinum",
-          "churchFrequency": 25,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
           "headword": "Italus",
           "folded": "italus",
-          "churchFrequency": 25,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Alexandrinae",
-          "folded": "alexandrinae",
-          "churchFrequency": 25,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "GABRIEL",
-          "folded": "gabriel",
-          "churchFrequency": 25,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Wicleff",
-          "folded": "wicleff",
-          "churchFrequency": 25,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Scytha",
-          "folded": "scytha",
-          "churchFrequency": 25,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Paulino",
-          "folded": "paulino",
-          "churchFrequency": 25,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Platonicus",
-          "folded": "platonicus",
           "churchFrequency": 25,
           "zh": "",
           "zhRoute": "",
@@ -21621,132 +19758,6 @@
           "zhRoute": "",
           "category": "教宗與主教",
           "categoryRoute": "episcopal_succession"
-        },
-        {
-          "headword": "Priscilla",
-          "folded": "priscilla",
-          "churchFrequency": 25,
-          "zh": "",
-          "zhRoute": "",
-          "category": "使徒與門徒",
-          "categoryRoute": "手列使徒門徒（原文字形）"
-        },
-        {
-          "headword": "Justiniani",
-          "folded": "iustiniani",
-          "churchFrequency": 25,
-          "zh": "",
-          "zhRoute": "",
-          "category": "君王",
-          "categoryRoute": "historical_rulers"
-        },
-        {
-          "headword": "Campaniae",
-          "folded": "campaniae",
-          "churchFrequency": 25,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Pictorum",
-          "folded": "pictorum",
-          "churchFrequency": 25,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Aeduini",
-          "folded": "aeduini",
-          "churchFrequency": 25,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Constantiensi",
-          "folded": "constantiensi",
-          "churchFrequency": 24,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Albanensis",
-          "folded": "albanensis",
-          "churchFrequency": 24,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Boetius",
-          "folded": "boetius",
-          "churchFrequency": 24,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "ORIGINUM",
-          "folded": "originum",
-          "churchFrequency": 24,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Assisiensis",
-          "folded": "assisiensis",
-          "churchFrequency": 24,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Galatas",
-          "folded": "galatas",
-          "churchFrequency": 24,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "COMPATRI",
-          "folded": "compatri",
-          "churchFrequency": 24,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "THEODAHADUS",
-          "folded": "theodahadus",
-          "churchFrequency": 24,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Hebraicus",
-          "folded": "hebraicus",
-          "churchFrequency": 23,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
         },
         {
           "headword": "Saulus",
@@ -21767,69 +19778,6 @@
           "categoryRoute": ""
         },
         {
-          "headword": "Flavianum",
-          "folded": "flauianum",
-          "churchFrequency": 23,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Gallicus",
-          "folded": "gallicus",
-          "churchFrequency": 23,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Chalcedonensem",
-          "folded": "chalcedonensem",
-          "churchFrequency": 23,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Ratisp",
-          "folded": "ratisp",
-          "churchFrequency": 23,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Ibae",
-          "folded": "ibae",
-          "churchFrequency": 23,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Tuscus",
-          "folded": "tuscus",
-          "churchFrequency": 23,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Senonensis",
-          "folded": "senonensis",
-          "churchFrequency": 23,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
           "headword": "Vulcanus",
           "folded": "uulcanus",
           "churchFrequency": 23,
@@ -21839,182 +19787,20 @@
           "categoryRoute": ""
         },
         {
-          "headword": "Seville",
-          "folded": "seuille",
-          "churchFrequency": 23,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Antonini",
-          "folded": "antonini",
-          "churchFrequency": 23,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "XIIIIa",
-          "folded": "xiiiia",
-          "churchFrequency": 23,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Uilfrid",
-          "folded": "uilfrid",
-          "churchFrequency": 23,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Rothomagensi",
-          "folded": "rothomagensi",
-          "churchFrequency": 22,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "mattheus",
-          "folded": "mattheus",
-          "churchFrequency": 22,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Constantinopolitanam",
-          "folded": "constantinopolitanam",
-          "churchFrequency": 22,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Praenestinus",
-          "folded": "praenestinus",
-          "churchFrequency": 22,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Lugdunensis",
-          "folded": "lugdunensis",
-          "churchFrequency": 22,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Constantinopolitanus",
-          "folded": "constantinopolitanus",
-          "churchFrequency": 22,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Cantuariensis",
-          "folded": "cantuariensis",
-          "churchFrequency": 22,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Conferentiis",
-          "folded": "conferentiis",
-          "churchFrequency": 22,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Slavorum",
-          "folded": "slauorum",
-          "churchFrequency": 22,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
           "headword": "Tiberius",
           "folded": "tiberius",
           "churchFrequency": 22,
-          "zh": "",
-          "zhRoute": "",
+          "zh": "提庇留",
+          "zhRoute": "rulers",
           "category": "君王",
           "categoryRoute": "historical_rulers"
-        },
-        {
-          "headword": "Theodoreti",
-          "folded": "theodoreti",
-          "churchFrequency": 22,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Foucauld",
-          "folded": "foucauld",
-          "churchFrequency": 22,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "ROBERTI",
-          "folded": "roberti",
-          "churchFrequency": 22,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Maximiano",
-          "folded": "maximiano",
-          "churchFrequency": 22,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
         },
         {
           "headword": "Carthago",
           "folded": "carthago",
           "churchFrequency": 22,
-          "zh": "",
-          "zhRoute": "",
-          "category": "地名",
-          "categoryRoute": "place_names"
-        },
-        {
-          "headword": "France",
-          "folded": "france",
-          "churchFrequency": 22,
-          "zh": "",
-          "zhRoute": "",
+          "zh": "迦太基",
+          "zhRoute": "place_names",
           "category": "民族與國名",
           "categoryRoute": "place_names"
         },
@@ -22028,234 +19814,9 @@
           "categoryRoute": ""
         },
         {
-          "headword": "Londonensi",
-          "folded": "londonensi",
-          "churchFrequency": 22,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "ETYMOLOGIARUM",
-          "folded": "etymologiarum",
-          "churchFrequency": 22,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Achamoth",
-          "folded": "achamoth",
-          "churchFrequency": 22,
-          "zh": "",
-          "zhRoute": "",
-          "category": "神名與稱號",
-          "categoryRoute": "deities"
-        },
-        {
-          "headword": "Trecensi",
-          "folded": "trecensi",
-          "churchFrequency": 21,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Exodo",
-          "folded": "exodo",
-          "churchFrequency": 21,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Bonifacius",
-          "folded": "bonifacius",
-          "churchFrequency": 21,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Toletano",
-          "folded": "toletano",
-          "churchFrequency": 21,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Laicisque",
-          "folded": "laicisque",
-          "churchFrequency": 21,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Hierosolymitani",
-          "folded": "hierosolymitani",
-          "churchFrequency": 21,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Arelatensi",
-          "folded": "arelatensi",
-          "churchFrequency": 21,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Venetiae",
-          "folded": "uenetiae",
-          "churchFrequency": 21,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Anastasium",
-          "folded": "anastasium",
-          "churchFrequency": 21,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "AURELII",
-          "folded": "aurelii",
-          "churchFrequency": 21,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
           "headword": "Saturninus",
           "folded": "saturninus",
           "churchFrequency": 21,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Portuensis",
-          "folded": "portuensis",
-          "churchFrequency": 21,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Apollinis",
-          "folded": "apollinis",
-          "churchFrequency": 21,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Roger",
-          "folded": "roger",
-          "churchFrequency": 21,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Pearse",
-          "folded": "pearse",
-          "churchFrequency": 21,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Galat",
-          "folded": "galat",
-          "churchFrequency": 20,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Honorio",
-          "folded": "honorio",
-          "churchFrequency": 20,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Gothos",
-          "folded": "gothos",
-          "churchFrequency": 20,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Theodoretus",
-          "folded": "theodoretus",
-          "churchFrequency": 20,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Mauricius",
-          "folded": "mauricius",
-          "churchFrequency": 20,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Mediolanensi",
-          "folded": "mediolanensi",
-          "churchFrequency": 20,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Maximianus",
-          "folded": "maximianus",
-          "churchFrequency": 20,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Pragmatic",
-          "folded": "pragmatic",
-          "churchFrequency": 20,
           "zh": "",
           "zhRoute": "",
           "category": "待歸類",
@@ -22289,71 +19850,8 @@
           "categoryRoute": "登錄"
         },
         {
-          "headword": "Cosmedin",
-          "folded": "cosmedin",
-          "churchFrequency": 19,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Pelagii",
-          "folded": "pelagii",
-          "churchFrequency": 19,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Tiberio",
-          "folded": "tiberio",
-          "churchFrequency": 19,
-          "zh": "",
-          "zhRoute": "",
-          "category": "其他人名",
-          "categoryRoute": "Strong 釋義（字幹）：G5085 the name of"
-        },
-        {
-          "headword": "Sadducaei",
-          "folded": "sadducaei",
-          "churchFrequency": 19,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
           "headword": "Deipara",
           "folded": "deipara",
-          "churchFrequency": 19,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Origene",
-          "folded": "origene",
-          "churchFrequency": 19,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Indiae",
-          "folded": "indiae",
-          "churchFrequency": 19,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Antiocheno",
-          "folded": "antiocheno",
           "churchFrequency": 19,
           "zh": "",
           "zhRoute": "",
@@ -22364,8 +19862,8 @@
           "headword": "Seneca",
           "folded": "seneca",
           "churchFrequency": 19,
-          "zh": "",
-          "zhRoute": "",
+          "zh": "塞內卡",
+          "zhRoute": "philosophers",
           "category": "教宗與主教",
           "categoryRoute": "episcopal_succession"
         },
@@ -22379,206 +19877,8 @@
           "categoryRoute": ""
         },
         {
-          "headword": "Viennensis",
-          "folded": "uiennensis",
-          "churchFrequency": 19,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "CASSIODORI",
-          "folded": "cassiodori",
-          "churchFrequency": 19,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Dioscorum",
-          "folded": "dioscorum",
-          "churchFrequency": 19,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Arianum",
-          "folded": "arianum",
-          "churchFrequency": 19,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Bononiensis",
-          "folded": "bononiensis",
-          "churchFrequency": 19,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Sarracenis",
-          "folded": "sarracenis",
-          "churchFrequency": 19,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Huss",
-          "folded": "huss",
-          "churchFrequency": 19,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Bituricensis",
-          "folded": "bituricensis",
-          "churchFrequency": 19,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Colimbriensis",
-          "folded": "colimbriensis",
-          "churchFrequency": 19,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Apelles",
-          "folded": "apelles",
-          "churchFrequency": 19,
-          "zh": "",
-          "zhRoute": "",
-          "category": "其他人名",
-          "categoryRoute": "Strong 釋義：G559 a Christian"
-        },
-        {
-          "headword": "Saxia",
-          "folded": "saxia",
-          "churchFrequency": 18,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Indos",
-          "folded": "indos",
-          "churchFrequency": 18,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Allocutionibus",
-          "folded": "allocutionibus",
-          "churchFrequency": 18,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Bibliis",
-          "folded": "bibliis",
-          "churchFrequency": 18,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Hieronymo",
-          "folded": "hieronymo",
-          "churchFrequency": 18,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Ssmi",
-          "folded": "ssmi",
-          "churchFrequency": 18,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Neapolis",
-          "folded": "neapolis",
-          "churchFrequency": 18,
-          "zh": "",
-          "zhRoute": "",
-          "category": "地名",
-          "categoryRoute": "Strong 釋義：G3496 a place"
-        },
-        {
           "headword": "Bononia",
           "folded": "bononia",
-          "churchFrequency": 18,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Paschatis",
-          "folded": "paschatis",
-          "churchFrequency": 18,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Thessalonicenses",
-          "folded": "thessalonicenses",
-          "churchFrequency": 18,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Marciani",
-          "folded": "marciani",
-          "churchFrequency": 18,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Nicaena",
-          "folded": "nicaena",
-          "churchFrequency": 18,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Siricio",
-          "folded": "siricio",
           "churchFrequency": 18,
           "zh": "",
           "zhRoute": "",
@@ -22589,163 +19889,19 @@
           "headword": "Eutyches",
           "folded": "eutyches",
           "churchFrequency": 18,
-          "zh": "",
-          "zhRoute": "",
+          "zh": "歐迪克",
+          "zhRoute": "theologians",
           "category": "待歸類",
           "categoryRoute": ""
         },
         {
-          "headword": "Childebertum",
-          "folded": "childebertum",
-          "churchFrequency": 18,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Beneventani",
-          "folded": "beneuentani",
-          "churchFrequency": 18,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "ARCADIUS",
+          "headword": "Arcadius",
           "folded": "arcadius",
           "churchFrequency": 18,
-          "zh": "",
-          "zhRoute": "",
+          "zh": "阿爾卡狄烏斯",
+          "zhRoute": "rulers",
           "category": "君王",
           "categoryRoute": "historical_rulers"
-        },
-        {
-          "headword": "Cererem",
-          "folded": "cererem",
-          "churchFrequency": 18,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Numa",
-          "folded": "numa",
-          "churchFrequency": 18,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Minervae",
-          "folded": "mineruae",
-          "churchFrequency": 18,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Aeonum",
-          "folded": "aeonum",
-          "churchFrequency": 18,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Basileensi",
-          "folded": "basileensi",
-          "churchFrequency": 17,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Turonensis",
-          "folded": "turonensis",
-          "churchFrequency": 17,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Hebraeum",
-          "folded": "hebraeum",
-          "churchFrequency": 17,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Neronis",
-          "folded": "neronis",
-          "churchFrequency": 17,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Saxo",
-          "folded": "saxo",
-          "churchFrequency": 17,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Hieronymum",
-          "folded": "hieronymum",
-          "churchFrequency": 17,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Muratori",
-          "folded": "muratori",
-          "churchFrequency": 17,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Peter",
-          "folded": "peter",
-          "churchFrequency": 17,
-          "zh": "",
-          "zhRoute": "",
-          "category": "教宗與主教",
-          "categoryRoute": "episcopal_succession"
-        },
-        {
-          "headword": "Lucaniae",
-          "folded": "lucaniae",
-          "churchFrequency": 17,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Aquinatis",
-          "folded": "aquinatis",
-          "churchFrequency": 17,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
         },
         {
           "headword": "Justinianus",
@@ -22757,8 +19913,8 @@
           "categoryRoute": ""
         },
         {
-          "headword": "Massonum",
-          "folded": "massonum",
+          "headword": "Sabinus",
+          "folded": "sabinus",
           "churchFrequency": 17,
           "zh": "",
           "zhRoute": "",
@@ -22766,8 +19922,8 @@
           "categoryRoute": ""
         },
         {
-          "headword": "Parisiensis",
-          "folded": "parisiensis",
+          "headword": "Romulus",
+          "folded": "romulus",
           "churchFrequency": 17,
           "zh": "",
           "zhRoute": "",
@@ -22775,67 +19931,67 @@
           "categoryRoute": ""
         },
         {
-          "headword": "FERDINANDUS",
-          "folded": "ferdinandus",
+          "headword": "Libya",
+          "folded": "libya",
           "churchFrequency": 17,
+          "zh": "利比亞",
+          "zhRoute": "place_names（英文欄同形）",
+          "category": "民族與國名",
+          "categoryRoute": "place_names"
+        },
+        {
+          "headword": "Valerius",
+          "folded": "ualerius",
+          "churchFrequency": 16,
           "zh": "",
           "zhRoute": "",
           "category": "待歸類",
           "categoryRoute": ""
         },
         {
-          "headword": "Malabariam",
-          "folded": "malabariam",
-          "churchFrequency": 17,
+          "headword": "Illyricum",
+          "folded": "illyricum",
+          "churchFrequency": 16,
+          "zh": "以利哩古",
+          "zhRoute": "place_names（英文欄同形）",
+          "category": "地名",
+          "categoryRoute": "place_names"
+        },
+        {
+          "headword": "Ceres",
+          "folded": "ceres",
+          "churchFrequency": 16,
           "zh": "",
           "zhRoute": "",
           "category": "待歸類",
           "categoryRoute": ""
         },
         {
-          "headword": "Theodosium",
-          "folded": "theodosium",
-          "churchFrequency": 17,
+          "headword": "Iuno",
+          "folded": "iuno",
+          "churchFrequency": 16,
+          "zh": "朱諾",
+          "zhRoute": "deities",
+          "category": "神名與稱號",
+          "categoryRoute": "deities"
+        },
+        {
+          "headword": "Afer",
+          "folded": "afer",
+          "churchFrequency": 16,
           "zh": "",
           "zhRoute": "",
           "category": "待歸類",
           "categoryRoute": ""
         },
         {
-          "headword": "Nicaeni",
-          "folded": "nicaeni",
-          "churchFrequency": 17,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Hierosolymitano",
-          "folded": "hierosolymitano",
-          "churchFrequency": 17,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Rufinum",
-          "folded": "rufinum",
-          "churchFrequency": 17,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
-        },
-        {
-          "headword": "Arsiensis",
-          "folded": "arsiensis",
-          "churchFrequency": 17,
-          "zh": "",
-          "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "headword": "Nero",
+          "folded": "nero",
+          "churchFrequency": 16,
+          "zh": "尼祿",
+          "zhRoute": "rulers",
+          "category": "君王",
+          "categoryRoute": "historical_rulers"
         }
       ]
     }

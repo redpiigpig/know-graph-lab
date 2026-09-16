@@ -166,6 +166,11 @@ def _fetch_registers() -> dict:
         "theologians": rows("theologians", "name_original,name_english,name_latin_std,name_catholic_sgs,name_protestant,role"),
         "rulers": rows("historical_rulers", "name_original,name_english,name_recommended"),
         "biblical_people": rows("biblical_people", "name_zh,name_en"),
+        # 這兩份不參與分類（分類器不認哲學家／科學家這兩類），只供譯名查詢：
+        # 拉丁下冊的近現代專名表裡有 Cicero、Plato、Socrates、Seneca 這些人，
+        # 他們的中文在詞庫裡早就定好了，沒有理由讓那幾格空著或另外編一個。
+        "philosophers": rows("philosophers", "name_original,name_english,name_recommended"),
+        "scientists": rows("scientists", "name_original,name_english,name_recommended"),
     }
 
 
