@@ -45,7 +45,7 @@ llm.NVIDIA_TIMEOUT = 240
 
 REPO = ROOT.parent
 VOCAB = REPO / "data" / "originalReaders" / "vocabulary" / "english-1000.json"
-OLD_LESSONS = REPO / "public" / "content" / "english" / "lessons.json"
+SYLLABUS = REPO / "data" / "english" / "course50-syllabus.json"
 OUT_DIR = REPO / "public" / "content" / "english" / "course50"
 
 # 使用者 2026-09-08 定案：每課印 10 題選擇題（原本 30）。早生成的那批仍存 30 題，
@@ -58,8 +58,18 @@ SIMPLIFIED = set("们个这来说时对开关国车东车马鸟鱼员问间学�
 
 
 def load_lessons() -> list[dict]:
+    """每課 = 20 個字 + 大綱指定的那一個文法點。
+
+    🚨 文法一定要按「課」綁定，不可以按「主題」。2026-09-08 那一版是拿舊 20 課版
+    lessons.json 的 theme -> grammar 對照當骨架，一個主題只有一條文法，同主題的
+    2～3 課就全部共用它：L01/02/03 都在教 be 動詞、L06/07/08 都是 What color/shape、
+    L16/17/18 連字面都幾乎一樣，50 課實際只有 17 個文法點。提示詞裡那句「同主題第
+    2 課以後要往下推進」模型根本不理。改成讀 data/english/course50-syllabus.json，
+    一課一個點、寫死在提示裡。
+    """
     vocab = json.loads(VOCAB.read_text(encoding="utf-8"))["entries"]
-    old = {l["title_en"]: l for l in json.loads(OLD_LESSONS.read_text(encoding="utf-8"))}
+    syllabus = {l["no"]: l for l in
+                json.loads(SYLLABUS.read_text(encoding="utf-8"))["lessons"]}
     lessons: dict[int, dict] = {}
     for entry in vocab:
         no = entry["lesson"]
@@ -67,26 +77,28 @@ def load_lessons() -> list[dict]:
                                 "theme_zh": entry["themeZh"], "words": []})
         lessons[no]["words"].append({"en": entry["en"], "zh": entry["zh"]})
     ordered = [lessons[n] for n in sorted(lessons)]
-    # 同一主題橫跨數課，標出這是該主題的第幾課，好讓文法有前後進程
-    by_theme: dict[str, list[dict]] = {}
     for lesson in ordered:
-        by_theme.setdefault(lesson["theme"], []).append(lesson)
-    for theme, group in by_theme.items():
-        source = old.get(theme, {})
-        for i, lesson in enumerate(group, 1):
-            lesson["part"] = i
-            lesson["part_of"] = len(group)
-            lesson["theme_grammar"] = source.get("grammar", "")
+        plan = syllabus[lesson["no"]]
+        lesson["focus"] = plan["focus"]
+        lesson["grammar"] = plan["grammar"]
+        lesson["patterns"] = plan["patterns"]
+        lesson["points"] = plan["points"]
+        # 前面教過什麼，寫進提示當「不可以重教」的清單
+        lesson["taught"] = [syllabus[n]["focus"] for n in range(1, lesson["no"])]
     return ordered
 
 
 _BODY_HEAD = """你是台灣國小英語教材的資深編寫者。請替一本自編課本寫第 {no} 課的內容。
 
 【本課主題】{theme}（{theme_zh}）
-【進度位置】這是「{theme_zh}」這個主題的第 {part} 課（共 {part_of} 課）
-【主題文法範圍】{theme_grammar}
+【本課文法點】{focus}——{grammar}
+【本課句型】{patterns}
 【本課必教的 20 個單字】
 {words}
+
+🚨 **文法只准教上面那一個點**。前面 {no_1} 課已經教過下列這些，本課一律不可以
+再拿來當重點或當考點（單純用到不算）：
+{taught}
 
 共同要求：
 1. 全部中文一律「繁體中文」（台灣用字，例如「裡」不寫「里」）。
@@ -96,10 +108,14 @@ _BODY_HEAD = """你是台灣國小英語教材的資深編寫者。請替一本�
 
 
 def _body_head(lesson: dict) -> str:
+    taught = lesson["taught"]
     return _BODY_HEAD.format(
-        no=lesson["no"], theme=lesson["theme"], theme_zh=lesson["theme_zh"],
-        part=lesson["part"], part_of=lesson["part_of"],
-        theme_grammar=lesson["theme_grammar"],
+        no=lesson["no"], no_1=lesson["no"] - 1,
+        theme=lesson["theme"], theme_zh=lesson["theme_zh"],
+        focus=lesson["focus"], grammar=lesson["grammar"],
+        patterns=" ／ ".join(lesson["patterns"]),
+        taught="（這是第一課，沒有前課）" if not taught
+               else "、".join(taught),
         words="\n".join(f"- {w['en']}　{w['zh']}" for w in lesson["words"]))
 
 
@@ -113,8 +129,7 @@ JSON 格式：
 {
   "title_en": "英文課名（3～5 個字）",
   "title_zh": "中文課名（6～12 字）",
-  "grammar": "本課文法重點一句話",
-  "intro_zh": "本課導言，60～90 字",
+  "intro_zh": "本課導言，60～90 字，要點出上面那個文法點",
   "can_do": ["學完能做到的事1", "…2", "…3"],
   "reading": {"title_en": "課文英文標題", "title_zh": "課文中文標題",
     "sentences": [{"en": "英文句", "zh": "中文翻譯"}]}
@@ -123,11 +138,11 @@ JSON 格式：
 
 def prompt_grammar(lesson: dict, intro: dict) -> str:
     return _body_head(lesson) + f"""
-本課文法重點已定為：{intro.get('grammar', '')}
+請寫文法解說、情境對話與例句，全部圍繞「{lesson['focus']}」這一個點。
 
-請寫文法解說、情境對話與例句。文法寫 2 個 grammar_points：第一個一定要附 table
-（第一列是表頭），第二個一定要附 examples。若這是同主題的第 2 課以後，
-文法要接續前一課往下推進，不要重複同一個點。
+兩個 grammar_points 分別寫：
+① {lesson['points'][0]}——一定要附 table（第一列是表頭）
+② {lesson['points'][1]}——一定要附 examples
 
 JSON 格式：
 {{
@@ -148,7 +163,7 @@ sentences 要 8 句，dialogue 要 4～6 句。
 
 _EX_HEAD = """你是台灣國小英語教材的資深編寫者，正在替第 {no} 課出練習題。
 
-【本課文法】{grammar}
+【本課文法】{focus}——{grammar}
 【本課 20 個單字】{words}
 
 共同要求：
@@ -156,11 +171,19 @@ _EX_HEAD = """你是台灣國小英語教材的資深編寫者，正在替第 {n
 - 全部中文一律繁體中文（台灣用字）。**不要 KK 音標**。
 - 每題答案必須唯一且正確。
 - 只輸出 JSON，不要說明文字，不要包在程式碼區塊裡。
+
+🚨 題目的語言方向是固定的，違反的題目會被退回：
+1. **選項一律是英文**。不可以出「她______一名士兵。」配選項「是／不是／會／能」——
+   那題整題沒有一個英文字，考不到任何東西。
+2. 考單字意思時**一律「中文題幹→選英文」**：「士兵 的英文是？」選項 soldier / king…。
+   **不可以**寫成「soldier 的英文是？」——題幹已經把答案寫出來了。
+3. 文法題的題幹是英文句子挖空，中文提示放在括號裡。
 """
 
 
 def _ex_head(lesson: dict, body: dict) -> str:
-    return _EX_HEAD.format(no=lesson["no"], grammar=body.get("grammar", ""),
+    return _EX_HEAD.format(no=lesson["no"], focus=lesson["focus"],
+                           grammar=lesson["grammar"],
                            words="、".join(w["en"] for w in lesson["words"]))
 
 
@@ -172,19 +195,29 @@ MCQ_STYLES = [
 ]
 
 
-def prompt_mcq(lesson: dict, body: dict, n: int, style: str, avoid: list[str]) -> str:
+def prompt_mcq(lesson: dict, body: dict, n: int, style: str, avoid: list[str],
+               used_opts: list[list[str]] | None = None) -> str:
     # NVIDIA 那層的輸出上限是 4000 token，30 題一次出會在半路被截斷成不合法 JSON，
     # 於是整批掉到 Haiku 去燒 Max 額度。分批出才留得住免費層。
     dodge = ""
     if avoid:
         dodge = "\n\n下列題目已經出過，不要重複或只改一個字：\n" + "\n".join(
             f"- {q}" for q in avoid)
+    if used_opts:
+        # 三批是分開呼叫的，不告訴它前面用過哪些選項組，它會在第二批把
+        # am/is/are/be 再出一次，合起來仍是十題長一樣
+        dodge += "\n\n下列這幾組選項已經用過，本批不可以再用：\n" + "\n".join(
+            f"- {' / '.join(o)}" for o in used_opts)
     return _ex_head(lesson, body) + f"""
 請出 **剛好 {n} 題**選擇題，每題 4 個選項，{style}。
 ans 必須**逐字**等於 opts 其中一個，四個選項不可重複。
 🚨 **不可以整批題目共用同一組選項、只換主詞**（例如連續五題都是
 I/She/They ___ 而選項一律 am/is/are/have）——那對學生等於同一題寫五次。
-每一題換不同的考點、不同的句子結構，四個選項也要跟著換。
+每一題換不同的考點、不同的句子結構，四個選項也要跟著換：
+**同一組四個選項最多只能出現在一題裡**。
+🚨 誘答項要是「有可能被選錯」的字。問「你長大的地方叫什麼？」而誘答項放
+wink／whisper／greeting 沒有意義，那三個一看就不是地方；要放 hometown 的
+同類字（neighbor、birthday、nickname）才考得出東西。
 
 JSON 格式：
 {{"mcq": [{{"q": "題目", "opts": ["A", "B", "C", "D"], "ans": "正確選項原文"}}]}}{dodge}"""
@@ -256,7 +289,8 @@ def check_simplified(obj) -> list[str]:
 
 def validate_intro(body: dict) -> list[str]:
     errs = []
-    for key in ("title_en", "title_zh", "grammar", "intro_zh", "can_do", "reading"):
+    # grammar 不再由模型自己想，改由 course50-syllabus.json 綁定，所以不列在這裡
+    for key in ("title_en", "title_zh", "intro_zh", "can_do", "reading"):
         if not body.get(key):
             errs.append(f"缺 {key}")
     reading = body.get("reading") or {}
@@ -321,10 +355,67 @@ def validate_exercises(ex: dict, keys: dict[str, int] | None = None) -> list[str
     dupes = {q for q in questions if questions.count(q) > 1}
     if dupes:
         errs.append(f"選擇題重複 {len(dupes)} 題：{next(iter(dupes))}")
+    errs += validate_direction(ex)
+    errs += validate_variety(ex)
     bad = check_simplified(ex)
     if bad:
         errs.append("簡體字：" + "".join(bad))
     return errs
+
+
+HAS_ZH = re.compile(r"[一-鿿]")
+SELF_ANSWER = re.compile(r"^\s*([A-Za-z][A-Za-z \-'()]*?)\s*的英文")
+
+
+def validate_direction(ex: dict) -> list[str]:
+    """擋掉中英方向錯亂的題目。
+
+    2026-09-16 使用者在第一、二、三課就抓到三種：
+      ① L03「wink 的英文是？」——題幹已經是英文，答案直接寫在題目上（24 題），
+         其中一題連標準答案都填錯（「whisper 的英文是？」答案寫 wink）。
+      ② L08/L10/L27/L45「她______一名士兵。」選項是「是／不是／會／能」——
+         整題沒有一個英文字。
+      ③ L25 題幹 not easy 是英文，選項卻是中文。
+    """
+    errs = []
+    for i, item in enumerate(ex.get("mcq") or [], 1):
+        q, opts, ans = item.get("q") or "", item.get("opts") or [], item.get("ans") or ""
+        zh_opts = [o for o in opts if HAS_ZH.search(o)]
+        if zh_opts:
+            errs.append(f"mcq 第 {i} 題選項是中文：{zh_opts[0]}")
+        hit = SELF_ANSWER.match(q)
+        if hit:
+            errs.append(f"mcq 第 {i} 題題幹是英文卻問「的英文是」，答案寫在題目上：{q[:24]}")
+        elif ans and not HAS_ZH.search(q) and ans in q.split():
+            errs.append(f"mcq 第 {i} 題答案出現在題幹裡：{q[:24]}")
+    for i, item in enumerate(ex.get("translate") or [], 1):
+        if not HAS_ZH.search(item.get("q") or ""):
+            errs.append(f"translate 第 {i} 題題幹不是中文：{(item.get('q') or '')[:24]}")
+        if HAS_ZH.search(item.get("ans") or ""):
+            errs.append(f"translate 第 {i} 題答案不是英文：{(item.get('ans') or '')[:24]}")
+    for key in ("fill", "unscramble"):
+        for i, item in enumerate(ex.get(key) or [], 1):
+            if HAS_ZH.search(item.get("ans") or ""):
+                errs.append(f"{key} 第 {i} 題答案不是英文：{(item.get('ans') or '')[:24]}")
+    return errs
+
+
+MAX_SAME_OPTS = 1
+
+
+def validate_variety(ex: dict) -> list[str]:
+    """擋掉「十題長得一模一樣」。
+
+    排版腳本的 pick_mcq 本來就會避開重複選項，但那是在爛牌裡挑——池子本身
+    am/is/are/be 這一組在全書出現 27 次、橫跨 5 課，怎麼挑都還是同一題。
+    要在生成這一端就擋。
+    """
+    seen: dict[tuple, int] = {}
+    for item in ex.get("mcq") or []:
+        key = tuple(sorted(item.get("opts") or []))
+        seen[key] = seen.get(key, 0) + 1
+    over = [(k, v) for k, v in seen.items() if v > MAX_SAME_OPTS]
+    return [f"選擇題有 {v} 題共用同一組選項 {' / '.join(k)}" for k, v in over]
 
 
 VERBOSE = False
@@ -474,13 +565,23 @@ def _build_once(lesson: dict) -> tuple[dict | None, list[str]]:
         if want <= 0:
             break
         part, errs = ask(
-            prompt_mcq(lesson, body, want, style, [q["q"] for q in questions]),
-            lambda d, n=want: validate_exercises(d, {"mcq": n}),
+            prompt_mcq(lesson, body, want, style, [q["q"] for q in questions],
+                       [sorted(q["opts"]) for q in questions]),
+            lambda d, n=want, seen=[sorted(q["opts"]) for q in questions]:
+                validate_exercises(d, {"mcq": n})
+                + [f"這組選項前面已經用過：{' / '.join(o)}"
+                   for o in (sorted(x.get("opts") or []) for x in d.get("mcq") or [])
+                   if o in seen],
             stage=f"選擇題{batch + 1}")
         if part is None:
             return None, [f"選擇題第 {batch + 1} 批：" + "；".join(errs)]
         questions.extend(part["mcq"])
     mcq = {"mcq": questions[:N_MCQ]}
+    # 選項多樣性要整課一起看。三批是分開出的，每批各自都合格，合起來仍可能
+    # 十題共用 am/is/are/be——批次內的檢查抓不到跨批重複。
+    cross = validate_variety(mcq)
+    if cross:
+        return None, ["選擇題跨批重複：" + "；".join(cross)]
 
     drills, errs = ask(prompt_drills(lesson, body),
                        lambda d: validate_exercises(
@@ -491,8 +592,10 @@ def _build_once(lesson: dict) -> tuple[dict | None, list[str]]:
         return None, ["填空造句：" + "；".join(errs)]
     ex = {**mcq, **drills}
     rebuild_scrambles(ex, seed=lesson["no"])
+    shuffle_options(ex, seed=lesson["no"])
     body.update({"no": lesson["no"], "theme": lesson["theme"],
                  "theme_zh": lesson["theme_zh"], "words": lesson["words"],
+                 "focus": lesson["focus"], "grammar": lesson["grammar"],
                  "exercises": ex, "engine": LAST_ENGINE})
     return body, []
 
@@ -526,6 +629,27 @@ def rebuild_scrambles(ex: dict, seed: int = 0) -> int:
             item["q"] = wanted
             fixed += 1
     return fixed
+
+
+def shuffle_options(ex: dict, seed: int = 0) -> int:
+    """把選擇題的四個選項洗牌，讓正確答案平均落在 A～D。
+
+    🚨 引擎幾乎都把正確答案寫在第一個：全書 1355 題裡有 1005 題（74%）答案是 (A)，
+    而排版與網站兩邊都沒有洗牌，所以原樣印到紙上——學生一路猜 A 就有七成分。
+    這裡用課號當種子，重跑結果一樣，改版時 diff 不會整本翻掉。
+    """
+    rng = random.Random(1000 + seed)
+    items = ex.get("mcq") or []
+    slots = [i % 4 for i in range(len(items))]
+    rng.shuffle(slots)
+    for item, slot in zip(items, slots):
+        opts, ans = item.get("opts") or [], item.get("ans")
+        if len(opts) != 4 or ans not in opts:
+            continue
+        rest = [o for o in opts if o != ans]
+        rng.shuffle(rest)
+        item["opts"] = rest[:slot] + [ans] + rest[slot:]
+    return len(items)
 
 
 def dedupe_mcq(ex: dict) -> int:
@@ -645,6 +769,7 @@ def main():
             ex = data["exercises"]
             scrambles = rebuild_scrambles(ex, seed=lesson["no"])
             dropped = dedupe_mcq(ex)
+            shuffle_options(ex, seed=lesson["no"])
             topped = 0
             while len(ex["mcq"]) < N_MCQ:
                 want = N_MCQ - len(ex["mcq"])
