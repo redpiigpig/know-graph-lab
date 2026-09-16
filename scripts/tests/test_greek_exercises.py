@@ -198,10 +198,15 @@ def test_gate_one_rejects_a_form_the_corpus_never_wrote():
     assert report["passed"] is False
 
 
-def test_gate_two_rejects_a_word_that_has_not_been_taught_yet():
+def test_gate_two_records_an_untaught_word_without_rejecting_the_sentence():
+    """第二道閘照記不照擋（2026-09-15 起，見 5feabc11）。
+
+    擁有者裁定：一個詞排在第幾課是難度排序的結果，不是它本身難不難，
+    所以簡單的詞可以先練。untaught 仍要照實記下供日後分級，但不再讓句子退件。
+    """
     report = verify_sentence("καὶ εἶπεν ὁ θεὸς", KNOWN - {fold_key("θεός")}, ATTESTED)
     assert report["untaught"] == ["θεὸς"]
-    assert report["passed"] is False
+    assert report["passed"] is True
 
 
 def test_a_sentence_of_taught_attested_words_passes():

@@ -75,10 +75,16 @@ def test_a_complete_set_passes():
     assert failures_for_payload(payload()) == []
 
 
-def test_untaught_word_is_rejected():
-    """The whole point of the cumulative rule: no word before its lesson."""
-    item = composed_item(verification={"unattested": [], "untaught": ["שָׁמַר"], "passed": False})
-    assert any("尚未教過" in problem for problem in failures_for_item(item))
+def test_untaught_word_no_longer_rejects_the_item():
+    """「已教過」照記不照擋（2026-09-15 起，見 5feabc11）。
+
+    擁有者裁定：「簡單的都可以先練習，沒有限制一定要本課教過的才行。」
+    一個詞排在第幾課是難度排序的結果，不是它本身難不難。
+    untaught 仍寫進 verification 供日後分級，但不再是退件理由 ——
+    第一道閘（語料有沒有這個形）沒有動，見下一個測試。
+    """
+    item = composed_item(verification={"unattested": [], "untaught": ["שָׁמַר"], "passed": True})
+    assert not any("尚未教過" in problem for problem in failures_for_item(item))
 
 
 def test_invented_form_is_rejected():

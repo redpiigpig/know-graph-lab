@@ -283,11 +283,15 @@ def test_verify_reports_an_invented_form_with_its_original_spelling():
     assert report["passed"] is False
 
 
-def test_verify_rejects_a_taught_check_that_the_enclitic_would_otherwise_pass():
-    """🚨 -que 第一課就教了。若把主詞和附著詞併在一起判，任何名詞黏上 que 都會過關。"""
+def test_verify_does_not_merge_a_noun_with_its_enclitic():
+    """🚨 -que 第一課就教了。若把主詞和附著詞併在一起判，任何名詞黏上 que 都算教過。
+
+    看的是 untaught 有沒有照實記下 Armaque —— 記錯了，日後分級就跟著錯。
+    passed 不在這裡看：2026-09-15 起「已教過」改成照記不照擋（見 5feabc11），
+    untaught 不再讓句子退件。
+    """
     report = verify("Armaque Deus est", CORPUS, TAGGER, TAUGHT_LEMMAS, TAUGHT_KEYS)
     assert report["untaught"] == ["Armaque"]
-    assert report["passed"] is False
 
 
 def test_verify_accepts_a_real_enclitic_whose_host_has_been_taught():
@@ -300,12 +304,12 @@ def test_verify_accepts_a_real_enclitic_whose_host_has_been_taught():
 def test_verify_does_not_split_itaque_and_so_calls_it_untaught():
     """語料裡有 itaque、`ita` 和 `que` 也都教過，但 itaque 本身沒教過就是沒教過。
 
-    這句若被拆成 ita ＋ que，兩半都教過，整句會過關——過的是一句不存在的話。
+    這句若被拆成 ita ＋ que，兩半都教過，就會被記成「全教過」——記的是一句不存在的話。
+    passed 不在這裡看：2026-09-15 起「已教過」改成照記不照擋（見 5feabc11）。
     """
     report = verify("Itaque Deus est", CORPUS, TAGGER, TAUGHT_LEMMAS, TAUGHT_KEYS)
     assert report["untaught"] == ["Itaque"]
     assert report["enclitics"] == []
-    assert report["passed"] is False
 
 
 def test_verify_enforces_the_length_rule():
