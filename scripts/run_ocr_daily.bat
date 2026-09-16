@@ -50,6 +50,25 @@ echo --- parse_worker --- >> "%LOGFILE%"
 "%PY%" scripts\parse_worker.py run --limit 150 >> "%LOGFILE%" 2>&1
 echo step2 exit=%ERRORLEVEL% >> "%LOGFILE%"
 
+REM Step 3: OCR. 本機 MinerU 是主力（2026-09-16 使用者定調）。
+REM   同一份考卷（原生數位排版、標準答案零誤差）實測：
+REM     MinerU 3.4.5   字元正確率 99.64%   最差一頁 0.92%   12 頁 22 秒
+REM     gemini-3.6-flash          98.83%           4.46%        123 秒
+REM   而且不吃配額、不會 429/503 —— reocr_ledger 裡 50 本有 32 本是
+REM   「引擎根本沒回來」，那才是轉錄品質的真正瓶頸，不是認字準度。
+REM   注意 GPU 只有 6 GB：mineru_ocr.py 自己有 lock，撞到別的 MinerU
+REM   會回 exit 4（忙碌，不是失敗）。qwen2.5vl:3b 當年就是塞不進 6 GB 才棄用，
+REM   MinerU 的 pipeline 後端只吃 ~1.1 GB，所以這次塞得下。
+echo --- mineru_ocr queue --- >> "%LOGFILE%"
+"%PY%" scripts\mineru_ocr.py queue --limit 8 --max-minutes 90 >> "%LOGFILE%" 2>&1
+set MINERU_EXIT=%ERRORLEVEL%
+echo step3 mineru exit=%MINERU_EXIT% >> "%LOGFILE%"
+
+REM MinerU 正常跑完（0）或只是 GPU 忙（4）就不必動 Gemini —— 把免費額度
+REM 留給翻譯那條線。只有本機這條真的出環境問題（3）才退回雲端。
+if "%MINERU_EXIT%"=="0" goto :skip_gemini
+if "%MINERU_EXIT%"=="4" goto :skip_gemini
+
 REM Step 3a: pick a Gemini model that is actually alive right now.
 REM   Every other Gemini consumer in this repo already probes first
 REM   (fleet_keeper.ps1, accs_ocr_gemini_runner.ps1, resume_lanes_on_gemini.ps1,
@@ -77,6 +96,12 @@ REM Probe swept every candidate model on every key and none could generate.
 REM Reuse exit code 2 so the existing quota-notify branch below handles it.
 echo step3 SKIPPED: gemini_probe found no live model on any key >> "%LOGFILE%"
 set GEMINI_EXIT=2
+goto :after_ocr
+
+:skip_gemini
+REM MinerU 那一輪就夠了，這班不碰雲端。設 0 讓底下的配額分支不要誤觸發。
+echo step3 gemini skipped: MinerU handled this run (exit %MINERU_EXIT%) >> "%LOGFILE%"
+set GEMINI_EXIT=0
 
 :after_ocr
 

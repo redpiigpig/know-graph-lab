@@ -24,7 +24,14 @@ p157 開頭一段 93 字的古文引文（司馬光論孔氏出妻）被搬到 p
     python scripts/mineru_ocr.py run --book <ebook_id>
     python scripts/mineru_ocr.py run --pdf <路徑> --out <輸出.jsonl>
     python scripts/mineru_ocr.py run --book <id> --staging   # 寫 .jsonl.new，不動 DB/R2
+    python scripts/mineru_ocr.py queue --limit 5             # 吃 OCR 佇列（每日排程用）
     python scripts/mineru_ocr.py check                       # 環境自檢
+
+🚨 **同時只准跑一個。** 這台是 RTX 4050 Mobile 6GB；bat 裡記著 qwen2.5vl:3b
+光是視覺計算圖就要 ~6.7 GiB、掉到 CPU 後約 1 tok/min 完全不能用。MinerU 的
+pipeline 後端只吃 ~1.1 GB，單獨跑很寬裕，但兩個一起跑就會把彼此擠爆。
+每日排程（10/14/18）和手動批次一定會撞在一起，所以用 lock 檔擋，
+擋下來回離開碼 4（＝忙碌，不是失敗，呼叫端不該把書標成壞掉）。
 
 離開碼（呼叫端要靠它分辨「這本書不行」和「環境壞了」）：
     0  成功
@@ -33,6 +40,7 @@ p157 開頭一段 93 字的古文引文（司馬光論孔氏出妻）被搬到 p
     3  🚨 環境問題（DNS／網路／Supabase 不通、MinerU 自己掛了）——
        **整場要停**，不可以當成書的失敗。2026-09-16 踩過：一次短暫斷網讓
        `getaddrinfo failed`，30 本在幾秒內全被標成 ocr_failed，佇列整個燒掉。
+    4  另一個 MinerU 正在跑（GPU 被佔），這次什麼都沒做 —— 不是失敗，晚點再來。
 """
 from __future__ import annotations
 
@@ -207,6 +215,46 @@ def cmd_check(args) -> int:
     return 0 if ok else 1
 
 
+# ── GPU 單例鎖 ────────────────────────────────────────────────────────────
+
+LOCK = REPO / "scripts" / "state" / "mineru_gpu.lock"
+
+
+def _pid_alive(pid: int) -> bool:
+    try:
+        out = subprocess.run(
+            ["powershell.exe", "-NoProfile", "-Command",
+             f"if (Get-Process -Id {pid} -ErrorAction SilentlyContinue) {{exit 0}} else {{exit 1}}"],
+            capture_output=True, timeout=20)
+        return out.returncode == 0
+    except Exception:
+        return True          # 判不出來就當它還活著，寧可多等一輪
+
+
+def acquire_lock() -> bool:
+    """拿到 GPU 就回 True。持有者已經死掉的話接收這把鎖。"""
+    LOCK.parent.mkdir(parents=True, exist_ok=True)
+    if LOCK.exists():
+        try:
+            old = int(LOCK.read_text(encoding="utf-8").strip().split()[0])
+        except Exception:
+            old = None
+        if old and old != os.getpid() and _pid_alive(old):
+            print(f"⛔ 另一個 MinerU 正在跑（PID {old}），這次跳過 —— GPU 只有 6GB，不能兩個一起擠")
+            return False
+        print(f"  （接收前一個已結束的 lock：PID {old}）")
+    LOCK.write_text(f"{os.getpid()} {time.strftime('%Y-%m-%d %H:%M:%S')}", encoding="utf-8")
+    return True
+
+
+def release_lock() -> None:
+    try:
+        if LOCK.exists() and LOCK.read_text(encoding="utf-8").strip().split()[0] == str(os.getpid()):
+            LOCK.unlink()
+    except Exception:
+        pass
+
+
 ENV_SIGNS = ("getaddrinfo", "URLError", "ConnectionError", "Connection refused",
              "Temporary failure", "timed out", "Max retries", "SSLError",
              "Remote end closed", "Connection aborted")
@@ -285,6 +333,101 @@ def cmd_run(args) -> int:
     return 0
 
 
+def cmd_queue(args) -> int:
+    """吃既有的 OCR 佇列（`parse_error` 含 'no extractable text' 的書）。
+
+    佇列與發布流程完全沿用 `ocr_with_gemini` 那一套 —— 兩條引擎共用同一個佇列
+    定義與同一組寫入函式，才不會出現「兩邊各有一套、久了就對不起來」。
+    """
+    from dotenv import load_dotenv
+    load_dotenv(REPO / ".env")
+    sys.path.insert(0, str(REPO / "scripts"))
+    import ocr_with_gemini as og
+
+    try:
+        targets = og.fetch_ocr_targets()
+    except Exception as e:
+        print(f"⛔ 取佇列失敗：{str(e)[:160]}")
+        return 3 if looks_like_env_failure(str(e)) else 1
+
+    if args.exclude:
+        skip = set(args.exclude)
+        targets = [t for t in targets if t["id"] not in skip]
+    print(f"OCR 佇列 {len(targets)} 本，本輪最多做 {args.limit} 本")
+    if not targets:
+        return 0
+
+    deadline = time.time() + args.max_minutes * 60 if args.max_minutes else None
+    done = fail = 0
+    for t in targets[: args.limit]:
+        if deadline and time.time() > deadline:
+            print(f"  ⏱ 已達 {args.max_minutes} 分鐘上限，其餘留給下一班")
+            break
+        bid, title = t["id"], (t.get("title") or "")[:40]
+        pdf = Path(t.get("file_path") or "")
+        print(f"\n▶ {bid}  {title}", flush=True)
+
+        if not pdf.exists():
+            drive_root = Path(str(pdf.drive) + os.sep) if pdf.drive else None
+            if drive_root is not None and not drive_root.exists():
+                print(f"  ⛔ {pdf.drive} 掛不上 —— Drive 卡住，整場停")
+                return 3
+            print("  跳過：檔案不在")
+            og.update_book_error(bid, "file not found (mineru)")
+            fail += 1
+            continue
+
+        try:
+            with tempfile.TemporaryDirectory(prefix="mineru_") as td:
+                pages = run_mineru(pdf, Path(td), lang=args.lang)
+        except Exception as e:
+            msg = str(e)
+            if looks_like_env_failure(msg):
+                print(f"  ⛔ 環境問題，整場停：{msg[:140]}")
+                return 3
+            print(f"  ✗ 這本失敗：{msg[:140]}")
+            og.update_book_error(bid, f"MinerU: {msg[:200]}")
+            fail += 1
+            continue
+
+        chunks = to_chunks(pages)
+        rep = quality_report(chunks)
+        print(f"  {rep['pages']} 頁　空白 {rep['blank_rate']:.1%}　每頁 {rep['chars_per_page']} 字")
+        if not rep["repetition_ok"]:
+            # 寧可留在佇列等重跑，也不要把幻覺文字寫進館藏。
+            print(f"  🚨 {rep['repetition_msg']} → 不入庫，留在佇列")
+            fail += 1
+            continue
+        if rep["chars_per_page"] < 50:
+            print("  ✗ 每頁不到 50 字，等於沒讀到 → 留在佇列")
+            fail += 1
+            continue
+
+        # 交給既有的發布路徑：JSONL(繁體) → R2 → DB preview → parsed_at
+        pub = [{"page": c["page_number"], "text": og._trad(c["content"])} for c in chunks]
+        try:
+            path = og.write_jsonl(bid, pub)
+            og.push_to_r2(bid, path)
+            non_empty = [c for c in pub if c["text"].strip()]
+            og.insert_chunk_previews(bid, non_empty)
+            og.update_book_done(bid,
+                                total_chars=sum(len(c["text"]) for c in non_empty),
+                                chunk_count=len(non_empty),
+                                total_pages=max(c["page"] for c in non_empty))
+        except Exception as e:
+            msg = str(e)
+            print(f"  ✗ 發布失敗：{msg[:140]}")
+            if looks_like_env_failure(msg):
+                return 3
+            fail += 1
+            continue
+        done += 1
+        print("  ✓ 已入庫")
+
+    print(f"\n本輪完成 {done} 本、失敗 {fail} 本")
+    return 0
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -304,8 +447,24 @@ def main() -> int:
     r.add_argument("--end", type=int, help="結束頁（0-based，含）")
     r.set_defaults(func=cmd_run)
 
+    q = sub.add_parser("queue", help="吃 OCR 佇列（每日排程用）")
+    q.add_argument("--limit", type=int, default=5, help="本輪最多做幾本")
+    q.add_argument("--max-minutes", type=int, default=0,
+                   help="時間上限，到了就把其餘留給下一班（0＝不限）")
+    q.add_argument("--lang", default="ch")
+    q.add_argument("--exclude", nargs="*", default=[], help="要跳過的 ebook id")
+    q.set_defaults(func=cmd_queue)
+
     args = ap.parse_args()
-    return args.func(args)
+    # check 不碰 GPU，不用排隊
+    if args.cmd == "check":
+        return args.func(args)
+    if not acquire_lock():
+        return 4
+    try:
+        return args.func(args)
+    finally:
+        release_lock()
 
 
 if __name__ == "__main__":

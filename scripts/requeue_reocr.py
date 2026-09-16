@@ -172,6 +172,11 @@ def step_ocr(bid: str, engine: str = "gemini") -> str:
         #    Gemini 那一路本來就有這道分辨（見下），MinerU 這路當初漏了。
         if rc == 3:
             return "env"
+        if rc == 4:
+            # GPU 被另一個 MinerU 佔著。什麼都還沒做，更不是這本書的問題 ——
+            # 跟 env 一樣整場停，等對方跑完再來。
+            print("  ⏸ GPU 忙碌中，本輪不搶", flush=True)
+            return "env"
         return "fail"          # rc==1 這本讀不了、rc==2 重複幻覺被擋下
 
     rc = run_cmd([PY, str(SCRIPTS / "ocr_with_gemini.py"), "run",
@@ -366,7 +371,10 @@ if __name__ == "__main__":
     if cmd == "run":
         limit = int(args[args.index("--limit") + 1]) if "--limit" in args else 5
         tier = args[args.index("--tier") + 1] if "--tier" in args else "REOCR"
-        engine = args[args.index("--engine") + 1] if "--engine" in args else "gemini"
+        # 2026-09-16 起預設本機 MinerU（使用者定調改為主力）。實測同一份考卷
+        # 字元正確率 99.64% vs gemini-3.6-flash 98.83%，且快 33 倍、不吃配額。
+        # 要走雲端仍可 --engine gemini。
+        engine = args[args.index("--engine") + 1] if "--engine" in args else "mineru"
         if engine not in ("gemini", "mineru"):
             sys.exit(f"--engine 只接受 gemini 或 mineru，收到 {engine}")
         cmd_run(limit, tier, engine, from_ledger="--from-ledger" in args)
