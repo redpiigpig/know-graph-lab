@@ -58,6 +58,33 @@ N_MCQ, N_FILL, N_TRANSLATE, N_UNSCRAMBLE = 10, 10, 8, 6
 SIMPLIFIED = set("们个这来说时对开关国车东车马鸟鱼员问间学习书写练习汉语课让点电话请问题种钟头饭觉觉给还没现认识爱乐种类样长间门问闻业务农产会记录师从众丽万与专业东乡习乡")
 
 
+# 這些文法標記在大綱裡有明確的登場課次，早於那一課就是超綱。
+# L31（虛主詞 it 說天氣）出過「It ______ rainy yesterday.」答案 was——過去式是
+# 第 49、50 課才教的。大綱訂了進程，題目卻會偷用後面的東西。
+FUTURE_MARKERS = {
+    "was": 50, "were": 50,
+    "can": 41, "can't": 41, "cannot": 41,
+}
+
+
+# 現在正在做第幾課。各個 validate_* 是照既有形狀寫的（只吃資料、不吃課號），
+# 逐課又是序列跑的（並行是分五個行程不是執行緒），所以用模組層變數最省事。
+CURRENT_LESSON = 0
+
+
+def validate_syllabus_order(no: int, obj) -> list[str]:
+    """擋掉「這一課在考後面才教的文法」。"""
+    text = json.dumps(obj, ensure_ascii=False).lower()
+    bad = []
+    for marker, first in FUTURE_MARKERS.items():
+        if no >= first:
+            continue
+        if re.search(rf"[^a-z']{re.escape(marker)}[^a-z]", text):
+            bad.append(f"用到「{marker}」，那是第 {first} 課才教的，本課不可以出現")
+    return sorted(set(bad))
+
+
+
 def load_lessons() -> list[dict]:
     """每課 = 20 個字 + 大綱指定的那一個文法點。
 
@@ -100,13 +127,22 @@ _BODY_HEAD = """你是台灣國小英語教材的資深編寫者。請替一本�
 🚨 **文法只准教上面那一個點**。前面 {no_1} 課已經教過下列這些，本課一律不可以
 再拿來當重點或當考點（單純用到不算）：
 {taught}
-
+{ahead}
 共同要求：
 1. 全部中文一律「繁體中文」，而且要**台灣用語**。寫早安／午安／晚安不寫早上好／
    下午好／晚上好；馬鈴薯不寫土豆（台灣的土豆是花生）；橡皮擦不寫橡皮；尺不寫尺子。
 2. 讀者是台灣國小中高年級學生，句子要短、具體、生活化。**絕對不要加 KK 音標或任何音標**。
 3. 只輸出 JSON，不要任何說明文字，不要包在程式碼區塊裡。
 """
+
+
+def _ahead_note(no: int) -> str:
+    """後面才教的東西，這一課連用都不可以用。"""
+    later = sorted({f"{m}（第 {n} 課）" for m, n in FUTURE_MARKERS.items() if no < n})
+    if not later:
+        return ""
+    return ("\n🚨 下面這幾個是**後面的課**才教的，本課的課文、例句、對話與題目"
+            "都不可以出現：\n" + "、".join(later) + "\n")
 
 
 def _body_head(lesson: dict) -> str:
@@ -118,6 +154,7 @@ def _body_head(lesson: dict) -> str:
         patterns=" ／ ".join(lesson["patterns"]),
         taught="（這是第一課，沒有前課）" if not taught
                else "、".join(taught),
+        ahead=_ahead_note(lesson["no"]),
         words="\n".join(f"- {w['en']}　{w['zh']}" for w in lesson["words"]))
 
 
@@ -435,7 +472,7 @@ def _common_errs(obj) -> list[str]:
     bad = check_simplified(obj)
     if bad:
         errs.append("簡體字：" + "".join(bad))
-    return errs + check_usage(obj)
+    return errs + check_usage(obj) + validate_syllabus_order(CURRENT_LESSON, obj)
 
 
 def validate_grammar(body: dict) -> list[str]:
@@ -490,7 +527,7 @@ def validate_exercises(ex: dict, keys: dict[str, int] | None = None) -> list[str
     bad = check_simplified(ex)
     if bad:
         errs.append("簡體字：" + "".join(bad))
-    return errs + check_usage(ex)
+    return errs + check_usage(ex) + validate_syllabus_order(CURRENT_LESSON, ex)
 
 
 HAS_ZH = re.compile(r"[一-鿿]")
@@ -747,6 +784,8 @@ def build_lesson(lesson: dict, rounds: int = 2) -> tuple[dict | None, list[str]]
 
 
 def _build_once(lesson: dict) -> tuple[dict | None, list[str]]:
+    global CURRENT_LESSON
+    CURRENT_LESSON = lesson["no"]
     intro, errs = ask(prompt_intro(lesson), validate_intro, stage="課文")
     if intro is None:
         return None, ["課名與課文：" + "；".join(errs)]

@@ -290,6 +290,35 @@ def test_lessons_carry_their_own_grammar(gen):
     assert lessons[2]["taught"] == [lessons[0]["focus"], lessons[1]["focus"]]
 
 
+# ---------------------------------------------------------------- 不可以偷用後面的文法
+
+def test_future_grammar_is_rejected(gen):
+    """L31（虛主詞 it 說天氣）出過「It ______ rainy yesterday.」答案 was，
+    但過去式是第 49、50 課才教的。大綱訂了進程，題目卻會偷用後面的東西。"""
+    item = {"q": "It ______ rainy yesterday. (昨天下雨)", "ans": "was"}
+    assert any("第 50 課才教" in e for e in gen.validate_syllabus_order(31, item))
+    assert gen.validate_syllabus_order(50, item) == []
+
+
+def test_can_before_its_lesson_is_rejected(gen):
+    assert any("第 41 課才教" in e for e in
+               gen.validate_syllabus_order(20, {"q": "I can jump."}))
+    assert gen.validate_syllabus_order(41, {"q": "I can jump."}) == []
+
+
+def test_marker_check_does_not_match_inside_words(gen):
+    """candy／cannonball 裡面有 can，不可以誤判。"""
+    assert gen.validate_syllabus_order(20, {"q": "I like candy and cannonball."}) == []
+
+
+def test_prompt_lists_the_forbidden_markers(gen):
+    lessons = gen.load_lessons()
+    text = gen.prompt_intro(lessons[30])          # 第 31 課
+    assert "was（第 50 課）" in text
+    assert "後面的課" in text
+    assert gen._ahead_note(50) == "", "最後一課沒有『後面的課』"
+
+
 # ---------------------------------------------------------------- 單字重排
 
 def test_reorder_keeps_every_word_and_theme(vocab):
