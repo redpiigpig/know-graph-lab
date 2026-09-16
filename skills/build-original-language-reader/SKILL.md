@@ -125,6 +125,18 @@ Two failures recur across languages and are worth carrying into any new reader:
      item line carries Chinese, and that nothing is printed twice. `ja` is a
      fourth language there; it skips the Chinese-character test, because
      Japanese is written in kanji, and relies on the exact line match instead.
+   - **Then read the pages back a second way.**
+     `scripts/audit_reader_pages.py` opens all fourteen books and checks what the
+     render checks cannot see: lessons present and in order, ten items each, text
+     inside the type area (mirrored — the bound edge swaps sides every turn),
+     placeholders still unfilled, Simplified Chinese, and whether every book names
+     its sections in the same words. It found, on 2026-09-16, fifty-two Chinese
+     strings that had come back from a model's fallback layer in Simplified and
+     been stored and printed as given — whole paragraphs of it in the Greek books.
+     `scripts/fix_reader_simplified_zh.py --write` repairs that class.
+     🚨 Detect Simplified **by character**, never by round-tripping OpenCC: that
+     calls 祢 Simplified. And Japanese shinjitai (国・学・会・点) are not
+     Simplified Chinese — counting them reports four hundred clean pages as dirty.
    - **Then move the books to Drive.** `output/` is scratch, not the products'
      home. Re-render changes the page count, the page count changes the spine
      width, and a book left in `output/` is a book the owner cannot open:
