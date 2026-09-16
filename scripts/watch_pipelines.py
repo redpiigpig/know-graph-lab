@@ -305,7 +305,6 @@ def section_downloads(tasks: dict) -> None:
     # z-lib：帳本＋ drop 夾
     if ZLIB_LEDGER.exists():
         recs = [json.loads(l) for l in ZLIB_LEDGER.read_text(encoding="utf-8").splitlines() if l.strip()]
-        wanted_n = sum(1 for _ in ZLIB_WANTED.open(encoding="utf-8")) if ZLIB_WANTED.exists() else 0
         c = collections.Counter(r.get("status", "?") for r in recs)
         last = recs[-1]["at"][:10] if recs else "—"
         n_today = sum(1 for r in recs if r["at"][:10] == today)
@@ -314,8 +313,24 @@ def section_downloads(tasks: dict) -> None:
         # 算進去會讓一輪 --dry-run 看起來像推進了獵表。
         uniq = len({r["key"] for r in recs if r.get("status") != "dry"})
         n_dry = sum(1 for r in recs if r.get("status") == "dry")
-        print(f"  z-lib：獵表 {wanted_n} 筆，已處理 {uniq} 筆／{len(recs)} 次嘗試"
-              f"（{uniq / wanted_n * 100:.1f}%；另有 {n_dry} 次只查不算數）"
+        # 🚨 分母不能用 zlib_wanted_all.jsonl 的行數。那個檔是 zlib_wanted.py 產的
+        #    **剩餘待辦**——它生成時就把帳本已處理的 key 扣掉了（為了讓配額對「還沒
+        #    抓的」生效）。拿它當分母，分子上升時分母同時下降，百分比會雙重虛報：
+        #    2026-09-16 實測印 1,618/5,442 = 29.7%，真值是 1,618/6,553 = 24.7%。
+        #    全表 = 剩餘 ∪ 已處理。
+        todo_keys = set()
+        if ZLIB_WANTED.exists():
+            for l in ZLIB_WANTED.read_text(encoding="utf-8").splitlines():
+                if l.strip():
+                    k = json.loads(l).get("key")
+                    if k:
+                        todo_keys.add(k)
+        done_keys = {r["key"] for r in recs if r.get("status") != "dry" and "key" in r}
+        total_n = len(todo_keys | done_keys)
+        pct = f"{uniq / total_n * 100:.1f}%" if total_n else "—"
+        print(f"  z-lib：獵表全表 {total_n} 筆（剩 {len(todo_keys - done_keys)}），"
+              f"已處理 {uniq} 筆／{len(recs)} 次嘗試"
+              f"（{pct}；另有 {n_dry} 次只查不算數）"
               f"；今天 {n_today} 次，最後動作 {last}")
         print(f"    {dict(c)}")
         if n_today == 0:
@@ -365,8 +380,18 @@ def section_ocr(tasks: dict) -> None:
         age = dt.datetime.now() - dt.datetime.fromtimestamp(newest.stat().st_mtime)
         print(f"  最新 OCR 日誌 {newest.name}（{age.days} 天 {age.seconds // 3600} 小時前）："
               f"成功 {ok}、失敗 {bad}、額度 {quota}、斷網 {net}")
-        if bad > ok:
-            warn(f"{newest.name} 失敗數（{bad}）多於成功數（{ok}）")
+        # 🚨 額度用完是**每天都會發生的正常結尾**，不是故障：Gemini 免費層一天就那麼點
+        #    （見 reference_gemini_free_tier_quotas），跑到撞牆才停本來就是設計。
+        #    無條件比「失敗>成功」就成了每天喊一次的狼來了，反而蓋掉真的警訊
+        #    （這支腳本在 z-lib 那一段已經為同樣的理由收斂過一次）。
+        #    所以扣掉額度那批再比；額度單獨報成「今天到頂」，不掛 🚨。
+        real_bad = bad - quota
+        if real_bad > ok:
+            warn(f"{newest.name} 非額度類失敗（{real_bad}）多於成功數（{ok}）"
+                 f"——這批不是撞額度，要看日誌")
+        elif quota and ok == 0:
+            print(f"    ⓘ {newest.name}：今天 Gemini 額度到頂（{quota} 次），"
+                  f"本地 MinerU 那條仍會接手，明天配額重置")
         if net:
             warn(f"{newest.name} 有 {net} 次連不上 Supabase／Gemini——那批 parse_error 沒被記錄，會重跑")
     for n in ("KGLab-OCR-Daily-10", "KGLab-OCR-Daily-14", "KGLab-OCR-Daily-18"):
