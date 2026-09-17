@@ -1,0 +1,940 @@
+{
+  "meta": {
+    "title": "諾斯底文庫（/gnostic 287 種）・譜系歸屬",
+    "scope": "gnostic_documents 全部 287 種。多數同類同源者以 category 規則處理；與 apocrypha 重複者指回該檔；非古代文本者明列排除。",
+    "siblings": [
+      "data/christian-genealogy/apocryphal-gospels.json（典外福音 30）",
+      "data/christian-genealogy/nt-apocrypha.json（典外非福音 36）"
+    ],
+    "data_quality_warning": "🚨 /gnostic 收的並非全是古代文本。valentinus（7）、mead（15）、modern（20）三類共 42 種是 gnosis.org 的現代介紹文與網頁導覽（實測第一節內容為「| Valentinus Index | Gnostic Society Library |」這類麵包屑），不可當史料掛軌跡。另有若干古代文本的首節是譯者說明或 Archive Notes，屬版面附件不是正文。",
+    "codes": "data/christian-genealogy/traditions.json",
+    "bibliography": "data/christian-genealogy/bibliography.json"
+  },
+  "category_rules": {
+    "manichaean": {
+      "n": 75,
+      "actual": [
+        "G4"
+      ],
+      "date": [
+        250,
+        900
+      ],
+      "note": "科普特詩篇集、根本書簡、中亞各語殘卷與寓言。⚠️ 其中 6066–6074 共 9 種是奧古斯丁的駁摩尼教著作，屬敵證不屬本教文獻，另標 evidence。",
+      "exceptions": {
+        "de-moribus-ecclesiae-catholicae": "evidence",
+        "de-moribus-manichaerorum": "evidence",
+        "de-duabus-animabus-contra-manichaeos": "evidence",
+        "disputatio-contra-fortunatum-manichaeum": "evidence",
+        "contra-epistolam-fundamenti-manichaei": "evidence",
+        "contra-faustum-manichaeum-books-i-xv": "evidence",
+        "contra-faustum-manichaeum-books-xvi-xxii": "evidence",
+        "contra-faustum-manichaeum-books-xxiii-xxxiii": "evidence",
+        "de-natura-boni-contra-manichaeos": "evidence"
+      }
+    },
+    "hermetica": {
+      "n": 28,
+      "actual": [
+        "G3"
+      ],
+      "date": [
+        100,
+        300
+      ],
+      "note": "《牧人者》以下赫密士文集全套。非基督宗教的平行系統——與基督教諾斯底共享語彙與宇宙論形態，但不以耶穌為中心，故獨立成節點而不併入 G1／G2。"
+    },
+    "mandaean": {
+      "n": 12,
+      "actual": [
+        "β4"
+      ],
+      "date": [
+        200,
+        700
+      ],
+      "note": "🚨 曼底安教正典。其中〈諾斯底的施洗約翰〉是曼底安《約翰書》選集——β 施洗約翰群體在正典之外的最終形態，也是本表第一層六群裡唯一發展成獨立宗教的一支。"
+    },
+    "cathar": {
+      "n": 11,
+      "actual": [
+        "G4"
+      ],
+      "date": [
+        1100,
+        1300
+      ],
+      "beyond_scope": true,
+      "note": "⚠️ 中世紀，遠逾 325。列為 G4 摩尼教的遠親而非獨立節點；〈約翰審問錄〉〈二原則書〉為其自產文獻，其餘數種（雷納爾都、伯納‧居伊）是宗教裁判所的敵證。"
+    },
+    "polemics": {
+      "n": 49,
+      "actual": [],
+      "evidence": "hostile",
+      "date": [
+        180,
+        250
+      ],
+      "note": "🚨 愛任紐《駁斥諸異端》、希坡律陀、特土良《駁瓦倫廷派》等。這些不是節點而是證據來源——本表所以能重建 G1／G2，靠的正是它們；同時它們的敵意框架也是必須扣除的偏差。"
+    },
+    "valentinus": {
+      "n": 7,
+      "excluded": true,
+      "reason": "gnosis.org 的現代介紹文與網頁導覽，非古代文本"
+    },
+    "mead": {
+      "n": 15,
+      "excluded": true,
+      "reason": "G.R.S. Mead（1863–1933）的近代神智學著作與譯介，非古代文本"
+    },
+    "modern": {
+      "n": 20,
+      "excluded": true,
+      "reason": "現代研究與網站說明，非古代文本"
+    }
+  },
+  "documents": {
+    "hypostasis-of-the-archons": {
+      "title": "執政者的本質",
+      "date": [
+        200,
+        300
+      ],
+      "place": "埃及",
+      "place_kind": "findspot",
+      "actual": [
+        "G1"
+      ],
+      "support": [
+        "Layton 2021",
+        "Williams 1996"
+      ],
+      "own_judgment": false,
+      "rationale": "拿戈瑪第第二冊。以創世記一至六章為底本重寫，把造物主寫成無知的執政者。🚨 塞特派解經的基本手法在此最清楚：不是另造神話，而是把猶太經典逐句翻轉——所以它必須先熟讀創世記才寫得出來。"
+    },
+    "on-the-origin-of-the-world": {
+      "title": "論世界起源",
+      "date": [
+        200,
+        300
+      ],
+      "place": "埃及",
+      "place_kind": "findspot",
+      "actual": [
+        "G1"
+      ],
+      "support": [
+        "Layton 2021"
+      ],
+      "own_judgment": false,
+      "rationale": "拿戈瑪第第二冊，與前書相鄰且主題相承，是塞特派宇宙論最系統的一篇。"
+    },
+    "apocalypse-of-adam": {
+      "title": "亞當啟示錄",
+      "date": [
+        100,
+        300
+      ],
+      "place": "埃及或敘利亞",
+      "place_kind": "composition",
+      "actual": [
+        "G1"
+      ],
+      "support": [
+        "Layton 2021"
+      ],
+      "own_judgment": true,
+      "rationale": "🚨 全篇沒有一處基督教成分——亞當向塞特傳授啟示，救主名為「發光者」。常被舉為「諾斯底可能先於或獨立於基督教」的主要證據。本表據此不把 G1 當成基督教的支派，而當成獨立分流。"
+    },
+    "three-steles-of-seth": {
+      "title": "塞特三石碑",
+      "date": [
+        200,
+        300
+      ],
+      "place": "埃及",
+      "place_kind": "findspot",
+      "actual": [
+        "G1"
+      ],
+      "support": [
+        "Layton 2021"
+      ],
+      "own_judgment": false,
+      "rationale": "三段上行的禮拜頌辭，無敘事。與新柏拉圖主義的上升階序高度接近——波菲利《普羅提諾傳》16 提到普羅提諾曾駁斥帶著《佐斯特里安諾斯》等書的諾斯底人，正是這一圈。"
+    },
+    "thought-of-norea": {
+      "title": "諾蕾亞的思想",
+      "date": [
+        200,
+        300
+      ],
+      "place": "埃及",
+      "place_kind": "findspot",
+      "actual": [
+        "G1"
+      ],
+      "support": [
+        "Layton 2021"
+      ],
+      "own_judgment": false,
+      "rationale": "極短。諾蕾亞是塞特派神話中挪亞的姊妹或妻子，是拒絕執政者的女性形象——與 μ 那種「以婦女為見證者」的取向形態相近而來源無關，不可混。"
+    },
+    "paraphrase-of-shem": {
+      "title": "謝姆釋義",
+      "date": [
+        200,
+        300
+      ],
+      "place": "埃及",
+      "place_kind": "findspot",
+      "actual": [
+        "G1"
+      ],
+      "support": [
+        "Layton 2021"
+      ],
+      "own_judgment": false,
+      "rationale": "拿戈瑪第第七冊。以挪亞之子閃為啟示受領者，基督教成分極薄。"
+    },
+    "exegesis-on-the-soul": {
+      "title": "靈魂釋義",
+      "date": [
+        200,
+        300
+      ],
+      "place": "埃及",
+      "place_kind": "findspot",
+      "actual": [
+        "G1"
+      ],
+      "support": [
+        "Layton 2021"
+      ],
+      "own_judgment": false,
+      "rationale": "靈魂墮落與回歸的寓意故事，引荷馬與舊約並列為證。"
+    },
+    "second-treatise-of-the-great-seth": {
+      "title": "大塞特第二論文",
+      "date": [
+        200,
+        300
+      ],
+      "place": "埃及",
+      "place_kind": "findspot",
+      "actual": [
+        "G1"
+      ],
+      "support": [
+        "Layton 2021"
+      ],
+      "own_judgment": false,
+      "rationale": "🚨 幻影派最直白的段落之一：被釘的是古利奈人西門，「我在高處嘲笑他們的無知」。與科普特《彼得啟示錄》的笑聲主題同型。"
+    },
+    "eugnostos-the-blessed": {
+      "title": "福樂者歐格諾斯圖",
+      "date": [
+        100,
+        200
+      ],
+      "place": "埃及",
+      "place_kind": "composition",
+      "actual": [
+        "G1"
+      ],
+      "support": [
+        "Layton 2021"
+      ],
+      "own_judgment": false,
+      "rationale": "🚨 非基督教的哲學書信。它被改寫成《耶穌基督智慧書》——兩書並存於同一文庫，改寫前後可逐段對讀，是全部古代文獻裡極罕見的「基督教化加工過程」實證。"
+    },
+    "book-of-thomas-the-contender": {
+      "title": "多馬爭辯者之書",
+      "date": [
+        200,
+        250
+      ],
+      "place": "敘利亞",
+      "place_kind": "composition",
+      "actual": [
+        "T1"
+      ],
+      "support": [
+        "DeConick 2005",
+        "Layton 2021"
+      ],
+      "own_judgment": false,
+      "rationale": "復活主與「爭辯者猶大多馬」的對話。與《多馬福音》《多馬行傳》同屬敘利亞的多馬傳統，掛 T1。"
+    },
+    "tripartite-tractate": {
+      "title": "三部論文",
+      "date": [
+        200,
+        300
+      ],
+      "place": "埃及",
+      "place_kind": "findspot",
+      "actual": [
+        "G2"
+      ],
+      "support": [
+        "Layton 2021"
+      ],
+      "own_judgment": false,
+      "rationale": "瓦倫廷派最長且最系統的神學論著，接近一部完整的教義大全。"
+    },
+    "treatise-on-the-resurrection": {
+      "title": "復活論（致雷吉努斯書）",
+      "date": [
+        150,
+        200
+      ],
+      "place": "埃及",
+      "place_kind": "findspot",
+      "actual": [
+        "G2"
+      ],
+      "support": [
+        "Layton 2021"
+      ],
+      "own_judgment": false,
+      "rationale": "寫給名叫雷吉努斯的學生的教牧書信，主張復活是已經發生的屬靈事件。與提後 2:18 所斥「說復活的事已過」的立場相合——書信作者所駁的那種人，在此有了自己的文獻。"
+    },
+    "a-valentinian-exposition": {
+      "title": "瓦倫廷派的闡釋",
+      "date": [
+        200,
+        300
+      ],
+      "place": "埃及",
+      "place_kind": "findspot",
+      "actual": [
+        "G2"
+      ],
+      "support": [
+        "Layton 2021"
+      ],
+      "own_judgment": false,
+      "rationale": "含洗禮與聖餐禮文附錄——顯示瓦倫廷派不是純思辨團體，有自己的聖禮實踐。"
+    },
+    "apocryphon-of-james": {
+      "title": "雅各藏經",
+      "date": [
+        150,
+        250
+      ],
+      "place": "埃及",
+      "place_kind": "findspot",
+      "actual": [
+        "G2"
+      ],
+      "attributed": [
+        "J1"
+      ],
+      "support": [
+        "Layton 2021"
+      ],
+      "own_judgment": false,
+      "rationale": "託名雅各寫給不具名收信人的祕傳書信。與《雅各啟示錄》壹貳同屬「借雅各之名的諾斯底文獻」那一組。"
+    },
+    "testimony-of-truth": {
+      "title": "真理的見證",
+      "date": [
+        200,
+        300
+      ],
+      "place": "埃及",
+      "place_kind": "findspot",
+      "actual": [
+        "G1"
+      ],
+      "support": [
+        "Layton 2021"
+      ],
+      "own_judgment": false,
+      "rationale": "🚨 罕見的諾斯底內部論戰文獻：同時攻擊大公教會與其他諾斯底派（點名瓦倫廷派與巴西里底派）。證明「諾斯底」從來不是一個陣營——本表把 G1 與 G2 分立而不合為一，這是主要依據之一。"
+    },
+    "teachings-of-silvanus": {
+      "title": "西爾瓦努斯教誨",
+      "date": [
+        200,
+        300
+      ],
+      "place": "埃及（亞歷山大）",
+      "place_kind": "composition",
+      "actual": [
+        "B2"
+      ],
+      "support": [
+        "Litwa 2023"
+      ],
+      "own_judgment": true,
+      "rationale": "🚨 拿戈瑪第文庫中的異數：內容是正統的亞歷山大式基督教智慧文學，沒有諾斯底宇宙論。掛 B2 而非 G——文庫收的東西不必然屬於文庫的神學。這一條提醒：出土地不決定歸屬。"
+    },
+    "prayer-of-the-apostle-paul": {
+      "title": "使徒保羅禱文",
+      "date": [
+        150,
+        300
+      ],
+      "place": "埃及",
+      "place_kind": "findspot",
+      "actual": [
+        "G2"
+      ],
+      "attributed": [
+        "U1"
+      ],
+      "support": [
+        "Layton 2021"
+      ],
+      "own_judgment": false,
+      "rationale": "抄在拿戈瑪第第一冊封面內頁的短禱文，瓦倫廷派色彩。"
+    },
+    "basilides-fragments-from-his-writings": {
+      "title": "巴西理德著作殘卷",
+      "date": [
+        120,
+        145
+      ],
+      "place": "亞歷山大",
+      "place_kind": "composition",
+      "actual": [
+        "G1"
+      ],
+      "evidence": "fragment",
+      "support": [
+        "Litwa 2023"
+      ],
+      "own_judgment": true,
+      "rationale": "🚨 巴西里底確曾寫《福音書》與《釋義》二十四卷，但全佚；現存僅革利免《雜記》與希坡律陀所引殘篇。依本表「立節點須有存世自產文獻」的規則，他不立節點，殘篇歸入亞歷山大的諾斯底教師圈。"
+    },
+    "ptolemy-letter-to-flora": {
+      "title": "托勒密致芙蘿拉書",
+      "date": [
+        150,
+        180
+      ],
+      "place": "羅馬",
+      "place_kind": "composition",
+      "actual": [
+        "G2"
+      ],
+      "support": [
+        "Layton 2021",
+        "Williams 1996"
+      ],
+      "own_judgment": false,
+      "rationale": "🚨 瓦倫廷派唯一完整存世的教理書信，寫給一位女性信徒。把摩西律法分成三層（神的、摩西的、長老的），論證方式極為節制冷靜——與敵證所描繪的「荒誕神話」形象反差極大，是重估諾斯底的關鍵文本。"
+    },
+    "ptolemy-commentary-on-the-gospel-of-john-prologue": {
+      "title": "托勒密：約翰福音序言評註",
+      "date": [
+        150,
+        180
+      ],
+      "place": "羅馬",
+      "place_kind": "composition",
+      "actual": [
+        "G2"
+      ],
+      "evidence": "fragment",
+      "support": [
+        "Layton 2021"
+      ],
+      "own_judgment": false,
+      "rationale": "存於愛任紐《反異端》1.8.5。🚨 現存最早的約翰福音註釋——第一個逐句註解約翰福音的人是瓦倫廷派，不是大公教會。"
+    },
+    "heracleon-fragments-from-his-commentary-on-the-gospel-of-john": {
+      "title": "赫拉克勒翁：約翰福音評註殘篇",
+      "date": [
+        170,
+        200
+      ],
+      "place": "亞歷山大或羅馬",
+      "place_kind": "composition",
+      "actual": [
+        "G2"
+      ],
+      "evidence": "fragment",
+      "support": [
+        "Layton 2021"
+      ],
+      "own_judgment": false,
+      "rationale": "🚨 現存最早的成部聖經註釋，四十八條殘篇全由俄利根《約翰福音註釋》引述保存——俄利根為了駁他而逐條抄錄，反而替他保住了書。註釋這個文體是從對手那邊學來的。"
+    },
+    "theodotus-the-excerpta-ex-theodoto": {
+      "title": "狄奧多托語錄（Excerpta ex Theodoto）",
+      "date": [
+        150,
+        200
+      ],
+      "place": "亞歷山大",
+      "place_kind": "composition",
+      "actual": [
+        "G2"
+      ],
+      "evidence": "fragment",
+      "support": [
+        "Layton 2021"
+      ],
+      "own_judgment": false,
+      "rationale": "由亞歷山卓的革利免抄錄並夾註。🚨 抄錄者與被抄錄者的文字混在同一份文獻裡，難以完全分離——敵證與原文同體的極端例子。"
+    },
+    "epiphanes-on-righteousness": {
+      "title": "埃皮法內斯論正義",
+      "date": [
+        150,
+        180
+      ],
+      "place": "亞歷山大",
+      "place_kind": "composition",
+      "actual": [
+        "G1"
+      ],
+      "evidence": "fragment",
+      "support": [
+        "Litwa 2023"
+      ],
+      "own_judgment": true,
+      "rationale": "存於革利免《雜記》3。卡波克拉底之子所作，主張神的正義即共有與平等，據此反對私產與婚姻制度。⚠️ 革利免的引述帶強烈敵意，內容可能被扭曲。"
+    },
+    "translation-of-the-naassene-psalm": {
+      "title": "拿俄賽尼派讚美詩",
+      "date": [
+        150,
+        220
+      ],
+      "place": "不詳",
+      "place_kind": "composition",
+      "actual": [
+        "G1"
+      ],
+      "evidence": "fragment",
+      "support": [],
+      "own_judgment": true,
+      "rationale": "存於希坡律陀《駁斥諸異端》5。拿俄賽尼（Naassene，源自希伯來文「蛇」）派的禮拜詩歌——少數存世的諾斯底禮拜用文。"
+    },
+    "ophite-diagrams": {
+      "title": "蛇形圖表",
+      "date": [
+        150,
+        250
+      ],
+      "place": "不詳",
+      "place_kind": "composition",
+      "actual": [
+        "G1"
+      ],
+      "evidence": "hostile",
+      "support": [
+        "Layton 2021"
+      ],
+      "own_judgment": false,
+      "rationale": "🚨 全由塞爾蘇斯的描述與俄利根《駁塞爾蘇斯》6 的反駁重建——一份圖像文獻，靠兩個敵人的互相駁斥才留下形狀。"
+    },
+    "hymn-of-the-pearl": {
+      "title": "珍珠頌歌",
+      "date": [
+        200,
+        250
+      ],
+      "place": "敘利亞（埃德薩）",
+      "place_kind": "composition",
+      "actual": [
+        "T2"
+      ],
+      "support": [
+        "Brock 1992",
+        "Griffith 2010"
+      ],
+      "own_judgment": false,
+      "rationale": "嵌在《多馬行傳》裡的敘利亞詩。王子下埃及取珍珠、忘了身分、讀家書後醒悟返鄉——T 通往 G4 的那條線就在這首詩上，摩尼教團後來傳唱它。"
+    },
+    "hymn-of-jesus-and-the-mystery-of-the-cross": {
+      "title": "耶穌讚歌與十字架之謎",
+      "date": [
+        150,
+        250
+      ],
+      "place": "小亞細亞（以弗所）",
+      "place_kind": "composition",
+      "actual": [
+        "O"
+      ],
+      "docetic": true,
+      "support": [
+        "Layton 2021"
+      ],
+      "own_judgment": true,
+      "rationale": "《約翰行傳》94–102。門徒繞圈起舞、耶穌居中領唱，同時「另一個他」在橄欖山對約翰顯現。掛 O 而不掛 G——亞細亞在地的幻影論，不是塞特派或瓦倫廷派體系。"
+    },
+    "odes-of-solomon": {
+      "title": "所羅門頌詩",
+      "date": [
+        100,
+        150
+      ],
+      "place": "敘利亞",
+      "place_kind": "composition",
+      "actual": [
+        "T2"
+      ],
+      "support": [
+        "Brock 1992"
+      ],
+      "own_judgment": true,
+      "rationale": "🚨 四十二首敘利亞語頌詩，可能是現存最早的基督教詩歌集。歸屬長年爭議：猶太基督徒、諾斯底、正統敘利亞教會三說並存。本表掛 T2（敘利亞傳統）而不掛 G，理由是它沒有諾斯底宇宙論，只有濃厚的洗禮與重生意象。⚠️ 本表判斷，爭議未決。"
+    },
+    "greek-gospel-of-thomas-texts-papyrus-oxyrhynchus": {
+      "title": "希臘文多馬福音：俄西林古蒲草紙",
+      "date": [
+        100,
+        200
+      ],
+      "place": "不詳",
+      "place_kind": "findspot",
+      "actual": [
+        "T1",
+        "κ"
+      ],
+      "support": [
+        "DeConick 2005",
+        "Koester 1990"
+      ],
+      "own_judgment": false,
+      "rationale": "🚨 P.Oxy. 1、654、655 三片。它們證明《多馬福音》的希臘文本在二世紀已流通於埃及，且與科普特本有異文——科普特本不是唯一形態，語錄集在流傳中持續變動。"
+    },
+    "marcion-the-gospel-of-the-lord-and-other-writings": {
+      "title": "馬吉安：主福音及其他著作",
+      "date": [
+        140,
+        160
+      ],
+      "place": "羅馬",
+      "place_kind": "composition",
+      "actual": [],
+      "evidence": "hostile",
+      "support": [
+        "Lieu 2015"
+      ],
+      "own_judgment": false,
+      "rationale": "🚨 現存內容全由特土良《駁馬吉安》與以比法尼烏的引述回推重建，無一字原件。依本表「立節點須有存世自產文獻」的規則，馬吉安不立節點——這與大藏經收錄他的作法不同，兩套標準都說得通，本表取前者（使用者 2026-09-17 裁示）。"
+    },
+    "gospel-of-the-lord-by-marcion": {
+      "title": "馬吉安的主福音",
+      "date": [
+        140,
+        160
+      ],
+      "place": "羅馬",
+      "place_kind": "composition",
+      "actual": [],
+      "evidence": "hostile",
+      "support": [
+        "Lieu 2015"
+      ],
+      "own_judgment": false,
+      "rationale": "同前條的另一份重建本。刪節過的路加福音，去掉一切猶太經典的痕跡。 actual 留空：同馬吉安條，無存世自產文獻故不立節點。"
+    },
+    "shepherd-of-hermas": {
+      "title": "赫馬牧人書",
+      "date": [
+        100,
+        160
+      ],
+      "place": "羅馬",
+      "place_kind": "composition",
+      "actual": [
+        "J4"
+      ],
+      "support": [
+        "Ehrman & Pleše 2011"
+      ],
+      "own_judgment": false,
+      "rationale": "羅馬的猶太基督徒教理與悔改規範。🚨 穆拉託利殘篇說它「可以讀但不可列在先知或使徒之列」，西乃抄本卻把它抄在新約之後——正典邊界在同一世紀的兩份證據裡就不一致。與大藏經經藏正藏的「黑馬牧人書」同書。"
+    },
+    "gospel-of-pseudo-matthew": {
+      "title": "偽馬太福音",
+      "date": [
+        600,
+        700
+      ],
+      "place": "拉丁西方",
+      "place_kind": "composition",
+      "actual": [
+        "J2"
+      ],
+      "beyond_scope": true,
+      "support": [],
+      "own_judgment": false,
+      "rationale": "⚠️ 年代遠逾 325。《雅各原始福音》與《多馬嬰孩福音》的拉丁改編，中世紀西方馬利亞敬禮的主要文本來源。"
+    },
+    "teaching-of-addaeus-the-apostle": {
+      "title": "使徒阿達伊的教導",
+      "date": [
+        300,
+        400
+      ],
+      "place": "埃德薩",
+      "place_kind": "composition",
+      "actual": [
+        "T2"
+      ],
+      "beyond_scope": true,
+      "support": [
+        "Griffith 2010"
+      ],
+      "own_judgment": false,
+      "rationale": "⚠️ 年代逾 325。亞伯加傳說的敘利亞文完整版，埃德薩教會的創始敘事。"
+    },
+    "acts-of-barnabas": {
+      "title": "巴拿巴行傳",
+      "date": [
+        400,
+        500
+      ],
+      "place": "居比路",
+      "place_kind": "composition",
+      "actual": [
+        "B1"
+      ],
+      "beyond_scope": true,
+      "support": [],
+      "own_judgment": false,
+      "rationale": "⚠️ 年代逾 325。托名馬可所作，記巴拿巴在居比路殉道——居比路教會據此向皇帝主張自主權（其自主地位於 488 年確立）。🚨 譜系敘事的政治用途在此完全外顯：一部行傳換來一間教會的獨立。"
+    },
+    "acts-of-peter-and-paul": {
+      "title": "彼得與保羅行傳",
+      "date": [
+        400,
+        600
+      ],
+      "place": "羅馬",
+      "place_kind": "composition",
+      "actual": [
+        "P2",
+        "U1"
+      ],
+      "beyond_scope": true,
+      "support": [],
+      "own_judgment": false,
+      "rationale": "⚠️ 年代逾 325。把兩位使徒寫成並肩在羅馬殉道——《革利免一書》5 章的雙重見證在此發展成完整敘事，也是羅馬教座「雙使徒創始」說法的文學形態。"
+    },
+    "revelation-of-stephen": {
+      "title": "司提反啟示錄",
+      "date": [
+        400,
+        500
+      ],
+      "place": "巴勒斯坦",
+      "place_kind": "composition",
+      "actual": [
+        "F1"
+      ],
+      "beyond_scope": true,
+      "support": [],
+      "own_judgment": false,
+      "rationale": "⚠️ 年代逾 325。記 415 年司提反遺骸被發現一事——F 軌跡的首位人物在四百年後以聖髑的形式回到敘事中。"
+    },
+    "acts-of-andrew-and-matthew": {
+      "title": "安得烈與馬太行傳",
+      "date": [
+        400,
+        600
+      ],
+      "place": "埃及",
+      "place_kind": "composition",
+      "actual": [],
+      "beyond_scope": true,
+      "support": [],
+      "own_judgment": false,
+      "rationale": "⚠️ 年代逾 325。食人族之地的冒險故事，古英語詩《安德烈亞斯》的底本。純託名，無實質傳承，actual 留空。"
+    },
+    "apocalypse-of-the-virgin": {
+      "title": "童貞女啟示錄",
+      "date": [
+        800,
+        1000
+      ],
+      "place": "拜占庭",
+      "place_kind": "composition",
+      "actual": [
+        "J2"
+      ],
+      "beyond_scope": true,
+      "support": [],
+      "own_judgment": false,
+      "rationale": "⚠️ 年代遠逾 325。馬利亞遊歷地獄並為罪人代求，東正教民間信仰影響極大。"
+    },
+    "infancy-gospel-of-thomas-greek-text-a": {
+      "title": "多馬的耶穌嬰孩時期福音：希臘文本甲",
+      "date": [
+        100,
+        200
+      ],
+      "place": "敘利亞或埃及",
+      "place_kind": "composition",
+      "actual": [
+        "T2"
+      ],
+      "support": [
+        "Ehrman & Pleše 2011"
+      ],
+      "own_judgment": false,
+      "rationale": "同一書的不同抄本系統之一。🚨 甲乙兩本與拉丁本並存於站上，正好顯示嬰孩福音這類文本沒有定本——它隨傳抄地點持續改寫。"
+    },
+    "infancy-gospel-of-thomas-greek-text-b": {
+      "title": "多馬的耶穌嬰孩時期福音：希臘文本乙",
+      "date": [
+        100,
+        300
+      ],
+      "place": "敘利亞或埃及",
+      "place_kind": "composition",
+      "actual": [
+        "T2"
+      ],
+      "support": [
+        "Ehrman & Pleše 2011"
+      ],
+      "own_judgment": false,
+      "rationale": "較甲本簡短的抄本系統。"
+    },
+    "infancy-gospel-of-thomas-latin-text": {
+      "title": "多馬的耶穌嬰孩時期福音：拉丁文本",
+      "date": [
+        400,
+        600
+      ],
+      "place": "拉丁西方",
+      "place_kind": "composition",
+      "actual": [
+        "T2"
+      ],
+      "beyond_scope": true,
+      "support": [],
+      "own_judgment": false,
+      "rationale": "⚠️ 年代逾 325。拉丁改編本，後併入《偽馬太福音》。"
+    },
+    "infancy-gospels-of-jesus": {
+      "title": "耶穌嬰孩時期福音書（合集）",
+      "date": [
+        100,
+        700
+      ],
+      "place": "多處",
+      "place_kind": "scattered",
+      "actual": [
+        "T2",
+        "J2"
+      ],
+      "support": [],
+      "own_judgment": false,
+      "rationale": "站上的合集頁，非單一文獻。內容涵蓋多馬嬰孩福音與雅各原始福音兩系。"
+    },
+    "consummation-of-thomas": {
+      "title": "多馬的圓滿",
+      "date": [
+        300,
+        500
+      ],
+      "place": "敘利亞",
+      "place_kind": "composition",
+      "actual": [
+        "T2"
+      ],
+      "beyond_scope": true,
+      "support": [],
+      "own_judgment": false,
+      "rationale": "⚠️ 年代逾 325。《多馬行傳》的結尾部分，記多馬在印度殉道。"
+    },
+    "acts-and-martyrdom-of-andrew": {
+      "title": "安得烈行傳與殉道記",
+      "date": [
+        300,
+        500
+      ],
+      "place": "亞該亞",
+      "place_kind": "composition",
+      "actual": [],
+      "beyond_scope": true,
+      "support": [],
+      "own_judgment": false,
+      "rationale": "⚠️ 年代逾 325。X 形十字架的傳說出自此系。純託名，actual 留空。"
+    },
+    "acts-and-martyrdom-of-matthew": {
+      "title": "馬太行傳與殉道記",
+      "date": [
+        400,
+        600
+      ],
+      "place": "埃及",
+      "place_kind": "composition",
+      "actual": [],
+      "beyond_scope": true,
+      "support": [],
+      "own_judgment": false,
+      "rationale": "⚠️ 年代逾 325。純託名，actual 留空。"
+    },
+    "martyrdom-of-matthew": {
+      "title": "馬太殉道記",
+      "date": [
+        400,
+        600
+      ],
+      "place": "埃及",
+      "place_kind": "composition",
+      "actual": [],
+      "beyond_scope": true,
+      "support": [],
+      "own_judgment": false,
+      "rationale": "⚠️ 年代逾 325。純託名，actual 留空。"
+    },
+    "acts-of-peter-and-andrew": {
+      "title": "彼得與安得烈行傳",
+      "date": [
+        400,
+        600
+      ],
+      "place": "不詳",
+      "place_kind": "composition",
+      "actual": [],
+      "beyond_scope": true,
+      "support": [],
+      "own_judgment": false,
+      "rationale": "⚠️ 年代逾 325。純託名，actual 留空。"
+    },
+    "acts-of-john-the-theologian": {
+      "title": "神學家約翰行傳",
+      "date": [
+        400,
+        600
+      ],
+      "place": "小亞細亞",
+      "place_kind": "composition",
+      "actual": [],
+      "beyond_scope": true,
+      "support": [],
+      "own_judgment": false,
+      "rationale": "⚠️ 年代逾 325。與二世紀《約翰行傳》不同書，是後出的正統化改寫本——把幻影派的成分洗掉。純託名，actual 留空。"
+    },
+    "books-of-jeu-and-the-untitled-text-in-the-bruce-codex": {
+      "title": "耶穌之書與布魯斯抄本無題文",
+      "date": [
+        200,
+        400
+      ],
+      "place": "埃及",
+      "place_kind": "findspot",
+      "actual": [
+        "G1"
+      ],
+      "support": [
+        "Layton 2021"
+      ],
+      "own_judgment": false,
+      "rationale": "布魯斯抄本。與 apocrypha 的 two-books-jeu 同書；大量印記、數字與圖形的天界通行指南。"
+    }
+  }
+}
