@@ -168,8 +168,8 @@ def convert(src: Path, dst_ext: str, tool: str) -> Path | None:
                 sys.path.insert(0, str(Path(__file__).resolve().parent))
                 import chm_to_epub
                 target = tmp / (src.stem + "." + dst_ext)
-                n = chm_to_epub.convert(str(src), str(target))
-                print(f"    fallback 收進 {n} 篇")
+                n, conv = chm_to_epub.convert(str(src), str(target))
+                print(f"    fallback 收進 {n} 篇，簡轉繁 {conv} 檔")
                 made = [target]
             except Exception as e:
                 print(f"    ✗ fallback 也失敗：{str(e)[:160]}")

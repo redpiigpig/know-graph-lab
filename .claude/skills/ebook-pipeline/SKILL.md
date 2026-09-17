@@ -1064,8 +1064,32 @@ fallback 在 `scripts/chm_to_epub.py`：用 calibre 自帶的 `CHMReader` 解開
 那幾篇——馬丁路德那本 24 個正文檔只出了 **2 篇、11,867 字**（真值 27 篇、590,568 字），
 一樣是「轉檔成功、檔案正常」的長相。現在一律自己生一份涵蓋全部正文檔的目次當進入點。
 
-轉完現況：`file_type=chm` 歸零（56/56），三本都已進 parse_worker 佇列。
-**馬丁路德文集與巴文克是簡體**，要走簡→繁那條（見 [[ebook-translate]] 的 pipeline B）。
+🚨 **簡體偵測看不到「存成 HTML 實體的中文」。** 馬丁路德文集的 `14.htm`（134,536 B，
+MSHTML 產的）**整檔是純 ASCII**——中文全寫成數值字元參照 `&#25991;`。任何 codec 都
+「解得開」、一個漢字都看不到，於是簡轉繁跳過這一檔；calibre 事後才把實體還原成簡體，
+1,978 處簡體就這樣進了 epub，而其他 23 檔都是漂亮的繁體，抽樣抽不到。
+現在 `_materialise_refs()` 在判編碼之後、偵測之前把 cp>127 的實體還原成真字元
+（`&lt;`／`&gt;`／`&amp;` 不動，不會弄壞標記）。
+
+簡→繁直接做在這一層（全站中文一律繁體），用既有的
+`parse_drive_inventory.to_traditional`（opencc `s2tw` + `TRAD_FIXES`），
+**只在偵測到簡體專有字時才轉**——判準用 `accs_audit_quality.simplified_chars`
+（白名單，不是 OpenCC 轉換後比對，那會把「祢」判成簡體）。對本來就是繁體的檔不動它。
+
+轉完現況：`file_type=chm` 歸零（56/56），三本都已進 parse_worker 佇列，原 `.chm` 保留。
+
+| 書 | 篇 | 字 | 簡轉繁 | 殘留簡體 |
+|---|---|---|---|---|
+| 神護理的奧秘 | 37 | 111,431 | 0/20 檔（本來就繁） | 0 |
+| 馬丁路德文集 | 27 | 590,600 | 24/24 檔 | 0 |
+| 巴文克：基督教神學 | 30 | 431,982 | 28/28 檔 | 0 |
+
+🚨 **轉完檔之後還要再動內容的話，記得 parse_worker 會搶跑。**轉檔一成功就把
+`parse_error` 清成 null，下一班 parse_worker（排程每小時）立刻撈走。這次第一版
+epub（還是簡體）在 10:10 被解析進 JSONL，我 10:2x 才把繁體版覆蓋上去——
+epub 是繁體、JSONL 卻是簡體，兩邊不一致而且**稽核只看 epub 會全綠**。
+補救：`parsed_at` 與 `parse_error` 都重置成 null，再
+`parse_worker.py run --book <id> --limit 10`（`cmd_run` 兩個欄位都要是 null 才撈）。
 
 ---
 
