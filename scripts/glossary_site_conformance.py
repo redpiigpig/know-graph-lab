@@ -16,6 +16,12 @@
    所以真正的問題不是「缺表」，是**站上的 data/*.ts 沒有照詞庫**
    （詞庫 name_recommended 是絕對權威，見 feedback_glossary_strict_authority）。
    這支就是量那個落差。
+
+🚨 **兩種假陽性**（2026-09-17 實測，不修的話總數從真值膨脹到 2,976）：
+   ① **合法簡稱不是偏離**。詞庫主譯是「該撒利亞的優西比烏」，正文寫「優西比烏」
+      本來就對；「帕拉馬斯」「愛任紐」「衛斯理」同理。判準：變體是主譯的子字串。
+   ② **變體互相包含會重複計數**。「奧多勒」18 次其實含「狄奧多勒」的 16 次。
+      判準：長的先算，短的扣掉被長的涵蓋的次數。
 """
 from __future__ import annotations
 
@@ -90,11 +96,55 @@ def main() -> int:
         variants = [v for v in variants if v and v != rec and len(v) >= 2]
 
         n_rec = blob.count(rec)
-        hits = [(v, blob.count(v)) for v in set(variants)]
-        hits = [(v, n) for v, n in hits if n]
+
+        # 🚨 兩種假陽性，不修的話數字是假的（2026-09-17 實測 2,976 → 真值小得多）
+        # ① 合法簡稱：變體是主譯的連續子字串。「優西比烏」⊂「該撒利亞的優西比烏」，
+        #    正文本來就該用簡稱，不是偏離。
+        # ② 子字串重複計數：變體之間互相包含時，短的會把長的那幾次也算進去
+        #    （「奧多勒」18 次其實含「狄奧多勒」的 16 次）。只留最長的那個。
+        variants = [v for v in set(variants) if v not in rec]
+        variants.sort(key=len, reverse=True)
+        counted, hits = [], []
+        for v in variants:
+            n = blob.count(v)
+            n -= sum(blob.count(longer) for longer in counted if v in longer)
+            if n > 0:
+                hits.append((v, n))
+            counted.append(v)
         if hits:
             drift.append((sum(n for _, n in hits), p["name_english"], rec,
                           str(n_rec), [f"{v}×{n}" for v, n in sorted(hits, key=lambda x: -x[1])]))
+
+    # ③ 第三種假陽性：**變體欄是功能不是錯**。
+    #    name_protestant / name_catholic_sgs 等欄位存在的目的就是
+    #    「不同脈絡用不同寫法」——站上寫「奧思定」不是偏離主譯，是天主教脈絡的正解。
+    #    真正的 bug 是【同一個檔案裡同時出現兩種】，那才是不一致而非分辨。
+    clash: list[tuple[int, str, str, list[str]]] = []
+    for p in people:
+        rec = (p.get("name_recommended") or "").strip()
+        if not rec or len(rec) < 2:
+            continue
+        vs = []
+        for f in VARIANT_FIELDS:
+            v = p.get(f)
+            if isinstance(v, list):
+                vs += [str(x).strip() for x in v]
+            elif v:
+                vs += [x.strip() for x in re.split(r"[;；／/]", str(v))]
+        vs = [v for v in set(vs) if v and len(v) >= 2 and v not in rec and rec not in v]
+        for rel, text in files.items():
+            if any(x in rel for x in ("local_inventory", "-chinese.txt",
+                                      "_hsscol", "encyclicals/20c", "encyclicals/21c")):
+                continue
+            here = [w for w in [rec] + vs if w in text]
+            if len(here) >= 2:
+                clash.append((sum(text.count(w) for w in here), p["name_english"], rel, here))
+    clash.sort(reverse=True)
+    print()
+    print(f"🚨 真不一致（同一檔案內兩種以上寫法）：{len(clash)} 筆")
+    print()
+    for n, en, rel, here in clash[:30]:
+        print(f"  {en[:30]:<32} {rel[:38]:<40} {' / '.join(here)}")
 
     drift.sort(reverse=True)
     total = sum(d[0] for d in drift)
