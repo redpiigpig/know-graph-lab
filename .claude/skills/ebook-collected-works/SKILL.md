@@ -53,7 +53,7 @@ description: 「經典學者全集」的收錄流程 —— 以**學科**組織�
 > - **馬克斯韋伯**（宗教社會學，hub 已存在 slug=`max-weber`）：**2026-07-23 改採 REFERENCE 轉錄既有中譯本、不自譯**，引擎 **OpenRouter 免費**（8 key，與主鏈分流；免費 vision 爛只能純文字）。9 本中譯本（李中文/張旺山/康樂簡惠美/閻克文/韓水法/顧忠華…繁簡混）已入 Drive `全集/宗教社會學/韋伯/`；轉錄走 `panikkar_build.py` 型 REFERENCE build。詳見 [[project_weber_collected_works]]。 **2026-09-02 開工**：兩篇志業演講（李中文繁譯 EPUB）已零 LLM 上架（`scripts/weber_build.py`），其餘七本的來源品質盤點與取捨見 [weber_collected_works.md](weber_collected_works.md)。
 > - **內村鑑三**：青空文庫 11 篇 ✅ 全譯／英文原著兩部與豪斯評傳翻譯中（`uchimura_auto.py --author uchimura|uchimura-en|howes`）。無教會神學區另有矢內原＋七人 hub（[[project_uchimura_yanaihara]]）。
 > - **東方聖書（sacred-books-east）**：奧義書✅；剩 5 卷（阿維斯陀/古蘭經/法句經/易經/耆那教）`sbe_translate.py --loop --backend haiku`。
-> - **引擎分流**：Gemini→ACCS OCR；NVIDIA→榮格佇列＋哲學佇列＋大愛道；Haiku→潘尼卡吠陀＋SBE。**監管只需 1 個 session**（艦隊靠排程自我修復，多 session 會搶 checkpoint）。
+> - **引擎分流（2026-09-17 更新）**：NVIDIA 是現在的主力（7 把 key）；Gemini 只剩 ACCS OCR 那種低量用途——**免費層是「20 次／天／key」的日額度**，長跑用它每段都要先吃滿 7×3 次重試才落到 NVIDIA；🚨 **Haiku 那條 Claude Code OAuth 自 2026-07-03 起 401**，凡是寫死 `--backend haiku` 的路徑都要改掉（supervisor 的線上複核就是這樣把整台鎖在 review 模式、兩個月沒產出）。**監管只需 1 個 session**（艦隊靠排程自我修復，多 session 會搶 checkpoint）。
 
 # 經典學者全集 Skill（Collected Works — 依學科組織）
 
@@ -753,6 +753,19 @@ Ports）。留白時 reader 只顯示英文，那是誠實的；留著錯譯則�
     python scripts/audit_llm_meta_replies.py                    # 只報告
     python scripts/audit_llm_meta_replies.py --root mueller_data --samples 5
     python scripts/audit_llm_meta_replies.py --fix --meta-only  # 清判準明確的兩類
+
+### 🚨 `sbe_translate --loop` 印「sbe done」不等於翻完（2026-09-17）
+
+`mueller_auto.is_done()` 把「連續失敗 MAX_FAIL(=3) 次」的段落算成**已耗盡**、計入
+完成——原意是不讓一兩個死段卡住整本，但引擎整段時間壞掉時，它會把**整本**判死。
+實測：易經 2,620 段、耆那教 2,399 段全是死段（該卷只譯了 4.4%），`--loop` 一跑就
+回「sbe done」收工。這是典型的「看起來成功的失敗」，log 看不出來，要看資料：
+
+    python -X utf8 scripts/sbe_progress.py             # 逐卷：已譯／死段／待譯
+    python -X utf8 scripts/sbe_progress.py --reset --apply   # 無譯文的死段 fail 歸零
+
+死段本身多半不是壞資料，**壞的是當時的引擎**；換好引擎再跑，那些段落一次就過。
+歸零只動「沒有譯文」的段落，已譯的不碰。
 
 🚨 `--fix` **只改本機 sec*.json，不會上傳**。清完要重跑該 driver 的
 `assemble_and_upload` 才會反映到站上，否則就是 [[feedback_build_not_equal_deployed]]。
