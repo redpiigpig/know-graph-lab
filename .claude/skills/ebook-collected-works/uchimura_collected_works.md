@@ -127,6 +127,17 @@ AUTHOR_MODULES 多一筆）。
     python scripts/uchimura_auto.py --author uchimura-en --list
     python scripts/uchimura_auto.py --author uchimura-en --run-queue --backend haiku
 
+## ✅ 2026-09-17 全卷稽核（八卷 1,681 段逐段驗過）
+
+- **中譯零缺漏**：0 空、0 拒譯回覆、0 推理外洩、0 英文未譯、0 簡體。
+- **原文覆蓋**：日文 11 篇對青空原檔 99.5–100%；英文兩部對 archive.org 文字層 99.1%／99.3%（未涵蓋的是書名頁與索引）。
+- **三邊一致**：DB `chunk_count` ＝ Drive JSONL 行數 ＝ R2 物件，八卷全對。
+- 修掉三處 `zh: null`（約伯記講演的表格框線與分隔星號），照其他卷慣例填回原樣並重推。
+- 🚨 **稽核誤報要先看內容**：本輪 18 筆旗標全是假的——署名「鑑三」、和曆日期「明治二十六年…」、重點符號ヽ、分隔星號、表格框線、英文歌名 "Luther's Song." 這些**譯文與原文本來就相同**；另外「台」不是簡體字，別放進簡體字表。
+- 🚨 **比對覆蓋率別用 `<div class="main_text">(.*?)</div>`**：青空長篇內有巢狀 div，非貪婪會在第一個 `</div>` 就停，實測把 49,906 字的《基督信徒のなぐさめ》讀成 87 字、算出 57274% 這種覆蓋率。要抓到 `bibliographical_information` 之前為止。
+- 《代表的日本人》第二章那段幻覺（舊紀錄寫「已改未重推」）**已經在 sec 資料與 JSONL 裡都不存在**，該筆待辦可以銷掉。
+- 《我如何成為基督徒》譯文修了十處宗派誤譯：`Methodist Episcopal Church` 曾被譯成「監理會‧聖公會」「監理會宣教團」（美以美會 ≠ 監理會）；內村全書把地名縮寫成單一字母，**「S.」＝札幌**卻被讀成教派，同一詞在三處分別譯成「聖公會」「聖教會」「救世教會」，節標題 `S. Church is Independent` 整條錯掉，已統一為「S 教會」。另 archive.org OCR 把 `The Rev. Mr. H.` 讀成 `The Bev. Mr. XL`，譯文跟著錯成「X牧師」，已依前一句 `through Mr. H.` 改回。
+
 ## 🚀 新 session 接手清單
 
 1. 看 worker 進度：`python scripts/uchimura_auto.py --list`（或 tail `scripts/logs/uchimura_translate.log`）；斷了就重新分離式啟動 `--run-queue`（checkpoint 自動續傳）。
