@@ -80,19 +80,18 @@ VOLUMES = {
     },
 }
 
-# 印製分冊（2026-09-08 使用者定案）：一本印刷實體不得超過 500 頁，同一種語言各冊
-# 厚薄要相近。切點只落在課與課之間，課次編號不動（線上讀本與音檔靠它對應），附錄
-# 只印在該部分的最後一分冊。依 2026-09-08 版面實測（上冊 456 頁、下冊 840 頁），
-# 上冊本來就進得去一本，下冊對半切，三冊落在 419–457 頁。
-# 🚨 切點是照**實際頁數**算出來的，不是照課數對半。讀文改成節錄之後每課的
-# 份量才變得平均（四分位 6–12 頁），在那之前最厚的一課是最薄的三四倍，切點
-# 必須遷就那幾課。改了讀文長度就要重算切點，否則會留下一冊厚一冊薄。
+# 印製分冊：一本印刷實體不得超過 500 頁（2026-09-08 使用者定案）。切點只落在課與
+# 課之間，課次編號不動（線上讀本與音檔靠它對應）。
+# 歷史：2026-09-08 的版面下上冊 456 頁、下冊 840 頁，印成三冊；2026-09-18 一課壓到
+# 八頁、讀文按版面預算節錄之後上冊 349 頁、下冊 324 頁，兩半各自進得去一本。
+# 🚨 切點的存在理由只有一個：一本裝訂實體不得超過 500 頁（2026-09-08）。
+# 2026-09-18 一課壓到八頁、讀文按版面預算節錄之後，各半只有 320–480 頁，上限不再
+# 逼人，所以擁有者裁示並冊——回到「內容的一半＝一本實體書」。課次編號不動。
 PARTS = [
-    {"book": 1, "source": "上冊", "first": 1, "last": 50, "appendix": True},   # 實測 349 頁
-    {"book": 2, "source": "下冊", "first": 1, "last": 27, "appendix": False},  # 實測 159 頁
-    {"book": 3, "source": "下冊", "first": 28, "last": 50, "appendix": True},  # 實測 165 頁
+    {"book": 1, "source": "上冊", "first": 1, "last": 50, "appendix": True},
+    {"book": 2, "source": "下冊", "first": 1, "last": 50, "appendix": True},
 ]
-BOOK_LABELS = ("第一冊", "第二冊", "第三冊")
+BOOK_LABELS = ("上冊", "下冊")
 
 COLOPHON = [
     ("拉丁文本", "武加大譯本用 Clementine Vulgate（eBible.org latVUC 轉錄，公有領域）；"
@@ -837,7 +836,7 @@ def build(book_number: int) -> Path:
 
 
 def main() -> None:
-    ap = argparse.ArgumentParser(description="排版教會拉丁文讀本 B5 DOCX（三冊，每冊不超過 500 頁）")
+    ap = argparse.ArgumentParser(description="排版教會拉丁文讀本 B5 DOCX（兩冊，每冊不超過 500 頁）")
     ap.add_argument("--book", type=int, choices=tuple(part["book"] for part in PARTS),
                     help="只排某一冊")
     args = ap.parse_args()

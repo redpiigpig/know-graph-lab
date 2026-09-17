@@ -254,6 +254,19 @@ PROPER_NAME_GOLD: dict[str, tuple[str, ...]] = {
     "H5467|סְדֹם": ("所多瑪",),
     "H1439|גִּדְעוֹן": ("基甸",),
     "H2809|חֶשְׁבּוֹן": ("希實本",),
+    # 創世記世系那一批（2026-08-29 使用者在 fix_hebrew_proper_names.ANCESTORS
+    # 裡逐個寫下的那一組）；譯名照那一組，不另立。
+    "H8352|שֵׁת": ("塞特",),
+    "H2585|חֲנוֹךְ": ("以諾",),
+    "H4968|מְתוּשָׁלַח": ("瑪土撒拉",),
+    "H8283|שָׂרָה": ("撒拉",),
+    "H1904|הָגָר": ("夏甲",),
+    "H6989|קְטוּרָה": ("基土拉",),
+    "H7259|רִבְקָה": ("利百加",),
+    "H3812|לֵאָה": ("利亞",),
+    "H2153|זִלְפָּה": ("悉帕",),
+    "H1090|בִּלְהָה": ("辟拉",),
+    "H3485|יִשָּׂשכָר": ("以薩迦",),
 }
 
 
@@ -415,7 +428,16 @@ def validate_vocabulary_sources(gate: Gate) -> tuple[list[dict], dict[int, dict]
     # The inventory is now split: person/place/nation names live in the appendix
     # file, and only divine names plus a few words that read as ordinary
     # vocabulary stay in the lessons.  Both halves are checked together so the
-    # 135 verified Chinese names cannot be lost by moving one of them.
+    # 144 verified Chinese names cannot be lost by moving one of them.
+    #
+    # 🚨 這個數字是凍結的，但凍結的是「清冊與 gold 名單必須一樣長」這件事，不是
+    # 某一個特定的數字。2026-09-18 之前它凍在 135，而清冊早已長到 145——因為
+    # 沒有人重建過衍生檔案，這三項紅燈一直沒有被看見。新增專名的時候要同時補
+    # gold 名單並改這裡，不要只改一邊。
+    #
+    # 🚨 課內刻意保留的詞（keptInLessons）不要再放進 hebrew-proper-names.json：
+    # 附錄表的 pool 本來就會把課內專名全部收進去，兩邊都放就會在紙上印出兩列
+    # ——אָדָם 曾經一列印「人」一列印「亞當」，兩列都在同一張表裡。
     lifted_names = load_json(NAMES_PATH)["items"]
     in_lessons = [item for item in vocab if item.get("isProperName")]
     inventory = in_lessons + lifted_names
@@ -423,6 +445,8 @@ def validate_vocabulary_sources(gate: Gate) -> tuple[list[dict], dict[int, dict]
 
     type_failures = [item["pointed"] for item in inventory if not item.get("properNameTypes")]
     gold_failures: list[dict[str, Any]] = []
+    missing_gold = [f"{item['strong']}|{item['pointed']}" for item in inventory
+                    if f"{item['strong']}|{item['pointed']}" not in PROPER_NAME_GOLD]
     for item in inventory:
         key = f"{item['strong']}|{item['pointed']}"
         expected = PROPER_NAME_GOLD.get(key)
@@ -437,9 +461,33 @@ def validate_vocabulary_sources(gate: Gate) -> tuple[list[dict], dict[int, dict]
         if lifted_types.intersection(item.get("properNameTypes") or []) and not item.get("keptInLessons")
     ]
 
-    gate.expect(len(inventory) == 135, "source.proper_names.count", "proper-name inventory contains exactly 135 entries across lessons and appendix", actual=len(inventory))
+    gate.expect(len(inventory) == 144, "source.proper_names.count", "proper-name inventory contains exactly 144 entries across lessons and appendix", actual=len(inventory))
     gate.expect(len(lemma_keys) == len(inventory), "source.proper_names.unique", "no proper name is listed twice", actual=len(lemma_keys))
-    gate.expect(len(PROPER_NAME_GOLD) == 135, "source.proper_names.gold_count", "gold list covers all 135 proper names", actual=len(PROPER_NAME_GOLD))
+    # 🚨 這一關本來寫成「gold 名單的長度等於清冊的長度」，而那個形狀是錯的：
+    # gold 名單刻意收著同一個名字的異體（耶路撒冷的兩種附點 H3389，約拿單的長短
+    # 兩形 H3083／H3129），所以它本來就會比清冊長。長度一相等就過的話，加一個
+    # 異體拼法就會紅，而紅的原因跟「有沒有名字掉了」一點關係都沒有。
+    #
+    # 要驗的是這一關存在的理由——「搬動一個名字的時候不會把它弄丟」，所以：
+    # ①清冊裡每一筆都要有 gold 譯名（下面的 conventional_zh 已經在驗）；
+    # ②gold 裡多出來的鍵，必須是清冊裡某個名字的異體——也就是它的中文仍然找得到
+    #   對應的清冊條目。真的掉了一個名字，它的中文就會在清冊裡消失，這一關才報。
+    inventory_zh = {str(item.get("glossZh", "")) for item in inventory}
+    orphan_gold = sorted(
+        key for key, forms in PROPER_NAME_GOLD.items()
+        if key not in lemma_keys
+        and not any(any(f in zh for f in forms) for zh in inventory_zh)
+    )
+    surplus = sorted(key for key in PROPER_NAME_GOLD if key not in lemma_keys)
+    gate.expect(
+        not missing_gold and not orphan_gold,
+        "source.proper_names.gold_count",
+        f"every one of the {len(inventory)} inventory entries has a verified Chinese form, "
+        f"and each of the {len(surplus)} surplus gold keys is an alternate spelling of a name still present",
+        missingGold=missing_gold[:20],
+        orphanGold=orphan_gold[:20],
+        surplusGold=surplus,
+    )
     gate.expect(not type_failures, "source.proper_names.types", "every proper name records person/place/people/divine type metadata", failures=type_failures)
     gate.expect(not gold_failures, "source.proper_names.conventional_zh", "all proper names retain conventional Traditional-Chinese biblical forms", failures=gold_failures[:30])
     gate.expect(not leaked, "source.proper_names.lifted", "no person, place or nation name is still taking a lesson slot", failures=leaked)

@@ -365,8 +365,9 @@ labelled one.
 - Never call the synthetic audio a release track, and never let a page offer a
   play control for a clip that does not exist.
 - 印製分冊（2026-09-08）：一本不超過 500 頁，同語言各冊厚薄相近，於是印成**三冊**
-  ——第一冊＝上冊全 50 課（456 頁）、第二冊＝下冊第 1–32 課（426 頁）、第三冊＝
-  下冊第 33–50 課＋附錄（416 頁）。切點只在課與課之間，課次編號不動，附錄只印在
-  該部分最後一冊。範圍凍結在 `scripts/build_latin_full_reader.py` 的 `PARTS`。
+  ——2026-09-18 起是**兩冊**：上冊全 50 課（349 頁）、下冊全 50 課（321 頁），
+  各自含附錄。一課壓到八頁、讀文按版面預算節錄之後兩半都進得去一本，擁有者裁示
+  並冊（在那之前是三冊 456／426／416 頁）。切點只在課與課之間，課次編號不動。
+  範圍凍結在 `scripts/build_latin_full_reader.py` 的 `PARTS`。
 - Never let the imported Hebrew layout keep its running header. Every page of
   the first Latin print run said 聖經希伯來文原文讀本.

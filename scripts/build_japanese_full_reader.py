@@ -13,8 +13,8 @@ series; what differs is only what the language forces:
   break marking (は・や・い), not an accent number — the source carries the break
   positions, and the number would be an inference nobody could check.
 * The content is in two halves — modern prose and 文語 with 舊字舊假名 — which the
-  owner named 第一冊／第二冊, never 上下冊. Neither half fits in one bound volume,
-  so they print as four: 第一–二冊 modern, 第三–四冊 文語.
+  owner named 第一冊／第二冊, never 上下冊. Since 2026-09-18 each half fits in one
+  bound volume (346 and 354 pages), so the two halves are the two books.
 
     python -X utf8 scripts/build_japanese_full_reader.py
     python -X utf8 scripts/build_japanese_full_reader.py --book 1
@@ -58,11 +58,11 @@ JA_TITLE_PT = 15
 # 標示不是閱讀內容。改這幾個數字會直接改變每頁容納的份量，讀文上限要跟著重算。
 GLOSS_PT = 12
 
-# 印刷冊次與內容分半是兩件事。合約把內容分成「第一冊＝現代語／第二冊＝文語」，
-# 但一本不得超過 500 頁，這兩半各自 744 與 657 頁，所以印成四本。冊號照使用者
-# 2026-09-08 對希臘與拉丁的裁定連續編（第一–四冊），現代語與文語的分野改由封面
-# 副標題說明。
-BOOK_LABELS = ("第一冊", "第二冊", "第三冊", "第四冊")
+# 印刷冊次與內容分半本來是兩件事：2026-09-08 的版面下兩半各自 744 與 657 頁，
+# 一本不得超過 500 頁，所以印成四本。2026-09-18 一課壓到八頁之後兩半只有 346 與
+# 354 頁，兩件事重合了——內容的第一冊／第二冊就是實體的第一冊／第二冊。
+# 冊名照擁有者 2026-08-27 定的「第一冊／第二冊」，不叫上下冊。
+BOOK_LABELS = ("第一冊", "第二冊")
 
 VOLUMES = {
     1: {
@@ -77,16 +77,12 @@ VOLUMES = {
     },
 }
 
-# 切點由 2026-09-08 的實測版面算出（現代語那半 744 頁、文語那半 657 頁），四冊
-# 329–377 頁。切點只落在課與課之間，課次編號不動，附錄只印在該半的最後一分冊。
-# 🚨 切點是照**實際頁數**算出來的，不是照課數對半。讀文改成節錄之後每課的
-# 份量才變得平均（四分位 6–12 頁），在那之前最厚的一課是最薄的三四倍，切點
-# 必須遷就那幾課。改了讀文長度就要重算切點，否則會留下一冊厚一冊薄。
+# 🚨 切點的存在理由只有一個：一本裝訂實體不得超過 500 頁（2026-09-08）。
+# 2026-09-18 一課壓到八頁、讀文按版面預算節錄之後，各半只有 320–480 頁，上限不再
+# 逼人，所以擁有者裁示並冊——回到「內容的一半＝一本實體書」。課次編號不動。
 PARTS = [
-    {"book": 1, "source": 1, "first": 1, "last": 27, "appendix": False},   # 實測 177 頁
-    {"book": 2, "source": 1, "first": 28, "last": 50, "appendix": True},   # 實測 173 頁
-    {"book": 3, "source": 2, "first": 1, "last": 28, "appendix": False},   # 實測 174 頁
-    {"book": 4, "source": 2, "first": 29, "last": 50, "appendix": True},   # 實測 184 頁
+    {"book": 1, "source": 1, "first": 1, "last": 50, "appendix": True},
+    {"book": 2, "source": 2, "first": 1, "last": 50, "appendix": True},
 ]
 
 _metrics = None

@@ -533,7 +533,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Babel (i.e. Babylon), including Babylonia and the Babylonian empire",
-      "glossZh": "巴別",
+      "glossZh": "巴比倫",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -557,9 +557,9 @@
       "lessonSlot": 6,
       "category": "地名",
       "categoryRoute": "既有 properNameTypes",
-      "name": "巴別",
+      "name": "巴比倫",
       "printedLabel": "地名",
-      "nameNote": ""
+      "nameNote": "本書凍結的 RCUV2010 快照內「巴比倫」53 次、「巴別」0 次（創 11:9 不在所收的 25 章內），故主譯取巴比倫；和合本修訂版在創 11:9 作「巴別」。（原值：巴別）"
     },
     {
       "pointed": "יְהוֹשׁוּעַ",
@@ -4618,32 +4618,6 @@
       "nameNote": ""
     },
     {
-      "pointed": "אָדָם",
-      "sourcePointed": "אָדָם",
-      "unpointed": "אדם",
-      "glossZh": "亞當",
-      "name": "亞當",
-      "glossEn": "'adam",
-      "note": "人類始祖；亞當",
-      "strong": "H120",
-      "strongs": [
-        "H120"
-      ],
-      "isProperName": true,
-      "properNameTypes": [
-        "person"
-      ],
-      "category": "先祖與族長",
-      "categoryRoute": "genesis-line",
-      "firstOccurrence": "Gen.1.26",
-      "itemKind": "proper_name",
-      "sourceType": "genesis_line",
-      "verification": "附點取自創世記本文（OSHB），Strong 編號經信望愛字典釋義核對",
-      "printedLabel": "先祖與族長",
-      "nameNote": "人類始祖；亞當",
-      "lessonSlot": 1
-    },
-    {
       "pointed": "שֵׁת",
       "sourcePointed": "שֵׁת",
       "unpointed": "שת",
@@ -4667,7 +4641,8 @@
       "verification": "附點取自創世記本文（OSHB），Strong 編號經信望愛字典釋義核對",
       "printedLabel": "先祖與族長",
       "nameNote": "塞特，亞當第三子",
-      "lessonSlot": 2
+      "lessonSlot": 2,
+      "textbookTransliteration": "šēṯ"
     },
     {
       "pointed": "חֲנוֹךְ",
@@ -4693,7 +4668,8 @@
       "verification": "附點取自創世記本文（OSHB），Strong 編號經信望愛字典釋義核對",
       "printedLabel": "先祖與族長",
       "nameNote": "以諾，與神同行",
-      "lessonSlot": 3
+      "lessonSlot": 3,
+      "textbookTransliteration": "ḥănôḵ"
     },
     {
       "pointed": "מְתוּשָׁלַח",
@@ -4719,7 +4695,8 @@
       "verification": "附點取自創世記本文（OSHB），Strong 編號經信望愛字典釋義核對",
       "printedLabel": "先祖與族長",
       "nameNote": "瑪土撒拉，以諾之子",
-      "lessonSlot": 4
+      "lessonSlot": 4,
+      "textbookTransliteration": "məṯûšālaḥ"
     },
     {
       "pointed": "שָׂרָה",
@@ -4745,7 +4722,8 @@
       "verification": "附點取自創世記本文（OSHB），Strong 編號經信望愛字典釋義核對",
       "printedLabel": "先祖與族長",
       "nameNote": "撒拉，亞伯拉罕之妻",
-      "lessonSlot": 5
+      "lessonSlot": 5,
+      "textbookTransliteration": "śārâ"
     },
     {
       "pointed": "הָגָר",
@@ -4771,7 +4749,8 @@
       "verification": "附點取自創世記本文（OSHB），Strong 編號經信望愛字典釋義核對",
       "printedLabel": "先祖與族長",
       "nameNote": "夏甲，撒拉的埃及使女",
-      "lessonSlot": 6
+      "lessonSlot": 6,
+      "textbookTransliteration": "hāg̅ār"
     },
     {
       "pointed": "קְטוּרָה",
@@ -4797,7 +4776,8 @@
       "verification": "附點取自創世記本文（OSHB），Strong 編號經信望愛字典釋義核對",
       "printedLabel": "先祖與族長",
       "nameNote": "基土拉，亞伯拉罕續娶之妻",
-      "lessonSlot": 7
+      "lessonSlot": 7,
+      "textbookTransliteration": "qəṭûrâ"
     },
     {
       "pointed": "רִבְקָה",
@@ -4823,7 +4803,8 @@
       "verification": "附點取自創世記本文（OSHB），Strong 編號經信望愛字典釋義核對",
       "printedLabel": "先祖與族長",
       "nameNote": "利百加，以撒之妻",
-      "lessonSlot": 8
+      "lessonSlot": 8,
+      "textbookTransliteration": "riḇqâ"
     },
     {
       "pointed": "לֵאָה",
@@ -4849,7 +4830,8 @@
       "verification": "附點取自創世記本文（OSHB），Strong 編號經信望愛字典釋義核對",
       "printedLabel": "先祖與族長",
       "nameNote": "利亞，雅各之妻",
-      "lessonSlot": 9
+      "lessonSlot": 9,
+      "textbookTransliteration": "lēʾâ"
     },
     {
       "pointed": "זִלְפָּה",
@@ -4875,7 +4857,8 @@
       "verification": "附點取自創世記本文（OSHB），Strong 編號經信望愛字典釋義核對",
       "printedLabel": "先祖與族長",
       "nameNote": "悉帕，利亞的使女",
-      "lessonSlot": 10
+      "lessonSlot": 10,
+      "textbookTransliteration": "zilpâ"
     },
     {
       "pointed": "בִּלְהָה",
@@ -4901,7 +4884,8 @@
       "verification": "附點取自創世記本文（OSHB），Strong 編號經信望愛字典釋義核對",
       "printedLabel": "先祖與族長",
       "nameNote": "辟拉，拉結的使女",
-      "lessonSlot": 11
+      "lessonSlot": 11,
+      "textbookTransliteration": "bilhâ"
     },
     {
       "pointed": "יִשָּׂשכָר",
@@ -4927,7 +4911,8 @@
       "verification": "附點取自創世記本文（OSHB），Strong 編號經信望愛字典釋義核對",
       "printedLabel": "先祖與族長",
       "nameNote": "以薩迦，雅各九子；以薩迦支派",
-      "lessonSlot": 12
+      "lessonSlot": 12,
+      "textbookTransliteration": "yiśśāšḵār"
     }
   ],
   "count": 129

@@ -434,17 +434,25 @@ describe("complete 50-lesson Hebrew private reader", () => {
     // order in scripts/proper_name_categories.py -- geography, then divine
     // names, then people from specific to general, with 待歸類 last.
     const names = payload.tables.find((table) => table.id === "hbo-appendix-proper-names");
-    // 2026-08-29 使用者重定人名分類：「族長與先知」拆成「先祖與族長」與「先知」，
-    // 節期歸曆法表（安息日本來在兩張表各一張卡）。一個名字只出現在一節裡，
-    // 所以節名就是卡上那一個標籤。
+    // 2026-08-29 使用者重定人名分類：「族長與先知」拆成「先祖與族長」與「先知」。
+    // 一個名字只出現在一節裡，所以節名就是卡上那一個標籤。
+    //
+    // 🚨 這一串以前凍結的是**當時那個檔案長什麼樣**，不是體例：附錄表從 2026-08-29
+    // 之後就沒有重建過，所以（一）安息日那一節從來沒有出現過，雖然
+    // proper_name_categories.PRINT_ORDER 一直把「節期與聖日」列為正式的一節；
+    // （二）拆出來的「先祖與族長」與「先知」沒被加進 PRINT_ORDER，於是掉進
+    // 「不認得的排最後」那條尾巴，次序是插入順序而不是體例順序。
+    // 2026-09-18 重建之後兩件都修好了，這一串改成體例真正的次序：
+    // 先地理、再神名、再人名由具體到籠統、節期、待歸類殿後。
     expect(names?.groups.map((group) => group.id)).toEqual([
       "民族與國名",
       "地名",
       "神名與稱號",
-      "君王",
-      "其他人名",
       "先祖與族長",
+      "君王",
       "先知",
+      "其他人名",
+      "節期與聖日",
     ]);
     // 一個名字只能出現在一節裡：跨節重複就是同一個詞印兩張卡。
     const everyName = names!.groups.flatMap((group) =>

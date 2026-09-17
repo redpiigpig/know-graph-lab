@@ -89,6 +89,10 @@ Use the frozen reader profile if the user approves a different specification.
 要問的是：**詞條有沒有被擠到下一頁去**——生詞標題在前一頁，而練習標題那一頁的
 上方還壓著詞條。`scripts/audit_reader_pages.py` 用的就是這一條。
 
+**擁有者 2026-09-18 裁示：「生詞到第二頁沒關係。」** 所以這件事到此為止——版面
+浪費該修（那是真的多印了紙），但「二十個詞一定要在同一頁」不是硬要求。
+`audit_reader_pages.py` 照實回報數字，不當成錯。
+
 2026-09-18 收工時的實測（全四本共 350 課）：
 
 | | 生詞表跨頁 | 十題練習佔兩頁 |
@@ -98,9 +102,8 @@ Use the frozen reader profile if the user approves a different specification.
 
 兩個數字會一起動，因為是同一件事：生詞表多佔半頁，練習就被推下去。剩下的 56 課
 幾乎都是拉丁（33 課）——它的主要部分字數中位數 22、第九十百分位 39，12pt 下沒有
-辦法與繁中詞義共存於 141mm 的版心而不折行。這是字級下限帶來的物理極限，不是版面
-浪費；要再往下壓，只剩「把詞類欄併進詞義欄」或「降字級」兩條路，都要問過擁有者。
-希臘四冊是零——它的詞條短。
+辦法與繁中詞義共存於 141mm 的版心而不折行。希臘是零，它的詞條短。這是字級下限帶
+來的物理極限，不是版面浪費；別再為它降字級或改表格結構。
 
 ## One shared layout across the three readers
 
@@ -140,11 +143,25 @@ and must match its *structure* too, not just its scale. Checked 2026-08-27:
   never renumber a lesson (the online reader and the audio routes key on it),
   and print each half's appendix in its last part only — repeating a 125-page
   appendix in every part pushes them back over the cap. The splits live in each
-  builder's `PARTS`. 2026-09-18（12pt、一課八頁之後）實測：希臘四冊
-  183／189／241／236，拉丁三冊 349／159／165，日文四冊 177／173／174／184，
-  希伯來單冊 406。
-  🚨 切點要把**整冊的厚度**算平，不是把課文頁數算平：附錄只印在該半的最後一分冊
-  （希臘下冊那份就有 150 頁）。照課文頁數對半切，會切出 201／277 的一薄一厚。 `render_and_check_reader_pdfs.py` fails the build
+  builder's `PARTS`。**2026-09-18 擁有者裁示「頁數少就並冊」**：一課壓到八頁、
+  讀文按版面預算節錄之後，各半都進得去一本，於是十二冊收成七冊——分冊本來就只是
+  為了那條 500 頁的上限而存在的，上限不再逼人就該回到「內容的一半＝一本實體書」。
+
+  | 書 | 冊 | 實測頁數 |
+  |---|---|---:|
+  | 聖經希伯來文 | 單冊 | 406 |
+  | 通用希臘文 | 上冊（新約與七十士）／下冊（教父與希臘教會文獻） | 369／474 |
+  | 教會拉丁文 | 上冊（武加大）／下冊（教父與教廷文獻） | 349／321 |
+  | 日文宗教學 | 第一冊（現代語）／第二冊（文語） | 347／355 |
+
+  🚨 真的需要再切的時候，切點要把**整冊的厚度**算平，不是把課文頁數算平：附錄只
+  印在該半的最後一分冊（希臘下冊那份就有 150 頁）。照課文頁數對半切，2026-09-18
+  那一輪切出來的是 201／277 的一薄一厚。
+  🚨 冊數一改，**四個寫死的清單**都要跟著改，而漏掉任一個的症狀都不像「冊數改了」：
+  `render_and_check_reader_pdfs.TARGETS`（說找不到 docx）、`audit_reader_pages.BOOKS`
+  （說找不到 PDF）、`audit_printed_exercises.BOOKS`（說課次順序印錯——錯的是稽核）、
+  `sync_reader_artifacts.SUPERSEDED_NAMES`（Drive 上留著一本已經不存在的冊次，而它
+  自己看起來完全正常）。 `render_and_check_reader_pdfs.py` fails the build
   over 500.
 - **Appendix tables print grouped**, in `PRINT_ORDER` from
   `scripts/proper_name_categories.py`, with the group heading at H2/H3.

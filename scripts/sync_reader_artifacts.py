@@ -65,6 +65,25 @@ SUPERSEDED_NAMES = {
     "greek-original-reader-vol6.docx",
     "greek-original-reader-vol6.pdf",
     "greek-original-reader-vol6-spine.pdf",
+    # 2026-09-18：一課壓到八頁、讀文按版面預算節錄之後各半都進得去一本，擁有者
+    # 裁示並冊——希臘、拉丁、日文各從四／三／四冊收成兩冊。
+    # 🚨 本機刪掉就沒了，Drive 上卻還躺著；使用者翻到的是一本已經不存在的冊次，
+    # 而它自己看起來完全正常。
+    "greek-original-reader-vol3.docx",
+    "greek-original-reader-vol3.pdf",
+    "greek-original-reader-vol3-spine.pdf",
+    "greek-original-reader-vol4.docx",
+    "greek-original-reader-vol4.pdf",
+    "greek-original-reader-vol4-spine.pdf",
+    "latin-original-reader-vol3.docx",
+    "latin-original-reader-vol3.pdf",
+    "latin-original-reader-vol3-spine.pdf",
+    "japanese-original-reader-vol3.docx",
+    "japanese-original-reader-vol3.pdf",
+    "japanese-original-reader-vol3-spine.pdf",
+    "japanese-original-reader-vol4.docx",
+    "japanese-original-reader-vol4.pdf",
+    "japanese-original-reader-vol4-spine.pdf",
 }
 # 2026-09-16 書背改走課程讀本那一套版式，舊的裸書背 SVG 全部作廢。
 SUPERSEDED_SUFFIXES = ("-spine.svg",)

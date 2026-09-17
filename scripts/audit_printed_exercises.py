@@ -47,21 +47,16 @@ BOOKS: dict[str, list[tuple[str, str, range, int]]] = {
     "grc": [
         # 🚨 這幾個範圍必須跟 build_greek_full_reader.PARTS 一模一樣。切點一改而
         # 這裡沒跟著改，稽核會說「課次順序印錯」——錯的是稽核自己。
-        ("greek-original-reader-vol1", "greek-full/exercise-set-v1.json", range(1, 27), 0),
-        ("greek-original-reader-vol2", "greek-full/exercise-set-v1.json", range(27, 51), 0),
-        ("greek-original-reader-vol3", "greek-full/exercise-set-v2.json", range(1, 38), 0),
-        ("greek-original-reader-vol4", "greek-full/exercise-set-v2.json", range(38, 51), 0),
+        ("greek-original-reader-vol1", "greek-full/exercise-set-v1.json", range(1, 51), 0),
+        ("greek-original-reader-vol2", "greek-full/exercise-set-v2.json", range(1, 51), 0),
     ],
     "lat": [
         ("latin-original-reader-vol1", "latin-full/exercise-set-v1.json", range(1, 51), 0),
-        ("latin-original-reader-vol2", "latin-full/exercise-set-v2.json", range(1, 28), 0),
-        ("latin-original-reader-vol3", "latin-full/exercise-set-v2.json", range(28, 51), 0),
+        ("latin-original-reader-vol2", "latin-full/exercise-set-v2.json", range(1, 51), 0),
     ],
     "ja": [
-        ("japanese-original-reader-vol1", "japanese-full/exercise-set.json", range(1, 28), 0),
-        ("japanese-original-reader-vol2", "japanese-full/exercise-set.json", range(28, 51), 0),
-        ("japanese-original-reader-vol3", "japanese-full/exercise-set.json", range(1, 29), 50),
-        ("japanese-original-reader-vol4", "japanese-full/exercise-set.json", range(29, 51), 50),
+        ("japanese-original-reader-vol1", "japanese-full/exercise-set.json", range(1, 51), 0),
+        ("japanese-original-reader-vol2", "japanese-full/exercise-set.json", range(1, 51), 50),
     ],
     "heb": [
         ("hebrew-original-reader-50-lessons", "hebrew-full/exercise-set.json", range(1, 51), 0),

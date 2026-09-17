@@ -59,9 +59,9 @@ TOLERANCE_MM = 2.0
 # 就多兩行「找不到 PDF」——一支永遠紅的稽核等於沒有稽核。
 BOOKS = (
     ["hebrew-original-reader-50-lessons"]
-    + [f"greek-original-reader-vol{n}" for n in range(1, 5)]
-    + [f"latin-original-reader-vol{n}" for n in range(1, 4)]
-    + [f"japanese-original-reader-vol{n}" for n in range(1, 5)]
+    + [f"greek-original-reader-vol{n}" for n in range(1, 3)]
+    + [f"latin-original-reader-vol{n}" for n in range(1, 3)]
+    + [f"japanese-original-reader-vol{n}" for n in range(1, 3)]
 )
 
 # 擁有者 2026-09-17 定的兩條硬規矩。

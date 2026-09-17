@@ -57,10 +57,21 @@ PERSON = "其他人名"
 # 拉丁上冊 585 條裡有 523 條就是這樣被說成人名的。
 UNSORTED = "待歸類"
 
-ORDER = [PATRIARCH, KING, APOSTLE, BISHOP, FATHER, PERSON, NATION, PLACE, DEITY]
+# 使用者 2026-08-29 把「族長與先知」拆成「先祖與族長」與「先知」
+# （fix_hebrew_proper_names.ANCESTORS／PROPHETS 就是那兩組）。
+# 🚨 PRINT_ORDER 當時沒跟著加這兩個名字，於是希伯來專名表最大的兩節（先祖與族長
+# 33 條、先知 6 條）掉進「不認得的就排在最後」那條尾巴裡，次序變成插入順序。
+# 那個錯一直沒有人看見，因為附錄表從那次之後就沒有重建過。舊名留著不刪：還在用
+# 舊分類的資料照樣排得到位置。
+ANCESTOR = "先祖與族長"
+PROPHET = "先知"
+FESTIVAL = "節期與聖日"
+
+ORDER = [PATRIARCH, ANCESTOR, PROPHET, KING, APOSTLE, BISHOP, FATHER, PERSON,
+         NATION, PLACE, DEITY]
 # 印出來的次序：先地理、再神名、再人名由具體到籠統，待歸類殿後。
-PRINT_ORDER = [NATION, PLACE, DEITY, PATRIARCH, KING, APOSTLE, BISHOP, FATHER,
-               PERSON, "節期與聖日", UNSORTED]
+PRINT_ORDER = [NATION, PLACE, DEITY, PATRIARCH, ANCESTOR, KING, PROPHET,
+               APOSTLE, BISHOP, FATHER, PERSON, FESTIVAL, UNSORTED]
 
 # 國名那一類收的 place_type
 NATION_TYPES = {"國名", "帝國", "王國", "政權", "哈里發國", "城邦", "地區／王國"}
