@@ -71,7 +71,13 @@ NVIDIA_KEYS = [v for k, v in sorted(os.environ.items())
 GEMINI_MODEL = os.environ.get('GEMINI_MODEL', 'gemini-flash-latest')
 NVIDIA_URL = os.environ.get('NVIDIA_URL', 'https://integrate.api.nvidia.com/v1')
 # 2026-08-19：舊名 deepseek-ai/deepseek-v4-flash（無 -0731）已下架回 HTTP 410
-NVIDIA_MODEL = os.environ.get('NVIDIA_MODEL', 'nvidia/nemotron-3-super-120b-a12b')
+# 🚨 **引擎突然失效先驗模型名**（[[feedback_engine_nvidia_no_haiku]]）。
+#    2026-09-18 祆教翻譯整夜 0 段落地，錯誤是 429/503/504 看起來像配額或服務問題，
+#    實測才發現是模型名：同一把 key、同一個 endpoint —
+#      nvidia/nemotron-3-super-120b-a12b   → 503 Service temporarily overloaded（長期）
+#      deepseek-ai/deepseek-v4-flash-0731  → 200，且回的就是乾淨 JSON
+#    引擎鏈本來定的就是 deepseek-v4-flash-0731，不知何時被換成 nemotron。
+NVIDIA_MODEL = os.environ.get('NVIDIA_MODEL', 'deepseek-ai/deepseek-v4-flash-0731')
 
 _gi = 0
 _ni = 0
