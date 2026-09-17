@@ -73,6 +73,27 @@ USED = []          # 本份簡報實際用到的圖，供「圖片出處」頁�
 
 HEI = '微軟正黑體'
 KAI = '標楷體'
+# 🚨 標楷體沒有越南文的附加符號（ơ ư ạ ề），也沒有 Ā 這類轉寫用字。
+#    整行拉丁轉寫照 KAI 排會被字型回退切得七零八落（單字卡那邊踩過：
+#    `Āgama` 印成 `Ā gama`，見 [[feedback_ui_no_text_overflow]]）。
+LATIN = 'Noto Serif'
+
+_CJK = re.compile(r'[㐀-鿿豈-﫿　-〿＀-￯]')
+_LAT = re.compile(r'[A-Za-zÀ-ɏḀ-ỿ]')
+
+
+def is_latin_line(s):
+    """整行是不是拉丁轉寫（越南國語字、羅馬拼音、白話字…）。
+
+    🚨 **只有整行**才換字型。中西混排的行不能換——換了會讓中文變成回退字型，
+       那是把一個字型問題換成另一個，而且更難看出來。
+    """
+    t = (s or '').strip()
+    if not t or _CJK.search(t):
+        return False
+    return len(_LAT.findall(t)) >= 3
+
+
 # 配色照使用者自己那套 114-2 簡報：封面整片深色＋米白字，內容頁米白底、
 # 深色標題、近黑內文，標題下一條細線。四門課各一色，抽錯簡報一眼看得出來。
 PALETTES = {
@@ -193,6 +214,42 @@ GROW = 1.55
 GROW_MARGIN = 0.92
 
 
+def text_height(items, width_cm, sizes, spaces, line, indent_cm, k=1.0):
+    """這批條目在「字級 × k」之下實際佔的高度（pt）。
+
+    🚨 **這是唯一一份高度算式。** fit() 與 course_slides_fitcheck 都呼叫它，
+       誰都不准自己再抄一份——2026-09-17 就是因為 fitcheck 裡手抄了第二份、
+       沒跟上「拉丁行折半」，把一頁裝得下的越南文轉寫報成超出 122pt。
+       這與「s_bullets 與 split_long 必須吃同一個 body_h」是同一條規矩。
+
+    🚨 **每行塞得下幾個字會隨 k 改變**，所以不能只把 k=1 的高度乘上 k。
+       字放大兩成，每行就少塞兩成的字，本來一行的條目會變成兩行——
+       高度是跳著長的，不是線性的。
+    """
+    # PowerPoint 的中文行高＝字級 × 段落行距 × 字型係數。
+    # 🚨 2026-09-09 拿 PDF 實量：18.7pt 的行、行距 1.3，行高 28.6pt → 係數 1.20，
+    #    也就是 line=1.3 時每行 1.56 個字級。舊值 1.75 多算了兩成，
+    #    與同樣保守的 FIT_MARGIN 疊起來，讓「內文只用掉半頁、字卻縮到 18.7pt」。
+    #    改成 1.60（比實量再留 3%），餘裕交給 FIT_MARGIN 一個地方管就好。
+    LINE = 1.60 / 1.3 * line
+    tot = 0.0
+    for it in items:
+        lvl, txt = (it if isinstance(it, tuple) else (0, it))
+        if not txt:
+            tot += sizes[0] * 0.5 * k
+            continue
+        sz = sizes[lvl] * k
+        avail = (width_cm - indent_cm[min(lvl, 2) if lvl != 3 else 0]) * CM_PT
+        per = max(8, int(avail / sz))
+        # 拉丁字母約半個中文字寬，同一行塞得下兩倍的字。
+        # 不折半的話越南文那種整行轉寫會被高估成兩倍行數，字白白縮小。
+        if is_latin_line(txt):
+            per *= 2
+        rows = -(-(len(txt) + 2) // per)          # ＋2 是行首的項目符號
+        tot += rows * sz * LINE + spaces[lvl] * k
+    return tot
+
+
 def fit(items, width_cm, height_cm, sizes, spaces, line=1.3, indent_cm=(0, 0.9, 1.6),
         raw=False, grow=1.0):
     """估算這批條目實際佔幾行，回傳縮放係數（最小 FIT_FLOOR、最大 grow）。
@@ -210,27 +267,8 @@ def fit(items, width_cm, height_cm, sizes, spaces, line=1.3, indent_cm=(0, 0.9, 
     #    也就是 line=1.3 時每行 1.56 個字級。舊值 1.75 多算了兩成，
     #    與同樣保守的 FIT_MARGIN 疊起來，讓「內文只用掉半頁、字卻縮到 18.7pt」。
     #    改成 1.60（比實量再留 3%），餘裕交給 FIT_MARGIN 一個地方管就好。
-    LINE = 1.60 / 1.3 * line
-
     def height_at(k):
-        """字放大 k 倍之後實際佔的高度（pt）。
-
-        🚨 **每行塞得下幾個字會隨 k 改變**，所以不能只把 k=1 的高度乘上 k。
-        字放大兩成，每行就少塞兩成的字，本來一行的條目會變成兩行——
-        高度是跳著長的，不是線性的。
-        """
-        tot = 0.0
-        for it in items:
-            lvl, txt = (it if isinstance(it, tuple) else (0, it))
-            if not txt:
-                tot += sizes[0] * 0.5 * k
-                continue
-            sz = sizes[lvl] * k
-            avail = (width_cm - indent_cm[min(lvl, 2) if lvl != 3 else 0]) * CM_PT
-            per = max(8, int(avail / sz))
-            rows = -(-(len(txt) + 2) // per)      # ＋2 是行首的項目符號
-            tot += rows * sz * LINE + spaces[lvl] * k
-        return tot
+        return text_height(items, width_cm, sizes, spaces, line, indent_cm, k)
 
     total = height_at(1.0)
     if not total:
@@ -541,14 +579,18 @@ def s_quote(prs, title, lines, source=None, sub=None, alt=None):
         if not ln:
             put(tf, ' ', 10 * k, first=first, space_after=0)
         else:
-            put(tf, ln, QUOTE_SZ[0] * k, font=KAI, color=INK, first=first,
+            # 🚨 逐行選字型：整行拉丁轉寫走 Noto Serif，其餘照舊標楷體。
+            put(tf, ln, QUOTE_SZ[0] * k,
+                font=LATIN if is_latin_line(ln) else KAI,
+                color=INK, first=first,
                 space_after=QUOTE_SP[0] * k, line=QUOTE_LINE)
         first = False
     if alt:
         put(tf, alt[0], QUOTE_SZ[1] * k * 0.85, bold=True, color=GOLD,
             first=first, space_after=5, line=1.3)
         for ln in alt[1]:
-            put(tf, ln, QUOTE_SZ[1] * k, font=KAI, color=GRAY,
+            put(tf, ln, QUOTE_SZ[1] * k,
+                font=LATIN if is_latin_line(ln) else KAI, color=GRAY,
                 space_after=QUOTE_SP[1] * k, line=1.35)
     if source:
         tfs = textbox(s, Cm(1.5), Cm(top + h + 0.15), Cm(BOX_W), Cm(SRC_H - 0.2))

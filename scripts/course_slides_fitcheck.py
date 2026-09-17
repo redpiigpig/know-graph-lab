@@ -75,19 +75,10 @@ def check(key):
             items, w, h, sizes, sp, grow, line, ind = got
             k = R.fit(items, w, h * R.FIT_MARGIN, sizes, sp,
                       line=line, indent_cm=ind, grow=grow)
-            # 重算這個字級下真正的高度——fit 內部的 height_at 是區域函式，
-            # 這裡用同一條算式再算一次，當作獨立的第二意見。
-            LINE = 1.60 / 1.3 * line
-            tot = 0.0
-            for it in items:
-                lvl, txt = (it if isinstance(it, tuple) else (0, it))
-                if not txt:
-                    tot += sizes[0] * 0.5 * k
-                    continue
-                sz = sizes[lvl] * k
-                avail = (w - ind[min(lvl, 2) if lvl != 3 else 0]) * R.CM_PT
-                rows = -(-(len(txt) + 2) // max(8, int(avail / sz)))
-                tot += rows * sz * LINE + sp[lvl] * k
+            # 🚨 **不要在這裡抄一份高度算式。** 第一版就是抄的，結果沒跟上
+            #    「拉丁行折半」，把越南文那頁裝得下的內容報成超出 122pt。
+            #    高度只有 course_slides_pptx.text_height 一份。
+            tot = R.text_height(items, w, sizes, sp, line, ind, k)
             if tot > h * R.CM_PT:
                 bad += 1
                 over = tot - h * R.CM_PT
