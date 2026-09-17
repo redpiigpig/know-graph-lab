@@ -331,6 +331,7 @@ def translate_work(
     reupload_every: int = 12,
     max_total_paras: int | None = None,
     engine_name: str = "unknown",
+    shard: tuple[int, int] | None = None,
 ) -> int:
     """Fill 繁中 for one already-ingested work, resumably, reading the per-section
     caches ingest_work wrote. Re-uploads every `reupload_every` sections so the
@@ -341,6 +342,11 @@ def translate_work(
     while sec_path(work["slug"], i).exists():
         if max_total_paras is not None and translated >= max_total_paras:
             break
+        # 切片：只做屬於自己的節，別的行程做別的節。各 shard 寫的是不同的 sec 檔，
+        # 所以不會互相覆寫；上傳交給最後一支彙整（shard 一律 --no-upload）。
+        if shard is not None and i % shard[1] != shard[0]:
+            i += 1
+            continue
         cp = sec_path(work["slug"], i)
         s = json.loads(cp.read_text(encoding="utf-8"))
         en = s["en"]

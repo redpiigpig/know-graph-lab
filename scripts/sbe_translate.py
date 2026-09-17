@@ -253,6 +253,8 @@ def main():
     ap.add_argument("--no-upload", action="store_true",
                     help="translate/cache only; do not assemble or publish")
     ap.add_argument("--local-draft-status", action="store_true")
+    ap.add_argument("--shard", default="",
+                    help="i/n：只翻第 i、i+n、i+2n… 節，用來把一卷切給多個行程平行跑")
     args = ap.parse_args()
 
     by_slug = {w["slug"]: w for w in WORKS}
@@ -276,6 +278,13 @@ def main():
         ma.ingest_work(by_slug[args.ingest])
         return
 
+    shard = None
+    if args.shard:
+        idx, _, count = args.shard.partition("/")
+        shard = (int(idx), int(count))
+        if not 0 <= shard[0] < shard[1]:
+            ap.error("--shard 要寫成 i/n 且 0 <= i < n")
+
     only = {s.strip() for s in args.only.split(",") if s.strip()}
     scope = [w for w in WORKS if not only or w["slug"] in only]
 
@@ -288,7 +297,7 @@ def main():
             tp = make_sbe_engine(trad, backend=args.backend)
             print(f"▶ translate {w['slug']} — {w['title']} [{trad}]", flush=True)
             ma.ingest_work(w)  # idempotent; keeps English readable + cache fresh
-            ma.translate_work(w, tp)
+            ma.translate_work(w, tp, shard=shard)
             if not args.no_upload:
                 ma.assemble_and_upload(w)
 
