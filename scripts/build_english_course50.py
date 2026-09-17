@@ -569,6 +569,7 @@ def validate_exercises(ex: dict, keys: dict[str, int] | None = None) -> list[str
     errs += validate_overlap(ex)
     errs += validate_complements(ex)
     errs += validate_punctuation(ex)
+    errs += validate_hints(ex)
     bad = check_simplified(ex)
     if bad:
         errs.append("簡體字：" + "".join(bad))
@@ -704,6 +705,35 @@ def validate_punctuation(ex: dict) -> list[str]:
                     errs.append(f"{label}第 {i} 題的英文句混了中文標點："
                                 f"{_txt(item.get(field))[:30]}")
                     break
+    return errs
+
+
+# 中文提示要真的給得出答案。
+#
+# 2026-09-18 把 1,700 道題逐題校讀，117 處裡 62 處是「答案不只一個」，
+# 而其中兩類是機械抓得到的：
+#
+#   The ribbon is ____.（這條緞帶是_____的）   提示自己挖空，等於沒給提示
+#   This is the ______ number. (請填序數詞)     只說詞性，任何序數詞都對
+#
+# L06 十題填空有七題是第一種。學生填 blue 被算錯、填 red 算對，
+# 而題目根本沒說是哪個顏色。
+_HINT_BLANK = re.compile(r"[_＿]{2,}")
+_HINT_VAGUE = re.compile(r"^(請填|填入|選出|填上|請選)")
+
+
+def validate_hints(ex: dict) -> list[str]:
+    errs = []
+    for key, label in (("mcq", "選擇題"), ("fill", "填空")):
+        for i, item in enumerate(_dicts(ex, key), 1):
+            for m in re.finditer(r"[（(]([^）)]*)[）)]", _txt(item.get("q"))):
+                hint = m.group(1).strip()
+                if _HINT_BLANK.search(hint):
+                    errs.append(f"{label}第 {i} 題的中文提示自己挖空"
+                                f"（{hint[:20]}），等於沒給提示，答案不只一個")
+                elif _HINT_VAGUE.match(hint):
+                    errs.append(f"{label}第 {i} 題的中文提示只說詞性"
+                                f"（{hint[:20]}），沒說語意，答案不只一個")
     return errs
 
 
