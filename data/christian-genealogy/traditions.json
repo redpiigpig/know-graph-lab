@@ -15,7 +15,11 @@
       "downstream": "後來被誰接走（可多值）",
       "attributed_vs_actual": "借名文獻：掛名軌跡與實際神學歸屬分記，借名本身即譜系資料"
     },
-    "evidence_levels": ["text", "fragment", "hostile"],
+    "evidence_levels": [
+      "text",
+      "fragment",
+      "hostile"
+    ],
     "inclusion_rule": "立節點的條件是有存世的自產文獻；只靠敵證回推者不立",
     "model_claims": [
       {
@@ -25,369 +29,1427 @@
       }
     ]
   },
-
   "layer1": [
     {
-      "code": "β", "key": "beta", "name": "施洗約翰群體", "etymon": "Βαπτιστής", "region": "north",
+      "code": "β",
+      "key": "beta",
+      "name": "施洗約翰群體",
+      "etymon": "Βαπτιστής",
+      "region": "north",
       "keeps": "悔改、洗禮、末世迫近、最早門徒的師門轉移",
-      "anchors": ["mark 1:2-11", "john 1:19-42", "john 3:22-30", "acts 18:24-19:7"],
-      "sub": [
-        { "code": "β1", "name": "約旦河洗禮圈" },
-        { "code": "β2", "name": "轉入耶穌運動的門徒", "anchors": ["john 1:35-42"] },
-        { "code": "β3", "name": "以弗所的洗者門徒", "anchors": ["acts 19:1-7"] },
-        { "code": "β4", "name": "曼底安教", "evidence": "text",
-          "docs": [
-            { "corpus": "gnostic", "slug": "ginza-rba" },
-            { "corpus": "gnostic", "slug": "haran-gawaitha" },
-            { "corpus": "gnostic", "slug": "gnostic-john-the-baptizer-selections-from-the-mand-an-john-book" },
-            { "corpus": "gnostic", "slug": "messenger-of-light" },
-            { "corpus": "gnostic", "slug": "baptism-of-adam" }
-          ] }
+      "anchors": [
+        "mark 1:2-11",
+        "john 1:19-42",
+        "john 3:22-30",
+        "acts 18:24-19:7"
       ],
-      "docs": [{ "corpus": "apocrypha", "slug": "john-baptist-life" }]
+      "sub": [
+        {
+          "code": "β1",
+          "name": "約旦河洗禮圈"
+        },
+        {
+          "code": "β2",
+          "name": "轉入耶穌運動的門徒",
+          "anchors": [
+            "john 1:35-42"
+          ]
+        },
+        {
+          "code": "β3",
+          "name": "以弗所的洗者門徒",
+          "anchors": [
+            "acts 19:1-7"
+          ]
+        },
+        {
+          "code": "β4",
+          "name": "曼底安教",
+          "evidence": "text",
+          "docs": [
+            {
+              "corpus": "gnostic",
+              "slug": "ginza-rba"
+            },
+            {
+              "corpus": "gnostic",
+              "slug": "haran-gawaitha"
+            },
+            {
+              "corpus": "gnostic",
+              "slug": "gnostic-john-the-baptizer-selections-from-the-mand-an-john-book"
+            },
+            {
+              "corpus": "gnostic",
+              "slug": "messenger-of-light"
+            },
+            {
+              "corpus": "gnostic",
+              "slug": "baptism-of-adam"
+            }
+          ]
+        }
+      ],
+      "docs": [
+        {
+          "corpus": "apocrypha",
+          "slug": "john-baptist-life"
+        }
+      ]
     },
     {
-      "code": "κ", "key": "kappa", "name": "迦百農群體（＝Q 群體）", "etymon": "Καφαρναούμ", "region": "north",
+      "code": "κ",
+      "key": "kappa",
+      "name": "迦百農群體（＝Q 群體）",
+      "etymon": "Καφαρναούμ",
+      "region": "north",
       "keeps": "呼召、醫病、趕鬼、湖上行動、彼得家、會堂；並語錄：八福、主禱文、愛仇敵、差遣、趕鬼辯論",
-      "anchors": ["mark 1:16-2:12", "matt 4:13", "matt 8:5-13", "matt 11:23", "matt 5-7 || luke 6", "luke 10:1-16"],
+      "anchors": [
+        "mark 1:16-2:12",
+        "matt 4:13",
+        "matt 8:5-13",
+        "matt 11:23",
+        "matt 5-7 || luke 6",
+        "luke 10:1-16"
+      ],
       "model_claim": "capernaum_q_merge",
       "sub": [
-        { "code": "κ1", "name": "加利利行動記憶" },
-        { "code": "κ2", "name": "語錄層（Q）" },
-        { "code": "κ3", "name": "語錄的正典外出路",
+        {
+          "code": "κ1",
+          "name": "加利利行動記憶"
+        },
+        {
+          "code": "κ2",
+          "name": "語錄層（Q）"
+        },
+        {
+          "code": "κ3",
+          "name": "語錄的正典外出路",
           "docs": [
-            { "corpus": "apocrypha", "slug": "logia-unknown" },
-            { "corpus": "apocrypha", "slug": "faiyum" },
-            { "corpus": "apocrypha", "slug": "gthom", "note": "語錄層與 T1 共有" }
-          ] }
+            {
+              "corpus": "apocrypha",
+              "slug": "logia-unknown"
+            },
+            {
+              "corpus": "apocrypha",
+              "slug": "faiyum"
+            },
+            {
+              "corpus": "apocrypha",
+              "slug": "gthom",
+              "note": "語錄層與 T1 共有"
+            }
+          ]
+        }
       ]
     },
     {
-      "code": "μ", "key": "mu", "name": "抹大拉群體", "etymon": "Μαγδαληνή", "region": "north",
+      "code": "μ",
+      "key": "mu",
+      "name": "抹大拉群體",
+      "etymon": "Μαγδαληνή",
+      "region": "north",
       "keeps": "婦女資助網絡、十字架、埋葬、空墳、復活首證",
-      "anchors": ["luke 8:1-3", "mark 15:40-16:8", "john 19:25", "john 20:1-18"],
+      "anchors": [
+        "luke 8:1-3",
+        "mark 15:40-16:8",
+        "john 19:25",
+        "john 20:1-18"
+      ],
       "sub": [
-        { "code": "μ1", "name": "婦女資助網絡" },
-        { "code": "μ2", "name": "受難─埋葬─空墳見證" },
-        { "code": "μ3", "name": "抹大拉的正典外傳統",
+        {
+          "code": "μ1",
+          "name": "婦女資助網絡"
+        },
+        {
+          "code": "μ2",
+          "name": "受難─埋葬─空墳見證"
+        },
+        {
+          "code": "μ3",
+          "name": "抹大拉的正典外傳統",
           "docs": [
-            { "corpus": "apocrypha", "slug": "gmary" },
-            { "corpus": "apocrypha", "slug": "pistis-sophia", "note": "全書由抹大拉的馬利亞發問" }
-          ] }
+            {
+              "corpus": "apocrypha",
+              "slug": "gmary"
+            },
+            {
+              "corpus": "apocrypha",
+              "slug": "pistis-sophia",
+              "note": "全書由抹大拉的馬利亞發問"
+            }
+          ]
+        }
       ]
     },
     {
-      "code": "θ", "key": "theta", "name": "伯大尼群體", "etymon": "Βηθανία", "region": "south",
+      "code": "θ",
+      "key": "theta",
+      "name": "伯大尼群體",
+      "etymon": "Βηθανία",
+      "region": "south",
       "keeps": "接待、膏抹、拉撒路、進城前的南方基地",
-      "anchors": ["mark 11:1-11", "mark 14:3-9", "luke 10:38-42", "john 11-12"],
+      "anchors": [
+        "mark 11:1-11",
+        "mark 14:3-9",
+        "luke 10:38-42",
+        "john 11-12"
+      ],
       "sub": [
-        { "code": "θ1", "name": "接待與膏抹" },
-        { "code": "θ2", "name": "拉撒路" }
+        {
+          "code": "θ1",
+          "name": "接待與膏抹"
+        },
+        {
+          "code": "θ2",
+          "name": "拉撒路"
+        }
       ],
       "docs": [],
       "note": "唯一被正典完全吸收、沒有留下自己文獻的地方群體"
     },
     {
-      "code": "σ", "key": "sigma", "name": "公會群體", "etymon": "Συνέδριον", "region": "south",
+      "code": "σ",
+      "key": "sigma",
+      "name": "公會群體",
+      "etymon": "Συνέδριον",
+      "region": "south",
       "keeps": "議會內部的同情者與異議：夜訪、聖殿與節期辯論、安葬、公會前受審的內情",
-      "anchors": ["john 3:1-21", "john 7:45-52", "john 19:38-42", "mark 15:42-47", "john 18:15-27", "acts 5:34-39"],
+      "anchors": [
+        "john 3:1-21",
+        "john 7:45-52",
+        "john 19:38-42",
+        "mark 15:42-47",
+        "john 18:15-27",
+        "acts 5:34-39"
+      ],
       "sub": [
-        { "code": "σ1", "name": "議會內同情者（尼哥底母、亞利馬太約瑟）" },
-        { "code": "σ2", "name": "認識大祭司的門徒", "same_as": "O3" },
-        { "code": "σ3", "name": "彼拉多文獻圈",
+        {
+          "code": "σ1",
+          "name": "議會內同情者（尼哥底母、亞利馬太約瑟）"
+        },
+        {
+          "code": "σ2",
+          "name": "認識大祭司的門徒",
+          "same_as": "O3"
+        },
+        {
+          "code": "σ3",
+          "name": "彼拉多文獻圈",
           "docs": [
-            { "corpus": "apocrypha", "slug": "gnicodemus" },
-            { "corpus": "apocrypha", "slug": "joseph-arimathea" },
-            { "corpus": "apocrypha", "slug": "pilate-claudius" },
-            { "corpus": "apocrypha", "slug": "pilate-tiberius" },
-            { "corpus": "apocrypha", "slug": "pilate-herod" },
-            { "corpus": "apocrypha", "slug": "vengeance-savior" }
-          ] }
+            {
+              "corpus": "apocrypha",
+              "slug": "gnicodemus"
+            },
+            {
+              "corpus": "apocrypha",
+              "slug": "joseph-arimathea"
+            },
+            {
+              "corpus": "apocrypha",
+              "slug": "pilate-claudius"
+            },
+            {
+              "corpus": "apocrypha",
+              "slug": "pilate-tiberius"
+            },
+            {
+              "corpus": "apocrypha",
+              "slug": "pilate-herod"
+            },
+            {
+              "corpus": "apocrypha",
+              "slug": "vengeance-savior"
+            }
+          ]
+        }
       ]
     },
     {
-      "code": "υ", "key": "upsilon", "name": "馬可樓群體", "etymon": "ὑπερῷον", "region": "south",
+      "code": "υ",
+      "key": "upsilon",
+      "name": "馬可樓群體",
+      "etymon": "ὑπερῷον",
+      "region": "south",
       "keeps": "樓房場所記憶：逾越節晚餐、復活顯現、五旬節、初期團契禱告與擘餅",
-      "anchors": ["mark 14:12-26", "luke 22:7-38", "luke 24:33-49", "acts 1:13-14", "acts 2:1-4", "acts 12:12"],
+      "anchors": [
+        "mark 14:12-26",
+        "luke 22:7-38",
+        "luke 24:33-49",
+        "acts 1:13-14",
+        "acts 2:1-4",
+        "acts 12:12"
+      ],
       "sub": [
-        { "code": "υ1", "name": "逾越節晚餐樓房" },
-        { "code": "υ2", "name": "復活顯現與五旬節" },
-        { "code": "υ3", "name": "馬可家", "anchors": ["acts 12:12"] },
-        { "code": "υ4", "name": "樓房傳統的正典外延伸",
+        {
+          "code": "υ1",
+          "name": "逾越節晚餐樓房"
+        },
+        {
+          "code": "υ2",
+          "name": "復活顯現與五旬節"
+        },
+        {
+          "code": "υ3",
+          "name": "馬可家",
+          "anchors": [
+            "acts 12:12"
+          ]
+        },
+        {
+          "code": "υ4",
+          "name": "樓房傳統的正典外延伸",
           "docs": [
-            { "corpus": "apocrypha", "slug": "q-secret-mark" },
-            { "corpus": "apocrypha", "slug": "epistula-apostolorum" }
-          ] }
+            {
+              "corpus": "apocrypha",
+              "slug": "q-secret-mark"
+            },
+            {
+              "corpus": "apocrypha",
+              "slug": "epistula-apostolorum"
+            }
+          ]
+        }
       ]
     }
   ],
-
   "layer2": [
     {
-      "code": "J", "name": "雅各群體", "authority": "耶穌血親、復活顯現、耶路撒冷領導",
+      "code": "J",
+      "name": "雅各群體",
+      "authority": "耶穌血親、復活顯現、耶路撒冷領導",
       "sub": [
-        { "code": "J1", "name": "雅各本人與耶路撒冷母會", "books": ["jas"] },
-        { "code": "J2", "name": "耶穌家族", "books": ["jude"],
-          "docs": [{ "corpus": "apocrypha", "slug": "protoevangelium-james" }] },
-        { "code": "J3", "name": "M 猶太基督徒語錄層", "flows_into": "P3" },
-        { "code": "J4", "name": "遺訓‧兩條道路教理層",
-          "docs": [{ "corpus": "apocrypha", "slug": "didache" }] },
-        { "code": "J5", "name": "拿撒勒派", "evidence": "fragment",
+        {
+          "code": "J1",
+          "name": "雅各本人與耶路撒冷母會",
+          "books": [
+            "jas"
+          ]
+        },
+        {
+          "code": "J2",
+          "name": "耶穌家族",
+          "books": [
+            "jude"
+          ],
           "docs": [
-            { "corpus": "apocrypha", "slug": "gnazarenes" },
-            { "corpus": "apocrypha", "slug": "ghebrews", "note": "J5／J6 之間" }
-          ] },
-        { "code": "J6", "name": "伊便尼派", "evidence": "fragment", "dual_parent": ["J", "P3"],
+            {
+              "corpus": "apocrypha",
+              "slug": "protoevangelium-james"
+            }
+          ]
+        },
+        {
+          "code": "J3",
+          "name": "M 猶太基督徒語錄層",
+          "flows_into": "P3"
+        },
+        {
+          "code": "J4",
+          "name": "遺訓‧兩條道路教理層",
+          "docs": [
+            {
+              "corpus": "apocrypha",
+              "slug": "didache"
+            }
+          ]
+        },
+        {
+          "code": "J5",
+          "name": "拿撒勒派",
+          "evidence": "fragment",
+          "docs": [
+            {
+              "corpus": "apocrypha",
+              "slug": "gnazarenes"
+            },
+            {
+              "corpus": "apocrypha",
+              "slug": "ghebrews",
+              "note": "J5／J6 之間"
+            }
+          ]
+        },
+        {
+          "code": "J6",
+          "name": "伊便尼派",
+          "evidence": "fragment",
+          "dual_parent": [
+            "J",
+            "P3"
+          ],
           "note": "名字即窮人（אביונים），接雅各軌跡的記念窮人線；文本卻是刪改過的馬太",
-          "docs": [{ "corpus": "apocrypha", "slug": "gebionites" }] },
-        { "code": "J7", "name": "以利克塞派", "evidence": "hostile", "downstream": ["G4"] },
-        { "code": "J8", "name": "偽克萊門文獻群",
-          "docs": [{ "corpus": "apocrypha", "slug": "clement-romance" }] }
+          "docs": [
+            {
+              "corpus": "apocrypha",
+              "slug": "gebionites"
+            }
+          ]
+        },
+        {
+          "code": "J7",
+          "name": "以利克塞派",
+          "evidence": "hostile",
+          "downstream": [
+            "G4"
+          ]
+        },
+        {
+          "code": "J8",
+          "name": "偽克萊門文獻群",
+          "docs": [
+            {
+              "corpus": "apocrypha",
+              "slug": "clement-romance"
+            }
+          ]
+        }
       ],
       "attributed_docs": [
-        { "corpus": "apocrypha", "slug": "apoc-james-1", "actual": "G1" },
-        { "corpus": "apocrypha", "slug": "apoc-james-2", "actual": "G1" },
-        { "corpus": "gnostic", "slug": "apocryphon-of-james", "actual": "G2" }
+        {
+          "corpus": "apocrypha",
+          "slug": "apoc-james-1",
+          "actual": "G1"
+        },
+        {
+          "corpus": "apocrypha",
+          "slug": "apoc-james-2",
+          "actual": "G1"
+        },
+        {
+          "corpus": "gnostic",
+          "slug": "apocryphon-of-james",
+          "actual": "G2"
+        }
       ]
     },
     {
-      "code": "P", "name": "彼得群體", "authority": "十二門徒首席、迦百農記憶、復活見證",
+      "code": "P",
+      "name": "彼得群體",
+      "authority": "十二門徒首席、迦百農記憶、復活見證",
       "alt_code_option": "K（Κηφᾶς 磯法），若保羅改回 P",
       "sub": [
-        { "code": "P1", "name": "彼得本人與十二門徒團" },
-        { "code": "P2", "name": "羅馬彼得支系 → 馬可群體", "books": ["mark", "1pet"],
-          "docs": [{ "corpus": "apocrypha", "slug": "acts-peter" }] },
-        { "code": "P3", "name": "安提阿彼得支系 → 馬太群體", "books": ["matt"] },
-        { "code": "P4", "name": "晚期托名彼得層", "books": ["2pet"],
+        {
+          "code": "P1",
+          "name": "彼得本人與十二門徒團"
+        },
+        {
+          "code": "P2",
+          "name": "羅馬彼得支系 → 馬可群體",
+          "books": [
+            "mark",
+            "1pet"
+          ],
           "docs": [
-            { "corpus": "apocrypha", "slug": "gpet" },
-            { "corpus": "apocrypha", "slug": "apoc-peter" },
-            { "corpus": "apocrypha", "slug": "q-peter-preaching" }
-          ] }
+            {
+              "corpus": "apocrypha",
+              "slug": "acts-peter"
+            }
+          ]
+        },
+        {
+          "code": "P3",
+          "name": "安提阿彼得支系 → 馬太群體",
+          "books": [
+            "matt"
+          ]
+        },
+        {
+          "code": "P4",
+          "name": "晚期托名彼得層",
+          "books": [
+            "2pet"
+          ],
+          "docs": [
+            {
+              "corpus": "apocrypha",
+              "slug": "gpet"
+            },
+            {
+              "corpus": "apocrypha",
+              "slug": "apoc-peter"
+            },
+            {
+              "corpus": "apocrypha",
+              "slug": "q-peter-preaching"
+            }
+          ]
+        }
       ],
       "attributed_docs": [
-        { "corpus": "apocrypha", "slug": "apoc-peter-cop", "actual": "G1" },
-        { "corpus": "apocrypha", "slug": "peter-philip", "actual": "G1", "also": "F" }
+        {
+          "corpus": "apocrypha",
+          "slug": "apoc-peter-cop",
+          "actual": "G1"
+        },
+        {
+          "corpus": "apocrypha",
+          "slug": "peter-philip",
+          "actual": "G1",
+          "also": "F"
+        }
       ]
     },
     {
-      "code": "U", "name": "保羅群體", "authority": "復活顯現、外邦宣教、城市教會",
+      "code": "U",
+      "name": "保羅群體",
+      "authority": "復活顯現、外邦宣教、城市教會",
       "sub": [
-        { "code": "U1", "name": "保羅本人", "books": ["rom", "1cor", "2cor", "gal", "phil", "1thess", "phlm"] },
-        { "code": "U2", "name": "各地保羅教會", "cities": ["帖撒羅尼迦", "加拉太", "哥林多", "腓立比", "歌羅西─老底嘉", "以弗所", "羅馬"] },
-        { "code": "U3", "name": "次保羅群體", "books": ["eph", "col", "2thess"] },
-        { "code": "U4", "name": "教牧群體", "books": ["1tim", "2tim", "titus"],
-          "docs": [{ "corpus": "apocrypha", "slug": "pseudo-titus" }] },
-        { "code": "U5", "name": "路加群體", "books": ["luke", "acts"],
+        {
+          "code": "U1",
+          "name": "保羅本人",
+          "books": [
+            "rom",
+            "1cor",
+            "2cor",
+            "gal",
+            "phil",
+            "1thess",
+            "phlm"
+          ]
+        },
+        {
+          "code": "U2",
+          "name": "各地保羅教會",
+          "cities": [
+            "帖撒羅尼迦",
+            "加拉太",
+            "哥林多",
+            "腓立比",
+            "歌羅西─老底嘉",
+            "以弗所",
+            "羅馬"
+          ]
+        },
+        {
+          "code": "U3",
+          "name": "次保羅群體",
+          "books": [
+            "eph",
+            "col",
+            "2thess"
+          ]
+        },
+        {
+          "code": "U4",
+          "name": "教牧群體",
+          "books": [
+            "1tim",
+            "2tim",
+            "titus"
+          ],
+          "docs": [
+            {
+              "corpus": "apocrypha",
+              "slug": "pseudo-titus"
+            }
+          ]
+        },
+        {
+          "code": "U5",
+          "name": "路加群體",
+          "books": [
+            "luke",
+            "acts"
+          ],
           "sub": [
-            { "code": "U5a", "name": "L 特有材料" },
-            { "code": "U5b", "name": "行傳「我們」旅行來源" }
-          ] }
+            {
+              "code": "U5a",
+              "name": "L 特有材料"
+            },
+            {
+              "code": "U5b",
+              "name": "行傳「我們」旅行來源"
+            }
+          ]
+        }
       ],
       "docs": [
-        { "corpus": "apocrypha", "slug": "acts-paul" },
-        { "corpus": "apocrypha", "slug": "3-cor" },
-        { "corpus": "apocrypha", "slug": "q-laodicea" },
-        { "corpus": "apocrypha", "slug": "seneca-paul" },
-        { "corpus": "apocrypha", "slug": "apoc-paul" }
+        {
+          "corpus": "apocrypha",
+          "slug": "acts-paul"
+        },
+        {
+          "corpus": "apocrypha",
+          "slug": "3-cor"
+        },
+        {
+          "corpus": "apocrypha",
+          "slug": "q-laodicea"
+        },
+        {
+          "corpus": "apocrypha",
+          "slug": "seneca-paul"
+        },
+        {
+          "corpus": "apocrypha",
+          "slug": "apoc-paul"
+        }
       ],
       "attributed_docs": [
-        { "corpus": "apocrypha", "slug": "apoc-paul-cop", "actual": "G1" },
-        { "corpus": "gnostic", "slug": "prayer-of-the-apostle-paul", "actual": "G2" }
+        {
+          "corpus": "apocrypha",
+          "slug": "apoc-paul-cop",
+          "actual": "G1"
+        },
+        {
+          "corpus": "gnostic",
+          "slug": "prayer-of-the-apostle-paul",
+          "actual": "G2"
+        }
       ]
     },
     {
-      "code": "O", "name": "約翰群體", "authority": "主所愛門徒的見證、亞細亞長老與先知傳統",
+      "code": "O",
+      "name": "約翰群體",
+      "authority": "主所愛門徒的見證、亞細亞長老與先知傳統",
       "sub": [
-        { "code": "O2", "name": "拿但業─迦拿線", "anchors": ["john 1:43-51", "john 2:1-11", "john 4:46-54", "john 21:2"] },
-        { "code": "O3", "name": "祭司約翰（認識大祭司的門徒）", "same_as": "σ2", "anchors": ["john 18:15-27"] },
-        { "code": "O4", "name": "主所愛的門徒與神蹟資料" },
-        { "code": "O5", "name": "約翰福音編輯圈", "books": ["john"] },
-        { "code": "O6", "name": "長老約翰", "books": ["1john", "2john", "3john"] },
-        { "code": "O7", "name": "先知約翰", "books": ["rev"] },
-        { "code": "O8", "name": "第廿一章附錄層", "anchors": ["john 21"] }
+        {
+          "code": "O2",
+          "name": "拿但業─迦拿線",
+          "anchors": [
+            "john 1:43-51",
+            "john 2:1-11",
+            "john 4:46-54",
+            "john 21:2"
+          ]
+        },
+        {
+          "code": "O3",
+          "name": "祭司約翰（認識大祭司的門徒）",
+          "same_as": "σ2",
+          "anchors": [
+            "john 18:15-27"
+          ]
+        },
+        {
+          "code": "O4",
+          "name": "主所愛的門徒與神蹟資料"
+        },
+        {
+          "code": "O5",
+          "name": "約翰福音編輯圈",
+          "books": [
+            "john"
+          ]
+        },
+        {
+          "code": "O6",
+          "name": "長老約翰",
+          "books": [
+            "1john",
+            "2john",
+            "3john"
+          ]
+        },
+        {
+          "code": "O7",
+          "name": "先知約翰",
+          "books": [
+            "rev"
+          ]
+        },
+        {
+          "code": "O8",
+          "name": "第廿一章附錄層",
+          "anchors": [
+            "john 21"
+          ]
+        }
       ],
       "docs": [
-        { "corpus": "apocrypha", "slug": "acts-john" },
-        { "corpus": "gnostic", "slug": "hymn-of-jesus-and-the-mystery-of-the-cross" }
+        {
+          "corpus": "apocrypha",
+          "slug": "acts-john"
+        },
+        {
+          "corpus": "gnostic",
+          "slug": "hymn-of-jesus-and-the-mystery-of-the-cross"
+        }
       ],
       "attributed_docs": [
-        { "corpus": "apocrypha", "slug": "john-apocryphon", "actual": "G1" }
+        {
+          "corpus": "apocrypha",
+          "slug": "john-apocryphon",
+          "actual": "G1"
+        }
       ]
     },
     {
-      "code": "T", "name": "多馬群體", "authority": "雙生使徒與秘密語錄權威", "region": "敘利亞、埃德薩",
+      "code": "T",
+      "name": "多馬群體",
+      "authority": "雙生使徒與秘密語錄權威",
+      "region": "敘利亞、埃德薩",
       "sub": [
-        { "code": "T1", "name": "語錄多馬",
+        {
+          "code": "T1",
+          "name": "語錄多馬",
           "docs": [
-            { "corpus": "apocrypha", "slug": "gthom" },
-            { "corpus": "gnostic", "slug": "book-of-thomas-the-contender" }
-          ] },
-        { "code": "T2", "name": "敘利亞行傳多馬",
+            {
+              "corpus": "apocrypha",
+              "slug": "gthom"
+            },
+            {
+              "corpus": "gnostic",
+              "slug": "book-of-thomas-the-contender"
+            }
+          ]
+        },
+        {
+          "code": "T2",
+          "name": "敘利亞行傳多馬",
           "docs": [
-            { "corpus": "apocrypha", "slug": "acts-thomas" },
-            { "corpus": "gnostic", "slug": "hymn-of-the-pearl" },
-            { "corpus": "apocrypha", "slug": "infancy-thomas" },
-            { "corpus": "apocrypha", "slug": "apoc-thomas" }
-          ] }
+            {
+              "corpus": "apocrypha",
+              "slug": "acts-thomas"
+            },
+            {
+              "corpus": "gnostic",
+              "slug": "hymn-of-the-pearl"
+            },
+            {
+              "corpus": "apocrypha",
+              "slug": "infancy-thomas"
+            },
+            {
+              "corpus": "apocrypha",
+              "slug": "apoc-thomas"
+            }
+          ]
+        }
       ],
-      "downstream": ["G4"]
-    },
-    {
-      "code": "B", "name": "巴拿巴─亞波羅群體", "authority": "海外利未人、希臘化猶太教師、高等解經",
-      "sub": [
-        { "code": "B1", "name": "巴拿巴‧塞浦路斯差傳線",
-          "docs": [{ "corpus": "fathers", "slug": "barnabas", "todo": "從 /fathers（ANF 卷一）接入" }] },
-        { "code": "B2", "name": "亞波羅‧亞歷山大解經線", "books": ["heb"],
-          "docs": [{ "corpus": "gnostic", "slug": "odes-of-solomon" }] }
+      "downstream": [
+        "G4"
       ]
     },
     {
-      "code": "F", "name": "司提反─腓力群體", "authority": "希臘化信徒、聖靈、先知與跨界洗禮",
+      "code": "B",
+      "name": "巴拿巴─亞波羅群體",
+      "authority": "海外利未人、希臘化猶太教師、高等解經",
       "sub": [
-        { "code": "F1", "name": "司提反與希臘化七執事", "anchors": ["acts 6:1-8:3"] },
-        { "code": "F2", "name": "腓力‧撒馬利亞‧衣索比亞太監", "anchors": ["acts 8:4-40"],
-          "docs": [{ "corpus": "apocrypha", "slug": "acts-philip" }] },
-        { "code": "F3", "name": "凱撒利亞腓力家族與說預言的女兒", "anchors": ["acts 21:8-9"] }
+        {
+          "code": "B1",
+          "name": "巴拿巴‧塞浦路斯差傳線",
+          "docs": [
+            {
+              "corpus": "fathers",
+              "slug": "barnabas",
+              "todo": "從 /fathers（ANF 卷一）接入"
+            }
+          ]
+        },
+        {
+          "code": "B2",
+          "name": "亞波羅‧亞歷山大解經線",
+          "books": [
+            "heb"
+          ],
+          "docs": [
+            {
+              "corpus": "gnostic",
+              "slug": "odes-of-solomon"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "F",
+      "name": "司提反─腓力群體",
+      "authority": "希臘化信徒、聖靈、先知與跨界洗禮",
+      "sub": [
+        {
+          "code": "F1",
+          "name": "司提反與希臘化七執事",
+          "anchors": [
+            "acts 6:1-8:3"
+          ]
+        },
+        {
+          "code": "F2",
+          "name": "腓力‧撒馬利亞‧衣索比亞太監",
+          "anchors": [
+            "acts 8:4-40"
+          ],
+          "docs": [
+            {
+              "corpus": "apocrypha",
+              "slug": "acts-philip"
+            }
+          ]
+        },
+        {
+          "code": "F3",
+          "name": "凱撒利亞腓力家族與說預言的女兒",
+          "anchors": [
+            "acts 21:8-9"
+          ]
+        }
       ],
       "attributed_docs": [
-        { "corpus": "apocrypha", "slug": "gphilip", "actual": "G2" }
+        {
+          "corpus": "apocrypha",
+          "slug": "gphilip",
+          "actual": "G2"
+        }
       ]
     }
   ],
-
   "layer3": [
     {
-      "code": "G1", "name": "塞特派諾斯底", "independent": true,
+      "code": "G1",
+      "name": "塞特派諾斯底",
+      "independent": true,
       "docs": [
-        { "corpus": "gnostic", "slug": "secret-book-of-john" },
-        { "corpus": "gnostic", "slug": "hypostasis-of-the-archons" },
-        { "corpus": "gnostic", "slug": "on-the-origin-of-the-world" },
-        { "corpus": "gnostic", "slug": "apocalypse-of-adam" },
-        { "corpus": "gnostic", "slug": "three-steles-of-seth" },
-        { "corpus": "gnostic", "slug": "thought-of-norea" },
-        { "corpus": "gnostic", "slug": "paraphrase-of-shem" }
+        {
+          "corpus": "gnostic",
+          "slug": "secret-book-of-john"
+        },
+        {
+          "corpus": "gnostic",
+          "slug": "hypostasis-of-the-archons"
+        },
+        {
+          "corpus": "gnostic",
+          "slug": "on-the-origin-of-the-world"
+        },
+        {
+          "corpus": "gnostic",
+          "slug": "apocalypse-of-adam"
+        },
+        {
+          "corpus": "gnostic",
+          "slug": "three-steles-of-seth"
+        },
+        {
+          "corpus": "gnostic",
+          "slug": "thought-of-norea"
+        },
+        {
+          "corpus": "gnostic",
+          "slug": "paraphrase-of-shem"
+        }
       ]
     },
     {
-      "code": "G2", "name": "瓦倫廷派", "independent": true,
+      "code": "G2",
+      "name": "瓦倫廷派",
+      "independent": true,
       "docs": [
-        { "corpus": "gnostic", "slug": "gospel-of-truth" },
-        { "corpus": "gnostic", "slug": "gospel-of-philip" },
-        { "corpus": "gnostic", "slug": "tripartite-tractate" },
-        { "corpus": "gnostic", "slug": "ptolemy-letter-to-flora" },
-        { "corpus": "gnostic", "slug": "ptolemy-commentary-on-the-gospel-of-john-prologue" },
-        { "corpus": "gnostic", "slug": "heracleon-fragments-from-his-commentary-on-the-gospel-of-john" },
-        { "corpus": "gnostic", "slug": "theodotus-the-excerpta-ex-theodoto" },
-        { "corpus": "gnostic", "slug": "a-valentinian-exposition" }
+        {
+          "corpus": "gnostic",
+          "slug": "gospel-of-truth"
+        },
+        {
+          "corpus": "gnostic",
+          "slug": "gospel-of-philip"
+        },
+        {
+          "corpus": "gnostic",
+          "slug": "tripartite-tractate"
+        },
+        {
+          "corpus": "gnostic",
+          "slug": "ptolemy-letter-to-flora"
+        },
+        {
+          "corpus": "gnostic",
+          "slug": "ptolemy-commentary-on-the-gospel-of-john-prologue"
+        },
+        {
+          "corpus": "gnostic",
+          "slug": "heracleon-fragments-from-his-commentary-on-the-gospel-of-john"
+        },
+        {
+          "corpus": "gnostic",
+          "slug": "theodotus-the-excerpta-ex-theodoto"
+        },
+        {
+          "corpus": "gnostic",
+          "slug": "a-valentinian-exposition"
+        }
       ]
     },
     {
-      "code": "G3", "name": "赫密士文集", "independent": true, "note": "非基督宗教的平行系統",
+      "code": "G3",
+      "name": "赫密士文集",
+      "independent": true,
+      "note": "非基督宗教的平行系統",
       "docs_category": "hermetica"
     },
     {
-      "code": "G4", "name": "摩尼教", "independent": true, "dual_parent": ["J7", "T"],
+      "code": "G4",
+      "name": "摩尼教",
+      "independent": true,
+      "dual_parent": [
+        "J7",
+        "T"
+      ],
       "note": "摩尼出身以利克塞派（約旦河東洗禮主義），文本卻大量繼承多馬傳統（多馬詩篇、珍珠頌歌）",
       "docs_category": "manichaean"
     }
   ],
-
   "city_traditions": {
-    "_note": "文章第五節的八個地理神學中心。這一層的時間跨度到尼西亞（325），比文獻母體的一二世紀窗口長——所以一座城在母體裡沒有文獻，不等於這座城在二三世紀沒有傳統。人物欄的 in_window 標示該人的著作是否落在 1–200 CE 的文獻母體內。",
+    "_note": "文章第五節的八個地理神學中心。人物線列到尼西亞（325），少數列到該傳統的終點（如奧古斯丁 430）；文獻母體仍只收一二世紀，後期教父列名不掃文獻（使用者裁示 2026-09-17）。zh 取自 /translation-glossary 的 theologians.name_recommended；詞庫未收者 zh 留 null 並標 needs_naming，不自創譯名。in_window＝其著作落在 1–200 CE 文獻母體內。",
+    "name_authority": "theologians.name_recommended（詞庫優先於大藏經既有寫法）",
     "cities": [
       {
-        "key": "jerusalem", "name": "耶路撒冷", "from": ["J", "F1", "υ"],
-        "figures": [
-          { "name": "公義者雅各", "dates": "d. 62", "in_window": false, "note": "殉道早於任何存世文獻" },
-          { "name": "耶路撒冷主教名單", "dates": "1–2 世紀", "in_window": false, "note": "僅存於優西比烏《教會史》4.5，本身無存世文本" },
-          { "name": "耶路撒冷的區利羅", "dates": "約 313–386", "in_window": false }
+        "key": "jerusalem",
+        "name": "耶路撒冷",
+        "from": [
+          "J",
+          "F1",
+          "υ"
         ],
-        "note": "🚨 母體零文獻。70 年城破、母會流散，雅各軌跡保存得住記憶卻保存不住文獻——這是伊便尼派後來只能靠敵證重建的結構原因。"
+        "figures": [
+          {
+            "zh": "公義者雅各",
+            "en": "James the Just",
+            "died": 62,
+            "in_window": false,
+            "note": "殉道早於任何存世文獻"
+          },
+          {
+            "zh": null,
+            "en": "Symeon son of Clopas",
+            "died": 107,
+            "in_window": false,
+            "needs_naming": true,
+            "note": "傳為第二任主教，耶穌家族"
+          },
+          {
+            "zh": "耶路撒冷十五位割禮主教",
+            "en": "the fifteen circumcised bishops",
+            "died": 135,
+            "in_window": false,
+            "note": "僅存於優西比烏《教會史》4.5；巴柯巴之亂後母會結束猶太人主教序列"
+          },
+          {
+            "zh": null,
+            "en": "Narcissus of Jerusalem",
+            "died": 216,
+            "in_window": false,
+            "needs_naming": true
+          },
+          {
+            "zh": null,
+            "en": "Alexander of Jerusalem",
+            "died": 251,
+            "in_window": false,
+            "needs_naming": true,
+            "note": "建耶路撒冷圖書館，優西比烏取材於此"
+          },
+          {
+            "zh": null,
+            "en": "Macarius of Jerusalem",
+            "died": 335,
+            "in_window": false,
+            "needs_naming": true,
+            "note": "出席尼西亞會議；法規七給耶路撒冷榮譽即在其任內"
+          },
+          {
+            "zh": "耶路撒冷的區利羅",
+            "en": "Cyril of Jerusalem",
+            "died": 386,
+            "in_window": false
+          }
+        ],
+        "note": "🚨 母體零文獻。70 年城破、135 年再破，雅各軌跡保存得住記憶卻保存不住文獻——這是伊便尼派後來只能靠敵證重建的結構原因。"
       },
       {
-        "key": "antioch", "name": "安提阿", "from": ["P3", "J", "B1", "F1"],
+        "key": "antioch",
+        "name": "安提阿",
+        "from": [
+          "P3",
+          "J",
+          "B1",
+          "F1"
+        ],
         "figures": [
-          { "name": "安提阿的伊格那丟", "dates": "d. 約 107", "in_window": true },
-          { "name": "安提阿的提阿非羅", "dates": "約 180", "in_window": true },
-          { "name": "撒摩撒他的保羅", "dates": "3 世紀", "in_window": false },
-          { "name": "殉道者路迦努", "dates": "d. 312", "in_window": false },
-          { "name": "金口約翰", "dates": "約 347–407", "in_window": false }
+          {
+            "zh": "安提阿的伊格那丟",
+            "en": "Ignatius of Antioch",
+            "died": 110,
+            "in_window": true
+          },
+          {
+            "zh": "安提阿的提阿非羅",
+            "en": "Theophilus of Antioch",
+            "died": 180,
+            "in_window": true
+          },
+          {
+            "zh": null,
+            "en": "Serapion of Antioch",
+            "died": 211,
+            "in_window": false,
+            "needs_naming": true,
+            "note": "禁止羅蘇斯教會誦讀《彼得福音》——現存最早的「哪本書不准讀」判決"
+          },
+          {
+            "zh": null,
+            "en": "Babylas of Antioch",
+            "died": 253,
+            "in_window": false,
+            "needs_naming": true
+          },
+          {
+            "zh": null,
+            "en": "Paul of Samosata",
+            "died": 275,
+            "in_window": false,
+            "needs_naming": true,
+            "note": "268 年被安提阿會議罷黜"
+          },
+          {
+            "zh": null,
+            "en": "Lucian of Antioch",
+            "died": 312,
+            "in_window": false,
+            "needs_naming": true,
+            "note": "亞流與其同伴的老師，安提阿釋經學派之祖"
+          },
+          {
+            "zh": null,
+            "en": "Eustathius of Antioch",
+            "died": 337,
+            "in_window": false,
+            "needs_naming": true,
+            "note": "出席尼西亞"
+          },
+          {
+            "zh": "金口若望",
+            "en": "John Chrysostom",
+            "died": 407,
+            "in_window": false
+          },
+          {
+            "zh": "摩普綏提亞的狄奧多若",
+            "en": "Theodore of Mopsuestia",
+            "died": 428,
+            "in_window": false
+          }
         ]
       },
       {
-        "key": "rome", "name": "羅馬", "from": ["P2", "U"],
+        "key": "rome",
+        "name": "羅馬",
+        "from": [
+          "P2",
+          "U"
+        ],
         "figures": [
-          { "name": "羅馬的克勉", "dates": "約 96", "in_window": true },
-          { "name": "黑馬", "dates": "2 世紀中", "in_window": true },
-          { "name": "殉道者猶斯定", "dates": "約 100–165", "in_window": true, "note": "出身撒馬利亞，見 F2" },
-          { "name": "希波律陀", "dates": "約 170–235", "in_window": true },
-          { "name": "諾窪天", "dates": "3 世紀", "in_window": false }
+          {
+            "zh": "羅馬的克勉",
+            "en": "Clement of Rome",
+            "died": 101,
+            "in_window": true
+          },
+          {
+            "zh": "羅馬的黑馬",
+            "en": "Hermas",
+            "died": 155,
+            "in_window": true
+          },
+          {
+            "zh": "殉道者猶斯定",
+            "en": "Justin Martyr",
+            "died": 165,
+            "in_window": true,
+            "note": "出身撒馬利亞，見 F2"
+          },
+          {
+            "zh": null,
+            "en": "Callistus I",
+            "died": 222,
+            "in_window": false,
+            "needs_naming": true
+          },
+          {
+            "zh": "希波呂圖斯",
+            "en": "Hippolytus of Rome",
+            "died": 235,
+            "in_window": true,
+            "note": "對立主教；承愛任紐把亞細亞末世傳統帶進羅馬"
+          },
+          {
+            "zh": "諾窪天",
+            "en": "Novatian",
+            "died": 258,
+            "in_window": false,
+            "note": "對立主教；《論三位一體》是最早的拉丁文教義專著"
+          },
+          {
+            "zh": null,
+            "en": "Cornelius",
+            "died": 253,
+            "in_window": false,
+            "needs_naming": true
+          },
+          {
+            "zh": null,
+            "en": "Stephen I",
+            "died": 257,
+            "in_window": false,
+            "needs_naming": true,
+            "note": "與居普良爭異端洗禮是否有效——羅馬與迦太基兩座城的第一次正面衝突"
+          },
+          {
+            "zh": null,
+            "en": "Sylvester I",
+            "died": 335,
+            "in_window": false,
+            "needs_naming": true,
+            "note": "尼西亞會議時的羅馬主教，本人未出席"
+          }
         ]
       },
       {
-        "key": "ephesus", "name": "以弗所（亞細亞）", "from": ["O", "U2"],
+        "key": "ephesus",
+        "name": "以弗所（亞細亞）",
+        "from": [
+          "O",
+          "U2"
+        ],
         "figures": [
-          { "name": "希拉波立的帕皮亞", "dates": "約 110–130", "in_window": true, "note": "O6 長老約翰的唯一直接史料" },
-          { "name": "士每拿的坡旅甲", "dates": "d. 約 155", "in_window": true },
-          { "name": "撒狄斯的墨利托", "dates": "約 165", "in_window": true, "note": "四七日派逾越節傳統" },
-          { "name": "里昂的愛任紐", "dates": "約 130–202", "in_window": true, "note": "師承坡旅甲；里昂是亞細亞的女兒教會" },
-          { "name": "以弗所的波利克拉底", "dates": "約 190", "in_window": false, "note": "逾越節之爭中代表亞細亞對抗羅馬" }
+          {
+            "zh": "希拉波利的帕皮亞",
+            "en": "Papias of Hierapolis",
+            "died": 135,
+            "in_window": true,
+            "note": "O6 長老約翰的唯一直接史料"
+          },
+          {
+            "zh": "士每拿的坡旅甲",
+            "en": "Polycarp of Smyrna",
+            "died": 155,
+            "in_window": true
+          },
+          {
+            "zh": "撒狄斯的墨利托",
+            "en": "Melito of Sardis",
+            "died": 180,
+            "in_window": true,
+            "name_source": "大藏經（詞庫未收）",
+            "note": "四七日派逾越節傳統"
+          },
+          {
+            "zh": null,
+            "en": "Apollinaris Claudius of Hierapolis",
+            "died": 180,
+            "in_window": false,
+            "needs_naming": true
+          },
+          {
+            "zh": null,
+            "en": "Polycrates of Ephesus",
+            "died": 196,
+            "in_window": false,
+            "needs_naming": true,
+            "note": "逾越節之爭中代表亞細亞正面抗拒羅馬的維克多——城市傳統之爭最赤裸的一次"
+          },
+          {
+            "zh": "里昂的愛任紐",
+            "en": "Irenaeus of Lyon",
+            "died": 202,
+            "in_window": true,
+            "note": "師承坡旅甲；里昂是亞細亞的女兒教會"
+          },
+          {
+            "zh": null,
+            "en": "Pionius of Smyrna",
+            "died": 250,
+            "in_window": false,
+            "needs_naming": true
+          },
+          {
+            "zh": "行異能者格列高里",
+            "en": "Gregory Thaumaturgus",
+            "died": 270,
+            "in_window": false,
+            "note": "本都；俄利根門生，亞細亞與凱撒利亞兩線在他身上交會"
+          }
         ]
       },
       {
-        "key": "alexandria", "name": "亞歷山大", "from": ["B2", "P2"],
+        "key": "alexandria",
+        "name": "亞歷山大",
+        "from": [
+          "B2",
+          "P2"
+        ],
         "figures": [
-          { "name": "巴西理德", "dates": "2 世紀", "in_window": true, "note": "僅殘篇；不立節點" },
-          { "name": "瓦倫廷", "dates": "2 世紀", "in_window": true, "note": "見 G2" },
-          { "name": "潘代諾", "dates": "2 世紀末", "in_window": false },
-          { "name": "亞歷山卓的克勉", "dates": "約 150–215", "in_window": true },
-          { "name": "俄利根", "dates": "約 185–253", "in_window": false, "note": "232 年後移居凱撒利亞" },
-          { "name": "亞他那修", "dates": "約 296–373", "in_window": false }
+          {
+            "zh": "巴西理德",
+            "en": "Basilides",
+            "died": 145,
+            "in_window": true,
+            "name_source": "大藏經（詞庫未收）",
+            "note": "僅殘篇；依收錄規則不立節點"
+          },
+          {
+            "zh": "瓦倫廷",
+            "en": "Valentinus",
+            "died": 160,
+            "in_window": true,
+            "note": "見 G2"
+          },
+          {
+            "zh": null,
+            "en": "Pantaenus",
+            "died": 200,
+            "in_window": false,
+            "needs_naming": true,
+            "note": "傳為要理學校首任校長"
+          },
+          {
+            "zh": "亞歷山卓的革利免",
+            "en": "Clement of Alexandria",
+            "died": 215,
+            "in_window": true,
+            "note": "🚨 大藏經寫作「亞歷山卓的克勉」，與詞庫不一致，待大藏經那邊改"
+          },
+          {
+            "zh": "俄利根",
+            "en": "Origen",
+            "died": 254,
+            "in_window": false,
+            "note": "232 年後移居凱撒利亞"
+          },
+          {
+            "zh": "亞歷山卓的狄奧尼修",
+            "en": "Dionysius of Alexandria",
+            "died": 265,
+            "in_window": false
+          },
+          {
+            "zh": "亞歷山卓的皮埃里烏斯",
+            "en": "Pierius of Alexandria",
+            "died": 310,
+            "in_window": false
+          },
+          {
+            "zh": null,
+            "en": "Peter of Alexandria",
+            "died": 311,
+            "in_window": false,
+            "needs_naming": true
+          },
+          {
+            "zh": null,
+            "en": "Arius",
+            "died": 336,
+            "in_window": false,
+            "needs_naming": true,
+            "note": "尼西亞會議所針對者；出身亞歷山大、受教於安提阿的路迦努"
+          },
+          {
+            "zh": null,
+            "en": "Alexander of Alexandria",
+            "died": 328,
+            "in_window": false,
+            "needs_naming": true
+          },
+          {
+            "zh": "亞他那修",
+            "en": "Athanasius of Alexandria",
+            "died": 373,
+            "in_window": false
+          }
         ],
         "note": "母體 30 筆中 18 筆是諾斯底——正典側與諾斯底側在同一座城裡數量相當。"
       },
       {
-        "key": "edessa", "name": "埃德薩", "from": ["T"],
+        "key": "edessa",
+        "name": "埃德薩",
+        "from": [
+          "T"
+        ],
         "figures": [
-          { "name": "塔提安", "dates": "2 世紀", "in_window": true, "note": "《四福音合參》；敘利亞教會讀合參本直到五世紀" },
-          { "name": "巴戴桑", "dates": "154–222", "in_window": false },
-          { "name": "亞弗拉哈特", "dates": "4 世紀", "in_window": false },
-          { "name": "敘利亞的以法蓮", "dates": "約 306–373", "in_window": false }
+          {
+            "zh": "塔提安",
+            "en": "Tatian",
+            "died": 180,
+            "in_window": true,
+            "name_source": "大藏經（詞庫未收）",
+            "note": "《四福音合參》；敘利亞教會讀合參本直到五世紀"
+          },
+          {
+            "zh": "巴爾戴桑",
+            "en": "Bardaisan of Edessa",
+            "died": 222,
+            "in_window": false
+          },
+          {
+            "zh": null,
+            "en": "Jacob of Nisibis",
+            "died": 338,
+            "in_window": false,
+            "needs_naming": true,
+            "note": "出席尼西亞；敘利亞語教會在會議上的代表"
+          },
+          {
+            "zh": "波斯賢士阿弗拉哈特",
+            "en": "Aphrahat the Persian Sage",
+            "died": 345,
+            "in_window": false
+          },
+          {
+            "zh": "敘利亞的厄弗冷",
+            "en": "Ephrem the Syrian",
+            "died": 373,
+            "in_window": false
+          }
         ]
       },
       {
-        "key": "carthage", "name": "迦太基（北非拉丁）", "from": [],
+        "key": "carthage",
+        "name": "迦太基（北非拉丁）",
+        "from": [],
         "figures": [
-          { "name": "特土良", "dates": "約 155–220", "in_window": true, "note": "母體 15 筆中他一人佔 13 筆" },
-          { "name": "居普良", "dates": "約 200–258", "in_window": false, "note": "主教共融與「教會之外無救恩」；北非殉道傳統的制度化" },
-          { "name": "多納徒派爭議", "dates": "4 世紀", "in_window": false, "note": "叛教者所施聖事是否有效——迦太基傳統內部的分裂" },
-          { "name": "希波的奧古斯丁", "dates": "354–430", "in_window": false, "note": "北非拉丁傳統的終點與西方神學的起點；屬成書第3章以後" }
+          {
+            "zh": "特土良",
+            "en": "Tertullian",
+            "died": 220,
+            "in_window": true,
+            "note": "母體 15 筆中他一人佔 13 筆"
+          },
+          {
+            "zh": null,
+            "en": "Perpetua and Felicity",
+            "died": 203,
+            "in_window": false,
+            "needs_naming": true,
+            "note": "《受難記》含珀佩圖亞本人的獄中日記，是最早由女性親筆寫下的基督教文本之一"
+          },
+          {
+            "zh": "密努修‧斐力克斯",
+            "en": "Minucius Felix",
+            "died": 250,
+            "in_window": true
+          },
+          {
+            "zh": "居普良",
+            "en": "Cyprian of Carthage",
+            "died": 258,
+            "in_window": false,
+            "note": "主教共融與「教會之外無救恩」；把北非殉道傳統制度化"
+          },
+          {
+            "zh": "科摩狄安",
+            "en": "Commodian",
+            "died": 270,
+            "in_window": false
+          },
+          {
+            "zh": null,
+            "en": "Arnobius of Sicca",
+            "died": 330,
+            "in_window": false,
+            "needs_naming": true
+          },
+          {
+            "zh": null,
+            "en": "Lactantius",
+            "died": 325,
+            "in_window": false,
+            "needs_naming": true,
+            "note": "君士坦丁之子的教師，拉丁護教學在尼西亞前夕的頂點"
+          },
+          {
+            "zh": null,
+            "en": "Donatus Magnus",
+            "died": 355,
+            "in_window": false,
+            "needs_naming": true
+          },
+          {
+            "zh": "泰康尼斯",
+            "en": "Tyconius",
+            "died": 400,
+            "in_window": false,
+            "note": "多納徒派的解經家，其解經規則卻被奧古斯丁全盤接收"
+          },
+          {
+            "zh": "希波的奧古斯丁",
+            "en": "Augustine of Hippo",
+            "died": 430,
+            "in_window": false,
+            "note": "北非拉丁傳統的終點與西方神學的起點；屬成書第3章以後"
+          }
         ],
-        "note": "🚨 八城中唯一不上承任何使徒軌跡的一座——它沒有使徒創始傳說，靠的是拉丁語、殉道者與法學式神學自行長成。特土良→居普良→多納徒派→奧古斯丁是最連續的一條城市線。"
+        "note": "🚨 八城中唯一不上承任何使徒軌跡的一座——沒有使徒創始傳說，靠拉丁語、殉道者與法學式神學自行長成。特土良→居普良→多納徒派→奧古斯丁是最連續的一條城市線，而它的每一次轉折都繞著同一個問題：叛教與失格者所施的聖事還算不算數。"
       },
       {
-        "key": "caesarea", "name": "凱撒利亞", "from": ["F3"],
-        "figures": [
-          { "name": "傳福音的腓力與四個說預言的女兒", "dates": "1 世紀", "in_window": false, "note": "徒 21:8–9；這座城的使徒根就是 F3" },
-          { "name": "俄利根", "dates": "232 年後", "in_window": false },
-          { "name": "龐非勒", "dates": "d. 309", "in_window": false, "note": "整理俄利根遺產與抄本" },
-          { "name": "優西比烏", "dates": "約 260–339", "in_window": false }
+        "key": "caesarea",
+        "name": "凱撒利亞",
+        "from": [
+          "F3"
         ],
-        "note": "🚨 母體零文獻，但不是零傳統——它的使徒根在徒 21:8 的腓力家族，文獻要到三世紀俄利根移居後才長出來。八座城不是同時登場的。"
+        "figures": [
+          {
+            "zh": "傳福音的腓力與四個說預言的女兒",
+            "en": "Philip the Evangelist and his four prophesying daughters",
+            "died": null,
+            "in_window": false,
+            "note": "徒 21:8–9；這座城的使徒根就是 F3"
+          },
+          {
+            "zh": null,
+            "en": "Theophilus of Caesarea",
+            "died": 195,
+            "in_window": false,
+            "needs_naming": true,
+            "note": "主持巴勒斯坦會議，站在羅馬一方反對亞細亞的逾越節算法"
+          },
+          {
+            "zh": "俄利根",
+            "en": "Origen",
+            "died": 254,
+            "in_window": false,
+            "note": "232 年後定居於此，帶來亞歷山大的解經傳統"
+          },
+          {
+            "zh": null,
+            "en": "Pamphilus of Caesarea",
+            "died": 309,
+            "in_window": false,
+            "needs_naming": true,
+            "note": "整理俄利根遺產與抄本，凱撒利亞圖書館的建立者"
+          },
+          {
+            "zh": "該撒利亞的優西比烏",
+            "en": "Eusebius of Caesarea",
+            "died": 340,
+            "in_window": false,
+            "note": "教會史體裁的創始者；尼西亞會後寫給本教會的信保存了定文的解釋"
+          }
+        ],
+        "note": "🚨 母體零文獻，但不是零傳統——使徒根在徒 21:8 的腓力家族，文獻要到三世紀俄利根移居後才長出來。八座城不是同時登場的。"
       }
     ]
   },
-
   "excluded": [
-    { "name": "馬吉安派", "reason": "無自產文獻；《主福音》是刪改過的路加，現存內容全靠敵證回推" },
-    { "name": "孟他努／新先知運動", "reason": "只有敵證，無自產文獻" },
-    { "name": "卡特里派", "reason": "逾 325，屬成書第3章以後" },
-    { "name": "巴西里底", "reason": "確曾寫《福音書》與《釋義》二十四卷，但全佚；現存只有革利免《雜記》與希坡律陀所引殘篇，無存世自產文獻，依收錄規則不立節點" }
+    {
+      "name": "馬吉安派",
+      "reason": "無自產文獻；《主福音》是刪改過的路加，現存內容全靠敵證回推"
+    },
+    {
+      "name": "孟他努／新先知運動",
+      "reason": "只有敵證，無自產文獻"
+    },
+    {
+      "name": "卡特里派",
+      "reason": "逾 325，屬成書第3章以後"
+    },
+    {
+      "name": "巴西里底",
+      "reason": "確曾寫《福音書》與《釋義》二十四卷，但全佚；現存只有革利免《雜記》與希坡律陀所引殘篇，無存世自產文獻，依收錄規則不立節點"
+    }
   ],
-
   "hostile_sources": {
     "note": "愛任紐、希坡律陀、特土良等不是節點，是證據來源",
-    "corpus": "gnostic", "category": "polemics"
+    "corpus": "gnostic",
+    "category": "polemics"
   }
 }
