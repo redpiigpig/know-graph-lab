@@ -196,6 +196,11 @@
             <div v-else class="text-gray-400 text-sm py-8 text-center">計畫書載入失敗。</div>
           </div>
 
+          <!-- ── 譜系歸屬（〈從使徒到大公〉資料層）── -->
+          <div v-if="hasGenealogy" v-show="bookTab === 'genealogy'">
+            <GenealogyTable />
+          </div>
+
           <!-- ── 研究資料 ── -->
           <div v-show="bookTab === 'materials'">
             <div class="mb-4">
@@ -965,11 +970,14 @@ watch(bookDraftVersions, (versions) => {
 const litEntries = ref<LitEntry[]>([])
 const litLoading = ref(false)
 
-// 書籍計畫分頁（研究資料 / 碩士文稿 / 口述訪談 / 書摘與構思）
-type BookTab = 'proposal' | 'materials' | 'draft' | 'thesis' | 'interviews' | 'review' | 'notes'
+// 〈從使徒到大公〉的逐節譜系歸屬表（資料 data/christian-genealogy/web-summary.json）
+const hasGenealogy = computed(() => slug.value === 'christian-genealogy')
+
+// 書籍計畫分頁（研究資料 / 碩士文稿 / 口述訪談 / 譜系歸屬 / 書摘與構思）
+type BookTab = 'proposal' | 'materials' | 'draft' | 'thesis' | 'interviews' | 'review' | 'genealogy' | 'notes'
 const bookTab = ref<BookTab>('materials')
 const useBookTabs = computed(() =>
-  project.value?.kind !== 'paper' && !dialogueDays.value.length && (materialsAvailable.value || proposalAvailable.value))
+  project.value?.kind !== 'paper' && !dialogueDays.value.length && (materialsAvailable.value || proposalAvailable.value || hasGenealogy.value))
 const bookTabs = computed(() => {
   const tabs: { key: BookTab; label: string; badge?: string }[] = []
   if (proposalAvailable.value) tabs.push({ key: 'proposal', label: '研究計畫書' })
@@ -978,6 +986,7 @@ const bookTabs = computed(() => {
   if (thesisConf.value) tabs.push({ key: 'thesis', label: '碩士文稿' })
   if (showInterviews.value) tabs.push({ key: 'interviews', label: '口述訪談', badge: String(interviewsStore.published.length) })
   if (litEntries.value.length) tabs.push({ key: 'review', label: '研究回顧', badge: String(litEntries.value.length) })
+  if (hasGenealogy.value) tabs.push({ key: 'genealogy', label: '譜系歸屬', badge: '7,971' })
   if (user.value) tabs.push({ key: 'notes', label: '書摘與構思' })
   return tabs
 })
