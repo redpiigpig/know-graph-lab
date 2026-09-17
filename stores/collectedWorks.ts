@@ -2703,8 +2703,11 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1900,
           category: '聖書研究',
           languages: ['ja'],
-          status: 'planned',
-          note: '個人聖經研究誌全 357 號，無教會運動機關誌；精華收入《內村鑑三全集》（岩波 1932–33），archive.org 有多卷掃描。',
+          status: 'in-progress',
+          externalUrl: '/collected-works/uchimura/seisho-kenkyu',
+          note: '個人聖經研究誌全 357 號，無教會運動機關誌。原刊沒有可取得的整套掃描，'
+            + '但全集每卷末的「內容年譜」逐篇記著出處號數與年月，據此反推出分號目次：'
+            + '已還原 1,302 篇、涵蓋 345／357 號（原刊頁碼從缺）。點進去看目次。',
         },
         {
           title: '羅馬書之研究',
