@@ -630,9 +630,14 @@ def validate_direction(ex: dict) -> list[str]:
 # 第一課的 20 個字全是招呼語，模型硬把它們當補語用。其餘 49 課都沒有這個問題。
 # （He is sorry. 與 We are welcome. 是對的，所以不能整批禁掉 sorry／welcome。）
 NOT_COMPLEMENTS = {"hello", "hi", "goodbye", "thank", "please", "yes", "no",
-                   "meet", "wave", "clap", "bow", "hug", "have"}
+                   "meet", "wave", "clap", "bow", "hug", "have",
+                   # 代名詞當補語同樣不是英文。L01 重出時冒出
+                   # 「They are you.（他們是你）」「They are it.」「I have it.（我有它）」
+                   # ——第一版只擋招呼語，接不住這一種。
+                   "you", "he", "she", "it", "we", "they", "i", "me", "him", "her",
+                   "us", "them"}
 _BE_LINE = re.compile(
-    r"^(?:I|You|He|She|It|We|They)\s+(?:am|is|are)\s+([a-z]+)\s*[.?!]?$")
+    r"^(?:I|You|He|She|It|We|They)\s+(?:am|is|are|have|has)\s+([a-z]+)\s*[.?!]?$")
 
 
 def validate_complements(ex: dict) -> list[str]:

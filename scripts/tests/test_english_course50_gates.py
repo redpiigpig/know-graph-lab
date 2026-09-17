@@ -245,11 +245,24 @@ def test_greetings_after_be_are_rejected(gen):
     assert all("不是英文" in e for e in errs)
 
 
+def test_pronoun_complements_are_rejected(gen):
+    """🚨 第一版只擋招呼語，L01 重出時就換一種冒出來。
+
+    「They are you.（他們是你）」「They are it.」「I have it.（我有它）」——
+    每擋一種，模型就找下一種。補上代名詞，並把 have/has 也納入。
+    """
+    ex = {"translate": [{"q": "他們是你。", "ans": "They are you."},
+                        {"q": "他們是它。", "ans": "They are it."},
+                        {"q": "我有它。", "ans": "I have it."}]}
+    assert len(gen.validate_complements(ex)) == 3
+
+
 def test_real_adjective_complements_pass(gen):
     """He is sorry. 與 We are welcome. 是對的，不可以整批禁掉。"""
     ex = {"translate": [{"q": "他很抱歉。", "ans": "He is sorry."},
                         {"q": "不客氣。", "ans": "You are welcome."},
-                        {"q": "她很好。", "ans": "She is fine."}]}
+                        {"q": "她很好。", "ans": "She is fine."},
+                        {"q": "我有一本書。", "ans": "I have a book."}]}
     assert gen.validate_complements(ex) == []
 
 
