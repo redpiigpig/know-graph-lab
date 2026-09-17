@@ -118,6 +118,10 @@ def main() -> int:
     print(f"合計 {all_done:,}/{denom:,}（{pct:.1f}%）"
           f"　留白 {all_blank:,}　死段 {all_dead:,}"
           f"　待譯 {denom - all_done - all_dead:,}")
+    # 給排程／看門狗 parse 的純 ASCII 摘要：中文錨點碰到編碼問題會整排比不中，
+    # 然後算出「待譯 0」宣布完工（2026-09-18 凌晨就是這樣讓整晚沒人重拉）。
+    print(f"TOTALS done={all_done} blank={all_blank} dead={all_dead} "
+          f"left={denom - all_done - all_dead}")
     if a.reset:
         print(f"共清掉 {all_reset:,} 段的失敗計數"
               + ("（已寫回）" if a.apply else "（試跑；加 --apply 才寫）"))

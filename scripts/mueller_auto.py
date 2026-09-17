@@ -366,7 +366,13 @@ def translate_work(
         if todo:
             print(f"    {work['slug']} sec{i}「{s['title'][:36]}」 ¶={len(en)} todo={len(todo)}", flush=True)
         for k, j in enumerate(todo, 1):
-            r = translate_para(en[j], "")
+            try:
+                r = translate_para(en[j], "")
+            except Exception as exc:  # noqa: BLE001
+                # 引擎或輸出閘否決這一段：記一次失敗、換下一段。連坐會讓整本停住。
+                r = ""
+                print(f"      SKIP sec{i}#{j}: {type(exc).__name__} {str(exc)[:70]}",
+                      flush=True)
             if (r or "").strip():
                 zh[j] = r
                 engines[j] = engine_name
