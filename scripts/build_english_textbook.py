@@ -10,7 +10,10 @@
 排版規格沿用使用者定案：B5、不要 KK 音標、英文 >= 13pt、中文 >= 12pt、
 課內不分頁（換下一課才換頁）、課文在單字前。超過 300 頁就分上下兩冊。
 
-一課的順序是：學習目標 → 課文（故事）→ 單字 → 文法 → 情境對話 → 練習 → 解答。
+一課的順序是：學習目標 → 課文（故事）→ 單字 → 文法 → 情境對話 → 練習。
+🚨 **課本不印解答**（2026-09-17 使用者定案）。原本每課末尾接一頁解答，學生翻過去
+就看到，練習等於白做；也不另出解答本——「國小英文我教就知道答案」。
+add_answers() 留著沒刪，將來要出教師本再接回 add_lesson。
 2026-09-16 砍掉原本夾在文法與練習之間的「例句」八句——那八句沒有情節也沒有
 說話人，排起來跟課文一樣，使用者翻紙本的第一個反應是「為何單字之前和之後都有
 課文」。課程資料仍保留 sentences，網站 /english 有自己的版面在用。
@@ -25,6 +28,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import random
 import re
 import shutil
 import subprocess
@@ -216,7 +220,7 @@ def add_cover(doc, lessons, volume: str):
     total = sum(len(l["words"]) for l in lessons)
     text(doc, f"國小英語 1000 字　‧　全 50 課", 15,
          align=WD_ALIGN_PARAGRAPH.CENTER, space_after=6, color="6B6B6B")
-    text(doc, "課文 ‧ 單字 ‧ 文法 ‧ 對話 ‧ 練習 ‧ 解答", 13,
+    text(doc, "課文 ‧ 單字 ‧ 文法 ‧ 對話 ‧ 練習", 13,
          align=WD_ALIGN_PARAGRAPH.CENTER, space_after=40, color="6B6B6B")
     text(doc, "家教講義用書", 14, align=WD_ALIGN_PARAGRAPH.CENTER,
          space_after=4, color="8E7CC3")
@@ -377,9 +381,59 @@ def add_dialogue(doc, lesson, color):
 OPTION_LABELS = "ABCD"
 
 
+MATCH_PAIRS = 8
+
+
+def matching_pairs(lesson: dict) -> list[tuple[str, str]]:
+    """連連看的題目：本課 20 字裡挑 8 個，右欄打亂。
+
+    2026-09-17 加的。使用者要我照真實的國小英語講義改——那些講義第一題幾乎都是
+    連連看或圈選，而這本原本只有選擇／填空／重組／造句四種，第一題就是選擇題。
+
+    🚨 這一區**純機械產生、不經模型**。課本裡那些不是英文的句子（We are hello.、
+    I am thank.）全是模型自由造句造出來的；連連看只是把既有的英中對照配成兩欄，
+    生不出錯的東西。挑字與打亂都用課號當種子，重出結果一樣，diff 乾淨。
+    """
+    words = [w for w in lesson["words"] if w.get("zh")]
+    rng = random.Random(7000 + lesson["no"])
+    picked = rng.sample(words, min(MATCH_PAIRS, len(words)))
+    right = [w["zh"] for w in picked]
+    for _ in range(8):                       # 打亂到沒有一列原地不動
+        rng.shuffle(right)
+        if all(a["zh"] != b for a, b in zip(picked, right)):
+            break
+    return [(w["en"], zh) for w, zh in zip(picked, right)]
+
+
+def add_matching(doc, lesson, color):
+    pairs = matching_pairs(lesson)
+    section_head(doc, f"練習一：連連看（{len(pairs)} 題）", color)
+    stick(text(doc, "把左邊的英文和右邊的中文連起來。", 12,
+               color="6B6B6B", space_after=6, indent=0.4))
+    table = doc.add_table(rows=len(pairs), cols=3)
+    table.autofit = False
+    widths = (Cm(5.4), Cm(2.6), Cm(5.4))
+    set_table_borders(table, "FFFFFF")
+    no_table_split(table)
+    for r, (en, zh) in enumerate(pairs):
+        for c, w in enumerate(widths):
+            table.cell(r, c).width = w
+            table.cell(r, c).vertical_alignment = WD_ALIGN_VERTICAL.CENTER
+        cell = clear_cell(table.cell(r, 0))
+        cell.alignment = WD_ALIGN_PARAGRAPH.RIGHT
+        style_run(cell.add_run(en), 13)
+        style_run(cell.add_run("　●"), 11, color=color)
+        cell = clear_cell(table.cell(r, 1))
+        cell = clear_cell(table.cell(r, 2))
+        style_run(cell.add_run("●　"), 11, color=color)
+        style_run(cell.add_run(zh), 12)
+    para(doc, space_after=4)
+
+
 def add_exercises(doc, lesson, color):
     ex = lesson["exercises"]
-    section_head(doc, f"練習一：選擇題（{len(ex['mcq'])} 題）", color)
+    add_matching(doc, lesson, color)
+    section_head(doc, f"練習二：選擇題（{len(ex['mcq'])} 題）", color)
     for i, item in enumerate(ex["mcq"], 1):
         p = para(doc, space_after=1, indent=0.4)
         style_run(p.add_run("（　　）"), 12, color="9A9A9A")
@@ -391,13 +445,13 @@ def add_exercises(doc, lesson, color):
             style_run(p.add_run(f"({label}) "), 12, color=color)
             style_run(p.add_run(f"{opt}　"), 13)
 
-    section_head(doc, f"練習二：填空（{len(ex['fill'])} 題）", color)
+    section_head(doc, f"練習三：填空（{len(ex['fill'])} 題）", color)
     for i, item in enumerate(ex["fill"], 1):
         p = para(doc, space_after=4, indent=0.4)
         style_run(p.add_run(f"{i}. "), 12, bold=True, color=color)
         style_run(p.add_run(item["q"]), 13)
 
-    section_head(doc, f"練習三：句子重組（{len(ex['unscramble'])} 題）", color)
+    section_head(doc, f"練習四：句子重組（{len(ex['unscramble'])} 題）", color)
     for i, item in enumerate(ex["unscramble"], 1):
         p = para(doc, space_after=2, indent=0.4)
         style_run(p.add_run(f"{i}. "), 12, bold=True, color=color)
@@ -406,7 +460,7 @@ def add_exercises(doc, lesson, color):
         p = para(doc, space_after=5, indent=0.9)
         style_run(p.add_run("→ " + BLANK), 13, color="C4C4C4")
 
-    section_head(doc, f"練習四：造句翻譯（{len(ex['translate'])} 題）", color)
+    section_head(doc, f"練習五：造句翻譯（{len(ex['translate'])} 題）", color)
     for i, item in enumerate(ex["translate"], 1):
         p = para(doc, space_after=2, indent=0.4)
         style_run(p.add_run(f"{i}. "), 12, bold=True, color=color)
@@ -456,7 +510,9 @@ def add_lesson(doc, lesson, first, images, stats):
     add_grammar(doc, lesson, color)
     add_dialogue(doc, lesson, color)
     add_exercises(doc, lesson, color)
-    add_answers(doc, lesson, color)
+    # 2026-09-17 使用者定案：**課本不印解答**。原本每課末尾接一頁解答，學生翻過去
+    # 就看到，練習等於白做。也不另出解答本——「國小英文我教就知道答案」。
+    # add_answers() 留著沒刪，將來若要出教師本可以再接回來。
 
 
 # ---------------------------------------------------------------- 主流程

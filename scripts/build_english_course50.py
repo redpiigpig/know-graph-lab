@@ -732,6 +732,10 @@ def validate_overlap(ex: dict) -> list[str]:
         # 🚨 「結尾詞要分散」那道閘會被用「把句子縮短」繞過去：L01 重出時
         # 重組題變成「. / Sorry」→「Sorry.」、「I / . / have」→「I have.」，
         # 甚至「please / . / Thank / you」→「Thank you please.」。先要求是完整句子。
+        # 🚨 前幾課的造句本來就是「Hello.」「Goodbye.」「Sorry.」——真實的國小
+        # Lesson 1 學習單就是這樣出。最小長度那條對它們不適用。
+        if key == "translate" and 0 < CURRENT_LESSON <= DRILL_LESSONS:
+            floor = 1
         short = [x for x, w in words if len(w) < floor]
         if short:
             errs.append(f"{label}有 {len(short)} 題不是完整句子（少於 {floor} 個字），"
@@ -761,7 +765,10 @@ def validate_variety(ex: dict) -> list[str]:
     for item in _dicts(ex, "mcq"):
         key = tuple(sorted(o for o in (item.get("opts") or []) if isinstance(o, str)))
         seen[key] = seen.get(key, 0) + 1
-    over = [(k, v) for k, v in seen.items() if v > MAX_SAME_OPTS]
+    # 🚨 be 動詞那幾課整課就是在練 am／is／are，選項一樣是應該的，
+    # 真實課本的 Lesson 1 也是十題同一組選項。這道閘對它們不適用。
+    cap = 99 if 0 < CURRENT_LESSON <= DRILL_LESSONS else MAX_SAME_OPTS
+    over = [(k, v) for k, v in seen.items() if v > cap]
     return [f"選擇題有 {v} 題共用同一組選項 {' / '.join(k)}" for k, v in over]
 
 
