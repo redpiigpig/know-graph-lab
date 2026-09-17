@@ -144,9 +144,17 @@ def scan_sec_file(path: str) -> list[tuple[int, str, str, str]]:
     return out
 
 
+# 清空時留下的記號：這一段不是「還沒翻」，是「來源沒有可譯內容，決定留白」。
+# 少了它，之後每一次進度計數都會把它當成待辦，面板永遠停在 99.x%「已暫停」，
+# 下一個人就再去「補完」一次（[[feedback_reader_silent_failures]]）。
+BLANK_MARK = "blank-unusable-source"
+
+
 def fix_sec_file(path: str, hits: list[tuple[int, str, str, str]], meta_only: bool) -> int:
     j = json.load(open(path, encoding="utf-8"))
     zh_l = j["zh"]
+    engines = list(j.get("engines") or [])
+    engines += [None] * (len(zh_l) - len(engines))
     n = 0
     # meta_only＝只清判準明確的兩類（元回覆、整段沒翻譯），保留啟發式的 HALLU。
     SURE = ("META", "RAW-EN")
@@ -154,9 +162,12 @@ def fix_sec_file(path: str, hits: list[tuple[int, str, str, str]], meta_only: bo
         if meta_only and kind not in SURE:
             continue
         zh_l[i] = ""
+        if i < len(engines):
+            engines[i] = BLANK_MARK
         n += 1
     if n:
         j["zh"] = zh_l
+        j["engines"] = engines
         json.dump(j, open(path, "w", encoding="utf-8"), ensure_ascii=False)
     return n
 

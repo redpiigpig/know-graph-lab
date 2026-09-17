@@ -313,6 +313,9 @@ def ingest_work(work: dict) -> int:
 # books are starved. translate_para already retries ×4 internally, so MAX_FAIL
 # passes ≈ MAX_FAIL×4 real attempts before a segment is declared dead.
 MAX_FAIL = 3
+# 稽核判定「來源沒有可譯內容」而留白的記號（audit_llm_meta_replies.BLANK_MARK）。
+# 翻譯迴圈要跳過它，否則清掉的垃圾下一輪又會被翻回來。
+BLANK_MARK = "blank-unusable-source"
 
 
 def _translation_engines(section: dict, zh: list, size: int) -> list:
@@ -354,8 +357,10 @@ def translate_work(
         engines = _translation_engines(s, zh, len(en))
         raw_fail = s.get("fail") or []
         fail = raw_fail[:len(en)] + [0] * max(0, len(en) - len(raw_fail))
-        # skip already-translated AND exhausted (dead) segments
-        todo = [j for j in range(len(en)) if not (zh[j] or "").strip() and fail[j] < MAX_FAIL]
+        # skip already-translated, exhausted (dead), and deliberately-blank segments
+        todo = [j for j in range(len(en))
+                if not (zh[j] or "").strip() and fail[j] < MAX_FAIL
+                and engines[j] != BLANK_MARK]
         if max_total_paras is not None:
             todo = todo[:max(0, max_total_paras - translated)]
         if todo:
@@ -522,7 +527,10 @@ def is_done(work: dict) -> bool:
         en = s.get("en") or []
         zh = s.get("zh") or []
         fail = s.get("fail") or []
+        engines = s.get("engines") or []
         for j in range(len(en)):
+            if j < len(engines) and engines[j] == BLANK_MARK:
+                continue          # 判定留白＝已處理，不算未完成
             z = zh[j] if j < len(zh) else None
             f = fail[j] if j < len(fail) else 0
             if not (z or "").strip() and f < MAX_FAIL:

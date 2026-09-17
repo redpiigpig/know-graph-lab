@@ -728,11 +728,15 @@ def _checkpoint_counts(path: Path, source_key: str) -> tuple[int, int, str, int]
         return 0, 0, "checkpoint 無法解析", 0
     source = obj.get(source_key) or []
     zh = obj.get("zh") or []
+    # 稽核判定「來源沒有可譯內容」而留白的段落算已處理：它不是待辦，硬翻反而會
+    # 得到錯譯（東方聖卷 231 段就是這種，全是打爛的轉寫與掃反的索引頁）。
+    engines = obj.get("engines") or []
     total = len(source)
     done = 0
     for idx in range(total):
         translated = idx < len(zh) and bool(str(zh[idx] or "").strip())
-        done += int(translated)
+        blanked = idx < len(engines) and engines[idx] == "blank-unusable-source"
+        done += int(translated or blanked)
     heading = str(obj.get("title_zh") or obj.get("title") or obj.get("heading") or path.stem)
     local_drafts = sum(value == "ollama" for value in (obj.get("engines") or []))
     return done, total, heading.lstrip("# ").strip(), local_drafts

@@ -30,25 +30,33 @@ import mueller_auto as ma  # noqa: E402
 from sbe_translate import WORKS  # noqa: E402
 
 
-def scan(slug: str) -> tuple[int, int, int, list[Path]]:
-    """(段數, 已譯, 死段, sec 檔清單)。死段＝沒有譯文且 fail >= MAX_FAIL。"""
+# 稽核判定「來源沒有可譯內容」而留白的記號（audit_llm_meta_replies.BLANK_MARK）。
+# 那不是待辦——硬翻只會得到錯譯——所以要跟「還沒翻」分開算。
+BLANK_MARK = "blank-unusable-source"
+
+
+def scan(slug: str) -> tuple[int, int, int, int, list[Path]]:
+    """(段數, 已譯, 留白, 死段, sec 檔清單)。死段＝沒有譯文且 fail >= MAX_FAIL。"""
     wd = ma.work_dir(slug)
     secs = sorted(wd.glob("sec*.json")) if wd.exists() else []
-    total = done = dead = 0
+    total = done = blank = dead = 0
     for p in secs:
         s = json.loads(p.read_text(encoding="utf-8"))
         en = s.get("en") or []
         zh = s.get("zh") or []
         fail = s.get("fail") or []
+        engines = s.get("engines") or []
         for j in range(len(en)):
             total += 1
             z = (zh[j] if j < len(zh) else None) or ""
             f = fail[j] if j < len(fail) else 0
             if z.strip():
                 done += 1
+            elif j < len(engines) and engines[j] == BLANK_MARK:
+                blank += 1
             elif f >= ma.MAX_FAIL:
                 dead += 1
-    return total, done, dead, secs
+    return total, done, blank, dead, secs
 
 
 def reset_dead(slug: str, secs: list[Path], apply: bool) -> int:
@@ -82,13 +90,16 @@ def main() -> int:
     a = ap.parse_args()
 
     sys.stdout.reconfigure(encoding="utf-8")
-    all_total = all_done = all_dead = all_reset = 0
+    all_total = all_done = all_blank = all_dead = all_reset = 0
     for w in WORKS:
-        total, done, dead, secs = scan(w["slug"])
-        left = total - done - dead
-        pct = (done / total * 100) if total else 0.0
-        line = (f"  {w['slug']:24s} {done:6d}/{total:<6d}（{pct:5.1f}%）"
+        total, done, blank, dead, secs = scan(w["slug"])
+        left = total - done - blank - dead
+        # 分母扣掉留白：那些段落已經處理過了，只是處理的結論是「不譯」。
+        pct = (done / (total - blank) * 100) if total - blank else 0.0
+        line = (f"  {w['slug']:24s} {done:6d}/{total - blank:<6d}（{pct:5.1f}%）"
                 f" 待譯 {left:5d}")
+        if blank:
+            line += f"　留白 {blank}"
         if dead:
             line += f"　🚨 死段 {dead}"
         print(line)
@@ -99,11 +110,14 @@ def main() -> int:
                 print(f"    ↳ 清掉失敗計數 {n} 段")
         all_total += total
         all_done += done
+        all_blank += blank
         all_dead += dead
 
-    pct = (all_done / all_total * 100) if all_total else 0.0
-    print(f"合計 {all_done:,}/{all_total:,}（{pct:.1f}%）"
-          f"　死段 {all_dead:,}　待譯 {all_total - all_done - all_dead:,}")
+    denom = all_total - all_blank
+    pct = (all_done / denom * 100) if denom else 0.0
+    print(f"合計 {all_done:,}/{denom:,}（{pct:.1f}%）"
+          f"　留白 {all_blank:,}　死段 {all_dead:,}"
+          f"　待譯 {denom - all_done - all_dead:,}")
     if a.reset:
         print(f"共清掉 {all_reset:,} 段的失敗計數"
               + ("（已寫回）" if a.apply else "（試跑；加 --apply 才寫）"))
