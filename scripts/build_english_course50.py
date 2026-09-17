@@ -624,32 +624,54 @@ def validate_direction(ex: dict) -> list[str]:
     return errs
 
 
-# be 動詞後面接不了的字。這些是招呼語與動詞，不是形容詞。
-# 2026-09-17 把 L01 的練習頁印出來看，才發現整批答案是
-# 「We are hello.」「They are goodbye.」「I am thank.」「It is sorry.」——
-# 第一課的 20 個字全是招呼語，模型硬把它們當補語用。其餘 49 課都沒有這個問題。
-# （He is sorry. 與 We are welcome. 是對的，所以不能整批禁掉 sorry／welcome。）
-NOT_COMPLEMENTS = {"hello", "hi", "goodbye", "thank", "please", "yes", "no",
-                   "meet", "wave", "clap", "bow", "hug", "have",
-                   # 代名詞當補語同樣不是英文。L01 重出時冒出
-                   # 「They are you.（他們是你）」「They are it.」「I have it.（我有它）」
-                   # ——第一版只擋招呼語，接不住這一種。
-                   "you", "he", "she", "it", "we", "they", "i", "me", "him", "her",
-                   "us", "them"}
+# be 動詞後面只能接形容詞或名詞（補語）。
+#
+# 🚨 2026-09-17 的教訓：**不要列禁字表**。第一版禁招呼語，模型就改出
+# 「They are you.（他們是你）」；再禁代名詞，它還有下一個字可以換。
+# 使用者的話是「甚麼叫做 We are hello.／I am thank.，小一的英文也不會是這樣」，
+# 而真正的國小講義是「固定句型 ＋ 詞性正確的詞槽」——`I am ___.` 那個空格
+# 只能放形容詞或名詞。所以判準改成查詞性，不是查黑名單。
+# 詞性在 english-1000.json 的 pos 欄（scripts/tag_english_pos.py 標的）。
+BE_COMPLEMENT_POS = {"adj", "noun", "num"}
+_POS: dict[str, list[str]] | None = None
+
+
+def word_pos(word: str) -> list[str]:
+    """查一個字的詞性。查不到回空陣列（不判它有罪）。"""
+    global _POS
+    if _POS is None:
+        _POS = {}
+        for e in json.loads(VOCAB.read_text(encoding="utf-8"))["entries"]:
+            tags = e.get("pos") or []
+            for form in {e["en"], e["en"].lower(),
+                         re.sub(r"\(.*?\)", "", e["en"].split("/")[0]).strip().lower()}:
+                _POS.setdefault(form, tags)
+    return _POS.get(word.lower(), [])
+
+
 _BE_LINE = re.compile(
-    r"^(?:I|You|He|She|It|We|They)\s+(?:am|is|are|have|has)\s+([a-z]+)\s*[.?!]?$")
+    r"^(?:I|You|He|She|It|We|They)\s+(?:am|is|are)\s+([A-Za-z]+)\s*[.?!]?$")
 
 
 def validate_complements(ex: dict) -> list[str]:
-    """擋掉「主詞 + be + 招呼語」這種不是英文的答案。"""
+    """擋掉「主詞 + be + 不能當補語的字」。
+
+    只看「主詞 + be + 單字 + 句點」這種最短的句子——那是第一課那批出事的形狀
+    （We are hello.）。句子一長（He is a nice boy.）就不在這個判式裡，
+    免得把 a／the 開頭的名詞片語誤殺。
+    """
     errs = []
     for key, label in (("translate", "造句翻譯"), ("unscramble", "句子重組"),
                        ("fill", "填空")):
         for i, item in enumerate(_dicts(ex, key), 1):
             hit = _BE_LINE.match(_txt(item.get("ans")).strip())
-            if hit and hit.group(1) in NOT_COMPLEMENTS:
+            if not hit:
+                continue
+            word = hit.group(1)
+            tags = word_pos(word)
+            if tags and not (set(tags) & BE_COMPLEMENT_POS):
                 errs.append(f"{label}第 {i} 題「{item['ans']}」不是英文——"
-                            f"{hit.group(1)} 不能接在 be 動詞後面")
+                            f"{word} 是{'／'.join(tags)}，不能接在 be 動詞後面當補語")
     return errs
 
 

@@ -231,39 +231,41 @@ def test_short_english_stem_is_not_a_false_positive(gen):
     assert gen.validate_overlap(ex) == []
 
 
-def test_greetings_after_be_are_rejected(gen):
-    """🚨 把 L01 的練習頁印出來看才發現的。
+def test_be_complement_is_checked_by_pos_not_a_blacklist(gen):
+    """🚨 判準是詞性，不是禁字表。
 
-    第一課的 20 個字全是招呼語，模型硬把它們當補語用，整批答案是
-    「We are hello.」「They are goodbye.」「I am thank.」。其餘 49 課都沒這問題。
+    2026-09-17 使用者：「甚麼叫做 We are hello.／I am thank.，小一的英文也不會
+    是這樣」。第一版列禁字表擋招呼語，模型就改出「They are you.」；再禁代名詞，
+    它還有下一個字可以換。真正的國小講義是「固定句型 ＋ 詞性正確的詞槽」，
+    所以改成查 english-1000.json 的 pos 欄：be 後面只能接 adj／noun／num。
     """
-    ex = {"translate": [{"q": "我們打招呼。", "ans": "We are hello."},
-                        {"q": "他們說再見。", "ans": "They are goodbye."},
-                        {"q": "我說謝謝。", "ans": "I am thank."}]}
-    errs = gen.validate_complements(ex)
-    assert len(errs) == 3
-    assert all("不是英文" in e for e in errs)
+    bad = ["We are hello.", "They are goodbye.", "I am thank.",
+           "They are you.", "They are it."]
+    for ans in bad:
+        errs = gen.validate_complements({"translate": [{"q": "x", "ans": ans}]})
+        assert errs, f"沒擋到：{ans}"
+        assert "不是英文" in errs[0]
 
 
-def test_pronoun_complements_are_rejected(gen):
-    """🚨 第一版只擋招呼語，L01 重出時就換一種冒出來。
-
-    「They are you.（他們是你）」「They are it.」「I have it.（我有它）」——
-    每擋一種，模型就找下一種。補上代名詞，並把 have/has 也納入。
-    """
-    ex = {"translate": [{"q": "他們是你。", "ans": "They are you."},
-                        {"q": "他們是它。", "ans": "They are it."},
-                        {"q": "我有它。", "ans": "I have it."}]}
-    assert len(gen.validate_complements(ex)) == 3
+def test_pos_gate_names_the_reason(gen):
+    """訊息要講出原因，模型才改得對。"""
+    errs = gen.validate_complements({"translate": [{"q": "x", "ans": "We are hello."}]})
+    assert "hello 是interj" in errs[0]
 
 
-def test_real_adjective_complements_pass(gen):
-    """He is sorry. 與 We are welcome. 是對的，不可以整批禁掉。"""
-    ex = {"translate": [{"q": "他很抱歉。", "ans": "He is sorry."},
-                        {"q": "不客氣。", "ans": "You are welcome."},
-                        {"q": "她很好。", "ans": "She is fine."},
-                        {"q": "我有一本書。", "ans": "I have a book."}]}
-    assert gen.validate_complements(ex) == []
+def test_real_complements_pass(gen):
+    """形容詞、名詞、名詞片語都要放行，不可以整批禁掉。"""
+    for ans in ("He is sorry.", "You are welcome.", "She is fine.",
+                "I am sure.", "It is OK.", "He is a student."):
+        assert gen.validate_complements({"translate": [{"q": "x", "ans": ans}]}) == [], ans
+
+
+def test_every_word_has_a_pos(gen):
+    """一千字都要標到，否則這道閘會靜默放行沒標到的那些。"""
+    import json
+    entries = json.loads(gen.VOCAB.read_text(encoding="utf-8"))["entries"]
+    missing = [e["en"] for e in entries if not e.get("pos")]
+    assert not missing, f"{len(missing)} 個字沒有詞性，例如 {missing[:5]}"
 
 
 # ---------------------------------------------------------------- 答案位置
