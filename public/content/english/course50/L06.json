@@ -355,43 +355,43 @@
     ],
     "fill": [
       {
-        "q": "The ribbon is ____.（這條絲帶是_____的）",
+        "q": "The ribbon is ____. （這條緞帶是紅色的）",
         "ans": "red"
       },
       {
-        "q": "This is a ____ ribbon.（這是一條_____的絲帶）",
+        "q": "This is a ____ ribbon. （這是一條藍色的絲帶）",
         "ans": "blue"
       },
       {
-        "q": "The brick is ____.（這塊磚是_____的）",
+        "q": "The brick is ____. （這塊磚是灰色的）",
         "ans": "gray"
       },
       {
-        "q": "The ____ is red.（這個_____是紅色的）",
+        "q": "The ____ is red. （這個磚是紅色的）",
         "ans": "brick"
       },
       {
-        "q": "This is a ____ space.（這是一個_____的空間）",
+        "q": "This is a ____ space. （這是一個藍色的空間）",
         "ans": "blue"
       },
       {
-        "q": "The ____ of the ribbon is red.（絲帶的_____是紅色的）",
+        "q": "The ____ of the ribbon is red. （絲帶的這一部分是紅色的）",
         "ans": "part"
       },
       {
-        "q": "The ____ is colourful.（這個_____是多彩的）",
+        "q": "The ____ is colorful. （這個形狀是多彩的）",
         "ans": "shape"
       },
       {
-        "q": "The ____ is orange.（這個顏色是橙色的）",
+        "q": "The ____ is orange. （這個顏色是橙色的）",
         "ans": "color"
       },
       {
-        "q": "The ____ is gold.（這個空間是金色的）",
+        "q": "The ____ is gold. （這個空間是金色的）",
         "ans": "space"
       },
       {
-        "q": "The ____ is white.（這個絲帶是白色的）",
+        "q": "The ____ is white. （這條絲帶是白色的）",
         "ans": "ribbon"
       }
     ],

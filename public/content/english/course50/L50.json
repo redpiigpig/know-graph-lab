@@ -296,7 +296,7 @@
         "ans": "went"
       },
       {
-        "q": "They ______ a present for the festival. (有)",
+        "q": "They ______ a present for the festival yesterday.（有）",
         "opts": [
           "has",
           "had",
@@ -392,15 +392,15 @@
         "ans": "He"
       },
       {
-        "q": "We met at the ____ yesterday.（我們昨天在___見面）",
+        "q": "We met at the ____ yesterday to see the airplane.（我們昨天在飛機起降的地方見面）",
         "ans": "airport"
       },
       {
-        "q": "The festival was held in ____ last year.（去年節日在___舉辦）",
-        "ans": "France"
+        "q": "The festival was held in ____ last year.（去年節日在一個由很多島嶼組成的東南亞國家舉辦）",
+        "ans": "the Philippines"
       },
       {
-        "q": "She went to Singapore by ____.（她搭飛機去新加坡）",
+        "q": "She caught a ____ to Singapore.（她搭乘可以在天空中飛行的工具前往新加坡）",
         "ans": "plane"
       },
       {
@@ -438,8 +438,8 @@
         "ans": "The present is good."
       },
       {
-        "q": "我曾經去過越南。",
-        "ans": "I have been to Vietnam."
+        "q": "我已經去過越南。",
+        "ans": "I have already been to Vietnam."
       }
     ],
     "unscramble": [

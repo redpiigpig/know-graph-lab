@@ -303,11 +303,11 @@
         "ans": "then"
       },
       {
-        "q": "She ______ goes to the park on Sundays, but she usually goes on Saturdays. (表示頻率，但不一定每次都)",
+        "q": "She ______ goes to the park on Sundays, but she usually goes on Saturdays.",
         "opts": [
           "always",
-          "early",
-          "late",
+          "sometimes",
+          "never",
           "often"
         ],
         "ans": "often"
@@ -343,12 +343,12 @@
         "ans": "December"
       },
       {
-        "q": "They ______ eat breakfast before school. (表示頻率，表示經常)",
+        "q": "They ______ eat breakfast before school.",
         "opts": [
-          "late",
-          "soon",
-          "often",
-          "early"
+          "always",
+          "sometimes",
+          "never",
+          "often"
         ],
         "ans": "often"
       },

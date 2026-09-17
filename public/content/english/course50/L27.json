@@ -337,14 +337,14 @@
         "ans": "chairs"
       },
       {
-        "q": "She ______ the telephone. (她用電話。)",
+        "q": "This is ______ telephone. (這是她的電話。)",
         "opts": [
-          "calls",
-          "called",
-          "call",
-          "calling"
+          "my",
+          "your",
+          "his",
+          "her"
         ],
-        "ans": "calls"
+        "ans": "her"
       },
       {
         "q": "浴缸 的英文是？",

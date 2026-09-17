@@ -320,14 +320,14 @@
         "ans": "shark"
       },
       {
-        "q": "The owl ______ fly at night. (使用 does not / do not)",
+        "q": "The owl ______ fly at night.",
         "opts": [
-          "does not fly",
-          "does not flies",
-          "do not fly",
-          "do not flies"
+          "does not",
+          "do not",
+          "doesn't",
+          "don't"
         ],
-        "ans": "does not fly"
+        "ans": "does not"
       },
       {
         "q": "長頸鹿 的英文是？",

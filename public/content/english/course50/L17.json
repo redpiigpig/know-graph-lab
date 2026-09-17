@@ -392,24 +392,24 @@
         "ans": "taste"
       },
       {
-        "q": "Does she ____ cookie?（她點餅乾嗎？）",
+        "q": "Does she ____ a cookie? (她點餅乾嗎？)",
         "ans": "order"
       },
       {
-        "q": "Do we ____ candy?（我們吃糖果當點心嗎？）",
-        "ans": "snack"
+        "q": "Do we ____ candy? (我們吃糖果嗎？)",
+        "ans": "eat"
       },
       {
-        "q": "I ____ egg.（我是蛋）",
-        "ans": "am"
+        "q": "I ____ an egg. (我吃蛋。)",
+        "ans": "eat"
       },
       {
-        "q": "He ____ soup.（他是湯）",
-        "ans": "is"
+        "q": "He ____ soup. (他吃湯。)",
+        "ans": "eats"
       },
       {
-        "q": "We ____ candy.（我們是糖果）",
-        "ans": "are"
+        "q": "We ____ candy. (我們吃糖果。)",
+        "ans": "eat"
       },
       {
         "q": "She ____ eat soup?（她真的吃湯嗎？）",
@@ -423,7 +423,7 @@
     "translate": [
       {
         "q": "我吃蛋。",
-        "ans": "I eat egg."
+        "ans": "I eat an egg."
       },
       {
         "q": "我們煮湯。",
@@ -435,7 +435,7 @@
       },
       {
         "q": "你點餅乾。",
-        "ans": "You order cookie."
+        "ans": "You order a cookie."
       },
       {
         "q": "我們吃沙拉。",
@@ -451,7 +451,7 @@
       },
       {
         "q": "他們吃蔬菜。",
-        "ans": "They eat vegetable."
+        "ans": "They eat vegetables."
       }
     ],
     "unscramble": [
@@ -468,8 +468,8 @@
         "ans": "They order soup."
       },
       {
-        "q": "He / eats / . / cookie",
-        "ans": "He eats cookie."
+        "q": "He / a / eats / . / cookie",
+        "ans": "He eats a cookie."
       },
       {
         "q": "eats / salad / He / .",

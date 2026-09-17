@@ -301,12 +301,12 @@
       {
         "q": "說話的英文是？",
         "opts": [
-          "tell",
           "talk",
-          "say",
-          "speak"
+          "listen",
+          "nod",
+          "walk"
         ],
-        "ans": "speak"
+        "ans": "talk"
       },
       {
         "q": "He ______ a hand. (他有一隻手。)",
@@ -384,15 +384,15 @@
       },
       {
         "q": "I ____ my leg.（我看我的腿）",
-        "ans": "see"
+        "ans": "look"
       },
       {
         "q": "I have an ____.（我有一個手臂）",
         "ans": "arm"
       },
       {
-        "q": "I have an ____.（我有一個腿）",
-        "ans": "leg"
+        "q": "I ____ an ____.（我有一個腿）",
+        "ans": "have a"
       },
       {
         "q": "We ____.（我們走路）",
@@ -408,7 +408,7 @@
       },
       {
         "q": "I ____ the hand.（我看手）",
-        "ans": "see"
+        "ans": "look"
       }
     ],
     "translate": [

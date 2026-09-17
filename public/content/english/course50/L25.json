@@ -360,7 +360,7 @@
     ],
     "fill": [
       {
-        "q": "Please ____ safe.（請保持安全）",
+        "q": "Please ____ safe.（請確保安全，不要讓危險發生）",
         "ans": "keep"
       },
       {
@@ -380,7 +380,7 @@
         "ans": "appear"
       },
       {
-        "q": "They ____ safe.（他們變得安全）",
+        "q": "They ____ safe.（他們從危險變成安全）",
         "ans": "become"
       },
       {
@@ -392,7 +392,7 @@
         "ans": "understand"
       },
       {
-        "q": "It is ____.（這很簡單）",
+        "q": "It is ____.（這很容易）",
         "ans": "easy"
       },
       {

@@ -302,11 +302,11 @@
         "q": "晚上 的英文是？",
         "opts": [
           "night",
-          "evening",
+          "morning",
           "today",
-          "morning"
+          "weekend"
         ],
-        "ans": "evening"
+        "ans": "night"
       },
       {
         "q": "We meet ______ 9 o'clock. (九點)",
@@ -321,12 +321,12 @@
       {
         "q": "上午 的英文是？",
         "opts": [
-          "Tuesday",
-          "Thursday",
+          "morning",
           "Monday",
+          "Tuesday",
           "Wednesday"
         ],
-        "ans": "Monday"
+        "ans": "morning"
       },
       {
         "q": "It is ______ 9 o'clock. (鐘點)",

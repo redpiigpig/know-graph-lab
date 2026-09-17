@@ -357,14 +357,14 @@
         "ans": "good night"
       },
       {
-        "q": "______ is good morning? (問候語)",
+        "q": "When is it good morning?",
         "opts": [
           "who",
           "where",
           "when",
           "what"
         ],
-        "ans": "what"
+        "ans": "when"
       },
       {
         "q": "______ good morning is this? (所有格)",
@@ -377,7 +377,7 @@
         "ans": "whose"
       },
       {
-        "q": "______ does lady wave? (原因)",
+        "q": "______ does the lady wave?",
         "opts": [
           "why",
           "who",

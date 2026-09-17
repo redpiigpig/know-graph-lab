@@ -276,10 +276,10 @@
         "opts": [
           "care",
           "cared",
-          "cares",
+          "cares for",
           "caring"
         ],
-        "ans": "cares"
+        "ans": "cares for"
       },
       {
         "q": "He ______ (有一個) son.",
@@ -297,9 +297,9 @@
           "caring",
           "care",
           "cares",
-          "kid"
+          "cares for"
         ],
-        "ans": "cares"
+        "ans": "cares for"
       },
       {
         "q": "She ______ (有一個) daughter.",
@@ -314,12 +314,12 @@
       {
         "q": "She ______ (照顧) her child every night.",
         "opts": [
-          "baby",
+          "cares for",
           "caring",
           "care",
           "cares"
         ],
-        "ans": "cares"
+        "ans": "cares for"
       },
       {
         "q": "父親 的英文是？",
@@ -355,7 +355,7 @@
     "fill": [
       {
         "q": "She ____ (她每天照顧寶寶).",
-        "ans": "cares"
+        "ans": "cares for"
       },
       {
         "q": "He ____ (他每天上班).",
@@ -387,11 +387,11 @@
       },
       {
         "q": "The father ____ (爸爸每天照顧家庭).",
-        "ans": "loves"
+        "ans": "cares for"
       },
       {
         "q": "The mother ____ (媽媽好像很開心).",
-        "ans": "seems"
+        "ans": "seems happy"
       }
     ],
     "translate": [
@@ -421,7 +421,7 @@
       },
       {
         "q": "這個孩子很會照顧。",
-        "ans": "This child cares."
+        "ans": "This child cares for family."
       },
       {
         "q": "我們有一個家庭。",

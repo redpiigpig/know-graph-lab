@@ -288,7 +288,7 @@
         "ans": "follow"
       },
       {
-        "q": "Please ______ the blanket over the baby. (請把毯子蓋過寶寶)",
+        "q": "Please ______ the blanket over the baby. (請把毯子放在寶寶身上)",
         "opts": [
           "pull",
           "put",
@@ -338,7 +338,7 @@
         "ans": "practice"
       },
       {
-        "q": "Please ______ the towel over the table. (請把毛巾蓋在桌子上)",
+        "q": "Please ______ the towel over the table. (請把毛巾放在桌子上)",
         "opts": [
           "pull",
           "put",

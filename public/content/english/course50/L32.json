@@ -311,14 +311,14 @@
         "ans": "The"
       },
       {
-        "q": "___ Taiwan is an island. (專有名詞則不加)",
+        "q": "___ rose is red.（單數可數名詞需加冠詞）",
         "opts": [
           "The",
-          "None",
           "A",
-          "An"
+          "An",
+          "None"
         ],
-        "ans": "None"
+        "ans": "A"
       },
       {
         "q": "冰 的英文是？",
@@ -351,12 +351,12 @@
         "ans": "beach"
       },
       {
-        "q": "Wind will ____ leaves. (動詞表示風吹動)",
+        "q": "Wind will ____ leaves.（動詞表示風吹動）",
         "opts": [
           "rose",
-          "earth",
-          "blow",
-          "fire"
+          "fire",
+          "land",
+          "blow"
         ],
         "ans": "blow"
       }

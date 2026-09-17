@@ -324,14 +324,15 @@
         "ans": "plus"
       },
       {
-        "q": "This is the ______ number. (請填序數詞)",
+        "q": "This is the ______ number.",
         "opts": [
-          "fifth",
           "first",
           "second",
-          "third"
+          "third",
+          "fourth"
         ],
-        "ans": "second"
+        "ans": "second",
+        "hint": "(這是我們數到的第一個之後的數字)"
       },
       {
         "q": "A ______ equals a dozen. (請填表示十二的單字)",
@@ -364,14 +365,15 @@
         "ans": "zero"
       },
       {
-        "q": "This is the ______ time I have seen a movie. (請填序數詞)",
+        "q": "This is the ______ time I have seen a movie.",
         "opts": [
-          "eighth",
           "fifth",
           "sixth",
-          "seventh"
+          "seventh",
+          "eighth"
         ],
-        "ans": "sixth"
+        "ans": "sixth",
+        "hint": "(這是我看電影的第五次之後的一次)"
       },
       {
         "q": "Two ____ two equals four. (請填入表示加法的單字)",
@@ -414,16 +416,19 @@
         "ans": "number"
       },
       {
-        "q": "This is ____.（加號）",
-        "ans": "plus"
+        "q": "This is a plus.",
+        "ans": "plus",
+        "hint": "(這是加號)"
       },
       {
-        "q": "This is ____.（減號）",
-        "ans": "minus"
+        "q": "This is a minus.",
+        "ans": "minus",
+        "hint": "(這是減號)"
       },
       {
-        "q": "This is ____.（等號）",
-        "ans": "equal"
+        "q": "This is an equal.",
+        "ans": "equal",
+        "hint": "(這是等號)"
       }
     ],
     "translate": [

@@ -273,7 +273,7 @@
         "ans": "wet"
       },
       {
-        "q": "It is not wet.",
+        "q": "It is ___.",
         "opts": [
           "sand",
           "dry",

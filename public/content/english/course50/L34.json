@@ -263,7 +263,7 @@
           "belt",
           "bag",
           "hat",
-          "cap"
+          "glove"
         ],
         "ans": "hat"
       },
@@ -340,10 +340,10 @@
       {
         "q": "She needs a pair of ___ (用來走路的) to go hiking.",
         "opts": [
-          "boots",
           "shoes",
-          "socks",
-          "hat"
+          "hat",
+          "glove",
+          "belt"
         ],
         "ans": "shoes"
       },

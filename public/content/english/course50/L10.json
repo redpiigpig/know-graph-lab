@@ -359,17 +359,17 @@
         "ans": "open"
       },
       {
-        "q": "You ______ at your friend when you see them. (習慣動作)",
+        "q": "You ______ your friend when you see them. (習慣動作)",
         "opts": [
           "laugh",
           "think",
           "help",
           "smile"
         ],
-        "ans": "smile"
+        "ans": "help"
       },
       {
-        "q": "They ______ at the picture when they talk. (習慣動作)",
+        "q": "They ______ to the picture when they talk. (習慣動作)",
         "opts": [
           "laugh",
           "point",

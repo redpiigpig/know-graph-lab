@@ -349,8 +349,8 @@
         "q": "你想知道公園附近有沒有一家銀行？你會怎麼用英語問？",
         "opts": [
           "Are there a bank near the park?",
-          "Is there any banks near the park?",
-          "Are there banks near the park?",
+          "Is there banks near the park?",
+          "Are there bank near the park?",
           "Is there a bank near the park?"
         ],
         "ans": "Is there a bank near the park?"

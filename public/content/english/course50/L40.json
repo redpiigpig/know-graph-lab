@@ -284,7 +284,7 @@
           "good",
           "fast",
           "loud",
-          "well"
+          "exciting"
         ],
         "ans": "fast"
       },
@@ -374,7 +374,7 @@
       },
       {
         "q": "The ticket is ____ the seat.（票在座位上）",
-        "ans": "in"
+        "ans": "on"
       },
       {
         "q": "This story is ____.（這個故事很有趣）",
@@ -416,7 +416,7 @@
       },
       {
         "q": "票在座位上。",
-        "ans": "The ticket is in the seat."
+        "ans": "The ticket is on the seat."
       },
       {
         "q": "這個故事很有趣。",

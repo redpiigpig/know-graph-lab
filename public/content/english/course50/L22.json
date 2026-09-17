@@ -376,7 +376,7 @@
       },
       {
         "q": "This is ____ sentence.（這是英文句子）",
-        "ans": "English"
+        "ans": "an English"
       },
       {
         "q": "English is a ____.（英語是一種語言）",
@@ -439,8 +439,8 @@
         "ans": "The blackboard is in the classroom."
       },
       {
-        "q": "on / glue / is / . / the / The / paper",
-        "ans": "The glue is on the paper."
+        "q": "on / paper / is / . / the / The / scissors",
+        "ans": "The paper is on the scissors."
       },
       {
         "q": "reads / . / She / notebook / the",

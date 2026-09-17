@@ -330,9 +330,9 @@
           "taxi",
           "ship",
           "department store",
-          "convenient store"
+          "convenience store"
         ],
-        "ans": "convenient store"
+        "ans": "convenience store"
       },
       {
         "q": "She goes to work ___ bicycle. (使用腳踏車去上班)",
@@ -402,7 +402,7 @@
       },
       {
         "q": "She ____ in China.（她住在中國）",
-        "ans": "live"
+        "ans": "lives"
       },
       {
         "q": "The ____ is long.（這座橋很長）",

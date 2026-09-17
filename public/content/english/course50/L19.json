@@ -274,7 +274,7 @@
         "ans": "fruit"
       },
       {
-        "q": "I'd like a ______, please. (我想要一碗麵，請。)",
+        "q": "I'd like an ______, please. （我想要一碗麵，請。）",
         "opts": [
           "oyster noodle",
           "fried chicken",
@@ -354,12 +354,12 @@
         "ans": "want"
       },
       {
-        "q": "She likes ____ .（她喜歡葡萄。）",
-        "ans": "grape"
+        "q": "She likes ____ . （她喜歡葡萄。）",
+        "ans": "grapes"
       },
       {
         "q": "Put the spoon ____ the cup.（把湯匙放在杯子裡。）",
-        "ans": "on"
+        "ans": "in"
       },
       {
         "q": "The spoon is ____ the cup.（湯匙在杯子裡。）",
@@ -375,7 +375,7 @@
       },
       {
         "q": "____ is a fruit.（這是水果。）",
-        "ans": "It"
+        "ans": "This"
       },
       {
         "q": "We ____ tea.（我們喝茶。）",
@@ -393,7 +393,7 @@
       },
       {
         "q": "她喜歡葡萄。",
-        "ans": "She likes grape."
+        "ans": "She likes grapes"
       },
       {
         "q": "我有一根香蕉。",
@@ -405,7 +405,7 @@
       },
       {
         "q": "請把湯匙放在杯子裡。",
-        "ans": "Put the spoon in the cup."
+        "ans": "Please put the spoon in the cup"
       },
       {
         "q": "這是水果。",

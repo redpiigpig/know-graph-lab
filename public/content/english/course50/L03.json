@@ -384,7 +384,7 @@
         "ans": "is"
       },
       {
-        "q": "They ____ at hometown.（他們在家鄉）",
+        "q": "They ____ in the hometown.（他們在家鄉。）",
         "ans": "are"
       },
       {
@@ -408,7 +408,7 @@
         "ans": "whisper"
       },
       {
-        "q": "We ____ at hometown.（我們在家鄉）",
+        "q": "We ____ in the hometown.（我們在家鄉。）",
         "ans": "are"
       },
       {
@@ -427,7 +427,7 @@
       },
       {
         "q": "他們在家鄉。",
-        "ans": "They are at hometown."
+        "ans": "They are in the hometown."
       },
       {
         "q": "他不是客人。",
@@ -460,8 +460,8 @@
         "ans": "She is not a neighbor."
       },
       {
-        "q": "hometown / . / They / are / not / at",
-        "ans": "They are not at hometown."
+        "q": "the / hometown / They / are / not / in / .",
+        "ans": "They are not in the hometown."
       },
       {
         "q": "not / It / is / a / . / birthday",

@@ -275,7 +275,7 @@
       {
         "q": "真實的 英文是？",
         "opts": [
-          "true",
+          "wrong",
           "real",
           "lend",
           "join"

@@ -405,43 +405,43 @@
     ],
     "fill": [
       {
-        "q": "The clock is ____ me.（手錢在我裡面）",
+        "q": "The clock is ____ me.（這隻手錶在我裡面）",
         "ans": "in"
       },
       {
-        "q": "The clock is ____ me.（手錢在我身上）",
+        "q": "The clock is ____ me.（這隻手錶在我身上）",
         "ans": "on"
       },
       {
-        "q": "The clock is ____ me.（手錢在我下面）",
+        "q": "The clock is ____ me.（這隻手錶在我下面）",
         "ans": "under"
       },
       {
-        "q": "The clock is ____ me.（手錢在我旁邊）",
+        "q": "The clock is ____ me.（這隻手錶在我旁邊，不太近）",
         "ans": "near"
       },
       {
-        "q": "The clock is ____ me.（手錢在我後面）",
+        "q": "The clock is ____ me.（這隻手錶在我後面）",
         "ans": "behind"
       },
       {
-        "q": "The clock is ____ me.（手錢在我旁邊）",
+        "q": "The clock is ____ me.（這隻手錶在我旁邊，緊貼著）",
         "ans": "beside"
       },
       {
-        "q": "The clock is ____ me.（手錢在我上面）",
+        "q": "The clock is ____ me.（這隻手錶在我上面）",
         "ans": "above"
       },
       {
-        "q": "The clock is ____ me.（手錢在我下面）",
+        "q": "The clock is ____ me.（這隻手錶在我下面）",
         "ans": "below"
       },
       {
-        "q": "The clock is ____ me.（手錢在我裡面）",
+        "q": "The clock is ____ me.（這隻手錶在我裡面，再次強調）",
         "ans": "in"
       },
       {
-        "q": "The clock is ____ me.（手錢在我身上）",
+        "q": "The clock is ____ me.（這隻手錶在我身上，再次強調）",
         "ans": "on"
       }
     ],

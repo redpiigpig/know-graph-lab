@@ -288,7 +288,7 @@
         "ans": "milk"
       },
       {
-        "q": "I ______ water. (我想喝水)",
+        "q": "I ______ water. (我喝水)",
         "opts": [
           "drink",
           "hot",
@@ -382,7 +382,7 @@
         "ans": "hot"
       },
       {
-        "q": "I drink a ____ of water.（我想喝一杯水）",
+        "q": "I drink a ____ of water.(我喝一杯水)",
         "ans": "glass"
       },
       {
@@ -424,7 +424,7 @@
         "ans": "The coffee is hot."
       },
       {
-        "q": "我想喝一杯水。",
+        "q": "我喝一杯水。",
         "ans": "I drink a glass of water."
       },
       {

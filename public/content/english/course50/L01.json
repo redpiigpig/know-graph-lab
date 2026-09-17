@@ -399,7 +399,7 @@
         "ans": "are"
       },
       {
-        "q": "____ , I am Lily.（你好，我是莉莉。）",
+        "q": "____ , I am Lily.（這是正式的問候語）",
         "ans": "Hello"
       },
       {
@@ -447,23 +447,23 @@
     ],
     "unscramble": [
       {
-        "q": "am / I / fine / .",
+        "q": ". / I / fine / am",
         "ans": "I am fine."
       },
       {
-        "q": "are / . / You / OK",
+        "q": ". / are / You / OK",
         "ans": "You are OK."
       },
       {
-        "q": "is / He / . / sure",
+        "q": "He / sure / is / .",
         "ans": "He is sure."
       },
       {
-        "q": ". / She / fine / is",
+        "q": "fine / . / She / is",
         "ans": "She is fine."
       },
       {
-        "q": "OK / We / . / are",
+        "q": ". / OK / are / We",
         "ans": "We are OK."
       },
       {

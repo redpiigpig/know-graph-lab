@@ -339,7 +339,7 @@
         "ans": "dining room"
       },
       {
-        "q": "If you want to go in, please ______ the door. (敲)",
+        "q": "If you want to go in, please ______ on the door.",
         "opts": [
           "knock",
           "floor",
@@ -363,7 +363,7 @@
         "ans": "are"
       },
       {
-        "q": "He ____ the door.（他敲門。）",
+        "q": "He ____ on the door.（他敲門。）",
         "ans": "knocks"
       },
       {

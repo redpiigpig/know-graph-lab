@@ -311,12 +311,12 @@
       {
         "q": "Today ______ . (天氣很好)",
         "opts": [
-          "It is snow",
-          "It is rain",
-          "It is wind",
-          "It is sunny"
+          "is sunny",
+          "is rainy",
+          "is windy",
+          "is cloudy"
         ],
-        "ans": "It is sunny"
+        "ans": "is sunny"
       },
       {
         "q": "風 的英文是？",

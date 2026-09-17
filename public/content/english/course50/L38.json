@@ -324,14 +324,14 @@
         "ans": "funny"
       },
       {
-        "q": "cheer 的意思是？",
+        "q": "cheer 的意思是?",
         "opts": [
-          "cheer",
+          "fun",
           "shy",
           "quiet",
-          "fun"
+          "boring"
         ],
-        "ans": "cheer"
+        "ans": "fun"
       },
       {
         "q": "I feel ______. (我感到緊張。)",
@@ -344,14 +344,14 @@
         "ans": "nervous"
       },
       {
-        "q": "habit 的意思是？",
+        "q": "habit 的意思是?",
         "opts": [
           "ball",
-          "habit",
           "art",
-          "hobby"
+          "hobby",
+          "exercise"
         ],
-        "ans": "habit"
+        "ans": "exercise"
       }
     ],
     "fill": [
