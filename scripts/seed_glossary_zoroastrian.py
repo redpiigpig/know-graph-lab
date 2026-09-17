@@ -395,7 +395,7 @@ D("Sraosha", "斯魯沙", o="Sraoša", var="索魯什（Sorush）；斯羅沙", 
   domain="聽從／守護亡魂",
   reason="字面「聽從、聆聽」。人死後三夜守護其魂者；亦為祭儀誦唸本身的神格化。")
 D("Rashnu", "拉什努", o="Rašnu", etype="deity", domain="公義／審判",
-  reason="亡魂過裁判之橋時執秤者。與密特拉、斯勞沙合為審判三神。")
+  reason="亡魂過裁判之橋時執秤者。與密特拉、斯魯沙合為審判三神。")
 D("Ashi", "阿希", o="Aṣ̌i", var="阿爾德（Ard）；福運", etype="deity", domain="福運／賞報",
   reason="耶什特第 17 首的受祀女神；與「阿沙」音近而詞源不同，勿混。")
 D("Vayu", "瓦尤", o="Vaiiu", var="瓦伊；風神", etype="deity", domain="風／生死之間",

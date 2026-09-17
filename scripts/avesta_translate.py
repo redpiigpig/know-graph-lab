@@ -96,7 +96,17 @@ def refresh_names() -> int:
         if row.get("name_recommended") and row["name_english"] in PLACES_WANTED:
             table[row["name_english"]] = row["name_recommended"]
 
-    table.update(EXTRA)   # 詞庫沒有、但本書高頻的通用詞
+    # 🚨 **EXTRA 只補詞庫沒有的，不可覆蓋詞庫**（2026-09-17 實測踩過）。
+    #    原本寫 table.update(EXTRA)，而 EXTRA 硬編了 "Sraosha": "斯勞沙"，
+    #    於是詞庫已定的「斯魯沙」被靜默蓋掉，46 段譯文用了錯的名字——
+    #    而本檔開頭才剛寫「詞庫是絕對權威」。update 的語義正好相反。
+    clash = {k: (EXTRA[k], table[k]) for k in EXTRA if k in table and EXTRA[k] != table[k]}
+    for k, v in EXTRA.items():
+        table.setdefault(k, v)
+    if clash:
+        print("🚨 EXTRA 與詞庫衝突（已從詞庫，EXTRA 那幾條該刪）：")
+        for k, (e, d) in clash.items():
+            print(f"     {k}: EXTRA={e} → 取詞庫={d}")
     io.open(NAMES_PATH, "w", encoding="utf-8").write(
         json.dumps(dict(sorted(table.items())), ensure_ascii=False, indent=1) + "\n")
     print(f"✓ 專名表 {len(table)} 條 → {NAMES_PATH}")
@@ -148,7 +158,7 @@ EXTRA = {
     "Peshotanu": "佩紹坦努",
     "Tanafuhr": "塔納弗爾罪",
     "Aspahe-astra": "馬鞭",
-    "Sraosho-carana": "斯勞沙鞭",
+    "Sraosho-carana": "斯魯沙鞭",   # 名根跟著 Sraosha 的詞庫定名走
     "Dashtan": "經期",
     "Barashnum": "巴爾什農",
     "Hathra": "哈特拉（長度單位）",
@@ -163,7 +173,7 @@ EXTRA = {
     "Ahriman": "安格拉‧曼紐",
     "Ormazd": "阿胡拉‧馬茲達",
     "Vanguhi Daitya": "萬古希‧戴提亞河",
-    "Sraosha": "斯勞沙",
+    # "Sraosha" 不列在這裡——詞庫已定「斯魯沙」，列在 EXTRA 只會製造衝突。
     "Rashnu": "拉什努",
     "Ashi Vanguhi": "阿希",
     "Drvaspa": "德爾瓦斯帕",

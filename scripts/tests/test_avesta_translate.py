@@ -86,7 +86,7 @@ def test_rejects_empty_and_too_short():
 
 def test_does_not_reject_translation_containing_numbers_and_parens():
     """數字與括號是本書的實質內容，不可被閘誤殺。"""
-    zh = "他當受四百鞭：以馬鞭四百，以斯勞沙鞭四百（見〔第四章〕）。"
+    zh = "他當受四百鞭：以馬鞭四百，以斯魯沙鞭四百（見〔第四章〕）。"
     assert reject_reason(zh, "x") is None
 
 
