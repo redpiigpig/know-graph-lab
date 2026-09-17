@@ -12,8 +12,10 @@
   - 東方聖卷：mueller_data/sbe-*/sec*.json
   - 無教會主義：yanaihara_data/<slug>/sec*.json + C:/tmp/yanaihara_ndl/（NDL 掃描與 OCR）
   - ACCS：C:/tmp/accs_*.raw.jsonl + .done
-  - z-library 收書：output/zlib_wanted_all.jsonl + scripts/state/zlib_ledger.jsonl
   - 是否運行：Windows Win32_Process command line
+
+本面板只管「全集翻譯」這一半。收書（z-lib／華藝）、圖書館 OCR、外文資料庫
+那幾條管線改看 scripts/watch_pipelines.py——那支是看產出對帳，排程叫得動。
 
 Usage:
   python -X utf8 scripts/translation_dashboard.py
@@ -48,7 +50,6 @@ JUNG_ROOT = CW_ROOT / "jung_data"
 PLATO_BUILD = ROOT / "scripts" / "plato_build.py"
 PLATO_CACHE = Path(r"C:\tmp\plato_cache")
 LOG_ROOT = ROOT / "scripts" / "logs"
-DAZANGJING_CATALOG_ROOT = ROOT / "data" / "dazangjing" / "source-catalog"
 TMP_ROOT = Path(os.environ.get("TEMP", r"C:\tmp"))
 if Path(r"C:\tmp").exists():
     TMP_ROOT = Path(r"C:\tmp")
@@ -70,11 +71,6 @@ PROCESS_PATTERNS = {
         "accs_resume",
         "accs_loop",
     ),
-    "基督教大藏經": (
-        "dazangjing_catalog_ai.py",
-        "dazangjing_catalog_curate.py",
-        "dazangjing_source_catalog.py",
-    ),
     "希臘化哲學": (
         "hellenistic_run_queue.py",
         "plotinus_build.py",
@@ -84,10 +80,6 @@ PROCESS_PATTERNS = {
     "無教會主義": (
         "uchimura_auto.py",
         "yanaihara_ndl.py",
-    ),
-    "z-library 收書": (
-        "zlib_fetch.mjs",
-        "zlib_daily.ps1",
     ),
 }
 
@@ -1318,201 +1310,6 @@ def scan_yanaihara(processes: list[dict[str, Any]]) -> list[WorkProgress]:
     return rows
 
 
-def _zlib_counts() -> tuple[dict[str, int], dict[str, dict[str, int]], float | None]:
-    """(清單各來源筆數, 各來源已結案筆數, 帳本最後更新時間)。
-
-    「已結案」＝下載到、查無、沒有對得上的版本三種；下載失敗不算——那多半是當天
-    額度用完，算進去的話那本書就再也輪不到（見 [[ebook-zlib-harvest]]）。
-    """
-    wanted_path = ROOT / "output" / "zlib_wanted_all.jsonl"
-    totals: dict[str, int] = {}
-    key_source: dict[str, str] = {}
-    if wanted_path.exists():
-        for line in wanted_path.read_text(encoding="utf-8").splitlines():
-            if not line.strip():
-                continue
-            try:
-                item = json.loads(line)
-            except json.JSONDecodeError:
-                continue
-            src = item.get("source", "?")
-            totals[src] = totals.get(src, 0) + 1
-            key_source[item.get("key", "")] = src
-
-    settled = {"downloaded", "not-found", "no-usable-hit"}
-    done: dict[str, dict[str, int]] = {}
-    ledger = ROOT / "scripts" / "state" / "zlib_ledger.jsonl"
-    if ledger.exists():
-        for line in ledger.read_text(encoding="utf-8").splitlines():
-            if not line.strip():
-                continue
-            try:
-                rec = json.loads(line)
-            except json.JSONDecodeError:
-                continue
-            status = rec.get("status", "")
-            if status not in settled:
-                continue
-            src = key_source.get(rec.get("key", ""), "?")
-            bucket = done.setdefault(src, {})
-            bucket[status] = bucket.get(status, 0) + 1
-    updated = ledger.stat().st_mtime if ledger.exists() else None
-    return totals, done, updated
-
-
-def scan_zlib(processes: list[dict[str, Any]]) -> list[WorkProgress]:
-    """z-library 收書清單消化到哪。免費帳號一天十本，所以這是長線滴流。"""
-    totals, done, updated = _zlib_counts()
-    if not totals:
-        return []
-    running = bool(processes)
-    rows = []
-    for src, total in sorted(totals.items(), key=lambda kv: -kv[1]):
-        bucket = done.get(src, {})
-        settled = sum(bucket.values())
-        got = bucket.get("downloaded", 0)
-        misses = settled - got
-        rows.append(WorkProgress(
-            group="z-library 收書",
-            key=f"zlib-{src}",
-            title=src,
-            done=settled, total=total, unit="本",
-            state=_state(settled, total, running, updated),
-            running=running,
-            current=f"下載 {got} 本" + (f"／查無 {misses}" if misses else ""),
-            updated_at=updated,
-            source="scripts/state/zlib_ledger.jsonl",
-            detail="每日 09:30 排程；免費帳號額度十本／日",
-        ))
-    return rows
-
-
-def _dazangjing_catalog_stats(
-        seed_path: Path, ledger_path: Path) -> tuple[int, int, int]:
-    """Return classified, valid candidate, and manual-review counts."""
-    def record_key(record: dict[str, Any]) -> str:
-        basis = "|".join(
-            str(record.get(key, ""))
-            for key in ("source", "url", "title", "author", "date")
-        )
-        return re.sub(r"\s+", " ", basis).strip().lower()
-
-    try:
-        seed = json.loads(seed_path.read_text(encoding="utf-8"))
-        seed_keys = {
-            record_key(record)
-            for record in (seed.get("records") or [])
-            if isinstance(record, dict) and str(record.get("title") or "").strip()
-        }
-    except (OSError, json.JSONDecodeError, AttributeError):
-        seed_keys = set()
-
-    latest_classified: dict[str, dict[str, Any]] = {}
-    try:
-        for raw in ledger_path.read_text(encoding="utf-8").splitlines():
-            if not raw.strip():
-                continue
-            try:
-                row = json.loads(raw)
-            except json.JSONDecodeError:
-                continue
-            if row.get("engine") == "none":
-                continue
-            key = str(row.get("record_key") or "").strip()
-            if key:
-                latest_classified[key] = row
-    except OSError:
-        pass
-    classified_keys = seed_keys & set(latest_classified)
-    manual = sum(
-        (latest_classified[key].get("classification") or {}).get("decision")
-        == "needs_manual_review"
-        for key in classified_keys
-    )
-    return len(classified_keys), len(seed_keys), manual
-
-
-def _dazangjing_catalog_counts(seed_path: Path, ledger_path: Path) -> tuple[int, int]:
-    """Compatibility wrapper returning classified and valid candidate counts."""
-    done, total, _manual = _dazangjing_catalog_stats(seed_path, ledger_path)
-    return done, total
-
-
-def scan_dazangjing(processes: list[dict[str, Any]]) -> list[WorkProgress]:
-    """Persistent source-classification rows for the Christian Dazangjing."""
-    specs = (
-        ("western", "西方館藏來源",
-         DAZANGJING_CATALOG_ROOT / "seed-records-expanded.json",
-         DAZANGJING_CATALOG_ROOT / "classified-records.jsonl"),
-        ("eastern", "東方基督教來源",
-         DAZANGJING_CATALOG_ROOT / "seed-records-eastern.json",
-         DAZANGJING_CATALOG_ROOT / "classified-records-eastern.jsonl"),
-    )
-    rows: list[WorkProgress] = []
-    commands = [
-        str(proc.get("CommandLine") or "").lower()
-        for proc in processes
-    ]
-    for key, label, seed_path, ledger_path in specs:
-        done, total, manual = _dazangjing_catalog_stats(seed_path, ledger_path)
-        running = any(
-            "dazangjing_catalog_ai.py" in cmd
-            and (("eastern" in cmd) == (key == "eastern"))
-            for cmd in commands
-        )
-        updated = _latest_mtime([seed_path, ledger_path])
-        remaining = max(0, total - done)
-        current = (
-            f"分類器執行中｜尚餘 {remaining:,} 筆"
-            if running else
-            (f"已分類；{manual:,} 筆待人工裁決" if manual else
-             "候選已全數分類" if total and done >= total else
-             f"尚餘 {remaining:,} 筆待分類")
-        )
-        state = _state(done, total, running, updated)
-        if manual and not running:
-            state = "待人工複查"
-        rows.append(WorkProgress(
-            "基督教大藏經", f"dazangjing:{key}",
-            f"來源候選分類｜{label}",
-            done, total, "筆", state, running,
-            current, updated, str(ledger_path),
-            f"候選：{seed_path.name}｜分類帳：{ledger_path.name}"
-            + (f"｜待人工裁決 {manual:,} 筆" if manual else ""),
-        ))
-
-    curate_running = any("dazangjing_catalog_curate.py" in cmd for cmd in commands)
-    for key, label, filename in (
-        ("western", "西方館藏", "curation-worklist.json"),
-        ("eastern", "東方館藏", "curation-worklist-eastern.json"),
-    ):
-        worklist = DAZANGJING_CATALOG_ROOT / filename
-        try:
-            work = json.loads(worklist.read_text(encoding="utf-8"))
-        except (OSError, json.JSONDecodeError):
-            continue
-        pending = len(work.get("new_works") or [])
-        resolved = int(work.get("in_corpus_count") or 0)
-        total = resolved + pending
-        updated = _latest_mtime([worklist])
-        running = curate_running and (
-            key == "eastern" or "eastern" not in " ".join(commands))
-        state = (
-            _state(resolved, total, running, updated)
-            if not pending else
-            "待匯入/檢查"
-        )
-        rows.append(WorkProgress(
-            "基督教大藏經", f"dazangjing:curate:{key}",
-            f"保留候選收錄去重｜{label}",
-            resolved, total, "部", state, running,
-            (f"尚有 {pending:,} 部待收錄複核"
-             if pending else "保留候選均已收錄或完成去重"),
-            updated, str(worklist),
-        ))
-    return rows
-
-
 def collect_snapshot() -> tuple[list[WorkProgress], dict[str, list[dict[str, Any]]]]:
     pan_titles, sbe_titles = registry_titles()
     processes = active_processes()
@@ -1525,10 +1322,8 @@ def collect_snapshot() -> tuple[list[WorkProgress], dict[str, list[dict[str, Any
     rows.extend(scan_json_checkpoints(
         "東方聖卷", MUELLER_ROOT, sbe_titles, groups["東方聖卷"], "en"))
     rows.extend(scan_accs(groups["ACCS"]))
-    rows.extend(scan_dazangjing(groups["基督教大藏經"]))
     rows.extend(scan_hellenistic(groups["希臘化哲學"]))
     rows.extend(scan_yanaihara(groups["無教會主義"]))
-    rows.extend(scan_zlib(groups["z-library 收書"]))
     rows.extend(scan_other_work(processes))
     return rows, groups
 
@@ -1669,7 +1464,7 @@ class Dashboard:
         self.notebook.pack(fill="both", expand=True, padx=24)
         self.trees: dict[str, Any] = {}
         for group in ("全部", "榮格", "哲學家全集", "希臘化哲學", "潘尼卡", "東方聖卷",
-                      "無教會主義", "ACCS", "基督教大藏經", "z-library 收書", "其他工作"):
+                      "無教會主義", "ACCS", "其他工作"):
             frame = tk.Frame(self.notebook, bg=self.COLORS["panel"])
             self.notebook.add(frame, text=group)
             tree = self.ttk.Treeview(

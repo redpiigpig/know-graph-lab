@@ -8,7 +8,6 @@ from scripts.translation_dashboard import (
     _accs_target,
     _checkpoint_counts,
     _command_arg,
-    _dazangjing_catalog_counts,
     _greek_source_total,
     _greek_work_registry,
     _next_source_page,
@@ -66,27 +65,6 @@ class TranslationDashboardTests(unittest.TestCase):
     def test_command_arg(self):
         cmd = "python scripts/ingest_lit_review.py --project genesis-philosophy --resume"
         self.assertEqual(_command_arg(cmd, "--project"), "genesis-philosophy")
-
-    def test_dazangjing_catalog_counts_unique_classifications(self):
-        with tempfile.TemporaryDirectory() as tmp:
-            root = Path(tmp)
-            seed = root / "seed.json"
-            ledger = root / "classified.jsonl"
-            a = {"source": "loc", "url": "a", "title": "A", "author": "", "date": ""}
-            b = {"source": "dnb", "url": "b", "title": "B", "author": "", "date": ""}
-            blank = {"source": "dnb", "url": "query", "title": "", "author": "", "date": ""}
-            seed.write_text(
-                json.dumps({"records": [a, a, b, blank]}), encoding="utf-8")
-            ledger.write_text(
-                "\n".join([
-                    json.dumps({"record_key": "loc|a|a||", "engine": "gemini"}),
-                    json.dumps({"record_key": "loc|a|a||", "engine": "gemini"}),
-                    "not-json",
-                    json.dumps({"record_key": "dnb|b|b||", "engine": "none"}),
-                ]),
-                encoding="utf-8",
-            )
-            self.assertEqual(_dazangjing_catalog_counts(seed, ledger), (1, 2))
 
     def test_next_source_page_uses_real_page_number(self):
         self.assertEqual(_next_source_page({43, 44, 96}), 97)

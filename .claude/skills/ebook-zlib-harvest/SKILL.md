@@ -178,7 +178,13 @@ PowerShell → cmd → node。
 **查法**是跑 `python scripts/zlib_wanted.py --stats`——它只印不寫（不會覆寫正在被
 `--probe` 讀的清單），會列出 33 個來源各自的筆數與合計，格式不對的檔會出聲跳過
 （目前唯一一筆是 `mukyokai-zh-found.jsonl` 的 7 行，非獵書格式、已知）。
+
 合計對得上「清單 − 已處理」就代表沒有來源掉，縮水純粹是扣掉已處理的。
+
+2026-09-17 把 `translation_dashboard.py` 的「z-library 收書」分頁整塊拆掉，原因同上：
+它也是拿 `zlib_wanted_all.jsonl` 的行數當分母（各來源印 0.4%／2.0% 那種數字），而且
+面板每次開都要重讀整本帳本。收書進度一律看 `watch_pipelines.py` 第二節，或
+`zlib_wanted.py --stats`；面板只留全集翻譯。
 
 ## 現況（2026-09-02）
 
