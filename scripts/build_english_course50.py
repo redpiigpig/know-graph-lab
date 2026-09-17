@@ -719,7 +719,17 @@ def validate_punctuation(ex: dict) -> list[str]:
 # L06 十題填空有七題是第一種。學生填 blue 被算錯、填 red 算對，
 # 而題目根本沒說是哪個顏色。
 _HINT_BLANK = re.compile(r"[_＿]{2,}")
-_HINT_VAGUE = re.compile(r"^(請填|填入|選出|填上|請選)")
+# 🚨 判準是「有沒有給語意」，不是「開頭是不是『請填』」。
+# 第一版拿前綴當代理指標，把「請填入表示『第一』的序數詞」也擋掉了——
+# 那個提示明明給了語意（第一），是好的提示。剝掉動詞與詞性用語之後，
+# 還剩中文才算有給語意。
+_HINT_STRIP = re.compile(
+    r"請填入|請填|填入|請選|選出|填上|表示|的|英文|單字|字|詞|"
+    r"序數|基數|介系|定冠|冠|名|動|形容|副|代名|連接|數|量|[『』「」（）()\s]")
+
+
+def _hint_is_vague(hint: str) -> bool:
+    return not re.search(r"[一-鿿0-9A-Za-z]", _HINT_STRIP.sub("", hint))
 
 
 def validate_hints(ex: dict) -> list[str]:
@@ -731,7 +741,7 @@ def validate_hints(ex: dict) -> list[str]:
                 if _HINT_BLANK.search(hint):
                     errs.append(f"{label}第 {i} 題的中文提示自己挖空"
                                 f"（{hint[:20]}），等於沒給提示，答案不只一個")
-                elif _HINT_VAGUE.match(hint):
+                elif _hint_is_vague(hint):
                     errs.append(f"{label}第 {i} 題的中文提示只說詞性"
                                 f"（{hint[:20]}），沒說語意，答案不只一個")
     return errs

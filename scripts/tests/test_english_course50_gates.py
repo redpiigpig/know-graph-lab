@@ -285,6 +285,32 @@ def test_fullwidth_punctuation_in_english_is_rejected(gen):
     assert gen.validate_punctuation(ok) == []
 
 
+def test_hint_must_give_an_answer(gen):
+    """中文提示要真的給得出唯一答案。
+
+    1,700 題逐題校讀，117 處裡 62 處是「答案不只一個」，兩類機械抓得到：
+      The ribbon is ____.（這條緞帶是_____的）  提示自己挖空
+      This is the ______ number. (請填序數詞)    只說詞性
+    L06 十題填空有七題是第一種——學生填 blue 被算錯、填 red 算對。
+    """
+    for q in ("The ribbon is ____.（這條緞帶是_____的）",
+              "This is the ______ number. (請填序數詞)"):
+        assert gen.validate_hints({"fill": [{"q": q, "ans": "x"}]}), q
+
+
+def test_hint_gate_does_not_kill_good_hints(gen):
+    """🚨 判準是「有沒有給語意」，不是「開頭是不是『請填』」。
+
+    第一版拿前綴當代理指標，把「請填入表示『第一』的序數詞」也擋掉——
+    那提示明明給了語意。模型照建議補好了提示，卻被我的閘退回，L05 修訂失敗。
+    """
+    for q in ("A ______ equals a dozen. (請填入表示『一打』的單字)",
+              "This is the ______ number. (請填入表示『第一』的序數詞)",
+              "Two ____ two is four. (請填入表示『加』的字)",
+              "I ______ fine.（我很好。）"):
+        assert gen.validate_hints({"fill": [{"q": q, "ans": "x"}]}) == [], q
+
+
 def test_every_word_has_a_pos(gen):
     """一千字都要標到，否則這道閘會靜默放行沒標到的那些。"""
     import json
