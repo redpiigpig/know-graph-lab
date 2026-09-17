@@ -568,6 +568,7 @@ def validate_exercises(ex: dict, keys: dict[str, int] | None = None) -> list[str
     errs += validate_variety(ex)
     errs += validate_overlap(ex)
     errs += validate_complements(ex)
+    errs += validate_punctuation(ex)
     bad = check_simplified(ex)
     if bad:
         errs.append("簡體字：" + "".join(bad))
@@ -682,6 +683,27 @@ def validate_complements(ex: dict) -> list[str]:
             if tags and not (set(tags) & BE_COMPLEMENT_POS):
                 errs.append(f"{label}第 {i} 題「{item['ans']}」不是英文——"
                             f"{word} 是{'／'.join(tags)}，不能接在 be 動詞後面當補語")
+    return errs
+
+
+# 英文句子裡不可以混中文標點。2026-09-17 把下冊印出來看，填空題長這樣：
+#   The _____ is in the house。（燈在房子裡。）
+# 全書 72 處、橫跨二十幾課。括號裡的中文提示用全形是對的，括號外的英文句
+# 用全形就錯了，所以判準是「剝掉括號之後還有沒有全形標點」。
+_FULLWIDTH = re.compile(r"[A-Za-z0-9_＿\s][。，；：？！]")
+
+
+def validate_punctuation(ex: dict) -> list[str]:
+    errs = []
+    for key, label in (("mcq", "選擇題"), ("fill", "填空"),
+                       ("translate", "造句翻譯"), ("unscramble", "句子重組")):
+        for i, item in enumerate(_dicts(ex, key), 1):
+            for field in ("q", "ans"):
+                stem = re.sub(r"[（(][^）)]*[）)]", "", _txt(item.get(field)))
+                if _FULLWIDTH.search(stem):
+                    errs.append(f"{label}第 {i} 題的英文句混了中文標點："
+                                f"{_txt(item.get(field))[:30]}")
+                    break
     return errs
 
 

@@ -389,15 +389,15 @@
         "ans": "in"
       },
       {
-        "q": "The hospital is in the ____。（醫院在市場）",
+        "q": "The hospital is in the ____.（醫院在市場）",
         "ans": "market"
       },
       {
-        "q": "She is at the ____。（她在___）",
+        "q": "She is at the ____.（她在___）",
         "ans": "factory"
       },
       {
-        "q": "They go to the ____。（他們去___）",
+        "q": "They go to the ____.（他們去___）",
         "ans": "library"
       },
       {

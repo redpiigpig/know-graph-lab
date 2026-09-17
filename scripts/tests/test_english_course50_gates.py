@@ -272,6 +272,19 @@ def test_place_words_after_be_are_allowed(gen):
         assert gen.validate_complements({"translate": [{"q": "x", "ans": ans}]}) == [], ans
 
 
+def test_fullwidth_punctuation_in_english_is_rejected(gen):
+    """把下冊印出來看才發現的：填空題長成
+    「The _____ is in the house。（燈在房子裡。）」——英文句用了全形句號。
+    全書 72 處、橫跨二十幾課。括號裡的中文提示用全形是對的，所以判準是
+    「剝掉括號之後還有沒有全形標點」。
+    """
+    bad = {"fill": [{"q": "The lamp is in the house。（燈在房子裡。）", "ans": "lamp"}]}
+    assert gen.validate_punctuation(bad)
+    ok = {"fill": [{"q": "The lamp is in the house.（燈在房子裡。）", "ans": "lamp"},
+                   {"q": "I ____ fine.（我很好。）", "ans": "am"}]}
+    assert gen.validate_punctuation(ok) == []
+
+
 def test_every_word_has_a_pos(gen):
     """一千字都要標到，否則這道閘會靜默放行沒標到的那些。"""
     import json

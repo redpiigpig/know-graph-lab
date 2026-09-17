@@ -378,15 +378,15 @@
         "ans": "goes"
       },
       {
-        "q": "The horse ____。（馬在走路）",
+        "q": "The horse ____.（馬在走路）",
         "ans": "walks"
       },
       {
-        "q": "The mouse ____。（老鼠在跑）",
+        "q": "The mouse ____.（老鼠在跑）",
         "ans": "runs"
       },
       {
-        "q": "The rabbit ____。（兔子來了）",
+        "q": "The rabbit ____.（兔子來了）",
         "ans": "comes"
       }
     ],

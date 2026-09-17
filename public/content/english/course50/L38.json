@@ -368,11 +368,11 @@
         "ans": "team"
       },
       {
-        "q": "The movie is ____。（這部電影很有趣。）",
+        "q": "The movie is ____.（這部電影很有趣。）",
         "ans": "funny"
       },
       {
-        "q": "The lecture is ____。（這堂課很無聊。）",
+        "q": "The lecture is ____.（這堂課很無聊。）",
         "ans": "boring"
       },
       {
@@ -380,7 +380,7 @@
         "ans": "nervous"
       },
       {
-        "q": "I ____ to read books。（我喜歡看書。）",
+        "q": "I ____ to read books.（我喜歡看書。）",
         "ans": "like"
       },
       {

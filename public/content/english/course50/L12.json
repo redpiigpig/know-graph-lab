@@ -366,43 +366,43 @@
     ],
     "fill": [
       {
-        "q": "He is a ____。（他是一個男孩）",
+        "q": "He is a ____.（他是一個男孩）",
         "ans": "boy"
       },
       {
-        "q": "She is a ____。（她是一個女孩）",
+        "q": "She is a ____.（她是一個女孩）",
         "ans": "girl"
       },
       {
-        "q": "My ____ is new。（我的____是新的）",
+        "q": "My ____ is new.（我的____是新的）",
         "ans": "friend"
       },
       {
-        "q": "She is my ____。（她是我的____）",
+        "q": "She is my ____.（她是我的____）",
         "ans": "cousin"
       },
       {
-        "q": "His ____ is wonderful。（他的____很棒）",
+        "q": "His ____ is wonderful.（他的____很棒）",
         "ans": "grandfather"
       },
       {
-        "q": "Her ____ is dear。（她的____很親愛）",
+        "q": "Her ____ is dear.（她的____很親愛）",
         "ans": "aunt"
       },
       {
-        "q": "Our ____ are people。（我們的____是人們）",
+        "q": "Our ____ are people.（我們的____是人們）",
         "ans": "friends"
       },
       {
-        "q": "This is a ____。（這是一個女人）",
+        "q": "This is a ____.（這是一個女人）",
         "ans": "woman"
       },
       {
-        "q": "That is a ____。（那是一個男人）",
+        "q": "That is a ____.（那是一個男人）",
         "ans": "man"
       },
       {
-        "q": "We are ____。（我們是青少年）",
+        "q": "We are ____.（我們是青少年）",
         "ans": "teenagers"
       }
     ],

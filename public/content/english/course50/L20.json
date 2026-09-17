@@ -351,43 +351,43 @@
     ],
     "fill": [
       {
-        "q": "How much ____ the apple？（這個蘋果多少錢？）",
+        "q": "How much ____ the apple?（這個蘋果多少錢？）",
         "ans": "is"
       },
       {
-        "q": "How much ____ the guavas？（這些番石榴多少錢？）",
+        "q": "How much ____ the guavas?（這些番石榴多少錢？）",
         "ans": "are"
       },
       {
-        "q": "I have a ____。（我有一個蘋果。）",
+        "q": "I have a ____.（我有一個蘋果。）",
         "ans": "apple"
       },
       {
-        "q": "She puts the ____ on the table。（她把碗放在桌子上。）",
+        "q": "She puts the ____ on the table.（她把碗放在桌子上。）",
         "ans": "bowl"
       },
       {
-        "q": "He likes to eat ____。（他喜歡吃魷魚。）",
+        "q": "He likes to eat ____.（他喜歡吃魷魚。）",
         "ans": "squid"
       },
       {
-        "q": "We put the garbage ____ the bin。（我們把垃圾放在垃圾桶裡。）",
+        "q": "We put the garbage ____ the bin.（我們把垃圾放在垃圾桶裡。）",
         "ans": "in"
       },
       {
-        "q": "The fork is ____ the plate。（叉子在盤子上。）",
+        "q": "The fork is ____ the plate.（叉子在盤子上。）",
         "ans": "on"
       },
       {
-        "q": "The cat sleeps ____ the table。（貓睡在桌子下面。）",
+        "q": "The cat sleeps ____ the table.（貓睡在桌子下面。）",
         "ans": "under"
       },
       {
-        "q": "She bought some ____ at the market。（她在市場買了一些花生。）",
+        "q": "She bought some ____ at the market.（她在市場買了一些花生。）",
         "ans": "peanuts"
       },
       {
-        "q": "He ordered ____ for lunch。（他點了酸菜當午餐。）",
+        "q": "He ordered ____ for lunch.（他點了酸菜當午餐。）",
         "ans": "pickle"
       }
     ],

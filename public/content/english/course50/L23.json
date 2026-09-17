@@ -373,27 +373,27 @@
         "ans": "check"
       },
       {
-        "q": "Please give me a ____ to colour the picture。（請給我一支蠟筆為圖上色）",
+        "q": "Please give me a ____ to colour the picture.（請給我一支蠟筆為圖上色）",
         "ans": "crayon"
       },
       {
-        "q": "Please ____ the room before speaking。（請先進入房間再說話）",
+        "q": "Please ____ the room before speaking.（請先進入房間再說話）",
         "ans": "enter"
       },
       {
-        "q": "We ____ for the test tomorrow。（我們明天為考試做準備）",
+        "q": "We ____ for the test tomorrow.（我們明天為考試做準備）",
         "ans": "prepare"
       },
       {
-        "q": "We ____ how to spell the word。（我們學怎麼拼寫這個詞）",
+        "q": "We ____ how to spell the word.（我們學怎麼拼寫這個詞）",
         "ans": "learn"
       },
       {
-        "q": "You ____ your name at the top of the paper。（你在紙上寫下你的名字）",
+        "q": "You ____ your name at the top of the paper.（你在紙上寫下你的名字）",
         "ans": "write"
       },
       {
-        "q": "The answer is ____。（答案是正確的）",
+        "q": "The answer is ____.（答案是正確的）",
         "ans": "correct"
       }
     ],

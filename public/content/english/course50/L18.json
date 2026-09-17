@@ -390,19 +390,19 @@
         "ans": "bottle"
       },
       {
-        "q": "The cake is ____。（這塊蛋糕很好吃）",
+        "q": "The cake is ____.（這塊蛋糕很好吃）",
         "ans": "delicious"
       },
       {
-        "q": "I am ____。（我飽了）",
+        "q": "I am ____.（我飽了）",
         "ans": "full"
       },
       {
-        "q": "The juice is ____。（這果汁很新鮮）",
+        "q": "The juice is ____.（這果汁很新鮮）",
         "ans": "fresh"
       },
       {
-        "q": "It is a ____ of cake。（這是一塊蛋糕）",
+        "q": "It is a ____ of cake.（這是一塊蛋糕）",
         "ans": "piece"
       },
       {

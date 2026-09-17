@@ -367,7 +367,7 @@
         "ans": "the cutest"
       },
       {
-        "q": "He is ______。（最高級）",
+        "q": "He is ______.（最高級）",
         "opts": [
           "thinner",
           "thinnest",
@@ -377,7 +377,7 @@
         "ans": "the thinnest"
       },
       {
-        "q": "This is ______。（最高級）",
+        "q": "This is ______.（最高級）",
         "opts": [
           "longer",
           "longest",

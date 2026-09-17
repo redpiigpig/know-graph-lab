@@ -398,31 +398,31 @@
         "ans": "half"
       },
       {
-        "q": "The number is ____。（這個數字是零。）",
+        "q": "The number is ____.（這個數字是零。）",
         "ans": "zero"
       },
       {
-        "q": "Please ____。（請數一下。）",
+        "q": "Please ____.（請數一下。）",
         "ans": "count"
       },
       {
-        "q": "We have a ____。（我們有一打。）",
+        "q": "We have a ____.（我們有一打。）",
         "ans": "dozen"
       },
       {
-        "q": "What is the ____。（這個數字是多少？）",
+        "q": "What is the ____.（這個數字是多少？）",
         "ans": "number"
       },
       {
-        "q": "This is ____。（加號）",
+        "q": "This is ____.（加號）",
         "ans": "plus"
       },
       {
-        "q": "This is ____。（減號）",
+        "q": "This is ____.（減號）",
         "ans": "minus"
       },
       {
-        "q": "This is ____。（等號）",
+        "q": "This is ____.（等號）",
         "ans": "equal"
       }
     ],

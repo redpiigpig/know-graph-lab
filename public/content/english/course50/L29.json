@@ -389,35 +389,35 @@
         "ans": "morning"
       },
       {
-        "q": "I take a nap in the ____。（我下午睡午覺）",
+        "q": "I take a nap in the ____.（我下午睡午覺）",
         "ans": "afternoon"
       },
       {
-        "q": "We watch TV in the ____。（我們晚上看電視）",
+        "q": "We watch TV in the ____.（我們晚上看電視）",
         "ans": "evening"
       },
       {
-        "q": "I sleep at ____。（我晚上睡覺）",
+        "q": "I sleep at ____.（我晚上睡覺）",
         "ans": "night"
       },
       {
-        "q": "We eat lunch at ____。（我們中午吃午餐）",
+        "q": "We eat lunch at ____.（我們中午吃午餐）",
         "ans": "noon"
       },
       {
-        "q": "We go to the park on the ____。（我們週末去公園）",
+        "q": "We go to the park on the ____.（我們週末去公園）",
         "ans": "weekend"
       },
       {
-        "q": "Today is ____。（今天是星期三）",
+        "q": "Today is ____.（今天是星期三）",
         "ans": "Wednesday"
       },
       {
-        "q": "The meeting lasts one ____。（會議持續一小時）",
+        "q": "The meeting lasts one ____.（會議持續一小時）",
         "ans": "hour"
       },
       {
-        "q": "We get paid once a ____。（我們每月領薪水）",
+        "q": "We get paid once a ____.（我們每月領薪水）",
         "ans": "month"
       }
     ],

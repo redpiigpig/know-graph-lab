@@ -363,23 +363,23 @@
         "ans": "are"
       },
       {
-        "q": "He ____ the door。（他敲門。）",
+        "q": "He ____ the door.（他敲門。）",
         "ans": "knocks"
       },
       {
-        "q": "The lamp is ____ the floor。（燈在地板下。）",
+        "q": "The lamp is ____ the floor.（燈在地板下。）",
         "ans": "under"
       },
       {
-        "q": "We ____ the fan。（我們修理風扇。）",
+        "q": "We ____ the fan.（我們修理風扇。）",
         "ans": "fix"
       },
       {
-        "q": "She likes to ____ in the garden。（她喜歡在花園裡走。）",
+        "q": "She likes to ____ in the garden.（她喜歡在花園裡走。）",
         "ans": "go"
       },
       {
-        "q": "The ____ is in the house。（燈在房子裡。）",
+        "q": "The ____ is in the house.（燈在房子裡。）",
         "ans": "lamp"
       },
       {
@@ -387,7 +387,7 @@
         "ans": "is"
       },
       {
-        "q": "This is my ____。（這是我的房間。）",
+        "q": "This is my ____.（這是我的房間。）",
         "ans": "room"
       }
     ],
