@@ -226,6 +226,9 @@ def run_vol(vol, cfg, bounds, args) -> None:
         part = data / "parts" / f"{i:04d}.json"
         if part.exists():
             continue
+        # --shard i/n：只做屬於自己的單位，其餘交給別的行程（各寫各的 part 檔）。
+        if args.shard and i % args.shard[1] != args.shard[0]:
+            continue
         try:
             zh = clean_pre("\n\n".join(te._to_traditional(engine(s)) for s in te.split_oversized(en)))
         except Exception as exc:  # noqa: BLE001
@@ -257,7 +260,16 @@ def main() -> None:
     ap.add_argument("--upload-every", type=int, default=8)
     ap.add_argument("--no-upload", action="store_true")
     ap.add_argument("--inspect", action="store_true")
+    ap.add_argument("--shard", default="",
+                    help="i/n：只翻第 i、i+n、i+2n… 個單位，用來平行跑同一卷")
     args = ap.parse_args()
+    if args.shard:
+        idx, _, count = args.shard.partition("/")
+        args.shard = (int(idx), int(count))
+        if not 0 <= args.shard[0] < args.shard[1]:
+            ap.error("--shard 要寫成 i/n 且 0 <= i < n")
+    else:
+        args.shard = None
     if not EPUB:
         sys.exit("CW EPUB not found in repo root")
     load_env()
