@@ -461,13 +461,19 @@ def add_exercises(doc, lesson, color):
         style_run(p.add_run("→ " + BLANK), 13, color="C4C4C4")
 
     section_head(doc, f"練習五：造句翻譯（{len(ex['translate'])} 題）", color)
-    for i, item in enumerate(ex["translate"], 1):
+    items = ex["translate"]
+    for i, item in enumerate(items, 1):
         p = para(doc, space_after=2, indent=0.4)
         style_run(p.add_run(f"{i}. "), 12, bold=True, color=color)
         style_run(p.add_run(item["q"]), 12)
         stick(p)
         p = para(doc, space_after=5, indent=0.9)
         style_run(p.add_run("→ " + BLANK), 13, color="C4C4C4")
+        # 🚨 最後兩題黏在一起，免得第 8 題被擠到單獨一頁。
+        # 2026-09-18 掃全書 408 頁，有 4 頁整頁只印一行「8. 你使用。→ ＿＿＿」。
+        # 這一區在每課最後，前面排滿了就只剩一行的空間給它。
+        if i >= len(items) - 1:
+            stick(p)
 
 
 def add_answers(doc, lesson, color):
