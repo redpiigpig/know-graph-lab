@@ -115,11 +115,31 @@ def _data_dir(slug: str) -> Path:
     return DATA_ROOT / slug
 
 
-def _find_src(prefix: str) -> Path:
-    hits = sorted(Z.glob(f"{prefix}*"))
-    if not hits:
-        raise FileNotFoundError(f"no z-lib file starting with {prefix!r}")
-    return hits[0]
+# 底本的正本在 Drive 的全集夾（2026-09-18 從 電子圖書館/_待入庫 移過去）。
+# repo 的 z-lib/ 只是 drop 區，檔案入庫後就不留了，所以兩邊都要找。
+SRC_DIRS = (Z, Path(r"G:/我的雲端硬碟/資料/知識圖工作室/全集/宗教學/雷蒙‧潘尼卡"))
+
+
+def _find_src(prefix: str, title: str = "") -> Path:
+    """先用原檔名前綴找，再用繁中書名找。
+
+    🚨 底本搬進全集夾時順手改成了「雷蒙‧潘尼卡，<繁中書名>.pdf」，原本只比對
+       英文／義文前綴的寫法就全部找不到了。八部都有快取的 orig.txt，所以不會
+       當場報錯——要等到哪天重抽原文才爆。兩種都認才安全。
+    """
+    pats = [f"{prefix}*"]
+    if title:
+        pats.append(f"*{title}*")
+    for d in SRC_DIRS:
+        if not d.exists():
+            continue
+        for pat in pats:
+            hits = sorted(d.glob(pat))
+            if hits:
+                return hits[0]
+    raise FileNotFoundError(
+        f"找不到底本（前綴 {prefix!r}／書名 {title!r}），"
+        f"找過：{[str(d) for d in SRC_DIRS]}")
 
 
 # ── extract original → orig.txt (cached) ──────────────────────────────────────
@@ -130,7 +150,7 @@ def extract_original(slug: str, *, force: bool = False) -> Path:
     out = d / "orig.txt"
     if out.exists() and not force and out.stat().st_size > 100:
         return out
-    src = _find_src(w["src"])
+    src = _find_src(w["src"], w.get("title", ""))
     if w["extract"] == "font":
         pages = ocr.extract_text_with_font_headings(src)
     elif w["extract"] == "epub":
