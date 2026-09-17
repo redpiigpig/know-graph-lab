@@ -595,12 +595,14 @@ A4 橫式、每頁 8 張、71.25×98 mm、圓角框內縮 3 mm、不印裁切線
 🚨 Drive 上的 PDF 可能被 Acrobat 開著鎖住（`Device or resource busy`）。那是使用者在看，
 **不要去砍那個行程**；docx 照樣蓋得過去，PDF 等他關掉再補，或先產在 `output/` 讓他自己看。
 
-## 現況（2026-09-04）
+## 現況（2026-09-17）
 
 | 成品 | 數量 | 位置 |
 |---|---|---|
 | 講義註釋／書目 | 1,098 條／962 筆 | 四本章節 fragment |
-| 簡報 | 24 份 pptx＋pdf | Drive `教學/{課程}/簡報/` |
+| 簡報 | **37 份**（週次版）pptx＋pdf | Drive `教學/{課程}/簡報/` |
+| 範文／經文原文頁 | ch 54／wr 33／sl 44 條，渲染後約 180 張 | `course_slides_quotes*.py` |
+| 版面稽核 | 三門課 **0 處**（PDF 實量）／估算預檢 0 頁 | `course_slides_audit.py`、`course_slides_fitcheck.py` |
 | 開場互動題 | 192 題 | `course_slides_openers.py` |
 | 紙本小考 | 96 份 docx＋96 份 pdf（考卷／解答卷各 16 章×3 課） | Drive `教學/{課程}/小考/` |
 | Kahoot | 24 份 xlsx／480 題 | Drive `教學/{課程}/Kahoot/` |
@@ -754,6 +756,17 @@ python scripts/course_slides_fitcheck.py christianity
 `office_to_pdf.py`（一份約三十秒，四十份要半小時），而且改完參數還沒重出時，
 它報的是**舊版**的結果。這支相反：秒級、看得到還沒渲染的改動，但 PowerPoint
 實際的斷行不會與估算完全一樣。**流程是 fitcheck → 重出 → office_to_pdf → audit。**
+
+### 🚨 稽核器拿到認不出來的路徑，會**改去掃預設資料夾**而不報錯
+
+`course_slides_audit.py` 的參數解析是
+`dirs = [Path(a) for a in args if ... and Path(a).is_dir()]`，
+路徑不被認成資料夾就整個被濾掉，於是 `dirs or DEFAULT_DIRS` 落到預設值——
+掃的是 `玄奘\博一上\教學\` 那邊的**課堂夾**，不是你給的鏡射夾。
+
+2026-09-17 在 Git Bash 裡用反斜線路徑餵它，三門課跑出**一模一樣**的結果
+（同一份調課單 PDF 的三處），看起來像「三門都有同一個問題」，其實三次都在掃同一個
+預設夾。**在 Bash 裡一律用正斜線路徑**；看到不同課程回報相同檔名就是中了這一招。
 
 ### 稽核器本身也會說謊
 
