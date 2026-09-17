@@ -473,7 +473,7 @@ const PRE_CHRISTIAN_ERA: DazangEra = {
             key: 'ane-letters', label: '近東書簡部', label_en: 'Ancient Near Eastern Letters',
             works: [
           { title_zh: '阿馬爾納書信', title_orig: 'The Amarna Letters', author: '埃及與近東諸王及封臣（佚名書記）', era: '約公元前 1360–1332 年', place: '埃及阿瑪爾納', language: '阿卡德語（外交通用語）', intro: '埃及新王國宮廷檔案中三百餘塊泥板,為法老與巴比倫、亞述、米坦尼諸王及迦南封臣往來的外交書信,以阿卡德語書寫。青銅時代國際書信體系的最大遺存,「書信作為跨國溝通媒介」的最古大宗實證,含迦南地名與早期以色列背景。' },
-          { title_zh: '馬裡書信', title_orig: 'The Mari Letters', author: '馬裡王室與官員（佚名書記）', era: '約公元前 1800–1760 年', place: '馬裡（幼發拉底中游）', language: '阿卡德語', intro: '馬裡王宮檔案數千封書信,涉政務、軍情、外交、先知傳諭與日常,尤以「先知向王傳神諭」諸信著稱。近東行政與先知書信的寶庫,「神藉使者傳言於王」母題與希伯來先知傳統相映,書信體宗教溝通的古老見證。' },
+          { title_zh: '馬里書信', title_orig: 'The Mari Letters', author: '馬里王室與官員（佚名書記）', era: '約公元前 1800–1760 年', place: '馬里（幼發拉底中游）', language: '阿卡德語', intro: '馬里王宮檔案數千封書信,涉政務、軍情、外交、先知傳諭與日常,尤以「先知向王傳神諭」諸信著稱。近東行政與先知書信的寶庫,「神藉使者傳言於王」母題與希伯來先知傳統相映,書信體宗教溝通的古老見證。' },
           { title_zh: '赫卡納赫特書信', title_orig: 'The Heqanakht Letters', author: '赫卡納赫特', era: '約公元前 1950 年', place: '古埃及（底比斯一帶）', language: '中埃及語', intro: '中王國一位名赫卡納赫特的祭司兼地主寄回家中的私人書信,叮囑耕作、家用與家人糾紛,語氣急切真實。現存最早的私人家書之一,「以書信處理日常人倫」的古埃及實例,私人尺牘傳統的源頭。' },
           { title_zh: '古亞述商人書信', title_orig: 'Old Assyrian Merchant Letters (Kültepe/Kanesh)', author: '亞述商人（佚名）', era: '約公元前 1950–1750 年', place: '安納託利亞卡尼什（今屈爾泰佩）', language: '古亞述語（阿卡德方言）', intro: '亞述商人於安納託利亞貿易殖民地留下的數千封商業書信,論貨物、債務、合夥與家事,不乏妻子致遠行丈夫的信。古代長途商業書信網絡的實錄,「書信維繫離散社群」的最早大宗見證,與後世教會書信網絡遙相對映。' },
           { title_zh: '大流士致加達塔斯書', title_orig: 'The Letter of Darius to Gadatas', author: '大流士一世（傳，希臘文轉刻）', era: '約公元前 5 世紀（希臘文碑約公元 2 世紀）', place: '波斯帝國／小亞細亞', language: '希臘文（傳自古波斯／亞蘭文）', intro: '阿契美尼德王大流士致總督加達塔斯、褒獎其護持阿波羅聖園並斥其向聖職者徵稅的書信。波斯帝國王室行政書信的著名個案,「君王以書信規範地方宗教事務」的實例,帝國政教書信傳統的東方樣本。' }
@@ -915,8 +915,8 @@ const PRE_CHRISTIAN_ERA: DazangEra = {
           { title_zh: '卡利馬科斯書目', title_orig: 'Pinakes (Callimachus)', author: '卡利馬科斯', era: '約公元前 3 世紀', place: '埃及亞歷山卓', language: '希臘文', intro: '卡利馬科斯為亞歷山卓圖書館編纂的一百二十卷分類作者書目，按文類與字母排列並附小傳。目錄學與書目學的鼻祖，一切工具書、辭典與圖書分類的遠祖。' },
           { title_zh: '阿提卡之夜', title_orig: 'Noctes Atticae (Aulus Gellius)', author: '奧盧斯‧革利烏斯', era: '約公元 2 世紀', place: '羅馬／雅典', language: '拉丁文', intro: '革利烏斯博採文法、法律、哲學、史事雜考而成的隨筆彙編，體例散而題自成篇。「雜纂—摘記」式類書的代表，教父與中世紀常引的知識雜俎母型。' },
           { title_zh: '哲人學說彙纂', title_orig: 'Placita philosophorum (Aëtius, doxography)', author: '傳埃提烏斯', era: '約公元 1–2 世紀', place: '希臘化世界', language: '希臘文', intro: '按主題臚列各派哲人主張的「學說彙纂」（doxography），如「論本原」下列泰利斯、阿那克西曼德諸說。學說分條彙纂的體裁代表，教父引文集（catena）與異端誌「羅列諸家」手法的前身。' },
-          { title_zh: '亞裡士多德《動物志》', title_orig: 'Aristotle, History of Animals', author: '亞裡士多德', era: '約公元前 4 世紀', place: '雅典', language: '古希臘文', intro: '亞裡士多德依觀察系統分類記述動物形態、習性與生殖的博物鉅著。西方系統性自然史與生物分類的奠基,「按類觀察窮舉」的科學百科母型,老普林尼《博物志》之學術先驅。' },
-          { title_zh: '忒奧弗拉斯托斯《植物誌》', title_orig: 'Theophrastus, Enquiry into Plants', author: '忒奧弗拉斯托斯', era: '約公元前 4 世紀末', place: '雅典', language: '古希臘文', intro: '亞裡士多德繼承人忒奧弗拉斯托斯系統分類記述植物的專著,西方植物學之祖。以觀察分類建立專門知識體系的典範,自然史百科傳統的另一支柱。' }
+          { title_zh: '亞里士多德《動物志》', title_orig: 'Aristotle, History of Animals', author: '亞里士多德', era: '約公元前 4 世紀', place: '雅典', language: '古希臘文', intro: '亞里士多德依觀察系統分類記述動物形態、習性與生殖的博物鉅著。西方系統性自然史與生物分類的奠基,「按類觀察窮舉」的科學百科母型,老普林尼《博物志》之學術先驅。' },
+          { title_zh: '忒奧弗拉斯托斯《植物誌》', title_orig: 'Theophrastus, Enquiry into Plants', author: '忒奧弗拉斯托斯', era: '約公元前 4 世紀末', place: '雅典', language: '古希臘文', intro: '亞里士多德繼承人忒奧弗拉斯托斯系統分類記述植物的專著,西方植物學之祖。以觀察分類建立專門知識體系的典範,自然史百科傳統的另一支柱。' }
         
         
             ],
