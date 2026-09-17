@@ -186,10 +186,24 @@ BATCHES = {
                          "玄德雪中訪孔明（月岡芳年浮世繪）"),
     },
 
+    # 第一～四回原本彼此重複用圖（第二回 5 張有 3 張借自第一回），這批是替代品
+    "fix14": {
+        "slips2":   ("Military documents on bamboo slips scroll in Han Dynasty 01.jpg",
+                      "漢代軍事文書木簡"),
+        "relief2":  ("Han Pottery Farm Scene.jpg",              "東漢陶製農家場景"),
+        "soldiers2": ("Han Terracotta Figurines, Han Tomb of Liu Wu, King of Chu (10084956736).jpg",
+                      "漢代陶兵俑群（楚王劉戊墓）"),
+        "que2":     ("Gaoyi Que(Front).jpg",                     "東漢高頤闕正面"),
+        "chariot2": ("Eastern Han Bronze Cavalry and Chariots1.JPG", "東漢銅騎兵與車馬"),
+        "map_3k":   ("Map of China During the Period of the Three Kingdoms.jpg",
+                      "三國時期中國地圖"),
+    },
+
     "maps": {
         "map_warlords": ("End of Han Dynasty Warlords.png",     "漢末群雄割據圖"),
         "map_guandu": ("Guanduzhizhan eng.png",                 "官渡之戰形勢圖"),
         "map_han189": ("Eastern Han in 189 AD.png",             "東漢疆域圖（189 年）"),
+        "map_jin": ("China Western Jin.PNG",                     "西晉統一疆域圖（280 年）"),
     },
 
     # 第五回　十八路諸侯
