@@ -80,7 +80,7 @@ export interface HellenWork {
   status?: WorkStatus
   /** 收錄軌道；不設＝正文 */
   track?: WorkTrack
-  /** 殘篇／敵證的轉引來源，如「普羅克洛斯《文選》摘要」「奧利金《駁塞爾蘇斯》」 */
+  /** 殘篇／敵證的轉引來源，如「普羅克洛斯《文選》摘要」「俄利根《駁塞爾蘇斯》」 */
   via?: string
   /** 與另一藏經／另一卷互見，如「基督教大藏經‧前藏經藏」 */
   seealso?: string

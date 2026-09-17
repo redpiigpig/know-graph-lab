@@ -955,12 +955,12 @@ const patristicCoreSpecs = [
 const patristicAdvancedSpecs = [
   ["clement-protrepticus-1", "亞歷山大的革利免《勸勉希臘人》1.1–3：新的歌", "Προτρεπτικὸς πρὸς Ἕλληνας 1.1–3", 4, 5],
   ["basil-holy-spirit-9", "該撒利亞的巴西流《論聖靈》9.22–23", "Περὶ τοῦ Ἁγίου Πνεύματος 9.22–23", 4, 5],
-  ["gregory-nazianzen-oration-27", "納齊安的貴格利《神學講辭》27.3–4", "Λόγος ΚΖʹ Θεολογικός 3–4", 4, 5],
-  ["gregory-nyssa-life-moses", "尼撒的貴格利《摩西生平》II.162–169：幽暗中的認識", "Περὶ τοῦ βίου Μωυσέως II.162–169", 4, 6],
+  ["gregory-nazianzen-oration-27", "拿先斯的格列高里《神學講辭》27.3–4", "Λόγος ΚΖʹ Θεολογικός 3–4", 4, 5],
+  ["gregory-nyssa-life-moses", "尼撒的格列高里《摩西生平》II.162–169：幽暗中的認識", "Περὶ τοῦ βίου Μωυσέως II.162–169", 4, 6],
   ["cyril-third-letter", "亞歷山大的區利羅《致聶斯多留第三書》譴責條文 1–3", "Τρίτη ἐπιστολὴ πρὸς Νεστόριον, ἀναθεματισμοί 1–3", 4, 5],
   ["pseudo-dionysius-mystical-theology", "偽狄奧尼修《神秘神學》1.1–3", "Περὶ μυστικῆς θεολογίας 1.1–3", 4, 6],
   ["maximus-centuries-love", "認信者馬克西姆《愛德百章》I.1–10", "Κεφάλαια περὶ ἀγάπης I.1–10", 4, 5],
-  ["john-damascene-orthodox-faith", "大馬士革的約翰《正統信仰詳解》I.8 節選", "Ἔκδοσις ἀκριβὴς τῆς ὀρθοδόξου πίστεως I.8", 4, 7],
+  ["john-damascene-orthodox-faith", "大馬士革的若望《正統信仰詳解》I.8 節選", "Ἔκδοσις ἀκριβὴς τῆς ὀρθοδόξου πίστεως I.8", 4, 7],
 ] as const;
 
 const patristicSelections: SelectionDraft[] = [

@@ -532,7 +532,7 @@
    "collectionKey": "lun",
    "verdict": "drop_dup_existing",
    "reason": "同書異名，已在藏",
-   "dup_of": "[中世紀/正/論] 為神聖靜修者辯護（三聯論）｜額我略‧帕拉瑪斯",
+   "dup_of": "[中世紀/正/論] 為神聖靜修者辯護（三聯論）｜格列高里‧帕拉馬斯",
    "alias": [
     "為神聖靜修者辯護",
     "維護神聖靜修者三論集"
@@ -560,7 +560,7 @@
    "collectionKey": "shizhuan",
    "verdict": "drop_dup_existing",
    "reason": "同書異名，已在藏",
-   "dup_of": "[古代/正/史傳] 法蘭克人歷史｜都爾的格列高利",
+   "dup_of": "[古代/正/史傳] 法蘭克人歷史｜圖爾的額我略",
    "alias": [
     "法蘭克人歷史",
     "法蘭克人史"

@@ -13,9 +13,9 @@ export const constantinople381: Creed = {
   topic: '修訂 325 尼西亞信經，加長聖靈段（回應馬其頓派／聖靈否定論 Pneumatomachi）+ 末日復活段；確立三位一體完整教義',
   authors: [
     '大瑪策羅（Macellus of Ancyra）',
-    '納西盎的格列高利（Gregory of Nazianzus）',
-    '尼撒的格列高利（Gregory of Nyssa）',
-    '會議主席：安提阿的默理塔（Meletius of Antioch）→ 後納西盎的格列高利',
+    '拿先斯的格列高里（Gregory of Nazianzus）',
+    '尼撒的格列高里（Gregory of Nyssa）',
+    '會議主席：安提阿的默理塔（Meletius of Antioch）→ 後拿先斯的格列高里',
   ],
   acceptedBy: [
     'catholic', 'orthodox', 'oriental-orthodox', 'assyrian',
