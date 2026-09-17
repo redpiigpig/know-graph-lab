@@ -47,7 +47,7 @@ description: 「經典學者全集」的收錄流程 —— 以**學科**組織�
 > 🚨 **截圖規則 — 絕對禁止 >2000px**：傳進對話的截圖（寬或高任一邊）超過 2000px 會直接炸掉整個 session。
 
 > 📊 **各全集翻譯線現況（2026-07-22，由 [[project_fleet_keeper]] 的 `KGL_Fleet_Keeper` 排程託管，`scripts/fleet_keeper.ps1`）**：
-> - **榮格**：CW9ii／11／12 ✅＋4 部早期著作 ✅；`scripts/jung_run_queue.py` 跑全 19 卷 CW（走 **NVIDIA**，把 Gemini 讓給 ACCS OCR）。CW1-8/9i/10/13-18 待補。新收「文集典藏版（全九冊）」EPUB 進 Drive `全集/心理學/榮格/`（含 CW4/5/6/8/9i/10/15/17/18 九冊）。
+> - **榮格 ✅ 全集竣（2026-09-17）**：CW 1–18（含 9i／9ii）19 卷＋4 部早期著作，`jung_data` 23 卷 status 全綠。最後補的是 CW 3／4／6（原本連 parts 都是空的），以 `jung_cw_translate.py --shard i/n` 切片平行跑 NVIDIA 完成。新收「文集典藏版（全九冊）」EPUB 進 Drive `全集/心理學/榮格/`（含 CW4/5/6/8/9i/10/15/17/18 九冊）。
 > - **哲學家（柏拉圖/亞里斯多德）**：`scripts/plato_run_queue.py` 跑 26 部（**NVIDIA**）；21/26 有滿快取，近完成。
 > - **潘尼卡**：7 部完成；**吠陀經驗（義文大部頭 ~1.7 萬段）走 Haiku**，sec3854 進行中。（韋伯已改道：見下）。
 > - **馬克斯韋伯**（宗教社會學，hub 已存在 slug=`max-weber`）：**2026-07-23 改採 REFERENCE 轉錄既有中譯本、不自譯**，引擎 **OpenRouter 免費**（8 key，與主鏈分流；免費 vision 爛只能純文字）。9 本中譯本（李中文/張旺山/康樂簡惠美/閻克文/韓水法/顧忠華…繁簡混）已入 Drive `全集/宗教社會學/韋伯/`；轉錄走 `panikkar_build.py` 型 REFERENCE build。詳見 [[project_weber_collected_works]]。 **2026-09-02 開工**：兩篇志業演講（李中文繁譯 EPUB）已零 LLM 上架（`scripts/weber_build.py`），其餘七本的來源品質盤點與取捨見 [weber_collected_works.md](weber_collected_works.md)。
@@ -753,6 +753,21 @@ Ports）。留白時 reader 只顯示英文，那是誠實的；留著錯譯則�
     python scripts/audit_llm_meta_replies.py                    # 只報告
     python scripts/audit_llm_meta_replies.py --root mueller_data --samples 5
     python scripts/audit_llm_meta_replies.py --fix --meta-only  # 清判準明確的兩類
+
+### ✅ 東方聖卷（SBE）六卷竣（2026-09-17）
+
+22,158 段全數處理完畢、死段 0，六卷都已 assemble_and_upload：奧義書（上）3,292／
+阿維斯陀（一）7,930／古蘭經（上）2,305／法句經‧經集 3,040／易經 3,091／
+耆那教經典（一）2,500。
+
+其中 **231 段刻意留白**（元回覆 2＋整段未翻 229）——那些來源是被 OCR 打爛的
+阿維斯陀與梵文轉寫、掃反的索引頁與表格亂碼，模型原樣回吐是對的，留白讓 reader
+顯示英文才誠實（判準與工具見下一節）。所以 `sbe_progress.py` 會印 99.0% 而不是
+100%，那是正確的數字，不要拿它當「還沒做完」。
+
+當天的作法：`--shard i/n` 把兩大卷各切四片、阿維斯陀切兩片平行跑，
+`KGL_NVIDIA_MIN_INTERVAL=2` 暫時鬆綁節流（預設 6 秒不動），全程零 429 之外的失敗，
+速率從 6.5 段/分拉到 41 段/分。
 
 ### 🚨 `sbe_translate --loop` 印「sbe done」不等於翻完（2026-09-17）
 
