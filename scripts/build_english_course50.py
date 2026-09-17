@@ -567,6 +567,7 @@ def validate_exercises(ex: dict, keys: dict[str, int] | None = None) -> list[str
     errs += validate_direction(ex)
     errs += validate_variety(ex)
     errs += validate_overlap(ex)
+    errs += validate_complements(ex)
     bad = check_simplified(ex)
     if bad:
         errs.append("簡體字：" + "".join(bad))
@@ -620,6 +621,30 @@ def validate_direction(ex: dict) -> list[str]:
         for i, item in enumerate(_dicts(ex, key), 1):
             if HAS_ZH.search(_txt(item.get("ans"))):
                 errs.append(f"{key} 第 {i} 題答案不是英文：{_txt(item.get('ans'))[:24]}")
+    return errs
+
+
+# be 動詞後面接不了的字。這些是招呼語與動詞，不是形容詞。
+# 2026-09-17 把 L01 的練習頁印出來看，才發現整批答案是
+# 「We are hello.」「They are goodbye.」「I am thank.」「It is sorry.」——
+# 第一課的 20 個字全是招呼語，模型硬把它們當補語用。其餘 49 課都沒有這個問題。
+# （He is sorry. 與 We are welcome. 是對的，所以不能整批禁掉 sorry／welcome。）
+NOT_COMPLEMENTS = {"hello", "hi", "goodbye", "thank", "please", "yes", "no",
+                   "meet", "wave", "clap", "bow", "hug", "have"}
+_BE_LINE = re.compile(
+    r"^(?:I|You|He|She|It|We|They)\s+(?:am|is|are)\s+([a-z]+)\s*[.?!]?$")
+
+
+def validate_complements(ex: dict) -> list[str]:
+    """擋掉「主詞 + be + 招呼語」這種不是英文的答案。"""
+    errs = []
+    for key, label in (("translate", "造句翻譯"), ("unscramble", "句子重組"),
+                       ("fill", "填空")):
+        for i, item in enumerate(_dicts(ex, key), 1):
+            hit = _BE_LINE.match(_txt(item.get("ans")).strip())
+            if hit and hit.group(1) in NOT_COMPLEMENTS:
+                errs.append(f"{label}第 {i} 題「{item['ans']}」不是英文——"
+                            f"{hit.group(1)} 不能接在 be 動詞後面")
     return errs
 
 

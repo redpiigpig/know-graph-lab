@@ -231,6 +231,28 @@ def test_short_english_stem_is_not_a_false_positive(gen):
     assert gen.validate_overlap(ex) == []
 
 
+def test_greetings_after_be_are_rejected(gen):
+    """🚨 把 L01 的練習頁印出來看才發現的。
+
+    第一課的 20 個字全是招呼語，模型硬把它們當補語用，整批答案是
+    「We are hello.」「They are goodbye.」「I am thank.」。其餘 49 課都沒這問題。
+    """
+    ex = {"translate": [{"q": "我們打招呼。", "ans": "We are hello."},
+                        {"q": "他們說再見。", "ans": "They are goodbye."},
+                        {"q": "我說謝謝。", "ans": "I am thank."}]}
+    errs = gen.validate_complements(ex)
+    assert len(errs) == 3
+    assert all("不是英文" in e for e in errs)
+
+
+def test_real_adjective_complements_pass(gen):
+    """He is sorry. 與 We are welcome. 是對的，不可以整批禁掉。"""
+    ex = {"translate": [{"q": "他很抱歉。", "ans": "He is sorry."},
+                        {"q": "不客氣。", "ans": "You are welcome."},
+                        {"q": "她很好。", "ans": "She is fine."}]}
+    assert gen.validate_complements(ex) == []
+
+
 # ---------------------------------------------------------------- 答案位置
 
 def test_answer_positions_are_spread(gen):
