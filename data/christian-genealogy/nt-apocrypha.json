@@ -1,0 +1,868 @@
+{
+  "meta": {
+    "title": "新約典外文獻（福音書以外）・學界分類與譜系歸屬",
+    "scope": "apocrypha_documents 中 category 為 nt_apocrypha 或 nag_hammadi 而非福音書者，共 36 種",
+    "sibling": "福音書那 30 種見 data/christian-genealogy/apocryphal-gospels.json",
+    "schemes": {
+      "NTA": {
+        "name": "Hennecke–Schneemelcher《新約次經》第二卷（NTA II）",
+        "bib": "Schneemelcher 1991",
+        "cats": [
+          "使徒行傳",
+          "託名書信",
+          "偽克萊門文獻",
+          "啟示文學",
+          "教會秩序",
+          "救主對話錄"
+        ]
+      },
+      "AcA": {
+        "name": "Markschies & Schröter 2012（NTA 第七版）",
+        "bib": "Markschies & Schröter 2012",
+        "cats": [
+          "福音與相關文獻",
+          "使徒行傳與相關文獻",
+          "啟示錄與相關文獻"
+        ]
+      }
+    },
+    "fields": {
+      "attributed": "文獻掛誰的名",
+      "actual": "本表判斷它實際出自哪一支",
+      "place_kind": "composition＝寫作地推定／findspot＝僅知出土地／claimed＝文獻自稱",
+      "beyond_scope": "true＝年代逾 325，只列不計入譜系統計"
+    },
+    "codes": "data/christian-genealogy/traditions.json",
+    "bibliography": "data/christian-genealogy/bibliography.json"
+  },
+  "documents": {
+    "acts-paul": {
+      "title": "保羅行傳",
+      "sections": 272,
+      "date": [
+        150,
+        200
+      ],
+      "lang": "希臘文",
+      "place": "小亞細亞",
+      "place_kind": "composition",
+      "NTA": "使徒行傳",
+      "AcA": "使徒行傳與相關文獻",
+      "attributed": [
+        "U1"
+      ],
+      "actual": [
+        "U2"
+      ],
+      "support": [
+        "Ehrman & Pleše 2011"
+      ],
+      "own_judgment": false,
+      "rationale": "🚨 全古代唯一一則「作偽者被查出並受處分」的紀錄：特土良《論洗禮》17 說一位亞細亞長老因愛慕保羅而編造此書，事發後被免職。這條記載同時證明了三件事——二世紀確有人以保羅之名造書、當地教會有能力查證、並且會處罰。掛 U2 而非 U1：作者是亞細亞的保羅教會成員，不是保羅軌跡的核心。書中的帖格拉是全古代基督教文獻裡最完整的女使徒形象，她自行施洗、公開教導，東方教會長期尊為聖徒。"
+    },
+    "acts-peter": {
+      "title": "彼得行傳",
+      "sections": 154,
+      "date": [
+        150,
+        250
+      ],
+      "lang": "希臘文",
+      "place": "羅馬或小亞細亞",
+      "place_kind": "composition",
+      "NTA": "使徒行傳",
+      "AcA": "使徒行傳與相關文獻",
+      "attributed": [
+        "P1"
+      ],
+      "actual": [
+        "P2"
+      ],
+      "support": [
+        "Bockmuehl 2012"
+      ],
+      "own_judgment": false,
+      "rationale": "彼得與行邪術的西門在羅馬鬥法，最後彼得倒釘十字架。「主啊，你往哪裡去」（Quo vadis）出自本書。掛 P2：整卷的場景與死亡都在羅馬，與《革利免一書》5 章的羅馬殉道記憶同一條線。⚠️ 與偽克萊門的彼得鬥西門主題重疊，但本書無反保羅色彩，兩者不可混為一談。"
+    },
+    "acts-john": {
+      "title": "約翰行傳",
+      "sections": 214,
+      "date": [
+        150,
+        250
+      ],
+      "lang": "希臘文",
+      "place": "小亞細亞（以弗所）",
+      "place_kind": "composition",
+      "NTA": "使徒行傳",
+      "AcA": "使徒行傳與相關文獻",
+      "attributed": [
+        "O"
+      ],
+      "actual": [
+        "O"
+      ],
+      "docetic": true,
+      "support": [
+        "Layton 2021"
+      ],
+      "own_judgment": true,
+      "rationale": "🚨 其中的〈耶穌讚歌與十字架之謎〉是全部古代基督教文獻裡最明確的幻影派段落：耶穌在門徒繞圈起舞時唱歌，同時「另一個他」在山上對約翰說，被釘的那位不是他。本表掛 O 而不掛 G1／G2——它的幻影論是亞細亞在地的發展，並非塞特派或瓦倫廷派的宇宙論體系。第二次尼西亞會議（787）曾下令焚毀本書。"
+    },
+    "acts-andrew": {
+      "title": "安得烈行傳",
+      "sections": 181,
+      "date": [
+        150,
+        250
+      ],
+      "lang": "希臘文",
+      "place": "亞該亞或小亞細亞",
+      "place_kind": "composition",
+      "NTA": "使徒行傳",
+      "AcA": "使徒行傳與相關文獻",
+      "attributed": [
+        "β2"
+      ],
+      "actual": [],
+      "support": [],
+      "own_judgment": true,
+      "rationale": "🚨 安得烈在正典裡唯一的獨立身分，就是約 1:35–42 那位從洗者門下轉入耶穌運動的門徒——本表的 β2。託名者挑中他，正因他在四福音裡幾乎沒有自己的故事。但本書內容是禁慾主義的殉道敘事，與 β 無實質傳承，故 actual 留空：只有借名，沒有傳承。"
+    },
+    "acts-thomas": {
+      "title": "多馬行傳",
+      "sections": 280,
+      "date": [
+        200,
+        250
+      ],
+      "lang": "敘利亞文",
+      "place": "埃德薩",
+      "place_kind": "composition",
+      "NTA": "使徒行傳",
+      "AcA": "使徒行傳與相關文獻",
+      "attributed": [
+        "T2"
+      ],
+      "actual": [
+        "T2"
+      ],
+      "support": [
+        "Brock 1992",
+        "Griffith 2010",
+        "Layton 2021"
+      ],
+      "own_judgment": false,
+      "rationale": "五部大行傳中唯一以敘利亞文寫成者。多馬被差往印度、以禁慾為得救條件。其中嵌著〈珍珠頌歌〉——後為摩尼教團傳唱，T 通往 G4 的那條線就在這首詩上。本書是埃德薩傳統獨立性的主要文獻依據之一。"
+    },
+    "acts-philip": {
+      "title": "腓力行傳",
+      "sections": 25,
+      "date": [
+        300,
+        400
+      ],
+      "lang": "希臘文",
+      "place": "小亞細亞（希拉波立）",
+      "place_kind": "composition",
+      "NTA": "使徒行傳",
+      "AcA": "使徒行傳與相關文獻",
+      "attributed": [
+        "F2"
+      ],
+      "actual": [
+        "F2"
+      ],
+      "beyond_scope": true,
+      "support": [],
+      "own_judgment": true,
+      "rationale": "⚠️ 年代逾 325。腓力在希拉波立殉道，同行的有他妹妹馬利安尼——延續徒 21:9 那種「腓力家族的女性也有職分」的形態，故仍掛 F2。本表判斷，未見專著支持。"
+    },
+    "3-cor": {
+      "title": "哥林多三書（保羅與哥林多人書信）",
+      "sections": 53,
+      "date": [
+        150,
+        250
+      ],
+      "lang": "希臘文",
+      "place": "小亞細亞",
+      "place_kind": "composition",
+      "NTA": "託名書信",
+      "AcA": "使徒行傳與相關文獻",
+      "attributed": [
+        "U1"
+      ],
+      "actual": [
+        "U2"
+      ],
+      "support": [],
+      "own_judgment": false,
+      "rationale": "原為《保羅行傳》的一部分，後獨立流傳。🚨 亞美尼亞與敘利亞教會一度列為正典——正典邊界不是一條線而是各地各畫一條。內容反對否認肉身復活者。"
+    },
+    "q-laodicea": {
+      "title": "老底嘉書",
+      "sections": 13,
+      "date": [
+        200,
+        400
+      ],
+      "lang": "拉丁文",
+      "place": "拉丁西方",
+      "place_kind": "composition",
+      "NTA": "託名書信",
+      "AcA": "使徒行傳與相關文獻",
+      "attributed": [
+        "U1"
+      ],
+      "actual": [],
+      "support": [],
+      "own_judgment": false,
+      "rationale": "🚨 憑空補出來的一封信：西 4:16 提到「你們也要念從老底嘉來的書信」，後人便照那句話造了一封。全篇幾乎全由腓立比書的句子拼成。正典的一句提及就足以生出一部偽書——這是正典如何自我繁殖的標本。穆拉託利殘篇已指其為馬吉安派所造。 actual 留空：純由正典一句話生出的偽書，與保羅軌跡無實質傳承，只有借名。"
+    },
+    "seneca-paul": {
+      "title": "辛尼加與保羅的信",
+      "sections": 25,
+      "date": [
+        300,
+        400
+      ],
+      "lang": "拉丁文",
+      "place": "拉丁西方",
+      "place_kind": "composition",
+      "NTA": "託名書信",
+      "AcA": "使徒行傳與相關文獻",
+      "attributed": [
+        "U1"
+      ],
+      "actual": [],
+      "beyond_scope": true,
+      "support": [],
+      "own_judgment": false,
+      "rationale": "⚠️ 年代逾 325。十四封保羅與斯多亞哲人辛尼加的往來書信，四世紀拉丁偽作；耶柔米《論名人》12 誤信為真，因而把辛尼加列入基督教作家。偽作被權威名錄收編的實例。 actual 留空：四世紀拉丁修辭練習式的偽作，與保羅軌跡無實質傳承，只有借名。"
+    },
+    "pseudo-titus": {
+      "title": "託提多名書",
+      "sections": 201,
+      "date": [
+        300,
+        500
+      ],
+      "lang": "拉丁文",
+      "place": "西班牙或高盧",
+      "place_kind": "composition",
+      "NTA": "託名書信",
+      "AcA": "使徒行傳與相關文獻",
+      "attributed": [
+        "U4"
+      ],
+      "actual": [],
+      "beyond_scope": true,
+      "support": [],
+      "own_judgment": false,
+      "rationale": "⚠️ 年代逾 325。極端禁慾主義的獨身勸勉，大量引用今已亡佚的典外行傳——它的價值在於保存了別書的殘句。 actual 留空：禁慾主義勸勉，與教牧群體無實質傳承，只有借名。"
+    },
+    "pilate-claudius": {
+      "title": "彼拉多給革老丟的信",
+      "sections": 0,
+      "date": [
+        200,
+        500
+      ],
+      "lang": "希臘文",
+      "place": "不詳",
+      "place_kind": "composition",
+      "NTA": "託名書信",
+      "AcA": "使徒行傳與相關文獻",
+      "attributed": [
+        "σ1"
+      ],
+      "actual": [
+        "σ3"
+      ],
+      "content_missing": true,
+      "support": [],
+      "own_judgment": false,
+      "rationale": "彼拉多文獻圈之一；站上尚無全文。"
+    },
+    "pilate-tiberius": {
+      "title": "彼拉多給提庇留的信",
+      "sections": 0,
+      "date": [
+        200,
+        500
+      ],
+      "lang": "希臘文",
+      "place": "不詳",
+      "place_kind": "composition",
+      "NTA": "託名書信",
+      "AcA": "使徒行傳與相關文獻",
+      "attributed": [
+        "σ1"
+      ],
+      "actual": [
+        "σ3"
+      ],
+      "content_missing": true,
+      "support": [],
+      "own_judgment": false,
+      "rationale": "彼拉多文獻圈之一；站上尚無全文。"
+    },
+    "pilate-herod": {
+      "title": "彼拉多與希律的信函",
+      "sections": 0,
+      "date": [
+        200,
+        500
+      ],
+      "lang": "希臘文",
+      "place": "不詳",
+      "place_kind": "composition",
+      "NTA": "託名書信",
+      "AcA": "使徒行傳與相關文獻",
+      "attributed": [
+        "σ1"
+      ],
+      "actual": [
+        "σ3"
+      ],
+      "content_missing": true,
+      "support": [],
+      "own_judgment": false,
+      "rationale": "彼拉多文獻圈之一；站上尚無全文。🚨 這一圈文獻的共同工程是把羅馬當局改寫成耶穌的同情者，把責任推給猶太議會——σ 群體的正典外後代走到後來成了推卸責任的裝置。"
+    },
+    "peter-philip": {
+      "title": "彼得給腓力的信",
+      "sections": 15,
+      "date": [
+        200,
+        300
+      ],
+      "lang": "科普特",
+      "place": "埃及",
+      "place_kind": "findspot",
+      "NTA": "託名書信／救主對話錄",
+      "AcA": "使徒行傳與相關文獻",
+      "attributed": [
+        "P1",
+        "F2"
+      ],
+      "actual": [
+        "G1"
+      ],
+      "support": [
+        "Layton 2021"
+      ],
+      "own_judgment": false,
+      "rationale": "拿戈瑪第第八冊。掛彼得與腓力兩個名字，內容是復活後的塞特派問答。借名兩位使徒而非一位——掛越多名字，越說明作者需要外來權威。"
+    },
+    "abgar": {
+      "title": "亞伯加傳記",
+      "sections": 12,
+      "date": [
+        200,
+        400
+      ],
+      "lang": "敘利亞文",
+      "place": "埃德薩",
+      "place_kind": "composition",
+      "NTA": "託名書信",
+      "AcA": "使徒行傳與相關文獻",
+      "attributed": [],
+      "actual": [
+        "T2"
+      ],
+      "support": [
+        "Griffith 2010"
+      ],
+      "own_judgment": false,
+      "rationale": "🚨 埃德薩王亞伯加與耶穌通信、多馬差遣達代前往的傳說。優西比烏《教會史》1.13 稱抄自埃德薩檔案館——這是埃德薩傳統替自己建立使徒創始敘事的方式：其他城市有使徒去過，埃德薩則讓耶穌本人寫了信。"
+    },
+    "clement-romance": {
+      "title": "革利免的傳奇故事（偽克萊門文獻）",
+      "sections": 454,
+      "date": [
+        300,
+        400
+      ],
+      "lang": "希臘文",
+      "place": "敘利亞",
+      "place_kind": "composition",
+      "NTA": "偽克萊門文獻",
+      "AcA": "使徒行傳與相關文獻",
+      "attributed": [
+        "P2"
+      ],
+      "actual": [
+        "J8"
+      ],
+      "beyond_scope": true,
+      "support": [
+        "Painter 2004"
+      ],
+      "own_judgment": false,
+      "rationale": "🚨 本表待做文獻中篇幅最大者（454 節），也是 J 軌跡最完整的正典外作品。表面是羅馬的革利免的尋親故事，骨幹卻是彼得對決行邪術的西門——而西門所說的話屢屢與保羅的立場重合，學界普遍認為那是對保羅的影射攻擊。雅各在書中是「眾主教之上的主教」，彼得須向他報告。⚠️ 成書逾 325，但其底層材料（《講道錄》《認信錄》共同的來源）可上溯二至三世紀的敘利亞猶太基督徒圈。"
+    },
+    "apoc-peter": {
+      "title": "彼得啟示錄（希臘）",
+      "sections": 72,
+      "date": [
+        100,
+        200
+      ],
+      "lang": "希臘文",
+      "place": "埃及",
+      "place_kind": "composition",
+      "NTA": "啟示文學",
+      "AcA": "啟示錄與相關文獻",
+      "attributed": [
+        "P1"
+      ],
+      "actual": [
+        "P4"
+      ],
+      "support": [
+        "Ehrman & Pleše 2011"
+      ],
+      "own_judgment": false,
+      "rationale": "🚨 現存最早詳述天堂與地獄刑罰的基督教文獻，中世紀地獄想像的源頭（但丁的遠祖）。穆拉託利殘篇把它與《約翰啟示錄》並列為可接受，只註明「有些人不願在教會中誦讀」——它一度是正典的候選。"
+    },
+    "apoc-peter-cop": {
+      "title": "科普替語諾斯底的彼得啟示錄",
+      "sections": 0,
+      "date": [
+        200,
+        300
+      ],
+      "lang": "科普特",
+      "place": "埃及",
+      "place_kind": "findspot",
+      "NTA": "諾斯底啟示文學",
+      "AcA": "啟示錄與相關文獻",
+      "attributed": [
+        "P1"
+      ],
+      "actual": [
+        "G1"
+      ],
+      "content_missing": true,
+      "support": [
+        "Layton 2021"
+      ],
+      "own_judgment": false,
+      "rationale": "拿戈瑪第第七冊，與希臘文《彼得啟示錄》是完全不同的書。內容是彼得看見「活的耶穌」在十字架上方歡笑，被釘的只是肉體替身——幻影派的關鍵文本。站上尚無全文。"
+    },
+    "apoc-paul": {
+      "title": "保羅啟示錄（Visio Pauli）",
+      "sections": 213,
+      "date": [
+        300,
+        400
+      ],
+      "lang": "希臘文",
+      "place": "埃及",
+      "place_kind": "composition",
+      "NTA": "啟示文學",
+      "AcA": "啟示錄與相關文獻",
+      "attributed": [
+        "U1"
+      ],
+      "actual": [],
+      "beyond_scope": true,
+      "support": [],
+      "own_judgment": false,
+      "rationale": "⚠️ 年代逾 325。由林後 12:2–4「被提到第三層天」一句生出的整部遊歷記——與《老底嘉書》同型：正典的一句提及足以生出一部書。中世紀西方流傳極廣。 actual 留空：由林後 12:2–4 生出的遊歷記，與保羅軌跡無實質傳承，只有借名。"
+    },
+    "apoc-paul-cop": {
+      "title": "科普替語諾斯底的保羅啟示錄",
+      "sections": 0,
+      "date": [
+        200,
+        300
+      ],
+      "lang": "科普特",
+      "place": "埃及",
+      "place_kind": "findspot",
+      "NTA": "諾斯底啟示文學",
+      "AcA": "啟示錄與相關文獻",
+      "attributed": [
+        "U1"
+      ],
+      "actual": [
+        "G1"
+      ],
+      "content_missing": true,
+      "support": [
+        "Layton 2021"
+      ],
+      "own_judgment": false,
+      "rationale": "拿戈瑪第第五冊，與拉丁《保羅啟示錄》不同書。站上尚無全文。"
+    },
+    "apoc-thomas": {
+      "title": "多馬啟示錄",
+      "sections": 42,
+      "date": [
+        400,
+        600
+      ],
+      "lang": "拉丁文",
+      "place": "拉丁西方",
+      "place_kind": "composition",
+      "NTA": "啟示文學",
+      "AcA": "啟示錄與相關文獻",
+      "attributed": [
+        "T2"
+      ],
+      "actual": [],
+      "beyond_scope": true,
+      "support": [],
+      "own_judgment": false,
+      "rationale": "⚠️ 年代逾 325。世界末日七日的預告，摩尼派色彩被指出過。借多馬之名而與敘利亞多馬傳統無實質關聯。 actual 留空：與敘利亞多馬傳統無實質傳承，只有借名。"
+    },
+    "apoc-james-1": {
+      "title": "雅各啟示錄壹書",
+      "sections": 51,
+      "date": [
+        200,
+        300
+      ],
+      "lang": "科普特",
+      "place": "埃及",
+      "place_kind": "findspot",
+      "NTA": "諾斯底啟示文學",
+      "AcA": "啟示錄與相關文獻",
+      "attributed": [
+        "J1"
+      ],
+      "actual": [
+        "G2"
+      ],
+      "support": [
+        "Layton 2021"
+      ],
+      "own_judgment": false,
+      "rationale": "🚨 借名最有意思的一組：雅各是猶太基督徒軌跡的象徵人物，卻被瓦倫廷派拿去當作祕傳啟示的受領者。借名者挑的往往不是最近的人，而是最有權威而又留白最多的人。"
+    },
+    "apoc-james-2": {
+      "title": "雅各啟示錄貳書",
+      "sections": 0,
+      "date": [
+        200,
+        300
+      ],
+      "lang": "科普特",
+      "place": "埃及",
+      "place_kind": "findspot",
+      "NTA": "諾斯底啟示文學",
+      "AcA": "啟示錄與相關文獻",
+      "attributed": [
+        "J1"
+      ],
+      "actual": [
+        "G1"
+      ],
+      "content_missing": true,
+      "support": [
+        "Layton 2021"
+      ],
+      "own_judgment": false,
+      "rationale": "同前書，拿戈瑪第第五冊；含雅各殉道敘事。站上尚無全文。"
+    },
+    "isaiah-ascension": {
+      "title": "以賽亞昇天記",
+      "sections": 213,
+      "date": [
+        100,
+        200
+      ],
+      "lang": "希臘文",
+      "place": "敘利亞或巴勒斯坦",
+      "place_kind": "composition",
+      "NTA": "啟示文學",
+      "AcA": "啟示錄與相關文獻",
+      "attributed": [],
+      "actual": [
+        "J"
+      ],
+      "kind": "jewish-christian",
+      "support": [],
+      "own_judgment": true,
+      "rationale": "🚨 複合文獻：前半是猶太的以賽亞殉道傳說（被鋸鋸死，來 11:37 已提及），後半是基督教的七重天異象。兩層縫在一起，接縫清晰可辨——是「猶太材料如何被基督教群體接管」最好的標本。掛 J 而不掛 J1–J8 任一子項：它屬廣義猶太基督徒圈，無法再細分。"
+    },
+    "didache": {
+      "title": "十二使徒遺訓（Didache）",
+      "sections": 39,
+      "date": [
+        50,
+        120
+      ],
+      "lang": "希臘文",
+      "place": "敘利亞",
+      "place_kind": "composition",
+      "NTA": "教會秩序",
+      "AcA": "使徒行傳與相關文獻",
+      "attributed": [
+        "P1"
+      ],
+      "actual": [
+        "J4"
+      ],
+      "support": [
+        "Ehrman & Pleše 2011"
+      ],
+      "own_judgment": false,
+      "rationale": "🚨 年代可能早於部分新約書卷。兩條道路、洗禮、禁食、禱告、聖餐禮文與巡迴先知的接待規矩——最早的教會手冊。11–13 章處理「怎麼分辨真假使徒與先知」：住過兩天就是假先知、要錢就是假先知。這批規矩正是 κ 那種巡迴傳道人在一個定居群體眼中的樣子，兩造的關係在此留下實錄。"
+    },
+    "epistula-apostolorum": {
+      "title": "使徒書信（Epistula Apostolorum）",
+      "sections": 180,
+      "date": [
+        150,
+        200
+      ],
+      "lang": "科普特",
+      "place": "埃及或小亞細亞",
+      "place_kind": "composition",
+      "NTA": "救主對話錄",
+      "AcA": "使徒行傳與相關文獻",
+      "attributed": [
+        "υ2"
+      ],
+      "actual": [
+        "υ4"
+      ],
+      "support": [],
+      "own_judgment": true,
+      "rationale": "🚨 形式是諾斯底最愛的「復活後對話錄」，內容卻是反諾斯底的：堅持肉身復活、堅持耶穌真的吃喝。以敵人的文體反擊敵人。掛 υ4：復活顯現的場景記憶是它的框架。"
+    },
+    "q-peter-preaching": {
+      "title": "彼得的宣講（Kerygma Petri）",
+      "sections": 0,
+      "date": [
+        100,
+        200
+      ],
+      "lang": "希臘文",
+      "place": "埃及（亞歷山大）",
+      "place_kind": "composition",
+      "NTA": "託名書信",
+      "AcA": "使徒行傳與相關文獻",
+      "attributed": [
+        "P1"
+      ],
+      "actual": [
+        "P4"
+      ],
+      "content_missing": true,
+      "support": [
+        "Litwa 2023"
+      ],
+      "own_judgment": false,
+      "rationale": "僅存於亞歷山卓的革利免所引。主張基督徒是「第三族類」，既非希臘人亦非猶太人——最早的基督教身分論述之一。站上尚無全文。"
+    },
+    "memoria-apostolorum": {
+      "title": "使徒回憶錄",
+      "sections": 15,
+      "date": [
+        200,
+        400
+      ],
+      "lang": "拉丁文",
+      "place": "西班牙",
+      "place_kind": "composition",
+      "NTA": "託名書信",
+      "AcA": "使徒行傳與相關文獻",
+      "attributed": [
+        "P1"
+      ],
+      "actual": [],
+      "beyond_scope": true,
+      "support": [],
+      "own_judgment": true,
+      "rationale": "⚠️ 年代逾 325。僅存於奧羅修斯與奧古斯丁對普里西利安派的駁論中，材料過少不足以判定來源。"
+    },
+    "joseph-arimathea": {
+      "title": "亞利馬太約瑟的記述",
+      "sections": 50,
+      "date": [
+        200,
+        500
+      ],
+      "lang": "希臘文",
+      "place": "不詳",
+      "place_kind": "composition",
+      "NTA": "託名書信",
+      "AcA": "使徒行傳與相關文獻",
+      "attributed": [
+        "σ1"
+      ],
+      "actual": [
+        "σ3"
+      ],
+      "support": [],
+      "own_judgment": false,
+      "rationale": "彼拉多文獻圈的一員。亞利馬太約瑟在正典裡是議會成員中出面收屍的那一位（可 15:43），這一圈文獻把他發展成完整的敘事者。"
+    },
+    "seventy-elders": {
+      "title": "七十長老福音",
+      "sections": 5,
+      "date": [
+        200,
+        400
+      ],
+      "lang": "希臘文",
+      "place": "不詳",
+      "place_kind": "composition",
+      "NTA": "託名書信",
+      "AcA": "福音與相關文獻",
+      "attributed": [],
+      "actual": [],
+      "support": [],
+      "own_judgment": true,
+      "rationale": "僅存書名與零星引述，材料過少不足以判定來源。actual 留空。"
+    },
+    "john-baptist-life": {
+      "title": "施洗者約翰生平",
+      "sections": 4,
+      "date": [
+        400,
+        700
+      ],
+      "lang": "科普特",
+      "place": "埃及",
+      "place_kind": "composition",
+      "NTA": "託名書信",
+      "AcA": "福音與相關文獻",
+      "attributed": [
+        "β1"
+      ],
+      "actual": [
+        "β1"
+      ],
+      "beyond_scope": true,
+      "support": [
+        "Taylor 1997"
+      ],
+      "own_judgment": false,
+      "rationale": "⚠️ 年代逾 325。託名亞歷山大的塞拉皮翁所作。與曼底安經典同屬 β 軌跡的正典外後代，但走的是基督教內部的聖徒傳方向，而非曼底安那種與耶穌對立的方向——同一條軌跡的兩種下場。"
+    },
+    "vengeance-savior": {
+      "title": "救主的伸冤（Vindicta Salvatoris）",
+      "sections": 16,
+      "date": [
+        700,
+        900
+      ],
+      "lang": "拉丁文",
+      "place": "拉丁西方",
+      "place_kind": "composition",
+      "NTA": "託名書信",
+      "AcA": "使徒行傳與相關文獻",
+      "attributed": [
+        "σ1"
+      ],
+      "actual": [
+        "σ3"
+      ],
+      "beyond_scope": true,
+      "support": [],
+      "own_judgment": false,
+      "rationale": "⚠️ 年代遠逾 325。彼拉多文獻圈最晚的一支，已轉為提圖斯毀耶路撒冷的復仇故事。"
+    },
+    "john-apocryphon": {
+      "title": "約翰藏經（Apocryphon of John）",
+      "sections": 188,
+      "date": [
+        100,
+        200
+      ],
+      "lang": "科普特",
+      "place": "埃及",
+      "place_kind": "findspot",
+      "NTA": "諾斯底福音及類似文獻",
+      "AcA": "啟示錄與相關文獻",
+      "attributed": [
+        "O"
+      ],
+      "actual": [
+        "G1"
+      ],
+      "support": [
+        "Layton 2021",
+        "King 2003",
+        "Williams 1996"
+      ],
+      "own_judgment": false,
+      "rationale": "🚨 塞特派宇宙論最完整的文獻，拿戈瑪第有三份抄本、另有柏林抄本一份，是全文庫抄本最多的一部——這在古代文獻裡就等於暢銷書。掛約翰之名而神學全屬 G1：借名文獻的標準樣本。愛任紐《反異端》1.29 已描述其神話，故成書必早於 180。"
+    },
+    "pistis-sophia": {
+      "title": "皮斯特斯‧索菲亞",
+      "sections": 98,
+      "date": [
+        200,
+        400
+      ],
+      "lang": "科普特",
+      "place": "埃及",
+      "place_kind": "composition",
+      "NTA": "救主對話錄",
+      "AcA": "啟示錄與相關文獻",
+      "attributed": [],
+      "actual": [
+        "μ3",
+        "G1"
+      ],
+      "support": [
+        "Layton 2021",
+        "King 2003"
+      ],
+      "own_judgment": false,
+      "rationale": "🚨 全書是復活後十一年間的問答，而發問者以抹大拉的馬利亞為主——她提問的次數遠多於任何男性門徒，彼得則抱怨「這女人佔盡了我們說話的機會」。與《馬利亞福音》同屬「以婦女為問道者」那一組，是 μ 軌跡在正典外最大的一部作品。"
+    },
+    "dialogue-savior": {
+      "title": "與救主的對話",
+      "sections": 104,
+      "date": [
+        200,
+        300
+      ],
+      "lang": "科普特",
+      "place": "埃及或敘利亞",
+      "place_kind": "findspot",
+      "NTA": "救主對話錄",
+      "AcA": "福音與相關文獻",
+      "attributed": [],
+      "actual": [
+        "G1"
+      ],
+      "support": [
+        "Koester 1990",
+        "Layton 2021"
+      ],
+      "own_judgment": false,
+      "rationale": "拿戈瑪第第三冊。提問者是猶大（多馬）、馬太與抹大拉的馬利亞三人。Koester 主張其底層含有可與多馬福音比較的早期語錄——若成立，則此書的語錄層應另掛 κ／T1，本表暫從保守處理。"
+    },
+    "two-books-jeu": {
+      "title": "論約伊的兩本書（Books of Jeu）",
+      "sections": 49,
+      "date": [
+        200,
+        400
+      ],
+      "lang": "科普特",
+      "place": "埃及",
+      "place_kind": "composition",
+      "NTA": "救主對話錄",
+      "AcA": "啟示錄與相關文獻",
+      "attributed": [],
+      "actual": [
+        "G1"
+      ],
+      "support": [
+        "Layton 2021"
+      ],
+      "own_judgment": false,
+      "rationale": "布魯斯抄本。大量印記、數字與圖形的天界通行指南——諾斯底文獻中最接近實用儀式手冊的一部。⚠️ 中譯題名作「論約翰的兩本書」是誤譯，Jeu（約伊）是一個天界存有的名字，與使徒約翰無關。"
+    }
+  }
+}
