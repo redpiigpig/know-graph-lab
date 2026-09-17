@@ -297,7 +297,7 @@ def main():
             tp = make_sbe_engine(trad, backend=args.backend)
             print(f"▶ translate {w['slug']} — {w['title']} [{trad}]", flush=True)
             ma.ingest_work(w)  # idempotent; keeps English readable + cache fresh
-            ma.translate_work(w, tp, shard=shard)
+            ma.translate_work(w, tp, shard=shard, engine_name=args.backend)
             if not args.no_upload:
                 ma.assemble_and_upload(w)
 

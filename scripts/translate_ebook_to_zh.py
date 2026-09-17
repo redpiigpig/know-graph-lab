@@ -749,10 +749,16 @@ _OPENCC_OVERSHOOT = (
 _MI_RE = re.compile(r"禰(?!宜)")
 
 
+# 模型偶爾會在輸出開頭吐一個替換字元／BOM／零寬空白（2026-09-17 在東方聖卷抓到
+# 17 段，reader 上就是一個刺眼的「�」）。這些字元在譯文裡從來沒有意義，一律清掉。
+_JUNK_CHARS = str.maketrans("", "", "\ufeff\ufffd\u200b\u200c\u200d")
+
+
 def _to_traditional(text: str) -> str:
     """Best-effort 繁體化 — Qwen/DeepSeek/GLM occasionally slip Simplified. opencc
     is lazy-imported; if unavailable we return text unchanged (prompt already
     asks for 繁體). 轉完再過一次 `_OPENCC_OVERSHOOT` 還原被誤轉的專名。"""
+    text = text.translate(_JUNK_CHARS)
     try:
         from opencc import OpenCC
         if not hasattr(_to_traditional, "_cc"):
