@@ -1093,6 +1093,54 @@ epub 是繁體、JSONL 卻是簡體，兩邊不一致而且**稽核只看 epub �
 
 ---
 
+## Workflow K — epub 進不了館的三種病（2026-09-17 全館盤點）
+
+起點是 OCR 佇列裡撈到一本 epub：MinerU 只吃 PDF，回 exit 1 退件。查下去發現
+「epub 進不了館」其實有三種完全不同的病，處置也完全不同。
+
+全館分母：**1,306 本 epub，77 本有 `parse_error`**，其中 68 本是良性註記
+（`not actually a 套書`／`split from set`／`file not found`），真正壞掉的只有 **9 本**。
+
+| 病 | 本數 | 症狀 | 處置 |
+|---|---|---|---|
+| ebooklib 讀不動，**正文其實都在** | 6 | `KeyError: There is no item named '…'`（manifest 指到不存在的 nav／toc.ncx／css）或 `AttributeError: 'NoneType' object has no attribute 'find'` | `parse_worker._epub_docs_from_zip()` zip 直讀 |
+| 真的沒文字，是**掃描書包成 epub** | 1 | 全書 86 字、354 張 839×1186 圖、圖片佔 102% | `scripts/scan_epub_to_pdf.py` 轉 PDF 再走 OCR 佇列 |
+| 檔案本身壞了 | 1 | `zipfile.BadZipFile` | 只能重抓（《心智的本質》） |
+| 與 epub 無關的舊 error | 1 | LLM `Error code: 400`，ebooklib 讀得好好的 | 清掉 `parse_error` 重解 |
+
+🚨 **這三種病的 `parse_error` 長得一模一樣，都是 `no extractable text`**，於是六本
+「只是解析壞掉」的書跟著混進 OCR 佇列。它們根本不需要 OCR，而且 MinerU 只吃 PDF，
+撈到只會退件——《法蘭西全史》就這樣退的，而它裡面有 481,090 字。
+**分診的判準是「zip 直讀所有 html 抽出幾個字」**：上千字就是解析問題，
+幾十字才是真的要 OCR。別拿 `parse_error` 的字面當病因。
+
+zip 直讀那條救回 6 本、合計 **504 萬字**：
+
+| 書 | 段 | 字 |
+|---|---|---|
+| 奧德賽,伊利亞特,薩迦,艾達 | 302 | 2,254,123 |
+| 伊斯蘭啟蒙運動 | 11 | 927,133 |
+| 法蘭西全史 | 30 | 817,222 |
+| 人類大命運 | 20 | 339,362 |
+| 地球上最偉大的表演 | 66 | 277,891 |
+| 從城市國家到中華 | 17 | 266,808 |
+| 死亡是一件孤獨的事 | 14 | 160,341 |
+
+fallback 照 OPF spine 走，spine 指到不存在的檔就跳過那一筆、不要整本放棄；
+OPF 本身壞掉才退回「所有 xhtml 照檔名排序」。`BadZipFile` 一律往上丟——
+那是真的檔壞了，不是這裡能救的。
+
+🚨 **掃描 epub 轉 PDF 要照 `<img>` 在 HTML 裡的出現順序，不是檔名排序。**
+`index-10_1.jpg` 檔名排序會跑到 `index-2_1.jpg` 前面，頁序整個亂掉，
+而產出的 PDF 頁數、大小、能不能開**全部正常**。
+
+🚨 **改了 `file_path` 之後，已經在跑的 OCR 佇列不會知道。**
+`mineru_ocr.py queue` 開跑時就把整份佇列抓進記憶體了，之後改 DB 它看不到，
+會拿舊路徑去跑然後標成失敗（順帶把它踢出佇列）。跑到那本之前改路徑的話，
+等那一班收工要回頭把 `parse_error` 重設成 `no extractable text`。
+
+---
+
 ## Workflow H — Structure audit & NO_TOC recovery (2026-05-31)
 
 針對「文字 OCR 沒問題、但**側欄目錄空白／標題正文不分**」的書。診斷顯示**髒書 100% 是 PDF，EPUB 結構乾淨**（EPUB 只有少數目錄項異常，走 audit）；主病是 **712 本 NO_TOC**（chapter_path 全空），且其中 189 本**已 standardize 仍無目錄** → standardize 對「無內嵌書籤的掃描/論文 PDF」無能為力，需新能力。

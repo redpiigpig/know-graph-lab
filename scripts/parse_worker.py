@@ -230,9 +230,88 @@ def parse_pdf(path):
     return chunks
 
 
+def _epub_docs_from_zip(path):
+    """繞過 ebooklib，直接從 zip 讀正文。回傳 [(href, html_bytes)]，照 spine 順序。
+
+    🚨 ebooklib 對 manifest 不乾淨的 epub 會整個爆掉，而**正文其實好好地在裡面**。
+       2026-09-17 全館盤點：1,306 本 epub 裡 6 本卡在這裡，合計 390 萬字，兩種症狀——
+         KeyError: "There is no item named 'OEBPS/Text/Section0001.xhtml' ..."
+           （manifest 指到不存在的項目；nav、toc.ncx、css 都出現過）
+         AttributeError: 'NoneType' object has no attribute 'find'
+       這些書會被標成 `no extractable text`，於是**混進 OCR 佇列**——但它們根本不需要
+       OCR，而且 MinerU 只吃 PDF，撈到只會退件（《法蘭西全史》就是這樣退的）。
+    """
+    import zipfile
+    from xml.etree import ElementTree as ET
+
+    zf = zipfile.ZipFile(path)      # BadZipFile 讓它往上丟：那是真的檔壞了，不是這裡能救的
+    names = zf.namelist()
+
+    def read(name):
+        try:
+            return zf.read(name)
+        except KeyError:
+            return None
+
+    # 照 spine 走；OPF 有問題就退回「所有 xhtml 照檔名排序」
+    order = []
+    try:
+        root = ET.fromstring(read("META-INF/container.xml"))
+        opf_path = root.find(
+            ".//{urn:oasis:names:tc:opendocument:xmlns:container}rootfile").get("full-path")
+        opf = ET.fromstring(read(opf_path))
+        base = opf_path.rsplit("/", 1)[0] + "/" if "/" in opf_path else ""
+        ns = {"o": "http://www.idpf.org/2007/opf"}
+        manifest = {it.get("id"): it.get("href")
+                    for it in opf.findall(".//o:manifest/o:item", ns)}
+        for ref in opf.findall(".//o:spine/o:itemref", ns):
+            href = manifest.get(ref.get("idref"))
+            if href:
+                order.append(base + href.split("#")[0])
+    except Exception:
+        order = []
+
+    docs, seen = [], set()
+    for href in order:
+        data = read(href)          # spine 指到不存在的檔就跳過，不要整本放棄
+        if data is not None and href not in seen:
+            seen.add(href)
+            docs.append((href, data))
+    if not docs:
+        for name in sorted(names):
+            if name.lower().endswith((".xhtml", ".html", ".htm")) and name not in seen:
+                seen.add(name)
+                docs.append((name, zf.read(name)))
+    return docs
+
+
+def _chapter_title(soup, href):
+    for sel in ("h1", "h2", "h3", "title"):
+        node = soup.find(sel)
+        if node and node.get_text(strip=True):
+            return node.get_text(strip=True)
+    return href
+
+
 def parse_epub(path):
     """Return list of {type:'chapter', chapter_path, content}."""
-    book = epub.read_epub(path)
+    try:
+        book = epub.read_epub(path)
+    except Exception as e:
+        # manifest 不乾淨的 epub：ebooklib 爆掉但正文都在，改用 zip 直讀。
+        print(f"  ebooklib 讀不動（{type(e).__name__}），改用 zip 直讀",
+              file=sys.stderr)
+        chunks = []
+        for href, data in _epub_docs_from_zip(path):
+            soup = BeautifulSoup(data, "html.parser")
+            text = soup.get_text(separator="\n").strip()
+            if not text:
+                continue
+            text = re.sub(r"\n\s*\n\s*\n+", "\n\n", text)
+            chunks.append({"type": "chapter",
+                           "chapter_path": _chapter_title(soup, href)[:500],
+                           "content": text})
+        return chunks
 
     # Build TOC map: item href -> chapter title path
     toc_map = {}
