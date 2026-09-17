@@ -89,6 +89,19 @@ Use the frozen reader profile if the user approves a different specification.
 要問的是：**詞條有沒有被擠到下一頁去**——生詞標題在前一頁，而練習標題那一頁的
 上方還壓著詞條。`scripts/audit_reader_pages.py` 用的就是這一條。
 
+2026-09-18 收工時的實測（全四本共 350 課）：
+
+| | 生詞表跨頁 | 十題練習佔兩頁 |
+|---|---:|---:|
+| 收緊之前 | 87 課 | 77 課 |
+| 收緊之後 | **56 課** | **52 課** |
+
+兩個數字會一起動，因為是同一件事：生詞表多佔半頁，練習就被推下去。剩下的 56 課
+幾乎都是拉丁（33 課）——它的主要部分字數中位數 22、第九十百分位 39，12pt 下沒有
+辦法與繁中詞義共存於 141mm 的版心而不折行。這是字級下限帶來的物理極限，不是版面
+浪費；要再往下壓，只剩「把詞類欄併進詞義欄」或「降字級」兩條路，都要問過擁有者。
+希臘四冊是零——它的詞條短。
+
 ## One shared layout across the three readers
 
 The Hebrew builder is the standard; Greek and Latin import its size constants
