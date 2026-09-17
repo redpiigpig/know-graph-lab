@@ -20,6 +20,68 @@
 
 > ebookId 完整格式：`555555NN-5555-4555-8555-555555555555`（NN=卷號）。eid 命名空間 `555555NN` 專給 SBE，勿與穆勒 `4444444X` 撞。
 
+
+## 🗝️ 全套取源已解決：archive.org 的 MLBD 掃描本（2026-09-18）
+
+卷 2–50 **整套都在** archive.org，一次 advancedsearch 就撈得到（`identifier:mlbd* AND
+title:(SBE)`，命中 51 筆）。抽驗的每一卷 `_djvu.txt` 都是真文字、卷號對得上，所以
+**後續各批不必再找來源**，挑卷→填 en_id→跑既有管線即可。
+
+🚨 仍要守 sacred_books_east.md 原本那條：新加一卷前先實抓 `_djvu.txt` 前幾百 bytes，
+確認不是 HTML 錯誤頁、而且 Part 對得上（第一部／第二部常常只差一個字）。
+
+| 卷 | archive.org id | 標題 |
+|---|---|---|
+| 2 | `mlbd.sacredlawsofarya0000gbuh_a4m2` | SBE 02: Sacred Laws of the Aryas, Part 1 (Sacred Books o |
+| 3 | `mlbd.shuchingsacredbo0000jame_y3x8` | SBE 03: The Shu King, Shih King, and Hsiao King (Sacred  |
+| 4 | `mlbd.zendavestasacred0000vol-4.fmax_h8l0` | SBE 04: Zend-Avesta, Part 1 (Sacred Books of the East) |
+| 5 | `mlbd.pahlavitextssacr0000ewwe_v3m0` | SBE 05: Pahlavi Texts, Part 1 (Sacred Books of the East) |
+| 6 | `mlbd.koransacredbooks0000unse_w1m9` | SBE 06: Qur’an, Part 1 (Sacred Books of the East) |
+| 7 | `mlbd.institutesofvisn0000jjol_w1d3` | SBE 07: Institutes of Visnu (Sacred Books of the East) |
+| 8 | `mlbd.sacredbooksofeas0000fmax.vol.8` | SBE 08: The Bhagavadgîtâ with the Sanatsugâtîyaand Anugî |
+| 9 | `mlbd.sacredbooksofeas0000fmax.vol.9` | SBE 09: The Qurʼan, part 2/2 – chapters XVII-CXIV (Sacre |
+| 10 | `mlbd.dhammapadasuttni0000fmax` | SBE 10: Dhammapada and Sutta-Nipâta (Sacred Books of the |
+| 11 | `mlbd.sacredbooksofeas0000fmax.vol.11` | SBE 11: Buddhist Sutta (Sacred Books of the East) |
+| 12 | `mlbd.satapathabrahman0000vol-12.jegg_g8l0` | SBE 12: Satapatha Brahmana, Part 1: According to the Tex |
+| 13 | `mlbd.vinayatextstrans0000thom_q8c1` | SBE 13: Vinaya Texts, Part 1 (Sacred Books of the East) |
+| 14 | `mlbd.sacredlawsofarya0000geor` | SBE 14: Sacred Laws of the Aryas, Part 2 (Sacred Books o |
+| 15 | `mlbd.upanishadssacred0000vol-15.unse_x5j4` | SBE 15: Upanishads, Part 2 (Sacred Books of the East) |
+| 16 | `mlbd.sacredbooksofeas0000fmax.vol.16` | SBE 16: The Sacred Books of China, part 2/6 – the texts  |
+| 17 | `mlbd.vinayatextsparti0000thom_i1k9` | SBE 17: Vinaya Texts, Part 2 (Sacred Books Of The East) |
+| 18 | `mlbd.pahlavitextssacr0000ewwe_z0t1` | SBE 18: Pahlavi Texts, Part 2 (Sacred Books of the East) |
+| 19 | `mlbd.foshhingtsanking0000asva` | SBE 19: Fo-sh-hing-tsan-king (Sacred Books of the East) |
+| 20 | `mlbd.vinayatextsparti0001thom` | SBE 20: Vinaya Texts, Part 3 (Sacred Books Of The East) |
+| 21 | `mlbd.saddharmapundarivol-21.0000unse_c0q8` | SBE 21: Saddharma Pundarika : Or Lotus of the True Law ( |
+| 22 | `mlbd.jainasutraspt1tr00vol-22.unse_m8x0` | SBE 22: Gaina Sutras, Part 1 (Sacred Books of the East) |
+| 23 | `mlbd.zendavestasacred0000vol-23.unse_e5w9` | SBE 23: Zend-Avesta, Part 2 (Sacred Books of the East) |
+| 24 | `mlbd.pahlavitextssacr0000ewwe_f3j9` | SBE 24: Pahlavi Texts, Part 3 (Sacred Books of the East) |
+| 25 | `mlbd.lawsofmanu0025unse_h6b1` | SBE 25: The Laws of Manu (Sacred Books of the East) |
+| 26 | `mlbd.satapathabrahman.vol.26.0026unse` | SBE 26: Satapatha Brahmana, Part 2 (Sacred Books of the  |
+| 27 | `mlbd.lichisacredbooks0000jame` | SBE 27: Texts of Confucianis , Part 4, Li (Sacred Books  |
+| 28 | `mlbd.sacredbooksofeas0000fmax.vol.28` | SBE 28: The Sacred Books of China, part 4/6 – the texts  |
+| 29 | `mlbd.grihyasutraspart0000fmax` | SBE 29: The Grihya - Sutras : Part 1 (Sacred Books of th |
+| 30 | `mlbd.grihyasutrassacr0000herm` | SBE 30: Grihya Sutras : Part 2 (Sacred Books of the East |
+| 31 | `mlbd.zendavestasacredvo0000vol-31.unse` | SBE 31: Zend-Avesta, Part 3 (Sacred Books of the East) |
+| 32 | `mlbd.vedichymnssacred0000unse` | SBE 32: Vedic Hymns, Part 1 (Sacred Books of the East) |
+| 33 | `mlbd.minorlawbookssac0000vol-33` | SBE 33: Minor Law Books, Part 1: Narada Brihaspati (Sacr |
+| 34 | `mlbd.vedantasutras00vol-34.bada` | SBE 34: Vedanta-Sutras, Part 1 (Sacred Books of the East |
+| 35 | `mlbd.questionsofkingm0000vol-35.thom_w1l5` | SBE 35: The Questions of King Milinda, Part 1 (Sacred Bo |
+| 36 | `mlbd.sacredbooksofeas0000fmax.vol.36` | SBE 36: The Questions of King Milinda, Part 2 (Sacred Bo |
+| 37 | `mlbd.pahlavitextssacr0000vol-37.ewwe_a5s1` | SBE 37: Pahlavi Texts, Part 4 (Sacred Books of the East) |
+| 38 | `mlbd.sacredbooksofeas0038unse` | SBE 38: Vedanta-Sutras, Part 2 (Sacred Books of the East |
+| 39 | `mlbd.sacredbooksofeas0039unse` | SBE 39: The Texts of Taosim, Part 5 (Sacred Books of the |
+| 40 | `mlbd.textsoftaoismsac0000unse` | SBE 40: Texts of Taoism, Part 2 (Sacred Books of the Eas |
+| 41 | `mlbd.sacredbooksofeas0000fmax_w1l7` | SBE 41: Satapatha Brahmana, part 3 (Sacred Books of the  |
+| 42 | `mlbd.hymnsofatharvave0001unse` | SBE 42: Hymns of the Atharva-Veda, together with extract |
+| 43 | `mlbd.sacredbooksofeas0000fmax.vol.43` | SBE 43: Satapatha Brahmana, Part 4 (Sacred Books of the  |
+| 44 | `mlbd.sacredbooksofeas0000fmax.vol.44` | SBE 44: The Satapatha-Brahmana, Part 5, Books XI-XIV (Sa |
+| 45 | `mlbd.gainasutraspart20000vol-45.unse` | SBE 45: Jaina Sûtras, part 2 of 2: Uttarâdhyayana Sûtra  |
+| 46 | `mlbd.vedichymnssacredvol-46.0000herm` | SBE 46: Vedic Hymns, Part 2 (Sacred Books of the East) |
+| 47 | `mlbd.sacredbooksofeas0047unse` | SBE 47: Pahlavi Texts,Part 5: Marvels of Zoroastrianism  |
+| 48 | `mlbd.vedantasutras0048bada` | SBE 48: Vedanta-Sutras, Part 3 (Sacred Books of the East |
+| 49 | `mlbd.buddhistmahayana0000vol-49.unse_o9r1` | SBE 49: Buddhist Mahâyâna Texts (Sacred Books of the Eas |
+| 50 | `mlbd.generalindexvolu0000aama` | SBE 50: General Index (Sacred Books of the East) |
+
 ## 架構（全部已上線、test 綠、已 push）
 
 - **store**：[stores/sacredBooksEast.ts](../../../stores/sacredBooksEast.ts) — 50 卷權威卷目，按 7 大傳統分組（veda/buddhism/jainism/zoroastrian/china/islam/index），譯者中英並列。轉錄完一卷把該卷 `status` 改 `done`／`in-progress` + 填 `ebookId`/`archiveId`。
