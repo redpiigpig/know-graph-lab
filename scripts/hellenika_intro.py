@@ -268,10 +268,15 @@ def ask(prompt: str) -> str:
     forced = os.environ.get('HELLENIKA_ENGINE', '').strip().lower()
     if forced == 'haiku':          # 使用者明確下令只走 Haiku（見 feedback_ocr_strategy）
         return ask_haiku(prompt)
-    try:
-        return ask_gemini(prompt)
-    except Exception as e:  # noqa: BLE001 — 整條 Gemini 鏈乾了才降級
-        print(f'  ⤷ Gemini 失敗（{e}），改走 NVIDIA', file=sys.stderr, flush=True)
+    if forced != 'nvidia':
+        # HELLENIKA_ENGINE=nvidia：跳過 Gemini 直接從 NVIDIA 起跳。
+        # 🚨 用在 Gemini **整片 503**（服務掛掉，不是配額）的時候——
+        #    那種狀況下每一段都要先燒掉 3 keys × 3 attempts = 9 次失敗才降級，
+        #    實測 1 小時只譯出 6 段。配額用完不必設這個，ask_gemini 自己會冷卻跳過。
+        try:
+            return ask_gemini(prompt)
+        except Exception as e:  # noqa: BLE001 — 整條 Gemini 鏈乾了才降級
+            print(f'  ⤷ Gemini 失敗（{e}），改走 NVIDIA', file=sys.stderr, flush=True)
     try:
         return ask_nvidia(prompt)
     except Exception as e:  # noqa: BLE001
