@@ -158,6 +158,40 @@ def seeder_entries() -> list[dict]:
     return out
 
 
+def db_glossary() -> dict[str, str]:
+    """整個 /translation-glossary 的 {name_english: name_recommended}，快取到 output/。
+
+    🚨 比對「這個名字詞庫有沒有」**必須拿整個 DB 比**，不能只比
+       seed_glossary_zoroastrian.py（122 筆）或 names.json（195 筆）。
+       DB 的 deities 有 360 筆、涵蓋所有宗教——`Mithra / Mithras → 密特拉`
+       就只存在於 DB 裡。只比 seeder 的話它會被當成「新的」，
+       然後用元文琪的「密斯拉」覆蓋掉全站通用的定名，
+       而密特拉不只祆教在用，羅馬密特拉教那邊也在用。
+    """
+    import urllib.request
+    cache = ROOT / "output" / "glossary_db_cache.json"
+    if cache.exists():
+        return json.loads(cache.read_text(encoding="utf-8"))
+    env = {}
+    for line in (ROOT / ".env").read_text(encoding="utf-8", errors="ignore").splitlines():
+        line = line.strip()
+        if line and not line.startswith("#") and "=" in line:
+            k, v = line.split("=", 1)
+            env[k] = v.strip().strip('"').strip("'")
+    url, key = env["SUPABASE_URL"], env.get("SUPABASE_SERVICE_ROLE_KEY") or env["SUPABASE_KEY"]
+    out: dict[str, str] = {}
+    for table in ("deities", "place_names", "theological_terms"):
+        req = urllib.request.Request(
+            f"{url}/rest/v1/{table}?select=name_english,name_recommended&limit=2000",
+            headers={"apikey": key, "Authorization": f"Bearer {key}"})
+        for r in json.load(urllib.request.urlopen(req)):
+            if r.get("name_english") and r.get("name_recommended"):
+                out[r["name_english"]] = r["name_recommended"]
+    cache.parent.mkdir(parents=True, exist_ok=True)
+    cache.write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
+    return out
+
+
 def book_text() -> str:
     """全書 OCR 文字，供頻率校驗用。"""
     return "".join(json.loads(l)["content"]
@@ -247,14 +281,144 @@ def normalise_cjk(s: str) -> str:
     return re.sub(r"[·‧•（）()\s]", "", s or "")
 
 
+# 🚨 音譯用「里」不用「裡」。本站的簡轉繁（opencc s2tw）會把
+#    「法里东→法裡東」「阿赫里曼→阿赫裡曼」誤轉，但「瓦伊里亚→瓦伊里亞」又對。
+#    所以從這本 OCR 取來的專名一律過這道閘，否則會把自己的轉換錯誤當成他的寫法。
+def fix_li(name: str) -> str:
+    """把音譯裡誤轉的「裡」改回「里」。
+
+    >>> fix_li('法裡東'), fix_li('阿赫裡曼'), fix_li('瓦伊裡亞')
+    ('法里東', '阿赫里曼', '瓦伊里亞')
+    """
+    return name.replace("裡", "里")
+
+
+def looks_damaged(zh: str, ro: str) -> str:
+    """這一格看起來是不是 OCR 壞的？回傳原因，沒問題回空字串。
+
+    🚨 附錄是掃描出來的，實測「阿沙·瓦希什阿塔」多一字、「彭塔·阿爾邁蒂」少一字、
+       羅馬轉寫「mshāspandān」掉首字母。壞的格不可入庫——
+       一個多一字的神名入了庫，之後每一次校對都會照著它改，錯得無法回頭。
+
+    >>> looks_damaged('亞扎塔', 'Yazata')
+    ''
+    >>> looks_damaged('阿', 'Yazata')
+    '中文過短'
+    >>> looks_damaged('亞扎塔', 'Yz')
+    '轉寫過短'
+    >>> looks_damaged('亞扎塔（', 'Yazata')
+    '括號不成對'
+    """
+    if len(re.sub(r"[·‧（）()]", "", zh)) < 2:
+        return "中文過短"
+    if len(re.sub(r"[^A-Za-z]", "", ro)) < 3:
+        return "轉寫過短"
+    if zh.count("（") != zh.count("）") or zh.count("(") != zh.count(")"):
+        return "括號不成對"
+    if ro.count("(") != ro.count(")") or ro.count("（") != ro.count("）"):
+        return "轉寫括號不成對"
+    # 🚨 轉寫首字母會被隔壁欄吃掉。實測「卡維 Kavi」的 K 跑到職司欄尾
+    #    （「凱揚王朝諸帝王的稱號K」），這一欄只剩 avi。
+    #    首字母小寫就是這種情形——他的轉寫一律大寫開頭。
+    if ro[:1].islower():
+        return "轉寫首字母被鄰欄吃掉"
+    return ""
+
+
+def cmd_new(out: Path) -> int:
+    """列出附錄有、而本站詞庫還沒有的神名／人名，產出可貼進 seeder 的條目。"""
+    import difflib
+
+    rows = parse_rows()
+    entries = seeder_entries()
+    full = book_text()
+    known = [normalise_roman(e["orig"]) for e in entries if e["orig"]]
+    known += [normalise_roman(e["en"]) for e in entries]
+    known_zh = {normalise_cjk(e["zh"]) for e in entries}
+    # 🚨 詞庫裡有五筆**既有權威條目不在 seeder 裡**（查拉圖斯特拉／阿胡拉‧馬茲達／
+    #    安格拉‧曼紐／密特拉／祆教，見 seeder 檔首「既有條目一律不動」）。
+    #    只比 seeder 的話，它們會被當成「新的」而重複入庫，
+    #    而且會用元文琪的寫法覆蓋掉全站通用的定名（密特拉→密斯拉）——
+    #    密特拉不只用在祆教，羅馬密特拉教那邊也在用，不能只看這本書就改。
+    protected = db_glossary()
+    for k, v in protected.items():
+        # 「Mithra / Mithras」這種一格兩名的鍵要拆開比
+        known += [normalise_roman(p) for p in re.split(r"[/;,]", k)]
+        known_zh |= {normalise_cjk(p) for p in re.split(r"[/；;，,]", v)}
+
+    new_rows, skipped = [], []
+    seen: set[str] = set()
+    for r in rows:
+        if not r["avestan"]:
+            continue
+        zh_raw, ro = r["avestan"][0]
+        why = looks_damaged(zh_raw, ro)
+        if why:
+            skipped.append((zh_raw, ro, why))
+            continue
+        # 🚨 不可用 strip("（）()")——那會把「阿胡拉(伊)」的收尾括號剝掉變成
+        #    「阿胡拉(伊」，一個本來完好的名字反而被弄壞。只去掉整個被包起來的情形。
+        zh = fix_li(re.sub(r"^[（(](.+)[）)]$", r"", zh_raw))
+        key = normalise_roman(ro)
+        if key in seen:
+            continue
+        seen.add(key)
+        # 已在詞庫？羅馬轉寫完全相同或高度相似、或中文相同，都算已有。
+        if key in known or normalise_cjk(zh) in known_zh:
+            continue
+        if any(difflib.SequenceMatcher(None, key, k).ratio() >= 0.86 for k in known if k):
+            continue
+        new_rows.append({
+            "zh": zh, "ro": ro.strip("()"),
+            "pe": fix_li(r["persian"][0][0]) if r["persian"] else "",
+            "pa": fix_li(r["pahlavi"][0][0]) if r["pahlavi"] else "",
+            "office": re.sub(r"\s+", "", r["office"])[:40],
+            "note": re.sub(r"\s+", "", r["note"])[:60],
+            "n": full.count(zh), "page": r["page"],
+        })
+
+    lines = ["# 元文琪附錄有、本站詞庫還沒有的神名／人名", "",
+             f"共 {len(new_rows)} 條（另有 {len(skipped)} 格判定為 OCR 損而略過）。", "",
+             "主譯取他的**阿維斯塔文**欄，波斯文／帕拉維文收為異名。",
+             "「全書次」是該寫法在 595 頁裡出現幾次——只在附錄出現（1 次）者要人再確認。", "",
+             "| 阿維斯塔文 | 轉寫 | 全書次 | 波斯文 | 帕拉維文 | 職司 | 頁 |",
+             "|---|---|---:|---|---|---|---:|"]
+    for r in sorted(new_rows, key=lambda x: -x["n"]):
+        lines.append(f"| **{r['zh']}** | {r['ro']} | {r['n']} | {r['pe'] or '—'} | "
+                     f"{r['pa'] or '—'} | {r['office']} | {r['page']} |")
+    lines += ["", "## 判定為 OCR 損而略過", "", "| 中文 | 轉寫 | 原因 |", "|---|---|---|"]
+    for zh, ro, why in skipped:
+        lines.append(f"| {zh} | {ro} | {why} |")
+
+    lines += ["", "## 可貼進 seed_glossary_zoroastrian.py 的條目", "", "```python"]
+    for r in sorted(new_rows, key=lambda x: -x["n"]):
+        var = "；".join(x for x in [
+            f"{r['pe']}（波斯語）" if r["pe"] else "",
+            f"{r['pa']}（帕拉維語）" if r["pa"] else ""] if x)
+        lines.append(
+            f'D("{r["ro"]}", "{r["zh"]}", o="{r["ro"]}",'
+            + (f' var="{var}",' if var else "")
+            + f' etype="deity", domain="{r["office"]}",'
+            + f' reason="元文琪譯《阿維斯塔》附錄阿維斯塔文欄（掃描本 p.{r["page"]}）。")')
+    lines.append("```")
+
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text("\n".join(lines), encoding="utf-8")
+    print(f"新增候選 {len(new_rows)} 條、OCR 損略過 {len(skipped)} 格 → {out.relative_to(ROOT)}")
+    return 0
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description="元文琪附錄神名表 → 詞庫稽核")
     ap.add_argument("--parse", action="store_true")
     ap.add_argument("--audit", action="store_true")
+    ap.add_argument("--new", action="store_true", help="列出附錄有而詞庫沒有的")
     ap.add_argument("--out", default=str(ROOT / "output" / "glossary_audit.md"))
     a = ap.parse_args()
     if a.parse:
         return cmd_parse()
+    if a.new:
+        return cmd_new(ROOT / "output" / "glossary_new.md")
     if a.audit:
         return cmd_audit(Path(a.out))
     ap.print_help()
