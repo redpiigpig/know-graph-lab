@@ -79,9 +79,20 @@ def main() -> int:
     ap = argparse.ArgumentParser(description="譯名通行度實測")
     ap.add_argument("--family", action="append", choices=list(FAMILIES))
     ap.add_argument("--all", action="store_true")
+    ap.add_argument("--terms", help="自訂詞表檔（一行一詞，# 開頭為註解）。"
+                                    "用來數『金口若望』這種帶脈絡的複合詞——"
+                                    "🚨 裸詞計數會誤導：「依納爵」大宗是羅耀拉，"
+                                    "拿它去裁定安提阿那一位就是拿錯證據。")
     ap.add_argument("--out", default="output/name_corpus.md")
     a = ap.parse_args()
-    fams = list(FAMILIES) if a.all else (a.family or [])
+    if a.terms:
+        words = [w.strip() for w in io.open(a.terms, encoding="utf-8")
+                 if w.strip() and not w.startswith("#")]
+        fams = ["脈絡詞"]
+        forms = {"脈絡詞": sorted(set(words), key=len, reverse=True)}
+    else:
+        fams = list(FAMILIES) if a.all else (a.family or [])
+        forms = None
     if not fams:
         ap.print_help()
         return 1
@@ -90,8 +101,9 @@ def main() -> int:
     # 改數帶脈絡的複合詞——「教宗良」數得到良一世，「良」數到的是特土良與善良。
     EXTRA = {"Leo": ["教宗良", "良一世", "良十三世", "大良", "教宗利奧", "利奧一世"]}
     SKIP = {"良", "讓", "揚"}
-    forms = {f: sorted(set(FAMILIES[f] + EXTRA.get(f, [])) - SKIP,
-                       key=len, reverse=True) for f in fams}
+    if forms is None:
+        forms = {f: sorted(set(FAMILIES[f] + EXTRA.get(f, [])) - SKIP,
+                           key=len, reverse=True) for f in fams}
     # 一個 family 一個 pattern，各自長的優先，免得短寫法把長寫法吃掉
     pats = {f: re.compile("|".join(map(re.escape, v))) for f, v in forms.items()}
 
