@@ -2405,7 +2405,7 @@ export const STATE_DETAILS: Record<string, StateDetail> = {
   'Swiss Confederation': {
     name_zh: '瑞士邦聯',
     capitals: ['伯恩', '蘇黎世', '琉森'],
-    religions: ['天主教', '新教（茲文利、喀爾文改革）'],
+    religions: ['天主教', '新教（茲文利、加爾文改革）'],
     intro: '以 1291 年烏里、施維茨、下瓦爾登三州永久同盟為傳統起點的山地共和同盟。1499 年士瓦本戰爭後實質脫離神聖羅馬帝國，1648 年《西發里亞和約》正式承認獨立；1798 年法軍入侵改組為赫爾維蒂共和國。',
     realm_id: 'western', sphere_id: 'central-european',
     predecessors: ['Holy Roman Empire'],

@@ -479,7 +479,7 @@
    "collectionKey": "lun",
    "verdict": "drop_dup_existing",
    "reason": "書名欄是 TRC 資料夾名殘留；與《駁異大全》同書，且已在藏",
-   "dup_of": "[中世紀/正/論] 哲學大全（駁異教大全）｜托馬斯‧阿奎那",
+   "dup_of": "[中世紀/正/論] 哲學大全（駁異教大全）｜多瑪斯‧阿奎那",
    "alias": [
     "哲學大全",
     "駁異大全",
@@ -494,7 +494,7 @@
    "collectionKey": "lun",
    "verdict": "drop_dup_existing",
    "reason": "同書異名，已在藏（既有於論藏、宣道藏重出兩筆）",
-   "dup_of": "[中世紀/正/論] 哲學大全（駁異教大全）｜托馬斯‧阿奎那",
+   "dup_of": "[中世紀/正/論] 哲學大全（駁異教大全）｜多瑪斯‧阿奎那",
    "alias": null,
    "patch": null
   },
@@ -610,7 +610,7 @@
    "dup_of": null,
    "alias": null,
    "patch": {
-    "author": "托馬斯‧阿奎那",
+    "author": "多瑪斯‧阿奎那",
     "era": "約 1267–1268 年"
    }
   },

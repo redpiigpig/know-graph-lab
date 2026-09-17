@@ -57,7 +57,7 @@
     { "rank": "6", "suit": "spade",   "zh": "坎特伯里的安瑟倫", "orig": "Anselm of Canterbury","dates": "1033–1109" },
     { "rank": "6", "suit": "heart",   "zh": "多瑪斯‧阿奎那", "orig": "Thomas Aquinas",        "dates": "1225–1274" },
     { "rank": "6", "suit": "diamond", "zh": "艾克哈特大師",   "orig": "Meister Eckhart",       "dates": "約1260–1328" },
-    { "rank": "6", "suit": "club",    "zh": "格列高利‧帕拉馬斯", "orig": "Gregory Palamas",    "dates": "1296–1359" },
+    { "rank": "6", "suit": "club",    "zh": "格列高里‧帕拉馬斯", "orig": "Gregory Palamas",    "dates": "1296–1359" },
 
     { "rank": "5", "suit": "spade",   "zh": "馬丁‧路德",     "orig": "Martin Luther",   "dates": "1483–1546" },
     { "rank": "5", "suit": "heart",   "zh": "托馬斯‧克蘭麥", "orig": "Thomas Cranmer",  "dates": "1489–1556" },
