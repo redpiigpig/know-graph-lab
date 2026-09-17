@@ -1,0 +1,219 @@
+{
+  "meta": {
+    "title": "譜系歸屬的文獻依據・書目",
+    "usage": "歸屬列以 support: [\"Brown 1979\", …] 引用本檔的鍵；本檔給完整出版資訊",
+    "provenance": {
+      "article-footnote": "出自〈從使徒到大公〉（《無境界者》第12期）的 35 條註釋，作者本人所引",
+      "added": "本表另補的標準參考書，未見於該文註釋"
+    },
+    "rule": "沒有學者支持的歸屬一律標 own_judgment 並寫出判斷依據，不得假託書目"
+  },
+  "entries": {
+    "Dunn 2006": {
+      "ref": "James D. G. Dunn, Unity and Diversity in the New Testament, 3rd ed. London: SCM Press, 2006.",
+      "provenance": "article-footnote",
+      "supports": "早期基督教的多元與統一；本表四層分類的總框架"
+    },
+    "Meeks 2006": {
+      "ref": "Wayne A. Meeks, “Social and Ecclesial Life of the Earliest Christians,” in The Cambridge History of Christianity, Vol. 1. Cambridge: Cambridge University Press, 2006, 145–173.",
+      "provenance": "article-footnote",
+      "supports": "以社會網絡而非教義陣營理解早期群體"
+    },
+    "Bauckham 2002": {
+      "ref": "Richard Bauckham, Gospel Women: Studies of the Named Women in the Gospels. Grand Rapids: Eerdmans, 2002.",
+      "provenance": "article-footnote",
+      "supports": "μ 抹大拉網絡：具名婦女作為受難與空墳記憶的連續線"
+    },
+    "Taylor 1997": {
+      "ref": "Joan E. Taylor, The Immerser: John the Baptist within Second Temple Judaism. Grand Rapids: Eerdmans, 1997.",
+      "provenance": "article-footnote",
+      "supports": "β 施洗約翰群體的獨立存在與其猶太脈絡"
+    },
+    "Pearson 2004": {
+      "ref": "Birger A. Pearson, “A Q Community in Galilee?” New Testament Studies 50.4 (2004): 476–494.",
+      "provenance": "article-footnote",
+      "supports": "反方：質疑能否由 Q 重建一個固定的加利利群體"
+    },
+    "Rollens 2012": {
+      "ref": "Sarah E. Rollens, “The Identity of Q in the First Century,” in Failure and Nerve in the Academic Study of Religion. Durham: Acumen, 2012, 177–191.",
+      "provenance": "article-footnote",
+      "supports": "反方：Q 群體身分的方法論限制"
+    },
+    "Brown 1979": {
+      "ref": "Raymond E. Brown, The Community of the Beloved Disciple. New York: Paulist Press, 1979.",
+      "provenance": "article-footnote",
+      "supports": "O 約翰群體的分期與分裂；主所愛門徒的群體史"
+    },
+    "Brown 1984": {
+      "ref": "Raymond E. Brown, The Churches the Apostles Left Behind. New York: Paulist Press, 1984.",
+      "provenance": "article-footnote",
+      "supports": "第二代文本群體：各使徒遺產如何被不同教會接手"
+    },
+    "Martyn 2003": {
+      "ref": "J. Louis Martyn, History and Theology in the Fourth Gospel, 3rd ed. Louisville: Westminster John Knox, 2003.",
+      "provenance": "article-footnote",
+      "supports": "約翰福音的兩層敘事：耶穌時代與群體當下的處境重疊"
+    },
+    "DeConick 2005": {
+      "ref": "April D. DeConick, Recovering the Original Gospel of Thomas. London: T&T Clark, 2005.",
+      "provenance": "article-footnote",
+      "supports": "T 多馬群體：語錄集的滾動層積而非單一成書"
+    },
+    "Layton 2021": {
+      "ref": "Bentley Layton, The Gnostic Scriptures, 2nd ed. New Haven: Yale University Press, 2021.",
+      "provenance": "article-footnote",
+      "supports": "G1 塞特派與 G2 瓦倫廷派的文本分群"
+    },
+    "Bauckham 1997": {
+      "ref": "Richard Bauckham, ed., The Gospels for All Christians. Grand Rapids: Eerdmans, 1997.",
+      "provenance": "article-footnote",
+      "supports": "反方：反對「一福音書＝一封閉群體」的預設"
+    },
+    "Sim 2001": {
+      "ref": "David C. Sim, “The Gospels for All Christians? A Response to Richard Bauckham,” Journal for the Study of the New Testament 24.2 (2001): 3–27.",
+      "provenance": "article-footnote",
+      "supports": "正方回應：福音書仍帶明確的在地群體印記"
+    },
+    "Last 2012": {
+      "ref": "Richard Last, “Communities That Write,” New Testament Studies 58.2 (2012): 173–198.",
+      "provenance": "article-footnote",
+      "supports": "書寫群體的社會規模與實際運作"
+    },
+    "Trebilco 2004": {
+      "ref": "Paul Trebilco, The Early Christians in Ephesus from Paul to Ignatius. Grand Rapids: Eerdmans, 2004.",
+      "provenance": "article-footnote",
+      "supports": "以弗所從來不只一個群體：保羅、約翰、啟示錄傳統並存"
+    },
+    "Goodacre 2001": {
+      "ref": "Mark Goodacre, The Synoptic Problem: A Way through the Maze. London: T&T Clark, 2001.",
+      "provenance": "article-footnote",
+      "supports": "對觀來源問題的競爭方案（含不需要 Q 的解法）"
+    },
+    "Kloppenborg 2008": {
+      "ref": "John S. Kloppenborg, Q, the Earliest Gospel. Louisville: Westminster John Knox, 2008.",
+      "provenance": "article-footnote",
+      "supports": "κ2 語錄層：Q 的範圍與層次"
+    },
+    "Litwa 2023": {
+      "ref": "M. David Litwa, Early Christianity in Alexandria: From Its Beginnings to the Late Second Century. Cambridge: Cambridge University Press, 2023.",
+      "provenance": "article-footnote",
+      "supports": "亞歷山大最早可見的教師即巴西理德、卡波克拉底等"
+    },
+    "Brock 1992": {
+      "ref": "Sebastian P. Brock, The Luminous Eye: The Spiritual World Vision of Saint Ephrem. Kalamazoo: Cistercian Publications, 1992.",
+      "provenance": "article-footnote",
+      "supports": "埃德薩／敘利亞傳統的獨立神學語彙"
+    },
+    "Griffith 2010": {
+      "ref": "Sidney H. Griffith, Christianity in Edessa and the Syriac-Speaking World. Farnham: Ashgate, 2010.",
+      "provenance": "article-footnote",
+      "supports": "埃德薩傳統的形成"
+    },
+    "Dunn G 2004": {
+      "ref": "Geoffrey D. Dunn, Tertullian. London: Routledge, 2004.",
+      "provenance": "article-footnote",
+      "supports": "迦太基的拉丁神學"
+    },
+    "Burns 2002": {
+      "ref": "J. Patout Burns, Cyprian the Bishop. London: Routledge, 2002.",
+      "provenance": "article-footnote",
+      "supports": "居普良的主教共融與北非殉道傳統"
+    },
+    "Louth 2004": {
+      "ref": "Andrew Louth, “Eusebius and the Birth of Church History,” in The Cambridge History of Early Christian Literature, 266–274.",
+      "provenance": "article-footnote",
+      "supports": "凱撒利亞：龐非勒與優西比烏的抄本與史學事業"
+    },
+    "Ayres 2004": {
+      "ref": "Lewis Ayres, Nicaea and Its Legacy: An Approach to Fourth-Century Trinitarian Theology. Oxford: Oxford University Press, 2004.",
+      "provenance": "article-footnote",
+      "supports": "尼西亞會後的重新結盟"
+    },
+    "Parvis 2006": {
+      "ref": "Sara Parvis, Marcellus of Ancyra and the Lost Years of the Arian Controversy 325–345. Oxford: Oxford University Press, 2006.",
+      "provenance": "article-footnote",
+      "supports": "尼西亞前後的陣營流動"
+    },
+    "Gwynn 2007": {
+      "ref": "David M. Gwynn, The Eusebians. Oxford: Oxford University Press, 2007.",
+      "provenance": "article-footnote",
+      "supports": "「亞流派」作為論敵建構出來的標籤"
+    },
+    "King 2003": {
+      "ref": "Karen L. King, What Is Gnosticism? Cambridge, MA: Harvard University Press, 2003.",
+      "provenance": "article-footnote",
+      "supports": "反對把差異極大的古代群體壓成單一「諾斯底宗教」"
+    },
+    "Williams 1996": {
+      "ref": "Michael Allen Williams, Rethinking “Gnosticism”. Princeton: Princeton University Press, 1996.",
+      "provenance": "article-footnote",
+      "supports": "同上；本表因此把 G1／G2 分立而不合為一"
+    },
+    "Lieu 2015": {
+      "ref": "Judith M. Lieu, Marcion and the Making of a Heretic: God and Scripture in the Second Century. Cambridge: Cambridge University Press, 2015.",
+      "provenance": "article-footnote",
+      "supports": "馬吉安其人其書全由敵證回推——本表據此不立其節點"
+    },
+    "Trevett 1996": {
+      "ref": "Christine Trevett, Montanism: Gender, Authority and the New Prophecy. Cambridge: Cambridge University Press, 1996.",
+      "provenance": "article-footnote",
+      "supports": "孟他努運動不應與諾斯底宇宙論混為一談"
+    },
+    "Bauer 1971": {
+      "ref": "Walter Bauer, Orthodoxy and Heresy in Earliest Christianity, trans. Robert A. Kraft and Gerhard Krodel. Philadelphia: Fortress Press, 1971.",
+      "provenance": "article-footnote",
+      "supports": "地方形態先於「正統」；本表城市傳統層的前提"
+    },
+    "Mitchell & Young 2006": {
+      "ref": "Margaret M. Mitchell and Frances M. Young, eds., The Cambridge History of Christianity, Vol. 1: Origins to Constantine. Cambridge: Cambridge University Press, 2006.",
+      "provenance": "article-footnote",
+      "supports": "由多元地方形態走向前大公秩序的通論"
+    },
+
+    "Streeter 1924": {
+      "ref": "Burnett Hillman Streeter, The Four Gospels: A Study of Origins. London: Macmillan, 1924.",
+      "provenance": "added",
+      "supports": "四文獻假說（馬可＋Q＋M＋L），本表 mat／luk 書卷層 sources 的來源分層即此"
+    },
+    "Hengel 1983": {
+      "ref": "Martin Hengel, Between Jesus and Paul: Studies in the Earliest History of Christianity, trans. John Bowden. London: SCM Press, 1983.",
+      "provenance": "added",
+      "supports": "F 司提反─腓力軌跡：〈最早教會中的「希臘化者」〉一文是此軌跡立目的主要依據"
+    },
+    "Hill 1992": {
+      "ref": "Craig C. Hill, Hellenists and Hebrews: Reappraising Division within the Earliest Church. Minneapolis: Fortress Press, 1992.",
+      "provenance": "added",
+      "supports": "反方：質疑希臘化者與希伯來人之間的分裂被誇大"
+    },
+    "Bockmuehl 2012": {
+      "ref": "Markus Bockmuehl, Simon Peter in Scripture and Memory. Grand Rapids: Baker Academic, 2012.",
+      "provenance": "added",
+      "supports": "P 彼得軌跡的羅馬與安提阿兩支系記憶"
+    },
+    "Painter 2004": {
+      "ref": "John Painter, Just James: The Brother of Jesus in History and Tradition, 2nd ed. Columbia: University of South Carolina Press, 2004.",
+      "provenance": "added",
+      "supports": "J 雅各軌跡與其猶太基督徒後代（含伊便尼派）"
+    },
+    "Attridge 1989": {
+      "ref": "Harold W. Attridge, The Epistle to the Hebrews (Hermeneia). Philadelphia: Fortress Press, 1989.",
+      "provenance": "added",
+      "supports": "希伯來書的希臘化猶太解經背景；作者歸屬存疑"
+    },
+    "Koester 1990": {
+      "ref": "Helmut Koester, Ancient Christian Gospels: Their History and Development. Philadelphia: Trinity Press International, 1990.",
+      "provenance": "added",
+      "supports": "正典與非正典福音書的平行發展"
+    },
+    "Ehrman & Pleše 2011": {
+      "ref": "Bart D. Ehrman and Zlatko Pleše, The Apocryphal Gospels: Texts and Translations. Oxford: Oxford University Press, 2011.",
+      "provenance": "added",
+      "supports": "典外福音書的文本與年代"
+    },
+    "Aune 1997": {
+      "ref": "David E. Aune, Revelation (Word Biblical Commentary 52A–C). Dallas: Word Books, 1997–1998.",
+      "provenance": "added",
+      "supports": "O7 先知約翰與福音書信圈的作者分立"
+    }
+  }
+}
