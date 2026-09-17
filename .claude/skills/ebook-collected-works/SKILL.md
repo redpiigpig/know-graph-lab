@@ -754,6 +754,20 @@ Ports）。留白時 reader 只顯示英文，那是誠實的；留著錯譯則�
     python scripts/audit_llm_meta_replies.py --root mueller_data --samples 5
     python scripts/audit_llm_meta_replies.py --fix --meta-only  # 清判準明確的兩類
 
+### 🚨 `KGL_Translation_Supervisor` 已停用（2026-09-17）
+
+它只顧兩個工作：sbe 與 panikkar。兩邊今天都到 100%（SBE 22,158 段、潘尼卡 9,513 段），
+worker 每輪回的是 `job=sbe-local-draft all-done`——**沒事做，不是壞掉**。照
+[[feedback_disable_finished_schedules]] 把排程關了；要重開就
+
+    Enable-ScheduledTask -TaskName KGL_Translation_Supervisor
+
+🚨 關掉之前它壞了兩個月而沒人發現：`choose_mode()` 只要「有待複核草稿且複核引擎可用」
+就選 review，而 review 走 `--backend haiku`、Haiku 的 OAuth 自 2026-07-03 起 401，
+於是**一筆卡住的草稿把整台鎖在複核模式**，從 7/24 之後每一輪都 translated=0。
+判法：看 `scripts/state/translation_supervisor.json` 的 `mode` 與
+`local_drafts_waiting_review`，兩者一起卡住就是這個病。複核引擎已改成 gemini-first。
+
 ### ✅ 東方聖卷（SBE）六卷竣（2026-09-17）
 
 22,158 段全數處理完畢、死段 0，六卷都已 assemble_and_upload：奧義書（上）3,292／
