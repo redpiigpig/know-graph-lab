@@ -128,7 +128,7 @@ and must match its *structure* too, not just its scale. Checked 2026-08-27:
   and print each half's appendix in its last part only — repeating a 125-page
   appendix in every part pushes them back over the cap. The splits live in each
   builder's `PARTS`. 2026-09-18（12pt、一課八頁之後）實測：希臘四冊
-  183／189／241／236，拉丁三冊 355／160／166，日文四冊 181／177／180／187，
+  183／189／241／236，拉丁三冊 349／159／165，日文四冊 177／173／174／184，
   希伯來單冊 406。
   🚨 切點要把**整冊的厚度**算平，不是把課文頁數算平：附錄只印在該半的最後一分冊
   （希臘下冊那份就有 150 頁）。照課文頁數對半切，會切出 201／277 的一薄一厚。 `render_and_check_reader_pdfs.py` fails the build

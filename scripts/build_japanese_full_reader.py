@@ -83,10 +83,10 @@ VOLUMES = {
 # 份量才變得平均（四分位 6–12 頁），在那之前最厚的一課是最薄的三四倍，切點
 # 必須遷就那幾課。改了讀文長度就要重算切點，否則會留下一冊厚一冊薄。
 PARTS = [
-    {"book": 1, "source": 1, "first": 1, "last": 27, "appendix": False},   # 約 181 頁
-    {"book": 2, "source": 1, "first": 28, "last": 50, "appendix": True},   # 約 178 頁
-    {"book": 3, "source": 2, "first": 1, "last": 28, "appendix": False},   # 約 180 頁
-    {"book": 4, "source": 2, "first": 29, "last": 50, "appendix": True},   # 約 188 頁
+    {"book": 1, "source": 1, "first": 1, "last": 27, "appendix": False},   # 實測 177 頁
+    {"book": 2, "source": 1, "first": 28, "last": 50, "appendix": True},   # 實測 173 頁
+    {"book": 3, "source": 2, "first": 1, "last": 28, "appendix": False},   # 實測 174 頁
+    {"book": 4, "source": 2, "first": 29, "last": 50, "appendix": True},   # 實測 184 頁
 ]
 
 _metrics = None
@@ -166,7 +166,9 @@ def add_vocabulary(document: Document, rows: list[dict]) -> None:
         ]
         for cell, (text, font, size, color) in zip(cells, values):
             H.set_cell_margins(cell, top=H.VOCAB_CELL_PAD_DXA,
-                               bottom=H.VOCAB_CELL_PAD_DXA)
+                               bottom=H.VOCAB_CELL_PAD_DXA,
+                               start=H.VOCAB_CELL_SIDE_PAD_DXA,
+                               end=H.VOCAB_CELL_SIDE_PAD_DXA)
             H.tighten_cell(cell)
             paragraph = cell.paragraphs[0]
             paragraph.paragraph_format.space_after = Pt(0)

@@ -102,6 +102,10 @@ LESSON_TITLE_SPACE_AFTER_PT = 2
 SECTION_HEADING_SPACE_BEFORE_PT = 2
 SECTION_HEADING_SPACE_AFTER_PT = 2
 VOCAB_CELL_PAD_DXA = 20
+# 🚨 側邊距也要收。預設 CELL_SIDE_PAD_DXA 是 120 dxa＝2.1mm，一欄兩側就 4.2mm；
+# 三欄的生詞表因此有 12.7mm 的版心花在留白上，而那正好是一個長詞條折不折行的
+# 差距——折一次那一列就高一倍，二十個詞排不進一頁。
+VOCAB_CELL_SIDE_PAD_DXA = 40
 VOCAB_LINE_SPACING = 1.0
 EXERCISE_ITEM_SPACE_BEFORE_PT = 1
 EXERCISE_ITEM_SPACE_AFTER_PT = 0
@@ -1090,7 +1094,8 @@ def add_vocabulary(document: Document, lesson: dict) -> None:
     for index, header in enumerate(headers):
         cell = table.cell(0, index)
         shade(cell, ACCENT)
-        set_cell_margins(cell, top=VOCAB_CELL_PAD_DXA, bottom=VOCAB_CELL_PAD_DXA)
+        set_cell_margins(cell, top=VOCAB_CELL_PAD_DXA, bottom=VOCAB_CELL_PAD_DXA,
+                         start=VOCAB_CELL_SIDE_PAD_DXA, end=VOCAB_CELL_SIDE_PAD_DXA)
         tighten_cell(cell)
         p = cell.paragraphs[0]
         p.alignment = WD_ALIGN_PARAGRAPH.CENTER
@@ -1110,7 +1115,9 @@ def add_vocabulary(document: Document, lesson: dict) -> None:
         )
         for index, value in enumerate(values):
             set_cell_margins(cells[index], top=VOCAB_CELL_PAD_DXA,
-                             bottom=VOCAB_CELL_PAD_DXA, start=60, end=60)
+                             bottom=VOCAB_CELL_PAD_DXA,
+                             start=VOCAB_CELL_SIDE_PAD_DXA,
+                             end=VOCAB_CELL_SIDE_PAD_DXA)
             tighten_cell(cells[index])
             if item["lessonSlot"] % 2 == 0:
                 shade(cells[index], PALE_2)

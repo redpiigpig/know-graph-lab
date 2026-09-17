@@ -88,9 +88,9 @@ VOLUMES = {
 # 份量才變得平均（四分位 6–12 頁），在那之前最厚的一課是最薄的三四倍，切點
 # 必須遷就那幾課。改了讀文長度就要重算切點，否則會留下一冊厚一冊薄。
 PARTS = [
-    {"book": 1, "source": "上冊", "first": 1, "last": 50, "appendix": True},   # 約 356 頁
-    {"book": 2, "source": "下冊", "first": 1, "last": 27, "appendix": False},  # 約 161 頁
-    {"book": 3, "source": "下冊", "first": 28, "last": 50, "appendix": True},  # 約 166 頁
+    {"book": 1, "source": "上冊", "first": 1, "last": 50, "appendix": True},   # 實測 349 頁
+    {"book": 2, "source": "下冊", "first": 1, "last": 27, "appendix": False},  # 實測 159 頁
+    {"book": 3, "source": "下冊", "first": 28, "last": 50, "appendix": True},  # 實測 165 頁
 ]
 BOOK_LABELS = ("第一冊", "第二冊", "第三冊")
 
@@ -260,7 +260,10 @@ def vocabulary_table(document, rows: list[dict]):
     header = table.rows[0]
     for cell, label in zip(header.cells, ("拉丁文", "詞類", "繁體中文")):
         H.shade(cell, H.PALE)
-        H.set_cell_margins(cell, top=H.VOCAB_CELL_PAD_DXA, bottom=H.VOCAB_CELL_PAD_DXA)
+        H.set_cell_margins(cell, top=H.VOCAB_CELL_PAD_DXA,
+                           bottom=H.VOCAB_CELL_PAD_DXA,
+                           start=H.VOCAB_CELL_SIDE_PAD_DXA,
+                           end=H.VOCAB_CELL_SIDE_PAD_DXA)
         H.tighten_cell(cell)
         paragraph = cell.paragraphs[0]
         H.add_mixed_script_text(paragraph, label, H.FONT_ZH, H.LABEL_PT, bold=True,
@@ -274,17 +277,23 @@ def vocabulary_table(document, rows: list[dict]):
         H.prevent_row_split(row)
         cells = row.cells
         H.set_cell_margins(cells[0], top=H.VOCAB_CELL_PAD_DXA,
-                           bottom=H.VOCAB_CELL_PAD_DXA)
+                           bottom=H.VOCAB_CELL_PAD_DXA,
+                           start=H.VOCAB_CELL_SIDE_PAD_DXA,
+                           end=H.VOCAB_CELL_SIDE_PAD_DXA)
         H.tighten_cell(cells[0])
         H.add_mixed_script_text(cells[0].paragraphs[0], entry.get("forms") or entry["headword"],
                                 FONT_LA, H.TABLE_SIZE_PT)
         H.set_cell_margins(cells[1], top=H.VOCAB_CELL_PAD_DXA,
-                           bottom=H.VOCAB_CELL_PAD_DXA)
+                           bottom=H.VOCAB_CELL_PAD_DXA,
+                           start=H.VOCAB_CELL_SIDE_PAD_DXA,
+                           end=H.VOCAB_CELL_SIDE_PAD_DXA)
         H.tighten_cell(cells[1])
         H.add_mixed_script_text(cells[1].paragraphs[0], short_pos(entry), H.FONT_ZH,
                                 H.LABEL_PT, color=H.MUTED)
         H.set_cell_margins(cells[2], top=H.VOCAB_CELL_PAD_DXA,
-                           bottom=H.VOCAB_CELL_PAD_DXA)
+                           bottom=H.VOCAB_CELL_PAD_DXA,
+                           start=H.VOCAB_CELL_SIDE_PAD_DXA,
+                           end=H.VOCAB_CELL_SIDE_PAD_DXA)
         H.tighten_cell(cells[2])
         H.add_mixed_script_text(cells[2].paragraphs[0], entry.get("glossZh") or "〔待補〕",
                                 H.FONT_ZH, H.TABLE_SIZE_PT)

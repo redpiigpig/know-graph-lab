@@ -88,6 +88,7 @@ from build_hebrew_full_reader import (  # noqa: E402  - shared typesetting machi
     SECTION_HEADING_SPACE_AFTER_PT,
     SECTION_HEADING_SPACE_BEFORE_PT,
     VOCAB_CELL_PAD_DXA,
+    VOCAB_CELL_SIDE_PAD_DXA,
     VOCAB_LINE_SPACING,
     compact_heading,
     start_section,
@@ -289,7 +290,8 @@ def add_vocabulary(document: Document, lesson: dict) -> None:
     set_repeat_header(header)
     for cell, title in zip(header.cells, ["#", "詞條", "詞類", "繁體中文詞義"]):
         shade(cell, PALE)
-        set_cell_margins(cell, top=VOCAB_CELL_PAD_DXA, bottom=VOCAB_CELL_PAD_DXA)
+        set_cell_margins(cell, top=VOCAB_CELL_PAD_DXA, bottom=VOCAB_CELL_PAD_DXA,
+                         start=VOCAB_CELL_SIDE_PAD_DXA, end=VOCAB_CELL_SIDE_PAD_DXA)
         tighten_cell(cell)
         paragraph = cell.paragraphs[0]
         paragraph.paragraph_format.space_after = Pt(0)
@@ -298,7 +300,8 @@ def add_vocabulary(document: Document, lesson: dict) -> None:
         row = table.add_row()
         prevent_row_split(row)
         for index, cell in enumerate(row.cells):
-            set_cell_margins(cell, top=VOCAB_CELL_PAD_DXA, bottom=VOCAB_CELL_PAD_DXA)
+            set_cell_margins(cell, top=VOCAB_CELL_PAD_DXA, bottom=VOCAB_CELL_PAD_DXA,
+                             start=VOCAB_CELL_SIDE_PAD_DXA, end=VOCAB_CELL_SIDE_PAD_DXA)
             tighten_cell(cell)
             paragraph = cell.paragraphs[0]
             paragraph.paragraph_format.space_after = Pt(0)
@@ -560,10 +563,10 @@ def add_latin_and_cjk(paragraph, text: str, size: float, *, color=MUTED) -> None
 # 2026-09-18 讀文改用版面預算之後重量的切點（scripts/fit_reader_reading_limit.py
 # 量每課頁數，再把「課文頁＋卷首＋附錄」湊平）。
 PARTS = [
-    {"book": 1, "source": 1, "first": 1, "last": 26, "appendix": False},   # 約 183 頁
-    {"book": 2, "source": 1, "first": 27, "last": 50, "appendix": True},   # 約 190 頁
-    {"book": 3, "source": 2, "first": 1, "last": 37, "appendix": False},   # 約 241 頁
-    {"book": 4, "source": 2, "first": 38, "last": 50, "appendix": True},   # 約 237 頁
+    {"book": 1, "source": 1, "first": 1, "last": 26, "appendix": False},   # 實測 183 頁
+    {"book": 2, "source": 1, "first": 27, "last": 50, "appendix": True},   # 實測 189 頁
+    {"book": 3, "source": 2, "first": 1, "last": 37, "appendix": False},   # 實測 241 頁
+    {"book": 4, "source": 2, "first": 38, "last": 50, "appendix": True},   # 實測 236 頁
 ]
 BOOK_LABELS = ("第一冊", "第二冊", "第三冊", "第四冊")
 
