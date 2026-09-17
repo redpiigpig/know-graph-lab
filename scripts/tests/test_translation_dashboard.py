@@ -8,6 +8,7 @@ from scripts.translation_dashboard import (
     _checkpoint_counts,
     _command_arg,
     _greek_source_total,
+    _jung_vol_running,
     _greek_work_registry,
     apply_runtime_rate_limits,
     api_inventory,
@@ -53,6 +54,19 @@ class TranslationDashboardTests(unittest.TestCase):
                 "潘尼卡", root, {"demo": "測試作品"}, [], "src")[0]
             self.assertEqual((row.done, row.total), (19, 20))
             self.assertNotEqual(row.state, "完成")
+
+    def test_jung_order_run_counts_as_running(self):
+        # --order 3,4,6 起跑的卷也要算執行中；只認 --vol 的話面板會把正在跑的
+        # 顯示成「已暫停」，那是假訊號。
+        order = [r"python -X utf8 scripts\jung_cw_translate.py --order 3,4,6 --engine nvidia"]
+        self.assertTrue(_jung_vol_running("cw3", order))
+        self.assertTrue(_jung_vol_running("cw6", order))
+        self.assertFalse(_jung_vol_running("cw5", order))
+        self.assertFalse(_jung_vol_running("cw9ii", order))
+        self.assertTrue(_jung_vol_running(
+            "cw11", [r"python scripts\jung_cw_translate.py --vol 11"]))
+        self.assertFalse(_jung_vol_running(
+            "cw3", [r"python scripts\sbe_translate.py --loop"]))
 
     def test_command_arg(self):
         cmd = "python scripts/ingest_lit_review.py --project genesis-philosophy --resume"

@@ -544,6 +544,24 @@ def is_stale_done(state: str, updated_at: float | None, now: float,
             and now - updated_at > days * 86400)
 
 
+def _jung_vol_running(slug: str, commands: list[str]) -> bool:
+    """slug 例如 cw9ii／cw3。jung_cw_translate.py 可以用 --vol 3 或 --order 3,4,6
+    起跑，只認 --vol 的話，用 --order 跑的那幾卷會在面板上顯示成「已暫停」——
+    那是假訊號，比沒有更糟（2026-09-17 收 CW3/4/6 時踩到）。"""
+    key = slug[2:] if slug.startswith("cw") else slug
+    for command in commands:
+        if "jung_cw_translate.py" not in command:
+            if slug and slug in command:
+                return True
+            continue
+        if re.search(rf"--vol(?:=|\s+){re.escape(key)}(?:\s|$)", command):
+            return True
+        order = re.search(r"--order(?:=|\s+)(\S+)", command)
+        if order and key in [k.strip() for k in order.group(1).split(",")]:
+            return True
+    return False
+
+
 def scan_jung(processes: list[dict[str, Any]]) -> list[WorkProgress]:
     rows: list[WorkProgress] = []
     if not JUNG_ROOT.exists():
@@ -566,7 +584,7 @@ def scan_jung(processes: list[dict[str, Any]]) -> list[WorkProgress]:
             pass
         slug = status_path.parent.name.lower()
         seen.add(slug)
-        direct_running = any(slug in command for command in commands)
+        direct_running = _jung_vol_running(slug, commands)
         rows.append(WorkProgress(
             "榮格", status_path.parent.name, str(obj.get("title") or status_path.parent.name),
             done, total, "段", _state(done, total, direct_running, updated, error=err),
@@ -582,12 +600,7 @@ def scan_jung(processes: list[dict[str, Any]]) -> list[WorkProgress]:
                 continue
             title = str(config[0])
             folder = JUNG_ROOT / "cw-full" / slug
-            direct_running = any(
-                "jung_cw_translate.py" in command
-                and re.search(rf"--vol(?:=|\s+){re.escape(str(volume).lower())}(?:\s|$)",
-                              command)
-                for command in commands
-            )
+            direct_running = _jung_vol_running(slug, commands)
             rows.append(WorkProgress(
                 "榮格", slug, f"CW {volume}　{title}", 0, 0, "段",
                 "執行中" if direct_running else "未開始", direct_running,

@@ -156,6 +156,9 @@ OLLAMA_MODEL = os.environ.get("OLLAMA_MODEL", "qwen2.5:7b")
 # is rested (cooldown) and skipped, so a depleted account doesn't waste retries.
 NVIDIA_MIN_INTERVAL = 6.0      # seconds between ANY two NVIDIA calls (global)
 NVIDIA_KEY_COOLDOWN = 120.0    # rest a key this long after it 429s
+# 上游暫時性錯誤（500/502/503/504）另計：同一把 key 通常下一秒就好了，
+# 罰滿 120 秒會讓一次上游波動把所有 key 一起推進休息，整條線空等。
+NVIDIA_TRANSIENT_REST = 15.0
 _nv_last_call = 0.0
 _nv_rr = 0                     # round-robin pointer
 _nv_key_cool: dict[int, float] = {}  # key idx -> epoch until which it's resting
@@ -832,9 +835,11 @@ def nvidia_translate(source: str) -> str:
             _nv_rest_key(idx)
             continue
         if r.status_code in (429, 500, 502, 503, 504):
+            rest = NVIDIA_KEY_COOLDOWN if r.status_code == 429 else NVIDIA_TRANSIENT_REST
             last_err = f"NVIDIA {r.status_code} key#{idx}"
-            print(f"  NVIDIA {r.status_code} key#{idx} — resting {NVIDIA_KEY_COOLDOWN:.0f}s, rotating", file=sys.stderr, flush=True)
-            _nv_rest_key(idx)
+            print(f"  NVIDIA {r.status_code} key#{idx} — resting {rest:.0f}s, rotating",
+                  file=sys.stderr, flush=True)
+            _nv_rest_key(idx, rest)
             continue
         last_err = f"NVIDIA HTTP {r.status_code}: {r.text[:200]}"
         _nv_rest_key(idx)
@@ -894,7 +899,8 @@ def nvidia_chat(prompt: str, max_tokens: int = 2000, system: str | None = None,
             continue
         if r.status_code in (429, 500, 502, 503, 504):
             last_err = f"NVIDIA {r.status_code} key#{idx}"
-            _nv_rest_key(idx)
+            _nv_rest_key(idx, NVIDIA_KEY_COOLDOWN if r.status_code == 429
+                         else NVIDIA_TRANSIENT_REST)
             continue
         last_err = f"NVIDIA HTTP {r.status_code}: {r.text[:200]}"
         _nv_rest_key(idx)
