@@ -211,16 +211,28 @@ def fit(items, width_cm, height_cm, sizes, spaces, line=1.3, indent_cm=(0, 0.9, 
     #    與同樣保守的 FIT_MARGIN 疊起來，讓「內文只用掉半頁、字卻縮到 18.7pt」。
     #    改成 1.60（比實量再留 3%），餘裕交給 FIT_MARGIN 一個地方管就好。
     LINE = 1.60 / 1.3 * line
-    total = 0.0
-    for it in items:
-        lvl, txt = (it if isinstance(it, tuple) else (0, it))
-        if not txt:
-            total += sizes[0] * 0.5
-            continue
-        avail = (width_cm - indent_cm[min(lvl, 2) if lvl != 3 else 0]) * CM_PT
-        per = max(8, int(avail / sizes[lvl]))
-        rows = -(-(len(txt) + 2) // per)          # ＋2 是行首的項目符號
-        total += rows * sizes[lvl] * LINE + spaces[lvl]
+
+    def height_at(k):
+        """字放大 k 倍之後實際佔的高度（pt）。
+
+        🚨 **每行塞得下幾個字會隨 k 改變**，所以不能只把 k=1 的高度乘上 k。
+        字放大兩成，每行就少塞兩成的字，本來一行的條目會變成兩行——
+        高度是跳著長的，不是線性的。
+        """
+        tot = 0.0
+        for it in items:
+            lvl, txt = (it if isinstance(it, tuple) else (0, it))
+            if not txt:
+                tot += sizes[0] * 0.5 * k
+                continue
+            sz = sizes[lvl] * k
+            avail = (width_cm - indent_cm[min(lvl, 2) if lvl != 3 else 0]) * CM_PT
+            per = max(8, int(avail / sz))
+            rows = -(-(len(txt) + 2) // per)      # ＋2 是行首的項目符號
+            tot += rows * sz * LINE + spaces[lvl] * k
+        return tot
+
+    total = height_at(1.0)
     if not total:
         return 1.0
     v = height_cm * CM_PT / total
@@ -228,14 +240,27 @@ def fit(items, width_cm, height_cm, sizes, spaces, line=1.3, indent_cm=(0, 0.9, 
     #    字縮到下限仍然溢出。要判斷該不該拆頁，必須看沒被夾過的 raw 值。
     if raw:
         return min(1.0, v)
-    # 🚨 **放大時要留安全邊際。** 舊版 k 上限是 1.0，估算與實際之間天然有餘裕；
-    #    開放放大之後，k 會剛好落在估算值上，估算一樂觀就溢出——2026-09-16
-    #    第 3 週那份的「本單元重點（續）」就是這樣：三條長條目被放到 32.8pt，
-    #    算出來剛好 13.3 cm＝框高，實際排出來掉到頁尾線下面。
-    #    只有「放大」這一側加邊際；縮小那一側的行為完全不動。
-    if v > 1.0:
-        v = max(1.0, v * GROW_MARGIN)
-    return min(grow, max(FIT_FLOOR, v))
+    # 縮小這一側完全不動：k<1 時折行只會變少，線性估算是保守的。
+    if v <= 1.0 or grow <= 1.0:
+        return min(grow, max(FIT_FLOOR, v))
+    # 🚨 **放大這一側要用實際字級重算折行，再留安全邊際。**
+    #    2026-09-16 只加了 GROW_MARGIN，仍然是拿 k=1 的折行數去乘 k——
+    #    於是「上次講到哪裡」那種三條長條目的頁被放大到 45pt，每條折成兩行，
+    #    最後一行落在 y=541.7 而版面只有 540。2026-09-17 改成往下二分搜尋，
+    #    每一步都用該字級真正的折行數量一次。
+    #    只會讓放大後的字**變小或不變**，所以不可能生出新的溢出；
+    #    而且 raw 這一側沒動，拆頁判斷與張數完全不受影響。
+    limit = height_cm * CM_PT * GROW_MARGIN
+    lo, hi = 1.0, min(grow, v)
+    if height_at(hi) <= limit:
+        return hi
+    for _ in range(24):
+        mid = (lo + hi) / 2
+        if height_at(mid) <= limit:
+            lo = mid
+        else:
+            hi = mid
+    return max(1.0, lo)
 
 
 def band(slide, color, x, y, w, h):
