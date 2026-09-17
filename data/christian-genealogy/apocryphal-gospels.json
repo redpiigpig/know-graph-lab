@@ -1,0 +1,824 @@
+{
+  "meta": {
+    "title": "典外福音書・學界分類與譜系歸屬",
+    "scope": "站上 /apocrypha 與 /gnostic 收有全文者為主，共 30 種（27 種有內容、3 種待補）",
+    "why_two_columns": "先記學界怎麼分，再記本表把它掛在哪條軌跡上。兩者是不同的問題：學界分類問的是『這是哪一類文本』（文類），本表問的是『這保存了誰的記憶、由誰傳下』（譜系）。同一份文獻在兩欄可以完全不對稱——《腓力福音》文類是語錄集、譜系卻屬瓦倫廷派而非腓力。",
+    "schemes": {
+      "EP": {
+        "name": "Ehrman & Pleše 2011《典外福音書》",
+        "cats": [
+          "嬰孩福音",
+          "傳道與語錄殘篇（含 agrapha）",
+          "受難與復活敘事",
+          "其他"
+        ],
+        "note": "以耶穌生平的階段分類——最簡明，也最貼近『這份文獻補的是正典的哪一段空白』",
+        "bib": "Ehrman & Pleše 2011"
+      },
+      "NTA": {
+        "name": "Hennecke–Schneemelcher《新約次經》第一卷（NTA I）",
+        "cats": [
+          "教父著作中的福音與語錄殘篇",
+          "猶太基督徒福音",
+          "埃及人福音",
+          "彼得福音",
+          "諾斯底福音及類似文獻",
+          "救主對話錄",
+          "託名使徒者",
+          "託名婦女或異端首領者",
+          "嬰孩福音",
+          "耶穌家族故事"
+        ],
+        "note": "形式史取向，分得最細，且把『救主對話錄』獨立成類——那正是諾斯底福音的主要文體",
+        "bib": "Schneemelcher 1991"
+      },
+      "AcA": {
+        "name": "Markschies & Schröter 主編《古代基督教次經》（2012，NTA 第七版）",
+        "cats": [
+          "福音與相關文獻",
+          "使徒行傳與相關文獻",
+          "啟示錄與相關文獻"
+        ],
+        "note": "改依正典本身的三大文類重編，不再細分福音的子類——本表取其大架構，細類仍用 NTA",
+        "bib": "Markschies & Schröter 2012"
+      }
+    },
+    "codes": "data/christian-genealogy/traditions.json",
+    "bibliography": "data/christian-genealogy/bibliography.json",
+    "rule": "attributed＝文獻掛誰的名；actual＝本表判斷它實際出自哪一支。借名本身就是譜系資料，兩欄都要留。",
+    "place_kinds": {
+      "composition": "寫作地（學界推定）",
+      "findspot": "僅知出土地，寫作地不詳",
+      "claimed": "文獻自稱，未經獨立證實",
+      "scattered": "無單一寫作地"
+    },
+    "place_warning": "🚨 紙草殘片全部出土於埃及，那是埃及乾燥氣候保存得下來，不是這些文獻都寫於埃及。出土地與寫作地必須分欄。"
+  },
+  "documents": {
+    "gthom": {
+      "title": "多馬福音",
+      "corpus": "apocrypha",
+      "sections": 574,
+      "date": [
+        50,
+        150
+      ],
+      "lang": "科普特（希臘文殘卷另存）",
+      "EP": "傳道與語錄殘篇",
+      "NTA": "諾斯底福音及類似文獻",
+      "AcA": "福音與相關文獻",
+      "attributed": [
+        "T1"
+      ],
+      "actual": [
+        "T1",
+        "κ"
+      ],
+      "support": [
+        "DeConick 2005",
+        "Layton 2021",
+        "Koester 1990"
+      ],
+      "own_judgment": true,
+      "rationale": "一百一十四則語錄、無敘事框架、無受難記——文體與 Q 同型而與四福音異類。本表同時掛 T1 與 κ：掛 T1 是因其自我歸屬（開篇「這是低土馬猶大多馬所記下的」）與敘利亞流傳史；掛 κ 是因語錄體本身就是 κ 群體那條傳輸線在正典外的出路，其中約三分之一與對觀有平行。🚨 NTA 把它歸諾斯底，但 DeConick 2005 主張它是滾動層積的，最早層未必諾斯底——本表從後者，故 actual 不掛 G1／G2。",
+      "place": "敘利亞（埃德薩圈）",
+      "place_kind": "composition",
+      "place_note": "科普特全本出自拿戈瑪第，希臘文殘卷出自俄西林古——兩處都是出土地不是寫作地"
+    },
+    "ghebrews": {
+      "title": "希伯來人福音",
+      "corpus": "apocrypha",
+      "sections": 37,
+      "date": [
+        50,
+        150
+      ],
+      "lang": "亞蘭文",
+      "EP": "傳道與語錄殘篇",
+      "NTA": "猶太基督徒福音",
+      "AcA": "福音與相關文獻",
+      "attributed": [
+        "J1"
+      ],
+      "actual": [
+        "J5",
+        "J6"
+      ],
+      "support": [
+        "Painter 2004",
+        "Ehrman & Pleše 2011"
+      ],
+      "own_judgment": false,
+      "rationale": "僅存於教父引文。其中最重要的一則是復活後首先向雅各顯現（耶柔米《論名人》2 所引）——與林前 15:7 把雅各列入顯現名單同向，是 J 軌跡自有復活敘事的證據。⚠️ 三部猶太基督徒福音（希伯來人／拿撒勒派／伊便尼派）在教父引用中彼此混淆，究竟是三部還是兩部、乃至一部，學界未定。",
+      "place": "埃及（亞歷山大的猶太基督徒圈）",
+      "place_kind": "composition"
+    },
+    "gnazarenes": {
+      "title": "拿撒勒派人福音",
+      "corpus": "apocrypha",
+      "sections": 31,
+      "date": [
+        100,
+        200
+      ],
+      "lang": "亞蘭文",
+      "EP": "傳道與語錄殘篇",
+      "NTA": "猶太基督徒福音",
+      "AcA": "福音與相關文獻",
+      "attributed": [
+        "J5"
+      ],
+      "actual": [
+        "J5"
+      ],
+      "support": [
+        "Painter 2004"
+      ],
+      "own_judgment": false,
+      "rationale": "亞蘭文的馬太擴充本。拿撒勒派守律法但接受童女生子、不咒罵保羅，四世紀以前未被當作異端——J 軌跡中較溫和的一支。",
+      "place": "敘利亞西部（貝雅一帶）",
+      "place_kind": "composition"
+    },
+    "gebionites": {
+      "title": "伊便尼派人福音",
+      "corpus": "apocrypha",
+      "sections": 6,
+      "date": [
+        100,
+        200
+      ],
+      "lang": "希臘文",
+      "EP": "傳道與語錄殘篇",
+      "NTA": "猶太基督徒福音",
+      "AcA": "福音與相關文獻",
+      "attributed": [
+        "J6"
+      ],
+      "actual": [
+        "J6",
+        "P3"
+      ],
+      "support": [
+        "Painter 2004",
+        "Ehrman & Pleše 2011"
+      ],
+      "own_judgment": true,
+      "rationale": "🚨 雙親文獻。身分與律法立場承自雅各軌跡（否認童女生子、視保羅為叛教者、守割禮與安息日），文本卻是一部以馬太為底本的合參福音——所以它同時掛 J6 與 P3。這正是本表『每次事件之後譜系單位就換一次』的樣本：同一群人在身分上繼承 J、在文本上繼承 P3。⚠️ 全部殘篇僅存於埃皮法尼烏《藥箱》30，evidence 屬 hostile。",
+      "place": "約旦河東／敘利亞南部",
+      "place_kind": "composition",
+      "place_note": "與以利克塞派同一地帶——摩尼日後出身之處"
+    },
+    "gegyptians": {
+      "title": "埃及人福音",
+      "corpus": "apocrypha",
+      "sections": 11,
+      "date": [
+        100,
+        200
+      ],
+      "lang": "希臘文",
+      "EP": "傳道與語錄殘篇",
+      "NTA": "埃及人福音（NTA 單獨立類）",
+      "AcA": "福音與相關文獻",
+      "attributed": [],
+      "actual": [
+        "B2",
+        "μ3"
+      ],
+      "support": [
+        "Litwa 2023"
+      ],
+      "own_judgment": true,
+      "rationale": "僅存於亞歷山卓的革利免《雜記》所引。對話者是撒羅米，內容是禁慾主義的性與生育論。本表掛 B2 是因其流傳地與唯一保存者都在亞歷山大；掛 μ3 是因對話的另一方是一位加利利婦女——與《馬利亞福音》《皮斯特斯‧索菲亞》同屬『以婦女為問道者』那一組。🚨 NTA 把它單獨立為一類而不併入諾斯底，顯示它的歸屬本身就是難題。",
+      "place": "埃及（亞歷山大）",
+      "place_kind": "composition"
+    },
+    "gpet": {
+      "title": "彼得福音",
+      "corpus": "apocrypha",
+      "sections": 42,
+      "date": [
+        100,
+        200
+      ],
+      "lang": "希臘文",
+      "EP": "受難與復活敘事",
+      "NTA": "彼得福音（NTA 單獨立類）",
+      "AcA": "福音與相關文獻",
+      "attributed": [
+        "P1"
+      ],
+      "actual": [
+        "P4"
+      ],
+      "support": [
+        "Koester 1990",
+        "Ehrman & Pleše 2011"
+      ],
+      "own_judgment": false,
+      "rationale": "第一人稱「我西門彼得」，但年代與幻影派傾向使其歸入晚期托名層。🚨 安提阿的塞拉皮翁（約 200）禁止羅蘇斯教會誦讀本書——現存最早的『哪一本書不准讀』判決，也是 P3 安提阿支系行使文本管轄權的第一個實例。",
+      "place": "敘利亞（安提阿一帶）",
+      "place_kind": "composition",
+      "place_note": "塞拉皮翁在羅蘇斯查禁它，可見流通範圍在安提阿教區內"
+    },
+    "gmary": {
+      "title": "馬利亞（抹大拉）福音",
+      "corpus": "apocrypha",
+      "sections": 32,
+      "date": [
+        100,
+        200
+      ],
+      "lang": "科普特",
+      "EP": "其他",
+      "NTA": "救主對話錄／託名婦女者",
+      "AcA": "福音與相關文獻",
+      "attributed": [
+        "μ3"
+      ],
+      "actual": [
+        "μ3",
+        "G1"
+      ],
+      "support": [
+        "King 2003",
+        "Layton 2021"
+      ],
+      "own_judgment": false,
+      "rationale": "🚨 全書的爭點正是本表關心的事：彼得質疑「主豈真的私下同一個婦人說話而不讓我們知道」，利未回護她。這是一份把『誰有資格作見證』寫成正面衝突的文獻——μ 與 P 兩條軌跡的對立在此文本化。",
+      "place": "原作或在敘利亞",
+      "place_kind": "composition",
+      "place_note": "科普特抄本（柏林抄本 8502）與希臘文殘片均出自埃及"
+    },
+    "q-secret-mark": {
+      "title": "馬可的神祕福音",
+      "corpus": "apocrypha",
+      "sections": 5,
+      "date": [
+        100,
+        200
+      ],
+      "lang": "希臘文",
+      "EP": "傳道與語錄殘篇",
+      "NTA": "教父著作中的殘篇",
+      "AcA": "福音與相關文獻",
+      "attributed": [
+        "P2"
+      ],
+      "actual": [
+        "υ4"
+      ],
+      "support": [
+        "Koester 1990"
+      ],
+      "own_judgment": true,
+      "rationale": "⚠️ 真偽本身有重大爭議：僅見於 Morton Smith 1958 所稱在馬爾撒巴修道院發現的革利免書信抄件，原件下落不明，偽造說至今未息。本表收錄但標明此點；掛 υ4 是因其自稱為馬可在亞歷山大所增補的祕傳本，與馬可家那條線同源。若判為偽作則整條移除。",
+      "place": "亞歷山大（文獻自稱）",
+      "place_kind": "claimed",
+      "place_note": "抄件自稱發現於馬爾撒巴修道院，原件下落不明"
+    },
+    "gmatthias": {
+      "title": "馬提亞福音／託馬太名福音",
+      "corpus": "apocrypha",
+      "sections": 57,
+      "date": [
+        100,
+        300
+      ],
+      "lang": "希臘文",
+      "EP": "傳道與語錄殘篇",
+      "NTA": "託名使徒者",
+      "AcA": "福音與相關文獻",
+      "attributed": [
+        "P1"
+      ],
+      "actual": [
+        "G1"
+      ],
+      "support": [
+        "Layton 2021"
+      ],
+      "own_judgment": true,
+      "rationale": "馬提亞是徒 1:26 補進十二人的那一位——託名者挑中他，正因他在正典裡幾乎沒有內容，留白最多。革利免記巴西里底派使用《馬提亞傳統》，故 actual 掛 G1 一系的亞歷山大教師圈。",
+      "place": "亞歷山大",
+      "place_kind": "composition"
+    },
+    "infancy-thomas": {
+      "title": "多馬的耶穌嬰孩時期福音",
+      "corpus": "apocrypha",
+      "sections": 22,
+      "date": [
+        100,
+        200
+      ],
+      "lang": "希臘文",
+      "EP": "嬰孩福音",
+      "NTA": "嬰孩福音",
+      "AcA": "福音與相關文獻",
+      "attributed": [
+        "T2"
+      ],
+      "actual": [
+        "T2"
+      ],
+      "support": [
+        "Ehrman & Pleše 2011"
+      ],
+      "own_judgment": false,
+      "rationale": "與語錄多馬無關，只是共用同一個名字。所填補的是路 2:52 與 2:41 之間的空白——EP 的『嬰孩福音』這一類，本質上是正典留白的填充工程。",
+      "place": "敘利亞或埃及",
+      "place_kind": "composition"
+    },
+    "protoevangelium-james": {
+      "title": "雅各原始福音",
+      "corpus": "apocrypha",
+      "sections": 90,
+      "date": [
+        100,
+        200
+      ],
+      "lang": "希臘文",
+      "EP": "嬰孩福音",
+      "NTA": "耶穌家族故事",
+      "AcA": "福音與相關文獻",
+      "attributed": [
+        "J2"
+      ],
+      "actual": [
+        "J2"
+      ],
+      "support": [
+        "Painter 2004",
+        "Ehrman & Pleše 2011"
+      ],
+      "own_judgment": false,
+      "rationale": "🚨 本書的關鍵貢獻是主張耶穌的弟兄是約瑟前妻所生——這一步既保住馬利亞的童貞，又同時把耶穌家族的地位重新定義。J 軌跡的血親權威在此被改寫成一種親屬論述。馬利亞的父母約雅敬與安娜之名即出自本書。",
+      "place": "埃及或敘利亞",
+      "place_kind": "composition"
+    },
+    "gtruth": {
+      "title": "真理福音",
+      "corpus": "apocrypha",
+      "sections": 45,
+      "date": [
+        150,
+        200
+      ],
+      "lang": "科普特",
+      "EP": "其他",
+      "NTA": "諾斯底福音",
+      "AcA": "福音與相關文獻",
+      "attributed": [],
+      "actual": [
+        "G2"
+      ],
+      "support": [
+        "Layton 2021",
+        "Williams 1996"
+      ],
+      "own_judgment": false,
+      "rationale": "不是耶穌生平敘事，而是一篇講道式的默想——『福音』一詞在此指信息而非文類。愛任紐《反異端》3.11.9 提到瓦倫廷派有一部《真理福音》，一般認定即本書。",
+      "place": "羅馬或亞歷山大",
+      "place_kind": "composition",
+      "place_note": "瓦倫廷兩地都活動過"
+    },
+    "gphilip": {
+      "title": "腓力福音",
+      "corpus": "apocrypha",
+      "sections": 112,
+      "date": [
+        200,
+        300
+      ],
+      "lang": "科普特",
+      "EP": "其他",
+      "NTA": "諾斯底福音／託名使徒者",
+      "AcA": "福音與相關文獻",
+      "attributed": [
+        "F2"
+      ],
+      "actual": [
+        "G2"
+      ],
+      "support": [
+        "Layton 2021",
+        "Williams 1996"
+      ],
+      "own_judgment": false,
+      "rationale": "🚨 標準的借名文獻：掛腓力之名，內容是瓦倫廷派的聖禮神學與語錄彙編，與徒 8 那位腓力毫無關係。attributed 與 actual 完全不重疊——借名這件事本身正是譜系資料：二世紀有人認為掛腓力的名字有用。",
+      "place": "敘利亞",
+      "place_kind": "composition",
+      "place_note": "科普特抄本出自拿戈瑪第"
+    },
+    "soph-jesus": {
+      "title": "耶穌基督智慧書",
+      "corpus": "apocrypha",
+      "sections": 56,
+      "date": [
+        200,
+        300
+      ],
+      "lang": "科普特",
+      "EP": "其他",
+      "NTA": "救主對話錄",
+      "AcA": "福音與相關文獻",
+      "attributed": [],
+      "actual": [
+        "G1"
+      ],
+      "support": [
+        "Layton 2021"
+      ],
+      "own_judgment": false,
+      "rationale": "🚨 可直接看見基督教化的加工過程：本書是把非基督教的《福樂者歐格諾斯圖》改寫成復活主與門徒的問答。兩本並存於拿戈瑪第文庫，改寫前後可逐段對讀——這在整個古代文獻裡極罕見。",
+      "place": "埃及",
+      "place_kind": "composition"
+    },
+    "gbart": {
+      "title": "巴多羅買福音",
+      "corpus": "apocrypha",
+      "sections": 188,
+      "date": [
+        200,
+        500
+      ],
+      "lang": "希臘文",
+      "EP": "受難與復活敘事",
+      "NTA": "託名使徒者",
+      "AcA": "福音與相關文獻",
+      "attributed": [
+        "O2"
+      ],
+      "actual": [],
+      "support": [
+        "Ehrman & Pleše 2011"
+      ],
+      "own_judgment": true,
+      "rationale": "🚨 巴多羅買在教會傳統中常與拿但業視為同一人（對觀有巴多羅買無拿但業，約翰有拿但業無巴多羅買）。若採此認定，本書的掛名就落在 O2 線上。但內容是降地獄的問答，年代晚，與約翰福音的迦拿材料無實質關聯，故 actual 留空——只有借名，沒有傳承。",
+      "place": "埃及",
+      "place_kind": "composition"
+    },
+    "gnicodemus": {
+      "title": "尼哥德慕福音（彼拉多行傳）",
+      "corpus": "apocrypha",
+      "sections": 219,
+      "date": [
+        300,
+        500
+      ],
+      "lang": "希臘文",
+      "EP": "受難與復活敘事",
+      "NTA": "託名使徒者",
+      "AcA": "福音與相關文獻",
+      "attributed": [
+        "σ1"
+      ],
+      "actual": [
+        "σ3"
+      ],
+      "support": [
+        "Ehrman & Pleše 2011"
+      ],
+      "own_judgment": true,
+      "rationale": "🚨 σ 公會群體最完整的正典外後代。掛尼哥底母之名（約 3、7:50、19:39 那位議會成員），內容是彼拉多前的審判紀錄與降地獄。連同亞利馬太約瑟的記述與四封彼拉多書信，構成本表所稱的『彼拉多文獻圈』σ3——第一層六個群體裡，公會群體是唯一發展出整組正典外文獻的一個。",
+      "place": "敘利亞或小亞細亞",
+      "place_kind": "composition",
+      "place_note": "拉丁西方流傳最廣，中世紀降地獄主題的主要來源"
+    },
+    "joseph-carpenter": {
+      "title": "木匠約瑟的歷史",
+      "corpus": "apocrypha",
+      "sections": 79,
+      "date": [
+        200,
+        500
+      ],
+      "lang": "科普特",
+      "EP": "嬰孩福音",
+      "NTA": "耶穌家族故事",
+      "AcA": "福音與相關文獻",
+      "attributed": [
+        "J2"
+      ],
+      "actual": [
+        "J2",
+        "B2"
+      ],
+      "support": [],
+      "own_judgment": true,
+      "rationale": "科普特文、埃及流傳，講約瑟之死與善終——耶穌家族材料在亞歷山大傳統裡的晚期發展，故同時掛 J2 與 B2。本表未見專著支持此雙掛，屬判斷。",
+      "place": "埃及",
+      "place_kind": "composition"
+    },
+    "birth-mary": {
+      "title": "馬利亞的出生",
+      "corpus": "apocrypha",
+      "sections": 10,
+      "date": [
+        600,
+        900
+      ],
+      "lang": "拉丁文",
+      "EP": "嬰孩福音",
+      "NTA": "耶穌家族故事",
+      "AcA": "福音與相關文獻",
+      "attributed": [
+        "J2"
+      ],
+      "actual": [
+        "J2"
+      ],
+      "support": [],
+      "own_judgment": false,
+      "rationale": "⚠️ 年代遠逾本表 325 年的上限，只列不掛入譜系計算；它是《雅各原始福音》在拉丁西方的改編。",
+      "place": "拉丁西方（加洛林時期）",
+      "place_kind": "composition"
+    },
+    "q-mani": {
+      "title": "摩尼福音（活的福音）",
+      "corpus": "apocrypha",
+      "sections": 3,
+      "date": [
+        200,
+        300
+      ],
+      "lang": "敘利亞文",
+      "EP": "其他",
+      "NTA": "託名異端首領者",
+      "AcA": "福音與相關文獻",
+      "attributed": [],
+      "actual": [
+        "G4"
+      ],
+      "support": [
+        "Layton 2021"
+      ],
+      "own_judgment": false,
+      "rationale": "摩尼自著七經之首，僅存開篇殘句。掛 G4；其雙親（J7 以利克塞派的出身、T 多馬的文本繼承）見代號主檔。",
+      "place": "美索不達米亞／波斯",
+      "place_kind": "composition"
+    },
+    "logia-unknown": {
+      "title": "獨立存留的耶穌語錄（agrapha）",
+      "corpus": "apocrypha",
+      "sections": 27,
+      "date": [
+        50,
+        300
+      ],
+      "lang": "希臘文",
+      "EP": "傳道與語錄殘篇（agrapha）",
+      "NTA": "教父著作中的福音與語錄殘篇",
+      "AcA": "福音與相關文獻",
+      "attributed": [],
+      "actual": [
+        "κ"
+      ],
+      "support": [
+        "Koester 1990"
+      ],
+      "own_judgment": true,
+      "rationale": "散見於教父、抄本異文與紙草的孤立語錄。掛 κ 的理由是文體：語錄的流傳方式本身就是 κ 那條傳輸線，即使個別語錄的來源無從追溯。⚠️ 這是一個文體判斷而非來源判斷，個別條目可能出自任何一支。",
+      "place": "各處",
+      "place_kind": "scattered",
+      "place_note": "散見於教父著作、抄本異文與紙草，無單一寫作地"
+    },
+    "faiyum": {
+      "title": "費爾語錄（Faiyum 殘片）",
+      "corpus": "apocrypha",
+      "sections": 6,
+      "date": [
+        200,
+        300
+      ],
+      "lang": "希臘文",
+      "EP": "傳道與語錄殘篇",
+      "NTA": "教父著作中的殘篇",
+      "AcA": "福音與相關文獻",
+      "attributed": [],
+      "actual": [
+        "κ"
+      ],
+      "support": [],
+      "own_judgment": true,
+      "rationale": "極短殘片，與可 14:26–30 平行而更簡。或為馬可的更早形式，或為後出的節錄，兩說並存。",
+      "place": "不詳",
+      "place_kind": "findspot",
+      "place_note": "出土於埃及法尤姆；出土地不是寫作地"
+    },
+    "p-oxy-840": {
+      "title": "俄西林古蒲草紙 840",
+      "corpus": "apocrypha",
+      "sections": 13,
+      "date": [
+        100,
+        300
+      ],
+      "lang": "希臘文",
+      "EP": "傳道與語錄殘篇",
+      "NTA": "教父著作中的殘篇",
+      "AcA": "福音與相關文獻",
+      "attributed": [],
+      "actual": [
+        "σ1"
+      ],
+      "support": [],
+      "own_judgment": true,
+      "rationale": "🚨 內容是耶穌在聖殿與一位法利賽祭司長辯論潔淨禮。掛 σ1 的理由是場景與對手：聖殿內部的禮儀爭論，與約翰福音那批節期材料同型。屬本表判斷。",
+      "place": "不詳",
+      "place_kind": "findspot",
+      "place_note": "出土於埃及俄西林古"
+    },
+    "p-egerton-2": {
+      "title": "伊吉頓蒲草紙 2",
+      "corpus": "apocrypha",
+      "sections": 14,
+      "date": [
+        100,
+        200
+      ],
+      "lang": "希臘文",
+      "EP": "傳道與語錄殘篇",
+      "NTA": "教父著作中的殘篇",
+      "AcA": "福音與相關文獻",
+      "attributed": [],
+      "actual": [
+        "O5",
+        "κ"
+      ],
+      "support": [
+        "Koester 1990"
+      ],
+      "own_judgment": true,
+      "rationale": "🚨 同時帶有約翰式與對觀式的材料，是最重要的非正典福音殘片之一。它究竟在四福音之前還是之後，直接關係到福音傳統的流向——Koester 主張其獨立性，其他學者主張它是四福音的混編。本表雙掛並標明爭議。",
+      "place": "不詳",
+      "place_kind": "findspot",
+      "place_note": "出土於埃及；原作地學界未定，正是它在福音傳統中位置之爭的一部分"
+    },
+    "p-merton-51": {
+      "title": "默頓蒲草紙 51",
+      "corpus": "apocrypha",
+      "sections": 2,
+      "date": [
+        100,
+        300
+      ],
+      "lang": "希臘文",
+      "EP": "傳道與語錄殘篇",
+      "NTA": "教父著作中的殘篇",
+      "AcA": "福音與相關文獻",
+      "attributed": [],
+      "actual": [],
+      "support": [],
+      "own_judgment": true,
+      "rationale": "殘存過少，不足以判定來源。actual 留空——沒有材料就不填，這比猜一個代號誠實。",
+      "place": "不詳",
+      "place_kind": "findspot",
+      "place_note": "出土於埃及"
+    },
+    "p-berlin-11710": {
+      "title": "柏林蒲草紙 11710",
+      "corpus": "apocrypha",
+      "sections": 1,
+      "date": [
+        100,
+        400
+      ],
+      "lang": "希臘文",
+      "EP": "傳道與語錄殘篇",
+      "NTA": "教父著作中的殘篇",
+      "AcA": "福音與相關文獻",
+      "attributed": [
+        "O5"
+      ],
+      "actual": [],
+      "support": [],
+      "own_judgment": true,
+      "rationale": "拿但業與耶穌對話的兩葉小書，內容改寫自約 1:49。掛名側與 O2／O5 有關，但文本是後出的護符式抄件，不足以立傳承。",
+      "place": "不詳",
+      "place_kind": "findspot",
+      "place_note": "出土於埃及"
+    },
+    "p-berlin-16388": {
+      "title": "柏林蒲草紙 16388",
+      "corpus": "apocrypha",
+      "sections": 7,
+      "date": [
+        100,
+        400
+      ],
+      "lang": "希臘文",
+      "EP": "傳道與語錄殘篇",
+      "NTA": "教父著作中的殘篇",
+      "AcA": "福音與相關文獻",
+      "attributed": [],
+      "actual": [],
+      "support": [],
+      "own_judgment": true,
+      "rationale": "殘存過少，不足以判定來源。",
+      "place": "不詳",
+      "place_kind": "findspot",
+      "place_note": "出土於埃及"
+    },
+    "p-strasbourg": {
+      "title": "斯特拉斯堡蒲草紙",
+      "corpus": "apocrypha",
+      "sections": 13,
+      "date": [
+        100,
+        400
+      ],
+      "lang": "希臘文",
+      "EP": "受難與復活敘事",
+      "NTA": "教父著作中的殘篇",
+      "AcA": "福音與相關文獻",
+      "attributed": [],
+      "actual": [
+        "O5"
+      ],
+      "support": [],
+      "own_judgment": true,
+      "rationale": "科普特文的耶穌禱告與顯現殘片，文風近約翰的告別講論。屬本表判斷，證據薄。",
+      "place": "不詳",
+      "place_kind": "findspot",
+      "place_note": "出土於埃及"
+    },
+    "gjudas": {
+      "title": "猶大福音",
+      "corpus": "apocrypha",
+      "sections": 0,
+      "date": [
+        130,
+        170
+      ],
+      "lang": "科普特",
+      "EP": "其他",
+      "NTA": "託名使徒者",
+      "AcA": "福音與相關文獻",
+      "attributed": [],
+      "actual": [
+        "G1"
+      ],
+      "support": [
+        "Layton 2021",
+        "King 2003"
+      ],
+      "own_judgment": false,
+      "rationale": "🚨 站上尚無全文，待補。愛任紐《反異端》1.31.1 已提到該隱派使用一部《猶大福音》，2006 年拿戈瑪第圈外的科普特抄本公布後可對讀。掛 G1。",
+      "place": "敘利亞或埃及",
+      "place_kind": "composition",
+      "place_note": "科普特抄本（查科抄本）出自埃及中部",
+      "source_status": "🚨 不在《基督教典外文獻》新約篇裡。第2冊 p53 只有一頁簡介，末句明寫「這書的文本已經失傳」——該書出版早於 2006 年查科抄本公布。要補全文須另尋來源。"
+    },
+    "infancy-arabic": {
+      "title": "阿拉伯語耶穌嬰孩時期福音",
+      "corpus": "apocrypha",
+      "sections": 0,
+      "date": [
+        500,
+        700
+      ],
+      "lang": "敘利亞文",
+      "EP": "嬰孩福音",
+      "NTA": "嬰孩福音",
+      "AcA": "福音與相關文獻",
+      "attributed": [
+        "T2"
+      ],
+      "actual": [
+        "T2"
+      ],
+      "support": [],
+      "own_judgment": false,
+      "rationale": "⚠️ 站上尚無全文；年代遠逾 325 上限，只列不計入譜系。",
+      "place": "敘利亞，後譯為阿拉伯文",
+      "place_kind": "composition",
+      "source_status": "《基督教典外文獻》新約篇第1冊，原書頁 110–132（PDF p119–141，共 23 頁）。已切出待 OCR。"
+    },
+    "infancy-latin": {
+      "title": "拉丁語耶穌嬰孩時期福音（阿倫德爾抄本 404）",
+      "corpus": "apocrypha",
+      "sections": 0,
+      "date": [
+        800,
+        1100
+      ],
+      "lang": "拉丁文",
+      "EP": "嬰孩福音",
+      "NTA": "嬰孩福音",
+      "AcA": "福音與相關文獻",
+      "attributed": [
+        "J2"
+      ],
+      "actual": [
+        "J2"
+      ],
+      "support": [],
+      "own_judgment": false,
+      "rationale": "⚠️ 站上尚無全文；年代遠逾 325 上限，只列不計入譜系。",
+      "place": "拉丁西方",
+      "place_kind": "composition",
+      "source_status": "《基督教典外文獻》新約篇第1冊，原書頁 150–154（PDF p159–163，共 5 頁）。已切出待 OCR。⚠️ 原書自述「以下文本只摘錄阿倫德爾抄本404 的部分內容」，並非全譯。"
+    }
+  }
+}

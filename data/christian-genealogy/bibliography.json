@@ -169,7 +169,6 @@
       "provenance": "article-footnote",
       "supports": "由多元地方形態走向前大公秩序的通論"
     },
-
     "Streeter 1924": {
       "ref": "Burnett Hillman Streeter, The Four Gospels: A Study of Origins. London: Macmillan, 1924.",
       "provenance": "added",
@@ -214,6 +213,16 @@
       "ref": "David E. Aune, Revelation (Word Biblical Commentary 52A–C). Dallas: Word Books, 1997–1998.",
       "provenance": "added",
       "supports": "O7 先知約翰與福音書信圈的作者分立"
+    },
+    "Schneemelcher 1991": {
+      "ref": "Wilhelm Schneemelcher, ed., New Testament Apocrypha, Vol. 1: Gospels and Related Writings, rev. ed., trans. R. McL. Wilson. Louisville: Westminster John Knox, 1991.",
+      "provenance": "added",
+      "supports": "典外福音書分類（NTA 體例）：猶太基督徒福音、諾斯底福音、救主對話錄、嬰孩福音、耶穌家族故事等十類"
+    },
+    "Markschies & Schröter 2012": {
+      "ref": "Christoph Markschies and Jens Schröter, eds., Antike christliche Apokryphen in deutscher Übersetzung, I: Evangelien und Verwandtes, 7. Aufl. Tübingen: Mohr Siebeck, 2012.",
+      "provenance": "added",
+      "supports": "NTA 第七版；改依正典的三大文類（福音／行傳／啟示）重編，不再細分福音子類"
     }
   }
 }
