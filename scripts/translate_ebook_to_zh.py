@@ -154,7 +154,11 @@ OLLAMA_MODEL = os.environ.get("OLLAMA_MODEL", "qwen2.5:7b")
 # each with its own daily quota. Round-robin across them so no single account is
 # called too often, with a global min-gap so total RPM stays low. A key that 429s
 # is rested (cooldown) and skipped, so a depleted account doesn't waste retries.
-NVIDIA_MIN_INTERVAL = 6.0      # seconds between ANY two NVIDIA calls (global)
+# 預設 6 秒是 user 2026-06-03 在「只有 4 把 key」時定的節流，維持不動；
+# 收尾長跑要暫時加壓時用 KGL_NVIDIA_MIN_INTERVAL 覆寫（每個行程各自計時，
+# 所以多開幾條線本來就會放大總 RPM——要壓就連行程數一起算）。
+NVIDIA_MIN_INTERVAL = float(
+    os.environ.get("KGL_NVIDIA_MIN_INTERVAL") or 6.0)  # 任兩次呼叫的全域間隔
 NVIDIA_KEY_COOLDOWN = 120.0    # rest a key this long after it 429s
 # 上游暫時性錯誤（500/502/503/504）另計：同一把 key 通常下一秒就好了，
 # 罰滿 120 秒會讓一次上游波動把所有 key 一起推進休息，整條線空等。
