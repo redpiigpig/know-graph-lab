@@ -1,51 +1,51 @@
 {
-  "title_en": "Friends on the Farm",
-  "title_zh": "農場裡的朋友們",
-  "intro_zh": "本課學習 There is / There are 的用法，說明某處有單數或複數的動物或物品。透過農場、樹林、池塘等情境，讓學生練習描述周圍有什麼。",
+  "title_en": "Farm Friends",
+  "title_zh": "農場的朋友們",
+  "intro_zh": "本課學習用 There is 描述單數名詞，There are 描述複數名詞，說明某處有什麼動物或物品。透過圖片與情境練習，學生能正確說出農場、森林或家裡的動物數量。",
   "can_do": [
-    "能說出農場裡有什麼動物。",
-    "能用 There is / There are 描述圖片中的動物。",
-    "能正確區分單數與複數的情況選擇 is 或 are。"
+    "能說出 There is + 單數名詞的句子",
+    "能說出 There are + 複數名詞的句子",
+    "能根據圖片描述某處有哪些動物"
   ],
   "reading": {
-    "title_en": "Friends on the Farm",
-    "title_zh": "農場裡的朋友們",
+    "title_en": "Farm Friends",
+    "title_zh": "農場的朋友們",
     "sentences": [
       {
-        "en": "There are six ducks and a goose near the pond.",
-        "zh": "池塘邊有六隻鴨和一隻鵝。"
+        "en": "There is a cow on the farm, and there are six ducks near the pond.",
+        "zh": "農場裡有一頭牛，而且池塘邊有六隻鴨子。"
       },
       {
-        "en": "There is a cow on the farm.",
-        "zh": "農場裡有一頭母牛。"
+        "en": "There are two goats on the hill, but there is a pig in the pen.",
+        "zh": "山坡上有兩隻山羊，但圈裡有一隻豬。"
       },
       {
-        "en": "There is a goat and a pig beside the barn.",
-        "zh": "谷倉旁有一隻山羊和一隻豬。"
+        "en": "There are three frogs by the stream, and there is a deer hiding in the woods.",
+        "zh": "溪邊有三隻青蛙，而且樹林裡有一隻鹿在躲藏。"
       },
       {
-        "en": "There is a hen beside the coop, and there are two horses in the field.",
-        "zh": "雞舍旁有一隻母雞，田裡有兩匹馬。"
+        "en": "There is a mouse under the straw, and there is a horse in the stable.",
+        "zh": "乾草下有一隻老鼠，而且馬棚裡有一匹馬。"
       },
       {
-        "en": "There is a sheep under the tree, and there is a dog near the fence.",
-        "zh": "樹下有一隻綿羊，籬笆旁有一隻狗。"
+        "en": "There are five sheep grazing, and there is a dog barking at the gate.",
+        "zh": "草地上有五隻綿羊在吃草，而且門口有一隻狗在叫。"
       },
       {
-        "en": "There is a rabbit in the garden, and there is a turtle beside the rock.",
-        "zh": "花園裡有一隻兔子，岩石旁有一隻烏龜。"
+        "en": "There is a koala in the tree, and there is a panda eating bamboo.",
+        "zh": "樹上有一隻無尾熊，而且樹旁有一隻貓熊在吃竹子。"
       },
       {
-        "en": "There is a fish in the water, and there is a frog on the leaf.",
-        "zh": "水裡有一條魚，葉子上有一隻青蛙。"
+        "en": "There is a goose by the lake, and there is a turtle on the rock.",
+        "zh": "湖邊有一隻鵝，而且岩石上有一隻烏龜。"
       },
       {
-        "en": "There is a koala and a panda in the tree, and there is a deer near the house.",
-        "zh": "樹上有一隻無尾熊和一隻貓熊，房子旁有一隻鹿。"
+        "en": "There is an elephant spraying water, and there is a kangaroo resting under the shade.",
+        "zh": "大象在噴水，而且樹蔭下有一隻袋鼠在休息。"
       },
       {
-        "en": "There is an elephant and a kangaroo beside river, and there is a mouse near house.",
-        "zh": "河邊有一頭大象和一隻袋鼠，房子旁有一隻老鼠。"
+        "en": "There is a rabbit hopping in the garden, and there are some fish swimming in the tank.",
+        "zh": "花園裡有一隻兔子在跳躍，而且水箱裡有幾條魚在游泳。"
       }
     ]
   },

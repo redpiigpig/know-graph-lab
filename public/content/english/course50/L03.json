@@ -13,14 +13,14 @@
     "sentences": [
       {
         "en": "This is a friendly greeting when I meet my neighbor.",
-        "zh": "這是一個友善的問候，當我遇到鄰居時會說。"
+        "zh": "這是我遇到鄰居時會用的友善問候。"
       },
       {
         "en": "Today I will introduce my new neighbor, Mr. Lin.",
-        "zh": "今天我要介紹我的新鄰居，林先生。"
+        "zh": "今天我要介紹我的新鄰居林先生。"
       },
       {
-        "en": "He is not a guest, he is my neighbor.",
+        "en": "He is not a guest; he is my neighbor.",
         "zh": "他不是客人，他是我的鄰居。"
       },
       {
@@ -36,7 +36,7 @@
         "zh": "他悄悄說出他的綽號給我聽。"
       },
       {
-        "en": "My nickname is 'Lucky', and my birthday is on May five.",
+        "en": "My nickname is 'Lucky', and my birthday is on May fifth.",
         "zh": "我的綽號是『Lucky』，我的生日是五月五日。"
       },
       {

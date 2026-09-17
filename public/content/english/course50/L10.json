@@ -1,55 +1,51 @@
 {
-  "title_en": "My Body",
+  "title_en": "My Body Actions",
   "title_zh": "我的身體與動作",
-  "intro_zh": "本課學習現在簡單式，當主詞是 I、you、we、they 時，動詞用原形說明日常習慣動作，例如 I open the door、We help the teacher。學生將能描述自己每天做的事，並理解簡短的身體動作句子。",
+  "intro_zh": "本課學習現在簡單式，主詞是 I、you、we、they 時，動詞用原形說明習慣動作。透過描述開門、坐下、幫助盲生等生活情境，練習用簡單句子表達日常行為。",
   "can_do": [
-    "能用 I/you/we/they 加動詞原形描述自己每天做的事。",
-    "能看懂簡短的描述身體動作的句子。",
-    "能自己編寫四到五句使用現在簡單式的短對話。"
+    "能用 I/you/we/they 現在簡單式說出日常動作。",
+    "能閱讀並理解有關身體與動作的短文。",
+    "能以簡單句子描述自己和同學的動作。"
   ],
   "reading": {
-    "title_en": "Body Actions",
-    "title_zh": "身體動作與習慣",
+    "title_en": "Our Classroom Story",
+    "title_zh": "課堂上的小故事",
     "sentences": [
       {
-        "en": "I open the door and we go inside.",
-        "zh": "我打開門，我們走進去。"
+        "en": "I open the door and we sit in a circle.",
+        "zh": "我開門，我們坐成一圈。"
       },
       {
-        "en": "We help the teacher and they start now.",
-        "zh": "我們幫助老師，他們現在開始。"
+        "en": "We think about the story and help the blind student.",
+        "zh": "我們想想故事，幫助那位盲生。"
       },
       {
-        "en": "I sit on the chair and we hold the book.",
-        "zh": "我坐在椅子上，我們握住書。"
+        "en": "We give him a book, take it, and smile.",
+        "zh": "我們給他一本書，拿起來，然後笑。"
       },
       {
-        "en": "They pick up the pen and I give the apple to Sam.",
-        "zh": "他們撿起筆，我把蘋果給 Sam。"
+        "en": "We laugh together and point to the picture.",
+        "zh": "我們一起笑，指著圖片。"
       },
       {
-        "en": "We take the bus and they turn the page.",
-        "zh": "我們搭公車，他們翻開頁面。"
+        "en": "We cut the paper, hold the scissors, and turn the page.",
+        "zh": "我們剪紙，拿起剪刀，翻頁。"
       },
       {
-        "en": "I stop at the crosswalk and we think about the answer.",
-        "zh": "我停在斑馬線前，我們思考答案。"
+        "en": "We brush our teeth and listen to the sound of the bell.",
+        "zh": "我們刷牙，聽鐘聲。"
       },
       {
-        "en": "I smile and we laugh.",
-        "zh": "我微笑，我們笑。"
+        "en": "We hear the teacher's voice and close the book.",
+        "zh": "我們聽到老師的聲音，關上書。"
       },
       {
-        "en": "They point at the board and I brush my teeth.",
-        "zh": "他們指著黑板，我刷牙。"
+        "en": "We start to draw, pick a color, and give the drawing to the teacher.",
+        "zh": "我們開始畫畫，選顏色，把畫給老師。"
       },
       {
-        "en": "We hear the voice and they hear the sound.",
-        "zh": "我們聽到聲音，他們聽到聲音。"
-      },
-      {
-        "en": "We help the blind man and I close the door.",
-        "zh": "我們幫助盲人，我關上門。"
+        "en": "We stop when the bell rings.",
+        "zh": "鐘聲響起時，我們停下來。"
       }
     ]
   },

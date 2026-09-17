@@ -1,51 +1,51 @@
 {
-  "title_en": "Months and Habits",
-  "title_zh": "月份與習慣",
-  "intro_zh": "本課學習頻率副詞 always、often、soon、early、late、after、before、then 的用法，重點在 always 與 often 放在動詞前面。",
+  "title_en": "Days Months Time",
+  "title_zh": "日子‧月份與時間",
+  "intro_zh": "本課學習頻率副詞 always、often、soon、early、late 等，說明動作發生的頻率或時間，並強調這些副詞通常放在一般動詞之前，幫助學生描述日常習慣與月份活動。",
   "can_do": [
-    "能用 always 和 often 說明自己常做的事情。",
-    "能用 soon、early、late、after、before、then 說明事情發生的時間。",
-    "能閱讀並理解包含月份和頻率副詞的短文。"
+    "能使用 always、often 等副詞描述自己的日常習慣。",
+    "能根據月份說出自己常做的活動。",
+    "能用 and、but、because 連接兩個簡單句子。"
   ],
   "reading": {
-    "title_en": "Months and Habits",
-    "title_zh": "月份與習慣",
+    "title_en": "A Year with Lily",
+    "title_zh": "莉莉的四季生活",
     "sentences": [
       {
-        "en": "We always celebrate January.",
-        "zh": "我們總是慶祝一月。"
+        "en": "Lily always gets up early in January.",
+        "zh": "莉莉在一月總是早起。"
       },
       {
-        "en": "We often celebrate February.",
-        "zh": "我們常常慶祝二月。"
+        "en": "She often goes to school before eight.",
+        "zh": "她經常在八點前去上學。"
       },
       {
-        "en": "We celebrate March and we celebrate April.",
-        "zh": "我們慶祝三月，也慶祝四月。"
+        "en": "Tom often comes late, but Lily waits for him.",
+        "zh": "湯姆經常遲到，但莉莉會等他。"
       },
       {
-        "en": "We celebrate May, then we celebrate June.",
-        "zh": "我們慶祝五月，然後慶祝六月。"
+        "en": "They meet in March after class.",
+        "zh": "他們在三月下課後會見面。"
       },
       {
-        "en": "We celebrate July early and we celebrate August late.",
-        "zh": "我們在七月早早慶祝，也在八月晚晚慶祝。"
+        "en": "After school, they play basketball and then go home.",
+        "zh": "放學後，他們打籃球然後回家。"
       },
       {
-        "en": "We often celebrate September before October.",
-        "zh": "我們常常在十月前慶祝九月。"
+        "en": "They soon go home because it is late.",
+        "zh": "他們很快回家，因為已經很晚了。"
       },
       {
-        "en": "We celebrate November after October and we celebrate December soon.",
-        "zh": "我們在十月後慶祝十一月，也很快慶祝十二月。"
+        "en": "In February, they always fly kites in the park.",
+        "zh": "二月時，他們總是在公園放風箏。"
       },
       {
-        "en": "We always celebrate December.",
-        "zh": "我們總是慶祝十二月。"
+        "en": "March and April are warm, so they often have a picnic.",
+        "zh": "三月和四月天氣溫暖，他們經常野餐。"
       },
       {
-        "en": "We celebrate months because we like fun.",
-        "zh": "我們慶祝月份，因為我們喜歡樂趣。"
+        "en": "May, June, July, August are hot; they always swim in the sea.",
+        "zh": "五、六、七、八月天氣炎熱，他們總是去海裡游泳。"
       }
     ]
   },

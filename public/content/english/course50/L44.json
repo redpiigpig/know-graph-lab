@@ -1,55 +1,55 @@
 {
   "title_en": "Jobs and People",
-  "title_zh": "職業與人物介紹",
-  "intro_zh": "本課將學習用 What does he do? 詢問他人的職業，並以 He is a… 作答。透過小故事練習句型與職業詞彙，讓學生能自然說出自己或他人的工作。",
+  "title_zh": "職業與人物探索",
+  "intro_zh": "本課學習用 What does he do? 來問別人的職業，回答用 He is a…，並了解 does 是第三人稱單數的助動詞。透過生活情境，讓學生能自然說出自己或他人的職業。",
   "can_do": [
-    "能用 What does he do? 問職業",
-    "能以 He is a… 回答職業問題",
-    "能在簡短對話中正確使用 job、work、boss 等詞彙"
+    "能用 What does he do? 問職業。",
+    "能用 He is a… 回答職業。",
+    "能辨認 does 在第三人稱單數疑問句中的作用。"
   ],
   "reading": {
-    "title_en": "A Day at the Station",
-    "title_zh": "消防站的一天",
+    "title_en": "Jobs and People",
+    "title_zh": "職業與人物探索",
     "sentences": [
       {
-        "en": "What does he do?",
-        "zh": "他做什麼工作？"
+        "en": "What does he do? He is a writer.",
+        "zh": "他的職業是什麼？他是作家。"
       },
       {
-        "en": "He is a fireman.",
-        "zh": "他是消防員。"
+        "en": "What does your mother do? She is a nurse.",
+        "zh": "你媽媽的職業是什麼？她是護士。"
       },
       {
-        "en": "He likes his job because he helps people, and his boss owns the station.",
-        "zh": "他喜歡自己的工作，因為他幫助人們，而且他的老闆擁有這個車站。"
+        "en": "He likes his work at a small business near the market.",
+        "zh": "他喜歡他在市場附近小公司的工作。"
       },
       {
-        "en": "Tom dreams of being a king one day.",
-        "zh": "湯姆夢想有一天成為國王。"
+        "en": "His boss likes his idea and gives him a chance.",
+        "zh": "他的老闆喜歡他的主意，並給他一個機會。"
       },
       {
-        "en": "He shares his idea with his friend Lily.",
-        "zh": "他把他的主意告訴他的朋友莉莉。"
+        "en": "He also has a plan to write a book about a king and a queen.",
+        "zh": "他也有一個計畫，要寫一本關於國王和皇后的書。"
       },
       {
-        "en": "Lily works as a nurse and helps with a case at the hospital.",
-        "zh": "莉莉在醫院工作，是一名護士，並協助處理一個個案。"
+        "en": "During a meeting, he talks with a fisherman and a fireman about an important matter.",
+        "zh": "在會議中，他與漁夫和消防員討論一件重要的事情。"
       },
       {
-        "en": "She thinks her work matters a lot and writes notes for a writer.",
-        "zh": "她覺得她的工作很重要，並為一位作家寫筆記。"
+        "en": "The fisherman shares his experience of the sea.",
+        "zh": "漁夫分享他關於海洋的經驗。"
       },
       {
-        "en": "Lily also meets the queen during a charity meeting with a businessman.",
-        "zh": "莉莉也在一次慈善會議中遇見女王，並有一位商人在場。"
+        "en": "The fireman says his job is to keep the town safe.",
+        "zh": "消防員說他的工作是保護城鎮的安全。"
       },
       {
-        "en": "They talk about chance, business, and their future plans.",
-        "zh": "他們談論機會、商業以及他們未來的計畫。"
+        "en": "A policeman stops by to investigate the case.",
+        "zh": "一位警察過來調查這件案子。"
       },
       {
-        "en": "A fisherman and a police man tell them about their experience at sea.",
-        "zh": "一位漁夫和一位警察告訴他們他們在海上的經驗。"
+        "en": "He owns a small shop and likes to work there.",
+        "zh": "他擁有一間小店，並喜歡在那裡工作。"
       }
     ]
   },

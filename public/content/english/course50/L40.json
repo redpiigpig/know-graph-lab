@@ -13,7 +13,7 @@
     "sentences": [
       {
         "en": "Tom likes to play soccer and badminton after school.",
-        "zh": "湯姆喜歡在放學後踢足球和打羽毛球。"
+        "zh": "湯姆喜歡放學後踢足球和打羽毛球。"
       },
       {
         "en": "He is interested in volleyball and dodge ball.",
@@ -24,12 +24,12 @@
         "zh": "他在場地上跑得很快。"
       },
       {
-        "en": "He wins a ticket for the exciting game.",
-        "zh": "他贏得一張刺激的比賽門票。"
+        "en": "He wins a ticket to the exciting game.",
+        "zh": "他贏得一張看這場精彩比賽的門票。"
       },
       {
-        "en": "He sometimes loses, but he still enjoys the noise of the crowd.",
-        "zh": "他偶爾會輸，但他仍然享受人群的噪音。"
+        "en": "He sometimes loses, but he still enjoys the cheers of the crowd.",
+        "zh": "他偶爾會輸，但他仍然享受人群的歡呼。"
       },
       {
         "en": "The magic show starts with a loud song.",
@@ -40,8 +40,8 @@
         "zh": "孩子們拍手並跟著唱，感到很開心。"
       },
       {
-        "en": "Tom finds a toy seat near the story corner.",
-        "zh": "湯姆在故事角落附近找到一個玩具座位。"
+        "en": "Tom finds a toy chair near the story corner.",
+        "zh": "湯姆在故事角落附近找到一個玩具椅子。"
       },
       {
         "en": "He thinks the day is interesting and fun.",

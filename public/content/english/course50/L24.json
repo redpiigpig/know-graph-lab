@@ -1,55 +1,51 @@
 {
-  "title_en": "Classroom Action Words",
-  "title_zh": "課堂上的動作",
-  "intro_zh": "本課學習受格代名詞 me、you、him、her、it、us、them，這些代名詞必須放在動詞或介系詞後面，例如 Lend me your pen、Join us、Tell them the answer。透過情境練習，讓學生自然使用正確的受格。",
+  "title_en": "Acts",
+  "title_zh": "課堂上的行動",
+  "intro_zh": "本課學習受格代名詞 me、you、him、her、it、us、them，它們只能放在動詞或介系詞後面作為受詞。透過請求借東西、邀請參加以及告知答案等情境，學生能正確使用這些代名詞。",
   "can_do": [
     "能正確使用 me、you、him、her、it、us、them 作為動詞或介系詞的受詞。",
-    "能說出並理解 Lend me your pen、Join us、Tell them the answer 等句子。",
-    "能在課堂情境中描述借筆、加入小組、告訴答案等情況。"
+    "能說出請求、邀請與告知的句型，例如 Lend me your pen.、Join us.、Tell them the answer.。",
+    "能閱讀簡短課堂情境故事並理解其中受格代名詞的用法。"
   ],
   "reading": {
-    "title_en": "A Classroom Story",
-    "title_zh": "課堂上的小故事",
+    "title_en": "Help in Class",
+    "title_zh": "課堂上的幫忙",
     "sentences": [
       {
-        "en": "We begin the class with a quick game.",
-        "zh": "我們用一個快速遊戲開始課堂。"
+        "en": "Lend me your pen, please.",
+        "zh": "請把你的筆借給我。"
       },
       {
-        "en": "I need to get a pencil from my friend.",
-        "zh": "我需要從朋友那裡得到一支鉛筆。"
+        "en": "Join us for the math game.",
+        "zh": "請加入我們玩數學遊戲。"
       },
       {
-        "en": "Please lend me your pen and I will return it soon.",
-        "zh": "請把你的筆借給我，我會很快歸還。"
+        "en": "Please get the book from the shelf.",
+        "zh": "請從書架拿書。"
       },
       {
-        "en": "If you forget your pencil, borrow mine.",
-        "zh": "如果你忘記鉛筆，可以借我的。"
+        "en": "We begin the lesson when everyone is ready.",
+        "zh": "我們在大家準備好時開始課程。"
       },
       {
-        "en": "Join us.",
-        "zh": "加入我們。"
+        "en": "When you forget your homework, borrow a sheet from a friend.",
+        "zh": "當你忘記作業時，向同學借一張紙。"
       },
       {
-        "en": "Join the group and the work becomes more helpful.",
-        "zh": "加入小組，工作會變得更有幫助。"
+        "en": "A mistake is not a problem if you remember the fact.",
+        "zh": "犯錯不是問題，只要你記得事實。"
       },
       {
-        "en": "We must mark the answers correctly before the end.",
-        "zh": "在結束前，我們必須正確標記答案。"
+        "en": "The teacher says the answer is real and true.",
+        "zh": "老師說答案是真的且是正確的。"
       },
       {
-        "en": "It is a fact that everyone makes a mistake sometimes.",
-        "zh": "事實是，每個人偶爾會犯錯誤。"
+        "en": "Your work is helpful, and I mark it as excellent.",
+        "zh": "你的工作很有用，我會把它評為優等。"
       },
       {
-        "en": "The real problem is not the wrong answer but the excuse we give.",
-        "zh": "真正的問題不是錯誤的答案，而是我們的藉口。"
-      },
-      {
-        "en": "Remember to be ready and tell them the true answer.",
-        "zh": "記得要準備好，並告訴他們真實的答案。"
+        "en": "At the end of class, we all feel ready for the next day.",
+        "zh": "課堂結束時，我們都覺得準備好迎接第二天。"
       }
     ]
   },

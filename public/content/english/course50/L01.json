@@ -1,51 +1,51 @@
 {
-  "title_en": "Hello Me",
+  "title_en": "Hello & Me",
   "title_zh": "問候與自我介紹",
-  "intro_zh": "本課將學習 be 動詞的肯定形（am/is/are）搭配人稱代名詞 I, you, he, she, it, we, they，說出自我狀態與問候語。",
+  "intro_zh": "本課學習 be 動詞的肯定句，搭配 I, you, he, she, it, we, they 等人稱代名詞，練習說 I am fine.、He is OK.、They are here. 等句子，讓學生能正確描述自己與他人的狀態。",
   "can_do": [
-    "能用 am/is/are 與人稱代名詞造肯定句。",
-    "能以正確的問候語和自我介紹進行簡單對話。",
-    "能閱讀並理解含有 be 動詞的短篇故事。"
+    "能用 am/is/is/are 造肯定句",
+    "能以正確人稱介紹自己與他人",
+    "能閱讀簡短對話並理解意思"
   ],
   "reading": {
-    "title_en": "A Friendly Day",
-    "title_zh": "友好的一天",
+    "title_en": "A Day at School",
+    "title_zh": "一天的校園生活",
     "sentences": [
       {
-        "en": "Hi, I am fine and you are OK today.",
-        "zh": "今天，嗨，我很好，而且你也很好。"
+        "en": "Hello, I am Lily.",
+        "zh": "你好，我是莉莉。"
       },
       {
-        "en": "Hello, we are here because it is OK.",
-        "zh": "你好，我們在這裡因為這是可以的。"
+        "en": "She is my friend and we are in class.",
+        "zh": "她是我的朋友，我們在教室裡。"
       },
       {
-        "en": "Please, I am fine.",
-        "zh": "請，我很好。"
+        "en": "He is OK and he has a red bag.",
+        "zh": "他很好，而且他有一個紅色的書包。"
       },
       {
-        "en": "No, I am sorry but I am sure.",
-        "zh": "不，我很抱歉，但我很確定。"
+        "en": "It is a nice day and the sun is bright.",
+        "zh": "今天是美好的一天，陽光明媚。"
       },
       {
-        "en": "He is OK and she is sure because they are here.",
-        "zh": "他很好，而且她很確定，因為他們在這裡。"
+        "en": "We are happy because we have lunch together.",
+        "zh": "我們很幸福，因為我們一起吃午餐。"
       },
       {
-        "en": "We are fine and they are sure because we have OK.",
-        "zh": "我們很好，而且他們很確定，因為我們有可以的。"
+        "en": "They are here and they say hi to me.",
+        "zh": "他們在這裡，他們對我說嗨。"
       },
       {
-        "en": "It is a book and it is OK.",
-        "zh": "這是一本書，而且這是可以的。"
+        "en": "I am fine, thank you.",
+        "zh": "我很好，謝謝。"
       },
       {
-        "en": "Thank you, yes I am fine because I have OK.",
-        "zh": "謝謝，是的，我很好，因為我有可以的。"
+        "en": "Sorry, I am late but I am sure.",
+        "zh": "抱歉，我遲到了，但我很確定。"
       },
       {
-        "en": "Goodbye, you are welcome and we are sure.",
-        "zh": "再見，不客氣，而且我們很確定。"
+        "en": "Goodbye, see you tomorrow.",
+        "zh": "再見，明天見。"
       }
     ]
   },

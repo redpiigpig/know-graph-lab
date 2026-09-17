@@ -13,7 +13,7 @@
     "sentences": [
       {
         "en": "Mr. Lin works hard every day.",
-        "zh": "林先生每天都努力工作。"
+        "zh": "林先生每天都很努力工作。"
       },
       {
         "en": "Ms. Lin cares for her baby.",
@@ -24,12 +24,12 @@
         "zh": "這個寶寶是在三月出生的。"
       },
       {
-        "en": "Their son's age is five and their child helps mother with chores.",
-        "zh": "他們兒子五歲，而且他們的孩子幫媽媽做家事。"
+        "en": "Their son is five years old and he helps his mother with chores.",
+        "zh": "他們的兒子五歲，而且他幫媽媽做家事。"
       },
       {
-        "en": "Their daughter helps her sister and brother.",
-        "zh": "他們的女兒幫助她的姐姐和弟弟。"
+        "en": "Their daughter helps her brother.",
+        "zh": "他們的女兒幫她的弟弟。"
       },
       {
         "en": "The family eats dinner together at six.",
@@ -44,7 +44,7 @@
         "zh": "林先生愛他的妻子，而且他是丈夫和爸爸。"
       },
       {
-        "en": "They celebrate birthdays with cake and song, and the parents are married and important to their kid.",
+        "en": "They celebrate birthdays with cake and song, and the parents are married and important to their children.",
         "zh": "他們慶祝生日時有蛋糕和歌曲，而且父母已婚且對他們的孩子很重要。"
       }
     ]

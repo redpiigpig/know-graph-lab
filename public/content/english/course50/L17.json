@@ -12,7 +12,7 @@
     "title_zh": "餐桌對話",
     "sentences": [
       {
-        "en": "Tom likes to eat ham and egg for breakfast.",
+        "en": "Tom likes to eat ham and eggs for breakfast.",
         "zh": "湯姆喜歡早餐吃火腿和雞蛋。"
       },
       {
@@ -40,12 +40,12 @@
         "zh": "他喜歡糖和巧克力的甜味。"
       },
       {
-        "en": "Does she like cookie or ice cream?",
-        "zh": "她喜歡餅乾還是冰淇淋？"
+        "en": "Does he like cookies or ice cream?",
+        "zh": "他喜歡餅乾還是冰淇淋？"
       },
       {
-        "en": "No, she doesn't.",
-        "zh": "她不喜歡。"
+        "en": "No, he doesn't.",
+        "zh": "他不喜歡。"
       }
     ]
   },

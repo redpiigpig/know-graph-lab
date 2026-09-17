@@ -17,7 +17,7 @@
       },
       {
         "en": "That is the bell.",
-        "zh": "那是鐘聲。"
+        "zh": "那是一個鐘。"
       },
       {
         "en": "These are rulers.",
@@ -29,7 +29,7 @@
       },
       {
         "en": "This is my pen and that is my word list.",
-        "zh": "這是我的原子筆，那是我的單字名單。"
+        "zh": "這是我的原子筆，那是我的單字表。"
       },
       {
         "en": "These are our math books and those are our class rules.",
@@ -37,14 +37,14 @@
       },
       {
         "en": "This is chalk and that is a test.",
-        "zh": "這是粉筆，那是測驗。"
+        "zh": "這是粉筆，那是一份測驗。"
       },
       {
         "en": "Those are our students and these are our teachers.",
         "zh": "那些是我們的學生，這些是我們的老師。"
       },
       {
-        "en": "These are elementary school, junior high school, and senior high school lessons.",
+        "en": "These are lessons for elementary school, junior high school, and senior high school.",
         "zh": "這些是小學、國中和高中的課程。"
       }
     ]

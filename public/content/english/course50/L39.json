@@ -1,51 +1,51 @@
 {
-  "title_en": "Hobby",
-  "title_zh": "運動與嗜好課",
-  "intro_zh": "本課將學習如 like、enjoy、go 後面接動詞時要用 V-ing 形式，例如 I like swimming、She enjoys singing、We go camping。透過圖文說明，學生能正確描述自己喜歡的運動與嗜好。",
+  "title_en": "A Fun Day Out",
+  "title_zh": "快樂的戶外一天",
+  "intro_zh": "本課教學如「喜歡」、「享受」、「去」後面接動詞原形加 -ing 的用法，例如喜歡游泳、享受唱歌、去露營。這樣的句子幫助學生描述自己喜歡的運動與嗜好。",
   "can_do": [
-    "能以 like/enjoy/go 後接 V-ing 描述自己喜歡的運動。",
-    "能看圖說出朋友的嗜好並使用正確句型。",
-    "能寫出至少五句使用動詞+V-ing 的句子。"
+    "能正確使用 like + V-ing 描述自己喜歡的活動。",
+    "能正確使用 enjoy + V-ing 描述自己喜歡的活動。",
+    "能正確使用 go + V-ing 描述戶外活動。"
   ],
   "reading": {
-    "title_en": "Fun Times",
-    "title_zh": "快樂時光",
+    "title_en": "A Fun Day Out",
+    "title_zh": "快樂的戶外一天",
     "sentences": [
       {
-        "en": "I like jogging and swimming.",
-        "zh": "我喜歡慢跑和游泳。"
+        "en": "I like swimming.",
+        "zh": "我喜歡在池裡游泳。"
       },
       {
-        "en": "I like drawing a picture of my doll and showing it.",
-        "zh": "我喜歡畫一張我娃娃的圖片並秀出它。"
+        "en": "She enjoys singing with the band.",
+        "zh": "她喜歡唱歌並和樂隊一起。"
       },
       {
-        "en": "She enjoys singing and listening to music and a band.",
-        "zh": "她喜歡唱歌、聽音樂和聽樂隊。"
+        "en": "We go camping and fly a kite.",
+        "zh": "我們去露營並放風箏。"
       },
       {
-        "en": "We go camping and like playing basketball.",
-        "zh": "我們去露營而且喜歡打籃球。"
+        "en": "He likes drawing pictures.",
+        "zh": "他喜歡畫美麗的圖畫。"
       },
       {
-        "en": "I like flying a kite and dancing.",
-        "zh": "我喜歡放風箏和跳舞。"
+        "en": "She enjoys dancing to music.",
+        "zh": "她喜歡跳舞聽音樂。"
       },
       {
-        "en": "I like watching a movie and reading a comic.",
-        "zh": "我喜歡看電影和看漫畫。"
+        "en": "They go jogging in the park.",
+        "zh": "他們在公園慢跑。"
       },
       {
-        "en": "I like painting and listening to music.",
-        "zh": "我喜歡畫畫和聽音樂。"
+        "en": "I like playing basketball and watching a movie.",
+        "zh": "我喜歡打籃球和看電影。"
       },
       {
-        "en": "I like going on a picnic and carrying a basket.",
-        "zh": "我喜歡去野餐和提籃子。"
+        "en": "She enjoys painting comics and showing her favorite doll.",
+        "zh": "她喜歡畫漫畫並展示她最愛的玩偶。"
       },
       {
-        "en": "I like playing my favorite game.",
-        "zh": "我喜歡玩我最愛的遊戲。"
+        "en": "We go picnicking with a basket and play a game.",
+        "zh": "我們去野餐帶籃子並玩遊戲。"
       }
     ]
   },
