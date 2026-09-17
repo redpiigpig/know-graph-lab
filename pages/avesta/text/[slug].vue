@@ -91,6 +91,21 @@
           class="mb-4 px-3 py-2 bg-white border border-gray-200 rounded-lg text-[11px] text-gray-500 leading-relaxed break-words"
         >{{ doc.pivot_note }}</p>
 
+        <!-- 元文琪譯本：另一套底本、另一套譯名，讀者有權在讀之前就知道 -->
+        <div v-if="yuan" class="mb-4 px-3 py-2.5 bg-sky-50 border border-sky-200 rounded-lg">
+          <div class="text-[11px] font-semibold text-sky-900 mb-0.5">「元文琪譯」欄是另一個譯本，不是本站譯文的校訂</div>
+          <p class="text-[11px] text-sky-800 leading-relaxed break-words">
+            {{ yuan.source }}。它譯自<b>波斯文選編本</b>，底本與收錄範圍都與本站正文不同，
+            因此<b>專名採波斯語形式</b>——巴赫曼＝沃胡‧馬納、奧爾迪貝赫什特＝阿沙‧瓦希什塔、
+            梅赫爾＝密特拉、索魯什＝斯勞沙。兩套譯名不可混用：拿波斯語形式去譯阿維斯陀語原文，
+            等於把中古波斯的用語套回一千多年前。本欄原樣呈現、不改字（簡體原文已轉繁體）。
+            選編本未收的節次，本欄留空。
+          </p>
+          <p v-if="yuan.head" class="text-[11px] text-sky-800 leading-relaxed break-words mt-1.5 pt-1.5 border-t border-sky-200">
+            <b>{{ yuan.head_label || '章首未編號段落' }}</b>：{{ yuan.head }}
+          </p>
+        </div>
+
         <!-- 欄位切換 -->
         <div class="flex flex-wrap items-center gap-2 mb-4">
           <button
@@ -136,13 +151,13 @@
               >
                 <div class="text-[10px] text-gray-400 mb-1 md:hidden">{{ c.label }}</div>
                 <p
-                  v-if="cellText(seg, c.key)"
+                  v-if="cellOf(seg, c.key)"
                   class="text-sm leading-relaxed break-words whitespace-pre-line"
                   :class="c.key === 'orig'
                     ? (useScript ? 'text-gray-800 text-lg leading-loose' : 'text-gray-800 italic')
                     : 'text-gray-700'"
                   :dir="c.key === 'orig' && useScript ? 'rtl' : 'ltr'"
-                >{{ cellText(seg, c.key) }}</p>
+                >{{ cellOf(seg, c.key) }}</p>
                 <p v-else class="text-sm text-gray-300">—</p>
               </div>
             </div>
@@ -170,6 +185,7 @@
 import { COLUMN_META, STATUS_META, columnsOf, findText } from '~/data/avesta'
 import { loadText } from '~/data/avesta/sources'
 import type { AvestaSegment } from '~/data/avesta/sources'
+import { loadYuan, yuanForRef } from '~/data/avesta/sources/yuan'
 import { toAvestanScript } from '~/utils/avestanScript'
 
 definePageMeta({ middleware: 'auth' })
@@ -185,6 +201,13 @@ const { data: doc } = await useAsyncData(
   { watch: [slug] },
 )
 
+// 元文琪譯本（既有中譯）只有 30 篇有，其餘回 null。與正文一樣按需載入。
+const { data: yuan } = await useAsyncData(
+  () => `avesta-yuan-${slug.value}`,
+  () => loadYuan(slug.value).then(d => d ?? null),
+  { watch: [slug] },
+)
+
 useHead(() => ({ title: `${loc.value?.text.title_zh ?? '祆教經典'} — 祆教經典` }))
 
 const status = computed(() => STATUS_META[loc.value?.text.status ?? 'whole'])
@@ -197,15 +220,27 @@ const COLS = [
   { key: 'orig' as const, label: '原文轉寫' },
   { key: 'en' as const, label: '英譯' },
   { key: 'zh' as const, label: '繁體中文' },
+  { key: 'yuan' as const, label: '元文琪譯' },
 ]
+
+type ColKey = typeof COLS[number]['key']
+
+/** 某一段在元文琪譯本裡對應的文字。查不到回空字串——那多半是選編本沒收這一節。 */
+function yuanOf(seg: AvestaSegment): string {
+  return yuanForRef(yuan.value, seg.ref)
+}
+
+function cellOf(seg: AvestaSegment, key: ColKey): string {
+  return key === 'yuan' ? yuanOf(seg) : cellText(seg, key as 'orig' | 'en' | 'zh')
+}
 
 // 空欄不出，免得整欄都是「—」
 const visibleCols = computed(() =>
-  COLS.filter(c => doc.value?.segments.some(s => (s[c.key] ?? '').trim().length > 0)))
-const shown = ref<Array<'orig' | 'en' | 'zh'>>(['orig', 'en', 'zh'])
+  COLS.filter(c => doc.value?.segments.some(s => cellOf(s, c.key).trim().length > 0)))
+const shown = ref<ColKey[]>(['orig', 'en', 'zh', 'yuan'])
 watchEffect(() => { shown.value = visibleCols.value.map(c => c.key) })
 
-function toggle(key: 'orig' | 'en' | 'zh') {
+function toggle(key: ColKey) {
   if (shown.value.includes(key)) {
     if (shown.value.length > 1) shown.value = shown.value.filter(c => c !== key)
   } else {
@@ -217,6 +252,7 @@ const gridCls = computed(() => ({
   1: 'grid-cols-1',
   2: 'grid-cols-1 md:grid-cols-2',
   3: 'grid-cols-1 md:grid-cols-3',
+  4: 'grid-cols-1 md:grid-cols-2 xl:grid-cols-4',
 }[shown.value.length] ?? 'grid-cols-1'))
 
 // ── 阿維斯陀字母 ──

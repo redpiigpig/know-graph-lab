@@ -283,4 +283,37 @@ describe('已上架正文與書目的對應', () => {
   it('已知缺英譯的兩篇標得出來（不得默默宣稱有）', () => {
     expect(findText('yasht-20')!.text.columns?.en).toBe('none')
   })
+
+  it('元文琪譯本：每一篇都對得上書目，且節號落在該篇的範圍內', async () => {
+    // 🚨 對不上書目的檔案 reader 永遠走不到，而書目頁照常顯示——看不出少了東西。
+    const { YUAN_SLUGS, loadYuan, versesOfRef } = await import('~/data/avesta/sources/yuan')
+    const { loadText } = await import('~/data/avesta/sources')
+    expect(YUAN_SLUGS.length, '元譯篇數').toBe(30)
+    for (const slug of YUAN_SLUGS) {
+      expect(findText(slug), `元譯 ${slug}.json 在書目裡找不到`).toBeTruthy()
+
+      // 節號必須是本站該篇實際有的節——對不上就是切錯章了。
+      const doc = (await loadText(slug))!
+      // 本站會把數節併成一段，所以要展開區間再比對。
+      const ours = new Set(doc.segments.flatMap(s => versesOfRef(s.ref)))
+      const y = (await loadYuan(slug))!
+      const strays = Object.keys(y.verses).filter(v => !ours.has(v))
+      expect(strays, `${slug} 有 ${strays.length} 個節號不在本站該篇內：${strays.slice(0, 8)}`)
+        .toEqual([])
+    }
+  })
+
+  it('元文琪譯本只涵蓋選編本收的那些篇，不得憑空多出來', async () => {
+    // 這份是**選編本**：伽薩 17＋亞斯納 3＋亞什特 6＋萬迪達德 2＋維斯帕拉德 2。
+    // 多出來的篇代表章節切分跑掉了（例如把導讀的引用當成正文）。
+    const { YUAN_SLUGS } = await import('~/data/avesta/sources/yuan')
+    const gathas = [28, 29, 30, 31, 32, 33, 34, 43, 44, 45, 46, 47, 48, 49, 50, 51, 53]
+    const expected = [
+      ...gathas.map(n => `yasna-${String(n).padStart(2, '0')}`),
+      'yasna-09', 'yasna-10', 'yasna-12',
+      'yasht-05', 'yasht-08', 'yasht-10', 'yasht-13', 'yasht-14', 'yasht-19',
+      'vendidad-05', 'vendidad-07', 'visperad-07', 'visperad-15',
+    ].sort()
+    expect([...YUAN_SLUGS].sort()).toEqual(expected)
+  })
 })
