@@ -377,7 +377,7 @@ D("Spenta Armaiti", "斯彭塔‧阿爾邁提", o="Spəṇtā Ārmaiti", var="�
   reason="名根與「斯彭塔‧曼紐」一致。六者中唯一明確為女性神格。")
 D("Haurvatat", "豪爾瓦塔特", o="Haurvatāt", var="圓滿；霍爾達德（Hordad）", etype="deity",
   domain="不朽聖者之一：完整；掌水", reason="與「阿梅雷塔特」常成對出現。")
-D("Ameretat", "阿梅雷塔特", o="Amərətāt", var="不朽；阿穆爾達德（Amurdad）；元文琪譯本作阿莫爾達德", etype="deity",
+D("Ameretat", "阿梅雷塔特", o="Amərətāt", var="不朽；阿莫爾達德（Amurdad，元文琪譯本作）", etype="deity",
   domain="不朽聖者之一：不朽；掌植物",
   reason="a-「非」＋mərəta「死」，與希臘語 ambrotos（不死）同源。")
 D("Anahita", "阿娜希塔", o="Arəduuī Sūrā Anāhitā", var="阿爾德維‧蘇拉‧阿娜希塔；阿納希塔；元文琪譯本作阿雷德維‧蘇拉‧阿娜希塔",
@@ -411,22 +411,22 @@ D("Zurwan", "祖爾萬", o="Zurwān", lang="pal", var="佐爾萬；時神", root
 D("Aeshma", "埃什瑪", o="Aēšma", var="忿怒魔", etype="deity", domain="忿怒／暴力之魔",
   reason="🚨 《多俾亞傳》的阿斯摩太（Asmodeus）一般認為源自 Aēšma-daēva，"
          "是祆教影響第二聖殿猶太教的少數具體詞證之一。")
-D("Azhi Dahaka", "阿日‧達哈卡", o="Aži Dahāka", var="扎哈克（Zahhāk）；三頭龍；元文琪譯本作阿日達哈克", etype="deity",
+D("Azhi Dahaka", "阿日‧達哈卡", o="Aži Dahāka", var="扎哈克（Zahhāk）；三頭龍", etype="deity",
   domain="三頭巨龍／暴君",
   reason="aži「蛇、龍」與梵語 ahi、希臘語 ekhis 同源。後在《列王紀》中人格化為暴君扎哈克。")
 D("Yima", "伊瑪", o="Yima", var="賈姆希德（Jamshīd）；亞瑪", etype="傳說人物", domain="首王／黃金時代",
   reason="🚨 與吠陀 Yama（漢譯閻摩、閻羅）同源，但職能全異：吠陀的閻摩是首位死者與冥界之主，"
          "祆教的伊瑪是首王與黃金時代之君。**不可借用「閻摩」譯名。**",
   note="祓魔法典第 2 章載其奉命造地下方城以避大寒，攜各類生靈之種入內。")
-D("Thraetaona", "斯萊塔奧納", o="Θraētaona", var="費里頓（Farīdūn）；元文琪譯本作法裡東", etype="傳說人物",
+D("Thraetaona", "斯萊塔奧納", o="Θraētaona", var="法裡東（Farīdūn，元文琪譯本作）", etype="傳說人物",
   domain="屠龍英雄", reason="制伏阿日‧達哈卡者；與吠陀 Trita Āptya 同源。")
-D("Keresaspa", "克爾薩斯帕", o="Kərəsāspa", var="加爾沙斯普（Garshāsp）；元文琪譯本作伽爾沙斯布", etype="傳說人物",
+D("Keresaspa", "克爾薩斯帕", o="Kərəsāspa", var="伽爾沙斯布（Garshāsp，元文琪譯本作）", etype="傳說人物",
   domain="英雄／末世助手", reason="末世時將醒來擊殺脫縛的阿日‧達哈卡。")
 
 # ════════════════ D. 歷史人物（祭司與作者）════════════════
 
 _ord["d"] = 9700
-D("Vishtaspa", "維什塔斯帕", o="Vīštāspa", var="古世塔斯普（Goštāsp）；維斯塔斯普；元文琪譯本作古什塔斯布",
+D("Vishtaspa", "維什塔斯帕", o="Vīštāspa", var="古什塔斯布（Goštāsp，元文琪譯本作）；維斯塔斯普",
   etype="傳說人物", domain="首位皈依的護法王",
   reason="🚨 與阿契美尼德的大流士之父 Hystaspes（希斯塔斯佩斯）同名而非同人，行文須辨明。")
 D("Kartir", "卡爾提爾", o="Kirdīr", lang="pal", var="卡爾迪爾；基爾德", etype="祭司",
