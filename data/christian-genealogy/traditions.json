@@ -293,6 +293,92 @@
     }
   ],
 
+  "city_traditions": {
+    "_note": "文章第五節的八個地理神學中心。這一層的時間跨度到尼西亞（325），比文獻母體的一二世紀窗口長——所以一座城在母體裡沒有文獻，不等於這座城在二三世紀沒有傳統。人物欄的 in_window 標示該人的著作是否落在 1–200 CE 的文獻母體內。",
+    "cities": [
+      {
+        "key": "jerusalem", "name": "耶路撒冷", "from": ["J", "F1", "υ"],
+        "figures": [
+          { "name": "公義者雅各", "dates": "d. 62", "in_window": false, "note": "殉道早於任何存世文獻" },
+          { "name": "耶路撒冷主教名單", "dates": "1–2 世紀", "in_window": false, "note": "僅存於優西比烏《教會史》4.5，本身無存世文本" },
+          { "name": "耶路撒冷的區利羅", "dates": "約 313–386", "in_window": false }
+        ],
+        "note": "🚨 母體零文獻。70 年城破、母會流散，雅各軌跡保存得住記憶卻保存不住文獻——這是伊便尼派後來只能靠敵證重建的結構原因。"
+      },
+      {
+        "key": "antioch", "name": "安提阿", "from": ["P3", "J", "B1", "F1"],
+        "figures": [
+          { "name": "安提阿的伊格那丟", "dates": "d. 約 107", "in_window": true },
+          { "name": "安提阿的提阿非羅", "dates": "約 180", "in_window": true },
+          { "name": "撒摩撒他的保羅", "dates": "3 世紀", "in_window": false },
+          { "name": "殉道者路迦努", "dates": "d. 312", "in_window": false },
+          { "name": "金口約翰", "dates": "約 347–407", "in_window": false }
+        ]
+      },
+      {
+        "key": "rome", "name": "羅馬", "from": ["P2", "U"],
+        "figures": [
+          { "name": "羅馬的克勉", "dates": "約 96", "in_window": true },
+          { "name": "黑馬", "dates": "2 世紀中", "in_window": true },
+          { "name": "殉道者猶斯定", "dates": "約 100–165", "in_window": true, "note": "出身撒馬利亞，見 F2" },
+          { "name": "希波律陀", "dates": "約 170–235", "in_window": true },
+          { "name": "諾窪天", "dates": "3 世紀", "in_window": false }
+        ]
+      },
+      {
+        "key": "ephesus", "name": "以弗所（亞細亞）", "from": ["O", "U2"],
+        "figures": [
+          { "name": "希拉波立的帕皮亞", "dates": "約 110–130", "in_window": true, "note": "O6 長老約翰的唯一直接史料" },
+          { "name": "士每拿的坡旅甲", "dates": "d. 約 155", "in_window": true },
+          { "name": "撒狄斯的墨利托", "dates": "約 165", "in_window": true, "note": "四七日派逾越節傳統" },
+          { "name": "里昂的愛任紐", "dates": "約 130–202", "in_window": true, "note": "師承坡旅甲；里昂是亞細亞的女兒教會" },
+          { "name": "以弗所的波利克拉底", "dates": "約 190", "in_window": false, "note": "逾越節之爭中代表亞細亞對抗羅馬" }
+        ]
+      },
+      {
+        "key": "alexandria", "name": "亞歷山大", "from": ["B2", "P2"],
+        "figures": [
+          { "name": "巴西理德", "dates": "2 世紀", "in_window": true, "note": "僅殘篇；不立節點" },
+          { "name": "瓦倫廷", "dates": "2 世紀", "in_window": true, "note": "見 G2" },
+          { "name": "潘代諾", "dates": "2 世紀末", "in_window": false },
+          { "name": "亞歷山卓的克勉", "dates": "約 150–215", "in_window": true },
+          { "name": "俄利根", "dates": "約 185–253", "in_window": false, "note": "232 年後移居凱撒利亞" },
+          { "name": "亞他那修", "dates": "約 296–373", "in_window": false }
+        ],
+        "note": "母體 30 筆中 18 筆是諾斯底——正典側與諾斯底側在同一座城裡數量相當。"
+      },
+      {
+        "key": "edessa", "name": "埃德薩", "from": ["T"],
+        "figures": [
+          { "name": "塔提安", "dates": "2 世紀", "in_window": true, "note": "《四福音合參》；敘利亞教會讀合參本直到五世紀" },
+          { "name": "巴戴桑", "dates": "154–222", "in_window": false },
+          { "name": "亞弗拉哈特", "dates": "4 世紀", "in_window": false },
+          { "name": "敘利亞的以法蓮", "dates": "約 306–373", "in_window": false }
+        ]
+      },
+      {
+        "key": "carthage", "name": "迦太基（北非拉丁）", "from": [],
+        "figures": [
+          { "name": "特土良", "dates": "約 155–220", "in_window": true, "note": "母體 15 筆中他一人佔 13 筆" },
+          { "name": "居普良", "dates": "約 200–258", "in_window": false, "note": "主教共融與「教會之外無救恩」；北非殉道傳統的制度化" },
+          { "name": "多納徒派爭議", "dates": "4 世紀", "in_window": false, "note": "叛教者所施聖事是否有效——迦太基傳統內部的分裂" },
+          { "name": "希波的奧古斯丁", "dates": "354–430", "in_window": false, "note": "北非拉丁傳統的終點與西方神學的起點；屬成書第3章以後" }
+        ],
+        "note": "🚨 八城中唯一不上承任何使徒軌跡的一座——它沒有使徒創始傳說，靠的是拉丁語、殉道者與法學式神學自行長成。特土良→居普良→多納徒派→奧古斯丁是最連續的一條城市線。"
+      },
+      {
+        "key": "caesarea", "name": "凱撒利亞", "from": ["F3"],
+        "figures": [
+          { "name": "傳福音的腓力與四個說預言的女兒", "dates": "1 世紀", "in_window": false, "note": "徒 21:8–9；這座城的使徒根就是 F3" },
+          { "name": "俄利根", "dates": "232 年後", "in_window": false },
+          { "name": "龐非勒", "dates": "d. 309", "in_window": false, "note": "整理俄利根遺產與抄本" },
+          { "name": "優西比烏", "dates": "約 260–339", "in_window": false }
+        ],
+        "note": "🚨 母體零文獻，但不是零傳統——它的使徒根在徒 21:8 的腓力家族，文獻要到三世紀俄利根移居後才長出來。八座城不是同時登場的。"
+      }
+    ]
+  },
+
   "excluded": [
     { "name": "馬吉安派", "reason": "無自產文獻；《主福音》是刪改過的路加，現存內容全靠敵證回推" },
     { "name": "孟他努／新先知運動", "reason": "只有敵證，無自產文獻" },
