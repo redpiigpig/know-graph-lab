@@ -310,7 +310,7 @@ D("Frashokereti", "弗拉紹‧克雷提", o="Frašō.kərəti", var="萬物復�
   domain="末世的萬物更新",
   reason="字面「使之奇妙」。祆教末世論的核心：烈火熔盡群山、死者復活、惡被消滅、世界復歸完好。"
          "意譯「萬物復原」列為變體。")
-D("Saoshyant", "薩奧希揚特", o="Saošyant", var="救世主；救主", etype="概念", domain="末世救主",
+D("Saoshyant", "薩奧希揚特", o="Saošyant", var="救世主；救主；元文琪譯本作蘇什揚特", etype="概念", domain="末世救主",
   reason="字面「使之有益者」。🚨 意譯「救世主」列為變體而不作主譯——"
          "免得讀者逕以基督論的救主概念套入。")
 D("Chinvat Bridge", "裁判之橋", o="Činvatō Pərətu", var="欽瓦特橋；分別橋", etype="概念",
@@ -366,25 +366,25 @@ D("Spenta Mainyu", "斯彭塔‧曼紐", o="Spəṇta Mainyu", var="豐饒之靈
 D("Vohu Manah", "沃胡‧馬納", o="Vohu Manah", var="善念；瓦赫曼（Wahman）；巴赫曼（Bahman）",
   etype="deity", domain="不朽聖者之一：善念",
   reason="六不朽聖者之首。中古波斯語形 Wahman 即《瓦赫曼耶什特》書名所本（該形只出現在變體欄，故不設 name_root）。")
-D("Asha Vahishta", "阿沙‧瓦希什塔", o="Aša Vahišta", var="至上真理；阿爾德瓦希什特（Ardwahisht）",
+D("Asha Vahishta", "阿沙‧瓦希什塔", o="Aša Vahišta", var="至上真理；阿爾德瓦希什特（Ardwahisht）；元文琪譯本作奧爾迪貝赫什特",
   root="阿沙", etype="deity", domain="不朽聖者之一：最勝之義；掌火",
   reason="名根與概念詞「阿沙」一致。")
 D("Khshathra Vairya", "赫沙特拉‧瓦伊里亞", o="Xšaθra Vairya", var="善治；沙赫雷瓦爾（Šahrewar）",
   etype="deity", domain="不朽聖者之一：可欲的王權；掌金屬",
   reason="xšaθra「王權」與古波斯語銘文的 xšāyaθiya（王）同源。")
-D("Spenta Armaiti", "斯彭塔‧阿爾邁提", o="Spəṇtā Ārmaiti", var="虔敬；斯潘達爾馬德（Spandarmad）",
+D("Spenta Armaiti", "斯彭塔‧阿爾邁提", o="Spəṇtā Ārmaiti", var="虔敬；斯潘達爾馬德（Spandarmad）；元文琪譯本作塞潘達爾馬茲",
   root="斯彭塔", etype="deity", domain="不朽聖者之一：虔敬；掌大地",
   reason="名根與「斯彭塔‧曼紐」一致。六者中唯一明確為女性神格。")
 D("Haurvatat", "豪爾瓦塔特", o="Haurvatāt", var="圓滿；霍爾達德（Hordad）", etype="deity",
   domain="不朽聖者之一：完整；掌水", reason="與「阿梅雷塔特」常成對出現。")
-D("Ameretat", "阿梅雷塔特", o="Amərətāt", var="不朽；阿穆爾達德（Amurdad）", etype="deity",
+D("Ameretat", "阿梅雷塔特", o="Amərətāt", var="不朽；阿穆爾達德（Amurdad）；元文琪譯本作阿莫爾達德", etype="deity",
   domain="不朽聖者之一：不朽；掌植物",
   reason="a-「非」＋mərəta「死」，與希臘語 ambrotos（不死）同源。")
-D("Anahita", "阿娜希塔", o="Arəduuī Sūrā Anāhitā", var="阿爾德維‧蘇拉‧阿娜希塔；阿納希塔",
+D("Anahita", "阿娜希塔", o="Arəduuī Sūrā Anāhitā", var="阿爾德維‧蘇拉‧阿娜希塔；阿納希塔；元文琪譯本作阿雷德維‧蘇拉‧阿娜希塔",
   root="阿娜希塔", etype="deity", domain="水／豐饒／戰勝",
   reason="全稱意為「潤澤的、強大的、無玷的」。耶什特第 5 首的受祀者；"
          "阿爾塔薛西斯二世起入王室銘文，是阿契美尼德晚期宗教變化的關鍵證據。")
-D("Tishtrya", "提什特里亞", o="Tištrya", var="提斯特里亞；提爾（Tīr）；天狼星神", etype="deity",
+D("Tishtrya", "提什特里亞", o="Tištrya", var="提斯特里亞；提爾（Tīr）；天狼星神；元文琪譯本作蒂什塔爾", etype="deity",
   domain="天狼星／降雨",
   reason="化白馬與旱魔阿波沙化的黑馬相鬥，勝則降雨——印歐鬥龍神話的伊朗形態。")
 D("Verethragna", "韋雷特拉格納", o="Vərəθraγna", var="巴赫拉姆（Bahrām）；韋雷斯拉格那",
@@ -411,22 +411,22 @@ D("Zurwan", "祖爾萬", o="Zurwān", lang="pal", var="佐爾萬；時神", root
 D("Aeshma", "埃什瑪", o="Aēšma", var="忿怒魔", etype="deity", domain="忿怒／暴力之魔",
   reason="🚨 《多俾亞傳》的阿斯摩太（Asmodeus）一般認為源自 Aēšma-daēva，"
          "是祆教影響第二聖殿猶太教的少數具體詞證之一。")
-D("Azhi Dahaka", "阿日‧達哈卡", o="Aži Dahāka", var="扎哈克（Zahhāk）；三頭龍", etype="deity",
+D("Azhi Dahaka", "阿日‧達哈卡", o="Aži Dahāka", var="扎哈克（Zahhāk）；三頭龍；元文琪譯本作阿日達哈克", etype="deity",
   domain="三頭巨龍／暴君",
   reason="aži「蛇、龍」與梵語 ahi、希臘語 ekhis 同源。後在《列王紀》中人格化為暴君扎哈克。")
 D("Yima", "伊瑪", o="Yima", var="賈姆希德（Jamshīd）；亞瑪", etype="傳說人物", domain="首王／黃金時代",
   reason="🚨 與吠陀 Yama（漢譯閻摩、閻羅）同源，但職能全異：吠陀的閻摩是首位死者與冥界之主，"
          "祆教的伊瑪是首王與黃金時代之君。**不可借用「閻摩」譯名。**",
   note="祓魔法典第 2 章載其奉命造地下方城以避大寒，攜各類生靈之種入內。")
-D("Thraetaona", "斯萊塔奧納", o="Θraētaona", var="費里頓（Farīdūn）", etype="傳說人物",
+D("Thraetaona", "斯萊塔奧納", o="Θraētaona", var="費里頓（Farīdūn）；元文琪譯本作法裡東", etype="傳說人物",
   domain="屠龍英雄", reason="制伏阿日‧達哈卡者；與吠陀 Trita Āptya 同源。")
-D("Keresaspa", "克爾薩斯帕", o="Kərəsāspa", var="加爾沙斯普（Garshāsp）", etype="傳說人物",
+D("Keresaspa", "克爾薩斯帕", o="Kərəsāspa", var="加爾沙斯普（Garshāsp）；元文琪譯本作伽爾沙斯布", etype="傳說人物",
   domain="英雄／末世助手", reason="末世時將醒來擊殺脫縛的阿日‧達哈卡。")
 
 # ════════════════ D. 歷史人物（祭司與作者）════════════════
 
 _ord["d"] = 9700
-D("Vishtaspa", "維什塔斯帕", o="Vīštāspa", var="古世塔斯普（Goštāsp）；維斯塔斯普",
+D("Vishtaspa", "維什塔斯帕", o="Vīštāspa", var="古世塔斯普（Goštāsp）；維斯塔斯普；元文琪譯本作古什塔斯布",
   etype="傳說人物", domain="首位皈依的護法王",
   reason="🚨 與阿契美尼德的大流士之父 Hystaspes（希斯塔斯佩斯）同名而非同人，行文須辨明。")
 D("Kartir", "卡爾提爾", o="Kirdīr", lang="pal", var="卡爾迪爾；基爾德", etype="祭司",

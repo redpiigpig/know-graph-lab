@@ -245,12 +245,86 @@ def cmd_harvest(min_hits: int, out: Path | None) -> int:
     return 0
 
 
+def aligned_verses() -> list[tuple[str, str]]:
+    """(英譯, 元譯) 的逐節配對。兩支命令共用。"""
+    verses: list[tuple[str, str]] = []
+    for yp in sorted(YUAN_DIR.glob("*.json")):
+        y = json.loads(yp.read_text(encoding="utf-8"))
+        tp = TEXT_DIR / f"{y['slug']}.json"
+        if not tp.exists():
+            continue
+        doc = json.loads(tp.read_text(encoding="utf-8"))
+        for seg in doc["segments"]:
+            m = re.search(r"\.(\d+)", seg.get("ref", ""))
+            if not m:
+                continue
+            zh, en = y["verses"].get(m.group(1), ""), seg.get("en", "")
+            if zh and en:
+                verses.append((en, zh))
+    return verses
+
+
+def cmd_style(min_hits: int, out: Path) -> int:
+    """找出反覆出現的**英譯公式句**，以及元文琪固定怎麼譯。
+
+    🚨 這一支的用途與 --harvest 不同，也沒有那個腳本的顧慮：
+       專名不能借（他用波斯語形式），但**語感可以借**——
+       呼格怎麼起、補字怎麼標、公式句怎麼排，這些與底本無關，
+       借過來能讓本站其餘各篇讀起來像同一個人譯的。
+    """
+    verses = aligned_verses()
+    # 英譯裡反覆出現的短語（4–10 個詞）
+    eng: Counter = Counter()
+    for en, _zh in verses:
+        words = re.findall(r"[A-Za-z']+", en)
+        for n in range(4, 11):
+            for i in range(len(words) - n + 1):
+                eng[" ".join(words[i:i + n]).lower()] += 1
+    common = [(p, c) for p, c in eng.most_common(400) if c >= min_hits]
+    # 只留「封閉」短語：有更長的且次數幾乎一樣時，短的只是碎片
+    by = dict(common)
+    closed = [(p, c) for p, c in common
+              if not any(p != q and p in q and by[q] >= c * 0.85 for q in by)]
+
+    rows = []
+    for phrase, c in closed[:40]:
+        idx = [i for i, (en, _z) in enumerate(verses) if phrase in en.lower()]
+        zhs = [verses[i][1] for i in idx]
+        # 這些節共有的中文片段（長度 3–14），取出現率最高者
+        local: Counter = Counter()
+        for z in zhs:
+            local.update(ngrams(z, 3, 14))
+        best = [(g, n) for g, n in local.most_common(60)
+                if n >= max(2, 0.6 * len(zhs)) and not (set(g) & {"，", "。"})]
+        bykey = dict(best)
+        best = [(g, n) for g, n in best
+                if not any(g != h and g in h and bykey[h] >= n * 0.9 for h in bykey)]
+        if best:
+            rows.append((phrase, c, best[0][0], best[0][1]))
+
+    lines = ["# 元文琪譯本的語感對照（自動萃取）", "",
+             "從 30 篇逐節對齊資料統計：反覆出現的**英譯公式句**，以及他固定怎麼譯。", "",
+             "🚨 這份與專名候選不同——**語感可以借，專名不可借**。",
+             "他的專名是波斯語形式（見 yuan_terms.md），但呼格怎麼起、補字怎麼標、",
+             "公式句怎麼排，與底本無關，借過來能讓其餘各篇讀起來像同一個人譯的。", "",
+             "| 英譯公式 | 出現 | 元文琪的譯法 | 命中 |", "|---|---:|---|---:|"]
+    for p, c, g, n in rows:
+        lines.append(f"| {p} | {c} | {g} | {n} |")
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text("\n".join(lines), encoding="utf-8")
+    print(f"寫出 {len(rows)} 組 → {out.relative_to(ROOT)}")
+    return 0
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description="從元文琪譯本反查專名候選")
     ap.add_argument("--harvest", action="store_true")
     ap.add_argument("--min", type=int, default=2, help="至少共現幾次才收")
+    ap.add_argument("--style", action="store_true", help="萃取語感對照（公式句怎麼譯）")
     ap.add_argument("--out", default=str(ROOT / "output" / "yuan_terms.md"))
     a = ap.parse_args()
+    if a.style:
+        return cmd_style(a.min, ROOT / "output" / "yuan_style.md")
     if a.harvest:
         return cmd_harvest(a.min, Path(a.out))
     ap.print_help()
