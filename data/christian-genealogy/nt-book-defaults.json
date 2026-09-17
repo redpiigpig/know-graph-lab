@@ -1,0 +1,68 @@
+{
+  "meta": {
+    "title": "新約二十七卷・書卷層歸屬預設",
+    "axes": {
+      "editor": "最終把它寫成這卷書的文本圈——恰一值，整卷適用，段落層不覆寫",
+      "sources": "這卷書所吸收的材料來自哪些群體／軌跡——段落層會逐段指定，此處只列該卷會用到的候選集"
+    },
+    "note": "書卷層是底線值：跑完這一層，7,971 節每一節都已有 editor。sources 要到段落層才逐段落定。",
+    "codes": "data/christian-genealogy/traditions.json"
+  },
+  "books": {
+    "mat": {
+      "name": "馬太福音", "editor": "P3", "editor_name": "馬太群體（安提阿彼得支系）",
+      "sources": ["P2", "κ1", "κ2", "J3", "J1", "μ2", "θ1", "υ1"],
+      "note": "在馬可骨架上加入 Q 與 M 語錄、教會秩序與彼得首席（16:17–19）。J3 的 M 材料是它與雅各軌跡的接點。"
+    },
+    "mrk": {
+      "name": "馬可福音", "editor": "P2", "editor_name": "馬可群體（羅馬彼得支系）",
+      "sources": ["κ1", "μ2", "θ1", "υ1", "β1", "P1"],
+      "note": "第一部敘事福音。迦百農行動記憶是骨架，受難—空墳段落轉由抹大拉網絡承擔。"
+    },
+    "luk": {
+      "name": "路加福音", "editor": "U5", "editor_name": "路加群體（第二代保羅傳統）",
+      "sources": ["P2", "κ1", "κ2", "U5a", "μ1", "θ1", "υ1", "υ2", "β1"],
+      "note": "以馬可為骨、Q 為語錄、L 為特有材料；婦女資助網絡（8:1–3）在此卷最顯。"
+    },
+    "jhn": {
+      "name": "約翰福音", "editor": "O5", "editor_name": "約翰福音編輯圈",
+      "sources": ["O2", "O3", "O4", "O8", "β1", "β2", "θ1", "θ2", "μ2", "σ1", "σ2", "υ1"],
+      "note": "來源最雜的一卷：拿但業─迦拿線、祭司約翰的公會內情、神蹟資料、伯大尼家庭、洗者圈，最後由以弗所編成道成肉身的福音。第廿一章是附錄層。"
+    },
+    "act": {
+      "name": "使徒行傳", "editor": "U5", "editor_name": "路加群體",
+      "sources": ["υ2", "υ3", "J1", "P1", "P2", "F1", "F2", "F3", "U1", "U5b", "β3", "B1"],
+      "note": "唯一一卷把七條軌跡都寫進同一條敘事線的書；6–8 章的司提反─腓力材料與 21 章的凱撒利亞段落是 F 軌跡的主要存世來源。"
+    },
+
+    "rom": { "name": "羅馬書", "editor": "U1", "editor_name": "保羅本人", "sources": ["U1", "U2"], "note": "無爭議七封之一" },
+    "1co": { "name": "哥林多前書", "editor": "U1", "editor_name": "保羅本人", "sources": ["U1", "U2", "υ1"], "note": "11:23–26 的立聖餐傳承語出自更早的口傳，接馬可樓；15:3–8 的復活顯現名單同理" },
+    "2co": { "name": "哥林多後書", "editor": "U1", "editor_name": "保羅本人", "sources": ["U1", "U2"] },
+    "gal": { "name": "加拉太書", "editor": "U1", "editor_name": "保羅本人", "sources": ["U1", "J1", "P1"], "note": "1:18–2:14 是雅各、磯法、保羅三條軌跡衝突的第一手記錄" },
+    "php": { "name": "腓立比書", "editor": "U1", "editor_name": "保羅本人", "sources": ["U1", "U2"] },
+    "1th": { "name": "帖撒羅尼迦前書", "editor": "U1", "editor_name": "保羅本人", "sources": ["U1", "U2"], "note": "現存最早的基督教文獻" },
+    "phm": { "name": "腓利門書", "editor": "U1", "editor_name": "保羅本人", "sources": ["U1"] },
+
+    "eph": { "name": "以弗所書", "editor": "U3", "editor_name": "次保羅群體", "sources": ["U3", "U2"] },
+    "col": { "name": "歌羅西書", "editor": "U3", "editor_name": "次保羅群體", "sources": ["U3", "U2"] },
+    "2th": { "name": "帖撒羅尼迦後書", "editor": "U3", "editor_name": "次保羅群體", "sources": ["U3"] },
+
+    "1ti": { "name": "提摩太前書", "editor": "U4", "editor_name": "教牧群體", "sources": ["U4"] },
+    "2ti": { "name": "提摩太後書", "editor": "U4", "editor_name": "教牧群體", "sources": ["U4"] },
+    "tit": { "name": "提多書", "editor": "U4", "editor_name": "教牧群體", "sources": ["U4"] },
+
+    "heb": { "name": "希伯來書", "editor": "B2", "editor_name": "亞波羅‧亞歷山大解經線", "sources": ["B2", "B1"], "note": "特土良保存出自巴拿巴的古老歸屬；作者至今未定" },
+
+    "jas": { "name": "雅各書", "editor": "J1", "editor_name": "雅各本人與耶路撒冷母會", "sources": ["J1", "κ2"], "note": "與 Q 語錄的倫理層高度重疊" },
+    "jud": { "name": "猶大書", "editor": "J2", "editor_name": "耶穌家族", "sources": ["J2"] },
+
+    "1pe": { "name": "彼得前書", "editor": "P2", "editor_name": "羅馬彼得支系", "sources": ["P2"], "note": "把彼得的聲音帶進羅馬與小亞細亞的受苦教會" },
+    "2pe": { "name": "彼得後書", "editor": "P4", "editor_name": "晚期托名彼得層", "sources": ["P4", "J2"], "note": "與猶大書大幅重疊；3:15–16 把保羅書信列在「別的經書」旁" },
+
+    "1jn": { "name": "約翰一書", "editor": "O6", "editor_name": "長老約翰", "sources": ["O6", "O5"], "note": "群體已因基督是否真正成肉身而分裂" },
+    "2jn": { "name": "約翰二書", "editor": "O6", "editor_name": "長老約翰", "sources": ["O6"] },
+    "3jn": { "name": "約翰三書", "editor": "O6", "editor_name": "長老約翰", "sources": ["O6"] },
+
+    "rev": { "name": "啟示錄", "editor": "O7", "editor_name": "先知約翰", "sources": ["O7"], "note": "整卷同一來源同一編成——二十七卷裡最單純的一卷" }
+  }
+}
