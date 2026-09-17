@@ -208,11 +208,45 @@ def difficulty(unit: Unit) -> tuple[int, int, int]:
 # corpus units
 # ---------------------------------------------------------------------------
 
-def load_units(corpus_name: str) -> list[Unit]:
+def printed_reading_text() -> str:
+    """下冊讀本實際印出來的拉丁正文，折疊成一串字母。
+
+    折成沒有空白的一串，是因為引文與讀文的斷行、標點不會一致；比字母序列才穩。
+    """
+    import latin_source_texts as _L  # noqa: PLC0415
+
+    path = CACHE / "latin-reader-two-volumes.json"
+    if not path.exists():
+        return ""
+    data = json.loads(path.read_text(encoding="utf-8"))
+    chunks: list[str] = []
+    for volume in data.get("volumes", []):
+        if volume.get("name") != "下冊":
+            continue
+        for lesson in volume.get("lessons", []):
+            for block in lesson.get("reading", []) or []:
+                chunks.append("".join(_L.fold(w) for w in _L.words(block.get("latin", ""))))
+    return " ".join(chunks)
+
+
+def load_units(corpus_name: str, printed_only: bool = False) -> list[Unit]:
+    """語料單位。`printed_only` 只給挖引錨用；驗證那一側走 build_latin_lemma_corpus。
+
+    🚨 引錨只能引讀者讀得到的句子。下冊讀文改成節錄之後，教會語料裡有大半的句子
+    已經不在書上——引一句書裡沒印的話，題目看起來完全正常，學生卻翻遍全書找不到
+    出處。節選前 150 則引錨全部引得到，節選後只剩 72 則。
+    """
     payload = json.loads(CORPUS_FILES[corpus_name].read_text(encoding="utf-8"))
+    printed = printed_reading_text() if (printed_only and corpus_name != "vulgate") else ""
     units: list[Unit] = []
+    import latin_source_texts as _L  # noqa: PLC0415
+
     for row in payload["units"]:
         text = row["text"]
+        if printed:
+            folded = "".join(_L.fold(w) for w in _L.words(text))
+            if folded and folded not in printed:
+                continue
         whole_words = tuple(tokenise(text))
         # A verse may be quoted once; so may a reading block.  For the Vulgate
         # that key is the reference, for the church corpus it is the block --
@@ -267,6 +301,7 @@ def select(
     candidates: list[tuple[Unit, set[tuple[int, int]]]],
     lesson_keys: set[tuple[int, int]],
     used_refs: set[str],
+    require_lesson_words: bool = True,
 ) -> list[tuple[Unit, set[tuple[int, int]]]]:
     """Greedy: widest coverage first, whole verses next, then shortest.
 
@@ -276,7 +311,13 @@ def select(
     preferring the forty chapters that had been fetched over better sentences
     from the other 1,300.
     """
-    pool = [row for row in candidates if row[0].ref not in used_refs and row[1] & lesson_keys]
+    # 🚨 `require_lesson_words` 只在備援階段關掉。擁有者 2026-09-17：「可以用前面
+    # 的造句來補，選文就沒有一定要覆蓋。」十題裡七題是自撰的，補生詞是那七題的事；
+    # 引錨的職責是「讀者在書上讀過這一句」。主階段照樣優先挑含本課生詞的。
+    pool = [
+        row for row in candidates
+        if row[0].ref not in used_refs and (row[1] & lesson_keys or not require_lesson_words)
+    ]
     chosen: list[tuple[Unit, set[tuple[int, int]]]] = []
     remaining = set(lesson_keys)
     taken: set[str] = set()
@@ -321,7 +362,7 @@ def main() -> None:
         appendix |= keys
     lemma_first, key_first, lemma_entries, key_entries = first_taught_index(entries, appendix)
 
-    units = load_units(corpus_name)
+    units = load_units(corpus_name, printed_only=True)
     print(f"第 {volume} 冊，語料 {corpus_name}：{len(units)} 個候選單元")
 
     # One pass over the distinct written forms, then everything else is lookups.
@@ -335,6 +376,7 @@ def main() -> None:
         return found
 
     scored: list[tuple[Unit, set[tuple[int, int]], tuple[int, int]]] = []
+    spare: list[tuple[Unit, set[tuple[int, int]]]] = []
     rejected: Counter[str] = Counter()
     for unit in units:
         readings = [reading(word) for word in unit.words]
@@ -361,12 +403,18 @@ def main() -> None:
                     entries_hit |= lemma_entries.get(lemma, set())
         if ready == NEVER:
             rejected["含未收錄的詞"] += 1
+            spare.append((unit, entries_hit))
             continue
         if ready[0] > volume:
             rejected["跨冊詞彙"] += 1
+            spare.append((unit, entries_hit))
             continue
         scored.append((unit, entries_hit, ready))
 
+    # 🚨 備援池：含未教過的詞、或詞在後面才教的句子。擁有者 2026-09-16 已經裁定
+    # 「沒有限制一定要本課教過的才行」，所以這些不是廢棄品，只是不優先。下冊讀文
+    # 改成節錄之後，十二課挖不到三則引錨——不是讀文太短（放寬到 1000 詞也只少兩
+    # 課），是那幾篇裡「每個詞都教過」的句子本來就少。備援只在不足時動用。
     by_ready: dict[tuple[int, int], list[tuple[Unit, set[tuple[int, int]]]]] = defaultdict(list)
     for unit, hits, ready in scored:
         by_ready[ready].append((unit, hits))
@@ -387,6 +435,17 @@ def main() -> None:
         lesson_keys = {entry.key for entry in entries
                        if entry.volume == volume and entry.lesson == lesson}
         chosen = select(available, lesson_keys, used_refs)
+        if len(chosen) < CANDIDATES_PER_LESSON:
+            taken_refs = used_refs | {u.ref for u, _ in chosen}
+            chosen += select(spare, lesson_keys, taken_refs)[
+                : CANDIDATES_PER_LESSON - len(chosen)
+            ]
+        if len(chosen) < CANDIDATES_PER_LESSON:
+            taken_refs = used_refs | {u.ref for u, _ in chosen}
+            chosen += select(available + spare, lesson_keys, taken_refs,
+                             require_lesson_words=False)[
+                : CANDIDATES_PER_LESSON - len(chosen)
+            ]
         items: list[dict[str, Any]] = []
         for number, (unit, hits) in enumerate(chosen, start=1):
             used_refs.add(unit.ref)

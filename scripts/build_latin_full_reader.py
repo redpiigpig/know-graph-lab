@@ -576,6 +576,38 @@ def chinese_by_section(path: str) -> dict[int, str]:
     return {number: " ".join(rows) for number, rows in sections.items()}
 
 
+READING_WORD_LIMIT = 800
+"""下冊一課讀文的篇幅上限（詞）。
+
+擁有者 2026-09-17：「大約抓個 500-800 字左右就好」「但要是自然段落的選集喔，
+不要是語意沒講完就中斷」。拉丁讀文本來就是一段一段收的（《懺悔錄》卷一有五十三
+段），所以裁的單位就是段落：從篇首連續取整段。上冊（武加大）不裁——中位數只有
+388 詞，而且一章是完整的閱讀單位。
+
+🚨 這一條一定要放在 `lower_readings()` 裡。它是印刷（build_latin_full_reader）
+與資料層（build_latin_reader_data 匯入它）唯一的共用點；寫在資料層那一端，網站
+變短了、書卻一頁沒少，而兩邊都不會報錯。
+"""
+
+
+def clip_lower_reading(pairs: list, note: str) -> tuple[list, str]:
+    """超過上限就取前幾段；回傳（段落、註記）。裁過一定要在 note 講出來。"""
+    total = sum(len(L.words(latin)) for latin, _ in pairs)
+    if total <= READING_WORD_LIMIT:
+        return pairs, note
+    kept: list = []
+    running = 0
+    for pair in pairs:
+        size = len(L.words(pair[0]))
+        # 第一段就超過上限時仍然收下：寧可長一點，也不要交出半段。
+        if kept and running + size > READING_WORD_LIMIT:
+            break
+        kept.append(pair)
+        running += size
+    extent = f"本課讀文為節錄，取前 {len(kept)} 段（全文 {len(pairs)} 段、{total:,} 詞）。"
+    return kept, f"{note} {extent}".strip()
+
+
 def lower_readings() -> dict[int, dict]:
     plan = load(CHURCH)
     translated = load(READINGS_ZH, {"units": {}})
@@ -613,6 +645,7 @@ def lower_readings() -> dict[int, dict]:
                                         "full-translation-unnumbered"}:
                 note += f"；既有中文檔為 {row['chineseSource']}，無法逐段並排，中譯另行自譯"
 
+        pairs, note = clip_lower_reading(pairs, note)
         out[row["lesson"]] = {
             "title": f"{row['title']}　{row['latinTitle']}", "pairs": pairs, "note": note,
         }

@@ -3,7 +3,7 @@
   "language": "Ecclesiastical Latin",
   "languageCode": "lat",
   "volume": 1,
-  "generatedOn": "2026-09-16",
+  "generatedOn": "2026-09-17",
   "direction": "original-to-chinese",
   "itemsPerLesson": 10,
   "quotedPerLesson": 3,
@@ -1595,7 +1595,9 @@
           "verification": {
             "words": 3,
             "unattested": [],
-            "untaught": [],
+            "untaught": [
+              "Eliphaz"
+            ],
             "enclitics": [],
             "lemmas": [
               "filius",
@@ -3892,7 +3894,9 @@
           "verification": {
             "words": 4,
             "unattested": [],
-            "untaught": [],
+            "untaught": [
+              "Machir"
+            ],
             "enclitics": [],
             "lemmas": [
               "do",
@@ -5072,7 +5076,9 @@
           "verification": {
             "words": 6,
             "unattested": [],
-            "untaught": [],
+            "untaught": [
+              "Noë"
+            ],
             "enclitics": [],
             "lemmas": [
               "Noe",
@@ -7431,7 +7437,9 @@
           "verification": {
             "words": 4,
             "unattested": [],
-            "untaught": [],
+            "untaught": [
+              "Mardochæus"
+            ],
             "enclitics": [],
             "lemmas": [
               "audio",
@@ -7473,7 +7481,9 @@
           "verification": {
             "words": 7,
             "unattested": [],
-            "untaught": [],
+            "untaught": [
+              "Judith"
+            ],
             "enclitics": [],
             "lemmas": [
               "canticum",
@@ -8668,7 +8678,9 @@
           "verification": {
             "words": 8,
             "unattested": [],
-            "untaught": [],
+            "untaught": [
+              "Alexander"
+            ],
             "enclitics": [],
             "lemmas": [
               "Alexander",
@@ -11618,7 +11630,9 @@
           "verification": {
             "words": 7,
             "unattested": [],
-            "untaught": [],
+            "untaught": [
+              "Sara"
+            ],
             "enclitics": [],
             "lemmas": [
               "Septem",
@@ -15295,7 +15309,9 @@
           "verification": {
             "words": 4,
             "unattested": [],
-            "untaught": [],
+            "untaught": [
+              "Lot"
+            ],
             "enclitics": [],
             "lemmas": [
               "memor",
@@ -19532,7 +19548,11 @@
           "verification": {
             "words": 7,
             "unattested": [],
-            "untaught": [],
+            "untaught": [
+              "Joakim",
+              "Jechonias",
+              "Sedecias"
+            ],
             "enclitics": [],
             "lemmas": [
               "Iechonias",
@@ -21920,7 +21940,9 @@
           "verification": {
             "words": 8,
             "unattested": [],
-            "untaught": [],
+            "untaught": [
+              "Mardochæo"
+            ],
             "enclitics": [],
             "lemmas": [
               "dico",
@@ -27026,7 +27048,9 @@
           "verification": {
             "words": 5,
             "unattested": [],
-            "untaught": [],
+            "untaught": [
+              "Lebna"
+            ],
             "enclitics": [],
             "lemmas": [
               "egredior",

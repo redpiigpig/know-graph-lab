@@ -57,12 +57,14 @@ def main() -> None:
         lessons = []
         for number in range(1, 51):
             reading = readings[name].get(number, {"title": "", "pairs": [], "note": ""})
+            # 節選在 R.lower_readings() 就做掉了（印刷與資料層的共用點）。
+            pairs, reading_note = reading["pairs"], reading["note"]
             lesson_words = [e for e in words if e["lesson"] == number]
             lesson_units = [u for u in units if u["lesson"] == number]
             lessons.append({
                 "lesson": number,
                 "title": reading["title"],
-                "note": reading["note"],
+                "note": reading_note,
                 "vocabulary": [{
                     "headword": e["headword"], "forms": e.get("forms", ""),
                     "pos": R.short_pos(e), "glossZh": e.get("glossZh", ""),
@@ -75,8 +77,8 @@ def main() -> None:
                     "zh": "" if u.get("zh") in (None, "reading-has-chinese") else u.get("zh", ""),
                     "readableFrom": u.get("readableFrom", number),
                 } for u in lesson_units],
-                "reading": [{"latin": latin, "zh": zh} for latin, zh in reading["pairs"]],
-                "readingWords": sum(len(L.words(latin)) for latin, _ in reading["pairs"]),
+                "reading": [{"latin": latin, "zh": zh} for latin, zh in pairs],
+                "readingWords": sum(len(L.words(latin)) for latin, _ in pairs),
             })
         volumes.append({
             **meta,

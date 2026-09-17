@@ -56,7 +56,11 @@ def failures_for_item(item: dict[str, Any]) -> list[str]:
     offenders = verification.get("unattested") or []
     if offenders:
         problems.append(f"第 {number} 題語料中查無此形：{'、'.join(offenders)}")
-    if not (item.get("targetWords") or []):
+    # 自撰題要練到本課的詞——那是它存在的理由。引錨不必：擁有者 2026-09-17
+    # 「可以用前面的造句來補，選文就沒有一定要覆蓋」。讀文改成節錄之後，有幾課
+    # 挑不出「既在書上印過、又含本課生詞」的原句，逼它兩者兼具只會把引錨換成
+    # 讀者在書裡找不到的句子——那比練不到一個詞嚴重得多。
+    if item.get("kind") != "quoted" and not (item.get("targetWords") or []):
         problems.append(f"第 {number} 題沒有標出練到的本課詞")
     return problems
 
@@ -66,8 +70,17 @@ def failures_for_lesson(lesson: dict[str, Any]) -> list[str]:
     problems: list[str] = []
     number = lesson.get("lesson", "?")
     items = lesson.get("items") or []
-    if len(items) != ITEMS_PER_LESSON:
-        problems.append(f"第 {number} 課有 {len(items)} 題，應為 {ITEMS_PER_LESSON} 題")
+    # 多於十題一律是錯；少於十題適用這一系列既有的原則：不足是允許的，不說明才
+    # 不允許。拉丁下冊改節錄之後，第 42、48 課挑不出第三則「書上印過」的原句，
+    # 自撰七題加起來只有九題。硬湊第十題的辦法只有兩種——引一句讀者在書裡找不到
+    # 的話，或把已經用過的原句再印一次——兩種都比少一題糟。
+    if len(items) > ITEMS_PER_LESSON:
+        problems.append(f"第 {number} 課有 {len(items)} 題，多於 {ITEMS_PER_LESSON} 題")
+    elif len(items) < ITEMS_PER_LESSON and not (lesson.get("note") or "").strip():
+        problems.append(
+            f"第 {number} 課只有 {len(items)} 題（應為 {ITEMS_PER_LESSON}），"
+            "少於十題必須在 note 說明原因"
+        )
     quoted = sum(1 for item in items if item.get("kind") == "quoted")
     if quoted < MIN_QUOTED_PER_LESSON and not (lesson.get("note") or "").strip():
         # The earliest lessons of every reader can run out of quotable text:
