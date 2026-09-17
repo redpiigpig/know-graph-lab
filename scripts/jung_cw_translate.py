@@ -246,7 +246,15 @@ def run_vol(vol, cfg, bounds, args) -> None:
             assemble(vol, title, ebid, data, units, upload=not args.no_upload)
         time.sleep(0.4)
     assemble(vol, title, ebid, data, units, upload=not args.no_upload)
-    print(f"[CW {vol}] complete", flush=True)
+    # 收尾時以「實際存在的 part 檔數」重寫 status.json：切片各自累加的 done 只是
+    # 自己那一份，最後退出的那支會把整卷覆蓋成它的份額（面板讀的就是這個檔）。
+    real_done = sum((data / "parts" / f"{i:04d}.json").exists() for i in range(len(units)))
+    (data / "status.json").write_text(json.dumps(
+        {"ebook_id": ebid, "title": f"CW {vol} {title}", "done": real_done,
+         "total": len(units), "current": f"{real_done - 1:04d}" if real_done else None,
+         "updated_at": dt.datetime.now().isoformat(timespec="seconds")},
+        ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"[CW {vol}] complete  status={real_done}/{len(units)}", flush=True)
 
 
 def main() -> None:
