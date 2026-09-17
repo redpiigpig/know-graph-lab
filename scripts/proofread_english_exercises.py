@@ -26,6 +26,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -95,31 +96,47 @@ def validate(payload) -> list[str]:
 FIX_PROMPT = """你是台灣國小英語教材的審稿人，正在修第 {no} 課的練習題。
 本課文法點是「{focus}」，本課單字：{words}
 
-下面是原題目與審稿挑出的問題。請把有問題的題目改掉，**沒被挑到的原樣保留**，
-每一區的題數不變（選擇 {n_mcq}、填空 {n_fill}、造句 {n_tr}、重組 {n_un}）。
+下面**每一題都有問題**，請逐題改好。題數不變，順序不變。
 
 規矩：
-- 選擇題：ans 必須逐字等於 opts 其中一個，四個選項不重複；挖空題的中文提示
-  一定要放在括號裡，否則答案會不只一個。
+- 選擇題：ans 必須逐字等於 opts 其中一個，四個選項不重複。
+- 挖空題的中文提示一定要放在括號裡，而且**要給語意**——
+  寫「（這條緞帶是紅色的）」不要寫「（這條緞帶是_____的）」，
+  也不要只寫「（請填序數詞）」，那樣答案不只一個。
 - 英文句不可以用全形標點（。，？），括號裡的中文提示才用全形。
 - 只能用本課與前面幾課學過的字。
 - 句子重組的打散字詞要排得出標準答案，不多字也不少字。
 
-只輸出 JSON，不要說明文字：
-{{"mcq": [{{"q": "…", "opts": ["A","B","C","D"], "ans": "…"}}],
-  "fill": [{{"q": "…", "ans": "…"}}],
-  "translate": [{{"q": "中文", "ans": "English."}}],
-  "unscramble": [{{"q": "打散 / 的 / 字", "ans": "正確句子."}}]}}
+只輸出 JSON，不要說明文字。**key 要照抄下面每一題的編號**：
+{{"items": {{"mcq-3": {{"q": "…", "opts": ["A","B","C","D"], "ans": "…"}},
+            "fill-7": {{"q": "…", "ans": "…"}}}}}}
 
-原題目：
+要改的題目：
 {body}
-
-審稿挑出的問題：
-{issues}
 """
 
 
+_WHERE = re.compile(r"(mcq|fill|translate|unscramble)\D*(\d+)")
+
+
+def parse_where(where: str) -> tuple[str, int] | None:
+    """把「mcq 第 3 題」解析成 ("mcq", 2)。解析不出來就回 None。"""
+    hit = _WHERE.search(where.replace("選擇題", "mcq").replace("填空", "fill")
+                        .replace("造句翻譯", "translate").replace("句子重組", "unscramble"))
+    if not hit:
+        return None
+    return hit.group(1), int(hit.group(2)) - 1
+
+
 def apply_fixes(report: list[dict]) -> None:
+    """只把**被挑到的那幾題**交給模型，改完插回原位。
+
+    🚨 不要把整個題區交出去。2026-09-18 第一版是「整區送出、整區收回、
+    要求沒被挑到的原樣保留」，結果 L08 只挑了 mcq 第 2 題，模型卻把 10 題填空的
+    中文提示整批刪掉——`I ____ a student.（我是學生）` 變成 `I ____ a student.`，
+    而沒有提示答案就不只一個，正是前面立閘要防的事。模型碰不到沒交出去的東西，
+    這是唯一可靠的擋法。
+    """
     lessons = {l["no"]: l for l in gen.load_lessons()}
     for row in report:
         no, issues = row["no"], row["issues"]
@@ -130,40 +147,69 @@ def apply_fixes(report: list[dict]) -> None:
         ex = data["exercises"]
         gen.CURRENT_LESSON = no
         lesson = lessons[no]
-        want = {"mcq": len(ex["mcq"]), "fill": len(ex["fill"]),
-                "translate": len(ex["translate"]), "unscramble": len(ex["unscramble"])}
 
-        def check(payload, w=want):
-            if not isinstance(payload, dict):
-                return ["輸出不是物件"]
+        targets: dict[str, tuple[str, int]] = {}
+        for it in issues:
+            spot = parse_where(it["where"])
+            if spot is None or not (0 <= spot[1] < len(ex[spot[0]])):
+                continue
+            targets[f"{spot[0]}-{spot[1] + 1}"] = spot
+        if not targets:
+            print(f"L{no:02d} ⚠ 定位不出任何一題，跳過", flush=True)
+            continue
+
+        body = []
+        for key, (sect, idx) in targets.items():
+            item = ex[sect][idx]
+            why = next((i["problem"] for i in issues
+                        if parse_where(i["where"]) == (sect, idx)), "")
+            opts = f"　選項 {' / '.join(item['opts'])}" if "opts" in item else ""
+            body.append(f"[{key}] {item['q']}{opts}　答案 {item['ans']}"
+                        + chr(10) + f"      問題：{why}")
+
+        def check(payload, want=targets):
+            if not isinstance(payload, dict) or not isinstance(payload.get("items"), dict):
+                return ["輸出要是 {\"items\": {…}}"]
+            got = payload["items"]
+            missing = [k for k in want if k not in got]
+            if missing:
+                return [f"漏了 {missing}"]
             errs = []
-            for key, n in w.items():
-                got = payload.get(key)
-                if not isinstance(got, list) or len(got) != n:
-                    errs.append(f"{key} 要剛好 {n} 題")
-            return errs or gen.validate_exercises(payload, w)
+            for k, (sect, _) in want.items():
+                item = got[k]
+                if not isinstance(item, dict) or not item.get("q") or not item.get("ans"):
+                    errs.append(f"{k} 缺 q/ans")
+                    continue
+                if sect == "mcq":
+                    opts = item.get("opts")
+                    if not isinstance(opts, list) or len(opts) != 4:
+                        errs.append(f"{k} 要四個選項")
+                    elif item["ans"] not in opts:
+                        errs.append(f"{k} 答案不在選項裡")
+                    elif len(set(opts)) != 4:
+                        errs.append(f"{k} 選項重複")
+            # 單題也要過閘：提示、標點、補語
+            probe = {sect: [] for sect in ("mcq", "fill", "translate", "unscramble")}
+            for k, (sect, _) in want.items():
+                probe[sect].append(got[k])
+            return (errs + gen.validate_hints(probe)
+                    + gen.validate_punctuation(probe)
+                    + gen.validate_complements(probe))
 
         fixed, errs = gen.ask(
             FIX_PROMPT.format(no=no, focus=lesson["focus"],
                               words="、".join(w["en"] for w in lesson["words"]),
-                              n_mcq=want["mcq"], n_fill=want["fill"],
-                              n_tr=want["translate"], n_un=want["unscramble"],
-                              body=lesson_text(data),
-                              issues="\n".join(
-                                  f"- {i['where']}「{i['quote']}」：{i['problem']}"
-                                  f"（建議：{i['fix']}）" for i in issues)),
+                              body=chr(10).join(body)),
             check, attempts=5, stage=f"修訂題目 L{no:02d}")
         if fixed is None:
             print(f"L{no:02d} ⚠ 修訂失敗：{'；'.join(errs)}", flush=True)
             continue
-        changed = sum(1 for k in want
-                      for a, b in zip(ex[k], fixed[k]) if a != b)
-        for k in want:
-            ex[k] = fixed[k]
+
+        for k, (sect, idx) in targets.items():
+            ex[sect][idx] = fixed["items"][k]
         gen.rebuild_scrambles(ex, seed=no)
-        gen.shuffle_options(ex, seed=no)
         path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
-        print(f"L{no:02d} ✓ 改了 {changed} 題", flush=True)
+        print(f"L{no:02d} ✓ 改了 {len(targets)} 題（只動這幾題）", flush=True)
 
 
 def main() -> None:
