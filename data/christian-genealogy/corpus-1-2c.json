@@ -1,0 +1,1948 @@
+{
+  "meta": {
+    "title": "〈從使徒到大公〉譜系表・文獻母體（1–200 CE）",
+    "source": "data/christian-genealogy/ancient-canon-1-2c.json",
+    "generated_by": "scripts/genealogy_build_corpus.mjs",
+    "ruling_2026_09_17": "母體取 109；馬吉安（3 筆）與孟他努神諭（2 筆）不收",
+    "dropped": [
+      "馬吉安主之福音",
+      "馬吉安使徒書信集",
+      "對觀",
+      "孟他努神諭殘篇",
+      "百基拉與馬克西米拉神諭"
+    ],
+    "merged_aliases": [
+      "猶斯定第一護教詞 → 第一護教詞",
+      "猶斯定第二護教詞 → 第二護教詞",
+      "特土良護教辯 → 護教辯",
+      "波利卡殉道錄 → 波利甲殉道錄",
+      "里昂殉道錄 → 里昂與維埃納教會殉道書",
+      "駁特里風護教詞 → 與特里風對話錄",
+      "克勉書 → 克勉致哥林多人前書",
+      "羅馬克勉一書 → 克勉致哥林多人前書",
+      "迦太基的德爾都良致殉道者書 → 勸殉道致殉道者書",
+      "帕皮亞遺篇 → 主道論集殘篇",
+      "〈雷：完美理智辭〉 → 雷：完美理智辭",
+      "波利甲致腓立比人書 → 坡旅甲致腓立比人書"
+    ],
+    "counts": {
+      "total": 94,
+      "near-canon": 5,
+      "zheng": 65,
+      "wai": 24
+    }
+  },
+  "works": [
+    {
+      "title_zh": "哥林多三書",
+      "aka": [],
+      "bucket": "near-canon",
+      "canon": "zheng",
+      "collection": "經藏",
+      "division": "保羅書信部",
+      "author": "託名保羅",
+      "era": "約 2 世紀",
+      "range": [
+        101,
+        200
+      ],
+      "place": "小亞細亞",
+      "language": "希臘文",
+      "tier": "eastern",
+      "source": null,
+      "title_orig": "3 Corinthians",
+      "link": "/apocrypha"
+    },
+    {
+      "title_zh": "巴拿巴書",
+      "aka": [],
+      "bucket": "near-canon",
+      "canon": "zheng",
+      "collection": "經藏",
+      "division": "第二大公書信部",
+      "author": "託名巴拿巴",
+      "era": "約 100–130",
+      "range": [
+        100,
+        130
+      ],
+      "place": "埃及（亞歷山卓）",
+      "language": "希臘文",
+      "tier": "patristic",
+      "source": null,
+      "title_orig": "Epistle of Barnabas",
+      "link": "/apocrypha"
+    },
+    {
+      "title_zh": "克勉致哥林多人前書",
+      "aka": [
+        "克勉書",
+        "羅馬克勉一書",
+        "克勉致哥林多人前書"
+      ],
+      "bucket": "near-canon",
+      "canon": "zheng",
+      "collection": "經藏",
+      "division": "第二大公書信部",
+      "author": "羅馬的克勉",
+      "era": "約 96",
+      "range": [
+        96,
+        96
+      ],
+      "place": "羅馬",
+      "language": "希臘文",
+      "tier": "patristic",
+      "source": null,
+      "title_orig": "1 Clement",
+      "link": "/apocrypha"
+    },
+    {
+      "title_zh": "黑馬牧人書",
+      "aka": [
+        "黑馬牧人書"
+      ],
+      "bucket": "near-canon",
+      "canon": "zheng",
+      "collection": "經藏",
+      "division": "第二大公書信部",
+      "author": "黑馬",
+      "era": "約 2 世紀中",
+      "range": [
+        134,
+        166
+      ],
+      "place": "羅馬",
+      "language": "希臘文",
+      "tier": "patristic",
+      "source": null,
+      "title_orig": "Shepherd of Hermas",
+      "link": "/apocrypha"
+    },
+    {
+      "title_zh": "彼得啟示錄",
+      "aka": [],
+      "bucket": "near-canon",
+      "canon": "zheng",
+      "collection": "經藏",
+      "division": "啟示錄部",
+      "author": "託名彼得",
+      "era": "約 2 世紀初",
+      "range": [
+        101,
+        133
+      ],
+      "place": "埃及",
+      "language": "希臘文",
+      "tier": "patristic",
+      "source": null,
+      "title_orig": "Apocalypse of Peter",
+      "link": "/apocrypha"
+    },
+    {
+      "title_zh": "以斯拉記四",
+      "aka": [],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "經藏",
+      "division": "歷史書部",
+      "author": "託名以斯拉",
+      "era": "約 1 世紀末",
+      "range": [
+        67,
+        100
+      ],
+      "place": "巴勒斯坦",
+      "language": "希伯來文（拉丁文存世）",
+      "tier": "lxx",
+      "source": null,
+      "title_orig": "4 Esdras (2 Esdras)",
+      "link": "/apocrypha"
+    },
+    {
+      "title_zh": "馬加比記四",
+      "aka": [],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "經藏",
+      "division": "歷史書部",
+      "author": "佚名",
+      "era": "約 1 世紀",
+      "range": [
+        1,
+        100
+      ],
+      "place": "安提阿／亞歷山卓",
+      "language": "希臘文",
+      "tier": "lxx",
+      "source": null,
+      "title_orig": "4 Maccabees",
+      "link": "/apocrypha"
+    },
+    {
+      "title_zh": "巴錄二書",
+      "aka": [],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "經藏",
+      "division": "天啟先知書部",
+      "author": "託名巴錄",
+      "era": "約 1 世紀末",
+      "range": [
+        67,
+        100
+      ],
+      "place": "巴勒斯坦",
+      "language": "希伯來文（敘利亞文存世）",
+      "tier": "eastern",
+      "source": null,
+      "title_orig": "2 Baruch",
+      "link": "/apocrypha"
+    },
+    {
+      "title_zh": "十二使徒遺訓",
+      "aka": [],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "律藏",
+      "division": "使徒律部",
+      "author": "佚名",
+      "era": "1 世紀末",
+      "range": [
+        67,
+        100
+      ],
+      "place": "敘利亞",
+      "language": "希臘文",
+      "tier": null,
+      "source": null,
+      "title_orig": "Didache",
+      "link": "/apocrypha"
+    },
+    {
+      "title_zh": "使徒信經",
+      "aka": [],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "律藏",
+      "division": "地方律部",
+      "author": "佚名",
+      "era": "2–4 世紀",
+      "range": [
+        101,
+        400
+      ],
+      "place": "羅馬",
+      "language": "拉丁文",
+      "tier": null,
+      "source": null,
+      "title_orig": "Apostles’ Creed",
+      "link": "/creeds"
+    },
+    {
+      "title_zh": "第一護教詞",
+      "aka": [
+        "猶斯定第一護教詞"
+      ],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "論藏",
+      "division": "護教詞部",
+      "author": "猶斯定",
+      "era": "2 世紀",
+      "range": [
+        101,
+        200
+      ],
+      "place": "羅馬",
+      "language": "希臘文",
+      "tier": null,
+      "source": null,
+      "title_orig": "First Apology",
+      "link": "/fathers"
+    },
+    {
+      "title_zh": "第二護教詞",
+      "aka": [
+        "猶斯定第二護教詞"
+      ],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "論藏",
+      "division": "護教詞部",
+      "author": "猶斯定",
+      "era": "2 世紀",
+      "range": [
+        101,
+        200
+      ],
+      "place": "羅馬",
+      "language": "希臘文",
+      "tier": null,
+      "source": null,
+      "title_orig": "Second Apology",
+      "link": "/fathers"
+    },
+    {
+      "title_zh": "與特里風對話錄",
+      "aka": [
+        "駁特里風護教詞",
+        "與特里風對話錄"
+      ],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "論藏",
+      "division": "護教詞部",
+      "author": "猶斯定",
+      "era": "2 世紀",
+      "range": [
+        101,
+        200
+      ],
+      "place": "以弗所",
+      "language": "希臘文",
+      "tier": null,
+      "source": null,
+      "title_orig": "Dialogue with Trypho",
+      "link": "/fathers"
+    },
+    {
+      "title_zh": "護教辯",
+      "aka": [
+        "特土良護教辯"
+      ],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "論藏",
+      "division": "護教詞部",
+      "author": "特土良",
+      "era": "2 世紀",
+      "range": [
+        101,
+        200
+      ],
+      "place": "迦太基",
+      "language": "拉丁文",
+      "tier": null,
+      "source": null,
+      "title_orig": "Apologeticus",
+      "link": "/fathers"
+    },
+    {
+      "title_zh": "塔提安致希臘人辯",
+      "aka": [],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "論藏",
+      "division": "護教詞部",
+      "author": "塔提安",
+      "era": "約170年",
+      "range": [
+        170,
+        170
+      ],
+      "place": "羅馬／敘利亞",
+      "language": "希臘文",
+      "tier": null,
+      "source": null,
+      "title_orig": "Address of Tatian to the Greeks",
+      "link": "/fathers/4e3d16fc-ef4f-420f-a3ec-56e2e92d659f?page=8"
+    },
+    {
+      "title_zh": "提阿非羅致奧托利庫護教書",
+      "aka": [],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "論藏",
+      "division": "護教詞部",
+      "author": "提阿非羅",
+      "era": "約180年",
+      "range": [
+        180,
+        180
+      ],
+      "place": "安提阿",
+      "language": "希臘文",
+      "tier": null,
+      "source": null,
+      "title_orig": "Theophilus to Autolycus",
+      "link": "/fathers/4e3d16fc-ef4f-420f-a3ec-56e2e92d659f?page=9"
+    },
+    {
+      "title_zh": "使徒傳道闡證",
+      "aka": [],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "論藏",
+      "division": "護教詞部",
+      "author": "愛任紐",
+      "era": "約190年",
+      "range": [
+        190,
+        190
+      ],
+      "place": "高盧里昂",
+      "language": "希臘文（亞美尼亞譯存）",
+      "tier": null,
+      "source": null,
+      "title_orig": "The Demonstration of the Apostolic Preaching",
+      "link": "/fathers"
+    },
+    {
+      "title_zh": "亞歷山卓的克勉勸希臘人歸主辭",
+      "aka": [],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "論藏",
+      "division": "護教詞部",
+      "author": "亞歷山卓的克勉",
+      "era": "約195年",
+      "range": [
+        195,
+        195
+      ],
+      "place": "亞歷山卓",
+      "language": "希臘文",
+      "tier": null,
+      "source": null,
+      "title_orig": "Exhortation to the Heathen (Protrepticus)",
+      "link": "/fathers/4e3d16fc-ef4f-420f-a3ec-56e2e92d659f?page=19"
+    },
+    {
+      "title_zh": "致諸民書",
+      "aka": [],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "論藏",
+      "division": "護教詞部",
+      "author": "特土良",
+      "era": "約197年",
+      "range": [
+        197,
+        197
+      ],
+      "place": "迦太基",
+      "language": "拉丁文",
+      "tier": null,
+      "source": null,
+      "title_orig": "To the Nations (Ad Nationes)",
+      "link": "/fathers/364dac2e-410f-4906-be63-8bb86b4865ee?page=20"
+    },
+    {
+      "title_zh": "奧克塔維護教對話錄",
+      "aka": [],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "論藏",
+      "division": "護教詞部",
+      "author": "米努修",
+      "era": "約200年",
+      "range": [
+        200,
+        200
+      ],
+      "place": "羅馬",
+      "language": "拉丁文",
+      "tier": null,
+      "source": null,
+      "title_orig": "The Octavius of Minucius Felix",
+      "link": "/fathers/904661d3-16fc-4f37-bb04-f7c4aa7671e9?page=10"
+    },
+    {
+      "title_zh": "基督真理護教遺篇彙編（補遺）",
+      "aka": [],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "論藏",
+      "division": "護教詞部",
+      "author": "二三世紀佚名",
+      "era": "約2-4世紀",
+      "range": [
+        101,
+        400
+      ],
+      "place": "地中海",
+      "language": "希臘文",
+      "tier": null,
+      "source": null,
+      "title_orig": "Apocrypha of the New Testament: Apologetic Remains",
+      "link": "/fathers"
+    },
+    {
+      "title_zh": "駁異端論",
+      "aka": [],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "論藏",
+      "division": "反異端部",
+      "author": "愛任紐",
+      "era": "2 世紀",
+      "range": [
+        101,
+        200
+      ],
+      "place": "里昂",
+      "language": "希臘文",
+      "tier": null,
+      "source": null,
+      "title_orig": "Adversus Haereses",
+      "link": "/fathers/c98d358d-7066-4691-a896-b7232707b0db?page=85"
+    },
+    {
+      "title_zh": "古老長老遺篇",
+      "aka": [],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "論藏",
+      "division": "反異端部",
+      "author": "早期長老",
+      "era": "約2世紀",
+      "range": [
+        101,
+        200
+      ],
+      "place": "不詳",
+      "language": "希臘文",
+      "tier": null,
+      "source": null,
+      "title_orig": "Fragments of the Ancient Elders (Quadratus etc.)",
+      "link": "/fathers"
+    },
+    {
+      "title_zh": "亞他那哥拉為基督徒請命書",
+      "aka": [],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "論藏",
+      "division": "反異端部",
+      "author": "亞他那哥拉",
+      "era": "約177年",
+      "range": [
+        177,
+        177
+      ],
+      "place": "雅典",
+      "language": "希臘文",
+      "tier": null,
+      "source": null,
+      "title_orig": "A Plea for the Christians (Athenagoras)",
+      "link": "/fathers/4e3d16fc-ef4f-420f-a3ec-56e2e92d659f?page=25"
+    },
+    {
+      "title_zh": "愛任紐遺篇",
+      "aka": [],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "論藏",
+      "division": "反異端部",
+      "author": "愛任紐",
+      "era": "約2世紀末",
+      "range": [
+        167,
+        200
+      ],
+      "place": "高盧里昂",
+      "language": "希臘文",
+      "tier": null,
+      "source": null,
+      "title_orig": "Fragments from the Lost Writings of Irenaeus",
+      "link": "/fathers/c98d358d-7066-4691-a896-b7232707b0db?page=105"
+    },
+    {
+      "title_zh": "駁猶太人論",
+      "aka": [],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "論藏",
+      "division": "反異端部",
+      "author": "特土良",
+      "era": "約198年",
+      "range": [
+        198,
+        198
+      ],
+      "place": "迦太基",
+      "language": "拉丁文",
+      "tier": null,
+      "source": null,
+      "title_orig": "An Answer to the Jews",
+      "link": "/fathers/364dac2e-410f-4906-be63-8bb86b4865ee?page=24"
+    },
+    {
+      "title_zh": "異端時效抗辯",
+      "aka": [],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "論藏",
+      "division": "反異端部",
+      "author": "特土良",
+      "era": "約200年",
+      "range": [
+        200,
+        200
+      ],
+      "place": "迦太基",
+      "language": "拉丁文",
+      "tier": null,
+      "source": null,
+      "title_orig": "The Prescription Against Heretics",
+      "link": "/fathers/364dac2e-410f-4906-be63-8bb86b4865ee?page=33"
+    },
+    {
+      "title_zh": "駁赫摩根尼",
+      "aka": [],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "論藏",
+      "division": "反異端部",
+      "author": "特土良",
+      "era": "約200年",
+      "range": [
+        200,
+        200
+      ],
+      "place": "迦太基",
+      "language": "拉丁文",
+      "tier": null,
+      "source": null,
+      "title_orig": "Against Hermogenes",
+      "link": "/fathers/364dac2e-410f-4906-be63-8bb86b4865ee?page=55"
+    },
+    {
+      "title_zh": "論死人復活",
+      "aka": [],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "論藏",
+      "division": "系統與教義部",
+      "author": "亞他那哥拉",
+      "era": "約2世紀末",
+      "range": [
+        167,
+        200
+      ],
+      "place": "雅典",
+      "language": "希臘文",
+      "tier": null,
+      "source": null,
+      "title_orig": "On the Resurrection of the Dead (Athenagoras)",
+      "link": "/fathers/4e3d16fc-ef4f-420f-a3ec-56e2e92d659f?page=29"
+    },
+    {
+      "title_zh": "雜文集",
+      "aka": [],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "論藏",
+      "division": "系統與教義部",
+      "author": "亞歷山卓的克勉",
+      "era": "約200年",
+      "range": [
+        200,
+        200
+      ],
+      "place": "亞歷山卓",
+      "language": "希臘文",
+      "tier": null,
+      "source": null,
+      "title_orig": "The Stromata (Miscellanies)",
+      "link": "/fathers/4e3d16fc-ef4f-420f-a3ec-56e2e92d659f?page=39"
+    },
+    {
+      "title_zh": "基督徒見證魂論",
+      "aka": [],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "論藏",
+      "division": "系統與教義部",
+      "author": "特土良",
+      "era": "約198年",
+      "range": [
+        198,
+        198
+      ],
+      "place": "迦太基",
+      "language": "拉丁文",
+      "tier": null,
+      "source": null,
+      "title_orig": "The Testimony of the Soul",
+      "link": "/fathers/364dac2e-410f-4906-be63-8bb86b4865ee?page=26"
+    },
+    {
+      "title_zh": "論基督與敵基督",
+      "aka": [],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "論藏",
+      "division": "系統與教義部",
+      "author": "希波律陀",
+      "era": "約200年",
+      "range": [
+        200,
+        200
+      ],
+      "place": "羅馬",
+      "language": "希臘文",
+      "tier": null,
+      "source": null,
+      "title_orig": "Treatise on Christ and Antichrist",
+      "link": "/fathers"
+    },
+    {
+      "title_zh": "主道論集殘篇",
+      "aka": [
+        "帕皮亞遺篇",
+        "主道論集殘篇"
+      ],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "論藏",
+      "division": "釋經與釋祕部",
+      "author": "希拉波利的帕皮亞",
+      "era": "約2世紀初",
+      "range": [
+        101,
+        133
+      ],
+      "place": "希拉波利",
+      "language": "希臘文",
+      "tier": null,
+      "source": null,
+      "title_orig": "Fragments of Papias",
+      "link": "/fathers/c98d358d-7066-4691-a896-b7232707b0db?page=48"
+    },
+    {
+      "title_zh": "克勉經文擇要",
+      "aka": [],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "論藏",
+      "division": "釋經與釋祕部",
+      "author": "亞歷山卓的克勉",
+      "era": "約200年",
+      "range": [
+        200,
+        200
+      ],
+      "place": "亞歷山卓",
+      "language": "希臘文",
+      "tier": null,
+      "source": null,
+      "title_orig": "Fragments and Excerpta (Eclogae, Excerpta ex Theodoto)",
+      "link": "/fathers"
+    },
+    {
+      "title_zh": "何等富人得救論",
+      "aka": [],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "論藏",
+      "division": "神祕主義部",
+      "author": "亞歷山卓的克勉",
+      "era": "約200年",
+      "range": [
+        200,
+        200
+      ],
+      "place": "亞歷山卓",
+      "language": "希臘文",
+      "tier": null,
+      "source": null,
+      "title_orig": "Who Is the Rich Man That Shall Be Saved?",
+      "link": "/fathers/4e3d16fc-ef4f-420f-a3ec-56e2e92d659f?page=61"
+    },
+    {
+      "title_zh": "波利甲殉道錄",
+      "aka": [
+        "波利卡殉道錄",
+        "波利甲殉道錄"
+      ],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "史傳藏",
+      "division": "殉道受難錄（錄）",
+      "author": "士每拿教會",
+      "era": "2 世紀",
+      "range": [
+        101,
+        200
+      ],
+      "place": "士每拿",
+      "language": "希臘文",
+      "tier": null,
+      "source": null,
+      "title_orig": "Martyrdom of Polycarp",
+      "link": "/apocrypha"
+    },
+    {
+      "title_zh": "里昂與維埃納教會殉道書",
+      "aka": [
+        "里昂殉道錄",
+        "里昂與維埃納教會殉道書"
+      ],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "史傳藏",
+      "division": "殉道受難錄（錄）",
+      "author": "維埃納與里昂教會",
+      "era": "2 世紀",
+      "range": [
+        101,
+        200
+      ],
+      "place": "里昂",
+      "language": "希臘文",
+      "tier": null,
+      "source": null,
+      "title_orig": "Letter of the Churches of Vienne and Lyons",
+      "link": "/fathers"
+    },
+    {
+      "title_zh": "猶斯定及其同伴殉道錄",
+      "aka": [],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "史傳藏",
+      "division": "殉道受難錄（錄）",
+      "author": "羅馬教會",
+      "era": "約165年",
+      "range": [
+        165,
+        165
+      ],
+      "place": "羅馬",
+      "language": "希臘文",
+      "tier": null,
+      "source": null,
+      "title_orig": "The Martyrdom of Justin Martyr",
+      "link": "/fathers/c98d358d-7066-4691-a896-b7232707b0db?page=84"
+    },
+    {
+      "title_zh": "斯基利殉道者行傳",
+      "aka": [],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "史傳藏",
+      "division": "殉道受難錄（錄）",
+      "author": "北非教會",
+      "era": "約180年",
+      "range": [
+        180,
+        180
+      ],
+      "place": "北非斯基利",
+      "language": "拉丁文",
+      "tier": null,
+      "source": null,
+      "title_orig": "The Acts of the Martyrdom of the Scillitan Martyrs",
+      "link": "/fathers"
+    },
+    {
+      "title_zh": "萊蘭茲約翰福音殘片",
+      "aka": [],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "譯校藏",
+      "division": "古卷寶抄部",
+      "author": "埃及教會（佚名抄手）",
+      "era": "約 125–150",
+      "range": [
+        125,
+        150
+      ],
+      "place": "埃及",
+      "language": "希臘文",
+      "tier": null,
+      "source": null,
+      "title_orig": "Papyrus Rylands Greek 457 (P52)",
+      "link": null
+    },
+    {
+      "title_zh": "徹斯特‧貝蒂聖經蒲草紙",
+      "aka": [],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "譯校藏",
+      "division": "古卷寶抄部",
+      "author": "埃及教會（佚名抄手群）",
+      "era": "2–4 世紀",
+      "range": [
+        101,
+        400
+      ],
+      "place": "埃及法尤姆一帶",
+      "language": "希臘文",
+      "tier": null,
+      "source": null,
+      "title_orig": "Chester Beatty Biblical Papyri",
+      "link": null
+    },
+    {
+      "title_zh": "博德默蒲草紙",
+      "aka": [],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "譯校藏",
+      "division": "古卷寶抄部",
+      "author": "埃及修道圈（佚名抄手群）",
+      "era": "2–4 世紀",
+      "range": [
+        101,
+        400
+      ],
+      "place": "上埃及",
+      "language": "希臘文／科普特文",
+      "tier": null,
+      "source": null,
+      "title_orig": "Bodmer Papyri",
+      "link": null
+    },
+    {
+      "title_zh": "奧克西林庫斯蒲草紙聖經群",
+      "aka": [],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "譯校藏",
+      "division": "古卷寶抄部",
+      "author": "埃及教會（佚名抄手群）",
+      "era": "2–6 世紀",
+      "range": [
+        101,
+        600
+      ],
+      "place": "奧克西林庫斯",
+      "language": "希臘文",
+      "tier": null,
+      "source": null,
+      "title_orig": "Oxyrhynchus Biblical Papyri",
+      "link": null
+    },
+    {
+      "title_zh": "九六七號蒲草紙",
+      "aka": [],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "譯校藏",
+      "division": "古卷寶抄部",
+      "author": "埃及抄手",
+      "era": "2–3 世紀",
+      "range": [
+        101,
+        300
+      ],
+      "place": "埃及",
+      "language": "希臘文",
+      "tier": null,
+      "source": null,
+      "title_orig": "Papyrus 967",
+      "link": null
+    },
+    {
+      "title_zh": "四福音合參",
+      "aka": [],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "譯校藏",
+      "division": "東方與希臘譯經部",
+      "author": "塔提安",
+      "era": "2 世紀",
+      "range": [
+        101,
+        200
+      ],
+      "place": "敘利亞",
+      "language": "敘利亞文",
+      "tier": null,
+      "source": null,
+      "title_orig": "Diatessaron",
+      "link": null
+    },
+    {
+      "title_zh": "別西大敘利亞文大譯本",
+      "aka": [],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "譯校藏",
+      "division": "東方與希臘譯經部",
+      "author": "佚名抄本",
+      "era": "2–5 世紀",
+      "range": [
+        101,
+        500
+      ],
+      "place": "埃德薩",
+      "language": "敘利亞文",
+      "tier": null,
+      "source": null,
+      "title_orig": "Peshitta",
+      "link": "/scripture"
+    },
+    {
+      "title_zh": "古敘利亞福音譯本",
+      "aka": [],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "譯校藏",
+      "division": "東方與希臘譯經部",
+      "author": "敘利亞教會（佚名）",
+      "era": "2–3 世紀",
+      "range": [
+        101,
+        300
+      ],
+      "place": "埃德薩一帶",
+      "language": "敘利亞文",
+      "tier": null,
+      "source": null,
+      "title_orig": "Vetus Syra (Evangelion da-Mepharreshe)",
+      "link": null
+    },
+    {
+      "title_zh": "古拉丁文譯本",
+      "aka": [],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "譯校藏",
+      "division": "西方與邊區譯經部",
+      "author": "佚名抄本",
+      "era": "2–4 世紀",
+      "range": [
+        101,
+        400
+      ],
+      "place": "北非",
+      "language": "拉丁文",
+      "tier": null,
+      "source": null,
+      "title_orig": "Vetus Latina",
+      "link": "/scripture"
+    },
+    {
+      "title_zh": "穆拉託利正典殘篇",
+      "aka": [],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "譯校藏",
+      "division": "校勘考異部",
+      "author": "佚名（羅馬教會圈）",
+      "era": "約 170–200（一說 4 世紀）",
+      "range": [
+        170,
+        200
+      ],
+      "place": "羅馬",
+      "language": "拉丁文",
+      "tier": null,
+      "source": null,
+      "title_orig": "Fragmentum Muratorianum",
+      "link": null
+    },
+    {
+      "title_zh": "坡旅甲致腓立比人書",
+      "aka": [
+        "波利甲致腓立比人書"
+      ],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "書函藏",
+      "division": "大公通諭與牧函部",
+      "author": "坡旅甲",
+      "era": "2 世紀",
+      "range": [
+        101,
+        200
+      ],
+      "place": "士每拿",
+      "language": "希臘文",
+      "tier": null,
+      "source": null,
+      "title_orig": "Polycarp to the Philippians",
+      "link": "/apocrypha"
+    },
+    {
+      "title_zh": "託名克勉致哥林多人後書",
+      "aka": [],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "書函藏",
+      "division": "大公通諭與牧函部",
+      "author": "託名羅馬的克勉",
+      "era": "約2世紀中",
+      "range": [
+        134,
+        166
+      ],
+      "place": "哥林多／羅馬",
+      "language": "希臘文",
+      "tier": null,
+      "source": null,
+      "title_orig": "Second Epistle of Clement to the Corinthians",
+      "link": "/fathers/75d8aae0-7431-4be9-baee-c57d26599653?page=60"
+    },
+    {
+      "title_zh": "伊格那丟致以弗所人書",
+      "aka": [],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "書函藏",
+      "division": "大公通諭與牧函部",
+      "author": "安提阿的伊格那丟",
+      "era": "約107年",
+      "range": [
+        107,
+        107
+      ],
+      "place": "士每拿（赴羅馬途中）",
+      "language": "希臘文",
+      "tier": null,
+      "source": null,
+      "title_orig": "Epistle of Ignatius to the Ephesians",
+      "link": "/fathers"
+    },
+    {
+      "title_zh": "伊格那丟致馬內夏人書",
+      "aka": [],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "書函藏",
+      "division": "大公通諭與牧函部",
+      "author": "安提阿的伊格那丟",
+      "era": "約107年",
+      "range": [
+        107,
+        107
+      ],
+      "place": "士每拿",
+      "language": "希臘文",
+      "tier": null,
+      "source": null,
+      "title_orig": "Epistle of Ignatius to the Magnesians",
+      "link": "/fathers"
+    },
+    {
+      "title_zh": "伊格那丟致他拉勒人書",
+      "aka": [],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "書函藏",
+      "division": "大公通諭與牧函部",
+      "author": "安提阿的伊格那丟",
+      "era": "約107年",
+      "range": [
+        107,
+        107
+      ],
+      "place": "士每拿",
+      "language": "希臘文",
+      "tier": null,
+      "source": null,
+      "title_orig": "Epistle of Ignatius to the Trallians",
+      "link": "/fathers"
+    },
+    {
+      "title_zh": "伊格那丟致羅馬人書",
+      "aka": [],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "書函藏",
+      "division": "大公通諭與牧函部",
+      "author": "安提阿的伊格那丟",
+      "era": "約107年",
+      "range": [
+        107,
+        107
+      ],
+      "place": "士每拿",
+      "language": "希臘文",
+      "tier": null,
+      "source": null,
+      "title_orig": "Epistle of Ignatius to the Romans",
+      "link": "/fathers"
+    },
+    {
+      "title_zh": "伊格那丟致非拉鐵非人書",
+      "aka": [],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "書函藏",
+      "division": "大公通諭與牧函部",
+      "author": "安提阿的伊格那丟",
+      "era": "約107年",
+      "range": [
+        107,
+        107
+      ],
+      "place": "特羅亞",
+      "language": "希臘文",
+      "tier": null,
+      "source": null,
+      "title_orig": "Epistle of Ignatius to the Philadelphians",
+      "link": "/fathers"
+    },
+    {
+      "title_zh": "伊格那丟致士每拿人書",
+      "aka": [],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "書函藏",
+      "division": "大公通諭與牧函部",
+      "author": "安提阿的伊格那丟",
+      "era": "約107年",
+      "range": [
+        107,
+        107
+      ],
+      "place": "特羅亞",
+      "language": "希臘文",
+      "tier": null,
+      "source": null,
+      "title_orig": "Epistle of Ignatius to the Smyrnaeans",
+      "link": "/fathers"
+    },
+    {
+      "title_zh": "伊格那丟致波利甲書",
+      "aka": [],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "書函藏",
+      "division": "大公通諭與牧函部",
+      "author": "安提阿的伊格那丟",
+      "era": "約107年",
+      "range": [
+        107,
+        107
+      ],
+      "place": "特羅亞",
+      "language": "希臘文",
+      "tier": null,
+      "source": null,
+      "title_orig": "Epistle of Ignatius to Polycarp",
+      "link": "/fathers"
+    },
+    {
+      "title_zh": "致丟格那妥書",
+      "aka": [],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "書函藏",
+      "division": "大公通諭與牧函部",
+      "author": "佚名（託名馬太斯）",
+      "era": "約2世紀",
+      "range": [
+        101,
+        200
+      ],
+      "place": "不詳",
+      "language": "希臘文",
+      "tier": null,
+      "source": null,
+      "title_orig": "Epistle to Diognetus",
+      "link": "/fathers/c98d358d-7066-4691-a896-b7232707b0db?page=10"
+    },
+    {
+      "title_zh": "勸殉道致殉道者書",
+      "aka": [
+        "迦太基的德爾都良致殉道者書",
+        "勸殉道致殉道者書"
+      ],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "書函藏",
+      "division": "神學交鋒與靈修尺牘部",
+      "author": "德爾都良",
+      "era": "約 197",
+      "range": [
+        197,
+        197
+      ],
+      "place": "迦太基",
+      "language": "拉丁文",
+      "tier": null,
+      "source": null,
+      "title_orig": "Ad Martyras",
+      "link": null
+    },
+    {
+      "title_zh": "哥林多的狄奧尼修書信",
+      "aka": [],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "書函藏",
+      "division": "早期主教與教宗書函部",
+      "author": "哥林多的狄奧尼修",
+      "era": "約 170",
+      "range": [
+        170,
+        170
+      ],
+      "place": "哥林多",
+      "language": "希臘文",
+      "tier": null,
+      "source": null,
+      "title_orig": "Letters of Dionysius of Corinth",
+      "link": null
+    },
+    {
+      "title_zh": "洗禮論",
+      "aka": [],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "禮儀藏",
+      "division": "聖事密典與教規部",
+      "author": "特土良",
+      "era": "約198年",
+      "range": [
+        198,
+        198
+      ],
+      "place": "迦太基",
+      "language": "拉丁文",
+      "tier": null,
+      "source": null,
+      "title_orig": "On Baptism",
+      "link": "/fathers/364dac2e-410f-4906-be63-8bb86b4865ee?page=83"
+    },
+    {
+      "title_zh": "祈禱論",
+      "aka": [],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "禮儀藏",
+      "division": "日課與經課部",
+      "author": "特土良",
+      "era": "約198年",
+      "range": [
+        198,
+        198
+      ],
+      "place": "迦太基",
+      "language": "拉丁文",
+      "tier": null,
+      "source": null,
+      "title_orig": "On Prayer",
+      "link": "/fathers/364dac2e-410f-4906-be63-8bb86b4865ee?page=86"
+    },
+    {
+      "title_zh": "救主基督頌",
+      "aka": [],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "詩藝藏",
+      "division": "希臘讚歌與禮儀詩部",
+      "author": "亞歷山卓的克萊門",
+      "era": "約 200",
+      "range": [
+        200,
+        200
+      ],
+      "place": "亞歷山卓",
+      "language": "希臘文",
+      "tier": null,
+      "source": null,
+      "title_orig": "Hymnus Christi Salvatoris (Paidagogos III)",
+      "link": null
+    },
+    {
+      "title_zh": "勸忍耐講章",
+      "aka": [],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "宣道藏",
+      "division": "節令與倫理講章部",
+      "author": "特土良",
+      "era": "約200年",
+      "range": [
+        200,
+        200
+      ],
+      "place": "迦太基",
+      "language": "拉丁文",
+      "tier": null,
+      "source": null,
+      "title_orig": "Of Patience",
+      "link": "/fathers/364dac2e-410f-4906-be63-8bb86b4865ee?page=91"
+    },
+    {
+      "title_zh": "論觀劇",
+      "aka": [],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "宣道藏",
+      "division": "節令與倫理講章部",
+      "author": "特土良",
+      "era": "約200年",
+      "range": [
+        200,
+        200
+      ],
+      "place": "迦太基",
+      "language": "拉丁文",
+      "tier": null,
+      "source": null,
+      "title_orig": "The Shows (De Spectaculis)",
+      "link": "/fathers/364dac2e-410f-4906-be63-8bb86b4865ee?page=14"
+    },
+    {
+      "title_zh": "導師基督教訓",
+      "aka": [],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "宣道藏",
+      "division": "啟蒙與教理講訓部",
+      "author": "亞歷山卓的克勉",
+      "era": "約198年",
+      "range": [
+        198,
+        198
+      ],
+      "place": "亞歷山卓",
+      "language": "希臘文",
+      "tier": null,
+      "source": null,
+      "title_orig": "The Instructor (Paedagogus)",
+      "link": "/fathers/4e3d16fc-ef4f-420f-a3ec-56e2e92d659f?page=33"
+    },
+    {
+      "title_zh": "墨利托論逾越",
+      "aka": [],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "宣道藏",
+      "division": "希臘教父講道部",
+      "author": "撒狄斯的墨利托",
+      "era": "約 165",
+      "range": [
+        165,
+        165
+      ],
+      "place": "小亞細亞撒狄斯",
+      "language": "希臘文",
+      "tier": null,
+      "source": null,
+      "title_orig": "Peri Pascha (On Pascha)",
+      "link": null
+    },
+    {
+      "title_zh": "自然物相志",
+      "aka": [],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "類書藏",
+      "division": "類書與博物志部",
+      "author": "佚名",
+      "era": "2–4 世紀",
+      "range": [
+        101,
+        400
+      ],
+      "place": "亞歷山卓",
+      "language": "希臘文",
+      "tier": null,
+      "source": null,
+      "title_orig": "Physiologus",
+      "link": null
+    },
+    {
+      "title_zh": "塞克斯圖斯箴言集",
+      "aka": [],
+      "bucket": "zheng",
+      "canon": "zheng",
+      "collection": "類書藏",
+      "division": "類書與博物志部",
+      "author": "塞克斯圖斯（基督教化編訂）",
+      "era": "2–3 世紀",
+      "range": [
+        101,
+        300
+      ],
+      "place": "亞歷山卓？",
+      "language": "希臘文",
+      "tier": null,
+      "source": null,
+      "title_orig": "Sententiae Sexti",
+      "link": null
+    },
+    {
+      "title_zh": "伊勒達與米達預言書",
+      "aka": [],
+      "bucket": "wai",
+      "canon": "wai",
+      "collection": "經藏",
+      "division": "大先知書部",
+      "author": "佚名",
+      "era": "約 1–2 世紀",
+      "range": [
+        1,
+        200
+      ],
+      "place": "巴勒斯坦",
+      "language": "希臘文",
+      "tier": null,
+      "source": "orthodox-apocrypha",
+      "title_orig": "Eldad and Modad",
+      "link": null
+    },
+    {
+      "title_zh": "真理福音",
+      "aka": [],
+      "bucket": "wai",
+      "canon": "wai",
+      "collection": "經藏",
+      "division": "福音書部",
+      "author": "瓦倫廷（學派）",
+      "era": "2 世紀",
+      "range": [
+        101,
+        200
+      ],
+      "place": "埃及／羅馬",
+      "language": "希臘文（科普特文存世）",
+      "tier": null,
+      "source": "gnostic",
+      "title_orig": "Gospel of Truth",
+      "link": "/gnostic"
+    },
+    {
+      "title_zh": "約翰密傳",
+      "aka": [],
+      "bucket": "wai",
+      "canon": "wai",
+      "collection": "經藏",
+      "division": "使徒密訓與神祕主義部",
+      "author": "佚名（塞特派）",
+      "era": "2 世紀",
+      "range": [
+        101,
+        200
+      ],
+      "place": "埃及",
+      "language": "希臘文（科普特文存世）",
+      "tier": null,
+      "source": "gnostic",
+      "title_orig": "Apocryphon of John",
+      "link": "/gnostic"
+    },
+    {
+      "title_zh": "三形初思錄",
+      "aka": [],
+      "bucket": "wai",
+      "canon": "wai",
+      "collection": "經藏",
+      "division": "使徒密訓與神祕主義部",
+      "author": "佚名（塞特派）",
+      "era": "2–3 世紀",
+      "range": [
+        101,
+        300
+      ],
+      "place": "埃及",
+      "language": "希臘文（科普特文存世）",
+      "tier": null,
+      "source": "gnostic",
+      "title_orig": "Trimorphic Protennoia",
+      "link": "/gnostic"
+    },
+    {
+      "title_zh": "歐格諾斯托斯論福者",
+      "aka": [],
+      "bucket": "wai",
+      "canon": "wai",
+      "collection": "經藏",
+      "division": "使徒密訓與神祕主義部",
+      "author": "託名歐格諾斯托斯",
+      "era": "約 1–2 世紀",
+      "range": [
+        1,
+        200
+      ],
+      "place": "埃及",
+      "language": "科普特文",
+      "tier": null,
+      "source": "gnostic",
+      "title_orig": "Eugnostos the Blessed",
+      "link": "/gnostic"
+    },
+    {
+      "title_zh": "耶穌智言",
+      "aka": [],
+      "bucket": "wai",
+      "canon": "wai",
+      "collection": "經藏",
+      "division": "使徒密訓與神祕主義部",
+      "author": "佚名（諾斯底）",
+      "era": "2–3 世紀",
+      "range": [
+        101,
+        300
+      ],
+      "place": "埃及",
+      "language": "希臘文（科普特文存世）",
+      "tier": null,
+      "source": "gnostic",
+      "title_orig": "Sophia of Jesus Christ",
+      "link": "/gnostic"
+    },
+    {
+      "title_zh": "救主對話錄",
+      "aka": [],
+      "bucket": "wai",
+      "canon": "wai",
+      "collection": "經藏",
+      "division": "使徒密訓與神祕主義部",
+      "author": "佚名（諾斯底）",
+      "era": "2 世紀",
+      "range": [
+        101,
+        200
+      ],
+      "place": "埃及／敘利亞",
+      "language": "希臘文（科普特文存世）",
+      "tier": null,
+      "source": "gnostic",
+      "title_orig": "Dialogue of the Savior",
+      "link": "/gnostic"
+    },
+    {
+      "title_zh": "靈魂釋義論",
+      "aka": [],
+      "bucket": "wai",
+      "canon": "wai",
+      "collection": "經藏",
+      "division": "使徒密訓與神祕主義部",
+      "author": "佚名（諾斯底）",
+      "era": "2–3 世紀",
+      "range": [
+        101,
+        300
+      ],
+      "place": "埃及",
+      "language": "希臘文（科普特文存世）",
+      "tier": null,
+      "source": "gnostic",
+      "title_orig": "Exegesis on the Soul",
+      "link": "/gnostic"
+    },
+    {
+      "title_zh": "瓦倫廷釋義",
+      "aka": [],
+      "bucket": "wai",
+      "canon": "wai",
+      "collection": "經藏",
+      "division": "使徒密訓與神祕主義部",
+      "author": "託名（瓦倫廷派）",
+      "era": "約 2–3 世紀",
+      "range": [
+        101,
+        300
+      ],
+      "place": "埃及",
+      "language": "科普特文",
+      "tier": null,
+      "source": "gnostic",
+      "title_orig": "A Valentinian Exposition",
+      "link": "/gnostic"
+    },
+    {
+      "title_zh": "復活論（致雷吉努斯書）",
+      "aka": [],
+      "bucket": "wai",
+      "canon": "wai",
+      "collection": "經藏",
+      "division": "使徒密訓與神祕主義部",
+      "author": "託名（瓦倫廷派）",
+      "era": "約 2–3 世紀",
+      "range": [
+        101,
+        300
+      ],
+      "place": "埃及",
+      "language": "科普特文",
+      "tier": null,
+      "source": "gnostic",
+      "title_orig": "Treatise on the Resurrection (Letter to Rheginos)",
+      "link": "/gnostic"
+    },
+    {
+      "title_zh": "彼得致腓力書信",
+      "aka": [],
+      "bucket": "wai",
+      "canon": "wai",
+      "collection": "經藏",
+      "division": "使徒密訓與神祕主義部",
+      "author": "託名彼得（諾斯底）",
+      "era": "約 2–3 世紀",
+      "range": [
+        101,
+        300
+      ],
+      "place": "埃及",
+      "language": "科普特文",
+      "tier": null,
+      "source": "gnostic",
+      "title_orig": "The Letter of Peter to Philip",
+      "link": "/gnostic"
+    },
+    {
+      "title_zh": "雷：完美理智辭",
+      "aka": [
+        "〈雷：完美理智辭〉"
+      ],
+      "bucket": "wai",
+      "canon": "wai",
+      "collection": "經藏",
+      "division": "使徒密訓與神祕主義部",
+      "author": "佚名（諾斯底）",
+      "era": "2–3 世紀",
+      "range": [
+        101,
+        300
+      ],
+      "place": "埃及",
+      "language": "希臘文（科普特文存世）",
+      "tier": null,
+      "source": "gnostic",
+      "title_orig": "The Thunder, Perfect Mind",
+      "link": "/gnostic"
+    },
+    {
+      "title_zh": "巴魯克書",
+      "aka": [],
+      "bucket": "wai",
+      "canon": "wai",
+      "collection": "經藏",
+      "division": "使徒密訓與神祕主義部",
+      "author": "諾斯底派猶斯定",
+      "era": "約 2 世紀",
+      "range": [
+        101,
+        200
+      ],
+      "place": "敘利亞或埃及",
+      "language": "希臘文",
+      "tier": null,
+      "source": "gnostic",
+      "title_orig": "Book of Baruch (by Justin the Gnostic)",
+      "link": "/gnostic"
+    },
+    {
+      "title_zh": "特土良嚴行規",
+      "aka": [],
+      "bucket": "wai",
+      "canon": "wai",
+      "collection": "律藏",
+      "division": "宗派律部",
+      "author": "特土良",
+      "era": "約 200",
+      "range": [
+        200,
+        200
+      ],
+      "place": "迦太基",
+      "language": "拉丁文",
+      "tier": null,
+      "source": "heresy",
+      "title_orig": "Tertullian’s Montanist Tracts",
+      "link": null
+    },
+    {
+      "title_zh": "瓦倫廷神話論",
+      "aka": [],
+      "bucket": "wai",
+      "canon": "wai",
+      "collection": "論藏",
+      "division": "諾斯底與摩尼教部",
+      "author": "瓦倫廷學派",
+      "era": "2 世紀",
+      "range": [
+        101,
+        200
+      ],
+      "place": "羅馬",
+      "language": "希臘文",
+      "tier": null,
+      "source": "gnostic",
+      "title_orig": "Valentinian Cosmogony",
+      "link": "/gnostic"
+    },
+    {
+      "title_zh": "瓦倫廷殘篇",
+      "aka": [],
+      "bucket": "wai",
+      "canon": "wai",
+      "collection": "論藏",
+      "division": "諾斯底與摩尼教部",
+      "author": "瓦倫廷",
+      "era": "約 2 世紀",
+      "range": [
+        101,
+        200
+      ],
+      "place": "亞歷山卓／羅馬",
+      "language": "希臘文",
+      "tier": null,
+      "source": "gnostic",
+      "title_orig": "Valentinus, Fragments and Letters",
+      "link": null
+    },
+    {
+      "title_zh": "致花綸書",
+      "aka": [],
+      "bucket": "wai",
+      "canon": "wai",
+      "collection": "論藏",
+      "division": "諾斯底與摩尼教部",
+      "author": "托勒密（瓦倫廷派）",
+      "era": "約 2 世紀",
+      "range": [
+        101,
+        200
+      ],
+      "place": "羅馬",
+      "language": "希臘文",
+      "tier": null,
+      "source": "gnostic",
+      "title_orig": "The Letter to Flora (by Ptolemy)",
+      "link": null
+    },
+    {
+      "title_zh": "瓦倫廷派教義摘錄（采奧多圖摘錄）",
+      "aka": [],
+      "bucket": "wai",
+      "canon": "wai",
+      "collection": "論藏",
+      "division": "諾斯底與摩尼教部",
+      "author": "采奧多圖（瓦倫廷派）",
+      "era": "約 2 世紀",
+      "range": [
+        101,
+        200
+      ],
+      "place": "亞歷山卓",
+      "language": "希臘文",
+      "tier": null,
+      "source": "gnostic",
+      "title_orig": "Excerpta ex Theodoto (Excerpts of Theodotus)",
+      "link": null
+    },
+    {
+      "title_zh": "巴西理德釋義集殘篇",
+      "aka": [],
+      "bucket": "wai",
+      "canon": "wai",
+      "collection": "論藏",
+      "division": "諾斯底與摩尼教部",
+      "author": "巴西理德",
+      "era": "約 2 世紀",
+      "range": [
+        101,
+        200
+      ],
+      "place": "亞歷山卓",
+      "language": "希臘文",
+      "tier": null,
+      "source": "gnostic",
+      "title_orig": "Basilides, Fragments of the Exegetica",
+      "link": null
+    },
+    {
+      "title_zh": "伊西多爾論附生靈魂殘篇",
+      "aka": [],
+      "bucket": "wai",
+      "canon": "wai",
+      "collection": "論藏",
+      "division": "諾斯底與摩尼教部",
+      "author": "伊西多爾（巴西理德之子）",
+      "era": "約 2 世紀",
+      "range": [
+        101,
+        200
+      ],
+      "place": "亞歷山卓",
+      "language": "希臘文",
+      "tier": null,
+      "source": "gnostic",
+      "title_orig": "Isidore, On the Grown-together Soul (Fragments)",
+      "link": null
+    },
+    {
+      "title_zh": "科隆摩尼抄本",
+      "aka": [],
+      "bucket": "wai",
+      "canon": "wai",
+      "collection": "論藏",
+      "division": "諾斯底與摩尼教部",
+      "author": "摩尼門徒",
+      "era": "約 4 至 5 世紀",
+      "range": [
+        4,
+        4
+      ],
+      "place": "埃及",
+      "language": "希臘文",
+      "tier": null,
+      "source": "manichaean",
+      "title_orig": "The Cologne Mani Codex (CMC)",
+      "link": null
+    },
+    {
+      "title_zh": "吐魯番中古波斯與帕提亞摩尼教殘卷",
+      "aka": [],
+      "bucket": "wai",
+      "canon": "wai",
+      "collection": "論藏",
+      "division": "諾斯底與摩尼教部",
+      "author": "摩尼教團（中亞）",
+      "era": "約 8 至 9 世紀",
+      "range": [
+        8,
+        8
+      ],
+      "place": "中亞吐魯番（高昌）",
+      "language": "中古波斯文",
+      "tier": null,
+      "source": "manichaean",
+      "title_orig": "The Turfan Middle Persian and Parthian Manichaean Fragments",
+      "link": null
+    },
+    {
+      "title_zh": "右藏",
+      "aka": [],
+      "bucket": "wai",
+      "canon": "wai",
+      "collection": "論藏",
+      "division": "曼達教部",
+      "author": "曼達教祭司（佚名）",
+      "era": "約 2–7 世紀",
+      "range": [
+        101,
+        700
+      ],
+      "place": "下美索不達米亞",
+      "language": "曼達文",
+      "tier": null,
+      "source": "mandaean",
+      "title_orig": "Ginza Rabba (Right Ginza)",
+      "link": "/gnostic"
+    },
+    {
+      "title_zh": "〈珍珠之歌〉",
+      "aka": [],
+      "bucket": "wai",
+      "canon": "wai",
+      "collection": "詩藝藏",
+      "division": "諾斯底讚歌部",
+      "author": "多馬行傳作者",
+      "era": "2–3 世紀",
+      "range": [
+        101,
+        300
+      ],
+      "place": "敘利亞",
+      "language": "敘利亞文",
+      "tier": null,
+      "source": "orthodox-apocrypha",
+      "title_orig": "Hymn of the Pearl",
+      "link": "/apocrypha"
+    }
+  ]
+}
