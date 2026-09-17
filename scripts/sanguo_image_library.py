@@ -66,6 +66,132 @@ BATCHES = {
         "sunce":     ("Sun Ce Portrait.jpg",                    "孫策像（清代繡像）"),
         "lusu":      ("LuSu.jpg",                              "魯肅像（清代繡像）"),
     },
+    # 同一套清代繡像系列剩下的，收齊備用（十六回不重複用圖，池子要夠大）
+    "qing2": {
+        "caohong":   ("Cao Hong Qing illustration.jpg",        "曹洪像（清代繡像）"),
+        "caoren":    ("Cao Ren Qing illustration.jpg",         "曹仁像（清代繡像）"),
+        "caozhang":  ("Cao Zhang - Qing ZQ-SGYY.jpg",          "曹彰像（清代繡像）"),
+        "caozhen":   ("Cao Zhen Qing illustration.jpg",        "曹真像（清代繡像）"),
+        "dingfeng":  ("DingFeng.jpg",                          "丁奉像（清代繡像）"),
+        "fuwan":     ("Fu Wan Qing illustration.jpg",          "伏完像（清代繡像）"),
+        "guanlu":    ("Guan Lu Qing portrait.jpg",             "管輅像（清代繡像）"),
+        "guanxing":  ("Guan Xing Qing illustration.jpg",       "關興像（清代繡像）"),
+        "hansui":    ("Han Sui Qing Dynasty portrait.jpg",     "韓遂像（清代繡像）"),
+        "huangchengyan": ("Huang Chengyan Qing Illustration.jpg", "黃承彥像（清代繡像）"),
+        "jiaxu":     ("Jia Xu2.jpg",                           "賈詡像（清代繡像）"),
+        "kongrong":  ("Kong Rong Qing Portrait.jpg",           "孔融像（清代繡像）"),
+        "madai":     ("Ma Dai Qing portrait.jpg",              "馬岱像（清代繡像）"),
+        "mateng":    ("Ma Teng Qing illustration.jpg",         "馬騰像（清代繡像）"),
+        "miheng":    ("Mi Heng Qing portait.jpg",              "禰衡像（清代繡像）"),
+        "pujing":    ("Pujing Qing dynasty illustration.jpg",  "普淨像（清代繡像）"),
+        "wangjing":  ("Wang Jing portrait Qing.jpg",           "王經像（清代繡像）"),
+        "wangshuang": ("Wang Shuang Qing portrait.jpg",        "王雙像（清代繡像）"),
+        "xiahouba":  ("XiahouBa.jpg",                          "夏侯霸像（清代繡像）"),
+        "yangxiu":   ("YangXiu.jpg",                           "楊修像（清代繡像）"),
+        "yuji":      ("Yu Ji Qing portrait.jpg",               "于吉像（清代繡像）"),
+        "zhangbao":  ("Zhang Bao Qing portrait.jpg",           "張苞像（清代繡像）"),
+        "zhangjue":  ("Zhang Jue Qing portrait.jpg",           "張角像（清代繡像）"),
+        "zhangxiu":  ("Zhang Xiu Qing portrait.jpg",           "張繡像（清代繡像）"),
+        "zhoutai":   ("Zhou Tai Qing illustration.jpg",        "周泰像（清代繡像）"),
+        "zhugedan":  ("Zhuge Dan Qing illustration.jpg",       "諸葛誕像（清代繡像）"),
+        "zhugejin":  ("Zhuge Jin Qing illustration.jpg",       "諸葛瑾像（清代繡像）"),
+        "zhugeke":   ("Zhuge Ke Qing illustration.jpg",        "諸葛恪像（清代繡像）"),
+        "zhugeshang": ("Zhuge Shang Qing portrait.jpg",        "諸葛尚像（清代繡像）"),
+        # 場景版畫
+        "slayguanhai": ("Guan Yu slays Guan Hai.jpg",          "關羽斬管亥（清代版畫）"),
+        "sunjianliubiao": ("Sun Jian attacks Liu Biao.jpg",    "孫堅攻劉表（清代版畫）"),
+        "wangkuang": ("Wang Kuanga and Lu Bu.jpg",             "王匡戰呂布（清代版畫）"),
+        "shiting":   ("At Shiting, Lu Xun defeats Cao Xiu.jpg", "石亭之戰陸遜破曹休（清代版畫）"),
+        "caozhenwu": ("Cao Zhen and Sima Yi assault the lands of Eastern Wu.jpg",
+                      "曹真與司馬懿伐吳（清代版畫）"),
+        # 這幾張內容待確認，抓下來要看過再用
+        "rtk2":      ("RTK - 002.jpg",                         "三國演義插圖（清代版畫）"),
+        "rtk3":      ("RTK - 003.jpg",                         "三國演義插圖（清代版畫）"),
+        "rtk4":      ("RTK - 004.jpg",                         "三國演義插圖（清代版畫）"),
+        "rtk5":      ("RTK - 005.jpg",                         "三國演義插圖（清代版畫）"),
+        "rtk6":      ("RTK - 006.jpg",                         "三國演義插圖（清代版畫）"),
+        "rtkc1":     ("RTK Chronicle - 001.jpg",               "三國志傳插圖（清代版畫）"),
+        "rtkc2":     ("RTK Chronicle - 002.jpg",               "三國志傳插圖（清代版畫）"),
+        "rtkc3":     ("RTK Chronicle - 003.jpg",               "三國志傳插圖（清代版畫）"),
+    },
+
+    # 文物與遺址：十六回不重複用圖，每回都要有自己的場景圖
+    "sites": {
+        "wuhougate": ("Gateway - Wuhou Shrine - Chengdu, China - DSC05423.jpg",
+                      "成都武侯祠大門"),
+        "wuhoucorridor": ("Corridor - Wuhou Shrine - Chengdu, China - DSC05483.jpg",
+                          "成都武侯祠迴廊"),
+        "wuhoustele": ("Inscription - Wuhou Shrine - Chengdu, China - DSC05441.jpg",
+                       "武侯祠碑刻"),
+        "jianmen":   ("Jianmen Pass.jpg",                      "劍門關"),
+        "jianmenmt": ("The mountain in Jianmenguan.jpg",        "劍門關的山"),
+        "baidicheng": ("Baidicheng 2014.jpg",                  "白帝城"),
+        "tuogutang": ("Tuogutang.jpg",                          "白帝城託孤堂"),
+        "woodenoxreplica": ("Wooden ox 2016 Temple of Marquis Wu (Wuzhang Plains).jpg",
+                            "木牛複製品（五丈原武侯祠）"),
+        "flowinghorse": ("Flowing horse 2016 Temple of Marquis Wu (Wuzhang Plains).jpg",
+                         "流馬複製品（五丈原武侯祠）"),
+        "chunqiulou": ("Chunqiu Lou 07.jpg",                    "許昌春秋樓（關羽夜讀處）"),
+    },
+    "relics": {
+        "crossbow":  ("Han Bronze Crossbow Mechanism.jpg",      "東漢青銅弩機"),
+        "bolts":     ("Han Bronze & Iron Crossbow Bolts, Han Tomb of Liu Wu, King of Chu, Xuzhou.jpg",
+                      "漢代弩箭鏃"),
+        "granary":   ("Eastern Han Pottery Granary.jpg",         "東漢陶倉"),
+        "granary2":  ("Eastern Han Pottery Qun (Granary).jpg",   "東漢陶囷（圓形穀倉）"),
+        "lamp":      ("Han Bronze Lamp 01.jpg",                  "漢代青銅燈"),
+        "lamp2":     ("Han Bronze Lamp 03.jpg",                  "漢代青銅燈（另一件）"),
+        "mirror":    ("Han Bronze Mirror, Palace Museum.jpg",    "漢代銅鏡"),
+        "mirror2":   ("Han Bronze Mirror, Gongyi.jpg",           "漢代銅鏡（鞏義出土）"),
+    },
+
+    # 主角會在十幾回出現，但同一張圖只能用一次 → 同一個人要備多幅。
+    # 備不到的回數就用樣板的 Q 版 chr() SVG。
+    "alts": {
+        "lvbu2":     ("Lü Bu Portrait.jpg",                     "呂布像（清代繡像，另一幅）"),
+        "dongzhuo2": ("Dong Zhuo Qing Dynasty Illustration.jpg", "董卓像（清代繡像，另一幅）"),
+        "diaochan2": ("DiaoChan.jpg",                           "貂蟬像（清代繡像，另一幅）"),
+        "xiandi2":   ("Emperor Xian Qing illustration.jpg",     "漢獻帝像（清代繡像，另一幅）"),
+        "hejin2":    ("He Jin Qing illustration.jpg",           "何進像（清代繡像，另一幅）"),
+        "huanggai2": ("HuangGai.jpg",                           "黃蓋像（清代繡像，另一幅）"),
+        "lvmeng2":   ("Lu Meng.jpg",                            "呂蒙像（清代繡像，另一幅）"),
+        "lvmeng3":   ("Portrait of Lu Meng, Qing dynasty.jpg",  "呂蒙像（清代繡像，第三幅）"),
+        "menghuo2":  ("MengHuo.jpg",                            "孟獲像（清代繡像，另一幅）"),
+        "miheng2":   ("Portrait of Mi Heng.jpg",                "禰衡像（清代繡像，另一幅）"),
+        "xunyu2":    ("Portrait of Xun Yu.jpg",                 "荀彧像（清代繡像，另一幅）"),
+        "liubei2":   ("Portraits of Famous Men - Liu Bei.jpg",  "劉備像（歷代名臣像冊）"),
+        "liubei3":   ("Portraits of Famous Men - Liu Bei 2.jpg", "劉備像（歷代名臣像冊，另一幅）"),
+        "liubei4":   ("Liu Bei Tang.jpg",                       "劉備像（傳唐人畫）"),
+        "sunquan2":  ("Portraits of Famous Men - Sun Quan.jpg", "孫權像（歷代名臣像冊）"),
+        "sunquan3":  ("Portraits of Famous Men - Sun Quan 2.jpg", "孫權像（歷代名臣像冊，另一幅）"),
+        "caopi2":    ("Cao Pi Tang.jpg",                        "曹丕像（傳唐人畫）"),
+        "guanyustatue": ("Daxiangguo Temple - Guan Yu Statue.jpg", "大相國寺關羽像"),
+        "guanyuhorse": ("Baling Qiao 33 Guan Yu on Red Hare.jpg", "關羽騎赤兔塑像"),
+        "guanyubig": ("Chunqiu Lou 11 Guan Yu Temple, 15 Meter Statue of Guan Yu.jpg",
+                      "許昌春秋樓十五公尺關羽像"),
+    },
+
+    # 江戶浮世繪的三國題材：彩色、動作感強，是日本漫畫的祖宗，
+    # 而且全部公有領域——要「像動漫」又能公開發布，這一批是正解。
+    "ukiyoe": {
+        "changbanbridge": ("Sangokushi Chohan hashi no zu 三国志長坂橋圖 (The Three Kingdoms- Zhang Fei at Changban Bridge) MET DP147623.jpg",
+                           "三國志長坂橋圖（歌川國芳浮世繪）"),
+        "threevisits": ("Gentoku Miyuki chu Komei wo tazu no zu 玄徳三雪中孔明訪圖 (BM 2008,3037.18401).jpg",
+                        "玄德雪中三訪孔明圖（浮世繪）"),
+        "tankei":    ("Gentoku uma o odorashite tankei o koeru zu LCCN2008660468.jpg",
+                      "玄德躍馬過檀溪圖（浮世繪）"),
+        "zhangfeibridge": ("Zhang Fei on the Long Sloped Bridge Turning Away One Million Soldiers.jpg",
+                           "張飛據長坂橋退百萬兵（月岡芳年浮世繪）"),
+        "threevisits2": ("F90-12-1 Tsukioka Yoshitoshi-Gentoku Visits Komei in the Snow.jpg",
+                         "玄德雪中訪孔明（月岡芳年浮世繪）"),
+    },
+
+    "maps": {
+        "map_warlords": ("End of Han Dynasty Warlords.png",     "漢末群雄割據圖"),
+        "map_guandu": ("Guanduzhizhan eng.png",                 "官渡之戰形勢圖"),
+        "map_han189": ("Eastern Han in 189 AD.png",             "東漢疆域圖（189 年）"),
+    },
+
     # 第五回　十八路諸侯
     "r05": {
         "sunjian":   ("Sun Jian Qing dynasty illustration.jpg", "孫堅像（清代繡像）"),
@@ -230,6 +356,29 @@ def save_credits(data):
         json.dumps(data, ensure_ascii=False, indent=1, sort_keys=True))
 
 
+def search_pick(query, want=6):
+    """搜尋 Commons，回傳過得了授權閘的候選（檔名, 授權, 寬, 高, 位元組）。"""
+    r = api({"action": "query", "format": "json", "list": "search",
+             "srnamespace": "6", "srsearch": query, "srlimit": str(want * 3)})
+    hits = [x["title"][5:] for x in r.get("query", {}).get("search", [])]
+    hits = [h for h in hits if h.lower().rsplit(".", 1)[-1] in ("jpg", "jpeg", "png")]
+    if not hits:
+        return []
+    r2 = api({"action": "query", "format": "json",
+              "titles": "|".join("File:" + h for h in hits[:20]),
+              "prop": "imageinfo", "iiprop": "url|size|extmetadata"})
+    out = []
+    for p in r2.get("query", {}).get("pages", {}).values():
+        if "imageinfo" not in p:
+            continue
+        ii = p["imageinfo"][0]
+        short, artist, ok, _ = license_of(ii.get("extmetadata", {}))
+        if not ok:
+            continue
+        out.append((p["title"][5:], short, ii.get("width"), ii.get("height"), ii.get("size")))
+    return out[:want]
+
+
 def fetch(batch_names, force=False):
     os.makedirs(IMAGES, exist_ok=True)
     lib = load_credits()
@@ -333,9 +482,16 @@ def main():
     ap.add_argument("--force", action="store_true", help="已在圖庫的也重抓")
     ap.add_argument("--list", action="store_true", help="列出圖庫現況")
     ap.add_argument("--audit", action="store_true", help="重驗授權與檔案")
+    ap.add_argument("--search", nargs="+", metavar="QUERY",
+                    help="搜尋 Commons 看有什麼可用的（只列出，不下載）")
     a = ap.parse_args()
 
-    if a.list:
+    if a.search:
+        for q in a.search:
+            print("【%s】" % q)
+            for t, lic, w, h, sz in search_pick(q):
+                print("   %-58s %-14s %sx%s" % (t[:58], lic, w, h))
+    elif a.list:
         show()
     elif a.audit:
         sys.exit(1 if audit() else 0)

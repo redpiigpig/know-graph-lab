@@ -44,7 +44,7 @@ SLIDES = [
    </ul>
    <div class="callout">上一回最後那個問題：<br><b>沒有人能管董卓了嗎？</b></div>
  </div>
- <div class="cast tight">${ph("burnluoyang","洛陽被燒","清代版畫")}</div></div>""",
+ <div class="cast tight">${cf(wall(),"洛陽","燒掉以前的樣子")}${im("fire","一把火")}</div></div>""",
  "note": """<p>「招牌」這個詞第四回正式成立，這一回要<b>再用一次</b>——整套課固定用這個詞，不要換成「傀儡」。</p>
  <p>小孩可能會問「皇帝為什麼不跑」。答：他才九歲，而且外面全是董卓的兵。</p>"""},
 
@@ -126,7 +126,7 @@ SLIDES = [
 
 {"html": """<div class="eyebrow">七 · 來了</div>
  <h2>十八支軍隊，同時出發</h2>
- <div class="art"><div class="txt">
+ <div class="art wide"><div class="txt">
    <ul class="pts">
      <li>信送出去以後，各地的太守、刺史<b>真的帶兵來了</b></li>
      <li>小說說<b>十八路</b>，史書上數得出來的<b>大概十一路</b></li>
@@ -134,14 +134,14 @@ SLIDES = [
    </ul>
    <div class="callout">這是整個故事裡，<b>好人們唯一一次站在同一邊</b>。<br>以後再也沒有了。</div>
  </div>
- <div class="cast tight">${ph("map_state","他們從這些地方來","東漢群雄割據形勢圖")}</div></div>""",
+ ${mp("map_warlords","他們從這些地方來","漢末群雄割據圖")}</div>""",
  "note": """<p>指地圖：<b>他們從四面八方來，但都在洛陽東邊。</b>洛陽西邊是董卓的老家（涼州），沒人敢從那邊來。</p>
  <p>「唯一一次站在同一邊」這句話要講重，<b>整回的悲哀都在這裡</b>。</p>"""},
 
 {"html": """<div class="eyebrow">八 · 誰當老大</div>
  <h2>選了家世最好的那一個</h2>
  <div class="cols">
-   <div class="card">${pc("yuanshao")}<h3>袁紹　盟主</h3><p>家裡<b>四代出大官</b>，認識的人最多。第四回出主意叫董卓進京的，就是他。</p></div>
+   <div class="card">${chr({robe:"#7A6A4F",hat:"jin",beard:"mo",prop:"jian"})}<h3>袁紹　盟主</h3><p>家裡<b>四代出大官</b>，認識的人最多。第四回出主意叫董卓進京的，就是他。</p></div>
    <div class="card">${pc("caocao")}<h3>曹操　跟班</h3><p>發信的人是他，兵最少，<b>連座位都排在後面</b>。</p></div>
  </div>
  <div class="callout">選老大的標準不是<b>誰最會打</b>，<br>是<b>誰的爸爸和爺爺比較有名</b>。</div>
@@ -231,7 +231,7 @@ SLIDES = [
    <div class="callout">三個人圍著一個人打，<br><b>呂布還是全身而退。</b></div>
    <p class="foot">這是三兄弟第一次打出名號——雖然是三個打一個。</p>
  </div>
- <div class="cast tight">${ph("threebros","三兄弟","清代版畫")}</div></div>""",
+ <div class="cast tight">${cf(chr({robe:"#8C2F1E",hat:"ze",beard:"mo"}),"劉備")}${cf(chr({robe:"#4F7460",hat:"jin",beard:"long",prop:"dao"}),"關羽")}${cf(chr({robe:"#3C3630",hat:"wu",beard:"long",fat:1,prop:"spear"}),"張飛")}</div></div>""",
  "note": """<p>這一段<b>完全是小說編的</b>，但它是三國最有名的畫面之一，孩子在電動和漫畫裡都看過。</p>
  <p class="ask">問：「三個打一個，很厲害還是很丟臉？」——小說其實在誇呂布。</p>"""},
 

@@ -120,6 +120,22 @@ def build(name, out_path=None):
     if missing:
         sys.exit("圖庫裡沒有這些 key，先補圖再組版：%s" % "、".join(missing))
 
+    # 🚨 不重複閘：同一張照片不准出現在兩回。
+    #    （OpenMoji 圖示不算，那是裝飾性符號，全套只有 36 個，硬要不重複沒有意義。）
+    claim_path = os.path.join(LIB, "assignments.json")
+    claims = json.load(io.open(claim_path, encoding="utf-8")) if os.path.exists(claim_path) else {}
+    clash = [(k, claims[k]) for k in photo_keys if claims.get(k) not in (None, name)]
+    if clash:
+        sys.exit("這些圖已經被別回用掉了，換一張：\n" +
+                 "\n".join("  %-16s 已用於 %s" % (k, d) for k, d in clash))
+    for k in list(claims):
+        if claims[k] == name and k not in photo_keys:
+            del claims[k]          # 這一回改掉了就放開
+    for k in photo_keys:
+        claims[k] = name
+    io.open(claim_path, "w", encoding="utf-8").write(
+        json.dumps(claims, ensure_ascii=False, indent=1, sort_keys=True))
+
     img_pairs, credit_items, total = [], [], 0
     for k in photo_keys:
         v = credits[k]
