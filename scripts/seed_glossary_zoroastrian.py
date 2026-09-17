@@ -280,14 +280,14 @@ D("Pazand", "帕贊德", etype="概念",
 D("Zand", "贊德", var="經註", etype="概念",
   reason="阿維斯陀經文的中古波斯語譯註。🚨「Avesta and Zand」被歐洲早期誤讀為書名"
          "「曾德‧阿維斯陀」(Zend-Avesta)，該形式為訛稱，本站不用於書名。")
-D("Amesha Spenta", "不朽聖者", o="Aməša Spənta", var="阿姆沙‧斯彭塔；聖不朽者；六大天使",
+D("Amesha Spenta", "大天神", o="Aməša Spənta", var="阿姆沙‧斯彭塔；聖不朽者；六大天使",
   etype="概念", domain="阿胡拉‧馬茲達的六位屬性神格",
   reason="aməša「不朽的」＋spənta「豐饒的、聖的」。意譯較音譯可讀；"
          "🚨 不用「天使長」一類基督宗教對位詞——它們是馬茲達的位格化屬性，不是受造的使者。")
 D("yazata", "亞扎塔", o="yazata", var="雅扎塔；應祀者", etype="概念",
   domain="值得敬拜的神格總稱",
   reason="字面「值得敬拜者」。音譯為主，意譯「應祀者」列為變體。")
-D("daēva", "迭瓦", o="daēva", var="代弗", etype="概念", domain="惡魔",
+D("daēva", "達埃瓦", o="daēva", var="代弗", etype="概念", domain="惡魔",
   reason="🚨 **絕不可譯「提婆」。** 梵語 deva 與本詞同源，佛教漢譯作提婆／天，"
          "但祆教把 daēva 貶為惡魔——這正是印度－伊朗宗教分道的關鍵。"
          "借用佛教譯名會把兩個宗教相反的價值判斷混成一個詞。")
@@ -375,7 +375,7 @@ D("Khshathra Vairya", "赫沙特拉‧瓦伊里亞", o="Xšaθra Vairya", var="�
 D("Spenta Armaiti", "斯彭塔‧阿爾邁提", o="Spəṇtā Ārmaiti", var="虔敬；斯潘達爾馬德（Spandarmad）；元文琪譯本作塞潘達爾馬茲",
   root="斯彭塔", etype="deity", domain="不朽聖者之一：虔敬；掌大地",
   reason="名根與「斯彭塔‧曼紐」一致。六者中唯一明確為女性神格。")
-D("Haurvatat", "豪爾瓦塔特", o="Haurvatāt", var="圓滿；霍爾達德（Hordad）", etype="deity",
+D("Haurvatat", "胡爾瓦塔特", o="Haurvatāt", var="圓滿；霍爾達德（Hordad）", etype="deity",
   domain="不朽聖者之一：完整；掌水", reason="與「阿梅雷塔特」常成對出現。")
 D("Ameretat", "阿梅雷塔特", o="Amərətāt", var="不朽；阿莫爾達德（Amurdad，元文琪譯本作）", etype="deity",
   domain="不朽聖者之一：不朽；掌植物",
@@ -384,14 +384,14 @@ D("Anahita", "阿娜希塔", o="Arəduuī Sūrā Anāhitā", var="阿爾德維�
   root="阿娜希塔", etype="deity", domain="水／豐饒／戰勝",
   reason="全稱意為「潤澤的、強大的、無玷的」。耶什特第 5 首的受祀者；"
          "阿爾塔薛西斯二世起入王室銘文，是阿契美尼德晚期宗教變化的關鍵證據。")
-D("Tishtrya", "提什特里亞", o="Tištrya", var="提斯特里亞；提爾（Tīr）；天狼星神；元文琪譯本作蒂什塔爾", etype="deity",
+D("Tishtrya", "蒂什特里亞", o="Tištrya", var="提斯特里亞；提爾（Tīr）；天狼星神；元文琪譯本作蒂什塔爾", etype="deity",
   domain="天狼星／降雨",
   reason="化白馬與旱魔阿波沙化的黑馬相鬥，勝則降雨——印歐鬥龍神話的伊朗形態。")
 D("Verethragna", "韋雷特拉格納", o="Vərəθraγna", var="巴赫拉姆（Bahrām）；韋雷斯拉格那",
   etype="deity", domain="勝利／戰爭",
   reason="字面「擊破障礙者」，與吠陀 Vṛtrahan（因陀羅的稱號）同源。以十種化身現形。"
          "中古波斯語形 Bahrām 即「阿塔什‧巴赫拉姆」所本（該形只出現在變體欄，故不設 name_root）。")
-D("Sraosha", "斯勞沙", o="Sraoša", var="索魯什（Sorush）；斯羅沙", etype="deity",
+D("Sraosha", "斯魯沙", o="Sraoša", var="索魯什（Sorush）；斯羅沙", etype="deity",
   domain="聽從／守護亡魂",
   reason="字面「聽從、聆聽」。人死後三夜守護其魂者；亦為祭儀誦唸本身的神格化。")
 D("Rashnu", "拉什努", o="Rašnu", etype="deity", domain="公義／審判",
@@ -418,9 +418,9 @@ D("Yima", "伊瑪", o="Yima", var="賈姆希德（Jamshīd）；亞瑪", etype="
   reason="🚨 與吠陀 Yama（漢譯閻摩、閻羅）同源，但職能全異：吠陀的閻摩是首位死者與冥界之主，"
          "祆教的伊瑪是首王與黃金時代之君。**不可借用「閻摩」譯名。**",
   note="祓魔法典第 2 章載其奉命造地下方城以避大寒，攜各類生靈之種入內。")
-D("Thraetaona", "斯萊塔奧納", o="Θraētaona", var="法裡東（Farīdūn，元文琪譯本作）", etype="傳說人物",
+D("Thraetaona", "斯拉埃陶納", o="Θraētaona", var="法里東（Farīdūn，元文琪譯本作）", etype="傳說人物",
   domain="屠龍英雄", reason="制伏阿日‧達哈卡者；與吠陀 Trita Āptya 同源。")
-D("Keresaspa", "克爾薩斯帕", o="Kərəsāspa", var="伽爾沙斯布（Garshāsp，元文琪譯本作）", etype="傳說人物",
+D("Keresaspa", "凱雷薩斯帕", o="Kərəsāspa", var="伽爾沙斯布（Garshāsp，元文琪譯本作）", etype="傳說人物",
   domain="英雄／末世助手", reason="末世時將醒來擊殺脫縛的阿日‧達哈卡。")
 
 # ════════════════ D. 歷史人物（祭司與作者）════════════════
