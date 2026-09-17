@@ -369,6 +369,36 @@ BAD_PATTERNS = [
 ]
 
 
+def parse_json_reply(raw: str) -> dict:
+    """把模型回覆解析成 dict，先剝掉推理模型的外圍雜訊。
+
+    🚨 **NVIDIA 那條鏈是推理模型（deepseek-v4），回覆會以 `<think>` 開頭。**
+       原本只剝 ```json``` 圍欄，於是整批被判「回傳非 JSON」跳過——
+       2026-09-18 實測三分鐘 0 段落地，錯的不是引擎是解析。
+       （比 [[feedback_translation_output_gate]] 那次好：那次是把推理**存進去**，
+       這次是整批丟掉；兩者都源於沒處理 `<think>`。）
+
+    剝除順序：``` 圍欄 → <think>…</think> → 未閉合的 <think> → 取最外層 {…}。
+
+    >>> parse_json_reply('{"a": "b"}')
+    {'a': 'b'}
+    >>> parse_json_reply('```json\\n{"a": "b"}\\n```')
+    {'a': 'b'}
+    >>> parse_json_reply('<think>嗯，這段要…</think>\\n{"a": "b"}')
+    {'a': 'b'}
+    >>> parse_json_reply('<think>沒有閉合就直接給答案 {"a": "b"}')
+    {'a': 'b'}
+    """
+    s = re.sub(r"^```(?:json)?|```$", "", raw.strip(), flags=re.M).strip()
+    s = re.sub(r"<think>.*?</think>", "", s, flags=re.S).strip()
+    if "<think>" in s:                       # 未閉合：丟掉標籤之前的整段推理
+        s = s.split("<think>", 1)[1]
+    i, j = s.find("{"), s.rfind("}")
+    if i >= 0 and j > i:
+        s = s[i:j + 1]
+    return json.loads(s)
+
+
 def normalise_keys(got: object) -> dict[str, str]:
     """把模型回傳的鍵正規化成純數字字串。
 
@@ -587,11 +617,10 @@ def translate_doc(doc: dict, names: dict[str, str], budget: list[int]) -> tuple[
         except Exception as e:  # noqa: BLE001
             print(f"    ✗ 本批失敗：{e}", flush=True)
             continue
-        raw = re.sub(r"^```(?:json)?|```$", "", raw.strip(), flags=re.M).strip()
         try:
-            got = json.loads(raw)
+            got = parse_json_reply(raw)
         except json.JSONDecodeError:
-            print("    ✗ 回傳非 JSON，跳過本批", flush=True)
+            print(f"    ✗ 回傳非 JSON，跳過本批（前 80 字：{raw.strip()[:80]!r}）", flush=True)
             continue
         got = normalise_keys(got)
         # 🚨 單段批次（長段落）Haiku 常不理會段落標記，逕自把那一長段拆成
@@ -648,9 +677,8 @@ def translate_long(seg: dict, name_lines: str, doc: dict) -> str:
         except Exception as e:  # noqa: BLE001
             print(f"    ✗ {seg['ref']} 分譯失敗：{e}", flush=True)
             return ""
-        raw = re.sub(r"^```(?:json)?|```$", "", raw.strip(), flags=re.M).strip()
         try:
-            got.update(normalise_keys(json.loads(raw)))
+            got.update(normalise_keys(parse_json_reply(raw)))
         except json.JSONDecodeError:
             print(f"    ✗ {seg['ref']} 分譯回傳非 JSON", flush=True)
             return ""
