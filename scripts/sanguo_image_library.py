@@ -462,7 +462,8 @@ def audit():
     bad = 0
     for k in sorted(lib):
         v = lib[k]
-        path = os.path.join(IMAGES, v.get("file", ""))
+        rel = v.get("file", "")
+        path = os.path.join(LIB, rel) if "/" in rel else os.path.join(IMAGES, rel)
         if not os.path.exists(path):
             print("  ✗ %-15s 檔案不見了：%s" % (k, v.get("file")))
             bad += 1

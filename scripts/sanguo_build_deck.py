@@ -139,7 +139,10 @@ def build(name, out_path=None):
     img_pairs, credit_items, total = [], [], 0
     for k in photo_keys:
         v = credits[k]
-        uri, n = data_uri(os.path.join(LIB, "images", v["file"]))
+        # 繪本插圖存在 ehon/ 子夾，credits 的 file 會帶斜線；其餘在 images/
+        rel = v["file"]
+        src = os.path.join(LIB, rel) if "/" in rel else os.path.join(LIB, "images", rel)
+        uri, n = data_uri(src)
         img_pairs.append((k, uri))
         credit_items.append((k, v["desc"], v["license"]))
         total += n
