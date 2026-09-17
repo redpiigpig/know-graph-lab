@@ -222,6 +222,43 @@ def memory_units(units: list[dict], words: list[str]) -> list[dict]:
     return picked
 
 
+READING_CHAR_LIMIT = 1200
+"""一課讀文的篇幅上限（字元）。
+
+擁有者 2026-09-17：「大約抓個 500-800 字左右就好」「但要是自然段落的選集喔，
+不要是語意沒講完就中斷」，日文這一側裁示「按字元放寬」。
+
+🚨 日文的單位是**字元**不是詞。希臘、拉丁的上限 800 是詞，日文一個詞平均兩個
+字元左右，照字面砍 800 字元等於砍掉六成，一篇隨筆只剩一頁多。1200 字元大約
+相當於六百詞，與另外兩語同一個量級。
+
+裁的單位是段落——青空文庫的散文本來就一段一段收，從篇首連續取整段。
+"""
+
+
+def clip_units(units: list[dict], extent: str) -> tuple[list[dict], str]:
+    """超過上限就從篇首連續取整段；回傳（段落、範圍說明）。
+
+    🚨 一定要在指派 unit["id"] 與挑 memoryUnits 之前裁。id 在裁之後補就不會跳號，
+    背誦句也會自動只從讀者讀得到的段落裡挑——希臘那一輪是先挑後裁，五十四則背誦
+    句指向被砍掉的段落，書上照印，只是出處不存在。
+    """
+    total = sum(len(unit["text"]) for unit in units)
+    if total <= READING_CHAR_LIMIT:
+        return units, extent
+    kept: list[dict] = []
+    running = 0
+    for unit in units:
+        size = len(unit["text"])
+        # 第一段就超過上限時仍然收下：寧可長一點，也不要交出半段。
+        if kept and running + size > READING_CHAR_LIMIT:
+            break
+        kept.append(unit)
+        running += size
+    note = f"節錄前 {len(kept)} 段（全文 {len(units)} 段、{total:,} 字）"
+    return kept, f"{extent}／{note}" if extent else note
+
+
 def build() -> dict:
     plan = load(PLAN)
     aozora = load(AOZORA)
@@ -235,6 +272,7 @@ def build() -> dict:
         lessons = []
         for number, row in enumerate(rows, start=1):
             body, units = resolve(row, aozora, scripture, manyoshu)
+            units, extent = clip_units(units, row["extent"])
             words = lesson_words(entries, volume["volume"], number)
             for index, unit in enumerate(units, start=1):
                 unit["id"] = f"v{volume['volume']}-l{number:02d}-u{index:03d}"
@@ -244,9 +282,9 @@ def build() -> dict:
                 "title": row["title"],
                 "author": row["author"],
                 "orthography": row["orthography"],
-                "extent": row["extent"],
+                "extent": extent,
                 "sourceUrl": row["sourceUrl"],
-                "chars": len(body),
+                "chars": sum(len(unit["text"]) for unit in units),
                 "units": units,
                 "memoryUnits": memory_units(units, words),
             })

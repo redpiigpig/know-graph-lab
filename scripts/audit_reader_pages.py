@@ -177,9 +177,13 @@ def audit(stem: str) -> tuple[list[str], dict]:
     # 每一課都要有十題，而且課次要連號、不重覆。
     if lessons != sorted(set(lessons)):
         problems.append(f"課次不是遞增或有重覆：{lessons}")
-    missing = [n for n in lessons if exercises.get(n) != 10]
-    if missing:
-        problems.append(f"這幾課沒有印滿十題：{[(n, exercises.get(n)) for n in missing]}")
+    # 多於十題一律是錯。少於十題適用這一系列既有的原則：不足是允許的，不說明才
+    # 不允許——而「有沒有說明」在 exercise-set 的 note 裡，不在版面上，所以這裡
+    # 只報數字、由 validate_reader_exercises 判它該不該過。
+    over = [n for n in lessons if (exercises.get(n) or 0) > 10]
+    if over:
+        problems.append(f"這幾課印超過十題：{[(n, exercises.get(n)) for n in over]}")
+    short = [(n, exercises.get(n)) for n in lessons if (exercises.get(n) or 0) < 10]
     if overflow:
         problems.append(f"文字跑出版心 {len(overflow)} 處：{overflow[:6]}")
     if broken:
@@ -194,6 +198,7 @@ def audit(stem: str) -> tuple[list[str], dict]:
         "lessons": len(lessons),
         "thin": thin,
         "placeholders": dict(placeholders),
+        "short": short,
         "headings": dict(headings),
     }
     document.close()
@@ -217,6 +222,8 @@ def main() -> int:
             print(f"    幾乎空白的頁（<40 字）{len(summary['thin'])} 頁：{summary['thin'][:10]}")
         if summary.get("placeholders"):
             print(f"    還沒補完的欄位：{summary['placeholders']}")
+        if summary.get("short"):
+            print(f"    少於十題（是否允許由 exercise-set 的 note 決定）：{summary['short']}")
         for line in problems:
             print(f"    ✘ {line}")
         all_headings[stem] = summary.get("headings", {})
