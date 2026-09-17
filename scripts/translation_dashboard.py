@@ -11,7 +11,6 @@
   - 潘尼卡：panikkar_data/<slug>/sec*.json
   - 東方聖卷：mueller_data/sbe-*/sec*.json
   - 無教會主義：yanaihara_data/<slug>/sec*.json + C:/tmp/yanaihara_ndl/（NDL 掃描與 OCR）
-  - ACCS：C:/tmp/accs_*.raw.jsonl + .done
   - 是否運行：Windows Win32_Process command line
 
 本面板只管「全集翻譯」這一半。收書（z-lib／華藝）、圖書館 OCR、外文資料庫
@@ -66,11 +65,6 @@ PROCESS_PATTERNS = {
     "哲學家全集": ("greek_overnight.py", "plato_build.py"),
     "潘尼卡": ("panikkar_auto.py", "panikkar_build.py"),
     "東方聖卷": ("sbe_translate.py",),
-    "ACCS": (
-        "ingest_accs_genesis.py",
-        "accs_resume",
-        "accs_loop",
-    ),
     "希臘化哲學": (
         "hellenistic_run_queue.py",
         "plotinus_build.py",
@@ -126,50 +120,6 @@ SBE_FALLBACK = {
     "sbe-16-yi-king": "第 16 卷　易經",
     "sbe-22-jaina-1": "第 22 卷　耆那教經典（一）",
 }
-
-ACCS_TARGETS = {
-    ("gen", "創1-11"): 316,
-    ("gen", "創12-50"): 654,
-    ("exo", ""): 228,
-    ("lev", ""): 60,
-    ("num", ""): 96,
-    ("deu", ""): 94,
-    ("jos", ""): 142,
-    ("jdg", ""): 114,
-    ("rut", ""): 20,
-    ("1sa", ""): 194,
-    ("2sa", ""): 100,
-}
-ACCS_NAMES = {
-    "gen": "創世記",
-    "exo": "出埃及記",
-    "lev": "利未記",
-    "num": "民數記",
-    "deu": "申命記",
-    "jos": "約書亞記",
-    "jdg": "士師記",
-    "rut": "路得記",
-    "1sa": "撒母耳記上",
-    "2sa": "撒母耳記下",
-    # 校園版第二批（11-66）：舊約中後段
-    "1ki": "列王紀上", "2ki": "列王紀下", "1ch": "歷代志上", "2ch": "歷代志下",
-    "ezr": "以斯拉記", "neh": "尼希米記", "est": "以斯帖記",
-    "job": "約伯記", "psa": "詩篇", "pro": "箴言", "ecc": "傳道書", "sng": "雅歌",
-    "isa": "以賽亞書", "jer": "耶利米書", "lam": "耶利米哀歌",
-    "ezk": "以西結書", "dan": "但以理書",
-    "hos": "何西阿書", "jol": "約珥書", "amo": "阿摩司書", "oba": "俄巴底亞書",
-    "jon": "約拿書", "mic": "彌迦書", "nam": "那鴻書", "hab": "哈巴谷書",
-    "zep": "西番雅書", "hag": "哈該書", "zec": "撒迦利亞書", "mal": "瑪拉基書",
-    # 新約全書
-    "mat": "馬太福音", "mrk": "馬可福音", "luk": "路加福音", "jhn": "約翰福音",
-    "act": "使徒行傳", "rom": "羅馬書", "1co": "哥林多前書", "2co": "哥林多後書",
-    "gal": "加拉太書", "eph": "以弗所書", "php": "腓立比書", "col": "歌羅西書",
-    "1th": "帖撒羅尼迦前書", "2th": "帖撒羅尼迦後書", "1ti": "提摩太前書",
-    "2ti": "提摩太後書", "tit": "提多書", "phm": "腓利門書", "heb": "希伯來書",
-    "jas": "雅各書", "1pe": "彼得前書", "2pe": "彼得後書", "1jn": "約翰一書",
-    "2jn": "約翰二書", "3jn": "約翰三書", "jud": "猶大書", "rev": "啟示錄",
-}
-
 
 @dataclass
 class WorkProgress:
@@ -594,12 +544,6 @@ def is_stale_done(state: str, updated_at: float | None, now: float,
             and now - updated_at > days * 86400)
 
 
-def _is_junk_accs_file(name: str) -> bool:
-    """Backup/bad/empty raw dumps that would list a book twice (e.g.
-    accs_num_BAD_empty_backup_… beside the real accs_num_…)."""
-    return bool(re.search(r"(?i)_(bad|backup|empty|old|bak)(?:_|\b)", name))
-
-
 def scan_jung(processes: list[dict[str, Any]]) -> list[WorkProgress]:
     rows: list[WorkProgress] = []
     if not JUNG_ROOT.exists():
@@ -835,117 +779,6 @@ def scan_json_checkpoints(
             active = max(recent, key=lambda r: r.updated_at or 0) if recent else incomplete[0]
             active.running = True
             active.state = _state(active.done, active.total, True, active.updated_at)
-    return rows
-
-
-def _accs_target(code: str, filename: str, covered: int) -> int:
-    for (target_code, marker), total in ACCS_TARGETS.items():
-        if code == target_code and (not marker or marker in filename):
-            return total
-    return covered
-
-
-def _accs_title(code: str, filename: str) -> str:
-    title = ACCS_NAMES.get(code, code.upper())
-    if code == "gen":
-        if "創1-11" in filename:
-            title += " 1–11 章"
-        elif "創12-50" in filename:
-            title += " 12–50 章"
-    return title
-
-
-def _next_source_page(pages: set[int]) -> int:
-    return max(pages) + 1 if pages else 1
-
-
-def scan_accs(processes: list[dict[str, Any]]) -> list[WorkProgress]:
-    rows = []
-    commands = [str(p.get("CommandLine") or "").lower() for p in processes]
-    for path in sorted(TMP_ROOT.glob("accs_*.raw.jsonl")):
-        if _is_junk_accs_file(path.name):   # skip BAD/backup dumps → no dup rows
-            continue
-        match = re.match(r"accs_([a-z0-9]+)_", path.name, re.I)
-        if not match:
-            continue
-        code = match.group(1).lower()
-        pages: set[int] = set()
-        parse_errors = 0
-        try:
-            with path.open(encoding="utf-8") as fh:
-                for line in fh:
-                    try:
-                        obj = json.loads(line)
-                        vals = obj.get("pages")
-                        if vals is None and "page" in obj:
-                            vals = [obj["page"]]
-                        pages.update(int(p) for p in (vals or []))
-                    except (json.JSONDecodeError, TypeError, ValueError):
-                        parse_errors += 1
-        except OSError:
-            continue
-        done_marker = path.with_suffix(".done")
-        done = len(pages)
-        total = _accs_target(code, path.name, done)
-        updated = path.stat().st_mtime
-        explicit_done = done_marker.exists()
-        if explicit_done:
-            updated = max(updated, done_marker.stat().st_mtime)
-        direct_running = any(
-            re.search(rf"(?:--book\s+|accs_){re.escape(code)}(?:\s|_|$)", cmd)
-            for cmd in commands
-        )
-        for command in commands:
-            if not re.search(rf"--book(?:=|\s+){re.escape(code)}(?:\s|$)", command):
-                continue
-            page_arg = _command_arg(command, "--pages")
-            page_match = re.fullmatch(r"(\d+)-(\d+)", page_arg)
-            if page_match:
-                total = max(total, int(page_match.group(2)) - int(page_match.group(1)) + 1)
-        state = _state(done, total, direct_running, updated, explicit_done=explicit_done)
-        if done >= total and total > 0 and not explicit_done:
-            state = "待入庫"
-        elif explicit_done:
-            state = "已入庫"
-        rows.append(WorkProgress(
-            "ACCS", path.stem, _accs_title(code, path.name), done, total, "頁",
-            state, direct_running, "OCR 完成，等待 upsert／.done" if state == "待入庫"
-            else ("已 upsert 至 accs_commentary" if state == "已入庫"
-                  else f"下一頁約 {_next_source_page(pages)}"),
-            updated, str(path),
-            (f"JSONL 解析錯誤行：{parse_errors}；" if parse_errors else "")
-            + f"入庫標記：{'有' if explicit_done else '無'}",
-        ))
-    if processes and not any(row.running for row in rows):
-        incomplete = [row for row in rows
-                      if row.state != "完成" and row.updated_at is not None]
-        if incomplete:
-            active = max(incomplete, key=lambda r: r.updated_at or 0)
-            active.running = True
-            active.state = _state(active.done, active.total, True, active.updated_at)
-    # 路線圖：accs_volume_config.json 裡尚未有 checkpoint 的卷列為「待轉錄」
-    seen = set()
-    for r in rows:
-        m = re.match(r"accs_([a-z0-9]+)_", Path(r.source).name, re.I)
-        if m:
-            seen.add(m.group(1).lower())
-    try:
-        cfg_path = Path(__file__).resolve().parent / "accs_volume_config.json"
-        for vol in json.loads(cfg_path.read_text(encoding="utf-8")):
-            single = vol.get("single_book")
-            for book in vol.get("books", []):
-                if book in seen:
-                    continue
-                seen.add(book)
-                rows.append(WorkProgress(
-                    "ACCS", f"plan-{book}", _accs_title(book, ""), 0,
-                    vol.get("page_count", 0) if single else 0, "頁",
-                    "待轉錄", False,
-                    "尚未開始 OCR" if single else "多書卷合冊，待定界",
-                    None, str(cfg_path), "校園版路線圖",
-                ))
-    except (OSError, json.JSONDecodeError, KeyError, TypeError):
-        pass
     return rows
 
 
@@ -1321,7 +1154,6 @@ def collect_snapshot() -> tuple[list[WorkProgress], dict[str, list[dict[str, Any
         "潘尼卡", PANIKKAR_ROOT, pan_titles, groups["潘尼卡"], "src"))
     rows.extend(scan_json_checkpoints(
         "東方聖卷", MUELLER_ROOT, sbe_titles, groups["東方聖卷"], "en"))
-    rows.extend(scan_accs(groups["ACCS"]))
     rows.extend(scan_hellenistic(groups["希臘化哲學"]))
     rows.extend(scan_yanaihara(groups["無教會主義"]))
     rows.extend(scan_other_work(processes))
@@ -1464,7 +1296,7 @@ class Dashboard:
         self.notebook.pack(fill="both", expand=True, padx=24)
         self.trees: dict[str, Any] = {}
         for group in ("全部", "榮格", "哲學家全集", "希臘化哲學", "潘尼卡", "東方聖卷",
-                      "無教會主義", "ACCS", "其他工作"):
+                      "無教會主義", "其他工作"):
             frame = tk.Frame(self.notebook, bg=self.COLORS["panel"])
             self.notebook.add(frame, text=group)
             tree = self.ttk.Treeview(

@@ -196,8 +196,8 @@ Ensure 'scan-ocr' 'scan_ocr_pass' @('-X','utf8','scripts\scan_ocr_pass.py','--ba
 # Those 15 hub cards have existed with zero chunks because no lane ever ran the three
 # builders. Haiku on Max: Gemini belongs to ACCS and NVIDIA has been 503-ing all day.
 # Split in two so both halves move at once - the per-section caches do not overlap.
-Ensure 'philo-queue' 'hellenistic_run_queue.py --group short' @('-X','utf8','scripts\hellenistic_run_queue.py','--group','short','--engine','haiku')
-Ensure 'plotinus-queue' 'hellenistic_run_queue.py --group plotinus' @('-X','utf8','scripts\hellenistic_run_queue.py','--group','plotinus','--engine','haiku')
+EnsureUntil 'philo-queue' $py @('-X','utf8','scripts\hellenistic_run_queue.py','--group','short','--engine','haiku') 'HELLENISTIC_QUEUE_COMPLETE'
+EnsureUntil 'plotinus-queue' $py @('-X','utf8','scripts\hellenistic_run_queue.py','--group','plotinus','--engine','haiku') 'HELLENISTIC_QUEUE_COMPLETE'
 # Yanaihara's Taiwan book (Iwanami 1929, public domain worldwide): NDL scan pid 1191101,
 # 201 images -> PDF -> Gemini Vision OCR. Both ends throttle us (NDL answers 429, Gemini
 # answers 503), so the script never retries to death - it moves one step and exits, and
@@ -209,7 +209,7 @@ Ensure 'yanaihara-ndl' 'yanaihara_ndl' @('-X','utf8','scripts\yanaihara_ndl.py',
 # two long ones (Introduction to Christianity 490 paras, Life of Jesus 1017 paras).
 # Same driver as Uchimura, --author switches the registry. Haiku for the same reason as
 # the philo lane. Per-section checkpoints, so a restart resumes.
-Ensure 'yanaihara' 'uchimura_auto' @('-X','utf8','scripts\uchimura_auto.py','--author','yanaihara','--run-queue','--backend','haiku')
+EnsureUntil 'yanaihara' $py @('-X','utf8','scripts\uchimura_auto.py','--author','yanaihara','--run-queue','--backend','auto') 'QUEUE_COMPLETE'
 
 # Husserl, Ideas I (Boyce Gibson 1931, public domain): Gemini Vision OCR finished
 # 2026-09-11 (59/59 batches, KGL_Husserl_OCR then disabled itself), and the section
@@ -218,7 +218,7 @@ Ensure 'yanaihara' 'uchimura_auto' @('-X','utf8','scripts\uchimura_auto.py','--a
 # if they were translations - see feedback_haiku_meta_reply_pollution).
 # Checkpoints are per section under .claude/skills/ebook-collected-works/husserl_data,
 # so a commute-sleep restart resumes where it stopped.
-Ensure 'husserl' 'uchimura_auto --author husserl' @('-X','utf8','scripts\uchimura_auto.py','--author','husserl','--run-queue')
+EnsureUntil 'husserl' $py @('-X','utf8','scripts\uchimura_auto.py','--author','husserl','--run-queue') 'QUEUE_COMPLETE'
 
 # Panikkar last volume (vedic-experience, huge): on Haiku per user (idle Claude account).
 # When it finishes, replace this lane with Max Weber (sociology) collected works.

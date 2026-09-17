@@ -57,12 +57,12 @@ REVIEW_JOBS = (
     {
         "id": "sbe",
         "script": "sbe_translate.py",
-        "args": ["--review-local-step", "--backend", "haiku", "--upload"],
+        "args": ["--review-local-step", "--backend", "gemini-first", "--upload"],
     },
     {
         "id": "panikkar",
         "script": "panikkar_auto.py",
-        "args": ["--review-queue-step", "--backend", "haiku", "--upload"],
+        "args": ["--review-queue-step", "--backend", "gemini-first", "--upload"],
     },
 )
 

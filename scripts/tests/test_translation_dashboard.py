@@ -5,12 +5,10 @@ from pathlib import Path
 
 from scripts.translation_dashboard import (
     ApiStatus,
-    _accs_target,
     _checkpoint_counts,
     _command_arg,
     _greek_source_total,
     _greek_work_registry,
-    _next_source_page,
     apply_runtime_rate_limits,
     api_inventory,
     cloud_lane_model_unavailable,
@@ -41,12 +39,6 @@ class TranslationDashboardTests(unittest.TestCase):
             }), encoding="utf-8")
             self.assertEqual(_checkpoint_counts(path, "en"), (1, 2, "第一節", 0))
 
-    def test_accs_known_targets(self):
-        self.assertEqual(
-            _accs_target("gen", "accs_gen_某書創12-50.raw.jsonl", 120), 654)
-        self.assertEqual(_accs_target("num", "accs_num_合卷.raw.jsonl", 40), 96)
-        self.assertEqual(_accs_target("jos", "accs_jos_約書亞記.raw.jsonl", 54), 142)
-
     def test_checkpoint_work_requires_exact_completion(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
@@ -65,9 +57,6 @@ class TranslationDashboardTests(unittest.TestCase):
     def test_command_arg(self):
         cmd = "python scripts/ingest_lit_review.py --project genesis-philosophy --resume"
         self.assertEqual(_command_arg(cmd, "--project"), "genesis-philosophy")
-
-    def test_next_source_page_uses_real_page_number(self):
-        self.assertEqual(_next_source_page({43, 44, 96}), 97)
 
     def test_api_inventory_has_eight_remote_and_ollama(self):
         rows = api_inventory()

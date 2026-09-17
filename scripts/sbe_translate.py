@@ -167,6 +167,11 @@ def make_sbe_engine(tradition: str, backend: str = "cloud"):
             return _join(te.ollama_translate, pieces)
         if backend == "gemini-first":
             return _join(te.gemini_with_nvidia_fallback, pieces)
+        if backend == "nvidia":
+            # Gemini 免費層是「20 次／天／key」的日額度，用完當天不會回復；額度用完時
+            # gemini-first 每一段都要先吃滿 7 key × 3 次重試才落到 NVIDIA。收尾長跑
+            # 直接指定 NVIDIA，省掉那段空轉（2026-09-17 收東方聖卷時加）。
+            return _join(te.nvidia_translate, pieces)
         if backend == "haiku":
             # Direct Haiku with patient backoffs (waits out Max's rolling-window
             # 429s) — no Sonnet fallback. Much steadier than 'cloud' when the whole
@@ -241,7 +246,8 @@ def main():
                     help="bounded Ollama pass; checkpoint only, never upload")
     ap.add_argument("--review-local-step", action="store_true",
                     help="bounded online replacement of provenance=ollama")
-    ap.add_argument("--backend", choices=["cloud", "gemini-first", "haiku"], default="gemini-first")
+    ap.add_argument("--backend", choices=["cloud", "gemini-first", "nvidia", "haiku"],
+                    default="gemini-first")
     ap.add_argument("--max-total-paras", type=int, default=3)
     ap.add_argument("--upload", action="store_true")
     ap.add_argument("--no-upload", action="store_true",

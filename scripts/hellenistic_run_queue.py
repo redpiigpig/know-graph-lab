@@ -79,6 +79,8 @@ def main() -> int:
         print(f"\n佇列跑完，跳過：{', '.join(skipped)}", flush=True)
         return 1
     print("\n希臘化哲學佇列全數完成", flush=True)
+    # ASCII 標記給 fleet_keeper 的 EnsureUntil 判退場用（中文標記比不中）。
+    print("HELLENISTIC_QUEUE_COMPLETE", flush=True)
     return 0
 
 

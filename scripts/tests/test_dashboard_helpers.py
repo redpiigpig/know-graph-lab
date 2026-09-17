@@ -6,7 +6,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from translation_dashboard import (
-    state_category, is_stale_done, _is_junk_accs_file, DONE_RETENTION_DAYS,
+    state_category, is_stale_done, DONE_RETENTION_DAYS,
 )
 
 DAY = 86400
@@ -29,11 +29,3 @@ def test_stale_done_only_hides_old_completed():
     assert is_stale_done("執行中", now - 9 * DAY, now) is False  # 執行中永不隱藏
     assert is_stale_done("完成", None, now) is False             # 無時間戳 → 不隱藏
     assert DONE_RETENTION_DAYS == 3
-
-
-def test_junk_accs_file_skips_backups_only():
-    assert _is_junk_accs_file("accs_num_BAD_empty_backup_20260701.raw.jsonl") is True
-    assert _is_junk_accs_file("accs_gen_v1_old_.raw.jsonl") is True
-    # the real dump must NOT be skipped
-    assert _is_junk_accs_file("accs_num_古代基督信仰聖經註釋叢書2-5 出利民申.raw.jsonl") is False
-    assert _is_junk_accs_file("accs_gen_古代基督信仰聖經註釋叢書1.raw.jsonl") is False
