@@ -59,47 +59,6 @@
         },
         {
           "kind": "quoted",
-          "ref": "良十三：新事　Rerum Novarum",
-          "text": "ut facile intelligitur",
-          "answerKeyRef": "L35#12",
-          "answerKeyEdition": "思高譯本",
-          "answerKeyScope": "block-containing-clause",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 1,
-              "ordinal": 4,
-              "headword": "intellegō",
-              "glossZh": "理解、認知、領會",
-              "lemmas": [
-                "intellego"
-              ],
-              "creditLemmas": [
-                "intellego"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "verification": {
-            "words": 3,
-            "unattested": [],
-            "untaught": [],
-            "enclitics": [],
-            "lemmas": [
-              "facile",
-              "facilis",
-              "intellego",
-              "ut"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 2
-        },
-        {
-          "kind": "quoted",
           "ref": "聖傑羅尼莫書信　Epistulae",
           "text": "facultatem forsitan quaeras",
           "answerKeyRef": "L05#2",
@@ -134,6 +93,51 @@
               "facultas",
               "forsitan",
               "quaero"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "corpus",
+          "no": 2
+        },
+        {
+          "kind": "quoted",
+          "ref": "聖奧思定懺悔錄 卷一　Confessiones I",
+          "text": "quoniam itaque et ego sum",
+          "answerKeyRef": "L07#3",
+          "answerKeyEdition": "思高譯本",
+          "answerKeyScope": "block-containing-clause",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 1,
+              "ordinal": 5,
+              "headword": "itaque",
+              "glossZh": "因此、所以",
+              "lemmas": [
+                "ita",
+                "itaque"
+              ],
+              "creditLemmas": [
+                "itaque"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "verification": {
+            "words": 5,
+            "unattested": [],
+            "untaught": [],
+            "enclitics": [],
+            "lemmas": [
+              "ego",
+              "et",
+              "ita",
+              "itaque",
+              "quoniam",
+              "sum",
+              "suus"
             ],
             "lengthOk": true,
             "passed": true
@@ -617,8 +621,23 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
+        "practised": 18,
         "notPractised": [
+          {
+            "volume": 2,
+            "lesson": 1,
+            "ordinal": 4,
+            "headword": "intellegō",
+            "glossZh": "理解、認知、領會",
+            "lemmas": [
+              "intellego"
+            ],
+            "creditLemmas": [
+              "intellego"
+            ],
+            "resolved": true,
+            "phrase": false
+          },
           {
             "volume": 2,
             "lesson": 1,
@@ -730,23 +749,23 @@
         },
         {
           "kind": "quoted",
-          "ref": "末日經　Dies irae",
-          "text": "in quo totum continetur",
-          "answerKeyRef": "L20#1",
+          "ref": "亞他納修信經　Symbolum Quicumque",
+          "text": "ante omnia opus est",
+          "answerKeyRef": "L11#1",
           "answerKeyEdition": "思高譯本",
           "answerKeyScope": "block-containing-clause",
           "targetWords": [
             {
               "volume": 2,
               "lesson": 2,
-              "ordinal": 37,
-              "headword": "contineō",
-              "glossZh": "容納、保持、約束",
+              "ordinal": 33,
+              "headword": "antequam",
+              "glossZh": "在……之前",
               "lemmas": [
-                "contineo"
+                "antequam"
               ],
               "creditLemmas": [
-                "contineo"
+                "antequam"
               ],
               "resolved": true,
               "phrase": false
@@ -758,15 +777,12 @@
             "untaught": [],
             "enclitics": [],
             "lemmas": [
-              "contineo",
-              "hic",
-              "in",
-              "invicem",
-              "qui",
-              "quis",
-              "quo",
-              "quomodo",
-              "totus"
+              "ante",
+              "antequam",
+              "calendar",
+              "omnis",
+              "opus",
+              "sum"
             ],
             "lengthOk": true,
             "passed": true
@@ -1342,40 +1358,41 @@
         },
         {
           "kind": "quoted",
-          "ref": "若望保祿二：信仰與理性　Fides et Ratio",
-          "text": "Quidquid autem id est",
-          "answerKeyRef": "L48#10",
+          "ref": "梵一：天主子　Dei Filius",
+          "text": "idem Decretum renovantes",
+          "answerKeyRef": "L32#12",
           "answerKeyEdition": "思高譯本",
           "answerKeyScope": "block-containing-clause",
           "targetWords": [
             {
               "volume": 2,
               "lesson": 3,
-              "ordinal": 53,
-              "headword": "quisquis",
-              "glossZh": "凡是……的人、無論誰",
+              "ordinal": 44,
+              "headword": "īdem",
+              "glossZh": "同一的、相同的",
               "lemmas": [
-                "quisquis"
+                "idem",
+                "item"
               ],
               "creditLemmas": [
-                "quisquis"
+                "idem"
               ],
               "resolved": true,
               "phrase": false
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 3,
             "unattested": [],
-            "untaught": [],
+            "untaught": [
+              "renovantes"
+            ],
             "enclitics": [],
             "lemmas": [
-              "autem",
-              "calendar",
-              "expression",
-              "is",
-              "quisquis",
-              "sum"
+              "decerno",
+              "decretum",
+              "idem",
+              "item"
             ],
             "lengthOk": true,
             "passed": true
@@ -1892,8 +1909,23 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
+        "practised": 18,
         "notPractised": [
+          {
+            "volume": 2,
+            "lesson": 3,
+            "ordinal": 53,
+            "headword": "quisquis",
+            "glossZh": "凡是……的人、無論誰",
+            "lemmas": [
+              "quisquis"
+            ],
+            "creditLemmas": [
+              "quisquis"
+            ],
+            "resolved": true,
+            "phrase": false
+          },
           {
             "volume": 2,
             "lesson": 3,
@@ -1960,38 +1992,42 @@
         },
         {
           "kind": "quoted",
-          "ref": "亞他納修信經　Symbolum Quicumque",
-          "text": "ut teneat catholicam fidem",
-          "answerKeyRef": "L11#1",
+          "ref": "聖良一世四旬期講道　Sermones de Quadragesima",
+          "text": "Vicit enim adversarium",
+          "answerKeyRef": "L10#6",
           "answerKeyEdition": "思高譯本",
           "answerKeyScope": "block-containing-clause",
           "targetWords": [
             {
               "volume": 2,
               "lesson": 4,
-              "ordinal": 62,
-              "headword": "teneō",
-              "glossZh": "握持、保有、扣留",
+              "ordinal": 65,
+              "headword": "vincō",
+              "glossZh": "戰勝、征服",
               "lemmas": [
-                "teneo"
+                "uinco",
+                "vinco"
               ],
               "creditLemmas": [
-                "teneo"
+                "uinco",
+                "vinco"
               ],
               "resolved": true,
               "phrase": false
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 3,
             "unattested": [],
-            "untaught": [],
+            "untaught": [
+              "adversarium"
+            ],
             "enclitics": [],
             "lemmas": [
-              "catholicus",
-              "fides",
-              "teneo",
-              "ut"
+              "aduersarius",
+              "enim",
+              "uinco",
+              "vinco"
             ],
             "lengthOk": true,
             "passed": true
@@ -2503,9 +2539,9 @@
       "items": [
         {
           "kind": "quoted",
-          "ref": "聖安博晨禱聖詩　Hymni Ambrosiani",
-          "text": "Laudes ferentes debitas",
-          "answerKeyRef": "L06#7",
+          "ref": "聖傑羅尼莫書信　Epistulae",
+          "text": "innocentiam tantum mecum feram",
+          "answerKeyRef": "L05#4",
           "answerKeyEdition": "思高譯本",
           "answerKeyScope": "block-containing-clause",
           "targetWords": [
@@ -2526,15 +2562,17 @@
             }
           ],
           "verification": {
-            "words": 3,
+            "words": 4,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
             "lemmas": [
-              "debeo",
+              "ego",
               "fero",
-              "laudo",
-              "laus"
+              "innocentia",
+              "mecum",
+              "tantum",
+              "tantus"
             ],
             "lengthOk": true,
             "passed": true
@@ -2544,64 +2582,23 @@
         },
         {
           "kind": "quoted",
-          "ref": "聖安博晨禱聖詩　Hymni Ambrosiani",
-          "text": "De luce lucem proferens",
-          "answerKeyRef": "L06#6",
+          "ref": "庇護十一：四十年　Quadragesimo Anno",
+          "text": "Levabit signum in nationes",
+          "answerKeyRef": "L37#7",
           "answerKeyEdition": "思高譯本",
           "answerKeyScope": "block-containing-clause",
           "targetWords": [
             {
               "volume": 2,
               "lesson": 5,
-              "ordinal": 97,
-              "headword": "prōferō",
-              "glossZh": "提出、陳述、發言",
+              "ordinal": 89,
+              "headword": "nātiō",
+              "glossZh": "民族、國族；異邦人",
               "lemmas": [
-                "profero"
+                "natio"
               ],
               "creditLemmas": [
-                "profero"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "verification": {
-            "words": 4,
-            "unattested": [],
-            "untaught": [],
-            "enclitics": [],
-            "lemmas": [
-              "de",
-              "lux",
-              "profero"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 2
-        },
-        {
-          "kind": "quoted",
-          "ref": "聖良一世四旬期講道　Sermones de Quadragesima",
-          "text": "in medio praeliorum est",
-          "answerKeyRef": "L10#6",
-          "answerKeyEdition": "思高譯本",
-          "answerKeyScope": "block-containing-clause",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 5,
-              "ordinal": 87,
-              "headword": "medium",
-              "glossZh": "中間、中部、中央",
-              "lemmas": [
-                "medium",
-                "medius"
-              ],
-              "creditLemmas": [
-                "medium"
+                "natio"
               ],
               "resolved": true,
               "phrase": false
@@ -2611,16 +2608,60 @@
             "words": 4,
             "unattested": [],
             "untaught": [
-              "praeliorum"
+              "Levabit"
             ],
             "enclitics": [],
             "lemmas": [
               "hic",
               "in",
               "invicem",
-              "medium",
-              "medius",
-              "sum"
+              "levo",
+              "natio",
+              "signum"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "corpus",
+          "no": 2
+        },
+        {
+          "kind": "quoted",
+          "ref": "聖母痛苦詠　Stabat mater dolorosa",
+          "text": "cum videbat nati poenas inclyti",
+          "answerKeyRef": "L21#1",
+          "answerKeyEdition": "思高譯本",
+          "answerKeyScope": "block-containing-clause",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 5,
+              "ordinal": 95,
+              "headword": "poena",
+              "glossZh": "懲罰、刑罰、苦難",
+              "lemmas": [
+                "poena"
+              ],
+              "creditLemmas": [
+                "poena"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "verification": {
+            "words": 5,
+            "unattested": [],
+            "untaught": [
+              "inclyti"
+            ],
+            "enclitics": [],
+            "lemmas": [
+              "cum",
+              "nascor",
+              "poena",
+              "uideo",
+              "video"
             ],
             "lengthOk": true,
             "passed": true
@@ -3095,14 +3136,14 @@
           {
             "volume": 2,
             "lesson": 5,
-            "ordinal": 95,
-            "headword": "poena",
-            "glossZh": "懲罰、刑罰、苦難",
+            "ordinal": 97,
+            "headword": "prōferō",
+            "glossZh": "提出、陳述、發言",
             "lemmas": [
-              "poena"
+              "profero"
             ],
             "creditLemmas": [
-              "poena"
+              "profero"
             ],
             "resolved": true,
             "phrase": false
@@ -3118,9 +3159,9 @@
       "items": [
         {
           "kind": "quoted",
-          "ref": "肋令的味增爵：備忘錄　Commonitorium",
-          "text": "et fieri potuit",
-          "answerKeyRef": "L09#10",
+          "ref": "聖誕詠　Adeste, fideles",
+          "text": "genitum non factum",
+          "answerKeyRef": "L25#1",
           "answerKeyEdition": "思高譯本",
           "answerKeyScope": "block-containing-clause",
           "targetWords": [
@@ -3146,10 +3187,14 @@
             "untaught": [],
             "enclitics": [],
             "lemmas": [
-              "et",
+              "facio",
+              "factum",
+              "factus",
               "fio",
-              "possum",
-              "sum"
+              "gigno",
+              "non",
+              "nonnihil",
+              "nonnullus"
             ],
             "lengthOk": true,
             "passed": true
@@ -3205,41 +3250,42 @@
         },
         {
           "kind": "quoted",
-          "ref": "梵二：教會憲章　Lumen Gentium",
-          "text": "humilitatis et abnegationis servans",
-          "answerKeyRef": "L42#13",
+          "ref": "梵二：大公主義法令　Unitatis Redintegratio",
+          "text": "in quadam cum Ecclesia catholica communione",
+          "answerKeyRef": "L41#9",
           "answerKeyEdition": "思高譯本",
           "answerKeyScope": "block-containing-clause",
           "targetWords": [
             {
               "volume": 2,
               "lesson": 6,
-              "ordinal": 117,
-              "headword": "humilitās",
-              "glossZh": "謙卑、卑微",
+              "ordinal": 109,
+              "headword": "commūniō",
+              "glossZh": "聖體聖血、領聖體",
               "lemmas": [
-                "humilitas"
+                "communio"
               ],
               "creditLemmas": [
-                "humilitas"
+                "communio"
               ],
               "resolved": true,
               "phrase": false
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 6,
             "unattested": [],
-            "untaught": [
-              "abnegationis"
-            ],
+            "untaught": [],
             "enclitics": [],
             "lemmas": [
-              "et",
-              "humilitas",
-              "seruo",
-              "servo",
-              "sum"
+              "catholicus",
+              "communio",
+              "cum",
+              "ecclesia",
+              "hic",
+              "in",
+              "invicem",
+              "quidam"
             ],
             "lengthOk": true,
             "passed": true
@@ -3777,49 +3823,6 @@
         },
         {
           "kind": "quoted",
-          "ref": "聖枝主日詠　Gloria, laus et honor",
-          "text": "cui bona cuncta placent",
-          "answerKeyRef": "L14#1",
-          "answerKeyEdition": "思高譯本",
-          "answerKeyScope": "block-containing-clause",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 7,
-              "ordinal": 132,
-              "headword": "placeo",
-              "glossZh": "討好、令人滿意",
-              "lemmas": [
-                "placeo"
-              ],
-              "creditLemmas": [
-                "placeo"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "verification": {
-            "words": 4,
-            "unattested": [],
-            "untaught": [],
-            "enclitics": [],
-            "lemmas": [
-              "bonum",
-              "bonus",
-              "cunctus",
-              "placeo",
-              "qui",
-              "quis"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 2
-        },
-        {
-          "kind": "quoted",
           "ref": "良十三：新事　Rerum Novarum",
           "text": "inter se oportet contineri",
           "answerKeyRef": "L35#7",
@@ -3853,6 +3856,51 @@
               "oportet",
               "se",
               "sui"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "corpus",
+          "no": 2
+        },
+        {
+          "kind": "quoted",
+          "ref": "聖奧思定懺悔錄 卷八　Confessiones VIII",
+          "text": "et placebat via ipse salvator",
+          "answerKeyRef": "L08#2",
+          "answerKeyEdition": "思高譯本",
+          "answerKeyScope": "block-containing-clause",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 7,
+              "ordinal": 132,
+              "headword": "placeo",
+              "glossZh": "討好、令人滿意",
+              "lemmas": [
+                "placeo"
+              ],
+              "creditLemmas": [
+                "placeo"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "verification": {
+            "words": 5,
+            "unattested": [],
+            "untaught": [],
+            "enclitics": [],
+            "lemmas": [
+              "et",
+              "ipse",
+              "placeo",
+              "saluator",
+              "salvator",
+              "sum",
+              "uia",
+              "via"
             ],
             "lengthOk": true,
             "passed": true
@@ -4341,48 +4389,6 @@
       "items": [
         {
           "kind": "quoted",
-          "ref": "庇護十一：四十年　Quadragesimo Anno",
-          "text": "multiplicari sunt coepta",
-          "answerKeyRef": "L37#10",
-          "answerKeyEdition": "思高譯本",
-          "answerKeyScope": "block-containing-clause",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 8,
-              "ordinal": 145,
-              "headword": "coepī",
-              "glossZh": "開始、著手",
-              "lemmas": [
-                "coepi"
-              ],
-              "creditLemmas": [
-                "coepi"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "verification": {
-            "words": 3,
-            "unattested": [],
-            "untaught": [
-              "multiplicari"
-            ],
-            "enclitics": [],
-            "lemmas": [
-              "coepi",
-              "multiplico",
-              "sum"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 1
-        },
-        {
-          "kind": "quoted",
           "ref": "良十三：至上智慧的天主　Providentissimus Deus",
           "text": "in pristinam dignitatem restituit",
           "answerKeyRef": "L36#1",
@@ -4420,6 +4426,50 @@
               "invicem",
               "pristinus",
               "restituo"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "corpus",
+          "no": 1
+        },
+        {
+          "kind": "quoted",
+          "ref": "厄革里雅朝聖記　Itinerarium Egeriae",
+          "text": "Iam autem ubi coeperit lucescere",
+          "answerKeyRef": "L04#2",
+          "answerKeyEdition": "思高譯本",
+          "answerKeyScope": "block-containing-clause",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 8,
+              "ordinal": 145,
+              "headword": "coepī",
+              "glossZh": "開始、著手",
+              "lemmas": [
+                "coepi"
+              ],
+              "creditLemmas": [
+                "coepi"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "verification": {
+            "words": 5,
+            "unattested": [],
+            "untaught": [
+              "lucescere"
+            ],
+            "enclitics": [],
+            "lemmas": [
+              "autem",
+              "coepi",
+              "iam",
+              "iampridem",
+              "ubi"
             ],
             "lengthOk": true,
             "passed": true
@@ -4957,73 +5007,6 @@
       "items": [
         {
           "kind": "quoted",
-          "ref": "梵一：天主子　Dei Filius",
-          "text": "ab eo revelata vera esse credimus",
-          "answerKeyRef": "L32#15",
-          "answerKeyEdition": "思高譯本",
-          "answerKeyScope": "block-containing-clause",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 9,
-              "ordinal": 167,
-              "headword": "revelō",
-              "glossZh": "揭示、啟示、披露",
-              "lemmas": [
-                "reuelo",
-                "revelo"
-              ],
-              "creditLemmas": [
-                "reuelo",
-                "revelo"
-              ],
-              "resolved": true,
-              "phrase": false
-            },
-            {
-              "volume": 2,
-              "lesson": 9,
-              "ordinal": 171,
-              "headword": "ab",
-              "glossZh": "由（施事者）；從（出發、原因）；自（遠時間或起源）",
-              "lemmas": [
-                "ab",
-                "ad"
-              ],
-              "creditLemmas": [
-                "ab"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "verification": {
-            "words": 6,
-            "unattested": [],
-            "untaught": [],
-            "enclitics": [],
-            "lemmas": [
-              "ab",
-              "ad",
-              "credo",
-              "eo",
-              "esse",
-              "is",
-              "reuelo",
-              "revelo",
-              "sum",
-              "uerus",
-              "verum",
-              "verus"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 1
-        },
-        {
-          "kind": "quoted",
           "ref": "若望二十三：和平於世　Pacem in Terris",
           "text": "ipsum per se iura et officia habere",
           "answerKeyRef": "L40#10",
@@ -5078,6 +5061,50 @@
               "se",
               "sui",
               "sum"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "corpus",
+          "no": 1
+        },
+        {
+          "kind": "quoted",
+          "ref": "使徒信經　Symbolum Apostolorum",
+          "text": "ascendit ad caelos",
+          "answerKeyRef": "L01#1",
+          "answerKeyEdition": "思高譯本",
+          "answerKeyScope": "block-containing-clause",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 9,
+              "ordinal": 171,
+              "headword": "ab",
+              "glossZh": "由（施事者）；從（出發、原因）；自（遠時間或起源）",
+              "lemmas": [
+                "ab",
+                "ad"
+              ],
+              "creditLemmas": [
+                "ab"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "verification": {
+            "words": 3,
+            "unattested": [],
+            "untaught": [],
+            "enclitics": [],
+            "lemmas": [
+              "ab",
+              "ad",
+              "an",
+              "ascendo",
+              "caelum",
+              "caelus"
             ],
             "lengthOk": true,
             "passed": true
@@ -5608,8 +5635,25 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
+        "practised": 18,
         "notPractised": [
+          {
+            "volume": 2,
+            "lesson": 9,
+            "ordinal": 167,
+            "headword": "revelō",
+            "glossZh": "揭示、啟示、披露",
+            "lemmas": [
+              "reuelo",
+              "revelo"
+            ],
+            "creditLemmas": [
+              "reuelo",
+              "revelo"
+            ],
+            "resolved": true,
+            "phrase": false
+          },
           {
             "volume": 2,
             "lesson": 9,
@@ -5634,72 +5678,6 @@
       "id": "lat-v2-lesson-10",
       "note": "",
       "items": [
-        {
-          "kind": "quoted",
-          "ref": "聖文德：心靈邁向天主的旅程　Itinerarium mentis in Deum",
-          "text": "secundum quod tenet rationem speciei seu formae",
-          "answerKeyRef": "L22#7",
-          "answerKeyEdition": "思高譯本",
-          "answerKeyScope": "block-containing-clause",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 10,
-              "ordinal": 185,
-              "headword": "forma",
-              "glossZh": "形狀、外貌、美麗；模式、範型",
-              "lemmas": [
-                "forma"
-              ],
-              "creditLemmas": [
-                "forma"
-              ],
-              "resolved": true,
-              "phrase": false
-            },
-            {
-              "volume": 2,
-              "lesson": 10,
-              "ordinal": 186,
-              "headword": "seu",
-              "glossZh": "或者、如果；無論……或",
-              "lemmas": [
-                "seu",
-                "siue",
-                "sive"
-              ],
-              "creditLemmas": [
-                "seu"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "verification": {
-            "words": 7,
-            "unattested": [],
-            "untaught": [],
-            "enclitics": [],
-            "lemmas": [
-              "forma",
-              "qui",
-              "quis",
-              "quod",
-              "ratio",
-              "secundum",
-              "secundus",
-              "seu",
-              "siue",
-              "sive",
-              "species",
-              "teneo"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 1
-        },
         {
           "kind": "quoted",
           "ref": "斐理伯與佩爾佩圖亞殉道錄　Passio Perpetuae et Felicitatis",
@@ -5740,13 +5718,57 @@
             "passed": true
           },
           "reviewedBy": "corpus",
+          "no": 1
+        },
+        {
+          "kind": "quoted",
+          "ref": "良十三：永恆之父　Aeterni Patris",
+          "text": "ut potius perficiat",
+          "answerKeyRef": "L34#6",
+          "answerKeyEdition": "思高譯本",
+          "answerKeyScope": "block-containing-clause",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 10,
+              "ordinal": 194,
+              "headword": "potius",
+              "glossZh": "寧可、更寧願、較為",
+              "lemmas": [
+                "pote",
+                "potior",
+                "potius"
+              ],
+              "creditLemmas": [
+                "potius"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "verification": {
+            "words": 3,
+            "unattested": [],
+            "untaught": [],
+            "enclitics": [],
+            "lemmas": [
+              "perficio",
+              "pote",
+              "potior",
+              "potius",
+              "ut"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "corpus",
           "no": 2
         },
         {
           "kind": "quoted",
           "ref": "聖本篤會規　Regula Benedicti",
-          "text": "abbati visum fuerit",
-          "answerKeyRef": "L13#6",
+          "text": "cum aliquis suscipit nomen abbatis",
+          "answerKeyRef": "L13#4",
           "answerKeyEdition": "思高譯本",
           "answerKeyScope": "block-containing-clause",
           "targetWords": [
@@ -5767,18 +5789,17 @@
             }
           ],
           "verification": {
-            "words": 3,
+            "words": 5,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
             "lemmas": [
               "abbas",
-              "sum",
-              "uideo",
-              "uisus",
-              "video",
-              "visum",
-              "visus"
+              "aliqui",
+              "aliquis",
+              "cum",
+              "nomen",
+              "suscipio"
             ],
             "lengthOk": true,
             "passed": true
@@ -6305,8 +6326,40 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 18,
+        "practised": 16,
         "notPractised": [
+          {
+            "volume": 2,
+            "lesson": 10,
+            "ordinal": 185,
+            "headword": "forma",
+            "glossZh": "形狀、外貌、美麗；模式、範型",
+            "lemmas": [
+              "forma"
+            ],
+            "creditLemmas": [
+              "forma"
+            ],
+            "resolved": true,
+            "phrase": false
+          },
+          {
+            "volume": 2,
+            "lesson": 10,
+            "ordinal": 186,
+            "headword": "seu",
+            "glossZh": "或者、如果；無論……或",
+            "lemmas": [
+              "seu",
+              "siue",
+              "sive"
+            ],
+            "creditLemmas": [
+              "seu"
+            ],
+            "resolved": true,
+            "phrase": false
+          },
           {
             "volume": 2,
             "lesson": 10,
@@ -6453,37 +6506,39 @@
         },
         {
           "kind": "quoted",
-          "ref": "聖良一世四旬期講道　Sermones de Quadragesima",
-          "text": "ut Apostolus ait",
-          "answerKeyRef": "L10#9",
+          "ref": "聖安博晨禱聖詩　Hymni Ambrosiani",
+          "text": "Te diligat castus amor",
+          "answerKeyRef": "L06#2",
           "answerKeyEdition": "思高譯本",
           "answerKeyScope": "block-containing-clause",
           "targetWords": [
             {
               "volume": 2,
               "lesson": 11,
-              "ordinal": 202,
-              "headword": "aio",
-              "glossZh": "言說、聲稱、肯定",
+              "ordinal": 219,
+              "headword": "amor",
+              "glossZh": "愛、情愛；情人",
               "lemmas": [
-                "aio"
+                "amor"
               ],
               "creditLemmas": [
-                "aio"
+                "amor"
               ],
               "resolved": true,
               "phrase": false
             }
           ],
           "verification": {
-            "words": 3,
+            "words": 4,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
             "lemmas": [
-              "aio",
-              "apostolus",
-              "ut"
+              "amor",
+              "castus",
+              "diligo",
+              "te",
+              "tu"
             ],
             "lengthOk": true,
             "passed": true
@@ -6969,8 +7024,24 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 20,
-        "notPractised": [],
+        "practised": 19,
+        "notPractised": [
+          {
+            "volume": 2,
+            "lesson": 11,
+            "ordinal": 202,
+            "headword": "aio",
+            "glossZh": "言說、聲稱、肯定",
+            "lemmas": [
+              "aio"
+            ],
+            "creditLemmas": [
+              "aio"
+            ],
+            "resolved": true,
+            "phrase": false
+          }
+        ],
         "notAttested": []
       }
     },
@@ -9018,49 +9089,6 @@
         },
         {
           "kind": "quoted",
-          "ref": "肋令的味增爵：備忘錄　Commonitorium",
-          "text": "quae flentes asserebant parati",
-          "answerKeyRef": "L09#12",
-          "answerKeyEdition": "思高譯本",
-          "answerKeyScope": "block-containing-clause",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 15,
-              "ordinal": 294,
-              "headword": "assero",
-              "glossZh": "抓住、把握；主張、聲稱；解放、維護",
-              "lemmas": [
-                "assero"
-              ],
-              "creditLemmas": [
-                "assero"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "verification": {
-            "words": 4,
-            "unattested": [],
-            "untaught": [],
-            "enclitics": [],
-            "lemmas": [
-              "assero",
-              "fleo",
-              "paratus",
-              "paro",
-              "qui",
-              "quis"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 2
-        },
-        {
-          "kind": "quoted",
           "ref": "額我略七世：教宗敕語　Dictatus papae",
           "text": "si canonice fuerit ordinatus",
           "answerKeyRef": "L16#23",
@@ -9094,6 +9122,48 @@
               "si",
               "sic",
               "sum"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "corpus",
+          "no": 2
+        },
+        {
+          "kind": "quoted",
+          "ref": "天鄉之歌　O quanta, qualia",
+          "text": "nec ineffabiles cessabunt iubili",
+          "answerKeyRef": "L18#2",
+          "answerKeyEdition": "思高譯本",
+          "answerKeyScope": "block-containing-clause",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 15,
+              "ordinal": 281,
+              "headword": "cesso",
+              "glossZh": "停止、終止、懈怠",
+              "lemmas": [
+                "cesso"
+              ],
+              "creditLemmas": [
+                "cesso"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "verification": {
+            "words": 4,
+            "unattested": [],
+            "untaught": [
+              "iubili"
+            ],
+            "enclitics": [],
+            "lemmas": [
+              "cesso",
+              "nec",
+              "neque"
             ],
             "lengthOk": true,
             "passed": true
@@ -9587,8 +9657,24 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 20,
-        "notPractised": [],
+        "practised": 19,
+        "notPractised": [
+          {
+            "volume": 2,
+            "lesson": 15,
+            "ordinal": 294,
+            "headword": "assero",
+            "glossZh": "抓住、把握；主張、聲稱；解放、維護",
+            "lemmas": [
+              "assero"
+            ],
+            "creditLemmas": [
+              "assero"
+            ],
+            "resolved": true,
+            "phrase": false
+          }
+        ],
         "notAttested": []
       }
     },
@@ -9641,47 +9727,6 @@
         },
         {
           "kind": "quoted",
-          "ref": "梵二：教會對非基督宗教態度宣言　Nostra Aetate",
-          "text": "Moysen et Prophetas",
-          "answerKeyRef": "L45#12",
-          "answerKeyEdition": "思高譯本",
-          "answerKeyScope": "block-containing-clause",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 16,
-              "ordinal": 314,
-              "headword": "Moyses",
-              "glossZh": "摩西",
-              "lemmas": [
-                "moyses"
-              ],
-              "creditLemmas": [
-                "moyses"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "verification": {
-            "words": 3,
-            "unattested": [],
-            "untaught": [],
-            "enclitics": [],
-            "lemmas": [
-              "et",
-              "moyses",
-              "propheta",
-              "sum"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 2
-        },
-        {
-          "kind": "quoted",
           "ref": "聖良一世四旬期講道　Sermones de Quadragesima",
           "text": "sed nostra delicta fecerunt",
           "answerKeyRef": "L10#2",
@@ -9716,6 +9761,52 @@
               "facio",
               "noster",
               "sed"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "corpus",
+          "no": 2
+        },
+        {
+          "kind": "quoted",
+          "ref": "良十三：至上智慧的天主　Providentissimus Deus",
+          "text": "haud paucos esse e catholicis",
+          "answerKeyRef": "L36#5",
+          "answerKeyEdition": "思高譯本",
+          "answerKeyScope": "block-containing-clause",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 16,
+              "ordinal": 304,
+              "headword": "paucus",
+              "glossZh": "少量的、稀少的、少數",
+              "lemmas": [
+                "paucus"
+              ],
+              "creditLemmas": [
+                "paucus"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "verification": {
+            "words": 5,
+            "unattested": [],
+            "untaught": [
+              "haud"
+            ],
+            "enclitics": [],
+            "lemmas": [
+              "e",
+              "esse",
+              "et",
+              "ex",
+              "haud",
+              "paucus",
+              "sum"
             ],
             "lengthOk": true,
             "passed": true
@@ -10184,14 +10275,14 @@
           {
             "volume": 2,
             "lesson": 16,
-            "ordinal": 304,
-            "headword": "paucus",
-            "glossZh": "少量的、稀少的、少數",
+            "ordinal": 314,
+            "headword": "Moyses",
+            "glossZh": "摩西",
             "lemmas": [
-              "paucus"
+              "moyses"
             ],
             "creditLemmas": [
-              "paucus"
+              "moyses"
             ],
             "resolved": true,
             "phrase": false
@@ -10205,51 +10296,6 @@
       "id": "lat-v2-lesson-17",
       "note": "本讀本語料中無任何字形，因而無法入題：archidiaconus",
       "items": [
-        {
-          "kind": "quoted",
-          "ref": "厄革里雅朝聖記　Itinerarium Egeriae",
-          "text": "id est dominica die",
-          "answerKeyRef": "L04#7",
-          "answerKeyEdition": "思高譯本",
-          "answerKeyScope": "block-containing-clause",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 17,
-              "ordinal": 337,
-              "headword": "dominicus",
-              "glossZh": "主的、主人的",
-              "lemmas": [
-                "Dominicus",
-                "dominicus"
-              ],
-              "creditLemmas": [
-                "Dominicus",
-                "dominicus"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "verification": {
-            "words": 4,
-            "unattested": [],
-            "untaught": [],
-            "enclitics": [],
-            "lemmas": [
-              "calendar",
-              "dies",
-              "dominicus",
-              "expression",
-              "is",
-              "sum"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 1
-        },
         {
           "kind": "quoted",
           "ref": "梵二：天主的啟示教義憲章　Dei Verbum",
@@ -10290,7 +10336,7 @@
             "passed": true
           },
           "reviewedBy": "corpus",
-          "no": 2
+          "no": 1
         },
         {
           "kind": "quoted",
@@ -10330,6 +10376,51 @@
               "libertas",
               "praeditus",
               "sum"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "corpus",
+          "no": 2
+        },
+        {
+          "kind": "quoted",
+          "ref": "肋令的味增爵：備忘錄　Commonitorium",
+          "text": "Remotiorem porro villulam vocavit Lirinum",
+          "answerKeyRef": "L09#2",
+          "answerKeyEdition": "思高譯本",
+          "answerKeyScope": "block-containing-clause",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 17,
+              "ordinal": 324,
+              "headword": "porro",
+              "glossZh": "往外、更遠；從前、今後；再者",
+              "lemmas": [
+                "porro"
+              ],
+              "creditLemmas": [
+                "porro"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "verification": {
+            "words": 5,
+            "unattested": [],
+            "untaught": [
+              "Remotiorem",
+              "villulam",
+              "Lirinum"
+            ],
+            "enclitics": [],
+            "lemmas": [
+              "porro",
+              "remotus",
+              "uoco",
+              "voco"
             ],
             "lengthOk": true,
             "passed": true
@@ -10806,7 +10897,7 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 18,
+        "practised": 17,
         "notPractised": [
           {
             "volume": 2,
@@ -10819,6 +10910,23 @@
             ],
             "creditLemmas": [
               "manifestus"
+            ],
+            "resolved": true,
+            "phrase": false
+          },
+          {
+            "volume": 2,
+            "lesson": 17,
+            "ordinal": 337,
+            "headword": "dominicus",
+            "glossZh": "主的、主人的",
+            "lemmas": [
+              "Dominicus",
+              "dominicus"
+            ],
+            "creditLemmas": [
+              "Dominicus",
+              "dominicus"
             ],
             "resolved": true,
             "phrase": false
@@ -11506,51 +11614,6 @@
       "items": [
         {
           "kind": "quoted",
-          "ref": "聖誕詠　Adeste, fideles",
-          "text": "genitum non factum",
-          "answerKeyRef": "L25#1",
-          "answerKeyEdition": "思高譯本",
-          "answerKeyScope": "block-containing-clause",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 19,
-              "ordinal": 379,
-              "headword": "gigno",
-              "glossZh": "生育、產生、誕生",
-              "lemmas": [
-                "gigno"
-              ],
-              "creditLemmas": [
-                "gigno"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "verification": {
-            "words": 3,
-            "unattested": [],
-            "untaught": [],
-            "enclitics": [],
-            "lemmas": [
-              "facio",
-              "factum",
-              "factus",
-              "fio",
-              "gigno",
-              "non",
-              "nonnihil",
-              "nonnullus"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 1
-        },
-        {
-          "kind": "quoted",
           "ref": "聖文德：心靈邁向天主的旅程　Itinerarium mentis in Deum",
           "text": "Quod patet sic",
           "answerKeyRef": "L22#2",
@@ -11589,7 +11652,7 @@
             "passed": true
           },
           "reviewedBy": "corpus",
-          "no": 2
+          "no": 1
         },
         {
           "kind": "quoted",
@@ -11625,6 +11688,47 @@
               "et",
               "spiritualis",
               "sum"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "corpus",
+          "no": 2
+        },
+        {
+          "kind": "quoted",
+          "ref": "梵二：教會對非基督宗教態度宣言　Nostra Aetate",
+          "text": "unam habent originem",
+          "answerKeyRef": "L45#4",
+          "answerKeyEdition": "思高譯本",
+          "answerKeyScope": "block-containing-clause",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 19,
+              "ordinal": 366,
+              "headword": "origo",
+              "glossZh": "起源、來源；出身、血統；種族、家系",
+              "lemmas": [
+                "origo"
+              ],
+              "creditLemmas": [
+                "origo"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "verification": {
+            "words": 3,
+            "unattested": [],
+            "untaught": [],
+            "enclitics": [],
+            "lemmas": [
+              "habeo",
+              "origo",
+              "una",
+              "unus"
             ],
             "lengthOk": true,
             "passed": true
@@ -12111,14 +12215,14 @@
           {
             "volume": 2,
             "lesson": 19,
-            "ordinal": 366,
-            "headword": "origo",
-            "glossZh": "起源、來源；出身、血統；種族、家系",
+            "ordinal": 379,
+            "headword": "gigno",
+            "glossZh": "生育、產生、誕生",
             "lemmas": [
-              "origo"
+              "gigno"
             ],
             "creditLemmas": [
-              "origo"
+              "gigno"
             ],
             "resolved": true,
             "phrase": false
@@ -12219,39 +12323,41 @@
         },
         {
           "kind": "quoted",
-          "ref": "梵二：論教會在現代世界牧職憲章　Gaudium et Spes",
-          "text": "Recte iudicat homo",
-          "answerKeyRef": "L46#18",
+          "ref": "梵二：天主的啟示教義憲章　Dei Verbum",
+          "text": "misso tandem Spiritu veritatis",
+          "answerKeyRef": "L44#8",
           "answerKeyEdition": "思高譯本",
           "answerKeyScope": "block-containing-clause",
           "targetWords": [
             {
               "volume": 2,
               "lesson": 20,
-              "ordinal": 398,
-              "headword": "recte",
-              "glossZh": "正確地、恰當地；直立地",
+              "ordinal": 394,
+              "headword": "tandem",
+              "glossZh": "最終、終於、最後",
               "lemmas": [
-                "recte",
-                "rego"
+                "tandem"
               ],
               "creditLemmas": [
-                "recte"
+                "tandem"
               ],
               "resolved": true,
               "phrase": false
             }
           ],
           "verification": {
-            "words": 3,
+            "words": 4,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
             "lemmas": [
-              "homo",
-              "iudico",
-              "recte",
-              "rego"
+              "misso",
+              "missus",
+              "mitto",
+              "spiritus",
+              "tandem",
+              "ueritas",
+              "veritas"
             ],
             "lengthOk": true,
             "passed": true
@@ -12734,8 +12840,25 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 20,
-        "notPractised": [],
+        "practised": 19,
+        "notPractised": [
+          {
+            "volume": 2,
+            "lesson": 20,
+            "ordinal": 398,
+            "headword": "recte",
+            "glossZh": "正確地、恰當地；直立地",
+            "lemmas": [
+              "recte",
+              "rego"
+            ],
+            "creditLemmas": [
+              "recte"
+            ],
+            "resolved": true,
+            "phrase": false
+          }
+        ],
         "notAttested": []
       }
     },
@@ -12744,6 +12867,48 @@
       "id": "lat-v2-lesson-21",
       "note": "",
       "items": [
+        {
+          "kind": "quoted",
+          "ref": "方濟各：願祢受讚頌　Laudato Si'",
+          "text": "rei nummariae coniuncta",
+          "answerKeyRef": "L50#3",
+          "answerKeyEdition": "思高譯本",
+          "answerKeyScope": "block-containing-clause",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 21,
+              "ordinal": 419,
+              "headword": "reus",
+              "glossZh": "訴訟當事人、被告；犯人、罪人",
+              "lemmas": [
+                "reus"
+              ],
+              "creditLemmas": [
+                "reus"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "verification": {
+            "words": 3,
+            "unattested": [],
+            "untaught": [
+              "nummariae"
+            ],
+            "enclitics": [],
+            "lemmas": [
+              "coniungo",
+              "res",
+              "reus"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "corpus",
+          "no": 1
+        },
         {
           "kind": "quoted",
           "ref": "聖文德：心靈邁向天主的旅程　Itinerarium mentis in Deum",
@@ -12785,72 +12950,27 @@
             "passed": true
           },
           "reviewedBy": "corpus",
-          "no": 1
-        },
-        {
-          "kind": "quoted",
-          "ref": "聖本篤會規　Regula Benedicti",
-          "text": "plus ab eo exigitur",
-          "answerKeyRef": "L13#8",
-          "answerKeyEdition": "思高譯本",
-          "answerKeyScope": "block-containing-clause",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 21,
-              "ordinal": 405,
-              "headword": "exigo",
-              "glossZh": "驅逐、完成、審視、衡量",
-              "lemmas": [
-                "exigo"
-              ],
-              "creditLemmas": [
-                "exigo"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "verification": {
-            "words": 4,
-            "unattested": [],
-            "untaught": [],
-            "enclitics": [],
-            "lemmas": [
-              "ab",
-              "ad",
-              "eo",
-              "exigo",
-              "is",
-              "multum",
-              "multus",
-              "plus"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
           "no": 2
         },
         {
           "kind": "quoted",
-          "ref": "聖奧思定懺悔錄 卷一　Confessiones I",
-          "text": "quaerens cum nihil desit tibi",
-          "answerKeyRef": "L07#6",
+          "ref": "梵二：天主的啟示教義憲章　Dei Verbum",
+          "text": "et ad promissum Salvatorem expectandum",
+          "answerKeyRef": "L44#6",
           "answerKeyEdition": "思高譯本",
           "answerKeyScope": "block-containing-clause",
           "targetWords": [
             {
               "volume": 2,
               "lesson": 21,
-              "ordinal": 412,
-              "headword": "desum",
-              "glossZh": "不足、失職、缺席、背棄",
+              "ordinal": 413,
+              "headword": "promitto",
+              "glossZh": "承諾、誓言",
               "lemmas": [
-                "desum"
+                "promitto"
               ],
               "creditLemmas": [
-                "desum"
+                "promitto"
               ],
               "resolved": true,
               "phrase": false
@@ -12862,11 +12982,16 @@
             "untaught": [],
             "enclitics": [],
             "lemmas": [
-              "cum",
-              "desum",
-              "nihil",
-              "quaero",
-              "tu"
+              "ab",
+              "ad",
+              "an",
+              "et",
+              "exspecto",
+              "promissum",
+              "promitto",
+              "saluator",
+              "salvator",
+              "sum"
             ],
             "lengthOk": true,
             "passed": true
@@ -13344,7 +13469,7 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 18,
+        "practised": 17,
         "notPractised": [
           {
             "volume": 2,
@@ -13357,6 +13482,21 @@
             ],
             "creditLemmas": [
               "idcirco"
+            ],
+            "resolved": true,
+            "phrase": false
+          },
+          {
+            "volume": 2,
+            "lesson": 21,
+            "ordinal": 412,
+            "headword": "desum",
+            "glossZh": "不足、失職、缺席、背棄",
+            "lemmas": [
+              "desum"
+            ],
+            "creditLemmas": [
+              "desum"
             ],
             "resolved": true,
             "phrase": false
@@ -13427,9 +13567,9 @@
         },
         {
           "kind": "quoted",
-          "ref": "梵二：教會對非基督宗教態度宣言　Nostra Aetate",
-          "text": "eleemosynis et ieiunio colunt",
-          "answerKeyRef": "L45#9",
+          "ref": "梵二：大公主義法令　Unitatis Redintegratio",
+          "text": "in divini cultus communi celebratione",
+          "answerKeyRef": "L41#6",
           "answerKeyEdition": "思高譯本",
           "answerKeyScope": "block-containing-clause",
           "targetWords": [
@@ -13450,19 +13590,18 @@
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 5,
             "unattested": [],
-            "untaught": [
-              "eleemosynis",
-              "ieiunio"
-            ],
+            "untaught": [],
             "enclitics": [],
             "lemmas": [
               "colo",
-              "eleemosyna",
-              "et",
-              "ieiunium",
-              "sum"
+              "communis",
+              "cultus",
+              "diuinus",
+              "hic",
+              "in",
+              "invicem"
             ],
             "lengthOk": true,
             "passed": true
@@ -13472,24 +13611,23 @@
         },
         {
           "kind": "quoted",
-          "ref": "大額我略　Gregorius Magnus",
-          "text": "de quibus parere nullatenus potuissem",
-          "answerKeyRef": "L12#7",
+          "ref": "方濟各：願祢受讚頌　Laudato Si'",
+          "text": "Contaminatio, eiectamenta et detractionis cultus",
+          "answerKeyRef": "L50#2",
           "answerKeyEdition": "思高譯本",
           "answerKeyScope": "block-containing-clause",
           "targetWords": [
             {
               "volume": 2,
               "lesson": 22,
-              "ordinal": 422,
-              "headword": "nullatenus",
-              "glossZh": "決不、毫不；無論如何不",
+              "ordinal": 437,
+              "headword": "colo",
+              "glossZh": "居住、住；耕作、培育；維護、保持",
               "lemmas": [
-                "nullatenus",
-                "nullus"
+                "colo"
               ],
               "creditLemmas": [
-                "nullatenus"
+                "colo"
               ],
               "resolved": true,
               "phrase": false
@@ -13499,17 +13637,16 @@
             "words": 5,
             "unattested": [],
             "untaught": [
-              "potuissem"
+              "Contaminatio",
+              "eiectamenta",
+              "detractionis"
             ],
             "enclitics": [],
             "lemmas": [
-              "de",
-              "nullatenus",
-              "nullus",
-              "pareo",
-              "pario",
-              "qui",
-              "quis"
+              "colo",
+              "cultus",
+              "et",
+              "sum"
             ],
             "lengthOk": true,
             "passed": true
@@ -14671,9 +14808,58 @@
       "items": [
         {
           "kind": "quoted",
-          "ref": "天鄉之歌　O quanta, qualia",
-          "text": "per quem sunt",
-          "answerKeyRef": "L18#2",
+          "ref": "若望二十三：和平於世　Pacem in Terris",
+          "text": "quem Deus constituit",
+          "answerKeyRef": "L40#1",
+          "answerKeyEdition": "思高譯本",
+          "answerKeyScope": "block-containing-clause",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 24,
+              "ordinal": 472,
+              "headword": "quam",
+              "glossZh": "如何、多少",
+              "lemmas": [
+                "quam",
+                "quamdiu",
+                "quamobrem",
+                "qui",
+                "quis"
+              ],
+              "creditLemmas": [
+                "quam"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "verification": {
+            "words": 3,
+            "unattested": [],
+            "untaught": [],
+            "enclitics": [],
+            "lemmas": [
+              "Deus",
+              "constituo",
+              "deus",
+              "quam",
+              "quem",
+              "quemadmodum",
+              "qui",
+              "quis"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "corpus",
+          "no": 1
+        },
+        {
+          "kind": "quoted",
+          "ref": "梵二：教會憲章　Lumen Gentium",
+          "text": "per quem vivimus",
+          "answerKeyRef": "L42#7",
           "answerKeyEdition": "思高譯本",
           "answerKeyScope": "block-containing-clause",
           "targetWords": [
@@ -14710,51 +14896,8 @@
               "quemadmodum",
               "qui",
               "quis",
-              "sum"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 1
-        },
-        {
-          "kind": "quoted",
-          "ref": "梵一：天主子　Dei Filius",
-          "text": "idem Decretum renovantes",
-          "answerKeyRef": "L32#12",
-          "answerKeyEdition": "思高譯本",
-          "answerKeyScope": "block-containing-clause",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 24,
-              "ordinal": 464,
-              "headword": "decretum",
-              "glossZh": "教令、法令、決議",
-              "lemmas": [
-                "decerno",
-                "decretum"
-              ],
-              "creditLemmas": [
-                "decretum"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "verification": {
-            "words": 3,
-            "unattested": [],
-            "untaught": [
-              "renovantes"
-            ],
-            "enclitics": [],
-            "lemmas": [
-              "decerno",
-              "decretum",
-              "idem",
-              "item"
+              "uiuo",
+              "vivo"
             ],
             "lengthOk": true,
             "passed": true
@@ -14764,42 +14907,48 @@
         },
         {
           "kind": "quoted",
-          "ref": "亞他納修信經　Symbolum Quicumque",
-          "text": "et unitas in Trinitate",
-          "answerKeyRef": "L11#3",
+          "ref": "聖奧思定懺悔錄 卷八　Confessiones VIII",
+          "text": "quem christianum defunctum esse audieram",
+          "answerKeyRef": "L08#6",
           "answerKeyEdition": "思高譯本",
           "answerKeyScope": "block-containing-clause",
           "targetWords": [
             {
               "volume": 2,
               "lesson": 24,
-              "ordinal": 461,
-              "headword": "Trinitas",
-              "glossZh": "聖三一、三位一體",
+              "ordinal": 472,
+              "headword": "quam",
+              "glossZh": "如何、多少",
               "lemmas": [
-                "trinitas"
+                "quam",
+                "quamdiu",
+                "quamobrem",
+                "qui",
+                "quis"
               ],
               "creditLemmas": [
-                "trinitas"
+                "quam"
               ],
               "resolved": true,
               "phrase": false
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 5,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
             "lemmas": [
-              "et",
-              "hic",
-              "in",
-              "invicem",
-              "sum",
-              "trinitas",
-              "unio",
-              "unitas"
+              "Christianus",
+              "audio",
+              "christianus",
+              "esse",
+              "quam",
+              "quem",
+              "quemadmodum",
+              "qui",
+              "quis",
+              "sum"
             ],
             "lengthOk": true,
             "passed": true
@@ -15959,48 +16108,6 @@
       "items": [
         {
           "kind": "quoted",
-          "ref": "梵二：禮儀憲章　Sacrosanctum Concilium",
-          "text": "fuit instrumentum nostrae salutis",
-          "answerKeyRef": "L39#4",
-          "answerKeyEdition": "思高譯本",
-          "answerKeyScope": "block-containing-clause",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 26,
-              "ordinal": 519,
-              "headword": "instrumentum",
-              "glossZh": "工具、器具、裝備、手段、文書",
-              "lemmas": [
-                "instrumentum"
-              ],
-              "creditLemmas": [
-                "instrumentum"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "verification": {
-            "words": 4,
-            "unattested": [],
-            "untaught": [],
-            "enclitics": [],
-            "lemmas": [
-              "Salus",
-              "instrumentum",
-              "noster",
-              "salus",
-              "sum"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 1
-        },
-        {
-          "kind": "quoted",
           "ref": "梵二：論教會在現代世界牧職憲章　Gaudium et Spes",
           "text": "varias et etiam contrarias",
           "answerKeyRef": "L46#5",
@@ -16044,47 +16151,101 @@
             "passed": true
           },
           "reviewedBy": "corpus",
-          "no": 2
+          "no": 1
         },
         {
           "kind": "quoted",
-          "ref": "庇護十一：四十年　Quadragesimo Anno",
-          "text": "Quid egerit potestas civilis",
-          "answerKeyRef": "L37#12",
+          "ref": "若望二十三：和平於世　Pacem in Terris",
+          "text": "Quam multa sunt opera tua, Domine",
+          "answerKeyRef": "L40#3",
           "answerKeyEdition": "思高譯本",
           "answerKeyScope": "block-containing-clause",
           "targetWords": [
             {
               "volume": 2,
               "lesson": 26,
-              "ordinal": 511,
-              "headword": "civilis",
-              "glossZh": "市民的、民事的、公眾的、有禮的",
+              "ordinal": 508,
+              "headword": "opera",
+              "glossZh": "勞動、幫助、盡力、努力",
               "lemmas": [
-                "ciuilis",
-                "civilis"
+                "opera",
+                "opus"
               ],
               "creditLemmas": [
-                "ciuilis",
-                "civilis"
+                "opera"
               ],
               "resolved": true,
               "phrase": false
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 6,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
             "lemmas": [
-              "ago",
-              "ciuilis",
-              "potestas",
+              "Dominus",
+              "domina",
+              "dominus",
+              "multus",
+              "opera",
+              "opus",
+              "quam",
+              "quamdiu",
+              "quamobrem",
               "qui",
-              "quid",
-              "quidam",
-              "quis"
+              "quis",
+              "sum",
+              "tuus"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "corpus",
+          "no": 2
+        },
+        {
+          "kind": "quoted",
+          "ref": "本篤十六：天主是愛　Deus Caritas Est",
+          "text": "verum est responsio erga amoris donum",
+          "answerKeyRef": "L49#2",
+          "answerKeyEdition": "思高譯本",
+          "answerKeyScope": "block-containing-clause",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 26,
+              "ordinal": 506,
+              "headword": "erga",
+              "glossZh": "對於、面對",
+              "lemmas": [
+                "erga"
+              ],
+              "creditLemmas": [
+                "erga"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "verification": {
+            "words": 6,
+            "unattested": [],
+            "untaught": [
+              "responsio"
+            ],
+            "enclitics": [],
+            "lemmas": [
+              "amor",
+              "donum",
+              "erga",
+              "responsio",
+              "sum",
+              "uero",
+              "uerum",
+              "uerus",
+              "verum",
+              "verus"
             ],
             "lengthOk": true,
             "passed": true
@@ -16572,7 +16733,7 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 14,
+        "practised": 15,
         "notPractised": [
           {
             "volume": 2,
@@ -16600,22 +16761,6 @@
             ],
             "creditLemmas": [
               "socialis"
-            ],
-            "resolved": true,
-            "phrase": false
-          },
-          {
-            "volume": 2,
-            "lesson": 26,
-            "ordinal": 508,
-            "headword": "opera",
-            "glossZh": "勞動、幫助、盡力、努力",
-            "lemmas": [
-              "opera",
-              "opus"
-            ],
-            "creditLemmas": [
-              "opera"
             ],
             "resolved": true,
             "phrase": false
@@ -17990,50 +18135,6 @@
       "items": [
         {
           "kind": "quoted",
-          "ref": "保祿六：人類生命　Humanae Vitae",
-          "text": "ad quas Coetus pervenerat",
-          "answerKeyRef": "L47#17",
-          "answerKeyEdition": "思高譯本",
-          "answerKeyScope": "block-containing-clause",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 29,
-              "ordinal": 571,
-              "headword": "coetus",
-              "glossZh": "集會、聚集；團體、幫派、群眾",
-              "lemmas": [
-                "coetus"
-              ],
-              "creditLemmas": [
-                "coetus"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "verification": {
-            "words": 4,
-            "unattested": [],
-            "untaught": [],
-            "enclitics": [],
-            "lemmas": [
-              "ab",
-              "ad",
-              "an",
-              "coetus",
-              "peruenio",
-              "pervenio",
-              "qui"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 1
-        },
-        {
-          "kind": "quoted",
           "ref": "若望二十三：和平於世　Pacem in Terris",
           "text": "illinc dumtaxat petendae sint",
           "answerKeyRef": "L40#7",
@@ -18072,7 +18173,7 @@
             "passed": true
           },
           "reviewedBy": "corpus",
-          "no": 2
+          "no": 1
         },
         {
           "kind": "quoted",
@@ -18112,6 +18213,49 @@
               "malus",
               "usura",
               "vorax"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "corpus",
+          "no": 2
+        },
+        {
+          "kind": "quoted",
+          "ref": "梵二：論教會在現代世界牧職憲章　Gaudium et Spes",
+          "text": "cum ipsa experientia concordat",
+          "answerKeyRef": "L46#10",
+          "answerKeyEdition": "思高譯本",
+          "answerKeyScope": "block-containing-clause",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 29,
+              "ordinal": 580,
+              "headword": "experientia",
+              "glossZh": "試驗、經驗",
+              "lemmas": [
+                "experientia"
+              ],
+              "creditLemmas": [
+                "experientia"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "verification": {
+            "words": 4,
+            "unattested": [],
+            "untaught": [
+              "concordat"
+            ],
+            "enclitics": [],
+            "lemmas": [
+              "concordo",
+              "cum",
+              "experientia",
+              "ipse"
             ],
             "lengthOk": true,
             "passed": true
@@ -18649,52 +18793,6 @@
       "items": [
         {
           "kind": "quoted",
-          "ref": "庇護十一：四十年　Quadragesimo Anno",
-          "text": "debet cura providentiaque singulari complecti respublica » (19)",
-          "answerKeyRef": "L37#14",
-          "answerKeyEdition": "思高譯本",
-          "answerKeyScope": "block-containing-clause",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 30,
-              "ordinal": 581,
-              "headword": "complector",
-              "glossZh": "擁抱、包含",
-              "lemmas": [
-                "complector"
-              ],
-              "creditLemmas": [
-                "complector"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "verification": {
-            "words": 6,
-            "unattested": [],
-            "untaught": [
-              "providentiaque",
-              "respublica"
-            ],
-            "enclitics": [],
-            "lemmas": [
-              "complector",
-              "cura",
-              "curo",
-              "debeo",
-              "prouidentia",
-              "singularis"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 1
-        },
-        {
-          "kind": "quoted",
           "ref": "聖安博晨禱聖詩　Hymni Ambrosiani",
           "text": "Mutata elementa stupent Transire in usus alteros",
           "answerKeyRef": "L06#5",
@@ -18739,51 +18837,97 @@
             "passed": true
           },
           "reviewedBy": "corpus",
-          "no": 2
+          "no": 1
         },
         {
           "kind": "quoted",
-          "ref": "梵一：天主子　Dei Filius",
-          "text": "attingens a fine usque ad finem fortiter",
-          "answerKeyRef": "L32#5",
+          "ref": "戴都良論祈禱　De oratione",
+          "text": "Neque enim propria tantum orationis officia complexa est",
+          "answerKeyRef": "L03#4",
           "answerKeyEdition": "思高譯本",
           "answerKeyScope": "block-containing-clause",
           "targetWords": [
             {
               "volume": 2,
               "lesson": 30,
-              "ordinal": 595,
-              "headword": "attingo",
-              "glossZh": "觸摸、接觸；到達、實現；提及",
+              "ordinal": 581,
+              "headword": "complector",
+              "glossZh": "擁抱、包含",
               "lemmas": [
-                "attingo"
+                "complector"
               ],
               "creditLemmas": [
-                "attingo"
+                "complector"
               ],
               "resolved": true,
               "phrase": false
             }
           ],
           "verification": {
-            "words": 7,
+            "words": 8,
+            "unattested": [],
+            "untaught": [],
+            "enclitics": [],
+            "lemmas": [
+              "complector",
+              "enim",
+              "neque",
+              "officium",
+              "oratio",
+              "proprius",
+              "sum",
+              "tantum",
+              "tantus"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "corpus",
+          "no": 2
+        },
+        {
+          "kind": "quoted",
+          "ref": "梵二：信仰自由宣言　Dignitatis Humanae",
+          "text": "veritati autem cognitae firmiter adhaerendum est assensu personali",
+          "answerKeyRef": "L43#5",
+          "answerKeyEdition": "思高譯本",
+          "answerKeyScope": "block-containing-clause",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 30,
+              "ordinal": 587,
+              "headword": "personalis",
+              "glossZh": "個人的、關於個人的",
+              "lemmas": [
+                "personalis"
+              ],
+              "creditLemmas": [
+                "personalis"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "verification": {
+            "words": 8,
             "unattested": [],
             "untaught": [
-              "fortiter"
+              "firmiter",
+              "adhaerendum",
+              "assensu"
             ],
             "enclitics": [],
             "lemmas": [
-              "Finis",
-              "a",
-              "ab",
-              "ad",
-              "an",
-              "attingo",
-              "calendar",
-              "finis",
-              "fortiter",
-              "hic",
-              "usque"
+              "assensus",
+              "autem",
+              "cognosco",
+              "firme",
+              "firmiter",
+              "personalis",
+              "sum",
+              "ueritas",
+              "veritas"
             ],
             "lengthOk": true,
             "passed": true
@@ -19406,53 +19550,6 @@
         },
         {
           "kind": "quoted",
-          "ref": "聖安博晨禱聖詩　Hymni Ambrosiani",
-          "text": "Versatur in templo Deus",
-          "answerKeyRef": "L06#4",
-          "answerKeyEdition": "思高譯本",
-          "answerKeyScope": "block-containing-clause",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 31,
-              "ordinal": 618,
-              "headword": "verso",
-              "glossZh": "旋轉、翻動、混合",
-              "lemmas": [
-                "uerso",
-                "verso"
-              ],
-              "creditLemmas": [
-                "uerso",
-                "verso"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "verification": {
-            "words": 4,
-            "unattested": [],
-            "untaught": [],
-            "enclitics": [],
-            "lemmas": [
-              "Deus",
-              "deus",
-              "hic",
-              "in",
-              "invicem",
-              "templum",
-              "uerso",
-              "verso"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 2
-        },
-        {
-          "kind": "quoted",
           "ref": "保祿六：人類生命　Humanae Vitae",
           "text": "quodammodo mutatum esse sensum",
           "answerKeyRef": "L47#4",
@@ -19486,6 +19583,48 @@
               "quodammodo",
               "sensus",
               "sum"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "corpus",
+          "no": 2
+        },
+        {
+          "kind": "quoted",
+          "ref": "聖傑羅尼莫書信　Epistulae",
+          "text": "dum conscientiae bono fruitur",
+          "answerKeyRef": "L05#5",
+          "answerKeyEdition": "思高譯本",
+          "answerKeyScope": "block-containing-clause",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 31,
+              "ordinal": 606,
+              "headword": "fruor",
+              "glossZh": "享受、受益；欣賞",
+              "lemmas": [
+                "fruor"
+              ],
+              "creditLemmas": [
+                "fruor"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "verification": {
+            "words": 4,
+            "unattested": [],
+            "untaught": [],
+            "enclitics": [],
+            "lemmas": [
+              "bonum",
+              "bonus",
+              "conscientia",
+              "dum",
+              "fruor"
             ],
             "lengthOk": true,
             "passed": true
@@ -20063,50 +20202,6 @@
         },
         {
           "kind": "quoted",
-          "ref": "梵二：教會憲章　Lumen Gentium",
-          "text": "Verbum nempe Domini comparatur semini",
-          "answerKeyRef": "L42#11",
-          "answerKeyEdition": "思高譯本",
-          "answerKeyScope": "block-containing-clause",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 32,
-              "ordinal": 634,
-              "headword": "comparo",
-              "glossZh": "籌備、預備；蒐集、徵集；聯合",
-              "lemmas": [
-                "comparo"
-              ],
-              "creditLemmas": [
-                "comparo"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "verification": {
-            "words": 5,
-            "unattested": [],
-            "untaught": [],
-            "enclitics": [],
-            "lemmas": [
-              "Dominus",
-              "comparo",
-              "dominus",
-              "nempe",
-              "semen",
-              "uerbum",
-              "verbum"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 2
-        },
-        {
-          "kind": "quoted",
           "ref": "聖本篤會規　Regula Benedicti",
           "text": "securi iam sine consolatione alterius",
           "answerKeyRef": "L13#1",
@@ -20145,6 +20240,60 @@
               "securus",
               "sine",
               "sino"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "corpus",
+          "no": 2
+        },
+        {
+          "kind": "quoted",
+          "ref": "聖體聖詩集　Hymni de Corpore Christi",
+          "text": "Qui vitam sine termino Nobis donet in patria",
+          "answerKeyRef": "L23#1",
+          "answerKeyEdition": "思高譯本",
+          "answerKeyScope": "block-containing-clause",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 32,
+              "ordinal": 626,
+              "headword": "sino",
+              "glossZh": "允許、容許",
+              "lemmas": [
+                "sino"
+              ],
+              "creditLemmas": [
+                "sino"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "verification": {
+            "words": 8,
+            "unattested": [],
+            "untaught": [
+              "donet"
+            ],
+            "enclitics": [],
+            "lemmas": [
+              "ego",
+              "hic",
+              "in",
+              "invicem",
+              "nos",
+              "patria",
+              "patrius",
+              "qui",
+              "quia",
+              "quis",
+              "sine",
+              "sino",
+              "terminus",
+              "uita",
+              "vita"
             ],
             "lengthOk": true,
             "passed": true
@@ -20638,7 +20787,7 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
+        "practised": 18,
         "notPractised": [
           {
             "volume": 2,
@@ -20654,6 +20803,21 @@
             ],
             "resolved": true,
             "phrase": false
+          },
+          {
+            "volume": 2,
+            "lesson": 32,
+            "ordinal": 634,
+            "headword": "comparo",
+            "glossZh": "籌備、預備；蒐集、徵集；聯合",
+            "lemmas": [
+              "comparo"
+            ],
+            "creditLemmas": [
+              "comparo"
+            ],
+            "resolved": true,
+            "phrase": false
           }
         ],
         "notAttested": []
@@ -20662,42 +20826,46 @@
     {
       "lesson": 33,
       "id": "lat-v2-lesson-33",
-      "note": "",
+      "note": "本課無可用經典原句，十題全由自撰題補",
       "items": [
         {
           "kind": "quoted",
-          "ref": "梵二：天主的啟示教義憲章　Dei Verbum",
-          "text": "Apostoli successores reliquerunt Episcopos",
-          "answerKeyRef": "L44#16",
+          "ref": "若望二十三：和平於世　Pacem in Terris",
+          "text": "simul in homine eiusmodi inesse dignitatem",
+          "answerKeyRef": "L40#2",
           "answerKeyEdition": "思高譯本",
           "answerKeyScope": "block-containing-clause",
           "targetWords": [
             {
               "volume": 2,
               "lesson": 33,
-              "ordinal": 643,
-              "headword": "successor",
-              "glossZh": "後繼者、接班人",
+              "ordinal": 642,
+              "headword": "insum",
+              "glossZh": "存在於、包含於；屬於",
               "lemmas": [
-                "successor"
+                "insum"
               ],
               "creditLemmas": [
-                "successor"
+                "insum"
               ],
               "resolved": true,
               "phrase": false
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 6,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
             "lemmas": [
-              "apostolus",
-              "episcopus",
-              "relinquo",
-              "successor"
+              "dignitas",
+              "eiusmodi",
+              "hic",
+              "homo",
+              "in",
+              "insum",
+              "invicem",
+              "simul"
             ],
             "lengthOk": true,
             "passed": true
@@ -20707,89 +20875,27 @@
         },
         {
           "kind": "quoted",
-          "ref": "厄革里雅朝聖記　Itinerarium Egeriae",
-          "text": "quia libenter haberetis haec cognoscere",
-          "answerKeyRef": "L04#1",
+          "ref": "聖傑羅尼莫書信　Epistulae",
+          "text": "unde posset negare",
+          "answerKeyRef": "L05#3",
           "answerKeyEdition": "思高譯本",
           "answerKeyScope": "block-containing-clause",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 33,
-              "ordinal": 657,
-              "headword": "libenter",
-              "glossZh": "欣然、樂意；甘心",
-              "lemmas": [
-                "libenter"
-              ],
-              "creditLemmas": [
-                "libenter"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
+          "targetWords": [],
           "verification": {
-            "words": 5,
+            "words": 3,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
             "lemmas": [
-              "cognosco",
-              "habeo",
-              "hic",
-              "libenter",
-              "quia"
+              "nego",
+              "possum",
+              "unde"
             ],
             "lengthOk": true,
             "passed": true
           },
           "reviewedBy": "corpus",
           "no": 2
-        },
-        {
-          "kind": "quoted",
-          "ref": "波尼法爵八世：唯一至聖　Unam Sanctam",
-          "text": "Christus videlicet et Christi vicarius",
-          "answerKeyRef": "L24#4",
-          "answerKeyEdition": "思高譯本",
-          "answerKeyScope": "block-containing-clause",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 33,
-              "ordinal": 649,
-              "headword": "vicarius",
-              "glossZh": "代理人、副手；奴僕",
-              "lemmas": [
-                "uicarius"
-              ],
-              "creditLemmas": [
-                "uicarius"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "verification": {
-            "words": 5,
-            "unattested": [],
-            "untaught": [],
-            "enclitics": [],
-            "lemmas": [
-              "Christus",
-              "christus",
-              "et",
-              "sum",
-              "uicarius",
-              "uidelicet",
-              "videlicet"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 3
         },
         {
           "kind": "composed",
@@ -20858,7 +20964,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 4
+          "no": 3
         },
         {
           "kind": "composed",
@@ -20924,7 +21030,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 5
+          "no": 4
         },
         {
           "kind": "composed",
@@ -20990,7 +21096,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 6
+          "no": 5
         },
         {
           "kind": "composed",
@@ -21057,7 +21163,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 7
+          "no": 6
         },
         {
           "kind": "composed",
@@ -21127,7 +21233,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 8
+          "no": 7
         },
         {
           "kind": "composed",
@@ -21192,7 +21298,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 9
+          "no": 8
         },
         {
           "kind": "composed",
@@ -21258,13 +21364,59 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 10
+          "no": 9
         }
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 20,
-        "notPractised": [],
+        "practised": 17,
+        "notPractised": [
+          {
+            "volume": 2,
+            "lesson": 33,
+            "ordinal": 643,
+            "headword": "successor",
+            "glossZh": "後繼者、接班人",
+            "lemmas": [
+              "successor"
+            ],
+            "creditLemmas": [
+              "successor"
+            ],
+            "resolved": true,
+            "phrase": false
+          },
+          {
+            "volume": 2,
+            "lesson": 33,
+            "ordinal": 649,
+            "headword": "vicarius",
+            "glossZh": "代理人、副手；奴僕",
+            "lemmas": [
+              "uicarius"
+            ],
+            "creditLemmas": [
+              "uicarius"
+            ],
+            "resolved": true,
+            "phrase": false
+          },
+          {
+            "volume": 2,
+            "lesson": 33,
+            "ordinal": 657,
+            "headword": "libenter",
+            "glossZh": "欣然、樂意；甘心",
+            "lemmas": [
+              "libenter"
+            ],
+            "creditLemmas": [
+              "libenter"
+            ],
+            "resolved": true,
+            "phrase": false
+          }
+        ],
         "notAttested": []
       }
     },
@@ -21275,49 +21427,9 @@
       "items": [
         {
           "kind": "quoted",
-          "ref": "若望二十三：和平於世　Pacem in Terris",
-          "text": "habere integritatis corporis",
-          "answerKeyRef": "L40#12",
-          "answerKeyEdition": "思高譯本",
-          "answerKeyScope": "block-containing-clause",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 34,
-              "ordinal": 675,
-              "headword": "integritas",
-              "glossZh": "完整、貞潔、正直",
-              "lemmas": [
-                "integritas"
-              ],
-              "creditLemmas": [
-                "integritas"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "verification": {
-            "words": 3,
-            "unattested": [],
-            "untaught": [],
-            "enclitics": [],
-            "lemmas": [
-              "corpus",
-              "habeo",
-              "integritas"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 1
-        },
-        {
-          "kind": "quoted",
-          "ref": "梵二：信仰自由宣言　Dignitatis Humanae",
-          "text": "Communitates religiosae ius etiam habent",
-          "answerKeyRef": "L43#12",
+          "ref": "戴都良論祈禱　De oratione",
+          "text": "Itaque sic adorantes etiam praeceptum obimus",
+          "answerKeyRef": "L03#5",
           "answerKeyEdition": "思高譯本",
           "answerKeyScope": "block-containing-clause",
           "targetWords": [
@@ -21338,22 +21450,27 @@
             }
           ],
           "verification": {
-            "words": 5,
+            "words": 6,
             "unattested": [],
-            "untaught": [],
+            "untaught": [
+              "obimus"
+            ],
             "enclitics": [],
             "lemmas": [
+              "adoro",
               "etiam",
               "etiamsi",
-              "habeo",
-              "ius",
-              "religiosus"
+              "ita",
+              "itaque",
+              "praeceptum",
+              "praecipio",
+              "sic"
             ],
             "lengthOk": true,
             "passed": true
           },
           "reviewedBy": "corpus",
-          "no": 2
+          "no": 1
         },
         {
           "kind": "quoted",
@@ -21396,6 +21513,53 @@
               "praeterea",
               "sum",
               "ut"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "corpus",
+          "no": 2
+        },
+        {
+          "kind": "quoted",
+          "ref": "梵二：信仰自由宣言　Dignitatis Humanae",
+          "text": "etiam ipsis in communi agentibus agnoscenda est",
+          "answerKeyRef": "L43#9",
+          "answerKeyEdition": "思高譯本",
+          "answerKeyScope": "block-containing-clause",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 34,
+              "ordinal": 667,
+              "headword": "etiamsi",
+              "glossZh": "縱然、即使、儘管",
+              "lemmas": [
+                "etiamsi"
+              ],
+              "creditLemmas": [
+                "etiamsi"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "verification": {
+            "words": 7,
+            "unattested": [],
+            "untaught": [],
+            "enclitics": [],
+            "lemmas": [
+              "agens",
+              "ago",
+              "communis",
+              "etiam",
+              "etiamsi",
+              "hic",
+              "in",
+              "invicem",
+              "ipse",
+              "sum"
             ],
             "lengthOk": true,
             "passed": true
@@ -21884,8 +22048,23 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
+        "practised": 18,
         "notPractised": [
+          {
+            "volume": 2,
+            "lesson": 34,
+            "ordinal": 675,
+            "headword": "integritas",
+            "glossZh": "完整、貞潔、正直",
+            "lemmas": [
+              "integritas"
+            ],
+            "creditLemmas": [
+              "integritas"
+            ],
+            "resolved": true,
+            "phrase": false
+          },
           {
             "volume": 2,
             "lesson": 34,
@@ -21910,48 +22089,6 @@
       "id": "lat-v2-lesson-35",
       "note": "本讀本語料中無任何字形，因而無法入題：continenter",
       "items": [
-        {
-          "kind": "quoted",
-          "ref": "波尼法爵八世：唯一至聖　Unam Sanctam",
-          "text": "sed sorte provenit",
-          "answerKeyRef": "L24#3",
-          "answerKeyEdition": "思高譯本",
-          "answerKeyScope": "block-containing-clause",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 35,
-              "ordinal": 695,
-              "headword": "sors",
-              "glossZh": "籤、命運；神諭",
-              "lemmas": [
-                "sors"
-              ],
-              "creditLemmas": [
-                "sors"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "verification": {
-            "words": 3,
-            "unattested": [],
-            "untaught": [
-              "provenit"
-            ],
-            "enclitics": [],
-            "lemmas": [
-              "prouenio",
-              "sed",
-              "sors"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 1
-        },
         {
           "kind": "quoted",
           "ref": "梵二：教會對非基督宗教態度宣言　Nostra Aetate",
@@ -21991,48 +22128,94 @@
             "passed": true
           },
           "reviewedBy": "corpus",
-          "no": 2
+          "no": 1
         },
         {
           "kind": "quoted",
-          "ref": "聖良一世四旬期講道　Sermones de Quadragesima",
-          "text": "qui divinis eruditionibus instituti",
-          "answerKeyRef": "L10#8",
+          "ref": "保祿六：人類生命　Humanae Vitae",
+          "text": "Denique illud praesertim animadvertendum est",
+          "answerKeyRef": "L47#5",
           "answerKeyEdition": "思高譯本",
           "answerKeyScope": "block-containing-clause",
           "targetWords": [
             {
               "volume": 2,
               "lesson": 35,
-              "ordinal": 681,
-              "headword": "institutum",
-              "glossZh": "制度、習俗、原則、安排、計畫",
+              "ordinal": 699,
+              "headword": "animadverto",
+              "glossZh": "注意、察覺、觀察；評判、懲罰",
               "lemmas": [
-                "instituo",
-                "institutum"
+                "animadverto"
               ],
               "creditLemmas": [
-                "institutum"
+                "animadverto"
               ],
               "resolved": true,
               "phrase": false
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 5,
+            "unattested": [],
+            "untaught": [],
+            "enclitics": [],
+            "lemmas": [
+              "animadverto",
+              "denique",
+              "ille",
+              "praesertim",
+              "sum"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "corpus",
+          "no": 2
+        },
+        {
+          "kind": "quoted",
+          "ref": "庇護十一：四十年　Quadragesimo Anno",
+          "text": "qui iuribus et officiis suae classis clare propositis",
+          "answerKeyRef": "L37#9",
+          "answerKeyEdition": "思高譯本",
+          "answerKeyScope": "block-containing-clause",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 35,
+              "ordinal": 691,
+              "headword": "clare",
+              "glossZh": "大聲地、響亮地；清晰地、明亮地",
+              "lemmas": [
+                "clare"
+              ],
+              "creditLemmas": [
+                "clare"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "verification": {
+            "words": 8,
             "unattested": [],
             "untaught": [
-              "eruditionibus"
+              "iuribus",
+              "classis"
             ],
             "enclitics": [],
             "lemmas": [
-              "diuinus",
-              "divinus",
-              "instituo",
-              "institutum",
+              "clare",
+              "classis",
+              "et",
+              "officium",
+              "propono",
+              "propositum",
               "qui",
               "quia",
-              "quis"
+              "quis",
+              "sum",
+              "suus"
             ],
             "lengthOk": true,
             "passed": true
@@ -22506,7 +22689,7 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 17,
+        "practised": 18,
         "notPractised": [
           {
             "volume": 2,
@@ -22519,21 +22702,6 @@
             ],
             "creditLemmas": [
               "neglego"
-            ],
-            "resolved": true,
-            "phrase": false
-          },
-          {
-            "volume": 2,
-            "lesson": 35,
-            "ordinal": 699,
-            "headword": "animadverto",
-            "glossZh": "注意、察覺、觀察；評判、懲罰",
-            "lemmas": [
-              "animadverto"
-            ],
-            "creditLemmas": [
-              "animadverto"
             ],
             "resolved": true,
             "phrase": false
@@ -22607,6 +22775,49 @@
         },
         {
           "kind": "quoted",
+          "ref": "方濟各：願祢受讚頌　Laudato Si'",
+          "text": "CONTAMINATIO ET CLIMATIS MUTATIO",
+          "answerKeyRef": "L50#1",
+          "answerKeyEdition": "思高譯本",
+          "answerKeyScope": "block-containing-clause",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 36,
+              "ordinal": 715,
+              "headword": "mutatio",
+              "glossZh": "變化、更替、交換",
+              "lemmas": [
+                "mutatio"
+              ],
+              "creditLemmas": [
+                "mutatio"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "verification": {
+            "words": 4,
+            "unattested": [],
+            "untaught": [
+              "CONTAMINATIO",
+              "CLIMATIS"
+            ],
+            "enclitics": [],
+            "lemmas": [
+              "et",
+              "mutatio",
+              "sum"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "corpus",
+          "no": 2
+        },
+        {
+          "kind": "quoted",
           "ref": "良十三：永恆之父　Aeterni Patris",
           "text": "quae et bono fidei apte respondeat",
           "answerKeyRef": "L34#3",
@@ -22644,49 +22855,6 @@
               "quis",
               "respondeo",
               "sum"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 2
-        },
-        {
-          "kind": "quoted",
-          "ref": "良十三：至上智慧的天主　Providentissimus Deus",
-          "text": "ut christianam sapientiam late gentibus persuaderent",
-          "answerKeyRef": "L36#7",
-          "answerKeyEdition": "思高譯本",
-          "answerKeyScope": "block-containing-clause",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 36,
-              "ordinal": 713,
-              "headword": "persuadeo",
-              "glossZh": "勸服、說服",
-              "lemmas": [
-                "persuadeo"
-              ],
-              "creditLemmas": [
-                "persuadeo"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "verification": {
-            "words": 6,
-            "unattested": [],
-            "untaught": [],
-            "enclitics": [],
-            "lemmas": [
-              "christianus",
-              "gens",
-              "late",
-              "persuadeo",
-              "sapientia",
-              "ut"
             ],
             "lengthOk": true,
             "passed": true
@@ -23168,7 +23336,7 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
+        "practised": 18,
         "notPractised": [
           {
             "volume": 2,
@@ -23181,6 +23349,21 @@
             ],
             "creditLemmas": [
               "spons"
+            ],
+            "resolved": true,
+            "phrase": false
+          },
+          {
+            "volume": 2,
+            "lesson": 36,
+            "ordinal": 713,
+            "headword": "persuadeo",
+            "glossZh": "勸服、說服",
+            "lemmas": [
+              "persuadeo"
+            ],
+            "creditLemmas": [
+              "persuadeo"
             ],
             "resolved": true,
             "phrase": false
@@ -23291,60 +23474,24 @@
         },
         {
           "kind": "quoted",
-          "ref": "梵二：信仰自由宣言　Dignitatis Humanae",
-          "text": "necnon in bonis congruis acquirendis et fruendis",
-          "answerKeyRef": "L43#11",
+          "ref": "復活詠　Chorus novae Ierusalem",
+          "text": "triumphat ille splendide",
+          "answerKeyRef": "L15#1",
           "answerKeyEdition": "思高譯本",
           "answerKeyScope": "block-containing-clause",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 37,
-              "ordinal": 732,
-              "headword": "acquiro",
-              "glossZh": "獲得、取得、贏得；增加、累積",
-              "lemmas": [
-                "acquiro"
-              ],
-              "creditLemmas": [
-                "acquiro"
-              ],
-              "resolved": true,
-              "phrase": false
-            },
-            {
-              "volume": 2,
-              "lesson": 37,
-              "ordinal": 737,
-              "headword": "congruus",
-              "glossZh": "相符的、協調的；適合、恰當",
-              "lemmas": [
-                "congruus"
-              ],
-              "creditLemmas": [
-                "congruus"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
+          "targetWords": [],
           "verification": {
-            "words": 7,
+            "words": 3,
             "unattested": [],
             "untaught": [
-              "fruendis"
+              "triumphat",
+              "splendide"
             ],
             "enclitics": [],
             "lemmas": [
-              "acquiro",
-              "bonum",
-              "bonus",
-              "et",
-              "hic",
-              "in",
-              "invicem",
-              "necnon",
-              "sum"
+              "ille",
+              "splendide",
+              "triumpho"
             ],
             "lengthOk": true,
             "passed": true
@@ -23900,7 +24047,7 @@
     {
       "lesson": 38,
       "id": "lat-v2-lesson-38",
-      "note": "本讀本語料中無任何字形，因而無法入題：admodum",
+      "note": "本課無可用經典原句，十題全由自撰題補；本讀本語料中無任何字形，因而無法入題：admodum",
       "items": [
         {
           "kind": "quoted",
@@ -23957,99 +24104,31 @@
         },
         {
           "kind": "quoted",
-          "ref": "梵一：永恆牧者　Pastor Aeternus",
-          "text": "et super hanc petram aedificabo Ecclesiam meam",
-          "answerKeyRef": "L33#4",
+          "ref": "將臨期詠：懇求厄瑪奴耳　Veni, veni, Emmanuel",
+          "text": "solare nos adveniens",
+          "answerKeyRef": "L19#1",
           "answerKeyEdition": "思高譯本",
           "answerKeyScope": "block-containing-clause",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 38,
-              "ordinal": 752,
-              "headword": "aedifico",
-              "glossZh": "建造、築造；確立、改善、啟蒙",
-              "lemmas": [
-                "aedifico"
-              ],
-              "creditLemmas": [
-                "aedifico"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
+          "targetWords": [],
           "verification": {
-            "words": 7,
+            "words": 3,
             "unattested": [],
             "untaught": [
-              "petram"
+              "solare",
+              "nos"
             ],
             "enclitics": [],
             "lemmas": [
-              "aedifico",
-              "ecclesia",
-              "et",
-              "hic",
-              "meus",
-              "petra",
-              "sum",
-              "super"
+              "aduenio",
+              "advenio",
+              "nos",
+              "solaris"
             ],
             "lengthOk": true,
             "passed": true
           },
           "reviewedBy": "corpus",
           "no": 2
-        },
-        {
-          "kind": "quoted",
-          "ref": "梵二：大公主義法令　Unitatis Redintegratio",
-          "text": "quibus simul sumptis ipsa Ecclesia aedificatur et vivificatur",
-          "answerKeyRef": "L41#10",
-          "answerKeyEdition": "思高譯本",
-          "answerKeyScope": "block-containing-clause",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 38,
-              "ordinal": 752,
-              "headword": "aedifico",
-              "glossZh": "建造、築造；確立、改善、啟蒙",
-              "lemmas": [
-                "aedifico"
-              ],
-              "creditLemmas": [
-                "aedifico"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "verification": {
-            "words": 8,
-            "unattested": [],
-            "untaught": [
-              "sumptis"
-            ],
-            "enclitics": [],
-            "lemmas": [
-              "aedifico",
-              "ecclesia",
-              "et",
-              "ipse",
-              "qui",
-              "quis",
-              "simul",
-              "sum",
-              "uiuifico",
-              "vivifico"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 3
         },
         {
           "kind": "composed",
@@ -24120,7 +24199,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 4
+          "no": 3
         },
         {
           "kind": "composed",
@@ -24189,7 +24268,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 5
+          "no": 4
         },
         {
           "kind": "composed",
@@ -24259,7 +24338,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 6
+          "no": 5
         },
         {
           "kind": "composed",
@@ -24325,7 +24404,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 7
+          "no": 6
         },
         {
           "kind": "composed",
@@ -24391,7 +24470,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 8
+          "no": 7
         },
         {
           "kind": "composed",
@@ -24458,7 +24537,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 9
+          "no": 8
         },
         {
           "kind": "composed",
@@ -24524,7 +24603,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 10
+          "no": 9
         }
       ],
       "coverage": {
@@ -24599,102 +24678,13 @@
     {
       "lesson": 39,
       "id": "lat-v2-lesson-39",
-      "note": "",
+      "note": "本課無可用經典原句，十題全由自撰題補",
       "items": [
         {
           "kind": "quoted",
-          "ref": "將臨期詠：懇求厄瑪奴耳　Veni, veni, Emmanuel",
-          "text": "Emmanuel nascetur pro te, Israel",
-          "answerKeyRef": "L19#1",
-          "answerKeyEdition": "思高譯本",
-          "answerKeyScope": "block-containing-clause",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 39,
-              "ordinal": 778,
-              "headword": "Israel",
-              "glossZh": "以色列民族、天主的民族",
-              "lemmas": [
-                "Israel",
-                "israel"
-              ],
-              "creditLemmas": [
-                "Israel",
-                "israel"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "verification": {
-            "words": 5,
-            "unattested": [],
-            "untaught": [],
-            "enclitics": [],
-            "lemmas": [
-              "israel",
-              "nascor",
-              "pro",
-              "te",
-              "tu"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 1
-        },
-        {
-          "kind": "quoted",
-          "ref": "聖奧思定懺悔錄 卷一　Confessiones I",
-          "text": "irascaris mihi et mineris ingentes miserias",
-          "answerKeyRef": "L07#7",
-          "answerKeyEdition": "思高譯本",
-          "answerKeyScope": "block-containing-clause",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 39,
-              "ordinal": 779,
-              "headword": "miseria",
-              "glossZh": "苦難、悲慘、痛苦",
-              "lemmas": [
-                "miseria"
-              ],
-              "creditLemmas": [
-                "miseria"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "verification": {
-            "words": 6,
-            "unattested": [],
-            "untaught": [
-              "irascaris",
-              "mineris",
-              "ingentes"
-            ],
-            "enclitics": [],
-            "lemmas": [
-              "ego",
-              "et",
-              "miseria",
-              "sum"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 2
-        },
-        {
-          "kind": "quoted",
-          "ref": "使徒信經　Symbolum Apostolorum",
-          "text": "descendit ad inferos",
-          "answerKeyRef": "L01#1",
+          "ref": "波尼法爵八世：唯一至聖　Unam Sanctam",
+          "text": "Dei ordinationi resistit",
+          "answerKeyRef": "L24#8",
           "answerKeyEdition": "思高譯本",
           "answerKeyScope": "block-containing-clause",
           "targetWords": [],
@@ -24702,21 +24692,21 @@
             "words": 3,
             "unattested": [],
             "untaught": [
-              "inferos"
+              "ordinationi",
+              "resistit"
             ],
             "enclitics": [],
             "lemmas": [
-              "ab",
-              "ad",
-              "an",
-              "descendo",
-              "inferi"
+              "Deus",
+              "deus",
+              "ordinatio",
+              "resisto"
             ],
             "lengthOk": true,
             "passed": true
           },
           "reviewedBy": "corpus",
-          "no": 3
+          "no": 1
         },
         {
           "kind": "composed",
@@ -24784,7 +24774,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 4
+          "no": 2
         },
         {
           "kind": "composed",
@@ -24854,7 +24844,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 5
+          "no": 3
         },
         {
           "kind": "composed",
@@ -24920,7 +24910,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 6
+          "no": 4
         },
         {
           "kind": "composed",
@@ -24986,7 +24976,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 7
+          "no": 5
         },
         {
           "kind": "composed",
@@ -25052,7 +25042,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 8
+          "no": 6
         },
         {
           "kind": "composed",
@@ -25120,7 +25110,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 9
+          "no": 7
         },
         {
           "kind": "composed",
@@ -25188,12 +25178,12 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 10
+          "no": 8
         }
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 18,
+        "practised": 17,
         "notPractised": [
           {
             "volume": 2,
@@ -25226,6 +25216,21 @@
             ],
             "resolved": true,
             "phrase": false
+          },
+          {
+            "volume": 2,
+            "lesson": 39,
+            "ordinal": 779,
+            "headword": "miseria",
+            "glossZh": "苦難、悲慘、痛苦",
+            "lemmas": [
+              "miseria"
+            ],
+            "creditLemmas": [
+              "miseria"
+            ],
+            "resolved": true,
+            "phrase": false
           }
         ],
         "notAttested": []
@@ -25238,9 +25243,9 @@
       "items": [
         {
           "kind": "quoted",
-          "ref": "聖奧思定懺悔錄 卷八　Confessiones VIII",
-          "text": "et hoc saepe dicebat",
-          "answerKeyRef": "L08#8",
+          "ref": "梵二：大公主義法令　Unitatis Redintegratio",
+          "text": "Hoc est unitatis Ecclesiae sacrum mysterium",
+          "answerKeyRef": "L41#8",
           "answerKeyEdition": "思高譯本",
           "answerKeyScope": "block-containing-clause",
           "targetWords": [
@@ -25261,17 +25266,18 @@
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 6,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
             "lemmas": [
-              "dico",
-              "et",
+              "ecclesia",
               "hic",
               "huc",
-              "saepe",
-              "sum"
+              "mysterium",
+              "sacer",
+              "sum",
+              "unitas"
             ],
             "lengthOk": true,
             "passed": true
@@ -25281,42 +25287,47 @@
         },
         {
           "kind": "quoted",
-          "ref": "聖安瑟莫：證道書　Proslogion",
-          "text": "si hoc non es",
-          "answerKeyRef": "L17#1",
+          "ref": "梵二：教會對非基督宗教態度宣言　Nostra Aetate",
+          "text": "quae sit via ad veram felicitatem obtinendam",
+          "answerKeyRef": "L45#5",
           "answerKeyEdition": "思高譯本",
           "answerKeyScope": "block-containing-clause",
           "targetWords": [
             {
               "volume": 2,
               "lesson": 40,
-              "ordinal": 783,
-              "headword": "huc",
-              "glossZh": "到此地、至此",
+              "ordinal": 784,
+              "headword": "felicitas",
+              "glossZh": "幸運、幸福、好運",
               "lemmas": [
-                "huc"
+                "Felicitas",
+                "felicitas"
               ],
               "creditLemmas": [
-                "huc"
+                "Felicitas",
+                "felicitas"
               ],
               "resolved": true,
               "phrase": false
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 7,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
             "lemmas": [
-              "hic",
-              "huc",
-              "non",
-              "nonnihil",
-              "nonnullus",
-              "si",
+              "ab",
+              "ad",
+              "an",
+              "felicitas",
+              "qui",
+              "quis",
               "sic",
-              "sum"
+              "sum",
+              "uerus",
+              "uia",
+              "via"
             ],
             "lengthOk": true,
             "passed": true
@@ -25326,42 +25337,45 @@
         },
         {
           "kind": "quoted",
-          "ref": "戴都良論祈禱　De oratione",
-          "text": "Hoc est quod Israeli exprobratur",
-          "answerKeyRef": "L03#5",
+          "ref": "若望保祿二：信仰與理性　Fides et Ratio",
+          "text": "hanc ipsam ob causam evadit vitae nostrae elementum",
+          "answerKeyRef": "L48#1",
           "answerKeyEdition": "思高譯本",
           "answerKeyScope": "block-containing-clause",
           "targetWords": [
             {
               "volume": 2,
               "lesson": 40,
-              "ordinal": 783,
-              "headword": "huc",
-              "glossZh": "到此地、至此",
+              "ordinal": 796,
+              "headword": "evado",
+              "glossZh": "逃脫、躲避、免於",
               "lemmas": [
-                "huc"
+                "euado",
+                "evado"
               ],
               "creditLemmas": [
-                "huc"
+                "euado",
+                "evado"
               ],
               "resolved": true,
               "phrase": false
             }
           ],
           "verification": {
-            "words": 5,
+            "words": 8,
             "unattested": [],
-            "untaught": [
-              "exprobratur"
-            ],
+            "untaught": [],
             "enclitics": [],
             "lemmas": [
+              "causa",
+              "elementum",
+              "euado",
               "hic",
-              "huc",
-              "qui",
-              "quis",
-              "quod",
-              "sum"
+              "ipse",
+              "noster",
+              "ob",
+              "uita",
+              "vita"
             ],
             "lengthOk": true,
             "passed": true
@@ -25893,50 +25907,6 @@
       "items": [
         {
           "kind": "quoted",
-          "ref": "肋令的味增爵：備忘錄　Commonitorium",
-          "text": "Per sanctum illum virum",
-          "answerKeyRef": "L09#9",
-          "answerKeyEdition": "思高譯本",
-          "answerKeyScope": "block-containing-clause",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 41,
-              "ordinal": 817,
-              "headword": "sancio",
-              "glossZh": "確認、制定、履行、奉獻",
-              "lemmas": [
-                "sancio"
-              ],
-              "creditLemmas": [
-                "sancio"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "verification": {
-            "words": 4,
-            "unattested": [],
-            "untaught": [],
-            "enclitics": [],
-            "lemmas": [
-              "ille",
-              "per",
-              "pervenio",
-              "sancio",
-              "sanctus",
-              "uir",
-              "vir"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 1
-        },
-        {
-          "kind": "quoted",
           "ref": "梵一：天主子　Dei Filius",
           "text": "a sancta Tridentina Synodo declaratam",
           "answerKeyRef": "L32#10",
@@ -25980,7 +25950,7 @@
             "passed": true
           },
           "reviewedBy": "corpus",
-          "no": 2
+          "no": 1
         },
         {
           "kind": "quoted",
@@ -26024,6 +25994,33 @@
               "quis",
               "sum",
               "uigeo"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "corpus",
+          "no": 2
+        },
+        {
+          "kind": "quoted",
+          "ref": "庇護十一：四十年　Quadragesimo Anno",
+          "text": "Quid egerit Ecclesia",
+          "answerKeyRef": "L37#1",
+          "answerKeyEdition": "思高譯本",
+          "answerKeyScope": "block-containing-clause",
+          "targetWords": [],
+          "verification": {
+            "words": 3,
+            "unattested": [],
+            "untaught": [],
+            "enclitics": [],
+            "lemmas": [
+              "ago",
+              "ecclesia",
+              "qui",
+              "quid",
+              "quidam",
+              "quis"
             ],
             "lengthOk": true,
             "passed": true
@@ -26544,56 +26541,9 @@
       "items": [
         {
           "kind": "quoted",
-          "ref": "梵二：論教會在現代世界牧職憲章　Gaudium et Spes",
-          "text": "neve illud pravis cordis sui inclinationibus inservire sinat",
-          "answerKeyRef": "L46#15",
-          "answerKeyEdition": "思高譯本",
-          "answerKeyScope": "block-containing-clause",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 42,
-              "ordinal": 828,
-              "headword": "neve",
-              "glossZh": "勿、不；勿……勿（皆勿）",
-              "lemmas": [
-                "neue"
-              ],
-              "creditLemmas": [
-                "neue"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "verification": {
-            "words": 8,
-            "unattested": [],
-            "untaught": [
-              "pravis"
-            ],
-            "enclitics": [],
-            "lemmas": [
-              "cor",
-              "ille",
-              "neue",
-              "prauus",
-              "se",
-              "sino",
-              "sui",
-              "suus"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 1
-        },
-        {
-          "kind": "quoted",
-          "ref": "斐理伯與佩爾佩圖亞殉道錄　Passio Perpetuae et Felicitatis",
-          "text": "Saturninus et Secundulus",
-          "answerKeyRef": "L02#5",
+          "ref": "梵二：大公主義法令　Unitatis Redintegratio",
+          "text": "qui est Ecclesia",
+          "answerKeyRef": "L41#4",
           "answerKeyEdition": "思高譯本",
           "answerKeyScope": "block-containing-clause",
           "targetWords": [],
@@ -26603,14 +26553,17 @@
             "untaught": [],
             "enclitics": [],
             "lemmas": [
-              "et",
+              "ecclesia",
+              "qui",
+              "quia",
+              "quis",
               "sum"
             ],
             "lengthOk": true,
             "passed": true
           },
           "reviewedBy": "corpus",
-          "no": 2
+          "no": 1
         },
         {
           "kind": "composed",
@@ -26679,7 +26632,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 3
+          "no": 2
         },
         {
           "kind": "composed",
@@ -26746,7 +26699,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 4
+          "no": 3
         },
         {
           "kind": "composed",
@@ -26816,7 +26769,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 5
+          "no": 4
         },
         {
           "kind": "composed",
@@ -26884,7 +26837,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 6
+          "no": 5
         },
         {
           "kind": "composed",
@@ -26950,7 +26903,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 7
+          "no": 6
         },
         {
           "kind": "composed",
@@ -27018,7 +26971,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 8
+          "no": 7
         },
         {
           "kind": "composed",
@@ -27088,7 +27041,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 9
+          "no": 8
         }
       ],
       "coverage": {
@@ -27147,52 +27100,8 @@
     {
       "lesson": 43,
       "id": "lat-v2-lesson-43",
-      "note": "",
+      "note": "本課無可用經典原句，十題全由自撰題補",
       "items": [
-        {
-          "kind": "quoted",
-          "ref": "梵二：論教會在現代世界牧職憲章　Gaudium et Spes",
-          "text": "Peccatum autem minuit ipsum hominem",
-          "answerKeyRef": "L46#12",
-          "answerKeyEdition": "思高譯本",
-          "answerKeyScope": "block-containing-clause",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 43,
-              "ordinal": 844,
-              "headword": "minuo",
-              "glossZh": "減少、減弱、減損、縮小",
-              "lemmas": [
-                "minuo"
-              ],
-              "creditLemmas": [
-                "minuo"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "verification": {
-            "words": 5,
-            "unattested": [],
-            "untaught": [],
-            "enclitics": [],
-            "lemmas": [
-              "autem",
-              "homo",
-              "ipse",
-              "minuo",
-              "peccatum",
-              "peccatus",
-              "pecco"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 1
-        },
         {
           "kind": "quoted",
           "ref": "梵二：教會憲章　Lumen Gentium",
@@ -27235,56 +27144,32 @@
             "passed": true
           },
           "reviewedBy": "corpus",
-          "no": 2
+          "no": 1
         },
         {
           "kind": "quoted",
-          "ref": "聖傑羅尼莫書信　Epistulae",
-          "text": "cumque ego id verecunde et vere",
-          "answerKeyRef": "L05#1",
+          "ref": "梵二：大公主義法令　Unitatis Redintegratio",
+          "text": "Christus munus docendi",
+          "answerKeyRef": "L41#5",
           "answerKeyEdition": "思高譯本",
           "answerKeyScope": "block-containing-clause",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 43,
-              "ordinal": 855,
-              "headword": "cumque",
-              "glossZh": "無論何時；任意、某某",
-              "lemmas": [
-                "cumque"
-              ],
-              "creditLemmas": [
-                "cumque"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
+          "targetWords": [],
           "verification": {
-            "words": 6,
+            "words": 3,
             "unattested": [],
-            "untaught": [
-              "verecunde"
-            ],
+            "untaught": [],
             "enclitics": [],
             "lemmas": [
-              "calendar",
-              "cumque",
-              "ego",
-              "et",
-              "expression",
-              "is",
-              "sum",
-              "uere",
-              "ver",
-              "vere"
+              "Christus",
+              "christus",
+              "doceo",
+              "munus"
             ],
             "lengthOk": true,
             "passed": true
           },
           "reviewedBy": "corpus",
-          "no": 3
+          "no": 2
         },
         {
           "kind": "composed",
@@ -27350,7 +27235,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 4
+          "no": 3
         },
         {
           "kind": "composed",
@@ -27416,7 +27301,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 5
+          "no": 4
         },
         {
           "kind": "composed",
@@ -27484,7 +27369,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 6
+          "no": 5
         },
         {
           "kind": "composed",
@@ -27550,7 +27435,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 7
+          "no": 6
         },
         {
           "kind": "composed",
@@ -27617,7 +27502,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 8
+          "no": 7
         },
         {
           "kind": "composed",
@@ -27685,7 +27570,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 9
+          "no": 8
         },
         {
           "kind": "composed",
@@ -27751,13 +27636,28 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 10
+          "no": 9
         }
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
+        "practised": 18,
         "notPractised": [
+          {
+            "volume": 2,
+            "lesson": 43,
+            "ordinal": 844,
+            "headword": "minuo",
+            "glossZh": "減少、減弱、減損、縮小",
+            "lemmas": [
+              "minuo"
+            ],
+            "creditLemmas": [
+              "minuo"
+            ],
+            "resolved": true,
+            "phrase": false
+          },
           {
             "volume": 2,
             "lesson": 43,
@@ -27780,138 +27680,35 @@
     {
       "lesson": 44,
       "id": "lat-v2-lesson-44",
-      "note": "本讀本語料中無任何字形，因而無法入題：dioecesis",
+      "note": "本課無可用經典原句，十題全由自撰題補；本讀本語料中無任何字形，因而無法入題：dioecesis",
       "items": [
         {
           "kind": "quoted",
-          "ref": "聖奧思定懺悔錄 卷一　Confessiones I",
-          "text": "stabilis et incomprehensibilis",
-          "answerKeyRef": "L07#5",
+          "ref": "梵二：天主的啟示教義憲章　Dei Verbum",
+          "text": "Verbum carnem factum",
+          "answerKeyRef": "L44#3",
           "answerKeyEdition": "思高譯本",
           "answerKeyScope": "block-containing-clause",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 44,
-              "ordinal": 869,
-              "headword": "stabilis",
-              "glossZh": "穩定的、堅定的；不變的",
-              "lemmas": [
-                "Stabilis",
-                "stabilis"
-              ],
-              "creditLemmas": [
-                "Stabilis",
-                "stabilis"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
+          "targetWords": [],
           "verification": {
             "words": 3,
             "unattested": [],
-            "untaught": [
-              "incomprehensibilis"
-            ],
+            "untaught": [],
             "enclitics": [],
             "lemmas": [
-              "et",
-              "incomprehensibilis",
-              "stabilis",
-              "sum"
+              "caro",
+              "facio",
+              "factum",
+              "factus",
+              "fio",
+              "uerbum",
+              "verbum"
             ],
             "lengthOk": true,
             "passed": true
           },
           "reviewedBy": "corpus",
           "no": 1
-        },
-        {
-          "kind": "quoted",
-          "ref": "厄革里雅朝聖記　Itinerarium Egeriae",
-          "text": "commemorat etiam ipse nomina",
-          "answerKeyRef": "L04#2",
-          "answerKeyEdition": "思高譯本",
-          "answerKeyScope": "block-containing-clause",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 44,
-              "ordinal": 870,
-              "headword": "commemoro",
-              "glossZh": "回憶、銘記；提及、記述",
-              "lemmas": [
-                "commemoro"
-              ],
-              "creditLemmas": [
-                "commemoro"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "verification": {
-            "words": 4,
-            "unattested": [],
-            "untaught": [],
-            "enclitics": [],
-            "lemmas": [
-              "commemoro",
-              "etiam",
-              "etiamsi",
-              "ipse",
-              "nomen"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 2
-        },
-        {
-          "kind": "quoted",
-          "ref": "聖本篤會規　Regula Benedicti",
-          "text": "duplici debet doctrina suis præesse discipulis",
-          "answerKeyRef": "L13#4",
-          "answerKeyEdition": "思高譯本",
-          "answerKeyScope": "block-containing-clause",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 44,
-              "ordinal": 867,
-              "headword": "duplex",
-              "glossZh": "雙重的、分裂的；虛偽的",
-              "lemmas": [
-                "duplex"
-              ],
-              "creditLemmas": [
-                "duplex"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "verification": {
-            "words": 6,
-            "unattested": [],
-            "untaught": [],
-            "enclitics": [],
-            "lemmas": [
-              "debeo",
-              "discipula",
-              "discipulus",
-              "doctrina",
-              "duplex",
-              "praesum",
-              "suus"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 3
         },
         {
           "kind": "composed",
@@ -27989,7 +27786,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 4
+          "no": 2
         },
         {
           "kind": "composed",
@@ -28055,7 +27852,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 5
+          "no": 3
         },
         {
           "kind": "composed",
@@ -28123,7 +27920,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 6
+          "no": 4
         },
         {
           "kind": "composed",
@@ -28191,7 +27988,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 7
+          "no": 5
         },
         {
           "kind": "composed",
@@ -28257,7 +28054,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 8
+          "no": 6
         },
         {
           "kind": "composed",
@@ -28328,7 +28125,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 9
+          "no": 7
         },
         {
           "kind": "composed",
@@ -28397,12 +28194,12 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 10
+          "no": 8
         }
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 17,
+        "practised": 16,
         "notPractised": [
           {
             "volume": 2,
@@ -28417,6 +28214,21 @@
             "creditLemmas": [
               "reuoco",
               "revoco"
+            ],
+            "resolved": true,
+            "phrase": false
+          },
+          {
+            "volume": 2,
+            "lesson": 44,
+            "ordinal": 870,
+            "headword": "commemoro",
+            "glossZh": "回憶、銘記；提及、記述",
+            "lemmas": [
+              "commemoro"
+            ],
+            "creditLemmas": [
+              "commemoro"
             ],
             "resolved": true,
             "phrase": false
@@ -28459,51 +28271,8 @@
     {
       "lesson": 45,
       "id": "lat-v2-lesson-45",
-      "note": "",
+      "note": "本課無可用經典原句，十題全由自撰題補",
       "items": [
-        {
-          "kind": "quoted",
-          "ref": "波尼法爵八世：唯一至聖　Unam Sanctam",
-          "text": "Dei ordinationi resistit",
-          "answerKeyRef": "L24#8",
-          "answerKeyEdition": "思高譯本",
-          "answerKeyScope": "block-containing-clause",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 45,
-              "ordinal": 889,
-              "headword": "resisto",
-              "glossZh": "抵抗、反對、對抗；駐足",
-              "lemmas": [
-                "resisto"
-              ],
-              "creditLemmas": [
-                "resisto"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "verification": {
-            "words": 3,
-            "unattested": [],
-            "untaught": [
-              "ordinationi"
-            ],
-            "enclitics": [],
-            "lemmas": [
-              "Deus",
-              "deus",
-              "ordinatio",
-              "resisto"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 1
-        },
         {
           "kind": "quoted",
           "ref": "保祿六：人類生命　Humanae Vitae",
@@ -28542,50 +28311,35 @@
             "passed": true
           },
           "reviewedBy": "corpus",
-          "no": 2
+          "no": 1
         },
         {
           "kind": "quoted",
-          "ref": "聖良一世四旬期講道　Sermones de Quadragesima",
-          "text": "sciens studium religionis laborem habere certaminis",
-          "answerKeyRef": "L10#7",
+          "ref": "梵二：天主的啟示教義憲章　Dei Verbum",
+          "text": "Verbum caro factum",
+          "answerKeyRef": "L44#7",
           "answerKeyEdition": "思高譯本",
           "answerKeyScope": "block-containing-clause",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 45,
-              "ordinal": 894,
-              "headword": "certamen",
-              "glossZh": "競賽、戰鬥、爭執",
-              "lemmas": [
-                "certamen"
-              ],
-              "creditLemmas": [
-                "certamen"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
+          "targetWords": [],
           "verification": {
-            "words": 6,
+            "words": 3,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
             "lemmas": [
-              "certamen",
-              "habeo",
-              "labor",
-              "religio",
-              "scio",
-              "studium"
+              "caro",
+              "facio",
+              "factum",
+              "factus",
+              "fio",
+              "uerbum",
+              "verbum"
             ],
             "lengthOk": true,
             "passed": true
           },
           "reviewedBy": "corpus",
-          "no": 3
+          "no": 2
         },
         {
           "kind": "composed",
@@ -28651,7 +28405,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 4
+          "no": 3
         },
         {
           "kind": "composed",
@@ -28717,7 +28471,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 5
+          "no": 4
         },
         {
           "kind": "composed",
@@ -28784,7 +28538,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 6
+          "no": 5
         },
         {
           "kind": "composed",
@@ -28849,7 +28603,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 7
+          "no": 6
         },
         {
           "kind": "composed",
@@ -28915,7 +28669,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 8
+          "no": 7
         },
         {
           "kind": "composed",
@@ -28983,7 +28737,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 9
+          "no": 8
         },
         {
           "kind": "composed",
@@ -29065,12 +28819,12 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 10
+          "no": 9
         }
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 18,
+        "practised": 17,
         "notPractised": [
           {
             "volume": 2,
@@ -29085,6 +28839,21 @@
             "creditLemmas": [
               "Iulius",
               "iulius"
+            ],
+            "resolved": true,
+            "phrase": false
+          },
+          {
+            "volume": 2,
+            "lesson": 45,
+            "ordinal": 889,
+            "headword": "resisto",
+            "glossZh": "抵抗、反對、對抗；駐足",
+            "lemmas": [
+              "resisto"
+            ],
+            "creditLemmas": [
+              "resisto"
             ],
             "resolved": true,
             "phrase": false
@@ -29111,147 +28880,31 @@
     {
       "lesson": 46,
       "id": "lat-v2-lesson-46",
-      "note": "本讀本語料中無任何字形，因而無法入題：amanter",
+      "note": "本課無可用經典原句，十題全由自撰題補；本讀本語料中無任何字形，因而無法入題：amanter",
       "items": [
         {
           "kind": "quoted",
-          "ref": "梵二：大公主義法令　Unitatis Redintegratio",
-          "text": "Spiritu Sancto munerum varietatem operante",
-          "answerKeyRef": "L41#8",
+          "ref": "若望保祿二：信仰與理性　Fides et Ratio",
+          "text": "tunc autem cognoscam",
+          "answerKeyRef": "L48#6",
           "answerKeyEdition": "思高譯本",
           "answerKeyScope": "block-containing-clause",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 46,
-              "ordinal": 915,
-              "headword": "varietas",
-              "glossZh": "多樣、差異、斑駁",
-              "lemmas": [
-                "uarietas",
-                "varietas"
-              ],
-              "creditLemmas": [
-                "uarietas",
-                "varietas"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
+          "targetWords": [],
           "verification": {
-            "words": 5,
+            "words": 3,
             "unattested": [],
-            "untaught": [
-              "munerum"
-            ],
+            "untaught": [],
             "enclitics": [],
             "lemmas": [
-              "operor",
-              "sanctus",
-              "spiritus",
-              "uarietas",
-              "varietas"
+              "autem",
+              "cognosco",
+              "tunc"
             ],
             "lengthOk": true,
             "passed": true
           },
           "reviewedBy": "corpus",
           "no": 1
-        },
-        {
-          "kind": "quoted",
-          "ref": "本篤十六：天主是愛　Deus Caritas Est",
-          "text": "Eros » et « agape » – diversitas et unitas",
-          "answerKeyRef": "L49#9",
-          "answerKeyEdition": "思高譯本",
-          "answerKeyScope": "block-containing-clause",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 46,
-              "ordinal": 918,
-              "headword": "diversitas",
-              "glossZh": "差異、不同",
-              "lemmas": [
-                "diuersitas",
-                "diversitas"
-              ],
-              "creditLemmas": [
-                "diuersitas",
-                "diversitas"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "verification": {
-            "words": 6,
-            "unattested": [],
-            "untaught": [
-              "Eros",
-              "agape"
-            ],
-            "enclitics": [],
-            "lemmas": [
-              "diuersitas",
-              "et",
-              "sum",
-              "unio",
-              "unitas"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 2
-        },
-        {
-          "kind": "quoted",
-          "ref": "聖奧思定懺悔錄 卷八　Confessiones VIII",
-          "text": "et ire per eius angustias adhuc pigebat",
-          "answerKeyRef": "L08#2",
-          "answerKeyEdition": "思高譯本",
-          "answerKeyScope": "block-containing-clause",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 46,
-              "ordinal": 914,
-              "headword": "angustia",
-              "glossZh": "狹隘、困難、海峽",
-              "lemmas": [
-                "angustia"
-              ],
-              "creditLemmas": [
-                "angustia"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "verification": {
-            "words": 7,
-            "unattested": [],
-            "untaught": [
-              "pigebat"
-            ],
-            "enclitics": [],
-            "lemmas": [
-              "adhuc",
-              "angustia",
-              "eo",
-              "et",
-              "is",
-              "per",
-              "pervenio",
-              "sum"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 3
         },
         {
           "kind": "composed",
@@ -29317,7 +28970,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 4
+          "no": 2
         },
         {
           "kind": "composed",
@@ -29387,7 +29040,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 5
+          "no": 3
         },
         {
           "kind": "composed",
@@ -29453,7 +29106,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 6
+          "no": 4
         },
         {
           "kind": "composed",
@@ -29519,7 +29172,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 7
+          "no": 5
         },
         {
           "kind": "composed",
@@ -29591,7 +29244,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 8
+          "no": 6
         },
         {
           "kind": "composed",
@@ -29657,7 +29310,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 9
+          "no": 7
         },
         {
           "kind": "composed",
@@ -29726,7 +29379,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 10
+          "no": 8
         }
       ],
       "coverage": {
@@ -29801,7 +29454,7 @@
     {
       "lesson": 47,
       "id": "lat-v2-lesson-47",
-      "note": "",
+      "note": "本課無可用經典原句，十題全由自撰題補",
       "items": [
         {
           "kind": "quoted",
@@ -29853,103 +29506,28 @@
         },
         {
           "kind": "quoted",
-          "ref": "聖文德：心靈邁向天主的旅程　Itinerarium mentis in Deum",
-          "text": "cum virtus agens non improportionaliter excedit recipientem",
-          "answerKeyRef": "L22#8",
+          "ref": "聖奧思定懺悔錄 卷八　Confessiones VIII",
+          "text": "2 videbam enim plenam ecclesiam",
+          "answerKeyRef": "L08#3",
           "answerKeyEdition": "思高譯本",
           "answerKeyScope": "block-containing-clause",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 47,
-              "ordinal": 928,
-              "headword": "excedo",
-              "glossZh": "超越、逾越；離去、過世",
-              "lemmas": [
-                "excedo"
-              ],
-              "creditLemmas": [
-                "excedo"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
+          "targetWords": [],
           "verification": {
-            "words": 7,
+            "words": 4,
             "unattested": [],
-            "untaught": [
-              "improportionaliter"
-            ],
+            "untaught": [],
             "enclitics": [],
             "lemmas": [
-              "agens",
-              "ago",
-              "cum",
-              "excedo",
-              "improportionaliter",
-              "non",
-              "nonnihil",
-              "nonnullus",
-              "recipio",
-              "uirtus",
-              "virtus"
+              "ecclesia",
+              "enim",
+              "plenus",
+              "video"
             ],
             "lengthOk": true,
             "passed": true
           },
           "reviewedBy": "corpus",
           "no": 2
-        },
-        {
-          "kind": "quoted",
-          "ref": "若望保祿二：信仰與理性　Fides et Ratio",
-          "text": "Philosophiae » vox Graecam ad originem « sapientiae amorem » designat",
-          "answerKeyRef": "L48#7",
-          "answerKeyEdition": "思高譯本",
-          "answerKeyScope": "block-containing-clause",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 47,
-              "ordinal": 933,
-              "headword": "designo",
-              "glossZh": "標記、描劃；指示、表明",
-              "lemmas": [
-                "designo"
-              ],
-              "creditLemmas": [
-                "designo"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "verification": {
-            "words": 8,
-            "unattested": [],
-            "untaught": [
-              "Graecam"
-            ],
-            "enclitics": [],
-            "lemmas": [
-              "Graecus",
-              "ab",
-              "ad",
-              "amor",
-              "an",
-              "designo",
-              "origo",
-              "philosophia",
-              "sapientia",
-              "uox",
-              "vox"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 3
         },
         {
           "kind": "composed",
@@ -30017,7 +29595,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 4
+          "no": 3
         },
         {
           "kind": "composed",
@@ -30084,7 +29662,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 5
+          "no": 4
         },
         {
           "kind": "composed",
@@ -30150,7 +29728,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 6
+          "no": 5
         },
         {
           "kind": "composed",
@@ -30216,7 +29794,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 7
+          "no": 6
         },
         {
           "kind": "composed",
@@ -30282,7 +29860,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 8
+          "no": 7
         },
         {
           "kind": "composed",
@@ -30348,7 +29926,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 9
+          "no": 8
         },
         {
           "kind": "composed",
@@ -30416,12 +29994,12 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 10
+          "no": 9
         }
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 18,
+        "practised": 17,
         "notPractised": [
           {
             "volume": 2,
@@ -30436,6 +30014,21 @@
             "creditLemmas": [
               "iustifico",
               "justifico"
+            ],
+            "resolved": true,
+            "phrase": false
+          },
+          {
+            "volume": 2,
+            "lesson": 47,
+            "ordinal": 928,
+            "headword": "excedo",
+            "glossZh": "超越、逾越；離去、過世",
+            "lemmas": [
+              "excedo"
+            ],
+            "creditLemmas": [
+              "excedo"
             ],
             "resolved": true,
             "phrase": false
@@ -30466,77 +30059,29 @@
       "items": [
         {
           "kind": "quoted",
-          "ref": "方濟各：願祢受讚頌　Laudato Si'",
-          "text": "quae quidem systematis energetici mundialis praecipuum occupat locum",
-          "answerKeyRef": "L50#7",
+          "ref": "肋令的味增爵：備忘錄　Commonitorium",
+          "text": "Lerina hodie nomen S",
+          "answerKeyRef": "L09#1",
           "answerKeyEdition": "思高譯本",
           "answerKeyScope": "block-containing-clause",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 48,
-              "ordinal": 944,
-              "headword": "occupo",
-              "glossZh": "佔領、奪取；攻擊、襲擊",
-              "lemmas": [
-                "occupo"
-              ],
-              "creditLemmas": [
-                "occupo"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
+          "targetWords": [],
           "verification": {
-            "words": 8,
+            "words": 4,
             "unattested": [],
             "untaught": [
-              "systematis",
-              "energetici",
-              "mundialis"
+              "Lerina"
             ],
             "enclitics": [],
             "lemmas": [
-              "locus",
-              "occupo",
-              "praecipuus",
-              "qui",
-              "quidem",
-              "quis"
+              "hodie",
+              "nomen",
+              "volo"
             ],
             "lengthOk": true,
             "passed": true
           },
           "reviewedBy": "corpus",
           "no": 1
-        },
-        {
-          "kind": "quoted",
-          "ref": "聖奧思定懺悔錄 卷八　Confessiones VIII",
-          "text": "cui deditus obstringebar",
-          "answerKeyRef": "L08#4",
-          "answerKeyEdition": "思高譯本",
-          "answerKeyScope": "block-containing-clause",
-          "targetWords": [],
-          "verification": {
-            "words": 3,
-            "unattested": [],
-            "untaught": [
-              "deditus",
-              "obstringebar"
-            ],
-            "enclitics": [],
-            "lemmas": [
-              "dedo",
-              "qui",
-              "quis"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 2
         },
         {
           "kind": "composed",
@@ -30605,7 +30150,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 3
+          "no": 2
         },
         {
           "kind": "composed",
@@ -30671,7 +30216,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 4
+          "no": 3
         },
         {
           "kind": "composed",
@@ -30737,7 +30282,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 5
+          "no": 4
         },
         {
           "kind": "composed",
@@ -30806,7 +30351,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 6
+          "no": 5
         },
         {
           "kind": "composed",
@@ -30872,7 +30417,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 7
+          "no": 6
         },
         {
           "kind": "composed",
@@ -30938,7 +30483,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 8
+          "no": 7
         },
         {
           "kind": "composed",
@@ -31004,7 +30549,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 9
+          "no": 8
         }
       ],
       "coverage": {
@@ -31081,146 +30626,36 @@
     {
       "lesson": 49,
       "id": "lat-v2-lesson-49",
-      "note": "",
+      "note": "本課無可用經典原句，十題全由自撰題補",
       "items": [
         {
           "kind": "quoted",
-          "ref": "梵二：天主的啟示教義憲章　Dei Verbum",
-          "text": "Verbum carnem factum",
-          "answerKeyRef": "L44#3",
+          "ref": "聖良一世四旬期講道　Sermones de Quadragesima",
+          "text": "in cujus virtute confidimus",
+          "answerKeyRef": "L10#5",
           "answerKeyEdition": "思高譯本",
           "answerKeyScope": "block-containing-clause",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 49,
-              "ordinal": 965,
-              "headword": "factum",
-              "glossZh": "事實、行為、業績",
-              "lemmas": [
-                "facio",
-                "factum",
-                "factus",
-                "fio"
-              ],
-              "creditLemmas": [
-                "factum"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
+          "targetWords": [],
           "verification": {
-            "words": 3,
+            "words": 4,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
             "lemmas": [
-              "caro",
-              "facio",
-              "factum",
-              "factus",
-              "fio",
-              "uerbum",
-              "verbum"
+              "confido",
+              "hic",
+              "in",
+              "invicem",
+              "qui",
+              "quis",
+              "uirtus",
+              "virtus"
             ],
             "lengthOk": true,
             "passed": true
           },
           "reviewedBy": "corpus",
           "no": 1
-        },
-        {
-          "kind": "quoted",
-          "ref": "梵二：天主的啟示教義憲章　Dei Verbum",
-          "text": "Verbum caro factum",
-          "answerKeyRef": "L44#7",
-          "answerKeyEdition": "思高譯本",
-          "answerKeyScope": "block-containing-clause",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 49,
-              "ordinal": 965,
-              "headword": "factum",
-              "glossZh": "事實、行為、業績",
-              "lemmas": [
-                "facio",
-                "factum",
-                "factus",
-                "fio"
-              ],
-              "creditLemmas": [
-                "factum"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "verification": {
-            "words": 3,
-            "unattested": [],
-            "untaught": [],
-            "enclitics": [],
-            "lemmas": [
-              "caro",
-              "facio",
-              "factum",
-              "factus",
-              "fio",
-              "uerbum",
-              "verbum"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 2
-        },
-        {
-          "kind": "quoted",
-          "ref": "梵二：大公主義法令　Unitatis Redintegratio",
-          "text": "regendi et sanctificandi Collegio Duodecim concredidit",
-          "answerKeyRef": "L41#5",
-          "answerKeyEdition": "思高譯本",
-          "answerKeyScope": "block-containing-clause",
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 49,
-              "ordinal": 972,
-              "headword": "collegium",
-              "glossZh": "學院、公會、同業組織",
-              "lemmas": [
-                "collegium"
-              ],
-              "creditLemmas": [
-                "collegium"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "verification": {
-            "words": 6,
-            "unattested": [],
-            "untaught": [
-              "concredidit"
-            ],
-            "enclitics": [],
-            "lemmas": [
-              "collegium",
-              "duodecim",
-              "et",
-              "rego",
-              "sanctifico",
-              "sum"
-            ],
-            "lengthOk": true,
-            "passed": true
-          },
-          "reviewedBy": "corpus",
-          "no": 3
         },
         {
           "kind": "composed",
@@ -31291,7 +30726,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 4
+          "no": 2
         },
         {
           "kind": "composed",
@@ -31357,7 +30792,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 5
+          "no": 3
         },
         {
           "kind": "composed",
@@ -31423,7 +30858,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 6
+          "no": 4
         },
         {
           "kind": "composed",
@@ -31489,7 +30924,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 7
+          "no": 5
         },
         {
           "kind": "composed",
@@ -31555,7 +30990,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 8
+          "no": 6
         },
         {
           "kind": "composed",
@@ -31621,7 +31056,7 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 9
+          "no": 7
         },
         {
           "kind": "composed",
@@ -31688,13 +31123,31 @@
             "passed": true
           },
           "reviewedBy": "author",
-          "no": 10
+          "no": 8
         }
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 18,
+        "practised": 17,
         "notPractised": [
+          {
+            "volume": 2,
+            "lesson": 49,
+            "ordinal": 965,
+            "headword": "factum",
+            "glossZh": "事實、行為、業績",
+            "lemmas": [
+              "facio",
+              "factum",
+              "factus",
+              "fio"
+            ],
+            "creditLemmas": [
+              "factum"
+            ],
+            "resolved": true,
+            "phrase": false
+          },
           {
             "volume": 2,
             "lesson": 49,
@@ -31828,24 +31281,25 @@
         },
         {
           "kind": "quoted",
-          "ref": "亞他納修信經　Symbolum Quicumque",
-          "text": "et unus immensus",
-          "answerKeyRef": "L11#2",
+          "ref": "聖本篤會規　Regula Benedicti",
+          "text": "quando ipsius vocatur pronomine",
+          "answerKeyRef": "L13#3",
           "answerKeyEdition": "思高譯本",
           "answerKeyScope": "block-containing-clause",
           "targetWords": [],
           "verification": {
-            "words": 3,
+            "words": 4,
             "unattested": [],
             "untaught": [
-              "immensus"
+              "pronomine"
             ],
             "enclitics": [],
             "lemmas": [
-              "et",
-              "immensus",
-              "sum",
-              "unus"
+              "ipse",
+              "pronomen",
+              "quando",
+              "uoco",
+              "voco"
             ],
             "lengthOk": true,
             "passed": true

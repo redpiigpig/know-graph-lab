@@ -56,11 +56,14 @@ GAP_ZH = CACHE / "reading-gap-zh.json"
 LITURGY_NOTE = "禮儀經文的固定對答採教會通行本文，其餘為自譯；付印前請對照《感恩祭典》核對"
 
 FONT_LA = "Noto Serif"
-LATIN_PT = 11.0
+# 🚨 擁有者 2026-09-17：「字都不可以小於 12。」正文、生詞表、逐詞對譯的中文義、
+# 整句中譯、練習——凡是要讀的字一律 ≥12pt。只有頁眉與頁碼維持小字，那是版口
+# 標示不是閱讀內容。改這幾個數字會直接改變每頁容納的份量，讀文上限要跟著重算。
+LATIN_PT = 12
 # 練習題的句子設得比正文小一級：一頁要放十句，每句底下還有一條作答橫線，
 # 而且是一句一句讀，不是連續讀下去。
-EXERCISE_PT = 10.4
-GLOSS_PT = 9.6
+EXERCISE_PT = 12
+GLOSS_PT = 12
 
 VOLUMES = {
     "上冊": {
@@ -79,10 +82,13 @@ VOLUMES = {
 # 厚薄要相近。切點只落在課與課之間，課次編號不動（線上讀本與音檔靠它對應），附錄
 # 只印在該部分的最後一分冊。依 2026-09-08 版面實測（上冊 456 頁、下冊 840 頁），
 # 上冊本來就進得去一本，下冊對半切，三冊落在 419–457 頁。
+# 🚨 切點是照**實際頁數**算出來的，不是照課數對半。讀文改成節錄之後每課的
+# 份量才變得平均（四分位 6–12 頁），在那之前最厚的一課是最薄的三四倍，切點
+# 必須遷就那幾課。改了讀文長度就要重算切點，否則會留下一冊厚一冊薄。
 PARTS = [
-    {"book": 1, "source": "上冊", "first": 1, "last": 50, "appendix": True},   # 約 457 頁
-    {"book": 2, "source": "下冊", "first": 1, "last": 32, "appendix": False},  # 約 428 頁
-    {"book": 3, "source": "下冊", "first": 33, "last": 50, "appendix": True},  # 約 419 頁
+    {"book": 1, "source": "上冊", "first": 1, "last": 50, "appendix": True},   # 約 470 頁
+    {"book": 2, "source": "下冊", "first": 1, "last": 29, "appendix": False},  # 約 254 頁
+    {"book": 3, "source": "下冊", "first": 30, "last": 50, "appendix": True},  # 約 259 頁
 ]
 BOOK_LABELS = ("第一冊", "第二冊", "第三冊")
 
@@ -243,6 +249,7 @@ def vocabulary_table(document, rows: list[dict]):
     for cell, label in zip(header.cells, ("拉丁文", "詞類", "繁體中文")):
         H.shade(cell, H.PALE)
         H.set_cell_margins(cell)
+        H.tighten_cell(cell)
         paragraph = cell.paragraphs[0]
         H.add_mixed_script_text(paragraph, label, H.FONT_ZH, H.LABEL_PT, bold=True,
                                 color=H.ACCENT_DARK)
@@ -255,12 +262,15 @@ def vocabulary_table(document, rows: list[dict]):
         H.prevent_row_split(row)
         cells = row.cells
         H.set_cell_margins(cells[0])
+        H.tighten_cell(cells[0])
         H.add_mixed_script_text(cells[0].paragraphs[0], entry.get("forms") or entry["headword"],
                                 FONT_LA, H.TABLE_SIZE_PT)
         H.set_cell_margins(cells[1])
+        H.tighten_cell(cells[1])
         H.add_mixed_script_text(cells[1].paragraphs[0], short_pos(entry), H.FONT_ZH,
                                 H.LABEL_PT, color=H.MUTED)
         H.set_cell_margins(cells[2])
+        H.tighten_cell(cells[2])
         H.add_mixed_script_text(cells[2].paragraphs[0], entry.get("glossZh") or "〔待補〕",
                                 H.FONT_ZH, H.TABLE_SIZE_PT)
     document.add_paragraph().paragraph_format.space_after = Pt(2)
@@ -576,8 +586,16 @@ def chinese_by_section(path: str) -> dict[int, str]:
     return {number: " ".join(rows) for number, rows in sections.items()}
 
 
-READING_WORD_LIMIT = 800
-"""下冊一課讀文的篇幅上限（詞）。
+READING_WORD_LIMIT = 570
+"""
+🚨 這個數字是從**版面**倒推的，不是憑感覺訂的。擁有者 2026-09-17：「一課最多
+不能超過 8 頁。」一課的版面是生詞（20 字）約一頁、翻譯練習（10 題）約半頁，
+其餘六頁半留給讀本；而讀本印的是逐詞對譯，一頁只裝得下約 96 個原文詞（實測
+印出來的頁面數的，不是估的）。讀文每多 96 個詞，書就厚一頁。
+
+🚨 量密度要數「印出來的原文詞」，不要拿「讀文字數 ÷ 總頁數」——那會把生詞頁與
+練習頁算進分母，密度低估四成，上限就砍過頭。
+下冊一課讀文的篇幅上限（詞）。
 
 擁有者 2026-09-17：「大約抓個 500-800 字左右就好」「但要是自然段落的選集喔，
 不要是語意沒講完就中斷」。拉丁讀文本來就是一段一段收的（《懺悔錄》卷一有五十三

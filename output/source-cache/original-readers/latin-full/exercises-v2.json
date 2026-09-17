@@ -22,10 +22,19 @@
   },
   "counts": {
     "lessons": 50,
-    "anchors": 273,
+    "anchors": 228,
     "lessonsShortOfThree": [
+      33,
+      38,
+      39,
       42,
-      48
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49
     ]
   },
   "lessons": [
@@ -64,34 +73,6 @@
         {
           "no": 2,
           "kind": "quoted",
-          "uid": "L35#12#13",
-          "ref": "良十三：新事　Rerum Novarum",
-          "clause": "13/20",
-          "text": "ut facile intelligitur",
-          "wordCount": 3,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 1,
-              "ordinal": 4,
-              "headword": "intellegō",
-              "glossZh": "理解、認知、領會",
-              "lemmas": [
-                "intellego"
-              ],
-              "creditLemmas": [
-                "intellego"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L35#12",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 3,
-          "kind": "quoted",
           "uid": "L07#3#10",
           "ref": "聖奧思定懺悔錄 卷一　Confessiones I",
           "clause": "10/29",
@@ -119,7 +100,7 @@
           "answerKeyScope": "block-containing-clause"
         },
         {
-          "no": 4,
+          "no": 3,
           "kind": "quoted",
           "uid": "L10#4#8",
           "ref": "聖良一世四旬期講道　Sermones de Quadragesima",
@@ -144,6 +125,34 @@
             }
           ],
           "answerKeyRef": "L10#4",
+          "answerKeyScope": "block-containing-clause"
+        },
+        {
+          "no": 4,
+          "kind": "quoted",
+          "uid": "L33#5#9",
+          "ref": "梵一：永恆牧者　Pastor Aeternus",
+          "clause": "9/20",
+          "text": "ut ab Ecclesia catholica semper intellecta est",
+          "wordCount": 7,
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 1,
+              "ordinal": 4,
+              "headword": "intellegō",
+              "glossZh": "理解、認知、領會",
+              "lemmas": [
+                "intellego"
+              ],
+              "creditLemmas": [
+                "intellego"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "answerKeyRef": "L33#5",
           "answerKeyScope": "block-containing-clause"
         },
         {
@@ -272,6 +281,34 @@
         {
           "no": 3,
           "kind": "quoted",
+          "uid": "L11#1#4",
+          "ref": "亞他納修信經　Symbolum Quicumque",
+          "clause": "4/27",
+          "text": "ante omnia opus est",
+          "wordCount": 4,
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 2,
+              "ordinal": 33,
+              "headword": "antequam",
+              "glossZh": "在……之前",
+              "lemmas": [
+                "antequam"
+              ],
+              "creditLemmas": [
+                "antequam"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "answerKeyRef": "L11#1",
+          "answerKeyScope": "block-containing-clause"
+        },
+        {
+          "no": 4,
+          "kind": "quoted",
           "uid": "L20#1#16",
           "ref": "末日經　Dies irae",
           "clause": "16/27",
@@ -295,34 +332,6 @@
             }
           ],
           "answerKeyRef": "L20#1",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 4,
-          "kind": "quoted",
-          "uid": "L04#6#9",
-          "ref": "厄革里雅朝聖記　Itinerarium Egeriae",
-          "clause": "9/15",
-          "text": "ita et ante Crucem",
-          "wordCount": 4,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 2,
-              "ordinal": 33,
-              "headword": "antequam",
-              "glossZh": "在……之前",
-              "lemmas": [
-                "antequam"
-              ],
-              "creditLemmas": [
-                "antequam"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L04#6",
           "answerKeyScope": "block-containing-clause"
         },
         {
@@ -358,36 +367,36 @@
         {
           "no": 6,
           "kind": "quoted",
-          "uid": "L33#14#14",
-          "ref": "梵一：永恆牧者　Pastor Aeternus",
-          "clause": "14/18",
-          "text": "et omnium Christianorum patrem ac doctorem existere",
-          "wordCount": 7,
+          "uid": "L03#2#7",
+          "ref": "戴都良論祈禱　De oratione",
+          "clause": "7/29",
+          "text": "ex sermone quo enuntiatur",
+          "wordCount": 4,
           "targetWords": [
             {
               "volume": 2,
               "lesson": 2,
-              "ordinal": 40,
-              "headword": "exsistō",
-              "glossZh": "出現、產生、存在",
+              "ordinal": 26,
+              "headword": "sermō",
+              "glossZh": "言談、言論、演說",
               "lemmas": [
-                "exsisto"
+                "sermo"
               ],
               "creditLemmas": [
-                "exsisto"
+                "sermo"
               ],
               "resolved": true,
               "phrase": false
             }
           ],
-          "answerKeyRef": "L33#14",
+          "answerKeyRef": "L03#2",
           "answerKeyScope": "block-containing-clause"
         }
       ],
       "note": "",
       "coverage": {
         "lessonWords": 20,
-        "reachedByAnchors": 6
+        "reachedByAnchors": 5
       }
     },
     {
@@ -425,34 +434,6 @@
         {
           "no": 2,
           "kind": "quoted",
-          "uid": "L48#10#2",
-          "ref": "若望保祿二：信仰與理性　Fides et Ratio",
-          "clause": "2/15",
-          "text": "Quidquid autem id est",
-          "wordCount": 4,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 3,
-              "ordinal": 53,
-              "headword": "quisquis",
-              "glossZh": "凡是……的人、無論誰",
-              "lemmas": [
-                "quisquis"
-              ],
-              "creditLemmas": [
-                "quisquis"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L48#10",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 3,
-          "kind": "quoted",
           "uid": "L12#3#10",
           "ref": "大額我略　Gregorius Magnus",
           "clause": "10/20",
@@ -480,7 +461,7 @@
           "answerKeyScope": "block-containing-clause"
         },
         {
-          "no": 4,
+          "no": 3,
           "kind": "quoted",
           "uid": "L49#3#15",
           "ref": "本篤十六：天主是愛　Deus Caritas Est",
@@ -508,13 +489,13 @@
           "answerKeyScope": "block-containing-clause"
         },
         {
-          "no": 5,
+          "no": 4,
           "kind": "quoted",
-          "uid": "L22#9#14",
-          "ref": "聖文德：心靈邁向天主的旅程　Itinerarium mentis in Deum",
-          "clause": "14/24",
-          "text": "quia diiudicatur et ratio redditur",
-          "wordCount": 5,
+          "uid": "L20#2#6",
+          "ref": "末日經　Dies irae",
+          "clause": "6/31",
+          "text": "donum fac remissionis ante diem rationis",
+          "wordCount": 6,
           "targetWords": [
             {
               "volume": 2,
@@ -532,11 +513,11 @@
               "phrase": false
             }
           ],
-          "answerKeyRef": "L22#9",
+          "answerKeyRef": "L20#2",
           "answerKeyScope": "block-containing-clause"
         },
         {
-          "no": 6,
+          "no": 5,
           "kind": "quoted",
           "uid": "L06#3#18",
           "ref": "聖安博晨禱聖詩　Hymni Ambrosiani",
@@ -562,12 +543,41 @@
           ],
           "answerKeyRef": "L06#3",
           "answerKeyScope": "block-containing-clause"
+        },
+        {
+          "no": 6,
+          "kind": "quoted",
+          "uid": "L32#12#6",
+          "ref": "梵一：天主子　Dei Filius",
+          "clause": "6/15",
+          "text": "idem Decretum renovantes",
+          "wordCount": 3,
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 3,
+              "ordinal": 44,
+              "headword": "īdem",
+              "glossZh": "同一的、相同的",
+              "lemmas": [
+                "idem",
+                "item"
+              ],
+              "creditLemmas": [
+                "idem"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "answerKeyRef": "L32#12",
+          "answerKeyScope": "block-containing-clause"
         }
       ],
       "note": "",
       "coverage": {
         "lessonWords": 20,
-        "reachedByAnchors": 6
+        "reachedByAnchors": 5
       }
     },
     {
@@ -605,34 +615,6 @@
         {
           "no": 2,
           "kind": "quoted",
-          "uid": "L11#1#5",
-          "ref": "亞他納修信經　Symbolum Quicumque",
-          "clause": "5/27",
-          "text": "ut teneat catholicam fidem",
-          "wordCount": 4,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 4,
-              "ordinal": 62,
-              "headword": "teneō",
-              "glossZh": "握持、保有、扣留",
-              "lemmas": [
-                "teneo"
-              ],
-              "creditLemmas": [
-                "teneo"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L11#1",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 3,
-          "kind": "quoted",
           "uid": "L38#1#6",
           "ref": "庇護十二：奧體　Mystici Corporis Christi",
           "clause": "6/24",
@@ -659,7 +641,7 @@
           "answerKeyScope": "block-containing-clause"
         },
         {
-          "no": 4,
+          "no": 3,
           "kind": "quoted",
           "uid": "L12#2#15",
           "ref": "大額我略　Gregorius Magnus",
@@ -685,35 +667,7 @@
           "answerKeyScope": "block-containing-clause"
         },
         {
-          "no": 5,
-          "kind": "quoted",
-          "uid": "L46#16#2",
-          "ref": "梵二：論教會在現代世界牧職憲章　Gaudium et Spes",
-          "clause": "2/17",
-          "text": "Homo vero non fallitur",
-          "wordCount": 4,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 4,
-              "ordinal": 79,
-              "headword": "fallō",
-              "glossZh": "欺騙、迷惑",
-              "lemmas": [
-                "fallo"
-              ],
-              "creditLemmas": [
-                "fallo"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L46#16",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 6,
+          "no": 4,
           "kind": "quoted",
           "uid": "L10#1#13",
           "ref": "聖良一世四旬期講道　Sermones de Quadragesima",
@@ -741,12 +695,70 @@
           ],
           "answerKeyRef": "L10#1",
           "answerKeyScope": "block-containing-clause"
+        },
+        {
+          "no": 5,
+          "kind": "quoted",
+          "uid": "L46#15#11",
+          "ref": "梵二：論教會在現代世界牧職憲章　Gaudium et Spes",
+          "clause": "11/15",
+          "text": "bonum et honore dignum habere tenetur",
+          "wordCount": 6,
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 4,
+              "ordinal": 62,
+              "headword": "teneō",
+              "glossZh": "握持、保有、扣留",
+              "lemmas": [
+                "teneo"
+              ],
+              "creditLemmas": [
+                "teneo"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "answerKeyRef": "L46#15",
+          "answerKeyScope": "block-containing-clause"
+        },
+        {
+          "no": 6,
+          "kind": "quoted",
+          "uid": "L10#6#2",
+          "ref": "聖良一世四旬期講道　Sermones de Quadragesima",
+          "clause": "2/33",
+          "text": "Vicit enim adversarium",
+          "wordCount": 3,
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 4,
+              "ordinal": 65,
+              "headword": "vincō",
+              "glossZh": "戰勝、征服",
+              "lemmas": [
+                "uinco",
+                "vinco"
+              ],
+              "creditLemmas": [
+                "uinco",
+                "vinco"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "answerKeyRef": "L10#6",
+          "answerKeyScope": "block-containing-clause"
         }
       ],
       "note": "",
       "coverage": {
         "lessonWords": 20,
-        "reachedByAnchors": 6
+        "reachedByAnchors": 5
       }
     },
     {
@@ -756,11 +768,11 @@
         {
           "no": 1,
           "kind": "quoted",
-          "uid": "L06#7#22",
-          "ref": "聖安博晨禱聖詩　Hymni Ambrosiani",
-          "clause": "22/33",
-          "text": "Laudes ferentes debitas",
-          "wordCount": 3,
+          "uid": "L05#4#30",
+          "ref": "聖傑羅尼莫書信　Epistulae",
+          "clause": "30/31",
+          "text": "innocentiam tantum mecum feram",
+          "wordCount": 4,
           "targetWords": [
             {
               "volume": 2,
@@ -778,45 +790,17 @@
               "phrase": false
             }
           ],
-          "answerKeyRef": "L06#7",
+          "answerKeyRef": "L05#4",
           "answerKeyScope": "block-containing-clause"
         },
         {
           "no": 2,
           "kind": "quoted",
-          "uid": "L06#6#15",
-          "ref": "聖安博晨禱聖詩　Hymni Ambrosiani",
-          "clause": "15/30",
-          "text": "De luce lucem proferens",
-          "wordCount": 4,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 5,
-              "ordinal": 97,
-              "headword": "prōferō",
-              "glossZh": "提出、陳述、發言",
-              "lemmas": [
-                "profero"
-              ],
-              "creditLemmas": [
-                "profero"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L06#6",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 3,
-          "kind": "quoted",
-          "uid": "L34#9#22",
-          "ref": "良十三：永恆之父　Aeterni Patris",
-          "clause": "22/28",
-          "text": "Invisibilia enim ipsius ut Apostolus inquit",
-          "wordCount": 6,
+          "uid": "L03#6#1",
+          "ref": "戴都良論祈禱　De oratione",
+          "clause": "1/8",
+          "text": "Ego enim, inquit, et Pater unum sumus",
+          "wordCount": 7,
           "targetWords": [
             {
               "volume": 2,
@@ -834,40 +818,11 @@
               "phrase": false
             }
           ],
-          "answerKeyRef": "L34#9",
+          "answerKeyRef": "L03#6",
           "answerKeyScope": "block-containing-clause"
         },
         {
-          "no": 4,
-          "kind": "quoted",
-          "uid": "L10#6#24",
-          "ref": "聖良一世四旬期講道　Sermones de Quadragesima",
-          "clause": "24/33",
-          "text": "in medio praeliorum est",
-          "wordCount": 4,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 5,
-              "ordinal": 87,
-              "headword": "medium",
-              "glossZh": "中間、中部、中央",
-              "lemmas": [
-                "medium",
-                "medius"
-              ],
-              "creditLemmas": [
-                "medium"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L10#6",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 5,
+          "no": 3,
           "kind": "quoted",
           "uid": "L37#7#10",
           "ref": "庇護十一：四十年　Quadragesimo Anno",
@@ -895,7 +850,7 @@
           "answerKeyScope": "block-containing-clause"
         },
         {
-          "no": 6,
+          "no": 4,
           "kind": "quoted",
           "uid": "L21#1#8",
           "ref": "聖母痛苦詠　Stabat mater dolorosa",
@@ -921,6 +876,62 @@
           ],
           "answerKeyRef": "L21#1",
           "answerKeyScope": "block-containing-clause"
+        },
+        {
+          "no": 5,
+          "kind": "quoted",
+          "uid": "L24#5#15",
+          "ref": "波尼法爵八世：唯一至聖　Unam Sanctam",
+          "clause": "15/26",
+          "text": "male verbum attendit Domini proferentis",
+          "wordCount": 5,
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 5,
+              "ordinal": 97,
+              "headword": "prōferō",
+              "glossZh": "提出、陳述、發言",
+              "lemmas": [
+                "profero"
+              ],
+              "creditLemmas": [
+                "profero"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "answerKeyRef": "L24#5",
+          "answerKeyScope": "block-containing-clause"
+        },
+        {
+          "no": 6,
+          "kind": "quoted",
+          "uid": "L14#1#21",
+          "ref": "聖枝主日詠　Gloria, laus et honor",
+          "clause": "21/27",
+          "text": "nos tibi regnati pangimus ecce melos",
+          "wordCount": 6,
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 5,
+              "ordinal": 92,
+              "headword": "pangō",
+              "glossZh": "制定、作成、譜寫",
+              "lemmas": [
+                "pango"
+              ],
+              "creditLemmas": [
+                "pango"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "answerKeyRef": "L14#1",
+          "answerKeyScope": "block-containing-clause"
         }
       ],
       "note": "",
@@ -936,10 +947,10 @@
         {
           "no": 1,
           "kind": "quoted",
-          "uid": "L09#10#23",
-          "ref": "肋令的味增爵：備忘錄　Commonitorium",
-          "clause": "23/23",
-          "text": "et fieri potuit",
+          "uid": "L25#1#10",
+          "ref": "聖誕詠　Adeste, fideles",
+          "clause": "10/25",
+          "text": "genitum non factum",
           "wordCount": 3,
           "targetWords": [
             {
@@ -958,7 +969,7 @@
               "phrase": false
             }
           ],
-          "answerKeyRef": "L09#10",
+          "answerKeyRef": "L25#1",
           "answerKeyScope": "block-containing-clause"
         },
         {
@@ -1050,34 +1061,6 @@
         {
           "no": 5,
           "kind": "quoted",
-          "uid": "L42#13#14",
-          "ref": "梵二：教會憲章　Lumen Gentium",
-          "clause": "14/21",
-          "text": "humilitatis et abnegationis servans",
-          "wordCount": 4,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 6,
-              "ordinal": 117,
-              "headword": "humilitās",
-              "glossZh": "謙卑、卑微",
-              "lemmas": [
-                "humilitas"
-              ],
-              "creditLemmas": [
-                "humilitas"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L42#13",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 6,
-          "kind": "quoted",
           "uid": "L42#9#3",
           "ref": "梵二：教會憲章　Lumen Gentium",
           "clause": "3/13",
@@ -1102,12 +1085,42 @@
           ],
           "answerKeyRef": "L42#9",
           "answerKeyScope": "block-containing-clause"
+        },
+        {
+          "no": 6,
+          "kind": "quoted",
+          "uid": "L16#12#1",
+          "ref": "額我略七世：教宗敕語　Dictatus papae",
+          "clause": "1/1",
+          "text": "XII Qd illi liceat imperatores deponere",
+          "wordCount": 6,
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 6,
+              "ordinal": 120,
+              "headword": "licet",
+              "glossZh": "許可、得以",
+              "lemmas": [
+                "4-O--------",
+                "licet",
+                "t"
+              ],
+              "creditLemmas": [
+                "licet"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "answerKeyRef": "L16#12",
+          "answerKeyScope": "block-containing-clause"
         }
       ],
       "note": "",
       "coverage": {
         "lessonWords": 20,
-        "reachedByAnchors": 5
+        "reachedByAnchors": 4
       }
     },
     {
@@ -1145,34 +1158,6 @@
         {
           "no": 2,
           "kind": "quoted",
-          "uid": "L14#1#27",
-          "ref": "聖枝主日詠　Gloria, laus et honor",
-          "clause": "27/27",
-          "text": "cui bona cuncta placent",
-          "wordCount": 4,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 7,
-              "ordinal": 132,
-              "headword": "placeo",
-              "glossZh": "討好、令人滿意",
-              "lemmas": [
-                "placeo"
-              ],
-              "creditLemmas": [
-                "placeo"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L14#1",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 3,
-          "kind": "quoted",
           "uid": "L35#7#7",
           "ref": "良十三：新事　Rerum Novarum",
           "clause": "7/10",
@@ -1196,6 +1181,34 @@
             }
           ],
           "answerKeyRef": "L35#7",
+          "answerKeyScope": "block-containing-clause"
+        },
+        {
+          "no": 3,
+          "kind": "quoted",
+          "uid": "L08#2#3",
+          "ref": "聖奧思定懺悔錄 卷八　Confessiones VIII",
+          "clause": "3/13",
+          "text": "et placebat via ipse salvator",
+          "wordCount": 5,
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 7,
+              "ordinal": 132,
+              "headword": "placeo",
+              "glossZh": "討好、令人滿意",
+              "lemmas": [
+                "placeo"
+              ],
+              "creditLemmas": [
+                "placeo"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "answerKeyRef": "L08#2",
           "answerKeyScope": "block-containing-clause"
         },
         {
@@ -1229,64 +1242,64 @@
         {
           "no": 5,
           "kind": "quoted",
-          "uid": "L13#7#12",
-          "ref": "聖本篤會規　Regula Benedicti",
-          "clause": "12/20",
-          "text": "oboedientes autem et mites et patientes",
-          "wordCount": 6,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 7,
-              "ordinal": 125,
-              "headword": "oboediō",
-              "glossZh": "服從、順從",
-              "lemmas": [
-                "oboedio"
-              ],
-              "creditLemmas": [
-                "oboedio"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L13#7",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 6,
-          "kind": "quoted",
-          "uid": "L05#4#31",
-          "ref": "聖傑羅尼莫書信　Epistulae",
-          "clause": "31/31",
-          "text": "non moritur, quisquis victurus occiditur",
+          "uid": "L48#5#11",
+          "ref": "若望保祿二：信仰與理性　Fides et Ratio",
+          "clause": "11/13",
+          "text": "quae hominibus ea offerat oportet",
           "wordCount": 5,
           "targetWords": [
             {
               "volume": 2,
               "lesson": 7,
-              "ordinal": 127,
-              "headword": "occidō",
-              "glossZh": "下沉、西沉",
+              "ordinal": 128,
+              "headword": "oportet",
+              "glossZh": "應該、必須",
               "lemmas": [
-                "occido"
+                "oportet"
               ],
               "creditLemmas": [
-                "occido"
+                "oportet"
               ],
               "resolved": true,
               "phrase": false
             }
           ],
-          "answerKeyRef": "L05#4",
+          "answerKeyRef": "L48#5",
+          "answerKeyScope": "block-containing-clause"
+        },
+        {
+          "no": 6,
+          "kind": "quoted",
+          "uid": "L12#1#3",
+          "ref": "大額我略　Gregorius Magnus",
+          "clause": "3/16",
+          "text": "religionis studio et sanctitatis amore conspicua",
+          "wordCount": 6,
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 7,
+              "ordinal": 137,
+              "headword": "sānctitās",
+              "glossZh": "聖德、聖潔",
+              "lemmas": [
+                "sanctitas"
+              ],
+              "creditLemmas": [
+                "sanctitas"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "answerKeyRef": "L12#1",
           "answerKeyScope": "block-containing-clause"
         }
       ],
       "note": "",
       "coverage": {
         "lessonWords": 20,
-        "reachedByAnchors": 6
+        "reachedByAnchors": 5
       }
     },
     {
@@ -1324,34 +1337,6 @@
         {
           "no": 2,
           "kind": "quoted",
-          "uid": "L37#10#5",
-          "ref": "庇護十一：四十年　Quadragesimo Anno",
-          "clause": "5/12",
-          "text": "multiplicari sunt coepta",
-          "wordCount": 3,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 8,
-              "ordinal": 145,
-              "headword": "coepī",
-              "glossZh": "開始、著手",
-              "lemmas": [
-                "coepi"
-              ],
-              "creditLemmas": [
-                "coepi"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L37#10",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 3,
-          "kind": "quoted",
           "uid": "L36#1#7",
           "ref": "良十三：至上智慧的天主　Providentissimus Deus",
           "clause": "7/22",
@@ -1375,6 +1360,34 @@
             }
           ],
           "answerKeyRef": "L36#1",
+          "answerKeyScope": "block-containing-clause"
+        },
+        {
+          "no": 3,
+          "kind": "quoted",
+          "uid": "L04#2#9",
+          "ref": "厄革里雅朝聖記　Itinerarium Egeriae",
+          "clause": "9/22",
+          "text": "Iam autem ubi coeperit lucescere",
+          "wordCount": 5,
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 8,
+              "ordinal": 145,
+              "headword": "coepī",
+              "glossZh": "開始、著手",
+              "lemmas": [
+                "coepi"
+              ],
+              "creditLemmas": [
+                "coepi"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "answerKeyRef": "L04#2",
           "answerKeyScope": "block-containing-clause"
         },
         {
@@ -1475,6 +1488,35 @@
         {
           "no": 1,
           "kind": "quoted",
+          "uid": "L01#1#16",
+          "ref": "使徒信經　Symbolum Apostolorum",
+          "clause": "16/26",
+          "text": "ascendit ad caelos",
+          "wordCount": 3,
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 9,
+              "ordinal": 171,
+              "headword": "ab",
+              "glossZh": "由（施事者）；從（出發、原因）；自（遠時間或起源）",
+              "lemmas": [
+                "ab",
+                "ad"
+              ],
+              "creditLemmas": [
+                "ab"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "answerKeyRef": "L01#1",
+          "answerKeyScope": "block-containing-clause"
+        },
+        {
+          "no": 2,
+          "kind": "quoted",
           "uid": "L43#3#3",
           "ref": "梵二：信仰自由宣言　Dignitatis Humanae",
           "clause": "3/16",
@@ -1498,34 +1540,6 @@
             }
           ],
           "answerKeyRef": "L43#3",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 2,
-          "kind": "quoted",
-          "uid": "L36#6#21",
-          "ref": "良十三：至上智慧的天主　Providentissimus Deus",
-          "clause": "21/24",
-          "text": "auctoritate meruit fidem",
-          "wordCount": 3,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 9,
-              "ordinal": 179,
-              "headword": "auctoritas",
-              "glossZh": "權力、權威、命令、認可權",
-              "lemmas": [
-                "auctoritas"
-              ],
-              "creditLemmas": [
-                "auctoritas"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L36#6",
           "answerKeyScope": "block-containing-clause"
         },
         {
@@ -1559,39 +1573,11 @@
         {
           "no": 4,
           "kind": "quoted",
-          "uid": "L02#10#16",
-          "ref": "斐理伯與佩爾佩圖亞殉道錄　Passio Perpetuae et Felicitatis",
-          "clause": "16/24",
-          "text": "quasi timens me",
-          "wordCount": 3,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 9,
-              "ordinal": 172,
-              "headword": "quasi",
-              "glossZh": "彷彿、似乎、好像；所謂的；約",
-              "lemmas": [
-                "quasi"
-              ],
-              "creditLemmas": [
-                "quasi"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L02#10",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 5,
-          "kind": "quoted",
-          "uid": "L32#15#12",
-          "ref": "梵一：天主子　Dei Filius",
-          "clause": "12/21",
-          "text": "ab eo revelata vera esse credimus",
-          "wordCount": 6,
+          "uid": "L33#4#9",
+          "ref": "梵一：永恆牧者　Pastor Aeternus",
+          "clause": "9/22",
+          "text": "et sanguis non revelavit tibi",
+          "wordCount": 5,
           "targetWords": [
             {
               "volume": 2,
@@ -1609,29 +1595,13 @@
               ],
               "resolved": true,
               "phrase": false
-            },
-            {
-              "volume": 2,
-              "lesson": 9,
-              "ordinal": 171,
-              "headword": "ab",
-              "glossZh": "由（施事者）；從（出發、原因）；自（遠時間或起源）",
-              "lemmas": [
-                "ab",
-                "ad"
-              ],
-              "creditLemmas": [
-                "ab"
-              ],
-              "resolved": true,
-              "phrase": false
             }
           ],
-          "answerKeyRef": "L32#15",
+          "answerKeyRef": "L33#4",
           "answerKeyScope": "block-containing-clause"
         },
         {
-          "no": 6,
+          "no": 5,
           "kind": "quoted",
           "uid": "L40#10#12",
           "ref": "若望二十三：和平於世　Pacem in Terris",
@@ -1672,12 +1642,40 @@
           ],
           "answerKeyRef": "L40#10",
           "answerKeyScope": "block-containing-clause"
+        },
+        {
+          "no": 6,
+          "kind": "quoted",
+          "uid": "L35#10#18",
+          "ref": "良十三：新事　Rerum Novarum",
+          "clause": "18/19",
+          "text": "pervertit officia reipublicae",
+          "wordCount": 3,
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 9,
+              "ordinal": 178,
+              "headword": "officium",
+              "glossZh": "職責、義務、恩惠、職務",
+              "lemmas": [
+                "officium"
+              ],
+              "creditLemmas": [
+                "officium"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "answerKeyRef": "L35#10",
+          "answerKeyScope": "block-containing-clause"
         }
       ],
       "note": "",
       "coverage": {
         "lessonWords": 20,
-        "reachedByAnchors": 8
+        "reachedByAnchors": 6
       }
     },
     {
@@ -1715,34 +1713,6 @@
         {
           "no": 2,
           "kind": "quoted",
-          "uid": "L13#6#4",
-          "ref": "聖本篤會規　Regula Benedicti",
-          "clause": "4/17",
-          "text": "abbati visum fuerit",
-          "wordCount": 3,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 10,
-              "ordinal": 188,
-              "headword": "abbas",
-              "glossZh": "修道院院長、教會團體首長",
-              "lemmas": [
-                "abbas"
-              ],
-              "creditLemmas": [
-                "abbas"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L13#6",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 3,
-          "kind": "quoted",
           "uid": "L34#6#12",
           "ref": "良十三：永恆之父　Aeterni Patris",
           "clause": "12/22",
@@ -1771,41 +1741,41 @@
           "answerKeyScope": "block-containing-clause"
         },
         {
-          "no": 4,
+          "no": 3,
           "kind": "quoted",
-          "uid": "L05#8#19",
-          "ref": "聖傑羅尼莫書信　Epistulae",
-          "clause": "19/21",
-          "text": "ne parum esset",
-          "wordCount": 3,
+          "uid": "L13#4#13",
+          "ref": "聖本篤會規　Regula Benedicti",
+          "clause": "13/17",
+          "text": "cum aliquis suscipit nomen abbatis",
+          "wordCount": 5,
           "targetWords": [
             {
               "volume": 2,
               "lesson": 10,
-              "ordinal": 184,
-              "headword": "parum",
-              "glossZh": "太少、不足、很少",
+              "ordinal": 188,
+              "headword": "abbas",
+              "glossZh": "修道院院長、教會團體首長",
               "lemmas": [
-                "parum"
+                "abbas"
               ],
               "creditLemmas": [
-                "parum"
+                "abbas"
               ],
               "resolved": true,
               "phrase": false
             }
           ],
-          "answerKeyRef": "L05#8",
+          "answerKeyRef": "L13#4",
           "answerKeyScope": "block-containing-clause"
         },
         {
-          "no": 5,
+          "no": 4,
           "kind": "quoted",
-          "uid": "L32#16#4",
-          "ref": "梵一：天主子　Dei Filius",
-          "clause": "4/22",
-          "text": "facta scilicet divina",
-          "wordCount": 3,
+          "uid": "L45#6#21",
+          "ref": "梵二：教會對非基督宗教態度宣言　Nostra Aetate",
+          "clause": "21/22",
+          "text": "doctrinas scilicet ac praecepta vitae",
+          "wordCount": 5,
           "targetWords": [
             {
               "volume": 2,
@@ -1823,59 +1793,72 @@
               "phrase": false
             }
           ],
-          "answerKeyRef": "L32#16",
+          "answerKeyRef": "L45#6",
           "answerKeyScope": "block-containing-clause"
         },
         {
-          "no": 6,
+          "no": 5,
           "kind": "quoted",
-          "uid": "L22#7#21",
-          "ref": "聖文德：心靈邁向天主的旅程　Itinerarium mentis in Deum",
-          "clause": "21/24",
-          "text": "secundum quod tenet rationem speciei seu formae",
-          "wordCount": 7,
+          "uid": "L32#8#4",
+          "ref": "梵一：天主子　Dei Filius",
+          "clause": "4/24",
+          "text": "rerum omnium principium et finem",
+          "wordCount": 5,
           "targetWords": [
             {
               "volume": 2,
               "lesson": 10,
-              "ordinal": 185,
-              "headword": "forma",
-              "glossZh": "形狀、外貌、美麗；模式、範型",
+              "ordinal": 190,
+              "headword": "finis",
+              "glossZh": "界限、終點、目標；（複數）領地、地域",
               "lemmas": [
-                "forma"
+                "Finis",
+                "finis"
               ],
               "creditLemmas": [
-                "forma"
-              ],
-              "resolved": true,
-              "phrase": false
-            },
-            {
-              "volume": 2,
-              "lesson": 10,
-              "ordinal": 186,
-              "headword": "seu",
-              "glossZh": "或者、如果；無論……或",
-              "lemmas": [
-                "seu",
-                "siue",
-                "sive"
-              ],
-              "creditLemmas": [
-                "seu"
+                "Finis",
+                "finis"
               ],
               "resolved": true,
               "phrase": false
             }
           ],
-          "answerKeyRef": "L22#7",
+          "answerKeyRef": "L32#8",
+          "answerKeyScope": "block-containing-clause"
+        },
+        {
+          "no": 6,
+          "kind": "quoted",
+          "uid": "L07#5#5",
+          "ref": "聖奧思定懺悔錄 卷一　Confessiones I",
+          "clause": "5/24",
+          "text": "an singulas singula et maiores maiora",
+          "wordCount": 6,
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 10,
+              "ordinal": 195,
+              "headword": "singulus",
+              "glossZh": "各個、單個、個別",
+              "lemmas": [
+                "singulus"
+              ],
+              "creditLemmas": [
+                "singulus"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "answerKeyRef": "L07#5",
           "answerKeyScope": "block-containing-clause"
         }
       ],
       "note": "",
       "coverage": {
         "lessonWords": 20,
-        "reachedByAnchors": 7
+        "reachedByAnchors": 6
       }
     },
     {
@@ -1960,62 +1943,6 @@
         {
           "no": 3,
           "kind": "quoted",
-          "uid": "L10#9#7",
-          "ref": "聖良一世四旬期講道　Sermones de Quadragesima",
-          "clause": "7/25",
-          "text": "ut Apostolus ait",
-          "wordCount": 3,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 11,
-              "ordinal": 202,
-              "headword": "aio",
-              "glossZh": "言說、聲稱、肯定",
-              "lemmas": [
-                "aio"
-              ],
-              "creditLemmas": [
-                "aio"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L10#9",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 4,
-          "kind": "quoted",
-          "uid": "L44#12#2",
-          "ref": "梵二：天主的啟示教義憲章　Dei Verbum",
-          "clause": "2/12",
-          "text": "Confitetur Sacra Synodus",
-          "wordCount": 3,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 11,
-              "ordinal": 216,
-              "headword": "synodus",
-              "glossZh": "教區會議、主教會議；教令集",
-              "lemmas": [
-                "synodus"
-              ],
-              "creditLemmas": [
-                "synodus"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L44#12",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 5,
-          "kind": "quoted",
           "uid": "L06#2#20",
           "ref": "聖安博晨禱聖詩　Hymni Ambrosiani",
           "clause": "20/32",
@@ -2042,7 +1969,7 @@
           "answerKeyScope": "block-containing-clause"
         },
         {
-          "no": 6,
+          "no": 4,
           "kind": "quoted",
           "uid": "L24#6#8",
           "ref": "波尼法爵八世：唯一至聖　Unam Sanctam",
@@ -2067,6 +1994,62 @@
             }
           ],
           "answerKeyRef": "L24#6",
+          "answerKeyScope": "block-containing-clause"
+        },
+        {
+          "no": 5,
+          "kind": "quoted",
+          "uid": "L43#7#4",
+          "ref": "梵二：信仰自由宣言　Dignitatis Humanae",
+          "clause": "4/4",
+          "text": "iusto ordine publico servato",
+          "wordCount": 4,
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 11,
+              "ordinal": 206,
+              "headword": "publicus",
+              "glossZh": "公眾的、公共的、官方的",
+              "lemmas": [
+                "publicus"
+              ],
+              "creditLemmas": [
+                "publicus"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "answerKeyRef": "L43#7",
+          "answerKeyScope": "block-containing-clause"
+        },
+        {
+          "no": 6,
+          "kind": "quoted",
+          "uid": "L03#3#10",
+          "ref": "戴都良論祈禱　De oratione",
+          "clause": "10/18",
+          "text": "ei soli religionem suam offerre",
+          "wordCount": 5,
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 11,
+              "ordinal": 220,
+              "headword": "religio",
+              "glossZh": "宗教、信仰；禮儀、聖潔",
+              "lemmas": [
+                "religio"
+              ],
+              "creditLemmas": [
+                "religio"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "answerKeyRef": "L03#3",
           "answerKeyScope": "block-containing-clause"
         }
       ],
@@ -2168,11 +2151,11 @@
         {
           "no": 4,
           "kind": "quoted",
-          "uid": "L48#5#10",
-          "ref": "若望保祿二：信仰與理性　Fides et Ratio",
-          "clause": "10/13",
-          "text": "Diversa inter officia",
-          "wordCount": 3,
+          "uid": "L50#4#4",
+          "ref": "方濟各：願祢受讚頌　Laudato Si'",
+          "clause": "4/30",
+          "text": "diversis in locis positis",
+          "wordCount": 4,
           "targetWords": [
             {
               "volume": 2,
@@ -2192,7 +2175,7 @@
               "phrase": false
             }
           ],
-          "answerKeyRef": "L48#5",
+          "answerKeyRef": "L50#4",
           "answerKeyScope": "block-containing-clause"
         },
         {
@@ -2228,29 +2211,29 @@
         {
           "no": 6,
           "kind": "quoted",
-          "uid": "L36#8#25",
-          "ref": "良十三：至上智慧的天主　Providentissimus Deus",
-          "clause": "25/26",
-          "text": "et quo ipsi studio",
-          "wordCount": 4,
+          "uid": "L11#3#12",
+          "ref": "亞他納修信經　Symbolum Quicumque",
+          "clause": "12/20",
+          "text": "sicut iam supra dictum est",
+          "wordCount": 5,
           "targetWords": [
             {
               "volume": 2,
               "lesson": 12,
-              "ordinal": 235,
-              "headword": "studium",
-              "glossZh": "熱忱、專心、追求、研習",
+              "ordinal": 229,
+              "headword": "supra",
+              "glossZh": "在……之上、超過；統治",
               "lemmas": [
-                "studium"
+                "supra"
               ],
               "creditLemmas": [
-                "studium"
+                "supra"
               ],
               "resolved": true,
               "phrase": false
             }
           ],
-          "answerKeyRef": "L36#8",
+          "answerKeyRef": "L11#3",
           "answerKeyScope": "block-containing-clause"
         }
       ],
@@ -2576,34 +2559,6 @@
         {
           "no": 5,
           "kind": "quoted",
-          "uid": "L03#7#11",
-          "ref": "戴都良論祈禱　De oratione",
-          "clause": "11/20",
-          "text": "in nomine Patris et rursus",
-          "wordCount": 5,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 14,
-              "ordinal": 272,
-              "headword": "rursus",
-              "glossZh": "相反地、反過來、再次",
-              "lemmas": [
-                "rursus"
-              ],
-              "creditLemmas": [
-                "rursus"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L03#7",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 6,
-          "kind": "quoted",
           "uid": "L37#8#5",
           "ref": "庇護十一：四十年　Quadragesimo Anno",
           "clause": "5/16",
@@ -2629,12 +2584,40 @@
           ],
           "answerKeyRef": "L37#8",
           "answerKeyScope": "block-containing-clause"
+        },
+        {
+          "no": 6,
+          "kind": "quoted",
+          "uid": "L40#6#6",
+          "ref": "若望二十三：和平於世　Pacem in Terris",
+          "clause": "6/12",
+          "text": "testimonium reddente illis conscientia ipsorum» ( Rm 2",
+          "wordCount": 6,
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 14,
+              "ordinal": 269,
+              "headword": "conscientia",
+              "glossZh": "良心、罪咎感、共謀",
+              "lemmas": [
+                "conscientia"
+              ],
+              "creditLemmas": [
+                "conscientia"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "answerKeyRef": "L40#6",
+          "answerKeyScope": "block-containing-clause"
         }
       ],
       "note": "",
       "coverage": {
         "lessonWords": 20,
-        "reachedByAnchors": 6
+        "reachedByAnchors": 5
       }
     },
     {
@@ -2672,34 +2655,6 @@
         {
           "no": 2,
           "kind": "quoted",
-          "uid": "L09#12#17",
-          "ref": "肋令的味增爵：備忘錄　Commonitorium",
-          "clause": "17/21",
-          "text": "quae flentes asserebant parati",
-          "wordCount": 4,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 15,
-              "ordinal": 294,
-              "headword": "assero",
-              "glossZh": "抓住、把握；主張、聲稱；解放、維護",
-              "lemmas": [
-                "assero"
-              ],
-              "creditLemmas": [
-                "assero"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L09#12",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 3,
-          "kind": "quoted",
           "uid": "L16#23#3",
           "ref": "額我略七世：教宗敕語　Dictatus papae",
           "clause": "3/5",
@@ -2726,65 +2681,7 @@
           "answerKeyScope": "block-containing-clause"
         },
         {
-          "no": 4,
-          "kind": "quoted",
-          "uid": "L48#11#3",
-          "ref": "若望保祿二：信仰與理性　Fides et Ratio",
-          "clause": "3/15",
-          "text": "quae humani propria est intellectus",
-          "wordCount": 5,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 15,
-              "ordinal": 300,
-              "headword": "intellectus",
-              "glossZh": "理解、領悟；知識、智力；意義",
-              "lemmas": [
-                "intellectus",
-                "intellego"
-              ],
-              "creditLemmas": [
-                "intellectus"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L48#11",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 5,
-          "kind": "quoted",
-          "uid": "L40#15#24",
-          "ref": "若望二十三：和平於世　Pacem in Terris",
-          "clause": "24/25",
-          "text": "est omni vi iniuriaque maior",
-          "wordCount": 5,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 15,
-              "ordinal": 299,
-              "headword": "injuria",
-              "glossZh": "傷害、不公正；侮辱、冒犯；性暴力",
-              "lemmas": [
-                "iniuria",
-                "iniurius"
-              ],
-              "creditLemmas": [
-                "iniuria"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L40#15",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 6,
+          "no": 3,
           "kind": "quoted",
           "uid": "L47#8#13",
           "ref": "保祿六：人類生命　Humanae Vitae",
@@ -2809,6 +2706,90 @@
             }
           ],
           "answerKeyRef": "L47#8",
+          "answerKeyScope": "block-containing-clause"
+        },
+        {
+          "no": 4,
+          "kind": "quoted",
+          "uid": "L18#2#8",
+          "ref": "天鄉之歌　O quanta, qualia",
+          "clause": "8/17",
+          "text": "nec ineffabiles cessabunt iubili",
+          "wordCount": 4,
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 15,
+              "ordinal": 281,
+              "headword": "cesso",
+              "glossZh": "停止、終止、懈怠",
+              "lemmas": [
+                "cesso"
+              ],
+              "creditLemmas": [
+                "cesso"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "answerKeyRef": "L18#2",
+          "answerKeyScope": "block-containing-clause"
+        },
+        {
+          "no": 5,
+          "kind": "quoted",
+          "uid": "L24#3#15",
+          "ref": "波尼法爵八世：唯一至聖　Unam Sanctam",
+          "clause": "15/23",
+          "text": "Quod corpus unicam scilicet ecclesiam nominavit",
+          "wordCount": 6,
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 15,
+              "ordinal": 285,
+              "headword": "nomino",
+              "glossZh": "命名、稱呼、提名",
+              "lemmas": [
+                "nomino"
+              ],
+              "creditLemmas": [
+                "nomino"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "answerKeyRef": "L24#3",
+          "answerKeyScope": "block-containing-clause"
+        },
+        {
+          "no": 6,
+          "kind": "quoted",
+          "uid": "L12#4#19",
+          "ref": "大額我略　Gregorius Magnus",
+          "clause": "19/21",
+          "text": "qui ossa levare sanctorum se asserunt",
+          "wordCount": 6,
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 15,
+              "ordinal": 294,
+              "headword": "assero",
+              "glossZh": "抓住、把握；主張、聲稱；解放、維護",
+              "lemmas": [
+                "assero"
+              ],
+              "creditLemmas": [
+                "assero"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "answerKeyRef": "L12#4",
           "answerKeyScope": "block-containing-clause"
         }
       ],
@@ -2854,34 +2835,6 @@
         {
           "no": 2,
           "kind": "quoted",
-          "uid": "L45#12#3",
-          "ref": "梵二：教會對非基督宗教態度宣言　Nostra Aetate",
-          "clause": "3/18",
-          "text": "Moysen et Prophetas",
-          "wordCount": 3,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 16,
-              "ordinal": 314,
-              "headword": "Moyses",
-              "glossZh": "摩西",
-              "lemmas": [
-                "moyses"
-              ],
-              "creditLemmas": [
-                "moyses"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L45#12",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 3,
-          "kind": "quoted",
           "uid": "L10#2#18",
           "ref": "聖良一世四旬期講道　Sermones de Quadragesima",
           "clause": "18/18",
@@ -2909,35 +2862,7 @@
           "answerKeyScope": "block-containing-clause"
         },
         {
-          "no": 4,
-          "kind": "quoted",
-          "uid": "L24#5#3",
-          "ref": "波尼法爵八世：唯一至聖　Unam Sanctam",
-          "clause": "3/26",
-          "text": "spiritualem videlicet et temporalem",
-          "wordCount": 4,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 16,
-              "ordinal": 320,
-              "headword": "temporalis",
-              "glossZh": "時間的、暫時的、屬世的",
-              "lemmas": [
-                "temporalis"
-              ],
-              "creditLemmas": [
-                "temporalis"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L24#5",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 5,
+          "no": 3,
           "kind": "quoted",
           "uid": "L02#7#2",
           "ref": "斐理伯與佩爾佩圖亞殉道錄　Passio Perpetuae et Felicitatis",
@@ -2965,38 +2890,94 @@
           "answerKeyScope": "block-containing-clause"
         },
         {
-          "no": 6,
+          "no": 4,
           "kind": "quoted",
-          "uid": "L32#8#20",
-          "ref": "梵一：天主子　Dei Filius",
-          "clause": "20/24",
-          "text": "multisque modis olim Deus loquens patribus in Prophetis",
+          "uid": "L43#8#7",
+          "ref": "梵二：信仰自由宣言　Dignitatis Humanae",
+          "clause": "7/10",
+          "text": "cuius finis proprius est bonum commune temporale curare",
           "wordCount": 8,
           "targetWords": [
             {
               "volume": 2,
               "lesson": 16,
-              "ordinal": 312,
-              "headword": "olim",
-              "glossZh": "曾經、往昔、將來",
+              "ordinal": 320,
+              "headword": "temporalis",
+              "glossZh": "時間的、暫時的、屬世的",
               "lemmas": [
-                "olim"
+                "temporalis"
               ],
               "creditLemmas": [
-                "olim"
+                "temporalis"
               ],
               "resolved": true,
               "phrase": false
             }
           ],
-          "answerKeyRef": "L32#8",
+          "answerKeyRef": "L43#8",
+          "answerKeyScope": "block-containing-clause"
+        },
+        {
+          "no": 5,
+          "kind": "quoted",
+          "uid": "L36#5#4",
+          "ref": "良十三：至上智慧的天主　Providentissimus Deus",
+          "clause": "4/23",
+          "text": "haud paucos esse e catholicis",
+          "wordCount": 5,
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 16,
+              "ordinal": 304,
+              "headword": "paucus",
+              "glossZh": "少量的、稀少的、少數",
+              "lemmas": [
+                "paucus"
+              ],
+              "creditLemmas": [
+                "paucus"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "answerKeyRef": "L36#5",
+          "answerKeyScope": "block-containing-clause"
+        },
+        {
+          "no": 6,
+          "kind": "quoted",
+          "uid": "L47#11#2",
+          "ref": "保祿六：人類生命　Humanae Vitae",
+          "clause": "2/15",
+          "text": "Nemo sane christifidelium eat infitias",
+          "wordCount": 5,
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 16,
+              "ordinal": 316,
+              "headword": "sane",
+              "glossZh": "合理地、確實、然而",
+              "lemmas": [
+                "sane"
+              ],
+              "creditLemmas": [
+                "sane"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "answerKeyRef": "L47#11",
           "answerKeyScope": "block-containing-clause"
         }
       ],
       "note": "",
       "coverage": {
         "lessonWords": 20,
-        "reachedByAnchors": 6
+        "reachedByAnchors": 5
       }
     },
     {
@@ -3005,36 +2986,6 @@
       "anchors": [
         {
           "no": 1,
-          "kind": "quoted",
-          "uid": "L04#7#3",
-          "ref": "厄革里雅朝聖記　Itinerarium Egeriae",
-          "clause": "3/26",
-          "text": "id est dominica die",
-          "wordCount": 4,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 17,
-              "ordinal": 337,
-              "headword": "dominicus",
-              "glossZh": "主的、主人的",
-              "lemmas": [
-                "Dominicus",
-                "dominicus"
-              ],
-              "creditLemmas": [
-                "Dominicus",
-                "dominicus"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L04#7",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 2,
           "kind": "quoted",
           "uid": "L44#10#9",
           "ref": "梵二：天主的啟示教義憲章　Dei Verbum",
@@ -3062,7 +3013,7 @@
           "answerKeyScope": "block-containing-clause"
         },
         {
-          "no": 3,
+          "no": 2,
           "kind": "quoted",
           "uid": "L47#3#8",
           "ref": "保祿六：人類生命　Humanae Vitae",
@@ -3090,7 +3041,7 @@
           "answerKeyScope": "block-containing-clause"
         },
         {
-          "no": 4,
+          "no": 3,
           "kind": "quoted",
           "uid": "L40#4#4",
           "ref": "若望二十三：和平於世　Pacem in Terris",
@@ -3120,7 +3071,7 @@
           "answerKeyScope": "block-containing-clause"
         },
         {
-          "no": 5,
+          "no": 4,
           "kind": "quoted",
           "uid": "L09#2#5",
           "ref": "肋令的味增爵：備忘錄　Commonitorium",
@@ -3148,7 +3099,7 @@
           "answerKeyScope": "block-containing-clause"
         },
         {
-          "no": 6,
+          "no": 5,
           "kind": "quoted",
           "uid": "L12#6#17",
           "ref": "大額我略　Gregorius Magnus",
@@ -3173,6 +3124,36 @@
             }
           ],
           "answerKeyRef": "L12#6",
+          "answerKeyScope": "block-containing-clause"
+        },
+        {
+          "no": 6,
+          "kind": "quoted",
+          "uid": "L32#3#12",
+          "ref": "梵一：天主子　Dei Filius",
+          "clause": "12/16",
+          "text": "simplex omnino et incommutabilis substantia spiritualis",
+          "wordCount": 6,
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 17,
+              "ordinal": 334,
+              "headword": "simplex",
+              "glossZh": "單一的、簡樸的、平易的",
+              "lemmas": [
+                "Simplex",
+                "simplex"
+              ],
+              "creditLemmas": [
+                "Simplex",
+                "simplex"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "answerKeyRef": "L32#3",
           "answerKeyScope": "block-containing-clause"
         }
       ],
@@ -3377,34 +3358,6 @@
         {
           "no": 1,
           "kind": "quoted",
-          "uid": "L25#1#10",
-          "ref": "聖誕詠　Adeste, fideles",
-          "clause": "10/25",
-          "text": "genitum non factum",
-          "wordCount": 3,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 19,
-              "ordinal": 379,
-              "headword": "gigno",
-              "glossZh": "生育、產生、誕生",
-              "lemmas": [
-                "gigno"
-              ],
-              "creditLemmas": [
-                "gigno"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L25#1",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 2,
-          "kind": "quoted",
           "uid": "L22#2#1",
           "ref": "聖文德：心靈邁向天主的旅程　Itinerarium mentis in Deum",
           "clause": "1/25",
@@ -3431,7 +3384,7 @@
           "answerKeyScope": "block-containing-clause"
         },
         {
-          "no": 3,
+          "no": 2,
           "kind": "quoted",
           "uid": "L32#4#7",
           "ref": "梵一：天主子　Dei Filius",
@@ -3459,7 +3412,7 @@
           "answerKeyScope": "block-containing-clause"
         },
         {
-          "no": 4,
+          "no": 3,
           "kind": "quoted",
           "uid": "L45#4#3",
           "ref": "梵二：教會對非基督宗教態度宣言　Nostra Aetate",
@@ -3487,13 +3440,41 @@
           "answerKeyScope": "block-containing-clause"
         },
         {
+          "no": 4,
+          "kind": "quoted",
+          "uid": "L11#2#21",
+          "ref": "亞他納修信經　Symbolum Quicumque",
+          "clause": "21/23",
+          "text": "nec creatus, nec genitus",
+          "wordCount": 4,
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 19,
+              "ordinal": 379,
+              "headword": "gigno",
+              "glossZh": "生育、產生、誕生",
+              "lemmas": [
+                "gigno"
+              ],
+              "creditLemmas": [
+                "gigno"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "answerKeyRef": "L11#2",
+          "answerKeyScope": "block-containing-clause"
+        },
+        {
           "no": 5,
           "kind": "quoted",
-          "uid": "L04#8#12",
+          "uid": "L04#3#5",
           "ref": "厄革里雅朝聖記　Itinerarium Egeriae",
-          "clause": "12/17",
-          "text": "similiter fit oratio",
-          "wordCount": 3,
+          "clause": "5/20",
+          "text": "similiter descendet et non sedet",
+          "wordCount": 5,
           "targetWords": [
             {
               "volume": 2,
@@ -3511,35 +3492,36 @@
               "phrase": false
             }
           ],
-          "answerKeyRef": "L04#8",
+          "answerKeyRef": "L04#3",
           "answerKeyScope": "block-containing-clause"
         },
         {
           "no": 6,
           "kind": "quoted",
-          "uid": "L40#13#2",
-          "ref": "若望二十三：和平於世　Pacem in Terris",
-          "clause": "2/12",
-          "text": "Homo praeterea iure naturae postulat",
-          "wordCount": 5,
+          "uid": "L32#5#13",
+          "ref": "梵一：天主子　Dei Filius",
+          "clause": "13/13",
+          "text": "quae libera creaturarum actione futura sunt",
+          "wordCount": 6,
           "targetWords": [
             {
               "volume": 2,
               "lesson": 19,
-              "ordinal": 361,
-              "headword": "praeterea",
-              "glossZh": "此外、況且；其後、隨後",
+              "ordinal": 372,
+              "headword": "actio",
+              "glossZh": "行動、動作、行為；事件、情節；訴訟、訴狀",
               "lemmas": [
-                "praeterea"
+                "Actium",
+                "actio"
               ],
               "creditLemmas": [
-                "praeterea"
+                "actio"
               ],
               "resolved": true,
               "phrase": false
             }
           ],
-          "answerKeyRef": "L40#13",
+          "answerKeyRef": "L32#5",
           "answerKeyScope": "block-containing-clause"
         }
       ],
@@ -3612,35 +3594,6 @@
         {
           "no": 3,
           "kind": "quoted",
-          "uid": "L46#18#2",
-          "ref": "梵二：論教會在現代世界牧職憲章　Gaudium et Spes",
-          "clause": "2/15",
-          "text": "Recte iudicat homo",
-          "wordCount": 3,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 20,
-              "ordinal": 398,
-              "headword": "recte",
-              "glossZh": "正確地、恰當地；直立地",
-              "lemmas": [
-                "recte",
-                "rego"
-              ],
-              "creditLemmas": [
-                "recte"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L46#18",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 4,
-          "kind": "quoted",
           "uid": "L44#8#7",
           "ref": "梵二：天主的啟示教義憲章　Dei Verbum",
           "clause": "7/9",
@@ -3667,35 +3620,7 @@
           "answerKeyScope": "block-containing-clause"
         },
         {
-          "no": 5,
-          "kind": "quoted",
-          "uid": "L44#15#24",
-          "ref": "梵二：天主的啟示教義憲章　Dei Verbum",
-          "clause": "24/24",
-          "text": "nuntium salutis scriptis mandaverunt (9)",
-          "wordCount": 4,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 20,
-              "ordinal": 395,
-              "headword": "nuntius",
-              "glossZh": "使者、信使、訊息、報告",
-              "lemmas": [
-                "nuntius"
-              ],
-              "creditLemmas": [
-                "nuntius"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L44#15",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 6,
+          "no": 4,
           "kind": "quoted",
           "uid": "L02#8#1",
           "ref": "斐理伯與佩爾佩圖亞殉道錄　Passio Perpetuae et Felicitatis",
@@ -3721,12 +3646,68 @@
           ],
           "answerKeyRef": "L02#8",
           "answerKeyScope": "block-containing-clause"
+        },
+        {
+          "no": 5,
+          "kind": "quoted",
+          "uid": "L17#1#23",
+          "ref": "聖安瑟莫：證道書　Proslogion",
+          "clause": "23/23",
+          "text": "ubi te quaeram absentem",
+          "wordCount": 4,
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 20,
+              "ordinal": 387,
+              "headword": "absum",
+              "glossZh": "缺席、離開、缺乏",
+              "lemmas": [
+                "absum"
+              ],
+              "creditLemmas": [
+                "absum"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "answerKeyRef": "L17#1",
+          "answerKeyScope": "block-containing-clause"
+        },
+        {
+          "no": 6,
+          "kind": "quoted",
+          "uid": "L34#2#4",
+          "ref": "良十三：永恆之父　Aeterni Patris",
+          "clause": "4/20",
+          "text": "et maxime Romanorum Pontificum sollicitudo quotidiana",
+          "wordCount": 6,
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 20,
+              "ordinal": 391,
+              "headword": "sollicitudo",
+              "glossZh": "憂慮、關切、焦慮",
+              "lemmas": [
+                "sollicitudo"
+              ],
+              "creditLemmas": [
+                "sollicitudo"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "answerKeyRef": "L34#2",
+          "answerKeyScope": "block-containing-clause"
         }
       ],
       "note": "",
       "coverage": {
         "lessonWords": 20,
-        "reachedByAnchors": 6
+        "reachedByAnchors": 4
       }
     },
     {
@@ -3764,62 +3745,6 @@
         {
           "no": 2,
           "kind": "quoted",
-          "uid": "L13#8#11",
-          "ref": "聖本篤會規　Regula Benedicti",
-          "clause": "11/11",
-          "text": "plus ab eo exigitur",
-          "wordCount": 4,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 21,
-              "ordinal": 405,
-              "headword": "exigo",
-              "glossZh": "驅逐、完成、審視、衡量",
-              "lemmas": [
-                "exigo"
-              ],
-              "creditLemmas": [
-                "exigo"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L13#8",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 3,
-          "kind": "quoted",
-          "uid": "L07#6#6",
-          "ref": "聖奧思定懺悔錄 卷一　Confessiones I",
-          "clause": "6/28",
-          "text": "quaerens cum nihil desit tibi",
-          "wordCount": 5,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 21,
-              "ordinal": 412,
-              "headword": "desum",
-              "glossZh": "不足、失職、缺席、背棄",
-              "lemmas": [
-                "desum"
-              ],
-              "creditLemmas": [
-                "desum"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L07#6",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 4,
-          "kind": "quoted",
           "uid": "L44#6#5",
           "ref": "梵二：天主的啟示教義憲章　Dei Verbum",
           "clause": "5/6",
@@ -3846,66 +3771,94 @@
           "answerKeyScope": "block-containing-clause"
         },
         {
-          "no": 5,
+          "no": 3,
           "kind": "quoted",
-          "uid": "L40#14#10",
-          "ref": "若望二十三：和平於世　Pacem in Terris",
-          "clause": "10/18",
-          "text": "si sui ingenii vires id ferant",
-          "wordCount": 6,
+          "uid": "L50#3#24",
+          "ref": "方濟各：願祢受讚頌　Laudato Si'",
+          "clause": "24/30",
+          "text": "rei nummariae coniuncta",
+          "wordCount": 3,
           "targetWords": [
             {
               "volume": 2,
               "lesson": 21,
-              "ordinal": 415,
-              "headword": "ingenium",
-              "glossZh": "天性、稟賦、資質、才智",
+              "ordinal": 419,
+              "headword": "reus",
+              "glossZh": "訴訟當事人、被告；犯人、罪人",
               "lemmas": [
-                "ingenium"
+                "reus"
               ],
               "creditLemmas": [
-                "ingenium"
+                "reus"
               ],
               "resolved": true,
               "phrase": false
             }
           ],
-          "answerKeyRef": "L40#14",
+          "answerKeyRef": "L50#3",
           "answerKeyScope": "block-containing-clause"
         },
         {
-          "no": 6,
+          "no": 4,
           "kind": "quoted",
-          "uid": "L36#5#10",
-          "ref": "良十三：至上智慧的天主　Providentissimus Deus",
-          "clause": "10/23",
-          "text": "facere tamen non possumus quin ceteros etiam",
-          "wordCount": 7,
+          "uid": "L16#2#1",
+          "ref": "額我略七世：教宗敕語　Dictatus papae",
+          "clause": "1/1",
+          "text": "II Qd solus Romanus pontifex iure dicatur universalis",
+          "wordCount": 8,
           "targetWords": [
             {
               "volume": 2,
               "lesson": 21,
-              "ordinal": 420,
-              "headword": "quin",
-              "glossZh": "使不、沒有；以至不；反而；而且",
+              "ordinal": 408,
+              "headword": "universalis",
+              "glossZh": "普遍的、廣泛適用的",
               "lemmas": [
-                "quin"
+                "uniuersalis"
               ],
               "creditLemmas": [
-                "quin"
+                "uniuersalis"
               ],
               "resolved": true,
               "phrase": false
             }
           ],
-          "answerKeyRef": "L36#5",
+          "answerKeyRef": "L16#2",
+          "answerKeyScope": "block-containing-clause"
+        },
+        {
+          "no": 5,
+          "kind": "quoted",
+          "uid": "L34#1#17",
+          "ref": "良十三：永恆之父　Aeterni Patris",
+          "clause": "17/22",
+          "text": "Ecclesia vero divini Auctoris sui cum erecta promissis",
+          "wordCount": 8,
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 21,
+              "ordinal": 413,
+              "headword": "promitto",
+              "glossZh": "承諾、誓言",
+              "lemmas": [
+                "promitto"
+              ],
+              "creditLemmas": [
+                "promitto"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "answerKeyRef": "L34#1",
           "answerKeyScope": "block-containing-clause"
         }
       ],
       "note": "",
       "coverage": {
         "lessonWords": 20,
-        "reachedByAnchors": 6
+        "reachedByAnchors": 3
       }
     },
     {
@@ -3943,11 +3896,11 @@
         {
           "no": 2,
           "kind": "quoted",
-          "uid": "L45#9#17",
-          "ref": "梵二：教會對非基督宗教態度宣言　Nostra Aetate",
-          "clause": "17/17",
-          "text": "eleemosynis et ieiunio colunt",
-          "wordCount": 4,
+          "uid": "L41#6#10",
+          "ref": "梵二：大公主義法令　Unitatis Redintegratio",
+          "clause": "10/11",
+          "text": "in divini cultus communi celebratione",
+          "wordCount": 5,
           "targetWords": [
             {
               "volume": 2,
@@ -3965,45 +3918,16 @@
               "phrase": false
             }
           ],
-          "answerKeyRef": "L45#9",
+          "answerKeyRef": "L41#6",
           "answerKeyScope": "block-containing-clause"
         },
         {
           "no": 3,
           "kind": "quoted",
-          "uid": "L12#7#3",
-          "ref": "大額我略　Gregorius Magnus",
-          "clause": "3/23",
-          "text": "de quibus parere nullatenus potuissem",
-          "wordCount": 5,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 22,
-              "ordinal": 422,
-              "headword": "nullatenus",
-              "glossZh": "決不、毫不；無論如何不",
-              "lemmas": [
-                "nullatenus",
-                "nullus"
-              ],
-              "creditLemmas": [
-                "nullatenus"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L12#7",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 4,
-          "kind": "quoted",
-          "uid": "L50#3#11",
+          "uid": "L50#5#26",
           "ref": "方濟各：願祢受讚頌　Laudato Si'",
-          "clause": "11/30",
-          "text": "quae coquendi vel calefaciendi causa adhibentur",
+          "clause": "26/31",
+          "text": "iterum adhibeantur et in circulum referantur",
           "wordCount": 6,
           "targetWords": [
             {
@@ -4022,70 +3946,70 @@
               "phrase": false
             }
           ],
-          "answerKeyRef": "L50#3",
+          "answerKeyRef": "L50#5",
+          "answerKeyScope": "block-containing-clause"
+        },
+        {
+          "no": 4,
+          "kind": "quoted",
+          "uid": "L09#3#8",
+          "ref": "肋令的味增爵：備忘錄　Commonitorium",
+          "clause": "8/15",
+          "text": "Frequentius tamen sumebatur pro lege a mandante praescripta",
+          "wordCount": 8,
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 22,
+              "ordinal": 438,
+              "headword": "frequenter",
+              "glossZh": "經常、頻繁；大量地、成群地",
+              "lemmas": [
+                "frequenter"
+              ],
+              "creditLemmas": [
+                "frequenter"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "answerKeyRef": "L09#3",
           "answerKeyScope": "block-containing-clause"
         },
         {
           "no": 5,
           "kind": "quoted",
-          "uid": "L43#8#10",
-          "ref": "梵二：信仰自由宣言　Dignitatis Humanae",
-          "clause": "10/10",
-          "text": "si actus religiosos dirigere vel impedire praesumat",
-          "wordCount": 7,
+          "uid": "L50#2#1",
+          "ref": "方濟各：願祢受讚頌　Laudato Si'",
+          "clause": "1/1",
+          "text": "Contaminatio, eiectamenta et detractionis cultus",
+          "wordCount": 5,
           "targetWords": [
             {
               "volume": 2,
               "lesson": 22,
-              "ordinal": 421,
-              "headword": "impedio",
-              "glossZh": "阻礙、妨礙；阻止",
+              "ordinal": 437,
+              "headword": "colo",
+              "glossZh": "居住、住；耕作、培育；維護、保持",
               "lemmas": [
-                "impedio"
+                "colo"
               ],
               "creditLemmas": [
-                "impedio"
+                "colo"
               ],
               "resolved": true,
               "phrase": false
             }
           ],
-          "answerKeyRef": "L43#8",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 6,
-          "kind": "quoted",
-          "uid": "L43#13#7",
-          "ref": "梵二：信仰自由宣言　Dignitatis Humanae",
-          "clause": "7/10",
-          "text": "libere possunt conventus habere vel associationes educativas",
-          "wordCount": 7,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 22,
-              "ordinal": 436,
-              "headword": "libere",
-              "glossZh": "自由地、坦率地",
-              "lemmas": [
-                "libere"
-              ],
-              "creditLemmas": [
-                "libere"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L43#13",
+          "answerKeyRef": "L50#2",
           "answerKeyScope": "block-containing-clause"
         }
       ],
       "note": "",
       "coverage": {
         "lessonWords": 20,
-        "reachedByAnchors": 5
+        "reachedByAnchors": 3
       }
     },
     {
@@ -4274,10 +4198,10 @@
         {
           "no": 1,
           "kind": "quoted",
-          "uid": "L18#2#13",
-          "ref": "天鄉之歌　O quanta, qualia",
-          "clause": "13/17",
-          "text": "per quem sunt",
+          "uid": "L40#1#6",
+          "ref": "若望二十三：和平於世　Pacem in Terris",
+          "clause": "6/7",
+          "text": "quem Deus constituit",
           "wordCount": 3,
           "targetWords": [
             {
@@ -4300,124 +4224,11 @@
               "phrase": false
             }
           ],
-          "answerKeyRef": "L18#2",
+          "answerKeyRef": "L40#1",
           "answerKeyScope": "block-containing-clause"
         },
         {
           "no": 2,
-          "kind": "quoted",
-          "uid": "L11#3#13",
-          "ref": "亞他納修信經　Symbolum Quicumque",
-          "clause": "13/20",
-          "text": "et unitas in Trinitate",
-          "wordCount": 4,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 24,
-              "ordinal": 461,
-              "headword": "Trinitas",
-              "glossZh": "聖三一、三位一體",
-              "lemmas": [
-                "trinitas"
-              ],
-              "creditLemmas": [
-                "trinitas"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L11#3",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 3,
-          "kind": "quoted",
-          "uid": "L34#1#5",
-          "ref": "良十三：永恆之父　Aeterni Patris",
-          "clause": "5/22",
-          "text": "magnum plane ac mirabile mundo contulit beneficium",
-          "wordCount": 7,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 24,
-              "ordinal": 474,
-              "headword": "plane",
-              "glossZh": "明白地、清楚地、完全地",
-              "lemmas": [
-                "plane"
-              ],
-              "creditLemmas": [
-                "plane"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L34#1",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 4,
-          "kind": "quoted",
-          "uid": "L32#12#6",
-          "ref": "梵一：天主子　Dei Filius",
-          "clause": "6/15",
-          "text": "idem Decretum renovantes",
-          "wordCount": 3,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 24,
-              "ordinal": 464,
-              "headword": "decretum",
-              "glossZh": "教令、法令、決議",
-              "lemmas": [
-                "decerno",
-                "decretum"
-              ],
-              "creditLemmas": [
-                "decretum"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L32#12",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 5,
-          "kind": "quoted",
-          "uid": "L50#5#13",
-          "ref": "方濟各：願祢受讚頌　Laudato Si'",
-          "clause": "13/31",
-          "text": "unde nova virentia generentur",
-          "wordCount": 4,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 24,
-              "ordinal": 466,
-              "headword": "genero",
-              "glossZh": "生育、產生、生出",
-              "lemmas": [
-                "genero"
-              ],
-              "creditLemmas": [
-                "genero"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L50#5",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 6,
           "kind": "quoted",
           "uid": "L08#6#5",
           "ref": "聖奧思定懺悔錄 卷八　Confessiones VIII",
@@ -4447,12 +4258,132 @@
           ],
           "answerKeyRef": "L08#6",
           "answerKeyScope": "block-containing-clause"
+        },
+        {
+          "no": 3,
+          "kind": "quoted",
+          "uid": "L39#4#19",
+          "ref": "梵二：禮儀憲章　Sacrosanctum Concilium",
+          "clause": "19/19",
+          "text": "et divini cultus nobis est indita plenitudo\"(11)",
+          "wordCount": 7,
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 24,
+              "ordinal": 476,
+              "headword": "cultus",
+              "glossZh": "耕耘的、雅緻的、彬彬有禮的",
+              "lemmas": [
+                "colo",
+                "cultus"
+              ],
+              "creditLemmas": [
+                "cultus"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "answerKeyRef": "L39#4",
+          "answerKeyScope": "block-containing-clause"
+        },
+        {
+          "no": 4,
+          "kind": "quoted",
+          "uid": "L05#1#21",
+          "ref": "聖傑羅尼莫書信　Epistulae",
+          "clause": "21/23",
+          "text": "super onerariam navem rudis vector inponor et homo",
+          "wordCount": 8,
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 24,
+              "ordinal": 463,
+              "headword": "navis",
+              "glossZh": "船舶",
+              "lemmas": [
+                "nauis",
+                "navis"
+              ],
+              "creditLemmas": [
+                "nauis",
+                "navis"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "answerKeyRef": "L05#1",
+          "answerKeyScope": "block-containing-clause"
+        },
+        {
+          "no": 5,
+          "kind": "quoted",
+          "uid": "L26#1#2",
+          "ref": "特倫多大公會議：聖經與聖傳　Concilium Tridentinum, sessio IV",
+          "clause": "2/2",
+          "text": "Documenta Catholica Omnia (DCO) / Alberigo, Conciliorum Oecumenicorum Decreta, 1973",
+          "wordCount": 8,
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 24,
+              "ordinal": 464,
+              "headword": "decretum",
+              "glossZh": "教令、法令、決議",
+              "lemmas": [
+                "decerno",
+                "decretum"
+              ],
+              "creditLemmas": [
+                "decretum"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "answerKeyRef": "L26#1",
+          "answerKeyScope": "block-containing-clause"
+        },
+        {
+          "no": 6,
+          "kind": "quoted",
+          "uid": "L42#7#14",
+          "ref": "梵二：教會憲章　Lumen Gentium",
+          "clause": "14/15",
+          "text": "per quem vivimus",
+          "wordCount": 3,
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 24,
+              "ordinal": 472,
+              "headword": "quam",
+              "glossZh": "如何、多少",
+              "lemmas": [
+                "quam",
+                "quamdiu",
+                "quamobrem",
+                "qui",
+                "quis"
+              ],
+              "creditLemmas": [
+                "quam"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "answerKeyRef": "L42#7",
+          "answerKeyScope": "block-containing-clause"
         }
       ],
       "note": "",
       "coverage": {
         "lessonWords": 20,
-        "reachedByAnchors": 5
+        "reachedByAnchors": 4
       }
     },
     {
@@ -4518,62 +4449,6 @@
         {
           "no": 3,
           "kind": "quoted",
-          "uid": "L32#3#11",
-          "ref": "梵一：天主子　Dei Filius",
-          "clause": "11/16",
-          "text": "qui cum sit una singularis",
-          "wordCount": 5,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 25,
-              "ordinal": 497,
-              "headword": "singularis",
-              "glossZh": "獨特的、唯一的、逐一的、非凡的",
-              "lemmas": [
-                "singularis"
-              ],
-              "creditLemmas": [
-                "singularis"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L32#3",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 4,
-          "kind": "quoted",
-          "uid": "L33#15#6",
-          "ref": "梵一：永恆牧者　Pastor Aeternus",
-          "clause": "6/24",
-          "text": "et hanc Romani Pontificis iurisdictionis potestatem",
-          "wordCount": 6,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 25,
-              "ordinal": 488,
-              "headword": "jurisdictio",
-              "glossZh": "司法權、統轄權；司法行為",
-              "lemmas": [
-                "iurisdictio"
-              ],
-              "creditLemmas": [
-                "iurisdictio"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L33#15",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 5,
-          "kind": "quoted",
           "uid": "L16#15#3",
           "ref": "額我略七世：教宗敕語　Dictatus papae",
           "clause": "3/4",
@@ -4600,38 +4475,94 @@
           "answerKeyScope": "block-containing-clause"
         },
         {
-          "no": 6,
+          "no": 4,
           "kind": "quoted",
-          "uid": "L34#2#17",
-          "ref": "良十三：永恆之父　Aeterni Patris",
-          "clause": "17/20",
-          "text": "simulque singulari vigilantia providere",
-          "wordCount": 4,
+          "uid": "L44#5#10",
+          "ref": "梵二：天主的啟示教義憲章　Dei Verbum",
+          "clause": "10/23",
+          "text": "insuper protoparentibus inde ab initio Semetipsum manifestavit",
+          "wordCount": 7,
           "targetWords": [
             {
               "volume": 2,
               "lesson": 25,
-              "ordinal": 497,
-              "headword": "singularis",
-              "glossZh": "獨特的、唯一的、逐一的、非凡的",
+              "ordinal": 490,
+              "headword": "insuper",
+              "glossZh": "此外、另外；在上面",
               "lemmas": [
-                "singularis"
+                "insuper"
               ],
               "creditLemmas": [
-                "singularis"
+                "insuper"
               ],
               "resolved": true,
               "phrase": false
             }
           ],
-          "answerKeyRef": "L34#2",
+          "answerKeyRef": "L44#5",
+          "answerKeyScope": "block-containing-clause"
+        },
+        {
+          "no": 5,
+          "kind": "quoted",
+          "uid": "L04#1#11",
+          "ref": "厄革里雅朝聖記　Itinerarium Egeriae",
+          "clause": "11/20",
+          "text": "et non solum hii",
+          "wordCount": 4,
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 25,
+              "ordinal": 491,
+              "headword": "nonnullus",
+              "glossZh": "一些、若干",
+              "lemmas": [
+                "nonnullus"
+              ],
+              "creditLemmas": [
+                "nonnullus"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "answerKeyRef": "L04#1",
+          "answerKeyScope": "block-containing-clause"
+        },
+        {
+          "no": 6,
+          "kind": "quoted",
+          "uid": "L06#4#2",
+          "ref": "聖安博晨禱聖詩　Hymni Ambrosiani",
+          "clause": "2/32",
+          "text": "Nec credidit plebs impia",
+          "wordCount": 4,
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 25,
+              "ordinal": 484,
+              "headword": "plebs",
+              "glossZh": "平民、普通民眾；下層民眾、烏合之眾",
+              "lemmas": [
+                "plebs"
+              ],
+              "creditLemmas": [
+                "plebs"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "answerKeyRef": "L06#4",
           "answerKeyScope": "block-containing-clause"
         }
       ],
       "note": "",
       "coverage": {
         "lessonWords": 20,
-        "reachedByAnchors": 4
+        "reachedByAnchors": 3
       }
     },
     {
@@ -4640,34 +4571,6 @@
       "anchors": [
         {
           "no": 1,
-          "kind": "quoted",
-          "uid": "L39#4#16",
-          "ref": "梵二：禮儀憲章　Sacrosanctum Concilium",
-          "clause": "16/19",
-          "text": "fuit instrumentum nostrae salutis",
-          "wordCount": 4,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 26,
-              "ordinal": 519,
-              "headword": "instrumentum",
-              "glossZh": "工具、器具、裝備、手段、文書",
-              "lemmas": [
-                "instrumentum"
-              ],
-              "creditLemmas": [
-                "instrumentum"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L39#4",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 2,
           "kind": "quoted",
           "uid": "L46#5#4",
           "ref": "梵二：論教會在現代世界牧職憲章　Gaudium et Spes",
@@ -4699,37 +4602,7 @@
           "answerKeyScope": "block-containing-clause"
         },
         {
-          "no": 3,
-          "kind": "quoted",
-          "uid": "L37#12#1",
-          "ref": "庇護十一：四十年　Quadragesimo Anno",
-          "clause": "1/1",
-          "text": "Quid egerit potestas civilis",
-          "wordCount": 4,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 26,
-              "ordinal": 511,
-              "headword": "civilis",
-              "glossZh": "市民的、民事的、公眾的、有禮的",
-              "lemmas": [
-                "ciuilis",
-                "civilis"
-              ],
-              "creditLemmas": [
-                "ciuilis",
-                "civilis"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L37#12",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 4,
+          "no": 2,
           "kind": "quoted",
           "uid": "L40#3#15",
           "ref": "若望二十三：和平於世　Pacem in Terris",
@@ -4758,35 +4631,7 @@
           "answerKeyScope": "block-containing-clause"
         },
         {
-          "no": 5,
-          "kind": "quoted",
-          "uid": "L05#7#7",
-          "ref": "聖傑羅尼莫書信　Epistulae",
-          "clause": "7/12",
-          "text": "prorsus quasi migrare civitas putaretur",
-          "wordCount": 5,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 26,
-              "ordinal": 514,
-              "headword": "prorsus",
-              "glossZh": "完全地、絕對地、實則",
-              "lemmas": [
-                "prorsus"
-              ],
-              "creditLemmas": [
-                "prorsus"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L05#7",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 6,
+          "no": 3,
           "kind": "quoted",
           "uid": "L49#2#33",
           "ref": "本篤十六：天主是愛　Deus Caritas Est",
@@ -4812,12 +4657,97 @@
           ],
           "answerKeyRef": "L49#2",
           "answerKeyScope": "block-containing-clause"
+        },
+        {
+          "no": 4,
+          "kind": "quoted",
+          "uid": "L37#5#4",
+          "ref": "庇護十一：四十年　Quadragesimo Anno",
+          "clause": "4/21",
+          "text": "vera quaedam disciplina socialis catholica exorta est",
+          "wordCount": 7,
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 26,
+              "ordinal": 507,
+              "headword": "socialis",
+              "glossZh": "同盟的、社交的、親密的",
+              "lemmas": [
+                "socialis"
+              ],
+              "creditLemmas": [
+                "socialis"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "answerKeyRef": "L37#5",
+          "answerKeyScope": "block-containing-clause"
+        },
+        {
+          "no": 5,
+          "kind": "quoted",
+          "uid": "L49#7#5",
+          "ref": "本篤十六：天主是愛　Deus Caritas Est",
+          "clause": "5/8",
+          "text": "cui videlicet interpretationes addimus prorsus inter se adversantes",
+          "wordCount": 8,
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 26,
+              "ordinal": 514,
+              "headword": "prorsus",
+              "glossZh": "完全地、絕對地、實則",
+              "lemmas": [
+                "prorsus"
+              ],
+              "creditLemmas": [
+                "prorsus"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "answerKeyRef": "L49#7",
+          "answerKeyScope": "block-containing-clause"
+        },
+        {
+          "no": 6,
+          "kind": "quoted",
+          "uid": "L46#6#13",
+          "ref": "梵二：論教會在現代世界牧職憲章　Gaudium et Spes",
+          "clause": "13/14",
+          "text": "et constituisti eum super opera manuum tuarum",
+          "wordCount": 7,
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 26,
+              "ordinal": 508,
+              "headword": "opera",
+              "glossZh": "勞動、幫助、盡力、努力",
+              "lemmas": [
+                "opera",
+                "opus"
+              ],
+              "creditLemmas": [
+                "opera"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "answerKeyRef": "L46#6",
+          "answerKeyScope": "block-containing-clause"
         }
       ],
       "note": "",
       "coverage": {
         "lessonWords": 20,
-        "reachedByAnchors": 6
+        "reachedByAnchors": 5
       }
     },
     {
@@ -4883,34 +4813,6 @@
         {
           "no": 3,
           "kind": "quoted",
-          "uid": "L35#13#22",
-          "ref": "良十三：新事　Rerum Novarum",
-          "clause": "22/24",
-          "text": "nec sane progredi longius possent",
-          "wordCount": 5,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 27,
-              "ordinal": 532,
-              "headword": "progredior",
-              "glossZh": "前進、行進、發展、有進展",
-              "lemmas": [
-                "progredior"
-              ],
-              "creditLemmas": [
-                "progredior"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L35#13",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 4,
-          "kind": "quoted",
           "uid": "L33#9#11",
           "ref": "梵一：永恆牧者　Pastor Aeternus",
           "clause": "11/22",
@@ -4937,35 +4839,7 @@
           "answerKeyScope": "block-containing-clause"
         },
         {
-          "no": 5,
-          "kind": "quoted",
-          "uid": "L37#13#2",
-          "ref": "庇護十一：四十年　Quadragesimo Anno",
-          "clause": "2/19",
-          "text": "Ad civilem vero potestatem quod attinet",
-          "wordCount": 6,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 27,
-              "ordinal": 535,
-              "headword": "attineo",
-              "glossZh": "握住、扣留、拘禁、延遲、關連",
-              "lemmas": [
-                "attineo"
-              ],
-              "creditLemmas": [
-                "attineo"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L37#13",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 6,
+          "no": 4,
           "kind": "quoted",
           "uid": "L45#7#15",
           "ref": "梵二：教會對非基督宗教態度宣言　Nostra Aetate",
@@ -5006,12 +4880,68 @@
           ],
           "answerKeyRef": "L45#7",
           "answerKeyScope": "block-containing-clause"
+        },
+        {
+          "no": 5,
+          "kind": "quoted",
+          "uid": "L46#12#18",
+          "ref": "梵二：論教會在現代世界牧職憲章　Gaudium et Spes",
+          "clause": "18/18",
+          "text": "a plenitudine consequenda eum repellens",
+          "wordCount": 5,
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 27,
+              "ordinal": 540,
+              "headword": "plenitudo",
+              "glossZh": "圓滿、豐富；充實、厚度",
+              "lemmas": [
+                "plenitudo"
+              ],
+              "creditLemmas": [
+                "plenitudo"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "answerKeyRef": "L46#12",
+          "answerKeyScope": "block-containing-clause"
+        },
+        {
+          "no": 6,
+          "kind": "quoted",
+          "uid": "L48#7#8",
+          "ref": "若望保祿二：信仰與理性　Fides et Ratio",
+          "clause": "8/10",
+          "text": "Philosophiae » vox Graecam ad originem « sapientiae amorem » designat",
+          "wordCount": 8,
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 27,
+              "ordinal": 529,
+              "headword": "philosophia",
+              "glossZh": "哲學、愛智慧",
+              "lemmas": [
+                "philosophia"
+              ],
+              "creditLemmas": [
+                "philosophia"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "answerKeyRef": "L48#7",
+          "answerKeyScope": "block-containing-clause"
         }
       ],
       "note": "",
       "coverage": {
         "lessonWords": 20,
-        "reachedByAnchors": 7
+        "reachedByAnchors": 6
       }
     },
     {
@@ -5051,11 +4981,11 @@
         {
           "no": 2,
           "kind": "quoted",
-          "uid": "L49#8#19",
-          "ref": "本篤十六：天主是愛　Deus Caritas Est",
-          "clause": "19/20",
-          "text": "denique unicus et solus est",
-          "wordCount": 5,
+          "uid": "L24#4#2",
+          "ref": "波尼法爵八世：唯一至聖　Unam Sanctam",
+          "clause": "2/20",
+          "text": "Igitur ecclesiae unius et unicae unum corpus",
+          "wordCount": 7,
           "targetWords": [
             {
               "volume": 2,
@@ -5073,39 +5003,11 @@
               "phrase": false
             }
           ],
-          "answerKeyRef": "L49#8",
+          "answerKeyRef": "L24#4",
           "answerKeyScope": "block-containing-clause"
         },
         {
           "no": 3,
-          "kind": "quoted",
-          "uid": "L42#7#11",
-          "ref": "梵二：教會憲章　Lumen Gentium",
-          "clause": "11/15",
-          "text": "Omnes homines ad hanc vocantur unionem cum Christo",
-          "wordCount": 8,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 28,
-              "ordinal": 543,
-              "headword": "unio",
-              "glossZh": "合一、統一",
-              "lemmas": [
-                "unio"
-              ],
-              "creditLemmas": [
-                "unio"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L42#7",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 4,
           "kind": "quoted",
           "uid": "L42#3#7",
           "ref": "梵二：教會憲章　Lumen Gentium",
@@ -5135,7 +5037,7 @@
           "answerKeyScope": "block-containing-clause"
         },
         {
-          "no": 5,
+          "no": 4,
           "kind": "quoted",
           "uid": "L47#10#4",
           "ref": "保祿六：人類生命　Humanae Vitae",
@@ -5165,7 +5067,7 @@
           "answerKeyScope": "block-containing-clause"
         },
         {
-          "no": 6,
+          "no": 5,
           "kind": "quoted",
           "uid": "L44#9#3",
           "ref": "梵二：天主的啟示教義憲章　Dei Verbum",
@@ -5191,12 +5093,40 @@
           ],
           "answerKeyRef": "L44#9",
           "answerKeyScope": "block-containing-clause"
+        },
+        {
+          "no": 6,
+          "kind": "quoted",
+          "uid": "L16#11#1",
+          "ref": "額我略七世：教宗敕語　Dictatus papae",
+          "clause": "1/1",
+          "text": "XI Qd hoc unicum est nomen in mundo",
+          "wordCount": 8,
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 28,
+              "ordinal": 549,
+              "headword": "unicus",
+              "glossZh": "唯一的、獨有的、無與倫比的",
+              "lemmas": [
+                "unicus"
+              ],
+              "creditLemmas": [
+                "unicus"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "answerKeyRef": "L16#11",
+          "answerKeyScope": "block-containing-clause"
         }
       ],
       "note": "",
       "coverage": {
         "lessonWords": 20,
-        "reachedByAnchors": 5
+        "reachedByAnchors": 4
       }
     },
     {
@@ -5205,34 +5135,6 @@
       "anchors": [
         {
           "no": 1,
-          "kind": "quoted",
-          "uid": "L47#17#3",
-          "ref": "保祿六：人類生命　Humanae Vitae",
-          "clause": "3/14",
-          "text": "ad quas Coetus pervenerat",
-          "wordCount": 4,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 29,
-              "ordinal": 571,
-              "headword": "coetus",
-              "glossZh": "集會、聚集；團體、幫派、群眾",
-              "lemmas": [
-                "coetus"
-              ],
-              "creditLemmas": [
-                "coetus"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L47#17",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 2,
           "kind": "quoted",
           "uid": "L36#3#27",
           "ref": "良十三：至上智慧的天主　Providentissimus Deus",
@@ -5260,7 +5162,7 @@
           "answerKeyScope": "block-containing-clause"
         },
         {
-          "no": 3,
+          "no": 2,
           "kind": "quoted",
           "uid": "L11#4#2",
           "ref": "亞他納修信經　Symbolum Quicumque",
@@ -5289,7 +5191,7 @@
           "answerKeyScope": "block-containing-clause"
         },
         {
-          "no": 4,
+          "no": 3,
           "kind": "quoted",
           "uid": "L32#11#5",
           "ref": "梵一：天主子　Dei Filius",
@@ -5317,7 +5219,7 @@
           "answerKeyScope": "block-containing-clause"
         },
         {
-          "no": 5,
+          "no": 4,
           "kind": "quoted",
           "uid": "L40#7#10",
           "ref": "若望二十三：和平於世　Pacem in Terris",
@@ -5345,7 +5247,7 @@
           "answerKeyScope": "block-containing-clause"
         },
         {
-          "no": 6,
+          "no": 5,
           "kind": "quoted",
           "uid": "L35#9#7",
           "ref": "良十三：新事　Rerum Novarum",
@@ -5370,6 +5272,34 @@
             }
           ],
           "answerKeyRef": "L35#9",
+          "answerKeyScope": "block-containing-clause"
+        },
+        {
+          "no": 6,
+          "kind": "quoted",
+          "uid": "L46#10#14",
+          "ref": "梵二：論教會在現代世界牧職憲章　Gaudium et Spes",
+          "clause": "14/19",
+          "text": "cum ipsa experientia concordat",
+          "wordCount": 4,
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 29,
+              "ordinal": 580,
+              "headword": "experientia",
+              "glossZh": "試驗、經驗",
+              "lemmas": [
+                "experientia"
+              ],
+              "creditLemmas": [
+                "experientia"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "answerKeyRef": "L46#10",
           "answerKeyScope": "block-containing-clause"
         }
       ],
@@ -5414,34 +5344,6 @@
         {
           "no": 2,
           "kind": "quoted",
-          "uid": "L37#14#7",
-          "ref": "庇護十一：四十年　Quadragesimo Anno",
-          "clause": "7/7",
-          "text": "debet cura providentiaque singulari complecti respublica » (19)",
-          "wordCount": 6,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 30,
-              "ordinal": 581,
-              "headword": "complector",
-              "glossZh": "擁抱、包含",
-              "lemmas": [
-                "complector"
-              ],
-              "creditLemmas": [
-                "complector"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L37#14",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 3,
-          "kind": "quoted",
           "uid": "L06#5#21",
           "ref": "聖安博晨禱聖詩　Hymni Ambrosiani",
           "clause": "21/24",
@@ -5468,35 +5370,7 @@
           "answerKeyScope": "block-containing-clause"
         },
         {
-          "no": 4,
-          "kind": "quoted",
-          "uid": "L32#5#5",
-          "ref": "梵一：天主子　Dei Filius",
-          "clause": "5/13",
-          "text": "attingens a fine usque ad finem fortiter",
-          "wordCount": 7,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 30,
-              "ordinal": 595,
-              "headword": "attingo",
-              "glossZh": "觸摸、接觸；到達、實現；提及",
-              "lemmas": [
-                "attingo"
-              ],
-              "creditLemmas": [
-                "attingo"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L32#5",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 5,
+          "no": 3,
           "kind": "quoted",
           "uid": "L43#5#8",
           "ref": "梵二：信仰自由宣言　Dignitatis Humanae",
@@ -5524,38 +5398,22 @@
           "answerKeyScope": "block-containing-clause"
         },
         {
-          "no": 6,
+          "no": 4,
           "kind": "quoted",
-          "uid": "L50#4#27",
-          "ref": "方濟各：願祢受讚頌　Laudato Si'",
-          "clause": "27/30",
-          "text": "quod usu venit etiam cum veneniferum elementum",
-          "wordCount": 7,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 30,
-              "ordinal": 592,
-              "headword": "elementum",
-              "glossZh": "元素、起源；基本原理",
-              "lemmas": [
-                "elementum"
-              ],
-              "creditLemmas": [
-                "elementum"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L50#4",
+          "uid": "L02#4#3",
+          "ref": "斐理伯與佩爾佩圖亞殉道錄　Passio Perpetuae et Felicitatis",
+          "clause": "3/7",
+          "text": "annuntiamus et uobis",
+          "wordCount": 3,
+          "targetWords": [],
+          "answerKeyRef": "L02#4",
           "answerKeyScope": "block-containing-clause"
         }
       ],
       "note": "",
       "coverage": {
         "lessonWords": 20,
-        "reachedByAnchors": 4
+        "reachedByAnchors": 3
       }
     },
     {
@@ -5593,36 +5451,6 @@
         {
           "no": 2,
           "kind": "quoted",
-          "uid": "L06#4#25",
-          "ref": "聖安博晨禱聖詩　Hymni Ambrosiani",
-          "clause": "25/32",
-          "text": "Versatur in templo Deus",
-          "wordCount": 4,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 31,
-              "ordinal": 618,
-              "headword": "verso",
-              "glossZh": "旋轉、翻動、混合",
-              "lemmas": [
-                "uerso",
-                "verso"
-              ],
-              "creditLemmas": [
-                "uerso",
-                "verso"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L06#4",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 3,
-          "kind": "quoted",
           "uid": "L47#4#3",
           "ref": "保祿六：人類生命　Humanae Vitae",
           "clause": "3/7",
@@ -5649,7 +5477,7 @@
           "answerKeyScope": "block-containing-clause"
         },
         {
-          "no": 4,
+          "no": 3,
           "kind": "quoted",
           "uid": "L05#5#15",
           "ref": "聖傑羅尼莫書信　Epistulae",
@@ -5677,7 +5505,7 @@
           "answerKeyScope": "block-containing-clause"
         },
         {
-          "no": 5,
+          "no": 4,
           "kind": "quoted",
           "uid": "L38#3#3",
           "ref": "庇護十二：奧體　Mystici Corporis Christi",
@@ -5705,38 +5533,22 @@
           "answerKeyScope": "block-containing-clause"
         },
         {
-          "no": 6,
+          "no": 5,
           "kind": "quoted",
-          "uid": "L34#8#3",
-          "ref": "良十三：永恆之父　Aeterni Patris",
-          "clause": "3/17",
-          "text": "si rite a sapientibus usurpetur",
-          "wordCount": 5,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 31,
-              "ordinal": 610,
-              "headword": "rite",
-              "glossZh": "按禮儀地、莊嚴地；適當地",
-              "lemmas": [
-                "rite"
-              ],
-              "creditLemmas": [
-                "rite"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L34#8",
+          "uid": "L02#5#5",
+          "ref": "斐理伯與佩爾佩圖亞殉道錄　Passio Perpetuae et Felicitatis",
+          "clause": "5/16",
+          "text": "Saturninus et Secundulus",
+          "wordCount": 3,
+          "targetWords": [],
+          "answerKeyRef": "L02#5",
           "answerKeyScope": "block-containing-clause"
         }
       ],
       "note": "",
       "coverage": {
         "lessonWords": 20,
-        "reachedByAnchors": 6
+        "reachedByAnchors": 4
       }
     },
     {
@@ -5774,34 +5586,6 @@
         {
           "no": 2,
           "kind": "quoted",
-          "uid": "L42#11#14",
-          "ref": "梵二：教會憲章　Lumen Gentium",
-          "clause": "14/25",
-          "text": "Verbum nempe Domini comparatur semini",
-          "wordCount": 5,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 32,
-              "ordinal": 634,
-              "headword": "comparo",
-              "glossZh": "籌備、預備；蒐集、徵集；聯合",
-              "lemmas": [
-                "comparo"
-              ],
-              "creditLemmas": [
-                "comparo"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L42#11",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 3,
-          "kind": "quoted",
           "uid": "L13#1#15",
           "ref": "聖本篤會規　Regula Benedicti",
           "clause": "15/26",
@@ -5828,74 +5612,13 @@
           "answerKeyScope": "block-containing-clause"
         },
         {
-          "no": 4,
+          "no": 3,
           "kind": "quoted",
-          "uid": "L33#5#10",
-          "ref": "梵一：永恆牧者　Pastor Aeternus",
-          "clause": "10/20",
-          "text": "aperte opponuntur pravae eorum sententiae",
-          "wordCount": 5,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 32,
-              "ordinal": 623,
-              "headword": "aperte",
-              "glossZh": "公開地、明白地、坦率地",
-              "lemmas": [
-                "aperio",
-                "aperte"
-              ],
-              "creditLemmas": [
-                "aperte"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L33#5",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 5,
-          "kind": "quoted",
-          "uid": "L35#10#4",
-          "ref": "良十三：新事　Rerum Novarum",
-          "clause": "4/19",
-          "text": "evertere privatas bonorum possessiones contendunt oportere",
-          "wordCount": 6,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 32,
-              "ordinal": 628,
-              "headword": "privatus",
-              "glossZh": "私人的、個人的；平民的",
-              "lemmas": [
-                "priuatus",
-                "priuo",
-                "privatus",
-                "privo"
-              ],
-              "creditLemmas": [
-                "priuatus",
-                "privatus"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L35#10",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 6,
-          "kind": "quoted",
-          "uid": "L44#5#17",
-          "ref": "梵二：天主的啟示教義憲章　Dei Verbum",
-          "clause": "17/23",
-          "text": "15) et sine intermissione generis humani curam egit",
-          "wordCount": 7,
+          "uid": "L23#1#20",
+          "ref": "聖體聖詩集　Hymni de Corpore Christi",
+          "clause": "20/23",
+          "text": "Qui vitam sine termino Nobis donet in patria",
+          "wordCount": 8,
           "targetWords": [
             {
               "volume": 2,
@@ -5913,14 +5636,14 @@
               "phrase": false
             }
           ],
-          "answerKeyRef": "L44#5",
+          "answerKeyRef": "L23#1",
           "answerKeyScope": "block-containing-clause"
         }
       ],
       "note": "",
       "coverage": {
         "lessonWords": 20,
-        "reachedByAnchors": 4
+        "reachedByAnchors": 1
       }
     },
     {
@@ -5929,118 +5652,6 @@
       "anchors": [
         {
           "no": 1,
-          "kind": "quoted",
-          "uid": "L44#16#3",
-          "ref": "梵二：天主的啟示教義憲章　Dei Verbum",
-          "clause": "3/9",
-          "text": "Apostoli successores reliquerunt Episcopos",
-          "wordCount": 4,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 33,
-              "ordinal": 643,
-              "headword": "successor",
-              "glossZh": "後繼者、接班人",
-              "lemmas": [
-                "successor"
-              ],
-              "creditLemmas": [
-                "successor"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L44#16",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 2,
-          "kind": "quoted",
-          "uid": "L04#1#7",
-          "ref": "厄革里雅朝聖記　Itinerarium Egeriae",
-          "clause": "7/20",
-          "text": "quia libenter haberetis haec cognoscere",
-          "wordCount": 5,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 33,
-              "ordinal": 657,
-              "headword": "libenter",
-              "glossZh": "欣然、樂意；甘心",
-              "lemmas": [
-                "libenter"
-              ],
-              "creditLemmas": [
-                "libenter"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L04#1",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 3,
-          "kind": "quoted",
-          "uid": "L24#4#6",
-          "ref": "波尼法爵八世：唯一至聖　Unam Sanctam",
-          "clause": "6/20",
-          "text": "Christus videlicet et Christi vicarius",
-          "wordCount": 5,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 33,
-              "ordinal": 649,
-              "headword": "vicarius",
-              "glossZh": "代理人、副手；奴僕",
-              "lemmas": [
-                "uicarius"
-              ],
-              "creditLemmas": [
-                "uicarius"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L24#4",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 4,
-          "kind": "quoted",
-          "uid": "L40#6#10",
-          "ref": "若望二十三：和平於世　Pacem in Terris",
-          "clause": "10/12",
-          "text": "haec infinitam eius referunt sapientiam",
-          "wordCount": 5,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 33,
-              "ordinal": 656,
-              "headword": "infinitus",
-              "glossZh": "無限的、無邊的；無窮的",
-              "lemmas": [
-                "infinitus"
-              ],
-              "creditLemmas": [
-                "infinitus"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L40#6",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 5,
           "kind": "quoted",
           "uid": "L40#2#4",
           "ref": "若望二十三：和平於世　Pacem in Terris",
@@ -6068,38 +5679,22 @@
           "answerKeyScope": "block-containing-clause"
         },
         {
-          "no": 6,
+          "no": 2,
           "kind": "quoted",
-          "uid": "L41#6#3",
-          "ref": "梵二：大公主義法令　Unitatis Redintegratio",
-          "clause": "3/11",
-          "text": "nempe episcoporum cum Petri successore capite",
-          "wordCount": 6,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 33,
-              "ordinal": 643,
-              "headword": "successor",
-              "glossZh": "後繼者、接班人",
-              "lemmas": [
-                "successor"
-              ],
-              "creditLemmas": [
-                "successor"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L41#6",
+          "uid": "L05#3#11",
+          "ref": "聖傑羅尼莫書信　Epistulae",
+          "clause": "11/11",
+          "text": "unde posset negare",
+          "wordCount": 3,
+          "targetWords": [],
+          "answerKeyRef": "L05#3",
           "answerKeyScope": "block-containing-clause"
         }
       ],
-      "note": "",
+      "note": "本課無可用經典原句，十題全由自撰題補",
       "coverage": {
         "lessonWords": 20,
-        "reachedByAnchors": 5
+        "reachedByAnchors": 1
       }
     },
     {
@@ -6108,34 +5703,6 @@
       "anchors": [
         {
           "no": 1,
-          "kind": "quoted",
-          "uid": "L40#12#4",
-          "ref": "若望二十三：和平於世　Pacem in Terris",
-          "clause": "4/22",
-          "text": "habere integritatis corporis",
-          "wordCount": 3,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 34,
-              "ordinal": 675,
-              "headword": "integritas",
-              "glossZh": "完整、貞潔、正直",
-              "lemmas": [
-                "integritas"
-              ],
-              "creditLemmas": [
-                "integritas"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L40#12",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 2,
           "kind": "quoted",
           "uid": "L38#8#2",
           "ref": "庇護十二：奧體　Mystici Corporis Christi",
@@ -6163,13 +5730,13 @@
           "answerKeyScope": "block-containing-clause"
         },
         {
-          "no": 3,
+          "no": 2,
           "kind": "quoted",
-          "uid": "L43#12#2",
-          "ref": "梵二：信仰自由宣言　Dignitatis Humanae",
-          "clause": "2/8",
-          "text": "Communitates religiosae ius etiam habent",
-          "wordCount": 5,
+          "uid": "L03#5#17",
+          "ref": "戴都良論祈禱　De oratione",
+          "clause": "17/27",
+          "text": "Itaque sic adorantes etiam praeceptum obimus",
+          "wordCount": 6,
           "targetWords": [
             {
               "volume": 2,
@@ -6187,69 +5754,11 @@
               "phrase": false
             }
           ],
-          "answerKeyRef": "L43#12",
+          "answerKeyRef": "L03#5",
           "answerKeyScope": "block-containing-clause"
         },
         {
-          "no": 4,
-          "kind": "quoted",
-          "uid": "L45#6#15",
-          "ref": "梵二：教會對非基督宗教態度宣言　Nostra Aetate",
-          "clause": "15/22",
-          "text": "vel propriis conatibus vel superiore auxilio innixi",
-          "wordCount": 7,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 34,
-              "ordinal": 669,
-              "headword": "innitor",
-              "glossZh": "依靠、憑藉、扶持",
-              "lemmas": [
-                "innitor"
-              ],
-              "creditLemmas": [
-                "innitor"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L45#6",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 5,
-          "kind": "quoted",
-          "uid": "L47#14#7",
-          "ref": "保祿六：人類生命　Humanae Vitae",
-          "clause": "7/19",
-          "text": "Ioanne XXIII mense Martio anni MDCCCCLXIII constitutum",
-          "wordCount": 7,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 34,
-              "ordinal": 680,
-              "headword": "Martius",
-              "glossZh": "三月",
-              "lemmas": [
-                "Martius",
-                "martius"
-              ],
-              "creditLemmas": [
-                "Martius",
-                "martius"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L47#14",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 6,
+          "no": 3,
           "kind": "quoted",
           "uid": "L02#2#7",
           "ref": "斐理伯與佩爾佩圖亞殉道錄　Passio Perpetuae et Felicitatis",
@@ -6277,12 +5786,40 @@
           ],
           "answerKeyRef": "L02#2",
           "answerKeyScope": "block-containing-clause"
+        },
+        {
+          "no": 4,
+          "kind": "quoted",
+          "uid": "L43#9#4",
+          "ref": "梵二：信仰自由宣言　Dignitatis Humanae",
+          "clause": "4/5",
+          "text": "etiam ipsis in communi agentibus agnoscenda est",
+          "wordCount": 7,
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 34,
+              "ordinal": 667,
+              "headword": "etiamsi",
+              "glossZh": "縱然、即使、儘管",
+              "lemmas": [
+                "etiamsi"
+              ],
+              "creditLemmas": [
+                "etiamsi"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "answerKeyRef": "L43#9",
+          "answerKeyScope": "block-containing-clause"
         }
       ],
       "note": "",
       "coverage": {
         "lessonWords": 20,
-        "reachedByAnchors": 5
+        "reachedByAnchors": 2
       }
     },
     {
@@ -6348,121 +5885,48 @@
         {
           "no": 3,
           "kind": "quoted",
-          "uid": "L38#9#12",
-          "ref": "庇護十二：奧體　Mystici Corporis Christi",
-          "clause": "12/17",
-          "text": "quotquot tamen ubique habemus in Christo filios",
-          "wordCount": 7,
+          "uid": "L37#9#5",
+          "ref": "庇護十一：四十年　Quadragesimo Anno",
+          "clause": "5/6",
+          "text": "qui iuribus et officiis suae classis clare propositis",
+          "wordCount": 8,
           "targetWords": [
             {
               "volume": 2,
               "lesson": 35,
-              "ordinal": 684,
-              "headword": "quotquot",
-              "glossZh": "凡若干、若干個",
+              "ordinal": 691,
+              "headword": "clare",
+              "glossZh": "大聲地、響亮地；清晰地、明亮地",
               "lemmas": [
-                "quotquot"
+                "clare"
               ],
               "creditLemmas": [
-                "quotquot"
+                "clare"
               ],
               "resolved": true,
               "phrase": false
             }
           ],
-          "answerKeyRef": "L38#9",
+          "answerKeyRef": "L37#9",
           "answerKeyScope": "block-containing-clause"
         },
         {
           "no": 4,
           "kind": "quoted",
-          "uid": "L24#3#22",
-          "ref": "波尼法爵八世：唯一至聖　Unam Sanctam",
-          "clause": "22/23",
-          "text": "sed sorte provenit",
+          "uid": "L08#4#5",
+          "ref": "聖奧思定懺悔錄 卷八　Confessiones VIII",
+          "clause": "5/18",
+          "text": "cui deditus obstringebar",
           "wordCount": 3,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 35,
-              "ordinal": 695,
-              "headword": "sors",
-              "glossZh": "籤、命運；神諭",
-              "lemmas": [
-                "sors"
-              ],
-              "creditLemmas": [
-                "sors"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L24#3",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 5,
-          "kind": "quoted",
-          "uid": "L10#8#4",
-          "ref": "聖良一世四旬期講道　Sermones de Quadragesima",
-          "clause": "4/26",
-          "text": "qui divinis eruditionibus instituti",
-          "wordCount": 4,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 35,
-              "ordinal": 681,
-              "headword": "institutum",
-              "glossZh": "制度、習俗、原則、安排、計畫",
-              "lemmas": [
-                "instituo",
-                "institutum"
-              ],
-              "creditLemmas": [
-                "institutum"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L10#8",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 6,
-          "kind": "quoted",
-          "uid": "L23#1#19",
-          "ref": "聖體聖詩集　Hymni de Corpore Christi",
-          "clause": "19/23",
-          "text": "Uni trinoque Domino Sit sempiterna gloria",
-          "wordCount": 6,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 35,
-              "ordinal": 687,
-              "headword": "sempiternus",
-              "glossZh": "永恆的、永遠的、永久的",
-              "lemmas": [
-                "sempiternus"
-              ],
-              "creditLemmas": [
-                "sempiternus"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L23#1",
+          "targetWords": [],
+          "answerKeyRef": "L08#4",
           "answerKeyScope": "block-containing-clause"
         }
       ],
       "note": "",
       "coverage": {
         "lessonWords": 20,
-        "reachedByAnchors": 6
+        "reachedByAnchors": 3
       }
     },
     {
@@ -6500,62 +5964,6 @@
         {
           "no": 2,
           "kind": "quoted",
-          "uid": "L36#7#27",
-          "ref": "良十三：至上智慧的天主　Providentissimus Deus",
-          "clause": "27/29",
-          "text": "ut christianam sapientiam late gentibus persuaderent",
-          "wordCount": 6,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 36,
-              "ordinal": 713,
-              "headword": "persuadeo",
-              "glossZh": "勸服、說服",
-              "lemmas": [
-                "persuadeo"
-              ],
-              "creditLemmas": [
-                "persuadeo"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L36#7",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 3,
-          "kind": "quoted",
-          "uid": "L12#4#13",
-          "ref": "大額我略　Gregorius Magnus",
-          "clause": "13/21",
-          "text": "si sanctorum corpora tangere quisquam fortasse voluerit",
-          "wordCount": 7,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 36,
-              "ordinal": 719,
-              "headword": "fortasse",
-              "glossZh": "或許、可能",
-              "lemmas": [
-                "fortasse"
-              ],
-              "creditLemmas": [
-                "fortasse"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L12#4",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 4,
-          "kind": "quoted",
           "uid": "L49#5#1",
           "ref": "本篤十六：天主是愛　Deus Caritas Est",
           "clause": "1/1",
@@ -6582,35 +5990,7 @@
           "answerKeyScope": "block-containing-clause"
         },
         {
-          "no": 5,
-          "kind": "quoted",
-          "uid": "L47#18#8",
-          "ref": "保祿六：人類生命　Humanae Vitae",
-          "clause": "8/8",
-          "text": "nunc gravibus huius generis quaestionibus responsum dare censemus",
-          "wordCount": 8,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 36,
-              "ordinal": 718,
-              "headword": "censeo",
-              "glossZh": "認為、判斷、建議、評估、計算",
-              "lemmas": [
-                "censeo"
-              ],
-              "creditLemmas": [
-                "censeo"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L47#18",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 6,
+          "no": 3,
           "kind": "quoted",
           "uid": "L43#2#8",
           "ref": "梵二：信仰自由宣言　Dignitatis Humanae",
@@ -6638,12 +6018,98 @@
           ],
           "answerKeyRef": "L43#2",
           "answerKeyScope": "block-containing-clause"
+        },
+        {
+          "no": 4,
+          "kind": "quoted",
+          "uid": "L50#1#2",
+          "ref": "方濟各：願祢受讚頌　Laudato Si'",
+          "clause": "2/2",
+          "text": "CONTAMINATIO ET CLIMATIS MUTATIO",
+          "wordCount": 4,
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 36,
+              "ordinal": 715,
+              "headword": "mutatio",
+              "glossZh": "變化、更替、交換",
+              "lemmas": [
+                "mutatio"
+              ],
+              "creditLemmas": [
+                "mutatio"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "answerKeyRef": "L50#1",
+          "answerKeyScope": "block-containing-clause"
+        },
+        {
+          "no": 5,
+          "kind": "quoted",
+          "uid": "L12#5#4",
+          "ref": "大額我略　Gregorius Magnus",
+          "clause": "4/19",
+          "text": "corpora mortuorum in campo iacentia effodiebant",
+          "wordCount": 6,
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 36,
+              "ordinal": 716,
+              "headword": "campus",
+              "glossZh": "平原、場地、戰場、海、範圍",
+              "lemmas": [
+                "campus"
+              ],
+              "creditLemmas": [
+                "campus"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "answerKeyRef": "L12#5",
+          "answerKeyScope": "block-containing-clause"
+        },
+        {
+          "no": 6,
+          "kind": "quoted",
+          "uid": "L37#6#2",
+          "ref": "庇護十一：四十年　Quadragesimo Anno",
+          "clause": "2/16",
+          "text": "Neque his tantum limitibus utilitas circumscribitur",
+          "wordCount": 6,
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 36,
+              "ordinal": 702,
+              "headword": "limes",
+              "glossZh": "小徑、界限、邊界標記的未開墾地帶",
+              "lemmas": [
+                "Limes",
+                "limes"
+              ],
+              "creditLemmas": [
+                "Limes",
+                "limes"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "answerKeyRef": "L37#6",
+          "answerKeyScope": "block-containing-clause"
         }
       ],
       "note": "",
       "coverage": {
         "lessonWords": 20,
-        "reachedByAnchors": 6
+        "reachedByAnchors": 5
       }
     },
     {
@@ -6709,29 +6175,13 @@
         {
           "no": 3,
           "kind": "quoted",
-          "uid": "L43#11#9",
-          "ref": "梵二：信仰自由宣言　Dignitatis Humanae",
-          "clause": "9/9",
-          "text": "necnon in bonis congruis acquirendis et fruendis",
-          "wordCount": 7,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 37,
-              "ordinal": 732,
-              "headword": "acquiro",
-              "glossZh": "獲得、取得、贏得；增加、累積",
-              "lemmas": [
-                "acquiro"
-              ],
-              "creditLemmas": [
-                "acquiro"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L43#11",
+          "uid": "L15#1#15",
+          "ref": "復活詠　Chorus novae Ierusalem",
+          "clause": "15/18",
+          "text": "triumphat ille splendide",
+          "wordCount": 3,
+          "targetWords": [],
+          "answerKeyRef": "L15#1",
           "answerKeyScope": "block-containing-clause"
         }
       ],
@@ -6776,64 +6226,20 @@
         {
           "no": 2,
           "kind": "quoted",
-          "uid": "L33#4#15",
-          "ref": "梵一：永恆牧者　Pastor Aeternus",
-          "clause": "15/22",
-          "text": "et super hanc petram aedificabo Ecclesiam meam",
-          "wordCount": 7,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 38,
-              "ordinal": 752,
-              "headword": "aedifico",
-              "glossZh": "建造、築造；確立、改善、啟蒙",
-              "lemmas": [
-                "aedifico"
-              ],
-              "creditLemmas": [
-                "aedifico"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L33#4",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 3,
-          "kind": "quoted",
-          "uid": "L41#10#3",
-          "ref": "梵二：大公主義法令　Unitatis Redintegratio",
-          "clause": "3/14",
-          "text": "quibus simul sumptis ipsa Ecclesia aedificatur et vivificatur",
-          "wordCount": 8,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 38,
-              "ordinal": 752,
-              "headword": "aedifico",
-              "glossZh": "建造、築造；確立、改善、啟蒙",
-              "lemmas": [
-                "aedifico"
-              ],
-              "creditLemmas": [
-                "aedifico"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L41#10",
+          "uid": "L19#1#14",
+          "ref": "將臨期詠：懇求厄瑪奴耳　Veni, veni, Emmanuel",
+          "clause": "14/27",
+          "text": "solare nos adveniens",
+          "wordCount": 3,
+          "targetWords": [],
+          "answerKeyRef": "L19#1",
           "answerKeyScope": "block-containing-clause"
         }
       ],
-      "note": "",
+      "note": "本課無可用經典原句，十題全由自撰題補",
       "coverage": {
         "lessonWords": 20,
-        "reachedByAnchors": 2
+        "reachedByAnchors": 1
       }
     },
     {
@@ -6843,78 +6249,20 @@
         {
           "no": 1,
           "kind": "quoted",
-          "uid": "L19#1#12",
-          "ref": "將臨期詠：懇求厄瑪奴耳　Veni, veni, Emmanuel",
-          "clause": "12/27",
-          "text": "Emmanuel nascetur pro te, Israel",
-          "wordCount": 5,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 39,
-              "ordinal": 778,
-              "headword": "Israel",
-              "glossZh": "以色列民族、天主的民族",
-              "lemmas": [
-                "Israel",
-                "israel"
-              ],
-              "creditLemmas": [
-                "Israel",
-                "israel"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L19#1",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 2,
-          "kind": "quoted",
-          "uid": "L07#7#12",
-          "ref": "聖奧思定懺悔錄 卷一　Confessiones I",
-          "clause": "12/25",
-          "text": "irascaris mihi et mineris ingentes miserias",
-          "wordCount": 6,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 39,
-              "ordinal": 779,
-              "headword": "miseria",
-              "glossZh": "苦難、悲慘、痛苦",
-              "lemmas": [
-                "miseria"
-              ],
-              "creditLemmas": [
-                "miseria"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L07#7",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 3,
-          "kind": "quoted",
-          "uid": "L01#1#14",
-          "ref": "使徒信經　Symbolum Apostolorum",
-          "clause": "14/26",
-          "text": "descendit ad inferos",
+          "uid": "L24#8#3",
+          "ref": "波尼法爵八世：唯一至聖　Unam Sanctam",
+          "clause": "3/12",
+          "text": "Dei ordinationi resistit",
           "wordCount": 3,
           "targetWords": [],
-          "answerKeyRef": "L01#1",
+          "answerKeyRef": "L24#8",
           "answerKeyScope": "block-containing-clause"
         }
       ],
-      "note": "",
+      "note": "本課無可用經典原句，十題全由自撰題補",
       "coverage": {
         "lessonWords": 20,
-        "reachedByAnchors": 2
+        "reachedByAnchors": 0
       }
     },
     {
@@ -6924,11 +6272,11 @@
         {
           "no": 1,
           "kind": "quoted",
-          "uid": "L08#8#20",
-          "ref": "聖奧思定懺悔錄 卷八　Confessiones VIII",
-          "clause": "20/23",
-          "text": "et hoc saepe dicebat",
-          "wordCount": 4,
+          "uid": "L41#8#2",
+          "ref": "梵二：大公主義法令　Unitatis Redintegratio",
+          "clause": "2/5",
+          "text": "Hoc est unitatis Ecclesiae sacrum mysterium",
+          "wordCount": 6,
           "targetWords": [
             {
               "volume": 2,
@@ -6946,7 +6294,7 @@
               "phrase": false
             }
           ],
-          "answerKeyRef": "L08#8",
+          "answerKeyRef": "L41#8",
           "answerKeyScope": "block-containing-clause"
         },
         {
@@ -7010,34 +6358,6 @@
         {
           "no": 4,
           "kind": "quoted",
-          "uid": "L03#5#20",
-          "ref": "戴都良論祈禱　De oratione",
-          "clause": "20/27",
-          "text": "Hoc est quod Israeli exprobratur",
-          "wordCount": 5,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 40,
-              "ordinal": 783,
-              "headword": "huc",
-              "glossZh": "到此地、至此",
-              "lemmas": [
-                "huc"
-              ],
-              "creditLemmas": [
-                "huc"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L03#5",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 5,
-          "kind": "quoted",
           "uid": "L45#5#9",
           "ref": "梵二：教會對非基督宗教態度宣言　Nostra Aetate",
           "clause": "9/13",
@@ -7066,31 +6386,15 @@
           "answerKeyScope": "block-containing-clause"
         },
         {
-          "no": 6,
+          "no": 5,
           "kind": "quoted",
-          "uid": "L17#1#22",
-          "ref": "聖安瑟莫：證道書　Proslogion",
-          "clause": "22/23",
-          "text": "si hoc non es",
-          "wordCount": 4,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 40,
-              "ordinal": 783,
-              "headword": "huc",
-              "glossZh": "到此地、至此",
-              "lemmas": [
-                "huc"
-              ],
-              "creditLemmas": [
-                "huc"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L17#1",
+          "uid": "L26#5#1",
+          "ref": "特倫多大公會議：聖經與聖傳　Concilium Tridentinum, sessio IV",
+          "clause": "1/1",
+          "text": "Sunt veri infrascripti",
+          "wordCount": 3,
+          "targetWords": [],
+          "answerKeyRef": "L26#5",
           "answerKeyScope": "block-containing-clause"
         }
       ],
@@ -7106,34 +6410,6 @@
       "anchors": [
         {
           "no": 1,
-          "kind": "quoted",
-          "uid": "L09#9#19",
-          "ref": "肋令的味增爵：備忘錄　Commonitorium",
-          "clause": "19/21",
-          "text": "Per sanctum illum virum",
-          "wordCount": 4,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 41,
-              "ordinal": 817,
-              "headword": "sancio",
-              "glossZh": "確認、制定、履行、奉獻",
-              "lemmas": [
-                "sancio"
-              ],
-              "creditLemmas": [
-                "sancio"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L09#9",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 2,
           "kind": "quoted",
           "uid": "L40#9#3",
           "ref": "若望二十三：和平於世　Pacem in Terris",
@@ -7163,7 +6439,7 @@
           "answerKeyScope": "block-containing-clause"
         },
         {
-          "no": 3,
+          "no": 2,
           "kind": "quoted",
           "uid": "L32#10#4",
           "ref": "梵一：天主子　Dei Filius",
@@ -7191,54 +6467,22 @@
           "answerKeyScope": "block-containing-clause"
         },
         {
-          "no": 4,
+          "no": 3,
           "kind": "quoted",
-          "uid": "L50#8#8",
-          "ref": "方濟各：願祢受讚頌　Laudato Si'",
-          "clause": "8/17",
-          "text": "cum illae mitigationem iuvent mutationis climatis",
-          "wordCount": 6,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 41,
-              "ordinal": 818,
-              "headword": "juvo",
-              "glossZh": "幫助、協助、助益",
-              "lemmas": [
-                "iuuo",
-                "iuvo",
-                "juvo"
-              ],
-              "creditLemmas": [
-                "iuuo",
-                "iuvo",
-                "juvo"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L50#8",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 5,
-          "kind": "quoted",
-          "uid": "L02#4#3",
-          "ref": "斐理伯與佩爾佩圖亞殉道錄　Passio Perpetuae et Felicitatis",
-          "clause": "3/7",
-          "text": "annuntiamus et uobis",
+          "uid": "L37#1#1",
+          "ref": "庇護十一：四十年　Quadragesimo Anno",
+          "clause": "1/1",
+          "text": "Quid egerit Ecclesia",
           "wordCount": 3,
           "targetWords": [],
-          "answerKeyRef": "L02#4",
+          "answerKeyRef": "L37#1",
           "answerKeyScope": "block-containing-clause"
         }
       ],
       "note": "",
       "coverage": {
         "lessonWords": 20,
-        "reachedByAnchors": 3
+        "reachedByAnchors": 2
       }
     },
     {
@@ -7248,48 +6492,20 @@
         {
           "no": 1,
           "kind": "quoted",
-          "uid": "L46#15#15",
-          "ref": "梵二：論教會在現代世界牧職憲章　Gaudium et Spes",
-          "clause": "15/15",
-          "text": "neve illud pravis cordis sui inclinationibus inservire sinat",
-          "wordCount": 8,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 42,
-              "ordinal": 828,
-              "headword": "neve",
-              "glossZh": "勿、不；勿……勿（皆勿）",
-              "lemmas": [
-                "neue"
-              ],
-              "creditLemmas": [
-                "neue"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L46#15",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 2,
-          "kind": "quoted",
-          "uid": "L02#5#5",
-          "ref": "斐理伯與佩爾佩圖亞殉道錄　Passio Perpetuae et Felicitatis",
-          "clause": "5/16",
-          "text": "Saturninus et Secundulus",
+          "uid": "L41#4#4",
+          "ref": "梵二：大公主義法令　Unitatis Redintegratio",
+          "clause": "4/21",
+          "text": "qui est Ecclesia",
           "wordCount": 3,
           "targetWords": [],
-          "answerKeyRef": "L02#5",
+          "answerKeyRef": "L41#4",
           "answerKeyScope": "block-containing-clause"
         }
       ],
       "note": "本課無可用經典原句，十題全由自撰題補",
       "coverage": {
         "lessonWords": 20,
-        "reachedByAnchors": 1
+        "reachedByAnchors": 0
       }
     },
     {
@@ -7298,34 +6514,6 @@
       "anchors": [
         {
           "no": 1,
-          "kind": "quoted",
-          "uid": "L46#12#17",
-          "ref": "梵二：論教會在現代世界牧職憲章　Gaudium et Spes",
-          "clause": "17/18",
-          "text": "Peccatum autem minuit ipsum hominem",
-          "wordCount": 5,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 43,
-              "ordinal": 844,
-              "headword": "minuo",
-              "glossZh": "減少、減弱、減損、縮小",
-              "lemmas": [
-                "minuo"
-              ],
-              "creditLemmas": [
-                "minuo"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L46#12",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 2,
           "kind": "quoted",
           "uid": "L42#8#6",
           "ref": "梵二：教會憲章　Lumen Gentium",
@@ -7353,122 +6541,22 @@
           "answerKeyScope": "block-containing-clause"
         },
         {
-          "no": 3,
+          "no": 2,
           "kind": "quoted",
-          "uid": "L41#4#10",
+          "uid": "L41#5#3",
           "ref": "梵二：大公主義法令　Unitatis Redintegratio",
-          "clause": "10/21",
-          "text": "Etenim «quicumque in Christo baptizati estis, Christum induistis",
-          "wordCount": 8,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 43,
-              "ordinal": 859,
-              "headword": "induo",
-              "glossZh": "穿上、披上；著衣",
-              "lemmas": [
-                "induo"
-              ],
-              "creditLemmas": [
-                "induo"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L41#4",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 4,
-          "kind": "quoted",
-          "uid": "L05#1#9",
-          "ref": "聖傑羅尼莫書信　Epistulae",
-          "clause": "9/23",
-          "text": "cumque ego id verecunde et vere",
-          "wordCount": 6,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 43,
-              "ordinal": 855,
-              "headword": "cumque",
-              "glossZh": "無論何時；任意、某某",
-              "lemmas": [
-                "cumque"
-              ],
-              "creditLemmas": [
-                "cumque"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L05#1",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 5,
-          "kind": "quoted",
-          "uid": "L46#6#11",
-          "ref": "梵二：論教會在現代世界牧職憲章　Gaudium et Spes",
-          "clause": "11/14",
-          "text": "Minuisti eum paulo minus ab angelis",
-          "wordCount": 6,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 43,
-              "ordinal": 844,
-              "headword": "minuo",
-              "glossZh": "減少、減弱、減損、縮小",
-              "lemmas": [
-                "minuo"
-              ],
-              "creditLemmas": [
-                "minuo"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L46#6",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 6,
-          "kind": "quoted",
-          "uid": "L44#17#4",
-          "ref": "梵二：天主的啟示教義憲章　Dei Verbum",
-          "clause": "4/4",
-          "text": "continua successione usque ad consummationem temporum conservari debebat",
-          "wordCount": 8,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 43,
-              "ordinal": 854,
-              "headword": "consummatio",
-              "glossZh": "總和、完成；最高點",
-              "lemmas": [
-                "consummatio"
-              ],
-              "creditLemmas": [
-                "consummatio"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L44#17",
+          "clause": "3/12",
+          "text": "Christus munus docendi",
+          "wordCount": 3,
+          "targetWords": [],
+          "answerKeyRef": "L41#5",
           "answerKeyScope": "block-containing-clause"
         }
       ],
-      "note": "",
+      "note": "本課無可用經典原句，十題全由自撰題補",
       "coverage": {
         "lessonWords": 20,
-        "reachedByAnchors": 5
+        "reachedByAnchors": 1
       }
     },
     {
@@ -7478,162 +6566,20 @@
         {
           "no": 1,
           "kind": "quoted",
-          "uid": "L04#2#15",
-          "ref": "厄革里雅朝聖記　Itinerarium Egeriae",
-          "clause": "15/22",
-          "text": "commemorat etiam ipse nomina",
-          "wordCount": 4,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 44,
-              "ordinal": 870,
-              "headword": "commemoro",
-              "glossZh": "回憶、銘記；提及、記述",
-              "lemmas": [
-                "commemoro"
-              ],
-              "creditLemmas": [
-                "commemoro"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L04#2",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 2,
-          "kind": "quoted",
-          "uid": "L13#4#14",
-          "ref": "聖本篤會規　Regula Benedicti",
-          "clause": "14/17",
-          "text": "duplici debet doctrina suis præesse discipulis",
-          "wordCount": 6,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 44,
-              "ordinal": 867,
-              "headword": "duplex",
-              "glossZh": "雙重的、分裂的；虛偽的",
-              "lemmas": [
-                "duplex"
-              ],
-              "creditLemmas": [
-                "duplex"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L13#4",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 3,
-          "kind": "quoted",
-          "uid": "L07#5#21",
-          "ref": "聖奧思定懺悔錄 卷一　Confessiones I",
-          "clause": "21/24",
-          "text": "stabilis et incomprehensibilis",
-          "wordCount": 3,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 44,
-              "ordinal": 869,
-              "headword": "stabilis",
-              "glossZh": "穩定的、堅定的；不變的",
-              "lemmas": [
-                "Stabilis",
-                "stabilis"
-              ],
-              "creditLemmas": [
-                "Stabilis",
-                "stabilis"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L07#5",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 4,
-          "kind": "quoted",
-          "uid": "L09#3#8",
-          "ref": "肋令的味增爵：備忘錄　Commonitorium",
-          "clause": "8/15",
-          "text": "Frequentius tamen sumebatur pro lege a mandante praescripta",
-          "wordCount": 8,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 44,
-              "ordinal": 872,
-              "headword": "praescribo",
-              "glossZh": "命令、指示；規定",
-              "lemmas": [
-                "praescribo"
-              ],
-              "creditLemmas": [
-                "praescribo"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L09#3",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 5,
-          "kind": "quoted",
-          "uid": "L47#15#5",
-          "ref": "保祿六：人類生命　Humanae Vitae",
-          "clause": "5/6",
-          "text": "licuit Nobis omnes multiplicis argumenti partes diligentius perpendere",
-          "wordCount": 8,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 44,
-              "ordinal": 876,
-              "headword": "liqueo",
-              "glossZh": "呈液態、熔化；明白、顯然",
-              "lemmas": [
-                "liqueo"
-              ],
-              "creditLemmas": [
-                "liqueo"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L47#15",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 6,
-          "kind": "quoted",
-          "uid": "L02#9#17",
-          "ref": "斐理伯與佩爾佩圖亞殉道錄　Passio Perpetuae et Felicitatis",
-          "clause": "17/23",
-          "text": "erant ibi gladii",
+          "uid": "L44#3#5",
+          "ref": "梵二：天主的啟示教義憲章　Dei Verbum",
+          "clause": "5/24",
+          "text": "Verbum carnem factum",
           "wordCount": 3,
           "targetWords": [],
-          "answerKeyRef": "L02#9",
+          "answerKeyRef": "L44#3",
           "answerKeyScope": "block-containing-clause"
         }
       ],
-      "note": "",
+      "note": "本課無可用經典原句，十題全由自撰題補",
       "coverage": {
         "lessonWords": 20,
-        "reachedByAnchors": 5
+        "reachedByAnchors": 0
       }
     },
     {
@@ -7642,62 +6588,6 @@
       "anchors": [
         {
           "no": 1,
-          "kind": "quoted",
-          "uid": "L10#7#3",
-          "ref": "聖良一世四旬期講道　Sermones de Quadragesima",
-          "clause": "3/8",
-          "text": "sciens studium religionis laborem habere certaminis",
-          "wordCount": 6,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 45,
-              "ordinal": 894,
-              "headword": "certamen",
-              "glossZh": "競賽、戰鬥、爭執",
-              "lemmas": [
-                "certamen"
-              ],
-              "creditLemmas": [
-                "certamen"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L10#7",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 2,
-          "kind": "quoted",
-          "uid": "L24#8#3",
-          "ref": "波尼法爵八世：唯一至聖　Unam Sanctam",
-          "clause": "3/12",
-          "text": "Dei ordinationi resistit",
-          "wordCount": 3,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 45,
-              "ordinal": 889,
-              "headword": "resisto",
-              "glossZh": "抵抗、反對、對抗；駐足",
-              "lemmas": [
-                "resisto"
-              ],
-              "creditLemmas": [
-                "resisto"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L24#8",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 3,
           "kind": "quoted",
           "uid": "L47#9#1",
           "ref": "保祿六：人類生命　Humanae Vitae",
@@ -7725,67 +6615,22 @@
           "answerKeyScope": "block-containing-clause"
         },
         {
-          "no": 4,
+          "no": 2,
           "kind": "quoted",
-          "uid": "L09#11#3",
-          "ref": "肋令的味增爵：備忘錄　Commonitorium",
-          "clause": "3/10",
-          "text": "quos fidem ejurare coegit Constantius die 10 Oct",
-          "wordCount": 7,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 45,
-              "ordinal": 891,
-              "headword": "constans",
-              "glossZh": "恆定的、堅貞的、穩固的",
-              "lemmas": [
-                "constans",
-                "consto"
-              ],
-              "creditLemmas": [
-                "constans"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L09#11",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 5,
-          "kind": "quoted",
-          "uid": "L47#11#3",
-          "ref": "保祿六：人類生命　Humanae Vitae",
-          "clause": "3/15",
-          "text": "ad Ecclesiae Magisterium interpretationem legis moralis naturalis spectare",
-          "wordCount": 8,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 45,
-              "ordinal": 885,
-              "headword": "interpretatio",
-              "glossZh": "解釋、闡釋；意義",
-              "lemmas": [
-                "interpretatio"
-              ],
-              "creditLemmas": [
-                "interpretatio"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L47#11",
+          "uid": "L44#7#12",
+          "ref": "梵二：天主的啟示教義憲章　Dei Verbum",
+          "clause": "12/20",
+          "text": "Verbum caro factum",
+          "wordCount": 3,
+          "targetWords": [],
+          "answerKeyRef": "L44#7",
           "answerKeyScope": "block-containing-clause"
         }
       ],
-      "note": "",
+      "note": "本課無可用經典原句，十題全由自撰題補",
       "coverage": {
         "lessonWords": 20,
-        "reachedByAnchors": 4
+        "reachedByAnchors": 1
       }
     },
     {
@@ -7795,139 +6640,20 @@
         {
           "no": 1,
           "kind": "quoted",
-          "uid": "L41#8#4",
-          "ref": "梵二：大公主義法令　Unitatis Redintegratio",
-          "clause": "4/5",
-          "text": "Spiritu Sancto munerum varietatem operante",
-          "wordCount": 5,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 46,
-              "ordinal": 915,
-              "headword": "varietas",
-              "glossZh": "多樣、差異、斑駁",
-              "lemmas": [
-                "uarietas",
-                "varietas"
-              ],
-              "creditLemmas": [
-                "uarietas",
-                "varietas"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L41#8",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 2,
-          "kind": "quoted",
-          "uid": "L49#9#1",
-          "ref": "本篤十六：天主是愛　Deus Caritas Est",
-          "clause": "1/1",
-          "text": "Eros » et « agape » – diversitas et unitas",
-          "wordCount": 6,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 46,
-              "ordinal": 918,
-              "headword": "diversitas",
-              "glossZh": "差異、不同",
-              "lemmas": [
-                "diuersitas",
-                "diversitas"
-              ],
-              "creditLemmas": [
-                "diuersitas",
-                "diversitas"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L49#9",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 3,
-          "kind": "quoted",
-          "uid": "L08#2#4",
-          "ref": "聖奧思定懺悔錄 卷八　Confessiones VIII",
-          "clause": "4/13",
-          "text": "et ire per eius angustias adhuc pigebat",
-          "wordCount": 7,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 46,
-              "ordinal": 914,
-              "headword": "angustia",
-              "glossZh": "狹隘、困難、海峽",
-              "lemmas": [
-                "angustia"
-              ],
-              "creditLemmas": [
-                "angustia"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L08#2",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 4,
-          "kind": "quoted",
-          "uid": "L05#3#7",
-          "ref": "聖傑羅尼莫書信　Epistulae",
-          "clause": "7/11",
-          "text": "infelicissimus iuvenis volens conpendio mortis longos vitare cruciatus",
-          "wordCount": 8,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 46,
-              "ordinal": 905,
-              "headword": "vito",
-              "glossZh": "迴避、躲避、規避",
-              "lemmas": [
-                "Vitus",
-                "uito",
-                "vito"
-              ],
-              "creditLemmas": [
-                "uito",
-                "vito"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L05#3",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 5,
-          "kind": "quoted",
-          "uid": "L03#2#6",
-          "ref": "戴都良論祈禱　De oratione",
-          "clause": "6/29",
-          "text": "quo tantum potest",
+          "uid": "L48#6#14",
+          "ref": "若望保祿二：信仰與理性　Fides et Ratio",
+          "clause": "14/15",
+          "text": "tunc autem cognoscam",
           "wordCount": 3,
           "targetWords": [],
-          "answerKeyRef": "L03#2",
+          "answerKeyRef": "L48#6",
           "answerKeyScope": "block-containing-clause"
         }
       ],
-      "note": "",
+      "note": "本課無可用經典原句，十題全由自撰題補",
       "coverage": {
         "lessonWords": 20,
-        "reachedByAnchors": 4
+        "reachedByAnchors": 0
       }
     },
     {
@@ -7965,120 +6691,13 @@
         {
           "no": 2,
           "kind": "quoted",
-          "uid": "L22#8#5",
-          "ref": "聖文德：心靈邁向天主的旅程　Itinerarium mentis in Deum",
-          "clause": "5/14",
-          "text": "cum virtus agens non improportionaliter excedit recipientem",
-          "wordCount": 7,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 47,
-              "ordinal": 928,
-              "headword": "excedo",
-              "glossZh": "超越、逾越；離去、過世",
-              "lemmas": [
-                "excedo"
-              ],
-              "creditLemmas": [
-                "excedo"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L22#8",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 3,
-          "kind": "quoted",
-          "uid": "L48#7#8",
-          "ref": "若望保祿二：信仰與理性　Fides et Ratio",
-          "clause": "8/10",
-          "text": "Philosophiae » vox Graecam ad originem « sapientiae amorem » designat",
-          "wordCount": 8,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 47,
-              "ordinal": 933,
-              "headword": "designo",
-              "glossZh": "標記、描劃；指示、表明",
-              "lemmas": [
-                "designo"
-              ],
-              "creditLemmas": [
-                "designo"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L48#7",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 4,
-          "kind": "quoted",
-          "uid": "L04#3#8",
-          "ref": "厄革里雅朝聖記　Itinerarium Egeriae",
-          "clause": "8/20",
-          "text": "ubi et mature",
-          "wordCount": 3,
-          "targetWords": [],
-          "answerKeyRef": "L04#3",
-          "answerKeyScope": "block-containing-clause"
-        }
-      ],
-      "note": "",
-      "coverage": {
-        "lessonWords": 20,
-        "reachedByAnchors": 3
-      }
-    },
-    {
-      "lesson": 48,
-      "id": "lat-v2-lesson-48",
-      "anchors": [
-        {
-          "no": 1,
-          "kind": "quoted",
-          "uid": "L50#7#26",
-          "ref": "方濟各：願祢受讚頌　Laudato Si'",
-          "clause": "26/29",
-          "text": "quae quidem systematis energetici mundialis praecipuum occupat locum",
-          "wordCount": 8,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 48,
-              "ordinal": 944,
-              "headword": "occupo",
-              "glossZh": "佔領、奪取；攻擊、襲擊",
-              "lemmas": [
-                "occupo"
-              ],
-              "creditLemmas": [
-                "occupo"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L50#7",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 2,
-          "kind": "quoted",
-          "uid": "L08#4#5",
+          "uid": "L08#3#2",
           "ref": "聖奧思定懺悔錄 卷八　Confessiones VIII",
-          "clause": "5/18",
-          "text": "cui deditus obstringebar",
-          "wordCount": 3,
+          "clause": "2/15",
+          "text": "2 videbam enim plenam ecclesiam",
+          "wordCount": 4,
           "targetWords": [],
-          "answerKeyRef": "L08#4",
+          "answerKeyRef": "L08#3",
           "answerKeyScope": "block-containing-clause"
         }
       ],
@@ -8089,132 +6708,49 @@
       }
     },
     {
+      "lesson": 48,
+      "id": "lat-v2-lesson-48",
+      "anchors": [
+        {
+          "no": 1,
+          "kind": "quoted",
+          "uid": "L09#1#4",
+          "ref": "肋令的味增爵：備忘錄　Commonitorium",
+          "clause": "4/7",
+          "text": "Lerina hodie nomen S",
+          "wordCount": 4,
+          "targetWords": [],
+          "answerKeyRef": "L09#1",
+          "answerKeyScope": "block-containing-clause"
+        }
+      ],
+      "note": "本課無可用經典原句，十題全由自撰題補",
+      "coverage": {
+        "lessonWords": 20,
+        "reachedByAnchors": 0
+      }
+    },
+    {
       "lesson": 49,
       "id": "lat-v2-lesson-49",
       "anchors": [
         {
           "no": 1,
           "kind": "quoted",
-          "uid": "L44#3#5",
-          "ref": "梵二：天主的啟示教義憲章　Dei Verbum",
-          "clause": "5/24",
-          "text": "Verbum carnem factum",
-          "wordCount": 3,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 49,
-              "ordinal": 965,
-              "headword": "factum",
-              "glossZh": "事實、行為、業績",
-              "lemmas": [
-                "facio",
-                "factum",
-                "factus",
-                "fio"
-              ],
-              "creditLemmas": [
-                "factum"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L44#3",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 2,
-          "kind": "quoted",
-          "uid": "L41#5#4",
-          "ref": "梵二：大公主義法令　Unitatis Redintegratio",
-          "clause": "4/12",
-          "text": "regendi et sanctificandi Collegio Duodecim concredidit",
-          "wordCount": 6,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 49,
-              "ordinal": 972,
-              "headword": "collegium",
-              "glossZh": "學院、公會、同業組織",
-              "lemmas": [
-                "collegium"
-              ],
-              "creditLemmas": [
-                "collegium"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L41#5",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 3,
-          "kind": "quoted",
-          "uid": "L37#5#9",
-          "ref": "庇護十一：四十年　Quadragesimo Anno",
-          "clause": "9/21",
-          "text": "sed in solem atque pulverem eam producunt",
-          "wordCount": 7,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 49,
-              "ordinal": 979,
-              "headword": "produco",
-              "glossZh": "引出、展示、延長",
-              "lemmas": [
-                "produco"
-              ],
-              "creditLemmas": [
-                "produco"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L37#5",
-          "answerKeyScope": "block-containing-clause"
-        },
-        {
-          "no": 4,
-          "kind": "quoted",
-          "uid": "L44#7#12",
-          "ref": "梵二：天主的啟示教義憲章　Dei Verbum",
-          "clause": "12/20",
-          "text": "Verbum caro factum",
-          "wordCount": 3,
-          "targetWords": [
-            {
-              "volume": 2,
-              "lesson": 49,
-              "ordinal": 965,
-              "headword": "factum",
-              "glossZh": "事實、行為、業績",
-              "lemmas": [
-                "facio",
-                "factum",
-                "factus",
-                "fio"
-              ],
-              "creditLemmas": [
-                "factum"
-              ],
-              "resolved": true,
-              "phrase": false
-            }
-          ],
-          "answerKeyRef": "L44#7",
+          "uid": "L10#5#15",
+          "ref": "聖良一世四旬期講道　Sermones de Quadragesima",
+          "clause": "15/19",
+          "text": "in cujus virtute confidimus",
+          "wordCount": 4,
+          "targetWords": [],
+          "answerKeyRef": "L10#5",
           "answerKeyScope": "block-containing-clause"
         }
       ],
-      "note": "",
+      "note": "本課無可用經典原句，十題全由自撰題補",
       "coverage": {
         "lessonWords": 20,
-        "reachedByAnchors": 3
+        "reachedByAnchors": 0
       }
     },
     {
@@ -8280,13 +6816,13 @@
         {
           "no": 3,
           "kind": "quoted",
-          "uid": "L11#2#5",
-          "ref": "亞他納修信經　Symbolum Quicumque",
-          "clause": "5/23",
-          "text": "et unus immensus",
-          "wordCount": 3,
+          "uid": "L13#3#5",
+          "ref": "聖本篤會規　Regula Benedicti",
+          "clause": "5/15",
+          "text": "quando ipsius vocatur pronomine",
+          "wordCount": 4,
           "targetWords": [],
-          "answerKeyRef": "L11#2",
+          "answerKeyRef": "L13#3",
           "answerKeyScope": "block-containing-clause"
         }
       ],
