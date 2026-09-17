@@ -45,22 +45,23 @@ ITEM_NUMBER = re.compile(r"^(\d{2})\s")
 # the two is exactly the join this whole script exists to check.
 BOOKS: dict[str, list[tuple[str, str, range, int]]] = {
     "grc": [
-        ("greek-original-reader-vol1", "greek-full/exercise-set-v1.json", range(1, 25), 0),
-        ("greek-original-reader-vol2", "greek-full/exercise-set-v1.json", range(25, 51), 0),
-        # 教父半部改節錄後從四冊收成兩冊，見 build_greek_full_reader.PARTS。
-        ("greek-original-reader-vol3", "greek-full/exercise-set-v2.json", range(1, 32), 0),
-        ("greek-original-reader-vol4", "greek-full/exercise-set-v2.json", range(32, 51), 0),
+        # 🚨 這幾個範圍必須跟 build_greek_full_reader.PARTS 一模一樣。切點一改而
+        # 這裡沒跟著改，稽核會說「課次順序印錯」——錯的是稽核自己。
+        ("greek-original-reader-vol1", "greek-full/exercise-set-v1.json", range(1, 27), 0),
+        ("greek-original-reader-vol2", "greek-full/exercise-set-v1.json", range(27, 51), 0),
+        ("greek-original-reader-vol3", "greek-full/exercise-set-v2.json", range(1, 38), 0),
+        ("greek-original-reader-vol4", "greek-full/exercise-set-v2.json", range(38, 51), 0),
     ],
     "lat": [
         ("latin-original-reader-vol1", "latin-full/exercise-set-v1.json", range(1, 51), 0),
-        ("latin-original-reader-vol2", "latin-full/exercise-set-v2.json", range(1, 33), 0),
-        ("latin-original-reader-vol3", "latin-full/exercise-set-v2.json", range(33, 51), 0),
+        ("latin-original-reader-vol2", "latin-full/exercise-set-v2.json", range(1, 28), 0),
+        ("latin-original-reader-vol3", "latin-full/exercise-set-v2.json", range(28, 51), 0),
     ],
     "ja": [
-        ("japanese-original-reader-vol1", "japanese-full/exercise-set.json", range(1, 31), 0),
-        ("japanese-original-reader-vol2", "japanese-full/exercise-set.json", range(31, 51), 0),
-        ("japanese-original-reader-vol3", "japanese-full/exercise-set.json", range(1, 33), 50),
-        ("japanese-original-reader-vol4", "japanese-full/exercise-set.json", range(33, 51), 50),
+        ("japanese-original-reader-vol1", "japanese-full/exercise-set.json", range(1, 28), 0),
+        ("japanese-original-reader-vol2", "japanese-full/exercise-set.json", range(28, 51), 0),
+        ("japanese-original-reader-vol3", "japanese-full/exercise-set.json", range(1, 29), 50),
+        ("japanese-original-reader-vol4", "japanese-full/exercise-set.json", range(29, 51), 50),
     ],
     "heb": [
         ("hebrew-original-reader-50-lessons", "hebrew-full/exercise-set.json", range(1, 51), 0),
@@ -142,6 +143,21 @@ def printed_blocks(pdf: Path) -> list[dict]:
     return blocks
 
 
+def printed_matches(got: dict, want: dict) -> bool:
+    """印出來的那幾行，是不是這一題的句子。
+
+    🚨 不能只比「相等」。題號與出處共用一行，而出處會折行——日文第四冊第 43 課
+    第 2 題的出處是〈奥羽北部の石器時代文化における古代シナ文化の影響について〉，
+    在 141mm 的版心裡折成兩行，於是「題號行下面那幾行」的第一行其實是出處的尾巴
+    「いて〉」，比對就報成「印的不是本課的題目」——而書上完全正確。
+
+    所以：相等當然算，句子落在收集到的那段文字**結尾**也算（前面多出來的是出處
+    的續行）。不放寬成「包含」——那會讓一題印成另一題的一部分也算過。
+    """
+    printed, expected = normalise(got["text"]), normalise(want["text"])
+    return printed == expected or (bool(expected) and printed.endswith(expected))
+
+
 def audit(language: str) -> list[str]:
     """Check what the books print against what the exercise sets hold.
 
@@ -194,7 +210,7 @@ def audit(language: str) -> list[str]:
                     f"印出 {len(block['items'])} 題，應有 {len(row['items'])} 題")
             for index, (got, want) in enumerate(zip(block["items"], row["items"]), start=1):
                 if exact:
-                    paired = normalise(got["text"]) == normalise(want["text"])
+                    paired = printed_matches(got, want)
                 else:
                     paired = best_match(bag(got["text"]), catalogue) == \
                         f"{block['lesson']}:{want['no']}"

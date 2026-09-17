@@ -134,6 +134,8 @@
                 <h2 class="mt-1 font-serif text-2xl font-semibold">{{ lessonData.reading.titleZh }}</h2>
                 <p class="hebrew-title mt-1 text-xl text-stone-600" dir="rtl" lang="hbo">{{ lessonData.reading.titleHe }}</p>
                 <p class="mt-2 text-xs text-stone-500">{{ lessonData.reading.ref }} · {{ lessonData.reading.segmentCount }}段<template v-if="lessonData.reading.wordCount"> · {{ lessonData.reading.wordCount }}詞</template></p>
+                <!-- 裁過就要說出印的是哪一段；不說的話，讀者會以為自己讀完了一整章。 -->
+                <p class="mt-1 text-xs" :class="lessonData.reading.completeness === 'excerpt' ? 'text-amber-800' : 'text-stone-500'">{{ lessonData.reading.extentZh }}</p>
               </div>
               <span class="w-fit rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold text-emerald-800">全文附點已核</span>
             </div>
@@ -250,6 +252,8 @@ interface Reading {
   titleHe: string;
   ref: string;
   summaryZh: string;
+  completeness: "complete" | "excerpt";
+  extentZh: string;
   segmentCount: number;
   wordCount: number | null;
   source: { edition: string; version?: string; sourceUrl: string; license: string };

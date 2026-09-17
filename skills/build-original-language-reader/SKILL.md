@@ -166,7 +166,33 @@ Two failures recur across languages and are worth carrying into any new reader:
      `output/print-masters/` and files the superseded render under
      `_superseded/`. Reader PDFs and DOCX never go to R2 — see
      `docs/repo-hygiene.md`.
-8. Build full readings, not summaries disguised as readings. Preserve the approved order. The default release contract is 25 complete Scripture chapters plus 25 complete prayers or articles; appendices do not silently replace those 50 readings.
+8. Build the readings. Preserve the approved order.
+   - **讀文的長度由版面決定（擁有者 2026-09-17）。** 「一課最多不能超過 8 頁」，
+     而一課印的是二十個生詞、十題翻譯練習、一篇讀文，前兩樣長度固定。所以讀文
+     收到多長不是編輯決定的：`scripts/reader_page_budget.py` 收著一個量出來的
+     模型（固定開銷 + a×讀文長度 + b×單元數），四支 builder 都問它「再加一個
+     單元會不會超過預算」。係數由 `scripts/fit_reader_reading_limit.py` 從排好的
+     PDF 回歸出來——量的是印出來的頁，不是估的。版面一改就要重量。
+     🚨 單元數那一項不能省：同樣五百詞，分五段與分五十段厚度差很多。只用詞數
+     回歸，希臘 R² 0.793、日文 0.478。
+     🚨 回歸線是平均，一半的課會落在線上方，所以要留 `SAFETY_PAGES` 的緩衝——
+     第一輪沒留，四本共 31 課印成九到十頁。
+   - **裁的單位是文本自己的分段**（節、段、章），從篇首連續取，不是詞數切點：
+     「要是自然段落的選集喔，不要是語意沒講完就中斷。」粗分段救不了的時候
+     （整篇只有一段、八百六十詞）才退到更細的一層，退到哪一層要在 extent 裡
+     說出來。句子還算「語意講完了」的單位；詞不算，所以沒有更細的一層。
+   - **裁過就要說出範圍，而且是取代不是附加。** `completeness` 改成 `excerpt`、
+     `extent` 寫出實際範圍，紙本與線上都要印。來源本來寫著「（完整，共 7 節）」
+     的話要把那句拿掉——在後面接一句「節錄前 7／8 段」，同一行會自相矛盾。
+   - **封面副標、凡例、字數統計都要跟著改。** 「二十五章完整經文」不能再說；
+     `counts.scriptureWords` 要數印出來的那些（希臘上冊照 plan 報是 26,115 詞，
+     書上只有 15,902 詞）。
+   - **裁完要問一次「誰指著被砍掉的地方」。** 答案每一本不一樣，要查不要照搬：
+     希伯來與希臘上冊的背誦句是全語料挑的，沒有一則出自該課那一章，裁與不裁
+     都一樣；希臘下冊的記憶句就是從讀文段落切出來的，所以要**先裁再挑**
+     （`select_greek_memory_sentences.py` 讀的是裁過的 plan）。
+   - **線上讀本要跟著裁。** 網頁若照未裁的 plan 逐節渲染，站上就會多出書裡沒有
+     的段落，而兩邊都不會報錯——只有拿著書對照的人會發現。
    - **Every reading is a complete chapter or a complete piece.** Where a work is too long to print entire, cut at *its own* divisions — whole chapters, numbered sections, canons — and let the budget decide how many fit, never how much of one. A word-count excerpt stops mid-argument. Record what was printed: 「第 1–4 節（完整，共 33 節）」.
    - Divisions are not always punctuated (`1 Excitatio mentis…`), section numbers are not always tight against their point (`2 . Haec…`), and the edition's own headings sit inside the OCR — including the title of the *next* reading, which is where this one ends.
    - Ordering is a frozen decision, not automatically difficulty. Once the owner says a reading need not match the vocabulary already taught, a coverage sort has nothing to recommend it: use the canon's order, or chronology, and keep coverage as a reported statistic.
@@ -185,7 +211,7 @@ Two failures recur across languages and are worth carrying into any new reader:
     - **No print caps.** Latin truncated each appendix group at 200 rows to hold the page count down and silently withheld 385 of 585 proper names.
 12. Assemble one master JSON. Fail on incomplete counts, IDs, ordering, translations, diacritics, transliteration, proper names, sources, rights metadata, or placeholder text. Key every cross-file reference on an identity, never on a position a builder computed: lesson numbers move when the sort changes, and one source file can hold several readings.
 13. Run `scripts/validate_reader_release.py` against the master before layout. Its defaults assume the Hebrew shape, where every lesson reads a Bible chapter; a volume that reads none needs `--scripture-lessons 0`, and two of its checks fail on a correct book without it. That is a flag, not a defect to fix in the master.
-14. Generate JIS B5 DOCX and PDF from that exact master, matching the shared layout in `references/layout-web-audio.md` — banner cover, real Heading styles, no heading smaller than the body, each lesson's reading on its own page, a centred page number and a running head that names the current lesson (`STYLEREF`, one section per part). No bound volume may exceed 500 pages and the volumes of one language should be about equally thick, so a long book prints as several — the lesson ranges are frozen in each builder's `PARTS`, and `scripts/build_reader_spines.py` then draws one B5-height spine per volume from its measured page count. `scripts/render_and_check_reader_pdfs.py` drives LibreOffice (one `UserInstallation` profile per file) and then checks page geometry, embedded fonts, U+FFFD and blank pages. Invoke the Documents and PDF skills and follow their render-and-verify procedures.
+14. Generate JIS B5 DOCX and PDF from that exact master, matching the shared layout in `references/layout-web-audio.md` — **凡是要讀的字一律 ≥12pt**（眉標與頁碼除外；下限實作在 `set_run_font` 的 `MIN_READING_PT`，不是靠逐一改常數），**一課最多八頁**，banner cover, real Heading styles, no heading smaller than the body, each lesson's reading on its own page, a centred page number and a running head that names the current lesson (`STYLEREF`, one section per part). No bound volume may exceed 500 pages and the volumes of one language should be about equally thick, so a long book prints as several — the lesson ranges are frozen in each builder's `PARTS`, and `scripts/build_reader_spines.py` then draws one B5-height spine per volume from its measured page count. `scripts/render_and_check_reader_pdfs.py` drives LibreOffice (one `UserInstallation` profile per file) and then checks page geometry, embedded fonts, U+FFFD and blank pages. Invoke the Documents and PDF skills and follow their render-and-verify procedures.
 15. Build the authenticated online counterpart from the same master. Keep authorized JSON and audio out of public static directories.
 16. Decide where the audio lives before building it. Where the owner has said it belongs on the web — as for Ecclesiastical Latin (2026-08-27) — the deliverable is device speech in the page: per-line and per-word controls, a straight-through walk with the current line highlighted, and a spelling rewrite that makes the voice correct rather than approximate (`utils/ecclesiasticalLatin.ts`). Where a recorded track is required instead, add real recordings and segment cues only under the frozen historical/textbook profile, never expose a play control for a missing track, and never let TTS or an external link satisfy that gate.
 17. Run the deterministic, package, raster, full-resolution visual, API, UI, type, build, and audio gates in `references/qa-gates.md`.

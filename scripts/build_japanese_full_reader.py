@@ -51,9 +51,12 @@ OUT_DIR = ROOT / "output/original-readers"
 FONT_JA = "MS Mincho"
 FONT_JA_FILE = r"C:\Windows\Fonts\msmincho.ttc"
 JA_PT = 13.5
-EXERCISE_PT = 13
+EXERCISE_PT = 12
 JA_TITLE_PT = 15
-GLOSS_PT = 9.4
+# 🚨 擁有者 2026-09-17：「字都不可以小於 12。」正文、生詞表、逐詞對譯的中文義、
+# 整句中譯、練習——凡是要讀的字一律 ≥12pt。只有頁眉與頁碼維持小字，那是版口
+# 標示不是閱讀內容。改這幾個數字會直接改變每頁容納的份量，讀文上限要跟著重算。
+GLOSS_PT = 12
 
 # 印刷冊次與內容分半是兩件事。合約把內容分成「第一冊＝現代語／第二冊＝文語」，
 # 但一本不得超過 500 頁，這兩半各自 744 與 657 頁，所以印成四本。冊號照使用者
@@ -76,11 +79,14 @@ VOLUMES = {
 
 # 切點由 2026-09-08 的實測版面算出（現代語那半 744 頁、文語那半 657 頁），四冊
 # 329–377 頁。切點只落在課與課之間，課次編號不動，附錄只印在該半的最後一分冊。
+# 🚨 切點是照**實際頁數**算出來的，不是照課數對半。讀文改成節錄之後每課的
+# 份量才變得平均（四分位 6–12 頁），在那之前最厚的一課是最薄的三四倍，切點
+# 必須遷就那幾課。改了讀文長度就要重算切點，否則會留下一冊厚一冊薄。
 PARTS = [
-    {"book": 1, "source": 1, "first": 1, "last": 30, "appendix": False},   # 約 374 頁
-    {"book": 2, "source": 1, "first": 31, "last": 50, "appendix": True},   # 約 377 頁
-    {"book": 3, "source": 2, "first": 1, "last": 32, "appendix": False},   # 約 329 頁
-    {"book": 4, "source": 2, "first": 33, "last": 50, "appendix": True},   # 約 335 頁
+    {"book": 1, "source": 1, "first": 1, "last": 27, "appendix": False},   # 約 181 頁
+    {"book": 2, "source": 1, "first": 28, "last": 50, "appendix": True},   # 約 178 頁
+    {"book": 3, "source": 2, "first": 1, "last": 28, "appendix": False},   # 約 180 頁
+    {"book": 4, "source": 2, "first": 29, "last": 50, "appendix": True},   # 約 188 頁
 ]
 
 _metrics = None
@@ -129,9 +135,15 @@ def accent_marks(entry: dict) -> str:
 
 
 def add_vocabulary(document: Document, rows: list[dict]) -> None:
-    document.add_heading(f"生詞　{len(rows)} 個", level=2)
+    H.compact_heading(document.add_heading(f"生詞　{len(rows)} 個", level=2),
+                      before=H.SECTION_HEADING_SPACE_BEFORE_PT,
+                      after=H.SECTION_HEADING_SPACE_AFTER_PT, line_spacing=1.0)
     table = document.add_table(rows=1, cols=5)
-    widths = [8, 34, 34, 18, 47]
+    # 🚨 編號欄要放得下兩位數。字級提到 12pt 之後，「14」需要 8.4mm 再加 cell 邊距，
+    # 原本的 8mm 放不下，Word 就把它拆成上下兩行——書上印出來是「1」換行「4」。
+    # 🚨 欄寬不足會折行，折一次就多一列——二十個詞因此排不進一頁。假名欄放得下
+    # 「エ・レベ・ーター」這種長片假名，中文欄縮一點補回來。
+    widths = [12, 33, 38, 16, 42]
     H.set_table_geometry(table, widths)
     H.set_borders(table)
     header = table.rows[0]
@@ -153,7 +165,9 @@ def add_vocabulary(document: Document, rows: list[dict]) -> None:
             (entry.get("glossZh") or "", H.FONT_ZH, H.TABLE_SIZE_PT, H.INK),
         ]
         for cell, (text, font, size, color) in zip(cells, values):
-            H.set_cell_margins(cell)
+            H.set_cell_margins(cell, top=H.VOCAB_CELL_PAD_DXA,
+                               bottom=H.VOCAB_CELL_PAD_DXA)
+            H.tighten_cell(cell)
             paragraph = cell.paragraphs[0]
             paragraph.paragraph_format.space_after = Pt(0)
             H.add_mixed_script_text(paragraph, text, font, size, color=color)
@@ -233,7 +247,10 @@ def add_exercises(document: Document, block: dict | None, lesson: dict) -> None:
             f"第 {lesson['volume']} 冊第 {lesson['lesson']} 課沒有練習題："
             "exercise-set 對不上本課詞表"
         )
-    document.add_heading(f"本課翻譯練習（{len(block['items'])}題）", level=2)
+    H.compact_heading(
+        document.add_heading(f"本課翻譯練習（{len(block['items'])}題）", level=2),
+        before=H.SECTION_HEADING_SPACE_BEFORE_PT,
+        after=H.SECTION_HEADING_SPACE_AFTER_PT, line_spacing=1.0)
     intro = H.add_body(
         document,
         "把每一句譯成繁體中文。題目只印日文——標出處的是引用題，出處是青空文庫或"
@@ -249,14 +266,16 @@ def add_exercises(document: Document, block: dict | None, lesson: dict) -> None:
     if (block.get("note") or "").strip():
         note_text += block["note"].strip() + "。"
     note = document.add_paragraph()
-    note.paragraph_format.space_after = Pt(5)
+    note.paragraph_format.space_after = Pt(3)
+    note.paragraph_format.line_spacing = Pt(H.EXERCISE_INTRO_LINE_PT)
     # note 裡夾著日文詞條，整串交給中文字體會逐字回退到 LibreOffice 自己挑的字型。
     H.add_mixed_script_text(note, note_text, H.FONT_ZH, H.CAPTION_PT - 0.4, color=H.MUTED)
     H.set_keep(note, next_paragraph=True)
     for item in block["items"]:
         head = document.add_paragraph()
-        head.paragraph_format.space_before = Pt(3)
-        head.paragraph_format.space_after = Pt(1)
+        head.paragraph_format.space_before = Pt(H.EXERCISE_ITEM_SPACE_BEFORE_PT)
+        head.paragraph_format.space_after = Pt(H.EXERCISE_ITEM_SPACE_AFTER_PT)
+        head.paragraph_format.line_spacing = Pt(H.EXERCISE_LABEL_LINE_PT)
         H.set_run_font(head.add_run(f"{item['no']:02d}　"), H.FONT_UI, H.LABEL_PT,
                        bold=True, color=H.ACCENT)
         if item["kind"] == "quoted":
@@ -268,19 +287,24 @@ def add_exercises(document: Document, block: dict | None, lesson: dict) -> None:
         H.set_keep(head, next_paragraph=True)
         line = document.add_paragraph()
         line.paragraph_format.left_indent = Mm(4)
-        line.paragraph_format.space_after = Pt(2)
-        line.paragraph_format.line_spacing = 1.4
+        line.paragraph_format.space_after = Pt(H.EXERCISE_TEXT_SPACE_AFTER_PT)
+        line.paragraph_format.line_spacing = H.EXERCISE_TEXT_LINE_SPACING
         ja_run(line, item["text"], EXERCISE_PT)
         H.set_keep(line, next_paragraph=True)
         answer = document.add_paragraph(" ")
-        answer.paragraph_format.space_after = Pt(5)
-        H.paragraph_rule(answer, color=H.RULE, size="3")
+        # 作答線留一行寫得下中文就夠；原本每題連留白佔 28.8mm，十題排掉一頁半。
+        answer.paragraph_format.space_after = Pt(H.EXERCISE_ANSWER_SPACE_AFTER_PT)
+        answer.paragraph_format.line_spacing = Pt(H.EXERCISE_ANSWER_LINE_PT)
+        H.paragraph_rule(answer, color=H.RULE, size="3", space="1")
 
 
 def add_reading(document: Document, lesson: dict, interlinear: dict) -> None:
     # 讀本自己起一頁：生詞與練習題是預備，讀本才是這一課。
-    H.page_break(document)
-    H.add_label(document, "Reading")
+    # 🚨 用段落的 page_break_before，不要用 document.add_page_break()。後者會插入
+    # 一個「帶分頁符的空段落」，接著這個 label 與標題的 keep-with-next 又把整組
+    # 推到下一頁——中間夾出一張全空白的紙。第一冊 257 頁裡有 29 頁是這樣來的，
+    # 剛好每課一頁，而且稽核只看「課次與題數」不看空白頁，一路都沒報。
+    H.add_label(document, "Reading", page_break_before=True)
     document.add_heading("讀本", level=1)
     heading = document.add_heading(lesson["title"], level=2)
     H.paragraph_rule(heading, color=H.GOLD, size="8")
@@ -294,13 +318,17 @@ def add_lesson(document: Document, lesson: dict, interlinear: dict, spec: dict,
     H.add_label(document, f"Lesson {lesson['lesson']:02d}  ·  {spec['subtitle']}",
                 page_break_before=page_break_before)
     number = H.mark_running_tag(document.add_paragraph())
-    number.paragraph_format.space_after = Pt(1)
+    number.paragraph_format.space_after = Pt(0)
+    number.paragraph_format.line_spacing = Pt(H.LESSON_NUMBER_LINE_PT)
     H.set_run_font(number.add_run(f"第 {lesson['lesson']:02d} 課"), H.FONT_UI, 11,
                    bold=True, color=H.ACCENT)
-    heading = document.add_heading(lesson["title"], level=1)
+    heading = H.compact_heading(document.add_heading(lesson["title"], level=1),
+                                before=H.LESSON_TITLE_SPACE_BEFORE_PT,
+                                after=H.LESSON_TITLE_SPACE_AFTER_PT,
+                                line_spacing=H.LESSON_TITLE_LINE_SPACING)
     H.paragraph_rule(heading, color=H.GOLD, size="14")
     source = document.add_paragraph()
-    source.paragraph_format.space_after = Pt(6)
+    source.paragraph_format.space_after = Pt(2)
     H.add_mixed_script_text(
         source,
         f"{lesson['author']}　{lesson['extent']}　{lesson['orthography']}　{lesson['chars']} 字",
@@ -488,6 +516,7 @@ def add_corpus_appendix(document: Document, payload: dict, *, classical: bool) -
                 size = H.TABLE_SIZE_PT + (1.2 if field == "form" else 0)
                 color = H.INK if field in ("form", "modern", "zh") else H.MUTED
                 H.set_cell_margins(cell)
+                H.tighten_cell(cell)
                 paragraph = cell.paragraphs[0]
                 paragraph.paragraph_format.space_after = Pt(0)
                 H.add_mixed_script_text(paragraph, text, font, size, color=color)

@@ -4,7 +4,7 @@
     {
       "lesson": 1,
       "half": "patristic",
-      "candidatesConsidered": 15,
+      "candidatesConsidered": 4,
       "top": [
         {
           "ref": "1:2.5#1",
@@ -19,54 +19,6 @@
             "from_this_lesson"
           ],
           "score": 5.267
-        },
-        {
-          "ref": "6:5.2#2",
-          "titleZh": "依納爵致羅馬人書",
-          "matchCount": 1,
-          "matchedTerms": [
-            "καν"
-          ],
-          "knownCoverage": 0.1,
-          "lengthFit": 0.786,
-          "memorabilityFlags": [],
-          "score": 4.186
-        },
-        {
-          "ref": "7:9.1#1",
-          "titleZh": "依納爵致士每拿人書",
-          "matchCount": 1,
-          "matchedTerms": [
-            "λοιπον"
-          ],
-          "knownCoverage": 0.053,
-          "lengthFit": 0.929,
-          "memorabilityFlags": [],
-          "score": 4.139
-        },
-        {
-          "ref": "19:3#5",
-          "titleZh": "猶斯定《第一護教辭》1–8：向皇帝陳情",
-          "matchCount": 1,
-          "matchedTerms": [
-            "λοιπον"
-          ],
-          "knownCoverage": 0.048,
-          "lengthFit": 0.929,
-          "memorabilityFlags": [],
-          "score": 4.119
-        },
-        {
-          "ref": "16:8.1.3#1",
-          "titleZh": "黑馬牧人書：誡命一至四",
-          "matchCount": 1,
-          "matchedTerms": [
-            "λιαν"
-          ],
-          "knownCoverage": 0.111,
-          "lengthFit": 0.643,
-          "memorabilityFlags": [],
-          "score": 4.087
         },
         {
           "ref": "20:61#11",
@@ -109,36 +61,8 @@
     {
       "lesson": 2,
       "half": "patristic",
-      "candidatesConsidered": 38,
+      "candidatesConsidered": 10,
       "top": [
-        {
-          "ref": "2:4.1#1",
-          "titleZh": "依納爵致以弗所人書",
-          "matchCount": 2,
-          "matchedTerms": [
-            "επισκοποσ",
-            "οθεν"
-          ],
-          "knownCoverage": 0.118,
-          "lengthFit": 1.0,
-          "memorabilityFlags": [
-            "from_this_lesson"
-          ],
-          "score": 8.471
-        },
-        {
-          "ref": "7:5.3#2",
-          "titleZh": "依納爵致士每拿人書",
-          "matchCount": 2,
-          "matchedTerms": [
-            "μεχρι",
-            "παθοσ"
-          ],
-          "knownCoverage": 0.08,
-          "lengthFit": 0.643,
-          "memorabilityFlags": [],
-          "score": 6.963
-        },
         {
           "ref": "2:1.3#2",
           "titleZh": "依納爵致以弗所人書",
@@ -154,34 +78,6 @@
           "score": 5.179
         },
         {
-          "ref": "2:6.1#2",
-          "titleZh": "依納爵致以弗所人書",
-          "matchCount": 1,
-          "matchedTerms": [
-            "επισκοποσ"
-          ],
-          "knownCoverage": 0.062,
-          "lengthFit": 0.929,
-          "memorabilityFlags": [
-            "from_this_lesson"
-          ],
-          "score": 5.179
-        },
-        {
-          "ref": "2:5.2#2",
-          "titleZh": "依納爵致以弗所人書",
-          "matchCount": 1,
-          "matchedTerms": [
-            "επισκοποσ"
-          ],
-          "knownCoverage": 0.069,
-          "lengthFit": 0.429,
-          "memorabilityFlags": [
-            "from_this_lesson"
-          ],
-          "score": 4.704
-        },
-        {
           "ref": "13:59.4#1",
           "titleZh": "革利免一書 59–61：大祈禱文",
           "matchCount": 1,
@@ -194,86 +90,84 @@
           "score": 4.357
         },
         {
-          "ref": "6:4.3#2",
-          "titleZh": "依納爵致羅馬人書",
+          "ref": "5:3.2#1",
+          "titleZh": "依納爵致費拉德非人書",
           "matchCount": 1,
           "matchedTerms": [
-            "μεχρι"
+            "επισκοποσ"
           ],
-          "knownCoverage": 0.077,
-          "lengthFit": 1.0,
+          "knownCoverage": 0.053,
+          "lengthFit": 0.929,
           "memorabilityFlags": [],
-          "score": 4.308
+          "score": 4.139
         },
         {
-          "ref": "8:4.3#2",
-          "titleZh": "依納爵致坡旅甲書",
+          "ref": "25:13#1",
+          "titleZh": "金口若望《復活節教理講道》",
           "matchCount": 1,
           "matchedTerms": [
             "κοινοσ"
           ],
-          "knownCoverage": 0.067,
-          "lengthFit": 1.0,
+          "knownCoverage": 0.077,
+          "lengthFit": 0.786,
           "memorabilityFlags": [],
-          "score": 4.267
+          "score": 4.093
+        },
+        {
+          "ref": "18:42.5#1",
+          "titleZh": "革利免一書 42–44：使徒統緒與教會職分",
+          "matchCount": 1,
+          "matchedTerms": [
+            "επισκοποσ"
+          ],
+          "knownCoverage": 0.053,
+          "lengthFit": 0.786,
+          "memorabilityFlags": [],
+          "score": 3.996
+        },
+        {
+          "ref": "8:1.3#2",
+          "titleZh": "依納爵致坡旅甲書",
+          "matchCount": 1,
+          "matchedTerms": [
+            "τελειοσ"
+          ],
+          "knownCoverage": 0.05,
+          "lengthFit": 0.786,
+          "memorabilityFlags": [],
+          "score": 3.986
+        },
+        {
+          "ref": "18:42.5#2",
+          "titleZh": "革利免一書 42–44：使徒統緒與教會職分",
+          "matchCount": 1,
+          "matchedTerms": [
+            "επισκοποσ"
+          ],
+          "knownCoverage": 0.043,
+          "lengthFit": 0.5,
+          "memorabilityFlags": [],
+          "score": 3.674
+        },
+        {
+          "ref": "17:1.8#1",
+          "titleZh": "巴拿巴書 1–5：新約與舊約的關係",
+          "matchCount": 1,
+          "matchedTerms": [
+            "παρειμι"
+          ],
+          "knownCoverage": 0.038,
+          "lengthFit": 0.5,
+          "memorabilityFlags": [],
+          "score": 3.654
         }
       ]
     },
     {
       "lesson": 3,
       "half": "patristic",
-      "candidatesConsidered": 10,
+      "candidatesConsidered": 5,
       "top": [
-        {
-          "ref": "25:26#1",
-          "titleZh": "金口若望《復活節教理講道》",
-          "matchCount": 1,
-          "matchedTerms": [
-            "οσπερ"
-          ],
-          "knownCoverage": 0.182,
-          "lengthFit": 0.786,
-          "memorabilityFlags": [],
-          "score": 4.513
-        },
-        {
-          "ref": "3:6.2#2",
-          "titleZh": "依納爵致馬內夏人書",
-          "matchCount": 1,
-          "matchedTerms": [
-            "αφθαρσια"
-          ],
-          "knownCoverage": 0.037,
-          "lengthFit": 0.357,
-          "memorabilityFlags": [
-            "from_this_lesson"
-          ],
-          "score": 4.505
-        },
-        {
-          "ref": "7:9.1#3",
-          "titleZh": "依納爵致士每拿人書",
-          "matchCount": 1,
-          "matchedTerms": [
-            "τιμαω"
-          ],
-          "knownCoverage": 0.1,
-          "lengthFit": 0.786,
-          "memorabilityFlags": [],
-          "score": 4.186
-        },
-        {
-          "ref": "15:1.2.4#2",
-          "titleZh": "黑馬牧人書：第一異象",
-          "matchCount": 1,
-          "matchedTerms": [
-            "παντωσ"
-          ],
-          "knownCoverage": 0.071,
-          "lengthFit": 0.857,
-          "memorabilityFlags": [],
-          "score": 4.143
-        },
         {
           "ref": "8:3.1#4",
           "titleZh": "依納爵致坡旅甲書",
@@ -321,65 +215,28 @@
           "lengthFit": 0.714,
           "memorabilityFlags": [],
           "score": 3.905
+        },
+        {
+          "ref": "23:2#2",
+          "titleZh": "額我略‧納祥《神學講辭》第廿七篇：論神學該由誰、何時、如何講",
+          "matchCount": 1,
+          "matchedTerms": [
+            "παντωσ"
+          ],
+          "knownCoverage": 0.2,
+          "lengthFit": 0.5,
+          "memorabilityFlags": [
+            "very_short"
+          ],
+          "score": 3.8
         }
       ]
     },
     {
       "lesson": 4,
       "half": "patristic",
-      "candidatesConsidered": 11,
+      "candidatesConsidered": 1,
       "top": [
-        {
-          "ref": "21:2.4#3",
-          "titleZh": "亞他那修《論道成肉身》1–4：創造與敗壞",
-          "matchCount": 2,
-          "matchedTerms": [
-            "δημιουργοσ",
-            "υλη"
-          ],
-          "knownCoverage": 0.091,
-          "lengthFit": 0.5,
-          "memorabilityFlags": [],
-          "score": 6.864
-        },
-        {
-          "ref": "4:4.2#2",
-          "titleZh": "依納爵致特拉勒人書",
-          "matchCount": 1,
-          "matchedTerms": [
-            "ζηλοσ"
-          ],
-          "knownCoverage": 0.053,
-          "lengthFit": 1.0,
-          "memorabilityFlags": [
-            "from_this_lesson"
-          ],
-          "score": 5.211
-        },
-        {
-          "ref": "2:4.1#3",
-          "titleZh": "依納爵致以弗所人書",
-          "matchCount": 1,
-          "matchedTerms": [
-            "ομονοια"
-          ],
-          "knownCoverage": 0.067,
-          "lengthFit": 0.929,
-          "memorabilityFlags": [],
-          "score": 4.195
-        },
-        {
-          "ref": "21:2.4#2",
-          "titleZh": "亞他那修《論道成肉身》1–4：創造與敗壞",
-          "matchCount": 1,
-          "matchedTerms": [
-            "υλη"
-          ],
-          "knownCoverage": 0.053,
-          "lengthFit": 0.714,
-          "memorabilityFlags": [],
-          "score": 3.925
-        },
         {
           "ref": "18:43.1#1",
           "titleZh": "革利免一書 42–44：使徒統緒與教會職分",
@@ -391,49 +248,13 @@
           "lengthFit": 0.714,
           "memorabilityFlags": [],
           "score": 3.888
-        },
-        {
-          "ref": "12:2.3#5",
-          "titleZh": "致丟格那妥書",
-          "matchCount": 1,
-          "matchedTerms": [
-            "υλη"
-          ],
-          "knownCoverage": 0.074,
-          "lengthFit": 0.5,
-          "memorabilityFlags": [],
-          "score": 3.796
-        },
-        {
-          "ref": "21:2.4#5",
-          "titleZh": "亞他那修《論道成肉身》1–4：創造與敗壞",
-          "matchCount": 1,
-          "matchedTerms": [
-            "υλη"
-          ],
-          "knownCoverage": 0.043,
-          "lengthFit": 0.571,
-          "memorabilityFlags": [],
-          "score": 3.745
-        },
-        {
-          "ref": "17:2.1#1",
-          "titleZh": "巴拿巴書 1–5：新約與舊約的關係",
-          "matchCount": 1,
-          "matchedTerms": [
-            "ενεργεω"
-          ],
-          "knownCoverage": 0.032,
-          "lengthFit": 0.5,
-          "memorabilityFlags": [],
-          "score": 3.629
         }
       ]
     },
     {
       "lesson": 5,
       "half": "patristic",
-      "candidatesConsidered": 15,
+      "candidatesConsidered": 7,
       "top": [
         {
           "ref": "15:1.1.5#1",
@@ -460,18 +281,6 @@
           "score": 4.25
         },
         {
-          "ref": "6:4.1#3",
-          "titleZh": "依納爵致羅馬人書",
-          "matchCount": 1,
-          "matchedTerms": [
-            "επιτυγχανω"
-          ],
-          "knownCoverage": 0.053,
-          "lengthFit": 0.929,
-          "memorabilityFlags": [],
-          "score": 4.139
-        },
-        {
           "ref": "16:7.1.6#3",
           "titleZh": "黑馬牧人書：誡命一至四",
           "matchCount": 1,
@@ -496,47 +305,47 @@
           "score": 4.068
         },
         {
-          "ref": "18:43.1#1",
-          "titleZh": "革利免一書 42–44：使徒統緒與教會職分",
+          "ref": "8:2.3#1",
+          "titleZh": "依納爵致坡旅甲書",
           "matchCount": 1,
           "matchedTerms": [
-            "θαυμαστοσ"
+            "επιτυγχανω"
           ],
-          "knownCoverage": 0.087,
+          "knownCoverage": 0.048,
           "lengthFit": 0.714,
           "memorabilityFlags": [],
-          "score": 4.062
+          "score": 3.905
         },
         {
-          "ref": "3:10.3#1",
-          "titleZh": "依納爵致馬內夏人書",
+          "ref": "6:2.1#2",
+          "titleZh": "依納爵致羅馬人書",
           "matchCount": 1,
           "matchedTerms": [
-            "ατοποσ"
+            "επιτυγχανω"
           ],
-          "knownCoverage": 0.077,
-          "lengthFit": 0.714,
+          "knownCoverage": 0.04,
+          "lengthFit": 0.571,
           "memorabilityFlags": [],
-          "score": 4.022
+          "score": 3.731
         },
         {
-          "ref": "15:1.2.2#2",
-          "titleZh": "黑馬牧人書：第一異象",
+          "ref": "6:1.2#3",
+          "titleZh": "依納爵致羅馬人書",
           "matchCount": 1,
           "matchedTerms": [
-            "κυρια"
+            "επιτυγχανω"
           ],
-          "knownCoverage": 0.077,
-          "lengthFit": 0.714,
+          "knownCoverage": 0.032,
+          "lengthFit": 0.429,
           "memorabilityFlags": [],
-          "score": 4.022
+          "score": 3.558
         }
       ]
     },
     {
       "lesson": 6,
       "half": "patristic",
-      "candidatesConsidered": 15,
+      "candidatesConsidered": 5,
       "top": [
         {
           "ref": "8:4.1#2",
@@ -550,45 +359,6 @@
           "lengthFit": 0.714,
           "memorabilityFlags": [],
           "score": 7.286
-        },
-        {
-          "ref": "4:5.1#2",
-          "titleZh": "依納爵致特拉勒人書",
-          "matchCount": 2,
-          "matchedTerms": [
-            "μηποτε",
-            "χωρεω"
-          ],
-          "knownCoverage": 0.087,
-          "lengthFit": 0.643,
-          "memorabilityFlags": [],
-          "score": 6.991
-        },
-        {
-          "ref": "6:4.2#3",
-          "titleZh": "依納爵致羅馬人書",
-          "matchCount": 1,
-          "matchedTerms": [
-            "οργανον"
-          ],
-          "knownCoverage": 0.053,
-          "lengthFit": 0.929,
-          "memorabilityFlags": [
-            "from_this_lesson"
-          ],
-          "score": 5.139
-        },
-        {
-          "ref": "12:2.7#1",
-          "titleZh": "致丟格那妥書",
-          "matchCount": 1,
-          "matchedTerms": [
-            "καταφρονεω"
-          ],
-          "knownCoverage": 0.087,
-          "lengthFit": 1.0,
-          "memorabilityFlags": [],
-          "score": 4.348
         },
         {
           "ref": "7:3.2#3",
@@ -615,48 +385,36 @@
           "score": 4.119
         },
         {
-          "ref": "4:5.1#1",
-          "titleZh": "依納爵致特拉勒人書",
+          "ref": "8:1.2#2",
+          "titleZh": "依納爵致坡旅甲書",
           "matchCount": 1,
           "matchedTerms": [
-            "επουρανιοσ"
+            "πνευματικοσ"
           ],
-          "knownCoverage": 0.091,
-          "lengthFit": 0.714,
+          "knownCoverage": 0.037,
+          "lengthFit": 0.571,
           "memorabilityFlags": [],
-          "score": 4.078
+          "score": 3.72
         },
         {
-          "ref": "7:5.2#1",
-          "titleZh": "依納爵致士每拿人書",
+          "ref": "10:2.3#1",
+          "titleZh": "坡旅甲殉道記",
           "matchCount": 1,
           "matchedTerms": [
-            "φρονεω"
+            "καταφρονεω"
           ],
-          "knownCoverage": 0.091,
-          "lengthFit": 0.714,
+          "knownCoverage": 0.036,
+          "lengthFit": 0.571,
           "memorabilityFlags": [],
-          "score": 4.078
+          "score": 3.714
         }
       ]
     },
     {
       "lesson": 7,
       "half": "patristic",
-      "candidatesConsidered": 10,
+      "candidatesConsidered": 4,
       "top": [
-        {
-          "ref": "14:19.6#1",
-          "titleZh": "巴拿巴書 18–21：兩道",
-          "matchCount": 1,
-          "matchedTerms": [
-            "επιθυμεω"
-          ],
-          "knownCoverage": 0.077,
-          "lengthFit": 0.929,
-          "memorabilityFlags": [],
-          "score": 4.236
-        },
         {
           "ref": "6:3.1#2",
           "titleZh": "依納爵致羅馬人書",
@@ -670,70 +428,6 @@
           "score": 4.214
         },
         {
-          "ref": "11:5.7#1",
-          "titleZh": "革利免二書",
-          "matchCount": 1,
-          "matchedTerms": [
-            "επιθυμεω"
-          ],
-          "knownCoverage": 0.056,
-          "lengthFit": 0.929,
-          "memorabilityFlags": [],
-          "score": 4.151
-        },
-        {
-          "ref": "6:6.1#2",
-          "titleZh": "依納爵致羅馬人書",
-          "matchCount": 1,
-          "matchedTerms": [
-            "περασ"
-          ],
-          "knownCoverage": 0.048,
-          "lengthFit": 0.929,
-          "memorabilityFlags": [],
-          "score": 4.119
-        },
-        {
-          "ref": "6:4.3#4",
-          "titleZh": "依納爵致羅馬人書",
-          "matchCount": 1,
-          "matchedTerms": [
-            "επιθυμεω"
-          ],
-          "knownCoverage": 0.25,
-          "lengthFit": 0.571,
-          "memorabilityFlags": [
-            "very_short"
-          ],
-          "score": 4.071
-        },
-        {
-          "ref": "6:6.1#1",
-          "titleZh": "依納爵致羅馬人書",
-          "matchCount": 1,
-          "matchedTerms": [
-            "περασ"
-          ],
-          "knownCoverage": 0.048,
-          "lengthFit": 0.857,
-          "memorabilityFlags": [],
-          "score": 4.048
-        },
-        {
-          "ref": "12:2.3#1",
-          "titleZh": "致丟格那妥書",
-          "matchCount": 1,
-          "matchedTerms": [
-            "φθαρτοσ"
-          ],
-          "knownCoverage": 0.222,
-          "lengthFit": 0.571,
-          "memorabilityFlags": [
-            "very_short"
-          ],
-          "score": 3.96
-        },
-        {
           "ref": "10:2.3#1",
           "titleZh": "坡旅甲殉道記",
           "matchCount": 1,
@@ -744,13 +438,39 @@
           "lengthFit": 0.571,
           "memorabilityFlags": [],
           "score": 3.857
+        },
+        {
+          "ref": "11:1.6#2",
+          "titleZh": "革利免二書",
+          "matchCount": 1,
+          "matchedTerms": [
+            "αποτιθημι"
+          ],
+          "knownCoverage": 0.038,
+          "lengthFit": 0.429,
+          "memorabilityFlags": [],
+          "score": 3.582
+        },
+        {
+          "ref": "25:18#1",
+          "titleZh": "金口若望《復活節教理講道》",
+          "matchCount": 1,
+          "matchedTerms": [
+            "κατω"
+          ],
+          "knownCoverage": 0.038,
+          "lengthFit": 0.5,
+          "memorabilityFlags": [
+            "proper_names"
+          ],
+          "score": 2.954
         }
       ]
     },
     {
       "lesson": 8,
       "half": "patristic",
-      "candidatesConsidered": 18,
+      "candidatesConsidered": 7,
       "top": [
         {
           "ref": "8:1.3#2",
@@ -767,58 +487,6 @@
           "score": 5.186
         },
         {
-          "ref": "8:6.2#1",
-          "titleZh": "依納爵致坡旅甲書",
-          "matchCount": 1,
-          "matchedTerms": [
-            "ω"
-          ],
-          "knownCoverage": 0.053,
-          "lengthFit": 0.786,
-          "memorabilityFlags": [
-            "from_this_lesson"
-          ],
-          "score": 4.996
-        },
-        {
-          "ref": "8:8.3#1",
-          "titleZh": "依納爵致坡旅甲書",
-          "matchCount": 1,
-          "matchedTerms": [
-            "ω"
-          ],
-          "knownCoverage": 0.042,
-          "lengthFit": 0.5,
-          "memorabilityFlags": [
-            "from_this_lesson"
-          ],
-          "score": 4.667
-        },
-        {
-          "ref": "7:8.1#4",
-          "titleZh": "依納爵致士每拿人書",
-          "matchCount": 1,
-          "matchedTerms": [
-            "ω"
-          ],
-          "knownCoverage": 0.1,
-          "lengthFit": 0.857,
-          "memorabilityFlags": [],
-          "score": 4.257
-        },
-        {
-          "ref": "24:3#1",
-          "titleZh": "額我略‧納祥《神學講辭》第廿八篇 1–10：論神",
-          "matchCount": 1,
-          "matchedTerms": [
-            "ω"
-          ],
-          "knownCoverage": 0.059,
-          "lengthFit": 1.0,
-          "memorabilityFlags": [],
-          "score": 4.235
-        },
-        {
           "ref": "25:10#3",
           "titleZh": "金口若望《復活節教理講道》",
           "matchCount": 1,
@@ -831,18 +499,6 @@
           "score": 4.214
         },
         {
-          "ref": "14:19.6#3",
-          "titleZh": "巴拿巴書 18–21：兩道",
-          "matchCount": 1,
-          "matchedTerms": [
-            "προσδεχομαι"
-          ],
-          "knownCoverage": 0.083,
-          "lengthFit": 0.857,
-          "memorabilityFlags": [],
-          "score": 4.19
-        },
-        {
           "ref": "25:3#1",
           "titleZh": "金口若望《復活節教理講道》",
           "matchCount": 1,
@@ -853,26 +509,62 @@
           "lengthFit": 0.786,
           "memorabilityFlags": [],
           "score": 4.186
+        },
+        {
+          "ref": "15:1.1.7#5",
+          "titleZh": "黑馬牧人書：第一異象",
+          "matchCount": 1,
+          "matchedTerms": [
+            "ω"
+          ],
+          "knownCoverage": 0.056,
+          "lengthFit": 0.929,
+          "memorabilityFlags": [],
+          "score": 4.151
+        },
+        {
+          "ref": "2:2.2#1",
+          "titleZh": "依納爵致以弗所人書",
+          "matchCount": 1,
+          "matchedTerms": [
+            "ω"
+          ],
+          "knownCoverage": 0.091,
+          "lengthFit": 0.714,
+          "memorabilityFlags": [],
+          "score": 4.078
+        },
+        {
+          "ref": "10:1.1#2",
+          "titleZh": "坡旅甲殉道記",
+          "matchCount": 1,
+          "matchedTerms": [
+            "ανωθεν"
+          ],
+          "knownCoverage": 0.053,
+          "lengthFit": 0.571,
+          "memorabilityFlags": [],
+          "score": 3.782
+        },
+        {
+          "ref": "5:2.2#1",
+          "titleZh": "依納爵致費拉德非人書",
+          "matchCount": 1,
+          "matchedTerms": [
+            "ηδονη"
+          ],
+          "knownCoverage": 0.04,
+          "lengthFit": 0.571,
+          "memorabilityFlags": [],
+          "score": 3.731
         }
       ]
     },
     {
       "lesson": 9,
       "half": "patristic",
-      "candidatesConsidered": 7,
+      "candidatesConsidered": 1,
       "top": [
-        {
-          "ref": "3:9.2#2",
-          "titleZh": "依納爵致馬內夏人書",
-          "matchCount": 1,
-          "matchedTerms": [
-            "δικαιωσ"
-          ],
-          "knownCoverage": 0.118,
-          "lengthFit": 1.0,
-          "memorabilityFlags": [],
-          "score": 4.471
-        },
         {
           "ref": "8:2.3#3",
           "titleZh": "依納爵致坡旅甲書",
@@ -884,75 +576,13 @@
           "lengthFit": 1.0,
           "memorabilityFlags": [],
           "score": 4.222
-        },
-        {
-          "ref": "5:8.1#4",
-          "titleZh": "依納爵致費拉德非人書",
-          "matchCount": 1,
-          "matchedTerms": [
-            "δεσμοσ"
-          ],
-          "knownCoverage": 0.053,
-          "lengthFit": 1.0,
-          "memorabilityFlags": [],
-          "score": 4.211
-        },
-        {
-          "ref": "1:4.3#1",
-          "titleZh": "十二使徒遺訓",
-          "matchCount": 1,
-          "matchedTerms": [
-            "δικαιωσ"
-          ],
-          "knownCoverage": 0.056,
-          "lengthFit": 0.786,
-          "memorabilityFlags": [],
-          "score": 4.008
-        },
-        {
-          "ref": "15:1.2.3#2",
-          "titleZh": "黑馬牧人書：第一異象",
-          "matchCount": 1,
-          "matchedTerms": [
-            "ιλαροσ"
-          ],
-          "knownCoverage": 0.059,
-          "lengthFit": 0.714,
-          "memorabilityFlags": [],
-          "score": 3.95
-        },
-        {
-          "ref": "15:1.1.9#2",
-          "titleZh": "黑馬牧人書：第一異象",
-          "matchCount": 1,
-          "matchedTerms": [
-            "αμαρτημα"
-          ],
-          "knownCoverage": 0.038,
-          "lengthFit": 0.357,
-          "memorabilityFlags": [],
-          "score": 3.511
-        },
-        {
-          "ref": "21:2.6#1",
-          "titleZh": "亞他那修《論道成肉身》1–4：創造與敗壞",
-          "matchCount": 1,
-          "matchedTerms": [
-            "θηλυσ"
-          ],
-          "knownCoverage": 0.033,
-          "lengthFit": 0.429,
-          "memorabilityFlags": [
-            "proper_names"
-          ],
-          "score": 2.862
         }
       ]
     },
     {
       "lesson": 10,
       "half": "patristic",
-      "candidatesConsidered": 5,
+      "candidatesConsidered": 2,
       "top": [
         {
           "ref": "16:7.1.3#2",
@@ -977,86 +607,14 @@
           "lengthFit": 0.929,
           "memorabilityFlags": [],
           "score": 4.179
-        },
-        {
-          "ref": "18:44.6#1",
-          "titleZh": "革利免一書 42–44：使徒統緒與教會職分",
-          "matchCount": 1,
-          "matchedTerms": [
-            "λειτουργια"
-          ],
-          "knownCoverage": 0.048,
-          "lengthFit": 0.786,
-          "memorabilityFlags": [],
-          "score": 3.976
-        },
-        {
-          "ref": "7:5.2#2",
-          "titleZh": "依納爵致士每拿人書",
-          "matchCount": 1,
-          "matchedTerms": [
-            "επαινεω"
-          ],
-          "knownCoverage": 0.08,
-          "lengthFit": 0.571,
-          "memorabilityFlags": [],
-          "score": 3.891
-        },
-        {
-          "ref": "23:3#1",
-          "titleZh": "額我略‧納祥《神學講辭》第廿七篇：論神學該由誰、何時、如何講",
-          "matchCount": 1,
-          "matchedTerms": [
-            "φιλοσοφεω"
-          ],
-          "knownCoverage": 0.08,
-          "lengthFit": 0.429,
-          "memorabilityFlags": [],
-          "score": 3.749
         }
       ]
     },
     {
       "lesson": 11,
       "half": "patristic",
-      "candidatesConsidered": 8,
+      "candidatesConsidered": 2,
       "top": [
-        {
-          "ref": "15:1.2.2#2",
-          "titleZh": "黑馬牧人書：第一異象",
-          "matchCount": 1,
-          "matchedTerms": [
-            "λυπεω"
-          ],
-          "knownCoverage": 0.154,
-          "lengthFit": 0.714,
-          "memorabilityFlags": [],
-          "score": 4.33
-        },
-        {
-          "ref": "8:7.3#4",
-          "titleZh": "依納爵致坡旅甲書",
-          "matchCount": 1,
-          "matchedTerms": [
-            "γραμμα"
-          ],
-          "knownCoverage": 0.05,
-          "lengthFit": 1.0,
-          "memorabilityFlags": [],
-          "score": 4.2
-        },
-        {
-          "ref": "16:8.1.4#2",
-          "titleZh": "黑馬牧人書：誡命一至四",
-          "matchCount": 1,
-          "matchedTerms": [
-            "ακριβωσ"
-          ],
-          "knownCoverage": 0.083,
-          "lengthFit": 0.714,
-          "memorabilityFlags": [],
-          "score": 4.048
-        },
         {
           "ref": "7:3.3#1",
           "titleZh": "依納爵致士每拿人書",
@@ -1070,30 +628,6 @@
           "score": 3.914
         },
         {
-          "ref": "8:5.2#1",
-          "titleZh": "依納爵致坡旅甲書",
-          "matchCount": 1,
-          "matchedTerms": [
-            "αγνεια"
-          ],
-          "knownCoverage": 0.05,
-          "lengthFit": 0.714,
-          "memorabilityFlags": [],
-          "score": 3.914
-        },
-        {
-          "ref": "9:5.3#1",
-          "titleZh": "坡旅甲致腓立比人書",
-          "matchCount": 1,
-          "matchedTerms": [
-            "αγνεια"
-          ],
-          "knownCoverage": 0.05,
-          "lengthFit": 0.643,
-          "memorabilityFlags": [],
-          "score": 3.843
-        },
-        {
           "ref": "25:9#1",
           "titleZh": "金口若望《復活節教理講道》",
           "matchCount": 1,
@@ -1104,62 +638,14 @@
           "lengthFit": 0.643,
           "memorabilityFlags": [],
           "score": 3.81
-        },
-        {
-          "ref": "15:1.2.1#1",
-          "titleZh": "黑馬牧人書：第一異象",
-          "matchCount": 1,
-          "matchedTerms": [
-            "λυπεω"
-          ],
-          "knownCoverage": 0.038,
-          "lengthFit": 0.643,
-          "memorabilityFlags": [],
-          "score": 3.797
         }
       ]
     },
     {
       "lesson": 12,
       "half": "patristic",
-      "candidatesConsidered": 6,
+      "candidatesConsidered": 1,
       "top": [
-        {
-          "ref": "2:6.1#2",
-          "titleZh": "依納爵致以弗所人書",
-          "matchCount": 1,
-          "matchedTerms": [
-            "δηλοσ"
-          ],
-          "knownCoverage": 0.125,
-          "lengthFit": 0.929,
-          "memorabilityFlags": [],
-          "score": 4.429
-        },
-        {
-          "ref": "23:4#2",
-          "titleZh": "額我略‧納祥《神學講辭》第廿七篇：論神學該由誰、何時、如何講",
-          "matchCount": 1,
-          "matchedTerms": [
-            "ταχυσ"
-          ],
-          "knownCoverage": 0.071,
-          "lengthFit": 0.857,
-          "memorabilityFlags": [],
-          "score": 4.143
-        },
-        {
-          "ref": "4:5.2#2",
-          "titleZh": "依納爵致特拉勒人書",
-          "matchCount": 1,
-          "matchedTerms": [
-            "λειπω"
-          ],
-          "knownCoverage": 0.083,
-          "lengthFit": 0.786,
-          "memorabilityFlags": [],
-          "score": 4.119
-        },
         {
           "ref": "15:1.1.6#1",
           "titleZh": "黑馬牧人書：第一異象",
@@ -1171,62 +657,14 @@
           "lengthFit": 0.714,
           "memorabilityFlags": [],
           "score": 4.114
-        },
-        {
-          "ref": "14:19.6#2",
-          "titleZh": "巴拿巴書 18–21：兩道",
-          "matchCount": 1,
-          "matchedTerms": [
-            "κολλαω"
-          ],
-          "knownCoverage": 0.053,
-          "lengthFit": 0.857,
-          "memorabilityFlags": [],
-          "score": 4.068
-        },
-        {
-          "ref": "1:3.9#2",
-          "titleZh": "十二使徒遺訓",
-          "matchCount": 1,
-          "matchedTerms": [
-            "κολλαω"
-          ],
-          "knownCoverage": 0.05,
-          "lengthFit": 0.857,
-          "memorabilityFlags": [],
-          "score": 4.057
         }
       ]
     },
     {
       "lesson": 13,
       "half": "patristic",
-      "candidatesConsidered": 9,
+      "candidatesConsidered": 4,
       "top": [
-        {
-          "ref": "7:8.1#4",
-          "titleZh": "依納爵致士每拿人書",
-          "matchCount": 1,
-          "matchedTerms": [
-            "ευχαριστια"
-          ],
-          "knownCoverage": 0.15,
-          "lengthFit": 0.857,
-          "memorabilityFlags": [],
-          "score": 4.457
-        },
-        {
-          "ref": "2:1.3#2",
-          "titleZh": "依納爵致以弗所人書",
-          "matchCount": 1,
-          "matchedTerms": [
-            "χαριζομαι"
-          ],
-          "knownCoverage": 0.125,
-          "lengthFit": 0.929,
-          "memorabilityFlags": [],
-          "score": 4.429
-        },
         {
           "ref": "8:2.2#1",
           "titleZh": "依納爵致坡旅甲書",
@@ -1252,18 +690,6 @@
           "score": 4.195
         },
         {
-          "ref": "1:4.12#1",
-          "titleZh": "十二使徒遺訓",
-          "matchCount": 1,
-          "matchedTerms": [
-            "υποκρισισ"
-          ],
-          "knownCoverage": 0.062,
-          "lengthFit": 0.929,
-          "memorabilityFlags": [],
-          "score": 4.179
-        },
-        {
           "ref": "11:1.4#1",
           "titleZh": "革利免二書",
           "matchCount": 1,
@@ -1286,74 +712,14 @@
           "lengthFit": 0.714,
           "memorabilityFlags": [],
           "score": 3.888
-        },
-        {
-          "ref": "2:5.3#2",
-          "titleZh": "依納爵致以弗所人書",
-          "matchCount": 1,
-          "matchedTerms": [
-            "σπουδαζω"
-          ],
-          "knownCoverage": 0.043,
-          "lengthFit": 0.643,
-          "memorabilityFlags": [],
-          "score": 3.817
         }
       ]
     },
     {
       "lesson": 14,
       "half": "patristic",
-      "candidatesConsidered": 5,
+      "candidatesConsidered": 1,
       "top": [
-        {
-          "ref": "4:4.2#3",
-          "titleZh": "依納爵致特拉勒人書",
-          "matchCount": 1,
-          "matchedTerms": [
-            "χρηζω"
-          ],
-          "knownCoverage": 0.067,
-          "lengthFit": 1.0,
-          "memorabilityFlags": [],
-          "score": 4.267
-        },
-        {
-          "ref": "15:1.2.3#2",
-          "titleZh": "黑馬牧人書：第一異象",
-          "matchCount": 1,
-          "matchedTerms": [
-            "ιδεα"
-          ],
-          "knownCoverage": 0.118,
-          "lengthFit": 0.714,
-          "memorabilityFlags": [],
-          "score": 4.185
-        },
-        {
-          "ref": "12:2.3#4",
-          "titleZh": "致丟格那妥書",
-          "matchCount": 1,
-          "matchedTerms": [
-            "μορφη"
-          ],
-          "knownCoverage": 0.083,
-          "lengthFit": 0.429,
-          "memorabilityFlags": [],
-          "score": 3.762
-        },
-        {
-          "ref": "15:1.3.2#5",
-          "titleZh": "黑馬牧人書：第一異象",
-          "matchCount": 1,
-          "matchedTerms": [
-            "βιβλοσ"
-          ],
-          "knownCoverage": 0.037,
-          "lengthFit": 0.5,
-          "memorabilityFlags": [],
-          "score": 3.648
-        },
         {
           "ref": "22:54.5#2",
           "titleZh": "亞他那修《論道成肉身》54：他成為人，使我們成為神",
@@ -1373,20 +739,8 @@
     {
       "lesson": 15,
       "half": "patristic",
-      "candidatesConsidered": 2,
+      "candidatesConsidered": 1,
       "top": [
-        {
-          "ref": "23:4#6",
-          "titleZh": "額我略‧納祥《神學講辭》第廿七篇：論神學該由誰、何時、如何講",
-          "matchCount": 1,
-          "matchedTerms": [
-            "κωλυω"
-          ],
-          "knownCoverage": 0.118,
-          "lengthFit": 0.429,
-          "memorabilityFlags": [],
-          "score": 3.899
-        },
         {
           "ref": "25:17#1",
           "titleZh": "金口若望《復活節教理講道》",
@@ -1406,7 +760,7 @@
     {
       "lesson": 16,
       "half": "patristic",
-      "candidatesConsidered": 9,
+      "candidatesConsidered": 5,
       "top": [
         {
           "ref": "16:7.1.3#1",
@@ -1423,18 +777,6 @@
           "score": 5.079
         },
         {
-          "ref": "1:4.3#1",
-          "titleZh": "十二使徒遺訓",
-          "matchCount": 1,
-          "matchedTerms": [
-            "παραπτωμα"
-          ],
-          "knownCoverage": 0.111,
-          "lengthFit": 0.786,
-          "memorabilityFlags": [],
-          "score": 4.23
-        },
-        {
           "ref": "10:2.2#1",
           "titleZh": "坡旅甲殉道記",
           "matchCount": 1,
@@ -1445,18 +787,6 @@
           "lengthFit": 0.929,
           "memorabilityFlags": [],
           "score": 4.195
-        },
-        {
-          "ref": "14:19.4#3",
-          "titleZh": "巴拿巴書 18–21：兩道",
-          "matchCount": 1,
-          "matchedTerms": [
-            "παραπτωμα"
-          ],
-          "knownCoverage": 0.091,
-          "lengthFit": 0.714,
-          "memorabilityFlags": [],
-          "score": 4.078
         },
         {
           "ref": "10:2.1#1",
@@ -1483,18 +813,6 @@
           "score": 3.891
         },
         {
-          "ref": "5:7.1#3",
-          "titleZh": "依納爵致費拉德非人書",
-          "matchCount": 1,
-          "matchedTerms": [
-            "μεταξυ"
-          ],
-          "knownCoverage": 0.05,
-          "lengthFit": 0.643,
-          "memorabilityFlags": [],
-          "score": 3.843
-        },
-        {
           "ref": "1:1.1#1",
           "titleZh": "十二使徒遺訓",
           "matchCount": 1,
@@ -1511,44 +829,8 @@
     {
       "lesson": 17,
       "half": "patristic",
-      "candidatesConsidered": 5,
+      "candidatesConsidered": 1,
       "top": [
-        {
-          "ref": "14:19.6#3",
-          "titleZh": "巴拿巴書 18–21：兩道",
-          "matchCount": 1,
-          "matchedTerms": [
-            "συμβαινω"
-          ],
-          "knownCoverage": 0.125,
-          "lengthFit": 0.857,
-          "memorabilityFlags": [],
-          "score": 4.357
-        },
-        {
-          "ref": "6:6.1#1",
-          "titleZh": "依納爵致羅馬人書",
-          "matchCount": 1,
-          "matchedTerms": [
-            "ωφελεω"
-          ],
-          "knownCoverage": 0.095,
-          "lengthFit": 0.857,
-          "memorabilityFlags": [],
-          "score": 4.238
-        },
-        {
-          "ref": "1:3.10#1",
-          "titleZh": "十二使徒遺訓",
-          "matchCount": 1,
-          "matchedTerms": [
-            "συμβαινω"
-          ],
-          "knownCoverage": 0.08,
-          "lengthFit": 0.857,
-          "memorabilityFlags": [],
-          "score": 4.177
-        },
         {
           "ref": "25:8#3",
           "titleZh": "金口若望《復活節教理講道》",
@@ -1560,52 +842,14 @@
           "lengthFit": 0.857,
           "memorabilityFlags": [],
           "score": 4.107
-        },
-        {
-          "ref": "7:5.2#2",
-          "titleZh": "依納爵致士每拿人書",
-          "matchCount": 1,
-          "matchedTerms": [
-            "ωφελεω"
-          ],
-          "knownCoverage": 0.12,
-          "lengthFit": 0.571,
-          "memorabilityFlags": [],
-          "score": 4.051
         }
       ]
     },
     {
       "lesson": 18,
       "half": "patristic",
-      "candidatesConsidered": 11,
+      "candidatesConsidered": 4,
       "top": [
-        {
-          "ref": "18:44.4#1",
-          "titleZh": "革利免一書 42–44：使徒統緒與教會職分",
-          "matchCount": 1,
-          "matchedTerms": [
-            "οσιωσ"
-          ],
-          "knownCoverage": 0.043,
-          "lengthFit": 0.571,
-          "memorabilityFlags": [
-            "from_this_lesson"
-          ],
-          "score": 4.745
-        },
-        {
-          "ref": "7:8.1#3",
-          "titleZh": "依納爵致士每拿人書",
-          "matchCount": 1,
-          "matchedTerms": [
-            "ανηκω"
-          ],
-          "knownCoverage": 0.125,
-          "lengthFit": 1.0,
-          "memorabilityFlags": [],
-          "score": 4.5
-        },
         {
           "ref": "6:2.1#1",
           "titleZh": "依納爵致羅馬人書",
@@ -1617,18 +861,6 @@
           "lengthFit": 1.0,
           "memorabilityFlags": [],
           "score": 4.286
-        },
-        {
-          "ref": "7:5.2#3",
-          "titleZh": "依納爵致士每拿人書",
-          "matchCount": 1,
-          "matchedTerms": [
-            "τελειωσ"
-          ],
-          "knownCoverage": 0.077,
-          "lengthFit": 0.857,
-          "memorabilityFlags": [],
-          "score": 4.165
         },
         {
           "ref": "15:1.1.7#2",
@@ -1643,30 +875,6 @@
           "score": 4.093
         },
         {
-          "ref": "3:10.1#1",
-          "titleZh": "依納爵致馬內夏人書",
-          "matchCount": 1,
-          "matchedTerms": [
-            "χρηστοτησ"
-          ],
-          "knownCoverage": 0.111,
-          "lengthFit": 0.643,
-          "memorabilityFlags": [],
-          "score": 4.087
-        },
-        {
-          "ref": "15:1.4.2#2",
-          "titleZh": "黑馬牧人書：第一異象",
-          "matchCount": 1,
-          "matchedTerms": [
-            "αρεσκω"
-          ],
-          "knownCoverage": 0.087,
-          "lengthFit": 0.714,
-          "memorabilityFlags": [],
-          "score": 4.062
-        },
-        {
           "ref": "25:12#2",
           "titleZh": "金口若望《復活節教理講道》",
           "matchCount": 1,
@@ -1677,50 +885,26 @@
           "lengthFit": 0.643,
           "memorabilityFlags": [],
           "score": 4.043
+        },
+        {
+          "ref": "4:2.3#1",
+          "titleZh": "依納爵致特拉勒人書",
+          "matchCount": 1,
+          "matchedTerms": [
+            "αρεσκω"
+          ],
+          "knownCoverage": 0.042,
+          "lengthFit": 0.786,
+          "memorabilityFlags": [],
+          "score": 3.952
         }
       ]
     },
     {
       "lesson": 19,
       "half": "patristic",
-      "candidatesConsidered": 5,
+      "candidatesConsidered": 2,
       "top": [
-        {
-          "ref": "6:4.3#2",
-          "titleZh": "依納爵致羅馬人書",
-          "matchCount": 1,
-          "matchedTerms": [
-            "ελευθεροσ"
-          ],
-          "knownCoverage": 0.154,
-          "lengthFit": 1.0,
-          "memorabilityFlags": [],
-          "score": 4.615
-        },
-        {
-          "ref": "6:4.3#3",
-          "titleZh": "依納爵致羅馬人書",
-          "matchCount": 1,
-          "matchedTerms": [
-            "ελευθεροσ"
-          ],
-          "knownCoverage": 0.062,
-          "lengthFit": 0.929,
-          "memorabilityFlags": [],
-          "score": 4.179
-        },
-        {
-          "ref": "7:3.3#1",
-          "titleZh": "依納爵致士每拿人書",
-          "matchCount": 1,
-          "matchedTerms": [
-            "σαρκικοσ"
-          ],
-          "knownCoverage": 0.1,
-          "lengthFit": 0.714,
-          "memorabilityFlags": [],
-          "score": 4.114
-        },
         {
           "ref": "8:1.2#2",
           "titleZh": "依納爵致坡旅甲書",
@@ -1752,58 +936,8 @@
     {
       "lesson": 20,
       "half": "patristic",
-      "candidatesConsidered": 9,
+      "candidatesConsidered": 3,
       "top": [
-        {
-          "ref": "12:2.7#1",
-          "titleZh": "致丟格那妥書",
-          "matchCount": 1,
-          "matchedTerms": [
-            "οιομαι"
-          ],
-          "knownCoverage": 0.13,
-          "lengthFit": 1.0,
-          "memorabilityFlags": [],
-          "score": 4.522
-        },
-        {
-          "ref": "14:19.4#4",
-          "titleZh": "巴拿巴書 18–21：兩道",
-          "matchCount": 1,
-          "matchedTerms": [
-            "πραυσ"
-          ],
-          "knownCoverage": 0.071,
-          "lengthFit": 0.929,
-          "memorabilityFlags": [],
-          "score": 4.214
-        },
-        {
-          "ref": "1:3.7#1",
-          "titleZh": "十二使徒遺訓",
-          "matchCount": 1,
-          "matchedTerms": [
-            "πραυσ"
-          ],
-          "knownCoverage": 0.071,
-          "lengthFit": 0.857,
-          "memorabilityFlags": [],
-          "score": 4.143
-        },
-        {
-          "ref": "7:9.2#3",
-          "titleZh": "依納爵致士每拿人書",
-          "matchCount": 1,
-          "matchedTerms": [
-            "απειμι"
-          ],
-          "knownCoverage": 0.25,
-          "lengthFit": 0.571,
-          "memorabilityFlags": [
-            "very_short"
-          ],
-          "score": 4.071
-        },
         {
           "ref": "14:18.1#3",
           "titleZh": "巴拿巴書 18–21：兩道",
@@ -1839,38 +973,14 @@
           "lengthFit": 0.5,
           "memorabilityFlags": [],
           "score": 3.654
-        },
-        {
-          "ref": "15:1.3.3#4",
-          "titleZh": "黑馬牧人書：第一異象",
-          "matchCount": 1,
-          "matchedTerms": [
-            "μεγαλωσ"
-          ],
-          "knownCoverage": 0.038,
-          "lengthFit": 0.5,
-          "memorabilityFlags": [],
-          "score": 3.654
         }
       ]
     },
     {
       "lesson": 21,
       "half": "patristic",
-      "candidatesConsidered": 4,
+      "candidatesConsidered": 1,
       "top": [
-        {
-          "ref": "6:5.3#1",
-          "titleZh": "依納爵致羅馬人書",
-          "matchCount": 1,
-          "matchedTerms": [
-            "συμφερω"
-          ],
-          "knownCoverage": 0.059,
-          "lengthFit": 0.929,
-          "memorabilityFlags": [],
-          "score": 4.164
-        },
         {
           "ref": "10:1.1#2",
           "titleZh": "坡旅甲殉道記",
@@ -1882,62 +992,14 @@
           "lengthFit": 0.571,
           "memorabilityFlags": [],
           "score": 3.992
-        },
-        {
-          "ref": "12:2.3#5",
-          "titleZh": "致丟格那妥書",
-          "matchCount": 1,
-          "matchedTerms": [
-            "τεχνιτησ"
-          ],
-          "knownCoverage": 0.111,
-          "lengthFit": 0.5,
-          "memorabilityFlags": [],
-          "score": 3.944
-        },
-        {
-          "ref": "8:8.3#1",
-          "titleZh": "依納爵致坡旅甲書",
-          "matchCount": 1,
-          "matchedTerms": [
-            "ρωννυμι"
-          ],
-          "knownCoverage": 0.083,
-          "lengthFit": 0.5,
-          "memorabilityFlags": [],
-          "score": 3.833
         }
       ]
     },
     {
       "lesson": 22,
       "half": "patristic",
-      "candidatesConsidered": 4,
+      "candidatesConsidered": 1,
       "top": [
-        {
-          "ref": "18:44.6#1",
-          "titleZh": "革利免一書 42–44：使徒統緒與教會職分",
-          "matchCount": 1,
-          "matchedTerms": [
-            "πολιτευω"
-          ],
-          "knownCoverage": 0.095,
-          "lengthFit": 0.786,
-          "memorabilityFlags": [],
-          "score": 4.167
-        },
-        {
-          "ref": "14:19.12#1",
-          "titleZh": "巴拿巴書 18–21：兩道",
-          "matchCount": 1,
-          "matchedTerms": [
-            "σχισμα"
-          ],
-          "knownCoverage": 0.1,
-          "lengthFit": 0.714,
-          "memorabilityFlags": [],
-          "score": 4.114
-        },
         {
           "ref": "8:1.2#1",
           "titleZh": "依納爵致坡旅甲書",
@@ -1949,50 +1011,14 @@
           "lengthFit": 0.714,
           "memorabilityFlags": [],
           "score": 3.888
-        },
-        {
-          "ref": "1:3.8#1",
-          "titleZh": "十二使徒遺訓",
-          "matchCount": 1,
-          "matchedTerms": [
-            "ησυχιοσ"
-          ],
-          "knownCoverage": 0.048,
-          "lengthFit": 0.5,
-          "memorabilityFlags": [],
-          "score": 3.69
         }
       ]
     },
     {
       "lesson": 23,
       "half": "patristic",
-      "candidatesConsidered": 6,
+      "candidatesConsidered": 1,
       "top": [
-        {
-          "ref": "4:11.2#2",
-          "titleZh": "依納爵致特拉勒人書",
-          "matchCount": 1,
-          "matchedTerms": [
-            "επαγγελλω"
-          ],
-          "knownCoverage": 0.091,
-          "lengthFit": 0.714,
-          "memorabilityFlags": [],
-          "score": 4.078
-        },
-        {
-          "ref": "21:2.4#5",
-          "titleZh": "亞他那修《論道成肉身》1–4：創造與敗壞",
-          "matchCount": 1,
-          "matchedTerms": [
-            "κτιστησ"
-          ],
-          "knownCoverage": 0.087,
-          "lengthFit": 0.571,
-          "memorabilityFlags": [],
-          "score": 3.919
-        },
         {
           "ref": "5:2.2#1",
           "titleZh": "依納爵致費拉德非人書",
@@ -2004,53 +1030,13 @@
           "lengthFit": 0.571,
           "memorabilityFlags": [],
           "score": 3.891
-        },
-        {
-          "ref": "1:3.8#1",
-          "titleZh": "十二使徒遺訓",
-          "matchCount": 1,
-          "matchedTerms": [
-            "ακακοσ"
-          ],
-          "knownCoverage": 0.095,
-          "lengthFit": 0.5,
-          "memorabilityFlags": [],
-          "score": 3.881
-        },
-        {
-          "ref": "11:5.2#1",
-          "titleZh": "革利免二書",
-          "matchCount": 1,
-          "matchedTerms": [
-            "λυκοσ"
-          ],
-          "knownCoverage": 0.067,
-          "lengthFit": 0.929,
-          "memorabilityFlags": [
-            "proper_names"
-          ],
-          "score": 3.495
-        },
-        {
-          "ref": "11:5.3#1",
-          "titleZh": "革利免二書",
-          "matchCount": 1,
-          "matchedTerms": [
-            "λυκοσ"
-          ],
-          "knownCoverage": 0.056,
-          "lengthFit": 0.857,
-          "memorabilityFlags": [
-            "proper_names"
-          ],
-          "score": 3.379
         }
       ]
     },
     {
       "lesson": 24,
       "half": "patristic",
-      "candidatesConsidered": 12,
+      "candidatesConsidered": 6,
       "top": [
         {
           "ref": "2:2.2#1",
@@ -2065,42 +1051,6 @@
           "score": 4.442
         },
         {
-          "ref": "1:4.4#1",
-          "titleZh": "十二使徒遺訓",
-          "matchCount": 1,
-          "matchedTerms": [
-            "ποτεροσ"
-          ],
-          "knownCoverage": 0.143,
-          "lengthFit": 0.643,
-          "memorabilityFlags": [],
-          "score": 4.214
-        },
-        {
-          "ref": "14:19.5#1",
-          "titleZh": "巴拿巴書 18–21：兩道",
-          "matchCount": 1,
-          "matchedTerms": [
-            "ποτεροσ"
-          ],
-          "knownCoverage": 0.125,
-          "lengthFit": 0.714,
-          "memorabilityFlags": [],
-          "score": 4.214
-        },
-        {
-          "ref": "14:20.1#1",
-          "titleZh": "巴拿巴書 18–21：兩道",
-          "matchCount": 1,
-          "matchedTerms": [
-            "καταρα"
-          ],
-          "knownCoverage": 0.062,
-          "lengthFit": 0.929,
-          "memorabilityFlags": [],
-          "score": 4.179
-        },
-        {
           "ref": "8:2.3#1",
           "titleZh": "依納爵致坡旅甲書",
           "matchCount": 1,
@@ -2111,18 +1061,6 @@
           "lengthFit": 0.714,
           "memorabilityFlags": [],
           "score": 4.095
-        },
-        {
-          "ref": "7:7.1#2",
-          "titleZh": "依納爵致士每拿人書",
-          "matchCount": 1,
-          "matchedTerms": [
-            "αντιλεγω"
-          ],
-          "knownCoverage": 0.083,
-          "lengthFit": 0.643,
-          "memorabilityFlags": [],
-          "score": 3.976
         },
         {
           "ref": "6:1.2#1",
@@ -2147,38 +1085,40 @@
           "lengthFit": 0.5,
           "memorabilityFlags": [],
           "score": 3.808
+        },
+        {
+          "ref": "8:1.3#3",
+          "titleZh": "依納爵致坡旅甲書",
+          "matchCount": 1,
+          "matchedTerms": [
+            "κοποσ"
+          ],
+          "knownCoverage": 0.167,
+          "lengthFit": 0.571,
+          "memorabilityFlags": [
+            "very_short"
+          ],
+          "score": 3.738
+        },
+        {
+          "ref": "6:1.2#3",
+          "titleZh": "依納爵致羅馬人書",
+          "matchCount": 1,
+          "matchedTerms": [
+            "εανπερ"
+          ],
+          "knownCoverage": 0.065,
+          "lengthFit": 0.429,
+          "memorabilityFlags": [],
+          "score": 3.687
         }
       ]
     },
     {
       "lesson": 25,
       "half": "patristic",
-      "candidatesConsidered": 3,
+      "candidatesConsidered": 1,
       "top": [
-        {
-          "ref": "17:2.5#4",
-          "titleZh": "巴拿巴書 1–5：新約與舊約的關係",
-          "matchCount": 1,
-          "matchedTerms": [
-            "χειρων"
-          ],
-          "knownCoverage": 0.077,
-          "lengthFit": 0.786,
-          "memorabilityFlags": [],
-          "score": 4.093
-        },
-        {
-          "ref": "12:2.5#3",
-          "titleZh": "致丟格那妥書",
-          "matchCount": 1,
-          "matchedTerms": [
-            "τελεοσ"
-          ],
-          "knownCoverage": 0.1,
-          "lengthFit": 0.643,
-          "memorabilityFlags": [],
-          "score": 4.043
-        },
         {
           "ref": "20:61#10",
           "titleZh": "猶斯定《第一護教辭》61–67：洗禮與感恩祭",
@@ -2242,7 +1182,7 @@
     {
       "lesson": 27,
       "half": "church-document",
-      "candidatesConsidered": 9,
+      "candidatesConsidered": 7,
       "top": [
         {
           "ref": "45:6#1",
@@ -2279,21 +1219,6 @@
           "lengthFit": 0.429,
           "memorabilityFlags": [],
           "score": 4.069
-        },
-        {
-          "ref": "45:23#1",
-          "titleZh": "大榮耀頌（晨禱）",
-          "matchCount": 1,
-          "matchedTerms": [
-            "ελεαω"
-          ],
-          "knownCoverage": 0.286,
-          "lengthFit": 0.5,
-          "memorabilityFlags": [
-            "very_short",
-            "proper_names"
-          ],
-          "score": 3.443
         },
         {
           "ref": "46:6#1",
@@ -2357,70 +1282,14 @@
     {
       "lesson": 28,
       "half": "church-document",
-      "candidatesConsidered": 2,
-      "top": [
-        {
-          "ref": "48:57#1",
-          "titleZh": "聖母讚頌詞（阿卡提斯托斯頌）",
-          "matchCount": 1,
-          "matchedTerms": [
-            "δεομαι"
-          ],
-          "knownCoverage": 0.125,
-          "lengthFit": 0.5,
-          "memorabilityFlags": [
-            "very_short"
-          ],
-          "score": 3.5
-        },
-        {
-          "ref": "31:67#1",
-          "titleZh": "第二次尼西亞大公會議教規（787）",
-          "matchCount": 1,
-          "matchedTerms": [
-            "στεφανοσ"
-          ],
-          "knownCoverage": 0.062,
-          "lengthFit": 0.857,
-          "memorabilityFlags": [
-            "proper_names"
-          ],
-          "score": 3.407
-        }
-      ]
+      "candidatesConsidered": 0,
+      "top": []
     },
     {
       "lesson": 29,
       "half": "church-document",
-      "candidatesConsidered": 2,
-      "top": [
-        {
-          "ref": "42:6#5",
-          "titleZh": "撒狄迦會議教規（343）",
-          "matchCount": 1,
-          "matchedTerms": [
-            "προειπον"
-          ],
-          "knownCoverage": 0.214,
-          "lengthFit": 0.357,
-          "memorabilityFlags": [],
-          "score": 4.214
-        },
-        {
-          "ref": "33:6#2",
-          "titleZh": "尼西亞第一次大公會議教規（325，20 條）",
-          "matchCount": 1,
-          "matchedTerms": [
-            "πρεσβεια"
-          ],
-          "knownCoverage": 0.053,
-          "lengthFit": 0.643,
-          "memorabilityFlags": [
-            "proper_names"
-          ],
-          "score": 3.153
-        }
-      ]
+      "candidatesConsidered": 0,
+      "top": []
     },
     {
       "lesson": 30,
@@ -2444,34 +1313,8 @@
     {
       "lesson": 31,
       "half": "church-document",
-      "candidatesConsidered": 3,
+      "candidatesConsidered": 1,
       "top": [
-        {
-          "ref": "31:31#1",
-          "titleZh": "第二次尼西亞大公會議教規（787）",
-          "matchCount": 1,
-          "matchedTerms": [
-            "νουθετεω"
-          ],
-          "knownCoverage": 0.083,
-          "lengthFit": 0.643,
-          "memorabilityFlags": [
-            "from_this_lesson"
-          ],
-          "score": 4.976
-        },
-        {
-          "ref": "42:1#2",
-          "titleZh": "撒狄迦會議教規（343）",
-          "matchCount": 1,
-          "matchedTerms": [
-            "προφασισ"
-          ],
-          "knownCoverage": 0.167,
-          "lengthFit": 0.929,
-          "memorabilityFlags": [],
-          "score": 4.595
-        },
         {
           "ref": "32:5#1",
           "titleZh": "使徒教規（85 條）",
@@ -2489,56 +1332,14 @@
     {
       "lesson": 32,
       "half": "church-document",
-      "candidatesConsidered": 1,
-      "top": [
-        {
-          "ref": "48:150#1",
-          "titleZh": "聖母讚頌詞（阿卡提斯托斯頌）",
-          "matchCount": 1,
-          "matchedTerms": [
-            "φλοξ"
-          ],
-          "knownCoverage": 0.286,
-          "lengthFit": 0.5,
-          "memorabilityFlags": [
-            "very_short"
-          ],
-          "score": 4.143
-        }
-      ]
+      "candidatesConsidered": 0,
+      "top": []
     },
     {
       "lesson": 33,
       "half": "church-document",
-      "candidatesConsidered": 2,
-      "top": [
-        {
-          "ref": "33:1#1",
-          "titleZh": "尼西亞第一次大公會議教規（325，20 條）",
-          "matchCount": 1,
-          "matchedTerms": [
-            "ιατροσ"
-          ],
-          "knownCoverage": 0.15,
-          "lengthFit": 0.643,
-          "memorabilityFlags": [
-            "from_this_lesson"
-          ],
-          "score": 5.243
-        },
-        {
-          "ref": "37:12#1",
-          "titleZh": "安基拉會議教規（314）",
-          "matchCount": 1,
-          "matchedTerms": [
-            "βαπτισμα"
-          ],
-          "knownCoverage": 0.1,
-          "lengthFit": 0.714,
-          "memorabilityFlags": [],
-          "score": 4.114
-        }
-      ]
+      "candidatesConsidered": 0,
+      "top": []
     },
     {
       "lesson": 34,
@@ -2562,7 +1363,7 @@
     {
       "lesson": 35,
       "half": "church-document",
-      "candidatesConsidered": 2,
+      "candidatesConsidered": 1,
       "top": [
         {
           "ref": "40:3#2",
@@ -2575,63 +1376,14 @@
           "lengthFit": 0.643,
           "memorabilityFlags": [],
           "score": 4.165
-        },
-        {
-          "ref": "36:1#10",
-          "titleZh": "特魯洛（五六）大公會議教規 1–20",
-          "matchCount": 1,
-          "matchedTerms": [
-            "παντελωσ"
-          ],
-          "knownCoverage": 0.043,
-          "lengthFit": 0.5,
-          "memorabilityFlags": [],
-          "score": 3.674
         }
       ]
     },
     {
       "lesson": 36,
       "half": "church-document",
-      "candidatesConsidered": 3,
-      "top": [
-        {
-          "ref": "40:10#3",
-          "titleZh": "安提阿會議教規（341）",
-          "matchCount": 1,
-          "matchedTerms": [
-            "υποκειμαι"
-          ],
-          "knownCoverage": 0.125,
-          "lengthFit": 0.929,
-          "memorabilityFlags": [],
-          "score": 4.429
-        },
-        {
-          "ref": "31:42#1",
-          "titleZh": "第二次尼西亞大公會議教規（787）",
-          "matchCount": 1,
-          "matchedTerms": [
-            "κοινωνεω"
-          ],
-          "knownCoverage": 0.062,
-          "lengthFit": 1.0,
-          "memorabilityFlags": [],
-          "score": 4.25
-        },
-        {
-          "ref": "32:30#1",
-          "titleZh": "使徒教規（85 條）",
-          "matchCount": 1,
-          "matchedTerms": [
-            "κοινωνεω"
-          ],
-          "knownCoverage": 0.148,
-          "lengthFit": 0.429,
-          "memorabilityFlags": [],
-          "score": 4.021
-        }
-      ]
+      "candidatesConsidered": 0,
+      "top": []
     },
     {
       "lesson": 37,
@@ -2642,51 +1394,14 @@
     {
       "lesson": 38,
       "half": "church-document",
-      "candidatesConsidered": 2,
-      "top": [
-        {
-          "ref": "42:6#6",
-          "titleZh": "撒狄迦會議教規（343）",
-          "matchCount": 1,
-          "matchedTerms": [
-            "επισκοπη"
-          ],
-          "knownCoverage": 0.036,
-          "lengthFit": 0.5,
-          "memorabilityFlags": [],
-          "score": 3.643
-        },
-        {
-          "ref": "50:75#2",
-          "titleZh": "聖誕晨禱（12 月 25 日）",
-          "matchCount": 1,
-          "matchedTerms": [
-            "υποποδιον"
-          ],
-          "knownCoverage": 0.038,
-          "lengthFit": 0.357,
-          "memorabilityFlags": [],
-          "score": 3.511
-        }
-      ]
+      "candidatesConsidered": 0,
+      "top": []
     },
     {
       "lesson": 39,
       "half": "church-document",
-      "candidatesConsidered": 2,
+      "candidatesConsidered": 1,
       "top": [
-        {
-          "ref": "33:2#4",
-          "titleZh": "尼西亞第一次大公會議教規（325，20 條）",
-          "matchCount": 1,
-          "matchedTerms": [
-            "κινδυνευω"
-          ],
-          "knownCoverage": 0.045,
-          "lengthFit": 0.643,
-          "memorabilityFlags": [],
-          "score": 3.825
-        },
         {
           "ref": "34:2#4",
           "titleZh": "君士坦丁堡第一次大公會議教規（381，7 條）",
@@ -2706,111 +1421,20 @@
     {
       "lesson": 40,
       "half": "church-document",
-      "candidatesConsidered": 4,
-      "top": [
-        {
-          "ref": "41:22#1",
-          "titleZh": "老底嘉會議教規（約 360）",
-          "matchCount": 1,
-          "matchedTerms": [
-            "υπηρετησ"
-          ],
-          "knownCoverage": 0.071,
-          "lengthFit": 0.929,
-          "memorabilityFlags": [],
-          "score": 4.214
-        },
-        {
-          "ref": "41:25#1",
-          "titleZh": "老底嘉會議教規（約 360）",
-          "matchCount": 1,
-          "matchedTerms": [
-            "υπηρετησ"
-          ],
-          "knownCoverage": 0.071,
-          "lengthFit": 0.857,
-          "memorabilityFlags": [],
-          "score": 4.143
-        },
-        {
-          "ref": "41:21#1",
-          "titleZh": "老底嘉會議教規（約 360）",
-          "matchCount": 1,
-          "matchedTerms": [
-            "υπηρετησ"
-          ],
-          "knownCoverage": 0.048,
-          "lengthFit": 0.857,
-          "memorabilityFlags": [],
-          "score": 4.048
-        },
-        {
-          "ref": "41:20#2",
-          "titleZh": "老底嘉會議教規（約 360）",
-          "matchCount": 1,
-          "matchedTerms": [
-            "υπηρετησ"
-          ],
-          "knownCoverage": 0.053,
-          "lengthFit": 0.786,
-          "memorabilityFlags": [],
-          "score": 3.996
-        }
-      ]
+      "candidatesConsidered": 0,
+      "top": []
     },
     {
       "lesson": 41,
       "half": "church-document",
-      "candidatesConsidered": 1,
-      "top": [
-        {
-          "ref": "48:180#1",
-          "titleZh": "聖母讚頌詞（阿卡提斯托斯頌）",
-          "matchCount": 1,
-          "matchedTerms": [
-            "γαλα"
-          ],
-          "knownCoverage": 0.1,
-          "lengthFit": 0.714,
-          "memorabilityFlags": [],
-          "score": 4.114
-        }
-      ]
+      "candidatesConsidered": 0,
+      "top": []
     },
     {
       "lesson": 42,
       "half": "church-document",
-      "candidatesConsidered": 2,
-      "top": [
-        {
-          "ref": "49:37#1",
-          "titleZh": "復活節晨禱正典（大馬士革的約翰）",
-          "matchCount": 1,
-          "matchedTerms": [
-            "υμνοσ"
-          ],
-          "knownCoverage": 0.061,
-          "lengthFit": 0.429,
-          "memorabilityFlags": [
-            "proper_names"
-          ],
-          "score": 2.971
-        },
-        {
-          "ref": "49:41#1",
-          "titleZh": "復活節晨禱正典（大馬士革的約翰）",
-          "matchCount": 1,
-          "matchedTerms": [
-            "υμνοσ"
-          ],
-          "knownCoverage": 0.061,
-          "lengthFit": 0.429,
-          "memorabilityFlags": [
-            "proper_names"
-          ],
-          "score": 2.971
-        }
-      ]
+      "candidatesConsidered": 0,
+      "top": []
     },
     {
       "lesson": 43,
@@ -2834,20 +1458,8 @@
     {
       "lesson": 44,
       "half": "church-document",
-      "candidatesConsidered": 5,
+      "candidatesConsidered": 3,
       "top": [
-        {
-          "ref": "38:15#1",
-          "titleZh": "新凱撒利亞會議教規（約 315）",
-          "matchCount": 1,
-          "matchedTerms": [
-            "κανων"
-          ],
-          "knownCoverage": 0.167,
-          "lengthFit": 0.857,
-          "memorabilityFlags": [],
-          "score": 4.524
-        },
         {
           "ref": "40:1#3",
           "titleZh": "安提阿會議教規（341）",
@@ -2859,18 +1471,6 @@
           "lengthFit": 0.5,
           "memorabilityFlags": [],
           "score": 3.9
-        },
-        {
-          "ref": "40:6#2",
-          "titleZh": "安提阿會議教規（341）",
-          "matchCount": 1,
-          "matchedTerms": [
-            "κανων"
-          ],
-          "knownCoverage": 0.056,
-          "lengthFit": 0.643,
-          "memorabilityFlags": [],
-          "score": 3.865
         },
         {
           "ref": "32:6#1",
@@ -2930,90 +1530,26 @@
     {
       "lesson": 47,
       "half": "church-document",
-      "candidatesConsidered": 1,
-      "top": [
-        {
-          "ref": "40:5#2",
-          "titleZh": "安提阿會議教規（341）",
-          "matchCount": 1,
-          "matchedTerms": [
-            "θορυβοσ"
-          ],
-          "knownCoverage": 0.095,
-          "lengthFit": 0.643,
-          "memorabilityFlags": [],
-          "score": 4.024
-        }
-      ]
+      "candidatesConsidered": 0,
+      "top": []
     },
     {
       "lesson": 48,
       "half": "church-document",
-      "candidatesConsidered": 1,
-      "top": [
-        {
-          "ref": "43:13#3",
-          "titleZh": "迦太基會議教規 1–20（希臘文傳本）",
-          "matchCount": 1,
-          "matchedTerms": [
-            "αποστερεω"
-          ],
-          "knownCoverage": 0.045,
-          "lengthFit": 0.571,
-          "memorabilityFlags": [],
-          "score": 3.753
-        }
-      ]
+      "candidatesConsidered": 0,
+      "top": []
     },
     {
       "lesson": 49,
       "half": "church-document",
-      "candidatesConsidered": 2,
-      "top": [
-        {
-          "ref": "32:5#1",
-          "titleZh": "使徒教規（85 條）",
-          "matchCount": 1,
-          "matchedTerms": [
-            "ευλαβεια"
-          ],
-          "knownCoverage": 0.2,
-          "lengthFit": 0.929,
-          "memorabilityFlags": [],
-          "score": 4.729
-        },
-        {
-          "ref": "41:20#2",
-          "titleZh": "老底嘉會議教規（約 360）",
-          "matchCount": 1,
-          "matchedTerms": [
-            "υπηρετεω"
-          ],
-          "knownCoverage": 0.105,
-          "lengthFit": 0.786,
-          "memorabilityFlags": [],
-          "score": 4.207
-        }
-      ]
+      "candidatesConsidered": 0,
+      "top": []
     },
     {
       "lesson": 50,
       "half": "church-document",
-      "candidatesConsidered": 1,
-      "top": [
-        {
-          "ref": "37:11#1",
-          "titleZh": "安基拉會議教規（314）",
-          "matchCount": 1,
-          "matchedTerms": [
-            "κορη"
-          ],
-          "knownCoverage": 0.04,
-          "lengthFit": 0.429,
-          "memorabilityFlags": [],
-          "score": 3.589
-        }
-      ]
+      "candidatesConsidered": 0,
+      "top": []
     }
   ]
 }

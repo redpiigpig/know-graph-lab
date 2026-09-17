@@ -11,13 +11,25 @@ Freeze deviations before extracting or laying out content.
 | Vocabulary per lesson | frozen per release. Hebrew: exactly 20, cut from one running order (BBH2 chapters 3-35, then the frequency extension). Greek: the BBG chapter's own count while the textbook lasts, then an even split of the extension |
 | Memory units | 100 unique reviewed units |
 | Memory units per lesson | 2 |
-| Complete Scripture chapters | 25 |
-| Complete prayers or articles | 25 |
+| Scripture chapters read | 25（篇幅上限之內；長章按節從章首連續節錄） |
+| Prayers or articles read | 25（同上，按段節錄） |
 | Main reading per lesson | 1 |
+| 一課的頁數 | ≤ 8（擁有者 2026-09-17 定，硬上限） |
+| 可讀文字的字級 | ≥ 12pt（眉標與頁碼除外） |
 | Hebrew Haggadah appendix | 15 ordered steps, separate from the 25 texts |
 | Hebrew reference tables | 4 appendix tables — numerals, kinship, calendar, classified proper names |
 
 Patristic or rabbinic collections are separately declared appendices unless the user explicitly changes the 50-lesson allocation. Record whether each item is a complete short work or an authorized excerpt; never label an excerpt as a complete work.
+
+**讀文的長度由版面決定，不由編輯決定（2026-09-17 起）。** 擁有者定的是「一課最多
+八頁」，所以「二十五章完整經文」不再是契約的一部分——長章會按節從章首連續節錄到
+版面預算為止（`scripts/reader_page_budget.py`）。隨之而來的三件事，少做一件就是在
+宣告一件書裡沒有的事：
+
+1. 每一篇讀文都要帶 `completeness` 與 `extent`／`extentZh`，紙本與線上都要印出來；
+2. 封面副標、凡例、目錄、任何「本書收錄……」的句子，都不能再說「完整」；
+3. 自我描述的字數（如 `counts.scriptureWords`）要數**印出來的那些**，不是 plan 裡
+   原本有的那些——希臘上冊照 plan 報是 26,115 詞，書上其實只有 15,902 詞。
 
 ## Vocabulary contract
 

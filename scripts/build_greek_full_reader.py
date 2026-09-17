@@ -73,7 +73,25 @@ from build_hebrew_full_reader import (  # noqa: E402  - shared typesetting machi
     set_run_font,
     set_table_geometry,
     shade,
+    EXERCISE_ANSWER_LINE_PT,
+    EXERCISE_ANSWER_SPACE_AFTER_PT,
+    EXERCISE_INTRO_LINE_PT,
+    EXERCISE_LABEL_LINE_PT,
+    EXERCISE_ITEM_SPACE_AFTER_PT,
+    EXERCISE_ITEM_SPACE_BEFORE_PT,
+    EXERCISE_TEXT_LINE_SPACING,
+    EXERCISE_TEXT_SPACE_AFTER_PT,
+    LESSON_NUMBER_LINE_PT,
+    LESSON_TITLE_LINE_SPACING,
+    LESSON_TITLE_SPACE_AFTER_PT,
+    LESSON_TITLE_SPACE_BEFORE_PT,
+    SECTION_HEADING_SPACE_AFTER_PT,
+    SECTION_HEADING_SPACE_BEFORE_PT,
+    VOCAB_CELL_PAD_DXA,
+    VOCAB_LINE_SPACING,
+    compact_heading,
     start_section,
+    tighten_cell,
     write_running_head,
 )
 
@@ -91,12 +109,15 @@ CJK_RE = re.compile(r"([\u3000-\u303F\u3400-\u4DBF\u4E00-\u9FFF\uFF00-\uFFEF]+)"
 GREEK_METRICS = Path(r"C:\Windows\Fonts\pala.ttf")
 
 INTERLINEAR_GREEK_PT = 13.5
-INTERLINEAR_GLOSS_PT = 9.4
+# 🚨 擁有者 2026-09-17：「字都不可以小於 12。」正文、生詞表、逐詞對譯的中文義、
+# 整句中譯、練習——凡是要讀的字一律 ≥12pt。只有頁眉與頁碼維持小字，那是版口
+# 標示不是閱讀內容。改這幾個數字會直接改變每頁容納的份量，讀文上限要跟著重算。
+INTERLINEAR_GLOSS_PT = 12
 INTERLINEAR_GUTTER_MM = 3.2
 INTERLINEAR_LINE_GAP_PT = 3.5
 MEMORY_GREEK_PT = 14
-EXERCISE_GREEK_PT = 13
-SENSE_PT = 10.4
+EXERCISE_GREEK_PT = 12
+SENSE_PT = 12
 
 _greek_metrics = None
 
@@ -249,20 +270,27 @@ def add_plain_greek(document: Document, text: str, size: float = INTERLINEAR_GRE
 
 
 def add_vocabulary(document: Document, lesson: dict) -> None:
-    document.add_heading(
-        f"生詞　{lesson['vocabularyCount']} 個　{lesson['vocabularySource']}", level=2)
+    compact_heading(
+        document.add_heading(
+            f"生詞　{lesson['vocabularyCount']} 個　{lesson['vocabularySource']}", level=2),
+        before=SECTION_HEADING_SPACE_BEFORE_PT,
+        after=SECTION_HEADING_SPACE_AFTER_PT, line_spacing=1.0)
     rows = lesson["vocabulary"]
     table = document.add_table(rows=1, cols=4)
     # 序號欄要放得下四位數：下冊編到 1000，8 mm 會把 992 折成兩行，整本詞表
     # 每一列都矮半截。
-    widths = [12.0, 46.0, 24.0, USABLE_WIDTH_MM - 82.0]
+    # 🚨 詞條欄要放得下三詞尾的形容詞（πρεσβύτερος, -α, -ον）。46mm 放不下，
+    # Word 折成兩行，那一列就高一倍——一課二十個詞裡有兩三個這樣的，加起來
+    # 就是多半頁。寬度從中文詞義欄借，那一欄的詞義多半四到六個字。
+    widths = [12.0, 54.0, 20.0, USABLE_WIDTH_MM - 86.0]
     set_table_geometry(table, widths)
     set_borders(table, color=RULE)
     header = table.rows[0]
     set_repeat_header(header)
     for cell, title in zip(header.cells, ["#", "詞條", "詞類", "繁體中文詞義"]):
         shade(cell, PALE)
-        set_cell_margins(cell)
+        set_cell_margins(cell, top=VOCAB_CELL_PAD_DXA, bottom=VOCAB_CELL_PAD_DXA)
+        tighten_cell(cell)
         paragraph = cell.paragraphs[0]
         paragraph.paragraph_format.space_after = Pt(0)
         set_run_font(paragraph.add_run(title), FONT_UI, LABEL_PT, bold=True, color=ACCENT)
@@ -270,10 +298,11 @@ def add_vocabulary(document: Document, lesson: dict) -> None:
         row = table.add_row()
         prevent_row_split(row)
         for index, cell in enumerate(row.cells):
-            set_cell_margins(cell)
+            set_cell_margins(cell, top=VOCAB_CELL_PAD_DXA, bottom=VOCAB_CELL_PAD_DXA)
+            tighten_cell(cell)
             paragraph = cell.paragraphs[0]
             paragraph.paragraph_format.space_after = Pt(0)
-            paragraph.paragraph_format.line_spacing = 1.2
+            paragraph.paragraph_format.line_spacing = VOCAB_LINE_SPACING
             if index == 0:
                 set_run_font(paragraph.add_run(str(entry["ordinal"])), FONT_UI, CAPTION_PT, color=MUTED)
             elif index == 1:
@@ -358,7 +387,10 @@ def add_exercises(document: Document, block: dict | None, lesson: int) -> None:
     """
     if block is None:
         raise SystemExit(f"第 {lesson} 課沒有練習題：exercise-set 對不上本課詞表")
-    document.add_heading(f"本課翻譯練習（{len(block['items'])}題）", level=2)
+    compact_heading(
+        document.add_heading(f"本課翻譯練習（{len(block['items'])}題）", level=2),
+        before=SECTION_HEADING_SPACE_BEFORE_PT,
+        after=SECTION_HEADING_SPACE_AFTER_PT, line_spacing=1.0)
     intro = add_body(
         document,
         "把每一句譯成繁體中文。題目只印原文——標出處的是定錨題，可對照既有譯本自我校對；"
@@ -366,14 +398,16 @@ def add_exercises(document: Document, block: dict | None, lesson: int) -> None:
         size=CAPTION_PT,
         color=MUTED,
     )
-    intro.paragraph_format.space_after = Pt(3)
+    intro.paragraph_format.space_after = Pt(2)
+    intro.paragraph_format.line_spacing = Pt(EXERCISE_INTRO_LINE_PT)
     set_keep(intro, next_paragraph=True)
     coverage = block.get("coverage") or {}
     practised, total = coverage.get("practised"), coverage.get("lessonWords")
     note_text = (f"本課 {total} 詞全數入題。" if practised == total
                  else f"本課 {practised}／{total} 詞入題。")
     note = document.add_paragraph()
-    note.paragraph_format.space_after = Pt(5)
+    note.paragraph_format.space_after = Pt(3)
+    note.paragraph_format.line_spacing = Pt(EXERCISE_INTRO_LINE_PT)
     set_run_font(note.add_run(note_text), FONT_ZH, CAPTION_PT - 0.4, color=MUTED)
     if (block.get("note") or "").strip():
         # note 裡夾著希臘文詞條，整串交給中文字體會逐字回退到 LibreOffice 自己
@@ -382,8 +416,9 @@ def add_exercises(document: Document, block: dict | None, lesson: int) -> None:
     set_keep(note, next_paragraph=True)
     for item in block["items"]:
         head = document.add_paragraph()
-        head.paragraph_format.space_before = Pt(3)
-        head.paragraph_format.space_after = Pt(1)
+        head.paragraph_format.space_before = Pt(EXERCISE_ITEM_SPACE_BEFORE_PT)
+        head.paragraph_format.space_after = Pt(EXERCISE_ITEM_SPACE_AFTER_PT)
+        head.paragraph_format.line_spacing = Pt(EXERCISE_LABEL_LINE_PT)
         set_run_font(head.add_run(f"{item['no']:02d}　"), FONT_UI, LABEL_PT,
                      bold=True, color=ACCENT)
         if item["kind"] == "quoted":
@@ -395,13 +430,14 @@ def add_exercises(document: Document, block: dict | None, lesson: int) -> None:
         set_keep(head, next_paragraph=True)
         greek = document.add_paragraph()
         greek.paragraph_format.left_indent = Mm(4)
-        greek.paragraph_format.space_after = Pt(2)
-        greek.paragraph_format.line_spacing = 1.4
+        greek.paragraph_format.space_after = Pt(EXERCISE_TEXT_SPACE_AFTER_PT)
+        greek.paragraph_format.line_spacing = EXERCISE_TEXT_LINE_SPACING
         add_greek_run(greek, item["text"], EXERCISE_GREEK_PT)
         set_keep(greek, next_paragraph=True)
         answer = document.add_paragraph(" ")
-        answer.paragraph_format.space_after = Pt(5)
-        paragraph_rule(answer, color=RULE, size="3")
+        answer.paragraph_format.space_after = Pt(EXERCISE_ANSWER_SPACE_AFTER_PT)
+        answer.paragraph_format.line_spacing = Pt(EXERCISE_ANSWER_LINE_PT)
+        paragraph_rule(answer, color=RULE, size="3", space="1")
 
 
 def add_reading(document: Document, lesson: dict, interlinear: dict) -> None:
@@ -445,12 +481,16 @@ def add_lesson(document: Document, lesson: dict, interlinear: dict, exercises: d
     kind = "scripture chapter" if lesson["reading"]["kind"] == "scripture_chapter" else "church reading"
     add_label(document, f"Lesson {lesson['lesson']:02d}  ·  {kind}", page_break_before=page_break_before)
     number = mark_running_tag(document.add_paragraph())
-    number.paragraph_format.space_after = Pt(1)
+    number.paragraph_format.space_after = Pt(0)
+    number.paragraph_format.line_spacing = Pt(LESSON_NUMBER_LINE_PT)
     set_run_font(number.add_run(f"第 {lesson['lesson']:02d} 課"), FONT_UI, 11, bold=True, color=ACCENT)
-    heading = document.add_heading(lesson["reading"]["titleZh"], level=1)
+    heading = compact_heading(document.add_heading(lesson["reading"]["titleZh"], level=1),
+                              before=LESSON_TITLE_SPACE_BEFORE_PT,
+                              after=LESSON_TITLE_SPACE_AFTER_PT,
+                              line_spacing=LESSON_TITLE_LINE_SPACING)
     paragraph_rule(heading, color=GOLD, size="14")
     greek_title = document.add_paragraph()
-    greek_title.paragraph_format.space_after = Pt(6)
+    greek_title.paragraph_format.space_after = Pt(2)
     add_greek_run(greek_title, lesson["reading"]["titleGrc"], TRANSLATION_PT, color=MUTED)
     add_vocabulary(document, lesson)
     add_exercises(document, exercises.get(lesson["lesson"]), lesson["lesson"])
@@ -515,11 +555,15 @@ def add_latin_and_cjk(paragraph, text: str, size: float, *, color=MUTED) -> None
 # 教父半部改成節錄（每篇上限 800 詞）之後，那五十課從 1,208 頁降到 711 頁，
 # 原本的四冊就只用到三百頁上下——上限是 500。收成兩冊。
 # 新約半部 549 頁，合成一冊會超過上限，維持兩冊。
+# 🚨 切點要把**整冊的厚度**算平，不是把課文頁數算平：附錄只印在該半的最後一分冊，
+# 希臘下冊那份就有 150 頁。照課文頁數對半切，會切出 201／277 的一薄一厚。
+# 2026-09-18 讀文改用版面預算之後重量的切點（scripts/fit_reader_reading_limit.py
+# 量每課頁數，再把「課文頁＋卷首＋附錄」湊平）。
 PARTS = [
-    {"book": 1, "source": 1, "first": 1, "last": 24, "appendix": False},   # 約 271 頁
-    {"book": 2, "source": 1, "first": 25, "last": 50, "appendix": True},   # 約 278 頁
-    {"book": 3, "source": 2, "first": 1, "last": 31, "appendix": False},   # 約 349 頁
-    {"book": 4, "source": 2, "first": 32, "last": 50, "appendix": True},   # 約 362 頁
+    {"book": 1, "source": 1, "first": 1, "last": 26, "appendix": False},   # 約 183 頁
+    {"book": 2, "source": 1, "first": 27, "last": 50, "appendix": True},   # 約 190 頁
+    {"book": 3, "source": 2, "first": 1, "last": 37, "appendix": False},   # 約 241 頁
+    {"book": 4, "source": 2, "first": 38, "last": 50, "appendix": True},   # 約 237 頁
 ]
 BOOK_LABELS = ("第一冊", "第二冊", "第三冊", "第四冊")
 

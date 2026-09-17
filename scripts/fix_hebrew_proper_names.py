@@ -199,8 +199,14 @@ def repair_appendix(forms: dict[str, tuple[str, str]], dictionary: dict, write: 
         if group.get("titleZh"):
             group["id"] = group["titleZh"]
     by_title = {g.get("titleZh") or g.get("id"): g for g in table["groups"]}
-    ancestors = by_title.setdefault("先祖與族長", {"id": "先祖與族長", "titleZh": "先祖與族長", "entries": []})
-    prophets = by_title.setdefault("先知", {"id": "先知", "titleZh": "先知", "entries": []})
+    # 🚨 新建的節一定要帶 shape。專名表的每一節都靠它挑版式
+    # （build_hebrew_full_reader.add_reference_tables 讀 group["shape"]），
+    # 漏掉就是 KeyError。這兩節當初漏了，而**當時沒有人重建過 master**，所以
+    # 錯誤一直藏在資料裡：站上與書上印的都是上一版的五節，看起來一切正常。
+    ancestors = by_title.setdefault("先祖與族長", {"id": "先祖與族長", "titleZh": "先祖與族長",
+                                                  "shape": "name", "entries": []})
+    prophets = by_title.setdefault("先知", {"id": "先知", "titleZh": "先知",
+                                            "shape": "name", "entries": []})
     if ancestors not in table["groups"]:
         table["groups"].append(ancestors)
     if prophets not in table["groups"]:

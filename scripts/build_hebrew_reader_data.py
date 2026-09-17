@@ -18,8 +18,13 @@ import json
 import hashlib
 import re
 import unicodedata
+import sys
 import xml.etree.ElementTree as ET
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+import reader_page_budget as budget
 
 from rcuv2010_reader import (
     load_rcuv_snapshot,
@@ -91,6 +96,57 @@ HEBREW_VOWEL_MARKS = {
 OSIS_NS = "http://www.bibletechnologies.net/2003/OSIS/namespace"
 _WLC_CACHE: dict[Path, dict[str, str]] = {}
 _PSALM_MT_COUNTS: dict[int, int] | None = None
+
+
+# 一課的讀文能收多長，由共用的版面預算決定：scripts/reader_page_budget.py。
+# 那裡不是一個詞數上限，而是一個量出來的版面模型——「這麼長、這麼多單元，排出來
+# 會不會超過八頁」。單元數那一項不能省：同樣五百詞，分五段與分五十段厚度差很多。
+#
+# 擁有者 2026-09-17：「一課最多不能超過 8 頁」「大約抓個 500-800 字左右就好」
+# 「但要是自然段落的選集喔，不要是語意沒講完就中斷」。所以裁的單位是文本自己的
+# 分段（節、段、章），不是詞數切點。
+
+# 希伯來文字區塊 U+0590–U+05FF；一個「詞」就是一串連續的希伯來字元。
+HEBREW_BLOCK = (0x0590, 0x05FF)
+HEBREW_WORD_RE = re.compile(f"[{chr(HEBREW_BLOCK[0])}-{chr(HEBREW_BLOCK[1])}]+")
+
+
+def hebrew_word_count(text: str) -> int:
+    return len(HEBREW_WORD_RE.findall(text))
+
+
+def clip_reading(reading: dict) -> dict:
+    """超過上限就從篇首連續取整節／整段；裁過一定要標明範圍。
+
+    🚨 一定要在課與課綁起來、背誦句掛上去之前裁。先挑後裁的話，背誦句會指向
+    讀者讀不到的段落——希臘那一輪五十四則就是這樣，書照印，只是出處不存在。
+
+    🚨 裁完一定要寫出 ``extentZh``，並把 ``completeness`` 改成 ``excerpt``。
+    本系列的停止條件之一就是「宣告為全篇的讀文其實是節錄」：裁了卻仍說是全章，
+    讀者以為自己讀完了一整章，而版面上看不出任何異狀。
+    """
+    def weight(unit: dict) -> int:
+        return hebrew_word_count(unit["text"])
+
+    field = "verses" if reading["kind"] == "bible_chapter" else "segments"
+    units = reading[field]
+    unit_name = "節" if field == "verses" else "段"
+    whole = "章" if field == "verses" else "篇"
+    total = sum(weight(unit) for unit in units)
+    if budget.fits("hbo", total, len(units)):
+        return {**reading, "completeness": "complete",
+                "extentZh": f"全{whole} {len(units)} {unit_name}（完整）"}
+    kept = budget.clip(units, weight, "hbo")
+    if field == "verses":
+        span = f"第 {kept[0]['verse']}–{kept[-1]['verse']} {unit_name}"
+    else:
+        span = f"前 {len(kept)} {unit_name}"
+    return {
+        **reading,
+        field: kept,
+        "completeness": "excerpt",
+        "extentZh": f"{span}（節錄，全{whole} {len(units)} {unit_name}、{total:,} 詞）",
+    }
 
 
 def load(path: Path):
@@ -514,10 +570,16 @@ def assemble() -> dict:
                 f"lesson {lesson_number}: vocab={len(lesson_vocab)}, memory={len(lesson_memory)}"
             )
         if lesson_number <= 25:
-            reading = {"kind": "bible_chapter", **chapters[lesson_number - 1]}
+            reading = clip_reading({"kind": "bible_chapter", **chapters[lesson_number - 1]})
             title = reading["titleZh"]
+            # 裁讀文會不會讓背誦句指向讀者讀不到的地方？這一本不會，而理由要寫
+            # 下來而不是假設：希伯來的背誦句是**全語料**按生詞覆蓋率挑的，不是
+            # 從該課那一章裡挑的——第 1 課讀詩篇 136，兩則背誦句卻是 Ezek.11.15
+            # 與 Gen.42.13。五十則經文課的背誦句沒有一則落在自己那一章裡，所以
+            # 裁與不裁都一樣。（希臘下冊不是這樣，那邊先挑後裁，五十四則背誦句
+            # 指向被砍掉的段落。換語言就要重新查一次，不要照搬這個結論。）
         else:
-            reading = {"kind": "prayer_or_article", **prayer_items[lesson_number - 26]}
+            reading = clip_reading({"kind": "prayer_or_article", **prayer_items[lesson_number - 26]})
             title = reading["title_zh"]
         lessons.append(
             {
@@ -534,7 +596,9 @@ def assemble() -> dict:
     return {
         "schemaVersion": "1.0.0",
         "title": "聖經希伯來文原文讀本",
-        "subtitle": "五十課・一千詞・五百題翻譯練習・二十五章・二十五篇禱文與文章",
+        # 🚨 讀文自 2026-09-17 起有篇幅上限（clip_reading），長章長篇會裁成節錄，
+        # 所以副標不能再說「二十五章」——那是在宣告一件書裡沒有的事。
+        "subtitle": "五十課・一千詞・五百題翻譯練習・二十五章經文選讀・二十五篇禱文與文章",
         "language": "Biblical Hebrew / Mishnaic Hebrew",
         "languageCode": "hbo",
         "privateUse": True,

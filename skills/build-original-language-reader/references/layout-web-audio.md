@@ -13,6 +13,82 @@ Default physical specification:
 
 Use the frozen reader profile if the user approves a different specification.
 
+## 一課八頁、字級不小於 12pt（擁有者 2026-09-17 定）
+
+這兩條是版面的硬約束，其他所有版面決定都排在它們後面。
+
+- **一課最多八頁。** 一課印的就是三樣東西：二十個生詞、十題翻譯練習、一篇讀文。
+  讀文的長度因此不是編輯決定的，是版面決定的——見下面的「版面預算」。
+- **凡是要讀的字一律 ≥12pt。** 只有眉標與頁碼例外（版口標示，不是閱讀內容）。
+  實作在 `build_hebrew_full_reader.set_run_font` 的 `MIN_READING_PT`：字級下限
+  收在唯一的出口，而不是靠把一百多處常數逐一改成 12——那樣會漏掉算出來的
+  （`CAPTION_PT - 0.4` 印出來是 11.6），而且攔不住下一個人新增的 9.5pt。
+  眉標與頁碼走 `chrome=True` 繞過下限。
+  🚨 **希伯來文要另外設 `w:szCs`。** 複雜文種（希伯來、阿拉伯…）排版讀的是
+  `w:szCs` 不是 `w:sz`，而 python-docx 的 `run.font.size` 只寫後者。整本希伯來
+  讀本的希伯來字因此一直印在 `szCs` 的預設值 11pt 上——詞表、逐詞對譯、練習題、
+  Haggadah，五千多個字級沒有一個是 builder 要求的那個數字，而頁面看起來完全
+  正常。量 PDF 才會發現（NotoSerifHebrew 只有 11.0pt 一種尺寸）。
+
+## 版面預算：讀文能收多長是量出來的
+
+`scripts/reader_page_budget.py` 收著一個量出來的模型：
+
+    頁數 ≈ 固定開銷 + a × 讀文長度 + b × 單元數
+
+四種語言各一組係數，由 `scripts/fit_reader_reading_limit.py` 從**排好的 PDF**
+回歸出來（每課的眉標就是那一課的頁，數眉標就是數厚度）。裁讀文的時候不是比對
+一個詞數上限，而是問「再加一個單元會不會超過預算」。
+
+- 🚨 **單元數那一項不能省。** 逐詞對譯每個單元自成一塊，末尾那一列多半沒排滿，
+  還要加一行整句中譯。同樣五百詞，分五段與分五十段厚度差很多：只用詞數回歸，
+  希臘 R² 0.793、日文 0.478；補上單元數之後是 0.925 與 0.643。被這一項咬到的是
+  〈聖母讚頌詞〉那種課——詞數不多、段數上百，照詞數估七頁，印出來十二頁。
+- 🚨 **不要用「讀文長度 ÷ 一課總頁數」當每頁容量**：分母含生詞頁與練習頁，密度
+  低估四成，上限就砍過頭。
+- 🚨 **也不要用「一頁排得下幾個原文詞」回推**：段末沒排滿的那一列、整句中譯的
+  行、單元之間的間距都不在那個數字裡。日文一頁排得下九十四個詞，看起來一頁可放
+  兩百字元，實際只有一百。
+- 🚨 **回歸線是平均，要留緩衝。** 照線設上限會有一半的課壓在線上方：第一輪就是
+  這樣，四本共 31 課印成九到十頁。`SAFETY_PAGES` 就是那個緩衝，也是量出來的。
+- 🚨 **版面一改，係數就作廢。** 字級、行距、cell 邊距、練習題的節奏動過之後要
+  重跑 `fit_reader_reading_limit.py`，不要沿用上一輪的數字。
+
+裁的單位一律是**文本自己的分段**（節、段、章），不是詞數切點——擁有者
+2026-09-17：「要是自然段落的選集喔，不要是語意沒講完就中斷。」粗分段救不了的
+時候（整篇只有一段）才退到更細的一層，退到哪一層要在 extent 裡說出來。
+
+## 一課的三塊：生詞一頁、練習一頁、讀文自己起頁
+
+擁有者 2026-09-17：「生詞表二十字只需要一頁啊，練習十個句子加作答空間也只需要
+一頁啊。」這一段的數字都在 `build_hebrew_full_reader` 的版面節奏常數裡，四本共用。
+
+踩過的坑，每一個都是「看起來正常、實際浪費一整頁」：
+
+- **Word 的預設段落節奏。** 12pt 的字（字高 4.2mm）排進表格 cell 會佔掉 11.2mm，
+  因為預設帶著 space_after 與 1.15 行距。`tighten_cell()` 清掉之後一列約 7mm。
+- **欄寬不足會折行，折一次就多一列。** 編號欄 8mm 放不下兩位數，印出來是「1」
+  換行「4」。長詞條同理——拉丁的主要部分（median 22 字母、p90 39）與繁中詞義
+  （median 7 字、p90 12）在 141mm 版心裡只能取捨，兩邊都給到 p90 就爆版。
+  🚨 兩個方向都要試過再定：把 forms 放寬到 56%、詞義縮到 32%，跨頁的課從 13 變
+  19、整冊多六頁——詞義折行的代價一樣是多一整列，而它的分佈比 forms 集中得多。
+- **練習題的三行要各自講明行距。** Normal 樣式的 1.25 是給整段中文正文的節奏，
+  套在三行各自成段的題目上，十題光行距就多出兩公分。題號行與作答線給**絕對**
+  行高（exact），正文那一行只能給倍數——它會折行，寫死會把第二行裁掉。
+- **課首那一疊的留白。** 眉標小標、課次、課題、生詞標題各自帶著 Heading 1 給整本
+  分章用的段前段後，加起來四公分；生詞表就差那幾公釐排不進一頁，於是二十個詞
+  跨兩頁、十題被推到第三頁，一課憑空多兩頁。
+
+量「生詞排不排得進一頁」有兩個想當然耳、都量錯了的判準：
+
+1. 「練習標題的 y 要小於 27mm」——標題自己的行高與段前留白就把 y 推到 28.5mm，
+   排得好好的十八課被報成壞的。
+2. 「練習標題上面不能有別的東西」——生詞排得下的時候，練習標題本來就緊接在表格
+   後面、跟課首同一頁。那是最緊湊的情形，不是錯。
+
+要問的是：**詞條有沒有被擠到下一頁去**——生詞標題在前一頁，而練習標題那一頁的
+上方還壓著詞條。`scripts/audit_reader_pages.py` 用的就是這一條。
+
 ## One shared layout across the three readers
 
 The Hebrew builder is the standard; Greek and Latin import its size constants
@@ -23,8 +99,9 @@ and must match its *structure* too, not just its scale. Checked 2026-08-27:
   through `add_label` for months — section headings smaller than the 11.5 pt
   body text. The eyebrow is for the line *above* a heading, never instead of one.
 - **Heading scale**, from `build_hebrew_full_reader`: title 24, H1 17, H2 14,
-  H3 12.5, body 11.5, tables 9.6, label 8.2. Nothing that acts as a heading may
-  sit below the body size.
+  H3 12.5, body 12, tables 12, label 12. Nothing that acts as a heading may sit
+  below the body size, and since 2026-09-17 nothing readable may sit below 12pt
+  at all — the old 11.5／9.6／8.2 rungs are gone.
 - **Cover**: dark banner table (`ACCENT_DARK`) holding a gold `ORIGINAL-LANGUAGE
   READER` eyebrow, the book name at 25 pt, and one line of the source script;
   then the volume line, a gold rule, and the `JIS B5 182 × 257 mm · 私人研讀`
@@ -50,9 +127,11 @@ and must match its *structure* too, not just its scale. Checked 2026-08-27:
   never renumber a lesson (the online reader and the audio routes key on it),
   and print each half's appendix in its last part only — repeating a 125-page
   appendix in every part pushes them back over the cap. The splits live in each
-  builder's `PARTS`: Greek 6 volumes of 262–301 pages, Latin 3 of 416–456,
-  Hebrew 1 of 401. Greek's first two are the thin ones because its 524-page
-  first half can only halve. `render_and_check_reader_pdfs.py` fails the build
+  builder's `PARTS`. 2026-09-18（12pt、一課八頁之後）實測：希臘四冊
+  183／189／241／236，拉丁三冊 355／160／166，日文四冊 181／177／180／187，
+  希伯來單冊 406。
+  🚨 切點要把**整冊的厚度**算平，不是把課文頁數算平：附錄只印在該半的最後一分冊
+  （希臘下冊那份就有 150 頁）。照課文頁數對半切，會切出 201／277 的一薄一厚。 `render_and_check_reader_pdfs.py` fails the build
   over 500.
 - **Appendix tables print grouped**, in `PRINT_ORDER` from
   `scripts/proper_name_categories.py`, with the group heading at H2/H3.

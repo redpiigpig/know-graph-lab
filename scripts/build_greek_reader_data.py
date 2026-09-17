@@ -50,6 +50,46 @@ READING_COUNT = 50
 NT_LESSON_LAST = 25
 PATRISTIC_LESSON_LAST = 25
 
+# 上冊的讀文與下冊同一套版面預算（scripts/reader_page_budget.py）。
+import reader_page_budget as budget  # noqa: E402
+
+
+def clip_scripture_chapter(chapter: dict) -> dict:
+    """上冊一課讀一章；超過上限就從章首連續取整節。
+
+    🚨 一章印出來是逐詞對譯，一節一節排，所以裁的單位是**節**——文本自己的
+    分段，不是詞數切點。取到再加一節就會超過為止；第一節就超過也仍然收下，
+    寧可長一點也不要交出半節。
+
+    🚨 裁完一定要寫 ``extentZh`` 並把 ``completeness`` 設成 ``excerpt``。本系列
+    的停止條件之一就是「宣告為全章的讀文其實是節錄」。
+
+    背誦句會不會因此指向讀者讀不到的地方？上冊不會：上冊的一百則背誦句是**全
+    語料**按生詞覆蓋率挑的，沒有一則出自該課那一章（第 1 課讀約翰一書 1，背誦句
+    卻是 Phil.4.20）。下冊不同——下冊的記憶句就是從讀文的段落裡切出來的，所以
+    改上限之後一定要重跑 select_greek_memory_sentences.py，先裁再挑。
+    """
+    def words(verse: dict) -> int:
+        return len((verse.get("sourceText") or verse.get("text") or "").split())
+
+    verses = chapter["verses"]
+    total = sum(words(verse) for verse in verses)
+    # 欄位名沿用下冊讀文那一側的 completeness／extent，印刷端才讀得到同一組欄位
+    # （build_greek_full_reader.add_reading 讀的是 reading["extent"]）。自己另立
+    # 一個 extentZh 的話，資料裡寫著「節錄」而書上照印「全章」。
+    if budget.fits("grc", total, len(verses)):
+        return {**chapter, "completeness": "complete",
+                "extent": f"全章 {len(verses)} 節"}
+    kept = budget.clip(verses, words, "grc")
+    return {
+        **chapter,
+        "verses": kept,
+        "completeness": "excerpt",
+        "extent": (f"第 {kept[0]['verse']}–{kept[-1]['verse']} 節"
+                   f"（全章 {len(verses)} 節、{total:,} 詞）"),
+    }
+
+
 VOLUME_ONE_HALVES = {True: "新約（Mounce 課程詞表）", False: "希臘文舊約（七十士譯本詞頻）"}
 VOLUME_TWO_HALVES = {True: "教父文獻詞頻", False: "希臘教會文獻與禮儀詞頻"}
 
@@ -294,7 +334,7 @@ def build_volume_one(
         if reading is None:
             problems.append(f"上冊第 {number} 課沒有讀文")
         else:
-            reading = {**reading, "kind": "scripture_chapter"}
+            reading = clip_scripture_chapter({**reading, "kind": "scripture_chapter"})
 
         lessons.append(
             {
@@ -576,7 +616,14 @@ def build(strict: bool = True) -> dict:
         "appendixTables": len(appendices["appendices"]),
         "appendixEntries": sum(len(item["entries"]) for item in appendices["appendices"]),
         "liturgySteps": liturgy["summary"]["stepCount"],
-        "scriptureWords": scripture["summary"]["wordCount"],
+        # 🚨 數印出來的那些，不是 plan 裡原本有的那些。上冊自 2026-09-18 起按節
+        # 裁到篇幅上限（clip_scripture_chapter），照 plan 的 summary 報就會說本書
+        # 收了 26,115 詞，而書上其實只有 15,902 詞——一個對不上書的自我描述。
+        "scriptureWords": sum(
+            len((verse.get("sourceText") or verse.get("text") or "").split())
+            for lesson in volume_one
+            for verse in (lesson["reading"] or {}).get("verses", [])
+        ),
         "patristicWords": patristic["summary"]["wordCount"],
         "liturgyWords": liturgy["summary"]["wordCount"],
     }
@@ -667,7 +714,9 @@ def build(strict: bool = True) -> dict:
                 "volume": 1,
                 "slug": "grc-vol-1",
                 "title": "上冊《新約與七十士譯本》",
-                "subtitle": "五十課・一千詞・一百節背誦・五十章完整經文",
+                # 🚨 上冊自 2026-09-18 起按節裁到篇幅上限，五十章裡有三十七章是
+                # 節錄。副標再寫「完整經文」，就是在封面上宣告一件書裡沒有的事。
+                "subtitle": "五十課・一千詞・一百節背誦・五十章經文選讀",
                 "memoryUnitKind": "verse",
                 "corpusByHalf": {"1-25": "新約", "26-50": "希臘文舊約（七十士譯本、次經、偽經）"},
                 "counts": volume_counts(volume_one),

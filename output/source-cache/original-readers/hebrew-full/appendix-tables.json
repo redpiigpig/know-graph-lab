@@ -2909,6 +2909,7 @@
     {
      "id": "先祖與族長",
      "titleZh": "先祖與族長",
+     "shape": "name",
      "entries": [
       {
        "pointed": "יְהוּדָה",
@@ -3424,6 +3425,7 @@
     {
      "id": "先知",
      "titleZh": "先知",
+     "shape": "name",
      "entries": [
       {
        "pointed": "מֹשֶׁה",

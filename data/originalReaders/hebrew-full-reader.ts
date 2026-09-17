@@ -197,10 +197,24 @@ interface AssembledReaderMaster {
     lesson: number;
     reading: {
       kind: string;
+      /** 「全章 26 節（完整）」或「第 1–22 節（節錄，全章 40 節、541 詞）」。 */
+      completeness: "complete" | "excerpt";
+      extentZh: string;
       verses?: Array<{
         ref: string;
+        verse: number;
+        text: string;
         translationZh: string;
         translationCrosswalk?: Record<string, unknown>;
+      }>;
+      segments?: Array<{
+        id: string;
+        ordinal: number;
+        sourcePath: string;
+        text: string;
+        sourceText?: string;
+        editorialPointedText?: string;
+        translationZh?: string;
       }>;
     };
   }>;
@@ -315,6 +329,16 @@ export interface HebrewLessonReading {
   titleHe: string;
   ref: string;
   summaryZh: string;
+  /**
+   * 線上讀本與紙本讀本讀的是同一段。
+   *
+   * 🚨 一課的讀文自 2026-09-18 起有篇幅上限（build_hebrew_reader_data.clip_reading），
+   * 長章長篇按節、按段從篇首連續節錄。這兩個欄位直接取自排印主檔，網頁才不會
+   * 悄悄多印出書上沒有的段落——那正是「資料層與印刷層各走各的」那一類錯：兩邊
+   * 都不報錯，只是讀者在站上讀到的跟手上那本不是同一篇。
+   */
+  completeness: "complete" | "excerpt";
+  extentZh: string;
   difficulty: number | null;
   genre: string;
   segmentCount: number;
@@ -699,19 +723,21 @@ function memoryForLesson(lesson: number): HebrewMemoryVerse[] {
 
 function scriptureReading(lesson: number): HebrewLessonReading {
   const chapter = scripturePlan.chapters.find((item) => item.lessonStart === lesson);
-  invariant(chapter, `找不到第 ${lesson} 課完整章`);
+  invariant(chapter, `找不到第 ${lesson} 課的章`);
   const assembledLesson = assembledReader.lessons.find((item) => item.lesson === lesson);
-  invariant(assembledLesson?.reading.kind === "bible_chapter", `排印主檔第 ${lesson} 課不是完整章`);
-  const translationByRef = new Map(
-    (assembledLesson.reading.verses || []).map((verse) => [verse.ref, verse]),
-  );
+  invariant(assembledLesson?.reading.kind === "bible_chapter", `排印主檔第 ${lesson} 課不是經文章`);
+  // 🚨 逐節走的是**排印主檔**的節，不是 scripture-plan 的節。plan 收的一定是
+  // 整章；排印主檔才是裁過的、書上真的印出來的那幾節。照 plan 走的話，站上會
+  // 多出書裡沒有的經節，而且沒有任何東西會報錯——只有拿著書對照的人會發現。
+  const printedVerses = assembledLesson.reading.verses || [];
+  invariant(printedVerses.length > 0, `${chapter.ref} 排印主檔沒有經節`);
   invariant(
-    chapter.verses.every((verse) => Boolean(translationByRef.get(verse.ref)?.translationZh.trim())),
+    printedVerses.every((verse) => Boolean(verse.translationZh.trim())),
     `${chapter.ref} 線上對照仍有空白繁中經文`,
   );
   const seenTranslationRefs = new Set<string>();
-  const segments = chapter.verses.map((verse, index) => {
-    const assembledVerse = translationByRef.get(verse.ref);
+  const segments = printedVerses.map((verse, index) => {
+    const assembledVerse = verse;
     const crosswalk = assembledVerse?.translationCrosswalk;
     const translationRef = String(crosswalk?.translationRef || "");
     const translationContinuation = Boolean(
@@ -737,9 +763,11 @@ function scriptureReading(lesson: number): HebrewLessonReading {
     titleHe: chapter.titleHe,
     ref: chapter.ref,
     summaryZh: "",
+    completeness: assembledLesson.reading.completeness,
+    extentZh: assembledLesson.reading.extentZh,
     difficulty: chapter.difficulty,
     genre: chapter.genre,
-    segmentCount: chapter.verses.length,
+    segmentCount: segments.length,
     wordCount: chapter.wordCount,
     pointingStatus: "wlc_pointed_complete",
     source: {
@@ -755,15 +783,26 @@ function scriptureReading(lesson: number): HebrewLessonReading {
 function prayerReading(lesson: number): HebrewLessonReading {
   const item = prayersArticles.items[lesson - 26];
   invariant(item, `找不到第 ${lesson} 課禱文／文章`);
+  const assembledLesson = assembledReader.lessons.find((entry) => entry.lesson === lesson);
+  invariant(
+    assembledLesson?.reading.kind === "prayer_or_article",
+    `排印主檔第 ${lesson} 課不是禱文／文章`,
+  );
+  // 與經文那一側同一條規矩：段落走排印主檔（裁過的），不走 prayers-articles
+  // 那份原始全篇。
+  const printedSegments = assembledLesson.reading.segments || [];
+  invariant(printedSegments.length > 0, `${item.id} 排印主檔沒有正文段落`);
   return {
     kind: "prayer_article",
     titleZh: item.title_zh,
     titleHe: item.title_he,
     ref: item.ref,
     summaryZh: item.summaryZh,
+    completeness: assembledLesson.reading.completeness,
+    extentZh: assembledLesson.reading.extentZh,
     difficulty: null,
     genre: item.id.includes("article") ? "rabbinic_article" : "jewish_prayer",
-    segmentCount: item.segments.length,
+    segmentCount: printedSegments.length,
     wordCount: null,
     pointingStatus: item.fullPointingStatus,
     source: {
@@ -772,14 +811,14 @@ function prayerReading(lesson: number): HebrewLessonReading {
       license: item.license,
       privateAuthorization: item.privateAuthorization,
     },
-    segments: item.segments.map((segment) => {
+    segments: printedSegments.map((segment) => {
       const text = segment.editorialPointedText || segment.text;
       return {
         id: segment.id,
         ordinal: segment.ordinal,
         ref: segment.sourcePath,
         text,
-        sourceText: segment.sourceText,
+        sourceText: segment.sourceText || segment.text,
         tokens: glossesFor(text, `prayer:${segment.id}`),
         translationZh: segment.translationZh || senseFor(`prayer:${segment.id}`),
       };

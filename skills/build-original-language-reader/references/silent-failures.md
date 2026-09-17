@@ -381,3 +381,37 @@ Chinese, so every gate passes.
   pictures by file found 公義 and 不義 on the same scales; grouping glosses by
   source found the commentary. Anything that legitimately repeats is worth
   listing once by what it repeats.
+
+## 一頁排版正常，而字級全錯：複雜文種要另外設 `w:szCs`
+
+希伯來讀本的每一個希伯來字——詞表的附點詞形、逐詞對譯的原文、練習題、Haggadah
+——從第一版起就印在 11pt 上，不管 builder 要求的是 12.5、13.5、14 還是 17。原因是
+Word／LibreOffice 排複雜文種（希伯來、阿拉伯…）讀的是 `w:szCs`（complex script
+size），而 python-docx 的 `run.font.size` 只寫 `w:sz`；沒寫的那一個就落在預設值
+11pt。五千多個字級沒有一個是對的，而頁面看起來完全正常：行距對、版心對、換行對，
+只是字比該有的小。
+
+量 PDF 才看得出來：`NotoSerifHebrew` 在整本書裡只有 11.0pt 一種尺寸，而同一頁的
+中文有 12、14、17 三種。修法是在 `set_run_font` 裡同時寫 `w:szCs`。
+
+**推廣**：一個「所有文字都套了樣式」的檢查不會發現這件事，因為樣式確實套上去了。
+要驗的是**印出來的字級**，不是**設定字級的那段程式**。
+
+## 重建才暴露出來的資料缺陷：`shape` 漏了兩節，而沒有人重建過
+
+希伯來的專名附錄分九類印，每一節靠 `group["shape"]` 挑版式。`fix_hebrew_proper_names.py`
+後來新增「先祖與族長」與「先知」兩節時漏了那個欄位。這個錯誤在資料裡躺了很久而
+沒有人發現，因為**沒有人重建過 master**：站上與書上印的都是上一版的五節，看起來
+一切正常。等到這一輪因為別的理由重建，builder 立刻 `KeyError: 'shape'`。
+
+**推廣**：衍生檔案沒有重建過，就不算驗證過上游資料。一個「跑得過」的管線，可能
+只是從來沒有真的跑過那一段。
+
+## 同一行同時宣告「完整」與「節錄」
+
+日文讀文的 extent 原本寫「第 四 節（完整，共 7 節）」，加上篇幅上限之後，裁切那一
+步在後面**接**了一句「節錄前 7／8 段」。印出來就是
+「第 四 節（完整，共 7 節）／節錄前 7／8 段」——同一行自相矛盾，而讀者只能猜哪一
+句是真的。裁過的時候不能用「附加」處理來源的說明，要把原本那句「完整」拿掉。
+
+**推廣**：狀態欄位不是可以疊加的字串。新的狀態要**取代**舊的，不是接在後面。

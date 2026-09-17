@@ -33,6 +33,10 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
+import reader_page_budget as budget
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
 from build_japanese_reading_plan import divisions
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -200,18 +204,50 @@ def memory_units(units: list[dict], words: list[str]) -> list[dict]:
     合約要求背誦與讀文同樣是宗教學或宗教史的內容；從本課讀文裡挑，這一條就不必
     另外證明。挑的是完整句、長度適中、且用得上本課生詞的句子。
     """
-    scored = []
+    # 🚨 背誦要的是「一句」，不是「一段」。這裡的 unit 是段落，動輒兩三百字，
+    # 落不進三十到五十字那個區間；第二冊第 15 課節選後只剩三段正文（65／208／370
+    # 字），照段落挑就只有一句合格。先切成句子，候選才是真的句子。
+    # 🚨 先拿整段當候選，湊不滿才切句。整句中譯是照**段落**的文字雜湊接上去的，
+    # 背誦句一旦變成段落的子字串就接不到中譯——改成一律切句那次，一百一十八句
+    # 背誦的中譯就這樣沒了，而且書照排、稽核照過。
+    candidates: list[tuple[str, str]] = [
+        (unit["text"].strip(), unit.get("label", "")) for unit in units
+    ]
+    sentence_level: list[tuple[str, str]] = []
     for unit in units:
-        text = unit["text"].strip()
-        if not (MEMORY_MIN <= len(text) <= MEMORY_MAX):
-            continue
-        if not text.endswith(("。", "」", "』", "！", "？")) and not unit["label"]:
-            continue
-        hits = sum(1 for form in words if form and form in text)
-        # 太短與太長都難背；三十到五十字是一句能記住的長度。
-        fit = 1.0 - abs(len(text) - 40) / 60
-        scored.append((hits + fit, text, unit["label"]))
-    scored.sort(key=lambda row: -row[0])
+        label = unit.get("label", "")
+        for piece in sentences(unit["text"]):
+            piece = piece.strip()
+            if piece and piece != unit["text"].strip():
+                sentence_level.append((piece, label))
+
+    def gather(low: int, high: int) -> list[tuple[float, str, str]]:
+        rows = []
+        for text, unit_label in candidates:
+            text = text.strip()
+            if not (low <= len(text) <= high):
+                continue
+            if not text.endswith(("。", "」", "』", "！", "？")) and not unit_label:
+                continue
+            hits = sum(1 for form in words if form and form in text)
+            # 太短與太長都難背；三十到五十字是一句能記住的長度。
+            fit = 1.0 - abs(len(text) - 40) / 60
+            rows.append((hits + fit, text, unit_label))
+        rows.sort(key=lambda row: -row[0])
+        return rows
+
+    scored = gather(MEMORY_MIN, MEMORY_MAX)
+    # 🚨 讀文改成節錄之後（上限 900 字元）候選池跟著縮小，第 15 課就湊不出兩句
+    # 落在三十到五十字那個區間的。湊不滿時放寬長度限制再挑一次——比起讓一課少
+    # 一句背誦，或為了這一課把讀文留長，放寬長度是代價最小的。
+    if len(scored) < 2:
+        # 整段湊不滿（第二冊第 15 課節選後只剩三段正文，65／208／370 字，只有一段
+        # 落在區間內），才把段落切成句子來挑。這些句子沒有現成的整句中譯。
+        candidates = sentence_level
+        scored += [row for row in gather(MEMORY_MIN, MEMORY_MAX) if row not in scored]
+    if len(scored) < 2:
+        scored += [row for row in gather(MEMORY_MIN // 2, MEMORY_MAX * 2)
+                   if row not in scored]
     picked: list[dict] = []
     for _, text, label in scored:
         if any(text == item["text"] for item in picked):
@@ -222,19 +258,13 @@ def memory_units(units: list[dict], words: list[str]) -> list[dict]:
     return picked
 
 
-READING_CHAR_LIMIT = 1200
-"""一課讀文的篇幅上限（字元）。
-
-擁有者 2026-09-17：「大約抓個 500-800 字左右就好」「但要是自然段落的選集喔，
-不要是語意沒講完就中斷」，日文這一側裁示「按字元放寬」。
-
-🚨 日文的單位是**字元**不是詞。希臘、拉丁的上限 800 是詞，日文一個詞平均兩個
-字元左右，照字面砍 800 字元等於砍掉六成，一篇隨筆只剩一頁多。1200 字元大約
-相當於六百詞，與另外兩語同一個量級。
-
-裁的單位是段落——青空文庫的散文本來就一段一段收，從篇首連續取整段。
-"""
-
+# 一課的讀文能收多長，由共用的版面預算決定：scripts/reader_page_budget.py。
+# 那裡不是一個詞數上限，而是一個量出來的版面模型——「這麼長、這麼多單元，排出來
+# 會不會超過八頁」。單元數那一項不能省：同樣五百詞，分五段與分五十段厚度差很多。
+#
+# 擁有者 2026-09-17：「一課最多不能超過 8 頁」「大約抓個 500-800 字左右就好」
+# 「但要是自然段落的選集喔，不要是語意沒講完就中斷」。所以裁的單位是文本自己的
+# 分段（節、段、章），不是詞數切點。
 
 def clip_units(units: list[dict], extent: str) -> tuple[list[dict], str]:
     """超過上限就從篇首連續取整段；回傳（段落、範圍說明）。
@@ -243,20 +273,22 @@ def clip_units(units: list[dict], extent: str) -> tuple[list[dict], str]:
     背誦句也會自動只從讀者讀得到的段落裡挑——希臘那一輪是先挑後裁，五十四則背誦
     句指向被砍掉的段落，書上照印，只是出處不存在。
     """
-    total = sum(len(unit["text"]) for unit in units)
-    if total <= READING_CHAR_LIMIT:
+    def weight(unit: dict) -> int:
+        return len(unit["text"])
+
+    total = sum(weight(unit) for unit in units)
+    if budget.fits("ja", total, len(units)):
         return units, extent
-    kept: list[dict] = []
-    running = 0
-    for unit in units:
-        size = len(unit["text"])
-        # 第一段就超過上限時仍然收下：寧可長一點，也不要交出半段。
-        if kept and running + size > READING_CHAR_LIMIT:
-            break
-        kept.append(unit)
-        running += size
-    note = f"節錄前 {len(kept)} 段（全文 {len(units)} 段、{total:,} 字）"
-    return kept, f"{extent}／{note}" if extent else note
+    kept = budget.clip(units, weight, "ja")
+    # 🚨 裁過就不能再說「完整」。來源的 extent 寫的是「第 四 節（完整，共 7 節）」，
+    # 在後面接一句「節錄前 7／8 段」的話，同一行會同時宣告完整與節錄——書上印出來
+    # 就是這樣，兩句話互相打架，而讀者只能猜哪一句是真的。
+    #
+    # 課首那行出處說明與課名同區，寫長了會佔掉兩行、把生詞表推到下半頁——二十個
+    # 詞就跨頁。所以這一行要短：字數在同一行末尾已經印過，這裡只講範圍。
+    base = extent.replace("（完整，", "（").replace("（完整）", "").replace("完整，", "").strip()
+    note = f"節錄前 {len(kept)}／{len(units)} 段"
+    return kept, f"{base}　{note}" if base else note
 
 
 def build() -> dict:

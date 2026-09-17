@@ -744,13 +744,18 @@ def validate_rcuv_snapshot(gate: Gate, master: dict) -> None:
     # 25 fixed chapters and the 100 memory verses, and it shifts whenever the
     # memory verses land inside or outside those chapters.
     expected_unique = len({str(record["ref"]) for record in chapter_records} | {str(record["ref"]) for record in memory_records})
+    # 🚨 章的位置數不能凍結成一個數字。讀文自 2026-09-17 起按節裁到版面預算，
+    # 印出來的位置數就會隨上限而動（614 → 397）；凍結它的話，每次調上限這一關
+    # 都會紅，而紅的原因跟「對照有沒有錯」一點關係都沒有。要驗的是**每一個印出來
+    # 的位置都對得上**（failures 為空），以及背誦句仍是 100 則。
     gate.expect(
-        len(chapter_records) == 614
+        len(chapter_records) > 0
         and len(memory_records) == 100
         and len(unique_refs) == expected_unique
         and not failures,
         "source.rcuv2010.crosswalk",
-        f"all 614 chapter positions and 100 memory verses ({expected_unique} unique MT refs) exactly match the frozen RCUV2010 crosswalk",
+        f"all {len(chapter_records)} printed chapter positions and 100 memory verses "
+        f"({expected_unique} unique MT refs) exactly match the frozen RCUV2010 crosswalk",
         chapterPositions=len(chapter_records),
         memoryPositions=len(memory_records),
         uniqueRefs=len(unique_refs),
@@ -859,8 +864,18 @@ def validate_master(gate: Gate, master_path: Path, vocab_by_ordinal: dict[int, d
         reading_kinds.append(kind)
         if number <= 25:
             verses = reading.get("verses", [])
-            if kind != "bible_chapter" or not verses or len(verses) != int(reading.get("verseCount", -1)):
+            # 🚨 讀文自 2026-09-17 起有版面預算（一課最多八頁），長章按節從章首連續
+            # 節錄，所以「印出來的節數 == verseCount」不再是契約。契約改成：印出來
+            # 的每一節都完整、都有中譯，而且**印的範圍要說得出來**——completeness
+            # 與 extentZh 缺一不可，缺了就是在宣告一件書裡沒有的事。
+            printed, whole = len(verses), int(reading.get("verseCount", -1))
+            completeness = reading.get("completeness")
+            if kind != "bible_chapter" or not verses or printed > whole:
                 chapter_failures.append(str(lesson.get("id")))
+            elif completeness not in {"complete", "excerpt"} or not reading.get("extentZh"):
+                chapter_failures.append(f"{lesson.get('id')}:extent")
+            elif (printed == whole) != (completeness == "complete"):
+                chapter_failures.append(f"{lesson.get('id')}:completeness")
             for verse in verses:
                 if unpointed_words(verse.get("text", "")) or not HEBREW_ACCENT.search(verse.get("text", "")):
                     chapter_failures.append(str(verse.get("ref")))
@@ -875,7 +890,7 @@ def validate_master(gate: Gate, master_path: Path, vocab_by_ordinal: dict[int, d
     gate.expect(not lesson_failures, "master.lesson_payloads", "every lesson contains a contiguous run of vocabulary items and two memory verses", failures=lesson_failures)
     vocab_ordinals = [item.get("ordinal") for item in all_vocab]
     gate.expect(len(all_vocab) == 1000 and vocab_ordinals == list(range(1, 1001)), "master.vocabulary", "master contains each of the 1,000 vocabulary entries exactly once", actual=len(all_vocab))
-    gate.expect(not chapter_failures and reading_kinds[:25] == ["bible_chapter"] * 25, "master.bible_chapters", "lessons 1–25 contain 25 complete pointed/cantillated chapters with zh-Hant translations", failures=chapter_failures[:40])
+    gate.expect(not chapter_failures and reading_kinds[:25] == ["bible_chapter"] * 25, "master.bible_chapters", "lessons 1–25 read 25 pointed/cantillated chapters, each printed verse complete with a zh-Hant translation and its extent stated", failures=chapter_failures[:40])
     gate.expect(not prayer_failures and reading_kinds[25:] == ["prayer_or_article"] * 25, "master.prayers", "lessons 26–50 contain 25 complete pointed prayers/articles with zh-Hant metadata", failures=prayer_failures[:40])
     validate_memory_metadata(gate, all_memory, vocab_by_ordinal, "master.memory")
 

@@ -35,6 +35,7 @@ from docx.shared import Mm, Pt
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import latin_source_texts as L  # noqa: E402
 import build_hebrew_full_reader as H
+import reader_page_budget as budget
 import build_greek_full_reader as G
 from proper_name_categories import PRINT_ORDER  # noqa: E402
 
@@ -68,7 +69,8 @@ GLOSS_PT = 12
 VOLUMES = {
     "上冊": {
         "subtitle": "武加大譯本",
-        "blurb": "十篇禮儀短經，四十章完整武加大經文，中文並列思高譯本。",
+        # 🚨 上冊自 2026-09-18 起也按節裁到篇幅上限，不能再說「完整」。
+        "blurb": "十篇禮儀短經，四十章武加大經文選讀，中文並列思高譯本。",
         "appendix": "upper",
     },
     "下冊": {
@@ -86,9 +88,9 @@ VOLUMES = {
 # 份量才變得平均（四分位 6–12 頁），在那之前最厚的一課是最薄的三四倍，切點
 # 必須遷就那幾課。改了讀文長度就要重算切點，否則會留下一冊厚一冊薄。
 PARTS = [
-    {"book": 1, "source": "上冊", "first": 1, "last": 50, "appendix": True},   # 約 470 頁
-    {"book": 2, "source": "下冊", "first": 1, "last": 29, "appendix": False},  # 約 254 頁
-    {"book": 3, "source": "下冊", "first": 30, "last": 50, "appendix": True},  # 約 259 頁
+    {"book": 1, "source": "上冊", "first": 1, "last": 50, "appendix": True},   # 約 356 頁
+    {"book": 2, "source": "下冊", "first": 1, "last": 27, "appendix": False},  # 約 161 頁
+    {"book": 3, "source": "下冊", "first": 28, "last": 50, "appendix": True},  # 約 166 頁
 ]
 BOOK_LABELS = ("第一冊", "第二冊", "第三冊")
 
@@ -240,15 +242,25 @@ def title_page(document, volume: str, spec: dict, counts: str, part: dict):
 
 
 def vocabulary_table(document, rows: list[dict]):
-    heading(document, f"生詞　{len(rows)} 個", H.H2_SIZE_PT, space_before=6, space_after=4)
+    H.compact_heading(
+        heading(document, f"生詞　{len(rows)} 個", H.H2_SIZE_PT),
+        before=H.SECTION_HEADING_SPACE_BEFORE_PT,
+        after=H.SECTION_HEADING_SPACE_AFTER_PT, line_spacing=1.0)
     table = document.add_table(rows=1, cols=3)
-    widths = [H.USABLE_WIDTH_MM * 0.46, H.USABLE_WIDTH_MM * 0.14, H.USABLE_WIDTH_MM * 0.40]
+    # 欄寬是量出來的，而且是**兩個方向都試過**的。主要部分（forms）的字數中位數
+    # 22、第九十百分位 39（12pt 下約 78mm）；繁中詞義中位數 7 個字、第九十百分位
+    # 12 個字（約 50mm）。兩欄都給到第九十百分位就超出版心 141mm，只能取捨。
+    # 🚨 把 forms 放寬到 56%、詞義縮到 32% 反而更糟：第二冊二十九課裡跨頁的從 13
+    # 課變成 19 課，整冊多了六頁。詞義欄折行的代價跟 forms 欄一樣是多一整列，而
+    # 詞義的分佈比 forms 集中得多，縮它等於讓更多列折行。要讓就讓詞類欄——它印的
+    # 是「形」「動」「片語」，兩個字就夠。
+    widths = [H.USABLE_WIDTH_MM * 0.46, H.USABLE_WIDTH_MM * 0.12, H.USABLE_WIDTH_MM * 0.42]
     H.set_table_geometry(table, widths)
     H.set_borders(table)
     header = table.rows[0]
     for cell, label in zip(header.cells, ("拉丁文", "詞類", "繁體中文")):
         H.shade(cell, H.PALE)
-        H.set_cell_margins(cell)
+        H.set_cell_margins(cell, top=H.VOCAB_CELL_PAD_DXA, bottom=H.VOCAB_CELL_PAD_DXA)
         H.tighten_cell(cell)
         paragraph = cell.paragraphs[0]
         H.add_mixed_script_text(paragraph, label, H.FONT_ZH, H.LABEL_PT, bold=True,
@@ -261,15 +273,18 @@ def vocabulary_table(document, rows: list[dict]):
         # which reads as a missing word rather than as a continuation.
         H.prevent_row_split(row)
         cells = row.cells
-        H.set_cell_margins(cells[0])
+        H.set_cell_margins(cells[0], top=H.VOCAB_CELL_PAD_DXA,
+                           bottom=H.VOCAB_CELL_PAD_DXA)
         H.tighten_cell(cells[0])
         H.add_mixed_script_text(cells[0].paragraphs[0], entry.get("forms") or entry["headword"],
                                 FONT_LA, H.TABLE_SIZE_PT)
-        H.set_cell_margins(cells[1])
+        H.set_cell_margins(cells[1], top=H.VOCAB_CELL_PAD_DXA,
+                           bottom=H.VOCAB_CELL_PAD_DXA)
         H.tighten_cell(cells[1])
         H.add_mixed_script_text(cells[1].paragraphs[0], short_pos(entry), H.FONT_ZH,
                                 H.LABEL_PT, color=H.MUTED)
-        H.set_cell_margins(cells[2])
+        H.set_cell_margins(cells[2], top=H.VOCAB_CELL_PAD_DXA,
+                           bottom=H.VOCAB_CELL_PAD_DXA)
         H.tighten_cell(cells[2])
         H.add_mixed_script_text(cells[2].paragraphs[0], entry.get("glossZh") or "〔待補〕",
                                 H.FONT_ZH, H.TABLE_SIZE_PT)
@@ -395,19 +410,23 @@ def exercise_section(document, block: dict | None, lesson: int) -> None:
     """
     if block is None:
         raise SystemExit(f"第 {lesson} 課沒有練習題：exercise-set 對不上本課詞表")
-    heading(document, f"本課翻譯練習（{len(block['items'])}題）",
-            H.H2_SIZE_PT, space_before=6, space_after=3)
+    H.compact_heading(
+        heading(document, f"本課翻譯練習（{len(block['items'])}題）", H.H2_SIZE_PT),
+        before=H.SECTION_HEADING_SPACE_BEFORE_PT,
+        after=H.SECTION_HEADING_SPACE_AFTER_PT, line_spacing=1.0)
     intro = body(document,
                  "把每一句譯成繁體中文。題目只印原文——出處標示的是定錨題，"
                  "可對照思高譯本自我校對；標「自撰」的句子每個詞都在本課或先前課次學過。",
                  H.CAPTION_PT, color=H.MUTED, space_after=2)
+    intro.paragraph_format.line_spacing = Pt(H.EXERCISE_INTRO_LINE_PT)
     H.set_keep(intro, next_paragraph=True)
     coverage = block.get("coverage") or {}
     practised, total = coverage.get("practised"), coverage.get("lessonWords")
     line = (f"本課 {total} 詞全數入題。" if practised == total
             else f"本課 {practised}／{total} 詞入題。")
     note = document.add_paragraph()
-    note.paragraph_format.space_after = Pt(4)
+    note.paragraph_format.space_after = Pt(3)
+    note.paragraph_format.line_spacing = Pt(H.EXERCISE_INTRO_LINE_PT)
     H.set_run_font(note.add_run(line), H.FONT_ZH, H.CAPTION_PT - 0.4, color=H.MUTED)
     if (block.get("note") or "").strip():
         # The headwords inside the note carry macrons the CJK face has no glyph
@@ -425,8 +444,9 @@ def exercise_section(document, block: dict | None, lesson: int) -> None:
     H.set_keep(note, next_paragraph=True)
     for item in block["items"]:
         head = document.add_paragraph()
-        head.paragraph_format.space_before = Pt(3)
-        head.paragraph_format.space_after = Pt(1)
+        head.paragraph_format.space_before = Pt(H.EXERCISE_ITEM_SPACE_BEFORE_PT)
+        head.paragraph_format.space_after = Pt(H.EXERCISE_ITEM_SPACE_AFTER_PT)
+        head.paragraph_format.line_spacing = Pt(H.EXERCISE_LABEL_LINE_PT)
         H.set_run_font(head.add_run(f"{item['no']:02d}　"), H.FONT_UI, H.LABEL_PT,
                        bold=True, color=H.ACCENT)
         if item["kind"] == "quoted":
@@ -445,11 +465,13 @@ def exercise_section(document, block: dict | None, lesson: int) -> None:
                            H.CAPTION_PT - 0.4, color=H.MUTED)
         H.set_keep(head, next_paragraph=True)
         latin = body(document, item["text"], EXERCISE_PT, font=FONT_LA,
-                     space_after=2, indent_mm=4)
+                     space_after=H.EXERCISE_TEXT_SPACE_AFTER_PT, indent_mm=4)
+        latin.paragraph_format.line_spacing = H.EXERCISE_TEXT_LINE_SPACING
         H.set_keep(latin, next_paragraph=True)
         answer = document.add_paragraph(" ")
-        answer.paragraph_format.space_after = Pt(5)
-        H.paragraph_rule(answer, color=H.RULE, size="3")
+        answer.paragraph_format.space_after = Pt(H.EXERCISE_ANSWER_SPACE_AFTER_PT)
+        answer.paragraph_format.line_spacing = Pt(H.EXERCISE_ANSWER_LINE_PT)
+        H.paragraph_rule(answer, color=H.RULE, size="3", space="1")
 
 
 _LATIN_METRICS = None
@@ -541,6 +563,7 @@ def upper_readings() -> dict[int, dict]:
             # a machine rendering of a formula the congregation knows by heart
             # is an error the label 自譯 does not cover.
             note = "　".join(x for x in (row.get("note"), LITURGY_NOTE) if x)
+            pairs, note = clip_reading(pairs, note, unit="行")
             out[row["lesson"]] = {"title": f"{row['title']}　{row['latinTitle']}",
                                   "pairs": pairs, "note": note}
             continue
@@ -551,6 +574,8 @@ def upper_readings() -> dict[int, dict]:
         note = row.get("note") or ""
         if chapter_zh and chapter_zh.get("alignmentNote"):
             note = (note + "　" if note else "") + chapter_zh["alignmentNote"]
+        # 武加大一章的自然單位是節，所以裁的單位是節，不是詞。
+        pairs, note = clip_reading(pairs, note, unit="節")
         out[row["lesson"]] = {"title": row["title"], "pairs": pairs, "note": note}
     return apply_gaps(out, 1)
 
@@ -586,43 +611,29 @@ def chinese_by_section(path: str) -> dict[int, str]:
     return {number: " ".join(rows) for number, rows in sections.items()}
 
 
-READING_WORD_LIMIT = 570
-"""
-🚨 這個數字是從**版面**倒推的，不是憑感覺訂的。擁有者 2026-09-17：「一課最多
-不能超過 8 頁。」一課的版面是生詞（20 字）約一頁、翻譯練習（10 題）約半頁，
-其餘六頁半留給讀本；而讀本印的是逐詞對譯，一頁只裝得下約 96 個原文詞（實測
-印出來的頁面數的，不是估的）。讀文每多 96 個詞，書就厚一頁。
+# 一課的讀文能收多長，由共用的版面預算決定：scripts/reader_page_budget.py。
+# 那裡不是一個詞數上限，而是一個量出來的版面模型——「這麼長、這麼多單元，排出來
+# 會不會超過八頁」。單元數那一項不能省：同樣五百詞，分五段與分五十段厚度差很多。
+#
+# 擁有者 2026-09-17：「一課最多不能超過 8 頁」「大約抓個 500-800 字左右就好」
+# 「但要是自然段落的選集喔，不要是語意沒講完就中斷」。所以裁的單位是文本自己的
+# 分段（節、段、章），不是詞數切點。
 
-🚨 量密度要數「印出來的原文詞」，不要拿「讀文字數 ÷ 總頁數」——那會把生詞頁與
-練習頁算進分母，密度低估四成，上限就砍過頭。
-下冊一課讀文的篇幅上限（詞）。
+def clip_reading(pairs: list, note: str, *, unit: str = "段") -> tuple[list, str]:
+    """超過上限就從篇首連續取整節／整段；回傳（段落、註記）。
 
-擁有者 2026-09-17：「大約抓個 500-800 字左右就好」「但要是自然段落的選集喔，
-不要是語意沒講完就中斷」。拉丁讀文本來就是一段一段收的（《懺悔錄》卷一有五十三
-段），所以裁的單位就是段落：從篇首連續取整段。上冊（武加大）不裁——中位數只有
-388 詞，而且一章是完整的閱讀單位。
+    🚨 裁過一定要在 note 講出來。本系列的停止條件之一就是「宣告為全篇的讀文
+    其實是節錄」：裁了卻不說，書上看起來一切正常，讀者以為自己讀完了一整章。
+    """
+    def weight(pair) -> int:
+        return len(L.words(pair[0]))
 
-🚨 這一條一定要放在 `lower_readings()` 裡。它是印刷（build_latin_full_reader）
-與資料層（build_latin_reader_data 匯入它）唯一的共用點；寫在資料層那一端，網站
-變短了、書卻一頁沒少，而兩邊都不會報錯。
-"""
-
-
-def clip_lower_reading(pairs: list, note: str) -> tuple[list, str]:
-    """超過上限就取前幾段；回傳（段落、註記）。裁過一定要在 note 講出來。"""
-    total = sum(len(L.words(latin)) for latin, _ in pairs)
-    if total <= READING_WORD_LIMIT:
+    total = sum(weight(pair) for pair in pairs)
+    if budget.fits("lat", total, len(pairs)):
         return pairs, note
-    kept: list = []
-    running = 0
-    for pair in pairs:
-        size = len(L.words(pair[0]))
-        # 第一段就超過上限時仍然收下：寧可長一點，也不要交出半段。
-        if kept and running + size > READING_WORD_LIMIT:
-            break
-        kept.append(pair)
-        running += size
-    extent = f"本課讀文為節錄，取前 {len(kept)} 段（全文 {len(pairs)} 段、{total:,} 詞）。"
+    kept = budget.clip(pairs, weight, "lat")
+    extent = (f"本課讀文為節錄，取前 {len(kept)} {unit}"
+              f"（全文 {len(pairs)} {unit}、{total:,} 詞）。")
     return kept, f"{note} {extent}".strip()
 
 
@@ -663,7 +674,7 @@ def lower_readings() -> dict[int, dict]:
                                         "full-translation-unnumbered"}:
                 note += f"；既有中文檔為 {row['chineseSource']}，無法逐段並排，中譯另行自譯"
 
-        pairs, note = clip_lower_reading(pairs, note)
+        pairs, note = clip_reading(pairs, note, unit="段")
         out[row["lesson"]] = {
             "title": f"{row['title']}　{row['latinTitle']}", "pairs": pairs, "note": note,
         }
@@ -790,11 +801,14 @@ def build(book_number: int) -> Path:
         H.add_label(document, f"Lesson {lesson:02d}  ·  {spec['subtitle']}",
                     page_break_before=index > 0)
         number = H.mark_running_tag(document.add_paragraph())
-        number.paragraph_format.space_after = Pt(1)
+        number.paragraph_format.space_after = Pt(0)
+        number.paragraph_format.line_spacing = Pt(H.LESSON_NUMBER_LINE_PT)
         H.set_run_font(number.add_run(f"第 {lesson:02d} 課"), H.FONT_UI, 11,
                        bold=True, color=H.ACCENT)
         opener = heading(document, reading["title"] or "　", H.H1_SIZE_PT,
-                         space_before=0, space_after=6)
+                         space_before=H.LESSON_TITLE_SPACE_BEFORE_PT,
+                         space_after=H.LESSON_TITLE_SPACE_AFTER_PT)
+        opener.paragraph_format.line_spacing = H.LESSON_TITLE_LINE_SPACING
         H.paragraph_rule(opener, color=H.GOLD, size="14")
         key = f"v{volume_number}-{lesson}"
         vocabulary_table(document, per_lesson.get(lesson, []))

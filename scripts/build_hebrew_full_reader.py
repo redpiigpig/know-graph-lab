@@ -51,18 +51,21 @@ USABLE_WIDTH_MM = PAGE_WIDTH_MM - MARGIN_INSIDE_MM - MARGIN_OUTSIDE_MM
 # overrides documented above. The page geometry is the sole form-factor
 # override; the preset's paragraph rhythm, heading ladder, list rhythm, table
 # indent, and base cell margins remain exact.
-BODY_SIZE_PT = 11.5
+# 🚨 擁有者 2026-09-17：「字都不可以小於 12。」正文、生詞表、逐詞對譯的中文義、
+# 整句中譯、練習——凡是要讀的字一律 ≥12pt。只有頁眉與頁碼維持小字，那是版口
+# 標示不是閱讀內容。改這幾個數字會直接改變每頁容納的份量，讀文上限要跟著重算。
+BODY_SIZE_PT = 12
 BODY_LINE_MULTIPLE = 1.25
 TITLE_SIZE_PT = 24
 H1_SIZE_PT = 17
 H2_SIZE_PT = 14
 H3_SIZE_PT = 12.5
-TABLE_SIZE_PT = 9.6
+TABLE_SIZE_PT = 12
 HEBREW_BODY_PT = 15
 # The exercise sentences are set below running size: ten of them share a page
 # with a ruled answer line each, and they are read one at a time rather than
 # followed continuously.
-EXERCISE_HEBREW_PT = 13.5
+EXERCISE_HEBREW_PT = 12
 PARA_AFTER_PT = 6
 
 # Interlinear layer.  Every running-text word carries a Traditional-Chinese
@@ -71,13 +74,51 @@ PARA_AFTER_PT = 6
 # a gloss row sits under it; the pair still reads larger than the previous
 # translation-only rhythm.
 INTERLINEAR_HEBREW_PT = 14
-INTERLINEAR_GLOSS_PT = 9.6
-SENSE_PT = 10.4
-TRANSLATION_PT = 10.2
-CAPTION_PT = 9.0
-LABEL_PT = 8.2
+INTERLINEAR_GLOSS_PT = 12
+SENSE_PT = 12
+TRANSLATION_PT = 12
+CAPTION_PT = 12
+LABEL_PT = 12
 INTERLINEAR_GUTTER_MM = 3.4
 INTERLINEAR_LINE_GAP_PT = 3.5
+# 一課只印三樣東西：二十個生詞、十題翻譯練習、一篇讀文；擁有者 2026-09-17 定的
+# 是「生詞二十個排一頁、練習十題連作答空間排一頁、一課最多八頁」。下面這幾個數字
+# 就是「排不排得下」的全部——四本書共用同一套，所以它們是一套書而不是四本。
+#
+# 🚨 改這裡要拿量出來的頁數驗，不要憑感覺。方法在 scripts/fit_reader_reading_limit.py：
+# 每課的（讀文長度、實際頁數）做線性回歸，截距就是這幾個常數決定的固定開銷。
+# 這一輪量到的浪費是：生詞表一列佔 10.4mm（裡面只有 6.4mm 是字），十題練習一題
+# 佔 28.2mm（只有 14.6mm 是字），於是二十個詞排掉兩頁、十題排掉兩頁半，一課還沒
+# 印讀文就用掉四頁半——希臘第一冊有一頁上面只有一題七十個字元。
+# 課首那一疊（眉標小標、課次、課題、生詞標題）每一課都出現一次，照 Heading 1
+# 給整本分章用的節奏排，光是留白就佔掉四公分——而生詞表就差那幾公釐排不進一頁，
+# 於是二十個詞跨兩頁、十題練習被推到第三頁，一課憑空多兩頁。
+LESSON_LABEL_LINE_PT = 13
+LESSON_LABEL_SPACE_AFTER_PT = 1
+LESSON_NUMBER_LINE_PT = 13
+LESSON_TITLE_LINE_SPACING = 1.0
+LESSON_TITLE_SPACE_BEFORE_PT = 2
+LESSON_TITLE_SPACE_AFTER_PT = 2
+SECTION_HEADING_SPACE_BEFORE_PT = 2
+SECTION_HEADING_SPACE_AFTER_PT = 2
+VOCAB_CELL_PAD_DXA = 20
+VOCAB_LINE_SPACING = 1.0
+EXERCISE_ITEM_SPACE_BEFORE_PT = 1
+EXERCISE_ITEM_SPACE_AFTER_PT = 0
+# 一題印三行：題號與出處、原文、作答線。每一行的行距都要自己講明白——Normal
+# 樣式的 1.25 是給整段中文正文的節奏，套在三行各自成段的練習題上，十題光是行距
+# 就多出兩公分。作答線反過來要比正文寬，那一行是拿來寫字的。
+# 🚨 題號行與作答線給的是**絕對行高**（exact），不是倍數。倍數乘的是字型自己
+# 報的行高，四種字型四個答案，算不準也調不動；十題差個兩公釐就跨頁。這兩行的
+# 內容是固定的（一行題號、一行空白），所以可以寫死高度。正文那一行不行——它會
+# 折行，寫死會把折出來的第二行裁掉——所以只給倍數。
+EXERCISE_LABEL_LINE_PT = 13
+EXERCISE_TEXT_LINE_SPACING = 1.05
+EXERCISE_TEXT_SPACE_AFTER_PT = 1
+EXERCISE_ANSWER_LINE_PT = 15
+EXERCISE_ANSWER_SPACE_AFTER_PT = 2
+EXERCISE_INTRO_LINE_PT = 13
+
 CELL_PAD_DXA = 80
 CELL_SIDE_PAD_DXA = 120
 TABLE_INDENT_DXA = 120
@@ -142,6 +183,7 @@ def add_contents(document, rows: list[tuple[str, str, str]], *, title: str,
         cell = table.cell(0, index)
         shade(cell, accent)
         set_cell_margins(cell)
+        tighten_cell(cell)
         paragraph = cell.paragraphs[0]
         paragraph.alignment = WD_ALIGN_PARAGRAPH.CENTER
         set_run_font(paragraph.add_run(header), FONT_UI, 7.5, bold=True, color="FFFFFF")
@@ -149,7 +191,12 @@ def add_contents(document, rows: list[tuple[str, str, str]], *, title: str,
     for index, values in enumerate(rows):
         cells = table.add_row().cells
         for position, value in enumerate(values):
-            set_cell_margins(cells[position], top=50, bottom=50)
+            # 目錄的字級從 7.5 抬到 12pt（MIN_READING_PT）之後整張表高了一半，
+            # 於是最後一列剛好卡在換頁處，重複表頭就自己佔掉一整頁——希臘第三冊
+            # 的第 5 頁上面只有「課／讀本／類型」三個字。把列高收緊就排得回去。
+            set_cell_margins(cells[position], top=VOCAB_CELL_PAD_DXA,
+                             bottom=VOCAB_CELL_PAD_DXA)
+            tighten_cell(cells[position])
             if index % 2:
                 shade(cells[position], PALE_2)
             paragraph = cells[position].paragraphs[0]
@@ -175,14 +222,49 @@ def set_rfonts(r_pr, font: str) -> None:
         fonts.attrib.pop(qn(f"w:{key}"), None)
 
 
-def set_run_font(run, font: str, size: float, *, bold=False, italic=False, color=INK) -> None:
+MIN_READING_PT = 12.0
+"""印在紙上、要拿來讀的字，一律不小於這個字級。
+
+擁有者 2026-09-17：「字都不可以小於 12。」凡是讀者會去讀的字都算——正文、生詞
+表、逐詞對譯的中文義、整句中譯、練習、目次、附錄表、凡例、封面說明。唯一的例外
+是眉標與頁碼：那是版口標示，不是閱讀內容，所以它們走 ``chrome=True``。
+
+🚨 這個下限實作在 ``set_run_font`` 裡，而不是靠把每個常數改成 12。四本書總共有
+一百多處字級，其中好幾處是算出來的（``CAPTION_PT - 0.4`` 印出來是 11.6），單改
+常數會漏掉它們，而且下一個人新增一行 9.5pt 時不會有任何東西攔他。改在唯一的出
+口，就沒有漏網的路。
+"""
+
+
+def set_complex_script_size(r_pr, points: float) -> None:
+    """把字級也寫進 ``w:szCs``（複雜文種字級）。
+
+    🚨 希伯來文是 complex script，Word 與 LibreOffice 排它時讀的是 ``w:szCs``，
+    不是 ``w:sz``。python-docx 的 ``run.font.size`` 只寫 ``w:sz``，所以整本希伯來
+    讀本的希伯來字——詞表的附點詞形、逐詞對譯的原文、練習題、Haggadah——全都印在
+    ``szCs`` 的預設值 11pt 上，跟 builder 要求的 14、15、17pt 一點關係都沒有。
+    五千多個字級沒有一個是對的，而頁面看起來完全正常：這就是本系列所謂「看起來
+    像成功的失敗」。量出來才知道（PDF 裡 NotoSerifHebrew 只有 11.0pt 一種尺寸）。
+    """
+    sz_cs = r_pr.find(qn("w:szCs"))
+    if sz_cs is None:
+        sz_cs = OxmlElement("w:szCs")
+        r_pr.append(sz_cs)
+    sz_cs.set(qn("w:val"), str(int(round(points * 2))))
+
+
+def set_run_font(run, font: str, size: float, *, bold=False, italic=False,
+                 color=INK, chrome=False) -> None:
+    """``chrome=True`` 專給眉標與頁碼，它們不受 ``MIN_READING_PT`` 的下限。"""
     run.font.name = font
-    run.font.size = Pt(size)
+    points = size if chrome else max(size, MIN_READING_PT)
+    run.font.size = Pt(points)
     run.font.bold = bold
     run.font.italic = italic
     run.font.color.rgb = RGBColor.from_string(color)
     r_pr = run._element.get_or_add_rPr()
     set_rfonts(r_pr, font)
+    set_complex_script_size(r_pr, points)
 
 
 def add_mixed_script_text(paragraph, text: str, font: str, size: float, *, bold=False, italic=False, color=INK) -> None:
@@ -239,6 +321,36 @@ def prevent_row_split(row) -> None:
         node = OxmlElement("w:cantSplit")
         tr_pr.append(node)
     node.set(qn("w:val"), "true")
+
+
+def compact_heading(heading, *, before: float, after: float,
+                    line_spacing: float | None = None):
+    """把一個標題的上下留白收成指定值。
+
+    Heading 1 的預設節奏（上 18pt 下 10pt）是給整本書的分章用的；一課之內的課題
+    與區塊標題每課都出現一次，照分章的節奏排，光是留白就吃掉一課半頁。
+    """
+    heading.paragraph_format.space_before = Pt(before)
+    heading.paragraph_format.space_after = Pt(after)
+    if line_spacing is not None:
+        heading.paragraph_format.line_spacing = line_spacing
+    return heading
+
+
+def tighten_cell(cell) -> None:
+    """把表格 cell 裡段落的預設間距與行距清掉。
+
+    🚨 Word 的預設段落帶著 space_after 與 1.15 行距，一個 12pt 的字（4.2mm）排進
+    表格會佔掉 11.2mm——二十個生詞因此排掉一頁半，十題練習再排掉一頁半，一課的
+    固定開銷就將近四頁，留給讀文的只剩四頁。擁有者 2026-09-17：「生詞表二十字只
+    需要一頁啊，練習十個句子加作答空間也只需要一頁啊。」清掉之後一列約 7mm，
+    二十個詞半頁多就排得下。
+    """
+    for paragraph in cell.paragraphs:
+        fmt = paragraph.paragraph_format
+        fmt.space_before = Pt(0)
+        fmt.space_after = Pt(0)
+        fmt.line_spacing = 1.0
 
 
 def set_cell_margins(cell, top=CELL_PAD_DXA, start=CELL_SIDE_PAD_DXA, bottom=CELL_PAD_DXA, end=CELL_SIDE_PAD_DXA) -> None:
@@ -326,7 +438,7 @@ def set_borders(table, *, color=RULE, size="3", outside=True, inside=True) -> No
             node.set(qn("w:color"), color)
 
 
-def paragraph_rule(paragraph, color=RULE, size="12") -> None:
+def paragraph_rule(paragraph, color=RULE, size="12", space="3") -> None:
     p_pr = paragraph._p.get_or_add_pPr()
     borders = p_pr.find(qn("w:pBdr"))
     if borders is None:
@@ -335,7 +447,7 @@ def paragraph_rule(paragraph, color=RULE, size="12") -> None:
     bottom = OxmlElement("w:bottom")
     bottom.set(qn("w:val"), "single")
     bottom.set(qn("w:sz"), size)
-    bottom.set(qn("w:space"), "3")
+    bottom.set(qn("w:space"), space)
     bottom.set(qn("w:color"), color)
     borders.append(bottom)
 
@@ -398,9 +510,9 @@ def write_running_head(section, title: str, *, lesson_tag: bool = False) -> None
     section.header.is_linked_to_previous = False
     paragraph = _blank_out(section.header.paragraphs[0])
     paragraph.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    set_run_font(paragraph.add_run(title), FONT_UI, 7.5, color=MUTED)
+    set_run_font(paragraph.add_run(title), FONT_UI, 7.5, color=MUTED, chrome=True)
     if lesson_tag:
-        set_run_font(paragraph.add_run("  ·  "), FONT_UI, 7.5, color=MUTED)
+        set_run_font(paragraph.add_run("  ·  "), FONT_UI, 7.5, color=MUTED, chrome=True)
         set_styleref_field(paragraph)
     paragraph_rule(paragraph, color=RULE, size="3")
 
@@ -409,7 +521,7 @@ def write_page_footer(section) -> None:
     section.footer.is_linked_to_previous = False
     paragraph = _blank_out(section.footer.paragraphs[0])
     paragraph.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    set_run_font(paragraph.add_run("私人研讀版  ·  "), FONT_UI, 7.5, color=MUTED)
+    set_run_font(paragraph.add_run("私人研讀版  ·  "), FONT_UI, 7.5, color=MUTED, chrome=True)
     set_page_field(paragraph)
 
 
@@ -519,7 +631,8 @@ def configure(document: Document) -> None:
     write_page_footer(section)
     first_footer = section.first_page_footer.paragraphs[0]
     first_footer.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    set_run_font(first_footer.add_run("PRIVATE STUDY EDITION  ·  2026"), FONT_UI, 7.5, color=MUTED)
+    set_run_font(first_footer.add_run("PRIVATE STUDY EDITION  ·  2026"), FONT_UI, 7.5,
+                 color=MUTED, chrome=True)
 
     props = document.core_properties
     props.title = "聖經希伯來文原文讀本：五十課"
@@ -535,7 +648,8 @@ def page_break(document: Document) -> None:
 def add_label(document: Document, text: str, *, page_break_before=False):
     p = document.add_paragraph()
     p.paragraph_format.page_break_before = page_break_before
-    p.paragraph_format.space_after = Pt(3)
+    p.paragraph_format.space_after = Pt(LESSON_LABEL_SPACE_AFTER_PT)
+    p.paragraph_format.line_spacing = Pt(LESSON_LABEL_LINE_PT)
     run = p.add_run(text.upper())
     set_run_font(run, FONT_UI, LABEL_PT, bold=True, color=ACCENT)
     set_keep(p, next_paragraph=True)
@@ -831,7 +945,10 @@ def add_cover(document: Document, data: dict) -> None:
 def add_front_matter(document: Document, data: dict) -> None:
     add_label(document, "Reader architecture")
     document.add_heading("這一本怎麼使用", level=1)
-    add_body(document, "全書五十課。每課固定收二十個詞、十題翻譯練習與一篇完整讀本；第1–25課讀二十五章《希伯來聖經》，第26–50課讀二十五篇禱文或拉比文章。冊末另附完整逾越節 Haggadah 流程。")
+    add_body(document, "全書五十課。每課固定收二十個詞、十題翻譯練習與一篇讀本；"
+                       "第1–25課讀二十五章《希伯來聖經》，第26–50課讀二十五篇禱文或拉比文章。"
+                       "一課以八頁為度，長章長篇按節、按段從篇首連續節錄，每一篇都在標題下寫明印的是哪一段。"
+                       "冊末另附完整逾越節 Haggadah 流程。")
     cards = [
         ("1", "先學本課詞表", "第1–33課就是 BBH2 第3–35章的原章詞表，詞數依課本而定；第34–50課以頻率與專名延伸補足一千詞。"),
         ("2", "做十題翻譯", "原文譯繁中，每課十題、本課二十詞全數入題；定錨題取自經典原句，其餘依已學詞彙自撰，早期課次可用原句不足時全部自撰。"),
@@ -879,6 +996,49 @@ def add_toc(document: Document, data: dict) -> None:
     )
 
 
+POS_ZH = {
+    "noun": "名詞", "verb": "動詞", "adjective": "形容詞", "particle": "質詞",
+    "preposition": "介詞", "adverb": "副詞", "pronoun": "代名詞",
+    "proper_name": "專有名詞", "conjunction": "連接詞",
+    "particle_or_preposition": "質詞／介詞", "prepositional_phrase": "介詞片語",
+    "adverbial_phrase": "副詞片語", "interrogative_particle": "疑問質詞",
+    "conjunction_phrase": "連接詞片語",
+}
+"""詞類的繁中說法。
+
+🚨 這一欄本來直接印詞庫裡的 ``noun``／``verb``。一本繁中讀本的詞表印英文詞類，
+一來與希臘、拉丁、日文那三本不一致（那三本印的是「名詞」「動詞」），二來
+``noun／神名／稱號`` 在 31mm 的欄寬裡放不下，Word 折成兩行——折一次就多一列，
+二十個詞因此排不進一頁。改成繁中同時解掉這兩件事。
+"""
+
+# 詞表那一欄只有 31mm，也就是七個全形字；專名類型在表格裡用短名，
+# 「本課專名」那一段仍用 proper_name_label 的全稱。
+TABLE_PROPER_NAME_ZH = {
+    "person": "人名", "place": "地名", "people_or_nation": "民族名",
+    "divine_name_or_title": "神名", "divine": "神名",
+    "festival_or_sacred_time": "節期",
+}
+VOCAB_TYPE_MAX_CHARS = 7
+
+
+def vocabulary_type_label(item: dict) -> str:
+    """詞表「詞類／專名」欄的內容，排得進一行。
+
+    專名一律印得出來；排不下時先讓掉詞類（專名比「名詞」有資訊），仍排不下就
+    只留第一個類型。寧可少講一件事，也不要折行——折行會讓二十個詞排成兩頁。
+    """
+    pos = POS_ZH.get(item.get("partOfSpeech", ""), item.get("partOfSpeech", ""))
+    kinds = [TABLE_PROPER_NAME_ZH.get(value, value)
+             for value in item.get("properNameTypes", [])]
+    for candidate in ("／".join(filter(None, [pos] + kinds)),
+                      "／".join(kinds),
+                      kinds[0] if kinds else ""):
+        if candidate and len(candidate) <= VOCAB_TYPE_MAX_CHARS:
+            return candidate
+    return pos or "—"
+
+
 def proper_name_label(item: dict) -> str:
     labels = {
         "person": "人名",
@@ -898,26 +1058,40 @@ def add_lesson_opener(document: Document, lesson: dict, *, page_break_before=Tru
         page_break_before=page_break_before,
     )
     p = mark_running_tag(document.add_paragraph())
-    p.paragraph_format.space_after = Pt(1)
+    p.paragraph_format.space_after = Pt(0)
+    p.paragraph_format.line_spacing = Pt(LESSON_NUMBER_LINE_PT)
     set_run_font(p.add_run(f"第 {lesson['lesson']:02d} 課"), FONT_UI, 11, bold=True, color=ACCENT)
-    heading = document.add_heading(lesson["title"], level=1)
+    heading = compact_heading(document.add_heading(lesson["title"], level=1),
+                              before=LESSON_TITLE_SPACE_BEFORE_PT,
+                              after=LESSON_TITLE_SPACE_AFTER_PT,
+                              line_spacing=LESSON_TITLE_LINE_SPACING)
     paragraph_rule(heading, color=GOLD, size="14")
-    route = document.add_paragraph()
-    set_run_font(route.add_run("線上跟讀（登入後）  "), FONT_ZH, 8, bold=True, color=ACCENT)
-    set_run_font(route.add_run(lesson["audioRoute"]), FONT_TRANSLIT, 7.6, color=MUTED)
+    # 🚨 線上跟讀的網址原本自成一行排在課題下面，佔掉課首 12mm——而生詞表就差
+    # 那幾公釐排不進一頁。網址在「完成本課」第五項裡本來就講了同一件事，所以併
+    # 過去印，課首少一行，資訊一個字也沒少。
 
 
 def add_vocabulary(document: Document, lesson: dict) -> None:
-    document.add_heading(f"生詞　{len(lesson['vocabulary'])} 個", level=2)
+    compact_heading(document.add_heading(f"生詞　{len(lesson['vocabulary'])} 個", level=2),
+                    before=SECTION_HEADING_SPACE_BEFORE_PT,
+                    after=SECTION_HEADING_SPACE_AFTER_PT, line_spacing=1.0)
     table = document.add_table(rows=1, cols=5)
-    widths = [9, 29, 30, 42, 31]
+    # 🚨 編號欄要放得下兩位數。字級到 12pt 之後「14」本身就要 8.4mm，再加 cell
+    # 兩側邊距，原本的 9mm 放不下，Word 會把它折成上下兩行——書上印出來是「1」
+    # 換行「4」，而且折一次就多一列，二十個詞因此排不進一頁。日文那一欄已經踩過
+    # 一次。總寬固定是版心 141mm，加給編號欄的就從中文義欄扣。
+    # 繁中義是唯一會折行的一欄（「判決；決定；條例；法律；習俗；方式」折三行，
+    # 一列就從 6.5mm 變 18.8mm，二十個詞因此排不進一頁）。音標欄放的是
+    # mišpāṭ 這種長度，30mm 用不完，勻 6mm 給詞義。
+    widths = [12, 29, 24, 45, 31]
     set_table_geometry(table, widths)
     set_borders(table, outside=True, inside=True)
     headers = ("#", "附點詞形", "BBH2 音標", "繁中義", "詞類／專名")
     for index, header in enumerate(headers):
         cell = table.cell(0, index)
         shade(cell, ACCENT)
-        set_cell_margins(cell, top=65, bottom=65)
+        set_cell_margins(cell, top=VOCAB_CELL_PAD_DXA, bottom=VOCAB_CELL_PAD_DXA)
+        tighten_cell(cell)
         p = cell.paragraphs[0]
         p.alignment = WD_ALIGN_PARAGRAPH.CENTER
         set_run_font(p.add_run(header), FONT_UI, LABEL_PT + 0.4, bold=True, color="FFFFFF")
@@ -932,10 +1106,12 @@ def add_vocabulary(document: Document, lesson: dict) -> None:
             item["pointed"],
             item["textbookTransliteration"],
             item["glossZh"],
-            "／".join(filter(None, [item.get("partOfSpeech", ""), proper_name_label(item)])),
+            vocabulary_type_label(item),
         )
         for index, value in enumerate(values):
-            set_cell_margins(cells[index], top=45, bottom=45, start=60, end=60)
+            set_cell_margins(cells[index], top=VOCAB_CELL_PAD_DXA,
+                             bottom=VOCAB_CELL_PAD_DXA, start=60, end=60)
+            tighten_cell(cells[index])
             if item["lessonSlot"] % 2 == 0:
                 shade(cells[index], PALE_2)
             p = cells[index].paragraphs[0]
@@ -1017,7 +1193,10 @@ def add_exercises(document: Document, block: dict) -> None:
     reference and the composed ones print that they are composed; neither prints
     a translation.  See references/exercise-sets.md.
     """
-    document.add_heading(f"本課翻譯練習（{len(block['items'])}題）", level=2)
+    compact_heading(
+        document.add_heading(f"本課翻譯練習（{len(block['items'])}題）", level=2),
+        before=SECTION_HEADING_SPACE_BEFORE_PT,
+        after=SECTION_HEADING_SPACE_AFTER_PT, line_spacing=1.0)
     intro = add_body(
         document,
         "把每一句譯成繁體中文。題目只印原文——出處標示的是定錨題，可對照既有譯本自我校對；"
@@ -1025,7 +1204,8 @@ def add_exercises(document: Document, block: dict) -> None:
         size=CAPTION_PT,
         color=MUTED,
     )
-    intro.paragraph_format.space_after = Pt(3)
+    intro.paragraph_format.space_after = Pt(2)
+    intro.paragraph_format.line_spacing = Pt(EXERCISE_INTRO_LINE_PT)
     set_keep(intro, next_paragraph=True)
     coverage = block.get("coverage") or {}
     if coverage.get("practised") == coverage.get("lessonWords"):
@@ -1035,13 +1215,15 @@ def add_exercises(document: Document, block: dict) -> None:
     if (block.get("note") or "").strip():
         note_text = f"{note_text}{block['note'].strip()}。"
     note = add_body(document, note_text, size=CAPTION_PT - 0.4, color=MUTED)
-    note.paragraph_format.space_after = Pt(5)
+    note.paragraph_format.space_after = Pt(3)
+    note.paragraph_format.line_spacing = Pt(EXERCISE_INTRO_LINE_PT)
     set_keep(note, next_paragraph=True)
 
     for item in block["items"]:
         head = document.add_paragraph()
-        head.paragraph_format.space_before = Pt(3)
-        head.paragraph_format.space_after = Pt(1)
+        head.paragraph_format.space_before = Pt(EXERCISE_ITEM_SPACE_BEFORE_PT)
+        head.paragraph_format.space_after = Pt(EXERCISE_ITEM_SPACE_AFTER_PT)
+        head.paragraph_format.line_spacing = Pt(EXERCISE_LABEL_LINE_PT)
         set_run_font(head.add_run(f"{item['no']:02d}　"), FONT_UI, LABEL_PT, bold=True, color=ACCENT)
         if item["kind"] == "quoted":
             set_run_font(head.add_run(item["ref"]), FONT_TRANSLIT, CAPTION_PT, color=MUTED)
@@ -1052,13 +1234,14 @@ def add_exercises(document: Document, block: dict) -> None:
             document,
             item["text"],
             size=EXERCISE_HEBREW_PT,
-            line_spacing=1.5,
-            space_after=2,
+            line_spacing=EXERCISE_TEXT_LINE_SPACING,
+            space_after=EXERCISE_TEXT_SPACE_AFTER_PT,
         )
         set_keep(hebrew, next_paragraph=True)
         answer = document.add_paragraph(" ")
-        answer.paragraph_format.space_after = Pt(5)
-        paragraph_rule(answer, color=RULE, size="3")
+        answer.paragraph_format.space_after = Pt(EXERCISE_ANSWER_SPACE_AFTER_PT)
+        answer.paragraph_format.line_spacing = Pt(EXERCISE_ANSWER_LINE_PT)
+        paragraph_rule(answer, color=RULE, size="3", space="1")
 
 
 def add_bible_reading(document: Document, reading: dict) -> None:
@@ -1066,9 +1249,12 @@ def add_bible_reading(document: Document, reading: dict) -> None:
     add_label(document, reading["ref"], page_break_before=True)
     document.add_heading("讀本", level=1)
     add_hebrew(document, reading["titleHe"], size=17, color=ACCENT, bold=True)
+    # 🚨 這一行要說出讀者手上這一篇的實際範圍。讀文自 2026-09-17 起有篇幅上限，
+    # 長章會裁成節錄（build_hebrew_reader_data.clip_reading）；仍舊印「全章 N 節」
+    # 的話，讀者讀完十四節會以為自己讀完了整章。
     add_body(
         document,
-        f"底本：{reading['version']}  ·  全章 {reading['verseCount']} 節  ·  逐詞繁中義在下，整句取和合本修訂版",
+        f"底本：{reading['version']}  ·  {reading['extentZh']}  ·  逐詞繁中義在下，整句取和合本修訂版",
         size=CAPTION_PT,
         color=MUTED,
     )
@@ -1107,6 +1293,8 @@ def add_prayer_reading(document: Document, reading: dict) -> None:
     document.add_heading("讀本", level=1)
     add_hebrew(document, reading["title_he"], size=17, color=ACCENT, bold=True)
     add_body(document, reading["summaryZh"], size=CAPTION_PT + 0.6, color=MUTED)
+    if reading.get("completeness") == "excerpt":
+        add_body(document, reading["extentZh"], size=CAPTION_PT, color=MUTED)
     for segment in reading["segments"]:
         text = clean_title_from_text(segment["text"], reading["title_he"])
         if not text:
@@ -1166,7 +1354,8 @@ def add_practice(document: Document, lesson: dict, *, page_break_before=False) -
         "做完本課十題翻譯練習；定錨題譯完後對照既有譯本，自撰題圈出沒把握的詞形。",
         f"讀完〈{reading_title}〉全文；在讀本中標出本課詞彙。",
         "選三個動詞辨認詞幹／時式，或選三個名詞辨認性、數、狀態。",
-        "登入線上讀本跟讀；沒有校訂音檔時只按課本音標自讀，不啟用現代希伯來文 TTS。",
+        f"登入線上讀本跟讀（{lesson['audioRoute']}）；沒有校訂音檔時只按課本音標自讀，"
+        "不啟用現代希伯來文 TTS。",
         "用一句繁中寫出本篇主旨，再以一個希伯來關鍵詞作標題。",
     )
     for index, text in enumerate(prompts, 1):
@@ -1250,6 +1439,7 @@ def _table_header(document: Document, widths: list[float], headers: tuple[str, .
         shade(cell, ACCENT)
         paragraph = cell.paragraphs[0]
         paragraph.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        tighten_cell(cell)
         set_run_font(paragraph.add_run(header), FONT_UI, 7, bold=True, color="FFFFFF")
     set_repeat_header(table.rows[0])
     return table
@@ -1263,6 +1453,7 @@ def _table_row(table, values: list[tuple[str, str, float]]):
     for index, (text, font, size) in enumerate(values):
         cell = row.cells[index]
         set_cell_margins(cell, top=45, bottom=45)
+        tighten_cell(cell)
         paragraph = cell.paragraphs[0]
         paragraph.alignment = (
             WD_ALIGN_PARAGRAPH.LEFT if font == FONT_ZH else WD_ALIGN_PARAGRAPH.CENTER

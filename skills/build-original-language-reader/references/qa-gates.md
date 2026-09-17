@@ -31,6 +31,22 @@ Run every applicable gate against the final artifacts. A prior render or prior r
 - Required fonts are explicitly assigned.
 - No missing glyph/replacement character or stale-version source label appears.
 
+## 3b. 版面硬約束（擁有者 2026-09-17）
+
+兩條都由 `scripts/audit_reader_pages.py` 讀排好的 PDF 來驗，不是讀 builder 的常數：
+
+- **一課最多八頁。** 數的是眉標——STYLEREF 讓一課的每一頁都印同一個課次。
+  🚨 附錄那幾節的眉標沒有課次；碰到沒有課次的眉標就要停止累計，不然最後一課會
+  把一百多頁附錄算進自己的厚度，一本書的最厚一課看起來像一百四十頁。
+- **版心內的字一律 ≥12pt。** 量的是 span 的外框，落在頁眉／頁腳帶子裡的不算——
+  不扣掉的話，每一頁的眉標與頁碼都會報成過小。
+  🚨 希伯來文（複雜文種）要另外驗：它的字級寫在 `w:szCs`，`w:sz` 對它沒有作用。
+  只檢查 builder 有沒有呼叫 `set_run_font` 是驗不到的，要量 PDF 裡的實際字級。
+
+同一支還會回報「生詞表跨頁」的課數。那不是錯，是 12pt 下的物理極限（二十個詞加
+課首要 187mm，長詞條折一次行那一列就高一倍），回報是為了讓下一個人知道現況、也
+知道它有沒有在惡化。
+
 ## 4. PDF gates
 
 - Final page count meets the expected range.

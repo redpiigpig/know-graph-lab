@@ -29,6 +29,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import greek_church_documents as church
 import greek_patristic_sources as src
+import reader_page_budget as budget
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -482,45 +483,72 @@ def load(spec: dict) -> tuple[list[src.Segment], dict]:
     raise ValueError(f"unknown loader {kind}")
 
 
-READING_WORD_LIMIT = 800
-"""一篇讀文的篇幅上限（詞）。
+# 一課的讀文能收多長，由共用的版面預算決定（scripts/reader_page_budget.py）：
+# 不是單一個詞數上限，而是「這麼長、這麼多單元，排出來會不會超過八頁」。上下冊
+# 同一套預算，上冊那一側由 build_greek_reader_data.clip_scripture_chapter 施行。
+#
+# 擁有者 2026-09-16：「大約抓個 500-800 字左右就好」「但要是自然段落的選集喔，
+# 不要是語意沒講完就中斷」。所以裁的單位是文本自己的分段，不是詞數切點。
+LANGUAGE = "grc"
 
-擁有者 2026-09-16：「大約抓個 500-800 字左右就好」「但要是自然段落的選集喔，
-不要是語意沒講完就中斷」。所以裁的單位是**篇章**，不是詞數——從篇首連續取整章，
-取到再加一章就會超過上限為止。這樣讀者拿到的一定是從頭讀起的完整幾章，而不是
-一段從半途開始、又在半途斷掉的文字。
-"""
+# 句末標點：希臘文用 ·（ano teleia）、;（希臘問號）與 . ! ?。
+SENTENCE_END = re.compile(r"(?<=[.;\u00b7!?])\s+")
+
+
+def _words(segment) -> int:
+    return len(segment.text.split())
+
+
+def _split_sentences(segments: list) -> list:
+    """把段落再切成句子，供粗分段救不了的時候用。
+
+    句子仍然是「語意講完了」的單位，所以切到這一層不違背擁有者那條規矩；切到
+    詞就違背了，所以沒有更細的一層。
+    """
+    finer = []
+    for segment in segments:
+        pieces = [piece.strip() for piece in SENTENCE_END.split(segment.text) if piece.strip()]
+        for index, piece in enumerate(pieces, start=1):
+            ref = segment.ref if len(pieces) == 1 else f"{segment.ref}#{index}"
+            finer.append(src.Segment(ref, piece))
+    return finer
 
 
 def clip_to_limit(spec: dict, segments: list) -> tuple[list, str, str]:
-    """超過上限就從篇首連續取整章；回傳（段落、完整度、範圍）。
+    """從篇首連續取整章；裝不下就退到整段，再裝不下就退到整句。
 
     🚨 裁完一定要把 completeness 改成 excerpt、extent 寫出實際範圍。這一系列的
     停止條件之一就是「宣告為全篇的讀文其實是節錄」——裁了卻仍標「全篇」，書上
     看起來一切正常，而讀者以為自己讀完了一整篇。
+
+    🚨 只按章裁是不夠的，而「不夠」長得像成功：〈黑馬牧人書：第一異象〉全篇 995
+    詞只分成一章、〈特魯洛大公會議教規 1–20〉全篇 860 詞只有一段，兩篇照章、照段
+    裁的結果都是「原封不動收下」，仍舊標著節錄，印出來十六頁與十三頁。粗分段救不
+    了就要退到更細的一層，退到哪一層要說出來。
     """
-    words = sum(len(segment.text.split()) for segment in segments)
-    if words <= READING_WORD_LIMIT:
+    words = sum(_words(segment) for segment in segments)
+    if budget.fits(LANGUAGE, words, len(segments)):
         return segments, spec["completeness"], spec.get("extent", "全篇")
 
     chapters: "OrderedDict[str, list]" = OrderedDict()
     for segment in segments:
         chapters.setdefault((segment.ref or "").split(".")[0] or "0", []).append(segment)
 
-    kept: list[tuple[str, list]] = []
-    running = 0
-    for key, group in chapters.items():
-        size = sum(len(x.text.split()) for x in group)
-        # 第一章就超過上限時仍然收下：寧可長一點，也不要交出半章。
-        if kept and running + size > READING_WORD_LIMIT:
-            break
-        kept.append((key, group))
-        running += size
-
+    groups = list(chapters.items())
+    kept = budget.clip(groups, lambda row: sum(_words(x) for x in row[1]), LANGUAGE)
     picked = [segment for _, group in kept for segment in group]
-    first, last = kept[0][0], kept[-1][0]
-    span = f"第 {first} 章" if first == last else f"第 {first}–{last} 章"
-    return picked, "excerpt", f"{span}（全篇 {len(chapters)} 章）"
+    if not budget.over_budget(picked, _words, LANGUAGE):
+        first, last = kept[0][0], kept[-1][0]
+        span = f"第 {first} 章" if first == last else f"第 {first}–{last} 章"
+        return picked, "excerpt", f"{span}（全篇 {len(chapters)} 章）"
+
+    picked = budget.clip(segments, _words, LANGUAGE)
+    if not budget.over_budget(picked, _words, LANGUAGE):
+        return picked, "excerpt", f"前 {len(picked)} 段（全篇 {len(segments)} 段）"
+
+    sentences = _split_sentences(segments)
+    picked = budget.clip(sentences, _words, LANGUAGE)
+    return picked, "excerpt", f"前 {len(picked)} 句（全篇 {len(sentences)} 句）"
 
 
 def build() -> dict:
