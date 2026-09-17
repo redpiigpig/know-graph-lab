@@ -440,3 +440,101 @@ Malaty《Introduction to the Coptic Orthodox Church》、《漢語景教文典�
 
 **索引壓縮時移入（2026-09-11）：**
 - 卷四篇幅只有別卷1/3
+
+---
+
+## 譜系資料層（2026-09-17／18 建置，`data/christian-genealogy/`）
+
+第 2 章〈從使徒到大公〉的**可查證資料層**：把新約每一節與每一份一二世紀文獻，
+逐筆掛回它所出自的群體。雜誌第 12 期那篇原文完全未動。
+
+### 代號樹：四層，`traditions.json`
+
+| 層 | 字形 | 內容 |
+|---|---|---|
+| 一 地方見證群體 | **小寫希臘** | β 施洗約翰／κ 迦百農＝Q／μ 抹大拉／θ 伯大尼／σ 公會／υ 馬可樓 |
+| 二 使徒軌跡 | **大寫拉丁** | J P U O T B F（後代沿同一字母延伸，不另立異端碼） |
+| 三 城市傳統 | 八城 | 耶路撒冷 安提阿 羅馬 以弗所 亞歷山大 埃德薩 迦太基 凱撒利亞（人物線列到 325，共 64 人） |
+| 四 獨立分支 | G | G1 塞特派／G2 瓦倫廷派／G3 赫密士／G4 摩尼 |
+
+每個希臘字母取自該群體在文獻裡的**那個希臘字**（`Συνέδριον`＝公會、`ὑπερῷον`＝徒 1:13
+的樓房），不是編號。
+
+🚨 **立節點的條件是有存世的自產文獻**（`inclusion_rule`）。馬吉安、孟他努、巴西里底、
+尼哥拉派據此都不立——這與大藏經「有可引殘篇就收」的標準不同，使用者 2026-09-17 裁示取前者。
+
+🚨 **κ 就是 Q 典群體，不要再往下切。**本工具曾自作主張拆成「迦百農敘事層＋語錄層」，
+再花兩輪去拆掉一個使用者從未主張過的東西。馬可的迦百農敘事（西門的家與岳母、屋頂縋下的
+癱子、睚魯、屋裡爭大小）**歸 P1 不歸 κ**：逐段檢查過，沒有一段是彼得不可及的，
+可 5:37 明說只帶彼得雅各約翰。κ 的性質寫在 `character` 欄（Theissen 巡迴激進主義 vs
+Arnal 2001 村落書記，爭議未決）。
+
+### 逐節層：7,971 節 100% 落定
+
+- `nt-verse-index.json` 節次骨架取自 **R2 `bible-verses/`**（站上閱讀器同一份），
+  不用希臘文校訂本——校訂本略去 26 節，約 7:53–8:11 整段不在，那段偏偏最該有列可掛。
+- `nt-pericopes.json` 段落界線取自 **ACCS 的段落總論**（`accs_commentary.section_kind
+  ='overview'`），1,268 段。🚨 ACCS 的總論**巢狀重疊**（章級套小段），直接相加會算出
+  112% 覆蓋——要每節指派給「包住它的最短範圍」再併連續節。
+- `nt-book-defaults.json` 書卷層：editor 恰一值＋date／place（另存大藏經的傳統年代地點，
+  **分歧 20 卷**已標 `dating_divergence`，最大分歧在弗、西、帖後與教牧書信）。
+- `segments/*.json` 27 卷逐段 sources＋主題，211 段附判定註記。
+
+全新約前五：U1 保羅本人 22.4%／P2 馬可群體 9.9%／κ 7.5%／P1 6.7%／σ1 公會 5.8%。
+**保羅一條線合計約 35%**。
+
+### 文獻層：典外 66 ＋ 諾斯底 287
+
+- `apocryphal-gospels.json`（30）、`nt-apocrypha.json`（36）：三套學界分類並列
+  （Ehrman & Pleše 2011／Schneemelcher NTA／Markschies & Schröter 2012），
+  外加 `attributed`／`actual` 兩欄——**借名本身就是譜系資料**。
+- `gnostic-corpus.json`（287）：逐份 50／category 規則 175／指回典外 20／排除 42。
+  🚨 **/gnostic 收的不全是古代文本**：valentinus(7)、mead(15)、modern(20) 共 42 種是
+  gnosis.org 的現代介紹文與網頁導覽（第一節內容是麵包屑導覽列），不可當史料掛軌跡。
+- `place_kind` 必填。🚨 **紙草殘片一律標 `findspot` 不標 `composition`**：它們出土於
+  埃及是因為埃及氣候保存得下來，不是寫於埃及。混為一談會得出「早期基督教文獻都產自埃及」。
+
+### 依據層：`bibliography.json` 43 筆
+
+31 筆直接取自第 12 期那篇自己的 35 條註釋（`provenance: article-footnote`），12 筆另補。
+**沒有學者支持的歸屬一律標 `own_judgment` 並寫出可被反駁的理由**，不得假託書目。
+缺書 37 筆已進 `data/zlib-wanted/apostolic-genealogy.jsonl`（priority 1；其中 3 筆是
+期刊論文，z-lib 抓不到，另標 `kind: article`）。
+
+### 稽核工具（三支，每支都印分母）
+
+```
+node scripts/genealogy_audit_tags.mjs        # 文獻母體 × 逐筆歸屬 × 代號主檔
+node scripts/genealogy_audit_segments.mjs    # 段落骨架 × 逐段歸屬 × 書卷層
+node scripts/genealogy_audit_apocrypha.mjs   # 典外 66 種欄位與引用
+```
+
+### 🚨 這條線特有的「看起來成功的失敗」
+
+- **統計超過 100% 就是重複計數**：ACCS 巢狀段落算出 112% 覆蓋。
+- **PostgREST 欄位名寫錯回 400 的 dict 不是空 list**：`select=title_en`（該欄不存在）
+  讓迴圈第一圈就 break，分母變 0，差點以「41 本書全不在館」下結論。實際館藏 5,374 本。
+- **書名 substring 比對會誤判**：「Tertullian」命中 ANF 的《拉丁基督教：特土良》、
+  「Just James」命中 TheDoctrineof**Justification****James**Buchanan。要詞界比對加驗作者。
+- **R2 經文檔有鬼章鍵**：代號開頭是數字的卷（1co/1jn/3jn…）每章多一個「章號＋代號開頭
+  數字」的重複鍵，直接統計會多算一倍（新約曾算成 9,240 節）。以 `bible_books.chapter_count`
+  白名單濾除。1co 的 "11" 與 2co 的 "12" 會撞真章號，實測撞號時存的是真章內容，站上顯示無誤。
+- **年代欄是自由文字**：「3／6 世紀」被解析成「西元 3 年」，把三世紀文獻誤收進一二世紀窗口。
+- **同名異人**：κ1 與 κ2 都有 Ἰωάννης，一個是西庇太的兒子一個是施洗約翰。拿拼法比對會假性
+  重疊——正是詞庫「認人看 name_english 不看 name_original」要防的錯。
+
+### 成品
+
+- artifact〈使徒軌跡歸屬表〉https://claude.ai/artifact/VF8xXBotg3QA1ZdpZ6KcWh
+- artifact〈迦百農與 Q 是一張網嗎〉https://claude.ai/artifact/65kSttH5VVLwc3movT3xnb
+- ⏳ `/works/christian-genealogy` 的表格分頁尚未實作
+
+### ⏳ 待辦
+
+- 猶大福音全文：**不在《基督教典外文獻》裡**（第 2 冊 p53 只有一頁簡介，末句寫「這書的
+  文本已經失傳」，該書出版早於 2006 年查科抄本公布）。須另尋來源。
+- 阿拉伯語嬰孩福音（第 1 冊原書頁 110–132）與拉丁語嬰孩福音（150–154，原書自述只摘錄
+  部分內容）已切出待 OCR。四冊都有文字層但品質不堪用（「阿倫德爾抄本404」讀成
+  「間偏德爾砂m 404 個」）。
+- 詞庫 27 筆待定名（Arius、Lucian of Antioch、Polycrates of Ephesus、Serapion of
+  Antioch、Perpetua and Felicity 等），詞庫未收故留空未自創。
