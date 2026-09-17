@@ -95,7 +95,7 @@
     "萊蘭茲約翰福音殘片": { "t": ["O5"], "city": "埃及", "tradition": "alexandria", "kind": "ms", "note": "P52，約 125–150；約翰福音成書年代的下限證據" },
     "徹斯特‧貝蒂聖經蒲草紙": { "t": [], "city": "埃及法尤姆一帶", "tradition": "alexandria", "kind": "ms" },
     "博德默蒲草紙": { "t": [], "city": "上埃及", "tradition": "alexandria", "kind": "ms" },
-    "奧克西林庫斯蒲草紙聖經群": { "t": ["κ3"], "city": "奧克西林庫斯", "tradition": "alexandria", "kind": "ms", "note": "其中的希臘文多馬福音殘片與無名語錄，是語錄傳統正典外出路的實物" },
+    "奧克西林庫斯蒲草紙聖經群": { "t": ["κ1"], "city": "奧克西林庫斯", "tradition": "alexandria", "kind": "ms", "note": "其中的希臘文多馬福音殘片與無名語錄，是語錄傳統正典外出路的實物" },
     "九六七號蒲草紙": { "t": [], "city": "埃及", "tradition": "alexandria", "kind": "ms" },
 
     "真理福音": { "t": ["G2"], "city": "埃及／羅馬", "tradition": "alexandria", "kind": "doc" },
