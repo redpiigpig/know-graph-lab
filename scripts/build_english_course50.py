@@ -633,6 +633,14 @@ def validate_direction(ex: dict) -> list[str]:
 # 只能放形容詞或名詞。所以判準改成查詞性，不是查黑名單。
 # 詞性在 english-1000.json 的 pos 欄（scripts/tag_english_pos.py 標的）。
 BE_COMPLEMENT_POS = {"adj", "noun", "num"}
+
+# 🚨 表地點的副詞與介系詞接在 be 後面是對的英文：I am here. / He is there. /
+# We are near. / The cat is in. 第一版把 adj/noun/num 以外的全擋掉，L28（位置
+# 介系詞那一課）整批被誤殺。每加一道閘都要回頭跑 --check 看有沒有誤殺，
+# 不能只看它擋到了想擋的。
+BE_PLACE_WORDS = {"here", "there", "near", "in", "on", "under", "behind",
+                  "beside", "above", "below", "inside", "outside", "out",
+                  "up", "down", "back", "home", "away"}
 _POS: dict[str, list[str]] | None = None
 
 
@@ -668,6 +676,8 @@ def validate_complements(ex: dict) -> list[str]:
             if not hit:
                 continue
             word = hit.group(1)
+            if word.lower() in BE_PLACE_WORDS:
+                continue
             tags = word_pos(word)
             if tags and not (set(tags) & BE_COMPLEMENT_POS):
                 errs.append(f"{label}第 {i} 題「{item['ans']}」不是英文——"

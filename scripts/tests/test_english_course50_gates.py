@@ -260,6 +260,18 @@ def test_real_complements_pass(gen):
         assert gen.validate_complements({"translate": [{"q": "x", "ans": ans}]}) == [], ans
 
 
+def test_place_words_after_be_are_allowed(gen):
+    """🚨 加閘之後要回頭跑全書看有沒有**誤殺**。
+
+    第一版只收 adj/noun/num，L28（位置介系詞那一課）整批被判成不是英文——
+    I am here. / He is there. / We are near. 全是對的英文。
+    我當時只驗了「它擋到想擋的」，沒驗「它有沒有擋到不該擋的」。
+    """
+    for ans in ("I am here.", "He is there.", "We are near.",
+                "The cat is inside.", "We are home."):
+        assert gen.validate_complements({"translate": [{"q": "x", "ans": ans}]}) == [], ans
+
+
 def test_every_word_has_a_pos(gen):
     """一千字都要標到，否則這道閘會靜默放行沒標到的那些。"""
     import json
