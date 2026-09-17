@@ -19,6 +19,13 @@ from pathlib import Path
 import requests
 from dotenv import load_dotenv
 
+# 主控台是 cp950，印到 ✓／✗ 會 UnicodeEncodeError 整支掛掉（排程就變成每晚靜默失敗）。
+for _s in (sys.stdout, sys.stderr):
+    try:
+        _s.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
+
 REPO = Path(__file__).resolve().parent.parent
 load_dotenv(REPO / ".env")
 URL = os.environ["SUPABASE_URL"]

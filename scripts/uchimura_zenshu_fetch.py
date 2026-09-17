@@ -16,6 +16,13 @@ import time
 import urllib.request
 from pathlib import Path
 
+# 主控台是 cp950，印到 ✓／✗ 會 UnicodeEncodeError 整支掛掉（排程就變成每晚靜默失敗）。
+for _s in (sys.stdout, sys.stderr):
+    try:
+        _s.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
+
 DEST = Path(r"G:\我的雲端硬碟\資料\知識圖工作室\全集\神學\內村鑑三\岩波全集（1932-33）")
 UA = {"User-Agent": "kgl-research/1.0 (personal digital library)"}
 
