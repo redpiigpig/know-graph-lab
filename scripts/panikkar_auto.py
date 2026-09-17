@@ -234,7 +234,10 @@ def translate_work(
         zh = (zh + [None] * len(src))[:len(src)]
         engines = _provenance(cache, zh, len(src))
         title_zh = cache.get("title_zh") or None
-        todo = [j for j in range(len(src)) if not zh[j]]
+        # 稽核判定「來源沒有可譯內容」而留白的段落要跳過，否則清掉的拒譯文字
+        # 下一輪又會被翻回來（與 mueller_auto 同一個記號）。
+        todo = [j for j in range(len(src))
+                if not zh[j] and engines[j] != "blank-unusable-source"]
         if maxparas:
             todo = todo[:maxparas]
         if max_total_paras is not None:
@@ -448,6 +451,10 @@ def run_work(slug: str, *, do_upload: bool, maxparas=None, backend: str = "auto"
     engine = pb.make_engine(WORKS[slug]["lang"], backend=backend)
     translate_work(slug, engine, maxparas=maxparas)
     build_and_upload(slug, do_upload=do_upload)
+    # 給 fleet_keeper 的 EnsureUntil 判退場用的 ASCII 標記：這一部沒有東西可翻了，
+    # 再拉起來只是把整本重組上傳一次（見 keeper 裡那段註解）。
+    if is_done(slug):
+        print("PANIKKAR_WORK_COMPLETE", flush=True)
 
 
 def run_queue(backend: str = "auto"):

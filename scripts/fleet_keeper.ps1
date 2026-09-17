@@ -223,7 +223,7 @@ EnsureUntil 'husserl' $py @('-X','utf8','scripts\uchimura_auto.py','--author','h
 # Panikkar last volume (vedic-experience, huge): on Haiku per user (idle Claude account).
 # When it finishes, replace this lane with Max Weber (sociology) collected works.
 # Moved off Gemini 2026-08-17 so ACCS owns the Gemini pool (see top of file).
-Ensure 'panikkar-vedic' 'panikkar_auto' @('-X','utf8','scripts\panikkar_auto.py','--work','vedic-experience','--backend','nvidia')
+EnsureUntil 'panikkar-vedic' $py @('-X','utf8','scripts\panikkar_auto.py','--work','vedic-experience','--backend','nvidia') 'PANIKKAR_WORK_COMPLETE'
 # Uchimura first-wave cache is already complete; do not re-upload it on every wake.
 # Dadaodao is a separate research-materials project, outside this collected-works restart.
 # Sacred Books of the East: its five driver volumes are done locally; keep it off
