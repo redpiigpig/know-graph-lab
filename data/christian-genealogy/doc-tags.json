@@ -44,8 +44,8 @@
     "伊格那丟致士每拿人書": { "t": ["P3"], "city": "特羅亞", "tradition": "antioch", "kind": "doc", "note": "8.1–2 首次出現「大公教會」一語，並把主教在場定為聖餐有效的條件" },
     "伊格那丟致波利甲書": { "t": ["P3", "O"], "city": "特羅亞", "tradition": "antioch", "kind": "doc", "note": "安提阿傳統直接寫給亞細亞傳統的一封信，兩條軌跡在此交握" },
 
-    "主道論集殘篇": { "t": ["O6", "P2"], "city": "希拉波立", "tradition": "ephesus", "kind": "doc", "note": "帕皮亞區分「長老約翰」與使徒約翰，是 O6 存在與否的唯一直接史料；同篇又稱馬可為彼得的傳譯者" },
-    "古老長老遺篇": { "t": ["O6"], "city": "不詳", "tradition": "ephesus", "kind": "doc", "note": "愛任紐所引「那些長老們」，亞細亞長老傳統的殘響" },
+    "主道論集殘篇": { "t": ["O5", "P2"], "city": "希拉波立", "tradition": "ephesus", "kind": "doc", "note": "帕皮亞區分「長老約翰」與使徒約翰，是 O5 存在與否的唯一直接史料；同篇又稱馬可為彼得的傳譯者" },
+    "古老長老遺篇": { "t": ["O5"], "city": "不詳", "tradition": "ephesus", "kind": "doc", "note": "愛任紐所引「那些長老們」，亞細亞長老傳統的殘響" },
     "坡旅甲致腓立比人書": { "t": ["O"], "city": "士每拿", "tradition": "ephesus", "kind": "doc" },
     "波利甲殉道錄": { "t": ["O"], "city": "士每拿", "tradition": "ephesus", "kind": "doc", "note": "現存最早的殉道錄體裁" },
     "墨利托論逾越": { "t": ["O"], "city": "撒狄斯", "tradition": "ephesus", "kind": "doc", "note": "四七日派逾越節傳統的講章，亞細亞據此對抗羅馬的主日復活節，是城市傳統之爭最早的具體案例" },
@@ -92,7 +92,7 @@
     "古敘利亞福音譯本": { "t": ["T"], "city": "埃德薩一帶", "tradition": "edessa", "kind": "ms" },
     "〈珍珠之歌〉": { "t": ["T2"], "city": "敘利亞", "tradition": "edessa", "kind": "doc", "note": "嵌在《多馬行傳》裡的詩，後為摩尼教團傳唱——T 通往 G4 的那條線就在這首詩上" },
 
-    "萊蘭茲約翰福音殘片": { "t": ["O5"], "city": "埃及", "tradition": "alexandria", "kind": "ms", "note": "P52，約 125–150；約翰福音成書年代的下限證據" },
+    "萊蘭茲約翰福音殘片": { "t": ["O4"], "city": "埃及", "tradition": "alexandria", "kind": "ms", "note": "P52，約 125–150；約翰福音成書年代的下限證據" },
     "徹斯特‧貝蒂聖經蒲草紙": { "t": [], "city": "埃及法尤姆一帶", "tradition": "alexandria", "kind": "ms" },
     "博德默蒲草紙": { "t": [], "city": "上埃及", "tradition": "alexandria", "kind": "ms" },
     "奧克西林庫斯蒲草紙聖經群": { "t": ["κ1"], "city": "奧克西林庫斯", "tradition": "alexandria", "kind": "ms", "note": "其中的希臘文多馬福音殘片與無名語錄，是語錄傳統正典外出路的實物" },
