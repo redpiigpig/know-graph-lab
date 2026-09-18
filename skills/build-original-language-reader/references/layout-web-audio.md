@@ -116,8 +116,8 @@ Use the frozen reader profile if the user approves a different specification.
 🚨 **LibreOffice 轉 PDF 時，儲存格裡的 `keepNext` 綁不住表格後面的段落。** 逐詞對譯
 是一列一張表格，整句中譯原本是表格後面的段落——那一行因此可以自己跑到下一頁，而
 「最後一列補 keepNext」這個看起來最自然的修法**一點作用都沒有**（`w:pPr` 裡的順序
-對錯都一樣不理它）。實測腳本留在 scratchpad：兩份只差 keepNext 的 DOCX，轉出來的
-PDF 完全一樣。
+對錯都一樣不理它）。要自己驗只需兩份 DOCX：內容一樣、只差儲存格裡有沒有 keepNext，
+各自 `soffice --headless --convert-to pdf` 之後比對——兩份的分頁完全一樣。
 
 能用的是這兩條，都實測過：
 
