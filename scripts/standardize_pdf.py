@@ -321,7 +321,7 @@ def standardize_pdf_full(book: dict, force: bool = False) -> tuple[list[dict] | 
         chapter_path = se.to_traditional(chapter_path)
         chapter_path = se.normalize_chapter_title(chapter_path) or chapter_path
 
-        out.append({
+        chunk = {
             "chunk_index": len(out),
             "chunk_type": "chapter",
             "page_number": pages_in_range[0],
@@ -329,7 +329,12 @@ def standardize_pdf_full(book: dict, force: bool = False) -> tuple[list[dict] | 
             "chapter_path": chapter_path,
             "format": "markdown",
             "content": _prepend_heading(content, chapter_path),
-        })
+        }
+        # 這一章起始頁在原書印的頁碼。不明寫就會在重建 chunk 時靜默消失。
+        printed = (page_lookup[pages_in_range[0]] or {}).get("printed_page")
+        if printed:
+            chunk["printed_page"] = printed
+        out.append(chunk)
 
     if len(out) < MIN_TOC_ENTRIES:
         return None, None, f"only {len(out)} chunks produced after TOC processing — keeping Plan A"

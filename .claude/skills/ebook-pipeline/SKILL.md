@@ -1291,6 +1291,18 @@ MinerU 會把**跨頁的段落合併、整段掛到段落起始的那一頁**。
 插頁不編號），所以逐頁記，別拿一個 offset 去推算。撈不到就不寫那個鍵——
 空著比填推算值誠實。
 
+🚨 **撿回來的頁碼偶爾是別的東西**，要過 `drop_isolated_printed_pages()`。
+《民主妙法》的書名頁沒印頁碼卻被填了 8，夾在一整串「PDF 頁 − 7」中間，
+單看那一頁完全正常。判準是**跟前後鄰居的位移對不對得上**，不是跟全書主流位移比——
+前言另編、正文重新從 1 起算的書，位移本來就會換一次檔，那是一整段連號的，不該丟。
+只有前後都不同意的那一個才清成 null。
+
+🚨 **下游重建 chunk 會把 `printed_page` 靜默洗掉。** `standardize_pdf_lite`（Plan A）
+與 `standardize_pdf`（Plan B）都是整個 chunk 重新組出來、只寫固定那幾個鍵，
+沒有明寫就消失，而兩支都會印「✓ N chunks」。兩支都已補上傳遞
+（Plan B 取該章起始頁的 `printed_page`）。**跑完 standardize 一定要回頭數一次**
+有幾段還有 `printed_page`。
+
 🚨 **`run --book` 以前只寫檔、不入庫**（2026-09-18 修）。發布（R2＋`parsed_at`）
 只寫在 `queue` 那條路徑上，於是手動跑單本會 exit 0、JSONL 也在，但站上看不到、
 `parse_error` 還掛著 `no extractable text`，**這本還留在佇列裡等明天再 OCR 一次**。
@@ -1335,6 +1347,23 @@ skill 另一處記著直排中文兩個引擎都吃鱉，MinerU 尚未試過。
 
 **定位**：0.55 秒/頁、零配額、可整晚跑（約 6,500 頁/小時；Gemini 約 350 頁/小時
 還要抽 503／429 的籤）。準度與頁碼都站得住，2026-09-16 起已是 OCR 主力。
+
+### GPU 忙的時候能不能改跑 CPU（2026-09-18 實測）
+
+能，但**不是加個 `MINERU_DEVICE_MODE=cpu` 就好**。
+
+- **準度一樣**。同三頁 GPU／CPU 都跑過，逐字相似度 0.996–1.000，字數完全相同；
+  那零星差異追下去全是發布時 opencc `s2tw` 造成的（内→內、布→佈），不是引擎差異。
+  同樣權重、同樣輸入，兩邊吐同樣的字。
+- **慢 8–10 倍**。《民主妙法》334 頁：GPU 341 秒；CPU 跑滿一小時還沒完成
+  （光 `OCR-det` 單批 464 個區塊就要 10 分鐘）。
+- 🚨 **整本一次送 CPU 必定撞 MinerU 內建的 1 小時 task 逾時**
+  （`MINERU_TASK_RESULT_TIMEOUT_SECONDS`，預設 3600），死法是
+  `Timed out waiting for result of task …`、離開碼 1。GPU 六分鐘跑完所以永遠碰不到。
+  要走 CPU 就先把那個環境變數調大，或用 `-s/-e` 切成每 60 頁一段分批送。
+- **兩邊可以並行**：那把鎖守的是 6 GB 顯示記憶體，CPU 路徑從頭到尾不碰 VRAM，
+  所以不受鎖管也不會讓 GPU 那邊 OOM；真正互相拖的只有 CPU 核心與磁碟。
+  GPU 被別的 session 的批次接力佔住時，這是不必排隊的替代路徑。
 
 安裝現況：`_mineru_venv/`（python 3.12 + torch 2.11.0+cu128，已 gitignore）。
 🚨 `~/mineru.json` 會把 `model-source` 與 `models-dir` **寫死**，環境變數

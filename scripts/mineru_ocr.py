@@ -198,6 +198,28 @@ def run_mineru(pdf: Path, out_dir: Path, lang: str = "ch",
 FOOTNOTE_RULE = "—" * 15          # reader 認這條線當「註釋」區的起點
 
 
+def drop_isolated_printed_pages(pages: dict[int, dict]) -> int:
+    """把孤立的假印刷頁碼清掉，回傳清掉幾個。
+
+    🚨 撿回來的頁碼偶爾是別的東西。《民主妙法》的書名頁（沒印頁碼）就被填了 8，
+    夾在一串「PDF 頁 − 7」之間，單看那一頁完全正常。假頁碼比沒有頁碼更糟，
+    因為它會讓人照著寫進論文（[[feedback_transcribe_page_numbers]]）。
+
+    判準是**跟鄰居的位移對不對得上**，不是「跟全書主流位移對不對得上」——
+    前言另編、正文重新從 1 起算的書，換算位移本來就會變一次，那種換檔是一整段
+    連號的，不該被當成錯。只有前後都不同意的那一個才丟。
+    """
+    numbered = [(idx, page) for idx, page in sorted(pages.items()) if page["printed_page"]]
+    offsets = [idx - page["printed_page"] for idx, page in numbered]
+    dropped = 0
+    for i, (idx, page) in enumerate(numbered):
+        neighbours = offsets[max(0, i - 1):i] + offsets[i + 1:i + 2]
+        if neighbours and offsets[i] not in neighbours:
+            page["printed_page"] = None
+            dropped += 1
+    return dropped
+
+
 def to_chunks(pages: dict[int, dict], page_offset: int = 0) -> list[dict]:
     """`pages_from_middle` 的輸出 → 本專案的 chunk 形狀。
 
@@ -209,6 +231,9 @@ def to_chunks(pages: dict[int, dict], page_offset: int = 0) -> list[dict]:
     註腳接在正文後面、以一條長橫線分隔，不要跟正文混在一起。
     空白頁保留，不要悄悄丟掉——頁碼覆蓋率的稽核靠它。
     """
+    bogus = drop_isolated_printed_pages(pages)
+    if bogus:
+        print(f"  （清掉 {bogus} 個跟前後都對不上的印刷頁碼，寧可留空）", flush=True)
     chunks = []
     for i, idx in enumerate(sorted(pages)):
         page = pages[idx]

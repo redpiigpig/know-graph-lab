@@ -203,14 +203,19 @@ def standardize_pdf_chunks(book) -> tuple[list[dict], dict]:
         # 4. Re-derive chapter_path only if absent
         chapter_path = c.get("chapter_path") or derive_pdf_chapter_path(content)
 
-        cleaned.append({
+        out = {
             "chunk_index": len(cleaned),
             "chunk_type": c.get("chunk_type") or "page",
             "page_number": page_number,                 # ← preserved
             "chapter_path": chapter_path,
             "format": "text",
             "content": content,
-        })
+        }
+        # 原書印的頁碼（引用時寫的就是它）。這裡是整個 chunk 重建的，沒有明寫
+        # 就會靜默消失 —— 一樣是「跑完全綠、東西不見了」那一類。
+        if c.get("printed_page"):
+            out["printed_page"] = c["printed_page"]
+        cleaned.append(out)
 
     # Extract publisher metadata across all chunks (early pages dominate
     # because we walk in order and first-hit wins per field).
