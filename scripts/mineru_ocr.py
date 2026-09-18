@@ -47,6 +47,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
 import shutil
 import subprocess
 import sys
@@ -104,6 +105,28 @@ def find_middle_json(out_dir: Path) -> Path:
 
 # ── 跑 MinerU ─────────────────────────────────────────────────────────────
 
+_ANSI = re.compile(r"\x1b\[[0-9;]*m")
+# 每次都會印、對查錯零幫助的開場白。留著會把訊息額度吃光。
+_BANNER = ("Start MinerU FastAPI Service", "API documentation:", "Started local mineru-api",
+           "Uvicorn running on", "Started server process", "Waiting for application startup",
+           "Application startup complete", "Request concurrency limited")
+
+
+def last_lines(*streams: str | None, n: int = 4, width: int = 220) -> str:
+    """把 MinerU 的輸出濃縮成「最後幾行有意義的話」。
+
+    進度條用 \\r 更新，所以要一起當換行切；banner 與空行丟掉；ANSI 色碼去掉。
+    取尾巴而不是取頭，因為呼叫端會截短，而死因永遠在最後一行。
+    """
+    lines: list[str] = []
+    for s in streams:
+        for raw in _ANSI.sub("", s or "").replace("\r", "\n").split("\n"):
+            ln = raw.strip()
+            if ln and not any(b in ln for b in _BANNER):
+                lines.append(ln[:width])
+    return " ⏎ ".join(lines[-n:]) if lines else "（MinerU 沒留下任何訊息）"
+
+
 def run_mineru(pdf: Path, out_dir: Path, lang: str = "ch",
                start: int | None = None, end: int | None = None,
                device: str | None = None) -> dict[int, str]:
@@ -130,8 +153,13 @@ def run_mineru(pdf: Path, out_dir: Path, lang: str = "ch",
     proc = subprocess.run(argv, env=env, capture_output=True, text=True,
                           encoding="utf-8", errors="replace")
     if proc.returncode != 0:
-        tail = (proc.stdout or "")[-1500:] + (proc.stderr or "")[-1500:]
-        raise RuntimeError(f"MinerU 失敗 (exit {proc.returncode})：\n{tail}")
+        elapsed = time.time() - t0
+        # 🚨 呼叫端只留訊息的前 140–200 字，而 MinerU 開頭固定是
+        #    「Start MinerU FastAPI Service / Started local mineru-api / API documentation」
+        #    三行 banner —— 直接塞 stdout 的話，存進 parse_error 的永遠是那段廢話，
+        #    真正的錯在最後面。2026-09-18 十本書就是這樣查不出死因。所以取**尾巴**。
+        raise RuntimeError(
+            f"MinerU 失敗 (exit {proc.returncode}, {elapsed:.0f}s)：{last_lines(proc.stderr, proc.stdout)}")
 
     middle = json.loads(find_middle_json(out_dir).read_text(encoding="utf-8"))
     pages = pages_from_middle(middle)
@@ -282,13 +310,27 @@ ENV_SIGNS = ("getaddrinfo", "URLError", "ConnectionError", "Connection refused",
              "Remote end closed", "Connection aborted")
 
 
+# MinerU 光是起 FastAPI ＋ 載模型就要 10–15 秒，載完才輪到這本書。
+# 死在這之前，它根本沒翻開書，怎麼樣都不會是「這本書的問題」。
+STARTUP_SECONDS = 60
+_ELAPSED = re.compile(r"exit -?\d+, (\d+)s")
+
+
 def looks_like_env_failure(msg: str) -> bool:
     """這個錯是「環境壞了」還是「這本書不行」。
 
     分錯的代價不對稱：把環境錯當成書的失敗，會在幾秒內燒掉整個佇列
     （2026-09-16 實測 30 本）；反過來只是多停一次、下次再跑。所以寧可誤判成環境錯。
+
+    🚨 2026-09-18 又燒掉 10 本：關鍵字表只認得網路錯，而那天是待機醒來後 GPU 不穩，
+       MinerU 在載模型時就沒了、一個字都沒留，於是十本書被判「書壞了」踢出佇列
+       （事後單獨重跑同一本 exit 0）。所以加第二條判準：**死得太快就是環境問題**。
     """
-    return any(s.lower() in (msg or "").lower() for s in ENV_SIGNS)
+    low = (msg or "").lower()
+    if any(s.lower() in low for s in ENV_SIGNS):
+        return True
+    m = _ELAPSED.search(msg or "")
+    return m is not None and int(m.group(1)) < STARTUP_SECONDS
 
 
 def cmd_run(args) -> int:
@@ -423,6 +465,7 @@ def cmd_queue(args) -> int:
 
     deadline = time.time() + args.max_minutes * 60 if args.max_minutes else None
     done = fail = 0
+    streak: list[str] = []   # 連續失敗的書；成功一本就清掉
     checked_at = time.time()
     for t in targets[: args.limit]:
         if deadline and time.time() > deadline:
@@ -448,13 +491,24 @@ def cmd_queue(args) -> int:
         except Exception as e:
             msg = str(e)
             if looks_like_env_failure(msg):
-                print(f"  ⛔ 環境問題，整場停：{msg[:140]}")
+                print(f"  ⛔ 環境問題，整場停：{msg[:200]}")
                 return 3
-            print(f"  ✗ 這本失敗：{msg[:140]}")
+            print(f"  ✗ 這本失敗：{msg[:200]}")
             og.update_book_error(bid, f"MinerU: {msg[:200]}")
             fail += 1
+            streak.append(bid)
+            # 🚨 認不出來的環境錯照樣會燒佇列 —— 關鍵字表漏過 2026-09-16 那次斷網
+            #    以外的每一種死法。所以不管看不看得懂訊息，連錯這麼多本就是環境有事：
+            #    好書不會排隊壞。把這一串放回佇列再整場停，等人來看。
+            if len(streak) >= args.max_streak:
+                print(f"\n⛔ 連續 {len(streak)} 本失敗 —— 這不是書的問題，整場停。")
+                for sid in streak:
+                    og.update_book_error(sid, "no extractable text")
+                print(f"   已把這 {len(streak)} 本放回佇列：{', '.join(s[:8] for s in streak)}")
+                return 3
             continue
 
+        streak.clear()   # MinerU 跑得動 → 前面那些失敗確實是各自的書的問題
         chunks = to_chunks(pages)
         rep = quality_report(chunks)
         print(f"  {rep['pages']} 頁　空白 {rep['blank_rate']:.1%}　每頁 {rep['chars_per_page']} 字")
@@ -536,6 +590,8 @@ def main() -> int:
                    help="GPU 被別的 MinerU 佔著時最多等幾分鐘（預設 0＝不等，直接回 4）。"
                         "整夜跑該給大一點，別因為現在剛好有人在用就整晚什麼都不做")
     q.add_argument("--exclude", nargs="*", default=[], help="要跳過的 ebook id")
+    q.add_argument("--max-streak", type=int, default=3,
+                   help="連續幾本失敗就判定環境有問題、把那幾本放回佇列並整場停（預設 3）")
     q.add_argument("--max-db-mb", type=int, default=1100,
                    help="DB 超過這個大小就停（預設 1100 MB）。"
                         "2026-07-08 曾在 1,313 MB 被鎖站，這道閘是為了別讓沒人看著的夜班撞上去")
