@@ -30,8 +30,10 @@ EXTRA_NAMES = {
 }
 
 payload = {
-    "tally": [[t["code"], EXTRA_NAMES.get(t["code"], t["name"]), t["verses"], t["pct"]]
-              for t in d["tally"]],
+    # 🚨 代號樹優先：EXTRA_NAMES 只在樹上查不到時才頂上（早期 U5a／U5b 還沒進樹時的遺留）。
+    #    寫成 EXTRA_NAMES 優先會讓 artifact 不跟著樹改名——正是 gdata.js 走味的老路。
+    "tally": [[t["code"], t["name"] if t["name"] != "?" else EXTRA_NAMES.get(t["code"], "?"),
+               t["verses"], t["pct"]] for t in d["tally"]],
     "books": [[b["code"], b["name"], b["editor"], b["editorName"], b["date"], b["place"],
                b["divergence"], b.get("dateTraditional") or "", b.get("placeTraditional") or "",
                b["segments"], b["verses"], b["own"], b["support"], b["rationale"]]
