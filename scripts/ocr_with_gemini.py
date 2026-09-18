@@ -342,13 +342,18 @@ def write_jsonl(book_id, chunks, staging=False):
     out = CHUNKS_DIR / (f"{book_id}.jsonl.new" if staging else f"{book_id}.jsonl")
     with out.open("w", encoding="utf-8") as f:
         for i, c in enumerate(chunks):
-            f.write(json.dumps({
+            row = {
                 "chunk_index": i,
                 "chunk_type": "page",
                 "page_number": c["page"],
                 "chapter_path": None,
                 "content": _trad(c["text"]),
-            }, ensure_ascii=False) + "\n")
+            }
+            # 原書印的那個頁碼（引用時要寫的就是它）。只有撈得到的引擎會給，
+            # 撈不到就不寫這個鍵 —— 空著比填一個推算值誠實。
+            if c.get("printed_page"):
+                row["printed_page"] = c["printed_page"]
+            f.write(json.dumps(row, ensure_ascii=False) + "\n")
     return out
 
 

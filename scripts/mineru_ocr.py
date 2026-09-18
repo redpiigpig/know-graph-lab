@@ -80,19 +80,45 @@ def _block_text(block: dict) -> str:
     return "".join(parts)
 
 
-def pages_from_middle(middle: dict) -> dict[int, str]:
-    """`middle.json` → {0-based 頁索引: 該頁文字}。
+def pages_from_middle(middle: dict) -> dict[int, dict]:
+    """`middle.json` → {0-based 頁索引: {text, footnotes, printed_page}}。
 
-    走 `preproc_blocks`（合併前），不走 `para_blocks`／`content_list` ——
+    正文走 `preproc_blocks`（合併前），不走 `para_blocks`／`content_list` ——
     理由見模組開頭那段，這是本檔存在的主要原因。
+
+    🚨 **註腳與印刷頁碼不在 `preproc_blocks` 裡**，MinerU 把它們跟書眉一起
+    歸到 `discarded_blocks`。只讀正文等於把兩樣硬規定要的東西靜默丟光：
+    專案規矩是註釋一律要收（不然無法核對作者引了什麼），頁碼要帶得回原書
+    （引用寫得出第幾頁）。2026-09-18《民主妙法》第一版就是這樣——334 頁
+    零缺頁、字數正常、閘全過，而全書 300 多條譯註原註一條都不在。
+
+    分類不必自己猜：那些 block 自帶 `type`（`header`／`page_number`／
+    `page_footnote`），照標籤撿就好。認不得的型別一律當家具丟掉。
     """
-    out: dict[int, str] = {}
+    out: dict[int, dict] = {}
     for page in middle.get("pdf_info") or []:
         idx = int(page.get("page_idx", len(out)))
         blocks = page.get("preproc_blocks")
         if blocks is None:                      # 舊版格式的保險
             blocks = page.get("para_blocks") or []
-        out[idx] = "\n".join(_block_text(b) for b in blocks).strip()
+        notes: list[str] = []
+        printed: int | None = None
+        for b in page.get("discarded_blocks") or []:
+            kind = b.get("type")
+            text = _block_text(b).strip()
+            if not text:
+                continue
+            if kind == "page_footnote":
+                notes.append(" ".join(text.split()))
+            elif kind == "page_number" and printed is None:
+                digits = re.sub(r"\D", "", text)
+                if digits:
+                    printed = int(digits)
+        out[idx] = {
+            "text": "\n".join(_block_text(b) for b in blocks).strip(),
+            "footnotes": notes,
+            "printed_page": printed,
+        }
     return out
 
 
@@ -169,21 +195,34 @@ def run_mineru(pdf: Path, out_dir: Path, lang: str = "ch",
 
 # ── 輸出成本專案的 JSONL ──────────────────────────────────────────────────
 
-def to_chunks(pages: dict[int, str], page_offset: int = 0) -> list[dict]:
-    """{頁索引: 文字} → 本專案的 chunk 形狀。
+FOOTNOTE_RULE = "—" * 15          # reader 認這條線當「註釋」區的起點
 
-    `page_number` 用 1-based 實體頁（`page_offset` 給「只 OCR 後半本」那種場合補回）。
+
+def to_chunks(pages: dict[int, dict], page_offset: int = 0) -> list[dict]:
+    """`pages_from_middle` 的輸出 → 本專案的 chunk 形狀。
+
+    `page_number` 用 1-based 實體頁（`page_offset` 給「只 OCR 後半本」那種場合補回），
+    `printed_page` 另存原書印的那個頁碼 —— 兩者是不同的東西，前者是檔案裡的第幾張，
+    後者才是引用時寫的頁。位移不是常數（前言用羅馬數字、插頁不編號），所以逐頁記，
+    不要拿一個 offset 去推算。
+
+    註腳接在正文後面、以一條長橫線分隔，不要跟正文混在一起。
     空白頁保留，不要悄悄丟掉——頁碼覆蓋率的稽核靠它。
     """
     chunks = []
     for i, idx in enumerate(sorted(pages)):
+        page = pages[idx]
+        body = page["text"]
+        if page["footnotes"]:
+            body = (body + "\n\n" + FOOTNOTE_RULE + "\n" + "\n".join(page["footnotes"])).strip()
         chunks.append({
             "chunk_index": i,
             "chunk_type": "page",
             "page_number": idx + 1 + page_offset,
+            "printed_page": page["printed_page"],
             "chapter_path": None,
             "format": "text",
-            "content": pages[idx],
+            "content": body,
         })
     return chunks
 
@@ -418,6 +457,32 @@ def cmd_run(args) -> int:
     print(f"  寫出 → {out_jsonl}")
     if args.staging:
         print("  （staging 模式：沒動 DB／R2。接 requeue_reocr 的 staged gate 決定要不要 swap）")
+        return 0
+    if book_id is None:
+        return 0                                  # --pdf 一次性轉檔，本來就沒有要入庫
+
+    # 🚨 寫完檔不等於入庫。這裡本來就 return 0 了，於是 `run --book` 跑完
+    #    exit 0、JSONL 也在，但 R2 沒有、`parsed_at` 還是 null、`parse_error`
+    #    還掛著 'no extractable text' —— 站上看不到，而且這本還留在佇列裡等
+    #    明天的排程再 OCR 一次。2026-09-18《民主妙法》與內村數卷都是這樣。
+    #    發布一律走 queue 用的同一組函式，不要在這裡另寫一套。
+    sys.path.insert(0, str(REPO / "scripts"))
+    import ocr_with_gemini as og
+    pub = [{"page": c["page_number"], "printed_page": c.get("printed_page"),
+            "text": c["content"]} for c in chunks]
+    try:
+        path = og.write_jsonl(book_id, pub)       # 內含簡→繁，形狀與 queue 一致
+        og.push_to_r2(book_id, path)
+        non_empty = [c for c in pub if c["text"].strip()]
+        og.update_book_done(book_id,
+                            total_chars=sum(len(c["text"]) for c in non_empty),
+                            chunk_count=len(non_empty),
+                            total_pages=max(c["page"] for c in non_empty))
+    except Exception as e:
+        msg = str(e)
+        print(f"  ✗ 發布失敗（JSONL 已寫出，重跑即可）：{msg[:200]}")
+        return 3 if looks_like_env_failure(msg) else 1
+    print("  ✓ 已入庫（R2 已推送，parsed_at 已寫）")
     return 0
 
 
@@ -546,7 +611,8 @@ def cmd_queue(args) -> int:
             continue
 
         # 交給既有的發布路徑：JSONL(繁體) → R2 → parsed_at
-        pub = [{"page": c["page_number"], "text": og._trad(c["content"])} for c in chunks]
+        pub = [{"page": c["page_number"], "printed_page": c.get("printed_page"),
+                "text": og._trad(c["content"])} for c in chunks]
         try:
             path = og.write_jsonl(bid, pub)
             og.push_to_r2(bid, path)

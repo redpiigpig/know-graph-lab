@@ -1271,6 +1271,31 @@ MinerU 會把**跨頁的段落合併、整段掛到段落起始的那一頁**。
 跟 [[feedback_transcribe_page_numbers]] 的「假頁碼比沒有更糟」同一類。
 換一個讀法，最差一頁從 13.17% 降到 0.92%，十二頁沒有一頁破 1%。
 
+🚨 **但「只讀 `preproc_blocks`」會把註腳與印刷頁碼整批丟掉**（2026-09-18 修）。
+那兩樣東西不在正文區塊裡，MinerU 跟書眉一起歸進 `discarded_blocks`。
+《民主妙法》第一版的長相：334 頁零缺頁、零重複、每頁 584 字、重複幻覺判準通過、
+內容逐字對得上原書——**而全書三百多條譯註原註一條都不在，印刷頁碼 334 頁只剩 2 頁看得到**。
+專案兩條硬規定同時被違反（[[feedback_transcribe_notes_and_bibliography]] 註釋必收、
+[[feedback_transcribe_page_numbers]] 頁碼要帶得回原書），而所有數字都是綠的。
+
+撿回來不必自己猜版面：那些 block 自帶 `type`，照標籤撿就好——
+
+| `discarded_blocks` 的 type | 處置 |
+|---|---|
+| `page_footnote` | 收進該頁，接在正文後、以一條 15 個全形破折號的線分隔 |
+| `page_number` | 取數字寫進 chunk 的新欄位 `printed_page` |
+| `header`（書眉）／其餘 | 丟掉 |
+
+`page_number` 仍是**檔案裡的第幾張**（契約不變、reader 與英文版都靠它），
+`printed_page` 才是**原書印的那個頁碼**。兩者差多少不是常數（前言用羅馬數字、
+插頁不編號），所以逐頁記，別拿一個 offset 去推算。撈不到就不寫那個鍵——
+空著比填推算值誠實。
+
+🚨 **`run --book` 以前只寫檔、不入庫**（2026-09-18 修）。發布（R2＋`parsed_at`）
+只寫在 `queue` 那條路徑上，於是手動跑單本會 exit 0、JSONL 也在，但站上看不到、
+`parse_error` 還掛著 `no extractable text`，**這本還留在佇列裡等明天再 OCR 一次**。
+現在 `run` 非 `--staging` 一律走 queue 用的同一組發布函式。
+
 Gemini 的分數要**抹平「」引號樣式**才看得準：97.95% → 98.83%。它把 `"` 轉成 `「」`，
 對繁體排版是正確處理，卻被逐字比對算成錯。
 
