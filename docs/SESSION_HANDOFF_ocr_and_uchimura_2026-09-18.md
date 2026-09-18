@@ -11,25 +11,27 @@
 
 ---
 
-## 🔴 立刻要做的第一件事
+## ✅ 第一件事已經做完（2026-09-18 11:47）
 
-停掉通用佇列那支，讓內村這條線拿到 GPU。**這一步需要人按**——自動模式的權限層
-會把 `Stop-Process` 擋成 `Interfere With Workloads`：
+通用佇列已停，內村班已推（PID 26320），卷 01 轉錄中、量到 `+44.9s CPU / 35s` 確認在算。
+
+停佇列那步**需要人按**——自動模式的權限層會把 `Stop-Process` 擋成
+`Interfere With Workloads`。下次要停，用這段（會自己重算行程樹，子 PID 換了也對）：
 
 ```powershell
-Stop-Process -Id 29544,7052,9176,26936,21316 -Force
+$ids=@(); Get-CimInstance Win32_Process -Filter "Name='python.exe'" |
+  Where-Object { $_.CommandLine -like '*mineru_ocr.py queue*' } | ForEach-Object {
+    $ids+=$_.ProcessId; $k=Get-CimInstance Win32_Process -Filter "ParentProcessId=$($_.ProcessId)"
+    while($k){$n=@();foreach($c in $k){$ids+=$c.ProcessId;$n+=Get-CimInstance Win32_Process -Filter "ParentProcessId=$($c.ProcessId)"};$k=$n} }
+Stop-Process -Id $ids -Force
 ```
 
-（PID 會變，先用下面「怎麼看誰佔著 GPU」那段重新抓。）
+**只停父程序不夠**：mineru 子孫會變孤兒繼續佔 GPU，所以要整棵樹。
 
-停掉之後**不必手動清鎖**：`acquire_lock()` 看到持有者 PID 已死會自己接收，
-log 會印「（接收前一個已結束的 lock：PID ...）」。
+停掉之後**不必手動清鎖**：`acquire_lock()` 看到持有者 PID 已死會自己接收。
+停掉**不會掉進度**：佇列狀態存在 DB 的 `parse_error`，沒做完的書原樣留著。
 
-停掉**不會掉進度**：那支是逐本入庫的，佇列狀態存在 DB 的 `parse_error`，
-沒做完的書原樣留著，下次再跑就是了。2026-09-18 08:16 停的時候，它手上那本
-（古埃及托勒密王朝）才剛開始一分鐘。
-
-然後推內村那班（**要卸離主控台**，理由見坑 3）：
+推內村那班的指令（**要卸離主控台**，理由見坑 3）：
 
 ```powershell
 Start-Process -FilePath 'C:\Users\user\AppData\Local\Python\bin\python.exe' `
@@ -51,7 +53,7 @@ Start-Process -FilePath 'C:\Users\user\AppData\Local\Python\bin\python.exe' `
 | PDF | ✅ 20/20，18,074 頁 / 0.88 GB，平均 45 MB |
 | Drive | `G:\我的雲端硬碟\資料\知識圖工作室\全集\神學\內村鑑三\岩波全集（1932-33）\` |
 | ebooks | ✅ 20 筆，`collection=collected-works`，id＝`d0000001-0000-4000-8000-0000000000NN` |
-| OCR | ❌ **0/20**，`chunk_count` 全 None |
+| OCR | 🔄 **轉錄中**（11:47 起跑，PID 26320，卷 01 進行中）。起跑前 0/20 |
 | 排程 | `KGL_Uchimura_Zenshu_OCR` 每晚 01:00（Ready，下次 09-19 01:00）；20 卷全完成會自己 DISABLE |
 | 昨晚那班 | 結果 255＝bat 中文被 cmd 切碎，**已修**（改純 ASCII） |
 
@@ -102,7 +104,7 @@ C:/Users/user/AppData/Local/Python/bin/python.exe scripts/seisho_kenkyu_build.py
 
 | 項目 | 數字 |
 |---|---|
-| 佇列總數 | 127 本＝通用 **107** ＋ 內村 20 |
+| 佇列總數 | **122 本**＝通用 102 ＋ 內村 20（含放回的 14 本誤殺）|
 | 通用那批體積 | **14.7 GB**，中位數 119 MB |
 | 起始規模 | 347 本 / 24.8 GB（2026-09-17 00:23 起跑） |
 | 已完成 | 約 214 本 |
@@ -120,15 +122,28 @@ Start-Process -FilePath 'C:\Users\user\AppData\Local\Python\bin\python.exe' `
   -WindowStyle Hidden
 ```
 
-### 待查：兩本 exit 1
+### ✅ 查完了：那兩本不是書的問題，而且不只兩本 —— 總共 14 本被誤殺
 
-08:16 前後 log 裡有兩本標成失敗，**還沒查**：
+**結論：全部是環境問題，已全數放回佇列。** 佇列從 108 回到 122 本。
 
-- `84791d07` 戰國時代的古史記憶──虞夏之際篇
-- `d9ed9c34` 歷代信條
+病因：07:50–08:11 那次 Modern Standby 醒來後 GPU 不穩，MinerU **每隔一本就死在起跑 5 秒**
+（08:17:09 起、08:17:15 死，每一本都是這個形狀）——那時模型都還沒載完，
+根本沒翻開書。證明方法最快：把其中一本單獨重跑。我拿 08:41 判失敗的
+《從封閉世界到無限宇宙》重跑，**exit 0、乾乾淨淨**，結案。
 
-判斷方法見坑 5——先確認不是待機打斷造成的誤判；是的話把 `parse_error`
-重設回 `no extractable text` 放回佇列，不要當成書的問題。
+`84791d07` 與 `d9ed9c34` 這兩本形狀不同（訊息停在進度條中間），是 07:50 那次
+待機**直接打斷**的，就是坑 5 講的那種；其餘 12 本是醒來後的後遺症。
+
+已修（commit `117c531c`），三道閘由窄到寬：
+
+1. 錯誤訊息改取**尾巴**。MinerU 開頭固定三行 banner，而呼叫端只留 200 字，
+   所以存進 `parse_error` 的永遠是那段廢話、死因被截掉 —— 這就是先前查不出死因的原因。
+2. **死在 60 秒內＝環境問題**。載模型要 10–15 秒，死在這之前它沒碰到那本書。
+3. 🚨 **連續 3 本失敗就整場停，並把那 3 本放回佇列**（`--max-streak`，預設 3）。
+   這道閘不靠「看不看得懂訊息」—— 關鍵字表認不出來的死法還會有下一種，
+   但好書不會排隊壞。
+
+放回佇列＝把 `parse_error` 寫回 `'no extractable text'`（`fetch_ocr_targets()` 靠這字串撈）。
 
 ---
 
@@ -166,6 +181,12 @@ foreach ($id in $snap.Keys) { $pr = Get-Process -Id $id -EA SilentlyContinue
    一律寫死 `C:\Users\user\AppData\Local\Python\bin\python.exe`。
 
 5. **離開碼分流：0 成功／1 這本的問題／2 幻覺擋下／3 環境壞了要整場停／4 GPU 忙。**
+   🚨 **2026-09-18 更新：這個判準已經補強，但要知道它為什麼補。**
+   關鍵字表（`ENV_SIGNS`）只認得網路錯，而環境壞掉的死法列不完（GPU／驅動／待機／磁碟…），
+   所以 09-16 斷網燒掉 30 本、09-18 待機醒來又燒掉 14 本。現在多了兩條：
+   **死在 60 秒內一律判環境**，以及 **連錯 3 本就整場停並把那 3 本放回佇列**。
+   查錯時記得：`parse_error` 存的是訊息**尾巴**了（以前存的是開頭的 banner，永遠看不到死因）。
+   證明「是環境不是書」最快的方法是**把同一本單獨重跑一次**，exit 0 就結案。
    🚨 **待機打斷會被誤判成「這本的問題」。** 09-17 19:47:10 一次短暫 Modern Standby
    打斷了《波斯拜火教與古代中國》（死在 `Layout Predict 50%`），被標成 exit 1 踢出佇列。
    已把它重設回 `no extractable text`。判準：錯誤訊息停在進度條中間、時間點對得上
