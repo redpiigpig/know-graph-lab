@@ -3,34 +3,28 @@
 
 夜班 bat 拿這個離開碼決定要不要把排程關掉。抽成一支小腳本，是因為原本那行
 內嵌的 `python -c "...regex..."` 在 cmd 裡被引號與百分號咬到，等於永遠判不出來。
+
+🚨 2026-09-18 改判準：本來查 `ebooks.chunk_count > 0`，但這條線根本不寫 DB ——
+`mineru_ocr.py run --book` 只把 JSONL 寫到 Drive（全集不混進圖書館），
+chunk_count 永遠是 null。於是 20 卷全轉完了這支也永遠回 1，排程**永遠不會關掉**、
+每晚空轉。現在改看成品本身：Drive 上那份 JSONL 的段數。
 """
 from __future__ import annotations
 
-import os
 import sys
-
-import requests
-from dotenv import load_dotenv
 from pathlib import Path
 
-REPO = Path(__file__).resolve().parent.parent
-load_dotenv(REPO / ".env")
-URL = os.environ["SUPABASE_URL"]
-KEY = os.environ["SUPABASE_SERVICE_ROLE_KEY"]
-H = {"apikey": KEY, "Authorization": f"Bearer {KEY}"}
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from uchimura_zenshu_ocr import VOLS, transcribed  # noqa: E402
 
 
 def main() -> int:
-    ids = [f"d0000001-0000-4000-8000-{v:012d}" for v in range(1, 21)]
-    try:
-        r = requests.get(f"{URL}/rest/v1/ebooks?select=id,chunk_count"
-                         f"&id=in.({','.join(ids)})&limit=100", headers=H, timeout=30)
-        rows = r.json()
-    except Exception:
-        return 1                      # 查不到就當「還沒完」，不要誤關排程
-    if not isinstance(rows, list) or len(rows) < 20:
-        return 1
-    return 0 if all((x.get("chunk_count") or 0) > 0 for x in rows) else 1
+    counts = {v: transcribed(v) for v in VOLS}
+    missing = [v for v, n in counts.items() if not n]
+    # 印出來才查得到為什麼沒關 —— 靜默回 1 跟「G: 沒掛」長得一模一樣。
+    print(f"已轉錄 {len(VOLS) - len(missing)}/{len(VOLS)} 卷"
+          + (f"，還缺：{missing}" if missing else "，全數完成"))
+    return 1 if missing else 0
 
 
 if __name__ == "__main__":

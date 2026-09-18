@@ -49,6 +49,37 @@ def ebook_id(vol: int) -> str:
     return f"d0000001-0000-4000-8000-{vol:012d}"
 
 
+# 半截的 JSONL 也會「存在」。856 頁的卷只寫出個位數行，就是寫到一半死了。
+MIN_LINES = 50
+
+
+def jsonl_path(vol: int) -> Path:
+    return Path(os.environ["EBOOK_CHUNKS_DIR"]) / f"{ebook_id(vol)}.jsonl"
+
+
+def transcribed(vol: int) -> int:
+    """這一卷轉錄好了沒 —— 回傳行數，0 代表沒有。
+
+    🚨 判準是 Drive 上那份 JSONL，**不是 `ebooks.chunk_count`**。
+    `mineru_ocr.py run --book` 只寫 JSONL、不碰 DB（全集不混進圖書館），
+    而 `seisho_kenkyu_index.py --source mineru` 讀的也正是這份 —— 它就是成品。
+    拿 chunk_count 當判準的話，20 卷全轉完了也永遠顯示「待轉錄 20 卷」，
+    排程那支 `uchimura_zenshu_done.py` 也永遠不會把自己關掉（會無限空轉）。
+
+    🚨 不能只看檔案在不在：空檔、寫到一半的檔都會存在，所以數行數。
+    G: 沒掛的時候一律回 0＝還沒完，往「不要誤判成完成」那邊倒。
+    """
+    try:
+        p = jsonl_path(vol)
+        if not p.exists():
+            return 0
+        with p.open(encoding="utf-8") as fh:
+            n = sum(1 for ln in fh if ln.strip())
+        return n if n >= MIN_LINES else 0
+    except OSError:
+        return 0
+
+
 def ledger_done() -> set[int]:
     if not LEDGER.exists():
         return set()
@@ -71,9 +102,29 @@ def note(vol: int, ok: bool, code: int, secs: float, msg: str = "") -> None:
                             ensure_ascii=False) + "\n")
 
 
+def db_get(url: str, tries: int = 6, timeout: int = 30):
+    """🚨 一次 DNS 閃斷不該弄死整班四小時的轉錄。
+
+    2026-09-18 實測：卷 01 轉完（856 頁、9 分）之後，查卷 02 的那一個 requests.get
+    撞到 `getaddrinfo failed`（校園 WiFi），整支腳本 traceback 收工——20 卷只做了 1 卷。
+    每晚排程照跑的話，等於 20 個晚上才轉得完。退避重試共約 63 秒，撐得過一般閃斷；
+    真的斷很久才會拋出去，那時候停下來是對的。
+    """
+    for i in range(tries):
+        try:
+            return requests.get(url, headers=H, timeout=timeout)
+        except requests.RequestException as e:
+            if i == tries - 1:
+                raise
+            wait = 2 ** i
+            print(f"  ⚠ 連 Supabase 失敗（{type(e).__name__}），{wait}s 後重試"
+                  f"（{i + 1}/{tries - 1}）", flush=True)
+            time.sleep(wait)
+
+
 def db_state(vol: int) -> dict:
-    r = requests.get(f"{URL}/rest/v1/ebooks?select=id,title,chunk_count,parsed_at,parse_error"
-                     f"&id=eq.{ebook_id(vol)}", headers=H, timeout=30)
+    r = db_get(f"{URL}/rest/v1/ebooks?select=id,title,chunk_count,parsed_at,parse_error"
+               f"&id=eq.{ebook_id(vol)}")
     rows = r.json() if r.ok else []
     return rows[0] if rows else {}
 
@@ -85,12 +136,19 @@ def cmd_status() -> int:
         s = db_state(v)
         if not s:
             print(f"  卷{v:02d} 尚未登記（PDF 還沒下載完或沒跑 register）")
+            pend += 1
             continue
-        chunks = s.get("chunk_count")
-        mark = "✓ 已轉錄" if (chunks or 0) > 0 else ("… 待轉錄" if v not in done else "✓ ledger")
-        pend += 0 if (chunks or 0) > 0 else 1
-        print(f"  卷{v:02d} {mark:8} chunks={str(chunks):>5}  {s.get('title','')[:34]}")
-    print(f"待轉錄 {pend} 卷")
+        lines = transcribed(v)
+        if lines:
+            mark = "✓ 已轉錄"
+        elif v in done:
+            # ledger 說做過，成品卻不在 —— 這種不一致要看見，不要靜靜當成完成。
+            mark = "⚠ 帳不符"
+        else:
+            mark = "… 待轉錄"
+        pend += 0 if lines else 1
+        print(f"  卷{v:02d} {mark:8} {lines:>5} 段  {s.get('title', '')[:34]}")
+    print(f"待轉錄 {pend} 卷（判準＝Drive 上的 JSONL 段數，不是 ebooks.chunk_count）")
     return 0
 
 
