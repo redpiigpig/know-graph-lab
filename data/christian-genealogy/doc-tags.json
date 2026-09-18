@@ -64,7 +64,7 @@
     "亞他那哥拉為基督徒請命書": { "t": [], "city": "雅典", "tradition": "outside", "kind": "doc" },
     "論死人復活": { "t": [], "city": "雅典", "tradition": "outside", "kind": "doc" },
 
-    "亞歷山卓的克勉勸希臘人歸主辭": { "t": ["B2"], "city": "亞歷山卓", "tradition": "alexandria", "kind": "doc" },
+    "亞歷山卓的革利免勸希臘人歸主辭": { "t": ["B2"], "city": "亞歷山卓", "tradition": "alexandria", "kind": "doc" },
     "導師基督教訓": { "t": ["B2"], "city": "亞歷山卓", "tradition": "alexandria", "kind": "doc" },
     "雜文集": { "t": ["B2"], "city": "亞歷山卓", "tradition": "alexandria", "kind": "doc", "note": "同時保存巴西理德與瓦倫廷的殘篇——敵證與傳承在同一部書裡" },
     "克勉經文擇要": { "t": ["B2"], "city": "亞歷山卓", "tradition": "alexandria", "kind": "doc" },
@@ -103,7 +103,7 @@
     "瓦倫廷神話論": { "t": ["G2"], "city": "羅馬", "tradition": "rome", "kind": "doc" },
     "瓦倫廷釋義": { "t": ["G2"], "city": "埃及", "tradition": "alexandria", "kind": "doc" },
     "致花綸書": { "t": ["G2"], "city": "羅馬", "tradition": "rome", "kind": "doc", "note": "托勒密向一位女性信徒解釋摩西律法的三分，是瓦倫廷派唯一完整存世的教理書信" },
-    "瓦倫廷派教義摘錄（采奧多圖摘錄）": { "t": ["G2"], "city": "亞歷山卓", "tradition": "alexandria", "kind": "doc", "note": "由亞歷山卓的克勉抄錄保存——敵證與原文在同一份文件裡" },
+    "瓦倫廷派教義摘錄（采奧多圖摘錄）": { "t": ["G2"], "city": "亞歷山卓", "tradition": "alexandria", "kind": "doc", "note": "由亞歷山卓的革利免抄錄保存——敵證與原文在同一份文件裡" },
     "復活論（致雷吉努斯書）": { "t": ["G2"], "city": "埃及", "tradition": "alexandria", "kind": "doc" },
     "巴西理德釋義集殘篇": { "t": ["G2"], "city": "亞歷山卓", "tradition": "alexandria", "kind": "doc", "note": "巴西理德不另立節點（無存世自產文獻），其殘篇歸入亞歷山卓的諾斯底教師圈" },
     "伊西多爾論附生靈魂殘篇": { "t": ["G2"], "city": "亞歷山卓", "tradition": "alexandria", "kind": "doc", "note": "巴西理德之子" },
