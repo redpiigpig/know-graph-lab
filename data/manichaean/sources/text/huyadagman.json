@@ -1,0 +1,178 @@
+{
+ "slug": "huyadagman",
+ "siglum": "M 4a, M 77 等",
+ "title_zh": "胡雅達格曼",
+ "canon": "iranian",
+ "volume": "hymn-cycles",
+ "script": "manichaean-translit",
+ "orig_source": "IAMS《東方摩尼教選輯》第 4 冊，pp. 119–121",
+ "orig_url": "https://www.manichaeism.de/other-resources-2/",
+ "en_source": "同上（原文轉寫與英譯逐行並排刊出）。",
+ "en_url": "https://www.manichaeism.de/other-resources-2/",
+ "licence": "原文轉寫與英譯取自國際摩尼教研究學會（IAMS）開放取用的《東方摩尼教選輯》(Anthologia Manichaica Orientalia, Samuel N. C. Lieu 編，Ancient India and Iran Trust, Cambridge)。各篇的原校訂者與譯者見每段出處。繁中為本站自譯。",
+ "pivot": "iams-eng",
+ "scheme": "section",
+ "pivot_note": "本篇原文轉寫與英譯同出 IAMS 開放取用的《東方摩尼教選輯》，兩欄是同一份校訂本的並排刊文，段號沿用該書的抄本定位符與行號，本站不自編。",
+ "segments": [
+  {
+   "chapter": "Anth. 4 p.119",
+   "verse": "—",
+   "ref": "Anth. 4 p.119",
+   "orig": "Verses from the hymn M6221 + M2412; photo: 1a/",
+   "en": "cycle Huwyadagmān MHC(PE) 27c, 28a; 1.",
+   "zh": ""
+  },
+  {
+   "chapter": "Anth. 4 p.119",
+   "verse": "cw.1",
+   "ref": "Anth. 4 p.119 cw.1 §",
+   "orig": "ky(m) wyšʾhʾẖ ʾc hrwyn g(r)yhcg o ẅ zyndʾn 1b/ cy ʾnmbrynd1 ʾwrjwg cy ny wxš ʾhynd o 2a/",
+   "en": "Who will release me from all the pits and prisons, in which are gathered (?) lusts that are not pleasing? 2. who will take me beyond these and save me from (them) all, so that I shall not turn and fall into the perdition of those hells? 9.",
+   "zh": ""
+  },
+  {
+   "chapter": "Anth. 4 p.119",
+   "verse": "cw.2",
+   "ref": "Anth. 4 p.119 cw.2 §",
+   "orig": "kym hynwʾr wydʾrʾ cy zryẖ ʾywštg o 2b/ zwnws rzmʾhyg ʿkw ʾngwn ny ʾsṯ 3a/",
+   "en": "Who will take me over the flood of the tossing sea - the zone of conflict in which there is no rest? 3.",
+   "zh": ""
+  },
+  {
+   "chapter": "Anth. 4 p.119",
+   "verse": "cw.3",
+   "ref": "Anth. 4 p.119 cw.3 §",
+   "orig": "kym bwjʾẖ ʾc rwmb cy hrwyn o dʾmdʾdʾn 3b/ cy ʿyw bydʾn wygʾnynd wṯ ʿstʾwynd ʾby o ʾxšd 4a/",
+   "en": "Who will save me from the jaws of all the beasts who destroy and terrify (?) one another without pity? 4.",
+   "zh": ""
+  },
+  {
+   "chapter": "Anth. 4 p.119",
+   "verse": "cw.4",
+   "ref": "Anth. 4 p.119 cw.4 §",
+   "orig": "k(ym) [p]rys(p)ʾn ʿzwʾyʾẖ ʾwṯ o pʾrgyn wydʾrʾẖ 4b/ cy pwr tr(s) [ʾw](ṯ) lrz cy dywʾn wygʾng o 5a/",
+   "en": "Who will lead me beyond the walls and take me over the moats, which (are) full of fear and trembling from ravaging demons? 5.",
+   "zh": ""
+  },
+  {
+   "chapter": "Anth. 4 p.119",
+   "verse": "cw.5",
+   "ref": "Anth. 4 p.119 cw.5 §",
+   "orig": "kym ʾʾjwn ʿzwʾyʾẖ ʾwṯ ʾc hrwyn o ʾ[bd]ʾcʾ 5b/ ʾwṯ ʾc hrwyn wrm kw ʾngwn ny ʾsṯ o 6a/",
+   "en": "Who will lead me beyond rebirths, and free me from (them) all - and from all the waves, in which there is no rest? 6.",
+   "zh": ""
+  },
+  {
+   "chapter": "Anth. 4 p.119",
+   "verse": "cw.6",
+   "ref": "Anth. 4 p.119 cw.6 §",
+   "orig": "ʾwṯ ʾbr gryw brmʾm kw ʾg bwxsʾn o ʾ(c) (h)w 6b/ ʾwṯ ʾc dʾmdʾdʾn ʿspʾw ky ʿyw bydʾn o xʾzynd 7a/",
+   "en": "I weep for (my) soul, saying : May I be saved from this, and from the terror of the beasts who devour one another! 7.",
+   "zh": ""
+  },
+  {
+   "chapter": "Anth. 4 p.119",
+   "verse": "cw.7–cw.8",
+   "ref": "Anth. 4 p.119 cw.7–cw.8 §",
+   "orig": "mrdwhmgʾn tnbʾr mwrgʾn o ʾndrwʾzyq 7b/ zrhyg mʾsyʾgʾn cwhrbʾdʾn ẅ wysp dywg o 8a/ kym ʿymyn wydʾrʾẖ ʾwṯ ʾc hrwyn o bwjʾẖ 8b/ kw ny wrtʾn ʾwṯ k(f)ʾn pṯ hwyn nrẖ ʾbnʾs o 9a/",
+   "en": "The bodies of men, and of birds of the air, of fish of the sea, and four-footed creatures and of all insects – 8.",
+   "zh": ""
+  },
+  {
+   "chapter": "Anth. 4 p.119",
+   "verse": "cw.9",
+   "ref": "Anth. 4 p.119 cw.9 §",
+   "orig": "ʾwṯ gst pṯ hwyn ny wydʾrʾn pd o ʾjwn ny ʿzw(r)[tʾn] 9b/ cy wysp zng dʾlwg (ʿ)[z]gry(f)tg2 pṯ o (.)[..]tʾn 10a/",
+   "en": "so that I shall not pass through defilement in them, nor return in rebirth, wherein all the kinds of plants (are) taken out in [..?] 10.",
+   "zh": ""
+  },
+  {
+   "chapter": "Anth. 4 p.119",
+   "verse": "cw.10",
+   "ref": "Anth. 4 p.119 cw.10 §",
+   "orig": "ʾwm k(y) [b]wjʾẖ ʾc hw o ʾbš(ʾm)gʾn bwrzynd 10b/ xʾzyndgʾn jfrʾn cy hmg nrẖ ʾwṯ tng o {Two verses missing} 1 Sundermann MHC(PE) 15: ʾnmbrynd is in the text, Why not “which gather/contain”? 2 Ibid. ʿ of (ʿ)[z]gry(f)tg doubtful.",
+   "en": "Who will save me from the swallowing heights (and?) the devouring deeps, which are all hell and distress? (Two verses missing) but perhaps as a mistake for ʾmbrynd / ʾnbrynd.",
+   "zh": ""
+  },
+  {
+   "chapter": "Anth. 4 p.120",
+   "verse": "—",
+   "ref": "Anth. 4 p.120",
+   "orig": "13a/ [ ] [ ]g 13b/ [ ] [ ] pd nxcyr 14a/ [ ] [ ]tynd 14b/ [ ] [ ]synd {Three verses missing} 18a/ [ ]ʾgʾn o [ ] 18b/ [ ](w)s(ʾ)n o [ ] Verses from the hymn M93 II + M289a (Pa.); photo: MHC(PE) 2a, Rd. §cx, 164-65; tr. Sixth canto of | Huwyadagmān 1a/",
+   "en": "13. .. in beast(s) of the chase. 14. 18 (Traces only are legible) cycle Huwyadagmān 2b; MHCP 100-05 (Huwyadagmān VIc)*; ap. GSR 100-110. 1.",
+   "zh": ""
+  },
+  {
+   "chapter": "Anth. 4 p.120",
+   "verse": "cx.1",
+   "ref": "Anth. 4 p.120 cx.1 §",
+   "orig": "ʾz pd zwš ʿstʾnʾn ʾwd frwzʾn pd o bʾzwr 1b/ ʾbr ʾž hrw zʾwrʾn ʾwd ʾxšyndʾn o [w]ystmbg 2a/",
+   "en": "I shall take (thee) eagerly and soar up upon wings, high over all the (Dark) Powers and rebellious Princes. 2.",
+   "zh": ""
+  },
+  {
+   "chapter": "Anth. 4 p.120",
+   "verse": "cx.2",
+   "ref": "Anth. 4 p.120 cx.2 §",
+   "orig": "ʾwd ʿydwʾyʾn ʾw hw šhr ʾng[wn o h]syng 2b/ ʾwd nmʾyʾn pydrʾn ʾw wxyb[yẖ1 sd]f o bgʾnyg 3a/",
+   "en": "I shall lead (thee) into the primeval calm of that land; and I shall show (thee) the Fathers, mu (?) own divine entity (?). 3.",
+   "zh": ""
+  },
+  {
+   "chapter": "Anth. 4 p.120",
+   "verse": "cx.3",
+   "ref": "Anth. 4 p.120 cx.3 §",
+   "orig": "ʾwd wšmnʾẖ pd šʾdyft p(d wyʾ)g2 o ʿstʾwšn 3b/ ʾwd bwʾẖ ʾby ʾndʾg ʾw[d ..] frʾmwšʾ o dyjʾwr3 4a/",
+   "en": "Thou shalt rejoice on the spot (?) in blissful praises. Thou shalt be without grief and [..]. Thou shalt forget the wretchedness (pl. ?). 4.",
+   "zh": ""
+  },
+  {
+   "chapter": "Anth. 4 p.120",
+   "verse": "cx.4",
+   "ref": "Anth. 4 p.120 cx.4 §",
+   "orig": "ʿspyxt pdmwg pdmwjʾ(ẖ) ẅ o ʿzyʾhʾ rwšn 4b/ ʾwd ʾwstʾn pd tw sr dydym šhrdʾryft o 5a/ [ ]ẖ pd [ o] ʿ[ ]rdn bʾmyn4 5b/ [ ] ʿ[ ]rd qyrbkr {Four verses missing} 1 ʾw wxyb[yẖ] legit Sundermann MHC(PE) 15; cf. 2 Sundermann, ibid.: M289a has p(d wyʾ)g instead 3 Ibid.: For frʾmwšt dwjgnd (MHC 100) read frʾmwšʾ Sundermann, ibid.: Perhaps rather dyjwrn, defective writing 4 Sundermann, ibid: bʾmyg (MHC 100) read bʾmyn.",
+   "en": "Thou shalt put on a radiant garment, and gird on Light; and I shall set on thy head the diadem of sovereignty. 5. [Thou shalt] [..] through [..]brilliant jewel [..] beneficent [..] {Four verses missing} Boyce, ‘Some remarks’, 320. of p[d hw]myʾg (MHC 100, Rd. §cx.3). dyjʾwr (M298a), cf. Boyce, op. cit. 320. for dyjʾwʾrʾn at the end of the line.",
+   "zh": ""
+  },
+  {
+   "chapter": "Anth. 4 p.121",
+   "verse": "—",
+   "ref": "Anth. 4 p.121",
+   "orig": "10a/ (ʾw)[d p]d rwmb wʾcʾfryd dyz ʾbr hw o [ ] 10b/ (b)wrz ʾwd qlʾn cy ʾrgʾw p(ʾ)[dyxšʾn] o 11a/",
+   "en": "10. By a spiritual invocation [there was built?] on that [structure?] the fortress, high and vast, of the noble Em[peror]. 11.",
+   "zh": ""
+  },
+  {
+   "chapter": "Anth. 4 p.121",
+   "verse": "cx.11",
+   "ref": "Anth. 4 p.121 cx.11 §",
+   "orig": "ʾpdn ʾst šhrdʾryft cy nwxzʾd o hsyng 11b/",
+   "en": "A palace is the dominion of the primeval First-born, for in it he clothes himself in gladness and binds on the diadem of sovereignty. 12.",
+   "zh": ""
+  },
+  {
+   "chapter": "Anth. 4 p.121",
+   "verse": "cx.12",
+   "ref": "Anth. 4 p.121 cx.12 §",
+   "orig": "cy pd hw pdmwcyd šʾdyft ẅ o šhrdʾryft dydym bndyd 12a/ ʾwd ʾw hrwyn ʾdyʾwrʾn dydym ʾw o hwyn bndyd 12b/ ʾwd šʾdyft pdmwcn ʾw hwyn tn o pdmwcyd 13a/",
+   "en": "And all (his) friends - he binds the diadem upon them, and clothes their bodies in the garment of gladness. 13.",
+   "zh": ""
+  },
+  {
+   "chapter": "Anth. 4 p.121",
+   "verse": "cx.13",
+   "ref": "Anth. 4 p.121 cx.13 §",
+   "orig": "ʾwd ʾw hrwyn dy(n)ʾbrʾn ẅ o wcydgʾn kyrbkrʾn 13b/ pdmwcyd ʿst(ʾw)yšn ʾwšʾn dydym o bndyd 14a/",
+   "en": "And all the believers and the pious Elect he clothes in praise, and binds on them the diadem. 14.",
+   "zh": ""
+  },
+  {
+   "chapter": "Anth. 4 p.121",
+   "verse": "cx.14",
+   "ref": "Anth. 4 p.121 cx.14 §",
+   "orig": "ẅ pdxšʾhynd pd šʾdyft cwʾgwn o ʾbr nʾm bwd pštg 14b/ ẅ ʾnjwgyft (w)dʾrʾ(d) ʾž dst dwšmnwn o 15a/ ʾwšʾn x(r)[1 ]t (o) ʿʾd h(r)[wyn ] 15b/ pd hw dyd(n) [ o] ʿ[ ] {Four verses missing} 20a/ [ ](gy)c jfrʾn ʾc prywg pdgryfṯ o 20b/ [ dwšm](n)yn nydrxt ʾwd hw bwrzyyft o pʾzʾ[ẖ] 21a/ [ ʾs](t) hw rwc kd pʾdgyrb o ʾbgwndyyd 21b/ [hw *pydr kyr](b)kr šhrʾn rwšnʾn o šhrdʾʾr 22a/ [ʾwd *hw *ʿspyxt cyhr](g) ẅ pʾdgyrb o (n)ysʾg bʾmyn 22b/ [nmʾyd *ʾw *hrwyn o] ʿ[b](g)[ʾn] ky ʾwwd mʾn(yy)nd {End of this fragment of the sixth handām} The Seventh Canto of the hymn M817 + M1223 + M1539 II + M1540 II + M6265 1 Ibid.: instead of k(r)[ (MHC 102) rather xd[ or x(r)[",
+   "en": "They reign (now) in gladness, even as (once they had) been fettered for (their mere) name, and (had) undergone anguish at the hands of (their) foes. 15. And [he makes?] them .. with all .. through that apparition .. {Four verses missing} 20. [The return from] the .. Depth was obtained out of the Victory; [for] the enemies are subdued, and the Height (lies) in front! 21. [.. is] the day when He will reveal his form, [the] beneficent [Father], the Lord of the Aeons of Light. 22. [He will show that radiant shape] and brilliant, glorious form [to all the gods] who shall dwell there. cycle Angad Rōšnān + M8801 (Pa.): MHCP, 154-65*; photo: or x(z)[.",
+   "zh": ""
+  }
+ ]
+}

@@ -90,7 +90,11 @@ LINE_TOL = 3.0  # 同一行的 y 容差
 #
 # 所以切之前要先**看兩欄各自認得出幾個**，挑兩邊都有的那一種（見 choose_scheme）。
 LINE_MARK = re.compile(r"(?<![\w/])(\d{1,3}[a-z]?)/")
-SECTION_MARK = re.compile(r"\{([a-z]\.\d+)\}")
+# 🚨 分組字母**不只一個字母**：編者用完 a–z 之後接的是 ac、ad、ae。
+#    第一版寫成 `[a-z]\.`，於是 `{ac.1}`～`{ae.5}` 這 18 個節號一個都認不得，
+#    沙卜爾干最後六頁（pp. 34–39）整頁沒有任何可認的標記，
+#    連同正文與英譯一起落進未編號的引言裡被丟掉——見 align_columns 第三條。
+SECTION_MARK = re.compile(r"\{([a-z]{1,3}\.\d+)\}")
 
 # 第三種鍵：**兩欄都印的方括號抄本編號**（[M17 V/i]、[So18151/R/Hd.]）。
 # 這是第二冊多數篇章唯一共用的標記。
@@ -298,41 +302,119 @@ def align_columns(
     left: list[tuple[str, str]],
     right: list[tuple[str, str]],
 ) -> tuple[list[dict], list[str], list[str]]:
-    """把兩欄按行號對齊，回 (segments, 僅左有, 僅右有)。
+    """把兩欄按對齊鍵併成段，回 (segments, 僅左欄有的鍵, 僅右欄有的鍵)。
 
     🚨 **對不齊時留空，不猜。**硬湊一對一會讓整篇往下錯一格而版面完全正常。
+       以下三條都是為了在不猜的前提下，不要連內容也一起丟掉。
 
-    >>> segs, lo, ro = align_columns([('1', 'a'), ('2', 'b')], [('1', 'A'), ('3', 'C')])
+    🚨 **一、不排序，照左欄印出來的順序走。**
+       第一版拿 `sorted(左右鍵的聯集, key=_mark_sort_key)` 併序，於是第 5 頁的
+       `a.5 → v.1–v.4 → t.1 t.2` 被字母序重排成 `a.5 → t.1 t.2 → v.1–v.4`。
+       編者的分組字母**不照字母序走**（實測 a→v→t→y→z→ac→ad→ae），
+       所以唯一可信的順序是左欄的印刷順序。重排後每一段的內容都正確、
+       段號也都在，只有順序是錯的——reader 打開來完全看不出來。
+
+    🚨 **二、只有一欄印的鍵不切段，併進前一個共有鍵。**
+       這批選輯的英譯欄印的節號比原文欄少：左欄 `{y.3}{y.4}{y.5}`
+       而右欄只印 `{y.3}{y.5}` 是常態。拿聯集當段界，y.4 就成了
+       「有原文、沒英譯」的孤段（實測沙卜爾干 18 段如此），
+       但英譯其實一個字都沒少，它在右欄 y.3 那一塊裡。
+       故以**兩欄共有的鍵**為段界，中間單欄獨有的鍵併進同一段，
+       段號記成範圍（`y.3–y.4`）。這是把粒度放粗，不是猜。
+
+    🚨 **三、第一個共有鍵之前的文字要留著。**
+       第一版用 `if n` 把 `split_numbered` 回的未編號引言整個丟掉
+       （舊測試還把這行為釘成「寧可丟掉也不要錯置」）。但兩欄的引言
+       指的是同一段範圍，配在一起既沒丟也沒錯置。丟掉的代價是：
+       實測沙卜爾干左欄 62,077 字只入段 31,934（51%），
+       右欄 67,256 字只入段 32,170（48%）——而配對率仍有 75%、
+       閘全過、版面正常。整本少掉一半而稽核看不出來。
+
+    >>> segs, lo, ro = align_columns([('1', 'a'), ('2', 'b')], [('1', 'A'), ('2', 'B')])
     >>> [(s['n'], s['orig'], s['en']) for s in segs]
-    [('1', 'a', 'A'), ('2', 'b', ''), ('3', '', 'C')]
-    >>> lo, ro
-    (['2'], ['3'])
+    [('1', 'a', 'A'), ('2', 'b', 'B')]
+
+    右欄少印一個節號：不切出孤段，併成 `1–2` 一段。
+
+    >>> segs, lo, ro = align_columns([('1', 'a'), ('2', 'b'), ('3', 'c')],
+    ...                              [('1', 'A'), ('3', 'C')])
+    >>> [(s['n'], s['orig'], s['en']) for s in segs]
+    [('1–2', 'a b', 'A'), ('3', 'c', 'C')]
+    >>> lo
+    ['2']
+
+    標記之前的引言兩欄配成一段，不丟。
+
+    >>> segs, _, _ = align_columns([('', 'lead'), ('1', 'a')],
+    ...                            [('', 'LEAD'), ('1', 'A')])
+    >>> [(s['n'], s['orig'], s['en']) for s in segs]
+    [('', 'lead', 'LEAD'), ('1', 'a', 'A')]
+
+    整頁一個標記都沒有：併成一段，兩欄各自全文——這正是被丟掉的那一半。
+
+    >>> segs, _, _ = align_columns([('', 'all of it')], [('', 'ALL OF IT')])
+    >>> [(s['n'], s['orig'], s['en']) for s in segs]
+    [('', 'all of it', 'ALL OF IT')]
     """
-    lmap = {n: t for n, t in left if n}
-    rmap = {n: t for n, t in right if n}
-    keys = sorted(set(lmap) | set(rmap), key=_mark_sort_key)
-    segs = [{"n": k, "orig": lmap.get(k, ""), "en": rmap.get(k, "")} for k in keys]
-    return segs, sorted(set(lmap) - set(rmap), key=_mark_sort_key), sorted(set(rmap) - set(lmap), key=_mark_sort_key)
+    lkeys = [n for n, _ in left if n]
+    rkeys = {n for n, _ in right if n}
+    shared_set = {n for n in lkeys if n in rkeys}
+    shared = [n for n in lkeys if n in shared_set]
+
+    def bucket(col: list[tuple[str, str]]) -> dict[str, list[tuple[str, str]]]:
+        """把一欄的 chunk 依「最後遇到的共有鍵」分堆；共有鍵之前的歸空字串堆。"""
+        out: dict[str, list[tuple[str, str]]] = {"": []}
+        cur = ""
+        for n, t in col:
+            if n in shared_set:
+                cur = n
+            out.setdefault(cur, []).append((n, t))
+        return out
+
+    lb, rb = bucket(left), bucket(right)
+    segs: list[dict] = []
+    for anchor in [""] + shared:
+        lchunks, rchunks = lb.get(anchor, []), rb.get(anchor, [])
+        if not lchunks and not rchunks:
+            continue
+        covered = [n for n, _ in lchunks if n] or [n for n, _ in rchunks if n]
+        segs.append({
+            "n": "" if not covered else
+                 covered[0] if len(covered) == 1 else f"{covered[0]}–{covered[-1]}",
+            "orig": " ".join(t for _, t in lchunks if t).strip(),
+            "en": " ".join(t for _, t in rchunks if t).strip(),
+        })
+    only_left = [n for n in lkeys if n not in rkeys]
+    only_right = [n for n, _ in right if n and n not in set(lkeys)]
+    return segs, only_left, only_right
 
 
-def _mark_sort_key(mark: str) -> tuple[str, int, str]:
-    """對齊鍵的排序：先分組字母，再比數字，最後比尾碼。
+#: 片段首行：抄本編號＋語言縮寫＋冒號，後接校本出處（`M49 MP: Ed. MM ii, 307-08`）。
+#: 編者換一份殘片就印一行這個，但它印在正文欄裡，不是置中標題，也沒有方括號。
+FRAGMENT_HEADER = re.compile(
+    r"\b((?:MIK|So|Or|M|U|T|S|P)\s?\d+[a-z]?(?:\s+[IVX]+)?)\s*[✝†*]?\s*"
+    r"(?:MP|Pa|So|Pe|Ar|Ug|Ch|Skt|BT)\.?\s*:")
 
-    🚨 別用字串排序：'a.10' 會排在 'a.2' 前面，於是整篇的段落順序是錯的，
-       而每一段的內容都正確——版面看不出任何異常。
 
-    >>> sorted(['10', '2', '2b', '2a'], key=_mark_sort_key)
-    ['2', '2a', '2b', '10']
-    >>> sorted(['a.10', 'a.2', 'v.1'], key=_mark_sort_key)
-    ['a.2', 'a.10', 'v.1']
+def find_fragment_siglum(text: str) -> str | None:
+    """從正文裡挑出「片段首行」的抄本編號。找不到回 None——不猜、不自編。
+
+    🚨 沒有這一步，換了殘片也不會換段號：build() 找不到定位符時**沿用上一頁的**，
+       於是 pp. 36–39 那批（實際是 M2 II、M9、M9 II）全被掛成前一頁的
+       `fc/II/R/Hd`。段號看起來完整又專業，卻指向錯的抄本——
+       比退回 `Anth. 3 p.36` 更糟，因為它讀起來像是可以直接引用的。
+
+    >>> find_fragment_siglum('M49 MP: Ed. MM ii, 307-08, Rd. §b, 31')
+    'M49'
+    >>> find_fragment_siglum('[... ...] M2 II✝ Pa.: Ed. and tr. MM iii, 849-53')
+    'M2 II'
+    >>> find_fragment_siglum('M61208 MP: Henning, Giants, [Col. B]')
+    'M61208'
+    >>> find_fragment_siglum('wyspʾn šẖrʾn ncy(h)[yd] 一般正文沒有片段首行') is None
+    True
     """
-    m = re.fullmatch(r"([a-z])\.(\d+)", mark)
-    if m:
-        return (m.group(1), int(m.group(2)), "")
-    m = re.fullmatch(r"(\d+)([a-z]?)", mark)
-    if m:
-        return ("", int(m.group(1)), m.group(2))
-    return ("zz", 10**6, mark)
+    m = FRAGMENT_HEADER.search(text)
+    return m.group(1).strip() if m else None
 
 
 # ────────────────────────── 抽頁 ──────────────────────────
@@ -445,7 +527,23 @@ def is_running_head(text: str) -> bool:
     🚨 見 [[feedback_boilerplate_strip_lines_not_blocks]]：整塊丟會連黏在
        同一塊裡的正文一起刪掉。
 
+    🚨 **書名頁眉會被欄界切成兩半**，兩半都不等於書名：左欄是
+       `6 Anthologia Manichaica`（頁碼黏在前面），右欄是 `Orientalia`。
+       只認完整書名，這兩半就會當成正文留下來，黏在每一頁第一段的句首。
+       舊版看不出來，是因為那些引言整段都被丟掉了（見 align_columns 第三條）；
+       一旦把引言留住，這個洞就跟著現形。
+       故比對時先剝掉頁碼，再看剩下的是不是書名的一截。
+
+    🚨 只能逐行比，不可全文置換：`Orientalia` 也是期刊名，
+       書目裡的 `‘…Gigantenbuch’, Orientalia J. 23` 是正文的一部分，不能刪。
+
     >>> is_running_head('Anthologia Manichaica Orientalia')
+    True
+    >>> is_running_head('6 Anthologia Manichaica')
+    True
+    >>> is_running_head('Orientalia')
+    True
+    >>> is_running_head('Orientalia 35')
     True
     >>> is_running_head('II. From the Manichaean Canon')
     True
@@ -453,11 +551,15 @@ def is_running_head(text: str) -> bool:
     True
     >>> is_running_head('1/ gwš wcyyhyd')
     False
+    >>> is_running_head("‘Ein manichäisches Gigantenbuch’, Orientalia J. 23")
+    False
     """
     t = text.strip()
     if not t or t.isdigit():
         return True
-    if t.startswith("Anthologia Manichaica Orientalia"):
+    # 剝掉頁碼後，剩下的若是書名的一截（含被欄界切開的兩半），就是頁眉。
+    core = re.sub(r"^\d+\s+|\s+\d+$", "", t).strip()
+    if len(core) >= 8 and core in "Anthologia Manichaica Orientalia":
         return True
     if re.match(r"^(I|II|III|IV)\.\s+(From the Manichaean Canon|Šābuhragān|Texts on|Manichaean Hymns)", t):
         return True
@@ -506,8 +608,11 @@ def build(slug: str, *, write: bool = True) -> dict:
     only_right: list[str] = []
 
     for pno, ltxt, rtxt, head_siglum in pages:
-        # 優先序：置中標題的抄本編號 > 內文的定位符 > 沿用上一頁的
-        loc = head_siglum or find_locator(ltxt) or find_locator(rtxt) or locator
+        # 優先序：置中標題的抄本編號 > 內文的定位符 > 片段首行 > 沿用上一頁的
+        # 🚨 「沿用上一頁的」放最後：它在換殘片時會把舊編號帶過去，
+        #    是四個來源裡唯一會產出**錯誤**段號（而非較粗段號）的那一個。
+        loc = (head_siglum or find_locator(ltxt) or find_locator(rtxt)
+               or find_fragment_siglum(ltxt) or locator)
         locator = loc
 
         segs, lo, ro = align_columns(split_numbered(ltxt, scheme), split_numbered(rtxt, scheme))

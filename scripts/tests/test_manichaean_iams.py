@@ -13,6 +13,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from manichaean_iams import (  # noqa: E402
     align_columns,
     choose_scheme,
+    find_fragment_siglum,
     find_locator,
     find_siglum_heading,
     group_words_into_lines,
@@ -20,7 +21,6 @@ from manichaean_iams import (  # noqa: E402
     line_text,
     split_line,
     split_numbered,
-    _mark_sort_key,
 )
 
 
@@ -123,31 +123,56 @@ class TestSplitNumbered:
 
 
 class TestAlignColumns:
-    def test_pairs_by_key_and_leaves_gaps(self):
-        segs, lo, ro = align_columns([("1", "a"), ("2", "b")], [("1", "A"), ("3", "C")])
+    def test_pairs_by_shared_key(self):
+        segs, lo, ro = align_columns([("1", "a"), ("2", "b")], [("1", "A"), ("2", "B")])
         assert [(s["n"], s["orig"], s["en"]) for s in segs] == [
-            ("1", "a", "A"), ("2", "b", ""), ("3", "", "C")]
-        assert (lo, ro) == (["2"], ["3"])
+            ("1", "a", "A"), ("2", "b", "B")]
+        assert (lo, ro) == ([], [])
+
+    def test_key_missing_from_right_column_merges_not_orphans(self):
+        # 🚨 英譯欄印的節號比原文欄少是常態。拿聯集當段界，2 就成了
+        #    「有原文沒英譯」的孤段（沙卜爾干實測 18 段），但英譯一個字沒少，
+        #    它在右欄 1 那一塊裡。併成 1–2 才是實情。
+        segs, lo, ro = align_columns(
+            [("1", "a"), ("2", "b"), ("3", "c")], [("1", "A"), ("3", "C")])
+        assert [(s["n"], s["orig"], s["en"]) for s in segs] == [
+            ("1–2", "a b", "A"), ("3", "c", "C")]
+        assert lo == ["2"]
 
     def test_never_pairs_by_position(self):
         # 🚨 按位置配對會讓整篇往下錯一格，而兩欄都有內容、版面完全正常。
+        #    兩欄沒有任何共有鍵時併成一段，仍然不做一對一配對。
         segs, _, _ = align_columns([("5", "five")], [("1", "one")])
-        pairs = {s["n"]: (s["orig"], s["en"]) for s in segs}
-        assert pairs["5"] == ("five", "")
-        assert pairs["1"] == ("", "one")
+        assert len(segs) == 1
+        assert (segs[0]["orig"], segs[0]["en"]) == ("five", "one")
 
-    def test_unkeyed_lead_text_is_dropped_not_misassigned(self):
-        segs, _, _ = align_columns([("", "lead"), ("1", "a")], [("1", "A")])
-        assert [s["n"] for s in segs] == ["1"]
+    def test_document_order_is_kept_not_alphabetical(self):
+        # 🚨 編者的分組字母不照字母序走（實測 a→v→t，以及 z 之後才是 ac→ad→ae）。
+        #    照字母序重排：每段內容都正確、段號也都在，只有順序錯——看不出來。
+        pairs = [("a.5", "x"), ("v.1", "y"), ("t.1", "z")]
+        segs, _, _ = align_columns(pairs, pairs)
+        assert [s["n"] for s in segs] == ["a.5", "v.1", "t.1"]
+
+    def test_unkeyed_lead_text_is_kept_and_paired(self):
+        # 🚨 舊版把未編號的引言整個丟掉，代價是沙卜爾干兩欄各少一半的字，
+        #    而配對率 75%、閘全過、版面正常。兩欄的引言指同一段範圍，配在一起。
+        segs, _, _ = align_columns([("", "lead"), ("1", "a")], [("", "LEAD"), ("1", "A")])
+        assert [(s["n"], s["orig"], s["en"]) for s in segs] == [
+            ("", "lead", "LEAD"), ("1", "a", "A")]
+
+    def test_page_with_no_marks_at_all_is_not_dropped(self):
+        # 沙卜爾干 pp. 31–35 一個可認的標記都沒有，整頁正文與英譯曾就此消失。
+        segs, _, _ = align_columns([("", "all of it")], [("", "ALL OF IT")])
+        assert [(s["n"], s["orig"], s["en"]) for s in segs] == [
+            ("", "all of it", "ALL OF IT")]
 
 
-class TestMarkSortKey:
-    def test_numeric_order_not_string_order(self):
-        assert sorted(["10", "2", "2b", "2a"], key=_mark_sort_key) == ["2", "2a", "2b", "10"]
-
-    def test_section_markers_group_then_number(self):
-        # 🚨 字串排序會讓 a.10 排在 a.2 前面：每段內容都對，順序全錯，看不出來。
-        assert sorted(["a.10", "a.2", "v.1"], key=_mark_sort_key) == ["a.2", "a.10", "v.1"]
+class TestSectionMarkCoversMultiLetterGroups:
+    def test_two_letter_group_prefix_is_recognised(self):
+        # 🚨 編者用完 a–z 接的是 ac、ad、ae。寫死 [a-z]. 會讓這 18 個節號
+        #    全部認不得，沙卜爾干最後六頁整頁落進引言裡被丟掉。
+        assert split_numbered("{ac.1} first {ad.2} second", "section") == [
+            ("ac.1", "first"), ("ad.2", "second")]
 
 
 # ────────────────────────── 定位符 ──────────────────────────
@@ -169,6 +194,27 @@ class TestFindLocator:
         assert find_locator("[……] (.)w(.)[……]") is None
 
 
+class TestFindFragmentSiglum:
+    def test_plain_fragment_header(self):
+        assert find_fragment_siglum("M49 MP: Ed. MM ii, 307-08, Rd. §b, 31") == "M49"
+
+    def test_roman_numeral_and_dagger(self):
+        # 🚨 沒認出這一行，pp. 36–39（實際是 M2 II）會沿用前一頁的 fc/II/R/Hd：
+        #    段號完整又專業，卻指向錯的抄本——比退回頁碼更糟。
+        assert find_fragment_siglum(
+            "[... ...] M2 II✝ Pa.: Ed. and tr. MM iii, 849-53") == "M2 II"
+
+    def test_long_number(self):
+        assert find_fragment_siglum("M61208 MP: Henning, Giants, [Col. B]") == "M61208"
+
+    def test_body_text_has_no_fragment_header(self):
+        assert find_fragment_siglum("wyspʾn šẖrʾn ncy(h)[yd] hw wsnʾd") is None
+
+    def test_bare_siglum_without_edition_colon_is_not_a_header(self):
+        # 正文裡順帶提到的編號不是片段首行；少了「語言縮寫＋冒號」就不算。
+        assert find_fragment_siglum("compare M49 and M99 here") is None
+
+
 class TestFindSiglumHeading:
     def test_picks_manuscript_id_heading(self):
         assert find_siglum_heading(["M49 I", "MP: MM ii, 306-07"]) == "M49 I"
@@ -183,6 +229,17 @@ class TestFindSiglumHeading:
 class TestIsRunningHead:
     def test_book_title(self):
         assert is_running_head("Anthologia Manichaica Orientalia")
+
+    def test_title_halves_split_by_the_gutter(self):
+        # 🚨 書名頁眉被欄界切成兩半，兩半都不等於書名：左欄帶頁碼，右欄只剩後段。
+        #    只認完整書名，這兩截就會黏在每頁第一段的句首。
+        assert is_running_head("6 Anthologia Manichaica")
+        assert is_running_head("Orientalia")
+        assert is_running_head("Orientalia 35")
+
+    def test_journal_name_in_a_citation_is_not_a_running_head(self):
+        # 🚨 Orientalia 也是期刊名。全文置換會把書目裡的正文一起刪掉。
+        assert not is_running_head("‘Ein manichäisches Gigantenbuch’, Orientalia J. 23")
 
     def test_volume_title(self):
         assert is_running_head("II. From the Manichaean Canon")

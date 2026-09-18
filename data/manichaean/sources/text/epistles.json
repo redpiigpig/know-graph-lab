@@ -1,74 +1,146 @@
 {
-  "slug": "epistles",
-  "siglum": "七 6",
-  "title_zh": "書信集",
-  "canon": "canon",
-  "volume": "seven-treatises",
-  "script": "manichaean-translit",
-  "orig_source": "IAMS《東方摩尼教選輯》第 2 冊，pp. 48–53",
-  "orig_url": "https://www.manichaeism.de/other-resources-2/",
-  "en_source": "同上（原文轉寫與英譯逐行並排刊出）。",
-  "en_url": "https://www.manichaeism.de/other-resources-2/",
-  "licence": "原文轉寫與英譯取自國際摩尼教研究學會（IAMS）開放取用的《東方摩尼教選輯》(Anthologia Manichaica Orientalia, Samuel N. C. Lieu 編，Ancient India and Iran Trust, Cambridge)。各篇的原校訂者與譯者見每段出處。繁中為本站自譯。",
-  "pivot": "iams-eng",
-  "scheme": "locator",
-  "pivot_note": "本篇原文轉寫與英譯同出 IAMS 開放取用的《東方摩尼教選輯》，兩欄是同一份校訂本的並排刊文，段號沿用該書的抄本定位符與行號，本站不自編。",
-  "segments": [
-    {
-      "chapter": "M1313/R/9",
-      "verse": "M1313/R/9",
-      "ref": "M1313/R/9 M1313/R/9",
-      "orig": "nwyst mwhr dyb (.) |10 mʾny frystg yy[š wʿ] | ʾryʾmʾn mwrzyd(g) [ʿyr] | [pʾy ]( ʾn n)ʾm ʾ(z š)[hryʾrʾn] |",
-      "en": "It has begun the Letter of the Seal. Mani, the apostle of Je[sus] Aryāmān, the persecuted [of spurned] name by the rulers",
-      "zh": ""
-    },
-    {
-      "chapter": "M1313/R/9",
-      "verse": "M801a P.1 = fol. I/R",
-      "ref": "M1313/R/9 M801a P.1 = fol. I/R",
-      "orig": "1/ {MP} ʿyg šhr °° ʾwd ʾmw | pws ʿym d[wšysṯ] | ʾwd ʾc wys[p]ʾn | przyndʾn dwšysṯʾʾn |5 ʿym ʾbʾg hynd °° | ʾw wyspʾn šwbʾnʾn | hmwcʾgʾn ẅ ʿspsgʾn | ʾwd ʾw wyspʾn wcydgʾn | ʾ[wd *nywšʾgʾn brʾd](r)[ʾn] |10 ʾwd wxʾrynso myhʾʾn | ʾwd qyhʾn °° hwrwʾn<ʾ>n | 41 See also C. Reck, ‘A Sogdian version of Mani’s Letter Manichaeism –Papers from the Sixth International 2009) 225-39.",
-      "en": "1/ of the world and from Ammō, my most beloved son, and from all the most beloved children (5) who are with me. To all pastors, teachers and bishops, and all the elect and hearers, brothers and (10) sisters, old and young, pious men (Hearers), of the Seal’ in J. BeDuhn (ed.), New Light on Congress on Manichaeism, NHMS 64 (Leiden,",
-      "zh": ""
-    },
-    {
-      "chapter": "P. 2 = fol. I/V",
-      "verse": "P. 2 = fol. I/V",
-      "ref": "P. 2 = fol. I/V P. 2 = fol. I/V",
-      "orig": "ʾbybxtgyẖ pd | (20) [w](r)[wyšn] hwstygʾʾn | hʾd ° (k)s ks pd xwyš nʾm Citations from Mani’s canonical M733 MPe.: Ed. HR ii, 31; Rd. §do, [R] {trace of one or more lines} [. ....](n) ny dy(d) [h](ʾ)d | [. ..](g)ʾy(y).] {do.1} (ẅ) zwd zwd swgnd | [m]ʾ (x)[w]ryd ʾwd (ʾ)[w ʾn]yž ks swgnd | [m]ʾ dyyd °° °° {do.2} ʾwd pd prwrdg ʿy |5 [m](h)ystgʾn gwyd kw ʾywštgyhʾ ʾwd | [gwm](y)xtgyhʾ mʾ wyʾwryd °° ʾwṯʾn | [sxw](n) ʿy gwgʾnyšn ʾc dhyn mʾ | [hy](b) ʾwzyhyd °° cy pd sxwn ʿy | [gwgʾn]yšn drwx(š) ʿy xwnyn ghwynyd °° |10 [...]°° ʾ(w)[d p](d) p(r)[wrd](g) ʿy htʾ gwyd | {do.3} ʿytʾn [kw hwny]wš bwyd pd (g)[wy](š)n prgnʾd ʾwd dhyn | [..] °° byc šb rwc | ʿstʾ ʾwd hʾn [..]k[...]yd phybwrsyd °° | [...] pd ʿ(y) |15 ʾwd cyyd zyndqr [gwpt °° ] °° {do.4} pd ʾwnglywn ʾ(wd) | [gnz ʿy] zyndgʾn gwyd42 °° kw pd zmyg ʾw [V] {lines missing and trace of one line} (b)[... ...] | ʾ[wd] hwpw)[.....] | {do.5} dwšʾrmyg(r)[ . .](.)k °(°) [. .] | wywʾsynyd [...](ʾ)ʾgnyn (b)[...] (ʾ)w(l)[.{?}] |5 hnʾryd °° ʾwd (y)k [ʾ]c yk zryg ʾnʾ(m)[yd] | ʾwd pd xwšyy ʾʾgnyn p[ryy] bwyd (ʾ)[wd] | hmyw pd ʿymy(n n)hw(p)[t](g)[y](h)ʾn (c)[ynyd] | ʾwd ʾʾgnyn dysyd °° ʾw[d ʾ](ny) pd [dys] | ʾwd ʾywyng (ʿy mn) (bwyd °°) °° (.)[...] |10 ʾny ny ʾw(hʾy hʾn) kw (. )[...] | ṯnwʾr ʿy (b)[ .](.)[...] (b)[y](c)[...] | qwnym (c)[y .] {do.6} (p)sc(g) (ʾ)[w .] | brʾdrʾ(n) [...] hrwkyn ʾš[mʾẖ . {?}] | whybgʾr °° ʾwd pd ks ʾr(.) (.)[...] |15 ʾnʾy pd 42 ʾwd pd ʾwnglywn ʾ(wd) [nyʾn ʿy] zyndgʾn gwyd kw Gospel and in the Treasure of Life . . . ” in: HR ii 31; The text here is re-edited by me. [nyʾn ʿy] zyndgʾn “Aber gnz ist im Parthischen nicht belegt.” Durkin-Meisterernst 36).",
-      "en": "without dissension in your firm (20) belief. To each one in his own name. The Letter of the Seal is ended. writings including the Epistles 185; tr. GSR, 258. [R] {trace of one or more lines} ‘[...] not seen [...]. {do.1} And do not bear witness nor swear an oath time and time again, nor make others swear.’ {do.2} And in the Epistle to the (5) Presbyters ne says, ‘Do not speak in an irritated an confused manner, and let not a word of destruction go forth from your mouth, for it is from a word of destruction that a bloody demoness is born.’ (10) {do.3} And in the Epistle to Ḥatā he says, ‘Be obedient, and in the speech of your mouth [do not be] dissolute (?) but rather recite, by day and night, the L[aw], and praise [...] and lament for what the Redeemer suffered (?).’ (15) {do.4} And in the Gospel and in the [Treasure of the] Living he says, ‘On earth and in heaven and …’ [V] {lines missing and trace of one line} [...] and with patience (?) [...] {do.5} and loving [...] soothe one [another] and build each other up (again), (5) and (dispel) each other’s sorrows, and be dear to one another in kindness and always r[un] (?) with these secrets and edify each other. And [...] be of my appearance and nature, [and one will be] and (10) one will not. Perhaps you may do that [...] body [... {do.6} it is] not fitting [...] brethren [...] all of your helpers. And to the worthy [...] but to the best of my ability and [...] I shall be a helper to all of you. And I [do not] say: (15) ‘This is mine (or: my) and this pd zmyg ʾwd . . . “And (he i.e. Mani) says in the MSt 31 apud Boyce in Reader, p. 184, text do: 4. is presented by Boyce (ibid.) as *gnz ʿy zyndgn. 2011, 30 “ (M. Shokri-Foumeshi, LG",
-      "zh": ""
-    },
-    {
-      "chapter": "P. 2 = fol. I/V",
-      "verse": "M6935+",
-      "ref": "P. 2 = fol. I/V M6935+",
-      "orig": "[ ] (.)w (…)wgyy wy(…) [… …] | […] (ʿ)y ʾrwʾnʾn (r)[ʾ]y mʾzy(n- d)[rʾn.](..rd) ʾwd y(z)dʾʾ[n …] | […]d byš ʾwd (mʾ)[zynd](r)ʾn pʾdfrʾẖ (ʿ)[y …] | […](.ʾ)g mʾ(zy)ndrʾ[n] ʾwd (…) [± 5](.) dwr ph(ryz)[yd …] |5 […]p gwwg [… …] | brʾdr dwš[yst …| …] (.)s hʾ(n)ysʾn pdy(.) [… | …] 43 The new arrangement and revised translation of the comments on the remnants of the Codex of Mani’s Sundermann’, in Team “Turfanforschung” (eds.), Iranistik und Zentralasienkunde im Gedenken an Werner 173-180 has been followed.",
-      "en": "{End of an epistle?} […] for the […] of the souls he […] the Māzendarān and the gods [… | … with] pain and unwillingly, and the […] punishment of the Māzendarān [… | from] the Māzendarān and […] keep away! [… (5) …] [… most] beloved brother [… | …] that their […] and fragments suggested by I.M.F. Gardner, ‘Some Epistles in Middle Persian as edited by W. Zur lichten Heimat. Studien zu Manichäismus, Sundermann, Iranica 25 (Wiesbaden, 2017),",
-      "zh": ""
-    },
-    {
-      "chapter": "P. 2 = fol. I/V",
-      "verse": "S1?",
-      "ref": "P. 2 = fol. I/V S1?",
-      "orig": "[ ±5 ] kw ʾw dwys(t)[ʾn ±2 ]( ±3)[ ±10 | ±3 ](p)d rmyšn ʾwd drwd phryzyyd ° (.)[ 6 ] | [ʾw](ẖ) kw pd hyʾrbwdyẖ ʿy frystgʾn ʾšmʾẖ dwšy(stn) | [±4 ] (d)ryst hyd wd ʾc tn ʾʾrg syrq ʾwd prmyyn |5 [±6 ](. wr)šʾn (krʾn) brʾd ʾwd dwst zn ʾwd rhyg bng | ʾwd (qn)y(cg)[ ±3 ] nyw ʾwd dryst hʾnd ʾwd pd ʿspync ʿy | ʾšmʾẖ dwšystn nyk drwd hʾd ʾwtʾn ʾc",
-      "en": "[…] that to the most beloved […] at ease and healthy you remain. [… …s]o(?) that with the aid of the angels you, the most beloved, [in spirit(?)] are well, and as for the body content and happy. (5) [And at(?)] the limit(?) of Georgia ((wr)šʾn) (?) , borhter and friend, wife and servant, slave and maiden [all(?)] may be well and healthy. And in the",
-      "zh": ""
-    },
-    {
-      "chapter": "P. 2 = fol. I/V",
-      "verse": "S2?",
-      "ref": "P. 2 = fol. I/V S2?",
-      "orig": "[… pr]w(r)d(g)[y]hʾ ʾw ʾšmʾ(ẖ)[… | …](p)ryhʾn ʾwd (dw)š[ystʾ](n) kym ʾb(ʾ)g xwyš gy(ʾ)[n … | …](h) ʾmtng hyd [hʾm](ʾ)- byr rwšn pydʾg ° [… | … n]cyhym [ ±6 |5 ](przyndʾ)n ʿy (pr)y(st)[g … …](st ẅ) p(ʾ)[… | …]y ʾndrz ʿy yzd[ʾn … | … h](wr)wʾnyẖ prʾc wynʾ(r)[… | …p](r)ʾc |10 wynʾryd (.)[… | …] (.) ʾyg twyc p(d m)[… … p](r)ʾc hrwʾgwc hyʾ(r) bʾš[… | … ʾ](ʾ)wn twxš kw hʾn prwrdg [… | …](.)[ ±5 ](wd ẅ) ʿync ʿy dwdyg ʿyym nw(n) [… | …] (.)yʾy xwndn š pdyš cyydn pd hr(w)[±1](..)[… | …](g)ʾ(ry)ẖ wynʾrdn hʾmʾwxyy(h)[ʾ … |15 …](ʾ)n ʾndwš prmʾ(y qyr)[dn … | …] (x)[w]ʾny[hʾ](d) ʾwt myzd ẅ pʾdʾšn (ʾ)[… | …](.) (ʾmʾ)-hyc pdyš hwšnwd ẅ ʿspʾ[sdʾr … | …] ẅ wynyyr pd dn ʿy drwd ẅ hʾn yzd ʿy ʾ(.)[… | …](b)rʾd ʿym grʾmyg pd hrw prʾ(rwn)[yẖ … |20 …](ʾwt) hrw ptyʾr wzynd ẅ gwm(ʾ)[n … | …] From part of an epistle to the M501p + M882c + M1402",
-      "en": "{The start of a second epistle} [Mani, the apostle of Jesus Aryaman, and […] with me; to the most beloved …] letters / by letter to you […] loved and most dear ones whom I, together with my own soul […] having the same body, – [you are] a visible store of light! {Recapitulation of the theme of the previous letter} […] I [t]each […] children of the apostles (?) [… (5) …] and […] the command of God […] establish [the] commu- nity of the) virtuous (i.e. the hearers). […] he (or ‘you’ pl.) will establish [… (10) …] you also thereupon be a helper everywhere […] so strive that (the first) letter […] and also this second one which I now [send …] to read it and collect with it, and to every […] to establish, and all together [… (15) …] consider to make familiar witn [… shall be] recited; and your reward and recompense [… …] and with that we too [shall be] content and grateful. {Prayer formula} [..] and be preserved by the right-hand of well-being and that God of [truth (?). …] my dear brother, with all righteousness […] and [may you be protected from] (20) all misfortune, harm and doubt […] community in Georgia (?) + M9152",
-      "zh": ""
-    },
-    {
-      "chapter": "S2?",
-      "verse": "S2?",
-      "ref": "S2? S2?",
-      "orig": "[ ±8 ](…) [±3]( š)g md kw kynz(ʾ) [ ±4 ] | [ ±4 b](xšʾ)ynd kwmʾn cʾwn ʾc dwr pd ʾndq [ 4 ] | ʾʾzrm ʾwd grʾmyg why bwd hym ʾygmʾn ws [±3 ] |5 ʾʾwn ʾbr hndʾcyẖ kw w b(rʾdrʾn) dwš(ys)[tʾn ±5 ](pd) | cšm ʿy nysʾhyn xwd wynyn °° °° b[yc tʾ ](kʾ yk) ʾw | dwdy wynym ʾyg pyštr yk nʾmg ʿy fryẖ ẅ dwšʾrmyẖ | ʾwd dyb ʿy drwd ʾwd bwrdyš- nwhryẖ ʾwd qyrbg ° So 15502 (T III Sogd. in SS: Ed. and tr. C. Reck, ap. W. Sundermann, and a list of Mani’s letters in Middle [V/10] ZY ZKwyh npʾyky frmʾnh ptwyrtʾnt | ʾwnʾkw cw ZY ZKwyh xrδyʾn (?) βrwr- tʾ(k)[w] | (Z)Y tʾδy-(s)[tʾny ](β)rwrtʾy (°° m)[ry] sy-sy-n | βrwrtʾkw sy-sy-n tw p(ykʾ)[ry βrwrtʾkw] | ʾʾβʾ pry βrwrtʾy [... …] |15 pʾpyl prwrtʾkw ...",
-      "en": "[ ] came to … ? … they gr]ant that we, when we from afar through a little [com- fort(?)]. which (is) from you, through your wisdom, piety, love and gentleness, honour and affection, have been bettered, thereupon we many [times(?)] (5) planned that I myself with corporeal eyes might see the most beloved brethren […]. But t[ill then] that we shall see each other, before (that), [we send you] a letter of love and affection, and an epistle of salutation and gratitude and charity. D 271k) ‘A Manichaean collection of letters Persian’, in BeDuhn (ed.), op. cit. 265 [V/10] And in the Scripture(s) they turn away the command such as in the Letter to the Khaldeans (?), and the Letter (on) the Judgment, the Mār Sīsin – Letter (?). [the Letter] (to) Sīsin (on) the Two Im[ages], the Letter (to) Abā (on) Love [ ] (15) the Letter (to) [Ba]bel [ - a long one?]",
-      "zh": ""
-    }
-  ]
+ "slug": "epistles",
+ "siglum": "七 6",
+ "title_zh": "書信集",
+ "canon": "canon",
+ "volume": "seven-treatises",
+ "script": "manichaean-translit",
+ "orig_source": "IAMS《東方摩尼教選輯》第 2 冊，pp. 48–53",
+ "orig_url": "https://www.manichaeism.de/other-resources-2/",
+ "en_source": "同上（原文轉寫與英譯逐行並排刊出）。",
+ "en_url": "https://www.manichaeism.de/other-resources-2/",
+ "licence": "原文轉寫與英譯取自國際摩尼教研究學會（IAMS）開放取用的《東方摩尼教選輯》(Anthologia Manichaica Orientalia, Samuel N. C. Lieu 編，Ancient India and Iran Trust, Cambridge)。各篇的原校訂者與譯者見每段出處。繁中為本站自譯。",
+ "pivot": "iams-eng",
+ "scheme": "section",
+ "pivot_note": "本篇原文轉寫與英譯同出 IAMS 開放取用的《東方摩尼教選輯》，兩欄是同一份校訂本的並排刊文，段號沿用該書的抄本定位符與行號，本站不自編。",
+ "segments": [
+  {
+   "chapter": "Anth. 2 p.48",
+   "verse": "—",
+   "ref": "Anth. 2 p.48",
+   "orig": "(V) THE EPISTLES The Epistles 336.19-337.11 ه ﺑﻌﺪ ﻻﺋﻤﺔ وا ﻟﻤﺎﻧﻰ ﻟﺘﻰ ا ﻟﺮﺳﺎﺋﻞ ا ء ﺳﻤﺂ ا 19 ﺳﺎﻟﺔ ر ٨ آء ﻟﻜﺒﺮ ا ﺳﺎﻟﺔ ر ٨ ﻻﺻﻠﯿﻦ ا ﺳﺎﻟﺔ ر | 20 | ﺳﺎﻟﺔ21 ر ٨ ﻟﺒﺮ َر ا ء ﯿﻰ ھ ﺳﺎﻟﺔ ٨ ﻟﻌﻈﯿﻤﺔ ا ﻨﺪ ھ ﻓﺘﻖ ﺳﺎﻟﺔ ر ٨ ﻛﺴﻜﺮ ّر ﺳﺎﻟﺔ ٨ ل ﻟﻌﺪ ا ء ﻗﻀﺎ | ﻣﻮﻟﯿﺎ22 ا ﺳﺎﻟﺔ ر ٨ ﻣﯿﻨﯿﺔ ار ﺳﺎﻟﺔ ر ٨ ﻟﻌﻈﯿﻤﺔ ا ﺳﺎﻟﺔ ر ٨ ﻗﺔ ر ﻟﻮ ا ﻓﻲ ن ﯿﺴﻔﻮ ط ﺳﺎﻟﺔ ر ٨ ﻟﻜﺎﻓﺮ ا ت ﻟﻮﺻﺎﻻ ا ﻓﻲ ﻢ ﻟﻤﻌﻠ ا ﺳﺎﻟﺔ ر ٨ ﻟﻌﺸﺮ ا ت ﻟﻜﻠﻤﺎ ا ﺳﺎﻟﺔ ر ٨ ﻟﻔﻢ ا ﺧﺎﺗﻢ ﻓﻲ ﺣﻤﻦ و ﺳﺎﻟﺔ ر | 23 ٨ ... ﻓﻲ ت ﺎ ھ ﺧﺒﺮ ﺳﺎﻟﺔ ر ٨ ﻟﺘﻌﺰﯾﺔ ا ﻓﻲ ت ﺎ ھ ﺧﺒﺮ ﯾﺤﯿﺮ ﺳﺎﻟﺔ ر ٨ ﺔ ﻟﻄﯿﺴﻔﻮﻧﯿ ا ﻣﮭﺴﻢ ا | ﺳﺎﻟﺔ24 ر ٨ ﺳﺎﻟﺔ ر ٨ ... ﻓﻲ ت ﺎ ھ ﺧﺒﺮ ﺳﺎﻟﺔ ر ٨ ﻟﻌﻄﺮ ا ﻓﻲ ٨ ﻓﺎﻓﻲ ﺳﺎﻟﺔ ر ٨ ﻟﺴﻤﺎﻋﯿﻦ ا ﻟﻰ ا | 25 ن ﯿﺴﻔﻮ ط ذات ﺳﯿﺲ ﺳﺎﻟﺔ ر ٨ ة ﻟﺼﻐﯿﺮ ا ى ﻟﮭﺪ ا ﺳﺎﻟﺔ ر ﺳﺎﻟﺔ ر ٨ ة ﻟﻜﺒﯿﺮ ا ﺑﺎﺑﻞ ﺳﺎﻟﺔ ر 26| ٨ ﻟﻮﺟﮭﯿﻦ ا ٨ ﻟﺠﻨﺔ ا ﺳﺎﻟﺔ ر ٨ ر ﻟﺼﻮ ا ﻓﻲ ﻓﺘﻖ و ﺳﯿﺲ س ﺳﻌﯿﻮ ﺳﺎﻟﺔ ر ٨ ن ﻟﺰﻣﺎ ا | ﻓﻲ27 ﺳﯿﺲ ﺳﺎﻟﺔ ر ﺳﺎﻟﺔ ر ٨ ن ﻮ ھ ﻟﺮ ا ﻓﻲ ﺳﯿﺲ ﺳﺎﻟﺔ ر ٨ ﻟﻌﺸﺮ ا ﻓﻲ ﺑﺮﺑﻰ ا ﺳﺎﻟﺔ ر ٨ ﻟﺘﻠﻤﯿﺬ ا ﺑﺎ ا | ﺳﺎﻟﺔ28 ر ٨ ﻟﺘﺪﺑﯿﺮ ا ﺳﺎﻟﺔ ر ٨ ﻟﺤﺐ ا ﻓﻲ ﺑﺎ ا ﺳﺎﻟﺔ ر ٨ ﺎ ھ ﻟﺮ ا ﻟﻰ ا ٨ ... ﻓﻲ ﺑﺎ ا ﺳﺎﻟﺔ ر | 29 ٨ ر ﻟﻨﮭﺎ ا ﻓﻲ ن ﻣﯿﺴﺎ ﻛﻰ ذ ﻓﻲ ﺑﺎ ا ﺳﺎﻟﺔ ر ٨ ل ﻟﮭﻮ ا ﻓﻲ ﺑﺎ ا ﺑﺤﺮ ﺎﻟﺔ ﺳ ر ٨ ت ﻟﻌﺼﺒﺎ ا ﻓﻰ | ع ﯾﺴﻮ ﻋﺒﺪ ﺳﺎﻟﺔ ر ٨ ﻟﻄﯿﺐ ا ﺷﺎﯾﻞ ﺳﺎﻟﺔ ر ٨ ت ﻟﻮﺻﺎﻻ ا ﻓﻲ ﺑﺎ ا ﺑﺤﺮ ﺳﺎﻟﺔ ر ( 337 ) ات ﻟﺰﻛﻮ ا ﻓﻲ ﺑﻰ ا ﺳﺎﻟﺔ ر ٨ ﺳﻜﻨﻰ و ﻓﻲ ﺑﺎ ر ﻓﻘﻮ ا ﺳﺎﻟﺔ ر ٨ ﻟﺤﻤﺎﻣﺔ ا ﻓﻲ ﺑﺎ ا ﺣﺪ ﺳﺎﻟﺔ ر ﺳﺎﻟﺔ ر ٨ ن ﻟﺰﻣﺎ ا ﻓﻲ ﻛﻮ ز ﺳﺎﻟﺔ ر ٨ ن ﻟﺰﻣﺎ ا ب ﻟﻌﺮ وا ح ﻟﻜﺮ ا ﻟﺔ ﺳﺎ ر ٨ ﻟﻌﺜﺮ ا ﻓﻲ | 2 اب ﺳﮭﺮ ٨ ﺑﺎﺣﯿﺎ ا ﺳﺎﻟﺔ ر ٨ س ﻟﻔﺮ ا ﻓﻲ اب ﺳﮭﺮ ﺳﺎﻟﺔ ر ٨ ﺣﯿﺎ ا ﺑﺮ ا | ﺳﺎﻟﺔ3 ر ٨ س ﻟﻤﮭﻨﺪ ا م ﯾﺴﺎ ﺑﻰ ا ﺳﺎﻟﺔ ر ﻓﻲ ﯾﺤﯿﻰ ﺳﺎﻟﺔ ر ٨ ﺔ ﯾ د ﻟﻤﻌﻤﻮ ا ﺳﺎﻟﺔ ر ٨ ﻟﻜﺎﻓﺮ ا ﺑﻌﺔ ر ﻻ ا ر ﻻﻋﺸﺎ ا ﻓﻲ ﻓﻌﻨﺪ ا ﺳﺎﻟﺔ ر | 4 ٨ ﻢ راھ ﻟﺪ ا ٨ ول ﻻ ا ﻟﺴﻌﺪ ا ﻓﻲ ﻓﻌﻨﺪ ا ﺳﺎﻟﺔ ر ﻟﻚ ذ ﺑﻌﺪ و ٨ ﻓﻲ5 ﯾﻮﺣﻨﺎ ﺎﻟﺔ ﺳ ر ٨ ﻟﻮﺳﺎﺋﺪ ا ﻛﺮ ذ | ﺑﺒﻮ ﺳﺎﻟﺔ ر ﻓﻲ ﻟﺴﻤﺎﻋﯿﻦ ا ﺳﺎﻟﺔ ر ٨ ﻟﺼﺪﻗﺔ ا ﺗﺪﺑﯿﺮ ﻓﻲ",
+   "en": "of Mani Titles of the Epistles, which Mani and the Religious leaders who came after him wrote. (20) 1. The Epistle on the two principles. - 2. The Epistle on the elders. - 3. The great Epistle to the Indians. - 4. The Epistle on the armaments of justice. - 5. The Epistle on the just judicial system. - 6. The Epistle to Kaskar. - 7. The great Epistle to Futtaḳ. - 8. The Epistle to Armenia. - 9. Epistle to Amulijâ the unbeliever. - 10. Epistle to Ctesiphon. One sheet. - 11. Epistle on the Ten Words. - 12. Treatise of the Teachers on social institutions. - 13. Epistle of Wahman on the seal of the mouth. - 14. Epistle of Khabarhât on consolation. - 15. Epistle of Khabarhât on… - 16. Epistle to Amhasam from Ctesiphon. -17. Epistle of Jahjâ (John) on the fragrance. - 18. Epistle of Khabarhât on… - 19. Epistle from Ctesiphon (25) to the auditors. - 20. Epistle to Fâfi. - 21. The small Epistle on the right path. - 22. The ambiguous Epistle of Sîs. - 23. The great Epistle to Babel. - 24. Epistle to Sîs and Futtaḳ on the forms. - 25. Epistle on Paradise. - 26. Epistle of Sis on time. - 27. Epistle of Sa'jus on tithes. - 28. Epistle of Sis on pledges. - 29. Epistle on administration. - 30. Epistle of Abâ of the pupil. - 31. Epistle of Ibrai to Rohâ. - 32. Epistle of Abâ on love. - 33. Epistle of Meisan on the day. - 34. Epistle of Abâ on ... - 35. Epistle of Baḥrâjâ on the terrifying form. - 36. Epistle of Abâ on the mention of fragrance. - 37. Epistle of Abdjesu on (30) distant relatives. - 38. Epistle of Baḥrâjâ on social institutions. - 39. Epistle to Schâil (Schâtil?) and Sakanî. - 40. Epistle of Ubajji on the various types of property taxes. – (337) 41. Epistle of Ḥudâjâ on the Pigeon. - 42. Epistle of Afḳurijâ on time. - 43. Epistle of Zakû on time. - 44. Epistle of Suhrâb on tithes. - 45. Epistle on the cell of the hermit, and the Arabic fruit, from which the beads for the rosaries are prepared (?). - 46. Epistle of Suhrâb on the Persians. - 47. Epistle to",
+   "zh": ""
+  },
+  {
+   "chapter": "M1313/R/9",
+   "verse": "—",
+   "ref": "M1313/R/9",
+   "orig": "ر ﻟﻨﺎ ا ﻓﻲ ﻟﺴﻤﺎﻋﯿﻦ ا | ﺳﺎﻟﺔ6 ر ٨ ر ﻟﻨﺬ وا م ﻟﺼﻮ ا ٨ ﻟﻤﻠﻚ ا ﻛﻰ ذ ﻓﻲ از ﻮ ھ ﻻ ا ﺳﺎﻟﺔ ر ٨ ى ﻟﻜﺒﺮ ا ٨ ﻧﺒﺨﺖ دا ﯾﺰ | ﺗﻌﺒﯿﺮ7 ﻓﻲ ﻟﺴﻤﺎﻋﯿﻦ ا ﺳﺎﻟﺔ ر ﻣﯿﻨﻖ ﺳﺎﻟﺔ ر ٨ ﻟﻰ و ﻻ ا ﺳﯿﺔ ر ﻟﻔﺎ ا ﻣﯿﻨﻖ ﺳﺎﻟﺔ ر | ﺳﺎﻟﺔ8 ر ٨ ت ﻟﺼﺪﻗﺎ وا ﻟﻌﺸﺮ ا ﺳﺎﻟﺔ ر ٨ ﻟﺜﺎﻧﯿﺔ ا ٨ ا ﻋﻨﺼﺮ و ﺳﻠﻢ ﺳﺎﻟﺔ ر ٨ ﻖ ﻣﯿﻨ و ﺷﯿﺮ ارد ٨ ﻟﻤﻚ ا ﻓﻲ ت ﺎ ھ ﺧﺒﺮ ﺳﺎﻟﺔ ر ٨ ﺣﻄﺎ ﺳﺎﻟﺔ ر ٨ ﻟﻤﺮﺿﻰ9| وا ﻻﺻﺤﱠﻰ ا ﻓﻲ ﺣﯿﺎ ا ﺑﺮ ا ﺳﺎﻟﺔ ر ﻓﻲ ﺟﺎ ا ﺳﺎﻟﺔ ر ٨ واب ﻟﺪ ا ﻓﻲ اردد ﺳﺎﻟﺔ ر ﻣﺎﻧﺎ ﺳﺎﻟﺔ ر ٨ ة ﻟﻨﯿﺮ ا ن ﻟﺤﻤﻼ ا ﺳﺎﻟﺔ ر ٨ ف ﻟﺨﻔﺎ ا ﺳﺎﻟﺔ ر ٨ ع ﻟﺴﻤﺎ ا ﻣﮭﺮ ﺳﺎﻟﺔ ر ٨ ﻟﺘﺼﻠﯿﺐ ا ﻓﻲ | 10 ٨ ﺳﯿﻦ ورا وز ﻓﯿﺮ ﺳﻔﺮ ﻓﻲ ل ﻋﺒﺪﺑﺎ ﺳﺎﻟﺔ ر ﺳﺎﻟﺔ ر ٨ ﻣﯿﻦ ور ن ﺳﻤﻌﻮ ﺳﻠﺔ ر ٨ ار ﻻﺳﺮ ا ة ﻟﻜﺴﻮ ا ﻓﻲ ل ﻋﺒﺪﺑﺎ The Letter of M801a with MPe.: Ed. W.B. Henning, BBB ; tr. [M1313/R/9] nwyst mwhr dyb (.) |10 mʾny frystg yy[š wʿ] | ʾryʾmʾn mwrzyd(g) [ʿyr] | [pʾy ]( ʾn n)ʾm ʾ(z š)[hryʾrʾn] | [M801a P.1 = fol. I/R] 1/ {MP} ʿyg šhr °° ʾwd ʾmw | pws ʿym d[wšysṯ] | ʾwd ʾc wys[p]ʾn | przyndʾn dwšysṯʾʾn |5 ʿym ʾbʾg hynd °° | ʾw wyspʾn šwbʾnʾn | hmwcʾgʾn ẅ ʿspsgʾn | ʾwd ʾw wyspʾn wcydgʾn | ʾ[wd *nywšʾgʾn brʾd](r)[ʾn] |10 ʾwd wxʾrynso myhʾʾn | ʾwd qyhʾn °° hwrwʾn<ʾ>n | 41 See also C. Reck, ‘A Sogdian version of Mani’s Letter Manichaeism –Papers from the Sixth International 2009) 225-39.",
+   "en": "Abrâḥijâ. - 48. Epistle to Abû Jasâm the geometer. - 49. Epistle to Abrâḥijâ the unbeliever. - 50 Epistle on the baptism. - 51. Epistle of Jahjâ on the dirham. - 52. Epistle of Af’and on the four types of tithing. In addition, the following Epistles are mentioned: 53. Epistle of Af’and on the first bliss. 54. Epistle of Janû (Innaeus?) on (5) the poll tax. 55. Epistle of Juhannâ on the administration of alms. - 56. Epistle to the auditors on fasting and keeping vows. - 57. Epistle to the auditors on the great fire. - 58. Epistle of Ahwâz on property that can be freely alienated. - 59. Epistle to the auditors on the dream interpretation of Yazdānbuxt. - 60. First Epistle to the Persian Meinaḳ (Menoch). - 61. Second Epistle to the Meinaḳ. - 62. Epistle on tithes and the various kinds of alms. - 63. Epistle to Ardashir and the Meinaḳ. - 64. Epistle to Salam and Ansaṛâ. - 65. Epistle of Ḥatâ. - 66. Epistle of Khabarhât on property that can be freely alienated. - 67. Epistle of Abrâhijâ on the healthy and the sick. - 68. Epistle of Ardad on the beasts of burden. - 69. Epistle of Adscha on the sandals. - 70. Epistle on the two luminous burdens. - 71. Epistle of Mânâ on the crucifixion. - 72. Epistle on the excellence of religious music. - 73. Epistle of Fîrûz and Râsîn. - 74. (line 10) Epistle of Abdîâl on the Book of Mysteries. - 75. Epistle of Sam'ûn (Simeon) and Ramîn. - 76. Epistle of Abdîâl on clothing. the Seal M1313 John Sheldon, unpublished.41 [M1313/R/9] It has begun the Letter of the Seal. Mani, the apostle of Je[sus] Aryāmān, the persecuted [of spurned] name by the rulers [M801a P.1 = fol. I/R] 1/ of the world and from Ammō, my most beloved son, and from all the most beloved children (5) who are with me. To all pastors, teachers and bishops, and all the elect and hearers, brothers and (10) sisters, old and young, pious men (Hearers), of the Seal’ in J. BeDuhn (ed.), New Light on Congress on Manichaeism, NHMS 64 (Leiden,",
+   "zh": ""
+  },
+  {
+   "chapter": "P. 2 = fol. I/V",
+   "verse": "—",
+   "ref": "P. 2 = fol. I/V",
+   "orig": "ʿspwrgʾrʾn ẅ rʾsṯʾn | hrw ky ʿyn myzdgtʾcy<y> | ʾc mn pdyrypṯ hʾʾd |15 ʾwd ʾw ʿyn ʾʾprʾẖ | ʾwd qyrbg qyrdgʾʾn | ʿymyš ncysṯ | hwnsnd bwd hʾd ʾwd | [P. 2 = fol. I/V] ʾbybxtgyẖ pd | (20) [w](r)[wyšn] hwstygʾʾn | hʾd ° (k)s ks pd xwyš nʾm Citations from Mani’s canonical M733 MPe.: Ed. HR ii, 31; Rd. §do, [R] {trace of one or more lines} [. ....](n) ny dy(d) [h](ʾ)d | [. ..](g)ʾy(y).]",
+   "en": "those perfect (Elect) and all you righteous men who have received this gospel from me (15) and have been taught in this doctrine and these good works by me and all who may have found contentment and in these precepts and good works which I have laid down, and you who are happy and [P. 2 = fol. I/V] without dissension in your firm (20) belief. To each one in his own name. The Letter of the Seal is ended. writings including the Epistles 185; tr. GSR, 258. [R] {trace of one or more lines} ‘[...] not seen [...].",
+   "zh": ""
+  },
+  {
+   "chapter": "P. 2 = fol. I/V",
+   "verse": "do.1",
+   "ref": "P. 2 = fol. I/V do.1 §",
+   "orig": "(ẅ) zwd zwd swgnd | [m]ʾ (x)[w]ryd ʾwd (ʾ)[w ʾn]yž ks swgnd | [m]ʾ dyyd °° °°",
+   "en": "And do not bear witness nor swear an oath time and time again, nor make others swear.’",
+   "zh": ""
+  },
+  {
+   "chapter": "P. 2 = fol. I/V",
+   "verse": "do.2",
+   "ref": "P. 2 = fol. I/V do.2 §",
+   "orig": "ʾwd pd prwrdg ʿy |5 [m](h)ystgʾn gwyd kw ʾywštgyhʾ ʾwd | [gwm](y)xtgyhʾ mʾ wyʾwryd °° ʾwṯʾn | [sxw](n) ʿy gwgʾnyšn ʾc dhyn mʾ | [hy](b) ʾwzyhyd °° cy pd sxwn ʿy | [gwgʾn]yšn drwx(š) ʿy xwnyn ghwynyd °° |10 [...]°° ʾ(w)[d p](d) p(r)[wrd](g) ʿy htʾ gwyd |",
+   "en": "And in the Epistle to the (5) Presbyters ne says, ‘Do not speak in an irritated an confused manner, and let not a word of destruction go forth from your mouth, for it is from a word of destruction that a bloody demoness is born.’ (10)",
+   "zh": ""
+  },
+  {
+   "chapter": "P. 2 = fol. I/V",
+   "verse": "do.3",
+   "ref": "P. 2 = fol. I/V do.3 §",
+   "orig": "ʿytʾn [kw hwny]wš bwyd pd (g)[wy](š)n prgnʾd ʾwd dhyn | [..] °° byc šb rwc | ʿstʾ ʾwd hʾn [..]k[...]yd phybwrsyd °° | [...] pd ʿ(y) |15 ʾwd cyyd zyndqr [gwpt °° ] °°",
+   "en": "And in the Epistle to Ḥatā he says, ‘Be obedient, and in the speech of your mouth [do not be] dissolute (?) but rather recite, by day and night, the L[aw], and praise [...] and lament for what the Redeemer suffered (?).’ (15)",
+   "zh": ""
+  },
+  {
+   "chapter": "P. 2 = fol. I/V",
+   "verse": "do.4",
+   "ref": "P. 2 = fol. I/V do.4 §",
+   "orig": "pd ʾwnglywn ʾ(wd) | [gnz ʿy] zyndgʾn gwyd42 °° kw pd zmyg ʾw [V] {lines missing and trace of one line} (b)[... ...] | ʾ[wd] hwpw)[.....] |",
+   "en": "And in the Gospel and in the [Treasure of the] Living he says, ‘On earth and in heaven and …’ [V] {lines missing and trace of one line} [...] and with patience (?) [...]",
+   "zh": ""
+  },
+  {
+   "chapter": "P. 2 = fol. I/V",
+   "verse": "do.5",
+   "ref": "P. 2 = fol. I/V do.5 §",
+   "orig": "dwšʾrmyg(r)[ . .](.)k °(°) [. .] | wywʾsynyd [...](ʾ)ʾgnyn (b)[...] (ʾ)w(l)[.{?}] |5 hnʾryd °° ʾwd (y)k [ʾ]c yk zryg ʾnʾ(m)[yd] | ʾwd pd xwšyy ʾʾgnyn p[ryy] bwyd (ʾ)[wd] | hmyw pd ʿymy(n n)hw(p)[t](g)[y](h)ʾn (c)[ynyd] | ʾwd ʾʾgnyn dysyd °° ʾw[d ʾ](ny) pd [dys] | ʾwd ʾywyng (ʿy mn) (bwyd °°) °° (.)[...] |10 ʾny ny ʾw(hʾy hʾn) kw (. )[...] | ṯnwʾr ʿy (b)[ .](.)[...] (b)[y](c)[...] | qwnym (c)[y .]",
+   "en": "and loving [...] soothe one [another] and build each other up (again), (5) and (dispel) each other’s sorrows, and be dear to one another in kindness and always r[un] (?) with these secrets and edify each other. And [...] be of my appearance and nature, [and one will be] and (10) one will not. Perhaps you may do that [...] body [...",
+   "zh": ""
+  },
+  {
+   "chapter": "P. 2 = fol. I/V",
+   "verse": "do.6",
+   "ref": "P. 2 = fol. I/V do.6 §",
+   "orig": "(p)sc(g) (ʾ)[w .] | brʾdrʾ(n) [...] hrwkyn ʾš[mʾẖ . {?}] | whybgʾr °° ʾwd pd ks ʾr(.) (.)[...] |15 ʾnʾy pd 42 ʾwd pd ʾwnglywn ʾ(wd) [nyʾn ʿy] zyndgʾn gwyd kw Gospel and in the Treasure of Life . . . ” in: HR ii 31; The text here is re-edited by me. [nyʾn ʿy] zyndgʾn “Aber gnz ist im Parthischen nicht belegt.” Durkin-Meisterernst 36).",
+   "en": "it is] not fitting [...] brethren [...] all of your helpers. And to the worthy [...] but to the best of my ability and [...] I shall be a helper to all of you. And I [do not] say: (15) ‘This is mine (or: my) and this pd zmyg ʾwd . . . “And (he i.e. Mani) says in the MSt 31 apud Boyce in Reader, p. 184, text do: 4. is presented by Boyce (ibid.) as *gnz ʿy zyndgn. 2011, 30 “ (M. Shokri-Foumeshi, LG",
+   "zh": ""
+  },
+  {
+   "chapter": "P. 2 = fol. I/V",
+   "verse": "—",
+   "ref": "P. 2 = fol. I/V",
+   "orig": "hʾn cym twʾn ʾwd [...] | hrwkyn (ʾš)mʾẖ hyʾr hym °[° …] | gwym kw (ʿ)yn mn xwyš (ẅ) ʿyn ʾ[...] M731 MPe.: Ed. HR ii, 32-33; Rd. [R?] [..](.)",
+   "en": "[is] a[nother one’s own (or task?) …] §dp, 185; tr. GSR, 258. ‘[...]",
+   "zh": ""
+  },
+  {
+   "chapter": "P. 2 = fol. I/V",
+   "verse": "dp.1",
+   "ref": "P. 2 = fol. I/V dp.1 §",
+   "orig": "nyšʾn ʿy drdyn | (k)[ʾ] (ʾ)br xwrdyg ʾʾhwg | ʾʾwryd ° ʾbʾg ʾbystʾwgʾnn | ny qwšydn ° ʾwd hšʾgyrdʾnc |5 ʾndrz qyrdn °",
+   "en": "a sign of grief if the gazelle brings upon the food (?) But do not strive with the apostates (pl.?) and disciples who obey the commands.",
+   "zh": ""
+  },
+  {
+   "chapter": "P. 2 = fol. I/V",
+   "verse": "dp.2",
+   "ref": "P. 2 = fol. I/V dp.2 §",
+   "orig": "mrdwhm pnz ʾž | šhrygʾn nʿyd ʾbʾg ʾwyšʾn | gwyd kw syryšn ny bwʾd ° ʾw | nywšʾgʾn gwyd kw mʾ ks | ʾšmʾẖ dwjdyl qwnʾd kw |10 pd šhr ʿystyd ° cy dwsṯ | ʿy dwstʾn ʾšmʾẖ hyd | [nywšʾ]gʾn hynd ky pd rwcg | [. . ʾ]wd ky pd ʾnyc | {Lines missing} sʾrʾr ʿy b(rʾ)[drʾn] ʾwd xwʾryn [V?]",
+   "en": "He led five people from among the worldly ones, and he said to them, ‘May there be no anger (among you).’ To the Hearers he said, ‘May no one dishearten you that you remain in the world. For you are friends of the friends (the Elect), you are Hearers (who) by fasting [...] and who by another [...] {Lines missing} …",
+   "zh": ""
+  },
+  {
+   "chapter": "P. 2 = fol. I/V",
+   "verse": "dp.3",
+   "ref": "P. 2 = fol. I/V dp.3 §",
+   "orig": "| pydʾg ʾc k[yrd] | {one line blank} |",
+   "en": "leader of the brothers and sisters who obey the command (i.e. virgins?). {one line blank}",
+   "zh": ""
+  },
+  {
+   "chapter": "P. 2 = fol. I/V",
+   "verse": "dp.4",
+   "ref": "P. 2 = fol. I/V dp.4 §",
+   "orig": "ʿy |5 ṯnwʾr prwrdg myšwn dw gwyd ° kw ʾmʾẖ ʾwd ʾšmʾẖ ʾw ʾyʾsʾm ʾwd | xwyš pdyšṯ | prgʾmʾʾm | šwdn ° ʿyn whyẖ ʿytʾʾn | pdyrypt pd yk ʾwx rʾstyhʾ |10 ptʾyd ° pd ʿyw sʾrg pymwcn | ʾwd nhwyn ʾwd swr ʿyg ʿyw | rwcg ° ʾwd pd wysp[ʾʾn .{?}] | wysʾn (pd) [...] {Lines missing} M6935 + M6944 and M5770 + MPe.: Ed. and tr. W. Sundermann, ‘A Manichaean letters in Middle Persian’, in BeDuhn [S1?] [M6935+] [ ] (.)w (…)wgyy wy(…) [… …] | […] (ʿ)y ʾrwʾnʾn (r)[ʾ]y mʾzy(n- d)[rʾn.](..rd) ʾwd y(z)dʾʾ[n …] | […]d byš ʾwd (mʾ)[zynd](r)ʾn pʾdfrʾẖ (ʿ)[y …] | […](.ʾ)g mʾ(zy)ndrʾ[n] ʾwd (…) [± 5](.) dwr ph(ryz)[yd …] |5 […]p gwwg [… …] | brʾdr dwš[yst …| …] (.)s hʾ(n)ysʾn pdy(.) [… | …] 43 The new arrangement and revised translation of the comments on the remnants of the Codex of Mani’s Sundermann’, in Team “Turfanforschung” (eds.), Iranistik und Zentralasienkunde im Gedenken an Werner 173-180 has been followed.",
+   "en": "In the Epistle of Mešun about the two bodies he says, ‘We and you remember and desire (to go) to (our) own place. This wisdom that you have received in one spirit, remain (in it) fittingly. With clothes for one year . and food for one day [...] and in everything [...] reposing on [...] {Lines missing} M5771 + M5772 + M6604 collection of letters and a list of Mani’s (ed.), op. cit. 259-77.43 [S 1?] [M6935+] {End of an epistle?} […] for the […] of the souls he […] the Māzendarān and the gods [… | … with] pain and unwillingly, and the […] punishment of the Māzendarān [… | from] the Māzendarān and […] keep away! [… (5) …] [… most] beloved brother [… | …] that their […] and fragments suggested by I.M.F. Gardner, ‘Some Epistles in Middle Persian as edited by W. Zur lichten Heimat. Studien zu Manichäismus, Sundermann, Iranica 25 (Wiesbaden, 2017),",
+   "zh": ""
+  },
+  {
+   "chapter": "P. 2 = fol. I/V",
+   "verse": "—",
+   "ref": "P. 2 = fol. I/V",
+   "orig": "ʾwd kʾ ʾndr [… | …] (wʾs)yšn ʿy grd(w)[n … |10 …] (r)d hʾnd ẅ wzrg swd ẅ w(h)[ybʾgryẖ … | …]ʾd ẅ pd hrw xrd brhm (ẅ) [… | …] ẅ ʾgnyn hsʾxt hʾnd ʾyg ps[… | …]ẖ pyrʾyg ʿbʿc pd drystyy (ẅ) (ʿ)sp[wrgʾryẖ …] | […]xy(ẖ ʾ)šnwym |15 m)-ʿny ẅ ʿmyn š pd(.) [… …](y (?) °° ẅ pwrsyn(d.) [… | …ʿ](s)psgʾn ẅ mhystgʾn ʿy xwʾ(š)[t](yẖ.)[… | … m](h)r- srʾyʾn hmys hmʾywyn b(r)[ʾdrʾn … | … h](n)zmnʾn ʾwšʾn prystʾd [… | … p](d)yštn ywjdhr … 8 … [… |20 …] ° [S2?] [… pr]w(r)d(g)[y]hʾ ʾw ʾšmʾ(ẖ)[… | …](p)ryhʾn ʾwd (dw)š[ystʾ](n) kym ʾb(ʾ)g xwyš gy(ʾ)[n … | …](h) ʾmtng hyd [hʾm](ʾ)- byr rwšn pydʾg ° [… | … n]cyhym [ ±6 |5 ](przyndʾ)n ʿy (pr)y(st)[g … …](st ẅ) p(ʾ)[… | …]y ʾndrz ʿy yzd[ʾn … | … h](wr)wʾnyẖ prʾc wynʾ(r)[… | …p](r)ʾc |10 wynʾryd (.)[… | …] (.) ʾyg twyc p(d m)[… … p](r)ʾc hrwʾgwc hyʾ(r) bʾš[… | … ʾ](ʾ)wn twxš kw hʾn prwrdg [… | …](.)[ ±5 ](wd ẅ) ʿync ʿy dwdyg ʿyym nw(n) [… | …] (.)yʾy xwndn š pdyš cyydn pd hr(w)[±1](..)[… | …](g)ʾ(ry)ẖ wynʾrdn hʾmʾwxyy(h)[ʾ … |15 …](ʾ)n ʾndwš prmʾ(y qyr)[dn … | …] (x)[w]ʾny[hʾ](d) ʾwt myzd ẅ pʾdʾšn (ʾ)[… | …](.) (ʾmʾ)-hyc pdyš hwšnwd ẅ ʿspʾ[sdʾr … | …] ẅ wynyyr pd dn ʿy drwd ẅ hʾn yzd ʿy ʾ(.)[… | …](b)rʾd ʿym grʾmyg pd hrw prʾ(rwn)[yẖ … |20 …](ʾwt) hrw ptyʾr wzynd ẅ gwm(ʾ)[n … | …] From part of an epistle to the M501p + M882c + M1402 [S1?] [ ±5 ] kw ʾw dwys(t)[ʾn ±2 ]( ±3)[ ±10 | ±3 ](p)d rmyšn ʾwd drwd phryzyyd ° (.)[ 6 ] | [ʾw](ẖ) kw pd hyʾrbwdyẖ ʿy frystgʾn ʾšmʾẖ dwšy(stn) | [±4 ] (d)ryst hyd wd ʾc tn ʾʾrg syrq ʾwd prmyyn |5 [±6 ](. wr)šʾn (krʾn) brʾd ʾwd dwst zn ʾwd rhyg bng | ʾwd (qn)y(cg)[ ±3 ] nyw ʾwd dryst hʾnd ʾwd pd ʿspync ʿy | ʾšmʾẖ dwšystn nyk drwd hʾd ʾwtʾn ʾc",
+   "en": "when among […] the circuit of the wheel […] (10) they will be, and great profit and betterment […] and with all conduct of wisdom […] together they will be made ready. {Final benediction?} Then after [… the adornment again of propriety and […] on you propriety and perfection and [..] I hear [… (15) …] you remain (or Mani or amen). And amen. {Scribal note} And they ask, [… the] bishops and the presbyters of peace- fulness [together] with the hymn-singers, likewise the brethren […] the congregations. And they sent [a letter to the …] holy dwelling (?). [S2?] {The start of a second epistle} [Mani, the apostle of Jesus Aryaman, and […] with me; to the most beloved …] letters / by letter to you […] loved and most dear ones whom I, together with my own soul […] having the same body, – [you are] a visible store of light! {Recapitulation of the theme of the previous letter} […] I [t]each […] children of the apostles (?) [… (5) …] and […] the command of God […] establish [the] commu- nity of the) virtuous (i.e. the hearers). […] he (or ‘you’ pl.) will establish [… (10) …] you also thereupon be a helper everywhere […] so strive that (the first) letter […] and also this second one which I now [send …] to read it and collect with it, and to every […] to establish, and all together [… (15) …] consider to make familiar witn [… shall be] recited; and your reward and recompense [… …] and with that we too [shall be] content and grateful. {Prayer formula} [..] and be preserved by the right-hand of well-being and that God of [truth (?). …] my dear brother, with all righteousness […] and [may you be protected from] (20) all misfortune, harm and doubt […] community in Georgia (?) + M9152 [S1?] […] that to the most beloved […] at ease and healthy you remain. [… …s]o(?) that with the aid of the angels you, the most beloved, [in spirit(?)] are well, and as for the body content and happy. (5) [And at(?)] the limit(?) of Georgia ((wr)šʾn) (?) , borhter and friend, wife and servant, slave and maiden [all(?)] may be well and healthy. And in the",
+   "zh": ""
+  },
+  {
+   "chapter": "S2?",
+   "verse": "—",
+   "ref": "S2?",
+   "orig": "hrwʾgwc ° | rʾmyšn hʾd ʿyg ʾc yzdʾn nyw dybg hyb hndʾcyhyd [S2?] [ ±8 ](…) [±3]( š)g md kw kynz(ʾ) [ ±4 ] | [ ±4 b](xšʾ)ynd kwmʾn cʾwn ʾc dwr pd ʾndq [ 4 ] | ʾʾzrm ʾwd grʾmyg why bwd hym ʾygmʾn ws [±3 ] |5 ʾʾwn ʾbr hndʾcyẖ kw w b(rʾdrʾn) dwš(ys)[tʾn ±5 ](pd) | cšm ʿy nysʾhyn xwd wynyn °° °° b[yc tʾ ](kʾ yk) ʾw | dwdy wynym ʾyg pyštr yk nʾmg ʿy fryẖ ẅ dwšʾrmyẖ | ʾwd dyb ʿy drwd ʾwd bwrdyš- nwhryẖ ʾwd qyrbg ° So 15502 (T III Sogd. in SS: Ed. and tr. C. Reck, ap. W. Sundermann, and a list of Mani’s letters in Middle [V/10] ZY ZKwyh npʾyky frmʾnh ptwyrtʾnt | ʾwnʾkw cw ZY ZKwyh xrδyʾn (?) βrwr- tʾ(k)[w] | (Z)Y tʾδy-(s)[tʾny ](β)rwrtʾy (°° m)[ry] sy-sy-n | βrwrtʾkw sy-sy-n tw p(ykʾ)[ry βrwrtʾkw] | ʾʾβʾ pry βrwrtʾy [... …] |15 pʾpyl prwrtʾkw ...",
+   "en": "hostel of yours, the most beloved, there may be good well-being. And from all sides there may then be for you peace from thegods, and good luck may be allotted. [S2?] [ ] came to … ? … they gr]ant that we, when we from afar through a little [com- fort(?)]. which (is) from you, through your wisdom, piety, love and gentleness, honour and affection, have been bettered, thereupon we many [times(?)] (5) planned that I myself with corporeal eyes might see the most beloved brethren […]. But t[ill then] that we shall see each other, before (that), [we send you] a letter of love and affection, and an epistle of salutation and gratitude and charity. D 271k) ‘A Manichaean collection of letters Persian’, in BeDuhn (ed.), op. cit. 265 [V/10] And in the Scripture(s) they turn away the command such as in the Letter to the Khaldeans (?), and the Letter (on) the Judgment, the Mār Sīsin – Letter (?). [the Letter] (to) Sīsin (on) the Two Im[ages], the Letter (to) Abā (on) Love [ ] (15) the Letter (to) [Ba]bel [ - a long one?]",
+   "zh": ""
+  }
+ ]
 }
