@@ -156,6 +156,11 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--max-minutes", type=int, default=240)
     ap.add_argument("--status", action="store_true")
+    # 🚨 這顆 GPU 是跟通用佇列、別的 session 的單本插班共用的。沒有這個旗標，
+    #    只要開跑那一刻剛好有人在用就回 exit 4、整班收工 —— 夜班排程等於整晚空轉，
+    #    而且 log 只有一行「這班不做了」，看起來像跑過了。預設等，不要直接放棄。
+    ap.add_argument("--wait-gpu-minutes", type=int, default=90,
+                    help="GPU 被別的 MinerU 佔著時最多等幾分鐘（預設 90；0＝不等）")
     args = ap.parse_args()
     if args.status:
         return cmd_status()
@@ -173,13 +178,17 @@ def main() -> int:
         if not s:
             print(f"  卷{vol:02d} 還沒登記，跳過", flush=True)
             continue
-        if (s.get("chunk_count") or 0) > 0:
-            note(vol, True, 0, 0, "DB 已有 chunks，視為完成")
+        # 成品在就別重轉（ledger 掉了也不用重做一次十分鐘）。判準同 transcribed()：
+        # 看 Drive 上的 JSONL，不是 ebooks.chunk_count —— 這條線從不寫 DB，
+        # 拿 chunk_count 判的話這一關永遠不會成立。
+        if (n := transcribed(vol)):
+            note(vol, True, 0, 0, f"成品已在（{n} 段），視為完成")
             continue
         print(f"▶ 卷{vol:02d} 開始：{s.get('title','')[:40]}", flush=True)
         t0 = time.time()
         p = subprocess.run([PY, str(REPO / "scripts" / "mineru_ocr.py"), "run",
-                            "--book", ebook_id(vol)], cwd=REPO)
+                            "--book", ebook_id(vol),
+                            "--wait-gpu-minutes", str(args.wait_gpu_minutes)], cwd=REPO)
         secs = time.time() - t0
         code = p.returncode
         if code == 0:
