@@ -272,8 +272,20 @@ describe('已上架正文與書目的對應', () => {
       const loc = findText(ref.slug)!
       const claimed = loc.text.columns?.en ?? loc.division.columns?.en
       if (claimed === 'none') {
-        // 宣稱沒有英譯的，就必須真的沒有——否則是白白浪費一欄現成的內容。
-        expect(filledCount(doc, 'en'), `${ref.slug} 標 none 卻有英譯`).toBe(0)
+        // 宣稱沒有英譯的，就必須真的沒有**自有**英譯——否則是白白浪費一欄現成的內容。
+        //
+        // 唯一的例外是「代入」：本節原文與他節逐字相同時，avesta_xref_en.py 會把
+        // 那一節的譯文代過來，並在 note 欄標明借自哪裡（Y5／Y63／Y64／Y67／Y72
+        // 與 Yt20 都屬此類）。那不是「來源」——en: 'none' 說的是查無可用來源，
+        // 這句話仍然為真——所以書目維持 none，但欄位不再是空的。
+        //
+        // 🚨 判準不能鬆成「標 none 就不檢查」：那樣一來，解析器沒認出版型而
+        //    整篇空掉的情況（本測試存在的理由）就會躲在這個分支裡不被發現。
+        //    改成逐段點名：有內容的段落，每一段都必須帶代入標示。
+        const unlabelled = doc.segments.filter(
+          s => (s.en ?? '').trim() && !(s.note ?? '').includes('SBE 此處未另譯'))
+        expect(unlabelled.map(s => s.ref),
+               `${ref.slug} 標 none 卻有未標示來源的英譯`).toEqual([])
       } else {
         expect(filledCount(doc, 'en'), `${ref.slug} 英譯欄整篇空`).toBeGreaterThan(0)
       }
