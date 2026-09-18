@@ -105,7 +105,8 @@ def find_middle_json(out_dir: Path) -> Path:
 # ── 跑 MinerU ─────────────────────────────────────────────────────────────
 
 def run_mineru(pdf: Path, out_dir: Path, lang: str = "ch",
-               start: int | None = None, end: int | None = None) -> dict[int, str]:
+               start: int | None = None, end: int | None = None,
+               device: str | None = None) -> dict[int, str]:
     """跑一次 MinerU，回傳 {頁索引: 文字}。頁索引以**送進去的 PDF** 為準。"""
     if not MINERU_EXE.exists():
         raise RuntimeError(f"找不到 MinerU：{MINERU_EXE}（venv 沒建好？跑 check 看看）")
@@ -120,6 +121,10 @@ def run_mineru(pdf: Path, out_dir: Path, lang: str = "ch",
     # 🚨 ModelScope 實測只有 30–40 kB/s，HuggingFace 4.2 MB/s。
     #    但 ~/mineru.json 的 model-source 會蓋過這個環境變數，改那個檔才算數。
     env.setdefault("MINERU_MODEL_SOURCE", "huggingface")
+    # MinerU 的 get_device() 先看這個環境變數，才輪到 torch.cuda.is_available()，
+    # 而 ~/mineru.json 沒有 device 這個鍵，所以這一行是可靠的強制指定。
+    if device:
+        env["MINERU_DEVICE_MODE"] = device
 
     t0 = time.time()
     proc = subprocess.run(argv, env=env, capture_output=True, text=True,
@@ -326,7 +331,8 @@ def cmd_run(args) -> int:
 
     try:
         with tempfile.TemporaryDirectory(prefix="mineru_") as td:
-            pages = run_mineru(pdf, Path(td), lang=args.lang, start=args.start, end=args.end)
+            pages = run_mineru(pdf, Path(td), lang=args.lang, start=args.start, end=args.end,
+                               device=getattr(args, "device", None))
             chunks = to_chunks(pages, page_offset=(args.start or 0))
     except Exception as e:
         msg = str(e)
@@ -513,6 +519,9 @@ def main() -> int:
     r.add_argument("--lang", default="ch")
     r.add_argument("--start", type=int, help="起始頁（0-based）")
     r.add_argument("--end", type=int, help="結束頁（0-based，含）")
+    r.add_argument("--device", choices=["cpu", "cuda"],
+                   help="強制指定運算裝置。--device cpu 不碰 GPU，因此**不排 GPU 鎖**，"
+                        "可以在別人的夜班佇列跑著的時候插隊做幾頁的小活")
     r.add_argument("--wait-gpu-minutes", type=int, default=0,
                    help="GPU 被別的 MinerU 佔著時最多等幾分鐘（預設 0＝不等，直接回 4）。"
                         "單本插班在夜間佇列後面時要給，不然只會立刻回 4")
@@ -547,7 +556,11 @@ def main() -> int:
         keep_awake()
     except Exception:
         pass
-    if not acquire_lock(getattr(args, "wait_gpu_minutes", 0)):
+    # 鎖是為了那張 6GB 的卡：兩個一起擠會 OOM。跑 CPU 的不佔顯存，不必排隊，
+    # 也不該把鎖從別人手上接過來。
+    if getattr(args, "device", None) == "cpu":
+        print("  （--device cpu：不佔 GPU，略過 GPU 鎖）", flush=True)
+    elif not acquire_lock(getattr(args, "wait_gpu_minutes", 0)):
         return 4
     try:
         return args.func(args)
