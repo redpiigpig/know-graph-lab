@@ -136,6 +136,12 @@ PLACES_WANTED = {
     "Airyanem Vaejah", "Bisotun", "Naqsh-e Rostam", "Paikuli", "Yazd", "Kerman",
     "Sanjan", "Navsari", "Susa", "Ecbatana", "Media", "Parthia", "Persepolis",
     "Achaemenid Empire", "Sasanian Empire", "Babylon", "Nineveh", "India",
+    # 🚨 七大洲（karšvar）。2026-09-18 補——Yt 12 整章逐一列舉七洲，
+    #    而這七個名字不在白名單裡，模型只好原樣留英文，
+    #    造成「無論你，聖拉什努啊！，在 Karshvare Arezahi」這種半英半中的譯文 25 段。
+    #    定名依元文琪〈梅赫爾·亞什特〉十五（Yt 10.15）七洲並列處。
+    "Arezahi", "Savahi", "Fradadhafshu", "Vidadhafshu",
+    "Vourubareshti", "Vourujareshti", "Xvaniratha",
 }
 
 # 詞庫收的是專名；這些是萬迪達德高頻的**普通名詞**，其定譯同樣不能逐批各譯各的。
@@ -168,6 +174,11 @@ EXTRA = {
     # 🚨 這一組是實測補的。首輪試譯 Vd 1 時，詞庫鍵 "Airyanem Vaejah" 比不上
     #    英譯寫的 "Airyana Vaeja"，模型就自己譯成「艾利亞納‧維賈」——
     #    與詞庫定的「艾里亞納‧瓦埃賈」不同，而版面完全正常。
+    # 七洲的通名與伊瑪的城堡。詞庫收在 theological_terms，本腳本只拉 deities／
+    # place_names，故列在此處補上——EXTRA 已是 setdefault，不會蓋掉詞庫。
+    "Karshvar": "洲",
+    "Karshvare": "洲",
+    "Vara": "城堡（伊瑪所築；元文琪意譯，非音譯）",
     "Airyana Vaeja": "艾里亞納‧瓦埃賈",
     "Spitama": "斯皮塔瑪",
     "Ahriman": "安格拉‧曼紐",
