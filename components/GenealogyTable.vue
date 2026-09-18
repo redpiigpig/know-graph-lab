@@ -117,6 +117,40 @@
               <span v-for="s in b.support" :key="s" class="inline-block font-mono text-[11px] bg-gray-100 text-gray-700 px-1.5 py-0.5 rounded mr-1">{{ s }}</span>
             </div>
             <p class="text-gray-600 leading-relaxed pt-1">{{ b.rationale }}</p>
+
+            <!-- 逐段清單：幾節到幾節 · 主題 · 來源 -->
+            <div v-if="segs(b.code)" class="mt-4">
+              <div class="text-[11px] font-mono uppercase tracking-wide text-gray-400 mb-1.5">
+                逐段來源　{{ segs(b.code).rows.length }} 段
+              </div>
+              <p v-if="segs(b.code).meta.layers" class="text-xs text-gray-500 mb-2 leading-relaxed">
+                {{ segs(b.code).meta.layers }}
+              </p>
+              <div class="border border-gray-200 rounded-lg overflow-hidden bg-white">
+                <table class="w-full text-[13px]">
+                  <thead class="bg-gray-50 text-[10.5px] uppercase tracking-wide text-gray-500">
+                    <tr>
+                      <th class="text-left px-3 py-1.5 font-medium whitespace-nowrap">節</th>
+                      <th class="text-left px-3 py-1.5 font-medium">主題</th>
+                      <th class="text-left px-3 py-1.5 font-medium whitespace-nowrap">來源</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr v-for="r in segs(b.code).rows" :key="r.ref" class="border-t border-gray-100 align-top">
+                      <td class="px-3 py-1.5 font-mono text-[12px] text-gray-500 whitespace-nowrap">{{ r.ref }}</td>
+                      <td class="px-3 py-1.5 text-gray-800">
+                        {{ r.title }}
+                        <div v-if="r.note" class="text-xs text-gray-500 mt-0.5 leading-relaxed">{{ r.note }}</div>
+                      </td>
+                      <td class="px-3 py-1.5 whitespace-nowrap">
+                        <span v-for="c in r.src" :key="c"
+                          class="inline-block font-mono text-[11px] bg-emerald-50 text-emerald-800 px-1.5 py-0.5 rounded mr-1">{{ c }}</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
         </details>
       </div>
@@ -246,6 +280,8 @@ const bookFilters = computed(() => [
   { k: 'div', l: `年代分歧 ${data.books.filter((b: any) => b.divergence).length} 卷` },
   ...[...new Set(data.books.map((b: any) => b.editor))].map((e) => ({ k: e as string, l: e as string })),
 ])
+const segs = (code: string) => data.segments?.[code] || null
+
 const filteredBooks = computed(() => data.books.filter((b: any) =>
   bookFilter.value === 'all' ? true : bookFilter.value === 'own' ? b.own : bookFilter.value === 'div' ? b.divergence : b.editor === bookFilter.value))
 

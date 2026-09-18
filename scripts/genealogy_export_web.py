@@ -67,8 +67,25 @@ apoc.sort(key=lambda x: (x["date"][0], x["date"][1]))
 
 gc = json.loads((D / "gnostic-corpus.json").read_text(encoding="utf-8"))
 
+# ── 逐段清單：每卷「幾節到幾節、主題、來源」 ──
+# 使用者 2026-09-18：「我原本以為你會列出馬太福音簡介，然後下面有幾節到幾節是屬於
+# 什麼來源」——資料一直都在 segments/*.json，先前只是沒有輸出到網站層。
+segments = {}
+for f in sorted((D / "segments").glob("*.json")):
+    doc = json.loads(f.read_text(encoding="utf-8"))
+    rows = []
+    for ref, seg in doc["segments"].items():
+        row = {"ref": ref, "title": seg["title"], "src": seg["sources"]}
+        if seg.get("note"):
+            row["note"] = seg["note"]
+        rows.append(row)
+    segments[f.stem] = {"meta": {k: v for k, v in doc["meta"].items()
+                                 if k in ("note", "layers", "boundaries")},
+                        "rows": rows}
+
 payload = {
     "generatedBy": "scripts/genealogy_export_web.py",
+    "segments": segments,
     "counts": {
         "verses": total, "segments": sum(len(v) for v in peri.values()), "books": len(defs),
         "apocrypha": len(apoc), "gnostic": 287, "bibliography": len(bib),
@@ -105,4 +122,5 @@ payload = {
 OUT.write_text(json.dumps(payload, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 size = len(OUT.read_text(encoding="utf-8"))
 print(f"逐節 {total} 節 · 段落 {payload['counts']['segments']} · 典外 {len(apoc)} · 書目 {len(bib)}")
+print(f"逐段清單 {sum(len(v['rows']) for v in segments.values())} 列，涵蓋 {len(segments)} 卷")
 print(f"寫出 → {OUT.relative_to(ROOT)}（{size/1024:.0f} KB）")
