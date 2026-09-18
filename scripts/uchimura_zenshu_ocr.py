@@ -172,17 +172,18 @@ def main() -> int:
         if time.time() > deadline:
             print("⏸ 時間到，收工（下一班接著跑）", flush=True)
             break
-        if vol in done:
+        # 🚨 **成品才是事實，帳本不是。** 這裡本來先看 ledger 有沒有記著「做過了」
+        #    就 continue，於是成品被刪掉或壞掉要重轉時，它照樣跳過、印「轉錄了 0 卷」
+        #    就收工——看起來像沒事做，其實是該做的沒做。2026-09-18 卷 11 因為簡繁
+        #    轉換毀掉要重轉，就卡在這一關。判準一律用 transcribed()（Drive 上的
+        #    JSONL 段數），ledger 只拿來決定要不要補記一筆。
+        if (n := transcribed(vol)):
+            if vol not in done:
+                note(vol, True, 0, 0, f"成品已在（{n} 段），視為完成")
             continue
         s = db_state(vol)
         if not s:
             print(f"  卷{vol:02d} 還沒登記，跳過", flush=True)
-            continue
-        # 成品在就別重轉（ledger 掉了也不用重做一次十分鐘）。判準同 transcribed()：
-        # 看 Drive 上的 JSONL，不是 ebooks.chunk_count —— 這條線從不寫 DB，
-        # 拿 chunk_count 判的話這一關永遠不會成立。
-        if (n := transcribed(vol)):
-            note(vol, True, 0, 0, f"成品已在（{n} 段），視為完成")
             continue
         print(f"▶ 卷{vol:02d} 開始：{s.get('title','')[:40]}", flush=True)
         t0 = time.time()

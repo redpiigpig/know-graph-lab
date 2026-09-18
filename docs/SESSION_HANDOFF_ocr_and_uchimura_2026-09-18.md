@@ -53,8 +53,8 @@ Start-Process -FilePath 'C:\Users\user\AppData\Local\Python\bin\python.exe' `
 | PDF | ✅ 20/20，18,074 頁 / 0.88 GB，平均 45 MB |
 | Drive | `G:\我的雲端硬碟\資料\知識圖工作室\全集\神學\內村鑑三\岩波全集（1932-33）\` |
 | ebooks | ✅ 20 筆，`collection=collected-works`，id＝`d0000001-0000-4000-8000-0000000000NN` |
-| OCR | 🔄 **轉錄中**（11:47 起跑，PID 26320，卷 01 進行中）。起跑前 0/20 |
-| 排程 | `KGL_Uchimura_Zenshu_OCR` 每晚 01:00（Ready，下次 09-19 01:00）；20 卷全完成會自己 DISABLE |
+| OCR | ✅ **20/20 完成**（17,498 段／1,240 萬字），`parsed_at` 20/20、`parse_error` 全清 |
+| 排程 | ✅ **已 DISABLE**（20 卷全完成，2026-09-18 收工）|
 | 昨晚那班 | 結果 255＝bat 中文被 cmd 切碎，**已修**（改純 ASCII） |
 
 ### 🚨 這 20 卷不在通用佇列的名單裡（查過了，別再懷疑）
@@ -74,27 +74,44 @@ C:/Users/user/AppData/Local/Python/bin/python.exe scripts/uchimura_zenshu_ocr.py
 cat scripts/state/mineru_gpu.lock          # 內容＝PID + 取得時間
 ```
 
-### 20 卷轉完之後（最容易被忘記的一步）
+### ✅ 書目已重建（2026-09-18 收工）
 
 ```bash
-C:/Users/user/AppData/Local/Python/bin/python.exe scripts/seisho_kenkyu_index.py --source mineru
+C:/Users/user/AppData/Local/Python/bin/python.exe scripts/seisho_kenkyu_index.py   # 預設 --source both
 C:/Users/user/AppData/Local/Python/bin/python.exe scripts/seisho_kenkyu_build.py
 ```
 
-**驗收看數字有沒有變好，不是「跑完了」。** 2026-09-18 08:10 用
-`--source archive --report` 量到的基準：
+站上 `public/content/collected-works/seisho-kenkyu.json`：
+
+| | 之前（archive 粗 OCR）| 現在（雙源合併）|
+|---|---|---|
+| 有篇目的號 | 345 | **350** |
+| 缺號 | 12 | **7**：[33,61,64,65,66,70,72] |
+| 篇目數 | 1302 | **1353**（archive 1213／mineru 140）|
+
+### 🚨 「比較準的 OCR」不等於「抽得比較多」——別把 mineru 當升級版換掉 archive
+
+20 卷轉完後實測，MinerU **單獨用比 archive.org 的粗 OCR 還差**：
 
 ```
-總筆數 1327｜相異號 349／357｜有年月且對得上 200｜號與年月打架 61
-沒出現過的號 8 個：[64, 65, 66, 70, 72, 131, 137, 336]
+archive.org djvu   1327 筆｜相異號 349｜缺 8
+本機 MinerU         937 筆｜相異號 339｜缺 18   ← 比粗 OCR 還少
+逐號取較完整者      1378 筆｜相異號 352｜缺 5   ← 比兩邊都好
 ```
 
-目標：相異號 **> 349**、打架 **< 61**、缺號清單變短。
-另外**卷 01、15、16、17、18、20 這次抽出 0 筆**——日記兩卷本來就是連載自本誌，
-抽不到八成是那幾卷年譜格式不同，拿 MinerU 的文字再看一次。
+原因：MinerU 是版面感知的，年譜那種表列會被切成多行，而 `parse_text` 逐行比對，
+一斷就不匹配；archive 的 djvu 純文字反而整行連著。兩份是同一批書的**獨立** OCR，
+錯的地方不一樣，合起來才補得滿。只有 mineru 抓到的號 [131,137,336]，
+只有 archive 抓到的 13 個。所以 `--source both` 已設為預設。
 
-（站上 `public/content/collected-works/seisho-kenkyu.json` 目前是 archive.org 粗 OCR 版：
-357 號、1,302 篇、`issuesWithItems` 345、`missingIssues` 12 個。）
+🚨 **挑哪一邊要用下游的判準。** 第一版按「筆數」比大小，結果第 344 號 archive 抽到
+`''`、mineru 抽到「回顧三十年」，1:1 平手偏向 archive，整個號就在 build 丟碎片那一步
+無聲消失。改成先比「清乾淨後有兩字以上的篇名數」才輪到總筆數。
+
+剩下 7 個缺號的原因分兩種，都不是待辦：[33,61] 兩邊都只剩一個碎片字（年譜本身斷在那）；
+[64,65,66,70,72] 兩份 OCR 都沒有，是真的沒被年譜引用到。
+卷 01、15–18、20 抽得少也不是 bug：卷 01 是 1900 年創刊**前**的初期著作，
+全卷 55 行含「號」、80 行含「研究」，但兩者同時出現的是 **0 行**。
 
 ---
 
@@ -104,7 +121,7 @@ C:/Users/user/AppData/Local/Python/bin/python.exe scripts/seisho_kenkyu_build.py
 
 | 項目 | 數字 |
 |---|---|
-| 佇列總數 | **122 本**＝通用 102 ＋ 內村 20（含放回的 14 本誤殺）|
+| 佇列總數 | **111 本**（內村 20 卷已全數離開佇列；含放回的 14 本誤殺）|
 | 通用那批體積 | **14.7 GB**，中位數 119 MB |
 | 起始規模 | 347 本 / 24.8 GB（2026-09-17 00:23 起跑） |
 | 已完成 | 約 214 本 |
@@ -213,7 +230,30 @@ foreach ($id in $snap.Keys) { $pr = Get-Process -Id $id -EA SilentlyContinue
     一行 log 都不寫）；**Python 腳本開頭要 `sys.stdout.reconfigure(encoding="utf-8")`**
     （主控台是 cp950，印一個「✓」就整支掛掉）。
 
-11. **原刊頁碼從缺是事實不是待辦。** 內村全 20 卷、1,571 行出處紀錄裡「頁」字零次；
+11. 🚨 **簡繁轉換不可以套在日文上，而且要以整本為單位判。**
+    入庫路徑（`ocr_with_gemini.write_jsonl` → `_trad`）會做簡→繁。內村是日文，
+    第 11 卷就這樣入庫了，實測 0.78% 的字被改動、改的全是要害：
+
+        云ふ → 雲ふ 604 處（「云ふ」＝說）      余輩 → 餘輩 61 處（「余」＝我）
+        岩波書店 → 巖波書店      面→麵   里→裡   干→幹   却→卻   淀→澱（毀掉「淀橋」）
+
+    **這種錯字數、段數、頁碼、簡體殘留率全部正常**，結構性稽核一律看不出來。
+    已修（`11f77fd7`＋`8d501b30`）：用假名偵測，且 `book_is_japanese()` **整本算一次**
+    ——逐段判會漏掉日文書裡本來就沒假名的扉頁、英文目次、年表（20 卷有 6 卷中招）。
+    第 11 卷原檔已被覆寫救不回，重轉過了。要驗一卷乾不乾淨就數這個：
+    `云ふ` 應該遠多於 `雲ふ`、`余輩` 應該遠多於 `餘輩`、`巖波` 應該是 0。
+
+12. 🚨 **成品才是事實，帳本不是。** `uchimura_zenshu_ocr.py` 本來先看 ledger 有沒有記
+    「做過了」就跳過，於是成品被刪掉要重轉時它照樣跳過、印「轉錄了 0 卷」收工——
+    看起來像沒事做，其實是該做的沒做。判準一律用 `transcribed()`（Drive 上的 JSONL
+    段數）。同理 `--status` 與 `uchimura_zenshu_done.py` 本來查 `ebooks.chunk_count`，
+    但這條線從不寫 DB，所以 20 卷全轉完也永遠印「待轉錄 20 卷」、排程永遠不會自己關。
+
+13. 🚨 **第三條管線不吃 GPU 鎖。** `scripts/ocr_cct_apocrypha.py`（基督教典外文獻 10 冊）
+    直接呼叫 `mineru.exe`，完全沒有 `acquire_lock()`，所以 `mineru_ocr.py` 那把鎖擋不到它，
+    兩支會一起擠同一張 6GB 卡。2026-09-18 18:40 實測撞上。要嘛等它跑完，要嘛替它補上鎖。
+
+14. **原刊頁碼從缺是事實不是待辦。** 內村全 20 卷、1,571 行出處紀錄裡「頁」字零次；
     年譜只記篇名／號數／年月。頁面已把「原刊頁碼｜從缺」寫在統計列，
     **不要**為了好看去補流水號——假頁碼比沒有更糟。
 
