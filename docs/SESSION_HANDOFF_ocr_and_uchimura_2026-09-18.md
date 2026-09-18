@@ -249,9 +249,12 @@ foreach ($id in $snap.Keys) { $pr = Get-Process -Id $id -EA SilentlyContinue
     段數）。同理 `--status` 與 `uchimura_zenshu_done.py` 本來查 `ebooks.chunk_count`，
     但這條線從不寫 DB，所以 20 卷全轉完也永遠印「待轉錄 20 卷」、排程永遠不會自己關。
 
-13. 🚨 **第三條管線不吃 GPU 鎖。** `scripts/ocr_cct_apocrypha.py`（基督教典外文獻 10 冊）
-    直接呼叫 `mineru.exe`，完全沒有 `acquire_lock()`，所以 `mineru_ocr.py` 那把鎖擋不到它，
-    兩支會一起擠同一張 6GB 卡。2026-09-18 18:40 實測撞上。要嘛等它跑完，要嘛替它補上鎖。
+13. **看到「有別的 MinerU 在跑」先確認它走的是 GPU 還是 CPU。**
+    `scripts/ocr_cct_apocrypha.py`（基督教典外文獻 10 冊）直接呼叫 `mineru.exe`
+    且**沒有** `acquire_lock()`——但那是對的：它設了 `MINERU_DEVICE_MODE="cpu"`，
+    不佔顯存所以本來就不必排鎖（小活不必跟夜班搶那張卡）。
+    光看「呼叫 mineru.exe 卻沒取鎖」會誤判成繞過鎖；判準看 `MINERU_DEVICE_MODE`，
+    或直接連續取樣 `nvidia-smi`——CPU 那種一路 0 MiB。
 
 14. **原刊頁碼從缺是事實不是待辦。** 內村全 20 卷、1,571 行出處紀錄裡「頁」字零次；
     年譜只記篇名／號數／年月。頁面已把「原刊頁碼｜從缺」寫在統計列，
