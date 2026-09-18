@@ -156,6 +156,49 @@ def _drop_page_headings(page: str) -> str:
     return re.sub(r"<H[12]\b[^>]*>.*?</H[12]>", " ", out, flags=re.I | re.S)
 
 
+#: 頁尾站內導覽的起頭行。中文那份是翻譯時一併被譯過去的，
+#: 破折號有半形與全形兩種寫法，故用「包含」比對，不寫死整行。
+SITE_NAV_MARKS = ("Zoroastrian Archives", "祆教檔案")
+#: 導覽行都很短（實測最長 30 字：'Avesta -- Zoroastrian Archives'）。
+SITE_NAV_MAX_LINE = 30
+
+
+def drop_site_nav(text: str) -> str:
+    """去掉頁尾的站內導覽區塊（Contents／Prev／Next／Glossary 那一串）。
+
+    avesta.org 每頁頁尾都有這一段，抓正文時會被吃進**該章最後一節**，
+    然後跟著正文一起被翻成中文存進去：實測 10 個 Yasht 檔、18 個欄位，
+    站上讀到最後一節就會看到「阿維斯陀 -- 祆教檔案／目錄／上一頁／詞彙表」。
+
+    🚨 **逐行剝，而且只剝結尾那一段連續的短行**，見
+       [[feedback_boilerplate_strip_lines_not_blocks]]：整塊丟會連黏在
+       同一塊裡的正文一起刪掉。這裡的保險是「導覽行之後不可有長行」——
+       若某節正文真的提到 Zoroastrian Archives，後面會接正常長度的句子，
+       就不動它。
+
+    >>> drop_site_nav("holy Ones.\\nAvesta -- Zoroastrian Archives\\nContents"
+    ...               "\\nPrev\\nYt17\\nNext\\nAvestan\\nGlossary")
+    'holy Ones.'
+    >>> drop_site_nav("聖潔的眾神。\\n阿維斯陀 —— 祆教檔案\\n目錄\\n上一\\nYt13\\n下一\\n詞彙表")
+    '聖潔的眾神。'
+    >>> drop_site_nav('no navigation here')
+    'no navigation here'
+
+    後面還有長行時不動——那不是頁尾導覽。
+
+    >>> drop_site_nav("a\\nZoroastrian Archives holds a copy of this manuscript "
+    ...               "in its collection.")[:1]
+    'a'
+    """
+    lines = text.split("\n")
+    for i, ln in enumerate(lines):
+        if any(m in ln for m in SITE_NAV_MARKS):
+            if all(len(x.strip()) <= SITE_NAV_MAX_LINE for x in lines[i:]):
+                return "\n".join(lines[:i]).rstrip()
+            break
+    return text
+
+
 def _absorb_verses(text: str, verses: dict[int, str], last: int) -> int:
     """把一格文字按行首「N.」切成數節塞進 verses，回傳最後看到的節號。
 
@@ -641,7 +684,7 @@ def build_chapter(spec: BookSpec, chap: int, en: dict[int, str],
             "ref": f"{spec.siglum_prefix} {chap}.{start}"
                    + ("" if start == end else f"-{end}"),
             "orig": orig_text,
-            "en": "\n".join(en_parts),
+            "en": drop_site_nav("\n".join(en_parts)),
             "zh": "",
         })
     title = CHAPTER_TITLES.get(spec.key, {}).get(chap)
