@@ -287,6 +287,10 @@ def main():
     ap.add_argument("--local-draft-status", action="store_true")
     ap.add_argument("--shard", default="",
                     help="i/n：只翻第 i、i+n、i+2n… 節，用來把一卷切給多個行程平行跑")
+    # 多條 shard 同時做同一卷時，每條都「每 N 節整卷重傳一次」，上傳量會乘上
+    # 行程數。切片長跑時調大（例 60）把整卷寫入量壓回來；預設 12 維持原行為。
+    ap.add_argument("--reupload-every", type=int, default=12,
+                    help="每幾節整卷重傳一次（0＝翻完才傳）")
     args = ap.parse_args()
 
     by_slug = {w["slug"]: w for w in WORKS}
@@ -329,7 +333,8 @@ def main():
             tp = make_sbe_engine(trad, backend=args.backend)
             print(f"▶ translate {w['slug']} — {w['title']} [{trad}]", flush=True)
             ma.ingest_work(w)  # idempotent; keeps English readable + cache fresh
-            ma.translate_work(w, tp, shard=shard, engine_name=args.backend)
+            ma.translate_work(w, tp, shard=shard, engine_name=args.backend,
+                              reupload_every=args.reupload_every)
             if not args.no_upload:
                 ma.assemble_and_upload(w)
 
