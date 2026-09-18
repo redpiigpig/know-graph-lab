@@ -20,7 +20,8 @@ const collect = arr => { for (const n of arr) { codes.add(n.code); if (n.sub) co
 collect(tree.layer1); collect(tree.layer2); collect(tree.layer3)
 
 const problems = []
-let total = 0, withContent = 0, ownJudgment = 0, emptyActual = 0, beyond = 0
+let total = 0, withContent = 0, ownJudgment = 0, emptyActual = 0, beyond = 0, xref = 0
+const noText = []
 const trajCount = {}
 const byNTA = {}
 
@@ -34,7 +35,8 @@ for (const [label, f] of files) {
     if (!d.place) problems.push(`${slug}: 缺 place`)
     if (!d.place_kind) problems.push(`${slug}: 缺 place_kind`)
     if (!d.date || d.date.length !== 2) problems.push(`${slug}: 缺 date 區間`)
-    if (d.sections > 0) withContent++
+    if (d.sections > 0) withContent++; else noText.push(slug)
+    if (d.text_in) xref++
     if (d.own_judgment) ownJudgment++
     if (d.beyond_scope) beyond++
     const actual = d.actual || []
@@ -49,6 +51,17 @@ for (const [label, f] of files) {
       else trajCount[c] = (trajCount[c] || 0) + 1
     }
     for (const k of d.support || []) if (!bib[k]) problems.push(`${slug}: support 查無書目 ${k}`)
+    // 🚨 使用者的規定：有歸屬主張就要說得出憑什麼——引學者，或標明是本表判斷並寫出依據。
+    //    2026-09-18 查出 9 種兩邊都沒有，而這支稽核當時照樣印「全部通過」：
+    //    有欄位不等於有內容，稽核要問的是規定本身，不是欄位存在與否。
+    if (actual.length && !(d.support || []).length && !d.own_judgment) {
+      problems.push(`${slug}: 有 actual ${actual.join('/')} 卻既無 support 也沒標 own_judgment`)
+    }
+    // 只在「自行判斷**而且真的掛了代號**」時要求寫得出依據。
+    // actual 留空的 own_judgment 是「材料不足、決定不填」，那一句話就說得完。
+    if (d.own_judgment && actual.length && (d.rationale || '').length < 40) {
+      problems.push(`${slug}: 掛了 ${actual.join('/')} 又標 own_judgment，但 rationale 只有 ${(d.rationale || '').length} 字`)
+    }
     const nta = d.NTA || '(未分類)'
     byNTA[nta] = (byNTA[nta] || 0) + 1
   }
@@ -56,7 +69,8 @@ for (const [label, f] of files) {
 }
 
 console.log(`\n合計 ${total} 種`)
-console.log(`  站上有全文      ${withContent} / ${total}`)
+console.log(`  站上有全文      ${withContent} / ${total}　（其中 ${xref} 種全文在 /gnostic 不在 /apocrypha）`)
+console.log(`  仍無全文        ${noText.length}：${noText.join('、') || '無'}`)
 console.log(`  本表自行判斷    ${ownJudgment}`)
 console.log(`  actual 留空     ${emptyActual}（材料不足，已於 rationale 說明）`)
 console.log(`  逾 325 只列不計  ${beyond}`)

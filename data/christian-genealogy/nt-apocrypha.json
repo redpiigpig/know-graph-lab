@@ -197,8 +197,8 @@
         "U2"
       ],
       "support": [],
-      "own_judgment": false,
-      "rationale": "原為《保羅行傳》的一部分，後獨立流傳。🚨 亞美尼亞與敘利亞教會一度列為正典——正典邊界不是一條線而是各地各畫一條。內容反對否認肉身復活者。"
+      "own_judgment": true,
+      "rationale": "掛 U2（各地保羅教會）而非 U1（保羅本人）：它原是《保羅行傳》的一部分，形式是哥林多人來信與保羅回信的往返，保存的是二世紀某個保羅教會的爭論——反對否認肉身復活者——而不是保羅本人的記憶。🚨 亞美尼亞與敘利亞教會一度列為正典：正典邊界不是一條線，而是各地各畫一條。"
     },
     "q-laodicea": {
       "title": "老底嘉書",
@@ -282,8 +282,8 @@
       ],
       "content_missing": true,
       "support": [],
-      "own_judgment": false,
-      "rationale": "彼拉多文獻圈之一；站上尚無全文。"
+      "own_judgment": true,
+      "rationale": "掛 σ3（彼拉多文獻圈）是本表自己的分群：這一圈文獻沒有共同作者，把它們歸為一支靠的是共同工程——把羅馬當局改寫成耶穌的同情者、把責任推給猶太議會。本篇是其中最短的一件，內容即彼拉多向皇帝報告。"
     },
     "pilate-tiberius": {
       "title": "彼拉多給提庇留的信",
@@ -305,8 +305,8 @@
       ],
       "content_missing": true,
       "support": [],
-      "own_judgment": false,
-      "rationale": "彼拉多文獻圈之一；站上尚無全文。"
+      "own_judgment": true,
+      "rationale": "同屬 σ3 彼拉多文獻圈，判準見該節點：以「向羅馬皇帝呈報」為體裁，把行刑者寫成不得已的旁觀者。本篇的收信人是提庇留。"
     },
     "pilate-herod": {
       "title": "彼拉多與希律的信函",
@@ -328,8 +328,8 @@
       ],
       "content_missing": true,
       "support": [],
-      "own_judgment": false,
-      "rationale": "彼拉多文獻圈之一；站上尚無全文。🚨 這一圈文獻的共同工程是把羅馬當局改寫成耶穌的同情者，把責任推給猶太議會——σ 群體的正典外後代走到後來成了推卸責任的裝置。"
+      "own_judgment": true,
+      "rationale": "同屬 σ3 彼拉多文獻圈。與其他幾篇不同的是這一篇是往返書信，把希律寫成悔罪者——推卸責任的裝置又往前推了一步。"
     },
     "peter-philip": {
       "title": "彼得給腓力的信",
@@ -429,7 +429,7 @@
     },
     "apoc-peter-cop": {
       "title": "科普替語諾斯底的彼得啟示錄",
-      "sections": 0,
+      "sections": 66,
       "date": [
         200,
         300
@@ -450,7 +450,11 @@
         "Layton 2021"
       ],
       "own_judgment": false,
-      "rationale": "拿戈瑪第第七冊，與希臘文《彼得啟示錄》是完全不同的書。內容是彼得看見「活的耶穌」在十字架上方歡笑，被釘的只是肉體替身——幻影派的關鍵文本。站上尚無全文。"
+      "rationale": "拿戈瑪第第七冊，與希臘文《彼得啟示錄》是完全不同的書。內容是彼得看見「活的耶穌」在十字架上方歡笑，被釘的只是肉體替身——幻影派的關鍵文本。 全文在 /gnostic（apocalypse-of-peter，66 節），不在 /apocrypha——典外表的 sections 只數後者，所以先前顯示為無全文。",
+      "text_in": {
+        "corpus": "gnostic",
+        "slug": "apocalypse-of-peter"
+      }
     },
     "apoc-paul": {
       "title": "保羅啟示錄（Visio Pauli）",
@@ -475,7 +479,7 @@
     },
     "apoc-paul-cop": {
       "title": "科普替語諾斯底的保羅啟示錄",
-      "sections": 0,
+      "sections": 22,
       "date": [
         200,
         300
@@ -496,7 +500,11 @@
         "Layton 2021"
       ],
       "own_judgment": false,
-      "rationale": "拿戈瑪第第五冊，與拉丁《保羅啟示錄》不同書。站上尚無全文。"
+      "rationale": "拿戈瑪第第五冊，與拉丁《保羅啟示錄》不同書。 全文在 /gnostic（apocalypse-of-paul，22 節），不在 /apocrypha——典外表的 sections 只數後者，所以先前顯示為無全文。",
+      "text_in": {
+        "corpus": "gnostic",
+        "slug": "apocalypse-of-paul"
+      }
     },
     "apoc-thomas": {
       "title": "多馬啟示錄",
@@ -700,8 +708,8 @@
         "σ3"
       ],
       "support": [],
-      "own_judgment": false,
-      "rationale": "彼拉多文獻圈的一員。亞利馬太約瑟在正典裡是議會成員中出面收屍的那一位（可 15:43），這一圈文獻把他發展成完整的敘事者。"
+      "own_judgment": true,
+      "rationale": "掛 σ3 的依據在人物線而非體裁：亞利馬太約瑟在正典裡是議會成員中出面收屍的那一位（可 15:43），σ1 議會內同情者記的就是他；這一圈文獻把他從一個動作發展成完整的敘事者，所以歸在同一支的正典外延伸 σ3。"
     },
     "seventy-elders": {
       "title": "七十長老福音",
@@ -766,8 +774,8 @@
       ],
       "beyond_scope": true,
       "support": [],
-      "own_judgment": false,
-      "rationale": "⚠️ 年代遠逾 325。彼拉多文獻圈最晚的一支，已轉為提圖斯毀耶路撒冷的復仇故事。"
+      "own_judgment": true,
+      "rationale": "彼拉多文獻圈最晚的一支，已轉為提圖斯毀耶路撒冷的復仇故事——推責的工程走到極端，成了報應敘事。掛 σ3 是循這條發展線，不是文本自身有署名。⚠️ 年代遠逾 325。"
     },
     "john-apocryphon": {
       "title": "約翰藏經（Apocryphon of John）",
