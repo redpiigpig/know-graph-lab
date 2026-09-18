@@ -1141,6 +1141,40 @@ OPF 本身壞掉才退回「所有 xhtml 照檔名排序」。`BadZipFile` 一�
 
 ---
 
+## Workflow H0 — 書裡有目次就別叫 LLM 推（2026-09-18）
+
+`fix_book_structure.py recover` 是拿 Gemini **推**章節，該用在沒有目次頁的書。
+但掃描書的目次多半就印在書裡、OCR 也轉出來了——那份表比模型推的準，而且不吃配額。
+[`scripts/toc_from_toc_pages.py`](../../../scripts/toc_from_toc_pages.py) 走這條：
+
+```bash
+python scripts/toc_from_toc_pages.py --book <id> --toc-pages 4-6            # 只看
+python scripts/toc_from_toc_pages.py --book <id> --toc-pages 4-6 --apply    # 寫回＋推 R2
+python scripts/toc_from_toc_pages.py --book <id> --toc-pages 4-6 \
+       --extra "292=譯後記" --apply          # 標題跟內文黏成一段時人工補，照樣過驗證閘
+```
+
+難處不在解析目次，在把「目次上印的頁碼」換算成「PDF 第幾張」。靠 `printed_page`，但——
+
+🚨 **不能直接查表**：章首頁多半不印頁碼，於是最需要的那幾個進入點恰好查不到
+（《民主妙法》五章的起始頁 53/75/127/175/205 全部沒有）。改用**最近的有頁碼鄰居**
+推算，同段落頁碼連號。
+
+🚨 **推算完一定要驗**：閘是「推算出的那一頁，內容裡真的找得到這個標題」，
+找不到就在 ±3 頁內挪，都找不到就丟掉並印出來。沒有這道閘，目次 OCR 讀錯一個數字
+（實測「索引…300」讀成「3003」）就會讓整段內容掛到別章名下——側欄看起來正常、
+點進去是別章，正是「看起來成功的失敗」。
+
+三種目次 OCR 壞法各有救援，全部照樣過閘：頁碼超出範圍 → 拿數字子字串當候選；
+整行沒頁碼 → 拿標題到內文裡找第一次出現；標題被吃掉 → 用該頁首行當章名。
+
+🚨 **首條目之前那幾頁的舊值要清掉**：standardize 會從目次頁的內文推出「第三章…」
+這種 chapter_path，不清就是目次頁掛著別章的名字。目次自己那幾頁由 `--toc-pages`
+指定，直接標「目次」（reader 會把連續同名收成一條）。
+
+《民主妙法》實測：43 條解出、46 條對上（含三條救援）、0 條掛錯，
+品質分級 `FIX_TOC` → **GOOD**，零 Gemini 呼叫。
+
 ## Workflow H — Structure audit & NO_TOC recovery (2026-05-31)
 
 針對「文字 OCR 沒問題、但**側欄目錄空白／標題正文不分**」的書。診斷顯示**髒書 100% 是 PDF，EPUB 結構乾淨**（EPUB 只有少數目錄項異常，走 audit）；主病是 **712 本 NO_TOC**（chapter_path 全空），且其中 189 本**已 standardize 仍無目錄** → standardize 對「無內嵌書籤的掃描/論文 PDF」無能為力，需新能力。
