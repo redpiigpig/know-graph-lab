@@ -533,7 +533,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Babel (i.e. Babylon), including Babylonia and the Babylonian empire",
-      "glossZh": "巴比倫",
+      "glossZh": "巴比倫；創世記十一章作巴別",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -559,7 +559,7 @@
       "categoryRoute": "既有 properNameTypes",
       "name": "巴比倫",
       "printedLabel": "地名",
-      "nameNote": "本書凍結的 RCUV2010 快照內「巴比倫」53 次、「巴別」0 次（創 11:9 不在所收的 25 章內），故主譯取巴比倫；和合本修訂版在創 11:9 作「巴別」。（原值：巴別）"
+      "nameNote": "擁有者 2026-09-18 定名：只有創世記十一章的巴別塔作「巴別」，其餘一律作「巴比倫」。和合本修訂版即如此分。本讀本所收的 25 章不含創世記十一章，故這個詞只出現在本表。"
     },
     {
       "pointed": "יְהוֹשׁוּעַ",

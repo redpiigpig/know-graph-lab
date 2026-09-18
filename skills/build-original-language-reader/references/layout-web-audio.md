@@ -302,3 +302,26 @@ highlight, `speakOne(language, text)` reads one line or one word, `rate` is
 shared, and `SPEECH_TEXT` holds the per-language rewrite. Warm `getVoices()` on
 mount — Chrome returns an empty list on the first call, and without the warm-up
 the first click reports a missing voice that is installed.
+
+## 正式課本：紙上不出現編務語言
+
+擁有者 2026-09-18：「那是正式課本，文本中不要有註記，也不要寫說是機器做或自學用的。」
+
+盤過一輪，四本書上原本印著約三千處不屬於課本的字，分五類：
+
+| 類 | 例 | 處置 |
+|---|---|---|
+| 自學／私人身分 | 頁尾每頁「私人研讀版 · N」、`PRIVATE STUDY EDITION`、封面「JIS B5 182×257 mm · 私人研讀」 | 全部拿掉；頁尾只印頁碼 |
+| 編務統計 | 「本課 20 詞全數入題」「本讀本語料中無任何字形，因而無法入題：concelebrō」「（全章 45 節、701 詞）」 | 拿掉；範圍留，詞數不留 |
+| 製作過程 | 「再其次才是模型」「由 OpenCC 的 t2jp 推導」「依合約寧缺勿濫」「付印前請對照《感恩祭典》核對」 | 改寫成描述這本書的話，或移到驗證器 |
+| 誰寫的 | 每一題旁的「自撰」（2,918 處） | 引用題印出處，自撰題只印題號 |
+| 空缺記號 | 〔中譯待補〕〔待補〕（中文待定） | 紙上留白 |
+
+🚨 **拿掉印刷記號，就要同時補上資料層的清點。** 空缺的可見性是這一系列的底線；
+把〔待補〕從紙上拿掉而沒有別的東西數它，缺口就真的消失了。所以四本各有一支驗證器
+在數：`qa_hebrew_full_reader`、`verify_greek_reader`、`verify_latin_reader`、
+`verify_japanese_reader`（後兩支的希臘與日文版是 2026-09-18 才補齊的——在那之前
+那兩本只有 builder 內建的自檢，而 builder 只在「組不出來」的時候才出聲）。
+
+🚨 **狀態字串要取代，不要附加。** 來源的說明常常已經寫著「（完整，共 21 節）」，
+裁過之後在後面接一句「取前 4 段」，同一行就同時宣告完整與節錄。日文與拉丁都犯過。

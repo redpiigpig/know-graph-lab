@@ -37,7 +37,10 @@ CACHE = ROOT / "output" / "source-cache" / "original-readers"
 CJK = re.compile(r"[㐀-䶿一-鿿]")
 LESSON_TAG = re.compile(r"第\s*(\d{1,2})\s*課")
 HEADING = re.compile(r"本課翻譯練習（\s*(\d+)\s*題）")
-ITEM_NUMBER = re.compile(r"^(\d{2})\s")
+# 🚨 題號行有兩種長相：引用題是「01　馬太福音 26:15」，自撰題自 2026-09-18 起
+# 只印「01」（正式課本不在題旁寫「自撰」）。要求題號後面一定有空白的話，自撰題
+# 全部匹配不到——四本一共 1,223 題會被報成不見了。
+ITEM_NUMBER = re.compile(r"^(\d{2})(?:\s|$)")
 
 # stem -> (exercise set, the lessons the book prints, offset to the set's own
 # numbering).  Japanese needs the offset: the exercise set counts 1–100 straight
@@ -94,6 +97,43 @@ def best_match(printed: Counter, candidates: list[tuple[str, Counter]]) -> str:
     return max(candidates, key=lambda row: similarity(printed, row[1]))[0]
 
 
+MM = 25.4 / 72.0
+PAGE_HEIGHT_MM = 257.0
+# 眉標印在版心上緣以上、頁碼在下緣以下；兩者都不是內文。
+HEADER_BAND_MM = 16.0
+FOOTER_BAND_MM = 16.0
+
+
+def _banded(page, *, inside: bool) -> list[str]:
+    """以 block 為單位取行：inside 取版心內，否則取頁眉頁腳帶。
+
+    🚨 用 block 不用「把所有行按 y 排序」。逐詞對譯一頁上有好幾欄，同一個 y 有
+    原文也有中文義；按 y 排會把兩欄交錯成一串，題目與句子就對不起來了（第一版
+    這樣改，四本報出三千多項假的不合）。PyMuPDF 的 block 次序就是閱讀次序。
+
+    🚨 也不能用 ``page.get_text().splitlines()`` 一把抓。頁尾自 2026-09-18 起只印
+    頁碼，而自撰題的題號行也只有兩位數字——字串分不出「第 73 頁」與「第 73 題」。
+    """
+    bottom = PAGE_HEIGHT_MM - FOOTER_BAND_MM
+    rows: list[str] = []
+    for block in page.get_text("blocks"):
+        top_mm = block[1] * MM
+        in_body = HEADER_BAND_MM <= top_mm <= bottom
+        if in_body != inside:
+            continue
+        for line in (block[4] or "").splitlines():
+            rows.append(line.strip())
+    return rows
+
+
+def running_head(page) -> list[str]:
+    return _banded(page, inside=False)
+
+
+def body_lines(page) -> list[str]:
+    return _banded(page, inside=True)
+
+
 def printed_blocks(pdf: Path) -> list[dict]:
     """Every exercise section the book prints, with the lesson its page claims.
 
@@ -107,8 +147,8 @@ def printed_blocks(pdf: Path) -> list[dict]:
     blocks: list[dict] = []
     current: dict | None = None
     for number, page in enumerate(document, start=1):
-        lines = [line.strip() for line in page.get_text().splitlines()]
-        tag = next((LESSON_TAG.search(line) for line in lines[:2]
+        lines = body_lines(page)
+        tag = next((LESSON_TAG.search(line) for line in running_head(page)
                     if LESSON_TAG.search(line)), None)
         lesson = int(tag.group(1)) if tag else None
         if current is not None and lesson != current["lesson"]:

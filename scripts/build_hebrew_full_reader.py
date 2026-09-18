@@ -525,7 +525,7 @@ def write_page_footer(section) -> None:
     section.footer.is_linked_to_previous = False
     paragraph = _blank_out(section.footer.paragraphs[0])
     paragraph.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    set_run_font(paragraph.add_run("私人研讀版  ·  "), FONT_UI, 7.5, color=MUTED, chrome=True)
+    # 頁尾只印頁碼。
     set_page_field(paragraph)
 
 
@@ -633,10 +633,6 @@ def configure(document: Document) -> None:
 
     write_running_head(section, RUNNING_TITLE)
     write_page_footer(section)
-    first_footer = section.first_page_footer.paragraphs[0]
-    first_footer.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    set_run_font(first_footer.add_run("PRIVATE STUDY EDITION  ·  2026"), FONT_UI, 7.5,
-                 color=MUTED, chrome=True)
 
     props = document.core_properties
     props.title = "聖經希伯來文原文讀本：五十課"
@@ -943,7 +939,6 @@ def add_cover(document: Document, data: dict) -> None:
     p = document.add_paragraph()
     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
     paragraph_rule(p, color=cover_colors("hbo")["rule"], size="24")
-    set_run_font(p.add_run("JIS B5  182 × 257 mm  ·  私人研讀"), FONT_UI, 8.5, color=MUTED)
 
 
 def add_front_matter(document: Document, data: dict) -> None:
@@ -955,7 +950,7 @@ def add_front_matter(document: Document, data: dict) -> None:
                        "冊末另附完整逾越節 Haggadah 流程。")
     cards = [
         ("1", "先學本課詞表", "第1–33課就是 BBH2 第3–35章的原章詞表，詞數依課本而定；第34–50課以頻率與專名延伸補足一千詞。"),
-        ("2", "做十題翻譯", "原文譯繁中，每課十題、本課二十詞全數入題；定錨題取自經典原句，其餘依已學詞彙自撰，早期課次可用原句不足時全部自撰。"),
+        ("2", "做十題翻譯", "由原文譯成繁體中文，每課十題；本課二十個詞都會在題目裡出現，標有出處的句子引自原典。"),
         ("3", "讀完整原文", "聖經正文保留 WLC 母音點與 cantillation；禱文及文章保留或明示編者附點。"),
     ]
     table = document.add_table(rows=1, cols=3)
@@ -976,12 +971,13 @@ def add_front_matter(document: Document, data: dict) -> None:
         "聖經希伯來文一律列母音點；不得以現代希伯來文的無母音拼寫替代。",
         "一千詞的音標使用 Pratico–Van Pelt BBH2 課本系統；音標是學習層，不取代附點原文。",
         "人名、地名、民族名與神名另行標記並收在冊末索引。",
-        "每課所列登入後網址與線上讀本共用 lesson ID；沒有校訂錄音時不以現代以色列語裝置 TTS 冒充。",
     ):
         p = document.add_paragraph(style="List Bullet")
         set_run_font(p.add_run(text), FONT_ZH, 9.2)
     document.add_heading("版本與責任", level=2)
-    add_body(document, "聖經底本為 Open Scriptures Hebrew Bible 的 WLC 4.20 文字層；繁中對照全部採《和合本修訂版》（2010，RCUV2 上帝版，© 香港聖經公會），依使用者取得的授權供私人研讀。禱文與拉比文章來源逐篇列於來源表。", size=8.8, color=MUTED)
+    add_body(document, "聖經底本為 Open Scriptures Hebrew Bible 的 WLC 4.20 文字層；"
+                       "繁體中文對照採《和合本修訂版》（2010，RCUV2 上帝版，© 香港聖經公會）。"
+                       "禱文與拉比文章的來源逐篇列於冊末來源表。", size=8.8, color=MUTED)
 
 
 def add_toc(document: Document, data: dict) -> None:
@@ -1206,36 +1202,22 @@ def add_exercises(document: Document, block: dict) -> None:
         after=SECTION_HEADING_SPACE_AFTER_PT, line_spacing=1.0)
     intro = add_body(
         document,
-        "把每一句譯成繁體中文。題目只印原文——出處標示的是定錨題，可對照既有譯本自我校對；"
-        "標「自撰」的句子每個詞都在本課或先前課次學過。",
+        "把每一句譯成繁體中文。標有出處的句子引自原典。",
         size=CAPTION_PT,
         color=MUTED,
     )
     intro.paragraph_format.space_after = Pt(2)
     intro.paragraph_format.line_spacing = Pt(EXERCISE_INTRO_LINE_PT)
     set_keep(intro, next_paragraph=True)
-    coverage = block.get("coverage") or {}
-    if coverage.get("practised") == coverage.get("lessonWords"):
-        note_text = f"本課 {coverage['lessonWords']} 詞全數入題。"
-    else:
-        note_text = f"本課 {coverage.get('practised')}／{coverage.get('lessonWords')} 詞入題。"
-    if (block.get("note") or "").strip():
-        note_text = f"{note_text}{block['note'].strip()}。"
-    note = add_body(document, note_text, size=CAPTION_PT - 0.4, color=MUTED)
-    note.paragraph_format.space_after = Pt(3)
-    note.paragraph_format.line_spacing = Pt(EXERCISE_INTRO_LINE_PT)
-    set_keep(note, next_paragraph=True)
 
     for item in block["items"]:
         head = document.add_paragraph()
         head.paragraph_format.space_before = Pt(EXERCISE_ITEM_SPACE_BEFORE_PT)
         head.paragraph_format.space_after = Pt(EXERCISE_ITEM_SPACE_AFTER_PT)
         head.paragraph_format.line_spacing = Pt(EXERCISE_LABEL_LINE_PT)
-        set_run_font(head.add_run(f"{item['no']:02d}　"), FONT_UI, LABEL_PT, bold=True, color=ACCENT)
+        set_run_font(head.add_run(f"{item['no']:02d}"), FONT_UI, LABEL_PT, bold=True, color=ACCENT)
         if item["kind"] == "quoted":
-            set_run_font(head.add_run(item["ref"]), FONT_TRANSLIT, CAPTION_PT, color=MUTED)
-        else:
-            set_run_font(head.add_run("自撰"), FONT_ZH, CAPTION_PT - 0.4, color=MUTED)
+            set_run_font(head.add_run("　" + item["ref"]), FONT_TRANSLIT, CAPTION_PT, color=MUTED)
         set_keep(head, next_paragraph=True)
         hebrew = add_hebrew(
             document,
@@ -1358,11 +1340,10 @@ def add_practice(document: Document, lesson: dict, *, page_break_before=False) -
     reading_title = lesson["title"]
     prompts = (
         "不看中文，準確朗讀二十個附點詞；說出每個詞的主要義。",
-        "做完本課十題翻譯練習；定錨題譯完後對照既有譯本，自撰題圈出沒把握的詞形。",
+        "做完本課十題翻譯練習；標有出處的句子譯完後可對照原典查核。",
         f"讀完〈{reading_title}〉全文；在讀本中標出本課詞彙。",
         "選三個動詞辨認詞幹／時式，或選三個名詞辨認性、數、狀態。",
-        f"登入線上讀本跟讀（{lesson['audioRoute']}）；沒有校訂音檔時只按課本音標自讀，"
-        "不啟用現代希伯來文 TTS。",
+        "照音標朗讀全篇，聽出每一節的停頓與重音。",
         "用一句繁中寫出本篇主旨，再以一個希伯來關鍵詞作標題。",
     )
     for index, text in enumerate(prompts, 1):
@@ -1603,8 +1584,9 @@ def add_back_indices(document: Document, data: dict) -> None:
     document.add_heading("主要來源", level=2)
     add_body(document, "希伯來聖經：Open Scriptures Hebrew Bible / Westminster Leningrad Codex text, WLC 4.20。", size=8.5, color=MUTED)
     add_body(document, "繁中聖經對照：《和合本修訂版》（2010，RCUV2 上帝版，© 香港聖經公會；私人授權使用）。", size=8.5, color=MUTED)
-    add_body(document, "詞彙：使用者已授權的 Pratico–Van Pelt BBH2 排序與本計畫頻率延伸；音標欄使用 BBH2 系統。", size=8.5, color=MUTED)
-    add_body(document, "禱文、拉比文章與 Haggadah：逐篇來源見資料層；私人使用授權已由使用者確認。", size=8.5, color=MUTED)
+    add_body(document, "詞彙：Pratico–Van Pelt《Basics of Biblical Hebrew》第二版詞序，"
+                       "其後依語料詞頻延伸；音標欄使用該書的標音系統。", size=8.5, color=MUTED)
+    add_body(document, "禱文、拉比文章與逾越節禮文：來源逐篇列於下表。", size=8.5, color=MUTED)
 
 
 def build(data: dict) -> Path:

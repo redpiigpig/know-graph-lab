@@ -381,7 +381,7 @@ def build(write: bool) -> dict:
             rows.append({"form": ch, "modern": modern, "count": count,
                          "lessons": where(ch, per_lesson)})
     tables.append({"id": "kyujitai", "title": "舊字體 → 新字體",
-                   "note": "取自本讀本正文實際出現的字形，對應由 OpenCC 的 t2jp 推導。"
+                   "note": "本表收正文中出現的舊字體及其新字體對應。"
                            "第三、四冊的文本用舊字體印，這一張表是讀它們時的對照。",
                    "entries": rows})
 
@@ -401,7 +401,7 @@ def build(write: bool) -> dict:
             for f in FUNCTION_WORDS if whole.count(f)]
     rows.sort(key=lambda r: -r["count"])
     tables.append({"id": "function_words", "title": "學術文體機能語",
-                   "note": "只收本讀本正文裡出現過的；讀學術日文卡住的多半不是名詞，是這些。",
+                   "note": "本表收正文中出現的學術文體機能語。",
                    "entries": rows})
 
     # 4–7. 四張語意表

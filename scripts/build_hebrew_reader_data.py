@@ -135,7 +135,7 @@ def clip_reading(reading: dict) -> dict:
     total = sum(weight(unit) for unit in units)
     if budget.fits("hbo", total, len(units)):
         return {**reading, "completeness": "complete",
-                "extentZh": f"全{whole} {len(units)} {unit_name}（完整）"}
+                "extentZh": f"全{whole} {len(units)} {unit_name}"}
     kept = budget.clip(units, weight, "hbo")
     if field == "verses":
         span = f"第 {kept[0]['verse']}–{kept[-1]['verse']} {unit_name}"
@@ -145,7 +145,7 @@ def clip_reading(reading: dict) -> dict:
         **reading,
         field: kept,
         "completeness": "excerpt",
-        "extentZh": f"{span}（節錄，全{whole} {len(units)} {unit_name}、{total:,} 詞）",
+        "extentZh": f"{span}（全{whole} {len(units)} {unit_name}）",
     }
 
 

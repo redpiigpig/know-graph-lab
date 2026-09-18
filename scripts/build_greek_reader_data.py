@@ -86,7 +86,7 @@ def clip_scripture_chapter(chapter: dict) -> dict:
         "verses": kept,
         "completeness": "excerpt",
         "extent": (f"第 {kept[0]['verse']}–{kept[-1]['verse']} 節"
-                   f"（全章 {len(verses)} 節、{total:,} 詞）"),
+                   f"（全章 {len(verses)} 節）"),
     }
 
 

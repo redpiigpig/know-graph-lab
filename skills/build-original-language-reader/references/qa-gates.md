@@ -47,6 +47,37 @@ Run every applicable gate against the final artifacts. A prior render or prior r
 課首要 187mm，長詞條折一次行那一列就高一倍），回報是為了讓下一個人知道現況、也
 知道它有沒有在惡化。
 
+## 3c. 四本各自的發行驗證器
+
+一支一本，缺一本就等於那一本沒有人在看資料層：
+
+| 語言 | 驗證器 |
+|---|---|
+| 聖經希伯來文 | `scripts/qa_hebrew_full_reader.py`（64 項，含 DOCX／PDF） |
+| 通用希臘文 | `scripts/verify_greek_reader.py` |
+| 教會拉丁文 | `scripts/verify_latin_reader.py` |
+| 日文宗教學 | `scripts/verify_japanese_reader.py` |
+
+希臘與日文那兩支是 2026-09-18 才補上的。在那之前那兩本只有 builder 內建的自檢，
+而 **builder 只在「組不出來」的時候才出聲**：組得出來的錯——一課少一個詞、兩課共用
+同一則背誦句、裁過卻沒寫範圍、某一段沒有逐詞對譯——它一句話都不會說。
+
+寫這兩支的時候各踩了一個坑，都值得記著：
+
+- 🚨 **欄位名要照資料實際的樣子查。** 希臘附錄的中文在 `zh` 不是 `glossZh`，照
+  `glossZh` 查會把 625 筆全部報成未定。一支會亂叫的驗證器比沒有還糟。
+- 🚨 **鍵要照資料實際的鍵。** 日文詞表的 `lesson` 是《大家的日本語》的課本章次，
+  讀本自己的課次在 `readerLesson`；拿 `lesson` 分組，第二冊每一課都被報成
+  「30 詞、127 詞」。逐詞對譯的鍵也猜不得（上冊 `scripture:<osis ref>`、下冊
+  `patristic:<課次>:<段 ref>`），猜錯就是 487 段假的缺。
+
+## 3d. 逐頁光柵檢查（`scripts/qa_reader_rendered_pages.py`）
+
+前面幾關查的都是「文字層說了什麼」，共用一個盲點：**抽得出文字不等於印得出來**。
+裁掉半個字、整頁重覆、某一頁悄悄變成空白、油墨壓到裁切線——文字層一個字都不會少。
+這一支把七冊每一頁 rasterise 之後逐頁量：頁數與頁序、尺寸一致、空白頁、整頁重覆、
+最外圈 0.4% 有沒有墨水。2026-09-18 首次全書跑完：2,596 頁全過。
+
 ## 4. PDF gates
 
 - Final page count meets the expected range.

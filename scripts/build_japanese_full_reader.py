@@ -238,7 +238,7 @@ def add_exercises(document: Document, block: dict | None, lesson: dict) -> None:
     """十題翻譯練習，站在原本背誦句的位置。
 
     只印日文。題旁若有中譯，就等於把答案印在題目旁邊，所以引用題印出處、
-    自撰題印「自撰」，兩種都不印譯文。見 references/exercise-sets.md。
+    自撰題只印題號，兩種都不印譯文。見 references/exercise-sets.md。
     """
     if block is None:
         raise SystemExit(
@@ -251,37 +251,21 @@ def add_exercises(document: Document, block: dict | None, lesson: dict) -> None:
         after=H.SECTION_HEADING_SPACE_AFTER_PT, line_spacing=1.0)
     intro = H.add_body(
         document,
-        "把每一句譯成繁體中文。題目只印日文——標出處的是引用題，出處是青空文庫或"
-        "文語訳聖書；標「自撰」的句子每個詞都在本課或先前課次學過。",
+        "把每一句譯成繁體中文。標有出處的句子引自原典。",
         size=H.CAPTION_PT, color=H.MUTED,
     )
     intro.paragraph_format.space_after = Pt(3)
     H.set_keep(intro, next_paragraph=True)
-    coverage = block.get("coverage") or {}
-    practised, total = coverage.get("practised"), coverage.get("lessonWords")
-    note_text = (f"本課 {total} 詞全數入題。" if practised == total
-                 else f"本課 {practised}／{total} 詞入題。")
-    if (block.get("note") or "").strip():
-        note_text += block["note"].strip() + "。"
-    note = document.add_paragraph()
-    note.paragraph_format.space_after = Pt(3)
-    note.paragraph_format.line_spacing = Pt(H.EXERCISE_INTRO_LINE_PT)
-    # note 裡夾著日文詞條，整串交給中文字體會逐字回退到 LibreOffice 自己挑的字型。
-    H.add_mixed_script_text(note, note_text, H.FONT_ZH, H.CAPTION_PT - 0.4, color=H.MUTED)
-    H.set_keep(note, next_paragraph=True)
     for item in block["items"]:
         head = document.add_paragraph()
         head.paragraph_format.space_before = Pt(H.EXERCISE_ITEM_SPACE_BEFORE_PT)
         head.paragraph_format.space_after = Pt(H.EXERCISE_ITEM_SPACE_AFTER_PT)
         head.paragraph_format.line_spacing = Pt(H.EXERCISE_LABEL_LINE_PT)
-        H.set_run_font(head.add_run(f"{item['no']:02d}　"), H.FONT_UI, H.LABEL_PT,
+        H.set_run_font(head.add_run(f"{item['no']:02d}"), H.FONT_UI, H.LABEL_PT,
                        bold=True, color=H.ACCENT)
         if item["kind"] == "quoted":
-            H.add_mixed_script_text(head, item["ref"], H.FONT_ZH, H.CAPTION_PT,
+            H.add_mixed_script_text(head, "　" + item["ref"], H.FONT_ZH, H.CAPTION_PT,
                                     color=H.MUTED)
-        else:
-            H.set_run_font(head.add_run("自撰"), H.FONT_ZH, H.CAPTION_PT - 0.4,
-                           color=H.MUTED)
         H.set_keep(head, next_paragraph=True)
         line = document.add_paragraph()
         line.paragraph_format.left_indent = Mm(4)
@@ -329,7 +313,7 @@ def add_lesson(document: Document, lesson: dict, interlinear: dict, spec: dict,
     source.paragraph_format.space_after = Pt(2)
     H.add_mixed_script_text(
         source,
-        f"{lesson['author']}　{lesson['extent']}　{lesson['orthography']}　{lesson['chars']} 字",
+        f"{lesson['author']}　{lesson['extent']}　{lesson['orthography']}",
         H.FONT_ZH, H.CAPTION_PT, color=H.MUTED,
     )
     add_vocabulary(document, lesson["vocabulary"])
@@ -370,8 +354,6 @@ def add_cover(document: Document, spec: dict, part: dict, counts: dict) -> None:
     spec_line = document.add_paragraph()
     spec_line.alignment = WD_ALIGN_PARAGRAPH.CENTER
     H.paragraph_rule(spec_line, color=palette["rule"], size="24")
-    H.set_run_font(spec_line.add_run("JIS B5  182 × 257 mm  ·  私人研讀"), H.FONT_UI,
-                   8.5, color=H.MUTED)
     counts_line = H.add_body(
         document,
         f"{counts['lessons']} 課．{counts['words']} 詞．翻譯練習 {counts['exercises']} 題．"
@@ -391,12 +373,11 @@ def add_front_matter(document: Document, spec: dict, part: dict, lessons: list[d
     H.page_break(document)
     document.add_heading("體例與來源", level=1)
     for line in (
-        "詞序依《大家的日本語》課次，經 u-biq 逐課頁重建；專名不佔課內詞額，另立附錄專名表。",
-        "重音欄印的是來源頁面自己的斷點（は・や・い），不是重音型編號——斷點是抓得到的事實，編號是推論。",
-        "讀本一律取宗教學、宗教史或宗教典籍；詞照課本，文照領域。背誦句仍在資料與線上讀本，紙本改印十題翻譯練習。",
-        "聖書用文語訳（明治元訳舊約、大正改訳新約，公有領域），不用口語訳或新共同訳。",
-        "逐詞對譯：本課詞表的譯法優先，其次是助詞助動詞表，再其次才是模型；查不到的留白，不用別的語言頂替。",
-        "佛典尚未收入。素材抓得到，但訓読者與年份查不到，且混著漢文與梵文轉寫；依合約寧缺勿濫。",
+        "詞序依《大家的日本語》課次；專名不佔課內詞額，另立附錄專名表。",
+        "重音欄印的是假名的斷點（は・や・い）。",
+        "讀本一律取宗教學、宗教史或宗教典籍：詞照課本次序，文照領域選材。",
+        "聖書用文語訳（明治元訳舊約、大正改訳新約）。",
+        "逐詞對譯以本課詞表的譯法為準；一個詞在該處沒有確定的譯法時留白。",
     ):
         H.add_body(document, line, size=H.CAPTION_PT, color=H.INK)
     H.page_break(document)

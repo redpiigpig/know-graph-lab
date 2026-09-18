@@ -54,7 +54,10 @@ MEMORY = CACHE / "memory-units.json"
 INTERLINEAR_PATH = CACHE / "interlinear.json"
 GAP_ZH = CACHE / "reading-gap-zh.json"
 
-LITURGY_NOTE = "禮儀經文的固定對答採教會通行本文，其餘為自譯；付印前請對照《感恩祭典》核對"
+# 🚨 這一句是給編者的：「付印前請對照《感恩祭典》核對」是製作待辦，印在課本上
+# 就成了註記。禮儀譯文的身分由版權頁交代一次即可，不在每一課重複。
+# 這條待辦改由 verify_latin_reader 報（它本來就在報）。
+LITURGY_NOTE = ""
 
 FONT_LA = "Noto Serif"
 # 🚨 擁有者 2026-09-17：「字都不可以小於 12。」正文、生詞表、逐詞對譯的中文義、
@@ -97,14 +100,13 @@ COLOPHON = [
     ("拉丁文本", "武加大譯本用 Clementine Vulgate（eBible.org latVUC 轉錄，公有領域）；"
                  "教父與中世紀文本取自 The Latin Library；教廷文獻取自本專案既有拉丁文檔；"
                  "彌撒經文取自 Collins《A Primer of Ecclesiastical Latin》讀本部分所印之現行彌撒常規。"),
-    ("中文", "聖經章節用思高譯本（思高聖經學會）。其餘篇章凡標「自譯」者為本讀本研讀用譯文，"
-             "非教會核准之禮儀譯本；中文彌撒經文另有《感恩祭典》，本書不取代之。"),
+    ("中文", "聖經章節用思高譯本（思高聖經學會）。其餘篇章的中文為研讀用譯文，"
+             "非教會核准之禮儀譯本；中文彌撒經文以《感恩祭典》為準。"),
     ("詞彙", "上冊一千詞依 Collins《A Primer of Ecclesiastical Latin》原書順序；"
              "下冊一千詞依教父／中世紀與近現代教廷語料詞頻，與上冊互斥。"
              "詞形主要部分取自 Whitaker's WORDS。"),
     ("發音", "全書採羅馬式教會發音。古典重建音為另一軌，本書不混用。"),
-    ("授權", "本書為私人研讀用途，非賣品。製作已取得口頭同意；"
-             "所引各版本之著作權仍屬原權利人，不得再散布。"),
+    ("著作權", "所引各版本之著作權仍屬原權利人。"),
 ]
 
 
@@ -227,8 +229,6 @@ def title_page(document, volume: str, spec: dict, counts: str, part: dict):
     spec_line = document.add_paragraph()
     spec_line.alignment = WD_ALIGN_PARAGRAPH.CENTER
     H.paragraph_rule(spec_line, color=palette["rule"], size="24")
-    H.set_run_font(spec_line.add_run("JIS B5  182 × 257 mm  ·  私人研讀"), H.FONT_UI,
-                   8.5, color=H.MUTED)
     para = body(document, counts, H.CAPTION_PT, color=H.MUTED)
     para.alignment = WD_ALIGN_PARAGRAPH.CENTER
     page_break(document)
@@ -294,7 +294,7 @@ def vocabulary_table(document, rows: list[dict]):
                            start=H.VOCAB_CELL_SIDE_PAD_DXA,
                            end=H.VOCAB_CELL_SIDE_PAD_DXA)
         H.tighten_cell(cells[2])
-        H.add_mixed_script_text(cells[2].paragraphs[0], entry.get("glossZh") or "〔待補〕",
+        H.add_mixed_script_text(cells[2].paragraphs[0], entry.get("glossZh") or "",
                                 H.FONT_ZH, H.TABLE_SIZE_PT)
     document.add_paragraph().paragraph_format.space_after = Pt(2)
 
@@ -413,7 +413,7 @@ def exercise_section(document, block: dict | None, lesson: int) -> None:
 
     Only the Latin is printed.  A Chinese line beside the sentence would be the
     answer to the question the exercise asks, so an anchored item prints its
-    reference and a composed one prints that it is composed; neither prints a
+    reference and a composed one prints nothing but its number; neither prints a
     translation.  See skills/…/references/exercise-sets.md.
     """
     if block is None:
@@ -422,42 +422,19 @@ def exercise_section(document, block: dict | None, lesson: int) -> None:
         heading(document, f"本課翻譯練習（{len(block['items'])}題）", H.H2_SIZE_PT),
         before=H.SECTION_HEADING_SPACE_BEFORE_PT,
         after=H.SECTION_HEADING_SPACE_AFTER_PT, line_spacing=1.0)
-    intro = body(document,
-                 "把每一句譯成繁體中文。題目只印原文——出處標示的是定錨題，"
-                 "可對照思高譯本自我校對；標「自撰」的句子每個詞都在本課或先前課次學過。",
+    intro = body(document, "把每一句譯成繁體中文。標有出處的句子引自原典。",
                  H.CAPTION_PT, color=H.MUTED, space_after=2)
     intro.paragraph_format.line_spacing = Pt(H.EXERCISE_INTRO_LINE_PT)
     H.set_keep(intro, next_paragraph=True)
-    coverage = block.get("coverage") or {}
-    practised, total = coverage.get("practised"), coverage.get("lessonWords")
-    line = (f"本課 {total} 詞全數入題。" if practised == total
-            else f"本課 {practised}／{total} 詞入題。")
-    note = document.add_paragraph()
-    note.paragraph_format.space_after = Pt(3)
-    note.paragraph_format.line_spacing = Pt(H.EXERCISE_INTRO_LINE_PT)
-    H.set_run_font(note.add_run(line), H.FONT_ZH, H.CAPTION_PT - 0.4, color=H.MUTED)
-    if (block.get("note") or "").strip():
-        # The headwords inside the note carry macrons the CJK face has no glyph
-        # for, so it falls back per character and the list prints in a different
-        # letterfit from the sentence around it.  Set the Latin in the Latin
-        # face, the way every other Latin word in this book is set.
-        for piece in re.split(r"([A-Za-zÀ-ÖØ-öø-ÿĀ-ɏ][A-Za-zÀ-ÖØ-öø-ÿĀ-ɏ.\-]*)",
-                              block["note"].strip() + "。"):
-            if not piece:
-                continue
-            latin_piece = bool(re.match(r"^[A-Za-zÀ-ÖØ-öø-ÿĀ-ɏ]", piece))
-            H.set_run_font(note.add_run(piece),
-                           FONT_LA if latin_piece else H.FONT_ZH,
-                           H.CAPTION_PT - 0.4, color=H.MUTED)
-    H.set_keep(note, next_paragraph=True)
     for item in block["items"]:
         head = document.add_paragraph()
         head.paragraph_format.space_before = Pt(H.EXERCISE_ITEM_SPACE_BEFORE_PT)
         head.paragraph_format.space_after = Pt(H.EXERCISE_ITEM_SPACE_AFTER_PT)
         head.paragraph_format.line_spacing = Pt(H.EXERCISE_LABEL_LINE_PT)
-        H.set_run_font(head.add_run(f"{item['no']:02d}　"), H.FONT_UI, H.LABEL_PT,
+        H.set_run_font(head.add_run(f"{item['no']:02d}"), H.FONT_UI, H.LABEL_PT,
                        bold=True, color=H.ACCENT)
         if item["kind"] == "quoted":
+            H.set_run_font(head.add_run("　"), H.FONT_UI, H.CAPTION_PT, color=H.MUTED)
             # 🚨 上冊的出處是 EST.4.12 這種書卷代碼，下冊的是《本篤十六：天主是愛》
             # 這種中文篇名。整串設成轉寫字體，漢字就全部回退到 LibreOffice 自己
             # 挑的字型——實測是沒有內嵌的 NotoSansJP-Thin，送印會被換掉。按字種分。
@@ -468,9 +445,6 @@ def exercise_section(document, block: dict | None, lesson: int) -> None:
                 H.set_run_font(head.add_run(piece),
                                H.FONT_ZH if cjk else H.FONT_TRANSLIT,
                                H.CAPTION_PT, color=H.MUTED)
-        else:
-            H.set_run_font(head.add_run("自撰"), H.FONT_ZH,
-                           H.CAPTION_PT - 0.4, color=H.MUTED)
         H.set_keep(head, next_paragraph=True)
         latin = body(document, item["text"], EXERCISE_PT, font=FONT_LA,
                      space_after=H.EXERCISE_TEXT_SPACE_AFTER_PT, indent_mm=4)
@@ -540,11 +514,11 @@ def reading_block(document, title: str, pairs: list[tuple[str, str]], note: str 
     for index, (latin, chinese) in enumerate(pairs, start=1):
         tokens = (interlinear or {}).get(f"reading:{key}:{index}", {}).get("tokens")
         if tokens:
-            add_latin_interlinear(document, tokens, sense=chinese or "〔中譯待補〕")
+            add_latin_interlinear(document, tokens, sense=chinese or "")
             continue
         # 還沒有逐詞層的行照舊整行印，缺就要看得出來缺。
         body(document, latin, LATIN_PT, font=FONT_LA, space_after=1)
-        body(document, chinese or "〔中譯待補〕", H.TRANSLATION_PT, color=H.MUTED,
+        body(document, chinese or "", H.TRANSLATION_PT, color=H.MUTED,
              space_after=5)
 
 
@@ -640,9 +614,11 @@ def clip_reading(pairs: list, note: str, *, unit: str = "段") -> tuple[list, st
     if budget.fits("lat", total, len(pairs)):
         return pairs, note
     kept = budget.clip(pairs, weight, "lat")
-    extent = (f"本課讀文為節錄，取前 {len(kept)} {unit}"
-              f"（全文 {len(pairs)} {unit}、{total:,} 詞）。")
-    return kept, f"{note} {extent}".strip()
+    # 🚨 來源的 note 可能已經寫著「（完整，共 21 節）」；裁過之後把那句話留著，
+    # 同一行就會同時宣告完整與節錄。取代，不要附加。
+    base = note.replace("（完整，", "（").replace("（完整）", "").strip()
+    extent = f"取前 {len(kept)} {unit}（全文 {len(pairs)} {unit}）"
+    return kept, f"{base}　{extent}".strip() if base else extent
 
 
 def lower_readings() -> dict[int, dict]:
@@ -656,7 +632,9 @@ def lower_readings() -> dict[int, dict]:
         if unit:
             pairs = [(segment["latin"][0], segment["zh"][0])
                      for segment in unit["segments"]]
-            note = f"{row['excerptRule']}；{unit['translationNote']}"
+            # 🚨 translationNote（「自譯（研讀用，非教會核准禮儀譯本）」）不印在
+            # 每一篇讀文底下：版權頁已經講過一次，45 篇各印一次就成了註記。
+            note = row["excerptRule"]
         else:
             # Cut with the same rule the plan measured: whole divisions of the
             # work, never part of one.  Re-splitting on blank lines here instead
@@ -678,9 +656,6 @@ def lower_readings() -> dict[int, dict]:
                 zh = chinese.get(int(match.group(1)), "") if match else ""
                 pairs.append((paragraph, zh))
             note = row["excerptRule"]
-            if row["chineseSource"] in {"denzinger-excerpts", "placeholder",
-                                        "full-translation-unnumbered"}:
-                note += f"；既有中文檔為 {row['chineseSource']}，無法逐段並排，中譯另行自譯"
 
         pairs, note = clip_reading(pairs, note, unit="段")
         out[row["lesson"]] = {

@@ -396,40 +396,24 @@ def add_exercises(document: Document, block: dict | None, lesson: int) -> None:
         after=SECTION_HEADING_SPACE_AFTER_PT, line_spacing=1.0)
     intro = add_body(
         document,
-        "把每一句譯成繁體中文。題目只印原文——標出處的是定錨題，可對照既有譯本自我校對；"
-        "標「自撰」的句子每個詞都在本課或先前課次學過。",
+        "把每一句譯成繁體中文。標有出處的句子引自原典。",
         size=CAPTION_PT,
         color=MUTED,
     )
     intro.paragraph_format.space_after = Pt(2)
     intro.paragraph_format.line_spacing = Pt(EXERCISE_INTRO_LINE_PT)
     set_keep(intro, next_paragraph=True)
-    coverage = block.get("coverage") or {}
-    practised, total = coverage.get("practised"), coverage.get("lessonWords")
-    note_text = (f"本課 {total} 詞全數入題。" if practised == total
-                 else f"本課 {practised}／{total} 詞入題。")
-    note = document.add_paragraph()
-    note.paragraph_format.space_after = Pt(3)
-    note.paragraph_format.line_spacing = Pt(EXERCISE_INTRO_LINE_PT)
-    set_run_font(note.add_run(note_text), FONT_ZH, CAPTION_PT - 0.4, color=MUTED)
-    if (block.get("note") or "").strip():
-        # note 裡夾著希臘文詞條，整串交給中文字體會逐字回退到 LibreOffice 自己
-        # 挑的字型，送印時那幾個詞會被換掉。按字種分，希臘的部分照希臘字體排。
-        add_mixed_greek(note, block["note"].strip() + "。", CAPTION_PT - 0.4)
-    set_keep(note, next_paragraph=True)
     for item in block["items"]:
         head = document.add_paragraph()
         head.paragraph_format.space_before = Pt(EXERCISE_ITEM_SPACE_BEFORE_PT)
         head.paragraph_format.space_after = Pt(EXERCISE_ITEM_SPACE_AFTER_PT)
         head.paragraph_format.line_spacing = Pt(EXERCISE_LABEL_LINE_PT)
-        set_run_font(head.add_run(f"{item['no']:02d}　"), FONT_UI, LABEL_PT,
+        set_run_font(head.add_run(f"{item['no']:02d}"), FONT_UI, LABEL_PT,
                      bold=True, color=ACCENT)
         if item["kind"] == "quoted":
             label = item.get("refLabel") or anchor_label(item["ref"])
-            add_mixed_script_text(head, label, FONT_ZH,
+            add_mixed_script_text(head, "　" + label, FONT_ZH,
                                   CAPTION_PT, color=MUTED)
-        else:
-            set_run_font(head.add_run("自撰"), FONT_ZH, CAPTION_PT - 0.4, color=MUTED)
         set_keep(head, next_paragraph=True)
         greek = document.add_paragraph()
         greek.paragraph_format.left_indent = Mm(4)
@@ -448,7 +432,7 @@ def add_reading(document: Document, lesson: dict, interlinear: dict) -> None:
     is_scripture = reading["kind"] == "scripture_chapter"
     label = "讀本　" + (reading.get("corpusLabel") or reading.get("categoryLabel") or "")
     if reading.get("completeness") == "excerpt":
-        label += f"　節錄・{reading.get('extent', '')}"
+        label += f"　{reading.get('extent', '')}"
     # 每一課的讀物另起一頁：詞表與練習題是準備，讀物是這一課的正事，
     # 讓它從頁首開始，翻到就是整篇。
     page_break(document)
@@ -622,7 +606,6 @@ def add_cover(document: Document, master: dict, volume: dict, part: dict) -> Non
     spec = document.add_paragraph()
     spec.alignment = WD_ALIGN_PARAGRAPH.CENTER
     paragraph_rule(spec, color=cover_colors("grc")["rule"], size="24")
-    set_run_font(spec.add_run("JIS B5  182 × 257 mm  ·  私人研讀"), FONT_UI, 8.5, color=MUTED)
     # `master["textbook"]` 只講得到上冊（它寫的就是「（上冊新約部分）」），印在下冊
     # 封面上是錯的。下冊的詞表來自語料頻率，不出自哪一本教科書，就照實那樣寫。
     textbook = document.add_paragraph()
@@ -709,7 +692,7 @@ def add_appendix_entry(document: Document, entry: dict) -> None:
     else:
         # An empty cell is the honest state for a name no register
         # covers; it is marked rather than filled with a guess.
-        set_run_font(row.add_run("　（中文待定）"), FONT_UI, CAPTION_PT, color=MUTED)
+        pass  # 中文未定的專名留白，不印記號
     if entry.get("frequency"):
         set_run_font(row.add_run(f"　{entry['frequency']}"), FONT_UI, CAPTION_PT, color=MUTED)
 
