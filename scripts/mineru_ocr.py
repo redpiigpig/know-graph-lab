@@ -307,7 +307,18 @@ def release_lock() -> None:
 
 ENV_SIGNS = ("getaddrinfo", "URLError", "ConnectionError", "Connection refused",
              "Temporary failure", "timed out", "Max retries", "SSLError",
-             "Remote end closed", "Connection aborted")
+             "Remote end closed", "Connection aborted",
+             # 🚨 這台是繁中 Windows，socket 錯誤回的是**中文**訊息，
+             #    上面整排英文關鍵字對它視而不見。2026-09-18 內村卷 09／11 就是這樣
+             #    被判成「這一卷的問題」：`[WinError 10054] 遠端主機已強制關閉一個現存的連線。`
+             #    所以改認 WinError 代碼 —— 那串不會被在地化。
+             "WinError 10054",   # 連線被對方強制關閉
+             "WinError 10053",   # 連線被本機軟體中止
+             "WinError 10060",   # 連線逾時
+             "WinError 10061",   # 拒絕連線
+             "WinError 11001",   # 主機名稱解析失敗
+             "WinError 10051",   # 網路無法連線
+             )
 
 
 # MinerU 光是起 FastAPI ＋ 載模型就要 10–15 秒，載完才輪到這本書。
@@ -347,12 +358,24 @@ def cmd_run(args) -> int:
         req = urllib.request.Request(
             f"{url}/rest/v1/ebooks?id=eq.{args.book}&select=id,title,file_path,total_pages",
             headers={"apikey": key, "Authorization": f"Bearer {key}"})
-        try:
-            rows = json.loads(urllib.request.urlopen(req, timeout=30).read())
-        except Exception as e:
+        # 🚨 校園 WiFi 會隨機斷。一次閃斷不該讓這一本白白算失敗 ——
+        #    2026-09-18 內村卷 09／11 就是死在這一行（各只花 12s／32s，MinerU 根本沒起跑）。
+        #    先重試，重試完還是不行才交給分類器判。
+        rows, err = None, None
+        for i in range(5):
+            try:
+                rows = json.loads(urllib.request.urlopen(req, timeout=30).read())
+                break
+            except Exception as e:
+                err = e
+                if i < 4:
+                    print(f"  ⚠ 查 DB 失敗（{type(e).__name__}），{2 ** i}s 後重試"
+                          f"（{i + 1}/4）", flush=True)
+                    time.sleep(2 ** i)
+        if rows is None:
             # 查不到書名 ≠ 這本書壞了。DNS／連線問題要讓呼叫端整場停下來。
-            print(f"⛔ 查 DB 失敗：{str(e)[:160]}")
-            return 3 if looks_like_env_failure(str(e)) else 1
+            print(f"⛔ 查 DB 失敗：{str(err)[:160]}")
+            return 3 if looks_like_env_failure(str(err)) else 1
         if not rows:
             print(f"DB 查不到 {args.book}")
             return 1
