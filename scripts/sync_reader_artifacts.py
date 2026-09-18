@@ -137,8 +137,16 @@ def sync(write: bool) -> tuple[int, int]:
 
 
 def retire(write: bool) -> int:
+    """把作廢的版次搬進各處的 _superseded。
+
+    🚨 **印刷母版那一夾也要掃。** 這支腳本原本只掃 output/original-readers 與
+    Drive 的「讀本」，而 Drive 的「印刷母版」——送印時真正會被打開的那一夾——
+    從來沒有被清過：2026-09-17 作廢的希臘第五、六冊在那裡躺到 2026-09-18 才
+    被發現，旁邊還多了並冊後作廢的另外五冊。一本已經不存在的冊次躺在送印夾裡，
+    而它自己看起來完全正常，這正是這支腳本存在的理由。
+    """
     moved = 0
-    for folder in (WORK_READERS, DRIVE_READERS):
+    for folder in (WORK_READERS, DRIVE_READERS, DRIVE_MASTERS, WORK_CARDS, DRIVE_CARDS):
         if not folder.exists():
             continue
         attic = folder / "_superseded"
