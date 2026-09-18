@@ -341,6 +341,10 @@ def write_jsonl(book_id, chunks, staging=False):
     staging=True 時寫 {id}.jsonl.new（requeue_reocr.py 的 validate gate 過了才 swap）。"""
     CHUNKS_DIR.mkdir(parents=True, exist_ok=True)
     out = CHUNKS_DIR / (f"{book_id}.jsonl.new" if staging else f"{book_id}.jsonl")
+    # 整本判一次：日文書連沒有假名的那幾頁（扉頁／英文目次／年表）也不准轉換。
+    jp = book_is_japanese([c.get("text") or "" for c in chunks])
+    if jp:
+        print("  （整本判為日文，跳過簡→繁轉換）", flush=True)
     with out.open("w", encoding="utf-8") as f:
         for i, c in enumerate(chunks):
             row = {
@@ -348,7 +352,7 @@ def write_jsonl(book_id, chunks, staging=False):
                 "chunk_type": "page",
                 "page_number": c["page"],
                 "chapter_path": None,
-                "content": _trad(c["text"]),
+                "content": c["text"] if jp else _trad(c["text"]),
             }
             # 原書印的那個頁碼（引用時要寫的就是它）。只有撈得到的引擎會給，
             # 撈不到就不寫這個鍵 —— 空著比填一個推算值誠實。
@@ -365,6 +369,20 @@ _KANA = re.compile(r"[ぁ-ゖァ-ヺー]")
 def is_japanese(text: str) -> bool:
     """這段是日文嗎 —— 看有沒有假名就夠了，不必猜漢字。"""
     return bool(text) and _KANA.search(text) is not None
+
+
+def book_is_japanese(texts, threshold: float = 0.10) -> bool:
+    """整本是不是日文書。
+
+    🚨 **一定要以整本為單位判，不能逐段判。** 日文書裡本來就有沒有假名的頁：
+    扉頁、英文目次、年表、單一個字的頁。那些頁逐段判會判成「不是日文」而被拿去
+    簡繁轉換，結果 内→內、国→國、谱→譜，甚至 **淀→澱**（毀掉「淀橋」這個地名）。
+    2026-09-18《內村鑑三全集》20 卷裡有 6 卷各有 1–5 段栽在這上面。
+    """
+    texts = [t for t in texts if (t or "").strip()]
+    if not texts:
+        return False
+    return sum(1 for t in texts if is_japanese(t)) / len(texts) >= threshold
 
 
 def _trad(text: str) -> str:
