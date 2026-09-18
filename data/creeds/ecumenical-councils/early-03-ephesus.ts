@@ -41,12 +41,21 @@ export const early03: Creed = {
       textKey: 'early-03-latin',
       source: 'Documenta Catholica Omnia, 0431-0431,_Concilium_Ephesenum,_Documenta_Omnia,_LT.doc — Conciliorum Oecumenicorum Decreta (Alberigo et al., 1973) 內中世紀拉丁回譯（含 Cyril 致 Nestorius 信件原文 + 12 anathemas + 8 canons）',
     },
+    // 🚨 這一欄的 source 是**會印出來的引文出處**（希臘文讀本下冊第 30 課讀它），
+    // 不是研究待辦欄。它原本掛著一句「Cyril 致 Nestorius 第二封信、12 anathemas
+    // 之希臘原文仍待補」，於是那句待辦跟著印上了紙本——稽核報的「還沒補完的欄位」
+    // 就是它。出處要說這一欄**是什麼**，不是說它還缺什麼。
+    //
+    // 真的想補希臘原文的話：拉丁欄所據的 Documenta Catholica Omnia 收了信件與
+    // 十二章的中世紀拉丁回譯，希臘原文要去 Schwartz, Acta Conciliorum
+    // Oecumenicorum I（archive.org）取。那是新增一份文獻的工作，不是這一欄的缺口：
+    // 本課的題目就是「教規」，extent 也寫著「教規本文」。
     {
       lang: 'grc',
       label: '希臘原文（earlychurchtexts.com — Schaff NPNF2 Vol 14）',
       text: '',
       textKey: 'early-03-greek',
-      source: 'earlychurchtexts.com /main/ephesus/canons_of_ephesus_01-02.shtml — 8 canons in polytonic Greek. 注：本檔僅含 8 條 canons；Cyril 致 Nestorius 第二封信、12 anathemas 之希臘原文仍待補（候選來源 Schwartz ACO Vol 1 archive.org）',
+      source: 'earlychurchtexts.com /main/ephesus/canons_of_ephesus_01-02.shtml — 以弗所會議 8 條教規，polytonic Greek（據 Schaff, NPNF2 Vol 14）。本欄收教規本文；會議的信件與十二章見拉丁欄所據的 Conciliorum Oecumenicorum Decreta。',
     },
   ],
   summaryZh: `以弗所大公會議於 431-06-22 至 7 月由東羅馬皇帝狄奧多西二世 (Theodosius II) 召開於小亞細亞以弗所聖母教堂，是東西方教會基督論辯論之第一場大公會議。

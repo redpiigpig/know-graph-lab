@@ -3,7 +3,7 @@
   "language": "Ecclesiastical Latin",
   "languageCode": "lat",
   "volume": 2,
-  "generatedOn": "2026-09-17",
+  "generatedOn": "2026-09-18",
   "direction": "original-to-chinese",
   "itemsPerLesson": 10,
   "quotedPerLesson": 3,
@@ -18740,7 +18740,7 @@
             "lesson": 29,
             "ordinal": 563,
             "headword": "Augustinus",
-            "glossZh": "奧斯定",
+            "glossZh": "奧思定",
             "lemmas": [
               "Augustinus",
               "augustinus"
@@ -20826,7 +20826,7 @@
     {
       "lesson": 33,
       "id": "lat-v2-lesson-33",
-      "note": "本課無可用經典原句，十題全由自撰題補",
+      "note": "本課可用的經典原句只有 2 句，其餘 8 題由自撰題補",
       "items": [
         {
           "kind": "quoted",
@@ -21365,58 +21365,94 @@
           },
           "reviewedBy": "author",
           "no": 9
+        },
+        {
+          "kind": "composed",
+          "text": "vicarius successorem libenter adeptus",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 33,
+              "ordinal": 641,
+              "headword": "adipiscor",
+              "glossZh": "獲得、贏得；達到、趕上",
+              "lemmas": [
+                "adipiscor"
+              ],
+              "creditLemmas": [
+                "adipiscor"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 2,
+              "lesson": 33,
+              "ordinal": 643,
+              "headword": "successor",
+              "glossZh": "後繼者、接班人",
+              "lemmas": [
+                "successor"
+              ],
+              "creditLemmas": [
+                "successor"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 2,
+              "lesson": 33,
+              "ordinal": 649,
+              "headword": "vicarius",
+              "glossZh": "代理人、副手；奴僕",
+              "lemmas": [
+                "uicarius"
+              ],
+              "creditLemmas": [
+                "uicarius"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 2,
+              "lesson": 33,
+              "ordinal": 657,
+              "headword": "libenter",
+              "glossZh": "欣然、樂意；甘心",
+              "lemmas": [
+                "libenter"
+              ],
+              "creditLemmas": [
+                "libenter"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "verification": {
+            "words": 4,
+            "unattested": [],
+            "untaught": [],
+            "enclitics": [],
+            "lemmas": [
+              "adipiscor",
+              "libenter",
+              "successor",
+              "uicarius"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "author",
+          "no": 10
         }
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 17,
-        "notPractised": [
-          {
-            "volume": 2,
-            "lesson": 33,
-            "ordinal": 643,
-            "headword": "successor",
-            "glossZh": "後繼者、接班人",
-            "lemmas": [
-              "successor"
-            ],
-            "creditLemmas": [
-              "successor"
-            ],
-            "resolved": true,
-            "phrase": false
-          },
-          {
-            "volume": 2,
-            "lesson": 33,
-            "ordinal": 649,
-            "headword": "vicarius",
-            "glossZh": "代理人、副手；奴僕",
-            "lemmas": [
-              "uicarius"
-            ],
-            "creditLemmas": [
-              "uicarius"
-            ],
-            "resolved": true,
-            "phrase": false
-          },
-          {
-            "volume": 2,
-            "lesson": 33,
-            "ordinal": 657,
-            "headword": "libenter",
-            "glossZh": "欣然、樂意；甘心",
-            "lemmas": [
-              "libenter"
-            ],
-            "creditLemmas": [
-              "libenter"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ],
+        "practised": 20,
+        "notPractised": [],
         "notAttested": []
       }
     },
@@ -24047,7 +24083,7 @@
     {
       "lesson": 38,
       "id": "lat-v2-lesson-38",
-      "note": "本課無可用經典原句，十題全由自撰題補；本讀本語料中無任何字形，因而無法入題：admodum",
+      "note": "本課可用的經典原句只有 2 句，其餘 8 題由自撰題補；本讀本語料中無任何字形，因而無法入題：admodum",
       "items": [
         {
           "kind": "quoted",
@@ -24604,58 +24640,94 @@
           },
           "reviewedBy": "author",
           "no": 9
+        },
+        {
+          "kind": "composed",
+          "text": "sollicitus operarius confectum superare",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 38,
+              "ordinal": 744,
+              "headword": "supero",
+              "glossZh": "克服、征服；超越、勝過",
+              "lemmas": [
+                "supero"
+              ],
+              "creditLemmas": [
+                "supero"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 2,
+              "lesson": 38,
+              "ordinal": 746,
+              "headword": "operarius",
+              "glossZh": "勞工、工匠、傭工",
+              "lemmas": [
+                "operarius"
+              ],
+              "creditLemmas": [
+                "operarius"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 2,
+              "lesson": 38,
+              "ordinal": 757,
+              "headword": "conficio",
+              "glossZh": "製造、構築；準備、完成；實行、徹底進行",
+              "lemmas": [
+                "conficio"
+              ],
+              "creditLemmas": [
+                "conficio"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 2,
+              "lesson": 38,
+              "ordinal": 759,
+              "headword": "sollicitus",
+              "glossZh": "關切、憂慮；不安、焦慮",
+              "lemmas": [
+                "sollicitus"
+              ],
+              "creditLemmas": [
+                "sollicitus"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "verification": {
+            "words": 4,
+            "unattested": [],
+            "untaught": [],
+            "enclitics": [],
+            "lemmas": [
+              "conficio",
+              "operarius",
+              "sollicitus",
+              "supero"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "author",
+          "no": 10
         }
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 16,
-        "notPractised": [
-          {
-            "volume": 2,
-            "lesson": 38,
-            "ordinal": 744,
-            "headword": "supero",
-            "glossZh": "克服、征服；超越、勝過",
-            "lemmas": [
-              "supero"
-            ],
-            "creditLemmas": [
-              "supero"
-            ],
-            "resolved": true,
-            "phrase": false
-          },
-          {
-            "volume": 2,
-            "lesson": 38,
-            "ordinal": 757,
-            "headword": "conficio",
-            "glossZh": "製造、構築；準備、完成；實行、徹底進行",
-            "lemmas": [
-              "conficio"
-            ],
-            "creditLemmas": [
-              "conficio"
-            ],
-            "resolved": true,
-            "phrase": false
-          },
-          {
-            "volume": 2,
-            "lesson": 38,
-            "ordinal": 759,
-            "headword": "sollicitus",
-            "glossZh": "關切、憂慮；不安、焦慮",
-            "lemmas": [
-              "sollicitus"
-            ],
-            "creditLemmas": [
-              "sollicitus"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ],
+        "practised": 19,
+        "notPractised": [],
         "notAttested": [
           {
             "volume": 2,
@@ -24678,7 +24750,7 @@
     {
       "lesson": 39,
       "id": "lat-v2-lesson-39",
-      "note": "本課無可用經典原句，十題全由自撰題補",
+      "note": "本課可用的經典原句只有 1 句，其餘 9 題由自撰題補",
       "items": [
         {
           "kind": "quoted",
@@ -25179,60 +25251,101 @@
           },
           "reviewedBy": "author",
           "no": 8
+        },
+        {
+          "kind": "composed",
+          "text": "universitatis bonitas infinita",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 39,
+              "ordinal": 771,
+              "headword": "universitas",
+              "glossZh": "全體、整體；宇宙、萬物；共同體",
+              "lemmas": [
+                "uniuersitas",
+                "universitas"
+              ],
+              "creditLemmas": [
+                "uniuersitas",
+                "universitas"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "verification": {
+            "words": 3,
+            "unattested": [],
+            "untaught": [],
+            "enclitics": [],
+            "lemmas": [
+              "bonitas",
+              "infinitus",
+              "uniuersitas"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "author",
+          "no": 9
+        },
+        {
+          "kind": "composed",
+          "text": "miseriæ exitum optamus",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 39,
+              "ordinal": 775,
+              "headword": "opto",
+              "glossZh": "選擇、揀選；希望、願望",
+              "lemmas": [
+                "opto"
+              ],
+              "creditLemmas": [
+                "opto"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 2,
+              "lesson": 39,
+              "ordinal": 779,
+              "headword": "miseria",
+              "glossZh": "苦難、悲慘、痛苦",
+              "lemmas": [
+                "miseria"
+              ],
+              "creditLemmas": [
+                "miseria"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "verification": {
+            "words": 3,
+            "unattested": [],
+            "untaught": [],
+            "enclitics": [],
+            "lemmas": [
+              "exitus",
+              "miseria",
+              "opto"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "author",
+          "no": 10
         }
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 17,
-        "notPractised": [
-          {
-            "volume": 2,
-            "lesson": 39,
-            "ordinal": 771,
-            "headword": "universitas",
-            "glossZh": "全體、整體；宇宙、萬物；共同體",
-            "lemmas": [
-              "uniuersitas",
-              "universitas"
-            ],
-            "creditLemmas": [
-              "uniuersitas",
-              "universitas"
-            ],
-            "resolved": true,
-            "phrase": false
-          },
-          {
-            "volume": 2,
-            "lesson": 39,
-            "ordinal": 775,
-            "headword": "opto",
-            "glossZh": "選擇、揀選；希望、願望",
-            "lemmas": [
-              "opto"
-            ],
-            "creditLemmas": [
-              "opto"
-            ],
-            "resolved": true,
-            "phrase": false
-          },
-          {
-            "volume": 2,
-            "lesson": 39,
-            "ordinal": 779,
-            "headword": "miseria",
-            "glossZh": "苦難、悲慘、痛苦",
-            "lemmas": [
-              "miseria"
-            ],
-            "creditLemmas": [
-              "miseria"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ],
+        "practised": 20,
+        "notPractised": [],
         "notAttested": []
       }
     },
@@ -26537,7 +26650,7 @@
     {
       "lesson": 42,
       "id": "lat-v2-lesson-42",
-      "note": "本課無可用經典原句，十題全由自撰題補",
+      "note": "本課可用的經典原句只有 1 句，其餘 9 題由自撰題補",
       "items": [
         {
           "kind": "quoted",
@@ -27042,65 +27155,155 @@
           },
           "reviewedBy": "author",
           "no": 8
+        },
+        {
+          "kind": "composed",
+          "text": "artifices violentiæ repugnant",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 42,
+              "ordinal": 821,
+              "headword": "violentia",
+              "glossZh": "暴力、猛烈",
+              "lemmas": [
+                "uiolentia"
+              ],
+              "creditLemmas": [
+                "uiolentia"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 2,
+              "lesson": 42,
+              "ordinal": 825,
+              "headword": "artifex",
+              "glossZh": "工匠、藝人、創作者",
+              "lemmas": [
+                "artifex"
+              ],
+              "creditLemmas": [
+                "artifex"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 2,
+              "lesson": 42,
+              "ordinal": 835,
+              "headword": "repugno",
+              "glossZh": "反抗、對抗、不相容、矛盾",
+              "lemmas": [
+                "repugno"
+              ],
+              "creditLemmas": [
+                "repugno"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "verification": {
+            "words": 3,
+            "unattested": [],
+            "untaught": [],
+            "enclitics": [],
+            "lemmas": [
+              "artifex",
+              "repugno",
+              "uiolentia"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "author",
+          "no": 9
+        },
+        {
+          "kind": "composed",
+          "text": "violentiam vix diligentia superat",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 42,
+              "ordinal": 821,
+              "headword": "violentia",
+              "glossZh": "暴力、猛烈",
+              "lemmas": [
+                "uiolentia"
+              ],
+              "creditLemmas": [
+                "uiolentia"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 2,
+              "lesson": 42,
+              "ordinal": 822,
+              "headword": "vix",
+              "glossZh": "幾乎不、勉強、不情願地",
+              "lemmas": [
+                "uix",
+                "vix"
+              ],
+              "creditLemmas": [
+                "uix",
+                "vix"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 2,
+              "lesson": 42,
+              "ordinal": 827,
+              "headword": "diligentia",
+              "glossZh": "勤勉、留心、節儉",
+              "lemmas": [
+                "diligentia"
+              ],
+              "creditLemmas": [
+                "diligentia"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "verification": {
+            "words": 4,
+            "unattested": [],
+            "untaught": [],
+            "enclitics": [],
+            "lemmas": [
+              "diligentia",
+              "supero",
+              "uiolentia",
+              "uix",
+              "vix"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "author",
+          "no": 10
         }
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 17,
-        "notPractised": [
-          {
-            "volume": 2,
-            "lesson": 42,
-            "ordinal": 821,
-            "headword": "violentia",
-            "glossZh": "暴力、猛烈",
-            "lemmas": [
-              "uiolentia"
-            ],
-            "creditLemmas": [
-              "uiolentia"
-            ],
-            "resolved": true,
-            "phrase": false
-          },
-          {
-            "volume": 2,
-            "lesson": 42,
-            "ordinal": 825,
-            "headword": "artifex",
-            "glossZh": "工匠、藝人、創作者",
-            "lemmas": [
-              "artifex"
-            ],
-            "creditLemmas": [
-              "artifex"
-            ],
-            "resolved": true,
-            "phrase": false
-          },
-          {
-            "volume": 2,
-            "lesson": 42,
-            "ordinal": 835,
-            "headword": "repugno",
-            "glossZh": "反抗、對抗、不相容、矛盾",
-            "lemmas": [
-              "repugno"
-            ],
-            "creditLemmas": [
-              "repugno"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ],
+        "practised": 20,
+        "notPractised": [],
         "notAttested": []
       }
     },
     {
       "lesson": 43,
       "id": "lat-v2-lesson-43",
-      "note": "本課無可用經典原句，十題全由自撰題補",
+      "note": "本課可用的經典原句只有 2 句，其餘 8 題由自撰題補",
       "items": [
         {
           "kind": "quoted",
@@ -27637,50 +27840,101 @@
           },
           "reviewedBy": "author",
           "no": 9
+        },
+        {
+          "kind": "composed",
+          "text": "rector tuto patrimonium minuit",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 43,
+              "ordinal": 841,
+              "headword": "rector",
+              "glossZh": "領導者、統治者、舵手、驾手",
+              "lemmas": [
+                "rector"
+              ],
+              "creditLemmas": [
+                "rector"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 2,
+              "lesson": 43,
+              "ordinal": 844,
+              "headword": "minuo",
+              "glossZh": "減少、減弱、減損、縮小",
+              "lemmas": [
+                "minuo"
+              ],
+              "creditLemmas": [
+                "minuo"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 2,
+              "lesson": 43,
+              "ordinal": 846,
+              "headword": "tuto",
+              "glossZh": "保護、防衛、防止",
+              "lemmas": [
+                "tuto"
+              ],
+              "creditLemmas": [
+                "tuto"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 2,
+              "lesson": 43,
+              "ordinal": 857,
+              "headword": "patrimonium",
+              "glossZh": "遺產、世襲產業",
+              "lemmas": [
+                "patrimonium"
+              ],
+              "creditLemmas": [
+                "patrimonium"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "verification": {
+            "words": 4,
+            "unattested": [],
+            "untaught": [],
+            "enclitics": [],
+            "lemmas": [
+              "minuo",
+              "patrimonium",
+              "rector",
+              "tuto"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "author",
+          "no": 10
         }
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 18,
-        "notPractised": [
-          {
-            "volume": 2,
-            "lesson": 43,
-            "ordinal": 844,
-            "headword": "minuo",
-            "glossZh": "減少、減弱、減損、縮小",
-            "lemmas": [
-              "minuo"
-            ],
-            "creditLemmas": [
-              "minuo"
-            ],
-            "resolved": true,
-            "phrase": false
-          },
-          {
-            "volume": 2,
-            "lesson": 43,
-            "ordinal": 846,
-            "headword": "tuto",
-            "glossZh": "保護、防衛、防止",
-            "lemmas": [
-              "tuto"
-            ],
-            "creditLemmas": [
-              "tuto"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ],
+        "practised": 20,
+        "notPractised": [],
         "notAttested": []
       }
     },
     {
       "lesson": 44,
       "id": "lat-v2-lesson-44",
-      "note": "本課無可用經典原句，十題全由自撰題補；本讀本語料中無任何字形，因而無法入題：dioecesis",
+      "note": "本課可用的經典原句只有 1 句，其餘 9 題由自撰題補；本讀本語料中無任何字形，因而無法入題：dioecesis",
       "items": [
         {
           "kind": "quoted",
@@ -28195,60 +28449,156 @@
           },
           "reviewedBy": "author",
           "no": 8
+        },
+        {
+          "kind": "composed",
+          "text": "præscriptum brevi commemoravi",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 44,
+              "ordinal": 864,
+              "headword": "brevis",
+              "glossZh": "短的、簡潔的；狹窄的",
+              "lemmas": [
+                "breue",
+                "breuis",
+                "brevis"
+              ],
+              "creditLemmas": [
+                "breuis",
+                "brevis"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 2,
+              "lesson": 44,
+              "ordinal": 870,
+              "headword": "commemoro",
+              "glossZh": "回憶、銘記；提及、記述",
+              "lemmas": [
+                "commemoro"
+              ],
+              "creditLemmas": [
+                "commemoro"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 2,
+              "lesson": 44,
+              "ordinal": 872,
+              "headword": "praescribo",
+              "glossZh": "命令、指示；規定",
+              "lemmas": [
+                "praescribo"
+              ],
+              "creditLemmas": [
+                "praescribo"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "verification": {
+            "words": 3,
+            "unattested": [],
+            "untaught": [],
+            "enclitics": [],
+            "lemmas": [
+              "breuis",
+              "breve",
+              "brevi",
+              "brevis",
+              "commemoro",
+              "praescribo",
+              "praescriptum"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "author",
+          "no": 9
+        },
+        {
+          "kind": "composed",
+          "text": "honestatem stabilem revocare",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 44,
+              "ordinal": 862,
+              "headword": "revoco",
+              "glossZh": "召回、恢復；重振",
+              "lemmas": [
+                "reuoco",
+                "revoco"
+              ],
+              "creditLemmas": [
+                "reuoco",
+                "revoco"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 2,
+              "lesson": 44,
+              "ordinal": 869,
+              "headword": "stabilis",
+              "glossZh": "穩定的、堅定的；不變的",
+              "lemmas": [
+                "Stabilis",
+                "stabilis"
+              ],
+              "creditLemmas": [
+                "Stabilis",
+                "stabilis"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 2,
+              "lesson": 44,
+              "ordinal": 874,
+              "headword": "honestas",
+              "glossZh": "榮譽、廉正、誠實",
+              "lemmas": [
+                "honestas",
+                "honestus"
+              ],
+              "creditLemmas": [
+                "honestas"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "verification": {
+            "words": 3,
+            "unattested": [],
+            "untaught": [],
+            "enclitics": [],
+            "lemmas": [
+              "honestas",
+              "revoco",
+              "stabilis"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "author",
+          "no": 10
         }
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 16,
-        "notPractised": [
-          {
-            "volume": 2,
-            "lesson": 44,
-            "ordinal": 862,
-            "headword": "revoco",
-            "glossZh": "召回、恢復；重振",
-            "lemmas": [
-              "reuoco",
-              "revoco"
-            ],
-            "creditLemmas": [
-              "reuoco",
-              "revoco"
-            ],
-            "resolved": true,
-            "phrase": false
-          },
-          {
-            "volume": 2,
-            "lesson": 44,
-            "ordinal": 870,
-            "headword": "commemoro",
-            "glossZh": "回憶、銘記；提及、記述",
-            "lemmas": [
-              "commemoro"
-            ],
-            "creditLemmas": [
-              "commemoro"
-            ],
-            "resolved": true,
-            "phrase": false
-          },
-          {
-            "volume": 2,
-            "lesson": 44,
-            "ordinal": 872,
-            "headword": "praescribo",
-            "glossZh": "命令、指示；規定",
-            "lemmas": [
-              "praescribo"
-            ],
-            "creditLemmas": [
-              "praescribo"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ],
+        "practised": 19,
+        "notPractised": [],
         "notAttested": [
           {
             "volume": 2,
@@ -28271,7 +28621,7 @@
     {
       "lesson": 45,
       "id": "lat-v2-lesson-45",
-      "note": "本課無可用經典原句，十題全由自撰題補",
+      "note": "本課可用的經典原句只有 2 句，其餘 8 題由自撰題補",
       "items": [
         {
           "kind": "quoted",
@@ -28820,67 +29170,88 @@
           },
           "reviewedBy": "author",
           "no": 9
+        },
+        {
+          "kind": "composed",
+          "text": "custodes Julio resistere",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 45,
+              "ordinal": 886,
+              "headword": "Julius",
+              "glossZh": "七月",
+              "lemmas": [
+                "Iulius",
+                "iulius"
+              ],
+              "creditLemmas": [
+                "Iulius",
+                "iulius"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 2,
+              "lesson": 45,
+              "ordinal": 889,
+              "headword": "resisto",
+              "glossZh": "抵抗、反對、對抗；駐足",
+              "lemmas": [
+                "resisto"
+              ],
+              "creditLemmas": [
+                "resisto"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 2,
+              "lesson": 45,
+              "ordinal": 898,
+              "headword": "custos",
+              "glossZh": "衛兵、守衛、守護者",
+              "lemmas": [
+                "custos"
+              ],
+              "creditLemmas": [
+                "custos"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "verification": {
+            "words": 3,
+            "unattested": [],
+            "untaught": [],
+            "enclitics": [],
+            "lemmas": [
+              "Iulius",
+              "custos",
+              "iulius",
+              "resisto"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "author",
+          "no": 10
         }
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 17,
-        "notPractised": [
-          {
-            "volume": 2,
-            "lesson": 45,
-            "ordinal": 886,
-            "headword": "Julius",
-            "glossZh": "七月",
-            "lemmas": [
-              "Iulius",
-              "iulius"
-            ],
-            "creditLemmas": [
-              "Iulius",
-              "iulius"
-            ],
-            "resolved": true,
-            "phrase": false
-          },
-          {
-            "volume": 2,
-            "lesson": 45,
-            "ordinal": 889,
-            "headword": "resisto",
-            "glossZh": "抵抗、反對、對抗；駐足",
-            "lemmas": [
-              "resisto"
-            ],
-            "creditLemmas": [
-              "resisto"
-            ],
-            "resolved": true,
-            "phrase": false
-          },
-          {
-            "volume": 2,
-            "lesson": 45,
-            "ordinal": 898,
-            "headword": "custos",
-            "glossZh": "衛兵、守衛、守護者",
-            "lemmas": [
-              "custos"
-            ],
-            "creditLemmas": [
-              "custos"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ],
+        "practised": 20,
+        "notPractised": [],
         "notAttested": []
       }
     },
     {
       "lesson": 46,
       "id": "lat-v2-lesson-46",
-      "note": "本課無可用經典原句，十題全由自撰題補；本讀本語料中無任何字形，因而無法入題：amanter",
+      "note": "本課可用的經典原句只有 1 句，其餘 9 題由自撰題補；本讀本語料中無任何字形，因而無法入題：amanter",
       "items": [
         {
           "kind": "quoted",
@@ -29380,58 +29751,144 @@
           },
           "reviewedBy": "author",
           "no": 8
+        },
+        {
+          "kind": "composed",
+          "text": "corruptum acriter inquirunt",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 46,
+              "ordinal": 903,
+              "headword": "inquiro",
+              "glossZh": "調查、追查、探尋",
+              "lemmas": [
+                "inquiro"
+              ],
+              "creditLemmas": [
+                "inquiro"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 2,
+              "lesson": 46,
+              "ordinal": 909,
+              "headword": "corrumpo",
+              "glossZh": "腐爛、毀壞、污染、摧毀",
+              "lemmas": [
+                "corrumpo"
+              ],
+              "creditLemmas": [
+                "corrumpo"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 2,
+              "lesson": 46,
+              "ordinal": 912,
+              "headword": "acriter",
+              "glossZh": "敏銳地、猛烈地、堅定地",
+              "lemmas": [
+                "acriter"
+              ],
+              "creditLemmas": [
+                "acriter"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "verification": {
+            "words": 3,
+            "unattested": [],
+            "untaught": [],
+            "enclitics": [],
+            "lemmas": [
+              "acriter",
+              "corrumpo",
+              "inquiro"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "author",
+          "no": 9
+        },
+        {
+          "kind": "composed",
+          "text": "comperit angustiam undique",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 46,
+              "ordinal": 908,
+              "headword": "undique",
+              "glossZh": "四面八方、各方面",
+              "lemmas": [
+                "undique"
+              ],
+              "creditLemmas": [
+                "undique"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 2,
+              "lesson": 46,
+              "ordinal": 914,
+              "headword": "angustia",
+              "glossZh": "狹隘、困難、海峽",
+              "lemmas": [
+                "angustia"
+              ],
+              "creditLemmas": [
+                "angustia"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 2,
+              "lesson": 46,
+              "ordinal": 916,
+              "headword": "comperio",
+              "glossZh": "發現、確認、查明",
+              "lemmas": [
+                "comperio"
+              ],
+              "creditLemmas": [
+                "comperio"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "verification": {
+            "words": 3,
+            "unattested": [],
+            "untaught": [],
+            "enclitics": [],
+            "lemmas": [
+              "angustia",
+              "comperio",
+              "undique"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "author",
+          "no": 10
         }
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 16,
-        "notPractised": [
-          {
-            "volume": 2,
-            "lesson": 46,
-            "ordinal": 903,
-            "headword": "inquiro",
-            "glossZh": "調查、追查、探尋",
-            "lemmas": [
-              "inquiro"
-            ],
-            "creditLemmas": [
-              "inquiro"
-            ],
-            "resolved": true,
-            "phrase": false
-          },
-          {
-            "volume": 2,
-            "lesson": 46,
-            "ordinal": 909,
-            "headword": "corrumpo",
-            "glossZh": "腐爛、毀壞、污染、摧毀",
-            "lemmas": [
-              "corrumpo"
-            ],
-            "creditLemmas": [
-              "corrumpo"
-            ],
-            "resolved": true,
-            "phrase": false
-          },
-          {
-            "volume": 2,
-            "lesson": 46,
-            "ordinal": 916,
-            "headword": "comperio",
-            "glossZh": "發現、確認、查明",
-            "lemmas": [
-              "comperio"
-            ],
-            "creditLemmas": [
-              "comperio"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ],
+        "practised": 19,
+        "notPractised": [],
         "notAttested": [
           {
             "volume": 2,
@@ -29454,7 +29911,7 @@
     {
       "lesson": 47,
       "id": "lat-v2-lesson-47",
-      "note": "本課無可用經典原句，十題全由自撰題補",
+      "note": "本課可用的經典原句只有 2 句，其餘 8 題由自撰題補",
       "items": [
         {
           "kind": "quoted",
@@ -29995,67 +30452,87 @@
           },
           "reviewedBy": "author",
           "no": 9
+        },
+        {
+          "kind": "composed",
+          "text": "ardor justificatus excedit",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 47,
+              "ordinal": 927,
+              "headword": "justifico",
+              "glossZh": "使成義、稱義；寬恕、赦免",
+              "lemmas": [
+                "iustifico",
+                "justifico"
+              ],
+              "creditLemmas": [
+                "iustifico",
+                "justifico"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 2,
+              "lesson": 47,
+              "ordinal": 928,
+              "headword": "excedo",
+              "glossZh": "超越、逾越；離去、過世",
+              "lemmas": [
+                "excedo"
+              ],
+              "creditLemmas": [
+                "excedo"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 2,
+              "lesson": 47,
+              "ordinal": 936,
+              "headword": "ardor",
+              "glossZh": "火焰、熱烈；情熱、熾愛",
+              "lemmas": [
+                "ardor"
+              ],
+              "creditLemmas": [
+                "ardor"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "verification": {
+            "words": 3,
+            "unattested": [],
+            "untaught": [],
+            "enclitics": [],
+            "lemmas": [
+              "ardor",
+              "excedo",
+              "iustifico"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "author",
+          "no": 10
         }
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 17,
-        "notPractised": [
-          {
-            "volume": 2,
-            "lesson": 47,
-            "ordinal": 927,
-            "headword": "justifico",
-            "glossZh": "使成義、稱義；寬恕、赦免",
-            "lemmas": [
-              "iustifico",
-              "justifico"
-            ],
-            "creditLemmas": [
-              "iustifico",
-              "justifico"
-            ],
-            "resolved": true,
-            "phrase": false
-          },
-          {
-            "volume": 2,
-            "lesson": 47,
-            "ordinal": 928,
-            "headword": "excedo",
-            "glossZh": "超越、逾越；離去、過世",
-            "lemmas": [
-              "excedo"
-            ],
-            "creditLemmas": [
-              "excedo"
-            ],
-            "resolved": true,
-            "phrase": false
-          },
-          {
-            "volume": 2,
-            "lesson": 47,
-            "ordinal": 936,
-            "headword": "ardor",
-            "glossZh": "火焰、熱烈；情熱、熾愛",
-            "lemmas": [
-              "ardor"
-            ],
-            "creditLemmas": [
-              "ardor"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ],
+        "practised": 20,
+        "notPractised": [],
         "notAttested": []
       }
     },
     {
       "lesson": 48,
       "id": "lat-v2-lesson-48",
-      "note": "本課無可用經典原句，十題全由自撰題補；本讀本語料中無任何字形，因而無法入題：Februarius",
+      "note": "本課可用的經典原句只有 1 句，其餘 9 題由自撰題補；本讀本語料中無任何字形，因而無法入題：Februarius",
       "items": [
         {
           "kind": "quoted",
@@ -30550,58 +31027,144 @@
           },
           "reviewedBy": "author",
           "no": 8
+        },
+        {
+          "kind": "composed",
+          "text": "beatitudinem sapienter suademus",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 48,
+              "ordinal": 950,
+              "headword": "suadeo",
+              "glossZh": "勸促、建議；誘導；勸服、勸告",
+              "lemmas": [
+                "suadeo"
+              ],
+              "creditLemmas": [
+                "suadeo"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 2,
+              "lesson": 48,
+              "ordinal": 951,
+              "headword": "sapienter",
+              "glossZh": "智慧地、明智地",
+              "lemmas": [
+                "sapienter"
+              ],
+              "creditLemmas": [
+                "sapienter"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 2,
+              "lesson": 48,
+              "ordinal": 959,
+              "headword": "beatitudo",
+              "glossZh": "至福、真福；幸福之境",
+              "lemmas": [
+                "beatitudo"
+              ],
+              "creditLemmas": [
+                "beatitudo"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "verification": {
+            "words": 3,
+            "unattested": [],
+            "untaught": [],
+            "enclitics": [],
+            "lemmas": [
+              "beatitudo",
+              "sapienter",
+              "suadeo"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "author",
+          "no": 9
+        },
+        {
+          "kind": "composed",
+          "text": "nedum egregia notitia",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 48,
+              "ordinal": 954,
+              "headword": "nedum",
+              "glossZh": "更不用說、況乎；遑論",
+              "lemmas": [
+                "nedum"
+              ],
+              "creditLemmas": [
+                "nedum"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 2,
+              "lesson": 48,
+              "ordinal": 957,
+              "headword": "notitia",
+              "glossZh": "認識、知曉；熟悉、相識",
+              "lemmas": [
+                "notitia"
+              ],
+              "creditLemmas": [
+                "notitia"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 2,
+              "lesson": 48,
+              "ordinal": 960,
+              "headword": "egregius",
+              "glossZh": "非凡、卓異；傑出、優秀",
+              "lemmas": [
+                "egregius"
+              ],
+              "creditLemmas": [
+                "egregius"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "verification": {
+            "words": 3,
+            "unattested": [],
+            "untaught": [],
+            "enclitics": [],
+            "lemmas": [
+              "egregius",
+              "nedum",
+              "notitia"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "author",
+          "no": 10
         }
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 16,
-        "notPractised": [
-          {
-            "volume": 2,
-            "lesson": 48,
-            "ordinal": 950,
-            "headword": "suadeo",
-            "glossZh": "勸促、建議；誘導；勸服、勸告",
-            "lemmas": [
-              "suadeo"
-            ],
-            "creditLemmas": [
-              "suadeo"
-            ],
-            "resolved": true,
-            "phrase": false
-          },
-          {
-            "volume": 2,
-            "lesson": 48,
-            "ordinal": 954,
-            "headword": "nedum",
-            "glossZh": "更不用說、況乎；遑論",
-            "lemmas": [
-              "nedum"
-            ],
-            "creditLemmas": [
-              "nedum"
-            ],
-            "resolved": true,
-            "phrase": false
-          },
-          {
-            "volume": 2,
-            "lesson": 48,
-            "ordinal": 959,
-            "headword": "beatitudo",
-            "glossZh": "至福、真福；幸福之境",
-            "lemmas": [
-              "beatitudo"
-            ],
-            "creditLemmas": [
-              "beatitudo"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ],
+        "practised": 19,
+        "notPractised": [],
         "notAttested": [
           {
             "volume": 2,
@@ -30626,7 +31189,7 @@
     {
       "lesson": 49,
       "id": "lat-v2-lesson-49",
-      "note": "本課無可用經典原句，十題全由自撰題補",
+      "note": "本課可用的經典原句只有 1 句，其餘 9 題由自撰題補",
       "items": [
         {
           "kind": "quoted",
@@ -31124,62 +31687,169 @@
           },
           "reviewedBy": "author",
           "no": 8
+        },
+        {
+          "kind": "composed",
+          "text": "facta tuta producit",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 49,
+              "ordinal": 965,
+              "headword": "factum",
+              "glossZh": "事實、行為、業績",
+              "lemmas": [
+                "facio",
+                "factum",
+                "factus",
+                "fio"
+              ],
+              "creditLemmas": [
+                "factum"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 2,
+              "lesson": 49,
+              "ordinal": 978,
+              "headword": "tutus",
+              "glossZh": "安全的、謹慎的、受保護的",
+              "lemmas": [
+                "tueor",
+                "tutus"
+              ],
+              "creditLemmas": [
+                "tutus"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 2,
+              "lesson": 49,
+              "ordinal": 979,
+              "headword": "produco",
+              "glossZh": "引出、展示、延長",
+              "lemmas": [
+                "produco"
+              ],
+              "creditLemmas": [
+                "produco"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "verification": {
+            "words": 3,
+            "unattested": [],
+            "untaught": [],
+            "enclitics": [],
+            "lemmas": [
+              "facio",
+              "factum",
+              "produco",
+              "tutus"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "author",
+          "no": 9
+        },
+        {
+          "kind": "composed",
+          "text": "peritus victum simpliciter producit",
+          "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 49,
+              "ordinal": 961,
+              "headword": "peritus",
+              "glossZh": "熟練、精通；經驗豐富、專精",
+              "lemmas": [
+                "peritus"
+              ],
+              "creditLemmas": [
+                "peritus"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 2,
+              "lesson": 49,
+              "ordinal": 962,
+              "headword": "victus",
+              "glossZh": "生活、生活方式；食物、養分；飲食",
+              "lemmas": [
+                "uictus",
+                "victus",
+                "vinco"
+              ],
+              "creditLemmas": [
+                "uictus",
+                "victus"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 2,
+              "lesson": 49,
+              "ordinal": 966,
+              "headword": "simpliciter",
+              "glossZh": "簡單地、純粹地、坦率地",
+              "lemmas": [
+                "simpliciter"
+              ],
+              "creditLemmas": [
+                "simpliciter"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 2,
+              "lesson": 49,
+              "ordinal": 979,
+              "headword": "produco",
+              "glossZh": "引出、展示、延長",
+              "lemmas": [
+                "produco"
+              ],
+              "creditLemmas": [
+                "produco"
+              ],
+              "resolved": true,
+              "phrase": false
+            }
+          ],
+          "verification": {
+            "words": 4,
+            "unattested": [],
+            "untaught": [],
+            "enclitics": [],
+            "lemmas": [
+              "peritus",
+              "produco",
+              "simpliciter",
+              "uictus",
+              "victus"
+            ],
+            "lengthOk": true,
+            "passed": true
+          },
+          "reviewedBy": "author",
+          "no": 10
         }
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 17,
-        "notPractised": [
-          {
-            "volume": 2,
-            "lesson": 49,
-            "ordinal": 965,
-            "headword": "factum",
-            "glossZh": "事實、行為、業績",
-            "lemmas": [
-              "facio",
-              "factum",
-              "factus",
-              "fio"
-            ],
-            "creditLemmas": [
-              "factum"
-            ],
-            "resolved": true,
-            "phrase": false
-          },
-          {
-            "volume": 2,
-            "lesson": 49,
-            "ordinal": 978,
-            "headword": "tutus",
-            "glossZh": "安全的、謹慎的、受保護的",
-            "lemmas": [
-              "tueor",
-              "tutus"
-            ],
-            "creditLemmas": [
-              "tutus"
-            ],
-            "resolved": true,
-            "phrase": false
-          },
-          {
-            "volume": 2,
-            "lesson": 49,
-            "ordinal": 979,
-            "headword": "produco",
-            "glossZh": "引出、展示、延長",
-            "lemmas": [
-              "produco"
-            ],
-            "creditLemmas": [
-              "produco"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ],
+        "practised": 20,
+        "notPractised": [],
         "notAttested": []
       }
     },

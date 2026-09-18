@@ -1,13 +1,81 @@
 {
-  "volume": 2, "lesson": 38, "author": "opus-5-hand-written",
-  "note": "admodum 兩層語料都沒有字形。",
+  "volume": 2,
+  "lesson": 38,
+  "author": "opus-5-hand-written",
+  "note": "admodum 兩層語料都沒有字形。 2026-09-18 補足十題：新增的每一句都練該課原本沒練到的詞。",
   "sentences": [
-    {"latin": "efficax augusto convictus", "chinese": "在奧古斯都時有效的結社。", "targets": ["efficax", "Augustus", "convictus"]},
-    {"latin": "consulere operarios verumtamen", "chinese": "然而要諮詢那些工人。", "targets": ["consulo", "operarius", "verumtamen"]},
-    {"latin": "mutuo interea raro", "chinese": "其間難得地出借。", "targets": ["mutuo", "interea", "raro"]},
-    {"latin": "incarnationem ædificare solidum", "chinese": "要以降生奧蹟建造那固定之物。", "targets": ["incarnatio", "aedifico", "solidus"]},
-    {"latin": "aspectus æstimatione impellat", "chinese": "願那外觀以評估推動。", "targets": ["aspectus", "aestimatio", "impello"]},
-    {"latin": "materialis convictu consulat", "chinese": "願那物質的在結社中商議。", "targets": ["materialis", "convictus", "consulo"]},
-    {"latin": "operarii ædificavi solidos", "chinese": "工人們啊，我建造了那些固定之物。", "targets": ["operarius", "aedifico", "solidus"]}
+    {
+      "latin": "efficax augusto convictus",
+      "chinese": "在奧古斯都時有效的結社。",
+      "targets": [
+        "efficax",
+        "Augustus",
+        "convictus"
+      ]
+    },
+    {
+      "latin": "consulere operarios verumtamen",
+      "chinese": "然而要諮詢那些工人。",
+      "targets": [
+        "consulo",
+        "operarius",
+        "verumtamen"
+      ]
+    },
+    {
+      "latin": "mutuo interea raro",
+      "chinese": "其間難得地出借。",
+      "targets": [
+        "mutuo",
+        "interea",
+        "raro"
+      ]
+    },
+    {
+      "latin": "incarnationem ædificare solidum",
+      "chinese": "要以降生奧蹟建造那固定之物。",
+      "targets": [
+        "incarnatio",
+        "aedifico",
+        "solidus"
+      ]
+    },
+    {
+      "latin": "aspectus æstimatione impellat",
+      "chinese": "願那外觀以評估推動。",
+      "targets": [
+        "aspectus",
+        "aestimatio",
+        "impello"
+      ]
+    },
+    {
+      "latin": "materialis convictu consulat",
+      "chinese": "願那物質的在結社中商議。",
+      "targets": [
+        "materialis",
+        "convictus",
+        "consulo"
+      ]
+    },
+    {
+      "latin": "operarii ædificavi solidos",
+      "chinese": "工人們啊，我建造了那些固定之物。",
+      "targets": [
+        "operarius",
+        "aedifico",
+        "solidus"
+      ]
+    },
+    {
+      "latin": "sollicitus operarius confectum superare",
+      "chinese": "憂心的工匠要勝過那已完成之事。",
+      "targets": [
+        "sollicitus",
+        "operarius",
+        "conficio",
+        "supero"
+      ]
+    }
   ]
 }

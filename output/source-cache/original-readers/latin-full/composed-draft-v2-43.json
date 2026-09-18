@@ -1,13 +1,81 @@
 {
-  "volume": 2, "lesson": 43, "author": "opus-5-hand-written",
-  "note": "Feliciter 與 Cave／Cavete 在語料裡都只有這幾個形。",
+  "volume": 2,
+  "lesson": 43,
+  "author": "opus-5-hand-written",
+  "note": "Feliciter 與 Cave／Cavete 在語料裡都只有這幾個形。 2026-09-18 補足十題：新增的每一句都練該課原本沒練到的詞。",
   "sentences": [
-    {"latin": "rectores indicium recens", "chinese": "統治者們那新近的證據。", "targets": ["rector", "indicium", "recens"]},
-    {"latin": "fortuna Feliciter vigore", "chinese": "命運順利地帶著活力。", "targets": ["fortuna", "feliciter", "vigor"]},
-    {"latin": "Cavete reducere obnoxia", "chinese": "你們要謹慎，別把有罪的帶回。", "targets": ["caveo", "reduco", "obnoxius"]},
-    {"latin": "suffragiis consummationem cumque", "chinese": "無論何時，以投票達成那完成。", "targets": ["suffragium", "consummatio", "cumque"]},
-    {"latin": "urgeri patrimonium postulatis", "chinese": "那世襲產業因那些請求而被逼迫。", "targets": ["urgeo", "patrimonium", "postulatum"]},
-    {"latin": "indutus paulatim vigor", "chinese": "那活力逐漸被披上。", "targets": ["induo", "paulatim", "vigor"]},
-    {"latin": "rector obnoxius patrimonio", "chinese": "那統治者對世襲產業負有責任。", "targets": ["rector", "obnoxius", "patrimonium"]}
+    {
+      "latin": "rectores indicium recens",
+      "chinese": "統治者們那新近的證據。",
+      "targets": [
+        "rector",
+        "indicium",
+        "recens"
+      ]
+    },
+    {
+      "latin": "fortuna Feliciter vigore",
+      "chinese": "命運順利地帶著活力。",
+      "targets": [
+        "fortuna",
+        "feliciter",
+        "vigor"
+      ]
+    },
+    {
+      "latin": "Cavete reducere obnoxia",
+      "chinese": "你們要謹慎，別把有罪的帶回。",
+      "targets": [
+        "caveo",
+        "reduco",
+        "obnoxius"
+      ]
+    },
+    {
+      "latin": "suffragiis consummationem cumque",
+      "chinese": "無論何時，以投票達成那完成。",
+      "targets": [
+        "suffragium",
+        "consummatio",
+        "cumque"
+      ]
+    },
+    {
+      "latin": "urgeri patrimonium postulatis",
+      "chinese": "那世襲產業因那些請求而被逼迫。",
+      "targets": [
+        "urgeo",
+        "patrimonium",
+        "postulatum"
+      ]
+    },
+    {
+      "latin": "indutus paulatim vigor",
+      "chinese": "那活力逐漸被披上。",
+      "targets": [
+        "induo",
+        "paulatim",
+        "vigor"
+      ]
+    },
+    {
+      "latin": "rector obnoxius patrimonio",
+      "chinese": "那統治者對世襲產業負有責任。",
+      "targets": [
+        "rector",
+        "obnoxius",
+        "patrimonium"
+      ]
+    },
+    {
+      "latin": "rector tuto patrimonium minuit",
+      "chinese": "統治者穩妥地減損了那份世襲產業。",
+      "targets": [
+        "rector",
+        "tuto",
+        "patrimonium",
+        "minuo"
+      ]
+    }
   ]
 }

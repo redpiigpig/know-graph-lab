@@ -75205,7 +75205,7 @@
                 "translationNote": "無權威中譯，此為自譯。"
               }
             ],
-            "source": "earlychurchtexts.com /main/ephesus/canons_of_ephesus_01-02.shtml — 8 canons in polytonic Greek. 注：本檔僅含 8 條 canons；Cyril 致 Nestorius 第二封信、12 anathemas 之希臘原文仍待補（候選來源 Schwartz ACO Vol 1 archive.org）",
+            "source": "earlychurchtexts.com /main/ephesus/canons_of_ephesus_01-02.shtml — 以弗所會議 8 條教規，polytonic Greek（據 Schaff, NPNF2 Vol 14）。本欄收教規本文；會議的信件與十二章見拉丁欄所據的 Conciliorum Oecumenicorum Decreta。",
             "sourceUrl": "",
             "kind": "patristic_reading"
           }
@@ -111698,7 +111698,7 @@
     "inputsSha256": {
       "greek-2000.json": "71f8d01309a3ffc0ce90cd460a82d4401b15825b5d9301ecb7a749cc4162961f",
       "scripture-plan.json": "f4ff044e4a29aaed9fcf7128b9f017f2e906831a5a28c8f8cf674799a32b3343",
-      "patristic-plan.json": "7cddfad0b31161449f1a5b89417886000bc0bdbfc879708ed6ceeff8a706f6ed",
+      "patristic-plan.json": "96495e4a3207b2f44d67230abd0899dfa7ea648839a23b00fce3488af11ad90f",
       "liturgy-chrysostom.json": "28b61dd175757a876ae4442544ff1a37b796af068c240d9fa0ea9e9421ac7bd5",
       "memory-verses.json": "0d751c2cf0ddb0714f139d28764865d46e9f92eddecf75b1636ff2d0c1cd925e",
       "memory-sentences.json": "28d508acdece68f5d2c5dc5cea4656c6e826f25bbe715c49de6376527e708059",

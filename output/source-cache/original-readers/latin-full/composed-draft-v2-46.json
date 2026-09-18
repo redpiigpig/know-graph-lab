@@ -1,13 +1,89 @@
 {
-  "volume": 2, "lesson": 46, "author": "opus-5-hand-written",
-  "note": "amanter 只認詞幹，語料裡對得上的是分詞 amantes。",
+  "volume": 2,
+  "lesson": 46,
+  "author": "opus-5-hand-written",
+  "note": "amanter 只認詞幹，語料裡對得上的是分詞 amantes。 2026-09-18 補足十題：新增的每一句都練該課原本沒練到的詞。",
   "sentences": [
-    {"latin": "jugiter sinu impetu", "chinese": "不斷地在懷中、在衝擊中。", "targets": ["jugiter", "sinus", "impetus"]},
-    {"latin": "vitare zelum imitari", "chinese": "要避開嫉妒，也要效法。", "targets": ["vito", "zelus", "imitor"]},
-    {"latin": "undique partim amantes", "chinese": "四面八方，部分地，那些愛的人。", "targets": ["undique", "partim", "amanter"]},
-    {"latin": "acriter essentiam angustiis", "chinese": "在困境中敏銳地面對本質。", "targets": ["acriter", "essentia", "angustia"]},
-    {"latin": "varietate controversiam diversitate", "chinese": "以多樣與差異面對那爭論。", "targets": ["varietas", "controversia", "diversitas"]},
-    {"latin": "exercitatio donationis jugiter", "chinese": "那捐贈的操練不斷進行。", "targets": ["exercitatio", "donatio", "jugiter"]},
-    {"latin": "zelo impetum vitetur", "chinese": "願那衝動因熱誠而被避開。", "targets": ["zelus", "impetus", "vito"]}
+    {
+      "latin": "jugiter sinu impetu",
+      "chinese": "不斷地在懷中、在衝擊中。",
+      "targets": [
+        "jugiter",
+        "sinus",
+        "impetus"
+      ]
+    },
+    {
+      "latin": "vitare zelum imitari",
+      "chinese": "要避開嫉妒，也要效法。",
+      "targets": [
+        "vito",
+        "zelus",
+        "imitor"
+      ]
+    },
+    {
+      "latin": "undique partim amantes",
+      "chinese": "四面八方，部分地，那些愛的人。",
+      "targets": [
+        "undique",
+        "partim",
+        "amanter"
+      ]
+    },
+    {
+      "latin": "acriter essentiam angustiis",
+      "chinese": "在困境中敏銳地面對本質。",
+      "targets": [
+        "acriter",
+        "essentia",
+        "angustia"
+      ]
+    },
+    {
+      "latin": "varietate controversiam diversitate",
+      "chinese": "以多樣與差異面對那爭論。",
+      "targets": [
+        "varietas",
+        "controversia",
+        "diversitas"
+      ]
+    },
+    {
+      "latin": "exercitatio donationis jugiter",
+      "chinese": "那捐贈的操練不斷進行。",
+      "targets": [
+        "exercitatio",
+        "donatio",
+        "jugiter"
+      ]
+    },
+    {
+      "latin": "zelo impetum vitetur",
+      "chinese": "願那衝動因熱誠而被避開。",
+      "targets": [
+        "zelus",
+        "impetus",
+        "vito"
+      ]
+    },
+    {
+      "latin": "corruptum acriter inquirunt",
+      "chinese": "他們猛烈地追查那腐壞之處。",
+      "targets": [
+        "corrumpo",
+        "acriter",
+        "inquiro"
+      ]
+    },
+    {
+      "latin": "comperit angustiam undique",
+      "chinese": "他查明了四面八方的困境。",
+      "targets": [
+        "comperio",
+        "angustia",
+        "undique"
+      ]
+    }
   ]
 }

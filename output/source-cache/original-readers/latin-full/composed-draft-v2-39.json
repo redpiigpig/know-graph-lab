@@ -1,13 +1,89 @@
 {
-  "volume": 2, "lesson": 39, "author": "opus-5-hand-written",
-  "note": "Januarius 只剩 Ianuarii，Israel 在語料裡寫作 Israël。",
+  "volume": 2,
+  "lesson": 39,
+  "author": "opus-5-hand-written",
+  "note": "Januarius 只剩 Ianuarii，Israel 在語料裡寫作 Israël。 2026-09-18 補足十題：新增的每一句都練該課原本沒練到的詞。",
   "sentences": [
-    {"latin": "prope quocumque domestica", "chinese": "無論何處都靠近家中的事。", "targets": ["prope", "quocumque", "domesticus"]},
-    {"latin": "commodare principatum benevolentia", "chinese": "要以善意出借那首位。", "targets": ["commodo", "principatus", "benevolentia"]},
-    {"latin": "Ianuarii ædificationem orientalem", "chinese": "一月裡東方的建造。", "targets": ["Januarius", "aedificatio", "orientalis"]},
-    {"latin": "postremo adiumenta conscia", "chinese": "最後，那些知情的援助。", "targets": ["postremo", "adiumentum", "conscius"]},
-    {"latin": "funditus magnopere imperat", "chinese": "他徹底而極力地下令。", "targets": ["funditus", "magnopere", "impero"]},
-    {"latin": "Israël accessum ædificatio", "chinese": "以色列的進路與那建造。", "targets": ["Israel", "accessus", "aedificatio"]},
-    {"latin": "quocumque Ianuarii domesticam", "chinese": "一月裡無論何處那家中之事。", "targets": ["quocumque", "Januarius", "domesticus"]}
+    {
+      "latin": "prope quocumque domestica",
+      "chinese": "無論何處都靠近家中的事。",
+      "targets": [
+        "prope",
+        "quocumque",
+        "domesticus"
+      ]
+    },
+    {
+      "latin": "commodare principatum benevolentia",
+      "chinese": "要以善意出借那首位。",
+      "targets": [
+        "commodo",
+        "principatus",
+        "benevolentia"
+      ]
+    },
+    {
+      "latin": "Ianuarii ædificationem orientalem",
+      "chinese": "一月裡東方的建造。",
+      "targets": [
+        "Januarius",
+        "aedificatio",
+        "orientalis"
+      ]
+    },
+    {
+      "latin": "postremo adiumenta conscia",
+      "chinese": "最後，那些知情的援助。",
+      "targets": [
+        "postremo",
+        "adiumentum",
+        "conscius"
+      ]
+    },
+    {
+      "latin": "funditus magnopere imperat",
+      "chinese": "他徹底而極力地下令。",
+      "targets": [
+        "funditus",
+        "magnopere",
+        "impero"
+      ]
+    },
+    {
+      "latin": "Israël accessum ædificatio",
+      "chinese": "以色列的進路與那建造。",
+      "targets": [
+        "Israel",
+        "accessus",
+        "aedificatio"
+      ]
+    },
+    {
+      "latin": "quocumque Ianuarii domesticam",
+      "chinese": "一月裡無論何處那家中之事。",
+      "targets": [
+        "quocumque",
+        "Januarius",
+        "domesticus"
+      ]
+    },
+    {
+      "latin": "universitatis bonitas infinita",
+      "chinese": "那全體的美善是無限的。",
+      "targets": [
+        "universitas",
+        "bonitas",
+        "infinitus"
+      ]
+    },
+    {
+      "latin": "miseriæ exitum optamus",
+      "chinese": "我們渴望苦難的終結。",
+      "targets": [
+        "miseria",
+        "exitus",
+        "opto"
+      ]
+    }
   ]
 }

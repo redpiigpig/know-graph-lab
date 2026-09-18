@@ -242,7 +242,14 @@ def build_volume(volume: int) -> dict[str, Any]:
         ]
         notes = []
         if len(anchors) < QUOTED_PER_LESSON:
-            notes.append("本課無可用經典原句，十題全由自撰題補")
+            # 🚨 這句話要說實話。它原本一律寫「十題全由自撰題補」，而自撰稿只有七篇，
+            # 所以那 11 課其實只印了八到九題——註記宣告了一件書裡沒做到的事。現在自撰
+            # 稿補到了缺口（composed-draft-v2-*.json），註記也照實說補了幾題。
+            notes.append(
+                f"本課可用的經典原句只有 {len(anchors)} 句，其餘 "
+                f"{ITEMS_PER_LESSON - len(anchors)} 題由自撰題補"
+                if anchors else "本課無可用經典原句，十題全由自撰題補"
+            )
         if unreachable:
             notes.append(
                 "本讀本語料中無任何字形，因而無法入題："
