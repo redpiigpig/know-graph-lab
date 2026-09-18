@@ -320,7 +320,7 @@
         "ans": "shark"
       },
       {
-        "q": "The owl ______ fly at night.",
+        "q": "The owl （不會） ______ fly at night.",
         "opts": [
           "does not",
           "do not",

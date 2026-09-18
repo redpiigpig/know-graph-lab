@@ -848,6 +848,30 @@ def validate_overlap(ex: dict) -> list[str]:
 MAX_SAME_OPTS = 1
 
 
+_WORDS_CACHE: dict[int, set[str]] = {}
+
+
+def _lesson_words() -> set[str]:
+    """本課 20 字的各種變化形（含 -s／-es／-ing／-ed 與片語各字）。
+
+    用來判斷「一組選項是不是本課的操練重點」——是的話，十題同一組選項是對的。
+    """
+    if CURRENT_LESSON in _WORDS_CACHE:
+        return _WORDS_CACHE[CURRENT_LESSON]
+    out: set[str] = set()
+    for e in json.loads(VOCAB.read_text(encoding="utf-8"))["entries"]:
+        if e["lesson"] != CURRENT_LESSON:
+            continue
+        for part in re.split(r"[/、(),]", e["en"]):
+            w = re.sub(r"[^a-z]", "", part.lower())
+            if not w:
+                continue
+            out |= {w, w + "s", w + "es", w + "ing", w + "ed",
+                    w.rstrip("e") + "ing", w.rstrip("y") + "ies"}
+    _WORDS_CACHE[CURRENT_LESSON] = out
+    return out
+
+
 def validate_variety(ex: dict) -> list[str]:
     """擋掉「十題長得一模一樣」。
 
@@ -859,10 +883,30 @@ def validate_variety(ex: dict) -> list[str]:
     for item in _dicts(ex, "mcq"):
         key = tuple(sorted(o for o in (item.get("opts") or []) if isinstance(o, str)))
         seen[key] = seen.get(key, 0) + 1
-    # 🚨 be 動詞那幾課整課就是在練 am／is／are，選項一樣是應該的，
-    # 真實課本的 Lesson 1 也是十題同一組選項。這道閘對它們不適用。
-    cap = 99 if 0 < CURRENT_LESSON <= DRILL_LESSONS else MAX_SAME_OPTS
-    over = [(k, v) for k, v in seen.items() if v > cap]
+    # 🚨 判準是「這組選項是不是本課的操練重點」，不是「第幾課」。
+    #
+    # 第一版只豁免前五課（be 動詞那幾課整課就在練 am／is／are）。但這種課散佈
+    # 全書：L09 練動作動詞 listen/nod/talk/walk、L11 練第三人稱單數
+    # care/cares/cares for/caring、L30 練頻率副詞 always/never/often/sometimes——
+    # 那四個字就是該課的全部內容，選項一樣是應該的，被判成「十題長一樣」是誤殺。
+    # 改成：整組選項都落在本課單字（或本課文法點的變化形）裡，就不算單調。
+    drill = _lesson_words()
+    over = []
+    for key, count in seen.items():
+        if count <= MAX_SAME_OPTS:
+            continue
+        if 0 < CURRENT_LESSON <= DRILL_LESSONS:
+            continue
+        # 片語選項（cares for）拆開逐字比；整組有一半以上落在本課單字就放行。
+        # L30 的 always／often 在單字表裡，never／sometimes 不在——那兩個是本課
+        # 文法點（頻率副詞）的教學內容，只是沒列進二十字。要求「整組都在表裡」
+        # 太嚴，這種課照樣被誤殺。
+        hit = sum(1 for o in key
+                  if any(re.sub(r"[^a-z]", "", w.lower()) in drill
+                         for w in o.split()))
+        if key and hit * 2 >= len(key):
+            continue                      # 過半是本課要練的字
+        over.append((key, count))
     return [f"選擇題有 {v} 題共用同一組選項 {' / '.join(k)}" for k, v in over]
 
 

@@ -356,15 +356,15 @@
     ],
     "fill": [
       {
-        "q": "They play ____ every weekend.（他們每週末都打____。）",
+        "q": "They play ____ every weekend.（他們每週末都打網球。）",
         "ans": "tennis"
       },
       {
-        "q": "She is a ____ on the school team.（她是校隊的____。）",
+        "q": "She is a ____ on the school team.（她是校隊的球員。）",
         "ans": "player"
       },
       {
-        "q": "Our ____ meets on Fridays.（我們的____在星期五開會。）",
+        "q": "Our ____ meets on Fridays.（我們的隊伍在星期五開會。）",
         "ans": "team"
       },
       {

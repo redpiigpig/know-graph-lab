@@ -339,7 +339,7 @@
         "ans": "dining room"
       },
       {
-        "q": "If you want to go in, please ______ on the door.",
+        "q": "If you want to go in, please ______ on the door. （請用手指輕敲門）",
         "opts": [
           "knock",
           "floor",

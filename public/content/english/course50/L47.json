@@ -381,7 +381,7 @@
         "ans": "in"
       },
       {
-        "q": "The map is at the ____.（地圖在___）",
+        "q": "The map is at the ____.（地圖放在商店裡）",
         "ans": "store"
       },
       {
@@ -393,15 +393,15 @@
         "ans": "market"
       },
       {
-        "q": "She is at the ____.（她在___）",
+        "q": "She is at the ____.（她在工廠裡）",
         "ans": "factory"
       },
       {
-        "q": "They go to the ____.（他們去___）",
+        "q": "They go to the ____.（他們去圖書館）",
         "ans": "library"
       },
       {
-        "q": "The ____ is open today.（___今天開放）",
+        "q": "The ____ is open today.（超級市場今天開門）",
         "ans": "supermarket"
       }
     ],

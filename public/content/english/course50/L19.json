@@ -294,7 +294,7 @@
         "ans": "tea"
       },
       {
-        "q": "One peach, two ______. （一個桃子，兩個___。）",
+        "q": "One peach, two ______. （一個桃子，兩個同種水果。）",
         "opts": [
           "lemons",
           "peaches",

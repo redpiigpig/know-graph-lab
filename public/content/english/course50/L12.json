@@ -374,23 +374,23 @@
         "ans": "girl"
       },
       {
-        "q": "My ____ is new.（我的____是新的）",
+        "q": "My ____ is new.(我剛認識的那個人。)",
         "ans": "friend"
       },
       {
-        "q": "She is my ____.（她是我的____）",
+        "q": "She is my ____.(她是我父母的姊妹或兄弟的女兒。)",
         "ans": "cousin"
       },
       {
-        "q": "His ____ is wonderful.（他的____很棒）",
+        "q": "His ____ is wonderful.(他爸爸或媽媽的父親。)",
         "ans": "grandfather"
       },
       {
-        "q": "Her ____ is dear.（她的____很親愛）",
+        "q": "Her ____ is dear.(她爸爸或媽媽的姐妹。)",
         "ans": "aunt"
       },
       {
-        "q": "Our ____ are people.（我們的____是人們）",
+        "q": "Our ____ are people.(我們和他們有好關係的人。)",
         "ans": "friends"
       },
       {

@@ -460,28 +460,28 @@
     ],
     "unscramble": [
       {
-        "q": "try / enjoy / to / I / .",
-        "ans": "I try to enjoy."
+        "q": "try / love / to / I / .",
+        "ans": "I try to love."
       },
       {
-        "q": "needs / She / . / love / to",
-        "ans": "She needs to love."
+        "q": "hopes / She / . / kiss / to",
+        "ans": "She hopes to kiss."
       },
       {
         "q": "They / . / decide / to / enjoy",
         "ans": "They decide to enjoy."
       },
       {
-        "q": ". / to / He / wants / worry",
-        "ans": "He wants to worry."
+        "q": ". / to / He / needs / try",
+        "ans": "He needs to try."
       },
       {
-        "q": ". / agree / to / We / enjoy",
-        "ans": "We agree to enjoy."
+        "q": ". / agree / to / We / belong",
+        "ans": "We agree to belong."
       },
       {
-        "q": "She / hopes / . / belong / to",
-        "ans": "She hopes to belong."
+        "q": "She / wishes / . / hope / to",
+        "ans": "She wishes to hope."
       }
     ]
   },
