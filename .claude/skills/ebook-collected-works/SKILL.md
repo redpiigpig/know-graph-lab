@@ -52,7 +52,7 @@ description: 「經典學者全集」的收錄流程 —— 以**學科**組織�
 > - **潘尼卡**：7 部完成；**吠陀經驗（義文大部頭 ~1.7 萬段）走 Haiku**，sec3854 進行中。（韋伯已改道：見下）。
 > - **馬克斯韋伯**（宗教社會學，hub 已存在 slug=`max-weber`）：**2026-07-23 改採 REFERENCE 轉錄既有中譯本、不自譯**，引擎 **OpenRouter 免費**（8 key，與主鏈分流；免費 vision 爛只能純文字）。9 本中譯本（李中文/張旺山/康樂簡惠美/閻克文/韓水法/顧忠華…繁簡混）已入 Drive `全集/宗教社會學/韋伯/`；轉錄走 `panikkar_build.py` 型 REFERENCE build。詳見 [[project_weber_collected_works]]。 **2026-09-02 開工**：兩篇志業演講（李中文繁譯 EPUB）已零 LLM 上架（`scripts/weber_build.py`），其餘七本的來源品質盤點與取捨見 [weber_collected_works.md](weber_collected_works.md)。
 > - **內村鑑三**：青空文庫 11 篇 ✅ 全譯／英文原著兩部與豪斯評傳翻譯中（`uchimura_auto.py --author uchimura|uchimura-en|howes`）。無教會神學區另有矢內原＋七人 hub（[[project_uchimura_yanaihara]]）。
-> - **東方聖書（sacred-books-east）**：奧義書✅；剩 5 卷（阿維斯陀/古蘭經/法句經/易經/耆那教）`sbe_translate.py --loop --backend haiku`。
+> - **東方聖書（sacred-books-east）**：50 卷中**第一批 7 卷 ✅**（奧義書一/阿維斯陀一/古蘭經一/法句經/易經/耆那教一，含刻意留白 281 段）；**第二批 6 卷進行中**（摩奴法論/薄伽梵歌/古蘭經二/奧義書二/法華經/道教一），六條 shard 平行跑 `sbe_translate.py --loop --backend nvidia --only <六卷> --shard i/6 --no-upload --reupload-every 60`。🚨 **backend 不要用 haiku**（那條 OAuth 自 2026-07-03 起 401）；剩 37 卷的 archive.org 編號表在 [sacred_books_east.md](sacred_books_east.md)。
 > - **引擎分流（2026-09-17 更新）**：NVIDIA 是現在的主力（7 把 key）；Gemini 只剩 ACCS OCR 那種低量用途——**免費層是「20 次／天／key」的日額度**，長跑用它每段都要先吃滿 7×3 次重試才落到 NVIDIA；🚨 **Haiku 那條 Claude Code OAuth 自 2026-07-03 起 401**，凡是寫死 `--backend haiku` 的路徑都要改掉（supervisor 的線上複核就是這樣把整台鎖在 review 模式、兩個月沒產出）。**監管只需 1 個 session**（艦隊靠排程自我修復，多 session 會搶 checkpoint）。
 
 # 經典學者全集 Skill（Collected Works — 依學科組織）
@@ -782,6 +782,37 @@ worker 每輪回的是 `job=sbe-local-draft all-done`——**沒事做，不是�
 當天的作法：`--shard i/n` 把兩大卷各切四片、阿維斯陀切兩片平行跑，
 `KGL_NVIDIA_MIN_INTERVAL=2` 暫時鬆綁節流（預設 6 秒不動），全程零 429 之外的失敗，
 速率從 6.5 段/分拉到 41 段/分。
+
+### 🚨 一條 lane 綁一卷＝完工時間由最大那卷決定（2026-09-18）
+
+第二批六卷原本是「一條 lane 跑一卷」，六條齊發看起來很平均，其實不是：
+
+    sbe-25-laws-of-manu  剩 5,564（佔剩餘量 41%）  ← 只分到 1/6 產能
+    sbe-39-taoism-1      剩   443（佔 3%）
+
+六條 lane 的速率幾乎一樣（各 2–2.7 段/分，總吞吐被上游延遲卡在 ~16 段/分），
+所以**完工時間由最大那卷決定**：manu 單線要 37 小時，而小卷三小時就做完。
+
+小卷做完後那個 slot **不是單純閒置，是會倒扣的**：lane 退出 → 看門狗 5 分鐘後
+重拉 → 跑一趟空 pass → 空 pass 仍會走到 `ingest_work()`，而它**結尾無條件呼叫
+`assemble_and_upload()`**（mueller_auto.py:304）→ 等於每 5 分鐘把整卷重傳一次。
+
+**正解：不要一條 lane 綁一卷，讓每條 lane 跑「全部未完的卷」、各取 1/N 的節。**
+
+    --only <六個 slug 逗號相連> --shard i/6 --no-upload --reupload-every 60
+
+`--only` 吃逗號清單，`--shard i/n` 是對**每一卷**各取第 i、i+n、… 節，所以負載
+自動攤平、不必手算配比；而且 `is_done()` 是看整卷，六條會一起做到最後才退場，
+不會有 slot 提早沒事做。實測各 shard 的節號 mod 6 恰好等於自己的編號、零重疊。
+
+🚨 **切片併發要一併調 `--reupload-every`**：`translate_work` 預設每 12 節整卷重傳
+一次，六條同時做同一卷時，整卷寫入量會**乘上行程數**。長跑切片設 60
+（2026-09-18 為此加的參數，預設 12 維持原行為）。有過 Supabase 超量鎖站的前例，
+這個不要省。
+
+🚨 **多開行程 ≠ 免費**：`KGL_NVIDIA_MIN_INTERVAL` 是**每個行程各自計時**，所以
+行程數就是總 RPM 的乘數。上面那個配法是 RPM 中性的（行程數不變、只換分派方式）；
+真要加行程數是帳號風險的取捨，**要問使用者**。
 
 ### 🚨 `sbe_translate --loop` 印「sbe done」不等於翻完（2026-09-17）
 
