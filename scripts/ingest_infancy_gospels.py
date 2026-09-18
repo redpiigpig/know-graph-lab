@@ -35,9 +35,13 @@ from pathlib import Path
 import requests
 
 ROOT = Path(__file__).resolve().parent.parent
-MID_DIR = Path(r"C:\Users\user\AppData\Local\Temp\claude"
-               r"\c--Users-user-Desktop-know-graph-lab"
-               r"\d58e3d0f-6f31-498e-b30f-2a931a54d6bc\scratchpad\mineru-out")
+# MinerU 的輸出（含 middle.json）與切好的兩份 PDF 都放在 output/ 底下，不進版控。
+# 要重跑就（Windows PowerShell，注意寫明解譯器／環境變數）：
+#   $env:MINERU_DEVICE_MODE='cpu'
+#   ._mineru_venv\Scripts\mineru.exe -p output/apocrypha-ocr/infancy-latin.pdf \
+#       -o output/apocrypha-ocr -b pipeline -m ocr -l ch
+# 走 CPU 是刻意的：這 28 頁只要三分多鐘，不必跟夜班佇列搶那張 6GB 的卡。
+MID_DIR = ROOT / "output" / "apocrypha-ocr"
 
 DOCS = {
     "infancy-arabic": {
