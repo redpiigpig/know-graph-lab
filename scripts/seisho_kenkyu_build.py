@@ -85,6 +85,7 @@ def main() -> int:
             "month": mo or est[1],
             "dateEstimated": not (y and mo),
             "suspect": r.get("consistent") is False,
+            "src": r.get("src", ""),        # 這條篇目是哪一份 OCR 抽到的，備查用
         }
         by[issue].append(item)
 
@@ -110,6 +111,7 @@ def main() -> int:
         "missingIssues": [i["issue"] for i in issues if not i["count"]],
         "source": "《內村鑑三全集》（岩波書店 1932–33）各卷末「內容年譜」",
         "caveat": "全集的年譜只記到篇名、號數與年月，**沒有原刊頁碼**；此處頁碼欄從缺。"
+                  "篇名的文字層來自兩份獨立 OCR（archive.org djvu 與本機 MinerU），逐號取抽得較完整的一份，每條的 src 欄記著出處。"
                   "另外，這是「全集所收錄的該號篇目」，不等於該號印出來的完整目次。",
         "issues": issues,
     }

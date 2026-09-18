@@ -5,16 +5,29 @@
 逐篇記著「篇名＋聖書之研究第N號＋年月」。把 20 卷的年譜抽出來合併，就得到
 一份「號 → 該號收在全集裡的篇目」的對照表，等於把刊物從全集反推回來。
 
-兩個資料源都吃：
-  --source archive   用 archive.org 的 djvu 文字層（粗 OCR，先看覆蓋率用）
-  --source mineru    用本機 MinerU 轉出的 JSONL（正式版）
+三個資料源：
+  --source archive   用 archive.org 的 djvu 文字層（粗 OCR）
+  --source mineru    用本機 MinerU 轉出的 JSONL
+  --source both      兩邊都跑，逐號取抽得比較多的那一邊（**預設，實測最好**）
+
+🚨 「比較準的 OCR」不等於「抽得比較多」。2026-09-18 兩邊都跑完實測：
+
+    archive   1327 筆｜相異號 349｜缺 8
+    mineru     937 筆｜相異號 339｜缺 18      ← 比粗 OCR 還少
+    逐號取多者 1378 筆｜相異號 352｜缺 5      ← 比兩邊都好
+
+   MinerU 是版面感知的，年譜那種表列會被切成多行，而下面 parse_text 是**逐行**
+   比對，一斷就不匹配；archive 的 djvu 純文字反而整行連著。所以別把 mineru 當成
+   archive 的升級版直接換掉——兩份是同一批書的**獨立** OCR，錯的地方不一樣，
+   合起來才補得滿。只有 mineru 抓到的號：[131, 137, 336]；只有 archive 抓到的 13 個。
+   兩邊都抓不到的剩 [64, 65, 66, 70, 72]，那五個是真的沒被年譜引用到。
 
 🚨 號數是漢數字又被 OCR 咬過（「第三 四ニ號」＝342、ニ 是片假名）。所以號數與年月
    互相校驗：本誌 1900 年 9 月創刊、按月發行，號數與年月是一條直線，對不上的標出來
    而不是默默採信。
 
-    python scripts/seisho_kenkyu_index.py --source archive
-    python scripts/seisho_kenkyu_index.py --source archive --report
+    python scripts/seisho_kenkyu_index.py                    # ＝ --source both
+    python scripts/seisho_kenkyu_index.py --source both --report
 """
 from __future__ import annotations
 
@@ -137,19 +150,66 @@ def load_mineru(vol: int) -> str:
     return "\n".join(json.loads(l).get("content", "") for l in p.open(encoding="utf-8"))
 
 
-def main() -> int:
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--source", choices=["archive", "mineru"], default="archive")
-    ap.add_argument("--report", action="store_true", help="只印覆蓋率，不寫檔")
-    args = ap.parse_args()
-
-    load = load_archive if args.source == "archive" else load_mineru
+def collect(load, label: str) -> list[dict]:
     rows: list[dict] = []
     with ThreadPoolExecutor(max_workers=3) as ex:
         for vol, text in zip(range(1, 21), ex.map(load, range(1, 21))):
             got = parse_text(text, vol) if text else []
+            for r in got:
+                r["src"] = label          # 哪一份 OCR 抽到的，事後查得到
             rows += got
-            print(f"  卷{vol:02d} 抽出 {len(got):4} 筆" + ("" if text else "（沒有文字可讀）"), flush=True)
+            print(f"  [{label:>7}] 卷{vol:02d} 抽出 {len(got):4} 筆"
+                  + ("" if text else "（沒有文字可讀）"), flush=True)
+    return rows
+
+
+def usable(rows: list[dict]) -> int:
+    """這批裡有幾筆的篇名真的能用。
+
+    🚨 判準要跟下游一致。seisho_kenkyu_build.py 會把清乾淨後不足兩字的篇名當碎片
+    丟掉，所以這裡若按「筆數」比大小，就可能挑中一邊的碎片而扔掉另一邊的好標題：
+    2026-09-18 第 344 號就是這樣——archive 抽到 `''`、mineru 抽到「回顧三十年」，
+    筆數 1:1 平手偏向 archive，整個號就在 build 那一步消失了。
+    """
+    return sum(1 for r in rows if len(re.sub(r"[\s　]+", "", r.get("title") or "")
+                                      .strip("・.,-—–_|｜")) >= 2)
+
+
+def merge_by_issue(a_rows: list[dict], m_rows: list[dict]) -> list[dict]:
+    """逐號取比較好的那一邊：先比能用的篇名數，平手再比總筆數。
+
+    不做兩邊聯集：同一篇在兩份 OCR 裡是兩種錯字寫法，硬併起來會讓同一號出現
+    一堆長得很像的重複篇名。逐號整批二選一，號的覆蓋率拿到聯集的好處，
+    篇名則維持同一份 OCR 的一致寫法。
+    """
+    by: dict[int, tuple[list, list]] = {}
+    for r in a_rows:
+        by.setdefault(r["issue"], ([], []))[0].append(r)
+    for r in m_rows:
+        by.setdefault(r["issue"], ([], []))[1].append(r)
+    out: list[dict] = []
+    for n in sorted(by):
+        a, m = by[n]
+        out += a if (usable(a), len(a)) >= (usable(m), len(m)) else m
+    return out
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--source", choices=["archive", "mineru", "both"], default="both")
+    ap.add_argument("--report", action="store_true", help="只印覆蓋率，不寫檔")
+    args = ap.parse_args()
+
+    if args.source == "both":
+        a = collect(load_archive, "archive")
+        m = collect(load_mineru, "mineru")
+        rows = merge_by_issue(a, m)
+        n_a = len({r["issue"] for r in rows if r["src"] == "archive"})
+        n_m = len({r["issue"] for r in rows if r["src"] == "mineru"})
+        print(f"\n合併：archive {len(a)} 筆 ＋ mineru {len(m)} 筆 → 逐號取多者 {len(rows)} 筆"
+              f"（{n_a} 個號採 archive、{n_m} 個號採 mineru）")
+    else:
+        rows = collect(load_archive if args.source == "archive" else load_mineru, args.source)
 
     issues = sorted({r["issue"] for r in rows})
     ok = [r for r in rows if r.get("consistent")]
