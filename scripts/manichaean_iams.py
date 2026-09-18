@@ -45,6 +45,7 @@ Trust) 四冊在 manichaeism.de 開放取用，**原文轉寫與英譯逐行並�
 from __future__ import annotations
 
 import argparse
+import collections
 import json
 import re
 import sys
@@ -359,7 +360,11 @@ def align_columns(
     lkeys = [n for n, _ in left if n]
     rkeys = {n for n, _ in right if n}
     shared_set = {n for n in lkeys if n in rkeys}
-    shared = [n for n in lkeys if n in shared_set]
+    # 🚨 同一個鍵在一頁裡可能印兩次（續段重標）。shared 不去重的話，
+    #    外層迴圈會把同一堆 chunk 吐成兩段**內容完全相同**的段落，
+    #    而且兩段的 ref 一模一樣。bucket() 本來就把兩段文字併在同一堆，
+    #    所以這裡只保留第一次出現的順序即可。
+    shared = list(dict.fromkeys(n for n in lkeys if n in shared_set))
 
     def bucket(col: list[tuple[str, str]]) -> dict[str, list[tuple[str, str]]]:
         """把一欄的 chunk 依「最後遇到的共有鍵」分堆；共有鍵之前的歸空字串堆。"""
@@ -379,14 +384,42 @@ def align_columns(
             continue
         covered = [n for n, _ in lchunks if n] or [n for n, _ in rchunks if n]
         segs.append({
+            # 頭尾相同就不要寫成 `4b–4b`：那是同一個鍵印了兩次，不是範圍。
             "n": "" if not covered else
-                 covered[0] if len(covered) == 1 else f"{covered[0]}–{covered[-1]}",
+                 covered[0] if covered[0] == covered[-1] else f"{covered[0]}–{covered[-1]}",
             "orig": " ".join(t for _, t in lchunks if t).strip(),
             "en": " ".join(t for _, t in rchunks if t).strip(),
         })
     only_left = [n for n in lkeys if n not in rkeys]
     only_right = [n for n, _ in right if n and n not in set(lkeys)]
     return segs, only_left, only_right
+
+
+def disambiguate_refs(segments: list[dict], vol: int) -> int:
+    """ref 撞名的，補上選輯冊頁把它分開。回補了幾段。
+
+    🚨 **ref 是引用鍵，重複就等於指不到東西。**定位符偵測本來就稀疏
+       （living-gospel 14 頁只有 3 頁認得出），認不出來時沿用上一頁的，
+       而行號又是每頁從 1/ 重新起算——於是 `M644 1a/` 在六頁各出現一次，
+       六段不同的正文共用同一個引用式。頁面照樣顯示，看不出任何異常。
+
+    只動撞名的那幾段，不動本來就唯一的——引用式一旦公布就不該無故變動。
+    補的是選輯自己的冊頁（可引用的出版品座標），不是這份 PDF 的內部頁碼。
+
+    >>> segs = [{'ref': 'M644 1a/', '_pno': 8}, {'ref': 'M644 1a/', '_pno': 9},
+    ...         {'ref': 'M172 I', '_pno': 5}]
+    >>> disambiguate_refs(segs, 2)
+    2
+    >>> [s['ref'] for s in segs]
+    ['M644 1a/ (Anth. 2 p.8)', 'M644 1a/ (Anth. 2 p.9)', 'M172 I']
+    """
+    seen = collections.Counter(s["ref"] for s in segments)
+    n = 0
+    for s in segments:
+        if seen[s["ref"]] > 1:
+            s["ref"] = f"{s['ref']} (Anth. {vol} p.{s['_pno']})"
+            n += 1
+    return n
 
 
 #: 片段首行：抄本編號＋語言縮寫＋冒號，後接校本出處（`M49 MP: Ed. MM ii, 307-08`）。
@@ -632,7 +665,12 @@ def build(slug: str, *, write: bool = True) -> dict:
                 "orig": s["orig"],
                 "en": s["en"],
                 "zh": "",
+                "_pno": pno,
             })
+
+    disambiguate_refs(segments, sec.vol)
+    for s in segments:
+        del s["_pno"]
 
     out = {
         "slug": sec.slug,
@@ -670,6 +708,13 @@ def build(slug: str, *, write: bool = True) -> dict:
         old_path = OUT_DIR / f"{slug}.json"
         if old_path.exists():
             old_path.unlink()  # 不留上一版的壞檔冒充已上架
+        return {}
+
+    # 🚨 ref 是引用鍵，重複就等於指不到東西，而頁面完全看不出異常。
+    #    disambiguate_refs() 之後仍撞名就是有沒想到的長相，寧可不出檔。
+    dup = [r for r, c in collections.Counter(s["ref"] for s in segments).items() if c > 1]
+    if dup:
+        print(f"✗ {slug:22s} ref 重複 {len(dup)} 種（例 {dup[:3]}），不產出")
         return {}
     if write:
         OUT_DIR.mkdir(parents=True, exist_ok=True)

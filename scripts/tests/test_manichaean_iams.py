@@ -13,6 +13,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from manichaean_iams import (  # noqa: E402
     align_columns,
     choose_scheme,
+    disambiguate_refs,
     find_fragment_siglum,
     find_locator,
     find_siglum_heading,
@@ -160,6 +161,13 @@ class TestAlignColumns:
         assert [(s["n"], s["orig"], s["en"]) for s in segs] == [
             ("", "lead", "LEAD"), ("1", "a", "A")]
 
+    def test_repeated_key_on_one_page_yields_one_segment(self):
+        # 🚨 同一個鍵一頁印兩次（續段重標）時，若不去重，外層迴圈會吐出兩段
+        #    內容完全相同、ref 也完全相同的段落。這條沒過＝正文被複製一份。
+        segs, _, _ = align_columns(
+            [("4b", "x"), ("4b", "y")], [("4b", "X")])
+        assert [(s["n"], s["orig"], s["en"]) for s in segs] == [("4b", "x y", "X")]
+
     def test_page_with_no_marks_at_all_is_not_dropped(self):
         # 沙卜爾干 pp. 31–35 一個可認的標記都沒有，整頁正文與英譯曾就此消失。
         segs, _, _ = align_columns([("", "all of it")], [("", "ALL OF IT")])
@@ -192,6 +200,22 @@ class TestFindLocator:
     def test_editorial_restoration_brackets_are_not_locators(self):
         # 補字括號 [……] 到處都是，誤認會把每段切碎。
         assert find_locator("[……] (.)w(.)[……]") is None
+
+
+class TestDisambiguateRefs:
+    def test_collision_gets_the_anthology_page(self):
+        # 🚨 定位符偵測稀疏＋行號每頁從 1/ 重起 ⇒ `M644 1a/` 在六頁各出現一次，
+        #    六段不同的正文共用同一個引用式，而頁面完全看不出異常。
+        segs = [{"ref": "M644 1a/", "_pno": 8}, {"ref": "M644 1a/", "_pno": 9}]
+        assert disambiguate_refs(segs, 2) == 2
+        assert [s["ref"] for s in segs] == [
+            "M644 1a/ (Anth. 2 p.8)", "M644 1a/ (Anth. 2 p.9)"]
+
+    def test_unique_refs_are_left_alone(self):
+        # 引用式一旦公布就不該無故變動：只動撞名的那幾段。
+        segs = [{"ref": "M172 I", "_pno": 5}, {"ref": "M644 2a/", "_pno": 8}]
+        assert disambiguate_refs(segs, 2) == 0
+        assert [s["ref"] for s in segs] == ["M172 I", "M644 2a/"]
 
 
 class TestFindFragmentSiglum:
