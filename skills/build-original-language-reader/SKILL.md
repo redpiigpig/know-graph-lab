@@ -126,7 +126,7 @@ Two failures recur across languages and are worth carrying into any new reader:
      fourth language there; it skips the Chinese-character test, because
      Japanese is written in kanji, and relies on the exact line match instead.
    - **Then read the pages back a second way.**
-     `scripts/audit_reader_pages.py` opens all fourteen books and checks what the
+     `scripts/audit_reader_pages.py` opens all seven volumes and checks what the
      render checks cannot see: lessons present and in order, ten items each, text
      inside the type area (mirrored — the bound edge swaps sides every turn),
      placeholders still unfilled, Simplified Chinese, and whether every book names
@@ -149,6 +149,18 @@ Two failures recur across languages and are worth carrying into any new reader:
      case label *is* the whole gloss — は「（主題）」 against が「（主格）」 — so
      dropping them would blank 21,172 glosses and make the two particles
      identical in the interlinear. Japanese keeps its particle markers.
+   - **Then look at every page, twice over.** Two gates do that, and both were
+     written because the ones above passed a book that was wrong on paper:
+     `scripts/qa_reader_rendered_pages.py` rasterises all seven volumes and
+     measures each page (blank pages, exact duplicates, ink on the trim edge) —
+     **text you can extract is not text that prints**. Then
+     `scripts/inspect_reader_pages.py` asks whether each page is *set* well:
+     colliding baselines, a hole in the type area, an orphan page carrying one
+     line, a tight line pair. It found 32 orphan pages on 2026-09-18 and the
+     fix is in `references/layout-web-audio.md`〈孤兒頁〉.
+     🚨 A keep inside a table cell binds a row to the next **row**; LibreOffice
+     ignores it when what follows is a paragraph, and honours it unreliably
+     unless every cell paragraph in the row carries it.
    - **Every volume needs a spine, in the course reader's format**
      (`scripts/build_reader_spines.py`, which follows `build_reader_spine.py`):
      a B5 carrier sheet, the strip drawn at its true width in the middle, 247 mm

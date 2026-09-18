@@ -35,8 +35,6 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from janome.tokenizer import Tokenizer
-
 import original_reader_llm as llm
 from translate_ebook_to_zh import _to_traditional as to_traditional
 
@@ -283,6 +281,10 @@ def main() -> int:
     readings = load(READINGS)
     vocab = vocabulary_glosses()
     glossary: dict[str, str] = load(GLOSSARY) if GLOSSARY.exists() else {}
+    # 🚨 janome 只有斷詞這一步用得到。寫在檔頭的話，第二冊的 builder 為了拿
+    # CLOSED_CLASS 這個常數 import 這一支就會 ModuleNotFoundError——排版不需要斷詞器。
+    from janome.tokenizer import Tokenizer
+
     tokenizer = Tokenizer()
 
     # 一次斷詞，之後都用這份；每個 lemma 記一句例句給模型判斷語境。

@@ -245,10 +245,11 @@ def add_exercises(document: Document, block: dict | None, lesson: dict) -> None:
             f"第 {lesson['volume']} 冊第 {lesson['lesson']} 課沒有練習題："
             "exercise-set 對不上本課詞表"
         )
-    H.compact_heading(
+    exercise_heading = H.compact_heading(
         document.add_heading(f"本課翻譯練習（{len(block['items'])}題）", level=2),
         before=H.SECTION_HEADING_SPACE_BEFORE_PT,
         after=H.SECTION_HEADING_SPACE_AFTER_PT, line_spacing=1.0)
+    exercise_heading.paragraph_format.page_break_before = True
     intro = H.add_body(
         document,
         "把每一句譯成繁體中文。標有出處的句子引自原典。",
@@ -603,6 +604,8 @@ def build(book: int) -> Path:
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     path = OUT_DIR / f"japanese-original-reader-vol{book}.docx"
+    # 換頁前的空段落會印出只有眉標的一頁；存檔前掃掉。
+    H.drop_spacer_before_break(document)
     document.save(path)
     return path
 

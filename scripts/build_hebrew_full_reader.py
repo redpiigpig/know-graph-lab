@@ -302,12 +302,86 @@ def set_rtl(paragraph) -> None:
         rtl.set(qn("w:val"), "1")
 
 
+def drop_spacer_before_break(document) -> None:
+    """Delete an empty spacer paragraph that sits just before a forced page break.
+
+    🚨 It prints a page with nothing but the running head on it. The spacer is
+    there for a few points of air after a table, and it is invisible — until the
+    table happens to end near the foot of the page. Then the spacer flows to the
+    next page on its own, the following section's ``page_break_before`` opens yet
+    another page, and the one in between goes to the printer blank. Ten pages of
+    the Latin volumes and one of the Hebrew were exactly this, and every other
+    gate passed them: the page is not text-empty, because the running head is
+    text, and its ink is a header, not a defect.
+
+    The air was never visible anyway — space before a forced break is not
+    rendered — so dropping the paragraph changes nothing else.
+    """
+    body = document.element.body
+    dropped = 0
+    children = list(body)
+    for index, element in enumerate(children[:-1]):
+        if element.tag != qn("w:p"):
+            continue
+        following = children[index + 1]
+        if following.tag != qn("w:p"):
+            continue
+        p_pr = following.find(qn("w:pPr"))
+        if p_pr is None or p_pr.find(qn("w:pageBreakBefore")) is None:
+            continue
+        if "".join(element.itertext()).strip():
+            continue
+        own_pr = element.find(qn("w:pPr"))
+        if own_pr is not None and (own_pr.find(qn("w:pBdr")) is not None
+                                   or own_pr.find(qn("w:sectPr")) is not None):
+            continue  # a rule line or a section break is not a spacer
+        body.remove(element)
+        dropped += 1
+    if dropped:
+        print(f"  清掉換頁前的空段落 {dropped} 個")
+
+
 def set_keep(paragraph, *, next_paragraph=False, together=False) -> None:
+    """🚨 ``w:keepNext``/``w:keepLines`` have to sit at the front of ``w:pPr``.
+
+    The schema fixes the order of ``pPr``'s children (``pStyle``, ``keepNext``,
+    ``keepLines``, … ``spacing`` … ``jc``), and by the time this runs the
+    paragraph already carries spacing and alignment. Appending put the keeps
+    after them, which Word treats as invalid and LibreOffice honours only
+    sometimes.
+    """
     p_pr = paragraph._p.get_or_add_pPr()
-    if next_paragraph:
-        p_pr.append(OxmlElement("w:keepNext"))
-    if together:
-        p_pr.append(OxmlElement("w:keepLines"))
+    at = 1 if p_pr.find(qn("w:pStyle")) is not None else 0
+    if next_paragraph and p_pr.find(qn("w:keepNext")) is None:
+        p_pr.insert(at, OxmlElement("w:keepNext"))
+        at += 1
+    if together and p_pr.find(qn("w:keepLines")) is None:
+        p_pr.insert(at, OxmlElement("w:keepLines"))
+
+
+def set_widow_control(paragraph) -> None:
+    """Let a long line of Chinese break across pages, but never one line alone.
+
+    🚨 ``keepLines`` on the whole-sentence translation looks right and reads
+    wrong. Some of the patristic senses are a whole paragraph — the one in Greek
+    volume 2 lesson 20 is 201 mm tall — and a block that may not split can only
+    move as a whole, so it took its page and left the word row it belongs to
+    stranded on the page before, two lines on an otherwise empty sheet. Widow
+    and orphan control gives the useful half of the promise: it may split, but
+    not so as to leave a single line.
+    """
+    p_pr = paragraph._p.get_or_add_pPr()
+    for existing in (qn("w:widowControl"),):
+        node = p_pr.find(existing)
+        if node is not None:
+            p_pr.remove(node)
+    at = 0
+    for earlier in (qn("w:pStyle"), qn("w:keepNext"), qn("w:keepLines"), qn("w:pageBreakBefore")):
+        if p_pr.find(earlier) is not None:
+            at += 1
+    node = OxmlElement("w:widowControl")
+    node.set(qn("w:val"), "1")
+    p_pr.insert(at, node)
 
 
 def set_repeat_header(row) -> None:
@@ -789,6 +863,27 @@ def _printed_tokens(text: str) -> list[tuple[str, str]]:
     return output
 
 
+def fold_bare_punctuation(tokens: list[dict]) -> list[dict]:
+    """A comma is not a word: give it to the token before it.
+
+    🚨 A gloss-less punctuation token takes a column of its own, and when it is
+    the last token of a unit that column becomes the unit's last row — which the
+    whole-sentence line then keeps company with. Japanese volume 1 page 179
+    printed 「、」 and one line of Chinese, and nothing else. Both packers measure
+    ``word + trailing``, so folding it in costs no width.
+    """
+    folded: list[dict] = []
+    for token in tokens:
+        bare = not (token.get("glossZh") or "").strip()
+        punctuation = bool(token.get("word")) and not re.search(r"[\w]", token["word"], re.UNICODE)
+        if folded and bare and punctuation:
+            previous = folded[-1]
+            previous["trailing"] = previous.get("trailing", "") + token["word"]
+            continue
+        folded.append(dict(token))
+    return folded
+
+
 def pack_interlinear(tokens: list[dict], available_mm: float, *, lead_mm: float = 0.0) -> list[list[dict]]:
     """Greedy right-to-left packing of word/gloss pairs into full-width rows."""
     lines: list[list[dict]] = []
@@ -825,7 +920,8 @@ def add_interlinear_unit(
     """Render one verse/segment as stacked word blocks running right to left,
     then close it with the whole-sentence meaning."""
     lead_mm = 7.0 if lead else 0.0
-    lines = pack_interlinear(tokens, available_mm, lead_mm=lead_mm)
+    lines = pack_interlinear(fold_bare_punctuation(tokens), available_mm, lead_mm=lead_mm)
+    last_table = None
     for line_index, line in enumerate(lines):
         cells_mm = [token["widthMm"] for token in line]
         if line_index == 0 and lead:
@@ -840,6 +936,7 @@ def add_interlinear_unit(
         elif slack > 0:
             cells_mm[-1] += slack
         table = container.add_table(rows=1, cols=len(cells_mm))
+        last_table = table
         set_table_geometry(table, cells_mm, indent_dxa=indent_dxa)
         set_borders(table, outside=False, inside=False)
         set_table_rtl(table)
@@ -872,10 +969,22 @@ def add_interlinear_unit(
             )
             set_rtl(top)
             set_run_font(bottom.add_run(token.get("glossZh", "")), FONT_ZH, INTERLINEAR_GLOSS_PT, color=gloss_color)
-            if line_index < len(lines) - 1:
-                set_keep(bottom, next_paragraph=True)
+            set_keep(bottom, next_paragraph=True)
     if sense:
-        p = container.add_paragraph()
+        # 🚨 只有**最後一列**要把 keepNext 補到每一格每一段上，其餘各列照舊只補有詞
+        # 的格子。實測（LibreOffice 25.x）：整句那一列留不留得住，看的是前一列每一格
+        # 都有沒有 keepNext；只有部分格子帶著時它有時認有時不認。但是整本每一列都補
+        # 滿的代價很大——逐詞對譯從此一個單元都不准跨頁，希臘下冊 474 頁變 557 頁。
+        # 所以只補這一列：整句跟得上，而長單元照舊可以在頁與頁之間斷開。
+        if last_table is not None:
+            if len(sense) > LONG_SENSE_CHARS:
+                clear_keep_next(last_table.rows[0])
+            else:
+                for keep_cell in last_table.rows[0].cells:
+                    for keep_paragraph in keep_cell.paragraphs:
+                        set_keep(keep_paragraph, next_paragraph=True)
+        # 整句中譯併進最後一列，不然它會自己跑到下一頁（見 sense_row）。
+        p = sense_row(last_table, rtl=True) if last_table is not None else container.add_paragraph()
         p.paragraph_format.space_before = Pt(3)
         p.paragraph_format.space_after = Pt(9)
         p.paragraph_format.line_spacing = 1.3
@@ -883,7 +992,59 @@ def add_interlinear_unit(
         p.paragraph_format.first_line_indent = Mm(-5)
         set_run_font(p.add_run("整句　"), FONT_UI, LABEL_PT, bold=True, color=ACCENT)
         add_mixed_script_text(p, sense, FONT_ZH, SENSE_PT, color=sense_color)
-        set_keep(p, together=True)
+        set_widow_control(p)
+
+
+# 整句中譯超過這麼多字，就不把它綁在詞列旁邊。教父那幾篇的整句是整段翻譯（最長
+# 201mm，佔掉大半頁），綁住的結果是詞列被拖到次頁、而整句仍舊擠不進去又跳一頁——
+# 那一頁上只有一個希臘詞與它的中譯。不綁，詞列就留在原頁排滿，整句自己佔一頁。
+# 門檻換算：12pt 中文在 141mm 版心一行約 33 字，一頁約 38 行；600 字約 18 行、100mm。
+LONG_SENSE_CHARS = 600
+
+
+def clear_keep_next(row) -> None:
+    """Undo the row-to-row keep: let this row stay where it is."""
+    for cell in row.cells:
+        for paragraph in cell.paragraphs:
+            p_pr = paragraph._p.get_or_add_pPr()
+            node = p_pr.find(qn("w:keepNext"))
+            if node is not None:
+                p_pr.remove(node)
+
+
+def sense_row(table, *, rtl=False):
+    """Give the whole-sentence line its own full-width row in the word table.
+
+    🚨 It cannot be a paragraph after the table. LibreOffice ignores
+    ``keepNext`` on a cell paragraph when what follows is a paragraph, so the
+    sense line was free to fall onto the next page by itself — eight pages
+    across the Greek, Latin and Japanese volumes printed one line of Chinese
+    and nothing else. Row-to-row ``keepNext`` inside one table it does honour,
+    which is why this works.
+    """
+    row = table.add_row()
+    # 🚨 這一列不准拆。放它拆過——教父那幾篇的整段翻譯於是每一篇都在頁首留下一兩行
+    # 尾巴、整頁其餘全白，希臘下冊七頁。長整句改用「不綁詞列」處理（見下面的
+    # LONG_SENSE_CHARS），不是靠允許它拆。
+    prevent_row_split(row)
+    cell = row.cells[0]
+    for other in row.cells[1:]:
+        cell = cell.merge(other)
+    set_cell_margins(cell, top=0, bottom=0, start=0, end=0)
+    # merge() concatenates every cell's paragraphs; the empty ones would print
+    # as blank lines under the sense.
+    for extra in cell.paragraphs[1:]:
+        extra._p.getparent().remove(extra._p)
+    if rtl:
+        cell.paragraphs[0].alignment = WD_ALIGN_PARAGRAPH.LEFT
+    # 🚨 逐詞對譯的表格帶著 tblInd，整張表格因此比版心寬出那麼多。詞欄很少排到
+    # 最右邊，所以看不出來；整句中譯會排滿整格，於是印到版心外面去（拉丁下冊
+    # 第 286 頁，稽核報「文字跑出版心」）。右邊收回表格縮排那一段。
+    indent = table._tbl.tblPr.find(qn("w:tblInd"))
+    if indent is not None:
+        dxa = int(indent.get(qn("w:w")) or 0)
+        cell.paragraphs[0].paragraph_format.right_indent = Mm(dxa / 1440 * 25.4)
+    return cell.paragraphs[0]
 
 
 def set_table_rtl(table) -> None:
@@ -1196,10 +1357,14 @@ def add_exercises(document: Document, block: dict) -> None:
     reference and the composed ones print that they are composed; neither prints
     a translation.  See references/exercise-sets.md.
     """
-    compact_heading(
+    # 🚨 練習另起一頁。生詞表跨到第二頁之後，練習從中段才開始，十題排不完，最後
+    # 一題被甩到第三頁——全四本共 22 頁是這樣來的，每一頁上只有一題、其餘全白。
+    # 十題加說明約 205mm，版心 219mm，另起一頁一定排得下。
+    heading = compact_heading(
         document.add_heading(f"本課翻譯練習（{len(block['items'])}題）", level=2),
         before=SECTION_HEADING_SPACE_BEFORE_PT,
         after=SECTION_HEADING_SPACE_AFTER_PT, line_spacing=1.0)
+    heading.paragraph_format.page_break_before = True
     intro = add_body(
         document,
         "把每一句譯成繁體中文。標有出處的句子引自原典。",
@@ -1346,6 +1511,7 @@ def add_practice(document: Document, lesson: dict, *, page_break_before=False) -
         "照音標朗讀全篇，聽出每一節的停頓與重音。",
         "用一句繁中寫出本篇主旨，再以一個希伯來關鍵詞作標題。",
     )
+    prompt_paragraphs = []
     for index, text in enumerate(prompts, 1):
         p = document.add_paragraph()
         p.paragraph_format.left_indent = Mm(8)
@@ -1354,16 +1520,29 @@ def add_practice(document: Document, lesson: dict, *, page_break_before=False) -
             p.paragraph_format.space_after = Pt(2)
         set_run_font(p.add_run(f"□ {index}. "), FONT_UI, 10.2, bold=True, color=ACCENT)
         set_run_font(p.add_run(text), FONT_ZH, 10.2 if compact else 10.6)
+        prompt_paragraphs.append(p)
+    # 🚨 六條清單要鎖成一塊。少了這一條，第 5、6 條會單獨落在次頁頁首——一頁上
+    # 只有兩行、其餘全白。最後一條的 keepNext 留給下面的讀後筆記；沒有讀後筆記
+    # 時不能加，不然它會去綁下一課的標籤（那一段是另起一頁的）而把整組拖過去。
+    for p in prompt_paragraphs[:-1]:
+        set_keep(p, next_paragraph=True)
     # A fixed note block overflowed on lessons with many proper names and made
     # rule-only pages.  Keep a useful writing area only where it fits on the
     # practice sheet; dense proper-name lessons already use the full page.
     if not compact and len(proper) <= 5:
+        set_keep(prompt_paragraphs[-1], next_paragraph=True)
         notes_heading = document.add_heading("讀後筆記", level=2)
         set_keep(notes_heading, next_paragraph=True)
-        note_lines = max(2, 8 - len(proper))
-        for _ in range(note_lines):
+        # 🚨 兩行就好。原本最多八行，那一整組排不進練習頁就整組跳到下一頁，印出來
+        # 是一頁上只有「讀後筆記」四個字加幾條線——全書十一頁這樣。收成兩行才跟得上
+        # 完成清單後面。
+        note_lines = 2
+        for index in range(note_lines):
             p = document.add_paragraph(" ")
             paragraph_rule(p, color=RULE, size="3")
+            # 標題與每一條橫線鎖成一組：拆開的話，一頁上會只剩標題與一條線。
+            if index < note_lines - 1:
+                set_keep(p, next_paragraph=True)
 
 
 def add_haggadah(document: Document, haggadah: dict, *, page_break_before=True) -> None:
@@ -1569,8 +1748,8 @@ def add_reference_tables(document: Document, data: dict) -> None:
 
 def add_back_indices(document: Document, data: dict) -> None:
     add_label(document, "Colophon", page_break_before=True)
+    # 標籤已經另起一頁了；標題再來一次，標籤就單獨佔掉一整頁。
     heading = document.add_heading("來源與成品檢核", level=1)
-    heading.paragraph_format.page_break_before = True
     for text in (
         "50課；每課固定20詞；總計1,000詞。",
         "每課10題原文譯繁中練習；總計500題，本課二十詞全數入題。",
@@ -1619,6 +1798,8 @@ def build(data: dict) -> Path:
     add_back_indices(document, data)
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    # 換頁前的空段落會印出只有眉標的一頁；存檔前掃掉。
+    drop_spacer_before_break(document)
     document.save(OUTPUT_PATH)
     return OUTPUT_PATH
 

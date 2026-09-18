@@ -418,10 +418,11 @@ def exercise_section(document, block: dict | None, lesson: int) -> None:
     """
     if block is None:
         raise SystemExit(f"第 {lesson} 課沒有練習題：exercise-set 對不上本課詞表")
-    H.compact_heading(
+    exercise_heading = H.compact_heading(
         heading(document, f"本課翻譯練習（{len(block['items'])}題）", H.H2_SIZE_PT),
         before=H.SECTION_HEADING_SPACE_BEFORE_PT,
         after=H.SECTION_HEADING_SPACE_AFTER_PT, line_spacing=1.0)
+    exercise_heading.paragraph_format.page_break_before = True
     intro = body(document, "把每一句譯成繁體中文。標有出處的句子引自原典。",
                  H.CAPTION_PT, color=H.MUTED, space_after=2)
     intro.paragraph_format.line_spacing = Pt(H.EXERCISE_INTRO_LINE_PT)
@@ -806,6 +807,8 @@ def build(book_number: int) -> Path:
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     path = OUT_DIR / f"latin-original-reader-vol{book_number}.docx"
+    # 換頁前的空段落會印出只有眉標的一頁；存檔前掃掉。
+    H.drop_spacer_before_break(document)
     document.save(path)
     return path
 

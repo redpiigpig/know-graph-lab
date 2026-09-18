@@ -69,8 +69,14 @@ from build_hebrew_full_reader import (  # noqa: E402  - shared typesetting machi
     set_borders,
     set_cell_margins,
     set_keep,
+    clear_keep_next,
+    drop_spacer_before_break,
+    fold_bare_punctuation,
+    LONG_SENSE_CHARS,
+    sense_row,
     set_repeat_header,
     set_run_font,
+    set_widow_control,
     set_table_geometry,
     shade,
     EXERCISE_ANSWER_LINE_PT,
@@ -192,7 +198,9 @@ def add_interlinear(
         return
     render = render or (lambda paragraph, text, size: add_greek_run(paragraph, text, size))
     lead_mm = 8.0 if lead else 0.0
-    lines = pack(tokens, available_mm, lead_mm=lead_mm, measure=measure, script_pt=greek_pt)
+    lines = pack(fold_bare_punctuation(tokens), available_mm,
+                 lead_mm=lead_mm, measure=measure, script_pt=greek_pt)
+    last_table = None
     for line_index, line in enumerate(lines):
         cells_mm = [token["widthMm"] for token in line]
         if line_index == 0 and lead:
@@ -206,6 +214,7 @@ def add_interlinear(
         elif slack > 0:
             cells_mm[-1] += slack
         table = document.add_table(rows=1, cols=len(cells_mm))
+        last_table = table
         set_table_geometry(table, cells_mm)
         set_borders(table, outside=False, inside=False)
         prevent_row_split(table.rows[0])
@@ -236,10 +245,22 @@ def add_interlinear(
                 INTERLINEAR_GLOSS_PT,
                 color=MUTED,
             )
-            if line_index < len(lines) - 1:
-                set_keep(bottom, next_paragraph=True)
+            set_keep(bottom, next_paragraph=True)
     if sense:
-        p = document.add_paragraph()
+        # 🚨 只有**最後一列**要把 keepNext 補到每一格每一段上，其餘各列照舊只補有詞
+        # 的格子。實測（LibreOffice 25.x）：整句那一列留不留得住，看的是前一列每一格
+        # 都有沒有 keepNext；只有部分格子帶著時它有時認有時不認。但是整本每一列都補
+        # 滿的代價很大——逐詞對譯從此一個單元都不准跨頁，希臘下冊 474 頁變 557 頁。
+        # 所以只補這一列：整句跟得上，而長單元照舊可以在頁與頁之間斷開。
+        if last_table is not None:
+            if len(sense) > LONG_SENSE_CHARS:
+                clear_keep_next(last_table.rows[0])
+            else:
+                for keep_cell in last_table.rows[0].cells:
+                    for keep_paragraph in keep_cell.paragraphs:
+                        set_keep(keep_paragraph, next_paragraph=True)
+        # 整句中譯併進最後一列，不然它會自己跑到下一頁（見 sense_row）。
+        p = sense_row(last_table) if last_table is not None else document.add_paragraph()
         p.paragraph_format.space_before = Pt(3)
         p.paragraph_format.space_after = Pt(9)
         p.paragraph_format.line_spacing = 1.3
@@ -247,7 +268,7 @@ def add_interlinear(
         p.paragraph_format.first_line_indent = Mm(-6)
         set_run_font(p.add_run("整句　"), FONT_UI, LABEL_PT, bold=True, color=ACCENT)
         add_mixed_script_text(p, sense, FONT_ZH, SENSE_PT, color=INK)
-        set_keep(p, together=True)
+        set_widow_control(p)
 
 
 def add_greek_run(paragraph, text: str, size: float, *, color=None) -> None:
@@ -390,10 +411,11 @@ def add_exercises(document: Document, block: dict | None, lesson: int) -> None:
     """
     if block is None:
         raise SystemExit(f"第 {lesson} 課沒有練習題：exercise-set 對不上本課詞表")
-    compact_heading(
+    heading = compact_heading(
         document.add_heading(f"本課翻譯練習（{len(block['items'])}題）", level=2),
         before=SECTION_HEADING_SPACE_BEFORE_PT,
         after=SECTION_HEADING_SPACE_AFTER_PT, line_spacing=1.0)
+    heading.paragraph_format.page_break_before = True
     intro = add_body(
         document,
         "把每一句譯成繁體中文。標有出處的句子引自原典。",
@@ -458,8 +480,9 @@ def add_reading(document: Document, lesson: dict, interlinear: dict) -> None:
             add_plain_greek(document, segment.get("displayText", ""))
             if sense:
                 add_body(document, sense, size=TRANSLATION_PT, color=INK)
-    for absent in reading.get("absentVerses") or []:
-        add_body(document, f"{absent['ref']}：{absent['note']}", size=CAPTION_PT, color=MUTED)
+    # 🚨 缺節的說明不印在紙上。「本節在此版本無正文（Swete 未收）」是編務語言，
+    # 課本不寫這種話（擁有者 2026-09-18）；而它印出來還會自己佔掉一整頁——上冊
+    # 第 308 頁就是一行這個。資料層照舊留著 absentVerses 給驗證器點名。
 
 
 def add_lesson(document: Document, lesson: dict, interlinear: dict, exercises: dict,
@@ -769,6 +792,8 @@ def build(book_number: int) -> Path:
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     path = OUTPUT_DIR / f"{OUTPUT_STEM}{book_number}.docx"
+    # 換頁前的空段落會印出只有眉標的一頁；存檔前掃掉。
+    drop_spacer_before_break(document)
     document.save(path)
     return path
 
