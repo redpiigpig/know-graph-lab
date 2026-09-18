@@ -773,7 +773,7 @@
     "infancy-arabic": {
       "title": "阿拉伯語耶穌嬰孩時期福音",
       "corpus": "apocrypha",
-      "sections": 0,
+      "sections": 56,
       "date": [
         500,
         700
@@ -798,7 +798,7 @@
     "infancy-latin": {
       "title": "拉丁語耶穌嬰孩時期福音（阿倫德爾抄本 404）",
       "corpus": "apocrypha",
-      "sections": 0,
+      "sections": 7,
       "date": [
         800,
         1100

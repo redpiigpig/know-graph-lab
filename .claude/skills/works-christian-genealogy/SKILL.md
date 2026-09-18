@@ -525,19 +525,53 @@ node scripts/genealogy_audit_apocrypha.mjs   # 典外 66 種欄位與引用
 
 ### 成品
 
+- `/works/christian-genealogy` 的「譜系歸屬」分頁（`components/GenealogyTable.vue`）
+- 論文體 Word：`public/content/works/christian-genealogy-attribution-revision-draft.md`
+  → `node scripts/build_paper_docx.mjs christian-genealogy-attribution <out.docx>`
 - artifact〈使徒軌跡歸屬表〉https://claude.ai/artifact/VF8xXBotg3QA1ZdpZ6KcWh
 - artifact〈迦百農與 Q 是一張網嗎〉https://claude.ai/artifact/65kSttH5VVLwc3movT3xnb
-- ⏳ `/works/christian-genealogy` 的表格分頁尚未實作
+
+🚨 artifact 那份的 `gdata.js` **不要手改**，跑 `scripts/genealogy_export_artifact.py`
+從 web-summary.json 重生。O 系列改號那次就是只更新了網站、artifact 停在舊代號。
 
 ### ⏳ 待辦
 
-- 猶大福音全文：**不在《基督教典外文獻》裡**（第 2 冊 p53 只有一頁簡介，末句寫「這書的
-  文本已經失傳」，該書出版早於 2006 年查科抄本公布）。須另尋來源。
-- 阿拉伯語嬰孩福音（第 1 冊原書頁 110–132）與拉丁語嬰孩福音（150–154，原書自述只摘錄
-  部分內容）已切出待 OCR。四冊都有文字層但品質不堪用（「阿倫德爾抄本404」讀成
-  「間偏德爾砂m 404 個」）。
 - 詞庫 27 筆待定名（Arius、Lucian of Antioch、Polycrates of Ephesus、Serapion of
   Antioch、Perpetua and Felicity 等），詞庫未收故留空未自創。
+
+### ✅ 猶大福音與兩篇嬰孩福音（2026-09-18 收）
+
+- **猶大福音不在《基督教典外文獻》裡**（第 2 冊 p53 只有一頁簡介，末句寫「這書的文本
+  已經失傳」，該書出版早於 2006 年查科抄本公布）。改收 gospels.net 的公有領域英譯
+  （`gospelsnet_en`）＋本站自譯（`kgl_zh`），抄本頁 33–58。**不可掛 `cct_zh`**，
+  那個版本碼專指《基督教典外文獻》，掛上去是張冠李戴。
+- **兩篇嬰孩福音**（第 1 冊卷五、卷七）用 MinerU 重 OCR 後入庫：阿拉伯語 56 節
+  （含序言）＋26 條註腳、拉丁語 §68–74 共 7 節＋2 條註腳。這兩篇出自那套書，
+  版本碼就是 `cct_zh`。腳本 `scripts/ingest_infancy_gospels.py`。
+
+### 🚨 MinerU 會靜默丟掉註腳與原書頁碼（2026-09-18）
+
+MinerU 把**頁碼與註腳放在 `discarded_blocks`**（型別 `page_number`／`page_footnote`），
+而 `scripts/mineru_ocr.py` 只讀 `preproc_blocks`。後果是**凡走 MinerU OCR 的書，
+註釋與原書頁碼都被丟掉**，而且頁面看起來完全正常。
+
+這兩篇是回頭讀 `middle.json` 才補回來的——阿拉伯語那篇 26 條註腳、22 個頁碼區塊
+全在 `discarded_blocks` 裡。頁碼因此**不必推算**，用頁面上印的那個；只有章首頁
+（版心不印頁碼）才回退到頁序，而且推完要與宣告的範圍對得上才放行。
+
+### 🚨 切節：只認節號當錨，不要拿「像不像新一節」去猜（2026-09-18）
+
+第一版用「這段夠長、開頭不是標點 → 判為新一節」去補被 OCR 吃掉的節號。結果把
+**跨頁的續段**全判成新節：55 節照樣連號、字數照樣對得上、閘照樣全過，但每一節的
+界線都往前挪了一段。**印出來一切正常。**
+
+改法：沒帶號的段落一律併進當前節；真正被吃掉的節號（只有阿拉伯語 §5、§7 兩處）
+走寫死的對照表 `MISSING_NUM`，只認那一節開頭的原文，比對不到／比對到多處／位置
+不在前後兩節之間，一律擋下不寫。
+
+順帶一條：**字數對不對不是好閘**——節號被切掉、段落接合符不同，本來就會差幾十字，
+差多少都能說成「正常」。閘要逐段點名：每個 preproc 段落都要在某一節／簡介／序言／
+版權尾裡找得到。
 
 ### 🚨 樣本太小就不要算密度（2026-09-18）
 
