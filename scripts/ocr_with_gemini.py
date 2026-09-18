@@ -30,6 +30,7 @@ import gzip
 import io
 import json
 import os
+import re
 import shutil
 import sys
 import tempfile
@@ -357,14 +358,35 @@ def write_jsonl(book_id, chunks, staging=False):
     return out
 
 
+# 平假名與片假名（含長音記號）。中文書不會整段出現這些。
+_KANA = re.compile(r"[ぁ-ゖァ-ヺー]")
+
+
+def is_japanese(text: str) -> bool:
+    """這段是日文嗎 —— 看有沒有假名就夠了，不必猜漢字。"""
+    return bool(text) and _KANA.search(text) is not None
+
+
 def _trad(text: str) -> str:
     """簡→繁保險。
 
     prompt 已要求繁體，但字跡淡時模型仍會漂向簡體（簡體在訓練分佈裡更常見），
     而這條路徑原本直接把模型輸出寫進 JSONL，沒有任何轉換——《舊約神學辭典》
     整本 97 萬字就是這樣以簡體入庫的。專案硬規則是所有寫入一律繁體。
+
+    🚨 **日文一定要跳過。** 簡繁轉換器會把日文改到面目全非，而且改的都是要害。
+    2026-09-18《內村鑑三全集》第 11 卷就是這樣入庫的，實測 0.78% 的字被改動：
+
+        余輩 → 餘輩（604 處「云ふ」變成「雲ふ」、61 處「余輩」變成「餘輩」）
+        岩波書店 → 巖波書店      面 → 麵      里 → 裡      干 → 幹      却 → 卻
+
+    「余」是明治文語体裡的第一人稱、「云ふ」是「說」，轉完整本語意全毀，
+    而字數、段數、頁碼全部正常，任何結構性稽核都看不出來。
+    判準用假名，不用書目欄位 —— 欄位會忘了填，假名不會騙人。
     """
     if not text:
+        return text
+    if is_japanese(text):
         return text
     try:
         sys.path.insert(0, str(Path(__file__).parent))
