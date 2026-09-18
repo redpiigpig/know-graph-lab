@@ -40,7 +40,9 @@
       "date": "約 80–90",
       "place": "敘利亞（安提阿）",
       "date_traditional": "約 80–90",
-      "place_traditional": "敘利亞（安提阿）"
+      "place_traditional": "敘利亞（安提阿）",
+      "motive": "替一個既守律法又收外邦人的混合教會立規章，並把彼得的首席地位神學化，好讓這種混合有使徒背書（16:17–19 是現存最早的彼得首席文本）。",
+      "source_kinds": "馬可全本當骨架（約 90% 被吸收）＋Q 語錄＋M 本群體自有材料。誕生敘事與四個夢的循環屬家族傳說型；五大講論是把散落語錄編成的教導單位；16:17–19 無平行，是本群體自產。"
     },
     "mrk": {
       "name": "馬可福音",
@@ -63,7 +65,9 @@
       "place": "羅馬（另說敘利亞）",
       "date_traditional": "約 65–70",
       "place_traditional": "羅馬",
-      "dating_divergence": true
+      "dating_divergence": true,
+      "motive": "把彼得的口傳定成文字——第一代見證人開始凋零、羅馬又遭逼迫，記憶若不落紙就會隨人而去。",
+      "source_kinds": "🚨 本卷是全新約最接近「口傳直接落字」的一卷。彼得的講道口傳（帕皮亞語）＋一段**已經成形的連續受難敘事**（多數意見認為是最早的書面單位）＋兩組奇蹟循環＋13 章的小啟示（可能是獨立流通的末世傳單）。"
     },
     "luk": {
       "name": "路加福音",
@@ -92,7 +96,9 @@
       "place_traditional": "小亞細亞／希臘",
       "dating_divergence": true,
       "place_evidence": "本表維持不指名城市，但把兩邊的證據記下來。【支持以弗所】(1) 以弗所材料共 107 節，扣掉「我們」來源仍有 91 節是編輯層自撰；(2) 米利都告別辭（20:17–38）不是「我們」段落，是全卷唯一一篇對某教會領導層講的告別辭，而 20:28 的長老／監督與牧養用語屬編輯者自己那個年代；(3) 徒 19 對以弗所市政術語 Ἀσιάρχης、γραμματεύς、νεωκόρος 一律不解釋，徒 18:12 講哥林多卻要交代「迦流作亞該亞方伯」；(4) β3 那 13 節（亞波羅、以弗所十二門徒）是純地方性問題。【反對】古代唯一明文《反馬吉安福音書序》說的是亞該亞不是亞細亞；且林前正是從以弗所寄出的，路加卻對保羅書信全卷沉默。【不支持羅馬】行傳的拉丁借詞密度全場最低（1.6/萬），路加還系統性刪掉馬可的拉丁詞（κεντυρίων→ἑκατοντάρχης、quadrans 註解整句不譯）；徒 28:15 的亞比烏市與三館落在「我們」來源（U5b）裡，證明的是那份旅行日誌熟悉那條路，不是成書的人在羅馬。",
-      "place_own_judgment": true
+      "place_own_judgment": true,
+      "motive": "寫進一個已經擁擠的場域並宣告自己更有次序（1:1 πολλοὶ ἐπεχείρησαν）；深層動因是目擊者已成過去式、耶路撒冷已毀、外邦教會需要一張繼承以色列的地契。",
+      "source_kinds": "馬可＋Q＋L 特有材料（撒瑪利亞人、婦女、比喻的三個循環）。🚨 序言自承是二手：παρέδοσαν ἡμῖν（傳給我們的），αὐτόπται…γενόμενοι（那些曾作目擊者的）——作者明說自己不在目擊者之列。"
     },
     "jhn": {
       "name": "約翰福音",
@@ -122,7 +128,9 @@
       "date": "約 90–100",
       "place": "小亞細亞（以弗所）",
       "date_traditional": "約 90–100",
-      "place_traditional": "小亞細亞（以弗所）"
+      "place_traditional": "小亞細亞（以弗所）",
+      "motive": "為一個被趕出會堂的群體重寫耶穌，用高基督論回答「那我們是誰」（9:22、16:2 的趕出會堂是這卷的處境）。",
+      "source_kinds": "一部帶編號的**記號書**（「頭一件」「第二件」，自成單位）＋耶路撒冷節期材料＋主所愛門徒的見證公式（19:35、21:24）＋一套與對觀不同的獨立受難年表。"
     },
     "act": {
       "name": "使徒行傳",
@@ -155,7 +163,9 @@
       "place_traditional": "小亞細亞／希臘",
       "dating_divergence": true,
       "place_evidence": "本表維持不指名城市，但把兩邊的證據記下來。【支持以弗所】(1) 以弗所材料共 107 節，扣掉「我們」來源仍有 91 節是編輯層自撰；(2) 米利都告別辭（20:17–38）不是「我們」段落，是全卷唯一一篇對某教會領導層講的告別辭，而 20:28 的長老／監督與牧養用語屬編輯者自己那個年代；(3) 徒 19 對以弗所市政術語 Ἀσιάρχης、γραμματεύς、νεωκόρος 一律不解釋，徒 18:12 講哥林多卻要交代「迦流作亞該亞方伯」；(4) β3 那 13 節（亞波羅、以弗所十二門徒）是純地方性問題。【反對】古代唯一明文《反馬吉安福音書序》說的是亞該亞不是亞細亞；且林前正是從以弗所寄出的，路加卻對保羅書信全卷沉默。【不支持羅馬】行傳的拉丁借詞密度全場最低（1.6/萬），路加還系統性刪掉馬可的拉丁詞（κεντυρίων→ἑκατοντάρχης、quadrans 註解整句不譯）；徒 28:15 的亞比烏市與三館落在「我們」來源（U5b）裡，證明的是那份旅行日誌熟悉那條路，不是成書的人在羅馬。",
-      "place_own_judgment": true
+      "place_own_judgment": true,
+      "motive": "續集要處理福音書文類處理不了的問題：多半是外邦人的我們，憑什麼站在這裡。徒 1:1 明說「前一卷書」，升天寫兩次是兩卷的接縫。",
+      "source_kinds": "「我們」旅行日誌（U5b，16、20–21、27–28 章，引用來的文件型材料）＋耶路撒冷早期傳說＋安提阿傳說＋腓力家族口傳。🚨 講辭一律是作者自撰，不是抄來的——這是行傳研究的通則。"
     },
     "rom": {
       "name": "羅馬書",
@@ -163,7 +173,7 @@
       "editor_name": "保羅本人",
       "sources": [
         "U1",
-        "U2"
+        "U2b"
       ],
       "support": [
         "Dunn 2006"
@@ -173,7 +183,9 @@
       "date": "約 57",
       "place": "哥林多",
       "date_traditional": "約 57",
-      "place_traditional": "哥林多"
+      "place_traditional": "哥林多",
+      "motive": "向一個**不是他建立**的教會自我介紹，並募集往西班牙的支持（15:20 免得建造在別人的根基上；15:24 羅馬是過境站）。",
+      "source_kinds": "保羅自撰。🚨 16 章的問安名單是一份可獨立流通的人名清冊，保存了羅馬會眾的實際組成（女執事非比、百基拉與亞居拉、魯孚）。"
     },
     "1co": {
       "name": "哥林多前書",
@@ -181,7 +193,7 @@
       "editor_name": "保羅本人",
       "sources": [
         "U1",
-        "U2",
+        "U2a",
         "υ1"
       ],
       "support": [
@@ -192,7 +204,9 @@
       "date": "約 53–55",
       "place": "以弗所",
       "date_traditional": "約 53–55",
-      "place_traditional": "以弗所"
+      "place_traditional": "以弗所",
+      "motive": "回覆兩路進來的訊息：革來氏家裡的人帶來的口頭報告，以及哥林多人的來信。",
+      "source_kinds": "🚨 本卷把自己的資料來源寫在正文裡：1:11「革來氏家裡的人」＝口頭報告；7:1「論到你們信上所提的事」＝書面來信。15:3–8 是**他領受再傳下的信經公式**（παρέλαβον…παρέδωκα），其中「先顯給磯法」把彼得排在他自己之前。"
     },
     "2co": {
       "name": "哥林多後書",
@@ -200,7 +214,7 @@
       "editor_name": "保羅本人",
       "sources": [
         "U1",
-        "U2"
+        "U2a"
       ],
       "support": [
         "Dunn 2006"
@@ -210,7 +224,9 @@
       "date": "約 55–56",
       "place": "馬其頓",
       "date_traditional": "約 55–56",
-      "place_traditional": "馬其頓"
+      "place_traditional": "馬其頓",
+      "motive": "修復破裂的關係、為使徒身分辯護、辦成給耶路撒冷的捐項。",
+      "source_kinds": "保羅自撰。🚨 語氣斷裂明顯（1–9 與 10–13 判若兩信），多數意見認為是數封信被編在一起，所以它同時是文本也是**編輯產物**。"
     },
     "gal": {
       "name": "加拉太書",
@@ -231,7 +247,9 @@
       "place": "以弗所或敘利亞",
       "date_traditional": "約 50–55",
       "place_traditional": "以弗所／敘利亞",
-      "dating_divergence": true
+      "dating_divergence": true,
+      "motive": "阻止加拉太人受割禮——這是取消轉換成本那場戰役的第一線。",
+      "source_kinds": "保羅自撰。🚨 1–2 章是他本人的生平自述，是全新約年代最早、最直接的一手史料，也是唯一記下安提阿衝突的文本。"
     },
     "php": {
       "name": "腓立比書",
@@ -239,7 +257,7 @@
       "editor_name": "保羅本人",
       "sources": [
         "U1",
-        "U2"
+        "U2a"
       ],
       "support": [
         "Dunn 2006"
@@ -250,7 +268,9 @@
       "place": "獄中：羅馬或以弗所",
       "date_traditional": "約 60–62",
       "place_traditional": "羅馬（獄中）",
-      "dating_divergence": true
+      "dating_divergence": true,
+      "motive": "獄中致謝、勸合一、並警告割禮派。",
+      "source_kinds": "保羅自撰，但 2:6–11 是**他引用的既有基督頌歌**（禮儀材料，非他自撰）。"
     },
     "1th": {
       "name": "帖撒羅尼迦前書",
@@ -258,7 +278,7 @@
       "editor_name": "保羅本人",
       "sources": [
         "U1",
-        "U2"
+        "U2a"
       ],
       "support": [
         "Dunn 2006"
@@ -268,7 +288,9 @@
       "date": "約 50–51",
       "place": "哥林多",
       "date_traditional": "約 50–51",
-      "place_traditional": "哥林多"
+      "place_traditional": "哥林多",
+      "motive": "安慰亡故者的家屬——這是再臨延遲的第一次衝擊，全新約最早的文獻。",
+      "source_kinds": "保羅自撰，含最早的口傳末世材料（4:15「我們照主的話告訴你們」）。"
     },
     "phm": {
       "name": "腓利門書",
@@ -286,7 +308,9 @@
       "place": "獄中：羅馬或以弗所",
       "date_traditional": "約 60–62",
       "place_traditional": "羅馬（獄中）",
-      "dating_divergence": true
+      "dating_divergence": true,
+      "motive": "替逃奴阿尼西母向主人說情。",
+      "source_kinds": "保羅自撰，全新約唯一的私人便箋，沒有引用任何傳統材料。"
     },
     "eph": {
       "name": "以弗所書",
@@ -294,7 +318,7 @@
       "editor_name": "次保羅群體",
       "sources": [
         "U3",
-        "U2"
+        "U2a"
       ],
       "support": [
         "Brown 1984",
@@ -306,7 +330,9 @@
       "place": "小亞細亞",
       "date_traditional": "約 60–62",
       "place_traditional": "羅馬（獄中）",
-      "dating_divergence": true
+      "dating_divergence": true,
+      "motive": "把保羅普世化：教會論從一間間地方教會擴成宇宙性的身體。",
+      "source_kinds": "🚨 文本依賴歌羅西書（逐段對應）＋洗禮教理與頌歌材料。沒有具體收信處境，像是**一封通函**。"
     },
     "col": {
       "name": "歌羅西書",
@@ -314,7 +340,7 @@
       "editor_name": "次保羅群體",
       "sources": [
         "U3",
-        "U2"
+        "U2a"
       ],
       "support": [
         "Brown 1984"
@@ -325,7 +351,9 @@
       "place": "小亞細亞（以弗所圈）",
       "date_traditional": "約 60–62",
       "place_traditional": "羅馬（獄中）",
-      "dating_divergence": true
+      "dating_divergence": true,
+      "motive": "對付一種混合的天使崇拜與禁慾主張。",
+      "source_kinds": "1:15–20 是既有的基督頌歌（禮儀材料）＋一套家庭規章（Haustafel，借自希臘化道德傳統的格式）。"
     },
     "2th": {
       "name": "帖撒羅尼迦後書",
@@ -343,7 +371,9 @@
       "place": "小亞細亞",
       "date_traditional": "約 50–52",
       "place_traditional": "哥林多",
-      "dating_divergence": true
+      "dating_divergence": true,
+      "motive": "壓下「主的日子已經到了」那種說法，把末日推遠。",
+      "source_kinds": "文本依賴帖前（結構逐段對應）＋一段獨立流通的**敵基督啟示材料**（2:3–12）。"
     },
     "1ti": {
       "name": "提摩太前書",
@@ -361,7 +391,9 @@
       "place": "小亞細亞（以弗所圈）",
       "date_traditional": "約 62–64",
       "place_traditional": "馬其頓",
-      "dating_divergence": true
+      "dating_divergence": true,
+      "motive": "建制：長老與監督怎麼設、資格是什麼——把保羅從群體創始人改寫成職分權威。",
+      "source_kinds": "教會規章型材料：資格清單（3:1–13）、寡婦名冊（5:9–16）、按手禮與洗禮的格言（3:16 是一段頌歌）。"
     },
     "2ti": {
       "name": "提摩太後書",
@@ -379,7 +411,9 @@
       "place": "小亞細亞（以弗所圈）",
       "date_traditional": "約 64–67",
       "place_traditional": "羅馬（獄中）",
-      "dating_divergence": true
+      "dating_divergence": true,
+      "motive": "遺囑體：把保羅寫成臨終託付者，好讓託付的內容有最高權威。",
+      "source_kinds": "同上，另含 4:9–21 一段**帶真實人名與行程的殘片**，常被認為可能保存了保羅書信的真實碎片。"
     },
     "tit": {
       "name": "提多書",
@@ -397,7 +431,9 @@
       "place": "小亞細亞（克里特為文中設定）",
       "date_traditional": "約 62–64",
       "place_traditional": "馬其頓",
-      "dating_divergence": true
+      "dating_divergence": true,
+      "motive": "同提前，但場景設在克里特，處理的是「在各城設立長老」。",
+      "source_kinds": "教會規章＋一段引用（1:12 引克里特詩人）。"
     },
     "heb": {
       "name": "希伯來書",
@@ -416,7 +452,9 @@
       "place": "不定；13:24「從義大利來的人」是唯一線索",
       "date_traditional": "約 60–90",
       "place_traditional": "羅馬／義大利",
-      "dating_divergence": true
+      "dating_divergence": true,
+      "motive": "阻止一群人回流猶太教，用大祭司論證基督的終極性與不可回頭。",
+      "source_kinds": "🚨 不是書信是**講道**（作者自稱「勸勉的話」13:22）。材料是七十士譯本的釋經串（利未記與詩篇為主）＋會堂講道體的論證格式。"
     },
     "jas": {
       "name": "雅各書",
@@ -436,7 +474,9 @@
       "place": "巴勒斯坦或敘利亞",
       "date_traditional": "約 50–60",
       "place_traditional": "巴勒斯坦（耶路撒冷）",
-      "dating_divergence": true
+      "dating_divergence": true,
+      "motive": "對抗一種被誤解的保羅式唯信（2:14–26 與羅 4 正面衝突）。",
+      "source_kinds": "猶太智慧文學體＋**耶穌語錄的非福音書形式**——與 Q 大量平行卻從不引用福音書，顯示語錄曾以獨立形式流通。"
     },
     "jud": {
       "name": "猶大書",
@@ -454,7 +494,9 @@
       "place": "巴勒斯坦或敘利亞",
       "date_traditional": "約 50–80",
       "place_traditional": "巴勒斯坦",
-      "dating_divergence": true
+      "dating_divergence": true,
+      "motive": "警告「偷著進來」的教師。",
+      "source_kinds": "🚨 全新約引用正典外文獻最明目張膽的一卷：直接引《以諾一書》1:9，並用《摩西升天記》的天使爭屍傳說。"
     },
     "1pe": {
       "name": "彼得前書",
@@ -472,7 +514,9 @@
       "place": "羅馬（自稱「巴比倫」）",
       "date_traditional": "約 60–64",
       "place_traditional": "羅馬",
-      "dating_divergence": true
+      "dating_divergence": true,
+      "motive": "給散居小亞細亞、因信仰被社會排擠的人立一套受苦的意義。",
+      "source_kinds": "洗禮講章與受苦教理（可能原是一篇洗禮訓辭）＋家庭規章。5:13「在巴比倫的教會」＝羅馬，是本卷與羅馬的連結。"
     },
     "2pe": {
       "name": "彼得後書",
@@ -491,7 +535,9 @@
       "place": "不定；新約年代最晚的一卷",
       "date_traditional": "約 1 世紀末–2 世紀初",
       "place_traditional": "羅馬",
-      "dating_divergence": true
+      "dating_divergence": true,
+      "motive": "回應對再臨延遲的嘲笑，並替保羅書信的正確讀法定調。",
+      "source_kinds": "🚨 幾乎整篇吸收猶大書（文本依賴）。3:15–16 明說保羅書信**已經成套流通且被人曲解**——這是新約內部唯一一處把保羅書信當成一個集合來談的地方。"
     },
     "1jn": {
       "name": "約翰一書",
@@ -510,7 +556,9 @@
       "place": "小亞細亞（以弗所）",
       "date_traditional": "約 90–100",
       "place_traditional": "小亞細亞（以弗所）",
-      "dating_divergence": true
+      "dating_divergence": true,
+      "motive": "分裂之後的邊界維護：誰還算我們（2:19 他們從我們中間出去）。",
+      "source_kinds": "群體見證公式（1:1–3 聽見、看見、親手摸過）＋約翰福音的語言世界，但不引用福音書本身。"
     },
     "2jn": {
       "name": "約翰二書",
@@ -528,7 +576,9 @@
       "place": "小亞細亞（以弗所）",
       "date_traditional": "約 90–100",
       "place_traditional": "小亞細亞（以弗所）",
-      "dating_divergence": true
+      "dating_divergence": true,
+      "motive": "通路控制：命令各家戶不要接待不傳這教訓的人。",
+      "source_kinds": "同約壹。🚨 10–11 節的禁令與丟特腓對那長老做的是同一招。"
     },
     "3jn": {
       "name": "約翰三書",
@@ -546,7 +596,9 @@
       "place": "小亞細亞（以弗所）",
       "date_traditional": "約 90–100",
       "place_traditional": "小亞細亞（以弗所）",
-      "dating_divergence": true
+      "dating_divergence": true,
+      "motive": "處理一次接待被拒的事件——巡迴權威撞上地方建制並且落敗的現場紀錄。",
+      "source_kinds": "沒有引用任何傳統材料，是純粹的**事件文件**，因此史料價值極高。"
     },
     "rev": {
       "name": "啟示錄",
@@ -563,7 +615,9 @@
       "own_judgment": false,
       "rationale": "語言、文體與末世政治都與約翰福音—書信明顯不同，作者分立是通說（Aune 1997）。同屬亞細亞七教會的世界，故仍在 O 軌跡內，但自成一支。⚠️ 把福音、書信與啟示錄視為同一作者是教會傳統的合併，不是現代研究共識——本文註12 已聲明。整卷同一來源同一編成，是二十七卷裡最單純的一卷。",
       "date": "約 95",
-      "place": "拔摩島，寄亞細亞七教會"
+      "place": "拔摩島，寄亞細亞七教會",
+      "motive": "在帝王崇拜的壓力下要求不妥協，並攻擊界線寬鬆的那一側（倪哥拉黨、耶洗別）。",
+      "source_kinds": "舊約意象的再組（但以理、以西結、以賽亞為骨幹）＋亞細亞七座城的實況情報（2–3 章每封信都貼合當地）＋先知異象體。"
     }
   }
 }
