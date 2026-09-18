@@ -513,6 +513,9 @@ def main() -> int:
     r.add_argument("--lang", default="ch")
     r.add_argument("--start", type=int, help="起始頁（0-based）")
     r.add_argument("--end", type=int, help="結束頁（0-based，含）")
+    r.add_argument("--wait-gpu-minutes", type=int, default=0,
+                   help="GPU 被別的 MinerU 佔著時最多等幾分鐘（預設 0＝不等，直接回 4）。"
+                        "單本插班在夜間佇列後面時要給，不然只會立刻回 4")
     r.set_defaults(func=cmd_run)
 
     q = sub.add_parser("queue", help="吃 OCR 佇列（每日排程用）")
