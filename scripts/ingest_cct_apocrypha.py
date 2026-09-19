@@ -36,7 +36,7 @@ from apocrypha_audit_quality import env, fetch_all  # noqa: E402
 from apocrypha_extract_works import (fill_printed, load_pages, markers_of,  # noqa: E402
                                      peel_columns, slice_work, split_front,
                                      two_column_pages)
-from apocrypha_footnotes import link_page, page_footnotes  # noqa: E402
+from apocrypha_footnotes import keyed, link_page, page_footnotes  # noqa: E402
 from apocrypha_missing_numbers import for_work  # noqa: E402
 from apocrypha_sectionize import choose  # noqa: E402
 from apocrypha_toc import load as load_toc  # noqa: E402
@@ -156,29 +156,63 @@ def build_doc(slug: str, vol: int, part: int | None, juan: int) -> dict:
 
     # ── 註腳：逐頁解析 → 正文轉上標 → 逐節掛定義 ──
     fn_total = fn_linked = 0
+    intro_notes: list[str] = []
     for p in wp:
         if not p["notes"]:
             continue
-        defs, _un = page_footnotes(p["notes"])
-        if not defs:
+        # 🚨 守門條件要用 `keyed`（含補不出標記的那些）。用 `defs` 的話，整頁註腳
+        #    都沒認出標記時會被跳過，那一頁的註釋就整批消失。
+        all_defs = keyed(p["notes"])
+        if not all_defs:
             continue
-        fn_total += len(defs)
+        defs, _un = page_footnotes(p["notes"])
+        fn_total += len(all_defs)
         here = [r for r in rows if r["page_number"] == p["printed"]]
         if not here:
-            continue
+            # 🚨 這一頁上**沒有任何一節開始**（某一節從前一頁延續過來、整頁都是它的
+            #    續文）。原本在這裡 `continue`，等於把整頁的註腳丟掉——實測 669 條
+            #    只寫進 337 條，剛好一半，而且沒有任何錯誤訊息。
+            #    正解是掛到**涵蓋這一頁的那一節**，也就是頁碼不大於本頁的最後一節。
+            prev = [r for r in rows if r["page_number"] is not None
+                    and r["page_number"] <= p["printed"]]
+            if not prev:
+                # 比第一節還早的頁 ＝ 主編**簡介**那幾頁。它們的註釋不屬於任何一節，
+                # 掛到 §1 會張冠李戴；`intro_zh` 又沒有存註釋的欄位。
+                # 所以附在簡介正文後面（實測 14 部共 35 條，不附就整批不見）。
+                intro_notes.extend(f"{k}　{v}" for k, v in all_defs.items())
+                continue
+            here = [prev[-1]]
         texts = [r["text"] for r in here]
         new, missed = link_page(texts, sorted(defs))
         fn_linked += len(defs) - len(missed)
         for r, t in zip(here, new):
             r["text"] = t
             r["char_count"] = len(t)
-        # 定義掛在「正文含該上標」的那一節；連不上的掛在該頁第一節
-        for mk, d in sorted(defs.items()):
-            sup = str(mk).translate(str.maketrans("0123456789", "⁰¹²³⁴⁵⁶⁷⁸⁹"))
+        # 定義掛在「正文含該上標」的那一節；連不上的掛在該頁第一節。
+        # `keyed` 連「標記補不出來」的那些也一併收（鍵是 *1、*2），一條都不丟。
+        for mk, d in all_defs.items():
+            sup = mk.translate(str.maketrans("0123456789", "⁰¹²³⁴⁵⁶⁷⁸⁹"))
             target = next((r for r in here if sup in r["text"]), here[0])
-            target["footnote_defs"] = {**(target["footnote_defs"] or {}), str(mk): d}
+            cur = dict(target["footnote_defs"] or {})
+            # 🚨 一節可能吃進好幾頁（中間那些頁沒有新的一節開始），而註腳號在不少卷
+            #    裡是**每頁從 1 重編**的，於是同一節底下會一直撞號。直接覆蓋會靜默
+            #    吃掉——實測 718 則只剩 683。
+            #    撞號就把鍵加上頁碼（`12·p203`）讓兩則都留著：正文連得上的那一則
+            #    保持原本的純數字鍵，後來的以頁碼區分，讀者看得出它來自哪一頁。
+            key = mk
+            if key in cur and cur[key] != d:
+                key = f"{mk}·p{p['printed']}"
+                n = 2
+                while key in cur and cur[key] != d:
+                    key = f"{mk}·p{p['printed']}#{n}"
+                    n += 1
+            cur[key] = d
+            target["footnote_defs"] = cur
 
     intro_text = fix_terms("\n\n".join(intro).strip())
+    if intro_notes:
+        intro_text = (intro_text + "\n\n── 簡介註釋 ──\n"
+                      + "\n".join(fix_terms(x) for x in intro_notes)).strip()
     return {"slug": slug, "title": it["title"], "vol": vol, "part": part, "juan": juan,
             "printed": (lo, hi), "pages": len(wp), "rows": rows, "scheme": sp.scheme,
             "note": note, "intro": intro_text, "twocol": twocol, "appended": appended,

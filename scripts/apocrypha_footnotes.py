@@ -57,10 +57,26 @@ def page_footnotes(notes: list[str]) -> tuple[dict[int, str], list[str]]:
     unresolved: list[str] = []
     for num, text in parsed:
         if num is None or num in out:
-            unresolved.append(text[:60])
+            unresolved.append(text)
         else:
             out[num] = text
     return out, unresolved
+
+
+def keyed(notes: list[str]) -> dict[str, str]:
+    """一頁的註腳 → {鍵: 定義}，**一條都不丟**。
+
+    🚨 補不出標記的那些（實測 718 條裡有 49 條，MinerU 沒把那個小上標認出來）
+    也要收。原本只回傳認得出標記的，那 49 條就這麼消失了——註釋內容本身是完整的，
+    丟掉的只是「它對應正文哪個位置」。
+    鍵用 `*1`、`*2`，一眼看得出「書上有這條註，但標記沒辨識出來」，
+    也不會跟真的標記撞號。
+    """
+    defs, un = page_footnotes(notes)
+    out = {str(k): v for k, v in sorted(defs.items())}
+    for i, text in enumerate(un, 1):
+        out[f"*{i}"] = text
+    return out
 
 
 def link_page(texts: list[str], markers: list[int]) -> tuple[list[str], list[int]]:
