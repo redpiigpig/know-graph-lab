@@ -18,7 +18,7 @@ description: 「印順學派與弘誓研究資料」collection（/research-data/
 
 | 子頁 | 來源 | 現況 |
 |---|---|---|
-| 弘誓雙月刊 `/magazine` `/magazine` | hongshi（有乾淨文字層 PDF） | 116 期(80–200)；**115/116 全文**（issue 103 源檔損毀待補）|
+| 弘誓雙月刊 `/magazine` `/magazine` | hongshi（有乾淨文字層 PDF） | 116 期(80–200)；**116/116 全文 ✅**（2026-09-19 補齊 103 期）＋**單篇層 104 期 / 2,388 篇**（`magazine-articles.json`）|
 | 學團日誌 `/log` `/log/[n]` | hongshi 網頁文字 | **173 則(n=27–210)** ✅ |
 | 玄奘佛學研究學報 `/xuanzang` | **hcu.edu.tw（非 CF）** | 45 期 / **304 篇全文 ✅(100%)** |
 | 歷屆學術活動 `/meeting` `/meeting/[n]` | hongshi（經 Wayback） | **24 項** ✅（卡 `v-if=meetCount`）|
@@ -79,7 +79,14 @@ R2 前綴：`yinshun-hongshi/<刊>/`（原檔）、`yinshun-hongshi-fulltext/<�
 - 頁面 `pages/research-data/yinshun-hongshi/*`；Drive canonical `G:\我的雲端硬碟\資料\知識圖工作室\研究資料\印順學派與弘誓\`
 
 ## ⏳ 待補（皆卡在 hongshi 持續封鎖，解封後可補；非流程問題）
-- **弘誓雙月刊 issue 103**：下載的 PDF 損毀（MuPDF 無法解析），Wayback 無此 PDF → 解封後 `hongshi_download_magazine.mjs`（已刪損毀本地檔，會重抓）＋ `hongshi_ocr_magazine.py`。
+- ~~**弘誓雙月刊 issue 103**：下載的 PDF 損毀~~ ✅ **2026-09-19 解決，而且當初的診斷是錯的**。
+  那個檔**根本沒壞**：現在 PyMuPDF 開得起來、64 頁、結尾 `%%EOF` 完整。真正的狀況是
+  **它沒有文字層**（64 頁只抽得出 2,251 字，而且全是數字）——這一期是掃描本，
+  而文字層管線把「抽不到字」報成了解析失敗。🚨 **「PDF 損毀」與「PDF 沒有文字層」
+  是兩回事，錯判會讓人去重抓一個根本沒問題的檔。** 處置是 OCR：
+  `mineru_ocr.py run --pdf <路徑> --out <jsonl>`，64 頁 194 秒、57,087 字、零空白頁。
+  逐頁 JSONL 存成側車 `弘誓雙月刊-103.ocr.jsonl` 放 PDF 旁邊（切單篇要靠它），
+  整期純文字照既有格式上 R2。
 - **歷屆學術活動 6 項**：Wayback 未存檔 → 解封後 `hongshi_scrape_meeting.mjs`（live 完整清單，會跳過已抓 24 項）＋ `hongshi_publish_meeting.py`。
 
 ## 姊妹站：玄奘佛學研究「公開官網」(/Hsuan_Chuang_Studies)
@@ -111,7 +118,43 @@ R2 前綴：`yinshun-hongshi/<刊>/`（原檔）、`yinshun-hongshi-fulltext/<�
 
 `/research-data`（論文資料整理，需登入）2026-06-15 起的第二個 collection **「印順學派與弘誓研究資料」**（slug `yinshun-hongshi`，rose 🪷），與 [[project_chengzhong_bulletins]] 的 taiwan-methodist 並列。作《當代的大愛道革命》([[project_dadaodao_book]]) 背景史料。skill＝`research-data-hongshi`。子站：
 
-- **弘誓雙月刊** `/magazine` — 官網 PDF（**有乾淨文字層、非純掃描**），**116 期（80–200）**。R2 `yinshun-hongshi/弘誓雙月刊/` + Drive canonical。**115/116 已抽全文**（text-layer，`hongshi_ocr_magazine.py`）；**issue 103 PDF 下載損毀**（MuPDF parse fail）待重抓。缺 5 期(85,177-180 源站連結 404)、1–79 期源站無 PDF。
+- **弘誓雙月刊** `/magazine` — 官網 PDF（**有乾淨文字層、非純掃描**），**116 期（80–200）**。R2 `yinshun-hongshi/弘誓雙月刊/` + Drive canonical。**116/116 已抽全文**（text-layer 走 `hongshi_ocr_magazine.py`；103 期是掃描本，走 MinerU）。缺 5 期(85,177-180 源站連結 404)、1–79 期源站無 PDF。
+
+### 單篇層（2026-09-19）— `scripts/hongshi_split_articles.py`
+
+整期一個 txt 不夠用：要引用某一篇、要按主題找、要把某位作者的文章聚起來，都得切到單篇。
+現況 **104 期 / 2,388 篇**，全文逐篇存 R2 `yinshun-hongshi-fulltext/弘誓雙月刊-單篇/`，
+索引 `public/content/research-data/yinshun-hongshi/magazine-articles.json`。
+昭慧法師署名 **454 篇**。
+
+切的依據是**頁碼**，不是篇名。四個踩過的坑：
+
+| 坑 | 症狀 |
+|---|---|
+| 🚨 用篇名當錨切 | 篇名是**逐頁眉標**，同一篇名在該篇每頁重複，會切出一堆碎片而段數看起來還合理 |
+| 🚨 只讀 `toc_page` 一頁 | 目次常有**第二頁**（院務資訊欄）。漏掉它們，每篇結尾就吃掉夾在中間的院務頁——第 80 期最後一篇因此多吞 23 頁 |
+| 🚨 短行都當欄目 | 「議程」其實是上一條篇名的續行。分辨靠排版：欄目以全形空白起首，續行是四格半形縮排 |
+| 🚨 只開第一冊 | 第 200 期原檔分冊，只開 p1 會讓後半本整片落到 PDF 之外 |
+
+🚨 **位移的門檻不能只看絕對票數。** 第一版寫「少於 5 篇同意就不切」，於是第 189 期
+4/5 篇（80%）一致同意位移 0 也被跳過——那期篇目本來就只有 5 篇，永遠湊不到 5 票。
+現行判準：`agree≥5` 或 `agree≥3 且比例≥50%` 或 `agree≥2 且毫無異議`，另加「次高票不得超過半數」。
+
+🚨 **旗標要跟著資料進索引。** `beyondPdf` 第一版漏了複製進 rec，於是「目次列到 PDF 以外」
+在索引裡長得跟「切出來是空的」一模一樣，稽核分不出是來源缺頁還是切壞了。
+
+**分類兩層、來源分清楚**：`column` ＝雜誌自己的欄目（薪火相傳／輝映法界／人間探照燈／
+當代台灣佛教／利他主義／院務資訊…，解析自目次頁，第一手）；`topics` ＝本專案關鍵字規則
+貼的標籤（印順學／戒律與僧制／性別／動物與護生／政教關係／佛教倫理學／禪修與教理／
+社會運動／學術活動／教育與學團／紀念與追思／環境與生態／院務資訊），是衍生物、會有誤差。
+
+**回報的分母**（別只講好消息）：篇名對不上頁面 182 篇已逐篇點名；12 期因位移證據不足
+不切（含第 165 期兩個位移各得 4 票、第 200 期篇目層重複且殘缺）；
+**357 篇是「目次列到 PDF 以外」——原檔普遍缺最後幾頁**（收支決算表／護持徵信那一疊），
+另有 10 篇是海報式公告、頁面本來就抽不到字。
+
+第 103 期走另一條路：它的目次**整份沒有頁碼**，改用「篇名出現在頁首」定位（只認該頁前
+120 字、且須逐篇遞增），9/11 條目定位成功；頁碼用 MinerU 撿回的印刷頁（位移 −1，60/64 頁一致）。
 - **學團日誌** `/log` `/log/[n]` — `log-page.php?n=N`（需 `Referer: log.php`），**173 則(n=27–210)**全文。n=1–26 是空 stub。
 - **玄奘佛學研究學報** `/xuanzang` — **hcu.edu.tw（非 Cloudflare，純 requests！）**，45 期 / 304 篇，**297 篇有全文**（born-digital 文字層）。7 篇缺：5 篇期45 源站 `file:///C:/…` 壞連結、2 篇掃描檔待 OCR。`xuanzang_journal.py`（harvest/process/publish；`--no-ocr` 延後掃描檔避配額卡）。
 - **歷屆學術活動** `/meeting` `/meeting/[n]` — 印順導師思想之理論與實踐國際學術會議歷屆＋性別倫理/動物倫理研討會公告全文，**24 項已上架**。原始碼在 hongshi `meeting-B-page.php?n=N`，但整天連抓後被 Cloudflare **持續硬封**（連 40min+ 冷卻都過不了）→ **改走 Wayback Machine** `hongshi_meeting_wayback.py`（archive.org，`<ts>id_` raw，純 requests）抓到 24/30（6 項未存檔）。`hongshi_scrape_meeting.mjs`（live headful）留著待 hongshi 解封後可補。
