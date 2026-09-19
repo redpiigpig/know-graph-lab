@@ -132,15 +132,34 @@ const missStatus = (base) => (DRY ? 'probe-miss' : base)
  * 整個帶走，帳號 3、4 的二十本額度一次都沒動用。導覽失敗屬於「這一筆跳過」，
  * 不是「整輪結束」，所以在這裡就把它吞掉、重試，真的過不去才回 false。
  */
+// 🚨 goto 失敗有兩種完全不同的原因，不可以都講成「站方擋住」：
+//   wall：真的被 DiamWall 擋下（標題一直是 challenge 頁）
+//   net ：本機連不上（ERR_NAME_NOT_RESOLVED / ERR_NETWORK_CHANGED / timeout）
+// 2026-09-18 整天四個帳號全 0 本，log 滿場「DiamWall 未過」，實際上是筆電通勤時
+// 網路跳動造成的 DNS 失敗——當天日誌裡夾著 ERR_NAME_NOT_RESOLVED，但拋出來的訊息
+// 把它蓋掉了。認錯原因就會拿錯對策：以為要等站方放行，其實只是等網路回來。
+let lastGotoFailure = ''
+
+/** 把 lastGotoFailure 翻成人讀得懂、而且指向正確修法的句子。 */
+function wallReason() {
+  if (lastGotoFailure.startsWith('net:')) {
+    return `連不上站方（${lastGotoFailure.slice(4)}）——是本機網路或 DNS，不是 DiamWall`
+  }
+  return 'DiamWall 未過——這是站方擋住，不是查無此書'
+}
+
 async function gotoPastWall(page, url, tries = 3) {
   const blocked = (t) => /DiamWall|验证|驗證|Verifying/i.test(t)
+  lastGotoFailure = ''
   for (let i = 0; i < tries; i++) {
     try {
       await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 60000 })
       if (!blocked(await page.title())) return true
       await page.waitForTimeout(12000)
       if (!blocked(await page.title())) return true
+      lastGotoFailure = 'wall'
     } catch (err) {
+      lastGotoFailure = `net:${String(err).split('\n')[0].slice(0, 70)}`
       console.log(`     ↻ 導覽失敗（${String(err).split('\n')[0].slice(0, 70)}），重試 ${i + 1}/${tries}`)
       await page.waitForTimeout(5000)
     }
@@ -263,7 +282,7 @@ async function search(page, q) {
   //    2026-09-11 實測：z-library.sk 連回 HTTP 513「正在验证您的浏览器 | DiamWall」，
   //    等滿兩分鐘都不放行，而當天凌晨那一輪把六本書全記成了 not-found。
   if (!(await gotoPastWall(page, `${HOST}/s/${encodeURIComponent(q)}`))) {
-    throw new Error('DiamWall 未過——這是站方擋住，不是查無此書')
+    throw new Error(wallReason())
   }
   await page.waitForSelector('z-bookcard', { timeout: 20000 }).catch(() => {})
   return page.evaluate(() => {
