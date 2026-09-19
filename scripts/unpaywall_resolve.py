@@ -69,6 +69,9 @@ UA = f"know-graph-lab/1.0 (academic research; {EMAIL})"
 RESOLVE_SLEEP = 0.23
 FETCH_SLEEP = 2.0        # 下載對各家 OJS 站客氣點
 MAX_PDF_MB = 60
+TRANSIENT_TRIES = 3      # 暫時性失敗試這麼多輪才放棄
+# 例外類別分兩種：網址／編碼本身壞掉是永久的，連不上是暫時的。
+PERMANENT_EXC = {'InvalidURL', 'UnicodeEncodeError', 'UnicodeDecodeError', 'ValueError'}
 
 
 def get(url: str, timeout: int = 30, tries: int = 3) -> bytes | None:
@@ -239,20 +242,37 @@ def cmd_fetch(args) -> None:
     if args.year:
         rows = [r for r in rows if str(r.get("year")) == str(args.year)]
     have = {p.stem for p in PDF_DIR.glob("*.pdf")}
-    # 🚨 待辦是按「有沒有 .pdf」算的，所以抓不到的那四成（403／landing page／SSL）
-    #    會永遠留在待辦裡，而且因為 --limit 取的是前 N 筆，它們會堆在最前面，
-    #    跑幾輪之後整輪都在重試同一批死目標，新的永遠輪不到。記一份失敗帳本跳過。
-    #    要重試就刪掉 fetch-failed.jsonl（403 有可能是暫時的）。
-    failed = set()
+    # 🚨 待辦是按「有沒有 .pdf」算的，所以抓不到的那些會永遠留在待辦裡，而且因為
+    #    --limit 取的是前 N 筆，它們會堆在最前面，跑幾輪之後整輪都在重試同一批
+    #    死目標，新的永遠輪不到。記一份失敗帳本跳過。
+    #
+    # 🚨 但「這次連線失敗」不等於「這篇永遠拿不到」——這正是 cyberleninka_harvest
+    #    註解裡那個「把抓取失敗寫成內容判決」的錯。2026-09-19 第一批 400 筆裡，158
+    #    筆失敗中有 68 筆是 URLError／5xx／連線被重置，全是暫時性的。所以分兩類：
+    #      永久（403/404/landing page/網址本身壞掉）→ 記一次就跳過
+    #      暫時（URLError/timeout/5xx/連線重置）    → 記次數，連續 TRANSIENT_TRIES
+    #                                                 次才放棄，中間每輪都會再試
+    failed = {}
     if FETCH_FAILED.exists():
         for line in FETCH_FAILED.open(encoding="utf-8"):
-            if line.strip():
-                try:
-                    failed.add(json.loads(line)["doi"])
-                except (ValueError, KeyError):
-                    pass
+            if not line.strip():
+                continue
+            try:
+                rec = json.loads(line)
+                failed[rec["doi"]] = rec
+            except (ValueError, KeyError):
+                pass
+
+    def give_up(doi: str) -> bool:
+        rec = failed.get(doi)
+        if not rec:
+            return False
+        if rec.get("permanent"):
+            return True
+        return int(rec.get("tries", 1)) >= TRANSIENT_TRIES
+
     todo = [r for r in rows
-            if slugify(r["doi"]) not in have and r["doi"] not in failed]
+            if slugify(r["doi"]) not in have and not give_up(r["doi"])]
     if args.limit:
         todo = todo[: args.limit]
     print(f"符合條件 {len(rows):,} 筆，已下 {len(rows) - len([r for r in rows if slugify(r['doi']) not in have]):,}，本輪 {len(todo):,}")
@@ -263,25 +283,29 @@ def cmd_fetch(args) -> None:
     ok = big = 0
     why = Counter()
     fl = FETCH_FAILED.open('a', encoding='utf-8')
+
+    def note_fail(doi: str, reason: str, permanent: bool) -> None:
+        tries = int(failed.get(doi, {}).get('tries', 0)) + 1
+        fl.write(json.dumps({'doi': doi, 'why': reason, 'tries': tries,
+                             'permanent': permanent},
+                            ensure_ascii=False) + '\n')
+        fl.flush()
     for i, r in enumerate(todo, 1):
         try:
             b = get(r["pdf_url"], timeout=90)
         except urllib.error.HTTPError as e:
             why[f"HTTP {e.code}"] += 1
-            fl.write(json.dumps({'doi': r['doi'], 'why': f"HTTP {e.code}"},
-                                ensure_ascii=False) + '\n')
+            note_fail(r['doi'], f"HTTP {e.code}", e.code not in (500, 502, 503, 504, 522, 429))
             time.sleep(FETCH_SLEEP)
             continue
         except Exception as e:                     # noqa: BLE001
             why[type(e).__name__] += 1
-            fl.write(json.dumps({'doi': r['doi'], 'why': type(e).__name__},
-                                ensure_ascii=False) + '\n')
+            note_fail(r['doi'], type(e).__name__, type(e).__name__ in PERMANENT_EXC)
             time.sleep(FETCH_SLEEP)
             continue
         if not b:
             why['空回應'] += 1
-            fl.write(json.dumps({'doi': r['doi'], 'why': '空回應'},
-                                ensure_ascii=False) + '\n')
+            note_fail(r['doi'], '空回應', True)
         elif len(b) > MAX_PDF_MB * 1024 * 1024:
             big += 1
         elif not b[:5].startswith(b"%PDF"):
@@ -289,8 +313,7 @@ def cmd_fetch(args) -> None:
             #    而檔案大小看起來完全正常。存進去就會變成一堆
             #    「打得開但沒有內文」的假 PDF。
             why['HTML landing page（非 PDF）'] += 1
-            fl.write(json.dumps({'doi': r['doi'], 'why': 'HTML landing page'},
-                                ensure_ascii=False) + '\n')
+            note_fail(r['doi'], 'HTML landing page', True)
         else:
             (PDF_DIR / f"{slugify(r['doi'])}.pdf").write_bytes(b)
             ok += 1
