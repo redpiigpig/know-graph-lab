@@ -15,19 +15,26 @@ const RID = '436650DB9FC648D783CDF0FEAACE0321'   // 臺灣佛教研究中心
 if (!existsSync(STATE)) { console.error('先跑 hcu_cms_login.mjs'); process.exit(2) }
 
 const listOnly = process.argv.includes('--list')
+// --images：改用「圖片庫管理」（PictureEditor + api/ajax.ashx，公開路徑 …/Images/），
+// 預設是「檔案庫管理」（FileEditor + api/ajax3.ashx，公開路徑 …/files/）
+const IMAGES = process.argv.includes('--images')
 const delIdx = process.argv.indexOf('--delete')   // --delete "<完整檔名>" …：只刪指定檔名（用於清掉自己傳錯的檔）
 const targets = (delIdx > 0 || listOnly) ? [] : process.argv.slice(2).filter(a => !a.startsWith('--'))
 const files = []
 for (const t of targets) {
   const st = statSync(t)
-  if (st.isDirectory()) for (const f of readdirSync(t)) { if (/\.pdf$/i.test(f)) files.push(join(t, f)) }
+  const want = IMAGES ? /\.(jpe?g|png|gif|webp)$/i : /\.pdf$/i
+  if (st.isDirectory()) for (const f of readdirSync(t)) { if (want.test(f)) files.push(join(t, f)) }
   else files.push(t)
 }
 
 const browser = await chromium.launch({ headless: true })
 const ctx = await browser.newContext({ storageState: STATE, viewport: { width: 1440, height: 1000 } })
 const page = await ctx.newPage()
-await page.goto('https://www.hcu.edu.tw/backend/MngFiles/FileEditor.aspx', { waitUntil: 'domcontentloaded' })
+const mngUrl = IMAGES
+  ? 'https://www.hcu.edu.tw/backend/MngFiles/PictureEditor.aspx'
+  : 'https://www.hcu.edu.tw/backend/MngFiles/FileEditor.aspx'
+await page.goto(mngUrl, { waitUntil: 'domcontentloaded' })
 await page.waitForTimeout(3000)
 if (/login\.aspx/i.test(page.url())) { console.log('❌ session 過期'); await browser.close(); process.exit(1) }
 

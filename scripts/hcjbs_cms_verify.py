@@ -16,14 +16,23 @@ BASE = ('https://www.hcu.edu.tw/buddhism/buddhism/zh-tw/'
         '43C51435624E43D583779C031ACF4E2F/B975569CC2F04819892552ADE1A9090E')
 UA = {'User-Agent': 'Mozilla/5.0'}
 
+# 各期頁＝「玄奘佛學研究」節點底下的內容；五個章則頁＝該節點底下的**子節點**（nav 上各一項）
 PAGES = {
     '第四十四期玄奘佛學研究': 'DE09FA1EDAB748D7A8FAE8E8CA57EE7B',
     '第四十五期玄奘佛學研究': '34BD6FE105FA42A583802ACC00D32151',
-    '投稿指引': '96A76E3B3AE547809089C47BAAD28B98',
-    '編輯委員': '03652C8EB3C8477D9D0808D33B6F96D9',
-    '審查流程': 'B52674BF2BF74D1EB3DA5E306F0DC4C3',
-    '學術倫理聲明': '4A70840CEA124E2D92F5D71D219E8658',
-    '生成式人工智慧（AI）使用規範': 'FD5F7F987CDD435393B68B0B6BAF7C5F',
+    '投稿指引': '963E07CC70054A9191713195B7E233A5',
+    '編輯委員': '28DBE4BB84354651ADB043FED6A1FAAE',
+    '審查流程': '25E6418CEC0E4A69AF569743EA6FDF43',
+    '學術倫理': '3D19104FF4CE46AC8F619F4F110BB884',
+    '生成式人工智慧（AI）使用規範': '430E878E0E0E409B96DBB8361E9FE95E',
+}
+# 章則頁是節點，頁尾要掛 Word；各期頁不掛
+WANT_DOCX = {
+    '投稿指引': '投稿指引',
+    '編輯委員': '編輯團隊資訊',
+    '審查流程': '期刊審查流程',
+    '學術倫理': '學術倫理聲明',
+    '生成式人工智慧（AI）使用規範': '學報AI使用規範',
 }
 
 # 每頁要出現的字串（正面），與不該出現的（負面）
@@ -38,8 +47,8 @@ MUST = {
              '邱敏捷', '侯坤宏', '張瓈文', '黃運喜', '葉海煙', '蕭麗華', '嚴瑋泓', 'Marcus Günzel',
              '編輯團隊簡介', '庭野和平獎'],
     '審查流程': ['審稿流程', '內審', '外審', '第三位審查', '修訂回應表', '複審'],
-    '學術倫理聲明': ['編輯者義務', '審查者義務', '投稿者（作者）義務', '調查參與', '資料使用與保留',
-                '來源告知', '資料來源之告知', 'COPE'],
+    '學術倫理': ['編輯者義務', '審查者義務', '投稿者（作者）義務', '調查參與', '資料使用與保留',
+             '來源告知', '資料來源之告知', 'COPE'],
     '生成式人工智慧（AI）使用規範': ['透明揭露原則', '人類須負最終全責原則', '機密與個資安全限制',
                         '作者使用相關工具', 'Prompt'],
 }
@@ -92,6 +101,31 @@ def main():
                 bad += 1
         if pdfs:
             print(f'   PDF 全部可下載：{len(pdfs)} 個')
+        # 章則頁的 Word 附件
+        # 🚨 附件不是 href="….docx"：CMS 用 /buddhism/Download.aspx?aid=… 出檔，
+        #    連結文字才是檔名。用 .docx 去比會全部誤報成「缺附件」。
+        want = WANT_DOCX.get(title)
+        if want:
+            atts = re.findall(r'<a[^>]+href="([^"]*Download\.aspx\?aid=[^"]+)"[^>]*>([^<]*)</a>', h)
+            names = [a[1].strip() for a in atts]
+            print(f'   相關附件 {len(atts)} 個：{names}')
+            hit = [u for u, n in atts if want in n]
+            if not hit:
+                print(f'   ❌ 缺 Word 附件：{want}'); bad += 1
+            for u in hit:
+                full = u if u.startswith('http') else 'https://www.hcu.edu.tw' + u
+                rr = requests.get(full, headers=UA, timeout=120, stream=True)
+                head = next(rr.iter_content(2), b'')
+                ctype = rr.headers.get('Content-Type', '')
+                rr.close()
+                ok = rr.status_code == 200 and head == b'PK'
+                print(f'   {"✔" if ok else "❌"} 附件可下載 status={rr.status_code} type={ctype[:40]}')
+                if not ok:
+                    bad += 1
+        # 🚨 全白底：不該再有淺藍／灰底
+        for bgcolor in ('DBE5F1', '#f5f5f5', '#eeeeee; background'):
+            if bgcolor in h and bgcolor != '#eeeeee; background':
+                print(f'   ❌ 還有底色 {bgcolor}'); bad += 1
 
     print(f'\n{"✅ 全部通過" if not bad else f"❌ {bad} 項未過"}')
     return 1 if bad else 0

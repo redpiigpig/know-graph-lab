@@ -11,84 +11,31 @@
 用法：python -X utf8 scripts/hcjbs_cms_rule_pages.py --out c:/tmp/hcu-cms/out
 """
 import argparse
-import html
 import re
 from pathlib import Path
 
-KAI = 'font-family: 標楷體; color: black'
-TNR = "font-family: 'Times New Roman',serif; color: black"
-# 🚨 字母類不能只寫 A-Za-z：Günzel 的 ü、梵巴轉寫的 ā ṃ ṭ 若被當成「非英文」，
-#    就會被切進標楷體的 span，畫面上是一個字母突然換字體（實際發生過）。
-#    範圍＝ASCII 字母數字 ＋ Latin-1 Supplement ＋ Latin Extended-A/B ＋ Latin Extended Additional。
-_L = 'A-Za-z0-9À-ɏḀ-ỿ'
-LATIN = re.compile(rf'[{_L}][{_L} .,:;()\[\]\'"“”’/&%\-–—+@?!]*')
+from hcjbs_cms_style import para, rule_table, section_nav, sub_head, title_bar, wrap
 
-TD = ('border-left: 1.0pt dotted lightgrey; border-right: 1.0pt dotted lightgrey; '
-      'border-top: medium none; border-bottom: 1.0pt dotted lightgrey; '
-      'padding: .75pt .75pt .75pt .75pt')
-TH = ('border: none; border-bottom: solid #548DD4 1.5pt; padding: .75pt .75pt 0cm .75pt')
-
-
-def esc(s):
-    return html.escape(s, quote=False)
-
-
-def runs(text):
-    """把一段中英混排切成 span：中文→標楷體，英文與數字→Times New Roman。"""
-    out, pos = [], 0
-    for m in LATIN.finditer(text):
-        if m.start() > pos:
-            out.append(f'<span style="{KAI}">{esc(text[pos:m.start()])}</span>')
-        seg = m.group(0)
-        # 尾端若是中文標點前的空白，留給中文那段
-        out.append(f'<span lang="EN-US" style="{TNR}">{esc(seg)}</span>')
-        pos = m.end()
-    if pos < len(text):
-        out.append(f'<span style="{KAI}">{esc(text[pos:])}</span>')
-    return ''.join(out) or f'<span style="{KAI}">{esc(text)}</span>'
+# 區內導覽（模擬站上方那一排）每頁都要帶：校網母頁的 nav 只到「資料庫」，
+# 這五頁在選單第三層，讀者在頁面上看不到彼此。
+NAV_NAME = {'submission': '投稿指引', 'editorial-team': '編輯委員', 'review-process': '審查流程',
+            'ethics': '學術倫理', 'ai-policy': 'AI 使用規範'}
 
 
 def p(text, indent=0, bold=False, align=None, size=None):
-    style = []
-    if indent:
-        style.append(f'margin-left: {indent * 1.2}em')
-    st = f' style="{"; ".join(style)}"' if style else ''
-    al = f' align="{align}"' if align else ''
-    body = runs(text)
-    if size:
-        body = f'<span style="font-size: {size}">{body}</span>'
-    if bold:
-        body = f'<b>{body}</b>'
-    return f'<p class="MsoNormal"{al}{st}>\n\t{body}</p>'
+    """章則頁的段落——照模擬站：17px、行高 1.85、白底、不填色。
+
+    `size` 舊介面是給頁首大標用的，現在頁首改用 title_bar()，所以這裡忽略它。
+    """
+    return para(text, size=17, indent=indent, bold=bold, align=align)
 
 
 def h(text):
-    """段落大標：16pt 粗體，前面加 ❖，與各期頁的專輯標一致。"""
-    return ('<p class="MsoNormal">\n\t<b>'
-            f'<span style="font-size: 16.0pt; font-family: \'MS Mincho\',serif; color: black">❖</span>'
-            f'<span style="font-size: 16.0pt">{runs(text)}</span></b></p>')
+    return sub_head(text)
 
 
 def table(headers, rows, widths=None, center_cols=()):
-    ws = widths or [f'{round(100 / max(1, len(headers)))}%'] * len(headers)
-    out = ['<table border="0" cellpadding="0" cellspacing="0" class="MsoNormalTable" '
-           'style="width: 20.0cm; border-collapse: collapse" width="756">', '<tbody>']
-    if headers:
-        out.append('\t<tr>')
-        for i, hd in enumerate(headers):
-            out.append(f'\t\t<td style="{TH}; width: {ws[i]}">\n\t\t\t'
-                       f'<p align="center" class="MsoNormal" style="text-align: center">{runs(hd)}</p>\n\t\t</td>')
-        out.append('\t</tr>')
-    for r, row in enumerate(rows):
-        bg = '; background: #DBE5F1' if r % 2 == 0 else ''
-        out.append('\t<tr>')
-        for i, cell in enumerate(row):
-            al = ' align="center" style="text-align: center"' if i in center_cols else ''
-            out.append(f'\t\t<td style="{TD}{bg}; width: {ws[i]}">\n\t\t\t'
-                       f'<p class="MsoNormal"{al}>{runs(str(cell))}</p>\n\t\t</td>')
-        out.append('\t</tr>')
-    out += ['</tbody>', '</table>']
-    return '\n'.join(out)
+    return rule_table(headers, rows, widths=widths, center_cols=center_cols)
 
 
 # ─────────────────────────── 一、投稿指引（英網-1） ───────────────────────────
@@ -152,7 +99,7 @@ FORMAT_ITEMS = [
 
 
 def page_submission():
-    out = [p('玄奘大學《玄奘佛學研究》徵稿啟事', align='center', bold=True, size='16.0pt'),
+    out = [title_bar('玄奘大學《玄奘佛學研究》徵稿啟事'),
            p('本學報主要刊載有關佛學相關領域之原創性論文，包括與佛教有關之義理、教史、藝術、文學、心理、社會、'
              '教育等，歡迎各界投稿，來稿應未曾以任何文字形式出版。本學報每年出版兩期，上半年出刊日為三月三十日，'
              '下半年為九月三十日。'),
@@ -342,7 +289,7 @@ BIOS = [
 
 
 def page_editorial():
-    out = [p('《玄奘佛學研究》編輯團隊', align='center', bold=True, size='16.0pt'),
+    out = [title_bar('《玄奘佛學研究》編輯團隊'),
            p('總編輯：釋昭慧教授（玄奘大學宗教與文化學系）', bold=True),
            p('編輯委員（依姓氏筆畫排序）：', bold=True),
            table(['姓名', '服務機構'], BOARD, widths=['30%', '70%'], center_cols=(0,)),
@@ -364,7 +311,7 @@ MATRIX = [
 
 
 def page_review():
-    out = [p('《玄奘佛學研究》審稿流程', align='center', bold=True, size='16.0pt'),
+    out = [title_bar('《玄奘佛學研究》審稿流程'),
            h('壹、審稿流程'),
            p('一、內審：', bold=True),
            p('1. 執行編輯先就來稿進行初步檢查如下：', indent=1),
@@ -470,7 +417,7 @@ ETHICS = [
 
 
 def page_ethics():
-    out = [p('學術倫理聲明', align='center', bold=True, size='16.0pt')]
+    out = [title_bar('學術倫理聲明')]
     for kind, val in ETHICS:
         if kind in ('intro', 'tail'):
             out.append(p(val))
@@ -503,7 +450,7 @@ AI_RULES = [
 
 
 def page_ai():
-    out = [p('生成式人工智慧（AI）使用規範', align='center', bold=True, size='16.0pt'),
+    out = [title_bar('生成式人工智慧（AI）使用規範'),
            p('因應生成式 AI 技術於學術領域之普及，為確保研究之真實性與自主思考，作者使用相關工具'
              '（如 ChatGPT、Claude 等）時，必須嚴格遵守以下三道防線：')]
     for title, body in AI_RULES:
@@ -529,6 +476,9 @@ def main():
     out.mkdir(parents=True, exist_ok=True)
     for slug, (title, fn) in PAGES.items():
         body = fn()
+        # 把區內導覽插在 wrap() 外框 div 的後面（第一行是那個 div）
+        lines = body.split('\n')
+        body = '\n'.join([lines[0], section_nav(NAV_NAME.get(slug))] + lines[1:])
         fp = out / f'{slug}.html'
         fp.write_text(body, encoding='utf-8')
         # 🚨 印分母：字數與段數，好跟正本對；太短就是有段落漏掉
