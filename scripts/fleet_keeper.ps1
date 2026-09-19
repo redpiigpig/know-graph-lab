@@ -304,6 +304,20 @@ EnsureUntil 'zlib-probe' $node @('scripts\zlib_fetch.mjs','--probe','--list','ou
 # close, give it a marker and switch to EnsureUntil - do NOT leave a finished lane
 # relaunching every 30 min doing nothing ([[feedback_disable_finished_schedules]]).
 Ensure 'unpaywall-resolve' 'unpaywall_resolve' @('scripts\unpaywall_resolve.py','--resolve')
+# ...and the half nobody was running (2026-09-19). --resolve only ASKS Unpaywall
+# which DOIs are open access; --fetch is what actually downloads the PDFs, and no
+# lane ever called it: 149,574 DOIs resolved, 52,153 with a direct PDF link, 0 files
+# on disk. Sampling 25 of them: 52% give a real PDF, 24% answer 403 (bepress-style
+# repositories refusing scripted access), 20% hand back an HTML landing page (the
+# fetcher checks the %PDF magic, so those are correctly refused rather than saved as
+# fake PDFs), 4% have a broken TLS certificate.
+#
+# --limit keeps each run bounded so Drive can drain between ticks. The fetcher also
+# keeps fetch-failed.jsonl now: todo is computed from which .pdf files exist, so
+# without it the permanently-dead 40% pile up at the FRONT of the queue and every
+# later run spends its whole limit re-trying them. Delete that file to retry (a 403
+# can be temporary).
+Ensure 'unpaywall-fetch' 'unpaywall_resolve --fetch' @('scripts\unpaywall_resolve.py','--fetch','--limit','400')
 Ensure 'cyberleninka-fetch' 'cyberleninka_harvest' @('scripts\cyberleninka_harvest.py','--fetch')
 # J-Stage PDFs are DONE (14,731/14,747 = 99.9%, finished 2026-09-17), so no fetch lane.
 # What is left is text extraction: 12,060 PDFs downloaded but not extracted. This is the

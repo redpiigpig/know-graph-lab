@@ -57,6 +57,7 @@ CORPUS = Path("G:/我的雲端硬碟/資料/知識圖工作室/_corpus/crossref"
 OUT = Path("G:/我的雲端硬碟/資料/知識圖工作室/_corpus/unpaywall")
 RESOLVED = OUT / "resolved.jsonl"
 PDF_DIR = OUT / "pdf"
+FETCH_FAILED = OUT / "fetch-failed.jsonl"   # 抓不到的 DOI，下一輪別再排隊
 
 EMAIL = "redpiigpig@gmail.com"
 API = "https://api.unpaywall.org/v2/"
@@ -238,34 +239,68 @@ def cmd_fetch(args) -> None:
     if args.year:
         rows = [r for r in rows if str(r.get("year")) == str(args.year)]
     have = {p.stem for p in PDF_DIR.glob("*.pdf")}
-    todo = [r for r in rows if slugify(r["doi"]) not in have]
+    # 🚨 待辦是按「有沒有 .pdf」算的，所以抓不到的那四成（403／landing page／SSL）
+    #    會永遠留在待辦裡，而且因為 --limit 取的是前 N 筆，它們會堆在最前面，
+    #    跑幾輪之後整輪都在重試同一批死目標，新的永遠輪不到。記一份失敗帳本跳過。
+    #    要重試就刪掉 fetch-failed.jsonl（403 有可能是暫時的）。
+    failed = set()
+    if FETCH_FAILED.exists():
+        for line in FETCH_FAILED.open(encoding="utf-8"):
+            if line.strip():
+                try:
+                    failed.add(json.loads(line)["doi"])
+                except (ValueError, KeyError):
+                    pass
+    todo = [r for r in rows
+            if slugify(r["doi"]) not in have and r["doi"] not in failed]
     if args.limit:
         todo = todo[: args.limit]
     print(f"符合條件 {len(rows):,} 筆，已下 {len(rows) - len([r for r in rows if slugify(r['doi']) not in have]):,}，本輪 {len(todo):,}")
-    ok = bad = big = 0
+    # 🚨 別把 403／HTML landing page／SSL 失敗混成同一個 bad 計數。
+    #    2026-09-19 抽樣 25 筆：PDF 成功 13、403 六、HTML 五、SSL 一——四種原因
+    #    四種對策（403 是對方擋腳本、HTML 是 landing page 擋下來是對的、SSL 是人家
+    #    憑證壞了），混成一句「非 PDF 或失敗」就完全看不出該不該處理。
+    ok = big = 0
+    why = Counter()
+    fl = FETCH_FAILED.open('a', encoding='utf-8')
     for i, r in enumerate(todo, 1):
         try:
             b = get(r["pdf_url"], timeout=90)
-        except Exception:                          # noqa: BLE001
-            bad += 1
+        except urllib.error.HTTPError as e:
+            why[f"HTTP {e.code}"] += 1
+            fl.write(json.dumps({'doi': r['doi'], 'why': f"HTTP {e.code}"},
+                                ensure_ascii=False) + '\n')
+            time.sleep(FETCH_SLEEP)
+            continue
+        except Exception as e:                     # noqa: BLE001
+            why[type(e).__name__] += 1
+            fl.write(json.dumps({'doi': r['doi'], 'why': type(e).__name__},
+                                ensure_ascii=False) + '\n')
             time.sleep(FETCH_SLEEP)
             continue
         if not b:
-            bad += 1
+            why['空回應'] += 1
+            fl.write(json.dumps({'doi': r['doi'], 'why': '空回應'},
+                                ensure_ascii=False) + '\n')
         elif len(b) > MAX_PDF_MB * 1024 * 1024:
             big += 1
         elif not b[:5].startswith(b"%PDF"):
             # 🚨 OA 連結常常回 HTML 的 landing page 而不是 PDF，
             #    而檔案大小看起來完全正常。存進去就會變成一堆
             #    「打得開但沒有內文」的假 PDF。
-            bad += 1
+            why['HTML landing page（非 PDF）'] += 1
+            fl.write(json.dumps({'doi': r['doi'], 'why': 'HTML landing page'},
+                                ensure_ascii=False) + '\n')
         else:
             (PDF_DIR / f"{slugify(r['doi'])}.pdf").write_bytes(b)
             ok += 1
         if i % 25 == 0:
-            print(f"   …{i}/{len(todo)}　成功 {ok}／非 PDF 或失敗 {bad}／過大 {big}", flush=True)
+            print(f"   …{i}/{len(todo)}　成功 {ok}／沒拿到 {sum(why.values())}／過大 {big}", flush=True)
         time.sleep(FETCH_SLEEP)
-    print(f"✓ 下載 {ok:,}（非 PDF 或失敗 {bad}、超過 {MAX_PDF_MB}MB 跳過 {big}）→ {PDF_DIR}")
+    fl.close()
+    print(f"✓ 下載 {ok:,}（超過 {MAX_PDF_MB}MB 跳過 {big}）→ {PDF_DIR}")
+    if why:
+        print("  沒拿到的原因：" + "、".join(f"{k} {v}" for k, v in why.most_common()))
 
 
 def slugify(doi: str) -> str:
