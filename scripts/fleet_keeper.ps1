@@ -78,6 +78,12 @@ $STALL_PER_LANE = @{
     'panikkar-vedic' = 180
     'aquinas'        = 90    # prints every 20 articles, but a cold volume can be slow
     'husserl'        = 240   # one log line per SECTION, and the biggest is 355 paragraphs
+    'sbe-b2-s0'      = 90    # one line per section; a 30-paragraph Manu section is slow
+    'sbe-b2-s1'      = 90
+    'sbe-b2-s2'      = 90
+    'sbe-b2-s3'      = 90
+    'sbe-b2-s4'      = 90
+    'sbe-b2-s5'      = 90
 }
 function StallLimit($label) {
     if ($STALL_PER_LANE.ContainsKey($label)) { return $STALL_PER_LANE[$label] }
@@ -247,6 +253,35 @@ EnsureUntil 'panikkar-vedic' $py @('-X','utf8','scripts\panikkar_auto.py','--wor
 # and confirm --no-upload is actually honoured. Audit with
 #   python scripts/audit_llm_meta_replies.py --root mueller_data
 # Ensure 'sbe-gemini' 'sbe_translate' @('-X','utf8','scripts\sbe_translate.py','--loop','--only','sbe-04-zend-avesta-1,sbe-06-quran-1,sbe-10-dhammapada,sbe-16-yi-king,sbe-22-jaina-1','--backend','cloud','--no-upload')
+#
+# SBE batch 2 (2026-09-19). The two conditions the note above set for re-enabling are met:
+#   (a) backend is 'nvidia', not cloud/haiku - the meta-reply pollution came from Haiku.
+#   (b) the '--no-upload despite uploads' mystery is solved: --no-upload only skips the
+#       FINAL assemble of a pass. translate_work() still re-uploads every N sections, and
+#       ingest_work() calls assemble_and_upload() unconditionally at its end. That is why
+#       the old lane logged "uploaded (266 chunks)" while asked not to upload. Nothing is
+#       broken - but with six shards on one volume the whole-volume write count gets
+#       multiplied by the process count, so --reupload-every 60 replaces the default 12.
+#
+# Six volumes are split across six shards: each lane takes every 6th section of EVERY
+# unfinished volume, so load balances itself and no lane runs out of work early. Binding
+# one lane to one volume made the finish time the biggest volume's (Manu alone was 37h)
+# and left finished slots being relaunched into empty passes every 5 min.
+#
+# 2026-09-18 this ran as a bare Start-Process watchdog and died with the machine at the
+# 09-18 shutdown, at left=8397, with nothing to restart it - only scheduler-hosted work
+# survives a reboot ([[feedback_laptop_sleeps_design_for_resume]]). Hence this lane.
+#
+# The marker is NOT the driver's own "sbe done": is_done() counts segments that failed
+# MAX_FAIL times as complete, so it fires while work remains. sbe_batch2_lane.py prints
+# SBE_BATCH2_COMPLETE only when sbe_progress's real counts say left=0 AND dead=0, and the
+# shard that wins a lock also runs the per-volume assemble the --no-upload lanes skipped.
+EnsureUntil 'sbe-b2-s0' $py @('-X','utf8','scripts\sbe_batch2_lane.py','--shard','0/6') 'SBE_BATCH2_COMPLETE'
+EnsureUntil 'sbe-b2-s1' $py @('-X','utf8','scripts\sbe_batch2_lane.py','--shard','1/6') 'SBE_BATCH2_COMPLETE'
+EnsureUntil 'sbe-b2-s2' $py @('-X','utf8','scripts\sbe_batch2_lane.py','--shard','2/6') 'SBE_BATCH2_COMPLETE'
+EnsureUntil 'sbe-b2-s3' $py @('-X','utf8','scripts\sbe_batch2_lane.py','--shard','3/6') 'SBE_BATCH2_COMPLETE'
+EnsureUntil 'sbe-b2-s4' $py @('-X','utf8','scripts\sbe_batch2_lane.py','--shard','4/6') 'SBE_BATCH2_COMPLETE'
+EnsureUntil 'sbe-b2-s5' $py @('-X','utf8','scripts\sbe_batch2_lane.py','--shard','5/6') 'SBE_BATCH2_COMPLETE'
 # z-lib probe: verify the WHOLE wanted list against the site (user asked 2026-09-16).
 # Finite job - measured 4 titles/min, ~1,600 left, so roughly 7 hours. Too long to
 # survive in one run: this laptop sleeps on the commute, and the #1 failure mode is
