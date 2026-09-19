@@ -20,7 +20,7 @@
 
       <!-- ZH -->
       <div v-if="lang === 'zh'" class="space-y-6 text-[17px] leading-relaxed">
-        <p>因應生成式 AI 技術於學術領域之普及，為確保研究之真實性與自主思考，學生使用相關工具（如 ChatGPT、Claude 等）時，必須嚴格遵守以下三道防線：</p>
+        <p>因應生成式 AI 技術於學術領域之普及，為確保研究之真實性與自主思考，作者使用相關工具（如 ChatGPT、Claude 等）時，必須嚴格遵守以下三道防線：</p>
 
         <div>
           <p class="font-bold text-lg mb-2">一、透明揭露原則（Disclosure）</p>
@@ -40,7 +40,7 @@
 
       <!-- EN -->
       <div v-else class="space-y-6 text-[17px] leading-relaxed">
-        <p>In response to the spread of generative AI in academic work, and in order to safeguard the authenticity of research and independent thinking, students using such tools (ChatGPT, Claude, and the like) must strictly observe the following three safeguards:</p>
+        <p>In response to the spread of generative AI in academic work, and in order to safeguard the authenticity of research and independent thinking, authors using such tools (ChatGPT, Claude, and the like) must strictly observe the following three safeguards:</p>
 
         <div>
           <p class="font-bold text-lg mb-2">I. Disclosure</p>
