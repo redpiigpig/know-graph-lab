@@ -1,5 +1,5 @@
 <template>
-  <footer style="background:#fff; border-top:1px solid #ddd; font-family:Arial,'Microsoft JhengHei',sans-serif;">
+  <footer style="background:#fff; border-top:1px solid #ddd; font-family:'Times New Roman',Times,'Microsoft JhengHei',sans-serif;">
 
     <!-- Main footer -->
     <div style="width:75%; margin:0 auto; padding:24px 0 20px; display:flex; align-items:flex-start; gap:20px;">

@@ -1,9 +1,9 @@
 <template>
-  <div class="min-h-screen bg-white text-gray-800" :style="{ fontFamily: lang==='en' ? 'Times New Roman,Times,serif' : 'DFKai-SB,標楷體,KaiTi,serif' }">
+  <div class="min-h-screen bg-white text-gray-800" :style="{ fontFamily: 'Times New Roman,Times,DFKai-SB,標楷體,KaiTi,serif' }">
     <HcjbsHeader :lang="lang" @toggle="toggle" />
 
     <main style="width:75%; margin:0 auto; padding:28px 0 60px;">
-      <nav class="text-sm mb-3" style="font-family: Arial, sans-serif;">
+      <nav class="text-sm mb-3" style="font-family: 'Times New Roman', Times, sans-serif;">
         <NuxtLink to="/Hsuan_Chuang_Studies" class="text-blue-700 hover:underline">{{ lang === 'zh' ? '玄奘佛學研究' : 'HCJBS' }}</NuxtLink>
         <span class="mx-1 text-gray-500">›</span>
         <span class="text-blue-700">{{ lang === 'zh' ? '審查流程' : 'Review Process' }}</span>
@@ -54,7 +54,7 @@
 
           <!-- Decision matrix -->
           <div class="mt-4 overflow-x-auto">
-            <table class="w-full border-collapse text-sm text-center" style="font-family: Arial, '新細明體', sans-serif;">
+            <table class="w-full border-collapse text-sm text-center" style="font-family: 'Times New Roman', Times, '新細明體', sans-serif;">
               <thead>
                 <tr class="bg-gray-100">
                   <th class="border border-gray-400 px-2 py-2"></th>
@@ -148,7 +148,7 @@
           </ol>
 
           <div class="mt-4 overflow-x-auto">
-            <table class="w-full border-collapse text-sm text-center" style="font-family: Arial, sans-serif;">
+            <table class="w-full border-collapse text-sm text-center" style="font-family: 'Times New Roman', Times, sans-serif;">
               <thead>
                 <tr class="bg-gray-100">
                   <th class="border border-gray-400 px-2 py-2"></th>
@@ -206,7 +206,7 @@
       </div>
 
       <!-- Download -->
-      <div class="mt-10 pt-6 border-t border-gray-200" style="font-family: Arial, sans-serif;">
+      <div class="mt-10 pt-6 border-t border-gray-200" style="font-family: 'Times New Roman', Times, sans-serif;">
         <a href="/api/xuanzang/download?file=review" download
           class="inline-flex items-center gap-2 px-5 py-2.5 border border-gray-500 text-sm text-gray-700 hover:bg-gray-100 transition">
           ↓ {{ lang === 'zh' ? '下載審查流程說明（Word）' : 'Download Review Process Document (Word)' }}

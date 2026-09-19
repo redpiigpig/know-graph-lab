@@ -1,10 +1,10 @@
 <template>
-  <div :style="{ minHeight:'100vh', background:'#fff', fontFamily: lang==='en' ? 'Times New Roman,Times,serif' : 'DFKai-SB,標楷體,KaiTi,serif' }">
+  <div :style="{ minHeight:'100vh', background:'#fff', fontFamily: 'Times New Roman,Times,DFKai-SB,標楷體,KaiTi,serif' }">
     <HcjbsHeader :lang="lang" @toggle="toggle" />
 
     <main id="main-content" style="width:75%; margin:0 auto; padding:28px 0 60px;">
       <!-- Breadcrumb -->
-      <div style="font-size:13px; margin-bottom:12px; font-family:Arial,'Microsoft JhengHei',sans-serif;">
+      <div style="font-size:13px; margin-bottom:12px; font-family:'Times New Roman',Times,'Microsoft JhengHei',sans-serif;">
         <span style="color:#1a56db;">{{ lang === 'zh' ? '玄奘佛學研究' : 'HCJBS' }}</span>
         <span style="margin:0 4px; color:#666;">›</span>
         <span style="color:#1a56db;">{{ lang === 'zh' ? '研究學報' : 'Journal Issues' }}</span>
@@ -40,7 +40,7 @@
           </div>
           <div :style="{
             textAlign:'center', marginTop:'10px', fontSize:'15px',
-            fontFamily: 'Arial,\'Microsoft JhengHei\',sans-serif',
+            fontFamily: '\'Times New Roman\',Times,\'Microsoft JhengHei\',sans-serif',
             color: hover === issue.issue ? '#c8860a' : '#333', transition:'color 0.18s'
           }">
             {{ lang === 'zh' ? `第${toZh(issue.issue)}期` : `Vol. ${issue.issue}` }}

@@ -8,10 +8,10 @@
           style="height:64px; width:auto; display:block;" />
       </NuxtLink>
       <div style="display:flex; align-items:center; gap:16px;">
-        <a href="#main-content" style="font-size:13px; color:#888; text-decoration:none; font-family:Arial,sans-serif;">Skip to content</a>
+        <a href="#main-content" style="font-size:13px; color:#888; text-decoration:none; font-family:'Times New Roman',Times,sans-serif;">Skip to content</a>
         <span style="width:1px; height:14px; background:#ccc; display:inline-block;"></span>
         <button @click="$emit('toggle')"
-          style="font-size:13px; color:#555; border:none; padding:2px 10px; background:none; cursor:pointer; font-family:Arial,sans-serif;">
+          style="font-size:13px; color:#555; border:none; padding:2px 10px; background:none; cursor:pointer; font-family:'Times New Roman',Times,sans-serif;">
           {{ lang === 'zh' ? 'EN' : '中文' }}
         </button>
       </div>
@@ -20,7 +20,7 @@
     <!-- Row 2: Journal name -->
     <div style="width:75%; margin:0 auto; padding:0 0 12px;">
       <NuxtLink to="/Hsuan_Chuang_Studies" style="text-decoration:none;">
-        <p style="font-size:30px; font-weight:bold; color:#777; margin:0; font-family:Arial,'Microsoft JhengHei',sans-serif; letter-spacing:1px; transition:color 0.15s; cursor:pointer;"
+        <p style="font-size:30px; font-weight:bold; color:#777; margin:0; font-family:'Times New Roman',Times,'Microsoft JhengHei',sans-serif; letter-spacing:1px; transition:color 0.15s; cursor:pointer;"
           onmouseover="this.style.color='#111'" onmouseout="this.style.color='#777'">
           {{ lang === 'zh' ? '玄奘佛學研究' : 'Hsuan Chuang Journal of Buddhism Studies' }}
         </p>
@@ -32,7 +32,7 @@
       <div style="width:75%; margin:0 auto; padding:0; display:flex; align-items:center; flex-wrap:wrap;">
         <NuxtLink
           v-for="item in nav" :key="item.to" :to="item.to"
-          style="padding:10px 24px; text-align:center; text-decoration:none; font-size:14px; font-family:Arial,'Microsoft JhengHei',sans-serif; border-right:2px solid #ddd; white-space:nowrap; transition:color 0.15s;"
+          style="padding:10px 24px; text-align:center; text-decoration:none; font-size:14px; font-family:'Times New Roman',Times,'Microsoft JhengHei',sans-serif; border-right:2px solid #ddd; white-space:nowrap; transition:color 0.15s;"
           :style="route.path === item.to ? 'color:#c8860a; font-weight:600;' : 'color:#444;'"
           @mouseenter="(e) => { if(route.path !== item.to) (e.target as HTMLElement).style.color='#c8860a' }"
           @mouseleave="(e) => { if(route.path !== item.to) (e.target as HTMLElement).style.color='#444' }">

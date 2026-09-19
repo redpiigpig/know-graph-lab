@@ -89,54 +89,12 @@ R2 前綴：`yinshun-hongshi/<刊>/`（原檔）、`yinshun-hongshi-fulltext/<�
   整期純文字照既有格式上 R2。
 - **歷屆學術活動 6 項**：Wayback 未存檔 → 解封後 `hongshi_scrape_meeting.mjs`（live 完整清單，會跳過已抓 24 項）＋ `hongshi_publish_meeting.py`。
 
-## 姊妹站：玄奘佛學研究「公開官網」(/Hsuan_Chuang_Studies)
-與本 collection 的 `/xuanzang`（研究資料、需登入、R2 全文）**不同**：`redpiigpig.com/Hsuan_Chuang_Studies`
-是學報公開門戶（`pages/Hsuan_Chuang_Studies/`）。每期以**封面圖**呈現，點入 `issue/[n]` 顯示
-篇名／作者／頁數／官方 PDF 下載鍵。資料同源 hcu.edu.tw：`scripts/hcjbs_journal.py` 逐期解析
-（`strip_en` 裁尾端英譯、封面升 400×560 存 `public/Hsuan_Chuang_Studies/covers/`）→
-`public/content/Hsuan_Chuang_Studies/issues.json`（頁面直接 `import`，SSR 友善；PDF 熱連 hcu 官方）。
-重跑：`python -X utf8 scripts/hcjbs_journal.py`（封面已存則跳過）。
-
-### 學報章則六頁：正本是編輯室給的「英網-N」docx（2026-09-19 更新）
-
-除期刊各期外，本站有六個章則頁，內容**一字不許自撰**，正本是編輯室交來的 Word 檔，
-放在 `stores/玄奘佛學研究/`（`stores/*` 不進版控），頁面下方的下載鍵走
-`server/api/xuanzang/download.get.ts` 的 `FILES` 對照表：
-
-| 頁面 | `?file=` | 正本檔 |
-|---|---|---|
-| `submission` 投稿指引 | `submission` | 英網-1 投稿指引(徵稿函).docx |
-| `editorial-team` 編輯委員 | `editorial` | 英網-2 編輯團隊資訊.docx |
-| `ethics` 學術倫理 | `ethics` | 英網-3 草擬學術倫理聲明**260425** |
-| `ai-policy` AI 使用規範 | `ai` | 英網-4 學報AI使用規範**260904**（2026-09 新增） |
-| `review-process` 審查流程 | `review` | 英網-5 期刊審查流程260213 |
-
-🚨 **檔名編號會整批位移。** 2026-09 這批新增了 AI 規範當「英網-4」，原本的「英網-4 期刊審查流程」
-被推成「英網-5」——只按編號對檔會讓審查流程頁改去下載 AI 規範。**對照要認檔名的內容詞，
-不是認編號**；換檔時同步改 `FILES` 並刪掉舊日期的那份。
-
-🚨 **章則頁曾出現「看起來像官方文件、其實抄錯」的表。** 審查流程頁的雙審查決策矩陣有兩格
-與 docx 相反（第一位「修改後再審」×第二位「不推薦刊登」原是**不推薦刊登**、頁面寫成第三位審查；
-第一位「不推薦刊登」那一列前三格也錯位）。docx 的矩陣沿對角線對稱，頁面那版不對稱——
-**改章則頁後拿 docx 的表逐格點名，別只看有沒有那張表。**
-
-編輯委員名單（總編輯釋昭慧 ＋ 委員 13 位，依姓氏筆畫）取 docx 表格那一頁為準，
-個人簡歷取同檔的逐位簡介、以 `<details>` 收折；簡歷只做中文，英文版僅名字與機構。
-兩處與簡歷正文打架的地方（林朝成、葉海煙的服務機構）一律**以 docx 的名單表為準**。
-
-### 正式上線處：玄奘大學校網後台「臺灣佛教研究中心」底下（2026-09-19 起）
-
-`redpiigpig.com/Hsuan_Chuang_Studies` 是**模擬站**，內容定稿後要在校網
-**臺灣佛教研究中心**底下新建一個《玄奘佛學研究》網站。後台與帳密在 `.env`：
-
-| | |
-|---|---|
-| 後台 | `HCU_WEB_CMS_URL`＝`https://www.hcu.edu.tw/backend/login.aspx`（ASP.NET 後台） |
-| 帳號／密碼 | `HCU_WEB_CMS_USER`／`HCU_WEB_CMS_PASS`（原本鍵名是 `path`／`accuant`／`password`，2026-09-19 改名） |
-
-🚨 **只准新建網頁。** 這是校方正式官網，中心底下既有的其他網頁一律不得改動、不得刪除、
-不得調整版面或內容——**唯一例外是替新網頁建立連結**（在中心選單或既有頁面加一條連結）。
-動手前先確認自己在新建的那一頁上，不要在既有頁的編輯器裡改東西。
+## 姊妹站：學報公開官網 → 已移出本 skill
+《玄奘佛學研究》的**公開官網**（模擬站 `redpiigpig.com/Hsuan_Chuang_Studies`＋玄奘校網後台
+「臺灣佛教研究中心」底下的正式站）是使用者在玄奘的**職務工作**，不屬弘誓研究資料，
+2026-09-19 起獨立成 [[hcu-hcjbs-journal]]：章則五頁的「英網-N」docx 對照、各期封面與篇目
+（`scripts/hcjbs_journal.py`）、校網後台帳密與「只准新建網頁」那條硬規則都在那裡。
+本 skill 只管需登入的研究資料層 `/xuanzang`（45 期 304 篇全文語料）。
 
 ## See also
 [[project_yinshun_hongshi_collection]]、[[project_chengzhong_bulletins]]（同 portal 衛理公會 collection）、[[ebook-pipeline]]（OCR 同源）、[[feedback_drive_canonical_storage]]。

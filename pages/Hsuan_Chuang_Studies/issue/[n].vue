@@ -1,10 +1,10 @@
 <template>
-  <div :style="{ minHeight:'100vh', background:'#fff', fontFamily: lang==='en' ? 'Times New Roman,Times,serif' : 'DFKai-SB,標楷體,KaiTi,serif' }">
+  <div :style="{ minHeight:'100vh', background:'#fff', fontFamily: 'Times New Roman,Times,DFKai-SB,標楷體,KaiTi,serif' }">
     <HcjbsHeader :lang="lang" @toggle="toggle" />
 
     <main id="main-content" style="width:75%; margin:0 auto; padding:28px 0 60px;">
       <!-- Breadcrumb -->
-      <div style="font-size:13px; margin-bottom:12px; font-family:Arial,'Microsoft JhengHei',sans-serif;">
+      <div style="font-size:13px; margin-bottom:12px; font-family:'Times New Roman',Times,'Microsoft JhengHei',sans-serif;">
         <span style="color:#1a56db;">{{ lang === 'zh' ? '玄奘佛學研究' : 'HCJBS' }}</span>
         <span style="margin:0 4px; color:#666;">›</span>
         <NuxtLink to="/Hsuan_Chuang_Studies" style="color:#1a56db; text-decoration:none;">{{ lang === 'zh' ? '研究學報' : 'Journal Issues' }}</NuxtLink>
@@ -20,7 +20,7 @@
             <img v-if="issue.cover" :src="`${issue.cover}?v=3`" :alt="`第${n}期封面`" style="width:100%; height:100%; object-fit:cover; display:block;" />
           </div>
           <a v-if="issue.url" :href="issue.url" target="_blank" rel="noopener"
-            style="display:block; text-align:center; margin-top:12px; font-size:13px; color:#888; text-decoration:none; font-family:Arial,'Microsoft JhengHei',sans-serif;"
+            style="display:block; text-align:center; margin-top:12px; font-size:13px; color:#888; text-decoration:none; font-family:'Times New Roman',Times,'Microsoft JhengHei',sans-serif;"
             onmouseover="this.style.color='#c8860a'" onmouseout="this.style.color='#888'">
             {{ lang === 'zh' ? '玄奘大學原始頁 ↗' : 'Original page ↗' }}
           </a>
@@ -37,7 +37,7 @@
           </div>
 
           <!-- Column header -->
-          <div style="display:flex; align-items:center; padding:0 4px 8px; border-bottom:2px solid #333; font-family:Arial,'Microsoft JhengHei',sans-serif; font-size:13px; color:#666; font-weight:600;">
+          <div style="display:flex; align-items:center; padding:0 4px 8px; border-bottom:2px solid #333; font-family:'Times New Roman',Times,'Microsoft JhengHei',sans-serif; font-size:13px; color:#666; font-weight:600;">
             <span style="flex:1;">{{ lang === 'zh' ? '篇名' : 'Title' }}</span>
             <span style="width:120px; flex-shrink:0;">{{ lang === 'zh' ? '作者' : 'Author' }}</span>
             <span style="width:52px; flex-shrink:0; text-align:center;">{{ lang === 'zh' ? '頁數' : 'Page' }}</span>
@@ -48,10 +48,10 @@
             style="display:flex; align-items:center; padding:14px 4px; border-bottom:1px solid #eee;">
             <span style="flex:1; font-size:16px; color:#222; line-height:1.5; padding-right:12px;">{{ a.title }}</span>
             <span style="width:120px; flex-shrink:0; font-size:14px; color:#555;">{{ a.author }}</span>
-            <span style="width:52px; flex-shrink:0; text-align:center; font-size:14px; color:#777; font-family:Arial,sans-serif;">{{ a.page }}</span>
+            <span style="width:52px; flex-shrink:0; text-align:center; font-size:14px; color:#777; font-family:'Times New Roman',Times,sans-serif;">{{ a.page }}</span>
             <span style="width:88px; flex-shrink:0; text-align:center;">
               <a v-if="a.pdf" :href="a.pdf" target="_blank" rel="noopener"
-                style="display:inline-block; padding:4px 12px; font-size:13px; color:#fff; background:#c8860a; border-radius:3px; text-decoration:none; font-family:Arial,'Microsoft JhengHei',sans-serif; white-space:nowrap;"
+                style="display:inline-block; padding:4px 12px; font-size:13px; color:#fff; background:#c8860a; border-radius:3px; text-decoration:none; font-family:'Times New Roman',Times,'Microsoft JhengHei',sans-serif; white-space:nowrap;"
                 onmouseover="this.style.background='#a86e05'" onmouseout="this.style.background='#c8860a'">
                 {{ lang === 'zh' ? 'PDF' : 'PDF' }} ↓
               </a>

@@ -1,9 +1,9 @@
 <template>
-  <div class="min-h-screen bg-white text-gray-800" :style="{ fontFamily: lang==='en' ? 'Times New Roman,Times,serif' : 'DFKai-SB,標楷體,KaiTi,serif' }">
+  <div class="min-h-screen bg-white text-gray-800" :style="{ fontFamily: 'Times New Roman,Times,DFKai-SB,標楷體,KaiTi,serif' }">
     <HcjbsHeader :lang="lang" @toggle="toggle" />
 
     <main style="width:75%; margin:0 auto; padding:28px 0 60px;">
-      <nav class="text-sm mb-3" style="font-family: Arial, sans-serif;">
+      <nav class="text-sm mb-3" style="font-family: 'Times New Roman', Times, sans-serif;">
         <NuxtLink to="/Hsuan_Chuang_Studies" class="text-blue-700 hover:underline">{{ lang === 'zh' ? '玄奘佛學研究' : 'HCJBS' }}</NuxtLink>
         <span class="mx-1 text-gray-500">›</span>
         <span class="text-blue-700">{{ lang === 'zh' ? '編輯委員' : 'Editorial Board' }}</span>
@@ -21,7 +21,7 @@
         <!-- Editor-in-Chief -->
         <div>
           <p class="font-bold text-lg mb-3">{{ lang === 'zh' ? '總編輯' : 'Editor-in-Chief' }}</p>
-          <table class="w-full border-collapse text-sm" style="font-family: Arial, '新細明體', sans-serif;">
+          <table class="w-full border-collapse text-sm" style="font-family: 'Times New Roman', Times, '新細明體', sans-serif;">
             <tbody>
               <tr class="border border-gray-300">
                 <td class="border border-gray-300 px-4 py-2 bg-gray-50 font-semibold w-32">
@@ -38,7 +38,7 @@
           </table>
 
           <details v-if="lang === 'zh'" class="mt-3 border border-gray-200 bg-gray-50">
-            <summary class="cursor-pointer px-4 py-2 text-sm text-gray-700 select-none" style="font-family: Arial, '新細明體', sans-serif;">
+            <summary class="cursor-pointer px-4 py-2 text-sm text-gray-700 select-none" style="font-family: 'Times New Roman', Times, '新細明體', sans-serif;">
               簡歷
             </summary>
             <div class="px-5 py-4 bg-white border-t border-gray-200 space-y-3 text-[15px]">
@@ -80,7 +80,7 @@
           <p class="font-bold text-lg mb-3">
             {{ lang === 'zh' ? '編輯委員（依姓氏筆畫排序）' : 'Editorial Board Members (in stroke order)' }}
           </p>
-          <table class="w-full border-collapse text-sm" style="font-family: Arial, '新細明體', sans-serif;">
+          <table class="w-full border-collapse text-sm" style="font-family: 'Times New Roman', Times, '新細明體', sans-serif;">
             <thead>
               <tr class="bg-gray-100">
                 <th class="border border-gray-400 px-4 py-2 text-left w-36">{{ lang === 'zh' ? '姓名' : 'Name' }}</th>
@@ -109,7 +109,7 @@
           <p class="font-bold text-lg mb-3">編輯委員簡歷</p>
           <div class="border border-gray-200 divide-y divide-gray-200">
             <details v-for="m in members" :key="`bio-${m.zhName}`" class="bg-white">
-              <summary class="cursor-pointer px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 select-none" style="font-family: Arial, '新細明體', sans-serif;">
+              <summary class="cursor-pointer px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 select-none" style="font-family: 'Times New Roman', Times, '新細明體', sans-serif;">
                 {{ m.zhName }}<span class="text-gray-400 mx-2">｜</span><span class="text-gray-500">{{ m.zhInst }}</span>
               </summary>
               <div class="px-5 py-4 bg-gray-50 border-t border-gray-200 space-y-2 text-[15px] leading-relaxed">
@@ -123,7 +123,7 @@
       </div>
 
       <!-- Download -->
-      <div class="mt-10 pt-6 border-t border-gray-200" style="font-family: Arial, sans-serif;">
+      <div class="mt-10 pt-6 border-t border-gray-200" style="font-family: 'Times New Roman', Times, sans-serif;">
         <a href="/api/xuanzang/download?file=editorial" download
           class="inline-flex items-center gap-2 px-5 py-2.5 border border-gray-500 text-sm text-gray-700 hover:bg-gray-100 transition">
           ↓ {{ lang === 'zh' ? '下載編輯團隊資訊（Word）' : 'Download Editorial Board Info (Word)' }}
