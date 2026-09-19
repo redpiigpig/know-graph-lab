@@ -124,6 +124,20 @@ R2 前綴：`yinshun-hongshi/<刊>/`（原檔）、`yinshun-hongshi-fulltext/<�
 個人簡歷取同檔的逐位簡介、以 `<details>` 收折；簡歷只做中文，英文版僅名字與機構。
 兩處與簡歷正文打架的地方（林朝成、葉海煙的服務機構）一律**以 docx 的名單表為準**。
 
+### 正式上線處：玄奘大學校網後台「臺灣佛教研究中心」底下（2026-09-19 起）
+
+`redpiigpig.com/Hsuan_Chuang_Studies` 是**模擬站**，內容定稿後要在校網
+**臺灣佛教研究中心**底下新建一個《玄奘佛學研究》網站。後台與帳密在 `.env`：
+
+| | |
+|---|---|
+| 後台 | `HCU_WEB_CMS_URL`＝`https://www.hcu.edu.tw/backend/login.aspx`（ASP.NET 後台） |
+| 帳號／密碼 | `HCU_WEB_CMS_USER`／`HCU_WEB_CMS_PASS`（原本鍵名是 `path`／`accuant`／`password`，2026-09-19 改名） |
+
+🚨 **只准新建網頁。** 這是校方正式官網，中心底下既有的其他網頁一律不得改動、不得刪除、
+不得調整版面或內容——**唯一例外是替新網頁建立連結**（在中心選單或既有頁面加一條連結）。
+動手前先確認自己在新建的那一頁上，不要在既有頁的編輯器裡改東西。
+
 ## See also
 [[project_yinshun_hongshi_collection]]、[[project_chengzhong_bulletins]]（同 portal 衛理公會 collection）、[[ebook-pipeline]]（OCR 同源）、[[feedback_drive_canonical_storage]]。
 
