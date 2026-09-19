@@ -103,6 +103,26 @@ REFERENCE-first 的預設是找中譯本（[[feedback_collected_works_reference_
 登入狀態存 `c:/tmp/zlib_state.json`，之後免登入。帳號在 `.env` 的
 `ZLIB_EMAIL` / `ZLIB_PASSWORD`。
 
+### 🚨「DiamWall 未過」不一定是 DiamWall（2026-09-19）
+
+`gotoPastWall()` 回 false 有**兩種完全不同**的原因，而舊版上層一律丟同一句
+「DiamWall 未過——這是站方擋住」：
+
+* **wall**：真的被擋，標題一直是 challenge 頁 → 只能等站方放行、換帳號、或改天再跑。
+* **net**：`page.goto` 一直丟例外（`ERR_NAME_NOT_RESOLVED`／`ERR_NETWORK_CHANGED`／
+  timeout）→ 是**本機網路**，跟站方無關。筆電通勤時網路跳動就長這樣。
+
+2026-09-18 四個帳號跑滿一整天、0 本落地，log 滿場「DiamWall 擋住」，看起來像站方封鎖；
+實際上當天日誌裡夾著 `ERR_NAME_NOT_RESOLVED at https://z-library.sk/s`，而隔天實測
+`z-library.sk` 解析得到（216.146.31.1）——網域好好的，是網路斷了。**認錯原因就會拿錯
+對策**：以為要等站方放行，其實只要等網路回來。現在 `wallReason()` 會照實分辨。
+
+判讀順序：看到 0 本先 `Resolve-DnsName z-library.sk` 驗網域，再看 log 裡有沒有
+`↻ 導覽失敗` 那種行——有就是本機網路，沒有才是真的牆。
+
+🚨 另外：**帳號 1 被擋不代表整站擋你。** 2026-09-19 帳號 1 連五筆被牆收手，換帳號 2
+就過牆開始下載。所以別在第一個帳號失敗時就判定「今天不用跑了」。
+
 ## 每日額度：每帳號十本，四個帳號＝四十本
 
 第 11 本開始，點下載鈕就是永遠等不到 download 事件，**站方不會明說**。所以：
