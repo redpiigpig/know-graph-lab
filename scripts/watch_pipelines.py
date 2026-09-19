@@ -423,11 +423,18 @@ def section_foreign_db() -> None:
 
     # --- Unpaywall：Crossref 母體 → 查 OA → 下載
     up = CORPUS / "unpaywall" / "resolved.jsonl"
+    pdfd = CORPUS / "unpaywall" / "pdf"
+    fail = CORPUS / "unpaywall" / "fetch-failed.jsonl"
     cr = CORPUS / "crossref"
     if up.exists():
         n = sum(1 for _ in up.open(encoding="utf-8"))
         tot = 452_459
-        print(f"  Unpaywall：已查 {n:,}／{tot:,}（{n / tot * 100:.1f}%）；已下載 0")
+        # 🚨 這裡本來把「已下載」寫死成 0，從來沒去數過——儀表板印一個沒量過的
+        #    數字，比不印還糟（2026-09-19 實際上磁碟裡已經有檔了還在報 0）。
+        got = len(list(pdfd.glob("*.pdf"))) if pdfd.exists() else 0
+        skipped = sum(1 for _ in fail.open(encoding="utf-8")) if fail.exists() else 0
+        print(f"  Unpaywall：已查 {n:,}／{tot:,}（{n / tot * 100:.1f}%）；"
+              f"已下載 {got:,}（抓不到而跳過 {skipped:,}）")
         age = dt.datetime.now() - dt.datetime.fromtimestamp(up.stat().st_mtime)
         if age.total_seconds() > 6 * 3600:
             warn(f"Unpaywall resolve 已 {age.total_seconds() / 3600:.1f} 小時沒寫入")
@@ -494,7 +501,8 @@ def section_foreign_db() -> None:
 
     # --- keeper 有沒有在管這四條
     fk = ROOT / "scripts/logs/fleet_keeper.log"
-    lanes = ("zlib-probe", "unpaywall-resolve", "cyberleninka-fetch", "jstage-text")
+    lanes = ("zlib-probe", "unpaywall-resolve", "unpaywall-fetch",
+             "cyberleninka-fetch", "jstage-text")
     for lane in lanes:
         pidf = ROOT / "scripts/state" / f"fleet_{lane}.pid"
         paused = (ROOT / "scripts/state" / f"fleet_{lane}.pause").exists()
