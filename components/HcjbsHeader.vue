@@ -29,10 +29,10 @@
 
     <!-- Row 3: Nav -->
     <div>
-      <div style="width:75%; margin:0 auto; padding:0; display:flex; align-items:center;">
+      <div style="width:75%; margin:0 auto; padding:0; display:flex; align-items:center; flex-wrap:wrap;">
         <NuxtLink
           v-for="item in nav" :key="item.to" :to="item.to"
-          style="padding:10px 32px; text-align:center; text-decoration:none; font-size:14px; font-family:Arial,'Microsoft JhengHei',sans-serif; border-right:2px solid #ddd; white-space:nowrap; transition:color 0.15s;"
+          style="padding:10px 24px; text-align:center; text-decoration:none; font-size:14px; font-family:Arial,'Microsoft JhengHei',sans-serif; border-right:2px solid #ddd; white-space:nowrap; transition:color 0.15s;"
           :style="route.path === item.to ? 'color:#c8860a; font-weight:600;' : 'color:#444;'"
           @mouseenter="(e) => { if(route.path !== item.to) (e.target as HTMLElement).style.color='#c8860a' }"
           @mouseleave="(e) => { if(route.path !== item.to) (e.target as HTMLElement).style.color='#444' }">
@@ -60,5 +60,6 @@ const nav = [
   { zh: '投稿指引', en: 'Submission Guidelines',   to: '/Hsuan_Chuang_Studies/submission' },
   { zh: '審查流程', en: 'Review Process',           to: '/Hsuan_Chuang_Studies/review-process' },
   { zh: '學術倫理', en: 'Academic Ethics',          to: '/Hsuan_Chuang_Studies/ethics' },
+  { zh: 'AI 使用規範', en: 'AI Use Policy',         to: '/Hsuan_Chuang_Studies/ai-policy' },
 ]
 </script>

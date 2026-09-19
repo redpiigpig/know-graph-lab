@@ -84,13 +84,13 @@
                   <td class="border border-gray-300 px-2 py-2">修正後再送原審者複審</td>
                   <td class="border border-gray-300 px-2 py-2">修正後再送原審者複審</td>
                   <td class="border border-gray-300 px-2 py-2">修正後再送原審者複審</td>
-                  <td class="border border-gray-300 px-2 py-2">第三位審查</td>
+                  <td class="border border-gray-300 px-2 py-2">不推薦刊登</td>
                 </tr>
                 <tr class="odd:bg-white even:bg-gray-50">
                   <td class="border border-gray-300 px-2 py-2 font-semibold bg-gray-100">第一位：不推薦刊登</td>
+                  <td class="border border-gray-300 px-2 py-2">第三位審查</td>
+                  <td class="border border-gray-300 px-2 py-2">第三位審查</td>
                   <td class="border border-gray-300 px-2 py-2">不推薦刊登</td>
-                  <td class="border border-gray-300 px-2 py-2">第三位審查</td>
-                  <td class="border border-gray-300 px-2 py-2">第三位審查</td>
                   <td class="border border-gray-300 px-2 py-2">不推薦刊登</td>
                 </tr>
               </tbody>
@@ -105,7 +105,7 @@
             <li>2. 「修正後刊登」之文稿，作者應於接獲通知後 7–14 天內完成修訂並連同「修訂回應表」寄回編委會，由主編確認後進入刊登程序。</li>
             <li>3. 「修正後再送原審者複審」之文稿，作者應於接獲通知後 7–14 天內完成修訂，並連同「修訂回應表」寄回編委會，由原審者進行複審。</li>
             <li>4. 凡審查結果為「一推薦刊登、一不推薦刊登」，或兩位審查意見落差太大之文稿，由主編或編委會議決是否送第三位審查。三審後若有二通過即予通過；若二不通過則不予通過。</li>
-            <li>5. 「不推薦刊登」之文稿，不予刊登。</li>
+            <li>5. 「不推薦刊登」之文稿，不予刊登。特殊情形則由主編考量論文品質及審查意見，並送編委會認可後，再行決議處理方式。</li>
             <li>6. 複審稿件審查時間以 2 週為限，複審之審查意見只分「推薦刊登」、「修正後刊登」、「不推薦刊登」三級。</li>
           </ol>
         </div>
@@ -178,13 +178,13 @@
                   <td class="border border-gray-300 px-2 py-2">Major Revision → Re-review</td>
                   <td class="border border-gray-300 px-2 py-2">Major Revision → Re-review</td>
                   <td class="border border-gray-300 px-2 py-2">Major Revision → Re-review</td>
-                  <td class="border border-gray-300 px-2 py-2">3rd Reviewer</td>
+                  <td class="border border-gray-300 px-2 py-2">Reject</td>
                 </tr>
                 <tr class="odd:bg-white even:bg-gray-50">
                   <td class="border border-gray-300 px-2 py-2 font-semibold bg-gray-100">Reviewer 1: Reject</td>
+                  <td class="border border-gray-300 px-2 py-2">3rd Reviewer</td>
+                  <td class="border border-gray-300 px-2 py-2">3rd Reviewer</td>
                   <td class="border border-gray-300 px-2 py-2">Reject</td>
-                  <td class="border border-gray-300 px-2 py-2">3rd Reviewer</td>
-                  <td class="border border-gray-300 px-2 py-2">3rd Reviewer</td>
                   <td class="border border-gray-300 px-2 py-2">Reject</td>
                 </tr>
               </tbody>
@@ -199,7 +199,7 @@
             <li>b. Manuscripts requiring minor revisions must be revised and returned with a response letter within 7–14 days of notification.</li>
             <li>c. Manuscripts requiring major revisions must also be returned with a response letter within 7–14 days for re-review by the original reviewer.</li>
             <li>d. Manuscripts where one reviewer accepts and one rejects, or where reviewer opinions diverge significantly, are sent to a third reviewer. If two of three reviewers accept, the manuscript is accepted; if two reject, it is rejected.</li>
-            <li>e. Manuscripts rejected by external reviewers will not be published.</li>
+            <li>e. Manuscripts rejected by external reviewers will not be published. In exceptional cases the Editor-in-Chief may, in light of the quality of the manuscript and the reviewers' comments and subject to the approval of the editorial committee, decide on an alternative course of action.</li>
             <li>f. The re-review period is limited to two weeks. Re-review decisions are limited to three categories: Accept, Accept with Minor Revisions, or Reject.</li>
           </ol>
         </div>

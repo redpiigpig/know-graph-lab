@@ -97,6 +97,33 @@ R2 前綴：`yinshun-hongshi/<刊>/`（原檔）、`yinshun-hongshi-fulltext/<�
 `public/content/Hsuan_Chuang_Studies/issues.json`（頁面直接 `import`，SSR 友善；PDF 熱連 hcu 官方）。
 重跑：`python -X utf8 scripts/hcjbs_journal.py`（封面已存則跳過）。
 
+### 學報章則六頁：正本是編輯室給的「英網-N」docx（2026-09-19 更新）
+
+除期刊各期外，本站有六個章則頁，內容**一字不許自撰**，正本是編輯室交來的 Word 檔，
+放在 `stores/玄奘佛學研究/`（`stores/*` 不進版控），頁面下方的下載鍵走
+`server/api/xuanzang/download.get.ts` 的 `FILES` 對照表：
+
+| 頁面 | `?file=` | 正本檔 |
+|---|---|---|
+| `submission` 投稿指引 | `submission` | 英網-1 投稿指引(徵稿函).docx |
+| `editorial-team` 編輯委員 | `editorial` | 英網-2 編輯團隊資訊.docx |
+| `ethics` 學術倫理 | `ethics` | 英網-3 草擬學術倫理聲明**260425** |
+| `ai-policy` AI 使用規範 | `ai` | 英網-4 學報AI使用規範**260904**（2026-09 新增） |
+| `review-process` 審查流程 | `review` | 英網-5 期刊審查流程260213 |
+
+🚨 **檔名編號會整批位移。** 2026-09 這批新增了 AI 規範當「英網-4」，原本的「英網-4 期刊審查流程」
+被推成「英網-5」——只按編號對檔會讓審查流程頁改去下載 AI 規範。**對照要認檔名的內容詞，
+不是認編號**；換檔時同步改 `FILES` 並刪掉舊日期的那份。
+
+🚨 **章則頁曾出現「看起來像官方文件、其實抄錯」的表。** 審查流程頁的雙審查決策矩陣有兩格
+與 docx 相反（第一位「修改後再審」×第二位「不推薦刊登」原是**不推薦刊登**、頁面寫成第三位審查；
+第一位「不推薦刊登」那一列前三格也錯位）。docx 的矩陣沿對角線對稱，頁面那版不對稱——
+**改章則頁後拿 docx 的表逐格點名，別只看有沒有那張表。**
+
+編輯委員名單（總編輯釋昭慧 ＋ 委員 13 位，依姓氏筆畫）取 docx 表格那一頁為準，
+個人簡歷取同檔的逐位簡介、以 `<details>` 收折；簡歷只做中文，英文版僅名字與機構。
+兩處與簡歷正文打架的地方（林朝成、葉海煙的服務機構）一律**以 docx 的名單表為準**。
+
 ## See also
 [[project_yinshun_hongshi_collection]]、[[project_chengzhong_bulletins]]（同 portal 衛理公會 collection）、[[ebook-pipeline]]（OCR 同源）、[[feedback_drive_canonical_storage]]。
 
