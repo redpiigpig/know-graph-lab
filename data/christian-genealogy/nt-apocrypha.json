@@ -38,7 +38,7 @@
   "documents": {
     "acts-paul": {
       "title": "保羅行傳",
-      "sections": 272,
+      "sections": 19,
       "date": [
         150,
         200
@@ -86,7 +86,7 @@
     },
     "acts-john": {
       "title": "約翰行傳",
-      "sections": 214,
+      "sections": 60,
       "date": [
         150,
         250
@@ -131,7 +131,7 @@
     },
     "acts-thomas": {
       "title": "多馬行傳",
-      "sections": 280,
+      "sections": 24,
       "date": [
         200,
         250
@@ -691,7 +691,7 @@
     },
     "joseph-arimathea": {
       "title": "亞利馬太約瑟的記述",
-      "sections": 50,
+      "sections": 5,
       "date": [
         200,
         500
@@ -805,7 +805,7 @@
     },
     "pistis-sophia": {
       "title": "皮斯特斯‧索菲亞",
-      "sections": 98,
+      "sections": 10,
       "date": [
         200,
         400

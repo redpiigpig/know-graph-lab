@@ -92,7 +92,8 @@
             <div class="font-semibold text-stone-700 mb-2">註釋</div>
             <ol class="space-y-1 list-none pl-0">
               <li v-for="f in footnotesOnPage" :key="f.id" :id="`fn-${f.id}`" class="flex gap-2">
-                <a :href="`#fnref-${f.id}`" class="text-amber-700 hover:underline shrink-0 font-mono font-semibold">{{ f.marker }}</a>
+                <a v-if="!f.unlinked" :href="`#fnref-${f.id}`" class="text-amber-700 hover:underline shrink-0 font-mono font-semibold">{{ f.marker }}</a>
+                <span v-else class="text-stone-400 shrink-0 font-mono font-semibold" title="原書此處的標記未被 OCR 認出，註釋內容仍完整">{{ f.marker }}</span>
                 <span v-if="f.def" class="text-gray-700">{{ f.def }}</span>
               </li>
             </ol>
@@ -322,7 +323,7 @@ function textClassFor(code: string) {
 const SUPERSCRIPT_RE = /([⁰¹²³⁴⁵⁶⁷⁸⁹]+)/g
 const SUPER_TO_ASCII: Record<string, string> = { '⁰':'0','¹':'1','²':'2','³':'3','⁴':'4','⁵':'5','⁶':'6','⁷':'7','⁸':'8','⁹':'9' }
 function superToAscii(s: string): string { return s.split('').map(c => SUPER_TO_ASCII[c] ?? c).join('') }
-type Footnote = { id: string; marker: string; def: string | null }
+type Footnote = { id: string; marker: string; def: string | null; unlinked?: boolean }
 const footnotesOnPage = computed<Footnote[]>(() => {
   const seen = new Map<string, Footnote>()
   for (const s of visibleSections.value) {
@@ -335,6 +336,20 @@ const footnotesOnPage = computed<Footnote[]>(() => {
         if (seen.has(id)) continue
         const def = s.footnotesByVersion?.[versionCode]?.[ascii] ?? null
         seen.set(id, { id, marker: m, def })
+      }
+    }
+  }
+  // 🚨 正文裡找不到標記的註釋也要列出來，否則它們「在 DB 裡、頁面上沒有」。
+  //    《基督教典外文獻》那十冊實測：2,085 條註腳裡有 58% 的標記**在 OCR 的正文
+  //    裡根本不存在**（原書是很小的上標，OCR 沒認出來），只有註釋本身被撿回來。
+  //    若只認正文上標，這些就等於沒收——正是舊版嬰孩福音「收了 26 條、站上一條
+  //    都看不到」的老問題。連不上的照樣印在頁底，只是沒有可點的錨。
+  for (const s of visibleSections.value) {
+    for (const defs of Object.values(s.footnotesByVersion ?? {})) {
+      for (const [ascii, def] of Object.entries(defs ?? {})) {
+        const id = `${s.order_index}-${ascii}`
+        if (seen.has(id)) continue
+        seen.set(id, { id, marker: ascii, def, unlinked: true })
       }
     }
   }

@@ -58,7 +58,7 @@
     "gthom": {
       "title": "多馬福音",
       "corpus": "apocrypha",
-      "sections": 213,
+      "sections": 114,
       "date": [
         50,
         150
@@ -116,7 +116,7 @@
     "gnazarenes": {
       "title": "拿撒勒派人福音",
       "corpus": "apocrypha",
-      "sections": 31,
+      "sections": 40,
       "date": [
         100,
         200
@@ -142,7 +142,7 @@
     "gebionites": {
       "title": "伊便尼派人福音",
       "corpus": "apocrypha",
-      "sections": 6,
+      "sections": 8,
       "date": [
         100,
         200
@@ -196,7 +196,7 @@
     "gpet": {
       "title": "彼得福音",
       "corpus": "apocrypha",
-      "sections": 42,
+      "sections": 3,
       "date": [
         100,
         200
@@ -280,7 +280,7 @@
     "gmatthias": {
       "title": "馬提亞福音／託馬太名福音",
       "corpus": "apocrypha",
-      "sections": 57,
+      "sections": 4,
       "date": [
         100,
         300
@@ -306,7 +306,7 @@
     "infancy-thomas": {
       "title": "多馬的耶穌嬰孩時期福音",
       "corpus": "apocrypha",
-      "sections": 22,
+      "sections": 34,
       "date": [
         100,
         200
@@ -332,7 +332,7 @@
     "protoevangelium-james": {
       "title": "雅各原始福音",
       "corpus": "apocrypha",
-      "sections": 90,
+      "sections": 41,
       "date": [
         100,
         200
@@ -488,7 +488,7 @@
     "joseph-carpenter": {
       "title": "木匠約瑟的歷史",
       "corpus": "apocrypha",
-      "sections": 79,
+      "sections": 21,
       "date": [
         200,
         500
@@ -537,7 +537,7 @@
     "q-mani": {
       "title": "摩尼福音（活的福音）",
       "corpus": "apocrypha",
-      "sections": 3,
+      "sections": 7,
       "date": [
         200,
         300
