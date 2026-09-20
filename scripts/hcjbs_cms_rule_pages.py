@@ -14,7 +14,7 @@ import argparse
 import re
 from pathlib import Path
 
-from hcjbs_cms_style import para, rule_table, section_nav, sub_head, title_bar, wrap
+from hcjbs_cms_style import para, rule_table, section_nav, sub_head, wrap
 
 # 區內導覽（模擬站上方那一排）每頁都要帶：校網母頁的 nav 只到「資料庫」，
 # 這五頁在選單第三層，讀者在頁面上看不到彼此。
@@ -25,7 +25,7 @@ NAV_NAME = {'submission': '投稿指引', 'editorial-team': '編輯委員', 'rev
 def p(text, indent=0, bold=False, align=None, size=None):
     """章則頁的段落——照模擬站：17px、行高 1.85、白底、不填色。
 
-    `size` 舊介面是給頁首大標用的，現在頁首改用 title_bar()，所以這裡忽略它。
+    `size` 舊介面是給頁首大標用的；現在頁內**不印大標**（CMS 樣板已經印過節點名稱），所以忽略它。
     """
     return para(text, size=17, indent=indent, bold=bold, align=align)
 
@@ -99,7 +99,7 @@ FORMAT_ITEMS = [
 
 
 def page_submission():
-    out = [title_bar('玄奘大學《玄奘佛學研究》徵稿啟事'),
+    out = [
            p('本學報主要刊載有關佛學相關領域之原創性論文，包括與佛教有關之義理、教史、藝術、文學、心理、社會、'
              '教育等，歡迎各界投稿，來稿應未曾以任何文字形式出版。本學報每年出版兩期，上半年出刊日為三月三十日，'
              '下半年為九月三十日。'),
@@ -117,7 +117,7 @@ def page_submission():
            p('投稿於本刊經收錄後，同意授權本刊得再授權國家圖書館「台灣期刊論文索引系統」或其他資料庫業者，'
              '進行重製、透過網路提供服務、授權用戶下載、列印、瀏覽等行為。並得為符合「台灣期刊論文索引系統」'
              '或其他資料庫之需求，酌作格式之修改。'),
-           p('＊聯絡人：0982-215-945　堅意法師'),
+           p('＊聯絡人：0982-215-945　堅意法師', align='right'),
            h('學術性論文撰寫格式要點'),
            p('論文請依下列次序撰寫：')]
     for title, items in FORMAT_ITEMS:
@@ -289,7 +289,7 @@ BIOS = [
 
 
 def page_editorial():
-    out = [title_bar('《玄奘佛學研究》編輯團隊'),
+    out = [
            p('總編輯：釋昭慧教授（玄奘大學宗教與文化學系）', bold=True),
            p('編輯委員（依姓氏筆畫排序）：', bold=True),
            table(['姓名', '服務機構'], BOARD, widths=['30%', '70%'], center_cols=(0,)),
@@ -311,7 +311,7 @@ MATRIX = [
 
 
 def page_review():
-    out = [title_bar('《玄奘佛學研究》審稿流程'),
+    out = [
            h('壹、審稿流程'),
            p('一、內審：', bold=True),
            p('1. 執行編輯先就來稿進行初步檢查如下：', indent=1),
@@ -417,7 +417,7 @@ ETHICS = [
 
 
 def page_ethics():
-    out = [title_bar('學術倫理聲明')]
+    out = []
     for kind, val in ETHICS:
         if kind in ('intro', 'tail'):
             out.append(p(val))
@@ -450,7 +450,7 @@ AI_RULES = [
 
 
 def page_ai():
-    out = [title_bar('生成式人工智慧（AI）使用規範'),
+    out = [
            p('因應生成式 AI 技術於學術領域之普及，為確保研究之真實性與自主思考，作者使用相關工具'
              '（如 ChatGPT、Claude 等）時，必須嚴格遵守以下三道防線：')]
     for title, body in AI_RULES:
@@ -475,10 +475,10 @@ def main():
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
     for slug, (title, fn) in PAGES.items():
-        body = fn()
-        # 把區內導覽插在 wrap() 外框 div 的後面（第一行是那個 div）
-        lines = body.split('\n')
-        body = '\n'.join([lines[0], section_nav(NAV_NAME.get(slug))] + lines[1:])
+        # 🚨 頁面函式只回「內容」，外框（白底＋'Times New Roman'/標楷體 字體堆疊）與區內導覽
+        #    一律在這裡套上。之前漏了 wrap()，五頁上線時字體是校網預設的黑體——而稽核只驗
+        #    關鍵字，驗不出這種「內容對、樣式沒套上」的錯。
+        body = wrap(section_nav(NAV_NAME.get(slug)) + '\n' + fn())
         fp = out / f'{slug}.html'
         fp.write_text(body, encoding='utf-8')
         # 🚨 印分母：字數與段數，好跟正本對；太短就是有段落漏掉

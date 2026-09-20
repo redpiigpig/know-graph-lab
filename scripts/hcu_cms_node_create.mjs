@@ -11,6 +11,8 @@ const OUT = 'c:/tmp/hcu-cms'
 function arg(n, d = null) { const i = process.argv.indexOf(`--${n}`); return i > 0 ? process.argv[i + 1] : d }
 const PARENT = arg('parent')
 const NAME = arg('name')
+const TEMPLATE = arg('template', '~/template/SingleData.aspx')   // 版型：單頁=SingleData、外連=URL.aspx
+const URL_FIELD = arg('url')                                     // Template=URL.aspx 時要填的網址
 const DUMP = process.argv.includes('--dump')
 if (!PARENT) { console.error('要 --parent <父節點標題>'); process.exit(2) }
 
@@ -67,7 +69,8 @@ await frame.evaluate(() => {
   const r = document.querySelector('input[name="IsList"][value="false"]')
   if (r) { r.checked = true; r.dispatchEvent(new Event('click', { bubbles: true })) }
 })
-await frame.selectOption('select[name="Template"]', '~/template/SingleData.aspx').catch(e => console.log('[Template] 選不到:', e.message))
+await frame.selectOption('select[name="Template"]', TEMPLATE).catch(e => console.log('[Template] 選不到:', e.message))
+if (URL_FIELD) await frame.fill('input[name="Url"]', URL_FIELD).catch(e => console.log('[Url] 填不進去:', e.message))
 await frame.selectOption('select[name="Enable"]', 'True').catch(() => {})
 await frame.selectOption('select[name="Visible"]', 'True').catch(() => {})
 await page.waitForTimeout(600)

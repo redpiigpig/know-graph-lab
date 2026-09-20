@@ -40,6 +40,22 @@ PDF 被貼成編輯者的 `file:///C:/Users/…/學報核銷/45期玄奘學報/�
 內文容器 `'Times New Roman',Times,DFKai-SB,標楷體,KaiTi,serif`。
 🚨 **不要再寫 `Arial`**——2026-09-19 全站掃過一次改掉了，新頁別又帶回來。
 
+## 🚨 各篇 PDF 的取源順序：先看本機，最後才去爬頁面
+
+**本機就有全部 304 篇**（45 期逐篇），不要一開始就去爬宗教系頁面：
+
+| 順位 | 來源 | 說明 |
+|---|---|---|
+| ① | Drive `G:\我的雲端硬碟\資料\知識圖工作室\研究資料\印順學派與弘誓\玄奘佛學研究\` | **304 個 PDF**，檔名 `玄奘佛學研究-v<期號兩位>-<10位雜湊>.pdf` |
+| ② | `public/content/research-data/yinshun-hongshi/xuanzang-index.json` | 期→逐篇的對照表（`title`／`author`／`pdfKey`／`hasFulltext`），`pdfKey` 就是上面那個檔名 |
+| ③ | `public/content/Hsuan_Chuang_Studies/issues.json` | 模擬站用的那份，裡面存著**早先抓到、仍然有效的** hcu 連結 |
+| ④ | 宗教系該期頁面 | 最後才用；**它的連結會壞** |
+
+🚨 **「頁面上沒有連結」不等於「檔案不存在」。** 第 45 期七篇裡有五篇，宗教系頁面現在寫的是
+編輯者本機路徑 `file:///C:/Users/…/學報核銷/45期玄奘學報/…pdf`，我因此回報「五篇拿不到」——
+**錯的**：檔案都在伺服器上，只是檔名跟頁面上那串不一樣，`issues.json` 裡的舊網址七篇全部
+200 下載得到（另外 Drive 也有）。下次遇到非 http 連結，照上表往前一順位找，不要直接宣告缺件。
+
 ## 各期資料層：`scripts/hcjbs_journal.py`
 
 資料同源 hcu.edu.tw（非 Cloudflare，純 requests 即可）。逐期解析篇目
@@ -212,6 +228,64 @@ PDF 被貼成編輯者的 `file:///C:/Users/…/學報核銷/45期玄奘學報/�
 
 待補：45 期那五篇 PDF 要向編輯室（使用者本人）拿原檔，上傳後重跑 `hcjbs_cms_issue_html.py 45`
 再覆蓋該篇。
+
+## 版面規格（使用者逐條定下來的，改頁前先看這裡）
+
+元件都在 `scripts/hcjbs_cms_style.py`，**六個頁面共用**（封面牆／45 期／五章則）：
+
+1. **不寫背景色**：站上本來就是白底；填色（淺藍／灰列底）一律不要。
+2. **英文與數字 Times New Roman**：外框 div 給 `'Times New Roman',Times,DFKai-SB,標楷體,KaiTi,serif`。
+3. **區內導覽**（研究學報｜編輯委員｜投稿指引｜審查流程｜學術倫理｜AI 使用規範）每頁都要，
+   **沒有下邊線**、每格之間與**最左最右兩端**都有直線、線寬一律 **2px**，
+   而且**目前所在那一項也要能點**（否則各期頁點「研究學報」沒反應）。
+4. **敘述段落首行空兩格**（`text-indent: 2em`）；粗體小標、置右行、條列子項不加。
+5. 投稿指引的「＊聯絡人⋯堅意法師」**置右**。
+6. **頁內不要自己再印一次頁面標題**：CMS 樣板已經印過節點名稱。
+   例外是各期頁與封面牆——見下一節。
+
+### 各期頁的三個藏標題招數
+
+CMS 的內容樣板在我們的內容**之前**印三樣東西，順序改不了，所以用 CSS 藏掉、由我們自己印：
+
+| 藏掉 | 為什麼 |
+|---|---|
+| `.news_detail_container h2` | 它印的節點名稱「玄奘佛學研究」**不是連結**；我們要能點回封面牆 |
+| `.news_detail_container .news_title` | 篇名要排在區內導覽**下面**（使用者指定） |
+| `.news_detail_container .datetime` | 出版日期我們自己排在篇目表尾 |
+| `.photo_list_container`（封面牆那頁） | 裡面是再印一次的節點名稱＋空清單＋分頁條 1 2 3 4 5 |
+
+🚨 **分頁條關不掉，只能藏。** 節點設定沒有「不要清單」的選項：`ListTemplate` **清空會整頁 404**，
+`Extra1` 改 999 也沒用；把 `Template` 改成 SingleData 更糟——各期頁會全部變成顯示封面牆
+（做過、已還原）。可行的組合是 `Template=~/template/URL.aspx` ＋
+`ListTemplate=~/template/Viedo.aspx`（影片列表不畫沒有影片的文章，清單就空了）＋ 上面那段 CSS。
+🚨 **改完版型頁面會 404 一兩分鐘**（伺服器重建），不是壞掉。
+
+## 既有 45 期全部換新版面：`hcjbs_cms_restyle.py`
+
+資料不外求——**舊稿裡就有**中英篇名／作者／頁數／PDF 連結：
+
+    node scripts/hcu_cms_dump_node_articles.mjs --node <rid> --ids c:/tmp/hcu-cms/issue-links.json
+    python -X utf8 scripts/hcjbs_cms_restyle.py 1 2 3 … 43      # 解析舊稿→新版面
+    python -X utf8 scripts/hcjbs_cms_issue_html.py 44 45         # 這兩期用 harvest（舊稿已是新版面）
+
+🚨 **PDF 連結沿用舊稿的 href，不要照檔名規則重算**：舊期檔名五花八門
+（`1-1.pdf`／`11-1(2).pdf`／`43-1應用倫理學的新視野…pdf`），重算一定對不上。
+🚨 **連結有相對與絕對兩種**：舊期指向宗教系檔案庫的絕對網址
+（`https://www.hcu.edu.tw/upload/userfiles/37837C6F…`），新上的兩期是站內相對路徑。
+稽核只認相對路徑會把 11–29、41、42 期誤報成「一個 PDF 都沒有」。
+🚨 **清單頁是 JS 表格（paramquery）**，`?page=N` 沒用、永遠只給第一頁 20 筆；
+要全部 45 期就餵 `--ids`（用公開清單頁抓的 `issue-links.json`）。
+
+## 節點順序：`api/move-node.ashx`
+
+後台把樹的拖拉排序關掉了（`check_move` 回 false），但 API 還在：
+`POST api/move-node.ashx {id: 要搬的, rid: 參考節點, p: first|last|before|after}`，
+從後台頁面裡 fetch 才帶得到 cookie。腳本 `hcu_cms_node_move.mjs`（`--list <父rid>` 先看順序）。
+子選單現況：研究學報（URL 型，外連回封面牆）／編輯委員／投稿指引／審查流程／學術倫理／AI 使用規範。
+
+🚨 **稽核要驗「樣式有沒有套上」，不只驗字。** 五個章則頁曾經關鍵字全中、內容全對，
+但外框 div 漏了沒套上、字體還是校網預設黑體——只驗關鍵字驗不出這種錯。
+現在 `hcjbs_cms_verify.py` 每頁都檢查字體堆疊、無填色、導覽列六項、研究學報可點。
 
 ## See also
 

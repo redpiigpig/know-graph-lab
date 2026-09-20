@@ -153,13 +153,31 @@ def main():
     if '--pdf' in sys.argv:
         pdir = OUT / 'pdf'
         pdir.mkdir(exist_ok=True)
+        fallback = load_fallbacks()
         for n, data in result.items():
             for k, a in enumerate([x for x in data['items'] if x['kind'] == 'article'], 1):
-                # 🚨 宗教系站上有些連結被貼成編輯者的 file:///C:/… 本機路徑，
-                #    那種抓不到，要當成「沒有 PDF」跳過並點名。
-                if not a['pdf'] or not a['pdf'].startswith('http'):
-                    print(f"  ⏭ 略過（非 http 連結）{a['title_zh'][:30]}")
+                # 🚨 宗教系站上有些連結被貼成編輯者的 file:///C:/… 本機路徑。
+                #    那**不代表檔案不存在**——第 45 期五篇就是這樣，檔案其實都在，
+                #    只是頁面上的檔名跟實際的不一樣。先往後備來源找。
+                url = a['pdf'] if a['pdf'].startswith('http') else None
+                local = None
+                if not url:
+                    url, local = pick_fallback(fallback, n, k, a['title_zh'])
+                    if url or local:
+                        print(f"  ↩ 頁面連結壞掉，改用{'本機 Drive' if local else ' issues.json'}："
+                              f"{a['title_zh'][:24]}")
+                if local:
+                    name = f"{n}-{k}{a['title_zh']}"[:90].replace('/', '／') + '.pdf'
+                    dest = pdir / name
+                    if not (dest.exists() and dest.stat().st_size > 10000):
+                        dest.write_bytes(Path(local).read_bytes())
+                    print(f"  ✔ {name[:46]}  {dest.stat().st_size // 1024} KB（本機）")
+                    a['local'] = str(dest)
                     continue
+                if not url:
+                    print(f"  ❌ 三個來源都沒有：{a['title_zh'][:30]}")
+                    continue
+                a['pdf'] = url
                 name = f"{n}-{k}{a['title_zh']}"[:90].replace('/', '／') + '.pdf'
                 dest = pdir / name
                 if dest.exists() and dest.stat().st_size > 10000:

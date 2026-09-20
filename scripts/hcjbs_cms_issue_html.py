@@ -18,8 +18,8 @@ import json
 import re
 from pathlib import Path
 
-from hcjbs_cms_style import (FILES, cover_img, cover_url, esc, pdf_button, section_nav,
-                             two_col, wrap)
+from hcjbs_cms_style import (FILES, cover_img, cover_url, esc, journal_home_url, linked_title,
+                             pdf_button, section_nav, title_bar, two_col, wrap)
 
 PUB_DATE = {44: '2025.9', 45: '2026.3'}      # 學報自印的出版年月（上半年 3 月／下半年 9 月）
 ZH = ['〇', '一', '二', '三', '四', '五', '六', '七', '八', '九', '十']
@@ -50,7 +50,14 @@ def find_pdf(names, issue, seq, title_zh):
 CELL = 'border-bottom: 1px solid #eeeeee; padding: 14px 8px;'
 
 
-def article_table(data, issue, names):
+def article_table(data, issue, names, pub=None):
+    """篇目表。
+
+    PDF 連結兩種來源：
+    - 舊稿重排（`hcjbs_cms_restyle.py`）：每一筆自己帶 `pdf_href`，**沿用頁面上原本的連結**，
+      因為舊期檔名五花八門（`1-1.pdf`／`43-1應用倫理學的新視野…pdf`），照規則重算一定對不上。
+    - 新抓的一期：用 `names`（檔案庫實際檔名）依 `<期>-<序>` 比對。
+    """
     rows = ['<table width="100%" cellpadding="0" cellspacing="0" style="border-collapse: collapse;">',
             '\t<tr>',
             '\t\t<td style="border-bottom: 2px solid #333333; padding: 0 8px 8px; font-size: 13px; '
@@ -72,10 +79,13 @@ def article_table(data, issue, names):
                      '\t</tr>']
             continue
         seq += 1
-        pdf = find_pdf(names, issue, seq, it['title_zh'])
+        href = it.get('pdf_href') or ''
+        if not href:
+            pdf = find_pdf(names, issue, seq, it['title_zh'])
+            href = (FILES + pdf) if pdf else ''
         # 🚨 沒有 PDF 的篇目照樣列出來（有目無文），但不掛連結——
         #    掛一個連不到的連結比沒有連結更糟。
-        full = pdf_button(FILES + pdf) if pdf else '<span style="font-size: 13px; color: #cccccc;">—</span>'
+        full = pdf_button(href) if href else '<span style="font-size: 13px; color: #cccccc;">—</span>'
         en = (f'<br /><span style="font-size: 13px; color: #888888; line-height: 1.5;">'
               f'{esc(it["title_en"])}</span>') if it['title_en'] else ''
         rows += ['\t<tr>',
@@ -86,17 +96,29 @@ def article_table(data, issue, names):
                  f'\t\t<td align="center" style="{CELL}">{full}</td>',
                  '\t</tr>']
     rows.append('</table>')
-    if issue in PUB_DATE:
+    # 出版日期：舊稿重排時用舊稿自己那一列（每期不同），新抓的一期用 PUB_DATE。
+    date = pub or PUB_DATE.get(issue)
+    if date:
         rows.append(f'<p style="margin: 18px 0 0; font-size: 14px; color: #777777;">出版日期：'
-                    f'{PUB_DATE[issue]}</p>')
+                    f'{esc(date)}</p>')
     return '\n'.join(rows)
 
 
-def issue_page(issue, data, names):
-    # 🚨 這裡不要再印「第N期玄奘佛學研究學報」：CMS 的內容樣板已經把篇名與日期
-    #    印在內容區上方了，我們再印一次就是同一個標題連著出現兩遍。
-    return wrap(section_nav('研究學報') + '\n'
-                + two_col(cover_img(issue), article_table(data, issue, names)))
+def issue_page(issue, data, names, pub=None):
+    """各期頁。與 `hcjbs_cms_restyle.py` 的 render() 必須長一樣（同一個版面）。
+
+    版面順序（使用者定的）：可點的「玄奘佛學研究」大標 → 區內導覽 → 「第N期…學報」 → 封面＋篇目。
+    CMS 樣板把節點名稱（h2，不是連結）、篇名（.news_title）與日期（.datetime）印在我們的
+    內容之前且順序改不了，所以三個都藏掉、由我們自己印。
+    """
+    hide = ('<style type="text/css">.news_detail_container h2,'
+            '.news_detail_container .news_title,'
+            '.news_detail_container .datetime{display:none !important;}</style>')
+    return wrap(hide + '\n'
+                + linked_title('玄奘佛學研究', journal_home_url()) + '\n'
+                + section_nav('研究學報') + '\n'
+                + title_bar(f'第{zh_num(issue)}期玄奘佛學研究學報', width=140) + '\n'
+                + two_col(cover_img(issue), article_table(data, issue, names, pub=pub)))
 
 
 def cover_wall(issue_links, per_row=5):
@@ -121,7 +143,18 @@ def cover_wall(issue_links, per_row=5):
              + '\n'.join(rows) + '\n</table>')
     # 🚨 這裡不要再加「玄奘佛學研究」標題：CMS 的清單樣板自己會印一次節點名稱，
     #    我們再印一次，畫面上同一個標題就連續出現兩遍。
-    return wrap(section_nav('研究學報') + '\n' + table)
+    #
+    # 🚨 分頁條（`.page_div` 的 1 2 3 4 5）是清單樣板畫的，而清單本身已經被
+    #    ListTemplate=Viedo.aspx 清空（那個樣板不畫沒有影片的文章），只剩一條空分頁。
+    #    節點設定裡沒有關掉它的選項（Extra1 改 999 沒用），所以在內容裡帶一小段 CSS 藏掉。
+    # 清單樣板在封面牆下面留了一整塊 `.photo_list_container`：裡面是**再印一次的節點名稱
+    # 「玄奘佛學研究」＋黑棒虛線**、空的清單容器、以及分頁條 1 2 3 4 5。整塊藏掉。
+    hide_pager = ('<style type="text/css">.photo_list_container{display:none !important;}'
+                  '.page_div{display:none !important;}</style>')
+    # 這一頁的標題原本由清單樣板印（在被藏掉的 .photo_list_container 裡），所以自己補一個，
+    # 樣式跟其他分頁由 CMS 印出來的標題一致（22px 粗體＋96px 黑棒＋虛線）。
+    return wrap(hide_pager + '\n' + title_bar('研究學報') + '\n'
+                + section_nav('研究學報') + '\n' + table)
 
 
 def main():

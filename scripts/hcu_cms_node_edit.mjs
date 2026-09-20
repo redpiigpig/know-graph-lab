@@ -28,7 +28,7 @@ await page.waitForTimeout(4000)
 
 // 展開樹找節點（點 <ins> 展開，不點 <a>——<a> 會導覽走）
 let node = null
-for (let round = 0; round < 6 && !node; round++) {
+for (let round = 0; round < 12 && !node; round++) {
   const a = page.locator(`#ctl00_cpContent_tree a:has-text("${TITLE}")`).first()
   if (await a.count()) { node = a; break }
   const closed = page.locator('#ctl00_cpContent_tree li.jstree-closed > ins')
@@ -58,8 +58,14 @@ if (!SETS.length) { console.log('\n[dump] 不修改'); await browser.close(); pr
 
 for (const [k, v] of SETS) {
   const sel = frame.locator(`select[name="${k}"]`)
-  if (await sel.count()) { await sel.selectOption(v); console.log(`[改] ${k} → 「${v}」`) }
-  else { await frame.fill(`input[name="${k}"]`, v); console.log(`[改] ${k} → 「${v}」`) }
+  const radio = frame.locator(`input[type=radio][name="${k}"][value="${v}"]`)
+  if (await sel.count()) { await sel.selectOption(v); console.log(`[改] ${k} → 「${v}」（select）`) }
+  else if (await radio.count()) {
+    // radio 用 check() 才會帶上 onclick（有些欄位會連動顯示／隱藏其他選項）
+    await radio.check({ force: true })
+    console.log(`[改] ${k} → 「${v}」（radio）`)
+  }
+  else { await frame.fill(`input[name="${k}"]`, v); console.log(`[改] ${k} → 「${v}」（input）`) }
 }
 const btn = frame.locator('#btNew, input[type=submit]').first()
 await btn.click()

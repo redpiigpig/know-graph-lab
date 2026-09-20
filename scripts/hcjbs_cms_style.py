@@ -28,9 +28,12 @@ def esc(s):
 
 
 def wrap(inner):
-    """整頁外框：白底＋字體堆疊。"""
-    return (f'<div style="font-family: {FONT}; color: #333; background: #ffffff;">\n'
-            f'{inner}\n</div>')
+    """整頁外框：只設字體堆疊與文字色。
+
+    🚨 不要寫 `background: #ffffff`——站上本來就是白底，多寫一層反而是多餘的宣告
+    （使用者要求拿掉）。真正要避免的是**填色**（淺藍／灰列底），那在 rule_table 那邊控制。
+    """
+    return f'<div style="font-family: {FONT}; color: #333;">\n{inner}\n</div>'
 
 
 def title_bar(text, width=96):
@@ -45,9 +48,18 @@ def title_bar(text, width=96):
             f'font-size: 0; line-height: 0;"></td>\n\t</tr>\n</table>')
 
 
-def para(text, size=17, indent=0, bold=False, color='#333333', align=None):
+def para(text, size=17, indent=0, bold=False, color='#333333', align=None, first_indent=None):
+    """段落。
+
+    敘述性文字**每段首行空兩格**（`text-indent: 2em`，中文書寫慣例，使用者要求）。
+    粗體小標、置右的行、以及本身已經縮排的條列子項不再加首行縮排。
+    """
+    if first_indent is None:
+        first_indent = (not bold) and align is None and indent == 0
     st = (f'font-size: {size}px; line-height: 1.85; color: {color}; '
           f'margin: 0 0 14px;')
+    if first_indent:
+        st += ' text-indent: 2em;'
     if indent:
         st += f' padding-left: {indent * 1.6}em;'
     if bold:
@@ -111,7 +123,8 @@ def cover_url(issue):
 BASE = ('https://www.hcu.edu.tw/buddhism/buddhism/zh-tw/'
         '43C51435624E43D583779C031ACF4E2F/B975569CC2F04819892552ADE1A9090E')
 SECTIONS = [
-    ('研究學報', f'{BASE}/'),
+    # 🚨 研究學報要帶 `?sh=`：那是站上其他選單連結的寫法，少了它在某些路徑下會 404。
+    ('研究學報', f'{BASE}/?sh='),
     ('編輯委員', f'{BASE}/28DBE4BB84354651ADB043FED6A1FAAE/'),
     ('投稿指引', f'{BASE}/963E07CC70054A9191713195B7E233A5/'),
     ('審查流程', f'{BASE}/25E6418CEC0E4A69AF569743EA6FDF43/'),
@@ -126,15 +139,40 @@ def section_nav(current=None):
     校網母頁的 nav 只到「資料庫」，這五個章則頁在選單第三層，首頁上看不到，
     所以每頁自己帶一排。current 那一項不加連結、用金色標出來。
     """
+    # 線條規格（使用者定的）：導覽列**沒有下邊線**，每一格之間與**最左、最右兩端**都有直線，
+    # 而且所有直線都是 2px。
     cells = []
-    for name, url in SECTIONS:
+    for i, (name, url) in enumerate(SECTIONS):
+        edge = 'border-left: 2px solid #dddddd; ' if i == 0 else ''
+        base = f'padding: 8px 14px; {edge}border-right: 2px solid #dddddd; font-size: 15px;'
         if name == current:
-            cells.append(f'\t\t<td align="center" style="padding: 8px 10px; border-right: 1px solid #dddddd; '
-                         f'font-size: 15px; color: {ORANGE}; font-weight: bold;">{esc(name)}</td>')
+            # 🚨 目前所在的那一項**也要能點**：各期頁把「研究學報」標成 current 卻不給連結，
+            #    讀者點它沒反應、回不去封面牆。
+            cells.append(f'\t\t<td align="center" style="{base}">'
+                         f'<a href="{url}" style="color: {ORANGE}; text-decoration: none; '
+                         f'font-weight: bold;">{esc(name)}</a></td>')
         else:
-            cells.append(f'\t\t<td align="center" style="padding: 8px 10px; border-right: 1px solid #dddddd; '
-                         f'font-size: 15px;"><a href="{url}" style="color: #444444; text-decoration: none;">'
-                         f'{esc(name)}</a></td>')
-    return ('<table cellpadding="0" cellspacing="0" style="border-collapse: collapse; '
-            'margin: 0 0 26px; border-bottom: 1px solid #dddddd;">\n\t<tr>\n'
-            + '\n'.join(cells) + '\n\t</tr>\n</table>')
+            cells.append(f'\t\t<td align="center" style="{base}">'
+                         f'<a href="{url}" style="color: #444444; text-decoration: none;">{esc(name)}</a></td>')
+    return ('<table cellpadding="0" cellspacing="0" style="border-collapse: collapse; margin: 0 0 26px;">\n'
+            '\t<tr>\n' + '\n'.join(cells) + '\n\t</tr>\n</table>')
+
+
+def linked_title(text, url, width=96):
+    """可點擊的大標：文字是連結，樣式與 title_bar() 一致。
+
+    各期頁上方的「玄奘佛學研究」要能點回封面牆，而 CMS 自己印的那個 h2 不是連結、
+    也改不動，所以藏掉它、由這裡自己印一個。
+    """
+    return (f'<p style="font-size: 22px; font-weight: bold; margin: 0 0 8px;">'
+            f'<a href="{url}" style="color: #111111; text-decoration: none;">{esc(text)}</a></p>\n'
+            f'<table width="100%" cellpadding="0" cellspacing="0" '
+            f'style="border-collapse: collapse; margin: 0 0 20px;">\n\t<tr>\n'
+            f'\t\t<td width="{width}" style="height: 4px; background: #111111; padding: 0; '
+            f'font-size: 0; line-height: 0;"></td>\n'
+            f'\t\t<td style="height: 4px; border-bottom: 1px dashed #bbbbbb; padding: 0; '
+            f'font-size: 0; line-height: 0;"></td>\n\t</tr>\n</table>')
+
+
+def journal_home_url():
+    return f'{BASE}/?sh='
