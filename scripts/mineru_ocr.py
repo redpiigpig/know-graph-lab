@@ -555,6 +555,14 @@ def cmd_queue(args) -> int:
     if args.exclude:
         skip = set(args.exclude)
         targets = [t for t in targets if t["id"] not in skip]
+    # 🚨 2026-09-23：純圖片 epub 也會掛 'no extractable text' 進同一個佇列，MinerU 對它回
+    #    「No supported documents」、13 秒就死 → 被判環境錯整場停，而且它照大小排在第 0 位，
+    #    每一輪都卡在它。MinerU 只吃 PDF，其餘留給 ocr_with_gemini。
+    non_pdf = [t for t in targets if not (t.get("file_path") or "").lower().endswith(".pdf")]
+    if non_pdf:
+        print(f"  略過非 PDF {len(non_pdf)} 本（MinerU 不吃，留給 Gemini）："
+              + "、".join(t["title"][:24] for t in non_pdf[:3]))
+        targets = [t for t in targets if t not in non_pdf]
     print(f"OCR 佇列 {len(targets)} 本，本輪最多做 {args.limit} 本")
     if not targets:
         return 0
