@@ -1,0 +1,1506 @@
+{
+ "person": {
+  "name": "關根正雄",
+  "original": "関根正雄",
+  "en": "Sekine Masao",
+  "born": "1912-08-14",
+  "died": "2000-09-09"
+ },
+ "generated": "2026-09-23",
+ "sources": [
+  "NDL Search OpenSearch（creator=関根正雄，528 筆，剔除同名醫史學家與重印後整理）",
+  "CiNii Research（creator 83 筆＋關鍵詞 425 筆）",
+  "J-STAGE（AJBI）",
+  "Crossref（西文論文）",
+  "ja.wikipedia「関根正雄」",
+  "nonchurch Supabase articles（《無境界者》）"
+ ],
+ "caveat": "本檔是從資料庫重建的，未與《関根正雄著作集》別卷〈著作総目録〉逐條對照；《預言と福音》各號篇目未列。",
+ "collected_works": {
+  "title": "関根正雄著作集",
+  "publisher": "新地書房",
+  "years": "1979–1989",
+  "volumes": [
+   {
+    "vol": 1,
+    "title": "聖書の信仰",
+    "date": "1979.10"
+   },
+   {
+    "vol": 2,
+    "title": "聖書と現代",
+    "date": "1981.5"
+   },
+   {
+    "vol": 3,
+    "title": "信仰と人生",
+    "date": "1980.8"
+   },
+   {
+    "vol": 4,
+    "title": "旧約聖書序説",
+    "date": "1985.7"
+   },
+   {
+    "vol": 5,
+    "title": "旧約学論文集 上",
+    "date": "1979.12"
+   },
+   {
+    "vol": 6,
+    "title": "旧約学論文集 中",
+    "date": "1980.6"
+   },
+   {
+    "vol": 7,
+    "title": "旧約学論文集 下",
+    "date": "1980.10"
+   },
+   {
+    "vol": 8,
+    "title": "イザヤ書註解",
+    "date": "1986.12"
+   },
+   {
+    "vol": 9,
+    "title": "ヨブ記註解",
+    "date": "1982.6"
+   },
+   {
+    "vol": 10,
+    "title": "詩篇註解 上",
+    "date": "1980.2",
+    "note": "2007 教文館重刊"
+   },
+   {
+    "vol": 11,
+    "title": "詩篇註解 中",
+    "date": "1980.4",
+    "note": "2007 教文館重刊"
+   },
+   {
+    "vol": 12,
+    "title": "詩篇註解 下",
+    "date": "1981.1"
+   },
+   {
+    "vol": 13,
+    "title": "創世時代講解",
+    "date": "1984.8"
+   },
+   {
+    "vol": 14,
+    "title": "エレミヤ書註解 上",
+    "date": "1981.10"
+   },
+   {
+    "vol": 15,
+    "title": "エレミヤ書註解 下",
+    "date": "1982.2"
+   },
+   {
+    "vol": 16,
+    "title": "申命記講解 上",
+    "date": "1988.1"
+   },
+   {
+    "vol": 17,
+    "title": "申命記講解 下",
+    "date": "1989.1"
+   },
+   {
+    "vol": 18,
+    "title": "ローマ人への手紙講解 上",
+    "date": "1988.7"
+   },
+   {
+    "vol": 19,
+    "title": "ローマ人への手紙講解 中",
+    "date": "1989.5"
+   },
+   {
+    "vol": 20,
+    "title": "ローマ人への手紙講解 下",
+    "date": "1989.12"
+   },
+   {
+    "vol": "別巻",
+    "title": "補遺・著作総目録",
+    "date": "2004.4",
+    "publisher": "教文館",
+    "note": "全部著作的權威清單就在這一卷；本檔是從 NDL／CiNii 重建的，未與它逐條核對"
+   }
+  ],
+  "geppo": "月報 1–20"
+ },
+ "monographs": [
+  {
+   "title": "旧約における神の独一性",
+   "year": 1947,
+   "category": "單著",
+   "publisher": "新教出版社"
+  },
+  {
+   "title": "無教会キリスト教",
+   "year": 1949,
+   "category": "單著",
+   "publisher": "弘文堂",
+   "series": "アテネ文庫 44"
+  },
+  {
+   "title": "宗教革命の論理：無教会キリスト教の神学的基礎",
+   "year": 1949,
+   "category": "單著",
+   "publisher": "弘文堂",
+   "note": "1953 第二版"
+  },
+  {
+   "title": "旧約聖書：その歴史・文学・思想",
+   "year": 1949,
+   "category": "單著",
+   "publisher": "創元社",
+   "series": "創元選書 176",
+   "note": "至 1970 年代多次重印（創元新社／東京創元社）；NDL 另有一筆「創之社 1951」，疑為同書"
+  },
+  {
+   "title": "ガラテヤ書研究",
+   "year": 1952,
+   "category": "單著",
+   "publisher": "三一書店"
+  },
+  {
+   "title": "旧約聖書の読み方",
+   "year": 1952,
+   "category": "單著",
+   "publisher": "三一書店"
+  },
+  {
+   "title": "イスラエル宗教文化史",
+   "year": 1952,
+   "category": "單著",
+   "publisher": "岩波書店",
+   "series": "岩波全書 157",
+   "note": "1962／1973 重印；2005 岩波全書セレクション"
+  },
+  {
+   "title": "イスラエルの思想と言語",
+   "year": 1962,
+   "category": "單著",
+   "publisher": "岩波書店",
+   "note": "東京教育大學文學博士學位論文（副題：特にギリシアの思想、言語との対比における）"
+  },
+  {
+   "title": "エレミヤ書註解",
+   "year": 1962,
+   "category": "單著",
+   "publisher": "待晨堂",
+   "note": "後收入著作集 14–15"
+  },
+  {
+   "title": "世俗の中の福音",
+   "year": 1967,
+   "category": "單著",
+   "publisher": "キリスト教夜間講座出版部"
+  },
+  {
+   "title": "古代イスラエル研究：対象と方法",
+   "year": 1969,
+   "category": "單著",
+   "publisher": "岩波書店"
+  },
+  {
+   "title": "ヨブ記註解",
+   "year": 1970,
+   "category": "單著",
+   "publisher": "教文館",
+   "note": "後收入著作集 9"
+  },
+  {
+   "title": "詩篇註解 上・下",
+   "year": 1971,
+   "category": "單著",
+   "publisher": "教文館",
+   "note": "1971–73；後收入著作集 10–12"
+  },
+  {
+   "title": "旧約聖書学と共に 上・下",
+   "year": 1977,
+   "category": "單著",
+   "publisher": "山本書店"
+  },
+  {
+   "title": "旧約聖書文学史 上・下",
+   "year": 1978,
+   "category": "單著",
+   "publisher": "岩波書店",
+   "series": "岩波全書 304／321",
+   "note": "1978–80；2008 岩波全書セレクション"
+  },
+  {
+   "title": "古代イスラエルの思想家",
+   "year": 1982,
+   "category": "單著",
+   "publisher": "講談社",
+   "series": "人類の知的遺産 1",
+   "note": "2004 改題《古代イスラエルの思想：旧約の預言者たち》講談社學術文庫"
+  },
+  {
+   "title": "聖書の信仰と思想：全聖書思想史概説",
+   "year": 1996,
+   "category": "單著",
+   "publisher": "教文館",
+   "note": "有中譯本（見 translations_zh）"
+  },
+  {
+   "title": "旧新約聖書を貫くもの",
+   "year": null,
+   "category": "單著",
+   "publisher": "日本基督教団鎌倉雪ノ下教会長老会",
+   "note": "1980 年代，小冊"
+  },
+  {
+   "title": "関根正雄（日本の説教 2-11）",
+   "year": 2007,
+   "category": "單著（歿後）",
+   "publisher": "日本キリスト教団出版局",
+   "note": "說教選"
+  },
+  {
+   "title": "関根正雄先生マタイによる福音書講義（1994～95年）筆記録",
+   "year": 2009,
+   "category": "單著（歿後）",
+   "publisher": "宇野益三",
+   "note": "宇野益三筆記"
+  },
+  {
+   "title": "関根正雄滞独雑記：1939～1945",
+   "year": 2010,
+   "category": "單著（歿後）",
+   "publisher": "無教会新宿集会",
+   "note": "留德六年的手記"
+  }
+ ],
+ "coauthored_edited": [
+  {
+   "title": "戦争と平和について",
+   "year": 1950,
+   "category": "共著",
+   "publisher": "新教出版社",
+   "series": "基督教論叢"
+  },
+  {
+   "title": "無教会主義と聖書（無教会主義論集 2）",
+   "year": 1950,
+   "category": "共著",
+   "publisher": "三一書店",
+   "note": "與石原兵永、小池辰雄合著"
+  },
+  {
+   "title": "人はなぜ宗教を求めるか",
+   "year": 1954,
+   "category": "共著",
+   "publisher": "創文社",
+   "note": "與西谷啟治、北森嘉藏等合著"
+  },
+  {
+   "title": "旧約宗教の社会学的背景：ウェーバー「古代ユダヤ教」研究",
+   "year": 1954,
+   "category": "共著",
+   "publisher": "新教出版社",
+   "series": "基督教論叢",
+   "note": "與內田芳明合著"
+  },
+  {
+   "title": "文明の発生",
+   "year": 1958,
+   "category": "共著",
+   "publisher": "誠文堂新光社"
+  },
+  {
+   "title": "聖書とその周辺：塚本虎二先生信仰五十年記念論文集",
+   "year": 1959,
+   "category": "共編",
+   "publisher": "伊藤節書房"
+  },
+  {
+   "title": "古代オリエント文明",
+   "year": 1960,
+   "category": "共著",
+   "publisher": "筑摩書房"
+  },
+  {
+   "title": "古代文字の解読",
+   "year": 1964,
+   "category": "共著",
+   "publisher": "岩波書店",
+   "note": "與高津春繁合著；2024 講談社學術文庫 2805"
+  },
+  {
+   "title": "聖書（世界古典文学全集 5）",
+   "year": 1965,
+   "category": "編",
+   "publisher": "筑摩書房",
+   "note": "與木下順治合編；1976《古典世界文学 5》重刊"
+  },
+  {
+   "title": "ヨーロッパ精神史の基本問題：下村寅太郎先生退官記念論文集",
+   "year": 1966,
+   "category": "共編",
+   "publisher": "岩波書店"
+  },
+  {
+   "title": "ヘブライ・アラビア・ペルシアの文学（世界の文学史 10）",
+   "year": 1967,
+   "category": "共著",
+   "publisher": "明治書院",
+   "note": "與牧野信也、蒲生禮一合著"
+  },
+  {
+   "title": "内村鑑三（人と思想 25）",
+   "year": 1967,
+   "category": "編著",
+   "publisher": "清水書院",
+   "note": "1978 新裝版；2014 再新裝版"
+  },
+  {
+   "title": "古代オリエント世界；地中海世界 1（岩波講座世界歴史 1）",
+   "year": 1969,
+   "category": "共著",
+   "publisher": "岩波書店"
+  },
+  {
+   "title": "聖書の世界（全 6 卷＋別卷）",
+   "year": 1970,
+   "category": "監修",
+   "publisher": "講談社",
+   "note": "1970–74；第 3 卷舊約 3 與村岡崇光合著；別卷 1《知恵と黙示》與新見宏合譯"
+  },
+  {
+   "title": "NTD新約聖書註解",
+   "year": 1973,
+   "category": "監修",
+   "publisher": "NTD新約聖書註解刊行会",
+   "note": "與 G. Friedrich 共同監修，1973 起陸續刊行"
+  },
+  {
+   "title": "Annual of the Japanese Biblical Institute, vols. 1–14",
+   "year": 1975,
+   "category": "共編",
+   "publisher": "Yamamoto Shoten",
+   "note": "與佐竹明合編，1975–1988"
+  },
+  {
+   "title": "聖書外典偽典",
+   "year": 1975,
+   "category": "監修",
+   "publisher": "教文館",
+   "note": "日本聖書學研究所編"
+  },
+  {
+   "title": "信仰と政治の根本問題：無教会二代目研究を中心に",
+   "year": 1976,
+   "category": "編",
+   "publisher": "キリスト教図書出版社"
+  },
+  {
+   "title": "死海写本：原色原形復元",
+   "year": 1979,
+   "category": "監修",
+   "publisher": "講談社"
+  },
+  {
+   "title": "新しいいのちを求めて",
+   "year": 1979,
+   "category": "共編",
+   "publisher": "山本書店",
+   "note": "與前田護郎合編，講演六篇"
+  },
+  {
+   "title": "オリエント世界の誕生",
+   "year": 1984,
+   "category": "共著",
+   "publisher": "學生社"
+  },
+  {
+   "title": "聖書の世界・総解説",
+   "year": 1984,
+   "category": "共著",
+   "publisher": "自由国民社"
+  },
+  {
+   "title": "マタイ福音書講義",
+   "year": 1985,
+   "category": "共著",
+   "publisher": "新地書房",
+   "note": "與伊藤進合著；2004 教文館新版"
+  },
+  {
+   "title": "ユダヤ思想 1（岩波講座東洋思想 1）",
+   "year": 1988,
+   "category": "共著",
+   "publisher": "岩波書店"
+  },
+  {
+   "title": "旧約聖書外典 上・下",
+   "year": 1998,
+   "category": "編",
+   "publisher": "講談社",
+   "series": "講談社文芸文庫",
+   "note": "1998–99；與新見宏、村岡崇光等"
+  }
+ ],
+ "bible_translations": [
+  {
+   "title": "創世記",
+   "year": 1956,
+   "category": "聖經翻譯",
+   "publisher": "岩波書店",
+   "series": "岩波文庫"
+  },
+  {
+   "title": "サムエル記",
+   "year": 1957,
+   "category": "聖經翻譯",
+   "publisher": "岩波書店",
+   "series": "岩波文庫"
+  },
+  {
+   "title": "エレミヤ書",
+   "year": 1959,
+   "category": "聖經翻譯",
+   "publisher": "岩波書店",
+   "series": "岩波文庫"
+  },
+  {
+   "title": "イザヤ書 上",
+   "year": 1961,
+   "category": "聖經翻譯",
+   "publisher": "岩波書店",
+   "series": "岩波文庫"
+  },
+  {
+   "title": "エゼキエル書",
+   "year": 1963,
+   "category": "聖經翻譯",
+   "publisher": "岩波書店",
+   "series": "岩波文庫",
+   "note": "1988 改版"
+  },
+  {
+   "title": "イザヤ書 下",
+   "year": 1965,
+   "category": "聖經翻譯",
+   "publisher": "岩波書店",
+   "series": "岩波文庫"
+  },
+  {
+   "title": "十二小預言書 上・下",
+   "year": 1967,
+   "category": "聖經翻譯",
+   "publisher": "岩波書店",
+   "series": "岩波文庫"
+  },
+  {
+   "title": "出エジプト記",
+   "year": 1969,
+   "category": "聖經翻譯",
+   "publisher": "岩波書店",
+   "series": "岩波文庫"
+  },
+  {
+   "title": "ヨブ記",
+   "year": 1971,
+   "category": "聖經翻譯",
+   "publisher": "岩波書店",
+   "series": "岩波文庫",
+   "note": "1983 岩波クラシックス 39"
+  },
+  {
+   "title": "詩篇",
+   "year": 1973,
+   "category": "聖經翻譯",
+   "publisher": "岩波書店",
+   "series": "岩波文庫"
+  },
+  {
+   "title": "士師記",
+   "year": 1991,
+   "category": "聖經翻譯",
+   "publisher": "新・預言と福音社"
+  },
+  {
+   "title": "新訳旧約聖書 I 律法／II 歴史書／III 預言書／IV 諸書",
+   "year": 1993,
+   "category": "聖經翻譯",
+   "publisher": "教文館",
+   "note": "1993–95 全 4 卷；1997 合本《旧約聖書》——一人獨譯舊約全書"
+  }
+ ],
+ "other_translations": [
+  {
+   "title": "旧約聖書緒論（E. Sellin／L. Rost）",
+   "year": 1954,
+   "category": "學術翻譯",
+   "publisher": "待晨堂"
+  },
+  {
+   "title": "旧新約聖書の一つの使信：講演・説教・論文（J. Schniewind）",
+   "year": 1987,
+   "category": "學術翻譯",
+   "publisher": "新地書房",
+   "note": "與森田外雄合譯"
+  },
+  {
+   "title": "国家権力とキリスト者",
+   "year": null,
+   "category": "學術翻譯",
+   "note": "NDL 著錄為關根譯，原著者與年份待核"
+  }
+ ],
+ "periodicals": [
+  {
+   "title": "預言と福音",
+   "publisher": "預言と福音社（初由靜岡三一書店發行）",
+   "years": "1950–1988",
+   "issues": "至 366 號（1988.8）",
+   "note": "個人傳道誌；NDL 館藏 305–366 號（1977–1988）"
+  },
+  {
+   "title": "新・預言と福音",
+   "publisher": "新・預言と福音社",
+   "years": "1989–",
+   "issues": "至少 64 號",
+   "note": "《預言と福音》的後繼誌"
+  }
+ ],
+ "articles_ja": [
+  {
+   "year": 1948,
+   "title": "無教会主義の弁証論",
+   "venue": "独立",
+   "volume": "",
+   "number": "4",
+   "pages": "6-21",
+   "url": "https://cir.nii.ac.jp/crid/1522262179808401152"
+  },
+  {
+   "year": 1949,
+   "title": "キリスト教の反省と前進",
+   "venue": "独立",
+   "volume": "",
+   "number": "5",
+   "pages": "29-32",
+   "url": "https://cir.nii.ac.jp/crid/1520854805021710464"
+  },
+  {
+   "year": 1949,
+   "title": "メシヤ--クリスマスに寄せて",
+   "venue": "福音と時代",
+   "volume": "4",
+   "number": "11",
+   "pages": "15-21",
+   "url": "https://cir.nii.ac.jp/crid/1523106604690585728"
+  },
+  {
+   "year": 1949,
+   "title": "世俗性の問題",
+   "venue": "基督教文化",
+   "volume": "",
+   "number": "39",
+   "pages": "56-64",
+   "url": "https://cir.nii.ac.jp/crid/1523388079811978624"
+  },
+  {
+   "year": 1949,
+   "title": "偽りの予言者",
+   "venue": "基督教文化",
+   "volume": "",
+   "number": "36",
+   "pages": "2-10",
+   "url": "https://cir.nii.ac.jp/crid/1521699229826125184"
+  },
+  {
+   "year": 1949,
+   "title": "基督者の社会的実践",
+   "venue": "独立",
+   "volume": "",
+   "number": "10",
+   "pages": "6-19",
+   "url": "https://cir.nii.ac.jp/crid/1521136280579692032"
+  },
+  {
+   "year": 1949,
+   "title": "批評の空転--渡辺善太氏の批評に答う",
+   "venue": "独立",
+   "volume": "",
+   "number": "7",
+   "pages": "31-39",
+   "url": "https://cir.nii.ac.jp/crid/1520573330044884224"
+  },
+  {
+   "year": 1950,
+   "title": "内村先生以後20年",
+   "venue": "独立",
+   "volume": "",
+   "number": "17",
+   "pages": "59-67",
+   "url": "https://cir.nii.ac.jp/crid/1520010380062522368"
+  },
+  {
+   "year": 1950,
+   "title": "内村鑑三先生20年記念講演--無教会信仰の建設",
+   "venue": "独立",
+   "volume": "",
+   "number": "16",
+   "pages": "40-45",
+   "url": "https://cir.nii.ac.jp/crid/1522543655278855168"
+  },
+  {
+   "year": 1950,
+   "title": "十字架の理解--北森嘉蔵氏に答う",
+   "venue": "独立",
+   "volume": "",
+   "number": "13",
+   "pages": "57-60",
+   "url": "https://cir.nii.ac.jp/crid/1521417755003815168"
+  },
+  {
+   "year": 1951,
+   "title": "大畠清著「イエス時代史の研究」--イエス時代のユダヤ教の研究を中心とせる",
+   "venue": "史学雑誌",
+   "volume": "60",
+   "number": "6",
+   "pages": "74-77",
+   "url": "https://cir.nii.ac.jp/crid/1520853834158066048"
+  },
+  {
+   "year": 1954,
+   "title": "ホセアの歴史観",
+   "venue": "福音と世界",
+   "volume": "9",
+   "number": "1",
+   "pages": "10-16",
+   "url": "https://cir.nii.ac.jp/crid/1522262180321543168"
+  },
+  {
+   "year": 1955,
+   "title": "選民イスラエル",
+   "venue": "福音と世界",
+   "volume": "10",
+   "number": "3",
+   "pages": "",
+   "url": "https://cir.nii.ac.jp/crid/1521699229729032320"
+  },
+  {
+   "year": 1956,
+   "title": "ヤハウィストとヘシオドス",
+   "venue": "東京教育大学文学部紀要",
+   "volume": "",
+   "number": "11",
+   "pages": "",
+   "url": "https://cir.nii.ac.jp/crid/1520009407393456640"
+  },
+  {
+   "year": 1956,
+   "title": "書評・紹介　George Beer-Rudolf Meyer著　Hebräische Grammatik I,II.",
+   "venue": "言語研究",
+   "volume": "1956",
+   "number": "29",
+   "pages": "45-50",
+   "url": "https://cir.nii.ac.jp/crid/1390282680098874496"
+  },
+  {
+   "year": 1957,
+   "title": "フランクル著・霜山徳爾訳「夜と霧」",
+   "venue": "福音と世界",
+   "volume": "12",
+   "number": "1",
+   "pages": "",
+   "url": "https://cir.nii.ac.jp/crid/1521699229748797696"
+  },
+  {
+   "year": 1958,
+   "title": "旧約聖書における愛",
+   "venue": "福音と世界",
+   "volume": "13",
+   "number": "4",
+   "pages": "",
+   "url": "https://cir.nii.ac.jp/crid/1523388080374154880"
+  },
+  {
+   "year": 1959,
+   "title": "ヘレニズム期ギリシャ語におけるINAの用法--セプトゥアギンタのギリシャ語を中心に",
+   "venue": "東京教育大学文学部紀要",
+   "volume": "",
+   "number": "23",
+   "pages": "",
+   "url": "https://cir.nii.ac.jp/crid/1520572359096371968"
+  },
+  {
+   "year": 1959,
+   "title": "文法における心理と論理--セム語と印欧語の比較論をめぐって",
+   "venue": "言語学論叢",
+   "volume": "",
+   "number": "1",
+   "pages": "",
+   "url": "https://cir.nii.ac.jp/crid/1520009408703514368"
+  },
+  {
+   "year": 1960,
+   "title": "ヨブとプロメテウス",
+   "venue": "東京教育大学文学部紀要",
+   "volume": "",
+   "number": "28",
+   "pages": "",
+   "url": "https://cir.nii.ac.jp/crid/1520290882181724544"
+  },
+  {
+   "year": 1960,
+   "title": "旧約聖書における神義論",
+   "venue": "日本オリエント学会月報",
+   "volume": "3",
+   "number": "1-2",
+   "pages": "16-20",
+   "url": "https://cir.nii.ac.jp/crid/1390282680319186304"
+  },
+  {
+   "year": 1961,
+   "title": "時間の言語的表出--言語と思考の問題に関連して",
+   "venue": "言語学論叢",
+   "volume": "",
+   "number": "3",
+   "pages": "",
+   "url": "https://cir.nii.ac.jp/crid/1520009407079947264"
+  },
+  {
+   "year": 1961,
+   "title": "語類の意味論",
+   "venue": "言語研究",
+   "volume": "1961",
+   "number": "40",
+   "pages": "22-32",
+   "url": "https://cir.nii.ac.jp/crid/1390282680098701056"
+  },
+  {
+   "year": 1962,
+   "title": "コーヘレスとテオグニス",
+   "venue": "東京教育大学文学部紀要",
+   "volume": "",
+   "number": "38",
+   "pages": "",
+   "url": "https://cir.nii.ac.jp/crid/1520572357366133504"
+  },
+  {
+   "year": 1962,
+   "title": "翻訳 語学",
+   "venue": "日本の神学",
+   "volume": "1962",
+   "number": "1",
+   "pages": "27-30",
+   "url": "https://cir.nii.ac.jp/crid/1390282680301021056"
+  },
+  {
+   "year": 1964,
+   "title": "イーリヤス・ケレト・族長伝説--文学史的および言語史的考察",
+   "venue": "東京教育大学文学部紀要",
+   "volume": "",
+   "number": "48",
+   "pages": "",
+   "url": "https://cir.nii.ac.jp/crid/1520853832499444352"
+  },
+  {
+   "year": 1965,
+   "title": "中沢洽樹著『第二イザヤ研究』について",
+   "venue": "日本の神学",
+   "volume": "1965",
+   "number": "4",
+   "pages": "24-29",
+   "url": "https://cir.nii.ac.jp/crid/1390282680300917248"
+  },
+  {
+   "year": 1965,
+   "title": "古典へブライ語BDGKPTの音韻論的解釈",
+   "venue": "言語学論叢",
+   "volume": "",
+   "number": "6",
+   "pages": "",
+   "url": "https://cir.nii.ac.jp/crid/1520290883611769216"
+  },
+  {
+   "year": 1967,
+   "title": "『聖書講座』第二巻 旧約聖書 II",
+   "venue": "日本の神学",
+   "volume": "1967",
+   "number": "6",
+   "pages": "35-40",
+   "url": "https://cir.nii.ac.jp/crid/1390001205325018368"
+  },
+  {
+   "year": 1967,
+   "title": "イスラエル人の思惟方法",
+   "venue": "オリエント",
+   "volume": "10",
+   "number": "1-2",
+   "pages": "1-13,241",
+   "url": "https://cir.nii.ac.jp/crid/1390001205341906944"
+  },
+  {
+   "year": 1967,
+   "title": "セプトゥアギンタ・ギリシァ語研究-1-",
+   "venue": "東京教育大学文学部紀要",
+   "volume": "",
+   "number": "63",
+   "pages": "1-9",
+   "url": "https://cir.nii.ac.jp/crid/1520009409259530752"
+  },
+  {
+   "year": 1968,
+   "title": "松井茂雄助教授追悼",
+   "venue": "言語学論叢",
+   "volume": "",
+   "number": "9",
+   "pages": "73-81",
+   "url": "https://cir.nii.ac.jp/crid/1520009408238293248"
+  },
+  {
+   "year": 1969,
+   "title": "旧約学諸論文の論評",
+   "venue": "日本の神学",
+   "volume": "1969",
+   "number": "8",
+   "pages": "39-47",
+   "url": "https://cir.nii.ac.jp/crid/1390001205325045120"
+  },
+  {
+   "year": 1970,
+   "title": "書評(赤井節著『ヘブライズム法思想史の研究・序説』(創文社 昭和四四年))",
+   "venue": "日本の神学",
+   "volume": "1970",
+   "number": "9",
+   "pages": "57-60",
+   "url": "https://cir.nii.ac.jp/crid/1390282680301600000"
+  },
+  {
+   "year": 1971,
+   "title": "北西セム語をめぐる最近の諸問題",
+   "venue": "言語学論叢",
+   "volume": "",
+   "number": "11",
+   "pages": "37-47",
+   "url": "https://cir.nii.ac.jp/crid/1520009409450264064"
+  },
+  {
+   "year": 1971,
+   "title": "後記",
+   "venue": "日本の神学",
+   "volume": "1971",
+   "number": "10",
+   "pages": "56-56",
+   "url": "https://cir.nii.ac.jp/crid/1390282680301513856"
+  },
+  {
+   "year": 1972,
+   "title": "イスラエル・ユダヤ思想の出発",
+   "venue": "理想",
+   "volume": "",
+   "number": "472",
+   "pages": "1-7",
+   "url": "https://cir.nii.ac.jp/crid/1521136280665782400"
+  },
+  {
+   "year": 1974,
+   "title": "序",
+   "venue": "日本の神学",
+   "volume": "1974",
+   "number": "13",
+   "pages": "1-3",
+   "url": "https://cir.nii.ac.jp/crid/1390001205324950272"
+  },
+  {
+   "year": 1974,
+   "title": "旧約学の最近の成果と展望(III) 歴史・言語",
+   "venue": "日本の神学",
+   "volume": "1974",
+   "number": "13",
+   "pages": "70-75",
+   "url": "https://cir.nii.ac.jp/crid/1390282680301658112"
+  },
+  {
+   "year": 1975,
+   "title": "イスラエル思想史について",
+   "venue": "日本の神学",
+   "volume": "1975",
+   "number": "14",
+   "pages": "44-59",
+   "url": "https://cir.nii.ac.jp/crid/1390001205324929024"
+  },
+  {
+   "year": 1976,
+   "title": "聖書学関係この五年間の研究業績概観",
+   "venue": "日本の神学",
+   "volume": "1976",
+   "number": "15",
+   "pages": "47-80",
+   "url": "https://cir.nii.ac.jp/crid/1390282680301873536"
+  },
+  {
+   "year": 1976,
+   "title": "言語学・文献学・社会学",
+   "venue": "言語学論叢",
+   "volume": "15",
+   "number": "最終刊",
+   "pages": "p17-28",
+   "url": "https://cir.nii.ac.jp/crid/1520572358190725632"
+  },
+  {
+   "year": 1978,
+   "title": "旧約学",
+   "venue": "日本の神学",
+   "volume": "1978",
+   "number": "17",
+   "pages": "61-66",
+   "url": "https://cir.nii.ac.jp/crid/1390282680301467008"
+  },
+  {
+   "year": 1980,
+   "title": "聖書翻訳の理論と課題",
+   "venue": "文学",
+   "volume": "48",
+   "number": "12",
+   "pages": "p144-155",
+   "url": "https://cir.nii.ac.jp/crid/1523106604736114176"
+  },
+  {
+   "year": 1983,
+   "title": "序",
+   "venue": "日本の神学",
+   "volume": "1983",
+   "number": "22",
+   "pages": "1-3",
+   "url": "https://cir.nii.ac.jp/crid/1390282680301096320"
+  },
+  {
+   "year": 1984,
+   "title": "小田島太郎氏の御批判に答えて",
+   "venue": "日本の神学",
+   "volume": "1984",
+   "number": "23",
+   "pages": "87-89",
+   "url": "https://cir.nii.ac.jp/crid/1390282680301152000"
+  },
+  {
+   "year": 1984,
+   "title": "現代聖書学・神学の主要問題",
+   "venue": "日本學士院紀要",
+   "volume": "40",
+   "number": "1",
+   "pages": "p1-17",
+   "url": "https://cir.nii.ac.jp/crid/1520010380311989504"
+  },
+  {
+   "year": 1984,
+   "title": "聖書の理解",
+   "venue": "理想",
+   "volume": "",
+   "number": "619",
+   "pages": "p62-67",
+   "url": "https://cir.nii.ac.jp/crid/1521136280859494272"
+  },
+  {
+   "year": 1988,
+   "title": "左近淑氏へのお答え",
+   "venue": "日本の神学",
+   "volume": "1988",
+   "number": "27",
+   "pages": "89-91",
+   "url": "https://cir.nii.ac.jp/crid/1390282680300840320"
+  },
+  {
+   "year": 1992,
+   "title": "聖書におけるユーモアとアイロニー",
+   "venue": "日本學士院紀要",
+   "volume": "46",
+   "number": "3",
+   "pages": "p175-190",
+   "url": "https://cir.nii.ac.jp/crid/1521417755564766080"
+  }
+ ],
+ "articles_western": [
+  {
+   "year": 1941,
+   "title": "Das Wesen des althebräischen Verbalausdrucks",
+   "venue": "ZAW",
+   "volume": "58",
+   "pages": "133-141",
+   "doi": "10.1515/zatw.1941.58.1-2.133"
+  },
+  {
+   "year": 1959,
+   "title": "Davidsbund und Sinaibund bei Jeremia",
+   "venue": "Vetus Testamentum",
+   "volume": "9",
+   "pages": "47-57",
+   "doi": "10.1163/156853359x00050"
+  },
+  {
+   "year": 1960,
+   "title": "Théodicée dans l'Ancien Testament",
+   "venue": "Orient",
+   "volume": "1",
+   "pages": "23-34",
+   "doi": "10.5356/orient1960.1.23"
+  },
+  {
+   "year": 1961,
+   "title": "Schöpfung und Erlösung im Buche Hiob",
+   "venue": "Von Ugarit nach Qumran (Festschrift O. Eißfeldt, BZAW 77)",
+   "pages": "213-223",
+   "doi": "10.1515/9783112416709-018"
+  },
+  {
+   "year": 1963,
+   "title": "Vom Verstehen der Heilsgeschichte",
+   "venue": "ZAW",
+   "volume": "75",
+   "pages": "145-154",
+   "doi": "10.1515/zatw.1963.75.2.145"
+  },
+  {
+   "year": 1963,
+   "title": "Erwägungen zur hebräischen Zeitauffassung",
+   "venue": "Congress Volume Bonn 1962 (VTSup 9)",
+   "pages": "66-82",
+   "doi": "10.1163/9789004275324_006"
+  },
+  {
+   "year": 1968,
+   "title": "Das Problem der Kultpolemik bei den Propheten",
+   "venue": "Evangelische Theologie",
+   "volume": "28",
+   "pages": "605-609",
+   "doi": "10.14315/evth-1968-1104"
+  },
+  {
+   "year": 1971,
+   "title": "Die Geschichte der japanischen Christenheit und die Bibelwissenschaft",
+   "venue": "Evangelische Missions-Zeitschrift",
+   "note": "1971 年 11 月號；頁碼待核（僅見二手引用）"
+  },
+  {
+   "year": 1972,
+   "title": "Beobachtungen zu der josianischen Reform",
+   "venue": "Vetus Testamentum",
+   "volume": "22",
+   "pages": "361-368",
+   "doi": "10.1163/156853372x00118"
+  },
+  {
+   "year": 1972,
+   "title": "[Review] F. Hecht, Eschatologie und Ritus bei den „Reformpropheten“",
+   "venue": "JBL",
+   "volume": "91",
+   "pages": "405",
+   "doi": "10.2307/3263176"
+  },
+  {
+   "year": 1973,
+   "title": "The Subdivisions of the North-West Semitic Languages",
+   "venue": "Journal of Semitic Studies",
+   "volume": "18",
+   "pages": "205-221",
+   "doi": "10.1093/jss/xviii.2.205"
+  },
+  {
+   "year": 1975,
+   "title": "Literatursoziologische Beobachtungen zu den Elisaerzählungen",
+   "venue": "AJBI",
+   "volume": "1",
+   "pages": "39-62",
+   "doi": "10.57389/ajbi.1.0_39",
+   "access": "open"
+  },
+  {
+   "year": 1977,
+   "title": "Elias Verzweiflung",
+   "venue": "AJBI",
+   "volume": "3",
+   "pages": "52-68",
+   "doi": "10.57389/ajbi.3.0_52",
+   "access": "open"
+  },
+  {
+   "year": 1985,
+   "title": "Der „Bruch“ in der althebräischen Poesie",
+   "venue": "AJBI",
+   "volume": "11",
+   "pages": "3-15",
+   "doi": "10.57389/ajbi.11.0_3",
+   "access": "open"
+  },
+  {
+   "year": 1988,
+   "title": "Wort, Name und Geist im Alten Testament",
+   "venue": "AJBI",
+   "volume": "14",
+   "pages": "3-9",
+   "doi": "10.57389/ajbi.14.0_3",
+   "access": "open"
+  }
+ ],
+ "translations_zh": [
+  {
+   "title": "聖經的信仰與思想：全本聖經思想史概說",
+   "original": "聖書の信仰と思想",
+   "translators": "郭維租、鄭廷憲",
+   "year": 2000,
+   "publisher": "永望文化事業（校園書房資料）；廖本恩書目作「台南：公報社」",
+   "isbn": "957918576X",
+   "pages": 216,
+   "note": "z-lib 已查無（all-gated, 2026-09-16）"
+  }
+ ],
+ "studies": {
+  "books": [
+   {
+    "author": "日本聖書学研究所 編",
+    "title": "聖書の思想・歴史・言語：関根正雄教授還暦記念論文集",
+    "year": 1972,
+    "publisher": "山本書店",
+    "series": "聖書学論集 9"
+   },
+   {
+    "author": "日本聖書学研究所 編",
+    "title": "聖書の使信と伝達：関根正雄先生喜寿記念論文集",
+    "year": 1989,
+    "publisher": "山本書店",
+    "series": "聖書学論集 23"
+   },
+   {
+    "author": "量義治",
+    "title": "無教会の展開：塚本虎二・三谷隆正・矢内原忠雄・関根正雄の歴史的考察他",
+    "year": 1989,
+    "publisher": "新地書房"
+   },
+   {
+    "author": "無教会新宿集会 編",
+    "title": "関根正雄伝道50年史年表",
+    "year": 2007,
+    "publisher": "無教会新宿集会"
+   },
+   {
+    "author": "（無教会新宿集会）",
+    "title": "関根正雄10周年記念講演集",
+    "year": 2011,
+    "note": "收月本昭男〈旧約聖書にみる救済史と創造信仰〉頁 23–45"
+   },
+   {
+    "author": "伊藤進",
+    "title": "出会い：内村鑑三・塚本虎二・植木良佐・関根正雄他",
+    "year": 2013
+   },
+   {
+    "author": "村松晋",
+    "title": "近代日本のキリスト者：その歴史的位相",
+    "year": 2020,
+    "publisher": "聖学院大学出版会",
+    "note": "作者另有兩篇關根專論（見下）；本書是否收關根專章待核"
+   }
+  ],
+  "articles": [
+   {
+    "author": "渡辺善太",
+    "title": "〔関根正雄〕「無教会主義の弁証論」を読む（上）（下）",
+    "year": 1949,
+    "venue": "独立",
+    "number": "5–6",
+    "pages": "48-51; 31-37",
+    "note": "論戰"
+   },
+   {
+    "author": "北森嘉蔵",
+    "title": "十字架の言：関根正雄氏に答ふ",
+    "year": 1950,
+    "venue": "独立",
+    "number": "12",
+    "pages": "19-24",
+    "note": "論戰；關根回應〈十字架の理解〉見同誌 13 號"
+   },
+   {
+    "author": "加山久夫",
+    "title": "論評：『聖書の思想・歴史・言語――関根正雄教授還暦記念論文集』",
+    "year": 1974,
+    "venue": "新約学研究",
+    "number": "2",
+    "pages": "27-32"
+   },
+   {
+    "author": "加藤善治／井上大衞／佐藤研",
+    "title": "論評『聖書の使信と伝達――関根正雄先生喜寿記念論文集』",
+    "year": 1991,
+    "venue": "新約学研究",
+    "number": "19",
+    "pages": "52-64"
+   },
+   {
+    "author": "久保正彰",
+    "title": "故関根正雄会員追悼の辞",
+    "year": 2001,
+    "venue": "日本學士院紀要",
+    "volume": "55",
+    "number": "3",
+    "pages": "268-274"
+   },
+   {
+    "author": "月本昭男",
+    "title": "旧約聖書にみる救済史と創造信仰",
+    "year": 2011,
+    "venue": "関根正雄10周年記念講演集",
+    "pages": "23-45"
+   },
+   {
+    "author": "村松晋",
+    "title": "関根正雄における「日本的キリスト教」とその射程：南原繁との交錯と分岐を中心に",
+    "year": 2018,
+    "venue": "比較思想研究",
+    "number": "45",
+    "pages": "162-170",
+    "url": "https://cir.nii.ac.jp/crid/1520290883782254336"
+   },
+   {
+    "author": "村松晋",
+    "title": "戦後初期における関根正雄の「無教会」論：その歴史的位相",
+    "year": 2023,
+    "venue": "無教会研究：聖書と現代",
+    "number": "26",
+    "pages": "22-44",
+    "url": "https://cir.nii.ac.jp/crid/1520299318877176192"
+   }
+  ],
+  "reviews": [
+   {
+    "reviewer": "浅野順一",
+    "target": "旧約聖書：その歴史・文学・思想",
+    "year": 1949,
+    "venue": "基督教文化",
+    "number": "42",
+    "pages": "43-45"
+   },
+   {
+    "reviewer": "深津文雄",
+    "target": "イスラエル宗教文化史",
+    "year": 1952,
+    "venue": "福音と世界",
+    "volume": "7",
+    "number": "4"
+   },
+   {
+    "reviewer": "石井良博",
+    "target": "イスラエル宗教文化史",
+    "year": 1952,
+    "venue": "法学研究（慶應）",
+    "volume": "25",
+    "number": "8",
+    "pages": "548-553"
+   },
+   {
+    "reviewer": "（無署名）",
+    "target": "イスラエル宗教文化史",
+    "year": 1952,
+    "venue": "指",
+    "number": "22"
+   },
+   {
+    "reviewer": "大場久雄",
+    "target": "旧約宗教の社会学的背景",
+    "year": 1954,
+    "venue": "思想",
+    "number": "363",
+    "pages": "1119-1122"
+   },
+   {
+    "reviewer": "石井良博",
+    "target": "旧約宗教の社会学的背景",
+    "year": 1955,
+    "venue": "法学研究（慶應）",
+    "volume": "28",
+    "number": "6",
+    "pages": "68-75"
+   },
+   {
+    "reviewer": "中沢洽樹",
+    "target": "イスラエルの思想と言語",
+    "year": 1965,
+    "venue": "日本の神学",
+    "number": "4",
+    "pages": "19-24"
+   },
+   {
+    "reviewer": "高橋虔",
+    "target": "岩波文庫『イザヤ書』",
+    "year": 1966,
+    "venue": "日本の神学",
+    "number": "5",
+    "pages": "7-15"
+   },
+   {
+    "reviewer": "木田献一",
+    "target": "岩波文庫『十二小預言書 上』",
+    "year": 1968,
+    "venue": "日本の神学",
+    "number": "7",
+    "pages": "9-17"
+   },
+   {
+    "reviewer": "並木浩一",
+    "target": "古代イスラエル研究：対象と方法",
+    "year": 1970,
+    "venue": "日本の神学",
+    "number": "9",
+    "pages": "51-56"
+   },
+   {
+    "reviewer": "遠藤彰",
+    "target": "『聖書の世界』第5–6巻の「聖書翻訳」",
+    "year": 1971,
+    "venue": "日本の神学",
+    "number": "10",
+    "pages": "57-65"
+   },
+   {
+    "reviewer": "吉田泰",
+    "target": "ヨブ記註解",
+    "year": 1971,
+    "venue": "日本の神学",
+    "number": "10",
+    "pages": "72-79"
+   },
+   {
+    "reviewer": "石井良博",
+    "target": "旧約聖書学と共に",
+    "year": 1977,
+    "venue": "法学研究（慶應）",
+    "volume": "50",
+    "number": "11",
+    "pages": "1456-1463"
+   },
+   {
+    "reviewer": "野本真也",
+    "target": "旧約聖書学と共に",
+    "year": 1978,
+    "venue": "日本の神学",
+    "number": "17",
+    "pages": "66-71"
+   },
+   {
+    "reviewer": "時田光彦",
+    "target": "旧約聖書文学史 上",
+    "year": 1979,
+    "venue": "日本の神学",
+    "number": "18",
+    "pages": "102-107"
+   },
+   {
+    "reviewer": "西村俊昭",
+    "target": "著作集 5–7 旧約学論文集",
+    "year": 1982,
+    "venue": "日本の神学",
+    "number": "20",
+    "pages": "9-17"
+   },
+   {
+    "reviewer": "定形日佐雄",
+    "target": "著作集 10–12 詩篇註解",
+    "year": 1982,
+    "venue": "日本の神学",
+    "number": "21",
+    "pages": "36-42"
+   },
+   {
+    "reviewer": "月本昭男",
+    "target": "旧約聖書文学史 上・下",
+    "year": 1982,
+    "venue": "宗教研究",
+    "volume": "55",
+    "number": "4",
+    "pages": "657-662"
+   },
+   {
+    "reviewer": "鈴木佳秀",
+    "target": "古代イスラエルの思想家（與池田裕、左近淑著作合評）",
+    "year": 1983,
+    "venue": "日本の神学",
+    "number": "22",
+    "pages": "61-80"
+   },
+   {
+    "reviewer": "小田島太郎",
+    "target": "著作集 14–15 エレミヤ書註解",
+    "year": 1984,
+    "venue": "日本の神学",
+    "number": "23",
+    "pages": "81-86",
+    "note": "關根回應〈小田島太郎氏の御批判に答えて〉同號 87–89"
+   },
+   {
+    "reviewer": "並木浩一",
+    "target": "著作集 4 旧約聖書序説",
+    "year": 1986,
+    "venue": "日本の神学",
+    "number": "25",
+    "pages": "64-71"
+   },
+   {
+    "reviewer": "左近淑",
+    "target": "著作集 8 イザヤ書註解",
+    "year": 1987,
+    "venue": "日本の神学",
+    "number": "26",
+    "pages": "42-47",
+    "note": "關根回應〈左近淑氏へのお答え〉1988 年 27 號"
+   },
+   {
+    "reviewer": "並木浩一（序）／大野恵正／山我哲雄／大住雄一／秋吉輝雄",
+    "target": "新訳旧約聖書 I–IV（五篇合評）",
+    "year": 1996,
+    "venue": "日本の神学",
+    "number": "35",
+    "pages": "77-94"
+   },
+   {
+    "reviewer": "八木誠一",
+    "target": "聖書の信仰と思想：全聖書思想史概説",
+    "year": 1997,
+    "venue": "日本の神学",
+    "number": "36",
+    "pages": "65-69"
+   }
+  ],
+  "zh": [
+   {
+    "author": "張辰瑋",
+    "title": "縱貫一世紀的無教會史",
+    "venue": "無境界者",
+    "number": "1",
+    "note": "提及鄭廷憲 1973 年赴日隨關根學舊約；1950 年關根與手島郁郎在熊本集會的靈恩經驗"
+   },
+   {
+    "author": "廖本恩",
+    "title": "繼承路德的第二次宗教改革",
+    "venue": "無境界者",
+    "number": "3",
+    "note": "提及關根、高橋三郎對「先生中心主義」的批判"
+   },
+   {
+    "author": "廖本恩",
+    "title": "無境界的信徒們：台灣無教會史 1911–2011",
+    "note": "書目 II.B 收關根中譯本"
+   }
+  ],
+  "leads": [
+   "鄭廷憲主編《下樂姆》（1982–）譯過許多日本無教會第二、三代的文章，關根的中譯很可能在這裡，尚未逐期查。",
+   "關根 1939–45 年在哈雷（Halle）取得神學博士，論文以舊約的神為題；德文原題與是否出版待查（Halle 大學目錄）。",
+   "英文無教會研究（Caldarola 1979、Mullins 1998 等）對關根的討論尚未逐本查核，故未列入。",
+   "同名陷阱：NDL／CiNii 裡另有一位醫史學家関根正雄（1906–1992，日本醫史學會），他的醫學與佛教醫療論文已全部剔除；兒子関根清三（Seizo Sekine）也是舊約學者，AJBI 17 期以後的 Sekine 都是他。"
+  ]
+ }
+}
