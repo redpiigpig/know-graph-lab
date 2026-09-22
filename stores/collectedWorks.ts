@@ -4352,10 +4352,10 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
       contribution: [
         '關根正雄是無教會第三代中把運動接上國際學術的關鍵人物。東京帝大法學部、文學部出身，十八歲進入內村鑑三的聖書研究會，內村歿後隨塚本虎二；1939–1945 年留學德國哈雷（Halle），以舊約的神為題取得神學博士。1949 年自塚本門下獨立傳道，主持個人誌《預言與福音》近四十年。',
         '學術上，他 1954 年起任教東京教育大學（閃語與舊約），1962 年以《以色列的思想與語言》取得文學博士，長年主持日本聖書學研究所（1958–1988）並主編其西文年報 AJBI，1982 年選為日本學士院會員。論文發表於 ZAW、Vetus Testamentum、VTSup、Journal of Semitic Studies 等，是戰後日本舊約學登上國際學界的第一代。',
-        '他最廣為人知的是**岩波文庫的舊約譯注**（創世記 1956 起，共十一冊），晚年更一人譯完舊約全書（《新譯舊約聖經》四卷，1993–95）。主要著作收入《關根正雄著作集》全 20 卷（新地書房 1979–89），2004 年教文館補刊別卷〈補遺‧著作總目錄〉。台灣無教會的鄭廷憲曾於 1973 年赴日隨他學舊約，郭維租、鄭廷憲並合譯其《聖經的信仰與思想》（2000）。卒於 2000 → 日本著作權至 2070、台灣至 2050，status=copyright。',
+        '他最廣為人知的是**岩波文庫的舊約譯注**（創世記 1956 起，共十一冊），晚年更一人譯完舊約全書（《新譯舊約聖經》四卷，1993–95）。主要著作收入《關根正雄著作集》全 20 卷（新地書房 1979–89），2004 年教文館補刊別卷〈補遺‧著作總目錄〉。台灣無教會的鄭廷憲曾於 1973 年赴日隨他學舊約，郭維租、鄭廷憲並合譯其《聖經的信仰與思想》（2000）。卒於 2000。',
       ],
       sourceNote:
-        '卒於 2000 → 日本（70 年）至 2070、台灣（50 年）至 2050，全面在版權內 → status=copyright，hub＋書目先行。書目由 NDL（528 筆，剔除同名醫史學家関根正雄 1906–1992 與重印）、CiNii、J-STAGE、Crossref 重建；日文論文 50 篇、研究文獻與書評完整清單見 data/mukyokai/sekine-bibliography.json。🚨 尚未與著作集別卷〈著作總目錄〉逐條對照。',
+        '個人研究用，不受版權限制（使用者 2026-09-23 指示），全部 works 排入 planned。全文來源：J-STAGE 開放 PDF 47 篇（本人 25／他人評論 22）已下載到 Drive 全集/神學/關根正雄/；專書與著作集走 z-lib 獵表（data/zlib-wanted/sekine-works.jsonl），找不到的要買實體書自掃。NDL 數位典藏的著作集是視障用有聲 DAISY，不是掃描本。書目由 NDL、CiNii、J-STAGE、Crossref 重建（剔除同名醫史學家関根正雄 1906–1992），完整清單見 data/mukyokai/sekine-bibliography.json。🚨 尚未與著作集別卷〈著作總目錄〉逐條對照。',
       sourceLinks: [
         { label: 'ja.wikipedia 関根正雄', url: 'https://ja.wikipedia.org/wiki/%E9%96%A2%E6%A0%B9%E6%AD%A3%E9%9B%84', kind: 'authority' },
         { label: 'Wikidata Q11656074', url: 'https://www.wikidata.org/wiki/Q11656074', kind: 'authority' },
@@ -4394,7 +4394,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1979,
           category: '關根正雄著作集（新地書房，全 20 卷）',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '新地書房。',
         },
         {
@@ -4404,7 +4404,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1981,
           category: '關根正雄著作集（新地書房，全 20 卷）',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '新地書房。',
         },
         {
@@ -4414,7 +4414,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1980,
           category: '關根正雄著作集（新地書房，全 20 卷）',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '新地書房。',
         },
         {
@@ -4424,7 +4424,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1985,
           category: '關根正雄著作集（新地書房，全 20 卷）',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '新地書房。',
         },
         {
@@ -4434,7 +4434,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1979,
           category: '關根正雄著作集（新地書房，全 20 卷）',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '新地書房。',
         },
         {
@@ -4444,7 +4444,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1980,
           category: '關根正雄著作集（新地書房，全 20 卷）',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '新地書房。',
         },
         {
@@ -4454,7 +4454,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1980,
           category: '關根正雄著作集（新地書房，全 20 卷）',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '新地書房。',
         },
         {
@@ -4464,7 +4464,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1986,
           category: '關根正雄著作集（新地書房，全 20 卷）',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '新地書房。',
         },
         {
@@ -4474,7 +4474,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1982,
           category: '關根正雄著作集（新地書房，全 20 卷）',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '新地書房。',
         },
         {
@@ -4484,7 +4484,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1980,
           category: '關根正雄著作集（新地書房，全 20 卷）',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '新地書房。',
         },
         {
@@ -4494,7 +4494,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1980,
           category: '關根正雄著作集（新地書房，全 20 卷）',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '新地書房。',
         },
         {
@@ -4504,7 +4504,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1981,
           category: '關根正雄著作集（新地書房，全 20 卷）',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '新地書房。',
         },
         {
@@ -4514,7 +4514,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1984,
           category: '關根正雄著作集（新地書房，全 20 卷）',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '新地書房。',
         },
         {
@@ -4524,7 +4524,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1981,
           category: '關根正雄著作集（新地書房，全 20 卷）',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '新地書房。',
         },
         {
@@ -4534,7 +4534,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1982,
           category: '關根正雄著作集（新地書房，全 20 卷）',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '新地書房。',
         },
         {
@@ -4544,7 +4544,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1988,
           category: '關根正雄著作集（新地書房，全 20 卷）',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '新地書房。',
         },
         {
@@ -4554,7 +4554,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1989,
           category: '關根正雄著作集（新地書房，全 20 卷）',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '新地書房。',
         },
         {
@@ -4564,7 +4564,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1988,
           category: '關根正雄著作集（新地書房，全 20 卷）',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '新地書房。',
         },
         {
@@ -4574,7 +4574,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1989,
           category: '關根正雄著作集（新地書房，全 20 卷）',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '新地書房。',
         },
         {
@@ -4584,7 +4584,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1989,
           category: '關根正雄著作集（新地書房，全 20 卷）',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '新地書房。',
         },
         {
@@ -4594,7 +4594,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 2004,
           category: '關根正雄著作集（新地書房，全 20 卷）',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '教文館。🚨 著作總目錄在此卷，是全部著作的權威清單。',
         },
         {
@@ -4604,7 +4604,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1947,
           category: '專書',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '新教出版社。戰後第一本書，由留德論文而來。',
         },
         {
@@ -4614,7 +4614,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1949,
           category: '專書',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '弘文堂（アテネ文庫 44）。無教會第三代自述。',
         },
         {
@@ -4624,7 +4624,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1949,
           category: '專書',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '弘文堂；1953 第二版。',
         },
         {
@@ -4634,7 +4634,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1949,
           category: '專書',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '創元社（創元選書 176），至 1970 年代多次重印。',
         },
         {
@@ -4644,7 +4644,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1952,
           category: '專書',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '三一書店。',
         },
         {
@@ -4654,7 +4654,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1952,
           category: '專書',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '三一書店。',
         },
         {
@@ -4664,7 +4664,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1952,
           category: '專書',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '岩波書店（岩波全書 157）；1962／1973 重印，2005 岩波全書セレクション。',
         },
         {
@@ -4674,7 +4674,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1962,
           category: '專書',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '岩波書店。東京教育大學文學博士學位論文（副題：特にギリシアの思想、言語との対比における）。',
         },
         {
@@ -4684,7 +4684,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1962,
           category: '專書',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '待晨堂；後收入著作集 14–15。',
         },
         {
@@ -4694,7 +4694,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1967,
           category: '專書',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '基督教夜間講座出版部。',
         },
         {
@@ -4704,7 +4704,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1969,
           category: '專書',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '岩波書店。',
         },
         {
@@ -4714,7 +4714,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1970,
           category: '專書',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '教文館；後收入著作集 9。',
         },
         {
@@ -4724,7 +4724,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1971,
           category: '專書',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '教文館；後收入著作集 10–12。',
         },
         {
@@ -4734,7 +4734,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1977,
           category: '專書',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '山本書店。學術自傳性質的文集。',
         },
         {
@@ -4744,7 +4744,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1978,
           category: '專書',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '岩波書店（岩波全書 304／321）；2008 岩波全書セレクション。',
         },
         {
@@ -4754,7 +4754,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1982,
           category: '專書',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '講談社（人類の知的遺產 1）；2004 改題《古代イスラエルの思想：旧約の預言者たち》入講談社學術文庫。',
         },
         {
@@ -4764,7 +4764,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1996,
           category: '專書',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '教文館。有郭維租、鄭廷憲中譯本（2000）。',
         },
         {
@@ -4774,7 +4774,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1985,
           category: '專書',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '日本基督教團鎌倉雪ノ下教會長老會，小冊。',
         },
         {
@@ -4784,7 +4784,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 2007,
           category: '歿後刊行',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '日本基督教團出版局。講道選，歿後刊。',
         },
         {
@@ -4794,7 +4794,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 2009,
           category: '歿後刊行',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '宇野益三筆記、自印，歿後刊。',
         },
         {
@@ -4804,7 +4804,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 2010,
           category: '歿後刊行',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '無教會新宿集會，歿後刊。留德六年的手記。',
         },
         {
@@ -4814,7 +4814,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1950,
           category: '共著與編著',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '新教出版社（基督教論叢），共著。',
         },
         {
@@ -4824,7 +4824,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1950,
           category: '共著與編著',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '三一書店；與石原兵永、小池辰雄合著。',
         },
         {
@@ -4834,7 +4834,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1954,
           category: '共著與編著',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '新教出版社；與內田芳明合著。',
         },
         {
@@ -4844,7 +4844,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1964,
           category: '共著與編著',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '岩波書店；與高津春繁合著。2024 講談社學術文庫 2805 重刊。',
         },
         {
@@ -4854,7 +4854,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1967,
           category: '共著與編著',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '明治書院；與牧野信也、蒲生禮一合著。',
         },
         {
@@ -4864,7 +4864,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1967,
           category: '共著與編著',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '清水書院，編著；1978 新裝版、2014 再新裝版。把運動創始者放回思想史脈絡的入門定本。',
         },
         {
@@ -4874,7 +4874,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1976,
           category: '共著與編著',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '基督教圖書出版社，編。',
         },
         {
@@ -4884,7 +4884,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1979,
           category: '共著與編著',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '山本書店；與前田護郎合編，講演六篇。',
         },
         {
@@ -4894,7 +4894,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1985,
           category: '共著與編著',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '新地書房；與伊藤進合著。2004 教文館新版。',
         },
         {
@@ -4904,7 +4904,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1965,
           category: '監修與叢書主編',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '筑摩書房；與木下順治合編。',
         },
         {
@@ -4914,7 +4914,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1970,
           category: '監修與叢書主編',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '講談社，監修；別卷 1《知恵と黙示》與新見宏合譯。',
         },
         {
@@ -4924,7 +4924,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1973,
           category: '監修與叢書主編',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: 'NTD 新約聖書註解刊行會；與 G. Friedrich 共同監修。',
         },
         {
@@ -4934,7 +4934,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1975,
           category: '監修與叢書主編',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '山本書店；與佐竹明合編。關根任日本聖書學研究所所長（1958–1988）。',
         },
         {
@@ -4944,7 +4944,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1975,
           category: '監修與叢書主編',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '教文館；日本聖書學研究所編，監修。',
         },
         {
@@ -4954,7 +4954,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1979,
           category: '監修與叢書主編',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '講談社，監修。',
         },
         {
@@ -4964,7 +4964,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1998,
           category: '監修與叢書主編',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '講談社文藝文庫，編。',
         },
         {
@@ -4974,7 +4974,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1956,
           category: '聖經翻譯',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '岩波文庫。以希伯來原文為據，附詳注。',
         },
         {
@@ -4984,7 +4984,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1957,
           category: '聖經翻譯',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '岩波文庫。',
         },
         {
@@ -4994,7 +4994,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1959,
           category: '聖經翻譯',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '岩波文庫。',
         },
         {
@@ -5004,7 +5004,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1961,
           category: '聖經翻譯',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '岩波文庫。',
         },
         {
@@ -5014,7 +5014,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1963,
           category: '聖經翻譯',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '岩波文庫；1988 改版。',
         },
         {
@@ -5024,7 +5024,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1967,
           category: '聖經翻譯',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '岩波文庫。',
         },
         {
@@ -5034,7 +5034,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1969,
           category: '聖經翻譯',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '岩波文庫。',
         },
         {
@@ -5044,7 +5044,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1971,
           category: '聖經翻譯',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '岩波文庫；1983 岩波クラシックス 39。',
         },
         {
@@ -5054,7 +5054,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1973,
           category: '聖經翻譯',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '岩波文庫。',
         },
         {
@@ -5064,7 +5064,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1991,
           category: '聖經翻譯',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '新・預言與福音社。',
         },
         {
@@ -5074,7 +5074,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1993,
           category: '聖經翻譯',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '教文館；1997 合本《旧約聖書》。一人獨力譯完舊約全書，晚年代表作。',
         },
         {
@@ -5084,7 +5084,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1954,
           category: '學術翻譯',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '待晨堂，譯。',
         },
         {
@@ -5094,7 +5094,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1987,
           category: '學術翻譯',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '新地書房；與森田外雄合譯。',
         },
         {
@@ -5104,7 +5104,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1950,
           category: '個人誌',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '預言と福音社。個人傳道誌，至 366 號（1988.8）；NDL 藏 305–366 號。各號篇目未整理。',
         },
         {
@@ -5114,7 +5114,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1989,
           category: '個人誌',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '新・預言と福音社。《預言と福音》後繼誌，至少 64 號。',
         },
         {
@@ -5124,7 +5124,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1941,
           category: '西文論文',
           languages: ['de'],
-          status: 'copyright',
+          status: 'planned',
           note: 'ZAW 58: 133–141。留德期間的第一篇論文。',
         },
         {
@@ -5134,7 +5134,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1959,
           category: '西文論文',
           languages: ['de'],
-          status: 'copyright',
+          status: 'planned',
           note: 'Vetus Testamentum 9: 47–57。',
         },
         {
@@ -5144,7 +5144,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1960,
           category: '西文論文',
           languages: ['fr'],
-          status: 'copyright',
+          status: 'planned',
           note: 'Orient 1: 23–34（日本オリエント学会）。',
         },
         {
@@ -5154,7 +5154,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1961,
           category: '西文論文',
           languages: ['de'],
-          status: 'copyright',
+          status: 'planned',
           note: 'Von Ugarit nach Qumran（Eißfeldt 紀念文集，BZAW 77）: 213–223。',
         },
         {
@@ -5164,7 +5164,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1963,
           category: '西文論文',
           languages: ['de'],
-          status: 'copyright',
+          status: 'planned',
           note: 'ZAW 75: 145–154。',
         },
         {
@@ -5174,7 +5174,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1963,
           category: '西文論文',
           languages: ['de'],
-          status: 'copyright',
+          status: 'planned',
           note: 'Congress Volume Bonn 1962（VTSup 9）: 66–82。',
         },
         {
@@ -5184,7 +5184,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1968,
           category: '西文論文',
           languages: ['de'],
-          status: 'copyright',
+          status: 'planned',
           note: 'Evangelische Theologie 28: 605–609。',
         },
         {
@@ -5194,7 +5194,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1971,
           category: '西文論文',
           languages: ['de'],
-          status: 'copyright',
+          status: 'planned',
           note: 'Evangelische Missions-Zeitschrift 1971 年 11 月號；頁碼待核。',
         },
         {
@@ -5204,7 +5204,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1972,
           category: '西文論文',
           languages: ['de'],
-          status: 'copyright',
+          status: 'planned',
           note: 'Vetus Testamentum 22: 361–368。',
         },
         {
@@ -5214,7 +5214,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1973,
           category: '西文論文',
           languages: ['en'],
-          status: 'copyright',
+          status: 'planned',
           note: 'Journal of Semitic Studies 18: 205–221。',
         },
         {
@@ -5224,7 +5224,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1975,
           category: '西文論文',
           languages: ['de'],
-          status: 'copyright',
+          status: 'planned',
           note: 'AJBI 1: 39–62。J-STAGE 開放全文。',
         },
         {
@@ -5234,7 +5234,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1977,
           category: '西文論文',
           languages: ['de'],
-          status: 'copyright',
+          status: 'planned',
           note: 'AJBI 3: 52–68。J-STAGE 開放全文。',
         },
         {
@@ -5244,7 +5244,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1985,
           category: '西文論文',
           languages: ['de'],
-          status: 'copyright',
+          status: 'planned',
           note: 'AJBI 11: 3–15。J-STAGE 開放全文。',
         },
         {
@@ -5254,7 +5254,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1988,
           category: '西文論文',
           languages: ['de'],
-          status: 'copyright',
+          status: 'planned',
           note: 'AJBI 14: 3–9。J-STAGE 開放全文。',
         },
         {
@@ -5264,7 +5264,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 2000,
           category: '中譯本',
           languages: ['zh'],
-          status: 'copyright',
+          status: 'planned',
           note: '郭維租、鄭廷憲合譯；永望文化（ISBN 957918576X，216 頁）。z-lib 查無，需實體取得。',
         },
         {
@@ -5274,7 +5274,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1972,
           category: '傳記與研究（他人著作）',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '日本聖書學研究所編，山本書店（聖書学論集 9）。',
         },
         {
@@ -5284,7 +5284,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1989,
           category: '傳記與研究（他人著作）',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '日本聖書學研究所編，山本書店（聖書学論集 23）。',
         },
         {
@@ -5294,7 +5294,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1989,
           category: '傳記與研究（他人著作）',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '量義治著，新地書房。',
         },
         {
@@ -5304,7 +5304,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 2007,
           category: '傳記與研究（他人著作）',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '無教會新宿集會編。',
         },
         {
@@ -5314,7 +5314,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 2013,
           category: '傳記與研究（他人著作）',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '伊藤進著。',
         },
         {
@@ -5324,7 +5324,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 2018,
           category: '傳記與研究（他人著作）',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '村松晉，《比較思想研究》45: 162–170。',
         },
         {
@@ -5334,7 +5334,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 2023,
           category: '傳記與研究（他人著作）',
           languages: ['ja'],
-          status: 'copyright',
+          status: 'planned',
           note: '村松晉，《無教会研究》26: 22–44。',
         },
       ],

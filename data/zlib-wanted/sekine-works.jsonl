@@ -1,0 +1,30 @@
+{"key": "sekine-chosakushu", "query": "関根正雄著作集", "expect": "関根正雄著作集", "who": "関根正雄", "source": "sekine-works", "zh": "《関根正雄著作集》全 20 卷（新地書房 1979–89）任一卷皆收。"}
+{"key": "sekine-chosakushu-bekkan", "query": "関根正雄著作集 別巻 補遺", "expect": "著作集", "who": "関根正雄", "source": "sekine-works", "zh": "著作集別卷〈補遺・著作總目錄〉（教文館 2004）——全部著作的權威清單，最優先。"}
+{"key": "sekine-shukyo-kakumei", "query": "宗教革命の論理 関根正雄", "expect": "宗教革命の論理", "who": "関根正雄", "source": "sekine-works", "zh": "《宗教革命の論理：無教会キリスト教の神学的基礎》（弘文堂 1949）。"}
+{"key": "sekine-mukyokai-kirisuto", "query": "無教会キリスト教 関根正雄", "expect": "無教会キリスト教", "who": "関根正雄", "source": "sekine-works", "zh": "《無教会キリスト教》（アテネ文庫 1949）。"}
+{"key": "sekine-kyuyaku-rekishi", "query": "旧約聖書 その歴史・文学・思想 関根正雄", "expect": "旧約聖書", "who": "関根正雄", "source": "sekine-works", "zh": "《旧約聖書：その歴史・文学・思想》（創元選書 1949）。"}
+{"key": "sekine-israel-shukyo", "query": "イスラエル宗教文化史 関根正雄", "expect": "イスラエル宗教文化史", "who": "関根正雄", "source": "sekine-works", "zh": "《イスラエル宗教文化史》（岩波全書 1952）。"}
+{"key": "sekine-israel-shiso-gengo", "query": "イスラエルの思想と言語 関根正雄", "expect": "イスラエルの思想と言語", "who": "関根正雄", "source": "sekine-works", "zh": "《イスラエルの思想と言語》（岩波 1962，博士論文）。"}
+{"key": "sekine-kodai-israel-kenkyu", "query": "古代イスラエル研究 関根正雄", "expect": "古代イスラエル研究", "who": "関根正雄", "source": "sekine-works", "zh": "《古代イスラエル研究：対象と方法》（岩波 1969）。"}
+{"key": "sekine-bungakushi", "query": "旧約聖書文学史 関根正雄", "expect": "旧約聖書文学史", "who": "関根正雄", "source": "sekine-works", "zh": "《旧約聖書文学史》上下（岩波全書 1978–80）。"}
+{"key": "sekine-kodai-israel-shiso", "query": "古代イスラエルの思想 旧約の預言者たち 関根正雄", "expect": "古代イスラエルの思想", "who": "関根正雄", "source": "sekine-works", "zh": "《古代イスラエルの思想：旧約の預言者たち》（講談社學術文庫 2004）。"}
+{"key": "sekine-shinko-shiso", "query": "聖書の信仰と思想 関根正雄", "expect": "聖書の信仰と思想", "who": "関根正雄", "source": "sekine-works", "zh": "《聖書の信仰と思想：全聖書思想史概説》（教文館 1996）。"}
+{"key": "sekine-shinyaku-kyuyaku", "query": "新訳旧約聖書 関根正雄", "expect": "新訳旧約聖書", "who": "関根正雄", "source": "sekine-works", "zh": "《新訳旧約聖書》4 卷（教文館 1993–95）／1997 合本。"}
+{"key": "sekine-iwanami-genesis", "query": "旧約聖書 創世記 関根正雄 岩波文庫", "expect": "創世記", "who": "関根正雄", "source": "sekine-works", "zh": "岩波文庫《創世記》關根譯。"}
+{"key": "sekine-iwanami-exodus", "query": "旧約聖書 出エジプト記 関根正雄", "expect": "出エジプト記", "who": "関根正雄", "source": "sekine-works", "zh": "岩波文庫《出エジプト記》關根譯。"}
+{"key": "sekine-iwanami-samuel", "query": "旧約聖書 サムエル記 関根正雄", "expect": "サムエル記", "who": "関根正雄", "source": "sekine-works", "zh": "岩波文庫《サムエル記》關根譯。"}
+{"key": "sekine-iwanami-job", "query": "旧約聖書 ヨブ記 関根正雄", "expect": "ヨブ記", "who": "関根正雄", "source": "sekine-works", "zh": "岩波文庫《ヨブ記》關根譯。"}
+{"key": "sekine-iwanami-isaiah", "query": "旧約聖書 イザヤ書 関根正雄", "expect": "イザヤ書", "who": "関根正雄", "source": "sekine-works", "zh": "岩波文庫《イザヤ書》上下關根譯。"}
+{"key": "sekine-iwanami-jeremiah", "query": "旧約聖書 エレミヤ書 関根正雄", "expect": "エレミヤ書", "who": "関根正雄", "source": "sekine-works", "zh": "岩波文庫《エレミヤ書》關根譯。"}
+{"key": "sekine-iwanami-ezekiel", "query": "旧約聖書 エゼキエル書 関根正雄", "expect": "エゼキエル書", "who": "関根正雄", "source": "sekine-works", "zh": "岩波文庫《エゼキエル書》關根譯。"}
+{"key": "sekine-iwanami-minor", "query": "旧約聖書 十二小預言書 関根正雄", "expect": "十二小預言書", "who": "関根正雄", "source": "sekine-works", "zh": "岩波文庫《十二小預言書》上下關根譯。"}
+{"key": "sekine-iwanami-psalms", "query": "旧約聖書 詩篇 関根正雄", "expect": "詩篇", "who": "関根正雄", "source": "sekine-works", "zh": "岩波文庫《詩篇》關根譯。"}
+{"key": "sekine-uchimura", "query": "内村鑑三 人と思想 関根正雄", "expect": "内村鑑三", "who": "関根正雄", "source": "sekine-works", "zh": "《内村鑑三》（清水書院 人と思想 25）。"}
+{"key": "sekine-kodai-moji", "query": "古代文字の解読 高津春繁 関根正雄", "expect": "古代文字の解読", "who": "関根正雄", "source": "sekine-works", "zh": "《古代文字の解読》（與高津春繁合著；講談社學術文庫 2024）。"}
+{"key": "sekine-taidoku", "query": "関根正雄滞独雑記", "expect": "滞独雑記", "who": "関根正雄", "source": "sekine-works", "zh": "《関根正雄滞独雑記 1939～1945》（無教会新宿集会 2010）。"}
+{"key": "sekine-matai", "query": "マタイ福音書講義 関根正雄 伊藤進", "expect": "マタイ福音書講義", "who": "関根正雄", "source": "sekine-works", "zh": "《マタイ福音書講義》（新地書房 1985／教文館 2004）。"}
+{"key": "sekine-gaiten", "query": "旧約聖書外典 関根正雄 講談社文芸文庫", "expect": "旧約聖書外典", "who": "関根正雄", "source": "sekine-works", "zh": "《旧約聖書外典》上下（講談社文芸文庫 1998–99）。"}
+{"key": "sekine-kanreki", "query": "聖書の思想・歴史・言語 関根正雄教授還暦記念論文集", "expect": "還暦記念", "who": "関根正雄", "source": "sekine-works", "zh": "還曆紀念論文集（山本書店 1972）——研究文獻。"}
+{"key": "sekine-kiju", "query": "聖書の使信と伝達 関根正雄先生喜寿記念論文集", "expect": "喜寿記念", "who": "関根正雄", "source": "sekine-works", "zh": "喜壽紀念論文集（山本書店 1989）——研究文獻。"}
+{"key": "sekine-hakari", "query": "無教会の展開 量義治", "expect": "無教会の展開", "who": "関根正雄", "source": "sekine-works", "zh": "量義治《無教会の展開》（新地書房 1989），有關根專章——研究文獻。"}
+{"key": "sekine-muramatsu", "query": "近代日本のキリスト者 村松晋", "expect": "近代日本のキリスト者", "who": "関根正雄", "source": "sekine-works", "zh": "村松晋《近代日本のキリスト者》（聖学院大学出版会 2020）——研究文獻。"}
