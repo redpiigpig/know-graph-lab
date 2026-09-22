@@ -164,9 +164,13 @@ def fmt_result(code: int | None) -> str:
 
 def section_collected_works(author: str | None) -> None:
     print("━━ 一、全集轉錄 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
-    rows = page("ebooks?select=title,author,chunk_count,total_chars,parse_error&collection=eq.collected-works")
+    rows = page("ebooks?select=title,author,chunk_count,total_chars,parse_error,file_path"
+                "&collection=eq.collected-works")
     empty = [r for r in rows if not (r.get("chunk_count") or 0)]
-    thin = [r for r in rows if 0 < (r.get("chunk_count") or 0) <= 5]
+    # 段數少不等於殘缺：伊利亞德 3 段 34 萬字是整章一段；星雲全集標「*」的是書法／圖影集，
+    # 官網本來就只有書名。只有「段少且字也少」才算。
+    thin = [r for r in rows if 0 < (r.get("chunk_count") or 0) <= 5
+            and (r.get("total_chars") or 0) < 20000 and not r["title"].endswith("*")]
     print(f"  DB collection=collected-works：{len(rows)} 本"
           f"（有內容 {len(rows) - len(empty)}、空 {len(empty)}、疑似殘缺 {len(thin)}）")
     if empty:
@@ -178,13 +182,26 @@ def section_collected_works(author: str | None) -> None:
         for r in thin[:5]:
             print(f"      {r.get('author')}《{r['title'][:32]}》 {r['chunk_count']} 段／{r.get('total_chars')} 字")
 
-    # Drive 側：全集各學科實際有幾個檔（沒有檔＝這位作家根本還沒開工）
+    # Drive 側：全集/ 只收「有原檔」的作家。佛學四套（印順／星雲／法鼓／太虛）是爬官網
+    # 直接進 R2＋DB，file_path 只是「XX全集/類/書名」標籤；東方聖卷、內村、矢內原等網路
+    # 文本沒有 file_path；柏拉圖、阿奎那等原檔留在 電子圖書館/。所以作家數對不上是正常的。
     if CW_DIR.exists():
-        parts = []
+        parts, folders = [], 0
         for d in sorted(CW_DIR.iterdir()):
             if d.is_dir():
+                folders += sum(1 for x in d.iterdir() if x.is_dir())
                 parts.append(f"{d.name} {sum(1 for _ in d.rglob('*') if _.is_file())}")
-        print(f"  Drive 全集/：{'、'.join(parts)}")
+        where = collections.Counter(
+            "全集/" if "/全集/" in "/" + fp
+            else "電子圖書館/" if "/電子圖書館/" in fp
+            else "無原檔（網路文本）" if not fp
+            else "官網爬取（R2＋DB）" if fp.split("/")[0].endswith(("全集", "全書", "著作集"))
+            else "其他"
+            for fp in ((r.get("file_path") or "").replace("\\", "/") for r in rows))
+        n_auth = len({r.get("author") for r in rows})
+        print(f"  Drive 全集/：{folders} 位作家夾；檔數 {'、'.join(parts)}")
+        print(f"    DB {n_auth} 個作者名；原檔去處 "
+              + "、".join(f"{k} {v}" for k, v in where.most_common()))
 
     if author:
         section_author(author)
@@ -297,7 +314,13 @@ def section_downloads(tasks: dict) -> None:
         by = collections.Counter(p.relative_to(AIRITI_DIR).parts[0] for p in pdfs)
         print(f"  華藝：Drive 累計 {len(pdfs)} 篇 PDF，今天 {n_today} 篇；"
               f"{len(by)} 種刊，最大宗 {by.most_common(1)[0][0]} {by.most_common(1)[0][1]}")
-        if n_today == 0:
+        # 華藝只認玄奘校網 IP；人不在學校時 0 篇是設計如此，不是壞掉
+        probe = pathlib.Path("C:/tmp/campus_probe.log")
+        last = probe.read_text(encoding="utf-8").splitlines()[-1:] if probe.exists() else []
+        off_campus = bool(last) and "不在校網" in last[0]
+        if n_today == 0 and off_campus:
+            print(f"    今天 0 篇是因為不在校網（校網探測最後一筆 {last[0][:19]}），回學校自動續抓")
+        elif n_today == 0:
             warn(f"華藝今天（{today}）一篇都沒落地")
     t = tasks.get("KGL_Airiti_Poll")
     if t:
@@ -474,8 +497,13 @@ def section_foreign_db() -> None:
         ntxt = len(list(js_txt.glob("*.txt"))) if js_txt.exists() else 0
         print(f"  J-Stage：PDF {npdf:,}／{tot:,}（{npdf / tot * 100:.1f}%）"
               f"、抽字 {ntxt:,}（{ntxt / tot * 100:.1f}%）")
-        if npdf - ntxt > 0:
-            print(f"    ↳ 待抽字 {npdf - ntxt:,} 篇（不吃網路，PDF 在 Drive 上就能跑）")
+        # needs-ocr.json＝抽過但沒有文字層的（2026-09-23 那 7 篇全是正誤／奥付／大會照片）
+        nocr_f = CORPUS / "jstage-ibk" / "needs-ocr.json"
+        nocr = len(json.loads(nocr_f.read_text(encoding="utf-8"))) if nocr_f.exists() else 0
+        if npdf - ntxt - nocr > 0:
+            print(f"    ↳ 待抽字 {npdf - ntxt - nocr:,} 篇（不吃網路，PDF 在 Drive 上就能跑）")
+        if nocr:
+            print(f"    ↳ 另 {nocr} 篇沒有文字層（清單 needs-ocr.json，先看是不是正誤頁再決定要不要 OCR）")
 
     # --- z-lib 探勘：分母見 section_downloads 的註解
     zl_led = ROOT / "scripts/state/zlib_ledger.jsonl"
