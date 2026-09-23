@@ -1,0 +1,61 @@
+{
+ "_說明": "J-STAGE 整頁切 PDF：首頁上半可能是前一篇、末頁下半可能是下一篇。每一篇有同頁鄰篇的都人工看過首末頁（2026-09-23），start_at／end_before 是段首文字（比對前做 NFKC、去空白）。ok=true 表示看過、不必切。",
+ "10.11435/gengo1939.1956.45": {
+  "start_at": "GeogeBEER"
+ },
+ "10.5356/jorient1955.3.16": {
+  "ok": true
+ },
+ "10.5873/nihonnoshingaku.1962.27": {
+  "ok": true
+ },
+ "10.5873/nihonnoshingaku.1965.24": {
+  "ok": true
+ },
+ "10.5873/nihonnoshingaku.1967.35": {
+  "ok": true
+ },
+ "10.5873/nihonnoshingaku.1969.39": {
+  "ok": true
+ },
+ "10.5873/nihonnoshingaku.1978.61": {
+  "ok": true
+ },
+ "10.5873/nihonnoshingaku.1965.19": {
+  "ok": true
+ },
+ "10.5873/nihonnoshingaku.1971.57": {
+  "end_before": "新改訳聖書の「新約」について"
+ },
+ "10.24758/jsnts.2.0_27": {
+  "start_at": "（山本ft店・1972年",
+  "end_before": "（山本1It店・1972年・626"
+ },
+ "10.5873/nihonnoshingaku.1978.66": {
+  "ok": true
+ },
+ "10.5873/nihonnoshingaku.1979.102": {
+  "ok": true
+ },
+ "10.5873/nihonnoshingaku.1983.61": {
+  "end_before": "並木浩一著『旧約聖書における"
+ },
+ "10.5873/nihonnoshingaku.1996.77": {
+  "ok": true
+ },
+ "10.5873/nihonnoshingaku.1996.80": {
+  "start_at": "Ⅰ律法",
+  "end_before": "Ⅱ歴史書"
+ },
+ "10.5873/nihonnoshingaku.1996.83": {
+  "start_at": "Ⅱ歴史書",
+  "end_before": "Ⅲ預言書"
+ },
+ "10.5873/nihonnoshingaku.1996.87": {
+  "start_at": "Ⅲ預言書",
+  "end_before": "Ⅳ諸書"
+ },
+ "10.5873/nihonnoshingaku.1996.90": {
+  "start_at": "Ⅳ諸書"
+ }
+}

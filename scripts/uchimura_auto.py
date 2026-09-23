@@ -42,7 +42,8 @@ AUTHOR_MODULES = {"uchimura": "uchimura_build", "yanaihara": "yanaihara_build",
                   "uchimura-en": "uchimura_en_build", "howes": "howes_build",
                   "azegami": "azegami_build",
                   "kagawa": "kagawa_build",
-                  "husserl": "husserl_build"}
+                  "husserl": "husserl_build",
+                  "sekine": "sekine_build"}
 
 
 def use_author(name: str) -> None:
@@ -332,6 +333,9 @@ def build_chunks(slug: str) -> list[dict]:
         if not any(zh):
             continue
         pages = list(s.get("pages") or [])[:len(src)]
+        # 一卷裡混著不同原文語言時（關根西文論文集：法文一篇、德文四篇），
+        # 以節為單位標語言，否則 reader 的來源欄會把法文標成德文。
+        lang = s.get("lang") or w.get("source_lang") or getattr(ub, "SOURCE_LANG", "ja")
         base_title = (c.get("title_zh") or s["heading"] or w["title"]).strip()
         src_head = s["heading"] if s["heading"] not in ("(front)", "") else w["original_title"]
         groups = list(_chunked(zh, src, pages=pages))
@@ -352,8 +356,9 @@ def ensure_row(slug: str):
     import translate_ebook_to_zh as te
     w = ub.REGISTRY[slug]
     row = {"id": w["ebook_id"], "title": w["title"], "subtitle": w["subtitle"],
-           "author": getattr(ub, "AUTHOR_ZH", "內村鑑三"),
-           "author_en": getattr(ub, "AUTHOR_EN", "Uchimura Kanzō"),
+           # 研究文獻卷（別人評這位作者的書評集）作者不是本人，registry 可以覆寫。
+           "author": w.get("author") or getattr(ub, "AUTHOR_ZH", "內村鑑三"),
+           "author_en": w.get("author_en") or getattr(ub, "AUTHOR_EN", "Uchimura Kanzō"),
            "original_title": w["original_title"], "original_publish_year": w["year"],
            "file_type": "epub", "category": getattr(ub, "CATEGORY", "神學"),
            # 沒這一欄就會落進電子圖書館，得事後補標
@@ -405,20 +410,32 @@ def build_and_upload(slug: str, *, do_upload: bool):
 def run_work(slug: str, *, do_upload: bool, maxparas=None, backend: str = "auto"):
     print(f"=== {slug} : {ub.REGISTRY[slug]['title']} ===", flush=True)
     engine = ub.make_engine(backend)
-    translate_work(slug, engine, maxparas=maxparas)
+    n = translate_work(slug, engine, maxparas=maxparas)
     build_and_upload(slug, do_upload=do_upload)
+    return n
 
 
 def run_queue(backend: str = "auto"):
+    progress, failed = 0, False
     for slug in ub.QUEUE:
         try:
             if all_filled(slug):
                 print(f"=== {slug}: already done, (re)building ===", flush=True)
                 build_and_upload(slug, do_upload=True)
                 continue
-            run_work(slug, do_upload=True, backend=backend)
+            progress += run_work(slug, do_upload=True, backend=backend) or 0
         except Exception as e:  # noqa: BLE001 — keep the queue going
+            failed = True
             print(f"  ⚠ {slug} failed: {str(e)[:200]}", flush=True)
+    # 🚨 fleet keeper 看到 QUEUE_COMPLETE 就把這條線退役。模組宣告 STRICT_COMPLETE 時，
+    # 只有「全部譯完」或「這輪零進展且引擎沒出錯」（剩下的是翻不出來的段落）才算完成；
+    # 引擎斷線留下的空白不能讓整條線提早收工。未宣告的作者維持原行為。
+    if getattr(ub, "STRICT_COMPLETE", False):
+        done = all(all_filled(s) for s in ub.QUEUE)
+        stuck = progress == 0 and not failed and getattr(ub, "ENGINE_ERRORS", 0) == 0
+        if not (done or stuck):
+            print(f"QUEUE_PASS progress={progress} engine_errors={getattr(ub, 'ENGINE_ERRORS', 0)}", flush=True)
+            return
     print("QUEUE_COMPLETE", flush=True)
 
 

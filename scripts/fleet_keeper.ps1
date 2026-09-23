@@ -78,6 +78,7 @@ $STALL_PER_LANE = @{
     'panikkar-vedic' = 180
     'aquinas'        = 90    # prints every 20 articles, but a cold volume can be slow
     'husserl'        = 240   # one log line per SECTION, and the biggest is 355 paragraphs
+    'sekine'         = 240   # one log line per article; the longest has ~200 paragraphs
     'sbe-b2-s0'      = 90    # one line per section; a 30-paragraph Manu section is slow
     'sbe-b2-s1'      = 90
     'sbe-b2-s2'      = 90
@@ -225,6 +226,12 @@ EnsureUntil 'yanaihara' $py @('-X','utf8','scripts\uchimura_auto.py','--author',
 # Checkpoints are per section under .claude/skills/ebook-collected-works/husserl_data,
 # so a commute-sleep restart resumes where it stopped.
 EnsureUntil 'husserl' $py @('-X','utf8','scripts\uchimura_auto.py','--author','husserl','--run-queue') 'QUEUE_COMPLETE'
+
+# Sekine Masao (2026-09-23): 43 J-STAGE papers + 5 Western papers, ja/de/fr -> zh.
+# NVIDIA only (Gemini answered 503 on every key that day). sekine_build declares
+# STRICT_COMPLETE, so uchimura_auto prints QUEUE_COMPLETE only when every paragraph is
+# filled, or a pass made no progress with zero engine errors - engine outages keep the lane alive.
+EnsureUntil 'sekine' $py @('-X','utf8','scripts\uchimura_auto.py','--author','sekine','--run-queue','--backend','nvidia') 'QUEUE_COMPLETE'
 
 # Panikkar last volume (vedic-experience, huge): on Haiku per user (idle Claude account).
 # When it finishes, replace this lane with Max Weber (sociology) collected works.
