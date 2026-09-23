@@ -565,6 +565,7 @@ def cmd_queue(args) -> int:
         targets = [t for t in targets if t not in non_pdf]
     print(f"OCR 佇列 {len(targets)} 本，本輪最多做 {args.limit} 本")
     if not targets:
+        print("MINERU_QUEUE_EMPTY")   # fleet_keeper 的 mineru-queue lane 看到這行就退場
         return 0
 
     # 🚨 DB 空間閘。整夜跑一次會塞進十幾萬列 preview；2026-07-08 曾因超量被鎖站

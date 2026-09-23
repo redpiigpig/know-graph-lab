@@ -78,7 +78,9 @@ $STALL_PER_LANE = @{
     'panikkar-vedic' = 180
     'aquinas'        = 90    # prints every 20 articles, but a cold volume can be slow
     'husserl'        = 240   # one log line per SECTION, and the biggest is 355 paragraphs
-    'sekine'         = 240   # one log line per article; the longest has ~200 paragraphs
+    'sekine-s0'      = 240   # one log line per article; the longest has ~230 paragraphs
+    'sekine-s1'      = 240   # one log line per article; the longest has ~230 paragraphs
+    'sekine-s2'      = 240   # one log line per article; the longest has ~230 paragraphs
     'sbe-b2-s0'      = 90    # one line per section; a 30-paragraph Manu section is slow
     'sbe-b2-s1'      = 90
     'sbe-b2-s2'      = 90
@@ -191,6 +193,14 @@ Ensure 'aquinas' 'aquinas_build' @('-X','utf8','scripts\aquinas_build.py','--all
 # prints one line and exits instead of spinning ([[feedback_disable_finished_schedules]]).
 Ensure 'scan-ocr' 'scan_ocr_pass' @('-X','utf8','scripts\scan_ocr_pass.py','--batch','6')
 
+# Library OCR backlog (user 2026-09-23, "scan them now"): 272 scanned PDFs had been
+# "parsed" off a cover-page text layer and never OCR'd (~100k pages), requeued that day.
+# The three daily OCR runs (8 books / 90 min each) would need over a month, so MinerU
+# eats the whole queue here. The GPU lock in mineru_ocr keeps it from colliding with the
+# daily runs; a halt (env failure) just ends the process and the next tick relaunches.
+# Retires itself on MINERU_QUEUE_EMPTY.
+EnsureUntil 'mineru-queue' $py @('-X','utf8','scripts\mineru_ocr.py','queue','--limit','1000') 'MINERU_QUEUE_EMPTY'
+
 # Jung: DONE 2026-09-02. All 16 translated volumes are on the site (the lane had been
 # dead since the source EPUB moved to Drive, and file_path collisions were rejecting
 # every volume but CW11 - see jung_collected_works.md). Nothing left to translate, and
@@ -231,7 +241,11 @@ EnsureUntil 'husserl' $py @('-X','utf8','scripts\uchimura_auto.py','--author','h
 # NVIDIA only (Gemini answered 503 on every key that day). sekine_build declares
 # STRICT_COMPLETE, so uchimura_auto prints QUEUE_COMPLETE only when every paragraph is
 # filled, or a pass made no progress with zero engine errors - engine outages keep the lane alive.
-EnsureUntil 'sekine' $py @('-X','utf8','scripts\uchimura_auto.py','--author','sekine','--run-queue','--backend','nvidia') 'QUEUE_COMPLETE'
+# Three shards (user OK'd 2026-09-23): latency-bound (~1 paragraph/min per lane), not
+# RPM-bound. --shard assigns whole sections greedily by size, so lanes never share a secN.json.
+EnsureUntil 'sekine-s0' $py @('-X','utf8','scripts\uchimura_auto.py','--author','sekine','--run-queue','--backend','nvidia','--shard','0/3') 'QUEUE_COMPLETE'
+EnsureUntil 'sekine-s1' $py @('-X','utf8','scripts\uchimura_auto.py','--author','sekine','--run-queue','--backend','nvidia','--shard','1/3') 'QUEUE_COMPLETE'
+EnsureUntil 'sekine-s2' $py @('-X','utf8','scripts\uchimura_auto.py','--author','sekine','--run-queue','--backend','nvidia','--shard','2/3') 'QUEUE_COMPLETE'
 
 # Panikkar last volume (vedic-experience, huge): on Haiku per user (idle Claude account).
 # When it finishes, replace this lane with Max Weber (sociology) collected works.
