@@ -496,6 +496,7 @@ python scripts/ocr_with_gemini.py run --engine haiku --book <id>  # Haiku one-at
 | `parse_error` | Meaning | Action |
 |---|---|---|
 | `no extractable text` | In OCR queue | next daily run picks up |
+| `no extractable text (text layer too thin: N chars / P pages)` | 掃描書只帶封面／版權頁文字層，被當成解析成功 | 同上。2026-09-23 起 parse_worker 對「≥20 頁且每頁 <30 字」的 PDF 直接標這個；當天回補 272 本／約 10 萬頁（備份 `output/requeue_thin_text_backup_2026-09-23*.json`）。🚨 判掃描看每頁字數，不看段數 |
 | `OCR ok but R2 push failed:` | OCR done, R2 write failed | next run re-tries cheaply (JSONL kept) |
 | `OCR: …` | Permanent Gemini failure | investigate; possibly reset to `no extractable text` to re-try |
 | `Haiku-OCR: …` | Permanent Haiku failure | investigate; often content-filter rejection |
