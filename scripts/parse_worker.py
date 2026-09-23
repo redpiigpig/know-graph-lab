@@ -596,8 +596,18 @@ def cmd_run(limit=None, only_ids=None):
         try:
             t0 = time.time()
             chunks = parse_book(path, ft)
-            if not chunks:
-                err = "no extractable text"
+            # 🚨 2026-09-23：掃描書常帶一兩頁文字層（封面／版權頁），於是以幾百字「解析成功」、
+            #    永遠進不了 OCR 佇列（韋伯《印度的宗教》536 頁 605 字）。每頁不到 30 字就當掃描書。
+            thin = ""
+            if chunks and ft == 'pdf':
+                import fitz
+                with fitz.open(path) as d:
+                    n_pages = d.page_count
+                n_chars = sum(len(c['content']) for c in chunks)
+                if n_pages >= 20 and n_chars / n_pages < 30:
+                    thin = f" (text layer too thin: {n_chars} chars / {n_pages} pages)"
+            if not chunks or thin:
+                err = "no extractable text" + thin
                 print(f"  ! {err}", file=sys.stderr)
                 mark_error(ebook_id, err)
                 update_checklist_line(ebook_id, '!', f"  ERROR: {err}")
