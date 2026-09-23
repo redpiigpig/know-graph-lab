@@ -247,6 +247,12 @@ EnsureUntil 'sekine-s0' $py @('-X','utf8','scripts\uchimura_auto.py','--author',
 EnsureUntil 'sekine-s1' $py @('-X','utf8','scripts\uchimura_auto.py','--author','sekine','--run-queue','--backend','nvidia','--shard','1/3') 'QUEUE_COMPLETE'
 EnsureUntil 'sekine-s2' $py @('-X','utf8','scripts\uchimura_auto.py','--author','sekine','--run-queue','--backend','nvidia','--shard','2/3') 'QUEUE_COMPLETE'
 
+# Collected works -> one Word reader per book on Drive (user 2026-09-23: "Drive needs a Word
+# for every book"). Incremental: only books whose JSONL is newer than the .docx are rebuilt,
+# so this keeps the Word copies in step with lanes that are still translating (sekine etc.).
+# Exits after one pass; Ensure relaunches it next tick = a 30-min refresh.
+Ensure 'cw-word' 'collected_works_word' @('-X','utf8','scripts\collected_works_word.py')
+
 # Panikkar last volume (vedic-experience, huge): on Haiku per user (idle Claude account).
 # When it finishes, replace this lane with Max Weber (sociology) collected works.
 # Moved off Gemini 2026-08-17 so ACCS owns the Gemini pool (see top of file).
