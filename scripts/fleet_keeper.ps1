@@ -250,6 +250,10 @@ EnsureUntil 'sekine-s0' $py @('-X','utf8','scripts\uchimura_auto.py','--author',
 EnsureUntil 'sekine-s1' $py @('-X','utf8','scripts\uchimura_auto.py','--author','sekine','--run-queue','--backend','nvidia','--shard','1/3') 'QUEUE_COMPLETE'
 EnsureUntil 'sekine-s2' $py @('-X','utf8','scripts\uchimura_auto.py','--author','sekine','--run-queue','--backend','nvidia','--shard','2/3') 'QUEUE_COMPLETE'
 
+# Uchimura, Kyuanroku (2026-09-23): only in the Iwanami zenshu vol.1, not on Aozora. Source
+# text is the MinerU transcription corrected page-by-page (uchimura_zenshu_works.py).
+EnsureUntil 'kyuanroku' $py @('-X','utf8','scripts\uchimura_auto.py','--author','uchimura-zenshu','--run-queue','--backend','nvidia') 'QUEUE_COMPLETE'
+
 # Collected works -> one Word reader per book on Drive (user 2026-09-23: "Drive needs a Word
 # for every book"). Incremental: only books whose JSONL is newer than the .docx are rebuilt,
 # so this keeps the Word copies in step with lanes that are still translating (sekine etc.).

@@ -2636,8 +2636,9 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1893.5,
           category: '信仰三部作',
           languages: ['ja'],
-          status: 'planned',
-          note: '罪與救贖的求索記，警醒社。青空文庫作業中；NDL 有原版。',
+          status: 'in-progress',
+          ebookId: 'd0000000-0000-4000-8000-000000000011',
+          note: '罪與救贖的求索記，警醒社。青空文庫仍在作業中，底本改用岩波《內村鑑三全集》第一卷（1932），逐頁對過原圖校正 MinerU 的漏讀與段落倒置；日文原文＋繁中對照，左欄為岩波版頁碼。另有橄欖出版社中譯本（電子書）。',
         },
         {
           title: '我如何成為基督徒',

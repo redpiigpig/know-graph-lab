@@ -44,7 +44,8 @@ AUTHOR_MODULES = {"uchimura": "uchimura_build", "yanaihara": "yanaihara_build",
                   "azegami": "azegami_build",
                   "kagawa": "kagawa_build",
                   "husserl": "husserl_build",
-                  "sekine": "sekine_build"}
+                  "sekine": "sekine_build",
+                  "uchimura-zenshu": "uchimura_zenshu_works"}
 
 
 def use_author(name: str) -> None:

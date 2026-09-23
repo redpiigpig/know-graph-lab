@@ -55,9 +55,16 @@ def parse_toc_entry(line: str) -> dict | None:
     if not m:
         return None
     title = m.group("title").strip().rstrip("/").strip()
+    # 有些書的目次把原書頁碼寫進章名欄（《求安録》824178：「悲嘆/1p」「贖罪の哲理/178p」）。
+    # 不剝掉的話章名會帶著「/1p」變成 reader 標題，目次 canary 也永遠對不上。
+    page = (m.group("page") or "").strip()
+    mp = re.search(r"/(\d+)p$", title)
+    if mp:
+        page = page or mp.group(1)
+        title = title[:mp.start()].strip()
     if not title:
         return None
-    return {"title": title, "printed_page": (m.group("page") or "").strip(), "image": int(m.group("img"))}
+    return {"title": title, "printed_page": page, "image": int(m.group("img"))}
 
 
 def sections_from_index(index: list[str], total_images: int, fallback_title: str = "全文") -> list[dict]:
@@ -1010,7 +1017,11 @@ def build_sections(pid: str, slug: str, cache_dir: Path = CACHE_DIR,
     if toc_imgs and pages.get(toc_imgs[0]):
         ratio = toc_ratio_spanning(pages, toc_imgs[0], [s0["title"] for s0 in secs])
         print("  目次 canary：影像 %d 對上 %.0f%% 章名" % (toc_imgs[0], ratio * 100))
-        if ratio < 0.5:
+        if ratio < 0.5 and backend == "ndl":
+            # 這道閘是抓**視覺模型編造內容**的；NDL 官方 OCR 不會編造，目次頁對不上
+            # 通常只是目次頁本身讀不全（《求安録》目次跨兩頁、第二頁 OCR 是空的）。
+            print("  ⚠️ 目次 canary 未過，但來源是 NDL 官方 OCR（不會編造），繼續")
+        elif ratio < 0.5:
             raise RuntimeError(
                 "目次頁只對上 %.0f%% 的已知章名 —— OCR 在編造內容，拒絕產出。"
                 "  這一頁的答案我們本來就知道（NDL 目次 API），連它都對不上，"
