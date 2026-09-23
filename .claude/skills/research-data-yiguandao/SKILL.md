@@ -1,6 +1,6 @@
 ---
 name: research-data-yiguandao
-description: 一貫道國家檔案專案（中研院社會所委託、與元智大學鍾雲鶯老師協作）的判讀與交件流程 —— 把檔案局／國史館的檔案盤成清單、讀出可做的題目、出成 /research-data/yiguandao 的分頁網站與 Drive「玄奘/博一上/研究助理」的 Word 檔。含檔案分佈的判讀原則、十項已確認的發現、六個研究方向、以及這批材料特有的四種「看起來成功的失敗」。Use when 要更新一貫道研究報告或年表、補下載或申請調閱檔案、OCR 影像、寫每月進度報告、重出 Word 交件檔，或使用者提到「一貫道」「鍾雲鶯」「捕鼠案」「敵偽組織及活動案」「可疑分子考管」「寧靜專案」。抓取層（archives_gov.py／archives_images.py）見 [[research-data-christianity]] 的〈國家檔案〉一節。
+description: 一貫道國家檔案專案（中研院社會所委託、與元智大學鍾雲鶯老師協作）的判讀與交件流程 —— 把檔案局／國史館的檔案盤成清單、讀出可做的題目、出成 /research-data/yiguandao 的分頁網站與 Drive「玄奘/博一上/工作/中研院助理」的 Word 檔。含檔案分佈的判讀原則、十項已確認的發現、六個研究方向、以及這批材料特有的四種「看起來成功的失敗」。Use when 要更新一貫道研究報告或年表、補下載或申請調閱檔案、OCR 影像、寫每月進度報告、重出 Word 交件檔，或使用者提到「一貫道」「鍾雲鶯」「捕鼠案」「敵偽組織及活動案」「可疑分子考管」「寧靜專案」。抓取層（archives_gov.py／archives_images.py）見 [[research-data-christianity]] 的〈國家檔案〉一節。
 ---
 
 > ⚙️ 所有中文一律繁體（[[feedback_traditional_chinese_only]]）。
@@ -24,7 +24,8 @@ description: 一貫道國家檔案專案（中研院社會所委託、與元智�
 | 研究報告 | 材料盤點＋十項發現＋六個方向 | `…/yiguandao/report.md` |
 | 年表 | 七個分期、57 則事件 | `…/yiguandao/timeline.json` |
 | 每月進度 | markdown 進版控 | `…/yiguandao/progress/YYYY-MM.md` |
-| 交件 Word | 00 進度／01 報告／02 年表／03 清單／04 書目 | Drive `玄奘/博一上/研究助理/` |
+| 交件 Word | 00 進度／01 報告／02 年表／03 清單／04 書目 | Drive `玄奘/博一上/工作/中研院助理/` |
+| 檔案×論文比對 | 捕鼠案／敵偽案逐頁對照鍾文初稿（引用核對＋未用材料＋十個延伸問題＋待核影像清單） | `…/yiguandao/analysis/2026-09_archives-vs-paper.md` → Drive `…/中研院助理/06_2026-09_…初步比對（勿外傳）.docx` |
 | 檔案原件 | 加密 docx 與 PDF（**使用者自備，腳本不要碰**） | Drive `…/研究助理/05_檔案全文/` |
 
 **產檔**：`yiguandao_inventory.py`（盤影像）→ `yiguandao_r2_sync.py`（上 R2）→ `yiguandao_docx.py`（出 Word）。
@@ -130,11 +131,22 @@ Word 排版沿用 `build_proposal_docx.build()`，不要各寫各的。
 - 🚨 **OCR 出來的字不要直接進論文。** 這批是手寫毛筆公文、直排、繁簡與異體字混雜、
   大量韻目代日（「亥真」「戍皓」「申養」）。凡要引用的段落一律回頭核對影像。
 
+## 八、2026-09 檔案×論文比對：鍾文初稿的判讀問題（引用前先看）
+
+全文與頁碼見 `analysis/2026-09_archives-vs-paper.md`。引文錄文大致忠實，錯在**誰發的文、公文流向、日期、誰的主張**。
+最關鍵四處：行政院 34.11 極密代電分兩版、緝捕張天然只在**雲南版**（敵偽 p.41）；最高法院判決的四點是**檢察官聲請意旨**（p.25）；
+「龍雲豔」「張鎮戍與文孝權」都是把**韻目代日讀成人名**（p.39；捕鼠 p.68）；崇華堂財產**沒有歸還**，訴願被駁回（p.104、p.114）。
+另：捕鼠案河南報告作者是許肅中寄黃仲望（p.59），不是張履中／李景才；目空夢道代電是 36.10.18「酉巧」（p.50）。
+
+🚨 **PDF 文字層直排欄序是反的**：先按欄重排再讀（scratchpad 做過 `dw_rev.txt`），否則會把後一欄的字接到前一欄。
+🚨 **論文引檔用原檔蓋印頁碼**（0706、02519），不是 PDF 頁碼，對照時兩者都要標。
+🚨 build_proposal_docx 不認 `- ` 清單（會印出「- 」），用「・」；四欄表要自己設 tblGrid 欄寬＋fixed layout，否則平均分欄、最後一欄擠成一字一行。
+
 ## 記憶庫併入：project_yiguandao_archives
 
 中研院社會所委託研究一貫道國家檔案；元智大學鍾雲鶯老師〈敵偽、附匪與邪教？〉（《民俗曲藝》231，2026.3，頁 61–107）用的是同一批材料。**2026-09-26 前後要與鍾老師討論新方向**。
 
-材料：檔案局書目 417 筆／影像 28 案 3,484 張（Drive `研究資料/國家檔案調閱/影像/yiguandao/`）／解密全文兩份 12.2 萬字。站上 `/research-data/yiguandao` 六分頁（需登入）。交件 Word 在 Drive `玄奘/博一上/研究助理/`；**`05_檔案全文/` 由使用者自備原件，腳本不要碰**（我把檢索用 txt 轉成 Word 放進去，格式全跑掉被刪）。流程見 skill [[research-data-yiguandao]]。
+材料：檔案局書目 417 筆／影像 28 案 3,484 張（Drive `研究資料/國家檔案調閱/影像/yiguandao/`）／解密全文兩份 12.2 萬字。站上 `/research-data/yiguandao` 六分頁（需登入）。交件 Word 在 Drive `玄奘/博一上/工作/中研院助理/`；**`05_檔案全文/` 由使用者自備原件，腳本不要碰**（我把檢索用 txt 轉成 Word 放進去，格式全跑掉被刪）。流程見 skill [[research-data-yiguandao]]。
 
 🚨 **`public/content/research-data/yiguandao/` 整夾已 gitignore（2026-09-06）**：repo 是公開的，那裡有檔案局目錄的人名加上「此人被列管 21 年」這類分析。**本機那份是唯一正本，git 不保管**；線上走 R2 `research-private/yiguandao/` ＋ 需登入的 `yiguandao-file` 端點。改完內容一定要跑 `scripts/yiguandao_r2_sync.py`，不跑的話線上是舊資料而頁面顯示得好好的。已推送的舊 commit 依使用者決定不改寫歷史。
 

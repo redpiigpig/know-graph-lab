@@ -3,7 +3,7 @@
 
     python -X utf8 scripts/yiguandao_docx.py
 
-去處：G:\\我的雲端硬碟\\玄奘\\博一上\\研究助理\\
+去處：G:\我的雲端硬碟\玄奘\博一上\工作\中研院助理\
     01_研究報告／02_年表／03_檔案清單／04_引用書目／05_檔案全文／00_進度
 
 排版沿用 build_proposal_docx.build()（A4、12pt 新細明體、行距 1.5、首行縮排兩字、
@@ -26,7 +26,7 @@ from build_proposal_docx import build as md_to_docx  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 CONTENT = ROOT / "public/content/research-data/yiguandao"
-DEST = Path(r"G:/我的雲端硬碟/玄奘/博一上/研究助理")
+DEST = Path(r"G:/我的雲端硬碟/玄奘/博一上/工作/中研院助理")
 TMP = ROOT / "output/yiguandao-docx"          # 中繼 markdown，不進版控
 
 COVER = """玄奘大學宗教與文化學系博士班
