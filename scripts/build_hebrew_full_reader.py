@@ -1112,7 +1112,7 @@ def add_front_matter(document: Document, data: dict) -> None:
     cards = [
         ("1", "先學本課詞表", "第1–33課就是 BBH2 第3–35章的原章詞表，詞數依課本而定；第34–50課以頻率與專名延伸補足一千詞。"),
         ("2", "做十題翻譯", "由原文譯成繁體中文，每課十題；本課二十個詞都會在題目裡出現，標有出處的句子引自原典。"),
-        ("3", "讀完整原文", "聖經正文保留 WLC 母音點與 cantillation；禱文及文章保留或明示編者附點。"),
+        ("3", "讀完整原文", "聖經正文保留 WLC 母音點與重音記號；禱文及文章保留或明示編者附點。"),
     ]
     table = document.add_table(rows=1, cols=3)
     set_table_geometry(table, [47, 47, 47])
@@ -1141,6 +1141,14 @@ def add_front_matter(document: Document, data: dict) -> None:
                        "禱文與拉比文章的來源逐篇列於冊末來源表。", size=8.8, color=MUTED)
 
 
+def toc_kind_label(reading: dict) -> str:
+    """目錄裡的類別欄要說實話：長章按八頁預算裁成節錄之後，不能再標「完整章」。"""
+    excerpt = reading.get("completeness") == "excerpt"
+    if reading["kind"] == "bible_chapter":
+        return "節錄" if excerpt else "完整章"
+    return "禱文／文章（節錄）" if excerpt else "禱文／文章"
+
+
 def add_toc(document: Document, data: dict) -> None:
     add_contents(
         document,
@@ -1148,7 +1156,7 @@ def add_toc(document: Document, data: dict) -> None:
             (
                 f"{lesson['lesson']:02d}",
                 lesson["title"],
-                "完整章" if lesson["reading"]["kind"] == "bible_chapter" else "禱文／文章",
+                toc_kind_label(lesson["reading"]),
             )
             for lesson in data["lessons"]
         ],
@@ -1450,7 +1458,15 @@ def add_prayer_reading(document: Document, reading: dict) -> None:
     if reading.get("completeness") == "excerpt":
         add_body(document, reading["extentZh"], size=CAPTION_PT, color=MUTED)
     for segment in reading["segments"]:
-        text = clean_title_from_text(segment["text"], reading["title_he"])
+        # 🚨 禱文的篇名多半就是它的起句（מוֹדֶה אֲנִי、אֲדוֹן עוֹלָם、יִגְדַּל…）。
+        # 第一版在這裡把篇名從正文開頭剝掉，九篇禱文就從第二個片語印起，
+        # 整句中譯卻含著開頭字（p208 只剩「而有了世界」）。篇名是標題，
+        # 起句仍是正文，兩者都要印。哈加達的步驟名（קַדֵּשׁ）才是純標記。
+        text = segment["text"].strip()
+        if segment.get("kind") == "mixed" and "יש ל" in (segment.get("sourceMarkup") or ""):
+            # 西杜爾的排版指示（「אֱלֹהֵיכֶם 要與 אֱמֶת 連讀」）不是禱文本文；
+            # 第一版把它印成孤立的 ל 並配上詞義「確實是」。
+            continue
         if not text:
             continue
         if not has_hebrew(text):
@@ -1751,12 +1767,11 @@ def add_back_indices(document: Document, data: dict) -> None:
     # 標籤已經另起一頁了；標題再來一次，標籤就單獨佔掉一整頁。
     heading = document.add_heading("來源與成品檢核", level=1)
     for text in (
-        "50課；每課固定20詞；總計1,000詞。",
-        "每課10題原文譯繁中練習；總計500題，本課二十詞全數入題。",
-        "第1–25課為25個完整聖經章；第26–50課為25篇完整禱文或文章。",
-        "冊末逾越節禮文按完整流程另列，不抵充25篇；其後另附數字、親屬、曆法與分類專名四張對照表。",
-        "聖經希伯來文保留完整母音點與 cantillation；全部詞彙列 BBH2 課本式音標。",
-        "線上音訊與紙本共用 lesson ID；正式錄音須經校訂，不以裝置TTS計入完成。",
+        "五十課；每課二十詞，共一千詞。",
+        "每課十題原文譯繁中練習，共五百題。",
+        "第 1–25 課為二十五個聖經章（長章按版面節錄，範圍標於各課讀本之首）；第 26–50 課為二十五篇禱文或拉比文章。",
+        "冊末逾越節禮文按完整流程另列，不計入二十五篇；其後另附數字、親屬、曆法與分類專名四張對照表。",
+        "聖經希伯來文保留完整母音點與重音記號；全部詞彙列 BBH2 課本式音標。",
     ):
         p = document.add_paragraph(style="List Bullet")
         set_run_font(p.add_run(text), FONT_ZH, 9.2)
@@ -1765,7 +1780,7 @@ def add_back_indices(document: Document, data: dict) -> None:
     add_body(document, "繁中聖經對照：《和合本修訂版》（2010，RCUV2 上帝版，© 香港聖經公會；私人授權使用）。", size=8.5, color=MUTED)
     add_body(document, "詞彙：Pratico–Van Pelt《Basics of Biblical Hebrew》第二版詞序，"
                        "其後依語料詞頻延伸；音標欄使用該書的標音系統。", size=8.5, color=MUTED)
-    add_body(document, "禱文、拉比文章與逾越節禮文：來源逐篇列於下表。", size=8.5, color=MUTED)
+    add_body(document, "禱文、拉比文章與逾越節禮文：來源標於各篇之末。", size=8.5, color=MUTED)
 
 
 def build(data: dict) -> Path:

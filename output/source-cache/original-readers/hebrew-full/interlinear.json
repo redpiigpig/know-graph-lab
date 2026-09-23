@@ -12392,7 +12392,7 @@
      "ordinal": 5,
      "word": "בָהֶ֨ם",
      "trailing": "",
-     "glossZh": "在他們裏面"
+     "glossZh": "在他們裡面"
     },
     {
      "ordinal": 6,
@@ -12810,7 +12810,7 @@
      "ordinal": 3,
      "word": "בָכֶם֙",
      "trailing": "",
-     "glossZh": "在你們裏面"
+     "glossZh": "在你們裡面"
     },
     {
      "ordinal": 4,
@@ -21882,7 +21882,7 @@
      "ordinal": 10,
      "word": "שָׂכִ֛יר",
      "trailing": "",
-     "glossZh": "雇工的"
+     "glossZh": "僱工的"
     },
     {
      "ordinal": 11,
@@ -23648,7 +23648,7 @@
      "ordinal": 2,
      "word": "תְּחַלֵּ֥ל",
      "trailing": "",
-     "glossZh": "你玷污"
+     "glossZh": "你玷汙"
     },
     {
      "ordinal": 3,
@@ -23818,7 +23818,7 @@
      "ordinal": 9,
      "word": "לְטָמְאָ֣ה",
      "trailing": "",
-     "glossZh": "以致被玷污"
+     "glossZh": "以致被玷汙"
     },
     {
      "ordinal": 10,
@@ -35794,13 +35794,13 @@
      "ordinal": 1,
      "word": "יִבְחַר֙",
      "trailing": "",
-     "glossZh": "祂選擇"
+     "glossZh": "他選擇（以色列）"
     },
     {
      "ordinal": 2,
      "word": "אֱלֹהִ֣ים",
      "trailing": "",
-     "glossZh": "上帝"
+     "glossZh": "神明（複數）"
     },
     {
      "ordinal": 3,
@@ -45028,7 +45028,7 @@
      "ordinal": 3,
      "word": "הַיָּמִין",
      "trailing": "",
-     "glossZh": "右手"
+     "glossZh": "日子（末日）"
     },
     {
      "ordinal": 4,
@@ -46922,7 +46922,7 @@
      "ordinal": 24,
      "word": "וְזוֹכֵר",
      "trailing": "",
-     "glossZh": "並記念的"
+     "glossZh": "並記唸的"
     },
     {
      "ordinal": 25,
@@ -54853,7 +54853,7 @@
      "glossZh": "活下去"
     }
    ],
-   "senseZh": "並且人數增多。正如經上所記：『我使你增多，如同田野的植物；你便增多，漸漸長大，達到極美的妝飾。雙乳已經發育，頭髮已經長出，你卻仍然赤身露體。我從你身旁路過，見你掙扎在血中，就對你說：你雖在血中，仍要活下去！對你說：你雖在血中，仍要活下去！』",
+   "senseZh": "並且人數增多。正如經上所記：『我使你增多，如同田野的植物；你便增多，漸漸長大，達到極美的妝飾。雙乳已經發育，頭髮已經長出，你卻仍然赤身露體。我從你身旁路過，見你掙紮在血中，就對你說：你雖在血中，仍要活下去！對你說：你雖在血中，仍要活下去！』",
    "engine": "gemini-3.5-flash"
   },
   "haggadah:haggadah-05-027": {
@@ -55796,7 +55796,7 @@
    "id": "haggadah:haggadah-05-032",
    "kind": "haggadah_segment",
    "ref": "haggadah-05 / First Fruits Declaration / 12",
-   "text": "וַנִּצְעַק אֶל־ה' אֱלֹהֵי אֲבֹתֵינוּ – כְּמָה שֶּׁנֶּאֱמַר: וַיְהִי בַיָּמִים הָרַבִּים הָהֵם וַיָּמָת מֶלֶךְ מִצְרַיִם, וַיֵּאָנְחוּ בְנֵי־יִשְׂרָאֵל מִ־הָעֲבוֹדָה וַיִּזְעָקוּ, וַתַּעַל שַׁוְעָתָם אֶל־הָאֱלֹהִים מִן הָעֲבֹדָה.",
+   "text": "וַנִּצְעַק אֶל־ה' אֱלֹהֵי אֲבֹתֵינוּ – כְּמָה שֶּׁנֶּאֱמַר: וַיְהִי בַיָּמִים הָרַבִּים הָהֵם וַיָּמָת מֶלֶךְ מִצְרַיִם, וַיֵּאָנְחוּ בְנֵי־יִשְׂרָאֵל מִן־הָעֲבוֹדָה וַיִּזְעָקוּ, וַתַּעַל שַׁוְעָתָם אֶל־הָאֱלֹהִים מִן הָעֲבֹדָה.",
    "tokens": [
     {
      "ordinal": 1,
@@ -55902,9 +55902,9 @@
     },
     {
      "ordinal": 18,
-     "word": "מִ",
+     "word": "מִן",
      "trailing": "־",
-     "glossZh": "因著"
+     "glossZh": "從"
     },
     {
      "ordinal": 19,
@@ -57370,10 +57370,10 @@
      "ordinal": 1,
      "word": "כִּנִּים",
      "trailing": "",
-     "glossZh": "虱子"
+     "glossZh": "蝨子"
     }
    ],
-   "senseZh": "虱災。",
+   "senseZh": "蝨災。",
    "engine": "gemini-3.5-flash"
   },
   "haggadah:haggadah-05-054": {
@@ -59608,7 +59608,7 @@
      "ordinal": 1,
      "word": "בִּרְשׁוּת",
      "trailing": "",
-     "glossZh": "在准許下"
+     "glossZh": "在準許下"
     },
     {
      "ordinal": 2,
@@ -62520,7 +62520,7 @@
      "ordinal": 15,
      "word": "נִגְלָה",
      "trailing": "",
-     "glossZh": "顯明了"
+     "glossZh": "顯明瞭"
     },
     {
      "ordinal": 16,
@@ -62559,7 +62559,7 @@
      "glossZh": "夜間"
     }
    ],
-   "senseZh": "褻瀆者謀劃向所渴望的聖城搖手，你卻在夜間使他的軍隊成為枯乾的屍首。貝爾和他的神像在黑夜中屈身傾倒；向那大蒙眷愛的人，夜間異象的奧秘顯明了。這事發生在半夜。",
+   "senseZh": "褻瀆者謀劃向所渴望的聖城搖手，你卻在夜間使他的軍隊成為枯乾的屍首。貝爾和他的神像在黑夜中屈身傾倒；向那大蒙眷愛的人，夜間異象的奧秘顯明瞭。這事發生在半夜。",
    "engine": "gemini-3.5-flash"
   },
   "haggadah:haggadah-14-012": {
@@ -73332,7 +73332,7 @@
      "ordinal": 10,
      "word": "צְבָעִים֙",
      "trailing": "",
-     "glossZh": "彩衣"
+     "glossZh": "綵衣"
     },
     {
      "ordinal": 11,
@@ -73350,7 +73350,7 @@
      "ordinal": 13,
      "word": "צְבָעִ֖ים",
      "trailing": "",
-     "glossZh": "彩衣"
+     "glossZh": "綵衣"
     },
     {
      "ordinal": 14,
@@ -73362,7 +73362,7 @@
      "ordinal": 15,
      "word": "צֶ֥בַע",
      "trailing": "",
-     "glossZh": "彩衣"
+     "glossZh": "綵衣"
     },
     {
      "ordinal": 16,
@@ -73982,55 +73982,43 @@
    "id": "prayer:hbo-prayer-14-shema-003",
    "kind": "prayer_segment",
    "ref": "hbo-prayer-14-shema / 3",
-   "text": "שְׁמַ ע יִשְׂרָאֵל יְהֹוָה אֱלֹהֵֽינוּ יְהֹוָה אֶחָ ד :",
+   "text": "שְׁמַע יִשְׂרָאֵל יְהֹוָה אֱלֹהֵֽינוּ יְהֹוָה אֶחָד:",
    "tokens": [
     {
      "ordinal": 1,
-     "word": "שְׁמַ",
+     "word": "שְׁמַע",
      "trailing": "",
      "glossZh": "你要聽"
     },
     {
      "ordinal": 2,
-     "word": "ע",
-     "trailing": "",
-     "glossZh": "聽啊"
-    },
-    {
-     "ordinal": 3,
      "word": "יִשְׂרָאֵל",
      "trailing": "",
      "glossZh": "以色列"
     },
     {
-     "ordinal": 4,
+     "ordinal": 3,
      "word": "יְהֹוָה",
      "trailing": "",
      "glossZh": "耶和華"
     },
     {
-     "ordinal": 5,
+     "ordinal": 4,
      "word": "אֱלֹהֵֽינוּ",
      "trailing": "",
      "glossZh": "我們的上帝"
     },
     {
-     "ordinal": 6,
+     "ordinal": 5,
      "word": "יְהֹוָה",
      "trailing": "",
      "glossZh": "耶和華"
     },
     {
-     "ordinal": 7,
-     "word": "אֶחָ",
-     "trailing": "",
-     "glossZh": "是獨一"
-    },
-    {
-     "ordinal": 8,
-     "word": "ד",
+     "ordinal": 6,
+     "word": "אֶחָד",
      "trailing": ":",
-     "glossZh": "一位"
+     "glossZh": "獨一"
     }
    ],
    "senseZh": "以色列啊，你要聽！耶和華我們的上帝是獨一的耶和華。",
@@ -87854,7 +87842,7 @@
      "ordinal": 11,
      "word": "בָּאָ֖רֶץ",
      "trailing": "",
-     "glossZh": "在地裏"
+     "glossZh": "在地裡"
     },
     {
      "ordinal": 12,
@@ -90124,7 +90112,7 @@
      "ordinal": 2,
      "word": "יִֽטַמְּא֣וּ",
      "trailing": "",
-     "glossZh": "玷污自己"
+     "glossZh": "玷汙自己"
     },
     {
      "ordinal": 3,
@@ -100558,7 +100546,7 @@
      "ordinal": 3,
      "word": "בְמַעֲלֹ֖ת",
      "trailing": "",
-     "glossZh": "用台階"
+     "glossZh": "用臺階"
     },
     {
      "ordinal": 4,
@@ -101060,7 +101048,7 @@
      "ordinal": 16,
      "word": "דִּבַּֽרְתָּ",
      "trailing": "׃",
-     "glossZh": "你說过"
+     "glossZh": "你說過"
     }
    ],
    "senseZh": "",
@@ -107594,7 +107582,7 @@
      "ordinal": 61,
      "word": "זָכוּר",
      "trailing": "",
-     "glossZh": "被記念的"
+     "glossZh": "被記唸的"
     },
     {
      "ordinal": 62,
@@ -110194,7 +110182,7 @@
      "ordinal": 7,
      "word": "נִטְמְאִ֤֨ים",
      "trailing": "",
-     "glossZh": "自取玷污"
+     "glossZh": "自取玷汙"
     },
     {
      "ordinal": 8,
@@ -118084,7 +118072,7 @@
      "ordinal": 8,
      "word": "מִשְׂגַּבִּי֙",
      "trailing": "",
-     "glossZh": "我的高台"
+     "glossZh": "我的高臺"
     },
     {
      "ordinal": 9,

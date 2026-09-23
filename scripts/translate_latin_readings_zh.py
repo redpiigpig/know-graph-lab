@@ -152,10 +152,47 @@ def strip_header(text: str) -> str:
     return chr(10).join(lines[start:]).strip()
 
 
+# 抓回來的教會文獻不是乾淨的正文：DCO 的 PDF 轉文字每一頁頁尾留著
+# 「www.internetsv.info」與孤立的頁碼「1」，repo 裡的 trent-*.txt 檔頭是
+# 「# Trent Session 4 — Latin / # Source: …」的 markdown 標頭，Latin Library 的
+# 文本帶著未解碼的 HTML 實體（&lt;oratio&gt; 是編者補字、&#171;…&#187; 是引號、
+# &#151; 是破折號、&#134; 是校勘十字），梵一與通諭的小標題前面有「##」。
+# 2026-09-23 的逐頁校對在成書裡數出三十多處這種東西，其中兩處還被逐詞對譯成
+# 「Source→來源」。這一支是唯一的清洗點：翻譯前的切段、builder 的備援讀檔、
+# 快取的修補都從這裡過。
+_DROP_PARAGRAPH = re.compile(r"^\s*(#\s|www\.|https?://|\d+\s*$)")
+_HEADING_MARK = re.compile(r"^\s*#{1,6}\s*")
+_EDITORIAL_BRACKETS = re.compile(r"&lt;([^&]*)&gt;")
+_ENTITIES = {"&#171;": "«", "&#187;": "»", "&#151;": "—", "&#150;": "–", "&#134;": "",
+             "&#8217;": "’", "&#8216;": "‘", "&nbsp;": " ", "&amp;": "&"}
+
+
+def clean_paragraph(paragraph: str) -> str:
+    """One paragraph of scraped Latin as it should print; empty string = drop it."""
+    text = paragraph.strip()
+    if not text or _DROP_PARAGRAPH.match(text):
+        return ""
+    text = _HEADING_MARK.sub("", text)
+    text = _EDITORIAL_BRACKETS.sub(r"\1", text)
+    for entity, replacement in _ENTITIES.items():
+        text = text.replace(entity, replacement)
+    text = re.sub(r"&#\d+;|&[a-z]+;", "", text)
+    text = re.sub(r"\[\^\[?\d+\]?\]", "", text)  # markdown footnote markers [^[2]]
+    # The Latin Library's footnote references sit inside the sentence
+    # (「Locus [1] autem」,「etenim [4] vere」); a paragraph-initial or
+    # sentence-initial [n] is the edition's section number and stays.
+    text = re.sub(r"(?<=[A-Za-zÀ-ſ,]) \[\d+\](?= [a-z])", "", text)
+    text = re.sub(r"(?<=\w)\+", "", text)  # the editor's crux (quo+) is not a letter
+    # The Latin Library closes some files with an English credit line inside
+    # the last paragraph (Confessions 1: "Submitted by James J. O'Donnell …").
+    text = re.sub(r"\s+", " ", text).strip()
+    return re.sub(r"Submitted by .*$", "", text).strip()
+
+
 def segments(text: str, size: int = SEGMENT_WORDS) -> list[list[str]]:
     """Group paragraphs into batches of roughly `size` Latin words."""
-    paragraphs = [re.sub(r"\s+", " ", p).strip()
-                  for p in re.split(r"\n\s*\n", text) if p.strip()]
+    paragraphs = [clean_paragraph(p) for p in re.split(r"\n\s*\n", text) if p.strip()]
+    paragraphs = [p for p in paragraphs if p]
     if not paragraphs:
         return []
     # A paragraph longer than the whole budget has to be cut, or the request

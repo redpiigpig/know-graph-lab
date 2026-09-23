@@ -58,3 +58,8 @@ Start-Process "C:\Program Files\Google\Drive File Stream\launch.bat" -WindowStyl
 
 約 20 秒後就掛回來；未上傳的檔在本機快取，重啟後接著傳，不會掉。
 別改用 Google Drive 連接器頂替——它只能逐檔讀寫小檔，撐不起管線的幾十 MB 進出。
+
+## 🚨 一個 session 同時最多開 3 個 agent
+
+不論任務多大，並行 agent 上限 3 個，要多就排隊接力。2026-09-23 一次開 20 個，
+兩分鐘燒光五小時的額度，二十個一個都沒做完。

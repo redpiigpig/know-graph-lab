@@ -35,6 +35,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import original_reader_llm as llm
+from translate_ebook_to_zh import _to_traditional as to_traditional
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -300,6 +301,9 @@ def gloss_unit(unit: dict) -> dict:
     rows = []
     for index, token in enumerate(tokens):
         gloss = answers.get(index + 1, "") if token["glossable"] else ""
+        # 繁體是出口閘不是提示詞：救急那層（Haiku）會回簡體，2026-09-23 成書裡
+        # 印出「可见」「为了」共 112 處。
+        gloss = to_traditional(gloss)
         if token["glossable"]:
             problem = validate(gloss)
             if problem:
@@ -311,6 +315,7 @@ def gloss_unit(unit: dict) -> dict:
         whole = llm.call_model(
             WHOLE_PROMPT.format(ref=unit["ref"], text=unit["text"]), max_tokens=1500
         ).strip()
+        whole = to_traditional(whole)
         if GREEK_RE.search(whole) or not whole:
             raise ValueError(f"{unit['ref']}：整段中譯不合格")
         result["translationZh"] = whole

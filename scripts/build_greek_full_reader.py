@@ -449,6 +449,17 @@ def add_exercises(document: Document, block: dict | None, lesson: int) -> None:
         paragraph_rule(answer, color=RULE, size="3", space="1")
 
 
+def source_line(source: str) -> str:
+    """The edition, not the fetch log.
+
+    The plan's `source` field doubles as the maintainer's note — after the em
+    dash it says things like「pdftotext UTF-8 抽取」or「見拉丁欄所據的…」, written
+    for whoever re-fetches the text. The 2026-09-23 proofread found both on the
+    printed page. Only the edition before the dash belongs under a reading.
+    """
+    return source.split(" — ")[0].split("—")[0].strip().rstrip("，,")
+
+
 def add_reading(document: Document, lesson: dict, interlinear: dict) -> None:
     reading = lesson["reading"]
     is_scripture = reading["kind"] == "scripture_chapter"
@@ -459,7 +470,7 @@ def add_reading(document: Document, lesson: dict, interlinear: dict) -> None:
     # 讓它從頁首開始，翻到就是整篇。
     page_break(document)
     document.add_heading(label, level=2)
-    add_body(document, reading["source"], size=CAPTION_PT, color=MUTED)
+    add_body(document, source_line(reading["source"]), size=CAPTION_PT, color=MUTED)
     if reading.get("numberingNote"):
         add_body(document, reading["numberingNote"], size=CAPTION_PT, color=MUTED)
 
@@ -518,7 +529,7 @@ def add_liturgy(document: Document, liturgy: dict, interlinear: dict, *,
     subtitle.paragraph_format.space_after = Pt(8)
     add_greek_run(subtitle, liturgy["titleGrc"], TRANSLATION_PT, color=MUTED)
     add_body(document, liturgy["placement"], size=CAPTION_PT, color=MUTED)
-    add_body(document, liturgy["roleDerivationNote"], size=CAPTION_PT, color=MUTED)
+    # roleDerivationNote（「角色由排版推定…不需重跑整份」）是製作紀錄，留在資料裡不印。
 
     current = ""
     for step in liturgy["steps"]:
@@ -638,38 +649,56 @@ def add_cover(document: Document, master: dict, volume: dict, part: dict) -> Non
     add_latin_and_cjk(textbook, line, CAPTION_PT)
 
 
+TEXT_POLICY_LABELS = {
+    "newTestament": "新約底本",
+    "septuagintAndBeyond": "七十士譯本與其後",
+    "chineseBible": "中文聖經",
+    "chineseDeuterocanon": "次經中文",
+    "chinesePseudepigrapha": "偽經中文",
+    "psalmNumbering": "詩篇編號",
+    "jeremiahNumbering": "耶利米書編號",
+    "churchDocuments": "教會文獻",
+}
+
+
+def toc_kind_label(reading: dict) -> str:
+    """目錄的類別欄要說實話：長章按八頁預算裁成節錄之後，不能再標「完整章」。"""
+    excerpt = reading.get("completeness") == "excerpt"
+    if reading["kind"] == "scripture_chapter":
+        return "節錄" if excerpt else "完整章"
+    return "讀本（節錄）" if excerpt else "讀本"
+
+
 def add_front_matter(document: Document, master: dict, volume: dict, part: dict,
                      exercises: dict) -> None:
     add_cover(document, master, volume, part)
     page_break(document)
     document.add_heading("體例與來源", level=1)
     for key, value in master["textPolicy"].items():
-        add_body(document, f"{key}：{value}", size=CAPTION_PT, color=INK)
+        # 欄位名是程式的（newTestament、chineseBible…），紙上要印中文標目。
+        add_body(document, f"{TEXT_POLICY_LABELS.get(key, key)}：{value}", size=CAPTION_PT, color=INK)
     counts = volume["counts"]
     lessons = part_lessons(volume, part)
     add_body(
         document,
-        f"本冊為{volume['subtitle']}的第 {part['first']:02d}–{part['last']:02d} 課，共 {len(lessons)} 課・"
-        f"{sum(lesson['vocabularyCount'] for lesson in lessons)} 詞・"
-        f"{sum(len(exercises.get(lesson['lesson'], {}).get('items', [])) for lesson in lessons)} 題翻譯練習・"
-        f"{len(lessons)} 篇讀本。"
-        "課次編號與線上讀本一致，分冊只是印刷單位（一本不超過 500 頁），不改變課的次序。",
+        f"本冊為{volume['title']}，{volume['subtitle']}；收第 {part['first']:02d}–{part['last']:02d} 課，共 {len(lessons)} 課・"
+        f"{sum(lesson['vocabularyCount'] for lesson in lessons):,} 詞・"
+        f"{sum(len(exercises.get(lesson['lesson'], {}).get('items', [])) for lesson in lessons):,} 題翻譯練習・"
+        f"{len(lessons)} 篇讀本。",
         size=CAPTION_PT,
         color=MUTED,
     )
     add_body(
         document,
-        f"這一部分全 {counts['vocabulary']} 詞、{counts['readings']} 篇讀本，"
-        f"每課十題翻譯練習；"
-        f"全書合計 {master['counts']['vocabulary']} 詞、1,000 題翻譯練習、"
-        f"連續正文 {master['counts']['totalRunningWords']} 詞。",
+        f"全書兩冊合計 {master['counts']['vocabulary']:,} 詞、1,000 題翻譯練習、"
+        f"連續正文 {master['counts']['totalRunningWords']:,} 詞。",
         size=CAPTION_PT,
         color=MUTED,
     )
     for half, label in volume["corpusByHalf"].items():
         add_body(document, f"第 {half} 課：{label}", size=CAPTION_PT, color=MUTED)
-    add_body(document, f"發布狀態：{master['releaseStatus']}", size=CAPTION_PT, color=MUTED)
-    add_body(document, f"音訊：{master['audio']['status']}　{master['audio']['policy']}", size=CAPTION_PT, color=MUTED)
+    # 🚨 發布狀態碼與音訊規則是給維護者看的欄位，不印在課本裡（2026-09-23 校對：
+    # 「content_complete_layout_pending／TTS 不算數」印在體例頁上）。
     page_break(document)
     add_contents(
         document,
@@ -677,7 +706,7 @@ def add_front_matter(document: Document, master: dict, volume: dict, part: dict,
             (
                 f"{lesson['lesson']:02d}",
                 lesson["reading"]["titleZh"],
-                "完整章" if lesson["reading"]["kind"] == "scripture_chapter" else "教父讀本",
+                toc_kind_label(lesson["reading"]),
             )
             for lesson in part_lessons(volume, part)
         ],

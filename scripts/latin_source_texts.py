@@ -54,6 +54,13 @@ def words(text: str) -> list[str]:
     return [w for w in re.findall(r"[A-Za-zÀ-ÿæœÆŒ]+", text) if w]
 
 
+# eBible.org 轉錄本自己的錯字。改在這裡而不是改 XML：XML 是重新下載就會還原的快取，
+# 這張表則跟著程式走。（2026-09-23 逐頁校對：宗 2:9 印成 Mespotamiam。）
+SOURCE_TYPOS = {
+    "ACT.2.9": (("Mespotamiam", "Mesopotamiam"),),
+}
+
+
 def vulgate_verses() -> dict[str, str]:
     """Return ``{'GEN.1.1': 'In principio creavit Deus cælum et terram.'}``."""
     verses: dict[str, str] = {}
@@ -63,6 +70,8 @@ def vulgate_verses() -> dict[str, str]:
     def flush() -> None:
         if current and buffer:
             joined = re.sub(r"\s+", " ", "".join(buffer)).strip()
+            for wrong, right in SOURCE_TYPOS.get(current, ()):
+                joined = joined.replace(wrong, right)
             if joined:
                 verses[current] = joined
 

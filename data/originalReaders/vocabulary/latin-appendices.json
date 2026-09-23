@@ -7800,7 +7800,7 @@
     },
     {
      "headword": "fruor",
-     "forms": "fruor, fruari, fruitus sum",
+     "forms": "fruor, frui, fruitus sum",
      "glossEn": "enjoy, profit by, delight in (w/ABL)",
      "conjugation": "1 1",
      "kind": "DEP",
@@ -11898,7 +11898,7 @@
     {
      "group": "彌撒各部",
      "headword": "communio",
-     "forms": "communio, communire, communivi, communitus",
+     "forms": "communio, communionis, f.",
      "glossEn": "fortify strongly, entrench, barricade; strengthen, secure, reinforce",
      "pos": "V",
      "ecclesiastical": false,
@@ -12241,7 +12241,7 @@
     {
      "group": "禮儀時節",
      "headword": "tempus",
-     "forms": "tempus, tempi",
+     "forms": "tempus, temporis",
      "glossEn": "weather",
      "pos": "N",
      "ecclesiastical": true,

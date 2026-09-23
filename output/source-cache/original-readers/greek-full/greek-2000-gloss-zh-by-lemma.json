@@ -1296,7 +1296,7 @@
     },
     "διάκονος": {
       "glossZh": "僕人；執事；侍者",
-      "printedEntry": "διάκονος, -ου, ὁ or ἡ",
+      "printedEntry": "διάκονος, -ου, ὁ／ἡ",
       "engine": "claude-haiku-4-5-20251001",
       "source": "greek-1000-gloss-zh-reviewed",
       "lesson": 23,
@@ -1614,11 +1614,11 @@
       "lesson": 16,
       "volume": 1
     },
-    "διοἰκέω": {
+    "διοικέω": {
       "glossZh": "管理；治理；照顧",
       "lesson": 32,
       "volume": 2,
-      "printedEntry": "διοἰκέω",
+      "printedEntry": "διοικέω",
       "engine": "claude-haiku-4-5-20251001",
       "source": "llm"
     },
@@ -13967,11 +13967,11 @@
       "engine": "claude-haiku-4-5-20251001",
       "source": "llm"
     },
-    "ἑτοίμος": {
+    "ἕτοιμος": {
       "glossZh": "預備好的；現成的",
       "lesson": 50,
       "volume": 1,
-      "printedEntry": "ἑτοίμος",
+      "printedEntry": "ἕτοιμος",
       "engine": "claude-haiku-4-5-20251001",
       "source": "llm"
     },
@@ -14487,11 +14487,11 @@
       "engine": "claude-haiku-4-5-20251001",
       "source": "llm"
     },
-    "ἥττον": {
+    "ἧττον": {
       "glossZh": "較少地；更少；較不",
       "lesson": 13,
       "volume": 2,
-      "printedEntry": "ἥττον",
+      "printedEntry": "ἧττον",
       "engine": "claude-haiku-4-5-20251001",
       "source": "llm"
     },

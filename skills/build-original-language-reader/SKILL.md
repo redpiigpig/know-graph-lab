@@ -352,9 +352,35 @@ Any change to vocabulary, glosses, source text, translation, crosswalk, readings
 
 The chain is longer than it looks, and skipping a link produces a PDF that renders cleanly and is simply out of date. Appendix data feeds the master, the master feeds the DOCX, the DOCX feeds the PDF, and the same appendix data separately feeds the flashcard decks and the web tables. A patch to the print builder applied *while* a build was running produced a book whose cover was new and whose appendix was old; it looked finished and passed every gate. **Rebuild from the data layer down, in one run, and check the rendered page for the change you just made** — not for errors, for the change.
 
+## Content gate: read every page before calling it done
+
+Every deterministic gate in this skill measures layout and counts. On 2026-09-23
+all of them were green on seven volumes (2,632 pages, SHA1 identical to Drive)
+and a page-by-page *reading* still found 1,771 content errors, 509 of them
+severe: words split in half and glossed as two words, a lemma glossed once
+without context and wrong on every page (子→私生子, ある→存在 inside である),
+scraper leftovers printed and interlinear-glossed (`# Source:`, page footers,
+`&lt;oratio&gt;`, Schaff's apparatus inside the creed), an entire lesson that
+printed the editor's introduction instead of the work, maintainer notes on the
+page (`需逐節核對`, `content_complete_layout_pending`, `TTS 不算數`).
+
+So before a release there is one more gate, and it is not a script: **read the
+rendered pages** — original text, gloss row, whole-sentence line, exercises and
+appendix each judged on its own — and record findings with page numbers. A
+reviewer (human or model) reads from the PDF text layer, renders the page as an
+image whenever the text layer looks odd, and reports nothing it has not seen
+printed. The per-language failure shapes are in
+`references/silent-failures.md` (last section). For Japanese the word-by-word
+layer is now produced per sentence in context with a hard alignment gate
+(`build_japanese_interlinear.py`, second design); never go back to per-lemma
+glossing there.
+
 ## Stop conditions
 
 Stop the release and report the exact gap when:
+
+- the content gate above has not been run on the final rendered pages, or its
+  severe findings have not been fixed;
 
 - an exact source edition or authorization record is missing;
 - a textbook order would need to be invented;

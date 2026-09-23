@@ -7540,7 +7540,7 @@
     },
     {
       "headword": "mandō",
-      "forms": "mandō, mandāre, mandūcāvī, mandūcātus eat",
+      "forms": "mandō, mandāre, mandāvī, mandātus",
       "gram": "",
       "glossEn": "",
       "unit": 15,
@@ -7716,7 +7716,7 @@
     },
     {
       "headword": "resurrectiō",
-      "forms": "resurrectiō, resurrectīōnis, f.",
+      "forms": "resurrectiō, resurrectiōnis, f.",
       "gram": "",
       "glossEn": "rising again, resurrection",
       "unit": 15,
@@ -7877,7 +7877,7 @@
     },
     {
       "headword": "cōnfringō",
-      "forms": "cōnfringō, cōnfringere, cōnfrēgī, cōnractus",
+      "forms": "cōnfringō, cōnfringere, cōnfrēgī, cōnfrāctus",
       "gram": "",
       "glossEn": "break in two, break in pieces",
       "unit": 16,
@@ -9814,7 +9814,7 @@
     },
     {
       "headword": "tenebrāe",
-      "forms": "tenebrāe, tenebārum, f.",
+      "forms": "tenebrae, tenebrārum, f.",
       "gram": "",
       "glossEn": "darkness, gloom",
       "unit": 18,
@@ -10774,7 +10774,7 @@
     },
     {
       "headword": "agnōscō",
-      "forms": "agnōscō, agnōscere, agnōvī, agnitūs",
+      "forms": "agnōscō, agnōscere, agnōvī, agnitus",
       "gram": "",
       "glossEn": "know, recognize, acknowledge",
       "unit": 21,
@@ -10838,7 +10838,7 @@
     },
     {
       "headword": "cognōscō",
-      "forms": "cognōscō, cognōscere, cognōvī, cognitūs",
+      "forms": "cognōscō, cognōscere, cognōvī, cognitus",
       "gram": "present-stem system: get acquainted with, get to know perfect system: know",
       "glossEn": "",
       "unit": 21,
@@ -10886,7 +10886,7 @@
     },
     {
       "headword": "cōnsolō",
-      "forms": "cōnsolō, cōnsolāre, —, cōnsolātus",
+      "forms": "cōnsolor, cōnsolārī, —, cōnsolātus sum",
       "gram": "",
       "glossEn": "sum or",
       "unit": 21,
@@ -11527,7 +11527,7 @@
     },
     {
       "headword": "fateor",
-      "forms": "fateor, fatērī, —, sassus sum",
+      "forms": "fateor, fatērī, —, fassus sum",
       "gram": "",
       "glossEn": "acknowledge, confess [+ acc.]; praise [+ dat.]",
       "unit": 22,
@@ -11782,8 +11782,8 @@
       "glossEngine": "claude-haiku-4-5-20251001"
     },
     {
-      "headword": "respondēō",
-      "forms": "respondēō, respondēre, respondī, responsus",
+      "headword": "respondeō",
+      "forms": "respondeō, respondēre, respondī, responsus",
       "gram": "",
       "glossEn": "answer, respond (to)",
       "unit": 22,
@@ -12887,7 +12887,7 @@
     },
     {
       "headword": "verītās",
-      "forms": "verītās, verītātis, f.",
+      "forms": "vēritās, vēritātis, f.",
       "gram": "",
       "glossEn": "truth",
       "unit": 24,
@@ -14600,7 +14600,7 @@
     },
     {
       "headword": "prōficiō",
-      "forms": "prōficiō, prōficere, prōfecī, prōjectus",
+      "forms": "prōficiō, prōficere, prōfēcī, prōfectus",
       "gram": "",
       "glossEn": "avail, prevail",
       "unit": 28,
@@ -14776,7 +14776,7 @@
     },
     {
       "headword": "tristis",
-      "forms": "tristis, tristē",
+      "forms": "tristis, triste",
       "gram": "",
       "glossEn": "sad, sorrowful, gloomy",
       "unit": 28,
@@ -15881,7 +15881,7 @@
     },
     {
       "headword": "vetō",
-      "forms": "vetō, vetāre, vetui, vetātus",
+      "forms": "vetō, vetāre, vetuī, vetitus",
       "gram": "",
       "glossEn": "forbid",
       "unit": 30,
@@ -16825,7 +16825,7 @@
     },
     {
       "headword": "pendeō",
-      "forms": "pendeō, pendēre,ependī, —",
+      "forms": "pendeō, pendēre, pependī, —",
       "gram": "",
       "glossEn": "hang; depend",
       "unit": 32,
@@ -18361,7 +18361,7 @@
     },
     {
       "headword": "dignitās",
-      "forms": "dignitās, dignitānis, f.",
+      "forms": "dignitās, dignitātis, f.",
       "gram": "",
       "glossEn": "condescension, graciousness",
       "unit": 35,
@@ -27880,7 +27880,7 @@
     },
     {
       "headword": "fruor",
-      "forms": "fruor, fruari, fruitus sum",
+      "forms": "fruor, frui, fruitus sum",
       "gram": "V",
       "glossEn": "enjoy, profit by, delight in (w/ABL)",
       "unit": null,
@@ -32458,7 +32458,7 @@
     },
     {
       "headword": "diffundo",
-      "forms": "diffundo, diffundere, diffundi, diffusus",
+      "forms": "diffundo, diffundere, diffudi, diffusus",
       "gram": "V",
       "glossEn": "diffuse; spread/pour out/widely; bottle/draw off; squander, distribute lavishly",
       "unit": null,

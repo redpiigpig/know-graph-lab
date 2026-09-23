@@ -6,7 +6,7 @@
     {"latin": "tam tanta vitis", "chinese": "那麼大的一棵葡萄樹。", "targets": ["tam", "tantus", "vitis"]},
     {"latin": "accendit cælestis creator", "chinese": "天上的造物主點燃了。", "targets": ["accendo", "caelestis", "creator"]},
     {"latin": "tueatur consortes a crimine", "chinese": "願他保護同伴們遠離罪過。", "targets": ["tueor", "consors", "a", "crimen"]},
-    {"latin": "Confestim commixtim concinnant", "chinese": "他們立刻混雜地齊唱。", "targets": ["confestim", "commixtio", "concino"]},
+    {"latin": "Confestim commixtim concinunt", "chinese": "他們立刻混雜地齊唱。", "targets": ["confestim", "commixtio", "concino"]},
     {"latin": "crimine tanto confestim", "chinese": "因那麼大的罪過，立刻。", "targets": ["crimen", "tantus", "confestim"]},
     {"latin": "creator vitem accendit", "chinese": "造物主點燃了那葡萄樹。", "targets": ["creator", "vitis", "accendo"]}
   ]

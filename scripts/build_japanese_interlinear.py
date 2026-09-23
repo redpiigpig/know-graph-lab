@@ -1,36 +1,44 @@
 #!/usr/bin/env python3
 """Build the word-by-word Traditional-Chinese layer for the Japanese reader.
 
-The other three readers gloss in context, a window of words at a time, because
-Hebrew, Greek and Latin inflect so heavily that the same form means different
-things in different sentences. Japanese does not work that way here: the reading
-text is 115,584 morphemes but only 10,601 distinct lemmas, and the particles and
-auxiliaries — a third of every page — are a closed class that no model needs to
-be asked about. Glossing per lemma instead of per occurrence turns a 4,800-call
-job into a 240-call one, and it buys the thing this series values more than
-speed: the same word reads the same way on every page it appears.
+**Second design (2026-09-23).** The first version segmented with janome and
+glossed *per lemma*, one context-free answer shared by every occurrence. The
+page-by-page proofread of the printed books showed why that cannot work here:
 
-Three sources, in this order:
+- janome knows modern orthography only. On 歴史的仮名遣い it cut なんぢ into
+  なん＋ぢ (glossed 難處), たまふ into たま＋ふ (glossed 球), 言ふ into 言＋ふ,
+  and the large-つ 促音 (あつた) into あつ＋た (glossed 燙). More than a hundred
+  distinct splits of this kind, on almost every 文語 page.
+- A lemma glossed without its sentence gets the wrong sense and keeps it on
+  every page: 子→私生子 (also in 神の子), 行→行政區域 (in 行ふ), ある→存在
+  (in である, 100+ times), が→（主格） even when it means "but".
 
-1. **The reader's own 2,000-word vocabulary.** If a word is taught in a lesson
-   table, the gloss row must say what the table said. Anything else prints two
-   different Chinese meanings for one word in one book.
-2. **The closed-class table below.** Particles and auxiliaries, modern and 文語.
-   These are grammar, not vocabulary, and a model asked for 「が」in isolation
-   will happily return a different answer each time.
-3. **The model**, for whatever is left, batched by lemma with one real sentence
-   from the text as context, cached so a stopped run resumes.
+So this version asks the model for **segmentation and gloss together, one
+sentence at a time, in context**, the way the Hebrew, Greek and Latin layers
+already work — and it enforces the one thing a segmenter must never get wrong:
+**the surfaces joined back together are the original text, character for
+character.** A unit that fails that check is retried with the diff, and left
+unglossed (never half-glossed) if it still fails.
 
-    python -X utf8 scripts/build_japanese_interlinear.py --limit 200   # 試跑
+Consistency, which the per-lemma design bought, is kept two ways: the lesson
+vocabulary is handed to the model as the preferred renderings, and particles /
+auxiliaries are labelled from the closed-class table below (the builder's
+auxiliary appendix prints that same table).
+
+    python -X utf8 scripts/build_japanese_interlinear.py --limit 8     # 試跑
     python -X utf8 scripts/build_japanese_interlinear.py               # 全書
+    python -X utf8 scripts/build_japanese_interlinear.py --assemble-only
 """
 
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
 import sys
+import threading
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -42,19 +50,20 @@ ROOT = Path(__file__).resolve().parents[1]
 CACHE = ROOT / "output/source-cache/original-readers/japanese-full"
 READINGS = CACHE / "readings.json"
 VOCAB = ROOT / "data/originalReaders/vocabulary/japanese-2000.json"
-GLOSSARY = CACHE / "interlinear-gloss.json"
+UNIT_CACHE = CACHE / "interlinear-units.json"
 OUTPUT = CACHE / "interlinear.json"
 
-CLOSED_POS = {"助詞", "助動詞", "記号", "フィラー", "その他"}
 KANA = re.compile(r"[ぁ-ゟァ-ヿー]")
-KANA_ONLY = re.compile(r"[ぁ-ゟァ-ヿー]+")
 LATIN = re.compile(r"[A-Za-z]")
-BATCH = 40
+SPACE = re.compile(r"\s+")
+BATCH = 4
 GLOSS_MAX = 12
+ROLES = {"詞", "助", "名", "符"}
 
 # 助詞與助動詞：現代語與文語一起收。文語那一批是合約附錄二點名要教的
 # （き・けり・つ・ぬ・たり・り・べし・ず・む・らむ・けむ・なり），讀本正文裡
-# 到處都是，交給模型只會每次答得不一樣。
+# 到處都是。這張表是給模型的**標記字典**（同一個功能全書同一種寫法），也是
+# builder 附錄印的那張表；模型在句中判定功能，表只管寫法。
 CLOSED_CLASS = {
     "は": "（主題）", "が": "（主格）", "を": "（受格）", "に": "（方向·對象）",
     "へ": "（往）", "と": "（和·引語）", "で": "（在·以）", "から": "（從）",
@@ -80,8 +89,7 @@ CLOSED_CLASS = {
     "なむ": "（強調·願）", "こそあれ": "（雖則）", "ものの": "（雖然）",
     "。": "", "、": "", "「": "", "」": "", "『": "", "』": "", "・": "",
     "（": "", "）": "", "！": "", "？": "", "…": "", "─": "", "ー": "",
-    # 學術文體的機能語（合約附錄四）。斷詞器把它們拆成助詞或名詞，模型逐塊問又
-    # 會每次答得不一樣，所以與助詞同一張表。
+    # 學術文體的機能語（合約附錄四）。
     "として": "（作為）", "における": "（在…的）", "において": "（在…）",
     "について": "（關於）", "によって": "（由於·藉由）", "による": "（依據）",
     "にとって": "（對…而言）", "とともに": "（與…一同）", "にほかならない": "（無非是）",
@@ -91,166 +99,158 @@ CLOSED_CLASS = {
     "とか": "（之類）", "かも": "（也許）", "を以て": "（以）",
     "に対する": "（對…的）", "により": "（依據）", "如き": "（如同的）",
     "如く": "（如同）", "ごとき": "（如同的）", "ん": "（推量·意志）",
-    "じ": "（不會·否定推量）", "なむ": "（強調·願）", "ましか": "（反實推量）",
+    "じ": "（不會·否定推量）", "ましか": "（反實推量）",
     "らし": "（推定）", "つる": "（完成）", "ぬる": "（完成）", "たる": "（的·完成）",
-    "なる": "（的·斷定）", "せ": "（使·過去）", "き": "（過去·親見）",
+    "なる": "（的·斷定）", "せ": "（使·過去）",
     # 青空文庫與舊活字的疊字記號：它們是符號不是詞，別讓模型去猜。
     "ゝ": "", "ゞ": "", "〳": "", "〵": "", "〴": "", "／": "", "＼": "",
     "″": "", "　": "", " ": "",
 }
 
-PROMPT = """你是日文讀本的逐詞對譯編輯。下面是 {count} 個日文詞，每個附一句書中的例句。\
-請逐詞給出**繁體中文**詞義。
+# 給模型看的功能標記表：只列會在句中反覆出現、而且過去印錯過的那些。
+# 表外的功能由模型自擬括號標記。
+LABEL_GUIDE = """は（主題）　が（主格）／接續用法的が（但是）　を（受格）　に（方向·對象）／に 作副詞語尾（地）
+へ（往）　と（和·引語）／條件的と（一…就）　で（在·以）／て形濁化的で（接續）／だ的連用形で（是）
+の（的）／形式名詞の（的·事）　も（也）　か（嗎）／疑問詞＋か（某）　ね（呢）　よ（喔）　な（呀·別）　ぞ（強調）
+ば（若）　ても（即使）　けれど（可是）　ので（因為）　のに（卻）　て（接續）　ながら（一邊）　だけ（只）　など（等）
+だ／です／である／なり（斷定）→（是）　ます（敬體）　ません 的 ん（否定）　た（過去）　ない／ぬ／ず（不）
+う／よう／む（意志·推量）　らしい（似乎）　べし（應當）　たい（想）　れる／られる／る／らる（被·可能·敬）
+せる／させる／しむ（使）　き（過去·親見）　けり（過去·傳聞·詠嘆）　つ／ぬ／り／たり（完成）　けむ（過去推量）　らむ（現在推量）
+ごとし（如同）　補助動詞：ている／ておる／ゐる（正在·狀態）　てしまう（…完了）　ておく（先…）　てみる（試著）　てあげる／てくれる／てもらう（授受）
+給ふ／たまふ（敬語）　奉る／申す（謙讓）　ございます（敬體）　文語形容詞語尾 かり／かる／けれ 與語幹合為一詞"""
 
-規矩：
-- 一個詞給一個意思，最多 {maxlen} 個中文字，不要加詞性標記、不要註解、不要拼音。
-- 給的是這個詞在例句裡的意思；例句只是幫你判斷，不要翻譯例句。
-- 漢語詞（如「宗教」「儀礼」）若中日同義，直接給對應的繁體寫法（儀礼→儀禮）。
-- 動詞給辭書形的意思（「行く」→ 去），不要寫成「去了」。
-- 專有名詞給通行中譯；沒有通行中譯就音譯。
-- 全部用繁體中文，不可出現日文假名或英文。
+PROMPT = """你是日文宗教學讀本的逐詞對譯編輯。下面有 {count} 段日文，每段先斷詞，再逐詞給繁體中文詞義。
 
-只輸出 JSON 物件，鍵是題號字串，值是詞義：{{"1": "神", "2": "祭祀"}}
+## 斷詞規矩
+1. 照「詞」切，不照詞素切：名詞、副詞、連體詞、複合詞、片假名外來語（含「・」連接的整串）各為一個詞，不可拆。
+2. 動詞、形容詞：語幹連同活用語尾為一詞（「起こっ」「読ま」「美しく」「言ひ」），後面的助動詞、助詞、補助動詞各自一詞（「た」「ます」「ない」「ている」）。「ません」切成「ませ」＋「ん」。
+3. 舊假名遣（歷史的假名遣）：ゐ・ゑ・ぢ・づ・ハ行轉呼（言ふ、たまふ、思へ、なんぢ、とこしへ、さうして、やう）都是詞的一部分，**絕對不可把一個詞切成兩半**。大書的促音つ（あつた、いつて、だつた）算在動詞語幹裡：「あつ」＋「た」。
+4. 專名（人名、地名、書名、神名、經名、教派名）整個一詞；日本人名「姓＋名」合為一詞。
+5. 標點、括號、空白（全形空白「　」也算）、踊り字（ゝ ゞ 〳 〵 ／＼）、外字記號（※ 及其後的［＃…］）都各自一個 token，role 填「符」。
+6. **所有 surface 依序連接起來必須與原文一字不差**（含標點與空白）。不可增刪改任何字元。
+
+## 詞義規矩
+- gloss 是「這個詞在這一句裡」的意思，繁體中文，最多 {maxlen} 個字，不可有假名或英文，不加詞性、不加註解。
+- 助詞、助動詞、補助動詞、接尾辭、助數詞：role 填「助」，gloss 用括號功能標記，寫法照下面的標記表；表裡沒有的自擬括號標記。
+- 專名：role 填「名」，gloss 給通行中譯（聖經人名地名照和合本；日本人名照漢字；西洋人名音譯）。
+- 其餘實詞：role 填「詞」。詞表給了譯法而且語意相同時照用；語意不同時照句意（例如「時」在句中是「時候」就不寫「點鐘」，「本」作助數詞就是「（支·本）」）。
+- 同形異義要看句子：「子」在「神の子」是「兒子」；「行ふ」是「進行、舉行」；「である」的「ある」是斷定不是存在。
+- 標點與空白：gloss 空字串。
+- lemma 填辭書形（現代假名遣）；助詞助動詞填自身；標點填自身。
+- 判不出意思就把 gloss 留空字串，不要編。
+
+## 功能標記表
+{labels}
+
+## 輸出
+只輸出一個 JSON 物件。鍵是題號字串，值是 token 陣列，每個 token 是 [surface, lemma, role, gloss]：
+{{"1": [["イエス","イエス","名","耶穌"],["群衆","群衆","詞","群眾"],["を","を","助","（受格）"],["見","見る","詞","看見"],["て","て","助","（接續）"],["、","、","符",""]]}}
 
 {items}"""
+
+_lock = threading.Lock()
 
 
 def load(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
-def vocabulary_glosses() -> dict[str, str]:
-    """The reader's own lesson tables win over anything a model says.
+def signature(text: str) -> str:
+    return hashlib.sha256(text.encode("utf-8")).hexdigest()[:16]
 
-    Kana-only keys are kept apart from the written forms. 「は」is in the
-    vocabulary as 歯（牙齒）and 「や」as 屋（房子）; let those match by kana and
-    every topic particle in the book reads 牙齒、齒. Kana is only consulted for a
-    word the table itself writes in kana, and never for a particle — see
-    `gloss_for`.
+
+# --------------------------------------------------------------------------
+# vocabulary hints
+# --------------------------------------------------------------------------
+
+def vocabulary_forms() -> list[tuple[str, str]]:
+    """(form, gloss) pairs to hand the model when the form occurs in a sentence.
+
+    Kana-only forms shorter than three characters are not used: 「は」is in the
+    table as 歯 and 「や」as 屋, and matching those by kana is how the first
+    print run glossed every topic particle as 牙齒.
     """
     out: dict[str, str] = {}
     for entry in load(VOCAB)["entries"]:
         zh = (entry.get("glossZh") or "").strip()
         if not zh:
             continue
-        for form in (entry.get("dictionaryForm"), entry.get("kanji")):
-            if form and form not in out:
-                out[form] = zh
-        kana = entry.get("kana")
-        if kana and not entry.get("kanji") and kana not in out:
+        for form in (entry.get("kanji"), entry.get("dictionaryForm")):
+            form = (form or "").strip()
+            if not form or form in out:
+                continue
+            if len(form) < 3 and not re.search(r"[一-鿿]", form):
+                continue  # kana-only and short: は＝齒、や＝屋 must not reach the model
+            out[form] = zh
+        kana = (entry.get("kana") or "").strip()
+        if kana and not entry.get("kanji") and len(kana) >= 3 and kana not in out:
             out[kana] = zh
-    return out
+    # longest first so 宗教学 is offered before 宗教
+    return sorted(out.items(), key=lambda kv: -len(kv[0]))
 
 
-# 接尾辭與被誤讀的文語形，優先於模型答案。「的」是「…的」不是「內在的」，
-# 「ら」是複數不是賤民，「さ」是名詞化語尾不是「做」。
-OVERRIDES = {
-    ("的", "接尾"): "（…的）",
-    ("ら", "接尾"): "（們·複數）",
-    ("さ", "接尾"): "（…的程度）",
-    ("給", "接尾"): "（敬語·給ふ）",
-    ("言", "一般"): "話語",
-    ("み", "接尾"): "（…之處）",
-    ("げ", "接尾"): "（似…的樣子）",
-}
+def hints_for(text: str, forms: list[tuple[str, str]], cap: int = 30) -> str:
+    seen: list[str] = []
+    for form, zh in forms:
+        if form in text:
+            seen.append(f"{form}＝{zh}")
+            if len(seen) >= cap:
+                break
+    return "、".join(seen)
 
 
-def gloss_for(token: dict, vocab: dict[str, str], glossary: dict[str, str]) -> str:
-    """Grammar comes from the closed-class table, vocabulary from the tables."""
-    base, word, pos = token["base"], token["word"], token["pos"]
-    if pos == "記号":
+# --------------------------------------------------------------------------
+# validation and repair
+# --------------------------------------------------------------------------
+
+def clean_gloss(role: str, gloss: str) -> str:
+    # 「云」（說）與「余」（我）要護住，opencc s2tw 會把它們轉成「雲」「餘」。
+    gloss = (gloss or "").strip().strip("。，,、 ").replace("云", "").replace("余", "")
+    gloss = to_traditional(gloss).replace("", "云").replace("", "余")
+    if role == "符":
         return ""
-    override = OVERRIDES.get((base, token.get("sub", "")))
-    if override is not None:
-        return override
-    if is_debris(token, vocab):
+    if not gloss or len(gloss) > GLOSS_MAX or KANA.search(gloss) or LATIN.search(gloss):
         return ""
-    if pos in ("助詞", "助動詞"):
-        gloss = CLOSED_CLASS.get(base) or CLOSED_CLASS.get(word)
-        if gloss is not None:
-            return gloss
-        # 詞表只對兩個字以上的形式開放。要擋的是單假名的碰撞——「は」在詞表裡是
-        # 齒、「や」是屋——而「ある」「という」被斷詞標成助動詞／助詞時，詞表裡
-        # 的「存在、具備」「叫做、所謂」正是要印的東西。一律不回退，這兩個字就
-        # 空著，全書一千多處。
-        if len(base) >= 2:
-            return glossary.get(f"{base}|{pos}") or vocab.get(base) or ""
-        return ""
-    return (
-        vocab.get(base)
-        or glossary.get(f"{base}|{pos}")
-        or CLOSED_CLASS.get(base)
-        or ""
-    )
-
-
-def tokenise(tokenizer: Tokenizer, text: str) -> list[dict]:
-    tokens = []
-    for token in tokenizer.tokenize(text):
-        fields = token.part_of_speech.split(",")
-        base = token.base_form if token.base_form and token.base_form != "*" else token.surface
-        tokens.append({"word": token.surface, "base": base, "pos": fields[0],
-                       "sub": fields[1] if len(fields) > 1 else "", "trailing": ""})
-    return tokens
-
-
-def is_debris(token: dict, vocab: dict[str, str]) -> bool:
-    """斷詞器在文語上留下的碎片，一律留白。
-
-    janome 認的是現代日語，第三、四冊卻整本文語：「見給ひき」被拆成 見／給／ひき，
-    「ゆゑに」拆成 ゆ／ゑに，「曾つて」拆成 曾／つて。這些碎片本身不是詞，卻會被
-    當成名詞去查——第一版就這樣把「ふ」印成「揮舞」226 次、「ひ」印成「廢止」
-    185 次。判準：一到兩個假名、被標成「名詞・一般」、又不在本讀本自己的詞表裡。
-    留白看得出缺，印錯看不出來。
-    """
-    base, word = token["base"], token["word"]
-    if base in vocab or not KANA_ONLY.fullmatch(base):
-        return False
-    if token["pos"] == "名詞" and token["sub"] in ("一般", "サ変接続") and len(base) <= 2:
-        return True
-    # 文語動詞的語尾單假名（思ふ的ふ、給ひ的ひ）被當成自立動詞，還替它們造出
-    # 「ふる」「ひる」這種辭書形——第一版就是這樣印出「揮舞」「廢止」的。真正的
-    # 單假名動詞形（い＝いる、し＝する）辭書形都在本讀本詞表裡，上面那行已放行。
-    return token["pos"] == "動詞" and len(word) == 1 and len(base) <= 3
-
-
-def is_word(base: str) -> bool:
-    """數字、半形符號與拉丁字母不是要對譯的詞。
-
-    janome 把「2304」與「(」都標成名詞，於是第一輪跑出「二千三百零四」「左括號」
-    這種詞義——萬葉集的歌番號被當成生詞在教。它們照原樣印，不給詞義。
-    """
-    stripped = base.strip()
-    if not stripped:
-        return False
-    if stripped.isdigit() or stripped.isascii():
-        return False
-    return not all(ch in "０１２３４５６７８９〇一二三四五六七八九十" for ch in stripped)
-
-
-def needs_model(base: str, pos: str, vocab: dict[str, str]) -> bool:
-    if pos in CLOSED_POS or base in CLOSED_CLASS or base in vocab:
-        return False
-    return is_word(base)
-
-
-def validate(gloss: str) -> str | None:
-    gloss = to_traditional((gloss or "").strip().strip("。，,、 "))
-    if not gloss:
-        return None
-    if len(gloss) > GLOSS_MAX or KANA.search(gloss) or LATIN.search(gloss):
-        return None
+    if role == "助" and not gloss.startswith("（"):
+        gloss = f"（{gloss.strip('()（）')}）"
     return gloss
 
 
-def ask(items: list[tuple[str, str, str]]) -> dict[str, str]:
-    """One batch: [(lemma, pos, example)] -> {lemma: 繁中}."""
-    lines = "\n".join(
-        f"{index}. {lemma}（{pos}）　例：{example[:40]}"
-        for index, (lemma, pos, example) in enumerate(items, start=1)
-    )
-    prompt = PROMPT.format(count=len(items), maxlen=GLOSS_MAX, items=lines)
-    reply = llm.call_model(prompt, max_tokens=2000)
+def align(text: str, tokens: list[list]) -> list[dict] | str:
+    """Walk the text with the model's surfaces; return tokens or an error string.
+
+    Whitespace the model dropped is re-inserted as its own token, because the
+    printed page needs it and models routinely eat it. Anything else that does
+    not line up is an error the model has to fix.
+    """
+    out: list[dict] = []
+    pos = 0
+    for item in tokens:
+        if not isinstance(item, list) or len(item) < 4:
+            return f"token 格式錯：{item!r}"
+        surface, lemma, role, gloss = (str(x) for x in item[:4])
+        if role not in ROLES:
+            role = "詞"
+        if not surface:
+            continue
+        # swallow whitespace the model skipped
+        while pos < len(text) and text[pos].isspace() and not surface.startswith(text[pos]):
+            out.append({"word": text[pos], "trailing": "", "glossZh": "", "role": "符", "lemma": text[pos]})
+            pos += 1
+        if not text.startswith(surface, pos):
+            got = text[pos:pos + max(len(surface), 6)]
+            return f"第 {len(out) + 1} 個 token「{surface}」對不上原文此處的「{got}」"
+        pos += len(surface)
+        out.append({"word": surface, "trailing": "", "glossZh": clean_gloss(role, gloss), "role": role, "lemma": lemma})
+    while pos < len(text) and text[pos].isspace():
+        out.append({"word": text[pos], "trailing": "", "glossZh": "", "role": "符", "lemma": text[pos]})
+        pos += 1
+    if pos != len(text):
+        return f"原文尾端「{text[pos:pos + 12]}」沒有被切到"
+    return out
+
+
+def parse_reply(reply: str) -> dict:
     match = re.search(r"\{.*\}", reply or "", re.S)
     if not match:
         return {}
@@ -258,113 +258,166 @@ def ask(items: list[tuple[str, str, str]]) -> dict[str, str]:
         payload = json.loads(match.group(0))
     except json.JSONDecodeError:
         return {}
-    out: dict[str, str] = {}
+    return payload if isinstance(payload, dict) else {}
+
+
+# --------------------------------------------------------------------------
+# asking
+# --------------------------------------------------------------------------
+
+def ask(batch: list[dict], forms: list[tuple[str, str]], feedback: dict[int, str] | None = None) -> dict[str, list[dict]]:
+    """One call for a batch of units -> {signature: tokens} for the ones that verified."""
+    lines = []
+    for index, unit in enumerate(batch, start=1):
+        hint = hints_for(unit["text"], forms)
+        note = f"　語體：{unit['orthography']}"
+        if hint:
+            note += f"　詞表：{hint}"
+        if feedback and index in feedback:
+            note += f"\n　🚨 上一次的輸出有誤：{feedback[index]}。請重新斷詞，確保 surface 連起來等於原文。"
+        lines.append(f"{index}.（{unit['ref']}{note}）\n{unit['text']}")
+    prompt = PROMPT.format(count=len(batch), maxlen=GLOSS_MAX, labels=LABEL_GUIDE, items="\n\n".join(lines))
+    reply = llm.call_model(prompt, max_tokens=8000)
+    engine = llm.current_model()
+    payload = parse_reply(reply)
+    out: dict[str, list[dict]] = {}
+    errors: dict[int, str] = {}
     for key, value in payload.items():
-        if not key.strip().isdigit():
+        if not str(key).strip().isdigit():
             continue
-        index = int(key) - 1
-        if 0 <= index < len(items):
-            gloss = validate(str(value))
-            if gloss:
-                out[items[index][0]] = gloss
+        index = int(key)
+        if not 1 <= index <= len(batch):
+            continue
+        unit = batch[index - 1]
+        result = align(unit["text"], value if isinstance(value, list) else [])
+        if isinstance(result, str):
+            errors[index] = result
+        else:
+            out[unit["sig"]] = {"engine": engine, "tokens": result}
+    for index in range(1, len(batch) + 1):
+        if index not in errors and batch[index - 1]["sig"] not in out:
+            errors[index] = "沒有回答這一段"
+    out["__errors__"] = errors  # type: ignore[assignment]
     return out
 
 
-def main() -> int:
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--limit", type=int, default=0, help="最多問幾個詞（試跑用）")
-    parser.add_argument("--batch", type=int, default=BATCH)
-    parser.add_argument("--assemble-only", action="store_true",
-                        help="只用現有快取重組 interlinear.json，不問模型")
-    args = parser.parse_args()
+def gloss_batch(batch: list[dict], forms: list[tuple[str, str]], cache: dict, tries: int = 3) -> tuple[int, int]:
+    """Ask, retry the failures with their diagnostics, write the cache. Returns (ok, failed)."""
+    pending = list(batch)
+    feedback: dict[int, str] = {}
+    ok = 0
+    for attempt in range(tries):
+        if not pending:
+            break
+        try:
+            got = ask(pending, forms, feedback)
+        except Exception as error:  # noqa: BLE001 - every engine down; keep the run alive
+            print(f"    · 引擎全部沒回應：{type(error).__name__} {str(error)[:80]}", flush=True)
+            got = {"__errors__": {i: "引擎沒回應" for i in range(1, len(pending) + 1)}}
+        errors = got.pop("__errors__", {})
+        with _lock:
+            for sig, entry in got.items():
+                cache[sig] = entry
+                ok += 1
+            UNIT_CACHE.write_text(json.dumps(cache, ensure_ascii=False, indent=0), encoding="utf-8")
+        still = [pending[i - 1] for i in sorted(errors)]
+        feedback = {n + 1: errors[i] for n, i in enumerate(sorted(errors))}
+        if still and attempt + 1 < tries:
+            print(f"    · {len(still)} 段沒過對齊檢查，重問（{list(feedback.values())[:2]}）", flush=True)
+        pending = still
+    for unit in pending:
+        print(f"    ✗ 放棄 {unit['id']}：{unit['text'][:30]}…", flush=True)
+    return ok, len(pending)
 
-    readings = load(READINGS)
-    vocab = vocabulary_glosses()
-    glossary: dict[str, str] = load(GLOSSARY) if GLOSSARY.exists() else {}
-    # 🚨 janome 只有斷詞這一步用得到。寫在檔頭的話，第二冊的 builder 為了拿
-    # CLOSED_CLASS 這個常數 import 這一支就會 ModuleNotFoundError——排版不需要斷詞器。
-    from janome.tokenizer import Tokenizer
 
-    tokenizer = Tokenizer()
+# --------------------------------------------------------------------------
+# main
+# --------------------------------------------------------------------------
 
-    # 一次斷詞，之後都用這份；每個 lemma 記一句例句給模型判斷語境。
-    units: dict[str, dict] = {}
-    example: dict[str, str] = {}
-    wanted: dict[str, str] = {}
+def every_unit(readings: dict) -> list[dict]:
+    units: list[dict] = []
     for volume in readings["volumes"]:
         for lesson in volume["lessons"]:
             groups = [("reading", lesson["units"]), ("memory", lesson["memoryUnits"])]
             for group, rows in groups:
                 for index, unit in enumerate(rows, start=1):
                     unit_id = unit.get("id") or f"v{volume['volume']}-l{lesson['lesson']:02d}-m{index:03d}"
-                    tokens = tokenise(tokenizer, unit["text"])
-                    units[unit_id] = {
-                        "ref": f"{lesson['title']}　{unit.get('label') or ''}".strip(),
+                    units.append({
+                        "id": unit_id,
                         "group": group,
-                        "tokens": tokens,
-                    }
-                    for token in tokens:
-                        key = f"{token['base']}|{token['pos']}"
-                        if needs_model(token["base"], token["pos"], vocab) and key not in glossary:
-                            wanted[key] = token["base"]
-                            example.setdefault(key, unit["text"])
+                        "text": unit["text"],
+                        "sig": signature(unit["text"]),
+                        "ref": f"{lesson['title']}　{unit.get('label') or ''}".strip(),
+                        "orthography": lesson.get("orthography") or "現代語",
+                    })
+    return units
 
-    todo = [] if args.assemble_only else sorted(wanted)
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--limit", type=int, default=0, help="最多處理幾段（試跑用）")
+    parser.add_argument("--batch", type=int, default=BATCH)
+    parser.add_argument("--workers", type=int, default=3)
+    parser.add_argument("--assemble-only", action="store_true", help="只用快取重組 interlinear.json，不問模型")
+    parser.add_argument("--redo", default="", help="重做 id 含此字串的段（例 v2-l42）")
+    args = parser.parse_args()
+
+    readings = load(READINGS)
+    forms = vocabulary_forms()
+    units = every_unit(readings)
+    cache: dict = load(UNIT_CACHE) if UNIT_CACHE.exists() else {}
+    if args.redo:
+        for unit in units:
+            if args.redo in unit["id"]:
+                cache.pop(unit["sig"], None)
+
+    todo = [] if args.assemble_only else [u for u in units if u["sig"] not in cache]
     if args.limit:
         todo = todo[: args.limit]
-    print(f"單元 {len(units):,}　需要問模型的詞 {len(wanted):,}"
-          f"（本輪 {len(todo):,}，已快取 {len(glossary):,}）")
+    print(f"單元 {len(units):,}　已快取 {len(units) - len([u for u in units if u['sig'] not in cache]):,}　本輪 {len(todo):,}", flush=True)
 
     batches = [todo[i : i + args.batch] for i in range(0, len(todo), args.batch)]
-    answered = 0
-    for number, batch in enumerate(batches, start=1):
-        items = [(key.split("|")[0], key.split("|")[1], example[key]) for key in batch]
-        got = ask(items)
-        if not got and len(items) > 4:
-            # 整批回空多半是輸出被截斷或格式跑掉，不是這些詞問不出來。對半再問一次
-            # 就好，不必整批丟掉——丟掉的話那四十個詞會永遠留白。
-            half = len(items) // 2
-            got = {**ask(items[:half]), **ask(items[half:])}
-            print(f"    · 批 {number} 整批回空，拆半重問拿到 {len(got)}")
-        for key in batch:
-            lemma = key.split("|")[0]
-            if lemma in got:
-                glossary[key] = got[lemma]
-                answered += 1
-        GLOSSARY.write_text(json.dumps(glossary, ensure_ascii=False, indent=0), encoding="utf-8")
-        print(f"  批 {number}/{len(batches)}　收到 {len(got)}/{len(batch)}　"
-              f"累計 {answered:,}　引擎 {llm.current_model()}")
+    done = failed = 0
+    with ThreadPoolExecutor(max_workers=args.workers) as pool:
+        for number, (ok, bad) in enumerate(pool.map(lambda b: gloss_batch(b, forms, cache), batches), start=1):
+            done += ok
+            failed += bad
+            print(f"  批 {number}/{len(batches)}　過 {ok}/{ok + bad}　累計 {done:,}（放棄 {failed}）　引擎 {llm.current_model()}", flush=True)
 
-    # 組裝：詞表 → 閉合詞類 → 模型。缺的就留白，不用別的語言或原文頂替。
-    missing = 0
-    for unit in units.values():
-        for token in unit["tokens"]:
-            gloss = gloss_for(token, vocab, glossary)
-            if not gloss and token["pos"] != "記号" and is_word(token["base"])                     and not is_debris(token, vocab):
-                missing += 1
-            token["glossZh"] = gloss
-            token.pop("base", None)
-            token.pop("pos", None)
-            token.pop("sub", None)
+    # 組裝。快取裡沒有的段整段留白（印原文、不印詞義），不用舊的 janome 結果頂替。
+    out_units: dict[str, dict] = {}
+    missing_units = 0
+    total = blank = 0
+    for unit in units:
+        entry = cache.get(unit["sig"])
+        if entry:
+            tokens = [{"word": t["word"], "trailing": t.get("trailing", ""), "glossZh": t["glossZh"]} for t in entry["tokens"]]
+            for t in entry["tokens"]:
+                if t.get("role") != "符":
+                    total += 1
+                    blank += not t["glossZh"]
+        else:
+            missing_units += 1
+            tokens = [{"word": unit["text"], "trailing": "", "glossZh": ""}]
+        out_units[unit["id"]] = {"ref": unit["ref"], "group": unit["group"], "tokens": tokens}
 
-    total = sum(len(unit["tokens"]) for unit in units.values())
     OUTPUT.write_text(
         json.dumps(
             {
-                "schemaVersion": "1.0.0",
+                "schemaVersion": "2.0.0",
                 "language": "Japanese",
                 "languageCode": "ja",
-                "engine": "詞表優先 → 閉合詞類表 → Gemini／NVIDIA",
-                "count": len(units),
-                "units": units,
+                "engine": "逐句上下文斷詞＋對譯（Gemini／NVIDIA／Haiku），對齊閘：surface 連接＝原文",
+                "count": len(out_units),
+                "units": out_units,
             },
             ensure_ascii=False,
             indent=1,
         ),
         encoding="utf-8",
     )
-    print(f"寫出 {OUTPUT.relative_to(ROOT)}：{len(units):,} 單元、{total:,} 詞、"
-          f"未有詞義 {missing:,}（{missing / total:.1%}）")
+    print(f"寫出 {OUTPUT.relative_to(ROOT)}：{len(out_units):,} 段（未對譯 {missing_units}）、"
+          f"{total:,} 詞、留白 {blank:,}（{blank / max(total, 1):.1%}）", flush=True)
     return 0
 
 

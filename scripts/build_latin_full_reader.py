@@ -554,9 +554,9 @@ def upper_readings() -> dict[int, dict]:
         zh_by_verse = {v["verse"]: v["text"] for v in chapter_zh["verses"]} if chapter_zh else {}
         pairs = [(f"{number}　{text}", zh_by_verse.get(number, ""))
                  for number, text in sorted(verses[(row["book"], row["chapter"])].items())]
+        # 🚨 alignmentNote（「拉丁 25 節，中文 26 節，需逐節核對」）是給維護者的，
+        # 留在 scripture-plan 裡給驗證器看；印上紙本就是課本裡的校對便條。
         note = row.get("note") or ""
-        if chapter_zh and chapter_zh.get("alignmentNote"):
-            note = (note + "　" if note else "") + chapter_zh["alignmentNote"]
         # 武加大一章的自然單位是節，所以裁的單位是節，不是詞。
         pairs, note = clip_reading(pairs, note, unit="節")
         out[row["lesson"]] = {"title": row["title"], "pairs": pairs, "note": note}
@@ -647,8 +647,9 @@ def lower_readings() -> dict[int, dict]:
                 latin_text = plan_module.section(latin_text, tuple(row["section"]))
             if row["extent"] == "excerpt":
                 latin_text, _, _ = plan_module.complete_unit(latin_text)
-            paragraphs = [re.sub(r"\s+", " ", part).strip()
+            paragraphs = [translator.clean_paragraph(part)
                           for part in latin_text.split(chr(10) * 2) if part.strip()]
+            paragraphs = [part for part in paragraphs if part]
             chinese = (chinese_by_section(row["sourcePath"])
                        if row["chineseParallel"] == "repo-aligned-by-number" else {})
             pairs = []
