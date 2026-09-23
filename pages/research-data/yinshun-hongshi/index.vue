@@ -74,6 +74,15 @@
           <span class="tool-badge bg-cyan-50 text-cyan-600">{{ faryinCount || '…' }} 期</span>
         </NuxtLink>
 
+        <NuxtLink to="/research-data/yinshun-hongshi/japan" class="tool-card group border-red-100 hover:border-red-300 hover:shadow-red-100">
+          <div class="tool-icon bg-red-50 text-red-600">🗾</div>
+          <div class="flex-1">
+            <h2 class="tool-title">日本學者論印順</h2>
+            <p class="tool-desc">日本學界評介印順思想與學術貢獻的論文、書評；全文逐段中譯與原文兩欄對照</p>
+          </div>
+          <span class="tool-badge bg-red-50 text-red-600">{{ japanCount || '…' }} 筆</span>
+        </NuxtLink>
+
       </div>
     </div>
   </div>
@@ -92,6 +101,7 @@ const xzCount = ref(0);
 const meetCount = ref(0);
 const mstCount = ref(0);
 const faryinCount = ref(0);
+const japanCount = ref(0);
 
 async function count(url: string): Promise<number> {
   try {
@@ -111,6 +121,7 @@ onMounted(async () => {
   meetCount.value = await count(`${base}/meeting-index.json`);
   mstCount.value = await count(`${base}/miaoxin-index.json`);
   faryinCount.value = await count(`${base}/faryin-index.json`);
+  japanCount.value = await count(`${base}/japan-index.json`);
 });
 </script>
 
