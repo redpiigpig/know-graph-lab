@@ -330,7 +330,10 @@ def make_engine(backend: str = "auto"):
             except Exception as e:  # noqa: BLE001
                 # 引擎整條斷掉（NVIDIA 連線錯誤、全部 key 503）時不可以讓例外往上冒：
                 # 驅動會把整卷放棄。留空白，下一輪（fleet keeper 每 30 分重拉）再補。
-                ENGINE_ERRORS += 1
+                # 品質閘擋下（output gate：未翻譯、推理外洩…）是這一段本身的問題，
+                # 重跑也一樣；只有連線／服務類錯誤才算引擎壞了、要讓 lane 繼續活著。
+                if "output gate" not in str(e):
+                    ENGINE_ERRORS += 1
                 print(f"    ⚠ engine error: {str(e)[:120]}", flush=True)
                 return ""
             if out:
