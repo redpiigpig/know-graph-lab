@@ -58,7 +58,12 @@ def safe_name(s: str, limit: int = 100) -> str:
     return s[:limit].rstrip(" .") or "untitled"
 
 
+_XML_BAD = re.compile("[\x00-\x08\x0b\x0c\x0e-\x1f\ufffe\uffff\ud800-\udfff]")
+
+
 def _clean_inline(t: str) -> str:
+    # Word（XML）不收控制字元；OCR 殘留的 \x0c 之類會讓整本匯出失敗
+    t = _XML_BAD.sub("", t)
     t = re.sub(r"\*\*(.+?)\*\*", r"\1", t)
     t = re.sub(r"(?<!\*)\*(?!\s)(.+?)(?<!\s)\*(?!\*)", r"\1", t)
     return t
@@ -141,7 +146,7 @@ def render_chunk(doc, c: dict, state: dict) -> None:
                 state["last_head"] = t
             continue
         if s.startswith("|") and "\n|" in s:
-            _add_table(doc, s)
+            _add_table(doc, _XML_BAD.sub("", s))
             k += 1
             continue
         mark = None
@@ -167,7 +172,7 @@ def build_docx(meta: dict, chunks: list[dict], out: Path) -> int:
         sec.left_margin = sec.right_margin = Cm(2.2)
     t = doc.add_paragraph()
     t.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    r = t.add_run(meta["title"])
+    r = t.add_run(_clean_inline(meta["title"]))
     r.bold = True
     r.font.size = Pt(22)
     _set_cjk(r)
@@ -175,7 +180,7 @@ def build_docx(meta: dict, chunks: list[dict], out: Path) -> int:
         if line:
             p = doc.add_paragraph()
             p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-            rr = p.add_run(line)
+            rr = p.add_run(_clean_inline(line))
             rr.font.size = Pt(size)
             _set_cjk(rr)
     note = doc.add_paragraph()
@@ -347,7 +352,9 @@ def _run(args, te) -> None:
             skipped += 1
             continue
         try:
-            chunks = [json.loads(l) for l in src.read_text(encoding="utf-8").splitlines() if l.strip()]
+            # 🚨 只按 \n 分行：splitlines() 連 JSON 字串裡合法的 U+2028／U+0085 也會切，
+            # 星雲全集那批因此一行被切斷、整本「JSON 解析失敗」。
+            chunks = [json.loads(l) for l in src.read_text(encoding="utf-8").split("\n") if l.strip()]
             n = build_docx(j, chunks, out)
             done += 1
             print(f"  [{done + skipped}/{len(jobs)}] {out.relative_to(DRIVE_CW)}（{n} 節）", flush=True)
