@@ -25,7 +25,7 @@ description: 一貫道國家檔案專案（中研院社會所委託、與元智�
 | 年表 | 七個分期、57 則事件 | `…/yiguandao/timeline.json` |
 | 每月進度 | markdown 進版控 | `…/yiguandao/progress/YYYY-MM.md` |
 | 交件 Word | 00 進度／01 報告／02 年表／03 清單／04 書目 | Drive `玄奘/博一上/工作/中研院助理/` |
-| 檔案×論文比對 | 只寫捕鼠案與敵偽案兩份：每份各「與論文對照／有趣的點／可繼續做的問題」，🚨使用者嫌囉嗦——別扯其他檔案、總評、待辦 | `…/yiguandao/analysis/2026-09_archives-vs-paper.md` → Drive `…/中研院助理/06_2026-09_一貫道兩份檔案初步分析（勿外傳）.docx` |
+| 檔案×論文比對 | 只寫捕鼠案與敵偽案兩份：每份各「與論文對照／有趣的點／可繼續做的問題」，🚨使用者嫌囉嗦——別扯其他檔案、總評、待辦 | `…/yiguandao/analysis/2026-09_archives-vs-paper.md` → Drive `…/中研院助理/06_2026-09_一貫道兩份檔案初步分析.docx（檔名不加勿外傳，使用者指定）` |
 | 檔案原件 | 加密 docx 與 PDF（**使用者自備，腳本不要碰**） | Drive `…/研究助理/05_檔案全文/` |
 
 **產檔**：`yiguandao_inventory.py`（盤影像）→ `yiguandao_r2_sync.py`（上 R2）→ `yiguandao_docx.py`（出 Word）。
