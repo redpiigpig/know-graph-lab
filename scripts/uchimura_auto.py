@@ -34,6 +34,7 @@ from multilang_chunks import write_jsonl  # noqa: E402
 _SKILL_DATA = SCRIPT_DIR.parent / ".claude" / "skills" / "ebook-collected-works"
 DATA_ROOT = _SKILL_DATA / "uchimura_data"
 MAX_PARAS_PER_CHUNK = 10
+SHARD: tuple[int, int] | None = None   # (i, n)，由 --shard i/n 設定
 
 # 同一套青空文庫 → ja＋繁中的流程，換一位作家只是換 registry 模組（無教會主義群像
 # 之後還有藤井武、塚本虎二…）。模組要提供 REGISTRY/QUEUE/load_work_sections/
@@ -128,6 +129,20 @@ def _bad_output(src: str, out: str) -> str:
     return te.unusable_reason(out, src)
 
 
+def shard_owner(sizes: list[int], n: int) -> dict[int, int]:
+    """節 → 負責的 shard。由大到小、每節交給目前段數最少的 shard（貪婪）。
+
+    純 mod n 會失衡：關根日文論文集有一篇座談紀錄就兩百多段，三條 lane 實測
+    分到 672／983／543 段。結果只取決於各節段數，所以每個行程算出來都一樣。"""
+    load = [0] * n
+    owner: dict[int, int] = {}
+    for i in sorted(range(len(sizes)), key=lambda k: (-sizes[k], k)):
+        j = min(range(n), key=lambda x: (load[x], x))
+        owner[i] = j
+        load[j] += sizes[i]
+    return owner
+
+
 # ── translate (checkpoint per section, resumable) ────────────────────────────
 def translate_work(slug: str, translate_para, *, save_every: int = 5,
                    maxparas: int | None = None) -> int:
@@ -135,7 +150,12 @@ def translate_work(slug: str, translate_para, *, save_every: int = 5,
     w = ub.REGISTRY[slug]
     print(f"  {slug}: {len(secs)} sections ({w['title']})", flush=True)
     translated = 0
+    owner = shard_owner([len(s["paras"]) for s in secs], SHARD[1]) if SHARD else {}
     for i, s in enumerate(secs):
+        # --shard i/n：多條 lane 平行時，每條只碰節號 mod n＝i 的節——不重疊，
+        # 也就不會有兩個行程同時寫同一個 secN.json（後寫的會蓋掉先寫的譯文）。
+        if SHARD and owner.get(i, 0) != SHARD[0]:
+            continue
         cp = _sec_path(slug, i)
         cache = json.loads(cp.read_text(encoding="utf-8")) if cp.exists() else {}
         src = list(s["paras"])
@@ -450,6 +470,8 @@ def main():
     ap.add_argument("--build-only", action="store_true")
     ap.add_argument("--run-queue", action="store_true")
     ap.add_argument("--author", choices=sorted(AUTHOR_MODULES), default="uchimura")
+    ap.add_argument("--shard", type=str, default=None,
+                    help="i/n：只翻節號 mod n＝i 的節（平行 lane 用；build/upload 仍是整卷）")
     ap.add_argument("--remap-cache", action="store_true",
                     help="parser 改過後，以原文字串為鍵重建 checkpoint（保住沒變的譯文）")
     ap.add_argument("--redo-matching", type=str, default=None,
@@ -458,6 +480,10 @@ def main():
                     help="把寫壞的章名換回原文標題（之後要重建該書）")
     args = ap.parse_args()
     use_author(args.author)
+    if args.shard:
+        global SHARD
+        i, n = (int(x) for x in args.shard.split("/"))
+        SHARD = (i, n)
 
     if args.remap_cache:
         for slug in ([args.work] if args.work else ub.QUEUE):
