@@ -147,6 +147,8 @@ PROMPT = """你是聖經譯者。下面是日文《文語訳聖書》（明治�
 {src}
 """
 
+OUT_FMT = "\n只輸出譯文：第一行寫 <<<譯文>>>，接著每節一行，最後一行寫 <<<完>>>。不要寫任何分析。"
+
 BOOK_ZH = {}
 
 
@@ -184,16 +186,30 @@ def translate_batch(code: str, ch: str, verses: dict[str, str], ref: dict[int, s
     last = "?"
     for attempt in range(3):
         try:
-            raw = te.nvidia_chat(prompt, max_tokens=8000, temperature=0.2)
+            raw = te.nvidia_chat(prompt + OUT_FMT, max_tokens=8000, temperature=0.2, system="/no_think")
         except Exception as e:  # noqa: BLE001
             last = f"engine {e}"
             time.sleep(20)
             continue
-        got = {}
-        for ln in raw.splitlines():
-            m = _LINE.match(ln)
-            if m and m.group(1) in verses:
-                got[m.group(1)] = te._to_traditional(m.group(2).strip())
+        # 🚨 nemotron 會先把推理寫成明文（沒有 <think> 標籤），裡面夾著日文原句與
+        #    「1｜…」半成品；整份解析會把那些當譯文（第一輪五章全數缺節／假名外洩）。
+        #    只收最後一個 <<<譯文>>>…<<<完>>> 區塊，沒有區塊就當失敗。
+        blocks = re.findall(r"<<<譯文>>>(.*?)<<<完>>>", raw, re.S)
+        if not blocks:
+            last = "沒有 <<<譯文>>> 區塊"
+            print(f"   {code} {ch} 重試 {attempt + 1}：{last}", flush=True)
+            continue
+        # 推理裡偶爾也會寫出 <<<譯文>>>…<<<完>>>（在複述格式要求），所以不取「最後一塊」，
+        # 取解析得出最多節的那一塊。
+        def parse(block: str) -> dict[str, str]:
+            out = {}
+            for ln in block.splitlines():
+                m = _LINE.match(ln)
+                if m and m.group(1) in verses:
+                    # 文語訳一律作「神」；附給它對照專名的和修是上帝版，模型會抄進來
+                    out[m.group(1)] = te._to_traditional(m.group(2).strip()).replace("上帝", "神")
+            return out
+        got = max((parse(b) for b in blocks), key=len)
         missing = [v for v in verses if not got.get(v)]
         leak = [v for v, t in got.items() if len(_KANA.findall(t)) > 2]
         joined = "".join(got.get(v, "") for v in verses)
