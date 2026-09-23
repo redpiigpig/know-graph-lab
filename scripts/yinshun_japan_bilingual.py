@@ -41,7 +41,8 @@ PROMPT = """你是日本佛教學論文的專業譯者，把以下日文學術�
 5. 引自漢文佛典的原文（漢文、訓讀體）直接還原為漢文原句，不要再白話化。
 6. 註號、頁碼、年份照原樣保留。
 7. 片假名外來語、西方人名與梵語人名一律譯成中文通行譯名，不可留片假名（例：エンゲイジド・ブッディズム→入世佛教、シャーンティデーヴァ→寂天、ラモット→拉莫特），首次出現可括注原文拼法。
-8. 只輸出這一段的譯文，不要前言、說明或原文。
+8. 即使原文只是片段、半句、書目、網址或註號，也照樣逐字翻譯（書目與網址原樣保留），**絕不可**要求補充原文、評論原文品質或說明自己要翻譯。
+9. 只輸出這一段的譯文，不要前言、說明或原文。
 
 {source}"""
 
@@ -514,6 +515,8 @@ def load_catalog() -> list[dict]:
 
 # ── 翻譯（Gemini → NVIDIA → Haiku，逐段寫回） ─────────────────────────────────
 _PROTECT_RE = re.compile(r"《[^》]{1,80}》|〈[^〉]{1,80}〉|『[^』]{1,80}』|岩波|余輩")
+_META_RE = re.compile(r"我注意到您|您提供的|您尚未提供|您貼上的|請提供(完整|具體|您要)|請將(原文|該段)|無法(提供|進行)?(忠實|準確)?(完整)?的?翻譯|尊敬的用戶|我已準備好|我準備好(進行)?翻譯|這段文字(殘缺|內容破碎|中沒有)|看來您提供|抱歉，(您|我需要)|我很遺憾，但這段|（注：(由於您|您提供|此段文本)")
+_KANA_ANY = re.compile(r"[぀-ヿ]")
 _PREAMBLE_RE = re.compile(r"^\s*(以下是|以下為|下面是)[^\n]{0,20}(翻譯|譯文)[^\n]*[:：]\s*\n|^\s*(譯文|翻譯)[:：]\s*")
 
 
@@ -537,8 +540,11 @@ def get_translator():
         # Gemini 免費層當天額度用完時，每段仍會把 7 把 key 各試三次（幾分鐘）才退 NVIDIA；直接跳過
         te._gemini_cooldown_until = time.time() + 86400
 
+    # YJ_ENGINE=haiku：直打 Haiku（Max 訂閱，獨立額度池），免費池乾掉或要趕工時用
+    engine = te.haiku_first if os.environ.get("YJ_ENGINE") == "haiku" else te.gemini_with_nvidia_fallback
+
     def fn(src: str) -> str:
-        out = te.gemini_with_nvidia_fallback(src)
+        out = engine(src)
         out = re.sub(r"<think>.*?</think>", "", out, flags=re.S)
         out = _PREAMBLE_RE.sub("", out).strip()
         if "<think>" in out or "</think>" in out:
@@ -546,6 +552,13 @@ def get_translator():
         bad = te.unusable_reason(out, src)
         if bad:
             raise RuntimeError(f"譯文不可用：{bad}")
+        # 🚨 Haiku 遇到片段／書目／亂碼會回「抱歉，您尚未提供…」「我注意到您提供的…」，
+        #    甚至自己編一段日文「論文」塞進來（2026-09-23 實測 23 篇中十幾篇中招）。這些一律退回。
+        if _META_RE.search(out):
+            raise RuntimeError("譯文不可用：後設回覆（拒譯／要求補充原文）")
+        kana = len(_KANA_ANY.findall(out))
+        if kana > 12 and kana / max(len(out), 1) > 0.08 and kana > len(_KANA_ANY.findall(src)) * 0.3:
+            raise RuntimeError("譯文不可用：譯文欄殘留大量假名（未譯或捏造日文）")
         return out
     return fn
 
