@@ -87,6 +87,7 @@ $STALL_PER_LANE = @{
     'sbe-b2-s3'      = 90
     'sbe-b2-s4'      = 90
     'sbe-b2-s5'      = 90
+    'mineru-queue'   = 180   # one log line per BOOK; a 500-page scan runs 30+ min on the GPU
 }
 function StallLimit($label) {
     if ($STALL_PER_LANE.ContainsKey($label)) { return $STALL_PER_LANE[$label] }
@@ -199,7 +200,9 @@ Ensure 'scan-ocr' 'scan_ocr_pass' @('-X','utf8','scripts\scan_ocr_pass.py','--ba
 # eats the whole queue here. The GPU lock in mineru_ocr keeps it from colliding with the
 # daily runs; a halt (env failure) just ends the process and the next tick relaunches.
 # Retires itself on MINERU_QUEUE_EMPTY.
-EnsureUntil 'mineru-queue' $py @('-X','utf8','scripts\mineru_ocr.py','queue','--limit','1000') 'MINERU_QUEUE_EMPTY'
+# -u is required: redirected stdout is block-buffered, so on 09-23 the out log sat idle
+# 166 min while books were being published, and the stall guard killed a healthy worker.
+EnsureUntil 'mineru-queue' $py @('-X','utf8','-u','scripts\mineru_ocr.py','queue','--limit','1000') 'MINERU_QUEUE_EMPTY'
 
 # Jung: DONE 2026-09-02. All 16 translated volumes are on the site (the lane had been
 # dead since the source EPUB moved to Drive, and file_path collisions were rejecting
