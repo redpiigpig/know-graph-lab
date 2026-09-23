@@ -334,6 +334,19 @@ def gloss_batch(batch: list[dict], forms: list[tuple[str, str]], cache: dict, tr
 # main
 # --------------------------------------------------------------------------
 
+def unglossed_pieces(text: str, width: int = 10) -> list[str]:
+    """Split a unit that got no gloss row into wrappable pieces: at punctuation, then every `width` chars."""
+    pieces: list[str] = []
+    for chunk in re.split(r"(?<=[、。，．！？」』）])", text):
+        chunk = chunk.strip()
+        while len(chunk) > width:
+            pieces.append(chunk[:width])
+            chunk = chunk[width:]
+        if chunk:
+            pieces.append(chunk)
+    return pieces or [text]
+
+
 def every_unit(readings: dict) -> list[dict]:
     units: list[dict] = []
     for volume in readings["volumes"]:
@@ -398,7 +411,10 @@ def main() -> int:
                     blank += not t["glossZh"]
         else:
             missing_units += 1
-            tokens = [{"word": unit["text"], "trailing": "", "glossZh": ""}]
+            # 整段當一個 token 會超出版心（排版按 token 寬度切行，一個比行還寬的
+            # token 就直接凸出去——2026-09-24 第二冊 49 處）。沒有對譯的段照標點與
+            # 每十字切成無詞義的小塊，至少能換行。
+            tokens = [{"word": piece, "trailing": "", "glossZh": ""} for piece in unglossed_pieces(unit["text"])]
         out_units[unit["id"]] = {"ref": unit["ref"], "group": unit["group"], "tokens": tokens}
 
     OUTPUT.write_text(
