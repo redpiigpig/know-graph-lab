@@ -252,6 +252,10 @@ FB/IG 抓不到，改抓 WordPress：`/feed/?paged=1..3` 三頁湊齊 25 篇（s
 4. **還沒做**：libgen 那條（`小黑書_libgen下載清單.txt`，73 行）還是人工的；libgen.li
    要 PowerShell IWR 且別讓檔案落地（Defender），與這支的 playwright 路線不同
    （[[project_christianity_studies_littleblackbook]]）。
+5. **研究史料專線（2026-09-23）**：`ingest_new_books.py` 的 `RESEARCH_ROUTES` 按檔名前綴把 z-lib 抓回的史料
+   直接搬到 Drive `研究資料/…`，不進電子圖書館、不寫 ebooks 表。目前只有「蔣中正日記」→
+   `研究資料/政教關係/蔣中正日記/`（清單 `data/zlib-wanted/chiang-diary.jsonl`，民國歷史文化學社排印本 44 冊；
+   探勘 37 冊有貨，1950–53、1957–59 七冊 probe-miss）。用途：查蔣是否對一貫道等教門下過指示。
 
 ## 記憶庫併入：feedback_zlib_3x_daily_check
 

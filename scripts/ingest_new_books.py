@@ -48,6 +48,11 @@ import book_classifier
 # 原地處理最後只做 Drive 內的搬移。
 NEW_BOOK_DIR = Path(__file__).resolve().parent.parent / "z-lib"
 DRIVE_ROOT = Path("G:/我的雲端硬碟/資料/知識圖工作室/電子圖書館")
+RESEARCH_ROOT = Path("G:/我的雲端硬碟/資料/知識圖工作室/研究資料")
+# 檔名前綴 → 研究資料夾（z-lib 抓回的史料，不當一般藏書分類）
+RESEARCH_ROUTES = [
+    ("蔣中正日記", RESEARCH_ROOT / "政教關係" / "蔣中正日記"),
+]
 EBOOK_EXTS = {".pdf", ".epub", ".mobi", ".azw3", ".azw"}
 
 # Broken / truncated downloads are held here, OUT of Drive, so they never
@@ -690,6 +695,19 @@ def cmd_run(limit: int | None, dry_run: bool):
                 except Exception as e:
                     print(f"    (隔離搬移失敗，檔案留原處: {e})")
             blacklisted += 1
+            continue
+
+        # 研究資料專線：不進電子圖書館也不入 ebooks 表，直接落在研究區的資料夾
+        route = next((d for pre, d in RESEARCH_ROUTES if p.name.startswith(pre)), None)
+        if route:
+            print(f"  RESEARCH → {route}")
+            if not dry_run:
+                route.mkdir(parents=True, exist_ok=True)
+                if (route / p.name).exists():
+                    p.unlink()
+                else:
+                    shutil.move(str(p), str(route / p.name))
+            ok += 1
             continue
 
         try:
