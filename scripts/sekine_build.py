@@ -252,7 +252,7 @@ SEKINE_PROMPT_JA = """你是日本聖經學與無教會史的專業譯者，正�
    様式史→形式批判、伝承史→傳統史、編集史→編修史、七十人訳→七十士譯本。
 5. 人名：西方學者用通行中譯並在首次出現時附原名（馮拉德 G. von Rad、諾特 M. Noth、
    艾希羅特 W. Eichrodt、韋伯 M. Weber）；日本學者照漢字原名（並木浩一、左近淑、木田献一）。
-6. 引用的聖經章節照中文和合本卷名（イザヤ書→以賽亞書、エレミヤ書→耶利米書、ヨブ記→約伯記、
+6. 聖經引文一律用《和合本修訂版》（2010）（prompt 末附查好的經文時逐字照錄）；引用的章節照和合本修訂版卷名（イザヤ書→以賽亞書、エレミヤ書→耶利米書、ヨブ記→約伯記、
    コーヘレト→傳道書）。
 7. **西文詞句（德、拉丁、希伯來轉寫、希臘文）原樣保留**，必要時在後面括號加中譯。
 8. 純書目式的註（作者‧書名‧卷期‧頁）照原樣保留，不要改寫。
@@ -268,7 +268,7 @@ SEKINE_PROMPT_WEST = """你是聖經學的專業譯者，正在翻譯日本舊�
 1. 嚴守繁體中文（禁簡體）；只翻譯，不要加前言、說明、譯註或回抄原文。
 2. 語域：現代學術白話文。
 3. 希伯來文、希臘文、拉丁文詞語與轉寫原樣保留，必要時在後面括號加中譯。
-4. 聖經書卷用和合本卷名（Jesaja→以賽亞書、Hiob→約伯記、Könige→列王紀）。
+4. 聖經引文一律用《和合本修訂版》（2010）（prompt 末附查好的經文時逐字照錄）；書卷用和合本修訂版卷名（Jesaja→以賽亞書、Hiob→約伯記、Könige→列王紀）。
 5. 學者名用通行中譯並附原名（馮拉德 G. von Rad、諾特 M. Noth、韋爾豪森 J. Wellhausen）。
 6. 術語：Heilsgeschichte→救恩史、Theodizee→神義論、Formgeschichte→形式批判、
    Überlieferungsgeschichte→傳統史、Deuteronomist→申命記史家、Jahwist→耶典作者。
@@ -310,7 +310,9 @@ def make_engine(backend: str = "auto"):
         src = (src or "").strip()
         if not src:
             return ""
-        te.PROMPT_TMPL = SEKINE_PROMPT_JA if _is_japanese(src) else SEKINE_PROMPT_WEST
+        import bible_quote_ref
+        te.PROMPT_TMPL = bible_quote_ref.with_hint(
+            SEKINE_PROMPT_JA if _is_japanese(src) else SEKINE_PROMPT_WEST, src)
         pieces = te.split_oversized(src)
 
         def piece(p: str) -> str:

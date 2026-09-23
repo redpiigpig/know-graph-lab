@@ -115,6 +115,28 @@ def _kana_leak(src: str, out: str) -> bool:
     return bool(out and _needs(src) and _KANA_RE.search(out))
 
 
+# ── 語域閘（2026-09-23）────────────────────────────────────────────────────────
+# prompt 早就寫明「絕不可譯成文言」，但原文是明治文語時模型照樣滑回半文言：
+# 「吾人若欲明瞭內村鑑三，須認識一個至為重要之事實：此人乃一位極其誠摯……」。
+# 這種句子沒有句末「也／矣／乎」，舊稽核（audit_classical_register）一段都抓不到，
+# 內村各卷實測 114 段漏網。判準改成「文言虛詞密度 − 白話虛詞密度」（每百漢字）。
+_CLASSICAL = re.compile(r"[之其於乃亦則而故此彼余吾汝爾焉矣也乎且若雖豈蓋茲斯遂既未皆曰謂]")
+_VERNACULAR_W = re.compile(r"的|了|著|們|是|在|把|被|給|很|就|還|沒有|不是|可以|因為|所以|這|那|他|她|我們|你們")
+CLASSICAL_LIMIT = 1.5
+
+
+def classical_score(zh: str) -> float:
+    n = len(re.findall(r"[\u4e00-\u9fff]", zh or "")) or 1
+    return (len(_CLASSICAL.findall(zh or "")) - len(_VERNACULAR_W.findall(zh or ""))) / n * 100
+
+
+def is_classical(src: str, zh: str) -> bool:
+    """詩行（原文或譯文有換行）照韻文譯，可以用文言，不算。"""
+    if not zh or len(zh) < 60 or "\n" in (src or "") or "\n" in zh:
+        return False
+    return classical_score(zh) > CLASSICAL_LIMIT
+
+
 def _bad_output(src: str, out: str) -> str:
     """這一段的譯文能不能存進 checkpoint。回傳原因，空字串＝可以存。
 
@@ -127,7 +149,10 @@ def _bad_output(src: str, out: str) -> str:
     if _kana_leak(src, out):
         return "kana-leak"
     import translate_ebook_to_zh as te
-    return te.unusable_reason(out, src)
+    why = te.unusable_reason(out, src)
+    if not why and getattr(ub, "REJECT_CLASSICAL", True) and is_classical(src, out):
+        return "classical"
+    return why
 
 
 def shard_owner(sizes: list[int], n: int) -> dict[int, int]:
@@ -193,9 +218,15 @@ def translate_work(slug: str, translate_para, *, save_every: int = 5,
             out = translate_para(src[j])
             why = _bad_output(src[j], out)
             if why:
+                first, first_why = out, why
                 out = translate_para(src[j])          # 換 key／換引擎再試一次
                 why = _bad_output(src[j], out)
-                if why:
+                if why == "classical":
+                    # 兩次都偏文言：留比較白話的那一版，不要留白（留白＝讀者看到日文原文）
+                    cands = [x for x, w in ((first, first_why), (out, why)) if w == "classical"]
+                    out = min(cands, key=classical_score)
+                    rejects["classical-kept"] = rejects.get("classical-kept", 0) + 1
+                elif why:
                     out = ""                          # 留白，別把壞輸出當譯文存
                     rejects[why] = rejects.get(why, 0) + 1
             if out:
