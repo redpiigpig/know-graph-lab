@@ -55,6 +55,13 @@ description: 「經典學者全集」的收錄流程 —— 以**學科**組織�
 > - **東方聖書（sacred-books-east）**：50 卷中**第一批 7 卷 ✅**（奧義書一/阿維斯陀一/古蘭經一/法句經/易經/耆那教一，含刻意留白 281 段）；**第二批 6 卷進行中**（摩奴法論/薄伽梵歌/古蘭經二/奧義書二/法華經/道教一），六條 shard 平行跑 `sbe_translate.py --loop --backend nvidia --only <六卷> --shard i/6 --no-upload --reupload-every 60`。🚨 **backend 不要用 haiku**（那條 OAuth 自 2026-07-03 起 401）；剩 37 卷的 archive.org 編號表在 [sacred_books_east.md](sacred_books_east.md)。
 > - **引擎分流（2026-09-17 更新）**：NVIDIA 是現在的主力（7 把 key）；Gemini 只剩 ACCS OCR 那種低量用途——**免費層是「20 次／天／key」的日額度**，長跑用它每段都要先吃滿 7×3 次重試才落到 NVIDIA；🚨 **Haiku 那條 Claude Code OAuth 自 2026-07-03 起 401**，凡是寫死 `--backend haiku` 的路徑都要改掉（supervisor 的線上複核就是這樣把整台鎖在 review 模式、兩個月沒產出）。**監管只需 1 個 session**（艦隊靠排程自我修復，多 session 會搶 checkpoint）。
 
+> 📘 **每本全集書在 Drive 都要有一本 Word（2026-09-23 使用者定調）**：
+> `scripts/collected_works_word.py` 把 `_chunks/{id}.jsonl` 出成 `全集/{學科}/{作者}/{書名}.docx`
+> （繁中讀本；引用號／原書頁碼灰字；章節做成 Heading）。fleet keeper 的 `cw-word` lane 每 30 分
+> 增量刷新——JSONL 比 Word 新才重出，翻譯中的書會自己跟上。新作者、新卷不必另外處理，
+> 只要 store 有連 ebookId、JSONL 在 `_chunks/`。**Drive 是正本（`_chunks/` 全 555 本都在），
+> R2 是給正式站讀的壓縮副本，全集只佔 149 MB，維持不刪**（使用者同日確認）。
+
 # 經典學者全集 Skill（Collected Works — 依學科組織）
 
 把**經典學者的全集**收進獨立的 `/collected-works` portal（**依學科分區**），每位學者一個作家 hub（小傳／肖像／年表／著作目錄），單卷進 `/ebook/[id]` reader 逐段對照閱讀。
