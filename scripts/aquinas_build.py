@@ -47,9 +47,9 @@ REGISTRY = {
     7:  ("58e9f9ea-5885-4e67-8daa-9e574ddeb324", "論信德與望德", "第二集第二部‧第1–22題"),
     8:  ("7e8209d6-6c0c-4e1d-a25a-2f83ab9a007a", "論愛德", "第二集第二部‧第23–46題"),
     9:  ("da118696-1588-46b7-8331-eb1e29b06af8", "論智德與義德", "第二集第二部‧第47–79題"),
-    10: ("d76c3b3c-5d00-4f55-8071-140861156e48", "論義德之諸部分", "第二集第二部‧第80–100題"),
-    11: ("365f47f5-2de0-4c9b-ad59-bc0b252f447d", "論勇德與節德", "第二集第二部‧第101–140題"),
-    12: ("0d41cf82-c1c3-4b8d-9e59-12b326070536", "論特殊恩寵、生活和身分", "第二集第二部‧第141–189題"),
+    10: ("d76c3b3c-5d00-4f55-8071-140861156e48", "論義德之諸部分", "第二集第二部‧第80–122題"),
+    11: ("365f47f5-2de0-4c9b-ad59-bc0b252f447d", "論勇德與節德", "第二集第二部‧第123–170題"),
+    12: ("0d41cf82-c1c3-4b8d-9e59-12b326070536", "論特殊恩寵、生活和身分", "第二集第二部‧第171–189題"),
     13: ("42fc24cf-41a3-46e4-b7d2-b2a061672cdf", "論天主聖言之降生成人", "第三集‧第1–26題"),
     14: ("0251c9bb-ec2b-4dd8-a34d-7ff367473444", "論基督的生平與救贖", "第三集‧第27–59題"),
     15: ("2351b657-a2c8-4072-a26c-620d471a320d", "論聖事總論與聖洗堅振", "第三集‧第60–90題"),
@@ -57,8 +57,35 @@ REGISTRY = {
     17: ("966bd071-5119-4d9e-8c50-8682825cb29e", "論肉身復活的問題", "補編‧第69–99題／附設1–2題"),
 }
 
+# 🚨 第 10–12 冊的題號範圍原本記錯（80–100／101–140／141–189），站上副標跟著錯了
+# 兩個月；照《神學大全》標準結構是 80–122／123–170／171–189（2026-09-23 更正，
+# 切節後的題數 43／48／19 與此相符）。
+# 各冊起始題號與所屬集（引用號前綴）。第 17 冊補編 69–99 之後是附錄 1–2 題。
+Q_START = {1: 1, 2: 44, 3: 75, 4: 1, 5: 49, 6: 90, 7: 1, 8: 23, 9: 47, 10: 80, 11: 123,
+           12: 171, 13: 1, 14: 27, 15: 60, 16: 1, 17: 69}
+PART = {1: "I", 2: "I", 3: "I", 4: "I-II", 5: "I-II", 6: "I-II", 7: "II-II", 8: "II-II",
+        9: "II-II", 10: "II-II", 11: "II-II", 12: "II-II", 13: "III", 14: "III", 15: "III",
+        16: "Suppl.", 17: "Suppl."}
+SUPPL_LAST = 99   # 補編最後一題；再往後是附錄（Suppl. App. q1–q2）
+
 _CN = {c: i for i, c in enumerate("零一二三四五六七八九", 0)}
-OPENER = re.compile(r"有關第([一二三四五六七八九十百]+)節[，,]?\s*我們討論如下[：:]")
+# 節標記「有關第N節，我們討論如下：」。OCR 把它讀壞的變體很多（2026-09-23 逐一看過 44 處）：
+# 有闕／有闇／有第／關於、我門／去們、計誰知下／誼論、第十-節／第卡二節／第仁節、
+# 節→章／飾、冒號→分號／問號，以及譯者自己的「有關這一節」「我們這樣來討論」。
+# 「如下／知下」必須有（或「這樣來討論」）——正文裡「有關第二節，我們討論過…」是交叉引用，不是標記。
+OPENER = re.compile(
+    r"(?:有[關闕開閣闇]?|關於)\s*(?:第([一二三四五六七八九十百卡仁\-－]+)(?:節|章|飾)|這一節)"
+    r"[^\n：:]{0,6}?(?:我[們門]|去們)?[^\n：:]{0,4}?"
+    r"(?:(?:[討計誼]論|計誰)(?:如下|知下)|這樣來討論)\s*[：:;；,，。．]?")
+STRICT_OPENER = re.compile(r"有關第([一二三四五六七八九十百]+)節[，,]?\s*我們討論如下[：:]")
+_NUM_FIX = str.maketrans({"卡": "十", "仁": "七", "-": "一", "－": "一"})
+
+
+def opener_number(m) -> int | None:
+    """節標記裡的數字；讀不出來（「有關這一節」、OCR 打爛）回 None，由呼叫端按順序推。"""
+    raw = (m.group(1) or "").translate(_NUM_FIX)
+    n = chinese_to_int(raw) if raw else 0
+    return n or None
 _QNUM = re.compile(r"第([一二三四五六七八九十百]+)題[：:]?\s*(論[^>\n，。]{2,25})")
 
 
@@ -110,14 +137,143 @@ def clean_ocr_light(text: str) -> str:
     return joined
 
 
+CN_DIGITS = "零一二三四五六七八九"
+
+
+def int_to_chinese(n: int) -> str:
+    if n < 10:
+        return CN_DIGITS[n]
+    if n < 20:
+        return "十" + (CN_DIGITS[n - 10] if n > 10 else "")
+    if n < 100:
+        return CN_DIGITS[n // 10] + "十" + (CN_DIGITS[n % 10] if n % 10 else "")
+    return str(n)
+
+
+_HEAD_NEXT = re.compile(r"質[疑提聽接矩]|買聽|反之|因為")
+
+
+def _heading_cut(seg: str, n: int) -> int | None:
+    """跳號區段裡找「第N節＋節標題」當切點（節標記整句都被 OCR 吃掉時的備援）。
+
+    取**最後一個**合格的：節標題緊接在該節之前，前文裡出現的多半是交叉引用
+    （「第十三題第二節釋疑」）。排除前面緊貼「題」的（交叉引用），並要求後面 160 字內
+    出現質疑／反之這類開節用語，或本身就在區段末尾。"""
+    best = None
+    for m in re.finditer(f"第{int_to_chinese(n)}節", seg):
+        if m.start() > 0 and seg[m.start() - 1] in "題第":
+            continue
+        tail = seg[m.end(): m.end() + 160]
+        if tail.startswith(("釋疑", "所說", "所講", "已說", "曾說")):
+            continue
+        if _HEAD_NEXT.search(tail) or len(seg) - m.end() < 80:
+            best = m.start()
+    return best
+
+
 def split_articles(full: str):
-    """全書文字 → [{'sec': 節號int, 'body': 該節內文}]，以「有關第N節，我們討論如下」為界。"""
-    ops = list(OPENER.finditer(full))
+    """全書文字 → [{'sec': 節號int, 'body': 該節內文, 'start': 在 full 裡的起點}]。
+
+    第一層：寬鬆的節標記（OPENER）。第二層：同一題內仍跳號的區段，找行首「第N節」
+    節標題補切。節號讀不出來時按「前一節＋1」推。"""
+    cuts = []  # (標記起點, 內文起點, 讀到的節號 or None)
+    for m in OPENER.finditer(full):
+        cuts.append((m.start(), m.end(), opener_number(m)))
+    raw = [n for _, _, n in cuts]
+    # 推定節號。兩條修正（2026-09-23 逐處看過）：
+    #  * 讀不出數字 → 前一節＋1。
+    #  * 相鄰兩個標記節號相同、且比前一節多 2（「有關第三節…有關第三節」）→ 前一個是
+    #    OCR 把「第二節」讀成「第三節」，改成前一節＋1。不修的話會被當成開新題，
+    #    整冊題號從那裡起全部錯位（第 4 冊因此多算三題）。
+    seq, prev = [], 0
+    for i, n in enumerate(raw):
+        nxt = raw[i + 1] if i + 1 < len(raw) else None
+        if not n:
+            n = prev + 1
+        elif nxt == n and n == prev + 2:
+            n = prev + 1
+        seq.append(n)
+        prev = n
+    # 第二層：跳號區段找節標題補切。兩種跳號：同一題內（3→5 缺 4），以及題首
+    # （新題從第 2 節開始＝第 1 節的標記整個被 OCR 吃掉）。
+    extra = []
+    for i in range(len(cuts) - 1):
+        a, b = seq[i], seq[i + 1]
+        missing = range(a + 1, b) if b > a + 1 else (range(1, b) if b <= a and b > 1 else range(0))
+        if missing:
+            seg_start, seg_end = cuts[i][1], cuts[i + 1][0]
+            seg = full[seg_start:seg_end]
+            for miss in missing:
+                pos = _heading_cut(seg, miss)
+                if pos is not None:
+                    extra.append((seg_start + pos, seg_start + pos, miss))
+    allc = sorted([(c[0], c[1], n) for c, n in zip(cuts, seq)] + extra)
     arts = []
-    for i, m in enumerate(ops):
-        body = full[m.end(): ops[i + 1].start() if i + 1 < len(ops) else len(full)]
-        arts.append({"sec": chinese_to_int(m.group(1)), "body": body})
+    for i, (st, body_start, n) in enumerate(allc):
+        end = allc[i + 1][0] if i + 1 < len(allc) else len(full)
+        arts.append({"sec": n, "body": full[body_start:end], "start": st})
     return arts
+
+
+# 每頁頂端的書眉「第一二九題論胸懷大志或壯心」＝這一頁屬於哪一題，是題號的權威來源。
+# 「論」必須緊跟在後——正文裡「如同前面第一二八題已經講過的」是交叉引用，不是書眉。
+RUNNING_HEAD = re.compile(r"第([一二三四五六七八九十百〇零]+)[題體]\s*[:：]?\s*(論[^第\n，。:：]{1,24})")
+
+
+def assign_questions(text: str, arts: list[dict], q_start: int) -> list[tuple[int, str]]:
+    """每一節 → (題號, 題名)。
+
+    主要靠「節號重置＝開新題」計數，但只靠計數會漂：漏掉一題的第一節、或多切出一個
+    假標記，後面整冊題號全錯（第 11 冊實測少算一題）。所以再用書眉校正——
+    **接續上一節**的節，前面若出現書眉而題號不同，以書眉為準並從那裡重新計數。
+    開新題的那一節不套：它上方的書眉常常還是上一題的。"""
+    out: list[tuple[int, str]] = []
+    titles: dict[int, str] = {}
+    for m in RUNNING_HEAD.finditer(text):
+        titles.setdefault(chinese_to_int(m.group(1)), m.group(2).strip())
+    q, prev = q_start - 1, 0
+    for i, a in enumerate(arts):
+        sec = a["sec"]
+        if i == 0 or sec < prev or (sec == 1 and prev >= 1):
+            q += 1
+        else:
+            back = text[arts[i - 1]["start"]:a["start"]]
+            heads = [chinese_to_int(m.group(1)) for m in RUNNING_HEAD.finditer(back)]
+            if heads and heads[-1] != q and 0 < abs(heads[-1] - q) <= 3:
+                q = heads[-1]
+        prev = sec
+        out.append((q, titles.get(q, "")))
+    return out
+
+
+QUESTION_INTRO = re.compile(r"分為[一二三四五六七八九十]+節|要討論的是|然後要討論|我們要討論|本題分為")
+
+
+def split_missed_question_starts(text: str, arts: list[dict], qs: list[tuple[int, str]]):
+    """書眉把題號往前校正了（接續節的題號 ≠ 前一節）＝新題第 1 節的標記整個不見，
+    它的內文被併進前一節。在前一節內文裡找這一題的題標題，從那裡切出第 1 節。
+
+    實測：第 2 冊第 73 題、第 16 冊第 18 題。找不到題標題就不動（寧可留在前一節，
+    不要猜錯切點）。"""
+    out_a, out_q = [], []
+    for i, (a, q) in enumerate(zip(arts, qs)):
+        if i and q[0] != qs[i - 1][0] and a["sec"] > 1 and out_a:
+            prev = out_a[-1]
+            seg = text[prev["start"]:a["start"]]
+            # 只認「題的開頭」，不認書眉：題開頭後面緊接引言（「分為六節」「然後要討論的是」），
+            # 書眉後面接的是正文續行。不加這道，書眉落在題中間時會切出只有 30 字的假第 1 節。
+            hit = [m for m in RUNNING_HEAD.finditer(seg) if chinese_to_int(m.group(1)) == q[0]
+                   and QUESTION_INTRO.search(seg[m.end():m.end() + 200])]
+            if hit:
+                cut = prev["start"] + hit[0].start()
+                body_start = a["start"] - len(prev["body"])   # 前一節內文止於本節起點
+                keep = text[body_start:cut]
+                prev["body"] = keep
+                out_a.append({"sec": 1, "body": text[cut:a["start"]], "start": cut})
+                out_q.append(q)
+        out_a.append(a)
+        out_q.append(q)
+    return out_a, out_q
 
 
 def mark_zones(body: str):
@@ -294,7 +450,12 @@ def _clean_piece(raw: str, engine: str, ki: int) -> str:
 def clean_body(vol: int, art_idx: int, raw: str, engine: str = "openrouter") -> str:
     """保守清理一節內文；長節先切 ≤1400 字塊逐塊清再併回（避免模型長文鬼打牆）。
     逐節 cache＋防呆，resumable。整節若一塊都沒清成，不 cache（下輪重試）。"""
-    cache = _clean_dir() / f"{vol:02d}_{art_idx:04d}.txt"
+    # 🚨 快取鍵是「該節原文的雜湊」，不是節的序號：2026-09-23 重切節之後序號位移，
+    # 用序號會把甲節的清理結果套到乙節上。舊快取已由 aquinas_cache_migrate.py 轉存。
+    import hashlib
+    key = hashlib.sha1(raw.strip().encode("utf-8")).hexdigest()[:16]
+    cache = _clean_dir() / "by_hash" / f"{vol:02d}_{key}.txt"
+    cache.parent.mkdir(exist_ok=True)
     if cache.exists():
         return cache.read_text(encoding="utf-8")
     raw = raw.strip()
@@ -344,11 +505,37 @@ def build_volume(vol: int, *, clean: bool = False, engine: str = "openrouter"):
     src_ebid, vol_title, vol_sub = REGISTRY[vol]
     rows = _load_source(src_ebid)
     qtitles = build_qtitles(rows)
-    full = clean_ocr_light("\n".join(r.get("content", "") for r in rows))
-    # 從第一個 article opener 起（之前皆前付/目次）
+    # 逐列清理再接起來，記下每列在全文裡的起點——節的起點落在哪一列，就是它的來源頁。
+    # （與整本一次清理的結果相同：clean_ocr_light 只做逐行處理與列內替換。）
+    pieces = [clean_ocr_light(r.get("content", "")) for r in rows]
+    full = "\n".join(pieces)
+    offsets, pos = [], 0
+    for r, piece in zip(rows, pieces):
+        offsets.append((pos, r.get("page_number")))
+        pos += len(piece) + 1
     first = OPENER.search(full)
-    body_text = full[first.start():] if first else full
+    base = first.start() if first else 0
+    # 冊首第一節的標記被 OCR 吃掉時（第 9、12 冊），第一個標記是第 2 節，第 1 節的內文
+    # 落在它前面、被當成前付丟掉。往前找這一冊起始題的書眉／題標題，從那裡起算。
+    if first and (opener_number(first) or 1) > 1:
+        heads = [m for m in RUNNING_HEAD.finditer(full[max(0, base - 6000):base])
+                 if chinese_to_int(m.group(1)) == Q_START[vol]]
+        if heads:
+            base = max(0, base - 6000) + heads[-1].start()
+    body_text = full[base:]
     arts = split_articles(body_text)
+    if arts and arts[0]["start"] > 0:
+        arts.insert(0, {"sec": 1, "body": body_text[:arts[0]["start"]], "start": 0})
+    qs = assign_questions(body_text, arts, Q_START[vol])
+    arts, qs = split_missed_question_starts(body_text, arts, qs)
+    import bisect
+    starts = [o for o, _ in offsets]
+
+    def page_of(a) -> int | None:
+        k = bisect.bisect_right(starts, base + a["start"]) - 1
+        pg = offsets[k][1] if k >= 0 else None
+        return pg if isinstance(pg, int) and pg > 0 else None
+
     if clean:
         workers = 8 if engine == "openrouter" else 1
         if workers > 1:
@@ -376,25 +563,28 @@ def build_volume(vol: int, *, clean: bool = False, engine: str = "openrouter"):
         "content": f"# {book}\n\n{PARENT_VOLUME}\n\n{vol_sub}",
     }
     chunks = [cover]
-    qnum, prev_sec = 0, 0
-    for a in arts:
+    for a, (qnum, qtitle) in zip(arts, qs):
         sec = a["sec"]
-        if sec <= 1 or sec < prev_sec:  # 節號重置 → 新題
-            qnum += 1
-        prev_sec = sec
-        qtitle = qtitles.get(qnum, f"第{qnum}題")
+        part, qn = PART[vol], qnum
+        if vol == 17 and qnum > SUPPL_LAST:          # 補編之後的附錄另起題號
+            part, qn = "Suppl. App.", qnum - SUPPL_LAST
+        qlabel = f"第{qn}題" if part != "Suppl. App." else f"附錄第{qn}題"
+        qtitle = qtitle or qtitles.get(qnum, "")
         zone_rows = mark_zones(a["body"])
         if not zone_rows:
             continue
-        heading = f"## 第{qnum}題 {qtitle} · 第{sec}節"
+        head_q = f"{qlabel} {qtitle}".strip()
+        heading = f"## {head_q} · 第{sec}節"
         paras = [heading] + [(f"〔{lab}〕{p}" if lab else p) for lab, p in zone_rows]
         idx = len(chunks)
         chunks.append({
-            "chunk_index": idx, "chunk_type": "chapter", "page_number": idx,
-            "chapter_path": f"{book} · 第{qnum}題 {qtitle} · 第{sec}節",
+            "chunk_index": idx, "chunk_type": "chapter",
+            # 🚨 舊版填的是 idx（流水號冒充頁碼）。改成來源掃描本的頁次，讀不到留空。
+            "page_number": page_of(a),
+            "chapter_path": f"{book} · {head_q} · 第{sec}節",
             "volume": book, "parent_volume": PARENT_VOLUME, "format": "markdown",
             "content": "\n\n".join(paras),
-            "anchors": [f"I q{qnum} a{sec}"] + [""] * (len(paras) - 1),
+            "anchors": [f"{part} q{qn} a{sec}"] + [""] * (len(paras) - 1),
         })
     return chunks
 

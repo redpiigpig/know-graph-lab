@@ -11800,7 +11800,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                 },
                 {
                       "title": "神學大全 第十冊：論義德之諸部分",
-                      "titleOriginal": "Summa Theologiae, Secunda Secundae, qq.80–100",
+                      "titleOriginal": "Summa Theologiae, Secunda Secundae, qq.80–122",
                       "year": "1265-1274",
                       "yearSort": 1265,
                       "category": "神學大全（中華道明會譯本‧共十七冊）",
@@ -11810,11 +11810,11 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "status": "done",
                       "genre": "quaestio",
                       ebookId: 'a9051225-0000-4000-8000-000000000010',
-                      "note": "第二集第二部第80–100題：論敬禮、祈禱、朝拜、奉獻與相反宗教德行之罪。中華道明會譯本逐節轉錄，經院問答四段（異議／反之／正解／答覆）版面。"
+                      "note": "第二集第二部第80–122題：論義德的諸部分——宗教德行（敬禮、祈禱、朝拜、奉獻、誓願、宣誓）與相反之罪、孝愛、敬重、服從、感恩、真誠、友愛、慷慨，以及義德的誡命。中華道明會譯本逐節轉錄，經院問答四段（異議／反之／正解／答覆）版面。"
                 },
                 {
                       "title": "神學大全 第十一冊：論勇德與節德",
-                      "titleOriginal": "Summa Theologiae, Secunda Secundae, qq.101–140",
+                      "titleOriginal": "Summa Theologiae, Secunda Secundae, qq.123–170",
                       "year": "1265-1274",
                       "yearSort": 1265,
                       "category": "神學大全（中華道明會譯本‧共十七冊）",
@@ -11824,11 +11824,11 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "status": "done",
                       "genre": "quaestio",
                       ebookId: 'a9051225-0000-4000-8000-000000000011',
-                      "note": "第二集第二部第101–140題：論孝敬、感恩、真誠、勇德、殉道、堅忍與大方。中華道明會譯本逐節轉錄，經院問答四段（異議／反之／正解／答覆）版面。"
+                      "note": "第二集第二部第123–170題：論勇德（殉道、大志、宏度、忍耐、堅持）與節德（知恥、節食、守齋、節飲、貞潔、童貞、克己、寬仁、謙遜、驕傲、好學）及其誡命。中華道明會譯本逐節轉錄，經院問答四段（異議／反之／正解／答覆）版面。"
                 },
                 {
                       "title": "神學大全 第十二冊：論特殊恩寵、生活和身分",
-                      "titleOriginal": "Summa Theologiae, Secunda Secundae, qq.141–189",
+                      "titleOriginal": "Summa Theologiae, Secunda Secundae, qq.171–189",
                       "year": "1265-1274",
                       "yearSort": 1265,
                       "category": "神學大全（中華道明會譯本‧共十七冊）",
@@ -11838,7 +11838,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "status": "done",
                       "genre": "quaestio",
                       ebookId: 'a9051225-0000-4000-8000-000000000012',
-                      "note": "第二集第二部第141–189題：論節德諸部分、神恩特寵（先知、神魂超拔）、主動與默觀生活、身分與修會生活。中華道明會譯本逐節轉錄，經院問答四段（異議／反之／正解／答覆）版面。"
+                      "note": "第二集第二部第171–189題：論特殊恩寵（先知預言、神魂超拔、言語之恩、行奇蹟）、行動生活與靜思生活、成全的身分（主教、修會生活）。中華道明會譯本逐節轉錄，經院問答四段（異議／反之／正解／答覆）版面。"
                 },
                 {
                       "title": "神學大全 第十三冊：論天主聖言之降生成人",

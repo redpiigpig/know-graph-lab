@@ -598,6 +598,15 @@ Commons 上要嘛沒有、要嘛是 CC BY-SA 不是 PD，一律留空。
 - `quaestio` 經院問答：段首 `〔異議/反之/正解/答覆〕` → 四段角色分區配色（阿奎那神學大全）。**✅ 首案在建（2026-07-23）：阿奎那《神學大全》中華道明會譯本 17 冊。圖書館既有 OCR 掃描本（collection=null）→ `scripts/aquinas_build.py`（6 純函式測試綠）讀 Drive 原始 OCR JSONL（唯讀保留）→ 每「節」切一 chunk、依「有關第N節，我們討論如下 → 質疑編號 → 反之 → 正解我解答如下 → 釋疑編號」注入四段標記 → 新 id `a9051225-…-NN`（a9≈aquinas 1225生年）。pilot 第一冊 221 節上架、reader 四段配色截圖驗證 ✅（作家 `thomas-aquinas` 在哲學學科，work 帶 `genre:'quaestio'`）。🚨 底本 OCR 雜訊重（督貴/啞益/反之→皮之），逐字清理＝剩餘大批次；批次同時重跑會修好被 OCR 打壞的區段標記。**
   **✅ 2026-08-17：17 冊全數 build＋upload 進 DB（2,598 chunks），hub 也補齊 17 冊 work 條目（原本只掛第一冊，另 16 冊入了庫卻在站上看不到）。逐字清理改走 `--clean --engine openrouter`（免費 8-key 獨立池，`google/gemma-4-26b-a4b-it:free`，完全不吃 Gemini／NVIDIA 量能），逐節 cache 在 `c:\tmp\aquinas_clean/{冊:02d}_{節:04d}.txt`＝可中斷續跑。已排進 `scripts/fleet_keeper.ps1` 的 **第一條 lane**（`aquinas`，每 30 分自我修復），`--upload` 為 idempotent（upsert＋replace chunks）故可反覆跑。**
 - `treatise`(預設)/`essay`/`lecture`/`diary-letters`/`narrative`：通用逐段版面。
+  **🔧 2026-09-23 重寫切節（`aquinas_build.py`，測試 10 例）**：舊版漏切約 100 節、題號與引用號大面積錯。
+  ① 節標記被 OCR 打壞的變體（有闕／有第／關於、我門／去們、計誰知下、第十-節／第卡二節、節→章／飾、
+  冒號→分號）改寬鬆比對，「如下」必須有以免吃到交叉引用；相鄰兩個同號（「第三節…第三節」）前一個改前一節＋1；
+  跳號與題首缺節再找行首「第N節」節標題補切。② **題號原本從 1 數起**（第 2 冊第 44–74 題被標成第 1–31 題）、
+  **引用號一律寫「I」**、**page_number 填流水號**——改成冊起始題號＋書眉校正（書眉「第一二九題論…」是權威）、
+  I／I-II／II-II／III／Suppl.／Suppl. App.、來源掃描頁次。③ **REGISTRY 第 10–12 冊題號範圍記錯**
+  （應為 80–122／123–170／171–189），store 簡介同步更正。④ 清理快取改以**原文雜湊**為鍵
+  （`c:/tmp/aquinas_clean/by_hash/`，舊序號鍵由 `aquinas_cache_migrate.py` 轉存），重切後只有 205 節要重清。
+  🚨 **掃描原檔缺頁、救不回來**：第 2 冊第 72 題、第 16 冊第 16–17 題（前後題直接相接）——要補得重掃那幾頁。
 判定 helper `scripts/genre_classify.py`（結構啟發式；**hint（fetch manifest 已標／Haiku 覆核）優先**，純文字易被目錄騙故門檻保守）。reader 改動 regression-safe（未標＝現行版面，已截圖驗證）。內容慣例：對話錄/問答段落一律以 `〔角色〕` 起始，詩歌保留換行——**ingest 時就要埋好這些標記**。
 
 ## SOP（每卷接手）

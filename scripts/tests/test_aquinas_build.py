@@ -59,3 +59,34 @@ def test_clean_ocr_light_drops_pagenum_lines():
     out = ab.clean_ocr_light("正文一\n- 307 -\n正文二\n42")
     assert "307" not in out and "42" not in out
     assert "正文一" in out and "正文二" in out
+
+
+# ── 2026-09-23 重寫切節：OCR 打壞的節標記、題號、引用號 ─────────────────
+def test_opener_accepts_ocr_variants():
+    import aquinas_build as ab
+    for s in ["有關第五節，我們討論如下;", "有關第二節﹒我們討論如下:", "有關第二節?我們討論如下:",
+              "有關第五節，我們計誰知下:", "有關第四節，去們討論如下:", "有闇第四節，我們討論如下:",
+              "有第二節，我們討論如下:", "有關第十一章，我們討論如下:", "有關第六飾，我們討論如下:",
+              "關於第二節，我們討論如下:", "有關第七節，我們這樣來討論:", "有關這一節，我們討論如下:"]:
+        assert ab.OPENER.search(s), s
+
+
+def test_opener_rejects_cross_reference():
+    import aquinas_build as ab
+    assert not ab.OPENER.search("有關第二節，我們討論過的那個問題")
+
+
+def test_duplicate_misread_number_is_repaired():
+    import aquinas_build as ab
+    text = ("有關第一節，我們討論如下:\n甲\n有關第三節，我們討論如下:\n乙\n"
+            "有關第三節，我們討論如下:\n丙\n")
+    assert [a["sec"] for a in ab.split_articles(text)] == [1, 2, 3]
+
+
+def test_questions_counted_from_volume_start_and_resynced_by_running_head():
+    import aquinas_build as ab
+    text = ("有關第一節，我們討論如下:\n一\n有關第二節，我們討論如下:\n二\n"
+            "有關第一節，我們討論如下:\n三\n第四十七題論智德\n有關第二節，我們討論如下:\n四\n")
+    arts = ab.split_articles(text)
+    qs = [q for q, _ in ab.assign_questions(text, arts, 45)]
+    assert qs == [45, 45, 46, 47]   # 書眉說這一節在第 47 題：少算的一題靠它補正
