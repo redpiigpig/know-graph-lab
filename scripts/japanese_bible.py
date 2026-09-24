@@ -16,9 +16,8 @@ r"""日文聖經——內村、關根那一代人實際讀的版本收進經典�
 🚨 `jkougo` **只 stage、沒有併進站上**：scrollmapper 那份有 473 節是空的（馬太福音
 一卷就 207 節），是語料缺損不是經文鑑別的刪節。要收得先找完整來源。
 
-🚨 **缺一個**：內村 1917 年以前讀的是**明治元訳新約（1880）**，跟大正改訳新約字句不同。
-這一版目前找不到數位全文（scrollmapper 只有 1953/1917 的組合），所以 `jbungo`
-新約部分對內村早期文章只是近似。
+內村 1917 年以前讀的是**明治元訳新約（1880）**，跟大正改訳新約字句不同，另收為 `jmeiji`
+（日文維基文庫「明治元訳新約聖書 (明治37年)」，見下方 `meiji()`），同樣直譯成 `jmeiji_zh`。
 
 語料：scrollmapper/bible_databases `formats/json/JapBungo.json`、`JapKougo.json`（MIT；
 經文本身公版——文語訳早已公版，口語訳是團體名義著作、日本著作權五十年已過）。
@@ -129,7 +128,7 @@ def stage() -> None:
 # 美國標準本 3 處），所以三個底本都各出一份中文直譯。
 #   jbungo_zh  ← jbungo  文語訳（明治元訳舊約＋大正改訳新約）
 #   kjv_zh     ← kjva    欽定本 1611（含次經，使用者要「整本」）
-#   jmeiji_zh  ← jmeiji  明治元訳新約 1880（內村 1917 年以前引的新約；語料待補）
+#   jmeiji_zh  ← jmeiji  明治元訳新約 1880（內村 1917 年以前引的新約；維基文庫，見 meiji()）
 SPECS = {
     "jbungo_zh": {"src": "jbungo", "lang": "ja", "style": "classical",
                   "name": "日文《文語訳聖書》（明治元訳舊約／大正改訳新約）"},
@@ -162,7 +161,7 @@ PROMPT_HEAD = """你是聖經譯者。下面是{name}{book_zh}第 {ch} 章的經
 規則：
 1. 譯的是這份原文的字句與語氣，**不是**把和合本抄過來。原文怎麼說，中文就怎麼說；
    用字若跟通行中文譯本不同，照原文。
-{register}3. 人名、地名、民族名、書卷名一律用下面附的中文譯本寫法（附文**只**供對照專名，不可照抄它的句子）。
+{register}3. 人名、地名、民族名、書卷名一律用《和合本修訂版》的通行寫法（亞伯拉罕、摩西、耶路撒冷、法利賽人……）。
 4. 引號用中文「」；不加註解、不加節外的說明。
    稱神的代名詞不用「祂」「祢」。
    🚨 **代名詞照原文留代名詞**：原文寫 he／him／his，就譯「他／他的」（文言作「彼／其」），
@@ -182,9 +181,6 @@ PROMPT_LANG = {
 """,
 }
 PROMPT_TAIL = """7. 輸出格式：每節一行，「節號｜譯文」，節號與原文相同、一節都不能少、不能合併。
-
-中文譯本同章（只看專名）：
-{ref}
 {style_ref}
 原文：
 {src}
@@ -242,11 +238,13 @@ def translate_batch(ver: str, code: str, ch: str, verses: dict[str, str], ref: d
     spec = dict(SPECS[ver], style=force_style or SPECS[ver].get("style", "vernacular"))
     classical = spec.get("style") == "classical"
     src = "\n".join(f"{v}｜{t}" for v, t in verses.items())
-    refs = "\n".join(f"{v}｜{ref.get(int(v), '')}" for v in verses)
+    # 🚨 不再把和修同章附進 prompt：關掉推理後，整節和修擺在眼前它就照抄（白話那一步
+    #    ASV／NIV 創世記前幾章重合 92–100%、整章被退）。專名改在規則裡要求用和修寫法，
+    #    ref 只留給下面的抄襲比對。
     style_ref = (f"\n文體範本（施約瑟淺文理譯本的別處經文，只學它的文言程度與句法）：\n{style_sample()}\n"
                  if classical else "")
     prompt = (PROMPT_HEAD + PROMPT_LANG[spec["lang"]] + PROMPT_TAIL).format(
-        name=spec["name"], book_zh=book_zh(code), ch=ch, ref=refs, src=src, style_ref=style_ref,
+        name=spec["name"], book_zh=book_zh(code), ch=ch, src=src, style_ref=style_ref,
         register=REGISTER[spec.get("style", "vernacular")])
     last = "?"
     tries = 4 if classical else 3
@@ -470,9 +468,129 @@ def collect(ver: str) -> None:
     print(f"{ver}：收進 {sum(len(v) for b in out.values() for v in b.values()):,} 節")
 
 
+
+# ── 明治元訳新約（1880）─────────────────────────────────────────────────────
+# 內村 1917 年以前引的新約是這一版：《求安錄》（1893）引太 5:48「天に在す爾曹の父の完全が如く
+# 爾曹も完全すべし」逐字相同，大正改訳作「汝らの天の父の全きが如く、汝らも全かれ」。
+# 來源：日文維基文庫「明治元訳新約聖書 (明治37年)」——底本 NDL『新約全書』米國聖書會社 1904，
+# 缺頁以同年大英國北英國聖書會社本補；逐章與明治14年（1881）版對校，異文記在章末 ※ 註。
+# 公有領域（PD-old）。頁面說明：已修正假名錯誤與明顯誤植、不用變體假名與踊り字（々除外）、
+# 拿掉專名旁線、ルビ依 1881 年版補齊——所以是「校訂本」，不是逐字影印。
+WS_API = "https://ja.wikisource.org/w/api.php"
+WS_UA = {"User-Agent": "know-graph-lab private research (contact: redpiigpig)"}
+MEIJI_BOOKS = {
+    "馬太傳福音書": "mat", "馬可傳福音書": "mrk", "路加傳福音書": "luk", "約翰傳福音書": "jhn",
+    "使徒行傳": "act", "羅馬書": "rom", "哥林多前書": "1co", "哥林多後書": "2co",
+    "加拉太書": "gal", "以弗所書": "eph", "腓立比書": "php", "哥羅西書": "col",
+    "帖撒羅尼迦前書": "1th", "帖撒羅尼迦後書": "2th", "提摩太前書": "1ti", "提摩太後書": "2ti",
+    "提多書": "tit", "腓利門書": "phm", "希伯來書": "heb", "雅各書": "jas",
+    "彼得前書": "1pe", "彼得後書": "2pe", "約翰第一書": "1jn", "約翰第二書": "2jn",
+    "約翰第三書": "3jn", "猶太書": "jud", "約翰默示録": "rev",
+}
+MEIJI_ONE_CHAPTER = {"腓利門書", "猶太書", "約翰第二書", "約翰第三書"}   # 只有一章，經文直接在卷頁上
+MEIJI_RAW = STAGE / "jmeiji_raw"
+
+
+def _ws_get(params: dict) -> dict:
+    import requests
+    for attempt in range(6):
+        r = requests.get(WS_API, params={**params, "format": "json"}, headers=WS_UA, timeout=60)
+        if r.status_code == 429:                   # 維基文庫連打幾次就 429；退避
+            time.sleep(15 * (attempt + 1))
+            continue
+        r.raise_for_status()
+        return r.json()
+    raise RuntimeError(f"wikisource 429 不停：{params}")
+
+
+def meiji_titles() -> list[tuple[str, str, int]]:
+    """(頁名, 書卷代碼, 章)。章頁從分類拿；單章書用卷頁。"""
+    import bible_quote_ref as bqr
+    d = _ws_get({"action": "query", "list": "categorymembers", "cmlimit": 500,
+                 "cmtitle": "Category:明治元訳新約聖書 (明治37年)"})
+    out = []
+    for m in d["query"]["categorymembers"]:
+        t = m["title"]
+        g = re.match(r"^(.+?)\(明治元訳\)(?: 第(.+)章)?$", t)
+        if not g or g.group(1) not in MEIJI_BOOKS:
+            continue
+        book, chk = g.group(1), g.group(2)
+        if chk:
+            out.append((t, MEIJI_BOOKS[book], bqr.cn_num(chk)))
+        elif book in MEIJI_ONE_CHAPTER:
+            out.append((t, MEIJI_BOOKS[book], 1))
+    return out
+
+
+_RUBY = re.compile(r"\{\{ruby\|([^|}]*)\|[^}]*\}\}")
+_VLINE = re.compile(r"^(\d+)\s+(.+?)(?:<br\s*/?>)?\s*$")
+
+
+def parse_meiji(wikitext: str) -> tuple[dict[str, str], list[str]]:
+    """wikitext → ({節: 經文（只留漢字，讀音拿掉）}, [章末 1881 年版異文註])。"""
+    verses: dict[str, str] = {}
+    notes: list[str] = []
+    for ln in wikitext.splitlines():
+        ln = ln.strip()
+        if ln.startswith("※"):
+            notes.append(_RUBY.sub(r"\1", re.sub(r"<br\s*/?>", "", ln)).strip())
+            continue
+        m = _VLINE.match(ln)
+        if not m:
+            continue
+        t = _RUBY.sub(r"\1", m.group(2))
+        t = re.sub(r"※\d*|<[^>]+>|\{\{[^}]*\}\}|'''?", "", t).strip()
+        if t:
+            verses[m.group(1)] = t
+    return verses, notes
+
+
+def meiji() -> None:
+    """抓明治元訳新約 → STAGE/jmeiji.json（格式同 jbungo），異文註 → STAGE/jmeiji_notes.json。
+    逐頁快取在 STAGE/jmeiji_raw/，可重跑。之後 `repair_bible_versions.py merge jmeiji`。"""
+    MEIJI_RAW.mkdir(parents=True, exist_ok=True)
+    titles = meiji_titles()
+    print(f"章頁 {len(titles)}（新約應為 260）")
+    out: dict = {}
+    notes: dict = {}
+    for k, (t, bk, ch) in enumerate(titles, 1):
+        f = MEIJI_RAW / f"{bk}_{ch}.txt"
+        if not f.exists():
+            d = _ws_get({"action": "query", "prop": "revisions", "rvprop": "content",
+                         "rvslots": "main", "titles": t})
+            page = next(iter(d["query"]["pages"].values()))
+            f.write_text(page["revisions"][0]["slots"]["main"]["*"], encoding="utf-8")
+            time.sleep(2.5)
+            if k % 20 == 0:
+                print(f"  {k}/{len(titles)}", flush=True)
+        vs, ns = parse_meiji(f.read_text(encoding="utf-8"))
+        out.setdefault(bk, {})[str(ch)] = vs
+        if ns:
+            notes.setdefault(bk, {})[str(ch)] = ns
+    (STAGE / "jmeiji.json").write_text(json.dumps(out, ensure_ascii=False), encoding="utf-8")
+    (STAGE / "jmeiji_notes.json").write_text(json.dumps(notes, ensure_ascii=False, indent=1), encoding="utf-8")
+    # 跟大正改訳（jbungo 新約）逐章比節數：少的節逐條列出來看，不要只看總數
+    bungo = json.loads((STAGE / "jbungo.json").read_text(encoding="utf-8"))
+    n = sum(len(v) for b in out.values() for v in b.values())
+    diffs = []
+    for bk, chs in bungo.items():
+        if bk not in MEIJI_BOOKS.values():
+            continue
+        for ch, vs in chs.items():
+            mine = set(out.get(bk, {}).get(ch, {}))
+            if set(vs) - mine:
+                diffs.append(f"{bk} {ch}: 明治本缺 {sorted(set(vs) - mine, key=int)}")
+            if mine - set(vs):
+                diffs.append(f"{bk} {ch}: 明治本多 {sorted(mine - set(vs), key=int)}")
+    print(f"jmeiji：{len(out)} 卷、{n:,} 節；異文註 {sum(len(v) for b in notes.values() for v in b.values())} 條；"
+          f"節號跟大正改訳對不上 {len(diffs)} 章")
+    for x in diffs[:40]:
+        print("   ", x)
+
+
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("cmd", choices=["pull", "stage", "translate", "progress", "collect"])
+    ap.add_argument("cmd", choices=["pull", "stage", "meiji", "translate", "progress", "collect"])
     ap.add_argument("--ver", default="jbungo_zh", choices=list(SPECS))
     ap.add_argument("--shard", default="0/1")
     a = ap.parse_args()
@@ -480,6 +598,8 @@ if __name__ == "__main__":
         pull()
     elif a.cmd == "stage":
         stage()
+    elif a.cmd == "meiji":
+        meiji()
     elif a.cmd == "translate":
         translate(a.ver, a.shard)
     elif a.cmd == "progress":
