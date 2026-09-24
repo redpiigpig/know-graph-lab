@@ -1238,7 +1238,8 @@ def pdf_to_chunks(pdf_path: Path) -> list[dict]:
                     paras[-1] += " " + text
                 else:
                     paras.append(text)
-        if not paras:
+        # The converter's own table-of-contents page is navigation, not text.
+        if not paras or paras[0].lower().startswith("table of contents"):
             continue
         if re.sub(r"\W", "", paras[0]).lower() == re.sub(r"\W", "", title).lower():
             paras[0] = f"## {title}"
@@ -1351,6 +1352,13 @@ def translate_book(ebook_id: str, limit: int | None, inspect: bool, dry_run: boo
             f"本書書名已定譯：原文提到本書 *{orig}*（或只寫 *{short}*）時，一律譯為《{zh_title}》，"
             f"一字不改，不可另譯。\n\n--- 原文 ---", 1)
         print(f"Title rule: {short} -> 《{zh_title}》", flush=True)
+    # 作者譯名同理：沿用 DB 既有寫法（例：館裡《軸心時代》作「凱倫·阿姆斯壯」，
+    # 模型自己會譯成「卡倫·阿姆斯壯」，同一個人兩種寫法）。
+    oa, za = (book.get("original_author") or "").strip(), (book.get("author") or "").strip()
+    if oa and za and re.search(r"[一-鿿]", za) and oa != za:
+        PROMPT_TMPL = PROMPT_TMPL.replace(
+            "--- 原文 ---", f"作者 {oa}（含只寫姓 {oa.split()[-1]} 時）一律譯為「{za}」。\n\n--- 原文 ---", 1)
+        print(f"Author rule: {oa} -> {za}", flush=True)
     epub_path, src_chunks = find_source_for_book(book)
     print(f"Source: {epub_path}", flush=True)
 
