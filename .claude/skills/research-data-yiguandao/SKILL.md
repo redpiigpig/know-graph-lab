@@ -161,6 +161,11 @@ docx 分頁與 PDF 頁碼對不上，定位要用「PDF 該頁是全文第幾次
 `scripts/yiguandao_catalog_xlsx.py [--cases BS,DW]` 產生 Drive `…/中研院助理/08_一貫道國家檔案分類總表.xlsx`，用 `YIGUANDAO_DOCX_PASSWORD` 加密。
 目前 BS（捕鼠 43 件）、DW（敵偽 40 件），119 人。🚨 建議謄打時每件開頭加固定標記（如【件012】），Word 頁碼會隨電腦跑掉。
 
+**離線搜尋工具**：`scripts/yiguandao_search_html.py` → Drive `…/中研院助理/09_一貫道檔案搜尋/`（一貫道檔案搜尋.html＋使用說明.txt）。
+單一 HTML、雙擊即用、不連網；資料（件層＋全文逐頁＋人名）gzip 後 AES-256-GCM 內嵌，PBKDF2-SHA256 31 萬次，同一組密碼，瀏覽器 WebCrypto 解在記憶體。
+全文按謄打本 PDF 頁切（直排欄序：DW 要倒序、BS 不用），以總表「PDF頁」欄連到件。老師不需要 git；資料與 HTML 都不進 repo。
+新卷宗進來：加進 catalog/*.json 與 FULLTEXT 對照後重跑，把新 HTML 給老師覆蓋。
+
 ## 記憶庫併入：project_yiguandao_archives
 
 中研院社會所委託研究一貫道國家檔案；元智大學鍾雲鶯老師〈敵偽、附匪與邪教？〉（《民俗曲藝》231，2026.3，頁 61–107）用的是同一批材料。**2026-09-26 前後要與鍾老師討論新方向**。
