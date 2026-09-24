@@ -45,6 +45,9 @@ REGISTRY: dict[str, dict] = {
     },
 }
 QUEUE = ["kyuanroku"]
+# 2026-09-23 NVIDIA 斷線時 run_queue 照樣印 QUEUE_COMPLETE，lane 退場、求安錄空著好幾段。
+# 開嚴格判定：只有每段都有譯文（或零進展且引擎沒出錯）才算完成。
+STRICT_COMPLETE = True
 
 # (PDF 頁, 日文章名, 中譯章名, 切點)。切點：'top'＝該頁頁首；('find', 前綴)＝在以此前綴
 # 開頭的段落之前；('drop', 前綴)＝該段就是 MinerU 讀到的章名行，丟掉並從下一段起算。
