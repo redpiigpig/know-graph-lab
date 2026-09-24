@@ -154,9 +154,10 @@
   "abstract": "作者以《人間佛教語錄》日譯者身分考證星雲引用典據；指出星雲對太虛極欽慕，對印順則「懷有不小的敬意與難以自禁的抵抗意識」，舉兩例（引《成佛之道》偈句勸夫妻和諧、改寫印順愛用的寓言）論其「勝他心」。",
   "relation": "專論；核對狀態：已核（全文）",
   "pdf": "2013_野川博之_星雲人間佛教語録と印順.pdf",
-  "translate": false,
+  "translate": true,
   "pageStart": 163,
-  "pageStep": 1
+  "pageStep": 1,
+  "transcribeOnly": true
  },
  {
   "id": "japan/1_09-2018",
@@ -702,9 +703,10 @@
   "abstract": "海外學界動態；提到新加坡佛寺流通印順「正聞學社叢書」《佛法概論》《淨土新論》《中觀今論》《評熊十力的新唯識論》等。",
   "relation": "僅提及；核對狀態：已核（全文）",
   "pdf": "1953_中村元_最近における海外のインド及び佛教の研究二.pdf",
-  "translate": false,
+  "translate": true,
   "pageStart": 509,
-  "pageStep": 1
+  "pageStep": 1,
+  "ocr": true
  },
  {
   "id": "japan/3_03-1961",
@@ -722,9 +724,10 @@
   "abstract": "台灣學界近況；稱「印順法師的諸著作在台灣最具學術性」，現居新竹精舍。",
   "relation": "僅提及；核對狀態：已核（全文）",
   "pdf": "1961_中村元_海外学界の歩み.pdf",
-  "translate": false,
+  "translate": true,
   "pageStart": 335,
-  "pageStep": 1
+  "pageStep": 1,
+  "ocr": true
  },
  {
   "id": "japan/3_04-1966",
@@ -742,9 +745,11 @@
   "abstract": "馬來西亞訪問記；記竺摩法師評印順《淨土新論》「書中否定上帝實則肯定」「否定西方淨土實在太過」，並稱某學僧與印順親近。",
   "relation": "僅提及；核對狀態：已核（全文）",
   "pdf": "1966_藤吉慈海_東南アジアの仏教調査報告.pdf",
-  "translate": false,
+  "translate": true,
   "pageStart": 576,
-  "pageStep": 1
+  "pageStep": 1,
+  "ocr": true,
+  "ocrEngine": "mineru"
  },
  {
   "id": "japan/3_05-1981",
@@ -762,9 +767,10 @@
   "abstract": "註中參照印順《中國禪宗史》p.304。",
   "relation": "僅提及；核對狀態：已核（全文）",
   "pdf": "1981_竹内弘道_南宗定是非論の成立.pdf",
-  "translate": false,
+  "translate": true,
   "pageStart": 606,
-  "pageStep": 1
+  "pageStep": 1,
+  "ocr": true
  },
  {
   "id": "japan/3_06-1997",
@@ -782,9 +788,10 @@
   "abstract": "註中參照印順著・伊吹敦譯《中國禪宗史》p.363。",
   "relation": "僅提及；核對狀態：已核（全文）",
   "pdf": "1997_岩崎日出男_恵果和尚の最初の師大照禅師.pdf",
-  "translate": false,
+  "translate": true,
   "pageStart": 263,
-  "pageStep": 1
+  "pageStep": 1,
+  "ocr": true
  },
  {
   "id": "japan/3_07-1998",
@@ -802,9 +809,10 @@
   "abstract": "註中指向印順《『大智度論』の作者とその翻訳》pp.71–80（日譯本）。",
   "relation": "僅提及；核對狀態：已核（全文）",
   "pdf": "1998_武田和博_大智度論におけるアビダルマ説.pdf",
-  "translate": false,
+  "translate": true,
   "pageStart": 128,
-  "pageStep": 1
+  "pageStep": 1,
+  "ocr": true
  },
  {
   "id": "japan/3_08-1998",
@@ -822,9 +830,10 @@
   "abstract": "引印順（伊吹譯《中國禪宗史》）「傅大士」為「傳大師」誤寫、屬道信所傳之說。",
   "relation": "僅提及；核對狀態：已核（全文）",
   "pdf": "1998_石井公成_金剛三昧経の成立事情.pdf",
-  "translate": false,
+  "translate": true,
   "pageStart": 551,
-  "pageStep": 1
+  "pageStep": 1,
+  "ocr": true
  },
  {
   "id": "japan/3_09-2000",
@@ -842,9 +851,11 @@
   "abstract": "引印順1968《說一切有部為主的論書與論師之研究》pp.138–139對《順正理論》迦葉說的解釋。",
   "relation": "僅提及；核對狀態：已核（全文）",
   "pdf": "2000_福田琢_業施設について.pdf",
-  "translate": false,
+  "translate": true,
   "pageStart": 55,
-  "pageStep": 1
+  "pageStep": 1,
+  "ocr": true,
+  "ocrEngine": "mineru"
  },
  {
   "id": "japan/3_10-2001",
@@ -862,9 +873,10 @@
   "abstract": "反駁Lamotte第三者作者說時，援引「印順博士的詳細反論」。",
   "relation": "僅提及；核對狀態：已核（全文）",
   "pdf": "2001_武田浩学_大智度論を一貫する主題.pdf",
-  "translate": false,
+  "translate": true,
   "pageStart": 801,
-  "pageStep": 1
+  "pageStep": 1,
+  "ocr": true
  },
  {
   "id": "japan/3_11-2002",
@@ -882,9 +894,11 @@
   "abstract": "註引印順編《雜阿含經論會編》。",
   "relation": "僅提及；核對狀態：已核（全文）",
   "pdf": "2002_早島理_瑜伽行派における信仰.pdf",
-  "translate": false,
+  "translate": true,
   "pageStart": 55,
-  "pageStep": 1
+  "pageStep": 1,
+  "ocr": true,
+  "ocrEngine": "mineru"
  },
  {
   "id": "japan/3_12-2004",
@@ -902,7 +916,9 @@
   "abstract": "述印順承太虛「非鬼化」而倡「非天化」，將人間佛教導入台灣，證嚴加以實踐。",
   "relation": "僅提及；核對狀態：已核（全文）",
   "pdf": "2004_金子昭_台湾仏教慈済基金会.pdf",
-  "translate": false
+  "translate": true,
+  "ocr": true,
+  "ocrEngine": "mineru"
  },
  {
   "id": "japan/3_13-2005",
@@ -920,9 +936,11 @@
   "abstract": "轉述金子昭：印順將太虛教說導入台灣、倡「為佛教，為眾生」。",
   "relation": "僅提及；核對狀態：已核（全文）",
   "pdf": "2005_櫻井義秀_宗教の社会的貢献.pdf",
-  "translate": false,
+  "translate": true,
   "pageStart": 163,
-  "pageStep": 1
+  "pageStep": 1,
+  "ocr": true,
+  "ocrEngine": "mineru"
  },
  {
   "id": "japan/3_14-2006",
@@ -940,9 +958,10 @@
   "abstract": "提及石井公成受印順說啟發而求典據於阿含。",
   "relation": "僅提及；核對狀態：已核（全文）",
   "pdf": "2006_伊吹敦_二入四行論の成立.pdf",
-  "translate": false,
+  "translate": true,
   "pageStart": 127,
-  "pageStep": 1
+  "pageStep": 1,
+  "ocr": true
  },
  {
   "id": "japan/3_15-2007",
@@ -960,9 +979,10 @@
   "abstract": "註引印順〈論真諦三藏所傳的阿摩羅識〉推定《九識章》為曇遷所作。",
   "relation": "僅提及；核對狀態：已核（全文）",
   "pdf": "2007_吉村誠_真諦の阿摩羅識説.pdf",
-  "translate": false,
+  "translate": true,
   "pageStart": 177,
-  "pageStep": 1
+  "pageStep": 1,
+  "ocr": true
  },
  {
   "id": "japan/3_16-2013",
@@ -980,9 +1000,11 @@
   "abstract": "述「人間仏教」由印順・太虛提倡。",
   "relation": "僅提及；核對狀態：已核（全文）",
   "pdf": "2013_五十嵐真子_社会参加仏教として見た台湾佛光山.pdf",
-  "translate": false,
+  "translate": true,
   "pageStart": 181,
-  "pageStep": 1
+  "pageStep": 1,
+  "ocr": true,
+  "ocrEngine": "mineru"
  },
  {
   "id": "japan/3_17-2016",
@@ -1000,9 +1022,12 @@
   "abstract": "引印順《初期大乘佛教之起源與開展》（2009版）之文殊經典資訊。",
   "relation": "僅提及；核對狀態：已核（全文）",
   "pdf": "2016_宮崎展昌_穢土サハー世界における行.pdf",
-  "translate": false,
+  "translate": true,
   "pageStart": 1171,
-  "pageStep": 1
+  "pageStep": 1,
+  "transcribeOnly": true,
+  "ocr": true,
+  "ocrEngine": "mineru"
  },
  {
   "id": "japan/3_18-2017",
@@ -1020,7 +1045,7 @@
   "abstract": "述歐陽竟無否定《起信論》如來藏說，「印順等台灣佛教亦汲其流」。",
   "relation": "僅提及；核對狀態：已核（全文）",
   "pdf": "2017_末木文美士_哲学神学から仏教へ.pdf",
-  "translate": false,
+  "translate": true,
   "pageStart": 81,
   "pageStep": 1
  },
@@ -1040,7 +1065,7 @@
   "abstract": "僅於參考文獻列魏道儒2010、何建明2011兩篇（題含印順）。",
   "relation": "僅提及；核對狀態：已核（全文）",
   "pdf": "2018_引田弘道_現代中国の仏教教育機関.pdf",
-  "translate": false,
+  "translate": true,
   "pageStart": 160,
   "pageStep": -1
  },
@@ -1060,9 +1085,10 @@
   "abstract": "書目引印順1968。",
   "relation": "僅提及；核對狀態：已核（全文）",
   "pdf": "2018_石田一裕_大毘婆沙論における西方尊者.pdf",
-  "translate": false,
+  "translate": true,
   "pageStart": 1085,
-  "pageStep": 1
+  "pageStep": 1,
+  "transcribeOnly": true
  },
  {
   "id": "japan/3_21-2021",
@@ -1080,7 +1106,7 @@
   "abstract": "批評印順以《曹溪大師傳》出於荷澤宗系統之說。",
   "relation": "僅提及；核對狀態：已核（全文）",
   "pdf": "2021_伊吹敦_敦煌本壇経から曹渓大師伝へ.pdf",
-  "translate": false,
+  "translate": true,
   "pageStart": 312,
   "pageStep": -1
  },
@@ -1100,7 +1126,7 @@
   "abstract": "提及1952年中國代表團（僧侶代表為太虛高弟印順）。",
   "relation": "僅提及；核對狀態：已核（全文）",
   "pdf": "2021_坂井田夕起子_近現代日本の仏教.pdf",
-  "translate": false,
+  "translate": true,
   "pageStart": 8,
   "pageStep": 1
  },
@@ -1120,7 +1146,7 @@
   "abstract": "指出印順《中國禪宗史》第九章第三節「眾流會歸於曹溪」與筆者見解相同。",
   "relation": "僅提及；核對狀態：已核（全文）",
   "pdf": "2022_伊吹敦_荷澤宗としての神照宗密の正統性.pdf",
-  "translate": false,
+  "translate": true,
   "pageStart": 254,
   "pageStep": -1
  },
@@ -1140,7 +1166,7 @@
   "abstract": "述同樣赴台的印順長壽活躍、在台被譽為「今玄奘」。",
   "relation": "僅提及；核對狀態：已核（全文）",
   "pdf": "2022_坂井田夕起子_近代日本仏教と中国人僧侶.pdf",
-  "translate": false,
+  "translate": true,
   "pageStart": 79,
   "pageStep": 1
  },
@@ -1160,7 +1186,7 @@
   "abstract": "參照印順1968整理妙音說與西方諸師說。",
   "relation": "僅提及；核對狀態：已核（全文）",
   "pdf": "2024_石田一裕_順正理論における西方諸師説.pdf",
-  "translate": false,
+  "translate": true,
   "pageStart": 925,
   "pageStep": -1
  },
@@ -1236,9 +1262,10 @@
   "abstract": "稱太虛門下以法尊、印順學績最卓著，印順自1943年《印度之佛教》以來大著迭出、為太虛門下首屈一指的論師。",
   "relation": "部分論及；核對狀態：已核（全文）",
   "pdf": "1970_林伝芳_楊文会以後の中国仏教学.pdf",
-  "translate": false,
+  "translate": true,
   "pageStart": 144,
-  "pageStep": 1
+  "pageStep": 1,
+  "ocr": true
  },
  {
   "id": "japan/4_03-1975",
@@ -1256,9 +1283,10 @@
   "abstract": "提及「台灣的印順博士」在《海潮音》發表的壇經作者論。",
   "relation": "僅提及；核對狀態：已核（全文）",
   "pdf": "1975_楊鴻飛_壇経の研究編著者について.pdf",
-  "translate": false,
+  "translate": true,
   "pageStart": 333,
-  "pageStep": 1
+  "pageStep": 1,
+  "ocr": true
  },
  {
   "id": "japan/4_04-1978",
@@ -1276,9 +1304,10 @@
   "abstract": "引印順・妙欽合編《中國佛教史略》。",
   "relation": "僅提及；核對狀態：已核（全文）",
   "pdf": "1978_楊鴻飛_神会南禅革命の二背景.pdf",
-  "translate": false,
+  "translate": true,
   "pageStart": 285,
-  "pageStep": 1
+  "pageStep": 1,
+  "ocr": true
  },
  {
   "id": "japan/4_05-1997",
@@ -1356,9 +1385,11 @@
   "abstract": "註引印順《說一切有部為主的論書與論師之研究》p.374。",
   "relation": "僅提及；核對狀態：已核（全文）",
   "pdf": "2002_孫儷茗_四諦における道諦説.pdf",
-  "translate": false,
+  "translate": true,
   "pageStart": 905,
-  "pageStep": -1
+  "pageStep": -1,
+  "ocr": true,
+  "ocrEngine": "mineru"
  },
  {
   "id": "japan/4_09-2002",
@@ -1376,9 +1407,11 @@
   "abstract": "註引印順法師論四事與六妙門。",
   "relation": "僅提及；核對狀態：已核（全文）",
   "pdf": "2002_洪鴻栄_止観の語源.pdf",
-  "translate": false,
+  "translate": true,
   "pageStart": 889,
-  "pageStep": -1
+  "pageStep": -1,
+  "ocr": true,
+  "ocrEngine": "mineru"
  },
  {
   "id": "japan/4_10-2004",
@@ -1396,9 +1429,11 @@
   "abstract": "註引釋印順《太虛法師年譜》。",
   "relation": "僅提及；核對狀態：已核（全文）",
   "pdf": "2004_李向平_太虚和尚宗教型公共インテリか.pdf",
-  "translate": false,
+  "translate": true,
   "pageStart": 1,
-  "pageStep": 1
+  "pageStep": 1,
+  "ocr": true,
+  "ocrEngine": "mineru"
  },
  {
   "id": "japan/4_11-2004",
@@ -1416,9 +1451,11 @@
   "abstract": "把釋印順（1991）與Lamotte、加藤純章、周伯戡並列為《大智度論》翻譯問題的主要說法加以檢討。",
   "relation": "部分論及；核對狀態：已核（全文）",
   "pdf": "2004_釈大田_大智度論の翻訳原本略本.pdf",
-  "translate": false,
+  "translate": true,
   "pageStart": 754,
-  "pageStep": -1
+  "pageStep": -1,
+  "ocr": true,
+  "ocrEngine": "mineru"
  },
  {
   "id": "japan/4_12-2004",
@@ -1436,9 +1473,11 @@
   "abstract": "引印順1968為先行研究。",
   "relation": "僅提及；核對狀態：已核（全文）",
   "pdf": "2004_釈大田_大智度論と倶舎論に及ぼした甘露味論.pdf",
-  "translate": false,
+  "translate": true,
   "pageStart": 366,
-  "pageStep": -1
+  "pageStep": -1,
+  "ocr": true,
+  "ocrEngine": "mineru"
  },
  {
   "id": "japan/4_13-2005",
@@ -1456,7 +1495,10 @@
   "abstract": "以印順對淨土教的批判性理解為對照，思考親鸞思想的哲學重構可能；稱印順的淨土批判是對淨土佛教「最具代表性的理論重估」，並連結批判佛教與京都學派。",
   "relation": "部分論及（副題專就印順）；核對狀態：已核（全文）",
   "pdf": "2005_JoaquimMonteiro_Shinran_Yin-shun_Pure_Land.pdf",
-  "translate": false
+  "translate": true,
+  "transcribeOnly": true,
+  "ocr": true,
+  "ocrEngine": "mineru"
  },
  {
   "id": "japan/4_14-2005",
@@ -1474,9 +1516,11 @@
   "abstract": "引印順導師《大智度論筆記》CD-ROM。",
   "relation": "僅提及；核對狀態：已核（全文）",
   "pdf": "2005_周柔含_順決択分における忍善根.pdf",
-  "translate": false,
+  "translate": true,
   "pageStart": 441,
-  "pageStep": -1
+  "pageStep": -1,
+  "ocr": true,
+  "ocrEngine": "mineru"
  },
  {
   "id": "japan/4_15-2006",
@@ -1494,9 +1538,11 @@
   "abstract": "多次依印順研究論法救、僧伽羅剎等為有部譬喻者及世友身分。",
   "relation": "部分論及；核對狀態：已核（全文）",
   "pdf": "2006_周柔含_譬喩者についての一考察.pdf",
-  "translate": false,
+  "translate": true,
   "pageStart": 395,
-  "pageStep": -1
+  "pageStep": -1,
+  "ocr": true,
+  "ocrEngine": "mineru"
  },
  {
   "id": "japan/4_16-2006",
@@ -1514,9 +1560,12 @@
   "abstract": "引印順法師（1992）論僧伽羅剎。",
   "relation": "僅提及；核對狀態：已核（全文）",
   "pdf": "2006_釋果暉_金剛寺本安般守意経.pdf",
-  "translate": false,
+  "translate": true,
   "pageStart": 1226,
-  "pageStep": 1
+  "pageStep": 1,
+  "transcribeOnly": true,
+  "ocr": true,
+  "ocrEngine": "mineru"
  },
  {
   "id": "japan/4_17-2007",
@@ -1534,9 +1583,11 @@
   "abstract": "以印順「三世實有」為判別有部與否的標準，討論鳩摩羅多所屬部派。",
   "relation": "部分論及；核對狀態：已核（全文）",
   "pdf": "2007_周柔含_鳩摩羅多の所属部派.pdf",
-  "translate": false,
+  "translate": true,
   "pageStart": 366,
-  "pageStep": -1
+  "pageStep": -1,
+  "ocr": true,
+  "ocrEngine": "mineru"
  },
  {
   "id": "japan/4_18-2009",
@@ -1554,9 +1605,10 @@
   "abstract": "引印順《初期大乘佛教之起源與開展》及其《平等覺經》支謙譯說。",
   "relation": "僅提及；核對狀態：已核（全文）",
   "pdf": "2009_肖越_浄土の訳語について.pdf",
-  "translate": false,
+  "translate": true,
   "pageStart": 732,
-  "pageStep": 1
+  "pageStep": 1,
+  "ocr": true
  },
  {
   "id": "japan/4_19-2010",
@@ -1694,7 +1746,7 @@
   "abstract": "註引印順「ダルマと『楞伽経』」（伊吹譯）。",
   "relation": "僅提及；核對狀態：已核（全文）",
   "pdf": "2019_康昊_中国の台禅論争と虎関師錬.pdf",
-  "translate": false,
+  "translate": true,
   "pageStart": 125,
   "pageStep": 1
  },
@@ -1773,9 +1825,10 @@
   "abstract": "上篇中文原文。",
   "relation": "部分論及；核對狀態：已核（全文）",
   "pdf": "2022_侯坤宏_逐步走向近代化的臺灣佛教_中文.pdf",
-  "translate": false,
+  "translate": true,
   "pageStart": 1,
-  "pageStep": 1
+  "pageStep": 1,
+  "transcribeOnly": true
  },
  {
   "id": "japan/4_30-2022",
@@ -1793,7 +1846,7 @@
   "abstract": "從政權交替、近代日本佛教影響、解嚴後三面論台灣佛教近代化；關鍵詞含「印順法師」，論及印順與日本學位、人間佛教。",
   "relation": "部分論及；核對狀態：已核（全文）",
   "pdf": "2022_侯坤宏_近代化へと向かう台湾仏教_日訳.pdf",
-  "translate": false,
+  "translate": true,
   "pageStart": 19,
   "pageStep": 1
  },
@@ -1849,9 +1902,10 @@
   "abstract": "引印順《佛法概論》。",
   "relation": "僅提及；核對狀態：已核（全文）",
   "pdf": "2023_唐秀連_捨生取義大乗仏教の倫理.pdf",
-  "translate": false,
+  "translate": true,
   "pageStart": 1122,
-  "pageStep": 1
+  "pageStep": 1,
+  "transcribeOnly": true
  },
  {
   "id": "japan/4_34-2023",
@@ -1869,7 +1923,7 @@
   "abstract": "註引印順《勝鬘經講記》論意生身。",
   "relation": "僅提及；核對狀態：已核（全文）",
   "pdf": "2023_魏藝_意生身問題の一考察.pdf",
-  "translate": false,
+  "translate": true,
   "pageStart": 26,
   "pageStep": 1
  },
@@ -1889,9 +1943,10 @@
   "abstract": "稱最早整理室利邏多修行體系者為印順（1968）。",
   "relation": "僅提及；核對狀態：已核（全文）",
   "pdf": "2024_禹鍾仁_経量部の修行論.pdf",
-  "translate": false,
+  "translate": true,
   "pageStart": 1018,
-  "pageStep": 1
+  "pageStep": 1,
+  "transcribeOnly": true
  },
  {
   "id": "japan/4_36-2024",
@@ -1909,7 +1964,7 @@
   "abstract": "參照印順1968 pp.91–99。",
   "relation": "僅提及；核對狀態：已核（全文）",
   "pdf": "2024_辛放_一切有と三世実有.pdf",
-  "translate": false,
+  "translate": true,
   "pageStart": 1,
   "pageStep": 1
  },
@@ -1929,7 +1984,7 @@
   "abstract": "引印順《中觀論頌講記》。",
   "relation": "僅提及；核對狀態：已核（全文）",
   "pdf": "2025_辛放_犢子部の補特伽羅と慧遠.pdf",
-  "translate": false,
+  "translate": true,
   "pageStart": 73,
   "pageStep": 1
  }

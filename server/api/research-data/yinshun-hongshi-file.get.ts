@@ -5,7 +5,7 @@ import { S3Client, GetObjectCommand } from '@aws-sdk/client-s3'
 import { getSignedUrl } from '@aws-sdk/s3-request-presigner'
 import { resolveResearchFile } from '~/server/utils/research-files'
 
-// 「印順學派與弘誓研究資料」collection 的原檔（弘誓雙月刊／玄奘佛學研究，皆為 PDF）。
+// 「印順學派與弘誓研究資料」collection 的原檔（弘誓雙月刊／玄奘佛學研究為 PDF；人間佛教論爭另含 HTML／MD）。
 //
 // 取檔順序：**Drive 正本 → R2 後備**。本機跑站時 G: 槽掛著 Drive，直接串流檔案；
 // 雲端部署沒有 Drive，才退回 R2 簽名網址。這批 2.8GB 掃描原檔已不放 R2 —
@@ -22,15 +22,17 @@ export default defineEventHandler(async (event) => {
   if (!key.startsWith(ALLOWED_PREFIX) || key.includes('..')) {
     throw createError({ statusCode: 400, message: 'invalid key' })
   }
-  const download = String(getQuery(event).download ?? '') === '1'
   const filename = key.split('/').pop() || 'download'
+  // 人間佛教論爭另有 HTML／MD 原檔：一律當附件下載、不在站內渲染（第三方 HTML 同源開啟等於讓它跑腳本）
+  const isPdf = /\.pdf$/i.test(key)
+  const download = String(getQuery(event).download ?? '') === '1' || !isPdf
 
   const local = resolveResearchFile(key)
   if (local) {
     const st = await stat(local).catch(() => null)
     if (st?.isFile()) {
       setResponseHeaders(event, {
-        'Content-Type': 'application/pdf',
+        'Content-Type': isPdf ? 'application/pdf' : 'application/octet-stream',
         'Content-Length': String(st.size),
         'Cache-Control': 'private, max-age=3600',
         ...(download
@@ -52,6 +54,7 @@ export default defineEventHandler(async (event) => {
     new GetObjectCommand({
       Bucket: config.r2Bucket,
       Key: key,
+      ...(isPdf ? {} : { ResponseContentType: 'application/octet-stream' }),
       ...(download
         ? { ResponseContentDisposition: `attachment; filename*=UTF-8''${encodeURIComponent(filename)}` }
         : {}),

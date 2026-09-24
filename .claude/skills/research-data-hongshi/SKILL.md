@@ -249,3 +249,48 @@ R2 前綴：`yinshun-hongshi/<刊>/`（原檔）、`yinshun-hongshi-fulltext/<�
 - 頁碼只用印刷頁碼；讀不到（方東岳 2022 的 PDF 根本沒印頁碼）就留 null，不用段序頂替。
 - 譯文過 `translate_ebook_to_zh.unusable_reason`（擋整段沒譯的日文、推理外洩、提示詞回音），外加剝 `<think>` 與「以下是翻譯」前言。
 - 2026-09 NVIDIA 模型是 `nemotron-3-super-120b-a12b`（deepseek-v4-flash-0731 已於 08-26 停服）。
+
+### 2026-09-24 擴充：其餘 49 篇全部轉錄＋背景續跑
+
+- 書目新欄位：`transcribeOnly`（中文／英文原件，只轉錄、站上單欄，不譯；野川 2013、侯坤宏 2022 中文版、印佛研英文稿 6 篇）、
+  `ocrEngine: "mineru"`（橫排掃描走本機 MinerU CPU，其餘 `ocr:true` 走 Gemini）。74 篇有 PDF 者 `translate` 全開。
+- 哪條路：**影像＋J-STAGE 舊 OCR 層**（字體 ＭＳ明朝／Courier／MS-Gothic、每頁一張整頁圖）一律重 OCR——
+  直排的（印佛研 1953–2001 與 2006–07、菅野 2005、蓑輪 2000、肖越 2009）走 Gemini；橫排的（印佛研 2002–07 大半、
+  宗教と社会、天理、佛教文化学会紀要）走 MinerU。🚨 文字層說「直排 100%」的金子 2004 其實是橫排、說「橫排」的吉村 2007 其實是直排：
+  掃描檔的方向要看圖，不能信 OCR 層。日本佛教學會年報 2000／2002（ILMA 字型）文字層把「『』「」―」對成韓文字、還**吃掉「瑜」字**，也改 MinerU。
+- **直排文字層切段**（新，`vertical_page_items`）：印佛研直排 PDF 是「一字一個 line」。字按中心 x 分直行 → 用非通欄直行的 y 覆蓋率找段間空白（gutter）
+  → 每直行歸上段／下段／通欄 → 由右而左把連續的非通欄直行併成一「區」，區內先上段後下段。
+  🚨 不可整頁按 (-x1, y0) 排（上下兩段式會交錯）；🚨 不可只靠「有沒有上下對應的伴」分區（首頁通欄要旨＋左半才分段的康 2019、
+  標題橫跨兩段而下段右端沒有上段對應的魏 2023 都會排錯）。註號「（ ）」小字直行連同裡面的縱中橫數字當一個記號插回正文（`とどまる（3）`）。
+- 背景：`python scripts/yinshun_japan_bilingual.py --auto`（OCR→切段→翻譯→上傳 R2→重寫索引，一次一篇）；
+  `--status` 印每篇進度與分母。Gemini OCR 連兩次配額錯就寫 `output/yinshun-fulltext/gemini_blocked_until.txt`（停 4 小時，與人間佛教論爭那支共用）。
+  翻譯連兩篇停在失敗就整場停。排程見下節 keeper。
+
+## 人間佛教論爭（2026-09-24）— `/research-data/yinshun-hongshi/debate`
+
+印順《我有明珠一顆》讀後引發的現代禪論辯（李元松、溫金柯、楊惠南…），及西方與中文學界、原始佛教復原主義的相關論著。
+
+- **來源**：Drive `研究資料\印順學派與弘誓\人間佛教論爭\`（根目錄＝論爭核心文獻、子夾 `西方與中文學界`、`復原主義比較`）；
+  2026-09-24 普查 74 檔（pdf 42／html 20／htm 9／md 3）。檔名 `年_作者_題名`，年份不明者寫「年待核」。
+- **腳本**：`scripts/yinshun_debate_fulltext.py`（`--status` 印分母與未完成清單、`--no-ocr`、`--only <相對路徑> --force`）。
+  - PDF 文字層：借用日本學者那支的 `horizontal_page_items`／`vertical_page_items`；中文雙欄欄距窄（約 3 字）時先用 block 找欄縫、
+    分 [通欄頂／左欄／右欄／通欄底] 四塊 clip 各自讀（`column_clips`）。🚨 欄縫要取最低跨越量那一段的**正中間**——貼著左欄右緣切，
+    clip 會把左欄行尾的字收進右欄（林建德 2011「轉學化」）。
+  - 頁碼：每頁前 `【頁 N】`＝頁上印的頁碼（上下緣 10% 短行首尾的數字，與頁序位移〔遞增或遞減〕多數一致且該頁真印著才算），
+    讀不到寫 `【PDF 頁 N】`，不推算。CBETA HTML 的行號 `Y43n0041_p0221a01` 換頁處轉成 `【頁 221】`（＝《印順法師佛學著作集》頁碼）。
+  - HTML：meta charset → utf-8 → big5hkscs → cp950；剝 Wayback 工具列。
+  - 掃描判準：六成以上頁面 <100 字，**或**字型是 `HiddenHorzOCR／HiddenVertOCR`（掃描器附的隱形 OCR 層：林建德 2003 香光莊嚴上下兩篇，
+    字在但直排讀序全亂、「印順法帥」）。英文掃描走 MinerU（CPU），中日文走 Gemini（2 頁一批，`_全文\_ocr\<md5>.json` 可續跑）。
+  - 簡→繁只在「簡體專用字密度 >1.5%、無假名、漢字多於拉丁字母」時做（s2tw＋TRAD_FIXES）；西文論文裡夾的日文書名不轉。
+  - 輸出：Drive `_全文\<相對路徑>.txt`、R2 `yinshun-hongshi-fulltext/人間佛教論爭/<相對路徑去副檔名>.txt`；
+    原檔 ≤30MB 上 R2 `yinshun-hongshi/人間佛教論爭/…`（1917 荻原 64MB 留 Drive）；進度 Drive `_全文\_status.json`；
+    索引 `public/content/research-data/yinshun-hongshi/debate-index.json`（進 git）。
+- **前端**：`pages/research-data/yinshun-hongshi/debate/index.vue`；全文走 `yinshun-hongshi-text`（已擴充剝 .html/.htm/.md），
+  原檔走 `yinshun-hongshi-file`（非 PDF 一律 `application/octet-stream`＋附件，第三方 HTML 不在站內同源渲染）。
+
+## 背景 keeper：`KGL_Yinshun_Fulltext`（每 60 分）
+
+`scripts/yinshun_fulltext_keeper.ps1`（UTF-8 BOM、python 寫完整路徑 `C:\Users\user\AppData\Local\Python\bin\python.exe`）：
+兩條工作（debate／japan）沒在跑也沒完成就背景重啟，日誌 `output/yinshun-fulltext/<名>-<時間>.out.log`、keeper 自身 `keeper.log`。
+兩條都印出 `ALL_DONE` → 只 commit 兩份索引並 push → **自行註銷排程**；同一「本輪結束」摘要連 36 輪不變 → 標 `<名>.stalled` 並註銷。
+查進度：`python -X utf8 scripts/yinshun_debate_fulltext.py --status`、`python -X utf8 scripts/yinshun_japan_bilingual.py --status`。

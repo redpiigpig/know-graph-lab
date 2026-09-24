@@ -12,7 +12,7 @@
         <h1 class="text-2xl font-bold text-gray-900 mb-1">日本學者論印順</h1>
         <p class="text-sm text-gray-500 leading-relaxed">
           日本學者評介、研究印順導師思想與學術貢獻的論文、書評與學位審查報告。能取得全文者逐段譯為中文，左欄中譯、右欄原文對照；
-          其餘列書目與出處。
+          原文本即中文或英文者只轉錄原文；其餘列書目與出處。
           <span v-if="entries.length" class="text-gray-400">共 {{ entries.length }} 筆，其中 {{ withText }} 筆有逐段對照。</span>
         </p>
       </div>
@@ -35,7 +35,7 @@
                   <div class="flex-shrink-0 flex flex-col items-end gap-1">
                     <button v-if="e.paras" @click="toggle(e)"
                       class="text-xs font-medium px-2 py-0.5 rounded-full bg-red-50 text-red-700 hover:bg-red-100">
-                      {{ states[e.id]?.open ? '收合' : `對照 ${e.translated}/${e.paras} 段` }}
+                      {{ states[e.id]?.open ? '收合' : (e.transcribeOnly ? `全文 ${e.paras} 段` : `對照 ${e.translated}/${e.paras} 段`) }}
                     </button>
                     <a v-if="e.url" :href="e.url" target="_blank" rel="noopener" class="text-xs text-gray-400 hover:text-red-600 no-underline">原文出處 ↗</a>
                   </div>
@@ -44,6 +44,13 @@
 
               <div v-if="states[e.id]?.open" class="border-t border-gray-100 bg-gray-50/60">
                 <div v-if="states[e.id].loading" class="px-4 py-3 text-xs text-gray-400">載入全文⋯</div>
+                <div v-else-if="states[e.id].paras?.length && e.transcribeOnly" class="divide-y divide-gray-100">
+                  <div class="px-4 py-2 text-[11px] font-medium text-gray-400">原文（{{ e.lang }}，只轉錄不譯）</div>
+                  <div v-for="(p, i) in states[e.id].paras" :key="i" class="px-4 py-3 text-sm leading-relaxed text-gray-800 break-words"
+                    :lang="e.lang?.startsWith('英') ? 'en' : 'zh-Hant'">
+                    <span v-if="p.page" class="mr-1 text-[10px] text-gray-400">p.{{ p.page }}</span>{{ p.orig }}
+                  </div>
+                </div>
                 <div v-else-if="states[e.id].paras?.length" class="divide-y divide-gray-100">
                   <div class="hidden md:grid grid-cols-2 gap-6 px-4 py-2 text-[11px] font-medium text-gray-400">
                     <div>中譯</div><div>原文</div>
@@ -78,6 +85,7 @@ interface Entry {
   id: string; group: string; author: string; year: string; title: string; titleZh?: string;
   venue?: string; volume?: string; issue?: string; pages?: string; kind?: string;
   url?: string; abstract?: string; paras: number; translated: number; zhSame?: boolean;
+  transcribeOnly?: boolean; lang?: string;
 }
 interface Para { page: number | null; orig: string; zh: string }
 

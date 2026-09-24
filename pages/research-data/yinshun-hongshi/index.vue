@@ -83,6 +83,15 @@
           <span class="tool-badge bg-red-50 text-red-600">{{ japanCount || '…' }} 筆</span>
         </NuxtLink>
 
+        <NuxtLink to="/research-data/yinshun-hongshi/debate" class="tool-card group border-indigo-100 hover:border-indigo-300 hover:shadow-indigo-100">
+          <div class="tool-icon bg-indigo-50 text-indigo-600">⚖️</div>
+          <div class="flex-1 min-w-0">
+            <h2 class="tool-title">人間佛教論爭</h2>
+            <p class="tool-desc line-clamp-2">印順導師與現代禪論辯，及中文學界、西方入世佛教、復原主義的相關論著；全文逐頁轉錄</p>
+          </div>
+          <span class="tool-badge bg-indigo-50 text-indigo-600">{{ debateCount || '…' }} 件</span>
+        </NuxtLink>
+
       </div>
     </div>
   </div>
@@ -102,6 +111,7 @@ const meetCount = ref(0);
 const mstCount = ref(0);
 const faryinCount = ref(0);
 const japanCount = ref(0);
+const debateCount = ref(0);
 
 async function count(url: string): Promise<number> {
   try {
@@ -122,6 +132,7 @@ onMounted(async () => {
   mstCount.value = await count(`${base}/miaoxin-index.json`);
   faryinCount.value = await count(`${base}/faryin-index.json`);
   japanCount.value = await count(`${base}/japan-index.json`);
+  debateCount.value = await count(`${base}/debate-index.json`);
 });
 </script>
 

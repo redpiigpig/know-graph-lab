@@ -1,8 +1,9 @@
 import { requireAdmin } from '~/server/utils/auth-helper'
 import { S3Client, GetObjectCommand } from '@aws-sdk/client-s3'
 
-// 回傳弘誓刊物某原檔的全文轉錄。傳入原檔 key（yinshun-hongshi/<刊>/X.pdf），
+// 回傳弘誓刊物某原檔的全文轉錄。傳入原檔 key（yinshun-hongshi/<刊>/X.pdf｜.html｜.htm｜.md），
 // 映射到全文前綴 yinshun-hongshi-fulltext/<刊>/X.txt。
+// 人間佛教論爭（yinshun-hongshi/人間佛教論爭/…）原檔有 HTML／MD，產檔器 scripts/yinshun_debate_fulltext.py。
 const SRC_PREFIX = 'yinshun-hongshi/'
 const TXT_PREFIX = 'yinshun-hongshi-fulltext/'
 
@@ -25,7 +26,7 @@ export default defineEventHandler(async (event) => {
   if (!srcKey.startsWith(SRC_PREFIX) || srcKey.includes('..')) {
     throw createError({ statusCode: 400, message: 'invalid key' })
   }
-  const rel = srcKey.slice(SRC_PREFIX.length).replace(/\.pdf$/i, '')
+  const rel = srcKey.slice(SRC_PREFIX.length).replace(/\.(pdf|html?|md)$/i, '')
   const config = useRuntimeConfig()
   const s3 = new S3Client({
     region: 'auto',

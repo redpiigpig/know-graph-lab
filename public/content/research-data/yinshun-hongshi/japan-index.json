@@ -141,8 +141,9 @@
   "url": "http://ykbi.edu.tw/modules/journal/data_21/journal_21_5.pdf",
   "abstract": "作者以《人間佛教語錄》日譯者身分考證星雲引用典據；指出星雲對太虛極欽慕，對印順則「懷有不小的敬意與難以自禁的抵抗意識」，舉兩例（引《成佛之道》偈句勸夫妻和諧、改寫印順愛用的寓言）論其「勝他心」。",
   "lang": "中文（附英文摘要）",
-  "paras": 0,
-  "translated": 0
+  "paras": 308,
+  "translated": 308,
+  "transcribeOnly": true
  },
  {
   "id": "japan/1_09-2018",
@@ -898,7 +899,8 @@
   "abstract": "引印順《初期大乘佛教之起源與開展》（2009版）之文殊經典資訊。",
   "lang": "英文",
   "paras": 0,
-  "translated": 0
+  "translated": 0,
+  "transcribeOnly": true
  },
  {
   "id": "japan/3_18-2017",
@@ -952,7 +954,8 @@
   "abstract": "書目引印順1968。",
   "lang": "英文",
   "paras": 0,
-  "translated": 0
+  "translated": 0,
+  "transcribeOnly": true
  },
  {
   "id": "japan/3_21-2021",
@@ -1312,7 +1315,8 @@
   "abstract": "以印順對淨土教的批判性理解為對照，思考親鸞思想的哲學重構可能；稱印順的淨土批判是對淨土佛教「最具代表性的理論重估」，並連結批判佛教與京都學派。",
   "lang": "英文",
   "paras": 0,
-  "translated": 0
+  "translated": 0,
+  "transcribeOnly": true
  },
  {
   "id": "japan/4_14-2005",
@@ -1366,7 +1370,8 @@
   "abstract": "引印順法師（1992）論僧伽羅剎。",
   "lang": "英文",
   "paras": 0,
-  "translated": 0
+  "translated": 0,
+  "transcribeOnly": true
  },
  {
   "id": "japan/4_17-2007",
@@ -1600,7 +1605,8 @@
   "abstract": "上篇中文原文。",
   "lang": "中文",
   "paras": 0,
-  "translated": 0
+  "translated": 0,
+  "transcribeOnly": true
  },
  {
   "id": "japan/4_30-2022",
@@ -1672,7 +1678,8 @@
   "abstract": "引印順《佛法概論》。",
   "lang": "英文",
   "paras": 0,
-  "translated": 0
+  "translated": 0,
+  "transcribeOnly": true
  },
  {
   "id": "japan/4_34-2023",
@@ -1708,7 +1715,8 @@
   "abstract": "稱最早整理室利邏多修行體系者為印順（1968）。",
   "lang": "英文",
   "paras": 0,
-  "translated": 0
+  "translated": 0,
+  "transcribeOnly": true
  },
  {
   "id": "japan/4_36-2024",

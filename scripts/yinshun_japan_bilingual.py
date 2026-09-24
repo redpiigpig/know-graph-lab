@@ -72,13 +72,13 @@ _KANA_RE = re.compile(r"[぀-ヿー・]{1,16}")
 ruby_chars = [0]          # 本次抽取丟掉的振り仮名字數（字數對帳用）
 
 
-def _page_lines(page) -> list[dict]:
+def _page_lines(page, clip=None) -> list[dict]:
     """一頁 → 視覺行（span 以基線分群；上標註號併進它所疊的那一行，保留成行內數字）。
 
     不用 block：dict 的 block 會把上標註號拆成獨立小 block，還會掉行
     （西野 2020 第一頁「作を残している」整行不見、「台湾のラモット²」被拆散）。"""
     spans = []
-    for b in page.get_text("dict")["blocks"]:
+    for b in page.get_text("dict", clip=clip)["blocks"]:
         if b.get("type") != 0:
             continue
         for l in b["lines"]:
@@ -200,10 +200,12 @@ _HEADING_RE = re.compile(r"^[（(]?[一二三四五六七八九十0-9０-９]+[�
 _NOTE_START_RE = re.compile(r"^[（(]?\s*[\d０-９]+\s*[）)．.]|^[\d０-９]{1,3}\s|^[＊*※]|^(注|註)\s*[（(]?[\d０-９]")
 
 
-def horizontal_page_items(page, heads: set[str], printed: int | None = None) -> tuple[list[dict], int]:
-    """一頁 → [{text, start, note}] 照閱讀順序；另回傳被當書眉頁碼濾掉的字數。"""
+def horizontal_page_items(page, heads: set[str], printed: int | None = None,
+                          clip=None) -> tuple[list[dict], int]:
+    """一頁 → [{text, start, note}] 照閱讀順序；另回傳被當書眉頁碼濾掉的字數。
+    clip：只讀頁面的這一塊（呼叫端先切好欄時用；欄距窄的中文雙欄，同基線的左右兩行會被併成一行）。"""
     W, H = page.rect.width, page.rect.height
-    lines = _page_lines(page)
+    lines = _page_lines(page, clip)
     dropped = sum(len(_norm_ws(l["text"])) for l in lines if _is_headfoot(l, H, heads, printed))
     lines = [l for l in lines if not _is_headfoot(l, H, heads, printed)]
     if not lines:
@@ -255,6 +257,289 @@ def horizontal_page_items(page, heads: set[str], printed: int | None = None) -> 
                 start = True
             items.append({"text": l["text"], "start": start, "note": note})
             prev = l
+    return items, dropped
+
+
+# ── 直排（縱書）文字層切段 ─────────────────────────────────────────────────────
+# 印佛研等直排 PDF 的文字層常是「一字一行」：每個字各自一個 dir=(0,1) 的 line。
+# 作法：字按中心 x 分成直行 → 直行內按 y 排、遇大空隙切開（上下兩段式的段間空白）→
+# 各段依 y 區間合併成「段」（上段、下段）→ 段內按 (-x1, y0) 由右而左。
+# 🚨 不可整頁按 (-x1, y0) 排：上下兩段式會把下段每一行插進上段對應那一行後面。
+
+def vertical_ratio(page) -> float:
+    vert = hor = 0
+    for b in page.get_text("dict")["blocks"]:
+        for l in b.get("lines", []):
+            c = sum(len(s["text"].strip()) for s in l["spans"])
+            if abs(l["dir"][1]) > 0.9:
+                vert += c
+            else:
+                hor += c
+    return vert / max(vert + hor, 1)
+
+
+def _vertical_cols(page) -> tuple[list[dict], list[dict], float]:
+    """一頁 → (直行段 [{x0,x1,y0,y1,size,text}], 剩下的橫排 span, 正文字級)。"""
+    W = page.rect.width
+    vg, hs = [], []
+    for b in page.get_text("dict")["blocks"]:
+        if b.get("type") != 0:
+            continue
+        for l in b["lines"]:
+            v = abs(l["dir"][1]) > 0.9
+            for s in l["spans"]:
+                t = s["text"].strip()
+                if not t:
+                    continue
+                x0, y0, x1, y1 = s["bbox"]
+                g = {"x0": x0, "y0": y0, "x1": x1, "y1": y1, "size": s["size"], "text": t,
+                     "xc": (x0 + x1) / 2, "v": v}
+                (vg if v else hs).append(g)
+    if not vg:
+        return [], hs, 10.0
+    sizes = sorted(g["size"] for g in vg for _ in range(len(g["text"])))
+    body = sizes[len(sizes) // 2]
+    # 1) 依中心 x 分群
+    vg.sort(key=lambda g: -g["xc"])
+    groups: list[list[dict]] = []
+    for g in vg:
+        if groups and abs(groups[-1][-1]["xc"] - g["xc"]) < min(g["size"], body) * 0.4:
+            groups[-1].append(g)
+        else:
+            groups.append([g])
+    # 2) 群內按 y 排、大空隙切開
+    segs = []
+    for grp in groups:
+        grp.sort(key=lambda g: g["y0"])
+        cur = [grp[0]]
+        for g in grp[1:]:
+            if g["y0"] - cur[-1]["y1"] > max(g["size"], body) * 1.2:
+                segs.append(cur)
+                cur = [g]
+            else:
+                cur.append(g)
+        segs.append(cur)
+    # 2b) 上下兩段式的段間空白（gutter）：頁面中段直字幾乎沒覆蓋的一條橫帶。
+    #     段間距有時只比字距大一點（魏 2023 首頁 12pt vs 字級 9.2），單靠空隙切不乾淨，要用覆蓋率找。
+    H = page.rect.height
+    occ = [0] * (int(H) + 2)
+    for g in vg:
+        if g["size"] < body * 0.7 or g["size"] > body * 1.3:
+            continue
+        for y in range(max(int(g["y0"]), 0), min(int(g["y1"]) + 1, len(occ))):
+            occ[y] += 1
+    M = max(occ) or 1
+    best, run = None, None
+    for y in range(int(H * 0.25), int(H * 0.75)):
+        if occ[y] <= M * 0.08:
+            run = (run[0], y) if run else (y, y)
+            if run[1] - run[0] + 1 >= body * 0.5 and (best is None or run[1] - run[0] > best[1] - best[0]):
+                best = run
+        else:
+            run = None
+    if best is not None:
+        gut = (best[0] + best[1]) / 2
+        cut = []
+        for sg in segs:
+            if max(g["size"] for g in sg) > body * 1.3:
+                cut.append(sg)
+                continue
+            up = [g for g in sg if (g["y0"] + g["y1"]) / 2 < gut]
+            dn = [g for g in sg if (g["y0"] + g["y1"]) / 2 >= gut]
+            cut += [x for x in (up, dn) if x]
+        segs = cut
+    cols = []
+    for sg in segs:
+        sz = sorted(g["size"] for g in sg for _ in range(len(g["text"])))
+        cols.append({"x0": min(g["x0"] for g in sg), "x1": max(g["x1"] for g in sg),
+                     "y0": min(g["y0"] for g in sg), "y1": max(g["y1"] for g in sg),
+                     "size": sz[len(sz) // 2], "glyphs": sg})
+    # 3) 小字直行：純假名＝振り仮名丟掉；其餘（註號「（ ）」）併進右／左鄰最近且 y 重疊的正文直行
+    main = [c for c in cols if c["size"] >= body * 0.7]
+    small = [c for c in cols if c["size"] < body * 0.7]
+    ruby = 0
+    for c in small:
+        t = "".join(g["text"] for g in c["glyphs"])
+        if _KANA_RE.fullmatch(t):
+            ruby += len(t)
+            continue
+        # 註號小字（「（ ）」）裡的縱中橫數字先併進來，整個當一個記號插進正文
+        own = [h for h in hs if c["x0"] - 1 <= (h["x0"] + h["x1"]) / 2 <= c["x1"] + 1
+               and c["y0"] - 1 <= (h["y0"] + h["y1"]) / 2 <= c["y1"] + 1]
+        if own:
+            hs = [h for h in hs if h not in own]
+            c["glyphs"] = sorted(c["glyphs"] + own, key=lambda g: (g["y0"] + g["y1"]) / 2)
+        c["text"] = "".join(g["text"] for g in c["glyphs"])
+        if re.fullmatch(r"[（(]\s*[）)]", c["text"]) and own:
+            c["text"] = "(" + "".join(h["text"] for h in own) + ")"
+        token = {"x0": c["x0"], "x1": c["x1"], "y0": c["y1"] - 0.5, "y1": c["y1"] + 0.5,
+                 "size": c["size"], "text": c["text"], "xc": c["xc"] if "xc" in c else (c["x0"] + c["x1"]) / 2}
+        best, bd = None, body * 1.3
+        for m in main:
+            if min(c["y1"], m["y1"]) - max(c["y0"], m["y0"]) < -1:
+                continue
+            d = max(m["x0"] - c["x1"], c["x0"] - m["x1"], 0)
+            if d < bd:
+                best, bd = m, d
+        if best is not None:
+            best["glyphs"].append(token)
+        else:
+            main.append(c)
+    ruby_chars[0] += ruby
+    # 4) 橫排短 span（縱中橫的數字、註號）：落在某直行的 x 範圍內就插進去
+    rest = []
+    for h in hs:
+        in_margin = h["y0"] > H * 0.9 or h["y1"] < H * 0.1
+        if h["x1"] - h["x0"] < body * 1.8 and not in_margin and not re.fullmatch(r"[―—‒–\-\s ]+", h["text"]):
+            hit = next((m for m in main if m["x0"] - body * 0.4 <= h["xc"] <= m["x1"] + body * 0.4
+                        and m["y0"] - body * 0.5 <= (h["y0"] + h["y1"]) / 2 <= m["y1"] + body * 0.5), None)
+            if hit is not None:
+                hit["glyphs"].append(h)
+                continue
+        rest.append(h)
+    for m in main:
+        m["glyphs"].sort(key=lambda g: (g["y0"] + g["y1"]) / 2)
+        m["y0"] = min(g["y0"] for g in m["glyphs"])
+        m["y1"] = max(g["y1"] for g in m["glyphs"])
+        m["text"] = ""
+        for g in m["glyphs"]:
+            m["text"] = _join(m["text"], g["text"])
+        m["xc"] = (m["x0"] + m["x1"]) / 2
+    return main, rest, body
+
+
+def _vhead_key(t: str) -> str:
+    return _DIGITS_RE.sub("#", _norm_ws(t))
+
+
+def vertical_running_heads(doc, skip: int) -> set[str]:
+    """直排頁：頁緣（左右 12%）重複出現的直行＝柱（書眉）。"""
+    from collections import Counter
+    cnt: Counter = Counter()
+    for pi, page in enumerate(doc):
+        if pi < skip or vertical_ratio(page) < 0.5:
+            continue
+        W = page.rect.width
+        seen = set()
+        for c in _vertical_cols(page)[0]:
+            if (c["xc"] < W * 0.12 or c["xc"] > W * 0.88) and len(c["text"]) < 80:
+                k = _vhead_key(c["text"])
+                if k not in seen:
+                    seen.add(k)
+                    cnt[k] += 1
+    return {k for k, v in cnt.items() if v >= 2 and len(k.replace("#", "")) >= 2}
+
+
+def vertical_page_items(page, heads: set[str], printed: int | None = None) -> tuple[list[dict], int]:
+    """直排頁 → [{text, start, note}]（與 horizontal_page_items 同形）；另回傳濾掉的書眉頁碼字數。"""
+    W, H = page.rect.width, page.rect.height
+    cols, rest, body = _vertical_cols(page)
+    dropped = 0
+    keep = []
+    for c in cols:
+        t = _norm_ws(c["text"])
+        edge = c["xc"] < W * 0.1 or c["xc"] > W * 0.9
+        if (edge and c["size"] < body * 0.95 and len(t) < 80) or _vhead_key(t) in heads \
+                or (edge and _PAGE_NUM_RE.match(t)):
+            dropped += len(t)
+            continue
+        keep.append(c)
+    # 橫排剩餘：頁碼／書眉丟掉；其他（直排頁裡夾的橫排西文、表格）照 y 附在頁尾
+    tail = []
+    for h in sorted(rest, key=lambda h: (round(h["y0"] / max(h["size"], 1)), h["x0"])):
+        t = _norm_ws(h["text"])
+        if (h["y1"] < H * 0.12 or h["y0"] > H * 0.9) and (len(t) < 60 or _PAGE_NUM_RE.match(t)):
+            dropped += len(t)
+            continue
+        if re.fullmatch(r"[\d\s･・.,()（）\-‒–―― ]+", h["text"]):
+            dropped += len(t)
+            continue
+        tail.append(h)
+    if not keep:
+        return [], dropped
+    # 段（上下兩段式）。同一頁可能右半是通欄（要旨）、左半才分上下段（康 2019 首頁），
+    # 首頁標題又常橫跨兩段、底下段的右端沒有上段對應（魏 2023）。作法：
+    # 先用「非通欄直行」的 y 覆蓋率找段間空白 gutter → 每一直行歸上段／下段／通欄 →
+    # 由右而左把連續的非通欄直行併成一「區」，區內先上段（-x1）再下段（-x1）。
+    Hh = page.rect.height
+    y_lo, y_hi = min(c["y0"] for c in keep), max(c["y1"] for c in keep)
+    span_all = max(y_hi - y_lo, 1)
+
+    def big(c) -> bool:
+        return c["size"] > body * 1.3
+    occ = [0] * (int(Hh) + 2)
+    for c in keep:
+        if big(c) or c["y1"] - c["y0"] > span_all * 0.75:
+            continue
+        for yy in range(max(int(c["y0"]), 0), min(int(c["y1"]) + 1, len(occ))):
+            occ[yy] += 1
+    M = max(occ) or 1
+    gbest, run = None, None
+    for yy in range(int(Hh * 0.25), int(Hh * 0.75)):
+        if occ[yy] <= M * 0.2:
+            run = (run[0], yy) if run else (yy, yy)
+            if run[1] - run[0] + 1 >= body * 0.8 and (gbest is None or run[1] - run[0] > gbest[1] - gbest[0]):
+                gbest = run
+        else:
+            run = None
+    gut = (gbest[0] + gbest[1]) / 2 if gbest and M >= 3 else None
+    if gut is not None and (sum(1 for c in keep if c["y1"] <= gut + 1) < 2
+                            or sum(1 for c in keep if c["y0"] >= gut - 1) < 2):
+        gut = None
+
+    def tier(c) -> int:              # 0 上段、1 下段、-1 通欄（或無分段）
+        if gut is None:
+            return -1
+        if c["y1"] <= gut + 1:
+            return 0
+        if c["y0"] >= gut - 1:
+            return 1
+        return -1
+    byx = sorted(keep, key=lambda c: (-c["x1"], c["y0"]))
+    zones: list[list[dict]] = []
+    for c in byx:
+        full = tier(c) < 0
+        if zones and not full and tier(zones[-1][-1]) >= 0:
+            zones[-1].append(c)
+        else:
+            zones.append([c])
+    seq: list[tuple[dict, float, float, tuple]] = []      # (直行, 段頂, 段底, 段鍵)
+    for zi, cs in enumerate(zones):
+        for t in (-1, 0, 1):
+            part = [c for c in cs if tier(c) == t]
+            if not part:
+                continue
+            top = min(c["y0"] for c in part) if t != 1 else gut
+            bot = max(c["y1"] for c in part) if t != 0 else gut
+            if t == 0:
+                top = min(c["y0"] for c in keep if tier(c) == 0)
+            if t == 1:
+                bot = max(c["y1"] for c in keep if tier(c) == 1)
+                top = min(c["y0"] for c in keep if tier(c) == 1)
+            seq += [(c, top, bot, (zi, t)) for c in part]
+    items = []
+    prev = prev_top = prev_bot = prev_key = None
+    for i, (c, top, bot, key) in enumerate(seq):
+        sz = c["size"]
+        rel = c["y0"] - top
+        nxt = seq[i + 1][0] if i + 1 < len(seq) and seq[i + 1][3] == key else None
+        same = prev is not None and prev_key == key
+        prel = (prev["y0"] - prev_top) if same else None
+        note = sz < body * 0.92
+        indent = (nxt is not None and (nxt["y0"] - top) < rel - sz * 0.6
+                  and (prel is None or rel > prel + sz * 0.5)) or (prel is not None and rel > prel + sz * 1.5)
+        heading = bool(_HEADING_RE.match(c["text"]))
+        prev_short = prev is not None and prev["y1"] < prev_bot - prev["size"] * 1.5 and (
+            prev["text"].endswith(SENT_END + ("：", ":")) or bool(_HEADING_RE.match(prev["text"])))
+        size_jump = prev is not None and abs(sz - prev["size"]) > 0.6
+        prev_note = prev is not None and prev["size"] < body * 0.92
+        start = indent or heading or (prev is not None and (prev_short or size_jump or note != prev_note))
+        if note and _NOTE_START_RE.match(c["text"]):
+            start = True
+        items.append({"text": c["text"], "start": start, "note": note})
+        prev, prev_top, prev_bot, prev_key = c, top, bot, key
+    for h in tail:
+        items.append({"text": h["text"], "start": True, "note": h["size"] < body * 0.92})
     return items, dropped
 
 
@@ -405,13 +690,17 @@ def _extract_paras(e: dict, pdf_path: Path, report: bool = False) -> list[dict]:
     skip = e.get("skipPages", 0)
     ps, step = e.get("pageStart"), e.get("pageStep", 1)
     heads = _running_heads(doc, skip)
+    vheads = vertical_running_heads(doc, skip)
     ruby_chars[0] = 0
     stream, dropped, raw = [], 0, 0
     for pi, page in enumerate(doc):
         if pi < skip:
             continue
         printed = (ps + (pi - skip) * step) if ps else None
-        items, d = horizontal_page_items(page, heads, printed)
+        if vertical_ratio(page) >= 0.5:
+            items, d = vertical_page_items(page, vheads | heads, printed)
+        else:
+            items, d = horizontal_page_items(page, heads, printed)
         dropped += d
         raw += len(_norm_ws(page.get_text("text")))
         dropped += ruby_chars[0]
@@ -451,6 +740,7 @@ OCR_PROMPT = """這是{lang}學術文獻〈{title}〉（{venue}）的 PDF，共 
 只輸出 JSON，不要任何說明。"""
 
 
+_last_ocr_err = [""]
 OCR_MODEL = os.environ.get("YJ_OCR_MODEL", "gemini-2.5-flash")   # 失敗時 ocr_pdf 會自己輪其他模型與 key
 
 
@@ -484,6 +774,7 @@ def run_ocr(e: dict, pdf: Path, batch: int = 2, redo_missing: bool = False) -> b
             pages = ocr_pdf(pdf, model=OCR_MODEL, pages=(rng[0], rng[-1]), prompt=prompt)
         except Exception as ex:  # noqa: BLE001
             print(f"    ✗ OCR pp{rng[0]}-{rng[-1]} 失敗：{str(ex)[-200:]}", flush=True)
+            _last_ocr_err[0] = str(ex)
             return False
         texts = {int(p["page"]): (p.get("text") or "") for p in pages}
         if set(texts) != set(rng) and len(pages) == len(rng):
@@ -506,6 +797,64 @@ def run_ocr(e: dict, pdf: Path, batch: int = 2, redo_missing: bool = False) -> b
         body.append(t)
     ocr_txt_path(e["id"]).write_text("\n".join(body) + "\n", encoding="utf-8")
     print(f"    → {ocr_txt_path(e['id']).name}", flush=True)
+    return True
+
+
+MINERU_PY = ROOT / "_mineru_venv" / "Scripts" / "python.exe"
+QUOTA_SIGNS = ("exhausted", "429", "quota", "RESOURCE_EXHAUSTED", "rate limit")
+# 兩支背景工作（本檔 --auto 與 yinshun_debate_fulltext.py）共用：Gemini OCR 連兩次配額錯就寫下停到何時，
+# 之後幾輪排程直接跳過 Gemini，不必每輪再把各把 key 試一遍
+GEMINI_BLOCK = ROOT / "output" / "yinshun-fulltext" / "gemini_blocked_until.txt"
+
+
+def gemini_blocked() -> bool:
+    try:
+        return time.time() < float(GEMINI_BLOCK.read_text(encoding="utf-8").strip())
+    except Exception:  # noqa: BLE001
+        return False
+
+
+def block_gemini(hours: float = 4) -> None:
+    GEMINI_BLOCK.parent.mkdir(parents=True, exist_ok=True)
+    GEMINI_BLOCK.write_text(str(time.time() + hours * 3600), encoding="utf-8")
+
+
+def run_mineru_ocr(e: dict, pdf: Path) -> bool:
+    """橫排掃描（J-STAGE 影像＋粗糙 OCR 層）走本機 MinerU（CPU，不搶夜班的 GPU 鎖），
+    組成與 Gemini 路徑同格式的 `<id>.ocr.txt`：每 PDF 頁一個【頁 N】，一段一行。
+    N 用書目核過的 pageStart／pageStep（一 PDF 頁一印刷頁）；沒有就寫【頁 ?】。
+    🚨 MinerU 原樣輸出，不過 OpenCC（日文不可簡繁轉換）。"""
+    import subprocess
+    import tempfile
+    lang = "en" if e.get("lang", "").startswith("英") else ("ch" if e.get("lang", "").startswith("中") else "japan")
+    with tempfile.TemporaryDirectory(prefix="yj_mineru_") as td:
+        out = Path(td) / "o.jsonl"
+        r = subprocess.run([str(MINERU_PY), "-X", "utf8", str(ROOT / "scripts" / "mineru_ocr.py"), "run",
+                            "--pdf", str(pdf), "--out", str(out), "--lang", lang, "--device", "cpu"],
+                           capture_output=True, text=True, encoding="utf-8", errors="replace")
+        if r.returncode != 0 or not out.exists():
+            tail = (r.stdout or "")[-300:] + (r.stderr or "")[-300:]
+            print(f"    ✗ MinerU 失敗 exit {r.returncode}：{tail}", flush=True)
+            return False
+        chunks = [json.loads(x) for x in out.read_text(encoding="utf-8").splitlines() if x.strip()]
+    ps, st = e.get("pageStart"), e.get("pageStep", 1)
+    body = []
+    for c in sorted(chunks, key=lambda c: c["page_number"]):
+        k = c["page_number"] - 1
+        n = str(ps + k * st) if ps else "?"
+        text = c.get("content") or ""
+        main, _, notes = text.partition("—" * 15)
+        paras = []
+        for blk in re.split(r"\n\s*\n", main):
+            t = ""
+            for ln in blk.splitlines():
+                t = _join(t, ln.strip()) if t else ln.strip()
+            if t:
+                paras.append(t)
+        paras += [ln.strip() for ln in notes.splitlines() if ln.strip()]
+        body.append(f"【頁 {n}】\n" + ("\n".join(paras) if paras else "（空白）"))
+    ocr_txt_path(e["id"]).write_text("\n".join(body) + "\n", encoding="utf-8")
+    print(f"    → {ocr_txt_path(e['id']).name}（MinerU {len(chunks)} 頁）", flush=True)
     return True
 
 
@@ -571,6 +920,9 @@ def translate_entry(e: dict, fn, pace: float) -> tuple[int, int]:
     wp = work_path(e["id"])
     data = json.loads(wp.read_text(encoding="utf-8"))
     paras = data["paras"]
+    if e.get("transcribeOnly"):
+        print(f"  {e['id']}: 只轉錄（{e.get('lang', '')}），{len(paras)} 段", flush=True)
+        return len(paras), len(paras)
     todo = [i for i, p in enumerate(paras) if not p["zh"]]
     print(f"  {e['id']}: {len(paras) - len(todo)}/{len(paras)} 已譯，待譯 {len(todo)}", flush=True)
     fails = 0
@@ -621,19 +973,116 @@ def write_index(cat: list[dict]) -> None:
         if e.get("pdf") and wp.exists():
             ps = json.loads(wp.read_text(encoding="utf-8"))["paras"]
             paras, translated = len(ps), sum(1 for p in ps if p["zh"])
+            if e.get("transcribeOnly"):
+                translated = paras
         row = {k: e.get(k, "") for k in ("id", "group", "author", "year", "title", "titleZh", "venue",
                                          "volume", "issue", "pages", "kind", "url", "abstract", "lang")}
         row["abstract"] = row["abstract"] if row["abstract"] != "未讀。" else ""
         row.update(paras=paras, translated=translated)
         if e.get("zhSame"):
             row["zhSame"] = True          # 原件本即中文（《內明》中譯審查報告）：兩欄同文
+        if e.get("transcribeOnly"):
+            row["transcribeOnly"] = True  # 中文／英文原件：只轉錄、單欄
         rows.append(row)
     INDEX_OUT.write_text(json.dumps(rows, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"索引 {len(rows)} 筆 → {INDEX_OUT.relative_to(ROOT)}")
 
 
+def status_rows(cat: list[dict]) -> list[tuple]:
+    rows = []
+    for e in cat:
+        if not e.get("pdf") or not e.get("translate"):
+            continue
+        wp = work_path(e["id"])
+        need_ocr = e.get("ocr") and not ocr_txt_path(e["id"]).exists()
+        if wp.exists():
+            ps = json.loads(wp.read_text(encoding="utf-8"))["paras"]
+            n, done = len(ps), (len(ps) if e.get("transcribeOnly") else sum(1 for p in ps if p["zh"]))
+        else:
+            n = done = 0
+        st = ("待OCR(" + e.get("ocrEngine", "gemini") + ")") if need_ocr else (
+            "未切段" if not wp.exists() else ("完成" if done == n and n else "翻譯中"))
+        kind = "只轉錄" if e.get("transcribeOnly") else "逐段中譯"
+        rows.append((e["id"], kind, st, done, n))
+    return rows
+
+
+def auto(cat: list[dict], only: set | None, pace: float) -> None:
+    """背景續跑：逐篇 OCR → 切段 → 翻譯 → 上傳 R2 → 重寫索引。一次一篇、一個程序。
+    Gemini OCR 連續兩次配額錯就這一輪不再叫 Gemini（其餘篇目照做 MinerU／翻譯），留待下輪。
+    翻譯連續兩篇都停在失敗（引擎全倒）就整場停。"""
+    s3, bucket = r2_client()
+    fn = None
+    gem_streak, gem_blocked, tr_fail = 0, gemini_blocked(), 0
+    for e in cat:
+        if only and e["id"] not in only:
+            continue
+        if not e.get("pdf") or not e.get("translate"):
+            continue
+        pdf = DRIVE_DIR / e["pdf"]
+        if not pdf.exists():
+            print(f"✗ 找不到 PDF：{pdf}", flush=True)
+            continue
+        wp = work_path(e["id"])
+        if e.get("ocr") and not ocr_txt_path(e["id"]).exists():
+            if e.get("ocrEngine") == "mineru":
+                print(f"● MinerU OCR {e['id']}", flush=True)
+                if not run_mineru_ocr(e, pdf):
+                    continue
+            else:
+                if gem_blocked:
+                    print(f"… {e['id']} 待 Gemini OCR（本輪配額已停）", flush=True)
+                    continue
+                print(f"● Gemini OCR {e['id']}", flush=True)
+                _last_ocr_err[0] = ""
+                if not run_ocr(e, pdf):
+                    if any(k.lower() in _last_ocr_err[0].lower() for k in QUOTA_SIGNS):
+                        gem_streak += 1
+                        if gem_streak >= 2:
+                            gem_blocked = True
+                            block_gemini()
+                            print("⛔ Gemini OCR 連續兩次配額錯：本輪不再叫 Gemini，其餘篇目留佇列", flush=True)
+                    continue
+                gem_streak = 0
+        if not wp.exists():
+            print(f"● 切段 {e['id']}", flush=True)
+            try:
+                paras = extract_paras(e, pdf, report=True)
+            except Exception as ex:  # noqa: BLE001
+                print(f"    ✗ 切段失敗：{ex}", flush=True)
+                continue
+            wp.write_text(json.dumps({"id": e["id"], "paras": paras}, ensure_ascii=False, indent=1), encoding="utf-8")
+        if not e.get("transcribeOnly") and not e.get("zhSame"):
+            ps = json.loads(wp.read_text(encoding="utf-8"))["paras"]
+            if any(not p["zh"] for p in ps):
+                fn = fn or get_translator()
+                done, total = translate_entry(e, fn, pace)
+                print(f"  → {done}/{total}", flush=True)
+                if done < total:
+                    tr_fail += 1
+                    if tr_fail >= 2:
+                        upload(e, s3, bucket)
+                        write_index(cat)
+                        print("⛔ 連續兩篇翻譯停在失敗，整場停（重跑接續）", flush=True)
+                        return
+                else:
+                    tr_fail = 0
+        elif e.get("zhSame"):
+            translate_entry(e, None, 0)
+        upload(e, s3, bucket)
+        print(f"  ↑ R2 {R2_PREFIX}{e['id']}.json", flush=True)
+        write_index(cat)
+    write_index(cat)
+    left = [r for r in status_rows(cat) if r[2] != "完成"]
+    print(f"本輪結束：{len(left)} 篇未完成", flush=True)
+    if not left:
+        print("ALL_DONE", flush=True)
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
+    ap.add_argument("--auto", action="store_true", help="背景續跑：OCR→切段→翻譯→上傳→索引，全自動")
+    ap.add_argument("--status", action="store_true", help="印每篇進度表")
     ap.add_argument("--only", help="只處理這個 id（可逗號分隔）")
     ap.add_argument("--dry-run", action="store_true", help="只切段，印字數對帳與前幾段，不翻譯不寫檔")
     ap.add_argument("--show", type=int, default=6, help="--dry-run 印幾段")
@@ -647,6 +1096,22 @@ def main() -> None:
 
     cat = load_catalog()
     only = set(a.only.split(",")) if a.only else None
+    if a.status:
+        rows = status_rows(cat)
+        for r in rows:
+            print(f"{r[0]:18} {r[1]:5} {r[2]:14} {r[3]}/{r[4]}")
+        from collections import Counter
+        print(f"共 {len(rows)} 篇：" + "、".join(f"{k} {v}" for k, v in Counter(r[2] for r in rows).items()))
+        return
+    if a.auto:
+        try:
+            from keep_awake import keep_awake
+            keep_awake()
+        except Exception:  # noqa: BLE001
+            pass
+        WORK_DIR.mkdir(parents=True, exist_ok=True)
+        auto(cat, only, a.pace)
+        return
     WORK_DIR.mkdir(parents=True, exist_ok=True)
     fn = None if (a.dry_run or a.no_translate or a.ocr) else get_translator()
     s3 = bucket = None
