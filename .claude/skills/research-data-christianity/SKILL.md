@@ -414,6 +414,8 @@ REFERENCE-first 要能執行，得先知道書拿不拿得到。實查見 `data/
 
 **已補建完整講道史**（`scripts/cz_sermons_extend.py`）：為 386 場「龐講道但無 DB 列」週次建 metadata-only row（無逐字稿、is_published、has_recording=false；title/occasion/服事人員/詩歌/經課取自週報；preacher 依 era map、church_year 以將臨期回推、sermon_type 主日講道/特殊節日）→ pong_sermons 314→**700 列**。經課**不覆蓋**既有列（舊年週報抽取不如 DB 轉錄可靠），只輸出 121 筆 DB↔週報雙向書卷衝突 → `城中教會講道清單/_經課對照需確認.md` 供人工複核。4 筆週報=龐但佇列⛔別人（有錄影）已建列待確認影片是否真為龐講道。
 
+**解析器 v2（2026-09-24，`scripts/cz_parse_v2.py` → `output/cz_bulletins_v2.jsonl`，讀 public/content 的 full_text，不碰 Word）**：只取「本週」崇拜程序。修掉 v1 三個錯——講員抓到服事表裡下週的人（2005-03-13 程序是蔡得恩，v1 給龐君華）、「福 音 書」字間空格認不得而整批漏福音書、2003–2007 詩歌全沒抓（「頌讚 聯91「…」」「【「…」《普天頌讚》637首】」格式）。覆蓋：講員 99.3%（缺的全是無證道的泰澤／朝陽聚會）、經課含福音書 100%、詩歌 100%、服事 99.9%；逐年抽驗約 110 份記在 `output/cz_bulletins_v2_check.md`。`warn` 標出週報本身印錯卷名（2005-02-27、2006-03-19、2009-03-15 午堂把出埃及記印成創世記）。v2 已套進 pong_sermons 的經課／詩歌／講題／服事（規則見 nonchurch `pong-sermon` skill〈城中週報 v2 對照〉）；服事只收講道、司會、讀經、音樂相關職分。
+
 **尚未做（使用者選「先只做週報」）：** 講章/講道/錄音 還沒上站；證道題目 61% 可日後用 Gemini 補強。與 [[pong_sermon_pipeline]]（城中講道 YouTube 轉錄）、[[project_pong_2020_era]] 相關（2019-10 起邱泰耀接任主任，週報服事表可見）。
 
 ## 索引補記
