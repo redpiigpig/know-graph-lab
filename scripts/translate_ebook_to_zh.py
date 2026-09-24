@@ -1339,6 +1339,18 @@ def translate_book(ebook_id: str, limit: int | None, inspect: bool, dry_run: boo
 
     book = fetch_book(ebook_id)
     print(f"Book: {book['title']}", flush=True)
+    # 使用者定名是最高原則（[[feedback_user_naming_is_final]]）：DB 書名若是
+    # 「中文書名（Original Title）」，書中提到本書時一律用那個中文書名。
+    global PROMPT_TMPL
+    zh_title = re.sub(r"（[^（）]*[A-Za-z][^（）]*）\s*$", "", book.get("title") or "").strip()
+    orig = (book.get("original_title") or "").strip()
+    if orig and zh_title and re.search(r"[一-鿿]", zh_title):
+        short = orig.split(":")[0].strip()
+        PROMPT_TMPL = PROMPT_TMPL.replace(
+            "--- 原文 ---",
+            f"本書書名已定譯：原文提到本書 *{orig}*（或只寫 *{short}*）時，一律譯為《{zh_title}》，"
+            f"一字不改，不可另譯。\n\n--- 原文 ---", 1)
+        print(f"Title rule: {short} -> 《{zh_title}》", flush=True)
     epub_path, src_chunks = find_source_for_book(book)
     print(f"Source: {epub_path}", flush=True)
 
@@ -1532,9 +1544,9 @@ def translate_book(ebook_id: str, limit: int | None, inspect: bool, dry_run: boo
         # the lane retires only once that copy has been read back and verified.
         if docx_out == "next-to-source":
             # Keeps non-ASCII paths out of fleet_keeper.ps1 (it must stay ASCII):
-            # "{author}，{zh title}（中譯）.docx" beside the source file on Drive.
-            zh_title = re.sub(r"（[^（）]*[A-Za-z][^（）]*）\s*$", "", book.get("title") or "").strip()
-            name = re.sub(r'[\\/:*?"<>|]', "_", f"{book.get('author') or ''}，{zh_title}（中譯）.docx")
+            # "{author}，{zh title}.docx" beside the source file on Drive. Full-width
+            # "：" is a legal Windows/Drive filename character; only ASCII ones are replaced.
+            name = re.sub(r'[\\/:*?"<>|]', "_", f"{book.get('author') or ''}，{zh_title}.docx")
             docx_out = str(Path(book["file_path"]).parent / name)
         if docx_out and export_docx(book, out_chunks, Path(docx_out)):
             print("  not complete: Word export failed verification", flush=True)
