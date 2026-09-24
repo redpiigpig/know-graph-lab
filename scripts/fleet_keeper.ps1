@@ -102,6 +102,7 @@ $STALL_PER_LANE = @{
     'sbe-b2-s4'      = 90
     'sbe-b2-s5'      = 90
     'mineru-queue'   = 180   # one log line per BOOK; a 500-page scan runs 30+ min on the GPU
+    'spiral-staircase' = 120 # one line per ~20k-char piece; a 3-failure wall sleeps 30 min
 }
 function StallLimit($label) {
     if ($STALL_PER_LANE.ContainsKey($label)) { return $STALL_PER_LANE[$label] }
@@ -283,6 +284,15 @@ EnsureUntil 'niv-s1' $py @('-X','utf8','scripts\japanese_bible.py','translate','
 EnsureUntil 'niv-s2' $py @('-X','utf8','scripts\japanese_bible.py','translate','--ver','niv_zh','--shard','2/3') 'QUEUE_COMPLETE'
 EnsureUntil 'jmeiji-s0' $py @('-X','utf8','scripts\japanese_bible.py','translate','--ver','jmeiji_zh','--shard','0/2') 'QUEUE_COMPLETE'
 EnsureUntil 'jmeiji-s1' $py @('-X','utf8','scripts\japanese_bible.py','translate','--ver','jmeiji_zh','--shard','1/2') 'QUEUE_COMPLETE'
+
+# Karen Armstrong, The Spiral Staircase (2004) - user's PRIVATE reference for a book review in
+# the Nonchurch magazine; to be DELETED after the review (list in ebook-translate SKILL.md).
+# ebook 39e70498-9d27-437c-909a-793a927d52d0, text-layer PDF on Drive, en -> zh (Gemini -> NVIDIA
+# -> Haiku). Login-gated /ebook reader only; collection is NOT collected-works, so cw-word skips it.
+# The worker prints TRANSLATE_BOOK_COMPLETE only when every source chunk is in the JSONL, R2 took
+# it, and the Chinese-only .docx beside the PDF was written and read back clean - engine errors
+# leave chunks missing, so an outage never retires the lane (STRICT_COMPLETE rule).
+EnsureUntil 'spiral-staircase' $py @('-X','utf8','-u','scripts\translate_ebook_to_zh.py','39e70498-9d27-437c-909a-793a927d52d0','--engine','auto','--resume','--docx-out','next-to-source') 'TRANSLATE_BOOK_COMPLETE'
 
 # Collected works -> one Word reader per book on Drive (user 2026-09-23: "Drive needs a Word
 # for every book"). Incremental: only books whose JSONL is newer than the .docx are rebuilt,

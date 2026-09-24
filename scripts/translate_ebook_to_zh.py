@@ -258,8 +258,14 @@ def _anthropic_translate(model: str, label: str, source: str,
                 max_tokens=16000,
                 messages=[{"role": "user", "content": PROMPT_TMPL.format(source=source)}],
             )
-            text = "".join(block.text for block in msg.content if hasattr(block, "text"))
-            return text.strip()
+            text = "".join(block.text for block in msg.content if hasattr(block, "text")).strip()
+            # Haiku answers a refusal / "我注意到您提供的…" as if it were the translation
+            # ([[feedback_haiku_meta_reply_pollution]]); Gemini and NVIDIA already pass this
+            # gate, the Anthropic tier did not. A bad answer is a failed request, never stored.
+            bad = unusable_reason(text, source)
+            if bad:
+                raise RuntimeError(f"{label} output rejected: {bad}")
+            return text
         except _anthropic.RateLimitError:
             print(f"  {label} rate-limit attempt {attempt}/{len(backoffs)}", file=sys.stderr, flush=True)
             if attempt >= len(backoffs):
@@ -1163,6 +1169,99 @@ def epub_to_chunks(epub_path: Path) -> list[dict]:
 
 # ── Pipeline ──────────────────────────────────────────────────────────────
 
+_NOTE_BLOCK_RE = re.compile(r"^\d{1,3}\s+\S")
+_PARA_END_RE = re.compile(r"[.!?:;\"'”’)\]—…]\s*$")
+
+
+def pdf_to_chunks(pdf_path: Path) -> list[dict]:
+    """Text-layer PDF (e.g. calibre-exported) -> one source chunk per top-level
+    bookmark, same shape as epub_to_chunks. Only for PDFs WITH a text layer; scans
+    go through OCR first. Each text block is one paragraph; a paragraph broken
+    across a page is re-joined when the block before it lacks closing punctuation.
+    Trailing pages made only of numbered notes become their own "Notes" chunk
+    (notes are always kept - [[feedback_transcribe_notes_and_bibliography]]).
+    No {{p:N}} markers: a converted PDF's page index is not the print page, and a
+    fake page number is worse than none ([[feedback_transcribe_page_numbers]])."""
+    import fitz
+    doc = fitz.open(str(pdf_path))
+    toc = sorted((p - 1, t.strip()) for lvl, t, p in doc.get_toc() if lvl == 1 and p >= 1)
+    if not toc:
+        raise ValueError(f"PDF has no bookmarks to split chapters on: {pdf_path}")
+    pages = [[b[4] for b in pg.get_text("blocks") if b[6] == 0 and b[4].strip()] for pg in doc]
+    if sum(len("".join(p)) for p in pages) < 1000 * max(1, len(pages)) // 10:
+        raise ValueError(f"PDF text layer too thin (scan?) - OCR it first: {pdf_path}")
+    # Converters mis-point bookmarks (calibre put PREFACE on the title page, so the
+    # preface body landed inside "Praise"). Trust a bookmark only if its title opens
+    # the page; otherwise move it to the first page that opens with that title.
+    def _norm(s: str) -> str:
+        return re.sub(r"[^a-z0-9]", "", s.lower())
+    def _opens(i: int, title: str) -> bool:
+        head = _norm(" ".join(pages[i][:2]))[:len(_norm(title)) + 40]
+        return bool(_norm(title)) and _norm(title)[:30] in head
+    fixed = []
+    for p, title in toc:
+        if not _opens(p, title):
+            hit = next((i for i in range(len(pages)) if pages[i] and _opens(i, title)), None)
+            if hit is not None:
+                p = hit
+        fixed.append((p, title))
+    toc = sorted(fixed)
+    # Notes pages: the last run of pages (back half of the book) whose every block
+    # is a numbered note.
+    is_note = [bool(pg) and all(_NOTE_BLOCK_RE.match(b) for b in pg) for pg in pages]
+    note_pages: set[int] = set()
+    for i in range(len(pages) - 1, len(pages) // 2, -1):
+        if is_note[i]:
+            note_pages.add(i)
+        elif note_pages:
+            break
+    sections = []
+    for k, (p, title) in enumerate(toc):
+        end = toc[k + 1][0] if k + 1 < len(toc) else len(pages)
+        sections.append((title, p, end))
+    if note_pages:
+        sections.append(("Notes", min(note_pages), max(note_pages) + 1))
+        sections.sort(key=lambda s: (s[1], s[0] != "Notes"))
+    chunks: list[dict] = []
+    seen_pages: set[int] = set()
+    for title, p0, p1 in sections:
+        paras: list[str] = []
+        for i in range(p0, p1):
+            if i in seen_pages or (title != "Notes" and i in note_pages):
+                continue
+            seen_pages.add(i)
+            for blk in pages[i]:
+                text = re.sub(r"\s+", " ", blk.replace("­\n", "")).strip()
+                if not text:
+                    continue
+                if paras and not _PARA_END_RE.search(paras[-1]) and not paras[-1].startswith("## "):
+                    paras[-1] += " " + text
+                else:
+                    paras.append(text)
+        if not paras:
+            continue
+        if re.sub(r"\W", "", paras[0]).lower() == re.sub(r"\W", "", title).lower():
+            paras[0] = f"## {title}"
+        else:
+            paras.insert(0, f"## {title}")
+        chunks.append({"src_file": f"pdf:{p0 + 1}-{p1}", "title_en": title,
+                       "content_en": "\n\n".join(paras)})
+    return chunks
+
+
+def find_source_for_book(book: dict) -> tuple[Path, list[dict]]:
+    """EPUB first (cleanest); a text-layer PDF with no EPUB sibling falls back to
+    pdf_to_chunks."""
+    try:
+        p = find_epub_for_book(book)
+        return p, epub_to_chunks(p)
+    except FileNotFoundError:
+        p = Path(book["file_path"])
+        if p.suffix.lower() == ".pdf" and p.exists():
+            return p, pdf_to_chunks(p)
+        raise
+
+
 def find_epub_for_book(book: dict) -> Path:
     pdf = Path(book["file_path"])
     # Sister .epub in same dir
@@ -1185,8 +1284,52 @@ def fetch_book(ebook_id: str) -> dict:
     return rows[0]
 
 
+_NOTE_LINE_RE = re.compile(r"^\d{1,3}\s")
+
+
+def export_docx(book: dict, chunks: list[dict], out: Path) -> list[str]:
+    """Whole-book Chinese-only Word copy, reusing collected_works_word.build_docx
+    (the cw-word lane's renderer) for a book that is NOT in the collected-works
+    collection. Reads the file back with python-docx and returns a list of
+    problems (empty = verified): paragraph count must equal the translation's,
+    every chapter heading must be there, and no paragraph may still be English
+    (numbered notes excepted - their cited titles stay in the original)."""
+    import collected_works_word as cww
+    from docx import Document
+    title = re.sub(r"（[^（）]*[A-Za-z][^（）]*）\s*$", "", book.get("title") or "").strip()
+    meta = {"title": title, "author": book.get("author") or "",
+            "original": book.get("original_title") or "", "subtitle": ""}
+    cww.build_docx(meta, chunks, out)
+    d = Document(str(out))
+    heads = [p.text.strip() for p in d.paragraphs if p.style.name.startswith("Heading")]
+    body = [p.text.strip() for p in d.paragraphs
+            if not p.style.name.startswith("Heading") and p.text.strip()]
+    front = sum(1 for x in (meta["title"], meta["author"], meta["original"]) if x) + 1  # + export note
+    want = sum(1 for c in chunks for q in re.split(r"\n\s*\n", c.get("content") or "")
+               if q.strip() and not q.lstrip().startswith("#"))
+    problems = []
+    if len(body) - front != want:
+        problems.append(f"body paragraphs {len(body) - front} != translation {want}")
+    for c in chunks:
+        cp = cww._level((c.get("chapter_path") or "").split(" · ")[-1])
+        if cp and cp not in heads:
+            problems.append(f"missing heading: {cp[:40]}")
+    for q in body[front:]:
+        if _NOTE_LINE_RE.match(q):
+            continue
+        why = unusable_reason(q)
+        if why in ("untranslated", "partial-untranslated", "untranslated-japanese"):
+            problems.append(f"{why}: {q[:60]}")
+    print(f"  docx: {out}  headings={len(heads)} body={len(body) - front}/{want}  problems={len(problems)}",
+          flush=True)
+    for x in problems[:10]:
+        print(f"    ! {x}", flush=True)
+    return problems
+
+
 def translate_book(ebook_id: str, limit: int | None, inspect: bool, dry_run: bool,
-                   engine: str = "gemini", resume: bool = False) -> None:
+                   engine: str = "gemini", resume: bool = False,
+                   docx_out: str | None = None) -> None:
     # Always unbuffered so background-mode logs show progress live.
     try:
         sys.stdout.reconfigure(line_buffering=True)
@@ -1196,10 +1339,9 @@ def translate_book(ebook_id: str, limit: int | None, inspect: bool, dry_run: boo
 
     book = fetch_book(ebook_id)
     print(f"Book: {book['title']}", flush=True)
-    epub_path = find_epub_for_book(book)
-    print(f"EPUB: {epub_path}", flush=True)
+    epub_path, src_chunks = find_source_for_book(book)
+    print(f"Source: {epub_path}", flush=True)
 
-    src_chunks = epub_to_chunks(epub_path)
     print(f"Source chunks: {len(src_chunks)}", flush=True)
     total_en_chars = sum(len(c["content_en"]) for c in src_chunks)
     print(f"Source total: {total_en_chars:,} chars", flush=True)
@@ -1209,6 +1351,9 @@ def translate_book(ebook_id: str, limit: int | None, inspect: bool, dry_run: boo
             print(f"\n[{i}] {c['title_en'][:60]}  ({len(c['content_en'])} chars)")
             print(c["content_en"][:400])
         print(f"... and {max(0, len(src_chunks)-8)} more")
+        for i, c in enumerate(src_chunks):
+            print(f"  #{i:>3} {c['src_file']:<14} {len(c['content_en']):>7,} chars  "
+                  f"{c['content_en'].count(chr(10) + chr(10)) + 1:>4} paras  {c['title_en'][:50]}")
         return
 
     target = src_chunks[:limit] if limit else src_chunks
@@ -1349,10 +1494,12 @@ def translate_book(ebook_id: str, limit: int | None, inspect: bool, dry_run: boo
     print(f"\nWrote {out_path}  ({out_path.stat().st_size//1024} KB)  [sorted to source order]", flush=True)
 
     # R2 + DB previews
+    r2_ok = True
     try:
         se.push_to_r2(ebook_id, out_path)
         print("  ✓ pushed R2")
     except Exception as e:
+        r2_ok = False
         print(f"  ⚠ R2 push failed: {e}", file=sys.stderr)
 
     # Update DB
@@ -1368,6 +1515,31 @@ def translate_book(ebook_id: str, limit: int | None, inspect: bool, dry_run: boo
     r = requests.patch(f"{URL}/rest/v1/ebooks?id=eq.{ebook_id}", headers=H_JSON, json=patch, timeout=30)
     r.raise_for_status()
     print(f"  ✓ ebooks row updated  chunk_count={len(out_chunks)}  total_chars={total_chars:,}")
+
+    # STRICT completion marker for fleet_keeper EnsureUntil lanes: printed ONLY when
+    # every translatable source chunk of the WHOLE book (not a --limit slice) is in the
+    # JSONL. A run whose engines failed leaves chunks missing, so it can never retire
+    # the lane - an outage just waits for the next tick (same rule as uchimura_auto's
+    # STRICT_COMPLETE, cf. commit f7dc2d11).
+    have = {c.get("source_text", "") for c in out_chunks}
+    missing = [c["title_en"] for c in src_chunks
+               if len(c["content_en"].strip()) >= 30 and c["content_en"] not in have]
+    if missing or limit or not r2_ok:
+        print(f"  not complete: {len(missing)} source chunk(s) still untranslated"
+              + (f" (first: {missing[0][:50]})" if missing else " (--limit run or R2 push failed)"), flush=True)
+    else:
+        # --docx-out: the Word copy is made only from a COMPLETE translation, and
+        # the lane retires only once that copy has been read back and verified.
+        if docx_out == "next-to-source":
+            # Keeps non-ASCII paths out of fleet_keeper.ps1 (it must stay ASCII):
+            # "{author}，{zh title}（中譯）.docx" beside the source file on Drive.
+            zh_title = re.sub(r"（[^（）]*[A-Za-z][^（）]*）\s*$", "", book.get("title") or "").strip()
+            name = re.sub(r'[\\/:*?"<>|]', "_", f"{book.get('author') or ''}，{zh_title}（中譯）.docx")
+            docx_out = str(Path(book["file_path"]).parent / name)
+        if docx_out and export_docx(book, out_chunks, Path(docx_out)):
+            print("  not complete: Word export failed verification", flush=True)
+        else:
+            print(f"TRANSLATE_BOOK_COMPLETE {ebook_id} chunks={len(out_chunks)}", flush=True)
 
     # 2026-09-16：不再寫 DB preview（見 database/drop-ebook-chunks-2026-09-16.sql）。
     # `ebook_chunks` 已退場 —— 1,005,363 列在 Supabase 免費層（上限 500 MB）獨自
@@ -1389,9 +1561,12 @@ def main():
                         "'sonnet' = Claude Sonnet. 'haiku' is RETIRED → routes to 'auto'.")
     p.add_argument("--resume", action="store_true",
                    help="Skip chapter_path already in the on-disk JSONL")
+    p.add_argument("--docx-out",
+                   help="After a COMPLETE translation, also write a Chinese-only .docx here "
+                        "(verified by reading it back) before printing TRANSLATE_BOOK_COMPLETE")
     args = p.parse_args()
     translate_book(args.ebook_id, args.limit, args.inspect, args.dry_run,
-                   engine=args.engine, resume=args.resume)
+                   engine=args.engine, resume=args.resume, docx_out=args.docx_out)
 
 
 if __name__ == "__main__":
