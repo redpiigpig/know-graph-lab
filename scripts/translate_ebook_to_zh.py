@@ -1489,13 +1489,20 @@ def translate_book(ebook_id: str, limit: int | None, inspect: bool, dry_run: boo
         failed = False
         for j, piece in enumerate(pieces, start=1):
             try:
-                zh_part = translator(piece)
-                # Silent truncation gate: NVIDIA runs with max_tokens=8000, so a 20k-char
-                # piece came back as 2,135 zh chars and was stored as "done" (2026-09-24,
-                # a whole preface lost). English -> Chinese is ~0.3 CJK per source char.
-                cjk = len(re.findall(r"[一-鿿]", zh_part))
-                if len(piece) >= 1500 and cjk < 0.15 * len(piece):
-                    raise RuntimeError(f"output too short ({cjk} CJK for {len(piece)} en chars) - truncated?")
+                # Retry a piece in place (3 tries) - failing it throws away every earlier
+                # piece of the chapter (a 16-piece chapter lost 11 good pieces this way).
+                for attempt in range(1, 4):
+                    zh_part = translator(piece)
+                    # Silent truncation gate: NVIDIA runs with max_tokens=8000, so a 20k-char
+                    # piece came back as 2,135 zh chars and was stored as "done" (2026-09-24,
+                    # a whole preface lost). English -> Chinese is ~0.3 CJK per source char.
+                    cjk = len(re.findall(r"[一-鿿]", zh_part))
+                    if not (len(piece) >= 1500 and cjk < 0.15 * len(piece)):
+                        break
+                    msg = f"output too short ({cjk} CJK for {len(piece)} en chars) - truncated?"
+                    if attempt == 3:
+                        raise RuntimeError(msg)
+                    print(f"    piece {j}: {msg} retry {attempt}/2", flush=True)
                 zh_parts.append(zh_part)
                 if len(pieces) > 1:
                     print(f"    piece {j}/{len(pieces)}: {len(zh_part)} zh chars", flush=True)
