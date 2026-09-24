@@ -253,7 +253,7 @@ FB/IG 抓不到，改抓 WordPress：`/feed/?paged=1..3` 三頁湊齊 25 篇（s
    要 PowerShell IWR 且別讓檔案落地（Defender），與這支的 playwright 路線不同
    （[[project_christianity_studies_littleblackbook]]）。
 5. **研究史料專線**：`ingest_new_books.py` 的 `RESEARCH_ROUTES` 按檔名前綴把史料直接搬到 Drive `研究資料/…`，不進電子圖書館。
-   🚨 2026-09-24 蔣中正日記排印本清單已撤掉（仍在版權期，從 z-lib 下載等同盜版）；兩蔣日記改走國史館官方：
+   兩蔣日記走國史館官方：
    蔣中正手稿影像官方開放下載（需會員登入），蔣經國影像標「禁止翻拍複製」不下載，只收目錄節錄（`scripts/chiang_diary_catalog.py`）。
 
 ## 記憶庫併入：feedback_zlib_3x_daily_check
