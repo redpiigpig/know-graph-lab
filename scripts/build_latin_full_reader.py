@@ -59,7 +59,7 @@ GAP_ZH = CACHE / "reading-gap-zh.json"
 # 這條待辦改由 verify_latin_reader 報（它本來就在報）。
 LITURGY_NOTE = ""
 
-FONT_LA = "Noto Serif"
+FONT_LA = "Times New Roman"
 # 🚨 擁有者 2026-09-17：「字都不可以小於 12。」正文、生詞表、逐詞對譯的中文義、
 # 整句中譯、練習——凡是要讀的字一律 ≥12pt。只有頁眉與頁碼維持小字，那是版口
 # 標示不是閱讀內容。改這幾個數字會直接改變每頁容納的份量，讀文上限要跟著重算。
@@ -90,11 +90,15 @@ VOLUMES = {
 # 🚨 切點的存在理由只有一個：一本裝訂實體不得超過 500 頁（2026-09-08）。
 # 2026-09-18 一課壓到八頁、讀文按版面預算節錄之後，各半只有 320–480 頁，上限不再
 # 逼人，所以擁有者裁示並冊——回到「內容的一半＝一本實體書」。課次編號不動。
+# 2026-09-25：行距放寬、作答線加高後上冊 511 頁、下冊 501 頁（目錄換頁補回來之後），
+# 各切成兩本；附錄只印在各半的後一本。實測：上冊 252／261、下冊約 254／252。
 PARTS = [
-    {"book": 1, "source": "上冊", "first": 1, "last": 50, "appendix": True},
-    {"book": 2, "source": "下冊", "first": 1, "last": 50, "appendix": True},
+    {"book": 1, "source": "上冊", "first": 1, "last": 30, "appendix": False},
+    {"book": 2, "source": "上冊", "first": 31, "last": 50, "appendix": True},
+    {"book": 3, "source": "下冊", "first": 1, "last": 28, "appendix": False},
+    {"book": 4, "source": "下冊", "first": 29, "last": 50, "appendix": True},
 ]
-BOOK_LABELS = ("上冊", "下冊")
+BOOK_LABELS = ("上冊（一）", "上冊（二）", "下冊（一）", "下冊（二）")
 
 COLOPHON = [
     ("拉丁文本", "武加大譯本用 Clementine Vulgate（eBible.org latVUC 轉錄，公有領域）；"
@@ -105,8 +109,7 @@ COLOPHON = [
     ("詞彙", "上冊一千詞依 Collins《A Primer of Ecclesiastical Latin》原書順序；"
              "下冊一千詞依教父／中世紀與近現代教廷語料詞頻，與上冊互斥。"
              "詞形主要部分取自 Whitaker's WORDS。"),
-    ("發音", "全書採羅馬式教會發音。古典重建音為另一軌，本書不混用。"),
-    ("著作權", "所引各版本之著作權仍屬原權利人。"),
+    # 擁有者 2026-09-25：發音與著作權兩段不印。
 ]
 
 
@@ -193,7 +196,7 @@ def load_interlinear() -> dict:
     return json.loads(INTERLINEAR_PATH.read_text(encoding="utf-8")).get("units", {})
 
 
-def title_page(document, volume: str, spec: dict, counts: str, part: dict):
+def title_page(document, volume: str, spec: dict, part: dict):
     """深色橫幅封面，與希伯來、希臘那兩本同一個版式。"""
     table = document.add_table(rows=1, cols=1)
     H.set_table_geometry(table, [H.USABLE_WIDTH_MM])
@@ -229,8 +232,7 @@ def title_page(document, volume: str, spec: dict, counts: str, part: dict):
     spec_line = document.add_paragraph()
     spec_line.alignment = WD_ALIGN_PARAGRAPH.CENTER
     H.paragraph_rule(spec_line, color=palette["rule"], size="24")
-    para = body(document, counts, H.CAPTION_PT, color=H.MUTED)
-    para.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    # 擁有者 2026-09-25：封面不印「N 課．N 詞．讀本 N 詞（…）」那行規格。
     page_break(document)
 
     heading(document, "凡例", H.H1_SIZE_PT)
@@ -451,10 +453,7 @@ def exercise_section(document, block: dict | None, lesson: int) -> None:
                      space_after=H.EXERCISE_TEXT_SPACE_AFTER_PT, indent_mm=4)
         latin.paragraph_format.line_spacing = H.EXERCISE_TEXT_LINE_SPACING
         H.set_keep(latin, next_paragraph=True)
-        answer = document.add_paragraph(" ")
-        answer.paragraph_format.space_after = Pt(H.EXERCISE_ANSWER_SPACE_AFTER_PT)
-        answer.paragraph_format.line_spacing = Pt(H.EXERCISE_ANSWER_LINE_PT)
-        H.paragraph_rule(answer, color=H.RULE, size="3", space="1")
+        H.add_answer_lines(document)
 
 
 _LATIN_METRICS = None
@@ -756,13 +755,7 @@ def build(book_number: int) -> Path:
     document = Document()
     H.configure(document)
     relabel(document, volume, spec, part)
-    words = sum(len(per_lesson.get(n, [])) for n in lesson_range)
-    reading_words = sum(len(L.words(latin)) for lesson in lesson_range
-                        for latin, _ in readings.get(lesson, {}).get("pairs", []))
-    title_page(document, volume, spec,
-               f"{len(lesson_range)} 課．{words} 詞．讀本 {reading_words:,} 詞"
-               "（課次編號與線上讀本一致；分冊只是印刷單位，一本不超過 500 頁）",
-               part)
+    title_page(document, volume, spec, part)
     interlinear = load_interlinear()
     volume_number = VOLUME_NUMBER[volume]
     H.add_contents(

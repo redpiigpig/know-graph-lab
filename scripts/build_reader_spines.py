@@ -34,6 +34,7 @@ import fitz
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from build_greek_full_reader import BOOK_LABELS as GREEK_LABELS, PARTS as GREEK_PARTS  # noqa: E402
+from build_hebrew_full_reader import BOOK_LABELS as HEBREW_LABELS, PARTS as HEBREW_PARTS  # noqa: E402
 from build_japanese_full_reader import BOOK_LABELS as JAPANESE_LABELS, PARTS as JAPANESE_PARTS  # noqa: E402
 from build_latin_full_reader import BOOK_LABELS as LATIN_LABELS, PARTS as LATIN_PARTS  # noqa: E402
 
@@ -70,7 +71,8 @@ VERTICAL = {
 
 def books() -> list[dict]:
     """One entry per physical volume, in shelf order."""
-    out = [{"stem": "hebrew-original-reader-50-lessons", "lang": "hbo", "volume": ""}]
+    out = [{"stem": f"hebrew-original-reader-vol{part['book']}", "lang": "hbo",
+            "volume": HEBREW_LABELS[part["book"] - 1]} for part in HEBREW_PARTS]
     for part in GREEK_PARTS:
         out.append({"stem": f"greek-original-reader-vol{part['book']}", "lang": "grc",
                     "volume": GREEK_LABELS[part["book"] - 1]})

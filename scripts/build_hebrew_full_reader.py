@@ -38,6 +38,23 @@ EXERCISE_PATH = (
 )
 OUTPUT_DIR = ROOT / "output" / "original-readers"
 OUTPUT_PATH = OUTPUT_DIR / "hebrew-original-reader-50-lessons.docx"
+# 2026-09-25：行距放寬、作答線加高後單冊 505 頁，超過一本 500 頁的上限，擁有者裁示
+# 「內容不動、再分冊」。切在第 25／26 課之間本來就是內容的分界（廿五章聖經／廿五篇
+# 禱文與文章），Haggadah 與附錄只印在下冊。課次編號不動（線上讀本與音訊都鍵在它上）。
+PARTS = [
+    {"book": 1, "first": 1, "last": 25, "appendix": False},
+    {"book": 2, "first": 26, "last": 50, "appendix": True},
+]
+BOOK_LABELS = ("上冊", "下冊")
+PART_SUBTITLES = ("希伯來聖經二十五章", "禱文與文章二十五篇")
+
+
+def part_label(part: dict | None) -> str:
+    return BOOK_LABELS[part["book"] - 1] if part else "五十課"
+
+
+def part_output(part: dict | None) -> Path:
+    return OUTPUT_DIR / f"hebrew-original-reader-vol{part['book']}.docx" if part else OUTPUT_PATH
 
 PAGE_WIDTH_MM = 182
 PAGE_HEIGHT_MM = 257
@@ -55,7 +72,7 @@ USABLE_WIDTH_MM = PAGE_WIDTH_MM - MARGIN_INSIDE_MM - MARGIN_OUTSIDE_MM
 # 整句中譯、練習——凡是要讀的字一律 ≥12pt。只有頁眉與頁碼維持小字，那是版口
 # 標示不是閱讀內容。改這幾個數字會直接改變每頁容納的份量，讀文上限要跟著重算。
 BODY_SIZE_PT = 12
-BODY_LINE_MULTIPLE = 1.25
+BODY_LINE_MULTIPLE = 1.6
 TITLE_SIZE_PT = 24
 H1_SIZE_PT = 17
 H2_SIZE_PT = 14
@@ -80,7 +97,7 @@ TRANSLATION_PT = 12
 CAPTION_PT = 12
 LABEL_PT = 12
 INTERLINEAR_GUTTER_MM = 3.4
-INTERLINEAR_LINE_GAP_PT = 3.5
+INTERLINEAR_LINE_GAP_PT = 7
 # 一課只印三樣東西：二十個生詞、十題翻譯練習、一篇讀文；擁有者 2026-09-17 定的
 # 是「生詞二十個排一頁、練習十題連作答空間排一頁、一課最多八頁」。下面這幾個數字
 # 就是「排不排得下」的全部——四本書共用同一套，所以它們是一套書而不是四本。
@@ -119,7 +136,8 @@ EXERCISE_ITEM_SPACE_AFTER_PT = 0
 EXERCISE_LABEL_LINE_PT = 13
 EXERCISE_TEXT_LINE_SPACING = 1.05
 EXERCISE_TEXT_SPACE_AFTER_PT = 1
-EXERCISE_ANSWER_LINE_PT = 15
+EXERCISE_ANSWER_LINE_PT = 34
+EXERCISE_ANSWER_LINES = 2
 EXERCISE_ANSWER_SPACE_AFTER_PT = 2
 EXERCISE_INTRO_LINE_PT = 13
 
@@ -141,7 +159,12 @@ FONT_ZH = "MingLiU"
 # and is therefore also the stable UI face for this private print edition.
 FONT_UI = FONT_ZH
 FONT_HEBREW = "Noto Serif Hebrew"
-FONT_TRANSLIT = "Noto Serif"
+FONT_TRANSLIT = "Times New Roman"
+# 擁有者 2026-09-25：「拉丁字母和阿拉伯數字都要是 Times Roman」。Word 的四個字型槽裡
+# 拉丁字母與數字走 ascii／hAnsi，所以 set_rfonts 一律把 ascii 釘成這個；hAnsi 也是，
+# 除非該字型是給希臘文用的（希臘字母走 hAnsi 槽），那些字型要在 HANSI_KEEP 登記。
+FONT_LATIN = "Times New Roman"
+HANSI_KEEP: set[str] = set()
 INK = "29241F"
 MUTED = "6E675F"
 PAPER = "FFFDF8"
@@ -220,7 +243,9 @@ def set_rfonts(r_pr, font: str) -> None:
     if fonts is None:
         fonts = OxmlElement("w:rFonts")
         r_pr.insert(0, fonts)
-    for key in ("ascii", "hAnsi", "eastAsia", "cs"):
+    fonts.set(qn("w:ascii"), FONT_LATIN)
+    fonts.set(qn("w:hAnsi"), font if font in HANSI_KEEP else FONT_LATIN)
+    for key in ("eastAsia", "cs"):
         fonts.set(qn(f"w:{key}"), font)
     for key in ("asciiTheme", "hAnsiTheme", "eastAsiaTheme", "cstheme"):
         fonts.attrib.pop(qn(f"w:{key}"), None)
@@ -327,10 +352,20 @@ def drop_spacer_before_break(document) -> None:
         if following.tag != qn("w:p"):
             continue
         p_pr = following.find(qn("w:pPr"))
-        if p_pr is None or p_pr.find(qn("w:pageBreakBefore")) is None:
+        if p_pr is None:
+            continue
+        pbb = p_pr.find(qn("w:pageBreakBefore"))
+        # 🚨 python-docx 把 ``page_break_before = False`` 寫成 ``<w:pageBreakBefore w:val="0"/>``，
+        # 元素在、值是「不換頁」。只看元素在不在，四本書目錄前面那個真正的分頁段落
+        # （``document.add_page_break()``，空文字、內含 ``<w:br w:type="page"/>``）就被當成
+        # 「換頁前的空段落」刪掉，目錄於是接在體例頁後面——擁有者 2026-09-25：「目錄開始
+        # 要換頁」。所以：值為 0／false 的不算換頁；本身帶分頁符的段落不是 spacer。
+        if pbb is None or pbb.get(qn("w:val")) in ("0", "false", "off"):
             continue
         if "".join(element.itertext()).strip():
             continue
+        # （帶分頁符的空段落接在 pageBreakBefore=1 的段落前面，仍照舊刪掉——兩個換頁
+        # 疊在一起就是一張只有眉標的白紙。）
         own_pr = element.find(qn("w:pPr"))
         if own_pr is not None and (own_pr.find(qn("w:pBdr")) is not None
                                    or own_pr.find(qn("w:sectPr")) is not None):
@@ -948,12 +983,12 @@ def add_interlinear_unit(
             top.alignment = WD_ALIGN_PARAGRAPH.CENTER
             top.paragraph_format.space_after = Pt(0)
             top.paragraph_format.space_before = Pt(INTERLINEAR_LINE_GAP_PT if line_index else 0)
-            top.paragraph_format.line_spacing = 1.18
+            top.paragraph_format.line_spacing = 1.3
             bottom = cell.add_paragraph()
             bottom.alignment = WD_ALIGN_PARAGRAPH.CENTER
             bottom.paragraph_format.space_before = Pt(0)
             bottom.paragraph_format.space_after = Pt(0)
-            bottom.paragraph_format.line_spacing = 1.0
+            bottom.paragraph_format.line_spacing = 1.35
             if line_index == 0 and lead and cell_index == 0:
                 set_run_font(top.add_run(lead), FONT_UI, LABEL_PT, bold=True, color=ACCENT)
                 continue
@@ -986,8 +1021,8 @@ def add_interlinear_unit(
         # 整句中譯併進最後一列，不然它會自己跑到下一頁（見 sense_row）。
         p = sense_row(last_table, rtl=True) if last_table is not None else container.add_paragraph()
         p.paragraph_format.space_before = Pt(3)
-        p.paragraph_format.space_after = Pt(9)
-        p.paragraph_format.line_spacing = 1.3
+        p.paragraph_format.space_after = Pt(12)
+        p.paragraph_format.line_spacing = 1.6
         p.paragraph_format.left_indent = Mm(5)
         p.paragraph_format.first_line_indent = Mm(-5)
         set_run_font(p.add_run("整句　"), FONT_UI, LABEL_PT, bold=True, color=ACCENT)
@@ -1071,7 +1106,7 @@ def add_divider(document: Document) -> None:
     paragraph_rule(p, color=RULE, size="6")
 
 
-def add_cover(document: Document, data: dict) -> None:
+def add_cover(document: Document, data: dict, part: dict | None = None) -> None:
     table = document.add_table(rows=1, cols=1)
     set_table_geometry(table, [USABLE_WIDTH_MM])
     set_borders(table, outside=False, inside=False)
@@ -1090,12 +1125,17 @@ def add_cover(document: Document, data: dict) -> None:
         if index == 2:
             set_rtl(p)
     document.add_paragraph().paragraph_format.space_after = Pt(26)
-    p = document.add_paragraph()
-    p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    set_run_font(p.add_run(data["subtitle"]), FONT_ZH, 12, bold=True, color=INK)
-    p = document.add_paragraph()
-    p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    set_run_font(p.add_run("附完整逾越節禮文流程"), FONT_ZH, 10.5, color=ACCENT)
+    # 擁有者 2026-09-25：封面不印「五十課・一千詞・…」那行規格。
+    if part:
+        p = document.add_paragraph()
+        p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        add_mixed_script_text(
+            p, f"{part_label(part)}　第 {part['first']:02d}–{part['last']:02d} 課　"
+               f"{PART_SUBTITLES[part['book'] - 1]}", FONT_ZH, 12, bold=True, color=INK)
+    if part is None or part["appendix"]:
+        p = document.add_paragraph()
+        p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        set_run_font(p.add_run("附完整逾越節禮文流程"), FONT_ZH, 10.5, color=ACCENT)
     document.add_paragraph().paragraph_format.space_after = Pt(26)
     p = document.add_paragraph()
     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
@@ -1127,17 +1167,17 @@ def add_front_matter(document: Document, data: dict) -> None:
         set_run_font(p.add_run(title), FONT_ZH, 10.5, bold=True)
         p = cell.add_paragraph()
         set_run_font(p.add_run(text), FONT_ZH, 8, color=MUTED)
-    document.add_heading("原文與音標原則", level=2)
+    # 擁有者 2026-09-25：不印發音／音標的說明段。
+    document.add_heading("原文原則", level=2)
     for text in (
         "聖經希伯來文一律列母音點；不得以現代希伯來文的無母音拼寫替代。",
-        "一千詞的音標使用 Pratico–Van Pelt BBH2 課本系統；音標是學習層，不取代附點原文。",
         "人名、地名、民族名與神名另行標記並收在冊末索引。",
     ):
         p = document.add_paragraph(style="List Bullet")
         set_run_font(p.add_run(text), FONT_ZH, 9.2)
     document.add_heading("版本與責任", level=2)
     add_body(document, "聖經底本為 Open Scriptures Hebrew Bible 的 WLC 4.20 文字層；"
-                       "繁體中文對照採《和合本修訂版》（2010，RCUV2 上帝版，© 香港聖經公會）。"
+                       "繁體中文對照採《和合本修訂版》（2010，RCUV2 上帝版）。"
                        "禱文與拉比文章的來源逐篇列於冊末來源表。", size=8.8, color=MUTED)
 
 
@@ -1149,7 +1189,7 @@ def toc_kind_label(reading: dict) -> str:
     return "禱文／文章（節錄）" if excerpt else "禱文／文章"
 
 
-def add_toc(document: Document, data: dict) -> None:
+def add_toc(document: Document, data: dict, part: dict | None = None) -> None:
     add_contents(
         document,
         [
@@ -1158,9 +1198,9 @@ def add_toc(document: Document, data: dict) -> None:
                 lesson["title"],
                 toc_kind_label(lesson["reading"]),
             )
-            for lesson in data["lessons"]
+            for lesson in part_lessons(data, part)
         ],
-        title="五十課目錄",
+        title=f"{part_label(part)}目錄",
         accent=cover_colors("hbo")["accent"],
     )
 
@@ -1400,10 +1440,25 @@ def add_exercises(document: Document, block: dict) -> None:
             space_after=EXERCISE_TEXT_SPACE_AFTER_PT,
         )
         set_keep(hebrew, next_paragraph=True)
+        add_answer_lines(document)
+
+
+def add_answer_lines(document: Document) -> None:
+    """The ruled space the learner writes the translation into.
+
+    擁有者 2026-09-25：「我作答的部分要留有一定空間」——一行 15pt（5mm）寫不下
+    一句中文。改成 EXERCISE_ANSWER_LINES 條各 EXERCISE_ANSWER_LINE_PT 高的橫線，
+    十題因此佔兩頁；那是作答空間，不是版面浪費。四本共用這一支。
+    """
+    for index in range(EXERCISE_ANSWER_LINES):
         answer = document.add_paragraph(" ")
-        answer.paragraph_format.space_after = Pt(EXERCISE_ANSWER_SPACE_AFTER_PT)
+        answer.paragraph_format.space_before = Pt(0)
+        answer.paragraph_format.space_after = Pt(
+            EXERCISE_ANSWER_SPACE_AFTER_PT if index == EXERCISE_ANSWER_LINES - 1 else 0)
         answer.paragraph_format.line_spacing = Pt(EXERCISE_ANSWER_LINE_PT)
         paragraph_rule(answer, color=RULE, size="3", space="1")
+        if index < EXERCISE_ANSWER_LINES - 1:
+            set_keep(answer, next_paragraph=True)
 
 
 def add_bible_reading(document: Document, reading: dict) -> None:
@@ -1783,18 +1838,26 @@ def add_back_indices(document: Document, data: dict) -> None:
     add_body(document, "禱文、拉比文章與逾越節禮文：來源標於各篇之末。", size=8.5, color=MUTED)
 
 
-def build(data: dict) -> Path:
+def part_lessons(data: dict, part: dict | None) -> list[dict]:
+    if part is None:
+        return data["lessons"]
+    return [lesson for lesson in data["lessons"] if part["first"] <= lesson["lesson"] <= part["last"]]
+
+
+def build(data: dict, part: dict | None = None) -> Path:
+    global RUNNING_TITLE
+    RUNNING_TITLE = f"聖經希伯來文原文讀本  ·  {part_label(part)}"
     document = Document()
     configure(document)
-    add_cover(document, data)
+    add_cover(document, data, part)
     page_break(document)
     add_front_matter(document, data)
     page_break(document)
-    add_toc(document, data)
+    add_toc(document, data, part)
 
     start_section(document, RUNNING_TITLE, lesson_tag=True)
     exercises = bind_exercises(data)
-    for index, lesson in enumerate(data["lessons"]):
+    for index, lesson in enumerate(part_lessons(data, part)):
         add_lesson_opener(document, lesson, page_break_before=index > 0)
         add_vocabulary(document, lesson)
         block = exercises.get(lesson["lesson"])
@@ -1807,16 +1870,18 @@ def build(data: dict) -> Path:
             add_prayer_reading(document, lesson["reading"])
         add_practice(document, lesson)
 
-    start_section(document, f"{RUNNING_TITLE}  ·  附錄")
-    add_haggadah(document, data["haggadah"], page_break_before=False)
-    add_reference_tables(document, data)
-    add_back_indices(document, data)
+    if part is None or part["appendix"]:
+        start_section(document, f"{RUNNING_TITLE}  ·  附錄")
+        add_haggadah(document, data["haggadah"], page_break_before=False)
+        add_reference_tables(document, data)
+        add_back_indices(document, data)
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     # 換頁前的空段落會印出只有眉標的一頁；存檔前掃掉。
     drop_spacer_before_break(document)
-    document.save(OUTPUT_PATH)
-    return OUTPUT_PATH
+    output = part_output(part)
+    document.save(output)
+    return output
 
 
 def main() -> None:
@@ -1842,7 +1907,8 @@ def main() -> None:
     for key, value in expected.items():
         if counts.get(key) != value:
             raise ValueError(f"{key}: expected {value}, got {counts.get(key)}")
-    print(build(data))
+    for part in PARTS:
+        print(f"{part_label(part)} -> {build(data, part)}")
 
 
 if __name__ == "__main__":

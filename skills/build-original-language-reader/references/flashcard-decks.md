@@ -616,3 +616,14 @@ Variants now pass individually while the line is otherwise clean, so 皇后 and
 公里 are accepted and 以后我们 is still refused. 号 is deliberately not on the
 list: that one really is simplified. Watch for this anywhere a
 Traditional-Chinese gate is written as a round-trip comparison.
+
+## Quizlet 匯入檔（2026-09-25）
+
+Quizlet 沒有開放 API，也沒有瀏覽器可以替使用者登入，所以能做的是把同一份卡片資料
+出成它「匯入」貼上框的格式：一行一張、正面 Tab 背面。`scripts/export_quizlet_tsv.py`
+從 `build_flashcards.DECKS`／`load_cards` 讀，產物在 `output/flashcards/quizlet/`，並複製
+到 Drive 單字卡 夾底下的 Quizlet匯入 子夾。背面＝（日文假名）＋繁中詞義＋（詞性）＋課次。
+🚨 **希伯來正課卡與附錄卡都不出**——使用者 Quizlet 上原本就有一套希伯來單字，
+說了不要動。手機上的替代是 Anki（AnkiDroid 免費、iOS 版付費），要的話用 genanki
+出 .apkg 可以連配圖一起帶；目前沒裝 genanki，也沒人要，先不做。
+

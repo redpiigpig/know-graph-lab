@@ -274,11 +274,8 @@ def add_exercises(document: Document, block: dict | None, lesson: dict) -> None:
         line.paragraph_format.line_spacing = H.EXERCISE_TEXT_LINE_SPACING
         ja_run(line, item["text"], EXERCISE_PT)
         H.set_keep(line, next_paragraph=True)
-        answer = document.add_paragraph(" ")
-        # 作答線留一行寫得下中文就夠；原本每題連留白佔 28.8mm，十題排掉一頁半。
-        answer.paragraph_format.space_after = Pt(H.EXERCISE_ANSWER_SPACE_AFTER_PT)
-        answer.paragraph_format.line_spacing = Pt(H.EXERCISE_ANSWER_LINE_PT)
-        H.paragraph_rule(answer, color=H.RULE, size="3", space="1")
+        # 擁有者 2026-09-25：作答要留空間，改用共用的兩行作答線（十題佔兩頁）。
+        H.add_answer_lines(document)
 
 
 def add_reading(document: Document, lesson: dict, interlinear: dict) -> None:
@@ -355,12 +352,7 @@ def add_cover(document: Document, spec: dict, part: dict, counts: dict) -> None:
     spec_line = document.add_paragraph()
     spec_line.alignment = WD_ALIGN_PARAGRAPH.CENTER
     H.paragraph_rule(spec_line, color=palette["rule"], size="24")
-    counts_line = H.add_body(
-        document,
-        f"{counts['lessons']} 課．{counts['words']} 詞．翻譯練習 {counts['exercises']} 題．"
-        f"讀本 {counts['chars']:,} 字",
-        size=H.CAPTION_PT, color=H.MUTED)
-    counts_line.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    # 擁有者 2026-09-25：封面不印「N 課．N 詞．…」那行規格。
 
 
 def add_front_matter(document: Document, spec: dict, part: dict, lessons: list[dict]) -> None:
@@ -375,7 +367,6 @@ def add_front_matter(document: Document, spec: dict, part: dict, lessons: list[d
     document.add_heading("體例與來源", level=1)
     for line in (
         "詞序依《大家的日本語》課次；專名不佔課內詞額，另立附錄專名表。",
-        "重音欄印的是假名的斷點（は・や・い）。",
         "讀本一律取宗教學、宗教史或宗教典籍：詞照課本次序，文照領域選材。",
         "聖書用文語訳（明治元訳舊約、大正改訳新約）。",
         "逐詞對譯以本課詞表的譯法為準；一個詞在該處沒有確定的譯法時留白。",
@@ -399,7 +390,7 @@ def add_formula_appendix(document: Document, formulas: dict) -> None:
     H.add_label(document, "Appendix  ·  formulas")
     heading = document.add_heading("附錄一　聖經・佛經・神道常用語句", level=1)
     H.paragraph_rule(heading, color=H.GOLD, size="14")
-    H.add_body(document, formulas["rights"], size=H.CAPTION_PT, color=H.MUTED)
+    # 擁有者 2026-09-25：著作權段不印。
     for group in formulas["groups"]:
         document.add_heading(f"{group['title']}　{len(group['entries'])} 條", level=2)
         H.add_body(document, group["tradition"], size=H.CAPTION_PT, color=H.MUTED)

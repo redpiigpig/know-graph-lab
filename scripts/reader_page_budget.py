@@ -25,7 +25,7 @@
 
 from __future__ import annotations
 
-PAGE_LIMIT = 8
+PAGE_LIMIT = 10  # 擁有者 2026-09-25：行距放寬、作答線加高後，一課放寬到十頁
 """擁有者定的硬上限：一課最多這麼多頁。"""
 
 SAFETY_PAGES = 0.6

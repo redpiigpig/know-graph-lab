@@ -51,18 +51,25 @@ BOOKS: dict[str, list[tuple[str, str, range, int]]] = {
         # 🚨 這幾個範圍必須跟 build_greek_full_reader.PARTS 一模一樣。切點一改而
         # 這裡沒跟著改，稽核會說「課次順序印錯」——錯的是稽核自己。
         ("greek-original-reader-vol1", "greek-full/exercise-set-v1.json", range(1, 51), 0),
-        ("greek-original-reader-vol2", "greek-full/exercise-set-v2.json", range(1, 51), 0),
+        # 2026-09-25：下冊切成兩本（第 1–35 課／第 36–50 課＋附錄），課次不重編。
+        ("greek-original-reader-vol2", "greek-full/exercise-set-v2.json", range(1, 36), 0),
+        ("greek-original-reader-vol3", "greek-full/exercise-set-v2.json", range(36, 51), 0),
     ],
     "lat": [
-        ("latin-original-reader-vol1", "latin-full/exercise-set-v1.json", range(1, 51), 0),
-        ("latin-original-reader-vol2", "latin-full/exercise-set-v2.json", range(1, 51), 0),
+        # 2026-09-25：上冊切成兩本（第 1–30 課／第 31–50 課＋附錄），下冊改叫 vol3。
+        ("latin-original-reader-vol1", "latin-full/exercise-set-v1.json", range(1, 31), 0),
+        ("latin-original-reader-vol2", "latin-full/exercise-set-v1.json", range(31, 51), 0),
+        ("latin-original-reader-vol3", "latin-full/exercise-set-v2.json", range(1, 29), 0),
+        ("latin-original-reader-vol4", "latin-full/exercise-set-v2.json", range(29, 51), 0),
     ],
     "ja": [
         ("japanese-original-reader-vol1", "japanese-full/exercise-set.json", range(1, 51), 0),
         ("japanese-original-reader-vol2", "japanese-full/exercise-set.json", range(1, 51), 50),
     ],
     "heb": [
-        ("hebrew-original-reader-50-lessons", "hebrew-full/exercise-set.json", range(1, 51), 0),
+        # 2026-09-25：希伯來也分兩冊（第 1–25 課／第 26–50 課＋Haggadah 與附錄）。
+        ("hebrew-original-reader-vol1", "hebrew-full/exercise-set.json", range(1, 26), 0),
+        ("hebrew-original-reader-vol2", "hebrew-full/exercise-set.json", range(26, 51), 0),
     ],
 }
 

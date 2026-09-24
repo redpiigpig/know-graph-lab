@@ -54,8 +54,9 @@ python -X utf8 scripts/sync_reader_artifacts.py --write
 ```
 
 `output/print-masters/` 是權威，其餘三處（本機 `output/original-readers/`、
-Drive `讀本`、Drive `印刷母版`）一律被改成與它相同；被取代的版次搬進
-`_superseded/` 而不是刪掉。少跑這一步的後果不是「檔案還沒上去」，是使用者翻到
+Drive `讀本`、Drive `印刷母版\讀本`；單字卡對應 `單字卡`／`印刷母版\單字卡`，
+撲克牌只在 `印刷母版\撲克牌`）一律被改成與它相同；被取代的版次**直接刪掉**
+（擁有者 2026-09-25：舊版留在 git 的資料層就夠，不再留 `_superseded/`）。少跑這一步的後果不是「檔案還沒上去」，是使用者翻到
 的是上一版——這一系列已經發生過一次，三本書的頁數與 Drive 上的對不起來，
 而每一份單獨看都正常（見 `scripts/sync_reader_artifacts.py` 的檔頭）。
 

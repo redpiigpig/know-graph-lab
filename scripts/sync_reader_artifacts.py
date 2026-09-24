@@ -12,7 +12,8 @@ and is simply not the current book.
 
 ``output/print-masters/`` is the authority. Everything else is made to match it.
 
-Superseded artifacts are moved into ``_superseded/`` rather than deleted, so a
+Superseded artifacts are deleted outright (owner, 2026-09-25: the old PDFs go; the
+source layer in git is the archive), so a
 mistake here costs a move rather than a rebuild.
 
     python -X utf8 scripts/sync_reader_artifacts.py            # report only
@@ -35,10 +36,20 @@ DRIVE = Path("G:/我的雲端硬碟/資料/知識圖工作室/語言/原文讀�
 DRIVE_READERS = DRIVE / "讀本"
 DRIVE_CARDS = DRIVE / "單字卡"
 DRIVE_MASTERS = DRIVE / "印刷母版"
+# 擁有者 2026-09-25：「資料夾中單字卡和讀本要分開」。印刷母版底下分三夾，撲克牌
+# 不再混進「讀本」那一夾。
+DRIVE_MASTER_READERS = DRIVE_MASTERS / "讀本"
+DRIVE_MASTER_CARDS = DRIVE_MASTERS / "單字卡"
+DRIVE_MASTER_PLAYING = DRIVE_MASTERS / "撲克牌"
+WORK_PLAYING = ROOT / "output/playing-cards"
 
 # A reader PDF belongs in the reader folders, a deck PDF in the card folders.
 def is_deck(name: str) -> bool:
     return "flashcards" in name
+
+
+def is_playing(name: str) -> bool:
+    return "playing-cards" in name
 
 
 # Artifacts from an earlier shape of the release. The Greek 50-lesson book was
@@ -49,6 +60,10 @@ SUPERSEDED_NAMES = {
     # 這兩個是舊的單張、寬度寫死 16 mm 的希伯來書背。
     "hebrew-original-reader-spine-b5-height.pdf",
     "hebrew-original-reader-spine-b5-height.svg",
+    # 2026-09-25：希伯來單冊 505 頁超過上限，切成 vol1／vol2，單冊那個 stem 作廢。
+    "hebrew-original-reader-50-lessons.docx",
+    "hebrew-original-reader-50-lessons.pdf",
+    "hebrew-original-reader-50-lessons-spine.pdf",
     "greek-original-reader-50-lessons.docx",
     "greek-original-reader-50-lessons.pdf",
     "greek-original-reader-sample.docx",
@@ -69,15 +84,11 @@ SUPERSEDED_NAMES = {
     # 裁示並冊——希臘、拉丁、日文各從四／三／四冊收成兩冊。
     # 🚨 本機刪掉就沒了，Drive 上卻還躺著；使用者翻到的是一本已經不存在的冊次，
     # 而它自己看起來完全正常。
-    "greek-original-reader-vol3.docx",
-    "greek-original-reader-vol3.pdf",
-    "greek-original-reader-vol3-spine.pdf",
+    # 2026-09-25：希臘 vol3 又活回來了（下冊 611 頁切成 vol2／vol3），不在作廢名單。
     "greek-original-reader-vol4.docx",
     "greek-original-reader-vol4.pdf",
     "greek-original-reader-vol4-spine.pdf",
-    "latin-original-reader-vol3.docx",
-    "latin-original-reader-vol3.pdf",
-    "latin-original-reader-vol3-spine.pdf",
+    # 2026-09-25：拉丁 vol3／vol4 活回來了（上下冊各切兩本），不在作廢名單。
     "japanese-original-reader-vol3.docx",
     "japanese-original-reader-vol3.pdf",
     "japanese-original-reader-vol3-spine.pdf",
@@ -87,7 +98,7 @@ SUPERSEDED_NAMES = {
 }
 # 2026-09-16 書背改走課程讀本那一套版式，舊的裸書背 SVG 全部作廢。
 SUPERSEDED_SUFFIXES = ("-spine.svg",)
-SUPERSEDED_DIRS = {"rebuild-v2", "rebuild-v3"}
+SUPERSEDED_DIRS = {"rebuild-v2", "rebuild-v3", "_superseded"}
 
 
 def digest(path: Path) -> str:
@@ -110,8 +121,10 @@ def digest(path: Path) -> str:
 
 def targets_for(name: str) -> list[Path]:
     if is_deck(name):
-        return [WORK_CARDS / name, DRIVE_CARDS / name, DRIVE_MASTERS / name]
-    return [WORK_READERS / name, DRIVE_READERS / name, DRIVE_MASTERS / name]
+        return [WORK_CARDS / name, DRIVE_CARDS / name, DRIVE_MASTER_CARDS / name]
+    if is_playing(name):
+        return [WORK_PLAYING / name, DRIVE_MASTER_PLAYING / name]
+    return [WORK_READERS / name, DRIVE_READERS / name, DRIVE_MASTER_READERS / name]
 
 
 def sync(write: bool) -> tuple[int, int]:
@@ -146,38 +159,35 @@ def retire(write: bool) -> int:
     而它自己看起來完全正常，這正是這支腳本存在的理由。
     """
     moved = 0
-    for folder in (WORK_READERS, DRIVE_READERS, DRIVE_MASTERS, WORK_CARDS, DRIVE_CARDS):
+    # 🚨 output/print-masters 也要掃：sync 是拿它當權威往三處複製的，作廢的冊次留在
+    # 那裡就會被當成現行的書推上 Drive。
+    folders = (MASTERS, WORK_READERS, DRIVE_READERS, DRIVE_MASTERS, DRIVE_MASTER_READERS,
+               DRIVE_MASTER_CARDS, WORK_CARDS, DRIVE_CARDS)
+    for folder in folders:
         if not folder.exists():
             continue
-        attic = folder / "_superseded"
         for name in sorted(SUPERSEDED_NAMES):
             source = folder / name
             if not source.exists():
                 continue
             moved += 1
-            print(f"  作廢：{source}")
+            print(f"  作廢（刪除）：{source}")
             if write:
-                attic.mkdir(parents=True, exist_ok=True)
-                shutil.move(str(source), str(attic / name))
+                source.unlink()
         for source in sorted(folder.glob("*")):
             if source.is_file() and source.name.endswith(SUPERSEDED_SUFFIXES):
                 moved += 1
-                print(f"  作廢：{source}")
+                print(f"  作廢（刪除）：{source}")
                 if write:
-                    attic.mkdir(parents=True, exist_ok=True)
-                    shutil.move(str(source), str(attic / source.name))
+                    source.unlink()
         for name in sorted(SUPERSEDED_DIRS):
             source = folder / name
             if not source.is_dir():
                 continue
             moved += 1
-            print(f"  作廢：{source}/")
+            print(f"  作廢（刪除）：{source}/")
             if write:
-                attic.mkdir(parents=True, exist_ok=True)
-                destination = attic / name
-                if destination.exists():
-                    shutil.rmtree(destination)
-                shutil.move(str(source), str(destination))
+                shutil.rmtree(source)
     return moved
 
 
@@ -190,7 +200,7 @@ def main() -> int:
     copied, missing = sync(args.write)
     print(f"  過期 {copied} 份、缺 {missing} 份")
 
-    print("二、把舊版次搬進 _superseded")
+    print("二、刪除作廢的舊版次")
     moved = retire(args.write)
     print(f"  {moved} 項")
 

@@ -36,6 +36,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from proper_name_categories import PRINT_ORDER  # noqa: E402
 from greek_reference_labels import anchor_label  # noqa: E402
+import build_hebrew_full_reader as _shared  # noqa: E402
 from build_hebrew_full_reader import (  # noqa: E402  - shared typesetting machinery
     ACCENT,
     ACCENT_DARK,
@@ -80,6 +81,7 @@ from build_hebrew_full_reader import (  # noqa: E402  - shared typesetting machi
     set_table_geometry,
     shade,
     EXERCISE_ANSWER_LINE_PT,
+    add_answer_lines,
     EXERCISE_ANSWER_SPACE_AFTER_PT,
     EXERCISE_INTRO_LINE_PT,
     EXERCISE_LABEL_LINE_PT,
@@ -111,6 +113,7 @@ OUTPUT_DIR = ROOT / "output" / "original-readers"
 OUTPUT_STEM = "greek-original-reader-vol"
 
 FONT_GREEK = "Palatino Linotype"
+_shared.HANSI_KEEP.add(FONT_GREEK)  # 希臘字母走 hAnsi 槽，不能被 Times 蓋掉
 # Chinese characters and CJK punctuation, which the Greek face cannot set.
 CJK_RE = re.compile(r"([\u3000-\u303F\u3400-\u4DBF\u4E00-\u9FFF\uFF00-\uFFEF]+)")
 GREEK_METRICS = Path(r"C:\Windows\Fonts\pala.ttf")
@@ -121,7 +124,7 @@ INTERLINEAR_GREEK_PT = 13.5
 # 標示不是閱讀內容。改這幾個數字會直接改變每頁容納的份量，讀文上限要跟著重算。
 INTERLINEAR_GLOSS_PT = 12
 INTERLINEAR_GUTTER_MM = 3.2
-INTERLINEAR_LINE_GAP_PT = 3.5
+INTERLINEAR_LINE_GAP_PT = 7
 MEMORY_GREEK_PT = 14
 EXERCISE_GREEK_PT = 12
 SENSE_PT = 12
@@ -225,12 +228,12 @@ def add_interlinear(
             top.alignment = WD_ALIGN_PARAGRAPH.CENTER
             top.paragraph_format.space_after = Pt(0)
             top.paragraph_format.space_before = Pt(INTERLINEAR_LINE_GAP_PT if line_index else 0)
-            top.paragraph_format.line_spacing = 1.16
+            top.paragraph_format.line_spacing = 1.3
             bottom = cell.add_paragraph()
             bottom.alignment = WD_ALIGN_PARAGRAPH.CENTER
             bottom.paragraph_format.space_before = Pt(0)
             bottom.paragraph_format.space_after = Pt(0)
-            bottom.paragraph_format.line_spacing = 1.0
+            bottom.paragraph_format.line_spacing = 1.35
             if line_index == 0 and lead and cell_index == 0:
                 set_run_font(top.add_run(lead), FONT_UI, LABEL_PT, bold=True, color=ACCENT)
                 continue
@@ -262,8 +265,8 @@ def add_interlinear(
         # 整句中譯併進最後一列，不然它會自己跑到下一頁（見 sense_row）。
         p = sense_row(last_table) if last_table is not None else document.add_paragraph()
         p.paragraph_format.space_before = Pt(3)
-        p.paragraph_format.space_after = Pt(9)
-        p.paragraph_format.line_spacing = 1.3
+        p.paragraph_format.space_after = Pt(12)
+        p.paragraph_format.line_spacing = 1.6
         p.paragraph_format.left_indent = Mm(6)
         p.paragraph_format.first_line_indent = Mm(-6)
         set_run_font(p.add_run("整句　"), FONT_UI, LABEL_PT, bold=True, color=ACCENT)
@@ -443,10 +446,7 @@ def add_exercises(document: Document, block: dict | None, lesson: int) -> None:
         greek.paragraph_format.line_spacing = EXERCISE_TEXT_LINE_SPACING
         add_greek_run(greek, item["text"], EXERCISE_GREEK_PT)
         set_keep(greek, next_paragraph=True)
-        answer = document.add_paragraph(" ")
-        answer.paragraph_format.space_after = Pt(EXERCISE_ANSWER_SPACE_AFTER_PT)
-        answer.paragraph_format.line_spacing = Pt(EXERCISE_ANSWER_LINE_PT)
-        paragraph_rule(answer, color=RULE, size="3", space="1")
+        add_answer_lines(document)
 
 
 def source_line(source: str) -> str:
@@ -578,11 +578,14 @@ def add_latin_and_cjk(paragraph, text: str, size: float, *, color=MUTED) -> None
 # 🚨 切點的存在理由只有一個：一本裝訂實體不得超過 500 頁（2026-09-08）。
 # 2026-09-18 一課壓到八頁、讀文按版面預算節錄之後，各半只有 320–480 頁，上限不再
 # 逼人，所以擁有者裁示並冊——回到「內容的一半＝一本實體書」。課次編號不動。
+# 2026-09-25：行距放寬、作答線加高後下冊 611 頁，切成兩本；切點把整冊厚度算平
+# （附錄 177 頁只印在下冊（二））：第 1–35 課約 301 頁、第 36–50 課＋附錄約 314 頁。
 PARTS = [
     {"book": 1, "source": 1, "first": 1, "last": 50, "appendix": True},
-    {"book": 2, "source": 2, "first": 1, "last": 50, "appendix": True},
+    {"book": 2, "source": 2, "first": 1, "last": 35, "appendix": False},
+    {"book": 3, "source": 2, "first": 36, "last": 50, "appendix": True},
 ]
-BOOK_LABELS = ("上冊", "下冊")
+BOOK_LABELS = ("上冊", "下冊（一）", "下冊（二）")
 
 COVER_GREEK = {
     1: "Ἡ ΚΑΙΝΗ ΔΙΑΘΗΚΗ",
@@ -677,21 +680,10 @@ def add_front_matter(document: Document, master: dict, volume: dict, part: dict,
     for key, value in master["textPolicy"].items():
         # 欄位名是程式的（newTestament、chineseBible…），紙上要印中文標目。
         add_body(document, f"{TEXT_POLICY_LABELS.get(key, key)}：{value}", size=CAPTION_PT, color=INK)
-    counts = volume["counts"]
-    lessons = part_lessons(volume, part)
+    # 擁有者 2026-09-25：不印「N 課・N 詞・N 題」那種規格行。
     add_body(
         document,
-        f"本冊為{volume['title']}，{volume['subtitle']}；收第 {part['first']:02d}–{part['last']:02d} 課，共 {len(lessons)} 課・"
-        f"{sum(lesson['vocabularyCount'] for lesson in lessons):,} 詞・"
-        f"{sum(len(exercises.get(lesson['lesson'], {}).get('items', [])) for lesson in lessons):,} 題翻譯練習・"
-        f"{len(lessons)} 篇讀本。",
-        size=CAPTION_PT,
-        color=MUTED,
-    )
-    add_body(
-        document,
-        f"全書兩冊合計 {master['counts']['vocabulary']:,} 詞、1,000 題翻譯練習、"
-        f"連續正文 {master['counts']['totalRunningWords']:,} 詞。",
+        f"本冊為{volume['title']}，{volume['subtitle']}；收第 {part['first']:02d}–{part['last']:02d} 課。",
         size=CAPTION_PT,
         color=MUTED,
     )
