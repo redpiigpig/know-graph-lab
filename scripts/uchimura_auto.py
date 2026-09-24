@@ -126,6 +126,9 @@ CLASSICAL_LIMIT = 1.5
 
 
 def classical_score(zh: str) -> float:
+    # 「」裡多半是引文：經文照錄的是淺近文言直譯（聖經譯本古語對古漢語），詩句也是，
+    # 那是該照原樣的地方，不算進正文語域。
+    zh = re.sub(r"「[^「」]*」", "", zh or "")
     n = len(re.findall(r"[\u4e00-\u9fff]", zh or "")) or 1
     return (len(_CLASSICAL.findall(zh or "")) - len(_VERNACULAR_W.findall(zh or ""))) / n * 100
 

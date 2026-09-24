@@ -36,9 +36,10 @@ prompt 附上同章和修經文**只供對照專名**，並在產物上量「跟
 
     python scripts/japanese_bible.py pull              # R2 → 本機卷檔（先拉最新，別蓋掉別人的修補）
     python scripts/japanese_bible.py stage             # scrollmapper → STAGE/jbungo.json、jkougo.json，並比對節數
-    python scripts/japanese_bible.py translate --shard 0/3   # 逐章譯，checkpoint 在 STAGE/jbungo_zh/
-    python scripts/japanese_bible.py progress
-    python scripts/japanese_bible.py collect           # checkpoint → STAGE/jbungo_zh.json
+    python scripts/japanese_bible.py translate --ver jbungo_zh --shard 0/3   # 逐章譯，checkpoint 在 STAGE/<ver>/
+    python scripts/japanese_bible.py translate --ver kjv_zh --shard 0/3      # 欽定本（含次經）
+    python scripts/japanese_bible.py progress --ver kjv_zh
+    python scripts/japanese_bible.py collect --ver jbungo_zh                 # checkpoint → STAGE/<ver>.json
     python scripts/repair_bible_versions.py merge jbungo   # 併進卷檔（jkougo、jbungo_zh 同）
     python scripts/repair_bible_versions.py upload         # 推回 R2
 """
@@ -57,7 +58,6 @@ sys.path.insert(0, str(SCRIPT_DIR))
 import repair_bible_versions as rbv  # noqa: E402
 
 CACHE, STAGE = rbv.CACHE, rbv.STAGE
-ZH_DIR = STAGE / "jbungo_zh"
 SRC_URL = "https://raw.githubusercontent.com/scrollmapper/bible_databases/master/formats/json/{}.json"
 VERSIONS = {"jbungo": "JapBungo", "jkougo": "JapKougo"}
 BOOKS = list(rbv.RCUV_BOOKS)            # 66 卷，標準順序（與 scrollmapper 相同）
@@ -124,30 +124,73 @@ def stage() -> None:
 
 
 # ── 翻譯 ─────────────────────────────────────────────────────────────────
-PROMPT = """你是聖經譯者。下面是日文《文語訳聖書》（明治元訳舊約／大正改訳新約）{book_zh}第 {ch} 章的經文。
-請**照日文逐節直譯**成現代白話繁體中文。
+# 一支程式譯三個版本（使用者 2026-09-24）：內村日文著作引文照當年日文聖經、
+# 英文著作引文照欽定本（實測 How I Became a Christian 欽定本獨有片語 138 處、
+# 美國標準本 3 處），所以三個底本都各出一份中文直譯。
+#   jbungo_zh  ← jbungo  文語訳（明治元訳舊約＋大正改訳新約）
+#   kjv_zh     ← kjva    欽定本 1611（含次經，使用者要「整本」）
+#   jmeiji_zh  ← jmeiji  明治元訳新約 1880（內村 1917 年以前引的新約；語料待補）
+SPECS = {
+    "jbungo_zh": {"src": "jbungo", "lang": "ja", "style": "classical",
+                  "name": "日文《文語訳聖書》（明治元訳舊約／大正改訳新約）"},
+    "kjv_zh": {"src": "kjva", "lang": "en", "style": "classical",
+               "name": "英文《欽定本聖經》（King James Version, 1611）"},
+    "asv_zh": {"src": "asv", "lang": "en", "style": "classical",
+               "name": "英文《美國標準譯本》（American Standard Version, 1901）"},
+    "niv_zh": {"src": "niv", "lang": "en", "style": "vernacular",
+               "name": "英文《新國際譯本》（New International Version, 2011）"},
+    "jmeiji_zh": {"src": "jmeiji", "lang": "ja", "style": "classical",
+                  "name": "日文《明治元訳新約全書》（1880）"},
+}
+# 語域（使用者 2026-09-24）：「若是古英語就用古漢語對譯」、「thee/thou 翻譯作汝」。
+# 欽定本、ASV 是古英語、文語訳是日文文語 → 淺近文言；NIV 是現代英語 → 白話。
+# （文語訳原本照白話譯了 56 章，使用者同日決定一併改文言，已刪掉重譯。）
+# 🚨 這條只管聖經譯本本身。內村等著作的正文仍一律白話（[[feedback_translation_register_and_titles]]）。
+REGISTER = {
+    "vernacular": "2. 一律白話，不用文言句末虛詞（也／矣／乎／焉），不拿「之」當「的」。詩歌可稍保留韻文節奏。\n",
+    "classical": ("2. 原文是古語（古英語 thee／thou／-eth／-est，或日文文語），譯文用**淺近文言**對譯，"
+                  "程度約如淺文理和合本：thou／thee 與日文「汝」作「汝」、thy／thine 作「汝之」、"
+                  "ye 與複數 you、日文「爾曹」作「爾等」，古語動詞照文言語氣處理；"
+                  "不要譯成現代白話，也不要艱深到讀不懂。標點用新式標點（，。；：「」），"
+                  "「、」只用在並列的詞語之間，不可當逗號用。"
+                  "文言裡不可夾「的」「了」「們」「這」「那」這類白話字。\n"),
+}
+
+PROMPT_HEAD = """你是聖經譯者。下面是{name}{book_zh}第 {ch} 章的經文。
+請**照原文逐節直譯**成現代白話繁體中文。
 
 規則：
-1. 譯的是這份日文的字句與語氣，**不是**把和合本抄過來。日文怎麼說，中文就怎麼說；
-   日文的用字若跟通行中文譯本不同（例如「愛」「義」「生命」「救」的講法），照日文。
-2. 一律白話，不用文言句末虛詞（也／矣／乎／焉），不拿「之」當「的」。詩歌可稍保留韻文節奏。
-3. 人名、地名、民族名、書卷名一律用下面附的《和合本修訂版》寫法（附文**只**供對照專名，
-   不可照抄它的句子）。「神」照日文作「神」。
-4. 日文的「」照用中文引號「」；不加註解、不加節外的說明。
-   稱神的代名詞用「他」「你」，不用「祂」「祢」（與和合本修訂版一致）。
-5. 詩歌體的日文用空格分隔詩行；譯文要照中文加上逗號、分號、句號，不可只留空格。
+1. 譯的是這份原文的字句與語氣，**不是**把和合本抄過來。原文怎麼說，中文就怎麼說；
+   用字若跟通行中文譯本不同，照原文。
+{register}3. 人名、地名、民族名、書卷名一律用下面附的中文譯本寫法（附文**只**供對照專名，不可照抄它的句子）。
+4. 引號用中文「」；不加註解、不加節外的說明。
+   稱神的代名詞不用「祂」「祢」。
+   🚨 **代名詞照原文留代名詞**：原文寫 he／him／his，就譯「他／他的」（文言作「彼／其」），
+   不可換成「主」「神」這類名詞；原文寫名詞才譯名詞。
+   每節句尾照原文的標點（句點作「。」、逗號作「，」、分號作「；」、冒號作「：」）。
+"""
+PROMPT_LANG = {
+    "ja": """5. 「神」照日文作「神」；「ヱホバ」作「耶和華」。
+6. 詩歌體的日文用空格分隔詩行；譯文要照中文加上逗號、分號、句號，不可只留空格。
    詩篇開頭的標題（如「ダビデのうた」「伶長にうたはしめたる歌」）併在第 1 節裡，
    譯出來放在該節最前面、用〔〕括起來，例如「〔大衛的詩〕耶和華是我的牧者，……」。
-6. 輸出格式：每節一行，「節號｜譯文」，節號與日文相同、一節都不能少、不能合併。
+""",
+    "en": """5. God 譯「神」。**全大寫的 LORD（用來代替神名）譯「主」**，不要改成「耶和華」；
+   一般的 Lord 也譯「主」。原文直接寫出神名 Jehovah（美國標準譯本）的，譯「耶和華」。
+   Holy Ghost／Holy Spirit 譯「聖靈」。欽定本的斜體補字照譯進句子裡，不另標。
+6. 詩篇標題若在第 1 節裡，譯出來放在該節最前面、用〔〕括起來。
+""",
+}
+PROMPT_TAIL = """7. 輸出格式：每節一行，「節號｜譯文」，節號與原文相同、一節都不能少、不能合併。
 
-《和合本修訂版》同章（只看專名）：
+中文譯本同章（只看專名）：
 {ref}
-
-日文原文：
+{style_ref}
+原文：
 {src}
 """
-
 OUT_FMT = "\n只輸出譯文：第一行寫 <<<譯文>>>，接著每節一行，最後一行寫 <<<完>>>。不要寫任何分析。"
+DEBUG = STAGE / "_debug"
 
 BOOK_ZH = {}
 
@@ -159,7 +202,8 @@ def book_zh(code: str) -> str:
     return BOOK_ZH.get(code, code)
 
 
-_KANA = re.compile(r"[\u3040-\u309f\u30a0-\u30fa\u30fc]")
+_KANA = re.compile(r"[぀-ゟ゠-ヺー]")
+_LATIN = re.compile(r"[A-Za-z]")
 _LINE = re.compile(r"^\s*(\d+)\s*[｜|:：.．、]\s*(.+?)\s*$")
 BATCH = 40                                   # 詩篇 119 篇 176 節要分批
 
@@ -178,78 +222,221 @@ def overlap(a: str, b: str) -> float:
 COPY_LIMIT = 0.9                             # 中文聖經語言本來就收斂，實測直譯也有 0.7–0.8
 
 
-def translate_batch(code: str, ch: str, verses: dict[str, str], ref: dict[int, str]) -> dict[str, str]:
+_END_PUNCT = {".": "。", ",": "，", ";": "；", ":": "：", "?": "？", "!": "！",
+              "。": "。", "、": "，", "，": "，", "；": "；", "：": "：", "？": "？", "！": "！"}
+_VERN = re.compile(r"[的了們這那]")
+
+
+def fix_end(zh: str, src: str) -> str:
+    """模型常漏掉句尾標點；照原文最後一個標點補上（原文沒標點就不補）。"""
+    zh = zh.rstrip("、，") if zh.endswith(("、", "，")) and src.rstrip()[-1:] not in ",，、" else zh
+    if not zh or zh[-1] in "。，；：？！」』）…—":
+        return zh
+    tail = src.rstrip().rstrip("'\"’”』」)）")
+    return zh + _END_PUNCT.get(tail[-1:], "") if tail else zh
+
+
+def translate_batch(ver: str, code: str, ch: str, verses: dict[str, str], ref: dict[int, str],
+                    force_style: str | None = None) -> dict[str, str]:
     import translate_ebook_to_zh as te
+    spec = dict(SPECS[ver], style=force_style or SPECS[ver].get("style", "vernacular"))
+    classical = spec.get("style") == "classical"
     src = "\n".join(f"{v}｜{t}" for v, t in verses.items())
     refs = "\n".join(f"{v}｜{ref.get(int(v), '')}" for v in verses)
-    prompt = PROMPT.format(book_zh=book_zh(code), ch=ch, ref=refs, src=src)
+    style_ref = (f"\n文體範本（施約瑟淺文理譯本的別處經文，只學它的文言程度與句法）：\n{style_sample()}\n"
+                 if classical else "")
+    prompt = (PROMPT_HEAD + PROMPT_LANG[spec["lang"]] + PROMPT_TAIL).format(
+        name=spec["name"], book_zh=book_zh(code), ch=ch, ref=refs, src=src, style_ref=style_ref,
+        register=REGISTER[spec.get("style", "vernacular")])
     last = "?"
-    for attempt in range(3):
+    tries = 4 if classical else 3
+    for attempt in range(tries):
         try:
-            raw = te.nvidia_chat(prompt + OUT_FMT, max_tokens=8000, temperature=0.2, system="/no_think")
+            # 關推理：開著的話規則一多它就先寫兩萬字推理、把 max_tokens 用完（見 nvidia_chat）。
+            # 關掉後文言會往附給它的和修白話靠，所以文言版本另附淺文理範本（style_ref）。
+            raw = te.nvidia_chat(prompt + OUT_FMT, max_tokens=8000, temperature=0.2, thinking=False)
         except Exception as e:  # noqa: BLE001
             last = f"engine {e}"
             time.sleep(20)
             continue
-        # 🚨 nemotron 會先把推理寫成明文（沒有 <think> 標籤），裡面夾著日文原句與
+        # 🚨 nemotron 會先把推理寫成明文（沒有 <think> 標籤），裡面夾著原句與
         #    「1｜…」半成品；整份解析會把那些當譯文（第一輪五章全數缺節／假名外洩）。
-        #    只收最後一個 <<<譯文>>>…<<<完>>> 區塊，沒有區塊就當失敗。
+        #    只收 <<<譯文>>>…<<<完>>> 區塊；推理裡偶爾也會複述出這種區塊，
+        #    所以取解析得出最多節的那一塊，不取最後一塊。
         blocks = re.findall(r"<<<譯文>>>(.*?)<<<完>>>", raw, re.S)
-        if not blocks:
-            last = "沒有 <<<譯文>>> 區塊"
-            print(f"   {code} {ch} 重試 {attempt + 1}：{last}", flush=True)
-            continue
-        # 推理裡偶爾也會寫出 <<<譯文>>>…<<<完>>>（在複述格式要求），所以不取「最後一塊」，
-        # 取解析得出最多節的那一塊。
+
         def parse(block: str) -> dict[str, str]:
             out = {}
             for ln in block.splitlines():
                 m = _LINE.match(ln)
                 if m and m.group(1) in verses:
-                    # 文語訳一律作「神」；附給它對照專名的和修是上帝版，模型會抄進來
-                    out[m.group(1)] = te._to_traditional(m.group(2).strip()).replace("上帝", "神")
+                    t = te._to_traditional(m.group(2).strip())
+                    if spec["lang"] == "ja":
+                        # 文語訳一律作「神」；附給它對照專名的和修是上帝版，模型會抄進來
+                        t = t.replace("上帝", "神")
+                    out[m.group(1)] = fix_end(t, verses[m.group(1)])
             return out
-        got = max((parse(b) for b in blocks), key=len)
+        got = max((parse(b) for b in blocks), key=len) if blocks else {}
         missing = [v for v in verses if not got.get(v)]
-        leak = [v for v, t in got.items() if len(_KANA.findall(t)) > 2]
+        if spec["lang"] == "ja":
+            leak = [v for v, t in got.items() if len(_KANA.findall(t)) > 2]
+        else:
+            leak = [v for v, t in got.items() if len(_LATIN.findall(t)) > max(6, len(t) * 0.2)]
         joined = "".join(got.get(v, "") for v in verses)
         copied = overlap(joined, "".join(ref.get(int(v), "") for v in verses))
-        if missing:
-            last = f"缺節 {missing[:5]}"
+        vern = len(_VERN.findall(joined))
+        too_vern = classical and vern > max(2, len(joined) // 150)
+        if not blocks:
+            last = "沒有 <<<譯文>>> 區塊"
+        elif missing:
+            last = f"缺節 {len(missing)}/{len(verses)}：{missing[:5]}"
         elif leak:
-            last = f"假名外洩 {leak[:5]}"
+            last = f"原文外洩 {leak[:5]}"
+        elif too_vern and attempt < tries - 1:
+            last = f"文言裡夾白話（的了們這那 {vern} 處）"
         elif copied > COPY_LIMIT:
-            last = f"跟和修重合 {copied:.0%}（抄了和修）"
+            last = f"跟對照本重合 {copied:.0%}（抄了）"
         else:
+            if too_vern:                          # 最後一次才放行：記下來之後重譯，不要靜默收下
+                with open(STAGE / f"_weak_{ver}.txt", "a", encoding="utf-8") as f:
+                    f.write(f"{code} {ch} {min(verses, key=int)}-{max(verses, key=int)} 白話 {vern} 處\n")
             return got
+        DEBUG.mkdir(parents=True, exist_ok=True)
+        (DEBUG / f"{ver}_{code}_{ch}_{attempt}.txt").write_text(raw, encoding="utf-8")
         print(f"   {code} {ch} 重試 {attempt + 1}：{last}", flush=True)
     raise RuntimeError(f"{code} {ch}: {last}")
 
 
-def chapters() -> list[tuple[str, str]]:
-    src = json.loads((STAGE / "jbungo.json").read_text(encoding="utf-8"))
-    return [(bk, ch) for bk in BOOKS for ch in sorted(src.get(bk, {}), key=int)]
+CLASSICALIZE = """下面是聖經{book_zh}第 {ch} 章的白話中文直譯（譯自{name}）。原文是古語，
+請把它**改寫成淺近文言**，程度約如淺文理和合本。
+
+規則：
+1. 只改語體，**意思一字不增減**；原譯的用字若是在反映原文的特殊講法，保留那個講法。
+2. 人名、地名、專名一字不動；「神」「耶和華」「主」照原譯。
+3. 你→汝、你的→汝之、你們→爾等；他→彼、他的→其；不可夾「的」「了」「們」「這」「那」。
+4. 代名詞照原譯留代名詞，不換成名詞。〔〕裡的詩篇標題照樣留在該節最前面。
+5. 標點用新式標點（，。；：「」），「、」只用在並列詞語之間。
+6. 輸出格式：每節一行，「節號｜譯文」，一節都不能少。
+{style_ref}
+白話直譯：
+{src}
+"""
 
 
-def translate(shard: str) -> None:
+def classicalize(ver: str, code: str, ch: str, vern: dict[str, str], ref: dict[int, str]) -> dict[str, str]:
+    """文言版本的第二步（白話直譯 → 淺近文言）。
+    文語訳：模型直接從日文文語譯文言，會把半句日文原封抄進來（「彼によりて永遠の生命を得ん爲なり」），
+    重試又改抄施約瑟淺文理——日文文語本身就半像文言，關掉推理後它分不清。
+    欽定本／ASV：關推理後一步到位會滑回和修式白話（約 3 章四次重試都「的」字十處上下）。
+    所以先照白話直譯（這一步忠於原文字句、品質穩），再中文轉中文改寫成文言。"""
+    import translate_ebook_to_zh as te
+    src = "\n".join(f"{v}｜{t}" for v, t in vern.items())
+    style_ref = f"\n文體範本（施約瑟淺文理譯本的別處經文，只學文言程度與句法）：\n{style_sample()}\n"
+    prompt = CLASSICALIZE.format(book_zh=book_zh(code), ch=ch, name=SPECS[ver]["name"], src=src, style_ref=style_ref)
+    last = "?"
+    for attempt in range(4):
+        try:
+            raw = te.nvidia_chat(prompt + OUT_FMT, max_tokens=8000, temperature=0.2, thinking=False)
+        except Exception as e:  # noqa: BLE001
+            last = f"engine {e}"
+            time.sleep(20)
+            continue
+        got = {}
+        for b in re.findall(r"<<<譯文>>>(.*?)<<<完>>>", raw, re.S):
+            cur = {}
+            for ln in b.splitlines():
+                m = _LINE.match(ln)
+                if m and m.group(1) in vern:
+                    cur[m.group(1)] = fix_end(te._to_traditional(m.group(2).strip()).replace("上帝", "神"), vern[m.group(1)])
+            got = max(got, cur, key=len)
+        joined = "".join(got.values())
+        vcount = len(_VERN.findall(joined))
+        missing = [v for v in vern if not got.get(v)]
+        # 跟施約瑟淺文理同章比：範本雖然不給同一章，模型仍可能憑記憶寫出淺文理原句
+        cl = {r["v"]: re.sub(r"\s+", "", r["t"].get("cuv1919e", "")) for r in load_book(code)["chapters"].get(ch, [])}
+        copied = overlap(joined, "".join(cl.get(int(v), "") for v in vern))
+        if missing:
+            last = f"文言化缺節 {len(missing)}/{len(vern)}"
+        elif any(_KANA.search(t) for t in got.values()):
+            last = "文言化帶假名"
+        elif vcount > max(2, len(joined) // 150) and attempt < 3:
+            last = f"文言化後仍夾白話 {vcount} 處"
+        elif copied > COPY_LIMIT:
+            last = f"跟施約瑟淺文理重合 {copied:.0%}（抄了）"
+        else:
+            if vcount > max(2, len(joined) // 150):
+                with open(STAGE / f"_weak_{ver}.txt", "a", encoding="utf-8") as f:
+                    f.write(f"{code} {ch} 文言化 白話 {vcount} 處\n")
+            return got
+        DEBUG.mkdir(parents=True, exist_ok=True)
+        (DEBUG / f"{ver}_{code}_{ch}_cl{attempt}.txt").write_text(raw, encoding="utf-8")
+        print(f"   {code} {ch} 文言化重試 {attempt + 1}：{last}", flush=True)
+    raise RuntimeError(f"{code} {ch}: {last}")
+
+
+def source_chapters(ver: str) -> list[tuple[str, str, dict[str, str]]]:
+    """(書卷, 章, {節: 原文})，原文一律從經文卷檔讀（jbungo 已併進卷檔）。
+    書卷順序：正典 66 卷在前，其餘（次經）照檔名。"""
+    srcv = SPECS[ver]["src"]
+    codes = BOOKS + sorted(f.name.split(".")[0] for f in CACHE.glob("*.json.gz")
+                           if f.name.split(".")[0] not in BOOKS)
+    out = []
+    for bk in codes:
+        doc = load_book(bk)
+        for ch in sorted(doc["chapters"], key=int):
+            vs = {str(r["v"]): r["t"][srcv].strip() for r in doc["chapters"][ch]
+                  if (r["t"].get(srcv) or "").strip()}
+            if vs:
+                out.append((bk, ch, vs))
+    return out
+
+
+_STYLE: list[str] = []
+
+
+def style_sample() -> str:
+    """文言版本的文體範本：施約瑟淺文理（1902）的詩篇 1:1–3 與馬太 5:3–8。
+    🚨 固定用這兩段、不給同一章：給同一章的淺文理，模型會整段照抄
+    （文言化那一步實測跟範本重合 100%，四次重試都一樣）。
+    語料在專名兩邊留了空格（「主諭 亞伯蘭 曰」），拿掉；淺文理的「、」逗號改新式標點。"""
+    if not _STYLE:
+        for bk, ch, vs in (("psa", "1", range(1, 4)), ("mat", "5", range(3, 9))):
+            rows = {r["v"]: r["t"].get("cuv1919e", "") for r in load_book(bk)["chapters"][ch]}
+            for v in vs:
+                t = re.sub(r"\s+", "", rows.get(v, "")).replace("○", "").replace("、", "，")
+                t = re.sub(r"[(（][^()（）]*[)）]", "", t)                 # 夾註「(虛心者原文作貧於心者)」.rstrip("，")
+                _STYLE.append(f"{book_zh(bk)} {ch}:{v}　{t}。")
+    return "\n".join(_STYLE)
+
+
+def chapter_ref(bk: str, ch: str) -> dict[int, str]:
+    """給模型對照專名的中文本：和修；次經和修沒有，用思高。"""
+    doc = load_book(bk)
+    return {r["v"]: r["t"].get("cuv2010") or r["t"].get("sigao") or r["t"].get("cuv1919", "")
+            for r in doc["chapters"].get(ch, [])}
+
+
+def translate(ver: str, shard: str) -> None:
     i, n = (int(x) for x in shard.split("/"))
-    src = json.loads((STAGE / "jbungo.json").read_text(encoding="utf-8"))
-    todo = [c for k, c in enumerate(chapters()) if k % n == i]
+    out_dir = STAGE / ver
+    todo = [c for k, c in enumerate(source_chapters(ver)) if k % n == i]
     fails = 0
-    for bk, ch in todo:
-        out = ZH_DIR / bk / f"{ch}.json"
+    for bk, ch, verses in todo:
+        out = out_dir / bk / f"{ch}.json"
         if out.exists():
             continue
-        verses = src[bk][ch]
-        doc = load_book(bk)
-        ref = {r["v"]: r["t"].get("cuv2010") or r["t"].get("cuv1919", "")
-               for r in doc["chapters"].get(ch, [])}
+        ref = chapter_ref(bk, ch)
         keys = sorted(verses, key=int)
         res: dict[str, str] = {}
         try:
             for k in range(0, len(keys), BATCH):
                 part = {v: verses[v] for v in keys[k:k + BATCH]}
-                res.update(translate_batch(bk, ch, part, ref))
+                # 文言版本一律兩步：一步到位時日文會漏假名、英文會滑回和修白話（見 classicalize）
+                if SPECS[ver].get("style") == "classical":
+                    vern = translate_batch(ver, bk, ch, part, ref, force_style="vernacular")
+                    res.update(classicalize(ver, bk, ch, vern, ref))
+                else:
+                    res.update(translate_batch(ver, bk, ch, part, ref))
         except RuntimeError as e:
             fails += 1
             print(f"✗ {e}", flush=True)
@@ -260,33 +447,42 @@ def translate(shard: str) -> None:
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(json.dumps(res, ensure_ascii=False, indent=0), encoding="utf-8")
         print(f"✓ {bk} {ch}（{len(res)} 節）", flush=True)
-    left = [c for c in todo if not (ZH_DIR / c[0] / f"{c[1]}.json").exists()]
+    left = [c for c in todo if not (out_dir / c[0] / f"{c[1]}.json").exists()]
     if left:
         print(f"本輪跑完，還有 {len(left)} 章失敗待重跑")
     else:
         print("QUEUE_COMPLETE")                    # fleet_keeper 的 EnsureUntil 認這個退場
 
 
-def progress() -> None:
-    allc = chapters()
-    done = sum(1 for bk, ch in allc if (ZH_DIR / bk / f"{ch}.json").exists())
-    print(f"jbungo_zh：{done}/{len(allc)} 章（{done / len(allc):.1%}）")
+def progress(ver: str) -> None:
+    allc = source_chapters(ver)
+    done = sum(1 for bk, ch, _ in allc if (STAGE / ver / bk / f"{ch}.json").exists())
+    print(f"{ver}：{done}/{len(allc)} 章（{done / max(len(allc), 1):.1%}）")
 
 
-def collect() -> None:
+def collect(ver: str) -> None:
     out: dict = {}
-    for bk, ch in chapters():
-        f = ZH_DIR / bk / f"{ch}.json"
+    for bk, ch, _ in source_chapters(ver):
+        f = STAGE / ver / bk / f"{ch}.json"
         if f.exists():
             out.setdefault(bk, {})[ch] = json.loads(f.read_text(encoding="utf-8"))
-    (STAGE / "jbungo_zh.json").write_text(json.dumps(out, ensure_ascii=False), encoding="utf-8")
-    print(f"收進 {sum(len(v) for b in out.values() for v in b.values()):,} 節")
+    (STAGE / f"{ver}.json").write_text(json.dumps(out, ensure_ascii=False), encoding="utf-8")
+    print(f"{ver}：收進 {sum(len(v) for b in out.values() for v in b.values()):,} 節")
 
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("cmd", choices=["pull", "stage", "translate", "progress", "collect"])
+    ap.add_argument("--ver", default="jbungo_zh", choices=list(SPECS))
     ap.add_argument("--shard", default="0/1")
     a = ap.parse_args()
-    {"pull": pull, "stage": stage, "progress": progress, "collect": collect}.get(
-        a.cmd, lambda: translate(a.shard))()
+    if a.cmd == "pull":
+        pull()
+    elif a.cmd == "stage":
+        stage()
+    elif a.cmd == "translate":
+        translate(a.ver, a.shard)
+    elif a.cmd == "progress":
+        progress(a.ver)
+    else:
+        collect(a.ver)

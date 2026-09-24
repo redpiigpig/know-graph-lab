@@ -65,7 +65,7 @@ def cn_num(s: str) -> int | None:
     s = s.strip().translate(str.maketrans("０１２３４５６７８９", "0123456789"))
     if s.isdigit():
         return int(s)
-    s = s.replace("卅", "三十").replace("廿", "二十").replace("卌", "四十")
+    s = s.replace("拾", "十").replace("卅", "三十").replace("廿", "二十").replace("卌", "四十")
     if s and all(c in _CN_DIGIT for c in s):               # 一二〇
         return int("".join(str(_CN_DIGIT[c]) for c in s))
     total, cur = 0, 0
@@ -83,7 +83,7 @@ def cn_num(s: str) -> int | None:
     return (total + cur) or None
 
 
-_NUM = r"[0-9０-９〇零一二三四五六七八九十百廿卅]+"
+_NUM = r"[0-9０-９〇零一二三四五六七八九十拾百廿卅]+"
 _NAMES_RE = "|".join(re.escape(n) for n, _ in _NAME)
 # 日文／中文：書名 第?N 章|篇 第?M 節? ( (より|至|乃至|—|–|〜|~|、|,|・) 第?K 節? )* (迄|まで)?
 _JA = re.compile(rf"({_NAMES_RE})\s*第?\s*({_NUM})\s*[章篇]\s*第?\s*({_NUM})\s*節?"
@@ -123,18 +123,24 @@ def find_refs(text: str) -> list[tuple[str, int, int, int]]:
 # 接著往往就拿那幾個字來講；套和修會跟他的解說對不上。所以日文原著的引文改用
 # 本站照文語訳逐節直譯的中文（scripts/japanese_bible.py → jbungo_zh），和修只當後備。
 # 使用者 2026-09-23：「在經典的那一邊，新增一個當時他們使用的日文聖經……再進行翻譯」。
-JBUNGO_ZH_DIR = Path(__file__).resolve().parent.parent / "output" / "source-cache" / "bible-repair" / "jbungo_zh"
+# 英文著作引的是欽定本（實測 How I Became a Christian 欽定本獨有片語 138 處、ASV 3 處），
+# 所以英文原著用 kjv_zh。兩份直譯都是淺近文言（使用者：「若是古英語就用古漢語對譯」）。
+STAGE_DIR = Path(__file__).resolve().parent.parent / "output" / "source-cache" / "bible-repair"
 
 HEAD = {
-    "jbungo_zh": ("【本段引用的經文——本站依作者當年所讀的《文語譯聖經》逐節直譯的中文，引用處請照錄，"
-                  "不要改用和合本或自行改寫；若作者明顯是自己另譯、改動字句或在比較譯本，才照作者的日文譯】"),
+    "jbungo_zh": ("【本段引用的經文——本站依作者當年所讀的《文語譯聖經》逐節直譯的中文（淺近文言），"
+                  "引用處請照錄，不要改用和合本或自行改寫；若作者明顯是自己另譯、改動字句或在比較譯本，"
+                  "才照作者的原文譯】"),
+    "kjv_zh": ("【本段引用的經文——本站依作者所讀的《欽定本聖經》（KJV）逐節直譯的中文（淺近文言），"
+               "引用處請照錄，不要改用和合本或自行改寫；若作者明顯是自己另譯、改動字句或在比較譯本，"
+               "才照作者的原文譯】"),
     "cuv2010": ("【本段引用的經文——《和合本修訂版》原文，引用處請逐字照錄，不要自行翻譯或改寫；"
                 "若作者明顯是刻意用了不同譯法（自譯、比較譯本），才照原文意思譯】"),
 }
 
 
-def _jbungo_zh(code: str, ch: int, v1: int, v2: int) -> list[tuple[int, str]]:
-    f = JBUNGO_ZH_DIR / code / f"{ch}.json"
+def _direct(ver: str, code: str, ch: int, v1: int, v2: int) -> list[tuple[int, str]]:
+    f = STAGE_DIR / ver / code / f"{ch}.json"
     if not f.exists():
         raise LookupError(f"{code} {ch} 還沒譯")
     d = json.loads(f.read_text(encoding="utf-8"))
@@ -147,7 +153,7 @@ def _jbungo_zh(code: str, ch: int, v1: int, v2: int) -> list[tuple[int, str]]:
 def verse_hint(text: str, prefer: str = "cuv2010", limit: int = 4) -> str:
     """給翻譯 prompt 的經文提示；原文沒有經文出處（或查不到）就回空字串。
 
-    prefer="jbungo_zh"：先用文語譯直譯；那一處還沒譯（或缺節）就退回和修。
+    prefer="jbungo_zh"／"kjv_zh"：先用該本的直譯；那一處還沒譯（或缺節）就退回和修。
     同一段裡兩種來源並存時各自標出處，不混成一段。"""
     refs = find_refs(text)[:limit]
     if not refs:
@@ -158,10 +164,10 @@ def verse_hint(text: str, prefer: str = "cuv2010", limit: int = 4) -> str:
         return ""
     lines: dict[str, list[str]] = {}
     for code, ch, v1, v2 in refs:
-        order = ["jbungo_zh", "cuv2010"] if prefer == "jbungo_zh" else ["cuv2010"]
+        order = [prefer, "cuv2010"] if prefer != "cuv2010" else ["cuv2010"]
         for ver in order:
             try:                                       # 和修詩體殘缺會丟 LookupError
-                vs = _jbungo_zh(code, ch, v1, v2) if ver == "jbungo_zh" else cqb.verses(code, ch, v1, v2)
+                vs = _direct(ver, code, ch, v1, v2) if ver != "cuv2010" else cqb.verses(code, ch, v1, v2)
             except Exception:  # noqa: BLE001 — 查不到或殘缺就換下一個，都沒有就照規則譯
                 continue
             name = cqb.BOOKS.get(code) or code

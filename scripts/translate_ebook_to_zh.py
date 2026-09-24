@@ -858,12 +858,17 @@ def nvidia_translate(source: str) -> str:
 
 
 def nvidia_chat(prompt: str, max_tokens: int = 2000, system: str | None = None,
-                temperature: float = 0.2, deadline_s: float = 600) -> str:
+                temperature: float = 0.2, deadline_s: float = 600,
+                thinking: bool = True) -> str:
     """Generic NVIDIA NIM chat call (OpenAI-compatible) for NON-translation tasks
     (proofreading / titling / cleanup) that previously used Haiku — Haiku is fully
     retired (user 2026-06-03). Rotates keys + NVIDIA_MODELS; strips <think> blocks.
     Does NOT run opencc (caller may need raw JSON). Raises on total failure.
-    Same 4-key round-robin + per-key cooldown + global throttle as nvidia_translate."""
+    Same 4-key round-robin + per-key cooldown + global throttle as nvidia_translate.
+
+    thinking=False 關掉 nemotron 的推理（chat_template_kwargs.enable_thinking）。
+    🚨 system「/no_think」它不認：規則一多就先寫兩萬多字明文推理、把 max_tokens
+    用完，譯文根本沒出來（聖經直譯 2026-09-24 十二條線八成失敗就是這個）。"""
     if not NVIDIA_KEYS:
         raise RuntimeError("no NVIDIA API key")
     msgs = ([{"role": "system", "content": system}] if system else []) + \
@@ -885,7 +890,8 @@ def nvidia_chat(prompt: str, max_tokens: int = 2000, system: str | None = None,
                 NVIDIA_URL,
                 headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json"},
                 json={"model": model, "messages": msgs,
-                      "temperature": temperature, "max_tokens": max_tokens},
+                      "temperature": temperature, "max_tokens": max_tokens,
+                      **({} if thinking else {"chat_template_kwargs": {"enable_thinking": False}})},
                 timeout=300,
             )
         except requests.exceptions.RequestException as e:

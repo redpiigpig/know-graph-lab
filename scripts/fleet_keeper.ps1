@@ -78,9 +78,18 @@ $STALL_PER_LANE = @{
     'panikkar-vedic' = 180
     'aquinas'        = 90    # prints every 20 articles, but a cold volume can be slow
     'husserl'        = 240   # one log line per SECTION, and the biggest is 355 paragraphs
-    'jbungo-s0'      = 60    # one log line per chapter (Ps 119 = 5 batches)
-    'jbungo-s1'      = 60
-    'jbungo-s2'      = 60
+    'jbungo-s0'     = 60    # one log line per chapter
+    'jbungo-s1'     = 60    # one log line per chapter
+    'jbungo-s2'     = 60    # one log line per chapter
+    'kjv-s0'        = 60    # one log line per chapter
+    'kjv-s1'        = 60    # one log line per chapter
+    'kjv-s2'        = 60    # one log line per chapter
+    'asv-s0'        = 60    # one log line per chapter
+    'asv-s1'        = 60    # one log line per chapter
+    'asv-s2'        = 60    # one log line per chapter
+    'niv-s0'        = 60    # one log line per chapter
+    'niv-s1'        = 60    # one log line per chapter
+    'niv-s2'        = 60    # one log line per chapter
     'sekine-s0'      = 240   # one log line per article; the longest has ~230 paragraphs
     'sekine-s1'      = 240   # one log line per article; the longest has ~230 paragraphs
     'sekine-s2'      = 240   # one log line per article; the longest has ~230 paragraphs
@@ -256,10 +265,20 @@ EnsureUntil 'sekine-s2' $py @('-X','utf8','scripts\uchimura_auto.py','--author',
 # Uchimura, Kyuanroku (2026-09-23): only in the Iwanami zenshu vol.1, not on Aozora. Source
 # text is the MinerU transcription corrected page-by-page (uchimura_zenshu_works.py).
 EnsureUntil 'kyuanroku' $py @('-X','utf8','scripts\uchimura_auto.py','--author','uchimura-zenshu','--run-queue','--backend','nvidia') 'QUEUE_COMPLETE'
-# Japanese Bungo-yaku Bible -> Chinese, chapter by chapter (2026-09-23; user wants Uchimura's quotes rendered from the Japanese he read). 1,189 chapters in 3 shards.
-EnsureUntil 'jbungo-s0' $py @('-X','utf8','scripts\japanese_bible.py','translate','--shard','0/3') 'QUEUE_COMPLETE'
-EnsureUntil 'jbungo-s1' $py @('-X','utf8','scripts\japanese_bible.py','translate','--shard','1/3') 'QUEUE_COMPLETE'
-EnsureUntil 'jbungo-s2' $py @('-X','utf8','scripts\japanese_bible.py','translate','--shard','2/3') 'QUEUE_COMPLETE'
+# Bible versions -> Chinese direct translation, chapter by chapter (2026-09-24). Bungo-yaku (Japanese),
+# KJV incl. Apocrypha, ASV: archaic -> classical Chinese (user: thee/thou -> ru); NIV -> vernacular.
+EnsureUntil 'jbungo-s0' $py @('-X','utf8','scripts\japanese_bible.py','translate','--ver','jbungo_zh','--shard','0/3') 'QUEUE_COMPLETE'
+EnsureUntil 'jbungo-s1' $py @('-X','utf8','scripts\japanese_bible.py','translate','--ver','jbungo_zh','--shard','1/3') 'QUEUE_COMPLETE'
+EnsureUntil 'jbungo-s2' $py @('-X','utf8','scripts\japanese_bible.py','translate','--ver','jbungo_zh','--shard','2/3') 'QUEUE_COMPLETE'
+EnsureUntil 'kjv-s0' $py @('-X','utf8','scripts\japanese_bible.py','translate','--ver','kjv_zh','--shard','0/3') 'QUEUE_COMPLETE'
+EnsureUntil 'kjv-s1' $py @('-X','utf8','scripts\japanese_bible.py','translate','--ver','kjv_zh','--shard','1/3') 'QUEUE_COMPLETE'
+EnsureUntil 'kjv-s2' $py @('-X','utf8','scripts\japanese_bible.py','translate','--ver','kjv_zh','--shard','2/3') 'QUEUE_COMPLETE'
+EnsureUntil 'asv-s0' $py @('-X','utf8','scripts\japanese_bible.py','translate','--ver','asv_zh','--shard','0/3') 'QUEUE_COMPLETE'
+EnsureUntil 'asv-s1' $py @('-X','utf8','scripts\japanese_bible.py','translate','--ver','asv_zh','--shard','1/3') 'QUEUE_COMPLETE'
+EnsureUntil 'asv-s2' $py @('-X','utf8','scripts\japanese_bible.py','translate','--ver','asv_zh','--shard','2/3') 'QUEUE_COMPLETE'
+EnsureUntil 'niv-s0' $py @('-X','utf8','scripts\japanese_bible.py','translate','--ver','niv_zh','--shard','0/3') 'QUEUE_COMPLETE'
+EnsureUntil 'niv-s1' $py @('-X','utf8','scripts\japanese_bible.py','translate','--ver','niv_zh','--shard','1/3') 'QUEUE_COMPLETE'
+EnsureUntil 'niv-s2' $py @('-X','utf8','scripts\japanese_bible.py','translate','--ver','niv_zh','--shard','2/3') 'QUEUE_COMPLETE'
 
 # Collected works -> one Word reader per book on Drive (user 2026-09-23: "Drive needs a Word
 # for every book"). Incremental: only books whose JSONL is newer than the .docx are rebuilt,
