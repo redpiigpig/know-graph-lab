@@ -533,3 +533,12 @@ p = {"q[0].f": "AU", "q[0].i": "鄭仰恩",        # 欄位：* / TI / PTI / AU 
 ## 索引補記
 
 - 使用者定調先只下300篇
+
+## 最優先清單 `airiti-first.json`（2026-09-24）
+
+使用者點名「排最前面」的單篇：`public/content/research-data/press/airiti-first.json`，
+`[{slug, docId, title, author}]`。`--batch` 先下這份，再清書目佇列（airiti-wanted），再照 PRIORITY 掃整刊。
+目前是鍾雲鶯 12 篇（一貫道 7 篇排前、越南先天道等 5 篇）＋楊弘任〈五教同源〉（中國大陸研究 63:4）。
+只點名幾篇的刊要進 `WANTED_ONLY`（folk-arts、mainland-china），否則會被當整刊掃。
+楊弘任另兩篇官網就開放全文（台灣社會學 46、人文及社會科學集刊 34:4），已直接存 Drive `研究資料/一貫道/`，不佔華藝額度。
+🚨 書目佇列 `--batch` 會從 `C:/tmp/airiti_wanted.json` 重算 `airiti-wanted.json`，手動加的要加在來源檔，否則被洗掉。

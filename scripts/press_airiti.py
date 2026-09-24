@@ -117,6 +117,7 @@ JOURNALS = {
     # 所以 --discover 掃不到，是按刊名另外查出來的。一貫道、鸞堂、地方祭儀
     # 這幾條線的主要發表園地，做註腳要的卷期頁碼只有華藝有。
     "folk-arts":          ("10251383",     "民俗曲藝"),
+    "mainland-china":     ("10132716",     "中國大陸研究"),
 }
 
 DELAY_META = 1.5     # 篇目：只是讀頁面，正常瀏覽速率
@@ -497,7 +498,7 @@ PRIORITY = [
 # 🚨 這一份名單存在的理由是「刻意不在 PRIORITY 裡」與「忘了加進 PRIORITY」
 #    在行為上完全一樣——都不會被整刊掃描到，也都不會報錯。寫明才分得出來，
 #    測試也才擋得住漏掉的那種。
-WANTED_ONLY = {"folk-arts"}
+WANTED_ONLY = {"folk-arts", "mainland-china"}
 
 LOCK = Path(r"C:/tmp/press_airiti_download.lock")
 LOCK_STALE = 3 * 3600
@@ -607,6 +608,8 @@ def already_on_site(slug, issue_label):
 # 它只對到「刊」；這裡再把篇名對到華藝的 docID，才真的抓得動。
 WANTED_SRC = Path(r"C:/tmp/airiti_wanted.json")
 WANTED = OUT / "airiti-wanted.json"
+# 使用者點名「排最前面」的篇（docId 清單），比書目佇列還早下：[{"slug":…, "docId":…}, …]
+FIRST = OUT / "airiti-first.json"
 
 # 🚨 破折號在中文書目裡至少六種寫法（—— ― ─ – － ‐），刊名頁與書目常各用各的。
 #    少涵蓋一種，同一篇就會因為一個破折號而對不上，症狀是「這篇華藝明明有卻說找不到」。
@@ -762,6 +765,13 @@ def batch(s, budget, daily_cap=0):
                 resolve_wanted()
             except Exception as e:                # noqa: BLE001
                 print(f"（書目佇列重算失敗，改用既有的：{e}）")
+        if FIRST.exists():
+            first = {}
+            for w in json.loads(FIRST.read_text(encoding="utf-8")):
+                first.setdefault(w["slug"], set()).add(w["docId"])
+            for slug, ids in first.items():
+                if spent < budget and (TOC_DIR / f"{slug}.json").exists():
+                    spent += download(s, slug, budget - spent, only=ids) or 0
         wanted = load_wanted()
         # 🚨 清佇列時**不可以只掃 PRIORITY**。PRIORITY 是「整份刊都要收」的名單；
         #    有些刊只點名幾篇而不整份收（民俗曲藝 479 篇裡只要 16 篇），
