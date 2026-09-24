@@ -763,6 +763,8 @@ def run_ocr(e: dict, pdf: Path, batch: int = 2, redo_missing: bool = False) -> b
             print(f"    重跑缺頁碼的 PDF 頁 {sorted(map(int, miss))}", flush=True)
         batch = 1
     n = len(fitz.open(pdf))
+    if e.get("spread"):
+        batch = 1          # 跨頁掃描：一次一個 PDF 頁，回傳才對得回來
     lang = "中文" if e.get("zhSame") else "日文"
     for s in range(1, n + 1, batch):
         rng = list(range(s, min(s + batch - 1, n) + 1))
@@ -780,6 +782,10 @@ def run_ocr(e: dict, pdf: Path, batch: int = 2, redo_missing: bool = False) -> b
         if set(texts) != set(rng) and len(pages) == len(rng):
             # 模型偶爾把印刷頁碼填進 "page"：回傳頁數對得上就照順序對回 PDF 頁
             texts = {i: (p.get("text") or "") for i, p in zip(rng, pages)}
+        elif set(texts) != set(rng) and len(rng) == 1 and pages:
+            # 跨頁掃描（一個 PDF 頁兩個印刷頁）：模型常把兩個印刷頁拆成兩筆、page 填印刷頁碼。
+            # 一次只送一頁時，回來的全部都屬於這一頁，照順序接起來
+            texts = {rng[0]: "\n".join((p.get("text") or "") for p in pages)}
         for i in rng:
             t = texts.get(i, "")
             if not t.strip():

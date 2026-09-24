@@ -278,7 +278,8 @@
   "translate": true,
   "pageStart": 76,
   "pageStep": 1,
-  "ocr": true
+  "ocr": true,
+  "spread": true
  },
  {
   "id": "japan/2_05-2004",
@@ -341,7 +342,8 @@
   "translate": true,
   "pageStart": 97,
   "pageStep": 1,
-  "ocr": true
+  "ocr": true,
+  "spread": true
  },
  {
   "id": "japan/2_08-2006",

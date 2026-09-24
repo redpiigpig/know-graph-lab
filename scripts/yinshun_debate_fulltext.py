@@ -386,7 +386,10 @@ def ocr_gemini(pdf: Path, rel: str, lang_label: str, title: str, batch: int = 2)
     OCR_SIDE.mkdir(parents=True, exist_ok=True)
     side = OCR_SIDE / (hashlib.md5(rel.encode("utf-8")).hexdigest()[:12] + ".json")
     got: dict[str, str] = json.loads(side.read_text(encoding="utf-8")) if side.exists() else {}
-    n = len(fitz.open(pdf))
+    doc = fitz.open(pdf)
+    n = len(doc)
+    if doc[0].rect.width > doc[0].rect.height:
+        batch = 1          # 橫幅＝跨頁掃描（NDL 荻原 1917）：一次一個 PDF 頁，回傳的幾筆全歸這一頁
     for s in range(1, n + 1, batch):
         rng = list(range(s, min(s + batch - 1, n) + 1))
         if all(str(i) in got for i in rng):
@@ -400,6 +403,8 @@ def ocr_gemini(pdf: Path, rel: str, lang_label: str, title: str, batch: int = 2)
         texts = {int(p["page"]): (p.get("text") or "") for p in pages}
         if set(texts) != set(rng) and len(pages) == len(rng):
             texts = {i: (p.get("text") or "") for i, p in zip(rng, pages)}
+        elif set(texts) != set(rng) and len(rng) == 1 and pages:
+            texts = {rng[0]: "\n".join((p.get("text") or "") for p in pages)}
         for i in rng:
             t = texts.get(i, "")
             if not t.strip():
