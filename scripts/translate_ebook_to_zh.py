@@ -323,6 +323,7 @@ def ollama_translate(source: str) -> str:
 
 
 MAX_CHUNK_CHARS = 20_000  # split source if larger — Sonnet 16K output cap + safety
+MAX_PIECE_CHARS = MAX_CHUNK_CHARS  # per-run override via --max-piece
 
 
 def split_oversized(src: str, max_chars: int = MAX_CHUNK_CHARS) -> list[str]:
@@ -1481,14 +1482,20 @@ def translate_book(ebook_id: str, limit: int | None, inspect: bool, dry_run: boo
             print("  (dry-run, skipped translation call)", flush=True)
             continue
         t0 = time.time()
-        pieces = split_oversized(en)
+        pieces = split_oversized(en, max_chars=MAX_PIECE_CHARS)
         if len(pieces) > 1:
-            print(f"  ↳ source split into {len(pieces)} pieces (>{MAX_CHUNK_CHARS} chars)", flush=True)
+            print(f"  ↳ source split into {len(pieces)} pieces (>{MAX_PIECE_CHARS} chars)", flush=True)
         zh_parts = []
         failed = False
         for j, piece in enumerate(pieces, start=1):
             try:
                 zh_part = translator(piece)
+                # Silent truncation gate: NVIDIA runs with max_tokens=8000, so a 20k-char
+                # piece came back as 2,135 zh chars and was stored as "done" (2026-09-24,
+                # a whole preface lost). English -> Chinese is ~0.3 CJK per source char.
+                cjk = len(re.findall(r"[一-鿿]", zh_part))
+                if len(piece) >= 1500 and cjk < 0.15 * len(piece):
+                    raise RuntimeError(f"output too short ({cjk} CJK for {len(piece)} en chars) - truncated?")
                 zh_parts.append(zh_part)
                 if len(pieces) > 1:
                     print(f"    piece {j}/{len(pieces)}: {len(zh_part)} zh chars", flush=True)
@@ -1625,10 +1632,14 @@ def main():
                         "'sonnet' = Claude Sonnet. 'haiku' is RETIRED → routes to 'auto'.")
     p.add_argument("--resume", action="store_true",
                    help="Skip chapter_path already in the on-disk JSONL")
+    p.add_argument("--max-piece", type=int, default=MAX_CHUNK_CHARS,
+                   help="Split source pieces above this many chars (default 20000). NVIDIA "
+                        "answers with max_tokens=8000, so ~6000 keeps it from truncating.")
     p.add_argument("--docx-out",
                    help="After a COMPLETE translation, also write a Chinese-only .docx here "
                         "(verified by reading it back) before printing TRANSLATE_BOOK_COMPLETE")
     args = p.parse_args()
+    globals()["MAX_PIECE_CHARS"] = args.max_piece
     translate_book(args.ebook_id, args.limit, args.inspect, args.dry_run,
                    engine=args.engine, resume=args.resume, docx_out=args.docx_out)
 

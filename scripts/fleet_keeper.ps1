@@ -292,7 +292,7 @@ EnsureUntil 'jmeiji-s1' $py @('-X','utf8','scripts\japanese_bible.py','translate
 # The worker prints TRANSLATE_BOOK_COMPLETE only when every source chunk is in the JSONL, R2 took
 # it, and the Chinese-only .docx beside the PDF was written and read back clean - engine errors
 # leave chunks missing, so an outage never retires the lane (STRICT_COMPLETE rule).
-EnsureUntil 'spiral-staircase' $py @('-X','utf8','-u','scripts\translate_ebook_to_zh.py','39e70498-9d27-437c-909a-793a927d52d0','--engine','auto','--resume','--docx-out','next-to-source') 'TRANSLATE_BOOK_COMPLETE'
+EnsureUntil 'spiral-staircase' $py @('-X','utf8','-u','scripts\translate_ebook_to_zh.py','39e70498-9d27-437c-909a-793a927d52d0','--engine','auto','--resume','--max-piece','6000','--docx-out','next-to-source') 'TRANSLATE_BOOK_COMPLETE'
 
 # Collected works -> one Word reader per book on Drive (user 2026-09-23: "Drive needs a Word
 # for every book"). Incremental: only books whose JSONL is newer than the .docx are rebuilt,
