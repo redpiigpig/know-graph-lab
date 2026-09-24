@@ -17,6 +17,13 @@ Nuxt 3 網站 + Python／Node 資料管線。網站原始碼在 `pages/ server/ 
 判不出來時問：「刪掉後重跑腳本能不能一模一樣長回來？」
 能 → 快取（本機）。不能且是最終產物 → 成品（Drive）。不能且是下一步輸入 → 進 git。
 
+## 🚨 收集任何研究資料前，先查已經有什麼
+
+讀 `docs/holdings.md`（自動產生的 Drive／R2／站上電子圖書館總盤點）與相關主題的
+`既有資料盤點.md`，再用 `python -X utf8 scripts/holdings_inventory.py --find 關鍵字`
+查特定書刊。只抓確認沒有的；收完更新主題盤點 md 並重跑盤點。資料夾依主題累積，
+不要一篇論文開一個夾。流程與陷阱見 `.claude/skills/research-data-holdings/SKILL.md`。
+
 ## 其他既有規則
 
 - 所有中文書寫一律繁體。
