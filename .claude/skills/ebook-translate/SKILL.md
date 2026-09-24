@@ -335,10 +335,10 @@ python scripts/translate_corpus_queue.py --only ANF:N # 單跑某本
 
 ### 🔒 私人參考書（不上任何公開 portal、用完即刪）
 
-- **《迴旋梯：掙脫幽暗的攀爬之路》（使用者定名）**（Karen Armstrong, *The Spiral Staircase*, 2004）｜`ebook_id: 39e70498-9d27-437c-909a-793a927d52d0`｜2026-09-24 起翻｜**使用者私人參考、寫完《無境界者》書評後刪除**。查過無中譯本（博客來／天下文化書目／中英維基皆無）；原檔是使用者自備的 calibre 轉出 PDF（有文字層），走本次新增的 `pdf_to_chunks`（按書籤分章、校正錯位書籤、尾頁註釋獨立成「Notes」、**不寫頁碼**——轉檔 PDF 的頁序不是印刷頁）。16 個 source chunk（序＋八章＋註＋前後附件）。lane `spiral-staircase`：`--engine auto --resume --docx-out next-to-source`，全書譯齊＋R2 成功＋Word 讀回驗過才印 `TRANSLATE_BOOK_COMPLETE`。`collection` 刻意留空（cw-word 不會碰它），只在需登入的 `/ebook/[id]` 可讀。
+- **《迴旋梯：掙脫幽暗的攀爬之路》（使用者定名）**（Karen Armstrong, *The Spiral Staircase*, 2004）｜`ebook_id: 39e70498-9d27-437c-909a-793a927d52d0`｜2026-09-24 起翻｜**使用者私人參考、寫完《無境界者》書評後刪除**。查過無中譯本（博客來／天下文化書目／中英維基皆無）；原檔是使用者自備的 calibre 轉出 PDF（有文字層），走本次新增的 `pdf_to_chunks`（按書籤分章、校正錯位書籤、尾註上標轉 `[^N]` 並把註文掛回所屬章末、**不寫頁碼**——轉檔 PDF 的頁序不是印刷頁）。14 個 source chunk（讚譽＋序＋題詞＋八章＋三個附件）。lane `spiral-staircase`：`--engine auto --resume --max-piece 6000 --docx-out next-to-source`，全書譯齊＋R2 成功＋Word 讀回驗過才印 `TRANSLATE_BOOK_COMPLETE`。`collection` 刻意留空（cw-word 不會碰它），只在需登入的 `/ebook/[id]` 可讀。
   **寫完書評後要刪**：①Drive 原檔 `全集\宗教學\凱倫‧阿姆斯壯\Karen Armstrong，The Spiral Staircase My Climb Out of Darkness.pdf`（作家夾留不留到時問使用者）②同夾的 `凱倫·阿姆斯壯，迴旋梯：掙脫幽暗的攀爬之路.docx` ③Drive `_chunks\39e70498-….jsonl` ④DB `ebooks` 那一列 ⑤R2 `ebook-chunks/39e70498-….jsonl.gz` ⑥`scripts/fleet_keeper.ps1` 的 `spiral-staircase` lane（連同 `$STALL_PER_LANE` 那行、`scripts/state/fleet_spiral-staircase.*`、`scripts/logs/fleet_spiral-staircase.*`）。
 
-**PDF 來源（2026-09-24 新增）**：沒有 EPUB 時，`find_source_for_book` 會退到 `pdf_to_chunks`——只收**有文字層**的 PDF（太薄當掃描擋下，先 OCR）。每個 text block 當一段，跨頁斷段在前段無句末標點時接回。另：Anthropic 層（Haiku/Sonnet）這次補上 `unusable_reason` 閘，拒答／「我注意到您提供的…」當失敗處理不入庫（原本只有 Gemini／NVIDIA 有閘）。
+**PDF 來源（2026-09-24 新增）**：沒有 EPUB 時，`find_source_for_book` 會退到 `pdf_to_chunks`——只收**有文字層**的 PDF（太薄當掃描擋下，先 OCR）。每個 text block 當一段，跨頁斷段在前段無句末標點時接回。🚨 裸數字上標（「…God.2」）不處理的話，模型會**自己捏一條註文**（實測捏出假的「pp. xiii–xvi」出處），所以按書中編號順序把第 N 個上標換成 `[^N]`、註文掛回該章末。🚨 **NVIDIA 是 `max_tokens=8000`**：20k 字的 piece 回來只剩 2,135 字、照樣當成功存檔（整篇序言沒了）——現在譯文 CJK 字數低於原文 15% 就判失敗，長書用 `--max-piece 6000`。另：Anthropic 層（Haiku/Sonnet）這次補上 `unusable_reason` 閘，拒答／「我注意到您提供的…」當失敗處理不入庫（原本只有 Gemini／NVIDIA 有閘）。
 
 每本書翻譯前先寫一行記到本表，列：`書名｜source 位置｜source 字數估計｜術語焦點`。翻完 toggle 到 [完成清單](#完成清單)。
 
