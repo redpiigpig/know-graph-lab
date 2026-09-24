@@ -425,7 +425,7 @@ def make_engine(backend: str = "auto"):
             return ""
         # 聖經引文用和合本修訂版（2010）：查出原文引的經文、交給模型照錄（bible_quote_ref）
         import bible_quote_ref
-        te.PROMPT_TMPL = bible_quote_ref.with_hint(UCHIMURA_PROMPT_TMPL, src, prefer="jbungo_zh")
+        te.PROMPT_TMPL = bible_quote_ref.with_hint(UCHIMURA_PROMPT_TMPL, src, prefer="ja-auto")
         pieces = te.split_oversized(src)
 
         def translate_piece(piece: str) -> str:

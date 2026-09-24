@@ -90,6 +90,8 @@ $STALL_PER_LANE = @{
     'niv-s0'        = 60    # one log line per chapter
     'niv-s1'        = 60    # one log line per chapter
     'niv-s2'        = 60    # one log line per chapter
+    'jmeiji-s0'     = 60    # Meiji NT 1880, one log line per chapter
+    'jmeiji-s1'     = 60
     'sekine-s0'      = 240   # one log line per article; the longest has ~230 paragraphs
     'sekine-s1'      = 240   # one log line per article; the longest has ~230 paragraphs
     'sekine-s2'      = 240   # one log line per article; the longest has ~230 paragraphs
@@ -279,6 +281,8 @@ EnsureUntil 'asv-s2' $py @('-X','utf8','scripts\japanese_bible.py','translate','
 EnsureUntil 'niv-s0' $py @('-X','utf8','scripts\japanese_bible.py','translate','--ver','niv_zh','--shard','0/3') 'QUEUE_COMPLETE'
 EnsureUntil 'niv-s1' $py @('-X','utf8','scripts\japanese_bible.py','translate','--ver','niv_zh','--shard','1/3') 'QUEUE_COMPLETE'
 EnsureUntil 'niv-s2' $py @('-X','utf8','scripts\japanese_bible.py','translate','--ver','niv_zh','--shard','2/3') 'QUEUE_COMPLETE'
+EnsureUntil 'jmeiji-s0' $py @('-X','utf8','scripts\japanese_bible.py','translate','--ver','jmeiji_zh','--shard','0/2') 'QUEUE_COMPLETE'
+EnsureUntil 'jmeiji-s1' $py @('-X','utf8','scripts\japanese_bible.py','translate','--ver','jmeiji_zh','--shard','1/2') 'QUEUE_COMPLETE'
 
 # Collected works -> one Word reader per book on Drive (user 2026-09-23: "Drive needs a Word
 # for every book"). Incremental: only books whose JSONL is newer than the .docx are rebuilt,

@@ -566,6 +566,26 @@ CREATE INDEX bible_commentary_verse ON bible_commentary (verse_ref);
     - catholicbible.online (Vulgate 順序 + browser UA): knox
     - bible.com YouVersion (`_ingest_youversion`): morrison/delegates/bridgman/peking/griffith + cuv1919e（淺文理）
 
+### 🟢 日文聖經＋本站逐節直譯（2026-09-23／24）
+
+起因是內村全集的聖經引文：要照作者**當年讀的那一本**譯，不套和修（使用者：「新增一個當時他們使用的日文聖經，全部收錄，再進行翻譯」）。工具是 [scripts/japanese_bible.py](../../../scripts/japanese_bible.py)。
+
+| 代碼 | 版本 | 來源 | 誰讀 |
+|---|---|---|---|
+| `jbungo` | 文語訳（明治元訳舊約 1887＋大正改訳新約 1917） | scrollmapper JapBungo | 內村 1917 後、矢內原 |
+| `jmeiji` | 明治元訳新約 1880（新約） | 日文維基文庫「明治元訳新約聖書 (明治37年)」 | 內村 1917 前（《求安錄》太 5:48 逐字吻合） |
+| `jbungo_zh`／`jmeiji_zh`／`kjv_zh`／`asv_zh`／`niv_zh` | 本站逐節直譯（中文欄） | NVIDIA，fleet_keeper 各 2–3 條線 | — |
+
+- **語域（使用者定）**：古語對古漢語——欽定本、ASV、文語訳、明治元訳 → 淺近文言（thou／thee 作「汝」）；NIV → 白話。
+- **專名**：全大寫 LORD 作「主」、ASV 的 Jehovah 作「耶和華」、日文「神」作「神」。🚨 手上的欽定本語料把 LORD 寫成「Lord」，欽定本的 LORD／Lord 目前分不出來。
+- **引文怎麼接**：`bible_quote_ref.with_hint(..., prefer=)`。內村日文用 `ja-auto`（每條新約引文拿原文段落比明治元訳／大正改訳哪一版字句較像），英文用 `kjv_zh`（實測欽定本獨有片語 138 處：ASV 3 處）。
+- 🚨 **nemotron 要關推理**（`nvidia_chat(thinking=False)` → `chat_template_kwargs.enable_thinking`）：system「/no_think」它不認，規則一多就寫兩萬字推理把 max_tokens 用完，十二條線八成失敗。
+- 🚨 **關推理後有兩種抄**：整節和修擺在 prompt 裡就照抄（重合 92–100%，所以不附和修、專名改在規則裡要求）；給同一章的淺文理當範本也照抄（所以範本固定用施約瑟淺文理詩 1／太 5）。
+- 🚨 **文言版本兩步走**：先白話直譯、再改寫文言。一步到位時日文會把半句原文抄進來、英文會滑回白話。
+- 🚨 **明治本的分節**：頁面上「43-44」是合印（掛第一個節號）；路加 17:36、使徒 15:34 照當時校勘本省略、後面節號前挪——`realign()` 拿大正改訳比字句掛回標準節號。
+- **口語訳（jkougo）沒上架**：scrollmapper 那份缺 473 節（馬太就 207）。
+- 待做：全部跑完後抽樣回譯校對（實測有「否定位置錯」這類格式閘抓不到的誤譯）；`_weak_<ver>.txt` 記著最後一次才放行、文言裡仍夾白話的章，要重譯。
+
 ### 🟢 已加：搜尋框（2026-05-21）
 
 `/scripture` index 頂部加經文搜尋框（[server/api/scripture/search.get.ts](../../../server/api/scripture/search.get.ts)）：

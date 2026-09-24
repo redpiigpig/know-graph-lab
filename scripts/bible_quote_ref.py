@@ -134,9 +134,41 @@ HEAD = {
     "kjv_zh": ("【本段引用的經文——本站依作者所讀的《欽定本聖經》（KJV）逐節直譯的中文（淺近文言），"
                "引用處請照錄，不要改用和合本或自行改寫；若作者明顯是自己另譯、改動字句或在比較譯本，"
                "才照作者的原文譯】"),
+    "jmeiji_zh": ("【本段引用的經文——本站依作者當年所讀的《明治元譯新約》（1880）逐節直譯的中文（淺近文言），"
+                  "引用處請照錄，不要改用和合本或自行改寫；若作者明顯是自己另譯、改動字句或在比較譯本，"
+                  "才照作者的原文譯】"),
     "cuv2010": ("【本段引用的經文——《和合本修訂版》原文，引用處請逐字照錄，不要自行翻譯或改寫；"
                 "若作者明顯是刻意用了不同譯法（自譯、比較譯本），才照原文意思譯】"),
 }
+NT = {"mat", "mrk", "luk", "jhn", "act", "rom", "1co", "2co", "gal", "eph", "php", "col", "1th", "2th",
+      "1ti", "2ti", "tit", "phm", "heb", "jas", "1pe", "2pe", "1jn", "2jn", "3jn", "jud", "rev"}
+
+
+def _cover(verse: str, para: str) -> float:
+    """經文有多少字出現在這段原文裡（3 字以上的連續片段才算）。"""
+    import difflib
+    a, p = re.sub(r"[\W_]", "", verse), re.sub(r"[\W_]", "", para)
+    if not a:
+        return 0.0
+    m = difflib.SequenceMatcher(None, a, p, autojunk=False)
+    return sum(x.size for x in m.get_matching_blocks() if x.size >= 3) / len(a)
+
+
+def ja_version(text: str, code: str, ch: int, v1: int, v2: int) -> str:
+    """日文原著的這條新約引文，照的是明治元訳（1880）還是大正改訳（1917）？
+    直接拿原文段落跟兩版日文比字句，比較像哪一版就用哪一版的中文直譯——比看寫作年份準，
+    也接得住他 1917 年後仍照舊譯引的情形。舊約兩版相同（都是明治元訳舊約），一律 jbungo_zh。"""
+    if code not in NT:
+        return "jbungo_zh"
+    try:
+        import japanese_bible as jb
+        rows = {r["v"]: r["t"] for r in jb.load_book(code)["chapters"].get(str(ch), [])}
+    except Exception:  # noqa: BLE001
+        return "jbungo_zh"
+    score = {}
+    for ver, src in (("jmeiji_zh", "jmeiji"), ("jbungo_zh", "jbungo")):
+        score[ver] = _cover("".join(rows.get(v, {}).get(src, "") for v in range(v1, v2 + 1)), text)
+    return max(score, key=score.get)
 
 
 def _direct(ver: str, code: str, ch: int, v1: int, v2: int) -> list[tuple[int, str]]:
@@ -154,6 +186,7 @@ def verse_hint(text: str, prefer: str = "cuv2010", limit: int = 4) -> str:
     """給翻譯 prompt 的經文提示；原文沒有經文出處（或查不到）就回空字串。
 
     prefer="jbungo_zh"／"kjv_zh"：先用該本的直譯；那一處還沒譯（或缺節）就退回和修。
+    prefer="ja-auto"：日文原著，每條新約引文各自判是明治元訳還是大正改訳（ja_version）。
     同一段裡兩種來源並存時各自標出處，不混成一段。"""
     refs = find_refs(text)[:limit]
     if not refs:
@@ -164,7 +197,8 @@ def verse_hint(text: str, prefer: str = "cuv2010", limit: int = 4) -> str:
         return ""
     lines: dict[str, list[str]] = {}
     for code, ch, v1, v2 in refs:
-        order = [prefer, "cuv2010"] if prefer != "cuv2010" else ["cuv2010"]
+        first = ja_version(text, code, ch, v1, v2) if prefer == "ja-auto" else prefer
+        order = [first, "cuv2010"] if first != "cuv2010" else ["cuv2010"]
         for ver in order:
             try:                                       # 和修詩體殘缺會丟 LookupError
                 vs = _direct(ver, code, ch, v1, v2) if ver != "cuv2010" else cqb.verses(code, ch, v1, v2)

@@ -523,13 +523,16 @@ def meiji_titles() -> list[tuple[str, str, int]]:
 
 
 _RUBY = re.compile(r"\{\{ruby\|([^|}]*)\|[^}]*\}\}")
-_VLINE = re.compile(r"^(\d+)\s+(.+?)(?:<br\s*/?>)?\s*$")
+# 明治本把幾節合印時頁面寫「43-44」「20-21-22」；照站上慣例（和修的合併節同）掛在第一個節號。
+# 只認單一節號的話，這 31 章會靜默各少兩三節。
+_VLINE = re.compile(r"^(\d+)(?:-\d+)*\s+(.+?)(?:<br\s*/?>)?\s*$")
 
 
-def parse_meiji(wikitext: str) -> tuple[dict[str, str], list[str]]:
-    """wikitext → ({節: 經文（只留漢字，讀音拿掉）}, [章末 1881 年版異文註])。"""
+def parse_meiji(wikitext: str) -> tuple[dict[str, str], list[str], set[str]]:
+    """wikitext → ({節: 經文（只留漢字，讀音拿掉）}, [章末 1881 年版異文註], {被併進前一節的節號})。"""
     verses: dict[str, str] = {}
     notes: list[str] = []
+    merged: set[str] = set()
     for ln in wikitext.splitlines():
         ln = ln.strip()
         if ln.startswith("※"):
@@ -538,11 +541,38 @@ def parse_meiji(wikitext: str) -> tuple[dict[str, str], list[str]]:
         m = _VLINE.match(ln)
         if not m:
             continue
+        rng = re.match(r"^(\d+)((?:-\d+)+)", ln)
+        if rng:
+            merged.update(re.findall(r"\d+", rng.group(2)))
         t = _RUBY.sub(r"\1", m.group(2))
         t = re.sub(r"※\d*|<[^>]+>|\{\{[^}]*\}\}|'''?", "", t).strip()
         if t:
             verses[m.group(1)] = t
-    return verses, notes
+    return verses, notes, merged
+
+
+def _sim(a: str, b: str) -> float:
+    import difflib
+    return difflib.SequenceMatcher(None, a, b, autojunk=False).ratio()
+
+
+def realign(meiji: dict[str, str], bungo: dict[str, str], merged: set[str]) -> dict[str, str]:
+    """明治本照當時的校勘本省掉某些節（路加 17:36、使徒 15:34…），後面的節號整個往前挪一號；
+    照原樣收會讓章末經文跟站上其他版本錯開一節。逐節拿去跟大正改訳（同是日文、措辭相近）
+    比字句，比下一節更像就把位移加一。被省略的那一節留空。只處理不是「合印」造成的缺號。"""
+    gaps = set(bungo) - set(meiji) - merged
+    if not gaps:
+        return meiji
+    out: dict[str, str] = {}
+    off = 0
+    for v in sorted(meiji, key=int):
+        t = meiji[v]
+        here = bungo.get(str(int(v) + off), "")
+        nxt = bungo.get(str(int(v) + off + 1), "")
+        if nxt and _sim(t, nxt) > _sim(t, here) + 0.1:
+            off += 1
+        out[str(int(v) + off)] = t
+    return out
 
 
 def meiji() -> None:
@@ -553,6 +583,8 @@ def meiji() -> None:
     print(f"章頁 {len(titles)}（新約應為 260）")
     out: dict = {}
     notes: dict = {}
+    merged_all: dict = {}
+    bungo = json.loads((STAGE / "jbungo.json").read_text(encoding="utf-8"))
     for k, (t, bk, ch) in enumerate(titles, 1):
         f = MEIJI_RAW / f"{bk}_{ch}.txt"
         if not f.exists():
@@ -563,21 +595,23 @@ def meiji() -> None:
             time.sleep(2.5)
             if k % 20 == 0:
                 print(f"  {k}/{len(titles)}", flush=True)
-        vs, ns = parse_meiji(f.read_text(encoding="utf-8"))
+        vs, ns, merged = parse_meiji(f.read_text(encoding="utf-8"))
+        vs = realign(vs, bungo.get(bk, {}).get(str(ch), {}), merged)
+        merged_all.setdefault(bk, {})[str(ch)] = merged
         out.setdefault(bk, {})[str(ch)] = vs
         if ns:
             notes.setdefault(bk, {})[str(ch)] = ns
     (STAGE / "jmeiji.json").write_text(json.dumps(out, ensure_ascii=False), encoding="utf-8")
     (STAGE / "jmeiji_notes.json").write_text(json.dumps(notes, ensure_ascii=False, indent=1), encoding="utf-8")
-    # 跟大正改訳（jbungo 新約）逐章比節數：少的節逐條列出來看，不要只看總數
-    bungo = json.loads((STAGE / "jbungo.json").read_text(encoding="utf-8"))
+    # 跟大正改訳（jbungo 新約）逐章比節數：少的節逐條列出來看，不要只看總數；
+    # 合印的節號（內容在前一節）另計，不算缺
     n = sum(len(v) for b in out.values() for v in b.values())
     diffs = []
     for bk, chs in bungo.items():
         if bk not in MEIJI_BOOKS.values():
             continue
         for ch, vs in chs.items():
-            mine = set(out.get(bk, {}).get(ch, {}))
+            mine = set(out.get(bk, {}).get(ch, {})) | merged_all.get(bk, {}).get(ch, set())
             if set(vs) - mine:
                 diffs.append(f"{bk} {ch}: 明治本缺 {sorted(set(vs) - mine, key=int)}")
             if mine - set(vs):
