@@ -1244,9 +1244,53 @@ def pdf_to_chunks(pdf_path: Path) -> list[dict]:
         if re.sub(r"\W", "", paras[0]).lower() == re.sub(r"\W", "", title).lower():
             paras[0] = f"## {title}"
         else:
+            # A heading sharing its block with the first paragraph ("PREFACE This is
+            # the sequel...") must be cut off, or the model fuses heading and text.
+            if paras[0].lower().startswith(title.lower() + " "):
+                paras[0] = paras[0][len(title):].strip()
             paras.insert(0, f"## {title}")
         chunks.append({"src_file": f"pdf:{p0 + 1}-{p1}", "title_en": title,
                        "content_en": "\n\n".join(paras)})
+    return _attach_pdf_notes(chunks)
+
+
+def _attach_pdf_notes(chunks: list[dict]) -> list[dict]:
+    """Endnote refs survive in a PDF text layer as bare digits glued to the word
+    ("...find God.2"). Left bare, the model invents a footnote for them (seen
+    2026-09-24: a fabricated "From The Spiral Staircase ... pp. xiii-xvi"). Notes
+    are numbered through the book, so find ref N as the first bare N after ref N-1,
+    turn it into [^N], and append the note body in the same "————/(N) body" block
+    epub_to_chunks emits, which the prompt already knows how to translate. The
+    separate Notes chunk is dropped only when every note found its ref."""
+    ni = next((i for i, c in enumerate(chunks) if c["title_en"] == "Notes"), None)
+    if ni is None:
+        return chunks
+    notes = {}
+    for para in chunks[ni]["content_en"].split("\n\n"):
+        m = re.match(r"^(\d{1,3})\s+(.+)", para, re.S)
+        if m:
+            notes[int(m.group(1))] = m.group(2).strip()
+    pos = (0, 0)  # (chunk index, char offset) of the previous ref
+    placed: dict[int, list[int]] = {}
+    for n in sorted(notes):
+        rx = re.compile(rf"(?<=[A-Za-z.,;!?”’\"')\]]){n}(?=\s|$)")
+        for ci in range(pos[0], len(chunks)):
+            if ci == ni:
+                continue
+            text = chunks[ci]["content_en"]
+            m = rx.search(text, pos[1] if ci == pos[0] else 0)
+            if m:
+                chunks[ci]["content_en"] = text[:m.start()] + f"[^{n}]" + text[m.end():]
+                pos = (ci, m.start() + len(f"[^{n}]"))
+                placed.setdefault(ci, []).append(n)
+                break
+    for ci, ns in placed.items():
+        lines = ["", "—" * 30, ""]
+        for n in ns:
+            lines += [f"({n}) {notes[n]}", ""]
+        chunks[ci]["content_en"] = chunks[ci]["content_en"].rstrip() + "\n" + "\n".join(lines)
+    if sum(len(v) for v in placed.values()) == len(notes):
+        chunks = [c for i, c in enumerate(chunks) if i != ni]
     return chunks
 
 
