@@ -67,3 +67,12 @@ description: 🚨 任何研究、找文獻、下載資料、列缺件清單之�
 ## §6 定期更新
 
 Windows 排程 `KGL_Holdings_Inventory` 每週一 03:30 重跑盤點並只 commit `docs/holdings.md`（`scripts/holdings_inventory_weekly.ps1`）。筆電休眠錯過就下次開機補跑（排程設 StartWhenAvailable）。
+
+---
+
+## §7 現況（2026-09-24 夜）
+
+- 新主題夾 `研究資料\民國與台灣佛教史\`：`太虛研究\`、`民國佛教期刊文獻集成\`（海潮音 58 冊＋正編 80、補編 53、74；純影像）、`海潮音\DLBS全文\`（2007–2025，1,140 檔）、`道安法師遺集\`。
+- `全集\佛學\` 新增 12 位台灣長老（盤點：`全集\佛學\台灣長老全集盤點.md`）。
+- 碩博論文（太虛／民國佛教）下載進行中 → `太虛研究\碩博論文\`；NDLTD 帳密在 `.env`（`NDLTD_USER`／`NDLTD_PASS`，勿印）。
+- 未竟事項清單見 `docs/SESSION_HANDOFF_taixu_papers_2026-09-24.md` 第三節。

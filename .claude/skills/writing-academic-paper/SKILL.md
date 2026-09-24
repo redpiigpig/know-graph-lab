@@ -121,3 +121,13 @@ doc.Footnotes(fn.Index).Range.Text='註文'  # 字型取 Footnotes(n).Range.Char
 - `ExportAsFixedFormat` 目標檔被開著會報「唯讀」；ReadOnly 開啟後異常中斷會留隱形 Word。
 - 全文逐字稽核：從 `word/document.xml`、`word/footnotes.xml` 解壓讀（不必開 Word，也不怕鎖檔）。
 - CBETA 頁碼：`raw.githubusercontent.com/cbeta-org/xml-p5/master/Y/Y29/Y29n0029.xml` 找 `<lb n="0008a01" ed="Y"/>`；太虛全書用 `cbdata.dila.edu.tw/stable/toc?q=…&canon=TX` 找篇目，再抓 TX XML 算頁碼範圍。
+
+---
+
+## §I 現況（2026-09-24 夜，最新交接見 `docs/SESSION_HANDOFF_taixu_papers_2026-09-24.md`）
+
+| 論文 | 截止 | 狀態 |
+|---|---|---|
+| 印順基金會〈「三藏法師」是如何鑄成的〉 | 9/25 | ✅ 紙本已寄；Gmail 草稿待使用者附檔寄出。正本＝使用者的 `初稿_v5.docx` |
+| 慧炬〈太虛世界佛學苑〉 | 9/30 | 🔶 換新題、未起稿。結構：願景→機構落地→留學譯介→反思（三份太虛自評對讀，不只〈失敗史〉）；不可再用「尋經譯經勘經」框架（一稿數投） |
+| 傳道法師讀書心得 | 10/30 | ⏸ 使用者自補【待你補】 |
