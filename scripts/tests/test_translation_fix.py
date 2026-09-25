@@ -382,3 +382,27 @@ def test_gnostic_gate():
     import ingest_gnostic as ig
     assert ig.output_gate("我注意到您提供的文本似乎不完整。", "x") == "meta"
     assert ig.output_gate("耶穌說：「看哪，天國在你們裡面。」", "x") is None
+
+
+# 2026-09-25：半中文、無全大寫人名的書目不算未譯
+def test_half_chinese_bibliography_not_untranslated():
+    t = "ZÖCKLER, OTTO. *The Cross of Christ*. 由Maurice J. Evans翻譯。倫敦，1877年。 See also pp. 12-14, ed. Smith, trans. Jones, vol. 2."
+    assert tf.clear_reason(t) == ""
+
+
+def test_english_prose_still_untranslated():
+    t = ("And when he had said these things, he went forth with his disciples over the brook "
+         "Cedron, where was a garden, into the which he entered, and his disciples, and they were there.")
+    assert tf.clear_reason(t) == "untranslated"
+
+
+# 2026-09-25：OCR 雜訊、經典出處縮寫、索引條目不算未譯；英文章名與正文照算
+def test_ocr_noise_and_refs_not_untranslated():
+    for t in ["; i Ih as pan fad is bir EG are eight nf Basten setts tal ne Say is at on of it be as to go",
+              "3. Sa. Gres. III, 1, 17; Go. Gri. III, 4, 30-34. Ya. II, 304; Va. XIX, 12; Ba. IV, 1, 29.",
+              "6aunaka-anukramani, 216. seq. 6aunaka-aranyaka, 314. 6aunaka-grihya-sutra, 212, 250."]:
+        assert tf.clear_reason(t) == "", t
+
+
+def test_english_heading_is_untranslated():
+    assert tf.clear_reason("## § 2. FACT. INSEPARABILITY OF FACT AND ESSENCE, AND THE EIDETIC SCIENCES OF THE WORLD") in ("untranslated", "")

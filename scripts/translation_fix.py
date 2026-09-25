@@ -533,17 +533,39 @@ def clear_reason(zh: str, src: str = "", *, allow_japanese: bool = False) -> str
     han = len(_HAN_RE.findall(t))
     lat = len(_LATIN_RE.findall(t))
     if lat >= 40 and han * 3 < lat:
-        if len(_ALLCAPS_RE.findall(t)) >= 2 and han == 0 and _looks_bibliographic(t):
-            return ""  # 西文書目條目：書名本來就留原文
+        # 西文書目條目：書名本來就留原文。2026-09-25 放寬：半中文的書目（「由 X 翻譯。倫敦，1877年」）
+        # 與沒有全大寫人名的書目也算，原本的條件把它們誤判成未譯。
+        if _looks_bibliographic(t):
+            return ""
         dens = max(len(_EN_FUNCTION_RE.findall(t)), len(_DE_FUNCTION_RE.findall(t)),
                    len(_FR_FUNCTION_RE.findall(t))) / (lat / 100)
-        if dens >= 4.0:
+        if dens >= 4.0 and _prose_like(t):
             return "untranslated"
     # 譯文與原文逐字相同（>=30 字、原文是外文）＝原樣吐回
     s = (src or "").strip()
-    if s and len(t) >= 30 and t == s and han * 3 < lat:
+    if s and len(t) >= 30 and t == s and han * 3 < lat and _prose_like(t):
         return "untranslated"
     return ""
+
+
+def _prose_like(t: str) -> bool:
+    """外文段是「該譯的正文」，還是 OCR 雜訊／經典出處縮寫／索引條目。
+
+    2026-09-25 東方聖書與全集的「未譯」938 段抽查：大多是「i Ih as pan fad is bir」這類 OCR 雜訊、
+    《摩奴法論》的「Ya. II, 304」交叉引用、「6aunaka-anukramani, 216. seq.」索引——原文就是這樣，
+    清空重譯只會讓模型再拒答一次。章名（# 開頭）一律算正文。
+    """
+    s = t.strip()
+    if s.startswith("#"):
+        return True
+    if len(s) < 80:
+        return False
+    if sum(ch.isdigit() for ch in s) / len(s) >= 0.05:
+        return False
+    words = re.findall(r"[A-Za-zÀ-ɏ]+", s)
+    if not words:
+        return False
+    return sum(len(w) for w in words) / len(words) >= 3.5
 
 
 _BIB_RE = re.compile(r"\b(1[5-9]\d\d|20\d\d)\b|pp?\.\s*\d|\bed\.|\beds\.|\bvol\.|\btrans\.", re.I)
@@ -1054,7 +1076,9 @@ def process_chunk(ctx: RunCtx, corpus: str, ch: dict, loc: dict,
         sp = sparas[j] if aligned else ""
         res = _run_segment(ctx, corpus, p, sp, heading=False, japanese_source=ja_source)
         if res.clear:
-            if not allow_clear:
+            # 2026-09-25 使用者定：「未譯」不清空、更不整章退回英文——一段沒譯就把整章好譯文丟掉損失太大。
+            # 這類段落本身就是外文，fathers_retranslate_untranslated.py 會直接撿英文段逐段補譯，不需要先清。
+            if not allow_clear or res.clear == "untranslated":
                 ctx.sink.emit(corpus, res.clear, {**loc, "para": j}, p, sp, "report-only")
                 st.clear[res.clear] += 1
                 new_paras.append(p)

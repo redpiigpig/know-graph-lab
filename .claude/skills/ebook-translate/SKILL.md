@@ -548,6 +548,7 @@ python -X utf8 scripts/translation_fix.py apply --corpus gnostic --ids <doc_slug
   改完要跑報告裡印的 driver 重建指令（**直接改全集 JSONL 會被下一輪重建蓋掉**）；lit_review **刪掉那列 zh**
   並把 entry 從 translated 改回 fetched；gnostic／apocrypha `text=''`（gnostic 不可刪列）；data sources `zh=""`，
   要 commit 才上線；accs 沒有原文可退，清空類**只列清單不動**。
+- 🚨 **2026-09-25「未譯」判準收緊（使用者定：不可整章退回）**：①JSONL 語料（教父、一般譯書）的「未譯」一律**只列清單不動檔**——段落本身就是外文，`fathers_retranslate_untranslated.py --book` 會直接撿英文段逐段補譯（它先切掉註腳，書目不會被翻；它**不推 R2**，要另外 push_to_r2）；②書目判斷放寬（半中文書目也算）；③加 `_prose_like`：OCR 雜訊、經典出處縮寫（Ya. II, 304）、索引條目不算未譯，東方聖書＋全集從 938 筆降到 128 筆。U+FFFD 實際改用 `--fffd-mode strip`（字元後面的譯文完整）。
 - **apply 必帶 `--ids`**，一次一個語料。會跳過正被 lane 寫的書：讀 `scripts/state/fleet_*.pid`、程序還活著就從命令列
   （UUID／`--work`／`--author`）推出它負責的書；30 分鐘內動過的檔也跳過；DB 語料則看 ingest／refine 程序在不在。
   JSONL 寫前留 `.jsonl.tfix.bak`，寫完推 R2（`standardize_ebook.push_to_r2`）並 PATCH `ebooks.total_chars`；`--no-push` 關掉。
