@@ -152,7 +152,7 @@ const store = useCollectedWorksStore()
 const DISCIPLINE_ORDER = ['哲學', '宗教學', '宗教社會學', '神學', '基督宗教研究', '佛學', '佛學研究', '心理學', '社會學', '人類學']
 // 某些傘狀學科的次領域（era 層）要固定順序，不依生年（如基督宗教研究：新約→舊約→教會史）
 const ERA_ORDER: Record<string, string[]> = {
-  基督宗教研究: ['新約研究', '舊約研究', '教會史'],
+  基督宗教研究: ['新約研究', '舊約研究', '次經與典外文獻', '教會史'],
 }
 
 const ALL = '全部'

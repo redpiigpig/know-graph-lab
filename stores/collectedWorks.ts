@@ -44603,7 +44603,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "note": "論多馬福音與正典形成的張力。"
         }
       ],
-      "era": "教會史"
+      "era": "次經與典外文獻"
     },
     {
       "slug": "macculloch",
@@ -44709,6 +44709,1408 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
         }
       ],
       "era": "教會史"
+    },
+    // ────────────────────────────────────────────────────────────────
+    // 【基督宗教研究／次經與典外文獻】（2026-09-26）
+    // 使用者 2026-09-14 點名的第三組十位：舊約偽經（R.H. Charles→Charlesworth→Stone）、
+    // 新約次經（Schneemelcher→Klauck）、死海古卷（Vermes→García Martínez→Collins）、
+    // 拿戈瑪第與諾斯底（Layton→Meyer→King；Pagels 自教會史移入）。
+    // 肖像待回填；書目對照 data/zlib-wanted/biblical-studies.jsonl 的 bs-ap-* 十二筆。
+    // ────────────────────────────────────────────────────────────────
+    {
+      "slug": "rh-charles",
+      "name": "羅伯特‧亨利‧查爾斯",
+      "nameEn": "R. H. Charles",
+      "lifespan": "1855–1931",
+      "disciplineGroup": "基督宗教研究",
+      "era": "次經與典外文獻",
+      "sortYear": 1855,
+      "discipline": "愛爾蘭聖經學者、西敏寺副主教，編成第一部標準的《舊約次經與偽經》英譯集，猶太啟示文學研究的奠基者。",
+      "fields": [
+        "舊約偽經",
+        "以諾書",
+        "啟示錄",
+        "猶太啟示文學"
+      ],
+      "portraitUrl": "",
+      "color": "amber",
+      "emoji": "📜",
+      "contribution": [
+        "查爾斯主編的兩卷本《舊約次經與偽經》（The Apocrypha and Pseudepigrapha of the Old Testament, 1913）是**英語世界第一部標準集**，把散在衣索比亞文、斯拉夫文、敘利亞文、希臘文、拉丁文各種抄本裡的第二聖殿時期文獻集中譯出並加註，此後七十年間學界引用偽經都以「Charles」為準。",
+        "他以一人之力校訂並英譯《以諾一書》（1893、1912）、《禧年書》（1902）、《以諾二書》、《巴錄二書》、《十二族長遺訓》與《摩西升天記》，並在《末世論：希伯來、猶太與基督教》（1899）中首次系統追溯來世觀念從舊約到新約的演變，確立了「啟示文學」作為一個研究領域。",
+        "晚年的《啟示錄註釋》（ICC, 1920）兩卷把偽經研究帶回正典：他主張要讀懂約翰啟示錄，必須先讀懂以諾與巴錄。此書至今仍是啟示錄文獻批判的基本參考。"
+      ],
+      "sourceNote": "1931 年過世，全部著作已進入公有領域；1913 年的兩卷集與各單書譯本都有 archive.org 掃描，可做英／繁中對照。",
+      "timeline": [
+        {
+          "year": "1855",
+          "text": "生於愛爾蘭泰隆郡庫克斯敦。"
+        },
+        {
+          "year": "1883",
+          "text": "受任愛爾蘭聖公會聖職。"
+        },
+        {
+          "year": "1893",
+          "text": "《以諾書》英譯初版，開始偽經校勘工作。"
+        },
+        {
+          "year": "1898–1906",
+          "text": "任牛津大學格林菲爾德七十士譯本講座。"
+        },
+        {
+          "year": "1899",
+          "text": "《末世論：希伯來、猶太與基督教》出版。"
+        },
+        {
+          "year": "1902",
+          "text": "《禧年書》譯註出版。"
+        },
+        {
+          "year": "1910",
+          "text": "當選英國學術院院士。"
+        },
+        {
+          "year": "1913",
+          "text": "主編兩卷本《舊約次經與偽經》出版；任西敏寺法政牧師。"
+        },
+        {
+          "year": "1919",
+          "text": "任西敏寺副主教。"
+        },
+        {
+          "year": "1920",
+          "text": "ICC《啟示錄註釋》兩卷出版。"
+        },
+        {
+          "year": "1931",
+          "text": "逝於倫敦。"
+        }
+      ],
+      "works": [
+        {
+          "title": "舊約次經與偽經",
+          "titleOriginal": "The Apocrypha and Pseudepigrapha of the Old Testament in English",
+          "year": "1913",
+          "yearSort": 1913,
+          "category": "舊約偽經",
+          "languages": [
+            "en"
+          ],
+          "status": "planned",
+          "note": "兩卷；卷一次經、卷二偽經。公有領域，館內已有英文原檔。"
+        },
+        {
+          "title": "以諾書",
+          "titleOriginal": "The Book of Enoch, or 1 Enoch",
+          "year": "1893／1912",
+          "yearSort": 1893,
+          "category": "舊約偽經",
+          "languages": [
+            "en"
+          ],
+          "status": "planned",
+          "note": "1912 年第二版據衣索比亞文抄本重譯。公有領域。"
+        },
+        {
+          "title": "禧年書",
+          "titleOriginal": "The Book of Jubilees, or the Little Genesis",
+          "year": "1902",
+          "yearSort": 1902,
+          "category": "舊約偽經",
+          "languages": [
+            "en"
+          ],
+          "status": "planned",
+          "note": "公有領域。"
+        },
+        {
+          "title": "末世論：希伯來、猶太與基督教",
+          "titleOriginal": "Eschatology: Hebrew, Jewish and Christian. A Critical History of the Doctrine of a Future Life",
+          "year": "1899",
+          "yearSort": 1899,
+          "category": "猶太啟示文學",
+          "languages": [
+            "en"
+          ],
+          "status": "planned",
+          "note": "來世觀念的通史。公有領域。"
+        },
+        {
+          "title": "啟示錄註釋",
+          "titleOriginal": "A Critical and Exegetical Commentary on the Revelation of St. John (ICC)",
+          "year": "1920",
+          "yearSort": 1920,
+          "category": "啟示錄",
+          "languages": [
+            "en"
+          ],
+          "status": "planned",
+          "note": "兩卷。公有領域。"
+        }
+      ]
+    },
+    {
+      "slug": "schneemelcher",
+      "name": "威廉‧施內梅爾赫",
+      "nameEn": "Wilhelm Schneemelcher",
+      "nameOriginal": "Wilhelm Schneemelcher",
+      "lifespan": "1914–2003",
+      "disciplineGroup": "基督宗教研究",
+      "era": "次經與典外文獻",
+      "sortYear": 1914,
+      "discipline": "德國新教教會史家，波昂大學教授，主編德語學界的標準集《新約次經》（Hennecke–Schneemelcher）。",
+      "fields": [
+        "新約次經",
+        "早期教會史",
+        "教父學",
+        "亞他那修研究"
+      ],
+      "portraitUrl": "",
+      "color": "slate",
+      "emoji": "📚",
+      "contribution": [
+        "施內梅爾赫接手亨內克（Edgar Hennecke）1904 年創編的《新約次經》（Neutestamentliche Apokryphen），從第三版（1959／1964）起全面改寫，到第五、六版（1987／1989、1990／1997）已是**德語學界唯一的標準集**：卷一福音書與相關文獻，卷二使徒行傳、書信與啟示文學，每篇都附導論、抄本狀況與譯文。英譯本（R. McL. Wilson 譯，1991／1992）同樣成為英語世界的通用本。",
+        "他把「次經」重新界定為一個文類史問題：不是被正典排除的殘餘，而是與正典並行、互相影響的早期基督教寫作傳統。導論中對「福音書」「使徒行傳」文類的界說，至今仍是討論典外文獻時的起點。",
+        "教會史方面，他長期主持《教父學書目》（Bibliographia Patristica）、參與亞他那修全集的校勘，並著有《早期基督教》（Das Urchristentum, 1981），是戰後德國教父學與教會史的重要組織者。"
+      ],
+      "sourceNote": "2003 年過世，德文原著與英譯仍在版權期內；館內已有英譯卷一原檔。",
+      "timeline": [
+        {
+          "year": "1914",
+          "text": "生於柏林。"
+        },
+        {
+          "year": "1938–1945",
+          "text": "修習神學；戰時服役。"
+        },
+        {
+          "year": "1949",
+          "text": "於波昂取得神學博士，論文研究亞他那修。"
+        },
+        {
+          "year": "1954",
+          "text": "任波昂大學教會史教授。"
+        },
+        {
+          "year": "1959／1964",
+          "text": "《新約次經》第三版兩卷出版，從此署名 Hennecke–Schneemelcher。"
+        },
+        {
+          "year": "1981",
+          "text": "《早期基督教》出版。"
+        },
+        {
+          "year": "1987／1989",
+          "text": "《新約次經》第五版兩卷出版。"
+        },
+        {
+          "year": "1991／1992",
+          "text": "威爾遜英譯本出版。"
+        },
+        {
+          "year": "2003",
+          "text": "逝於巴特洪內夫。"
+        }
+      ],
+      "works": [
+        {
+          "title": "新約次經卷一：福音書與相關文獻",
+          "titleOriginal": "Neutestamentliche Apokryphen I: Evangelien ／ New Testament Apocrypha I: Gospels and Related Writings",
+          "year": "1959／1987",
+          "yearSort": 1959,
+          "category": "新約次經",
+          "languages": [
+            "de",
+            "en"
+          ],
+          "status": "copyright",
+          "note": "館內已有 1991 年英譯原檔。"
+        },
+        {
+          "title": "新約次經卷二：使徒行傳、書信與啟示文學",
+          "titleOriginal": "Neutestamentliche Apokryphen II: Apostolisches, Apokalypsen und Verwandtes",
+          "year": "1964／1989",
+          "yearSort": 1964,
+          "category": "新約次經",
+          "languages": [
+            "de",
+            "en"
+          ],
+          "status": "copyright",
+          "note": ""
+        },
+        {
+          "title": "早期基督教",
+          "titleOriginal": "Das Urchristentum",
+          "year": "1981",
+          "yearSort": 1981,
+          "category": "早期教會史",
+          "languages": [
+            "de"
+          ],
+          "status": "copyright",
+          "note": ""
+        },
+        {
+          "title": "教父學書目（主編）",
+          "titleOriginal": "Bibliographia Patristica",
+          "year": "1959–",
+          "yearSort": 1959,
+          "category": "教父學",
+          "languages": [
+            "de"
+          ],
+          "status": "copyright",
+          "note": "年度書目，長期主持。"
+        }
+      ]
+    },
+    {
+      "slug": "vermes",
+      "name": "格札‧維爾梅斯",
+      "nameEn": "Géza Vermes",
+      "nameOriginal": "Vermes Géza",
+      "lifespan": "1924–2013",
+      "disciplineGroup": "基督宗教研究",
+      "era": "次經與典外文獻",
+      "sortYear": 1924,
+      "discipline": "匈牙利裔英國學者，牛津大學猶太研究教授，死海古卷英譯的標準本作者，「猶太人耶穌」研究的開創者。",
+      "fields": [
+        "死海古卷",
+        "第二聖殿猶太教",
+        "歷史耶穌",
+        "猶太釋經傳統"
+      ],
+      "portraitUrl": "",
+      "color": "teal",
+      "emoji": "🏺",
+      "contribution": [
+        "維爾梅斯 1962 年的《死海古卷英譯》（The Dead Sea Scrolls in English）是**第一部面向一般讀者的古卷全譯**，此後歷經六版擴充至《死海古卷全集英譯》（1997），半個世紀來一直是英語世界引用古卷的通用本。他也是 1970–80 年代公開批評官方編輯團隊壟斷古卷、迫使全部照片在 1991 年公開的關鍵人物。",
+        "《猶太人耶穌》（Jesus the Jew, 1973）把耶穌放回加利利的哈西德傳統與第二聖殿猶太教的宗教圖景中閱讀，開啟「歷史耶穌第三次探索」的猶太路徑；後續的《猶太人耶穌的宗教》（1993）與《基督教的起源》（2012）追溯從拿撒勒到尼西亞的觀念演變。",
+        "他與米勒（Fergus Millar）等人合力修訂舒勒（Emil Schürer）的《耶穌時代的猶太民族史》（1973–1987）三卷，把十九世紀的經典重寫為當代標準參考書；早年的《猶太教中的經文與傳統》（1961）則是米大示式釋經研究的奠基之作。"
+      ],
+      "sourceNote": "2013 年過世，著作仍在版權期內；館內已有《死海古卷全集英譯》原檔。",
+      "timeline": [
+        {
+          "year": "1924",
+          "text": "生於匈牙利馬科，猶太家庭，幼時隨父母改宗天主教。"
+        },
+        {
+          "year": "1944",
+          "text": "納粹佔領期間藏匿倖存；父母死於集中營。"
+        },
+        {
+          "year": "1950",
+          "text": "領受天主教司鐸聖職；1953 年於魯汶取得博士，論文即研究死海古卷。"
+        },
+        {
+          "year": "1957",
+          "text": "離開聖職，移居英國，任教紐卡斯爾。"
+        },
+        {
+          "year": "1961",
+          "text": "《猶太教中的經文與傳統》出版。"
+        },
+        {
+          "year": "1962",
+          "text": "《死海古卷英譯》初版。"
+        },
+        {
+          "year": "1965",
+          "text": "任牛津大學猶太研究講師，1989 年升教授。"
+        },
+        {
+          "year": "1973",
+          "text": "《猶太人耶穌》出版；修訂版舒勒《猶太民族史》卷一問世。"
+        },
+        {
+          "year": "1997",
+          "text": "《死海古卷全集英譯》出版。"
+        },
+        {
+          "year": "2012",
+          "text": "《基督教的起源》出版。"
+        },
+        {
+          "year": "2013",
+          "text": "逝於牛津。"
+        }
+      ],
+      "works": [
+        {
+          "title": "死海古卷全集英譯",
+          "titleOriginal": "The Complete Dead Sea Scrolls in English",
+          "year": "1997",
+          "yearSort": 1997,
+          "category": "死海古卷",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "1962 年初版《死海古卷英譯》的最終擴充版。館內已有英文原檔。"
+        },
+        {
+          "title": "猶太人耶穌",
+          "titleOriginal": "Jesus the Jew: A Historian's Reading of the Gospels",
+          "year": "1973",
+          "yearSort": 1973,
+          "category": "歷史耶穌",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": ""
+        },
+        {
+          "title": "猶太教中的經文與傳統",
+          "titleOriginal": "Scripture and Tradition in Judaism: Haggadic Studies",
+          "year": "1961",
+          "yearSort": 1961,
+          "category": "猶太釋經傳統",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": ""
+        },
+        {
+          "title": "耶穌時代的猶太民族史（修訂舒勒）",
+          "titleOriginal": "The History of the Jewish People in the Age of Jesus Christ (175 B.C.–A.D. 135), rev. ed.",
+          "year": "1973–1987",
+          "yearSort": 1973,
+          "category": "第二聖殿猶太教",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "三卷四冊，與 Fergus Millar、Matthew Black、Martin Goodman 合編。"
+        },
+        {
+          "title": "猶太人耶穌的宗教",
+          "titleOriginal": "The Religion of Jesus the Jew",
+          "year": "1993",
+          "yearSort": 1993,
+          "category": "歷史耶穌",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": ""
+        },
+        {
+          "title": "基督教的起源：從拿撒勒到尼西亞",
+          "titleOriginal": "Christian Beginnings: From Nazareth to Nicaea, AD 30–325",
+          "year": "2012",
+          "yearSort": 2012,
+          "category": "歷史耶穌",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "slug": "michael-stone",
+      "name": "麥可‧斯通",
+      "nameEn": "Michael E. Stone",
+      "lifespan": "1938–",
+      "disciplineGroup": "基督宗教研究",
+      "era": "次經與典外文獻",
+      "sortYear": 1938,
+      "discipline": "希伯來大學亞美尼亞研究與比較宗教教授，第二聖殿時期猶太文獻與亞美尼亞文偽經的權威。",
+      "fields": [
+        "舊約偽經",
+        "以斯拉四書",
+        "亞當夏娃文獻",
+        "亞美尼亞文獻"
+      ],
+      "portraitUrl": "",
+      "color": "orange",
+      "emoji": "🕎",
+      "contribution": [
+        "斯通主編的《第二聖殿時期的猶太文獻》（Jewish Writings of the Second Temple Period, 1984，CRINT 叢書）是**第一部按文類把次經、偽經、昆蘭文獻、斐羅與約瑟夫整體介紹的手冊**，把「第二聖殿猶太教」確立為一個獨立於「兩約之間」神學框架的歷史研究領域。",
+        "他的《以斯拉四書》Hermeneia 註釋（1990）是這部偽經的定本研究；《亞當夏娃文獻史》（1992）與後續的多語言校勘整理出一整個從猶太教延伸到中世紀基督教的「亞當文學」傳統，並與 Gary Anderson 合編對觀本。",
+        "作為亞美尼亞學者，他發掘並刊佈大量只存於亞美尼亞文的偽經（亞美尼亞文《以諾》殘篇、《族長遺訓》、亞當文獻），並在《經文、教派與異象》（1980）與《古代猶太教：新視野》（2011）中主張啟示文學的核心是「異象經驗」而不只是文學體裁。"
+      ],
+      "sourceNote": "在世，著作仍在版權期內；館內已有《第二聖殿時期的猶太文獻》原檔。",
+      "timeline": [
+        {
+          "year": "1938",
+          "text": "生於英國里茲，幼時移居澳洲。"
+        },
+        {
+          "year": "1965",
+          "text": "獲哈佛大學博士，論文研究《以斯拉四書》。"
+        },
+        {
+          "year": "1966",
+          "text": "任教耶路撒冷希伯來大學，開設亞美尼亞研究。"
+        },
+        {
+          "year": "1980",
+          "text": "《經文、教派與異象》出版。"
+        },
+        {
+          "year": "1984",
+          "text": "主編《第二聖殿時期的猶太文獻》出版。"
+        },
+        {
+          "year": "1990",
+          "text": "Hermeneia《以斯拉四書》註釋出版。"
+        },
+        {
+          "year": "1992",
+          "text": "《亞當夏娃文獻史》出版。"
+        },
+        {
+          "year": "2011",
+          "text": "《古代猶太教：新視野與觀點》出版。"
+        }
+      ],
+      "works": [
+        {
+          "title": "第二聖殿時期的猶太文獻（主編）",
+          "titleOriginal": "Jewish Writings of the Second Temple Period: Apocrypha, Pseudepigrapha, Qumran Sectarian Writings, Philo, Josephus",
+          "year": "1984",
+          "yearSort": 1984,
+          "category": "第二聖殿猶太教",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "CRINT II/2。館內已有英文原檔。"
+        },
+        {
+          "title": "以斯拉四書註釋",
+          "titleOriginal": "Fourth Ezra: A Commentary on the Book of Fourth Ezra (Hermeneia)",
+          "year": "1990",
+          "yearSort": 1990,
+          "category": "舊約偽經",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": ""
+        },
+        {
+          "title": "亞當夏娃文獻史",
+          "titleOriginal": "A History of the Literature of Adam and Eve",
+          "year": "1992",
+          "yearSort": 1992,
+          "category": "亞當夏娃文獻",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": ""
+        },
+        {
+          "title": "經文、教派與異象",
+          "titleOriginal": "Scriptures, Sects and Visions: A Profile of Judaism from Ezra to the Jewish Revolts",
+          "year": "1980",
+          "yearSort": 1980,
+          "category": "第二聖殿猶太教",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": ""
+        },
+        {
+          "title": "古代猶太教：新視野與觀點",
+          "titleOriginal": "Ancient Judaism: New Visions and Views",
+          "year": "2011",
+          "yearSort": 2011,
+          "category": "第二聖殿猶太教",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "slug": "charlesworth",
+      "name": "詹姆斯‧查爾斯沃思",
+      "nameEn": "James H. Charlesworth",
+      "lifespan": "1940–",
+      "disciplineGroup": "基督宗教研究",
+      "era": "次經與典外文獻",
+      "sortYear": 1940,
+      "discipline": "普林斯頓神學院新約語言與文學教授，主編兩卷本《舊約偽經》，主持普林斯頓死海古卷計畫。",
+      "fields": [
+        "舊約偽經",
+        "死海古卷",
+        "歷史耶穌",
+        "約翰福音"
+      ],
+      "portraitUrl": "",
+      "color": "amber",
+      "emoji": "📜",
+      "contribution": [
+        "查爾斯沃思主編的兩卷本《舊約偽經》（The Old Testament Pseudepigrapha, 1983／1985）收錄 52 篇文獻、集合五十餘位譯者，**取代查爾斯 1913 年的集子成為英語世界的標準本**，並把「偽經」的範圍從查爾斯的十七篇擴大到包括晚期與基督教改寫的文本，改變了整個領域的邊界。",
+        "他主持的普林斯頓神學院死海古卷計畫（PTSDSSP）自 1994 年起逐卷刊佈希伯來、亞蘭文原文與英譯對照本；《耶穌與死海古卷》（1992）、《耶穌與猶太教》（Jesus within Judaism, 1988）則把古卷與偽經直接接上歷史耶穌研究。",
+        "他的《舊約偽經與新約》（1985）論證偽經是理解新約思想世界不可缺的背景，《善與惡的蛇》（2010）追索蛇的象徵從古代近東到約翰福音的轉變，是把典外文獻讀進正典詮釋的代表作。"
+      ],
+      "sourceNote": "在世，著作仍在版權期內；館內已有《舊約偽經》卷二原檔。",
+      "timeline": [
+        {
+          "year": "1940",
+          "text": "生於美國。"
+        },
+        {
+          "year": "1967",
+          "text": "獲杜克大學博士。"
+        },
+        {
+          "year": "1969",
+          "text": "任教杜克大學。"
+        },
+        {
+          "year": "1983／1985",
+          "text": "主編兩卷本《舊約偽經》出版。"
+        },
+        {
+          "year": "1984",
+          "text": "任普林斯頓神學院新約語言與文學教授。"
+        },
+        {
+          "year": "1988",
+          "text": "《耶穌與猶太教》出版。"
+        },
+        {
+          "year": "1994",
+          "text": "普林斯頓死海古卷計畫第一卷刊行。"
+        },
+        {
+          "year": "2010",
+          "text": "《善與惡的蛇》出版。"
+        }
+      ],
+      "works": [
+        {
+          "title": "舊約偽經（主編）",
+          "titleOriginal": "The Old Testament Pseudepigrapha",
+          "year": "1983／1985",
+          "yearSort": 1983,
+          "category": "舊約偽經",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "兩卷；卷一啟示文學與遺訓，卷二舊約擴寫、智慧文學、禱文與詩篇等。館內已有卷二英文原檔。"
+        },
+        {
+          "title": "舊約偽經與新約",
+          "titleOriginal": "The Old Testament Pseudepigrapha and the New Testament: Prolegomena for the Study of Christian Origins",
+          "year": "1985",
+          "yearSort": 1985,
+          "category": "舊約偽經",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": ""
+        },
+        {
+          "title": "耶穌與猶太教",
+          "titleOriginal": "Jesus within Judaism: New Light from Exciting Archaeological Discoveries",
+          "year": "1988",
+          "yearSort": 1988,
+          "category": "歷史耶穌",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": ""
+        },
+        {
+          "title": "死海古卷：希伯來、亞蘭與希臘原文英譯對照（主編）",
+          "titleOriginal": "The Dead Sea Scrolls: Hebrew, Aramaic, and Greek Texts with English Translations (PTSDSSP)",
+          "year": "1994–",
+          "yearSort": 1994,
+          "category": "死海古卷",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "多卷，陸續出版。"
+        },
+        {
+          "title": "善與惡的蛇",
+          "titleOriginal": "The Good and Evil Serpent: How a Universal Symbol Became Christianized",
+          "year": "2010",
+          "yearSort": 2010,
+          "category": "約翰福音",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "slug": "layton",
+      "name": "本特利‧萊頓",
+      "nameEn": "Bentley Layton",
+      "lifespan": "1941–",
+      "disciplineGroup": "基督宗教研究",
+      "era": "次經與典外文獻",
+      "sortYear": 1941,
+      "discipline": "耶魯大學宗教研究與科普特語教授，《諾斯底經典》的譯註者，拿戈瑪第抄本校勘與科普特語法的權威。",
+      "fields": [
+        "諾斯底文獻",
+        "拿戈瑪第抄本",
+        "科普特語",
+        "埃及修道文獻"
+      ],
+      "portraitUrl": "",
+      "color": "violet",
+      "emoji": "𓂀",
+      "contribution": [
+        "萊頓的《諾斯底經典》（The Gnostic Scriptures, 1987）是**第一部按學派（塞特派、瓦倫廷派、多馬傳統、巴西里德等）而非按抄本編排的諾斯底文獻譯注集**，附有清晰的導論與註釋，至今仍是英語世界教學用的標準讀本；2021 年由布拉克（David Brakke）增訂再版。",
+        "他主編的《拿戈瑪第抄本 II,2–7》（1989）兩卷是《多馬福音》《腓力福音》等核心文本的校勘定本；《諾斯底論復活》（1979）則以一篇文獻示範科普特語文獻學的精細讀法。1978 年他召集的耶魯「諾斯底主義再發現」會議，是此領域學術史上的分水嶺。",
+        "《科普特語法》（A Coptic Grammar, 2000）是薩伊德方言的當代標準語法書；晚年的《我們列祖的規條》（2014）整理修道院長謝努特的修道規則，把科普特研究從諾斯底延伸到埃及修道傳統。"
+      ],
+      "sourceNote": "在世，著作仍在版權期內；館內已有《諾斯底經典》原檔。",
+      "timeline": [
+        {
+          "year": "1941",
+          "text": "生於美國。"
+        },
+        {
+          "year": "1971",
+          "text": "獲哈佛大學博士。"
+        },
+        {
+          "year": "1978",
+          "text": "召集耶魯「諾斯底主義再發現」國際會議。"
+        },
+        {
+          "year": "1979",
+          "text": "《諾斯底論復活》出版。"
+        },
+        {
+          "year": "1987",
+          "text": "《諾斯底經典》出版。"
+        },
+        {
+          "year": "1989",
+          "text": "主編《拿戈瑪第抄本 II,2–7》兩卷出版。"
+        },
+        {
+          "year": "2000",
+          "text": "《科普特語法》出版。"
+        },
+        {
+          "year": "2014",
+          "text": "《我們列祖的規條：謝努特的修道規則》出版。"
+        }
+      ],
+      "works": [
+        {
+          "title": "諾斯底經典",
+          "titleOriginal": "The Gnostic Scriptures: A New Translation with Annotations and Introductions",
+          "year": "1987",
+          "yearSort": 1987,
+          "category": "諾斯底文獻",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "2021 年與 David Brakke 合作增訂再版。館內已有英文原檔。"
+        },
+        {
+          "title": "拿戈瑪第抄本 II,2–7（主編）",
+          "titleOriginal": "Nag Hammadi Codex II, 2–7, together with XIII,2*, Brit. Lib. Or. 4926(1), and P.Oxy. 1, 654, 655",
+          "year": "1989",
+          "yearSort": 1989,
+          "category": "拿戈瑪第抄本",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "兩卷，含多馬福音、腓力福音等校勘本。"
+        },
+        {
+          "title": "諾斯底論復活",
+          "titleOriginal": "The Gnostic Treatise on Resurrection from Nag Hammadi",
+          "year": "1979",
+          "yearSort": 1979,
+          "category": "諾斯底文獻",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": ""
+        },
+        {
+          "title": "諾斯底主義的再發現（主編）",
+          "titleOriginal": "The Rediscovery of Gnosticism",
+          "year": "1980／1981",
+          "yearSort": 1980,
+          "category": "諾斯底文獻",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "1978 年耶魯會議論文集，兩卷。"
+        },
+        {
+          "title": "科普特語法",
+          "titleOriginal": "A Coptic Grammar with Chrestomathy and Glossary: Sahidic Dialect",
+          "year": "2000",
+          "yearSort": 2000,
+          "category": "科普特語",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "slug": "garcia-martinez",
+      "name": "弗洛倫蒂諾‧加西亞‧馬丁內斯",
+      "nameEn": "Florentino García Martínez",
+      "nameOriginal": "Florentino García Martínez",
+      "lifespan": "1942–",
+      "disciplineGroup": "基督宗教研究",
+      "era": "次經與典外文獻",
+      "sortYear": 1942,
+      "discipline": "西班牙昆蘭學者，格羅寧根與魯汶大學教授，《死海古卷研究版》原文英譯對照本的編者，《昆蘭學刊》主編。",
+      "fields": [
+        "死海古卷",
+        "昆蘭研究",
+        "亞蘭文文獻",
+        "啟示文學"
+      ],
+      "portraitUrl": "",
+      "color": "teal",
+      "emoji": "🏺",
+      "contribution": [
+        "加西亞‧馬丁內斯與提赫拉爾（Eibert Tigchelaar）合編的《死海古卷研究版》（The Dead Sea Scrolls Study Edition, 1997／1998）兩卷，是**第一部把昆蘭全部非聖經文獻的希伯來、亞蘭原文與英譯逐行對照排版的工具書**，至今仍是研究者案頭必備。它的前身《死海古卷譯本》（西班牙文 1992、英文 1994）則是第一部全譯本。",
+        "他在《昆蘭與啟示文學》（1992）中提出「格羅寧根假說」：昆蘭團體是從更早的巴勒斯坦啟示傳統中分裂出來的，愛色尼運動與昆蘭社群不能簡單畫等號。此說改變了 1990 年代以後對古卷起源的討論框架。",
+        "作為《昆蘭學刊》（Revue de Qumrân）主編與《猶太沙漠發現》第 23 卷（昆蘭第 11 洞穴第二部分，1998）的編者，他把西班牙、荷蘭與比利時的昆蘭研究接上國際主流，並培養了一整代歐洲古卷學者。"
+      ],
+      "sourceNote": "在世，著作仍在版權期內；《死海古卷研究版》z-lib 探勘未命中。",
+      "timeline": [
+        {
+          "year": "1942",
+          "text": "生於西班牙瓜達拉哈拉省莫查萊斯。"
+        },
+        {
+          "year": "1970 年代",
+          "text": "於羅馬與耶路撒冷修習聖經與古卷研究。"
+        },
+        {
+          "year": "1980",
+          "text": "任教荷蘭格羅寧根大學，後創設昆蘭研究所。"
+        },
+        {
+          "year": "1992",
+          "text": "《死海古卷譯本》西班牙文版與《昆蘭與啟示文學》出版。"
+        },
+        {
+          "year": "1994",
+          "text": "《死海古卷譯本》英文版出版。"
+        },
+        {
+          "year": "1997／1998",
+          "text": "《死海古卷研究版》兩卷出版。"
+        },
+        {
+          "year": "1998",
+          "text": "《猶太沙漠發現》第 23 卷出版。"
+        },
+        {
+          "year": "2000 年代",
+          "text": "轉任比利時魯汶大學，續任《昆蘭學刊》主編。"
+        }
+      ],
+      "works": [
+        {
+          "title": "死海古卷研究版",
+          "titleOriginal": "The Dead Sea Scrolls Study Edition",
+          "year": "1997／1998",
+          "yearSort": 1997,
+          "category": "死海古卷",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "兩卷，與 Eibert Tigchelaar 合編；原文英譯對照。"
+        },
+        {
+          "title": "死海古卷譯本",
+          "titleOriginal": "The Dead Sea Scrolls Translated: The Qumran Texts in English",
+          "year": "1992／1994",
+          "yearSort": 1992,
+          "category": "死海古卷",
+          "languages": [
+            "es",
+            "en"
+          ],
+          "status": "copyright",
+          "note": "西班牙文原版 Textos de Qumrán (1992)。"
+        },
+        {
+          "title": "昆蘭與啟示文學",
+          "titleOriginal": "Qumran and Apocalyptic: Studies on the Aramaic Texts from Qumran",
+          "year": "1992",
+          "yearSort": 1992,
+          "category": "昆蘭研究",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "提出格羅寧根假說。"
+        },
+        {
+          "title": "猶太沙漠發現第 23 卷：昆蘭第 11 洞穴（二）",
+          "titleOriginal": "Discoveries in the Judaean Desert XXIII: Qumran Cave 11.II (11Q2–18, 11Q20–31)",
+          "year": "1998",
+          "yearSort": 1998,
+          "category": "死海古卷",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "與 Tigchelaar、van der Woude 合編。"
+        }
+      ]
+    },
+    {
+      "slug": "jj-collins",
+      "name": "約翰‧柯林斯",
+      "nameEn": "John J. Collins",
+      "lifespan": "1946–",
+      "disciplineGroup": "基督宗教研究",
+      "era": "次經與典外文獻",
+      "sortYear": 1946,
+      "discipline": "愛爾蘭裔美國學者，耶魯大學舊約批判與詮釋教授，猶太啟示文學的定義者，但以理書與死海古卷研究的權威。",
+      "fields": [
+        "啟示文學",
+        "但以理書",
+        "死海古卷",
+        "第二聖殿猶太教"
+      ],
+      "portraitUrl": "",
+      "color": "orange",
+      "emoji": "🔥",
+      "contribution": [
+        "柯林斯 1979 年主編的《啟示：一個文類的形態學》（Semeia 14）給出了**至今仍被普遍引用的「啟示」文類定義**：一種由異世界中介者向人間受者揭示超越實在的敘事框架。他的《啟示文學的想像》（1984，三版 2016）以此為軸把猶太啟示文學從但以理、以諾到以斯拉四書整體梳理，是這個領域的標準教科書。",
+        "Hermeneia《但以理書註釋》（1993）與《權杖與星：死海古卷中的彌賽亞》（1995）分別是但以理書與昆蘭彌賽亞觀念的定本研究；《雅典與耶路撒冷之間》（1983）和《希臘化時代的猶太智慧》（1997）則處理離散猶太教與希臘化的交會。",
+        "他在《昆蘭社群之外》（2010）中主張古卷所屬的運動遠比昆蘭一地寬廣；長期擔任《死海古卷發現》學刊主編與聖經文學學會會長（2002），並主編《牛津猶太啟示文學手冊》（2014）。"
+      ],
+      "sourceNote": "在世，著作仍在版權期內；館內已有《啟示文學的想像》原檔。",
+      "timeline": [
+        {
+          "year": "1946",
+          "text": "生於愛爾蘭。"
+        },
+        {
+          "year": "1972",
+          "text": "獲哈佛大學博士。"
+        },
+        {
+          "year": "1979",
+          "text": "主編 Semeia 14《啟示：一個文類的形態學》。"
+        },
+        {
+          "year": "1983",
+          "text": "《雅典與耶路撒冷之間》出版。"
+        },
+        {
+          "year": "1984",
+          "text": "《啟示文學的想像》出版。"
+        },
+        {
+          "year": "1993",
+          "text": "Hermeneia《但以理書註釋》出版。"
+        },
+        {
+          "year": "1995",
+          "text": "《權杖與星》出版。"
+        },
+        {
+          "year": "2000",
+          "text": "任耶魯大學神學院霍姆斯講座舊約批判與詮釋教授。"
+        },
+        {
+          "year": "2002",
+          "text": "任聖經文學學會會長。"
+        },
+        {
+          "year": "2010",
+          "text": "《昆蘭社群之外》出版。"
+        }
+      ],
+      "works": [
+        {
+          "title": "啟示文學的想像",
+          "titleOriginal": "The Apocalyptic Imagination: An Introduction to Jewish Apocalyptic Literature",
+          "year": "1984／2016",
+          "yearSort": 1984,
+          "category": "啟示文學",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "第三版 2016。館內已有英文原檔。"
+        },
+        {
+          "title": "啟示：一個文類的形態學（主編）",
+          "titleOriginal": "Apocalypse: The Morphology of a Genre (Semeia 14)",
+          "year": "1979",
+          "yearSort": 1979,
+          "category": "啟示文學",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "提出啟示文類的標準定義。"
+        },
+        {
+          "title": "但以理書註釋",
+          "titleOriginal": "Daniel: A Commentary on the Book of Daniel (Hermeneia)",
+          "year": "1993",
+          "yearSort": 1993,
+          "category": "但以理書",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": ""
+        },
+        {
+          "title": "權杖與星：死海古卷中的彌賽亞",
+          "titleOriginal": "The Scepter and the Star: The Messiahs of the Dead Sea Scrolls and Other Ancient Literature",
+          "year": "1995",
+          "yearSort": 1995,
+          "category": "死海古卷",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": ""
+        },
+        {
+          "title": "雅典與耶路撒冷之間",
+          "titleOriginal": "Between Athens and Jerusalem: Jewish Identity in the Hellenistic Diaspora",
+          "year": "1983",
+          "yearSort": 1983,
+          "category": "第二聖殿猶太教",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": ""
+        },
+        {
+          "title": "昆蘭社群之外",
+          "titleOriginal": "Beyond the Qumran Community: The Sectarian Movement of the Dead Sea Scrolls",
+          "year": "2010",
+          "yearSort": 2010,
+          "category": "死海古卷",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "slug": "klauck",
+      "name": "漢斯–約瑟夫‧克勞克",
+      "nameEn": "Hans-Josef Klauck",
+      "nameOriginal": "Hans-Josef Klauck",
+      "lifespan": "1946–",
+      "disciplineGroup": "基督宗教研究",
+      "era": "次經與典外文獻",
+      "sortYear": 1946,
+      "discipline": "德國天主教新約學者，芝加哥大學神學院教授，以《次經福音書導論》《次經使徒行傳》把典外文獻研究寫成系統教科書。",
+      "fields": [
+        "新約次經",
+        "次經使徒行傳",
+        "希臘羅馬宗教環境",
+        "古代書信"
+      ],
+      "portraitUrl": "",
+      "color": "slate",
+      "emoji": "📚",
+      "contribution": [
+        "克勞克的《次經福音書導論》（Apokryphe Evangelien, 2002；英譯 2003）與《次經使徒行傳導論》（2005；英譯 2008）是**第一套按文類逐篇介紹典外文獻的當代教科書**，每篇交代抄本、年代、內容與研究史，把施內梅爾赫集子裡的專家導論改寫成可教學的形式。",
+        "他的《早期基督教的宗教環境》（Die religiöse Umwelt des Urchristentums, 1995／1996；英譯 2000）從家庭與城邦祭祀、奧祕宗教、皇帝崇拜到哲學宗教，系統描繪新約寫作時的希臘羅馬宗教世界；《早期基督教中的魔法與異教》（2000）則從使徒行傳看基督教與周邊宗教的碰撞。",
+        "早期的《主餐與希臘化祭儀》（1982）以宗教史方法比較聖餐與異教會餐，《古代書信與新約》（2006）提供書信體的文類分析。他也是《聖經及其接受史百科全書》（EBR）的創始主編之一。"
+      ],
+      "sourceNote": "在世，德文原著與英譯仍在版權期內；《次經福音書導論》z-lib 探勘未命中。",
+      "timeline": [
+        {
+          "year": "1946",
+          "text": "生於德國黑森州赫斯巴赫。"
+        },
+        {
+          "year": "1977",
+          "text": "於明斯特取得神學博士。"
+        },
+        {
+          "year": "1982",
+          "text": "任維爾茨堡大學新約教授；《主餐與希臘化祭儀》出版。"
+        },
+        {
+          "year": "1995／1996",
+          "text": "《早期基督教的宗教環境》兩卷出版。"
+        },
+        {
+          "year": "1997",
+          "text": "轉任慕尼黑大學。"
+        },
+        {
+          "year": "2001",
+          "text": "任芝加哥大學神學院新約與早期基督教文學教授。"
+        },
+        {
+          "year": "2002",
+          "text": "《次經福音書導論》出版。"
+        },
+        {
+          "year": "2005",
+          "text": "《次經使徒行傳導論》出版。"
+        },
+        {
+          "year": "2009",
+          "text": "《聖經及其接受史百科全書》第一卷出版，任創始主編。"
+        }
+      ],
+      "works": [
+        {
+          "title": "次經福音書導論",
+          "titleOriginal": "Apokryphe Evangelien: Eine Einführung ／ Apocryphal Gospels: An Introduction",
+          "year": "2002／2003",
+          "yearSort": 2002,
+          "category": "新約次經",
+          "languages": [
+            "de",
+            "en"
+          ],
+          "status": "copyright",
+          "note": ""
+        },
+        {
+          "title": "次經使徒行傳導論",
+          "titleOriginal": "Apokryphe Apostelakten: Eine Einführung ／ The Apocryphal Acts of the Apostles: An Introduction",
+          "year": "2005／2008",
+          "yearSort": 2005,
+          "category": "次經使徒行傳",
+          "languages": [
+            "de",
+            "en"
+          ],
+          "status": "copyright",
+          "note": ""
+        },
+        {
+          "title": "早期基督教的宗教環境",
+          "titleOriginal": "Die religiöse Umwelt des Urchristentums ／ The Religious Context of Early Christianity",
+          "year": "1995／2000",
+          "yearSort": 1995,
+          "category": "希臘羅馬宗教環境",
+          "languages": [
+            "de",
+            "en"
+          ],
+          "status": "copyright",
+          "note": "德文兩卷，英譯合一卷。"
+        },
+        {
+          "title": "早期基督教中的魔法與異教",
+          "titleOriginal": "Magic and Paganism in Early Christianity: The World of the Acts of the Apostles",
+          "year": "2000",
+          "yearSort": 2000,
+          "category": "希臘羅馬宗教環境",
+          "languages": [
+            "de",
+            "en"
+          ],
+          "status": "copyright",
+          "note": ""
+        },
+        {
+          "title": "古代書信與新約",
+          "titleOriginal": "Ancient Letters and the New Testament: A Guide to Context and Exegesis",
+          "year": "2006",
+          "yearSort": 2006,
+          "category": "古代書信",
+          "languages": [
+            "de",
+            "en"
+          ],
+          "status": "copyright",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "slug": "marvin-meyer",
+      "name": "馬文‧梅耶",
+      "nameEn": "Marvin Meyer",
+      "lifespan": "1948–2012",
+      "disciplineGroup": "基督宗教研究",
+      "era": "次經與典外文獻",
+      "sortYear": 1948,
+      "discipline": "美國查普曼大學聖經與基督教研究教授，《拿戈瑪第經集》國際版主編，《猶大福音》首譯團隊成員。",
+      "fields": [
+        "拿戈瑪第文獻",
+        "多馬福音",
+        "猶大福音",
+        "古代魔法文獻"
+      ],
+      "portraitUrl": "",
+      "color": "violet",
+      "emoji": "🗝️",
+      "contribution": [
+        "梅耶主編的《拿戈瑪第經集》（The Nag Hammadi Scriptures: The International Edition, 2007）把 1977 年羅賓遜（James M. Robinson）版全面重譯，加入柏林抄本與查科斯抄本，是**目前通用的拿戈瑪第文獻英譯全集**。",
+        "他是 2006 年國家地理學會《猶大福音》首次刊佈的譯者之一，並以《多馬福音：耶穌的隱藏語錄》（1992）、《諾斯底發現》（2005）等書把科普特文獻帶給一般讀者；與史密斯合編的《古代基督教魔法》（1994）則整理科普特咒語與護符文獻。",
+        "早年的《古代奧祕宗教文獻選》（1987）是希臘羅馬密儀宗教原始資料的常用教材；他長期任查普曼大學葛里塞特講座教授與阿爾伯特‧史懷哲研究所所長。"
+      ],
+      "sourceNote": "2012 年過世，著作仍在版權期內；《拿戈瑪第經集》z-lib 探勘未命中。",
+      "timeline": [
+        {
+          "year": "1948",
+          "text": "生於美國。"
+        },
+        {
+          "year": "1979",
+          "text": "獲克萊蒙研究院博士。"
+        },
+        {
+          "year": "1985",
+          "text": "任教查普曼大學。"
+        },
+        {
+          "year": "1987",
+          "text": "《古代奧祕宗教文獻選》出版。"
+        },
+        {
+          "year": "1992",
+          "text": "《多馬福音：耶穌的隱藏語錄》出版。"
+        },
+        {
+          "year": "1994",
+          "text": "與 Richard Smith 合編《古代基督教魔法》出版。"
+        },
+        {
+          "year": "2006",
+          "text": "參與國家地理學會《猶大福音》首譯刊佈。"
+        },
+        {
+          "year": "2007",
+          "text": "主編《拿戈瑪第經集》國際版出版。"
+        },
+        {
+          "year": "2012",
+          "text": "逝於加州。"
+        }
+      ],
+      "works": [
+        {
+          "title": "拿戈瑪第經集（主編）",
+          "titleOriginal": "The Nag Hammadi Scriptures: The International Edition",
+          "year": "2007",
+          "yearSort": 2007,
+          "category": "拿戈瑪第文獻",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": ""
+        },
+        {
+          "title": "多馬福音：耶穌的隱藏語錄",
+          "titleOriginal": "The Gospel of Thomas: The Hidden Sayings of Jesus",
+          "year": "1992",
+          "yearSort": 1992,
+          "category": "多馬福音",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": ""
+        },
+        {
+          "title": "猶大福音（合譯）",
+          "titleOriginal": "The Gospel of Judas",
+          "year": "2006",
+          "yearSort": 2006,
+          "category": "猶大福音",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "與 Rodolphe Kasser、Gregor Wurst 合編。"
+        },
+        {
+          "title": "古代基督教魔法：科普特儀式文獻",
+          "titleOriginal": "Ancient Christian Magic: Coptic Texts of Ritual Power",
+          "year": "1994",
+          "yearSort": 1994,
+          "category": "古代魔法文獻",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "與 Richard Smith 合編。"
+        },
+        {
+          "title": "古代奧祕宗教文獻選",
+          "titleOriginal": "The Ancient Mysteries: A Sourcebook of Sacred Texts",
+          "year": "1987",
+          "yearSort": 1987,
+          "category": "古代魔法文獻",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "slug": "karen-king",
+      "name": "凱倫‧金恩",
+      "nameEn": "Karen L. King",
+      "lifespan": "1954–",
+      "disciplineGroup": "基督宗教研究",
+      "era": "次經與典外文獻",
+      "sortYear": 1954,
+      "discipline": "哈佛神學院霍利斯神學講座教授（該講座首位女性），以《何謂諾斯底主義》對「諾斯底」範疇本身提出根本質疑。",
+      "fields": [
+        "諾斯底主義",
+        "抹大拉的馬利亞福音",
+        "約翰祕傳書",
+        "早期基督教與性別"
+      ],
+      "portraitUrl": "",
+      "color": "rose",
+      "emoji": "📖",
+      "contribution": [
+        "金恩的《何謂諾斯底主義？》（What Is Gnosticism?, 2003）追溯「諾斯底主義」這個範疇如何從教父的異端論述經宗教史學派一路建構出來，論證它**與其說是古代的一種宗教，不如說是現代學術的一種發明**，此後學界對此一術語的使用普遍轉為謹慎。",
+        "《抹大拉的馬利亞福音》（2003）與《約翰祕傳書》（2006）是兩部典外文獻的譯注與詮釋，前者把馬利亞從「悔改的妓女」的傳統形象還原為早期基督教的使徒與教師；與帕格爾斯合著的《讀猶大福音》（2007）則在首譯刊佈次年即提出殉道與犧牲的新讀法。",
+        "2012 年她公布所謂「耶穌之妻福音」殘片，引發真偽論戰，2016 年承認該殘片極可能是現代偽造；這一事件本身成了典外文獻研究中來源查證與學術倫理的教材。"
+      ],
+      "sourceNote": "在世，著作仍在版權期內；館內已有《何謂諾斯底主義》原檔。",
+      "timeline": [
+        {
+          "year": "1954",
+          "text": "生於美國蒙大拿州。"
+        },
+        {
+          "year": "1984",
+          "text": "獲布朗大學博士。"
+        },
+        {
+          "year": "1984",
+          "text": "任教西方學院。"
+        },
+        {
+          "year": "1995",
+          "text": "《不可知之神的啟示》出版。"
+        },
+        {
+          "year": "1997",
+          "text": "轉任哈佛神學院。"
+        },
+        {
+          "year": "2003",
+          "text": "《何謂諾斯底主義？》與《抹大拉的馬利亞福音》出版。"
+        },
+        {
+          "year": "2006",
+          "text": "《約翰祕傳書》出版。"
+        },
+        {
+          "year": "2007",
+          "text": "與帕格爾斯合著《讀猶大福音》出版。"
+        },
+        {
+          "year": "2009",
+          "text": "任霍利斯神學講座教授，為 1721 年設座以來首位女性。"
+        },
+        {
+          "year": "2012–2016",
+          "text": "公布「耶穌之妻福音」殘片，後承認極可能為偽造。"
+        }
+      ],
+      "works": [
+        {
+          "title": "何謂諾斯底主義？",
+          "titleOriginal": "What Is Gnosticism?",
+          "year": "2003",
+          "yearSort": 2003,
+          "category": "諾斯底主義",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "館內已有英文原檔。"
+        },
+        {
+          "title": "抹大拉的馬利亞福音：耶穌與第一位女使徒",
+          "titleOriginal": "The Gospel of Mary of Magdala: Jesus and the First Woman Apostle",
+          "year": "2003",
+          "yearSort": 2003,
+          "category": "抹大拉的馬利亞福音",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": ""
+        },
+        {
+          "title": "約翰祕傳書",
+          "titleOriginal": "The Secret Revelation of John",
+          "year": "2006",
+          "yearSort": 2006,
+          "category": "約翰祕傳書",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": ""
+        },
+        {
+          "title": "讀猶大福音（與帕格爾斯合著）",
+          "titleOriginal": "Reading Judas: The Gospel of Judas and the Shaping of Christianity",
+          "year": "2007",
+          "yearSort": 2007,
+          "category": "諾斯底主義",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": ""
+        },
+        {
+          "title": "不可知之神的啟示",
+          "titleOriginal": "Revelation of the Unknowable God",
+          "year": "1995",
+          "yearSort": 1995,
+          "category": "諾斯底主義",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "拿戈瑪第《阿羅基尼》（Allogenes）譯注。"
+        }
+      ]
     },
     ...requestedCollectedWorksAuthors,
 

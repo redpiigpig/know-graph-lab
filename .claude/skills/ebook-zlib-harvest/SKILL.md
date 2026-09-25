@@ -224,7 +224,13 @@ PowerShell → cmd → node。
 | buddhism-gender | 20 |
 | **合計** | **1,444** |
 
-**已下載 10 本**（舊約與福音書研究經典）：威爾豪森《以色列史導論》、貢克爾《創世記的
+**聖經研究獵表 2026-09-26 對帳**（67 筆＝舊約 11／新約 11／典外 12／批判史 10）：downloaded 26＋already-owned 11＝37 有書、
+probe-miss 19、dry 11。🚨 `holdings_inventory.py --find` 的「站上電子圖書館書名」只比書名不比作者，
+拿作者姓去查會回 0 筆——這 37 本其實都已在 ebooks 表且 parsed，要查請直接打 DB 的 author 欄。
+兩個壞命中：`bs-hc-astruc-conjectures` 抓到的是 John Jarick 編的論文集 *Sacred Conjectures*（談 Astruc 的書，不是 Astruc 原著）；
+`bs-nt-hengel-judaism` z-lib 作者欄拼成 "Martin Hegel"，DB 已改回 Hengel。批判史那組原著仍應走 archive.org。
+
+**已下載 10 本**（舊約與福音書研究經典，2026-09-02 當時）：威爾豪森《以色列史導論》、貢克爾《創世記的
 傳說》、馮拉德《舊約神學》、諾特《五經傳統史》、柴爾茲《作為聖經的舊約導論》、克羅斯
 《迦南神話與希伯來史詩》、布魯格曼《舊約神學》、特里布爾《恐怖文本》、布特曼《符類福音
 傳統史》、陶德《天國的比喻》。
