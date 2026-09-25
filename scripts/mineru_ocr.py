@@ -102,6 +102,8 @@ def pages_from_middle(middle: dict) -> dict[int, dict]:
         if blocks is None:                      # 舊版格式的保險
             blocks = page.get("para_blocks") or []
         notes: list[str] = []
+        headers: list[str] = []          # 書眉／頁腳原文（期刊的版心刊名卷期就在這）
+        page_numbers: list[str] = []     # 每一個 page_number block 的原文，不只第一個
         printed: int | None = None
         for b in page.get("discarded_blocks") or []:
             kind = b.get("type")
@@ -110,14 +112,22 @@ def pages_from_middle(middle: dict) -> dict[int, dict]:
                 continue
             if kind == "page_footnote":
                 notes.append(" ".join(text.split()))
-            elif kind == "page_number" and printed is None:
-                digits = re.sub(r"\D", "", text)
-                if digits:
-                    printed = int(digits)
+            elif kind == "page_number":
+                page_numbers.append(" ".join(text.split()))
+                if printed is None:
+                    digits = re.sub(r"\D", "", text)
+                    if digits:
+                        printed = int(digits)
+            elif kind in ("header", "footer"):
+                headers.append(" ".join(text.split()))
         out[idx] = {
             "text": "\n".join(_block_text(b) for b in blocks).strip(),
             "footnotes": notes,
             "printed_page": printed,
+            # 2026-09-25 加：民國期刊集成一頁同時印集成頁碼（頁底 -283-）與原刊頁碼（版心），
+            # 只留 printed_page 會把第二套頁碼與版心的卷期靜默丟掉。多出來的鍵下游可以不理。
+            "headers": headers,
+            "page_numbers": page_numbers,
         }
     return out
 
@@ -248,6 +258,8 @@ def to_chunks(pages: dict[int, dict], page_offset: int = 0) -> list[dict]:
             "chapter_path": None,
             "format": "text",
             "content": body,
+            "headers": page.get("headers") or [],
+            "page_numbers": page.get("page_numbers") or [],
         })
     return chunks
 

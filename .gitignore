@@ -268,3 +268,6 @@ public/content/research-data/**/*-fulltext.json
 public/content/research-data/yiguandao/
 G:/
 output/iams/
+
+# 民國佛教期刊文獻集成 OCR 管線的跑班狀態（每班改寫，可由 Drive _OCR/*.jsonl 重建）
+/scripts/state/minguo_jikan_ocr.json

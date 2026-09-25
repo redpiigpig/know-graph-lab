@@ -76,3 +76,41 @@ Windows 排程 `KGL_Holdings_Inventory` 每週一 03:30 重跑盤點並只 commi
 - `全集\佛學\` 新增 12 位台灣長老（盤點：`全集\佛學\台灣長老全集盤點.md`）。
 - 碩博論文（太虛／民國佛教）下載進行中 → `太虛研究\碩博論文\`；NDLTD 帳密在 `.env`（`NDLTD_USER`／`NDLTD_PASS`，勿印）。
 - 未竟事項清單見 `docs/SESSION_HANDOFF_taixu_papers_2026-09-24.md` 第三節。
+
+---
+
+## §8 《民國佛教期刊文獻集成》全集 OCR（2026-09-25 起，長期管線）
+
+**目標**：正編 204 冊＋補編 83 冊（Commons 只有正編 204＋補編 28＋補編目錄／作者索引，
+其餘 55 冊補編要去玄奘藏經閣影印）全部 OCR 成可檢索的逐頁文字；**太虛相關篇目優先**
+（9/30 慧炬論文「世界佛學苑」要用）。三支腳本，一個排程，狀態記到頁，休眠／闔蓋／被砍都能接著跑：
+
+| 步驟 | 腳本 | 產出（Drive 集成夾 `研究資料\民國與台灣佛教史\民國佛教期刊文獻集成\`） |
+|---|---|---|
+| 篇目 | `scripts/minguo_jikan_dila_catalog.py`（`quick`＝太虛關鍵字／作者查詢幾分鐘；`crawl`＝整庫 4,650 頁約 90 分；`build`） | `_篇目_全集.tsv`（DILA 正編 96,109＋補編 43,410 筆）、`_篇目_太虛相關_全集.tsv`（**7,516 筆、涉及 220 冊、13,626 集成頁**；欄位 叢刊、冊、集成頁、篇名、作者、原刊、原刊卷／期／頁、命中關鍵字） |
+| 下載 | `scripts/haichaoyin_commons_fetch.py --series all --priority-tsv <太虛清單>`（`--vols 正80 補53`、`--max-files N`） | `正編\`、`補編\` 整冊 PDF（Commons 原檔名；`.hcy.part` 續傳、SHA1 驗）；紀錄 `正編\_下載紀錄_海潮音.json`、`補編\_下載紀錄.json` |
+| OCR | `scripts/minguo_jikan_ocr.py run [--max-minutes 25] [--engine auto|cpu] [--only 正編187] [--dry-run]`；`status`／`cut`／`audit --vol`／`import-legacy` | `_OCR\<叢刊><冊>.jsonl`（一行一個 PDF 頁：pdf_index、集成頁、原刊頁＋依據、text、footnotes、headers、page_numbers、engine）；`_OCR\單篇\<叢刊><冊>\<冊>_<起-訖>_<篇名>.txt`（頁標頭 `【集成 正編187 頁 142｜原刊 頁 4】`，與 09-24 那 18 件同式）；`_OCR\_稽核\<冊>\p<集成頁>.png` |
+
+- **排程** `KGL_Minguo_Jikan_OCR`：每 30 分鐘一班跑 `scripts/minguo_jikan_ocr.ps1`（UTF-8 BOM），
+  `ExecutionTimeLimit PT2H`、`IgnoreNew`、StartWhenAvailable；一班＝補下載最多 2 冊＋OCR 25 分鐘。
+  log `output/minguo_jikan/ocr_<日期>.log`，每班開頭與結尾都印分母（冊／頁／優先篇／已切件數）。
+  狀態 `scripts/state/minguo_jikan_ocr.json`；跑班鎖 `scripts/state/minguo_jikan_ocr.lock`（PID 死了自動接收）。
+- **優先序**：第 0 級 世界佛學苑／世苑 → 1 級 漢藏教理院／武昌／閩南／柏林／巴利三藏院／錫蘭留學 →
+  2 級 法舫／法尊 → 3 級 篇名含太虛／作者太虛 → 之後整冊（太虛命中多的冊先）。同一頁只 OCR 一次。
+- **引擎與 GPU 鎖的真相**：電子圖書館的 `mineru_ocr.py queue` 是**整個佇列期間握著 GPU 鎖**
+  （acquire 在 `main()`、release 在 `finally`，每本之間不放），fleet keeper 又會重拉到佇列空
+  （09-25 看：253 本做了 59 本，約 4 本／時，還要兩天）。所以本管線 `--engine auto` 每班先試一段 GPU，
+  回 4 就整班改 `--device cpu`（不佔鎖）。**CPU 實測 8–15 秒／頁**（09-24 的 37 秒是含起跑的 3 頁小段；
+  10–20 頁的段攤下來只要 8–10 秒），一班 25 分鐘約 120–150 頁；GPU 約 2–3 秒／頁。不搶鎖、不殺別人、不改電源。
+- **頁碼規矩**：集成頁＝PDF 頁序（0 起）− offset；offset 每冊一個，09-24 核過的 22 冊寫死在 `SEED_OFFSETS`，
+  其他冊先假設 2、段前後各多留 2 頁，再從 MinerU 撿到的頁底「-N-」學（眾數、≥3 頁、六成同意、落在 0–8）。
+  原刊頁只由篇目推算（多篇打架就留空），MinerU 撿到的頁碼原文全存 `page_numbers` 給人核；**推不出就是空，不准編**。
+  `mineru_ocr.py` 09-25 起 `to_chunks` 多帶 `headers`／`page_numbers` 兩鍵（下游其他路徑不受影響）。
+- **失敗處理**：離開碼 3（環境）整場停；連錯 3 段整場停；離開碼 2（重複幻覺）段對半切再試；同一段錯 3 次先不排
+  （`--retry-failed` 清掉）；每冊做完自動稽核（空白率、重複幻覺、迴圈頁重做一次、抽 3 頁存 png＋log 印文字開頭）。
+- **09-24 那 18 件**已用 `import-legacy` 登記成完成並併進 JSONL（切單篇時跳過同範圍不重做）。
+- 🚨 兩個下載程序（手動整批＋排程班）會 append 同一個 `.hcy.part`；腳本已把 2 分鐘內有更新的 `.hcy.part`
+  當「別人在下」延後，班 ps1 也先查有沒有另一個 fetcher 在跑。
+- 🚨 DILA `spValue` 關鍵字查詢**要一併送三個 checkbox**（`myLessAreaTitle/JournalName/Author=on`），不送回的是空表單；
+  0 筆時頁面寫「回傳結果 : 0筆」不是 `<span>N筆</span>`。
+- 已知 OCR 系統性錯字：敎→軟／敘；圈點多半掉；「（講）」一類夾註標記會殘缺。**摘句一律回影像核**（`_稽核\` 或自己用 fitz 畫）。
