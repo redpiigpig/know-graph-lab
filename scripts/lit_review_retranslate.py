@@ -243,6 +243,9 @@ def classify(orig: str, zh: str) -> str:
     if not z:
         return ""
     base = tf.clear_reason(z, o)
+    if (base == "meta" and re.search(r"\bsorry\b|\bapolog|\bplease\b|\bnotice\b|\bready\b", o[:160], re.I)
+            and not re.search("翻譯|譯文|原文|文本|文段|學術文字", z)):
+        base = ""  # 原文自己就在道歉／請求（「Sorry, a shareable link is not currently available」）
     if base in ("meta", "think", "fffd"):
         return base
     if any(m in z[:META_WINDOW] and m.lower() not in o.lower() for m in SUPP_HEAD):
