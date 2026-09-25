@@ -30,12 +30,24 @@ const run = (text, o = {}) => new TextRun({
   font: { ascii: EN, hAnsi: EN, cs: EN, eastAsia: o.cjk ?? MING },
 })
 
+// 行內引文：「」內八字以上視為整句引用，套標楷體（七字以下的詞語不算，見 writing-academic-paper SKILL.md §C）
+function pushPlain(out, s, o) {
+  if (o.cjk === KAI) { out.push(run(s, o)); return }
+  const qre = /「([^「」]{8,})」/g
+  let c = 0
+  for (const m of s.matchAll(qre)) {
+    out.push(run(s.slice(c, m.index + 1), o))          // 含開引號
+    out.push(run(m[1], { ...o, cjk: KAI }))            // 引文本體
+    c = m.index + m[0].length - 1                       // 閉引號留給下一段
+  }
+  if (c < s.length) out.push(run(s.slice(c), o))
+}
 function inline(text, noteMap, o = {}) {
   const out = []
   const re = /\*\*(.+?)\*\*|\*([^*]+?)\*|〔註(\d+)〕/g
   let c = 0
   for (const m of text.matchAll(re)) {
-    if (m.index > c) out.push(run(text.slice(c, m.index), o))
+    if (m.index > c) pushPlain(out, text.slice(c, m.index), o)
     if (m[1] !== undefined) out.push(run(m[1], { ...o, bold: true }))
     else if (m[2] !== undefined) out.push(run(m[2], { ...o, italics: true }))
     else {
@@ -45,7 +57,7 @@ function inline(text, noteMap, o = {}) {
     }
     c = m.index + m[0].length
   }
-  if (c < text.length) out.push(run(text.slice(c), o))
+  if (c < text.length) pushPlain(out, text.slice(c), o)
   return out.length ? out : [run('', o)]
 }
 
