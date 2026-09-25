@@ -428,6 +428,14 @@ def gate(zh: str, orig: str) -> str:
     if "<think" in z.lower() or "</think" in z.lower():
         return "think"
     o = (orig or "").strip()
+    if z[0] in "‧·、，。；：":
+        return "bad-start"  # 抽查抓到「ROBERT L. HUMPHREY」→「‧漢弗萊」（名字被吃掉）
+    # 數字不可憑空變出來：抽查抓到「Penrose 2007」→「Penrose 2007007」。
+    # 譯文裡每一串 ≥4 位的數字都必須在原文出現過（年月日改寫只會重排，不會造新數字）。
+    o_digits = re.sub(r"[,\s]", "", o)
+    for d in re.findall(r"\d{4,}", re.sub(r"(?<=\d),(?=\d{3})", "", z)):
+        if d not in o_digits:
+            return "number-changed"
     # 必須是中文：原文有實質散文而譯文幾乎沒有漢字＝沒譯（書目、公式段除外）
     # 參考文獻清單（年份一堆）整段留原文是對的，不算沒譯。
     if (not is_bib(o) and len(_YEAR.findall(o)) < 3 and func_density(o) >= 4.0
