@@ -16,14 +16,23 @@ repo 的 data/*/sources），以前每修一類就寫一支一次性腳本，判
                「一千零三十六年」這類年數（→1036年）。不改：經文語料、世紀／年代、
                兩位有效數字（四千五百、二十五萬）、逐位寫的西元年月日（一九六九年，
                這次不批改）、非西元紀年（年號、民國、佛曆）、詩句與成語（一千零一夜）、
-               序數（第一千二百五十條）。
+               序數（第一千二百五十條）。2026-09-25 稽核發現兩個 bug 已修：①數字結尾
+               接「兩」（銀兩、重量單位，如「五千兩」）不可當成 +2——結尾的「兩」會從
+               數字裡剔除、原樣留在文字裡，數字本身仍照算（五千兩→5,000兩）；②含
+               「多」「餘」「幾」等約數字樣的一律不動（兩億五千多萬 不會被拆算）。
   middle_dot   中文人名之間的「·」「・」→「‧」。英文、數字、書名號裡的點不動。
-  zhi          「隻能／隻是／隻有／隻要」→「只…」，量詞（每隻、一隻、船隻）不動。
-  toufa        「頭發」→「頭髮」，「開頭發表」「帶頭發起」這種不動。
-  variants     大陸／舊字形 爲衆着裏綫… → 台灣字形。含假名的段落整段不碰（日文原字形）。
+  zhi          「隻能／隻是／隻有／隻要」→「只…」，量詞（每隻、一隻、船隻）與
+               動物名＋隻（狗隻、雞隻、牛隻、豬隻、鳥隻、牲隻）不動。
+  variants     大陸／舊字形 爲衆着裏綫… → 台灣字形。含假名的段落整段不碰（日文原字形），
+               來源是日文原典的整段也不碰（ndl_data 工作目錄、JSONL `source_lang=="ja"`）。
   quotes       彎引號 “ ” ‘ ’ → 「」『』。引號裡是英文（英文引文、書目篇名）就保留。
   heading      章名黏正文（`## 第一章當我…`）→ 從原文 heading 的邊界切回獨立一行；
                章名後只隔一個換行（reader 會把整段吃進標題）→ 補空行。
+
+2026-09-25 稽核另外發現 `toufa`（「頭發」→「頭髮」）規則對全站僅有的 14 筆命中
+**全部誤判**——「骨頭發預言」「舌頭發了誓」「一頭發了狂」「石頭發笑」這類「N頭+發+
+動詞」被錯拆成「頭髮」，站上找不到一筆真正該修的「頭發→頭髮」案例，這條規則已整條
+移除（見 [[feedback_translation_fix_numerals_toufa_bugs]]）。
 
 清空（交給補譯 agent 重譯，不在這裡改字）：
   meta         模型拒答／回話（「請提供完整的文段內容」「我注意到您提供的…」）
@@ -43,7 +52,7 @@ repo 的 data/*/sources），以前每修一類就寫一支一次性腳本，判
   python -X utf8 scripts/translation_fix.py lanes                        # 看哪些書正被 lane 寫
 
 scan 永遠唯讀。apply 預設**所有**規則（修正＋清空）；`--rules fixes` 只做確定性修正，
-`--rules clear` 只做清空，也可以逐條列：`--rules zhi,toufa,meta`。
+`--rules clear` 只做清空，也可以逐條列：`--rules zhi,middle_dot,meta`。
 輸出（scan 報告、清空清單）在 output/translation_fix/（不進 git）。
 
 🚨 apply 會跳過「正在被 fleet lane 寫」的書：讀 scripts/state/fleet_*.pid，程序還活著
@@ -150,6 +159,16 @@ def fix_numerals(text: str) -> tuple[str, int]:
     for m in _NUM_RUN.finditer(text):
         s, e = m.start(), m.end()
         run = m.group(0)
+        # 約數（多／餘／幾）緊接在數字後面：整串不動，不可拆算（2026-09-25 修：
+        # 「兩億五千多萬」曾被算成 200,005,000，「多」字還孤零零留在後面）。
+        if text[e:e + 1] in "多餘幾":
+            continue
+        # 「兩」在數字結尾＝量詞／單位（銀兩、重量），不是「+2」（2026-09-25 修：
+        # 「五千兩」曾被讀成 5000+2=5002）。把結尾的「兩」排除在數字之外，原樣留著；
+        # 「兩」在數字中段（兩千三百）緊接著單位字，仍是正常的「2」，不受影響。
+        if run[-1] == "兩" and len(run) > 1:
+            run = run[:-1]
+            e -= 1
         # 「六十年代」「十九世紀」本身不到四位數，自然不會中；這裡只擋會中的例外。
         window = text[max(0, s - 6):s]
         if _NUM_BAD_PREFIX.search(window):
@@ -208,7 +227,11 @@ def fix_middle_dot(text: str) -> tuple[str, int]:
 # 🚨「這隻是／那隻是」**要改**：量詞「這隻」後面接的是名詞（這隻羊），直接接「是」
 # 幾乎一定是「這只是」被轉壞——這是全站最常見的一種。
 _ZHI_RE = re.compile(r"隻(?=[能是有要])")
-_ZHI_MEASURE_PREV = set("一二兩三四五六七八九十百千萬幾每某半數多整各單零0123456789０１２３４５６７８９船艦舟")
+# 數詞、「每」、船／艦／舟隻是量詞或名詞的一部分；動物名＋隻（狗隻、雞隻、牛隻、
+# 豬隻、鳥隻、牲隻）也是集合名詞，不是「只」（2026-09-25 修：「鳥類或狗隻能夠
+# 得著」曾被誤讀成「狗只能夠（only can）」）。
+_ZHI_MEASURE_PREV = set("一二兩三四五六七八九十百千萬幾每某半數多整各單零0123456789０１２３４５６７８９"
+                        "船艦舟狗雞牛豬鳥牲")
 
 
 def fix_zhi(text: str) -> tuple[str, int]:
@@ -226,26 +249,9 @@ def fix_zhi(text: str) -> tuple[str, int]:
     return ("".join(chars), hits) if hits else (text, 0)
 
 
-# ── 4. 頭發 → 頭髮 ──────────────────────────────────────────────────────────
-# 「頭」＋「發X」的動詞複合詞（開頭發表、帶頭發起、從頭發展）不是頭髮。
-_FA_VERB_NEXT = set("表起展生現出動佈布射言明給放行售揮芽酵燒熱怒抖亮光作送電願誓號財達難愁覺掘揚病覺配散聲問")
-_FA_PREV_BLOCK = set("開帶起源從為領打出口念苗鏡")
-
-
-def fix_toufa(text: str) -> tuple[str, int]:
-    if not text or "頭發" not in text:
-        return text, 0
-    hits = 0
-    chars = list(text)
-    for m in re.finditer("頭發", text):
-        i = m.start()
-        nxt = text[i + 2:i + 3]
-        prev = text[i - 1:i]
-        if nxt in _FA_VERB_NEXT or prev in _FA_PREV_BLOCK:
-            continue
-        chars[i + 1] = "髮"
-        hits += 1
-    return ("".join(chars), hits) if hits else (text, 0)
+# 「頭發→頭髮」規則（原第 4 條）2026-09-25 移除：全站僅有的 14 筆命中全部是
+# 「N頭+發+動詞」誤判（骨頭發預言、舌頭發了誓、一頭發了狂、石頭發笑…），
+# 站上沒有一筆真正該修的案例。見 SKILL.md「既有譯文共用修正工具」一節。
 
 
 # ── 5. 大陸／舊字形 → 台灣字形 ──────────────────────────────────────────────
@@ -554,7 +560,6 @@ FIX_RULES: dict[str, Callable[[str], tuple[str, int]]] = {
     "numerals": fix_numerals,
     "middle_dot": fix_middle_dot,
     "zhi": fix_zhi,
-    "toufa": fix_toufa,
     "variants": fix_variants,
     "quotes": fix_curly_quotes,
 }
@@ -590,11 +595,16 @@ class SegResult:
 
 
 def fix_segment(zh: str, src: str = "", *, rules: set[str] | None = None,
-                scripture: bool = False, heading: bool = True) -> SegResult:
+                scripture: bool = False, heading: bool = True,
+                japanese_source: bool = False) -> SegResult:
     """一段譯文跑全部規則。先判清空（清空就不必再修字），再依序套確定性修正。
 
     scripture=True：經文語料（東方聖書、諾斯底、次經、阿維斯陀…）不套數字規則。
     heading=False：這個語料的段落本來就不是 markdown（DB 表），跳過章名規則。
+    japanese_source=True：這段的來源是日文原典（ndl_data 工作、JSONL
+    source_lang=="ja"），不套字形規則——`fix_variants` 只能看段落本身有沒有假名，
+    看不出「這段沒有假名但整份文件是日文」（例如純漢字的日文標題），要靠呼叫端
+    的語料層級資訊補（2026-09-25 修：ndl_data 的日文標題曾被繁化）。
     """
     rules = set(ALL_RULES) if rules is None else rules
     hits: dict[str, int] = {}
@@ -607,6 +617,8 @@ def fix_segment(zh: str, src: str = "", *, rules: set[str] | None = None,
         if name not in rules:
             continue
         if name == "numerals" and scripture:
+            continue
+        if name == "variants" and japanese_source:
             continue
         t, n = fn(t)
         if n:
@@ -632,6 +644,7 @@ def fix_segment(zh: str, src: str = "", *, rules: set[str] | None = None,
 #  四、fleet lane 保護：正在被 lane 寫的書不碰
 # ═════════════════════════════════════════════════════════════════════════════
 _UUID_RE = re.compile(r"[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}", re.I)
+_UUID_FULL_RE = re.compile(r"^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$", re.I)
 RECENT_WRITE_SECS = 30 * 60
 
 
@@ -977,12 +990,13 @@ class RunCtx:
     limit: int | None = None
 
 
-def _run_segment(ctx: RunCtx, corpus: str, zh: str, src: str, *, heading: bool) -> SegResult:
+def _run_segment(ctx: RunCtx, corpus: str, zh: str, src: str, *, heading: bool,
+                 japanese_source: bool = False) -> SegResult:
     rules = set(ctx.rules)
     if ctx.fffd_mode == "strip":
         rules.discard("fffd")
     res = fix_segment(zh, src, rules=rules, scripture=corpus in SCRIPTURE_CORPORA,
-                      heading=heading)
+                      heading=heading, japanese_source=japanese_source)
     if ctx.fffd_mode == "strip" and not res.clear and "\ufffd" in res.text:
         stripped = strip_fffd(res.text)
         if stripped is None:           # 剝不乾淨（連續或落在結尾）→ 還是清空
@@ -1028,6 +1042,7 @@ def process_chunk(ctx: RunCtx, corpus: str, ch: dict, loc: dict,
     zparas = content.split("\n\n")
     sparas = src.split("\n\n") if src else []
     aligned = bool(src) and len(zparas) == len(sparas)
+    ja_source = ch.get("source_lang") == "ja" or "ja" in (ch.get("sources") or {})
     new_paras: list[str] = []
     changed = False
     clear_chunk = ""
@@ -1037,7 +1052,7 @@ def process_chunk(ctx: RunCtx, corpus: str, ch: dict, loc: dict,
             continue
         st.segments += 1
         sp = sparas[j] if aligned else ""
-        res = _run_segment(ctx, corpus, p, sp, heading=False)
+        res = _run_segment(ctx, corpus, p, sp, heading=False, japanese_source=ja_source)
         if res.clear:
             if not allow_clear:
                 ctx.sink.emit(corpus, res.clear, {**loc, "para": j}, p, sp, "report-only")
@@ -1137,13 +1152,21 @@ def fathers_ids(rest: "Rest") -> dict[str, str]:
     return out
 
 
-def translated_book_ids(exclude: set[str], limit: int | None = None) -> list[Path]:
-    """_chunks 裡「有原文欄」的書（translate_ebook_to_zh 與全集 JSONL）。只讀每本前幾行判斷。"""
+def translated_book_ids(exclude: set[str], limit: int | None = None,
+                        root: Path | None = None) -> list[Path]:
+    """_chunks 裡「有原文欄」的書（translate_ebook_to_zh 與全集 JSONL）。只讀每本前幾行判斷。
+
+    只接受合法 UUID 檔名（2026-09-25 修：`*.jsonl` glob 連 `xxx.partial664.bak.jsonl`／
+    `xxx.scrambled.bak.jsonl` 這類殘檔也吃進來，且它們同樣帶 source_text 欄位不會被排除，
+    曾被當成「書」一起送進批次修正並推 R2）。"""
+    root = root or CHUNKS_DIR
     out = []
-    files = sorted(CHUNKS_DIR.glob("*.jsonl"))
+    files = sorted(root.glob("*.jsonl"))
     if not files:
-        raise SystemExit(f"⛔ {CHUNKS_DIR} 一個 .jsonl 都沒有——G: 沒掛？先 Test-Path 'G:\\我的雲端硬碟'")
+        raise SystemExit(f"⛔ {root} 一個 .jsonl 都沒有——G: 沒掛？先 Test-Path 'G:\\我的雲端硬碟'")
     for f in files:
+        if not _UUID_FULL_RE.match(f.stem):
+            continue
         if f.stem.lower() in exclude:
             continue
         try:
@@ -1222,8 +1245,11 @@ def _sec_sort_key(p: Path) -> int:
 
 
 def process_sec_file(ctx: RunCtx, corpus: str, data: dict, loc: dict,
-                     st: CorpusStats) -> bool:
-    """改 sec dict（就地）。回傳有沒有改。純邏輯，測試直接餵 dict。"""
+                     st: CorpusStats, *, japanese_source: bool = False) -> bool:
+    """改 sec dict（就地）。回傳有沒有改。純邏輯，測試直接餵 dict。
+
+    japanese_source=True：整份工作來源是日文原典（如 ndl_data），不套字形規則，
+    即使個別段落本身沒有假名（純漢字的日文標題）也一樣。"""
     zh = data.get("zh") or []
     src = data.get("src") or data.get("en") or []
     engines = data.get("engines") or []
@@ -1236,7 +1262,7 @@ def process_sec_file(ctx: RunCtx, corpus: str, data: dict, loc: dict,
             continue
         st.segments += 1
         s = src[j] if j < len(src) and isinstance(src[j], str) else ""
-        res = _run_segment(ctx, corpus, z, s, heading=False)
+        res = _run_segment(ctx, corpus, z, s, heading=False, japanese_source=japanese_source)
         st.add(res)
         if res.clear:
             ctx.sink.emit(corpus, res.clear, {**loc, "idx": j}, z, s, "sec-zh-empty")
@@ -1256,7 +1282,7 @@ def process_sec_file(ctx: RunCtx, corpus: str, data: dict, loc: dict,
             continue
         h = data.get(hkey) or ""
         st.segments += 1
-        res = _run_segment(ctx, corpus, t, h, heading=False)
+        res = _run_segment(ctx, corpus, t, h, heading=False, japanese_source=japanese_source)
         st.add(res)
         if res.clear:
             ctx.sink.emit(corpus, res.clear, {**loc, "field": tkey}, t, h, "sec-title-empty")
@@ -1296,7 +1322,10 @@ def process_sec_corpus(ctx: RunCtx, corpus: str, st: CorpusStats, ids: list[str]
             if not isinstance(data, dict):
                 continue
             loc = {"id": wid, "file": sf.name}
-            if process_sec_file(ctx, corpus, data, loc, st):
+            # ndl_data＝日文原典（National Diet Library）；整份工作不套字形規則，
+            # 不能只看個別段落有沒有假名（純漢字的日文標題會漏抓，2026-09-25 修）。
+            if process_sec_file(ctx, corpus, data, loc, st,
+                                japanese_source=(wdir.parent.name == "ndl_data")):
                 work_changed = True
                 if ctx.apply and not ctx.dry_run:
                     _write_json_like(sf, raw, data)
