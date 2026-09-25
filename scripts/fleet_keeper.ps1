@@ -103,6 +103,7 @@ $STALL_PER_LANE = @{
     'sbe-b2-s5'      = 90
     'mineru-queue'   = 180   # one log line per BOOK; a 500-page scan runs 30+ min on the GPU
     'spiral-staircase' = 120 # one line per ~20k-char piece; a 3-failure wall sleeps 30 min
+    'litreview-retrans' = 60 # one line per batch of <=6 paragraphs; NVIDIA deadline 420s + Haiku
 }
 function StallLimit($label) {
     if ($STALL_PER_LANE.ContainsKey($label)) { return $STALL_PER_LANE[$label] }
@@ -397,4 +398,11 @@ Ensure 'cyberleninka-fetch' 'cyberleninka_harvest' @('scripts\cyberleninka_harve
 # What is left is text extraction: 12,060 PDFs downloaded but not extracted. This is the
 # one line that needs NO network - the PDFs are on Drive - so it also runs on the commute.
 Ensure 'jstage-text' 'jstage_ibk_harvest --text' @('scripts\jstage_ibk_harvest.py','--text')
+# Lit-review re-translation (2026-09-25): 3,643 zh rows in lit_review_sections were model
+# refusals / chat replies / U+FFFD / invented English and were cleared (backup in
+# output\lit_review_backup_2026-09-25.json). The worker re-translates them paragraph by
+# paragraph (Gemini -> NVIDIA -> Haiku), every row passes an output gate before it is written,
+# and progress lives in output\lit_review_retrans\progress.json. It prints
+# LITREVIEW_RETRANS_COMPLETE only when no row is left; an engine outage exits WITHOUT the marker.
+EnsureUntil 'litreview-retrans' $py @('-X','utf8','-u','scripts\lit_review_retranslate.py','run') 'LITREVIEW_RETRANS_COMPLETE'
 Note "keeper tick done"
