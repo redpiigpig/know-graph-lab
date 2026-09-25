@@ -60,10 +60,13 @@ SUPERSEDED_NAMES = {
     # 這兩個是舊的單張、寬度寫死 16 mm 的希伯來書背。
     "hebrew-original-reader-spine-b5-height.pdf",
     "hebrew-original-reader-spine-b5-height.svg",
-    # 2026-09-25：希伯來單冊 505 頁超過上限，切成 vol1／vol2，單冊那個 stem 作廢。
-    "hebrew-original-reader-50-lessons.docx",
-    "hebrew-original-reader-50-lessons.pdf",
-    "hebrew-original-reader-50-lessons-spine.pdf",
+    # 2026-09-25：行距放寬那一版曾切成希伯來二、希臘三、拉丁四冊；同日改成不印逐詞層後
+    # 回到希伯來一、希臘二、拉丁二，多出來的冊次作廢。
+    "hebrew-original-reader-vol1.docx", "hebrew-original-reader-vol1.pdf", "hebrew-original-reader-vol1-spine.pdf",
+    "hebrew-original-reader-vol2.docx", "hebrew-original-reader-vol2.pdf", "hebrew-original-reader-vol2-spine.pdf",
+    "greek-original-reader-vol3.docx", "greek-original-reader-vol3.pdf", "greek-original-reader-vol3-spine.pdf",
+    "latin-original-reader-vol3.docx", "latin-original-reader-vol3.pdf", "latin-original-reader-vol3-spine.pdf",
+    "latin-original-reader-vol4.docx", "latin-original-reader-vol4.pdf", "latin-original-reader-vol4-spine.pdf",
     "greek-original-reader-50-lessons.docx",
     "greek-original-reader-50-lessons.pdf",
     "greek-original-reader-sample.docx",
@@ -84,11 +87,9 @@ SUPERSEDED_NAMES = {
     # 裁示並冊——希臘、拉丁、日文各從四／三／四冊收成兩冊。
     # 🚨 本機刪掉就沒了，Drive 上卻還躺著；使用者翻到的是一本已經不存在的冊次，
     # 而它自己看起來完全正常。
-    # 2026-09-25：希臘 vol3 又活回來了（下冊 611 頁切成 vol2／vol3），不在作廢名單。
     "greek-original-reader-vol4.docx",
     "greek-original-reader-vol4.pdf",
     "greek-original-reader-vol4-spine.pdf",
-    # 2026-09-25：拉丁 vol3／vol4 活回來了（上下冊各切兩本），不在作廢名單。
     "japanese-original-reader-vol3.docx",
     "japanese-original-reader-vol3.pdf",
     "japanese-original-reader-vol3-spine.pdf",

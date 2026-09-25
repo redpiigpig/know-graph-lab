@@ -38,9 +38,9 @@ PDF_DIR = ROOT / "output" / "print-masters"
 REPORT_DIR = ROOT / "output" / "qa" / "original-readers"
 
 BOOKS = (
-    [f"hebrew-original-reader-vol{n}" for n in (1, 2)]  # 2026-09-25 希伯來兩冊
-    + [f"greek-original-reader-vol{n}" for n in (1, 2, 3)]
-    + [f"latin-original-reader-vol{n}" for n in (1, 2, 3, 4)]
+    ["hebrew-original-reader-50-lessons"]  # 2026-09-25 稍後回到單冊
+    + [f"greek-original-reader-vol{n}" for n in (1, 2)]
+    + [f"latin-original-reader-vol{n}" for n in (1, 2)]
     + [f"japanese-original-reader-vol{n}" for n in (1, 2)]
 )
 

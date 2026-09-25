@@ -41,6 +41,7 @@ from build_hebrew_full_reader import (  # noqa: E402  - shared typesetting machi
     ACCENT,
     ACCENT_DARK,
     add_contents,
+    add_reading_unit,
     cover_colors,
     GOLD,
     CAPTION_PT,
@@ -482,15 +483,11 @@ def add_reading(document: Document, lesson: dict, interlinear: dict) -> None:
             else f"patristic:{reading['ordinal']}:{segment['ref']}"
         )
         record = interlinear.get(unit_id) or {}
-        tokens = record.get("tokens") or []
         sense = segment.get("translationZh") or record.get("translationZh") or ""
         lead = str(segment.get("verse") or segment.get("ref", ""))
-        if tokens:
-            add_interlinear(document, tokens, lead=lead, sense=sense)
-        else:
-            add_plain_greek(document, segment.get("displayText", ""))
-            if sense:
-                add_body(document, sense, size=TRANSLATION_PT, color=INK)
+        # 2026-09-25：紙本不印逐詞層，一段原文、一段中譯（H.add_reading_unit）。
+        add_reading_unit(document, segment.get("displayText", ""), sense,
+                         render=add_greek_run, source_pt=INTERLINEAR_GREEK_PT, lead=lead)
     # 🚨 缺節的說明不印在紙上。「本節在此版本無正文（Swete 未收）」是編務語言，
     # 課本不寫這種話（擁有者 2026-09-18）；而它印出來還會自己佔掉一整頁——上冊
     # 第 308 頁就是一行這個。資料層照舊留著 absentVerses 給驗證器點名。
@@ -580,12 +577,12 @@ def add_latin_and_cjk(paragraph, text: str, size: float, *, color=MUTED) -> None
 # 逼人，所以擁有者裁示並冊——回到「內容的一半＝一本實體書」。課次編號不動。
 # 2026-09-25：行距放寬、作答線加高後下冊 611 頁，切成兩本；切點把整冊厚度算平
 # （附錄 177 頁只印在下冊（二））：第 1–35 課約 301 頁、第 36–50 課＋附錄約 314 頁。
+# 2026-09-25 稍後：紙本不印逐詞層之後上半 319 頁、下半 464 頁，各自進得去一本，回到兩冊。
 PARTS = [
     {"book": 1, "source": 1, "first": 1, "last": 50, "appendix": True},
-    {"book": 2, "source": 2, "first": 1, "last": 35, "appendix": False},
-    {"book": 3, "source": 2, "first": 36, "last": 50, "appendix": True},
+    {"book": 2, "source": 2, "first": 1, "last": 50, "appendix": True},
 ]
-BOOK_LABELS = ("上冊", "下冊（一）", "下冊（二）")
+BOOK_LABELS = ("第一冊", "第二冊")  # 2026-09-25：冊名只寫一二三
 
 COVER_GREEK = {
     1: "Ἡ ΚΑΙΝΗ ΔΙΑΘΗΚΗ",
@@ -595,6 +592,11 @@ COVER_GREEK = {
 
 def part_label(part: dict) -> str:
     return BOOK_LABELS[part["book"] - 1]
+
+
+def volume_title(volume: dict) -> str:
+    """資料裡的半部標題寫「上冊《…》」；紙上冊名只寫一二三（2026-09-25）。"""
+    return volume["title"].replace("上冊", "第一冊", 1).replace("下冊", "第二冊", 1)
 
 
 def part_lessons(volume: dict, part: dict) -> list[dict]:
@@ -635,9 +637,7 @@ def add_cover(document: Document, master: dict, volume: dict, part: dict) -> Non
         f"{part_label(part)}　第 {part['first']:02d}–{part['last']:02d} 課",
         FONT_ZH, 12, bold=True, color=INK,
     )
-    subtitle = document.add_paragraph()
-    subtitle.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    add_mixed_script_text(subtitle, volume["subtitle"], FONT_ZH, 10.5, color=ACCENT)
+    # 擁有者 2026-09-25：封面不印「五十課・一千詞・…」那種規格行（volume["subtitle"] 就是）。
 
     document.add_paragraph().paragraph_format.space_after = Pt(26)
     spec = document.add_paragraph()
@@ -648,7 +648,8 @@ def add_cover(document: Document, master: dict, volume: dict, part: dict) -> Non
     textbook = document.add_paragraph()
     textbook.alignment = WD_ALIGN_PARAGRAPH.CENTER
     line = (master["textbook"] if volume["volume"] == 1
-            else "詞表：教父文獻與希臘教會文獻語料詞頻，與上冊不重複")
+            else "詞表：教父文獻與希臘教會文獻語料詞頻，與第一冊不重複")
+    line = line.replace("上冊", "第一冊")  # 2026-09-25：冊名只寫一二三
     add_latin_and_cjk(textbook, line, CAPTION_PT)
 
 
@@ -683,7 +684,7 @@ def add_front_matter(document: Document, master: dict, volume: dict, part: dict,
     # 擁有者 2026-09-25：不印「N 課・N 詞・N 題」那種規格行。
     add_body(
         document,
-        f"本冊為{volume['title']}，{volume['subtitle']}；收第 {part['first']:02d}–{part['last']:02d} 課。",
+        f"本冊為{volume_title(volume)}；收第 {part['first']:02d}–{part['last']:02d} 課。",
         size=CAPTION_PT,
         color=MUTED,
     )

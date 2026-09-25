@@ -58,9 +58,9 @@ TOLERANCE_MM = 2.0
 # 收成兩冊（build_greek_full_reader.PARTS），這裡還寫著六冊，於是每跑一次稽核
 # 就多兩行「找不到 PDF」——一支永遠紅的稽核等於沒有稽核。
 BOOKS = (
-    [f"hebrew-original-reader-vol{n}" for n in (1, 2)]  # 2026-09-25 希伯來兩冊
-    + [f"greek-original-reader-vol{n}" for n in range(1, 4)]  # 2026-09-25 希臘三冊
-    + [f"latin-original-reader-vol{n}" for n in range(1, 5)]
+    ["hebrew-original-reader-50-lessons"]  # 2026-09-25 稍後回到單冊
+    + [f"greek-original-reader-vol{n}" for n in range(1, 3)]
+    + [f"latin-original-reader-vol{n}" for n in range(1, 3)]
     + [f"japanese-original-reader-vol{n}" for n in range(1, 3)]
 )
 

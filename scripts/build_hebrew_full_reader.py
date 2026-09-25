@@ -41,20 +41,31 @@ OUTPUT_PATH = OUTPUT_DIR / "hebrew-original-reader-50-lessons.docx"
 # 2026-09-25：行距放寬、作答線加高後單冊 505 頁，超過一本 500 頁的上限，擁有者裁示
 # 「內容不動、再分冊」。切在第 25／26 課之間本來就是內容的分界（廿五章聖經／廿五篇
 # 禱文與文章），Haggadah 與附錄只印在下冊。課次編號不動（線上讀本與音訊都鍵在它上）。
+# 2026-09-25 稍後：紙本改成「一段原文、一段中譯」不印逐詞層，全書 381 頁，回到一本。
+# PARTS 機制留著，超過 500 頁時切成 {"book": 1, 1–25} / {"book": 2, 26–50, appendix}。
+# 擁有者同日：「分冊不用寫上下，就寫一二三」——多冊時一律 第一冊、第二冊…
 PARTS = [
-    {"book": 1, "first": 1, "last": 25, "appendix": False},
-    {"book": 2, "first": 26, "last": 50, "appendix": True},
+    {"book": 1, "first": 1, "last": 50, "appendix": True},
 ]
-BOOK_LABELS = ("上冊", "下冊")
+BOOK_LABELS = ("第一冊", "第二冊")
 PART_SUBTITLES = ("希伯來聖經二十五章", "禱文與文章二十五篇")
+SINGLE_VOLUME = len(PARTS) == 1
 
 
 def part_label(part: dict | None) -> str:
-    return BOOK_LABELS[part["book"] - 1] if part else "五十課"
+    if part is None or SINGLE_VOLUME:
+        return "五十課"
+    return BOOK_LABELS[part["book"] - 1]
 
 
 def part_output(part: dict | None) -> Path:
-    return OUTPUT_DIR / f"hebrew-original-reader-vol{part['book']}.docx" if part else OUTPUT_PATH
+    if part is None or SINGLE_VOLUME:
+        return OUTPUT_PATH
+    return OUTPUT_DIR / f"hebrew-original-reader-vol{part['book']}.docx"
+
+
+def part_stem(part: dict | None) -> str:
+    return part_output(part).stem
 
 PAGE_WIDTH_MM = 182
 PAGE_HEIGHT_MM = 257
@@ -97,6 +108,14 @@ TRANSLATION_PT = 12
 CAPTION_PT = 12
 LABEL_PT = 12
 INTERLINEAR_GUTTER_MM = 3.4
+# 擁有者 2026-09-25：「讀本不需要逐字對譯，只需要一段原文、一段中譯，行距一樣是 1.8，
+# 讓我有辦法寫字」「讀本的中文翻譯改成標楷體」。逐詞層留在資料與線上讀本，紙本不印。
+READING_LINE_SPACING = 1.8
+READING_UNIT_SPACE_AFTER_PT = 10
+KEEP_TOGETHER_CHARS = 240  # 約六行以內的段落整段不拆
+# 🚨 要用中文名「標楷體」：LibreOffice 認不得英文名 DFKai-SB，會靜默退到 Noto Sans JP，
+# 而 PDF 照樣出得來。驗法看 get_page_fonts 有沒有 DFKaiShu-SB-Estd-BF。
+FONT_ZH_READING = "標楷體"  # C:/Windows/Fonts/kaiu.ttf
 INTERLINEAR_LINE_GAP_PT = 7
 # 一課只印三樣東西：二十個生詞、十題翻譯練習、一篇讀文；擁有者 2026-09-17 定的
 # 是「生詞二十個排一頁、練習十題連作答空間排一頁、一課最多八頁」。下面這幾個數字
@@ -136,8 +155,10 @@ EXERCISE_ITEM_SPACE_AFTER_PT = 0
 EXERCISE_LABEL_LINE_PT = 13
 EXERCISE_TEXT_LINE_SPACING = 1.05
 EXERCISE_TEXT_SPACE_AFTER_PT = 1
-EXERCISE_ANSWER_LINE_PT = 34
-EXERCISE_ANSWER_LINES = 2
+# 擁有者 2026-09-25（第二次）：「練習句空太寬的，應該是可以放進一頁中的」——一條
+# 8.5mm 的線寫得下一句中文，十題連標題約 205mm，版心 219mm，一頁排得下。
+EXERCISE_ANSWER_LINE_PT = 24
+EXERCISE_ANSWER_LINES = 1
 EXERCISE_ANSWER_SPACE_AFTER_PT = 2
 EXERCISE_INTRO_LINE_PT = 13
 
@@ -940,6 +961,86 @@ def pack_interlinear(tokens: list[dict], available_mm: float, *, lead_mm: float 
     return lines
 
 
+def add_reading_unit(
+    document,
+    source_text: str,
+    sense: str,
+    *,
+    render,
+    source_pt: float,
+    lead: str = "",
+    rtl: bool = False,
+    sense_color: str = INK,
+) -> None:
+    """One reading unit on paper: the original as a paragraph, then its Chinese.
+
+    ``render(paragraph, text, size)`` puts the source-language runs in (each
+    builder has its own: Hebrew face + RTL, Greek/CJK mix, Latin, Japanese).
+    Both paragraphs are set at READING_LINE_SPACING so the reader can write
+    between the lines; the Chinese is set in 標楷體 (FONT_ZH_READING).
+    """
+    source = document.add_paragraph()
+    source.paragraph_format.line_spacing = READING_LINE_SPACING
+    source.paragraph_format.space_before = Pt(0)
+    source.paragraph_format.space_after = Pt(2)
+    if lead:
+        set_run_font(source.add_run(lead + "\u2002"), FONT_UI, LABEL_PT, bold=True, color=ACCENT)
+    render(source, source_text, source_pt)
+    if rtl:
+        source.alignment = WD_ALIGN_PARAGRAPH.RIGHT
+        set_rtl(source)
+    # 短的單元整段不拆（keepLines）：拆開的下場是次頁頁首孤零零一兩行、其餘全白，
+    # 09-25 第一版七冊有 22 頁這樣。長段落（教父整段）仍讓它自然分頁。
+    set_keep(source, next_paragraph=True, together=len(source_text) <= KEEP_TOGETHER_CHARS)
+    set_widow_control(source)
+    if not sense:
+        source.paragraph_format.space_after = Pt(READING_UNIT_SPACE_AFTER_PT)
+        return
+    zh = document.add_paragraph()
+    zh.paragraph_format.line_spacing = READING_LINE_SPACING
+    zh.paragraph_format.space_before = Pt(0)
+    zh.paragraph_format.space_after = Pt(READING_UNIT_SPACE_AFTER_PT)
+    # 🚨 標楷體只有 Big5 那兩萬多字，缺的字（々、部分日文漢字）LibreOffice 會靜默退到
+    # Noto Sans JP 而且不內嵌——render_and_check 才會叫。缺字逐段退回細明體。
+    for chunk, covered in kai_chunks(sense):
+        add_mixed_script_text(zh, chunk, FONT_ZH_READING if covered else FONT_ZH,
+                              TRANSLATION_PT, color=sense_color)
+    if len(sense) <= KEEP_TOGETHER_CHARS:
+        set_keep(zh, together=True)
+    set_widow_control(zh)
+
+
+_KAI_CMAP: set[int] | None = None
+
+
+def kai_covers(ch: str) -> bool:
+    global _KAI_CMAP
+    if _KAI_CMAP is None:
+        try:
+            from fontTools.ttLib import TTFont
+            _KAI_CMAP = set(TTFont(r"C:/Windows/Fonts/kaiu.ttf").getBestCmap())
+        except Exception:  # noqa: BLE001 - 沒有 fontTools 或字型就全當覆蓋
+            _KAI_CMAP = set()
+    if not _KAI_CMAP:
+        return True
+    return ord(ch) in _KAI_CMAP or ch.isspace()
+
+
+def kai_chunks(text: str) -> list[tuple[str, bool]]:
+    out: list[tuple[str, bool]] = []
+    for ch in text:
+        covered = kai_covers(ch)
+        if out and out[-1][1] == covered:
+            out[-1] = (out[-1][0] + ch, covered)
+        else:
+            out.append((ch, covered))
+    return out
+
+
+def render_hebrew(paragraph, text: str, size: float, *, color: str = INK) -> None:
+    set_run_font(paragraph.add_run(text), FONT_HEBREW, size, color=color)
+
+
 def add_interlinear_unit(
     container,
     tokens: list[dict],
@@ -1126,7 +1227,7 @@ def add_cover(document: Document, data: dict, part: dict | None = None) -> None:
             set_rtl(p)
     document.add_paragraph().paragraph_format.space_after = Pt(26)
     # 擁有者 2026-09-25：封面不印「五十課・一千詞・…」那行規格。
-    if part:
+    if part and not SINGLE_VOLUME:
         p = document.add_paragraph()
         p.alignment = WD_ALIGN_PARAGRAPH.CENTER
         add_mixed_script_text(
@@ -1447,8 +1548,8 @@ def add_answer_lines(document: Document) -> None:
     """The ruled space the learner writes the translation into.
 
     擁有者 2026-09-25：「我作答的部分要留有一定空間」——一行 15pt（5mm）寫不下
-    一句中文。改成 EXERCISE_ANSWER_LINES 條各 EXERCISE_ANSWER_LINE_PT 高的橫線，
-    十題因此佔兩頁；那是作答空間，不是版面浪費。四本共用這一支。
+    一句中文；同日再裁「應該是可以放進一頁中的」，所以是一條 24pt（8.5mm）的線，
+    十題仍在一頁。EXERCISE_ANSWER_LINES／EXERCISE_ANSWER_LINE_PT 四本共用。
     """
     for index in range(EXERCISE_ANSWER_LINES):
         answer = document.add_paragraph(" ")
@@ -1471,7 +1572,7 @@ def add_bible_reading(document: Document, reading: dict) -> None:
     # 的話，讀者讀完十四節會以為自己讀完了整章。
     add_body(
         document,
-        f"底本：{reading['version']}  ·  {reading['extentZh']}  ·  逐詞繁中義在下，整句取和合本修訂版",
+        f"底本：{reading['version']}  ·  {reading['extentZh']}  ·  中譯取和合本修訂版",
         size=CAPTION_PT,
         color=MUTED,
     )
@@ -1491,10 +1592,8 @@ def add_bible_reading(document: Document, reading: dict) -> None:
             if is_combined_continuation
             else verse["translationZh"]
         )
-        tokens = align_glosses(verse["text"], f"bible:{verse['ref']}")
-        if tokens is None:
-            raise SystemExit(f"逐詞對譯缺 {verse['ref']}，或與排印正文對不上")
-        add_interlinear_unit(document, tokens, sense=sense, lead=str(verse["verse"]))
+        add_reading_unit(document, verse["text"], sense, render=render_hebrew,
+                         source_pt=HEBREW_BODY_PT, lead=str(verse["verse"]), rtl=True)
 
 
 def clean_title_from_text(text: str, title_he: str) -> str:
@@ -1528,11 +1627,9 @@ def add_prayer_reading(document: Document, reading: dict) -> None:
             add_divider(document)
             continue
         unit_id = f"prayer:{segment['id']}"
-        tokens = align_glosses(text, unit_id)
-        if tokens is None:
-            raise SystemExit(f"逐詞對譯缺禱文段落 {unit_id}")
         record = interlinear_master().get(unit_id, {})
-        add_interlinear_unit(document, tokens, sense=record.get("senseZh", ""))
+        add_reading_unit(document, text, record.get("senseZh", ""), render=render_hebrew,
+                         source_pt=HEBREW_BODY_PT, rtl=True)
     source = add_body(document, f"來源：{reading['source']}  ·  {reading['ref']}", size=CAPTION_PT - 0.6, color=MUTED)
     source.paragraph_format.line_spacing = 1.05
     source.paragraph_format.space_before = Pt(2)
@@ -1654,17 +1751,13 @@ def add_haggadah(document: Document, haggadah: dict, *, page_break_before=True) 
                 add_divider(document)
                 continue
             unit_id = f"haggadah:{segment['id']}"
-            tokens = align_glosses(text, unit_id)
-            if tokens is None:
-                raise SystemExit(f"逐詞對譯缺 Haggadah 段落 {unit_id}")
             record = interlinear_master().get(unit_id, {})
             rubric = segment.get("kind") == "rubric_or_variant"
-            add_interlinear_unit(
-                document,
-                tokens,
-                sense=record.get("senseZh", ""),
-                hebrew_color=MUTED if rubric else INK,
-                sense_color=MUTED if rubric else INK,
+            colour = MUTED if rubric else INK
+            add_reading_unit(
+                document, text, record.get("senseZh", ""),
+                render=lambda p, t, s, c=colour: render_hebrew(p, t, s, color=c),
+                source_pt=HEBREW_BODY_PT, rtl=True, sense_color=colour,
             )
 
 

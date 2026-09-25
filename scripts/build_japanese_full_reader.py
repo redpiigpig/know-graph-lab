@@ -172,19 +172,10 @@ def add_vocabulary(document: Document, rows: list[dict]) -> None:
 
 
 def add_interlinear_unit(document: Document, unit: dict, tokens: list[dict], *, lead: str = "") -> None:
-    if not tokens:
-        H.add_body(document, unit["text"], size=H.TRANSLATION_PT)
-        return
-    G.add_interlinear(
-        document,
-        tokens,
-        lead=lead,
-        sense=unit.get("senseZh", ""),
-        greek_pt=JA_PT,
-        available_mm=H.USABLE_WIDTH_MM,
-        measure=ja_width_mm,
-        render=ja_run,
-    )
+    # 2026-09-25：紙本不印逐詞層，一段原文、一段中譯（H.add_reading_unit）；
+    # 逐詞層留在資料與線上讀本。
+    H.add_reading_unit(document, unit["text"], unit.get("senseZh", ""),
+                       render=ja_run, source_pt=JA_PT, lead=lead)
 
 
 def exercise_blocks(vocabulary: list[dict]) -> dict[tuple[int, int], dict]:
@@ -271,7 +262,9 @@ def add_exercises(document: Document, block: dict | None, lesson: dict) -> None:
         line = document.add_paragraph()
         line.paragraph_format.left_indent = Mm(4)
         line.paragraph_format.space_after = Pt(H.EXERCISE_TEXT_SPACE_AFTER_PT)
-        line.paragraph_format.line_spacing = H.EXERCISE_TEXT_LINE_SPACING
+        # 🚨 MS Mincho 自報的行高比細明體／Times 高得多，倍數行距下十題多出約一題的高度，
+        # 第 10 題就自己跑到下一頁（兩冊各五十幾頁只印一題）。題目一行寫得完，給固定行高。
+        line.paragraph_format.line_spacing = Pt(H.EXERCISE_LABEL_LINE_PT + 2)
         ja_run(line, item["text"], EXERCISE_PT)
         H.set_keep(line, next_paragraph=True)
         # 擁有者 2026-09-25：作答要留空間，改用共用的兩行作答線（十題佔兩頁）。

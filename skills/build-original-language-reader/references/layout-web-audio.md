@@ -70,6 +70,42 @@ Use the frozen reader profile if the user approves a different specification.
 - **舊版次直接刪，不再搬 `_superseded/`**（「以前的版本留在 git，舊版本的 PDF 刪掉」）。
   三處 `_superseded` 2026-09-25 已清（Drive 兩夾 271 MB、本機 122 MB）。
 
+## 2026-09-25 第二輪（看過重出的書之後）：不印逐詞層、一段原文一段中譯、標楷體、七冊
+
+擁有者翻過上一節那版之後再裁四條，全部在 `build_hebrew_full_reader` 共用：
+
+- **冊名只寫一二三**：第一冊、第二冊…（`BOOK_LABELS`）；單冊的希伯來不寫。資料裡的
+  「上冊《…》」印出來時換成冊名（`build_greek_full_reader.volume_title`），拉丁凡例的
+  「上冊一千詞…」同樣改寫。封面不印 `volume["subtitle"]`（那是「五十課・一千詞…」規格行）。
+- **十題練習收回一頁**：作答線改回一條，24pt（8.5mm）。🚨 日文題目行要給**固定行高**
+  （`Pt(EXERCISE_LABEL_LINE_PT + 2)`）：MS Mincho 自報的行高比細明體高得多，倍數行距下
+  十題多出約一題，第 10 題自己跑到下一頁，兩冊各五十幾頁只印一題。
+- **讀本不印逐詞對譯**：一段原文、一段中譯（`add_reading_unit`，四本共用，各自傳
+  `render` 放原文字型），兩段都 1.8 行距讓讀者在行間寫字；逐詞層留在資料與線上讀本。
+  短段落 keepLines（`KEEP_TOGETHER_CHARS`）少掉一些孤兒頁，但「最後一個短單元自己
+  落到下一頁」這種本質上避不掉，七冊剩 19 頁，`inspect_reader_pages` 照實報。
+- **讀本中譯用標楷體**（`FONT_ZH_READING`）。🚨 字型名要寫「標楷體」——寫英文名
+  DFKai-SB LibreOffice 認不得，靜默退到 Noto Sans JP 且不內嵌，PDF 照樣出得來；
+  驗法看 `get_page_fonts` 有沒有 DFKaiShu-SB-Estd-BF。標楷體缺的字（々…）逐段退回
+  細明體（`kai_chunks`，用 fontTools 讀 kaiu.ttf 的 cmap）。
+
+不印逐詞層之後頁數少四成，回到**七冊 2,407 頁**，全部在 500 頁內：
+
+| 書 | 冊 | 頁數 |
+|---|---|---:|
+| 聖經希伯來文 | 單冊 | 384 |
+| 通用希臘文 | 第一冊／第二冊 | 319／465 |
+| 教會拉丁文 | 第一冊／第二冊 | 349／326 |
+| 日文宗教學 | 第一冊／第二冊 | 281／283 |
+
+上一節那張十一冊的表因此只是當天中午的過渡狀態；PARTS 機制與希伯來的 `part_label`／
+`part_output` 都留著，哪一冊再超過 500 頁就在 PARTS 切。🚨 冊數一改要跟著改的清單現在是
+六份：`render_and_check_reader_pdfs.TARGETS`、`audit_reader_pages`／`inspect_reader_pages`／
+`qa_reader_rendered_pages` 的 BOOKS、`audit_printed_exercises.BOOKS`、`fit_reader_reading_limit`
+的 BOOKS／HALVES、`sync_reader_artifacts.SUPERSEDED_NAMES`（作廢的冊次要列進去，活回來的
+要拿掉——拉丁 vol3 曾因為還在名單上差點被 sync 刪掉，dry-run 先看一遍）。
+版面又改了，`reader_page_budget.py` 的係數要重量（`fit_reader_reading_limit.py`）。
+
 ## 一課十頁（2026-09-25 起；以下「八頁」是 2026-09-17 的舊值）、字級不小於 12pt
 
 這兩條是版面的硬約束，其他所有版面決定都排在它們後面。

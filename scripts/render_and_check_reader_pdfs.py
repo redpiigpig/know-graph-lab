@@ -38,7 +38,7 @@ MAX_READER_PAGES = 500
 TARGETS: dict[str, tuple[Path, tuple[float, float], int | None]] = {}
 # 冊數照各 builder 的 PARTS：2026-09-18 並冊後希臘、拉丁、日文各兩冊，希伯來一冊。
 # 2026-09-25：行距放寬後希臘下冊 611 頁，再切成兩本（vol2／vol3），希臘共三冊。
-for stem in [f"greek-original-reader-vol{n}" for n in range(1, 4)] +             [f"latin-original-reader-vol{n}" for n in range(1, 5)] +             [f"japanese-original-reader-vol{n}" for n in range(1, 3)] +             [f"hebrew-original-reader-vol{n}" for n in range(1, 3)]:
+for stem in [f"greek-original-reader-vol{n}" for n in range(1, 3)] +             [f"latin-original-reader-vol{n}" for n in range(1, 3)] +             [f"japanese-original-reader-vol{n}" for n in range(1, 3)] +             ["hebrew-original-reader-50-lessons"]:
     TARGETS[stem] = (ROOT / "output/original-readers" / f"{stem}.docx", B5, MAX_READER_PAGES)
 for stem in ("hebrew-flashcards-1000", "greek-flashcards-volume-1",
              "greek-flashcards-volume-2", "latin-flashcards-volume-1",

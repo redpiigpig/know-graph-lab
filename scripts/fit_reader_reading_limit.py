@@ -44,20 +44,18 @@ PDF_DIR = ROOT / "output" / "print-masters"
 LESSON_TAG = re.compile(r"第\s*(\d{1,3})\s*課")
 HEBREW_WORD = re.compile(r"[֐-׿]+")
 
-BOOKS = {  # 2026-09-25 的冊數：希伯來二、希臘三、拉丁三、日文二
-    "hbo": [f"hebrew-original-reader-vol{n}" for n in range(1, 3)],
-    "grc": [f"greek-original-reader-vol{n}" for n in range(1, 4)],
-    "lat": [f"latin-original-reader-vol{n}" for n in range(1, 5)],
+BOOKS = {  # 2026-09-25 稍後的冊數：希伯來一、希臘二、拉丁二、日文二
+    "hbo": ["hebrew-original-reader-50-lessons"],
+    "grc": [f"greek-original-reader-vol{n}" for n in range(1, 3)],
+    "lat": [f"latin-original-reader-vol{n}" for n in range(1, 3)],
     "ja": [f"japanese-original-reader-vol{n}" for n in range(1, 3)],
 }
 # 一課同一個課次可能出現在兩冊（上下冊各自從第 1 課編號），所以量到的頁數要用
 # （冊, 課）當鍵。哪幾冊算同一半，各 builder 的 PARTS 說了算。
 HALVES = {
-    "hbo": {"hebrew-original-reader-vol1": 1, "hebrew-original-reader-vol2": 1},
-    "grc": {"greek-original-reader-vol1": 1, "greek-original-reader-vol2": 2,
-            "greek-original-reader-vol3": 2},
-    "lat": {"latin-original-reader-vol1": 1, "latin-original-reader-vol2": 1,
-            "latin-original-reader-vol3": 2, "latin-original-reader-vol4": 2},
+    "hbo": {"hebrew-original-reader-50-lessons": 1},
+    "grc": {"greek-original-reader-vol1": 1, "greek-original-reader-vol2": 2},
+    "lat": {"latin-original-reader-vol1": 1, "latin-original-reader-vol2": 2},
     "ja": {"japanese-original-reader-vol1": 1, "japanese-original-reader-vol2": 2},
 }
 UNIT = {"hbo": "詞", "grc": "詞", "lat": "詞", "ja": "字元"}

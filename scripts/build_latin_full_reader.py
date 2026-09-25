@@ -92,13 +92,12 @@ VOLUMES = {
 # 逼人，所以擁有者裁示並冊——回到「內容的一半＝一本實體書」。課次編號不動。
 # 2026-09-25：行距放寬、作答線加高後上冊 511 頁、下冊 501 頁（目錄換頁補回來之後），
 # 各切成兩本；附錄只印在各半的後一本。實測：上冊 252／261、下冊約 254／252。
+# 2026-09-25 稍後：紙本不印逐詞層之後上半 352 頁、下半 318 頁，回到兩冊。
 PARTS = [
-    {"book": 1, "source": "上冊", "first": 1, "last": 30, "appendix": False},
-    {"book": 2, "source": "上冊", "first": 31, "last": 50, "appendix": True},
-    {"book": 3, "source": "下冊", "first": 1, "last": 28, "appendix": False},
-    {"book": 4, "source": "下冊", "first": 29, "last": 50, "appendix": True},
+    {"book": 1, "source": "上冊", "first": 1, "last": 50, "appendix": True},
+    {"book": 2, "source": "下冊", "first": 1, "last": 50, "appendix": True},
 ]
-BOOK_LABELS = ("上冊（一）", "上冊（二）", "下冊（一）", "下冊（二）")
+BOOK_LABELS = ("第一冊", "第二冊")  # 2026-09-25：冊名只寫一二三
 
 COLOPHON = [
     ("拉丁文本", "武加大譯本用 Clementine Vulgate（eBible.org latVUC 轉錄，公有領域）；"
@@ -106,8 +105,8 @@ COLOPHON = [
                  "彌撒經文取自 Collins《A Primer of Ecclesiastical Latin》讀本部分所印之現行彌撒常規。"),
     ("中文", "聖經章節用思高譯本（思高聖經學會）。其餘篇章的中文為研讀用譯文，"
              "非教會核准之禮儀譯本；中文彌撒經文以《感恩祭典》為準。"),
-    ("詞彙", "上冊一千詞依 Collins《A Primer of Ecclesiastical Latin》原書順序；"
-             "下冊一千詞依教父／中世紀與近現代教廷語料詞頻，與上冊互斥。"
+    ("詞彙", "第一冊一千詞依 Collins《A Primer of Ecclesiastical Latin》原書順序；"
+             "第二冊一千詞依教父／中世紀與近現代教廷語料詞頻，與第一冊互斥。"
              "詞形主要部分取自 Whitaker's WORDS。"),
     # 擁有者 2026-09-25：發音與著作權兩段不印。
 ]
@@ -512,14 +511,11 @@ def reading_block(document, title: str, pairs: list[tuple[str, str]], note: str 
     if note:
         body(document, note, H.CAPTION_PT, color=H.MUTED, space_after=4)
     for index, (latin, chinese) in enumerate(pairs, start=1):
-        tokens = (interlinear or {}).get(f"reading:{key}:{index}", {}).get("tokens")
-        if tokens:
-            add_latin_interlinear(document, tokens, sense=chinese or "")
-            continue
-        # 還沒有逐詞層的行照舊整行印，缺就要看得出來缺。
-        body(document, latin, LATIN_PT, font=FONT_LA, space_after=1)
-        body(document, chinese or "", H.TRANSLATION_PT, color=H.MUTED,
-             space_after=5)
+        # 2026-09-25：紙本不印逐詞層，一段原文、一段中譯（H.add_reading_unit）。
+        H.add_reading_unit(
+            document, latin, chinese or "",
+            render=lambda p, t, s: H.set_run_font(p.add_run(t), FONT_LA, s),
+            source_pt=LATIN_PT)
 
 
 # --------------------------------------------------------------------------
