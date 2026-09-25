@@ -149,7 +149,7 @@ def significant_digits(n: int) -> int:
 
 
 def fix_numerals(text: str) -> tuple[str, int]:
-    """三位以上有效數字的四位數以上數字 → 阿拉伯數字。後接「年」且落在 1000–2999
+    """三位以上有效數字的四位數以上數字 → 阿拉伯數字。後接「年」且為四位數（1000–9999）
     的當年份寫（1036年），其餘加千分位（1,234人）。"""
     if not text:
         return text, 0
@@ -182,7 +182,7 @@ def fix_numerals(text: str) -> tuple[str, int]:
             continue
         nxt = text[e:e + 1]
         after2 = text[e:e + 2]
-        if nxt == "年" and after2 != "年代" and 1000 <= n <= 2999:
+        if nxt == "年" and after2 != "年代" and 1000 <= n <= 9999:
             rep = str(n)
         else:
             rep = f"{n:,}"

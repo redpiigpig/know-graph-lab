@@ -532,8 +532,16 @@ python -X utf8 scripts/translation_fix.py apply --corpus gnostic --ids <doc_slug
 - **語料**：`fathers`（教父 JSONL）／`books`（其他有原文欄的 JSONL，已排除教父與由 sec 重建的書）／
   `collected`、`sbe`（`.claude/skills/ebook-collected-works/*_data/*/sec*.json`）／`lit_review`／`gnostic`／
   `apocrypha`（kgl_zh）／`accs`（accs_commentary.body_zh）／`sources`（data/{avesta,hellenika,manichaean}/sources）。
-- **規則**：修字 `numerals middle_dot zhi toufa variants quotes heading`；清空 `meta think fffd untranslated`。
+- **規則**：修字 `numerals middle_dot zhi variants quotes heading`；清空 `meta think fffd untranslated`。
   `--rules fixes|clear|逗號清單`。經文類語料（sbe／gnostic／apocrypha／sources）不套數字規則。
+- 🚨 **2026-09-25 抽查揪出兩個 bug，已修（跑批次修正前先跑過 `pytest scripts/tests/test_translation_fix.py`）**：
+  ①`numerals` 把數字結尾的「兩」（銀兩、重量單位）當成 +2，「五千兩」曾被讀成 5,002；也把含「多／餘／幾」
+  等約數的複合數拆算（「兩億五千多萬」→200,005,000）。修法：結尾的「兩」剔出數字外、原樣留著（五千兩→5,000兩）；
+  緊接著多／餘／幾的整串不動。②`toufa`（頭發→頭髮）全站僅有的 14 筆命中**全部誤判**（「骨頭發預言」「舌頭發了誓」
+  「一頭發了狂」「石頭發笑」這類「N頭+發+動詞」被拆成頭髮），規則已整條移除，不在 `ALL_RULES` 裡。另外
+  `zhi` 補了動物名＋隻（狗隻／雞隻／牛隻／豬隻／鳥隻／牲隻）不動、`variants` 補了整份工作是日文原典（ndl_data）
+  時即使段落本身沒假名也不套字形規則、`translated_book_ids()` 只認合法 UUID 檔名（排除 `.bak`／`.partial`／
+  `.scrambled` 殘檔）。
 - **清空各語料的表示法不同**（工具已照各自寫法做，reader 仍顯示原文、補譯流程找得到）：
   JSONL 段序對得上就把該段換回原文，對不上（或教父）整個 chunk 的 content 設回原文——**不可寫空字串**，
   兩個 reader 會把空段吃掉、整欄錯位；sec*.json `zh[j]=""`（sbe 另把 `fail[j]` 歸 0，章名 `title_zh=""`），
