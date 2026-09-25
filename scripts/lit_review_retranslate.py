@@ -429,7 +429,9 @@ def gate(zh: str, orig: str) -> str:
         return "think"
     o = (orig or "").strip()
     # 必須是中文：原文有實質散文而譯文幾乎沒有漢字＝沒譯（書目、公式段除外）
-    if not is_bib(o) and func_density(o) >= 4.0 and len(_LAT.findall(o)) >= 40 and cjk_ratio(z) < 0.15:
+    # 參考文獻清單（年份一堆）整段留原文是對的，不算沒譯。
+    if (not is_bib(o) and len(_YEAR.findall(o)) < 3 and func_density(o) >= 4.0
+            and len(_LAT.findall(o)) >= 40 and cjk_ratio(z) < 0.15):
         return "not-chinese"
     if len(o) >= 200 and len(z) < len(o) * 0.12:
         return "too-short"
