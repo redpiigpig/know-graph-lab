@@ -623,7 +623,7 @@ Quizlet 沒有開放 API，也沒有瀏覽器可以替使用者登入，所以�
 出成它「匯入」貼上框的格式：一行一張、正面 Tab 背面。`scripts/export_quizlet_tsv.py`
 從 `build_flashcards.DECKS`／`load_cards` 讀，產物在 `output/flashcards/quizlet/`，並複製
 到 Drive 單字卡 夾底下的 Quizlet匯入 子夾。背面＝（日文假名）＋繁中詞義＋（詞性）＋課次。
-🚨 **希伯來正課卡與附錄卡都不出**——使用者 Quizlet 上原本就有一套希伯來單字，
-說了不要動。手機上的替代是 Anki（AnkiDroid 免費、iOS 版付費），要的話用 genanki
+希伯來一開始說不出（使用者 Quizlet 上原本就有一套），同日改口「希伯來的也要建立」，
+所以十二副全出；要不要匯入、匯入哪副由使用者自己決定。手機上的替代是 Anki（AnkiDroid 免費、iOS 版付費），要的話用 genanki
 出 .apkg 可以連配圖一起帶；目前沒裝 genanki，也沒人要，先不做。
 

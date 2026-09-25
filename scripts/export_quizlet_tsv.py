@@ -4,7 +4,8 @@ Quizlet 沒有開放 API（2020 年關掉了），只能在網頁版「建立學
 貼進去：一行一張卡，正面與背面用 Tab 隔開。這支腳本從 build_flashcards.DECKS 讀同
 一份資料，所以匯進 Quizlet 的卡跟印出來的卡一模一樣。
 
-🚨 希伯來那副不出（擁有者 2026-09-25：「我原本就有希伯來單字的你不要去動」）。
+希伯來原本說不出（使用者 Quizlet 上已有一套），同日改口「希伯來的也要建立」，所以全部都出；
+匯入哪一副由使用者自己決定，這支只出檔。
 
 用法：python -X utf8 scripts/export_quizlet_tsv.py [--deck grc1 ...]
 產物：output/flashcards/quizlet/<deck>.txt，並複製到 Drive 單字卡\Quizlet匯入\。
@@ -23,12 +24,11 @@ from build_flashcards import DECKS, load_cards  # noqa: E402
 
 OUT = ROOT / "output" / "flashcards" / "quizlet"
 DRIVE = Path(r"G:\我的雲端硬碟\資料\知識圖工作室\語言\原文讀本\單字卡\Quizlet匯入")
-SKIP = {"hbo"}  # 擁有者自己已經有一套希伯來卡，不動
+SKIP: set[str] = set()
 
 
 def skipped(key: str) -> bool:
-    """希伯來的正課卡與附錄卡都不出。"""
-    return key in SKIP or "hebrew" in DECKS[key]["output"]
+    return key in SKIP
 
 
 def back_text(card: dict) -> str:

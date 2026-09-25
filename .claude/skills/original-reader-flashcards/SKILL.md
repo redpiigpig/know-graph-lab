@@ -35,7 +35,7 @@ description: 由原文讀本詞表產出「可裁切的實體印刷單字卡」�
 同時複製一份到 Drive `資料\知識圖工作室\語言\原文讀本\單字卡\`；
 送印用的定稿另放 `…\原文讀本\印刷母版\單字卡\`（2026-09-25 起印刷母版底下分
 讀本／單字卡／撲克牌三夾）。Quizlet 匯入用的 TSV 由 `scripts/export_quizlet_tsv.py` 出到
-`單字卡\Quizlet匯入\`，🚨 希伯來那副不出（使用者 Quizlet 上原本就有，不要動）。
+`單字卡\Quizlet匯入\`，十二副全出（希伯來原說不出、同日改口要）。
 
 進版控的只有配圖對照與審閱紀錄——`output/source-cache/flashcards/*.json`
 （`*-card-images.json`、`*-card-icons.json`、`icon-rejects.json`、`proper-name-registers.json`）。
