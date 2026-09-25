@@ -8,6 +8,26 @@ description: 「翻譯定名」通用名物中譯對照工具（/translation-glo
 
 # Translation Glossary Skill（「翻譯定名」）
 
+## 🆕 2026-09-25：翻譯回饋一律回寫這裡（原文讀本校對首批 30 條）
+
+使用者裁示：「翻譯的回饋也要跟著更新 /translation-glossary」——校對、覆核、裁示裡出現的
+**譯名層**回饋（人名／地名／族名／作品名、按譯本 register 分歧的字）都要進表，不能只改在
+讀本或某本譯文裡；一般詞義錯不算（改讀本詞表）。記憶 [[feedback_translation_feedback_to_glossary]]。
+
+首批來自 2026-09-23 七冊逐頁校對的譯名類發現：`scripts/seed_glossary_readers_2026_09_25.py`
+（hand-curated、`--dry-run` 先看、existing 只補空白欄不覆蓋 ★）。theologians 新增 12 位聖經
+人物（`person_era=biblical`：葉忒羅／拿娥米／基連／暗嫩／革流巴／居里扭／耶孫／托彼特／多俾亞／
+托彼耳／友弟德／敖羅斐乃），theological_terms 新增 18 條（阿們＝和修，亞孟＝思高，依讀本所用
+譯本；巴別只用於創十一，其餘巴比倫＝使用者 09-18 裁示；波斯人／亞捫／伯示麥／暗妃坡里／
+加帕多家／亞細亞／撒但／以法他人／以攔；次經七卷書名）。
+
+🚨 **待使用者定奪**（★暫依讀本課題所用的思高形，`recommendation_reason` 寫明和修次經的另一形）：
+Tobit 托彼特／多比、Tobias 多俾亞／多比雅、Tobiel、Judith 友弟德／猶滴、Holofernes 敖羅斐乃／
+荷羅弗尼，以及七卷次經書名（多俾亞傳／多比傳、友弟德傳／猶滴傳、德訓篇／便西拉智訓、
+智慧篇／所羅門智訓、瑪加伯上下／馬加比一二書、瑪加伯四書／馬加比四書）。定了就改 ★ 並把
+希臘讀本課題與練習出處統一成同一套。
+
+
 ## 🆕 2026-06-03 升級：頂層卡「翻譯定名」+ 全領域擴充
 
 `/translation-glossary` **從聖經 portal 第 6 卡升為首頁頂層卡**（移出 `/scripture-canon`），並從「神學專用」擴成「**通用名物中譯**」。

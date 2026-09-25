@@ -47,27 +47,29 @@
 <!-- 自動從 /translation-glossary DB 同步 — 不要手動編輯這段，改了會被 export_glossary_from_db.py 覆寫。
      要改譯名請去 /translation-glossary 編輯模式 → 重跑 `python scripts/export_glossary_from_db.py`。 -->
 
-_共 249 位 — 按卒年由古至今排（卒年未知按生年；生年未知按世紀）_
+_共 540 位 — 按卒年由古至今排（卒年未知按生年；生年未知按世紀）_
 
-### 使徒教父與護教士（1-2c）  （13 位）
+### 使徒教父與護教士（1-2c）  （15 位）
 
 | 英文／拉丁 | 原文 | 年代 | ★ 建議譯名 | 其他傳統變體 |
 |---|---|---|---|---|
-| Clement of Rome | Κλήμης | –101 | **羅馬的革利免** | 思高=羅馬‧克萊孟一世 · 中國=克勒孟一世 |
-| Ignatius of Antioch | Ἰγνάτιος | –110 | **安提阿的依納爵** | 新教=安提阿的伊格那丟 · 東正=神聖致命者伊格納提 · 中國=安條克的伊格那提烏斯 |
+| Addai (Addaeus the Apostle) | ܐܕܝ | 1-2c | **阿達伊** | — |
+| Clement of Rome | Κλήμης | –101 | **羅馬的克勉** | 新教=羅馬的革利免 · 思高=羅馬‧克萊孟一世 · 中國=克勒孟一世 |
+| Ignatius of Antioch | Ἰγνάτιος | –110 | **安提阿的伊格那丟** | 思高=安提阿的依納爵 · 東正=神聖致命者伊格納提 · 中國=安條克的伊格那提烏斯 |
 | Papias of Hierapolis | Παπίας | 60–135 | **希拉波利的帕皮亞** | 思高=希拉波利‧帕皮亞 · 中國=帕皮亞 |
-| Aristides of Athens | Ἀριστείδης Ἀθηναῖος | 2c | **雅典的亞里斯底德** | 思高=雅典‧亞里斯特德 · 中國=雅典的亞里斯多德 |
 | Melito of Sardis | Μελίτων Σάρδεων | 2c | **撒狄的美利多** | 思高=撒狄‧梅利托 · 中國=撒狄的梅利托 |
+| Aristides of Athens | Ἀριστείδης Ἀθηναῖος | 2c | **雅典的亞里斯底德** | 思高=雅典‧亞里斯特德 · 中國=雅典的亞里斯多德 |
 | Mathetes | Μαθητής | 2c | **瑪忒特** | 新教=瑪忒特斯 · 思高=瑪提特 · 中國=馬提特 |
 | Pantaenus | Πανταῖνος | 2c | **潘代諾** | 新教=班提努斯 · 思高=龐泰努斯 · 東正=潘塔依努斯 · 中國=潘塔伊努斯 |
 | Hermas | Ἑρμᾶς | 80–155 | **羅馬的黑馬** | 新教=羅馬的赫瑪斯 · 思高=羅馬‧赫瑪斯 · 中國=赫爾瑪斯 |
 | Polycarp of Smyrna | Πολύκαρπος | 69–155 | **士每拿的坡旅甲** | 思高=斯米爾納‧玻里加 · 東正=司米爾納的聖波利卡爾普 · 中國=波利卡普 |
+| Valentinus (gnostic teacher) | Οὐαλεντῖνος | 100–160 | **瓦倫廷** | — |
+| Epiphanes (Carpocratian) | Ἐπιφάνης | 130–160 | **埃皮法內斯** | — |
 | Justin Martyr | Ἰουστῖνος | 100–165 | **殉道者猶斯定** | 東正=殉道者尤斯丁 · 中國=殉教者猶斯定 |
-| Tatian the Assyrian | Τατιανός | 120–180 | **他提安** | 新教=敘利亞的塔提安 · 思高=塔提安 |
 | Theophilus of Antioch | Θεόφιλος | 120–180 | **安提阿的提阿非羅** | 思高=安提約基雅‧德奧斐羅 · 東正=安提阿的聖狄奧非羅 · 中國=安條克的狄奧非羅 |
 | Athenagoras of Athens | Ἀθηναγόρας | 133–190 | **雅典那哥拉** | 新教=雅典的亞典娜哥拉 · 思高=雅典‧亞典娜哥拉 · 中國=雅典的阿忒那哥剌 |
 
-### 尼西亞前教父（3c）  （15 位）
+### 尼西亞前教父（3c）  （16 位）
 
 | 英文／拉丁 | 原文 | 年代 | ★ 建議譯名 | 其他傳統變體 |
 |---|---|---|---|---|
@@ -75,6 +77,7 @@ _共 249 位 — 按卒年由古至今排（卒年未知按生年；生年未知
 | Irenaeus of Lyon | Εἰρηναῖος Λυόνος | –202 | **里昂的愛任紐** | 思高=里昂‧依肋內 · 東正=里昂的聖愛任紐 · 中國=里昂的伊里奈烏 |
 | Clement of Alexandria | Κλήμης Ἀλεξανδρεύς | 150–215 | **亞歷山卓的革利免** | 思高=亞歷山卓‧克萊孟 · 中國=亞歷山卓的克勒孟 |
 | Tertullian | Tertullianus | 160–220 | **特土良** | 思高=戴爾都良 · 中國=德爾圖良 |
+| Bardaisan of Edessa | ܒܪ ܕܝܨܢ | 154–222 | **巴爾戴桑** | — |
 | Hippolytus of Rome | Ἱππόλυτος | –235 | **希波呂圖斯** | 東正=聖希波呂圖斯 |
 | Julius Africanus | Ἰούλιος Ἀφρικανός | 160–240 | **猶略‧阿弗里卡努斯** | 新教=尤利烏斯‧阿弗里卡努斯 · 思高=儒略‧阿弗里卡努斯 · 東正=聖猶略 阿弗里卡努斯 · 中國=尤利烏斯‧阿非利加努 |
 | Minucius Felix | Marcus Minucius Felix | –250 | **密努修‧斐力克斯** | 中國=米奴修斯‧腓力克斯 |
@@ -85,57 +88,103 @@ _共 249 位 — 按卒年由古至今排（卒年未知按生年；生年未知
 | Novatian | Novatianus | 200–258 | **諾窪天** | 新教=挪瓦提安 · 中國=諾瓦蒂安 |
 | Dionysius of Alexandria | Διονύσιος ὁ Ἀλεξανδρεύς | –265 | **亞歷山卓的狄奧尼修** | 新教=亞歷山卓的狄奧尼修斯 · 思高=亞歷山卓‧狄奧尼削 · 東正=亞歷山卓的聖狄奧尼西烏斯 · 中國=亞歷山卓的丟尼修斯 |
 | Commodian | Commodianus | –270 | **科摩狄安** | 中國=科莫迪安 |
-| Gregory Thaumaturgus | Γρηγόριος ὁ Θαυματουργός | 213–270 | **奇蹟行者格列高利** | 新教=神蹟行者貴格利 · 思高=奇蹟師額我略 · 東正=聖格列高利 奇蹟行者 |
+| Gregory Thaumaturgus | Γρηγόριος ὁ Θαυματουργός | 213–270 | **行異能者格列高里** | 新教=行異能者貴格利 · 思高=奇蹟師額我略 · 東正=聖格列高利 奇蹟行者 · 中國=奇蹟行者格列高利 |
 
-### 尼西亞 + 4c 教父  （22 位）
+### 尼西亞 + 4c 教父  （40 位）
 
 | 英文／拉丁 | 原文 | 年代 | ★ 建議譯名 | 其他傳統變體 |
 |---|---|---|---|---|
 | Arnobius of Sicca | Ἀρνόβιος | 3-4c | **阿爾諾比烏斯** | — |
-| Lactantius | Λακτάντιος | 3-4c | **乳香者拉克坦提烏斯** | 新教=乳香者 · 思高=拉克坦提烏斯 |
 | Venantius | Βενάντιος / Venantius | 3-4c | **維南提烏** | — |
 | Asterius the Sophist | Ἀστέριος ὁ σοφιστής | 3-4c | **詭辯家亞斯特里烏** | 思高=詭辯家‧亞斯特里烏 · 東正=亞斯特里烏斯 · 中國=亞斯特里烏 |
+| Lactantius | Λακτάντιος | 3-4c | **乳香者拉克坦提烏斯** | 新教=乳香者 · 思高=拉克坦提烏斯 |
+| Victorinus of Pettau | Victorinus Poetovionensis | –304 | **彼他的維克多納** | — |
 | Pierius of Alexandria | Πιέριος ὁ Ἀλεξανδρεύς | –310 | **亞歷山卓的皮埃里烏斯** | 思高=亞歷山卓‧皮埃里 · 東正=亞歷山卓的聖皮埃里烏斯 |
 | Methodius of Olympus | Μέθοδος ὁ ἐξ Ὀλύμπου | –311 | **奧林波斯的美多第烏** | 思高=奧林波斯‧美多德 · 東正=聖美多第烏斯 · 中國=美多第烏 |
 | Eusebius of Caesarea | Εὐσέβιος ὁ Καισαρείας / Εὐσέβιος τῆς Παλαιστίνης | 260–340 | **該撒利亞的優西比烏** | 思高=該撒利亞‧歐瑟比烏 · 東正=該撒利亞的聖優西比烏 · 中國=優西比烏 |
-| Aphrahat the Persian Sage | ܐܦܪܗܛ | –345 | **波斯智者亞弗拉哈特** | 新教=波斯聖人亞弗拉哈特 · 思高=波斯‧亞弗拉哈特 · 東正=波斯的聖亞弗拉哈特 · 中國=亞弗拉哈特 |
+| Aphrahat the Persian Sage | ܐܦܪܗܛ | –345 | **波斯賢士阿弗拉哈特** | 新教=波斯聖人亞弗拉哈特 · 思高=波斯‧亞弗拉哈特 · 東正=波斯的聖亞弗拉哈特 · 中國=亞弗拉哈特 |
+| Pachomius the Great | ⲡⲁϧⲱⲙ (Pakhom) | –348 | **帕宏** | — |
+| Ambrosiaster | Ambrosiaster | 4c | **安波羅修註釋者** | — |
 | Pacian of Barcelona | Pacianus | 4c | **帕齊安** | 新教=帕西安 |
+| Pseudo-Clement | Pseudo-Clemens | 4c | **偽革利免** | — |
+| Nicetas of Remesiana | Niceta Remesianensis | 4c | **利米西亞納的尼塞塔** | — |
+| Pseudo-Constantius | — | 4c | **託君士坦丟名作品** | — |
+| Paulinus of Nola | Paulinus Nolanus | 4c | **諾拉的保利努** | — |
+| Theodore of Tabennesi | Theodorus Tabennensis | 4c | **塔本尼西的狄奧多** | — |
+| Anonymous Anomoean | — | 4c | **佚名阿諾謬派作者** | — |
+| Gaudentius of Brescia | Gaudentius Brixiensis | 4c | **布雷西亞的高登丟** | — |
+| Palladius of Helenopolis | Palladius Helenopolitanus | 4c | **巴拉第** | — |
+| Optatus of Milevis | Optatus Milevitanus | 4c | **米利未的奧普塔圖** | — |
+| Phib (Apa Phib) | ⲫⲓⲃ (Phib) | –350 | **菲布** | — |
+| Gregory of Elvira | Gregorius | 4c | **埃爾維拉的額我略** | 新教=埃爾維拉的貴格利 |
+| Paphnutius of Egypt | ⲡⲁⲡⲛⲟⲩⲧⲉ (Papnoute) | –360 | **帕夫努特** | — |
+| Marius Victorinus | Gaius Marius Victorinus | 290–364 | **馬流‧維克多納** | — |
 | Hilary of Poitiers | Ἱλάριος ὁ Πικταβιένσης | 315–367 | **希拉里** | 思高=希拉略 · 東正=普瓦捷的聖希拉里 |
-| Ephrem the Syrian | ܐܦܪܝܡ ܣܘܪܝܝܐ | 306–373 | **敘利亞的艾弗冷** | 新教=敘利亞的以弗琅 · 思高=敘利亞‧厄弗冷 · 東正=敘利亞的聖以弗琅 |
+| Ephrem the Syrian | ܐܦܪܝܡ ܣܘܪܝܝܐ | 306–373 | **敘利亞的厄弗冷** | 新教=敘利亞的以弗琅 · 思高=敘利亞‧厄弗冷 · 東正=敘利亞的聖以弗琅 |
 | Athanasius of Alexandria | Ἀθανάσιος ὁ Ἀλεξανδρεύς | 298–373 | **亞他那修** | 思高=阿塔納修 · 東正=亞歷山卓的聖阿塔納修 · 中國=阿塔那修 |
 | Macrina the Younger | Μακρίνα ἡ Νέα | 327–379 | **小瑪克麗娜** | 思高=小瑪克里納 · 東正=聖瑪克里納 · 中國=瑪克里納 |
-| Basil the Great | Βασίλειος ὁ Μέγας | 330–379 | **大巴西略** | 新教=大巴西流 · 東正=大聖瓦西里 · 中國=巴西爾大帝 |
-| Cyril of Jerusalem | Κύριλλος ὁ Ἱεροσολυμίτης | 315–386 | **西瑞爾** | 新教=居里羅 · 東正=聖西瑞爾 |
-| Gregory of Nazianzus | Γρήγοριος ὁ Ναζιανζηνός | 329–390 | **拿先斯的格列高理** | 新教=拿先素斯的貴格利 · 思高=額我略‧納齊安 · 東正=神學家額我略 · 中國=納齊安的格列高利 |
+| Basil the Great | Βασίλειος ὁ Μέγας | 330–379 | **凱撒利亞的巴西流** | 新教=大巴西流 · 思高=大巴西略 · 東正=大聖瓦西里 · 中國=巴西爾大帝 |
+| Horsiesi | Ὡρσιήσιος | –380 | **霍西耶西** | — |
+| Cyril of Jerusalem | Κύριλλος ὁ Ἱεροσολυμίτης | 315–386 | **耶路撒冷的區利羅** | 新教=居里羅 · 思高=西瑞爾 · 東正=聖西瑞爾 |
 | Apollinaris of Laodicea | Ἀπολλινάριος ὁ Λαοδικεύς | 310–390 | **亞波里那留** | 新教=亞波利拿流 · 思高=亞波里那流 · 東正=聖亞波利那流 · 中國=阿波利那流 |
+| Gregory of Nazianzus | Γρήγοριος ὁ Ναζιανζηνός | 329–390 | **拿先斯的格列高里** | 新教=拿先斯的貴格利 · 思高=額我略‧納齊安 · 東正=神學家額我略 · 中國=納齊安的格列高利 |
 | Diodore of Tarsus | Διόδωρος ὁ Ταρσεύς | –394 | **大數的狄奧多若** | 新教=大數的丟奧多若 · 思高=大數‧狄奧多若 · 東正=大數的聖狄奧多若 |
 | Pelagius | Πελάγιος | 354– | **伯拉糾** | 思高=培拉糾 · 東正=伯拉奇烏斯 |
-| Gregory of Nyssa | Γρηγόριος ὁ Νυσσαῖος | 335–395 | **尼撒的格列高理** | 新教=尼撒的貴格利 · 思高=尼撒‧額我略 · 東正=尼撒的聖格列高利 · 中國=尼撒的格列高利 |
+| Gregory of Nyssa | Γρηγόριος ὁ Νυσσαῖος | 335–395 | **尼撒的格列高里** | 新教=尼撒的貴格利 · 思高=尼撒‧額我略 · 東正=尼撒的聖格列高利 · 中國=尼撒的格列高利 |
 | Ambrose of Milan | Ἀμβρόσιος ὁ Μεδιολανέσης | 340–397 | **安波羅修** | 思高=盎博羅削 · 東正=米蘭的聖盎博羅削 · 中國=安布羅斯 |
 | Didymus the Blind | Διδυμος ὁ Τυφλός | 313–398 | **狄第摩** | 新教=底底母 · 東正=聖底底摩 |
+| Evagrius Ponticus | Εὐάγριος ὁ Ποντικός | 345–399 | **本都的伊華紐斯** | — |
 
-### 5c 教父  （16 位）
+### 5c 教父  （44 位）
 
 | 英文／拉丁 | 原文 | 年代 | ★ 建議譯名 | 其他傳統變體 |
 |---|---|---|---|---|
+| Severian of Gabala | Σεβηριανὸς Γαβάλων | 4-5c | **迦巴拉的瑟維裡安** | — |
 | Asterius of Amasea | Ἀστέριος ὁ Ἀμασείας | 4-5c | **亞斯特里** | 新教=亞斯特利烏 · 東正=聖亞斯特里 |
+| Tyconius | Tyconius | –400 | **泰康尼斯** | — |
+| Onnophrius (Onuphrius) the Anchorite | ⲁⲃⲉⲛⲛⲟⲫⲣⲓⲟⲥ (Abennofrios) | –400 | **奧諾夫里** | — |
 | Epiphanius of Salamis | Ἐπιφάνιος ὁ Σαλαμῖνος | 315–403 | **厄皮法尼** | 新教=以彼法紐 · 東正=聖厄皮法尼 |
+| Chromatius of Aquileia | Chromatius Aquileiensis | –407 | **阿奎萊亞的克羅馬丟** | — |
 | John Chrysostom | Ἰωάννης ὁ Χρυσόστομος | 347–407 | **金口若望** | 新教=屈梭多模 · 東正=聖金口約安 · 中國=約翰‧克里索斯通 |
-| Jerome | Ἱερώνυμος / Hieronymus | 342–420 | **耶柔米** | 思高=熱羅尼莫 · 東正=至福人耶柔米 · 中國=哲羅姆 |
+| Prudentius | Aurelius Prudentius Clemens | 348–413 | **普魯頓丟** | — |
+| Pishoi (Bishoy) the Great | ⲡⲓϣⲱⲓ (Pishoi) | –417 | **皮紹依** | — |
 | Sulpitius Severus | Sulpitius Severus | 360–420 | **蘇皮修** | 思高=蘇匹提烏斯‧塞維路 · 東正=蘇匹提烏斯 · 中國=蘇皮提烏斯 |
+| Jerome | Ἱερώνυμος / Hieronymus | 342–420 | **耶柔米** | 思高=熱羅尼莫 · 東正=至福人耶柔米 · 中國=哲羅姆 |
+| Maximus of Turin | Maximus Taurinensis | –423 | **都靈的馬克西穆** | — |
 | Theodore of Mopsuestia | Θεόδωρος ὁ Μοψουεστίας | 350–428 | **摩普綏提亞的狄奧多若** | 新教=摩普蘇埃提亞的提多略 · 思高=摩普蘇埃斯提亞‧狄奧多若 · 東正=摩普蘇埃斯提亞的聖提奧多若 · 中國=摩普蘇埃斯提亞的狄奧多若 |
-| Augustine of Hippo | Αὐρήλιος Αὐγουστῖνος / Aurelius Augustinus | 354–430 | **希波的奧古斯丁** | 新教=奧古斯丁 · 思高=奧斯定 · 東正=希波的聖奧古斯丁 |
+| Augustine of Hippo | Αὐρήλιος Αὐγουστῖνος / Aurelius Augustinus | 354–430 | **希波的奧古斯丁** | 新教=奧古斯丁 · 思高=奧思定 · 東正=希波的聖奧古斯丁 |
 | John Cassian | Ἰωάννης Κασσιανός / Ioannes Cassianus | 360–435 | **若望‧格西安** | 新教=約翰‧卡西安 · 思高=若望‧喀西安 · 東正=聖約翰‧喀西安 · 中國=喀西安 |
-| Cyril of Alexandria | Κύριλλος ὁ Ἀλεξανδρεύς | 378–444 | **亞歷山卓的西里爾** | 思高=亞歷山卓‧西里爾 · 東正=亞歷山卓的聖西里爾 · 中國=西里爾 |
+| Cyril of Alexandria | Κύριλλος ὁ Ἀλεξανδρεύς | 378–444 | **亞歷山卓的區利羅** | 新教=亞歷山卓的西里爾 · 思高=亞歷山卓‧西里爾 · 東正=亞歷山卓的聖西里爾 · 中國=西里爾 |
 | Vincent of Lerins | Vincentius Lirinensis | –445 | **勒蘭的文生** | 新教=勒蘭的文森特 · 思高=勒蘭‧文生 · 東正=勒蘭的溫仙 |
+| Hilary of Arles | Hilarius Arelatensis | 403–449 | **阿爾勒的希拉流** | — |
+| Aponius | Aponius | 5c | **亞波紐** | — |
+| John of Apamea | ܝܘܚܢܢ ܐܝܚܝܕܝܐ | 5c | **隱修士約翰** | — |
+| Peter Chrysologus | Petrus | 5c | **金言彼得** | — |
+| Valerian of Cimiez | Valerianus Cemeliensis | 5c | **齊彌慈的瓦勒良** | — |
+| Vigilius of Thapsus | Vigilius Thapsensis | 5c | **塔普蘇斯的維吉留** | — |
+| Theodotus of Ancyra | Theodotus Ancyranus | 5c | **安基拉的狄奧多圖** | — |
+| Julian Pomerius | Iulianus Pomerius | 5c | **尤利安‧波梅里烏** | — |
+| Callinicus | Callinicus | 5c | **卡利尼庫** | — |
+| Eucherius of Lyon | Eucherius Lugdunensis | 5c | **優克里烏** | — |
+| Victor of Cartenna | Victor Cartennensis | 5c | **卡爾滕納的維克多** | — |
+| Quodvultdeus | Quodvultdeus | 5c | **奎德華爾丟** | — |
+| Faustus of Riez | Faustus Reiensis | 5c | **列茲的浮士德** | — |
+| Victor of Vita | Victor Vitensis | 5c | **維塔的維克多** | — |
+| Fastidiosus | Fastidiosus | 5c | **法斯提狄歐蘇** | — |
 | Nestorius | Νεστόριος | –451 | **聶斯脫里** | 新教=聶斯脫里烏斯 |
+| Hesychius of Jerusalem | Ἡσύχιος Ἱεροσολυμίτης | –451 | **耶路撒冷的赫西糾** | — |
 | Prosper of Aquitaine | Prosper Aquitanus | 390–455 | **普洛斯培** | 思高=普羅斯培‧阿基坦 · 中國=普羅斯佩 |
+| Arnobius the Younger | Arnobius Iunior | –455 | **小亞那比烏** | — |
 | Eutyches | Εὐτύχης | –456 | **歐迪克** | — |
+| Patrick of Ireland | Patricius | 385–461 | **愛爾蘭的帕特里克** | — |
 | Leo the Great | Λέων ὁ Μέγας | 400–461 | **大良** | 新教=大利奧 · 思高=大良一世 · 東正=教宗聖良 · 中國=利奧一世 |
-| Theodoret of Cyrus | Θεοδώρητος ὁ Κύρου | 393–466 | **居魯斯的狄奧多雷特** | 新教=居魯斯的提多略 · 思高=居魯斯‧狄奧多雷特 · 東正=居魯斯的聖狄奧多雷特 · 中國=塞魯斯的狄奧多雷特 |
+| Shenoute of Atripe | ϣⲉⲛⲟⲩⲧⲉ (Shenoute) | –465 | **舍努特** | — |
+| Theodoret of Cyrus | Θεοδώρητος ὁ Κύρου | 393–466 | **居魯斯的狄奧多勒** | 新教=居魯斯的提多略 · 思高=居魯斯‧狄奧多雷特 · 東正=居魯斯的聖狄奧多雷特 · 中國=塞魯斯的狄奧多雷特 |
+| Besa of Atripe | ⲃⲏⲥⲁ (Besa) | –474 | **貝薩** | — |
 | Salvian of Marseille | Salvianus Massiliensis | 400–480 | **薩爾維安** | 思高=薩爾維亞努斯‧馬賽城 · 東正=薩爾維努斯 · 中國=薩爾維亞努斯 |
+| Salvian the Presbyter | Salvianus Massiliensis | 400–490 | **長老薩爾維安** | — |
 
-### 6-8c 過渡期  （16 位）
+### 6-8c 過渡期  （32 位）
 
 | 英文／拉丁 | 原文 | 年代 | ★ 建議譯名 | 其他傳統變體 |
 |---|---|---|---|---|
@@ -145,28 +194,47 @@ _共 249 位 — 按卒年由古至今排（卒年未知按生年；生年未知
 | Fulgentius of Ruspe | Fabius Claudius Gordianus Fulgentius | 467–527 | **富爾根修** | 思高=富爾根‧魯斯佩 |
 | Severus of Antioch | Σευῆρος | 465–538 | **塞維魯斯** | 思高=塞維魯斯‧安提約基雅 · 東正=聖塞維魯斯 |
 | Caesarius of Arles | Καισάριος ὁ Ἀρελατένσης | 470–542 | **凱撒略** | 新教=該撒利烏 · 思高=凱撒略‧亞耳城 · 東正=凱撒利烏斯 |
+| Oecumenius | Οἰκουμένιος | 6c | **俄厄庫美紐** | — |
+| Apringius of Beja | Apringius Pacensis | 6c | **貝雅的亞帕瑞糾** | — |
+| Arator | Arator | 490–550 | **阿拉託** | — |
+| Paterius | Paterius | 6c | **帕特里烏斯** | — |
+| Dorotheus of Gaza | Dorotheus Gazensis | 6c | **迦薩的多羅西斯** | — |
+| Olympiodorus of Alexandria | Olympiodorus Alexandrinus | 6c | **奧林匹多羅** | — |
+| Barsanuphius and John | Barsanuphius et Iohannes | 6c | **巴爾撒努非與約翰** | — |
 | Romanos the Melodist | Ῥωμανὸς ὁ Μελῳδός | –556 | **羅馬努斯‧梅洛迪斯特** | 新教=羅馬奴斯‧梅洛迪斯特 · 東正=聖羅馬努斯‧旋律詩人 |
+| Primasius of Hadrumetum | Primasius | –560 | **哈德魯門的彼馬修** | — |
 | Cassiodorus | Flāvius Māgnus Aurēlius Cassiodōrus Senator | 485–585 | **卡西奧多魯斯** | — |
-| Gregory the Great | Γρηγόριος ὁ Μέγας | 540–604 | **大額我略** | 新教=大格雷戈里 · 東正=教宗聖格列高利 · 中國=格列高利一世 |
+| Leander of Seville | Leander Hispalensis | –600 | **塞維利亞的雷安德** | — |
+| Gregory the Great | Gregorius Magnus | 1–604 | **大額我略** | 新教=大貴格利 |
 | Isidore of Seville | Ἰσίδωρος ὁ Σεβιλλανός | 560–636 | **依西多祿** | 新教=塞維利亞的伊西多爾 · 思高=塞維利亞‧依西多祿 |
+| Andrew of Caesarea | Ἀνδρέας Καισαρείας | 563–637 | **凱撒利亞的安德烈** | — |
 | John Climacus | Ἰωάννης ὁ Σιναΐτης | –649 | **西奈的若望** | 新教=西奈的若翰 · 思高=西奈‧若望 · 東正=西奈的聖約安 · 中國=西奈的約翰 |
+| Andreas (catenist) | Ἀνδρέας | 7c | **安德烈亞斯** | — |
+| Fructuosus of Braga | Fructuosus | 7c | **布拉加的福拓索斯** | — |
+| Ildefonsus of Toledo | Ildefonsus Toletanus | 7c | **托雷多的伊爾德豐蘇** | — |
+| Stephen of Hnes | Stephanus | 7c | **赫內斯的斯德望** | — |
+| Sophronius of Jerusalem | Sophronius Hierosolymitanus | 7c | **耶路撒冷的索弗洛尼烏** | — |
+| Braulio of Saragossa | Braulio Caesaraugustanus | –651 | **薩拉戈薩的布勞略** | — |
 | Maximus the Confessor | Μάξιμος ὁ Ὁμολογητής | 580–662 | **認信者馬克西姆** | 新教=馬克西穆斯‧認信者 · 思高=馬克西莫斯‧認信者 · 東正=聖認信者馬克西穆斯 · 中國=馬克西穆斯 |
 | Germanus of Constantinople | Γερμανός ὁ Κωνσταντινουπολίτης | 634–733 | **君士坦丁堡的日耳曼** | 思高=君士坦丁堡‧日爾曼 · 東正=聖日耳曼‧君士坦丁堡宗主教 |
 | Bede the Venerable | Βήδα ὁ Σεβάσμιος | 673–735 | **可敬者比德** | 新教=比德 · 東正=敬虔的比德 |
 | Andrew of Crete | Ἀνδρέας ὁ Κρής | 660–740 | **克里特的安德烈** | 思高=克里特‧安德肋亞 · 東正=聖安德烈‧克里特人 |
 | John of Damascus | Ἰωάννης ὁ Δαμασκηνός | 676–749 | **大馬士革的若望** | 新教=約翰‧大馬士革 · 思高=達瑪斯克‧若望 · 東正=聖約翰‧大馬士革 · 中國=大馬士革的約翰 |
 
-### 9-12c 中世紀早期  （15 位）
+### 9-12c 中世紀早期  （18 位）
 
 | 英文／拉丁 | 原文 | 年代 | ★ 建議譯名 | 其他傳統變體 |
 |---|---|---|---|---|
 | Alcuin of York | Alcuinus Eboracensis | 735–804 | **艾爾昆** | 思高=阿爾昆 |
 | Theodore the Studite | Θεόδωρος ὁ Στουδίτης | 759–826 | **斯圖德修院的西奧多** | 新教=斯圖德修道院的西奧多 · 思高=斯圖德修院‧提奧多若 · 東正=聖西奧多‧斯圖德斯 · 中國=斯圖德的西奧多 |
+| Ishodad of Merv | ܝܫܘܥܕܕ ܕܡܪܘ | 9c | **默維的伊澤達德** | — |
+| Dhuoda of Septimania | Dhuoda | 9c | **塞普提馬尼亞的杜奧達** | — |
 | Rabanus Maurus | Rabanus Maurus | 780–856 | **拉班‧毛魯斯** | 中國=拉班努斯 |
 | John Scotus Eriugena | Iohannes Scotus Eriugena | –877 | **若望‧思高‧愛留根納** | 新教=約翰‧司各脫‧愛留根納 · 思高=若望‧司各脫‧愛留根納 · 中國=約翰‧司各特 |
 | Photius of Constantinople | Φώτιος ὁ Κωνσταντινουπόλεως | 810–893 | **君士坦丁堡的佛提烏** | 新教=君士坦丁堡的佛提烏斯 · 思高=君士坦丁堡‧佛提烏 · 東正=聖福提烏 · 中國=君士坦丁堡的福提烏 |
 | Symeon the New Theologian | Συμεών ὁ Νέος Θεολόγος | 949–1022 | **新神學家西蒙** | 新教=新神學家西門 · 思高=新神學家‧西面溫 · 東正=新神學家聖西美翁 · 中國=新神學家西美翁 |
 | Berengar of Tours | Berengarius Turonensis | 999–1088 | **貝倫加留斯** | 思高=貝倫加里烏斯 |
+| Theophylact of Ohrid | Θεοφύλακτος Ἀχρίδος | 1055–1107 | **狄奧菲拉克圖斯** | — |
 | Anselm of Canterbury | Ἀνσέλμος τοῦ Καντουαρίας | 1033–1109 | **坎特伯里的安瑟倫** | 思高=坎特伯雷‧安瑟倫 · 中國=安瑟倫 |
 | Anselm of Laon | Anselmus Laudunensis | –1117 | **蘭的安塞姆** | 新教=蘭的安瑟倫 · 思高=蘭‧安塞爾姆 · 東正=蘭的安塞爾姆 |
 | Hugh of Saint Victor | Hugo Sancti Victoris | 1096–1141 | **聖維克多的修格** | 新教=聖維克多的休格 · 思高=聖維克多‧雨果 · 中國=聖維克多的雨果 |
@@ -192,9 +260,9 @@ _共 249 位 — 按卒年由古至今排（卒年未知按生年；生年未知
 | Giles of Rome | Αἰγίδιος τῆς Ῥώμης | 1243–1316 | **羅馬的埃吉迪烏斯** | 新教=羅馬的吉爾斯 · 思高=羅馬‧埃吉迪烏斯 · 東正=（非東方傳統） · 中國=埃吉迪烏斯 |
 | Meister Eckhart | Meister Eckhart von Hochheim | 1260–1327 | **艾克哈特** | — |
 | Marsilius of Padua | Marsilius Patavinus | 1280–1343 | **馬西略‧帕多瓦** | 新教=馬西略 · 中國=馬西流 |
-| Gregory of Sinai | Γρηγόριος ὁ Σιναΐτης | 1265–1346 | **西奈的格列高理** | 新教=西奈的格雷戈里 · 思高=西奈‧額我略 · 東正=西奈的聖格列高利 · 中國=西奈的格列高利 |
+| Gregory of Sinai | Γρηγόριος ὁ Σιναΐτης | 1265–1346 | **西奈的格列高里** | 新教=西奈的格雷戈里 · 思高=西奈‧額我略 · 東正=西奈的聖格列高利 · 中國=西奈的格列高利 |
 | William of Ockham | Guilielmus Ockhamensis | 1287–1347 | **奧坎的威廉** | 新教=奧卡姆的威廉 · 中國=威廉‧奧卡姆 |
-| Gregory Palamas | Γρηγόριος Παλαμάς | 1296–1359 | **帕拉馬的格列高理** | 新教=帕拉馬的格雷戈里 · 思高=帕拉馬‧額我略 · 東正=聖帕拉馬的額我略 · 中國=帕拉馬斯 |
+| Gregory Palamas | Γρηγόριος Παλαμάς | 1296–1359 | **格列高里·帕拉馬斯** | 思高=額我略·帕拉馬斯 · 東正=聖帕拉馬的額我略 · 中國=帕拉馬斯 |
 | Johannes Tauler | Johannes Tauler | 1300–1361 | **陶勒** | — |
 | Henry Suso | Heinrich Seuse | 1295–1366 | **蘇索** | — |
 | Catherine of Siena | Catharina Senensis | 1347–1380 | **錫耶納的凱瑟琳** | 新教=聖葉琳娜 · 思高=聖凱琳 · 東正=聖凱瑟琳 |
@@ -207,7 +275,7 @@ _共 249 位 — 按卒年由古至今排（卒年未知按生年；生年未知
 | Thomas à Kempis | Thomas Hemerken | 1380–1471 | **多瑪斯‧肯皮斯** | 新教=湯馬斯‧肯皮斯 · 思高=湯瑪斯‧肯皮斯 · 中國=托馬斯‧肯皮斯 |
 | Gabriel Biel | Gabriel Biel | 1420–1495 | **比耶爾** | 新教=加百列‧比耶爾 |
 
-### 16-17c 宗改與正統時代  （31 位）
+### 16-17c 宗改與正統時代  （32 位）
 
 | 英文／拉丁 | 原文 | 年代 | ★ 建議譯名 | 其他傳統變體 |
 |---|---|---|---|---|
@@ -231,6 +299,7 @@ _共 249 位 — 按卒年由古至今排（卒年未知按生年；生年未知
 | Luis de Molina | Ludovicus de Molina | 1535–1600 | **莫利納** | — |
 | William Perkins | Gulielmus Perkins | 1558–1602 | **威廉‧珀金斯** | — |
 | Theodore Beza | Théodore de Bèze | 1519–1605 | **貝撒** | — |
+| Matteo Ricci | Matteo Ricci | 1552–1610 | **利瑪竇** | — |
 | Francisco Suárez | Franciscus Suárez | 1548–1617 | **蘇亞雷茲** | — |
 | Robert Bellarmine | Robertus Bellarminus | 1542–1621 | **貝拉敏** | 東正=聖貝拉敏 |
 | Francis de Sales | François de Sales | 1567–1622 | **方濟各‧沙雷氏** | 新教=聖芳濟‧德銷利 · 思高=聖方濟‧德銷利 · 中國=弗朗西斯‧德塞爾斯 |
@@ -276,27 +345,30 @@ _共 249 位 — 按卒年由古至今排（卒年未知按生年；生年未知
 | John Henry Newman | John Henry Newman | 1801–1890 | **紐曼樞機** | 新教=紐曼 |
 | Charles Spurgeon | Charles Haddon Spurgeon | 1834–1892 | **司布真** | — |
 
-### 20c  （53 位）
+### 20c  （60 位）
 
 | 英文／拉丁 | 原文 | 年代 | ★ 建議譯名 | 其他傳統變體 |
 |---|---|---|---|---|
 | Vladimir Soloviev | Владимир Сергеевич Соловьёв | 1853–1900 | **索洛維約夫** | 東正=聖弗拉基米爾‧索洛維約夫 |
 | B. F. Westcott | Brooke Foss Westcott | 1825–1901 | **韋斯科特** | — |
 | B. B. Warfield | Benjamin Breckinridge Warfield | 1851–1921 | **沃菲德** | 中國=沃菲爾德 |
+| Ernst Troeltsch | Ernst Troeltsch | 1865–1923 | **特爾慈** | — |
 | Adolf von Harnack | Adolf von Harnack | 1851–1930 | **哈那克** | — |
 | Sergius Bulgakov | Сергий Николаевич Булгаков | 1871–1944 | **謝爾蓋‧布爾加科夫** | 東正=聖謝爾蓋‧布爾加科夫 · 中國=塞爾吉‧布爾加科夫 |
 | Dietrich Bonhoeffer | Dietrich Bonhoeffer | 1906–1945 | **潘霍華** | 中國=朋霍費爾 |
 | Vladimir Lossky | Владимир Николаевич Лосский | 1903–1958 | **洛斯基** | 東正=聖洛斯基 |
 | H. Richard Niebuhr | Helmut Richard Niebuhr | 1894–1962 | **H‧理查‧尼布爾** | 中國=H‧理查德‧尼布爾 |
 | Jia Yuming | 賈玉銘 | 1880–1964 | **賈玉銘** | — |
-| Paul Tillich | Paul Johannes Tillich | 1886–1965 | **保囉‧田立克** | 新教=蒂利希 |
+| Paul Tillich | Paul Johannes Tillich | 1886–1965 | **保羅‧田立克** | 新教=蒂利希 |
 | Emil Brunner | Emil Brunner | 1889–1966 | **埃米爾‧布魯納** | 中國=埃米爾‧布倫納 |
+| Nicholas Afanasiev | Николай Афанасьев | 1893–1966 | **阿法納西耶夫** | — |
 | Jürgen Moltmann | Jürgen Moltmann | 1926– | **于爾根‧莫特曼** | 新教=莫爾特曼 |
 | Gustavo Gutiérrez | Gustavo Gutiérrez Merino | 1928– | **古斯塔沃‧古蒂埃雷斯** | — |
 | Karl Barth | Karl Barth | 1886–1968 | **巴特** | — |
 | John Zizioulas | Ἰωάννης Ζιζιούλας | 1931– | **齊齊烏拉斯** | 東正=聖約安‧齊齊烏拉斯 |
 | Reinhold Niebuhr | Reinhold Niebuhr | 1892–1971 | **萊因霍爾德‧尼布爾** | — |
 | Watchman Nee | 倪柝聲 | 1903–1972 | **倪柝聲** | — |
+| Talal Asad | Talal Asad | 1932– | **阿薩德** | — |
 | Jacques Maritain | Ἰάκωβος Μαριτέν | 1882–1973 | **馬里坦** | 新教=雅克‧馬里坦 |
 | Walter Kasper | Gualterius Kasper | 1933– | **卡斯帕** | 新教=瓦爾特‧卡斯帕 |
 | Jean Daniélou | Jean Daniélou | 1905–1974 | **丹尼埃盧** | 新教=丹尼盧 |
@@ -310,14 +382,16 @@ _共 249 位 — 按卒年由古至今排（卒年未知按生年；生年未知
 | Georges Florovsky | Георгий Васильевич Флоровский | 1893–1979 | **弗洛羅夫斯基** | 東正=聖格奧爾基‧弗洛羅夫斯基 |
 | T. C. Chao | 趙紫宸 | 1888–1979 | **趙紫宸** | — |
 | Carver T. Yu | 余達心 | 1939– | **余達心** | — |
-| Justin Popović | Јустин Поповић | 1894–1979 | **猶斯定‧波波維奇** | 東正=聖殉道者猶斯定‧波波維奇 · 中國=尤斯丁‧波波維奇 |
+| Justin Popović | Јустин Поповић | 1894–1979 | **猶斯定‧波波維奇** | 思高=尤斯丁·波波維奇 · 東正=聖殉道者猶斯定‧波波維奇 · 中國=尤斯丁‧波波維奇 |
 | Stanley Hauerwas | Stanley Martin Hauerwas | 1940– | **史丹利‧豪厄瓦斯** | 中國=斯坦利‧豪爾瓦斯 |
 | Elizabeth Johnson | Elizabeth A. Johnson | 1941– | **約翰遜** | 新教=伊麗莎白‧約翰遜 · 思高=伊利莎白‧約翰遜 |
 | Alexander Schmemann | Александр Дмитриевич Шмеман | 1921–1983 | **施美曼** | 東正=聖亞歷山卓‧施美曼 |
 | Francis Schaeffer | Francis August Schaeffer IV | 1912–1984 | **法蘭西斯‧薛佛** | 思高=法蘭西斯‧謝費爾 · 中國=弗朗西斯‧謝費爾 |
 | Karl Rahner | Karl Rahner | 1904–1984 | **卡爾‧拉納** | — |
+| Willem Adolf Visser 't Hooft | Willem Adolf Visser 't Hooft | 1900–1985 | **維瑟特‧霍夫特** | — |
 | D. A. Carson | Donald Arthur Carson | 1946– | **卡森** | — |
 | John Piper | John Stephen Piper | 1946– | **約翰‧派博** | 中國=派博 |
+| Robert Wuthnow | Robert Wuthnow | 1946– | **烏斯諾** | — |
 | Cornelius Van Til | Cornelius Van Til | 1895–1987 | **范‧蒂爾** | 新教=凡‧蒂爾 · 中國=范蒂爾 |
 | Hans Urs von Balthasar | Hans Urs von Balthasar | 1905–1988 | **巴爾塔薩** | 新教=漢斯‧烏爾斯‧馮‧巴爾塔薩 |
 | N. T. Wright | Nicholas Thomas Wright | 1948– | **萊特** | — |
@@ -326,37 +400,254 @@ _共 249 位 — 按卒年由古至今排（卒年未知按生年；生年未知
 | Chow Lien-Hwa | 周聯華 | 1914–1991 | **周聯華** | — |
 | Wang Mingdao | 王明道 | 1900–1991 | **王明道** | — |
 | Henri de Lubac | Henri-Marie de Lubac | 1896–1991 | **德呂巴克** | 新教=亨利‧德‧呂巴克 |
-| Dumitru Stăniloae | Dumitru Stăniloae | 1903–1993 | **杜米特魯‧斯坦尼洛埃** | 東正=聖神學家杜米特魯‧斯坦尼洛埃 |
+| Marcel Lefebvre | Marcel Lefebvre | 1905–1991 | **勒菲弗** | — |
 | Alister McGrath | Alister Edgar McGrath | 1953– | **麥格拉思** | 新教=麥格夫 |
+| Dumitru Stăniloae | Dumitru Stăniloae | 1903–1993 | **杜米特魯‧斯坦尼洛埃** | 思高=杜米特魯·斯塔尼洛亞 · 東正=聖神學家杜米特魯‧斯坦尼洛埃 |
 | Yves Congar | Yves Marie-Joseph Congar | 1904–1995 | **孔蓋** | 新教=伊夫‧孔蓋 |
 | John Milbank | John Milbank | 1956– | **米爾班克** | — |
+| Max Thurian | Max Thurian | 1921–1996 | **杜里安** | — |
 | Kevin Vanhoozer | Kevin J. Vanhoozer | 1957– | **范胡澤** | — |
 | Khiok-Khng Yeo | 楊克勤 | 1957– | **楊克勤** | — |
 | Lesslie Newbigin | James Edward Lesslie Newbigin | 1909–1998 | **萊斯利‧紐比金** | — |
 
-### 21c 當代  （19 位）
+### 21c 當代  （234 位）
 
 | 英文／拉丁 | 原文 | 年代 | ★ 建議譯名 | 其他傳統變體 |
 |---|---|---|---|---|
+| Carl McIntire | Carl McIntire | 1906–2002 | **麥堅泰** | — |
 | Carl F. H. Henry | Carl Ferdinand Howard Henry | 1913–2003 | **卡爾‧亨利** | — |
-| John Behr | John Behr | 1965– | **約翰‧貝爾** | 東正=約安‧貝爾 |
+| John Behr | John Behr | 1965– | **約翰‧貝爾** | 思高=約翰·貝爾 · 東正=約安‧貝爾 |
 | Stanley Grenz | Stanley J. Grenz | 1950–2005 | **斯坦利‧格倫茲** | 思高=史坦利‧葛倫茲 · 中國=格倫茲 |
 | Sallie McFague | Sallie McFague | 1933–2006 | **莎莉‧麥克格** | 思高=薩莉‧麥克法格 |
 | Thomas F. Torrance | Thomas Forsyth Torrance | 1913–2007 | **湯瑪斯‧托倫斯** | 思高=湯瑪斯‧托蘭斯 · 中國=托爾蘭斯 |
-| Kosuke Koyama | 小山晃介 | 1929–2008 | **小山晃介** | — |
 | Avery Dulles | Avery Robert Dulles | 1918–2008 | **艾弗里‧德爾斯樞機** | 新教=艾弗里‧德爾斯 |
+| Lukas Vischer | Lukas Vischer | 1926–2008 | **維舍爾** | — |
+| Kosuke Koyama | 小山晃介 | 1929–2008 | **小山晃介** | — |
 | Edward Schillebeeckx | Eduardus Schillebeeckx | 1914–2009 | **席勒貝克斯** | 新教=愛德華‧斯基勒貝克 · 思高=斯基勒貝克 |
 | Donald Bloesch | Donald G. Bloesch | 1928–2010 | **唐納德‧布洛施** | 中國=布洛施 |
 | John Stott | John Robert Walmsley Stott | 1921–2011 | **約翰‧史托得** | 思高=約翰‧斯托特 |
 | K. H. Ting | 丁光訓 | 1915–2012 | **丁光訓** | — |
+| Shenouda III | شنودة الثالث | 1923–2012 | **沙努達三世** | — |
 | C. S. Song | 宋泉盛 | 1929–2014 | **宋泉盛** | — |
 | Wolfhart Pannenberg | Wolfhart Pannenberg | 1928–2014 | **沃夫哈特‧潘能伯格** | 新教=潘能貝格 |
+| Mar Dinkha IV | Mar Dinkha IV | 1935–2015 | **丁克哈四世** | — |
+| Benedict Anderson | Benedict Anderson | 1936–2015 | **班尼迪克‧安德森** | — |
 | Thomas Oden | Thomas C. Oden | 1931–2016 | **湯瑪斯‧歐登** | 中國=歐登 |
+| Fredrik Barth | Fredrik Barth | 1928–2016 | **巴斯** | — |
+| Jonathan Z. Smith | Jonathan Z. Smith | 1938–2017 | **史密斯** | — |
 | James Cone | James Hal Cone | 1938–2018 | **科恩** | 新教=詹姆士‧科恩 · 中國=詹姆斯‧科恩 |
 | George Lindbeck | George Arthur Lindbeck | 1923–2018 | **林德貝克** | — |
+| Billy Graham | Billy Graham | 1918–2018 | **葛理翰** | — |
 | J. I. Packer | James Innell Packer | 1926–2020 | **派克** | 中國=帕克 |
 | Hans Küng | Hans Küng | 1928–2021 | **漢斯‧昆** | 新教=孔漢思 |
 | Joseph Ratzinger | Joseph Ratzinger | 1927–2022 | **本篤十六世（教宗身份）／拉青格（神學家身份）** | 新教=拉青格 |
+| Saturus (martyr of Carthage) | Saturus | — | **薩圖魯** | — |
+| Saturninus (martyr of Carthage) | Saturninus | — | **薩圖爾努斯** | — |
+| Caecilius Natalis | Caecilius Natalis | — | **凱基琉‧納塔利** | — |
+| Octavius Januarius | Octavius Ianuarius | — | **屋大維‧雅努阿留** | — |
+| Celsus (philosopher) | Kelsos | — | **塞爾蘇斯** | — |
+| Demetrius of Alexandria | Demetrius | — | **亞歷山卓的德米特** | — |
+| Heraclas of Alexandria | Heraclas | — | **亞歷山卓的赫拉克拉** | — |
+| Leonides (Origen's father) | Leonides | — | **里奧尼德斯** | — |
+| Numenius of Apamea | Numenius | — | **努門尼烏** | — |
+| Ammonius Saccas | Ammonius Saccas | — | **阿摩尼烏‧薩卡斯** | — |
+| Porphyry of Tyre | Porphyry | — | **波菲利** | — |
+| Septimius Severus (emperor) | Septimius Severus | — | **塞普蒂米烏‧塞維魯** | — |
+| Caracalla (emperor) | Caracalla | — | **卡拉卡拉** | — |
+| Pope Callistus I | Callistus I | — | **教宗加里斯都一世** | — |
+| Pope Zephyrinus | Zephyrinus | — | **教宗澤斐林諾** | — |
+| Pope Pontian | Pontianus | — | **教宗龐謙** | — |
+| Pope Urban I | Urbanus I | — | **教宗烏爾巴諾一世** | — |
+| Noetus of Smyrna | Noetus | — | **諾愛圖** | — |
+| Sabellius (Modalist) | Sabellius | — | **撒伯流** | — |
+| Theodotus of Byzantium (the Cobbler) | Theodotus | — | **拜占庭的狄奧多圖** | — |
+| Simon Magus | Simon Magus | — | **行邪術的西門** | — |
+| Cerinthus | Cerinthus | — | **克林妥斯** | — |
+| Pope Cornelius | Cornelius | — | **教宗高乃流** | — |
+| Pope Lucius I | Lucius I | — | **教宗路濟** | — |
+| Pope Stephen I | Stephanus I | — | **教宗斯德望一世** | — |
+| Pope Fabian | Fabianus | — | **教宗法比盎** | — |
+| Pontius the Deacon (biographer) | Pontius Diaconus | — | **執事彭修** | — |
+| Caecilius (Cyprian's mentor) | Caecilianus | — | **凱基琉（居普良之師）** | — |
+| Donatus (Cyprian correspondent) | Donatus | — | **多納徒（居普良通信者）** | — |
+| Demetrian (proconsul) | Demetrianus | — | **德米特里安** | — |
+| Fortunatus (rival bishop) | Fortunatus | — | **福爾圖那特** | — |
+| Felicissimus (Carthage schismatic) | Felicissimus | — | **費利西西穆** | — |
+| Maximus (Roman confessor) | Maximus | — | **馬克西穆** | — |
+| Nicostratus (deacon) | Nicostratus | — | **尼科斯特拉** | — |
+| Tatian | Τατιανός | — | **他提安** | — |
+| Autolycus | Αὐτόλυκος | — | **奧托呂庫斯** | — |
+| Basilides | Βασιλείδης | — | **巴西理德** | — |
+| Isidorus (son of Basilides) | Ἰσίδωρος | — | **依西多魯** | — |
+| Carpocrates | Καρποκράτης | — | **家波克拉特** | — |
+| Heracleon (Valentinian) | Ἡρακλέων | — | **赫拉克勒翁** | — |
+| Critias | Κριτίας | — | **克里提亞** | — |
+| Aristippus | Ἀρίστιππος | — | **亞里斯提普** | — |
+| Homer | Ὅμηρος | — | **荷馬** | — |
+| Hesiod | Ἡσίοδος | — | **赫西奧德** | — |
+| Euripides | Εὐριπίδης | — | **歐里庇得斯** | — |
+| Orpheus | Ὀρφεύς | — | **俄耳甫斯** | — |
+| Privatus of Lambaesa | Privatus Lambaesitanus | — | **蘭巴埃西斯的普里瓦圖** | — |
+| Quirinus (Cyprian's son in faith) | Quirinus | — | **奎利努** | — |
+| Pupianus (Cyprian correspondent) | Pupianus | — | **普皮安** | — |
+| Magnus (Cyprian correspondent) | Magnus | — | **馬格努** | — |
+| Florentius (Cyprian correspondent) | Florentius | — | **佛羅倫修** | — |
+| Jubaianus (bishop) | Iubaianus | — | **尤拜安** | — |
+| Firmilian of Caesarea | Firmilianus | — | **凱撒利亞的菲爾米連** | — |
+| Mappalicus (martyr) | Mappalicus | — | **馬帕利庫** | — |
+| Decius (emperor) | Decius | — | **德修** | — |
+| Trebonianus Gallus (emperor) | Trebonianus Gallus | — | **特雷波尼安‧加盧斯** | — |
+| Valerian (emperor) | Valerianus | — | **瓦勒良** | — |
+| Gallienus (emperor) | Gallienus | — | **伽利努斯** | — |
+| Aurelian (emperor) | Aurelianus | — | **奧勒良** | — |
+| Caius of Rome (presbyter) | Gaius | — | **羅馬的該猶** | — |
+| Aristion | Ἀριστίων | — | **亞里斯鐸** | 思高=亞理斯鐸 |
+| Trypho | Τρύφων | — | **特里弗** | 思高=特黎豐 |
+| Diognetus | Διόγνητος | — | **丟格那妥** | 思高=狄奧革乃托 |
+| Hero (deacon of Antioch) | Ἥρων | — | **黑羅** | 思高=赫羅 |
+| Cephas | Κηφᾶς | — | **磯法** | 思高=刻法 |
+| Paul (apostle) | Παῦλος | — | **保羅** | 思高=保祿 |
+| Mary (mother of Jesus) | Μαρία | — | **馬利亞** | 思高=瑪利亞 |
+| Salome | Σαλώμη | — | **撒羅米** | 思高=撒羅默 |
+| Clopas | Κλωπᾶς | — | **革羅帕** | 思高=克羅帕 |
+| Marcion of Sinope | Marcion | — | **馬吉安** | — |
+| Hermogenes | Hermogenes | — | **黑摩根** | — |
+| Praxeas | Praxeas | — | **普拉克西亞斯** | — |
+| Scapula (Proconsul of Africa) | Scapula | — | **斯卡普拉** | — |
+| Perpetua (martyr) | Vibia Perpetua | — | **佩爾佩圖亞** | — |
+| Felicitas (martyr) | Felicitas | — | **費莉西塔斯** | — |
+| Pliny the Younger | Plinius Caecilius | — | **普利尼** | — |
+| Trajan (emperor) | Traianus | — | **圖拉真** | — |
+| Ammonius of Alexandria | Ammonius | — | **亞歷山卓的阿摩尼烏** | — |
+| Mar Aba (Catholicos of the East) | Mar Aba | — | **馬·阿巴** | — |
+| Rabbula of Edessa | Rabbula | — | **厄德薩的拉布拉** | — |
+| Ciasca, Augustinus (Diatessaron editor) | Ciasca | — | **齊亞斯卡** | — |
+| Zahn, Theodor (NT scholar) | Theodor Zahn | — | **察恩** | — |
+| Barlaam (Christian sage) | Barlaam | — | **巴爾蘭** | — |
+| Josaphat (Indian prince in legend) | Josaphat | — | **約沙法（傳奇）** | — |
+| Speratus (Scillitan martyr) | Speratus | — | **斯佩拉圖斯** | — |
+| Nartzalus (Scillitan martyr) | Nartzalus | — | **納札魯** | — |
+| Cittinus (Scillitan martyr) | Cittinus | — | **齊提努** | — |
+| Donata (Scillitan martyr) | Donata | — | **多納妲** | — |
+| Vestia (Scillitan martyr) | Vestia | — | **維斯提雅** | — |
+| Secunda (Scillitan martyr) | Secunda | — | **塞昆妲** | — |
+| Saturninus (proconsul of Africa) | Saturninus | — | **撒圖爾尼努（非洲總督）** | — |
+| Michael the Archangel | Michael | — | **天使長米迦勒** | — |
+| Death personified (Mavet) | Mors | — | **死亡（位格化）** | — |
+| Sarah (Abraham's wife) | Sarah | — | **撒拉** | — |
+| Isaac (Abraham's son) | Isaac | — | **以撒** | — |
+| Virgin Mary (Theotokos in apocalyptic literature) | Maria Theotokos | — | **天主之母瑪利亞** | — |
+| Tartarouchos (angel of Tartarus) | Tartarouchos | — | **塔爾塔魯庫（地獄主管天使）** | — |
+| Temeluchus (angel of punishments) | Temeluchus | — | **特墨魯庫斯** | — |
+| Sedrach (apocalyptic seer) | Sedrach | — | **塞德拉克** | — |
+| Xanthippe (sister of Polyxena) | Xanthippe | — | **散提碧** | — |
+| Polyxena (Christian virgin) | Polyxena | — | **波利克塞娜** | — |
+| Rebecca (Acts of Xanthippe) | Rebecca | — | **利百加（散提碧行傳）** | — |
+| Probus (Roman governor) | Probus | — | **普羅布** | — |
+| Pope Gregory I (citation context) | Gregorius Magnus | — | **額我略** | — |
+| Isaac of Nineveh (Isaac the Syrian) | ܐܝܣܚܩ Ishaq | — | **尼尼微的伊沙克** | — |
+| Gregory the Illuminator (apostle of Armenia) | Գրիգոր Lusavorich | — | **啟蒙者格里高爾** | — |
+| Theodotus the Valentinian (gnostic) | Theodotus | — | **瓦倫廷派的狄奧多托** | — |
+| Simon Magus (Clementine Homilies foe) | Simon Magus | — | **行邪術的西門** | — |
+| Clement of Rome (Pseudo-Clementine narrator) | Clemens Romanus | — | **羅馬的克勉** | — |
+| Faustinianus (Clement's father) | Faustinianus | — | **福斯提尼安（革利免之父）** | — |
+| Faustus (Clement's brother) | Faustus | — | **福斯圖** | — |
+| Faustinus (Clement's brother) | Faustinus | — | **福斯提奴** | — |
+| Mattidia (Clement's mother) | Mattidia | — | **瑪提狄雅** | — |
+| Apion the Grammarian | Apion | — | **文法學家阿庇翁** | — |
+| Aquila (Clementine companion) | Aquila | — | **亞居拉** | — |
+| Niceta (Clementine companion) | Niceta | — | **尼克塔** | — |
+| Joseph of Arimathea (apocryphal) | Iosephus ab Arimathea | — | **亞利馬太的約瑟** | — |
+| Nicodemus | Nicodemus | — | **尼哥底母** | — |
+| Thecla (martyr / companion of Paul) | Thecla | — | **黛克拉** | — |
+| Pontius Pilate (apocryphal acts) | Pontius Pilatus | — | **彼拉多** | — |
+| Veronica (Cura Sanitatis Tiberii) | Veronica | — | **維羅尼加** | — |
+| Abgar V of Edessa (Black King) | Abgar V Ukkama | — | **厄德薩的阿布加爾五世** | — |
+| Addai (Thaddeus of Edessa) | Addai / Addaeus | — | **阿岱（厄德薩使徒）** | — |
+| Bardesanes (Bar Daisan of Edessa) | Bardesanes | — | **巴德撒尼斯** | — |
+| Hystaspes (Persian sage) | Hystaspes | — | **希斯塔斯佩斯** | — |
+| Hegesippus (church historian) | Hegesippus | — | **黑格希普** | — |
+| Quadratus of Athens (apologist) | Quadratus | — | **雅典的庫德拉圖** | — |
+| Pinytus of Knossos | Pinytus | — | **克諾索斯的皮尼圖斯** | — |
+| Dionysius of Corinth | Dionysius Corinthius | — | **哥林多的狄奧尼修** | — |
+| Serapion of Antioch | Serapion | — | **安提阿的塞拉皮昂** | — |
+| Apollonius (anti-Montanist) | Apollonius | — | **阿波羅尼烏斯** | — |
+| Maximus of Jerusalem | Maximus | — | **耶路撒冷的馬克西穆** | — |
+| Polycrates of Ephesus | Polycrates | — | **以弗所的波利克拉特** | — |
+| Theophilus of Caesarea | Theophilus | — | **凱撒利亞的提阿非羅** | — |
+| Reuben (firstborn of Jacob) | Reuben | — | **流便** | — |
+| Simeon (second son of Jacob) | Simeon | — | **西緬** | — |
+| Levi (third son of Jacob) | Levi | — | **利未** | — |
+| Judah (fourth son of Jacob) | Judah | — | **猶大** | — |
+| Issachar (fifth son of Jacob) | Issachar | — | **以薩迦** | — |
+| Zebulun (sixth son of Jacob) | Zebulun | — | **西布倫** | — |
+| Dan (seventh son of Jacob) | Dan | — | **但** | — |
+| Naphtali (eighth son of Jacob) | Naphtali | — | **拿弗他利** | — |
+| Gad (ninth son of Jacob) | Gad | — | **迦得** | — |
+| Asher (tenth son of Jacob) | Asher | — | **亞設** | — |
+| Joseph (Jacob's son, Egypt vizier) | Joseph | — | **約瑟** | — |
+| Benjamin (twelfth son of Jacob) | Benjamin | — | **便雅憫** | — |
+| Monica (mother of Augustine) | Monica | — | **莫尼卡** | — |
+| Patricius (father of Augustine) | Patricius | — | **帕特里修** | — |
+| Alypius of Thagaste | Alypius | — | **阿呂皮烏** | — |
+| Nebridius (friend of Augustine) | Nebridius | — | **涅布里狄烏** | — |
+| Adeodatus (son of Augustine) | Adeodatus | — | **阿得奧達圖** | — |
+| Romanianus (patron) | Romanianus | — | **羅馬尼安努** | — |
+| Ponticianus | Ponticianus | — | **彭提齊安** | — |
+| Faustus of Mileve (Manichaean) | Faustus | — | **米利夫的浮士德** | — |
+| Arius (Alexandrian presbyter) | Areios | — | **亞流** | — |
+| Antony of Egypt (the Great) | Antonios | — | **安東尼** | — |
+| Rufinus of Aquileia | Tyrannius Rufinus | — | **魯菲努斯** | — |
+| Eusebius of Nicomedia | Eusebios | — | **尼科米底亞的優西比烏** | — |
+| Marcellus of Ancyra | Markellos | — | **安該拉的馬克勒斯** | — |
+| Alexander of Alexandria | Alexandros | — | **亞歷山卓的亞歷山大** | — |
+| Hosius of Cordova | Hosius | — | **科爾多瓦的何西烏** | — |
+| George of Cappadocia (Arian) | Georgios | — | **卡帕多細亞的喬治** | — |
+| Serapion of Thmuis | Serapion | — | **特穆伊斯的塞拉皮昂** | — |
+| Caelestius (disciple of Pelagius) | Caelestius | — | **凱萊斯提烏斯** | — |
+| Olympias (deaconess) | Olympias | — | **奧林匹亞** | — |
+| Eutropius (consul) | Eutropius | — | **歐特羅皮烏斯** | — |
+| Sozomen (church historian) | Salaminios Hermias Sozomenos | — | **索佐門** | — |
+| Socrates Scholasticus | Sokrates Scholastikos | — | **蘇格拉底** | — |
+| Gennadius of Massilia | Gennadius | — | **根那狄** | — |
+| Julian of Eclanum | Julianus | — | **埃克拉努姆的尤利安** | — |
+| Eunomius of Cyzicus | Eunomios | — | **歐諾米烏** | — |
+| Anonymous Italian | — | — | **佚名義大利作者** | — |
+| Pseudo-Ephrem | — | — | **託厄弗冷名作品** | — |
+| Timothy Larsen | Timothy Larsen | — | **拉森** | — |
+| Ambrose (Origen's patron) | Ambrosius | — | **安波羅斯（俄利根贊助者）** | — |
+| Pseudo-Chrysostom | — | — | **託金口若望名作品** | — |
+| Pseudo-Augustine | — | — | **託奧古斯丁名作品** | — |
+| James Davison Hunter | James Davison Hunter | — | **亨特** | — |
+| David Bebbington | David Bebbington | — | **貝賓頓** | — |
+| Russell T. McCutcheon | Russell T. McCutcheon | — | **麥卡琴** | — |
+| Robert A. Orsi | Robert A. Orsi | — | **奧爾西** | — |
+| Pseudo-Ambrose | — | — | **託安波羅修名作品** | — |
+| Pseudo-Cyprian | — | — | **託居普良名作品** | — |
+| Allan Heaton Anderson | Allan Heaton Anderson | — | **艾倫‧安德森** | — |
+| T. M. Luhrmann | T. M. Luhrmann | — | **魯爾曼** | — |
+| Meredith B. McGuire | Meredith B. McGuire | — | **麥奎爾** | — |
+| Valentinus | Valentinus | — | **瓦倫廷** | — |
+| Cyril | Cyrillus | — | **濟利祿** | — |
+| Theophilus of Alexandria | Theophilus | — | **亞歷山大的提阿非羅** | 思高=亞歷山大‧德敖斐羅 |
+| Gregory of Tours | Gregorius Turonensis | 6 | **圖爾的額我略** | 思高=都爾的額我略 |
+| Gregory of Rimini | Gregorius de Arimino | 14 | **里米尼的額我略** | — |
+| Gregory Bar Hebraeus | ܓܪܝܓܘܪܝܘܣ ܒܪ ܥܒܪܝܐ | 13 | **格列高里·巴爾·赫布拉烏斯** | — |
+| Gregory of Narek | Գրիգոր Նարեկացի | 10 | **納雷克的格里高爾** | — |
+| Grigor Magistros | Գրիգոր Մագիստրոս | 11 | **格里高爾·馬吉斯特羅斯** | — |
+| Deacon Grigory (Ostromir Gospels scribe) | дьякон Григорий | 11 | **執事格列高里** | — |
+| Jethro | Ἰοθόρ／יִתְרוֹ | — | **葉忒羅** | 思高=耶特洛 |
+| Naomi | Νωεμείν／נָעֳמִי | — | **拿娥米** | 思高=納敖米 |
+| Kilion | Χελαιών／כִּלְיוֹן | — | **基連** | 思高=基肋雍 |
+| Amnon | Ἀμνών／אַמְנוֹן | — | **暗嫩** | 思高=阿默農 |
+| Cleopas | Κλεοπᾶς | — | **革流巴** | 思高=克羅帕 |
+| Quirinius | Κυρήνιος | — | **居里扭** | 思高=季黎諾 |
+| Jason (Thessalonica) | Ἰάσων | — | **耶孫** | 思高=雅松 |
+| Tobit | Τωβίθ | — | **托彼特** | 新教=多比 |
+| Tobias | Τωβίας | — | **多俾亞** | 新教=多比雅 |
+| Tobiel | Τωβιήλ | — | **托彼耳** | 新教=多比業 |
+| Judith | Ἰουδίθ | — | **友弟德** | 新教=猶滴 |
+| Holofernes | Ὀλοφέρνης | — | **敖羅斐乃** | 新教=荷羅弗尼 |
 
 <!-- AUTO-GLOSSARY:theologians:END -->
 
