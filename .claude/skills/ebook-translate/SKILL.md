@@ -516,6 +516,41 @@ python scripts/simp_to_trad_batch.py --previews-only <ebook_id>
 - **DB title 全英文搜不到中文**：新 ingest 預設用 `[English] Original Title` tag。翻完應 PATCH title 成 `中文書名（Original Title）` 格式（例 2026-05-22 ACCS Apocrypha vol 15）—— search 走 ilike 對 title，無中文則中文 query 命不中
 - **跨翻譯 worker 名稱不一致**（例：多比傳 vs 多俾亞傳）— Haiku 偶爾忽略 PROMPT_TMPL 的 glossary 跳譯一次。改進方向：翻完後跑一個 glossary sweep 全文取代（沿用 `parse_drive_inventory.TRAD_FIXES` 模式但範圍更廣）。**目前狀態：未實作，使用者讀時可能會看到不一致**
 
+## 既有譯文共用修正工具 `scripts/translation_fix.py`（2026-09-25）
+
+2026-09-25 全站稽核後的批次修正一律用這支，不要再寫一次性腳本。判準是純函式、測試在
+`scripts/tests/test_translation_fix.py`（每條規則都有正例與反例：年號、經文、量詞「每隻」、英文書目引號…）。
+
+```bash
+python -X utf8 scripts/translation_fix.py scan --corpus all                 # 全語料唯讀掃描
+python -X utf8 scripts/translation_fix.py scan --corpus lit_review --limit 500
+python -X utf8 scripts/translation_fix.py lanes                             # 哪些書正被 fleet lane 寫
+python -X utf8 scripts/translation_fix.py apply --corpus books --ids <ebook_id> --dry-run
+python -X utf8 scripts/translation_fix.py apply --corpus gnostic --ids <doc_slug> --rules fixes
+```
+
+- **語料**：`fathers`（教父 JSONL）／`books`（其他有原文欄的 JSONL，已排除教父與由 sec 重建的書）／
+  `collected`、`sbe`（`.claude/skills/ebook-collected-works/*_data/*/sec*.json`）／`lit_review`／`gnostic`／
+  `apocrypha`（kgl_zh）／`accs`（accs_commentary.body_zh）／`sources`（data/{avesta,hellenika,manichaean}/sources）。
+- **規則**：修字 `numerals middle_dot zhi toufa variants quotes heading`；清空 `meta think fffd untranslated`。
+  `--rules fixes|clear|逗號清單`。經文類語料（sbe／gnostic／apocrypha／sources）不套數字規則。
+- **清空各語料的表示法不同**（工具已照各自寫法做，reader 仍顯示原文、補譯流程找得到）：
+  JSONL 段序對得上就把該段換回原文，對不上（或教父）整個 chunk 的 content 設回原文——**不可寫空字串**，
+  兩個 reader 會把空段吃掉、整欄錯位；sec*.json `zh[j]=""`（sbe 另把 `fail[j]` 歸 0，章名 `title_zh=""`），
+  改完要跑報告裡印的 driver 重建指令（**直接改全集 JSONL 會被下一輪重建蓋掉**）；lit_review **刪掉那列 zh**
+  並把 entry 從 translated 改回 fetched；gnostic／apocrypha `text=''`（gnostic 不可刪列）；data sources `zh=""`，
+  要 commit 才上線；accs 沒有原文可退，清空類**只列清單不動**。
+- **apply 必帶 `--ids`**，一次一個語料。會跳過正被 lane 寫的書：讀 `scripts/state/fleet_*.pid`、程序還活著就從命令列
+  （UUID／`--work`／`--author`）推出它負責的書；30 分鐘內動過的檔也跳過；DB 語料則看 ingest／refine 程序在不在。
+  JSONL 寫前留 `.jsonl.tfix.bak`，寫完推 R2（`standardize_ebook.push_to_r2`）並 PATCH `ebooks.total_chars`；`--no-push` 關掉。
+- **輸出**在 `output/translation_fix/`（不進 git）：`<tag>-<時間>-<語料>.md` 總表（每格＝命中段／分母）、
+  `.json`、`.clear.jsonl`（清空清單，一段一行，給補譯 agent）、`.samples.jsonl`（每規則改前改後抽樣，apply 前先看）。
+- 🚨 **U+FFFD 查證結果**：不是按位元組切壞——原文端 0 例、U+FFFD 後面那個字是完整的（「�請」），是模型
+  byte-fallback 多吐的一個字元。根因是 Gemini／Anthropic／Ollama 出口沒剝，2026-09-25 已在 `translate_ebook_to_zh._finalize`
+  補上。所以既有資料其實**剝掉就無損**：`--fffd-mode strip` 可用（預設仍照使用者決定 clear）。
+- 研究回顧（`ingest_lit_review.output_gate`）與 gnostic（`ingest_gnostic.output_gate`）翻譯時都過四項關卡
+  （非中文／模型回話／`<think>`／U+FFFD），過不了不寫入；兩者的 prompt 已加數字規則。
+
 ## Tests
 
 Pure-function pytest suite at [`scripts/tests/`](../../../scripts/tests/README.md)（`npm run test:py`）涵蓋本 pipeline 的可測邏輯：`split_oversized`（切塊不丟內容、段落數守恆）、`scan_translated_book.paragraph_drift`（逐段對照 T11 指標，已抽成 module-level 可重用 gate）、`sweep_book_quality` 的 T1/T2/T3 自動修、簡→繁 `to_traditional` + TRAD_FIXES（历→歷 不為曆）。改 regex／threshold 後先跑這套抓回歸。新發現的譯文品質 bug 先寫一條 `xfail(strict=True)` 當修復目標，修好自動轉綠。

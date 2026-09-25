@@ -67,6 +67,8 @@ GNOSTIC_PROMPT_TMPL = """你是諾斯底主義、赫密士、摩尼教等古典�
    或自行創作任何句子或段落。** 內容多寡必須與原文相當，嚴禁無中生有。
 5. 若原文不是英文（拉丁文、希臘文、奧克語、古普羅旺斯語等），同樣直接翻成繁體中文，
    不要說明原文是何種語言，也不要拒絕。
+6. **數字寫法**：西元的年、月、日一律用阿拉伯數字（1969年2月18日、1960年代），不寫「一九六九年」「二月」；
+   四位數以上的非整數盡量用阿拉伯數字（1,382人），整數可照中文（四千年、兩萬人）；章名序號、詩句、成語照中文。
 
 {source}"""
 
@@ -228,12 +230,22 @@ def translate_one(p: str, te, engine_fn) -> tuple[str, str | None]:
     last, tag = "", None
     for _ in range(GATE_RETRIES + 1):
         last = "\n\n".join(engine_fn(piece) for piece in pieces).strip()
-        tag = gl.classify_translation(p, last)
+        tag = gl.classify_translation(p, last) or output_gate(last, p)
         if tag is None:
             return last, None
     if len(p.strip()) <= 80:                  # structural marker → keep verbatim
         return p.strip(), f"{tag}→verbatim"
+    if output_gate(last, p):
+        # 🚨 2026-09-25：四項關卡（非中文／模型回話／<think>／U+FFFD）過不了就不寫入譯文，
+        # 存空字串——reader 顯示「—」，fix_gnostic_quality 會把 "empty" 當待修撿回去。
+        return "", f"{tag}→blank"
     return last, tag                          # keep best effort, surface the tag
+
+
+def output_gate(zh: str, src: str) -> str | None:
+    """四項輸出關卡，判準共用 translation_fix.clear_reason。過關回 None。"""
+    import translation_fix as tf
+    return tf.clear_reason(zh, src) or None
 
 
 def translate_paragraphs(paragraphs: list[str], te, engine_fn, limit: int | None = None) -> list[str]:

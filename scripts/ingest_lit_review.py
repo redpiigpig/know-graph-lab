@@ -59,6 +59,8 @@ LR_PROMPT_TMPL = """你是佛教學／宗教學學術論文的專業譯者。
 2. 專有名詞用通行中譯，首次出現可括註原文（例：八敬法（aṭṭhagarudhammā）、比丘尼（bhikkhunī）、大愛道（Mahāpajāpatī Gotamī）、《小品》（Cullavagga））。巴利／梵文術語保留原拼寫於括註內。
 3. 引用的經典名、人名依學界慣例；不確定者保留原文。
 4. 只輸出這一段的繁體中文翻譯，不要前言、編號或說明。
+5. **數字寫法**：西元的年、月、日一律用阿拉伯數字（1969年2月18日、1960年代），不寫「一九六九年」「二月」；
+   四位數以上的非整數盡量用阿拉伯數字（1,382人），整數可照中文（四千年、兩萬人）；章名序號、詩句、成語照中文。
 
 {source}"""
 
@@ -95,6 +97,20 @@ def is_rate_limited(exc: Exception) -> bool:
         if permanent in msg:
             return False
     return any(h in msg for h in RATE_LIMIT_HINTS)
+
+
+# ── 輸出關卡（2026-09-25）─────────────────────────────────────────────────────
+# 四項：是不是中文、有沒有模型回話／拒答、有沒有 <think>、有沒有 U+FFFD。
+# 判準共用 translation_fix.clear_reason（測試在 tests/test_translation_fix.py）。
+GATE_RETRIES = 2
+
+
+def output_gate(zh: str, src: str) -> str:
+    """譯文能不能寫入。回傳擋下原因；可寫入回空字串。空譯文也擋。"""
+    import translation_fix as tf
+    if not (zh or "").strip():
+        return "empty"
+    return tf.clear_reason(zh, src)
 
 
 # ── REST helpers ──────────────────────────────────────────────────────────────
@@ -319,7 +335,17 @@ def translate_and_store(entry_id: int, orig: list[str], te, fn, pace: float, res
         if pace and k > 0:
             time.sleep(pace)
         pieces = te.split_oversized(orig[i])
-        zh = "\n\n".join(fn(piece) for piece in pieces).strip()
+        zh, bad = "", ""
+        for _attempt in range(GATE_RETRIES + 1):
+            zh = "\n\n".join(fn(piece) for piece in pieces).strip()
+            bad = output_gate(zh, orig[i])
+            if not bad:
+                break
+        if bad:
+            # 🚨 過不了關就**不寫入**：缺列＝未譯，下一輪 --resume 會再補。
+            # 2026-09-25 稽核：3,321 段「請提供完整的文段內容」、822 段 U+FFFD 都是這裡直接存進去的。
+            print(f"      ✗ para {i + 1}/{len(orig)} 輸出關卡擋下（{bad}），不寫入", flush=True)
+            continue
         upsert_one_section(entry_id, i, orig[i], zh)
         n += 1
         print(f"      · para {i + 1}/{len(orig)} ({len(orig[i])}→{len(zh)})", flush=True)

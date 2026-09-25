@@ -262,6 +262,7 @@ def _anthropic_translate(model: str, label: str, source: str,
             # Haiku answers a refusal / "我注意到您提供的…" as if it were the translation
             # ([[feedback_haiku_meta_reply_pollution]]); Gemini and NVIDIA already pass this
             # gate, the Anthropic tier did not. A bad answer is a failed request, never stored.
+            text = _finalize(text)
             bad = unusable_reason(text, source)
             if bad:
                 raise RuntimeError(f"{label} output rejected: {bad}")
@@ -319,7 +320,7 @@ def ollama_translate(source: str) -> str:
     text = (r.json().get("message") or {}).get("content", "")
     if not text.strip():
         raise RuntimeError(f"Ollama returned empty response from {OLLAMA_MODEL}")
-    return text.strip()
+    return _finalize(text)
 
 
 MAX_CHUNK_CHARS = 20_000  # split source if larger — Sonnet 16K output cap + safety
@@ -557,7 +558,7 @@ def gemini_translate(source: str, model: str = GEMINI_MODEL) -> str:
             if r.status_code == 200:
                 data = r.json()
                 try:
-                    text = data["candidates"][0]["content"]["parts"][0]["text"]
+                    text = _finalize(data["candidates"][0]["content"]["parts"][0]["text"])
                 except (KeyError, IndexError):
                     # gemini-2.5 偶發：200/STOP 但 thinking 吃光輸出、candidate 無 parts
                     # —— 當作暫時性失敗，同 429 重試/輪 key，全乾自然落入 fallback 鏈
@@ -573,7 +574,7 @@ def gemini_translate(source: str, model: str = GEMINI_MODEL) -> str:
                     if attempt >= 3:
                         break
                     continue
-                return text.strip()
+                return text
             if r.status_code in (429, 502, 503, 504):
                 print(f"  Gemini {r.status_code} key#{_key_idx} attempt {attempt}", file=sys.stderr, flush=True)
                 if attempt >= 3:
@@ -761,6 +762,18 @@ _MI_RE = re.compile(r"禰(?!宜)")
 # 模型偶爾會在輸出開頭吐一個替換字元／BOM／零寬空白（2026-09-17 在東方聖卷抓到
 # 17 段，reader 上就是一個刺眼的「�」）。這些字元在譯文裡從來沒有意義，一律清掉。
 _JUNK_CHARS = str.maketrans("", "", "\ufeff\ufffd\u200b\u200c\u200d")
+
+
+def _finalize(text: str) -> str:
+    """每個引擎的出口都要過這一關：剝掉替換字元／BOM／零寬空白。
+
+    🚨 2026-09-25 查明：全站約 1,300 段開頭多一個 U+FFFD，**不是**我們按位元組切壞
+    UTF-8——原文端 0 例，而且 U+FFFD 後面那個字是完整的（「?請」「實?踐」，? 即
+    U+FFFD）。那是模型的 byte-fallback token：先吐出半個 UTF-8 字元、又重吐整個字，
+    供應商把孤立的位元組解成 U+FFFD 放進 JSON 回應。9/17 那次只在 `_to_traditional`
+    裡剝，而只有 NVIDIA 會經過它；Gemini、Sonnet／Haiku、Ollama 三條路一直原樣存下來。
+    測試鎖在 scripts/tests/test_translation_fix.py。"""
+    return (text or "").translate(_JUNK_CHARS).strip()
 
 
 def _to_traditional(text: str) -> str:
