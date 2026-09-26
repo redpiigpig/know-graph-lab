@@ -1248,3 +1248,16 @@ NVIDIA 對六把 key 全回 **503**（不是 410，模型名沒問題）→ 救�
 2026-07-23 首輪：撈 25 集 → **libgen.li 逐本實查**（annas-archive 有 JS 指紋擋、libgen.bz 庫小；只 libgen.li 能用），23/25 有電子檔。清單在 `.claude/skills/ebook-collected-works/小黑書_libgen下載清單.txt`。使用者下載後走 `ingest_new_books.py` 進電子圖書館。libgen 域名在此環境 **WebFetch 被擋、curl DNS 也擋**，只能用 **PowerShell `Invoke-WebRequest -UseBasicParsing`**（且別 OutFile 落地：Defender 會把 shadow-library HTML 當病毒攔，要在記憶體處理）。
 
 由此緣起，全集 `/collected-works` **新增傘狀學科「基督宗教研究」**（[[project_collected_works_multilang]] 的一支）：`era` 當三次領域＝新約研究/舊約研究/教會史（`ERA_ORDER` 固定順序、**無 region 地域層**）。40 位新 hub 骨架＋布特曼/哈納克/菲奧倫查從神學遷入＝43 位。全 `planned`/`copyright`、**肖像 portraitUrl 待回填**、著作待 REFERENCE-first 收錄。細節見 collected-works SKILL.md §A（2026-07-23 note）。
+
+<!-- rule:user-docx-no-overwrite -->
+## 🚨 使用者會改的 Word 檔：只能就地改，絕不重建覆蓋
+
+交出去的 .docx 一產出，使用者就會直接在 Word 裡改，**從那一刻起 docx 才是正本**，md、腳本、法師／老師的修訂稿都不是。
+
+1. **寫入前先讀現檔**：抽出全文，跟自己上一次寫出的版本比對；只要有任何不是我改的差異，就代表使用者動過。
+2. **只就地改指定處**：逐段改文字、插圖片。禁止「從原稿／md／修訂稿重跑一次產生器」再存回同一個檔名。
+3. **有 `~$` 鎖檔就不寫**：代表 Word 正開著，寫進去會跟使用者的存檔互相覆蓋。改成把素材（圖片、段落）另存新檔，請使用者插入，或等關檔。
+4. **要大改就另存新檔**，檔名加版本或日期，不覆蓋原檔。
+5. **救援**：Drive 網頁 → 檔案 → 管理版本（保留 30 天）。
+
+事故：2026-09-24 獎學金論文連續五次從 md 重建蓋掉修改；2026-09-26 弘青網路學堂文案定稿又從法師修訂稿整份重建，蓋掉使用者在定稿上的修改。
