@@ -542,3 +542,15 @@ p = {"q[0].f": "AU", "q[0].i": "鄭仰恩",        # 欄位：* / TI / PTI / AU 
 只點名幾篇的刊要進 `WANTED_ONLY`（folk-arts、mainland-china），否則會被當整刊掃。
 楊弘任另兩篇官網就開放全文（台灣社會學 46、人文及社會科學集刊 34:4），已直接存 Drive `研究資料/一貫道/`，不佔華藝額度。
 🚨 書目佇列 `--batch` 會從 `C:/tmp/airiti_wanted.json` 重算 `airiti-wanted.json`，手動加的要加在來源檔，否則被洗掉。
+
+## 按作者抓（airiti_author_fetch.py，2026-09-26）
+
+`press_airiti.py` 是按刊走的；要某一個人的全部著作，用 `python -X utf8 scripts/airiti_author_fetch.py 鍾雲鶯 楊弘任 [--download]`。
+它直接打華藝檢索 `POST /Article/Query?queryString=<encodeURIComponent(JSON)>`（表單欄位 queryString 同值）：
+
+* 🚨 JSON 的 `查詢歷史類型代碼` 必須是 `"ADLang"`。寫 `"DSF"` 會回一頁**看起來正常的「查無資料」**（85,461 bytes、有 noResult.png、HTTP 200），連「一貫道」這種必中的關鍵字也查無資料——卡了半小時才找到。
+* 欄位代碼是數字：作者=2、篇名=1、所有欄位含全文=49（全表在 `_Layout_js` 的 `全域_OpDocSearchFiled`）。`PageSize` 可放 50。
+* 結果每筆 `div.searchResultGroup[key=docID]`，出處在 `span.source` 三個 key：key0=publicationID、key1=出版日期 YYYYMMDD、key2=issueID。**publisherID 不在結果裡**，要開 `/Publication/Information?publicationID=` 讀 JS 變數 `全域_出版單位代碼`（🚨 不一定是數字，鵝湖月刊社是 `U20110425001`；用 `publisherID=(\d+)` 抓會漏掉一半的刊）。
+* 作者檢索會把英文名相近的人也撈進來，腳本只留作者欄真的含該名字的。
+* 篇目寫 `public/content/research-data/press/airiti-authors/<作者>.json`（進版控），PDF 放 Drive `研究資料/華藝期刊全文/_作者專輯/<作者>/`，各刊資料夾已下過的不重下、只在 downloaded 欄記位置。
+* 首例：鍾雲鶯 28 篇（27 有全文）、楊弘任 9 篇（6 有全文；《台灣社會學》兩篇華藝沒全文、學位論文不走這條）。

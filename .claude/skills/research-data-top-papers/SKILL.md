@@ -88,3 +88,15 @@ pages/research-data/index.vue                        要手動加一張卡
 * 使用者若說「某篇該進／不該進」：直接改 jsonl 那一行，重跑 build，不用重寫整組。
 * 要加第五組：config 加一個 group、新開一個 jsonl 即可。
 * 要換領域：從步驟 1 起，不要動腳本與頁面；若真的要改頁面，改的是通用版，所有領域一起變。
+
+## 清單之後怎麼「拿到」（2026-09-26 實測）
+
+使用者想在校內把五百篇一次下載——**走不通**，三條證據：Unpaywall 112 個 DOI 只有 4 筆 OA（其中兩筆是目次／前言）；
+校內 IP 開 doi.org：劍橋顯示「Get access／purchase」（校方沒訂）、SAGE 與 OUP 對腳本直接 403、de Gruyter 回 202 驗證頁、JSTOR 也是 403。
+華藝那條額度（1,200／日）對這批西文文獻無用。所以分兩路：
+
+1. **專著**（type=monograph，本例 434 筆、扣館內與已在獵表者剩 384）→ `data/zlib-wanted/biblical-top500.jsonl`（key `bt-`、source 沿用 `biblical-studies` 吃它的優先序 20），
+   `python scripts/zlib_wanted.py` 併入後由每日 z-lib 排程慢慢抓（[[ebook-zlib-harvest]]）。
+2. **期刊論文與專章**（本例 102 筆、52 有 DOI）→ Drive `研究資料/<領域>/待下載_期刊論文與專章（校內圖書館用）.csv`，
+   帶 DOI 連結與出處，給使用者在校用瀏覽器走圖書館下載；OA 的那幾筆腳本直接抓進同一夾。
+🚨 不要對出版社網站寫自動下載：機構 IP 被擋是整校一起擋，和華藝那條的道理一樣。
