@@ -15,11 +15,11 @@
 | 涂爾幹《宗教生活的基本形式（英繁對照）》補註：註文少 15 條、正文註號少 291 處，`scripts/fix_durkheim_notes.py --apply → --push → --verify` | `scripts/logs/durkheim_notes_2026-09-26.log`（UTF-16，結尾 ALL DONE）；完成後 `fix_durkheim_notes.py` 還沒 commit，要提交 |
 | 研究回顧補譯 lane `litreview-retrans`（3,643 段拒答清空後補譯） | `scripts/logs/fleet_litreview-retrans.out.log` |
 | 教父英文段補譯：排程 KGL_Fathers_Retranslate（已開，時限 PT10M） | 排程＋`fathers_retranslate_untranslated.py --scan` |
-| 一般譯書／全集／東方聖書補譯：`output/translation_fix/retrans_{cleared,books,untrans}.ps1` 接力 | `scripts/logs/retrans_*_2026-09-25.log` 結尾 ALL DONE |
+| 一般譯書／全集／東方聖書補譯：09-26 晚改由 `output/translation_fix/retrans_resume.ps1` 一支接手（原 books／untrans 兩支因用 UTF-16 比對 ANSI 寫的 ALL DONE 從未啟動、重開機後消失；cleared 那支的推 R2 全部因 PS5.1 吃掉引號失敗、gnostic 用了不收的 auto、東方聖書用錯 driver，都已在 resume 裡補正） | `scripts/logs/retrans_resume_2026-09-26.log` 結尾 ALL DONE |
 | 圖書館 MinerU OCR lane `mineru-queue`（272 本掃描書回補） | `scripts/logs/fleet_mineru-queue.out.log` |
 
 ## 待辦（依優先）
-1. **原文中譯配對要加內容驗證**：`output/reverse_originals/batch_dryrun.tsv`（1,002 對乾跑結果）證明
+1. ✅ **09-26 晚已完成**：兩道檢查已加進 align_reference.py，重篩只剩 2 對確定同一本（見 ebook-collected-works SKILL.md），尚未寫入、等使用者點頭。原始說明：**原文中譯配對要加內容驗證**：`output/reverse_originals/batch_dryrun.tsv`（1,002 對乾跑結果）證明
    `align_reference.py` 的「對上率」只反映結構相似，**不能判斷是否同一本書**：中文配中文（《神護理的奧秘》多版本）與
    明顯錯配（《基督教思想史》↔ Simon Peter…）都拿到 100%。要加兩道檢查再重篩：①原文側確實是外文；
    ②抽配到的段落比對人名、數字、經文出處是否對應（不呼叫引擎）。只有通過的才 `--apply`，其餘列清單給使用者。

@@ -316,6 +316,26 @@ python scripts/align_reference.py --orig-id <原文ebook_id> --zh-id <中譯eboo
 python scripts/align_reference.py --orig-id <原文ebook_id> --zh-id <中譯ebook_id> --apply
 ```
 
+🚨 **對上率不能判斷是不是同一本書**（2026-09-26 批次乾跑 1,002 對：《神護理的奧秘》中文配中文、
+《基督教思想史》配 Simon Peter 都拿 100%）。所以 `--apply` 前強制兩道檢查，不過就 exit 3 不寫
+（人工核對過才加 `--force`）：
+1. `is_foreign_original()`：原文側取樣全書，漢字佔字元三成以上＝中文書；假名佔漢字＋假名 15% 以上＝日文（算外文）。
+2. `verify_same_book()`：從中譯段抽錨點（括注外文字、1000–2099 年份、經文章:節含舊式 `Rom. viii. 28`），
+   到比例分配後「前後各 5% 的原文」找，和「半本書外」的對照組比；就近 ≥20% 且 ≥ 對照組兩倍才判 same。
+   錨點不到 8 段＝undetermined（錯配常落這裡，不會被放行）。
+   另要求命中分散在全書五等分中至少 3 段：兩本不相干的書，書末參考書目都在書末、
+   都是外文字，會「就近對上」而對照組為 0（第一版就讓大分離／思想史配 Simon Peter 過關）。
+   中譯側也要驗是中文（第一版放過德配德、英配英），中譯本早有原文欄的（自譯雙語）另列。
+   🚨 視窗別開窄：中譯逐頁切、原文逐章切時位置誤差好幾頁，±3 段曾把詹姆斯真配對判成對不上；
+   三位數不收（中譯本頁碼、譯注書目頁碼會灌爆）。
+   外文字錨點只收大寫開頭的專名（christ、scholarship 這類普通字到處都有）；外文佔三成以上的
+   中譯段（註釋、書目）不拿來驗。
+批次重篩：`output/reverse_originals/verify_pairs.py`（報告 `verify_pairs.tsv`，不寫入）。
+2026-09-26 重篩 1,002 對結果：確定同一本只有 **2 對**（`confirmed_same.tsv`：Guthrie《基督徒的重大利益》、
+圖倫丁《辯道學神學要義》第一冊）；原文其實是中文 498、讀不到 195、中譯側非中文 19、早有原文欄 5、
+內容對不上 27、無法判定 256。全書外文字重疊 ≥0.7 但被擋下的 18 對（加爾文《基督教要義》、切斯特頓
+《回到正統》×2、萊爾、圖倫丁第二冊…）在 `review_candidates.tsv`，要人工看，不要放寬閘門去收。
+
 `--apply` 寫入前留 `{id}.jsonl.align.bak` 備份、寫完推 R2
 （`standardize_ebook.push_to_r2`）並 PATCH `ebooks.total_chars/standardized_at`。
 

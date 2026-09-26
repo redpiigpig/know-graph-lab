@@ -388,3 +388,53 @@ def test_align_book_footnote_no_original_notes_section():
     fn = result["report"]["footnotes"]
     assert fn["original_footnotes"] == 0
     assert fn["numbered_pairing"] is False
+
+
+# ---------------------------------------------------------------------------
+# 同一本書驗證（2026-09-26）
+# ---------------------------------------------------------------------------
+
+def _chunks(texts, key="content"):
+    return [{key: t} for t in texts]
+
+
+def test_is_foreign_original_rejects_chinese_and_accepts_english_japanese():
+    zh = _chunks(["神的護理是奧秘，加爾文（Calvin）說：「上帝掌管萬有。」" * 40] * 5)
+    en = _chunks(["The providence of God is a mystery, as Calvin said." * 40] * 5)
+    ja = _chunks(["神の摂理は奥義であると、カルヴァンは言ったのである。" * 40] * 5)
+    assert ar.is_foreign_original(zh)[0] is False
+    assert ar.is_foreign_original(en)[0] is True
+    ok, prof = ar.is_foreign_original(ja)
+    assert ok is True and prof["why"] == "japanese"
+
+
+def test_content_anchors_and_roman_chapter_refs():
+    a = ar.content_anchors("奧古斯丁（Augustine）在 1517 年引用羅 8:28。")
+    assert "augustine" in a["words"] and "1517" in a["nums"] and (8, 28) in a["cvs"]
+    h, t = ar.anchor_hit_rate(a, "Augustine ... in 1517 ... Rom. viii. 28")
+    assert (h, t) == (3, 3)
+
+
+def _book(n, same):
+    zh, names = [], ["Athanasius", "Irenaeus", "Tertullian", "Cyprian", "Origenes",
+                     "Ambrosius", "Hieronymus", "Chrysostom", "Basilius", "Gregorius"]
+    for i in range(n):
+        w = names[i % 10] + chr(97 + i // 10) + "us"  # 每段一個獨特錨點（純字母）
+        src = f"In the year {1000 + i} {w} wrote" if same else f"Unrelated text about Simon Peter {i}"
+        zh.append({"content": f"第{i}段：這位早期教會的作者（{w}）於 {1000 + i} 年寫成一部重要的神學著作，影響深遠。",
+                   "source_text": src})
+    return zh
+
+
+def test_verify_same_book_distinguishes_match_from_mismatch():
+    assert ar.verify_same_book(_book(60, True))["verdict"] == "same"
+    assert ar.verify_same_book(_book(60, False))["verdict"] == "different"
+
+
+def test_verify_same_book_undetermined_without_anchors():
+    zh = [{"content": "純中文段落沒有任何外文或數字。", "source_text": "plain text"}] * 60
+    assert ar.verify_same_book(zh)["verdict"] == "undetermined"
+
+
+def test_sample_pairs_zero_does_not_divide_by_zero():
+    assert ar._sample_pairs([{"content": "中", "source_text": "en"}], n=0) == []

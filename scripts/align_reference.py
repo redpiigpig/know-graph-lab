@@ -647,6 +647,157 @@ def align_book(en_chunks: list[dict], zh_chunks: list[dict], *,
 
 
 # ============================================================================
+# 7b. 同一本書驗證（2026-09-26）——對上率只量「結構像不像」，不能判斷是不是同一本書
+#     （中文配中文、明顯錯配的書也能拿 100%）。這裡加兩道不呼叫引擎的檢查。
+# ============================================================================
+
+_FOREIGN_SCRIPT_RE = re.compile(r"[A-Za-zÀ-ɏͰ-Ͽἀ-῿"
+                                r"Ѐ-ӿ֐-׿؀-ۿ]")
+_HAN_RE = re.compile(r"[一-鿿㐀-䶿]")
+_KANA_RE = re.compile(r"[぀-ヿ]")
+
+
+def script_profile(text: str) -> dict:
+    """字元層級的文字系統統計：漢字／假名／外文字母（拉丁、希臘、西里爾、希伯來、阿拉伯）。"""
+    han = len(_HAN_RE.findall(text))
+    kana = len(_KANA_RE.findall(text))
+    foreign = len(_FOREIGN_SCRIPT_RE.findall(text))
+    total = han + kana + foreign
+    return {"han": han, "kana": kana, "foreign": foreign,
+            "han_share": round(han / total, 4) if total else 0.0,
+            "kana_in_cjk": round(kana / (han + kana), 4) if han + kana else 0.0}
+
+
+def is_foreign_original(chunks: list[dict], *, sample_chars: int = 200_000) -> tuple[bool, dict]:
+    """原文側確實是外文嗎？
+
+    外文字母一個詞佔好幾個字元、漢字一字一詞，所以漢字只要佔三成就是中文書
+    （中文書夾英文引文也到不了七成外文字母）。日文書漢字多，改看假名：
+    假名占漢字＋假名的 15% 以上就是日文。取樣分散在全書各處（書前常是中文出版資訊）。"""
+    texts = [(c.get("content") or "") for c in chunks]
+    step = max(1, len(texts) // 200)
+    buf, n = [], 0
+    for t in texts[::step]:
+        buf.append(t[:2000])
+        n += len(buf[-1])
+        if n >= sample_chars:
+            break
+    prof = script_profile("".join(buf))
+    if prof["han"] + prof["kana"] + prof["foreign"] < 500:
+        return False, {**prof, "why": "too-little-text"}
+    if prof["kana_in_cjk"] >= 0.15:
+        return True, {**prof, "why": "japanese"}
+    if prof["han_share"] < 0.3:
+        return True, {**prof, "why": "alphabetic"}
+    return False, {**prof, "why": "chinese"}
+
+
+_LATIN_WORD_RE = re.compile(r"(?<![A-Za-z])[A-Za-zÀ-ɏ][A-Za-zÀ-ɏ'\-]{3,}")
+_NUM_RE = re.compile(r"(?<!\d)(1\d{3}|20\d{2})(?!\d)")  # 只收年份：三位數多是頁碼
+_CV_RE = re.compile(r"(?<!\d)(\d{1,3})\s*[:：]\s*(\d{1,3})(?!\d)")
+_ROMAN_CV_RE = re.compile(r"\b([ivxlc]{1,7})\.?\s*,?\s*(\d{1,3})\b", re.IGNORECASE)
+# 中文書裡常見、但與「是不是同一本書」無關的外文字（出版資訊、網址殘片）
+_ANCHOR_STOP = {"http", "https", "www", "html", "com", "org", "press", "university",
+                "edition", "isbn", "vol", "ibid", "chapter", "page", "pages", "note",
+                "notes", "trans", "the", "and", "with", "from", "that", "this"}
+
+
+def content_anchors(zh_text: str) -> dict:
+    """從中譯段落抽出「原文裡也該出現」的錨點：
+    ① 括注的外文字（人名、書名、術語）②年份（1000–2099；三位數多半是頁碼，不收）③經文出處章:節。
+    中譯本裡的外文字就是原文照抄進來的，所以在原文對應處一定找得到。
+    外文字只收大寫開頭的專名：christ、scholarship 這類普通字到處都有，
+    曾讓不相干的書「就近對上」。"""
+    words = {w.lower().strip("'-") for w in _LATIN_WORD_RE.findall(zh_text) if w[0].isupper()}
+    words = {w for w in words if len(w) >= 4 and w not in _ANCHOR_STOP}
+    nums = set(_NUM_RE.findall(zh_text))
+    cvs = {(int(a), int(b)) for a, b in _CV_RE.findall(zh_text)}
+    return {"words": words, "nums": nums, "cvs": cvs}
+
+
+def _orig_index(orig_text: str) -> dict:
+    low = orig_text.lower()
+    words = {w.lower().strip("'-") for w in _LATIN_WORD_RE.findall(orig_text)}
+    nums = set(_NUM_RE.findall(orig_text))
+    cvs = {(int(a), int(b)) for a, b in _CV_RE.findall(orig_text)}
+    for r, v in _ROMAN_CV_RE.findall(orig_text):  # 舊英譯本：Rom. viii. 28
+        c = roman_to_int(r)
+        if c:
+            cvs.add((c, int(v)))
+    return {"low": low, "words": words, "nums": nums, "cvs": cvs}
+
+
+def anchor_hit_rate(anchors: dict, orig_text: str) -> tuple[int, int]:
+    """(命中, 總數)。外文字比對不分大小寫，六個字母以上也接受子字串（屈折變化、連字號斷詞）。"""
+    idx = _orig_index(orig_text)
+    hit = total = 0
+    for w in anchors["words"]:
+        total += 1
+        hit += (w in idx["words"]) or (len(w) >= 6 and w in idx["low"])
+    for n in anchors["nums"]:
+        total += 1
+        hit += n in idx["nums"]
+    for cv in anchors["cvs"]:
+        total += 1
+        hit += cv in idx["cvs"]
+    return hit, total
+
+
+def verify_same_book(aligned_zh: list[dict], *, n: int = 60, window: int | None = None,
+                     min_anchors: int = 2, min_testable: int = 8) -> dict:
+    """抽樣已配到原文的中譯段落，比較「就近原文」與「半本書外的原文」的錨點命中率。
+
+    同一本書：就近命中率明顯高於對照組（錨點位置對得上）。
+    不同書：兩者都低，或一樣高（只是剛好都提到 Augustine、1517 這類常見錨點）。
+    視窗預設取全書前後各 5%：中譯本逐頁切、原文逐章切時，比例分配的位置誤差
+    可以到好幾頁，視窗太窄會把真的同一本書判成對不上（詹姆斯試跑時就是）。
+    命中率以錨點總數計，OCR 爛字兩邊都命中不了，只會拉低分母不影響高低比較。
+    回傳 verdict ∈ {"same", "different", "undetermined"} 與統計數字。"""
+    m = len(aligned_zh)
+    w = window if window is not None else max(3, m // 20)
+    testable = []
+    for i, c in enumerate(aligned_zh):
+        if not (c.get("source_text") or "").strip() or c.get("zh_only"):
+            continue
+        prof = script_profile(c.get("content") or "")
+        if prof["han_share"] < 0.7:  # 外文佔三成以上＝註釋／書目段，不是正文，跳過
+            continue
+        a = content_anchors(c.get("content") or "")
+        if sum(len(v) for v in a.values()) >= min_anchors:
+            testable.append((i, a))
+    out = {"testable": len(testable), "local": None, "baseline": None, "verdict": "undetermined"}
+    if len(testable) < min_testable or m < 4 * w + 4:
+        return out
+    step = max(1, len(testable) // n)
+    picks = testable[::step][:n]
+
+    def window_text(center: int) -> str:
+        lo, hi = max(0, center - w), min(m, center + w + 1)
+        return "\n".join(aligned_zh[j].get("source_text") or "" for j in range(lo, hi))
+
+    lh = lt = bh = bt = 0
+    fifths = set()  # 命中段落落在全書哪幾個五等分
+    for i, a in picks:
+        h, t = anchor_hit_rate(a, window_text(i))
+        lh, lt = lh + h, lt + t
+        if h * 2 >= t:
+            fifths.add(i * 5 // m)
+        h2, t2 = anchor_hit_rate(a, window_text((i + m // 2) % m))
+        bh, bt = bh + h2, bt + t2
+    local, baseline = lh / lt, bh / bt
+    out.update(local=round(local, 3), baseline=round(baseline, 3), sampled=len(picks),
+               spread=len(fifths))
+    # 分散度：兩本不相干的書，書末參考書目都是外文字、位置也都在書末，會「就近對上」
+    # 而對照組（書中段）是 0——2026-09-26 大分離／思想史配 Simon Peter 就這樣過關。
+    # 真同一本書的命中會分散在全書，所以要求至少三個五等分裡有命中。
+    if local >= 0.2 and local >= 2 * baseline and local - baseline >= 0.1 and len(fifths) >= 3:
+        out["verdict"] = "same"
+    elif local < 0.1 or local < 1.3 * baseline:
+        out["verdict"] = "different"
+    return out
+
+
+# ============================================================================
 # 8. CLI I/O 層（讀 Drive／R2、寫回＋備份＋推 R2、dry-run 報告）
 # ============================================================================
 
@@ -723,7 +874,7 @@ def _sample_pairs(zh_chunks: list[dict], n: int = 5, cap: int = 80) -> list[dict
     """抽樣（預設 5 對）給人核對，每段截 `cap` 字，避免把整本書內容灌進報告。"""
     candidates = [c for c in zh_chunks if (c.get("source_text") or "").strip()
                   and not c.get("zh_only")]
-    if not candidates:
+    if not candidates or n <= 0:
         return []
     step = max(1, len(candidates) // n)
     picks = candidates[::step][:n]
@@ -781,6 +932,7 @@ def main() -> None:
     ap.add_argument("--apply", action="store_true")
     ap.add_argument("--window", type=int, default=250)
     ap.add_argument("--samples", type=int, default=5)
+    ap.add_argument("--force", action="store_true", help="略過同一本書檢查（人工核對過才用）")
     ap.add_argument("--engine", default="auto",
                     help="保留給日後低覆蓋率時的 LLM 輔助錨定（目前兩本 pilot 用純規則已足夠）")
     args = ap.parse_args()
@@ -794,6 +946,16 @@ def main() -> None:
     result = align_book(en, zh, window=args.window)
     samples = _sample_pairs(result["zh_chunks"], n=args.samples)
     print_report(args.orig_id, args.zh_id, result["report"], samples)
+
+    foreign, prof = is_foreign_original(en)
+    zh_is_chinese = is_foreign_original(zh)[1]["why"] == "chinese"
+    foreign = foreign and zh_is_chinese  # 外文配外文（德配德、英配英）也不算
+    same = verify_same_book(result["zh_chunks"])
+    print(f"\n同一本書檢查：原文是外文＝{'是' if foreign else '否'}（{prof['why']}，漢字占比 {prof['han_share']}）；"
+          f"內容錨點 {same['verdict']}（可驗段 {same['testable']}，就近命中 {same['local']}，對照組 {same['baseline']}）")
+    if args.apply and not args.force and not (foreign and same["verdict"] == "same"):
+        print("未通過同一本書檢查，不寫入。確定要寫請先人工核對後加 --force。")
+        sys.exit(3)
 
     if args.apply:
         rows = result["zh_chunks"]
