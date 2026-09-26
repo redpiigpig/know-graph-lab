@@ -41,6 +41,16 @@
           <span class="tool-badge bg-amber-50 text-amber-600">7 區</span>
         </NuxtLink>
 
+        <!-- 聖經研究五百篇（舊約／新約／次經與典外／批判史，依研究史策展） -->
+        <NuxtLink to="/research-data/top-papers/biblical-studies" class="tool-card group border-rose-100 hover:border-rose-300 hover:shadow-rose-100">
+          <div class="tool-icon bg-rose-50 text-rose-600">📜</div>
+          <div class="flex-1">
+            <h2 class="tool-title">聖經研究五百篇</h2>
+            <p class="tool-desc">近現代聖經研究最有影響力的五百餘篇：舊約、新約、次經與典外文獻、聖經批判史四組，依研究史主題排列，每筆一句話說明它為何重要，並標館內有無全文</p>
+          </div>
+          <span class="tool-badge bg-rose-50 text-rose-600">4 組</span>
+        </NuxtLink>
+
         <!-- 台灣衛理公會研究資料 -->
         <NuxtLink to="/research-data/taiwan-methodist" class="tool-card group border-teal-100 hover:border-teal-300 hover:shadow-teal-100">
           <div class="tool-icon bg-teal-50 text-teal-600">⛪</div>

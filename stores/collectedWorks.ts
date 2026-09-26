@@ -32555,8 +32555,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                 "新約研究",
                 "批判女性主義"
           ],
-          "portraitUrl": "",
-          "portraitCredit": "（Wikimedia Commons 無公有領域肖像）",
+          "portraitUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Elisabeth_Schüssler-Fiorenza_2008_(cropped).JPG?width=500",
+          "portraitCredit": "Wikimedia Commons，攝於 2008 年德國天主教徒大會（Katholikentag）",
           "color": "orange",
           "emoji": "📜",
           "contribution": [
@@ -36328,8 +36328,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                 "非神話化",
                 "詮釋學"
           ],
-          "portraitUrl": "",
-          "portraitCredit": "（Wikimedia Commons 無公有領域肖像）",
+          "portraitUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Rudolf_Bultmann_als_Porträtbüste_von_Michael_Mohns.JPG?width=500",
+          "portraitCredit": "Wikimedia Commons‧Michael Mohns 塑肖像胸像照（馬堡，非照片）",
           "color": "emerald",
           "emoji": "🔍",
           "contribution": [
@@ -40901,7 +40901,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
         "早期基督論",
         "希臘化時代"
       ],
-      "portraitUrl": "",
+      "portraitUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Martin_Hengel.jpg?width=500",
+      "portraitCredit": "荷蘭皇家藝術與科學院《Levensberichten en herdenkingen 2010》肖像照‧Wikimedia Commons（CC BY 3.0）",
       "color": "sky",
       "emoji": "🏛️",
       "contribution": [
@@ -41010,7 +41011,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
         "歷史耶穌",
         "新約導論"
       ],
-      "portraitUrl": "",
+      "portraitUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Raymond_Edward_Brown-Monochrome_representation.png?width=500",
+      "portraitCredit": "Wikimedia Commons，Gabriel Sozzi 繪（CC BY-SA 4.0）",
       "color": "indigo",
       "emoji": "✝️",
       "contribution": [
@@ -41132,7 +41134,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
         "第二聖殿猶太教",
         "歷史耶穌"
       ],
-      "portraitUrl": "",
+      "portraitUrl": "https://religionnews.com/wp-content/uploads/2022/12/webRNS-E-P-Sanders-2015.jpg",
+      "portraitCredit": "Religion News Service，Scott Faber Photography 攝，2015 年",
       "color": "cyan",
       "emoji": "🔄",
       "contribution": [
@@ -41338,7 +41341,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
         "早期基督論",
         "歷史耶穌"
       ],
-      "portraitUrl": "",
+      "portraitUrl": "https://storage.ghost.io/c/7b/0b/7b0bd699-d78f-4472-8d29-233bd333f048/content/images/2026/05/ghost-upload-1779119192006-565196-professor-james-dunn-1.jpg",
+      "portraitCredit": "杜倫大學追思文（Mere Orthodoxy）配圖",
       "color": "stone",
       "emoji": "📖",
       "contribution": [
@@ -41447,7 +41451,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
         "經文互涉",
         "新約倫理學"
       ],
-      "portraitUrl": "",
+      "portraitUrl": "https://divinity.duke.edu/sites/default/files/styles/component_cta_left_right/public/images/media-images/Richard%2520Hays%2520Preferred%2520Head%2520Shot.jpg?itok=_SYIA_5e",
+      "portraitCredit": "杜克大學神學院官方肖像照",
       "color": "purple",
       "emoji": "🎼",
       "contribution": [
@@ -41987,7 +41992,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
         "一神教起源",
         "猶太聖經學"
       ],
-      "portraitUrl": "",
+      "portraitUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/יחזקאל%20קויפמן.jpg?width=500",
+      "portraitCredit": "Wikimedia Commons（Wikidata 官方肖像圖）",
       "color": "rose",
       "emoji": "🕎",
       "contribution": [
@@ -42991,7 +42997,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
         "希伯來敘事",
         "性別研究"
       ],
-      "portraitUrl": "",
+      "portraitUrl": "https://www.womenshistory.org/sites/default/files/styles/embedded_alt_1/public/images/2017-07/trible.jpg?itok=yHQmWwcS",
+      "portraitCredit": "美國國家婦女歷史博物館（National Women’s History Museum）官網",
       "color": "teal",
       "emoji": "⚖️",
       "contribution": [
@@ -43096,7 +43103,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
         "詩篇",
         "社會批判釋經"
       ],
-      "portraitUrl": "",
+      "portraitUrl": "https://cdn.tukioswebsites.com/d97daeef-deb2-49c7-acc5-e593640d5fac/lg",
+      "portraitCredit": "Reynolds Jonkhoff Funeral Home 訃聞官網肖像照",
       "color": "amber",
       "emoji": "🔥",
       "contribution": [
@@ -43751,7 +43759,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
         "世俗化",
         "教會史方法"
       ],
-      "portraitUrl": "",
+      "portraitUrl": "https://www.sel.cam.ac.uk/sites/default/files/assets/news/OwenChadwick-3-510x.jpg",
+      "portraitCredit": "劍橋大學塞爾文學院（Selwyn College）追思頁，攝於 99 歲生日",
       "color": "sky",
       "emoji": "⛪",
       "contribution": [
@@ -44301,7 +44310,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
         "基督教與希臘化文化",
         "宗教自由史"
       ],
-      "portraitUrl": "",
+      "portraitUrl": "https://s3.amazonaws.com/berkley-center/RobertWilken.jpg",
+      "portraitCredit": "喬治城大學柏克萊中心（Berkley Center）學者頁",
       "color": "purple",
       "emoji": "🧠",
       "contribution": [
@@ -44407,7 +44417,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
         "拉美神學",
         "講道史"
       ],
-      "portraitUrl": "",
+      "portraitUrl": "https://hti.ptsem.edu/wp-content/uploads/2017/08/Justo_L_González.jpg",
+      "portraitCredit": "普林斯頓神學院西語裔神學倡議（Hispanic Theological Initiative）官網，Robert Siegmann 攝",
       "color": "teal",
       "emoji": "🌎",
       "contribution": [
@@ -44732,7 +44743,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
         "啟示錄",
         "猶太啟示文學"
       ],
-      "portraitUrl": "",
+      "portraitUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/R._H._Charles.jpg?width=500",
+      "portraitCredit": "Wikimedia Commons（公有領域）",
       "color": "amber",
       "emoji": "📜",
       "contribution": [
@@ -44982,7 +44994,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
         "歷史耶穌",
         "猶太釋經傳統"
       ],
-      "portraitUrl": "",
+      "portraitUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Vermes_Géza_(cropped).jpg?width=500",
+      "portraitCredit": "Wikimedia Commons，Kaiser Ottó 攝（CC BY 4.0）",
       "color": "teal",
       "emoji": "🏺",
       "contribution": [
@@ -45127,7 +45140,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
         "亞當夏娃文獻",
         "亞美尼亞文獻"
       ],
-      "portraitUrl": "",
+      "portraitUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Professor_Michael_Stone.jpg?width=500",
+      "portraitCredit": "Wikimedia Commons，Nira Stone 攝（公有領域）",
       "color": "orange",
       "emoji": "🕎",
       "contribution": [
@@ -45248,7 +45262,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
         "歷史耶穌",
         "約翰福音"
       ],
-      "portraitUrl": "",
+      "portraitUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/James_H._Charlesworth.jpg?width=500",
+      "portraitCredit": "Wikimedia Commons（CC BY 3.0）",
       "color": "amber",
       "emoji": "📜",
       "contribution": [
@@ -45369,7 +45384,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
         "科普特語",
         "埃及修道文獻"
       ],
-      "portraitUrl": "",
+      "portraitUrl": "https://news.yale.edu/sites/default/files/2025-04/2001_02_19_12-02-43_Layton_Bentley_01-SQ.jpg",
+      "portraitCredit": "耶魯大學官方訃聞，Michael Marsland 攝",
       "color": "violet",
       "emoji": "𓂀",
       "contribution": [
@@ -45491,7 +45507,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
         "亞蘭文文獻",
         "啟示文學"
       ],
-      "portraitUrl": "",
+      "portraitUrl": "https://theo.kuleuven.be/en/research/researchers/00035105/@@images/person_photo/mini",
+      "portraitCredit": "魯汶大學神學暨宗教研究學院官網",
       "color": "teal",
       "emoji": "🏺",
       "contribution": [
@@ -45601,7 +45618,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
         "死海古卷",
         "第二聖殿猶太教"
       ],
-      "portraitUrl": "",
+      "portraitUrl": "https://divinity.yale.edu/sites/default/files/styles/2_3_480/public/2025-06/john_collins.jpg?h=821666ca&itok=Vwm_cAzY",
+      "portraitCredit": "耶魯大學神學院官方教師頁",
       "color": "orange",
       "emoji": "🔥",
       "contribution": [
@@ -45743,7 +45761,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
         "希臘羅馬宗教環境",
         "古代書信"
       ],
-      "portraitUrl": "",
+      "portraitUrl": "https://divinity.uchicago.edu/sites/default/files/styles/news_detail_featured_image/public/2019-09/klauck1.jpg.webp?itok=o2DlUBpR",
+      "portraitCredit": "芝加哥大學神學院追思頁（2025）",
       "color": "slate",
       "emoji": "📚",
       "contribution": [
@@ -45873,7 +45892,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
         "猶大福音",
         "古代魔法文獻"
       ],
-      "portraitUrl": "",
+      "portraitUrl": "https://news.chapman.edu/wp-content/uploads/2012/08/M.Meyer-in-Greece.jpg",
+      "portraitCredit": "查普曼大學（Chapman University）追思頁",
       "color": "violet",
       "emoji": "🗝️",
       "contribution": [
@@ -45998,7 +46018,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
         "約翰祕傳書",
         "早期基督教與性別"
       ],
-      "portraitUrl": "",
+      "portraitUrl": "https://bpb-us-e1.wpmucdn.com/sites.harvard.edu/dist/4/404/files/2023/08/king1.jpg",
+      "portraitCredit": "哈佛大學宗教研究委員會官網",
       "color": "rose",
       "emoji": "📖",
       "contribution": [

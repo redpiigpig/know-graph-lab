@@ -101,6 +101,89 @@ WANTED = [
          title="Vier Schetsen uit de Godsdienstgeschiedenis（宗教史四論）",
          author="Pierre Daniël Chantepie de la Saussaye", category="宗教學", sub="宗教學史",
          why="荷蘭文原著，1883；荷蘭宗教學派的起點"),
+
+    # ── 聖經批判史十本公有領域原著（2026-09-26 使用者指定）
+    # 每筆 identifier 都先用 advancedsearch 比過多個版本，挑掃描完整、非節錄、
+    # 非借閱制的那份；Schweitzer《Quest of the Historical Jesus》館內已有一份
+    # epub（ebooks 表 id b3db3469-…），故不重抓。
+    dict(key="bc-spinoza-ttp", ident="chiefworksofbene01spin",
+         title="The Chief Works of Benedict de Spinoza, Vol. I（含《神學政治論》Tractatus "
+               "Theologico-Politicus, 1670；Elwes 英譯本）",
+         author="Baruch Spinoza（R. H. M. Elwes 英譯）", category="神學", sub="聖經批判史",
+         why="第一本用歷史批判法讀摩西五經的著作；Elwes 譯本公有領域"),
+    dict(key="bc-simon-histoire", ident="histoirecritique01simo",
+         title="Histoire critique du Vieux Testament（舊約批判史，1685 增訂新版）",
+         author="Richard Simon", category="神學", sub="聖經批判史",
+         why="首部以文獻批判法系統質疑摩西著作權的專著；1678 初版付印前即遭焚毀，"
+             "1685 鹿特丹增訂版是學界通行的定本"),
+    dict(key="bc-astruc-conjectures", ident="conjecturessurl00astr",
+         title="Conjectures sur les mémoires originaux dont il paroit que Moyse s'est "
+               "servi pour composer le livre de la Genèse（創世記原始底本臆測，1753）",
+         author="Jean Astruc", category="神學", sub="聖經批判史",
+         why="底本假說（Documentary Hypothesis）的起點，'耶和華／伊羅欣' 底本切分首見於此"),
+    dict(key="bc-reimarus-fragmente", ident="fragmenteundant00reimgoog",
+         title="Fragmente eines Ungenannten（無名氏殘篇，Lessing 編，1778）",
+         author="Hermann Samuel Reimarus（G. E. Lessing 編）", category="神學", sub="聖經批判史",
+         why="歷史耶穌研究的起點；Reimarus 死後由 Lessing 匿名發表，開啟「歷史耶穌」與"
+             "「信仰基督」的分野"),
+    dict(key="bc-eichhorn-at-1", ident="10410481bsb",
+         title="Einleitung ins Alte Testament, Bd. 1（舊約導論‧卷一，1780 初版）",
+         author="Johann Gottfried Eichhorn", category="神學", sub="聖經批判史",
+         why="「舊約導論」（Introduction）作為學科體裁的奠基之作，三卷本第一卷"),
+    dict(key="bc-eichhorn-at-2", ident="10410482bsb",
+         title="Einleitung ins Alte Testament, Bd. 2（舊約導論‧卷二，1781 初版）",
+         author="Johann Gottfried Eichhorn", category="神學", sub="聖經批判史",
+         why="同上，第二卷"),
+    dict(key="bc-eichhorn-at-3", ident="10410483bsb",
+         title="Einleitung ins Alte Testament, Bd. 3（舊約導論‧卷三，1783 初版）",
+         author="Johann Gottfried Eichhorn", category="神學", sub="聖經批判史",
+         why="同上，第三卷"),
+    dict(key="bc-semler-canon-1", ident="10412817bsb",
+         title="Abhandlung von freier Untersuchung des Canons, Teil 1（論正典的自由考察‧"
+               "第一部，1771）",
+         author="Johann Salomo Semler", category="神學", sub="聖經批判史",
+         why="首度把「正典」本身當作歷史形成物來考察，區分「聖經」與「神的話」；"
+             "四部本第一部"),
+    dict(key="bc-semler-canon-2", ident="10412821bsb",
+         title="Abhandlung von freier Untersuchung des Canons, Teil 2（論正典的自由考察‧"
+               "第二部，1772）",
+         author="Johann Salomo Semler", category="神學", sub="聖經批判史",
+         why="同上，第二部"),
+    dict(key="bc-semler-canon-3", ident="10412822bsb",
+         title="Abhandlung von freier Untersuchung des Canons, Teil 3（論正典的自由考察‧"
+               "第三部，1773）",
+         author="Johann Salomo Semler", category="神學", sub="聖經批判史",
+         why="同上，第三部"),
+    dict(key="bc-semler-canon-4", ident="10412823bsb",
+         title="Abhandlung von freier Untersuchung des Canons, Teil 4（論正典的自由考察‧"
+               "第四部，1775）",
+         author="Johann Salomo Semler", category="神學", sub="聖經批判史",
+         why="同上，第四部（完結）"),
+    dict(key="bc-dewette-beitrage", ident="beitragezureinle00deweuoft",
+         title="Beiträge zur Einleitung in das Alte Testament（舊約導論補篇，1806–07，"
+               "兩卷合訂）",
+         author="W. M. L. de Wette", category="神學", sub="聖經批判史",
+         why="論歷代志史料價值遠遜摩西五經、質疑摩西著作權的關鍵早期論證；此版兩卷合訂一冊"),
+    dict(key="bc-strauss-leben-jesu-1", ident="lifeofjesuscriti01stra",
+         title="The Life of Jesus, Critically Examined, Vol. I（耶穌傳批判研究‧卷一，"
+               "1860，George Eliot 英譯）",
+         author="David Friedrich Strauss（George Eliot 英譯）", category="神學", sub="聖經批判史",
+         why="以「神話」（Mythus）解釋福音書神蹟敘事的劃時代著作；引爆十九世紀最大神學論戰"),
+    dict(key="bc-strauss-leben-jesu-2", ident="lifeofjesuscriti02stra",
+         title="The Life of Jesus, Critically Examined, Vol. II（耶穌傳批判研究‧卷二，"
+               "1860，George Eliot 英譯）",
+         author="David Friedrich Strauss（George Eliot 英譯）", category="神學", sub="聖經批判史",
+         why="同上，第二卷"),
+    dict(key="bc-baur-paulus-1", ident="paultheapostle01bauruoft",
+         title="Paul, the Apostle of Jesus Christ, Vol. I（保羅：耶穌基督的使徒‧卷一，"
+               "1876 英譯）",
+         author="Ferdinand Christian Baur", category="神學", sub="聖經批判史",
+         why="杜賓學派歷史批判法用於保羅書信真偽考證的代表作，只認四封「真保羅書信」"),
+    dict(key="bc-baur-paulus-2", ident="paulapostlejesu00baurgoog",
+         title="Paul, the Apostle of Jesus Christ, Vol. II（保羅：耶穌基督的使徒‧卷二，"
+               "1875 英譯）",
+         author="Ferdinand Christian Baur", category="神學", sub="聖經批判史",
+         why="同上，第二卷"),
 ]
 
 # Patrologia Orientalis：東方諸教會原典的對照譯本（敘利亞／科普特／亞美尼亞／
@@ -144,8 +227,15 @@ def pick_file(files: list[dict], ident: str = "") -> tuple[str, str, int] | None
     而且那些字全是 Google 的版權聲明（"This is a digital copy of a book…"）——
     檔案大小、頁數、下載流程全部正常，只有內容是空的。同一個項目的 `_djvu.txt`
     才有正文（1.1 MB）。所以這類項目把 djvu.txt 排到 PDF 前面。
+
+    🚨 巴伐利亞邦立圖書館（MDZ，identifier 以 `bsb` 結尾）的德文古籍掃描同理，
+    只是反過來浪費：PDF 是逐頁高解析度全彩掃描，一冊動輒 150–400 MB，
+    而同一項目的 `_djvu.txt` 已經是 OCR 好的全文（幾百 KB～1 MB）。2026-09-26
+    抓 Eichhorn／Semler 那批德文原典時實測過（例：10412821bsb 的 PDF 357 MB，
+    djvu.txt 只有 944 KB，OCR 品質可用）。故 bsb 項目也把 djvu.txt 排到 PDF 前面，
+    不然一本書要收半小時以上還佔滿 Drive 空間。
     """
-    prefer = ("_djvu.txt", ".pdf", ".epub") if ident.lower().endswith("goog") else PREFER
+    prefer = ("_djvu.txt", ".pdf", ".epub") if ident.lower().endswith(("goog", "bsb")) else PREFER
     best = None
     for ext in prefer:
         for f in files:
