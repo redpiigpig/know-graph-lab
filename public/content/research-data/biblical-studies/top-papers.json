@@ -17,7 +17,7 @@
  ],
  "total": 536,
  "verified": 112,
- "in_library": 38,
+ "in_library": 88,
  "langs": {
   "en": 366,
   "de": 147,
@@ -34,7 +34,7 @@
   "article": 61,
   "chapter": 41
  },
- "built_at": "2026-09-26T00:06:27+00:00",
+ "built_at": "2026-09-26T06:21:32+00:00",
  "groups": [
   {
    "slug": "ot",
@@ -42,7 +42,7 @@
    "icon": "🕎",
    "desc": "從威爾豪森的底本學說到當代五經研究、以色列史與考古之爭、舊約神學、先知書、智慧與詩篇、文學與女性主義批判、經文與正典",
    "count": 139,
-   "in_library": 8,
+   "in_library": 18,
    "verified": 35,
    "themes": [
     {
@@ -62,7 +62,7 @@
        "lang": "de",
        "note": "《導論》的文獻學底盤：逐段切分 J／E／P／D 的原始分析，後結集成書（1885）。",
        "crossref": null,
-       "in_library": false
+       "in_library": true
       },
       {
        "group": "ot",
@@ -77,7 +77,7 @@
        "lang": "de",
        "note": "底本學說（JEDP）的定本：祭司典最晚、律法後於先知，整個十九世紀批判的總結，此後一切五經研究都是對它的回應。",
        "crossref": null,
-       "in_library": false
+       "in_library": true
       },
       {
        "group": "ot",
@@ -92,7 +92,7 @@
        "lang": "de",
        "note": "形式批判的誕生：問一段文本的「文類」「生活處境」與口傳史，把研究從文獻層拉到前文獻層。",
        "crossref": null,
-       "in_library": false
+       "in_library": true
       },
       {
        "group": "ot",
@@ -671,7 +671,7 @@
        "lang": "en",
        "note": "把低年代學與約西亞時期成書說寫成公眾讀物，決定了此後大眾對「聖經與考古」的印象。",
        "crossref": null,
-       "in_library": false
+       "in_library": true
       },
       {
        "group": "ot",
@@ -833,7 +833,7 @@
        "lang": "de",
        "note": "以「約」為中心的系統式舊約神學，戰後舊約神學復興的第一座里程碑。",
        "crossref": null,
-       "in_library": false
+       "in_library": true
       },
       {
        "group": "ot",
@@ -1043,7 +1043,7 @@
        "lang": "de",
        "note": "分出第三以賽亞（56–66 章）與四首僕人之歌：此後一切以賽亞書研究的座標。",
        "crossref": null,
-       "in_library": false
+       "in_library": true
       },
       {
        "group": "ot",
@@ -1484,7 +1484,7 @@
         ],
         "sim": 1.0
        },
-       "in_library": false
+       "in_library": true
       },
       {
        "group": "ot",
@@ -2549,7 +2549,7 @@
        "lang": "de",
        "note": "創世記 1 與啟示錄 12 都源自巴比倫混沌之戰神話：宗教史學派在舊約的開山之作。",
        "crossref": null,
-       "in_library": false
+       "in_library": true
       },
       {
        "group": "ot",
@@ -2564,7 +2564,7 @@
        "lang": "de",
        "note": "「巴比倫與聖經」之爭：主張舊約多數材料借自巴比倫，引發德皇介入的公共論戰，泛巴比倫主義的頂點。",
        "crossref": null,
-       "in_library": false
+       "in_library": true
       },
       {
        "group": "ot",
@@ -2621,7 +2621,7 @@
        "lang": "en",
        "note": "以有實證版本史的史詩檢驗文獻批判方法是否可靠——「經驗模型」進路的奠基。",
        "crossref": null,
-       "in_library": false
+       "in_library": true
       },
       {
        "group": "ot",
@@ -2648,7 +2648,7 @@
    "icon": "✝️",
    "desc": "三次歷史耶穌探索、符類問題與形式／編修批判、約翰文獻、保羅新舊觀、基督論起源、早期基督教與猶太教、經文批判、啟示錄",
    "count": 134,
-   "in_library": 14,
+   "in_library": 24,
    "verified": 23,
    "themes": [
     {
@@ -2668,7 +2668,7 @@
        "lang": "de",
        "note": "歷史耶穌探究的起點：耶穌是失敗的政治彌賽亞，門徒偷屍造出復活——史懷哲從這裡開始寫研究史。",
        "crossref": null,
-       "in_library": false
+       "in_library": true
       },
       {
        "group": "nt",
@@ -2683,7 +2683,7 @@
        "lang": "de",
        "note": "以「神話」取代超自然與理性主義兩種解釋：福音書是早期教會以舊約期望鑄成的神話，十九世紀最震撼的一本書。",
        "crossref": null,
-       "in_library": false
+       "in_library": true
       },
       {
        "group": "nt",
@@ -2728,7 +2728,7 @@
        "lang": "de",
        "note": "馬可的「彌賽亞祕密」是早期教會的神學建構而非史實：宣告馬可福音不是歷史、而是神學。",
        "crossref": null,
-       "in_library": false
+       "in_library": true
       },
       {
        "group": "nt",
@@ -3004,7 +3004,7 @@
        "lang": "de",
        "note": "馬可優先與兩源說的學術定型，自由派耶穌傳的文獻學基礎。",
        "crossref": null,
-       "in_library": false
+       "in_library": true
       },
       {
        "group": "nt",
@@ -3019,7 +3019,7 @@
        "lang": "de",
        "note": "「起初是講道」：從宣講的需要推導福音書材料的形式，形式批判的另一奠基者。",
        "crossref": null,
-       "in_library": false
+       "in_library": true
       },
       {
        "group": "nt",
@@ -3049,7 +3049,7 @@
        "lang": "de",
        "note": "把每一個福音書單元按文類分類並追溯其在社群中的成長：形式批判在新約的定本。",
        "crossref": null,
-       "in_library": false
+       "in_library": true
       },
       {
        "group": "nt",
@@ -3544,7 +3544,7 @@
        "lang": "de",
        "note": "保羅是「基督教的第二創立者」、稱義只是與猶太化者論戰時的「副題」：百年後「保羅新觀」的先聲。",
        "crossref": null,
-       "in_library": false
+       "in_library": true
       },
       {
        "group": "nt",
@@ -3799,7 +3799,7 @@
         ],
         "sim": 1.0
        },
-       "in_library": false
+       "in_library": true
       },
       {
        "group": "nt",
@@ -4342,7 +4342,7 @@
        "lang": "de",
        "note": "自由派大師反而為路加作者說與早期成書辯護，二十世紀「路加是保羅同伴」立場的源頭。",
        "crossref": null,
-       "in_library": false
+       "in_library": true
       },
       {
        "group": "nt",
@@ -4465,7 +4465,7 @@
        "lang": "en",
        "note": "「中性經文」與譜系法、推翻公認經文：現代新約經文批判的方法奠基。",
        "crossref": null,
-       "in_library": false
+       "in_library": true
       },
       {
        "group": "nt",
@@ -5009,7 +5009,7 @@
    "icon": "📜",
    "desc": "舊約偽經與啟示文學、第二正典、死海古卷、新約次經、多馬福音、諾斯底與拿戈瑪第、希臘化猶太文獻、拉比文獻與使徒教父",
    "count": 128,
-   "in_library": 6,
+   "in_library": 13,
    "verified": 37,
    "themes": [
     {
@@ -5044,7 +5044,7 @@
        "lang": "de",
        "note": "以偽經與啟示文學為主要史料重建「晚期猶太教」：宗教史學派的猶太教圖像，也是後來被批為貶抑猶太教的靶子。",
        "crossref": null,
-       "in_library": false
+       "in_library": true
       },
       {
        "group": "apoc",
@@ -5969,7 +5969,7 @@
        "lang": "en",
        "note": "英語世界七十年的標準單卷集，鬼故事作家兼古文書學家的手筆。",
        "crossref": null,
-       "in_library": false
+       "in_library": true
       },
       {
        "group": "apoc",
@@ -6761,7 +6761,7 @@
        "lang": "en",
        "note": "瓦倫廷派是講求情緒治療與倫理的哲學學派：範疇批判之後的正面重構。",
        "crossref": null,
-       "in_library": false
+       "in_library": true
       },
       {
        "group": "apoc",
@@ -7083,7 +7083,7 @@
         ],
         "sim": 1.0
        },
-       "in_library": false
+       "in_library": true
       },
       {
        "group": "apoc",
@@ -7098,7 +7098,7 @@
        "lang": "de",
        "note": "逐節堆疊拉比平行材料的巨著，「平行狂」與「以拉比重建一世紀」兩種毛病的來源，也仍是不可缺的工具。",
        "crossref": null,
-       "in_library": false
+       "in_library": true
       },
       {
        "group": "apoc",
@@ -7125,7 +7125,7 @@
         ],
         "sim": 0.821
        },
-       "in_library": false
+       "in_library": true
       },
       {
        "group": "apoc",
@@ -7248,7 +7248,7 @@
        "lang": "en",
        "note": "以文獻學終結圖賓根學派對依納爵書信真偽的懷疑，英語教父學的典範。",
        "crossref": null,
-       "in_library": false
+       "in_library": true
       },
       {
        "group": "apoc",
@@ -7432,7 +7432,7 @@
    "icon": "🔍",
    "desc": "從斯賓諾莎到當代：批判方法的誕生、圖賓根學派、宗教史學派、研究史寫作、聖經神學與正典論戰、詮釋學與文學理論、解放與全球視角、天主教與猶太教的批判學術史",
    "count": 135,
-   "in_library": 10,
+   "in_library": 33,
    "verified": 17,
    "themes": [
     {
@@ -7497,7 +7497,7 @@
        "lang": "la",
        "note": "發現希伯來詩歌的「平行體」：聖經詩學研究的起點，也是把先知當詩人讀的開始。",
        "crossref": null,
-       "in_library": false
+       "in_library": true
       },
       {
        "group": "crit",
@@ -7572,7 +7572,7 @@
        "lang": "de",
        "note": "把聖經當民族詩歌、以「同情的理解」讀之：浪漫主義聖經觀與貢克爾文類研究的遠源。",
        "crossref": null,
-       "in_library": false
+       "in_library": true
       },
       {
        "group": "crit",
@@ -7653,7 +7653,7 @@
        "lang": "de",
        "note": "第一部批判性的以色列通史，威爾豪森的老師與對頭。",
        "crossref": null,
-       "in_library": false
+       "in_library": true
       },
       {
        "group": "crit",
@@ -7683,7 +7683,7 @@
        "lang": "nl",
        "note": "萊頓學派的以色列宗教史，把格拉夫假說做成整套發展史；威爾豪森稱他為最重要的同道。",
        "crossref": null,
-       "in_library": false
+       "in_library": true
       },
       {
        "group": "crit",
@@ -7713,7 +7713,7 @@
        "lang": "en",
        "note": "獻祭是共餐、儀式先於信仰：宗教社會學（涂爾幹）與宗教史學派共同的源頭。",
        "crossref": null,
-       "in_library": false
+       "in_library": true
       },
       {
        "group": "crit",
@@ -7728,7 +7728,7 @@
        "lang": "en",
        "note": "以節制的語調讓底本學說在英國聖公會成為體面學術，一代人的標準教科書。",
        "crossref": null,
-       "in_library": false
+       "in_library": true
       },
       {
        "group": "crit",
@@ -7743,7 +7743,7 @@
        "lang": "en",
        "note": "一場演說引發美國長老會的異端審判（1893 年定罪）：美國批判史的分水嶺事件。",
        "crossref": null,
-       "in_library": false
+       "in_library": true
       },
       {
        "group": "crit",
@@ -7773,7 +7773,7 @@
        "lang": "en",
        "note": "第一部舊約批判史（艾希霍恩到威爾豪森）的英文傳記式敘述。",
        "crossref": null,
-       "in_library": false
+       "in_library": true
       }
      ]
     },
@@ -7806,7 +7806,7 @@
         ],
         "sim": 0.992
        },
-       "in_library": false
+       "in_library": true
       },
       {
        "group": "crit",
@@ -7821,7 +7821,7 @@
        "lang": "de",
        "note": "普遍詮釋學（文法的與心理的理解）：聖經詮釋從特殊詮釋學走向普遍詮釋學的轉捩點。",
        "crossref": null,
-       "in_library": false
+       "in_library": true
       },
       {
        "group": "crit",
@@ -7836,7 +7836,7 @@
        "lang": "de",
        "note": "只有四封主要書信為真、使徒行傳是二世紀的調和之作：圖賓根「傾向批判」的總綱。",
        "crossref": null,
-       "in_library": false
+       "in_library": true
       },
       {
        "group": "crit",
@@ -7851,7 +7851,7 @@
        "lang": "de",
        "note": "早期基督教史作為彼得派與保羅派衝突與綜合的辯證：黑格爾式教會史的典型。",
        "crossref": null,
-       "in_library": false
+       "in_library": true
       },
       {
        "group": "crit",
@@ -7866,7 +7866,7 @@
        "lang": "de",
        "note": "圖賓根學派學生的反叛：早期大公教會來自外邦基督教而非猶太—外邦綜合，圖賓根範式的終結。",
        "crossref": null,
-       "in_library": false
+       "in_library": true
       },
       {
        "group": "crit",
@@ -7881,7 +7881,7 @@
        "lang": "fr",
        "note": "以文學筆法寫的自然主義耶穌傳，暢銷全歐並使作者失去法蘭西公學院教席：批判學術進入公共領域的事件。",
        "crossref": null,
-       "in_library": false
+       "in_library": true
       },
       {
        "group": "crit",
@@ -7911,7 +7911,7 @@
        "lang": "de",
        "note": "教義是「福音在希臘精神土壤上的作品」：教義史批判的經典命題。",
        "crossref": null,
-       "in_library": false
+       "in_library": true
       },
       {
        "group": "crit",
@@ -7956,7 +7956,7 @@
        "lang": "de",
        "note": "自由派新教的「耶穌的福音」（父神、靈魂的無限價值、愛的誡命）：史懷哲與巴特共同的靶子。",
        "crossref": null,
-       "in_library": false
+       "in_library": true
       }
      ]
     },
@@ -7977,7 +7977,7 @@
        "lang": "de",
        "note": "追蹤一個神話母題跨越猶太教與基督教的傳統史：宗教史學派方法的早期示範。",
        "crossref": null,
-       "in_library": false
+       "in_library": true
       },
       {
        "group": "crit",
@@ -7992,7 +7992,7 @@
        "lang": "de",
        "note": "基督教是「融合宗教」（syncretistic religion）：宗教史學派的綱領，FRLANT 叢書第一冊。",
        "crossref": null,
-       "in_library": false
+       "in_library": true
       },
       {
        "group": "crit",
@@ -8022,7 +8022,7 @@
        "lang": "de",
        "note": "保羅的救贖論源自奧祕宗教與伊朗救贖者神話：宗教史學派最激進的來源假說，布特曼諾斯底救贖者神話的來源。",
        "crossref": null,
-       "in_library": false
+       "in_library": true
       },
       {
        "group": "crit",
@@ -8185,7 +8185,7 @@
        "lang": "de",
        "note": "保羅研究史的第一部批判性回顧，與《耶穌生平研究史》成對。",
        "crossref": null,
-       "in_library": false
+       "in_library": true
       },
       {
        "group": "crit",
@@ -9145,7 +9145,7 @@
        "lang": "es",
        "note": "拉美女性解放神學家的聖經詮釋代表作。",
        "crossref": null,
-       "in_library": false
+       "in_library": true
       },
       {
        "group": "crit",
@@ -9422,7 +9422,7 @@
        "lang": "de",
        "note": "十九世紀保守派對德威特的最系統反擊，「新路德派」正統對抗批判的代表。",
        "crossref": null,
-       "in_library": false
+       "in_library": true
       },
       {
        "group": "crit",
@@ -9437,7 +9437,7 @@
        "lang": "de",
        "note": "「猶太學」（Wissenschaft des Judentums）的奠基作，把歷史批判方法用於米大示與禮儀文獻。",
        "crossref": null,
-       "in_library": false
+       "in_library": true
       },
       {
        "group": "crit",

@@ -100,3 +100,13 @@ pages/research-data/index.vue                        要手動加一張卡
 2. **期刊論文與專章**（本例 102 筆、52 有 DOI）→ Drive `研究資料/<領域>/待下載_期刊論文與專章（校內圖書館用）.csv`，
    帶 DOI 連結與出處，給使用者在校用瀏覽器走圖書館下載；OA 的那幾筆腳本直接抓進同一夾。
 🚨 不要對出版社網站寫自動下載：機構 IP 被擋是整校一起擋，和華藝那條的道理一樣。
+
+## archive.org 是第一站（2026-09-26 使用者裁示「西文文獻先找 archive.org」）
+
+`python -X utf8 scripts/top_papers_archive_org.py <field> --scan` 逐筆 advancedsearch（題名相似度 ≥ 0.8、creator 含作者姓、年份差 ≤ 3），
+`--fetch` 把能整本下載的抓進 `電子圖書館/神學/<領域標題>/`、建 ebooks 列並批次 parse。快取在 `output/top-papers/<field>-archive.json`，
+被打斷重跑會接著做。首例 497 筆：**55 本可整本下載、216 本只有借閱制**（現代書；metadata `access-restricted-item: true`、
+collection 含 inlibrary，files 只有 _meta.xml——一律跳過）、其餘查無。順序＝archive.org → 專著進 z-lib 獵表 → 論文出 DOI 清單。
+
+🚨 校內網路對西文期刊的真相：用真 Chrome（`scripts/doi_browser_fetch.mjs`）試六篇，T&F／Brill／SAGE／芝加哥大學出版社
+全顯示「Get access／purchase」——不是腳本被擋，是校方沒訂。這條不要再花時間。
