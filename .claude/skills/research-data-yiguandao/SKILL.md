@@ -185,6 +185,6 @@ docx 分頁與 PDF 頁碼對不上，定位要用「PDF 該頁是全文第幾次
 
 ## 兩位老師的期刊論文全文（2026-09-26）
 
-使用者在校時用 `scripts/airiti_author_fetch.py 鍾雲鶯 楊弘任 --download` 一次抓齊（見 [[research-data-airiti]]）：
+使用者在校時用 `scripts/airiti_author_fetch.py 鍾雲鶯 楊弘任 --download --dest 一貫道` 一次抓齊（見 [[research-data-airiti]]）：
 鍾雲鶯 27/28、楊弘任 6/9（楊老師＝中研院社會所楊弘任，一貫道全球化那一支）。篇目在 `public/content/research-data/press/airiti-authors/`，
-PDF 在 Drive `研究資料/華藝期刊全文/_作者專輯/`，清單也附進 `研究資料/一貫道/既有資料盤點.md`。缺的三篇華藝本來就沒全文，不是沒抓到。
+PDF 全在 Drive `研究資料/一貫道/`（檔名「作者_篇名_刊名卷期年」，帳本在 `_華藝帳本/`），清單也附進 `研究資料/一貫道/既有資料盤點.md`。缺的三篇華藝本來就沒全文，不是沒抓到。

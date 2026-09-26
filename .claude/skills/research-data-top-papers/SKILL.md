@@ -97,7 +97,7 @@ pages/research-data/index.vue                        要手動加一張卡
 
 1. **專著**（type=monograph，本例 434 筆、扣館內與已在獵表者剩 384）→ `data/zlib-wanted/biblical-top500.jsonl`（key `bt-`、source 沿用 `biblical-studies` 吃它的優先序 20），
    `python scripts/zlib_wanted.py` 併入後由每日 z-lib 排程慢慢抓（[[ebook-zlib-harvest]]）。
-2. **期刊論文與專章**（本例 102 筆、52 有 DOI）→ Drive `研究資料/<領域>/待下載_期刊論文與專章（校內圖書館用）.csv`，
+2. **期刊論文與專章**（本例 102 筆、52 有 DOI）→ Drive `電子圖書館/神學/<領域標題>/待下載_期刊論文與專章（校內圖書館用）.csv`（與 archive.org 抓回的書同一夾，不另開研究資料夾），
    帶 DOI 連結與出處，給使用者在校用瀏覽器走圖書館下載；OA 的那幾筆腳本直接抓進同一夾。
 🚨 不要對出版社網站寫自動下載：機構 IP 被擋是整校一起擋，和華藝那條的道理一樣。
 

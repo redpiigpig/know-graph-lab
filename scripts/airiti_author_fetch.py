@@ -16,11 +16,11 @@ press_airiti.py 是按「刊」走的（先抓整刊篇目再下載），要某�
 下載沿用 press_airiti.fetch_pdf（兩段式、驗 %PDF、6 秒一篇、機構 IP 掉了就整批停）。
 
   python -X utf8 scripts/airiti_author_fetch.py 鍾雲鶯 楊弘任            # 只列清單
-  python -X utf8 scripts/airiti_author_fetch.py 鍾雲鶯 楊弘任 --download # 列＋下載
+  python -X utf8 scripts/airiti_author_fetch.py 鍾雲鶯 楊弘任 --download --dest 一貫道   # 列＋下載
   python -X utf8 scripts/airiti_author_fetch.py 鍾雲鶯 --types 期刊 會議  # 只要這些類型
 
 輸出：public/content/research-data/press/airiti-authors/<作者>.json（篇目，進版控）
-      Drive 研究資料/華藝期刊全文/_作者專輯/<作者>/<年>_<刊>_<篇名>.pdf（＋ _ledger.json）
+      Drive 研究資料/<--dest 專案夾>/<作者>_<篇名>_<刊名卷期年>.pdf（帳本在 _華藝帳本/<作者>.json）
 已在各刊資料夾下過的（journal ledger 標 ok）不重下，只在清單上註明位置。
 """
 from __future__ import annotations
@@ -42,7 +42,15 @@ import press_airiti as pa  # noqa: E402
 
 BASE = "https://www.airitilibrary.com"
 OUT = ROOT / "public" / "content" / "research-data" / "press" / "airiti-authors"
-DRIVE = pa.DRIVE / "_作者專輯"
+# 🚨 不另開「作者專輯」夾：PDF 一律進 Drive 研究資料/<既有專案夾>/（--dest），
+#    檔名照專案夾既有慣例「作者_篇名_刊名卷期年.pdf」。使用者 2026-09-26 糾正過一次。
+RESEARCH = pa.DRIVE.parent
+
+
+def target_name(author: str, a: dict) -> str:
+    year = (a.get("dateCode") or a.get("date") or "")[:4]
+    vol = re.sub(r"\s+", "", a.get("volIssue") or "")
+    return re.sub(r'[\\/:*?"<>|\r\n\t]+', "", f"{author}_{a['title']}_{a['journal']}{vol}{year}")[:150] + ".pdf"
 PUBCACHE = Path(r"C:/tmp/airiti_publisher_ids.json")
 
 SRC_RE = re.compile(r'class="source 點擊資訊" key0="([^"]*)" key1="([^"]*)" key2="([^"]*)".*?'
@@ -139,11 +147,14 @@ def main() -> int:
     ap.add_argument("--download", action="store_true")
     ap.add_argument("--types", nargs="*", default=None, help="只下這些類型（期刊／會議／學位）")
     ap.add_argument("--limit", type=int, default=300)
+    ap.add_argument("--dest", default=None, help="--download 時必填：Drive 研究資料底下既有的專案夾名，如 一貫道")
     args = ap.parse_args()
 
     s = pa.session()
     inst = pa.institution(s)
     print(f"機構身分：{inst or '（無）'}")
+    if args.download and not args.dest:
+        print("--download 要加 --dest <研究資料底下既有的專案夾>"); return 1
     if args.download and not inst:
         print("不是校內 IP，只列清單不下載"); args.download = False
     cache = json.loads(PUBCACHE.read_text(encoding="utf-8")) if PUBCACHE.exists() else {}
@@ -156,10 +167,18 @@ def main() -> int:
         arts = search_author(s, author)
         n_ft = sum(a["fulltext"] for a in arts)
         print(f"  共 {len(arts)} 篇（有電子全文 {n_ft}）；類型：{ {t: sum(a['type']==t for a in arts) for t in {a['type'] for a in arts}} }")
+        # 🚨 只列清單也不可把上一輪記下的路徑洗掉：沿用舊清單裡檔案仍在的那些
+        prev_f = OUT / f"{author}.json"
+        prev = {}
+        if prev_f.exists():
+            prev = {x["docId"]: x.get("downloaded") for x in json.loads(prev_f.read_text(encoding="utf-8"))["articles"]}
         for a in arts:
             a["downloaded"] = None
-            if a["docId"] in done_elsewhere:
-                a["downloaded"] = str(done_elsewhere[a["docId"]].relative_to(pa.DRIVE))
+            old = prev.get(a["docId"])
+            if old and (RESEARCH / old).exists():
+                a["downloaded"] = old
+            elif a["docId"] in done_elsewhere:
+                a["downloaded"] = str(done_elsewhere[a["docId"]].relative_to(RESEARCH))
         (OUT / f"{author}.json").write_text(json.dumps(
             {"author": author, "fetched": time.strftime("%Y-%m-%d"), "count": len(arts), "articles": arts},
             ensure_ascii=False, indent=1), encoding="utf-8")
@@ -169,10 +188,16 @@ def main() -> int:
 
         if not args.download:
             continue
-        root = DRIVE / pa.safe_name(author)
-        root.mkdir(parents=True, exist_ok=True)
-        ledger_p = root / "_ledger.json"
+        root = RESEARCH / args.dest
+        if not root.exists():
+            print(f"  ✕ {root} 不存在。--dest 要指到 Drive 研究資料底下既有的專案夾（先查，別新開）"); return 1
+        (root / "_華藝帳本").mkdir(exist_ok=True)
+        ledger_p = root / "_華藝帳本" / f"{author}.json"
         ledger = json.loads(ledger_p.read_text(encoding="utf-8")) if ledger_p.exists() else {}
+        for a in arts:  # 上一輪已下到專案夾的，清單上要照記（第一版在這裡把 downloaded 覆寫成空）
+            p = root / target_name(author, a)
+            if not a["downloaded"] and p.exists():
+                a["downloaded"] = str(p.relative_to(RESEARCH))
         todo = [a for a in arts if a["fulltext"] and not a["downloaded"] and ledger.get(a["docId"]) != "ok"
                 and a["pid"] and (args.types is None or any(t in a["type"] for t in args.types))]
         print(f"  待下載 {len(todo)} 篇")
@@ -182,9 +207,9 @@ def main() -> int:
             if not pub:
                 ledger[a["docId"]] = "fail: 取不到 publisherID"; fail += 1; continue
             year = (a["dateCode"] or "")[:4]
-            dest = root / f"{pa.safe_name(year + '_' + a['journal'] + '_' + a['title'], 120)}.pdf"
+            dest = root / target_name(author, a)
             if dest.exists() and dest.stat().st_size > 1024:
-                ledger[a["docId"]] = "ok"; a["downloaded"] = str(dest.relative_to(pa.DRIVE)); continue
+                ledger[a["docId"]] = "ok"; a["downloaded"] = str(dest.relative_to(RESEARCH)); continue
             time.sleep(pa.DELAY_DL)
             blob, info = pa.fetch_pdf(s, a["pid"], pub, year, a["issueID"], a["docId"])
             if blob is None:
@@ -196,7 +221,7 @@ def main() -> int:
             err = pa.write_with_retry(dest, blob)
             if err:
                 ledger[a["docId"]] = f"fail: 寫檔失敗 {err}"; fail += 1; continue
-            ledger[a["docId"]] = "ok"; a["downloaded"] = str(dest.relative_to(pa.DRIVE)); ok += 1; spent += 1
+            ledger[a["docId"]] = "ok"; a["downloaded"] = str(dest.relative_to(RESEARCH)); ok += 1; spent += 1
             pa.add_spent(1)
             print(f"  ✓ {a['date'][:7]} 《{a['journal']}》{a['title'][:40]} ({len(blob)//1024} KB)", flush=True)
             ledger_p.write_text(json.dumps(ledger, ensure_ascii=False, indent=1), encoding="utf-8")

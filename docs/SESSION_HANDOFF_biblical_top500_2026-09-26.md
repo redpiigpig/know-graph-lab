@@ -36,21 +36,21 @@
 ### 4. 五百篇的「拿到」進度
 | 路徑 | 結果 |
 |---|---|
-| Unpaywall（112 DOI） | 4 筆 OA，只 1 筆真 PDF（賴特 1978，已存 Drive） |
+| Unpaywall（112 DOI） | 4 筆 OA，只 1 筆真 PDF（賴特 1978，已入館並解析） |
 | 校內 IP 走 doi.org（curl） | 劍橋要付費、SAGE／OUP／JSTOR 403、de Gruyter 驗證頁 |
 | 校內 IP 用真 Chrome（`scripts/doi_browser_fetch.mjs`，6 篇） | T&F／Brill／SAGE／芝加哥 4 篇「Get access／purchase」＝**校方沒訂**，不是被擋 |
 | archive.org（`scripts/top_papers_archive_org.py`，497 筆） | **55 本整本入館**（`電子圖書館\神學\聖經研究五百篇\`，全 parsed）、216 本借閱制跳過 |
 | z-lib 獵表 `data/zlib-wanted/biblical-top500.jsonl` | 專著 384 筆併入（source 沿用 biblical-studies 優先序 20），對帳後佇列剩 331，每日排程慢慢抓 |
-| 論文與專章 102 筆 | Drive `研究資料\聖經研究五百篇\待下載_期刊論文與專章（校內圖書館用）.csv`（52 筆有 DOI 連結） |
+| 論文與專章 102 筆 | Drive `電子圖書館\神學\聖經研究五百篇\待下載_期刊論文與專章（校內圖書館用）.csv`（52 筆有 DOI 連結） |
 
 清單「館內已有」：38 → 88。
 
 ### 5. 一貫道：鍾雲鶯、楊弘任（楊老師＝中研院社會所楊弘任）
-- 新腳本 `scripts/airiti_author_fetch.py 作者 [--download]`：華藝按作者檢索。
+- 新腳本 `scripts/airiti_author_fetch.py 作者 [--download --dest 專案夾]`：華藝按作者檢索。
   🚨 JSON 的 `查詢歷史類型代碼` 要 `"ADLang"`（寫 DSF 回一頁正常的「查無資料」）；欄位代碼是數字（作者=2）；
   publisherID 要讀刊物頁 JS 變數 `全域_出版單位代碼`，不一定是數字。
 - 鍾雲鶯 28 篇→27 有全文；楊弘任 9 篇→6 有全文（《台灣社會學》兩篇華藝無全文、博論不走這條）。
-- 篇目 `public/content/research-data/press/airiti-authors/<作者>.json`；PDF `研究資料\華藝期刊全文\_作者專輯\<作者>\`（早先按刊抓的 11 篇在各刊夾，清單 downloaded 欄有路徑）；
+- 篇目 `public/content/research-data/press/airiti-authors/<作者>.json`；PDF 全在 `研究資料\一貫道\`（33 篇，檔名「作者_篇名_刊名卷期年」；早先按刊抓的 11 篇在各刊夾另留一份）；
   `研究資料\一貫道\既有資料盤點.md` 已附逐篇清單。
 - 華藝當日額度用了 42／1,200。
 
@@ -75,3 +75,6 @@
 - heredoc 與 `python -c` 都吃反斜線；`\b` 進檔案成退格字元，`ast.parse` 照樣過。
 - 校內 IP 對出版社：腳本 403 不代表沒權限，真 Chrome 顯示「purchase」才是沒訂——兩個都要試過才知道是哪一種。
 - 前一個 session 結束會把背景任務一起帶走（archive.org 掃描做到 299/497）；有快取的腳本重跑會接著做，所以長任務一律要有快取。
+- 🚨 **檔案歸位**（使用者當天糾正）：我一度把兩位老師的論文放進新開的 `華藝期刊全文\_作者專輯\`、五百篇的 CSV 放進新開的 `研究資料\聖經研究五百篇\`。
+  Drive 本來就有對應夾，已全部併回（一貫道 → `研究資料\一貫道\`；五百篇 → `電子圖書館\神學\聖經研究五百篇\`），兩個新夾已刪。
+  腳本現在 `--download` 必須給 `--dest 既有專案夾`，夾不存在就停。動手前先 `ls` Drive 對應層，別新開。
