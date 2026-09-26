@@ -518,7 +518,11 @@ def load_progress() -> dict:
 
 def save_progress(p: dict) -> None:
     tmp = PROGRESS.with_suffix(".tmp")
-    tmp.write_text(json.dumps(p, ensure_ascii=False), encoding="utf-8")
+    # 2026-09-26：重開機後 progress.json 變成整檔 0x00——寫完要 fsync 再換名。
+    with open(tmp, "w", encoding="utf-8") as f:
+        f.write(json.dumps(p, ensure_ascii=False))
+        f.flush()
+        os.fsync(f.fileno())
     os.replace(tmp, PROGRESS)
 
 
