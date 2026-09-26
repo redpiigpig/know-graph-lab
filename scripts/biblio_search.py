@@ -27,7 +27,7 @@ from pathlib import Path
 
 OUT = Path(__file__).resolve().parents[1] / "public/content/research-data/pct/biblio-airiti.json"
 # 必須放 repo 內執行，否則 node 找不到 playwright
-NODE_SCRIPT = Path(__file__).resolve().parents[1] / ".airiti_fetch.mjs"
+NODE_SCRIPT = Path(__file__).resolve().parent / "airiti_search_fetch.mjs"  # 原在 repo 根目錄，2026-09-26 依根目錄禁令移入 scripts/
 
 # 依論文七章的需要編的檢索詞；每條對應一個章節任務
 QUERIES = [

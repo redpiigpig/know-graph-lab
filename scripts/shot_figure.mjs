@@ -3,7 +3,7 @@
 //
 // 用法：node scripts/_shot_figure.mjs <節檔路徑> <輸出png> [第幾個figure，預設0]
 //
-// ⚠️ 必須放在 repo 內執行，否則 node 找不到 playwright（同 .airiti_fetch.mjs）。
+// ⚠️ 必須放在 repo 內執行，否則 node 找不到 playwright（同 scripts/airiti_search_fetch.mjs）。
 // ⚠️ 寫這支檔案時不要用 bash heredoc——heredoc 會吃掉一層反斜線，
 //    path.replace(/\\/g, '/') 會變成 replace(/\/g, '/') 而語法錯誤。
 import { chromium } from 'playwright';
