@@ -178,3 +178,52 @@ def test_allcaps_exemption_needs_two():
 def test_empty_is_not_this_gates_problem():
     assert unusable_reason("") == ""
     assert unusable_reason(None) == ""
+
+
+def test_fabricated_expansion_from_heading():
+    # 2026-09-27：研究回顧〈The Phenomenological Mind〉章名 22 字元被「譯」成 1,533 字
+    src = "what is phenomenology?"
+    out = "現象學是什麼？" + "現象學是一種哲學方法，旨在檢視經驗與意識的結構。" * 20
+    assert unusable_reason(out, src) == "fabricated-expansion"
+
+
+def test_fabricated_expansion_ratio():
+    src = "He said so. " * 20  # 240 字元
+    out = "他這樣說，並且進一步論證了宗教的起源與發展。" * 40  # 800 漢字
+    assert unusable_reason(out, src) == "fabricated-expansion"
+
+
+def test_normal_translation_length_passes():
+    src = ("It is evident that there is a principle of connexion between the different "
+           "thoughts or ideas of the mind.")
+    out = "顯而易見，心靈中的各種思想或觀念之間存在著一種聯繫的原則。"
+    assert unusable_reason(out, src) == ""
+
+
+def test_expansion_check_skips_non_latin_source():
+    src = "宗教" * 10
+    out = "宗教經驗" * 200
+    assert unusable_reason(out, src) != "fabricated-expansion"
+
+
+def test_truncated_output_of_long_prose():
+    # 2026-09-27：法華經一段 3,317 字元只譯出 390 字
+    src = ("It is a case, Mañjusrî, similar to that of a king, a ruler of armies, who by force "
+           "has conquered his own realm, and against whom his enemies are fighting. ") * 12
+    out = "正如先前所述，那位國王對其士兵在戰場上的英勇感到驚訝。"
+    assert unusable_reason(out, src) == "truncated-output"
+
+
+def test_long_list_source_is_not_truncation():
+    src = "anye manye arau parau amane mamane hitte farite same samite " * 20
+    out = "其內容如下：" + src[:60]
+    assert unusable_reason(out, src) != "truncated-output"
+
+
+def test_reference_appendix_not_counted_as_source():
+    # mueller_build 在原文後附德文參考段；只譯英文段不算截斷
+    en = "Another very common misunderstanding is this: people imagine that it is impossible."
+    de = "Ein anderes sehr gewöhnliches Mißverständniß ist dieses, daß man sich einbildet. " * 15
+    src = f"{en}\n\n[德文參考 — 不要翻譯，僅供消歧義]\n{de}"
+    out = "另一個很常見的誤解是：人們以為這是不可能的。"
+    assert unusable_reason(out, src) == ""

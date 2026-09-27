@@ -272,7 +272,16 @@ def translate_work(
             title_engine = cache.get("title_engine") or "unknown"
 
         def save() -> None:
-            cp.write_text(json.dumps({
+            # 2026-09-27：重開機時 360 個 sec 檔變成整檔 0x00、lane 每次啟動即崩——寫完要 fsync
+            tmp = cp.with_suffix(".json.tmp")
+            with open(tmp, "w", encoding="utf-8") as fh:
+                fh.write(_payload())
+                fh.flush()
+                os.fsync(fh.fileno())
+            os.replace(tmp, cp)
+
+        def _payload() -> str:
+            return (json.dumps({
                 **cache,
                 "heading": s["heading"],
                 "title_zh": title_zh,
@@ -280,7 +289,7 @@ def translate_work(
                 "src": src,
                 "zh": zh,
                 "engines": engines,
-            }, ensure_ascii=False, indent=1), encoding="utf-8")
+            }, ensure_ascii=False, indent=1))
 
         for done, j in enumerate(todo, 1):
             output = translate_para(src[j])

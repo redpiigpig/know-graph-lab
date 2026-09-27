@@ -206,7 +206,12 @@ def make_engine():
         # / blank response that _clean reduces to ""; don't cache that as the translation.
         out = ""
         for _ in range(4):
-            out = _clean(" ".join(te.gemini_with_nvidia_fallback(p) for p in pieces))
+            try:
+                out = _clean(" ".join(te.gemini_with_nvidia_fallback(p) for p in pieces))
+            except RuntimeError as e:
+                # 2026-09-27：引擎鏈全數被關卡擋下會 raise，原本整本中止；改為這段留空、下次再試
+                print(f"    ✗ 引擎全數失敗（{str(e)[:80]}），此段留空", flush=True)
+                return ""
             if out:
                 return out
         return out

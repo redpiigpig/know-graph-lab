@@ -682,6 +682,14 @@ _JA_HEAD_CHARS = 12      # 「開頭」算多長：真傷的假名最晚出現�
 _JA_MIN_RATIO = 0.25
 
 
+_MULTI_WORD_RE = re.compile(r"[A-Za-zÀ-ɏ]+")
+_MULTI_FUNC_RE = re.compile(
+    r"\b(the|of|and|to|in|is|that|which|as|it|this|by|not|be|are|with|for|was|his|"
+    r"il|la|di|che|per|un|una|non|del|della|nel|sono|come|anche|"
+    r"der|die|das|und|ist|nicht|mit|sich|auf|des|"
+    r"le|les|et|est|une|dans|qui|pas|du)\b", re.I)
+
+
 def unusable_reason(text: str, source: str = "") -> str:
     """譯文不能用的話回傳原因字串，可以用就回空字串。純函式，測試鎖在
     tests/test_translation_output_gate.py。
@@ -695,6 +703,24 @@ def unusable_reason(text: str, source: str = "") -> str:
         # 收尾標籤要是有出現，_THINK_RE 早就把整段剪掉了；還看得到開頭標籤
         # 就代表回應被截斷在推理中間。
         return "truncated-reasoning"
+    # 2026-09-27 全站複查：原文只有一行（章名、書眉、OCR 殘字、一條短註），模型卻
+    # 「續寫」出幾百上千字原書沒有的內容——穆勒全集、潘尼卡《吠陀經驗》、研究回顧
+    # 〈The Phenomenological Mind〉（章名 22 字元→1,533 字，還冒出「佛陀的教導」）都中過，
+    # 而且全部過了這一關上線。英文→中文正常約每個字元 0.4–0.9 個漢字。
+    # 只看拉丁字母為主的原文；中日文原文比例不同，不在此判。
+    # 呼叫端常在原文後附「[德文參考 — 不要翻譯…]」這類參考段（mueller_build），不算要譯的原文
+    s = re.split(r"\n\s*\[[^\]\n]*參考", (source or ""))[0].strip()
+    if s and len(_LATIN_RE.findall(s)) >= 0.5 * len(s):
+        han = len(_CJK_RE.findall(t))
+        if (len(s) < 120 and han > 300) or (han > 600 and han > 2.0 * len(s)):
+            return "fabricated-expansion"
+        # 反方向：長段散文只譯出開頭一小截（法華經一段 3,317 字元只剩 390 字）。
+        # 只在原文確實是散文（多語虛詞密度）時判，OCR 雜訊、書目、陀羅尼列表本來就照原文留。
+        if len(s) > 800 and 10 <= han < 0.12 * len(s):
+            words = _MULTI_WORD_RE.findall(s)
+            if (words and len(_MULTI_FUNC_RE.findall(s)) / len(words) >= 0.18
+                    and len(re.findall(r"\b(1[5-9]|20)\d\d\b", s)) <= 6):
+                return "truncated-output"
     low = t.lower()
     if any(m in low for m in _COT_MARKERS):
         return "reasoning-leak"

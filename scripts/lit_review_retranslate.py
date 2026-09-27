@@ -431,6 +431,11 @@ def gate(zh: str, orig: str) -> str:
     if "<think" in z.lower() or "</think" in z.lower():
         return "think"
     o = (orig or "").strip()
+    # 2026-09-27：章名一行被「續寫」成上千字（〈The Phenomenological Mind〉），同 te.unusable_reason
+    if o and len(re.findall(r"[A-Za-z]", o)) >= 0.5 * len(o):
+        han = len(re.findall(r"[一-鿿]", z))
+        if (len(o) < 120 and han > 300) or (han > 600 and han > 2.0 * len(o)):
+            return "fabricated-expansion"
     if z[0] in "‧·、，。；：":
         return "bad-start"  # 抽查抓到「ROBERT L. HUMPHREY」→「‧漢弗萊」（名字被吃掉）
     # 數字不可憑空變出來：抽查抓到「Penrose 2007」→「Penrose 2007007」。
