@@ -249,6 +249,7 @@ def translate_batch(ver: str, code: str, ch: str, verses: dict[str, str], ref: d
         name=spec["name"], book_zh=book_zh(code), ch=ch, src=src, style_ref=style_ref,
         register=REGISTER[spec.get("style", "vernacular")])
     last = "?"
+    best_leak = None        # (got, leak)：只卡在少數幾節外洩的那一次，留給逐節修補
     tries = 4 if classical else 3
     for attempt in range(tries):
         try:
@@ -292,6 +293,8 @@ def translate_batch(ver: str, code: str, ch: str, verses: dict[str, str], ref: d
             last = f"缺節 {len(missing)}/{len(verses)}：{missing[:5]}"
         elif leak:
             last = f"原文外洩 {leak[:5]}"
+            if best_leak is None or len(leak) < len(best_leak[1]):
+                best_leak = (got, leak)
         elif too_vern and attempt < tries - 1:
             last = f"文言裡夾白話（的了們這那 {vern} 處）"
         elif copied > COPY_LIMIT:
@@ -304,7 +307,44 @@ def translate_batch(ver: str, code: str, ch: str, verses: dict[str, str], ref: d
         DEBUG.mkdir(parents=True, exist_ok=True)
         (DEBUG / f"{ver}_{code}_{ch}_{attempt}.txt").write_text(raw, encoding="utf-8")
         print(f"   {code} {ch} 重試 {attempt + 1}：{last}", flush=True)
+    # 2026-09-27：整章每次都只卡在同一兩節（民數記 33 章站名、但以理書 1 章改名、約書亞記 20 章
+    # 逃城）——模型把那幾節的專名留成英文拼法。整章丟掉太可惜：保留其他節，只把外洩的節逐節重翻，
+    # 並給它和修同節當專名參考（單節照抄專名是對的，抄襲比對只在整章層級做）。
+    if best_leak and len(best_leak[1]) <= 5:
+        got, leak = best_leak
+        fixed = dict(got)
+        for v in leak:
+            one = repair_verse(spec, code, ch, v, verses[v], ref.get(int(v), ""))
+            if not one:
+                break
+            fixed[v] = fix_end(one, verses[v])
+        else:
+            print(f"   {code} {ch} 逐節修補 {leak} 成功", flush=True)
+            return fixed
     raise RuntimeError(f"{code} {ch}: {last}")
+
+
+def repair_verse(spec: dict, code: str, ch: str, v: str, src: str, ref: str) -> str:
+    """單節重翻：專名照和修（或思高）寫法。回傳譯文，失敗回空字串。"""
+    import translate_ebook_to_zh as te
+    style = "淺近文言（程度約如淺文理和合本）" if spec.get("style") == "classical" else "現代白話"
+    prompt = (f"把聖經{book_zh(code)} {ch}:{v} 這一節譯成繁體中文{style}。\n"
+              f"所有人名、地名、專名一律用中文，寫法照下面這個中文本同一節；不可留下任何外文拼法。\n"
+              f"原文：{src}\n中文本同節（只參考專名寫法）：{ref}\n"
+              f"只輸出一行譯文，不要節號、不要說明。")
+    for _ in range(3):
+        try:
+            out = te.nvidia_chat(prompt, max_tokens=800, temperature=0.2, thinking=False)
+        except Exception:  # noqa: BLE001
+            continue
+        t = te._to_traditional((out or "").strip().splitlines()[0] if (out or "").strip() else "")
+        t = re.sub(r"^\s*\d+\s*[｜|:：]\s*", "", t).strip()
+        if spec["lang"] == "ja":
+            t = t.replace("上帝", "神")
+        bad = len(_KANA.findall(t)) > 2 if spec["lang"] == "ja" else len(_LATIN.findall(t)) > max(6, len(t) * 0.2)
+        if t and not bad:
+            return t
+    return ""
 
 
 CLASSICALIZE = """下面是聖經{book_zh}第 {ch} 章的白話中文直譯（譯自{name}）。原文是古語，
@@ -438,7 +478,11 @@ def translate(ver: str, shard: str) -> None:
                 else:
                     res.update(translate_batch(ver, bk, ch, part, ref))
         except RuntimeError as e:
-            fails += 1
+            # 2026-09-27：只有引擎沒回應／沒有譯文區塊才算「引擎出事」。內容被關卡擋（原文外洩、缺節、
+            # 抄襲）不算——之前三條欽定本線每輪都先撞同三個難章就整條停，次經 72 章永遠輪不到。
+            msg = str(e)
+            if "engine" in msg or "沒有 <<<譯文>>> 區塊" in msg:
+                fails += 1
             print(f"✗ {e}", flush=True)
             if fails >= 3:
                 raise SystemExit("連續三章失敗，整條線停（引擎多半出事了）")

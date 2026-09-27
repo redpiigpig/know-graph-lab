@@ -647,6 +647,92 @@ def section_cw_translation() -> None:
     stuck = [w for w in todo if not w.running and w.state not in ("已暫停",)]
     if stuck:
         warn(f"全集翻譯有 {len(stuck)} 部沒在跑也沒完成：" + "、".join(w.title[:12] for w in stuck[:5]))
+    section_cw_mukyokai_eliade(td)
+    section_bible_translation()
+
+
+def section_bible_translation() -> None:
+    """日文／英文聖經的中文直譯（japanese_bible.py，fleet lane jbungo／kjv／asv／niv）。"""
+    try:
+        sys.path.insert(0, str(ROOT / "scripts"))
+        import japanese_bible as jb  # noqa: E402
+    except Exception as e:  # noqa: BLE001
+        warn(f"聖經翻譯進度讀不到：{type(e).__name__}")
+        return
+    print("  ── 聖經中文直譯（日文文語／明治、英文 KJV／ASV／NIV）")
+    for ver in ("jmeiji_zh", "jbungo_zh", "kjv_zh", "asv_zh", "niv_zh"):
+        try:
+            allc = jb.source_chapters(ver)
+        except Exception:  # noqa: BLE001
+            continue
+        miss = [(b, c) for b, c, _ in allc if not (jb.STAGE / ver / b / f"{c}.json").exists()]
+        done = len(allc) - len(miss)
+        tail = "" if not miss else "　缺：" + "、".join(f"{b} {c}" for b, c in miss[:6]) + ("…" if len(miss) > 6 else "")
+        print(f"    {ver:10} {done:,}/{len(allc):,} 章（{done * 100 / max(len(allc), 1):.1f}%）{tail}")
+
+
+# 無教會主義各家的逐段 checkpoint（面板原本只掃矢內原）。(顯示名, 建置模組, 資料夾)
+MUKY_BUILDERS = [
+    ("內村鑑三", "uchimura_build", "uchimura_data"),
+    ("內村全集", "uchimura_zenshu_works", "uchimura_data"),
+    ("內村英文著作", "uchimura_en_build", "uchimura_en_data"),
+    ("豪斯評傳", "howes_build", "howes_data"),
+    ("畔上賢造", "azegami_build", "ndl_data"),
+    ("關根正雄", "sekine_build", "sekine_data"),
+]
+# 書目完成度看 hub（stores/collectedWorks.ts）的 status 與 DB 內容
+MUKY_AUTHORS = ["uchimura", "yanaihara", "azegami", "tsukamoto", "kurosaki", "fujii", "nanbara",
+                "kim-kyoshin", "ham-sokhon", "masaike", "teshima", "sekine", "takahashi-saburo"]
+
+
+def section_cw_mukyokai_eliade(td) -> None:
+    """2026-09-27 使用者要求：無教會主義與伊利亞德的轉錄／翻譯進度併進對帳。"""
+    print("  ── 無教會主義逐段翻譯（內村／關根／豪斯／畔上；矢內原見上）")
+    cw = ROOT / ".claude" / "skills" / "ebook-collected-works"
+    seen: set[tuple[str, str]] = set()
+    for label, module, dirname in MUKY_BUILDERS:
+        reg = td._literal_assignment(ROOT / "scripts" / f"{module}.py", "REGISTRY") or {}
+        titles = {slug: (cfg.get("title") or slug) if isinstance(cfg, dict) else slug
+                  for slug, cfg in reg.items()
+                  if (cw / dirname / slug).exists() and (dirname, slug) not in seen}
+        if not titles:
+            continue
+        seen.update((dirname, s) for s in titles)
+        rows = td.scan_json_checkpoints(label, cw / dirname, titles, [], "src")
+        d, t = sum(r.done for r in rows), sum(r.total for r in rows)
+        fin = sum(1 for r in rows if r.state == "完成")
+        print(f"    {label:8} {fin}/{len(rows)} 部完成　{d:,}/{t:,} 段（{d * 100 / t:.1f}%）" if t
+              else f"    {label:8} {len(rows)} 部，尚無段落")
+        for r in rows:
+            if r.state != "完成":
+                print(f"        {r.state:6} {r.title[:26]:26} {r.done:,}/{r.total:,}（{r.percent:.0f}%）")
+    try:
+        sys.path.insert(0, str(ROOT / "scripts"))
+        import collected_works_status as cws  # noqa: E402
+        works = cws.parse_store((ROOT / "stores" / "collectedWorks.ts").read_text(encoding="utf-8"))
+        books = cws.db_books()
+    except Exception as e:  # noqa: BLE001
+        warn(f"全集書目完成度讀不到：{type(e).__name__}: {str(e)[:80]}")
+        return
+    print("  ── 書目完成度（hub 狀態／DB 實際有內容）")
+    zh = {"uchimura": "內村鑑三", "yanaihara": "矢內原忠雄", "azegami": "畔上賢造", "tsukamoto": "塚本虎二",
+          "kurosaki": "黑崎幸吉", "fujii": "藤井武", "nanbara": "南原繁", "kim-kyoshin": "金教臣",
+          "ham-sokhon": "咸錫憲", "masaike": "政池仁", "teshima": "手島郁郎", "sekine": "關根正雄",
+          "takahashi-saburo": "高橋三郎", "mircea-eliade": "伊利亞德"}
+    for group, authors in (("無教會主義", MUKY_AUTHORS), ("伊利亞德", ["mircea-eliade"])):
+        print(f"    【{group}】")
+        for a in authors:
+            ws = [w for w in works if w["author"] == a]
+            if not ws:
+                continue
+            st = collections.Counter(w["status"] for w in ws)
+            has = sum(1 for w in ws if w["ebookId"] and (books.get(w["ebookId"]) or {}).get("chunk_count"))
+            should = [w for w in ws if w["status"] != "done" and w["ebookId"]
+                      and (books.get(w["ebookId"]) or {}).get("chunk_count")]
+            stat_txt = "、".join(f"{k} {v}" for k, v in st.most_common())
+            print(f"      {zh.get(a, a):6} 書目 {len(ws):>3} 本（{stat_txt}）；DB 有內容 {has}")
+            if should:
+                print(f"          ⓘ DB 已有內容、hub 還沒標完成：" + "、".join(w["title"][:14] for w in should[:6]))
 
 
 def main() -> int:
