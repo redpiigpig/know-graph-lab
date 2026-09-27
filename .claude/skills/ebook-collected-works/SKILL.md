@@ -481,6 +481,7 @@ Supabase/R2 偶發 `RemoteDisconnected`/`ConnectionError` → **`--all` 迴圈�
 
 ### 資料：`stores/collectedWorks.ts`（repo-committed，沿用 /works·speech.ts 模式）
 - 直接改本檔新增／編輯作家與書目，**免 DB migration、免 server route**（user 拍板 2026-06-05）。
+- 🚨 **本檔已 2.8MB（全是小傳／年表／註記文字，肖像只是網址）**：不可從全站會載入的地方靜態引用它——`definePageMeta` 的 middleware、plugin、layout、元件都算。2026-09-27 曾因 `/ebook/[id]` 的轉址 middleware 靜態呼叫 store，把整份塞進入口 JS，全站每頁先下載 2.27MB（無壓縮）而慢到跑不動；現改 `await import('~/stores/collectedWorks')`。portal 卡片頭像用 `thumb()` 改抓 250px。
 - `CwAuthor` 必填欄：`slug` / `name` / `disciplineGroup`（§A 分組鍵）/ `discipline`（一句話副標）/ `fields[]` / `portraitUrl` / `color` / `emoji` / `contribution` / `timeline` / `works`。
 - `WorkStatus`：`done`（已轉錄→reader）/ `in-progress`（轉錄中，可連 pilot）/ `planned`（待轉錄）/ `copyright`（受版權待來源）。badge：綠／琥珀／灰／石。hub `[slug].vue` 會 fetch 活 chunk_count → 有內容自動把 planned 升「轉錄中」可點。
 - **某卷轉錄完成** = 改 `status` 為 `done`/`in-progress` 並填 `ebookId`。

@@ -21,6 +21,16 @@ export default defineNuxtConfig({
 
   modules: ["@nuxtjs/tailwindcss", "@nuxtjs/supabase", "@vueuse/nuxt", "@pinia/nuxt"],
 
+  // main.css 已含 @tailwind 指令；不指定的話模組找不到 assets/css/tailwind.css
+  // 會再注入一份預設 Tailwind，整份 CSS 重複兩遍。
+  tailwindcss: { cssPath: "~/assets/css/main.css" },
+
+  // CSS 走獨立檔讓瀏覽器快取，不要每頁 HTML 都內嵌一整份。
+  features: { inlineStyles: false },
+
+  // 靜態檔預先 gzip（主機不會自己壓縮）。brotli 對 public/ 上百 MB 文字檔太慢，先不開。
+  nitro: { compressPublicAssets: { gzip: true, brotli: false } },
+
   supabase: {
     redirect: false, // 我們自己處理重導向
   },

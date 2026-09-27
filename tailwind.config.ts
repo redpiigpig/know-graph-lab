@@ -28,10 +28,17 @@ export default {
     },
   },
   safelist: [
+    // Dynamic color classes (/works writing_projects.color, 全集作家 color…)。
+    // 🚨 pattern 一定要 ^…$ 錨定：不錨定時 Tailwind 會連 bg-amber-100/35 這類
+    // 透明度組合全部生出來，CSS 曾因此膨脹到 400KB。
     {
-      // Dynamic color classes used in /works (writing_projects.color)
       pattern:
-        /(bg|text|border|hover:bg|hover:border|hover:shadow)-(amber|blue|rose|emerald|violet|sky|indigo|cyan|orange|stone|purple|teal)-(50|100|200|300|500|600|700)/,
+        /^(bg|text|border)-(amber|blue|rose|emerald|violet|sky|indigo|cyan|orange|stone|purple|teal)-(50|100|200|300|500|600|700)$/,
+    },
+    {
+      pattern:
+        /^(bg-(amber|blue|rose|emerald|violet|sky|indigo|cyan|orange|stone|purple|teal)-100|border-(amber|blue|rose|emerald|violet|sky|indigo|cyan|orange|stone|purple|teal)-300|shadow-(amber|blue|rose|emerald|violet|sky|indigo|cyan|orange|stone|purple|teal)-100)$/,
+      variants: ["hover"],
     },
   ],
   plugins: [],

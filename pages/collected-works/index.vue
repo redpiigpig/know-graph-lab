@@ -98,7 +98,7 @@
             >
               <img
                 v-if="a.portraitUrl"
-                :src="a.portraitUrl"
+                :src="thumb(a.portraitUrl)"
                 :alt="a.name"
                 class="w-20 h-20 rounded-xl object-cover object-top flex-shrink-0 bg-gray-100 ring-1 ring-gray-200"
                 loading="lazy"
@@ -147,6 +147,9 @@ definePageMeta({ middleware: 'auth' })
 useHead({ title: '全集 — Know Graph Lab' })
 
 const store = useCollectedWorksStore()
+
+// 卡片頭像只顯示 80px，Wikimedia 縮圖改抓 250px（它本來就只給固定級距），整頁省約七成圖片流量。
+const thumb = (url: string) => url.replace(/([?&]width=)\d+/, '$1250')
 
 // 學科顯示順序；未列出的學科接在最後（按字母序），空組不顯示。
 const DISCIPLINE_ORDER = ['哲學', '宗教學', '宗教社會學', '神學', '基督宗教研究', '佛學', '佛學研究', '心理學', '社會學', '人類學']

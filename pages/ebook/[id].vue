@@ -507,8 +507,11 @@ definePageMeta({
   middleware: [
     "auth",
     // 全集卷不屬於圖書館 reader：進頁前 302 到全集專屬三欄 reader。
-    (to) => {
-      const cwRoute = useCollectedWorksStore().routeForEbook(to.params.id as string);
+    // 🚨 store 必須動態 import：definePageMeta 的 middleware 會被抽進全站路由表，
+    // 靜態引用會把 2.8MB 的全集作家資料塞進每一頁都要先下載的入口 JS。
+    async (to) => {
+      const { useCollectedWorksStore: useCwStore } = await import("~/stores/collectedWorks");
+      const cwRoute = useCwStore().routeForEbook(to.params.id as string);
       if (cwRoute) {
         return navigateTo(
           { path: cwRoute, query: to.query.page ? { p: to.query.page } : undefined },
