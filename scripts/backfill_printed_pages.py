@@ -93,6 +93,21 @@ def fill_from_labels(chunks: list[dict], labels: list[str]) -> int:
     return len(nums)
 
 
+def read_labels(fp: str, timeout: int = 60) -> list[str]:
+    """在子程序裡讀 PDF 頁碼標籤，逾時回空清單。2026-09-27 NPNF1-08 那本（7 MB）讓 fitz 卡死不回，
+    整批停在那裡——壞掉的 /PageLabels 樹會讓 get_label 陷入迴圈，只能從外面砍。"""
+    import subprocess
+    code = ("import fitz,json,sys;d=fitz.open(sys.argv[1]);"
+            "print(json.dumps([d[k].get_label() for k in range(d.page_count)]))")
+    try:
+        r = subprocess.run([sys.executable, "-c", code, fp], capture_output=True, text=True,
+                           encoding="utf-8", timeout=timeout)
+        return json.loads(r.stdout) if r.returncode == 0 and r.stdout.strip() else []
+    except (subprocess.TimeoutExpired, json.JSONDecodeError):
+        print("label timeout/skip", fp[-60:], flush=True)
+        return []
+
+
 def eligible(chunks: list[dict]) -> bool:
     if not chunks or any("printed_page" in c for c in chunks[:50]):
         return False
@@ -139,9 +154,8 @@ def main() -> int:
             if fp and Path(fp).exists():
                 print("label", p.stem, flush=True)   # 09-27 曾靜默卡在某本 Drive 檔，先印再開
                 try:
-                    import fitz  # noqa: E402
-                    d = fitz.open(fp)
-                    filled = fill_from_labels(chunks, [d[k].get_label() for k in range(d.page_count)])
+                    labels = read_labels(fp)
+                    filled = fill_from_labels(chunks, labels) if labels else 0
                     if filled:
                         stat["from_labels"] = stat.get("from_labels", 0) + 1
                 except Exception as e:  # noqa: BLE001
