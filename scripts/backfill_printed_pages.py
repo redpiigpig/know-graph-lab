@@ -13,6 +13,7 @@ MinerU 管線會填 printed_page，但有文字層、走舊解析的 PDF（稽�
 
   python -X utf8 scripts/backfill_printed_pages.py --dry-run          # 全館統計
   python -X utf8 scripts/backfill_printed_pages.py --apply [--ids ...] # 寫 JSONL（留 .jsonl.bak_printed）＋推 R2
+  加 --labels：文字層抓不到時改讀原檔 PDF 的頁碼標籤（fill_from_labels）
 """
 from __future__ import annotations
 
@@ -72,6 +73,26 @@ def fill_book(chunks: list[dict]) -> tuple[int, int]:
     return len(got), len(pages)
 
 
+def fill_from_labels(chunks: list[dict], labels: list[str]) -> int:
+    """PDF 內建頁碼標籤（/PageLabels）→ printed_page。純函式；回傳填了幾頁。
+
+    文字層抓不到頁碼的書（約兩成出版社 PDF）自帶標籤：書前 A、B、C 或 i、ii，正文從 1 起。
+    只收純數字標籤；羅馬數字、字母頁留空（printed_page 是整數欄）。
+    標籤跟實體頁序完全一樣（1,2,3…）就是沒設標籤、等於沒資訊，不填。"""
+    pages = [c for c in chunks if c.get("chunk_type") == "page" and isinstance(c.get("page_number"), int)]
+    nums = {}
+    for c in pages:
+        i = c["page_number"] - 1
+        lab = labels[i].strip() if 0 <= i < len(labels) and labels[i] else ""
+        if lab.isdigit():
+            nums[c["page_number"]] = int(lab)
+    if len(nums) < MIN_COVERAGE * len(pages) or all(pg == v for pg, v in nums.items()):
+        return 0
+    for c in pages:
+        c["printed_page"] = nums.get(c["page_number"])
+    return len(nums)
+
+
 def eligible(chunks: list[dict]) -> bool:
     if not chunks or any("printed_page" in c for c in chunks[:50]):
         return False
@@ -85,6 +106,21 @@ def main() -> int:
     files = [CH / f"{i}.jsonl" for i in ids] if ids else sorted(CH.glob("*.jsonl"))
     stat = {"books": 0, "filled_books": 0, "low_coverage": 0, "pages": 0, "filled_pages": 0}
     rows = []
+    use_labels = "--labels" in sys.argv
+    paths: dict[str, str] = {}
+    if use_labels:   # 標籤要讀原檔 PDF，路徑在 DB
+        import requests
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+        import translate_ebook_to_zh as te  # noqa: E402
+        H = {"apikey": te.KEY, "Authorization": "Bearer " + te.KEY}
+        off = 0
+        while True:
+            b = requests.get(te.URL + "/rest/v1/ebooks", headers=H, timeout=120, params={
+                "select": "id,file_path", "file_type": "eq.pdf", "order": "id", "limit": "1000", "offset": str(off)}).json()
+            paths.update({x["id"]: x["file_path"] for x in b if x.get("file_path")})
+            if len(b) < 1000:
+                break
+            off += 1000
     if apply:
         sys.path.insert(0, str(Path(__file__).resolve().parent))
         import standardize_ebook as se  # noqa: E402
@@ -98,6 +134,17 @@ def main() -> int:
         stat["books"] += 1
         filled, total = fill_book(chunks)
         stat["pages"] += total
+        if not filled and use_labels:
+            fp = paths.get(p.stem)
+            if fp and Path(fp).exists():
+                try:
+                    import fitz  # noqa: E402
+                    d = fitz.open(fp)
+                    filled = fill_from_labels(chunks, [d[k].get_label() for k in range(d.page_count)])
+                    if filled:
+                        stat["from_labels"] = stat.get("from_labels", 0) + 1
+                except Exception as e:  # noqa: BLE001
+                    print("label err", p.stem, type(e).__name__, flush=True)
         if not filled:
             stat["low_coverage"] += 1
             continue

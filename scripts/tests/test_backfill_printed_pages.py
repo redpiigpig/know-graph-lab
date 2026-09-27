@@ -29,3 +29,12 @@ def test_fill_book_low_coverage_leaves_untouched():
 
 def test_last_line_page_number_beats_footnote_marker():
     assert bp.candidate("信，說除非我看見\n正文\n1\n149") == 149
+
+
+def test_fill_from_labels_numeric_only_and_skips_identity():
+    chunks = [{"chunk_type": "page", "page_number": i, "content": ""} for i in range(1, 11)]
+    labels = ["A", "B", "i", "ii", "1", "2", "3", "4", "5", "6"]
+    assert bp.fill_from_labels(chunks, labels) == 6
+    assert chunks[0]["printed_page"] is None and chunks[4]["printed_page"] == 1
+    ident = [{"chunk_type": "page", "page_number": i, "content": ""} for i in range(1, 11)]
+    assert bp.fill_from_labels(ident, [str(i) for i in range(1, 11)]) == 0
