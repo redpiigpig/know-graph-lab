@@ -1,4 +1,7 @@
-# 全集翻譯進度桌面面板
+# 全集翻譯進度桌面面板（2026-09-27 退場）
+
+> 🚨 **2026-09-27 起桌面捷徑已刪除**，進度改看「管線對帳」（`scripts/watch_pipelines.py`）第六段「全集翻譯進度」。
+> 對帳直接呼叫本面板的 `collect_snapshot()`，所以 `translation_dashboard.py` 保留當資料層，別刪；圖形介面不再使用。
 
 雙擊桌面「全集翻譯進度」捷徑或 `scripts/translation-dashboard.cmd` 即可開啟
 （2026-08-27 從根目錄移進 scripts/）。

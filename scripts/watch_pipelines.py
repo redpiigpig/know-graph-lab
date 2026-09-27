@@ -618,6 +618,37 @@ def section_quality() -> None:
         print("    " + "；".join(lines[:8]))
 
 
+# ── 六、全集翻譯進度（2026-09-27 併入；原桌面「全集翻譯進度」面板退場）──────────
+
+def section_cw_translation() -> None:
+    """掃描邏輯沿用 translation_dashboard.collect_snapshot（榮格 status.json、各 sec 檔、
+    本機快取），這裡只做彙總。圖形面板不再從桌面開。"""
+    print("\n━━ 六、全集翻譯進度 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
+    try:
+        sys.path.insert(0, str(ROOT / "scripts"))
+        import translation_dashboard as td  # noqa: E402
+        works, _procs = td.collect_snapshot()
+    except Exception as e:  # noqa: BLE001
+        warn(f"全集翻譯進度讀不到：{type(e).__name__}: {str(e)[:80]}")
+        return
+    groups: dict[str, list] = collections.defaultdict(list)
+    for w in works:
+        groups[w.group].append(w)
+    for g, ws in groups.items():
+        done_n = sum(1 for w in ws if w.state == "完成")
+        d, t = sum(w.done for w in ws), sum(w.total for w in ws)
+        pct = f"{d * 100 / t:.1f}%" if t else "—"
+        print(f"  {g:8} {done_n}/{len(ws)} 部完成　{d:,}/{t:,}（{pct}）")
+    todo = [w for w in works if w.state != "完成"]
+    for w in todo:
+        run = "▶" if w.running else " "
+        print(f"    {run} {w.state:6} {w.title[:28]:28} {w.done:,}/{w.total:,} {w.unit}"
+              f"（{w.percent:.0f}%）{(w.current or '')[:30]}")
+    stuck = [w for w in todo if not w.running and w.state not in ("已暫停",)]
+    if stuck:
+        warn(f"全集翻譯有 {len(stuck)} 部沒在跑也沒完成：" + "、".join(w.title[:12] for w in stuck[:5]))
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--author", help="併看某位全集作家（hub slug，如 mircea-eliade）")
@@ -634,6 +665,7 @@ def main() -> int:
             section_ocr(tasks)
             section_foreign_db()
             section_quality()
+            section_cw_translation()
     else:
         print(f"◆ 管線對帳 {dt.datetime.now():%Y-%m-%d %H:%M}\n")
         section_collected_works(a.author)
@@ -641,6 +673,7 @@ def main() -> int:
         section_ocr(tasks)
         section_foreign_db()
         section_quality()
+        section_cw_translation()
 
     print("\n━━ 警訊 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
     if warnings:
