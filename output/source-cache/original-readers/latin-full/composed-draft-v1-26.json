@@ -2,7 +2,7 @@
   "volume": 1,
   "lesson": 26,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。🚨 genuflectō／refundō／scandō 在武加大＋教會語料中零字形，練不到；20 詞僅練 17。paschālis 只用中性 paschale 形（語料無陽性 paschalis 字形）。",
+  "note": "2026-09-27 全句重寫。🚨 genuflectō／scandō 在武加大＋教會語料中零字形，練不到。paschālis 只用中性 paschale 形（語料無陽性 paschalis 字形）。🚨 2026-09-27 再補正：refundō 舊筆記併寫零字形有誤——它只透過詞幹搭上 refunditur（詞位欄是空的），第 5 句已補上。",
   "sentences": [
     {
       "latin": "Christus manibus figitur.",
@@ -25,8 +25,8 @@
       "targets": ["calix", "potus", "infundo", "Deus", "omnipotens"]
     },
     {
-      "latin": "Intra ecclesiam populus stat.",
-      "chinese": "百姓站在教會之內。",
+      "latin": "Intra ecclesiam populus stat; gratia refunditur.",
+      "chinese": "百姓站在教會之內；那恩寵被回倒賜下。",
       "targets": ["intra", "ecclesia", "populus"]
     },
     {

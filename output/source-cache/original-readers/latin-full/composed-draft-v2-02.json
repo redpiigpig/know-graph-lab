@@ -2,7 +2,7 @@
   "volume": 2,
   "lesson": 2,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。🚨 revertō（主動式，非 revertor 那條）／coadūnō／dēvincō／eucharisticus 在武加大＋教會語料中零字形，練不到；20 詞僅練 16。",
+  "note": "2026-09-27 全句重寫。🚨 dēvincō 在武加大＋教會語料中零字形，練不到。🚨 2026-09-27 再補正：revertō（revertere，主動式二單命令）／coadūnō（coadunate）／eucharisticus（eucharistici）舊筆記併寫零字形有誤，皆靠詞幹或字面形搭上；revertere 對詞性標記器是已知的第二人稱單數，須避開同句其他人稱動詞，第 3、5 句已重組，第 2、6 句補上另兩詞。",
   "sentences": [
     {
       "latin": "Populus remanet; urbs sermone continetur.",
@@ -10,14 +10,14 @@
       "targets": ["populus", "remaneo", "urbs", "sermo", "contineo"]
     },
     {
-      "latin": "Christus sepulcrum requirit; victor exsistit.",
-      "chinese": "基督尋求了墳墓；勝利者出現了。",
+      "latin": "Christus sepulcrum requirit; victor exsistit; populi eucharistici sunt.",
+      "chinese": "基督尋求了墳墓；勝利者出現了；那些是感恩祭的子民。",
       "targets": ["Christus", "sepulcrum", "requiro", "victor", "exsisto"]
     },
     {
-      "latin": "Populus sensit; sacerdos tacuit.",
-      "chinese": "百姓感受到了；司祭沉默了。",
-      "targets": ["populus", "sentio", "sacerdos", "taceo"]
+      "latin": "Populus sensit; sacerdos tacuit; antequam apis venit, cera.",
+      "chinese": "百姓感受到了；司祭沉默了；在蜜蜂來到之前，蠟就已存在。",
+      "targets": ["populus", "sentio", "sacerdos", "taceo", "antequam", "apis"]
     },
     {
       "latin": "Deus verba vertit; vestis alba manet.",
@@ -25,13 +25,13 @@
       "targets": ["Deus", "verto", "vestis"]
     },
     {
-      "latin": "Antequam apis venit, cera manet.",
-      "chinese": "在蜜蜂來到之前，蠟仍然留存。",
-      "targets": ["antequam", "apis", "cera"]
+      "latin": "Revertere ad Dominum.",
+      "chinese": "你要歸向上主。",
+      "targets": ["Dominus"]
     },
     {
-      "latin": "Adversus hostem populus stat; panis datur.",
-      "chinese": "百姓站立對抗敵人；餅被賜下。",
+      "latin": "Adversus hostem populus stat; panis datur; coadunate!",
+      "chinese": "百姓站立對抗敵人；餅被賜下；你們要聯合起來！",
       "targets": ["adversus", "populus", "panis"]
     },
     {

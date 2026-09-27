@@ -5,8 +5,8 @@
   "note": "2026-09-27 全句重寫（棄用模板產生器）。🚨 dioecesis 在武加大＋教會語料中零字形（含 diœcesis／diocesis 拼法皆試過），練不到；20 詞僅練 19。",
   "sentences": [
     {
-      "latin": "Quintus mensuram revocet.",
-      "chinese": "願昆圖斯恢復那量度。",
+      "latin": "Sacerdos quintam mensuram revocet.",
+      "chinese": "願司祭恢復那第五項量度。",
       "targets": ["Quintus", "revoco", "mensura"]
     },
     {

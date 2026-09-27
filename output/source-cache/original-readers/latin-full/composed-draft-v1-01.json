@@ -38,13 +38,13 @@
       ]
     },
     {
-      "latin": "Familia in ecclesia flectitur",
-      "chinese": "家庭在教會中屈膝。",
+      "latin": "Familia coram ecclesia flectitur",
+      "chinese": "家庭在教會面前屈膝。",
       "targets": [
+        "coram",
         "ecclesia",
         "familia",
-        "flecto",
-        "in"
+        "flecto"
       ]
     },
     {

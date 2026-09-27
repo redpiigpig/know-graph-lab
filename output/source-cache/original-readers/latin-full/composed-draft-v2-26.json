@@ -2,12 +2,12 @@
   "volume": 2,
   "lesson": 26,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。🚨 potis 在武加大＋教會語料中實際上零可信字形（僅 potissimum，詞位不歸此條），練不到；20 詞僅練 19。",
+  "note": "2026-09-27 全句重寫。🚨 2026-09-27 再補正：potis 舊筆記寫「詞位不歸此條」有誤——potissimum 的詞位直標就有 potis（與詞頭 fold 後相符），第 1 句已補上（讀作副詞「尤其」）。",
   "sentences": [
     {
-      "latin": "Societas condicionem moralem spectat.",
-      "chinese": "社會考量了道德的處境。",
-      "targets": ["societas", "condicio", "moralis", "specto"]
+      "latin": "Societas condicionem moralem potissimum spectat.",
+      "chinese": "社會尤其考量了道德的處境。",
+      "targets": ["societas", "condicio", "moralis", "specto", "potis"]
     },
     {
       "latin": "Veluti pater erga filium, socialis vita manet.",

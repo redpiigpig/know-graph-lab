@@ -2,7 +2,7 @@
   "volume": 1,
   "lesson": 13,
   "author": "opus-5-hand-written",
-  "note": "sacrosānctus 與 salūtifer 武加大都沒有字形，練不到。meritum 與第 7 課的 meritō 一樣只認 Merito 一形。supernus 只有 supernis／supernæ，沒有中性複數主格。",
+  "note": "sacrosānctus 武加大沒有字形，練不到。meritum 與第 7 課的 meritō 一樣只認 Merito 一形。supernus 只有 supernis／supernæ，沒有中性複數主格。🚨 2026-09-27 更正：post／salūtifer 舊註記併寫「都沒有字形」有誤——post 本身就常見、salūtifer 有陰性 salutifera，第 4 句已補上。",
   "sentences": [
     {
       "latin": "Jam iterum silentium est in templo",
@@ -30,11 +30,13 @@
       ]
     },
     {
-      "latin": "Per gratiam mundus est.",
-      "chinese": "他藉著恩寵而潔淨。",
+      "latin": "Per gratiam mundus est; salutifera post culpam venit.",
+      "chinese": "他藉著恩寵而潔淨；那救恩之物在過錯之後來臨。",
       "targets": [
         "mundus",
-        "per"
+        "per",
+        "post",
+        "salutifer"
       ]
     },
     {

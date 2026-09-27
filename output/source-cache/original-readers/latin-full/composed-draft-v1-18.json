@@ -2,7 +2,7 @@
   "volume": 1,
   "lesson": 18,
   "author": "opus-5-hand-written",
-  "note": "resultō 武加大沒有字形，練不到。parvus 只有比較級與最高級進語料（minus／minor／minimus），所以第 1 句用 minor。acclāmō 只認詞幹，dēsinō 沒有不定式，故用命令式 desine。🚨 附錄只收詞頭，dies 在曆法附錄裡但 die 這個奪格不算教過，caput 同理——附錄那一層不是詞形表。",
+  "note": "resultō 武加大沒有字形，練不到。parvus 只有比較級與最高級進語料（minus／minor／minimus），所以第 1 句用 minor。acclāmō 只認詞幹，dēsinō 沒有不定式，故用命令式 desine。🚨 附錄只收詞頭，dies 在曆法附錄裡但 die 這個奪格不算教過，caput 同理——附錄那一層不是詞形表。🚨 2026-09-27 補：debeō 舊稿七句全未帶到，第 7 句已補上 debet。",
   "sentences": [
     {
       "latin": "Minor propheta acclamabat tertia hora",
@@ -54,10 +54,11 @@
       ]
     },
     {
-      "latin": "Ancilla filium concepit",
-      "chinese": "婢女懷了兒子。",
+      "latin": "Ancilla filium concepit; ancilla Deo debet.",
+      "chinese": "婢女懷了兒子；那婢女對天主是負有義務的。",
       "targets": [
-        "concipio"
+        "concipio",
+        "debeo"
       ]
     }
   ]

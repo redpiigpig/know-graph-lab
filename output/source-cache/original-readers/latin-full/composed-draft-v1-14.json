@@ -2,15 +2,16 @@
   "volume": 1,
   "lesson": 14,
   "author": "opus-5-hand-written",
-  "note": "apostolicus、catholicus、cēreus 三個詞武加大都沒有字形——這一課是教會拉丁文詞彙與武加大語料落差最大的一課。causa 與 causā 兩條詞共用同一組字形，同一個字同時記給兩條。",
+  "note": "apostolicus、catholicus 兩個詞武加大都沒有字形——這一課是教會拉丁文詞彙與武加大語料落差最大的一課。causa 與 causā 兩條詞共用同一組字形，同一個字同時記給兩條。🚨 2026-09-27 補：causa／causā／cēreus／certē 舊稿七句全未帶到（cēreus 只有屬格 cerei 進語料），第 1、4、7 句已各補上。",
   "sentences": [
     {
-      "latin": "Altissimus inter socios est.",
-      "chinese": "至高者在同伴之中。",
+      "latin": "Altissimus inter socios est; magna causa est.",
+      "chinese": "至高者在同伴之中；這是重大的緣故。",
       "targets": [
         "altus",
         "inter",
-        "socius"
+        "socius",
+        "causa"
       ]
     },
     {
@@ -31,11 +32,12 @@
       ]
     },
     {
-      "latin": "Perhibet gratiam sæpe",
-      "chinese": "他時常施予恩寵。",
+      "latin": "Perhibet gratiam sæpe; gratia cerei magna est.",
+      "chinese": "他時常施予恩寵；那蠟燭的恩澤是浩大的。",
       "targets": [
         "perhibeo",
-        "saepe"
+        "saepe",
+        "cereus"
       ]
     },
     {
@@ -58,11 +60,12 @@
       ]
     },
     {
-      "latin": "Sæpe satiati sunt in templo",
-      "chinese": "他們時常在聖殿中得了飽足。",
+      "latin": "Sæpe satiati sunt in templo certe.",
+      "chinese": "他們時常確實在聖殿中得了飽足。",
       "targets": [
         "saepe",
-        "satio"
+        "satio",
+        "certe"
       ]
     }
   ]

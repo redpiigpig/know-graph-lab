@@ -2,7 +2,7 @@
   "volume": 1,
   "lesson": 16,
   "author": "opus-5-hand-written",
-  "note": "本課四個詞武加大沒有字形：Kyrie、perenniter 與兩個黏著詞素 -clīnō、aggregō。excelsus 沒有複數奪格 excelsis，所以第 1 句不寫 in excelsis。",
+  "note": "本課三個詞武加大沒有字形：Kyrie 與兩個黏著詞素 -clīnō、aggregō。excelsus 沒有複數奪格 excelsis，所以第 1 句不寫 in excelsis。🚨 2026-09-27 補：perenniter（只透過名詞 perennitas 的詞幹搭上）與 spatium 舊稿七句全未帶到，第 2、5 句已各補上。",
   "sentences": [
     {
       "latin": "Hosanna in templo est.",
@@ -12,8 +12,8 @@
       ]
     },
     {
-      "latin": "Imperium dei perpetuum est",
-      "chinese": "天主的統治權是永恆的。",
+      "latin": "Imperium dei perpetuum est; perennitas magna est.",
+      "chinese": "天主的統治權是永恆的；那恆久性是浩大的。",
       "targets": [
         "imperium",
         "perpetuus"
@@ -35,10 +35,11 @@
       ]
     },
     {
-      "latin": "Vulnerati sunt in agro",
-      "chinese": "他們在田間受了傷。",
+      "latin": "Vulnerati sunt in agro; spatium magnum est.",
+      "chinese": "他們在田間受了傷；那空間是浩大的。",
       "targets": [
-        "uulnero"
+        "uulnero",
+        "spatium"
       ]
     },
     {

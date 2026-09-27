@@ -2,7 +2,7 @@
   "volume": 2,
   "lesson": 9,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。🚨 pacificō 在武加大＋教會語料中零字形，練不到；20 詞僅練 19。",
+  "note": "2026-09-27 全句重寫。🚨 2026-09-27 再補正：pacificō 舊筆記寫零字形有誤——pacifico 本身在語料裡（詞位標記給了同形的形容詞 pacificus，字面形比對不受影響），第 4 句已補上（讀作與詞頭同形的奪格）。",
   "sentences": [
     {
       "latin": "Sacerdos clericus est; officium suum tenet.",
@@ -20,8 +20,8 @@
       "targets": ["judex", "sententia", "persona"]
     },
     {
-      "latin": "Deus propitius est; paenitentia sufficit.",
-      "chinese": "天主是仁慈的；悔改就足夠了。",
+      "latin": "Deus propitius est; paenitentia sufficit; pacifico gratiam dat.",
+      "chinese": "天主是仁慈的；悔改就足夠了；祂把恩寵賜給那締造和平的人。",
       "targets": ["Deus", "propitius", "paenitentia"]
     },
     {

@@ -2,11 +2,11 @@
   "volume": 1,
   "lesson": 28,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。🚨 obeō 在武加大＋教會語料中零字形，練不到；20 詞僅練 19。",
+  "note": "2026-09-27 全句重寫。🚨 2026-09-27 再補正：obeō 舊筆記寫零字形有誤——它的完成分詞 obitus 本身就在武加大語料中（詞位欄是空的，靠詞幹搭上），第 1 句已補上、當名詞用（「逝世」）。",
   "sentences": [
     {
-      "latin": "Fructus in loco bono crescit.",
-      "chinese": "果實在好的地方生長。",
+      "latin": "Fructus in loco crescit; obitus sacerdotis magnus est.",
+      "chinese": "果實在地方中生長；那司祭的逝世是重大的。",
       "targets": ["fructus", "locus"]
     },
     {

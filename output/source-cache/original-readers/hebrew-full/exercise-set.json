@@ -1058,14 +1058,14 @@
         },
         {
           "kind": "composed",
-          "text": "הַכֹּהֵן עֶבֶד יְהוָה",
+          "text": "הַגּוֹי עֶבֶד הָאֱלֹהִים",
           "targetWords": [
             {
-              "ordinal": 30,
-              "pointed": "כֹּהֵן",
-              "lemma": "H3548",
+              "ordinal": 26,
+              "pointed": "גּוֹי",
+              "lemma": "H1471",
               "strongs": [
-                "H3548"
+                "H1471"
               ],
               "isProperName": false,
               "properNameTypes": []
@@ -1076,9 +1076,8 @@
             "unattested": [],
             "untaught": [],
             "lemmas": [
-              "3068",
-              "3071",
-              "3548",
+              "1471",
+              "430",
               "5650",
               "5651",
               "5663"
@@ -1090,54 +1089,34 @@
         },
         {
           "kind": "composed",
-          "text": "בַּת הַמֶּלֶךְ אֵשֶׁת הַנָּבִיא",
+          "text": "עִיר הַמֶּלֶךְ עִיר הַנָּבִיא",
           "targetWords": [
-            {
-              "ordinal": 22,
-              "pointed": "אִשָּׁה",
-              "lemma": "H802",
-              "strongs": [
-                "H802"
-              ],
-              "isProperName": false,
-              "properNameTypes": []
-            },
-            {
-              "ordinal": 23,
-              "pointed": "נָשִׁים",
-              "lemma": "H802",
-              "strongs": [
-                "H802"
-              ],
-              "isProperName": false,
-              "properNameTypes": []
-            },
-            {
-              "ordinal": 24,
-              "pointed": "בַּת",
-              "lemma": "H1323",
-              "strongs": [
-                "H1323"
-              ],
-              "isProperName": false,
-              "properNameTypes": []
-            },
-            {
-              "ordinal": 25,
-              "pointed": "בָּנוֹת",
-              "lemma": "H1323",
-              "strongs": [
-                "H1323"
-              ],
-              "isProperName": false,
-              "properNameTypes": []
-            },
             {
               "ordinal": 35,
               "pointed": "נָבִיא",
               "lemma": "H5030",
               "strongs": [
                 "H5030"
+              ],
+              "isProperName": false,
+              "properNameTypes": []
+            },
+            {
+              "ordinal": 39,
+              "pointed": "עִיר",
+              "lemma": "H5892",
+              "strongs": [
+                "H5892"
+              ],
+              "isProperName": false,
+              "properNameTypes": []
+            },
+            {
+              "ordinal": 40,
+              "pointed": "עָרִים",
+              "lemma": "H5892",
+              "strongs": [
+                "H5892"
               ],
               "isProperName": false,
               "properNameTypes": []
@@ -1148,14 +1127,13 @@
             "unattested": [],
             "untaught": [],
             "lemmas": [
-              "1323",
-              "1324",
-              "1337",
-              "1339",
               "4428",
               "4429",
               "5030",
-              "802"
+              "5892",
+              "5893",
+              "5894",
+              "5904"
             ],
             "passed": true
           },
@@ -1203,39 +1181,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 17,
-        "notPractised": [
-          {
-            "ordinal": 26,
-            "pointed": "גּוֹי",
-            "lemma": "H1471",
-            "strongs": [
-              "H1471"
-            ],
-            "isProperName": false,
-            "properNameTypes": []
-          },
-          {
-            "ordinal": 39,
-            "pointed": "עִיר",
-            "lemma": "H5892",
-            "strongs": [
-              "H5892"
-            ],
-            "isProperName": false,
-            "properNameTypes": []
-          },
-          {
-            "ordinal": 40,
-            "pointed": "עָרִים",
-            "lemma": "H5892",
-            "strongs": [
-              "H5892"
-            ],
-            "isProperName": false,
-            "properNameTypes": []
-          }
-        ]
+        "practised": 20,
+        "notPractised": []
       }
     },
     {
@@ -1860,8 +1807,18 @@
         },
         {
           "kind": "composed",
-          "text": "הַמִּשְׁפָּט בְּשַׁעַר הָעִיר",
+          "text": "כֹּה הַמִּשְׁפָּט בְּשַׁעַר הָעִיר",
           "targetWords": [
+            {
+              "ordinal": 61,
+              "pointed": "כֹּה",
+              "lemma": "H3541",
+              "strongs": [
+                "H3541"
+              ],
+              "isProperName": false,
+              "properNameTypes": []
+            },
             {
               "ordinal": 63,
               "pointed": "מִשְׁפָּט",
@@ -1892,10 +1849,11 @@
             }
           ],
           "verification": {
-            "words": 3,
+            "words": 4,
             "unattested": [],
             "untaught": [],
             "lemmas": [
+              "3541",
               "4941",
               "5892",
               "8179"
@@ -2117,7 +2075,7 @@
         },
         {
           "kind": "composed",
-          "text": "הַצָּבָא אַחֲרֵי הַשַּׂר וְהַכֹּהֵן אִתּוֹ",
+          "text": "הַצָּבָא אַחֲרֵי הַשַּׂר וְהַכֹּהֵן אֶת־הַצָּבָא",
           "targetWords": [
             {
               "ordinal": 69,
@@ -2148,10 +2106,21 @@
               ],
               "isProperName": false,
               "properNameTypes": []
+            },
+            {
+              "ordinal": 74,
+              "pointed": "אֵת/אֶת־",
+              "lemma": "H853",
+              "strongs": [
+                "H853",
+                "H854"
+              ],
+              "isProperName": false,
+              "properNameTypes": []
             }
           ],
           "verification": {
-            "words": 5,
+            "words": 6,
             "unattested": [],
             "untaught": [],
             "lemmas": [
@@ -2160,6 +2129,7 @@
               "3548",
               "6635",
               "8269",
+              "853",
               "854"
             ],
             "passed": true
@@ -2300,30 +2270,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 18,
-        "notPractised": [
-          {
-            "ordinal": 61,
-            "pointed": "כֹּה",
-            "lemma": "H3541",
-            "strongs": [
-              "H3541"
-            ],
-            "isProperName": false,
-            "properNameTypes": []
-          },
-          {
-            "ordinal": 74,
-            "pointed": "אֵת/אֶת־",
-            "lemma": "H853",
-            "strongs": [
-              "H853",
-              "H854"
-            ],
-            "isProperName": false,
-            "properNameTypes": []
-          }
-        ]
+        "practised": 20,
+        "notPractised": []
       }
     },
     {
@@ -3630,7 +3578,7 @@
         },
         {
           "kind": "composed",
-          "text": "הֲטוֹבָה הָעִיר אִם־רָעָה",
+          "text": "הֲטוֹבָה הָעִיר כִּי אִם־רָעָה",
           "targetWords": [
             {
               "ordinal": 122,
@@ -3649,14 +3597,37 @@
               "strongs": [],
               "isProperName": false,
               "properNameTypes": []
+            },
+            {
+              "ordinal": 137,
+              "pointed": "כִּי",
+              "lemma": "H3588",
+              "strongs": [
+                "H3588"
+              ],
+              "isProperName": false,
+              "properNameTypes": []
+            },
+            {
+              "ordinal": 138,
+              "pointed": "כִּי־אִם",
+              "lemma": "H3588",
+              "strongs": [
+                "H3588",
+                "H518"
+              ],
+              "isProperName": false,
+              "properNameTypes": []
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 5,
             "unattested": [],
             "untaught": [],
             "lemmas": [
               "2896",
+              "3587",
+              "3588",
               "518",
               "5892",
               "7451"
@@ -3800,20 +3771,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
-        "notPractised": [
-          {
-            "ordinal": 138,
-            "pointed": "כִּי־אִם",
-            "lemma": "H3588",
-            "strongs": [
-              "H3588",
-              "H518"
-            ],
-            "isProperName": false,
-            "properNameTypes": []
-          }
-        ]
+        "practised": 20,
+        "notPractised": []
       }
     },
     {
@@ -5186,7 +5145,7 @@
         },
         {
           "kind": "composed",
-          "text": "הַחַיִּים וְהַמָּוֶת לִפְנֵי הָעָם",
+          "text": "הַחַיִּים וְהַמָּוֶת לִפְנֵי הָעָם וְהוּא קָרוֹב לְמוֹת",
           "targetWords": [
             {
               "ordinal": 184,
@@ -5207,17 +5166,32 @@
               ],
               "isProperName": false,
               "properNameTypes": []
+            },
+            {
+              "ordinal": 198,
+              "pointed": "מוֹת",
+              "lemma": "H4193",
+              "strongs": [
+                "H4193",
+                "H4194"
+              ],
+              "isProperName": false,
+              "properNameTypes": []
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 7,
             "unattested": [],
             "untaught": [],
             "lemmas": [
+              "1931",
+              "1932",
               "2416",
+              "4193",
               "4194",
               "5971",
-              "6440"
+              "6440",
+              "7138"
             ],
             "passed": true
           },
@@ -5291,20 +5265,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
-        "notPractised": [
-          {
-            "ordinal": 198,
-            "pointed": "מוֹת",
-            "lemma": "H4193",
-            "strongs": [
-              "H4193",
-              "H4194"
-            ],
-            "isProperName": false,
-            "properNameTypes": []
-          }
-        ]
+        "practised": 20,
+        "notPractised": []
       }
     },
     {
@@ -6529,7 +6491,7 @@
         },
         {
           "kind": "composed",
-          "text": "הַשַּׁבָּת קֹדֶשׁ אַל־תִּכְתֹּב בַּיּוֹם הַזֶּה",
+          "text": "אִם הַשַּׁבָּת קֹדֶשׁ אַל־תִּכְתֹּב",
           "targetWords": [
             {
               "ordinal": 243,
@@ -6549,6 +6511,16 @@
               "lemma": "H408",
               "strongs": [
                 "H408"
+              ],
+              "isProperName": false,
+              "properNameTypes": []
+            },
+            {
+              "ordinal": 246,
+              "pointed": "אִם",
+              "lemma": "H518",
+              "strongs": [
+                "H518"
               ],
               "isProperName": false,
               "properNameTypes": []
@@ -6575,18 +6547,17 @@
             }
           ],
           "verification": {
-            "words": 6,
+            "words": 5,
             "unattested": [],
             "untaught": [],
             "lemmas": [
-              "2088",
-              "3117",
               "3789",
               "3808",
               "408",
               "409",
               "413",
               "516",
+              "518",
               "6944",
               "7676"
             ],
@@ -6784,19 +6755,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
-        "notPractised": [
-          {
-            "ordinal": 246,
-            "pointed": "אִם",
-            "lemma": "H518",
-            "strongs": [
-              "H518"
-            ],
-            "isProperName": false,
-            "properNameTypes": []
-          }
-        ]
+        "practised": 20,
+        "notPractised": []
       }
     },
     {
@@ -10000,8 +9960,18 @@
         },
         {
           "kind": "composed",
-          "text": "הַכֶּבֶשׂ הַבְּכֹר לַיהוָה וְטוֹב הַדָּבָר בְּעֵינָיו",
+          "text": "הַכֶּבֶשׂ הַבְּכֹר לַיהוָה וְיִיטַב הַדָּבָר בְּעֵינָיו",
           "targetWords": [
+            {
+              "ordinal": 389,
+              "pointed": "יָטַב",
+              "lemma": "H3190",
+              "strongs": [
+                "H3190"
+              ],
+              "isProperName": false,
+              "properNameTypes": []
+            },
             {
               "ordinal": 398,
               "pointed": "כֶּ֫בֶשׂ",
@@ -10030,10 +10000,8 @@
             "lemmas": [
               "1060",
               "1697",
-              "2895",
-              "2896",
-              "2899",
               "3068",
+              "3190",
               "3532",
               "5869"
             ],
@@ -10087,19 +10055,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
-        "notPractised": [
-          {
-            "ordinal": 389,
-            "pointed": "יָטַב",
-            "lemma": "H3190",
-            "strongs": [
-              "H3190"
-            ],
-            "isProperName": false,
-            "properNameTypes": []
-          }
-        ]
+        "practised": 20,
+        "notPractised": []
       }
     },
     {
@@ -14849,7 +14806,7 @@
         },
         {
           "kind": "composed",
-          "text": "בַּל־יָשׁוּב הָאִישׁ אֶל הַכִּכָּר",
+          "text": "חֹרֵשׁ הָאִישׁ בַּשָּׂדֶה וּבַל־יָשׁוּב אֶל הַכִּכָּר",
           "targetWords": [
             {
               "ordinal": 586,
@@ -14857,6 +14814,16 @@
               "lemma": "H1077",
               "strongs": [
                 "H1077"
+              ],
+              "isProperName": false,
+              "properNameTypes": []
+            },
+            {
+              "ordinal": 587,
+              "pointed": "חָרַשׁ",
+              "lemma": "H2790",
+              "strongs": [
+                "H2790"
               ],
               "isProperName": false,
               "properNameTypes": []
@@ -14873,18 +14840,20 @@
             }
           ],
           "verification": {
-            "words": 5,
+            "words": 7,
             "unattested": [],
             "untaught": [],
             "lemmas": [
               "1077",
+              "2790",
+              "2794",
               "3437",
               "3603",
               "376",
-              "3816",
               "408",
               "413",
               "7610",
+              "7704",
               "7725"
             ],
             "passed": true
@@ -14895,19 +14864,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
-        "notPractised": [
-          {
-            "ordinal": 587,
-            "pointed": "חָרַשׁ",
-            "lemma": "H2790",
-            "strongs": [
-              "H2790"
-            ],
-            "isProperName": false,
-            "properNameTypes": []
-          }
-        ]
+        "practised": 20,
+        "notPractised": []
       }
     },
     {
@@ -16504,8 +16462,18 @@
         },
         {
           "kind": "composed",
-          "text": "צָעֲקָה הָאַלְמָנָה וְהָאָמָה עִמָּהּ",
+          "text": "צָעֲקָה הָאַלְמָנָה הָאָמָה עִמָּהּ",
           "targetWords": [
+            {
+              "ordinal": 666,
+              "pointed": "אָמָה",
+              "lemma": "H519",
+              "strongs": [
+                "H519"
+              ],
+              "isProperName": false,
+              "properNameTypes": []
+            },
             {
               "ordinal": 667,
               "pointed": "אַלְמָנָה",
@@ -16533,7 +16501,7 @@
             "untaught": [],
             "lemmas": [
               "490",
-              "520",
+              "519",
               "5973",
               "6817"
             ],
@@ -16722,19 +16690,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
-        "notPractised": [
-          {
-            "ordinal": 666,
-            "pointed": "אָמָה",
-            "lemma": "H519",
-            "strongs": [
-              "H519"
-            ],
-            "isProperName": false,
-            "properNameTypes": []
-          }
-        ]
+        "practised": 20,
+        "notPractised": []
       }
     },
     {
@@ -17514,7 +17471,7 @@
         },
         {
           "kind": "composed",
-          "text": "קָצְרָה בְּתוּלָה בַּשָּׂדֶה",
+          "text": "קָצְרָה בְּתוּלָה בַּשָּׂדֶה וְכִבֶּס הָאָב אֶת־בְּגָדָיו",
           "targetWords": [
             {
               "ordinal": 711,
@@ -17522,6 +17479,16 @@
               "lemma": "H7114",
               "strongs": [
                 "H7114"
+              ],
+              "isProperName": false,
+              "properNameTypes": []
+            },
+            {
+              "ordinal": 713,
+              "pointed": "כָּבַס",
+              "lemma": "H3526",
+              "strongs": [
+                "H3526"
               ],
               "isProperName": false,
               "properNameTypes": []
@@ -17538,13 +17505,18 @@
             }
           ],
           "verification": {
-            "words": 3,
+            "words": 7,
             "unattested": [],
             "untaught": [],
             "lemmas": [
+              "1",
               "1330",
+              "3526",
               "7114",
-              "7704"
+              "7704",
+              "853",
+              "854",
+              "899"
             ],
             "passed": true
           },
@@ -17642,19 +17614,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
-        "notPractised": [
-          {
-            "ordinal": 713,
-            "pointed": "כָּבַס",
-            "lemma": "H3526",
-            "strongs": [
-              "H3526"
-            ],
-            "isProperName": false,
-            "properNameTypes": []
-          }
-        ]
+        "practised": 20,
+        "notPractised": []
       }
     },
     {
@@ -19252,7 +19213,7 @@
         },
         {
           "kind": "composed",
-          "text": "וַיַּחְגֹּר הָאִישׁ חֶרֶב וַיֶּאְסֹר אֶת־הַסּוּסִים בַּמֶּרְכָּבָה",
+          "text": "וַיַּחְגֹּר הָאִישׁ חֶרֶב וַיִּקְשֹׁר אֶת־הַסּוּסִים בַּמֶּרְכָּבָה",
           "targetWords": [
             {
               "ordinal": 783,
@@ -19260,6 +19221,16 @@
               "lemma": "H4818",
               "strongs": [
                 "H4818"
+              ],
+              "isProperName": false,
+              "properNameTypes": []
+            },
+            {
+              "ordinal": 786,
+              "pointed": "קָשַׁר",
+              "lemma": "H7194",
+              "strongs": [
+                "H7194"
               ],
               "isProperName": false,
               "properNameTypes": []
@@ -19285,7 +19256,7 @@
               "376",
               "4818",
               "5483",
-              "631",
+              "7194",
               "853",
               "854"
             ],
@@ -19340,7 +19311,7 @@
         },
         {
           "kind": "composed",
-          "text": "אֹכֶל וְחָלָב בַּבַּיִת",
+          "text": "אֹכֶל וְחָלָב עִמָּדִי בַּבַּיִת",
           "targetWords": [
             {
               "ordinal": 790,
@@ -19348,6 +19319,16 @@
               "lemma": "H2461",
               "strongs": [
                 "H2461"
+              ],
+              "isProperName": false,
+              "properNameTypes": []
+            },
+            {
+              "ordinal": 791,
+              "pointed": "עִמָּד",
+              "lemma": "H5978",
+              "strongs": [
+                "H5978"
               ],
               "isProperName": false,
               "properNameTypes": []
@@ -19364,13 +19345,14 @@
             }
           ],
           "verification": {
-            "words": 3,
+            "words": 4,
             "unattested": [],
             "untaught": [],
             "lemmas": [
               "1004",
               "2461",
-              "400"
+              "400",
+              "5978"
             ],
             "passed": true
           },
@@ -19527,29 +19509,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 18,
-        "notPractised": [
-          {
-            "ordinal": 786,
-            "pointed": "קָשַׁר",
-            "lemma": "H7194",
-            "strongs": [
-              "H7194"
-            ],
-            "isProperName": false,
-            "properNameTypes": []
-          },
-          {
-            "ordinal": 791,
-            "pointed": "עִמָּד",
-            "lemma": "H5978",
-            "strongs": [
-              "H5978"
-            ],
-            "isProperName": false,
-            "properNameTypes": []
-          }
-        ]
+        "practised": 20,
+        "notPractised": []
       }
     },
     {
@@ -23386,8 +23347,18 @@
         },
         {
           "kind": "composed",
-          "text": "גָּבַהּ לֵב הַכֹּהֵן וְהַסִּיר עַל הָאֵשׁ לְפָנָיו",
+          "text": "הַסִּיר עַל הָאֵשׁ לְפָנָיו וְגָבַהּ לֵב הַכֹּהֵן",
           "targetWords": [
+            {
+              "ordinal": 961,
+              "pointed": "סִיר",
+              "lemma": "H5518",
+              "strongs": [
+                "H5518"
+              ],
+              "isProperName": false,
+              "properNameTypes": []
+            },
             {
               "ordinal": 963,
               "pointed": "גָּבַהּ",
@@ -23407,7 +23378,7 @@
               "1361",
               "3548",
               "3820",
-              "5493",
+              "5518",
               "5920",
               "5921",
               "5922",
@@ -23709,19 +23680,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
-        "notPractised": [
-          {
-            "ordinal": 961,
-            "pointed": "סִיר",
-            "lemma": "H5518",
-            "strongs": [
-              "H5518"
-            ],
-            "isProperName": false,
-            "properNameTypes": []
-          }
-        ]
+        "practised": 20,
+        "notPractised": []
       }
     },
     {

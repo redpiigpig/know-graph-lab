@@ -2,7 +2,7 @@
   "volume": 1,
   "lesson": 50,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。🚨 nōlī/nōlite 詞頭本身帶斜線，折疊鍵含斜線而永遠對不上句中實際寫出的 nolite（第 4 句已用），這是詞表鍵值的問題不是沒練到；20 詞機器只認得 19，實際 20。",
+  "note": "2026-09-27 全句重寫。🚨 2026-09-27 再查：nōlī/nōlite 是片語詞條，credit_keys={noli,nolite} 要求兩個字面形同句齊現才算練到——但 noli 是second-person singular、nolite 是second-person plural，兩者同句必定撞上 2026-09-27 加的人稱數閘（person 2 涉入即封殺，且原文本身無法迴避：兩個祈使式天生就是不同數）。這不是句子寫不寫得出來的問題，是詞表把「單數／複數二選一」的片語錯記成「兩個字面形都要」——**無法靠改寫例句解決，需要腳本層修正**（例如拆成 nōlī、nōlite 兩條各自的詞條，或把 credit_keys 的判定改成「任一形即可」）。第 4 句維持原樣（僅用 nolite），vicinum 挪去與第 5 句共用以避免重複，不影響覆蓋率。",
   "sentences": [
     {
       "latin": "Parens filium trahit; nemo vetare potest.",
@@ -20,9 +20,9 @@
       "targets": ["somnus", "premo", "Deus", "averto"]
     },
     {
-      "latin": "Nolite putare vicinum vel amicum inimicum esse.",
-      "chinese": "不要以為鄰居或朋友是仇敵。",
-      "targets": ["nolite", "puto", "vicinus", "vel", "amicus"]
+      "latin": "Nolite putare amicum vel inimicum esse.",
+      "chinese": "你們不要以為朋友是仇敵。",
+      "targets": ["nolite", "puto", "vel", "amicus"]
     },
     {
       "latin": "Vicina domus appropinquat; daemonium fugit.",

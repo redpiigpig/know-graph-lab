@@ -2,7 +2,7 @@
   "volume": 1,
   "lesson": 8,
   "author": "opus-5-hand-written",
-  "note": "sacrō 武加大沒有任何字形，練不到。片語詞條 aut . . aut 要兩個 aut 都在同一句才算練到，單一個 aut 只能記到單詞那一條，故第 7 句寫成雙 aut。bibō 進語料的是 bibere／bibit／bibam／bibent，沒有完成式複數，故第 4 句用未來式。",
+  "note": "sacrō 武加大沒有任何字形，練不到。片語詞條 aut . . aut 要兩個 aut 都在同一句才算練到，單一個 aut 只能記到單詞那一條，故第 7 句寫成雙 aut。bibō 進語料的是 bibere／bibit／bibam／bibent，沒有完成式複數，故第 4 句用未來式。🚨 2026-09-27 補：afficiō 原七句全未帶到，第 5 句已補上 afficit。",
   "sentences": [
     {
       "latin": "Stellæ semper in cælo sunt.",
@@ -38,10 +38,11 @@
       ]
     },
     {
-      "latin": "Servus cepit gladium in agro",
-      "chinese": "那僕人在田間取了劍。",
+      "latin": "Servus cepit gladium; gratia afficiatur.",
+      "chinese": "那僕人取了劍；願他被恩寵所感動。",
       "targets": [
-        "capio"
+        "capio",
+        "afficio"
       ]
     },
     {

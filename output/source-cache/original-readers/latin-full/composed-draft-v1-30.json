@@ -2,21 +2,21 @@
   "volume": 1,
   "lesson": 30,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。🚨 cōtīdiānus／intentus／incēdō 三詞在武加大＋教會語料中查無任一可信詞形（incēdō 僅存非限定的分詞，且詞位與詞表核對不上），練不到；20 詞僅練 17。",
+  "note": "2026-09-27 全句重寫。🚨 2026-09-27 再補正：incēdō 舊筆記寫「詞位與詞表核對不上」有誤——incedens／incedere 在武加大裡本來就直掛詞位 incedo，第 1 句已補上。cōtīdiānus／intentus 兩詞仍只透過詞幹搭上（cotidianae／intentissimus，詞位欄是空的），第 2、3 句已各補上。",
   "sentences": [
     {
-      "latin": "Pastor gregem custodit.",
-      "chinese": "牧人看守羊群。",
+      "latin": "Pastor incedens gregem custodit.",
+      "chinese": "那牧人一邊行走，一邊看守羊群。",
       "targets": ["grex", "custodio"]
     },
     {
-      "latin": "Levita legem custodit.",
-      "chinese": "肋未人遵守法律。",
+      "latin": "Levita intentissimus legem custodit.",
+      "chinese": "那極為專注的肋未人遵守法律。",
       "targets": ["lex", "Levita"]
     },
     {
-      "latin": "Sacerdos cotidie orat; inde discedit.",
-      "chinese": "司祭每天祈禱；然後從那裡離開。",
+      "latin": "Sacerdos cotidie orat; inde discedit; horae cotidianae sunt.",
+      "chinese": "司祭每天祈禱；然後從那裡離開；那些是每日的時辰。",
       "targets": ["sacerdos", "cotidie", "inde", "discedo"]
     },
     {

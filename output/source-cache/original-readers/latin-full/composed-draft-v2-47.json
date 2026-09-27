@@ -10,8 +10,8 @@
       "targets": ["fas", "illuc", "mano"]
     },
     {
-      "latin": "Ardor tertio designat centrum.",
-      "chinese": "熱烈第三次標示出了中心。",
+      "latin": "Centrum tertio designatur; ardor crescit.",
+      "chinese": "中心第三次被標示出來；熱誠漸漸增長。",
       "targets": ["ardor", "tertio", "designo", "centrum"]
     },
     {

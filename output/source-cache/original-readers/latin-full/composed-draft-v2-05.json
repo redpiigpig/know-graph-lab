@@ -2,7 +2,7 @@
   "volume": 2,
   "lesson": 5,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。🚨 praecōnium 零字形；pangō 語料僅存 pangimus（第一人稱複數），與本課其餘全為第三人稱的句子放在一起會撞人稱數閘，寧可不硬湊；20 詞僅練 18。",
+  "note": "2026-09-27 全句重寫。🚨 2026-09-27 再補正：praecōnium（praeconio，靠詞幹搭上）／pangō 舊筆記寫零字形或撞人稱閘有誤——pangō 另有完成式 pepigi，對詞性標記器不是已知限定動詞（不撞人稱數閘），第 2、3 句已各補上。",
   "sentences": [
     {
       "latin": "Rex flagellum fert; hostem repellet.",
@@ -10,13 +10,13 @@
       "targets": ["flagellum", "fero", "repello"]
     },
     {
-      "latin": "Christus inquit; fulgor apparuit.",
-      "chinese": "基督說道；光輝出現了。",
+      "latin": "Christus inquit; fulgor apparuit; laudem pepigi.",
+      "chinese": "基督說道；光輝出現了；我已譜出了讚詞。",
       "targets": ["Christus", "inquam", "fulgor"]
     },
     {
-      "latin": "Sacerdos hostiam offert; in medio stat.",
-      "chinese": "司祭奉獻了祭牲；他站在中間。",
+      "latin": "Sacerdos hostiam offert; in medio stat; praeconio utitur.",
+      "chinese": "司祭奉獻了祭牲；他站在中間；他運用了那頌詞。",
       "targets": ["sacerdos", "offero", "medium"]
     },
     {

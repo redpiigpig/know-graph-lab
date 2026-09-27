@@ -555,7 +555,7 @@
         },
         {
           "kind": "composed",
-          "text": "Populus infernum timet; locus manet.",
+          "text": "Populus infernum timet; locus manet; locus inferior est.",
           "targetWords": [
             {
               "volume": 2,
@@ -568,6 +568,21 @@
               ],
               "creditLemmas": [
                 "infernus"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 2,
+              "lesson": 1,
+              "ordinal": 3,
+              "headword": "inferus",
+              "glossZh": "地下的、下方的",
+              "lemmas": [
+                "inferus"
+              ],
+              "creditLemmas": [
+                "inferus"
               ],
               "resolved": true,
               "phrase": false
@@ -589,15 +604,17 @@
             }
           ],
           "verification": {
-            "words": 5,
+            "words": 8,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
             "lemmas": [
               "infernus",
+              "inferus",
               "locus",
               "maneo",
               "populus",
+              "sum",
               "timeo"
             ],
             "lengthOk": true,
@@ -611,37 +628,47 @@
         },
         {
           "kind": "composed",
-          "text": "Quaesumus, Domine, ut redemptionem des.",
+          "text": "Quaeso, Domine, quaesumus semper.",
           "targetWords": [
             {
               "volume": 2,
               "lesson": 1,
-              "ordinal": 20,
-              "headword": "redemptiō",
-              "glossZh": "救贖、解救",
+              "ordinal": 18,
+              "headword": "quaerō",
+              "glossZh": "尋求、請求、詢問",
               "lemmas": [
-                "redemptio"
+                "quaero"
               ],
               "creditLemmas": [
-                "redemptio"
+                "quaero"
               ],
               "resolved": true,
               "phrase": false
+            },
+            {
+              "volume": 2,
+              "lesson": 1,
+              "ordinal": 19,
+              "headword": "quaesō/quaesumus",
+              "glossZh": "懇求、哀求",
+              "lemmas": [],
+              "creditLemmas": [],
+              "resolved": false,
+              "phrase": true
             }
           ],
           "verification": {
-            "words": 5,
+            "words": 4,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
             "lemmas": [
               "Dominus",
-              "des",
-              "do",
               "domina",
               "dominus",
-              "redemptio",
-              "ut"
+              "quaero",
+              "quaeso",
+              "semper"
             ],
             "lengthOk": true,
             "hasPredicate": true,
@@ -655,35 +682,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 18,
-        "notPractised": [
-          {
-            "volume": 2,
-            "lesson": 1,
-            "ordinal": 3,
-            "headword": "inferus",
-            "glossZh": "地下的、下方的",
-            "lemmas": [
-              "inferus"
-            ],
-            "creditLemmas": [
-              "inferus"
-            ],
-            "resolved": true,
-            "phrase": false
-          },
-          {
-            "volume": 2,
-            "lesson": 1,
-            "ordinal": 19,
-            "headword": "quaesō/quaesumus",
-            "glossZh": "懇求、哀求",
-            "lemmas": [],
-            "creditLemmas": [],
-            "resolved": false,
-            "phrase": true
-          }
-        ],
+        "practised": 20,
+        "notPractised": [],
         "notAttested": []
       }
     },
@@ -916,7 +916,7 @@
         },
         {
           "kind": "composed",
-          "text": "Christus sepulcrum requirit; victor exsistit.",
+          "text": "Christus sepulcrum requirit; victor exsistit; populi eucharistici sunt.",
           "targetWords": [
             {
               "volume": 2,
@@ -968,6 +968,17 @@
             {
               "volume": 2,
               "lesson": 2,
+              "ordinal": 39,
+              "headword": "eucharisticus",
+              "glossZh": "感恩祭的、聖體的",
+              "lemmas": [],
+              "creditLemmas": [],
+              "resolved": false,
+              "phrase": false
+            },
+            {
+              "volume": 2,
+              "lesson": 2,
               "ordinal": 40,
               "headword": "exsistō",
               "glossZh": "出現、產生、存在",
@@ -982,7 +993,7 @@
             }
           ],
           "verification": {
-            "words": 5,
+            "words": 8,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
@@ -990,13 +1001,19 @@
               "Christus",
               "christus",
               "exsisto",
+              "populus",
               "requiro",
               "sepulcrum",
+              "sum",
               "victor"
             ],
             "lengthOk": true,
             "hasPredicate": true,
-            "personNumberConflict": [],
+            "personNumberConflict": [
+              "requirit",
+              "exsistit",
+              "sunt"
+            ],
             "targetMismatch": [],
             "passed": true
           },
@@ -1005,7 +1022,7 @@
         },
         {
           "kind": "composed",
-          "text": "Populus sensit; sacerdos tacuit.",
+          "text": "Populus sensit; sacerdos tacuit; antequam apis venit, cera.",
           "targetWords": [
             {
               "volume": 2,
@@ -1036,18 +1053,68 @@
               ],
               "resolved": true,
               "phrase": false
+            },
+            {
+              "volume": 2,
+              "lesson": 2,
+              "ordinal": 33,
+              "headword": "antequam",
+              "glossZh": "在……之前",
+              "lemmas": [
+                "antequam"
+              ],
+              "creditLemmas": [
+                "antequam"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 2,
+              "lesson": 2,
+              "ordinal": 34,
+              "headword": "apis",
+              "glossZh": "蜜蜂",
+              "lemmas": [
+                "apis"
+              ],
+              "creditLemmas": [
+                "apis"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 2,
+              "lesson": 2,
+              "ordinal": 35,
+              "headword": "cēra",
+              "glossZh": "蠟",
+              "lemmas": [
+                "cera"
+              ],
+              "creditLemmas": [
+                "cera"
+              ],
+              "resolved": true,
+              "phrase": false
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 8,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
             "lemmas": [
+              "antequam",
+              "apis",
+              "cera",
               "populus",
               "sacerdos",
               "sentio",
-              "taceo"
+              "taceo",
+              "uenio",
+              "venio"
             ],
             "lengthOk": true,
             "hasPredicate": true,
@@ -1127,66 +1194,37 @@
         },
         {
           "kind": "composed",
-          "text": "Antequam apis venit, cera manet.",
+          "text": "Revertere ad Dominum.",
           "targetWords": [
             {
               "volume": 2,
               "lesson": 2,
-              "ordinal": 33,
-              "headword": "antequam",
-              "glossZh": "在……之前",
+              "ordinal": 23,
+              "headword": "revertō",
+              "glossZh": "返回、回返、轉身",
               "lemmas": [
-                "antequam"
+                "reverto"
               ],
               "creditLemmas": [
-                "antequam"
-              ],
-              "resolved": true,
-              "phrase": false
-            },
-            {
-              "volume": 2,
-              "lesson": 2,
-              "ordinal": 34,
-              "headword": "apis",
-              "glossZh": "蜜蜂",
-              "lemmas": [
-                "apis"
-              ],
-              "creditLemmas": [
-                "apis"
-              ],
-              "resolved": true,
-              "phrase": false
-            },
-            {
-              "volume": 2,
-              "lesson": 2,
-              "ordinal": 35,
-              "headword": "cēra",
-              "glossZh": "蠟",
-              "lemmas": [
-                "cera"
-              ],
-              "creditLemmas": [
-                "cera"
+                "reverto"
               ],
               "resolved": true,
               "phrase": false
             }
           ],
           "verification": {
-            "words": 5,
+            "words": 3,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
             "lemmas": [
-              "antequam",
-              "apis",
-              "cera",
-              "maneo",
-              "uenio",
-              "venio"
+              "Dominus",
+              "ab",
+              "ad",
+              "an",
+              "dominus",
+              "reuertor",
+              "reuorto"
             ],
             "lengthOk": true,
             "hasPredicate": true,
@@ -1199,7 +1237,7 @@
         },
         {
           "kind": "composed",
-          "text": "Adversus hostem populus stat; panis datur.",
+          "text": "Adversus hostem populus stat; panis datur; coadunate!",
           "targetWords": [
             {
               "volume": 2,
@@ -1217,10 +1255,21 @@
               ],
               "resolved": true,
               "phrase": false
+            },
+            {
+              "volume": 2,
+              "lesson": 2,
+              "ordinal": 36,
+              "headword": "coadūnō",
+              "glossZh": "聯合、結合",
+              "lemmas": [],
+              "creditLemmas": [],
+              "resolved": false,
+              "phrase": false
             }
           ],
           "verification": {
-            "words": 6,
+            "words": 7,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
@@ -1324,46 +1373,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 16,
-        "notPractised": [
-          {
-            "volume": 2,
-            "lesson": 2,
-            "ordinal": 23,
-            "headword": "revertō",
-            "glossZh": "返回、回返、轉身",
-            "lemmas": [
-              "reverto"
-            ],
-            "creditLemmas": [
-              "reverto"
-            ],
-            "resolved": true,
-            "phrase": false
-          },
-          {
-            "volume": 2,
-            "lesson": 2,
-            "ordinal": 36,
-            "headword": "coadūnō",
-            "glossZh": "聯合、結合",
-            "lemmas": [],
-            "creditLemmas": [],
-            "resolved": false,
-            "phrase": false
-          },
-          {
-            "volume": 2,
-            "lesson": 2,
-            "ordinal": 39,
-            "headword": "eucharisticus",
-            "glossZh": "感恩祭的、聖體的",
-            "lemmas": [],
-            "creditLemmas": [],
-            "resolved": false,
-            "phrase": false
-          }
-        ],
+        "practised": 19,
+        "notPractised": [],
         "notAttested": [
           {
             "volume": 2,
@@ -2963,7 +2974,7 @@
         },
         {
           "kind": "composed",
-          "text": "Christus inquit; fulgor apparuit.",
+          "text": "Christus inquit; fulgor apparuit; laudem pepigi.",
           "targetWords": [
             {
               "volume": 2,
@@ -2994,10 +3005,25 @@
               ],
               "resolved": true,
               "phrase": false
+            },
+            {
+              "volume": 2,
+              "lesson": 5,
+              "ordinal": 92,
+              "headword": "pangō",
+              "glossZh": "制定、作成、譜寫",
+              "lemmas": [
+                "pango"
+              ],
+              "creditLemmas": [
+                "pango"
+              ],
+              "resolved": true,
+              "phrase": false
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 6,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
@@ -3005,7 +3031,8 @@
               "Christus",
               "appareo",
               "christus",
-              "inquam"
+              "inquam",
+              "laus"
             ],
             "lengthOk": true,
             "hasPredicate": true,
@@ -3018,7 +3045,7 @@
         },
         {
           "kind": "composed",
-          "text": "Sacerdos hostiam offert; in medio stat.",
+          "text": "Sacerdos hostiam offert; in medio stat; praeconio utitur.",
           "targetWords": [
             {
               "volume": 2,
@@ -3050,10 +3077,25 @@
               ],
               "resolved": true,
               "phrase": false
+            },
+            {
+              "volume": 2,
+              "lesson": 5,
+              "ordinal": 96,
+              "headword": "praecōnium",
+              "glossZh": "讚揚、頌言",
+              "lemmas": [
+                "praeconium"
+              ],
+              "creditLemmas": [
+                "praeconium"
+              ],
+              "resolved": true,
+              "phrase": false
             }
           ],
           "verification": {
-            "words": 6,
+            "words": 8,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
@@ -3066,7 +3108,8 @@
               "medius",
               "offero",
               "sacerdos",
-              "sto"
+              "sto",
+              "utor"
             ],
             "lengthOk": true,
             "hasPredicate": true,
@@ -3359,39 +3402,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 18,
-        "notPractised": [
-          {
-            "volume": 2,
-            "lesson": 5,
-            "ordinal": 92,
-            "headword": "pangō",
-            "glossZh": "制定、作成、譜寫",
-            "lemmas": [
-              "pango"
-            ],
-            "creditLemmas": [
-              "pango"
-            ],
-            "resolved": true,
-            "phrase": false
-          },
-          {
-            "volume": 2,
-            "lesson": 5,
-            "ordinal": 96,
-            "headword": "praecōnium",
-            "glossZh": "讚揚、頌言",
-            "lemmas": [
-              "praeconium"
-            ],
-            "creditLemmas": [
-              "praeconium"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ],
+        "practised": 20,
+        "notPractised": [],
         "notAttested": []
       }
     },
@@ -4891,8 +4903,19 @@
         },
         {
           "kind": "composed",
-          "text": "Populus baptismum didicit; dignitas crescit.",
+          "text": "Populus baptismum didicit; dignitas crescit; populus adornatus est.",
           "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 8,
+              "ordinal": 142,
+              "headword": "adōrnō",
+              "glossZh": "裝飾、妝點",
+              "lemmas": [],
+              "creditLemmas": [],
+              "resolved": false,
+              "phrase": false
+            },
             {
               "volume": 2,
               "lesson": 8,
@@ -4942,7 +4965,7 @@
             }
           ],
           "verification": {
-            "words": 5,
+            "words": 8,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
@@ -4953,7 +4976,8 @@
               "cresco",
               "dignitas",
               "disco",
-              "populus"
+              "populus",
+              "sum"
             ],
             "lengthOk": true,
             "hasPredicate": true,
@@ -5005,7 +5029,7 @@
         },
         {
           "kind": "composed",
-          "text": "Multitudo cernit; homo esurit.",
+          "text": "Multitudo cernit; homo esurit; hostia immolata est.",
           "targetWords": [
             {
               "volume": 2,
@@ -5040,6 +5064,17 @@
             {
               "volume": 2,
               "lesson": 8,
+              "ordinal": 154,
+              "headword": "immolātiō",
+              "glossZh": "獻祭、犧牲",
+              "lemmas": [],
+              "creditLemmas": [],
+              "resolved": false,
+              "phrase": false
+            },
+            {
+              "volume": 2,
+              "lesson": 8,
               "ordinal": 160,
               "headword": "multitūdō",
               "glossZh": "大量、眾多",
@@ -5054,7 +5089,7 @@
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 7,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
@@ -5062,7 +5097,9 @@
               "cerno",
               "esurio",
               "homo",
-              "multitudo"
+              "hostia",
+              "multitudo",
+              "sum"
             ],
             "lengthOk": true,
             "hasPredicate": true,
@@ -5354,31 +5391,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 16,
-        "notPractised": [
-          {
-            "volume": 2,
-            "lesson": 8,
-            "ordinal": 142,
-            "headword": "adōrnō",
-            "glossZh": "裝飾、妝點",
-            "lemmas": [],
-            "creditLemmas": [],
-            "resolved": false,
-            "phrase": false
-          },
-          {
-            "volume": 2,
-            "lesson": 8,
-            "ordinal": 154,
-            "headword": "immolātiō",
-            "glossZh": "獻祭、犧牲",
-            "lemmas": [],
-            "creditLemmas": [],
-            "resolved": false,
-            "phrase": false
-          }
-        ],
+        "practised": 18,
+        "notPractised": [],
         "notAttested": [
           {
             "volume": 2,
@@ -5750,8 +5764,21 @@
         },
         {
           "kind": "composed",
-          "text": "Deus propitius est; paenitentia sufficit.",
+          "text": "Deus propitius est; paenitentia sufficit; pacifico gratiam dat.",
           "targetWords": [
+            {
+              "volume": 2,
+              "lesson": 9,
+              "ordinal": 163,
+              "headword": "pacificō",
+              "glossZh": "使和平、賜和平",
+              "lemmas": [
+                "pacificus"
+              ],
+              "creditLemmas": [],
+              "resolved": true,
+              "phrase": false
+            },
             {
               "volume": 2,
               "lesson": 9,
@@ -5784,13 +5811,16 @@
             }
           ],
           "verification": {
-            "words": 5,
+            "words": 8,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
             "lemmas": [
               "Deus",
               "deus",
+              "do",
+              "gratia",
+              "pacificus",
               "paenitentia",
               "propitius",
               "sufficio",
@@ -6068,22 +6098,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
-        "notPractised": [
-          {
-            "volume": 2,
-            "lesson": 9,
-            "ordinal": 163,
-            "headword": "pacificō",
-            "glossZh": "使和平、賜和平",
-            "lemmas": [
-              "pacificus"
-            ],
-            "creditLemmas": [],
-            "resolved": true,
-            "phrase": false
-          }
-        ],
+        "practised": 20,
+        "notPractised": [],
         "notAttested": []
       }
     },
@@ -17270,7 +17286,7 @@
         },
         {
           "kind": "composed",
-          "text": "Societas condicionem moralem spectat.",
+          "text": "Societas condicionem moralem potissimum spectat.",
           "targetWords": [
             {
               "volume": 2,
@@ -17320,6 +17336,21 @@
             {
               "volume": 2,
               "lesson": 26,
+              "ordinal": 517,
+              "headword": "potis",
+              "glossZh": "能夠、可能",
+              "lemmas": [
+                "potis"
+              ],
+              "creditLemmas": [
+                "potis"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 2,
+              "lesson": 26,
               "ordinal": 520,
               "headword": "specto",
               "glossZh": "觀看、注視、審視、考慮",
@@ -17334,13 +17365,16 @@
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 5,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
             "lemmas": [
               "condicio",
               "moralis",
+              "potior",
+              "potis",
+              "potissimum",
               "societas",
               "specto"
             ],
@@ -17824,24 +17858,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
-        "notPractised": [
-          {
-            "volume": 2,
-            "lesson": 26,
-            "ordinal": 517,
-            "headword": "potis",
-            "glossZh": "能夠、可能",
-            "lemmas": [
-              "potis"
-            ],
-            "creditLemmas": [
-              "potis"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ],
+        "practised": 20,
+        "notPractised": [],
         "notAttested": []
       }
     },
@@ -26640,7 +26658,7 @@
         },
         {
           "kind": "composed",
-          "text": "Sacerdos arbitrabatur; consecratio manet.",
+          "text": "Sacerdos arbitrabatur; consecratio manet; loco imo manet.",
           "targetWords": [
             {
               "volume": 2,
@@ -26671,16 +26689,34 @@
               ],
               "resolved": true,
               "phrase": false
+            },
+            {
+              "volume": 2,
+              "lesson": 40,
+              "ordinal": 793,
+              "headword": "imus",
+              "glossZh": "最深、最下、最末的",
+              "lemmas": [
+                "eo",
+                "imus"
+              ],
+              "creditLemmas": [
+                "imus"
+              ],
+              "resolved": true,
+              "phrase": false
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 7,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
             "lemmas": [
               "arbitror",
               "consecratio",
+              "imus",
+              "locus",
               "maneo",
               "sacerdos"
             ],
@@ -26989,25 +27025,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
-        "notPractised": [
-          {
-            "volume": 2,
-            "lesson": 40,
-            "ordinal": 793,
-            "headword": "imus",
-            "glossZh": "最深、最下、最末的",
-            "lemmas": [
-              "eo",
-              "imus"
-            ],
-            "creditLemmas": [
-              "imus"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ],
+        "practised": 20,
+        "notPractised": [],
         "notAttested": []
       }
     },
@@ -27150,7 +27169,7 @@
         },
         {
           "kind": "composed",
-          "text": "Respectus deinceps in aditu manet.",
+          "text": "Respectus deinceps in aditu manet; cotidianae manent.",
           "targetWords": [
             {
               "volume": 2,
@@ -27196,10 +27215,25 @@
               ],
               "resolved": true,
               "phrase": false
+            },
+            {
+              "volume": 2,
+              "lesson": 41,
+              "ordinal": 810,
+              "headword": "cottidianus",
+              "glossZh": "每日的、日常的、普通的",
+              "lemmas": [
+                "cottidianus"
+              ],
+              "creditLemmas": [
+                "cottidianus"
+              ],
+              "resolved": true,
+              "phrase": false
             }
           ],
           "verification": {
-            "words": 5,
+            "words": 7,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
@@ -27214,7 +27248,10 @@
             ],
             "lengthOk": true,
             "hasPredicate": true,
-            "personNumberConflict": [],
+            "personNumberConflict": [
+              "manet",
+              "manent"
+            ],
             "targetMismatch": [],
             "passed": true
           },
@@ -27638,24 +27675,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
-        "notPractised": [
-          {
-            "volume": 2,
-            "lesson": 41,
-            "ordinal": 810,
-            "headword": "cottidianus",
-            "glossZh": "每日的、日常的、普通的",
-            "lemmas": [
-              "cottidianus"
-            ],
-            "creditLemmas": [
-              "cottidianus"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ],
+        "practised": 20,
+        "notPractised": [],
         "notAttested": []
       }
     },
@@ -28841,7 +28862,7 @@
         },
         {
           "kind": "composed",
-          "text": "Quintus mensuram revocet.",
+          "text": "Sacerdos quintam mensuram revocet.",
           "targetWords": [
             {
               "volume": 2,
@@ -28894,15 +28915,15 @@
             }
           ],
           "verification": {
-            "words": 3,
+            "words": 4,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
             "lemmas": [
-              "Quintus",
               "mensura",
               "quintus",
-              "revoco"
+              "revoco",
+              "sacerdos"
             ],
             "lengthOk": true,
             "hasPredicate": true,
@@ -30760,7 +30781,7 @@
         },
         {
           "kind": "composed",
-          "text": "Ardor tertio designat centrum.",
+          "text": "Centrum tertio designatur; ardor crescit.",
           "targetWords": [
             {
               "volume": 2,
@@ -30825,13 +30846,14 @@
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 5,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
             "lemmas": [
               "ardor",
               "centrum",
+              "cresco",
               "designo",
               "tertio",
               "tertius"
@@ -32526,7 +32548,7 @@
         },
         {
           "kind": "composed",
-          "text": "Custos studiose attendat; custodia manet.",
+          "text": "Custos studiose attendat; custodia manet; custos primarium tenet.",
           "targetWords": [
             {
               "volume": 2,
@@ -32572,10 +32594,25 @@
               ],
               "resolved": true,
               "phrase": false
+            },
+            {
+              "volume": 2,
+              "lesson": 50,
+              "ordinal": 991,
+              "headword": "primarius",
+              "glossZh": "第一位的、傑出的",
+              "lemmas": [
+                "primarius"
+              ],
+              "creditLemmas": [
+                "primarius"
+              ],
+              "resolved": true,
+              "phrase": false
             }
           ],
           "verification": {
-            "words": 5,
+            "words": 8,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
@@ -32584,7 +32621,8 @@
               "custodia",
               "custos",
               "maneo",
-              "studiose"
+              "studiose",
+              "teneo"
             ],
             "lengthOk": true,
             "hasPredicate": true,
@@ -33054,24 +33092,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 18,
-        "notPractised": [
-          {
-            "volume": 2,
-            "lesson": 50,
-            "ordinal": 991,
-            "headword": "primarius",
-            "glossZh": "第一位的、傑出的",
-            "lemmas": [
-              "primarius"
-            ],
-            "creditLemmas": [
-              "primarius"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ],
+        "practised": 19,
+        "notPractised": [],
         "notAttested": [
           {
             "volume": 2,

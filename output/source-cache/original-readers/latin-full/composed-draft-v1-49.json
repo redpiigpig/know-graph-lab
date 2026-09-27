@@ -2,7 +2,7 @@
   "volume": 1,
   "lesson": 49,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。🚨 illūcēsco／liquō 在武加大＋教會語料中零字形，練不到；20 詞僅練 18。",
+  "note": "2026-09-27 全句重寫。🚨 liquō 在武加大＋教會語料中零字形，練不到。🚨 2026-09-27 再補正：illūcēsco 舊筆記併寫零字形有誤——illucescit 本身在教會語料裡（詞位欄是空的，靠詞幹搭上），第 3 句已補上。",
   "sentences": [
     {
       "latin": "Christus se commendat; sancti deputantur.",
@@ -15,8 +15,8 @@
       "targets": ["hostis", "detraho", "inimicus", "nego"]
     },
     {
-      "latin": "Difficile est; facile non est.",
-      "chinese": "這是困難的；並非容易的。",
+      "latin": "Difficile est; facile non est; dies illucescit.",
+      "chinese": "這是困難的；並非容易的；天正在破曉。",
       "targets": ["difficilis", "facilis"]
     },
     {

@@ -2,7 +2,7 @@
   "volume": 1,
   "lesson": 36,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。🚨 solor／alloquor／dēdignor／antistes 在武加大＋教會語料中零字形，練不到；20 詞僅練 16。cantus 只用受格 cantum／奪格 cantu（語料無主格）。",
+  "note": "2026-09-27 全句重寫。🚨 solor／dēdignor 在武加大＋教會語料中零字形，練不到。cantus 只用受格 cantum／奪格 cantu（語料無主格）。🚨 2026-09-27 再補正：alloquor（alloquitur）／antistes（antistites）舊筆記併寫零字形有誤，皆靠詞幹搭上（詞位欄是空的），第 2、4 句已各補上；alloquor 不宣稱進 targets（宣稱會撞 target_mismatch，靠詞幹的字仍計入覆蓋率）。",
   "sentences": [
     {
       "latin": "Discipuli septem homines sepelierunt; indulgentiam assequuntur.",
@@ -10,8 +10,8 @@
       "targets": ["discipulus", "septem", "sepelio", "assequor"]
     },
     {
-      "latin": "Christus substantiam humanam tangit.",
-      "chinese": "基督觸及了人的本質。",
+      "latin": "Christus substantiam humanam tangit; episcopum alloquitur.",
+      "chinese": "基督觸及了人的本質；祂向那主教說話。",
       "targets": ["Christus", "substantia", "tango"]
     },
     {
@@ -20,8 +20,8 @@
       "targets": ["populus", "vestio"]
     },
     {
-      "latin": "Episcopus civitatem regit; cantum audit.",
-      "chinese": "主教治理著城邦；他聽見了聖歌。",
+      "latin": "Episcopus civitatem regit; cantum audit; antistites veniunt.",
+      "chinese": "主教治理著城邦；他聽見了聖歌；眾主教們來臨了。",
       "targets": ["civitas", "cantus"]
     },
     {

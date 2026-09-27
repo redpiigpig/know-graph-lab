@@ -785,7 +785,7 @@ function prayerReading(lesson: number): HebrewLessonReading {
   invariant(item, `找不到第 ${lesson} 課禱文／文章`);
   const assembledLesson = assembledReader.lessons.find((entry) => entry.lesson === lesson);
   invariant(
-    assembledLesson?.reading.kind === "prayer_or_article",
+    assembledLesson?.reading.kind === "prayer" || assembledLesson?.reading.kind === "article",
     `排印主檔第 ${lesson} 課不是禱文／文章`,
   );
   // 與經文那一側同一條規矩：段落走排印主檔（裁過的），不走 prayers-articles

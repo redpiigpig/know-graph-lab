@@ -2,15 +2,16 @@
   "volume": 1,
   "lesson": 11,
   "author": "opus-5-hand-written",
-  "note": "liturgia 與 maestus 武加大都沒有字形，練不到。片語 male habeō 要 male 與 habeō 兩個**字面形**同句（habet 不算，片語記的是字形）、in prīmīs 要 in 與 primis 同句才算練到。",
+  "note": "片語 male habeō 要 male 與 habeō 兩個**字面形**同句（habet 不算，片語記的是字形）、in prīmīs 要 in 與 primis 同句才算練到。🚨 2026-09-27 更正：liturgia 舊註記寫「武加大沒有字形，練不到」有誤——liturgia／liturgiae 本身就在教會語料裡（詞位欄是空的，但字形比對不看詞位），第 1 句已補上。",
   "sentences": [
     {
-      "latin": "In primis firmavit ecclesiam",
-      "chinese": "他首先堅固了教會。",
+      "latin": "In primis firmavit ecclesiam; liturgia sancta est.",
+      "chinese": "他首先堅固了教會；那禮儀是神聖的。",
       "targets": [
         "firmo",
         "in prīmīs",
-        "primus"
+        "primus",
+        "liturgia"
       ]
     },
     {

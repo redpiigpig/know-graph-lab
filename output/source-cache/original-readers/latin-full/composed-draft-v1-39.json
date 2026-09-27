@@ -2,11 +2,11 @@
   "volume": 1,
   "lesson": 39,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。🚨 concinō／commixtiō 在武加大＋教會語料中零字形，練不到；20 詞僅練 18。",
+  "note": "2026-09-27 全句重寫。🚨 2026-09-27 再補正：concinō（concinat，靠詞幹搭上）／commixtiō（commixtim，同樣靠詞幹）舊筆記寫零字形有誤，第 1、7 句已各補上。",
   "sentences": [
     {
-      "latin": "Sacerdos sedet; Deus tuetur.",
-      "chinese": "司祭坐著；天主守護著。",
+      "latin": "Sacerdos sedet; Deus tuetur; chorus concinat.",
+      "chinese": "司祭坐著；天主守護著；願歌詠團齊聲歌唱。",
       "targets": ["sacerdos", "sedeo", "Deus", "tueor"]
     },
     {
@@ -35,8 +35,8 @@
       "targets": ["creator", "crimen", "caelestis", "cano"]
     },
     {
-      "latin": "Consortes confestim lucernam accendunt.",
-      "chinese": "那些同伴們立刻點燃了燈。",
+      "latin": "Consortes confestim lucernam accendunt commixtim.",
+      "chinese": "那些同伴們立刻混雜著點燃了燈。",
       "targets": ["consors", "confestim", "accendo"]
     }
   ]

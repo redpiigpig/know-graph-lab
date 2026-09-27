@@ -2,7 +2,7 @@
   "volume": 1,
   "lesson": 17,
   "author": "opus-5-hand-written",
-  "note": "dolōrōsus 與 gregō 武加大沒有字形，練不到。conglōrificō 整部武加大只有 conglorificemur 一形（羅八17），第 5 句就照它寫。lætus 沒有陰性單數 læta。",
+  "note": "gregō 武加大沒有字形，練不到。conglōrificō 整部武加大只有 conglorificemur 一形（羅八17），第 5 句就照它寫。lætus 沒有陰性單數 læta。🚨 2026-09-27 補：dolōrōsus（僅透過陰性 dolorosa 的詞幹搭上）舊稿七句全未帶到，第 6 句已補上。",
   "sentences": [
     {
       "latin": "Columna in aula templi est",
@@ -48,8 +48,8 @@
       ]
     },
     {
-      "latin": "Hostiam paraverunt in aula",
-      "chinese": "他們在殿堂中預備了祭獻。",
+      "latin": "Hostiam paraverunt in aula; hostia dolorosa est.",
+      "chinese": "他們在殿堂中預備了祭獻；那祭獻是哀傷的。",
       "targets": [
         "aula",
         "hostia",

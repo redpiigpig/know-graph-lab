@@ -2,7 +2,7 @@
   "volume": 1,
   "lesson": 42,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。🚨 succurrō 零字形；venia 全格皆查無（唯一攤到的 veniam 語料歸給同形的 veniō），練不到；20 詞僅練 18。",
+  "note": "2026-09-27 全句重寫。🚨 venia 全格皆查無（唯一攤到的 veniam 語料歸給同形的 veniō），練不到。🚨 2026-09-27 再補正：succurrō 舊筆記併寫零字形有誤——命令式 succurre 本身在語料裡（第二人稱單數，詞位欄是空的），第 4 句已補上，與同句既有的 salve／timeas 同為第二人稱單數，不撞人稱數閘。",
   "sentences": [
     {
       "latin": "Imperator honorem habet; patriam defendit.",
@@ -20,8 +20,8 @@
       "targets": ["praedico", "populus", "timeo"]
     },
     {
-      "latin": "Salve, fili; ne timeas.",
-      "chinese": "你好，孩子；不要害怕。",
+      "latin": "Salve, fili; ne timeas; succurre populo.",
+      "chinese": "你好，孩子；不要害怕；你要援助百姓。",
       "targets": ["salve", "ne", "timeo"]
     },
     {

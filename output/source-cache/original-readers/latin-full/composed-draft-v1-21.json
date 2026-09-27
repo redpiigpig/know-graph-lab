@@ -2,7 +2,7 @@
   "volume": 1,
   "lesson": 21,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。🚨 pellō 在武加大＋教會語料中零字形（僅一個非限定的 dat. Pelli），練不到，本課無可用句；20 詞僅練 19。",
+  "note": "2026-09-27 全句重寫。🚨 2026-09-27 再補正：先前筆記寫 pellō 零字形有誤——教會語料裡有非限定的被動不定式 pelli（「被驅逐」），第 6 句已補上 malus pelli debet。",
   "sentences": [
     {
       "latin": "Populus restitit donec Dominus venit; dum orat, credit.",
@@ -30,9 +30,9 @@
       "targets": ["si", "pario", "primum", "filius", "video"]
     },
     {
-      "latin": "Oculus mutatur; cor non immutatur.",
-      "chinese": "眼睛改變了；心卻不改變。",
-      "targets": ["oculus", "muto", "immuto"]
+      "latin": "Oculus mutatur; cor non immutatur; malus pelli debet.",
+      "chinese": "眼睛改變了；心卻不改變；那惡者應當被驅逐。",
+      "targets": ["oculus", "muto", "immuto", "pello"]
     },
     {
       "latin": "Populus instat; Verbum incarnatum est.",

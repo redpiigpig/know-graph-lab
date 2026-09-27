@@ -2,14 +2,15 @@
   "volume": 1,
   "lesson": 2,
   "author": "opus-5-hand-written",
-  "note": "累積詞彙四十個，動詞仍只有 flectō，故以名詞句為主。pāpa 一詞武加大沒有任何字形，本課練不到，由 assemble 的 note 說明。missa 只認字形（missa／Missæ），不可用 mitto 的分詞冒充。",
+  "note": "累積詞彙四十個，動詞仍只有 flectō，故以名詞句為主。🚨 2026-09-27 更正：pāpa 舊註記寫「武加大沒有任何字形，練不到」有誤——教會語料裡有 papa／papae／pape，第 1 句已補上。missa 只認字形（missa／Missæ），不可用 mitto 的分詞冒充。",
   "sentences": [
     {
-      "latin": "Gloria dei super ecclesiam est.",
-      "chinese": "天主的光榮在教會之上。",
+      "latin": "Gloria papae super ecclesiam est.",
+      "chinese": "教宗的光榮在教會之上。",
       "targets": [
+        "papa",
         "super",
-        "deus"
+        "ecclesia"
       ]
     },
     {

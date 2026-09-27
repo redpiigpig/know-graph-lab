@@ -334,8 +334,23 @@
         },
         {
           "kind": "composed",
-          "text": "Familia in ecclesia flectitur",
+          "text": "Familia coram ecclesia flectitur",
           "targetWords": [
+            {
+              "volume": 1,
+              "lesson": 1,
+              "ordinal": 7,
+              "headword": "cōram",
+              "glossZh": "在……面前",
+              "lemmas": [
+                "coram"
+              ],
+              "creditLemmas": [
+                "coram"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
             {
               "volume": 1,
               "lesson": 1,
@@ -380,22 +395,6 @@
               ],
               "resolved": true,
               "phrase": false
-            },
-            {
-              "volume": 1,
-              "lesson": 1,
-              "ordinal": 20,
-              "headword": "in",
-              "glossZh": "進入、在內；由",
-              "lemmas": [
-                "in",
-                "invicem"
-              ],
-              "creditLemmas": [
-                "in"
-              ],
-              "resolved": true,
-              "phrase": false
             }
           ],
           "verification": {
@@ -404,11 +403,10 @@
             "untaught": [],
             "enclitics": [],
             "lemmas": [
+              "coram",
               "ecclesia",
               "familia",
-              "flecto",
-              "in",
-              "invicem"
+              "flecto"
             ],
             "lengthOk": true,
             "hasPredicate": true,
@@ -1009,24 +1007,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
-        "notPractised": [
-          {
-            "volume": 1,
-            "lesson": 1,
-            "ordinal": 7,
-            "headword": "cōram",
-            "glossZh": "在……面前",
-            "lemmas": [
-              "coram"
-            ],
-            "creditLemmas": [
-              "coram"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ],
+        "practised": 20,
+        "notPractised": [],
         "notAttested": []
       }
     },
@@ -1207,8 +1189,23 @@
         },
         {
           "kind": "composed",
-          "text": "Gloria dei super ecclesiam est.",
+          "text": "Gloria papae super ecclesiam est.",
           "targetWords": [
+            {
+              "volume": 1,
+              "lesson": 2,
+              "ordinal": 24,
+              "headword": "pāpa",
+              "glossZh": "教宗",
+              "lemmas": [
+                "papa"
+              ],
+              "creditLemmas": [
+                "papa"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
             {
               "volume": 1,
               "lesson": 2,
@@ -1223,23 +1220,6 @@
               ],
               "resolved": true,
               "phrase": false
-            },
-            {
-              "volume": 1,
-              "lesson": 2,
-              "ordinal": 38,
-              "headword": "Deus",
-              "glossZh": "天主",
-              "lemmas": [
-                "Deus",
-                "deus"
-              ],
-              "creditLemmas": [
-                "Deus",
-                "deus"
-              ],
-              "resolved": true,
-              "phrase": false
             }
           ],
           "verification": {
@@ -1250,9 +1230,9 @@
             ],
             "enclitics": [],
             "lemmas": [
-              "deus",
               "ecclesia",
               "gloria",
+              "papa",
               "sum",
               "super"
             ],
@@ -1666,24 +1646,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
-        "notPractised": [
-          {
-            "volume": 1,
-            "lesson": 2,
-            "ordinal": 24,
-            "headword": "pāpa",
-            "glossZh": "教宗",
-            "lemmas": [
-              "papa"
-            ],
-            "creditLemmas": [
-              "papa"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ],
+        "practised": 20,
+        "notPractised": [],
         "notAttested": []
       }
     },
@@ -2182,7 +2146,7 @@
         },
         {
           "kind": "composed",
-          "text": "Pueri in choro sunt",
+          "text": "Puer chori in ecclesia est",
           "targetWords": [
             {
               "volume": 1,
@@ -2213,16 +2177,30 @@
               ],
               "resolved": true,
               "phrase": false
+            },
+            {
+              "volume": 1,
+              "lesson": 3,
+              "ordinal": 57,
+              "headword": "chorus",
+              "glossZh": "聖詠團、唱詩班",
+              "lemmas": [
+                "chorus"
+              ],
+              "creditLemmas": [
+                "chorus"
+              ],
+              "resolved": true,
+              "phrase": false
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 5,
             "unattested": [],
-            "untaught": [
-              "choro"
-            ],
+            "untaught": [],
             "enclitics": [],
             "lemmas": [
+              "ecclesia",
               "in",
               "invicem",
               "puer",
@@ -2403,24 +2381,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
-        "notPractised": [
-          {
-            "volume": 1,
-            "lesson": 3,
-            "ordinal": 57,
-            "headword": "chorus",
-            "glossZh": "聖詠團、唱詩班",
-            "lemmas": [
-              "chorus"
-            ],
-            "creditLemmas": [
-              "chorus"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ],
+        "practised": 20,
+        "notPractised": [],
         "notAttested": []
       }
     },
@@ -3341,7 +3303,7 @@
         },
         {
           "kind": "composed",
-          "text": "Magistri antiqui in cœnaculo sunt",
+          "text": "Cœnaculum magistri antiqui est",
           "targetWords": [
             {
               "volume": 1,
@@ -3354,6 +3316,21 @@
               ],
               "creditLemmas": [
                 "antiquus"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 1,
+              "lesson": 5,
+              "ordinal": 88,
+              "headword": "cēnāculum",
+              "glossZh": "餐室、樓上房間",
+              "lemmas": [
+                "cenaculum"
+              ],
+              "creditLemmas": [
+                "cenaculum"
               ],
               "resolved": true,
               "phrase": false
@@ -3375,16 +3352,12 @@
             }
           ],
           "verification": {
-            "words": 5,
+            "words": 4,
             "unattested": [],
-            "untaught": [
-              "cœnaculo"
-            ],
+            "untaught": [],
             "enclitics": [],
             "lemmas": [
               "antiquus",
-              "in",
-              "invicem",
               "magister",
               "sum"
             ],
@@ -3722,24 +3695,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
-        "notPractised": [
-          {
-            "volume": 1,
-            "lesson": 5,
-            "ordinal": 88,
-            "headword": "cēnāculum",
-            "glossZh": "餐室、樓上房間",
-            "lemmas": [
-              "cenaculum"
-            ],
-            "creditLemmas": [
-              "cenaculum"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ],
+        "practised": 20,
+        "notPractised": [],
         "notAttested": []
       }
     },
@@ -4087,7 +4044,7 @@
         },
         {
           "kind": "composed",
-          "text": "Collaudate dominum Sabaoth",
+          "text": "Collaudate dominum Sabaoth in sacramento",
           "targetWords": [
             {
               "volume": 1,
@@ -4109,6 +4066,21 @@
             {
               "volume": 1,
               "lesson": 6,
+              "ordinal": 107,
+              "headword": "sacrāmentum",
+              "glossZh": "聖事、聖禮",
+              "lemmas": [
+                "sacramentum"
+              ],
+              "creditLemmas": [
+                "sacramentum"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 1,
+              "lesson": 6,
               "ordinal": 115,
               "headword": "collaudō",
               "glossZh": "極力讚美、共同讚美",
@@ -4123,13 +4095,16 @@
             }
           ],
           "verification": {
-            "words": 3,
+            "words": 5,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
             "lemmas": [
               "Sabaoth",
-              "dominus"
+              "dominus",
+              "in",
+              "invicem",
+              "sacramentum"
             ],
             "lengthOk": true,
             "hasPredicate": true,
@@ -4323,24 +4298,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
-        "notPractised": [
-          {
-            "volume": 1,
-            "lesson": 6,
-            "ordinal": 107,
-            "headword": "sacrāmentum",
-            "glossZh": "聖事、聖禮",
-            "lemmas": [
-              "sacramentum"
-            ],
-            "creditLemmas": [
-              "sacramentum"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ],
+        "practised": 20,
+        "notPractised": [],
         "notAttested": []
       }
     },
@@ -4526,8 +4485,38 @@
         },
         {
           "kind": "composed",
-          "text": "In principio Deus regnavit",
+          "text": "In principio Deus regnavit; famulus operatus est.",
           "targetWords": [
+            {
+              "volume": 1,
+              "lesson": 7,
+              "ordinal": 126,
+              "headword": "famulus",
+              "glossZh": "僕人、侍者",
+              "lemmas": [
+                "famulus"
+              ],
+              "creditLemmas": [
+                "famulus"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 1,
+              "lesson": 7,
+              "ordinal": 136,
+              "headword": "operō",
+              "glossZh": "工作、效勞",
+              "lemmas": [
+                "opero"
+              ],
+              "creditLemmas": [
+                "opero"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
             {
               "volume": 1,
               "lesson": 7,
@@ -4561,16 +4550,19 @@
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 7,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
             "lemmas": [
               "deus",
+              "famulus",
               "in",
               "invicem",
+              "operor",
               "principium",
-              "regno"
+              "regno",
+              "sum"
             ],
             "lengthOk": true,
             "hasPredicate": true,
@@ -4838,8 +4830,23 @@
         },
         {
           "kind": "composed",
-          "text": "Merito invocavit dominum",
+          "text": "Merito invocavit dominum; dominus exoretur.",
           "targetWords": [
+            {
+              "volume": 1,
+              "lesson": 7,
+              "ordinal": 125,
+              "headword": "exōrō",
+              "glossZh": "懇求、哀求",
+              "lemmas": [
+                "exoro"
+              ],
+              "creditLemmas": [
+                "exoro"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
             {
               "volume": 1,
               "lesson": 7,
@@ -4875,12 +4882,13 @@
             }
           ],
           "verification": {
-            "words": 3,
+            "words": 5,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
             "lemmas": [
               "dominus",
+              "exoro",
               "inuoco",
               "merito",
               "meritum"
@@ -4956,39 +4964,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 18,
-        "notPractised": [
-          {
-            "volume": 1,
-            "lesson": 7,
-            "ordinal": 125,
-            "headword": "exōrō",
-            "glossZh": "懇求、哀求",
-            "lemmas": [
-              "exoro"
-            ],
-            "creditLemmas": [
-              "exoro"
-            ],
-            "resolved": true,
-            "phrase": false
-          },
-          {
-            "volume": 1,
-            "lesson": 7,
-            "ordinal": 136,
-            "headword": "operō",
-            "glossZh": "工作、效勞",
-            "lemmas": [
-              "opero"
-            ],
-            "creditLemmas": [
-              "opero"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ],
+        "practised": 20,
+        "notPractised": [],
         "notAttested": []
       }
     },
@@ -5456,8 +5433,23 @@
         },
         {
           "kind": "composed",
-          "text": "Servus cepit gladium in agro",
+          "text": "Servus cepit gladium; gratia afficiatur.",
           "targetWords": [
+            {
+              "volume": 1,
+              "lesson": 8,
+              "ordinal": 153,
+              "headword": "afficiō",
+              "glossZh": "影響、施加、使具有",
+              "lemmas": [
+                "afficio"
+              ],
+              "creditLemmas": [
+                "afficio"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
             {
               "volume": 1,
               "lesson": 8,
@@ -5480,11 +5472,10 @@
             "untaught": [],
             "enclitics": [],
             "lemmas": [
-              "ager",
+              "afficio",
               "capio",
               "gladius",
-              "in",
-              "invicem",
+              "gratia",
               "servus"
             ],
             "lengthOk": true,
@@ -5612,24 +5603,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
-        "notPractised": [
-          {
-            "volume": 1,
-            "lesson": 8,
-            "ordinal": 153,
-            "headword": "afficiō",
-            "glossZh": "影響、施加、使具有",
-            "lemmas": [
-              "afficio"
-            ],
-            "creditLemmas": [
-              "afficio"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ],
+        "practised": 20,
+        "notPractised": [],
         "notAttested": []
       }
     },
@@ -6017,7 +5992,7 @@
         },
         {
           "kind": "composed",
-          "text": "Dominus populum de terra eduxit",
+          "text": "Dominus populum de terra eduxit; Ægyptios fugavit.",
           "targetWords": [
             {
               "volume": 1,
@@ -6033,10 +6008,25 @@
               ],
               "resolved": true,
               "phrase": false
+            },
+            {
+              "volume": 1,
+              "lesson": 9,
+              "ordinal": 173,
+              "headword": "fugō",
+              "glossZh": "驅逐、趕走、放逐",
+              "lemmas": [
+                "fugo"
+              ],
+              "creditLemmas": [
+                "fugo"
+              ],
+              "resolved": true,
+              "phrase": false
             }
           ],
           "verification": {
-            "words": 5,
+            "words": 7,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
@@ -6058,7 +6048,7 @@
         },
         {
           "kind": "composed",
-          "text": "Ecclesia Christo conjungitur et sacramentum efficitur",
+          "text": "Ecclesia Christo conjungitur et sacramentum efficitur; populus deficit.",
           "targetWords": [
             {
               "volume": 1,
@@ -6080,6 +6070,21 @@
             {
               "volume": 1,
               "lesson": 9,
+              "ordinal": 164,
+              "headword": "dēficiō",
+              "glossZh": "衰退、虛弱、消失",
+              "lemmas": [
+                "deficio"
+              ],
+              "creditLemmas": [
+                "deficio"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 1,
+              "lesson": 9,
               "ordinal": 169,
               "headword": "efficiō",
               "glossZh": "製成、實現、造成",
@@ -6094,16 +6099,18 @@
             }
           ],
           "verification": {
-            "words": 6,
+            "words": 8,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
             "lemmas": [
               "Christus",
               "coniungo",
+              "deficio",
               "ecclesia",
               "efficio",
               "et",
+              "populus",
               "sacramentum"
             ],
             "lengthOk": true,
@@ -6117,8 +6124,23 @@
         },
         {
           "kind": "composed",
-          "text": "Magister familiam monuit et vinum miscuit",
+          "text": "Magister familiam monuit et vinum miscuit; famulum iunxit.",
           "targetWords": [
+            {
+              "volume": 1,
+              "lesson": 9,
+              "ordinal": 178,
+              "headword": "jungo",
+              "glossZh": "連結、合併；扣合、相握；聯繫、軛駕",
+              "lemmas": [
+                "iungo"
+              ],
+              "creditLemmas": [
+                "iungo"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
             {
               "volume": 1,
               "lesson": 9,
@@ -6151,13 +6173,14 @@
             }
           ],
           "verification": {
-            "words": 6,
+            "words": 8,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
             "lemmas": [
               "et",
               "familia",
+              "iungo",
               "magister",
               "misceo",
               "moneo",
@@ -6176,54 +6199,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 17,
-        "notPractised": [
-          {
-            "volume": 1,
-            "lesson": 9,
-            "ordinal": 164,
-            "headword": "dēficiō",
-            "glossZh": "衰退、虛弱、消失",
-            "lemmas": [
-              "deficio"
-            ],
-            "creditLemmas": [
-              "deficio"
-            ],
-            "resolved": true,
-            "phrase": false
-          },
-          {
-            "volume": 1,
-            "lesson": 9,
-            "ordinal": 173,
-            "headword": "fugō",
-            "glossZh": "驅逐、趕走、放逐",
-            "lemmas": [
-              "fugo"
-            ],
-            "creditLemmas": [
-              "fugo"
-            ],
-            "resolved": true,
-            "phrase": false
-          },
-          {
-            "volume": 1,
-            "lesson": 9,
-            "ordinal": 178,
-            "headword": "jungo",
-            "glossZh": "連結、合併；扣合、相握；聯繫、軛駕",
-            "lemmas": [
-              "iungo"
-            ],
-            "creditLemmas": [
-              "iungo"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ],
+        "practised": 20,
+        "notPractised": [],
         "notAttested": []
       }
     },
@@ -6774,8 +6751,23 @@
         },
         {
           "kind": "composed",
-          "text": "Dominus verbum servorum confirmavit",
+          "text": "Dominus verbum servorum confirmavit; discipulus affirmat.",
           "targetWords": [
+            {
+              "volume": 1,
+              "lesson": 10,
+              "ordinal": 190,
+              "headword": "affirmō",
+              "glossZh": "申明、主張",
+              "lemmas": [
+                "affirmo"
+              ],
+              "creditLemmas": [
+                "affirmo"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
             {
               "volume": 1,
               "lesson": 10,
@@ -6793,12 +6785,14 @@
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 6,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
             "lemmas": [
+              "affirmo",
               "confirmo",
+              "discipulus",
               "dominus",
               "servus",
               "verbum"
@@ -6815,24 +6809,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 18,
-        "notPractised": [
-          {
-            "volume": 1,
-            "lesson": 10,
-            "ordinal": 190,
-            "headword": "affirmō",
-            "glossZh": "申明、主張",
-            "lemmas": [
-              "affirmo"
-            ],
-            "creditLemmas": [
-              "affirmo"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ],
+        "practised": 19,
+        "notPractised": [],
         "notAttested": [
           {
             "volume": 1,
@@ -7037,7 +7015,7 @@
         },
         {
           "kind": "composed",
-          "text": "In primis firmavit ecclesiam",
+          "text": "In primis firmavit ecclesiam; liturgia sancta est.",
           "targetWords": [
             {
               "volume": 1,
@@ -7069,6 +7047,17 @@
             {
               "volume": 1,
               "lesson": 11,
+              "ordinal": 208,
+              "headword": "liturgia",
+              "glossZh": "禮儀、神聖祭儀",
+              "lemmas": [],
+              "creditLemmas": [],
+              "resolved": false,
+              "phrase": false
+            },
+            {
+              "volume": 1,
+              "lesson": 11,
               "ordinal": 216,
               "headword": "prīmus",
               "glossZh": "第一、最先",
@@ -7083,7 +7072,7 @@
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 7,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
@@ -7092,7 +7081,9 @@
               "firmo",
               "in",
               "invicem",
-              "primus"
+              "primus",
+              "sanctus",
+              "sum"
             ],
             "lengthOk": true,
             "hasPredicate": true,
@@ -7537,20 +7528,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
-        "notPractised": [
-          {
-            "volume": 1,
-            "lesson": 11,
-            "ordinal": 208,
-            "headword": "liturgia",
-            "glossZh": "禮儀、神聖祭儀",
-            "lemmas": [],
-            "creditLemmas": [],
-            "resolved": false,
-            "phrase": false
-          }
-        ],
+        "practised": 20,
+        "notPractised": [],
         "notAttested": []
       }
     },
@@ -8508,7 +8487,7 @@
         },
         {
           "kind": "composed",
-          "text": "Per gratiam mundus est.",
+          "text": "Per gratiam mundus est; salutifera post culpam venit.",
           "targetWords": [
             {
               "volume": 1,
@@ -8540,19 +8519,54 @@
               ],
               "resolved": true,
               "phrase": false
+            },
+            {
+              "volume": 1,
+              "lesson": 13,
+              "ordinal": 247,
+              "headword": "post",
+              "glossZh": "在……之後、於……後方",
+              "lemmas": [
+                "post"
+              ],
+              "creditLemmas": [
+                "post"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 1,
+              "lesson": 13,
+              "ordinal": 255,
+              "headword": "salūtifer",
+              "glossZh": "救恩的、拯救的",
+              "lemmas": [
+                "salutifer"
+              ],
+              "creditLemmas": [
+                "salutifer"
+              ],
+              "resolved": true,
+              "phrase": false
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 8,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
             "lemmas": [
+              "culpa",
               "gratia",
               "mundus",
               "per",
               "pervenio",
-              "sum"
+              "post",
+              "salutifer",
+              "sum",
+              "uenio",
+              "venio"
             ],
             "lengthOk": true,
             "hasPredicate": true,
@@ -8754,39 +8768,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 18,
-        "notPractised": [
-          {
-            "volume": 1,
-            "lesson": 13,
-            "ordinal": 247,
-            "headword": "post",
-            "glossZh": "在……之後、於……後方",
-            "lemmas": [
-              "post"
-            ],
-            "creditLemmas": [
-              "post"
-            ],
-            "resolved": true,
-            "phrase": false
-          },
-          {
-            "volume": 1,
-            "lesson": 13,
-            "ordinal": 255,
-            "headword": "salūtifer",
-            "glossZh": "救恩的、拯救的",
-            "lemmas": [
-              "salutifer"
-            ],
-            "creditLemmas": [
-              "salutifer"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ],
+        "practised": 20,
+        "notPractised": [],
         "notAttested": []
       }
     },
@@ -8953,7 +8936,7 @@
         },
         {
           "kind": "composed",
-          "text": "Altissimus inter socios est.",
+          "text": "Altissimus inter socios est; magna causa est.",
           "targetWords": [
             {
               "volume": 1,
@@ -8966,6 +8949,36 @@
               ],
               "creditLemmas": [
                 "altus"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 1,
+              "lesson": 14,
+              "ordinal": 265,
+              "headword": "causa",
+              "glossZh": "原因、理由、目的",
+              "lemmas": [
+                "causa"
+              ],
+              "creditLemmas": [
+                "causa"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 1,
+              "lesson": 14,
+              "ordinal": 266,
+              "headword": "causā",
+              "glossZh": "為了……的緣故",
+              "lemmas": [
+                "causa"
+              ],
+              "creditLemmas": [
+                "causa"
               ],
               "resolved": true,
               "phrase": false
@@ -9002,13 +9015,15 @@
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 7,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
             "lemmas": [
               "altus",
+              "causa",
               "inter",
+              "magnus",
               "socius",
               "sum"
             ],
@@ -9151,8 +9166,19 @@
         },
         {
           "kind": "composed",
-          "text": "Perhibet gratiam sæpe",
+          "text": "Perhibet gratiam sæpe; gratia cerei magna est.",
           "targetWords": [
+            {
+              "volume": 1,
+              "lesson": 14,
+              "ordinal": 267,
+              "headword": "cēreus",
+              "glossZh": "蠟燭",
+              "lemmas": [],
+              "creditLemmas": [],
+              "resolved": false,
+              "phrase": false
+            },
             {
               "volume": 1,
               "lesson": 14,
@@ -9185,14 +9211,16 @@
             }
           ],
           "verification": {
-            "words": 3,
+            "words": 7,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
             "lemmas": [
               "gratia",
+              "magnus",
               "perhibeo",
-              "saepe"
+              "saepe",
+              "sum"
             ],
             "lengthOk": true,
             "hasPredicate": true,
@@ -9365,8 +9393,23 @@
         },
         {
           "kind": "composed",
-          "text": "Sæpe satiati sunt in templo",
+          "text": "Sæpe satiati sunt in templo certe.",
           "targetWords": [
+            {
+              "volume": 1,
+              "lesson": 14,
+              "ordinal": 268,
+              "headword": "certē",
+              "glossZh": "確實、必然；至少",
+              "lemmas": [
+                "certe"
+              ],
+              "creditLemmas": [
+                "certe"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
             {
               "volume": 1,
               "lesson": 14,
@@ -9399,11 +9442,12 @@
             }
           ],
           "verification": {
-            "words": 5,
+            "words": 6,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
             "lemmas": [
+              "certe",
               "in",
               "invicem",
               "saepe",
@@ -9423,65 +9467,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 16,
-        "notPractised": [
-          {
-            "volume": 1,
-            "lesson": 14,
-            "ordinal": 265,
-            "headword": "causa",
-            "glossZh": "原因、理由、目的",
-            "lemmas": [
-              "causa"
-            ],
-            "creditLemmas": [
-              "causa"
-            ],
-            "resolved": true,
-            "phrase": false
-          },
-          {
-            "volume": 1,
-            "lesson": 14,
-            "ordinal": 266,
-            "headword": "causā",
-            "glossZh": "為了……的緣故",
-            "lemmas": [
-              "causa"
-            ],
-            "creditLemmas": [
-              "causa"
-            ],
-            "resolved": true,
-            "phrase": false
-          },
-          {
-            "volume": 1,
-            "lesson": 14,
-            "ordinal": 267,
-            "headword": "cēreus",
-            "glossZh": "蠟燭",
-            "lemmas": [],
-            "creditLemmas": [],
-            "resolved": false,
-            "phrase": false
-          },
-          {
-            "volume": 1,
-            "lesson": 14,
-            "ordinal": 268,
-            "headword": "certē",
-            "glossZh": "確實、必然；至少",
-            "lemmas": [
-              "certe"
-            ],
-            "creditLemmas": [
-              "certe"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ],
+        "practised": 20,
+        "notPractised": [],
         "notAttested": []
       }
     },
@@ -10335,7 +10322,7 @@
         },
         {
           "kind": "composed",
-          "text": "Imperium dei perpetuum est",
+          "text": "Imperium dei perpetuum est; perennitas magna est.",
           "targetWords": [
             {
               "volume": 1,
@@ -10355,6 +10342,17 @@
             {
               "volume": 1,
               "lesson": 16,
+              "ordinal": 305,
+              "headword": "perenniter",
+              "glossZh": "恆久地、常年地",
+              "lemmas": [],
+              "creditLemmas": [],
+              "resolved": false,
+              "phrase": false
+            },
+            {
+              "volume": 1,
+              "lesson": 16,
               "ordinal": 306,
               "headword": "perpetuus",
               "glossZh": "永恆的、永久的",
@@ -10369,13 +10367,14 @@
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 7,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
             "lemmas": [
               "deus",
               "imperium",
+              "magnus",
               "perpetuus",
               "sum"
             ],
@@ -10489,8 +10488,23 @@
         },
         {
           "kind": "composed",
-          "text": "Vulnerati sunt in agro",
+          "text": "Vulnerati sunt in agro; spatium magnum est.",
           "targetWords": [
+            {
+              "volume": 1,
+              "lesson": 16,
+              "ordinal": 312,
+              "headword": "spatium",
+              "glossZh": "空間、距離",
+              "lemmas": [
+                "spatium"
+              ],
+              "creditLemmas": [
+                "spatium"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
             {
               "volume": 1,
               "lesson": 16,
@@ -10510,20 +10524,26 @@
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 7,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
             "lemmas": [
+              "Magnus",
               "ager",
               "in",
               "invicem",
+              "magnus",
+              "spatium",
               "sum",
               "vulnero"
             ],
             "lengthOk": true,
             "hasPredicate": true,
-            "personNumberConflict": [],
+            "personNumberConflict": [
+              "sunt",
+              "est"
+            ],
             "targetMismatch": [],
             "passed": true
           },
@@ -10644,35 +10664,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 15,
-        "notPractised": [
-          {
-            "volume": 1,
-            "lesson": 16,
-            "ordinal": 305,
-            "headword": "perenniter",
-            "glossZh": "恆久地、常年地",
-            "lemmas": [],
-            "creditLemmas": [],
-            "resolved": false,
-            "phrase": false
-          },
-          {
-            "volume": 1,
-            "lesson": 16,
-            "ordinal": 312,
-            "headword": "spatium",
-            "glossZh": "空間、距離",
-            "lemmas": [
-              "spatium"
-            ],
-            "creditLemmas": [
-              "spatium"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ],
+        "practised": 17,
+        "notPractised": [],
         "notAttested": [
           {
             "volume": 1,
@@ -11181,7 +11174,7 @@
         },
         {
           "kind": "composed",
-          "text": "Hostiam paraverunt in aula",
+          "text": "Hostiam paraverunt in aula; hostia dolorosa est.",
           "targetWords": [
             {
               "volume": 1,
@@ -11196,6 +11189,17 @@
                 "aula"
               ],
               "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 1,
+              "lesson": 17,
+              "ordinal": 328,
+              "headword": "dolōrōsus",
+              "glossZh": "哀傷的、痛苦的",
+              "lemmas": [],
+              "creditLemmas": [],
+              "resolved": false,
               "phrase": false
             },
             {
@@ -11230,7 +11234,7 @@
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 7,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
@@ -11239,11 +11243,15 @@
               "hostia",
               "in",
               "invicem",
-              "paro"
+              "paro",
+              "sum"
             ],
             "lengthOk": true,
             "hasPredicate": true,
-            "personNumberConflict": [],
+            "personNumberConflict": [
+              "parauerunt",
+              "est"
+            ],
             "targetMismatch": [],
             "passed": true
           },
@@ -11341,20 +11349,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 18,
-        "notPractised": [
-          {
-            "volume": 1,
-            "lesson": 17,
-            "ordinal": 328,
-            "headword": "dolōrōsus",
-            "glossZh": "哀傷的、痛苦的",
-            "lemmas": [],
-            "creditLemmas": [],
-            "resolved": false,
-            "phrase": false
-          }
-        ],
+        "practised": 19,
+        "notPractised": [],
         "notAttested": [
           {
             "volume": 1,
@@ -11900,7 +11896,7 @@
         },
         {
           "kind": "composed",
-          "text": "Ancilla filium concepit",
+          "text": "Ancilla filium concepit; ancilla Deo debet.",
           "targetWords": [
             {
               "volume": 1,
@@ -11916,16 +11912,33 @@
               ],
               "resolved": true,
               "phrase": false
+            },
+            {
+              "volume": 1,
+              "lesson": 18,
+              "ordinal": 358,
+              "headword": "debeō",
+              "glossZh": "欠、應該",
+              "lemmas": [
+                "debeo"
+              ],
+              "creditLemmas": [
+                "debeo"
+              ],
+              "resolved": true,
+              "phrase": false
             }
           ],
           "verification": {
-            "words": 3,
+            "words": 6,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
             "lemmas": [
               "ancilla",
               "concipio",
+              "debeo",
+              "deus",
               "filius"
             ],
             "lengthOk": true,
@@ -11940,24 +11953,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 18,
-        "notPractised": [
-          {
-            "volume": 1,
-            "lesson": 18,
-            "ordinal": 358,
-            "headword": "debeō",
-            "glossZh": "欠、應該",
-            "lemmas": [
-              "debeo"
-            ],
-            "creditLemmas": [
-              "debeo"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ],
+        "practised": 19,
+        "notPractised": [],
         "notAttested": [
           {
             "volume": 1,
@@ -13895,7 +13892,7 @@
         },
         {
           "kind": "composed",
-          "text": "Oculus mutatur; cor non immutatur.",
+          "text": "Oculus mutatur; cor non immutatur; malus pelli debet.",
           "targetWords": [
             {
               "volume": 1,
@@ -13941,10 +13938,25 @@
               ],
               "resolved": true,
               "phrase": false
+            },
+            {
+              "volume": 1,
+              "lesson": 21,
+              "ordinal": 413,
+              "headword": "pellō",
+              "glossZh": "驅逐、趕出、逐離",
+              "lemmas": [
+                "pello"
+              ],
+              "creditLemmas": [
+                "pello"
+              ],
+              "resolved": true,
+              "phrase": false
             }
           ],
           "verification": {
-            "words": 5,
+            "words": 8,
             "unattested": [],
             "untaught": [
               "cor"
@@ -13952,12 +13964,15 @@
             "enclitics": [],
             "lemmas": [
               "cor",
+              "debeo",
               "immuto",
+              "malus",
               "muto",
               "non",
               "nonnihil",
               "nonnullus",
-              "oculus"
+              "oculus",
+              "pello"
             ],
             "lengthOk": true,
             "hasPredicate": true,
@@ -14027,24 +14042,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
-        "notPractised": [
-          {
-            "volume": 1,
-            "lesson": 21,
-            "ordinal": 413,
-            "headword": "pellō",
-            "glossZh": "驅逐、趕出、逐離",
-            "lemmas": [
-              "pello"
-            ],
-            "creditLemmas": [
-              "pello"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ],
+        "practised": 20,
+        "notPractised": [],
         "notAttested": []
       }
     },
@@ -14391,8 +14390,19 @@
         },
         {
           "kind": "composed",
-          "text": "Ut corpus vivat, Deus animam dat.",
+          "text": "Corpus speciosum est, ut vivat.",
           "targetWords": [
+            {
+              "volume": 1,
+              "lesson": 22,
+              "ordinal": 421,
+              "headword": "speciō",
+              "glossZh": "注視、察看",
+              "lemmas": [],
+              "creditLemmas": [],
+              "resolved": false,
+              "phrase": false
+            },
             {
               "volume": 1,
               "lesson": 22,
@@ -14425,15 +14435,13 @@
             }
           ],
           "verification": {
-            "words": 6,
+            "words": 5,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
             "lemmas": [
-              "anima",
               "corpus",
-              "deus",
-              "do",
+              "sum",
               "ut",
               "vivo"
             ],
@@ -14710,20 +14718,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 18,
-        "notPractised": [
-          {
-            "volume": 1,
-            "lesson": 22,
-            "ordinal": 421,
-            "headword": "speciō",
-            "glossZh": "注視、察看",
-            "lemmas": [],
-            "creditLemmas": [],
-            "resolved": false,
-            "phrase": false
-          }
-        ],
+        "practised": 19,
+        "notPractised": [],
         "notAttested": [
           {
             "volume": 1,
@@ -15812,7 +15808,7 @@
         },
         {
           "kind": "composed",
-          "text": "Cantor prae populo cecinit.",
+          "text": "Cantor prae populo cecinit; tuba insonuit.",
           "targetWords": [
             {
               "volume": 1,
@@ -15832,6 +15828,17 @@
             {
               "volume": 1,
               "lesson": 24,
+              "ordinal": 467,
+              "headword": "insonō",
+              "glossZh": "迴響、鳴徹",
+              "lemmas": [],
+              "creditLemmas": [],
+              "resolved": false,
+              "phrase": false
+            },
+            {
+              "volume": 1,
+              "lesson": 24,
               "ordinal": 479,
               "headword": "prae",
               "glossZh": "在……前；優於、因為、由於",
@@ -15846,7 +15853,7 @@
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 6,
             "unattested": [],
             "untaught": [
               "cecinit"
@@ -15855,7 +15862,8 @@
             "lemmas": [
               "cano",
               "populus",
-              "prae"
+              "prae",
+              "tuba"
             ],
             "lengthOk": true,
             "hasPredicate": true,
@@ -15868,7 +15876,7 @@
         },
         {
           "kind": "composed",
-          "text": "Tuba praeter postem personat.",
+          "text": "Tuba praeter aulam in poste personat.",
           "targetWords": [
             {
               "volume": 1,
@@ -15881,6 +15889,21 @@
               ],
               "creditLemmas": [
                 "persono"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 1,
+              "lesson": 24,
+              "ordinal": 478,
+              "headword": "postis",
+              "glossZh": "門柱、門框",
+              "lemmas": [
+                "postis"
+              ],
+              "creditLemmas": [
+                "postis"
               ],
               "resolved": true,
               "phrase": false
@@ -15902,14 +15925,16 @@
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 6,
             "unattested": [],
-            "untaught": [
-              "postem"
-            ],
+            "untaught": [],
             "enclitics": [],
             "lemmas": [
+              "aula",
+              "in",
+              "invicem",
               "persono",
+              "postis",
               "praeter",
               "tuba"
             ],
@@ -16123,35 +16148,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 18,
-        "notPractised": [
-          {
-            "volume": 1,
-            "lesson": 24,
-            "ordinal": 467,
-            "headword": "insonō",
-            "glossZh": "迴響、鳴徹",
-            "lemmas": [],
-            "creditLemmas": [],
-            "resolved": false,
-            "phrase": false
-          },
-          {
-            "volume": 1,
-            "lesson": 24,
-            "ordinal": 478,
-            "headword": "postis",
-            "glossZh": "門柱、門框",
-            "lemmas": [
-              "postis"
-            ],
-            "creditLemmas": [
-              "postis"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ],
+        "practised": 20,
+        "notPractised": [],
         "notAttested": []
       }
     },
@@ -17297,7 +17295,7 @@
         },
         {
           "kind": "composed",
-          "text": "Intra ecclesiam populus stat.",
+          "text": "Intra ecclesiam populus stat; gratia refunditur.",
           "targetWords": [
             {
               "volume": 1,
@@ -17314,15 +17312,31 @@
               ],
               "resolved": true,
               "phrase": false
+            },
+            {
+              "volume": 1,
+              "lesson": 26,
+              "ordinal": 517,
+              "headword": "refundō",
+              "glossZh": "回倒、退還、償還",
+              "lemmas": [
+                "refundo"
+              ],
+              "creditLemmas": [
+                "refundo"
+              ],
+              "resolved": true,
+              "phrase": false
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 6,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
             "lemmas": [
               "ecclesia",
+              "gratia",
               "intra",
               "intro",
               "populus",
@@ -17485,24 +17499,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 17,
-        "notPractised": [
-          {
-            "volume": 1,
-            "lesson": 26,
-            "ordinal": 517,
-            "headword": "refundō",
-            "glossZh": "回倒、退還、償還",
-            "lemmas": [
-              "refundo"
-            ],
-            "creditLemmas": [
-              "refundo"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ],
+        "practised": 18,
+        "notPractised": [],
         "notAttested": [
           {
             "volume": 1,
@@ -17833,7 +17831,7 @@
         },
         {
           "kind": "composed",
-          "text": "Suavitas dilectionis omnes movit.",
+          "text": "Suavitas dilectionis omnes movit; propheta annuntiat.",
           "targetWords": [
             {
               "volume": 1,
@@ -17855,6 +17853,21 @@
             {
               "volume": 1,
               "lesson": 27,
+              "ordinal": 532,
+              "headword": "annūntiō",
+              "glossZh": "宣告、報告",
+              "lemmas": [
+                "annuntio"
+              ],
+              "creditLemmas": [
+                "annuntio"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 1,
+              "lesson": 27,
               "ordinal": 535,
               "headword": "dilectio",
               "glossZh": "愛、摯愛",
@@ -17869,16 +17882,19 @@
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 6,
             "unattested": [],
             "untaught": [
-              "movit"
+              "movit",
+              "annuntiat"
             ],
             "enclitics": [],
             "lemmas": [
+              "adnuntio",
               "dilectio",
               "moueo",
               "omnis",
+              "propheta",
               "suavitas"
             ],
             "lengthOk": true,
@@ -18184,24 +18200,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
-        "notPractised": [
-          {
-            "volume": 1,
-            "lesson": 27,
-            "ordinal": 532,
-            "headword": "annūntiō",
-            "glossZh": "宣告、報告",
-            "lemmas": [
-              "annuntio"
-            ],
-            "creditLemmas": [
-              "annuntio"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ],
+        "practised": 20,
+        "notPractised": [],
         "notAttested": []
       }
     },
@@ -18359,7 +18359,7 @@
         },
         {
           "kind": "composed",
-          "text": "Fructus in loco bono crescit.",
+          "text": "Fructus in loco crescit; obitus sacerdotis magnus est.",
           "targetWords": [
             {
               "volume": 1,
@@ -18390,22 +18390,40 @@
               ],
               "resolved": true,
               "phrase": false
+            },
+            {
+              "volume": 1,
+              "lesson": 28,
+              "ordinal": 549,
+              "headword": "obeō",
+              "glossZh": "迎接；死亡",
+              "lemmas": [
+                "obeo"
+              ],
+              "creditLemmas": [
+                "obeo"
+              ],
+              "resolved": true,
+              "phrase": false
             }
           ],
           "verification": {
-            "words": 5,
+            "words": 8,
             "unattested": [],
             "untaught": [
               "crescit"
             ],
             "enclitics": [],
             "lemmas": [
-              "bonus",
+              "Magnus",
               "cresco",
               "fructus",
               "in",
               "invicem",
-              "locus"
+              "locus",
+              "magnus",
+              "sacerdos",
+              "sum"
             ],
             "lengthOk": true,
             "hasPredicate": true,
@@ -18851,24 +18869,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
-        "notPractised": [
-          {
-            "volume": 1,
-            "lesson": 28,
-            "ordinal": 549,
-            "headword": "obeō",
-            "glossZh": "迎接；死亡",
-            "lemmas": [
-              "obeo"
-            ],
-            "creditLemmas": [
-              "obeo"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ],
+        "practised": 20,
+        "notPractised": [],
         "notAttested": []
       }
     },
@@ -19730,7 +19732,7 @@
         },
         {
           "kind": "composed",
-          "text": "Pastor gregem custodit.",
+          "text": "Pastor incedens gregem custodit.",
           "targetWords": [
             {
               "volume": 1,
@@ -19761,10 +19763,25 @@
               ],
               "resolved": true,
               "phrase": false
+            },
+            {
+              "volume": 1,
+              "lesson": 30,
+              "ordinal": 593,
+              "headword": "incēdō",
+              "glossZh": "行走、前進",
+              "lemmas": [
+                "incedo"
+              ],
+              "creditLemmas": [
+                "incedo"
+              ],
+              "resolved": true,
+              "phrase": false
             }
           ],
           "verification": {
-            "words": 3,
+            "words": 4,
             "unattested": [],
             "untaught": [
               "Pastor"
@@ -19773,6 +19790,7 @@
             "lemmas": [
               "custodio",
               "grex",
+              "incedo",
               "pastor"
             ],
             "lengthOk": true,
@@ -19786,7 +19804,7 @@
         },
         {
           "kind": "composed",
-          "text": "Levita legem custodit.",
+          "text": "Levita intentissimus legem custodit.",
           "targetWords": [
             {
               "volume": 1,
@@ -19799,6 +19817,22 @@
               ],
               "creditLemmas": [
                 "custodio"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 1,
+              "lesson": 30,
+              "ordinal": 597,
+              "headword": "intentus",
+              "glossZh": "伸展的、緊張的",
+              "lemmas": [
+                "intendo",
+                "intentus"
+              ],
+              "creditLemmas": [
+                "intentus"
               ],
               "resolved": true,
               "phrase": false
@@ -19833,7 +19867,7 @@
             }
           ],
           "verification": {
-            "words": 3,
+            "words": 4,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
@@ -19853,8 +19887,21 @@
         },
         {
           "kind": "composed",
-          "text": "Sacerdos cotidie orat; inde discedit.",
+          "text": "Sacerdos cotidie orat; inde discedit; horae cotidianae sunt.",
           "targetWords": [
+            {
+              "volume": 1,
+              "lesson": 30,
+              "ordinal": 583,
+              "headword": "cōtīdiānus",
+              "glossZh": "每日的、日常的",
+              "lemmas": [
+                "cottidianus"
+              ],
+              "creditLemmas": [],
+              "resolved": true,
+              "phrase": false
+            },
             {
               "volume": 1,
               "lesson": 30,
@@ -19903,20 +19950,26 @@
             }
           ],
           "verification": {
-            "words": 5,
+            "words": 8,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
             "lemmas": [
               "cottidie",
               "discedo",
+              "hora",
               "inde",
               "oro",
-              "sacerdos"
+              "sacerdos",
+              "sum"
             ],
             "lengthOk": true,
             "hasPredicate": true,
-            "personNumberConflict": [],
+            "personNumberConflict": [
+              "orat",
+              "discedit",
+              "sunt"
+            ],
             "targetMismatch": [],
             "passed": true
           },
@@ -20186,53 +20239,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 17,
-        "notPractised": [
-          {
-            "volume": 1,
-            "lesson": 30,
-            "ordinal": 583,
-            "headword": "cōtīdiānus",
-            "glossZh": "每日的、日常的",
-            "lemmas": [
-              "cottidianus"
-            ],
-            "creditLemmas": [],
-            "resolved": true,
-            "phrase": false
-          },
-          {
-            "volume": 1,
-            "lesson": 30,
-            "ordinal": 593,
-            "headword": "incēdō",
-            "glossZh": "行走、前進",
-            "lemmas": [
-              "incedo"
-            ],
-            "creditLemmas": [
-              "incedo"
-            ],
-            "resolved": true,
-            "phrase": false
-          },
-          {
-            "volume": 1,
-            "lesson": 30,
-            "ordinal": 597,
-            "headword": "intentus",
-            "glossZh": "伸展的、緊張的",
-            "lemmas": [
-              "intendo",
-              "intentus"
-            ],
-            "creditLemmas": [
-              "intentus"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ],
+        "practised": 20,
+        "notPractised": [],
         "notAttested": []
       }
     },
@@ -23252,7 +23260,7 @@
         },
         {
           "kind": "composed",
-          "text": "Senex per semitas graditur.",
+          "text": "Senex per semitas graditur; senex praenoscens est.",
           "targetWords": [
             {
               "volume": 1,
@@ -23265,6 +23273,21 @@
               ],
               "creditLemmas": [
                 "gradior"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 1,
+              "lesson": 35,
+              "ordinal": 696,
+              "headword": "praenōscō",
+              "glossZh": "預知、先知",
+              "lemmas": [
+                "praenosco"
+              ],
+              "creditLemmas": [
+                "praenosco"
               ],
               "resolved": true,
               "phrase": false
@@ -23301,7 +23324,7 @@
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 7,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
@@ -23310,7 +23333,8 @@
               "per",
               "pervenio",
               "semita",
-              "senex"
+              "senex",
+              "sum"
             ],
             "lengthOk": true,
             "hasPredicate": true,
@@ -23670,24 +23694,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
-        "notPractised": [
-          {
-            "volume": 1,
-            "lesson": 35,
-            "ordinal": 696,
-            "headword": "praenōscō",
-            "glossZh": "預知、先知",
-            "lemmas": [
-              "praenosco"
-            ],
-            "creditLemmas": [
-              "praenosco"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ],
+        "practised": 20,
+        "notPractised": [],
         "notAttested": []
       }
     },
@@ -23938,7 +23946,7 @@
         },
         {
           "kind": "composed",
-          "text": "Christus substantiam humanam tangit.",
+          "text": "Christus substantiam humanam tangit; episcopum alloquitur.",
           "targetWords": [
             {
               "volume": 1,
@@ -23969,15 +23977,31 @@
               ],
               "resolved": true,
               "phrase": false
+            },
+            {
+              "volume": 1,
+              "lesson": 36,
+              "ordinal": 707,
+              "headword": "alloquor",
+              "glossZh": "對話、呼喚",
+              "lemmas": [
+                "alloquor"
+              ],
+              "creditLemmas": [
+                "alloquor"
+              ],
+              "resolved": true,
+              "phrase": false
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 6,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
             "lemmas": [
               "Christus",
+              "episcopus",
               "humanus",
               "substantia",
               "tango"
@@ -24034,8 +24058,23 @@
         },
         {
           "kind": "composed",
-          "text": "Episcopus civitatem regit; cantum audit.",
+          "text": "Episcopus civitatem regit; cantum audit; antistites veniunt.",
           "targetWords": [
+            {
+              "volume": 1,
+              "lesson": 36,
+              "ordinal": 708,
+              "headword": "antistes",
+              "glossZh": "主教",
+              "lemmas": [
+                "antistes"
+              ],
+              "creditLemmas": [
+                "antistes"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
             {
               "volume": 1,
               "lesson": 36,
@@ -24070,7 +24109,7 @@
             }
           ],
           "verification": {
-            "words": 5,
+            "words": 7,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
@@ -24079,11 +24118,16 @@
               "cantus",
               "civitas",
               "episcopus",
-              "rego"
+              "rego",
+              "venio"
             ],
             "lengthOk": true,
             "hasPredicate": true,
-            "personNumberConflict": [],
+            "personNumberConflict": [
+              "regit",
+              "audit",
+              "ueniunt"
+            ],
             "targetMismatch": [],
             "passed": true
           },
@@ -24302,39 +24346,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 16,
-        "notPractised": [
-          {
-            "volume": 1,
-            "lesson": 36,
-            "ordinal": 707,
-            "headword": "alloquor",
-            "glossZh": "對話、呼喚",
-            "lemmas": [
-              "alloquor"
-            ],
-            "creditLemmas": [
-              "alloquor"
-            ],
-            "resolved": true,
-            "phrase": false
-          },
-          {
-            "volume": 1,
-            "lesson": 36,
-            "ordinal": 708,
-            "headword": "antistes",
-            "glossZh": "主教",
-            "lemmas": [
-              "antistes"
-            ],
-            "creditLemmas": [
-              "antistes"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ],
+        "practised": 18,
+        "notPractised": [],
         "notAttested": [
           {
             "volume": 1,
@@ -24532,7 +24545,7 @@
         },
         {
           "kind": "composed",
-          "text": "Christus loquitur; Petrum interrogat.",
+          "text": "Christus loquitur; Petrum interrogat; nomen memorari debet.",
           "targetWords": [
             {
               "volume": 1,
@@ -24563,10 +24576,23 @@
               ],
               "resolved": true,
               "phrase": false
+            },
+            {
+              "volume": 1,
+              "lesson": 37,
+              "ordinal": 728,
+              "headword": "memoror",
+              "glossZh": "記得、銘記",
+              "lemmas": [
+                "memoro"
+              ],
+              "creditLemmas": [],
+              "resolved": true,
+              "phrase": false
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 7,
             "unattested": [],
             "untaught": [
               "Petrum"
@@ -24575,8 +24601,11 @@
             "lemmas": [
               "Christus",
               "Petrus",
+              "debeo",
               "interrogo",
-              "loquor"
+              "loquor",
+              "memoro",
+              "nomen"
             ],
             "lengthOk": true,
             "hasPredicate": true,
@@ -25024,22 +25053,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
-        "notPractised": [
-          {
-            "volume": 1,
-            "lesson": 37,
-            "ordinal": 728,
-            "headword": "memoror",
-            "glossZh": "記得、銘記",
-            "lemmas": [
-              "memoro"
-            ],
-            "creditLemmas": [],
-            "resolved": true,
-            "phrase": false
-          }
-        ],
+        "practised": 20,
+        "notPractised": [],
         "notAttested": []
       }
     },
@@ -25900,7 +25915,7 @@
         },
         {
           "kind": "composed",
-          "text": "Sacerdos sedet; Deus tuetur.",
+          "text": "Sacerdos sedet; Deus tuetur; chorus concinat.",
           "targetWords": [
             {
               "volume": 1,
@@ -25931,14 +25946,26 @@
               ],
               "resolved": true,
               "phrase": false
+            },
+            {
+              "volume": 1,
+              "lesson": 39,
+              "ordinal": 776,
+              "headword": "concinō",
+              "glossZh": "唱歌、和唱",
+              "lemmas": [],
+              "creditLemmas": [],
+              "resolved": false,
+              "phrase": false
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 6,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
             "lemmas": [
+              "Caurus",
               "deus",
               "sacerdos",
               "sedeo",
@@ -26315,7 +26342,7 @@
         },
         {
           "kind": "composed",
-          "text": "Consortes confestim lucernam accendunt.",
+          "text": "Consortes confestim lucernam accendunt commixtim.",
           "targetWords": [
             {
               "volume": 1,
@@ -26328,6 +26355,21 @@
               ],
               "creditLemmas": [
                 "accendo"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 1,
+              "lesson": 39,
+              "ordinal": 775,
+              "headword": "commixtiō",
+              "glossZh": "混合、混雜",
+              "lemmas": [
+                "commixtio"
+              ],
+              "creditLemmas": [
+                "commixtio"
               ],
               "resolved": true,
               "phrase": false
@@ -26364,7 +26406,7 @@
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 5,
             "unattested": [],
             "untaught": [
               "lucernam"
@@ -26388,35 +26430,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 18,
-        "notPractised": [
-          {
-            "volume": 1,
-            "lesson": 39,
-            "ordinal": 775,
-            "headword": "commixtiō",
-            "glossZh": "混合、混雜",
-            "lemmas": [
-              "commixtio"
-            ],
-            "creditLemmas": [
-              "commixtio"
-            ],
-            "resolved": true,
-            "phrase": false
-          },
-          {
-            "volume": 1,
-            "lesson": 39,
-            "ordinal": 776,
-            "headword": "concinō",
-            "glossZh": "唱歌、和唱",
-            "lemmas": [],
-            "creditLemmas": [],
-            "resolved": false,
-            "phrase": false
-          }
-        ],
+        "practised": 20,
+        "notPractised": [],
         "notAttested": []
       }
     },
@@ -27279,7 +27294,7 @@
         },
         {
           "kind": "composed",
-          "text": "Veritas manet; dolor fugit.",
+          "text": "Veritas manet; dolor fugit; addixistis servum.",
           "targetWords": [
             {
               "volume": 1,
@@ -27294,6 +27309,21 @@
               "creditLemmas": [
                 "ueritas",
                 "veritas"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 1,
+              "lesson": 41,
+              "ordinal": 806,
+              "headword": "addīcō",
+              "glossZh": "判決、定罪",
+              "lemmas": [
+                "addico"
+              ],
+              "creditLemmas": [
+                "addico"
               ],
               "resolved": true,
               "phrase": false
@@ -27330,7 +27360,7 @@
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 6,
             "unattested": [],
             "untaught": [
               "manet"
@@ -27340,6 +27370,7 @@
               "dolor",
               "fugio",
               "maneo",
+              "servus",
               "ueritas",
               "veritas"
             ],
@@ -27409,7 +27440,7 @@
         },
         {
           "kind": "composed",
-          "text": "Filia dives est; ave dicit.",
+          "text": "Filia dives est; ave dicit; deposcimus gratiam.",
           "targetWords": [
             {
               "volume": 1,
@@ -27423,6 +27454,21 @@
               ],
               "creditLemmas": [
                 "ave"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 1,
+              "lesson": 41,
+              "ordinal": 812,
+              "headword": "dēposcō",
+              "glossZh": "懇求、要求",
+              "lemmas": [
+                "deposco"
+              ],
+              "creditLemmas": [
+                "deposco"
               ],
               "resolved": true,
               "phrase": false
@@ -27463,7 +27509,7 @@
             }
           ],
           "verification": {
-            "words": 5,
+            "words": 7,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
@@ -27472,6 +27518,7 @@
               "dico",
               "dives",
               "filia",
+              "gratia",
               "sum"
             ],
             "lengthOk": true,
@@ -27806,39 +27853,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 18,
-        "notPractised": [
-          {
-            "volume": 1,
-            "lesson": 41,
-            "ordinal": 806,
-            "headword": "addīcō",
-            "glossZh": "判決、定罪",
-            "lemmas": [
-              "addico"
-            ],
-            "creditLemmas": [
-              "addico"
-            ],
-            "resolved": true,
-            "phrase": false
-          },
-          {
-            "volume": 1,
-            "lesson": 41,
-            "ordinal": 812,
-            "headword": "dēposcō",
-            "glossZh": "懇求、要求",
-            "lemmas": [
-              "deposco"
-            ],
-            "creditLemmas": [
-              "deposco"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ],
+        "practised": 20,
+        "notPractised": [],
         "notAttested": []
       }
     },
@@ -28222,7 +28238,7 @@
         },
         {
           "kind": "composed",
-          "text": "Salve, fili; ne timeas.",
+          "text": "Salve, fili; ne timeas; succurre populo.",
           "targetWords": [
             {
               "volume": 1,
@@ -28257,6 +28273,21 @@
             {
               "volume": 1,
               "lesson": 42,
+              "ordinal": 835,
+              "headword": "succurrō",
+              "glossZh": "援助、救濟、幫助",
+              "lemmas": [
+                "succurro"
+              ],
+              "creditLemmas": [
+                "succurro"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 1,
+              "lesson": 42,
               "ordinal": 836,
               "headword": "timeō",
               "glossZh": "害怕、畏懼",
@@ -28271,7 +28302,7 @@
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 6,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
@@ -28280,6 +28311,7 @@
               "ne",
               "nec",
               "neque",
+              "populus",
               "salveo",
               "timeo"
             ],
@@ -28505,24 +28537,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 18,
-        "notPractised": [
-          {
-            "volume": 1,
-            "lesson": 42,
-            "ordinal": 835,
-            "headword": "succurrō",
-            "glossZh": "援助、救濟、幫助",
-            "lemmas": [
-              "succurro"
-            ],
-            "creditLemmas": [
-              "succurro"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ],
+        "practised": 19,
+        "notPractised": [],
         "notAttested": [
           {
             "volume": 1,
@@ -28726,7 +28742,7 @@
         },
         {
           "kind": "composed",
-          "text": "Doctor consuetudinem docet; martyr fortis est.",
+          "text": "Doctor consuetudinem docet; martyr fortis est; patronum habet.",
           "targetWords": [
             {
               "volume": 1,
@@ -28789,10 +28805,25 @@
               ],
               "resolved": true,
               "phrase": false
+            },
+            {
+              "volume": 1,
+              "lesson": 43,
+              "ordinal": 853,
+              "headword": "patrōnus",
+              "glossZh": "保護者、辯護人",
+              "lemmas": [
+                "patronus"
+              ],
+              "creditLemmas": [
+                "patronus"
+              ],
+              "resolved": true,
+              "phrase": false
             }
           ],
           "verification": {
-            "words": 6,
+            "words": 8,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
@@ -28801,6 +28832,7 @@
               "doceo",
               "doctor",
               "fortis",
+              "habeo",
               "sum"
             ],
             "lengthOk": true,
@@ -28992,8 +29024,19 @@
         },
         {
           "kind": "composed",
-          "text": "Christus spirat; indulgentiam dat.",
+          "text": "Christus spirat; indulgentiam dat; Christus expiravit.",
           "targetWords": [
+            {
+              "volume": 1,
+              "lesson": 43,
+              "ordinal": 845,
+              "headword": "exspīrō",
+              "glossZh": "呼出、死亡",
+              "lemmas": [],
+              "creditLemmas": [],
+              "resolved": false,
+              "phrase": false
+            },
             {
               "volume": 1,
               "lesson": 43,
@@ -29026,7 +29069,7 @@
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 6,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
@@ -29243,35 +29286,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 18,
-        "notPractised": [
-          {
-            "volume": 1,
-            "lesson": 43,
-            "ordinal": 845,
-            "headword": "exspīrō",
-            "glossZh": "呼出、死亡",
-            "lemmas": [],
-            "creditLemmas": [],
-            "resolved": false,
-            "phrase": false
-          },
-          {
-            "volume": 1,
-            "lesson": 43,
-            "ordinal": 853,
-            "headword": "patrōnus",
-            "glossZh": "保護者、辯護人",
-            "lemmas": [
-              "patronus"
-            ],
-            "creditLemmas": [
-              "patronus"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ],
+        "practised": 20,
+        "notPractised": [],
         "notAttested": []
       }
     },
@@ -30167,7 +30183,7 @@
         },
         {
           "kind": "composed",
-          "text": "Christus nos redimeret; refulsit gloria.",
+          "text": "Christus nos redimeret; refulsit gloria; sacerdos condolet.",
           "targetWords": [
             {
               "volume": 1,
@@ -30198,10 +30214,21 @@
               ],
               "resolved": true,
               "phrase": false
+            },
+            {
+              "volume": 1,
+              "lesson": 45,
+              "ordinal": 898,
+              "headword": "condoleō",
+              "glossZh": "同情、共感痛楚",
+              "lemmas": [],
+              "creditLemmas": [],
+              "resolved": false,
+              "phrase": false
             }
           ],
           "verification": {
-            "words": 5,
+            "words": 7,
             "unattested": [],
             "untaught": [
               "nos"
@@ -30212,7 +30239,8 @@
               "gloria",
               "nos",
               "redimo",
-              "refulgeo"
+              "refulgeo",
+              "sacerdos"
             ],
             "lengthOk": true,
             "hasPredicate": true,
@@ -30687,20 +30715,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
-        "notPractised": [
-          {
-            "volume": 1,
-            "lesson": 45,
-            "ordinal": 898,
-            "headword": "condoleō",
-            "glossZh": "同情、共感痛楚",
-            "lemmas": [],
-            "creditLemmas": [],
-            "resolved": false,
-            "phrase": false
-          }
-        ],
+        "practised": 20,
+        "notPractised": [],
         "notAttested": []
       }
     },
@@ -31284,7 +31300,7 @@
         },
         {
           "kind": "composed",
-          "text": "Opus perfectum est; homo proficit.",
+          "text": "Opus perfectum est; homo proficit; praefatione utitur.",
           "targetWords": [
             {
               "volume": 1,
@@ -31298,6 +31314,21 @@
               ],
               "creditLemmas": [
                 "perfectus"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 1,
+              "lesson": 46,
+              "ordinal": 911,
+              "headword": "praefātiō",
+              "glossZh": "序文、前言",
+              "lemmas": [
+                "praefatio"
+              ],
+              "creditLemmas": [
+                "praefatio"
               ],
               "resolved": true,
               "phrase": false
@@ -31319,7 +31350,7 @@
             }
           ],
           "verification": {
-            "words": 5,
+            "words": 7,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
@@ -31329,7 +31360,8 @@
               "perfectus",
               "perficio",
               "proficio",
-              "sum"
+              "sum",
+              "utor"
             ],
             "lengthOk": true,
             "hasPredicate": true,
@@ -31469,24 +31501,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
-        "notPractised": [
-          {
-            "volume": 1,
-            "lesson": 46,
-            "ordinal": 911,
-            "headword": "praefātiō",
-            "glossZh": "序文、前言",
-            "lemmas": [
-              "praefatio"
-            ],
-            "creditLemmas": [
-              "praefatio"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ],
+        "practised": 20,
+        "notPractised": [],
         "notAttested": []
       }
     },
@@ -31731,7 +31747,7 @@
         },
         {
           "kind": "composed",
-          "text": "Umbra transit; populus veneratur.",
+          "text": "Umbra transit; populus veneratur; Deum venerandum credit.",
           "targetWords": [
             {
               "volume": 1,
@@ -31747,18 +31763,37 @@
               ],
               "resolved": true,
               "phrase": false
+            },
+            {
+              "volume": 1,
+              "lesson": 47,
+              "ordinal": 925,
+              "headword": "venerō",
+              "glossZh": "敬拜、崇敬",
+              "lemmas": [
+                "uenero",
+                "venio"
+              ],
+              "creditLemmas": [
+                "uenero"
+              ],
+              "resolved": true,
+              "phrase": false
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 7,
             "unattested": [],
             "untaught": [
               "veneratur"
             ],
             "enclitics": [],
             "lemmas": [
+              "credo",
+              "deus",
               "populus",
               "transeo",
+              "uenero",
               "ueneror",
               "umbra"
             ],
@@ -32141,25 +32176,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
-        "notPractised": [
-          {
-            "volume": 1,
-            "lesson": 47,
-            "ordinal": 925,
-            "headword": "venerō",
-            "glossZh": "敬拜、崇敬",
-            "lemmas": [
-              "uenero",
-              "venio"
-            ],
-            "creditLemmas": [
-              "uenero"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ],
+        "practised": 20,
+        "notPractised": [],
         "notAttested": []
       }
     },
@@ -32481,7 +32499,7 @@
         },
         {
           "kind": "composed",
-          "text": "Amicus pretiosus est; priusquam venit, cogitabat.",
+          "text": "Amicus pretiosus est; priusquam venit, cogitabat; supplicare debet.",
           "targetWords": [
             {
               "volume": 1,
@@ -32509,6 +32527,21 @@
               ],
               "creditLemmas": [
                 "priusquam"
+              ],
+              "resolved": true,
+              "phrase": false
+            },
+            {
+              "volume": 1,
+              "lesson": 48,
+              "ordinal": 953,
+              "headword": "supplicō",
+              "glossZh": "懇求、祈禱",
+              "lemmas": [
+                "supplico"
+              ],
+              "creditLemmas": [
+                "supplico"
               ],
               "resolved": true,
               "phrase": false
@@ -32547,13 +32580,14 @@
             }
           ],
           "verification": {
-            "words": 6,
+            "words": 8,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
             "lemmas": [
               "amicus",
               "cogito",
+              "debeo",
               "pretiosus",
               "priusquam",
               "sum",
@@ -32780,24 +32814,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 16,
-        "notPractised": [
-          {
-            "volume": 1,
-            "lesson": 48,
-            "ordinal": 953,
-            "headword": "supplicō",
-            "glossZh": "懇求、祈禱",
-            "lemmas": [
-              "supplico"
-            ],
-            "creditLemmas": [
-              "supplico"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ],
+        "practised": 17,
+        "notPractised": [],
         "notAttested": [
           {
             "volume": 1,
@@ -33156,7 +33174,7 @@
         },
         {
           "kind": "composed",
-          "text": "Difficile est; facile non est.",
+          "text": "Difficile est; facile non est; dies illucescit.",
           "targetWords": [
             {
               "volume": 1,
@@ -33187,14 +33205,30 @@
               ],
               "resolved": true,
               "phrase": false
+            },
+            {
+              "volume": 1,
+              "lesson": 49,
+              "ordinal": 972,
+              "headword": "illūcēsco",
+              "glossZh": "照亮、發光、破曉",
+              "lemmas": [
+                "illucesco"
+              ],
+              "creditLemmas": [
+                "illucesco"
+              ],
+              "resolved": true,
+              "phrase": false
             }
           ],
           "verification": {
-            "words": 5,
+            "words": 7,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
             "lemmas": [
+              "dies",
               "difficile",
               "difficilis",
               "facile",
@@ -33476,24 +33510,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 18,
-        "notPractised": [
-          {
-            "volume": 1,
-            "lesson": 49,
-            "ordinal": 972,
-            "headword": "illūcēsco",
-            "glossZh": "照亮、發光、破曉",
-            "lemmas": [
-              "illucesco"
-            ],
-            "creditLemmas": [
-              "illucesco"
-            ],
-            "resolved": true,
-            "phrase": false
-          }
-        ],
+        "practised": 19,
+        "notPractised": [],
         "notAttested": [
           {
             "volume": 1,
@@ -33942,7 +33960,7 @@
         },
         {
           "kind": "composed",
-          "text": "Nolite putare vicinum vel amicum inimicum esse.",
+          "text": "Nolite putare amicum vel inimicum esse.",
           "targetWords": [
             {
               "volume": 1,
@@ -33975,44 +33993,10 @@
               ],
               "resolved": true,
               "phrase": false
-            },
-            {
-              "volume": 1,
-              "lesson": 50,
-              "ordinal": 993,
-              "headword": "vīcīnus",
-              "glossZh": "相鄰的、附近的",
-              "lemmas": [
-                "uicinus",
-                "vicinus"
-              ],
-              "creditLemmas": [
-                "uicinus",
-                "vicinus"
-              ],
-              "resolved": true,
-              "phrase": false
-            },
-            {
-              "volume": 1,
-              "lesson": 50,
-              "ordinal": 994,
-              "headword": "vicīnus",
-              "glossZh": "鄰居",
-              "lemmas": [
-                "uicinus",
-                "vicinus"
-              ],
-              "creditLemmas": [
-                "uicinus",
-                "vicinus"
-              ],
-              "resolved": true,
-              "phrase": false
             }
           ],
           "verification": {
-            "words": 7,
+            "words": 6,
             "unattested": [],
             "untaught": [],
             "enclitics": [],
@@ -34023,8 +34007,7 @@
               "puto",
               "sum",
               "uel",
-              "vel",
-              "vicinus"
+              "vel"
             ],
             "lengthOk": true,
             "hasPredicate": true,

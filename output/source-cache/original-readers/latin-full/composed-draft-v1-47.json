@@ -2,7 +2,7 @@
   "volume": 1,
   "lesson": 47,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。🚨 venerō／veneror 雖同條收兩式，詞頭鎖在 venerō 那個字串，但語料唯一能用的限定形 veneratur 詞位卻標記為 veneror，兩邊對不上、詞表原形也查無字形，練不到；20 詞僅練 19。",
+  "note": "2026-09-27 全句重寫。🚨 2026-09-27 再補正：veneratur（詞位標 veneror）確實與詞頭 venerō 對不上，但同一詞條的動名詞 venerandus（詞位直標 uenero，folds 後與詞頭相符）可用，第 2 句已補上。",
   "sentences": [
     {
       "latin": "Testis totus fidelis est; tristis non est.",
@@ -10,9 +10,9 @@
       "targets": ["testis", "totus", "tristis"]
     },
     {
-      "latin": "Umbra transit; populus veneratur.",
-      "chinese": "陰影消逝了；百姓在敬拜。",
-      "targets": ["umbra", "populus"]
+      "latin": "Umbra transit; populus veneratur; Deum venerandum credit.",
+      "chinese": "陰影消逝了；百姓在敬拜；他信天主是應受敬拜的。",
+      "targets": ["umbra", "populus", "venero"]
     },
     {
       "latin": "Aliqui credunt; aliquis non credit.",

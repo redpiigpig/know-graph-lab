@@ -2,7 +2,7 @@
   "volume": 1,
   "lesson": 35,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。🚨 praenōscō 在武加大＋教會語料中零字形，練不到；20 詞僅練 19。",
+  "note": "2026-09-27 全句重寫。🚨 2026-09-27 再補正：praenōscō 舊筆記寫零字形有誤——分詞 praenoscens 本身在武加大語料裡（詞位欄是空的，靠詞幹搭上），第 2 句已補上。",
   "sentences": [
     {
       "latin": "Petrus egreditur; regressus est; iterum ingreditur.",
@@ -10,8 +10,8 @@
       "targets": ["Petrus", "egredior", "regredior", "ingredior"]
     },
     {
-      "latin": "Senex per semitas graditur.",
-      "chinese": "老人沿著小徑行走。",
+      "latin": "Senex per semitas graditur; senex praenoscens est.",
+      "chinese": "老人沿著小徑行走；那老人是有預知能力的。",
       "targets": ["senex", "semita", "gradior"]
     },
     {

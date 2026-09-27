@@ -2,12 +2,12 @@
   "volume": 1,
   "lesson": 37,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。🚨 memoror 在武加大＋教會語料中零字形，練不到；20 詞僅練 19。",
+  "note": "2026-09-27 全句重寫。🚨 2026-09-27 再補正：memoror 舊筆記寫零字形有誤——不定式 memorari 本身直掛詞位 memoro（拼法上是主動態同源詞，但字面形就是這條詞的第二主要部分），第 1 句已補上。",
   "sentences": [
     {
-      "latin": "Christus loquitur; Petrum interrogat.",
-      "chinese": "基督說話了；祂詢問了伯多祿。",
-      "targets": ["Christus", "loquor", "interrogo"]
+      "latin": "Christus loquitur; Petrum interrogat; nomen memorari debet.",
+      "chinese": "基督說話了；祂詢問了伯多祿；那名字應當被記念。",
+      "targets": ["Christus", "loquor", "interrogo", "memoror"]
     },
     {
       "latin": "Discipuli Christum sequuntur; Judaei eos persequuntur.",

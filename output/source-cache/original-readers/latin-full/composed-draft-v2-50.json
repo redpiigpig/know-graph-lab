@@ -2,11 +2,11 @@
   "volume": 2,
   "lesson": 50,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫（棄用模板產生器）。🚨 primarius、Aprilis 在武加大＋教會語料中均零字形（含 Aprili／primarii／primaria 拼法皆試過），練不到；20 詞僅練 18。下冊至此全數（1–50 課）重寫完成。",
+  "note": "2026-09-27 全句重寫（棄用模板產生器）。🚨 Aprilis 在武加大＋教會語料中零字形，練不到。🚨 2026-09-27 再補正：primarius 舊筆記寫「Aprili／primarii／primaria 拼法皆試過」仍零字形，但另兩拼法 primariae／primarium 確實在教會語料裡（詞位欄是空的，靠詞幹搭上），第 1 句已補上 primarium。下冊至此全數（1–50 課）重寫完成。",
   "sentences": [
     {
-      "latin": "Custos studiose attendat; custodia manet.",
-      "chinese": "願守衛熱切地留心；守護仍然長存。",
+      "latin": "Custos studiose attendat; custodia manet; custos primarium tenet.",
+      "chinese": "願守衛熱切地留心；守護仍然長存；那守衛持守著首要之事。",
       "targets": ["attendo", "studiose", "custodia"]
     },
     {

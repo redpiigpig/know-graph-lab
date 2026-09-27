@@ -2,11 +2,11 @@
   "volume": 2,
   "lesson": 8,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。🚨 adōrnō／exspoliō／irradio／immolātiō 在武加大＋教會語料中零字形，練不到；20 詞僅練 16。",
+  "note": "2026-09-27 全句重寫。🚨 exspoliō／irradio 在武加大＋教會語料中零字形，練不到。🚨 2026-09-27 再補正：adōrnō（adornatus）／immolātiō（immolata，都靠詞幹搭上、詞位欄是空的）舊筆記併寫零字形有誤，第 1、3 句已各補上。",
   "sentences": [
     {
-      "latin": "Populus baptismum didicit; dignitas crescit.",
-      "chinese": "百姓學會了聖洗；尊嚴漸漸增長。",
+      "latin": "Populus baptismum didicit; dignitas crescit; populus adornatus est.",
+      "chinese": "百姓學會了聖洗；尊嚴漸漸增長；那百姓被裝飾妝點了。",
       "targets": ["populus", "baptismus", "disco", "dignitas"]
     },
     {
@@ -15,8 +15,8 @@
       "targets": ["ejicio", "daemonium"]
     },
     {
-      "latin": "Multitudo cernit; homo esurit.",
-      "chinese": "眾人看見了；那人餓了。",
+      "latin": "Multitudo cernit; homo esurit; hostia immolata est.",
+      "chinese": "眾人看見了；那人餓了；那祭牲被獻上了。",
       "targets": ["multitudo", "cerno", "homo", "esurio"]
     },
     {

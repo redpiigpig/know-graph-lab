@@ -2,11 +2,11 @@
   "volume": 1,
   "lesson": 43,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫；peregrīnantis 已於詞表校對輪改名為 peregrīnāns（主格分詞），第 6 句已改用該形練到。🚨 exspīrō／patrōnus 仍零字形，練不到；20 詞練 18。",
+  "note": "2026-09-27 全句重寫；peregrīnantis 已於詞表校對輪改名為 peregrīnāns（主格分詞），第 6 句已改用該形練到。🚨 2026-09-27 再補正：exspīrō（expiravit）／patrōnus（patronum）舊筆記寫零字形有誤，兩詞都只透過詞幹搭上（詞位欄是空的），第 1、4 句已各補上。",
   "sentences": [
     {
-      "latin": "Doctor consuetudinem docet; martyr fortis est.",
-      "chinese": "教師教導了習俗；殉道者是勇敢的。",
+      "latin": "Doctor consuetudinem docet; martyr fortis est; patronum habet.",
+      "chinese": "教師教導了習俗；殉道者是勇敢的；他有一位主保。",
       "targets": ["doctor", "consuetudo", "martyr", "fortis"]
     },
     {
@@ -20,8 +20,8 @@
       "targets": ["sacerdos", "laboro", "spiritualis", "gratia", "sufficio"]
     },
     {
-      "latin": "Christus spirat; indulgentiam dat.",
-      "chinese": "基督呼吸；祂賜下寬赦。",
+      "latin": "Christus spirat; indulgentiam dat; Christus expiravit.",
+      "chinese": "基督呼吸；祂賜下寬赦；基督也氣絕了。",
       "targets": ["Christus", "spiro", "indulgentia"]
     },
     {

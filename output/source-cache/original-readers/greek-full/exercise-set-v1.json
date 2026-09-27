@@ -1402,7 +1402,7 @@
         },
         {
           "kind": "composed",
-          "text": "εἶπεν ὅτι οὐκ ἁμαρτία ἐν τῇ καρδίᾳ αὐτοῦ.",
+          "text": "εἶπεν ὅτι οὐ μὴ ἁμαρτία ἐν καρδίᾳ αὐτοῦ.",
           "targetWords": [
             {
               "volume": 1,
@@ -1423,16 +1423,6 @@
               "lemma": "ἐν",
               "glossZh": "（配與格）在…裡；在…上；在…中間",
               "pos": "介系詞"
-            },
-            {
-              "volume": 1,
-              "lesson": 2,
-              "slot": 8,
-              "ordinal": 28,
-              "headword": "ὁ",
-              "lemma": "ὁ",
-              "glossZh": "定冠詞",
-              "pos": "冠詞"
             },
             {
               "volume": 1,
@@ -1473,6 +1463,16 @@
               "lemma": "εἶπεν",
               "glossZh": "說、講",
               "pos": "動詞"
+            },
+            {
+              "volume": 1,
+              "lesson": 2,
+              "slot": 20,
+              "ordinal": 40,
+              "headword": "μή",
+              "lemma": "μή",
+              "glossZh": "不要；免得、恐怕",
+              "pos": "質詞"
             }
           ],
           "verification": {
@@ -1485,12 +1485,12 @@
               "αυτοσ",
               "εν",
               "καρδια",
-              "ο",
+              "μη",
               "οτι"
             ],
             "forms": [
               "ειπεν",
-              "ουκ"
+              "ου"
             ],
             "written": [
               "αμαρτια",
@@ -1498,9 +1498,9 @@
               "ειπεν",
               "εν",
               "καρδια",
+              "μη",
               "οτι",
-              "ουκ",
-              "τη"
+              "ου"
             ],
             "lengthOk": true,
             "hasFiniteVerb": true,
@@ -1565,19 +1565,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
-        "notPractised": [
-          {
-            "volume": 1,
-            "lesson": 2,
-            "slot": 20,
-            "ordinal": 40,
-            "headword": "μή",
-            "lemma": "μή",
-            "glossZh": "不要；免得、恐怕",
-            "pos": "質詞"
-          }
-        ],
+        "practised": 20,
+        "notPractised": [],
         "notAttested": []
       }
     },
@@ -2124,7 +2113,7 @@
         },
         {
           "kind": "composed",
-          "text": "ἦν ὁ λόγος ἐν ἀρχῇ",
+          "text": "ἵνα ᾖ ὁ λόγος ἐν ἀρχῇ.",
           "targetWords": [
             {
               "volume": 1,
@@ -2139,16 +2128,16 @@
             {
               "volume": 1,
               "lesson": 3,
-              "slot": 12,
-              "ordinal": 52,
-              "headword": "ἦν",
-              "lemma": "ἦν",
-              "glossZh": "（過去式）是；曾是",
-              "pos": "動詞"
+              "slot": 15,
+              "ordinal": 55,
+              "headword": "ἵνα",
+              "lemma": "ἵνα",
+              "glossZh": "＝ ἵνα 的省音形（上冊第 3 課已教）：為了；以便",
+              "pos": "連接詞"
             }
           ],
           "verification": {
-            "words": 5,
+            "words": 6,
             "unattested": [],
             "untaught": [],
             "accentVariants": [],
@@ -2156,6 +2145,7 @@
               "αρχη",
               "ειμι",
               "εν",
+              "ινα",
               "λογοσ",
               "ο"
             ],
@@ -2163,7 +2153,8 @@
             "written": [
               "αρχη",
               "εν",
-              "ην",
+              "η",
+              "ινα",
               "λογοσ",
               "ο"
             ],
@@ -2349,19 +2340,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
-        "notPractised": [
-          {
-            "volume": 1,
-            "lesson": 3,
-            "slot": 15,
-            "ordinal": 55,
-            "headword": "ἵνα",
-            "lemma": "ἵνα",
-            "glossZh": "＝ ἵνα 的省音形（上冊第 3 課已教）：為了；以便",
-            "pos": "連接詞"
-          }
-        ],
+        "practised": 20,
+        "notPractised": [],
         "notAttested": []
       }
     },
@@ -2752,7 +2732,7 @@
         },
         {
           "kind": "composed",
-          "text": "ἡ ζωὴ ἡ αἰώνιος ἐν τῇ ἀγάπῃ τοῦ θεοῦ ἐστιν.",
+          "text": "ἐὰν ᾖ ζωὴ αἰώνιος ἐν ἀγάπῃ.",
           "targetWords": [
             {
               "volume": 1,
@@ -2763,35 +2743,41 @@
               "lemma": "αἰώνιος",
               "glossZh": "永遠的；不朽的",
               "pos": "形容詞"
+            },
+            {
+              "volume": 1,
+              "lesson": 4,
+              "slot": 12,
+              "ordinal": 72,
+              "headword": "ἐάν",
+              "lemma": "ἐάν",
+              "glossZh": "如果；若；倘若",
+              "pos": "連接詞"
             }
           ],
           "verification": {
-            "words": 10,
+            "words": 6,
             "unattested": [],
             "untaught": [],
             "accentVariants": [],
             "lemmas": [
               "αγαπη",
               "αιωνιοσ",
+              "εαν",
               "ειμι",
               "εν",
-              "ζωη",
-              "θεοσ",
-              "ο"
+              "ζωη"
             ],
             "forms": [],
             "written": [
               "αγαπη",
               "αιωνιοσ",
+              "εαν",
               "εν",
-              "εστιν",
               "ζωη",
-              "η",
-              "θεου",
-              "τη",
-              "του"
+              "η"
             ],
-            "lengthOk": false,
+            "lengthOk": true,
             "hasFiniteVerb": true,
             "sentenceInitialParticle": null,
             "moodAfterConjunction": [],
@@ -3020,19 +3006,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
-        "notPractised": [
-          {
-            "volume": 1,
-            "lesson": 4,
-            "slot": 12,
-            "ordinal": 72,
-            "headword": "ἐάν",
-            "lemma": "ἐάν",
-            "glossZh": "如果；若；倘若",
-            "pos": "連接詞"
-          }
-        ],
+        "practised": 20,
+        "notPractised": [],
         "notAttested": []
       }
     },
@@ -3600,18 +3575,8 @@
         },
         {
           "kind": "composed",
-          "text": "ἐν ἐκκλησίᾳ πάντες ἀδελφοί εἰσιν.",
+          "text": "ὃς ἂν ἀδελφός ᾖ, ἐν ἐκκλησίᾳ ἐστίν.",
           "targetWords": [
-            {
-              "volume": 1,
-              "lesson": 5,
-              "slot": 9,
-              "ordinal": 89,
-              "headword": "πᾶς",
-              "lemma": "πᾶς",
-              "glossZh": "所有的；全部的；每一種",
-              "pos": "形容詞"
-            },
             {
               "volume": 1,
               "lesson": 5,
@@ -3625,6 +3590,16 @@
             {
               "volume": 1,
               "lesson": 5,
+              "slot": 18,
+              "ordinal": 98,
+              "headword": "ἄν",
+              "lemma": "ἄν",
+              "glossZh": "（條件語氣詞）若；假若",
+              "pos": "質詞"
+            },
+            {
+              "volume": 1,
+              "lesson": 5,
               "slot": 20,
               "ordinal": 100,
               "headword": "ἐκκλησία",
@@ -3634,24 +3609,28 @@
             }
           ],
           "verification": {
-            "words": 5,
+            "words": 7,
             "unattested": [],
-            "untaught": [],
+            "untaught": [
+              "ὃς"
+            ],
             "accentVariants": [],
             "lemmas": [
               "αδελφοσ",
+              "αν",
               "ειμι",
               "εκκλησια",
-              "εν",
-              "πασ"
+              "εν"
             ],
             "forms": [],
             "written": [
-              "αδελφοι",
-              "εισιν",
+              "αδελφοσ",
+              "αν",
               "εκκλησια",
               "εν",
-              "παντεσ"
+              "εστιν",
+              "η",
+              "οσ"
             ],
             "lengthOk": true,
             "hasFiniteVerb": true,
@@ -3719,19 +3698,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
-        "notPractised": [
-          {
-            "volume": 1,
-            "lesson": 5,
-            "slot": 18,
-            "ordinal": 98,
-            "headword": "ἄν",
-            "lemma": "ἄν",
-            "glossZh": "（條件語氣詞）若；假若",
-            "pos": "質詞"
-          }
-        ],
+        "practised": 20,
+        "notPractised": [],
         "notAttested": []
       }
     },
@@ -4224,18 +4192,8 @@
         },
         {
           "kind": "composed",
-          "text": "οὐκ ἦν ἐν αὐτοῖς οὐδὲ χάρις οὐδὲ ἐλπίς.",
+          "text": "εὐθὺς οὐδὲ χάρις ἦν ἐν αὐτοῖς.",
           "targetWords": [
-            {
-              "volume": 1,
-              "lesson": 6,
-              "slot": 1,
-              "ordinal": 101,
-              "headword": "ἐλπίς",
-              "lemma": "ἐλπίς",
-              "glossZh": "盼望；期待",
-              "pos": "名詞"
-            },
             {
               "volume": 1,
               "lesson": 6,
@@ -4255,31 +4213,38 @@
               "lemma": "χάρις",
               "glossZh": "恩典；恩惠；憐憫",
               "pos": "名詞"
+            },
+            {
+              "volume": 1,
+              "lesson": 6,
+              "slot": 20,
+              "ordinal": 120,
+              "headword": "εὐθύς",
+              "lemma": "εὐθύς",
+              "glossZh": "直的；立刻",
+              "pos": "副詞"
             }
           ],
           "verification": {
-            "words": 8,
+            "words": 6,
             "unattested": [],
             "untaught": [],
             "accentVariants": [],
             "lemmas": [
               "αυτοσ",
               "ειμι",
-              "ελπισ",
               "εν",
+              "ευθυσ",
               "ουδε",
               "χαρισ"
             ],
-            "forms": [
-              "ουκ"
-            ],
+            "forms": [],
             "written": [
               "αυτοισ",
-              "ελπισ",
               "εν",
+              "ευθυσ",
               "ην",
               "ουδε",
-              "ουκ",
               "χαρισ"
             ],
             "lengthOk": true,
@@ -4352,19 +4317,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
-        "notPractised": [
-          {
-            "volume": 1,
-            "lesson": 6,
-            "slot": 20,
-            "ordinal": 120,
-            "headword": "εὐθύς",
-            "lemma": "εὐθύς",
-            "glossZh": "直的；立刻",
-            "pos": "副詞"
-          }
-        ],
+        "practised": 20,
+        "notPractised": [],
         "notAttested": []
       }
     },
@@ -4606,8 +4560,18 @@
         },
         {
           "kind": "composed",
-          "text": "οὐδεὶς μόνος ἐστὶν ἐν τῇ ἐκκλησίᾳ.",
+          "text": "οὐδεὶς μόνος ἐστίν· μηδεὶς τοῦτο γινωσκέτω.",
           "targetWords": [
+            {
+              "volume": 1,
+              "lesson": 7,
+              "slot": 4,
+              "ordinal": 124,
+              "headword": "μηδείς",
+              "lemma": "μηδείς",
+              "glossZh": "沒有人；沒有什麼",
+              "pos": "代名詞"
+            },
             {
               "volume": 1,
               "lesson": 7,
@@ -4622,24 +4586,25 @@
           "verification": {
             "words": 6,
             "unattested": [],
-            "untaught": [],
+            "untaught": [
+              "γινωσκέτω"
+            ],
             "accentVariants": [],
             "lemmas": [
               "ειμι",
-              "εκκλησια",
-              "εν",
+              "μηδεισ",
               "μονοσ",
-              "ο",
-              "ουδεισ"
+              "ουδεισ",
+              "ουτοσ"
             ],
             "forms": [],
             "written": [
-              "εκκλησια",
-              "εν",
+              "γινωσκετω",
               "εστιν",
+              "μηδεισ",
               "μονοσ",
               "ουδεισ",
-              "τη"
+              "τουτο"
             ],
             "lengthOk": true,
             "hasFiniteVerb": true,
@@ -4652,8 +4617,18 @@
         },
         {
           "kind": "composed",
-          "text": "ὅσα λέγει ὁ κύριος, ἀγαθά ἐστιν.",
+          "text": "ὅσα λέγει, ἀγαθά ἐστιν ὅπως ᾖ μακάριος.",
           "targetWords": [
+            {
+              "volume": 1,
+              "lesson": 7,
+              "slot": 6,
+              "ordinal": 126,
+              "headword": "ὅπως",
+              "lemma": "ὅπως",
+              "glossZh": "如何；為了；使得",
+              "pos": "連接詞"
+            },
             {
               "volume": 1,
               "lesson": 7,
@@ -4663,28 +4638,49 @@
               "lemma": "ὅσος",
               "glossZh": "多少；多大；多少個",
               "pos": "形容詞"
+            },
+            {
+              "volume": 1,
+              "lesson": 7,
+              "slot": 18,
+              "ordinal": 138,
+              "headword": "ἤ",
+              "lemma": "ἤ",
+              "glossZh": "或者；比",
+              "pos": "連接詞"
+            },
+            {
+              "volume": 1,
+              "lesson": 7,
+              "slot": 20,
+              "ordinal": 140,
+              "headword": "μακάριος",
+              "lemma": "μακάριος",
+              "glossZh": "有福的；蒙福的",
+              "pos": "形容詞"
             }
           ],
           "verification": {
-            "words": 6,
+            "words": 7,
             "unattested": [],
             "untaught": [],
             "accentVariants": [],
             "lemmas": [
               "αγαθοσ",
               "ειμι",
-              "κυριοσ",
               "λεγω",
-              "ο",
+              "μακαριοσ",
+              "οπωσ",
               "οσοσ"
             ],
             "forms": [],
             "written": [
               "αγαθα",
               "εστιν",
-              "κυριοσ",
+              "η",
               "λεγει",
-              "ο",
+              "μακαριοσ",
+              "οπωσ",
               "οσα"
             ],
             "lengthOk": true,
@@ -4889,8 +4885,18 @@
         },
         {
           "kind": "composed",
-          "text": "κἀγὼ λέγω ὑπὲρ δικαιοσύνης.",
+          "text": "κἀγὼ λέγω ὑπὲρ τῶν ὀφθαλμῶν.",
           "targetWords": [
+            {
+              "volume": 1,
+              "lesson": 7,
+              "slot": 9,
+              "ordinal": 129,
+              "headword": "ὀφθαλμός",
+              "lemma": "ὀφθαλμός",
+              "glossZh": "眼睛",
+              "pos": "名詞"
+            },
             {
               "volume": 1,
               "lesson": 7,
@@ -4904,16 +4910,6 @@
             {
               "volume": 1,
               "lesson": 7,
-              "slot": 14,
-              "ordinal": 134,
-              "headword": "δικαιοσύνη",
-              "lemma": "δικαιοσύνη",
-              "glossZh": "公義；正義",
-              "pos": "名詞"
-            },
-            {
-              "volume": 1,
-              "lesson": 7,
               "slot": 19,
               "ordinal": 139,
               "headword": "κἀγώ",
@@ -4923,21 +4919,23 @@
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 5,
             "unattested": [],
             "untaught": [],
             "accentVariants": [],
             "lemmas": [
-              "δικαιοσυνη",
               "καγω",
               "λεγω",
+              "ο",
+              "οφθαλμοσ",
               "υπερ"
             ],
             "forms": [],
             "written": [
-              "δικαιοσυνησ",
               "καγω",
               "λεγω",
+              "οφθαλμων",
+              "των",
               "υπερ"
             ],
             "lengthOk": true,
@@ -4952,39 +4950,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 17,
-        "notPractised": [
-          {
-            "volume": 1,
-            "lesson": 7,
-            "slot": 4,
-            "ordinal": 124,
-            "headword": "μηδείς",
-            "lemma": "μηδείς",
-            "glossZh": "沒有人；沒有什麼",
-            "pos": "代名詞"
-          },
-          {
-            "volume": 1,
-            "lesson": 7,
-            "slot": 6,
-            "ordinal": 126,
-            "headword": "ὅπως",
-            "lemma": "ὅπως",
-            "glossZh": "如何；為了；使得",
-            "pos": "連接詞"
-          },
-          {
-            "volume": 1,
-            "lesson": 7,
-            "slot": 9,
-            "ordinal": 129,
-            "headword": "ὀφθαλμός",
-            "lemma": "ὀφθαλμός",
-            "glossZh": "眼睛",
-            "pos": "名詞"
-          }
-        ],
+        "practised": 20,
+        "notPractised": [],
         "notAttested": []
       }
     },
@@ -11986,7 +11953,7 @@
         },
         {
           "kind": "composed",
-          "text": "μικρὰ γενεὰ ὁμοία σπέρματί ἐστιν.",
+          "text": "μικρὸν μέρος ὅμοιόν ἐστιν σπέρματι.",
           "targetWords": [
             {
               "volume": 1,
@@ -12011,21 +11978,21 @@
             {
               "volume": 1,
               "lesson": 18,
-              "slot": 8,
-              "ordinal": 348,
-              "headword": "γενεά",
-              "lemma": "γενεά",
-              "glossZh": "世代；一代人",
-              "pos": "名詞"
-            },
-            {
-              "volume": 1,
-              "lesson": 18,
               "slot": 15,
               "ordinal": 355,
               "headword": "σπέρμα",
               "lemma": "σπέρμα",
               "glossZh": "種子；後裔",
+              "pos": "名詞"
+            },
+            {
+              "volume": 1,
+              "lesson": 18,
+              "slot": 19,
+              "ordinal": 359,
+              "headword": "μέρος",
+              "lemma": "μέρος",
+              "glossZh": "部分；份額",
               "pos": "名詞"
             }
           ],
@@ -12033,20 +12000,22 @@
             "words": 5,
             "unattested": [],
             "untaught": [],
-            "accentVariants": [],
+            "accentVariants": [
+              "ὅμοιόν"
+            ],
             "lemmas": [
-              "γενεα",
               "ειμι",
+              "μεροσ",
               "μικροσ",
               "ομοιοσ",
               "σπερμα"
             ],
             "forms": [],
             "written": [
-              "γενεα",
               "εστιν",
-              "μικρα",
-              "ομοια",
+              "μεροσ",
+              "μικρον",
+              "ομοιον",
               "σπερματι"
             ],
             "lengthOk": true,
@@ -12061,19 +12030,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
-        "notPractised": [
-          {
-            "volume": 1,
-            "lesson": 18,
-            "slot": 19,
-            "ordinal": 359,
-            "headword": "μέρος",
-            "lemma": "μέρος",
-            "glossZh": "部分；份額",
-            "pos": "名詞"
-          }
-        ],
+        "practised": 20,
+        "notPractised": [],
         "notAttested": []
       }
     },
@@ -13834,26 +13792,16 @@
         },
         {
           "kind": "composed",
-          "text": "ἐπιστρέψει ἐκ τῆς ὀργῆς ἅπαντας ὥσπερ εἶπεν.",
+          "text": "ὥσπερ εἶπεν, ἡ περιτομὴ ἐν τοῖς μέλεσιν ἐστιν.",
           "targetWords": [
             {
               "volume": 1,
               "lesson": 21,
-              "slot": 1,
-              "ordinal": 401,
-              "headword": "ἐπιστρέφω",
-              "lemma": "ἐπιστρέφω",
-              "glossZh": "轉回；歸回；悔改",
-              "pos": "動詞"
-            },
-            {
-              "volume": 1,
-              "lesson": 21,
-              "slot": 3,
-              "ordinal": 403,
-              "headword": "ὀργή",
-              "lemma": "ὀργή",
-              "glossZh": "憤怒；怒氣；烈怒",
+              "slot": 5,
+              "ordinal": 405,
+              "headword": "περιτομή",
+              "lemma": "περιτομή",
+              "glossZh": "割禮；受割禮的人",
               "pos": "名詞"
             },
             {
@@ -13869,37 +13817,37 @@
             {
               "volume": 1,
               "lesson": 21,
-              "slot": 13,
-              "ordinal": 413,
-              "headword": "ἅπας",
-              "lemma": "ἅπας",
-              "glossZh": "全部；整個；所有",
-              "pos": "形容詞"
+              "slot": 16,
+              "ordinal": 416,
+              "headword": "μέλος",
+              "lemma": "μέλος",
+              "glossZh": "肢體；身體部分",
+              "pos": "名詞"
             }
           ],
           "verification": {
-            "words": 7,
+            "words": 8,
             "unattested": [],
             "untaught": [],
             "accentVariants": [],
             "lemmas": [
-              "απασ",
-              "επιστρεφω",
+              "ειμι",
+              "εν",
               "λεγω",
+              "μελοσ",
               "ο",
-              "οργη",
+              "περιτομη",
               "ωσπερ"
             ],
-            "forms": [
-              "εκ"
-            ],
+            "forms": [],
             "written": [
-              "απαντασ",
               "ειπεν",
-              "εκ",
-              "επιστρεψει",
-              "οργησ",
-              "τησ",
+              "εν",
+              "εστιν",
+              "η",
+              "μελεσιν",
+              "περιτομη",
+              "τοισ",
               "ωσπερ"
             ],
             "lengthOk": true,
@@ -13914,29 +13862,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 18,
-        "notPractised": [
-          {
-            "volume": 1,
-            "lesson": 21,
-            "slot": 5,
-            "ordinal": 405,
-            "headword": "περιτομή",
-            "lemma": "περιτομή",
-            "glossZh": "割禮；受割禮的人",
-            "pos": "名詞"
-          },
-          {
-            "volume": 1,
-            "lesson": 21,
-            "slot": 16,
-            "ordinal": 416,
-            "headword": "μέλος",
-            "lemma": "μέλος",
-            "glossZh": "肢體；身體部分",
-            "pos": "名詞"
-          }
-        ],
+        "practised": 20,
+        "notPractised": [],
         "notAttested": []
       }
     },
@@ -16942,8 +16869,18 @@
         },
         {
           "kind": "composed",
-          "text": "ἐπάταξεν τὸν ἐχθρὸν καὶ ἐνετείλατό μοι.",
+          "text": "ἐπάταξέν με καὶ ἐνετείλατό μοι.",
           "targetWords": [
+            {
+              "volume": 1,
+              "lesson": 26,
+              "slot": 5,
+              "ordinal": 505,
+              "headword": "μέ",
+              "lemma": "μέ",
+              "glossZh": "我（受格）",
+              "pos": "代名詞"
+            },
             {
               "volume": 1,
               "lesson": 26,
@@ -16976,27 +16913,27 @@
             }
           ],
           "verification": {
-            "words": 6,
+            "words": 5,
             "unattested": [],
             "untaught": [],
-            "accentVariants": [],
+            "accentVariants": [
+              "ἐπάταξέν"
+            ],
             "lemmas": [
               "εγω",
               "εντελλομαι",
-              "εχθροσ",
               "και",
+              "με",
               "μοι",
-              "ο",
               "πατασσω"
             ],
             "forms": [],
             "written": [
               "ενετειλατο",
               "επαταξεν",
-              "εχθρον",
               "και",
-              "μοι",
-              "τον"
+              "με",
+              "μοι"
             ],
             "lengthOk": true,
             "hasFiniteVerb": true,
@@ -17155,19 +17092,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
-        "notPractised": [
-          {
-            "volume": 1,
-            "lesson": 26,
-            "slot": 5,
-            "ordinal": 505,
-            "headword": "μέ",
-            "lemma": "μέ",
-            "glossZh": "我（受格）",
-            "pos": "代名詞"
-          }
-        ],
+        "practised": 20,
+        "notPractised": [],
         "notAttested": []
       }
     },
@@ -17663,7 +17589,7 @@
         },
         {
           "kind": "composed",
-          "text": "προσέθετο ἀργύριον εἰς παρεμβολὴν",
+          "text": "προσέθετο ἀργύριον ἀνὰ δέκα εἰς παρεμβολήν.",
           "targetWords": [
             {
               "volume": 1,
@@ -17678,12 +17604,32 @@
             {
               "volume": 1,
               "lesson": 27,
+              "slot": 6,
+              "ordinal": 526,
+              "headword": "ἀνά",
+              "lemma": "ἀνά",
+              "glossZh": "（配賓格）每…；各…；（ἀνὰ μέσον）在…中間",
+              "pos": "介系詞"
+            },
+            {
+              "volume": 1,
+              "lesson": 27,
               "slot": 12,
               "ordinal": 532,
               "headword": "παρεμβολή",
               "lemma": "παρεμβολή",
               "glossZh": "軍營；營；陣營；軍隊",
               "pos": "名詞"
+            },
+            {
+              "volume": 1,
+              "lesson": 27,
+              "slot": 19,
+              "ordinal": 539,
+              "headword": "δέκα",
+              "lemma": "δέκα",
+              "glossZh": "十",
+              "pos": "數詞"
             },
             {
               "volume": 1,
@@ -17697,19 +17643,23 @@
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 6,
             "unattested": [],
             "untaught": [],
             "accentVariants": [],
             "lemmas": [
+              "ανα",
               "αργυριον",
+              "δεκα",
               "εισ",
               "παρεμβολη",
               "προστιθημι"
             ],
             "forms": [],
             "written": [
+              "ανα",
               "αργυριον",
+              "δεκα",
               "εισ",
               "παρεμβολην",
               "προσεθετο"
@@ -17792,19 +17742,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
-        "notPractised": [
-          {
-            "volume": 1,
-            "lesson": 27,
-            "slot": 6,
-            "ordinal": 526,
-            "headword": "ἀνά",
-            "lemma": "ἀνά",
-            "glossZh": "（配賓格）每…；各…；（ἀνὰ μέσον）在…中間",
-            "pos": "介系詞"
-          }
-        ],
+        "practised": 20,
+        "notPractised": [],
         "notAttested": []
       }
     },
@@ -21523,16 +21462,16 @@
         },
         {
           "kind": "composed",
-          "text": "ἔθυσεν κριὸν ὑπὸ τὴν νεφέλην.",
+          "text": "ἔθυσεν κριὸν ὑπὲρ τοῦ κλήρου.",
           "targetWords": [
             {
               "volume": 1,
               "lesson": 33,
-              "slot": 4,
-              "ordinal": 644,
-              "headword": "νεφέλη",
-              "lemma": "νεφέλη",
-              "glossZh": "雲",
+              "slot": 1,
+              "ordinal": 641,
+              "headword": "κλῆρος",
+              "lemma": "κλῆρος",
+              "glossZh": "地界；產業；籤；職分",
               "pos": "名詞"
             },
             {
@@ -21553,18 +21492,18 @@
             "accentVariants": [],
             "lemmas": [
               "θυω",
+              "κληροσ",
               "κριοσ",
-              "νεφελη",
               "ο",
-              "υπο"
+              "υπερ"
             ],
             "forms": [],
             "written": [
               "εθυσεν",
+              "κληρου",
               "κριον",
-              "νεφελην",
-              "την",
-              "υπο"
+              "του",
+              "υπερ"
             ],
             "lengthOk": true,
             "hasFiniteVerb": true,
@@ -21644,19 +21583,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
-        "notPractised": [
-          {
-            "volume": 1,
-            "lesson": 33,
-            "slot": 1,
-            "ordinal": 641,
-            "headword": "κλῆρος",
-            "lemma": "κλῆρος",
-            "glossZh": "地界；產業；籤；職分",
-            "pos": "名詞"
-          }
-        ],
+        "practised": 20,
+        "notPractised": [],
         "notAttested": []
       }
     },
@@ -24799,60 +24727,38 @@
         },
         {
           "kind": "composed",
-          "text": "ἔσφαξεν ἀμώμους ἀμνοὺς ὑπὲρ τοῦ γένους.",
+          "text": "τὸ μῆκος αὐτοῦ ἦν μέγα.",
           "targetWords": [
             {
               "volume": 1,
               "lesson": 38,
-              "slot": 8,
-              "ordinal": 748,
-              "headword": "γένος",
-              "lemma": "γένος",
-              "glossZh": "後裔；家族；種族；類別",
+              "slot": 9,
+              "ordinal": 749,
+              "headword": "μῆκος",
+              "lemma": "μῆκος",
+              "glossZh": "長度；長",
               "pos": "名詞"
-            },
-            {
-              "volume": 1,
-              "lesson": 38,
-              "slot": 15,
-              "ordinal": 755,
-              "headword": "σφάζω",
-              "lemma": "σφάζω",
-              "glossZh": "宰殺；屠殺",
-              "pos": "動詞"
-            },
-            {
-              "volume": 1,
-              "lesson": 38,
-              "slot": 16,
-              "ordinal": 756,
-              "headword": "ἄμωμος",
-              "lemma": "ἄμωμος",
-              "glossZh": "無瑕疵的；完美的",
-              "pos": "形容詞"
             }
           ],
           "verification": {
-            "words": 6,
+            "words": 5,
             "unattested": [],
             "untaught": [],
             "accentVariants": [],
             "lemmas": [
-              "αμνοσ",
-              "αμωμοσ",
-              "γενοσ",
-              "ο",
-              "σφαζω",
-              "υπερ"
+              "αυτοσ",
+              "ειμι",
+              "μεγασ",
+              "μηκοσ",
+              "ο"
             ],
             "forms": [],
             "written": [
-              "αμνουσ",
-              "αμωμουσ",
-              "γενουσ",
-              "εσφαξεν",
-              "του",
-              "υπερ"
+              "αυτου",
+              "ην",
+              "μεγα",
+              "μηκοσ",
+              "το"
             ],
             "lengthOk": true,
             "hasFiniteVerb": true,
@@ -24866,19 +24772,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
-        "notPractised": [
-          {
-            "volume": 1,
-            "lesson": 38,
-            "slot": 9,
-            "ordinal": 749,
-            "headword": "μῆκος",
-            "lemma": "μῆκος",
-            "glossZh": "長度；長",
-            "pos": "名詞"
-          }
-        ],
+        "practised": 20,
+        "notPractised": [],
         "notAttested": []
       }
     },
@@ -25335,16 +25230,16 @@
         },
         {
           "kind": "composed",
-          "text": "ἔδωκεν ὑετὸν ἐπὶ τὸν σῖτον.",
+          "text": "ἔδωκεν ὑετὸν ἐπὶ τὸ δέρμα.",
           "targetWords": [
             {
               "volume": 1,
               "lesson": 39,
-              "slot": 6,
-              "ordinal": 766,
-              "headword": "σῖτος",
-              "lemma": "σῖτος",
-              "glossZh": "麥子；五穀",
+              "slot": 13,
+              "ordinal": 773,
+              "headword": "δέρμα",
+              "lemma": "δέρμα",
+              "glossZh": "皮膚；皮",
               "pos": "名詞"
             },
             {
@@ -25364,18 +25259,18 @@
             "untaught": [],
             "accentVariants": [],
             "lemmas": [
+              "δερμα",
               "διδωμι",
               "επι",
               "ο",
-              "σιτοσ",
               "υετοσ"
             ],
             "forms": [],
             "written": [
+              "δερμα",
               "εδωκεν",
               "επι",
-              "σιτον",
-              "τον",
+              "το",
               "υετον"
             ],
             "lengthOk": true,
@@ -25389,18 +25284,8 @@
         },
         {
           "kind": "composed",
-          "text": "ἐβεβήλουν τὰς εὐχὰς τῶν ποιμένων.",
+          "text": "ἡ ὀσμὴ τοῦ θυμιάματος ἦν ἐπὶ τῶν ποιμένων.",
           "targetWords": [
-            {
-              "volume": 1,
-              "lesson": 39,
-              "slot": 1,
-              "ordinal": 761,
-              "headword": "βεβηλόω",
-              "lemma": "βεβηλόω",
-              "glossZh": "褻瀆；污辱",
-              "pos": "動詞"
-            },
             {
               "volume": 1,
               "lesson": 39,
@@ -25414,31 +25299,46 @@
             {
               "volume": 1,
               "lesson": 39,
-              "slot": 7,
-              "ordinal": 767,
-              "headword": "εὐχή",
-              "lemma": "εὐχή",
-              "glossZh": "禱告；願望；誓願",
+              "slot": 12,
+              "ordinal": 772,
+              "headword": "ὀσμή",
+              "lemma": "ὀσμή",
+              "glossZh": "香氣；香味",
+              "pos": "名詞"
+            },
+            {
+              "volume": 1,
+              "lesson": 39,
+              "slot": 14,
+              "ordinal": 774,
+              "headword": "θυμίαμα",
+              "lemma": "θυμίαμα",
+              "glossZh": "香；香祭；馨香",
               "pos": "名詞"
             }
           ],
           "verification": {
-            "words": 5,
+            "words": 8,
             "unattested": [],
             "untaught": [],
             "accentVariants": [],
             "lemmas": [
-              "βεβηλοω",
-              "ευχη",
+              "ειμι",
+              "επι",
+              "θυμιαμα",
               "ο",
+              "οσμη",
               "ποιμην"
             ],
             "forms": [],
             "written": [
-              "εβεβηλουν",
-              "ευχασ",
+              "επι",
+              "η",
+              "ην",
+              "θυμιαματοσ",
+              "οσμη",
               "ποιμενων",
-              "τασ",
+              "του",
               "των"
             ],
             "lengthOk": true,
@@ -25453,39 +25353,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 17,
-        "notPractised": [
-          {
-            "volume": 1,
-            "lesson": 39,
-            "slot": 12,
-            "ordinal": 772,
-            "headword": "ὀσμή",
-            "lemma": "ὀσμή",
-            "glossZh": "香氣；香味",
-            "pos": "名詞"
-          },
-          {
-            "volume": 1,
-            "lesson": 39,
-            "slot": 13,
-            "ordinal": 773,
-            "headword": "δέρμα",
-            "lemma": "δέρμα",
-            "glossZh": "皮膚；皮",
-            "pos": "名詞"
-          },
-          {
-            "volume": 1,
-            "lesson": 39,
-            "slot": 14,
-            "ordinal": 774,
-            "headword": "θυμίαμα",
-            "lemma": "θυμίαμα",
-            "glossZh": "香；香祭；馨香",
-            "pos": "名詞"
-          }
-        ],
+        "practised": 20,
+        "notPractised": [],
         "notAttested": []
       }
     },
@@ -26046,64 +25915,46 @@
         },
         {
           "kind": "composed",
-          "text": "ἐξοίσει τὴν αἶγα ἐκ τοῦ ἀγροῦ μετὰ πόνου.",
+          "text": "ἡ τράπεζα ἦν ἀργυρᾶ.",
           "targetWords": [
             {
               "volume": 1,
               "lesson": 40,
-              "slot": 3,
-              "ordinal": 783,
-              "headword": "ἐκφέρω",
-              "lemma": "ἐκφέρω",
-              "glossZh": "搬出；帶出；運出",
-              "pos": "動詞"
+              "slot": 5,
+              "ordinal": 785,
+              "headword": "ἀργύρεος",
+              "lemma": "ἀργύρεος",
+              "glossZh": "銀製的；白銀的",
+              "pos": "形容詞"
             },
             {
               "volume": 1,
               "lesson": 40,
-              "slot": 4,
-              "ordinal": 784,
-              "headword": "αἴξ",
-              "lemma": "αἴξ",
-              "glossZh": "山羊",
-              "pos": "名詞"
-            },
-            {
-              "volume": 1,
-              "lesson": 40,
-              "slot": 9,
-              "ordinal": 789,
-              "headword": "πόνος",
-              "lemma": "πόνος",
-              "glossZh": "勞苦；痛苦；疼痛",
+              "slot": 11,
+              "ordinal": 791,
+              "headword": "τράπεζα",
+              "lemma": "τράπεζα",
+              "glossZh": "桌子；筵席",
               "pos": "名詞"
             }
           ],
           "verification": {
-            "words": 8,
+            "words": 4,
             "unattested": [],
             "untaught": [],
             "accentVariants": [],
             "lemmas": [
-              "αγροσ",
-              "αιξ",
-              "εκφερω",
-              "μετα",
+              "αργυρεοσ",
+              "ειμι",
               "ο",
-              "πονοσ"
+              "τραπεζα"
             ],
-            "forms": [
-              "εκ"
-            ],
+            "forms": [],
             "written": [
-              "αγρου",
-              "αιγα",
-              "εκ",
-              "εξοισει",
-              "μετα",
-              "πονου",
-              "την",
-              "του"
+              "αργυρα",
+              "η",
+              "ην",
+              "τραπεζα"
             ],
             "lengthOk": true,
             "hasFiniteVerb": true,
@@ -26117,19 +25968,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 18,
-        "notPractised": [
-          {
-            "volume": 1,
-            "lesson": 40,
-            "slot": 5,
-            "ordinal": 785,
-            "headword": "ἀργύρεος",
-            "lemma": "ἀργύρεος",
-            "glossZh": "銀製的；白銀的",
-            "pos": "形容詞"
-          }
-        ],
+        "practised": 19,
+        "notPractised": [],
         "notAttested": [
           {
             "volume": 1,
@@ -26914,28 +26754,8 @@
         },
         {
           "kind": "composed",
-          "text": "ἀνεῖλεν αὐτὸν ἐπὶ τῆς κοίτης, καὶ ὁ οἶκος κενὸς ἦν.",
+          "text": "ἀνεῖλεν αὐτὸν ἁφῇ τραχήλου.",
           "targetWords": [
-            {
-              "volume": 1,
-              "lesson": 42,
-              "slot": 2,
-              "ordinal": 822,
-              "headword": "κενός",
-              "lemma": "κενός",
-              "glossZh": "空的；虛妄的",
-              "pos": "形容詞"
-            },
-            {
-              "volume": 1,
-              "lesson": 42,
-              "slot": 3,
-              "ordinal": 823,
-              "headword": "κοίτη",
-              "lemma": "κοίτη",
-              "glossZh": "床；臥室",
-              "pos": "名詞"
-            },
             {
               "volume": 1,
               "lesson": 42,
@@ -26945,38 +26765,47 @@
               "lemma": "ἀναιρέω",
               "glossZh": "舉起；廢除；殺害",
               "pos": "動詞"
+            },
+            {
+              "volume": 1,
+              "lesson": 42,
+              "slot": 10,
+              "ordinal": 830,
+              "headword": "τράχηλος",
+              "lemma": "τράχηλος",
+              "glossZh": "頸；咽喉",
+              "pos": "名詞"
+            },
+            {
+              "volume": 1,
+              "lesson": 42,
+              "slot": 13,
+              "ordinal": 833,
+              "headword": "ἁφή",
+              "lemma": "ἁφή",
+              "glossZh": "接觸；接點；結合",
+              "pos": "名詞"
             }
           ],
           "verification": {
-            "words": 10,
+            "words": 4,
             "unattested": [],
             "untaught": [],
             "accentVariants": [],
             "lemmas": [
               "αναιρεω",
               "αυτοσ",
-              "ειμι",
-              "επι",
-              "και",
-              "κενοσ",
-              "κοιτη",
-              "ο",
-              "οικοσ"
+              "αφη",
+              "τραχηλοσ"
             ],
             "forms": [],
             "written": [
               "ανειλεν",
               "αυτον",
-              "επι",
-              "ην",
-              "και",
-              "κενοσ",
-              "κοιτησ",
-              "ο",
-              "οικοσ",
-              "τησ"
+              "αφη",
+              "τραχηλου"
             ],
-            "lengthOk": false,
+            "lengthOk": true,
             "hasFiniteVerb": true,
             "sentenceInitialParticle": null,
             "moodAfterConjunction": [],
@@ -27351,29 +27180,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 18,
-        "notPractised": [
-          {
-            "volume": 1,
-            "lesson": 42,
-            "slot": 10,
-            "ordinal": 830,
-            "headword": "τράχηλος",
-            "lemma": "τράχηλος",
-            "glossZh": "頸；咽喉",
-            "pos": "名詞"
-          },
-          {
-            "volume": 1,
-            "lesson": 42,
-            "slot": 13,
-            "ordinal": 833,
-            "headword": "ἁφή",
-            "lemma": "ἁφή",
-            "glossZh": "接觸；接點；結合",
-            "pos": "名詞"
-          }
-        ],
+        "practised": 20,
+        "notPractised": [],
         "notAttested": []
       }
     },
@@ -29191,59 +28999,50 @@
         },
         {
           "kind": "composed",
-          "text": "ἐπίσταται τὴν παγίδα τὴν ἐν τῷ δρυμῷ.",
+          "text": "μέλι ἦν ἐν τῇ γαστρὶ αὐτοῦ.",
           "targetWords": [
             {
               "volume": 1,
               "lesson": 45,
-              "slot": 2,
-              "ordinal": 882,
-              "headword": "δρυμός",
-              "lemma": "δρυμός",
-              "glossZh": "森林；樹林",
+              "slot": 7,
+              "ordinal": 887,
+              "headword": "μέλι",
+              "lemma": "μέλι",
+              "glossZh": "蜂蜜",
               "pos": "名詞"
             },
             {
               "volume": 1,
               "lesson": 45,
-              "slot": 8,
-              "ordinal": 888,
-              "headword": "ἐπίσταμαι",
-              "lemma": "ἐπίσταμαι",
-              "glossZh": "知道；明白",
-              "pos": "動詞"
-            },
-            {
-              "volume": 1,
-              "lesson": 45,
-              "slot": 9,
-              "ordinal": 889,
-              "headword": "παγίς",
-              "lemma": "παγίς",
-              "glossZh": "網羅；陷阱；圈套",
+              "slot": 18,
+              "ordinal": 898,
+              "headword": "γαστήρ",
+              "lemma": "γαστήρ",
+              "glossZh": "腹部；肚子；胃",
               "pos": "名詞"
             }
           ],
           "verification": {
-            "words": 7,
+            "words": 6,
             "unattested": [],
             "untaught": [],
             "accentVariants": [],
             "lemmas": [
-              "δρυμοσ",
+              "αυτοσ",
+              "γαστηρ",
+              "ειμι",
               "εν",
-              "επισταμαι",
-              "ο",
-              "παγισ"
+              "μελι",
+              "ο"
             ],
             "forms": [],
             "written": [
-              "δρυμω",
+              "αυτου",
+              "γαστρι",
               "εν",
-              "επισταται",
-              "παγιδα",
-              "την",
-              "τω"
+              "ην",
+              "μελι",
+              "τη"
             ],
             "lengthOk": true,
             "hasFiniteVerb": true,
@@ -29257,19 +29056,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
-        "notPractised": [
-          {
-            "volume": 1,
-            "lesson": 45,
-            "slot": 18,
-            "ordinal": 898,
-            "headword": "γαστήρ",
-            "lemma": "γαστήρ",
-            "glossZh": "腹部；肚子；胃",
-            "pos": "名詞"
-          }
-        ],
+        "practised": 20,
+        "notPractised": [],
         "notAttested": []
       }
     },
@@ -30404,37 +30192,37 @@
         },
         {
           "kind": "composed",
-          "text": "ἐπιβήσῃ ἐπὶ τοὺς τάφους τῶν σκληρῶν.",
+          "text": "τὸ εὖρος τῆς γενέσεως ἦν ἐνιαύσιον.",
           "targetWords": [
             {
               "volume": 1,
               "lesson": 47,
-              "slot": 3,
-              "ordinal": 923,
-              "headword": "σκληρός",
-              "lemma": "σκληρός",
-              "glossZh": "硬的；粗暴的；難的",
+              "slot": 5,
+              "ordinal": 925,
+              "headword": "ἐνιαύσιος",
+              "lemma": "ἐνιαύσιος",
+              "glossZh": "一年一度的；年度的",
               "pos": "形容詞"
             },
             {
               "volume": 1,
               "lesson": 47,
-              "slot": 14,
-              "ordinal": 934,
-              "headword": "τάφος",
-              "lemma": "τάφος",
-              "glossZh": "墳墓；埋葬",
+              "slot": 11,
+              "ordinal": 931,
+              "headword": "γένεσις",
+              "lemma": "γένεσις",
+              "glossZh": "起源；出生；世代",
               "pos": "名詞"
             },
             {
               "volume": 1,
               "lesson": 47,
-              "slot": 15,
-              "ordinal": 935,
-              "headword": "ἐπιβαίνω",
-              "lemma": "ἐπιβαίνω",
-              "glossZh": "踏上；登上",
-              "pos": "動詞"
+              "slot": 18,
+              "ordinal": 938,
+              "headword": "εὖρος",
+              "lemma": "εὖρος",
+              "glossZh": "寬度；廣度",
+              "pos": "名詞"
             }
           ],
           "verification": {
@@ -30443,20 +30231,20 @@
             "untaught": [],
             "accentVariants": [],
             "lemmas": [
-              "επι",
-              "επιβαινω",
-              "ο",
-              "σκληροσ",
-              "ταφοσ"
+              "γενεσισ",
+              "ειμι",
+              "ενιαυσιοσ",
+              "ευροσ",
+              "ο"
             ],
             "forms": [],
             "written": [
-              "επι",
-              "επιβηση",
-              "σκληρων",
-              "ταφουσ",
-              "τουσ",
-              "των"
+              "γενεσεωσ",
+              "ενιαυσιον",
+              "ευροσ",
+              "ην",
+              "τησ",
+              "το"
             ],
             "lengthOk": true,
             "hasFiniteVerb": true,
@@ -30538,39 +30326,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 17,
-        "notPractised": [
-          {
-            "volume": 1,
-            "lesson": 47,
-            "slot": 5,
-            "ordinal": 925,
-            "headword": "ἐνιαύσιος",
-            "lemma": "ἐνιαύσιος",
-            "glossZh": "一年一度的；年度的",
-            "pos": "形容詞"
-          },
-          {
-            "volume": 1,
-            "lesson": 47,
-            "slot": 11,
-            "ordinal": 931,
-            "headword": "γένεσις",
-            "lemma": "γένεσις",
-            "glossZh": "起源；出生；世代",
-            "pos": "名詞"
-          },
-          {
-            "volume": 1,
-            "lesson": 47,
-            "slot": 18,
-            "ordinal": 938,
-            "headword": "εὖρος",
-            "lemma": "εὖρος",
-            "glossZh": "寬度；廣度",
-            "pos": "名詞"
-          }
-        ],
+        "practised": 20,
+        "notPractised": [],
         "notAttested": []
       }
     },
@@ -32433,59 +32190,34 @@
         },
         {
           "kind": "composed",
-          "text": "δεῖ κατασχεῖν τὴν ῥίζαν τῶν συνετῶν.",
+          "text": "ἐκοπίασεν ὁ ἀνήρ.",
           "targetWords": [
             {
               "volume": 1,
               "lesson": 50,
-              "slot": 15,
-              "ordinal": 995,
-              "headword": "κατέχω",
-              "lemma": "κατέχω",
-              "glossZh": "緊持；束縛；抑制",
+              "slot": 10,
+              "ordinal": 990,
+              "headword": "κοπιάω",
+              "lemma": "κοπιάω",
+              "glossZh": "勞苦；疲倦；操勞",
               "pos": "動詞"
-            },
-            {
-              "volume": 1,
-              "lesson": 50,
-              "slot": 17,
-              "ordinal": 997,
-              "headword": "συνετός",
-              "lemma": "συνετός",
-              "glossZh": "聰慧的；有悟性的",
-              "pos": "形容詞"
-            },
-            {
-              "volume": 1,
-              "lesson": 50,
-              "slot": 20,
-              "ordinal": 1000,
-              "headword": "ῥίζα",
-              "lemma": "ῥίζα",
-              "glossZh": "根；根源",
-              "pos": "名詞"
             }
           ],
           "verification": {
-            "words": 6,
+            "words": 3,
             "unattested": [],
             "untaught": [],
             "accentVariants": [],
             "lemmas": [
-              "δεω",
-              "κατεχω",
-              "ο",
-              "ριζα",
-              "συνετοσ"
+              "ανηρ",
+              "κοπιαω",
+              "ο"
             ],
             "forms": [],
             "written": [
-              "δει",
-              "κατασχειν",
-              "ριζαν",
-              "συνετων",
-              "την",
-              "των"
+              "ανηρ",
+              "εκοπιασεν",
+              "ο"
             ],
             "lengthOk": true,
             "hasFiniteVerb": true,
@@ -32499,19 +32231,8 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 19,
-        "notPractised": [
-          {
-            "volume": 1,
-            "lesson": 50,
-            "slot": 10,
-            "ordinal": 990,
-            "headword": "κοπιάω",
-            "lemma": "κοπιάω",
-            "glossZh": "勞苦；疲倦；操勞",
-            "pos": "動詞"
-          }
-        ],
+        "practised": 20,
+        "notPractised": [],
         "notAttested": []
       }
     }

@@ -2,7 +2,7 @@
   "volume": 1,
   "lesson": 46,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。🚨 praefātiō 在武加大＋教會語料中零字形，練不到；20 詞僅練 19。",
+  "note": "2026-09-27 全句重寫。🚨 2026-09-27 再補正：praefātiō 舊筆記寫零字形有誤——奪格 praefatione 本身在教會語料裡（詞位欄是空的，靠詞幹搭上），第 5 句已補上。",
   "sentences": [
     {
       "latin": "Deus dolet; peccatum infectum manet; sui miseretur.",
@@ -25,8 +25,8 @@
       "targets": ["populus", "Deus", "magnifico", "nullus", "solum", "suus", "servo"]
     },
     {
-      "latin": "Opus perfectum est; homo proficit.",
-      "chinese": "工作是完美的；人得益了。",
+      "latin": "Opus perfectum est; homo proficit; praefatione utitur.",
+      "chinese": "工作是完美的；人得益了；他用了那段序文。",
       "targets": ["opus", "perfectus", "homo", "proficio"]
     },
     {

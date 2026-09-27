@@ -50,11 +50,11 @@
       "reviewedBy": "author"
     },
     {
-      "greek": "ἦν ὁ λόγος ἐν ἀρχῇ",
-      "chinese": "起初有道。",
+      "greek": "ἵνα ᾖ ὁ λόγος ἐν ἀρχῇ.",
+      "chinese": "為了使道在起初就存在。",
       "targets": [
         "εἰμί",
-        "ἦν"
+        "ἵνα"
       ],
       "reviewedBy": "author"
     },

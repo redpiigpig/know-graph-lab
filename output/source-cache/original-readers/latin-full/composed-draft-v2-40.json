@@ -2,7 +2,7 @@
   "volume": 2,
   "lesson": 40,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫（棄用模板產生器）。🚨 imus 唯一攤到的字形 imus 本身與 eō(一複 imus)同形共用、詞位又歸給 eo，另一形 imo 詞表未收該格，練不到；20 詞僅練 19。",
+  "note": "2026-09-27 全句重寫（棄用模板產生器）。🚨 2026-09-27 再補正：imus 唯一攤到的主格字形確與 eō 的一複 imus 同形共用（詞位歸 eo），但另一形 imo（奪格）語料裡詞位直標 imus（與詞頭相符），詞表沒收錄這個格不影響詞位比對，第 3 句已補上。",
   "sentences": [
     {
       "latin": "Justificatio congregationem servat.",
@@ -15,9 +15,9 @@
       "targets": ["huc", "felicitas", "primas", "credo"]
     },
     {
-      "latin": "Sacerdos arbitrabatur; consecratio manet.",
-      "chinese": "司祭這樣認為；祝聖長存。",
-      "targets": ["sacerdos", "arbitror", "consecratio"]
+      "latin": "Sacerdos arbitrabatur; consecratio manet; loco imo manet.",
+      "chinese": "司祭這樣認為；祝聖長存；在那最低之處，它也長存。",
+      "targets": ["sacerdos", "arbitror", "consecratio", "imus"]
     },
     {
       "latin": "Exemplar conventus datur.",

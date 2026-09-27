@@ -2,7 +2,7 @@
   "volume": 2,
   "lesson": 1,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫（棄用模板產生器）。🚨 inferus 語料只有比較級 inferior 系列（詞位不歸原級），原級本身零字形，練不到；quaesō/quaesumus 詞頭帶斜線，折疊鍵對不上句中已寫出的 quaesumus（第 7 句），這是詞表鍵值問題不是沒練到；20 詞機器只認得 18，實際 19。",
+  "note": "2026-09-27 全句重寫（棄用模板產生器）。🚨 2026-09-27 再補正：inferus 舊筆記寫零字形有誤——語料裡的比較級 inferior 系列詞位就是直標 inferus（fold 後與詞頭相同），第 6 句已補上。quaesō/quaesumus 是片語詞條，credit_keys 要求 quaeso 與 quaesumus 兩形同句齊現才算練到——與 nōlī/nōlite（上冊第 50 課）不同，quaesumus 對詞性標記器是「無已知人稱數」的形，兩形擺一起不會撞人稱數閘，第 7 句已改寫成兩形並存（原句的 redemptio 已由第 1 句覆蓋，不受影響）。",
   "sentences": [
     {
       "latin": "Concilium redemptionem intellegit; majestas Dei manet.",
@@ -30,14 +30,14 @@
       "targets": ["populus", "pariter", "ploro", "dispar", "dolor"]
     },
     {
-      "latin": "Populus infernum timet; locus manet.",
-      "chinese": "百姓畏懼地獄；那地方長存。",
-      "targets": ["populus", "infernus", "locus", "maneo"]
+      "latin": "Populus infernum timet; locus manet; locus inferior est.",
+      "chinese": "百姓畏懼地獄；那地方長存；那地方是更低下的。",
+      "targets": ["populus", "infernus", "locus", "maneo", "inferus"]
     },
     {
-      "latin": "Quaesumus, Domine, ut redemptionem des.",
-      "chinese": "我們祈求，主啊，願你賜下救贖。",
-      "targets": ["quaesumus", "Dominus", "redemptio"]
+      "latin": "Quaeso, Domine, quaesumus semper.",
+      "chinese": "主啊，我懇求；我們也時常懇切祈求。",
+      "targets": ["Dominus"]
     }
   ]
 }

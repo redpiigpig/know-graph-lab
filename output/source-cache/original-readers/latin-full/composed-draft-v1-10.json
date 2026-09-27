@@ -2,7 +2,7 @@
   "volume": 1,
   "lesson": 10,
   "author": "opus-5-hand-written",
-  "note": "concelebrō 武加大沒有任何字形，練不到。affirmō 只有 affirmant、diaconus 只有 Diaconi、nātus 只認字形 natus／nati，句子照這些形寫。",
+  "note": "concelebrō 武加大沒有任何字形，練不到。diaconus 只有 Diaconi、nātus 只認字形 natus／nati，句子照這些形寫。🚨 2026-09-27 補：affirmō（affirmant／affirmat 等形）舊稿七句全未帶到，第 7 句已補上 affirmat。",
   "sentences": [
     {
       "latin": "Natus in templo est",
@@ -54,10 +54,11 @@
       ]
     },
     {
-      "latin": "Dominus verbum servorum confirmavit",
-      "chinese": "上主堅固了僕人們的話。",
+      "latin": "Dominus verbum servorum confirmavit; discipulus affirmat.",
+      "chinese": "上主堅固了僕人們的話；門徒也申明了這事。",
       "targets": [
-        "confirmo"
+        "confirmo",
+        "affirmo"
       ]
     }
   ]

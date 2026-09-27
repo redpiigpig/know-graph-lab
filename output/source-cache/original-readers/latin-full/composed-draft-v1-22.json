@@ -2,7 +2,7 @@
   "volume": 1,
   "lesson": 22,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。🚨 speciō 與 dētergeō 在武加大＋教會語料中零字形，練不到；20 詞僅練 18。",
+  "note": "2026-09-27 全句重寫。🚨 dētergeō 在武加大＋教會語料中零字形，練不到。🚨 2026-09-27 再補正：speciō 舊筆記寫零字形有誤——它只透過武加大裡的形容詞 speciōsus 的詞幹搭上，第 3 句已改用 speciosum。",
   "sentences": [
     {
       "latin": "Ubi tuba sonat, populus colligitur; baptisma sanctificat.",
@@ -15,9 +15,9 @@
       "targets": ["homo", "ubique", "Deus", "diligo"]
     },
     {
-      "latin": "Ut corpus vivat, Deus animam dat.",
-      "chinese": "為使身體能活，天主賜下靈魂。",
-      "targets": ["ut", "corpus", "Deus"]
+      "latin": "Corpus speciosum est, ut vivat.",
+      "chinese": "身體是美麗的，好讓它存活。",
+      "targets": ["ut", "corpus"]
     },
     {
       "latin": "Genus humanum peccavit; ideo Christus venit.",

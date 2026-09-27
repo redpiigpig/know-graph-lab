@@ -2,7 +2,7 @@
   "volume": 1,
   "lesson": 24,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。🚨 insonō 零字形；postis 雖有字形（postem、poste）但語料未給詞位、詞表也只收格式化的原形，三道閘都碰不到——同批已知的『字形在、詞位是空的』缺口，練不到；20 詞僅練 18。",
+  "note": "2026-09-27 全句重寫。🚨 2026-09-27 再補正：postis 舊筆記寫「三道閘都碰不到」有誤——原第 4 句用的 postem 確實沒有詞位，但奪格 poste 有直掛詞位 postis，已改用 poste（praeter 只接受格，改配 in）。insonō 舊筆記寫零字形也有誤——insonuit 本身在武加大裡（詞位欄是空的，靠詞幹搭上），第 3 句已補上。",
   "sentences": [
     {
       "latin": "Cor humanum mortem timet.",
@@ -15,14 +15,14 @@
       "targets": ["lector", "lectio", "panis", "mando"]
     },
     {
-      "latin": "Cantor prae populo cecinit.",
-      "chinese": "歌者在百姓面前歌唱了。",
+      "latin": "Cantor prae populo cecinit; tuba insonuit.",
+      "chinese": "歌者在百姓面前歌唱了；號筒也響徹了。",
       "targets": ["cantor", "prae"]
     },
     {
-      "latin": "Tuba praeter postem personat.",
-      "chinese": "號筒在門框之外響徹迴盪。",
-      "targets": ["praeter", "persono"]
+      "latin": "Tuba praeter aulam in poste personat.",
+      "chinese": "號筒在殿堂之外、在門框上響徹迴盪。",
+      "targets": ["praeter", "persono", "postis"]
     },
     {
       "latin": "Pars populi in mari periit.",

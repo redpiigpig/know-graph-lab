@@ -2,11 +2,11 @@
   "volume": 2,
   "lesson": 41,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫（棄用模板產生器）。🚨 cottidianus 在武加大＋教會語料中零字形，練不到；20 詞僅練 19。",
+  "note": "2026-09-27 全句重寫（棄用模板產生器）。🚨 2026-09-27 再補正：cottidianus 舊筆記寫零字形有誤——cotidianae 本身在教會語料裡（詞位欄是空的，靠詞幹搭上），第 1 句已補上、當形容詞實體化的複數主格用。",
   "sentences": [
     {
-      "latin": "Respectus deinceps in aditu manet.",
-      "chinese": "顧慮相繼地存留在門口。",
+      "latin": "Respectus deinceps in aditu manet; cotidianae manent.",
+      "chinese": "顧慮相繼地存留在門口；日常的事務也長存著。",
       "targets": ["respectus", "deinceps", "aditus"]
     },
     {

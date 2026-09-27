@@ -2,7 +2,7 @@
   "volume": 1,
   "lesson": 48,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。🚨 struō／supplicō／psalmista／omissiō 在武加大＋教會語料中零字形，練不到；20 詞僅練 16。",
+  "note": "2026-09-27 全句重寫。🚨 struō／psalmista／omissiō 在武加大＋教會語料中零字形，練不到。🚨 2026-09-27 再補正：supplicō 舊筆記併寫零字形有誤——不定式 supplicare 本身在教會語料裡（詞位欄是空的，靠詞幹搭上），第 3 句已補上。",
   "sentences": [
     {
       "latin": "Judicium justum est; timor Domini sapientia est.",
@@ -15,8 +15,8 @@
       "targets": ["lampas", "monstro", "licet", "ardeo"]
     },
     {
-      "latin": "Amicus pretiosus est; priusquam venit, cogitabat.",
-      "chinese": "朋友是珍貴的；在他來到之前，他就已經在思考。",
+      "latin": "Amicus pretiosus est; priusquam venit, cogitabat; supplicare debet.",
+      "chinese": "朋友是珍貴的；在他來到之前，他就已經在思考；他應當懇求祈禱。",
       "targets": ["amicus", "pretiosus", "priusquam", "cogito"]
     },
     {

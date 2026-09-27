@@ -276,7 +276,8 @@ def main() -> int:
         if args.write:
             output.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
             print(f"  寫入 {output.relative_to(ROOT)}")
-        worst |= report(failures_for_payload(payload), label=output.name)
+        notices: list[Any] = []
+        worst |= report(failures_for_payload(payload, notices=notices), label=output.name, notices=notices)
     return worst
 
 

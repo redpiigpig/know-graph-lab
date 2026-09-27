@@ -2,7 +2,7 @@
   "volume": 1,
   "lesson": 5,
   "author": "opus-5-hand-written",
-  "note": "antīquus 與 hymnus 一樣沒有主格進語料，改用 antiqui；vitium 只有 vitio／vitiis／vitii，故用複數奪格；cēnāculum 只有主格與屬格，所以配 in ＋ 受格。",
+  "note": "antīquus 與 hymnus 一樣沒有主格進語料，改用 antiqui；vitium 只有 vitio／vitiis／vitii，故用複數奪格。🚨 2026-09-27 更正：cēnāculum 舊註記寫「只有主格與屬格，配 in ＋ 受格」，但第 2 句原文其實寫的是奪格 cœnaculo（語料查無此形）——已改用屬格 cenaculi。",
   "sentences": [
     {
       "latin": "Vir beatus in mundo est.",
@@ -14,9 +14,10 @@
       ]
     },
     {
-      "latin": "Magistri antiqui in cœnaculo sunt",
-      "chinese": "古代的師傅們在樓上的房間裡。",
+      "latin": "Cœnaculum magistri antiqui est",
+      "chinese": "這是古代師傅的樓上房間。",
       "targets": [
+        "cenaculum",
         "antiquus",
         "magister"
       ]

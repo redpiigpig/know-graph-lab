@@ -2,7 +2,7 @@
   "volume": 1,
   "lesson": 27,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。annūntiō 與 eō(īre) 在語料中只各留一個第一人稱形（annuntio／eo），與本課其餘全為第三人稱的句子擺在一起會撞人稱數閘，寧可不硬湊也不拿去和不同人稱拼句；20 詞練 18。",
+  "note": "2026-09-27 全句重寫。eō(īre) 在語料中只留一個第一人稱形（eo），與本課其餘全為第三人稱的句子擺在一起會撞人稱數閘，寧可不硬湊也不拿去和不同人稱拼句。🚨 2026-09-27 補：annūntiō 除了第一人稱 annuntio，語料裡還有拼成 adnuntio 但字形寫成 annuntiat 的第三人稱形（詞幹搭上），第 3 句已補上。",
   "sentences": [
     {
       "latin": "Vultus Domini gloriae similis est; nuntium emisit.",
@@ -15,8 +15,8 @@
       "targets": ["spiritus", "homo", "adsum", "ubique"]
     },
     {
-      "latin": "Suavitas dilectionis omnes movit.",
-      "chinese": "愛的甘美感動了眾人。",
+      "latin": "Suavitas dilectionis omnes movit; propheta annuntiat.",
+      "chinese": "愛的甘美感動了眾人；那先知宣告了信息。",
       "targets": ["suavitas", "dilectio", "omnis"]
     },
     {
