@@ -131,16 +131,41 @@ def consolidate(chunks: list[dict]) -> list[dict]:
     return out
 
 
+def eligible(chunks: list[dict]) -> str:
+    """回傳空字串＝可合併；否則回原因。一頁一塊為主、多數頁有章節、沒有原文欄／譯文、沒合併過。"""
+    pages = [c for c in chunks if c.get("chunk_type") == "page"]
+    if len(pages) < 10 or len(pages) < 0.6 * len(chunks):
+        return "not-page-book"
+    if any(c.get("page_numbers") for c in chunks):
+        return "already"
+    if any("source_text" in c or "sources" in c for c in chunks):
+        return "has-translation"
+    with_cp = [c for c in pages if c.get("chapter_path")]
+    if len(with_cp) < 0.5 * len(pages) or len({c["chapter_path"] for c in with_cp}) < 2:
+        return "no-chapters"
+    return ""
+
+
 def main() -> int:
     ids = sys.argv[sys.argv.index("--ids") + 1:] if "--ids" in sys.argv else []
     ids = [i for i in ids if not i.startswith("--")]
     apply = "--apply" in sys.argv
+    if "--all" in sys.argv:
+        ids = sorted(p.stem for p in CH.glob("*.jsonl"))
+    stat: dict[str, int] = {}
     for bid in ids:
         p = CH / f"{bid}.jsonl"
-        chunks = [json.loads(l) for l in p.open(encoding="utf-8") if l.strip()]
-        if any(c.get("page_numbers") for c in chunks):
-            print(bid, "已合併過，略過")
+        try:
+            chunks = [json.loads(l) for l in p.open(encoding="utf-8") if l.strip()]
+        except Exception:  # noqa: BLE001
             continue
+        why = eligible(chunks)
+        if why:
+            stat[why] = stat.get(why, 0) + 1
+            if "--all" not in sys.argv:
+                print(bid, "略過：", why)
+            continue
+        stat["merged"] = stat.get("merged", 0) + 1
         new = consolidate(chunks)
         fn_in = sum(len(split_page(c.get("content") or "")[1]) for c in chunks if c.get("chunk_type") == "page")
         linked = sum(c["content"].count("[^") for c in new)
@@ -152,9 +177,15 @@ def main() -> int:
             sys.path.insert(0, str(Path(__file__).resolve().parent))
             import standardize_ebook as se  # noqa: E402
             out = se.write_jsonl(bid, new)
-            se.push_to_r2(bid, out)
-            se.update_db(bid, new)
-            print("  已寫入＋R2＋DB")
+            try:
+                se.push_to_r2(bid, out)
+                se.update_db(bid, new)
+            except Exception as e:  # noqa: BLE001  網路失敗只記，本機已寫好
+                print("  同步失敗", type(e).__name__, flush=True)
+                stat["sync-failed"] = stat.get("sync-failed", 0) + 1
+            print("  已寫入＋R2＋DB", flush=True)
+    print("SUMMARY", stat, flush=True)
+    print("CONSOLIDATE_DONE", flush=True)
     return 0
 
 
