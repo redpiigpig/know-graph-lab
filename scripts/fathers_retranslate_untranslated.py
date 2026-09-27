@@ -158,7 +158,12 @@ def run_book(path: Path, translate, apply: bool, limit: int = 0) -> tuple[int, i
         if limit and done >= limit:
             break
         promote_content_to_en(c)
-        zh = translate((c.get("sources") or {}).get("en") or "")
+        try:
+            zh = translate((c.get("sources") or {}).get("en") or "")
+        except RuntimeError as e:
+            # 2026-09-27：Haiku 關卡拒絕會 raise，原本整本中止、連前面未落地的譯文一起丟掉
+            print(f"    ✗ #{c['chunk_index']} 引擎全數失敗（{str(e)[:80]}），跳過", flush=True)
+            zh = ""
         if not zh:
             print(f"    ✗ #{c['chunk_index']} 引擎沒回東西，跳過（留著下次再試）", flush=True)
             continue
