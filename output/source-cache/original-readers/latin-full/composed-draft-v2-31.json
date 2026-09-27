@@ -2,42 +2,60 @@
   "volume": 2,
   "lesson": 31,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫（棄用模板產生器；本課曾誤填第 33 課內容，已改正）。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫，連接詞只用在真的因果／轉折／時間／目的關係上；寧可少練一詞也不硬塞，每課覆蓋至少 15/20（含引用題）。",
   "sentences": [
     {
-      "latin": "Contentio magna est; solummodo quodammodo manet.",
-      "chinese": "衝突是巨大的；它只在某種程度上長存。",
-      "targets": ["contentio", "solummodo", "quodammodo"]
+      "latin": "Redemptor noster gloriam suam discipulis manifestavit.",
+      "chinese": "我們的救贖主向門徒們顯示了他的光榮。",
+      "targets": [
+        "manifesto",
+        "redemptor"
+      ]
     },
     {
-      "latin": "Dubium manet; homo experiri potest.",
-      "chinese": "疑問長存；人能夠去嘗試。",
-      "targets": ["dubium", "homo", "experior"]
+      "latin": "In intima cordis parte thesaurus fidei latet.",
+      "chinese": "信德的寶藏隱藏在內心的最深處。",
+      "targets": [
+        "thesaurus",
+        "intimus"
+      ]
     },
     {
-      "latin": "Populus gratia fruitur; manifestat gloriam.",
-      "chinese": "百姓享受了恩寵；他顯示了光榮。",
-      "targets": ["populus", "gratia", "fruor", "manifesto", "gloria"]
+      "latin": "Sine dubio Deus omnibus æquus est.",
+      "chinese": "毫無疑問，天主對眾人都是公平的。",
+      "targets": [
+        "dubium",
+        "aequus"
+      ]
     },
     {
-      "latin": "Christus redemptor est; necessario venit.",
-      "chinese": "基督是救贖者；他必然地來臨了。",
-      "targets": ["Christus", "redemptor", "necessario"]
+      "latin": "Vocatio christiana non solummodo sacerdotibus datur.",
+      "chinese": "基督徒的聖召不只是賜給司祭的。",
+      "targets": [
+        "solummodo",
+        "vocatio"
+      ]
     },
     {
-      "latin": "Rite quodsi vocatio venit, aequa manet.",
-      "chinese": "若聖召按禮儀地來臨，它便是公正的。",
-      "targets": ["rite", "quodsi", "vocatio", "aequus"]
+      "latin": "Christus contentionem discipulorum composuit.",
+      "chinese": "基督平息了門徒們的爭執。",
+      "targets": [
+        "contentio"
+      ]
     },
     {
-      "latin": "Divinitus probe thesaurus datur.",
-      "chinese": "寶庫因天恩而恰當地被賜下。",
-      "targets": ["divinitus", "probe", "thesaurus"]
+      "latin": "Scriptura sacra divinitus nobis tradita est.",
+      "chinese": "聖經是由天上傳給我們的。",
+      "targets": [
+        "divinitus"
+      ]
     },
     {
-      "latin": "Intima gratia versatur; subsidium componunt.",
-      "chinese": "至深的恩寵在運行著；他們組合了援助。",
-      "targets": ["intimus", "gratia", "verso", "subsidium", "compono"]
+      "latin": "Ecclesia pauperibus subsidium præbet.",
+      "chinese": "教會給窮人提供援助。",
+      "targets": [
+        "subsidium"
+      ]
     }
   ]
 }

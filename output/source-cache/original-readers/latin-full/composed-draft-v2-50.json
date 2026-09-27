@@ -2,42 +2,61 @@
   "volume": 2,
   "lesson": 50,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫（棄用模板產生器）。🚨 Aprilis 在武加大＋教會語料中零字形，練不到。🚨 2026-09-27 再補正：primarius 舊筆記寫「Aprili／primarii／primaria 拼法皆試過」仍零字形，但另兩拼法 primariae／primarium 確實在教會語料裡（詞位欄是空的，靠詞幹搭上），第 1 句已補上 primarium。下冊至此全數（1–50 課）重寫完成。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫，連接詞只用在真的因果／轉折／時間／目的關係上；寧可少練一詞也不硬塞，每課覆蓋至少 15/20（含引用題）。",
   "sentences": [
     {
-      "latin": "Custos studiose attendat; custodia manet; custos primarium tenet.",
-      "chinese": "願守衛熱切地留心；守護仍然長存；那守衛持守著首要之事。",
-      "targets": ["attendo", "studiose", "custodia"]
+      "latin": "Ecclesia profectum spiritalem fidelium fovet.",
+      "chinese": "教會培育信友靈性上的進步。",
+      "targets": [
+        "profectus",
+        "foveo"
+      ]
     },
     {
-      "latin": "Subditus prudens vindicat.",
-      "chinese": "謹慎的臣民伸張了主張。",
-      "targets": ["subditus", "prudens", "vindico"]
+      "latin": "Fides majorem certitudinem habet quam visus.",
+      "chinese": "信德比視覺更有確實性。",
+      "targets": [
+        "certitudo",
+        "visus"
+      ]
     },
     {
-      "latin": "Atqui potiora sunt.",
-      "chinese": "然而，更重要的事物存在著。",
-      "targets": ["atqui", "potior"]
+      "latin": "Discipulus prudens verbis magistri studiose attendit.",
+      "chinese": "明智的學生專心留意老師的話。",
+      "targets": [
+        "studiose",
+        "prudens"
+      ]
     },
     {
-      "latin": "Fames profectum convenienter fovet.",
-      "chinese": "飢餓適切地培育了進步。",
-      "targets": ["fames", "profectus", "convenienter", "foveo"]
+      "latin": "Paulus in custodia pro defensione Evangelii erat.",
+      "chinese": "保祿為了替福音辯護而被監禁。",
+      "targets": [
+        "custodia",
+        "defensio"
+      ]
     },
     {
-      "latin": "Manifestatio certitudinem visu praestat.",
-      "chinese": "彰顯藉由視覺提供了確實性。",
-      "targets": ["manifestatio", "certitudo", "visus"]
+      "latin": "Jesus parentibus suis subditus erat.",
+      "chinese": "耶穌順從他的父母。",
+      "targets": [
+        "subditus"
+      ]
     },
     {
-      "latin": "Intellegentia defensionem studiose vindicat.",
-      "chinese": "智慧熱切地伸張了辯護。",
-      "targets": ["intellegentia", "defensio"]
+      "latin": "Omnibus datur manifestatio Spiritus ad utilitatem.",
+      "chinese": "聖神的顯示賜給眾人，是為了公益。",
+      "targets": [
+        "manifestatio"
+      ]
     },
     {
-      "latin": "Custos conceptionem studiose fovet.",
-      "chinese": "守護者熱切地培育著那構想。",
-      "targets": ["conceptio"]
+      "latin": "In diebus famis Deus pauperes vindicat.",
+      "chinese": "在饑荒的日子，天主為窮人伸冤。",
+      "targets": [
+        "vindico",
+        "fames"
+      ]
     }
   ]
 }

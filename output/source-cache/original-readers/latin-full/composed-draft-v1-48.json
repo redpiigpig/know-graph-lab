@@ -2,42 +2,56 @@
   "volume": 1,
   "lesson": 48,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。🚨 struō／psalmista／omissiō 在武加大＋教會語料中零字形，練不到。🚨 2026-09-27 再補正：supplicō 舊筆記併寫零字形有誤——不定式 supplicare 本身在教會語料裡（詞位欄是空的，靠詞幹搭上），第 3 句已補上。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫。",
   "sentences": [
     {
-      "latin": "Judicium justum est; timor Domini sapientia est.",
-      "chinese": "審判是公正的；敬畏上主即是智慧。",
-      "targets": ["judicium", "timor", "Dominus", "sapientia"]
+      "latin": "Vos amici mei estis.",
+      "chinese": "你們是我的朋友。",
+      "targets": [
+        "amicus"
+      ]
     },
     {
-      "latin": "Lampas monstratur; licet, et ardet.",
-      "chinese": "燈被顯示了；那是可以的，它也在燃燒。",
-      "targets": ["lampas", "monstro", "licet", "ardeo"]
+      "latin": "Deus Jesum a mortuis suscitavit.",
+      "chinese": "天主使耶穌從死者中復活了。",
+      "targets": [
+        "suscito"
+      ]
     },
     {
-      "latin": "Amicus pretiosus est; priusquam venit, cogitabat; supplicare debet.",
-      "chinese": "朋友是珍貴的；在他來到之前，他就已經在思考；他應當懇求祈禱。",
-      "targets": ["amicus", "pretiosus", "priusquam", "cogito"]
+      "latin": "Sumite psalmum, et date tympanum.",
+      "chinese": "你們要唱起聖詠，擊起鼓來。",
+      "targets": [
+        "sumo"
+      ]
     },
     {
-      "latin": "Christus resuscitavit; suscitat mortuos.",
-      "chinese": "基督使人復活了；祂喚醒死者。",
-      "targets": ["Christus", "resuscito", "suscito"]
+      "latin": "Redempti estis pretioso sanguine Christi.",
+      "chinese": "你們是以基督的寶血贖回來的。",
+      "targets": [
+        "pretiosus"
+      ]
     },
     {
-      "latin": "Sacerdos panem sumit; sanctificationem dat.",
-      "chinese": "司祭領受了餅；他賜下了聖化。",
-      "targets": ["sacerdos", "sumo", "sanctificatio"]
+      "latin": "Virgines lampades suas acceperunt.",
+      "chinese": "童女們拿起了自己的燈。",
+      "targets": [
+        "lampas"
+      ]
     },
     {
-      "latin": "Homo timoratus est; tempus vespertinum venit.",
-      "chinese": "人是敬畏天主的；晚間的時刻到了。",
-      "targets": ["homo", "timoratus", "tempus"]
+      "latin": "Qui credit, licet mortuus sit, vivet.",
+      "chinese": "信的人，雖然死了，仍要活著。",
+      "targets": [
+        "licet"
+      ]
     },
     {
-      "latin": "Deus attraxit populum ad se.",
-      "chinese": "天主吸引了百姓歸向自己。",
-      "targets": ["Deus", "populus"]
+      "latin": "Simeon erat justus et timoratus.",
+      "chinese": "西默盎是個正義而虔誠的人。",
+      "targets": [
+        "timoratus"
+      ]
     }
   ]
 }

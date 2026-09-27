@@ -2,42 +2,59 @@
   "volume": 2,
   "lesson": 19,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫，連接詞只用在真的因果／轉折／時間／目的關係上；寧可少練一詞也不硬塞，每課覆蓋至少 15/20（含引用題）。",
   "sentences": [
     {
-      "latin": "Dux propositum restituit; philosophus reperit veritatem.",
-      "chinese": "領導者恢復了計畫；哲學家發現了真理。",
-      "targets": ["dux", "propositum", "restituo", "philosophus", "reperio", "veritas"]
+      "latin": "Quem Pater genuit, hunc virgo Maria edidit.",
+      "chinese": "聖父所生的那一位，童貞瑪利亞把他生了下來。",
+      "targets": [
+        "edo",
+        "gigno"
+      ]
     },
     {
-      "latin": "Discretio intentionem removere potest; origo manet.",
-      "chinese": "分辨力能夠移除意圖；起源長存。",
-      "targets": ["discretio", "intentio", "removeo", "origo"]
+      "latin": "Philosophus veritatem quærit, sed plenam non reperit.",
+      "chinese": "哲學家尋求真理，卻找不到完整的真理。",
+      "targets": [
+        "philosophus",
+        "reperio"
+      ]
     },
     {
-      "latin": "Deus omnia disponit; qualitate bona est.",
-      "chinese": "天主安排了萬物；祂具有美好的特質。",
-      "targets": ["Deus", "omnis", "dispono", "qualitas"]
+      "latin": "Remove a me, Domine, viam iniquitatis.",
+      "chinese": "主啊，求你使邪惡的道路遠離我。",
+      "targets": []
     },
     {
-      "latin": "Actio corporalis patet; edunt panem.",
-      "chinese": "肉身的行動是顯明的；他們吃著餅。",
-      "targets": ["actio", "corporalis", "pateo", "edo", "panis"]
+      "latin": "Qui rem alienam abstulit, eam restituere debet.",
+      "chinese": "拿走別人東西的人，應當歸還。",
+      "targets": [
+        "restituo"
+      ]
     },
     {
-      "latin": "Praeterea gignit filium; similiter proinde manet.",
-      "chinese": "此外，他生了兒子；同樣地，因此他仍然存在。",
-      "targets": ["praeterea", "gigno", "filius", "similiter", "proinde"]
+      "latin": "Deus omnia secundum propositum suum disponit.",
+      "chinese": "天主按照自己的旨意安排萬事。",
+      "targets": [
+        "propositum",
+        "dispono"
+      ]
     },
     {
-      "latin": "Exinde populus credit.",
-      "chinese": "自此，百姓相信了。",
-      "targets": ["exinde", "populus", "credo"]
+      "latin": "Discretio est dux et mater virtutum.",
+      "chinese": "明辨是諸德的嚮導和母親。",
+      "targets": [
+        "dux",
+        "discretio"
+      ]
     },
     {
-      "latin": "Dux originem reperit; qualitate corporali manet.",
-      "chinese": "領導者發現了起源；他以肉身的特質長存。",
-      "targets": ["dux", "origo", "reperio", "qualitas", "corporalis"]
+      "latin": "Omnis actio bona intentione fieri debet.",
+      "chinese": "每一個行動都應當出於善的意向。",
+      "targets": [
+        "intentio",
+        "actio"
+      ]
     }
   ]
 }

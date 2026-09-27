@@ -2,42 +2,62 @@
   "volume": 2,
   "lesson": 3,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫，連接詞只用在真的因果／轉折／時間／目的關係上；寧可少練一詞也不硬塞，每課覆蓋至少 15/20（含引用題）。",
   "sentences": [
     {
-      "latin": "Judex orbem regit; sidus fulget; fons manat.",
-      "chinese": "審判者統治大地；星辰閃耀著；泉源流湧著。",
-      "targets": ["judex", "orbis", "sidus", "fons"]
+      "latin": "Pueri flores et palmas portantes Domino occurrerunt.",
+      "chinese": "孩子們拿著花和棕櫚枝去迎接主。",
+      "targets": [
+        "flos",
+        "palma"
+      ]
     },
     {
-      "latin": "Victor palmam accipit; species nova est.",
-      "chinese": "勝利者領受了棕枝；那形貌是嶄新的。",
-      "targets": ["palma", "victor", "species"]
+      "latin": "Christus pro peccatis nostris in cruce pendet.",
+      "chinese": "基督為了我們的罪懸在十字架上。",
+      "targets": [
+        "pendeo"
+      ]
     },
     {
-      "latin": "Quisquis credit, requiem habet.",
-      "chinese": "凡信的人，就擁有安息。",
-      "targets": ["quisquis", "credo", "requies"]
+      "latin": "Deus sidera cæli et fontes aquarum creavit.",
+      "chinese": "天主創造了天上的星辰和水的泉源。",
+      "targets": [
+        "fons",
+        "sidus"
+      ]
     },
     {
-      "latin": "Ratio hominis regionem cognoscit; palam est.",
-      "chinese": "人的理性認識了地區；這是明顯的。",
-      "targets": ["ratio", "homo", "regio", "cognosco", "palam"]
+      "latin": "In te, Domine, speravi et requiem inveni.",
+      "chinese": "主啊，我寄望於你，就找到了安息。",
+      "targets": [
+        "requies",
+        "spero"
+      ]
     },
     {
-      "latin": "Idem judex piaculum videt.",
-      "chinese": "同一位審判者看見了罪愆。",
-      "targets": ["idem", "judex", "piaculum"]
+      "latin": "Apostoli Evangelium palam in toto orbe prædicabant.",
+      "chinese": "宗徒們在全世界公開宣講福音。",
+      "targets": [
+        "orbis",
+        "palam"
+      ]
     },
     {
-      "latin": "Sperat fore lucem; Christus illuminationem dat.",
-      "chinese": "他盼望將有光明；基督賜下光照。",
-      "targets": ["spero", "fore", "Christus", "illuminatio"]
+      "latin": "Rex impius omnes pueros in illa regione occidit.",
+      "chinese": "那不虔敬的君王殺了那地區所有的男孩。",
+      "targets": [
+        "occido",
+        "regio"
+      ]
     },
     {
-      "latin": "Flos pendet; homo sperat; sol occidit; omnes sisterent.",
-      "chinese": "花朵懸垂著；人在盼望；太陽落下了；眾人都會止步。",
-      "targets": ["flos", "pendeo", "spero", "occido", "sisto"]
+      "latin": "Fides est illuminatio rationis.",
+      "chinese": "信德是理性的光照。",
+      "targets": [
+        "illuminatio",
+        "ratio"
+      ]
     }
   ]
 }

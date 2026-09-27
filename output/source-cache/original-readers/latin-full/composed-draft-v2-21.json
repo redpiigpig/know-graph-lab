@@ -2,42 +2,62 @@
   "volume": 2,
   "lesson": 21,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫（棄用模板產生器）。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫，連接詞只用在真的因果／轉折／時間／目的關係上；寧可少練一詞也不硬塞，每課覆蓋至少 15/20（含引用題）。",
   "sentences": [
     {
-      "latin": "Reus poenam expedit; universalis lex manet.",
-      "chinese": "被告人的懲罰得到了解決；普遍的法律長存。",
-      "targets": ["reus", "poena", "expedio", "universalis", "lex"]
+      "latin": "Omnia licent, sed non omnia expediunt.",
+      "chinese": "凡事都可行，但不都有益。",
+      "targets": [
+        "expedio"
+      ]
     },
     {
-      "latin": "Cito integer manet; utilis est; ingenium habet.",
-      "chinese": "他迅速地保持完整；他是有用的；他有其資質。",
-      "targets": ["cito", "integer", "utilis", "ingenium"]
+      "latin": "Deo providente, nihil quod utile sit deerit.",
+      "chinese": "有天主照顧，凡是有益的都不會缺少。",
+      "targets": [
+        "desum",
+        "provideo",
+        "utilis"
+      ]
     },
     {
-      "latin": "Idcirco quondam exigit; prout necesse est.",
-      "chinese": "因此，他從前有所要求；正如所必要的那樣。",
-      "targets": ["idcirco", "quondam", "exigo", "prout", "necesse"]
+      "latin": "Christus crucem sustinuit, idcirco Deus eum specialiter glorificavit.",
+      "chinese": "基督忍受了十字架，因此天主特別光榮了他。",
+      "targets": [
+        "idcirco",
+        "specialiter"
+      ]
     },
     {
-      "latin": "Populus lege carere non potest; specialiter credit.",
-      "chinese": "百姓不能夠缺乏法律；他特別地相信。",
-      "targets": ["populus", "careo", "specialiter", "credo"]
+      "latin": "Fidelis defunctus fidem integram servavit.",
+      "chinese": "這位已故的信友保全了完整的信德。",
+      "targets": [
+        "defungor",
+        "integer"
+      ]
     },
     {
-      "latin": "Nihil deest; sacerdos promisit auxilium.",
-      "chinese": "什麼都不缺乏；司祭承諾了援助。",
-      "targets": ["desum", "sacerdos", "promitto", "auxilium"]
+      "latin": "Vir magni ingenii scripturas exposuit.",
+      "chinese": "一位才智卓越的人講解了聖經。",
+      "targets": [
+        "expono",
+        "ingenium"
+      ]
     },
     {
-      "latin": "Episcopus rem exposuit; Deus providebit; sacerdos defunctus est.",
-      "chinese": "主教陳述了此事；天主將會照顧；司祭已經去世了。",
-      "targets": ["episcopus", "res", "expono", "Deus", "provideo", "defungor"]
+      "latin": "Spiritus in ecclesia universali dona dividit prout vult.",
+      "chinese": "聖神在普世教會中隨己意分施恩賜。",
+      "targets": [
+        "universalis",
+        "prout"
+      ]
     },
     {
-      "latin": "Secundo loco venit; quin veniat, dubium non est.",
-      "chinese": "他在第二個位置到來；他必定會來，這是無可置疑的。",
-      "targets": ["secundo", "quin"]
+      "latin": "Paulus, qui quondam ecclesiam persequebatur, nunc fidem prædicat.",
+      "chinese": "從前迫害教會的保祿，如今宣講信仰。",
+      "targets": [
+        "quondam"
+      ]
     }
   ]
 }

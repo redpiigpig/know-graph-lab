@@ -2,63 +2,58 @@
   "volume": 1,
   "lesson": 18,
   "author": "opus-5-hand-written",
-  "note": "resultō 武加大沒有字形，練不到。parvus 只有比較級與最高級進語料（minus／minor／minimus），所以第 1 句用 minor。acclāmō 只認詞幹，dēsinō 沒有不定式，故用命令式 desine。🚨 附錄只收詞頭，dies 在曆法附錄裡但 die 這個奪格不算教過，caput 同理——附錄那一層不是詞形表。🚨 2026-09-27 補：debeō 舊稿七句全未帶到，第 7 句已補上 debet。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫。",
   "sentences": [
     {
-      "latin": "Minor propheta acclamabat tertia hora",
-      "chinese": "那較小的先知在第三時辰歡呼。",
+      "latin": "Discipuli Pascha præparaverunt.",
+      "chinese": "門徒們預備了逾越節晚餐。",
       "targets": [
-        "paruus",
+        "pascha",
+        "praeparo"
+      ]
+    },
+    {
+      "latin": "Impletæ sunt Scripturæ prophetarum.",
+      "chinese": "先知們的經書應驗了。",
+      "targets": [
         "propheta",
+        "scriptura"
+      ]
+    },
+    {
+      "latin": "Dominus populum segregavit et sanctificavit.",
+      "chinese": "上主把百姓分別出來，並使他們成聖。",
+      "targets": [
+        "sanctifico",
+        "segrego"
+      ]
+    },
+    {
+      "latin": "Tertia die resurrexit a mortuis.",
+      "chinese": "第三天他從死者中復活了。",
+      "targets": [
         "tertius"
       ]
     },
     {
-      "latin": "Propheta præparavit viam ante pascha",
-      "chinese": "先知在逾越節前預備了道路。",
+      "latin": "Dimitte, Domine, peccata populi tui.",
+      "chinese": "上主，求你赦免你百姓的罪。",
       "targets": [
-        "pascha",
-        "praeparo",
-        "propheta"
-      ]
-    },
-    {
-      "latin": "Scriptura sanctificata et certa est",
-      "chinese": "聖經是被聖化而確實的。",
-      "targets": [
-        "sanctifico",
-        "scriptura",
-        "certus"
-      ]
-    },
-    {
-      "latin": "Segregavit et dimisit populum",
-      "chinese": "他分開並遣散了百姓。",
-      "targets": [
-        "segrego",
         "dimitto"
       ]
     },
     {
-      "latin": "Reclinavit in aula",
-      "chinese": "他在殿堂中斜倚著。",
+      "latin": "Gratias agere debemus Deo semper.",
+      "chinese": "我們應當常常感謝天主。",
       "targets": [
-        "reclino"
-      ]
-    },
-    {
-      "latin": "Desine a culpa",
-      "chinese": "你要停止犯錯。",
-      "targets": [
-        "desino"
-      ]
-    },
-    {
-      "latin": "Ancilla filium concepit; ancilla Deo debet.",
-      "chinese": "婢女懷了兒子；那婢女對天主是負有義務的。",
-      "targets": [
-        "concipio",
         "debeo"
+      ]
+    },
+    {
+      "latin": "Maria filium concepit.",
+      "chinese": "瑪利亞懷了一個兒子。",
+      "targets": [
+        "concipio"
       ]
     }
   ]

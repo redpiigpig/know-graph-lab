@@ -2,42 +2,60 @@
   "volume": 2,
   "lesson": 9,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。🚨 2026-09-27 再補正：pacificō 舊筆記寫零字形有誤——pacifico 本身在語料裡（詞位標記給了同形的形容詞 pacificus，字面形比對不受影響），第 4 句已補上（讀作與詞頭同形的奪格）。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫，連接詞只用在真的因果／轉折／時間／目的關係上；寧可少練一詞也不硬塞，每課覆蓋至少 15/20（含引用題）。",
   "sentences": [
     {
-      "latin": "Sacerdos clericus est; officium suum tenet.",
-      "chinese": "司祭是教士；他持守自己的職責。",
-      "targets": ["sacerdos", "clericus", "officium"]
+      "latin": "Deus pœnitentiam peccatoris accipit et ei propitius est.",
+      "chinese": "天主接納罪人的悔改，並且恩待他。",
+      "targets": [
+        "paenitentia",
+        "propitius"
+      ]
     },
     {
-      "latin": "Episcopus auctoritatem habet; jus servat.",
-      "chinese": "主教擁有權柄；他遵守法律。",
-      "targets": ["episcopus", "auctoritas", "jus"]
+      "latin": "Puer hic positus est in ruinam multorum.",
+      "chinese": "這孩子被立定，為使許多人跌倒。",
+      "targets": [
+        "ruina"
+      ]
     },
     {
-      "latin": "Judex sententiam dixit; persona ejus nota est.",
-      "chinese": "審判者宣佈了判詞；他的身份是眾所周知的。",
-      "targets": ["judex", "sententia", "persona"]
+      "latin": "Clerici auctoritati episcopi obœdire tenentur.",
+      "chinese": "聖職人員有義務服從主教的權威。",
+      "targets": [
+        "auctoritas",
+        "clericus"
+      ]
     },
     {
-      "latin": "Deus propitius est; paenitentia sufficit; pacifico gratiam dat.",
-      "chinese": "天主是仁慈的；悔改就足夠了；祂把恩寵賜給那締造和平的人。",
-      "targets": ["Deus", "propitius", "paenitentia"]
+      "latin": "Filius, splendor gloriæ Patris, mysteria regni revelavit.",
+      "chinese": "聖子，聖父光榮的光輝，啟示了天國的奧祕。",
+      "targets": [
+        "revelo",
+        "splendor"
+      ]
     },
     {
-      "latin": "Populus opem ab episcopo requirit; quasi ruina est.",
-      "chinese": "百姓向主教尋求了援助；那彷彿是一場毀滅。",
-      "targets": ["populus", "ops", "ab", "quasi", "ruina"]
+      "latin": "Deus proprio Filio suo non pepercit.",
+      "chinese": "天主連自己的親生子也沒有顧惜。",
+      "targets": [
+        "proprius"
+      ]
     },
     {
-      "latin": "Splendor Dei ceteris major est; propriam aulam ornaverunt.",
-      "chinese": "天主的光輝比其他的更大；他們裝飾了自己的殿堂。",
-      "targets": ["splendor", "Deus", "ceterus", "proprius", "orno"]
+      "latin": "Mulier tremens ante Jesum procidit.",
+      "chinese": "那婦人戰戰兢兢地俯伏在耶穌面前。",
+      "targets": [
+        "tremo"
+      ]
     },
     {
-      "latin": "Deus revelat; peccatum projicitur; mundus tremuit.",
-      "chinese": "天主啟示了；罪過被拋棄了；世界顫慄了。",
-      "targets": ["Deus", "revelo", "projicio"]
+      "latin": "Ceteri episcopi sententiam ejus secuti sunt.",
+      "chinese": "其餘的主教都採納了他的意見。",
+      "targets": [
+        "ceterus",
+        "sententia"
+      ]
     }
   ]
 }

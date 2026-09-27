@@ -1,71 +1,43 @@
 {
   "lesson": 11,
   "volume": 1,
-  "author": "opus-5-hand-written",
-  "note": "",
+  "author": "opus-5.5-hand-written",
+  "note": "2026-09-27 第三次重寫（擁有者選項 B：一題一句、問句每課≤2、至少 15 詞）",
   "sentences": [
     {
-      "japanese": "誕生日は何月何日ですか。",
-      "chinese": "生日是幾月幾日？",
-      "targets": [
-        "誕生日",
-        "何月",
-        "何日"
-      ]
+      "japanese": "誕生日は何月何日ですか。五月十日です。",
+      "chinese": "你的生日是幾月幾日？五月十日。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "次の日は新幹線で行きます。",
-      "chinese": "第二天坐新幹線去。",
-      "targets": [
-        "次",
-        "日",
-        "新幹線"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 校對] 採用覆核建議修正句；原句：次の日は新幹線です。"
+      "japanese": "次の急行は何時ですか。十時半です。",
+      "chinese": "下一班快車是幾點？十點半。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "急行ですか、特急ですか。",
-      "chinese": "是急行，還是特急？",
-      "targets": [
-        "急行",
-        "特急"
-      ]
+      "japanese": "昨日は新幹線じゃなくて、普通の電車で帰りました。",
+      "chinese": "昨天不是搭新幹線，是搭普通電車回家的。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "コーヒーを飲みます。",
-      "chinese": "喝咖啡。",
-      "targets": [
-        "どういたしまして",
-        "飲みます"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 校對] 採用覆核建議修正句；原句：どういたしまして。コーヒーを飲みます。"
+      "japanese": "私はコーヒーを飲みながら新聞を読みます。",
+      "chinese": "我邊喝咖啡邊看報紙。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "新聞を買います。手帳に書きます。",
-      "chinese": "買報紙。寫在手帳上。",
-      "targets": [
-        "買います",
-        "書きます"
-      ]
+      "japanese": "デパートでチョコレートを買って、家で食べました。",
+      "chinese": "在百貨公司買了巧克力，回家吃了。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "本を読みます。ラジオを聞きます。",
-      "chinese": "看書。聽收音機。",
-      "targets": [
-        "読みます",
-        "聞きます"
-      ]
+      "japanese": "夜はテレビを見ないで、ラジオを聞きます。",
+      "chinese": "晚上我不看電視，而是聽收音機。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "煙草を吸います。ありがとうございます。どういたしまして。",
-      "chinese": "抽根菸。謝謝。不客氣。",
-      "targets": [
-        "吸います"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 修補生詞覆蓋] 補 どういたしまして；原句：煙草を吸います。"
+      "japanese": "私は煙草を吸いませんが、友達は吸います。",
+      "chinese": "我不抽菸，但我朋友抽。",
+      "reviewedBy": "author"
     }
   ]
 }

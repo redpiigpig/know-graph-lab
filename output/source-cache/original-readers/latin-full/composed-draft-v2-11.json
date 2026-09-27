@@ -2,42 +2,59 @@
   "volume": 2,
   "lesson": 11,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫，連接詞只用在真的因果／轉折／時間／目的關係上；寧可少練一詞也不硬塞，每課覆蓋至少 15/20（含引用題）。",
   "sentences": [
     {
-      "latin": "Nolite peccare, filii.",
-      "chinese": "孩子們，不要犯罪。",
-      "targets": ["nolo", "filius"]
+      "latin": "Noli timere, Maria, invenisti enim gratiam apud Deum.",
+      "chinese": "瑪利亞，不要害怕，因為你在天主前獲得了寵幸。",
+      "targets": [
+        "nolo"
+      ]
     },
     {
-      "latin": "Hoc constat; electio bona est; sic ait Christus.",
-      "chinese": "這是確立的；那揀選是好的；基督如此說道。",
-      "targets": ["consto", "electio", "aio", "Christus"]
+      "latin": "Vir uxorem suam diligat sicut corpus suum.",
+      "chinese": "丈夫應當愛自己的妻子，如同愛自己的身體。",
+      "targets": [
+        "uxor"
+      ]
     },
     {
-      "latin": "Synodus litteras misit; prius consilium habuit.",
-      "chinese": "教區會議發出了書信；此前它已有了商議。",
-      "targets": ["synodus", "littera", "mitto", "prius", "consilium"]
+      "latin": "Episcopus presbyteros diaconosque ordinat.",
+      "chinese": "主教祝聖司鐸和執事。",
+      "targets": [
+        "que",
+        "ordino"
+      ]
     },
     {
-      "latin": "Publicus amor pertinet ad omnes; infra manet humilitas.",
-      "chinese": "公眾的愛屬於眾人；謙卑仍在低處。",
-      "targets": ["publicus", "amor", "pertineo", "omnis", "infra", "humilitas"]
+      "latin": "Religio vera hominem cum Deo summo conjungit.",
+      "chinese": "真正的宗教使人與至高的天主結合。",
+      "targets": [
+        "summus",
+        "religio"
+      ]
     },
     {
-      "latin": "Religio uxorem docet; quantum credit, tantum amat.",
-      "chinese": "信仰教導了妻子；她信多少，就愛多少。",
-      "targets": ["religio", "uxor", "doceo", "quantum", "credo", "tantum"]
+      "latin": "Littera occidit, spiritus autem vivificat.",
+      "chinese": "文字叫人死，聖神卻叫人活。",
+      "targets": [
+        "littera"
+      ]
     },
     {
-      "latin": "Episcopus presbyterum ordinat; summum bonum quaerit.",
-      "chinese": "主教祝聖了長老；他尋求至善。",
-      "targets": ["episcopus", "presbyter", "ordino", "summus", "quaero"]
+      "latin": "Hæc res ad synodum pertinet.",
+      "chinese": "這件事屬於主教會議處理。",
+      "targets": [
+        "pertineo"
+      ]
     },
     {
-      "latin": "Concilium appellatur; prior sedesque videlicet manet.",
-      "chinese": "大會被召開了；在先的座位顯然仍然存在。",
-      "targets": ["concilium", "appello", "prior", "sedes", "que", "videlicet"]
+      "latin": "Oratio publica ecclesiæ liturgia appellatur.",
+      "chinese": "教會的公共祈禱稱為禮儀。",
+      "targets": [
+        "publicus",
+        "appello"
+      ]
     }
   ]
 }

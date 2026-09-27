@@ -2,42 +2,77 @@
   "volume": 2,
   "lesson": 39,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫（棄用模板產生器）。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫，連接詞只用在真的因果／轉折／時間／目的關係上；寧可少練一詞也不硬塞，每課覆蓋至少 15/20（含引用題）。",
   "sentences": [
     {
-      "latin": "Prope est; quocumque ibit.",
-      "chinese": "他在近處；無論他將去哪裡。",
-      "targets": ["prope", "quocumque"]
+      "latin": "Deus, qui prope est, miseriam populi Israel vidit.",
+      "chinese": "近在咫尺的天主看見了以色列百姓的苦難。",
+      "targets": [
+        "prope",
+        "Israel",
+        "miseria"
+      ]
     },
     {
-      "latin": "Panem domesticum commoda!",
-      "chinese": "把家用的餅出借吧！",
-      "targets": ["panis", "domesticus", "commodo"]
+      "latin": "Magi orientales stellam videntes magnopere gavisi sunt.",
+      "chinese": "東方的賢士們看見那顆星，就非常歡喜。",
+      "targets": [
+        "orientalis",
+        "magnopere"
+      ]
     },
     {
-      "latin": "Principatus benevolentiam ostendit.",
-      "chinese": "統治權展示了善意。",
-      "targets": ["principatus", "benevolentia", "ostendo"]
+      "latin": "Per benevolentiam Patris accessum ad eum habemus.",
+      "chinese": "藉著聖父的慈愛，我們得以親近祂。",
+      "targets": [
+        "benevolentia",
+        "accessus"
+      ]
     },
     {
-      "latin": "Mense Januarii, aedificatio orientalis fit; magnopere crescit.",
-      "chinese": "在一月的月份，東方的建築物興建起來；它極大地增長。",
-      "targets": ["Januarius", "aedificatio", "orientalis", "fio", "magnopere"]
+      "latin": "Christus in universitate rerum principatum tenet.",
+      "chinese": "基督在萬有之中居首位。",
+      "targets": [
+        "principatus",
+        "universitas"
+      ]
     },
     {
-      "latin": "Postremo universitas adiumentum praestat.",
-      "chinese": "最終，整體提供了援助。",
-      "targets": ["postremo", "universitas", "adiumentum", "praesto"]
+      "latin": "Omnia ad ædificationem domesticorum fidei fiant.",
+      "chinese": "一切都應當為建樹信德家人而做。",
+      "targets": [
+        "aedificatio"
+      ]
     },
     {
-      "latin": "Conscii funditus optabant pacem.",
-      "chinese": "知情的人們徹底地渴望了平安。",
-      "targets": ["funditus", "opto"]
+      "latin": "Postremo templum funditus destructum est.",
+      "chinese": "最後聖殿被徹底摧毀了。",
+      "targets": [
+        "postremo",
+        "funditus"
+      ]
     },
     {
-      "latin": "Deus Israel imperat; miseria accessum habet.",
-      "chinese": "天主統治了以色列；苦難有其進路。",
-      "targets": ["Deus", "Israel", "impero", "miseria", "accessus"]
+      "latin": "Quocumque Jesus venit, dæmonibus imperavit.",
+      "chinese": "耶穌無論到哪裡，都命令魔鬼。",
+      "targets": [
+        "quocumque",
+        "impero"
+      ]
+    },
+    {
+      "latin": "Prophetæ adventum Christi vehementer optabant.",
+      "chinese": "先知們熱切渴望基督的來臨。",
+      "targets": [
+        "opto"
+      ]
+    },
+    {
+      "latin": "Die prima Januarii ecclesia festum Mariæ celebrat.",
+      "chinese": "一月一日，教會慶祝聖母瑪利亞的節日。",
+      "targets": [
+        "Januarius"
+      ]
     }
   ]
 }

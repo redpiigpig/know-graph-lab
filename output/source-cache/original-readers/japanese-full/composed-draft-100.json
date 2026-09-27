@@ -1,83 +1,43 @@
 {
   "lesson": 100,
   "volume": 2,
-  "author": "opus-5-hand-written",
-  "note": "",
+  "author": "opus-5.5-hand-written",
+  "note": "2026-09-27 第二冊重寫（擁有者選項 B：一題一句、問句每課≤2、至少 15 詞）",
   "sentences": [
     {
-      "japanese": "過去の様式と方言を描く。",
-      "chinese": "描繪過去的樣式與方言。",
-      "targets": [
-        "様式",
-        "過去",
-        "方言"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 校對] 採用覆核建議修正句；原句：様式と過去と方言です。"
+      "japanese": "この小説の作者は、過去と現実の間で揺れる心を描いています。",
+      "chinese": "這部小說的作者描寫了在過去與現實之間擺盪的心。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "役者が舞台で仏教を描く。",
-      "chinese": "演員在舞台上描繪佛教。",
-      "targets": [
-        "舞台",
-        "仏教",
-        "役者"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 校對] 採用覆核建議修正句；原句：舞台の仏教と役者です。"
+      "japanese": "聖書は、多くの言語に翻訳されています。",
+      "chinese": "聖經已被翻譯成許多種語言。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "役者が現実を描く。",
-      "chinese": "演員描繪現實。",
-      "targets": [
-        "描く",
-        "現実"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 校對] 覆核未附修正句，自撰改寫；原句：現実を描く。"
+      "japanese": "京都で初めて舞妓を見て、その美しさに驚きました。",
+      "chinese": "第一次在京都看到舞妓，我對她的美感到驚訝。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "文字と言語の様式を描く。",
-      "chinese": "描繪文字與語言的樣式。",
-      "targets": [
-        "文字",
-        "言語"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 校對] 採用覆核建議修正句；原句：文字と言語の様式です。"
+      "japanese": "仏教は、日本人の道徳に大きな影響を与えました。",
+      "chinese": "佛教對日本人的道德有很大的影響。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "舞妓は事業に与る。",
-      "chinese": "舞妓參與此事業。",
-      "targets": [
-        "舞妓",
-        "作者",
-        "与る"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 校對] 採用覆核建議修正句；原句：舞妓は作者に与る。"
+      "japanese": "その役者は、舞台で方言を上手に話しました。",
+      "chinese": "那位演員在舞台上把方言說得很道地。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "舞妓の事業は方言に及ぶ。",
-      "chinese": "舞妓的行業涉及方言。",
-      "targets": [
-        "事業",
-        "及ぶ"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 校對] 覆核未附修正句，自撰改寫；原句：事業は方言に及ぶ。"
+      "japanese": "父は事業に失敗して、家も財産も失いました。",
+      "chinese": "父親事業失敗，失去了房子和財產。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "かつての舞台を描く。聖書の作者に驚く。",
-      "chinese": "描繪過去的舞台。對聖經的作者感到驚訝。",
-      "targets": [
-        "かつて",
-        "過去",
-        "舞台",
-        "描く"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 修補生詞覆蓋] 補 作者；原句：かつての舞台を描く。"
+      "japanese": "かつてこの地方で用いられた文字は、今ではほとんど読めません。",
+      "chinese": "從前在這個地區使用的文字，如今幾乎已經沒人能讀了。",
+      "reviewedBy": "author"
     }
   ]
 }

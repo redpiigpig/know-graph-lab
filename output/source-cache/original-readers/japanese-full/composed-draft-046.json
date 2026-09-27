@@ -1,81 +1,43 @@
 {
   "lesson": 46,
   "volume": 1,
-  "author": "opus-5-hand-written",
-  "note": "",
+  "author": "opus-5.5-hand-written",
+  "note": "2026-09-27 第三次重寫（擁有者選項 B：一題一句、問句每課≤2、至少 15 詞）",
   "sentences": [
     {
-      "japanese": "ごみの置き場は横です。",
-      "chinese": "垃圾放置處在旁邊。",
-      "targets": [
-        "横",
-        "塵",
-        "置き場"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 校對] 採用覆核建議修正句；原句：横の塵の置き場です。"
+      "japanese": "燃えるごみは、月曜日と木曜日に出してください。",
+      "chinese": "可燃垃圾請在星期一和星期四拿出來。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "医者が診ます。大学に申し込みます。",
-      "chinese": "醫生看診。向大學申請。",
-      "targets": [
-        "診ます",
-        "申し込みます"
-      ]
+      "japanese": "瓶や缶は、駐車場の横のごみ置き場に出してください。",
+      "chinese": "瓶罐請拿到停車場旁邊的垃圾放置處。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "新聞社で働きます。運動会で柔道をします。",
-      "chinese": "在報社工作。在運動會上比柔道。",
-      "targets": [
-        "新聞社",
-        "柔道",
-        "運動会"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 校對] 採用覆核建議修正句；原句：新聞社と柔道と運動会です。"
+      "japanese": "熱がありましたから、医者に診てもらいました。",
+      "chinese": "因為發燒，所以請醫生看診了。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "ボランティアに直接申し込みます。",
-      "chinese": "直接報名志工。",
-      "targets": [
-        "ボランティア",
-        "随分",
-        "直接"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 校對] 採用覆核建議修正句；原句：ボランティアは随分直接です。"
+      "japanese": "日曜日の運動会のボランティアに申し込みます。",
+      "chinese": "我要報名星期日運動會的志工。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "そんな瓶とあんな缶は捨てます。随分怖いです。",
-      "chinese": "那種瓶子和那種罐子要丟掉。相當可怕。",
-      "targets": [
-        "そんな",
-        "瓶",
-        "あんな",
-        "缶"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 修補生詞覆蓋] 補 弁／随分；原句：そんな瓶とあんな缶は捨てます。"
+      "japanese": "兄は柔道が随分強くなりました。",
+      "chinese": "哥哥的柔道變得相當厲害了。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "お湯と弁の置き場です。",
-      "chinese": "是熱水和便當的放置處。",
-      "targets": [
-        "お湯",
-        "弁",
-        "置き場"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 修補生詞覆蓋] 補 弁／随分；原句：お湯と弁当の置き場です。"
+      "japanese": "こんな怖い映画は初めて見ました。",
+      "chinese": "第一次看這麼可怕的電影。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "横の新聞社に申し込みます。",
-      "chinese": "向旁邊的報社申請。",
-      "targets": [
-        "横",
-        "新聞社",
-        "申し込みます"
-      ]
+      "japanese": "姉は新聞社で働いています。",
+      "chinese": "姊姊在報社工作。",
+      "reviewedBy": "author"
     }
   ]
 }

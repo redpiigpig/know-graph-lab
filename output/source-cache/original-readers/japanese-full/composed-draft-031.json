@@ -1,70 +1,43 @@
 {
   "lesson": 31,
   "volume": 1,
-  "author": "opus-5-hand-written",
-  "note": "",
+  "author": "opus-5.5-hand-written",
+  "note": "2026-09-27 第三次重寫（擁有者選項 B：一題一句、問句每課≤2、至少 15 詞）",
   "sentences": [
     {
-      "japanese": "お釣りと地図をください。エアコンと砂糖もください。",
-      "chinese": "請給我找的錢和地圖。冷氣機和糖也請給我。",
-      "targets": [
-        "お釣り",
-        "エアコン",
-        "地図",
-        "砂糖"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 修補生詞覆蓋] 補 エアコン／砂糖；原句：お釣りと地図をください。"
+      "japanese": "高校の友達はみんな結婚しましたが、私はまだ独身です。",
+      "chinese": "高中的朋友都結婚了，我還是單身。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "後で真っ直ぐ行きます。",
-      "chinese": "稍後直直地走。",
-      "targets": [
-        "後で",
-        "真っ直ぐ"
-      ]
+      "japanese": "駅まで真っ直ぐ行って、銀行を右に曲がってください。",
+      "chinese": "請直走到車站，再在銀行右轉。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "地図を使います。服を作ります。",
-      "chinese": "使用地圖。做衣服。",
-      "targets": [
-        "使います",
-        "作ります",
-        "服"
-      ]
+      "japanese": "すみません、塩と砂糖を取ってください。",
+      "chinese": "不好意思，請把鹽和砂糖遞給我。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "箱を置きます。立ちます。座ります。",
-      "chinese": "放下箱子。站起來。坐下。",
-      "targets": [
-        "置きます",
-        "立ちます",
-        "座ります"
-      ]
+      "japanese": "私の部屋のエアコンは古いですから、あまり使いません。",
+      "chinese": "我房間的冷氣很舊，所以不太用。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "寮に住みます。服を売ります。",
-      "chinese": "住在宿舍。賣衣服。",
-      "targets": [
-        "住みます",
-        "売ります"
-      ]
+      "japanese": "駅の近くの店で地図を売っていますから、後で買いに行きます。",
+      "chinese": "車站附近的店有賣地圖，我等一下去買。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "高校の先生は独身です。",
-      "chinese": "高中的老師是單身。",
-      "targets": [
-        "高校",
-        "独身"
-      ]
+      "japanese": "さあ、荷物はそこに置いて、ここに座ってください。",
+      "chinese": "來，行李放那裡，請坐這裡。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "経済を研究します。後で座ります。",
-      "chinese": "研究經濟。稍後坐下。",
-      "targets": [
-        "研究します",
-        "後で"
-      ]
+      "japanese": "母はよく私の服を作ります。",
+      "chinese": "母親常常幫我做衣服。",
+      "reviewedBy": "author"
     }
   ]
 }

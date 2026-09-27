@@ -2,42 +2,59 @@
   "volume": 2,
   "lesson": 13,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫，連接詞只用在真的因果／轉折／時間／目的關係上；寧可少練一詞也不硬塞，每課覆蓋至少 15/20（含引用題）。",
   "sentences": [
     {
-      "latin": "Episcopus Ecclesiae praeest; presbyter auctor regulae est.",
-      "chinese": "主教治理著教會；長老是那規則的創立者。",
-      "targets": ["episcopus", "praesum", "presbyter", "auctor", "regula"]
+      "latin": "Membra quippe corporis Christi sumus.",
+      "chinese": "因為我們原是基督身體的肢體。",
+      "targets": [
+        "membrum",
+        "quippe"
+      ]
     },
     {
-      "latin": "Epistola instituta est; denique praesentia manet.",
-      "chinese": "書信被設立了；最終臨在長存。",
-      "targets": ["instituo", "epistola", "denique", "praesentia"]
+      "latin": "Matrimonium a Deo institutum est.",
+      "chinese": "婚姻是由天主建立的。",
+      "targets": [
+        "instituo",
+        "matrimonium"
+      ]
     },
     {
-      "latin": "Populus contrarius non est; matrimonium sanctum manet.",
-      "chinese": "百姓並非敵對的；婚姻仍是神聖的。",
-      "targets": ["populus", "contrarius", "matrimonium"]
+      "latin": "Deus, auctor salutis, prophetas ante Filium præmisit.",
+      "chinese": "天主，救恩的創始者，在聖子之前先派遣了先知。",
+      "targets": [
+        "auctor",
+        "praemitto"
+      ]
     },
     {
-      "latin": "Cur membrum aetatem habet? Necesse est credere.",
-      "chinese": "為何肢體有其年紀呢？必須要相信。",
-      "targets": ["cur", "membrum", "aetas", "necesse", "credo"]
+      "latin": "Monachi sub regula et abbate vivunt.",
+      "chinese": "隱修士在會規和院長之下生活。",
+      "targets": [
+        "regula"
+      ]
     },
     {
-      "latin": "Sacerdos tempus futurum praemisit; ullum signum manet.",
-      "chinese": "司祭預先送出了未來的時刻；一個記號仍然存在。",
-      "targets": ["sacerdos", "tempus", "futurus", "praemitto", "ullus", "signum"]
+      "latin": "Paulus in epistolis suis fratres salutare solebat.",
+      "chinese": "保祿常在他的書信中問候弟兄們。",
+      "targets": [
+        "soleo"
+      ]
     },
     {
-      "latin": "Soleo pro Ecclesia orare.",
-      "chinese": "我習慣為教會祈禱。",
-      "targets": ["soleo", "ecclesia"]
+      "latin": "Puer Jesus sapientia et ætate proficiebat.",
+      "chinese": "孩童耶穌在智慧和年齡上漸漸增長。",
+      "targets": [
+        "aetas"
+      ]
     },
     {
-      "latin": "Quippe fides amplius crescit; quanto credit, magis amat.",
-      "chinese": "誠然，信德更加地增長；他信得越多，就越加地愛。",
-      "targets": ["quippe", "fides", "ample", "quanto", "credo"]
+      "latin": "Necesse est Filium hominis multa pati.",
+      "chinese": "人子必須受許多苦。",
+      "targets": [
+        "necesse"
+      ]
     }
   ]
 }

@@ -1,72 +1,43 @@
 {
   "lesson": 2,
   "volume": 1,
-  "author": "opus-5-hand-written",
-  "note": "",
+  "author": "opus-5.5-hand-written",
+  "note": "2026-09-27 第三次重寫（擁有者選項 B：一題一句、問句每課≤2、至少 15 詞）",
   "sentences": [
     {
-      "japanese": "初めまして。私は教師です。どうぞよろしく。",
-      "chinese": "初次見面。我是教師。請多關照。",
-      "targets": [
-        "初めまして",
-        "教師",
-        "どうぞよろしく"
-      ]
+      "japanese": "初めまして、私は大学の研究者です。",
+      "chinese": "初次見面，我是大學的研究人員。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "いいえ、あの人は社員です。",
-      "chinese": "不，那個人是職員。",
-      "targets": [
-        "いいえ",
-        "社員"
-      ]
+      "japanese": "失礼ですが、あの方は教師ですか。いいえ、銀行員です。",
+      "chinese": "不好意思，那一位是老師嗎？不，是銀行職員。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "それは辞書ですか。その本は雑誌です。",
-      "chinese": "那是字典嗎？那本書是雜誌。",
-      "targets": [
-        "それ",
-        "辞書",
-        "雑誌"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 修補生詞覆蓋] 補 その／電気；原句：それは辞書ですか、雑誌ですか。"
+      "japanese": "これは辞書ですか。いいえ、それは雑誌です。",
+      "chinese": "這是字典嗎？不，那是雜誌。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "あれは私の本です。",
-      "chinese": "那是我的書。",
-      "targets": [
-        "あれ",
-        "その",
-        "本"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 校對] 採用覆核建議修正句；原句：あれはその本です。"
+      "japanese": "この本は私の本で、その本は先生の本です。",
+      "chinese": "這本書是我的書，那本書是老師的書。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "医者ですか、銀行員ですか。",
-      "chinese": "是醫生，還是銀行職員？",
-      "targets": [
-        "医者",
-        "銀行員"
-      ]
+      "japanese": "あの人は電気のエンジニアです。",
+      "chinese": "那個人是電機工程師。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "これは研究者の雑誌です。",
-      "chinese": "這是研究者的雜誌。",
-      "targets": [
-        "研究者"
-      ]
+      "japanese": "あれは先生の辞書です。",
+      "chinese": "那是老師的字典。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "これはエンジニアの電気です。",
-      "chinese": "這是工程師的電力。",
-      "targets": [
-        "エンジニア",
-        "電気"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 修補生詞覆蓋] 補 その／電気；原句：これはエンジニアの本です。"
+      "japanese": "あの人は医者じゃなくて、病院の研究者です。",
+      "chinese": "那個人不是醫生，是醫院的研究人員。",
+      "reviewedBy": "author"
     }
   ]
 }

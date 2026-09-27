@@ -2,42 +2,57 @@
   "volume": 1,
   "lesson": 46,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。🚨 2026-09-27 再補正：praefātiō 舊筆記寫零字形有誤——奪格 praefatione 本身在教會語料裡（詞位欄是空的，靠詞幹搭上），第 5 句已補上。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫。",
   "sentences": [
     {
-      "latin": "Deus dolet; peccatum infectum manet; sui miseretur.",
-      "chinese": "天主憂傷；罪過的污染長存著；祂憐憫自己的子民。",
-      "targets": ["Deus", "doleo", "peccatum", "inficio", "sui", "misereor"]
+      "latin": "Ne nos inducas in tentationem.",
+      "chinese": "不要讓我們陷於誘惑。",
+      "targets": [
+        "inuicem",
+        "tentatio"
+      ]
     },
     {
-      "latin": "Ecclesiam fundavit; gravis labor est.",
-      "chinese": "祂建立了教會；那是沉重的勞苦。",
-      "targets": ["ecclesia", "fundo", "gravis", "labor"]
+      "latin": "Nullum verbum apud Deum impossibile est.",
+      "chinese": "在天主前沒有不可能的事。",
+      "targets": [
+        "nullus"
+      ]
     },
     {
-      "latin": "Invicem se diligunt; lingua una est; cor movit.",
-      "chinese": "他們彼此相愛；只有一種語言；心受了感動。",
-      "targets": ["invicem", "diligo", "lingua", "cor", "moveo"]
+      "latin": "Dominus sapientia fundavit terram.",
+      "chinese": "上主以智慧奠定了大地。",
+      "targets": [
+        "fundo"
+      ]
     },
     {
-      "latin": "Populus Deum magnificat; nullus impedit; solum suos servat.",
-      "chinese": "百姓稱揚天主；沒有人阻擋；祂只保守自己的子民。",
-      "targets": ["populus", "Deus", "magnifico", "nullus", "solum", "suus", "servo"]
+      "latin": "Estote ergo vos perfecti.",
+      "chinese": "所以你們要成全。",
+      "targets": [
+        "perfectus"
+      ]
     },
     {
-      "latin": "Opus perfectum est; homo proficit; praefatione utitur.",
-      "chinese": "工作是完美的；人得益了；他用了那段序文。",
-      "targets": ["opus", "perfectus", "homo", "proficio"]
+      "latin": "Mandata ejus gravia non sunt.",
+      "chinese": "他的誡命並不沉重。",
+      "targets": [
+        "grauis"
+      ]
     },
     {
-      "latin": "Quies protectio est; animas reficiebant.",
-      "chinese": "安息與保護長存；它們恢復了眾靈魂。",
-      "targets": ["quies", "protectio", "anima", "reficio"]
+      "latin": "Jesus proficiebat sapientia et gratia.",
+      "chinese": "耶穌在智慧和恩寵上漸漸增長。",
+      "targets": [
+        "proficio"
+      ]
     },
     {
-      "latin": "Deus solus est; populi tentationem novit.",
-      "chinese": "天主是獨一的；祂知道百姓的試探。",
-      "targets": ["Deus", "solus", "populus", "tentatio", "nosco"]
+      "latin": "Ego reficiam vos.",
+      "chinese": "我要使你們得到安息。",
+      "targets": [
+        "reficio"
+      ]
     }
   ]
 }

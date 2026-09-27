@@ -2,42 +2,61 @@
   "volume": 2,
   "lesson": 16,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫，連接詞只用在真的因果／轉折／時間／目的關係上；寧可少練一詞也不硬塞，每課覆蓋至少 15/20（含引用題）。",
   "sentences": [
     {
-      "latin": "Mox aer purus est; color mutatur.",
-      "chinese": "不久空氣是純淨的；顏色改變了。",
-      "targets": ["mox", "aer", "purus", "color"]
+      "latin": "Olim Deus per Moysen patribus locutus est.",
+      "chinese": "從前天主藉著梅瑟向祖先們說話。",
+      "targets": [
+        "olim",
+        "Moyses"
+      ]
     },
     {
-      "latin": "Consensus generalis est; animal exhibetur.",
-      "chinese": "共識是普遍的；動物被展示了。",
-      "targets": ["consensus", "generalis", "animal", "exhibeo"]
+      "latin": "Jesus diu oravit, et mox discipulos suos vocavit.",
+      "chinese": "耶穌祈禱了很久，隨即召叫了他的門徒。",
+      "targets": [
+        "mox",
+        "diu"
+      ]
     },
     {
-      "latin": "Idoneus casus est; nihilominus periculum manet.",
-      "chinese": "這是恰當的時機；儘管如此，危險仍然存在。",
-      "targets": ["idoneus", "casus", "nihilominus", "periculum"]
+      "latin": "Bona temporalia transeunt, bona autem æterna manent.",
+      "chinese": "暫時的財物會過去，永恆的財物卻長存。",
+      "targets": [
+        "temporalis"
+      ]
     },
     {
-      "latin": "Ultra fines olim decrevit Moyses.",
-      "chinese": "梅瑟從前在界限之外作了決定。",
-      "targets": ["ultra", "finis", "olim", "decerno", "Moyses"]
+      "latin": "Clerici negotia sæcularia sine licentia episcopi non gerant.",
+      "chinese": "聖職人員未經主教許可，不得經營世俗事務。",
+      "targets": [
+        "licentia",
+        "saecularis"
+      ]
     },
     {
-      "latin": "Delictum sane grave est; licentia data est.",
-      "chinese": "過犯確實是嚴重的；許可已被賜下。",
-      "targets": ["delictum", "sane", "gravis", "licentia"]
+      "latin": "Episcopi communi consensu hoc decreverunt.",
+      "chinese": "主教們一致同意，決定了這件事。",
+      "targets": [
+        "consensus",
+        "decerno"
+      ]
     },
     {
-      "latin": "Diu populus saecularis manet; temporalis potestas crescit.",
-      "chinese": "百姓長久地保持世俗；世上的權力漸漸增長。",
-      "targets": ["diu", "populus", "saecularis", "temporalis", "potestas"]
+      "latin": "Christus resurgens ultra non moritur.",
+      "chinese": "基督既已復活，就不再死亡。",
+      "targets": [
+        "ultra"
+      ]
     },
     {
-      "latin": "Pauci homines credunt.",
-      "chinese": "少數人相信。",
-      "targets": ["paucus", "homo", "credo"]
+      "latin": "Minister idoneus se Deo probatum exhibere debet.",
+      "chinese": "合格的服務者應當把自己呈現給天主，作一個經得起考驗的人。",
+      "targets": [
+        "exhibeo",
+        "idoneus"
+      ]
     }
   ]
 }

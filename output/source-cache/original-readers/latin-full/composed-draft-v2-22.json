@@ -2,42 +2,61 @@
   "volume": 2,
   "lesson": 22,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫，連接詞只用在真的因果／轉折／時間／目的關係上；寧可少練一詞也不硬塞，每課覆蓋至少 15/20（含引用題）。",
   "sentences": [
     {
-      "latin": "Interdum comes lunam impedit.",
-      "chinese": "有時同伴阻礙了月亮。",
-      "targets": ["interdum", "luna", "comes", "impedio"]
+      "latin": "Fideles frequenter in basilica conveniunt.",
+      "chinese": "信友們常常在大殿聚會。",
+      "targets": [
+        "basilica",
+        "frequenter"
+      ]
     },
     {
-      "latin": "Ecclesia postera nullatenus modicum fert.",
-      "chinese": "後來的教會絕不帶來微小的東西。",
-      "targets": ["ecclesia", "posterus", "nullatenus", "modicus"]
+      "latin": "Quod dubium est, quisque libere sentiat.",
+      "chinese": "有疑問的事，每個人可以自由地判斷。",
+      "targets": [
+        "dubius",
+        "libere"
+      ]
     },
     {
-      "latin": "Paene fama omnem basilicam replet.",
-      "chinese": "名聲幾乎充滿了整座教堂。",
-      "targets": ["paene", "fama", "omnis", "basilica"]
+      "latin": "Fama Jesu exiit, et pæne tota civitas convenit.",
+      "chinese": "耶穌的名聲傳開了，幾乎全城的人都聚集過來。",
+      "targets": [
+        "paene",
+        "fama"
+      ]
     },
     {
-      "latin": "Episcopus jus retinet; consuetudo legitima est.",
-      "chinese": "主教保留了權利；那習俗是合法的。",
-      "targets": ["episcopus", "jus", "retineo", "legitimus"]
+      "latin": "Rei a judice legitimo puniuntur.",
+      "chinese": "犯罪的人受到合法審判者的懲罰。",
+      "targets": [
+        "legitimus",
+        "punio"
+      ]
     },
     {
-      "latin": "Dubius homo remedium adhibuit.",
-      "chinese": "疑惑的人採用了藥物。",
-      "targets": ["dubius", "homo", "remedium", "adhibeo"]
+      "latin": "Jesus scripturas interpretabatur, et discipuli verba ejus retinebant.",
+      "chinese": "耶穌講解聖經，門徒們把他的話記在心裡。",
+      "targets": [
+        "interpretor"
+      ]
     },
     {
-      "latin": "Libere colunt; frequenter orant; memorabitur nomen.",
-      "chinese": "他們自由地敬拜；他們經常祈禱；那名字將被記念。",
-      "targets": ["libere", "colo", "frequenter", "memoro"]
+      "latin": "Comes malus iter justi impedit.",
+      "chinese": "壞同伴會阻礙義人的道路。",
+      "targets": [
+        "impedio",
+        "comes"
+      ]
     },
     {
-      "latin": "Sapientes interpretantur; peccatores puniuntur.",
-      "chinese": "智者們解釋了；罪人們受到了懲罰。",
-      "targets": ["interpretor", "punio"]
+      "latin": "Sol et luna Dominum laudant.",
+      "chinese": "太陽和月亮讚美上主。",
+      "targets": [
+        "luna"
+      ]
     }
   ]
 }

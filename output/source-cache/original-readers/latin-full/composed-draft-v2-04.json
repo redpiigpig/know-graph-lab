@@ -2,42 +2,54 @@
   "volume": 2,
   "lesson": 4,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫，連接詞只用在真的因果／轉折／時間／目的關係上；寧可少練一詞也不硬塞，每課覆蓋至少 15/20（含引用題）。",
   "sentences": [
     {
-      "latin": "Rex thronum tenet; hostem vincit.",
-      "chinese": "君王持守著寶座；他戰勝了敵人。",
-      "targets": ["thronus", "teneo", "vinco"]
+      "latin": "Milites Jesum verberaverunt, at ipse omnia sustinuit.",
+      "chinese": "兵士們鞭打了耶穌，他卻忍受了這一切。",
+      "targets": [
+        "sustineo"
+      ]
     },
     {
-      "latin": "Miles hostem verberavit; populus damnum sustinuit.",
-      "chinese": "士兵鞭打了敵人；百姓承受了損害。",
-      "targets": ["verbero", "damnum", "populus", "sustineo"]
+      "latin": "Sacramenta novæ legis gratiam conferunt.",
+      "chinese": "新約的聖事賦予恩寵。",
+      "targets": [
+        "confero"
+      ]
     },
     {
-      "latin": "Aqua aspergitur; homo defunctus est.",
-      "chinese": "水被灑下；那人已經去世了。",
-      "targets": ["aspergo", "homo", "defunctus"]
+      "latin": "Diabolus hominem verbis falsis fefellit.",
+      "chinese": "魔鬼用虛假的話欺騙了人。",
+      "targets": [
+        "falsus"
+      ]
     },
     {
-      "latin": "Deus dona confert; falsus testis negat; fallit multos.",
-      "chinese": "天主賜予了禮物；虛假的證人否認了；他欺騙了許多人。",
-      "targets": ["Deus", "confero", "falsus", "fallo"]
+      "latin": "Occisus est pastor, et oves gregis dispersæ sunt.",
+      "chinese": "牧人被殺了，羊群就四散了。",
+      "targets": []
     },
     {
-      "latin": "Populus munus detulit; castus sacerdos communicationem dat.",
-      "chinese": "百姓呈獻了禮物；貞潔的司祭賜下了共融。",
-      "targets": ["populus", "defero", "castus", "sacerdos", "communicatio"]
+      "latin": "Angeli orationes sanctorum ante thronum Dei detulerunt.",
+      "chinese": "天使們把聖徒的祈禱呈到天主的寶座前。",
+      "targets": [
+        "thronus",
+        "defero"
+      ]
     },
     {
-      "latin": "Deus populum dispergit; hostes cogit fugere; falsos expellit.",
-      "chinese": "天主使百姓四散；祂強迫敵人逃跑；祂驅逐了虛假的人。",
-      "targets": ["Deus", "populus", "dispergo", "cogo", "expello"]
+      "latin": "Sacerdos corpus defuncti aqua benedicta aspergit.",
+      "chinese": "司祭用聖水灑在亡者的遺體上。",
+      "targets": []
     },
     {
-      "latin": "Deus aufert peccata; pauperes ditati sunt; humilem extulit.",
-      "chinese": "天主除去了罪過；窮人們變得富足了；祂高舉了卑微的人。",
-      "targets": ["Deus", "aufero", "dito", "effero"]
+      "latin": "Virgo verbum Dei corde casto tenebat.",
+      "chinese": "童貞女以貞潔的心保存著天主的話。",
+      "targets": [
+        "teneo",
+        "castus"
+      ]
     }
   ]
 }

@@ -2,42 +2,61 @@
   "volume": 2,
   "lesson": 15,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫，連接詞只用在真的因果／轉折／時間／目的關係上；寧可少練一詞也不硬塞，每課覆蓋至少 15/20（含引用題）。",
   "sentences": [
     {
-      "latin": "Titulus gradum nominat; sacerdos non cessat.",
-      "chinese": "頭銜稱呼了等級；司祭並不停止。",
-      "targets": ["titulus", "gradus", "nomino", "sacerdos", "cesso"]
+      "latin": "Regnum Dei in initio est sicut semen parvulum.",
+      "chinese": "天主的國在起初就像一粒微小的種子。",
+      "targets": [
+        "semen",
+        "initium"
+      ]
     },
     {
-      "latin": "Siquidem semen bonum est; occasio postmodum venit.",
-      "chinese": "既然種子是好的；機會其後來到了。",
-      "targets": ["siquidem", "semen", "occasio", "postmodum"]
+      "latin": "Pilatus in titulo Jesum regem Judæorum nominavit.",
+      "chinese": "比拉多在罪狀牌上稱耶穌為猶太人的君王。",
+      "targets": [
+        "titulus",
+        "nomino"
+      ]
     },
     {
-      "latin": "Decimus liber scriptus est; initium penitus, longe manet.",
-      "chinese": "第十本書被寫成了；起初徹底地，在遠方長存。",
-      "targets": ["Decimus", "liber", "initium", "penitus", "longe"]
+      "latin": "Diaconus gradum sacrum ab episcopo obtinet.",
+      "chinese": "執事從主教那裡得到神聖的品級。",
+      "targets": [
+        "gradus",
+        "obtineo"
+      ]
     },
     {
-      "latin": "Injuria magna est; intellectus hominis obtinet veritatem.",
-      "chinese": "傷害是巨大的；人的理智獲得了真理。",
-      "targets": ["injuria", "intellectus", "homo", "obtineo", "veritas"]
+      "latin": "Credere est actus intellectus.",
+      "chinese": "相信是理智的行為。",
+      "targets": [
+        "actus",
+        "intellectus"
+      ]
     },
     {
-      "latin": "Lex generalis est; canonica regula manet.",
-      "chinese": "法律是普遍的；教會法的規則長存。",
-      "targets": ["lex", "generalis", "canonicus", "regula"]
+      "latin": "Patres in concilio generali hanc veritatem asserunt.",
+      "chinese": "教父們在大公會議中肯定這項真理。",
+      "targets": [
+        "generalis",
+        "assero"
+      ]
     },
     {
-      "latin": "Actus longam viam habet.",
-      "chinese": "行為有著長遠的路途。",
-      "targets": ["actus", "longus"]
+      "latin": "Deus non longe est a nobis.",
+      "chinese": "天主離我們並不遠。",
+      "targets": [
+        "longe"
+      ]
     },
     {
-      "latin": "Multi asserunt veritatem.",
-      "chinese": "許多人主張了真理。",
-      "targets": ["assero", "veritas"]
+      "latin": "Fugite occasiones peccati.",
+      "chinese": "你們要躲避犯罪的機會。",
+      "targets": [
+        "occasio"
+      ]
     }
   ]
 }

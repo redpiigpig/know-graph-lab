@@ -1,79 +1,43 @@
 {
   "lesson": 7,
   "volume": 1,
-  "author": "opus-5-hand-written",
-  "note": "",
+  "author": "opus-5.5-hand-written",
+  "note": "2026-09-27 第三次重寫（擁有者選項 B：一題一句、問句每課≤2、至少 15 詞）",
   "sentences": [
     {
-      "japanese": "今何時ですか。午前ですか、午後ですか。",
-      "chinese": "現在幾點？是上午還是下午？",
-      "targets": [
-        "今",
-        "何時",
-        "午前",
-        "午後"
-      ]
-    },
-    {
-      "japanese": "朝起きます。昼に休みます。夜、寝ます。",
-      "chinese": "早上起床。中午休息。晚上睡覺。",
-      "targets": [
-        "朝",
-        "起きます",
-        "昼",
-        "休みます"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 修補生詞覆蓋] 補 寝ます／分；原句：朝起きます。昼に休みます。"
-    },
-    {
-      "japanese": "午後、大学で勉強します。",
-      "chinese": "下午在大學唸書。",
-      "targets": [
-        "勉強します",
-        "寝ます"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 校對] 採用覆核建議修正句；原句：大学で勉強します。午後に寝ます。"
-    },
-    {
-      "japanese": "デパートと銀行はどこですか。郵便局はどこですか。",
-      "chinese": "百貨公司和銀行在哪裡？郵局在哪裡？",
-      "targets": [
-        "デパート",
-        "銀行",
-        "郵便局"
-      ],
-      "note": "[2026-09-27 と並列超過兩項修正] 原句：デパートと銀行と郵便局はどこですか。",
+      "japanese": "今、何時何分ですか。午後三時十五分です。",
+      "chinese": "現在幾點幾分？下午三點十五分。",
       "reviewedBy": "author"
     },
     {
-      "japanese": "図書館は何時に終わりますか。",
-      "chinese": "圖書館幾點結束？",
-      "targets": [
-        "図書館",
-        "終わります"
-      ]
+      "japanese": "私は朝六時に起きます。",
+      "chinese": "我早上六點起床。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "今、三時半です。",
-      "chinese": "現在是三點半。",
-      "targets": [
-        "今",
-        "半"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 校對] 覆核建議含未教詞，改寫；原句：今は半です。"
+      "japanese": "デパートは午前十時から夜八時までです。",
+      "chinese": "百貨公司從上午十點營業到晚上八點。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "今、何時何分ですか。四時二分です。",
-      "chinese": "現在幾點幾分？四點兩分。",
-      "targets": [
-        "分",
-        "何分"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 修補生詞覆蓋] 補 寝ます／分；原句：今、何時何分ですか。"
+      "japanese": "私は図書館で夜九時まで勉強します。",
+      "chinese": "我在圖書館讀書讀到晚上九點。",
+      "reviewedBy": "author"
+    },
+    {
+      "japanese": "私は夜十一時半に寝ます。",
+      "chinese": "我晚上十一點半睡覺。",
+      "reviewedBy": "author"
+    },
+    {
+      "japanese": "私達は昼、十二時から一時まで休みます。",
+      "chinese": "我們中午從十二點休息到一點。",
+      "reviewedBy": "author"
+    },
+    {
+      "japanese": "銀行は何時に終わりますか。午後三時です。",
+      "chinese": "銀行幾點結束營業？下午三點。",
+      "reviewedBy": "author"
     }
   ]
 }

@@ -2,63 +2,58 @@
   "volume": 1,
   "lesson": 10,
   "author": "opus-5-hand-written",
-  "note": "concelebrō 武加大沒有任何字形，練不到。diaconus 只有 Diaconi、nātus 只認字形 natus／nati，句子照這些形寫。🚨 2026-09-27 補：affirmō（affirmant／affirmat 等形）舊稿七句全未帶到，第 7 句已補上 affirmat。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫。",
   "sentences": [
     {
-      "latin": "Natus in templo est",
-      "chinese": "他在聖殿中出生。",
+      "latin": "Diaconus minister episcopi est.",
+      "chinese": "執事是主教的助手。",
       "targets": [
-        "natus",
-        "templum"
+        "diaconus"
       ]
     },
     {
-      "latin": "Perduxit populum ad templum",
-      "chinese": "他把百姓領到聖殿。",
+      "latin": "Parentes puerum in templum perduxerunt.",
+      "chinese": "父母把孩子帶到聖殿。",
       "targets": [
         "perduco",
         "templum"
       ]
     },
     {
-      "latin": "Dominus verbum tradidit et discipuli receperunt",
-      "chinese": "上主交付了話，門徒們也領受了。",
+      "latin": "Judas magistrum tradidit.",
+      "chinese": "猶達斯出賣了老師。",
       "targets": [
-        "recipio",
         "trado"
       ]
     },
     {
-      "latin": "Ne seducat populum",
-      "chinese": "免得他誘惑百姓。",
+      "latin": "Pater filium recepit et festum celebravit.",
+      "chinese": "父親接回兒子，並慶祝了一番。",
       "targets": [
-        "seduco"
+        "recipio",
+        "celebro"
       ]
     },
     {
-      "latin": "Diaconi et carissimi discipuli in templo sunt",
-      "chinese": "執事們與最親愛的門徒們都在聖殿中。",
-      "targets": [
-        "templum",
-        "carus",
-        "diaconus"
-      ]
-    },
-    {
-      "latin": "Dignus servus bene celebravit sacramentum",
-      "chinese": "配得的僕人好好地舉行了聖事。",
+      "latin": "Bene dixisti, magister.",
+      "chinese": "老師，你說得好。",
       "targets": [
         "bene",
-        "celebro",
-        "dignus"
+        "dico"
       ]
     },
     {
-      "latin": "Dominus verbum servorum confirmavit; discipulus affirmat.",
-      "chinese": "上主堅固了僕人們的話；門徒也申明了這事。",
+      "latin": "Confirma fratres tuos.",
+      "chinese": "你要堅固你的弟兄。",
       "targets": [
-        "confirmo",
-        "affirmo"
+        "confirmo"
+      ]
+    },
+    {
+      "latin": "Agnus dignus est accipere gloriam.",
+      "chinese": "羔羊配得光榮。",
+      "targets": [
+        "dignus"
       ]
     }
   ]

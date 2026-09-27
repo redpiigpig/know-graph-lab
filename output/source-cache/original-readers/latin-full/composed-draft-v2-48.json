@@ -2,42 +2,73 @@
   "volume": 2,
   "lesson": 48,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫（棄用模板產生器）。🚨 Februarius 在武加大＋教會語料中零字形（含 Februario／Februarii 拼法皆試過），練不到；20 詞僅練 19。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫，連接詞只用在真的因果／轉折／時間／目的關係上；寧可少練一詞也不硬塞，每課覆蓋至少 15/20（含引用題）。",
   "sentences": [
     {
-      "latin": "Impulsu occupat; nemo adversatur.",
-      "chinese": "他因激勵而奪取了；沒有人反對。",
-      "targets": ["impulsus", "occupo", "adversor"]
+      "latin": "Hoc rationi consentaneum est et bonum commune promovet.",
+      "chinese": "這合乎理性，並且促進公益。",
+      "targets": [
+        "consentaneus"
+      ]
     },
     {
-      "latin": "Hoc consentaneum est.",
-      "chinese": "這是相宜的。",
-      "targets": ["consentaneus"]
+      "latin": "Apostoli impulsu Spiritus Sancti Evangelium sapienter prædicabant.",
+      "chinese": "宗徒們在聖神的推動下明智地宣講福音。",
+      "targets": [
+        "impulsus",
+        "sapienter"
+      ]
     },
     {
-      "latin": "Solutio ubere manet.",
-      "chinese": "償還豐足地長存。",
-      "targets": ["solutio", "uber"]
+      "latin": "Notitia Dei ad beatitudinem necessaria est.",
+      "chinese": "認識天主是得到真福所必需的。",
+      "targets": [
+        "notitia",
+        "beatitudo"
+      ]
     },
     {
-      "latin": "Repetit notitiam; egregius opus promovit.",
-      "chinese": "他重申了那知識；那卓異的人推進了工作。",
-      "targets": ["repeto", "notitia", "egregius", "promoveo"]
+      "latin": "Paulus, egregius apostolus, eadem sæpe repetit.",
+      "chinese": "卓越的宗徒保祿常常重複同樣的事。",
+      "targets": [
+        "repeto",
+        "egregius"
+      ]
     },
     {
-      "latin": "Consummatur beatitudo; nedum prospectus eget.",
-      "chinese": "至福就此完成；那展望更不用說有所缺乏了。",
-      "targets": ["consummo", "beatitudo", "nedum", "prospectus", "egeo"]
+      "latin": "Fideles in Jesum, consummatorem fidei, intuentur.",
+      "chinese": "信友們注視著耶穌，信德的成全者。",
+      "targets": [
+        "intueor"
+      ]
     },
     {
-      "latin": "Custos suadet; sapienter intuetur.",
-      "chinese": "守衛勸告著；他明智地注視著。",
-      "targets": ["suadeo", "sapienter", "intueor"]
+      "latin": "Pauperes auxilio fratrum egent.",
+      "chinese": "窮人需要弟兄們的幫助。",
+      "targets": [
+        "egeo"
+      ]
     },
     {
-      "latin": "Deus omnia sapienter redigit.",
-      "chinese": "天主明智地將萬物轉變安排。",
-      "targets": ["redigo"]
+      "latin": "Deus impios in nihilum redigit.",
+      "chinese": "天主使惡人歸於虛無。",
+      "targets": [
+        "redigo"
+      ]
+    },
+    {
+      "latin": "Caro et spiritus sibi invicem adversantur.",
+      "chinese": "肉性與聖神彼此相爭。",
+      "targets": [
+        "adversor"
+      ]
+    },
+    {
+      "latin": "Diabolus homini peccatum suadet.",
+      "chinese": "魔鬼慫恿人去犯罪。",
+      "targets": [
+        "suadeo"
+      ]
     }
   ]
 }

@@ -2,42 +2,60 @@
   "volume": 1,
   "lesson": 38,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫。",
   "sentences": [
     {
-      "latin": "Sacerdos aqua utitur; pro Deo operatur; commemoratio manet.",
-      "chinese": "司祭使用了水；他為天主工作；那紀念長存著。",
-      "targets": ["sacerdos", "utor", "Deus", "operor", "commemoratio"]
+      "latin": "Hoc facite in meam commemorationem.",
+      "chinese": "你們要這樣做，為紀念我。",
+      "targets": [
+        "commemoratio",
+        "hic"
+      ]
     },
     {
-      "latin": "Deus mundum amat; in deliciis manet.",
-      "chinese": "天主愛世界；祂安居於喜樂之中。",
-      "targets": ["Deus", "amo", "delicia"]
+      "latin": "Et factum est ita.",
+      "chinese": "事就這樣成了。",
+      "targets": [
+        "ita"
+      ]
     },
     {
-      "latin": "Locus desertus est; factor omnium venit.",
-      "chinese": "那地方是荒涼的；萬物的創造者來臨了。",
-      "targets": ["locus", "desertus", "factor"]
+      "latin": "Illumina, Domine, cogitationes nostras.",
+      "chinese": "上主，求你光照我們的思念。",
+      "targets": [
+        "cogitatio"
+      ]
     },
     {
-      "latin": "Hic homo est; ille angelus est; is venit.",
-      "chinese": "這是個人；那是位天使；他來了。",
-      "targets": ["hic", "ille", "is"]
+      "latin": "Diligentibus Deum omnia cooperantur in bonum.",
+      "chinese": "為愛天主的人，萬事都互相協助，使他們獲得益處。",
+      "targets": [
+        "cooperor"
+      ]
     },
     {
-      "latin": "Iste liber ita scriptus est.",
-      "chinese": "那本書是這樣寫成的。",
-      "targets": ["iste", "liber", "ita"]
+      "latin": "Qualis est iste, qui in deserto prædicat?",
+      "chinese": "在曠野中宣講的，是個怎樣的人？",
+      "targets": [
+        "desertus",
+        "iste",
+        "qualis"
+      ]
     },
     {
-      "latin": "Cogitatio bona illuminat; ordo servatur; omnes cooperantur.",
-      "chinese": "善的思念照亮人；秩序被遵守；眾人都在協作。",
-      "targets": ["cogitatio", "illumino", "ordo", "cooperor"]
+      "latin": "Pater meus usque modo operatur.",
+      "chinese": "我父到現在一直在工作。",
+      "targets": [
+        "operor"
+      ]
     },
     {
-      "latin": "Qualis Deus, quanta dona largitus est! Labi potest.",
-      "chinese": "何等的天主，祂賜下了多麼大的恩賜！人卻可能跌倒。",
-      "targets": ["qualis", "Deus", "quantus", "largior", "labor"]
+      "latin": "Deus, qui nos amat, gratiam nobis largitus est.",
+      "chinese": "愛我們的天主將恩寵賜給了我們。",
+      "targets": [
+        "amo",
+        "largior"
+      ]
     }
   ]
 }

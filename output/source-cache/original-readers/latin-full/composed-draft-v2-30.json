@@ -2,42 +2,61 @@
   "volume": 2,
   "lesson": 30,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。🚨 December 在武加大＋教會語料中零字形，練不到；20 詞僅練 19。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫，連接詞只用在真的因果／轉折／時間／目的關係上；寧可少練一詞也不硬塞，每課覆蓋至少 15/20（含引用題）。",
   "sentences": [
     {
-      "latin": "Ecclesia sacerdotium complectitur; regimen habet; elementum manet.",
-      "chinese": "教會擁抱了聖職；她擁有治理；要素長存。",
-      "targets": ["ecclesia", "sacerdotium", "complector", "regimen", "elementum"]
+      "latin": "Christiani sunt genus electum et sacerdotium sanctum.",
+      "chinese": "基督徒是被揀選的族類，是神聖的司祭團。",
+      "targets": [
+        "sacerdotium"
+      ]
     },
     {
-      "latin": "Nequit omnia facere; industria studet.",
-      "chinese": "他不能夠做到一切；他以勤奮致力於。",
-      "targets": ["nequeo", "omnis", "industria", "studeo"]
+      "latin": "Qui gratia indigent, cum fiducia ad Deum accedant.",
+      "chinese": "需要恩寵的人，應當懷著信心走近天主。",
+      "targets": [
+        "indigeo",
+        "fiducia"
+      ]
     },
     {
-      "latin": "Revera personalis fides indiget gratia.",
-      "chinese": "確實，個人的信德需要恩寵。",
-      "targets": ["revera", "personalis", "fides", "indigeo", "gratia"]
+      "latin": "Christiani imprimis regno Dei student.",
+      "chinese": "基督徒首先致力於天主的國。",
+      "targets": [
+        "imprimis",
+        "studeo"
+      ]
     },
     {
-      "latin": "Praecipue imprimis Deum attingit fides.",
-      "chinese": "尤其首要地，信德觸及了天主。",
-      "targets": ["praecipue", "imprimis", "Deus", "attingo", "fides"]
+      "latin": "Christus revera in sacramento altaris præsens est.",
+      "chinese": "基督確實臨在於祭台的聖事中。",
+      "targets": [
+        "revera"
+      ]
     },
     {
-      "latin": "Progressus fiduciam auget.",
-      "chinese": "進展增加了信心。",
-      "targets": ["progressus", "fiducia", "augeo"]
+      "latin": "Episcopi regimen ecclesiæ cum papa exercent.",
+      "chinese": "主教們與教宗一同治理教會。",
+      "targets": [
+        "regimen"
+      ]
     },
     {
-      "latin": "Effectus progressionis multiplex est; nimirum demum crescit.",
-      "chinese": "進展的果效是多重的；毫無疑問，它終於增長了。",
-      "targets": ["progressio", "multiplex", "nimirum", "demum"]
+      "latin": "Verus progressus multiplex est et totum hominem complectitur.",
+      "chinese": "真正的進步是多方面的，包含整個人。",
+      "targets": [
+        "complector",
+        "progressus",
+        "multiplex"
+      ]
     },
     {
-      "latin": "Sacerdotium multiplex regimen attingit.",
-      "chinese": "聖職觸及了多重的治理。",
-      "targets": ["sacerdotium", "multiplex", "regimen", "attingo"]
+      "latin": "Monachi præcipue industria manuum suarum vivebant.",
+      "chinese": "隱修士主要靠自己雙手的勞動生活。",
+      "targets": [
+        "industria",
+        "praecipue"
+      ]
     }
   ]
 }

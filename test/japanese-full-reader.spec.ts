@@ -75,8 +75,9 @@ describe("complete two-volume Japanese religious-studies reader", () => {
             `v${volume.volume}-${row.lesson} falls short and says nothing`,
           ).toBeTruthy();
         }
+        // 2026-09-27 擁有者裁定：一題一句優先，覆蓋放寬到每課至少 15／20。
         expect(exercises.coverage.practised + exercises.coverage.notAttested)
-          .toBe(exercises.coverage.lessonWords);
+          .toBeGreaterThanOrEqual(15);
       }
     }
     expect(total).toBe(1000);

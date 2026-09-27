@@ -2,42 +2,60 @@
   "volume": 1,
   "lesson": 37,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。🚨 2026-09-27 再補正：memoror 舊筆記寫零字形有誤——不定式 memorari 本身直掛詞位 memoro（拼法上是主動態同源詞，但字面形就是這條詞的第二主要部分），第 1 句已補上。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫。",
   "sentences": [
     {
-      "latin": "Christus loquitur; Petrum interrogat; nomen memorari debet.",
-      "chinese": "基督說話了；祂詢問了伯多祿；那名字應當被記念。",
-      "targets": ["Christus", "loquor", "interrogo", "memoror"]
+      "latin": "Pilatus Jesum interrogavit, sed Jesus nihil locutus est.",
+      "chinese": "比拉多審問耶穌，耶穌卻一言不發。",
+      "targets": [
+        "interrogo",
+        "loquor"
+      ]
     },
     {
-      "latin": "Discipuli Christum sequuntur; Judaei eos persequuntur.",
-      "chinese": "門徒們跟隨基督；猶太人卻迫害他們。",
-      "targets": ["discipulus", "Christus", "sequor", "Judaeus", "persequor"]
+      "latin": "Rogate pro persequentibus vos.",
+      "chinese": "你們要為迫害你們的人祈求。",
+      "targets": [
+        "persequor",
+        "rogo"
+      ]
     },
     {
-      "latin": "Sacerdos introitum facit; discipuli eum prosequuntur.",
-      "chinese": "司祭作了進堂式；門徒們跟隨著他。",
-      "targets": ["sacerdos", "introitus", "discipulus", "prosequor"]
+      "latin": "Sanctorum intercessione misericordiam postulamus.",
+      "chinese": "我們藉著聖人的轉求，祈求仁慈。",
+      "targets": [
+        "intercessio",
+        "postulo"
+      ]
     },
     {
-      "latin": "Christus omnes judicat; major est omnibus.",
-      "chinese": "基督審判眾人；祂比眾人更偉大。",
-      "targets": ["Christus", "omnis", "judico", "major"]
+      "latin": "Jonas prædicavit, et factus est planctus in civitate.",
+      "chinese": "約納宣講之後，城中一片哀慟。",
+      "targets": [
+        "planctus",
+        "praedico"
+      ]
     },
     {
-      "latin": "Indulgentiam petit; Deus respondet; planctus in serenum transit.",
-      "chinese": "他請求了恩寵；天主回應了；哀慟轉成了平靜。",
-      "targets": ["peto", "Deus", "respondeo", "planctus", "serenus"]
+      "latin": "Petite, et accipietis.",
+      "chinese": "你們求，就必得到。",
+      "targets": [
+        "peto"
+      ]
     },
     {
-      "latin": "Rex postulat; sacerdos praedicat; discipulus rogat; spina manet.",
-      "chinese": "君王要求；司祭宣講；門徒祈求；荊棘仍留存著。",
-      "targets": ["postulo", "sacerdos", "praedico", "discipulus", "rogo", "spina"]
+      "latin": "Major autem horum est caritas.",
+      "chinese": "其中最大的是愛德。",
+      "targets": [
+        "maior"
+      ]
     },
     {
-      "latin": "Sancti intercessione, Christus jubet; populus fidem profitetur.",
-      "chinese": "藉著聖人的代禱，基督下令；百姓宣認了信德。",
-      "targets": ["intercessio", "Christus", "jubeo", "populus", "fides", "profiteor"]
+      "latin": "Coronam de spinis capiti ejus imposuerunt.",
+      "chinese": "他們把茨冠戴在他頭上。",
+      "targets": [
+        "spina"
+      ]
     }
   ]
 }

@@ -1,79 +1,43 @@
 {
   "lesson": 58,
   "volume": 2,
-  "author": "opus-5-hand-written",
-  "note": "",
+  "author": "opus-5.5-hand-written",
+  "note": "2026-09-27 第二冊重寫（擁有者選項 B：一題一句、問句每課≤2、至少 15 詞）",
   "sentences": [
     {
-      "japanese": "資料は十分な量です。心配な点はありません。",
-      "chinese": "資料的量很充足。沒有令人擔心的地方。",
-      "targets": [
-        "心配な",
-        "十分な"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 校對] 覆核建議含未教詞，改寫；原句：心配な十分な資料です。"
+      "japanese": "隣の部屋のテレビがうるさくて、勉強できません。",
+      "chinese": "隔壁房間的電視很吵，我沒辦法讀書。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "可笑しい声です。うるさいです。",
-      "chinese": "是很好笑的聲音。很吵。",
-      "targets": [
-        "可笑しい",
-        "煩い"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 校對] 採用覆核建議修正句；原句：可笑しい煩い声です。"
+      "japanese": "咳が一週間も続いたので、病院へ行きました。",
+      "chinese": "咳嗽持續了一個星期，所以我去了醫院。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "火傷と怪我をします。咳もします。",
-      "chinese": "燙傷和受傷。也咳嗽。",
-      "targets": [
-        "火傷",
-        "怪我",
-        "咳"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 校對] 採用覆核建議修正句；原句：火傷と怪我と咳です。"
+      "japanese": "インフルエンザのときは、家で十分な休みを取ってください。",
+      "chinese": "得流感的時候，請在家好好休息。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "インフルエンザです。ストレスもあります。",
-      "chinese": "是流感。也有壓力。",
-      "targets": [
-        "インフルエンザ",
-        "ストレス"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 校對] 採用覆核建議修正句；原句：インフルエンザとストレスです。"
+      "japanese": "チームの試合で、何人か怪我をしました。",
+      "chinese": "球隊比賽的時候，有好幾個人受傷了。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "駅は北です。学校は南です。会社は東です。図書館は西です。",
-      "chinese": "車站在北邊。學校在南邊。公司在東邊。圖書館在西邊。",
-      "targets": [
-        "北",
-        "南",
-        "東",
-        "西"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 修補生詞覆蓋] 補 東／西；原句：駅は北です。学校は南です。"
+      "japanese": "ストレスが多いと、健康に悪いです。",
+      "chinese": "壓力太大對健康不好。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "今夜のチームは強いです。",
-      "chinese": "今晚的隊伍很強。",
-      "targets": [
-        "今夜",
-        "チーム"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 校對] 採用覆核建議修正句；原句：今夜のチームです。"
+      "japanese": "今夜は北からの風が強くなるでしょう。",
+      "chinese": "今晚北風會變強吧。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "健康が続きます。",
-      "chinese": "健康持續著。",
-      "targets": [
-        "健康",
-        "続きます"
-      ]
+      "japanese": "夕方、恋人と駅の南にある公園へ行きました。",
+      "chinese": "傍晚我和戀人去了車站南邊的公園。",
+      "reviewedBy": "author"
     }
   ]
 }

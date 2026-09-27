@@ -2,42 +2,61 @@
   "volume": 1,
   "lesson": 22,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。🚨 dētergeō 在武加大＋教會語料中零字形，練不到。🚨 2026-09-27 再補正：speciō 舊筆記寫零字形有誤——它只透過武加大裡的形容詞 speciōsus 的詞幹搭上，第 3 句已改用 speciosum。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫。",
   "sentences": [
     {
-      "latin": "Ubi tuba sonat, populus colligitur; baptisma sanctificat.",
-      "chinese": "號筒響起的地方，百姓就聚集；聖洗使人成聖。",
-      "targets": ["ubi", "tuba", "populus", "colligo", "baptisma"]
+      "latin": "Hoc est corpus meum.",
+      "chinese": "這是我的身體。",
+      "targets": [
+        "corpus"
+      ]
     },
     {
-      "latin": "Homo ubique Deum invenit; Deum diligit.",
-      "chinese": "人到處尋見天主；並愛慕天主。",
-      "targets": ["homo", "ubique", "Deus", "diligo"]
+      "latin": "Terra, ubi stetit Jesus, sancta est.",
+      "chinese": "耶穌站過的土地是神聖的。",
+      "targets": [
+        "sto",
+        "ubi"
+      ]
     },
     {
-      "latin": "Corpus speciosum est, ut vivat.",
-      "chinese": "身體是美麗的，好讓它存活。",
-      "targets": ["ut", "corpus"]
+      "latin": "Deus ubique est.",
+      "chinese": "天主無所不在。",
+      "targets": [
+        "ubique"
+      ]
     },
     {
-      "latin": "Genus humanum peccavit; ideo Christus venit.",
-      "chinese": "人類犯了罪；因此基督來臨了。",
-      "targets": ["genus", "ideo", "Christus"]
+      "latin": "Christiani sunt genus electum.",
+      "chinese": "基督徒是蒙揀選的種族。",
+      "targets": [
+        "eligo",
+        "genus"
+      ]
     },
     {
-      "latin": "Sacerdos voluntatem Deo subdit; librum descripsit.",
-      "chinese": "司祭將意願交託給天主；並記述了那書卷。",
-      "targets": ["subdo", "describo"]
+      "latin": "Deus dilexit mundum, ideo Filium misit.",
+      "chinese": "天主愛了世界，因此派遣了聖子。",
+      "targets": [
+        "diligo",
+        "ideo"
+      ]
     },
     {
-      "latin": "Deprecationem Ecclesiae Deus suscipit; iram non infert.",
-      "chinese": "天主接納了教會的祈求；並不降下怒氣。",
-      "targets": ["deprecatio", "Deus", "infero"]
+      "latin": "Angeli cum tuba electos colligent.",
+      "chinese": "天使們要以號角聲召集蒙選的人。",
+      "targets": [
+        "tuba",
+        "colligo",
+        "eligo"
+      ]
     },
     {
-      "latin": "Petrus stat; Deus eum elegit; ergo gaudet.",
-      "chinese": "伯多祿站立著；天主揀選了他；因此他歡喜。",
-      "targets": ["sto", "Deus", "eligo", "ergo"]
+      "latin": "Unus est Dominus et unum baptisma.",
+      "chinese": "主只有一位，聖洗也只有一個。",
+      "targets": [
+        "baptisma"
+      ]
     }
   ]
 }

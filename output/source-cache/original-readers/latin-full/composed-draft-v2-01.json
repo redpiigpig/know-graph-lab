@@ -2,42 +2,61 @@
   "volume": 2,
   "lesson": 1,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫（棄用模板產生器）。🚨 2026-09-27 再補正：inferus 舊筆記寫零字形有誤——語料裡的比較級 inferior 系列詞位就是直標 inferus（fold 後與詞頭相同），第 6 句已補上。quaesō/quaesumus 是片語詞條，credit_keys 要求 quaeso 與 quaesumus 兩形同句齊現才算練到——與 nōlī/nōlite（上冊第 50 課）不同，quaesumus 對詞性標記器是「無已知人稱數」的形，兩形擺一起不會撞人稱數閘，第 7 句已改寫成兩形並存（原句的 redemptio 已由第 1 句覆蓋，不受影響）。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫，連接詞只用在真的因果／轉折／時間／目的關係上；寧可少練一詞也不硬塞，每課覆蓋至少 15/20（含引用題）。",
   "sentences": [
     {
-      "latin": "Concilium redemptionem intellegit; majestas Dei manet.",
-      "chinese": "大會理解了救贖；天主的威嚴長存。",
-      "targets": ["redemptio", "intellego", "majestas", "Deus", "maneo"]
+      "latin": "Magi regi narraverunt stellam quam viderant.",
+      "chinese": "賢士們向君王述說了他們所看見的那顆星。",
+      "targets": [
+        "magus",
+        "narro"
+      ]
     },
     {
-      "latin": "Magus regem quaerit; praeses narrat.",
-      "chinese": "術士尋找君王；總督述說了。",
-      "targets": ["magus", "quaero", "praeses", "narro"]
+      "latin": "Petrus peccatum suum intellexit et ploravit.",
+      "chinese": "伯多祿明白了自己的罪，就哭了。",
+      "targets": [
+        "intellego",
+        "ploro"
+      ]
     },
     {
-      "latin": "Populus paenitet; itaque Deus permanet fidelis.",
-      "chinese": "百姓懊悔；因此天主仍然忠信。",
-      "targets": ["populus", "paeniteo", "itaque", "Deus", "permaneo"]
+      "latin": "Angeli et homines pariter majestatem tuam, Domine, adorant.",
+      "chinese": "主啊，天使和人一同朝拜你的威嚴。",
+      "targets": [
+        "majestas",
+        "pariter"
+      ]
     },
     {
-      "latin": "Octavus dies purus est; par ceteris non est.",
-      "chinese": "第八日是純淨的；它與其他的日子不相同。",
-      "targets": ["octavus", "dies", "purus", "par"]
+      "latin": "Caritas pura in æternum permanet.",
+      "chinese": "純潔的愛德永遠長存。",
+      "targets": [
+        "permaneo",
+        "purus"
+      ]
     },
     {
-      "latin": "Populus pariter ploravit; dispar est dolor.",
-      "chinese": "百姓同聲哭泣了；痛苦卻是不一樣的。",
-      "targets": ["populus", "pariter", "ploro", "dispar", "dolor"]
+      "latin": "Per redemptionem Christi ab inferno liberati sumus.",
+      "chinese": "藉著基督的救贖，我們從陰府中得到了釋放。",
+      "targets": [
+        "infernus",
+        "redemptio"
+      ]
     },
     {
-      "latin": "Populus infernum timet; locus manet; locus inferior est.",
-      "chinese": "百姓畏懼地獄；那地方長存；那地方是更低下的。",
-      "targets": ["populus", "infernus", "locus", "maneo", "inferus"]
+      "latin": "Pænitet me, Domine, peccatorum meorum.",
+      "chinese": "主啊，我痛悔我的罪過。",
+      "targets": [
+        "paeniteo"
+      ]
     },
     {
-      "latin": "Quaeso, Domine, quaesumus semper.",
-      "chinese": "主啊，我懇求；我們也時常懇切祈求。",
-      "targets": ["Dominus"]
+      "latin": "Præses Jesum interrogabat, at ille nihil respondit.",
+      "chinese": "總督審問耶穌，他卻什麼也不回答。",
+      "targets": [
+        "praeses"
+      ]
     }
   ]
 }

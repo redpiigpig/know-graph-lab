@@ -1,79 +1,43 @@
 {
   "lesson": 12,
   "volume": 1,
-  "author": "opus-5-hand-written",
-  "note": "",
+  "author": "opus-5.5-hand-written",
+  "note": "2026-09-27 第三次重寫（擁有者選項 B：一題一句、問句每課≤2、至少 15 詞）",
   "sentences": [
     {
-      "japanese": "写真を撮ります。映画の写真です。",
-      "chinese": "拍照片。是電影的照片。",
-      "targets": [
-        "撮ります",
-        "写真",
-        "映画"
-      ]
-    },
-    {
-      "japanese": "ご飯とパンを買います。卵も買います。",
-      "chinese": "買飯和麵包。也買蛋。",
-      "targets": [
-        "ご飯",
-        "パン",
-        "卵"
-      ],
-      "note": "[2026-09-27 と並列超過兩項修正] 原句：ご飯とパンと卵を買います。",
+      "japanese": "日曜日は友達に会って、映画を見ます。",
+      "chinese": "星期日和朋友見面，去看電影。",
       "reviewedBy": "author"
     },
     {
-      "japanese": "肉と魚を買います。野菜と果物も買います。",
-      "chinese": "買肉和魚。也買蔬菜和水果。",
-      "targets": [
-        "肉",
-        "魚",
-        "野菜",
-        "果物"
-      ],
-      "note": "[2026-09-27 と並列超過兩項修正] 原句：肉と魚と野菜と果物を買います。",
+      "japanese": "北京で家族の写真を撮りました。",
+      "chinese": "在北京拍了家人的照片。",
       "reviewedBy": "author"
     },
     {
-      "japanese": "お茶とビールを飲みます。お酒も飲みます。",
-      "chinese": "喝茶和啤酒。也喝酒。",
-      "targets": [
-        "お茶",
-        "ビール",
-        "お酒"
-      ],
-      "note": "[2026-09-27 と並列超過兩項修正] 原句：お茶とビールとお酒を飲みます。",
+      "japanese": "朝はパンと卵を食べます。",
+      "chinese": "早上吃麵包和雞蛋。",
       "reviewedBy": "author"
     },
     {
-      "japanese": "店とレストランはどこですか。",
-      "chinese": "商店和餐廳在哪裡？",
-      "targets": [
-        "店",
-        "レストラン"
-      ]
+      "japanese": "私は肉を食べませんが、魚は食べます。",
+      "chinese": "我不吃肉，但吃魚。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "宿題をします。",
-      "chinese": "做功課。",
-      "targets": [
-        "宿題"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 校對] 採用覆核建議修正句；原句：宿題を書きます。"
+      "japanese": "昨日は何をしましたか。家で宿題をしました。",
+      "chinese": "昨天做了什麼？在家寫了功課。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "店で写真を撮ります。映画を見ます。",
-      "chinese": "在店裡拍照。看電影。",
-      "targets": [
-        "映画",
-        "店",
-        "撮ります"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 校對] 採用覆核建議修正句；原句：映画の店で写真を撮ります。"
+      "japanese": "あの店で果物と野菜を買います。",
+      "chinese": "在那家店買水果和蔬菜。",
+      "reviewedBy": "author"
+    },
+    {
+      "japanese": "お茶を飲みますか。いいえ、水をください。",
+      "chinese": "要喝茶嗎？不用，請給我水。",
+      "reviewedBy": "author"
     }
   ]
 }

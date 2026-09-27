@@ -2,42 +2,61 @@
   "volume": 2,
   "lesson": 40,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫（棄用模板產生器）。🚨 2026-09-27 再補正：imus 唯一攤到的主格字形確與 eō 的一複 imus 同形共用（詞位歸 eo），但另一形 imo（奪格）語料裡詞位直標 imus（與詞頭相符），詞表沒收錄這個格不影響詞位比對，第 3 句已補上。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫，連接詞只用在真的因果／轉折／時間／目的關係上；寧可少練一詞也不硬塞，每課覆蓋至少 15/20（含引用題）。",
   "sentences": [
     {
-      "latin": "Justificatio congregationem servat.",
-      "chinese": "成義守護了那團體。",
-      "targets": ["justificatio", "congregatio"]
+      "latin": "Matrimonium, vitæ consortium, ad bonum prolis ordinatum est.",
+      "chinese": "婚姻是生命的結合，以子女的益處為目的。",
+      "targets": [
+        "consortium",
+        "proles"
+      ]
     },
     {
-      "latin": "Huc felicitas venit; primas credit.",
-      "chinese": "幸福來到了此地；首席主教相信了。",
-      "targets": ["huc", "felicitas", "primas", "credo"]
+      "latin": "Martyres exemplar fortitudinis sunt.",
+      "chinese": "殉道者是勇毅的典範。",
+      "targets": [
+        "exemplar",
+        "fortitudo"
+      ]
     },
     {
-      "latin": "Sacerdos arbitrabatur; consecratio manet; loco imo manet.",
-      "chinese": "司祭這樣認為；祝聖長存；在那最低之處，它也長存。",
-      "targets": ["sacerdos", "arbitror", "consecratio", "imus"]
+      "latin": "Amicitia Dei veram securitatem dat.",
+      "chinese": "與天主的友誼帶來真正的安全。",
+      "targets": [
+        "amicitia",
+        "securitas"
+      ]
     },
     {
-      "latin": "Exemplar conventus datur.",
-      "chinese": "範本在集會中被賜下。",
-      "targets": ["exemplar", "conventus"]
+      "latin": "Conventus liturgicus est congregatio populi Dei.",
+      "chinese": "禮儀集會是天主子民的聚集。",
+      "targets": [
+        "congregatio",
+        "conventus"
+      ]
     },
     {
-      "latin": "Consortium amicitiae manet; proles crescit.",
-      "chinese": "友誼的伴侶關係長存；子嗣漸漸增長。",
-      "targets": ["consortium", "amicitia", "proles"]
+      "latin": "Qui graviter peccavit, justificationem amisit.",
+      "chinese": "犯了重罪的人，就失去了成義的恩寵。",
+      "targets": [
+        "justificatio",
+        "graviter"
+      ]
     },
     {
-      "latin": "Fortitudo graviter subest.",
-      "chinese": "力量沉重地潛存著。",
-      "targets": ["fortitudo", "graviter", "subsum"]
+      "latin": "Paulus omnia propter Christum detrimentum arbitratus est.",
+      "chinese": "保祿為了基督，把一切都看作損失。",
+      "targets": [
+        "arbitror"
+      ]
     },
     {
-      "latin": "Populus evadit; securitas novissima manet; mense Dec.",
-      "chinese": "百姓逃脫了；最後的安全感長存；在十二月的月份。",
-      "targets": ["populus", "evado", "securitas", "novissimus", "Dec"]
+      "latin": "Novissimi erunt primi.",
+      "chinese": "最後的將成為最先的。",
+      "targets": [
+        "novissimus"
+      ]
     }
   ]
 }

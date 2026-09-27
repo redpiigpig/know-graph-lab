@@ -2,42 +2,58 @@
   "volume": 1,
   "lesson": 45,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。🚨 2026-09-27 再補正：condoleō 舊筆記寫零字形有誤——condolet 本身在教會語料裡（詞位欄是空的，靠詞幹搭上），第 1 句已補上。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫。",
   "sentences": [
     {
-      "latin": "Christus nos redimeret; refulsit gloria; sacerdos condolet.",
-      "chinese": "基督為要救贖我們；光榮閃耀了；司祭一同感受著這苦痛。",
-      "targets": ["Christus", "redimo", "refulgeo", "gloria"]
+      "latin": "Sanguine Christi redempti sumus.",
+      "chinese": "我們是藉著基督的血蒙救贖的。",
+      "targets": [
+        "redimo"
+      ]
     },
     {
-      "latin": "Deus signum statuit; salutare omnibus est.",
-      "chinese": "天主設立了記號；救恩屬於眾人。",
-      "targets": ["Deus", "signum", "statuo", "salutare"]
+      "latin": "Jugum meum suave est.",
+      "chinese": "我的軛是柔和的。",
+      "targets": [
+        "suauis"
+      ]
     },
     {
-      "latin": "Vox suavis est; synagoga audit.",
-      "chinese": "聲音是甘美的；會堂在聆聽。",
-      "targets": ["vox", "suavis", "synagoga"]
+      "latin": "Jesus in synagogis cum virtute docebat.",
+      "chinese": "耶穌帶著大能在會堂裡施教。",
+      "targets": [
+        "synagoga",
+        "uirtus"
+      ]
     },
     {
-      "latin": "Tantum unum signum datur; tempus venit.",
-      "chinese": "只有一個記號被賜下；時候到了。",
-      "targets": ["tantum", "signum", "tempus"]
+      "latin": "Noli timere, tantum crede.",
+      "chinese": "不要怕，只要信。",
+      "targets": [
+        "tantum"
+      ]
     },
     {
-      "latin": "Unde virtus venit? Alius credit, alter non credit.",
-      "chinese": "德行從何而來？有人相信，另有人卻不信。",
-      "targets": ["unde", "virtus", "alius", "alter"]
+      "latin": "Lux refulsit, et vox de cælo facta est.",
+      "chinese": "光芒閃耀，並有聲音從天上傳來。",
+      "targets": [
+        "refulgeo",
+        "uox"
+      ]
     },
     {
-      "latin": "Amor amplius semper crescit.",
-      "chinese": "愛總是更加廣大地增長。",
-      "targets": ["amplus", "amplius"]
+      "latin": "Alter alterius onera portate.",
+      "chinese": "你們要彼此協助背負重擔。",
+      "targets": [
+        "alter"
+      ]
     },
     {
-      "latin": "Ignis ardet; genua curvantur contra malum.",
-      "chinese": "火焰燃燒著；膝蓋向著惡屈曲。",
-      "targets": ["ignis", "ardeo", "contra", "curvo"]
+      "latin": "Qui non est mecum, contra me est.",
+      "chinese": "不與我在一起的，就是反對我。",
+      "targets": [
+        "contra"
+      ]
     }
   ]
 }

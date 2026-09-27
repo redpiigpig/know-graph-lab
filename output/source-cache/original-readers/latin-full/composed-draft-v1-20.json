@@ -2,42 +2,60 @@
   "volume": 1,
   "lesson": 20,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。cēnō 武加大僅見完成式 cœnāvit／cœnāvērunt（無現在式、無不定式字形），故只用這兩形；-dō 與獨立動詞 dō, dare 共享詞位 do，故用 dat 練到；videor 僅不定式 vīderī 與詞頭本身收在詞表形表中，改用「bonum vidērī potest」句式（能顯得是好的）。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫。",
   "sentences": [
     {
-      "latin": "Deus caelum et terram creavit; digito mundum condidit.",
-      "chinese": "天主創造了天與地；祂以指頭創造了世界。",
-      "targets": ["Deus", "creo", "digitus", "mundus", "condo"]
+      "latin": "Dextera Domini cælos condidit.",
+      "chinese": "上主的右手建立了諸天。",
+      "targets": [
+        "condo",
+        "dextera"
+      ]
     },
     {
-      "latin": "Baptista in deserto vivit.",
-      "chinese": "施洗者活在荒野中。",
-      "targets": ["baptista", "desertum", "vivo"]
+      "latin": "Discipuli Joannem Baptistam circumsteterunt.",
+      "chinese": "門徒們圍在洗者若翰身旁。",
+      "targets": [
+        "baptista",
+        "circumsto"
+      ]
     },
     {
-      "latin": "Discipuli circumsteterunt, populus circumspiciebat.",
-      "chinese": "門徒們圍站著，百姓則四處觀望。",
-      "targets": ["discipulus", "circumsto", "populus", "circumspicio"]
+      "latin": "Brachium Domini multum valet.",
+      "chinese": "上主的手臂大有能力。",
+      "targets": [
+        "ualeo",
+        "brachium"
+      ]
     },
     {
-      "latin": "Populus infirmus est, Deus tamen valet, dona dat.",
-      "chinese": "百姓是虛弱的，然而天主卻強盛，並賜下恩賜。",
-      "targets": ["populus", "tamen", "Deus", "valeo", "-do"]
+      "latin": "Aspiciens in cælum benedixit.",
+      "chinese": "他舉目望天，祝福了。",
+      "targets": [
+        "aspicio"
+      ]
     },
     {
-      "latin": "Dextera magnam utilitatem habet; brachium magnum est.",
-      "chinese": "右手有很大的用處；那手臂是大的。",
-      "targets": ["dextera", "utilitas", "brachium"]
+      "latin": "Digitus Dei est hic.",
+      "chinese": "這是天主的手指。",
+      "targets": [
+        "digitus"
+      ]
     },
     {
-      "latin": "Angeli astiterunt, aspiciebant, donum addiderunt.",
-      "chinese": "天使們站著，觀望著，添上了一件禮物。",
-      "targets": ["angelus", "asto", "aspicio", "addo"]
+      "latin": "Parvuli sunt, Deus tamen eos non despicit.",
+      "chinese": "他們雖然微小，天主卻不輕視他們。",
+      "targets": [
+        "tamen",
+        "despicio"
+      ]
     },
     {
-      "latin": "Homo despicit; bonum videri potest; angelus cœnavit.",
-      "chinese": "那人蔑視了；這似乎能是好的；天使用了晚餐。",
-      "targets": ["despicio", "videor"]
+      "latin": "Astiterunt reges terræ adversus Dominum.",
+      "chinese": "地上的君王起來反對上主。",
+      "targets": [
+        "asto"
+      ]
     }
   ]
 }

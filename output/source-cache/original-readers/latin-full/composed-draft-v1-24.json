@@ -2,42 +2,59 @@
   "volume": 1,
   "lesson": 24,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。🚨 2026-09-27 再補正：postis 舊筆記寫「三道閘都碰不到」有誤——原第 4 句用的 postem 確實沒有詞位，但奪格 poste 有直掛詞位 postis，已改用 poste（praeter 只接受格，改配 in）。insonō 舊筆記寫零字形也有誤——insonuit 本身在武加大裡（詞位欄是空的，靠詞幹搭上），第 3 句已補上。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫。",
   "sentences": [
     {
-      "latin": "Cor humanum mortem timet.",
-      "chinese": "人心懼怕死亡。",
-      "targets": ["cor", "humanus", "mors"]
+      "latin": "Dele iniquitatem meam.",
+      "chinese": "求你抹去我的罪惡。",
+      "targets": [
+        "iniquitas"
+      ]
     },
     {
-      "latin": "Lector lectionem legit; panem sacerdoti mandavit.",
-      "chinese": "讀經員誦讀了讀經；並將餅交託給了司祭。",
-      "targets": ["lector", "lectio", "panis", "mando"]
+      "latin": "Christus mortem vicit.",
+      "chinese": "基督戰勝了死亡。",
+      "targets": [
+        "mors"
+      ]
     },
     {
-      "latin": "Cantor prae populo cecinit; tuba insonuit.",
-      "chinese": "歌者在百姓面前歌唱了；號筒也響徹了。",
-      "targets": ["cantor", "prae"]
+      "latin": "Lector primam lectionem legit.",
+      "chinese": "讀經員宣讀第一篇讀經。",
+      "targets": [
+        "lectio",
+        "lector"
+      ]
     },
     {
-      "latin": "Tuba praeter aulam in poste personat.",
-      "chinese": "號筒在殿堂之外、在門框上響徹迴盪。",
-      "targets": ["praeter", "persono", "postis"]
+      "latin": "Non est alius Deus præter Dominum.",
+      "chinese": "除了上主，沒有別的神。",
+      "targets": [
+        "praeter"
+      ]
     },
     {
-      "latin": "Pars populi in mari periit.",
-      "chinese": "百姓的一部分在海中喪亡了。",
-      "targets": ["pars", "mare"]
+      "latin": "Mens humana Deum desiderat.",
+      "chinese": "人的心智渴慕天主。",
+      "targets": [
+        "humanus",
+        "mens"
+      ]
     },
     {
-      "latin": "Mens hominis caligine plena est.",
-      "chinese": "人的心智充滿了昏暗。",
-      "targets": ["mens", "caligo"]
+      "latin": "Dominus in caligine habitat.",
+      "chinese": "上主居住在幽暗之中。",
+      "targets": [
+        "caligo"
+      ]
     },
     {
-      "latin": "Cruor iniquitatem sanat; Deus in largitate mandavit.",
-      "chinese": "血液醫治了罪愆；天主出於慷慨大方吩咐了。",
-      "targets": ["cruor", "iniquitas"]
+      "latin": "Cantores præ gaudio cantabant.",
+      "chinese": "歌詠者因喜樂而歌唱。",
+      "targets": [
+        "cantor",
+        "prae"
+      ]
     }
   ]
 }

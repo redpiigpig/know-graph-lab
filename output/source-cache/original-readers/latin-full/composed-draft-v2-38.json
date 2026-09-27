@@ -2,42 +2,68 @@
   "volume": 2,
   "lesson": 38,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫（棄用模板產生器）。🚨 admodum 在武加大＋教會語料中零字形，練不到；20 詞僅練 19。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫，連接詞只用在真的因果／轉折／時間／目的關係上；寧可少練一詞也不硬塞，每課覆蓋至少 15/20（含引用題）。",
   "sentences": [
     {
-      "latin": "Efficax est; hostem superat; deum consulat.",
-      "chinese": "他是有效的；他征服了敵人；願他求問於神。",
-      "targets": ["efficax", "supero", "consulo"]
+      "latin": "Sacramenta rite confecta efficacia sunt.",
+      "chinese": "按禮舉行的聖事是有效的。",
+      "targets": [
+        "efficax",
+        "conficio"
+      ]
     },
     {
-      "latin": "Tempore Augusti, operarii convictus manet.",
-      "chinese": "在奧古斯都的時代，工匠們的情誼長存。",
-      "targets": ["Augustus", "operarius", "convictus"]
+      "latin": "Evangelium incarnationem Verbi tempore Augusti factam narrat.",
+      "chinese": "福音記述聖言在奧古斯都時代降生成人。",
+      "targets": [
+        "Augustus",
+        "incarnatio"
+      ]
     },
     {
-      "latin": "Verumtamen mutuo dat; interea raro venit.",
-      "chinese": "然而他出借了；同時，他難得來到。",
-      "targets": ["verumtamen", "mutuo", "interea", "raro"]
+      "latin": "Messis multa est, operarii autem raro inveniuntur.",
+      "chinese": "莊稼很多，工人卻很少找得到。",
+      "targets": [
+        "operarius",
+        "raro"
+      ]
     },
     {
-      "latin": "Incarnatione Deus aedificat Ecclesiam.",
-      "chinese": "藉著降生成人，天主建立了教會。",
-      "targets": ["incarnatio", "Deus", "aedifico", "ecclesia"]
+      "latin": "Verumtamen non mea voluntas, sed tua fiat.",
+      "chinese": "然而不要照我的意願，而要照你的意願成就。",
+      "targets": [
+        "verumtamen"
+      ]
     },
     {
-      "latin": "Solidum impellit; conficiat opus.",
-      "chinese": "他推動了那金幣；願他完成工作。",
-      "targets": ["solidus", "impello", "conficio", "opus"]
+      "latin": "Martha sollicita erat, Maria interea sedebat.",
+      "chinese": "瑪爾大忙亂不安，瑪利亞這時卻安坐著。",
+      "targets": [
+        "interea",
+        "sollicitus"
+      ]
     },
     {
-      "latin": "Aspectus aestimationem mutat.",
-      "chinese": "外觀改變了估價。",
-      "targets": ["aspectus", "aestimatio"]
+      "latin": "Episcopus, antequam ecclesiam ædificaret, presbyteros consulere voluit.",
+      "chinese": "主教在建造教堂之前，願意先諮詢司鐸們。",
+      "targets": [
+        "consulo"
+      ]
     },
     {
-      "latin": "Sollicitus est; materialis res non est.",
-      "chinese": "他是焦慮的；這並非物質性的事物。",
-      "targets": ["sollicitus", "materialis", "res"]
+      "latin": "Spiritus Jesum in desertum impulit, ubi tentationes superavit.",
+      "chinese": "聖神催迫耶穌到曠野去，他在那裡戰勝了誘惑。",
+      "targets": [
+        "supero",
+        "impello"
+      ]
+    },
+    {
+      "latin": "Mundus materialis a Deo creatus est.",
+      "chinese": "物質世界是由天主所造的。",
+      "targets": [
+        "materialis"
+      ]
     }
   ]
 }

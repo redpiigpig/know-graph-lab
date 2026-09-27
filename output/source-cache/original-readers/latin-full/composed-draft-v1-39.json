@@ -2,42 +2,60 @@
   "volume": 1,
   "lesson": 39,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。🚨 2026-09-27 再補正：concinō（concinat，靠詞幹搭上）／commixtiō（commixtim，同樣靠詞幹）舊筆記寫零字形有誤，第 1、7 句已各補上。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫。",
   "sentences": [
     {
-      "latin": "Sacerdos sedet; Deus tuetur; chorus concinat.",
-      "chinese": "司祭坐著；天主守護著；願歌詠團齊聲歌唱。",
-      "targets": ["sacerdos", "sedeo", "Deus", "tueor"]
+      "latin": "Sicut erat in principio, et nunc, et semper.",
+      "chinese": "起初如何，今日亦然，直到永遠。",
+      "targets": [
+        "sicut",
+        "sicut .. et"
+      ]
     },
     {
-      "latin": "Homo sensum habet; sextus non est.",
-      "chinese": "人有感覺；並沒有第六種。",
-      "targets": ["homo", "sensus", "sextus"]
+      "latin": "Sic et Pater meus cælestis faciet vobis.",
+      "chinese": "我的天父也要這樣對待你們。",
+      "targets": [
+        "sic",
+        "caelestis"
+      ]
     },
     {
-      "latin": "Sic loquitur; sicut vivit Pater, et Filius vivit.",
-      "chinese": "他這樣說話；正如父活著，子也活著。",
-      "targets": ["sic", "loquor", "sicut", "pater", "filius"]
+      "latin": "Christus est vitis vera.",
+      "chinese": "基督是真葡萄樹。",
+      "targets": [
+        "uitis"
+      ]
     },
     {
-      "latin": "Talis fides est; amor tam magnus, tantus est.",
-      "chinese": "信德是這樣的；愛是這麼浩大，是如此巨大的。",
-      "targets": ["talis", "fides", "tam", "tantus"]
+      "latin": "Tantam fidem in Israel non inveni.",
+      "chinese": "在以色列我沒有見過這麼大的信德。",
+      "targets": [
+        "tantus"
+      ]
     },
     {
-      "latin": "Vitis fructum dat; sacerdos ignem accendit.",
-      "chinese": "葡萄樹結出果實；司祭點燃了火。",
-      "targets": ["vitis", "fructus", "sacerdos", "ignis", "accendo"]
+      "latin": "Talium est regnum cælorum.",
+      "chinese": "天國正是屬於這樣的人的。",
+      "targets": [
+        "talis"
+      ]
     },
     {
-      "latin": "Creator omnium venit; crimen tollit; caelestis chorus cecinit.",
-      "chinese": "萬物的創造者來臨了；祂除去罪過；天上的歌詠團詠唱了。",
-      "targets": ["creator", "crimen", "caelestis", "cano"]
+      "latin": "Creator mundi omnia tuetur.",
+      "chinese": "造物主守護萬物。",
+      "targets": [
+        "tueor",
+        "creator"
+      ]
     },
     {
-      "latin": "Consortes confestim lucernam accendunt commixtim.",
-      "chinese": "那些同伴們立刻混雜著點燃了燈。",
-      "targets": ["consors", "confestim", "accendo"]
+      "latin": "Mulier confestim lucernam accendit.",
+      "chinese": "婦人立刻點亮了燈。",
+      "targets": [
+        "accendo",
+        "confestim"
+      ]
     }
   ]
 }

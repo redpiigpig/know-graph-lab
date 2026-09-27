@@ -2,62 +2,58 @@
   "volume": 1,
   "lesson": 15,
   "author": "opus-5-hand-written",
-  "note": "eléison 是彌撒常規裡的希臘文呼求，武加大沒有字形，練不到。extollō 沒有直述現在式進語料（只有 extollens／extollitur／extollat 等），故用祈願式。clērus 只有 cleros 一形。dētrīmentum 只有主格與複數 detrimentum／detrimenta，沒有奪格。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫。",
   "sentences": [
     {
-      "latin": "Populus sub tecto templi est",
-      "chinese": "百姓在聖殿的屋頂下。",
+      "latin": "Jesus sub tectum famuli intravit.",
+      "chinese": "耶穌進了那僕人的家。",
       "targets": [
         "sub",
         "tectum"
       ]
     },
     {
-      "latin": "Vere testimonium domini verum est",
-      "chinese": "上主的見證確實是真的。",
-      "targets": [
-        "testimonium",
-        "uere"
-      ]
-    },
-    {
-      "latin": "Vestigia ante templum sunt.",
-      "chinese": "聖殿前有足跡。",
-      "targets": [
-        "uestigium",
-        "ante"
-      ]
-    },
-    {
-      "latin": "Absolvit debitum populi",
-      "chinese": "他免了百姓的債。",
-      "targets": [
-        "absoluo",
-        "debitum"
-      ]
-    },
-    {
-      "latin": "Alleluja, excelsus est Dominus",
-      "chinese": "阿肋路亞，上主是至尊的。",
+      "latin": "Alleluja, excelsus est Dominus.",
+      "chinese": "阿肋路亞，上主是崇高的。",
       "targets": [
         "alleluia",
         "excelsus"
       ]
     },
     {
-      "latin": "Cleros extollat Dominus",
-      "chinese": "願上主舉揚聖職者。",
+      "latin": "Christus vere erat ante Abraham.",
+      "chinese": "基督確實在亞巴郎之前就已存在。",
       "targets": [
-        "clerus",
-        "extollo"
+        "uere",
+        "ante"
       ]
     },
     {
-      "latin": "Detrimentum finitum est",
-      "chinese": "損失結束了。",
+      "latin": "Testimonium meum verum est.",
+      "chinese": "我的見證是真實的。",
       "targets": [
-        "detrimentum",
-        "finio"
+        "testimonium"
+      ]
+    },
+    {
+      "latin": "Ego te absolvo a peccatis tuis.",
+      "chinese": "我赦免你的罪。",
+      "targets": [
+        "absoluo"
+      ]
+    },
+    {
+      "latin": "Servus debitum reddidit.",
+      "chinese": "那僕人還清了債。",
+      "targets": [
+        "debitum"
+      ]
+    },
+    {
+      "latin": "Ambulate in vestigiis Christi.",
+      "chinese": "你們要循著基督的足跡行走。",
+      "targets": [
+        "uestigium"
       ]
     }
   ]

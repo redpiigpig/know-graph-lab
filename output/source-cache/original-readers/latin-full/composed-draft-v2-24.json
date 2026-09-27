@@ -2,42 +2,63 @@
   "volume": 2,
   "lesson": 24,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫，連接詞只用在真的因果／轉折／時間／目的關係上；寧可少練一詞也不硬塞，每課覆蓋至少 15/20（含引用題）。",
   "sentences": [
     {
-      "latin": "Trinitas metum aufert; navis venit.",
-      "chinese": "聖三除去了恐懼；船到了。",
-      "targets": ["Trinitas", "metus", "aufero", "navis"]
+      "latin": "Petrus de navi descendit, sed dubitans timuit.",
+      "chinese": "伯多祿從船上下來，卻因疑惑而害怕了。",
+      "targets": [
+        "navis",
+        "dubito"
+      ]
     },
     {
-      "latin": "Decretum tribuitur; effectum generat.",
-      "chinese": "法令被賦予了；它產生了效果。",
-      "targets": ["decretum", "tribuo", "genero"]
+      "latin": "Papa per decretum monasterio privilegium concessit.",
+      "chinese": "教宗以法令授予修院一項特權。",
+      "targets": [
+        "decretum",
+        "privilegium"
+      ]
     },
     {
-      "latin": "Homo remedium quaerit; opus honestum est.",
-      "chinese": "人尋求了藥物；那工作是誠實的。",
-      "targets": ["homo", "remedium", "quaero", "opus", "honestus"]
+      "latin": "Deus Trinitas in anima justi habitat.",
+      "chinese": "天主聖三住在義人的靈魂裡。",
+      "targets": [
+        "Trinitas",
+        "habito"
+      ]
     },
     {
-      "latin": "En! Sacerdos in ecclesia habitat.",
-      "chinese": "看！司祭住在教會中。",
-      "targets": ["en", "sacerdos", "ecclesia", "habito"]
+      "latin": "Qui idola adorat, anathema sit.",
+      "chinese": "誰朝拜偶像，就應受絕罰。",
+      "targets": [
+        "anathema",
+        "idolum"
+      ]
     },
     {
-      "latin": "Privilegium magnitudinem habet; plane manet.",
-      "chinese": "特權具有其重要性；它清楚地長存。",
-      "targets": ["privilegium", "magnitudo", "plane"]
+      "latin": "Peccatum in anima metum generat.",
+      "chinese": "罪在靈魂中產生恐懼。",
+      "targets": [
+        "metus",
+        "genero"
+      ]
     },
     {
-      "latin": "Prudentia cultum regit; anathema non est.",
-      "chinese": "智慧治理了敬拜；這不是絕罰。",
-      "targets": ["prudentia", "cultus", "anathema"]
+      "latin": "Magnitudinem Dei plane intellegere non possumus.",
+      "chinese": "我們不能完全明白天主的偉大。",
+      "targets": [
+        "magnitudo",
+        "plane"
+      ]
     },
     {
-      "latin": "Quam multi dubitaverunt! Idolum sapit nihil.",
-      "chinese": "何等多的人曾懷疑過！偶像毫無意義。",
-      "targets": ["quam", "dubito", "idolum", "sapio", "nihil"]
+      "latin": "Deus peccatoribus remedium salutis tribuit.",
+      "chinese": "天主賜給罪人得救的良方。",
+      "targets": [
+        "tribuo",
+        "remedium"
+      ]
     }
   ]
 }

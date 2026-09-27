@@ -2,66 +2,59 @@
   "volume": 1,
   "lesson": 7,
   "author": "opus-5-hand-written",
-  "note": "本課十五個待練詞多半是動詞，而它們進語料的形很零散：ōrō 只有 oravit／ora／Orate／Oro，ēvocō 只有 evocati，exōrō 只有 exorare／exoretur，meritō 只有大寫的 Merito。句子照這些形寫，不照詞形表推。🚨 2026-09-27 補：exōrō／operō 原七句全未帶到，第 1、6 句已各補上 operatus（operō 的完成分詞）與 exoretur（exōrō 的被動假設式）。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫。",
   "sentences": [
     {
-      "latin": "In principio Deus regnavit; famulus operatus est.",
-      "chinese": "起初天主就統治了；那僕人也效勞了。",
+      "latin": "Dominus a principio regnat.",
+      "chinese": "上主從起初就為王。",
       "targets": [
         "principium",
-        "regno",
-        "famulus",
-        "opero"
+        "regno"
       ]
     },
     {
-      "latin": "Famulus oravit in ecclesia",
-      "chinese": "那僕人在教會中祈禱了。",
+      "latin": "Famulus tuus orat pro familia.",
+      "chinese": "你的僕人為這個家庭祈禱。",
       "targets": [
         "famulus",
         "oro"
       ]
     },
     {
-      "latin": "Famulus necnon discipulus dominum laudat",
-      "chinese": "僕人與門徒都讚美上主。",
+      "latin": "Christus numquam peccavit.",
+      "chinese": "基督從未犯過罪。",
       "targets": [
-        "famulus",
+        "numquam"
+      ]
+    },
+    {
+      "latin": "Invoco Dominum pro familia mea.",
+      "chinese": "我為我的家人呼求上主。",
+      "targets": [
+        "inuoco"
+      ]
+    },
+    {
+      "latin": "Merito laudamus Deum.",
+      "chinese": "我們讚美天主，是理所當然的。",
+      "targets": [
         "laudo",
-        "necnon"
+        "merito"
       ]
     },
     {
-      "latin": "Servi numquam observabant præcepta",
-      "chinese": "僕人們從不遵守誡命。",
+      "latin": "Christus est exemplum nostrum.",
+      "chinese": "基督是我們的榜樣。",
       "targets": [
-        "numquam",
-        "obseruo"
-      ]
-    },
-    {
-      "latin": "Dominus exemplum famulis donavit",
-      "chinese": "上主把榜樣賜給了僕人們。",
-      "targets": [
-        "dono",
         "exemplum"
       ]
     },
     {
-      "latin": "Merito invocavit dominum; dominus exoretur.",
-      "chinese": "他理當呼求了上主；願上主被懇求垂允。",
+      "latin": "Justus præcepta Domini observat.",
+      "chinese": "義人遵守上主的誡命。",
       "targets": [
-        "inuoco",
-        "merito",
-        "exoro"
-      ]
-    },
-    {
-      "latin": "Famuli evocati sunt a deo.",
-      "chinese": "僕人們被天主召出了。",
-      "targets": [
-        "euoco",
-        "famulus"
+        "iustus",
+        "obseruo"
       ]
     }
   ]

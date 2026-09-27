@@ -2,42 +2,59 @@
   "volume": 1,
   "lesson": 23,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫。",
   "sentences": [
     {
-      "latin": "Mater juxta crucem stat.",
-      "chinese": "母親站在十字架旁邊。",
-      "targets": ["mater", "juxta"]
+      "latin": "Christus voluntatem Patris fecit.",
+      "chinese": "基督承行了父的旨意。",
+      "targets": [
+        "pater",
+        "uoluntas"
+      ]
     },
     {
-      "latin": "Pater filii nomen legit.",
-      "chinese": "父親讀了兒子的名字。",
-      "targets": ["pater", "nomen", "lego"]
+      "latin": "Pax Domini sit semper vobiscum.",
+      "chinese": "願主的平安常與你們同在。",
+      "targets": [
+        "pax"
+      ]
     },
     {
-      "latin": "Lumen aptum est; pax data est.",
-      "chinese": "那光是合適的；和平已經賜下。",
-      "targets": ["lumen", "aptus", "pax"]
+      "latin": "Ecce virgo concipiet et pariet filium.",
+      "chinese": "看，童貞女要懷孕生子。",
+      "targets": [
+        "uirgo"
+      ]
     },
     {
-      "latin": "Rex principem juxta se habet; mare Rubrum videt.",
-      "chinese": "君王讓那首領在他身旁；他望見了紅海。",
-      "targets": ["rex", "princeps", "ruber"]
+      "latin": "Stabat mater juxta crucem.",
+      "chinese": "母親站在十字架旁。",
+      "targets": [
+        "iuxta",
+        "mater"
+      ]
     },
     {
-      "latin": "Sacerdos munus regi dat.",
-      "chinese": "司祭把禮物獻給君王。",
-      "targets": ["sacerdos", "munus"]
+      "latin": "Christus est Rex regum.",
+      "chinese": "基督是萬王之王。",
+      "targets": [
+        "rex"
+      ]
     },
     {
-      "latin": "Virgo orationem dicit; oculi sicci sunt.",
-      "chinese": "那處女誦念禱詞；眼睛是乾的。",
-      "targets": ["virgo", "oratio", "siccus"]
+      "latin": "Filii Israel per mare Rubrum in sicco ambulaverunt.",
+      "chinese": "以色列子民在紅海中走乾地過去。",
+      "targets": [
+        "ruber",
+        "siccus"
+      ]
     },
     {
-      "latin": "Sacerdos voluntatem scripsit; ambo suscipiunt.",
-      "chinese": "司祭記下了意願；兩者都領受了。",
-      "targets": ["scribo", "voluntas", "ambo", "suscipio"]
+      "latin": "Diaconus Evangelium legit.",
+      "chinese": "執事宣讀福音。",
+      "targets": [
+        "lego"
+      ]
     }
   ]
 }

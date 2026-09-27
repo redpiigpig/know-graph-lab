@@ -2,42 +2,62 @@
   "volume": 2,
   "lesson": 12,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫，連接詞只用在真的因果／轉折／時間／目的關係上；寧可少練一詞也不硬塞，每課覆蓋至少 15/20（含引用題）。",
   "sentences": [
     {
-      "latin": "Pontifex materiam quaestionis committit.",
-      "chinese": "教宗交付了問題的內容。",
-      "targets": ["pontifex", "materia", "quaestio", "committo"]
+      "latin": "Jesus in medio doctorum quæstionibus eorum respondebat.",
+      "chinese": "耶穌在經師們中間回答他們的問題。",
+      "targets": [
+        "medius",
+        "quaestio"
+      ]
     },
     {
-      "latin": "Capitulum negotium disciplinae regit.",
-      "chinese": "議事錄治理了紀律的事務。",
-      "targets": ["capitulum", "negotium", "disciplina"]
+      "latin": "Episcopi provinciæ curam habent de necessitatibus fidelium.",
+      "chinese": "該省的主教們關心信友的需要。",
+      "targets": [
+        "necessitas",
+        "provincia"
+      ]
     },
     {
-      "latin": "Item studium provinciae necessitatem habet.",
-      "chinese": "同樣地，行省的熱忱有其必要性。",
-      "targets": ["item", "studium", "provincia", "necessitas"]
+      "latin": "Abbas fratri fideli negotia monasterii commisit.",
+      "chinese": "院長把修院的事務託付給一位忠信的弟兄。",
+      "targets": [
+        "committo",
+        "negotium"
+      ]
     },
     {
-      "latin": "Medius error alienus non est; possessio contingit.",
-      "chinese": "中間的錯誤並非外來的；財產歸屬於他。",
-      "targets": ["medius", "error", "alienus", "possessio", "contingo"]
+      "latin": "Dona diversa sunt, sed idem Spiritus.",
+      "chinese": "恩賜雖有區別，卻是同一聖神。",
+      "targets": [
+        "item",
+        "diversus"
+      ]
     },
     {
-      "latin": "Diversus est nec supra omnes; omnino manet.",
-      "chinese": "他是不同的，也不在眾人之上；他完全地長存。",
-      "targets": ["diversus", "nec", "supra", "omnino"]
+      "latin": "Christus, pontifex futurorum bonorum, supra cælos ascendit.",
+      "chinese": "基督，未來福分的大司祭，升到諸天之上。",
+      "targets": [
+        "pontifex",
+        "supra"
+      ]
     },
     {
-      "latin": "Provincia negotium suum habet; error alienus est.",
-      "chinese": "行省有自己的事務；那錯誤是外來的。",
-      "targets": ["provincia", "negotium", "error", "alienus"]
+      "latin": "Clerici in studio et disciplina formantur.",
+      "chinese": "聖職人員在學習和紀律中受培育。",
+      "targets": [
+        "disciplina",
+        "studium"
+      ]
     },
     {
-      "latin": "Pontifex disciplinam constituit; possessio omnino diversa est.",
-      "chinese": "教宗建立了紀律；財產卻完全是不同的。",
-      "targets": ["pontifex", "disciplina", "possessio", "omnino", "diversus"]
+      "latin": "Deus mundum ex nihilo, non ex materia creavit.",
+      "chinese": "天主從無中創造了世界，而不是從現成的材料。",
+      "targets": [
+        "materia"
+      ]
     }
   ]
 }

@@ -111,10 +111,18 @@ def failures_for_lesson(
         names = "、".join(
             str(row.get("pointed") or row.get("headword") or row) for row in missing
         )
+        floor = MIN_PRACTISED.get(language_code or "")
+        reached = len(coverage.get("practised") or []) if isinstance(coverage.get("practised"), list) \
+            else int(coverage.get("practised") or 0)
+        reached += len(coverage.get("notAttested") or [])
         if language_code is None or language_code in FULL_COVERAGE_LANGUAGES:
             problems.append(
                 f"第 {number} 課只練到 {coverage_ratio(coverage):.0%} 的本課詞，"
                 f"未達全覆蓋，沒練到的有 {len(missing)} 個：{names}"
+            )
+        elif floor is not None and reached < floor:
+            problems.append(
+                f"第 {number} 課只練到 {reached} 個本課詞，低於下限 {floor}，沒練到的有 {len(missing)} 個：{names}"
             )
         elif notices is not None:
             notices.append({"lesson": number, "count": len(missing), "names": names})
@@ -140,7 +148,16 @@ def failures_for_lesson(
     return problems
 
 
-FULL_COVERAGE_LANGUAGES = {"hbo", "ja"}
+FULL_COVERAGE_LANGUAGES = {"hbo"}
+
+MIN_PRACTISED = {"lat": 15, "ja": 15}
+"""每課至少要練到幾個本課詞（練到＋語料零字形），低於就擋，其餘缺口照印 notices。
+
+2026-09-27 擁有者裁定（選項 B）：拉丁與日文的自撰題為了湊滿二十詞，六成把兩三個
+互不相干的短句拼成一題，覆核者也放行。改成「一題一句、語意連貫」優先，覆蓋放寬到
+每課至少 15／20；日文因此移出 FULL_COVERAGE_LANGUAGES。一題一句的形式檢查在
+`check_exercise_coherence.py`。
+"""
 """哪些語言要求本課二十詞一個不漏（`languageCode`）。
 
 本來全系列都要求二十個字一個不漏。教父讀文改成節錄之後這一條在希臘／拉丁跟自己

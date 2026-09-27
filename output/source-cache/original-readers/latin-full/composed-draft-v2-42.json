@@ -2,42 +2,77 @@
   "volume": 2,
   "lesson": 42,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫（棄用模板產生器）。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫，連接詞只用在真的因果／轉折／時間／目的關係上；寧可少練一詞也不硬塞，每課覆蓋至少 15/20（含引用題）。",
   "sentences": [
     {
-      "latin": "Violentia vix manet; passim pax est.",
-      "chinese": "暴力幾乎不存留了；到處都是平安。",
-      "targets": ["violentia", "vix", "passim", "pax"]
+      "latin": "Deus mundum tantopere dilexit ut Filium suum daret.",
+      "chinese": "天主竟這樣愛了世界，甚至賜下了自己的兒子。",
+      "targets": [
+        "tantopere"
+      ]
     },
     {
-      "latin": "Artifex opus diffundet; plene laborat.",
-      "chinese": "工匠將要傳播作品；他充分地勞動著。",
-      "targets": ["artifex", "opus", "diffundo", "plene"]
+      "latin": "Caritas Dei in cordibus nostris diffusa est.",
+      "chinese": "天主的愛已傾注在我們心中。",
+      "targets": [
+        "diffundo"
+      ]
     },
     {
-      "latin": "Diligentia extremum non superat.",
-      "chinese": "勤勉並不超越極限。",
-      "targets": ["diligentia", "extremum"]
+      "latin": "Artifex opus suum cum diligentia perficit.",
+      "chinese": "工匠用心地完成他的作品。",
+      "targets": [
+        "artifex",
+        "diligentia"
+      ]
     },
     {
-      "latin": "Aequitas congruenter juventuti datur.",
-      "chinese": "公正恰當地被賜給了青年。",
-      "targets": ["aequitas", "congruenter", "juventus"]
+      "latin": "Deus pauperibus in inopia consolationem præbet.",
+      "chinese": "天主在窮人匱乏時給他們安慰。",
+      "targets": [
+        "consolatio",
+        "inopia"
+      ]
     },
     {
-      "latin": "Ego consolationem do; satisfaciam populo.",
-      "chinese": "我賜下了安慰；我將滿足百姓。",
-      "targets": ["consolatio", "satisfacio", "populus"]
+      "latin": "Christus pro peccatis nostris plene satisfacere voluit.",
+      "chinese": "基督甘願為我們的罪作完全的補贖。",
+      "targets": [
+        "plene",
+        "satisfacio"
+      ]
     },
     {
-      "latin": "Multi repugnant; arguit sacerdos; inopia crescit.",
-      "chinese": "許多人反抗；司祭指控了；貧困漸漸增長。",
-      "targets": ["repugno", "arguo", "sacerdos", "inopia"]
+      "latin": "Propheta violentiam principum arguit.",
+      "chinese": "先知譴責首領們的暴行。",
+      "targets": [
+        "violentia",
+        "arguo"
+      ]
     },
     {
-      "latin": "Validus nonnumquam manet; neve tantopere crescat.",
-      "chinese": "強者有時仍然存留；但願不要如此地過度增長。",
-      "targets": ["validus", "nonnumquam", "neve", "tantopere"]
+      "latin": "Infirmus, qui antea validus erat, vix ambulare poterat.",
+      "chinese": "那病人從前很強壯，如今卻幾乎不能走路。",
+      "targets": [
+        "vix",
+        "validus"
+      ]
+    },
+    {
+      "latin": "Decreta quæ æquitatem non servant, rationi repugnant.",
+      "chinese": "不維護公平的法令與理性相違。",
+      "targets": [
+        "aequitas",
+        "repugno"
+      ]
+    },
+    {
+      "latin": "Juventus nonnumquam a fide recedit.",
+      "chinese": "青年人有時會離開信仰。",
+      "targets": [
+        "juventus",
+        "nonnumquam"
+      ]
     }
   ]
 }

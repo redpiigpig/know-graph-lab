@@ -2,42 +2,61 @@
   "volume": 2,
   "lesson": 29,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫，連接詞只用在真的因果／轉折／時間／目的關係上；寧可少練一詞也不硬塞，每課覆蓋至少 15/20（含引用題）。",
   "sentences": [
     {
-      "latin": "Theologia Augustini manet; effectus manet.",
-      "chinese": "奧思定的神學長存；果效長存。",
-      "targets": ["Augustinus", "theologia", "effectus"]
+      "latin": "Augustinus in theologia magister ecclesiæ est.",
+      "chinese": "奧思定在神學上是教會的導師。",
+      "targets": [
+        "theologia",
+        "Augustinus"
+      ]
     },
     {
-      "latin": "Cottidie momentum crescit; homo participat.",
-      "chinese": "每天，重要性漸漸增長；人參與了。",
-      "targets": ["cottidie", "momentum", "homo", "participo"]
+      "latin": "Cœtus fidelium cottidie in ecclesia convenit.",
+      "chinese": "信友的團體每天在教堂裡聚會。",
+      "targets": [
+        "cottidie",
+        "coetus"
+      ]
     },
     {
-      "latin": "Quoad rectus est, coetus communicat.",
-      "chinese": "就他是正直的而言，那團體共融了。",
-      "targets": ["quoad", "rectus", "coetus", "communico"]
+      "latin": "Via recta ad perfectionem caritas est.",
+      "chinese": "通往成全的正路就是愛德。",
+      "targets": [
+        "rectus",
+        "perfectio"
+      ]
     },
     {
-      "latin": "Umquam de educatione perfectio quaeritur?",
-      "chinese": "曾經有人就教養尋求過完美嗎？",
-      "targets": ["umquam", "educatio", "perfectio", "quaero"]
+      "latin": "Parentes jus et officium educationis filiorum habent.",
+      "chinese": "父母有教育子女的權利和義務。",
+      "targets": [
+        "educatio"
+      ]
     },
     {
-      "latin": "Cursus augetur; dumtaxat copia manet.",
-      "chinese": "進程增長了；至此，豐富長存。",
-      "targets": ["cursus", "augeo", "dumtaxat", "copia"]
+      "latin": "Qui sacramenta participant, effectum gratiæ recipiunt.",
+      "chinese": "參與聖事的人領受恩寵的效果。",
+      "targets": [
+        "effectus",
+        "participo"
+      ]
     },
     {
-      "latin": "Pondus fere magnum est; experientia docet.",
-      "chinese": "重量幾乎是巨大的；經驗教導了人。",
-      "targets": ["pondus", "fere", "experientia", "doceo"]
+      "latin": "Deum nemo vidit umquam.",
+      "chinese": "從來沒有人見過天主。",
+      "targets": [
+        "umquam"
+      ]
     },
     {
-      "latin": "Theologia in coetu docetur; effectus augetur.",
-      "chinese": "神學在團體中被教導；果效增長了。",
-      "targets": ["theologia", "coetus", "doceo", "effectus", "augeo"]
+      "latin": "Paulus pondus laborum portavit et cursum suum complevit.",
+      "chinese": "保祿背負了勞苦的重擔，跑完了自己的路程。",
+      "targets": [
+        "cursus",
+        "pondus"
+      ]
     }
   ]
 }

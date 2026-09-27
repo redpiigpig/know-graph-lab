@@ -2,42 +2,60 @@
   "volume": 1,
   "lesson": 35,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。🚨 2026-09-27 再補正：praenōscō 舊筆記寫零字形有誤——分詞 praenoscens 本身在武加大語料裡（詞位欄是空的，靠詞幹搭上），第 2 句已補上。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫。",
   "sentences": [
     {
-      "latin": "Petrus egreditur; regressus est; iterum ingreditur.",
-      "chinese": "伯多祿出去了；他回來了；他又進去了。",
-      "targets": ["Petrus", "egredior", "regredior", "ingredior"]
+      "latin": "Pastor bonus oves suas novit.",
+      "chinese": "好牧人認識自己的羊。",
+      "targets": [
+        "nosco",
+        "ouis"
+      ]
     },
     {
-      "latin": "Senex per semitas graditur; senex praenoscens est.",
-      "chinese": "老人沿著小徑行走；那老人是有預知能力的。",
-      "targets": ["senex", "semita", "gradior"]
+      "latin": "In Christo non est servus neque liber.",
+      "chinese": "在基督內不分奴隸或自由人。",
+      "targets": [
+        "liber",
+        "neque"
+      ]
     },
     {
-      "latin": "Sacerdos munere fungitur; corona data est.",
-      "chinese": "司祭盡了職責；花冠已被賜下。",
-      "targets": ["sacerdos", "fungor", "corona"]
+      "latin": "Simeon senex erat, exspectans consolationem Israel.",
+      "chinese": "西默盎是個老人，期待著以色列的安慰。",
+      "targets": [
+        "exspecto",
+        "senex"
+      ]
     },
     {
-      "latin": "Discipuli laetabantur; unus neque lacrimatus est.",
-      "chinese": "門徒們歡喜著；其中一人也沒有哭泣過。",
-      "targets": ["discipulus", "laetor", "neque", "lacrimor"]
+      "latin": "Justi in conspectu Dei lætantur.",
+      "chinese": "義人在天主面前歡樂。",
+      "targets": [
+        "conspectus",
+        "laetor"
+      ]
     },
     {
-      "latin": "Christus in conspectu omnium apparuit; quattuor discipuli viderunt.",
-      "chinese": "基督在眾人面前顯現了；四位門徒看見了。",
-      "targets": ["Christus", "conspectus", "quattuor", "discipulus"]
+      "latin": "Ibi erit fletus et stridor dentium.",
+      "chinese": "在那裡要有哀哭和切齒。",
+      "targets": [
+        "fletus"
+      ]
     },
     {
-      "latin": "Ovis fletum audit; pastor exspectat.",
-      "chinese": "羊聽見了哭聲；牧人在等候。",
-      "targets": ["ovis", "fletus", "exspecto"]
+      "latin": "Regressi sunt pastores glorificantes Deum.",
+      "chinese": "牧羊人回去了，一路光榮天主。",
+      "targets": [
+        "regredior"
+      ]
     },
     {
-      "latin": "Populus liber est; Deus miserans venit; eum novit.",
-      "chinese": "百姓是自由的；天主憐憫著而來；祂認識他。",
-      "targets": ["populus", "liber", "Deus", "miseror", "nosco"]
+      "latin": "Reposita est mihi corona justitiæ.",
+      "chinese": "正義的冠冕已為我存留。",
+      "targets": [
+        "corona"
+      ]
     }
   ]
 }

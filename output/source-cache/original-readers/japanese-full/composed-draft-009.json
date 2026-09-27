@@ -1,74 +1,43 @@
 {
   "lesson": 9,
   "volume": 1,
-  "author": "opus-5-hand-written",
-  "note": "",
+  "author": "opus-5.5-hand-written",
+  "note": "2026-09-27 第三次重寫（擁有者選項 B：一題一句、問句每課≤2、至少 15 詞）",
   "sentences": [
     {
-      "japanese": "番号は何番ですか。",
-      "chinese": "號碼是幾號？",
-      "targets": [
-        "番号",
-        "何番"
-      ]
-    },
-    {
-      "japanese": "学校から美術館までお願いします。",
-      "chinese": "從學校到美術館，麻煩了。",
-      "targets": [
-        "から",
-        "まで",
-        "学校",
-        "美術館",
-        "お願いします"
-      ]
-    },
-    {
-      "japanese": "ええと、お願いします。ありがとうございました。",
-      "chinese": "嗯，拜託了。非常感謝。",
-      "targets": [
-        "ええと",
-        "お願いします",
-        "ありがとうございました"
-      ]
-    },
-    {
-      "japanese": "畏まりました。お問い合わせはこちらです。",
-      "chinese": "遵命。查詢在這邊。",
-      "targets": [
-        "畏まりました",
-        "お問い合わせ"
-      ]
-    },
-    {
-      "japanese": "美術館と学校はどこですか。スーパーはどこですか。",
-      "chinese": "美術館和學校在哪裡？超市在哪裡？",
-      "targets": [
-        "美術館",
-        "学校",
-        "スーパー"
-      ],
-      "note": "[2026-09-27 と並列超過兩項修正] 原句：美術館と学校とスーパーはどこですか。",
+      "japanese": "明日、飛行機で北京へ行きます。",
+      "chinese": "明天搭飛機去北京。",
       "reviewedBy": "author"
     },
     {
-      "japanese": "北京の駅はどこですか。飛行機で行きます。",
-      "chinese": "北京的車站在哪裡？坐飛機去。",
-      "targets": [
-        "北京",
-        "駅"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 修補生詞覆蓋] 補 飛行機；原句：北京の駅はどこですか。"
+      "japanese": "私は毎日電車で学校へ来ます。",
+      "chinese": "我每天搭電車來學校。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "バスは何番ですか。",
-      "chinese": "公車是幾號？",
-      "targets": [
-        "飛行機"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 校對] 覆核未附修正句，自撰改寫；原句：飛行機は何番ですか。"
+      "japanese": "ええと、美術館の電話番号は何番ですか。",
+      "chinese": "嗯……美術館的電話號碼是幾號？",
+      "reviewedBy": "author"
+    },
+    {
+      "japanese": "お問い合わせは受付までお願いします。",
+      "chinese": "洽詢請到服務台。",
+      "reviewedBy": "author"
+    },
+    {
+      "japanese": "昨日はありがとうございました。",
+      "chinese": "昨天真是謝謝您了。",
+      "reviewedBy": "author"
+    },
+    {
+      "japanese": "かしこまりました、明日の午後三時ですね。",
+      "chinese": "好的，明天下午三點對吧。",
+      "reviewedBy": "author"
+    },
+    {
+      "japanese": "昨日は駅のスーパーへ行って、夜七時に家へ帰りました。",
+      "chinese": "昨天去了車站的超市，晚上七點回到家。",
+      "reviewedBy": "author"
     }
   ]
 }

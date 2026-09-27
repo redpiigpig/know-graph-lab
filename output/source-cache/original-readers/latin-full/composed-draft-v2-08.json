@@ -2,42 +2,60 @@
   "volume": 2,
   "lesson": 8,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。🚨 exspoliō／irradio 在武加大＋教會語料中零字形，練不到。🚨 2026-09-27 再補正：adōrnō（adornatus）／immolātiō（immolata，都靠詞幹搭上、詞位欄是空的）舊筆記併寫零字形有誤，第 1、3 句已各補上。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫，連接詞只用在真的因果／轉折／時間／目的關係上；寧可少練一詞也不硬塞，每課覆蓋至少 15/20（含引用題）。",
   "sentences": [
     {
-      "latin": "Populus baptismum didicit; dignitas crescit; populus adornatus est.",
-      "chinese": "百姓學會了聖洗；尊嚴漸漸增長；那百姓被裝飾妝點了。",
-      "targets": ["populus", "baptismus", "disco", "dignitas"]
+      "latin": "Beati qui justitiam esuriunt.",
+      "chinese": "渴慕正義的人是有福的。",
+      "targets": [
+        "esurio"
+      ]
     },
     {
-      "latin": "Ejice statim daemonium.",
-      "chinese": "立刻逐出魔鬼吧。",
-      "targets": ["ejicio", "daemonium"]
+      "latin": "Jesus apostolis potestatem dedit dæmonia ejicere.",
+      "chinese": "耶穌賜給宗徒們驅逐魔鬼的權柄。",
+      "targets": [
+        "ejicio"
+      ]
     },
     {
-      "latin": "Multitudo cernit; homo esurit; hostia immolata est.",
-      "chinese": "眾人看見了；那人餓了；那祭牲被獻上了。",
-      "targets": ["multitudo", "cerno", "homo", "esurio"]
+      "latin": "Multitudo fidelium hora matutina in domum Dei convenit.",
+      "chinese": "清晨時分，眾多的信友聚集到天主的殿宇裡。",
+      "targets": [
+        "domus",
+        "matutinus",
+        "multitudo"
+      ]
     },
     {
-      "latin": "Puer coepit discere; Deus confortavit eum.",
-      "chinese": "孩童開始學習；天主堅固了他。",
-      "targets": ["coepi", "disco", "Deus", "conforto"]
+      "latin": "Anima fidelis mirabilia Dei cernit.",
+      "chinese": "忠信的靈魂看見天主的奇事。",
+      "targets": [
+        "cerno",
+        "mirabilis"
+      ]
     },
     {
-      "latin": "Homo jacet; jaciat lapidem.",
-      "chinese": "那人躺著；讓他投擲石頭吧。",
-      "targets": ["homo", "jaceo", "jacio"]
+      "latin": "Per baptismum hæreditatem cælestem accipimus.",
+      "chinese": "我們藉著聖洗領受天上的產業。",
+      "targets": [
+        "baptismus",
+        "hereditas"
+      ]
     },
     {
-      "latin": "Multitudo hereditatem accipit; matutina hora venit; domum intrat.",
-      "chinese": "眾人領受了遺產；晨早的時辰來到了；他走進了家門。",
-      "targets": ["multitudo", "hereditas", "matutinus", "domus"]
+      "latin": "Fratres a Christo humilitatem discant.",
+      "chinese": "弟兄們應當向基督學習謙卑。",
+      "targets": [
+        "disco"
+      ]
     },
     {
-      "latin": "Signum mirabile est; ratio accommodata est.",
-      "chinese": "記號是奇異的；方法是合宜的。",
-      "targets": ["mirabilis", "accommodo"]
+      "latin": "Angelus de cælo Jesum confortavit.",
+      "chinese": "一位天使從天上來堅強耶穌。",
+      "targets": [
+        "conforto"
+      ]
     }
   ]
 }

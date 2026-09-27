@@ -2,42 +2,61 @@
   "volume": 2,
   "lesson": 20,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫，連接詞只用在真的因果／轉折／時間／目的關係上；寧可少練一詞也不硬塞，每課覆蓋至少 15/20（含引用題）。",
   "sentences": [
     {
-      "latin": "Homo mundum possidet; leo mille annos vivit.",
-      "chinese": "人擁有世界；獅子活了一千年。",
-      "targets": ["homo", "possideo", "leo", "mille"]
+      "latin": "Diabolus tamquam leo circuit.",
+      "chinese": "魔鬼像獅子一樣四處巡行。",
+      "targets": [
+        "leo"
+      ]
     },
     {
-      "latin": "Christus abest corpore; spiritali praesentia adest.",
-      "chinese": "基督在肉身上不在場；祂以屬靈的臨在在場。",
-      "targets": ["Christus", "absum", "spiritalis"]
+      "latin": "Qui multa possidet, multas sollicitudines habet.",
+      "chinese": "擁有很多的人，也有很多憂慮。",
+      "targets": [
+        "possideo",
+        "sollicitudo"
+      ]
     },
     {
-      "latin": "Populus consentit; opinio mensis mutatur.",
-      "chinese": "百姓同意了；那月份的看法改變了。",
-      "targets": ["populus", "consentio", "opinio", "mensis"]
+      "latin": "Spiritus Sanctus in infirmitate nostra auxilium nobis fert.",
+      "chinese": "聖神在我們的軟弱中給我們帶來助佑。",
+      "targets": [
+        "infirmitas",
+        "auxilium"
+      ]
     },
     {
-      "latin": "Episcopus reliquias transfert; infirmitas manet.",
-      "chinese": "主教移送了聖髑；病弱仍然存在。",
-      "targets": ["episcopus", "transfero", "infirmitas"]
+      "latin": "Mense sexto nuntius Dei ad Mariam missus est.",
+      "chinese": "第六個月，天主的使者被派遣到瑪利亞那裡。",
+      "targets": [
+        "mensis",
+        "nuntius"
+      ]
     },
     {
-      "latin": "Hoc interest; sollicitudo naturalis est.",
-      "chinese": "這是有關係的；那憂慮是天生的。",
-      "targets": ["intersum", "sollicitudo", "naturalis"]
+      "latin": "Peccator recte facit, si ad Deum revertitur.",
+      "chinese": "罪人若回到天主那裡，就是做對了。",
+      "targets": [
+        "recte",
+        "revertor"
+      ]
     },
     {
-      "latin": "Nuntius auxilium tandem ibidem invenit.",
-      "chinese": "使者終於在同一處找到了援助。",
-      "targets": ["nuntius", "auxilium", "tandem", "ibidem"]
+      "latin": "Deus nos in regnum Filii sui transtulit.",
+      "chinese": "天主把我們遷移到他聖子的國裡。",
+      "targets": [
+        "transfero"
+      ]
     },
     {
-      "latin": "Populus divertit; recte revertitur.",
-      "chinese": "百姓轉向了；他正確地回歸了。",
-      "targets": ["populus", "diverto", "recte", "revertor"]
+      "latin": "Homo naturalis spiritalia non intellegit.",
+      "chinese": "屬血氣的人不明白屬神的事。",
+      "targets": [
+        "spiritalis",
+        "naturalis"
+      ]
     }
   ]
 }

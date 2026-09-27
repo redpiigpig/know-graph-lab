@@ -2,42 +2,60 @@
   "volume": 1,
   "lesson": 43,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫；peregrīnantis 已於詞表校對輪改名為 peregrīnāns（主格分詞），第 6 句已改用該形練到。🚨 2026-09-27 再補正：exspīrō（expiravit）／patrōnus（patronum）舊筆記寫零字形有誤，兩詞都只透過詞幹搭上（詞位欄是空的），第 1、4 句已各補上。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫。",
   "sentences": [
     {
-      "latin": "Doctor consuetudinem docet; martyr fortis est; patronum habet.",
-      "chinese": "教師教導了習俗；殉道者是勇敢的；他有一位主保。",
-      "targets": ["doctor", "consuetudo", "martyr", "fortis"]
+      "latin": "Nos dimittimus debitoribus nostris.",
+      "chinese": "我們寬恕得罪我們的人。",
+      "targets": [
+        "debitor"
+      ]
     },
     {
-      "latin": "Debitor iter facit; dogma nescit; quid petit?",
-      "chinese": "債務人上路了；他不知道那教義；他在請求什麼？",
-      "targets": ["debitor", "iter", "dogma", "nescio", "quid", "peto"]
+      "latin": "Stephanus, martyr fortis, pro Christo mortuus est.",
+      "chinese": "斯德望這位英勇的殉道者為基督而死。",
+      "targets": [
+        "fortis",
+        "martyr"
+      ]
     },
     {
-      "latin": "Sacerdos laborat; spirituali gratia sufficit.",
-      "chinese": "司祭勞動了；靠著屬靈的恩寵就夠了。",
-      "targets": ["sacerdos", "laboro", "spiritualis", "gratia", "sufficio"]
+      "latin": "Paulus, doctor gentium, iter faciebat.",
+      "chinese": "外邦人的導師保祿正在旅途中。",
+      "targets": [
+        "doctor",
+        "iter"
+      ]
     },
     {
-      "latin": "Christus spirat; indulgentiam dat; Christus expiravit.",
-      "chinese": "基督呼吸；祂賜下寬赦；基督也氣絕了。",
-      "targets": ["Christus", "spiro", "indulgentia"]
+      "latin": "Quid est veritas?",
+      "chinese": "真理是什麼？",
+      "targets": [
+        "quid",
+        "quis"
+      ]
     },
     {
-      "latin": "Lucifer apparet; sacerdos praestolatur.",
-      "chinese": "晨星出現了；司祭在等候。",
-      "targets": ["lucifer", "appareo", "praestolor"]
+      "latin": "Spiritus ubi vult spirat.",
+      "chinese": "風隨意向哪裡吹，就向哪裡吹。",
+      "targets": [
+        "spiro"
+      ]
     },
     {
-      "latin": "Peregrinans iter facit; quomodo est? Quis scit?",
-      "chinese": "旅人走上了旅程；情況如何？誰知道呢？",
-      "targets": ["peregrinans", "iter", "quomodo", "quis", "scio"]
+      "latin": "Ecclesia peregrinans vigilat et adventum Domini præstolatur.",
+      "chinese": "旅途中的教會警醒著，等候主的來臨。",
+      "targets": [
+        "peregrinans",
+        "praestolor"
+      ]
     },
     {
-      "latin": "Doctor iterum docet; discipulus laborat.",
-      "chinese": "教師再次教導；門徒勞動了。",
-      "targets": ["doctor", "laboro", "discipulus"]
+      "latin": "Jesus secundum consuetudinem in synagogam intravit.",
+      "chinese": "耶穌照常進了會堂。",
+      "targets": [
+        "consuetudo"
+      ]
     }
   ]
 }

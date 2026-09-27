@@ -256,8 +256,8 @@ def add_exercises(document: Document, block: dict | None, lesson: dict) -> None:
         H.set_run_font(head.add_run(f"{item['no']:02d}"), H.FONT_UI, H.LABEL_PT,
                        bold=True, color=H.ACCENT)
         if item["kind"] == "quoted":
-            H.add_mixed_script_text(head, "　" + item["ref"], H.FONT_ZH, H.CAPTION_PT,
-                                    color=H.MUTED)
+            H.add_mixed_script_text(head, "　" + fit_ref_label(item["ref"]), H.FONT_ZH,
+                                    H.CAPTION_PT, color=H.MUTED)
         H.set_keep(head, next_paragraph=True)
         line = document.add_paragraph()
         line.paragraph_format.left_indent = Mm(4)
@@ -504,6 +504,38 @@ def add_auxiliary_appendix(document: Document) -> None:
         row.paragraph_format.space_after = Pt(1)
         H.add_mixed_script_text(row, form, FONT_JA, H.TABLE_SIZE_PT + 1.6)
         H.add_mixed_script_text(row, f"　{gloss}", H.FONT_ZH, H.TABLE_SIZE_PT, color=H.INK)
+
+
+REF_LABEL_MAX_WIDTH = 30.0
+
+
+def _display_width(text: str) -> float:
+    import unicodedata
+    return sum(1.0 if unicodedata.east_asian_width(ch) in "WF" else 0.55 for ch in text)
+
+
+def fit_ref_label(ref: str) -> str:
+    """引用題的出處標籤壓在一行內。
+
+    練習頁是照「每題一行」算滿一頁的（擁有者 2026-09-25：十題收在一頁），標籤一折行，
+    第 10 題就被擠到下一頁。喜田貞吉〈奥羽北部の石器時代文化における古代シナ文化の
+    影響について〉這種長篇名就是這樣把第二冊第 43 課撐破的。篇名太長時保留頭尾、
+    中段以「…」省略；作者與書名號照留，讀者仍認得出是哪一篇。
+    """
+    if _display_width(ref) <= REF_LABEL_MAX_WIDTH or "〈" not in ref or not ref.endswith("〉"):
+        return ref
+    author, title = ref.split("〈", 1)
+    title = title[:-1]
+    budget = REF_LABEL_MAX_WIDTH - _display_width(author) - 3  # 〈 〉 …
+    head_len = tail_len = 0
+    while _display_width(title[:head_len + 1]) + _display_width(title[len(title) - tail_len:]) <= budget:
+        if head_len <= tail_len * 2:
+            head_len += 1
+        elif _display_width(title[:head_len]) + _display_width(title[len(title) - tail_len - 1:]) <= budget:
+            tail_len += 1
+        else:
+            break
+    return f"{author}〈{title[:head_len]}…{title[len(title) - tail_len:] if tail_len else ''}〉"
 
 
 def attach_sense(lessons: list[dict], sense: dict[str, str]) -> int:

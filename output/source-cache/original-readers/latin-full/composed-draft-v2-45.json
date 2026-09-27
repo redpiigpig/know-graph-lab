@@ -2,42 +2,69 @@
   "volume": 2,
   "lesson": 45,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫（棄用模板產生器）。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫，連接詞只用在真的因果／轉折／時間／目的關係上；寧可少練一詞也不硬塞，每課覆蓋至少 15/20（含引用題）。",
   "sentences": [
     {
-      "latin": "Custos vulnus privatim sustentat.",
-      "chinese": "守衛私下地照料著那創傷。",
-      "targets": ["custos", "vulnus", "privatim", "sustento"]
+      "latin": "Diabolo resistere possumus, dummodo in fide firmi simus.",
+      "chinese": "只要我們在信德上堅定，就能抵抗魔鬼。",
+      "targets": [
+        "dummodo",
+        "resisto"
+      ]
     },
     {
-      "latin": "Certamen diuturnum differtur.",
-      "chinese": "長久的競賽被延遲了。",
-      "targets": ["certamen", "diuturnus", "differo"]
+      "latin": "Christus vulnera passus est et fel gustavit.",
+      "chinese": "基督忍受了創傷，也嘗了苦膽。",
+      "targets": [
+        "fel",
+        "vulnus"
+      ]
     },
     {
-      "latin": "Fel constans resistit; firmitas manet.",
-      "chinese": "苦毒持續地抵抗；堅固卻長存。",
-      "targets": ["fel", "constans", "resisto", "firmitas"]
+      "latin": "Martyres certamen suum magna constantia sustinuerunt.",
+      "chinese": "殉道者以極大的堅貞承受了他們的奮戰。",
+      "targets": [
+        "constantia",
+        "certamen"
+      ]
     },
     {
-      "latin": "Interpretatio contextum habet; mentio fit.",
-      "chinese": "解釋擁有其脈絡；提及就此發生。",
-      "targets": ["interpretatio", "contextus", "mentio"]
+      "latin": "Fides constans animæ firmitatem dat.",
+      "chinese": "堅貞的信德給靈魂堅定的力量。",
+      "targets": [
+        "constans",
+        "firmitas"
+      ]
     },
     {
-      "latin": "Constantia instar solis manet.",
-      "chinese": "堅貞如同太陽長存。",
-      "targets": ["constantia", "instar"]
+      "latin": "Contemplatio et oratio elementa essentialia vitæ religiosæ sunt.",
+      "chinese": "默觀和祈禱是修道生活的本質要素。",
+      "targets": [
+        "contemplatio",
+        "essentialis"
+      ]
     },
     {
-      "latin": "Contemplatio et fel essentialia manent, dummodo constans sit.",
-      "chinese": "沉思與苦毒都是本質性的，只要它是恆定的。",
-      "targets": ["contemplatio", "essentialis", "dummodo"]
+      "latin": "Deus, custos noster, omnia sustentat.",
+      "chinese": "天主是我們的守護者，祂支撐萬物。",
+      "targets": [
+        "sustento",
+        "custos"
+      ]
     },
     {
-      "latin": "Mensis Julius manet.",
-      "chinese": "七月這個月份仍然存留。",
-      "targets": ["Julius"]
+      "latin": "Stella a stella differt in claritate.",
+      "chinese": "星與星在光輝上彼此不同。",
+      "targets": [
+        "differo"
+      ]
+    },
+    {
+      "latin": "Servitus populi in Ægypto diuturna fuit.",
+      "chinese": "百姓在埃及所受的奴役是長久的。",
+      "targets": [
+        "diuturnus"
+      ]
     }
   ]
 }

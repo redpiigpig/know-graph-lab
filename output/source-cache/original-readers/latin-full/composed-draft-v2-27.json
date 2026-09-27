@@ -2,42 +2,62 @@
   "volume": 2,
   "lesson": 27,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫；va 已於詞表校對輪改名為 vah，第 4 句已改用該形。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫，連接詞只用在真的因果／轉折／時間／目的關係上；寧可少練一詞也不硬塞，每課覆蓋至少 15/20（含引用題）。",
   "sentences": [
     {
-      "latin": "Eucharistiae fundamentum manet; civis credit.",
-      "chinese": "感恩祭的根基長存；公民相信了。",
-      "targets": ["eucharistia", "fundamentum", "civis", "credo"]
+      "latin": "Cognitio Dei vitam æternam affert.",
+      "chinese": "認識天主帶來永生。",
+      "targets": [
+        "affero",
+        "cognitio"
+      ]
     },
     {
-      "latin": "Etenim traditiones culturam adiungunt.",
-      "chinese": "誠然，傳統們聯結了文化。",
-      "targets": ["etenim", "traditio", "adjungo"]
+      "latin": "Matrimonium est conjunctio viri et mulieris.",
+      "chinese": "婚姻是男人和女人的結合。",
+      "targets": [
+        "conjunctio"
+      ]
     },
     {
-      "latin": "Philosophia praecipua est; religiosa manet.",
-      "chinese": "哲學是主要的；她仍是虔敬的。",
-      "targets": ["philosophia", "praecipuus", "religiosus"]
+      "latin": "Scriptura et traditio fundamentum fidei sunt.",
+      "chinese": "聖經和聖傳是信仰的基礎。",
+      "targets": [
+        "fundamentum",
+        "traditio"
+      ]
     },
     {
-      "latin": "Vah! Cognitio contendit; homo progreditur.",
-      "chinese": "啊！認知在爭辯；人在前進。",
-      "targets": ["vah", "cognitio", "contendo", "homo", "progredior"]
+      "latin": "Ecclesia eucharistiam celebrat et in via progreditur.",
+      "chinese": "教會舉行感恩祭，並在旅途上前進。",
+      "targets": [
+        "eucharistia",
+        "progredior"
+      ]
     },
     {
-      "latin": "Hoc attinet; significatio declarat plenitudinem.",
-      "chinese": "這是有關的；意義宣告了圓滿。",
-      "targets": ["attineo", "significatio", "declaro", "plenitudo"]
+      "latin": "Philosophia et cultura gentium fidei viam parant.",
+      "chinese": "各民族的哲學和文化為信仰預備道路。",
+      "targets": [
+        "cultura",
+        "philosophia"
+      ]
     },
     {
-      "latin": "Conjunctio civium fundamentum affert.",
-      "chinese": "公民的聯合帶來了根基。",
-      "targets": ["conjunctio", "civis", "fundamentum", "affero"]
+      "latin": "Ecclesia significationem hujus signi declaravit.",
+      "chinese": "教會闡明了這個標記的意義。",
+      "targets": [
+        "significatio",
+        "declaro"
+      ]
     },
     {
-      "latin": "Traditio et cultura fundamentum plenitudinis sunt.",
-      "chinese": "傳統與文化都是圓滿的根基。",
-      "targets": ["traditio", "cultura", "fundamentum", "plenitudo"]
+      "latin": "Cives cælestis patriæ ad sanctitatem contendunt.",
+      "chinese": "天上家鄉的公民努力追求聖德。",
+      "targets": [
+        "civis",
+        "contendo"
+      ]
     }
   ]
 }

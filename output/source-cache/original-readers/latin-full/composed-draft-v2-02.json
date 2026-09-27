@@ -2,42 +2,61 @@
   "volume": 2,
   "lesson": 2,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。🚨 dēvincō 在武加大＋教會語料中零字形，練不到。🚨 2026-09-27 再補正：revertō（revertere，主動式二單命令）／coadūnō（coadunate）／eucharisticus（eucharistici）舊筆記併寫零字形有誤，皆靠詞幹或字面形搭上；revertere 對詞性標記器是已知的第二人稱單數，須避開同句其他人稱動詞，第 3、5 句已重組，第 2、6 句補上另兩詞。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫，連接詞只用在真的因果／轉折／時間／目的關係上；寧可少練一詞也不硬塞，每課覆蓋至少 15/20（含引用題）。",
   "sentences": [
     {
-      "latin": "Populus remanet; urbs sermone continetur.",
-      "chinese": "百姓仍然留下；城邦被言論所容納。",
-      "targets": ["populus", "remaneo", "urbs", "sermo", "contineo"]
+      "latin": "Maria apud monumentum remansit, Dominum requirens.",
+      "chinese": "瑪利亞留在墳墓旁，尋找主。",
+      "targets": [
+        "remaneo",
+        "requiro"
+      ]
     },
     {
-      "latin": "Christus sepulcrum requirit; victor exsistit; populi eucharistici sunt.",
-      "chinese": "基督尋求了墳墓；勝利者出現了；那些是感恩祭的子民。",
-      "targets": ["Christus", "sepulcrum", "requiro", "victor", "exsisto"]
+      "latin": "Testes adversus Jesum loquebantur, sed ipse tacebat.",
+      "chinese": "證人們說話控告耶穌，他卻一直沉默。",
+      "targets": [
+        "taceo",
+        "adversus"
+      ]
     },
     {
-      "latin": "Populus sensit; sacerdos tacuit; antequam apis venit, cera.",
-      "chinese": "百姓感受到了；司祭沉默了；在蜜蜂來到之前，蠟就已存在。",
-      "targets": ["populus", "sentio", "sacerdos", "taceo", "antequam", "apis"]
+      "latin": "Deus planctum nostrum in gaudium vertit.",
+      "chinese": "天主把我們的哀哭轉為喜樂。",
+      "targets": [
+        "verto"
+      ]
     },
     {
-      "latin": "Deus verba vertit; vestis alba manet.",
-      "chinese": "天主轉變了話語；那白色的衣服長存。",
-      "targets": ["Deus", "verto", "vestis"]
+      "latin": "Milites vestes ejus inter se diviserunt.",
+      "chinese": "兵士們把他的衣服彼此分了。",
+      "targets": [
+        "vestis"
+      ]
     },
     {
-      "latin": "Revertere ad Dominum.",
-      "chinese": "你要歸向上主。",
-      "targets": ["Dominus"]
+      "latin": "Christus victor surrexit, nec sepulcrum eum continuit.",
+      "chinese": "基督得勝復活了，墳墓沒能困住他。",
+      "targets": [
+        "sepulcrum",
+        "victor",
+        "contineo"
+      ]
     },
     {
-      "latin": "Adversus hostem populus stat; panis datur; coadunate!",
-      "chinese": "百姓站立對抗敵人；餅被賜下；你們要聯合起來！",
-      "targets": ["adversus", "populus", "panis"]
+      "latin": "Impii peribunt sicut cera ante ignem.",
+      "chinese": "惡人必要滅亡，如同蠟在火前融化。",
+      "targets": [
+        "antequam",
+        "cera"
+      ]
     },
     {
-      "latin": "Victor urbem tenet; sepulcrum vacuum manet.",
-      "chinese": "勝利者持守著城邦；墳墓仍然空著。",
-      "targets": ["victor", "urbs", "sepulcrum"]
+      "latin": "Videns Jesus urbem flevit super illam.",
+      "chinese": "耶穌看見那座城，就為它哭泣。",
+      "targets": [
+        "urbs"
+      ]
     }
   ]
 }

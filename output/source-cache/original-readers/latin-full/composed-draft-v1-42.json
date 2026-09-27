@@ -2,42 +2,59 @@
   "volume": 1,
   "lesson": 42,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。🚨 venia 全格皆查無（唯一攤到的 veniam 語料歸給同形的 veniō），練不到。🚨 2026-09-27 再補正：succurrō 舊筆記併寫零字形有誤——命令式 succurre 本身在語料裡（第二人稱單數，詞位欄是空的），第 4 句已補上，與同句既有的 salve／timeas 同為第二人稱單數，不撞人稱數閘。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫。",
   "sentences": [
     {
-      "latin": "Imperator honorem habet; patriam defendit.",
-      "chinese": "皇帝擁有榮譽；他保衛了祖國。",
-      "targets": ["imperator", "honor", "patria", "defendo"]
+      "latin": "Nemo propheta acceptus est in patria sua.",
+      "chinese": "沒有一個先知在自己的家鄉受歡迎。",
+      "targets": [
+        "patria"
+      ]
     },
     {
-      "latin": "Pauper oblationem dat; nihil necessarium poscit.",
-      "chinese": "窮人獻上了祭品；他沒有要求任何必要的東西。",
-      "targets": ["pauper", "oblatio", "necessarius", "posco"]
+      "latin": "In die solemni oblatio Domino offertur.",
+      "chinese": "在慶節的日子，有祭品獻給上主。",
+      "targets": [
+        "oblatio",
+        "solemnis"
+      ]
     },
     {
-      "latin": "Propheta praedixit; populus timuit.",
-      "chinese": "先知預言了；百姓就懼怕了。",
-      "targets": ["praedico", "populus", "timeo"]
+      "latin": "Ecclesia in unitate perpetuo manebit.",
+      "chinese": "教會將永遠保持合一。",
+      "targets": [
+        "perpetuo",
+        "unitas"
+      ]
     },
     {
-      "latin": "Salve, fili; ne timeas; succurre populo.",
-      "chinese": "你好，孩子；不要害怕；你要援助百姓。",
-      "targets": ["salve", "ne", "timeo"]
+      "latin": "Sive vivimus, sive morimur, Domini sumus.",
+      "chinese": "我們或生或死，都是屬於主的。",
+      "targets": [
+        "siue"
+      ]
     },
     {
-      "latin": "Deus occurrit homini; venit an manet?",
-      "chinese": "天主向人迎面而來；他來臨呢，還是留下？",
-      "targets": ["Deus", "occurro", "homo", "an"]
+      "latin": "Imperator honorem a populo accepit.",
+      "chinese": "皇帝接受了百姓的尊崇。",
+      "targets": [
+        "honor",
+        "imperator"
+      ]
     },
     {
-      "latin": "Perpetuo Deus adest; unitas manet.",
-      "chinese": "天主永遠在場；合一長存。",
-      "targets": ["perpetuo", "Deus", "unitas"]
+      "latin": "Vos estis populus acquisitionis.",
+      "chinese": "你們是屬於天主的子民。",
+      "targets": [
+        "acquisitio"
+      ]
     },
     {
-      "latin": "Sive pauper sive dives, solemnis est acquisitio.",
-      "chinese": "無論貧窮或富有，那獲得都是隆重的。",
-      "targets": ["sive", "pauper", "dives", "solemnis", "acquisitio"]
+      "latin": "Salve, Regina, mater misericordiæ.",
+      "chinese": "萬福母后，仁慈的母親。",
+      "targets": [
+        "salue"
+      ]
     }
   ]
 }

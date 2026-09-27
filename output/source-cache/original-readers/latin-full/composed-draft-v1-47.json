@@ -2,42 +2,61 @@
   "volume": 1,
   "lesson": 47,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。🚨 2026-09-27 再補正：veneratur（詞位標 veneror）確實與詞頭 venerō 對不上，但同一詞條的動名詞 venerandus（詞位直標 uenero，folds 後與詞頭相符）可用，第 2 句已補上。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫。",
   "sentences": [
     {
-      "latin": "Testis totus fidelis est; tristis non est.",
-      "chinese": "整個見證人是忠信的；他並不憂傷。",
-      "targets": ["testis", "totus", "tristis"]
+      "latin": "Totum corpus in caritate crescit.",
+      "chinese": "整個身體在愛德中成長。",
+      "targets": [
+        "totus",
+        "cresco"
+      ]
     },
     {
-      "latin": "Umbra transit; populus veneratur; Deum venerandum credit.",
-      "chinese": "陰影消逝了；百姓在敬拜；他信天主是應受敬拜的。",
-      "targets": ["umbra", "populus", "venero"]
+      "latin": "Aliqui discipuli tristes hospitem susceperunt.",
+      "chinese": "有幾個憂愁的門徒接待了一位旅客。",
+      "targets": [
+        "tristis",
+        "aliqui",
+        "aliquis",
+        "hospes"
+      ]
     },
     {
-      "latin": "Aliqui credunt; aliquis non credit.",
-      "chinese": "有些人相信；卻有一人不信。",
-      "targets": ["aliqui", "aliquis", "credo"]
+      "latin": "Maria in cælum assumpta est.",
+      "chinese": "瑪利亞被提升天。",
+      "targets": [
+        "assumo"
+      ]
     },
     {
-      "latin": "Christus mundum assumpsit; figuram hominis gessit.",
-      "chinese": "基督承擔了世界；祂擁有人的形像。",
-      "targets": ["Christus", "assumo", "figura", "homo", "gero"]
+      "latin": "Possum destruere templum Dei.",
+      "chinese": "我能拆毀天主的聖殿。",
+      "targets": [
+        "destruo"
+      ]
     },
     {
-      "latin": "Hospes domum instruxit; caput coronatum est.",
-      "chinese": "客人裝備了房舍；那頭被加冕了。",
-      "targets": ["hospes", "domus", "instruo", "caput", "corono"]
+      "latin": "Præterit figura hujus mundi.",
+      "chinese": "這世界的局面正在逝去。",
+      "targets": [
+        "figura"
+      ]
     },
     {
-      "latin": "Deus mundum destruxit? Non; demonstrat misericordiam; fides crescit.",
-      "chinese": "天主毀滅了世界嗎？不；祂顯示了憐憫；信德在增長。",
-      "targets": ["Deus", "destruo", "demonstro", "fides", "cresco"]
+      "latin": "Jesum gloria et honore coronatum videmus.",
+      "chinese": "我們看見耶穌戴上了光榮尊貴的冠冕。",
+      "targets": [
+        "corono"
+      ]
     },
     {
-      "latin": "Humilis cautionem dat; conclusionem curia habet.",
-      "chinese": "卑微的人提出了保證；議院持有那結論。",
-      "targets": ["humilis", "cautio", "conclusio", "curia"]
+      "latin": "Jesus discipulos instruxit et viam demonstravit.",
+      "chinese": "耶穌教導門徒，並給他們指示道路。",
+      "targets": [
+        "demonstro",
+        "instruo"
+      ]
     }
   ]
 }

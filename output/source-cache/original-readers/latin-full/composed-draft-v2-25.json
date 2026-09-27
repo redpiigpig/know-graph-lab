@@ -2,42 +2,61 @@
   "volume": 2,
   "lesson": 25,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。🚨 interdīco 在武加大＋教會語料中零字形，練不到；20 詞僅練 19。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫，連接詞只用在真的因果／轉折／時間／目的關係上；寧可少練一詞也不硬塞，每課覆蓋至少 15/20（含引用題）。",
   "sentences": [
     {
-      "latin": "Libido cupiditatem gignit; plebs nequaquam credit.",
-      "chinese": "欲望產生了貪心；平民絕不相信。",
-      "targets": ["libido", "cupiditas", "gigno", "plebs", "nequaquam", "credo"]
+      "latin": "Superbia, cupiditas et libido animam a Deo avertunt.",
+      "chinese": "驕傲、貪婪和情慾使靈魂遠離天主。",
+      "targets": [
+        "libido",
+        "cupiditas",
+        "superbia"
+      ]
     },
     {
-      "latin": "Episcopus jurisdictionis potestatem qualiter exercet?",
-      "chinese": "主教如何行使司法權的權力？",
-      "targets": ["episcopus", "jurisdictio", "potestas", "qualiter", "exerceo"]
+      "latin": "Episcopus jurisdictionem suam publice exercet.",
+      "chinese": "主教公開行使他的管轄權。",
+      "targets": [
+        "jurisdictio",
+        "publice"
+      ]
     },
     {
-      "latin": "Jejunium principalis lex est; superbia latuit.",
-      "chinese": "禁食是主要的法律；驕傲隱藏了。",
-      "targets": ["jejunium", "principalis", "lex", "superbia", "lateo"]
+      "latin": "Christus sub speciebus panis latere voluit.",
+      "chinese": "基督願意隱藏在餅的形象之下。",
+      "targets": [
+        "lateo"
+      ]
     },
     {
-      "latin": "Insuper nonnulli aureum testantur.",
-      "chinese": "此外，若干人為那金製之物作證。",
-      "targets": ["insuper", "nonnullus", "aureus", "testor"]
+      "latin": "Maria, singulari gratia ornata, domus aurea vocatur.",
+      "chinese": "瑪利亞蒙受獨特的恩寵裝飾，被稱為黃金之殿。",
+      "targets": [
+        "aureus",
+        "singularis"
+      ]
     },
     {
-      "latin": "Tantummodo interim singularis manet.",
-      "chinese": "暫時，只有那獨特的長存。",
-      "targets": ["tantummodo", "interim", "singularis"]
+      "latin": "Jejunium cum oratione dæmones expellit.",
+      "chinese": "禁食加上祈禱能驅逐魔鬼。",
+      "targets": [
+        "jejunium"
+      ]
     },
     {
-      "latin": "Publice numquid credit populus?",
-      "chinese": "百姓難道公開地相信嗎？",
-      "targets": ["publice", "numquid", "credo", "populus"]
+      "latin": "Scriptura testatur qualiter Dominus resurrexerit.",
+      "chinese": "聖經為主是怎樣復活的作了見證。",
+      "targets": [
+        "qualiter",
+        "testor"
+      ]
     },
     {
-      "latin": "Superbia latebat; plebs nonnulla testatur.",
-      "chinese": "驕傲曾隱藏著；若干平民作證了。",
-      "targets": ["superbia", "plebs", "nonnullus", "testor"]
+      "latin": "Noli timere, tantummodo crede.",
+      "chinese": "不要害怕，只要信。",
+      "targets": [
+        "tantummodo"
+      ]
     }
   ]
 }

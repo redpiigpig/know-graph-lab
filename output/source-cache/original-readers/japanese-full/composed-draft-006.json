@@ -1,68 +1,43 @@
 {
   "lesson": 6,
   "volume": 1,
-  "author": "opus-5-hand-written",
-  "note": "",
+  "author": "opus-5.5-hand-written",
+  "note": "2026-09-27 第三次重寫（擁有者選項 B：一題一句、問句每課≤2、至少 15 詞）",
   "sentences": [
     {
-      "japanese": "済みません、食堂は何階ですか。",
-      "chinese": "不好意思，食堂在幾樓？",
-      "targets": [
-        "済みません",
-        "食堂",
-        "何階"
-      ]
+      "japanese": "すみません、このネクタイはいくらですか。三千円です。",
+      "chinese": "請問，這條領帶多少錢？三千圓。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "事務所と会議室は地下です。",
-      "chinese": "辦公室和會議室在地下。",
-      "targets": [
-        "事務所",
-        "会議室",
-        "地下"
-      ]
+      "japanese": "こちらのワインは一万円です。",
+      "chinese": "這邊這瓶葡萄酒是一萬圓。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "受付とロビーはこちらです。",
-      "chinese": "服務台和大廳在這邊。",
-      "targets": [
-        "受付",
-        "ロビー"
-      ]
+      "japanese": "じゃ、それをください。",
+      "chinese": "那麼，請給我那個。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "そのネクタイを見せてください。",
-      "chinese": "請讓我看那條領帶。",
-      "targets": [
-        "ネクタイ",
-        "見せてください"
-      ]
+      "japanese": "食堂は何階ですか。地下です。",
+      "chinese": "食堂在幾樓？在地下。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "ワインをください。",
-      "chinese": "請給我葡萄酒。",
-      "targets": [
-        "ワイン",
-        "ください"
-      ]
+      "japanese": "すみません、あの時計を見せてください。",
+      "chinese": "不好意思，請讓我看看那只錶。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "百円ですか、千円ですか、万円ですか。",
-      "chinese": "是一百圓、一千圓，還是一萬圓？",
-      "targets": [
-        "百",
-        "円",
-        "万"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 修補生詞覆蓋] 補 万；原句：百円ですか、千円ですか。"
+      "japanese": "受付は一階のロビーにございます。",
+      "chinese": "服務台在一樓大廳。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "私は会社で働きます。",
-      "chinese": "我在公司工作。",
-      "targets": [
-        "働きます"
-      ]
+      "japanese": "私はこの会社の事務所で働きます。",
+      "chinese": "我在這家公司的辦公室工作。",
+      "reviewedBy": "author"
     }
   ]
 }

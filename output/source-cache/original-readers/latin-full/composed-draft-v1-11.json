@@ -2,70 +2,58 @@
   "volume": 1,
   "lesson": 11,
   "author": "opus-5-hand-written",
-  "note": "片語 male habeō 要 male 與 habeō 兩個**字面形**同句（habet 不算，片語記的是字形）、in prīmīs 要 in 與 primis 同句才算練到。🚨 2026-09-27 更正：liturgia 舊註記寫「武加大沒有字形，練不到」有誤——liturgia／liturgiae 本身就在教會語料裡（詞位欄是空的，但字形比對不看詞位），第 1 句已補上。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫。",
   "sentences": [
     {
-      "latin": "In primis firmavit ecclesiam; liturgia sancta est.",
-      "chinese": "他首先堅固了教會；那禮儀是神聖的。",
+      "latin": "Turba lætitia plena erat.",
+      "chinese": "群眾滿心歡喜。",
       "targets": [
-        "firmo",
-        "in prīmīs",
-        "primus",
-        "liturgia"
-      ]
-    },
-    {
-      "latin": "Vir firmus primus est in turba",
-      "chinese": "堅定的人在人群中居首。",
-      "targets": [
-        "firmus",
-        "primus",
+        "laetitia",
+        "plenus",
         "turba"
       ]
     },
     {
-      "latin": "Lætitia in ecclesia est propter responsum domini",
-      "chinese": "教會中因上主的答覆而有喜樂。",
+      "latin": "In primis oramus pro ecclesia sancta.",
+      "chinese": "首先，我們為神聖的教會祈禱。",
       "targets": [
-        "laetitia",
-        "propter",
-        "responsum"
+        "in prīmīs",
+        "primus"
       ]
     },
     {
-      "latin": "Indignus male habeo propter culpam",
-      "chinese": "我不配，因過錯而患病。",
+      "latin": "Indignus sum vocari filius tuus.",
+      "chinese": "我不配稱為你的兒子。",
       "targets": [
-        "indignus",
-        "male",
-        "male habeō",
+        "indignus"
+      ]
+    },
+    {
+      "latin": "Christus traditus est propter peccata nostra.",
+      "chinese": "基督為了我們的罪被交付。",
+      "targets": [
         "propter"
       ]
     },
     {
-      "latin": "Servus maledictus mæstusque est",
-      "chinese": "那僕人被咒罵，且是憂傷的。",
+      "latin": "Benedicite, et nolite maledicere.",
+      "chinese": "你們要祝福，不要咒罵。",
       "targets": [
-        "maestus",
         "maledico"
       ]
     },
     {
-      "latin": "Turba convenit propter lætitiam",
-      "chinese": "群眾因喜樂而聚集。",
+      "latin": "Verbum Domini firmum est.",
+      "chinese": "上主的話是堅定的。",
       "targets": [
-        "laetitia",
-        "propter",
-        "turba"
+        "firmus"
       ]
     },
     {
-      "latin": "Primum responsum firmum est",
-      "chinese": "第一個答覆是穩固的。",
+      "latin": "In liturgia ecclesia Deum laudat.",
+      "chinese": "教會在禮儀中讚美天主。",
       "targets": [
-        "firmus",
-        "primus",
-        "responsum"
+        "liturgia"
       ]
     }
   ]

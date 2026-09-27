@@ -2,42 +2,61 @@
   "volume": 1,
   "lesson": 32,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。prex 只用複數 preces（語料無單數字形）。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫。",
   "sentences": [
     {
-      "latin": "Dies dilectus fidelibus est.",
-      "chinese": "那日子為信實的人是可愛的。",
-      "targets": ["dies", "dilectus", "fidelis"]
+      "latin": "Timotheus est frater fidelis et dilectus.",
+      "chinese": "弟茂德是忠信而可愛的弟兄。",
+      "targets": [
+        "dilectus",
+        "fidelis",
+        "frater"
+      ]
     },
     {
-      "latin": "Christus doceat; fides crescit.",
-      "chinese": "願基督教導；信德便增長。",
-      "targets": ["Christus", "doceo", "fides"]
+      "latin": "Fides est substantia rerum sperandarum.",
+      "chinese": "信德是所希望之事的實質。",
+      "targets": [
+        "fides",
+        "res"
+      ]
     },
     {
-      "latin": "Frater incidit; pes dolet.",
-      "chinese": "兄弟跌落了；他的腳疼痛。",
-      "targets": ["frater", "incido", "pes"]
+      "latin": "Spes non confundit.",
+      "chinese": "望德不叫人蒙羞。",
+      "targets": [
+        "spes"
+      ]
     },
     {
-      "latin": "Mulier latus tetigit; os ejus dulce est.",
-      "chinese": "婦女觸摸了那肋旁；她的口是甘美的。",
-      "targets": ["mulier", "latus", "os", "dulcis"]
+      "latin": "Verba tua dulcia sunt ori meo.",
+      "chinese": "你的話在我口中是甘甜的。",
+      "targets": [
+        "dulcis",
+        "os"
+      ]
     },
     {
-      "latin": "Ego et tu preces dicimus; spem habemus.",
-      "chinese": "我和你都誦念了禱詞；我們懷有希望。",
-      "targets": ["ego", "tu", "prex", "spes"]
+      "latin": "Panem nostrum supersubstantialem da nobis hodie.",
+      "chinese": "我們的日用糧，求你今天賞給我們。",
+      "targets": [
+        "supersubstantialis"
+      ]
     },
     {
-      "latin": "Res sursum tendit; Deus panem supersubstantialem dat.",
-      "chinese": "那事物向上伸展；天主賜下超越本質的餅。",
-      "targets": ["res", "sursum", "supersubstantialis", "panis"]
+      "latin": "Mulier, magna est fides tua.",
+      "chinese": "婦人，你的信德真大。",
+      "targets": [
+        "fides",
+        "mulier"
+      ]
     },
     {
-      "latin": "Arbor fructum dat; frater docet.",
-      "chinese": "樹木結出果實；兄弟教導人。",
-      "targets": ["arbor", "fructus", "frater", "doceo"]
+      "latin": "Ex fructu arbor agnoscitur.",
+      "chinese": "從果實就可以認出樹來。",
+      "targets": [
+        "arbor"
+      ]
     }
   ]
 }

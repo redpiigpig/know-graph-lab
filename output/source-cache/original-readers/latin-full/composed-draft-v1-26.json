@@ -2,42 +2,61 @@
   "volume": 1,
   "lesson": 26,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。🚨 genuflectō／scandō 在武加大＋教會語料中零字形，練不到。paschālis 只用中性 paschale 形（語料無陽性 paschalis 字形）。🚨 2026-09-27 再補正：refundō 舊筆記併寫零字形有誤——它只透過詞幹搭上 refunditur（詞位欄是空的），第 5 句已補上。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫。",
   "sentences": [
     {
-      "latin": "Christus manibus figitur.",
-      "chinese": "基督的雙手被刺穿。",
-      "targets": ["Christus", "manus", "figo"]
+      "latin": "Regnum Dei intra vos est.",
+      "chinese": "天主的國就在你們中間。",
+      "targets": [
+        "intra"
+      ]
     },
     {
-      "latin": "Sacerdos panem fregit; Pascha omnibus datum est.",
-      "chinese": "司祭擘開了餅；逾越節的羔羊已分給眾人。",
-      "targets": ["sacerdos", "frango", "Pascha", "omnis"]
+      "latin": "Jesus accepit panem et fregit.",
+      "chinese": "耶穌拿起餅來，擘開了。",
+      "targets": [
+        "frango"
+      ]
     },
     {
-      "latin": "Genu flectitur; sacramentum paschale servatur.",
-      "chinese": "膝蓋屈下了；逾越節的聖事被遵守。",
-      "targets": ["genu", "sacramentum", "paschalis"]
+      "latin": "Deo omnipotenti omne genu flectatur.",
+      "chinese": "願眾膝都向全能的天主跪拜。",
+      "targets": [
+        "genu",
+        "omnipotens",
+        "omnis"
+      ]
     },
     {
-      "latin": "Calix potum infundit; Deus omnipotens est.",
-      "chinese": "聖爵注入了飲品；天主是全能的。",
-      "targets": ["calix", "potus", "infundo", "Deus", "omnipotens"]
+      "latin": "Gratiam tuam mentibus nostris infunde.",
+      "chinese": "求你將你的恩寵傾注在我們心中。",
+      "targets": [
+        "infundo"
+      ]
     },
     {
-      "latin": "Intra ecclesiam populus stat; gratia refunditur.",
-      "chinese": "百姓站在教會之內；那恩寵被回倒賜下。",
-      "targets": ["intra", "ecclesia", "populus"]
+      "latin": "In passione Christus cruci fixus est.",
+      "chinese": "基督受難時被釘在十字架上。",
+      "targets": [
+        "figo",
+        "passio"
+      ]
     },
     {
-      "latin": "Memor passionis, sacerdos quapropter orat; ritus servatur.",
-      "chinese": "因為記念苦難，司祭於是祈禱；那禮儀被遵守。",
-      "targets": ["memor", "passio", "quapropter", "ritus"]
+      "latin": "Discipuli Pascha secundum ritum fecerunt.",
+      "chinese": "門徒們按照禮規舉行了逾越節。",
+      "targets": [
+        "pascha",
+        "ritus"
+      ]
     },
     {
-      "latin": "Sanguinem fudit; hostia salutaris est.",
-      "chinese": "他傾流了血；那祭品是救恩的。",
-      "targets": ["sanguis", "fundo", "salutaris"]
+      "latin": "Christus resurrexit, quapropter ecclesia festum paschale celebrat.",
+      "chinese": "基督復活了，因此教會慶祝逾越慶節。",
+      "targets": [
+        "paschalis",
+        "quapropter"
+      ]
     }
   ]
 }

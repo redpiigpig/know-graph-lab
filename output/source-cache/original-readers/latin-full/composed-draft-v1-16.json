@@ -2,60 +2,57 @@
   "volume": 1,
   "lesson": 16,
   "author": "opus-5-hand-written",
-  "note": "本課三個詞武加大沒有字形：Kyrie 與兩個黏著詞素 -clīnō、aggregō。excelsus 沒有複數奪格 excelsis，所以第 1 句不寫 in excelsis。🚨 2026-09-27 補：perenniter（只透過名詞 perennitas 的詞幹搭上）與 spatium 舊稿七句全未帶到，第 2、5 句已各補上。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫。",
   "sentences": [
     {
-      "latin": "Hosanna in templo est.",
-      "chinese": "和散那在聖殿中。",
+      "latin": "Pueri in templo clamabant hosanna.",
+      "chinese": "孩子們在聖殿裡高喊「賀三納」。",
       "targets": [
         "hosanna"
       ]
     },
     {
-      "latin": "Imperium dei perpetuum est; perennitas magna est.",
-      "chinese": "天主的統治權是永恆的；那恆久性是浩大的。",
+      "latin": "Postea Jesus discipulis Scripturas aperuit.",
+      "chinese": "後來耶穌為門徒們開解了經書。",
+      "targets": [
+        "postea",
+        "aperio"
+      ]
+    },
+    {
+      "latin": "Imperium Christi perpetuum est.",
+      "chinese": "基督的王權是永久的。",
       "targets": [
         "imperium",
         "perpetuus"
       ]
     },
     {
-      "latin": "Ministerium diaconi in templo est",
-      "chinese": "執事的服事在聖殿中。",
+      "latin": "Ministerium tuum imple.",
+      "chinese": "你要完成你的職務。",
       "targets": [
         "ministerium"
       ]
     },
     {
-      "latin": "Postea subito venit",
-      "chinese": "其後他突然來了。",
+      "latin": "Subito venit angelus Domini.",
+      "chinese": "上主的天使忽然來到。",
       "targets": [
-        "postea",
         "subito"
       ]
     },
     {
-      "latin": "Vulnerati sunt in agro; spatium magnum est.",
-      "chinese": "他們在田間受了傷；那空間是浩大的。",
+      "latin": "Vulneratus est propter peccata nostra.",
+      "chinese": "他為了我們的罪受了創傷。",
       "targets": [
-        "uulnero",
-        "spatium"
+        "uulnero"
       ]
     },
     {
-      "latin": "Aperuit ministerium populo",
-      "chinese": "他向百姓開啟了服事。",
+      "latin": "Christo est gloria et imperium.",
+      "chinese": "光榮和王權都歸於基督。",
       "targets": [
-        "ministerium",
-        "aperio"
-      ]
-    },
-    {
-      "latin": "Postea perpetua lætitia est",
-      "chinese": "其後便有永久的喜樂。",
-      "targets": [
-        "perpetuus",
-        "postea"
+        "imperium"
       ]
     }
   ]

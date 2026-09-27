@@ -2,11 +2,34 @@
   "volume": 1,
   "lesson": 6,
   "author": "opus-5-hand-written",
-  "note": "本課終於有動詞（ambulō／cantō／collaudō／conservō），句子不再全是名詞片語。chorus 沒有主格進語料，第 3 句改用 populus 當主語。🚨 2026-09-27 補：sacrāmentum 原七句全未帶到（字形本身在教會語料中很常見），第 4 句已補上奪格 sacramento。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫。",
   "sentences": [
     {
-      "latin": "Deus noster verus et vivus est.",
-      "chinese": "我們的天主是真實而活的。",
+      "latin": "Dominus conservat vitam meam.",
+      "chinese": "上主保全我的性命。",
+      "targets": [
+        "conseruo"
+      ]
+    },
+    {
+      "latin": "Benedictus es, Domine Deus Sabaoth.",
+      "chinese": "萬軍的上主天主，你是可讚美的。",
+      "targets": [
+        "sabaoth",
+        "benedictus"
+      ]
+    },
+    {
+      "latin": "Cantabo Domino canticum novum.",
+      "chinese": "我要向上主唱一首新歌。",
+      "targets": [
+        "nouus",
+        "canto"
+      ]
+    },
+    {
+      "latin": "Deus noster vivus et verus est.",
+      "chinese": "我們的天主是生活而真實的。",
       "targets": [
         "noster",
         "uerus",
@@ -14,51 +37,25 @@
       ]
     },
     {
-      "latin": "Populus pius ambulat in agro",
-      "chinese": "虔敬的百姓行走在田間。",
+      "latin": "Sacramenta dona divina sunt.",
+      "chinese": "聖事是天主的恩賜。",
       "targets": [
-        "pius",
+        "sacramentum",
+        "diuinus"
+      ]
+    },
+    {
+      "latin": "Noë cum Deo ambulavit.",
+      "chinese": "諾厄與天主同行。",
+      "targets": [
         "ambulo"
       ]
     },
     {
-      "latin": "Cantet populus psalmum novum",
-      "chinese": "願百姓唱新的聖詠。",
-      "targets": [
-        "nouus",
-        "canto"
-      ]
-    },
-    {
-      "latin": "Collaudate dominum Sabaoth in sacramento",
-      "chinese": "你們要在聖事中極力讚美萬軍的上主。",
-      "targets": [
-        "sabaoth",
-        "sacramentum"
-      ]
-    },
-    {
-      "latin": "Numerus discipulorum magnus est",
-      "chinese": "門徒的數目很大。",
+      "latin": "Magnus est numerus discipulorum.",
+      "chinese": "門徒的數目很多。",
       "targets": [
         "numerus"
-      ]
-    },
-    {
-      "latin": "Conserva documentum divinum",
-      "chinese": "你要保守這神聖的文件。",
-      "targets": [
-        "conseruo",
-        "diuinus",
-        "documentum"
-      ]
-    },
-    {
-      "latin": "Benedictus vir in sacra ecclesia est.",
-      "chinese": "蒙福的人在聖教會中。",
-      "targets": [
-        "sacer",
-        "benedictus"
       ]
     }
   ]

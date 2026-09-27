@@ -2,42 +2,59 @@
   "volume": 1,
   "lesson": 49,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。🚨 liquō 在武加大＋教會語料中零字形，練不到。🚨 2026-09-27 再補正：illūcēsco 舊筆記併寫零字形有誤——illucescit 本身在教會語料裡（詞位欄是空的，靠詞幹搭上），第 3 句已補上。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫。",
   "sentences": [
     {
-      "latin": "Christus se commendat; sancti deputantur.",
-      "chinese": "基督將自己交託；聖人們被算為義人。",
-      "targets": ["Christus", "commendo", "deputo"]
+      "latin": "In manus tuas commendo spiritum meum.",
+      "chinese": "我把我的靈魂交託在你手中。",
+      "targets": [
+        "commendo"
+      ]
     },
     {
-      "latin": "Hostes detraxerunt; inimicus negat.",
-      "chinese": "敵人們貶損了；仇敵否認了。",
-      "targets": ["hostis", "detraho", "inimicus", "nego"]
+      "latin": "Quod homini difficile est, Deo facile est.",
+      "chinese": "為人難的事，為天主卻容易。",
+      "targets": [
+        "difficilis",
+        "facilis"
+      ]
     },
     {
-      "latin": "Difficile est; facile non est; dies illucescit.",
-      "chinese": "這是困難的；並非容易的；天正在破曉。",
-      "targets": ["difficilis", "facilis"]
+      "latin": "In Christo inhabitat plenitudo divinitatis.",
+      "chinese": "神性的整個圓滿住在基督內。",
+      "targets": [
+        "diuinitas"
+      ]
     },
     {
-      "latin": "Deus mare dividit; divinitas magna est.",
-      "chinese": "天主分開了海；祂的神性是浩大的。",
-      "targets": ["Deus", "divido", "divinitas"]
+      "latin": "Petrus Jesum ter negavit.",
+      "chinese": "伯多祿三次否認了耶穌。",
+      "targets": [
+        "nego"
+      ]
     },
     {
-      "latin": "Rex dominam videt; ligno monumentum stat.",
-      "chinese": "君王看見了那女士；憑那木頭，紀念碑立著。",
-      "targets": ["domina", "lignum", "monumentum"]
+      "latin": "Domina nostra nos ab hostibus defendit.",
+      "chinese": "聖母保護我們脫離仇敵。",
+      "targets": [
+        "domina",
+        "hostis"
+      ]
     },
     {
-      "latin": "Sacerdos existimat; gratia inaestimabilis est.",
-      "chinese": "司祭這樣認為；恩寵是無法估量的。",
-      "targets": ["sacerdos", "existimo", "inaestimabilis"]
+      "latin": "Deponentes eum de ligno, posuerunt in monumento.",
+      "chinese": "他們把他從木架上卸下來，安放在墳墓裡。",
+      "targets": [
+        "lignum",
+        "monumentum"
+      ]
     },
     {
-      "latin": "Verbum exprimitur; mysterium ineffabile est; nemo comprehendit.",
-      "chinese": "言語被表達出來；那奧祕是不可言喻的；沒有人能領悟。",
-      "targets": ["exprimo", "ineffabilis", "nemo"]
+      "latin": "Donum Dei ineffabile est.",
+      "chinese": "天主的恩賜是不可言喻的。",
+      "targets": [
+        "ineffabilis"
+      ]
     }
   ]
 }

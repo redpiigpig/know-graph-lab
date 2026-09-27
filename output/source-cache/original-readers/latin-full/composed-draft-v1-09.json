@@ -2,62 +2,59 @@
   "volume": 1,
   "lesson": 9,
   "author": "opus-5-hand-written",
-  "note": "本課十六個待練詞幾乎全是動詞，一句要扛兩到三個。片語 grātiās agere 要 gratias 與 agere 同句才算練到。fugō 只有 fugerem 一個形進語料（第一人稱未完成假設），所以配 ne 寫成祈願句。🚨 2026-09-27 補：dēficiō／fugō／jungo 三詞舊稿全未帶到（jungo 是與第 6 句 conjungō 不同的獨立詞條），第 2、5 句已各補上。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫。",
   "sentences": [
     {
-      "latin": "Discipuli convenerunt et habentes gratiam crediderunt",
-      "chinese": "門徒們聚集，懷著恩寵相信了。",
+      "latin": "Convenit Domino gratias agere.",
+      "chinese": "向上主感恩是合宜的。",
       "targets": [
         "conuenio",
-        "credo",
-        "habeo"
+        "grātiās agere"
       ]
     },
     {
-      "latin": "Gratias agere volumus.",
-      "chinese": "我們向天主感謝。",
-      "targets": [
-        "gratias agere"
-      ]
-    },
-    {
-      "latin": "Dominus exaudivit et peccata delevit",
-      "chinese": "上主垂聽了，也抹去了罪過。",
-      "targets": [
-        "exaudio"
-      ]
-    },
-    {
-      "latin": "Duxit servos et induxit in terram",
-      "chinese": "他率領僕人們，並把他們帶進那地。",
+      "latin": "Magister discipulos monet et ducit.",
+      "chinese": "老師勸誡並帶領門徒。",
       "targets": [
         "duco",
+        "moneo"
+      ]
+    },
+    {
+      "latin": "Populum de Ægypto eduxit et in terram induxit.",
+      "chinese": "他把百姓從埃及領出來，又領進那地。",
+      "targets": [
+        "educo",
         "induco"
       ]
     },
     {
-      "latin": "Dominus populum de terra eduxit; Ægyptios fugavit.",
-      "chinese": "上主領百姓出了那地；他把埃及人驅散了。",
+      "latin": "Dominus exaudiet credentes.",
+      "chinese": "上主必俯聽信的人。",
       "targets": [
-        "educo"
+        "credo",
+        "exaudio"
       ]
     },
     {
-      "latin": "Ecclesia Christo conjungitur et sacramentum efficitur; populus deficit.",
-      "chinese": "教會與基督結合，聖事得以成就；百姓卻衰弱了。",
+      "latin": "Deus virum et uxorem conjunxit.",
+      "chinese": "天主使丈夫和妻子結合。",
       "targets": [
-        "coniungo",
-        "efficio",
-        "deficio"
+        "coniungo"
       ]
     },
     {
-      "latin": "Magister familiam monuit et vinum miscuit; famulum iunxit.",
-      "chinese": "師傅勸誡了家人，也調了酒；他聯繫了那僕人。",
+      "latin": "Minister aquam vino miscuit.",
+      "chinese": "侍者把水摻進酒裡。",
       "targets": [
-        "misceo",
-        "moneo",
-        "jungo"
+        "misceo"
+      ]
+    },
+    {
+      "latin": "Verba vitæ æternæ habes.",
+      "chinese": "你有永生的話。",
+      "targets": [
+        "habeo"
       ]
     }
   ]

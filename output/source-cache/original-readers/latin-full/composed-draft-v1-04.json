@@ -2,64 +2,62 @@
   "volume": 1,
   "lesson": 4,
   "author": "opus-5-hand-written",
-  "note": "hymnus 的主格沒進語料（只有 hymnis／hymno），故第 2 句用複數奪格。in saecula 是片語詞條，整組到齊才算練到，所以第 5 句寫足 in sæcula sæculorum。ūniversum 只認字形。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫。",
   "sentences": [
     {
-      "latin": "Gaudium et præmium in regno sunt.",
-      "chinese": "王國中有喜樂與賞報。",
+      "latin": "Regnum Dei est justitia et gaudium.",
+      "chinese": "天主的國是正義與喜樂。",
       "targets": [
         "gaudium",
-        "praemium",
         "regnum"
       ]
     },
     {
-      "latin": "Gaudium in hymnis et in canticis est",
-      "chinese": "喜樂在聖歌與讚美詩中。",
-      "targets": [
-        "gaudium",
-        "hymnus"
-      ]
-    },
-    {
-      "latin": "Ibi mysterium dei est.",
-      "chinese": "天主的奧祕就在那裡。",
-      "targets": [
-        "ibi",
-        "mysterium"
-      ]
-    },
-    {
-      "latin": "Odium non est in regno",
-      "chinese": "王國中沒有仇恨。",
-      "targets": [
-        "odium",
-        "regnum"
-      ]
-    },
-    {
-      "latin": "Regina est in regno in sæcula sæculorum",
-      "chinese": "女王直到世世無窮都在國度中。",
+      "latin": "Christo est gloria in sæcula sæculorum.",
+      "chinese": "光榮歸於基督，直到世世代代。",
       "targets": [
         "in saecula (saeculōrum)",
-        "regina",
-        "regnum",
         "saeculum"
       ]
     },
     {
-      "latin": "Sabbatum est testamentum dei",
-      "chinese": "安息日是天主的盟約。",
+      "latin": "Hodie sabbatum Domini est.",
+      "chinese": "今天是上主的安息日。",
       "targets": [
-        "sabbatum",
-        "testamentum"
+        "sabbatum"
       ]
     },
     {
-      "latin": "Vinum et universa dona dei sunt",
-      "chinese": "酒與一切恩賜都是天主的。",
+      "latin": "Hoc est mysterium regni Dei.",
+      "chinese": "這就是天主之國的奧祕。",
       "targets": [
+        "hic",
+        "mysterium",
+        "regnum"
+      ]
+    },
+    {
+      "latin": "Vinum ibi non est.",
+      "chinese": "那裡沒有酒了。",
+      "targets": [
+        "ibi",
         "uinum"
+      ]
+    },
+    {
+      "latin": "Odium in animo peccatum est.",
+      "chinese": "心中懷恨就是罪。",
+      "targets": [
+        "odium",
+        "peccatum",
+        "pecco"
+      ]
+    },
+    {
+      "latin": "Maria regina cæli est.",
+      "chinese": "瑪利亞是天上的母后。",
+      "targets": [
+        "regina"
       ]
     }
   ]

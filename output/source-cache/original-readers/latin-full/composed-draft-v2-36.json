@@ -2,42 +2,61 @@
   "volume": 2,
   "lesson": 36,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫（棄用模板產生器）。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫，連接詞只用在真的因果／轉折／時間／目的關係上；寧可少練一詞也不硬塞，每課覆蓋至少 15/20（含引用題）。",
   "sentences": [
     {
-      "latin": "Sponte homo credit; limites servat.",
-      "chinese": "人自願地相信；他遵守了界限。",
-      "targets": ["spons", "homo", "credo", "limes"]
+      "latin": "Generatio Filii non est opus creationis.",
+      "chinese": "聖子的受生不是創造的工程。",
+      "targets": [
+        "generatio",
+        "creatio"
+      ]
     },
     {
-      "latin": "Apte conversio evangelica fit.",
-      "chinese": "皈依恰當地按福音的方式發生了。",
-      "targets": ["apte", "conversio", "evangelicus"]
+      "latin": "Religiosi sua sponte consilia evangelica profitentur.",
+      "chinese": "修會會士自願宣誓遵守福音勸諭。",
+      "targets": [
+        "spons",
+        "evangelicus"
+      ]
     },
     {
-      "latin": "Servitium insertum est; comprehendit populum.",
-      "chinese": "服役被插入了；它包含了百姓。",
-      "targets": ["servitium", "insero", "comprehendo", "populus"]
+      "latin": "Apostoli multis ad conversionem persuaserunt.",
+      "chinese": "宗徒們勸服了許多人皈依。",
+      "targets": [
+        "conversio",
+        "persuadeo"
+      ]
     },
     {
-      "latin": "Relatione generatio nova crescit.",
-      "chinese": "藉著關係，新的一代漸漸增長。",
-      "targets": ["relatio", "generatio"]
+      "latin": "Tenebræ lucem non comprehenderunt.",
+      "chinese": "黑暗沒有勝過光明。",
+      "targets": [
+        "comprehendo"
+      ]
     },
     {
-      "latin": "Aeque dominatur; persuadet omnibus.",
-      "chinese": "他同樣地統治著；他說服了眾人。",
-      "targets": ["aeque", "dominor", "persuadeo", "omnis"]
+      "latin": "Ecclesia de gravitate peccati mortalis censuit.",
+      "chinese": "教會對死罪的嚴重性作了判斷。",
+      "targets": [
+        "censeo",
+        "gravitas"
+      ]
     },
     {
-      "latin": "Opus creationis mutatio est; campus crescit.",
-      "chinese": "創造的工作即是變化；平原漸漸增長。",
-      "targets": ["creatio", "mutatio", "campus"]
+      "latin": "Peccatum in nobis non dominetur.",
+      "chinese": "罪不可在我們身上作主。",
+      "targets": [
+        "dominor"
+      ]
     },
     {
-      "latin": "Familiaris homo censet; fortasse gravitate movetur.",
-      "chinese": "親密的人這樣判斷；他或許受到重量的感動。",
-      "targets": ["familiaris", "homo", "censeo", "fortasse", "gravitas"]
+      "latin": "Deus omnes familiares suos æque diligit.",
+      "chinese": "天主同樣地愛祂家中的每一個人。",
+      "targets": [
+        "aeque",
+        "familiaris"
+      ]
     }
   ]
 }

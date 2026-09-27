@@ -2,42 +2,58 @@
   "volume": 2,
   "lesson": 5,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。🚨 2026-09-27 再補正：praecōnium（praeconio，靠詞幹搭上）／pangō 舊筆記寫零字形或撞人稱閘有誤——pangō 另有完成式 pepigi，對詞性標記器不是已知限定動詞（不撞人稱數閘），第 2、3 句已各補上。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫，連接詞只用在真的因果／轉折／時間／目的關係上；寧可少練一詞也不硬塞，每課覆蓋至少 15/20（含引用題）。",
   "sentences": [
     {
-      "latin": "Rex flagellum fert; hostem repellet.",
-      "chinese": "君王持著鞭子；他將擊退敵人。",
-      "targets": ["flagellum", "fero", "repello"]
+      "latin": "In nativitate Domini angelus cum fulgore pastoribus apparuit.",
+      "chinese": "主誕生時，天使在光輝中向牧羊人顯現。",
+      "targets": [
+        "fulgor",
+        "nativitas"
+      ]
     },
     {
-      "latin": "Christus inquit; fulgor apparuit; laudem pepigi.",
-      "chinese": "基督說道；光輝出現了；我已譜出了讚詞。",
-      "targets": ["Christus", "inquam", "fulgor"]
+      "latin": "Christus mortem crucis pertulit ut nobis reconciliationem offerret.",
+      "chinese": "基督忍受了十字架的死亡，為要把和好賜給我們。",
+      "targets": [
+        "perfero",
+        "reconciliatio"
+      ]
     },
     {
-      "latin": "Sacerdos hostiam offert; in medio stat; praeconio utitur.",
-      "chinese": "司祭奉獻了祭牲；他站在中間；他運用了那頌詞。",
-      "targets": ["sacerdos", "offero", "medium"]
+      "latin": "In præconio paschali ecclesia jucunda voce cantat.",
+      "chinese": "在逾越頌中，教會以愉悅的聲音歌唱。",
+      "targets": [
+        "jucundus"
+      ]
     },
     {
-      "latin": "Populus poenam sustinet; natio jucunda est.",
-      "chinese": "百姓承受了刑罰；那民族是快樂的。",
-      "targets": ["populus", "poena", "natio", "jucundus"]
+      "latin": "Jesus flagellum fecit et omnes de templo expulit.",
+      "chinese": "耶穌做了一條鞭子，把眾人都趕出聖殿。",
+      "targets": [
+        "flagellum"
+      ]
     },
     {
-      "latin": "Populus nativitatem celebrat; perennis memoria est.",
-      "chinese": "百姓慶祝了誕生；那是永恆的記念。",
-      "targets": ["populus", "nativitas", "perennis"]
+      "latin": "Deus, inquam, populum suum non repulit.",
+      "chinese": "我說，天主並沒有拋棄自己的子民。",
+      "targets": [
+        "inquam"
+      ]
     },
     {
-      "latin": "Deus reconciliationem profert; homo eam refert.",
-      "chinese": "天主提出了和解；人將此回報。",
-      "targets": ["Deus", "reconciliatio", "profero", "homo", "refero"]
+      "latin": "Homo bonus de corde bono profert bona.",
+      "chinese": "善人從善心裡發出善來。",
+      "targets": [
+        "profero"
+      ]
     },
     {
-      "latin": "Deus donum infert; homo mutuari potest; pertulit crucem.",
-      "chinese": "天主引入了恩賜；人是可以借用的；祂承受了十字架。",
-      "targets": ["Deus", "infero", "homo", "mutuor", "perfero"]
+      "latin": "Tibi, Christe, canticum novum pangimus.",
+      "chinese": "基督，我們為你譜唱新歌。",
+      "targets": [
+        "pango"
+      ]
     }
   ]
 }

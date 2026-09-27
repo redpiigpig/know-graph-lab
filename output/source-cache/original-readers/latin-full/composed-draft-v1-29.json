@@ -2,42 +2,58 @@
   "volume": 1,
   "lesson": 29,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。🚨 tellūs 在武加大＋教會語料中零字形（各格都查無），練不到；20 詞僅練 19。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫。",
   "sentences": [
     {
-      "latin": "Salvator noster benignus est.",
-      "chinese": "我們的救主是仁慈的。",
-      "targets": ["salvator", "benignus"]
+      "latin": "Hodie ascensio Salvatoris celebratur.",
+      "chinese": "今天慶祝救主升天。",
+      "targets": [
+        "saluator",
+        "ascensio"
+      ]
     },
     {
-      "latin": "Christus subiit; opus artis magnum est.",
-      "chinese": "基督親自承受了；那技藝的作品是偉大的。",
-      "targets": ["Christus", "subeo", "ars"]
+      "latin": "Spiritus est qui vivificat.",
+      "chinese": "使人生活的是聖神。",
+      "targets": [
+        "uiuifico"
+      ]
     },
     {
-      "latin": "Populus mare transiit; usque ad montem venit.",
-      "chinese": "百姓越過了海；一直來到了山那裡。",
-      "targets": ["populus", "transeo", "usque"]
+      "latin": "Deus creavit visibilia et invisibilia.",
+      "chinese": "天主創造了有形和無形的萬物。",
+      "targets": [
+        "uisibilis"
+      ]
     },
     {
-      "latin": "Lex vetus erat; nunc mundus vivificatur.",
-      "chinese": "那法律是古舊的；如今世界被賦予了生命。",
-      "targets": ["vetus", "vivifico"]
+      "latin": "Vetus homo noster crucifixus est.",
+      "chinese": "我們的舊人被釘在十字架上了。",
+      "targets": [
+        "uetus"
+      ]
     },
     {
-      "latin": "Regnum Dei visibile non est; supplex tamen orat.",
-      "chinese": "天主的國不是可見的；然而祈求者仍在祈禱。",
-      "targets": ["Deus", "visibilis", "supplex"]
+      "latin": "Misericordiam volo, et non sacrificium.",
+      "chinese": "我要的是仁慈，而不是祭獻。",
+      "targets": [
+        "uolo"
+      ]
     },
     {
-      "latin": "Sacerdos vult; ad altare accedit; circum stat, cedit.",
-      "chinese": "司祭願意；他走近了祭台；他站在周圍，且讓步了。",
-      "targets": ["sacerdos", "volo", "altare", "accedo", "circum", "cedo"]
+      "latin": "Supplices clementiam tuam deprecamur.",
+      "chinese": "我們懇切地祈求你的仁慈。",
+      "targets": [
+        "supplex",
+        "clementia"
+      ]
     },
     {
-      "latin": "Post ascensionem, sacerdos ostium claudit; baptizat, clementia manet.",
-      "chinese": "升天之後，司祭關閉了門；他施洗，仁慈長存。",
-      "targets": ["ascensio", "claudo", "baptizo", "clementia"]
+      "latin": "Benignus est Dominus universis.",
+      "chinese": "上主善待眾人。",
+      "targets": [
+        "benignus"
+      ]
     }
   ]
 }

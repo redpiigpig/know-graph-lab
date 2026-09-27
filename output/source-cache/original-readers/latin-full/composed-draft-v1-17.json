@@ -2,68 +2,59 @@
   "volume": 1,
   "lesson": 17,
   "author": "opus-5-hand-written",
-  "note": "gregō 武加大沒有字形，練不到。conglōrificō 整部武加大只有 conglorificemur 一形（羅八17），第 5 句就照它寫。lætus 沒有陰性單數 læta。🚨 2026-09-27 補：dolōrōsus（僅透過陰性 dolorosa 的詞幹搭上）舊稿七句全未帶到，第 6 句已補上。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫。",
   "sentences": [
     {
-      "latin": "Columna in aula templi est",
-      "chinese": "柱子在聖殿的殿堂中。",
+      "latin": "Ob peccata nostra Christus hostia factus est.",
+      "chinese": "基督為了我們的罪成了祭品。",
       "targets": [
-        "aula",
-        "columna"
-      ]
-    },
-    {
-      "latin": "Cibus paratus est parvulis",
-      "chinese": "食物為幼小者預備好了。",
-      "targets": [
-        "cibus",
-        "paro",
-        "paruulus"
-      ]
-    },
-    {
-      "latin": "Creaturæ exsultant in domino",
-      "chinese": "受造物在上主中歡躍。",
-      "targets": [
-        "creatura",
-        "exsulto"
-      ]
-    },
-    {
-      "latin": "Glorificavit dominum ob innocentiam",
-      "chinese": "他因那份無辜而光榮了上主。",
-      "targets": [
-        "glorifico",
-        "innocentia",
+        "hostia",
         "ob"
       ]
     },
     {
-      "latin": "Hinc læti conglorificemur",
-      "chinese": "從此讓我們歡欣地同受光榮。",
+      "latin": "Deus cibum creaturis dat.",
+      "chinese": "天主賜食物給受造物。",
       "targets": [
-        "conglorifico",
-        "hinc",
+        "cibus",
+        "creatura"
+      ]
+    },
+    {
+      "latin": "Lætus exsultabo in Domino.",
+      "chinese": "我要在上主內歡欣踴躍。",
+      "targets": [
+        "exsulto",
         "laetus"
       ]
     },
     {
-      "latin": "Hostiam paraverunt in aula; hostia dolorosa est.",
-      "chinese": "他們在殿堂中預備了祭獻；那祭獻是哀傷的。",
+      "latin": "Deus innocentiam parvuli diligit.",
+      "chinese": "天主喜愛小孩子的純真。",
       "targets": [
-        "aula",
-        "hostia",
-        "paro"
+        "innocentia",
+        "paruulus"
       ]
     },
     {
-      "latin": "Flamma apud columnam in aula est",
-      "chinese": "火焰在殿堂中的柱子旁。",
+      "latin": "Turbæ Deum glorificabant.",
+      "chinese": "群眾都光榮天主。",
       "targets": [
-        "apud",
-        "aula",
-        "columna",
+        "glorifico"
+      ]
+    },
+    {
+      "latin": "Angelus Domini in flamma apparuit.",
+      "chinese": "上主的天使在火焰中顯現。",
+      "targets": [
         "flamma"
+      ]
+    },
+    {
+      "latin": "Ecclesia est columna veritatis.",
+      "chinese": "教會是真理的柱石。",
+      "targets": [
+        "columna"
       ]
     }
   ]

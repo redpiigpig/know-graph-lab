@@ -1,76 +1,43 @@
 {
   "lesson": 28,
   "volume": 1,
-  "author": "opus-5-hand-written",
-  "note": "",
+  "author": "opus-5.5-hand-written",
+  "note": "2026-09-27 第三次重寫（擁有者選項 B：一題一句、問句每課≤2、至少 15 詞）",
   "sentences": [
     {
-      "japanese": "週末に泳ぎます。公園で遊びます。",
-      "chinese": "週末游泳。在公園玩。",
-      "targets": [
-        "週末",
-        "泳ぎます",
-        "遊びます"
-      ]
+      "japanese": "週末、どこかへ行きますか。ええ、友達と食事します。",
+      "chinese": "週末要去哪裡嗎？嗯，要和朋友吃飯。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "空港で迎えます。疲れます。",
-      "chinese": "在機場迎接。很累。",
-      "targets": [
-        "迎えます",
-        "疲れます"
-      ]
+      "japanese": "夏は子供と海で泳いだり遊んだりします。",
+      "chinese": "夏天會和孩子在海邊游泳、玩耍。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "結婚します。買い物します。食事します。",
-      "chinese": "結婚。購物。用餐。",
-      "targets": [
-        "結婚します",
-        "買い物します",
-        "食事します"
-      ]
+      "japanese": "疲れましたから、何か冷たい物を飲みましょう。",
+      "chinese": "累了，我們喝點冰涼的東西吧。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "大変な仕事です。寂しいです。",
-      "chinese": "是很辛苦的工作。很寂寞。",
-      "targets": [
-        "大変な",
-        "寂しい"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 校對] 覆核建議含未教詞，改寫；原句：大変な仕事で寂しいです。"
+      "japanese": "私の部屋は狭いですから、広い部屋が欲しいです。",
+      "chinese": "我的房間很窄，所以想要一間寬敞的房間。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "広い部屋が欲しいです。この部屋は狭いです。",
-      "chinese": "想要寬敞的房間。這個房間很窄。",
-      "targets": [
-        "広い",
-        "狭い",
-        "欲しい"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 校對] 採用覆核建議修正句；原句：広い部屋と狭い部屋が欲しいです。"
+      "japanese": "明日は空港へ母を迎えに行きますから、朝七時に家を出ます。",
+      "chinese": "明天要去機場接母親，所以早上七點出門。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "店で何か買います。市役所へ行きます。",
-      "chinese": "在店裡買點東西。去市公所。",
-      "targets": [
-        "市役所",
-        "何か"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 校對] 採用覆核建議修正句；原句：市役所で何かを買います。"
+      "japanese": "姉は市役所の人と結婚します。",
+      "chinese": "姊姊要和市公所的人結婚。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "週末は何処かで散歩します。",
-      "chinese": "週末在某處散步。",
-      "targets": [
-        "何処か",
-        "散歩します",
-        "週末"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 校對] 採用覆核建議修正句；原句：何処かで散歩します。週末です。"
+      "japanese": "家族は北京にいますから、少し寂しいです。",
+      "chinese": "家人都在北京，所以有點寂寞。",
+      "reviewedBy": "author"
     }
   ]
 }

@@ -2,42 +2,70 @@
   "volume": 2,
   "lesson": 33,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫，連接詞只用在真的因果／轉折／時間／目的關係上；寧可少練一詞也不硬塞，每課覆蓋至少 15/20（含引用題）。",
   "sentences": [
     {
-      "latin": "Homo salutem adipiscatur; bonitas inest.",
-      "chinese": "願人得以獲得救恩；良善存在於他之內。",
-      "targets": ["homo", "adipiscor", "bonitas", "insum"]
+      "latin": "Bonitas Dei infinita est.",
+      "chinese": "天主的美善是無限的。",
+      "targets": [
+        "infinitus",
+        "bonitas"
+      ]
     },
     {
-      "latin": "Deus cor excitavit; exitus bonus est.",
-      "chinese": "天主激勵了心；結局是好的。",
-      "targets": ["Deus", "excito", "exitus"]
+      "latin": "Papa, successor Petri, vicarius Christi est.",
+      "chinese": "教宗是伯多祿的繼承人，也是基督的代表。",
+      "targets": [
+        "successor",
+        "vicarius"
+      ]
     },
     {
-      "latin": "Notiones multae sunt; vicarium episcopus misit; successor venit.",
-      "chinese": "有許多概念；主教派遣了代理人；繼任者來到了。",
-      "targets": ["notio", "vicarius", "episcopus", "successor"]
+      "latin": "Martyres in exitu vitæ coronam adepti sunt.",
+      "chinese": "殉道者在生命結束時獲得了冠冕。",
+      "targets": [
+        "adipiscor",
+        "exitus"
+      ]
     },
     {
-      "latin": "Antea Deus deduxit populum.",
-      "chinese": "從前天主引領了百姓。",
-      "targets": ["antea", "Deus", "deduco", "populus"]
+      "latin": "Qui libenter dat, bona terrena parvi æstimat.",
+      "chinese": "樂意施捨的人不看重世上的財物。",
+      "targets": [
+        "aestimo",
+        "libenter"
+      ]
     },
     {
-      "latin": "Sacerdos baptismum aestimat; casus accidit.",
-      "chinese": "司祭評估了聖洗；事故發生了。",
-      "targets": ["sacerdos", "baptismum", "aestimo", "casus", "accido"]
+      "latin": "Prædicatio Joannis baptismum pœnitentiæ annuntiabat.",
+      "chinese": "若翰的宣講宣告悔改的洗禮。",
+      "targets": [
+        "baptismum",
+        "praedicatio"
+      ]
     },
     {
-      "latin": "Nemo queat praedicationem infinitam facere.",
-      "chinese": "沒有人能夠使宣講成為無限的。",
-      "targets": ["nemo", "queo", "praedicatio", "infinitus"]
+      "latin": "Participatio fidelium in liturgia imprimis interior est.",
+      "chinese": "信友參與禮儀，首先是內在的參與。",
+      "targets": [
+        "participatio",
+        "interior"
+      ]
     },
     {
-      "latin": "Libenter interior participatio absoluta manet.",
-      "chinese": "內在的、完全的參與甘願地長存。",
-      "targets": ["libenter", "interior", "participatio", "absolutus"]
+      "latin": "Deus populum per desertum deduxit, sicut antea promiserat.",
+      "chinese": "天主照祂先前所應許的，帶領百姓穿越曠野。",
+      "targets": [
+        "deduco",
+        "antea"
+      ]
+    },
+    {
+      "latin": "Discipuli Jesum in navi excitaverunt, quia timebant.",
+      "chinese": "門徒們在船上叫醒了耶穌，因為他們害怕。",
+      "targets": [
+        "excito"
+      ]
     }
   ]
 }

@@ -2,42 +2,58 @@
   "volume": 1,
   "lesson": 36,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。🚨 solor／dēdignor 在武加大＋教會語料中零字形，練不到。cantus 只用受格 cantum／奪格 cantu（語料無主格）。🚨 2026-09-27 再補正：alloquor（alloquitur）／antistes（antistites）舊筆記併寫零字形有誤，皆靠詞幹搭上（詞位欄是空的），第 2、4 句已各補上；alloquor 不宣稱進 targets（宣稱會撞 target_mismatch，靠詞幹的字仍計入覆蓋率）。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫。",
   "sentences": [
     {
-      "latin": "Discipuli septem homines sepelierunt; indulgentiam assequuntur.",
-      "chinese": "門徒們埋葬了七個人；他們獲得了寬免。",
-      "targets": ["discipulus", "septem", "sepelio", "assequor"]
+      "latin": "In cantu confitebor Domino.",
+      "chinese": "我要以歌聲讚頌上主。",
+      "targets": [
+        "cantus",
+        "confiteor"
+      ]
     },
     {
-      "latin": "Christus substantiam humanam tangit; episcopum alloquitur.",
-      "chinese": "基督觸及了人的本質；祂向那主教說話。",
-      "targets": ["Christus", "substantia", "tango"]
+      "latin": "Angelus Danielem tetigit et allocutus est.",
+      "chinese": "天使觸摸了達尼爾，並對他說話。",
+      "targets": [
+        "tango",
+        "alloquor"
+      ]
     },
     {
-      "latin": "Populus gloria vestietur.",
-      "chinese": "百姓將被光榮所披覆。",
-      "targets": ["populus", "vestio"]
+      "latin": "Erant illis omnia communia.",
+      "chinese": "他們的一切都是公有的。",
+      "targets": [
+        "communis"
+      ]
     },
     {
-      "latin": "Episcopus civitatem regit; cantum audit; antistites veniunt.",
-      "chinese": "主教治理著城邦；他聽見了聖歌；眾主教們來臨了。",
-      "targets": ["civitas", "cantus"]
+      "latin": "Pater et Filius unius substantiæ sunt.",
+      "chinese": "父與子同屬一個本體。",
+      "targets": [
+        "substantia"
+      ]
     },
     {
-      "latin": "Claritas Dei communis est; unus fatetur.",
-      "chinese": "天主的光輝是普世共有的；有一人承認了。",
-      "targets": ["claritas", "Deus", "communis", "fateor"]
+      "latin": "Deus lilia agri vestit.",
+      "chinese": "天主給田野的百合花穿衣。",
+      "targets": [
+        "uestio"
+      ]
     },
     {
-      "latin": "Populus confitetur; peccatum dijudicatur.",
-      "chinese": "百姓認罪了；那罪過被審斷。",
-      "targets": ["populus", "confiteor", "dijudico"]
+      "latin": "Misericordiam consecuti sumus.",
+      "chinese": "我們蒙受了憐憫。",
+      "targets": [
+        "consequor"
+      ]
     },
     {
-      "latin": "Populi gratiam consequuntur; Deus curam habet, dignetur nos.",
-      "chinese": "百姓們獲得了恩寵；天主懷有關懷，願祂垂視我們。",
-      "targets": ["consequor", "Deus", "cura", "dignor"]
+      "latin": "Curam illius habe.",
+      "chinese": "你要好好照顧他。",
+      "targets": [
+        "cura"
+      ]
     }
   ]
 }

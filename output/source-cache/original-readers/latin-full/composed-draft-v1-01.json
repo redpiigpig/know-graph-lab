@@ -2,86 +2,42 @@
   "volume": 1,
   "lesson": 1,
   "author": "opus-5-hand-written",
-  "note": "二十詞裡只有 flectō 一個動詞，武加大挖不出合格的原句，故十題全為自撰。名詞句與 flectō 的三種形交替，避免十句全是介系詞片語。cēna 一詞克萊孟版一律寫 cœna，題目照語料的拼法。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫。第一課二十詞只有 flectō 一個動詞，本課無可用經典原句，十題全為自撰；名詞句用 est／sunt（第三課才教）。cēna 照語料拼 cœna。",
   "sentences": [
     {
-      "latin": "Gratia et gloria in ecclesia sunt.",
-      "chinese": "恩寵與光榮都在教會中。",
-      "targets": [
-        "ecclesia",
-        "et",
-        "gloria",
-        "gratia",
-        "in"
-      ]
-    },
-    {
-      "latin": "Doctrina de gratia in ecclesia est.",
-      "chinese": "教會中有關於恩寵的教導。",
+      "latin": "Doctrina ecclesiæ de gratia est.",
+      "chinese": "教會的教導是關於恩寵的。",
       "targets": [
         "de",
         "doctrina",
         "ecclesia",
-        "gratia",
-        "in"
+        "gratia"
       ]
     },
     {
-      "latin": "Aqua et cœna in familia sunt.",
-      "chinese": "家中有水與晚餐。",
-      "targets": [
-        "aqua",
-        "cena",
-        "et",
-        "familia",
-        "in"
-      ]
-    },
-    {
-      "latin": "Familia coram ecclesia flectitur",
-      "chinese": "家庭在教會面前屈膝。",
-      "targets": [
-        "coram",
-        "ecclesia",
-        "familia",
-        "flecto"
-      ]
-    },
-    {
-      "latin": "Flectitur animus a culpa",
-      "chinese": "心思從過錯轉開。",
+      "latin": "Flectit animum a culpa ad gratiam.",
+      "chinese": "他使心從過錯轉向恩寵。",
       "targets": [
         "a",
-        "animus",
-        "culpa",
-        "flecto"
-      ]
-    },
-    {
-      "latin": "Flectit animum ad doctrinam",
-      "chinese": "他把心思轉向教導。",
-      "targets": [
         "ad",
         "animus",
-        "doctrina",
-        "flecto"
+        "culpa",
+        "flecto",
+        "gratia"
       ]
     },
     {
-      "latin": "Hora cœnæ in familia est.",
-      "chinese": "家中有晚餐的時辰。",
+      "latin": "Hora cœnæ est.",
+      "chinese": "晚餐的時候到了。",
       "targets": [
         "cena",
-        "familia",
-        "hora",
-        "in"
+        "hora"
       ]
     },
     {
-      "latin": "Aqua cum familia in ecclesia est.",
-      "chinese": "水跟家人一起在教會中。",
+      "latin": "Cum familia in ecclesia est.",
+      "chinese": "他和家人一起在教會裡。",
       "targets": [
-        "aqua",
         "cum",
         "ecclesia",
         "familia",
@@ -89,24 +45,59 @@
       ]
     },
     {
-      "latin": "Gratia e familia ad ecclesiam est.",
-      "chinese": "恩寵從家庭通向教會。",
-      "targets": [
-        "ad",
-        "e",
-        "ecclesia",
-        "familia",
-        "gratia"
-      ]
-    },
-    {
-      "latin": "In ecclesia gloria gratiaque sunt.",
-      "chinese": "教會中有光榮與恩寵。",
+      "latin": "Gratia gloriaque ecclesiæ sunt.",
+      "chinese": "恩寵和光榮都屬於教會。",
       "targets": [
         "que",
         "ecclesia",
         "gloria",
+        "gratia"
+      ]
+    },
+    {
+      "latin": "Gratia in animo est.",
+      "chinese": "恩寵在人心中。",
+      "targets": [
+        "animus",
         "gratia",
+        "in"
+      ]
+    },
+    {
+      "latin": "Culpa ex animo est.",
+      "chinese": "過錯出自內心。",
+      "targets": [
+        "animus",
+        "culpa",
+        "e"
+      ]
+    },
+    {
+      "latin": "Hora gloriæ est.",
+      "chinese": "光榮的時辰到了。",
+      "targets": [
+        "gloria",
+        "hora"
+      ]
+    },
+    {
+      "latin": "Flecto animum ad doctrinam ecclesiæ.",
+      "chinese": "我把心轉向教會的教導。",
+      "targets": [
+        "ad",
+        "animus",
+        "doctrina",
+        "ecclesia",
+        "flecto"
+      ]
+    },
+    {
+      "latin": "Animus familiæ in ecclesia est.",
+      "chinese": "這一家人的心在教會裡。",
+      "targets": [
+        "animus",
+        "ecclesia",
+        "familia",
         "in"
       ]
     }

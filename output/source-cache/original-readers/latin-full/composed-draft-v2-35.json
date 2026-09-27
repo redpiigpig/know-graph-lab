@@ -2,42 +2,59 @@
   "volume": 2,
   "lesson": 35,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫（棄用模板產生器）。🚨 continenter 在武加大＋教會語料中零字形，練不到；20 詞僅練 19。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫，連接詞只用在真的因果／轉折／時間／目的關係上；寧可少練一詞也不硬塞，每課覆蓋至少 15/20（含引用題）。",
   "sentences": [
     {
-      "latin": "Institutum radicem habet; professio manet.",
-      "chinese": "制度有其根基；職業長存。",
-      "targets": ["institutum", "radix", "professio"]
+      "latin": "Radix omnium malorum est cupiditas.",
+      "chinese": "貪婪是萬惡之根。",
+      "targets": [
+        "radix"
+      ]
     },
     {
-      "latin": "Quotquot latissime credunt, administratio manet.",
-      "chinese": "無論多少人極廣泛地相信，行政管理長存。",
-      "targets": ["quotquot", "late", "credo", "administratio"]
+      "latin": "Quotquot eum receperunt, filii Dei facti sunt.",
+      "chinese": "凡接受他的人，都成了天主的子女。",
+      "targets": [
+        "quotquot"
+      ]
     },
     {
-      "latin": "Sempiternus Deus nominatim sedulo vocat.",
-      "chinese": "永恆的天主按名殷切地呼喚著。",
-      "targets": ["sempiternus", "Deus", "nominatim", "sedulo"]
+      "latin": "Dominium Dei sempiternum est.",
+      "chinese": "天主的主權是永恆的。",
+      "targets": [
+        "sempiternus",
+        "dominium"
+      ]
     },
     {
-      "latin": "Episcopus distinxit; clare obsequium docet.",
-      "chinese": "主教作了區分；他清楚地教導了服從。",
-      "targets": ["episcopus", "distinguo", "clare", "obsequium"]
+      "latin": "Religiosi in instituto professionem emittunt.",
+      "chinese": "修會會士在修會中發願。",
+      "targets": [
+        "institutum"
+      ]
     },
     {
-      "latin": "Dominium sortem regit.",
-      "chinese": "統治權治理著命運。",
-      "targets": ["dominium", "sors"]
+      "latin": "Episcopus administrationem bonorum negligere non debet.",
+      "chinese": "主教不應疏忽財產的管理。",
+      "targets": [
+        "administratio",
+        "neglego"
+      ]
     },
     {
-      "latin": "Populi neglexerunt; secus est.",
-      "chinese": "百姓們忽視了；情況並非如此。",
-      "targets": ["populus", "neglego", "secus"]
+      "latin": "Pastor oves suas sedulo custodit et nominatim vocat.",
+      "chinese": "牧人細心看守他的羊，並按名叫牠們。",
+      "targets": [
+        "nominatim",
+        "sedulo"
+      ]
     },
     {
-      "latin": "Episcopus hortatur; animadvertit; quominus credant, nihil impedit.",
-      "chinese": "主教鼓勵著；他察覺了；沒有什麼能阻止他們相信。",
-      "targets": ["episcopus", "hortor", "animadverto", "quominus", "credo", "nihil"]
+      "latin": "Fides est obsequium intellectus et voluntatis.",
+      "chinese": "信德是理智和意志的服從。",
+      "targets": [
+        "obsequium"
+      ]
     }
   ]
 }

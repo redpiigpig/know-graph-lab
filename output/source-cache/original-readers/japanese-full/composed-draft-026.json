@@ -1,81 +1,43 @@
 {
   "lesson": 26,
   "volume": 1,
-  "author": "opus-5-hand-written",
-  "note": "",
+  "author": "opus-5.5-hand-written",
+  "note": "2026-09-27 第三次重寫（擁有者選項 B：一題一句、問句每課≤2、至少 15 詞）",
   "sentences": [
     {
-      "japanese": "電車は速いです。今日は遅い時間に帰ります。朝は早いです。",
-      "chinese": "電車很快。今天很晚回家。早上很早。",
-      "targets": [
-        "速い",
-        "早い",
-        "遅い"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 修補生詞覆蓋] 補 早い；原句：電車は速いです。今日は遅い時間に帰ります。"
+      "japanese": "一番好きな季節はいつですか。秋です。",
+      "chinese": "你最喜歡的季節是什麼時候？秋天。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "私の荷物は多いです。彼女の荷物は少ないです。",
-      "chinese": "我的行李很多。她的行李很少。",
-      "targets": [
-        "多い",
-        "少ない"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 校對] 採用覆核建議修正句；原句：多い荷物と少ない荷物です。"
+      "japanese": "私の町の冬は寒くて、雪が多いです。",
+      "chinese": "我住的城鎮冬天很冷，雪很多。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "暖かい季節です。温かい料理を食べます。",
-      "chinese": "是溫暖的季節。吃溫熱的料理。",
-      "targets": [
-        "暖かい",
-        "温かい",
-        "季節"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 校對] 採用覆核建議修正句；原句：暖かい季節と温かい料理です。"
+      "japanese": "夏は雨が多いですが、今年は少ないです。",
+      "chinese": "夏天雨通常很多，但今年很少。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "甘い果物を食べます。辛い料理は食べません。",
-      "chinese": "吃甜的水果。不吃辣的料理。",
-      "targets": [
-        "甘い",
-        "辛い"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 校對] 採用覆核建議修正句；原句：甘い果物と辛い料理です。"
+      "japanese": "新幹線は速いですが、切符が高いです。",
+      "chinese": "新幹線很快，但車票很貴。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "この鞄は重いです。その鞄は軽いです。",
-      "chinese": "這個包包很重。那個包包很輕。",
-      "targets": [
-        "重い",
-        "軽い"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 校對] 採用覆核建議修正句；原句：重い鞄と軽い鞄です。"
+      "japanese": "私は甘い物が好きですが、辛い物は嫌いです。",
+      "chinese": "我喜歡甜食，但討厭辣的東西。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "冬の天気は雪です。",
-      "chinese": "冬天的天氣是雪。",
-      "targets": [
-        "冬",
-        "天気",
-        "雪"
-      ]
+      "japanese": "荷物が重いですから、タクシーで帰ります。",
+      "chinese": "行李很重，所以搭計程車回家。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "冬は雪が多いです。",
-      "chinese": "冬天雪很多。",
-      "targets": [
-        "雪",
-        "多い",
-        "冬",
-        "天気"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 校對] 採用覆核建議修正句；原句：雪の多い冬の天気です。"
+      "japanese": "春は暖かいですが、朝はまだ涼しいです。",
+      "chinese": "春天很暖和，但早上還是涼涼的。",
+      "reviewedBy": "author"
     }
   ]
 }

@@ -2,42 +2,60 @@
   "volume": 1,
   "lesson": 28,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。🚨 2026-09-27 再補正：obeō 舊筆記寫零字形有誤——它的完成分詞 obitus 本身就在武加大語料中（詞位欄是空的，靠詞幹搭上），第 1 句已補上、當名詞用（「逝世」）。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫。",
   "sentences": [
     {
-      "latin": "Fructus in loco crescit; obitus sacerdotis magnus est.",
-      "chinese": "果實在地方中生長；那司祭的逝世是重大的。",
-      "targets": ["fructus", "locus"]
+      "latin": "Christus est imago Dei invisibilis.",
+      "chinese": "基督是不可見的天主的肖像。",
+      "targets": [
+        "inuisibilis"
+      ]
     },
     {
-      "latin": "Populus laudem Deo nuntiavit.",
-      "chinese": "百姓向天主宣揚了讚美。",
-      "targets": ["laus", "Deus", "nuntio"]
+      "latin": "Sacerdos in locum sanctum introivit.",
+      "chinese": "司祭進入了聖所。",
+      "targets": [
+        "introeo",
+        "locus"
+      ]
     },
     {
-      "latin": "Deus invisibilis est; pietas ejus magna est.",
-      "chinese": "天主是無形的；祂的仁慈是浩大的。",
-      "targets": ["Deus", "invisibilis", "pietas"]
+      "latin": "Pietas ad omnia prodest.",
+      "chinese": "虔敬對一切都有益處。",
+      "targets": [
+        "pietas",
+        "prosum"
+      ]
     },
     {
-      "latin": "Sacerdos ad altare introivit; sacrificium purgat.",
-      "chinese": "司祭走進了祭台；他潔淨了祭品。",
-      "targets": ["sacerdos", "introeo", "purgo"]
+      "latin": "Placatus Dominus peccata populi remisit.",
+      "chinese": "上主息了怒，赦免了百姓的罪。",
+      "targets": [
+        "placo",
+        "remitto"
+      ]
     },
     {
-      "latin": "Discipuli praeibant; Christus prodiit; populus redit.",
-      "chinese": "門徒們在前行走；基督走了出來；百姓於是歸來。",
-      "targets": ["discipulus", "praeeo", "Christus", "prodeo", "populus", "redeo"]
+      "latin": "Pater palmitem purgat, ut fructum afferat.",
+      "chinese": "父修剪枝條，使它結出果實。",
+      "targets": [
+        "fructus",
+        "purgo"
+      ]
     },
     {
-      "latin": "Hoc omnibus prodest; peccator perit; Deus placari potest.",
-      "chinese": "這對眾人有益；罪人喪亡了；天主是能被撫慰的。",
-      "targets": ["prosum", "pereo", "Deus", "placo"]
+      "latin": "Sanguis Christi effusus est in remissionem peccatorum.",
+      "chinese": "基督的血傾流出來，為使罪得赦。",
+      "targets": [
+        "remissio"
+      ]
     },
     {
-      "latin": "Populus iniit; unus interiit; alius pertransit; remissionem remisit.",
-      "chinese": "百姓進去了；一人喪亡了；另一人卻經過了；他赦免了罪過。",
-      "targets": ["populus", "ineo", "intereo", "pertranseo", "remissio", "remitto"]
+      "latin": "Filius ad patrem rediit.",
+      "chinese": "兒子回到了父親那裡。",
+      "targets": [
+        "redeo"
+      ]
     }
   ]
 }

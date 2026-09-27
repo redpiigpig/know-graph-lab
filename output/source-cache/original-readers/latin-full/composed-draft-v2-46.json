@@ -2,42 +2,75 @@
   "volume": 2,
   "lesson": 46,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫（棄用模板產生器）。🚨 amanter 在武加大＋教會語料中零字形，練不到；20 詞僅練 19。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫，連接詞只用在真的因果／轉折／時間／目的關係上；寧可少練一詞也不硬塞，每課覆蓋至少 15/20（含引用題）。",
   "sentences": [
     {
-      "latin": "Zelus jugiter corrumpit.",
-      "chinese": "熱誠不斷地在腐化著。",
-      "targets": ["zelus", "jugiter", "corrumpo"]
+      "latin": "Sancti zelum Christi imitantur.",
+      "chinese": "聖人們效法基督的熱忱。",
+      "targets": [
+        "zelus",
+        "imitor"
+      ]
     },
     {
-      "latin": "Custos undique inquirit; impetus vitetur.",
-      "chinese": "守衛從四面八方追查；願攻勢被躲避。",
-      "targets": ["undique", "inquiro", "impetus", "vito"]
+      "latin": "In angustia filii Israel Dominum jugiter invocabant.",
+      "chinese": "以色列子民在困苦中不斷地呼求上主。",
+      "targets": [
+        "jugiter",
+        "angustia"
+      ]
     },
     {
-      "latin": "In sinu angustia manet.",
-      "chinese": "困苦仍存留在懷抱之中。",
-      "targets": ["sinus", "angustia"]
+      "latin": "Diversitas rituum varietatem ecclesiæ ostendit.",
+      "chinese": "禮儀的差異顯示出教會的多樣性。",
+      "targets": [
+        "varietas",
+        "diversitas"
+      ]
     },
     {
-      "latin": "Custos controversiam partim comperit; exercitatio manet.",
-      "chinese": "守衛部分地查明了那爭論；修習仍長存。",
-      "targets": ["comperio", "controversia", "partim", "exercitatio"]
+      "latin": "Judex in controversia veritatem comperit.",
+      "chinese": "法官在爭訟中查明真相。",
+      "targets": [
+        "comperio",
+        "controversia"
+      ]
     },
     {
-      "latin": "Varietas diversitate crescit; zelum imitatur.",
-      "chinese": "多樣性藉著差異性而增長；它效法著那熱誠。",
-      "targets": ["varietas", "diversitas", "imitor"]
+      "latin": "Corporalis exercitatio ad modicum utilis est.",
+      "chinese": "身體的鍛鍊只有少許益處。",
+      "targets": [
+        "exercitatio"
+      ]
     },
     {
-      "latin": "Essentia donationis acriter manet.",
-      "chinese": "贈禮的本質敏銳而長存。",
-      "targets": ["essentia", "donatio", "acriter"]
+      "latin": "Pauper in sinum Abrahæ portatus est.",
+      "chinese": "那窮人被送到亞巴郎的懷裡。",
+      "targets": [
+        "sinus"
+      ]
     },
     {
-      "latin": "Impetus zelo jugiter crescit.",
-      "chinese": "攻勢藉著熱誠不斷地增長。",
-      "targets": ["impetus", "zelus", "jugiter"]
+      "latin": "Societas mala mores bonos corrumpit.",
+      "chinese": "壞的交往敗壞善良的品行。",
+      "targets": [
+        "corrumpo"
+      ]
+    },
+    {
+      "latin": "Christianus occasiones peccati vitare debet.",
+      "chinese": "基督徒應當躲避犯罪的機會。",
+      "targets": [
+        "vito"
+      ]
+    },
+    {
+      "latin": "Turbæ magno impetu undique ad Jesum veniebant.",
+      "chinese": "群眾從四面八方蜂擁到耶穌那裡。",
+      "targets": [
+        "impetus",
+        "undique"
+      ]
     }
   ]
 }

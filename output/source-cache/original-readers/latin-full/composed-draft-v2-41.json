@@ -2,42 +2,62 @@
   "volume": 2,
   "lesson": 41,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫（棄用模板產生器）。🚨 2026-09-27 再補正：cottidianus 舊筆記寫零字形有誤——cotidianae 本身在教會語料裡（詞位欄是空的，靠詞幹搭上），第 1 句已補上、當形容詞實體化的複數主格用。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫，連接詞只用在真的因果／轉折／時間／目的關係上；寧可少練一詞也不硬塞，每課覆蓋至少 15/20（含引用題）。",
   "sentences": [
     {
-      "latin": "Respectus deinceps in aditu manet; cotidianae manent.",
-      "chinese": "顧慮相繼地存留在門口；日常的事務也長存著。",
-      "targets": ["respectus", "deinceps", "aditus"]
+      "latin": "Per Christum aditus ad Patrem nobis patet.",
+      "chinese": "藉著基督，通往聖父的道路為我們敞開。",
+      "targets": [
+        "aditus"
+      ]
     },
     {
-      "latin": "Occursus confirmationem insignem dat.",
-      "chinese": "相遇賜下了顯著的堅振。",
-      "targets": ["occursus", "confirmatio", "insignis"]
+      "latin": "Servus bonus tempus opportunum ad lucrum quærit.",
+      "chinese": "好僕人尋找獲利的適當時機。",
+      "targets": [
+        "lucrum",
+        "opportunus"
+      ]
     },
     {
-      "latin": "Nexus vigent; lucrum manet.",
-      "chinese": "聯繫興盛著；利益長存。",
-      "targets": ["nexus", "vigeo", "lucrum"]
+      "latin": "In calamitate fratres se invicem juvent.",
+      "chinese": "在災難中，弟兄們應當互相幫助。",
+      "targets": [
+        "calamitas",
+        "juvo"
+      ]
     },
     {
-      "latin": "Calamitas opportuna non est.",
-      "chinese": "災難並非有利的。",
-      "targets": ["calamitas", "opportunus"]
+      "latin": "Peccatum mortale hominem a visione Dei excludere potest.",
+      "chinese": "死罪能使人被排除在面見天主之外。",
+      "targets": [
+        "visio",
+        "excludo"
+      ]
     },
     {
-      "latin": "Visio excludatur; continuo manet.",
-      "chinese": "願視象被排除；然而它立即長存。",
-      "targets": ["visio", "excludo", "continuo"]
+      "latin": "Templum insigni pulchritudine ornatum erat.",
+      "chinese": "聖殿以卓越的美麗裝飾起來。",
+      "targets": [
+        "insignis",
+        "pulchritudo"
+      ]
     },
     {
-      "latin": "Patres sanxerunt; pulchritudo reverentiam auget.",
-      "chinese": "教父們制定了；美增添了敬畏。",
-      "targets": ["sancio", "pulchritudo", "reverentia"]
+      "latin": "Sacramentum confirmationis cum reverentia accipiendum est.",
+      "chinese": "應當以虔敬的心領受堅振聖事。",
+      "targets": [
+        "confirmatio",
+        "reverentia"
+      ]
     },
     {
-      "latin": "Deus juvat; accurate providebit.",
-      "chinese": "天主幫助了；祂將精確地照顧。",
-      "targets": ["Deus", "juvo", "accurate", "provideo"]
+      "latin": "Tota civitas continuo in occursum Jesu exiit.",
+      "chinese": "全城的人立刻出來迎接耶穌。",
+      "targets": [
+        "occursus",
+        "continuo"
+      ]
     }
   ]
 }

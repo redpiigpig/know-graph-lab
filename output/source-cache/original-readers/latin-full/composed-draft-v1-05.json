@@ -2,66 +2,63 @@
   "volume": 1,
   "lesson": 5,
   "author": "opus-5-hand-written",
-  "note": "antīquus 與 hymnus 一樣沒有主格進語料，改用 antiqui；vitium 只有 vitio／vitiis／vitii，故用複數奪格。🚨 2026-09-27 更正：cēnāculum 舊註記寫「只有主格與屬格，配 in ＋ 受格」，但第 2 句原文其實寫的是奪格 cœnaculo（語料查無此形）——已改用屬格 cenaculi。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫。",
   "sentences": [
     {
-      "latin": "Vir beatus in mundo est.",
-      "chinese": "蒙福的人在世上。",
+      "latin": "Magister meus vir bonus est.",
+      "chinese": "我的老師是一位好人。",
       "targets": [
         "uir",
-        "beatus",
-        "mundus"
+        "bonus",
+        "magister",
+        "meus"
       ]
     },
     {
-      "latin": "Cœnaculum magistri antiqui est",
-      "chinese": "這是古代師傅的樓上房間。",
-      "targets": [
-        "cenaculum",
-        "antiquus",
-        "magister"
-      ]
-    },
-    {
-      "latin": "Impius vir in multis vitiis est",
-      "chinese": "不敬的人陷於許多過失之中。",
-      "targets": [
-        "uir",
-        "uitium",
-        "impius",
-        "multus"
-      ]
-    },
-    {
-      "latin": "Clara gloria in æternum est.",
-      "chinese": "光明的榮耀直到永遠常存。",
+      "latin": "Regnum Dei est in æternum.",
+      "chinese": "天主的國存到永遠。",
       "targets": [
         "aeternus",
-        "clarus",
         "in aeternum"
       ]
     },
     {
-      "latin": "Gladius viri in agro est.",
-      "chinese": "那人的劍在田間。",
+      "latin": "Magnus est Dominus in Sion.",
+      "chinese": "上主在熙雍是偉大的。",
       "targets": [
-        "uir",
+        "magnus"
+      ]
+    },
+    {
+      "latin": "Regnum meum non est de hoc mundo.",
+      "chinese": "我的國不屬於這世界。",
+      "targets": [
+        "meus",
+        "mundus"
+      ]
+    },
+    {
+      "latin": "Verbum Dei est gladius.",
+      "chinese": "天主的話是一把劍。",
+      "targets": [
         "gladius"
       ]
     },
     {
-      "latin": "Magnus est modus dei",
-      "chinese": "天主的方式是偉大的。",
+      "latin": "Beati sunt mortui in Domino.",
+      "chinese": "在主內死去的人是有福的。",
       "targets": [
-        "magnus",
-        "modus"
+        "beatus",
+        "mortuus"
       ]
     },
     {
-      "latin": "Vita æterna in regno dei est",
-      "chinese": "永生在天主的國度中。",
+      "latin": "Cœnaculum antiquum et magnum est.",
+      "chinese": "那間樓廳又古老又寬敞。",
       "targets": [
-        "aeternus"
+        "antiquus",
+        "cenaculum",
+        "magnus"
       ]
     }
   ]

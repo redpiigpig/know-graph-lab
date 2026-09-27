@@ -2,42 +2,63 @@
   "volume": 2,
   "lesson": 37,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫（棄用模板產生器）。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫，連接詞只用在真的因果／轉折／時間／目的關係上；寧可少練一詞也不硬塞，每課覆蓋至少 15/20（含引用題）。",
   "sentences": [
     {
-      "latin": "Objectum structuram indicat.",
-      "chinese": "對象指出了結構。",
-      "targets": ["objectum", "structura", "indico"]
+      "latin": "Nonne cor nostrum ardens erat in nobis?",
+      "chinese": "我們的心不是火熱的嗎？",
+      "targets": [
+        "nonne"
+      ]
     },
     {
-      "latin": "Nonne opus peragitur? Consideratio manet.",
-      "chinese": "此工作豈不是被完成了嗎？沉思長存。",
-      "targets": ["nonne", "opus", "perago", "consideratio"]
+      "latin": "Merces paupertatis evangelicæ regnum cælorum est.",
+      "chinese": "福音神貧的賞報就是天國。",
+      "targets": [
+        "merces",
+        "paupertas"
+      ]
     },
     {
-      "latin": "Merces motu magno data est.",
-      "chinese": "報酬以巨大的動作被賜下了。",
-      "targets": ["merces", "motus"]
+      "latin": "Nimius amor rerum temporalium inanis est.",
+      "chinese": "過分貪愛暫時的事物是徒然的。",
+      "targets": [
+        "nimius",
+        "inanis"
+      ]
     },
     {
-      "latin": "Paupertas supernaturalis manet; eventus bonus est.",
-      "chinese": "超自然的貧窮長存；結果是好的。",
-      "targets": ["paupertas", "supernaturalis", "eventus"]
+      "latin": "Gratia supernaturalis animæ robur præbet.",
+      "chinese": "超性的恩寵給靈魂力量。",
+      "targets": [
+        "supernaturalis",
+        "robur"
+      ]
     },
     {
-      "latin": "Populi gratiam acquirunt; nimius amor non est.",
-      "chinese": "百姓們獲得了恩寵；愛並非過度的。",
-      "targets": ["populus", "gratia", "acquiro", "nimius"]
+      "latin": "In missa opus redemptionis nostræ constanter peragitur.",
+      "chinese": "在彌撒中，我們救贖的工程不斷地得以完成。",
+      "targets": [
+        "perago",
+        "constanter"
+      ]
     },
     {
-      "latin": "Denuo robur crescit; tempus congruum est.",
-      "chinese": "力量再次增長；時機是恰當的。",
-      "targets": ["denuo", "robur", "congruus"]
+      "latin": "Consideratio passionis Christi motum caritatis excitare solet.",
+      "chinese": "默想基督的苦難，常會激起愛德的衝動。",
+      "targets": [
+        "consideratio",
+        "motus"
+      ]
     },
     {
-      "latin": "Necessitudo inanis non est; constanter evenit.",
-      "chinese": "義務並非虛空的；它堅定不移地發生了。",
-      "targets": ["necessitudo", "inanis", "constanter", "evenio"]
+      "latin": "Eventus verba prophetarum vera esse indicavit.",
+      "chinese": "事情的結果顯明先知們的話是真實的。",
+      "targets": [
+        "indico",
+        "eventus",
+        "evenio"
+      ]
     }
   ]
 }

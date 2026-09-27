@@ -2,42 +2,60 @@
   "volume": 2,
   "lesson": 17,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。🚨 archidiaconus 在武加大＋教會語料中零字形，練不到；20 詞僅練 19。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫，連接詞只用在真的因果／轉折／時間／目的關係上；寧可少練一詞也不硬塞，每課覆蓋至少 15/20（含引用題）。",
   "sentences": [
     {
-      "latin": "Episcopus similitudinem considerat; manifestus error est.",
-      "chinese": "主教考量了相似之處；那錯誤是顯明的。",
-      "targets": ["episcopus", "considero", "similitudo", "manifestus", "error"]
+      "latin": "Deus hominem ad similitudinem suam creavit.",
+      "chinese": "天主按照自己的肖像造了人。",
+      "targets": [
+        "similitudo"
+      ]
     },
     {
-      "latin": "Porro, appellatio nobilis manet; absque timore.",
-      "chinese": "此外，那高貴的上訴仍然存在；沒有畏懼。",
-      "targets": ["porro", "absque", "appellatio", "nobilis"]
+      "latin": "Opera Dei manifesta sunt omnibus qui ea considerant.",
+      "chinese": "天主的作為，凡是細心觀察的人都看得清楚。",
+      "targets": [
+        "manifestus",
+        "considero"
+      ]
     },
     {
-      "latin": "Tot vocabula praebet; simplex sensus manet.",
-      "chinese": "他提供了如此多的詞彙；單純的意義仍然存在。",
-      "targets": ["tot", "vocabulum", "praebeo", "simplex", "sensus"]
+      "latin": "Dominica die mulieres ad sepulcrum venerunt.",
+      "chinese": "主日那天，婦女們來到墳墓那裡。",
+      "targets": [
+        "dominicus"
+      ]
     },
     {
-      "latin": "Praesumit veritatem; confessio taliter fit.",
-      "chinese": "他自負地假定了真理；認信便如此發生。",
-      "targets": ["praesumo", "veritas", "confessio", "taliter", "fio"]
+      "latin": "Presbyter facultatem confessionem audiendi ab episcopo accepit.",
+      "chinese": "司鐸從主教那裡得到了聽告解的權柄。",
+      "targets": [
+        "confessio",
+        "facultas"
+      ]
     },
     {
-      "latin": "Haeresis contra dominicam legem est.",
-      "chinese": "異端違反了屬主的法律。",
-      "targets": ["haeresis", "contra", "dominicus", "lex"]
+      "latin": "Hæresis simplices fideles seducit.",
+      "chinese": "異端誘騙單純的信友。",
+      "targets": [
+        "simplex",
+        "haeresis"
+      ]
     },
     {
-      "latin": "Lapis libertatem significat; facultas data est.",
-      "chinese": "石頭象徵了自由；能力已被賜下。",
-      "targets": ["lapis", "libertas", "significo", "facultas"]
+      "latin": "Viri nobiles lapides pretiosos templo obtulerunt.",
+      "chinese": "顯貴的人把寶貴的石頭獻給聖殿。",
+      "targets": [
+        "nobilis",
+        "lapis"
+      ]
     },
     {
-      "latin": "Confessio simplex praebet gratiam; lapis nobilis manet.",
-      "chinese": "單純的認信提供了恩寵；貴重的石頭仍然存在。",
-      "targets": ["confessio", "simplex", "praebeo", "lapis", "nobilis"]
+      "latin": "Absque gratia Dei nihil boni facere possumus.",
+      "chinese": "沒有天主的恩寵，我們什麼善事也不能做。",
+      "targets": [
+        "absque"
+      ]
     }
   ]
 }

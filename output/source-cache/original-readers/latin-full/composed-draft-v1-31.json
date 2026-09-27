@@ -2,42 +2,60 @@
   "volume": 1,
   "lesson": 31,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫。",
   "sentences": [
     {
-      "latin": "Pastor ostendit; oves recedunt; grex alitur.",
-      "chinese": "牧人指示了；羊群卻退開了；那群羊被餵養著。",
-      "targets": ["pastor", "ostendo", "recedo", "alo"]
+      "latin": "Christus caput est ecclesiæ.",
+      "chinese": "基督是教會的頭。",
+      "targets": [
+        "caput"
+      ]
     },
     {
-      "latin": "Christus perficit; ad Patrem pervenit; nos curat.",
-      "chinese": "基督完成了；祂到達了父那裡；祂照顧我們。",
-      "targets": ["Christus", "perficio", "pater", "pervenio", "curo"]
+      "latin": "Pastor bonus oves alit et curat.",
+      "chinese": "好牧人餵養並照顧羊群。",
+      "targets": [
+        "pastor",
+        "alo",
+        "curo"
+      ]
     },
     {
-      "latin": "Sapientia sufficit; auris audit; verbum procedit.",
-      "chinese": "智慧足夠了；耳朵聽見了；言語發出了。",
-      "targets": ["sapientia", "sufficio", "auris", "procedo"]
+      "latin": "Pervenit sermo ad aures ecclesiæ.",
+      "chinese": "這消息傳到了教會的耳中。",
+      "targets": [
+        "peruenio",
+        "auris"
+      ]
     },
     {
-      "latin": "Dolor supervenit; caro tendit ad mortem.",
-      "chinese": "痛苦突然來到；肉身趨向死亡。",
-      "targets": ["supervenio", "caro", "tendo", "mors"]
+      "latin": "Qui in tenebris ambulat, cadit.",
+      "chinese": "在黑暗中行走的人會跌倒。",
+      "targets": [
+        "tenebrae",
+        "cado"
+      ]
     },
     {
-      "latin": "Populus in tenebris cadit; Deus subvenire potest.",
-      "chinese": "百姓在黑暗中跌倒；天主能夠援助。",
-      "targets": ["populus", "tenebrae", "cado", "Deus", "subvenio"]
+      "latin": "Spiritus Sanctus superveniet in te.",
+      "chinese": "聖神要臨於你。",
+      "targets": [
+        "superuenio"
+      ]
     },
     {
-      "latin": "Christus apparuit populo; caput Ecclesiae est; omnes praecedit.",
-      "chinese": "基督向百姓顯現了；祂是教會的頭；祂在眾人之前領先。",
-      "targets": ["Christus", "appareo", "populus", "caput", "ecclesia", "praecedo"]
+      "latin": "Christus est sapientia Dei.",
+      "chinese": "基督是天主的智慧。",
+      "targets": [
+        "sapientia"
+      ]
     },
     {
-      "latin": "Bonus pastor oves alit; capita earum curat.",
-      "chinese": "良善的牧人餵養羊群；他照顧牠們的頭。",
-      "targets": ["pastor", "alo", "caput", "curo"]
+      "latin": "Sufficit tibi gratia mea.",
+      "chinese": "我的恩寵為你夠了。",
+      "targets": [
+        "sufficio"
+      ]
     }
   ]
 }

@@ -2,42 +2,61 @@
   "volume": 2,
   "lesson": 26,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。🚨 2026-09-27 再補正：potis 舊筆記寫「詞位不歸此條」有誤——potissimum 的詞位直標就有 potis（與詞頭 fold 後相符），第 1 句已補上（讀作副詞「尤其」）。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫，連接詞只用在真的因果／轉折／時間／目的關係上；寧可少練一詞也不硬塞，每課覆蓋至少 15/20（含引用題）。",
   "sentences": [
     {
-      "latin": "Societas condicionem moralem potissimum spectat.",
-      "chinese": "社會尤其考量了道德的處境。",
-      "targets": ["societas", "condicio", "moralis", "specto", "potis"]
+      "latin": "Ecclesia non est communitas politica.",
+      "chinese": "教會不是政治團體。",
+      "targets": [
+        "communitas",
+        "politicus"
+      ]
     },
     {
-      "latin": "Veluti pater erga filium, socialis vita manet.",
-      "chinese": "正如父親對兒子那樣，社會性的生活長存。",
-      "targets": ["veluti", "pater", "erga", "filius", "socialis"]
+      "latin": "Doctrina socialis ecclesiæ principia moralia proponit.",
+      "chinese": "教會的社會訓導提出道德原則。",
+      "targets": [
+        "moralis",
+        "socialis"
+      ]
     },
     {
-      "latin": "Opera haud civilis est.",
-      "chinese": "那工作絕非是市民性的。",
-      "targets": ["opera", "haud", "civilis"]
+      "latin": "Societas civilis justis legibus regi debet.",
+      "chinese": "公民社會應當由公正的法律來治理。",
+      "targets": [
+        "societas",
+        "civilis"
+      ]
     },
     {
-      "latin": "Nempe varius est; profecto communitas crescit.",
-      "chinese": "確實，它是多樣的；必然地，社群漸漸增長。",
-      "targets": ["nempe", "varius", "profecto", "communitas"]
+      "latin": "Ejusmodi quæstiones ad fidem spectant.",
+      "chinese": "這一類問題關乎信仰。",
+      "targets": [
+        "ejusmodi",
+        "specto"
+      ]
     },
     {
-      "latin": "Historia prorsus ejusmodi est.",
-      "chinese": "歷史完全是這樣的。",
-      "targets": ["historia", "prorsus", "ejusmodi"]
+      "latin": "Profecto hic homo Filius Dei erat.",
+      "chinese": "這人真是天主子。",
+      "targets": [
+        "profecto"
+      ]
     },
     {
-      "latin": "Communitas politica instrumentum habet.",
-      "chinese": "政治的社群擁有其工具。",
-      "targets": ["politicus", "instrumentum"]
+      "latin": "Humanitas Christi est veluti instrumentum divinitatis.",
+      "chinese": "基督的人性就像是天主性的工具。",
+      "targets": [
+        "veluti",
+        "instrumentum"
+      ]
     },
     {
-      "latin": "Communitas civilis artem politicam spectat.",
-      "chinese": "市民的社群考量了政治的技藝。",
-      "targets": ["communitas", "civilis", "politicus", "specto"]
+      "latin": "Historia salutis in Christo impletur.",
+      "chinese": "救恩史在基督身上得到圓滿。",
+      "targets": [
+        "historia"
+      ]
     }
   ]
 }

@@ -2,42 +2,75 @@
   "volume": 2,
   "lesson": 44,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫（棄用模板產生器）。🚨 dioecesis 在武加大＋教會語料中零字形（含 diœcesis／diocesis 拼法皆試過），練不到；20 詞僅練 19。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫，連接詞只用在真的因果／轉折／時間／目的關係上；寧可少練一詞也不硬塞，每課覆蓋至少 15/20（含引用題）。",
   "sentences": [
     {
-      "latin": "Sacerdos quintam mensuram revocet.",
-      "chinese": "願司祭恢復那第五項量度。",
-      "targets": ["Quintus", "revoco", "mensura"]
+      "latin": "Promissio Dei stabilis est.",
+      "chinese": "天主的應許是穩固的。",
+      "targets": [
+        "promissio",
+        "stabilis"
+      ]
     },
     {
-      "latin": "Solacium breve in arcano manet.",
-      "chinese": "短暫的安慰仍存留在隱密之處。",
-      "targets": ["solacium", "brevis", "arcanus"]
+      "latin": "Anima humana immortalis est, vita autem hominis brevis.",
+      "chinese": "人的靈魂是不死的，人的生命卻是短暫的。",
+      "targets": [
+        "brevis",
+        "immortalis"
+      ]
     },
     {
-      "latin": "Promissio stabilis manet; honestas fraternitatis crescit.",
-      "chinese": "穩固的承諾長存；兄弟情誼的廉正漸漸增長。",
-      "targets": ["promissio", "stabilis", "honestas", "fraternitas"]
+      "latin": "Adhærere Deo bonum est.",
+      "chinese": "依附天主是美好的。",
+      "targets": [
+        "adhaereo"
+      ]
     },
     {
-      "latin": "Incommodis duplex malum adhaeret.",
-      "chinese": "雙重的禍患緊緊依附在那些不便之事上。",
-      "targets": ["incommodus", "duplex", "adhaereo"]
+      "latin": "In hierarchia ecclesiæ episcopi primum locum tenent.",
+      "chinese": "在教會的聖統制中，主教居首位。",
+      "targets": [
+        "hierarchia"
+      ]
     },
     {
-      "latin": "Equidem hierarchia immortalis liquet.",
-      "chinese": "確實，那聖品階級顯然是不朽的。",
-      "targets": ["equidem", "hierarchia", "immortalis", "liqueo"]
+      "latin": "In missa ecclesia mortem Domini commemorat.",
+      "chinese": "教會在彌撒中紀念主的死亡。",
+      "targets": [
+        "commemoro"
+      ]
     },
     {
-      "latin": "Sacerdos praescriptum commemorat.",
-      "chinese": "司祭銘記著那規定。",
-      "targets": ["praescribo", "commemoro"]
+      "latin": "Deus Spiritum sine mensura dat.",
+      "chinese": "天主賜聖神是沒有限量的。",
+      "targets": [
+        "mensura"
+      ]
     },
     {
-      "latin": "Solacium arcano promissionis manet.",
-      "chinese": "承諾隱密的安慰仍然長存。",
-      "targets": ["solacium", "arcanus", "promissio"]
+      "latin": "Per fraternitatis amorem tristes solacium inveniunt.",
+      "chinese": "憂傷的人藉著手足之愛找到安慰。",
+      "targets": [
+        "fraternitas",
+        "solacium"
+      ]
+    },
+    {
+      "latin": "Ex scripturis liquet duplicem esse naturam in Christo.",
+      "chinese": "從聖經可以清楚看出，基督內有兩個本性。",
+      "targets": [
+        "duplex",
+        "liqueo"
+      ]
+    },
+    {
+      "latin": "Honestas morum a lege Dei præscripta est.",
+      "chinese": "品行端正是天主的法律所規定的。",
+      "targets": [
+        "praescribo",
+        "honestas"
+      ]
     }
   ]
 }

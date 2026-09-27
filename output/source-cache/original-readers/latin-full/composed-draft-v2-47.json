@@ -2,42 +2,68 @@
   "volume": 2,
   "lesson": 47,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫（棄用模板產生器）。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫，連接詞只用在真的因果／轉折／時間／目的關係上；寧可少練一詞也不硬塞，每課覆蓋至少 15/20（含引用題）。",
   "sentences": [
     {
-      "latin": "Fas illuc manat.",
-      "chinese": "天理流動向那處。",
-      "targets": ["fas", "illuc", "mano"]
+      "latin": "Sacerdos unctionem infirmis in gravi morbo confert.",
+      "chinese": "人患重病時，司祭給他們施行傅油。",
+      "targets": [
+        "unctio",
+        "morbus"
+      ]
     },
     {
-      "latin": "Centrum tertio designatur; ardor crescit.",
-      "chinese": "中心第三次被標示出來；熱誠漸漸增長。",
-      "targets": ["ardor", "tertio", "designo", "centrum"]
+      "latin": "Sine licentia ordinarii non est fas hoc facere.",
+      "chinese": "沒有教區教長的許可，不得做這件事。",
+      "targets": [
+        "fas"
+      ]
     },
     {
-      "latin": "Unctio justificat; dubitatio excedit.",
-      "chinese": "傅油使人成義；疑惑就此消退。",
-      "targets": ["unctio", "justifico", "dubitatio", "excedo"]
+      "latin": "Eximia sanctitas Mariæ omnium sanctorum merita excedit.",
+      "chinese": "瑪利亞卓越的聖德超過所有聖人的功德。",
+      "targets": [
+        "excedo",
+        "eximius"
+      ]
     },
     {
-      "latin": "Patrocinium Ordinario datur; commode manet.",
-      "chinese": "法律扶助被賜給了教區主教；它恰當地長存。",
-      "targets": ["patrocinium", "ordinarius", "commode"]
+      "latin": "Utinam nemo mendacium dicat.",
+      "chinese": "但願沒有人說謊。",
+      "targets": [
+        "utinam",
+        "mendacium"
+      ]
     },
     {
-      "latin": "Morbo eximia patientia manet.",
-      "chinese": "在病患之中，非凡的忍耐仍然長存。",
-      "targets": ["morbus", "eximius"]
+      "latin": "Justificati ex fide, sine dubitatione speramus.",
+      "chinese": "我們既因信成義，就毫不猶疑地懷著希望。",
+      "targets": [
+        "justifico",
+        "dubitatio"
+      ]
     },
     {
-      "latin": "Hactenus mercatus est; utinam fas maneat.",
-      "chinese": "迄今他已經貿易了；願天理長存。",
-      "targets": ["hactenus", "mercor", "utinam"]
+      "latin": "Per patrocinium Mariæ gratia Dei in fideles manat.",
+      "chinese": "藉著瑪利亞的護佑，天主的恩寵流到信友身上。",
+      "targets": [
+        "mano",
+        "patrocinium"
+      ]
     },
     {
-      "latin": "Mendacium illuc manat; ardor excedit.",
-      "chinese": "謊言流向了那處；熱烈就此消退。",
-      "targets": ["mendacium"]
+      "latin": "Post Pentecosten apostoli novo ardore prædicabant.",
+      "chinese": "五旬節之後，宗徒們以新的熱火宣講。",
+      "targets": [
+        "ardor"
+      ]
+    },
+    {
+      "latin": "Jesus tertio Petrum interrogavit.",
+      "chinese": "耶穌第三次問伯多祿。",
+      "targets": [
+        "tertio"
+      ]
     }
   ]
 }

@@ -1,81 +1,43 @@
 {
   "lesson": 99,
   "volume": 2,
-  "author": "opus-5-hand-written",
-  "note": "",
+  "author": "opus-5.5-hand-written",
+  "note": "2026-09-27 第二冊重寫（擁有者選項 B：一題一句、問句每課≤2、至少 15 詞）",
   "sentences": [
     {
-      "japanese": "特殊な武士の人生です。",
-      "chinese": "是特殊武士的人生。",
-      "targets": [
-        "特殊",
-        "武士",
-        "人生"
-      ]
+      "japanese": "江戸時代の武士は、いつも刀を持っていました。",
+      "chinese": "江戶時代的武士總是隨身帶著刀。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "それは天皇の理想です。",
-      "chinese": "那是天皇的理想。",
-      "targets": [
-        "理想",
-        "天皇"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 校對] 覆核未附修正句，自撰改寫；原句：天皇の理想です。"
+      "japanese": "近代になって、日本の社会は著しく変わりました。",
+      "chinese": "進入近代以後，日本社會有了顯著的改變。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "武士の時代が変わる。近代に這入る。",
-      "chinese": "武士的時代改變了。進入了近代。",
-      "targets": [
-        "這入る",
-        "近代"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 修補生詞覆蓋] 補 這入る／近代；原句：武士の時代が変わる。"
+      "japanese": "恐らく、彼も兄と同様に医者になるでしょう。",
+      "chinese": "他大概也會和哥哥一樣當醫生吧。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "祝詞の価値と真理を求める。",
-      "chinese": "追求祝詞的價值與真理。",
-      "targets": [
-        "価値",
-        "祝詞",
-        "真理"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 校對] 採用覆核建議修正句；原句：価値と祝詞と真理です。"
+      "japanese": "天皇は、日本の国民の統合の象徴とされています。",
+      "chinese": "天皇被定位為日本國民統合的象徵。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "武士の理想は常にこれに限る。",
-      "chinese": "武士的理想總是僅限於此。",
-      "targets": [
-        "常に",
-        "限る"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 校對] 覆核未附修正句，自撰改寫；原句：常にこれに限る。"
+      "japanese": "人生の価値は、お金で決まるとは限りません。",
+      "chinese": "人生的價值不一定是由金錢決定的。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "従って芸能の価値を認める。",
-      "chinese": "因此認可技藝的價值。",
-      "targets": [
-        "従って",
-        "芸能",
-        "価値"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 校對] 採用覆核建議修正句；原句：従って芸能の価値です。"
+      "japanese": "この現象は、特殊な条件の下でしか起こりません。",
+      "chinese": "這種現象只有在特殊條件下才會發生。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "武士は常に理想を求める。",
-      "chinese": "武士總是追求理想。",
-      "targets": [
-        "武士",
-        "常に",
-        "理想",
-        "限る"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 校對] 採用覆核建議修正句；原句：武士は常に理想に限る。"
+      "japanese": "哲学者は、常に真理と理想を求めてきました。",
+      "chinese": "哲學家始終在追求真理與理想。",
+      "reviewedBy": "author"
     }
   ]
 }

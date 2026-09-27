@@ -2,42 +2,59 @@
   "volume": 1,
   "lesson": 41,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。🚨 2026-09-27 再補正：addīcō（addixistis）／dēposcō（deposcimus）舊筆記寫零字形有誤——兩形詞位欄雖空、且不被詞性標記器判為限定動詞（不會觸發人稱數閘），可安心併進既有句子，第 1、3 句已各補上。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫。",
   "sentences": [
     {
-      "latin": "Veritas manet; dolor fugit; addixistis servum.",
-      "chinese": "真理長存；痛苦消逝了；你們判定了那僕人有罪。",
-      "targets": ["veritas", "dolor", "fugio"]
+      "latin": "Filia, vade in pace.",
+      "chinese": "女兒，平安地去吧。",
+      "targets": [
+        "uado",
+        "filia"
+      ]
     },
     {
-      "latin": "Petrus currit; discipulus contradicit.",
-      "chinese": "伯多祿奔跑；門徒卻反駁。",
-      "targets": ["curro", "discipulus", "contradico"]
+      "latin": "Michael archangelus nos contra diabolum defendit.",
+      "chinese": "總領天使米迦勒保護我們對抗魔鬼。",
+      "targets": [
+        "defendo",
+        "diabolus"
+      ]
     },
     {
-      "latin": "Filia dives est; ave dicit; deposcimus gratiam.",
-      "chinese": "女兒是富有的；她說：「你好」；我們懇切地要求恩寵。",
-      "targets": ["filia", "dives", "ave"]
+      "latin": "Dives difficile intrabit in regnum cælorum.",
+      "chinese": "富人難進天國。",
+      "targets": [
+        "diues"
+      ]
     },
     {
-      "latin": "Deus fideles defendit; diabolus circa vadit.",
-      "chinese": "天主保衛信實的人；魔鬼在周圍游走。",
-      "targets": ["Deus", "defendo", "diabolus", "circa", "vado"]
+      "latin": "Non est dolor sicut dolor meus.",
+      "chinese": "沒有痛苦像我的痛苦。",
+      "targets": [
+        "dolor"
+      ]
     },
     {
-      "latin": "Populus flevit; extra civitatem fugit.",
-      "chinese": "百姓哭泣了；他們逃到城外。",
-      "targets": ["populus", "fleo", "extra", "civitas", "fugio"]
+      "latin": "Judæi Paulo contradicebant, et eum extra civitatem ejecerunt.",
+      "chinese": "猶太人反駁保祿，把他趕出城外。",
+      "targets": [
+        "contradico",
+        "extra"
+      ]
     },
     {
-      "latin": "Sanguinis effusio magna est; simul currunt.",
-      "chinese": "血的傾流是浩大的；他們一同奔跑。",
-      "targets": ["sanguis", "effusio", "simul", "curro"]
+      "latin": "Circa horam nonam clamavit Jesus.",
+      "chinese": "約在第九時辰，耶穌大聲呼喊。",
+      "targets": [
+        "circa"
+      ]
     },
     {
-      "latin": "Simul ac panis repositus est, populus venit.",
-      "chinese": "餅一被存放好，百姓就來了。",
-      "targets": ["simulac", "panis", "repono", "populus"]
+      "latin": "Sine sanguinis effusione non fit remissio.",
+      "chinese": "沒有流血，就沒有赦免。",
+      "targets": [
+        "effusio"
+      ]
     }
   ]
 }

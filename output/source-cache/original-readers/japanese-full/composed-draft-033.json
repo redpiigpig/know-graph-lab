@@ -1,84 +1,43 @@
 {
   "lesson": 33,
   "volume": 1,
-  "author": "opus-5-hand-written",
-  "note": "",
+  "author": "opus-5.5-hand-written",
+  "note": "2026-09-27 第三次重寫（擁有者選項 B：一題一句、問句每課≤2、至少 15 詞）",
   "sentences": [
     {
-      "japanese": "部屋は暗いです。背が高いです。",
-      "chinese": "房間很暗。個子很高。",
-      "targets": [
-        "暗い",
-        "背",
-        "体",
-        "髪"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 校對] 採用覆核建議修正句；原句：暗い部屋です。背と体と髪です。"
+      "japanese": "彼女は顔が小さくて、目が大きいです。",
+      "chinese": "她臉很小，眼睛很大。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "目が大きいです。歯が白いです。髪が短いです。",
-      "chinese": "眼睛很大。牙齒很白。頭髮很短。",
-      "targets": [
-        "目",
-        "耳",
-        "口",
-        "歯"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 修補生詞覆蓋] 補 髪／お腹；原句：目が大きいです。歯が白いです。"
+      "japanese": "父は背が高くて、足が長いです。",
+      "chinese": "父親個子高，腿很長。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "足が大きいです。お腹も大きいです。体は元気な体です。",
-      "chinese": "腳很大。肚子也很大。身體是健康的身體。",
-      "targets": [
-        "お腹",
-        "足",
-        "体"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 修補生詞覆蓋] 補 髪／お腹；原句：足が大きいです。元気な体です。"
+      "japanese": "どうやって行きますか。まずバスで、次に地下鉄に乗り換えます。",
+      "chinese": "要怎麼去？先搭公車，接著換搭地下鐵。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "どの駅でどうやって乗り換えますか。",
-      "chinese": "在哪一站怎麼轉車？",
-      "targets": [
-        "どの",
-        "どうやって",
-        "乗り換えます"
-      ]
+      "japanese": "暗いですから、電気を点けます。",
+      "chinese": "太暗了，我來開燈。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "まず立ちます。次にボタンを触ります。",
-      "chinese": "先站起來。接著碰按鈕。",
-      "targets": [
-        "まず",
-        "次に",
-        "ボタン"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 校對] 覆核建議含未教詞，改寫；原句：まず立ちます。次にボタンです。"
+      "japanese": "私の部屋は窓が大きいですから、明るいです。",
+      "chinese": "我的房間窗戶很大，所以很明亮。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "どのボタンですか。",
-      "chinese": "是哪一個按鈕？",
-      "targets": [
-        "どの",
-        "ボタン"
-      ]
+      "japanese": "どのボタンを押しますか。この赤いボタンです。",
+      "chinese": "要按哪個按鈕？這個紅色的按鈕。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "まず耳を見ます。次に口と歯を見ます。",
-      "chinese": "先看耳朵。接著看嘴巴和牙齒。",
-      "targets": [
-        "まず",
-        "耳",
-        "次に",
-        "口",
-        "歯"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 校對] 採用覆核建議修正句；原句：まず耳、次に口と歯です。"
+      "japanese": "兄は髪が短くて、体が大きいです。",
+      "chinese": "哥哥頭髮短，身材高大。",
+      "reviewedBy": "author"
     }
   ]
 }

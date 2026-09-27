@@ -1,83 +1,43 @@
 {
   "lesson": 22,
   "volume": 1,
-  "author": "opus-5-hand-written",
-  "note": "",
+  "author": "opus-5.5-hand-written",
+  "note": "2026-09-27 第三次重寫（擁有者選項 B：一題一句、問句每課≤2、至少 15 詞）",
   "sentences": [
     {
-      "japanese": "犬と猫は木の後ろです。",
-      "chinese": "狗和貓在樹的後面。",
-      "targets": [
-        "犬",
-        "猫",
-        "木",
-        "後ろ"
-      ]
+      "japanese": "冷蔵庫の中にビールがあります。",
+      "chinese": "冰箱裡有啤酒。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "スイッチと冷蔵庫とベッドは部屋の中です。",
-      "chinese": "開關、冰箱和床在房間裡。",
-      "targets": [
-        "スイッチ",
-        "冷蔵庫",
-        "ベッド",
-        "中"
-      ]
+      "japanese": "公園の木の下に犬がいます。",
+      "chinese": "公園的樹下有一隻狗。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "窓の外はビルです。",
-      "chinese": "窗外是大樓。",
-      "targets": [
-        "ドア",
-        "窓",
-        "ビル",
-        "外"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 校對] 採用覆核建議修正句；原句：ドアと窓はビルの外です。"
+      "japanese": "猫はベッドの上にいます。",
+      "chinese": "貓在床上。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "猫は公園の木の上です。",
-      "chinese": "貓在公園的樹上。",
-      "targets": [
-        "公園",
-        "上"
-      ]
+      "japanese": "スイッチはどこですか。ドアの右です。",
+      "chinese": "開關在哪裡？在門的右邊。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "公園の前は屋です。",
-      "chinese": "公園的前面是一間店。",
-      "targets": [
-        "屋",
-        "中"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 修補生詞覆蓋] 補 屋／前；原句：静かな部屋の中です。"
+      "japanese": "窓の外に高いビルがあります。",
+      "chinese": "窗外有一棟高樓。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "犬はベッドの上、猫はドアの後ろです。",
-      "chinese": "狗在床上，貓在門後。",
-      "targets": [
-        "犬",
-        "ベッド",
-        "上",
-        "猫",
-        "ドア",
-        "後ろ"
-      ]
+      "japanese": "駅の前にパン屋があります。",
+      "chinese": "車站前有一家麵包店。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "窓の外は公園です。木があります。",
-      "chinese": "窗外是公園。有樹。",
-      "targets": [
-        "公園",
-        "前",
-        "外",
-        "木",
-        "窓"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 校對] 採用覆核建議修正句；原句：窓の前と外は木と公園です。"
+      "japanese": "銀行は郵便局の左です。",
+      "chinese": "銀行在郵局的左邊。",
+      "reviewedBy": "author"
     }
   ]
 }

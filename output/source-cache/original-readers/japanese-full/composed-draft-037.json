@@ -1,76 +1,43 @@
 {
   "lesson": 37,
   "volume": 1,
-  "author": "opus-5-hand-written",
-  "note": "",
+  "author": "opus-5.5-hand-written",
+  "note": "2026-09-27 第三次重寫（擁有者選項 B：一題一句、問句每課≤2、至少 15 詞）",
   "sentences": [
     {
-      "japanese": "国際会議で現金を払います。",
-      "chinese": "在國際會議上付現金。",
-      "targets": [
-        "国際",
-        "現金"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 校對] 採用覆核建議修正句；原句：国際の会議で現金です。"
+      "japanese": "私は動物が好きで、特に馬が好きです。",
+      "chinese": "我喜歡動物，特別喜歡馬。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "日記に祈りを書きます。",
-      "chinese": "在日記裡寫祈禱。",
-      "targets": [
-        "日記",
-        "祈り"
-      ]
+      "japanese": "課長は来年、部長になります。",
+      "chinese": "課長明年要升部長。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "課長と部長がいます。社長もいます。",
-      "chinese": "有課長和部長。也有社長。",
-      "targets": [
-        "課長",
-        "部長",
-        "社長"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 校對] 採用覆核建議修正句；原句：課長と部長と社長です。 [2026-09-27 と並列超過兩項修正] 原句：課長と部長と社長がいます。"
+      "japanese": "国際会議の間は、駅の近くのホテルに泊まります。",
+      "chinese": "國際會議期間，我住在車站附近的飯店。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "動物はなかなか強いです。",
-      "chinese": "動物相當強。",
-      "targets": [
-        "動物",
-        "なかなか",
-        "強い"
-      ]
+      "japanese": "是非、一緒に山に登りましょう。",
+      "chinese": "一定要一起去爬山。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "へえ、そうですか。是非どうぞ。",
-      "chinese": "哦，是這樣啊。請務必來。",
-      "targets": [
-        "へえ",
-        "是非"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 校對] 採用覆核建議修正句；原句：へえ、是非どうぞ。"
+      "japanese": "眠いですが、ピアノをもう少し練習します。",
+      "chinese": "雖然很睏，但鋼琴我要再多練習一下。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "部屋を掃除します。服を洗濯します。ピアノを練習します。",
-      "chinese": "打掃房間。洗衣服。練鋼琴。",
-      "targets": [
-        "掃除します",
-        "洗濯します",
-        "練習します"
-      ]
+      "japanese": "毎晩、祈りの後で日記を書きます。",
+      "chinese": "每晚禱告之後寫日記。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "ホテルに泊まります。",
-      "chinese": "住飯店。",
-      "targets": [
-        "泊まります",
-        "強い",
-        "動物"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 校對] 採用覆核建議修正句；原句：ホテルに泊まります。強い動物です。"
+      "japanese": "兄はテニスがなかなか強いです。",
+      "chinese": "哥哥的網球打得相當厲害。",
+      "reviewedBy": "author"
     }
   ]
 }

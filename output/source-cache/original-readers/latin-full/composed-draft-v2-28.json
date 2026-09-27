@@ -2,42 +2,61 @@
   "volume": 2,
   "lesson": 28,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫，連接詞只用在真的因果／轉折／時間／目的關係上；寧可少練一詞也不硬塞，每課覆蓋至少 15/20（含引用題）。",
   "sentences": [
     {
-      "latin": "Apostolatus unicus est; difficultas magna manet.",
-      "chinese": "宗徒職分是獨特的；困難仍然巨大。",
-      "targets": ["apostolatus", "unicus", "difficultas"]
+      "latin": "Apostoli apostolatum acceperunt et multos ad Christum adduxerunt.",
+      "chinese": "宗徒們領受了宗徒職，並把許多人帶到基督那裡。",
+      "targets": [
+        "adduco",
+        "apostolatus"
+      ]
     },
     {
-      "latin": "Argumentum patriarcha vehementer defendit.",
-      "chinese": "族長激烈地捍衛了論據。",
-      "targets": ["argumentum", "patriarcha", "vehementer", "defendo"]
+      "latin": "Fides verbo Dei, non argumentis humanis nititur.",
+      "chinese": "信德依靠的是天主的話，而不是人的論證。",
+      "targets": [
+        "nitor",
+        "argumentum"
+      ]
     },
     {
-      "latin": "Discrimen magnum est; revelatio nititur veritate.",
-      "chinese": "區別是巨大的；啟示依靠著真理。",
-      "targets": ["discrimen", "revelatio", "nitor", "veritas"]
+      "latin": "Fratres mutua caritate difficultates sustinent.",
+      "chinese": "弟兄們以彼此的愛德承擔困難。",
+      "targets": [
+        "difficultas",
+        "mutuus"
+      ]
     },
     {
-      "latin": "Incrementum constitutionis percipitur.",
-      "chinese": "體制的增長被察覺到了。",
-      "targets": ["incrementum", "constitutio", "percipio"]
+      "latin": "Fideles corpus Domini saltem in Paschate percipiant.",
+      "chinese": "信友們至少應在復活節領受主的聖體。",
+      "targets": [
+        "saltem"
+      ]
     },
     {
-      "latin": "Saltem Junio missio incipit.",
-      "chinese": "至少在六月，使命開始了。",
-      "targets": ["saltem", "Junius", "missio", "incipio"]
+      "latin": "Missio ecclesiæ incrementum a Deo accipit.",
+      "chinese": "教會的使命從天主那裡得到成長。",
+      "targets": [
+        "incrementum",
+        "missio"
+      ]
     },
     {
-      "latin": "Ambitu suo Deus omnes adducit.",
-      "chinese": "天主以自己的範圍將眾人引來。",
-      "targets": ["ambitus", "Deus", "omnis", "adduco"]
+      "latin": "Patriarcha Abraham filium suum unicum Deo obtulit.",
+      "chinese": "聖祖亞巴郎把自己唯一的兒子獻給天主。",
+      "targets": [
+        "unicus",
+        "patriarcha"
+      ]
     },
     {
-      "latin": "Ecclesia unitur; mutua caritas manet, utpote donum Dei.",
-      "chinese": "教會被聯合了；互愛長存，正如天主的恩賜一般。",
-      "targets": ["ecclesia", "unio", "mutuus", "utpote", "Deus"]
+      "latin": "In Christo non est discrimen Judæi et Græci.",
+      "chinese": "在基督內，猶太人和希臘人沒有區別。",
+      "targets": [
+        "discrimen"
+      ]
     }
   ]
 }

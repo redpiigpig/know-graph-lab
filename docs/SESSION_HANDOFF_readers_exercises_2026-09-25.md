@@ -87,3 +87,16 @@ TSV（含希伯來）＋英文托福 B2–C2 六千字（240 課，`scripts/expo
 - 🚨 **重寫後生詞覆蓋退步 312 詞**（validate 當時只要求 50%，只有線上讀本 vitest 擋下）。已補回：希伯來、日文、希臘兩冊 0 缺；拉丁只剩語料零字形（notAttested）與 v1 第 50 課 nōlī/nōlite
   （片語要求單複數命令式同句，必撞人稱閘，要改詞條或 credit_keys 判準）。`validate_reader_exercises.py` 現在對希伯來／日文硬擋未全覆蓋，希臘／拉丁印缺詞清單不擋。
   **改練習題後一定要跑 `npx vitest run test/original-readers.spec.ts test/japanese-full-reader.spec.ts`。**
+
+## 四、2026-09-27 晚：逐句獨立覆核 → 拉丁／日文自撰題全面重寫 ✅
+
+- 四語逐句獨立覆核（報告 `output/qa/original-readers/exercise-grammar-review-2026-09-27/`，本機）：希伯來修 4 句、希臘修 17 句。
+  🚨 驗收要用程式核對「報告裡的原句＝覆核前 git HEAD 的現行句子、每句一筆」——日文第一位覆核者抄了 09-25 對舊句子的判定（658/701 一字不差），被抓到退回。
+- 覆核也暴露拉丁、日文自撰題約六成是**互不相干短句拼成一題**（覆核者照樣判 ok）。擁有者選 **B**：一題一句、語意連貫優先，
+  覆蓋放寬為**每課至少 15／20**（`validate_reader_exercises.MIN_PRACTISED = {"lat": 15, "ja": 15}`；希伯來仍全覆蓋、希臘印缺詞不擋）。
+  形式檢查 `scripts/check_exercise_coherence.py {latin|japanese}`：拉丁禁分號冒號、日文兩句須一問一答、每課問句 ≤2。
+- 🚨 Sonnet 寫這種「受限自然句」連敗四次（模板詞沙拉 → 分號拼接 → 全改問句鑽檢查 → 假連接詞硬接）；**改用 Opus 後四份抽 40 句全數通過**。
+  之後寫或重寫自撰題一律用 Opus，並由我自己抽 40 句驗收。
+- 日文句子變長 → 第 10 題掉頁：句子壓到一行（全形寬 ≤30），`build_japanese_full_reader.fit_ref_label()` 把過長出處篇名中段省略。
+- 頁數：希伯來 422、希臘 367／464、拉丁 339／325、日文 281／280；Drive PDF 與 Word 同步（覆蓋前比對 SHA1 確認使用者沒改過）。
+- 殘留：希伯來第 38 課第 10 題掉頁（p251，引用經文折行，早已存在）；拉丁 nōlī/nōlite 片語判準；日文詞表「素適な」錯字與「や」元句子。

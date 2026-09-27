@@ -2,42 +2,58 @@
   "volume": 1,
   "lesson": 50,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。🚨 2026-09-27 再查：nōlī/nōlite 是片語詞條，credit_keys={noli,nolite} 要求兩個字面形同句齊現才算練到——但 noli 是second-person singular、nolite 是second-person plural，兩者同句必定撞上 2026-09-27 加的人稱數閘（person 2 涉入即封殺，且原文本身無法迴避：兩個祈使式天生就是不同數）。這不是句子寫不寫得出來的問題，是詞表把「單數／複數二選一」的片語錯記成「兩個字面形都要」——**無法靠改寫例句解決，需要腳本層修正**（例如拆成 nōlī、nōlite 兩條各自的詞條，或把 credit_keys 的判定改成「任一形即可」）。第 4 句維持原樣（僅用 nolite），vicinum 挪去與第 5 句共用以避免重複，不影響覆蓋率。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫。",
   "sentences": [
     {
-      "latin": "Parens filium trahit; nemo vetare potest.",
-      "chinese": "父母拖著兒子；沒有人能夠禁止。",
-      "targets": ["parens", "filius", "traho", "nemo", "veto"]
+      "latin": "Discipuli somno premebantur.",
+      "chinese": "門徒們被睡意壓得沉重。",
+      "targets": [
+        "premo",
+        "somnus"
+      ]
     },
     {
-      "latin": "Populus sedem habet; quisquam non convertitur.",
-      "chinese": "百姓擁有座位；沒有任何人回轉。",
-      "targets": ["populus", "sedes", "quisquam", "converto"]
+      "latin": "Filii, obedite parentibus vestris in Domino.",
+      "chinese": "作子女的，你們要在主內聽從父母。",
+      "targets": [
+        "parens"
+      ]
     },
     {
-      "latin": "Somnus premebat; Deus non avertit faciem.",
-      "chinese": "睡意在壓迫著；天主沒有轉離祂的容顏。",
-      "targets": ["somnus", "premo", "Deus", "averto"]
+      "latin": "Qui perseveraverit usque in finem, hic salvus erit.",
+      "chinese": "堅持到底的，這人必要得救。",
+      "targets": [
+        "perseuero"
+      ]
     },
     {
-      "latin": "Nolite putare amicum vel inimicum esse.",
-      "chinese": "你們不要以為朋友是仇敵。",
-      "targets": ["nolite", "puto", "vel", "amicus"]
+      "latin": "Convertimini ad Dominum Deum vestrum.",
+      "chinese": "你們要歸向上主你們的天主。",
+      "targets": [
+        "conuerto"
+      ]
     },
     {
-      "latin": "Vicina domus appropinquat; daemonium fugit.",
-      "chinese": "鄰近的房屋逼近了；魔鬼逃走了。",
-      "targets": ["vicinus", "domus", "appropinquo", "daemonium", "fugio"]
+      "latin": "Jesus multa dæmonia ejecit.",
+      "chinese": "耶穌驅逐了許多魔鬼。",
+      "targets": [
+        "daemonium"
+      ]
     },
     {
-      "latin": "Populus sociatur; compar Christo est.",
-      "chinese": "百姓聯合了；他與基督相似。",
-      "targets": ["populus", "socio", "compar", "Christus"]
+      "latin": "Non venit quisquam, nisi Pater eum traxerit.",
+      "chinese": "除非父吸引了他，沒有人會來。",
+      "targets": [
+        "quisquam",
+        "traho"
+      ]
     },
     {
-      "latin": "Populus perseverat; at nemo vetat.",
-      "chinese": "百姓堅持不懈；但沒有人禁止。",
-      "targets": ["populus", "persevero", "at", "nemo"]
+      "latin": "Dominus in cælo paravit sedem suam.",
+      "chinese": "上主在天上建立了自己的寶座。",
+      "targets": [
+        "sedes"
+      ]
     }
   ]
 }

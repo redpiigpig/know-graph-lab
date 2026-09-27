@@ -2,42 +2,60 @@
   "volume": 2,
   "lesson": 10,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫，連接詞只用在真的因果／轉折／時間／目的關係上；寧可少練一詞也不硬塞，每課覆蓋至少 15/20（含引用題）。",
   "sentences": [
     {
-      "latin": "Concilium consilium dat; abbas probat.",
-      "chinese": "大會給予了建議；院長認可了。",
-      "targets": ["concilium", "consilium", "abbas", "probo"]
+      "latin": "Abbas monasterium cum consilio fratrum regit.",
+      "chinese": "院長聽取弟兄們的意見來治理修院。",
+      "targets": [
+        "monasterium",
+        "abbas",
+        "consilium"
+      ]
     },
     {
-      "latin": "Monasterium formam habet; mos antiquus est.",
-      "chinese": "修道院有其形式；那習俗是古老的。",
-      "targets": ["monasterium", "forma", "mos"]
+      "latin": "Apostoli et presbyteri in concilio convenerunt.",
+      "chinese": "宗徒們和長老們聚集開會。",
+      "targets": [
+        "concilium",
+        "presbyter"
+      ]
     },
     {
-      "latin": "Presbyter beneficium accipit; finis bonus est.",
-      "chinese": "長老領受了恩惠；結局是美好的。",
-      "targets": ["presbyter", "beneficium", "finis"]
+      "latin": "Deus, principium et finis omnium, ubique præsens est.",
+      "chinese": "天主是萬物的開始和終結，祂無所不在。",
+      "targets": [
+        "finis",
+        "praesens"
+      ]
     },
     {
-      "latin": "Christus praesens est; singuli credunt.",
-      "chinese": "基督是臨在的；每一個人都相信。",
-      "targets": ["Christus", "praesens", "singulus", "credo"]
+      "latin": "Christus formam servi accepit et tamquam homo apparuit.",
+      "chinese": "基督取了奴僕的形體，顯現得像一個人。",
+      "targets": [
+        "forma",
+        "tamquam"
+      ]
     },
     {
-      "latin": "Modo credit; parum intellegit.",
-      "chinese": "他現在相信了；他理解得太少。",
-      "targets": ["modo", "parum", "intellego"]
+      "latin": "Filia mea modo mortua est.",
+      "chinese": "我的女兒剛剛死了。",
+      "targets": [
+        "modo"
+      ]
     },
     {
-      "latin": "Seu pauper seu dives, tamquam frater est.",
-      "chinese": "無論貧窮或富有，他都如同兄弟一般。",
-      "targets": ["seu", "pauper", "dives", "tamquam", "frater"]
+      "latin": "Singulis diebus, ut mos est, fratres conveniunt.",
+      "chinese": "按照慣例，弟兄們每天聚集。",
+      "targets": [
+        "mos",
+        "singulus"
+      ]
     },
     {
-      "latin": "Scilicet, quatenus credit, potius orat; forte venit.",
-      "chinese": "確實，就他所信的範圍而言，他寧願祈禱；他也許來到了。",
-      "targets": ["scilicet", "quatenus", "credo", "potius", "forte"]
+      "latin": "Ecclesia hanc doctrinam probavit.",
+      "chinese": "教會認可了這項教導。",
+      "targets": []
     }
   ]
 }

@@ -2,42 +2,61 @@
   "volume": 2,
   "lesson": 18,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫，連接詞只用在真的因果／轉折／時間／目的關係上；寧可少練一詞也不硬塞，每課覆蓋至少 15/20（含引用題）。",
   "sentences": [
     {
-      "latin": "Diaconus juramentum subjecit; episcopatus manet.",
-      "chinese": "執事使誓言服從了；主教職位長存。",
-      "targets": ["juramentum", "subicio", "episcopatus"]
+      "latin": "Qui episcopatum desiderat, bonum opus desiderat.",
+      "chinese": "誰若想望主教職，就是想望一件好事。",
+      "targets": [
+        "episcopatus"
+      ]
     },
     {
-      "latin": "Terminus insulam prohibet; illic manet populus.",
-      "chinese": "邊界阻止了那島；百姓在那裡長存。",
-      "targets": ["terminus", "insula", "prohibeo", "illic", "populus"]
+      "latin": "Homo mortalis sua vi salvus fieri non potest.",
+      "chinese": "必死的人不能靠自己的力量得救。",
+      "targets": [
+        "vis",
+        "mortalis"
+      ]
     },
     {
-      "latin": "Quemadmodum notus est, arbitrium suum exercet.",
-      "chinese": "正如他是眾所周知的，他行使了自己的判斷。",
-      "targets": ["quemadmodum", "notus", "arbitrium"]
+      "latin": "Nomen Domini usque ad insulas notum factum est.",
+      "chinese": "上主的名一直傳到海島，眾所周知。",
+      "targets": [
+        "insula",
+        "notus"
+      ]
     },
     {
-      "latin": "Aliquando reliquus populus vim ignorat.",
-      "chinese": "有時，剩餘的百姓不知道那力量。",
-      "targets": ["aliquando", "reliquus", "populus", "vis", "ignoro"]
+      "latin": "Petrus cum reliquis apostolis et feminis orabat.",
+      "chinese": "伯多祿和其餘的宗徒以及婦女們一同祈禱。",
+      "targets": [
+        "reliquus",
+        "femina"
+      ]
     },
     {
-      "latin": "Femina matrimonium contraxit; sapiens est.",
-      "chinese": "婦女締結了婚姻；她是明智的。",
-      "targets": ["femina", "matrimonium", "contraho", "sapiens"]
+      "latin": "Christus juramentum omnino prohibuit.",
+      "chinese": "基督完全禁止起誓。",
+      "targets": [
+        "juramentum",
+        "prohibeo"
+      ]
     },
     {
-      "latin": "Mortalis conditio manet; regnum superum non est.",
-      "chinese": "會死的境況長存；那在上的國度並不是他的。",
-      "targets": ["mortalis", "conditio", "superus"]
+      "latin": "Omnia usque ad terminos terræ Christo subjecta sunt.",
+      "chinese": "直到地極的萬物都屬於基督權下。",
+      "targets": [
+        "terminus",
+        "subicio"
+      ]
     },
     {
-      "latin": "Episcopatus terminum habet; arbitrium notum manet.",
-      "chinese": "主教職位有其界限；那已知的判斷仍然存在。",
-      "targets": ["episcopatus", "terminus", "arbitrium", "notus"]
+      "latin": "Ubi Christus est, illic est ecclesia.",
+      "chinese": "基督在哪裡，教會就在那裡。",
+      "targets": [
+        "illic"
+      ]
     }
   ]
 }

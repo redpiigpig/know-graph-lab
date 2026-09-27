@@ -2,42 +2,60 @@
   "volume": 1,
   "lesson": 21,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。🚨 2026-09-27 再補正：先前筆記寫 pellō 零字形有誤——教會語料裡有非限定的被動不定式 pelli（「被驅逐」），第 6 句已補上 malus pelli debet。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫。",
   "sentences": [
     {
-      "latin": "Populus restitit donec Dominus venit; dum orat, credit.",
-      "chinese": "百姓停留，直到上主來到；他祈禱的時候，就信從了。",
-      "targets": ["populus", "resto", "donec", "Dominus", "dum", "credo"]
+      "latin": "Joseph Mariam non cognovit, donec peperit filium.",
+      "chinese": "若瑟沒有認識瑪利亞，直到她生了兒子。",
+      "targets": [
+        "donec",
+        "pario"
+      ]
     },
     {
-      "latin": "Etsi Judaeus est, Christo credit.",
-      "chinese": "雖然他是猶太人，卻信從基督。",
-      "targets": ["etsi", "Judaeus", "Christus", "credo"]
+      "latin": "Verbum Dei primum Judæis datum est.",
+      "chinese": "天主的話首先賜給了猶太人。",
+      "targets": [
+        "iudaeus",
+        "primum"
+      ]
     },
     {
-      "latin": "Galilaeus quidam Dominum respicit; Romanus autem stat.",
-      "chinese": "有位加里肋亞人望著主；那羅馬人卻站著。",
-      "targets": ["Galilaeus", "quidam", "Dominus", "respicio", "Romanus"]
+      "latin": "Pilatus Romanus erat, Jesus autem Galilæus.",
+      "chinese": "比拉多是羅馬人，耶穌卻是加里肋亞人。",
+      "targets": [
+        "galilaeus",
+        "romanus"
+      ]
     },
     {
-      "latin": "Nisi Deus praestat, populus perdet.",
-      "chinese": "若非天主賜予，百姓將要滅亡。",
-      "targets": ["nisi", "Deus", "praesto", "populus", "perdo"]
+      "latin": "Christus est Verbum incarnatum.",
+      "chinese": "基督是降生成人的聖言。",
+      "targets": [
+        "incarno"
+      ]
     },
     {
-      "latin": "Si mater parit, primum filium videt.",
-      "chinese": "若母親生產，她首先看見兒子。",
-      "targets": ["si", "pario", "primum", "filius", "video"]
+      "latin": "Nemo venit ad Patrem, nisi per me.",
+      "chinese": "除了藉著我，沒有人到父那裡去。",
+      "targets": [
+        "nisi"
+      ]
     },
     {
-      "latin": "Oculus mutatur; cor non immutatur; malus pelli debet.",
-      "chinese": "眼睛改變了；心卻不改變；那惡者應當被驅逐。",
-      "targets": ["oculus", "muto", "immuto", "pello"]
+      "latin": "Etsi filius bona perdidit, pater eum recepit.",
+      "chinese": "雖然兒子敗光了家產，父親仍接納了他。",
+      "targets": [
+        "etsi",
+        "perdo"
+      ]
     },
     {
-      "latin": "Populus instat; Verbum incarnatum est.",
-      "chinese": "百姓催逼不已；聖言成了肉身。",
-      "targets": ["populus", "insto", "verbum", "incarno"]
+      "latin": "Jesus aquam in vinum mutavit.",
+      "chinese": "耶穌把水變成了酒。",
+      "targets": [
+        "muto"
+      ]
     }
   ]
 }

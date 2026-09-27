@@ -2,20 +2,11 @@
   "volume": 1,
   "lesson": 3,
   "author": "opus-5-hand-written",
-  "note": "sum 由本課定錨帶進來，名詞句終於可以有繫詞。🚨 2026-09-27 更正：chorus 只有 chori／choros／chorum／chorus 幾形，沒有奪格 choro——原第 5 句「in choro」的奪格形不在語料裡，chorus 因而沒被記到，已改用屬格 chori。festum 只有 festo 一形。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫。",
   "sentences": [
     {
-      "latin": "Episcopus et ministri in ecclesia sunt.",
-      "chinese": "主教與侍者都在教會中。",
-      "targets": [
-        "episcopus",
-        "minister",
-        "sum"
-      ]
-    },
-    {
-      "latin": "Hodie festum est in ecclesia",
-      "chinese": "今天教會中有慶節。",
+      "latin": "Hodie festum est.",
+      "chinese": "今天是節日。",
       "targets": [
         "hodie",
         "sum",
@@ -23,51 +14,60 @@
       ]
     },
     {
-      "latin": "Nam justitia dei in cælo est",
-      "chinese": "因為天主的公義在天上。",
+      "latin": "Episcopus minister Evangelii est.",
+      "chinese": "主教是福音的僕役。",
       "targets": [
-        "iustitia",
-        "nam",
+        "episcopus",
+        "minister",
         "sum",
-        "caelum"
-      ]
-    },
-    {
-      "latin": "Potentia dei super populum est.",
-      "chinese": "天主的權能在人民之上。",
-      "targets": [
-        "populus",
-        "potentia",
-        "sum"
-      ]
-    },
-    {
-      "latin": "Puer chori in ecclesia est",
-      "chinese": "那唱詩班的孩童在教會中。",
-      "targets": [
-        "puer",
-        "chorus",
-        "ecclesia",
-        "sum"
-      ]
-    },
-    {
-      "latin": "Donum evangelii servis est",
-      "chinese": "福音的恩賜是給僕人們的。",
-      "targets": [
-        "seruus",
-        "sum",
-        "donum",
         "euangelium"
       ]
     },
     {
-      "latin": "Psalmus et canticum in ecclesia sunt.",
-      "chinese": "教會中有聖詠與聖歌。",
+      "latin": "Gratia donum Dei est.",
+      "chinese": "恩寵是天主的恩賜。",
       "targets": [
+        "sum",
+        "donum"
+      ]
+    },
+    {
+      "latin": "Psalmus est canticum populi Dei.",
+      "chinese": "聖詠是天主子民的歌。",
+      "targets": [
+        "populus",
         "psalmus",
         "sum",
         "canticum"
+      ]
+    },
+    {
+      "latin": "Evangelium potentia Dei est.",
+      "chinese": "福音是天主的大能。",
+      "targets": [
+        "potentia",
+        "sum",
+        "euangelium"
+      ]
+    },
+    {
+      "latin": "Puer non est servus, nam filius est.",
+      "chinese": "這孩子不是奴僕，因為他是兒子。",
+      "targets": [
+        "filius",
+        "nam",
+        "non",
+        "puer",
+        "seruus",
+        "sum"
+      ]
+    },
+    {
+      "latin": "Gloria Dei super cælum est.",
+      "chinese": "天主的光榮在天之上。",
+      "targets": [
+        "sum",
+        "caelum"
       ]
     }
   ]

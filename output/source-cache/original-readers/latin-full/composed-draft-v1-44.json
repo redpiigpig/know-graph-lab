@@ -2,42 +2,60 @@
   "volume": 1,
   "lesson": 44,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫。",
   "sentences": [
     {
-      "latin": "Christus circumfulsit; gens tota adjuvatur.",
-      "chinese": "基督光照四周；整個民族都獲得了幫助。",
-      "targets": ["Christus", "circumfulgeo", "gens", "adjuvo"]
+      "latin": "In facie Christi fulget claritas Dei.",
+      "chinese": "天主的光輝在基督的面容上閃耀。",
+      "targets": [
+        "facies",
+        "fulgeo"
+      ]
     },
     {
-      "latin": "Deus mundum constituit; facie sua fulget.",
-      "chinese": "天主建立了世界；祂以自己的容顏閃耀著。",
-      "targets": ["Deus", "constituo", "facies", "fulgeo"]
+      "latin": "Patrem multarum gentium constitui te.",
+      "chinese": "我已立你為萬民之父。",
+      "targets": [
+        "constituo",
+        "gens"
+      ]
     },
     {
-      "latin": "Filius genitus est; ira non manet.",
-      "chinese": "子是所生的；忿怒卻不長存。",
-      "targets": ["filius", "genitus", "ira"]
+      "latin": "Pastores gregem pascebant, et claritas Dei circumfulsit illos.",
+      "chinese": "牧羊人正在牧放羊群，天主的光輝環照著他們。",
+      "targets": [
+        "circumfulgeo",
+        "pasco"
+      ]
     },
     {
-      "latin": "Sacerdos pedes lavit; odor bonus est post laborem.",
-      "chinese": "司祭洗淨了雙腳；勞苦之後，那氣息是好的。",
-      "targets": ["sacerdos", "lavo", "odor", "labor"]
+      "latin": "Filius a Patre genitus est, non factus.",
+      "chinese": "聖子是由父所生，而非受造。",
+      "targets": [
+        "genitus"
+      ]
     },
     {
-      "latin": "Pastor oves pascit; pretium magnum meretur.",
-      "chinese": "牧人餵養了羊群；他配得極大的代價。",
-      "targets": ["pastor", "ovis", "pasco", "pretium", "mereo"]
+      "latin": "Amplius lava me ab iniquitate mea.",
+      "chinese": "求你將我的罪過洗滌淨盡。",
+      "targets": [
+        "lauo"
+      ]
     },
     {
-      "latin": "Dies triumphi venit; nondum apparuit.",
-      "chinese": "凱旋之日來臨了；尚未顯現。",
-      "targets": ["dies", "triumphus", "nondum", "appareo"]
+      "latin": "Nondum venit hora mea.",
+      "chinese": "我的時辰還沒有到。",
+      "targets": [
+        "nondum"
+      ]
     },
     {
-      "latin": "Ait: 'Ut quid? Quo magis vadit?'",
-      "chinese": "他說：「為什麼？他還要往哪裡走呢？」",
-      "targets": ["ait", "ut quid", "quo", "magis"]
+      "latin": "Deus labores nostros adjuvat.",
+      "chinese": "天主扶助我們的勞苦。",
+      "targets": [
+        "adiuuo",
+        "labor"
+      ]
     }
   ]
 }

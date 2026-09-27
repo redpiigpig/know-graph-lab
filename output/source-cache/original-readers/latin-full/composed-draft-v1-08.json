@@ -2,63 +2,57 @@
   "volume": 1,
   "lesson": 8,
   "author": "opus-5-hand-written",
-  "note": "sacrō 武加大沒有任何字形，練不到。片語詞條 aut . . aut 要兩個 aut 都在同一句才算練到，單一個 aut 只能記到單詞那一條，故第 7 句寫成雙 aut。bibō 進語料的是 bibere／bibit／bibam／bibent，沒有完成式複數，故第 4 句用未來式。🚨 2026-09-27 補：afficiō 原七句全未帶到，第 5 句已補上 afficit。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫。",
   "sentences": [
     {
-      "latin": "Stellæ semper in cælo sunt.",
-      "chinese": "星辰常在天上。",
+      "latin": "Christiani semper orant pro ecclesia.",
+      "chinese": "基督徒常為教會祈禱。",
       "targets": [
         "semper",
+        "christianus"
+      ]
+    },
+    {
+      "latin": "Stellæ cæli multæ sunt.",
+      "chinese": "天上的星辰很多。",
+      "targets": [
         "stella"
       ]
     },
     {
-      "latin": "Audite verba domini",
+      "latin": "Audite verbum Domini.",
       "chinese": "你們要聽上主的話。",
       "targets": [
         "audio"
       ]
     },
     {
-      "latin": "Adhuc advenit christianus sacratus",
-      "chinese": "那受祝聖的基督徒至今才到。",
+      "latin": "Adveniat regnum tuum.",
+      "chinese": "願你的國來臨。",
       "targets": [
-        "sacro",
-        "adhuc",
-        "aduenio",
-        "christianus"
+        "aduenio"
       ]
     },
     {
-      "latin": "Ægyptii bibent aquam",
-      "chinese": "埃及人將喝水。",
+      "latin": "Serva præcepta Domini Dei tui.",
+      "chinese": "你要遵守上主你天主的誡命。",
       "targets": [
-        "aegyptius",
-        "bibo"
-      ]
-    },
-    {
-      "latin": "Servus cepit gladium; gratia afficiatur.",
-      "chinese": "那僕人取了劍；願他被恩寵所感動。",
-      "targets": [
-        "capio",
-        "afficio"
-      ]
-    },
-    {
-      "latin": "Serva præcepta dei semper",
-      "chinese": "你要常守天主的誡命。",
-      "targets": [
-        "semper",
         "seruo"
       ]
     },
     {
-      "latin": "Aut in agro aut in ecclesia servi sunt",
-      "chinese": "僕人們或在田間、或在教會中。",
+      "latin": "Accipite et bibite ex hoc.",
+      "chinese": "你們拿去，從這裡面喝。",
       "targets": [
-        "aut",
-        "aut . . aut"
+        "accipio",
+        "bibo"
+      ]
+    },
+    {
+      "latin": "Adhuc sum servus tuus.",
+      "chinese": "我仍是你的僕人。",
+      "targets": [
+        "adhuc"
       ]
     }
   ]

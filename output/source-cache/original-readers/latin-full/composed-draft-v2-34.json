@@ -2,42 +2,63 @@
   "volume": 2,
   "lesson": 34,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫（棄用模板產生器）。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫，連接詞只用在真的因果／轉折／時間／目的關係上；寧可少練一詞也不硬塞，每課覆蓋至少 15/20（含引用題）。",
   "sentences": [
     {
-      "latin": "Lex perspicitur; regularis vita manet.",
-      "chinese": "法律被審視了；規律的生活長存。",
-      "targets": ["lex", "perspicio", "regularis"]
+      "latin": "Sacerdos sacra mysteria fideliter tractare debet.",
+      "chinese": "司祭應當忠實地處理神聖的奧蹟。",
+      "targets": [
+        "fideliter",
+        "tracto"
+      ]
     },
     {
-      "latin": "Sacerdos sanus casum particularem efficaciter regit.",
-      "chinese": "健全的司祭有效地治理了那特殊的案例。",
-      "targets": ["sacerdos", "sanus", "casus", "particularis", "efficaciter"]
+      "latin": "Ecclesiæ particulares integritatem fidei servare debent.",
+      "chinese": "各地方教會應當保全信仰的完整。",
+      "targets": [
+        "particularis",
+        "integritas"
+      ]
     },
     {
-      "latin": "Juvenis pactum fideliter servat.",
-      "chinese": "年輕人忠誠地遵守了契約。",
-      "targets": ["pactum", "juvenis", "fideliter"]
+      "latin": "Filius juvenis in regionem alienam profectus est.",
+      "chinese": "那年輕的兒子動身往遠方去了。",
+      "targets": [
+        "juvenis",
+        "proficiscor"
+      ]
     },
     {
-      "latin": "Etiamsi innititur servitute, commodum manet.",
-      "chinese": "儘管他依靠著奴役，利益仍然存在。",
-      "targets": ["etiamsi", "innitor", "servitus", "commodum"]
+      "latin": "Fides nostra pacto Dei innititur.",
+      "chinese": "我們的信德倚靠天主的盟約。",
+      "targets": [
+        "pactum",
+        "innitor"
+      ]
     },
     {
-      "latin": "Integritas sacerdotalem ordinem servat; inquisitione crescit.",
-      "chinese": "正直守護了司祭的階級；藉著調查而增長。",
-      "targets": ["sacerdotalis", "integritas", "inquisitio"]
+      "latin": "Præclarum est ministerium sacerdotale.",
+      "chinese": "司祭的職務是崇高的。",
+      "targets": [
+        "sacerdotalis",
+        "praeclarus"
+      ]
     },
     {
-      "latin": "Sacerdos rem tractet; praeclarus est.",
-      "chinese": "讓司祭處理此事吧；他是卓越的。",
-      "targets": ["sacerdos", "tracto", "praeclarus"]
+      "latin": "Christus nos a servitute peccati efficaciter liberavit.",
+      "chinese": "基督有效地把我們從罪的奴役中解放出來。",
+      "targets": [
+        "efficaciter",
+        "servitus"
+      ]
     },
     {
-      "latin": "Martio proficiscar; quamquam timeo, credo.",
-      "chinese": "我將在三月出發；儘管我害怕，我卻相信。",
-      "targets": ["Martius", "proficiscor", "quamquam"]
+      "latin": "Quamquam sanus non erat, Paulus Evangelium prædicabat.",
+      "chinese": "雖然保祿身體不健康，他仍然宣講福音。",
+      "targets": [
+        "sanus",
+        "quamquam"
+      ]
     }
   ]
 }

@@ -1402,7 +1402,7 @@
         },
         {
           "kind": "composed",
-          "text": "εἶπεν ὅτι οὐ μὴ ἁμαρτία ἐν καρδίᾳ αὐτοῦ.",
+          "text": "εἶπεν ὅτι οὐ μὴ ᾖ ἁμαρτία ἐν καρδίᾳ αὐτοῦ.",
           "targetWords": [
             {
               "volume": 1,
@@ -1476,9 +1476,11 @@
             }
           ],
           "verification": {
-            "words": 8,
+            "words": 9,
             "unattested": [],
-            "untaught": [],
+            "untaught": [
+              "ᾖ"
+            ],
             "accentVariants": [],
             "lemmas": [
               "αμαρτια",
@@ -1497,12 +1499,13 @@
               "αυτου",
               "ειπεν",
               "εν",
+              "η",
               "καρδια",
               "μη",
               "οτι",
               "ου"
             ],
-            "lengthOk": true,
+            "lengthOk": false,
             "hasFiniteVerb": true,
             "sentenceInitialParticle": null,
             "moodAfterConjunction": [],
@@ -2113,7 +2116,7 @@
         },
         {
           "kind": "composed",
-          "text": "ἵνα ᾖ ὁ λόγος ἐν ἀρχῇ.",
+          "text": "ἦν ὁ θεὸς ἐν ἀρχῇ, ἵνα ᾖ καὶ ὁ λόγος.",
           "targetWords": [
             {
               "volume": 1,
@@ -2128,6 +2131,16 @@
             {
               "volume": 1,
               "lesson": 3,
+              "slot": 12,
+              "ordinal": 52,
+              "headword": "ἦν",
+              "lemma": "ἦν",
+              "glossZh": "（過去式）是；曾是",
+              "pos": "動詞"
+            },
+            {
+              "volume": 1,
+              "lesson": 3,
               "slot": 15,
               "ordinal": 55,
               "headword": "ἵνα",
@@ -2137,7 +2150,7 @@
             }
           ],
           "verification": {
-            "words": 6,
+            "words": 10,
             "unattested": [],
             "untaught": [],
             "accentVariants": [],
@@ -2145,7 +2158,9 @@
               "αρχη",
               "ειμι",
               "εν",
+              "θεοσ",
               "ινα",
+              "και",
               "λογοσ",
               "ο"
             ],
@@ -2154,11 +2169,14 @@
               "αρχη",
               "εν",
               "η",
+              "ην",
+              "θεοσ",
               "ινα",
+              "και",
               "λογοσ",
               "ο"
             ],
-            "lengthOk": true,
+            "lengthOk": false,
             "hasFiniteVerb": true,
             "sentenceInitialParticle": null,
             "moodAfterConjunction": [],
@@ -2732,7 +2750,7 @@
         },
         {
           "kind": "composed",
-          "text": "ἐὰν ᾖ ζωὴ αἰώνιος ἐν ἀγάπῃ.",
+          "text": "ἐὰν ᾖ ζωὴ αἰώνιος, ἐν ἀγάπῃ ἐστίν.",
           "targetWords": [
             {
               "volume": 1,
@@ -2756,7 +2774,7 @@
             }
           ],
           "verification": {
-            "words": 6,
+            "words": 7,
             "unattested": [],
             "untaught": [],
             "accentVariants": [],
@@ -2774,6 +2792,7 @@
               "αιωνιοσ",
               "εαν",
               "εν",
+              "εστιν",
               "ζωη",
               "η"
             ],
@@ -10034,7 +10053,7 @@
         },
         {
           "kind": "composed",
-          "text": "ὁ δίκαιος δοκεῖ ὅτι ἀπολύσω αὐτόν.",
+          "text": "ὁ δίκαιος δοκεῖ ὅτι ὁ κύριος ἀπέλυσεν αὐτόν.",
           "targetWords": [
             {
               "volume": 1,
@@ -10068,7 +10087,7 @@
             }
           ],
           "verification": {
-            "words": 6,
+            "words": 8,
             "unattested": [],
             "untaught": [],
             "accentVariants": [],
@@ -10077,15 +10096,17 @@
               "αυτοσ",
               "δικαιοσ",
               "δοκεω",
+              "κυριοσ",
               "ο",
               "οτι"
             ],
             "forms": [],
             "written": [
-              "απολυσω",
+              "απελυσεν",
               "αυτον",
               "δικαιοσ",
               "δοκει",
+              "κυριοσ",
               "ο",
               "οτι"
             ],
@@ -10581,7 +10602,7 @@
         },
         {
           "kind": "composed",
-          "text": "ἤνοιξεν ὁ κύριος τὴν ὁδὸν τῆς σωτηρίας, καὶ δείξω αὐτὴν ὑμῖν.",
+          "text": "ἤνοιξεν ὁ κύριος τὴν ὁδὸν τῆς σωτηρίας, καὶ δείξει αὐτὴν ὑμῖν.",
           "targetWords": [
             {
               "volume": 1,
@@ -10633,7 +10654,7 @@
             "forms": [],
             "written": [
               "αυτην",
-              "δειξω",
+              "δειξει",
               "ηνοιξεν",
               "και",
               "κυριοσ",
@@ -14081,7 +14102,7 @@
         },
         {
           "kind": "composed",
-          "text": "ποίᾳ ὥρᾳ ἐκπορεύεται; ναί, νῦν.",
+          "text": "ποίᾳ ὥρᾳ ἐκπορεύεται; νῦν ἐκπορεύεται, ναί.",
           "targetWords": [
             {
               "volume": 1,
@@ -14115,7 +14136,7 @@
             }
           ],
           "verification": {
-            "words": 5,
+            "words": 6,
             "unattested": [],
             "untaught": [],
             "accentVariants": [],
@@ -16140,7 +16161,7 @@
         },
         {
           "kind": "composed",
-          "text": "εἰ ἅγιος νόμος, πόσῳ μᾶλλον σταυρός ἐστιν;",
+          "text": "εἰ ἅγιος νόμος, πόσῳ μᾶλλον ἅγιος σταυρός ἐστιν;",
           "targetWords": [
             {
               "volume": 1,
@@ -16164,7 +16185,7 @@
             }
           ],
           "verification": {
-            "words": 7,
+            "words": 8,
             "unattested": [],
             "untaught": [],
             "accentVariants": [],
@@ -30192,7 +30213,7 @@
         },
         {
           "kind": "composed",
-          "text": "τὸ εὖρος τῆς γενέσεως ἦν ἐνιαύσιον.",
+          "text": "ἄγει τὴν ἑορτὴν τῆς γενέσεως αὐτοῦ ἐνιαυσίαν, καὶ τὸ εὖρος τοῦ οἴκου μέγα.",
           "targetWords": [
             {
               "volume": 1,
@@ -30226,27 +30247,39 @@
             }
           ],
           "verification": {
-            "words": 6,
+            "words": 13,
             "unattested": [],
             "untaught": [],
             "accentVariants": [],
             "lemmas": [
+              "αγω",
+              "αυτοσ",
               "γενεσισ",
-              "ειμι",
               "ενιαυσιοσ",
+              "εορτη",
               "ευροσ",
-              "ο"
+              "και",
+              "μεγασ",
+              "ο",
+              "οικοσ"
             ],
             "forms": [],
             "written": [
+              "αγει",
+              "αυτου",
               "γενεσεωσ",
-              "ενιαυσιον",
+              "ενιαυσιαν",
+              "εορτην",
               "ευροσ",
-              "ην",
+              "και",
+              "μεγα",
+              "οικου",
+              "την",
               "τησ",
-              "το"
+              "το",
+              "του"
             ],
-            "lengthOk": true,
+            "lengthOk": false,
             "hasFiniteVerb": true,
             "sentenceInitialParticle": null,
             "moodAfterConjunction": [],

@@ -2,66 +2,59 @@
   "volume": 1,
   "lesson": 13,
   "author": "opus-5-hand-written",
-  "note": "sacrosānctus 武加大沒有字形，練不到。meritum 與第 7 課的 meritō 一樣只認 Merito 一形。supernus 只有 supernis／supernæ，沒有中性複數主格。🚨 2026-09-27 更正：post／salūtifer 舊註記併寫「都沒有字形」有誤——post 本身就常見、salūtifer 有陰性 salutifera，第 4 句已補上。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫。",
   "sentences": [
     {
-      "latin": "Jam iterum silentium est in templo",
-      "chinese": "此刻聖殿中又有寂靜。",
+      "latin": "Beati mundo corde, quoniam Deum videbunt.",
+      "chinese": "心裡潔淨的人是有福的，因為他們要看見天主。",
       "targets": [
-        "iterum",
-        "iam",
-        "silentium"
+        "mundus",
+        "quoniam"
       ]
     },
     {
-      "latin": "Merito repleti sunt gaudio",
-      "chinese": "他們理當因喜樂而被充滿。",
+      "latin": "Oramus per Christum Dominum nostrum.",
+      "chinese": "我們藉著我們的主基督祈禱。",
       "targets": [
-        "meritum",
+        "per"
+      ]
+    },
+    {
+      "latin": "Post cœnam Jesus iterum oravit.",
+      "chinese": "晚餐之後，耶穌又祈禱了。",
+      "targets": [
+        "iterum",
+        "post"
+      ]
+    },
+    {
+      "latin": "Jam non est servus, sed filius.",
+      "chinese": "他已不再是奴僕，而是兒子。",
+      "targets": [
+        "iam",
+        "sed"
+      ]
+    },
+    {
+      "latin": "Quando veniet regnum Dei?",
+      "chinese": "天主的國什麼時候來臨？",
+      "targets": [
+        "quando"
+      ]
+    },
+    {
+      "latin": "Discipuli repleti sunt gaudio.",
+      "chinese": "門徒們充滿了喜樂。",
+      "targets": [
         "repleo"
       ]
     },
     {
-      "latin": "Mysteria sacrosancta et mira in supernis sunt",
-      "chinese": "至聖而奇妙的奧秘都在天上。",
+      "latin": "Justus superna desiderat, non terrena.",
+      "chinese": "義人渴望天上的事，而不是地上的事。",
       "targets": [
-        "mirus",
-        "supernus"
-      ]
-    },
-    {
-      "latin": "Per gratiam mundus est; salutifera post culpam venit.",
-      "chinese": "他藉著恩寵而潔淨；那救恩之物在過錯之後來臨。",
-      "targets": [
-        "mundus",
-        "per",
-        "post",
-        "salutifer"
-      ]
-    },
-    {
-      "latin": "Quando Dominus venit, silentium est",
-      "chinese": "上主來的時候，便有寂靜。",
-      "targets": [
-        "quando",
-        "silentium"
-      ]
-    },
-    {
-      "latin": "Sed terrenus non est mundus",
-      "chinese": "然而屬地的並不潔淨。",
-      "targets": [
-        "mundus",
-        "sed",
+        "supernus",
         "terrenus"
-      ]
-    },
-    {
-      "latin": "Gaudium est, quoniam Dominus iterum venit",
-      "chinese": "有喜樂，因為上主又來了。",
-      "targets": [
-        "iterum",
-        "quoniam"
       ]
     }
   ]

@@ -2,42 +2,67 @@
   "volume": 2,
   "lesson": 43,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫（棄用模板產生器）。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫，連接詞只用在真的因果／轉折／時間／目的關係上；寧可少練一詞也不硬塞，每課覆蓋至少 15/20（含引用題）。",
   "sentences": [
     {
-      "latin": "Rector patrimonium tuto servat.",
-      "chinese": "管理者安全地守護著世襲產業。",
-      "targets": ["rector", "patrimonium", "tuto"]
+      "latin": "Cavete ab eis qui fortunæ confidunt.",
+      "chinese": "你們要提防那些信賴命運的人。",
+      "targets": [
+        "fortuna",
+        "caveo"
+      ]
     },
     {
-      "latin": "Indicium recens minuitur.",
-      "chinese": "新近的證據漸漸被減損。",
-      "targets": ["indicium", "recens", "minuo"]
+      "latin": "Recens baptizati vestes novas induunt.",
+      "chinese": "新領洗的人穿上新衣。",
+      "targets": [
+        "recens",
+        "induo"
+      ]
     },
     {
-      "latin": "Fortuna vigore crescit.",
-      "chinese": "命運藉著活力而增長。",
-      "targets": ["fortuna", "vigor"]
+      "latin": "Ecclesia patrimonium fidei usque ad consummationem sæculi custodit.",
+      "chinese": "教會守護信仰的寶庫，直到世界的終結。",
+      "targets": [
+        "consummatio",
+        "patrimonium"
+      ]
     },
     {
-      "latin": "Caveant cives; suffragium feliciter datur.",
-      "chinese": "願公民們謹防；選票被幸運地賜下。",
-      "targets": ["caveo", "suffragium", "feliciter"]
+      "latin": "Ecclesia paulatim novo vigore crevit.",
+      "chinese": "教會以新的活力逐漸成長。",
+      "targets": [
+        "vigor",
+        "paulatim"
+      ]
     },
     {
-      "latin": "Consummatio paulatim venit.",
-      "chinese": "終結漸漸地來到。",
-      "targets": ["consummatio", "paulatim"]
+      "latin": "Rector ecclesiam suam feliciter gubernavit.",
+      "chinese": "主任司鐸順利地治理了他的堂區。",
+      "targets": [
+        "rector",
+        "feliciter"
+      ]
     },
     {
-      "latin": "Cives urgent; obnoxius postulatis cumque manet.",
-      "chinese": "公民們急切催促；有義務的人也仍受制於那些請願。",
-      "targets": ["urgeo", "obnoxius", "postulatum", "cumque"]
+      "latin": "Suffragia vivorum defunctis pœnas minuunt.",
+      "chinese": "生者的代禱為亡者減輕懲罰。",
+      "targets": [
+        "minuo",
+        "suffragium"
+      ]
     },
     {
-      "latin": "Sacerdotes vestem induunt die Pentecostes; rector reducit.",
-      "chinese": "司祭們在五旬節那日穿上了聖衣；管理者帶了回來。",
-      "targets": ["Pentecoste", "induo", "reduco"]
+      "latin": "Omnes homines peccato et morti obnoxii sunt.",
+      "chinese": "所有的人都受制於罪和死亡。",
+      "targets": []
+    },
+    {
+      "latin": "Bonus pastor ovem perditam reducit.",
+      "chinese": "善牧把迷失的羊帶回來。",
+      "targets": [
+        "reduco"
+      ]
     }
   ]
 }

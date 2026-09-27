@@ -2,65 +2,66 @@
   "volume": 1,
   "lesson": 2,
   "author": "opus-5-hand-written",
-  "note": "累積詞彙四十個，動詞仍只有 flectō，故以名詞句為主。🚨 2026-09-27 更正：pāpa 舊註記寫「武加大沒有任何字形，練不到」有誤——教會語料裡有 papa／papae／pape，第 1 句已補上。missa 只認字形（missa／Missæ），不可用 mitto 的分詞冒充。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫。",
   "sentences": [
     {
-      "latin": "Gloria papae super ecclesiam est.",
-      "chinese": "教宗的光榮在教會之上。",
+      "latin": "Christus est agnus Dei.",
+      "chinese": "基督是天主的羔羊。",
       "targets": [
-        "papa",
-        "super",
-        "ecclesia"
-      ]
-    },
-    {
-      "latin": "Agnus dei sine culpa est.",
-      "chinese": "天主的羔羊是沒有過錯的。",
-      "targets": [
-        "sine",
         "agnus",
+        "christus",
         "deus"
       ]
     },
     {
-      "latin": "Natura Christi in ecclesia est.",
-      "chinese": "基督的本性在教會中。",
+      "latin": "Vita discipuli in Christo est.",
+      "chinese": "門徒的生命在基督內。",
       "targets": [
-        "natura",
-        "christus"
-      ]
-    },
-    {
-      "latin": "Apostoli et discipuli in agro sunt.",
-      "chinese": "宗徒與門徒都在田間。",
-      "targets": [
-        "ager",
-        "apostolus",
+        "uita",
+        "christus",
         "discipulus"
       ]
     },
     {
-      "latin": "Satis gratiæ in vita",
-      "chinese": "生命中有足夠的恩寵。",
+      "latin": "Missa pro familia est.",
+      "chinese": "這台彌撒是為這個家庭奉獻的。",
       "targets": [
-        "satis",
-        "uita"
+        "missa",
+        "pro"
       ]
     },
     {
-      "latin": "Archangelus coram deo flectitur",
-      "chinese": "大天使在天主面前屈膝。",
+      "latin": "Doctrina papæ de natura et gratia est.",
+      "chinese": "教宗的教導是關於本性與恩寵的。",
       "targets": [
+        "natura",
+        "papa"
+      ]
+    },
+    {
+      "latin": "Gloria Domini super terram est.",
+      "chinese": "上主的光榮在大地之上。",
+      "targets": [
+        "super",
+        "terra",
+        "dominus"
+      ]
+    },
+    {
+      "latin": "Angeli et archangeli coram Deo sunt.",
+      "chinese": "天使和總領天使都在天主面前。",
+      "targets": [
+        "angelus",
         "archangelus",
         "deus"
       ]
     },
     {
-      "latin": "Missa pro familia in ecclesia est.",
-      "chinese": "為家人獻的彌撒在教會中。",
+      "latin": "Gratia Christi satis est.",
+      "chinese": "基督的恩寵就足夠了。",
       "targets": [
-        "missa",
-        "pro"
+        "satis",
+        "christus"
       ]
     }
   ]

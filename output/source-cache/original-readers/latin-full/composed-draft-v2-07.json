@@ -2,42 +2,62 @@
   "volume": 2,
   "lesson": 7,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫，連接詞只用在真的因果／轉折／時間／目的關係上；寧可少練一詞也不硬塞，每課覆蓋至少 15/20（含引用題）。",
   "sentences": [
     {
-      "latin": "Sol occasum habet; radium mittit.",
-      "chinese": "太陽有西沉之時；它發出光線。",
-      "targets": ["sol", "occasus", "radius"]
+      "latin": "Sol oritur et occidit, sed Deus manet.",
+      "chinese": "太陽升起又落下，天主卻常存。",
+      "targets": [
+        "occido",
+        "sol"
+      ]
     },
     {
-      "latin": "Luminare in caelo rutilat; sidera lucent.",
-      "chinese": "天上的光體閃耀著；星辰照耀著。",
-      "targets": ["luminare", "rutilo"]
+      "latin": "Usque ad occasum solis nomen Domini laudatur.",
+      "chinese": "直到日落之處，上主的名都受讚美。",
+      "targets": [
+        "occasus",
+        "sol"
+      ]
     },
     {
-      "latin": "Populus occidit; Deus non parcet.",
-      "chinese": "百姓死去了；天主將不寬容。",
-      "targets": ["populus", "occido", "Deus", "parco"]
+      "latin": "Filius Patri usque ad mortem obœdire voluit.",
+      "chinese": "聖子甘願服從聖父，直到死亡。",
+      "targets": [
+        "oboedio"
+      ]
     },
     {
-      "latin": "Necesse est orare; oportet credere.",
-      "chinese": "必須祈禱；應該相信。",
-      "targets": ["necesse est", "oportet"]
+      "latin": "Deo sincero corde servire necesse est.",
+      "chinese": "必須以真誠的心事奉天主。",
+      "targets": [
+        "necesse est",
+        "servio",
+        "sincerus"
+      ]
     },
     {
-      "latin": "Pectus sanctitate plenum est; sincera fides placet.",
-      "chinese": "胸懷充滿了聖德；真誠的信德是討喜悅的。",
-      "targets": ["pectus", "sanctitas", "sincerus", "placeo"]
+      "latin": "Dominus peccatoribus parcet, quia misericordia ei placet.",
+      "chinese": "上主必寬恕罪人，因為他喜愛仁慈。",
+      "targets": [
+        "parco",
+        "placeo",
+        "placet"
+      ]
     },
     {
-      "latin": "Discipulus procidit; Deo servit; lux penetrare potest.",
-      "chinese": "門徒俯伏了；他服事天主；光能夠穿透進來。",
-      "targets": ["discipulus", "procido", "Deus", "servio", "penetro"]
+      "latin": "Peccator ante altare procidit et misericordiam petivit.",
+      "chinese": "罪人在祭台前俯伏，祈求憐憫。",
+      "targets": [
+        "procido"
+      ]
     },
     {
-      "latin": "Oboedientia bona est; multi obediunt; nemo nocet.",
-      "chinese": "服從是好的；許多人順從；沒有人受到傷害。",
-      "targets": ["oboedientia", "oboedio", "nemo", "noceo"]
+      "latin": "Via ad sanctitatem est obœdientia fidei.",
+      "chinese": "通往聖德的道路是信德的服從。",
+      "targets": [
+        "oboedientia"
+      ]
     }
   ]
 }

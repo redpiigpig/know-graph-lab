@@ -2,42 +2,62 @@
   "volume": 1,
   "lesson": 25,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫。",
   "sentences": [
     {
-      "latin": "Sanguis Christi salutem dat; effunditur.",
-      "chinese": "基督的血賜下拯救；並且被傾流了。",
-      "targets": ["sanguis", "Christus", "salus", "effundo"]
+      "latin": "Christus descendit de cælo et ascendit in cælum.",
+      "chinese": "基督從天降下，又升上了天。",
+      "targets": [
+        "ascendo",
+        "descendo"
+      ]
     },
     {
-      "latin": "Populus salvus est; Christus ascendit; tuba sonat.",
-      "chinese": "百姓得救了；基督升上了；號筒響起。",
-      "targets": ["populus", "salvus", "Christus", "ascendo", "tuba", "sono"]
+      "latin": "Jesus crucem tulit et crucifixus est.",
+      "chinese": "耶穌背了十字架，並被釘死了。",
+      "targets": [
+        "crucifigo",
+        "crux"
+      ]
     },
     {
-      "latin": "Crux ad cornu altaris stat.",
-      "chinese": "十字架立在祭台的角上。",
-      "targets": ["crux", "cornu"]
+      "latin": "Per resurrectionem Christi salvi sumus.",
+      "chinese": "藉著基督的復活，我們得救了。",
+      "targets": [
+        "resurrectio",
+        "saluus"
+      ]
     },
     {
-      "latin": "Calix vinum habet; caritas crescit; nec confringetur.",
-      "chinese": "聖爵盛著酒；愛德漸漸增長；它也不會被打碎。",
-      "targets": ["calix", "caritas", "confringo"]
+      "latin": "Hic est calix sanguinis mei.",
+      "chinese": "這是我的血爵。",
+      "targets": [
+        "sanguis",
+        "calix"
+      ]
     },
     {
-      "latin": "Proximus tuus felix est; satis habet.",
-      "chinese": "你的近人是有福的；他擁有足夠。",
-      "targets": ["proximus", "felix", "satis"]
+      "latin": "Felix est qui in caritate ambulat.",
+      "chinese": "在愛德中生活的人是有福的。",
+      "targets": [
+        "caritas",
+        "felix"
+      ]
     },
     {
-      "latin": "Filius descendit; homini dissimilis non est, nec confunditur.",
-      "chinese": "子降下了；他與人並無不同，也不困惑。",
-      "targets": ["filius", "descendo", "dissimilis", "confundo"]
+      "latin": "Qui credit in Christum non confundetur.",
+      "chinese": "信基督的人必不致蒙羞。",
+      "targets": [
+        "confundo"
+      ]
     },
     {
-      "latin": "Christus crucifixus est; dolor acer fuit; resurrectio venit.",
-      "chinese": "基督被釘上了十字架；那痛苦是猛烈的；復活來到了。",
-      "targets": ["Christus", "crucifigo", "acer", "resurrectio"]
+      "latin": "Erexit cornu salutis nobis.",
+      "chinese": "他為我們興起了救恩的角。",
+      "targets": [
+        "salus",
+        "cornu"
+      ]
     }
   ]
 }

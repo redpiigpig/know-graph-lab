@@ -2,42 +2,62 @@
   "volume": 2,
   "lesson": 14,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫，連接詞只用在真的因果／轉折／時間／目的關係上；寧可少練一詞也不硬塞，每課覆蓋至少 15/20（含引用題）。",
   "sentences": [
     {
-      "latin": "Episcopus scientiam praefert; usus antiquus est; utrum scit?",
-      "chinese": "主教偏好知識；那用法是古老的；他是否知道呢？",
-      "targets": ["episcopus", "praefero", "scientia", "usus", "utrum", "scio"]
+      "latin": "Scientia Dei melior est quam pecunia.",
+      "chinese": "認識天主的知識勝過金錢。",
+      "targets": [
+        "scientia",
+        "pecunia"
+      ]
     },
     {
-      "latin": "Sacerdos habitum gerit; venerabilis est.",
-      "chinese": "司祭穿著衣著；他是可敬的。",
-      "targets": ["sacerdos", "habitus", "venerabilis", "gero"]
+      "latin": "Doctrina hæreticorum animas in periculum ducit.",
+      "chinese": "異端者的學說把靈魂引入危險。",
+      "targets": [
+        "periculum",
+        "haereticus"
+      ]
     },
     {
-      "latin": "Periculum magnum est; conscientia clamat.",
-      "chinese": "危險是巨大的；良心在呼喊。",
-      "targets": ["periculum", "conscientia"]
+      "latin": "Quamvis filius peccaverit, pater eum rursus suscipit.",
+      "chinese": "雖然兒子犯了罪，父親還是再次接納他。",
+      "targets": [
+        "quamvis",
+        "rursus"
+      ]
     },
     {
-      "latin": "Imago Dei in homine manet; bellum malum est.",
-      "chinese": "天主的形象存留在人之內；戰爭是邪惡的。",
-      "targets": ["imago", "Deus", "homo", "bellum"]
+      "latin": "Pilatus interrogavit utrum Jesus Galilæus esset.",
+      "chinese": "比拉多問耶穌是不是加里肋亞人。",
+      "targets": [
+        "utrum"
+      ]
     },
     {
-      "latin": "Haeretici errant; legatus veritatem defendit.",
-      "chinese": "異端者們犯錯了；使節捍衛了真理。",
-      "targets": ["haereticus", "erro", "legatus", "veritas", "defendo"]
+      "latin": "Venerabilis sacerdos habitum ecclesiasticum gerebat.",
+      "chinese": "那位可敬的司祭穿著聖職人員的服裝。",
+      "targets": [
+        "ecclesiasticus",
+        "habitus",
+        "venerabilis"
+      ]
     },
     {
-      "latin": "Pecunia in statu Ecclesiae manet; ecclesiasticum jus manet.",
-      "chinese": "金錢存留在教會的狀態中；教會的法律長存。",
-      "targets": ["pecunia", "status", "ecclesia", "ecclesiasticus", "jus"]
+      "latin": "Bona terræ ad usum omnium hominum creata sunt.",
+      "chinese": "大地的財物是為了供眾人使用而受造的。",
+      "targets": [
+        "usus"
+      ]
     },
     {
-      "latin": "Quamvis erret, tum credit; immo rursus aliter cogitat.",
-      "chinese": "儘管他可能犯錯，那時他還是相信了；不然他又換個方式思考。",
-      "targets": ["quamvis", "tum", "credo", "immo", "rursus", "aliter", "cogito"]
+      "latin": "Rex legatos misit, quia bellum timebat.",
+      "chinese": "君王派出了使節，因為他害怕戰爭。",
+      "targets": [
+        "bellum",
+        "legatus"
+      ]
     }
   ]
 }

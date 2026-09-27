@@ -2,42 +2,60 @@
   "volume": 1,
   "lesson": 33,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。🚨 cōnsubstantiālis 在武加大＋教會語料中零字形，練不到；20 詞僅練 19。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫。",
   "sentences": [
     {
-      "latin": "Petrus audet; Deo confidit.",
-      "chinese": "伯多祿敢作敢為；他信賴天主。",
-      "targets": ["audeo", "Deus", "confido"]
+      "latin": "Dominus nocte in columna ignis populum præcedebat.",
+      "chinese": "上主夜間在火柱中走在百姓前面。",
+      "targets": [
+        "ignis",
+        "nox"
+      ]
     },
     {
-      "latin": "Sacerdos benedictionem dat; populus deprecatur.",
-      "chinese": "司祭給予祝福；百姓在懇求。",
-      "targets": ["sacerdos", "benedictio", "populus", "deprecor"]
+      "latin": "Anna cum lacrimis Dominum deprecabatur.",
+      "chinese": "亞納流著淚向上主懇求。",
+      "targets": [
+        "deprecor",
+        "lacrima"
+      ]
     },
     {
-      "latin": "Anima desiderium habet; ignis ardet.",
-      "chinese": "靈魂懷有渴望；火焰燃燒著。",
-      "targets": ["desiderium", "ignis"]
+      "latin": "Memoria justi in benedictione est.",
+      "chinese": "義人的記念蒙受祝福。",
+      "targets": [
+        "benedictio",
+        "memoria"
+      ]
     },
     {
-      "latin": "Innocens gaudet; miser autem moritur.",
-      "chinese": "無辜的人歡喜；可憐的人卻死去。",
-      "targets": ["innocens", "gaudeo", "miser", "morior"]
+      "latin": "Fides sine operibus nihil valet.",
+      "chinese": "沒有行為的信德毫無價值。",
+      "targets": [
+        "nihil",
+        "opus"
+      ]
     },
     {
-      "latin": "Lacrima cadit; memoria non perit.",
-      "chinese": "淚水落下；記憶卻不消逝。",
-      "targets": ["lacrima", "memoria"]
+      "latin": "Miserere mei, Deus.",
+      "chinese": "天主，求你憐憫我。",
+      "targets": [
+        "misereor"
+      ]
     },
     {
-      "latin": "Populus miratur; Deus misereatur.",
-      "chinese": "百姓感到驚異；願天主垂憐。",
-      "targets": ["populus", "miror", "Deus", "misereor"]
+      "latin": "Gaudete in Domino semper.",
+      "chinese": "你們要在主內常常喜樂。",
+      "targets": [
+        "gaudeo"
+      ]
     },
     {
-      "latin": "Nihil in nocte oritur, nisi opus nascitur.",
-      "chinese": "在夜裡什麼都不會興起，除非有工作誕生。",
-      "targets": ["nihil", "nox", "orior", "opus", "nascor"]
+      "latin": "In Domino confido.",
+      "chinese": "我信賴上主。",
+      "targets": [
+        "confido"
+      ]
     }
   ]
 }

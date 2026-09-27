@@ -2,42 +2,60 @@
   "volume": 1,
   "lesson": 27,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。eō(īre) 在語料中只留一個第一人稱形（eo），與本課其餘全為第三人稱的句子擺在一起會撞人稱數閘，寧可不硬湊也不拿去和不同人稱拼句。🚨 2026-09-27 補：annūntiō 除了第一人稱 annuntio，語料裡還有拼成 adnuntio 但字形寫成 annuntiat 的第三人稱形（詞幹搭上），第 3 句已補上。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫。",
   "sentences": [
     {
-      "latin": "Vultus Domini gloriae similis est; nuntium emisit.",
-      "chinese": "上主的容顏相似於光榮；他發出了信息。",
-      "targets": ["vultus", "Dominus", "gloria", "similis", "emitto"]
+      "latin": "Emitte Spiritum tuum, Domine.",
+      "chinese": "上主，求你派遣你的聖神。",
+      "targets": [
+        "spiritus",
+        "emitto"
+      ]
     },
     {
-      "latin": "Spiritus in homine est; adest ubique.",
-      "chinese": "神在人之內；並無所不在。",
-      "targets": ["spiritus", "homo", "adsum", "ubique"]
+      "latin": "Clemens est Dominus, nec avertet vultum suum.",
+      "chinese": "上主是寬仁的，他必不轉臉不顧。",
+      "targets": [
+        "uultus",
+        "clemens"
+      ]
     },
     {
-      "latin": "Suavitas dilectionis omnes movit; propheta annuntiat.",
-      "chinese": "愛的甘美感動了眾人；那先知宣告了信息。",
-      "targets": ["suavitas", "dilectio", "omnis"]
+      "latin": "Sacrificium acceptabile est odor suavitatis.",
+      "chinese": "蒙悅納的祭獻是馨香的氣味。",
+      "targets": [
+        "suauitas",
+        "acceptabilis"
+      ]
     },
     {
-      "latin": "Munus acceptabile Deo est; adventus Domini prope est.",
-      "chinese": "禮物是天主所悅納的；上主的來臨臨近了。",
-      "targets": ["munus", "acceptabilis", "Deus", "adventus", "Dominus"]
+      "latin": "Annuntio vobis adventum Domini.",
+      "chinese": "我向你們宣報主的來臨。",
+      "targets": [
+        "aduentus",
+        "annuntio"
+      ]
     },
     {
-      "latin": "Episcopus clemens est; Ecclesia ab episcopali loco regitur.",
-      "chinese": "主教是仁慈的；教會受主教之座所治理。",
-      "targets": ["episcopus", "clemens", "ecclesia", "episcopalis"]
+      "latin": "Dilectio proximi malum non operatur.",
+      "chinese": "愛近人的心不會加害於人。",
+      "targets": [
+        "dilectio"
+      ]
     },
     {
-      "latin": "Populus circuit; Petrus exit; Andreas adeat; emit agnum.",
-      "chinese": "百姓繞行；伯多祿出去了；讓安德肋前去吧；他買了一隻羊羔。",
-      "targets": ["populus", "circumeo", "exeo", "adeo", "emo", "agnus"]
+      "latin": "Simile est regnum cælorum fermento.",
+      "chinese": "天國好比酵母。",
+      "targets": [
+        "similis"
+      ]
     },
     {
-      "latin": "Filius abiit; pater amisit spem, admisit eum.",
-      "chinese": "兒子離去了；父親失去了希望，卻又接納了他。",
-      "targets": ["filius", "abeo", "amitto", "admitto"]
+      "latin": "Jesus trans mare abiit.",
+      "chinese": "耶穌往海的對岸去了。",
+      "targets": [
+        "abeo"
+      ]
     }
   ]
 }

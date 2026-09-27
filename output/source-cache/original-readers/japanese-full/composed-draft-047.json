@@ -1,78 +1,43 @@
 {
   "lesson": 47,
   "volume": 1,
-  "author": "opus-5-hand-written",
-  "note": "",
+  "author": "opus-5.5-hand-written",
+  "note": "2026-09-27 第三次重寫（擁有者選項 B：一題一句、問句每課≤2、至少 15 詞）",
   "sentences": [
     {
-      "japanese": "宇宙の夢を見ます。ガスを使います。",
-      "chinese": "夢到宇宙。使用瓦斯。",
-      "targets": [
-        "ガス",
-        "宇宙",
-        "夢"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 校對] 採用覆核建議修正句；原句：ガスと宇宙と夢です。"
+      "japanese": "この部屋の窓から、海がよく見えます。",
+      "chinese": "從這個房間的窗戶可以清楚看到海。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "子供の日は別の日です。",
-      "chinese": "兒童節是另外一天。",
-      "targets": [
-        "別の",
-        "子供の日"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 校對] 採用覆核建議修正句；原句：別の子供の日です。"
+      "japanese": "電話の声がはっきり聞こえません。",
+      "chinese": "電話裡的聲音聽不清楚。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "声がはっきり聞こえます。鳥は殆ど見えません。",
-      "chinese": "聲音聽得很清楚。幾乎看不到鳥。",
-      "targets": [
-        "声",
-        "聞こえます",
-        "はっきり"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 修補生詞覆蓋] 補 殆ど；原句：声がはっきり聞こえます。"
+      "japanese": "家で飼っている鳥が、窓から飛んで行きました。",
+      "chinese": "家裡養的鳥從窗戶飛走了。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "家を建てます。犬を飼います。",
-      "chinese": "蓋房子。養狗。",
-      "targets": [
-        "建てます",
-        "飼います"
-      ]
+      "japanese": "子供の日に、子供と公園を走りました。",
+      "chinese": "兒童節那天，和孩子在公園裡跑步。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "ドアが開きます。鳥が飛びます。",
-      "chinese": "門開了。鳥飛了。",
-      "targets": [
-        "開きます",
-        "飛びます"
-      ]
+      "japanese": "子供の夢は宇宙へ行く事です。",
+      "chinese": "孩子的夢想是去宇宙。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "昔は他の夢がありました。",
-      "chinese": "以前有別的夢想。",
-      "targets": [
-        "昔",
-        "他の",
-        "殆ど"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 校對] 採用覆核建議修正句；原句：昔の他の夢です。殆どです。"
+      "japanese": "この町は昔お寺が多かったですが、今は殆どありません。",
+      "chinese": "這個城鎮以前寺廟很多，現在幾乎都沒有了。",
+      "reviewedBy": "author"
     },
     {
-      "japanese": "他の声しか聞こえません。",
-      "chinese": "只聽得到別的聲音。",
-      "targets": [
-        "しか",
-        "他の",
-        "声"
-      ],
-      "reviewedBy": "author",
-      "note": "[2026-09-27 校對] 採用覆核建議修正句；原句：しか、他の声です。"
+      "japanese": "三年後に、田舎に家を建てます。",
+      "chinese": "三年後要在鄉下蓋房子。",
+      "reviewedBy": "author"
     }
   ]
 }

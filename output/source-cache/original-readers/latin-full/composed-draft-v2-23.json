@@ -2,42 +2,61 @@
   "volume": 2,
   "lesson": 23,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫，連接詞只用在真的因果／轉折／時間／目的關係上；寧可少練一詞也不硬塞，每課覆蓋至少 15/20（含引用題）。",
   "sentences": [
     {
-      "latin": "Summa cupit veritatem; equus currit.",
-      "chinese": "要旨渴望了真理；馬奔跑著。",
-      "targets": ["summa", "cupio", "veritas", "equus"]
+      "latin": "Martha ministrabat, et soror ejus Domini verba audiebat.",
+      "chinese": "瑪爾大忙著伺候，她的妹妹則聆聽主的話。",
+      "targets": [
+        "soror",
+        "ministro"
+      ]
     },
     {
-      "latin": "Propterea alibi habitant; proprie credunt.",
-      "chinese": "因此，他們居住在別處；他們正確地相信。",
-      "targets": ["propterea", "alibi", "proprie", "credo"]
+      "latin": "Deus mundum dilexit, propterea Filium suum misit.",
+      "chinese": "天主愛了世界，因此派遣了自己的兒子。",
+      "targets": [
+        "propterea"
+      ]
     },
     {
-      "latin": "Judex reum damnavit; consistit lex.",
-      "chinese": "審判者判罪了被告；法律確立了。",
-      "targets": ["judex", "reus", "damno", "consisto", "lex"]
+      "latin": "Qui vitam æternam cupit, patientiam habeat.",
+      "chinese": "誰渴望永生，就應當有忍耐。",
+      "targets": [
+        "cupio",
+        "patientia"
+      ]
     },
     {
-      "latin": "Populus consuevit orare; patientiam habet.",
-      "chinese": "百姓習慣了祈禱；他擁有忍耐。",
-      "targets": ["populus", "consuesco", "patientia"]
+      "latin": "Innocens per fraudem judicis iniqui damnatus est.",
+      "chinese": "無辜的人因不義法官的詭計而被定罪。",
+      "targets": [
+        "damno",
+        "fraus",
+        "iniquus"
+      ]
     },
     {
-      "latin": "Deus proprietatem privavit; soror praesertim credit.",
-      "chinese": "天主奪去了所有權；姐妹尤其相信。",
-      "targets": ["Deus", "proprietas", "privo", "soror", "praesertim", "credo"]
+      "latin": "Speciali dispositione Dei Maria mater Christi facta est.",
+      "chinese": "由於天主特別的安排，瑪利亞成了基督的母親。",
+      "targets": [
+        "specialis",
+        "dispositio"
+      ]
     },
     {
-      "latin": "Specialis dispositio manet; fraudem non habet.",
-      "chinese": "特殊的安排長存；它沒有欺詐。",
-      "targets": ["specialis", "dispositio", "fraus"]
+      "latin": "Peccatum primi hominis genus humanum gratia privavit.",
+      "chinese": "原祖的罪使人類失去了恩寵。",
+      "targets": [
+        "privo"
+      ]
     },
     {
-      "latin": "Iniquus homo ministrat; potestatem exercet.",
-      "chinese": "不義的人服事著；他行使了權力。",
-      "targets": ["iniquus", "homo", "ministro", "potestas", "exerceo"]
+      "latin": "Proprietas Patris est quod Filium ab æterno gignit.",
+      "chinese": "聖父的特性就是從永遠生聖子。",
+      "targets": [
+        "proprietas"
+      ]
     }
   ]
 }

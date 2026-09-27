@@ -2,42 +2,57 @@
   "volume": 1,
   "lesson": 30,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫。🚨 2026-09-27 再補正：incēdō 舊筆記寫「詞位與詞表核對不上」有誤——incedens／incedere 在武加大裡本來就直掛詞位 incedo，第 1 句已補上。cōtīdiānus／intentus 兩詞仍只透過詞幹搭上（cotidianae／intentissimus，詞位欄是空的），第 2、3 句已各補上。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫。",
   "sentences": [
     {
-      "latin": "Pastor incedens gregem custodit.",
-      "chinese": "那牧人一邊行走，一邊看守羊群。",
-      "targets": ["grex", "custodio"]
+      "latin": "Paulus quotidie Christum evangelizabat.",
+      "chinese": "保祿天天宣講基督的福音。",
+      "targets": [
+        "cotidie",
+        "euangelizo"
+      ]
     },
     {
-      "latin": "Levita intentissimus legem custodit.",
-      "chinese": "那極為專注的肋未人遵守法律。",
-      "targets": ["lex", "Levita"]
+      "latin": "Abraham manum extendit, ut filium interficeret.",
+      "chinese": "亞巴郎伸出手來，要宰殺他的兒子。",
+      "targets": [
+        "extendo"
+      ]
     },
     {
-      "latin": "Sacerdos cotidie orat; inde discedit; horae cotidianae sunt.",
-      "chinese": "司祭每天祈禱；然後從那裡離開；那些是每日的時辰。",
-      "targets": ["sacerdos", "cotidie", "inde", "discedo"]
+      "latin": "Anna devota de templo non discedebat.",
+      "chinese": "虔誠的亞納不離開聖殿。",
+      "targets": [
+        "deuotus",
+        "discedo"
+      ]
     },
     {
-      "latin": "Deus concedit; homo interficit.",
-      "chinese": "天主准許；人卻殺害。",
-      "targets": ["Deus", "concedo", "interficio"]
+      "latin": "Pater pusillo gregi regnum concessit.",
+      "chinese": "天父把國賜給了小小的羊群。",
+      "targets": [
+        "concedo",
+        "grex"
+      ]
     },
     {
-      "latin": "Ecclesia devota est; caritas ejus indeficiens est.",
-      "chinese": "教會是虔誠的；她的愛德是不衰退的。",
-      "targets": ["ecclesia", "devotus", "indeficiens"]
+      "latin": "Apparuit humanitas Salvatoris nostri.",
+      "chinese": "我們救主的仁愛顯現了。",
+      "targets": [
+        "humanitas"
+      ]
     },
     {
-      "latin": "Dies festus concluditur; humanitas extenditur.",
-      "chinese": "節慶之日結束了；人性延展開來。",
-      "targets": ["festus", "concludo", "humanitas", "extendo"]
+      "latin": "Inde venturus est judicare vivos et mortuos.",
+      "chinese": "他要從那裡降來，審判生者死者。",
+      "targets": [
+        "inde"
+      ]
     },
     {
-      "latin": "Apostolus evangelizat; animum intendit.",
-      "chinese": "宗徒宣講福音；他專注了心思。",
-      "targets": ["evangelizo", "intendo"]
+      "latin": "Deus, in adjutorium meum intende.",
+      "chinese": "天主，求你快來扶助我。",
+      "targets": []
     }
   ]
 }

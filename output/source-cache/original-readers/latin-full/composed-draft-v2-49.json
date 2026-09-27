@@ -2,42 +2,76 @@
   "volume": 2,
   "lesson": 49,
   "author": "opus-5-hand-written",
-  "note": "2026-09-27 全句重寫（棄用模板產生器）。",
+  "note": "2026-09-27 第四次重寫（選項 B）：一題一句、逐句手寫，連接詞只用在真的因果／轉折／時間／目的關係上；寧可少練一詞也不硬塞，每課覆蓋至少 15/20（含引用題）。",
   "sentences": [
     {
-      "latin": "Opifices periti victum simpliciter producunt.",
-      "chinese": "熟練的工匠們純粹地生產出了食糧。",
-      "targets": ["opifex", "peritus", "victus", "simpliciter", "produco"]
+      "latin": "Homo, animal rationale, in duplici sexu creatus est.",
+      "chinese": "人是有理性的動物，受造時分為兩性。",
+      "targets": [
+        "sexus",
+        "rationalis"
+      ]
     },
     {
-      "latin": "Collegio opifices admirationem directe habent.",
-      "chinese": "工匠們對公會直接懷有敬慕。",
-      "targets": ["collegium", "admiratio", "directe"]
+      "latin": "Papa cum collegio episcoporum ecclesiam universam regit.",
+      "chinese": "教宗與主教團一同治理整個教會。",
+      "targets": [
+        "collegium"
+      ]
     },
     {
-      "latin": "Sexus, factum popularium, gradatim manet.",
-      "chinese": "性別身分，作為平民百姓的事實，逐步地長存。",
-      "targets": ["sexus", "factum", "popularis", "gradatim"]
+      "latin": "Opifices victum suum labore manuum quærunt.",
+      "chinese": "工匠們靠雙手的勞動謀生。",
+      "targets": [
+        "victus",
+        "opifex"
+      ]
     },
     {
-      "latin": "Localis opportunitas tuta manet.",
-      "chinese": "地方性的機會安全地長存。",
-      "targets": ["localis", "opportunitas", "tutus"]
+      "latin": "Opera Jesu magnam admirationem excitaverunt.",
+      "chinese": "耶穌的作為引起了極大的驚嘆。",
+      "targets": [
+        "admiratio"
+      ]
     },
     {
-      "latin": "Rationalis ethica abstinet.",
-      "chinese": "理性的倫理學保持節制。",
-      "targets": ["rationalis", "ethica", "abstineo"]
+      "latin": "Obsecro vos, fratres, per misericordiam Dei.",
+      "chinese": "弟兄們，我因天主的仁慈懇求你們。",
+      "targets": [
+        "obsecro"
+      ]
     },
     {
-      "latin": "Ego simpliciter obsecro.",
-      "chinese": "我坦率而純粹地懇求。",
-      "targets": ["obsecro"]
+      "latin": "Ecclesia localis pietatis popularis traditiones servat.",
+      "chinese": "地方教會保存民間虔敬的傳統。",
+      "targets": [
+        "popularis",
+        "localis"
+      ]
     },
     {
-      "latin": "Opifices misere abstineant.",
-      "chinese": "願工匠們悲慘地節制自守。",
-      "targets": ["misere"]
+      "latin": "Peccator gradatim a vitiis abstinere discat.",
+      "chinese": "罪人應當逐步學習戒絕惡習。",
+      "targets": [
+        "gradatim",
+        "abstineo"
+      ]
+    },
+    {
+      "latin": "Magister in ethica peritus de moribus docet.",
+      "chinese": "精通倫理學的老師講授品行。",
+      "targets": [
+        "peritus",
+        "ethica"
+      ]
+    },
+    {
+      "latin": "Qui simpliciter in Deo confidit, tutus est.",
+      "chinese": "單純地信賴天主的人是安全的。",
+      "targets": [
+        "simpliciter",
+        "tutus"
+      ]
     }
   ]
 }
