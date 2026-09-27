@@ -137,6 +137,7 @@ def main() -> int:
         if not filled and use_labels:
             fp = paths.get(p.stem)
             if fp and Path(fp).exists():
+                print("label", p.stem, flush=True)   # 09-27 曾靜默卡在某本 Drive 檔，先印再開
                 try:
                     import fitz  # noqa: E402
                     d = fitz.open(fp)
