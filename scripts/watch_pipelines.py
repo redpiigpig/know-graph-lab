@@ -106,6 +106,22 @@ class _Unreachable(RuntimeError):
     """連不上 DB。呼叫端要接住並印「這一節看不到」，而不是讓整份報告消失。"""
 
 
+
+def read_jsonl(path: pathlib.Path) -> list[dict]:
+    """帳本逐行讀，壞行略過並發警訊。2026-09-27 重開機讓 zlib_ledger 某一行變成 751 個 0x00，
+    整份對帳直接崩在這裡——一行壞掉不該讓全部區塊都看不到。"""
+    out, bad = [], 0
+    for line in path.read_text(encoding="utf-8", errors="replace").splitlines():
+        if not line.strip():
+            continue
+        try:
+            out.append(json.loads(line))
+        except json.JSONDecodeError:
+            bad += 1
+    if bad:
+        warn(f"{path.name} 有 {bad} 行讀不出來（多半是斷電寫壞的 0x00），已略過")
+    return out
+
 def page(path: str, size: int = 1000) -> list[dict]:
     out, off = [], 0
     sep = "&" if "?" in path else "?"
@@ -169,10 +185,33 @@ def section_collected_works(author: str | None) -> None:
     empty = [r for r in rows if not (r.get("chunk_count") or 0)]
     # 段數少不等於殘缺：伊利亞德 3 段 34 萬字是整章一段；星雲全集標「*」的是書法／圖影集，
     # 官網本來就只有書名。只有「段少且字也少」才算。
-    thin = [r for r in rows if 0 < (r.get("chunk_count") or 0) <= 5
-            and (r.get("total_chars") or 0) < 20000 and not r["title"].endswith("*")]
+    thin_all = [r for r in rows if 0 < (r.get("chunk_count") or 0) <= 5
+                and (r.get("total_chars") or 0) < 20000 and not r["title"].endswith("*")]
+
+    # 2026-09-27：官網附錄區的重複入口（《傳燈》《雲水日月2》《佛教叢書1 教理(1)》）
+    # 同作者另有同名完整冊，不是殘缺；兩千字以上的短篇（內村、矢內原的單篇講演）也正常。
+    def _base(t: str) -> str:
+        return re.sub(r"[\s　]*[0-9０-９]*[\s　]*(教理)?\(?[0-9]*\)?$", "", t).strip()
+
+    def _dup_of(r):
+        b = _base(r["title"])
+        for o in rows:
+            if o is not r and o.get("author") == r.get("author") and (o.get("total_chars") or 0) > 10 * (r.get("total_chars") or 1):
+                ob = _base(o["title"])
+                if b and ob and (b.startswith(ob) or ob.startswith(b)):
+                    return o
+        return None
+    dups = [(r, _dup_of(r)) for r in thin_all]
+    dups = [(r, o) for r, o in dups if o]
+    dup_ids = {id(r) for r, _ in dups}
+    short_ok = [r for r in thin_all if id(r) not in dup_ids and (r.get("total_chars") or 0) >= 2000]
+    thin = [r for r in thin_all if id(r) not in dup_ids and r not in short_ok]
     print(f"  DB collection=collected-works：{len(rows)} 本"
-          f"（有內容 {len(rows) - len(empty)}、空 {len(empty)}、疑似殘缺 {len(thin)}）")
+          f"（有內容 {len(rows) - len(empty)}、空 {len(empty)}、疑似殘缺 {len(thin)}；"
+          f"另有官網重複入口 {len(dups)}、正常短篇 {len(short_ok)}）")
+    for r, o in dups:
+        print(f"    ⓘ 重複入口：{r.get('author')}《{r['title'][:24]}》{r.get('total_chars')} 字"
+              f" → 完整冊《{o['title'][:24]}》{o.get('total_chars')} 字（可從館藏移除，待使用者決定）")
     if empty:
         warn(f"全集有 {len(empty)} 本掛在 collected-works 卻沒有任何 chunk")
         for r in empty[:5]:
@@ -275,12 +314,12 @@ def section_author(slug: str) -> None:
 
     # z-lib 獵表：排在第幾、輪不輪得到
     if ZLIB_WANTED.exists() and ZLIB_LEDGER.exists():
-        wanted = [json.loads(l) for l in ZLIB_WANTED.read_text(encoding="utf-8").splitlines() if l.strip()]
+        wanted = read_jsonl(ZLIB_WANTED)
         # 🚨 要跟 zlib_fetch.doneKeys() 同一套語意：status='dry' 是「只查沒下載」，
         # 那邊明確不算已處理。這裡要是照單全收，跑一輪 --dry-run 就會讓獵表進度
         # 假性前進（2026-09-08 一輪 11 筆 dry 讓「未處理」從 22 掉到 11）。
         done = {r["key"] for r in
-                (json.loads(l) for l in ZLIB_LEDGER.read_text(encoding="utf-8").splitlines() if l.strip())
+                read_jsonl(ZLIB_LEDGER)
                 if r.get("status") != "dry"}
         mine = [(n, w) for n, w in enumerate(wanted)
                 if any(t.lower() in json.dumps(w, ensure_ascii=False).lower() for t in terms)]
@@ -328,7 +367,7 @@ def section_downloads(tasks: dict) -> None:
 
     # z-lib：帳本＋ drop 夾
     if ZLIB_LEDGER.exists():
-        recs = [json.loads(l) for l in ZLIB_LEDGER.read_text(encoding="utf-8").splitlines() if l.strip()]
+        recs = read_jsonl(ZLIB_LEDGER)
         c = collections.Counter(r.get("status", "?") for r in recs)
         last = recs[-1]["at"][:10] if recs else "—"
         n_today = sum(1 for r in recs if r["at"][:10] == today)
@@ -546,6 +585,39 @@ def section_foreign_db() -> None:
         warn("fleet_keeper 還沒有日誌——這四條線沒人自動重拉")
 
 
+# ── 五、譯文品質與目錄稽核（2026-09-27 加）────────────────────────────────
+
+def section_quality() -> None:
+    """只讀最近一次稽核的輸出，不重跑（全站掃描要讀 Drive 上幾千個檔，約 40 分鐘）。
+    重跑：translation_fix.py scan --corpus all／audit_translation_ratio.py／audit_toc_accuracy.py。"""
+    print("\n━━ 五、譯文品質與目錄稽核 ━━━━━━━━━━━━━━━━━━━━━━━━━━")
+    tf = ROOT / "output" / "translation_fix"
+    scans = sorted(tf.glob("scan-*-all.json")) if tf.exists() else []
+    if scans:
+        age = (time.time() - scans[-1].stat().st_mtime) / 86400
+        rows = json.loads(scans[-1].read_text(encoding="utf-8"))
+        tot = sum(r.get("clear_total", 0) for r in rows)
+        print(f"  全站譯文掃描 {scans[-1].stem[5:18]}（{age:.1f} 天前）：待清空重譯 {tot:,} 段")
+        for r in rows:
+            if r.get("clear_total"):
+                print(f"    {r['corpus']:11} {r['clear_total']:>6,}  {dict(r.get('clear') or {})}")
+        if age > 7:
+            warn("全站譯文掃描超過 7 天沒重跑")
+    else:
+        warn("找不到全站譯文掃描報告（translation_fix.py scan --corpus all）")
+    ra = tf / "ratio_audit.tsv"
+    if ra.exists():
+        c = collections.Counter(l.split("\t")[2].split("?")[0] for l in ra.read_text(encoding="utf-8").splitlines()
+                                if l.count("\t") >= 2)
+        print(f"  長度比例稽核（捏造／截斷）：{dict(c)}（教父截斷多為整章原文造成的誤報）")
+    toc = ROOT / "output" / "toc_audit" / "summary.md"
+    if toc.exists():
+        lines = [l.strip("- ").strip() for l in toc.read_text(encoding="utf-8").splitlines() if l.startswith("- ")]
+        head = toc.read_text(encoding="utf-8").splitlines()[0].lstrip("# ")
+        print(f"  {head}")
+        print("    " + "；".join(lines[:8]))
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--author", help="併看某位全集作家（hub slug，如 mircea-eliade）")
@@ -561,12 +633,14 @@ def main() -> int:
             section_downloads(tasks)
             section_ocr(tasks)
             section_foreign_db()
+            section_quality()
     else:
         print(f"◆ 管線對帳 {dt.datetime.now():%Y-%m-%d %H:%M}\n")
         section_collected_works(a.author)
         section_downloads(tasks)
         section_ocr(tasks)
         section_foreign_db()
+        section_quality()
 
     print("\n━━ 警訊 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
     if warnings:

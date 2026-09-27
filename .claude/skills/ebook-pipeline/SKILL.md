@@ -1924,3 +1924,23 @@ Clean 750+ ebook chunks: convert simplified Chinese → traditional, fix formatt
 5. **救援**：Drive 網頁 → 檔案 → 管理版本（保留 30 天）。
 
 事故：2026-09-24 獎學金論文連續五次從 md 重建蓋掉修改；2026-09-26 弘青網路學堂文案定稿又從法師修訂稿整份重建，蓋掉使用者在定稿上的修改。
+
+## Workflow L — 目錄章節／切塊／頁碼準確度稽核（2026-09-27）
+
+`scripts/audit_toc_accuracy.py`（唯讀，讀 Drive `_chunks/*.jsonl` 約 30 分鐘）→ `output/toc_audit/toc_audit.tsv`（一書一列）＋ `summary.md`。
+`audit_book_structure.py` 只數「有沒有章節」，這支驗「對不對」：
+
+| 旗標 | 判準 | 09-27 本數 |
+|---|---|---|
+| NO_TOC | ≥30 塊但章名少於 2 種 | 1,403（1,295 是一頁一塊的 PDF、108 txt） |
+| PRINTED_TOC_MISS | 書前「目錄／Contents」頁條目在章名裡找得到 <50% | 1,240 |
+| SEQ_BROKEN | 第N章／Chapter N 跳號或倒退 | 558 |
+| RUNNING_HEADER | 同一章名在全書不連續出現 ≥3 段（書眉當章名） | 426 |
+| BODY_AS_TITLE | 章名是正文（>50 字、句號結尾、兩個以上逗號） | 425 |
+| GIANT_CHUNK／TINY_CHUNKS | 單塊 >80,000 字／三成以上 <150 字 | 326／117 |
+| PAGE_BACKWARD／PAGE_SERIAL | 頁碼倒退 ≥3 次／epub 流水號冒充頁碼 | 64／13 |
+
+分母 5,556 本；切塊粒度：一頁一塊 3,330（PDF）、一章一塊 1,538（EPUB 為主）、一節多塊 139、無章節 549。
+抽查結論：EPUB 的旗標多數是真的（《資本的世界史》只抓到第 1、3、5、6、8、15 章；笛卡兒《沉思集》英繁對照整本沒目錄；萊爾只抓到第 5、8、10 章）。
+已知誤報：多本合輯每本從第一章重編（SEQ_BROKEN）；印刷目錄帶章號而章名沒有。
+🚨 PDF 一頁一塊的 `page_number` 多半是 **PDF 頁序**（1,748 本），不是**印刷頁碼**；只有 MinerU 新管線會對印刷頁碼（1,776 本 real）。引用要印刷頁碼，見 [[feedback_transcribe_page_numbers]]。
