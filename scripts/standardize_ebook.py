@@ -1178,6 +1178,82 @@ def rebuild_toc_chunk(chunks, book=None):
     toc_chunk["content"] = "\n".join(lines)
 
 
+def ncx_to_toc(ncx_xml: str, base_dir: str = ""):
+    """NCX navMap → ebooklib 形狀的目錄（epub.Link／(epub.Section, [children])）。純函式。
+
+    2026-09-27：ebooklib 讀 EPUB3 nav.xhtml 時，每個 <li> 只取第一個 <a>。Google Books 製的
+    EPUB 在 <li> 裡先塞一個頁碼錨點 <a id="GBS.0005.03"/>（沒有 href），真正的連結在後面，
+    於是那些章整條消失、篇名變空白——《資本的世界史》19 章只剩 10 章，後面章節全被併進
+    前一章。同一本書的 NCX 是完整的，所以兩份都讀、取條目多的那份。
+    `base_dir`＝NCX 相對於 OPF 的目錄（ebooklib 的 href 以 OPF 為基準）。"""
+    import posixpath
+    import xml.etree.ElementTree as ET
+    root = ET.fromstring(ncx_xml.encode("utf-8") if isinstance(ncx_xml, str) else ncx_xml)
+    ns = {"n": root.tag.split("}")[0].strip("{")} if root.tag.startswith("{") else {}
+    q = (lambda t: f"n:{t}") if ns else (lambda t: t)
+
+    def label(np):
+        el = np.find(f"{q('navLabel')}/{q('text')}", ns)
+        return (el.text or "").strip() if el is not None else ""
+
+    def href(np):
+        el = np.find(q("content"), ns)
+        src = el.get("src", "") if el is not None else ""
+        return posixpath.normpath(posixpath.join(base_dir, src)) if src and base_dir else src
+
+    def walk(parent):
+        out = []
+        for np in parent.findall(q("navPoint"), ns):
+            kids = walk(np)
+            t, h = label(np), href(np)
+            if kids:
+                out.append((epub.Section(t, h), kids))
+            elif t and h:
+                out.append(epub.Link(h, t, np.get("id") or t))
+        return out
+
+    nav_map = root.find(q("navMap"), ns)
+    return walk(nav_map) if nav_map is not None else []
+
+
+def toc_entry_count(toc) -> int:
+    n = 0
+    if toc and not isinstance(toc, (list, tuple)):
+        toc = [toc]           # ebooklib 偶爾把只有一個子項的層級給成單一 Link
+    elif isinstance(toc, tuple) and len(toc) == 2 and not isinstance(toc[1], (list, tuple)):
+        toc = [toc]
+    for it in toc or []:
+        if isinstance(it, tuple):
+            sec, kids = it
+            n += (1 if (getattr(sec, "title", "") or "").strip() else 0) + toc_entry_count(kids)
+        elif (getattr(it, "title", "") or "").strip() and getattr(it, "href", ""):
+            n += 1
+    return n
+
+
+def _prefer_richer_toc(b) -> None:
+    """nav.xhtml 解析掉條目時改用 NCX（見 ncx_to_toc）。"""
+    import posixpath
+    for item in b.get_items_of_type(ebooklib.ITEM_NAVIGATION):
+        name = getattr(item, "file_name", "") or ""
+        if not name.lower().endswith(".ncx"):
+            continue
+        try:
+            alt = ncx_to_toc(item.get_content().decode("utf-8", "replace"), posixpath.dirname(name))
+        except Exception as e:  # noqa: BLE001
+            print(f"  NCX 解析失敗（沿用 nav）：{e}")
+            return
+        try:
+            cur, new = toc_entry_count(b.toc), toc_entry_count(alt)
+        except Exception as e:  # noqa: BLE001  計數失敗就沿用原目錄，不讓整本標準化失敗
+            print(f"  目錄計數失敗（沿用 nav）：{e}")
+            return
+        if new > cur:
+            print(f"  目錄改用 NCX：nav 只解析到 {cur} 條，NCX 有 {new} 條")
+            b.toc = alt
+        return
+
+
 def standardize(book):
     """Re-parse EPUB → cleaned markdown chunks."""
     if book["file_type"] != "epub":
@@ -1189,6 +1265,7 @@ def standardize(book):
 
     print(f"Parsing: {src.name}  ({src.stat().st_size//1024} KB)")
     b = epub.read_epub(str(src))
+    _prefer_richer_toc(b)
 
     # Iterate documents in spine order (preserves reading order)
     spine_ids = [s[0] for s in b.spine]

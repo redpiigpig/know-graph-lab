@@ -19,6 +19,8 @@ export interface ChunkData {
   chunk_index: number;
   chunk_type: "page" | "chapter" | "section";
   page_number: number | null;
+  // 原書印刷頁碼（MinerU／printed-page 回填才有）；page_number 是 PDF 實體頁序，兩者不同。
+  printed_page?: number | null;
   chapter_path: string | null;
   volume?: string | null;
   // Father/parent-author for multi-work collections (Schaff ANF/NPNF).

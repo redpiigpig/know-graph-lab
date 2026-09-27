@@ -605,6 +605,8 @@ const pageDhNumber = ref<number | null>(null);
 // Original PDF page (1-indexed). Surfaced in copy citations but NOT shown
 // inline — keeps the reader clean while preserving citation accuracy.
 const pagePdfPage = ref<number | null>(null);
+// 原書印刷頁碼：引用優先用它（PDF 實體頁序會因前言羅馬頁、插頁而錯開，照著引會引錯頁）。
+const pagePrintedPage = ref<number | null>(null);
 const dhJumpInput = ref<string>("");
 const isBilingualMode = computed(() => ebook.value?.display_mode === "bilingual-parallel");
 
@@ -1482,6 +1484,7 @@ async function loadPage(page: number) {
   pageSectionType.value = data?.currentPage?.section_type ?? null;
   pageDhNumber.value = data?.currentPage?.dh_number ?? null;
   pagePdfPage.value = data?.currentPage?.page_number ?? null;
+  pagePrintedPage.value = data?.currentPage?.printed_page ?? null;
   pageLoading.value = false;
   jumpPage.value = page;
 
@@ -2070,7 +2073,7 @@ function findNearestPageBeforeNode(startNode: Node | null): number | null {
   // No inline {{p:N}} markers? Fall back to the chunk's own page_number
   // metadata (Denzinger and similar bilingual-parallel books don't insert
   // inline page-markers — citations still need the original PDF page).
-  if (!markers.length) return pagePdfPage.value ?? null;
+  if (!markers.length) return pagePrintedPage.value ?? pagePdfPage.value ?? null;
   // Find the LAST marker that's positioned <= startNode in document order.
   let best: HTMLElement | null = null;
   for (const m of markers) {

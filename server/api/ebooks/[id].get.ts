@@ -41,6 +41,7 @@ export default defineEventHandler(async (event) => {
       ? {
           id: `${id}-${chunkIndex}`,
           page_number: chunk.page_number ?? chunkIndex + 1,
+          printed_page: chunk.printed_page ?? null,
           chapter_path: chunk.chapter_path,
           chunk_type: chunk.chunk_type,
           content: chunk.content,
