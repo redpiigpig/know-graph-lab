@@ -42,8 +42,15 @@ def main() -> int:
     cands = [r for r in rows if r[2] == "epub" and r[3] != "collected-works" and FLAGS & set(r[-1].split(","))]
     if limit:
         cands = cands[:limit]
-    rep = open(ROOT / "output/toc_audit/restandardize_report.tsv", "w", encoding="utf-8")
-    rep.write("id\ttitle\tresult\told_chars\tnew_chars\told_titles\tnew_titles\told_max\tnew_max\n")
+    rp = ROOT / "output/toc_audit/restandardize_report.tsv"
+    done_ids: set[str] = set()
+    if "--resume" in sys.argv and rp.exists():   # 已處理的不重做；報告改附加
+        done_ids = {l.split("\t")[0] for l in rp.read_text(encoding="utf-8").splitlines()[1:]}
+        rep = open(rp, "a", encoding="utf-8")
+    else:
+        rep = open(rp, "w", encoding="utf-8")
+        rep.write("id\ttitle\tresult\told_chars\tnew_chars\told_titles\tnew_titles\told_max\tnew_max\n")
+    cands = [r for r in cands if r[0] not in done_ids]
     stat = {}
     for n, r in enumerate(cands):
         bid = r[0]
@@ -77,8 +84,11 @@ def main() -> int:
                         if not bak.exists():
                             shutil.copy2(p, bak)
                         out = se.write_jsonl(bid, new)
-                        se.push_to_r2(bid, out)
-                        se.update_db(bid, new)
+                        try:
+                            se.push_to_r2(bid, out)
+                            se.update_db(bid, new)
+                        except Exception as e:  # noqa: BLE001  09-27 Supabase 逾時讓整批在 294 本中止
+                            res = f"apply-sync-failed {type(e).__name__}"
                 else:
                     res = "no-improvement"
             else:
