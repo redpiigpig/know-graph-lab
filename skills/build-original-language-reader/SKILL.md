@@ -17,8 +17,9 @@ Read these files for every production run:
 - `references/qa-gates.md`
 - `references/exercise-sets.md` — the ten translation exercises that now stand
   where the two memory verses used to.  It carries the frozen contract (ten
-  items, original into Chinese only, seven composed plus three quoted, all
-  twenty lesson words present, no untaught word), the one method that was tried
+  items, original into Chinese only, seven composed plus three quoted, one
+  coherent sentence per item, Hebrew all twenty lesson words / Latin and Japanese
+  at least 15 of 20 since 2026-09-27, no untaught word), the one method that was tried
   and ruled out, what the corpus gate can and cannot certify, and a status table
   saying which reader is finished.
 - `references/silent-failures.md` — the bugs in this series that shipped a page
@@ -382,6 +383,11 @@ Stop the release and report the exact gap when:
 
 - the content gate above has not been run on the final rendered pages, or its
   severe findings have not been fixed;
+- composed exercises were written or reviewed without the acceptance in
+  `references/exercise-sets.md`「寫句與驗收」: write with Opus, pass
+  `check_exercise_coherence.py`, check the review's scope against git HEAD by
+  script, and read 40 random sentences yourself — gates and a writer's
+  "reviewed every sentence" have certified word salad four times;
 
 - an exact source edition or authorization record is missing;
 - a textbook order would need to be invented;
