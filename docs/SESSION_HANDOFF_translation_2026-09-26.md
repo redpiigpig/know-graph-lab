@@ -12,10 +12,10 @@
 ## 正在背景跑的（不耗 Claude）
 | 項目 | 怎麼看進度 |
 |---|---|
-| 涂爾幹《宗教生活的基本形式（英繁對照）》補註：註文少 15 條、正文註號少 291 處，`scripts/fix_durkheim_notes.py --apply → --push → --verify` | `scripts/logs/durkheim_notes_2026-09-26.log`（UTF-16，結尾 ALL DONE）；完成後 `fix_durkheim_notes.py` 還沒 commit，要提交 |
-| 研究回顧補譯 lane `litreview-retrans`（3,643 段拒答清空後補譯） | `scripts/logs/fleet_litreview-retrans.out.log` |
+| ✅ 涂爾幹補註：已完成（英中註各 1,319 條、缺 0），腳本已提交 | — |
+| ✅ 研究回顧補譯：09-27 完成（3,643 段：補 2,883、留白 753、放棄 7、剩 0） | — |
 | 教父英文段補譯：排程 KGL_Fathers_Retranslate（已開，時限 PT10M） | 排程＋`fathers_retranslate_untranslated.py --scan` |
-| 一般譯書／全集／東方聖書補譯：09-26 晚改由 `output/translation_fix/retrans_resume.ps1` 一支接手（原 books／untrans 兩支因用 UTF-16 比對 ANSI 寫的 ALL DONE 從未啟動、重開機後消失；cleared 那支的推 R2 全部因 PS5.1 吃掉引號失敗、gnostic 用了不收的 auto、東方聖書用錯 driver，都已在 resume 裡補正） | `scripts/logs/retrans_resume_2026-09-26.log` 結尾 ALL DONE |
+| ✅ 一般譯書／全集／東方聖書補譯：09-27 收尾。全集與東方聖書空白段 0（僅古蘭經下 sec12#3 一條註腳連敗留空）；一般譯書 80 本剩 75 段全是索引／書目／註腳出處（偵測器誤判，本來就留原文），另修 10 段（休謨等章首夾帶捏造英文→只留章名、2 段拒答→原文），80 本已推 R2。清單 output/translation_fix/remaining_classified.tsv | — |
 | 圖書館 MinerU OCR lane `mineru-queue`（272 本掃描書回補） | `scripts/logs/fleet_mineru-queue.out.log` |
 
 ## 待辦（依優先）
