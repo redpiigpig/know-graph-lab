@@ -1951,6 +1951,6 @@ Clean 750+ ebook chunks: convert simplified Chinese → traditional, fix formatt
   只合併「有章節」的書（09-27：可合 628 本；2,496 本一頁一塊但沒章節，要先補章節才合得了）；有 source_text／sources 的不動。
 - **註釋上下互點**：頁尾「50譯註：…」→ `(50) 譯註：…` 一條一段集中節末（reader 在 15 條破折號分隔線後認 `(N)`，帶 ↩）；正文註號 → `[^N]`（只認該頁有的號碼、緊接中文或標點、後面不是數字／年月日；OCR「5°」＝50）。《民主妙法》597 條註連上 411 個。
 - **目錄「章 / 節」**：`loadToc` 遇到 chapter_path 是「章 / 節」或「章 > 節」路徑時，章名只出一次、節縮排；以前每節都掛完整章名，看起來同一章重複好幾次。
-- **印刷頁碼**：`page_number`＝PDF 實體頁序，`printed_page`＝書上印的頁碼；reader 引用優先用 printed_page。`backfill_printed_pages.py` 從頁首頁尾回填（09-27 補 1,043 本），`--labels` 改讀 PDF 內建頁碼標籤。
+- **印刷頁碼**：`page_number`＝PDF 實體頁序，`printed_page`＝書上印的頁碼；reader 引用優先用 printed_page。`backfill_printed_pages.py` 從頁首頁尾回填（09-27 補 1,043 本），`--labels` 改讀 PDF 內建頁碼標籤（09-27 再補 100 本／43,147 頁；15 本標籤壞掉讀取卡死，已改子程序 60 秒逾時略過）。合計 1,143 本 PDF 有印刷頁碼；仍有約 1,235 本一頁一塊的 PDF 文字層與標籤都沒頁碼。🚨 回填與 consolidate 不可同時跑（會互相蓋回）。
 - 🚨 MinerU 新入庫的書是一頁一塊、沒有章節；補好章節後要再跑一次 consolidate，否則又是一頁一塊。
 - 🚨 標準化程式 09-27 三修：附錄合併不再吞正文（「致謝／文獻」子字串曾把整本併進一塊）、nav.xhtml 被 GBS 錨點吃條目時改讀 NCX、日文書整本不做簡轉繁。批次重建 `restandardize_epub_toc.py` 寫入 47 本。
