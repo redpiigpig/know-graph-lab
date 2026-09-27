@@ -1944,3 +1944,13 @@ Clean 750+ ebook chunks: convert simplified Chinese → traditional, fix formatt
 抽查結論：EPUB 的旗標多數是真的（《資本的世界史》只抓到第 1、3、5、6、8、15 章；笛卡兒《沉思集》英繁對照整本沒目錄；萊爾只抓到第 5、8、10 章）。
 已知誤報：多本合輯每本從第一章重編（SEQ_BROKEN）；印刷目錄帶章號而章名沒有。
 🚨 PDF 一頁一塊的 `page_number` 多半是 **PDF 頁序**（1,748 本），不是**印刷頁碼**；只有 MinerU 新管線會對印刷頁碼（1,776 本 real）。引用要印刷頁碼，見 [[feedback_transcribe_page_numbers]]。
+
+### L-2（2026-09-27 使用者定：「盡量都改成一節一塊，原書頁碼只要有保留就好」）
+
+- **一頁一塊 → 一節一塊**：`scripts/consolidate_page_chunks.py --ids <id> [--apply]`／`--all --apply`。同一 chapter_path 的連續頁合一塊（上限 1.5 萬字），每頁開頭插 `{{p:印刷頁碼}}`（reader 顯示〔頁N〕、引用取游標前最近一個），頁碼清單存 `page_numbers`＋`printed_pages`（`loadPageMap` 依此展開，PDF 對照不落空）。跨頁斷句直接接回。留 `.jsonl.bak_pages`。
+  只合併「有章節」的書（09-27：可合 628 本；2,496 本一頁一塊但沒章節，要先補章節才合得了）；有 source_text／sources 的不動。
+- **註釋上下互點**：頁尾「50譯註：…」→ `(50) 譯註：…` 一條一段集中節末（reader 在 15 條破折號分隔線後認 `(N)`，帶 ↩）；正文註號 → `[^N]`（只認該頁有的號碼、緊接中文或標點、後面不是數字／年月日；OCR「5°」＝50）。《民主妙法》597 條註連上 411 個。
+- **目錄「章 / 節」**：`loadToc` 遇到 chapter_path 是「章 / 節」或「章 > 節」路徑時，章名只出一次、節縮排；以前每節都掛完整章名，看起來同一章重複好幾次。
+- **印刷頁碼**：`page_number`＝PDF 實體頁序，`printed_page`＝書上印的頁碼；reader 引用優先用 printed_page。`backfill_printed_pages.py` 從頁首頁尾回填（09-27 補 1,043 本），`--labels` 改讀 PDF 內建頁碼標籤。
+- 🚨 MinerU 新入庫的書是一頁一塊、沒有章節；補好章節後要再跑一次 consolidate，否則又是一頁一塊。
+- 🚨 標準化程式 09-27 三修：附錄合併不再吞正文（「致謝／文獻」子字串曾把整本併進一塊）、nav.xhtml 被 GBS 錨點吃條目時改讀 NCX、日文書整本不做簡轉繁。批次重建 `restandardize_epub_toc.py` 寫入 47 本。
