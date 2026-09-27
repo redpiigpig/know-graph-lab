@@ -49,3 +49,10 @@ App（`org.fgs.introbookapp` / iOS `id1441930680`）幾乎必然打私有 JSON A
 ## 雷區
 - 著作總覽是 Word 匯出（mso- styles），無乾淨 12 大類標頭、年代只 24 個 marker → **不要硬塞年份/大類**（會錯）；書目先用「依文件順序的唯一書名」最誠實。
 - 別在官網 reader 上硬爬：sitemap/API/XHR 全試過，沒有乾淨全文路徑。
+
+## 2026-09-27 移除官網附錄區重複入口（使用者同意）
+
+《傳燈》(…108，31 字)、《雲水日月2》(…109，29 字)、《佛教叢書1　教理(1)》(…107，4,387 字) 是官網「第十二類附錄／教科書」的單篇入口，
+完整冊另存（262傳燈 12 萬字、263-264雲水日月 26 萬字、043-070佛教叢書 28 冊）。已刪 DB 三列（備份 `output/removed_ebooks_hsingyun_dups_2026-09-27.json`）、
+移出 `stores/collectedWorks.ts`；`hsingyun_build.py` 加 `DUP_SKIP` 在建冊時跳過。
+🚨 **registry 不可刪這三筆**——`build_registry()` 按排序位置配 ebook_id，少一筆後面每冊都換號。

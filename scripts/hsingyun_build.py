@@ -45,6 +45,7 @@ if _ENV_PATH.exists():
 BASE = "https://books.masterhsingyun.org"
 ART_URL = BASE + "/ArticleDetail/artcle{n}"
 CACHE_DIR = Path(os.environ.get("HSINGYUN_CACHE") or r"c:/tmp/hsingyun_cache")
+DUP_SKIP = {"傳燈", "雲水日月2", "佛教叢書1　教理(1)"}  # 官網附錄區重複入口（09-27 移除）
 REG_PATH = SCRIPT_DIR.parent / ".claude/skills/ebook-collected-works/hsingyun_registry.json"
 EBID_PREFIX = "c0000000-0000-4000-8000-"
 _UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
@@ -294,6 +295,9 @@ def main():
         books = group_books(load_cache())
         reg = build_registry()
         targets = [a.book] if a.book else sorted(books, key=book_sort_key)
+        # 2026-09-27 使用者定：官網附錄區的重複入口不建冊（完整冊另存：傳燈／雲水日月／佛教叢書）。
+        # 🚨 只在這裡跳過，不能從 group_books 拿掉——registry 按排序位置配 ebook_id，拿掉會讓後面每冊換號。
+        targets = [bk for bk in targets if bk not in DUP_SKIP]
         if a.resume:
             done = _books_with_chunks({reg[bk]["ebook_id"]: bk for bk in targets if bk in reg})
             targets = [bk for bk in targets if bk not in done]
