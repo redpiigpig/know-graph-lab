@@ -2,74 +2,42 @@
   "volume": 1,
   "lesson": 26,
   "author": "opus-5-hand-written",
-  "note": "本課四個詞武加大沒有字形：genuflectō、paschālis、refundō、scandō——禮儀用語與武加大落差最大的一批。passiō 沒有主格單數進語料，只有 passionem／passiones 等。",
+  "note": "2026-09-27 全句重寫。🚨 genuflectō／refundō／scandō 在武加大＋教會語料中零字形，練不到；20 詞僅練 17。paschālis 只用中性 paschale 形（語料無陽性 paschalis 字形）。",
   "sentences": [
     {
-      "latin": "fixum est et fregit",
-      "chinese": "它被釘牢了，而他打碎了。",
-      "targets": [
-        "figo",
-        "sum",
-        "frango"
-      ]
+      "latin": "Christus manibus figitur.",
+      "chinese": "基督的雙手被刺穿。",
+      "targets": ["Christus", "manus", "figo"]
     },
     {
-      "latin": "fudit potum intra templum",
-      "chinese": "他在聖殿裡傾倒了飲料。",
-      "targets": [
-        "fundo",
-        "potus",
-        "intra",
-        "templum"
-      ]
+      "latin": "Sacerdos panem fregit; Pascha omnibus datum est.",
+      "chinese": "司祭擘開了餅；逾越節的羔羊已分給眾人。",
+      "targets": ["sacerdos", "frango", "Pascha", "omnis"]
     },
     {
-      "latin": "passiones et genua",
-      "chinese": "諸般苦難與雙膝。",
-      "targets": [
-        "passio",
-        "genu"
-      ]
+      "latin": "Genu flectitur; sacramentum paschale servatur.",
+      "chinese": "膝蓋屈下了；逾越節的聖事被遵守。",
+      "targets": ["genu", "sacramentum", "paschalis"]
     },
     {
-      "latin": "Infunde ritum et paschale",
-      "chinese": "你要注入禮儀與逾越之物。",
-      "targets": [
-        "Pascha",
-        "infundo",
-        "paschālis",
-        "ritus"
-      ]
+      "latin": "Calix potum infundit; Deus omnipotens est.",
+      "chinese": "聖爵注入了飲品；天主是全能的。",
+      "targets": ["calix", "potus", "infundo", "Deus", "omnipotens"]
     },
     {
-      "latin": "omnipotens quapropter venit",
-      "chinese": "全能者因此而來。",
-      "targets": [
-        "omnipotens",
-        "quapropter",
-        "venio"
-      ]
+      "latin": "Intra ecclesiam populus stat.",
+      "chinese": "百姓站在教會之內。",
+      "targets": ["intra", "ecclesia", "populus"]
     },
     {
-      "latin": "genu fixum intra aulam",
-      "chinese": "在殿堂裡固定的膝。",
-      "targets": [
-        "genu",
-        "figo",
-        "intra",
-        "aula"
-      ]
+      "latin": "Memor passionis, sacerdos quapropter orat; ritus servatur.",
+      "chinese": "因為記念苦難，司祭於是祈禱；那禮儀被遵守。",
+      "targets": ["memor", "passio", "quapropter", "ritus"]
     },
     {
-      "latin": "refudit potum et fregit calicem",
-      "chinese": "他退還了飲料，又打碎了杯。",
-      "targets": [
-        "calix",
-        "frango",
-        "fundo",
-        "potus",
-        "refundō"
-      ]
+      "latin": "Sanguinem fudit; hostia salutaris est.",
+      "chinese": "他傾流了血；那祭品是救恩的。",
+      "targets": ["sanguis", "fundo", "salutaris"]
     }
   ]
 }

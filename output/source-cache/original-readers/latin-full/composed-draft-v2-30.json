@@ -1,13 +1,43 @@
 {
-  "volume": 2, "lesson": 30, "author": "opus-5-hand-written",
-  "note": "December 兩層語料都沒有字形；progressiō 也沒有（語料裡是 progressus 那一條）。",
+  "volume": 2,
+  "lesson": 30,
+  "author": "opus-5-hand-written",
+  "note": "2026-09-27 全句重寫。🚨 December 在武加大＋教會語料中零字形，練不到；20 詞僅練 19。",
   "sentences": [
-    {"latin": "complexus nequit regimen", "chinese": "他擁抱了，卻無法治理。", "targets": ["complector", "nequeo", "regimen"]},
-    {"latin": "sacerdotio personalis præcipue", "chinese": "尤其在司鐸職上是屬個人的。", "targets": ["sacerdotium", "personalis", "praecipue"]},
-    {"latin": "student indiget elementa", "chinese": "他們熱衷，卻缺乏那些元素。", "targets": ["studeo", "indigeo", "elementum"]},
-    {"latin": "attingere regiminis elementis", "chinese": "要以那些元素觸及治理。", "targets": ["attingo", "regimen", "elementum"]},
-    {"latin": "Nimirum multiplex fiducia", "chinese": "顯然是多層次的信賴。", "targets": ["nimirum", "multiplex", "fiducia"]},
-    {"latin": "demum regimen personali", "chinese": "最終是屬個人的治理。", "targets": ["demum", "regimen", "personalis"]},
-    {"latin": "indigens studeant attingit", "chinese": "那缺乏的人，願他們熱衷，他也觸及了。", "targets": ["indigeo", "studeo", "attingo"]}
+    {
+      "latin": "Ecclesia sacerdotium complectitur; regimen habet; elementum manet.",
+      "chinese": "教會擁抱了聖職；她擁有治理；要素長存。",
+      "targets": ["ecclesia", "sacerdotium", "complector", "regimen", "elementum"]
+    },
+    {
+      "latin": "Nequit omnia facere; industria studet.",
+      "chinese": "他不能夠做到一切；他以勤奮致力於。",
+      "targets": ["nequeo", "omnis", "industria", "studeo"]
+    },
+    {
+      "latin": "Revera personalis fides indiget gratia.",
+      "chinese": "確實，個人的信德需要恩寵。",
+      "targets": ["revera", "personalis", "fides", "indigeo", "gratia"]
+    },
+    {
+      "latin": "Praecipue imprimis Deum attingit fides.",
+      "chinese": "尤其首要地，信德觸及了天主。",
+      "targets": ["praecipue", "imprimis", "Deus", "attingo", "fides"]
+    },
+    {
+      "latin": "Progressus fiduciam auget.",
+      "chinese": "進展增加了信心。",
+      "targets": ["progressus", "fiducia", "augeo"]
+    },
+    {
+      "latin": "Effectus progressionis multiplex est; nimirum demum crescit.",
+      "chinese": "進展的果效是多重的；毫無疑問，它終於增長了。",
+      "targets": ["progressio", "multiplex", "nimirum", "demum"]
+    },
+    {
+      "latin": "Sacerdotium multiplex regimen attingit.",
+      "chinese": "聖職觸及了多重的治理。",
+      "targets": ["sacerdotium", "multiplex", "regimen", "attingo"]
+    }
   ]
 }

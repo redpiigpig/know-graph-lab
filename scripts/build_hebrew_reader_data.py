@@ -579,7 +579,13 @@ def assemble() -> dict:
             # 裁與不裁都一樣。（希臘下冊不是這樣，那邊先挑後裁，五十四則背誦句
             # 指向被砍掉的段落。換語言就要重新查一次，不要照搬這個結論。）
         else:
-            reading = clip_reading({"kind": "prayer_or_article", **prayer_items[lesson_number - 26]})
+            item = prayer_items[lesson_number - 26]
+            # The running head prints this word ("PRAYER" / "ARTICLE"); a
+            # hardcoded "prayer_or_article" left it as an untranslated
+            # placeholder on every one of lessons 26-45. Derive it from the
+            # item's own id prefix (hbo-prayer-… vs hbo-article-…) instead.
+            item_kind = "article" if item.get("id", "").startswith("hbo-article-") else "prayer"
+            reading = clip_reading({"kind": item_kind, **item})
             title = reading["title_zh"]
         lessons.append(
             {
@@ -620,7 +626,7 @@ def assemble() -> dict:
             "vocabulary": sum(len(lesson["vocabulary"]) for lesson in lessons),
             "memoryVerses": sum(len(lesson["memoryVerses"]) for lesson in lessons),
             "bibleChapters": sum(lesson["reading"]["kind"] == "bible_chapter" for lesson in lessons),
-            "prayersOrArticles": sum(lesson["reading"]["kind"] == "prayer_or_article" for lesson in lessons),
+            "prayersOrArticles": sum(lesson["reading"]["kind"] in ("prayer", "article") for lesson in lessons),
             "haggadahSteps": len(haggadah["steps"]),
         },
         "textPolicy": {

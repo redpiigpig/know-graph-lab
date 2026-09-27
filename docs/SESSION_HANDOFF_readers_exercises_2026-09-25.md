@@ -62,3 +62,24 @@ TSV（含希伯來）＋英文托福 B2–C2 六千字（240 課，`scripts/expo
 `qa_reader_rendered_pages.py` → `build_reader_spines.py` → `sync_reader_artifacts.py --write`。
 🚨 同一 session 最多三個 agent（使用者這次特准四個，不是常態）。
 🚨 版面又改了，`reader_page_budget.py` 的係數要重量（`fit_reader_reading_limit.py`）。
+
+## 三、2026-09-27 收尾：練習題重寫與內容校對殘項 ✅
+
+四語都做完、七冊與十一副單字卡重出、稽核全綠（只剩已知孤兒頁）、Drive PDF 已同步（Drive 上的 .docx 未覆蓋，照 CLAUDE.md 規矩）。
+頁數：希伯來 422、希臘 367／464、拉丁 339／325、日文 281／282。
+
+- **練習題**：希伯來 79 句、希臘 603 句、日文 464＋25 句（と 三項以上並列）逐句換掉；拉丁上冊 19–50、下冊 1–50 共 574 句**手寫重寫**。
+  四支 `compose_*_sentences.py` 都加了句型閘（有述語／限定動詞、δέ・γάρ・οὖν 不在句首、ἵνα 等後須假設語氣、標題詞與詞形相符、
+  拉丁正字法 æ/œ/j、日文 と 並列上限、副詞助詞不直接接です），只套自撰題，引用題不套（套了會誤殺 58/300 句真語料）。
+- 🚨 **拉丁第一次重寫用「規則式產生器」→ 閘全綠但是新型詞沙拉**（`Dominus testem crēscit`、`Ignis lacrimæ est`「火與淚相關」、中譯夾拉丁字）。
+  產生器版備份在 `latin-full/_prev-generator-2026-09-27/`（本機）。**自撰句禁止模板產生**；驗收一定要自己抽樣讀，不能信 agent 說「逐句讀過」。
+- **內容校對**（逐條狀態在 `output/qa/original-readers/content-review-2026-09-23/status-{hebrew,greek,latin,japanese}.json`，本機）：
+  希伯來 fixed 73／pending 16；希臘 fixed 167／pending 238（大宗是逐詞層，紙本不印）；拉丁 fixed 115＋already 36／逐詞層 56／pending 100；
+  日文 pending 6。日文另有 179＋41 段文言譯文改白話（聖經文語譯引文、詩篇標題、信經、和歌照規矩不動）。
+- 🚨 原文欄位（printedEntry／forms）不可放中文：希臘 5 條、拉丁 2 條曾印出「（簡單過去時）」「（不變格）」→ LibreOffice 退回 NotoSansJP 未內嵌。改用 aor./gen./indecl.。
+- 🚨 詞表 headword 一改（αιλαμ→Αἰλάμ、edo→ēdō…）必須重跑 assemble，否則 builder 報「兩邊對的不是同一個詞」。
+
+**待使用者定奪**：希伯來稱上帝 你／祢／您 與 אֲדֹנָי 五種譯法；次經書名思高／和修（希臘讀本已依課題用思高名）；日文語域要不要放寬出《大家的日本語》；
+拉丁 operō／operor 重複；日文詞表 na 形容詞別名鍵與「いい」詞條。
+**未做**：希臘／拉丁逐詞層（線上）殘錯、拉丁 -que 接回後逐詞層要重跑 `build_latin_interlinear.py`、日文 50 段逐詞層留白（別用 Haiku）、
+拉丁 Trent 書目段與分節錯位三處、希臘禮儀附錄 永貞／童貞 等用字統一、部分課生詞覆蓋 16–19/20。

@@ -5,72 +5,61 @@
   "note": "sacrosānctus 與 salūtifer 武加大都沒有字形，練不到。meritum 與第 7 課的 meritō 一樣只認 Merito 一形。supernus 只有 supernis／supernæ，沒有中性複數主格。",
   "sentences": [
     {
-      "latin": "iterum et jam in silentio",
-      "chinese": "再一次，而且此刻，在寂靜中。",
+      "latin": "Jam iterum silentium est in templo",
+      "chinese": "此刻聖殿中又有寂靜。",
       "targets": [
         "iterum",
-        "jam",
-        "in",
+        "iam",
         "silentium"
       ]
     },
     {
-      "latin": "Merito Repleti sunt",
-      "chinese": "他們理當被充滿了。",
+      "latin": "Merito repleti sunt gaudio",
+      "chinese": "他們理當因喜樂而被充滿。",
       "targets": [
         "meritum",
-        "repleo",
-        "sum"
+        "repleo"
       ]
     },
     {
-      "latin": "mira sacrosancta in supernis",
-      "chinese": "天上至聖的奇事。",
+      "latin": "Mysteria sacrosancta et mira in supernis sunt",
+      "chinese": "至聖而奇妙的奧秘都在天上。",
       "targets": [
-        "in",
         "mirus",
-        "sacrosānctus",
         "supernus"
       ]
     },
     {
-      "latin": "mundus est per gratiam salutiferam",
-      "chinese": "他藉救恩的恩寵而潔淨。",
+      "latin": "Per gratiam mundus est.",
+      "chinese": "他藉著恩寵而潔淨。",
       "targets": [
         "mundus",
-        "per",
-        "grātia",
-        "salūtifer"
+        "per"
       ]
     },
     {
-      "latin": "post silentium quando venit",
-      "chinese": "寂靜之後，他何時來。",
+      "latin": "Quando Dominus venit, silentium est",
+      "chinese": "上主來的時候，便有寂靜。",
       "targets": [
-        "post",
-        "silentium",
         "quando",
-        "venio"
+        "silentium"
       ]
     },
     {
-      "latin": "sed terrenus non est mundus",
+      "latin": "Sed terrenus non est mundus",
       "chinese": "然而屬地的並不潔淨。",
       "targets": [
+        "mundus",
         "sed",
-        "terrenus",
-        "non",
-        "sum",
-        "mundus"
+        "terrenus"
       ]
     },
     {
-      "latin": "quoniam iterum venit",
-      "chinese": "因為他又來了。",
+      "latin": "Gaudium est, quoniam Dominus iterum venit",
+      "chinese": "有喜樂，因為上主又來了。",
       "targets": [
-        "quoniam",
         "iterum",
-        "venio"
+        "quoniam"
       ]
     }
   ]

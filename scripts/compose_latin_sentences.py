@@ -33,6 +33,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 
 from pathlib import Path
@@ -171,6 +172,254 @@ def part_is_taught(
     return False
 
 
+def _looks_like_verb_entry(entry: Any) -> bool:
+    """A crude POS test read from the vocabulary's own ``forms`` field.
+
+    This vocabulary carries no clean part-of-speech column for verbs (``gram``
+    is filled in for prepositions, conjunctions, adverbs… and left blank for
+    nouns and verbs alike). But a verb's second principal part is always its
+    infinitive, and nothing else in this vocabulary's ``forms`` field ends
+    that way: ``flectō, flectere, flexī, flexus`` / ``cōnor, cōnārī, —,
+    cōnātus sum``. Good enough to separate "this headword is a verb" from
+    "this headword is not", which is all the fallback below needs.
+    """
+    pieces = [p.strip() for p in re.split(r"[,;]", getattr(entry, "forms", "") or "") if p.strip()]
+    if len(pieces) < 2:
+        return False
+    inf = fold(pieces[1])
+    return inf.endswith("re") or inf.endswith("ri")
+
+
+def verb_stems_of(entries: Iterable[Any]) -> set[str]:
+    """Stems of every verb-looking entry, for the predicate gate's fallback.
+
+    Built once per run and passed into ``verify``/``has_predicate``.
+    """
+    stems: set[str] = set()
+    for entry in entries:
+        if _looks_like_verb_entry(entry):
+            stems |= getattr(entry, "credit_stems", set())
+    return stems
+
+
+def has_predicate(
+    readings: Sequence[dict[str, Any]],
+    tagger: Tagger,
+    verb_stems: Iterable[str] | None = None,
+) -> bool:
+    """Does the sentence carry at least one finite verb (2026-09-27 gate)?
+
+    Added after the 2026-09-25 grammar review: 404 of 720 composed sentences
+    were severe, and the largest single category was word-heaps with no
+    predicate at all -- three or four nouns and adverbs in different cases,
+    readable as nothing.  ``est``/``sunt`` themselves are ordinary finite verbs
+    in the treebanks, so a noun sentence with an explicit copula already
+    satisfies this without any special case for it; what this catches is the
+    noun-phrase-as-sentence the report calls out.
+
+    Checked first against ``Tagger.finite_keys``, which is blind to context
+    the same way ``is_verbal`` already is -- a form ambiguous between finite
+    and non-finite counts as having a predicate if any treebank occurrence
+    tagged it finite.
+
+    ``verb_stems`` is a second, narrower route for a form the six treebanks
+    never saw at all: ``collaudāte`` is imperative plural of this reader's own
+    ``collaudō`` and is attested in the Vulgate/church corpus, but has zero
+    occurrences in any UD Latin treebank, so ``finite_keys`` has no evidence
+    for it one way or the other. Falling back to "this word's stem belongs to
+    a vocabulary entry whose forms field is a verb's" only fires when the word
+    carries **no lemma at all** (a treebank that had seen the form even once,
+    tagged as a participle or infinitive, would have given it one, and that
+    lemma-bearing case is deliberately left to the strict route only) -- so it
+    cannot turn a real infinitive or participle into a false predicate.
+    """
+    for row in readings:
+        for part in row["parts"]:
+            if tagger.is_finite_key(part["key"]):
+                return True
+            if not part["lemmas"] and verb_stems:
+                if any(part["key"].startswith(stem) for stem in verb_stems):
+                    return True
+    return False
+
+
+def person_number_conflict(
+    readings: Sequence[dict[str, Any]], tagger: Tagger
+) -> tuple[list[str], list[str]]:
+    """Finite verbs in one sentence whose person/number cannot agree.
+
+    A proxy for "two verbs must share a subject" (2026-09-25 review, §2): most
+    of the ``et``-spliced pairs the review flagged as ungrammatical turn out to
+    disagree in person or number -- ``perfecisti et pervenit`` (2sg + 3sg),
+    ``collegerunt et descripsit`` (3pl + 3sg).  Only raised when every finite
+    verb in the sentence has *known* person/number evidence and their sets
+    share nothing in common; a form attested only via the lexicon tables (no
+    treebank occurrence, hence no feature evidence) is silently excused rather
+    than treated as a mismatch, because absence of evidence is not evidence of
+    disagreement.
+
+    Returns two lists, not one: *all* conflicting keys (reported always), and
+    the subset actually treated as an error. A bare 3rd-vs-3rd mismatch --
+    ``Dominus verbum tradidit et discipuli receperunt`` -- is completely
+    ordinary Latin: two different, explicitly named subjects, each with its
+    own verb. Latin has no other way to say that, and this checker cannot
+    parse which noun goes with which verb, so it cannot tell that case apart
+    from a genuine dangling ``et``-splice by number alone. Person 1 or 2 is
+    different: those persons have no noun to name them (nothing reads
+    "Petrus" as filling in for "I"), so ``incipiam et resurget`` (1sg + 3sg)
+    with no first-person noun anywhere is not a reading choice, it is a
+    contradiction. Blocking is therefore narrowed to a mismatch that involves
+    person 1 or 2; a 3rd-vs-3rd number clash is still recorded so the note
+    field can say why coverage looks the way it does, but does not fail the
+    sentence on its own.
+    """
+    finite_keys = [
+        part["key"]
+        for row in readings
+        for part in row["parts"]
+        if tagger.is_finite_key(part["key"])
+    ]
+    pn_sets = [tagger.person_number_for(key) for key in finite_keys]
+    known = [(key, pn) for key, pn in zip(finite_keys, pn_sets) if pn]
+    if len(known) < 2:
+        return [], []
+    common: set[tuple[str, str]] | None = None
+    for _, pn in known:
+        common = pn if common is None else (common & pn)
+    if common:
+        return [], []
+    all_conflicts = [key for key, _ in known]
+    involves_1_or_2 = any(
+        person in {"1", "2"} for _, pn in known for person, _ in pn
+    )
+    return all_conflicts, (all_conflicts if involves_1_or_2 else [])
+
+
+def target_mismatch(
+    readings: Sequence[dict[str, Any]],
+    targets: Iterable[str],
+    entries_by_headword: dict[str, list[Any]] | None,
+) -> list[str]:
+    """Declared ``targets`` whose headword no word in the sentence actually is.
+
+    2026-09-25 review, §5: ``ne fugerem`` is a form of ``fugiō`` (flee), and the
+    draft declared it practised ``fugō`` (drive out) -- attested, taught, and
+    simply the wrong verb.  Nothing upstream checks the draft's own claim about
+    itself; ``practised()`` recomputes coverage independently for the printed
+    book, but a human or model reading only the ``targets`` field would never
+    see the mismatch.  This reads the same ``credit_lemmas``/``credit_keys``
+    rule the coverage gate uses, so a target only ever counts as matched for
+    the reason the book would also count it matched.
+    """
+    if not entries_by_headword:
+        return []
+    seen_lemmas: set[str] = set()
+    seen_keys: set[str] = set()
+    for row in readings:
+        for part in row["parts"]:
+            seen_lemmas |= part["lemmas"]
+            seen_keys.add(part["key"])
+    bad: list[str] = []
+    for target in targets:
+        key = fold(target)
+        candidates = entries_by_headword.get(key)
+        if not candidates:
+            continue  # not a recognised headword (phrase piece, enclitic, "et" …): nothing to check
+        matched = False
+        for entry in candidates:
+            if getattr(entry, "phrase", False):
+                if entry.credit_keys <= seen_keys:
+                    matched = True
+                    break
+                continue
+            # Lemma route, then the entry's own written forms -- never the stem
+            # route. The stem route is exactly what let ``speciosum`` credit
+            # ``speciō`` and ``triumphabit`` credit ``triumphus`` in the vocabulary
+            # build: both share a six-letter prefix with a derived word that is
+            # not them. ``practised()`` keeps that fallback because some words
+            # are only reachable through it; a target declaration has no such
+            # excuse -- the author is claiming a specific word was used, and a
+            # prefix match is not evidence of that.
+            if entry.credit_lemmas & seen_lemmas:
+                matched = True
+                break
+            if entry.written_keys & seen_keys:
+                matched = True
+                break
+        if not matched:
+            bad.append(target)
+    return bad
+
+
+# 全書字例統一的正字法：ae→æ、oe→œ 連字，字首 i+母音→j（Iesus→Jesus、
+# Ianuarii→Januarii），少數前綴＋iacio/iungo 族複合詞的詞中 i→j
+# （obiectum→objectum、adiectivum→adjectivum、coniunctio→conjunctio）。
+# 只處理這份報告列出、確認安全的形——見 references/latin-reader-contract.md
+# 對 STEM_VARIANTS 的同一警告：規則寫太寬會連好字都吃掉。
+_AE_RE = re.compile(r"ae", re.IGNORECASE)
+_OE_RE = re.compile(r"oe", re.IGNORECASE)
+_INITIAL_J_RE = re.compile(r"^([Ii])([aeiouyAEIOUY])")
+_MIDWORD_J_RE = re.compile(
+    r"(?<=[bcdfgklmnpqrstvxzBCDFGKLMNPQRSTVXZ])([Ii])(?=(?:ect|ic|unct|ung|unx))"
+)
+
+
+def _swap_ae_oe(word: str) -> str:
+    def ae(match: "re.Match[str]") -> str:
+        return "Æ" if match.group(0)[0].isupper() else "æ"
+
+    def oe(match: "re.Match[str]") -> str:
+        return "Œ" if match.group(0)[0].isupper() else "œ"
+
+    word = _AE_RE.sub(ae, word)
+    word = _OE_RE.sub(oe, word)
+    return word
+
+
+def _swap_j(word: str) -> str:
+    def to_j(match: "re.Match[str]") -> str:
+        return "J" if match.group(1) == "I" else "j"
+
+    word = _INITIAL_J_RE.sub(lambda m: to_j(m) + m.group(2), word)
+    word = _MIDWORD_J_RE.sub(to_j, word)
+    return word
+
+
+def normalize_orthography(sentence: str, tagger: Tagger) -> str:
+    """Print form: æ/œ ligatures, j for consonantal i, mid-sentence lowercase.
+
+    2026-09-25 review, §6: about eighty of the 720 composed sentences printed
+    ``ae``/``i`` where the rest of the book prints ``æ``/``j``, or carried a
+    capital the corpus happened to print (``Ascendit et Descendit`` mid-
+    sentence).  「句中非專名一律小寫」: every word but the first and any
+    proper name keeps whatever case ``normalize`` gives it; the sentence-
+    initial word is capitalised regardless of what the corpus wrote, and every
+    other non-proper word is lowercased.  Comparison against the corpus is
+    unaffected because ``fold()`` already collapses all of ae/æ, oe/œ, i/j and
+    case -- this only changes what gets printed, never what gets checked.
+    """
+    words = tokenise(sentence)
+    if not words:
+        return sentence
+    out: list[str] = []
+    for index, word in enumerate(words):
+        spelled = _swap_j(_swap_ae_oe(word))
+        if index == 0:
+            spelled = spelled[:1].upper() + spelled[1:] if spelled else spelled
+        elif not tagger.is_proper(fold(word)):
+            spelled = spelled.lower()
+        out.append(spelled)
+    # Re-assemble keeping the original punctuation/whitespace skeleton: replace
+    # words positionally in the original string rather than joining with plain
+    # spaces, so a sentence ending "…familia." keeps its full stop.
+    result = sentence
+    for original, replacement in zip(words, out):
+        if original == replacement:
+            continue
+        result = re.sub(re.escape(original), replacement, result, count=1)
+    return result
+
+
 def verify(
     sentence: str,
     corpus: Corpus,
@@ -178,8 +427,25 @@ def verify(
     taught_lemmas: set[str],
     taught_keys: set[str],
     taught_stems: Iterable[str] = (),
+    targets: Iterable[str] | None = None,
+    entries_by_headword: dict[str, list[Any]] | None = None,
+    verb_stems: Iterable[str] | None = None,
+    check_predicate: bool = True,
 ) -> dict[str, Any]:
-    """Gates one and two, on one sentence.  Everything reported is verbatim."""
+    """Gates one and two, on one sentence.  Everything reported is verbatim.
+
+    ``check_predicate`` gates the 2026-09-27 additions (predicate presence,
+    person/number agreement) and defaults on for the composed sentences these
+    were written for. A quoted anchor is a fragment of real Vulgate or
+    church Latin cut by ``build_latin_exercises.py`` at a clause boundary,
+    and a periodic sentence's subordinate clauses are routinely a
+    participial or prepositional phrase with no finite verb of their own --
+    grammatical in context, not a defect to flag. Turning the same checks on
+    quoted items in the lower volume rejected the *majority* of its mined
+    anchors this way, which is a real finding about the anchor miner, not
+    something this composed-sentence gate should silently paper over by
+    reporting the anchor as failing.
+    """
     words = tokenise(sentence)
     readings = [word_reading(word, corpus, tagger) for word in words]
     unattested = [row["word"] for row in readings if not row["attested"]]
@@ -193,6 +459,13 @@ def verify(
         ):
             untaught.append(row["word"])
     length_ok = MIN_WORDS <= len(words) <= MAX_WORDS
+    if check_predicate:
+        predicate_ok = has_predicate(readings, tagger, verb_stems)
+        pn_conflicts, pn_conflicts_blocking = person_number_conflict(readings, tagger)
+    else:
+        predicate_ok = True
+        pn_conflicts, pn_conflicts_blocking = [], []
+    mismatched_targets = target_mismatch(readings, targets or (), entries_by_headword)
     return {
         "words": len(words),
         "unattested": unattested,
@@ -205,8 +478,23 @@ def verify(
             lemma for row in readings for part in row["parts"] for lemma in part["lemmas"]
         }),
         "lengthOk": length_ok,
+        "hasPredicate": predicate_ok,
+        # Always reported in full; only the person-1/2 subset blocks (see
+        # `person_number_conflict`'s docstring for why a bare 3rd-vs-3rd
+        # mismatch is not on its own evidence of a dangling ``et``).
+        "personNumberConflict": pn_conflicts,
+        "targetMismatch": mismatched_targets,
         # 「已教過」不再擋人（見檔頭 2026-09-16 的裁定）；untaught 照記不照擋。
-        "passed": not unattested and length_ok,
+        # 2026-09-27 加三條硬閘：有述語、限定動詞人稱數一致（僅第一／第二人稱
+        # 牽涉時才擋）、宣稱的標題詞真的在句中——這三條正是 2026-09-25 覆核
+        # 報告指出機械閘看不見的病灶。
+        "passed": (
+            not unattested
+            and length_ok
+            and predicate_ok
+            and not pn_conflicts_blocking
+            and not mismatched_targets
+        ),
     }
 
 
@@ -312,6 +600,16 @@ def main() -> None:
         appendix_all |= keys
     taught_keys = taught_keys | appendix_all
 
+    # 標題詞閘要問「這個字真的是這個標題詞」，所以要用全書兩千詞（不是只有
+    # 這一課或累積到這一課的），因為草稿的 targets 欄位可以宣稱任何一個
+    # 已印在書裡的詞。以 headword_key 為鍵；少數同形異詞（liber、mundus、
+    # occido……）鍵到一個以上的詞條，逐一比對再判定。
+    entries_by_headword: dict[str, list[Any]] = {}
+    for entry in entries:
+        if entry.headword_key:
+            entries_by_headword.setdefault(entry.headword_key, []).append(entry)
+    verb_stems = verb_stems_of(entries)
+
     print(f"第 {volume} 冊第 {lesson} 課，{len(sentences)} 句")
     print(f"語料 {'＋'.join(corpus.names)}：{len(corpus.forms)} 種字形")
     print(f"已教：{len(taught_lemmas)} 個詞位、{len(taught_keys)} 種字形"
@@ -320,7 +618,11 @@ def main() -> None:
     rows: list[dict[str, Any]] = []
     for index, row in enumerate(sentences, start=1):
         latin = row.get("latin", "")
-        report = verify(latin, corpus, tagger, taught_lemmas, taught_keys, taught_stems)
+        report = verify(
+            latin, corpus, tagger, taught_lemmas, taught_keys, taught_stems,
+            targets=row.get("targets"), entries_by_headword=entries_by_headword,
+            verb_stems=verb_stems,
+        )
         rows.append({**row, "verification": report})
         mark = "通過" if report["passed"] else "退回"
         print(f"{index:2d} [{mark}] {latin}")
@@ -331,6 +633,12 @@ def main() -> None:
             print(f"     ✗ 尚未教過：{'、'.join(report['untaught'])}")
         if not report["lengthOk"]:
             print(f"     ✗ 長度 {report['words']} 詞，規格是 {MIN_WORDS}–{MAX_WORDS} 詞")
+        if not report["hasPredicate"]:
+            print("     ✗ 沒有限定動詞（也讀不出省略 est／sunt 的名詞句）")
+        if report["personNumberConflict"]:
+            print(f"     ✗ 限定動詞人稱／數不一致：{'、'.join(report['personNumberConflict'])}")
+        if report["targetMismatch"]:
+            print(f"     ✗ 宣稱練到卻對不上詞形：{'、'.join(report['targetMismatch'])}")
         for hit in report["enclitics"]:
             print(f"     · 附著詞：{hit['word']} ＝ 主詞 ＋ -{hit['enclitic']}")
 

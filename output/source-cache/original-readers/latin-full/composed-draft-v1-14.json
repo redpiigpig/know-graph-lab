@@ -5,7 +5,7 @@
   "note": "apostolicus、catholicus、cēreus 三個詞武加大都沒有字形——這一課是教會拉丁文詞彙與武加大語料落差最大的一課。causa 與 causā 兩條詞共用同一組字形，同一個字同時記給兩條。",
   "sentences": [
     {
-      "latin": "Altissimus inter socios",
+      "latin": "Altissimus inter socios est.",
       "chinese": "至高者在同伴之中。",
       "targets": [
         "altus",
@@ -14,65 +14,55 @@
       ]
     },
     {
-      "latin": "certe deinde diligenter Formavit",
-      "chinese": "確實地，然後他勤勉地塑造了。",
+      "latin": "Deinde Deus populum diligenter formavit",
+      "chinese": "然後天主勤勉地塑造了百姓。",
       "targets": [
-        "certe",
         "deinde",
         "diligenter",
         "formo"
       ]
     },
     {
-      "latin": "causa catholica et apostolica magna est",
-      "chinese": "公教而宗徒的理由是重大的。",
+      "latin": "Ecclesia catholica et apostolica magna est",
+      "chinese": "公教而宗徒的教會是重大的。",
       "targets": [
         "apostolicus",
-        "catholicus",
-        "causa",
-        "magnus",
-        "sum"
+        "catholicus"
       ]
     },
     {
-      "latin": "perhibet gratiam sæpe",
+      "latin": "Perhibet gratiam sæpe",
       "chinese": "他時常施予恩寵。",
       "targets": [
         "perhibeo",
-        "gratia",
         "saepe"
       ]
     },
     {
-      "latin": "satiati sunt et separati",
-      "chinese": "他們得了飽足，也被分開了。",
+      "latin": "Socii satiati sunt et deinde separati",
+      "chinese": "同伴們得了飽足，然後被分開了。",
       "targets": [
+        "deinde",
         "satio",
-        "sum",
-        "separo"
+        "separo",
+        "socius"
       ]
     },
     {
-      "latin": "cerei et socii separati sunt inter turbam",
-      "chinese": "蠟燭與同伴在人群中被分開了。",
+      "latin": "Socii inter turbam separati sunt",
+      "chinese": "同伴們在人群中被分開了。",
       "targets": [
-        "cēreus",
         "inter",
         "separo",
-        "socius",
-        "sum",
-        "turba"
+        "socius"
       ]
     },
     {
-      "latin": "sæpe satiati sunt in templo",
+      "latin": "Sæpe satiati sunt in templo",
       "chinese": "他們時常在聖殿中得了飽足。",
       "targets": [
         "saepe",
-        "satio",
-        "sum",
-        "in",
-        "templum"
+        "satio"
       ]
     }
   ]

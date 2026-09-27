@@ -1,13 +1,43 @@
 {
-  "volume": 2, "lesson": 10, "author": "opus-5-hand-written",
-  "note": "modo 只剩大寫的 Modo。本課多半是中世紀行政與會議用語，兩層語料都收得齊。",
+  "volume": 2,
+  "lesson": 10,
+  "author": "opus-5-hand-written",
+  "note": "2026-09-27 全句重寫。",
   "sentences": [
-    {"latin": "Modo concilium in monasterio", "chinese": "此刻修道院裡的會議。", "targets": ["modo", "concilium", "monasterium", "in"]},
-    {"latin": "parum morem abbas probat", "chinese": "院長不太贊同那風俗。", "targets": ["parum", "mos", "abbas", "probo"]},
-    {"latin": "scilicet præsens presbyter", "chinese": "當然，那在場的司鐸。", "targets": ["scilicet", "praesens", "presbyter"]},
-    {"latin": "potius consilium tamquam mos", "chinese": "寧可當作勸告，而非風俗。", "targets": ["potius", "consilium", "tamquam", "mos"]},
-    {"latin": "forte quatenus probatur", "chinese": "或許就其被認可的範圍而言。", "targets": ["forte", "quatenus", "probo"]},
-    {"latin": "abbatis consilio præsenti", "chinese": "依院長在場時的勸告。", "targets": ["abbas", "consilium", "praesens"]},
-    {"latin": "presbyteri in concilio tamquam", "chinese": "司鐸們在會議中，彷彿如此。", "targets": ["presbyter", "concilium", "tamquam"]}
+    {
+      "latin": "Concilium consilium dat; abbas probat.",
+      "chinese": "大會給予了建議；院長認可了。",
+      "targets": ["concilium", "consilium", "abbas", "probo"]
+    },
+    {
+      "latin": "Monasterium formam habet; mos antiquus est.",
+      "chinese": "修道院有其形式；那習俗是古老的。",
+      "targets": ["monasterium", "forma", "mos"]
+    },
+    {
+      "latin": "Presbyter beneficium accipit; finis bonus est.",
+      "chinese": "長老領受了恩惠；結局是美好的。",
+      "targets": ["presbyter", "beneficium", "finis"]
+    },
+    {
+      "latin": "Christus praesens est; singuli credunt.",
+      "chinese": "基督是臨在的；每一個人都相信。",
+      "targets": ["Christus", "praesens", "singulus", "credo"]
+    },
+    {
+      "latin": "Modo credit; parum intellegit.",
+      "chinese": "他現在相信了；他理解得太少。",
+      "targets": ["modo", "parum", "intellego"]
+    },
+    {
+      "latin": "Seu pauper seu dives, tamquam frater est.",
+      "chinese": "無論貧窮或富有，他都如同兄弟一般。",
+      "targets": ["seu", "pauper", "dives", "tamquam", "frater"]
+    },
+    {
+      "latin": "Scilicet, quatenus credit, potius orat; forte venit.",
+      "chinese": "確實，就他所信的範圍而言，他寧願祈禱；他也許來到了。",
+      "targets": ["scilicet", "quatenus", "credo", "potius", "forte"]
+    }
   ]
 }

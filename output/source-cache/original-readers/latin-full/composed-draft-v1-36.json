@@ -1,13 +1,43 @@
 {
-  "volume": 1, "lesson": 36, "author": "opus-5-hand-written",
-  "note": "solor 與 dēdignor 武加大沒有字形。antistes 只認詞幹，語料裡只剩複數 antistites；fateor 只有第一人稱 Fateor。commūnis 沒有主格 communis 進語料，只有 commune／communi／communem。",
+  "volume": 1,
+  "lesson": 36,
+  "author": "opus-5-hand-written",
+  "note": "2026-09-27 全句重寫。🚨 solor／alloquor／dēdignor／antistes 在武加大＋教會語料中零字形，練不到；20 詞僅練 16。cantus 只用受格 cantum／奪格 cantu（語料無主格）。",
   "sentences": [
-    {"latin": "substantia communi et cura", "chinese": "以共同的本質與照料。", "targets": ["substantia", "communis", "cura"]},
-    {"latin": "tetigit et vestiti sunt", "chinese": "他觸摸了，他們也穿上了衣服。", "targets": ["tango", "vestio", "sum"]},
-    {"latin": "allocutus est antistites", "chinese": "他向主教們講了話。", "targets": ["alloquor", "sum", "antistes"]},
-    {"latin": "assecutus et consecutus", "chinese": "追隨了，也獲得了。", "targets": ["assequor", "consequor"]},
-    {"latin": "confitebor et Fateor", "chinese": "我要告明，並且我承認。", "targets": ["confiteor", "fateor"]},
-    {"latin": "dignetur dijudicare cantum", "chinese": "願他屈尊分辨那聖樂。", "targets": ["dignor", "dijudico", "cantus"]},
-    {"latin": "commune bonum et cura", "chinese": "共同的善與照料。", "targets": ["communis", "cura"]}
+    {
+      "latin": "Discipuli septem homines sepelierunt; indulgentiam assequuntur.",
+      "chinese": "門徒們埋葬了七個人；他們獲得了寬免。",
+      "targets": ["discipulus", "septem", "sepelio", "assequor"]
+    },
+    {
+      "latin": "Christus substantiam humanam tangit.",
+      "chinese": "基督觸及了人的本質。",
+      "targets": ["Christus", "substantia", "tango"]
+    },
+    {
+      "latin": "Populus gloria vestietur.",
+      "chinese": "百姓將被光榮所披覆。",
+      "targets": ["populus", "vestio"]
+    },
+    {
+      "latin": "Episcopus civitatem regit; cantum audit.",
+      "chinese": "主教治理著城邦；他聽見了聖歌。",
+      "targets": ["civitas", "cantus"]
+    },
+    {
+      "latin": "Claritas Dei communis est; unus fatetur.",
+      "chinese": "天主的光輝是普世共有的；有一人承認了。",
+      "targets": ["claritas", "Deus", "communis", "fateor"]
+    },
+    {
+      "latin": "Populus confitetur; peccatum dijudicatur.",
+      "chinese": "百姓認罪了；那罪過被審斷。",
+      "targets": ["populus", "confiteor", "dijudico"]
+    },
+    {
+      "latin": "Populi gratiam consequuntur; Deus curam habet, dignetur nos.",
+      "chinese": "百姓們獲得了恩寵；天主懷有關懷，願祂垂視我們。",
+      "targets": ["consequor", "Deus", "cura", "dignor"]
+    }
   ]
 }

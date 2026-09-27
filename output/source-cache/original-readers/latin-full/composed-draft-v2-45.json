@@ -2,79 +2,42 @@
   "volume": 2,
   "lesson": 45,
   "author": "opus-5-hand-written",
-  "note": "本課待練詞多為抽象名詞，兩層語料齊備。 2026-09-18 補足十題：新增的每一句都練該課原本沒練到的詞。",
+  "note": "2026-09-27 全句重寫（棄用模板產生器）。",
   "sentences": [
     {
-      "latin": "contemplatione contextum dummodo",
-      "chinese": "只要以默觀面對那脈絡。",
-      "targets": [
-        "contemplatio",
-        "contextus",
-        "dummodo"
-      ]
+      "latin": "Custos vulnus privatim sustentat.",
+      "chinese": "守衛私下地照料著那創傷。",
+      "targets": ["custos", "vulnus", "privatim", "sustento"]
     },
     {
-      "latin": "instar interpretationem mentio",
-      "chinese": "彷彿那解釋與那提及。",
-      "targets": [
-        "instar",
-        "interpretatio",
-        "mentio"
-      ]
+      "latin": "Certamen diuturnum differtur.",
+      "chinese": "長久的競賽被延遲了。",
+      "targets": ["certamen", "diuturnus", "differo"]
     },
     {
-      "latin": "constantiam essentialibus constanti",
-      "chinese": "以恆定面對那些本質之事。",
-      "targets": [
-        "constantia",
-        "essentialis",
-        "constans"
-      ]
+      "latin": "Fel constans resistit; firmitas manet.",
+      "chinese": "苦毒持續地抵抗；堅固卻長存。",
+      "targets": ["fel", "constans", "resisto", "firmitas"]
     },
     {
-      "latin": "felle firmitas contextu",
-      "chinese": "在那脈絡中以苦膽得堅固。",
-      "targets": [
-        "fel",
-        "firmitas",
-        "contextus"
-      ]
+      "latin": "Interpretatio contextum habet; mentio fit.",
+      "chinese": "解釋擁有其脈絡；提及就此發生。",
+      "targets": ["interpretatio", "contextus", "mentio"]
     },
     {
-      "latin": "certamen sustentat differt",
-      "chinese": "他支撐那爭戰，卻又拖延。",
-      "targets": [
-        "certamen",
-        "sustento",
-        "differo"
-      ]
+      "latin": "Constantia instar solis manet.",
+      "chinese": "堅貞如同太陽長存。",
+      "targets": ["constantia", "instar"]
     },
     {
-      "latin": "diuturnum vulnus privatim",
-      "chinese": "那長久的創傷，私下地。",
-      "targets": [
-        "diuturnus",
-        "vulnus",
-        "privatim"
-      ]
+      "latin": "Contemplatio et fel essentialia manent, dummodo constans sit.",
+      "chinese": "沉思與苦毒都是本質性的，只要它是恆定的。",
+      "targets": ["contemplatio", "essentialis", "dummodo"]
     },
     {
-      "latin": "instar constantia felle",
-      "chinese": "彷彿以苦膽而有的恆心。",
-      "targets": [
-        "instar",
-        "constantia",
-        "fel"
-      ]
-    },
-    {
-      "latin": "custodes Julio resistere",
-      "chinese": "衛兵們在七月裡抵抗。",
-      "targets": [
-        "custos",
-        "Julius",
-        "resisto"
-      ]
+      "latin": "Mensis Julius manet.",
+      "chinese": "七月這個月份仍然存留。",
+      "targets": ["Julius"]
     }
   ]
 }

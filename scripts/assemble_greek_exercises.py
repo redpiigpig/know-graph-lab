@@ -47,6 +47,11 @@ QUOTED_PER_LESSON = 3
 ITEMS_PER_LESSON = 10
 ANSWER_KEY_EDITION = "和合本修訂版（2010）／教父文獻另計"
 
+# 樂譜／版式標記：語料裡確實有字形，三道機械閘都會放行，但拿它當一句話裡的
+# 名詞或受詞是語意胡說（2026-09-25 覆核，「他教導並且帶出了細拉」）。剔出
+# 自撰題詞池，這個詞的覆蓋只能靠引用題（詩篇原文本身就帶著這個記號）。
+COMPOSE_POOL_EXCLUDE = {fold_key("διάψαλμα")}
+
 
 def pick_anchors(items: Sequence[dict[str, Any]]) -> list[dict[str, Any]]:
     """Take the three anchors a learner can best check an answer against.
@@ -78,13 +83,15 @@ def load_drafts(volume: int, lesson: int) -> tuple[list[dict[str, Any]], str]:
     return payload.get("sentences", []), payload.get("author", "")
 
 
-def target_words_in(text: str, items, known, attestation, taught_forms) -> list[dict[str, Any]]:
+def target_words_in(
+    text: str, items, known, attestation, taught_forms, verb_keys
+) -> list[dict[str, Any]]:
     """Which of the lesson's twenty words a sentence actually practises.
 
     Delegated to the gate's own lookup, so the book and the gate can never
     disagree about what a sentence covers.
     """
-    report = checker.verify_sentence(text, known, attestation, taught_forms)
+    report = checker.verify_sentence(text, known, attestation, taught_forms, verb_keys)
     seen = set(report["lemmas"])
     seen_forms = set(report.get("forms") or ())
     written = set(report.get("written") or ())
@@ -147,6 +154,7 @@ def build_volume(volume: int) -> dict[str, Any]:
     missing: list[int] = []
     for lesson, items, known in cumulative_sets(vocabulary, volume):
         taught_forms = checker.taught_forms_through(vocabulary, volume, lesson)
+        verb_keys = checker.verb_keys_through(vocabulary, volume, lesson)
         anchors = pick_anchors((mined_by_lesson.get(lesson) or {}).get("items", []))
         if len(anchors) < QUOTED_PER_LESSON:
             thin.append(lesson)
@@ -167,7 +175,11 @@ def build_volume(volume: int) -> dict[str, Any]:
                 "answerKeyRef": row["ref"],
                 "answerKeyEdition": ANSWER_KEY_EDITION,
                 "answerKeyScope": "verse-containing-clause" if row.get("clause") else "verse",
-                "targetWords": target_words_in(text, items, known, attestation, taught_forms),
+                "targetWords": target_words_in(
+                    text, items, known, attestation, taught_forms, verb_keys
+                ),
+                # 引用題是語料自己的停頓切出的子句，可能沒有限定動詞（詩篇標題行、
+                # 詩歌體），strict 閘不套在它身上——見 verify_sentence 檔頭說明。
                 "verification": checker.verify_sentence(text, known, attestation, taught_forms),
                 "reviewedBy": "corpus",
             })
@@ -176,15 +188,23 @@ def build_volume(volume: int) -> dict[str, Any]:
             rows.append({
                 "kind": "composed",
                 "text": text,
-                "targetWords": target_words_in(text, items, known, attestation, taught_forms),
-                "verification": checker.verify_sentence(text, known, attestation, taught_forms),
+                "targetWords": target_words_in(
+                    text, items, known, attestation, taught_forms, verb_keys
+                ),
+                "verification": checker.verify_sentence(
+                    text, known, attestation, taught_forms, verb_keys, strict=True
+                ),
                 "reviewedBy": row.get("reviewedBy", "author" if author else "draft"),
             })
         for number, item in enumerate(rows, start=1):
             item["no"] = number
 
         practised = {word["ordinal"] for item in rows for word in item["targetWords"]}
-        unreachable_ordinals = unreachable_words(items, known, attestation, taught_forms)
+        corpus_unreachable_ordinals = unreachable_words(items, known, attestation, taught_forms)
+        editorial_ordinals = {
+            item.ordinal for item in items if item.keys & COMPOSE_POOL_EXCLUDE
+        } - practised  # 若剛好被引用題練到，不必再列進未涵蓋
+        unreachable_ordinals = corpus_unreachable_ordinals | editorial_ordinals
         unreachable = [item for item in items if item.ordinal in unreachable_ordinals]
         not_practised = [
             item.public_record()
@@ -194,10 +214,20 @@ def build_volume(volume: int) -> dict[str, Any]:
         notes = []
         if len(anchors) < QUOTED_PER_LESSON:
             notes.append("本課無可用經典原句，十題全由自撰題補")
-        if unreachable:
+        corpus_unreachable = [
+            item for item in items
+            if item.ordinal in corpus_unreachable_ordinals - editorial_ordinals
+        ]
+        if corpus_unreachable:
             notes.append(
                 "本讀本語料中無可用字形，因而無法入題："
-                + "、".join(item.headword for item in unreachable)
+                + "、".join(item.headword for item in corpus_unreachable)
+            )
+        editorial = [item for item in items if item.ordinal in editorial_ordinals]
+        if editorial:
+            notes.append(
+                "樂譜／版式標記，不放入自撰句，只能靠引用題覆蓋："
+                + "、".join(item.headword for item in editorial)
             )
         lessons_out.append({
             "lesson": lesson,

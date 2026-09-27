@@ -1,13 +1,43 @@
 {
-  "volume": 2, "lesson": 32, "author": "opus-5-hand-written",
-  "note": "oeconomicus 只認字形。",
+  "volume": 2,
+  "lesson": 32,
+  "author": "opus-5-hand-written",
+  "note": "2026-09-27 全句重寫（棄用模板產生器）。",
   "sentences": [
-    {"latin": "congruit aperte mystici", "chinese": "那神祕之事公開地相符。", "targets": ["congruo", "aperte", "mysticus"]},
-    {"latin": "præsidium hodiernum privatus", "chinese": "今日私人的守衛。", "targets": ["praesidium", "hodiernus", "privatus"]},
-    {"latin": "explicare onus epistulam", "chinese": "要說明那重擔與那封信。", "targets": ["explico", "onus", "epistula"]},
-    {"latin": "processus exercitio procul", "chinese": "那進展在遠處以訓練進行。", "targets": ["processus", "exercitium", "procul"]},
-    {"latin": "definire impedimento pastorali", "chinese": "要以牧靈的阻礙加以界定。", "targets": ["definio", "impedimentum", "pastoralis"]},
-    {"latin": "providentia oeconomica congruunt", "chinese": "天意與經濟的事相合。", "targets": ["providentia", "oeconomicus", "congruo"]},
-    {"latin": "aperte privatis oneribus", "chinese": "公開地面對那些私人的重擔。", "targets": ["aperte", "privatus", "onus"]}
+    {
+      "latin": "Tempus praeterit; congruit dies.",
+      "chinese": "時間流逝著；那日子是合宜的。",
+      "targets": ["tempus", "praetereo", "congruo", "dies"]
+    },
+    {
+      "latin": "Aperte mysticum corpus manere sinit.",
+      "chinese": "他公開地容許奧祕的身體長存。",
+      "targets": ["aperte", "mysticus", "sino"]
+    },
+    {
+      "latin": "Praesidium hodiernum manet; privatus est.",
+      "chinese": "今日的守衛長存；他是私人的。",
+      "targets": ["praesidium", "hodiernus", "privatus"]
+    },
+    {
+      "latin": "Sacerdos legem explicat; onus grave portat.",
+      "chinese": "司祭闡述了法律；他背負著沉重的負擔。",
+      "targets": ["sacerdos", "lex", "explico", "onus"]
+    },
+    {
+      "latin": "Epistulam comparavit; processus manet.",
+      "chinese": "他準備了書信；那進程長存。",
+      "targets": ["epistula", "comparo", "processus"]
+    },
+    {
+      "latin": "Exercitium procul definitum est; impedimentum manet.",
+      "chinese": "那訓練在遠處被界定了；障礙長存。",
+      "targets": ["exercitium", "procul", "definio", "impedimentum"]
+    },
+    {
+      "latin": "Providentia pastoralis oeconomica est.",
+      "chinese": "牧靈的照顧是有經濟性質的。",
+      "targets": ["providentia", "pastoralis", "oeconomicus"]
+    }
   ]
 }

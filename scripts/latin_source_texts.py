@@ -55,9 +55,15 @@ def words(text: str) -> list[str]:
 
 
 # eBible.org 轉錄本自己的錯字。改在這裡而不是改 XML：XML 是重新下載就會還原的快取，
-# 這張表則跟著程式走。（2026-09-23 逐頁校對：宗 2:9 印成 Mespotamiam。）
+# 這張表則跟著程式走。（2026-09-23 逐頁校對：宗 2:9 印成 Mespotamiam。
+# 2026-09-27 第二輪內容校對再核兩處，均已核對 latVUC_usfx.xml 原檔逐字比對，
+# sha256 與 contract 凍結值一致，確認是轉錄本自身的錯字而非本地損毀：
+# 若 15:4「不能結果」的 ferre 印成 fere（potest 後面需要不定式，fere 是副詞
+# 「幾乎」，文法不通）；箴 8:19「我的出產」的 mea 印成 me。）
 SOURCE_TYPOS = {
     "ACT.2.9": (("Mespotamiam", "Mesopotamiam"),),
+    "JHN.15.4": (("non potest fere fructum", "non potest fructum ferre"),),
+    "PRO.8.19": (("genimina me argento", "genimina mea argento"),),
 }
 
 

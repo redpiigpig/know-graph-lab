@@ -2,7 +2,7 @@
   "schemaVersion": "1.0.0",
   "language": "Biblical Hebrew",
   "languageCode": "hbo",
-  "generatedOn": "2026-09-16",
+  "generatedOn": "2026-09-27",
   "direction": "original-to-chinese",
   "itemsPerLesson": 10,
   "quotedPerLesson": 3,
@@ -712,18 +712,8 @@
       "items": [
         {
           "kind": "composed",
-          "text": "הַנָּבִיא עֵין הַגּוֹי",
+          "text": "עֵינֵי הַנָּבִיא עֵינֵי הָאֱלֹהִים",
           "targetWords": [
-            {
-              "ordinal": 26,
-              "pointed": "גּוֹי",
-              "lemma": "H1471",
-              "strongs": [
-                "H1471"
-              ],
-              "isProperName": false,
-              "properNameTypes": []
-            },
             {
               "ordinal": 35,
               "pointed": "נָבִיא",
@@ -756,22 +746,13 @@
             }
           ],
           "verification": {
-            "words": 3,
+            "words": 4,
             "unattested": [],
             "untaught": [],
             "lemmas": [
-              "1471",
+              "430",
               "5030",
-              "5869",
-              "5872",
-              "5873",
-              "5875",
-              "5878",
-              "5880",
-              "5882",
-              "5883",
-              "5885",
-              "5887"
+              "5869"
             ],
             "passed": true
           },
@@ -938,7 +919,7 @@
         },
         {
           "kind": "composed",
-          "text": "כֹּהֲנֵי הָעִיר עֵינַיִם",
+          "text": "עֵינֵי הַכֹּהֵן עֵינֵי אָדָם",
           "targetWords": [
             {
               "ordinal": 30,
@@ -969,37 +950,17 @@
               ],
               "isProperName": false,
               "properNameTypes": []
-            },
-            {
-              "ordinal": 39,
-              "pointed": "עִיר",
-              "lemma": "H5892",
-              "strongs": [
-                "H5892"
-              ],
-              "isProperName": false,
-              "properNameTypes": []
-            },
-            {
-              "ordinal": 40,
-              "pointed": "עָרִים",
-              "lemma": "H5892",
-              "strongs": [
-                "H5892"
-              ],
-              "isProperName": false,
-              "properNameTypes": []
             }
           ],
           "verification": {
-            "words": 3,
+            "words": 4,
             "unattested": [],
             "untaught": [],
             "lemmas": [
+              "120",
+              "121",
               "3548",
-              "5869",
-              "5879",
-              "5892"
+              "5869"
             ],
             "passed": true
           },
@@ -1242,8 +1203,39 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 20,
-        "notPractised": []
+        "practised": 17,
+        "notPractised": [
+          {
+            "ordinal": 26,
+            "pointed": "גּוֹי",
+            "lemma": "H1471",
+            "strongs": [
+              "H1471"
+            ],
+            "isProperName": false,
+            "properNameTypes": []
+          },
+          {
+            "ordinal": 39,
+            "pointed": "עִיר",
+            "lemma": "H5892",
+            "strongs": [
+              "H5892"
+            ],
+            "isProperName": false,
+            "properNameTypes": []
+          },
+          {
+            "ordinal": 40,
+            "pointed": "עָרִים",
+            "lemma": "H5892",
+            "strongs": [
+              "H5892"
+            ],
+            "isProperName": false,
+            "properNameTypes": []
+          }
+        ]
       }
     },
     {
@@ -2083,18 +2075,8 @@
         },
         {
           "kind": "composed",
-          "text": "הַשַּׂר כֹּה וְעֵינָיו אֶל־הַמֶּלֶךְ",
+          "text": "עֵינֵי הַשַּׂר אֶל־הַמֶּלֶךְ",
           "targetWords": [
-            {
-              "ordinal": 61,
-              "pointed": "כֹּה",
-              "lemma": "H3541",
-              "strongs": [
-                "H3541"
-              ],
-              "isProperName": false,
-              "properNameTypes": []
-            },
             {
               "ordinal": 69,
               "pointed": "שַׂר",
@@ -2117,11 +2099,10 @@
             }
           ],
           "verification": {
-            "words": 5,
+            "words": 4,
             "unattested": [],
             "untaught": [],
             "lemmas": [
-              "3541",
               "408",
               "413",
               "4428",
@@ -2167,17 +2148,6 @@
               ],
               "isProperName": false,
               "properNameTypes": []
-            },
-            {
-              "ordinal": 74,
-              "pointed": "אֵת/אֶת־",
-              "lemma": "H853",
-              "strongs": [
-                "H853",
-                "H854"
-              ],
-              "isProperName": false,
-              "properNameTypes": []
             }
           ],
           "verification": {
@@ -2199,7 +2169,7 @@
         },
         {
           "kind": "composed",
-          "text": "יְהוָה מֶלֶךְ עוֹלָם נְאֻם אֱלֹהֵי הַצְּבָאוֹת",
+          "text": "יְהוָה מֶלֶךְ עוֹלָם נְאֻם אֱלֹהֵי צְבָאוֹת",
           "targetWords": [
             {
               "ordinal": 65,
@@ -2330,8 +2300,30 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 20,
-        "notPractised": []
+        "practised": 18,
+        "notPractised": [
+          {
+            "ordinal": 61,
+            "pointed": "כֹּה",
+            "lemma": "H3541",
+            "strongs": [
+              "H3541"
+            ],
+            "isProperName": false,
+            "properNameTypes": []
+          },
+          {
+            "ordinal": 74,
+            "pointed": "אֵת/אֶת־",
+            "lemma": "H853",
+            "strongs": [
+              "H853",
+              "H854"
+            ],
+            "isProperName": false,
+            "properNameTypes": []
+          }
+        ]
       }
     },
     {
@@ -2627,17 +2619,6 @@
           "kind": "composed",
           "text": "דִּבְרֵי הַכֹּהֲנִים פֶּה אֶחָד",
           "targetWords": [
-            {
-              "ordinal": 95,
-              "pointed": "עַל־דְּבַר",
-              "lemma": "H5921",
-              "strongs": [
-                "H5921",
-                "H1697"
-              ],
-              "isProperName": false,
-              "properNameTypes": []
-            },
             {
               "ordinal": 97,
               "pointed": "פֶּה",
@@ -3214,7 +3195,7 @@
         },
         {
           "kind": "composed",
-          "text": "יְהוָה קָדוֹשׁ לָכֵן הַהֵיכָל קֹדֶשׁ",
+          "text": "יְהוָה קָדוֹשׁ עַל־כֵּן הַהֵיכָל קֹדֶשׁ",
           "targetWords": [
             {
               "ordinal": 108,
@@ -3269,7 +3250,7 @@
             }
           ],
           "verification": {
-            "words": 5,
+            "words": 6,
             "unattested": [],
             "untaught": [],
             "lemmas": [
@@ -3277,6 +3258,12 @@
               "3068",
               "3071",
               "3651",
+              "3652",
+              "3653",
+              "5920",
+              "5921",
+              "5922",
+              "5954",
               "6918",
               "6944"
             ],
@@ -3662,17 +3649,6 @@
               "strongs": [],
               "isProperName": false,
               "properNameTypes": []
-            },
-            {
-              "ordinal": 138,
-              "pointed": "כִּי־אִם",
-              "lemma": "H3588",
-              "strongs": [
-                "H3588",
-                "H518"
-              ],
-              "isProperName": false,
-              "properNameTypes": []
             }
           ],
           "verification": {
@@ -3824,8 +3800,20 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 20,
-        "notPractised": []
+        "practised": 19,
+        "notPractised": [
+          {
+            "ordinal": 138,
+            "pointed": "כִּי־אִם",
+            "lemma": "H3588",
+            "strongs": [
+              "H3588",
+              "H518"
+            ],
+            "isProperName": false,
+            "properNameTypes": []
+          }
+        ]
       }
     },
     {
@@ -5219,17 +5207,6 @@
               ],
               "isProperName": false,
               "properNameTypes": []
-            },
-            {
-              "ordinal": 198,
-              "pointed": "מוֹת",
-              "lemma": "H4193",
-              "strongs": [
-                "H4193",
-                "H4194"
-              ],
-              "isProperName": false,
-              "properNameTypes": []
             }
           ],
           "verification": {
@@ -5314,8 +5291,20 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 20,
-        "notPractised": []
+        "practised": 19,
+        "notPractised": [
+          {
+            "ordinal": 198,
+            "pointed": "מוֹת",
+            "lemma": "H4193",
+            "strongs": [
+              "H4193",
+              "H4194"
+            ],
+            "isProperName": false,
+            "properNameTypes": []
+          }
+        ]
       }
     },
     {
@@ -6540,7 +6529,7 @@
         },
         {
           "kind": "composed",
-          "text": "אִם קָדוֹשׁ הַשַּׁבָּת אַל־תִּכְתֹּב",
+          "text": "הַשַּׁבָּת קֹדֶשׁ אַל־תִּכְתֹּב בַּיּוֹם הַזֶּה",
           "targetWords": [
             {
               "ordinal": 243,
@@ -6560,16 +6549,6 @@
               "lemma": "H408",
               "strongs": [
                 "H408"
-              ],
-              "isProperName": false,
-              "properNameTypes": []
-            },
-            {
-              "ordinal": 246,
-              "pointed": "אִם",
-              "lemma": "H518",
-              "strongs": [
-                "H518"
               ],
               "isProperName": false,
               "properNameTypes": []
@@ -6596,18 +6575,19 @@
             }
           ],
           "verification": {
-            "words": 5,
+            "words": 6,
             "unattested": [],
             "untaught": [],
             "lemmas": [
+              "2088",
+              "3117",
               "3789",
               "3808",
               "408",
               "409",
               "413",
               "516",
-              "518",
-              "6918",
+              "6944",
               "7676"
             ],
             "passed": true
@@ -6659,7 +6639,7 @@
         },
         {
           "kind": "composed",
-          "text": "כִּי חָזַק הָעָם וַתִּכְבַּד הַמִּלְחָמָה",
+          "text": "חָזַק הָעָם וַתִּכְבַּד הַמִּלְחָמָה",
           "targetWords": [
             {
               "ordinal": 251,
@@ -6683,14 +6663,12 @@
             }
           ],
           "verification": {
-            "words": 5,
+            "words": 4,
             "unattested": [],
             "untaught": [],
             "lemmas": [
               "2388",
               "3513",
-              "3587",
-              "3588",
               "4421",
               "5971"
             ],
@@ -6701,7 +6679,7 @@
         },
         {
           "kind": "composed",
-          "text": "וַיִּשְׁכַּב הַנַּעַר וְהַהֵיכָל מָלֵא כָבוֹד",
+          "text": "וַיִּשְׁכַּב הַנַּעַר בְּהֵיכַל יְהוָה וְהַבַּיִת מָלֵא כָבוֹד",
           "targetWords": [
             {
               "ordinal": 255,
@@ -6725,11 +6703,14 @@
             }
           ],
           "verification": {
-            "words": 5,
+            "words": 7,
             "unattested": [],
             "untaught": [],
             "lemmas": [
+              "1004",
               "1964",
+              "3068",
+              "3071",
               "350",
               "3519",
               "4390",
@@ -6803,8 +6784,19 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 20,
-        "notPractised": []
+        "practised": 19,
+        "notPractised": [
+          {
+            "ordinal": 246,
+            "pointed": "אִם",
+            "lemma": "H518",
+            "strongs": [
+              "H518"
+            ],
+            "isProperName": false,
+            "properNameTypes": []
+          }
+        ]
       }
     },
     {
@@ -7039,7 +7031,7 @@
         },
         {
           "kind": "composed",
-          "text": "וַתֵּלֶד הָאִשָּׁה בֵּן וַיִּקְרָא הָאָב אֶת־שְׁמוֹ",
+          "text": "וַתֵּלֶד הָאִשָּׁה בֵּן וַיִּקְרָא הָאָב שֵׁם לַבֵּן",
           "targetWords": [
             {
               "ordinal": 264,
@@ -7071,11 +7063,11 @@
               "1121",
               "1122",
               "3205",
+              "4192",
               "7121",
               "802",
               "8034",
-              "853",
-              "854",
+              "8035",
               "996"
             ],
             "passed": true
@@ -8045,7 +8037,7 @@
         },
         {
           "kind": "composed",
-          "text": "שָׁתָה הַנַּעַר מַיִם וְתַם הַיּוֹם",
+          "text": "תַּמּוּ הַמַּיִם וְלֹא שָׁתָה הַנַּעַר",
           "targetWords": [
             {
               "ordinal": 303,
@@ -8073,9 +8065,8 @@
             "unattested": [],
             "untaught": [],
             "lemmas": [
-              "3117",
+              "3808",
               "4325",
-              "4956",
               "5288",
               "5289",
               "7896",
@@ -8134,7 +8125,7 @@
         },
         {
           "kind": "composed",
-          "text": "בָּעֲרָה הָאֵשׁ וְאָבַד הַבַּיִת",
+          "text": "בָּעֲרָה הָאֵשׁ וְהַבַּיִת אָבַד",
           "targetWords": [
             {
               "ordinal": 308,
@@ -8163,7 +8154,6 @@
             "untaught": [],
             "lemmas": [
               "1004",
-              "1006",
               "1197",
               "6",
               "784"
@@ -8499,7 +8489,7 @@
         },
         {
           "kind": "composed",
-          "text": "וַיְקַדֵּשׁ הַכֹּהֵן אֶת־הַמִּזְבֵּחַ וְשָׂרַף אֶת־הַזֶּבַח",
+          "text": "וַיְקַדֵּשׁ הַכֹּהֵן אֶת־הַמִּזְבֵּחַ וַיִּשְׂרֹף אֶת־הַזֶּבַח",
           "targetWords": [
             {
               "ordinal": 328,
@@ -8644,7 +8634,7 @@
         },
         {
           "kind": "composed",
-          "text": "שְׁלַח נָא אֶת־הַכֹּהֵן בְּעַד הָעָם",
+          "text": "יְכַפֵּר נָא הַכֹּהֵן בְּעַד הָעָם",
           "targetWords": [
             {
               "ordinal": 333,
@@ -8678,20 +8668,17 @@
             }
           ],
           "verification": {
-            "words": 6,
+            "words": 5,
             "unattested": [],
             "untaught": [],
             "lemmas": [
               "1157",
               "3548",
+              "3722",
               "4994",
               "4995",
               "5971",
-              "7080",
-              "7971",
-              "7972",
-              "853",
-              "854"
+              "7080"
             ],
             "passed": true
           },
@@ -8960,7 +8947,7 @@
         },
         {
           "kind": "composed",
-          "text": "נָגַע הַנַּעַר בְּמֵת וְטָמֵא",
+          "text": "נָגַע הַנַּעַר בְּמֵת וְהוּא טָמֵא",
           "targetWords": [
             {
               "ordinal": 351,
@@ -8984,10 +8971,12 @@
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 5,
             "unattested": [],
             "untaught": [],
             "lemmas": [
+              "1931",
+              "1932",
               "2930",
               "2931",
               "4191",
@@ -9116,7 +9105,7 @@
         },
         {
           "kind": "composed",
-          "text": "אָחַז הָאִישׁ בַּמַּטֶּה וְעָשָׂה מְלָאכָה",
+          "text": "אָחַז הָאִישׁ בַּמַּטֶּה וַיַּעַשׂ מְלָאכָה",
           "targetWords": [
             {
               "ordinal": 345,
@@ -9475,7 +9464,7 @@
         },
         {
           "kind": "composed",
-          "text": "פָּנָה הַכֹּהֵן אֶל הָעָם וּפָתַח אֶת־הַסֵּפֶר",
+          "text": "פָּנָה הַכֹּהֵן אֶל הָעָם וַיִּפְתַּח אֶת־הַסֵּפֶר",
           "targetWords": [
             {
               "ordinal": 371,
@@ -9876,7 +9865,7 @@
         },
         {
           "kind": "composed",
-          "text": "לָכַד הָאוֹיֵב אֶת־הָעִיר וְשִׁבַּר אֶת־הַחוֹמָה",
+          "text": "לָכַד הָאוֹיֵב אֶת־הָעִיר וַיְשַׁבֵּר אֶת־הַחוֹמָה",
           "targetWords": [
             {
               "ordinal": 390,
@@ -10011,18 +10000,8 @@
         },
         {
           "kind": "composed",
-          "text": "הַכֶּבֶשׂ הַבְּכֹר לַיהוָה וַיִּיטַב בְּעֵינָיו",
+          "text": "הַכֶּבֶשׂ הַבְּכֹר לַיהוָה וְטוֹב הַדָּבָר בְּעֵינָיו",
           "targetWords": [
-            {
-              "ordinal": 389,
-              "pointed": "יָטַב",
-              "lemma": "H3190",
-              "strongs": [
-                "H3190"
-              ],
-              "isProperName": false,
-              "properNameTypes": []
-            },
             {
               "ordinal": 398,
               "pointed": "כֶּ֫בֶשׂ",
@@ -10045,13 +10024,16 @@
             }
           ],
           "verification": {
-            "words": 5,
+            "words": 6,
             "unattested": [],
             "untaught": [],
             "lemmas": [
               "1060",
+              "1697",
+              "2895",
+              "2896",
+              "2899",
               "3068",
-              "3190",
               "3532",
               "5869"
             ],
@@ -10105,8 +10087,19 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 20,
-        "notPractised": []
+        "practised": 19,
+        "notPractised": [
+          {
+            "ordinal": 389,
+            "pointed": "יָטַב",
+            "lemma": "H3190",
+            "strongs": [
+              "H3190"
+            ],
+            "isProperName": false,
+            "properNameTypes": []
+          }
+        ]
       }
     },
     {
@@ -10396,7 +10389,7 @@
         },
         {
           "kind": "composed",
-          "text": "אֵין כֹּחַ בָּעָם וְהוֹשִׁיעַ יְהוָה",
+          "text": "אֵין כֹּחַ בָּעָם וַיּוֹשַׁע יְהוָה אֶת־עַמּוֹ",
           "targetWords": [
             {
               "ordinal": 404,
@@ -10420,7 +10413,7 @@
             }
           ],
           "verification": {
-            "words": 5,
+            "words": 7,
             "unattested": [],
             "untaught": [],
             "lemmas": [
@@ -10429,7 +10422,9 @@
               "3467",
               "3581",
               "369",
-              "5971"
+              "5971",
+              "853",
+              "854"
             ],
             "passed": true
           },
@@ -10438,7 +10433,7 @@
         },
         {
           "kind": "composed",
-          "text": "נִמְלַט הַכֶּבֶשׂ וְעֶצֶם לֹא נִשְׁבָּר",
+          "text": "נִמְלַט הַכֶּבֶשׂ וְעֶצֶם לֹא נִשְׁבָּרָה",
           "targetWords": [
             {
               "ordinal": 408,
@@ -10858,7 +10853,7 @@
         },
         {
           "kind": "composed",
-          "text": "הָפַךְ אֱלֹהִים אֶת־הֶעָרִים וְשִׁחֵת אֶת־הָאָרֶץ",
+          "text": "הָפַךְ אֱלֹהִים אֶת־הֶעָרִים וְאֶת־הָאָרֶץ שִׁחֵת",
           "targetWords": [
             {
               "ordinal": 427,
@@ -10989,7 +10984,7 @@
         },
         {
           "kind": "composed",
-          "text": "נִפְלְאוּ מַעֲשֵׂי יְהוָה וְשָׂבַע הַזָּכָר",
+          "text": "נִפְלְאוּ מַעֲשֵׂי יְהוָה וְכָל־זָכָר בָּעָם שָׂבַע לֶחֶם",
           "targetWords": [
             {
               "ordinal": 425,
@@ -11023,16 +11018,31 @@
             }
           ],
           "verification": {
-            "words": 5,
+            "words": 8,
             "unattested": [],
             "untaught": [],
             "lemmas": [
+              "1035",
+              "1339",
+              "2142",
               "2145",
               "3068",
               "3071",
+              "3557",
+              "3605",
+              "3606",
+              "3899",
               "4639",
+              "5971",
               "6381",
-              "7646"
+              "7620",
+              "7646",
+              "7647",
+              "7648",
+              "7649",
+              "7651",
+              "7652",
+              "884"
             ],
             "passed": true
           },
@@ -11445,7 +11455,7 @@
         },
         {
           "kind": "composed",
-          "text": "גָּר הָאִישׁ בָּאָרֶץ וְלָמַד אֶת־חֻקּוֹת יְהוָה",
+          "text": "גָּר הָאִישׁ בָּאָרֶץ וַיִּלְמַד אֶת־חֻקּוֹת יְהוָה",
           "targetWords": [
             {
               "ordinal": 457,
@@ -11490,7 +11500,7 @@
         },
         {
           "kind": "composed",
-          "text": "שָׁת הַכֹּהֵן אֶת־הַכְּלִי לִפְנֵי הַמִּזְבֵּחַ וְקִטֵּר",
+          "text": "שָׁת הַכֹּהֵן אֶת־הַכְּלִי לִפְנֵי הַמִּזְבֵּחַ וַיַּקְטֵר",
           "targetWords": [
             {
               "ordinal": 453,
@@ -11709,7 +11719,7 @@
         },
         {
           "kind": "composed",
-          "text": "אָסַר הַמֶּלֶךְ אֶת־רִכְבּוֹ וְרָכַב עַל הַסּוּס",
+          "text": "אָסַר הַמֶּלֶךְ אֶת־רִכְבּוֹ וַיִּרְכַּב בּוֹ",
           "targetWords": [
             {
               "ordinal": 466,
@@ -11733,17 +11743,12 @@
             }
           ],
           "verification": {
-            "words": 7,
+            "words": 6,
             "unattested": [],
             "untaught": [],
             "lemmas": [
               "4428",
               "4429",
-              "5483",
-              "5920",
-              "5921",
-              "5922",
-              "5954",
               "617",
               "631",
               "632",
@@ -11751,7 +11756,6 @@
               "634",
               "7392",
               "7393",
-              "7394",
               "853",
               "854"
             ],
@@ -11762,7 +11766,7 @@
         },
         {
           "kind": "composed",
-          "text": "שָׁחַט הַכֹּהֵן אֶת־הַכֶּבֶשׂ וְרָחַץ אֶת־יָדָיו",
+          "text": "שָׁחַט הַכֹּהֵן אֶת־הַכֶּבֶשׂ וַיִּרְחַץ אֶת־יָדָיו",
           "targetWords": [
             {
               "ordinal": 467,
@@ -11955,7 +11959,7 @@
         },
         {
           "kind": "composed",
-          "text": "חָזָה הַנָּבִיא עַמּוּד אֵשׁ וְעָרַךְ הָעָם מִלְחָמָה",
+          "text": "חָזָה הַנָּבִיא עַמּוּד אֵשׁ וַיַּעַרְכוּ הָעָם מִלְחָמָה",
           "targetWords": [
             {
               "ordinal": 470,
@@ -12910,7 +12914,7 @@
         },
         {
           "kind": "composed",
-          "text": "נָפַל הַגּוֹרָל עַל הַכֹּהֵן וְהָיָה לוֹ מִקְנֶה רַב",
+          "text": "נָפַל הַגּוֹרָל עַל הַכֹּהֵן וַיְהִי לוֹ מִקְנֶה רַב",
           "targetWords": [
             {
               "ordinal": 518,
@@ -13116,7 +13120,7 @@
         },
         {
           "kind": "composed",
-          "text": "צַר בָּעִיר וְהַנֶּגַע בַּבַּיִת וְקֶשֶׁת בְּיָדוֹ",
+          "text": "הַצַּר בָּעִיר קַשְׁתּוֹ בְּיָדוֹ וְהַנֶּגַע בְּכָל־בַּיִת",
           "targetWords": [
             {
               "ordinal": 522,
@@ -13150,17 +13154,18 @@
             }
           ],
           "verification": {
-            "words": 6,
+            "words": 7,
             "unattested": [],
             "untaught": [],
             "lemmas": [
               "1004",
               "3027",
+              "3605",
+              "3606",
               "5061",
               "5782",
               "5892",
               "6862",
-              "6887",
               "7198"
             ],
             "passed": true
@@ -13402,7 +13407,7 @@
         },
         {
           "kind": "composed",
-          "text": "חֶרְפָּה לָעָם וְהָעוֹף יָעוּף מֵעַל הָאָרֶץ",
+          "text": "חֶרְפָּה לָעָם כִּי הָעוֹף יָעוּף מֵעַל אַרְצָם",
           "targetWords": [
             {
               "ordinal": 532,
@@ -13436,11 +13441,13 @@
             }
           ],
           "verification": {
-            "words": 6,
+            "words": 7,
             "unattested": [],
             "untaught": [],
             "lemmas": [
               "2781",
+              "3587",
+              "3588",
               "5774",
               "5775",
               "5921",
@@ -13639,7 +13646,7 @@
         },
         {
           "kind": "composed",
-          "text": "כְּלִי בַרְזֶל וְשׁוֹר אֶחָד",
+          "text": "כְּלִי בַרְזֶל וְשׁוֹר אֶחָד בַּשָּׂדֶה",
           "targetWords": [
             {
               "ordinal": 541,
@@ -13663,13 +13670,14 @@
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 5,
             "unattested": [],
             "untaught": [],
             "lemmas": [
               "1270",
               "259",
               "3627",
+              "7704",
               "7794"
             ],
             "passed": true
@@ -13679,7 +13687,7 @@
         },
         {
           "kind": "composed",
-          "text": "שָׁמַע יְהוָה אֶת־תְּפִלָּתִי וַיִּשְׁתַּחוּ הָאִישׁ",
+          "text": "שָׁמַע יְהוָה אֶת־תְּפִלַּת הָאִישׁ וַיִּשְׁתַּחוּ לוֹ",
           "targetWords": [
             {
               "ordinal": 546,
@@ -13703,13 +13711,16 @@
             }
           ],
           "verification": {
-            "words": 6,
+            "words": 7,
             "unattested": [],
             "untaught": [],
             "lemmas": [
               "3068",
               "3071",
               "376",
+              "3789",
+              "5456",
+              "7592",
               "7812",
               "8085",
               "8088",
@@ -13808,7 +13819,7 @@
         },
         {
           "kind": "composed",
-          "text": "אַרְבַּע קַרְנוֹת לַמִּזְבֵּחַ וְחָמֵשׁ אַמּוֹת",
+          "text": "לַמִּזְבֵּחַ אַרְבַּע קַרְנוֹת וְחָמֵשׁ אַמּוֹת עַד הַשַּׁעַר",
           "targetWords": [
             {
               "ordinal": 552,
@@ -13832,17 +13843,22 @@
             }
           ],
           "verification": {
-            "words": 5,
+            "words": 7,
             "unattested": [],
             "untaught": [],
             "lemmas": [
               "2568",
               "4196",
               "520",
+              "5703",
+              "5704",
+              "5705",
+              "5706",
               "702",
               "703",
               "7153",
-              "7161"
+              "7161",
+              "8179"
             ],
             "passed": true
           },
@@ -14197,7 +14213,7 @@
         },
         {
           "kind": "composed",
-          "text": "שְׁמֹנֶה אַמּוֹת מִפְּאַת הַצָּפוֹן",
+          "text": "רֹחַב הַבַּיִת שְׁמֹנֶה אַמּוֹת מִפְּאַת הַצָּפוֹן",
           "targetWords": [
             {
               "ordinal": 565,
@@ -14205,6 +14221,16 @@
               "lemma": "H8083",
               "strongs": [
                 "H8083"
+              ],
+              "isProperName": false,
+              "properNameTypes": []
+            },
+            {
+              "ordinal": 567,
+              "pointed": "רֹחַב",
+              "lemma": "H7341",
+              "strongs": [
+                "H7341"
               ],
               "isProperName": false,
               "properNameTypes": []
@@ -14221,13 +14247,16 @@
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 6,
             "unattested": [],
             "untaught": [],
             "lemmas": [
+              "1004",
+              "1006",
               "520",
               "6285",
               "6828",
+              "7341",
               "8083"
             ],
             "passed": true
@@ -14237,7 +14266,7 @@
         },
         {
           "kind": "composed",
-          "text": "זָבַח שְׁלָמִים וְנָתַן בְּשֶׁקֶל הַקֹּדֶשׁ",
+          "text": "זָבַח הָאִישׁ שְׁלָמִים וַיִּתֵּן כֶּסֶף בְּשֶׁקֶל הַקֹּדֶשׁ",
           "targetWords": [
             {
               "ordinal": 573,
@@ -14261,12 +14290,14 @@
             }
           ],
           "verification": {
-            "words": 5,
+            "words": 7,
             "unattested": [],
             "untaught": [],
             "lemmas": [
               "2076",
               "2077",
+              "3701",
+              "376",
               "5414",
               "6944",
               "8002",
@@ -14732,7 +14763,7 @@
         },
         {
           "kind": "composed",
-          "text": "מָצָא חֵן בְּעֵינֵי הַמֶּלֶךְ וְנִרְפָּא",
+          "text": "מָצָא חֵן בְּעֵינֵי יְהוָה וַיִּרְפָּא אֹתוֹ",
           "targetWords": [
             {
               "ordinal": 593,
@@ -14756,16 +14787,17 @@
             }
           ],
           "verification": {
-            "words": 5,
+            "words": 6,
             "unattested": [],
             "untaught": [],
             "lemmas": [
               "2580",
-              "4428",
-              "4429",
+              "3068",
+              "3071",
               "4672",
               "5869",
-              "7495"
+              "7495",
+              "853"
             ],
             "passed": true
           },
@@ -14817,7 +14849,7 @@
         },
         {
           "kind": "composed",
-          "text": "הַחֲרֵשׁ וּבַל יָשׁוּב הָאִישׁ אֶל הַכִּכָּר",
+          "text": "בַּל־יָשׁוּב הָאִישׁ אֶל הַכִּכָּר",
           "targetWords": [
             {
               "ordinal": 586,
@@ -14825,16 +14857,6 @@
               "lemma": "H1077",
               "strongs": [
                 "H1077"
-              ],
-              "isProperName": false,
-              "properNameTypes": []
-            },
-            {
-              "ordinal": 587,
-              "pointed": "חָרַשׁ",
-              "lemma": "H2790",
-              "strongs": [
-                "H2790"
               ],
               "isProperName": false,
               "properNameTypes": []
@@ -14851,15 +14873,15 @@
             }
           ],
           "verification": {
-            "words": 6,
+            "words": 5,
             "unattested": [],
             "untaught": [],
             "lemmas": [
               "1077",
-              "2790",
               "3437",
               "3603",
               "376",
+              "3816",
               "408",
               "413",
               "7610",
@@ -14873,8 +14895,19 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 20,
-        "notPractised": []
+        "practised": 19,
+        "notPractised": [
+          {
+            "ordinal": 587,
+            "pointed": "חָרַשׁ",
+            "lemma": "H2790",
+            "strongs": [
+              "H2790"
+            ],
+            "isProperName": false,
+            "properNameTypes": []
+          }
+        ]
       }
     },
     {
@@ -15155,18 +15188,8 @@
         },
         {
           "kind": "composed",
-          "text": "נָשָׂא הָעֶבֶד אֶת־הַמַּשָּׂא וְהִצְלִיחַ לְנַצֵּחַ עַל הַמְּלָאכָה",
+          "text": "נָשָׂא הָעֶבֶד אֶת־הַמַּשָּׂא וַיהוָה הִצְלִיחַ דַּרְכּוֹ",
           "targetWords": [
-            {
-              "ordinal": 608,
-              "pointed": "נָצַח",
-              "lemma": "H5329",
-              "strongs": [
-                "H5329"
-              ],
-              "isProperName": false,
-              "properNameTypes": []
-            },
             {
               "ordinal": 609,
               "pointed": "מַשָּׂא",
@@ -15189,19 +15212,15 @@
             }
           ],
           "verification": {
-            "words": 8,
+            "words": 7,
             "unattested": [],
             "untaught": [],
             "lemmas": [
-              "4399",
+              "1870",
+              "3068",
               "4853",
-              "5329",
               "5375",
               "5650",
-              "5920",
-              "5921",
-              "5922",
-              "5954",
               "6743",
               "853",
               "854"
@@ -15252,8 +15271,18 @@
         },
         {
           "kind": "composed",
-          "text": "רָאָה הָאִישׁ חֲלוֹם בַּלַּיְלָה",
+          "text": "בַּלַּיְלָה חֲלוֹם לָאִישׁ לְנַצֵּחַ עַל הַמְּלָאכָה",
           "targetWords": [
+            {
+              "ordinal": 608,
+              "pointed": "נָצַח",
+              "lemma": "H5329",
+              "strongs": [
+                "H5329"
+              ],
+              "isProperName": false,
+              "properNameTypes": []
+            },
             {
               "ordinal": 619,
               "pointed": "חֲלוֹם",
@@ -15266,14 +15295,19 @@
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 6,
             "unattested": [],
             "untaught": [],
             "lemmas": [
               "2472",
               "376",
               "3915",
-              "7200"
+              "4399",
+              "5329",
+              "5920",
+              "5921",
+              "5922",
+              "5954"
             ],
             "passed": true
           },
@@ -15282,7 +15316,7 @@
         },
         {
           "kind": "composed",
-          "text": "נָתַן נְסָכִים עַל הַיְאֹר וְאִשֵּׁה לַיהוָה",
+          "text": "נָתַן הַכֹּהֵן נְסָכִים וְאִשֶּׁה לַיהוָה עַל שְׂפַת הַיְאֹר",
           "targetWords": [
             {
               "ordinal": 616,
@@ -15318,12 +15352,13 @@
             }
           ],
           "verification": {
-            "words": 6,
+            "words": 8,
             "unattested": [],
             "untaught": [],
             "lemmas": [
               "2975",
               "3068",
+              "3548",
               "5262",
               "5414",
               "5920",
@@ -15331,7 +15366,7 @@
               "5922",
               "5954",
               "801",
-              "802"
+              "8193"
             ],
             "passed": true
           },
@@ -15547,7 +15582,7 @@
         },
         {
           "kind": "composed",
-          "text": "שִׁפְחַת דּוֹדִי אֶבְיוֹן",
+          "text": "דּוֹדִי אֶבְיוֹן וְאֵין לוֹ שִׁפְחָה",
           "targetWords": [
             {
               "ordinal": 623,
@@ -15581,12 +15616,16 @@
             }
           ],
           "verification": {
-            "words": 3,
+            "words": 5,
             "unattested": [],
             "untaught": [],
             "lemmas": [
               "1730",
               "34",
+              "369",
+              "3789",
+              "5456",
+              "7592",
               "8198"
             ],
             "passed": true
@@ -16139,7 +16178,7 @@
         },
         {
           "kind": "composed",
-          "text": "הַכְּלִי מָלֵא קְטֹרֶת וְרֵיחַ טוֹב עָלָה מִן הַסֶּלַע",
+          "text": "הַכְּלִי מָלֵא קְטֹרֶת עַל הַסֶּלַע וְרֵיחַ טוֹב עָלָה",
           "targetWords": [
             {
               "ordinal": 650,
@@ -16183,11 +16222,13 @@
               "3627",
               "4390",
               "4392",
-              "4480",
-              "4481",
               "5553",
               "5554",
+              "5920",
+              "5921",
+              "5922",
               "5927",
+              "5954",
               "7004",
               "7381",
               "7382"
@@ -16371,7 +16412,7 @@
         },
         {
           "kind": "composed",
-          "text": "בְּטֶרֶם תִּזְרַע אֶת־הַשָּׂדֶה",
+          "text": "בְּטֶרֶם תִּזְרַע אֶת־הַשָּׂדֶה קְרָא בְשֵׁם יְהוָה",
           "targetWords": [
             {
               "ordinal": 662,
@@ -16395,13 +16436,17 @@
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 7,
             "unattested": [],
             "untaught": [],
             "lemmas": [
               "2232",
               "2962",
+              "3068",
+              "3071",
+              "7121",
               "7704",
+              "8034",
               "853",
               "854"
             ],
@@ -16459,18 +16504,8 @@
         },
         {
           "kind": "composed",
-          "text": "צָעֲקָה אַלְמָנָה וַאֲמָתוֹ עִמָּהּ",
+          "text": "צָעֲקָה הָאַלְמָנָה וְהָאָמָה עִמָּהּ",
           "targetWords": [
-            {
-              "ordinal": 666,
-              "pointed": "אָמָה",
-              "lemma": "H519",
-              "strongs": [
-                "H519"
-              ],
-              "isProperName": false,
-              "properNameTypes": []
-            },
             {
               "ordinal": 667,
               "pointed": "אַלְמָנָה",
@@ -16498,7 +16533,7 @@
             "untaught": [],
             "lemmas": [
               "490",
-              "519",
+              "520",
               "5973",
               "6817"
             ],
@@ -16509,7 +16544,7 @@
         },
         {
           "kind": "composed",
-          "text": "הַגֶּפֶן חֲזָקָה וְהַגְּמַלִּים בַּשָּׂדֶה",
+          "text": "הַגֶּפֶן הַחֲזָקָה בַּשָּׂדֶה וְהַגְּמַלִּים עִמָּהּ",
           "targetWords": [
             {
               "ordinal": 668,
@@ -16543,13 +16578,14 @@
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 5,
             "unattested": [],
             "untaught": [],
             "lemmas": [
               "1581",
               "1612",
               "2389",
+              "5973",
               "7704"
             ],
             "passed": true
@@ -16559,7 +16595,7 @@
         },
         {
           "kind": "composed",
-          "text": "מִדָּה אַחַת וְהָאֲדָנִים כֶּסֶף",
+          "text": "מִדָּה אַחַת לְכָל־הַכֵּלִים וְהָאֲדָנִים כֶּסֶף",
           "targetWords": [
             {
               "ordinal": 663,
@@ -16583,12 +16619,15 @@
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 6,
             "unattested": [],
             "untaught": [],
             "lemmas": [
               "134",
               "259",
+              "3605",
+              "3606",
+              "3627",
               "3701",
               "4060"
             ],
@@ -16599,7 +16638,7 @@
         },
         {
           "kind": "composed",
-          "text": "מִזְמוֹר לַיהוָה בַּיּוֹם הָרְבִיעִי",
+          "text": "שִׁירוּ מִזְמוֹר לַיהוָה בַּיּוֹם הָרְבִיעִי",
           "targetWords": [
             {
               "ordinal": 664,
@@ -16623,14 +16662,15 @@
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 5,
             "unattested": [],
             "untaught": [],
             "lemmas": [
               "3068",
               "3117",
               "4210",
-              "7243"
+              "7243",
+              "7891"
             ],
             "passed": true
           },
@@ -16682,8 +16722,19 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 20,
-        "notPractised": []
+        "practised": 19,
+        "notPractised": [
+          {
+            "ordinal": 666,
+            "pointed": "אָמָה",
+            "lemma": "H519",
+            "strongs": [
+              "H519"
+            ],
+            "isProperName": false,
+            "properNameTypes": []
+          }
+        ]
       }
     },
     {
@@ -17270,7 +17321,7 @@
         },
         {
           "kind": "composed",
-          "text": "יוֹמָם וָלַיְלָה תָּעוּ בַּמִּדְבָּר וְלֹא יַשִּׂיגוּ אֶת־הַדֶּרֶךְ",
+          "text": "יוֹמָם וָלַיְלָה תָּעוּ בַּמִּדְבָּר וְלֹא הִשִּׂיגוּ אֶת־הָעִיר",
           "targetWords": [
             {
               "ordinal": 702,
@@ -17308,13 +17359,13 @@
             "unattested": [],
             "untaught": [],
             "lemmas": [
-              "1870",
               "3117",
               "3119",
               "3808",
               "3915",
               "4057",
               "5381",
+              "5892",
               "853",
               "854",
               "8582"
@@ -17326,7 +17377,7 @@
         },
         {
           "kind": "composed",
-          "text": "מָדַד אֶת־הָאָרֶץ בְּרֵאשִׁית וְגַם בָּאַחֲרֹנָה",
+          "text": "בְּרֵאשִׁית הַשָּׁנָה מָדַד אֶת־הָאָרֶץ וְגַם בָּאַחֲרֹנָה",
           "targetWords": [
             {
               "ordinal": 706,
@@ -17360,7 +17411,7 @@
             }
           ],
           "verification": {
-            "words": 6,
+            "words": 7,
             "unattested": [],
             "untaught": [],
             "lemmas": [
@@ -17369,6 +17420,7 @@
               "4058",
               "7225",
               "776",
+              "8141",
               "853",
               "854"
             ],
@@ -17419,7 +17471,7 @@
         },
         {
           "kind": "composed",
-          "text": "וַיַּדַּח הָאוֹיֵב אֶת־הָעָם וְחַתּוּ הַגִּבּוֹרִים",
+          "text": "וַיַּדַּח הָאוֹיֵב אֶת־הָעָם וַיֵּחַתּוּ הַגִּבּוֹרִים",
           "targetWords": [
             {
               "ordinal": 701,
@@ -17501,18 +17553,8 @@
         },
         {
           "kind": "composed",
-          "text": "יְכַבֵּס אֶת־בְּגָדָיו וְלֹא יַכִּיר אֹתוֹ",
+          "text": "לֹא הִכִּיר הָאָב אֶת־בְּנוֹ",
           "targetWords": [
-            {
-              "ordinal": 713,
-              "pointed": "כָּבַס",
-              "lemma": "H3526",
-              "strongs": [
-                "H3526"
-              ],
-              "isProperName": false,
-              "properNameTypes": []
-            },
             {
               "ordinal": 720,
               "pointed": "נָכַר",
@@ -17525,16 +17567,19 @@
             }
           ],
           "verification": {
-            "words": 6,
+            "words": 5,
             "unattested": [],
             "untaught": [],
             "lemmas": [
-              "3526",
+              "1",
+              "1121",
               "3808",
+              "3818",
+              "3819",
+              "3863",
               "5234",
               "853",
-              "854",
-              "899"
+              "854"
             ],
             "passed": true
           },
@@ -17543,7 +17588,7 @@
         },
         {
           "kind": "composed",
-          "text": "הַקְּרָשִׁים הֵנָּה וּמַעֲלוֹת שָׁם",
+          "text": "הָבֵא הֵנָּה אֶת־הַקְּרָשִׁים וְאֶת־הַמַּעֲלוֹת",
           "targetWords": [
             {
               "ordinal": 714,
@@ -17577,7 +17622,7 @@
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 6,
             "unattested": [],
             "untaught": [],
             "lemmas": [
@@ -17585,7 +17630,9 @@
               "2008",
               "4609",
               "7175",
-              "8033"
+              "853",
+              "854",
+              "935"
             ],
             "passed": true
           },
@@ -17595,8 +17642,19 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 20,
-        "notPractised": []
+        "practised": 19,
+        "notPractised": [
+          {
+            "ordinal": 713,
+            "pointed": "כָּבַס",
+            "lemma": "H3526",
+            "strongs": [
+              "H3526"
+            ],
+            "isProperName": false,
+            "properNameTypes": []
+          }
+        ]
       }
     },
     {
@@ -17737,7 +17795,7 @@
         },
         {
           "kind": "composed",
-          "text": "בָגְדוּ בִּגְאוֹן לִבָּם כִּי הֵפֵרוּ אֶת־הַבְּרִית",
+          "text": "בָּגְדוּ בִּגְאוֹן לִבָּם כִּי הֵפֵרוּ אֶת־הַבְּרִית",
           "targetWords": [
             {
               "ordinal": 721,
@@ -19149,7 +19207,7 @@
         },
         {
           "kind": "composed",
-          "text": "נָגִיד עַל הָעָם וְהָעֵד בּוֹ",
+          "text": "הַנָּגִיד עַל הָעָם רַע וְהָעֵד בּוֹ",
           "targetWords": [
             {
               "ordinal": 781,
@@ -19173,7 +19231,7 @@
             }
           ],
           "verification": {
-            "words": 5,
+            "words": 6,
             "unattested": [],
             "untaught": [],
             "lemmas": [
@@ -19183,7 +19241,9 @@
               "5921",
               "5922",
               "5954",
-              "5971"
+              "5971",
+              "7451",
+              "7489"
             ],
             "passed": true
           },
@@ -19192,7 +19252,7 @@
         },
         {
           "kind": "composed",
-          "text": "חָגוּר חֶרֶב וַיִּקְשֹׁר אֶת־הַסּוּסִים בַּמֶּרְכָּבָה",
+          "text": "וַיַּחְגֹּר הָאִישׁ חֶרֶב וַיֶּאְסֹר אֶת־הַסּוּסִים בַּמֶּרְכָּבָה",
           "targetWords": [
             {
               "ordinal": 783,
@@ -19200,16 +19260,6 @@
               "lemma": "H4818",
               "strongs": [
                 "H4818"
-              ],
-              "isProperName": false,
-              "properNameTypes": []
-            },
-            {
-              "ordinal": 786,
-              "pointed": "קָשַׁר",
-              "lemma": "H7194",
-              "strongs": [
-                "H7194"
               ],
               "isProperName": false,
               "properNameTypes": []
@@ -19226,15 +19276,16 @@
             }
           ],
           "verification": {
-            "words": 6,
+            "words": 7,
             "unattested": [],
             "untaught": [],
             "lemmas": [
               "2296",
               "2719",
+              "376",
               "4818",
               "5483",
-              "7194",
+              "631",
               "853",
               "854"
             ],
@@ -19328,7 +19379,7 @@
         },
         {
           "kind": "composed",
-          "text": "וַתַּהַר הָאִשָּׁה כִּי הַגּוֹלָה שָׁבָה",
+          "text": "שָׁבָה הַגּוֹלָה וַתַּהַר הָאִשָּׁה וַתֵּלֶד בֵּן",
           "targetWords": [
             {
               "ordinal": 794,
@@ -19352,17 +19403,19 @@
             }
           ],
           "verification": {
-            "words": 5,
+            "words": 6,
             "unattested": [],
             "untaught": [],
             "lemmas": [
+              "1121",
+              "1122",
               "1473",
               "2029",
-              "3587",
-              "3588",
+              "3205",
               "7617",
               "7725",
-              "802"
+              "802",
+              "996"
             ],
             "passed": true
           },
@@ -19371,18 +19424,8 @@
         },
         {
           "kind": "composed",
-          "text": "בָּזָה אֶת־אָחִיו וְשֶׁבֶר עִמָּדִי",
+          "text": "בָּזָה אֶת־אָחִיו וַיָּבֹא עָלָיו שֶׁבֶר גָּדוֹל",
           "targetWords": [
-            {
-              "ordinal": 791,
-              "pointed": "עִמָּד",
-              "lemma": "H5978",
-              "strongs": [
-                "H5978"
-              ],
-              "isProperName": false,
-              "properNameTypes": []
-            },
             {
               "ordinal": 792,
               "pointed": "שֶׁבֶר",
@@ -19405,15 +19448,19 @@
             }
           ],
           "verification": {
-            "words": 5,
+            "words": 7,
             "unattested": [],
             "untaught": [],
             "lemmas": [
+              "1419",
               "251",
-              "5978",
+              "5921",
               "7667",
+              "7668",
+              "7669",
               "853",
               "854",
+              "935",
               "959"
             ],
             "passed": true
@@ -19423,7 +19470,7 @@
         },
         {
           "kind": "composed",
-          "text": "פָּשְׁטוּ אֶת־בְּגָדָיו וְאֶפֶס כֹּחוֹ לָנֶצַח",
+          "text": "פָּשְׁטוּ בְּגָדָיו עַד אֶפֶס וְאֵין כֹּחַ בּוֹ לָנֶצַח",
           "targetWords": [
             {
               "ordinal": 788,
@@ -19457,16 +19504,19 @@
             }
           ],
           "verification": {
-            "words": 6,
+            "words": 8,
             "unattested": [],
             "untaught": [],
             "lemmas": [
               "3581",
+              "369",
               "5331",
+              "5703",
+              "5704",
+              "5705",
+              "5706",
               "657",
               "6584",
-              "853",
-              "854",
               "899"
             ],
             "passed": true
@@ -19477,8 +19527,29 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 20,
-        "notPractised": []
+        "practised": 18,
+        "notPractised": [
+          {
+            "ordinal": 786,
+            "pointed": "קָשַׁר",
+            "lemma": "H7194",
+            "strongs": [
+              "H7194"
+            ],
+            "isProperName": false,
+            "properNameTypes": []
+          },
+          {
+            "ordinal": 791,
+            "pointed": "עִמָּד",
+            "lemma": "H5978",
+            "strongs": [
+              "H5978"
+            ],
+            "isProperName": false,
+            "properNameTypes": []
+          }
+        ]
       }
     },
     {
@@ -19662,7 +19733,7 @@
         },
         {
           "kind": "composed",
-          "text": "הַלֻּחֹת בָּאָרוֹן וְהַכֹּהֵן נָקִי",
+          "text": "נָתַן הַכֹּהֵן הַנָּקִי אֶת־הַלֻּחֹת בָּאָרוֹן",
           "targetWords": [
             {
               "ordinal": 803,
@@ -19686,14 +19757,17 @@
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 6,
             "unattested": [],
             "untaught": [],
             "lemmas": [
               "3548",
               "3871",
               "5355",
-              "727"
+              "5414",
+              "727",
+              "853",
+              "854"
             ],
             "passed": true
           },
@@ -19875,7 +19949,7 @@
         },
         {
           "kind": "composed",
-          "text": "תּוֹלַעַת וּתְכֵלֶת עַל הַיְרִיעֹת וְקוֹל כִּנּוֹר בַּבַּיִת",
+          "text": "תּוֹלַעַת בַּפְּרִי וְקוֹל כִּנּוֹר בַּבַּיִת",
           "targetWords": [
             {
               "ordinal": 812,
@@ -19899,20 +19973,15 @@
             }
           ],
           "verification": {
-            "words": 7,
+            "words": 5,
             "unattested": [],
             "untaught": [],
             "lemmas": [
               "1004",
-              "3407",
               "3658",
-              "5920",
-              "5921",
-              "5922",
-              "5954",
+              "6529",
               "6963",
-              "8438",
-              "8504"
+              "8438"
             ],
             "passed": true
           },
@@ -20146,7 +20215,7 @@
         },
         {
           "kind": "composed",
-          "text": "יִרְאַת יְהוָה עַל אֱנוֹשׁ אֲשֶׁר חֵרֵף",
+          "text": "אֱנוֹשׁ אֲשֶׁר חֵרֵף אֶת־יְהוָה אֵין בּוֹ יִרְאַת אֱלֹהִים",
           "targetWords": [
             {
               "ordinal": 827,
@@ -20180,7 +20249,7 @@
             }
           ],
           "verification": {
-            "words": 6,
+            "words": 9,
             "unattested": [],
             "untaught": [],
             "lemmas": [
@@ -20189,13 +20258,13 @@
               "3071",
               "3373",
               "3374",
+              "369",
+              "430",
               "582",
               "583",
-              "5920",
-              "5921",
-              "5922",
-              "5954",
-              "834"
+              "834",
+              "853",
+              "854"
             ],
             "passed": true
           },
@@ -20204,7 +20273,7 @@
         },
         {
           "kind": "composed",
-          "text": "נָתַץ אֶת־הַבָּמוֹת וְחָרְבוּ הֶעָרִים",
+          "text": "נָתַץ אֶת־הַבָּמוֹת וְהֶעָרִים חָרְבוּ",
           "targetWords": [
             {
               "ordinal": 830,
@@ -20508,7 +20577,7 @@
         },
         {
           "kind": "composed",
-          "text": "הַצֵּלָע עַל הַבַּיִת וְהָאֹרֵב בַּמְּעָרָה",
+          "text": "הָאֹרֵב בַּצֵּלָע עַל הַבַּיִת וְלֹא בַּמְּעָרָה",
           "targetWords": [
             {
               "ordinal": 841,
@@ -20542,17 +20611,19 @@
             }
           ],
           "verification": {
-            "words": 5,
+            "words": 6,
             "unattested": [],
             "untaught": [],
             "lemmas": [
               "1004",
               "1006",
+              "3808",
               "4631",
               "5920",
               "5921",
               "5922",
               "5954",
+              "6762",
               "6763",
               "693"
             ],
@@ -20607,7 +20678,7 @@
         },
         {
           "kind": "composed",
-          "text": "שָׁב אֶת־שְׁבוּת עַמּוֹ בְּאַהֲבָתוֹ כִּי יִצְדַּק",
+          "text": "שָׁב יְהוָה אֶת־שְׁבוּת עַמּוֹ בְּאַהֲבָתוֹ וְהָעָם יִצְדַּק",
           "targetWords": [
             {
               "ordinal": 842,
@@ -20641,14 +20712,14 @@
             }
           ],
           "verification": {
-            "words": 7,
+            "words": 8,
             "unattested": [],
             "untaught": [],
             "lemmas": [
               "157",
               "160",
-              "3587",
-              "3588",
+              "3068",
+              "3071",
               "5971",
               "6663",
               "7622",
@@ -21003,7 +21074,7 @@
         },
         {
           "kind": "composed",
-          "text": "אֵלֶּה תּוֹלְדֹת הָאִישׁ וַיַּקְהֵל שְׁמֹנִים אִישׁ",
+          "text": "אֵלֶּה תּוֹלְדֹת הָאִישׁ שְׁמֹנִים אִישׁ וַיַּקְהֵל אֹתָם",
           "targetWords": [
             {
               "ordinal": 861,
@@ -21037,7 +21108,7 @@
             }
           ],
           "verification": {
-            "words": 6,
+            "words": 7,
             "unattested": [],
             "untaught": [],
             "lemmas": [
@@ -21047,7 +21118,8 @@
               "428",
               "6950",
               "8084",
-              "8435"
+              "8435",
+              "853"
             ],
             "passed": true
           },
@@ -21105,7 +21177,7 @@
         },
         {
           "kind": "composed",
-          "text": "הַמָּשָׁל בְּפִיהֶם וְהָעָם כָּבֵד",
+          "text": "הַמָּשָׁל בְּפִי הָעָם וְהָעָם כָּבֵד מְאֹד",
           "targetWords": [
             {
               "ordinal": 866,
@@ -21129,12 +21201,13 @@
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 6,
             "unattested": [],
             "untaught": [],
             "lemmas": [
               "3513",
               "3515",
+              "3966",
               "4912",
               "5971",
               "6310"
@@ -21146,7 +21219,7 @@
         },
         {
           "kind": "composed",
-          "text": "חֵפֶץ יְהוָה נָחַנִי בַּדֶּרֶךְ",
+          "text": "יְהוָה נָחַנִי בְּדֶרֶךְ חֶפְצוֹ",
           "targetWords": [
             {
               "ordinal": 869,
@@ -21612,7 +21685,7 @@
         },
         {
           "kind": "composed",
-          "text": "אֵי פִּילֶגֶשׁ הָאִישׁ כִּי הַיֶּלֶד עַל חֵיק אִמּוֹ",
+          "text": "אֵי פִּילֶגֶשׁ הָאִישׁ וְהַנַּעַר בְּחֵיק אִמּוֹ",
           "targetWords": [
             {
               "ordinal": 886,
@@ -21646,21 +21719,15 @@
             }
           ],
           "verification": {
-            "words": 8,
+            "words": 6,
             "unattested": [],
             "untaught": [],
             "lemmas": [
               "2436",
-              "3206",
               "335",
-              "3587",
-              "3588",
               "376",
               "517",
-              "5920",
-              "5921",
-              "5922",
-              "5954",
+              "5288",
               "6370"
             ],
             "passed": true
@@ -21727,7 +21794,7 @@
         },
         {
           "kind": "composed",
-          "text": "אַרְגָּמָן עַל הַיְרִיעֹת וַיהוָה גָּמַל טוֹב",
+          "text": "גָּמַל יְהוָה טוֹב עַל הָעָם וַיִּתְּנוּ אַרְגָּמָן עַל הַיְרִיעֹת",
           "targetWords": [
             {
               "ordinal": 889,
@@ -21751,7 +21818,7 @@
             }
           ],
           "verification": {
-            "words": 6,
+            "words": 9,
             "unattested": [],
             "untaught": [],
             "lemmas": [
@@ -21760,11 +21827,14 @@
               "2896",
               "2897",
               "3068",
+              "3071",
               "3407",
+              "5414",
               "5920",
               "5921",
               "5922",
               "5954",
+              "5971",
               "713"
             ],
             "passed": true
@@ -22017,7 +22087,7 @@
         },
         {
           "kind": "composed",
-          "text": "לְלַקֵּט בַּשָּׂדֶה אֵצֶל הַבְּאֵר",
+          "text": "יָצְאָה הַנַּעֲרָה לְלַקֵּט בַּשָּׂדֶה אֵצֶל הַבְּאֵר",
           "targetWords": [
             {
               "ordinal": 905,
@@ -22041,11 +22111,13 @@
             }
           ],
           "verification": {
-            "words": 4,
+            "words": 6,
             "unattested": [],
             "untaught": [],
             "lemmas": [
+              "3318",
               "3950",
+              "5291",
               "681",
               "7704",
               "875"
@@ -22171,7 +22243,7 @@
         },
         {
           "kind": "composed",
-          "text": "חָרָשׁ עָשָׂה מוֹפֵת וְהַיְלָדִים מְשַׂחֲקִים",
+          "text": "עָשָׂה יְהוָה מוֹפֵת וְהַיְלָדִים מְשַׂחֲקִים לִפְנֵי הֶחָרָשׁ",
           "targetWords": [
             {
               "ordinal": 912,
@@ -22205,14 +22277,17 @@
             }
           ],
           "verification": {
-            "words": 5,
+            "words": 7,
             "unattested": [],
             "untaught": [],
             "lemmas": [
               "2796",
+              "3068",
+              "3071",
               "3206",
               "4159",
               "6213",
+              "6440",
               "7832"
             ],
             "passed": true
@@ -22403,7 +22478,7 @@
         },
         {
           "kind": "composed",
-          "text": "וַיָּצַר עַל הָעִיר וְאֶבֶן יְקָרָה בְּתוֹךְ הַמִּבְצָר",
+          "text": "וַיָּצַר עַל הָעִיר כִּי אֶבֶן יְקָרָה בְּתוֹךְ הַמִּבְצָר",
           "targetWords": [
             {
               "ordinal": 921,
@@ -22427,12 +22502,14 @@
             }
           ],
           "verification": {
-            "words": 7,
+            "words": 8,
             "unattested": [],
             "untaught": [],
             "lemmas": [
               "3335",
               "3368",
+              "3587",
+              "3588",
               "4013",
               "5892",
               "5920",
@@ -22442,6 +22519,8 @@
               "6696",
               "68",
               "6887",
+              "69",
+              "72",
               "8432"
             ],
             "passed": true
@@ -22615,7 +22694,7 @@
         },
         {
           "kind": "composed",
-          "text": "מָשַׁךְ אֹתוֹ מִן תְּהוֹם וּמָחָה אֶת־טֻמְאָתוֹ",
+          "text": "מָשַׁךְ אֹתוֹ מִן תְּהוֹם וַיִּמַח אֶת־טֻמְאָתוֹ",
           "targetWords": [
             {
               "ordinal": 929,
@@ -22679,7 +22758,7 @@
         },
         {
           "kind": "composed",
-          "text": "מִשְׁנֵה כֶסֶף בְּיָדָם וַיָּמָל אֶת־בְּנוֹ",
+          "text": "וַיָּמָל הָאִישׁ אֶת־בְּנוֹ וַיִּתֵּן לַכֹּהֵן מִשְׁנֵה כֶסֶף",
           "targetWords": [
             {
               "ordinal": 936,
@@ -22703,15 +22782,17 @@
             }
           ],
           "verification": {
-            "words": 6,
+            "words": 8,
             "unattested": [],
             "untaught": [],
             "lemmas": [
               "1121",
-              "3027",
+              "3548",
               "3701",
+              "376",
               "4135",
               "4932",
+              "5414",
               "853",
               "854"
             ],
@@ -22937,7 +23018,7 @@
         },
         {
           "kind": "composed",
-          "text": "הָאוֹפַנִּים תַּחַת הַכְּרוּבִים וְהַמַּלְכָּה בַּהֵיכָל",
+          "text": "הָאוֹפַנִּים תַּחַת הַכְּרוּבִים בַּהֵיכָל וְהַמַּלְכָּה עֹמֶדֶת שָׁם",
           "targetWords": [
             {
               "ordinal": 944,
@@ -22961,7 +23042,7 @@
             }
           ],
           "verification": {
-            "words": 5,
+            "words": 7,
             "unattested": [],
             "untaught": [],
             "lemmas": [
@@ -22969,6 +23050,8 @@
               "212",
               "3742",
               "4436",
+              "5975",
+              "8033",
               "8478",
               "8480"
             ],
@@ -23080,7 +23163,7 @@
         },
         {
           "kind": "composed",
-          "text": "הַצָּרַעַת בְּבָשָׂר וְזָרְקוּ מַיִם עָלָיו",
+          "text": "הַצָּרַעַת בִּבְשַׂר הָאִישׁ וְזָרְקוּ עָלָיו מַיִם",
           "targetWords": [
             {
               "ordinal": 951,
@@ -23104,12 +23187,13 @@
             }
           ],
           "verification": {
-            "words": 5,
+            "words": 6,
             "unattested": [],
             "untaught": [],
             "lemmas": [
               "1320",
               "2236",
+              "376",
               "4325",
               "4956",
               "5921",
@@ -23122,7 +23206,7 @@
         },
         {
           "kind": "composed",
-          "text": "שְׂעֹרִים עַל הָאָתוֹן וְהָאִישׁ יַאֲרִיךְ יָמִים",
+          "text": "יַאֲרִיךְ הָאִישׁ יָמִים וּשְׂעֹרִים לוֹ עַל הָאָתוֹן",
           "targetWords": [
             {
               "ordinal": 954,
@@ -23156,17 +23240,20 @@
             }
           ],
           "verification": {
-            "words": 6,
+            "words": 7,
             "unattested": [],
             "untaught": [],
             "lemmas": [
               "3117",
               "376",
+              "3789",
+              "5456",
               "5920",
               "5921",
               "5922",
               "5954",
               "748",
+              "7592",
               "8184",
               "860"
             ],
@@ -23299,18 +23386,8 @@
         },
         {
           "kind": "composed",
-          "text": "הַסִּיר עַל הָאֵשׁ וְגָבַהּ לִבּוֹ",
+          "text": "גָּבַהּ לֵב הַכֹּהֵן וְהַסִּיר עַל הָאֵשׁ לְפָנָיו",
           "targetWords": [
-            {
-              "ordinal": 961,
-              "pointed": "סִיר",
-              "lemma": "H5518",
-              "strongs": [
-                "H5518"
-              ],
-              "isProperName": false,
-              "properNameTypes": []
-            },
             {
               "ordinal": 963,
               "pointed": "גָּבַהּ",
@@ -23323,17 +23400,19 @@
             }
           ],
           "verification": {
-            "words": 5,
+            "words": 7,
             "unattested": [],
             "untaught": [],
             "lemmas": [
               "1361",
+              "3548",
               "3820",
-              "5518",
+              "5493",
               "5920",
               "5921",
               "5922",
               "5954",
+              "6440",
               "784"
             ],
             "passed": true
@@ -23630,8 +23709,19 @@
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 20,
-        "notPractised": []
+        "practised": 19,
+        "notPractised": [
+          {
+            "ordinal": 961,
+            "pointed": "סִיר",
+            "lemma": "H5518",
+            "strongs": [
+              "H5518"
+            ],
+            "isProperName": false,
+            "properNameTypes": []
+          }
+        ]
       }
     },
     {
@@ -23888,7 +23978,7 @@
         },
         {
           "kind": "composed",
-          "text": "עֶשְׂרֹנִים סֹלֶת מִזְרָק אֶחָד כְּעֶרְכְּךָ",
+          "text": "נָתַן מִזְרָק אֶחָד וּשְׁנֵי עֶשְׂרֹנִים סֹלֶת כְּעֶרְכְּךָ",
           "targetWords": [
             {
               "ordinal": 986,
@@ -23922,15 +24012,18 @@
             }
           ],
           "verification": {
-            "words": 5,
+            "words": 7,
             "unattested": [],
             "untaught": [],
             "lemmas": [
               "259",
               "4219",
+              "5414",
               "5560",
               "6187",
-              "6241"
+              "6241",
+              "8141",
+              "8147"
             ],
             "passed": true
           },
@@ -24022,7 +24115,7 @@
         },
         {
           "kind": "composed",
-          "text": "יוֹנֵק אָכַל חִנָּם וְרִמּוֹן בְּיָדוֹ",
+          "text": "רִמּוֹן בְּיַד יוֹנֵק כִּי אוֹיְבִים שָׂנְאוּ אֶת־הָעָם חִנָּם",
           "targetWords": [
             {
               "ordinal": 994,
@@ -24056,16 +24149,26 @@
             }
           ],
           "verification": {
-            "words": 5,
+            "words": 9,
             "unattested": [],
             "untaught": [],
             "lemmas": [
+              "1667",
+              "1910",
               "2600",
               "3027",
+              "3028",
               "3243",
-              "398",
+              "341",
+              "3587",
+              "3588",
+              "5884",
+              "5971",
               "7416",
-              "7417"
+              "7417",
+              "8130",
+              "853",
+              "854"
             ],
             "passed": true
           },

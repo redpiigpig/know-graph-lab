@@ -1,13 +1,43 @@
 {
-  "volume": 1, "lesson": 47, "author": "opus-5-hand-written",
-  "note": "venerō 只認字形，cautiō／corōnō／cūria 各只剩一個形進語料。",
+  "volume": 1,
+  "lesson": 47,
+  "author": "opus-5-hand-written",
+  "note": "2026-09-27 全句重寫。🚨 venerō／veneror 雖同條收兩式，詞頭鎖在 venerō 那個字串，但語料唯一能用的限定形 veneratur 詞位卻標記為 veneror，兩邊對不上、詞表原形也查無字形，練不到；20 詞僅練 19。",
   "sentences": [
-    {"latin": "totus tristis veneratus est", "chinese": "他整個人憂傷地敬拜了。", "targets": ["totus", "tristis", "venero", "sum"]},
-    {"latin": "aliquam cautionem assumpsit", "chinese": "某位承擔了那份保證。", "targets": ["aliqui", "cautio", "assumo"]},
-    {"latin": "conclusione coronatum Crevit", "chinese": "以結論加冕，他就增長了。", "targets": ["conclusio", "corono", "cresco"]},
-    {"latin": "curiam demonstrat et destruxit", "chinese": "他指出了議院，又毀壞了它。", "targets": ["curia", "demonstro", "destruo"]},
-    {"latin": "figura gesta hospites", "chinese": "已成就的形像，與那些客人。", "targets": ["figura", "gero", "hospes"]},
-    {"latin": "instruxit hospites in curiam", "chinese": "他在議院中教導了客人們。", "targets": ["instruo", "hospes", "in", "curia"]},
-    {"latin": "tota figura tristis", "chinese": "整個形像都是憂傷的。", "targets": ["totus", "figura", "tristis"]}
+    {
+      "latin": "Testis totus fidelis est; tristis non est.",
+      "chinese": "整個見證人是忠信的；他並不憂傷。",
+      "targets": ["testis", "totus", "tristis"]
+    },
+    {
+      "latin": "Umbra transit; populus veneratur.",
+      "chinese": "陰影消逝了；百姓在敬拜。",
+      "targets": ["umbra", "populus"]
+    },
+    {
+      "latin": "Aliqui credunt; aliquis non credit.",
+      "chinese": "有些人相信；卻有一人不信。",
+      "targets": ["aliqui", "aliquis", "credo"]
+    },
+    {
+      "latin": "Christus mundum assumpsit; figuram hominis gessit.",
+      "chinese": "基督承擔了世界；祂擁有人的形像。",
+      "targets": ["Christus", "assumo", "figura", "homo", "gero"]
+    },
+    {
+      "latin": "Hospes domum instruxit; caput coronatum est.",
+      "chinese": "客人裝備了房舍；那頭被加冕了。",
+      "targets": ["hospes", "domus", "instruo", "caput", "corono"]
+    },
+    {
+      "latin": "Deus mundum destruxit? Non; demonstrat misericordiam; fides crescit.",
+      "chinese": "天主毀滅了世界嗎？不；祂顯示了憐憫；信德在增長。",
+      "targets": ["Deus", "destruo", "demonstro", "fides", "cresco"]
+    },
+    {
+      "latin": "Humilis cautionem dat; conclusionem curia habet.",
+      "chinese": "卑微的人提出了保證；議院持有那結論。",
+      "targets": ["humilis", "cautio", "conclusio", "curia"]
+    }
   ]
 }

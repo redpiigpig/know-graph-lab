@@ -1,13 +1,43 @@
 {
-  "volume": 1, "lesson": 32, "author": "opus-5-hand-written",
-  "note": "mulier 沒有屬格進語料（只有 mulier／mulieres／mulierem）。supersubstantiālis 只有主禱文那一個受格 supersubstantialem。",
+  "volume": 1,
+  "lesson": 32,
+  "author": "opus-5-hand-written",
+  "note": "2026-09-27 全句重寫。prex 只用複數 preces（語料無單數字形）。",
   "sentences": [
-    {"latin": "dilectus frater fidelis", "chinese": "心愛而忠信的兄弟。", "targets": ["dilectus", "frater", "fidelis"]},
-    {"latin": "dulce os et mulier", "chinese": "甘美的口，以及那婦人。", "targets": ["dulcis", "os", "mulier"]},
-    {"latin": "fide et spe", "chinese": "以信德與望德。", "targets": ["fides", "spes"]},
-    {"latin": "incidit in latere", "chinese": "它落在肋旁。", "targets": ["incido", "in", "latus"]},
-    {"latin": "preces sursum ad arborem", "chinese": "向上朝那樹的祈求。", "targets": ["prex", "sursum", "ad", "arbor"]},
-    {"latin": "rem supersubstantialem dedit", "chinese": "他給了那超乎本質的東西。", "targets": ["res", "supersubstantialis"]},
-    {"latin": "arbor dulcis et fidelis frater", "chinese": "甘美的樹與忠信的兄弟。", "targets": ["arbor", "dulcis", "fidelis", "frater"]}
+    {
+      "latin": "Dies dilectus fidelibus est.",
+      "chinese": "那日子為信實的人是可愛的。",
+      "targets": ["dies", "dilectus", "fidelis"]
+    },
+    {
+      "latin": "Christus doceat; fides crescit.",
+      "chinese": "願基督教導；信德便增長。",
+      "targets": ["Christus", "doceo", "fides"]
+    },
+    {
+      "latin": "Frater incidit; pes dolet.",
+      "chinese": "兄弟跌落了；他的腳疼痛。",
+      "targets": ["frater", "incido", "pes"]
+    },
+    {
+      "latin": "Mulier latus tetigit; os ejus dulce est.",
+      "chinese": "婦女觸摸了那肋旁；她的口是甘美的。",
+      "targets": ["mulier", "latus", "os", "dulcis"]
+    },
+    {
+      "latin": "Ego et tu preces dicimus; spem habemus.",
+      "chinese": "我和你都誦念了禱詞；我們懷有希望。",
+      "targets": ["ego", "tu", "prex", "spes"]
+    },
+    {
+      "latin": "Res sursum tendit; Deus panem supersubstantialem dat.",
+      "chinese": "那事物向上伸展；天主賜下超越本質的餅。",
+      "targets": ["res", "sursum", "supersubstantialis", "panis"]
+    },
+    {
+      "latin": "Arbor fructum dat; frater docet.",
+      "chinese": "樹木結出果實；兄弟教導人。",
+      "targets": ["arbor", "fructus", "frater", "doceo"]
+    }
   ]
 }

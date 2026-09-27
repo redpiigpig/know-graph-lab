@@ -1344,7 +1344,7 @@
       "readerLesson": 4,
       "lessonSlot": 3,
       "textbookLesson": 2,
-      "glossZh": "圓珠筆",
+      "glossZh": "原子筆",
       "glossEn": "ballpoint pen",
       "pos": "名詞",
       "dictionaryForm": ""
@@ -2252,7 +2252,7 @@
       "textbookLesson": 3,
       "glossZh": "那麼、那樣的話",
       "glossEn": "then, in that case",
-      "pos": "接続詞",
+      "pos": "接續詞",
       "dictionaryForm": ""
     },
     {
@@ -4149,7 +4149,7 @@
       "readerLesson": 11,
       "lessonSlot": 4,
       "textbookLesson": 5,
-      "glossZh": "何時、何候",
+      "glossZh": "何時",
       "glossEn": "when, what time",
       "pos": "名詞",
       "dictionaryForm": ""
@@ -4979,7 +4979,7 @@
       "textbookLesson": 6,
       "glossZh": "然後、接著",
       "glossEn": "then, after that",
-      "pos": "接続詞",
+      "pos": "接續詞",
       "dictionaryForm": ""
     },
     {
@@ -5172,7 +5172,7 @@
       "readerLesson": 13,
       "lessonSlot": 15,
       "textbookLesson": 6,
-      "glossZh": "視頻、錄影",
+      "glossZh": "影片、錄影帶",
       "glossEn": "video",
       "pos": "名詞",
       "dictionaryForm": ""
@@ -6047,7 +6047,7 @@
       "readerLesson": 15,
       "lessonSlot": 19,
       "textbookLesson": 7,
-      "glossZh": "訂書機",
+      "glossZh": "釘書機",
       "glossEn": "stapler",
       "pos": "名詞",
       "dictionaryForm": ""
@@ -6129,7 +6129,7 @@
       "readerLesson": 16,
       "lessonSlot": 3,
       "textbookLesson": 7,
-      "glossZh": "素敵、出色",
+      "glossZh": "出色、漂亮",
       "glossEn": "nice, wonderful, lovely",
       "pos": "な形容詞",
       "dictionaryForm": ""
@@ -7227,7 +7227,7 @@
       "textbookLesson": 8,
       "glossZh": "而且、並且",
       "glossEn": "and, and then, moreover",
-      "pos": "接続詞",
+      "pos": "接續詞",
       "dictionaryForm": ""
     },
     {
@@ -10573,7 +10573,7 @@
       "textbookLesson": 12,
       "glossZh": "但是、可是、然而",
       "glossEn": "but, however, yet",
-      "pos": "接続詞",
+      "pos": "接續詞",
       "dictionaryForm": ""
     },
     {
@@ -14141,7 +14141,7 @@
       "textbookLesson": 17,
       "glossZh": "所以、因此",
       "glossEn": "therefore, so, that is why",
-      "pos": "接続詞",
+      "pos": "接續詞",
       "dictionaryForm": ""
     },
     {
@@ -15094,7 +15094,7 @@
       "textbookLesson": 19,
       "glossZh": "但是、然而",
       "glossEn": "however, but",
-      "pos": "接続詞",
+      "pos": "接續詞",
       "dictionaryForm": ""
     },
     {
@@ -17649,7 +17649,7 @@
       "textbookLesson": 25,
       "glossZh": "萬一、如果",
       "glossEn": "if, in case, suppose",
-      "pos": "接続詞",
+      "pos": "接續詞",
       "dictionaryForm": ""
     },
     {
@@ -17741,7 +17741,7 @@
       "readerLesson": 45,
       "lessonSlot": 2,
       "textbookLesson": 25,
-      "glossZh": "轉勤",
+      "glossZh": "調職、調任",
       "glossEn": "job transfer",
       "pos": "名詞",
       "dictionaryForm": ""
@@ -19786,7 +19786,7 @@
       "textbookLesson": 28,
       "glossZh": "而且、並且",
       "glossEn": "moreover, in addition",
-      "pos": "接続詞",
+      "pos": "接續詞",
       "dictionaryForm": ""
     },
     {
@@ -19805,7 +19805,7 @@
       "textbookLesson": 28,
       "glossZh": "因此、所以",
       "glossEn": "therefore, so",
-      "pos": "接続詞",
+      "pos": "接續詞",
       "dictionaryForm": ""
     },
     {
@@ -21778,7 +21778,7 @@
       "textbookLesson": 30,
       "glossZh": "於是、然後",
       "glossEn": "then, and so",
-      "pos": "接続詞",
+      "pos": "接續詞",
       "dictionaryForm": ""
     },
     {
@@ -28843,7 +28843,7 @@
       "textbookLesson": 38,
       "glossZh": "叫做、所謂",
       "glossEn": "called, named",
-      "pos": "接続詞",
+      "pos": "接續詞",
       "dictionaryForm": ""
     },
     {
@@ -30369,7 +30369,7 @@
       "textbookLesson": 40,
       "glossZh": "順便說一下、話說回來",
       "glossEn": "by the way, incidentally",
-      "pos": "接続詞",
+      "pos": "接續詞",
       "dictionaryForm": ""
     },
     {
@@ -33061,7 +33061,7 @@
       "textbookLesson": 43,
       "glossZh": "此外、而且",
       "glossEn": "furthermore, moreover",
-      "pos": "接続詞",
+      "pos": "接續詞",
       "dictionaryForm": ""
     },
     {
@@ -34784,7 +34784,7 @@
       "readerLesson": 37,
       "lessonSlot": 12,
       "textbookLesson": 46,
-      "glossZh": "宅配便",
+      "glossZh": "宅配快遞",
       "glossEn": "home delivery service",
       "pos": "名詞",
       "dictionaryForm": ""
@@ -37768,7 +37768,7 @@
       "textbookLesson": 0,
       "glossZh": "或者、或是",
       "glossEn": "or, alternatively, either",
-      "pos": "接続詞",
+      "pos": "接續詞",
       "dictionaryForm": ""
     },
     {
@@ -37806,7 +37806,7 @@
       "textbookLesson": 0,
       "glossZh": "或者、或是",
       "glossEn": "or, either, or else",
-      "pos": "接続詞",
+      "pos": "接續詞",
       "dictionaryForm": ""
     },
     {
@@ -38110,7 +38110,7 @@
       "textbookLesson": 0,
       "glossZh": "即、也就是",
       "glossEn": "that is, in other words",
-      "pos": "接続詞",
+      "pos": "接續詞",
       "dictionaryForm": ""
     },
     {
@@ -38167,7 +38167,7 @@
       "textbookLesson": 0,
       "glossZh": "即、也就是",
       "glossEn": "namely, that is",
-      "pos": "接続詞",
+      "pos": "接續詞",
       "dictionaryForm": ""
     },
     {
@@ -38547,7 +38547,7 @@
       "textbookLesson": 0,
       "glossZh": "因此、故此",
       "glossEn": "therefore, hence, thus",
-      "pos": "接続詞",
+      "pos": "接續詞",
       "dictionaryForm": ""
     },
     {
@@ -38680,7 +38680,7 @@
       "textbookLesson": 0,
       "glossZh": "及、以及",
       "glossEn": "and, as well as, plus",
-      "pos": "接続詞",
+      "pos": "接續詞",
       "dictionaryForm": ""
     },
     {
@@ -39250,7 +39250,7 @@
       "textbookLesson": 0,
       "glossZh": "或、或者",
       "glossEn": "or, either",
-      "pos": "接続詞",
+      "pos": "接續詞",
       "dictionaryForm": ""
     },
     {
@@ -39463,7 +39463,7 @@
       "dictionaryForm": ""
     },
     {
-      "kana": "はいいる",
+      "kana": "はいる",
       "kanji": "這入る",
       "accentBreaks": [],
       "step": 1,
@@ -39630,7 +39630,7 @@
       "textbookLesson": 0,
       "glossZh": "因此、所以",
       "glossEn": "therefore, consequently, thus",
-      "pos": "接続詞",
+      "pos": "接續詞",
       "dictionaryForm": ""
     },
     {
@@ -39799,7 +39799,7 @@
       "readerLesson": 50,
       "lessonSlot": 8,
       "textbookLesson": 0,
-      "glossZh": "役者",
+      "glossZh": "演員",
       "glossEn": "actor, actress, performer",
       "pos": "名詞",
       "dictionaryForm": ""

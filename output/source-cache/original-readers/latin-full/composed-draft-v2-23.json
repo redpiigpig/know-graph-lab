@@ -1,13 +1,43 @@
 {
-  "volume": 2, "lesson": 23, "author": "opus-5-hand-written",
-  "note": "本課多為教會法用語，兩層語料齊備。",
+  "volume": 2,
+  "lesson": 23,
+  "author": "opus-5-hand-written",
+  "note": "2026-09-27 全句重寫。",
   "sentences": [
-    {"latin": "summa alibi cupio", "chinese": "我在別處渴望那總數。", "targets": ["summa", "alibi", "cupio"]},
-    {"latin": "proprie damnavit consistere", "chinese": "他恰當地判定要停止。", "targets": ["proprie", "damno", "consisto"]},
-    {"latin": "equos patientia privari", "chinese": "要以忍耐奪去那些馬。", "targets": ["equus", "patientia", "privo"]},
-    {"latin": "præsertim proprietatem sororis", "chinese": "尤其是姐妹的所有權。", "targets": ["praesertim", "proprietas", "soror"]},
-    {"latin": "speciali dispositione fraudem", "chinese": "以特別的安排面對那欺詐。", "targets": ["specialis", "dispositio", "fraus"]},
-    {"latin": "iniqui exercent equorum", "chinese": "那些不義的人操練馬匹。", "targets": ["iniquus", "exerceo", "equus"]},
-    {"latin": "Summaque patientiam cupientes", "chinese": "而那總數，以及渴望忍耐的人們。", "targets": ["summa", "patientia", "cupio"]}
+    {
+      "latin": "Summa cupit veritatem; equus currit.",
+      "chinese": "要旨渴望了真理；馬奔跑著。",
+      "targets": ["summa", "cupio", "veritas", "equus"]
+    },
+    {
+      "latin": "Propterea alibi habitant; proprie credunt.",
+      "chinese": "因此，他們居住在別處；他們正確地相信。",
+      "targets": ["propterea", "alibi", "proprie", "credo"]
+    },
+    {
+      "latin": "Judex reum damnavit; consistit lex.",
+      "chinese": "審判者判罪了被告；法律確立了。",
+      "targets": ["judex", "reus", "damno", "consisto", "lex"]
+    },
+    {
+      "latin": "Populus consuevit orare; patientiam habet.",
+      "chinese": "百姓習慣了祈禱；他擁有忍耐。",
+      "targets": ["populus", "consuesco", "patientia"]
+    },
+    {
+      "latin": "Deus proprietatem privavit; soror praesertim credit.",
+      "chinese": "天主奪去了所有權；姐妹尤其相信。",
+      "targets": ["Deus", "proprietas", "privo", "soror", "praesertim", "credo"]
+    },
+    {
+      "latin": "Specialis dispositio manet; fraudem non habet.",
+      "chinese": "特殊的安排長存；它沒有欺詐。",
+      "targets": ["specialis", "dispositio", "fraus"]
+    },
+    {
+      "latin": "Iniquus homo ministrat; potestatem exercet.",
+      "chinese": "不義的人服事著；他行使了權力。",
+      "targets": ["iniquus", "homo", "ministro", "potestas", "exerceo"]
+    }
   ]
 }

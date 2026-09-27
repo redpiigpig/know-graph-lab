@@ -1,13 +1,43 @@
 {
-  "volume": 2, "lesson": 18, "author": "opus-5-hand-written",
-  "note": "本課十七個待練詞多半是抽象名詞與副詞，兩層語料都收得齊。superus 在語料裡活著的是比較級 superior 那一家。",
+  "volume": 2,
+  "lesson": 18,
+  "author": "opus-5-hand-written",
+  "note": "2026-09-27 全句重寫。",
   "sentences": [
-    {"latin": "juramento episcopatum terminos", "chinese": "以誓言定主教職的界限。", "targets": ["juramentum", "episcopatus", "terminus"]},
-    {"latin": "insulæ illic subjecta", "chinese": "那裡島嶼所屬的部分。", "targets": ["insula", "illic", "subicio"]},
-    {"latin": "prohibuit notum arbitrium", "chinese": "他禁止了那眾所周知的裁決。", "targets": ["prohibeo", "notus", "arbitrium"]},
-    {"latin": "reliqua vis illic", "chinese": "其餘的力量在那裡。", "targets": ["reliquus", "vis", "illic"]},
-    {"latin": "quemadmodum ignoro feminam", "chinese": "正如我不認識那婦人。", "targets": ["quemadmodum", "ignoro", "femina"]},
-    {"latin": "contraxit mortalis cum superioribus", "chinese": "那必死的與在上者們締結了。", "targets": ["contraho", "mortalis", "superus"]},
-    {"latin": "conditio nota episcopatus reliqui", "chinese": "其餘主教職眾所周知的處境。", "targets": ["conditio", "notus", "episcopatus", "reliquus"]}
+    {
+      "latin": "Diaconus juramentum subjecit; episcopatus manet.",
+      "chinese": "執事使誓言服從了；主教職位長存。",
+      "targets": ["juramentum", "subicio", "episcopatus"]
+    },
+    {
+      "latin": "Terminus insulam prohibet; illic manet populus.",
+      "chinese": "邊界阻止了那島；百姓在那裡長存。",
+      "targets": ["terminus", "insula", "prohibeo", "illic", "populus"]
+    },
+    {
+      "latin": "Quemadmodum notus est, arbitrium suum exercet.",
+      "chinese": "正如他是眾所周知的，他行使了自己的判斷。",
+      "targets": ["quemadmodum", "notus", "arbitrium"]
+    },
+    {
+      "latin": "Aliquando reliquus populus vim ignorat.",
+      "chinese": "有時，剩餘的百姓不知道那力量。",
+      "targets": ["aliquando", "reliquus", "populus", "vis", "ignoro"]
+    },
+    {
+      "latin": "Femina matrimonium contraxit; sapiens est.",
+      "chinese": "婦女締結了婚姻；她是明智的。",
+      "targets": ["femina", "matrimonium", "contraho", "sapiens"]
+    },
+    {
+      "latin": "Mortalis conditio manet; regnum superum non est.",
+      "chinese": "會死的境況長存；那在上的國度並不是他的。",
+      "targets": ["mortalis", "conditio", "superus"]
+    },
+    {
+      "latin": "Episcopatus terminum habet; arbitrium notum manet.",
+      "chinese": "主教職位有其界限；那已知的判斷仍然存在。",
+      "targets": ["episcopatus", "terminus", "arbitrium", "notus"]
+    }
   ]
 }

@@ -1,13 +1,43 @@
 {
-  "volume": 1, "lesson": 40, "author": "opus-5-hand-written",
-  "note": "illūstro 整部武加大只有 illustretur 一形。",
+  "volume": 1,
+  "lesson": 40,
+  "author": "opus-5-hand-written",
+  "note": "2026-09-27 全句重寫。",
   "sentences": [
-    {"latin": "deposuit, proposuit et imposuit lucem", "chinese": "他放下了、提出了，又加上了光。", "targets": ["depono", "propono", "impono", "lux"]},
-    {"latin": "illustretur mons luce", "chinese": "願那山被光照亮。", "targets": ["illustro", "mons", "lux"]},
-    {"latin": "milites mites in monte", "chinese": "山上溫和的士兵們。", "targets": ["miles", "mitis", "in", "mons"]},
-    {"latin": "octo et octoginta participes", "chinese": "八十八位共享者。", "targets": ["octo", "octoginta", "particeps"]},
-    {"latin": "plangent milites in monte", "chinese": "士兵們要在山上哀哭。", "targets": ["plango", "miles", "mons"]},
-    {"latin": "particeps quidem lucis et mitis", "chinese": "的確是光的共享者，也是溫和的。", "targets": ["particeps", "quidem", "lux", "mitis"]},
-    {"latin": "imposuit octo milites et portavit", "chinese": "他派上了八名士兵，並且擔負了。", "targets": ["impono", "octo", "miles", "porto"]}
+    {
+      "latin": "Miles arma deposuit; particeps est; crucem portat.",
+      "chinese": "士兵放下了武器；他成了參與者；他背負著十字架。",
+      "targets": ["miles", "depono", "particeps", "porto"]
+    },
+    {
+      "latin": "Sacerdos manum imponit; mitis est.",
+      "chinese": "司祭按了手；他是溫和的。",
+      "targets": ["sacerdos", "impono", "mitis"]
+    },
+    {
+      "latin": "Lux illustretur; mons apparet.",
+      "chinese": "願光照耀；那山出現了。",
+      "targets": ["lux", "illustro", "mons"]
+    },
+    {
+      "latin": "Ipse octo panes ponit; quinque pisces addit.",
+      "chinese": "他親自放置了八個餅；加上了五條魚。",
+      "targets": ["ipse", "octo", "pono", "quinque"]
+    },
+    {
+      "latin": "Discipuli plangent; pauca deposuerunt.",
+      "chinese": "門徒們將要哀慟；他們放下了少許東西。",
+      "targets": ["discipulus", "plango", "paucus", "depono"]
+    },
+    {
+      "latin": "Rex octoginta annos habet.",
+      "chinese": "君王活了八十年。",
+      "targets": ["octoginta"]
+    },
+    {
+      "latin": "Sacerdos dexter stat; quidem proponit; Deus praecipit.",
+      "chinese": "那右邊的司祭站著；他確實提出了；天主吩咐了。",
+      "targets": ["sacerdos", "dexter", "quidem", "propono", "Deus", "praecipio"]
+    }
   ]
 }

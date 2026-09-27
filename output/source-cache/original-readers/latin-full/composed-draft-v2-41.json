@@ -1,13 +1,43 @@
 {
-  "volume": 2, "lesson": 41, "author": "opus-5-hand-written",
-  "note": "cottidianus 只認詞幹，語料裡對得上的是 cotidianae。",
+  "volume": 2,
+  "lesson": 41,
+  "author": "opus-5-hand-written",
+  "note": "2026-09-27 全句重寫（棄用模板產生器）。🚨 cottidianus 在武加大＋教會語料中零字形，練不到；20 詞僅練 19。",
   "sentences": [
-    {"latin": "respectu deinceps aditus", "chinese": "就那考慮而言，接著是進路。", "targets": ["respectus", "deinceps", "aditus"]},
-    {"latin": "occursum confirmatione insignis", "chinese": "以那顯著的堅固面對相遇。", "targets": ["occursus", "confirmatio", "insignis"]},
-    {"latin": "nexu lucrum cotidianae", "chinese": "日常束縛中的利益。", "targets": ["nexus", "lucrum", "cottidianus"]},
-    {"latin": "opportuno calamitas visionem", "chinese": "在合宜之時，災難與那異象。", "targets": ["opportunus", "calamitas", "visio"]},
-    {"latin": "excludere continuo pulchritudinem", "chinese": "要立即排除那美。", "targets": ["excludo", "continuo", "pulchritudo"]},
-    {"latin": "juvat reverentia aditu", "chinese": "敬畏在那進路上有所助益。", "targets": ["juvo", "reverentia", "aditus"]},
-    {"latin": "insigni visione juvent", "chinese": "願他們以那顯著的異象相助。", "targets": ["insignis", "visio", "juvo"]}
+    {
+      "latin": "Respectus deinceps in aditu manet.",
+      "chinese": "顧慮相繼地存留在門口。",
+      "targets": ["respectus", "deinceps", "aditus"]
+    },
+    {
+      "latin": "Occursus confirmationem insignem dat.",
+      "chinese": "相遇賜下了顯著的堅振。",
+      "targets": ["occursus", "confirmatio", "insignis"]
+    },
+    {
+      "latin": "Nexus vigent; lucrum manet.",
+      "chinese": "聯繫興盛著；利益長存。",
+      "targets": ["nexus", "vigeo", "lucrum"]
+    },
+    {
+      "latin": "Calamitas opportuna non est.",
+      "chinese": "災難並非有利的。",
+      "targets": ["calamitas", "opportunus"]
+    },
+    {
+      "latin": "Visio excludatur; continuo manet.",
+      "chinese": "願視象被排除；然而它立即長存。",
+      "targets": ["visio", "excludo", "continuo"]
+    },
+    {
+      "latin": "Patres sanxerunt; pulchritudo reverentiam auget.",
+      "chinese": "教父們制定了；美增添了敬畏。",
+      "targets": ["sancio", "pulchritudo", "reverentia"]
+    },
+    {
+      "latin": "Deus juvat; accurate providebit.",
+      "chinese": "天主幫助了；祂將精確地照顧。",
+      "targets": ["Deus", "juvo", "accurate", "provideo"]
+    }
   ]
 }

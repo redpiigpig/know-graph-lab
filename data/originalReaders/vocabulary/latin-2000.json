@@ -1278,7 +1278,7 @@
       "volume": "上冊",
       "lesson": 4,
       "ordinal": 79,
-      "glossZh": "言語、諺語、欺騙",
+      "glossZh": "言語、話；聖言",
       "glossEngine": "claude-haiku-4-5-20251001"
     },
     {
@@ -2051,7 +2051,7 @@
     },
     {
       "headword": "jūstus",
-      "forms": "jūstus, -um",
+      "forms": "jūstus, -a, -um",
       "gram": "",
       "glossEn": "righteous, just",
       "unit": 5,
@@ -2382,7 +2382,7 @@
       "volume": "上冊",
       "lesson": 8,
       "ordinal": 148,
-      "glossZh": "用於疑問句末尾",
+      "glossZh": "疑問後綴，附於句首詞之後",
       "glossEngine": "claude-haiku-4-5-20251001"
     },
     {
@@ -2930,7 +2930,7 @@
       "glossEngine": "claude-haiku-4-5-20251001"
     },
     {
-      "headword": "quāré",
+      "headword": "quārē",
       "forms": "quāré",
       "gram": "interrog. adv.",
       "glossEn": "for what reason? why? [6]",
@@ -3187,7 +3187,7 @@
     },
     {
       "headword": "dicō",
-      "forms": "dicō, dicere, dixi, dictus",
+      "forms": "dīcō, dīcere, dīxī, dictus",
       "gram": "",
       "glossEn": "say, tell, pass., also, be called",
       "unit": 7,
@@ -3299,7 +3299,7 @@
     },
     {
       "headword": "Jēsus",
-      "forms": "Jēsus, Jēsū, Jēsu, Jēsūm, Jēsu",
+      "forms": "Jēsus, Jēsū, Jēsu, Jēsum, Jēsu",
       "gram": "m. (voc., Jēsū)",
       "glossEn": "Jesus, Joshua",
       "unit": 7,
@@ -3411,7 +3411,7 @@
     },
     {
       "headword": "misericordia",
-      "forms": "misericordiae, f.",
+      "forms": "misericordia, misericordiae, f.",
       "gram": "",
       "glossEn": "mercy, kindness, pity [7]",
       "unit": 7,
@@ -3999,7 +3999,7 @@
       "volume": "上冊",
       "lesson": 13,
       "ordinal": 249,
-      "glossZh": "因為、那是",
+      "glossZh": "因為；（引出名詞子句）表示、以為",
       "glossEngine": "claude-haiku-4-5-20251001"
     },
     {
@@ -4015,7 +4015,7 @@
       "volume": "上冊",
       "lesson": 13,
       "ordinal": 250,
-      "glossZh": "因為、那是",
+      "glossZh": "因為；（引出名詞子句）表示、以為",
       "glossEngine": "claude-haiku-4-5-20251001"
     },
     {
@@ -4031,7 +4031,7 @@
       "volume": "上冊",
       "lesson": 13,
       "ordinal": 251,
-      "glossZh": "因為、那是",
+      "glossZh": "因為；（引出名詞子句）表示、以為",
       "glossEngine": "claude-haiku-4-5-20251001"
     },
     {
@@ -5892,7 +5892,7 @@
     },
     {
       "headword": "mēnsa",
-      "forms": "mēnsae, f.",
+      "forms": "mēnsa, mēnsae, f.",
       "gram": "",
       "glossEn": "table; banquet [12]",
       "unit": 12,
@@ -7542,7 +7542,7 @@
       "headword": "mandō",
       "forms": "mandō, mandāre, mandāvī, mandātus",
       "gram": "",
-      "glossEn": "",
+      "glossEn": "entrust, commit to charge; command, order",
       "unit": 15,
       "exerciseOnly": false,
       "under": "",
@@ -7551,7 +7551,7 @@
       "volume": "上冊",
       "lesson": 24,
       "ordinal": 471,
-      "glossZh": "咀嚼、進食",
+      "glossZh": "委託、吩咐、命令",
       "glossEngine": "claude-haiku-4-5-20251001"
     },
     {
@@ -8726,7 +8726,7 @@
     },
     {
       "headword": "invīsibilis",
-      "forms": "invīsibilis, invīsible",
+      "forms": "invīsibilis, invīsibile",
       "gram": "",
       "glossEn": "spiritual, invisible",
       "unit": 17,
@@ -9190,7 +9190,7 @@
     },
     {
       "headword": "ascēnsiō",
-      "forms": "ascēnsiōnis, f.",
+      "forms": "ascēnsiō, ascēnsiōnis, f.",
       "gram": "",
       "glossEn": "going up, ascension",
       "unit": 18,
@@ -9813,7 +9813,7 @@
       "glossEngine": "claude-haiku-4-5-20251001"
     },
     {
-      "headword": "tenebrāe",
+      "headword": "tenebrae",
       "forms": "tenebrae, tenebrārum, f.",
       "gram": "",
       "glossEn": "darkness, gloom",
@@ -10885,10 +10885,10 @@
       "glossEngine": "claude-haiku-4-5-20251001"
     },
     {
-      "headword": "cōnsolō",
+      "headword": "cōnsolor",
       "forms": "cōnsolor, cōnsolārī, —, cōnsolātus sum",
       "gram": "",
-      "glossEn": "sum or",
+      "glossEn": "console, comfort",
       "unit": 21,
       "exerciseOnly": false,
       "under": "solor",
@@ -12503,7 +12503,7 @@
     },
     {
       "headword": "dēpōnō",
-      "forms": "dēpōnō, dēpōnere, dēposuit, dēpositus",
+      "forms": "dēpōnō, dēpōnere, dēposuī, dēpositus",
       "gram": "",
       "glossEn": "set down, lay down; remove",
       "unit": 24,
@@ -12727,7 +12727,7 @@
     },
     {
       "headword": "pōnō",
-      "forms": "pōnō, pōnere, posuit, positus",
+      "forms": "pōnō, pōnere, posuī, positus",
       "gram": "",
       "glossEn": "put, place, set",
       "unit": 24,
@@ -12775,7 +12775,7 @@
     },
     {
       "headword": "prōpōnō",
-      "forms": "prōpōnō, prōpōnere, prōposuit, prōpositus",
+      "forms": "prōpōnō, prōpōnere, prōposuī, prōpositus",
       "gram": "",
       "glossEn": "set before; propose",
       "unit": 24,
@@ -12823,7 +12823,7 @@
     },
     {
       "headword": "repōnō",
-      "forms": "repōnō, repōnere, reposuit, repositus",
+      "forms": "repōnō, repōnere, reposuī, repositus",
       "gram": "",
       "glossEn": "put back, replace; lay aside, bury",
       "unit": 24,
@@ -13639,7 +13639,7 @@
     },
     {
       "headword": "nesciō",
-      "forms": "nesciō, nescīre, nescīvī (nescit), nescitus",
+      "forms": "nesciō, nescīre, nescīvī (nesciī), nescītus",
       "gram": "",
       "glossEn": "not to know, be ignorant",
       "unit": 26,
@@ -13670,8 +13670,8 @@
       "glossEngine": "claude-haiku-4-5-20251001"
     },
     {
-      "headword": "peregrīnantis",
-      "forms": "peregrīnantis, gen., peregrīnantis",
+      "headword": "peregrīnāns",
+      "forms": "peregrīnāns (gen., peregrīnantis)",
       "gram": "",
       "glossEn": "traveling; subst., (foreign) traveler, pilgrim",
       "unit": 26,
@@ -14135,8 +14135,8 @@
       "glossEngine": "claude-haiku-4-5-20251001"
     },
     {
-      "headword": "salutāre",
-      "forms": "salutāre, salutāris, salūtārium, n.",
+      "headword": "salūtāre",
+      "forms": "salūtāre, salūtāris, n.",
       "gram": "",
       "glossEn": "salvation",
       "unit": 27,
@@ -14979,7 +14979,7 @@
       "volume": "上冊",
       "lesson": 47,
       "ordinal": 935,
-      "glossZh": "毀壞、推毀",
+      "glossZh": "毀壞、摧毀",
       "glossEngine": "claude-haiku-4-5-20251001"
     },
     {
@@ -16377,7 +16377,7 @@
     },
     {
       "headword": "revertō",
-      "forms": "revertō, revertī, —, reversus sum",
+      "forms": "revertō, revertere, revertī, reversum",
       "gram": "",
       "glossEn": "return",
       "unit": 31,
@@ -18409,7 +18409,7 @@
     },
     {
       "headword": "ējiciō",
-      "forms": "ējiciō, ējicere, ējēct, ējectus",
+      "forms": "ējiciō, ējicere, ējēcī, ējectus",
       "gram": "",
       "glossEn": "throw out",
       "unit": 35,
@@ -18649,7 +18649,7 @@
     },
     {
       "headword": "prōjiciō",
-      "forms": "prōjiciō, prōjicere, prōjēct, projectus",
+      "forms": "prōjiciō, prōjicere, prōjēcī, prōjectus",
       "gram": "",
       "glossEn": "cast forth, throw down",
       "unit": 35,
@@ -20672,7 +20672,7 @@
       "volume": "下冊",
       "lesson": 14,
       "ordinal": 262,
-      "glossZh": "教會的、聖職的；世俗的",
+      "glossZh": "教會的、聖職的",
       "glossEngine": "claude-haiku-4-5-20251001"
     },
     {
@@ -20945,7 +20945,7 @@
       "volume": "下冊",
       "lesson": 14,
       "ordinal": 275,
-      "glossZh": "異端的、異教的",
+      "glossZh": "異端的",
       "glossEngine": "claude-haiku-4-5-20251001"
     },
     {
@@ -23070,8 +23070,8 @@
       "glossEngine": "claude-haiku-4-5-20251001"
     },
     {
-      "headword": "edo",
-      "forms": "edo, edare, edidi, editus",
+      "headword": "ēdō",
+      "forms": "ēdō, ēdere, ēdidī, ēditus",
       "gram": "V",
       "glossEn": "eject/emit; put/give forth (buds); beget; bear (fruit); display/evince/exhibit",
       "unit": null,
@@ -26283,7 +26283,7 @@
       "glossEngine": "claude-haiku-4-5-20251001"
     },
     {
-      "headword": "va",
+      "headword": "vah",
       "forms": "va",
       "gram": "INTERJ",
       "glossEn": "Ha!/oh!/ah!; (exclamation of pain/dismay, of contempt/anger, of surprise/joy)",
@@ -26678,7 +26678,7 @@
       "volume": "下冊",
       "lesson": 28,
       "ordinal": 548,
-      "glossZh": "論據、論証、理由；情節",
+      "glossZh": "論據、論證、理由；情節",
       "glossEngine": "claude-haiku-4-5-20251001"
     },
     {
@@ -26867,7 +26867,7 @@
       "volume": "下冊",
       "lesson": 28,
       "ordinal": 557,
-      "glossZh": "至少、至多、即便、甚至",
+      "glossZh": "至少、即便、甚至",
       "glossEngine": "claude-haiku-4-5-20251001"
     },
     {
@@ -26909,7 +26909,7 @@
       "volume": "下冊",
       "lesson": 28,
       "ordinal": 559,
-      "glossZh": "遣遣、派遣；遣散、解職；赦免",
+      "glossZh": "遣送、派遣；遣散、解職；赦免",
       "glossEngine": "claude-haiku-4-5-20251001"
     },
     {
@@ -27266,7 +27266,7 @@
       "volume": "下冊",
       "lesson": 29,
       "ordinal": 576,
-      "glossZh": "至此、只限於",
+      "glossZh": "僅、只；至少",
       "glossEngine": "nvidia:meta/llama-3.1-70b-instruct"
     },
     {
@@ -28778,7 +28778,7 @@
       "volume": "下冊",
       "lesson": 33,
       "ordinal": 648,
-      "glossZh": "司法審問、調查",
+      "glossZh": "概念、觀念；（法）審理",
       "glossEngine": "claude-haiku-4-5-20251001"
     },
     {
@@ -29072,7 +29072,7 @@
       "volume": "下冊",
       "lesson": 34,
       "ordinal": 662,
-      "glossZh": "成條狀的、可錘成條狀的",
+      "glossZh": "規則的、按會規的；修會的",
       "glossEngine": "claude-haiku-4-5-20251001"
     },
     {
@@ -29182,7 +29182,7 @@
     },
     {
       "headword": "juvenis",
-      "forms": "juvenis, juvenis, juvene",
+      "forms": "juvenis (gen., juvenis)",
       "gram": "ADJ",
       "glossEn": "youthful, young",
       "unit": null,
@@ -29813,7 +29813,7 @@
     {
       "headword": "secus",
       "forms": "secus",
-      "gram": "PREP",
+      "gram": "ADV",
       "glossEn": "by, beside, alongside; in accordance with",
       "unit": null,
       "exerciseOnly": false,
@@ -29828,7 +29828,7 @@
       "volume": "下冊",
       "lesson": 35,
       "ordinal": 698,
-      "glossZh": "在……旁邊、靠近；依照、按照",
+      "glossZh": "（副）否則、不同地；（介，罕）在旁",
       "glossEngine": "claude-haiku-4-5-20251001"
     },
     {
@@ -29954,7 +29954,7 @@
       "volume": "下冊",
       "lesson": 36,
       "ordinal": 704,
-      "glossZh": "旋轉、迴圈、周期",
+      "glossZh": "旋轉、迴圈、周期；皈依、轉變",
       "glossEngine": "claude-haiku-4-5-20251001"
     },
     {
@@ -29996,7 +29996,7 @@
       "volume": "下冊",
       "lesson": 36,
       "ordinal": 706,
-      "glossZh": "奴隸制、奴役、奴隸階級",
+      "glossZh": "奴隸制、奴役、奴隸階級；服事、侍奉",
       "glossEngine": "claude-haiku-4-5-20251001"
     },
     {
@@ -30038,7 +30038,7 @@
       "volume": "下冊",
       "lesson": 36,
       "ordinal": 708,
-      "glossZh": "緊握、捕捉、逮捕、點燃、懷孕",
+      "glossZh": "緊握、捕捉、逮捕、點燃、懷孕；包含、理解",
       "glossEngine": "claude-haiku-4-5-20251001"
     },
     {
@@ -31298,7 +31298,7 @@
       "volume": "下冊",
       "lesson": 39,
       "ordinal": 768,
-      "glossZh": "建築物、建物；建築、營造",
+      "glossZh": "建築物、建物；建築、營造；造就、建樹",
       "glossEngine": "claude-haiku-4-5-20251001"
     },
     {
@@ -31640,7 +31640,7 @@
     {
       "headword": "primas",
       "forms": "primas, primatis",
-      "gram": "ADJ",
+      "gram": "N",
       "glossEn": "noble; of the highest rank; principle",
       "unit": null,
       "exerciseOnly": false,
@@ -31655,7 +31655,7 @@
       "volume": "下冊",
       "lesson": 40,
       "ordinal": 785,
-      "glossZh": "貴族、第一人；最高級的",
+      "glossZh": "首席主教；首要人物（形：首要的）",
       "glossEngine": "claude-haiku-4-5-20251001"
     },
     {
@@ -32075,7 +32075,7 @@
       "volume": "下冊",
       "lesson": 41,
       "ordinal": 805,
-      "glossZh": "堅定、鼓勵、安慰",
+      "glossZh": "堅定、鼓勵、安慰；堅振（聖事）",
       "glossEngine": "claude-haiku-4-5-20251001"
     },
     {
@@ -32122,7 +32122,7 @@
     },
     {
       "headword": "nexus",
-      "forms": "nexus, nexi",
+      "forms": "nexus, nexus",
       "gram": "N",
       "glossEn": "one reduced to quasi-slavery for debt, bondsman",
       "unit": null,
@@ -32138,7 +32138,7 @@
       "volume": "下冊",
       "lesson": 41,
       "ordinal": 808,
-      "glossZh": "債奴、從人",
+      "glossZh": "聯繫、關連（教會文獻）；（古法律）債奴",
       "glossEngine": "claude-haiku-4-5-20251001"
     },
     {
@@ -33083,7 +33083,7 @@
       "volume": "下冊",
       "lesson": 43,
       "ordinal": 853,
-      "glossZh": "投票、判斷；喝彩",
+      "glossZh": "投票、判斷；喝彩；代禱、（為亡者的）助佑",
       "glossEngine": "claude-haiku-4-5-20251001"
     },
     {
@@ -34096,7 +34096,7 @@
     },
     {
       "headword": "sinus",
-      "forms": "sinus, sini",
+      "forms": "sinus, sinus",
       "gram": "N",
       "glossEn": "bowl for serving wine, etc",
       "unit": null,
@@ -34112,7 +34112,7 @@
       "volume": "下冊",
       "lesson": 46,
       "ordinal": 902,
-      "glossZh": "酒碗、盛酒器皿",
+      "glossZh": "懷抱、胸懷；海灣",
       "glossEngine": "claude-haiku-4-5-20251001"
     },
     {
@@ -35876,7 +35876,7 @@
       "volume": "下冊",
       "lesson": 50,
       "ordinal": 986,
-      "glossZh": "聲張、懲罰、復仇",
+      "glossZh": "伸張、懲罰、復仇",
       "glossEngine": "claude-haiku-4-5-20251001"
     },
     {
@@ -36170,7 +36170,7 @@
       "volume": "下冊",
       "lesson": 50,
       "ordinal": 1000,
-      "glossZh": "防衛、辯護、申辭",
+      "glossZh": "防衛、辯護、申辯",
       "glossEngine": "claude-haiku-4-5-20251001"
     }
   ]

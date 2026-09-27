@@ -1,13 +1,43 @@
 {
-  "volume": 1, "lesson": 48, "author": "opus-5-hand-written",
-  "note": "omissiō 與 struō 武加大沒有字形。psalmista 只認詞幹，語料裡對得上的是 psalmis；supplicō 同理只剩 suppliciis／supplices。",
+  "volume": 1,
+  "lesson": 48,
+  "author": "opus-5-hand-written",
+  "note": "2026-09-27 全句重寫。🚨 struō／supplicō／psalmista／omissiō 在武加大＋教會語料中零字形，練不到；20 詞僅練 16。",
   "sentences": [
-    {"latin": "lampades licet pretiosæ", "chinese": "雖然那些燈是寶貴的。", "targets": ["lampas", "licet", "pretiosus"]},
-    {"latin": "in psalmis supplices", "chinese": "在聖詠中懇求的人們。", "targets": ["psalmista", "supplico", "in"]},
-    {"latin": "resuscitabo et suscitavit", "chinese": "我要使人甦醒，而他已興起了。", "targets": ["resuscito", "suscito"]},
-    {"latin": "Sume vespertinum amicum", "chinese": "你要接納那傍晚的朋友。", "targets": ["sumo", "vespertinus", "amicus"]},
-    {"latin": "timoratus attraxit amicum", "chinese": "那敬畏天主的人吸引了朋友。", "targets": ["timoratus", "attraho", "amicus"]},
-    {"latin": "pretioso in psalmis", "chinese": "以寶貴的，在聖詠中。", "targets": ["pretiosus", "psalmista", "in"]},
-    {"latin": "licet suscitabo lampades", "chinese": "雖然如此，我要點起那些燈。", "targets": ["licet", "suscito", "lampas"]}
+    {
+      "latin": "Judicium justum est; timor Domini sapientia est.",
+      "chinese": "審判是公正的；敬畏上主即是智慧。",
+      "targets": ["judicium", "timor", "Dominus", "sapientia"]
+    },
+    {
+      "latin": "Lampas monstratur; licet, et ardet.",
+      "chinese": "燈被顯示了；那是可以的，它也在燃燒。",
+      "targets": ["lampas", "monstro", "licet", "ardeo"]
+    },
+    {
+      "latin": "Amicus pretiosus est; priusquam venit, cogitabat.",
+      "chinese": "朋友是珍貴的；在他來到之前，他就已經在思考。",
+      "targets": ["amicus", "pretiosus", "priusquam", "cogito"]
+    },
+    {
+      "latin": "Christus resuscitavit; suscitat mortuos.",
+      "chinese": "基督使人復活了；祂喚醒死者。",
+      "targets": ["Christus", "resuscito", "suscito"]
+    },
+    {
+      "latin": "Sacerdos panem sumit; sanctificationem dat.",
+      "chinese": "司祭領受了餅；他賜下了聖化。",
+      "targets": ["sacerdos", "sumo", "sanctificatio"]
+    },
+    {
+      "latin": "Homo timoratus est; tempus vespertinum venit.",
+      "chinese": "人是敬畏天主的；晚間的時刻到了。",
+      "targets": ["homo", "timoratus", "tempus"]
+    },
+    {
+      "latin": "Deus attraxit populum ad se.",
+      "chinese": "天主吸引了百姓歸向自己。",
+      "targets": ["Deus", "populus"]
+    }
   ]
 }

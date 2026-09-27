@@ -1,13 +1,43 @@
 {
-  "volume": 1, "lesson": 23, "author": "opus-5-hand-written",
-  "note": "ruber 整部武加大只有 Rubro 一形（「紅海」的固定搭配），所以兩句都照那個形寫。lego 沒有完成式複數 legerunt。",
+  "volume": 1,
+  "lesson": 23,
+  "author": "opus-5-hand-written",
+  "note": "2026-09-27 全句重寫。",
   "sentences": [
-    {"latin": "juxta patrem et matrem", "chinese": "在父親與母親身旁。", "targets": ["juxta", "pater", "mater"]},
-    {"latin": "legit lumen regis", "chinese": "他讀出君王的光。", "targets": ["lego", "lumen", "rex"]},
-    {"latin": "Pax et munus virginis", "chinese": "那童貞女的平安與禮物。", "targets": ["pax", "munus", "virgo"]},
-    {"latin": "voluntas patris apta est", "chinese": "父親的意願是恰當的。", "targets": ["voluntas", "pater", "aptus", "sum"]},
-    {"latin": "ambo steterunt juxta Rubro", "chinese": "兩人都站在紅海旁。", "targets": ["ambo", "sto", "juxta", "ruber"]},
-    {"latin": "siccum munus regis", "chinese": "君王那乾燥的祭品。", "targets": ["siccus", "munus", "rex"]},
-    {"latin": "lumen matris et pax virginis", "chinese": "母親的光與童貞女的平安。", "targets": ["lumen", "mater", "pax", "virgo"]}
+    {
+      "latin": "Mater juxta crucem stat.",
+      "chinese": "母親站在十字架旁邊。",
+      "targets": ["mater", "juxta"]
+    },
+    {
+      "latin": "Pater filii nomen legit.",
+      "chinese": "父親讀了兒子的名字。",
+      "targets": ["pater", "nomen", "lego"]
+    },
+    {
+      "latin": "Lumen aptum est; pax data est.",
+      "chinese": "那光是合適的；和平已經賜下。",
+      "targets": ["lumen", "aptus", "pax"]
+    },
+    {
+      "latin": "Rex principem juxta se habet; mare Rubrum videt.",
+      "chinese": "君王讓那首領在他身旁；他望見了紅海。",
+      "targets": ["rex", "princeps", "ruber"]
+    },
+    {
+      "latin": "Sacerdos munus regi dat.",
+      "chinese": "司祭把禮物獻給君王。",
+      "targets": ["sacerdos", "munus"]
+    },
+    {
+      "latin": "Virgo orationem dicit; oculi sicci sunt.",
+      "chinese": "那處女誦念禱詞；眼睛是乾的。",
+      "targets": ["virgo", "oratio", "siccus"]
+    },
+    {
+      "latin": "Sacerdos voluntatem scripsit; ambo suscipiunt.",
+      "chinese": "司祭記下了意願；兩者都領受了。",
+      "targets": ["scribo", "voluntas", "ambo", "suscipio"]
+    }
   ]
 }

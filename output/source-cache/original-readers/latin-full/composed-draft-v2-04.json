@@ -1,13 +1,43 @@
 {
-  "volume": 2, "lesson": 4, "author": "opus-5-hand-written",
-  "note": "defunctus 只認字形。",
+  "volume": 2,
+  "lesson": 4,
+  "author": "opus-5-hand-written",
+  "note": "2026-09-27 全句重寫。",
   "sentences": [
-    {"latin": "sustinere et tenet thronum", "chinese": "去承受，而他握著寶座。", "targets": ["sustineo", "teneo", "thronus"]},
-    {"latin": "verberavit et vicit", "chinese": "他鞭打了，並且得勝了。", "targets": ["verbero", "vinco"]},
-    {"latin": "aspergens castam communicationem", "chinese": "灑下那貞潔的共融。", "targets": ["aspergo", "castus", "communicatio"]},
-    {"latin": "contulit damnum et detulit", "chinese": "他帶來了損害，也呈獻了。", "targets": ["confero", "damnum", "defero"]},
-    {"latin": "defuncti dispersi sunt", "chinese": "已亡者被四散了。", "targets": ["defunctus", "dispergo", "sum"]},
-    {"latin": "ditari et expulit", "chinese": "去得富足，而他驅逐了。", "targets": ["dito", "expello"]},
-    {"latin": "falsa fallit et damno", "chinese": "虛假的欺騙著，並帶來損害。", "targets": ["falsus", "fallo", "damnum"]}
+    {
+      "latin": "Rex thronum tenet; hostem vincit.",
+      "chinese": "君王持守著寶座；他戰勝了敵人。",
+      "targets": ["thronus", "teneo", "vinco"]
+    },
+    {
+      "latin": "Miles hostem verberavit; populus damnum sustinuit.",
+      "chinese": "士兵鞭打了敵人；百姓承受了損害。",
+      "targets": ["verbero", "damnum", "populus", "sustineo"]
+    },
+    {
+      "latin": "Aqua aspergitur; homo defunctus est.",
+      "chinese": "水被灑下；那人已經去世了。",
+      "targets": ["aspergo", "homo", "defunctus"]
+    },
+    {
+      "latin": "Deus dona confert; falsus testis negat; fallit multos.",
+      "chinese": "天主賜予了禮物；虛假的證人否認了；他欺騙了許多人。",
+      "targets": ["Deus", "confero", "falsus", "fallo"]
+    },
+    {
+      "latin": "Populus munus detulit; castus sacerdos communicationem dat.",
+      "chinese": "百姓呈獻了禮物；貞潔的司祭賜下了共融。",
+      "targets": ["populus", "defero", "castus", "sacerdos", "communicatio"]
+    },
+    {
+      "latin": "Deus populum dispergit; hostes cogit fugere; falsos expellit.",
+      "chinese": "天主使百姓四散；祂強迫敵人逃跑；祂驅逐了虛假的人。",
+      "targets": ["Deus", "populus", "dispergo", "cogo", "expello"]
+    },
+    {
+      "latin": "Deus aufert peccata; pauperes ditati sunt; humilem extulit.",
+      "chinese": "天主除去了罪過；窮人們變得富足了；祂高舉了卑微的人。",
+      "targets": ["Deus", "aufero", "dito", "effero"]
+    }
   ]
 }

@@ -2,70 +2,42 @@
   "volume": 1,
   "lesson": 43,
   "author": "opus-5-hand-written",
-  "note": "exspīrō 與 patrōnus 武加大沒有字形。martyr 只剩屬格複數 martyrum，debitor 沒有屬格複數。",
+  "note": "2026-09-27 全句重寫；peregrīnantis 已於詞表校對輪改名為 peregrīnāns（主格分詞），第 6 句已改用該形練到。🚨 exspīrō／patrōnus 仍零字形，練不到；20 詞練 18。",
   "sentences": [
     {
-      "latin": "consuetudo et debitores",
-      "chinese": "那習俗與那些欠債者。",
-      "targets": [
-        "consuetudo",
-        "debitor"
-      ]
+      "latin": "Doctor consuetudinem docet; martyr fortis est.",
+      "chinese": "教師教導了習俗；殉道者是勇敢的。",
+      "targets": ["doctor", "consuetudo", "martyr", "fortis"]
     },
     {
-      "latin": "doctor dogma spiritualis",
-      "chinese": "教師、教義、屬靈的。",
-      "targets": [
-        "doctor",
-        "dogma",
-        "spiritualis"
-      ]
+      "latin": "Debitor iter facit; dogma nescit; quid petit?",
+      "chinese": "債務人上路了；他不知道那教義；他在請求什麼？",
+      "targets": ["debitor", "iter", "dogma", "nescio", "quid", "peto"]
     },
     {
-      "latin": "fortis iter luciferum",
-      "chinese": "強者通往晨星的旅程。",
-      "targets": [
-        "fortis",
-        "iter",
-        "lucifer"
-      ]
+      "latin": "Sacerdos laborat; spirituali gratia sufficit.",
+      "chinese": "司祭勞動了；靠著屬靈的恩寵就夠了。",
+      "targets": ["sacerdos", "laboro", "spiritualis", "gratia", "sufficio"]
     },
     {
-      "latin": "martyrum patronum peregrinantes quid",
-      "chinese": "殉道者的保護者，那些旅人，為什麼呢。",
-      "targets": [
-        "martyr",
-        "patrōnus",
-        "peregrinantis",
-        "quid"
-      ]
+      "latin": "Christus spirat; indulgentiam dat.",
+      "chinese": "基督呼吸；祂賜下寬赦。",
+      "targets": ["Christus", "spiro", "indulgentia"]
     },
     {
-      "latin": "præstolatur et spirat et expiravit",
-      "chinese": "他等待著，呼吸著，並且斷了氣。",
-      "targets": [
-        "exspīrō",
-        "praestolor",
-        "spiro"
-      ]
+      "latin": "Lucifer apparet; sacerdos praestolatur.",
+      "chinese": "晨星出現了；司祭在等候。",
+      "targets": ["lucifer", "appareo", "praestolor"]
     },
     {
-      "latin": "quid spirat doctor",
-      "chinese": "那教師為何呼吸。",
-      "targets": [
-        "quid",
-        "spiro",
-        "doctor"
-      ]
+      "latin": "Peregrinans iter facit; quomodo est? Quis scit?",
+      "chinese": "旅人走上了旅程；情況如何？誰知道呢？",
+      "targets": ["peregrinans", "iter", "quomodo", "quis", "scio"]
     },
     {
-      "latin": "iter fortium et dogma",
-      "chinese": "強者們的旅程與那教義。",
-      "targets": [
-        "iter",
-        "fortis",
-        "dogma"
-      ]
+      "latin": "Doctor iterum docet; discipulus laborat.",
+      "chinese": "教師再次教導；門徒勞動了。",
+      "targets": ["doctor", "laboro", "discipulus"]
     }
   ]
 }

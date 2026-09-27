@@ -1,13 +1,43 @@
 {
-  "volume": 2, "lesson": 17, "author": "opus-5-hand-written",
-  "note": "archidiaconus 兩層語料都沒有字形。appellatio 只認字形，語料裡活著的是動詞 appello 那一家。",
+  "volume": 2,
+  "lesson": 17,
+  "author": "opus-5-hand-written",
+  "note": "2026-09-27 全句重寫。🚨 archidiaconus 在武加大＋教會語料中零字形，練不到；20 詞僅練 19。",
   "sentences": [
-    {"latin": "similitudinem considerat Porro", "chinese": "再者，他察看那相似之處。", "targets": ["similitudo", "considero", "porro"]},
-    {"latin": "absque nobilis appellatur", "chinese": "除去貴族的，他被這樣稱呼。", "targets": ["absque", "nobilis", "appellatio"]},
-    {"latin": "tot vocabulo præsumit", "chinese": "他以那麼多的詞彙加以假定。", "targets": ["tot", "vocabulum", "praesumo"]},
-    {"latin": "Confessio taliter simplex", "chinese": "那告明如此簡樸。", "targets": ["confessio", "taliter", "simplex"]},
-    {"latin": "hæreses lapides præbuit", "chinese": "那些異端提供了石頭。", "targets": ["haeresis", "lapis", "praebeo"]},
-    {"latin": "facultatem considerans simplici", "chinese": "以單純之心考量那能力。", "targets": ["facultas", "considero", "simplex"]},
-    {"latin": "taliter lapides præbe", "chinese": "你要這樣提供石頭。", "targets": ["taliter", "lapis", "praebeo"]}
+    {
+      "latin": "Episcopus similitudinem considerat; manifestus error est.",
+      "chinese": "主教考量了相似之處；那錯誤是顯明的。",
+      "targets": ["episcopus", "considero", "similitudo", "manifestus", "error"]
+    },
+    {
+      "latin": "Porro, appellatio nobilis manet; absque timore.",
+      "chinese": "此外，那高貴的上訴仍然存在；沒有畏懼。",
+      "targets": ["porro", "absque", "appellatio", "nobilis"]
+    },
+    {
+      "latin": "Tot vocabula praebet; simplex sensus manet.",
+      "chinese": "他提供了如此多的詞彙；單純的意義仍然存在。",
+      "targets": ["tot", "vocabulum", "praebeo", "simplex", "sensus"]
+    },
+    {
+      "latin": "Praesumit veritatem; confessio taliter fit.",
+      "chinese": "他自負地假定了真理；認信便如此發生。",
+      "targets": ["praesumo", "veritas", "confessio", "taliter", "fio"]
+    },
+    {
+      "latin": "Haeresis contra dominicam legem est.",
+      "chinese": "異端違反了屬主的法律。",
+      "targets": ["haeresis", "contra", "dominicus", "lex"]
+    },
+    {
+      "latin": "Lapis libertatem significat; facultas data est.",
+      "chinese": "石頭象徵了自由；能力已被賜下。",
+      "targets": ["lapis", "libertas", "significo", "facultas"]
+    },
+    {
+      "latin": "Confessio simplex praebet gratiam; lapis nobilis manet.",
+      "chinese": "單純的認信提供了恩寵；貴重的石頭仍然存在。",
+      "targets": ["confessio", "simplex", "praebeo", "lapis", "nobilis"]
+    }
   ]
 }

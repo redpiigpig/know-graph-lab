@@ -1,13 +1,43 @@
 {
-  "volume": 2, "lesson": 2, "author": "opus-5-hand-written",
-  "note": "dēvincō 兩層語料都沒有字形。urbs 沒有單數奪格 urbe，coadūnō 只剩命令式 coadunate，eucharisticus 只剩 Eucharistici。",
+  "volume": 2,
+  "lesson": 2,
+  "author": "opus-5-hand-written",
+  "note": "2026-09-27 全句重寫。🚨 revertō（主動式，非 revertor 那條）／coadūnō／dēvincō／eucharisticus 在武加大＋教會語料中零字形，練不到；20 詞僅練 16。",
   "sentences": [
-    {"latin": "Remansit et requiram urbem", "chinese": "他留下了，而我要尋求那城。", "targets": ["remaneo", "requiro", "urbs"]},
-    {"latin": "reversus est ad sepulchrum", "chinese": "他回到了墳墓那裡。", "targets": ["reverto", "sum", "ad", "sepulcrum"]},
-    {"latin": "Tace, victor adversus apes", "chinese": "住口吧，那對著蜜蜂的勝利者。", "targets": ["taceo", "victor", "adversus", "apis"]},
-    {"latin": "vertit vestes antequam", "chinese": "他在那之前轉換了衣裳。", "targets": ["verto", "vestis", "antequam"]},
-    {"latin": "cera in vestibus continetur", "chinese": "蠟被包在衣服裡。", "targets": ["cera", "vestis", "contineo", "in"]},
-    {"latin": "coadunate Eucharistici victores", "chinese": "你們要聯合，感恩祭的勝利者們。", "targets": ["coaduno", "eucharisticus", "victor"]},
-    {"latin": "apis et cera in sepulchro", "chinese": "墳墓裡的蜜蜂與蠟。", "targets": ["apis", "cera", "sepulcrum", "in"]}
+    {
+      "latin": "Populus remanet; urbs sermone continetur.",
+      "chinese": "百姓仍然留下；城邦被言論所容納。",
+      "targets": ["populus", "remaneo", "urbs", "sermo", "contineo"]
+    },
+    {
+      "latin": "Christus sepulcrum requirit; victor exsistit.",
+      "chinese": "基督尋求了墳墓；勝利者出現了。",
+      "targets": ["Christus", "sepulcrum", "requiro", "victor", "exsisto"]
+    },
+    {
+      "latin": "Populus sensit; sacerdos tacuit.",
+      "chinese": "百姓感受到了；司祭沉默了。",
+      "targets": ["populus", "sentio", "sacerdos", "taceo"]
+    },
+    {
+      "latin": "Deus verba vertit; vestis alba manet.",
+      "chinese": "天主轉變了話語；那白色的衣服長存。",
+      "targets": ["Deus", "verto", "vestis"]
+    },
+    {
+      "latin": "Antequam apis venit, cera manet.",
+      "chinese": "在蜜蜂來到之前，蠟仍然留存。",
+      "targets": ["antequam", "apis", "cera"]
+    },
+    {
+      "latin": "Adversus hostem populus stat; panis datur.",
+      "chinese": "百姓站立對抗敵人；餅被賜下。",
+      "targets": ["adversus", "populus", "panis"]
+    },
+    {
+      "latin": "Victor urbem tenet; sepulcrum vacuum manet.",
+      "chinese": "勝利者持守著城邦；墳墓仍然空著。",
+      "targets": ["victor", "urbs", "sepulcrum"]
+    }
   ]
 }

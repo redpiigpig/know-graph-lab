@@ -5,66 +5,54 @@
   "note": "本課四個詞武加大沒有字形：Kyrie、perenniter 與兩個黏著詞素 -clīnō、aggregō。excelsus 沒有複數奪格 excelsis，所以第 1 句不寫 in excelsis。",
   "sentences": [
     {
-      "latin": "Hosanna in templo",
-      "chinese": "和散那，在聖殿中。",
+      "latin": "Hosanna in templo est.",
+      "chinese": "和散那在聖殿中。",
       "targets": [
-        "hosanna",
-        "in",
-        "templum"
+        "hosanna"
       ]
     },
     {
-      "latin": "imperium perpetuum Dei",
-      "chinese": "天主永恆的統治權。",
+      "latin": "Imperium dei perpetuum est",
+      "chinese": "天主的統治權是永恆的。",
       "targets": [
         "imperium",
-        "perpetuus",
-        "Deus"
+        "perpetuus"
       ]
     },
     {
-      "latin": "ministerium in spatio",
-      "chinese": "在那空間裡的服事。",
+      "latin": "Ministerium diaconi in templo est",
+      "chinese": "執事的服事在聖殿中。",
       "targets": [
-        "ministerium",
-        "in",
-        "spatium"
+        "ministerium"
       ]
     },
     {
-      "latin": "postea subito venit",
+      "latin": "Postea subito venit",
       "chinese": "其後他突然來了。",
       "targets": [
         "postea",
-        "subito",
-        "venio"
+        "subito"
       ]
     },
     {
-      "latin": "vulnerati sunt in agro",
+      "latin": "Vulnerati sunt in agro",
       "chinese": "他們在田間受了傷。",
       "targets": [
-        "vulnero",
-        "sum",
-        "in",
-        "ager"
+        "uulnero"
       ]
     },
     {
-      "latin": "aperuit ministerium populo",
+      "latin": "Aperuit ministerium populo",
       "chinese": "他向百姓開啟了服事。",
       "targets": [
-        "aperio",
         "ministerium",
-        "populus"
+        "aperio"
       ]
     },
     {
-      "latin": "perpetua lætitia et perennitas postea",
-      "chinese": "其後有永久的喜樂與恆久。",
+      "latin": "Postea perpetua lætitia est",
+      "chinese": "其後便有永久的喜樂。",
       "targets": [
-        "laetitia",
-        "perenniter",
         "perpetuus",
         "postea"
       ]

@@ -2,88 +2,42 @@
   "volume": 2,
   "lesson": 46,
   "author": "opus-5-hand-written",
-  "note": "amanter 只認詞幹，語料裡對得上的是分詞 amantes。 2026-09-18 補足十題：新增的每一句都練該課原本沒練到的詞。",
+  "note": "2026-09-27 全句重寫（棄用模板產生器）。🚨 amanter 在武加大＋教會語料中零字形，練不到；20 詞僅練 19。",
   "sentences": [
     {
-      "latin": "jugiter sinu impetu",
-      "chinese": "不斷地在懷中、在衝擊中。",
-      "targets": [
-        "jugiter",
-        "sinus",
-        "impetus"
-      ]
+      "latin": "Zelus jugiter corrumpit.",
+      "chinese": "熱誠不斷地在腐化著。",
+      "targets": ["zelus", "jugiter", "corrumpo"]
     },
     {
-      "latin": "vitare zelum imitari",
-      "chinese": "要避開嫉妒，也要效法。",
-      "targets": [
-        "vito",
-        "zelus",
-        "imitor"
-      ]
+      "latin": "Custos undique inquirit; impetus vitetur.",
+      "chinese": "守衛從四面八方追查；願攻勢被躲避。",
+      "targets": ["undique", "inquiro", "impetus", "vito"]
     },
     {
-      "latin": "undique partim amantes",
-      "chinese": "四面八方，部分地，那些愛的人。",
-      "targets": [
-        "undique",
-        "partim",
-        "amanter"
-      ]
+      "latin": "In sinu angustia manet.",
+      "chinese": "困苦仍存留在懷抱之中。",
+      "targets": ["sinus", "angustia"]
     },
     {
-      "latin": "acriter essentiam angustiis",
-      "chinese": "在困境中敏銳地面對本質。",
-      "targets": [
-        "acriter",
-        "essentia",
-        "angustia"
-      ]
+      "latin": "Custos controversiam partim comperit; exercitatio manet.",
+      "chinese": "守衛部分地查明了那爭論；修習仍長存。",
+      "targets": ["comperio", "controversia", "partim", "exercitatio"]
     },
     {
-      "latin": "varietate controversiam diversitate",
-      "chinese": "以多樣與差異面對那爭論。",
-      "targets": [
-        "varietas",
-        "controversia",
-        "diversitas"
-      ]
+      "latin": "Varietas diversitate crescit; zelum imitatur.",
+      "chinese": "多樣性藉著差異性而增長；它效法著那熱誠。",
+      "targets": ["varietas", "diversitas", "imitor"]
     },
     {
-      "latin": "exercitatio donationis jugiter",
-      "chinese": "那捐贈的操練不斷進行。",
-      "targets": [
-        "exercitatio",
-        "donatio",
-        "jugiter"
-      ]
+      "latin": "Essentia donationis acriter manet.",
+      "chinese": "贈禮的本質敏銳而長存。",
+      "targets": ["essentia", "donatio", "acriter"]
     },
     {
-      "latin": "zelo impetum vitetur",
-      "chinese": "願那衝動因熱誠而被避開。",
-      "targets": [
-        "zelus",
-        "impetus",
-        "vito"
-      ]
-    },
-    {
-      "latin": "corruptum acriter inquirunt",
-      "chinese": "他們猛烈地追查那腐壞之處。",
-      "targets": [
-        "corrumpo",
-        "acriter",
-        "inquiro"
-      ]
-    },
-    {
-      "latin": "comperit angustiam undique",
-      "chinese": "他查明了四面八方的困境。",
-      "targets": [
-        "comperio",
-        "angustia",
-        "undique"
-      ]
+      "latin": "Impetus zelo jugiter crescit.",
+      "chinese": "攻勢藉著熱誠不斷地增長。",
+      "targets": ["impetus", "zelus", "jugiter"]
     }
   ]
 }

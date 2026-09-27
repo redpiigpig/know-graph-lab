@@ -1,13 +1,43 @@
 {
-  "volume": 2, "lesson": 25, "author": "opus-5-hand-written",
-  "note": "interdico 兩層語料都沒有字形。Nequaquam、Interim、Numquid 在語料裡都只有句首大寫那一形。",
+  "volume": 2,
+  "lesson": 25,
+  "author": "opus-5-hand-written",
+  "note": "2026-09-27 全句重寫。🚨 interdīco 在武加大＋教會語料中零字形，練不到；20 詞僅練 19。",
   "sentences": [
-    {"latin": "libidine cupiditate qualiter", "chinese": "以情慾、以貪求，如何呢。", "targets": ["libido", "cupiditas", "qualiter"]},
-    {"latin": "latuit Nequaquam iurisdictionis", "chinese": "他決不隱藏那司法權的事。", "targets": ["lateo", "nequaquam", "jurisdictio"]},
-    {"latin": "jejunio insuper aurea", "chinese": "此外還有齋戒與那金色之物。", "targets": ["jejunium", "insuper", "aureus"]},
-    {"latin": "superbiam tantummodo Interim", "chinese": "其間僅僅是那驕傲。", "targets": ["superbia", "tantummodo", "interim"]},
-    {"latin": "testatur singularis publice", "chinese": "那獨特的一位公開作證。", "targets": ["testor", "singularis", "publice"]},
-    {"latin": "Numquid libidinem latere", "chinese": "難道情慾能隱藏嗎。", "targets": ["numquid", "libido", "lateo"]},
-    {"latin": "aureos jejuniis testante", "chinese": "以齋戒為金幣作證。", "targets": ["aureus", "jejunium", "testor"]}
+    {
+      "latin": "Libido cupiditatem gignit; plebs nequaquam credit.",
+      "chinese": "欲望產生了貪心；平民絕不相信。",
+      "targets": ["libido", "cupiditas", "gigno", "plebs", "nequaquam", "credo"]
+    },
+    {
+      "latin": "Episcopus jurisdictionis potestatem qualiter exercet?",
+      "chinese": "主教如何行使司法權的權力？",
+      "targets": ["episcopus", "jurisdictio", "potestas", "qualiter", "exerceo"]
+    },
+    {
+      "latin": "Jejunium principalis lex est; superbia latuit.",
+      "chinese": "禁食是主要的法律；驕傲隱藏了。",
+      "targets": ["jejunium", "principalis", "lex", "superbia", "lateo"]
+    },
+    {
+      "latin": "Insuper nonnulli aureum testantur.",
+      "chinese": "此外，若干人為那金製之物作證。",
+      "targets": ["insuper", "nonnullus", "aureus", "testor"]
+    },
+    {
+      "latin": "Tantummodo interim singularis manet.",
+      "chinese": "暫時，只有那獨特的長存。",
+      "targets": ["tantummodo", "interim", "singularis"]
+    },
+    {
+      "latin": "Publice numquid credit populus?",
+      "chinese": "百姓難道公開地相信嗎？",
+      "targets": ["publice", "numquid", "credo", "populus"]
+    },
+    {
+      "latin": "Superbia latebat; plebs nonnulla testatur.",
+      "chinese": "驕傲曾隱藏著；若干平民作證了。",
+      "targets": ["superbia", "plebs", "nonnullus", "testor"]
+    }
   ]
 }

@@ -1,13 +1,43 @@
 {
-  "volume": 1, "lesson": 46, "author": "opus-5-hand-written",
-  "note": "praefātiō 只認詞幹（語料只有 præfatione），prōtēctiō 只認字形且沒有奪格，sui 在語料裡只剩 secum。",
+  "volume": 1,
+  "lesson": 46,
+  "author": "opus-5-hand-written",
+  "note": "2026-09-27 全句重寫。🚨 praefātiō 在武加大＋教會語料中零字形，練不到；20 詞僅練 19。",
   "sentences": [
-    {"latin": "fundavit protectionem in quiete", "chinese": "他在安寧中建立了保護。", "targets": ["fundo", "protectio", "in", "quies"]},
-    {"latin": "gravis tentatio et nullus", "chinese": "沉重的試探，而一無所有。", "targets": ["gravis", "tentatio", "nullus"]},
-    {"latin": "infecta est et perfecta", "chinese": "它被污染了，卻又完成了。", "targets": ["inficio", "sum", "perfectus"]},
-    {"latin": "in præfatione proficit", "chinese": "他在序言中得益。", "targets": ["praefatio", "proficio", "in"]},
-    {"latin": "secum refecerunt quietem", "chinese": "他們在自己身上恢復了安寧。", "targets": ["sui", "reficio", "quies"]},
-    {"latin": "nullus perfectus secum", "chinese": "沒有人在自己裡面是完美的。", "targets": ["nullus", "perfectus", "sui"]},
-    {"latin": "tentationem gravem reficiam", "chinese": "我要以沉重重整那試探。", "targets": ["tentatio", "gravis", "reficio"]}
+    {
+      "latin": "Deus dolet; peccatum infectum manet; sui miseretur.",
+      "chinese": "天主憂傷；罪過的污染長存著；祂憐憫自己的子民。",
+      "targets": ["Deus", "doleo", "peccatum", "inficio", "sui", "misereor"]
+    },
+    {
+      "latin": "Ecclesiam fundavit; gravis labor est.",
+      "chinese": "祂建立了教會；那是沉重的勞苦。",
+      "targets": ["ecclesia", "fundo", "gravis", "labor"]
+    },
+    {
+      "latin": "Invicem se diligunt; lingua una est; cor movit.",
+      "chinese": "他們彼此相愛；只有一種語言；心受了感動。",
+      "targets": ["invicem", "diligo", "lingua", "cor", "moveo"]
+    },
+    {
+      "latin": "Populus Deum magnificat; nullus impedit; solum suos servat.",
+      "chinese": "百姓稱揚天主；沒有人阻擋；祂只保守自己的子民。",
+      "targets": ["populus", "Deus", "magnifico", "nullus", "solum", "suus", "servo"]
+    },
+    {
+      "latin": "Opus perfectum est; homo proficit.",
+      "chinese": "工作是完美的；人得益了。",
+      "targets": ["opus", "perfectus", "homo", "proficio"]
+    },
+    {
+      "latin": "Quies protectio est; animas reficiebant.",
+      "chinese": "安息與保護長存；它們恢復了眾靈魂。",
+      "targets": ["quies", "protectio", "anima", "reficio"]
+    },
+    {
+      "latin": "Deus solus est; populi tentationem novit.",
+      "chinese": "天主是獨一的；祂知道百姓的試探。",
+      "targets": ["Deus", "solus", "populus", "tentatio", "nosco"]
+    }
   ]
 }

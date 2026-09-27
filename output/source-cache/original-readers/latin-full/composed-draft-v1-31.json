@@ -1,13 +1,43 @@
 {
-  "volume": 1, "lesson": 31, "author": "opus-5-hand-written",
-  "note": "subveniō 只認字形，語料裡是 subveni／subvenisti／subvenite 三個命令式與完成式，沒有直述現在式。",
+  "volume": 1,
+  "lesson": 31,
+  "author": "opus-5-hand-written",
+  "note": "2026-09-27 全句重寫。",
   "sentences": [
-    {"latin": "ostendit pastorem in tenebris", "chinese": "他在黑暗中顯出了牧人。", "targets": ["ostendo", "pastor", "in", "tenebrae"]},
-    {"latin": "perfecisti et pervenit", "chinese": "你成就了，而他到達了。", "targets": ["perficio", "pervenio"]},
-    {"latin": "processit sapientia et subvenite", "chinese": "智慧前行了，你們要來相助。", "targets": ["procedo", "sapientia", "subvenio"]},
-    {"latin": "Sufficit et superveniet", "chinese": "這已足夠，而他將驟然臨到。", "targets": ["sufficio", "supervenio"]},
-    {"latin": "tendentes aures ad caput", "chinese": "把耳朵伸向那頭。", "targets": ["tendo", "auris", "ad", "caput"]},
-    {"latin": "alit et Cecidit", "chinese": "他滋養了，卻跌倒了。", "targets": ["alo", "cado"]},
-    {"latin": "curavit caput pastoris", "chinese": "他醫治了牧人的頭。", "targets": ["curo", "caput", "pastor"]}
+    {
+      "latin": "Pastor ostendit; oves recedunt; grex alitur.",
+      "chinese": "牧人指示了；羊群卻退開了；那群羊被餵養著。",
+      "targets": ["pastor", "ostendo", "recedo", "alo"]
+    },
+    {
+      "latin": "Christus perficit; ad Patrem pervenit; nos curat.",
+      "chinese": "基督完成了；祂到達了父那裡；祂照顧我們。",
+      "targets": ["Christus", "perficio", "pater", "pervenio", "curo"]
+    },
+    {
+      "latin": "Sapientia sufficit; auris audit; verbum procedit.",
+      "chinese": "智慧足夠了；耳朵聽見了；言語發出了。",
+      "targets": ["sapientia", "sufficio", "auris", "procedo"]
+    },
+    {
+      "latin": "Dolor supervenit; caro tendit ad mortem.",
+      "chinese": "痛苦突然來到；肉身趨向死亡。",
+      "targets": ["supervenio", "caro", "tendo", "mors"]
+    },
+    {
+      "latin": "Populus in tenebris cadit; Deus subvenire potest.",
+      "chinese": "百姓在黑暗中跌倒；天主能夠援助。",
+      "targets": ["populus", "tenebrae", "cado", "Deus", "subvenio"]
+    },
+    {
+      "latin": "Christus apparuit populo; caput Ecclesiae est; omnes praecedit.",
+      "chinese": "基督向百姓顯現了；祂是教會的頭；祂在眾人之前領先。",
+      "targets": ["Christus", "appareo", "populus", "caput", "ecclesia", "praecedo"]
+    },
+    {
+      "latin": "Bonus pastor oves alit; capita earum curat.",
+      "chinese": "良善的牧人餵養羊群；他照顧牠們的頭。",
+      "targets": ["pastor", "alo", "caput", "curo"]
+    }
   ]
 }

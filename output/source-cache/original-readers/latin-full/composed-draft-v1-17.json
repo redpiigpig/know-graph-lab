@@ -5,72 +5,65 @@
   "note": "dolōrōsus 與 gregō 武加大沒有字形，練不到。conglōrificō 整部武加大只有 conglorificemur 一形（羅八17），第 5 句就照它寫。lætus 沒有陰性單數 læta。",
   "sentences": [
     {
-      "latin": "aula templi et columna",
-      "chinese": "聖殿的殿堂與柱子。",
+      "latin": "Columna in aula templi est",
+      "chinese": "柱子在聖殿的殿堂中。",
       "targets": [
         "aula",
-        "templum",
         "columna"
       ]
     },
     {
-      "latin": "cibus paratus est parvulis",
+      "latin": "Cibus paratus est parvulis",
       "chinese": "食物為幼小者預備好了。",
       "targets": [
         "cibus",
         "paro",
-        "sum",
-        "parvulus"
+        "paruulus"
       ]
     },
     {
-      "latin": "creaturæ exsultant in flamma",
-      "chinese": "受造物在火焰中歡躍。",
+      "latin": "Creaturæ exsultant in domino",
+      "chinese": "受造物在上主中歡躍。",
       "targets": [
         "creatura",
-        "exsulto",
-        "in",
-        "flamma"
+        "exsulto"
       ]
     },
     {
-      "latin": "glorificavit Dominum ob innocentiam",
+      "latin": "Glorificavit dominum ob innocentiam",
       "chinese": "他因那份無辜而光榮了上主。",
       "targets": [
         "glorifico",
-        "dominus",
-        "ob",
-        "innocentia"
+        "innocentia",
+        "ob"
       ]
     },
     {
-      "latin": "hinc læti conglorificemur",
+      "latin": "Hinc læti conglorificemur",
       "chinese": "從此讓我們歡欣地同受光榮。",
       "targets": [
+        "conglorifico",
         "hinc",
-        "laetus",
-        "conglorifico"
+        "laetus"
       ]
     },
     {
-      "latin": "hostiam paraverunt in aula",
+      "latin": "Hostiam paraverunt in aula",
       "chinese": "他們在殿堂中預備了祭獻。",
       "targets": [
+        "aula",
         "hostia",
-        "paro",
-        "in",
-        "aula"
+        "paro"
       ]
     },
     {
-      "latin": "flamma dolorosa columnæ in aula",
-      "chinese": "殿堂中柱子的哀傷火焰。",
+      "latin": "Flamma apud columnam in aula est",
+      "chinese": "火焰在殿堂中的柱子旁。",
       "targets": [
+        "apud",
         "aula",
         "columna",
-        "dolōrōsus",
-        "flamma",
-        "in"
+        "flamma"
       ]
     }
   ]

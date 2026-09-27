@@ -5,74 +5,59 @@
   "note": "本課終於有動詞（ambulō／cantō／collaudō／conservō），句子不再全是名詞片語。documentum 武加大沒有任何字形，練不到。chorus 沒有主格進語料，第 3 句改用 populus 當主語。",
   "sentences": [
     {
-      "latin": "Deus noster verus et vivus",
+      "latin": "Deus noster verus et vivus est.",
       "chinese": "我們的天主是真實而活的。",
       "targets": [
         "noster",
-        "verus",
-        "vivus",
-        "Deus"
+        "uerus",
+        "uiuus"
       ]
     },
     {
-      "latin": "populus pius ambulat in agro",
+      "latin": "Populus pius ambulat in agro",
       "chinese": "虔敬的百姓行走在田間。",
       "targets": [
         "pius",
-        "ambulo",
-        "populus",
-        "in",
-        "ager"
+        "ambulo"
       ]
     },
     {
-      "latin": "cantet populus psalmum novum",
+      "latin": "Cantet populus psalmum novum",
       "chinese": "願百姓唱新的聖詠。",
       "targets": [
-        "canto",
-        "populus",
-        "psalmus",
-        "novus"
+        "nouus",
+        "canto"
       ]
     },
     {
-      "latin": "collaudate Dominum Sabaoth",
+      "latin": "Collaudate dominum Sabaoth",
       "chinese": "你們要極力讚美萬軍的上主。",
       "targets": [
-        "collaudo",
-        "dominus",
-        "Sabaoth"
+        "sabaoth"
       ]
     },
     {
-      "latin": "numerus discipulorum magnus est",
+      "latin": "Numerus discipulorum magnus est",
       "chinese": "門徒的數目很大。",
       "targets": [
-        "numerus",
-        "discipulus",
-        "magnus",
-        "sum"
+        "numerus"
       ]
     },
     {
-      "latin": "conserva sacramentum et documentum divinum",
-      "chinese": "你要保守這神聖的聖事與文件。",
+      "latin": "Conserva documentum divinum",
+      "chinese": "你要保守這神聖的文件。",
       "targets": [
-        "conservo",
-        "divinus",
-        "documentum",
-        "sacramentum"
+        "conseruo",
+        "diuinus",
+        "documentum"
       ]
     },
     {
-      "latin": "benedictus vir in sacra ecclesia",
-      "chinese": "在聖教會中蒙福的人。",
+      "latin": "Benedictus vir in sacra ecclesia est.",
+      "chinese": "蒙福的人在聖教會中。",
       "targets": [
-        "benedictus",
-        "vir",
-        "in",
         "sacer",
-        "ecclesia"
+        "benedictus"
       ]
     }
   ]

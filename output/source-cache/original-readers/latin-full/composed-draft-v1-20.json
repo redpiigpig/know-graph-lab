@@ -1,13 +1,43 @@
 {
-  "volume": 1, "lesson": 20, "author": "opus-5-hand-written",
-  "note": "cēnō 只認詞幹，整部武加大只有 cœnavit 一形（而且是 cœ- 拼法）。brāchium 只有複數 brachia，dextera 只有 dexteræ。videor 要寫 visus／videris 這類形才記得到——它的 written_keys 雖含 sum，但那條路線只在詞位那條走不通時才開，寫 est 不會記到它。",
+  "volume": 1,
+  "lesson": 20,
+  "author": "opus-5-hand-written",
+  "note": "2026-09-27 全句重寫。cēnō 武加大僅見完成式 cœnāvit／cœnāvērunt（無現在式、無不定式字形），故只用這兩形；-dō 與獨立動詞 dō, dare 共享詞位 do，故用 dat 練到；videor 僅不定式 vīderī 與詞頭本身收在詞表形表中，改用「bonum vidērī potest」句式（能顯得是好的）。",
   "sentences": [
-    {"latin": "tamen utilitas magna est", "chinese": "然而那好處是很大的。", "targets": ["tamen", "utilitas", "magnus", "sum"]},
-    {"latin": "valet et addidit", "chinese": "他安康，並且增加了。", "targets": ["valeo", "addo"]},
-    {"latin": "Astiterunt et circumsteterunt", "chinese": "他們站在旁邊，並且圍繞著。", "targets": ["asto", "circumsto"]},
-    {"latin": "Baptista aspiciens brachia", "chinese": "洗者注視著臂膀。", "targets": ["baptista", "aspicio", "brachium"]},
-    {"latin": "cœnavit et despexit", "chinese": "他用了晚餐，卻輕視了。", "targets": ["ceno", "despicio"]},
-    {"latin": "circumspiciens condita visus est", "chinese": "他環顧四周，顯出了樣子。", "targets": ["circumspicio", "condo", "videor"]},
-    {"latin": "digitos dexteræ aspiciens", "chinese": "注視著右手的指頭。", "targets": ["digitus", "dextera", "aspicio"]}
+    {
+      "latin": "Deus caelum et terram creavit; digito mundum condidit.",
+      "chinese": "天主創造了天與地；祂以指頭創造了世界。",
+      "targets": ["Deus", "creo", "digitus", "mundus", "condo"]
+    },
+    {
+      "latin": "Baptista in deserto vivit.",
+      "chinese": "施洗者活在荒野中。",
+      "targets": ["baptista", "desertum", "vivo"]
+    },
+    {
+      "latin": "Discipuli circumsteterunt, populus circumspiciebat.",
+      "chinese": "門徒們圍站著，百姓則四處觀望。",
+      "targets": ["discipulus", "circumsto", "populus", "circumspicio"]
+    },
+    {
+      "latin": "Populus infirmus est, Deus tamen valet, dona dat.",
+      "chinese": "百姓是虛弱的，然而天主卻強盛，並賜下恩賜。",
+      "targets": ["populus", "tamen", "Deus", "valeo", "-do"]
+    },
+    {
+      "latin": "Dextera magnam utilitatem habet; brachium magnum est.",
+      "chinese": "右手有很大的用處；那手臂是大的。",
+      "targets": ["dextera", "utilitas", "brachium"]
+    },
+    {
+      "latin": "Angeli astiterunt, aspiciebant, donum addiderunt.",
+      "chinese": "天使們站著，觀望著，添上了一件禮物。",
+      "targets": ["angelus", "asto", "aspicio", "addo"]
+    },
+    {
+      "latin": "Homo despicit; bonum videri potest; angelus cœnavit.",
+      "chinese": "那人蔑視了；這似乎能是好的；天使用了晚餐。",
+      "targets": ["despicio", "videor"]
+    }
   ]
 }

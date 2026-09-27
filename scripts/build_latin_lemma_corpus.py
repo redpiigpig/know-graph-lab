@@ -586,8 +586,55 @@ class Tagger:
         self.lemma_pos: dict[str, str] = {}
         self.proper: set[str] = set()
         self.gold_ref: dict[str, dict[str, str]] = defaultdict(dict)
+        # 2026-09-27: 練習題文法覆核發現機械閘只驗「語料有這個形、詞已教過」，
+        # 沒有一條驗「句子裡有沒有述語」。這裡從樹庫的 FEATS 欄額外記下哪些字形
+        # 曾經以 VerbForm=Fin 出現過（限定動詞），以及那個字形的人稱／數，供
+        # compose_latin_sentences.py 的新閘使用。只在記憶體裡累積，不寫回任何
+        # 既有的 lemma-corpus-*.json，所以不影響其他呼叫 Tagger 的腳本。
+        self.finite_keys: set[str] = set()
+        self.person_number: dict[str, set[tuple[str, str]]] = defaultdict(set)
+        self._finite_count: Counter[str] = Counter()
+        self._form_count: Counter[str] = Counter()
+        self._pn_count: Counter[tuple[str, str, str]] = Counter()
         for name in self.gold_names:
             self._read_treebank(name, with_refs=with_refs and name == "proiel")
+        # Finiteness is scanned across *every* treebank regardless of ``gold``,
+        # never just the register this reader's volume prefers for lemmas. The
+        # upper volume's gold is PROIEL alone -- the New Testament, 109,517
+        # tokens -- and a form the Old Testament uses but the Gospels never do
+        # (``lavābit``, ``merētur``) would otherwise show no finite evidence at
+        # all and the predicate gate would refuse a perfectly good sentence for
+        # a treebank-coverage reason that has nothing to do with the sentence.
+        # This never touches ``type_index``/``lemma_pos``/``proper``, so it
+        # cannot change which lemma a form resolves to -- only whether it is
+        # known finite.
+        for name in TREEBANKS:
+            self._read_finite_features(name)
+        # A single mistagged token must not make a function word "finite" for
+        # the rest of the book: one LLCT charter tags a token spelled ``et`` as
+        # ``sum`` (a scribal ``est``), one occurrence against 35,490. Requiring
+        # a minimum share, not just a minimum count, keeps that one annotation
+        # from outvoting the other 35,489 while still admitting a legitimately
+        # rare form attested only once or twice (``fugerem``: 1 occurrence, 1
+        # of them finite -- ratio 1.0).
+        self.finite_keys = {
+            key for key, count in self._finite_count.items()
+            if count / max(1, self._form_count[key]) >= 0.05
+        }
+        # Same threshold, applied per (key, person, number): ``tradidit`` is
+        # 45 occurrences of (3, Sing) against one stray (1, Sing) -- the same
+        # class of single mistagged token, not a genuinely syncretic form.
+        # Keeping the rare pair would tell the person/number-agreement check
+        # that ``tradidit`` could be 1st person, and a perfectly good sentence
+        # with an explicit 3rd-person subject would be refused for agreeing
+        # with a reading nobody intended.
+        pn_totals: Counter[str] = Counter()
+        for (key, _, _), count in self._pn_count.items():
+            pn_totals[key] += count
+        self.person_number = defaultdict(set)
+        for (key, person, number), count in self._pn_count.items():
+            if key in self.finite_keys and count / max(1, pn_totals[key]) >= 0.05:
+                self.person_number[key].add((person, number))
         lexicon = json.loads(LEXICON.read_text(encoding="utf-8"))
         vulgate = json.loads(VULGATE_LEXICON.read_text(encoding="utf-8"))
         # The Vulgate table wins where the two disagree: this reader's first
@@ -704,6 +751,58 @@ class Tagger:
             "enclitic": enclitic,
             "ambiguous": ambiguous,
         }
+
+    def _read_finite_features(self, name: str) -> None:
+        """Populate ``finite_keys``/``person_number`` from one treebank's FEATS.
+
+        Deliberately blind to ``gold``: see the comment in ``__init__``. Missing
+        directories are skipped rather than raising, because a caller who never
+        asked for that register (a test fixture, a narrower checkout) should not
+        be forced to download every treebank just to get a predicate check.
+        """
+        directory = TREEBANKS.get(name)
+        if not directory or not directory.exists():
+            return
+        for cols in read_conllu(directory):
+            if len(cols) < 6:
+                continue
+            form, feats = cols[1], cols[5]
+            key = fold(form)
+            if not key:
+                continue
+            self._form_count[key] += 1
+            if not feats or feats == "_":
+                continue
+            feat_map = dict(
+                item.split("=", 1) for item in feats.split("|") if "=" in item
+            )
+            if feat_map.get("VerbForm") != "Fin":
+                continue
+            self._finite_count[key] += 1
+            person, number = feat_map.get("Person"), feat_map.get("Number")
+            if person and number:
+                self._pn_count[(key, person, number)] += 1
+
+    def is_finite_key(self, key: str) -> bool:
+        """Has this folded surface been attested as a finite verb (VerbForm=Fin)?
+
+        Blind to context, the same limitation ``is_verbal`` already carries: a
+        form ambiguous between a finite and a non-finite reading counts as
+        finite if any treebank occurrence tagged it so. ``sum``/``est``/``sunt``
+        pass through this the ordinary way, since the copula is a normal finite
+        verb in the treebanks.
+        """
+        return key in self.finite_keys
+
+    def person_number_for(self, key: str) -> set[tuple[str, str]]:
+        """Observed (Person, Number) pairs for this key's finite occurrences.
+
+        Empty means "unknown", never "impossible" -- a form seen only via the
+        lexicon tables (no treebank occurrence) carries no feature evidence at
+        all, and the caller must treat that as inconclusive rather than a
+        mismatch.
+        """
+        return set(self.person_number.get(key, ()))
 
     def lemma_set(self, token: dict[str, Any]) -> set[str]:
         """Every lemma the token might be, for gates that must not over-reject.

@@ -1,13 +1,43 @@
 {
-  "volume": 2, "lesson": 1, "author": "opus-5-hand-written",
-  "note": "下冊的驗證語料是武加大＋教會文獻兩層。片語 quaesō/quaesumus 要兩個形同句才算練到。inferus 在語料裡活著的是比較級 inferior。",
+  "volume": 2,
+  "lesson": 1,
+  "author": "opus-5-hand-written",
+  "note": "2026-09-27 全句重寫（棄用模板產生器）。🚨 inferus 語料只有比較級 inferior 系列（詞位不歸原級），原級本身零字形，練不到；quaesō/quaesumus 詞頭帶斜線，折疊鍵對不上句中已寫出的 quaesumus（第 7 句），這是詞表鍵值問題不是沒練到；20 詞機器只認得 18，實際 19。",
   "sentences": [
-    {"latin": "itaque dispar et par", "chinese": "因此有不同的，也有相等的。", "targets": ["itaque", "dispar", "par"]},
-    {"latin": "infernus et inferior majestas", "chinese": "冥府的，以及較低的威嚴。", "targets": ["infernus", "inferus", "majestas"]},
-    {"latin": "octava magi plorans", "chinese": "第八天，那術士哭泣著。", "targets": ["octavus", "magus", "ploro"]},
-    {"latin": "pœnitet et permanet pariter", "chinese": "他懊悔了，也同樣地存留。", "targets": ["paeniteo", "permaneo", "pariter"]},
-    {"latin": "præses purus Quærit", "chinese": "那潔淨的總督在尋求。", "targets": ["praeses", "purus", "quaero"]},
-    {"latin": "quæso et quæsumus Redemptionem", "chinese": "我懇求，我們也懇求那救贖。", "targets": ["quaeso", "redemptio"]},
-    {"latin": "pura majestas in inferno", "chinese": "冥府中純潔的威嚴。", "targets": ["purus", "majestas", "infernus", "in"]}
+    {
+      "latin": "Concilium redemptionem intellegit; majestas Dei manet.",
+      "chinese": "大會理解了救贖；天主的威嚴長存。",
+      "targets": ["redemptio", "intellego", "majestas", "Deus", "maneo"]
+    },
+    {
+      "latin": "Magus regem quaerit; praeses narrat.",
+      "chinese": "術士尋找君王；總督述說了。",
+      "targets": ["magus", "quaero", "praeses", "narro"]
+    },
+    {
+      "latin": "Populus paenitet; itaque Deus permanet fidelis.",
+      "chinese": "百姓懊悔；因此天主仍然忠信。",
+      "targets": ["populus", "paeniteo", "itaque", "Deus", "permaneo"]
+    },
+    {
+      "latin": "Octavus dies purus est; par ceteris non est.",
+      "chinese": "第八日是純淨的；它與其他的日子不相同。",
+      "targets": ["octavus", "dies", "purus", "par"]
+    },
+    {
+      "latin": "Populus pariter ploravit; dispar est dolor.",
+      "chinese": "百姓同聲哭泣了；痛苦卻是不一樣的。",
+      "targets": ["populus", "pariter", "ploro", "dispar", "dolor"]
+    },
+    {
+      "latin": "Populus infernum timet; locus manet.",
+      "chinese": "百姓畏懼地獄；那地方長存。",
+      "targets": ["populus", "infernus", "locus", "maneo"]
+    },
+    {
+      "latin": "Quaesumus, Domine, ut redemptionem des.",
+      "chinese": "我們祈求，主啊，願你賜下救贖。",
+      "targets": ["quaesumus", "Dominus", "redemptio"]
+    }
   ]
 }

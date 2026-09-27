@@ -1,13 +1,43 @@
 {
-  "volume": 2, "lesson": 40, "author": "opus-5-hand-written",
-  "note": "imus 只剩 imo，Dec 只剩縮寫 dec。",
+  "volume": 2,
+  "lesson": 40,
+  "author": "opus-5-hand-written",
+  "note": "2026-09-27 全句重寫（棄用模板產生器）。🚨 imus 唯一攤到的字形 imus 本身與 eō(一複 imus)同形共用、詞位又歸給 eo，另一形 imo 詞表未收該格，練不到；20 詞僅練 19。",
   "sentences": [
-    {"latin": "justificationes congregationem felicitatem", "chinese": "那些成義、那團體、那幸福。", "targets": ["justificatio", "congregatio", "felicitas"]},
-    {"latin": "primates arbitrantur consecrationis", "chinese": "首要者們判斷那祝聖之事。", "targets": ["primas", "arbitror", "consecratio"]},
-    {"latin": "graviter conventu consortio", "chinese": "在集會與交誼中嚴厲地。", "targets": ["graviter", "conventus", "consortium"]},
-    {"latin": "imo amicitiam prolis", "chinese": "在最深處，子嗣的友誼。", "targets": ["imus", "amicitia", "proles"]},
-    {"latin": "evadere fortitudine dec", "chinese": "要以勇毅在十二月逃脫。", "targets": ["evado", "fortitudo", "Dec"]},
-    {"latin": "securitas novissima congregatione", "chinese": "在末後的團體中的安穩。", "targets": ["securitas", "novissimus", "congregatio"]},
-    {"latin": "amicitia prole evadat", "chinese": "願友誼藉子嗣而脫出。", "targets": ["amicitia", "proles", "evado"]}
+    {
+      "latin": "Justificatio congregationem servat.",
+      "chinese": "成義守護了那團體。",
+      "targets": ["justificatio", "congregatio"]
+    },
+    {
+      "latin": "Huc felicitas venit; primas credit.",
+      "chinese": "幸福來到了此地；首席主教相信了。",
+      "targets": ["huc", "felicitas", "primas", "credo"]
+    },
+    {
+      "latin": "Sacerdos arbitrabatur; consecratio manet.",
+      "chinese": "司祭這樣認為；祝聖長存。",
+      "targets": ["sacerdos", "arbitror", "consecratio"]
+    },
+    {
+      "latin": "Exemplar conventus datur.",
+      "chinese": "範本在集會中被賜下。",
+      "targets": ["exemplar", "conventus"]
+    },
+    {
+      "latin": "Consortium amicitiae manet; proles crescit.",
+      "chinese": "友誼的伴侶關係長存；子嗣漸漸增長。",
+      "targets": ["consortium", "amicitia", "proles"]
+    },
+    {
+      "latin": "Fortitudo graviter subest.",
+      "chinese": "力量沉重地潛存著。",
+      "targets": ["fortitudo", "graviter", "subsum"]
+    },
+    {
+      "latin": "Populus evadit; securitas novissima manet; mense Dec.",
+      "chinese": "百姓逃脫了；最後的安全感長存；在十二月的月份。",
+      "targets": ["populus", "evado", "securitas", "novissimus", "Dec"]
+    }
   ]
 }

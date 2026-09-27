@@ -2,71 +2,42 @@
   "volume": 1,
   "lesson": 41,
   "author": "opus-5-hand-written",
-  "note": "dēposcō 武加大沒有字形。addīcō 只剩 Addixistis 一形，avē! 只有 Ave。",
+  "note": "2026-09-27 全句重寫。🚨 addīcō／dēposcō 在武加大＋教會語料中零字形，練不到；20 詞僅練 18。",
   "sentences": [
     {
-      "latin": "reposita est et vade",
-      "chinese": "它被放回了，你去吧。",
-      "targets": [
-        "repono",
-        "sum",
-        "vado"
-      ]
+      "latin": "Veritas manet; dolor fugit.",
+      "chinese": "真理長存；痛苦消逝了。",
+      "targets": ["veritas", "dolor", "fugio"]
     },
     {
-      "latin": "Addixistis filiam extra",
-      "chinese": "你們在外面定了那女兒的罪。",
-      "targets": [
-        "addico",
-        "filia",
-        "extra"
-      ]
+      "latin": "Petrus currit; discipulus contradicit.",
+      "chinese": "伯多祿奔跑；門徒卻反駁。",
+      "targets": ["curro", "discipulus", "contradico"]
     },
     {
-      "latin": "Ave, dives circa templum",
-      "chinese": "你好，聖殿周圍的富人。",
-      "targets": [
-        "ave",
-        "dives",
-        "circa",
-        "templum"
-      ]
+      "latin": "Filia dives est; ave dicit.",
+      "chinese": "女兒是富有的；她說：「你好」。",
+      "targets": ["filia", "dives", "ave"]
     },
     {
-      "latin": "contradicunt et cucurrit",
-      "chinese": "他們反駁，而他跑開了。",
-      "targets": [
-        "contradico",
-        "curro"
-      ]
+      "latin": "Deus fideles defendit; diabolus circa vadit.",
+      "chinese": "天主保衛信實的人；魔鬼在周圍游走。",
+      "targets": ["Deus", "defendo", "diabolus", "circa", "vado"]
     },
     {
-      "latin": "defendit a diabolo",
-      "chinese": "他抵禦了魔鬼。",
-      "targets": [
-        "defendo",
-        "a",
-        "diabolus"
-      ]
+      "latin": "Populus flevit; extra civitatem fugit.",
+      "chinese": "百姓哭泣了；他們逃到城外。",
+      "targets": ["populus", "fleo", "extra", "civitas", "fugio"]
     },
     {
-      "latin": "deposcimus dolorem et effusionem",
-      "chinese": "我們懇求痛苦與傾流。",
-      "targets": [
-        "dolor",
-        "dēposcō",
-        "effusio"
-      ]
+      "latin": "Sanguinis effusio magna est; simul currunt.",
+      "chinese": "血的傾流是浩大的；他們一同奔跑。",
+      "targets": ["sanguis", "effusio", "simul", "curro"]
     },
     {
-      "latin": "dives filia circa dolorem",
-      "chinese": "富有的女兒在痛苦周圍。",
-      "targets": [
-        "dives",
-        "filia",
-        "circa",
-        "dolor"
-      ]
+      "latin": "Simul ac panis repositus est, populus venit.",
+      "chinese": "餅一被存放好，百姓就來了。",
+      "targets": ["simulac", "panis", "repono", "populus"]
     }
   ]
 }

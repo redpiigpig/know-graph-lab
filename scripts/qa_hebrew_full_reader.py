@@ -930,7 +930,7 @@ def validate_master(gate: Gate, master_path: Path, vocab_by_ordinal: dict[int, d
                 if not is_zh_hant_field(str(verse.get("translationZh", ""))):
                     chapter_failures.append(f"{verse.get('ref')}:translationZh")
         else:
-            if kind != "prayer_or_article" or not reading.get("text", "").strip() or unpointed_words(reading.get("text", "")):
+            if kind not in ("prayer", "article") or not reading.get("text", "").strip() or unpointed_words(reading.get("text", "")):
                 prayer_failures.append(str(lesson.get("id")))
             if not is_zh_hant_field(str(reading.get("title_zh", ""))) or not is_zh_hant_field(str(reading.get("summaryZh", ""))):
                 prayer_failures.append(f"{lesson.get('id')}:zh")
@@ -939,7 +939,7 @@ def validate_master(gate: Gate, master_path: Path, vocab_by_ordinal: dict[int, d
     vocab_ordinals = [item.get("ordinal") for item in all_vocab]
     gate.expect(len(all_vocab) == 1000 and vocab_ordinals == list(range(1, 1001)), "master.vocabulary", "master contains each of the 1,000 vocabulary entries exactly once", actual=len(all_vocab))
     gate.expect(not chapter_failures and reading_kinds[:25] == ["bible_chapter"] * 25, "master.bible_chapters", "lessons 1–25 read 25 pointed/cantillated chapters, each printed verse complete with a zh-Hant translation and its extent stated", failures=chapter_failures[:40])
-    gate.expect(not prayer_failures and reading_kinds[25:] == ["prayer_or_article"] * 25, "master.prayers", "lessons 26–50 contain 25 complete pointed prayers/articles with zh-Hant metadata", failures=prayer_failures[:40])
+    gate.expect(not prayer_failures and all(k in ("prayer", "article") for k in reading_kinds[25:]) and len(reading_kinds[25:]) == 25, "master.prayers", "lessons 26–50 contain 25 complete pointed prayers/articles with zh-Hant metadata", failures=prayer_failures[:40])
     validate_memory_metadata(gate, all_memory, vocab_by_ordinal, "master.memory")
 
     translit_failures = [

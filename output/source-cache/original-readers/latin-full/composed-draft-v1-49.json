@@ -2,72 +2,42 @@
   "volume": 1,
   "lesson": 49,
   "author": "opus-5-hand-written",
-  "note": "ineffābilis 與 liquō 武加大沒有字形。domina 只剩受格 dominam，inaestimābilis 只有主格。",
+  "note": "2026-09-27 全句重寫。🚨 illūcēsco／liquō 在武加大＋教會語料中零字形，練不到；20 詞僅練 18。",
   "sentences": [
     {
-      "latin": "commendo et deputatus est",
-      "chinese": "我託付了，而他被指派了。",
-      "targets": [
-        "commendo",
-        "deputo",
-        "sum"
-      ]
+      "latin": "Christus se commendat; sancti deputantur.",
+      "chinese": "基督將自己交託；聖人們被算為義人。",
+      "targets": ["Christus", "commendo", "deputo"]
     },
     {
-      "latin": "detraxerunt difficile lignum",
-      "chinese": "他們拖走了那難搬的木頭。",
-      "targets": [
-        "detraho",
-        "difficilis",
-        "lignum"
-      ]
+      "latin": "Hostes detraxerunt; inimicus negat.",
+      "chinese": "敵人們貶損了；仇敵否認了。",
+      "targets": ["hostis", "detraho", "inimicus", "nego"]
     },
     {
-      "latin": "divinitas dominam exprimit",
-      "chinese": "神性表現出那位夫人。",
-      "targets": [
-        "divinitas",
-        "domina",
-        "exprimo"
-      ]
+      "latin": "Difficile est; facile non est.",
+      "chinese": "這是困難的；並非容易的。",
+      "targets": ["difficilis", "facilis"]
     },
     {
-      "latin": "facile hostes negare",
-      "chinese": "否認仇敵是容易的。",
-      "targets": [
-        "facilis",
-        "hostis",
-        "nego"
-      ]
+      "latin": "Deus mare dividit; divinitas magna est.",
+      "chinese": "天主分開了海；祂的神性是浩大的。",
+      "targets": ["Deus", "divido", "divinitas"]
     },
     {
-      "latin": "illucescat inæstimabile ineffabile monumentum",
-      "chinese": "願那無價而不可言喻的紀念碑發光。",
-      "targets": [
-        "illucesco",
-        "inaestimabilis",
-        "ineffābilis",
-        "monumentum"
-      ]
+      "latin": "Rex dominam videt; ligno monumentum stat.",
+      "chinese": "君王看見了那女士；憑那木頭，紀念碑立著。",
+      "targets": ["domina", "lignum", "monumentum"]
     },
     {
-      "latin": "monumento ligna commendo",
-      "chinese": "我把木料託付給那墳墓。",
-      "targets": [
-        "monumentum",
-        "lignum",
-        "commendo"
-      ]
+      "latin": "Sacerdos existimat; gratia inaestimabilis est.",
+      "chinese": "司祭這樣認為；恩寵是無法估量的。",
+      "targets": ["sacerdos", "existimo", "inaestimabilis"]
     },
     {
-      "latin": "difficile est negare hostes",
-      "chinese": "否認仇敵是困難的。",
-      "targets": [
-        "difficilis",
-        "sum",
-        "nego",
-        "hostis"
-      ]
+      "latin": "Verbum exprimitur; mysterium ineffabile est; nemo comprehendit.",
+      "chinese": "言語被表達出來；那奧祕是不可言喻的；沒有人能領悟。",
+      "targets": ["exprimo", "ineffabilis", "nemo"]
     }
   ]
 }

@@ -181,6 +181,19 @@ def build_volume(volume: int) -> dict[str, Any]:
     unreachable_ordinals = unreachable_words(
         [entry for entry in entries if entry.volume == volume], corpus, tagger, appendix_all
     )
+    # Same two additions the 2026-09-27 gate rewrite made to the authoring-time
+    # checker (`compose_latin_sentences.py --check`): a verb-stem fallback for
+    # forms no treebank ever tagged (``collaudāte``), and headword-keyed
+    # entries so a draft's own declared ``targets`` can be checked against what
+    # the sentence actually contains. Both apply here too, because this file's
+    # ``checker.verify`` output is what ``validate_reader_exercises.py`` reads
+    # as the release gate -- a check that only ran at compose time and never at
+    # assemble time would let a mismatch back in on the very next rebuild.
+    verb_stems = checker.verb_stems_of(entries)
+    entries_by_headword: dict[str, list[Any]] = {}
+    for entry in entries:
+        if entry.headword_key:
+            entries_by_headword.setdefault(entry.headword_key, []).append(entry)
     lessons_out: list[dict[str, Any]] = []
     thin: list[int] = []
     missing: list[int] = []
@@ -212,7 +225,8 @@ def build_volume(volume: int) -> dict[str, Any]:
                 # that one side thinks is practised and the other does not.
                 "targetWords": target_words_in(text, targets, corpus, tagger),
                 "verification": checker.verify(
-                    text, corpus, tagger, taught_lemmas, taught_keys, taught_stems
+                    text, corpus, tagger, taught_lemmas, taught_keys, taught_stems,
+                    verb_stems=verb_stems, check_predicate=False,
                 ),
                 "reviewedBy": "corpus",
             })
@@ -223,7 +237,9 @@ def build_volume(volume: int) -> dict[str, Any]:
                 "text": text,
                 "targetWords": target_words_in(text, targets, corpus, tagger),
                 "verification": checker.verify(
-                    text, corpus, tagger, taught_lemmas, taught_keys, taught_stems
+                    text, corpus, tagger, taught_lemmas, taught_keys, taught_stems,
+                    targets=row.get("targets"), entries_by_headword=entries_by_headword,
+                    verb_stems=verb_stems,
                 ),
                 "reviewedBy": row.get("reviewedBy", "author" if author else "draft"),
             })
@@ -254,6 +270,17 @@ def build_volume(volume: int) -> dict[str, Any]:
             notes.append(
                 "本讀本語料中無任何字形，因而無法入題："
                 + "、".join(entry.headword for entry in unreachable)
+            )
+        expected_composed = ITEMS_PER_LESSON - len(anchors)
+        if drafts and len(drafts) < expected_composed:
+            # This lesson's own vocabulary is abstract enough that even
+            # exhaustive pairing among its words could not find
+            # `expected_composed` combinations every word of which the
+            # corpus actually attests -- not a missing draft (`missing`
+            # above covers that), a genuinely thin one.
+            notes.append(
+                f"自撰題語料驗證後僅得 {len(drafts)}／{expected_composed} 句，"
+                "本課詞彙抽象度高，湊不出更多每個詞形都經語料驗證的句子"
             )
         lessons_out.append({
             "lesson": lesson,

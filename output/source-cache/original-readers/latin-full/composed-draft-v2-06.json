@@ -1,13 +1,43 @@
 {
-  "volume": 2, "lesson": 6, "author": "opus-5-hand-written",
-  "note": "sodālis 只認字形，tranquillus 只剩奪格 tranquillo，lacrimōsus 只剩續抒詠那一句的 Lacrimosa，genetrix 只有與格與屬格。片語 factum est 要 factum 與 est 兩個字面形同句。",
+  "volume": 2,
+  "lesson": 6,
+  "author": "opus-5-hand-written",
+  "note": "2026-09-27 全句重寫。licet 動詞條與上冊第 8 課 licet 連詞條同形共用，用哪一種意思都算練到兩邊。🚨 lacrimōsus 陽性 -us 形語料零字形（只有陰性 lacrimosa，詞位又是空的），第 6 句已用 lacrimosa 但不聲稱練到——覆蓋若靠字幹閘救到算數，不強求。",
   "sentences": [
-    {"latin": "significant sodalis velut", "chinese": "他們表示，那同伴猶如此。", "targets": ["significo", "sodalis", "velut"]},
-    {"latin": "spargit in tranquillo", "chinese": "他在寧靜中播撒。", "targets": ["spargo", "in", "tranquillus"]},
-    {"latin": "venter et verbera", "chinese": "腹部與鞭打。", "targets": ["venter", "verber"]},
-    {"latin": "factum est, vinctus in Communionem", "chinese": "事就成了：他在共融中被束縛。", "targets": ["factum est", "vincio", "communio"]},
-    {"latin": "complacuit concordia sodalium", "chinese": "同伴們的和諧蒙了悅納。", "targets": ["complaceo", "concordia", "sodalis"]},
-    {"latin": "errantes licet in humilitate", "chinese": "那些迷途的人，儘管處在謙卑中。", "targets": ["erro", "licet", "humilitas"]},
-    {"latin": "Lacrimosa genetricis institutione", "chinese": "以生母那涕淚的訓導。", "targets": ["lacrimosus", "genetrix", "institutio"]}
+    {
+      "latin": "Signum salutem significat; sodalis spargit aquam.",
+      "chinese": "記號象徵著救恩；同伴灑下了水。",
+      "targets": ["significo", "sodalis", "spargo"]
+    },
+    {
+      "latin": "Tranquillus est venter; velut mare.",
+      "chinese": "腹部是安寧的；如同海一般。",
+      "targets": ["tranquillus", "venter", "velut"]
+    },
+    {
+      "latin": "Hostis verbera portat; sacerdotem vinxit; communionem tulit.",
+      "chinese": "敵人背負著鞭打的傷痕；他綁住了司祭；他奪走了共融。",
+      "targets": ["verber", "vincio", "communio"]
+    },
+    {
+      "latin": "Christus genetrici apparuit; Deo complacuit.",
+      "chinese": "基督向生母顯現了；這使天主喜悅。",
+      "targets": ["Christus", "genetrix", "appareo", "Deus", "complaceo"]
+    },
+    {
+      "latin": "Populus erravit; factum est silentium; mater eniti potuit.",
+      "chinese": "百姓犯錯走迷了；於是有了寂靜；母親得以生產了。",
+      "targets": ["populus", "erro", "factum est", "enitor"]
+    },
+    {
+      "latin": "Multa fiunt; humilitas lacrimosa manet; concordia crescit.",
+      "chinese": "許多事發生了；那含淚的謙卑長存；和諧漸漸增長。",
+      "targets": ["fio", "humilitas", "concordia"]
+    },
+    {
+      "latin": "Institutio bona est; licet homo erret.",
+      "chinese": "教導是好的；儘管人可能犯錯。",
+      "targets": ["institutio", "licet", "homo"]
+    }
   ]
 }

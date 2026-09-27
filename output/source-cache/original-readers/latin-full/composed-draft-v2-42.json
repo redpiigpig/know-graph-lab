@@ -2,89 +2,42 @@
   "volume": 2,
   "lesson": 42,
   "author": "opus-5-hand-written",
-  "note": "plene 只剩比較級與最高級。 2026-09-18 補足十題：新增的每一句都練該課原本沒練到的詞。",
+  "note": "2026-09-27 全句重寫（棄用模板產生器）。",
   "sentences": [
     {
-      "latin": "Vix passim diffusa",
-      "chinese": "幾乎沒有散布各處。",
-      "targets": [
-        "vix",
-        "passim",
-        "diffundo"
-      ]
+      "latin": "Violentia vix manet; passim pax est.",
+      "chinese": "暴力幾乎不存留了；到處都是平安。",
+      "targets": ["violentia", "vix", "passim", "pax"]
     },
     {
-      "latin": "plenius diligentia neve",
-      "chinese": "更充分地以勤勉，也不要如此。",
-      "targets": [
-        "plene",
-        "diligentia",
-        "neve"
-      ]
+      "latin": "Artifex opus diffundet; plene laborat.",
+      "chinese": "工匠將要傳播作品；他充分地勞動著。",
+      "targets": ["artifex", "opus", "diffundo", "plene"]
     },
     {
-      "latin": "extremis æquitate congruenter",
-      "chinese": "在末端恰當地以公平。",
-      "targets": [
-        "extremum",
-        "aequitas",
-        "congruenter"
-      ]
+      "latin": "Diligentia extremum non superat.",
+      "chinese": "勤勉並不超越極限。",
+      "targets": ["diligentia", "extremum"]
     },
     {
-      "latin": "juventute consolatio diffusus",
-      "chinese": "青年時期所傾注的安慰。",
-      "targets": [
-        "juventus",
-        "consolatio",
-        "diffundo"
-      ]
+      "latin": "Aequitas congruenter juventuti datur.",
+      "chinese": "公正恰當地被賜給了青年。",
+      "targets": ["aequitas", "congruenter", "juventus"]
     },
     {
-      "latin": "satisfaciam tantopere inopia",
-      "chinese": "我要在如此的貧乏中作出補償。",
-      "targets": [
-        "satisfacio",
-        "tantopere",
-        "inopia"
-      ]
+      "latin": "Ego consolationem do; satisfaciam populo.",
+      "chinese": "我賜下了安慰；我將滿足百姓。",
+      "targets": ["consolatio", "satisfacio", "populus"]
     },
     {
-      "latin": "arguit nonnumquam validus",
-      "chinese": "那強壯者有時加以指責。",
-      "targets": [
-        "arguo",
-        "nonnumquam",
-        "validus"
-      ]
+      "latin": "Multi repugnant; arguit sacerdos; inopia crescit.",
+      "chinese": "許多人反抗；司祭指控了；貧困漸漸增長。",
+      "targets": ["repugno", "arguo", "sacerdos", "inopia"]
     },
     {
-      "latin": "Vix plenissime consolatio",
-      "chinese": "那安慰幾乎不是最完全的。",
-      "targets": [
-        "vix",
-        "plene",
-        "consolatio"
-      ]
-    },
-    {
-      "latin": "artifices violentiæ repugnant",
-      "chinese": "工匠們抵抗那暴力。",
-      "targets": [
-        "artifex",
-        "violentia",
-        "repugno"
-      ]
-    },
-    {
-      "latin": "violentiam vix diligentia superat",
-      "chinese": "勤勉幾乎勝不過那暴力。",
-      "targets": [
-        "violentia",
-        "vix",
-        "diligentia",
-        "supero"
-      ]
+      "latin": "Validus nonnumquam manet; neve tantopere crescat.",
+      "chinese": "強者有時仍然存留；但願不要如此地過度增長。",
+      "targets": ["validus", "nonnumquam", "neve", "tantopere"]
     }
   ]
 }

@@ -1,13 +1,43 @@
 {
-  "volume": 1, "lesson": 22, "author": "opus-5-hand-written",
-  "note": "dētergeō 武加大沒有字形，練不到。speciō 語料裡活著的只有派生形容詞 speciosus 那一家——寫 speciosam／speciosa 會被判成沒教過（樹庫認得它們、詞位是 speciosus，另一個詞），但 speciosum／speciosus 這幾個形兩層都沒有詞位，於是落到詞幹那條路線，可以用。",
+  "volume": 1,
+  "lesson": 22,
+  "author": "opus-5-hand-written",
+  "note": "2026-09-27 全句重寫。🚨 speciō 與 dētergeō 在武加大＋教會語料中零字形，練不到；20 詞僅練 18。",
   "sentences": [
-    {"latin": "stetit ubi tuba", "chinese": "他站在號筒所在之處。", "targets": ["sto", "ubi", "tuba"]},
-    {"latin": "ubique subditi sunt", "chinese": "他們到處都順服了。", "targets": ["ubique", "subdo", "sum"]},
-    {"latin": "baptisma corporis ideo", "chinese": "因此是身體的洗禮。", "targets": ["baptisma", "corpus", "ideo"]},
-    {"latin": "collegerunt et descripsit genus", "chinese": "他們聚集了，他也記載了那族類。", "targets": ["colligo", "describo", "genus"]},
-    {"latin": "elegit speciosum et intulit", "chinese": "他揀選了那華美的，並且帶了進來。", "targets": ["eligo", "specio", "infero"]},
-    {"latin": "corpus stetit ubique", "chinese": "那身體處處站立。", "targets": ["corpus", "sto", "ubique"]},
-    {"latin": "ideo colligite genus", "chinese": "因此你們要聚集那族類。", "targets": ["ideo", "colligo", "genus"]}
+    {
+      "latin": "Ubi tuba sonat, populus colligitur; baptisma sanctificat.",
+      "chinese": "號筒響起的地方，百姓就聚集；聖洗使人成聖。",
+      "targets": ["ubi", "tuba", "populus", "colligo", "baptisma"]
+    },
+    {
+      "latin": "Homo ubique Deum invenit; Deum diligit.",
+      "chinese": "人到處尋見天主；並愛慕天主。",
+      "targets": ["homo", "ubique", "Deus", "diligo"]
+    },
+    {
+      "latin": "Ut corpus vivat, Deus animam dat.",
+      "chinese": "為使身體能活，天主賜下靈魂。",
+      "targets": ["ut", "corpus", "Deus"]
+    },
+    {
+      "latin": "Genus humanum peccavit; ideo Christus venit.",
+      "chinese": "人類犯了罪；因此基督來臨了。",
+      "targets": ["genus", "ideo", "Christus"]
+    },
+    {
+      "latin": "Sacerdos voluntatem Deo subdit; librum descripsit.",
+      "chinese": "司祭將意願交託給天主；並記述了那書卷。",
+      "targets": ["subdo", "describo"]
+    },
+    {
+      "latin": "Deprecationem Ecclesiae Deus suscipit; iram non infert.",
+      "chinese": "天主接納了教會的祈求；並不降下怒氣。",
+      "targets": ["deprecatio", "Deus", "infero"]
+    },
+    {
+      "latin": "Petrus stat; Deus eum elegit; ergo gaudet.",
+      "chinese": "伯多祿站立著；天主揀選了他；因此他歡喜。",
+      "targets": ["sto", "Deus", "eligo", "ergo"]
+    }
   ]
 }

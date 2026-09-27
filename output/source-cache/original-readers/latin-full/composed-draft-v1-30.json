@@ -2,69 +2,42 @@
   "volume": 1,
   "lesson": 30,
   "author": "opus-5-hand-written",
-  "note": "cōtīdiānus 武加大沒有字形；cōtīdiē 只認字形，而武加大寫的是 quotidie，所以題目照語料拼法寫。intentus 只認詞幹。",
+  "note": "2026-09-27 全句重寫。🚨 cōtīdiānus／intentus／incēdō 三詞在武加大＋教會語料中查無任一可信詞形（incēdō 僅存非限定的分詞，且詞位與詞表核對不上），練不到；20 詞僅練 17。",
   "sentences": [
     {
-      "latin": "Concessit et conclusit gregem",
-      "chinese": "他准許了，並且圈住了羊群。",
-      "targets": [
-        "concedo",
-        "concludo",
-        "grex"
-      ]
+      "latin": "Pastor gregem custodit.",
+      "chinese": "牧人看守羊群。",
+      "targets": ["grex", "custodio"]
     },
     {
-      "latin": "quotidie discessit inde",
-      "chinese": "他每日從那裡離開。",
-      "targets": [
-        "cotidie",
-        "discedo",
-        "inde"
-      ]
+      "latin": "Levita legem custodit.",
+      "chinese": "肋未人遵守法律。",
+      "targets": ["lex", "Levita"]
     },
     {
-      "latin": "devota humanitas cotidie evangelizavit",
-      "chinese": "虔誠的人性每日地宣講了福音。",
-      "targets": [
-        "cōtīdiānus",
-        "devotus",
-        "evangelizo",
-        "humanitas"
-      ]
+      "latin": "Sacerdos cotidie orat; inde discedit.",
+      "chinese": "司祭每天祈禱；然後從那裡離開。",
+      "targets": ["sacerdos", "cotidie", "inde", "discedo"]
     },
     {
-      "latin": "extendit et incedentes",
-      "chinese": "他伸展開來，而那些前行的人。",
-      "targets": [
-        "extendo",
-        "incedo"
-      ]
+      "latin": "Deus concedit; homo interficit.",
+      "chinese": "天主准許；人卻殺害。",
+      "targets": ["Deus", "concedo", "interficio"]
     },
     {
-      "latin": "indeficiens et intenta humanitas",
-      "chinese": "恆久而緊張的人性。",
-      "targets": [
-        "indeficiens",
-        "intentus",
-        "humanitas"
-      ]
+      "latin": "Ecclesia devota est; caritas ejus indeficiens est.",
+      "chinese": "教會是虔誠的；她的愛德是不衰退的。",
+      "targets": ["ecclesia", "devotus", "indeficiens"]
     },
     {
-      "latin": "intendit et interfecerunt",
-      "chinese": "他注視著，而他們殺害了。",
-      "targets": [
-        "intendo",
-        "interficio"
-      ]
+      "latin": "Dies festus concluditur; humanitas extenditur.",
+      "chinese": "節慶之日結束了；人性延展開來。",
+      "targets": ["festus", "concludo", "humanitas", "extendo"]
     },
     {
-      "latin": "gregem quotidie intendit",
-      "chinese": "他每日注視著羊群。",
-      "targets": [
-        "grex",
-        "cotidie",
-        "intendo"
-      ]
+      "latin": "Apostolus evangelizat; animum intendit.",
+      "chinese": "宗徒宣講福音；他專注了心思。",
+      "targets": ["evangelizo", "intendo"]
     }
   ]
 }

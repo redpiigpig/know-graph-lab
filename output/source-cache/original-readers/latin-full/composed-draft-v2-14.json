@@ -1,13 +1,43 @@
 {
-  "volume": 2, "lesson": 14, "author": "opus-5-hand-written",
-  "note": "aliter 與 immo 在語料裡都只有句首大寫那一形。",
+  "volume": 2,
+  "lesson": 14,
+  "author": "opus-5-hand-written",
+  "note": "2026-09-27 全句重寫。",
   "sentences": [
-    {"latin": "ecclesiastici habitus usus", "chinese": "教會服飾的用法。", "targets": ["ecclesiasticus", "habitus", "usus"]},
-    {"latin": "quamvis venerabilis utrum", "chinese": "儘管可敬，是否如此。", "targets": ["quamvis", "venerabilis", "utrum"]},
-    {"latin": "periculum conscientiæ tum", "chinese": "那時良心的危險。", "targets": ["periculum", "conscientia", "tum"]},
-    {"latin": "imaginem præfert bello", "chinese": "他把形象看得比戰爭更重。", "targets": ["imago", "praefero", "bellum"]},
-    {"latin": "Aliter legati pecuniam", "chinese": "否則使節們就要那筆錢。", "targets": ["aliter", "legatus", "pecunia"]},
-    {"latin": "statum Immo venerabilis", "chinese": "那身分，反而是可敬的。", "targets": ["status", "immo", "venerabilis"]},
-    {"latin": "usu bellum periculo", "chinese": "以經驗面對危險中的戰爭。", "targets": ["usus", "bellum", "periculum"]}
+    {
+      "latin": "Episcopus scientiam praefert; usus antiquus est; utrum scit?",
+      "chinese": "主教偏好知識；那用法是古老的；他是否知道呢？",
+      "targets": ["episcopus", "praefero", "scientia", "usus", "utrum", "scio"]
+    },
+    {
+      "latin": "Sacerdos habitum gerit; venerabilis est.",
+      "chinese": "司祭穿著衣著；他是可敬的。",
+      "targets": ["sacerdos", "habitus", "venerabilis", "gero"]
+    },
+    {
+      "latin": "Periculum magnum est; conscientia clamat.",
+      "chinese": "危險是巨大的；良心在呼喊。",
+      "targets": ["periculum", "conscientia"]
+    },
+    {
+      "latin": "Imago Dei in homine manet; bellum malum est.",
+      "chinese": "天主的形象存留在人之內；戰爭是邪惡的。",
+      "targets": ["imago", "Deus", "homo", "bellum"]
+    },
+    {
+      "latin": "Haeretici errant; legatus veritatem defendit.",
+      "chinese": "異端者們犯錯了；使節捍衛了真理。",
+      "targets": ["haereticus", "erro", "legatus", "veritas", "defendo"]
+    },
+    {
+      "latin": "Pecunia in statu Ecclesiae manet; ecclesiasticum jus manet.",
+      "chinese": "金錢存留在教會的狀態中；教會的法律長存。",
+      "targets": ["pecunia", "status", "ecclesia", "ecclesiasticus", "jus"]
+    },
+    {
+      "latin": "Quamvis erret, tum credit; immo rursus aliter cogitat.",
+      "chinese": "儘管他可能犯錯，那時他還是相信了；不然他又換個方式思考。",
+      "targets": ["quamvis", "tum", "credo", "immo", "rursus", "aliter", "cogito"]
+    }
   ]
 }

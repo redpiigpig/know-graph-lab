@@ -1537,16 +1537,16 @@
     },
     {
      "group": "基數",
-     "headword": "Sex",
-     "forms": "Sex",
-     "glossEn": "Sextus (Roman praenomen); (abb. Sex.)",
+     "headword": "sex",
+     "forms": "sex",
+     "glossEn": "six",
      "pos": "N",
      "ecclesiastical": false,
      "corpusFrequency": 132,
      "attested": true,
      "dictionaryRoute": "whitakers-words",
-     "zh": "塞克斯圖斯",
-     "zhRoute": "gemini:gemini-flash-latest"
+     "zh": "六",
+     "zhRoute": "human-fix-2026-09-27"
     },
     {
      "group": "基數",
@@ -1798,7 +1798,7 @@
     {
      "group": "基數",
      "headword": "mille",
-     "forms": "mille, milis",
+     "forms": "mille, indecl.; pl. mīlia, mīlium",
      "glossEn": "thousand; thousands (men/things); miles; [~ passuum => thousand paces = 1 mile]",
      "pos": "N",
      "ecclesiastical": false,
@@ -1862,22 +1862,22 @@
     },
     {
      "group": "序數",
-     "headword": "Quintus",
-     "forms": "Quintus, Quinti",
-     "glossEn": "Quintus (Roman praenomen); (abb. Q.)",
+     "headword": "quintus",
+     "forms": "quintus, -a, -um",
+     "glossEn": "fifth",
      "pos": "N",
      "ecclesiastical": false,
      "corpusFrequency": 10,
      "attested": true,
      "dictionaryRoute": "whitakers-words",
-     "zh": "昆圖斯",
-     "zhRoute": "五十課詞表"
+     "zh": "第五",
+     "zhRoute": "human-fix-2026-09-27"
     },
     {
      "group": "序數",
-     "headword": "Sextus",
-     "forms": "Sextus, Sexti",
-     "glossEn": "Sextus (Roman praenomen); (abb. Sex.)",
+     "headword": "sextus",
+     "forms": "sextus, -a, -um",
+     "glossEn": "sixth",
      "pos": "N",
      "ecclesiastical": false,
      "corpusFrequency": 11,
@@ -1927,16 +1927,16 @@
     },
     {
      "group": "序數",
-     "headword": "Decimus",
-     "forms": "Decimus, Decimi",
-     "glossEn": "Decimus (Roman praenomen); (abb. D.)",
+     "headword": "decimus",
+     "forms": "decimus, -a, -um",
+     "glossEn": "tenth",
      "pos": "N",
      "ecclesiastical": false,
      "corpusFrequency": 3,
      "attested": true,
      "dictionaryRoute": "whitakers-words",
-     "zh": "第十、戴克姆",
-     "zhRoute": "五十課詞表"
+     "zh": "第十",
+     "zhRoute": "human-fix-2026-09-27"
     },
     {
      "group": "序數",
@@ -2239,15 +2239,15 @@
     },
     {
      "group": "長度與容量",
-     "headword": "passuum",
-     "forms": "passuum",
+     "headword": "passus",
+     "forms": "passus, passūs",
      "glossEn": "",
      "pos": "",
      "ecclesiastical": false,
      "corpusFrequency": 1,
      "attested": true,
      "dictionaryRoute": "missing",
-     "zh": "步（長度單位，為千步的百分之一）",
+     "zh": "步（羅馬長度單位，千步為一里）",
      "zhRoute": "claude-haiku-4-5-20251001"
     },
     {
@@ -2273,7 +2273,7 @@
      "corpusFrequency": 0,
      "attested": false,
      "dictionaryRoute": "missing",
-     "zh": "播種、撒播",
+     "zh": "斗（希伯來乾量單位）",
      "zhRoute": "claude-haiku-4-5-20251001"
     },
     {
@@ -2299,7 +2299,7 @@
      "corpusFrequency": 0,
      "attested": false,
      "dictionaryRoute": "whitakers-words",
-     "zh": "科魯斯（西北風）",
+     "zh": "柯爾（希伯來量器，約十厄法）",
      "zhRoute": "claude-haiku-4-5-20251001"
     },
     {
@@ -2455,7 +2455,7 @@
      "corpusFrequency": 2,
      "attested": true,
      "dictionaryRoute": "missing",
-     "zh": "分、極小部分",
+     "zh": "小錢（最小的銅幣）",
      "zhRoute": "claude-haiku-4-5-20251001"
     },
     {
@@ -2520,7 +2520,7 @@
      "corpusFrequency": 0,
      "attested": false,
      "dictionaryRoute": "whitakers-words",
-     "zh": "十二分之一、英吋、英寸",
+     "zh": "十二分之一、羅馬盎司；寸",
      "zhRoute": "nvidia:nvidia/nemotron-3-super-120b-a12b"
     }
    ]
@@ -2616,7 +2616,7 @@
      "corpusFrequency": 1,
      "attested": true,
      "dictionaryRoute": "whitakers-words",
-     "zh": "祖母、祖先、老派故事",
+     "zh": "祖母",
      "zhRoute": "nvidia:nvidia/nemotron-3-super-120b-a12b"
     },
     {
@@ -2772,7 +2772,7 @@
      "corpusFrequency": 0,
      "attested": false,
      "dictionaryRoute": "whitakers-words",
-     "zh": "姑母、父姊、伯母",
+     "zh": "姑母（父親的姊妹）",
      "zhRoute": "nvidia:nvidia/nemotron-3-super-120b-a12b"
     },
     {
@@ -2785,7 +2785,7 @@
      "corpusFrequency": 0,
      "attested": false,
      "dictionaryRoute": "whitakers-words",
-     "zh": "母舅、母親的兄弟、外舅",
+     "zh": "舅父（母親的兄弟）",
      "zhRoute": "nvidia:nvidia/nemotron-3-super-120b-a12b"
     },
     {
@@ -2798,7 +2798,7 @@
      "corpusFrequency": 0,
      "attested": false,
      "dictionaryRoute": "whitakers-words",
-     "zh": "媽媽的姐姐、外姑、母姊",
+     "zh": "姨母（母親的姊妹）",
      "zhRoute": "nvidia:nvidia/nemotron-3-super-120b-a12b"
     },
     {
@@ -2941,7 +2941,7 @@
      "corpusFrequency": 6,
      "attested": true,
      "dictionaryRoute": "whitakers-words",
-     "zh": "岳父、岳母",
+     "zh": "婆婆、岳母",
      "zhRoute": "claude-haiku-4-5-20251001"
     },
     {
@@ -3180,7 +3180,7 @@
      "corpusFrequency": 0,
      "attested": false,
      "dictionaryRoute": "missing",
-     "zh": "月中第九日（羅馬曆法）",
+     "zh": "月中第五日或第七日（Idus 前第九日）",
      "zhRoute": "claude-haiku-4-5-20251001"
     },
     {
@@ -3237,16 +3237,16 @@
     },
     {
      "group": "羅馬記日法",
-     "headword": "diem",
-     "forms": "diem",
-     "glossEn": "",
-     "pos": "",
+     "headword": "ante diem (a.d.)",
+     "forms": "ante diem",
+     "glossEn": "x days before (the Kalends/Nones/Ides), counting inclusively",
+     "pos": "PHRASE",
      "ecclesiastical": false,
-     "corpusFrequency": 314,
+     "corpusFrequency": 0,
      "attested": true,
-     "dictionaryRoute": "missing",
-     "zh": "日、天",
-     "zhRoute": "claude-haiku-4-5-20251001"
+     "dictionaryRoute": "human-fix-2026-09-27",
+     "zh": "……日前（羅馬記日法，以「距某日尚有 N 日」倒數計算）",
+     "zhRoute": "human-fix-2026-09-27"
     },
     {
      "group": "羅馬記日法",
@@ -3427,7 +3427,7 @@
      "corpusFrequency": 0,
      "attested": false,
      "dictionaryRoute": "whitakers-words",
-     "zh": "奧古斯都",
+     "zh": "八月",
      "zhRoute": "五十課詞表"
     },
     {
@@ -3831,15 +3831,6 @@
     },
     {
      "headword": "acquiesco",
-     "forms": "acquiesco, acquiescere, acquiei, acquietus",
-     "glossEn": "lie with (w/cum), rest/relax; repose (death); acquiesce/assent/submit; subside",
-     "conjugation": "3 1",
-     "kind": "INTRANS",
-     "zh": "安息、同意、屈服",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
-     "headword": "acquiesco",
      "forms": "acquiesco, acquiescere, acquievi, acquietus",
      "glossEn": "lie with (w/cum), rest/relax; repose (death); acquiesce/assent/submit; subside",
      "conjugation": "3 1",
@@ -4011,15 +4002,6 @@
     },
     {
      "headword": "adquiesco",
-     "forms": "adquiesco, adquiescere, adquiei, adquietus",
-     "glossEn": "lie with (w/cum), rest, relax; repose (in death); acquiesce, assent; subside",
-     "conjugation": "3 1",
-     "kind": "INTRANS",
-     "zh": "安息、同意、屈服",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
-     "headword": "adquiesco",
      "forms": "adquiesco, adquiescere, adquievi, adquietus",
      "glossEn": "lie with (w/cum), rest, relax; repose (in death); acquiesce, assent; subside",
      "conjugation": "3 1",
@@ -4058,15 +4040,6 @@
      "headword": "adstringo",
      "forms": "adstringo, adstringere, adstrinxi, adstrictus",
      "glossEn": "tie up/down/back/on/together/tightly; bind, grasp, tighten, fix; form boundary",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "綁束、緊束；結合、固定；形成邊界；強制、限制；皺起、凝固",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
-     "headword": "adstringo",
-     "forms": "adstringo, adstringere, adstrinxi, adstrictus",
-     "glossEn": "|oblige, commit; compress, narrow, restrict; knit (brows); freeze, solidify",
      "conjugation": "3 1",
      "kind": "TRANS",
      "zh": "綁束、緊束；結合、固定；形成邊界；強制、限制；皺起、凝固",
@@ -4213,15 +4186,6 @@
      "glossEn": "say (defective), assert; say yes/so, affirm, assent; prescribe/lay down (law)",
      "conjugation": "7 1",
      "kind": "X",
-     "zh": "言說、聲稱、肯定",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "aio",
-     "forms": "aio",
-     "glossEn": "he says (ait), it is said; they say (aiunt)",
-     "conjugation": "7 1",
-     "kind": "IMPERS",
      "zh": "言說、聲稱、肯定",
      "zhRoute": "五十課詞表"
     },
@@ -4420,7 +4384,7 @@
      "glossEn": "drive to, move up, bring along, force towards; put ashore at, land (ship)",
      "conjugation": "3 1",
      "kind": "X",
-     "zh": "呼喚、稱呼、上訴、指控",
+     "zh": "驅向、靠岸",
      "zhRoute": "五十課詞表"
     },
     {
@@ -4614,7 +4578,7 @@
     },
     {
      "headword": "audeo",
-     "forms": "audeo, audere, ausi, ausus sum",
+     "forms": "audeo, audere, —, ausus sum",
      "glossEn": "intend, be prepared; dare/have courage (to go/do), act boldly, venture, risk",
      "conjugation": "2 1",
      "kind": "SEMIDEP",
@@ -4784,15 +4748,6 @@
      "zhRoute": "claude-haiku-4-5-20251001"
     },
     {
-     "headword": "carpo",
-     "forms": "carpo, carpere, carpsi, carptus",
-     "glossEn": "|separate/divide, tear down; carve; despoil/fleece; pursue/harry; consume/erode",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "摘取、拔取；放牧採食；梳理",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
      "headword": "castigo",
      "forms": "castigo, castigare, castigavi, castigatus",
      "glossEn": "chastise/chasten, punish; correct, reprimand/dress down, castigate; neutralize",
@@ -4823,15 +4778,6 @@
      "headword": "cedo",
      "forms": "cedo, cedere, cessi, cessus",
      "glossEn": "go/pass (from/away); withdraw/retire/leave; step aside/make way; take place of",
-     "conjugation": "3 1",
-     "kind": "X",
-     "zh": "行去、退讓、屈服",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "cedo",
-     "forms": "cedo, cedere, cessi, cessus",
-     "glossEn": "|grant, concede, yield, submit; fall back/to; happen/result; start (period)",
      "conjugation": "3 1",
      "kind": "X",
      "zh": "行去、退讓、屈服",
@@ -4910,27 +4856,9 @@
      "zhRoute": "claude-haiku-4-5-20251001"
     },
     {
-     "headword": "cio",
-     "forms": "cio, cire, civi, citus",
-     "glossEn": "|disturb, shake; provoke (war); invoke, call on by name; cite; raise/produce",
-     "conjugation": "6 1",
-     "kind": "TRANS",
-     "zh": "移動、驅動；激發、煽動；徵召",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
      "headword": "circumscribo",
      "forms": "circumscribo, circumscribere, circumscripsi, circumscriptus",
      "glossEn": "abridge, write concise form/well-turned phrase; cheat, impose on; circumvent",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "節約、簡潔敘述；欺騙、困阻",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
-     "headword": "circumscribo",
-     "forms": "circumscribo, circumscribere, circumscripsi, circumscriptus",
-     "glossEn": "|draw a line/circle around; circumscribe; hem in, confine, restrict; rule out",
      "conjugation": "3 1",
      "kind": "TRANS",
      "zh": "節約、簡潔敘述；欺騙、困阻",
@@ -5046,20 +4974,11 @@
     },
     {
      "headword": "colligo",
-     "forms": "colligo, colligere, collegi, collectus",
-     "glossEn": "|obtain/acquire, amass; rally; recover; sum up; deduce, infer; compute, add up",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "聚集、收集、採集",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "colligo",
      "forms": "colligo, colligare, colligavi, colligatus",
      "glossEn": "bind/tie/pack together/up, connect, unite/unify; fetter/bind; immobilize, stop",
      "conjugation": "1 1",
      "kind": "TRANS",
-     "zh": "聚集、收集、採集",
+     "zh": "捆綁、連結",
      "zhRoute": "五十課詞表"
     },
     {
@@ -5079,24 +4998,6 @@
      "kind": "X",
      "zh": "居住、住；耕作、培育；維護、保持",
      "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "colo",
-     "forms": "colo, colere, colui, cultus",
-     "glossEn": "|honor, cherish, worship; tend, take care of; adorn, dress, decorate, embellish",
-     "conjugation": "3 1",
-     "kind": "X",
-     "zh": "居住、住；耕作、培育；維護、保持",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "comburo",
-     "forms": "comburo, comburere, combusi, combustus",
-     "glossEn": "burn up/away; (w/love); consume/destroy w/fire; reduce to ash, cremate; scald",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "燒毀、焚化、消滅",
-     "zhRoute": "claude-haiku-4-5-20251001"
     },
     {
      "headword": "comburo",
@@ -5180,15 +5081,6 @@
      "zhRoute": "五十課詞表"
     },
     {
-     "headword": "committo",
-     "forms": "committo, committere, commisi, commissus",
-     "glossEn": "|engage (battle), set against; begin/start; bring about; commit; incur; forfeit",
-     "conjugation": "3 1",
-     "kind": "X",
-     "zh": "結合、連接；製造；託付",
-     "zhRoute": "五十課詞表"
-    },
-    {
      "headword": "commodo",
      "forms": "commodo, commodare, commodavi, commodatus",
      "glossEn": "lend, hire; give, bestow, provide; put at disposal of, oblige; make fit, adapt",
@@ -5201,15 +5093,6 @@
      "headword": "communico",
      "forms": "communico, communicare, communicavi, communicatus",
      "glossEn": "share; share/divide with/out; receive/take a share of; receive; join with",
-     "conjugation": "1 1",
-     "kind": "TRANS",
-     "zh": "共有、分享；交通、聯誼、領受",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "communico",
-     "forms": "communico, communicare, communicavi, communicatus",
-     "glossEn": "|communicate, discuss, impart; make common cause; take common counsel, consult",
      "conjugation": "1 1",
      "kind": "TRANS",
      "zh": "共有、分享；交通、聯誼、領受",
@@ -5234,24 +5117,6 @@
      "zhRoute": "五十課詞表"
     },
     {
-     "headword": "comparo",
-     "forms": "comparo, comparare, comparavi, comparatus",
-     "glossEn": "|place together, match, couple, pair; set/pit against; treat as equal; compare",
-     "conjugation": "1 1",
-     "kind": "TRANS",
-     "zh": "籌備、預備；蒐集、徵集；聯合",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "comparo",
-     "forms": "comparo, comparare, comparavi, comparatus",
-     "glossEn": "||set up/establish/institute; arrange, dispose, settle; buy, acquire, secure",
-     "conjugation": "1 1",
-     "kind": "TRANS",
-     "zh": "籌備、預備；蒐集、徵集；聯合",
-     "zhRoute": "五十課詞表"
-    },
-    {
      "headword": "compello",
      "forms": "compello, compellare, compellavi, compellatus",
      "glossEn": "address/accost, speak to, call upon; appeal to; challenge; chide/rebuke; accuse",
@@ -5266,7 +5131,7 @@
      "glossEn": "drive together (cattle), round up; force, compel, impel, drive; squeeze; gnash",
      "conjugation": "3 1",
      "kind": "TRANS",
-     "zh": "呼喚、稱呼；責罵、控告",
+     "zh": "驅趕、逼迫、強迫",
      "zhRoute": "claude-haiku-4-5-20251001"
     },
     {
@@ -5288,27 +5153,9 @@
      "zhRoute": "claude-haiku-4-5-20251001"
     },
     {
-     "headword": "competo",
-     "forms": "competo, competere, competivi, competitus",
-     "glossEn": "|be sound/capable/applicable/relevant/sufficient/adequate/competent/admissible",
-     "conjugation": "3 1",
-     "kind": "X",
-     "zh": "相遇、巧合；適當、足夠",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
      "headword": "complector",
      "forms": "complector, complecti, complexus sum",
      "glossEn": "embrace, hug; welcome; encircle, encompass; attain; include, bring in, involve",
-     "conjugation": "3 1",
-     "kind": "DEP",
-     "zh": "擁抱、包含",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "complector",
-     "forms": "complector, complecti, complexus sum",
-     "glossEn": "|lay hold of, grip; seize; grasp, take in/up; sum up; include in scope, cover",
      "conjugation": "3 1",
      "kind": "DEP",
      "zh": "擁抱、包含",
@@ -5342,36 +5189,9 @@
      "zhRoute": "claude-haiku-4-5-20251001"
     },
     {
-     "headword": "concilio",
-     "forms": "concilio, conciliare, conciliavi, conciliatus",
-     "glossEn": "|attract favor of, render favorably disposed; commend, endear; acquire; gain",
-     "conjugation": "1 1",
-     "kind": "TRANS",
-     "zh": "聯合、和解；贏得、獲得",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
-     "headword": "concilio",
-     "forms": "concilio, conciliare, conciliavi, conciliatus",
-     "glossEn": "||bring a woman to man as wife, match; procure as a mistress; obtain improperly",
-     "conjugation": "1 1",
-     "kind": "TRANS",
-     "zh": "聯合、和解；贏得、獲得",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
      "headword": "concinno",
      "forms": "concinno, concinnare, concinnavi, concinnatus",
      "glossEn": "prepare/make ready; repair, put/set right/in order, touch up; arrange suitably",
-     "conjugation": "1 1",
-     "kind": "TRANS",
-     "zh": "準備、修整、安排妥當",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
-     "headword": "concinno",
-     "forms": "concinno, concinnare, concinnavi, concinnatus",
-     "glossEn": "|make up, construct, concoct, put together; bring about, cause; render, make",
      "conjugation": "1 1",
      "kind": "TRANS",
      "zh": "準備、修整、安排妥當",
@@ -5387,27 +5207,9 @@
      "zhRoute": "claude-haiku-4-5-20251001"
     },
     {
-     "headword": "concito",
-     "forms": "concito, concitare, concitavi, concitatus",
-     "glossEn": "|rush; urge/rouse/agitate; enrage/inflame; spur/impel; summon/assemble; cause",
-     "conjugation": "1 1",
-     "kind": "TRANS",
-     "zh": "激起、煽動、驅使",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
      "headword": "concludo",
      "forms": "concludo, concludere, conclusi, conclusus",
      "glossEn": "shut up, confine; contain, limit; close; include (limit); conceal, keep secret",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "關閉、封閉；結論、推斷",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "concludo",
-     "forms": "concludo, concludere, conclusi, conclusus",
-     "glossEn": "|conclude/finish; define; construct/compose (sentence); infer, deduce, imply",
      "conjugation": "3 1",
      "kind": "TRANS",
      "zh": "關閉、封閉；結論、推斷",
@@ -5441,24 +5243,6 @@
      "zhRoute": "五十課詞表"
     },
     {
-     "headword": "condo",
-     "forms": "condo, condere, condidi, conditus",
-     "glossEn": "|build/found, make; shut (eyes); conceal/hide/keep safe; put together, compose",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "創建、建立；隱藏",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "condo",
-     "forms": "condo, condere, condidi, conditus",
-     "glossEn": "||restore; sheathe (sword); plunge/bury (weapon in enemy); put out of sight",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "創建、建立；隱藏",
-     "zhRoute": "五十課詞表"
-    },
-    {
      "headword": "confero",
      "forms": "confero, conferre, contuli, collatus",
      "glossEn": "bring together, carry/convey; collect/gather, compare; unite, add; direct/aim",
@@ -5469,26 +5253,8 @@
     },
     {
      "headword": "confero",
-     "forms": "confero, conferre, contuli, collatus",
-     "glossEn": "|discuss/debate/confer; oppose; pit/match against another; blame; bestow/assign",
-     "conjugation": "3 2",
-     "kind": "TRANS",
-     "zh": "陪伴、賦予；前往",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "confero",
      "forms": "confero, conferre, contuli, conlatus",
      "glossEn": "bring together, carry/convey; collect/gather, compare; unite, add; direct/aim",
-     "conjugation": "3 2",
-     "kind": "TRANS",
-     "zh": "陪伴、賦予；前往",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "confero",
-     "forms": "confero, conferre, contuli, conlatus",
-     "glossEn": "|discuss/debate/confer; oppose; pit/match against another; blame; bestow/assign",
      "conjugation": "3 2",
      "kind": "TRANS",
      "zh": "陪伴、賦予；前往",
@@ -5513,15 +5279,6 @@
      "zhRoute": "五十課詞表"
     },
     {
-     "headword": "confirmo",
-     "forms": "confirmo, confirmare, confirmavi, confirmatus",
-     "glossEn": "|assert positively; declare, prove, confirm, support; sanction; encourage",
-     "conjugation": "1 1",
-     "kind": "TRANS",
-     "zh": "堅固、確認",
-     "zhRoute": "五十課詞表"
-    },
-    {
      "headword": "confiteor",
      "forms": "confiteor, confiteri, confessus sum",
      "glossEn": "confess (w/ACC), admit, acknowledge, reveal, disclose; concede, allow; denote",
@@ -5534,15 +5291,6 @@
      "headword": "confundo",
      "forms": "confundo, confundere, confudi, confusus",
      "glossEn": "pour/mix/mass/bring together; combine/unite/blend/merge; spread over, diffuse",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "混淆、使困惑、羞辱",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "confundo",
-     "forms": "confundo, confundere, confudi, confusus",
-     "glossEn": "|upset/confuse; blur/jumble; bring disorder/ruin; disfigure; bewilder, dismay",
      "conjugation": "3 1",
      "kind": "TRANS",
      "zh": "混淆、使困惑、羞辱",
@@ -5576,15 +5324,6 @@
      "zhRoute": "五十課詞表"
     },
     {
-     "headword": "congruo",
-     "forms": "congruo, congruere, congrui",
-     "glossEn": "|unite, combine, come together; blend, harmonize, act together; be congenial",
-     "conjugation": "3 1",
-     "kind": "INTRANS",
-     "zh": "相合、協調、相符；適應",
-     "zhRoute": "五十課詞表"
-    },
-    {
      "headword": "conicio",
      "forms": "conicio, conicere, conjeci, conjectus",
      "glossEn": "throw/put/pile together; conclude, infer/guess; assign, make go; classify, put",
@@ -5594,27 +5333,9 @@
      "zhRoute": "claude-haiku-4-5-20251001"
     },
     {
-     "headword": "conicio",
-     "forms": "conicio, conicere, conjeci, conjectus",
-     "glossEn": "|throw/cast/fling (into area); devote/pour (money); thrust, involve; insert",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "投擲、推斷、歸類",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
      "headword": "conjungo",
      "forms": "conjungo, conjungere, conjunxi, conjunctus",
      "glossEn": "connect, join/yoke together; marry; connect/compound (words) (w/conjunctions)",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "連結、結合、統一",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "conjungo",
-     "forms": "conjungo, conjungere, conjunxi, conjunctus",
-     "glossEn": "|unite (sexually); place/bring side-by-side; juxtapose; share; add; associate",
      "conjugation": "3 1",
      "kind": "TRANS",
      "zh": "連結、結合、統一",
@@ -5640,15 +5361,6 @@
     },
     {
      "headword": "conligo",
-     "forms": "conligo, conligere, conlegi, conlectus",
-     "glossEn": "|obtain/acquire, amass; rally; recover; sum up; deduce, infer; compute, add up",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "聚集、蒐集、採收",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
-     "headword": "conligo",
      "forms": "conligo, conligare, conligavi, conligatus",
      "glossEn": "bind/tie/pack together/up, connect, unite/unify; fetter/bind; immobilize, stop",
      "conjugation": "1 1",
@@ -5660,15 +5372,6 @@
      "headword": "conmitto",
      "forms": "conmitto, conmittere, conmisi, conmissus",
      "glossEn": "bring together, unite/join, connect/attach; put together, construct; entrust",
-     "conjugation": "3 1",
-     "kind": "X",
-     "zh": "結合、聯接、委託",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
-     "headword": "conmitto",
-     "forms": "conmitto, conmittere, conmisi, conmissus",
-     "glossEn": "|engage (battle), set against; begin/start; bring about; commit; incur; forfeit",
      "conjugation": "3 1",
      "kind": "X",
      "zh": "結合、聯接、委託",
@@ -5693,15 +5396,6 @@
      "zhRoute": "claude-haiku-4-5-20251001"
     },
     {
-     "headword": "conplector",
-     "forms": "conplector, conplecti, conplexus sum",
-     "glossEn": "|lay hold of, grip; seize; grasp, take in/up; sum up; include in scope, cover",
-     "conjugation": "3 1",
-     "kind": "DEP",
-     "zh": "擁抱、環繞、包含",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
      "headword": "conqueror",
      "forms": "conqueror, conqueri, conquestus sum",
      "glossEn": "bewail, lament, utter a complaint; complain of, deplore",
@@ -5714,24 +5408,6 @@
      "headword": "consentio",
      "forms": "consentio, consentire, consensi, consensus",
      "glossEn": "join/share in sensation/feeling; be in agreement/harmony; be of the same mind",
-     "conjugation": "3 4",
-     "kind": "X",
-     "zh": "同意、和諧、心意相通",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "consentio",
-     "forms": "consentio, consentire, consensi, consensus",
-     "glossEn": "|act together; plot, conspire, combine; coincide; be in conjunction (planets)",
-     "conjugation": "3 4",
-     "kind": "X",
-     "zh": "同意、和諧、心意相通",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "consentio",
-     "forms": "consentio, consentire, consensi, consensus",
-     "glossEn": "||agree, consent; fit/be consistent/in sympathy/unison with; favor; assent to",
      "conjugation": "3 4",
      "kind": "X",
      "zh": "同意、和諧、心意相通",
@@ -5765,45 +5441,9 @@
      "zhRoute": "五十課詞表"
     },
     {
-     "headword": "consisto",
-     "forms": "consisto, consistere, constiti, constitus",
-     "glossEn": "|stand together/fast; consist of/be reckoned in; rest/depend upon; be unaltered",
-     "conjugation": "3 1",
-     "kind": "X",
-     "zh": "停止、駐足；立定、佇立；維持、保持",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "consisto",
-     "forms": "consisto, consistere, constiti, constitus",
-     "glossEn": "||make a stand; stay, remain (fixed), stand still/erect/upright; correspond to",
-     "conjugation": "3 1",
-     "kind": "X",
-     "zh": "停止、駐足；立定、佇立；維持、保持",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "consisto",
-     "forms": "consisto, consistere, constiti, constitus",
-     "glossEn": "|||come about, exist; fall due (tax); be established; remain valid/applicable",
-     "conjugation": "3 1",
-     "kind": "X",
-     "zh": "停止、駐足；立定、佇立；維持、保持",
-     "zhRoute": "五十課詞表"
-    },
-    {
      "headword": "conspicio",
      "forms": "conspicio, conspicere, conspexi, conspectus",
      "glossEn": "observe/see/witness; notice; watch; gaze/stare on; catch/be in sight of; face",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "觀察、注視、望見",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
-     "headword": "conspicio",
-     "forms": "conspicio, conspicere, conspexi, conspectus",
-     "glossEn": "|have appearance; attract attention; discern; (PASS) be conspicuous/visible",
      "conjugation": "3 1",
      "kind": "TRANS",
      "zh": "觀察、注視、望見",
@@ -5819,36 +5459,9 @@
      "zhRoute": "五十課詞表"
     },
     {
-     "headword": "constituo",
-     "forms": "constituo, constituere, constitui, constitutus",
-     "glossEn": "|decide/resolve; decree/ordain; appoint, post/station (troops); settle (colony)",
-     "conjugation": "3 1",
-     "kind": "X",
-     "zh": "規定、設立、任命",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "constituo",
-     "forms": "constituo, constituere, constitui, constitutus",
-     "glossEn": "||establish/create/institute; draw up, arrange/set in order; make up, form; fix",
-     "conjugation": "3 1",
-     "kind": "X",
-     "zh": "規定、設立、任命",
-     "zhRoute": "五十課詞表"
-    },
-    {
      "headword": "consulo",
      "forms": "consulo, consulere, consului, consultus",
      "glossEn": "ask information/advice of; consult, take counsel; deliberate/consider; advise",
-     "conjugation": "3 1",
-     "kind": "X",
-     "zh": "請教、諮詢；思考、商議；建議",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "consulo",
-     "forms": "consulo, consulere, consului, consultus",
-     "glossEn": "|decide upon, adopt; look after/out for (DAT), pay attention to; refer to",
      "conjugation": "3 1",
      "kind": "X",
      "zh": "請教、諮詢；思考、商議；建議",
@@ -5864,27 +5477,9 @@
      "zhRoute": "claude-haiku-4-5-20251001"
     },
     {
-     "headword": "consulto",
-     "forms": "consulto, consultare, consultavi, consultatus",
-     "glossEn": "|deliberate, debate, discuss; consider carefully, weigh, ponder",
-     "conjugation": "1 1",
-     "kind": "X",
-     "zh": "諮詢、籌畫、求卜",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
      "headword": "contemno",
      "forms": "contemno, contemnere, contempsi, contemptus",
      "glossEn": "think little of; look down on, take poor view of; pay no heed/disregard/slight",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "輕視、蔑視、鄙棄",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
-     "headword": "contemno",
-     "forms": "contemno, contemnere, contempsi, contemptus",
-     "glossEn": "|treat with/hold in contempt, scorn, disdain; despise; keep away from, avoid",
      "conjugation": "3 1",
      "kind": "TRANS",
      "zh": "輕視、蔑視、鄙棄",
@@ -5909,33 +5504,6 @@
      "zhRoute": "五十課詞表"
     },
     {
-     "headword": "contendo",
-     "forms": "contendo, contendere, contendi, contentus",
-     "glossEn": "|compete/contend (fight/law), dispute; compare/match/contrast; demand/press for",
-     "conjugation": "3 1",
-     "kind": "X",
-     "zh": "拉緊、繃張、張弦、伸展",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "contendo",
-     "forms": "contendo, contendere, contendi, contentus",
-     "glossEn": "||strain/tense; make effort, strive for; speak seriously/passionately; assert",
-     "conjugation": "3 1",
-     "kind": "X",
-     "zh": "拉緊、繃張、張弦、伸展",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "contendo",
-     "forms": "contendo, contendere, contendi, contentus",
-     "glossEn": "|||hurl, shoot; direct; travel; extend; rush to, be in a hurry, hasten",
-     "conjugation": "3 1",
-     "kind": "X",
-     "zh": "拉緊、繃張、張弦、伸展",
-     "zhRoute": "五十課詞表"
-    },
-    {
      "headword": "contexo",
      "forms": "contexo, contexere, contexui, contextus",
      "glossEn": "weave/entwine/braid/twist together; compose/connect/link/combine; make/join/form",
@@ -5950,16 +5518,7 @@
      "glossEn": "make continuous (space/time); put in line, join (in succession), connect, unite",
      "conjugation": "1 1",
      "kind": "TRANS",
-     "zh": "立即、隨即、連續不斷",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "continuo",
-     "forms": "continuo, continuare, continuavi, continuatus",
-     "glossEn": "|bridge (gap); extend/prolong/draw out/last/renew; keep on; do without pause",
-     "conjugation": "1 1",
-     "kind": "TRANS",
-     "zh": "立即、隨即、連續不斷",
+     "zh": "使連續、連接、串連",
      "zhRoute": "五十課詞表"
     },
     {
@@ -5972,36 +5531,9 @@
      "zhRoute": "claude-haiku-4-5-20251001"
     },
     {
-     "headword": "contracto",
-     "forms": "contracto, contractare, contractavi, contractatus",
-     "glossEn": "|caress/fondle, handle amorously; have sex with; deal with/handle/apply oneself",
-     "conjugation": "1 1",
-     "kind": "TRANS",
-     "zh": "觸摸、把玩、反覆撫弄",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
      "headword": "contraho",
      "forms": "contraho, contrahere, contraxi, contractus",
      "glossEn": "enter into/upon relationship/agreement/business/marriage/loan/battle, deal with",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "締結、訂立、從事、交戰",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "contraho",
-     "forms": "contraho, contrahere, contraxi, contractus",
-     "glossEn": "|bring/draw together/in, assemble, collect/gather; unite in friendship/alliance",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "締結、訂立、從事、交戰",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "contraho",
-     "forms": "contraho, contrahere, contraxi, contractus",
-     "glossEn": "||sadden/depress/diminish/contract/tighten; cause/provoke (disease/war); commit",
      "conjugation": "3 1",
      "kind": "TRANS",
      "zh": "締結、訂立、從事、交戰",
@@ -6026,54 +5558,9 @@
      "zhRoute": "五十課詞表"
     },
     {
-     "headword": "convenio",
-     "forms": "convenio, convenire, conveni, conventus",
-     "glossEn": "|meet/assemble; go to meet; come together; (have sex); converge; visit/approach",
-     "conjugation": "3 4",
-     "kind": "X",
-     "zh": "聚集、相聚；適合、相稱",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "convenio",
-     "forms": "convenio, convenire, conveni, conventus",
-     "glossEn": "||resort to; sue, prosecute, take legal action; be agreed upon/arranged (PASS)",
-     "conjugation": "3 4",
-     "kind": "X",
-     "zh": "聚集、相聚；適合、相稱",
-     "zhRoute": "五十課詞表"
-    },
-    {
      "headword": "converto",
      "forms": "converto, convertere, converti, conversus",
      "glossEn": "turn upside down/side-to-side; invert/transpose/convulse; turn over (soil)/dig",
-     "conjugation": "3 1",
-     "kind": "X",
-     "zh": "轉變、改變、皈依",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "converto",
-     "forms": "converto, convertere, converti, conversus",
-     "glossEn": "|turn backwards, recoil; retort; drive back, repulse; direct (course/attention)",
-     "conjugation": "3 1",
-     "kind": "X",
-     "zh": "轉變、改變、皈依",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "converto",
-     "forms": "converto, convertere, converti, conversus",
-     "glossEn": "||translate; modify, adapt; change/alter/transform; convert (to cash), pay over",
-     "conjugation": "3 1",
-     "kind": "X",
-     "zh": "轉變、改變、皈依",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "converto",
-     "forms": "converto, convertere, converti, conversus",
-     "glossEn": "|||cause to turn/revolve, rotate; turn/wheel about; reverse; shift/transfer",
      "conjugation": "3 1",
      "kind": "X",
      "zh": "轉變、改變、皈依",
@@ -6125,15 +5612,6 @@
      "zhRoute": "五十課詞表"
     },
     {
-     "headword": "credo",
-     "forms": "credo, credere, credidi, creditus",
-     "glossEn": "|lend (money) to, make loans/give credit; believe/think/accept as true/be sure",
-     "conjugation": "3 1",
-     "kind": "X",
-     "zh": "相信、信任",
-     "zhRoute": "五十課詞表"
-    },
-    {
      "headword": "creo",
      "forms": "creo, creare, creavi, creatus",
      "glossEn": "create/bring into being/make; procreate; beget/sire; give birth to",
@@ -6143,36 +5621,9 @@
      "zhRoute": "五十課詞表"
     },
     {
-     "headword": "creo",
-     "forms": "creo, creare, creavi, creatus",
-     "glossEn": "|produce/bear fruit; bring about; cause to grow; elect, appoint, invest",
-     "conjugation": "1 1",
-     "kind": "TRANS",
-     "zh": "創造、製造",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "creo",
-     "forms": "creo, creare, creavi, creatus",
-     "glossEn": "||institute; conjure up; (PASS) be born/spring from; be home/native of",
-     "conjugation": "1 1",
-     "kind": "TRANS",
-     "zh": "創造、製造",
-     "zhRoute": "五十課詞表"
-    },
-    {
      "headword": "cumulo",
      "forms": "cumulo, cumulare, cumulavi, cumulatus",
      "glossEn": "heap/pile up/high, gather into a pile/heap; accumulate, amass; load/fill full",
-     "conjugation": "1 1",
-     "kind": "TRANS",
-     "zh": "堆積、聚集、裝滿",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
-     "headword": "cumulo",
-     "forms": "cumulo, cumulare, cumulavi, cumulatus",
-     "glossEn": "|increase/augment/enhance; perfect/finish up; (PASS) be made/composed of",
      "conjugation": "1 1",
      "kind": "TRANS",
      "zh": "堆積、聚集、裝滿",
@@ -6191,15 +5642,6 @@
      "headword": "curo",
      "forms": "curo, curare, curavi, curatus",
      "glossEn": "arrange/see/attend to; take care of; provide for; worry/care about; heal/cure",
-     "conjugation": "1 1",
-     "kind": "X",
-     "zh": "醫治、治療、照顧",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "curo",
-     "forms": "curo, curare, curavi, curatus",
-     "glossEn": "|undertake; procure; regard w/anxiety/interest; take trouble/interest; desire",
      "conjugation": "1 1",
      "kind": "X",
      "zh": "醫治、治療、照顧",
@@ -6233,15 +5675,6 @@
      "zhRoute": "五十課詞表"
     },
     {
-     "headword": "damno",
-     "forms": "damno, damnare, damnavi, damnatus",
-     "glossEn": "|discredit; seek/secure condemnation of; find fault; bind/oblige under a will",
-     "conjugation": "1 1",
-     "kind": "TRANS",
-     "zh": "判罪、定罪；譴責、宣判；傷害、危及",
-     "zhRoute": "五十課詞表"
-    },
-    {
      "headword": "debeo",
      "forms": "debeo, debere, debui, debitus",
      "glossEn": "owe; be indebted/responsible for/obliged/bound/destined; ought, must, should",
@@ -6269,15 +5702,6 @@
      "zhRoute": "claude-haiku-4-5-20251001"
     },
     {
-     "headword": "declino",
-     "forms": "declino, declinare, declinavi, declinatus",
-     "glossEn": "|avoid/stray; vary/be different; bend/sink down, subside/decline; lower/descend",
-     "conjugation": "1 1",
-     "kind": "X",
-     "zh": "轉向、迴避、偏離",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
      "headword": "decoro",
      "forms": "decoro, decorare, decoravi, decoratus",
      "glossEn": "adorn/grace, embellish/add beauty to; glorify, honor/add honor to; do credit to",
@@ -6297,26 +5721,8 @@
     },
     {
      "headword": "decurro",
-     "forms": "decurro, decurrere, decucurri, decursus",
-     "glossEn": "|run a race (over course); make for; turn (to); exercise/drill/maneuver (army)",
-     "conjugation": "3 1",
-     "kind": "X",
-     "zh": "急速下降、奔流、結束",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
-     "headword": "decurro",
      "forms": "decurro, decurrere, decurri, decursus",
      "glossEn": "run/hurry/rush/flow/slope down; hasten; travel downstream; come to land/end",
-     "conjugation": "3 1",
-     "kind": "X",
-     "zh": "急速下降、奔流、結束",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
-     "headword": "decurro",
-     "forms": "decurro, decurrere, decurri, decursus",
-     "glossEn": "|run a race (over course); make for; turn (to); exercise/drill/maneuver (army)",
      "conjugation": "3 1",
      "kind": "X",
      "zh": "急速下降、奔流、結束",
@@ -6332,36 +5738,9 @@
      "zhRoute": "五十課詞表"
     },
     {
-     "headword": "deduco",
-     "forms": "deduco, deducere, deduxi, deductus",
-     "glossEn": "|divert/draw (water); draw (sword); spin; deduct/reduce/lessen; describe; deduce",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "引下、帶走；牽出；驅逐",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "deduco",
-     "forms": "deduco, deducere, deduxi, deductus",
-     "glossEn": "|launch/bring downstream (ship); remove (force); entice; found/settle (colony)",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "引下、帶走；牽出；驅逐",
-     "zhRoute": "五十課詞表"
-    },
-    {
      "headword": "defendo",
      "forms": "defendo, defendere, defendi, defensus",
      "glossEn": "defend/guard/protect, look after; act/speak/plead/write for defense; prosecute",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "保衛、防禦",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "defendo",
-     "forms": "defendo, defendere, defendi, defensus",
-     "glossEn": "|repel, fend/ward off, avert/prevent; support/preserve/maintain; defend (right)",
      "conjugation": "3 1",
      "kind": "TRANS",
      "zh": "保衛、防禦",
@@ -6377,27 +5756,9 @@
      "zhRoute": "五十課詞表"
     },
     {
-     "headword": "deficio",
-     "forms": "deficio, deficere, defeci, defectus",
-     "glossEn": "|pass away; become extinct, die/fade out; subside/sink; suffer eclipse, wane",
-     "conjugation": "3 1",
-     "kind": "INTRANS",
-     "zh": "衰退、虛弱、消失",
-     "zhRoute": "五十課詞表"
-    },
-    {
      "headword": "definio",
      "forms": "definio, definire, definivi, definitus",
      "glossEn": "define/bound/fix/limit/mark; restrict/confine; assign, ordain; lay down (rule)",
-     "conjugation": "3 4",
-     "kind": "TRANS",
-     "zh": "界定、規定；限制、確定；制定",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "definio",
-     "forms": "definio, definire, definivi, definitus",
-     "glossEn": "|finish off/put an end/end the life; determine, settle; specify, sum up; assert",
      "conjugation": "3 4",
      "kind": "TRANS",
      "zh": "界定、規定；限制、確定；制定",
@@ -6413,36 +5774,9 @@
      "zhRoute": "五十課詞表"
     },
     {
-     "headword": "deleo",
-     "forms": "deleo, delere, delevi, deletus",
-     "glossEn": "|annihilate/exterminate, kill every member of a group; put end to, end/abolish",
-     "conjugation": "2 1",
-     "kind": "TRANS",
-     "zh": "摧毀、抹除、消滅",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "deleo",
-     "forms": "deleo, delere, delevi, deletus",
-     "glossEn": "|destroy completely, demolish/obliterate/crush; ruin; overthrow; nullify/annul",
-     "conjugation": "2 1",
-     "kind": "TRANS",
-     "zh": "摧毀、抹除、消滅",
-     "zhRoute": "五十課詞表"
-    },
-    {
      "headword": "demonstro",
      "forms": "demonstro, demonstrare, demonstravi, demonstratus",
      "glossEn": "point out/at/to, draw attention to; explain/describe/show, give an account of",
-     "conjugation": "1 1",
-     "kind": "TRANS",
-     "zh": "指示、揭示",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "demonstro",
-     "forms": "demonstro, demonstrare, demonstravi, demonstratus",
-     "glossEn": "|reveal, mention, refer to; allege; prove, demonstrate; represent; recommend",
      "conjugation": "1 1",
      "kind": "TRANS",
      "zh": "指示、揭示",
@@ -6458,36 +5792,9 @@
      "zhRoute": "claude-haiku-4-5-20251001"
     },
     {
-     "headword": "denuntio",
-     "forms": "denuntio, denuntiare, denuntiavi, denuntiatus",
-     "glossEn": "|announce, give official information; declare; summon (witness)/deliver summons",
-     "conjugation": "1 1",
-     "kind": "X",
-     "zh": "公告、宣布；傳喚；遞交傳票",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
      "headword": "depono",
-     "forms": "depono, deponere, deposui, depostus",
+     "forms": "depono, deponere, deposui, depositus",
      "glossEn": "put/lay down/aside/away; let drop/fall; give up; resign; deposit/entrust/commit",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "放下、卸去、除去",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "depono",
-     "forms": "depono, deponere, deposui, depostus",
-     "glossEn": "|lift off; take off (clothes); have (hair/beard/nails) cut; shed (tusks)",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "放下、卸去、除去",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "depono",
-     "forms": "depono, deponere, deposui, depostus",
-     "glossEn": "||pull down, demolish; plant (seedlings); set up, place; lay to rest; fire",
      "conjugation": "3 1",
      "kind": "TRANS",
      "zh": "放下、卸去、除去",
@@ -6512,27 +5819,9 @@
      "zhRoute": "claude-haiku-4-5-20251001"
     },
     {
-     "headword": "deprehendo",
-     "forms": "deprehendo, deprehendere, deprehendi, deprehensus",
-     "glossEn": "|discover, discern, recognize; detect; indicate, reveal; embarrass",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "捕獲、逮捕；當場抓住；攔截",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
      "headword": "descendo",
      "forms": "descendo, descendere, descendi, descensus",
      "glossEn": "descend, climb/march/come/go/flow/run/hang down; dismount; penetrate/sink",
-     "conjugation": "3 1",
-     "kind": "INTRANS",
-     "zh": "下降、下來",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "descendo",
-     "forms": "descendo, descendere, descendi, descensus",
-     "glossEn": "|stoop; demean; drop/become lower (pitch); be reduced; trace descent/come down",
      "conjugation": "3 1",
      "kind": "INTRANS",
      "zh": "下降、下來",
@@ -6548,15 +5837,6 @@
      "zhRoute": "claude-haiku-4-5-20251001"
     },
     {
-     "headword": "desero",
-     "forms": "desero, deserere, deserui, desertus",
-     "glossEn": "|cease to be concerned with; fail/fall short; (PASS w/ABL) be without/deprived",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "離棄、放棄；背棄；撤回支持",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
      "headword": "desidero",
      "forms": "desidero, desiderare, desideravi, desideratus",
      "glossEn": "desire/want, long/wish for, request, require/need; miss, lack; lose",
@@ -6566,27 +5846,9 @@
      "zhRoute": "五十課詞表"
     },
     {
-     "headword": "desidero",
-     "forms": "desidero, desiderare, desideravi, desideratus",
-     "glossEn": "|want to know; investigate/examine/discuss (L+S); raise the question",
-     "conjugation": "1 1",
-     "kind": "TRANS",
-     "zh": "渴望、期望",
-     "zhRoute": "五十課詞表"
-    },
-    {
      "headword": "designo",
      "forms": "designo, designare, designavi, designatus",
      "glossEn": "mark; point/mark/trace out, outline/describe; indicate/designate/denote",
-     "conjugation": "1 1",
-     "kind": "TRANS",
-     "zh": "標記、描劃；指示、表明",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "designo",
-     "forms": "designo, designare, designavi, designatus",
-     "glossEn": "|earmark/choose; appoint, elect (magistrate); order/plan; scheme. perpetrate",
      "conjugation": "1 1",
      "kind": "TRANS",
      "zh": "標記、描劃；指示、表明",
@@ -6647,45 +5909,9 @@
      "zhRoute": "claude-haiku-4-5-20251001"
     },
     {
-     "headword": "detracto",
-     "forms": "detracto, detractare, detractavi, detractatus",
-     "glossEn": "|disparage/belittle, speak/write slightingly of; reduce/depreciate/detract from",
-     "conjugation": "1 1",
-     "kind": "TRANS",
-     "zh": "拒絕、推辭；規避",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
      "headword": "detraho",
      "forms": "detraho, detrahere, detraxi, detractus",
      "glossEn": "drag/pull/strip/take down/away/off; remove; exclude, omit, cut out; subtract",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "抽取、奪去",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "detraho",
-     "forms": "detraho, detrahere, detraxi, detractus",
-     "glossEn": "|detract (from in speech), disparage; lessen, cause diminishment/detriment",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "抽取、奪去",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "detraho",
-     "forms": "detraho, detrahere, detraxi, detractus",
-     "glossEn": "||detach, dislodge (troops); draw (into action); demolish; abstract, derive",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "抽取、奪去",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "detraho",
-     "forms": "detraho, detrahere, detraxi, detractus",
-     "glossEn": "|||draw off (blood); promote discharge of; force down, induce to come down",
      "conjugation": "3 1",
      "kind": "TRANS",
      "zh": "抽取、奪去",
@@ -6701,45 +5927,18 @@
      "zhRoute": "claude-haiku-4-5-20251001"
     },
     {
-     "headword": "detrecto",
-     "forms": "detrecto, detrectare, detrectavi, detrectatus",
-     "glossEn": "|disparage/belittle, speak/write slightingly of; reduce/depreciate/detract from",
-     "conjugation": "1 1",
-     "kind": "TRANS",
-     "zh": "拒絕、推辭；規避",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
      "headword": "dico",
      "forms": "dico, dicare, dicavi, dicatus",
      "glossEn": "dedicate/consecrate; deify; devote; attach to another state; assign; show",
      "conjugation": "1 1",
      "kind": "TRANS",
-     "zh": "說、告訴；被稱為",
+     "zh": "奉獻、致獻",
      "zhRoute": "五十課詞表"
     },
     {
      "headword": "dico",
      "forms": "dico, dicere, dixi, dictus",
      "glossEn": "say, declare, state; allege, declare positively; assert; plead (case)",
-     "conjugation": "3 1",
-     "kind": "X",
-     "zh": "說、告訴；被稱為",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "dico",
-     "forms": "dico, dicere, dixi, dictus",
-     "glossEn": "|talk/speak; make speech; play (instrument); pronounce, articulate; utter; mean",
-     "conjugation": "3 1",
-     "kind": "X",
-     "zh": "說、告訴；被稱為",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "dico",
-     "forms": "dico, dicere, dixi, dictus",
-     "glossEn": "||name/call; appoint, fix/set (date); designate, declare intention of giving",
      "conjugation": "3 1",
      "kind": "X",
      "zh": "說、告訴；被稱為",
@@ -6755,15 +5954,6 @@
      "zhRoute": "claude-haiku-4-5-20251001"
     },
     {
-     "headword": "dicto",
-     "forms": "dicto, dictare, dictavi, dictatus",
-     "glossEn": "|say/declare/assert repeatedly/habitually/often/frequently; reiterate; recite",
-     "conjugation": "1 1",
-     "kind": "TRANS",
-     "zh": "口述、授意；制定、規定",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
      "headword": "diduco",
      "forms": "diduco, diducere, diduxi, diductus",
      "glossEn": "divide, split, separate, sever; cause to come apart, break up; loosen (knot)",
@@ -6773,27 +5963,9 @@
      "zhRoute": "claude-haiku-4-5-20251001"
     },
     {
-     "headword": "diduco",
-     "forms": "diduco, diducere, diduxi, diductus",
-     "glossEn": "|draw/lead/pull apart/aside; spread/open/space out; deploy/disperse (forces)",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "分開、分裂；使分離；鬆開",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
      "headword": "differo",
      "forms": "differo, differre, distuli, dilatus",
      "glossEn": "postpone/delay/differ; put off, keep waiting; give respite to; differ, disagree",
-     "conjugation": "3 2",
-     "kind": "X",
-     "zh": "延遲、推遲；不同、有別",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "differo",
-     "forms": "differo, differre, distuli, dilatus",
-     "glossEn": "|spread abroad; scatter/disperse; separate; defame; confound/bewilder, distract",
      "conjugation": "3 2",
      "kind": "X",
      "zh": "延遲、推遲；不同、有別",
@@ -6818,24 +5990,6 @@
      "zhRoute": "claude-haiku-4-5-20251001"
     },
     {
-     "headword": "digero",
-     "forms": "digero, digerere, digessi, digestus",
-     "glossEn": "|lay/set out; plant/spread/branch out; arrange, organize, classify; enumerate",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "散佈、運走；分配、區分",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
-     "headword": "digero",
-     "forms": "digero, digerere, digessi, digestus",
-     "glossEn": "||dissolve, dissipate morbid matter; exercise (for health); consider maturely",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "散佈、運走；分配、區分",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
      "headword": "digno",
      "forms": "digno, dignare, dignavi, dignatus",
      "glossEn": "deem/consider/think worthy/becoming/deserving/fit (to); deign, condescend",
@@ -6848,15 +6002,6 @@
      "headword": "dilato",
      "forms": "dilato, dilatare, dilatavi, dilatatus",
      "glossEn": "widen/broaden, expand/enlarge/extend/spread/dilate; prolong; flatten/roll out",
-     "conjugation": "1 1",
-     "kind": "TRANS",
-     "zh": "擴張、擴大、延伸；拉平、展開",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
-     "headword": "dilato",
-     "forms": "dilato, dilatare, dilatavi, dilatatus",
-     "glossEn": "|exaggerate, magnify; fill out; express more fully; pronounce more broadly",
      "conjugation": "1 1",
      "kind": "TRANS",
      "zh": "擴張、擴大、延伸；拉平、展開",
@@ -6881,63 +6026,9 @@
      "zhRoute": "五十課詞表"
     },
     {
-     "headword": "dimitto",
-     "forms": "dimitto, dimittere, dimisi, dimissus",
-     "glossEn": "|dissolve (assembly); part with; put away; divorce; pay off, settle (debt)",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "遣送、赦免",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "dimitto",
-     "forms": "dimitto, dimittere, dimisi, dimissus",
-     "glossEn": "||release, set free; allow to escape/slip away; shake off/scatter/shed",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "遣送、赦免",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "dimitto",
-     "forms": "dimitto, dimittere, dimisi, dimissus",
-     "glossEn": "|||discontinue, renounce, abandon/forsake, forgo, give up (activity); dispatch",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "遣送、赦免",
-     "zhRoute": "五十課詞表"
-    },
-    {
      "headword": "dirigo",
      "forms": "dirigo, dirigere, direxi, directus",
      "glossEn": "arrange/set in line/direction; align; set in order; form up, fall in (army)",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "指導、引導",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "dirigo",
-     "forms": "dirigo, dirigere, direxi, directus",
-     "glossEn": "|mark/fix (boundary); demarcate; straighten (out); level; square (up)",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "指導、引導",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "dirigo",
-     "forms": "dirigo, dirigere, direxi, directus",
-     "glossEn": "||point; direct (word/attention); bring proceedings; end word w/inflection",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "指導、引導",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "dirigo",
-     "forms": "dirigo, dirigere, direxi, directus",
-     "glossEn": "|||direct (course/steps), turn/steer/guide; propel/direct (missiles/blows)",
      "conjugation": "3 1",
      "kind": "TRANS",
      "zh": "指導、引導",
@@ -6989,15 +6080,6 @@
      "zhRoute": "五十課詞表"
     },
     {
-     "headword": "dispono",
-     "forms": "dispono, disponere, disposui, dispositus",
-     "glossEn": "|appoint, post, station; allot, assign; arrange, ordain, prescribe; regulate",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "配置、分佈；排列、布置；管理、治理、安排",
-     "zhRoute": "五十課詞表"
-    },
-    {
      "headword": "divido",
      "forms": "divido, dividere, divisi, divisus",
      "glossEn": "divide; separate, break up; share, distribute; distinguish",
@@ -7010,15 +6092,6 @@
      "headword": "do",
      "forms": "do, dare, dedi, datus",
      "glossEn": "give; dedicate; sell; pay; grant/bestow/impart/offer/lend; devote; allow; make",
-     "conjugation": "1 1",
-     "kind": "TRANS",
-     "zh": "給、賜予",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "do",
-     "forms": "do, dare, dedi, datus",
-     "glossEn": "|surrender/give over; send to die; ascribe/attribute; give birth/produce; utter",
      "conjugation": "1 1",
      "kind": "TRANS",
      "zh": "給、賜予",
@@ -7089,63 +6162,9 @@
     },
     {
      "headword": "edo",
-     "forms": "edo, edare, edidi, editus",
+     "forms": "edo, edere, edidi, editus",
      "glossEn": "eject/emit; put/give forth (buds); beget; bear (fruit); display/evince/exhibit",
-     "conjugation": "1 1",
-     "kind": "TRANS",
-     "zh": "射出、發出；生出、長出；生育、產生；展現、表現",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "edo",
-     "forms": "edo, edare, edidi, editus",
-     "glossEn": "|utter solemnly; pronounce/decree (oracle); deliver (message); issue (command)",
-     "conjugation": "1 1",
-     "kind": "TRANS",
-     "zh": "射出、發出；生出、長出；生育、產生；展現、表現",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "edo",
-     "forms": "edo, edare, edidi, editus",
-     "glossEn": "||publish; disclose, tell, relate, make known; declare, make formal statement",
-     "conjugation": "1 1",
-     "kind": "TRANS",
-     "zh": "射出、發出；生出、長出；生育、產生；展現、表現",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "edo",
-     "forms": "edo, edare, edidi, editus",
-     "glossEn": "|||cause; see birth of; be birthplace/breeding ground of; debouch (river PASS)",
-     "conjugation": "1 1",
-     "kind": "TRANS",
-     "zh": "射出、發出；生出、長出；生育、產生；展現、表現",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "edo",
-     "forms": "edo, edare, edidi, editus",
-     "glossEn": "||||bring forth,  produce/yield (crops), give birth to (often PASS PERF VPAR)",
-     "conjugation": "1 1",
-     "kind": "TRANS",
-     "zh": "射出、發出；生出、長出；生育、產生；展現、表現",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "edo",
-     "forms": "edo, edare, edidi, editus",
-     "glossEn": "|||||notify of suit; nominate for jury; appoint/set (a time); bring witnesses",
-     "conjugation": "1 1",
-     "kind": "TRANS",
-     "zh": "射出、發出；生出、長出；生育、產生；展現、表現",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "edo",
-     "forms": "edo, edare, edidi, editus",
-     "glossEn": "||||||present (documents for inspection; put on (play); hold (banquet); uplift",
-     "conjugation": "1 1",
+     "conjugation": "3",
      "kind": "TRANS",
      "zh": "射出、發出；生出、長出；生育、產生；展現、表現",
      "zhRoute": "五十課詞表"
@@ -7163,33 +6182,6 @@
      "headword": "effundo",
      "forms": "effundo, effundere, effudi, effusus",
      "glossEn": "pour out/away/off; allow to drain; shower; volley (missiles); send/stream forth",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "傾倒、流出、灑出",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "effundo",
-     "forms": "effundo, effundere, effudi, effusus",
-     "glossEn": "|shed (blood/tears); discharge (vomit/urine), debouch, emit; flow out, overflow",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "傾倒、流出、灑出",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "effundo",
-     "forms": "effundo, effundere, effudi, effusus",
-     "glossEn": "||break out; bear/yield/bring forth; expend/use up; unseat, eject/drop/discard",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "傾倒、流出、灑出",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "effundo",
-     "forms": "effundo, effundere, effudi, effusus",
-     "glossEn": "|||stretch/spread out, extend; spread (sail); loosen/slacken/fling, give rein",
      "conjugation": "3 1",
      "kind": "TRANS",
      "zh": "傾倒、流出、灑出",
@@ -7358,15 +6350,6 @@
      "zhRoute": "claude-haiku-4-5-20251001"
     },
     {
-     "headword": "excusso",
-     "forms": "excusso, excussare, excussavi, excussatus",
-     "glossEn": "excuse/justify/explain; make excuse for/plead as excuse; allege; absolve/exempt",
-     "conjugation": "1 1",
-     "kind": "TRANS",
-     "zh": "辯解、說明、藉口；赦免、豁免",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
      "headword": "excutio",
      "forms": "excutio, excutere, excussi, excussus",
      "glossEn": "shake out or off; cast out; search, examine",
@@ -7379,15 +6362,6 @@
      "headword": "exeo",
      "forms": "exeo, exire, exivi, exitus",
      "glossEn": "come/go/sail/march/move out/forth/away, leave; pass (away), expire/perish/die",
-     "conjugation": "6 1",
-     "kind": "INTRANS",
-     "zh": "出去、離開",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "exeo",
-     "forms": "exeo, exire, exivi, exitus",
-     "glossEn": "|discharge (fluid); rise (river); become visible; issue/emerge/escape; sprout",
      "conjugation": "6 1",
      "kind": "INTRANS",
      "zh": "出去、離開",
@@ -7442,15 +6416,6 @@
      "headword": "exolvo",
      "forms": "exolvo, exolvere, exolvi, exolutus",
      "glossEn": "unfasten/undo/loose; open (vein); thaw (ice); let flow (body discharge); solve",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "解開、鬆開；打開、放流；融化",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
-     "headword": "exolvo",
-     "forms": "exolvo, exolvere, exolvi, exolutus",
-     "glossEn": "|set free, release; end, do away with; pay; award; release; perform/discharge",
      "conjugation": "3 1",
      "kind": "TRANS",
      "zh": "解開、鬆開；打開、放流；融化",
@@ -7521,26 +6486,8 @@
     },
     {
      "headword": "extendo",
-     "forms": "extendo, extendere, extendi, extensus",
-     "glossEn": "|make even/straight/smooth; stretch out in death, (PASS) lie full length",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "伸展、延伸",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "extendo",
      "forms": "extendo, extendere, extendi, extentus",
      "glossEn": "stretch/thrust out; make taut; extend/prolong/continue; enlarge/increase",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "伸展、延伸",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "extendo",
-     "forms": "extendo, extendere, extendi, extentus",
-     "glossEn": "|make even/straight/smooth; stretch out in death, (PASS) lie full length",
      "conjugation": "3 1",
      "kind": "TRANS",
      "zh": "伸展、延伸",
@@ -7568,33 +6515,6 @@
      "headword": "facio",
      "forms": "facio, facere, feci, factus",
      "glossEn": "make/build/construct/create/cause/do; have built/made; fashion; work (metal)",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "做、製作、創造",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "facio",
-     "forms": "facio, facere, feci, factus",
-     "glossEn": "|act/take action/be active; (bowels); act/work (things), function, be effective",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "做、製作、創造",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "facio",
-     "forms": "facio, facere, feci, factus",
-     "glossEn": "||produce; produce by growth; bring forth (young); create, bring into existence",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "做、製作、創造",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "facio",
-     "forms": "facio, facere, feci, factus",
-     "glossEn": "|||compose/write; classify; provide; do/perform; commit crime; suppose/imagine",
      "conjugation": "3 1",
      "kind": "TRANS",
      "zh": "做、製作、創造",
@@ -7637,45 +6557,9 @@
      "zhRoute": "claude-haiku-4-5-20251001"
     },
     {
-     "headword": "fingo",
-     "forms": "fingo, fingere, finxi, fictus",
-     "glossEn": "|adapt, transform into; modify (appearance/character/behavior); groom",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "塑造、形成；創造、發明；想像、編造",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
-     "headword": "fingo",
-     "forms": "fingo, fingere, finxi, fictus",
-     "glossEn": "||make up (story/excuse); pretend, pose; forge, counterfeit; act insincerely",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "塑造、形成；創造、發明；想像、編造",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
      "headword": "fio",
      "forms": "fio, fieri, factus sum",
      "glossEn": "happen, come about; result (from); take place, be held, occur, arise (event)",
-     "conjugation": "3 3",
-     "kind": "SEMIDEP",
-     "zh": "被造成、生成、成為",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "fio",
-     "forms": "fio, fieri, factus sum",
-     "glossEn": "|be made/created/instituted/elected/appointed/given; be prepared/done; develop",
-     "conjugation": "3 3",
-     "kind": "SEMIDEP",
-     "zh": "被造成、生成、成為",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "fio",
-     "forms": "fio, fieri, factus sum",
-     "glossEn": "||be made/become; (facio PASS); [fiat => so be it, very well; it is being done]",
      "conjugation": "3 3",
      "kind": "SEMIDEP",
      "zh": "被造成、生成、成為",
@@ -7727,33 +6611,6 @@
      "zhRoute": "claude-haiku-4-5-20251001"
     },
     {
-     "headword": "foedo",
-     "forms": "foedo, foedare, foedavi, foedatus",
-     "glossEn": "|disgrace/dishonor; bring shame, discredit; sully/besmirch (person/reputation)",
-     "conjugation": "1 1",
-     "kind": "TRANS",
-     "zh": "污穢、玷污、弄髒；腐蝕、敗壞",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
-     "headword": "foedo",
-     "forms": "foedo, foedare, foedavi, foedatus",
-     "glossEn": "||disfigure, mar, spoil appearance/brightness/clearness/purity of; darken, dim",
-     "conjugation": "1 1",
-     "kind": "TRANS",
-     "zh": "污穢、玷污、弄髒；腐蝕、敗壞",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
-     "headword": "foedo",
-     "forms": "foedo, foedare, foedavi, foedatus",
-     "glossEn": "|||make (punishment) horrible/barbarous; mangle/hack/mutilate, ravage (land)",
-     "conjugation": "1 1",
-     "kind": "TRANS",
-     "zh": "污穢、玷污、弄髒；腐蝕、敗壞",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
      "headword": "for",
      "forms": "for, fari, fatus sum",
      "glossEn": "speak, talk; say",
@@ -7775,15 +6632,6 @@
      "headword": "fraudo",
      "forms": "fraudo, fraudare, fraudavi, fraudatus",
      "glossEn": "cheat/defraud/swindle; deprive deceitfully; baffle, make ineffectual; dishonor",
-     "conjugation": "1 1",
-     "kind": "TRANS",
-     "zh": "欺詐、詐騙；非法剝奪；破壞",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
-     "headword": "fraudo",
-     "forms": "fraudo, fraudare, fraudavi, fraudatus",
-     "glossEn": "|embezzle, take (money) dishonestly, steal; violate; evade/trick intent of law",
      "conjugation": "1 1",
      "kind": "TRANS",
      "zh": "欺詐、詐騙；非法剝奪；破壞",
@@ -7822,7 +6670,7 @@
      "glossEn": "pour, cast (metals); scatter, shed, rout",
      "conjugation": "3 1",
      "kind": "X",
-     "zh": "建立、創立",
+     "zh": "傾倒、灌注、澎湃流出",
      "zhRoute": "五十課詞表"
     },
     {
@@ -8042,24 +6890,6 @@
      "zhRoute": "claude-haiku-4-5-20251001"
     },
     {
-     "headword": "incendo",
-     "forms": "incendo, incendere, incendi, incensus",
-     "glossEn": "|scorch; make fiery hot (fever/thirst); light up; cause to glow; intensify",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "點燃、焚燒、發火",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
-     "headword": "incendo",
-     "forms": "incendo, incendere, incendi, incensus",
-     "glossEn": "||inspire, fire, rouse, excite, inflame; provoke, incense, aggravate",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "點燃、焚燒、發火",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
      "headword": "incipio",
      "forms": "incipio, incipere, incepi, inceptus",
      "glossEn": "begin; start, undertake",
@@ -8128,52 +6958,7 @@
      "glossEn": "bring/carry in, import; advance, bring/march/step/move foward; impel, urge",
      "conjugation": "3 2",
      "kind": "TRANS",
-     "zh": "依附、緊貼",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "infero",
-     "forms": "infero, inferre, intuli, illatus",
-     "glossEn": "|inflict/cause/inflict/impose/inspire (w/DAT); [bellum inferre => make war on]",
-     "conjugation": "3 2",
-     "kind": "TRANS",
-     "zh": "依附、緊貼",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "infero",
-     "forms": "infero, inferre, intuli, illatus",
-     "glossEn": "||put/throw/thrust in/on, insert; bury/inter; pay; charge as expense; append",
-     "conjugation": "3 2",
-     "kind": "TRANS",
-     "zh": "依附、緊貼",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "infero",
-     "forms": "infero, inferre, intuli, inlatus",
-     "glossEn": "bring/carry in, import; advance, bring/march/step/move foward; impel, urge",
-     "conjugation": "3 2",
-     "kind": "TRANS",
-     "zh": "依附、緊貼",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "infero",
-     "forms": "infero, inferre, intuli, inlatus",
-     "glossEn": "|inflict/cause/inflict/impose/inspire (w/DAT); [bellum inferre => make war on]",
-     "conjugation": "3 2",
-     "kind": "TRANS",
-     "zh": "依附、緊貼",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "infero",
-     "forms": "infero, inferre, intuli, inlatus",
-     "glossEn": "||put/throw/thrust in/on, insert; bury/inter; pay; charge as expense; append",
-     "conjugation": "3 2",
-     "kind": "TRANS",
-     "zh": "依附、緊貼",
+     "zh": "帶入、搬進；施加、引起",
      "zhRoute": "五十課詞表"
     },
     {
@@ -8297,15 +7082,6 @@
      "headword": "interpretor",
      "forms": "interpretor, interpretari, interpretatus sum",
      "glossEn": "explain/expound; interpret/prophesy from (dream/omen); understand/comprehend",
-     "conjugation": "1 1",
-     "kind": "DEP",
-     "zh": "解釋、說明；詮釋、預言；理解、領會",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "interpretor",
-     "forms": "interpretor, interpretari, interpretatus sum",
-     "glossEn": "|decide; translate; regard/construe; take view (that); interpret to suit self",
      "conjugation": "1 1",
      "kind": "DEP",
      "zh": "解釋、說明；詮釋、預言；理解、領會",
@@ -8497,7 +7273,7 @@
      "glossEn": "read; gather, collect (cremated bones); furl (sail), weigh (anchor); pick out",
      "conjugation": "3 1",
      "kind": "X",
-     "zh": "選擇、讀",
+     "zh": "閱讀、採集、拾取",
      "zhRoute": "五十課詞表"
     },
     {
@@ -8506,31 +7282,13 @@
      "glossEn": "bequeath, will; entrust, send as an envoy, choose as a deputy",
      "conjugation": "1 1",
      "kind": "X",
-     "zh": "選擇、讀",
+     "zh": "派遣、遺贈、指定",
      "zhRoute": "五十課詞表"
     },
     {
      "headword": "levo",
      "forms": "levo, levare, levavi, levatus",
      "glossEn": "lift/raise/hold up; support; erect, set up; lift off, remove (load); comfort",
-     "conjugation": "1 1",
-     "kind": "TRANS",
-     "zh": "舉起、扶持；豎立、卸去；減輕、寬慰",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
-     "headword": "levo",
-     "forms": "levo, levare, levavi, levatus",
-     "glossEn": "|undo, take off; release, rid; free from (worry/expense); refresh/restore",
-     "conjugation": "1 1",
-     "kind": "TRANS",
-     "zh": "舉起、扶持；豎立、卸去；減輕、寬慰",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
-     "headword": "levo",
-     "forms": "levo, levare, levavi, levatus",
-     "glossEn": "||lighten, lessen, relieve; reduce in force/potency; bring down (cost/prices)",
      "conjugation": "1 1",
      "kind": "TRANS",
      "zh": "舉起、扶持；豎立、卸去；減輕、寬慰",
@@ -8609,24 +7367,6 @@
      "zhRoute": "claude-haiku-4-5-20251001"
     },
     {
-     "headword": "luo",
-     "forms": "luo, luere, lui, lutus",
-     "glossEn": "|atone, make amends for, expiate; compensate; liberate/set free; redeem (debt)",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "償付、贖罪；解放、兌現",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
-     "headword": "luo",
-     "forms": "luo, luere, lui, lutus",
-     "glossEn": "||fulfill (promise), make good; discharge (debt); avert (trouble) by expiation",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "償付、贖罪；解放、兌現",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
      "headword": "malo",
      "forms": "malo, malle, malui",
      "glossEn": "prefer; incline toward, wish rather",
@@ -8641,7 +7381,7 @@
      "glossEn": "entrust, commit to one's charge, deliver over; commission; order, command",
      "conjugation": "1 1",
      "kind": "X",
-     "zh": "咀嚼、進食",
+     "zh": "委託、吩咐、命令",
      "zhRoute": "五十課詞表"
     },
     {
@@ -8666,24 +7406,6 @@
      "headword": "meditor",
      "forms": "meditor, meditari, meditatus sum",
      "glossEn": "consider/contemplate/ponder; meditate, think about; reflect on; devise/plan",
-     "conjugation": "1 1",
-     "kind": "DEP",
-     "zh": "意欲、準備；思考、構思；演練、誦讀",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
-     "headword": "meditor",
-     "forms": "meditor, meditari, meditatus sum",
-     "glossEn": "|have in mind, intend; think out, prepare a speech; practice public speaking",
-     "conjugation": "1 1",
-     "kind": "DEP",
-     "zh": "意欲、準備；思考、構思；演練、誦讀",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
-     "headword": "meditor",
-     "forms": "meditor, meditari, meditatus sum",
-     "glossEn": "||rehearse; go over, say to oneself; declaim, work over (song) in performance",
      "conjugation": "1 1",
      "kind": "DEP",
      "zh": "意欲、準備；思考、構思；演練、誦讀",
@@ -8762,15 +7484,6 @@
      "zhRoute": "五十課詞表"
     },
     {
-     "headword": "miror",
-     "forms": "miror, mirari, miratus sum",
-     "glossEn": "|admire/revere; wonder; marvel at",
-     "conjugation": "1 1",
-     "kind": "DEP",
-     "zh": "驚異、讚歎",
-     "zhRoute": "五十課詞表"
-    },
-    {
      "headword": "misereo",
      "forms": "misereo, miserere, miserui, miseritus",
      "glossEn": "pity, feel pity; show/have mercy/compassion/pity for (w/GEN)",
@@ -8828,33 +7541,6 @@
      "headword": "morior",
      "forms": "morior, mori, mortuus sum",
      "glossEn": "die, expire, pass/die/wither away/out; fail, come to an end; decay",
-     "conjugation": "3 1",
-     "kind": "DEP",
-     "zh": "死去、逝世",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "morior",
-     "forms": "morior, mori, mortuus sum",
-     "glossEn": "|perish; become obsolete (word), fall into disuse; be forgotten",
-     "conjugation": "3 1",
-     "kind": "DEP",
-     "zh": "死去、逝世",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "morior",
-     "forms": "morior, mori, mortuus sum",
-     "glossEn": "||become obsolete (word), fall into disuse; be forgotten; faint, languish",
-     "conjugation": "3 1",
-     "kind": "DEP",
-     "zh": "死去、逝世",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "morior",
-     "forms": "morior, mori, mortuus sum",
-     "glossEn": "|||become void/moot (lawsuit); be extinguished (fire/light), go out",
      "conjugation": "3 1",
      "kind": "DEP",
      "zh": "死去、逝世",
@@ -9230,15 +7916,6 @@
      "zhRoute": "claude-haiku-4-5-20251001"
     },
     {
-     "headword": "pareo",
-     "forms": "pareo, parere, parui, paritus",
-     "glossEn": "|appear, be visible, be seen; be clear/evident (legal)",
-     "conjugation": "2 1",
-     "kind": "INTRANS",
-     "zh": "服從、順從、遵循、屈服",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
      "headword": "pario",
      "forms": "pario, parere, peperi, partus",
      "glossEn": "bear; give birth to; beget, bring forth; produce, lay (eggs); create; acquire",
@@ -9266,15 +7943,6 @@
      "zhRoute": "claude-haiku-4-5-20251001"
     },
     {
-     "headword": "patefacio",
-     "forms": "patefacio, patefacere, patefeci, patefactus",
-     "glossEn": "|open (up); (gates); clear, make available; deploy (troops); expose (to attack)",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "揭露、顯現、使明知；剖開、暴露",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
      "headword": "patior",
      "forms": "patior, pati, passus sum",
      "glossEn": "suffer; allow; undergo, endure; permit",
@@ -9287,15 +7955,6 @@
      "headword": "pecco",
      "forms": "pecco, peccare, peccavi, peccatus",
      "glossEn": "sin; do wrong, commit moral offense; blunder, stumble; be wrong",
-     "conjugation": "1 1",
-     "kind": "INTRANS",
-     "zh": "犯罪、違過",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "pecco",
-     "forms": "pecco, peccare, peccavi, peccatus",
-     "glossEn": "|make mistake; make slip in speaking; act incorrectly; go wrong, be faulty",
      "conjugation": "1 1",
      "kind": "INTRANS",
      "zh": "犯罪、違過",
@@ -9366,62 +8025,8 @@
     },
     {
      "headword": "percurro",
-     "forms": "percurro, percurrere, percucurri, percursus",
-     "glossEn": "|review, run over (in thought/words), run through in sequence; skim over",
-     "conjugation": "3 1",
-     "kind": "X",
-     "zh": "迅速通過；快速巡視",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
-     "headword": "percurro",
-     "forms": "percurro, percurrere, percucurri, percursus",
-     "glossEn": "||touch upon different points in quick succession; fill offices in succession",
-     "conjugation": "3 1",
-     "kind": "X",
-     "zh": "迅速通過；快速巡視",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
-     "headword": "percurro",
-     "forms": "percurro, percurrere, percucurri, percursus",
-     "glossEn": "|||travel quickly from end to end; make rapid tour, visit in quick succession",
-     "conjugation": "3 1",
-     "kind": "X",
-     "zh": "迅速通過；快速巡視",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
-     "headword": "percurro",
      "forms": "percurro, percurrere, percurri, percursus",
      "glossEn": "quickly move/run/travel/hasten/pass through/over; form continuous line; stroke",
-     "conjugation": "3 1",
-     "kind": "X",
-     "zh": "迅速通過；快速巡視",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
-     "headword": "percurro",
-     "forms": "percurro, percurrere, percurri, percursus",
-     "glossEn": "|review, run over (in thought/words), run through in sequence; skim over",
-     "conjugation": "3 1",
-     "kind": "X",
-     "zh": "迅速通過；快速巡視",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
-     "headword": "percurro",
-     "forms": "percurro, percurrere, percurri, percursus",
-     "glossEn": "||touch upon different points in quick succession; fill offices in succession",
-     "conjugation": "3 1",
-     "kind": "X",
-     "zh": "迅速通過；快速巡視",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
-     "headword": "percurro",
-     "forms": "percurro, percurrere, percurri, percursus",
-     "glossEn": "|||travel quickly from end to end; make rapid tour, visit in quick succession",
      "conjugation": "3 1",
      "kind": "X",
      "zh": "迅速通過；快速巡視",
@@ -9536,42 +8141,6 @@
      "zhRoute": "五十課詞表"
     },
     {
-     "headword": "pono",
-     "forms": "pono, ponere, posui, positus",
-     "glossEn": "|specify, put down; cite/quote; locate; depict; classify; assume/suppose; bury",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "放置、設置",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "pono",
-     "forms": "pono, ponere, posui, positus",
-     "glossEn": "||lay (foundation/keel); found (town), build; plant (trees); provide/serve",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "放置、設置",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "pono",
-     "forms": "pono, ponere, posui, positus",
-     "glossEn": "|||put/lay down (load/arms), take off (clothes); shed (leaves); cut (nails)",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "放置、設置",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "pono",
-     "forms": "pono, ponere, posui, positus",
-     "glossEn": "||||esteem/value/count; impose; ordain; lend, put out, offer, wager; rid/drop",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "放置、設置",
-     "zhRoute": "五十課詞表"
-    },
-    {
      "headword": "porto",
      "forms": "porto, portare, portavi, portatus",
      "glossEn": "carry, bring",
@@ -9622,40 +8191,13 @@
      "glossEn": "obtain, acquire; grasp; attain, reach (goal); come by (experiences)",
      "conjugation": "3 4",
      "kind": "DEP",
-     "zh": "更好的、更優越的、更重要的",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "potior",
-     "forms": "potior, potiri, potitus sum",
-     "glossEn": "|seize, capture; control; have/possess; reign over; win sexually",
-     "conjugation": "3 4",
-     "kind": "DEP",
-     "zh": "更好的、更優越的、更重要的",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "potior",
-     "forms": "potior, potiri, potitus sum",
-     "glossEn": "||be/become master of (w/GEN/ABL), get possession/submission/hold of",
-     "conjugation": "3 4",
-     "kind": "DEP",
-     "zh": "更好的、更優越的、更重要的",
+     "zh": "獲得、掌握、佔有",
      "zhRoute": "五十課詞表"
     },
     {
      "headword": "praebeo",
      "forms": "praebeo, praebere, praebui, praebitus",
      "glossEn": "present/show/put forward; offer; expose physically oneself; expose/submit/allow",
-     "conjugation": "2 1",
-     "kind": "TRANS",
-     "zh": "呈現、提供、展示",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "praebeo",
-     "forms": "praebeo, praebere, praebui, praebitus",
-     "glossEn": "|make available, supply, provide; be the cause, occasion, produce; render",
      "conjugation": "2 1",
      "kind": "TRANS",
      "zh": "呈現、提供、展示",
@@ -9685,7 +8227,7 @@
      "glossEn": "say beforehand, mention in advance; warn/predict/foretell; recommend/prescribe",
      "conjugation": "3 1",
      "kind": "TRANS",
-     "zh": "宣講、宣揚",
+     "zh": "預言、預先說",
      "zhRoute": "五十課詞表"
     },
     {
@@ -9719,24 +8261,6 @@
      "headword": "praesto",
      "forms": "praesto, praestare, praestiti, praestitus",
      "glossEn": "excel, surpass, be outstanding/superior/best/greater/preferable (to); prevail",
-     "conjugation": "1 1",
-     "kind": "X",
-     "zh": "施與、完成、提供",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "praesto",
-     "forms": "praesto, praestare, praestiti, praestitus",
-     "glossEn": "|furnish/supply, make available, hand over; tender/offer/present; play part",
-     "conjugation": "1 1",
-     "kind": "X",
-     "zh": "施與、完成、提供",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "praesto",
-     "forms": "praesto, praestare, praestiti, praestitus",
-     "glossEn": "||apply, bring to bear; fulfill, make good; keep word; be responsible for",
      "conjugation": "1 1",
      "kind": "X",
      "zh": "施與、完成、提供",
@@ -9800,15 +8324,6 @@
      "headword": "probo",
      "forms": "probo, probare, probavi, probatus",
      "glossEn": "approve (of), esteem/commend/recommend/certify; give assent/approval/sanction",
-     "conjugation": "1 1",
-     "kind": "TRANS",
-     "zh": "贊同、讚許；認可、核准",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "probo",
-     "forms": "probo, probare, probavi, probatus",
-     "glossEn": "|let; show to be real/true; examine/test/try/prove/demonstrate; get accepted",
      "conjugation": "1 1",
      "kind": "TRANS",
      "zh": "贊同、讚許；認可、核准",
@@ -10067,54 +8582,9 @@
      "zhRoute": "五十課詞表"
     },
     {
-     "headword": "redimo",
-     "forms": "redimo, redimere, redemi, redemptus",
-     "glossEn": "|redeem; atone for; ransom; rescue/save; contract for; buy/purchase; buy off",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "贖回、救贖",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "redimo",
-     "forms": "redimo, redimere, redimi",
-     "glossEn": "buy back, recover, replace by purchase; buy up; make good, fulfill (promise)",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "贖回、救贖",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "redimo",
-     "forms": "redimo, redimere, redimi",
-     "glossEn": "|redeem; atone for; ransom; rescue/save; contract for; buy/purchase; buy off",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "贖回、救贖",
-     "zhRoute": "五十課詞表"
-    },
-    {
      "headword": "refero",
      "forms": "refero, referre, rettuli, relatus",
      "glossEn": "bring/carry back/again/home; move/draw/force back, withdraw; go back, return",
-     "conjugation": "3 2",
-     "kind": "X",
-     "zh": "回報、呈獻、述說",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "refero",
-     "forms": "refero, referre, rettuli, relatus",
-     "glossEn": "|report (on), bring back news; record/enter; propose/open debate; assign/count",
-     "conjugation": "3 2",
-     "kind": "X",
-     "zh": "回報、呈獻、述說",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "refero",
-     "forms": "refero, referre, rettuli, relatus",
-     "glossEn": "||give/pay back, render, tender; restore; redirect; revive, repeat; recall",
      "conjugation": "3 2",
      "kind": "X",
      "zh": "回報、呈獻、述說",
@@ -10365,26 +8835,8 @@
     },
     {
      "headword": "salio",
-     "forms": "salio, salire, salivi, saltus",
-     "glossEn": "|spurt, discharge, be ejected under force (water/fluid); mount/cover (by stud)",
-     "conjugation": "3 4",
-     "kind": "X",
-     "zh": "躍起、跳躍；噴出、迸出",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
-     "headword": "salio",
      "forms": "salio, salire, salui, saltus",
      "glossEn": "leap, jump; move suddenly/spasmodically (part of body under stress), twitch",
-     "conjugation": "3 4",
-     "kind": "X",
-     "zh": "躍起、跳躍；噴出、迸出",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
-     "headword": "salio",
-     "forms": "salio, salire, salui, saltus",
-     "glossEn": "|spurt, discharge, be ejected under force (water/fluid); mount/cover (by stud)",
      "conjugation": "3 4",
      "kind": "X",
      "zh": "躍起、跳躍；噴出、迸出",
@@ -10445,28 +8897,10 @@
      "zhRoute": "五十課詞表"
     },
     {
-     "headword": "satisfacio",
-     "forms": "satisfacio, satisfacere, satisfeci, satisfactus",
-     "glossEn": "|give satisfactory assurance (to/that); give all (attention) that is required",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "滿足、賠償、道歉、足夠",
-     "zhRoute": "五十課詞表"
-    },
-    {
      "headword": "scio",
      "forms": "scio, scire, scivi, scitus",
      "glossEn": "know, understand",
      "conjugation": "3 4",
-     "kind": "TRANS",
-     "zh": "知道、認識",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "scio",
-     "forms": "scio, scire, scivi, scitus",
-     "glossEn": "know, understand",
-     "conjugation": "6 1",
      "kind": "TRANS",
      "zh": "知道、認識",
      "zhRoute": "五十課詞表"
@@ -10511,15 +8945,6 @@
      "headword": "sequor",
      "forms": "sequor, sequi, secutus sum",
      "glossEn": "follow; escort/attend/accompany; aim at/reach after/strive for/make for/seek",
-     "conjugation": "3 1",
-     "kind": "DEP",
-     "zh": "跟隨、追隨",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "sequor",
-     "forms": "sequor, sequi, secutus sum",
-     "glossEn": "|support/back/side with; obey, observe; pursue/chase; range/spread over; attain",
      "conjugation": "3 1",
      "kind": "DEP",
      "zh": "跟隨、追隨",
@@ -10608,26 +9033,8 @@
     },
     {
      "headword": "sono",
-     "forms": "sono, sonare, sonavi, sonatus",
-     "glossEn": "|echo/resound; be heard, sound; be spoken of (as); celebrate in speech",
-     "conjugation": "1 1",
-     "kind": "X",
-     "zh": "發聲、鳴響",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "sono",
      "forms": "sono, sonere, sonui, sonitus",
      "glossEn": "make a noise/sound; speak/utter, emit sound; be spoken of (as); express/denote",
-     "conjugation": "3 1",
-     "kind": "X",
-     "zh": "發聲、鳴響",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "sono",
-     "forms": "sono, sonere, sonui, sonitus",
-     "glossEn": "|echo/resound; be heard, sound; be spoken of (as); celebrate in speech",
      "conjugation": "3 1",
      "kind": "X",
      "zh": "發聲、鳴響",
@@ -10851,26 +9258,8 @@
     },
     {
      "headword": "tendo",
-     "forms": "tendo, tendere, tetendi, tensus",
-     "glossEn": "|pitch tent, encamp; pull tight; draw (bow); press on, insist; exert oneself",
-     "conjugation": "3 1",
-     "kind": "X",
-     "zh": "伸展、張開",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "tendo",
      "forms": "tendo, tendere, tetendi, tentus",
      "glossEn": "stretch/spread/extend; distend; aim/direct weapon/glance/steps/course; strive",
-     "conjugation": "3 1",
-     "kind": "X",
-     "zh": "伸展、張開",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "headword": "tendo",
-     "forms": "tendo, tendere, tetendi, tentus",
-     "glossEn": "|pitch tent, encamp; pull tight; draw (bow); press on, insist; exert oneself",
      "conjugation": "3 1",
      "kind": "X",
      "zh": "伸展、張開",
@@ -10970,15 +9359,6 @@
      "headword": "traduco",
      "forms": "traduco, traducere, traduxi, traductus",
      "glossEn": "bring across/over, move/transfer; convert; cause to cross/to extend across area",
-     "conjugation": "3 1",
-     "kind": "TRANS",
-     "zh": "運送、轉移；導引通過",
-     "zhRoute": "claude-haiku-4-5-20251001"
-    },
-    {
-     "headword": "traduco",
-     "forms": "traduco, traducere, traduxi, traductus",
-     "glossEn": "|lead across; exhibit/display/carry past in parade/procession; pass/get through",
      "conjugation": "3 1",
      "kind": "TRANS",
      "zh": "運送、轉移；導引通過",
@@ -11125,7 +9505,7 @@
      "glossEn": "beat, strike, lash",
      "conjugation": "1 1",
      "kind": "X",
-     "zh": "鞭打、殴打",
+     "zh": "鞭打、毆打",
      "zhRoute": "五十課詞表"
     },
     {
@@ -11206,7 +9586,7 @@
      "glossEn": "claim, vindicate; punish, avenge",
      "conjugation": "1 1",
      "kind": "X",
-     "zh": "聲張、懲罰、復仇",
+     "zh": "伸張、懲罰、復仇",
      "zhRoute": "五十課詞表"
     },
     {
@@ -11269,7 +9649,7 @@
      "glossEn": "fly",
      "conjugation": "1 1",
      "kind": "X",
-     "zh": "願意、欲求、有意",
+     "zh": "飛、飛翔",
      "zhRoute": "五十課詞表"
     },
     {
@@ -11359,7 +9739,7 @@
      "corpusFrequency": 228,
      "attested": true,
      "dictionaryRoute": "whitakers-words",
-     "zh": "宗族長、族長；主教長",
+     "zh": "宗主教；宗族長、族長",
      "zhRoute": "五十課詞表"
     },
     {
@@ -11476,7 +9856,7 @@
      "corpusFrequency": 241,
      "attested": true,
      "dictionaryRoute": "whitakers-words",
-     "zh": "在前的、先前的；基本的",
+     "zh": "會院院長；在前的、先前的",
      "zhRoute": "五十課詞表"
     },
     {
@@ -11515,7 +9895,7 @@
      "corpusFrequency": 111,
      "attested": true,
      "dictionaryRoute": "whitakers-words",
-     "zh": "議院、法院",
+     "zh": "教廷；議院、法院",
      "zhRoute": "五十課詞表"
     },
     {
@@ -11554,7 +9934,7 @@
      "corpusFrequency": 901,
      "attested": true,
      "dictionaryRoute": "whitakers-words",
-     "zh": "教區會議、主教會議；教令集",
+     "zh": "教區會議、主教會議",
      "zhRoute": "五十課詞表"
     },
     {
@@ -11580,7 +9960,7 @@
      "corpusFrequency": 22,
      "attested": true,
      "dictionaryRoute": "whitakers-words",
-     "zh": "密室、房間",
+     "zh": "選教宗會議；密室、房間",
      "zhRoute": "claude-haiku-4-5-20251001"
     },
     {
@@ -11775,7 +10155,7 @@
      "corpusFrequency": 12,
      "attested": true,
      "dictionaryRoute": "missing",
-     "zh": "步驟、階段、等級",
+     "zh": "升階詠",
      "zhRoute": "nvidia:nvidia/nemotron-3-super-120b-a12b"
     },
     {
@@ -11879,7 +10259,7 @@
      "corpusFrequency": 217,
      "attested": true,
      "dictionaryRoute": "whitakers-words",
-     "zh": "聖堂主保、教律；聖堂參事、修會會士",
+     "zh": "感恩經（彌撒正典）",
      "zhRoute": "claude-haiku-4-5-20251001"
     },
     {
@@ -11899,13 +10279,13 @@
      "group": "彌撒各部",
      "headword": "communio",
      "forms": "communio, communionis, f.",
-     "glossEn": "fortify strongly, entrench, barricade; strengthen, secure, reinforce",
-     "pos": "V",
+     "glossEn": "communion, fellowship; the reception of the Eucharist",
+     "pos": "N",
      "ecclesiastical": false,
      "corpusFrequency": 138,
      "attested": true,
      "dictionaryRoute": "whitakers-words",
-     "zh": "聖體聖血、領聖體",
+     "zh": "共融；領聖體",
      "zhRoute": "五十課詞表"
     },
     {
@@ -11970,7 +10350,7 @@
      "corpusFrequency": 47,
      "attested": true,
      "dictionaryRoute": "whitakers-words",
-     "zh": "堅定、鼓勵、安慰",
+     "zh": "堅定、鼓勵、安慰；堅振（聖事）",
      "zhRoute": "五十課詞表"
     },
     {
@@ -12022,7 +10402,7 @@
      "corpusFrequency": 424,
      "attested": true,
      "dictionaryRoute": "whitakers-words",
-     "zh": "等級、秩序",
+     "zh": "等級、秩序；聖秩（聖事）",
      "zhRoute": "五十課詞表"
     },
     {
@@ -12326,7 +10706,7 @@
      "corpusFrequency": 161,
      "attested": true,
      "dictionaryRoute": "whitakers-words",
-     "zh": "聖日、節日",
+     "zh": "平日（非節日）",
      "zhRoute": "claude-haiku-4-5-20251001"
     },
     {
@@ -12469,7 +10849,7 @@
      "corpusFrequency": 5,
      "attested": true,
      "dictionaryRoute": "whitakers-words",
-     "zh": "晚禱經、日終禱禮",
+     "zh": "夜禱（睡前禱）",
      "zhRoute": "claude-haiku-4-5-20251001"
     },
     {
@@ -12565,7 +10945,7 @@
      "corpusFrequency": 78,
      "attested": true,
      "dictionaryRoute": "whitakers-words",
-     "zh": "泡沫、圓形飾章、護符",
+     "zh": "詔書；泡沫、圓形飾章、護符",
      "zhRoute": "claude-haiku-4-5-20251001"
     },
     {
@@ -12747,7 +11127,7 @@
      "corpusFrequency": 472,
      "attested": true,
      "dictionaryRoute": "whitakers-words",
-     "zh": "禮物、給予之物",
+     "zh": "（公文末）頒於；禮物、給予之物",
      "zhRoute": "claude-haiku-4-5-20251001"
     },
     {
@@ -12942,7 +11322,7 @@
      "corpusFrequency": 217,
      "attested": true,
      "dictionaryRoute": "whitakers-words",
-     "zh": "聖堂主保、教律；聖堂參事、修會會士",
+     "zh": "法典條文、教規",
      "zhRoute": "claude-haiku-4-5-20251001"
     },
     {
@@ -13065,7 +11445,7 @@
     {
      "group": "法律用語",
      "headword": "nullus",
-     "forms": "nullus, nulli",
+     "forms": "nullus, nulla, nullum (gen. nullius)",
      "glossEn": "no one",
      "pos": "N",
      "ecclesiastical": false,
@@ -13220,7 +11600,7 @@
      "corpusFrequency": 603,
      "attested": true,
      "dictionaryRoute": "whitakers-words",
-     "zh": "假面、角色、人格、身份",
+     "zh": "位格；假面、角色、人格",
      "zhRoute": "五十課詞表"
     },
     {
@@ -13272,7 +11652,7 @@
      "corpusFrequency": 186,
      "attested": true,
      "dictionaryRoute": "whitakers-words",
-     "zh": "力量、權勢",
+     "zh": "潛能；力量、權勢",
      "zhRoute": "五十課詞表"
     },
     {
@@ -13298,7 +11678,7 @@
      "corpusFrequency": 435,
      "attested": true,
      "dictionaryRoute": "whitakers-words",
-     "zh": "木材、木料；樹枝",
+     "zh": "質料；木材、木料",
      "zhRoute": "五十課詞表"
     },
     {
@@ -13415,7 +11795,7 @@
      "corpusFrequency": 450,
      "attested": true,
      "dictionaryRoute": "whitakers-words",
-     "zh": "容貌、種類、美貌",
+     "zh": "形相、種；容貌、美貌",
      "zhRoute": "五十課詞表"
     },
     {
@@ -13454,7 +11834,7 @@
      "corpusFrequency": 76,
      "attested": true,
      "dictionaryRoute": "whitakers-words",
-     "zh": "懷孕、胎兒；捕捉、蓄積",
+     "zh": "概念；懷孕、胎兒",
      "zhRoute": "claude-haiku-4-5-20251001"
     },
     {
@@ -13507,19 +11887,6 @@
      "attested": true,
      "dictionaryRoute": "whitakers-words",
      "zh": "恩寵、感謝",
-     "zhRoute": "五十課詞表"
-    },
-    {
-     "group": "神學",
-     "headword": "natura",
-     "forms": "natura, naturae",
-     "glossEn": "nature; birth; character",
-     "pos": "N",
-     "ecclesiastical": false,
-     "corpusFrequency": 1407,
-     "attested": true,
-     "dictionaryRoute": "whitakers-words",
-     "zh": "性質、自然",
      "zhRoute": "五十課詞表"
     },
     {
@@ -13597,7 +11964,7 @@
      "corpusFrequency": 5,
      "attested": true,
      "dictionaryRoute": "missing",
-     "zh": "發出、發出流出",
+     "zh": "發出、流出",
      "zhRoute": "claude-haiku-4-5-20251001"
     },
     {
@@ -13610,7 +11977,7 @@
      "corpusFrequency": 112,
      "attested": true,
      "dictionaryRoute": "whitakers-words",
-     "zh": "遣遣、派遣；遣散、解職；赦免",
+     "zh": "遣送、派遣；遣散、解職；赦免",
      "zhRoute": "五十課詞表"
     },
     {

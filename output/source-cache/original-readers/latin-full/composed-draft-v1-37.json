@@ -2,71 +2,42 @@
   "volume": 1,
   "lesson": 37,
   "author": "opus-5-hand-written",
-  "note": "intercessio 武加大沒有字形。major 與 memoror 都只認字形——major 的詞位在樹庫歸到 magnus 之下。profiteor 沒有直述現在式、serenus 沒有主格進語料。",
+  "note": "2026-09-27 全句重寫。🚨 memoror 在武加大＋教會語料中零字形，練不到；20 詞僅練 19。",
   "sentences": [
     {
-      "latin": "Interrogavit in introitu",
-      "chinese": "他在進口處詢問了。",
-      "targets": [
-        "interrogo",
-        "introitus"
-      ]
+      "latin": "Christus loquitur; Petrum interrogat.",
+      "chinese": "基督說話了；祂詢問了伯多祿。",
+      "targets": ["Christus", "loquor", "interrogo"]
     },
     {
-      "latin": "Locutus est et Memoratus",
-      "chinese": "他講了話，也被記念了。",
-      "targets": [
-        "loquor",
-        "memoror",
-        "sum"
-      ]
+      "latin": "Discipuli Christum sequuntur; Judaei eos persequuntur.",
+      "chinese": "門徒們跟隨基督；猶太人卻迫害他們。",
+      "targets": ["discipulus", "Christus", "sequor", "Judaeus", "persequor"]
     },
     {
-      "latin": "majorem planctum postulas",
-      "chinese": "你要求更大的哀慟。",
-      "targets": [
-        "major",
-        "planctus",
-        "postulo"
-      ]
+      "latin": "Sacerdos introitum facit; discipuli eum prosequuntur.",
+      "chinese": "司祭作了進堂式；門徒們跟隨著他。",
+      "targets": ["sacerdos", "introitus", "discipulus", "prosequor"]
     },
     {
-      "latin": "persecutus est et petiit intercessione",
-      "chinese": "他追趕了，也以代禱請求了。",
-      "targets": [
-        "intercessio",
-        "persequor",
-        "peto",
-        "sum"
-      ]
+      "latin": "Christus omnes judicat; major est omnibus.",
+      "chinese": "基督審判眾人；祂比眾人更偉大。",
+      "targets": ["Christus", "omnis", "judico", "major"]
     },
     {
-      "latin": "prædicans in introitu profiteretur",
-      "chinese": "他在進口處一面宣講，一面明認。",
-      "targets": [
-        "praedico",
-        "profiteor",
-        "introitus",
-        "in"
-      ]
+      "latin": "Indulgentiam petit; Deus respondet; planctus in serenum transit.",
+      "chinese": "他請求了恩寵；天主回應了；哀慟轉成了平靜。",
+      "targets": ["peto", "Deus", "respondeo", "planctus", "serenus"]
     },
     {
-      "latin": "prosecutus est et rogavit",
-      "chinese": "他一路追隨，也請求了。",
-      "targets": [
-        "prosequor",
-        "rogo",
-        "sum"
-      ]
+      "latin": "Rex postulat; sacerdos praedicat; discipulus rogat; spina manet.",
+      "chinese": "君王要求；司祭宣講；門徒祈求；荊棘仍留存著。",
+      "targets": ["postulo", "sacerdos", "praedico", "discipulus", "rogo", "spina"]
     },
     {
-      "latin": "sereno inter Spinas",
-      "chinese": "在荊棘之中安詳地。",
-      "targets": [
-        "serenus",
-        "spina",
-        "inter"
-      ]
+      "latin": "Sancti intercessione, Christus jubet; populus fidem profitetur.",
+      "chinese": "藉著聖人的代禱，基督下令；百姓宣認了信德。",
+      "targets": ["intercessio", "Christus", "jubeo", "populus", "fides", "profiteor"]
     }
   ]
 }

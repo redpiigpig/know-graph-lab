@@ -1,13 +1,43 @@
 {
-  "volume": 2, "lesson": 8, "author": "opus-5-hand-written",
-  "note": "exspoliō 與 irradio 兩層語料都沒有字形。accommodō 只剩 accommodata、adōrnō 只剩 adornatus、immolātiō 只認詞幹。",
+  "volume": 2,
+  "lesson": 8,
+  "author": "opus-5-hand-written",
+  "note": "2026-09-27 全句重寫。🚨 adōrnō／exspoliō／irradio／immolātiō 在武加大＋教會語料中零字形，練不到；20 詞僅練 16。",
   "sentences": [
-    {"latin": "accommodata et adornatus", "chinese": "被配合的，也被裝飾的。", "targets": ["accommodo", "adorno"]},
-    {"latin": "baptismum in domo", "chinese": "家中的洗禮。", "targets": ["baptismus", "in", "domus"]},
-    {"latin": "Confortare in dignitate", "chinese": "你要在尊嚴中剛強。", "targets": ["conforto", "dignitas", "in"]},
-    {"latin": "Ejice esurientem de domo", "chinese": "把那飢餓的人逐出家門。", "targets": ["ejicio", "esurio", "de", "domus"]},
-    {"latin": "hæreditatem immolate matutina", "chinese": "你們要在清晨獻上那產業。", "targets": ["hereditas", "immolatio", "matutinus"]},
-    {"latin": "jacet et jacere mirabilia", "chinese": "他躺著，而要拋出奇妙的事。", "targets": ["jaceo", "jacio", "mirabilis"]},
-    {"latin": "multitudinem jacentem vidit", "chinese": "他看見那躺臥的群眾。", "targets": ["multitudo", "jaceo"]}
+    {
+      "latin": "Populus baptismum didicit; dignitas crescit.",
+      "chinese": "百姓學會了聖洗；尊嚴漸漸增長。",
+      "targets": ["populus", "baptismus", "disco", "dignitas"]
+    },
+    {
+      "latin": "Ejice statim daemonium.",
+      "chinese": "立刻逐出魔鬼吧。",
+      "targets": ["ejicio", "daemonium"]
+    },
+    {
+      "latin": "Multitudo cernit; homo esurit.",
+      "chinese": "眾人看見了；那人餓了。",
+      "targets": ["multitudo", "cerno", "homo", "esurio"]
+    },
+    {
+      "latin": "Puer coepit discere; Deus confortavit eum.",
+      "chinese": "孩童開始學習；天主堅固了他。",
+      "targets": ["coepi", "disco", "Deus", "conforto"]
+    },
+    {
+      "latin": "Homo jacet; jaciat lapidem.",
+      "chinese": "那人躺著；讓他投擲石頭吧。",
+      "targets": ["homo", "jaceo", "jacio"]
+    },
+    {
+      "latin": "Multitudo hereditatem accipit; matutina hora venit; domum intrat.",
+      "chinese": "眾人領受了遺產；晨早的時辰來到了；他走進了家門。",
+      "targets": ["multitudo", "hereditas", "matutinus", "domus"]
+    },
+    {
+      "latin": "Signum mirabile est; ratio accommodata est.",
+      "chinese": "記號是奇異的；方法是合宜的。",
+      "targets": ["mirabilis", "accommodo"]
+    }
   ]
 }

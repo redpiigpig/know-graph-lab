@@ -1,13 +1,43 @@
 {
-  "volume": 2, "lesson": 36, "author": "opus-5-hand-written",
-  "note": "aeque 在語料裡只有句首大寫的 Æque；creatio 沒有主格、gravitas 沒有主格進語料。",
+  "volume": 2,
+  "lesson": 36,
+  "author": "opus-5-hand-written",
+  "note": "2026-09-27 全句重寫（棄用模板產生器）。",
   "sentences": [
-    {"latin": "limites conversionem evangelica", "chinese": "福音的界限與皈依。", "targets": ["limes", "conversio", "evangelicus"]},
-    {"latin": "servitio insertus comprehendit", "chinese": "他被植入服事，並且領會了。", "targets": ["servitium", "insero", "comprehendo"]},
-    {"latin": "relatione generationem Æque", "chinese": "同樣地以那報告論及世代。", "targets": ["relatio", "generatio", "aeque"]},
-    {"latin": "dominabitur limitibus evangelicis", "chinese": "他要在福音的界限中掌權。", "targets": ["dominor", "limes", "evangelicus"]},
-    {"latin": "creationis mutatio campo", "chinese": "田野中創造的變化。", "targets": ["creatio", "mutatio", "campus"]},
-    {"latin": "familiaris censet fortasse", "chinese": "那親近的人或許如此認為。", "targets": ["familiaris", "censeo", "fortasse"]},
-    {"latin": "gravitate Æque dominatus", "chinese": "同樣地，以莊嚴被統治。", "targets": ["gravitas", "aeque", "dominor"]}
+    {
+      "latin": "Sponte homo credit; limites servat.",
+      "chinese": "人自願地相信；他遵守了界限。",
+      "targets": ["spons", "homo", "credo", "limes"]
+    },
+    {
+      "latin": "Apte conversio evangelica fit.",
+      "chinese": "皈依恰當地按福音的方式發生了。",
+      "targets": ["apte", "conversio", "evangelicus"]
+    },
+    {
+      "latin": "Servitium insertum est; comprehendit populum.",
+      "chinese": "服役被插入了；它包含了百姓。",
+      "targets": ["servitium", "insero", "comprehendo", "populus"]
+    },
+    {
+      "latin": "Relatione generatio nova crescit.",
+      "chinese": "藉著關係，新的一代漸漸增長。",
+      "targets": ["relatio", "generatio"]
+    },
+    {
+      "latin": "Aeque dominatur; persuadet omnibus.",
+      "chinese": "他同樣地統治著；他說服了眾人。",
+      "targets": ["aeque", "dominor", "persuadeo", "omnis"]
+    },
+    {
+      "latin": "Opus creationis mutatio est; campus crescit.",
+      "chinese": "創造的工作即是變化；平原漸漸增長。",
+      "targets": ["creatio", "mutatio", "campus"]
+    },
+    {
+      "latin": "Familiaris homo censet; fortasse gravitate movetur.",
+      "chinese": "親密的人這樣判斷；他或許受到重量的感動。",
+      "targets": ["familiaris", "homo", "censeo", "fortasse", "gravitas"]
+    }
   ]
 }

@@ -34,8 +34,8 @@
             "patristic": 272
           },
           "kind": "person",
-          "zh": "耶穌",
-          "zhSource": "信望愛 Strong 中文字典",
+          "zh": "耶穌；約書亞",
+          "zhSource": "信望愛 Strong 中文字典；2026-09-27 catB 覆核修正",
           "strong": "G2424",
           "zhRoute": "信望愛",
           "category": "其他人名",
@@ -727,10 +727,10 @@
             "septuagint": 110
           },
           "kind": "person",
-          "zh": "亞們",
+          "zh": "亞捫",
           "zhSource": "biblical_people",
           "zhRoute": "音譯",
-          "zhReview": "音譯比對所得，須複核",
+          "zhReview": "音譯比對所得，須複核；2026-09-27 catB 修正：頻次多屬七十士亞捫人，改音譯亞捫",
           "category": "其他人名",
           "categoryRoute": "biblical_people"
         },
@@ -2524,8 +2524,8 @@
             "patristic": 1
           },
           "kind": "person",
-          "zh": "彼息氏",
-          "zhSource": "信望愛 Strong 中文字典",
+          "zh": "波斯（人）",
+          "zhSource": "信望愛 Strong 中文字典；2026-09-27 catB 覆核修正",
           "strong": "G4069",
           "zhRoute": "信望愛",
           "category": "其他人名",
@@ -2767,13 +2767,13 @@
           "byCorpus": {
             "septuagint": 31
           },
-          "kind": "place",
-          "zh": "哀嫩",
+          "kind": "person",
+          "zh": "暗嫩",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G137",
           "zhRoute": "信望愛",
-          "category": "地名",
-          "categoryRoute": "既有 kind 欄"
+          "category": "其他人名",
+          "categoryRoute": "既有 kind 欄；2026-09-27 catB 修正：原誤標地名哀嫩，實為大衛之子暗嫩"
         },
         {
           "headword": "Βαναίας",
@@ -4024,8 +4024,8 @@
             "septuagint": 20
           },
           "kind": "",
-          "zh": "示麥",
-          "zhSource": "和合本修訂版（RCUV2）",
+          "zh": "伯示麥",
+          "zhSource": "和合本修訂版（RCUV2）；2026-09-27 catB 覆核修正",
           "zhRoute": "中文聖經對位",
           "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
@@ -5740,8 +5740,8 @@
             "patristic": 1
           },
           "kind": "person",
-          "zh": "彼息氏",
-          "zhSource": "信望愛 Strong 中文字典",
+          "zh": "波斯",
+          "zhSource": "信望愛 Strong 中文字典；2026-09-27 catB 覆核修正",
           "strong": "G4069",
           "zhRoute": "信望愛",
           "category": "其他人名",
@@ -6600,8 +6600,8 @@
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G5344",
           "zhRoute": "信望愛",
-          "category": "教宗與主教",
-          "categoryRoute": "episcopal_succession"
+          "category": "其他人名",
+          "categoryRoute": "episcopal_succession；2026-09-27 catE 修正：腓力斯是羅馬巡撫非主教，移出教宗與主教類"
         },
         {
           "headword": "Ἀγρίππα",
@@ -7892,8 +7892,8 @@
           "group": "倍數與分數",
           "frequency": 25,
           "attested": true,
-          "zh": "兩倍；二分之一",
-          "zhSource": "語言模型（nvidia:meta/llama-3.1-70b-instruct），待人工複核",
+          "zh": "兩次；兩倍",
+          "zhSource": "語言模型（nvidia:meta/llama-3.1-70b-instruct），待人工複核；2026-09-27 catB 覆核修正",
           "inLessons": false
         },
         {
@@ -7901,8 +7901,8 @@
           "group": "倍數與分數",
           "frequency": 28,
           "attested": true,
-          "zh": "三倍；三分之一",
-          "zhSource": "語言模型（nvidia:meta/llama-3.1-70b-instruct），待人工複核",
+          "zh": "三次",
+          "zhSource": "語言模型（nvidia:meta/llama-3.1-70b-instruct），待人工複核；2026-09-27 catB 覆核修正",
           "inLessons": false
         },
         {
@@ -7910,8 +7910,8 @@
           "group": "倍數與分數",
           "frequency": 30,
           "attested": true,
-          "zh": "七倍；七分之一",
-          "zhSource": "語言模型（nvidia:meta/llama-3.1-70b-instruct），待人工複核",
+          "zh": "七次",
+          "zhSource": "語言模型（nvidia:meta/llama-3.1-70b-instruct），待人工複核；2026-09-27 catB 覆核修正",
           "inLessons": false
         },
         {
@@ -7919,8 +7919,8 @@
           "group": "倍數與分數",
           "frequency": 2,
           "attested": true,
-          "zh": "七十倍；七十分之一",
-          "zhSource": "語言模型（nvidia:meta/llama-3.1-70b-instruct），待人工複核",
+          "zh": "七十次",
+          "zhSource": "語言模型（nvidia:meta/llama-3.1-70b-instruct），待人工複核；2026-09-27 catB 覆核修正",
           "inLessons": false
         },
         {
@@ -7937,8 +7937,8 @@
           "group": "倍數與分數",
           "frequency": 1,
           "attested": true,
-          "zh": "多倍；多分之一",
-          "zhSource": "語言模型（nvidia:meta/llama-3.1-70b-instruct），待人工複核",
+          "zh": "多倍的",
+          "zhSource": "語言模型（nvidia:meta/llama-3.1-70b-instruct），待人工複核；2026-09-27 catB 覆核修正",
           "inLessons": false
         },
         {
@@ -7991,8 +7991,8 @@
           "group": "長度與容量",
           "frequency": 15,
           "attested": true,
-          "zh": "一公升；一公升的容量",
-          "zhSource": "語言模型（nvidia:meta/llama-3.1-70b-instruct），待人工複核",
+          "zh": "歌珥；容量單位，約 220 升",
+          "zhSource": "語言模型（nvidia:meta/llama-3.1-70b-instruct），待人工複核；2026-09-27 catB 覆核修正",
           "inLessons": false
         },
         {
@@ -8000,8 +8000,8 @@
           "group": "長度與容量",
           "frequency": 18,
           "attested": true,
-          "zh": "荊棘叢；荊棘",
-          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
+          "zh": "罷特；液量單位，約 22 升",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）；2026-09-27 catB 覆核修正",
           "inLessons": true
         },
         {
@@ -8009,8 +8009,8 @@
           "group": "長度與容量",
           "frequency": 4,
           "attested": true,
-          "zh": "量器；量尺",
-          "zhSource": "語言模型（nvidia:meta/llama-3.1-70b-instruct），待人工複核",
+          "zh": "液量單位，約 39 升",
+          "zhSource": "語言模型（nvidia:meta/llama-3.1-70b-instruct），待人工複核；2026-09-27 catB 覆核修正",
           "inLessons": false
         },
         {
@@ -8036,8 +8036,8 @@
           "group": "長度與容量",
           "frequency": 4,
           "attested": true,
-          "zh": "細麥粉；容量單位，約7.3升",
-          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
+          "zh": "細亞；容量單位，約 7.3 升",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核；2026-09-27 catB 覆核修正",
           "inLessons": false
         },
         {
@@ -8153,8 +8153,8 @@
           "group": "錢幣與重量",
           "frequency": 278,
           "attested": true,
-          "zh": "金製飾物",
-          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
+          "zh": "金子；金幣；金飾",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）；2026-09-27 catB 覆核修正",
           "inLessons": true
         },
         {
@@ -8321,8 +8321,8 @@
           "group": "旁系",
           "frequency": 87,
           "attested": true,
-          "zh": "神聖的；神的",
-          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
+          "zh": "叔伯；舅父",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）；2026-09-27 catB 覆核修正",
           "inLessons": true
         },
         {
@@ -8570,8 +8570,8 @@
           "group": "時辰與日夜",
           "frequency": 164,
           "attested": true,
-          "zh": "看守；監禁；監獄",
-          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
+          "zh": "更（夜間守望的時段）；看守；監禁；監獄",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）；2026-09-27 catB 覆核修正",
           "inLessons": true
         },
         {
@@ -8624,8 +8624,8 @@
           "group": "週月年",
           "frequency": 22,
           "attested": true,
-          "zh": "七重天",
-          "zhSource": "deities",
+          "zh": "七日；一週",
+          "zhSource": "deities；2026-09-27 catB 覆核修正",
           "inLessons": false
         },
         {
@@ -8858,8 +8858,8 @@
           "group": "月名",
           "frequency": 0,
           "attested": false,
-          "zh": "西番月",
-          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
+          "zh": "西彎月",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核；2026-09-27 catB 覆核修正",
           "inLessons": false
         },
         {
@@ -8876,8 +8876,8 @@
           "group": "月名",
           "frequency": 7,
           "attested": true,
-          "zh": "基斯利月（猶太曆第九月，約相當於十一月中至十二月中）",
-          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
+          "zh": "基斯流月（猶太曆第九月，約相當於十一月中至十二月中）",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核；2026-09-27 catB 覆核修正",
           "inLessons": false
         },
         {
@@ -8894,8 +8894,8 @@
           "group": "月名",
           "frequency": 1,
           "attested": true,
-          "zh": "迪斯特魯斯月（馬其頓曆第二月，約相當於四月中至五月中）",
-          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
+          "zh": "迪斯特魯斯月（馬其頓曆第十二月，約相當於二月中至三月中）",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核；2026-09-27 catB 覆核修正",
           "inLessons": false
         },
         {
@@ -8921,8 +8921,8 @@
           "group": "月名",
           "frequency": 0,
           "attested": false,
-          "zh": "帕尼莫斯月（馬其頓曆第十月，約相當於十二月中至一月中）",
-          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
+          "zh": "帕尼莫斯月（馬其頓曆第四月，約相當於六月中至七月中）",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核；2026-09-27 catB 覆核修正",
           "inLessons": false
         }
       ]
@@ -9017,8 +9017,8 @@
           "group": "新約職分",
           "frequency": 21,
           "attested": true,
-          "zh": "少府",
-          "zhSource": "official_titles",
+          "zh": "管家；司庫；總管",
+          "zhSource": "official_titles；2026-09-27 catB 覆核修正",
           "inLessons": false
         },
         {

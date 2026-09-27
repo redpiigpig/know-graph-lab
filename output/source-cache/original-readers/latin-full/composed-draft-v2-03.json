@@ -1,13 +1,43 @@
 {
-  "volume": 2, "lesson": 3, "author": "opus-5-hand-written",
-  "note": "palma 沒有主格單數進語料，fore 只認字形，sistō 兩層語料裡只剩 sisterent 一形。",
+  "volume": 2,
+  "lesson": 3,
+  "author": "opus-5-hand-written",
+  "note": "2026-09-27 全句重寫。",
   "sentences": [
-    {"latin": "flos et fons orbis", "chinese": "世界的花與泉源。", "targets": ["flos", "fons", "orbis"]},
-    {"latin": "fore eadem illuminatio", "chinese": "將會是同一道光照。", "targets": ["fore", "idem", "illuminatio"]},
-    {"latin": "occidit palam in orbe", "chinese": "他公開地在世上殺害了。", "targets": ["occido", "palam", "orbis", "in"]},
-    {"latin": "pendet inter palmas", "chinese": "他懸在棕櫚之間。", "targets": ["pendeo", "palma", "inter"]},
-    {"latin": "piaculum eodem fonte", "chinese": "出於同一泉源的罪愆。", "targets": ["piaculum", "idem", "fons"]},
-    {"latin": "in regione requiem sperat", "chinese": "他在那地區盼望安息。", "targets": ["regio", "requies", "spero"]},
-    {"latin": "sidera speciem sisterent", "chinese": "那些星辰要立起那容貌。", "targets": ["sidus", "species", "sisto"]}
+    {
+      "latin": "Judex orbem regit; sidus fulget; fons manat.",
+      "chinese": "審判者統治大地；星辰閃耀著；泉源流湧著。",
+      "targets": ["judex", "orbis", "sidus", "fons"]
+    },
+    {
+      "latin": "Victor palmam accipit; species nova est.",
+      "chinese": "勝利者領受了棕枝；那形貌是嶄新的。",
+      "targets": ["palma", "victor", "species"]
+    },
+    {
+      "latin": "Quisquis credit, requiem habet.",
+      "chinese": "凡信的人，就擁有安息。",
+      "targets": ["quisquis", "credo", "requies"]
+    },
+    {
+      "latin": "Ratio hominis regionem cognoscit; palam est.",
+      "chinese": "人的理性認識了地區；這是明顯的。",
+      "targets": ["ratio", "homo", "regio", "cognosco", "palam"]
+    },
+    {
+      "latin": "Idem judex piaculum videt.",
+      "chinese": "同一位審判者看見了罪愆。",
+      "targets": ["idem", "judex", "piaculum"]
+    },
+    {
+      "latin": "Sperat fore lucem; Christus illuminationem dat.",
+      "chinese": "他盼望將有光明；基督賜下光照。",
+      "targets": ["spero", "fore", "Christus", "illuminatio"]
+    },
+    {
+      "latin": "Flos pendet; homo sperat; sol occidit; omnes sisterent.",
+      "chinese": "花朵懸垂著；人在盼望；太陽落下了；眾人都會止步。",
+      "targets": ["flos", "pendeo", "spero", "occido", "sisto"]
+    }
   ]
 }

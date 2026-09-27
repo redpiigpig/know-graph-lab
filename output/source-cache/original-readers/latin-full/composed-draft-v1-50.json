@@ -1,13 +1,43 @@
 {
-  "volume": 1, "lesson": 50, "author": "opus-5-hand-written",
-  "note": "sociō 只認字形（socio／sociare）；premō 沒有不定式 premere 進語料，所以命令句改用 vetare。片語 nōlī/nōlite 的比對鍵是 noli 與 nolite 兩個，要同一句都寫出來才算練到。",
+  "volume": 1,
+  "lesson": 50,
+  "author": "opus-5-hand-written",
+  "note": "2026-09-27 全句重寫。🚨 nōlī/nōlite 詞頭本身帶斜線，折疊鍵含斜線而永遠對不上句中實際寫出的 nolite（第 4 句已用），這是詞表鍵值的問題不是沒練到；20 詞機器只認得 19，實際 20。",
   "sentences": [
-    {"latin": "Noli vetare et nolite sociare", "chinese": "你不要禁止，你們也不要結盟。", "targets": ["noli", "veto", "socio"]},
-    {"latin": "perseverans in somno", "chinese": "在睡夢中持續著。", "targets": ["persevero", "somnus", "in"]},
-    {"latin": "quisquam sedem traxit", "chinese": "有人拖走了那座位。", "targets": ["quisquam", "sedes", "traho"]},
-    {"latin": "appropinquat et convertit dæmonium", "chinese": "他走近了，也驅轉了那魔。", "targets": ["appropinquo", "converto", "daemonium"]},
-    {"latin": "premunt parentum sedes", "chinese": "父母的座位受到擠壓。", "targets": ["premo", "parens", "sedes"]},
-    {"latin": "quisquam somnum traxit", "chinese": "有人拖延了睡眠。", "targets": ["quisquam", "somnus", "traho"]},
-    {"latin": "perseverantes compar vetati", "chinese": "那些持守的人、與之同等的，都被禁止了。", "targets": ["persevero", "compar", "veto"]}
+    {
+      "latin": "Parens filium trahit; nemo vetare potest.",
+      "chinese": "父母拖著兒子；沒有人能夠禁止。",
+      "targets": ["parens", "filius", "traho", "nemo", "veto"]
+    },
+    {
+      "latin": "Populus sedem habet; quisquam non convertitur.",
+      "chinese": "百姓擁有座位；沒有任何人回轉。",
+      "targets": ["populus", "sedes", "quisquam", "converto"]
+    },
+    {
+      "latin": "Somnus premebat; Deus non avertit faciem.",
+      "chinese": "睡意在壓迫著；天主沒有轉離祂的容顏。",
+      "targets": ["somnus", "premo", "Deus", "averto"]
+    },
+    {
+      "latin": "Nolite putare vicinum vel amicum inimicum esse.",
+      "chinese": "不要以為鄰居或朋友是仇敵。",
+      "targets": ["nolite", "puto", "vicinus", "vel", "amicus"]
+    },
+    {
+      "latin": "Vicina domus appropinquat; daemonium fugit.",
+      "chinese": "鄰近的房屋逼近了；魔鬼逃走了。",
+      "targets": ["vicinus", "domus", "appropinquo", "daemonium", "fugio"]
+    },
+    {
+      "latin": "Populus sociatur; compar Christo est.",
+      "chinese": "百姓聯合了；他與基督相似。",
+      "targets": ["populus", "socio", "compar", "Christus"]
+    },
+    {
+      "latin": "Populus perseverat; at nemo vetat.",
+      "chinese": "百姓堅持不懈；但沒有人禁止。",
+      "targets": ["populus", "persevero", "at", "nemo"]
+    }
   ]
 }

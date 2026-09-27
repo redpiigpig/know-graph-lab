@@ -1,13 +1,43 @@
 {
-  "volume": 2, "lesson": 50, "author": "opus-5-hand-written",
-  "note": "Aprilis 兩層語料都沒有字形。primarius 只認字形，Atqui 只有句首大寫那一形。",
+  "volume": 2,
+  "lesson": 50,
+  "author": "opus-5-hand-written",
+  "note": "2026-09-27 全句重寫（棄用模板產生器）。🚨 primarius、Aprilis 在武加大＋教會語料中均零字形（含 Aprili／primarii／primaria 拼法皆試過），練不到；20 詞僅練 18。下冊至此全數（1–50 課）重寫完成。",
   "sentences": [
-    {"latin": "certitudine Attende custodiam", "chinese": "你要以確信留心那看守。", "targets": ["certitudo", "attendo", "custodia"]},
-    {"latin": "subditi vindicare conceptionem", "chinese": "臣民們要聲張那構想。", "targets": ["subditus", "vindico", "conceptio"]},
-    {"latin": "convenienter Atqui primarium", "chinese": "然而，適切地是那首要的。", "targets": ["convenienter", "atqui", "primarius"]},
-    {"latin": "intelligentiam prudens profectum", "chinese": "那聰慧者的理智與進步。", "targets": ["intellegentia", "prudens", "profectus"]},
-    {"latin": "manifestatione fame foveat", "chinese": "願他在飢餓中以彰顯來培育。", "targets": ["manifestatio", "fames", "foveo"]},
-    {"latin": "custodia potior defensio", "chinese": "那看守是更重要的防衛。", "targets": ["custodia", "potior", "defensio"]},
-    {"latin": "prudentes intelligentia vindicat", "chinese": "聰慧的人以理智聲張。", "targets": ["prudens", "intellegentia", "vindico"]}
+    {
+      "latin": "Custos studiose attendat; custodia manet.",
+      "chinese": "願守衛熱切地留心；守護仍然長存。",
+      "targets": ["attendo", "studiose", "custodia"]
+    },
+    {
+      "latin": "Subditus prudens vindicat.",
+      "chinese": "謹慎的臣民伸張了主張。",
+      "targets": ["subditus", "prudens", "vindico"]
+    },
+    {
+      "latin": "Atqui potiora sunt.",
+      "chinese": "然而，更重要的事物存在著。",
+      "targets": ["atqui", "potior"]
+    },
+    {
+      "latin": "Fames profectum convenienter fovet.",
+      "chinese": "飢餓適切地培育了進步。",
+      "targets": ["fames", "profectus", "convenienter", "foveo"]
+    },
+    {
+      "latin": "Manifestatio certitudinem visu praestat.",
+      "chinese": "彰顯藉由視覺提供了確實性。",
+      "targets": ["manifestatio", "certitudo", "visus"]
+    },
+    {
+      "latin": "Intellegentia defensionem studiose vindicat.",
+      "chinese": "智慧熱切地伸張了辯護。",
+      "targets": ["intellegentia", "defensio"]
+    },
+    {
+      "latin": "Custos conceptionem studiose fovet.",
+      "chinese": "守護者熱切地培育著那構想。",
+      "targets": ["conceptio"]
+    }
   ]
 }

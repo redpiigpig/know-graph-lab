@@ -80,6 +80,14 @@ def _psalm_title_translation(titles: list[str], offset: int, mt_verse: int) -> s
     if offset == 2 and "；" in title:
         first, second = [part.strip() for part in title.split("；", 1)]
         if mt_verse == 1:
+            # RCUV's combined title reads "...拿單先知來見他；他作這詩，交給聖詠團長。"
+            # -- the "他" in the second clause is anaphoric to "大衛" named only
+            # in the first clause. Isolating the second clause for MT verse 1
+            # (which corresponds to "מִזְמוֹר לְדָוִד", a psalm *of David*) leaves
+            # a pronoun with no antecedent, so name David explicitly rather than
+            # print a dangling "他".
+            if second.startswith("他"):
+                second = "大衛" + second[1:]
             return _wrap_title(second)
         if mt_verse == 2:
             if not first.endswith(("。", "！", "？")):

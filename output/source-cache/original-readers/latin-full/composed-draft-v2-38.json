@@ -2,80 +2,42 @@
   "volume": 2,
   "lesson": 38,
   "author": "opus-5-hand-written",
-  "note": "admodum 兩層語料都沒有字形。 2026-09-18 補足十題：新增的每一句都練該課原本沒練到的詞。",
+  "note": "2026-09-27 全句重寫（棄用模板產生器）。🚨 admodum 在武加大＋教會語料中零字形，練不到；20 詞僅練 19。",
   "sentences": [
     {
-      "latin": "efficax augusto convictus",
-      "chinese": "在奧古斯都時有效的結社。",
-      "targets": [
-        "efficax",
-        "Augustus",
-        "convictus"
-      ]
+      "latin": "Efficax est; hostem superat; deum consulat.",
+      "chinese": "他是有效的；他征服了敵人；願他求問於神。",
+      "targets": ["efficax", "supero", "consulo"]
     },
     {
-      "latin": "consulere operarios verumtamen",
-      "chinese": "然而要諮詢那些工人。",
-      "targets": [
-        "consulo",
-        "operarius",
-        "verumtamen"
-      ]
+      "latin": "Tempore Augusti, operarii convictus manet.",
+      "chinese": "在奧古斯都的時代，工匠們的情誼長存。",
+      "targets": ["Augustus", "operarius", "convictus"]
     },
     {
-      "latin": "mutuo interea raro",
-      "chinese": "其間難得地出借。",
-      "targets": [
-        "mutuo",
-        "interea",
-        "raro"
-      ]
+      "latin": "Verumtamen mutuo dat; interea raro venit.",
+      "chinese": "然而他出借了；同時，他難得來到。",
+      "targets": ["verumtamen", "mutuo", "interea", "raro"]
     },
     {
-      "latin": "incarnationem ædificare solidum",
-      "chinese": "要以降生奧蹟建造那固定之物。",
-      "targets": [
-        "incarnatio",
-        "aedifico",
-        "solidus"
-      ]
+      "latin": "Incarnatione Deus aedificat Ecclesiam.",
+      "chinese": "藉著降生成人，天主建立了教會。",
+      "targets": ["incarnatio", "Deus", "aedifico", "ecclesia"]
     },
     {
-      "latin": "aspectus æstimatione impellat",
-      "chinese": "願那外觀以評估推動。",
-      "targets": [
-        "aspectus",
-        "aestimatio",
-        "impello"
-      ]
+      "latin": "Solidum impellit; conficiat opus.",
+      "chinese": "他推動了那金幣；願他完成工作。",
+      "targets": ["solidus", "impello", "conficio", "opus"]
     },
     {
-      "latin": "materialis convictu consulat",
-      "chinese": "願那物質的在結社中商議。",
-      "targets": [
-        "materialis",
-        "convictus",
-        "consulo"
-      ]
+      "latin": "Aspectus aestimationem mutat.",
+      "chinese": "外觀改變了估價。",
+      "targets": ["aspectus", "aestimatio"]
     },
     {
-      "latin": "operarii ædificavi solidos",
-      "chinese": "工人們啊，我建造了那些固定之物。",
-      "targets": [
-        "operarius",
-        "aedifico",
-        "solidus"
-      ]
-    },
-    {
-      "latin": "sollicitus operarius confectum superare",
-      "chinese": "憂心的工匠要勝過那已完成之事。",
-      "targets": [
-        "sollicitus",
-        "operarius",
-        "conficio",
-        "supero"
-      ]
+      "latin": "Sollicitus est; materialis res non est.",
+      "chinese": "他是焦慮的；這並非物質性的事物。",
+      "targets": ["sollicitus", "materialis", "res"]
     }
   ]
 }

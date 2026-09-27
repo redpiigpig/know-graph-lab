@@ -1,13 +1,43 @@
 {
-  "volume": 2, "lesson": 22, "author": "opus-5-hand-written",
-  "note": "paene 在語料裡多寫 pene。",
+  "volume": 2,
+  "lesson": 22,
+  "author": "opus-5-hand-written",
+  "note": "2026-09-27 全句重寫。",
   "sentences": [
-    {"latin": "impedit nullatenus interdum", "chinese": "它有時決不妨礙。", "targets": ["impedio", "nullatenus", "interdum"]},
-    {"latin": "luna comites Memorare", "chinese": "月亮啊，求你記念那些同伴。", "targets": ["luna", "comes", "memoro"]},
-    {"latin": "Modicum pene famam", "chinese": "幾乎是微小的名聲。", "targets": ["modicus", "paene", "fama"]},
-    {"latin": "basilicam retinere legitima", "chinese": "要合法地保有那教堂。", "targets": ["basilica", "retineo", "legitimus"]},
-    {"latin": "libere colunt frequenter", "chinese": "他們經常自由地敬事。", "targets": ["libere", "colo", "frequenter"]},
-    {"latin": "interpretatur puniens comes", "chinese": "那施罰的同伴解釋著。", "targets": ["interpretor", "punio", "comes"]},
-    {"latin": "famæ lunam impediri", "chinese": "名聲的月亮要被阻礙。", "targets": ["fama", "luna", "impedio"]}
+    {
+      "latin": "Interdum comes lunam impedit.",
+      "chinese": "有時同伴阻礙了月亮。",
+      "targets": ["interdum", "luna", "comes", "impedio"]
+    },
+    {
+      "latin": "Ecclesia postera nullatenus modicum fert.",
+      "chinese": "後來的教會絕不帶來微小的東西。",
+      "targets": ["ecclesia", "posterus", "nullatenus", "modicus"]
+    },
+    {
+      "latin": "Paene fama omnem basilicam replet.",
+      "chinese": "名聲幾乎充滿了整座教堂。",
+      "targets": ["paene", "fama", "omnis", "basilica"]
+    },
+    {
+      "latin": "Episcopus jus retinet; consuetudo legitima est.",
+      "chinese": "主教保留了權利；那習俗是合法的。",
+      "targets": ["episcopus", "jus", "retineo", "legitimus"]
+    },
+    {
+      "latin": "Dubius homo remedium adhibuit.",
+      "chinese": "疑惑的人採用了藥物。",
+      "targets": ["dubius", "homo", "remedium", "adhibeo"]
+    },
+    {
+      "latin": "Libere colunt; frequenter orant; memorabitur nomen.",
+      "chinese": "他們自由地敬拜；他們經常祈禱；那名字將被記念。",
+      "targets": ["libere", "colo", "frequenter", "memoro"]
+    },
+    {
+      "latin": "Sapientes interpretantur; peccatores puniuntur.",
+      "chinese": "智者們解釋了；罪人們受到了懲罰。",
+      "targets": ["interpretor", "punio"]
+    }
   ]
 }

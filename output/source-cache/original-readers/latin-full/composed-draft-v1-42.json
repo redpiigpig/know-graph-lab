@@ -2,74 +2,42 @@
   "volume": 1,
   "lesson": 42,
   "author": "opus-5-hand-written",
-  "note": "succurrō 與 venia 武加大沒有字形。imperātor 只認詞幹，honor 沒有屬格 honoris。",
+  "note": "2026-09-27 全句重寫。🚨 succurrō 零字形；venia 全格皆查無（唯一攤到的 veniam 語料歸給同形的 veniō），練不到；20 詞僅練 18。",
   "sentences": [
     {
-      "latin": "honorem patriæ poscit",
-      "chinese": "他要求祖國的榮譽。",
-      "targets": [
-        "honor",
-        "patria",
-        "posco"
-      ]
+      "latin": "Imperator honorem habet; patriam defendit.",
+      "chinese": "皇帝擁有榮譽；他保衛了祖國。",
+      "targets": ["imperator", "honor", "patria", "defendo"]
     },
     {
-      "latin": "oblatio occurrit in patria",
-      "chinese": "奉獻在祖國迎面而來。",
-      "targets": [
-        "oblatio",
-        "occurro",
-        "in",
-        "patria"
-      ]
+      "latin": "Pauper oblationem dat; nihil necessarium poscit.",
+      "chinese": "窮人獻上了祭品；他沒有要求任何必要的東西。",
+      "targets": ["pauper", "oblatio", "necessarius", "posco"]
     },
     {
-      "latin": "Salve, succurre, imperate perpetuo",
-      "chinese": "敬禮，求你援助，願你永遠統領。",
-      "targets": [
-        "imperator",
-        "perpetuo",
-        "salve",
-        "succurrō"
-      ]
+      "latin": "Propheta praedixit; populus timuit.",
+      "chinese": "先知預言了；百姓就懼怕了。",
+      "targets": ["praedico", "populus", "timeo"]
     },
     {
-      "latin": "sive solemnis an unitatem",
-      "chinese": "或是隆重的，還是那合一。",
-      "targets": [
-        "sive",
-        "solemnis",
-        "an",
-        "unitas"
-      ]
+      "latin": "Salve, fili; ne timeas.",
+      "chinese": "你好，孩子；不要害怕。",
+      "targets": ["salve", "ne", "timeo"]
     },
     {
-      "latin": "Prædixi acquisitionem in patria",
-      "chinese": "我預言了祖國中的獲得。",
-      "targets": [
-        "praedico",
-        "acquisitio",
-        "in",
-        "patria"
-      ]
+      "latin": "Deus occurrit homini; venit an manet?",
+      "chinese": "天主向人迎面而來；他來臨呢，還是留下？",
+      "targets": ["Deus", "occurro", "homo", "an"]
     },
     {
-      "latin": "perpetuum honorem poscis",
-      "chinese": "你要求永久的榮譽。",
-      "targets": [
-        "perpetuo",
-        "honor",
-        "posco"
-      ]
+      "latin": "Perpetuo Deus adest; unitas manet.",
+      "chinese": "天主永遠在場；合一長存。",
+      "targets": ["perpetuo", "Deus", "unitas"]
     },
     {
-      "latin": "occurrit oblatio et unitatem",
-      "chinese": "奉獻與合一都迎面而來。",
-      "targets": [
-        "occurro",
-        "oblatio",
-        "unitas"
-      ]
+      "latin": "Sive pauper sive dives, solemnis est acquisitio.",
+      "chinese": "無論貧窮或富有，那獲得都是隆重的。",
+      "targets": ["sive", "pauper", "dives", "solemnis", "acquisitio"]
     }
   ]
 }

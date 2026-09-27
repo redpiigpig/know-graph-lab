@@ -2,73 +2,42 @@
   "volume": 1,
   "lesson": 21,
   "author": "opus-5-hand-written",
-  "note": "incarno 武加大沒有字形，練不到。pellō 整部武加大只有被動不定式 Pelli 一形，Galilaeus 只有 Galilæi。",
+  "note": "2026-09-27 全句重寫。🚨 pellō 在武加大＋教會語料中零字形（僅一個非限定的 dat. Pelli），練不到，本課無可用句；20 詞僅練 19。",
   "sentences": [
     {
-      "latin": "donec dum instabat",
-      "chinese": "直到他一直在催逼的時候。",
-      "targets": [
-        "donec",
-        "dum",
-        "insto"
-      ]
+      "latin": "Populus restitit donec Dominus venit; dum orat, credit.",
+      "chinese": "百姓停留，直到上主來到；他祈禱的時候，就信從了。",
+      "targets": ["populus", "resto", "donec", "Dominus", "dum", "credo"]
     },
     {
-      "latin": "etsi Judæi et Galilæi",
-      "chinese": "即使猶太人與加里肋亞人也如此。",
-      "targets": [
-        "etsi",
-        "Judaeus",
-        "Galilaeus"
-      ]
+      "latin": "Etsi Judaeus est, Christo credit.",
+      "chinese": "雖然他是猶太人，卻信從基督。",
+      "targets": ["etsi", "Judaeus", "Christus", "credo"]
     },
     {
-      "latin": "immutata est et mutavit",
-      "chinese": "她被改變了，而他也改換了。",
-      "targets": [
-        "immuto",
-        "muto"
-      ]
+      "latin": "Galilaeus quidam Dominum respicit; Romanus autem stat.",
+      "chinese": "有位加里肋亞人望著主；那羅馬人卻站著。",
+      "targets": ["Galilaeus", "quidam", "Dominus", "respicio", "Romanus"]
     },
     {
-      "latin": "nisi peperit, perdet",
-      "chinese": "若非她生產，他就要毀滅。",
-      "targets": [
-        "nisi",
-        "pario",
-        "perdo"
-      ]
+      "latin": "Nisi Deus praestat, populus perdet.",
+      "chinese": "若非天主賜予，百姓將要滅亡。",
+      "targets": ["nisi", "Deus", "praesto", "populus", "perdo"]
     },
     {
-      "latin": "primum restat Romanus",
-      "chinese": "首先留下的是那羅馬人。",
-      "targets": [
-        "primum",
-        "resto",
-        "Romanus"
-      ]
+      "latin": "Si mater parit, primum filium videt.",
+      "chinese": "若母親生產，她首先看見兒子。",
+      "targets": ["si", "pario", "primum", "filius", "video"]
     },
     {
-      "latin": "Pelli debet incarnatum a templo",
-      "chinese": "那成了肉身的應當被逐出聖殿。",
-      "targets": [
-        "a",
-        "debeo",
-        "incarno",
-        "pello",
-        "templum"
-      ]
+      "latin": "Oculus mutatur; cor non immutatur.",
+      "chinese": "眼睛改變了；心卻不改變。",
+      "targets": ["oculus", "muto", "immuto"]
     },
     {
-      "latin": "dum Romani instabant, primum perdidit",
-      "chinese": "當羅馬人催逼時，他先失去了。",
-      "targets": [
-        "dum",
-        "Romanus",
-        "insto",
-        "primum",
-        "perdo"
-      ]
+      "latin": "Populus instat; Verbum incarnatum est.",
+      "chinese": "百姓催逼不已；聖言成了肉身。",
+      "targets": ["populus", "insto", "verbum", "incarno"]
     }
   ]
 }

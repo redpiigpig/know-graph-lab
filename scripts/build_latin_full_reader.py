@@ -330,10 +330,49 @@ BY_FORMS_POS = {
     "-plēre, -plēvi, -plētus": "動", "videor, vidērī, — vīsus sum": "動",
     "ait; aiunt": "動", "quaesō/quaesumus": "動", "fore": "動", "inquam": "動",
     "nōlī/nōlite": "動", "placet": "動", "eléison": "動",
-    "fulgor, fulgōris, —": "名", "peregrīnantis, gen., peregrīnantis": "名", "Kyrie": "名",
+    "fulgor, fulgōris, —": "名", "peregrīnāns (gen., peregrīnantis)": "名", "Kyrie": "名",
     "-ne": "質", "ūsque": "副", "avē!": "嘆", "salvē": "嘆",
     "satis (+ partitive gen.)": "副",
+    # Jesus declines Greek-style with five distinct forms (nom./gen./dat./
+    # acc./abl.), which the ">=4 parts" verb heuristic below reads as four
+    # principal parts and prints as a verb.
+    "Jēsus, Jēsū, Jēsu, Jēsum, Jēsu": "名",
 }
+
+
+def _strip_macron(text: str) -> str:
+    table = str.maketrans("āēīōūĀĒĪŌŪ", "aeiouAEIOU")
+    return text.translate(table)
+
+
+def _looks_like_adjective_two_part(first: str, second_raw: str) -> bool:
+    """Two comma-separated forms that are actually one adjective, not a noun.
+
+    Collins prints a 3rd-declension two-termination adjective as
+    ``headword, neuter-form`` (``dulcis, dulce``) and a comparative as
+    ``headword, neuter-form`` too (``major, majus``) -- both collide with the
+    noun convention ``headword, genitive`` (``psalmus, psalmī``) once split on
+    the comma, because both are exactly two parts.  What tells them apart is
+    the *stem*: an adjective's second form is the same stem with a different
+    gender ending; a noun's second form is a genitive, which is either a
+    different stem shape (``laus, laudis``) or the same stem with an ending
+    that no adjective pair uses (``-ī``, ``-ae``, ``-ūs``).
+    """
+    second = re.sub(r"\s*\([^)]*\)\s*$", "", second_raw).strip()
+    if not second:
+        return False
+    f, s = _strip_macron(first), _strip_macron(second)
+    # i-stem two-termination: dulcis/dulce, omnis/omne, commūnis/commūne
+    if f.endswith("is") and s.endswith("e") and f[:-2] == s[:-1]:
+        return True
+    # comparative: major/majus, minor/minus
+    if f.endswith("or") and s.endswith("us") and f[:-2] == s[:-2]:
+        return True
+    # first/second declension two-termination given as fem/neut only
+    # (headword itself is the masculine): misera/miserum -> miser
+    if f.endswith("a") and s.endswith("um") and f[:-1] == s[:-2]:
+        return True
+    return False
 
 
 def short_pos(entry: dict) -> str:
@@ -343,6 +382,16 @@ def short_pos(entry: dict) -> str:
     end of a noun entry and the four principal parts of a verb entry *are* the
     labels.  Taking the label only from an explicit field leaves the column
     empty for most of the book, which is what the first print run did.
+
+    A second, subtler gap: 3rd-declension adjectives print as two
+    comma-separated forms (``dulcis, dulce``) or as a headword with a
+    parenthetical genitive (``fēlix (gen., fēlicis)``), both of which are
+    *exactly* the shape the noun fallback below expects (``headword,
+    genitive``).  Left unguarded, every two-termination and one-termination
+    adjective in the book was printed as a noun.  See
+    ``_looks_like_adjective_two_part`` for the stem test that tells the two
+    apart, and the content-review findings (2026-09 second pass) for the
+    roughly forty headwords this misclassified.
     """
     by_forms = BY_FORMS_POS.get((entry.get("forms") or "").strip())
     if by_forms:
@@ -356,6 +405,13 @@ def short_pos(entry: dict) -> str:
         if needle in gram:
             return label
     forms = (entry.get("forms") or "").strip()
+    # one-termination 3rd-declension adjective written as headword +
+    # parenthetical genitive: fēlix (gen., fēlicis), omnipotēns (gen., ...).
+    # Checked before the comma split below, because the comma *inside* the
+    # parenthesis would otherwise count as the noun-style "headword, genitive"
+    # split and print every one of these as a noun.
+    if re.search(r"^[^(),]+\s*\(gen\.,\s*[^()]+\)\s*$", forms):
+        return "形"
     parts = [p.strip() for p in forms.split(",")]
     if re.search(r"(^|[, ])(m|f|n|c)\.$", forms):
         return "名"
@@ -364,6 +420,8 @@ def short_pos(entry: dict) -> str:
     if len(parts) >= 4 or re.search(r"(are|ēre|ere|īre|ire)$", parts[1] if len(parts) > 1 else ""):
         return "動"
     if len(parts) == 2 and parts[1]:
+        if _looks_like_adjective_two_part(parts[0], parts[1]):
+            return "形"
         return "名"
     return ""
 

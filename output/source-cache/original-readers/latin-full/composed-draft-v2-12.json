@@ -1,13 +1,43 @@
 {
-  "volume": 2, "lesson": 12, "author": "opus-5-hand-written",
-  "note": "capitulum 只剩複數奪格 capitulis。",
+  "volume": 2,
+  "lesson": 12,
+  "author": "opus-5-hand-written",
+  "note": "2026-09-27 全句重寫。",
   "sentences": [
-    {"latin": "materiam in capitulis", "chinese": "各章條裡的材料。", "targets": ["materia", "capitulum", "in"]},
-    {"latin": "necessitate commisit medium", "chinese": "他因需要而託付了中間那一份。", "targets": ["necessitas", "committo", "medius"]},
-    {"latin": "supra provinciæ negotia", "chinese": "在行省事務之上。", "targets": ["supra", "provincia", "negotium"]},
-    {"latin": "item nec disciplinam nec studium contingit", "chinese": "同樣地，既不涉及紀律，也不涉及熱忱。", "targets": ["item", "nec", "disciplina", "studium", "contingo"]},
-    {"latin": "alienis possessionem tenet", "chinese": "他為外人保有那產業。", "targets": ["alienus", "possessio"]},
-    {"latin": "diversa quæstio in provincia", "chinese": "行省裡不同的爭議。", "targets": ["diversus", "quaestio", "in", "provincia"]},
-    {"latin": "studio disciplinæ medio", "chinese": "以居中的紀律熱忱。", "targets": ["studium", "disciplina", "medius"]}
+    {
+      "latin": "Pontifex materiam quaestionis committit.",
+      "chinese": "教宗交付了問題的內容。",
+      "targets": ["pontifex", "materia", "quaestio", "committo"]
+    },
+    {
+      "latin": "Capitulum negotium disciplinae regit.",
+      "chinese": "議事錄治理了紀律的事務。",
+      "targets": ["capitulum", "negotium", "disciplina"]
+    },
+    {
+      "latin": "Item studium provinciae necessitatem habet.",
+      "chinese": "同樣地，行省的熱忱有其必要性。",
+      "targets": ["item", "studium", "provincia", "necessitas"]
+    },
+    {
+      "latin": "Medius error alienus non est; possessio contingit.",
+      "chinese": "中間的錯誤並非外來的；財產歸屬於他。",
+      "targets": ["medius", "error", "alienus", "possessio", "contingo"]
+    },
+    {
+      "latin": "Diversus est nec supra omnes; omnino manet.",
+      "chinese": "他是不同的，也不在眾人之上；他完全地長存。",
+      "targets": ["diversus", "nec", "supra", "omnino"]
+    },
+    {
+      "latin": "Provincia negotium suum habet; error alienus est.",
+      "chinese": "行省有自己的事務；那錯誤是外來的。",
+      "targets": ["provincia", "negotium", "error", "alienus"]
+    },
+    {
+      "latin": "Pontifex disciplinam constituit; possessio omnino diversa est.",
+      "chinese": "教宗建立了紀律；財產卻完全是不同的。",
+      "targets": ["pontifex", "disciplina", "possessio", "omnino", "diversus"]
+    }
   ]
 }

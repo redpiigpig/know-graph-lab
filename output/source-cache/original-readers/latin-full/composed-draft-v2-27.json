@@ -1,13 +1,43 @@
 {
-  "volume": 2, "lesson": 27, "author": "opus-5-hand-written",
-  "note": "va 這條感嘆詞在語料裡寫作 Vah／vane。",
+  "volume": 2,
+  "lesson": 27,
+  "author": "opus-5-hand-written",
+  "note": "2026-09-27 全句重寫；va 已於詞表校對輪改名為 vah，第 4 句已改用該形。",
   "sentences": [
-    {"latin": "fundamenta Eucharistiae civibus", "chinese": "為公民們所立的感恩祭根基。", "targets": ["fundamentum", "eucharistia", "civis"]},
-    {"latin": "etenim attulit traditionem", "chinese": "他確實帶來了那傳統。", "targets": ["etenim", "affero", "traditio"]},
-    {"latin": "cultura præcipua Vah", "chinese": "啊，那主要的耕作。", "targets": ["cultura", "praecipuus", "va"]},
-    {"latin": "cognitione progressus attinet", "chinese": "就認識的進展而言。", "targets": ["cognitio", "progredior", "attineo"]},
-    {"latin": "adjunge traditiones culturæ", "chinese": "你要把那些傳統連於耕作。", "targets": ["adjungo", "traditio", "cultura"]},
-    {"latin": "significatio conjunctionis declarat", "chinese": "那結合的意義顯明出來。", "targets": ["significatio", "conjunctio", "declaro"]},
-    {"latin": "plenitudo Eucharistiam affert", "chinese": "那圓滿帶來了感恩祭。", "targets": ["plenitudo", "eucharistia", "affero"]}
+    {
+      "latin": "Eucharistiae fundamentum manet; civis credit.",
+      "chinese": "感恩祭的根基長存；公民相信了。",
+      "targets": ["eucharistia", "fundamentum", "civis", "credo"]
+    },
+    {
+      "latin": "Etenim traditiones culturam adiungunt.",
+      "chinese": "誠然，傳統們聯結了文化。",
+      "targets": ["etenim", "traditio", "adjungo"]
+    },
+    {
+      "latin": "Philosophia praecipua est; religiosa manet.",
+      "chinese": "哲學是主要的；她仍是虔敬的。",
+      "targets": ["philosophia", "praecipuus", "religiosus"]
+    },
+    {
+      "latin": "Vah! Cognitio contendit; homo progreditur.",
+      "chinese": "啊！認知在爭辯；人在前進。",
+      "targets": ["vah", "cognitio", "contendo", "homo", "progredior"]
+    },
+    {
+      "latin": "Hoc attinet; significatio declarat plenitudinem.",
+      "chinese": "這是有關的；意義宣告了圓滿。",
+      "targets": ["attineo", "significatio", "declaro", "plenitudo"]
+    },
+    {
+      "latin": "Conjunctio civium fundamentum affert.",
+      "chinese": "公民的聯合帶來了根基。",
+      "targets": ["conjunctio", "civis", "fundamentum", "affero"]
+    },
+    {
+      "latin": "Traditio et cultura fundamentum plenitudinis sunt.",
+      "chinese": "傳統與文化都是圓滿的根基。",
+      "targets": ["traditio", "cultura", "fundamentum", "plenitudo"]
+    }
   ]
 }

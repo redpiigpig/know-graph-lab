@@ -1,13 +1,43 @@
 {
-  "volume": 2, "lesson": 34, "author": "opus-5-hand-written",
-  "note": "Martius 只剩 Martio，pactum 只剩 pacto。",
+  "volume": 2,
+  "lesson": 34,
+  "author": "opus-5-hand-written",
+  "note": "2026-09-27 全句重寫（棄用模板產生器）。",
   "sentences": [
-    {"latin": "perspicis regularis particularia", "chinese": "你看透那些規律而個別的事。", "targets": ["perspicio", "regularis", "particularis"]},
-    {"latin": "sana efficaciter pacto", "chinese": "以協議有效而健全地。", "targets": ["sanus", "efficaciter", "pactum"]},
-    {"latin": "juvenes innititur servitutis", "chinese": "青年們倚靠那奴役之事。", "targets": ["juvenis", "innitor", "servitus"]},
-    {"latin": "fideliter commodis sacerdotali", "chinese": "忠誠地以司祭的利益。", "targets": ["fideliter", "commodum", "sacerdotalis"]},
-    {"latin": "tractans Profectus quamquam", "chinese": "他一面論述一面啟程，儘管如此。", "targets": ["tracto", "proficiscor", "quamquam"]},
-    {"latin": "præclara Martio perspecta", "chinese": "三月裡所察明的那些卓越之事。", "targets": ["praeclarus", "Martius", "perspicio"]},
-    {"latin": "servitute juvenum tractare", "chinese": "要處理青年們的奴役。", "targets": ["servitus", "juvenis", "tracto"]}
+    {
+      "latin": "Lex perspicitur; regularis vita manet.",
+      "chinese": "法律被審視了；規律的生活長存。",
+      "targets": ["lex", "perspicio", "regularis"]
+    },
+    {
+      "latin": "Sacerdos sanus casum particularem efficaciter regit.",
+      "chinese": "健全的司祭有效地治理了那特殊的案例。",
+      "targets": ["sacerdos", "sanus", "casus", "particularis", "efficaciter"]
+    },
+    {
+      "latin": "Juvenis pactum fideliter servat.",
+      "chinese": "年輕人忠誠地遵守了契約。",
+      "targets": ["pactum", "juvenis", "fideliter"]
+    },
+    {
+      "latin": "Etiamsi innititur servitute, commodum manet.",
+      "chinese": "儘管他依靠著奴役，利益仍然存在。",
+      "targets": ["etiamsi", "innitor", "servitus", "commodum"]
+    },
+    {
+      "latin": "Integritas sacerdotalem ordinem servat; inquisitione crescit.",
+      "chinese": "正直守護了司祭的階級；藉著調查而增長。",
+      "targets": ["sacerdotalis", "integritas", "inquisitio"]
+    },
+    {
+      "latin": "Sacerdos rem tractet; praeclarus est.",
+      "chinese": "讓司祭處理此事吧；他是卓越的。",
+      "targets": ["sacerdos", "tracto", "praeclarus"]
+    },
+    {
+      "latin": "Martio proficiscar; quamquam timeo, credo.",
+      "chinese": "我將在三月出發；儘管我害怕，我卻相信。",
+      "targets": ["Martius", "proficiscor", "quamquam"]
+    }
   ]
 }

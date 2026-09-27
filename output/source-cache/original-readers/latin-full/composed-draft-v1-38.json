@@ -1,13 +1,43 @@
 {
-  "volume": 1, "lesson": 38, "author": "opus-5-hand-written",
-  "note": "iste 只有 iste／ista／isti 進語料，factor 沒有屬格，cōgitātiō 沒有單數奪格。",
+  "volume": 1,
+  "lesson": 38,
+  "author": "opus-5-hand-written",
+  "note": "2026-09-27 全句重寫。",
   "sentences": [
-    {"latin": "iste usus est ordine", "chinese": "這一位按著秩序使用了。", "targets": ["iste", "utor", "sum", "ordo"]},
-    {"latin": "factor amat commemorationem", "chinese": "那造作者喜愛紀念。", "targets": ["factor", "amo", "commemoratio"]},
-    {"latin": "cogitationes illuminabit in deserto", "chinese": "他要在荒野中照亮那些思想。", "targets": ["cogitatio", "illumino", "in", "desertus"]},
-    {"latin": "cooperante largitus est", "chinese": "在協作之下他慷慨賜予了。", "targets": ["cooperor", "largior", "sum"]},
-    {"latin": "operatur et labores", "chinese": "他做工，也有勞苦。", "targets": ["operor", "labor"]},
-    {"latin": "qualis et quanta cogitatio", "chinese": "何等樣、何等大的思想。", "targets": ["qualis", "quantus", "cogitatio"]},
-    {"latin": "quantum operatur factor", "chinese": "那造作者做了多少工。", "targets": ["quantus", "operor", "factor"]}
+    {
+      "latin": "Sacerdos aqua utitur; pro Deo operatur; commemoratio manet.",
+      "chinese": "司祭使用了水；他為天主工作；那紀念長存著。",
+      "targets": ["sacerdos", "utor", "Deus", "operor", "commemoratio"]
+    },
+    {
+      "latin": "Deus mundum amat; in deliciis manet.",
+      "chinese": "天主愛世界；祂安居於喜樂之中。",
+      "targets": ["Deus", "amo", "delicia"]
+    },
+    {
+      "latin": "Locus desertus est; factor omnium venit.",
+      "chinese": "那地方是荒涼的；萬物的創造者來臨了。",
+      "targets": ["locus", "desertus", "factor"]
+    },
+    {
+      "latin": "Hic homo est; ille angelus est; is venit.",
+      "chinese": "這是個人；那是位天使；他來了。",
+      "targets": ["hic", "ille", "is"]
+    },
+    {
+      "latin": "Iste liber ita scriptus est.",
+      "chinese": "那本書是這樣寫成的。",
+      "targets": ["iste", "liber", "ita"]
+    },
+    {
+      "latin": "Cogitatio bona illuminat; ordo servatur; omnes cooperantur.",
+      "chinese": "善的思念照亮人；秩序被遵守；眾人都在協作。",
+      "targets": ["cogitatio", "illumino", "ordo", "cooperor"]
+    },
+    {
+      "latin": "Qualis Deus, quanta dona largitus est! Labi potest.",
+      "chinese": "何等的天主，祂賜下了多麼大的恩賜！人卻可能跌倒。",
+      "targets": ["qualis", "Deus", "quantus", "largior", "labor"]
+    }
   ]
 }

@@ -1,13 +1,43 @@
 {
-  "volume": 2, "lesson": 13, "author": "opus-5-hand-written",
-  "note": "auctor 沒有屬格單數 auctoris 進語料。",
+  "volume": 2,
+  "lesson": 13,
+  "author": "opus-5-hand-written",
+  "note": "2026-09-27 全句重寫。",
   "sentences": [
-    {"latin": "contraria regula et auctores", "chinese": "相反的規則與那些作者。", "targets": ["contrarius", "regula", "auctor"]},
-    {"latin": "Denique instituta ætate", "chinese": "最後，在既定的時代裡。", "targets": ["denique", "instituo", "aetas"]},
-    {"latin": "membra futura solet", "chinese": "他慣常如此對待將來的肢體。", "targets": ["membrum", "futurus", "soleo"]},
-    {"latin": "epistola quippe quanto", "chinese": "書信誠然，相差多少。", "targets": ["epistola", "quippe", "quanto"]},
-    {"latin": "matrimonio ulla præmitti", "chinese": "在婚姻中要先送上任何一樣。", "targets": ["matrimonium", "ullus", "praemitto"]},
-    {"latin": "necesse solet in matrimonio", "chinese": "在婚姻中這是慣常必要的。", "targets": ["necesse", "soleo", "matrimonium", "in"]},
-    {"latin": "auctores epistolæ futuri", "chinese": "那將來書信的作者們。", "targets": ["auctor", "epistola", "futurus"]}
+    {
+      "latin": "Episcopus Ecclesiae praeest; presbyter auctor regulae est.",
+      "chinese": "主教治理著教會；長老是那規則的創立者。",
+      "targets": ["episcopus", "praesum", "presbyter", "auctor", "regula"]
+    },
+    {
+      "latin": "Epistola instituta est; denique praesentia manet.",
+      "chinese": "書信被設立了；最終臨在長存。",
+      "targets": ["instituo", "epistola", "denique", "praesentia"]
+    },
+    {
+      "latin": "Populus contrarius non est; matrimonium sanctum manet.",
+      "chinese": "百姓並非敵對的；婚姻仍是神聖的。",
+      "targets": ["populus", "contrarius", "matrimonium"]
+    },
+    {
+      "latin": "Cur membrum aetatem habet? Necesse est credere.",
+      "chinese": "為何肢體有其年紀呢？必須要相信。",
+      "targets": ["cur", "membrum", "aetas", "necesse", "credo"]
+    },
+    {
+      "latin": "Sacerdos tempus futurum praemisit; ullum signum manet.",
+      "chinese": "司祭預先送出了未來的時刻；一個記號仍然存在。",
+      "targets": ["sacerdos", "tempus", "futurus", "praemitto", "ullus", "signum"]
+    },
+    {
+      "latin": "Soleo pro Ecclesia orare.",
+      "chinese": "我習慣為教會祈禱。",
+      "targets": ["soleo", "ecclesia"]
+    },
+    {
+      "latin": "Quippe fides amplius crescit; quanto credit, magis amat.",
+      "chinese": "誠然，信德更加地增長；他信得越多，就越加地愛。",
+      "targets": ["quippe", "fides", "ample", "quanto", "credo"]
+    }
   ]
 }

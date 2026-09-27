@@ -230,7 +230,7 @@
       "volume": 1,
       "corpus": "new-testament",
       "lemma": "θεός",
-      "printedEntry": "θεός, -οῦ, -ὁ",
+      "printedEntry": "θεός, -οῦ, ὁ",
       "headword": "θεός",
       "textbookTransliteration": "theos",
       "transliterationSystem": "Mounce standard Erasmian",
@@ -296,7 +296,7 @@
       "volume": 1,
       "corpus": "new-testament",
       "lemma": "κόσμος",
-      "printedEntry": "κόσμος, ου, -ὁ",
+      "printedEntry": "κόσμος, -ου, ὁ",
       "headword": "κόσμος",
       "textbookTransliteration": "kosmos",
       "transliterationSystem": "Mounce standard Erasmian",
@@ -4388,7 +4388,7 @@
       "volume": 1,
       "corpus": "new-testament",
       "lemma": "μείζων",
-      "printedEntry": "μείζων, –ον",
+      "printedEntry": "μείζων, -ον",
       "headword": "μείζων",
       "textbookTransliteration": "meizōn",
       "transliterationSystem": "Mounce standard Erasmian",
@@ -11648,7 +11648,7 @@
       "verification": "corpus_frequency",
       "lesson": 27,
       "lessonSlot": 6,
-      "pos": "副詞",
+      "pos": "介系詞",
       "glossEnSource": "dodson"
     },
     {
@@ -19160,7 +19160,7 @@
       "verification": "corpus_frequency",
       "lesson": 42,
       "lessonSlot": 19,
-      "pos": "形容詞",
+      "pos": "名詞",
       "glossEnSource": "dodson"
     },
     {
@@ -19311,9 +19311,9 @@
       "ordinal": 846,
       "volume": 1,
       "corpus": "septuagint",
-      "lemma": "αιλαμ",
-      "printedEntry": "αιλαμ",
-      "headword": "αιλαμ",
+      "lemma": "Αἰλάμ",
+      "printedEntry": "Αἰλάμ",
+      "headword": "Αἰλάμ",
       "textbookTransliteration": "ailam",
       "transliterationSystem": "Mounce standard Erasmian",
       "transliterationStatus": "rule_generated_from_official_table",
@@ -25767,10 +25767,10 @@
       "ordinal": 115,
       "volume": 2,
       "corpus": "patristic",
-      "lemma": "ιν",
-      "printedEntry": "ιν",
-      "headword": "ιν",
-      "textbookTransliteration": "in",
+      "lemma": "ἵνα",
+      "printedEntry": "ἵν’ (= ἵνα, elided)",
+      "headword": "ἵν’",
+      "textbookTransliteration": "hin’",
       "transliterationSystem": "Mounce standard Erasmian",
       "transliterationStatus": "rule_generated_from_official_table",
       "glossEn": "in order to",
@@ -25785,7 +25785,8 @@
       "lesson": 6,
       "lessonSlot": 15,
       "pos": "連接詞",
-      "glossEnSource": "rendered"
+      "glossEnSource": "rendered",
+      "transliteration": "hin’"
     },
     {
       "ordinal": 116,
@@ -30975,10 +30976,10 @@
       "ordinal": 332,
       "volume": 2,
       "corpus": "patristic",
-      "lemma": "χράω",
-      "printedEntry": "χράω",
-      "headword": "χράω",
-      "textbookTransliteration": "chraō",
+      "lemma": "χράομαι",
+      "printedEntry": "ἐχρήσαντο (χράομαι, aor.)",
+      "headword": "ἐχρήσαντο",
+      "textbookTransliteration": "echrēsanto",
       "transliterationSystem": "Mounce standard Erasmian",
       "transliterationStatus": "rule_generated_from_official_table",
       "glossEn": "I lend",
@@ -30993,7 +30994,8 @@
       "lesson": 17,
       "lessonSlot": 12,
       "pos": "動詞",
-      "glossEnSource": "dodson"
+      "glossEnSource": "dodson",
+      "transliteration": "echrēsanto"
     },
     {
       "ordinal": 333,
@@ -31064,7 +31066,7 @@
       "verification": "corpus_frequency",
       "lesson": 17,
       "lessonSlot": 15,
-      "pos": "形容詞",
+      "pos": "副詞",
       "glossEnSource": "dodson"
     },
     {
@@ -35727,8 +35729,8 @@
       "ordinal": 530,
       "volume": 2,
       "corpus": "patristic",
-      "lemma": "συνόχωκα",
-      "printedEntry": "συνόχωκα",
+      "lemma": "συνέχω",
+      "printedEntry": "συνόχωκα (συνέχω, pf.)",
       "headword": "συνόχωκα",
       "textbookTransliteration": "sunochōka",
       "transliterationSystem": "Mounce standard Erasmian",
@@ -39663,10 +39665,10 @@
       "ordinal": 694,
       "volume": 2,
       "corpus": "patristic",
-      "lemma": "τροπέω",
-      "printedEntry": "τροπέω",
-      "headword": "τροπέω",
-      "textbookTransliteration": "tropeō",
+      "lemma": "τρόπος",
+      "printedEntry": "τρόπου (τρόπος, gen.)",
+      "headword": "τρόπου",
+      "textbookTransliteration": "tropou",
       "transliterationSystem": "Mounce standard Erasmian",
       "transliterationStatus": "rule_generated_from_official_table",
       "glossEn": "turn or change",
@@ -39680,8 +39682,9 @@
       "verification": "corpus_frequency",
       "lesson": 35,
       "lessonSlot": 14,
-      "pos": "動詞",
-      "glossEnSource": "rendered"
+      "pos": "名詞",
+      "glossEnSource": "rendered",
+      "transliteration": "tropou"
     },
     {
       "ordinal": 695,
@@ -42416,7 +42419,7 @@
       "verification": "corpus_frequency",
       "lesson": 41,
       "lessonSlot": 8,
-      "pos": "介系詞",
+      "pos": "動詞",
       "glossEnSource": "rendered"
     },
     {
@@ -44007,10 +44010,10 @@
       "ordinal": 875,
       "volume": 2,
       "corpus": "patristic",
-      "lemma": "ἀπαλλαξείω",
-      "printedEntry": "ἀπαλλαξείω",
-      "headword": "ἀπαλλαξείω",
-      "textbookTransliteration": "apallaxeiō",
+      "lemma": "ἀπαλλάσσω",
+      "printedEntry": "ἀπαλλαγῆναι (ἀπαλλάσσω, aor. pass. inf.)",
+      "headword": "ἀπαλλαγῆναι",
+      "textbookTransliteration": "apallagēnai",
       "transliterationSystem": "Mounce standard Erasmian",
       "transliterationStatus": "rule_generated_from_official_table",
       "glossEn": "to rescue or deliver",
@@ -44025,7 +44028,8 @@
       "lesson": 44,
       "lessonSlot": 15,
       "pos": "動詞",
-      "glossEnSource": "rendered"
+      "glossEnSource": "rendered",
+      "transliteration": "apallagēnai"
     },
     {
       "ordinal": 876,

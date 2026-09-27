@@ -126,11 +126,20 @@ def target_words_in(text: str, lesson_items, pointed, skeleton, codes=None) -> l
         ):
             strongs |= analysis_strongs
             present_codes |= analysis_codes
-    return [
-        item.public_record()
-        for item in lesson_items
-        if (set(item.strongs) & strongs) or (item.bound_codes & present_codes)
-    ]
+
+    def credited(item) -> bool:
+        # A phrase entry (e.g. עַל־דְּבַר, strongs {H5921, H1697}) has no Strong
+        # of its own, so it is recorded as the union of its two words' Strongs.
+        # `& strongs` non-empty then credits it to any sentence that merely
+        # contains "דָּבָר" on its own -- the exact bug exercise-sets.md warns
+        # about ("片語詞條不能被其中一個詞記成已練"). A multi-Strong entry must
+        # have every one of its Strongs present, not just one.
+        item_strongs = set(item.strongs)
+        if len(item_strongs) > 1:
+            return item_strongs <= strongs or bool(item.bound_codes & present_codes)
+        return bool(item_strongs & strongs) or bool(item.bound_codes & present_codes)
+
+    return [item.public_record() for item in lesson_items if credited(item)]
 
 
 def main() -> int:

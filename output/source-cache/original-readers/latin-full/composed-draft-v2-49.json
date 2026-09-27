@@ -2,89 +2,42 @@
   "volume": 2,
   "lesson": 49,
   "author": "opus-5-hand-written",
-  "note": "popularis 只剩屬格複數 popularium，opifex 只剩 opifices，collegium 只剩 Collegio。 2026-09-18 補足十題：新增的每一句都練該課原本沒練到的詞。",
+  "note": "2026-09-27 全句重寫（棄用模板產生器）。",
   "sentences": [
     {
-      "latin": "peritus victus popularium",
-      "chinese": "精通平民生活方式的人。",
-      "targets": [
-        "peritus",
-        "victus",
-        "popularis"
-      ]
+      "latin": "Opifices periti victum simpliciter producunt.",
+      "chinese": "熟練的工匠們純粹地生產出了食糧。",
+      "targets": ["opifex", "peritus", "victus", "simpliciter", "produco"]
     },
     {
-      "latin": "admiratione simpliciter opifices",
-      "chinese": "工匠們單純地懷著驚歎。",
-      "targets": [
-        "admiratio",
-        "simpliciter",
-        "opifex"
-      ]
+      "latin": "Collegio opifices admirationem directe habent.",
+      "chinese": "工匠們對公會直接懷有敬慕。",
+      "targets": ["collegium", "admiratio", "directe"]
     },
     {
-      "latin": "localis gradatim opportunitatem",
-      "chinese": "地方性地逐步把握那機會。",
-      "targets": [
-        "localis",
-        "gradatim",
-        "opportunitas"
-      ]
+      "latin": "Sexus, factum popularium, gradatim manet.",
+      "chinese": "性別身分，作為平民百姓的事實，逐步地長存。",
+      "targets": ["sexus", "factum", "popularis", "gradatim"]
     },
     {
-      "latin": "abstinere Collegio sexus",
-      "chinese": "要在公會中節制那性別之事。",
-      "targets": [
-        "abstineo",
-        "collegium",
-        "sexus"
-      ]
+      "latin": "Localis opportunitas tuta manet.",
+      "chinese": "地方性的機會安全地長存。",
+      "targets": ["localis", "opportunitas", "tutus"]
     },
     {
-      "latin": "directe obsecro misere",
-      "chinese": "我直接而悲切地懇求。",
-      "targets": [
-        "directe",
-        "obsecro",
-        "misere"
-      ]
+      "latin": "Rationalis ethica abstinet.",
+      "chinese": "理性的倫理學保持節制。",
+      "targets": ["rationalis", "ethica", "abstineo"]
     },
     {
-      "latin": "ethica rationale simpliciter",
-      "chinese": "倫理學單純地是理性的。",
-      "targets": [
-        "ethica",
-        "rationalis",
-        "simpliciter"
-      ]
+      "latin": "Ego simpliciter obsecro.",
+      "chinese": "我坦率而純粹地懇求。",
+      "targets": ["obsecro"]
     },
     {
-      "latin": "periti sexu abstineant",
-      "chinese": "願那些精通者在性別之事上節制。",
-      "targets": [
-        "peritus",
-        "sexus",
-        "abstineo"
-      ]
-    },
-    {
-      "latin": "facta tuta producit",
-      "chinese": "他引出那些穩妥的行為。",
-      "targets": [
-        "factum",
-        "tutus",
-        "produco"
-      ]
-    },
-    {
-      "latin": "peritus victum simpliciter producit",
-      "chinese": "精通者坦率地產出那份養分。",
-      "targets": [
-        "peritus",
-        "victus",
-        "simpliciter",
-        "produco"
-      ]
+      "latin": "Opifices misere abstineant.",
+      "chinese": "願工匠們悲慘地節制自守。",
+      "targets": ["misere"]
     }
   ]
 }

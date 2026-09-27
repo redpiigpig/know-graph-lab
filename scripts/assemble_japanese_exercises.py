@@ -168,13 +168,19 @@ def build(write: bool, only: range | None = None) -> int:
         by_key = {checker.entry_key(entry): entry for entry in targets}
         checked: dict[str, dict[str, Any]] = {}
 
-        def check(text: str) -> dict[str, Any]:
-            if text not in checked:
-                checked[text] = checker.verify(
+        def check(text: str, *, check_shape: bool = False) -> dict[str, Any]:
+            # 引用題與自撰題共用一個快取鍵是安全的：句型閘（2026-09-27）只加嚴，
+            # 同一句字面若先被自撰題那條路查過（check_shape=True）又被引用那條路
+            # 查到，快取住的是較嚴的那次結果——但兩邊的來源集合不重疊（引用題
+            # 挖的是語料原句，自撰題是手寫稿），實務上不會真的撞到同一句字面。
+            key = (text, check_shape)
+            if key not in checked:
+                checked[key] = checker.verify(
                     text, segmenter=segmenter, vocabulary=vocabulary,
                     lemmas=lemmas, lesson=lesson, grammar=grammar,
+                    check_shape=check_shape,
                 )
-            return checked[text]
+            return checked[key]
 
         def practised_in(verification: dict[str, Any]) -> list[dict[str, Any]]:
             """Which of the lesson's twenty words a sentence practises.
@@ -219,7 +225,7 @@ def build(write: bool, only: range | None = None) -> int:
                 "reviewedBy": "corpus",
             })
         for row in drafts:
-            verification = check(row["japanese"])
+            verification = check(row["japanese"], check_shape=True)
             items.append({
                 "kind": "composed",
                 "text": row["japanese"],

@@ -1,13 +1,43 @@
 {
-  "volume": 2, "lesson": 28, "author": "opus-5-hand-written",
-  "note": "missio 在語料裡只剩主格 missio 一形。",
+  "volume": 2,
+  "lesson": 28,
+  "author": "opus-5-hand-written",
+  "note": "2026-09-27 全句重寫。",
   "sentences": [
-    {"latin": "difficultatem vehementer mutuam", "chinese": "極其相互的困難。", "targets": ["difficultas", "vehementer", "mutuus"]},
-    {"latin": "adduxit apostolatus unicum", "chinese": "他帶來了那獨一的宗徒職分。", "targets": ["adduco", "apostolatus", "unicus"]},
-    {"latin": "patriarcha utpote discrimen", "chinese": "族長既然是那分界。", "targets": ["patriarcha", "utpote", "discrimen"]},
-    {"latin": "revelatione incrementum constitutione", "chinese": "藉啟示與制度而有的增長。", "targets": ["revelatio", "incrementum", "constitutio"]},
-    {"latin": "percipite saltem Iunio", "chinese": "你們至少在六月要領受。", "targets": ["percipio", "saltem", "Junius"]},
-    {"latin": "missio in ambitu", "chinese": "那範圍中的派遣。", "targets": ["missio", "ambitus", "in"]},
-    {"latin": "unica constitutio patriarchæ", "chinese": "族長獨一的制度。", "targets": ["unicus", "constitutio", "patriarcha"]}
+    {
+      "latin": "Apostolatus unicus est; difficultas magna manet.",
+      "chinese": "宗徒職分是獨特的；困難仍然巨大。",
+      "targets": ["apostolatus", "unicus", "difficultas"]
+    },
+    {
+      "latin": "Argumentum patriarcha vehementer defendit.",
+      "chinese": "族長激烈地捍衛了論據。",
+      "targets": ["argumentum", "patriarcha", "vehementer", "defendo"]
+    },
+    {
+      "latin": "Discrimen magnum est; revelatio nititur veritate.",
+      "chinese": "區別是巨大的；啟示依靠著真理。",
+      "targets": ["discrimen", "revelatio", "nitor", "veritas"]
+    },
+    {
+      "latin": "Incrementum constitutionis percipitur.",
+      "chinese": "體制的增長被察覺到了。",
+      "targets": ["incrementum", "constitutio", "percipio"]
+    },
+    {
+      "latin": "Saltem Junio missio incipit.",
+      "chinese": "至少在六月，使命開始了。",
+      "targets": ["saltem", "Junius", "missio", "incipio"]
+    },
+    {
+      "latin": "Ambitu suo Deus omnes adducit.",
+      "chinese": "天主以自己的範圍將眾人引來。",
+      "targets": ["ambitus", "Deus", "omnis", "adduco"]
+    },
+    {
+      "latin": "Ecclesia unitur; mutua caritas manet, utpote donum Dei.",
+      "chinese": "教會被聯合了；互愛長存，正如天主的恩賜一般。",
+      "targets": ["ecclesia", "unio", "mutuus", "utpote", "Deus"]
+    }
   ]
 }

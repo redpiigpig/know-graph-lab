@@ -1914,7 +1914,7 @@
     "strongs": [
       "H2416"
     ],
-    "partOfSpeech": "adjective",
+    "partOfSpeech": "noun",
     "isProperName": false,
     "properNameTypes": [],
     "verification": "source_and_lexicon_matched",
@@ -3119,7 +3119,7 @@
     "textbookTransliteration": "miṣôṯ",
     "transliterationSystem": "Pratico-Van Pelt BBH2",
     "transliterationStatus": "rule_generated_exception_review",
-    "glossEn": "commandments [irregular plural of מִצְוָה]",
+    "glossEn": "commandments [regular feminine plural of מִצְוָה]",
     "glossZh": "",
     "sourceType": "bbh2_order",
     "sourceChapter": 6,
@@ -4395,7 +4395,7 @@
     "strongs": [
       "H505"
     ],
-    "partOfSpeech": "adjective",
+    "partOfSpeech": "noun",
     "isProperName": false,
     "properNameTypes": [],
     "verification": "source_and_lexicon_matched",
@@ -4734,7 +4734,7 @@
     "strongs": [
       "H3684"
     ],
-    "partOfSpeech": "adjective",
+    "partOfSpeech": "noun",
     "isProperName": false,
     "properNameTypes": [],
     "verification": "source_and_lexicon_matched",
@@ -5006,7 +5006,7 @@
     "strongs": [
       "H8199"
     ],
-    "partOfSpeech": "verb",
+    "partOfSpeech": "noun",
     "isProperName": false,
     "properNameTypes": [],
     "verification": "source_and_lexicon_matched",
@@ -6230,7 +6230,7 @@
     "strongs": [
       "H5439"
     ],
-    "partOfSpeech": "noun",
+    "partOfSpeech": "adverb",
     "isProperName": false,
     "properNameTypes": [],
     "verification": "source_and_lexicon_matched",
@@ -6400,7 +6400,7 @@
     "strongs": [
       "H341"
     ],
-    "partOfSpeech": "verb",
+    "partOfSpeech": "noun",
     "isProperName": false,
     "properNameTypes": [],
     "verification": "source_and_lexicon_matched",
@@ -7795,7 +7795,7 @@
     "strongs": [
       "H8548"
     ],
-    "partOfSpeech": "noun",
+    "partOfSpeech": "adverb",
     "isProperName": false,
     "properNameTypes": [],
     "verification": "source_and_lexicon_matched",
@@ -14841,7 +14841,7 @@
     "strongs": [
       "H2145"
     ],
-    "partOfSpeech": "adjective",
+    "partOfSpeech": "noun",
     "isProperName": false,
     "properNameTypes": [],
     "verification": "source_and_lexicon_matched",
@@ -15045,7 +15045,7 @@
     "strongs": [
       "H7462"
     ],
-    "partOfSpeech": "verb",
+    "partOfSpeech": "noun",
     "isProperName": false,
     "properNameTypes": [],
     "verification": "source_and_lexicon_matched",
@@ -16720,7 +16720,7 @@
     "strongs": [
       "H2416"
     ],
-    "partOfSpeech": "adjective",
+    "partOfSpeech": "noun",
     "isProperName": false,
     "properNameTypes": [],
     "verification": "source_and_lexicon_matched",
@@ -19653,7 +19653,7 @@
     "strongs": [
       "H2114"
     ],
-    "partOfSpeech": "adjective",
+    "partOfSpeech": "verb",
     "isProperName": false,
     "properNameTypes": [],
     "verification": "lemma_frequency_verified",
@@ -24403,7 +24403,7 @@
     "strongs": [
       "H5668"
     ],
-    "partOfSpeech": "noun",
+    "partOfSpeech": "preposition",
     "isProperName": false,
     "properNameTypes": [],
     "verification": "lemma_frequency_verified",
@@ -27895,7 +27895,7 @@
     "strongs": [
       "H8336"
     ],
-    "partOfSpeech": "adjective",
+    "partOfSpeech": "noun",
     "isProperName": false,
     "properNameTypes": [],
     "verification": "lemma_frequency_verified",
@@ -29627,7 +29627,7 @@
     "strongs": [
       "H1219"
     ],
-    "partOfSpeech": "adjective",
+    "partOfSpeech": "verb",
     "isProperName": false,
     "properNameTypes": [],
     "verification": "lemma_frequency_verified",
@@ -32027,7 +32027,7 @@
     "strongs": [
       "H8227"
     ],
-    "partOfSpeech": "proper_name",
+    "partOfSpeech": "noun",
     "isProperName": false,
     "properNameTypes": [],
     "verification": "lemma_frequency_verified",

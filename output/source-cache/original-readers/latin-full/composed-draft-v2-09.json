@@ -1,13 +1,43 @@
 {
-  "volume": 2, "lesson": 9, "author": "opus-5-hand-written",
-  "note": "pacificō 只認字形。",
+  "volume": 2,
+  "lesson": 9,
+  "author": "opus-5-hand-written",
+  "note": "2026-09-27 全句重寫。🚨 pacificō 在武加大＋教會語料中零字形，練不到；20 詞僅練 19。",
   "sentences": [
-    {"latin": "opes ornata quasi", "chinese": "那被裝飾的財富，彷彿如此。", "targets": ["ops", "orno", "quasi"]},
-    {"latin": "pacifica pœnitentiam projicit", "chinese": "那和平的拋下了懺悔。", "targets": ["pacifico", "paenitentia", "projicio"]},
-    {"latin": "propitius in ruina", "chinese": "在崩壞之中仍是仁慈的。", "targets": ["propitius", "ruina", "in"]},
-    {"latin": "splendor tremens quasi ruinam", "chinese": "顫動的光耀，彷彿崩壞。", "targets": ["splendor", "tremo", "quasi", "ruina"]},
-    {"latin": "cetera opibus ornata", "chinese": "其餘的都以財富裝飾了。", "targets": ["ceterus", "ops", "orno"]},
-    {"latin": "sententia propria personæ", "chinese": "那人位自己的判斷。", "targets": ["sententia", "proprius", "persona"]},
-    {"latin": "clerici propriam sententiam tremere", "chinese": "聖職者們對自己的判斷戰慄。", "targets": ["clericus", "proprius", "sententia", "tremo"]}
+    {
+      "latin": "Sacerdos clericus est; officium suum tenet.",
+      "chinese": "司祭是教士；他持守自己的職責。",
+      "targets": ["sacerdos", "clericus", "officium"]
+    },
+    {
+      "latin": "Episcopus auctoritatem habet; jus servat.",
+      "chinese": "主教擁有權柄；他遵守法律。",
+      "targets": ["episcopus", "auctoritas", "jus"]
+    },
+    {
+      "latin": "Judex sententiam dixit; persona ejus nota est.",
+      "chinese": "審判者宣佈了判詞；他的身份是眾所周知的。",
+      "targets": ["judex", "sententia", "persona"]
+    },
+    {
+      "latin": "Deus propitius est; paenitentia sufficit.",
+      "chinese": "天主是仁慈的；悔改就足夠了。",
+      "targets": ["Deus", "propitius", "paenitentia"]
+    },
+    {
+      "latin": "Populus opem ab episcopo requirit; quasi ruina est.",
+      "chinese": "百姓向主教尋求了援助；那彷彿是一場毀滅。",
+      "targets": ["populus", "ops", "ab", "quasi", "ruina"]
+    },
+    {
+      "latin": "Splendor Dei ceteris major est; propriam aulam ornaverunt.",
+      "chinese": "天主的光輝比其他的更大；他們裝飾了自己的殿堂。",
+      "targets": ["splendor", "Deus", "ceterus", "proprius", "orno"]
+    },
+    {
+      "latin": "Deus revelat; peccatum projicitur; mundus tremuit.",
+      "chinese": "天主啟示了；罪過被拋棄了；世界顫慄了。",
+      "targets": ["Deus", "revelo", "projicio"]
+    }
   ]
 }

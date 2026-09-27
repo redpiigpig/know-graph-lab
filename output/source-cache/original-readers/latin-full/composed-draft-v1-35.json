@@ -1,13 +1,43 @@
 {
-  "volume": 1, "lesson": 35, "author": "opus-5-hand-written",
-  "note": "gradior 整部武加大只有 graditur 一形，praenōscō 只有分詞 prænoscens，corōna 沒有屬格 coronæ。",
+  "volume": 1,
+  "lesson": 35,
+  "author": "opus-5-hand-written",
+  "note": "2026-09-27 全句重寫。🚨 praenōscō 在武加大＋教會語料中零字形，練不到；20 詞僅練 19。",
   "sentences": [
-    {"latin": "in conspectu coronam exspectamus", "chinese": "我們在眼前等待那花冠。", "targets": ["conspectus", "corona", "exspecto"]},
-    {"latin": "fletu fungebatur senex", "chinese": "那老人以哭泣盡了本分。", "targets": ["fletus", "fungor", "senex"]},
-    {"latin": "graditur et lætamini", "chinese": "他行走著，你們也要歡喜。", "targets": ["gradior", "laetor"]},
-    {"latin": "neque libera neque oves", "chinese": "既不是自由的，也不是那些羊。", "targets": ["neque", "liber", "ovis"]},
-    {"latin": "miserans nosti quatuor", "chinese": "你憐憫地認得那四個。", "targets": ["miseror", "nosco", "quattuor"]},
-    {"latin": "prænoscens regressus est", "chinese": "他預先知道，便回來了。", "targets": ["praenosco", "regredior", "sum"]},
-    {"latin": "Exspecta coronam, senex", "chinese": "老人啊，你要等待那花冠。", "targets": ["exspecto", "corona", "senex"]}
+    {
+      "latin": "Petrus egreditur; regressus est; iterum ingreditur.",
+      "chinese": "伯多祿出去了；他回來了；他又進去了。",
+      "targets": ["Petrus", "egredior", "regredior", "ingredior"]
+    },
+    {
+      "latin": "Senex per semitas graditur.",
+      "chinese": "老人沿著小徑行走。",
+      "targets": ["senex", "semita", "gradior"]
+    },
+    {
+      "latin": "Sacerdos munere fungitur; corona data est.",
+      "chinese": "司祭盡了職責；花冠已被賜下。",
+      "targets": ["sacerdos", "fungor", "corona"]
+    },
+    {
+      "latin": "Discipuli laetabantur; unus neque lacrimatus est.",
+      "chinese": "門徒們歡喜著；其中一人也沒有哭泣過。",
+      "targets": ["discipulus", "laetor", "neque", "lacrimor"]
+    },
+    {
+      "latin": "Christus in conspectu omnium apparuit; quattuor discipuli viderunt.",
+      "chinese": "基督在眾人面前顯現了；四位門徒看見了。",
+      "targets": ["Christus", "conspectus", "quattuor", "discipulus"]
+    },
+    {
+      "latin": "Ovis fletum audit; pastor exspectat.",
+      "chinese": "羊聽見了哭聲；牧人在等候。",
+      "targets": ["ovis", "fletus", "exspecto"]
+    },
+    {
+      "latin": "Populus liber est; Deus miserans venit; eum novit.",
+      "chinese": "百姓是自由的；天主憐憫著而來；祂認識他。",
+      "targets": ["populus", "liber", "Deus", "miseror", "nosco"]
+    }
   ]
 }

@@ -1,13 +1,43 @@
 {
-  "volume": 2, "lesson": 31, "author": "opus-5-hand-written",
-  "note": "Solummodo 與 Quodsi 在語料裡只有句首大寫那一形。",
+  "volume": 2,
+  "lesson": 31,
+  "author": "opus-5-hand-written",
+  "note": "2026-09-27 全句重寫（棄用模板產生器；本課曾誤填第 33 課內容，已改正）。",
   "sentences": [
-    {"latin": "contentione Solummodo quodammodo", "chinese": "僅僅以某種方式的努力。", "targets": ["contentio", "solummodo", "quodammodo"]},
-    {"latin": "dubio fruatur manifesta", "chinese": "願他在疑問中享用那顯明的事。", "targets": ["dubium", "fruor", "manifesto"]},
-    {"latin": "redemptor necessario rite", "chinese": "救贖者必然按禮儀而行。", "targets": ["redemptor", "necessario", "rite"]},
-    {"latin": "Quodsi vocatione probe", "chinese": "但若以聖召恰當地行。", "targets": ["quodsi", "vocatio", "probe"]},
-    {"latin": "thesauros intima versatur", "chinese": "他在至深處周旋於那些寶藏。", "targets": ["thesaurus", "intimus", "verso"]},
-    {"latin": "composita subsidia vocationis", "chinese": "為聖召而組合的援助。", "targets": ["compono", "subsidium", "vocatio"]},
-    {"latin": "manifestetur thesaurum necessario", "chinese": "願那寶藏必然被顯明。", "targets": ["manifesto", "thesaurus", "necessario"]}
+    {
+      "latin": "Contentio magna est; solummodo quodammodo manet.",
+      "chinese": "衝突是巨大的；它只在某種程度上長存。",
+      "targets": ["contentio", "solummodo", "quodammodo"]
+    },
+    {
+      "latin": "Dubium manet; homo experiri potest.",
+      "chinese": "疑問長存；人能夠去嘗試。",
+      "targets": ["dubium", "homo", "experior"]
+    },
+    {
+      "latin": "Populus gratia fruitur; manifestat gloriam.",
+      "chinese": "百姓享受了恩寵；他顯示了光榮。",
+      "targets": ["populus", "gratia", "fruor", "manifesto", "gloria"]
+    },
+    {
+      "latin": "Christus redemptor est; necessario venit.",
+      "chinese": "基督是救贖者；他必然地來臨了。",
+      "targets": ["Christus", "redemptor", "necessario"]
+    },
+    {
+      "latin": "Rite quodsi vocatio venit, aequa manet.",
+      "chinese": "若聖召按禮儀地來臨，它便是公正的。",
+      "targets": ["rite", "quodsi", "vocatio", "aequus"]
+    },
+    {
+      "latin": "Divinitus probe thesaurus datur.",
+      "chinese": "寶庫因天恩而恰當地被賜下。",
+      "targets": ["divinitus", "probe", "thesaurus"]
+    },
+    {
+      "latin": "Intima gratia versatur; subsidium componunt.",
+      "chinese": "至深的恩寵在運行著；他們組合了援助。",
+      "targets": ["intimus", "gratia", "verso", "subsidium", "compono"]
+    }
   ]
 }

@@ -1,13 +1,43 @@
 {
-  "volume": 2, "lesson": 15, "author": "opus-5-hand-written",
-  "note": "Decimus 在語料裡是十分之一那一家（decimas／Decima）。",
+  "volume": 2,
+  "lesson": 15,
+  "author": "opus-5-hand-written",
+  "note": "2026-09-27 全句重寫。",
   "sentences": [
-    {"latin": "cessavit gradus Tituli", "chinese": "那名目的等級停止了。", "targets": ["cesso", "gradus", "titulus"]},
-    {"latin": "nominatus actus Decima", "chinese": "被稱為第十的那行為。", "targets": ["nomino", "actus", "Decimus"]},
-    {"latin": "penitus semen occasione", "chinese": "藉那機會徹底地播種。", "targets": ["penitus", "semen", "occasio"]},
-    {"latin": "postmodum longe generalis", "chinese": "其後遠遠地成為普遍的。", "targets": ["postmodum", "longe", "generalis"]},
-    {"latin": "obtinuit canonica initium", "chinese": "那合乎教規的取得了開端。", "targets": ["obtineo", "canonicus", "initium"]},
-    {"latin": "injuriam intellectu cessare", "chinese": "要以理解讓那不義止息。", "targets": ["injuria", "intellectus", "cesso"]},
-    {"latin": "semine actibus longius", "chinese": "以種子、以行動，更遠地。", "targets": ["semen", "actus", "longe"]}
+    {
+      "latin": "Titulus gradum nominat; sacerdos non cessat.",
+      "chinese": "頭銜稱呼了等級；司祭並不停止。",
+      "targets": ["titulus", "gradus", "nomino", "sacerdos", "cesso"]
+    },
+    {
+      "latin": "Siquidem semen bonum est; occasio postmodum venit.",
+      "chinese": "既然種子是好的；機會其後來到了。",
+      "targets": ["siquidem", "semen", "occasio", "postmodum"]
+    },
+    {
+      "latin": "Decimus liber scriptus est; initium penitus, longe manet.",
+      "chinese": "第十本書被寫成了；起初徹底地，在遠方長存。",
+      "targets": ["Decimus", "liber", "initium", "penitus", "longe"]
+    },
+    {
+      "latin": "Injuria magna est; intellectus hominis obtinet veritatem.",
+      "chinese": "傷害是巨大的；人的理智獲得了真理。",
+      "targets": ["injuria", "intellectus", "homo", "obtineo", "veritas"]
+    },
+    {
+      "latin": "Lex generalis est; canonica regula manet.",
+      "chinese": "法律是普遍的；教會法的規則長存。",
+      "targets": ["lex", "generalis", "canonicus", "regula"]
+    },
+    {
+      "latin": "Actus longam viam habet.",
+      "chinese": "行為有著長遠的路途。",
+      "targets": ["actus", "longus"]
+    },
+    {
+      "latin": "Multi asserunt veritatem.",
+      "chinese": "許多人主張了真理。",
+      "targets": ["assero", "veritas"]
+    }
   ]
 }

@@ -28,9 +28,14 @@ BOOK_ZH = {
     "Neh": "尼希米記", "Job": "約伯記", "Psa": "詩篇", "Pro": "箴言",
     "Ecc": "傳道書", "Isa": "以賽亞書", "Jer": "耶利米書", "Lam": "耶利米哀歌",
     "Eze": "以西結書", "Dan": "但以理書", "Hos": "何西阿書", "Nah": "那鴻書",
-    "Tob": "多比傳", "Tbs": "多比傳（西奈抄本）", "Wis": "所羅門智訓",
-    "Sir": "便西拉智訓", "Bar": "巴錄書", "1Es": "以斯拉續篇上卷",
-    "1Ma": "馬加比一書", "3Ma": "馬加比三書", "4Ma": "馬加比四書",
+    # 次經書名以 bible_books 表的 name_sigao（思高譯本，本讀本課題已採用此名）為
+    # 準；該表沒有思高名的（3Ma／4Ma／1Es 不屬思高／天主教正典），改用該表的
+    # name_zh。2026-09-27 統一：Tob「多比傳」→「多俾亞傳」、Sir「便西拉智訓」→
+    # 「德訓篇」、Wis「所羅門智訓」→「智慧篇」、1Ma「馬加比一書」→「瑪加伯上」、
+    # 1Es「以斯拉續篇上卷」→「厄斯德拉一書」，修正練習出處與課題目錄不一致。
+    "Tob": "多俾亞傳", "Tbs": "多俾亞傳（西奈抄本）", "Wis": "智慧篇",
+    "Sir": "德訓篇", "Bar": "巴錄書", "1Es": "厄斯德拉一書",
+    "1Ma": "瑪加伯上", "3Ma": "馬加比三書", "4Ma": "馬加比四書",
     "Pss": "所羅門詩篇", "1En": "以諾一書",
     "Matt": "馬太福音", "Mark": "馬可福音", "Luke": "路加福音", "John": "約翰福音",
     "Acts": "使徒行傳", "Rom": "羅馬書", "1Cor": "哥林多前書", "2Cor": "哥林多後書",
@@ -77,4 +82,24 @@ def anchor_label(ref: str) -> str:
     book, _, locus = ref.partition(".")
     if book not in BOOK_ZH:
         raise SystemExit(f"練習題出處 {ref} 的書卷代碼 {book} 不在對照表裡")
+    if book == "Psa":
+        # 七十士詩篇編號與馬所拉／中文聖經編號多數差一號（見
+        # export_reader_rcuv2010_greek.psalm_crosswalk）；節號還可能因標題節
+        # 算不算入而再差一號，換算節號須配 RCUV 逐節核對，這裡沒有那份資料。
+        # 體例（本書第 2 頁）是「七十士編號一律換算成馬所拉編號」，練習題出處
+        # 也要照做，否則學生會拿著「詩篇 23:1」去找詩篇 23 篇，卻應該找的是
+        # 詩篇 24 篇。篇號換算了就不會找錯書；節號不確定的，寫出七十士原節號
+        # 供對照，不假裝算出一個可能錯的節號。
+        import sys as _sys
+        _sys.path.insert(0, str(ROOT / "scripts"))
+        from export_reader_rcuv2010_greek import psalm_crosswalk
+
+        chapter_str, _, verse_str = locus.partition(":")
+        lxx_chapter = int(chapter_str)
+        lxx_verse = int(verse_str) if verse_str else None
+        mt_chapter, _mt_verse, _note = psalm_crosswalk(lxx_chapter, lxx_verse)
+        lxx_locus = str(lxx_chapter) if lxx_verse is None else f"{lxx_chapter}:{lxx_verse}"
+        if mt_chapter == lxx_chapter:
+            return f"{BOOK_ZH[book]} {lxx_locus}"
+        return f"{BOOK_ZH[book]} {mt_chapter} 篇（七十士 {lxx_locus}）"
     return f"{BOOK_ZH[book]} {locus.replace('.', ':')}"

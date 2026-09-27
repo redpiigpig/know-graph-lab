@@ -1,13 +1,43 @@
 {
-  "volume": 1, "lesson": 34, "author": "opus-5-hand-written",
-  "note": "caelicola 與 collaetor 武加大沒有可用字形——collaetor 的詞形表裡那個 sum 是助動詞，不算它自己的形，所以它練不到。cōnsolō／cōnor／aggredior／amplector 都只剩關身分詞與未來式那幾個形。",
+  "volume": 1,
+  "lesson": 34,
+  "author": "opus-5-hand-written",
+  "note": "2026-09-27 全句重寫。🚨 caelicola／collaetor 在武加大＋教會語料中零字形，練不到；20 詞僅練 18。",
   "sentences": [
-    {"latin": "paterna potestas potens", "chinese": "父親的權柄是有力的。", "targets": ["paternus", "potestas", "potens"]},
-    {"latin": "peccatores scelus vero", "chinese": "罪人們的惡行確實如此。", "targets": ["peccator", "scelus", "vero"]},
-    {"latin": "affectu agnovit Dominum", "chinese": "他以虔誠的感情認出了上主。", "targets": ["affectus", "agnosco", "dominus"]},
-    {"latin": "aggressus est, amplexus et precatus", "chinese": "他上前了，擁抱了，也祈求了。", "targets": ["aggredior", "amplector", "precor", "sum"]},
-    {"latin": "assidue conatus est", "chinese": "他不斷地嘗試了。", "targets": ["assiduus", "conor", "sum"]},
-    {"latin": "consolabitur peccatores assidue", "chinese": "他要不斷地安慰罪人們。", "targets": ["consolo", "peccator", "assiduus"]},
-    {"latin": "vero paterna potestas potens est", "chinese": "父親的權柄確實是有力的。", "targets": ["vero", "paternus", "potestas", "potens"]}
+    {
+      "latin": "Christus passus est; peccator patitur.",
+      "chinese": "基督受難了；罪人也在受苦。",
+      "targets": ["Christus", "patior", "peccator"]
+    },
+    {
+      "latin": "Deus potens est; potestatem habet.",
+      "chinese": "天主是有能力的；祂擁有權柄。",
+      "targets": ["Deus", "potens", "potestas"]
+    },
+    {
+      "latin": "Ego precor; scelus agnosco.",
+      "chinese": "我祈求；我承認罪過。",
+      "targets": ["precor", "scelus", "agnosco"]
+    },
+    {
+      "latin": "Petrus paternum affectum agnoscit; peccatum cognoscitur.",
+      "chinese": "伯多祿察覺了那父親般的情感；罪過被認清了。",
+      "targets": ["paternus", "affectus", "cognosco"]
+    },
+    {
+      "latin": "Frater alium amplectitur.",
+      "chinese": "兄弟擁抱了另一人。",
+      "targets": ["frater", "amplector"]
+    },
+    {
+      "latin": "Ego aggredior; Deum invenio.",
+      "chinese": "我勇於嘗試；我尋見了天主。",
+      "targets": ["aggredior", "Deus"]
+    },
+    {
+      "latin": "Vero utique, labor assiduus est; valde conatur, consolatur.",
+      "chinese": "確實，那勞苦是持續不斷的；他極力嘗試，並獲得安慰。",
+      "targets": ["vero", "utique", "assiduus", "valde", "conor", "consolor"]
+    }
   ]
 }

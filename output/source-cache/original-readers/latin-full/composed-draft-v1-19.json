@@ -1,13 +1,43 @@
 {
-  "volume": 1, "lesson": 19, "author": "opus-5-hand-written",
-  "note": "maximus 與 optimus 都只認字形——它們的詞位在樹庫裡歸到 magnus／bonus 之下，寫 magnum 不會記到 maximus。",
+  "volume": 1,
+  "lesson": 19,
+  "author": "opus-5-hand-written",
+  "note": "2026-09-27 全句重寫（棄用模板產生器）：每句一個限定動詞或 est 名詞句，動詞配格與人稱數逐句核對。",
   "sentences": [
-    {"latin": "excepit et exclamavit", "chinese": "他接待了，並且大聲呼喊。", "targets": ["excipio", "exclamo"]},
-    {"latin": "gubernare potest populum", "chinese": "他能夠治理百姓。", "targets": ["guberno", "possum", "populus"]},
-    {"latin": "incipiam et resurget", "chinese": "我要開始，而他將復起。", "targets": ["incipio", "resurgo"]},
-    {"latin": "insurrexerunt nimis in agro", "chinese": "他們在田間起來得太過了。", "targets": ["insurgo", "nimis", "in", "ager"]},
-    {"latin": "misit et permisit", "chinese": "他派遣了，也允許了。", "targets": ["mitto", "permitto"]},
-    {"latin": "reliquit optimum et maximum", "chinese": "他留下了最好的與最大的。", "targets": ["relinquo", "optimus", "maximus"]},
-    {"latin": "submiserunt populum in templo", "chinese": "他們在聖殿中壓低了百姓。", "targets": ["submitto", "populus", "in", "templum"]}
+    {
+      "latin": "Episcopus maximus ecclesiam gubernare potest; psalmus optimus est.",
+      "chinese": "那位極偉大的主教能夠治理教會；這聖詠是最好的。",
+      "targets": ["episcopus", "maximus", "ecclesia", "guberno", "possum", "optimus"]
+    },
+    {
+      "latin": "Christus resurrexit; discipuli surgunt.",
+      "chinese": "基督復活了；門徒們也站起來了。",
+      "targets": ["Christus", "resurgo", "discipulus", "surgo"]
+    },
+    {
+      "latin": "Populus quidam insurgere incipit.",
+      "chinese": "有一夥百姓開始起來反抗。",
+      "targets": ["populus", "quidam", "insurgo", "incipio"]
+    },
+    {
+      "latin": "Minister igitur vinum in mensam mittit.",
+      "chinese": "侍者於是把酒送上祭台。",
+      "targets": ["minister", "igitur", "vinum", "mensa", "mitto"]
+    },
+    {
+      "latin": "Postquam propheta surrexit, nimis exclamavit.",
+      "chinese": "先知起身之後，就過度大聲呼喊。",
+      "targets": ["postquam", "propheta", "surgo", "nimis", "exclamo"]
+    },
+    {
+      "latin": "Episcopus discipulo domum relinquere permisit.",
+      "chinese": "主教容許了門徒離開家。",
+      "targets": ["episcopus", "discipulus", "domus", "relinquo", "permitto"]
+    },
+    {
+      "latin": "Episcopus discipulos excepit, discipuli capita submiserunt.",
+      "chinese": "主教接待了門徒們，門徒們就低下了頭。",
+      "targets": ["episcopus", "discipulus", "excipio", "submitto"]
+    }
   ]
 }

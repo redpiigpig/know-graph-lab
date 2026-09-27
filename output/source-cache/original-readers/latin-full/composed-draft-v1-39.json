@@ -1,13 +1,43 @@
 {
-  "volume": 1, "lesson": 39, "author": "opus-5-hand-written",
-  "note": "commixtiō 與 concinō 都只認詞幹，語料裡活著的是 commixtim 與 concinno 那一家。片語 sicut .. et 要 sicut 與 et 同句。",
+  "volume": 1,
+  "lesson": 39,
+  "author": "opus-5-hand-written",
+  "note": "2026-09-27 全句重寫。🚨 concinō／commixtiō 在武加大＋教會語料中零字形，練不到；20 詞僅練 18。",
   "sentences": [
-    {"latin": "sic et sicut talia", "chinese": "如此，也正如那樣的事。", "targets": ["sic", "sicut", "sicut et", "talis"]},
-    {"latin": "tam tanta vitis", "chinese": "那麼大的一棵葡萄樹。", "targets": ["tam", "tantus", "vitis"]},
-    {"latin": "accendit cælestis creator", "chinese": "天上的造物主點燃了。", "targets": ["accendo", "caelestis", "creator"]},
-    {"latin": "tueatur consortes a crimine", "chinese": "願他保護同伴們遠離罪過。", "targets": ["tueor", "consors", "a", "crimen"]},
-    {"latin": "Confestim commixtim concinunt", "chinese": "他們立刻混雜地齊唱。", "targets": ["confestim", "commixtio", "concino"]},
-    {"latin": "crimine tanto confestim", "chinese": "因那麼大的罪過，立刻。", "targets": ["crimen", "tantus", "confestim"]},
-    {"latin": "creator vitem accendit", "chinese": "造物主點燃了那葡萄樹。", "targets": ["creator", "vitis", "accendo"]}
+    {
+      "latin": "Sacerdos sedet; Deus tuetur.",
+      "chinese": "司祭坐著；天主守護著。",
+      "targets": ["sacerdos", "sedeo", "Deus", "tueor"]
+    },
+    {
+      "latin": "Homo sensum habet; sextus non est.",
+      "chinese": "人有感覺；並沒有第六種。",
+      "targets": ["homo", "sensus", "sextus"]
+    },
+    {
+      "latin": "Sic loquitur; sicut vivit Pater, et Filius vivit.",
+      "chinese": "他這樣說話；正如父活著，子也活著。",
+      "targets": ["sic", "loquor", "sicut", "pater", "filius"]
+    },
+    {
+      "latin": "Talis fides est; amor tam magnus, tantus est.",
+      "chinese": "信德是這樣的；愛是這麼浩大，是如此巨大的。",
+      "targets": ["talis", "fides", "tam", "tantus"]
+    },
+    {
+      "latin": "Vitis fructum dat; sacerdos ignem accendit.",
+      "chinese": "葡萄樹結出果實；司祭點燃了火。",
+      "targets": ["vitis", "fructus", "sacerdos", "ignis", "accendo"]
+    },
+    {
+      "latin": "Creator omnium venit; crimen tollit; caelestis chorus cecinit.",
+      "chinese": "萬物的創造者來臨了；祂除去罪過；天上的歌詠團詠唱了。",
+      "targets": ["creator", "crimen", "caelestis", "cano"]
+    },
+    {
+      "latin": "Consortes confestim lucernam accendunt.",
+      "chinese": "那些同伴們立刻點燃了燈。",
+      "targets": ["consors", "confestim", "accendo"]
+    }
   ]
 }

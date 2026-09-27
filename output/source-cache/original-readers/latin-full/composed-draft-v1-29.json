@@ -1,13 +1,43 @@
 {
-  "volume": 1, "lesson": 29, "author": "opus-5-hand-written",
-  "note": "tellus 武加大沒有字形，練不到。subeō 只有 subire／Subiit，supplex 只有複數 supplices，vīsibilis 只有中性複數 visibilia。ars 沒有主格進語料，只有 arte／artis／artium。",
+  "volume": 1,
+  "lesson": 29,
+  "author": "opus-5-hand-written",
+  "note": "2026-09-27 全句重寫。🚨 tellūs 在武加大＋教會語料中零字形（各格都查無），練不到；20 詞僅練 19。",
   "sentences": [
-    {"latin": "salvator benignus est", "chinese": "救主是仁慈的。", "targets": ["salvator", "benignus", "sum"]},
-    {"latin": "subire et supplices", "chinese": "去承受，以及那些懇求者。", "targets": ["subeo", "supplex"]},
-    {"latin": "vetus arte visibilia", "chinese": "藉古老技藝而成的可見之物。", "targets": ["vetus", "ars", "visibilis"]},
-    {"latin": "vivificat et voluit", "chinese": "他賦予生命，也願意了。", "targets": ["vivifico", "volo"]},
-    {"latin": "ascensionem circum templum", "chinese": "繞著聖殿的上升。", "targets": ["ascensio", "circum", "templum"]},
-    {"latin": "clementia cessit et clausit", "chinese": "仁慈退讓了，並且關上了。", "targets": ["clementia", "cedo", "claudo"]},
-    {"latin": "arte benigna vivificabit", "chinese": "他要以仁慈的技藝賦予生命。", "targets": ["ars", "benignus", "vivifico"]}
+    {
+      "latin": "Salvator noster benignus est.",
+      "chinese": "我們的救主是仁慈的。",
+      "targets": ["salvator", "benignus"]
+    },
+    {
+      "latin": "Christus subiit; opus artis magnum est.",
+      "chinese": "基督親自承受了；那技藝的作品是偉大的。",
+      "targets": ["Christus", "subeo", "ars"]
+    },
+    {
+      "latin": "Populus mare transiit; usque ad montem venit.",
+      "chinese": "百姓越過了海；一直來到了山那裡。",
+      "targets": ["populus", "transeo", "usque"]
+    },
+    {
+      "latin": "Lex vetus erat; nunc mundus vivificatur.",
+      "chinese": "那法律是古舊的；如今世界被賦予了生命。",
+      "targets": ["vetus", "vivifico"]
+    },
+    {
+      "latin": "Regnum Dei visibile non est; supplex tamen orat.",
+      "chinese": "天主的國不是可見的；然而祈求者仍在祈禱。",
+      "targets": ["Deus", "visibilis", "supplex"]
+    },
+    {
+      "latin": "Sacerdos vult; ad altare accedit; circum stat, cedit.",
+      "chinese": "司祭願意；他走近了祭台；他站在周圍，且讓步了。",
+      "targets": ["sacerdos", "volo", "altare", "accedo", "circum", "cedo"]
+    },
+    {
+      "latin": "Post ascensionem, sacerdos ostium claudit; baptizat, clementia manet.",
+      "chinese": "升天之後，司祭關閉了門；他施洗，仁慈長存。",
+      "targets": ["ascensio", "claudo", "baptizo", "clementia"]
+    }
   ]
 }

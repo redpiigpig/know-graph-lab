@@ -1,13 +1,43 @@
 {
-  "volume": 1, "lesson": 45, "author": "opus-5-hand-written",
-  "note": "salutāre 只有 Salutare 一形，condoleō 只認字形。vōx 沒有複數主格 voces 進語料。",
+  "volume": 1,
+  "lesson": 45,
+  "author": "opus-5-hand-written",
+  "note": "2026-09-27 全句重寫。🚨 condoleō 在武加大＋教會語料中零字形，練不到；20 詞僅練 19。",
   "sentences": [
-    {"latin": "redimere et refulsit", "chinese": "去救贖，而他照耀了。", "targets": ["redimo", "refulgeo"]},
-    {"latin": "Salutare suavis vocis", "chinese": "甘美聲音的救恩。", "targets": ["salutare", "suavis", "vox"]},
-    {"latin": "in synagoga tantum", "chinese": "只在會堂裡。", "targets": ["synagoga", "tantum", "in"]},
-    {"latin": "virtutem alius et alter", "chinese": "一人與另一人的德能。", "targets": ["virtus", "alius", "alter"]},
-    {"latin": "ardens condolet contra", "chinese": "他熾熱地同情，並且相對。", "targets": ["ardeo", "condoleo", "contra"]},
-    {"latin": "curvantur in synagoga", "chinese": "他們在會堂裡俯身。", "targets": ["curvo", "in", "synagoga"]},
-    {"latin": "suavissimum Salutare redimere", "chinese": "去救贖那最甘美的救恩。", "targets": ["suavis", "salutare", "redimo"]}
+    {
+      "latin": "Christus nos redimeret; refulsit gloria.",
+      "chinese": "基督為要救贖我們；光榮閃耀了。",
+      "targets": ["Christus", "redimo", "refulgeo", "gloria"]
+    },
+    {
+      "latin": "Deus signum statuit; salutare omnibus est.",
+      "chinese": "天主設立了記號；救恩屬於眾人。",
+      "targets": ["Deus", "signum", "statuo", "salutare"]
+    },
+    {
+      "latin": "Vox suavis est; synagoga audit.",
+      "chinese": "聲音是甘美的；會堂在聆聽。",
+      "targets": ["vox", "suavis", "synagoga"]
+    },
+    {
+      "latin": "Tantum unum signum datur; tempus venit.",
+      "chinese": "只有一個記號被賜下；時候到了。",
+      "targets": ["tantum", "signum", "tempus"]
+    },
+    {
+      "latin": "Unde virtus venit? Alius credit, alter non credit.",
+      "chinese": "德行從何而來？有人相信，另有人卻不信。",
+      "targets": ["unde", "virtus", "alius", "alter"]
+    },
+    {
+      "latin": "Amor amplius semper crescit.",
+      "chinese": "愛總是更加廣大地增長。",
+      "targets": ["amplus", "amplius"]
+    },
+    {
+      "latin": "Ignis ardet; genua curvantur contra malum.",
+      "chinese": "火焰燃燒著；膝蓋向著惡屈曲。",
+      "targets": ["ignis", "ardeo", "contra", "curvo"]
+    }
   ]
 }

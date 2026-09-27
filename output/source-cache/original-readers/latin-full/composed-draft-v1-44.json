@@ -2,69 +2,42 @@
   "volume": 1,
   "lesson": 44,
   "author": "opus-5-hand-written",
-  "note": "genitus 武加大沒有字形。triumphus 只認詞幹，語料裡活著的是動詞 triumpho 那一家。片語 ut quid 要 ut 與 quid 同句。",
+  "note": "2026-09-27 全句重寫。",
   "sentences": [
     {
-      "latin": "ut quid genitus triumphabit",
-      "chinese": "那被生者為什麼要凱旋。",
-      "targets": [
-        "genitus",
-        "triumphus",
-        "ut quid"
-      ]
+      "latin": "Christus circumfulsit; gens tota adjuvatur.",
+      "chinese": "基督光照四周；整個民族都獲得了幫助。",
+      "targets": ["Christus", "circumfulgeo", "gens", "adjuvo"]
     },
     {
-      "latin": "Adjuva et constituit faciem",
-      "chinese": "求你幫助，而他立定了面容。",
-      "targets": [
-        "adjuvo",
-        "constituo",
-        "facies"
-      ]
+      "latin": "Deus mundum constituit; facie sua fulget.",
+      "chinese": "天主建立了世界；祂以自己的容顏閃耀著。",
+      "targets": ["Deus", "constituo", "facies", "fulgeo"]
     },
     {
-      "latin": "circumfulsit et fulget",
-      "chinese": "光環照了，並且仍在發光。",
-      "targets": [
-        "circumfulgeo",
-        "fulgeo"
-      ]
+      "latin": "Filius genitus est; ira non manet.",
+      "chinese": "子是所生的；忿怒卻不長存。",
+      "targets": ["filius", "genitus", "ira"]
     },
     {
-      "latin": "gentes laborem lavabit",
-      "chinese": "他要洗淨萬民的勞苦。",
-      "targets": [
-        "gens",
-        "labor",
-        "lavo"
-      ]
+      "latin": "Sacerdos pedes lavit; odor bonus est post laborem.",
+      "chinese": "司祭洗淨了雙腳；勞苦之後，那氣息是好的。",
+      "targets": ["sacerdos", "lavo", "odor", "labor"]
     },
     {
-      "latin": "meretur odorem et pretium",
-      "chinese": "他配得那香氣與代價。",
-      "targets": [
-        "mereo",
-        "odor",
-        "pretium"
-      ]
+      "latin": "Pastor oves pascit; pretium magnum meretur.",
+      "chinese": "牧人餵養了羊群；他配得極大的代價。",
+      "targets": ["pastor", "ovis", "pasco", "pretium", "mereo"]
     },
     {
-      "latin": "nondum pascit gentes",
-      "chinese": "他還沒有牧養萬民。",
-      "targets": [
-        "nondum",
-        "pasco",
-        "gens"
-      ]
+      "latin": "Dies triumphi venit; nondum apparuit.",
+      "chinese": "凱旋之日來臨了；尚未顯現。",
+      "targets": ["dies", "triumphus", "nondum", "appareo"]
     },
     {
-      "latin": "pretio laborem meruit",
-      "chinese": "他以代價換得了勞苦。",
-      "targets": [
-        "pretium",
-        "labor",
-        "mereo"
-      ]
+      "latin": "Ait: 'Ut quid? Quo magis vadit?'",
+      "chinese": "他說：「為什麼？他還要往哪裡走呢？」",
+      "targets": ["ait", "ut quid", "quo", "magis"]
     }
   ]
 }

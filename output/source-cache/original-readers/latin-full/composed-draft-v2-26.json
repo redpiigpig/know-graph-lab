@@ -1,13 +1,43 @@
 {
-  "volume": 2, "lesson": 26, "author": "opus-5-hand-written",
-  "note": "veluti 只認字形；potis 在語料裡活著的是最高級 potissimum。civis 要到第 27 課才教，所以本課不能寫 cives。",
+  "volume": 2,
+  "lesson": 26,
+  "author": "opus-5-hand-written",
+  "note": "2026-09-27 全句重寫。🚨 potis 在武加大＋教會語料中實際上零可信字形（僅 potissimum，詞位不歸此條），練不到；20 詞僅練 19。",
   "sentences": [
-    {"latin": "societatem moralis veluti", "chinese": "那道德的社群，彷彿如此。", "targets": ["societas", "moralis", "veluti"]},
-    {"latin": "haud erga Nempe", "chinese": "確實並非對著它。", "targets": ["haud", "erga", "nempe"]},
-    {"latin": "civilis varia communitas", "chinese": "多樣的公民社群。", "targets": ["civilis", "varius", "communitas"]},
-    {"latin": "historia potissimum politicis", "chinese": "歷史尤其在政治的事情上。", "targets": ["historia", "potis", "politicus"]},
-    {"latin": "instrumenta spectat moralia", "chinese": "他審視那些道德的工具。", "targets": ["instrumentum", "specto", "moralis"]},
-    {"latin": "communitatis historiæ instrumentum", "chinese": "社群歷史的工具。", "targets": ["communitas", "historia", "instrumentum"]},
-    {"latin": "erga varii spectant", "chinese": "不同的人都對著它注視。", "targets": ["erga", "varius", "specto"]}
+    {
+      "latin": "Societas condicionem moralem spectat.",
+      "chinese": "社會考量了道德的處境。",
+      "targets": ["societas", "condicio", "moralis", "specto"]
+    },
+    {
+      "latin": "Veluti pater erga filium, socialis vita manet.",
+      "chinese": "正如父親對兒子那樣，社會性的生活長存。",
+      "targets": ["veluti", "pater", "erga", "filius", "socialis"]
+    },
+    {
+      "latin": "Opera haud civilis est.",
+      "chinese": "那工作絕非是市民性的。",
+      "targets": ["opera", "haud", "civilis"]
+    },
+    {
+      "latin": "Nempe varius est; profecto communitas crescit.",
+      "chinese": "確實，它是多樣的；必然地，社群漸漸增長。",
+      "targets": ["nempe", "varius", "profecto", "communitas"]
+    },
+    {
+      "latin": "Historia prorsus ejusmodi est.",
+      "chinese": "歷史完全是這樣的。",
+      "targets": ["historia", "prorsus", "ejusmodi"]
+    },
+    {
+      "latin": "Communitas politica instrumentum habet.",
+      "chinese": "政治的社群擁有其工具。",
+      "targets": ["politicus", "instrumentum"]
+    },
+    {
+      "latin": "Communitas civilis artem politicam spectat.",
+      "chinese": "市民的社群考量了政治的技藝。",
+      "targets": ["communitas", "civilis", "politicus", "specto"]
+    }
   ]
 }

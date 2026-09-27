@@ -219,14 +219,8 @@
      "lessons": "2-47"
     },
     {
-     "form": "聯",
-     "modern": "連",
-     "count": 1,
-     "lessons": "1-04"
-    },
-    {
-     "form": "遥",
-     "modern": "遙",
+     "form": "遙",
+     "modern": "遥",
      "count": 1,
      "lessons": "1-04"
     },
@@ -301,12 +295,6 @@
      "modern": "処",
      "count": 1,
      "lessons": "2-19"
-    },
-    {
-     "form": "疎",
-     "modern": "疏",
-     "count": 1,
-     "lessons": "2-27"
     },
     {
      "form": "燈",
@@ -426,7 +414,7 @@
     {
      "form": "ぢ",
      "modern": "じ",
-     "example": "はぢ（恥）、まぢか",
+     "example": "はぢ（恥）、もみぢ→もみじ",
      "count": 44
     },
     {
@@ -474,7 +462,7 @@
     {
      "form": "〜ほ",
      "modern": "〜お",
-     "example": "たほれる→たおれる",
+     "example": "とほる→とおる",
      "count": 52
     },
     {
@@ -868,9 +856,9 @@
      "zh": "聖靈",
      "count": 5,
      "lessons": "2-06、2-07",
-     "zhProtestant": "靈",
+     "zhProtestant": "聖靈",
      "zhCatholic": "聖神",
-     "variants": "靈／聖神（Pneuma）",
+     "variants": "聖靈／聖神（Pneuma）",
      "glossaryTerm": "Pneuma"
     },
     {
@@ -1183,7 +1171,7 @@
     },
     {
      "form": "左衛門",
-     "zh": "左衞門",
+     "zh": "左衛門",
      "count": 6,
      "lessons": "1-14"
     },
@@ -1418,7 +1406,7 @@
     },
     {
      "form": "国栖",
-     "zh": "國棧",
+     "zh": "國栖",
      "count": 4,
      "lessons": "1-06"
     },
@@ -1606,61 +1594,61 @@
    "entries": [
     {
      "form": "母",
-     "zh": "",
+     "zh": "母親、媽媽",
      "count": 27,
      "lessons": "1-08、1-09、1-29…"
     },
     {
      "form": "父",
-     "zh": "",
+     "zh": "父親、爸爸",
      "count": 19,
      "lessons": "1-07、1-15、2-07…"
     },
     {
      "form": "兄",
-     "zh": "",
+     "zh": "哥哥",
      "count": 17,
      "lessons": "1-07、1-09、1-17…"
     },
     {
      "form": "弟",
-     "zh": "",
+     "zh": "弟弟",
      "count": 14,
      "lessons": "1-07、1-35、2-13…"
     },
     {
      "form": "親",
-     "zh": "",
+     "zh": "父母、雙親",
      "count": 14,
      "lessons": "1-01、1-02、1-04…"
     },
     {
      "form": "夫",
-     "zh": "",
+     "zh": "丈夫",
      "count": 7,
      "lessons": "1-04、1-30、2-11"
     },
     {
      "form": "妹",
-     "zh": "",
+     "zh": "妹妹",
      "count": 5,
      "lessons": "1-07、2-33、2-38"
     },
     {
      "form": "娘",
-     "zh": "",
+     "zh": "女兒",
      "count": 5,
      "lessons": "1-23、1-27、2-36"
     },
     {
      "form": "嫁",
-     "zh": "",
+     "zh": "兒媳、新娘",
      "count": 5,
      "lessons": "1-27、1-35、2-10"
     },
     {
      "form": "妻",
-     "zh": "",
+     "zh": "妻子",
      "count": 4,
      "lessons": "1-27、2-12、2-27"
     },
@@ -1672,7 +1660,7 @@
     },
     {
      "form": "姉",
-     "zh": "",
+     "zh": "姊姊",
      "count": 3,
      "lessons": "1-07"
     },
