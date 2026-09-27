@@ -36,3 +36,34 @@ def test_toc_entry_count_tolerates_single_link_level():
     from ebooklib import epub
     assert se.toc_entry_count(epub.Link("a.xhtml", "一", "1")) == 1
     assert se.toc_entry_count([(epub.Section("篇", "p.xhtml"), epub.Link("c.xhtml", "章", "2"))]) == 2
+
+
+def _c(title, n):
+    return {"chapter_path": title, "content": f"## {title}\n\n" + "字" * n}
+
+
+def test_front_acknowledgments_does_not_swallow_body():
+    chunks = [_c("封面", 10), _c("ACKNOWLEDGMENTS", 500), _c("Introduction", 30000),
+              _c("1. Secular Equality", 90000), _c("2. Translation", 90000), _c("Epilogue", 20000),
+              _c("Notes", 60000), _c("INDEX", 30000)]
+    se.merge_appendix_subentries(chunks)
+    assert [c["chapter_path"] for c in chunks] == ["封面", "ACKNOWLEDGMENTS", "Introduction",
+                                                    "1. Secular Equality", "2. Translation", "Epilogue",
+                                                    "Notes", "INDEX"]
+
+
+def test_tail_index_letters_still_fold():
+    chunks = [_c("第一章", 50000), _c("第二章", 50000), _c("第三章", 50000),
+              _c("索引", 3000), _c("A", 800), _c("B", 900)]
+    se.merge_appendix_subentries(chunks)
+    assert [c["chapter_path"] for c in chunks] == ["第一章", "第二章", "第三章", "索引"]
+
+
+def test_book_is_japanese_whole_book():
+    assert se.book_is_japanese(["余輩は神を信ずるものなり。", "基督教の本質について"])
+    assert not se.book_is_japanese(["資本主義並非永恆的存在", "只不過是歷史的產物"])
+
+
+def test_to_traditional_skips_japanese_book(monkeypatch):
+    monkeypatch.setattr(se, "_BOOK_IS_JAPANESE", True)
+    assert se.to_traditional("余輩は云ふ") == "余輩は云ふ"

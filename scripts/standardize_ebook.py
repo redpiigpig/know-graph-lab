@@ -545,11 +545,25 @@ def apply_cover_enrichment(chunks, book):
     chunks.insert(0, new_cover)
 
 
+_BOOK_IS_JAPANESE = False   # standardize() 開頭整本判一次；日文書整本不做簡轉繁
+
+
+def book_is_japanese(texts) -> bool:
+    """整本判：假名佔（漢字＋假名）5% 以上＝日文。🚨 不可逐段判（日文書的漢文引文段沒有假名）。"""
+    kana = han = 0
+    for t in texts:
+        kana += len(re.findall(r"[぀-ヿ]", t))
+        han += len(re.findall(r"[一-鿿]", t))
+    return (kana + han) > 0 and kana / (kana + han) >= 0.05
+
+
 def to_traditional(text: str) -> str:
     """opencc s2tw + post-fix substitutions to correct over-conversion bugs
     (e.g. s2tw turns 历史 → 曆史 when it should be 歷史). The fix table is
-    shared with parse_drive_inventory so filename + content stay consistent."""
-    if not text:
+    shared with parse_drive_inventory so filename + content stay consistent.
+
+    🚨 2026-09-27：日文書不可轉（余輩→餘輩、云ふ→雲ふ、岩波→巖波，見 feedback_no_opencc_on_japanese）。"""
+    if not text or _BOOK_IS_JAPANESE:
         return text
     out = CC.convert(text)
     for wrong, right in TRAD_FIXES:
@@ -1025,15 +1039,25 @@ def merge_appendix_subentries(chunks):
     The tail of a book is almost always all-appendix (索引/書目/年表/etc.) so
     once appendix mode opens we stay in it. If a book has body chapters AFTER
     an appendix (rare), this heuristic would over-merge — acceptable trade-off."""
+    # 🚨 2026-09-27：「acceptable trade-off」其實不可接受。_APPENDIX_TITLE_RE 是子字串比對，
+    #    「致謝／Acknowledgments」常在書的最前面、「文獻」會命中「第三章 敦煌文獻研究」這種正文章名，
+    #    一命中就把後面整本正文併進去——Talal Asad《Secular Translations》導論＋三章＋結語
+    #    全變成「ACKNOWLEDGMENTS」一塊 40 萬字；全館 EPUB 巨塊 205 本多半是這個。
+    #    三道護欄：附錄只在全書後 40% 才開啟合併模式；被併的塊要小（真的章節都大）；
+    #    標題像「第N章／Chapter N」的一律不併。
+    FOLD_MAX_CHARS = 20_000
+    tail_start = int(len(chunks) * 0.6)
     out: list[dict] = []
     current_appendix_idx: int | None = None
 
-    for c in chunks:
+    for pos, c in enumerate(chunks):
         cp = (c.get("chapter_path") or "").strip()
         if _is_appendix_title(cp):
             out.append(c)
-            current_appendix_idx = len(out) - 1
-        elif current_appendix_idx is not None:
+            current_appendix_idx = len(out) - 1 if pos >= tail_start else None
+        elif (current_appendix_idx is not None
+              and len(c.get("content") or "") <= FOLD_MAX_CHARS
+              and not _is_chapter_title(cp)):
             # Fold into current appendix — strip the duplicate heading line first
             cont = c.get("content", "") or ""
             cont = re.sub(r"^\s*#{1,4}\s+.+\n+", "", cont, count=1).strip()
@@ -1045,6 +1069,7 @@ def merge_appendix_subentries(chunks):
                 )
         else:
             out.append(c)
+            current_appendix_idx = None   # 沒併的塊（真章節）結束附錄模式，後面的小塊不可越過它往回併
 
     # Renumber chunk_index since we may have removed chunks
     for i, c in enumerate(out):
@@ -1274,6 +1299,11 @@ def standardize(book):
         item = b.get_item_with_id(sid)
         if item and item.get_type() == ebooklib.ITEM_DOCUMENT:
             docs.append(item)
+    global _BOOK_IS_JAPANESE
+    _BOOK_IS_JAPANESE = book_is_japanese(
+        BeautifulSoup(d.get_content(), "html.parser").get_text() for d in docs)
+    if _BOOK_IS_JAPANESE:
+        print("  日文書：整本不做簡轉繁")
 
     print(f"Spine docs: {len(docs)}")
 
@@ -1341,6 +1371,14 @@ def standardize(book):
         print(f"Detected {len(all_vols)} volume(s): {sorted(all_vols)}")
     else:
         print("No volume hierarchy detected — flat TOC.")
+
+    # 扁平目錄：檔名 → 目錄上的章名（只收沒有 #錨點 的連結，一個檔一章）
+    flat_toc_titles: dict[str, str] = {}
+    for it in (b.toc if isinstance(b.toc, list) else [b.toc]):
+        if not isinstance(it, tuple) and getattr(it, "href", "") and "#" not in it.href:
+            t = (getattr(it, "title", "") or "").strip()
+            if t:
+                flat_toc_titles.setdefault(it.href, t)
 
     chunks = []
     seen_dedupe_keys = set()
@@ -1426,6 +1464,11 @@ def standardize(book):
             # Hierarchical mode wins when TOC gave us a chapter title; the
             # in-content first-heading scan only runs as a fallback.
             chapter_title = hier_chap_tw or derive_chapter_title(md_tw, d.file_name)
+            # 2026-09-27：內文標題只是章號（<h2>1</h2>）時，扁平目錄上的完整章名比較好
+            # （《Secular Translations》三章原本只叫「1」「2」「3」）。
+            if (not hier_chap_tw and seg_idx == 0 and is_continuation_title(chapter_title)
+                    and flat_toc_titles.get(d.file_name)):
+                chapter_title = to_traditional(flat_toc_titles[d.file_name])
 
             # In hierarchical mode the reader's TOC sidebar derives nesting
             # from each chunk's first heading depth. EPUB bodies often use
