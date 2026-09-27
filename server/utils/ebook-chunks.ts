@@ -241,10 +241,14 @@ export async function loadPageMap(
   for (let i = 0; i < lines.length; i++) {
     try {
       const c = JSON.parse(lines[i]) as ChunkData;
-      out.push({
-        chunk_index: typeof c.chunk_index === "number" ? c.chunk_index : i,
-        page_number: c.page_number ?? null,
-      });
+      const ci = typeof c.chunk_index === "number" ? c.chunk_index : i;
+      // 2026-09-27：一頁一塊的 OCR 書合併成「一節一塊」後，一塊涵蓋多個實體頁，
+      // 頁碼清單在 page_numbers；每一頁都要對得回這一塊，PDF 對照才不會落空。
+      if (Array.isArray(c.page_numbers) && c.page_numbers.length) {
+        for (const pn of c.page_numbers) out.push({ chunk_index: ci, page_number: pn });
+      } else {
+        out.push({ chunk_index: ci, page_number: c.page_number ?? null });
+      }
     } catch {
       out.push({ chunk_index: i, page_number: null });
     }
@@ -459,6 +463,39 @@ export async function loadToc(ebookId: string): Promise<TocEntry[]> {
       // still preserved in the body for in-reader navigation.
       const rawTitle = chapterTitle || (firstHead ? firstHead[2].trim() : `第 ${i + 1} 段`);
       const title = rawTitle.replace(/\[\^\d+\]/g, "").trim();
+
+      // 2026-09-27 使用者回報《民主妙法》：chapter_path 是「第二章 慈濟… / 慈濟與民主」這種
+      // 「章 / 節」路徑時，每一節都變成一個掛著完整章名的目錄項目，看起來同一章重複好幾次。
+      // 章名只出一次（該章第一頁），節名縮排列在底下、只顯示節名。去重仍看完整路徑，
+      // 所以一節跨好幾頁也只出現一次。
+      const pathParts = title.split(/\s+[\/>]\s+/).map(s => s.trim()).filter(Boolean);
+      if (pathParts.length >= 2) {
+        const parentTitle = pathParts.slice(0, -1).join(" / ");
+        const leafTitle = pathParts[pathParts.length - 1];
+        const baseLevel = effectiveVolume ? 3 : 2;
+        const parentKey = parentTitle.replace(/\s+/g, "");
+        if (!seenTitles.has(parentKey)) {
+          seenTitles.add(parentKey);
+          raws.push({
+            entry: { chunk_index: i, title: parentTitle, level: baseLevel, volume: effectiveVolume,
+                     parent_volume: parentVolume },
+            rawChapterPath: chapterTitle,
+            skip: false,
+          });
+        }
+        const fullKey = title.replace(/\s+/g, "");
+        if (!seenTitles.has(fullKey)) {
+          seenTitles.add(fullKey);
+          raws.push({
+            entry: { chunk_index: i, title: leafTitle, level: Math.min(baseLevel + 1, 4),
+                     volume: effectiveVolume, parent_volume: parentVolume,
+                     sections: sections.length ? sections : undefined },
+            rawChapterPath: chapterTitle,
+            skip: false,
+          });
+        }
+        continue;
+      }
 
       // Dedupe across the whole book by collapsed title — "目錄"/"目　錄"/
       // "目　　錄" all map to "目錄" and only the first stays in TOC.
