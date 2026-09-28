@@ -36,3 +36,15 @@ def test_consolidate_merges_same_section_and_collects_notes():
     assert "句子未完{{p:4}}傳統" in a["content"]          # 句中跨頁直接接上
     assert "\n\n(50) 譯註" in a["content"] and "(52) 譯註" in a["content"]
     assert out[1]["chunk_index"] == 1 and out[1]["content"].startswith("{{p:5}}")
+
+
+def test_suffix_marker_between_neighbours():
+    body = "法師頗為雷同。1930年7（民國十九年），他出生於上海附近，18由於家庭太過貧窮，被送進寺院19，當時"
+    out, found = cp.link_markers(body, [17, 18, 19])
+    assert found == [17, 18, 19]
+    assert "1930年[^17]（" in out
+
+
+def test_ascii_paren_and_degree_variants():
+    out, found = cp.link_markers("感謝 Ellen Kerrigan)2二人尤其盛情。倒影。1º我的希望", [2, 10])
+    assert found == [2, 10] and ")[^2]二人" in out and "。[^10]我的" in out

@@ -53,25 +53,63 @@ def split_page(content: str) -> tuple[str, list[tuple[int, str]]]:
     return body, notes
 
 
+_LEFT = r"(?:(?<=" + _CJK + r")|(?<=[，。、；：！？」』）)\],.;:]))"   # 註號前：中文字或中英標點
+_LEFT_LATIN = r"(?<=[A-Za-z])"                                       # 前是英文字母時，後面要接中文
+_RIGHT_STOP = r"(?![\d°º年月日%％頁])"
+
+
+def _variants(n: int) -> list[str]:
+    s = str(n)
+    out = [s]
+    if s.endswith("0"):
+        out += [s[:-1] + c for c in "°ºoO"]      # OCR：上標 50 → 5°／5º／5o
+    return out
+
+
+def _find(body: str, v: str, start: int, end: int):
+    rx = re.compile(r"(?:" + _LEFT + re.escape(v) + _RIGHT_STOP + r")|(?:" + _LEFT_LATIN + re.escape(v)
+                    + r"(?=" + _CJK + r"))")
+    m = rx.search(body, start, end)
+    return m
+
+
 def link_markers(body: str, numbers: list[int]) -> tuple[str, list[int]]:
-    """把正文裡的註號換成 `[^N]`，依序找（每個號碼只換第一個合格位置）。回傳 (新正文, 找到的號碼)。"""
-    found = []
+    """把正文裡的註號換成 `[^N]`，依序找（每個號碼只換第一個合格位置）。回傳 (新正文, 找到的號碼)。
+
+    第一輪：完整號碼（含 OCR 變體 5°＝50）。
+    第二輪（2026-09-27 使用者回報「1930年7」其實是註 17）：還沒找到的號碼，只在前後兩個已連上的
+    註號之間，找「掉了開頭位數」的寫法（17→7、123→23），避免在全文裡亂抓。"""
+    found: list[int] = []
     pos = 0
     for n in sorted(numbers):
-        variants = [str(n)]
-        if n % 10 == 0:
-            variants.append(str(n)[:-1] + "°")   # OCR：上標 50 → 5°
         best = None
-        for v in variants:
-            rx = re.compile(r"(?<=" + _CJK + r"|[，。、；：！？」』）])" + re.escape(v) + r"(?![\d°年月日%％頁])")
-            m = rx.search(body, pos)
+        for v in _variants(n):
+            m = _find(body, v, pos, len(body))
             if m and (best is None or m.start() < best.start()):
                 best = m
         if best:
-            body = body[:best.start()] + f"[^{n}]" + body[best.end():]
-            pos = best.start() + len(f"[^{n}]")
+            tag = f"[^{n}]"
+            body = body[:best.start()] + tag + body[best.end():]
+            pos = best.start() + len(tag)
             found.append(n)
-    return body, found
+    for n in sorted(set(numbers) - set(found)):
+        s = str(n)
+        if len(s) < 2:
+            continue
+        prev = max((f for f in found if f < n), default=None)
+        nxt = min((f for f in found if f > n), default=None)
+        lo = body.find(f"[^{prev}]") + len(f"[^{prev}]") if prev is not None else 0
+        hi = body.find(f"[^{nxt}]") if nxt is not None else len(body)
+        if lo < 0 or hi < lo:
+            continue
+        for cut in range(1, len(s)):
+            m = _find(body, s[cut:], lo, hi)
+            if m:
+                tag = f"[^{n}]"
+                body = body[:m.start()] + tag + body[m.end():]
+                found.append(n)
+                break
+    return body, sorted(found)
 
 
 def join_lines(text: str) -> str:
