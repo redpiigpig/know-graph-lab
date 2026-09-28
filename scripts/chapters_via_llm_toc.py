@@ -155,9 +155,13 @@ def main() -> int:
         rep = ROOT / "output/toc_audit/bookmark_chapters.tsv"
         ids = [l.split("\t")[0] for l in rep.read_text(encoding="utf-8").splitlines()
                if l.strip() and not l.split("\t")[1].startswith("merged")]
+    rp = ROOT / "output/toc_audit/llm_toc_chapters.tsv"
+    if rp.exists():   # 續跑：處理過的（不論成敗）不再呼叫模型
+        seen = {l.split("\t")[0] for l in rp.read_text(encoding="utf-8").splitlines() if l.strip()}
+        ids = [i for i in ids if i not in seen]
     if limit:
         ids = ids[:limit]
-    out = open(ROOT / "output/toc_audit/llm_toc_chapters.tsv", "a", encoding="utf-8")
+    out = open(rp, "a", encoding="utf-8")
     stat: dict[str, int] = {}
     for n, bid in enumerate(ids):
         p = CH / f"{bid}.jsonl"
