@@ -336,6 +336,20 @@ python scripts/align_reference.py --orig-id <原文ebook_id> --zh-id <中譯eboo
 內容對不上 27、無法判定 256。全書外文字重疊 ≥0.7 但被擋下的 18 對（加爾文《基督教要義》、切斯特頓
 《回到正統》×2、萊爾、圖倫丁第二冊…）在 `review_candidates.tsv`，要人工看，不要放寬閘門去收。
 
+**2026-09-28 民主妙法（Madsen ↔《民主妙法》）踩到的四個坑，已修進 `align_reference.py`**：
+1. **先修原文側章節再對齊**：英文本經 `chapters_via_llm_toc.py` 補章節時漏了第一、二章、
+   Notes 被吞進 Conclusions，對上率只有 45.8%、抽樣頁序倒退。對齊前先印兩邊 chapter_path 清單目視，
+   原文側章節不對就從 `.jsonl.bak_chapters` 逐頁備份按印刷目錄重派（PDF 頁－印刷頁差值要全書驗一致）。
+2. **目錄頁不可當章節錨點**：「目次」頁列出全部章名，會把 chapter_zone 往前撐開，導讀／謝辭／自序全算進正文、
+   不走前後附件配對。現在 toc 種類的 block 一律清空章節鍵；「目次」已補進 toc 關鍵字（排在「圖目次」之後判斷）。
+3. **中譯本自己加的篇章不按位置硬配**：導讀、中文版序、譯序、譯後記歸 `translator_note`，只會標「中譯本獨有」，
+   不參與位置兜底（曾把「譯後記」配到英文的 A Note on Romanization、「導讀」搶走 Preface）。
+   另補 `acknowledgments`（謝辭）、`illustrations`（圖目次）兩類，preface 補「自序」、postscript 補「結論」。
+4. **同種類相鄰小節合成一組再配**：中譯「結論」分兩小節、原文只一個 Conclusions，逐 block zip 會讓第二節落單。
+- `--anchors`：章內改用 `align_reference_anchors.distribute_with_anchors`（錨點校正，覆蓋率不比純比例差）。
+  民主妙法 72.9% → 79.2%，每章開頭都準確對到原書該章第一頁。子代理 93 組比較：0 組變差、1 組明顯變好。
+- 中文學術譯本括注外文少，`verify_same_book` 常落 undetermined；抽樣 10 對以上逐章核對過才加 `--force`。
+
 `--apply` 寫入前留 `{id}.jsonl.align.bak` 備份、寫完推 R2
 （`standardize_ebook.push_to_r2`）並 PATCH `ebooks.total_chars/standardized_at`。
 

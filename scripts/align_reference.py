@@ -307,12 +307,18 @@ def chapter_zone(blocks: list[dict]) -> tuple[int, int]:
 _ZONE_KEYWORDS: dict[str, tuple[str, ...]] = {
     "cover": ("cover", "title page", "imprint", "colophon", "uncopyright",
               "封面", "版權", "出版資訊", "扉頁"),
-    "toc": ("contents", "目錄", "目录"),
-    "preface": ("preface", "foreword", "introduction", "dedication",
-                "前言", "序言", "導讀", "导读", "獻詞", "献词"),
-    "translator_note": ("译者序", "譯者序", "译后记", "譯後記",
+    # 🚨 translator_note 要排在 preface 前面：「中文版序」含「序」字，先比到才不會被當原書序言
+    "translator_note": ("译者序", "譯者序", "译后记", "譯後記", "中文版序", "中譯本序", "中译本序",
+                         "導讀", "导读",   # 導讀是中譯本請人寫的，原書沒有（2026-09-28 民主妙法搶走 Preface）
                          "出版說明", "出版说明", "编者序", "編者序", "译者按", "譯者按"),
-    "postscript": ("postscript", "conclusion", "後記", "后记", "跋", "結語", "结语"),
+    "acknowledgments": ("acknowledg", "謝辭", "谢辞", "致謝", "致谢", "鳴謝", "鸣谢"),
+    "illustrations": ("list of illustrations", "list of figures", "list of tables",
+                      "圖目次", "图目次", "圖目錄", "图目录", "插圖", "插图", "表目次"),
+    "toc": ("contents", "目錄", "目录", "目次"),   # 🚨 要在 illustrations 之後：「圖目次」含「目次」
+    "preface": ("preface", "foreword", "introduction", "dedication",
+                "前言", "序言", "自序", "作者序", "獻詞", "献词"),
+    "postscript": ("postscript", "conclusion", "後記", "后记", "跋", "結語", "结语",
+                   "結論", "结论"),
     "notes": ("notes", "endnotes", "footnotes", "尾註", "尾注",
               "注釋", "注释", "附註", "附注"),
     "bibliography": ("bibliography", "references", "works cited",
@@ -496,14 +502,24 @@ def align_front_back(en_blocks: list[dict], zh_blocks: list[dict],
     en_idx = outside(en_blocks, en_lo, en_hi)
     zh_idx = outside(zh_blocks, zh_lo, zh_hi)
 
-    en_by_zone: dict[str | None, list[int]] = {}
-    for i in en_idx:
-        en_by_zone.setdefault(classify_zone(block_title(en_blocks[i])), []).append(i)
-    zh_by_zone: dict[str | None, list[int]] = {}
-    for i in zh_idx:
-        zh_by_zone.setdefault(classify_zone(block_title(zh_blocks[i])), []).append(i)
+    def by_zone(blocks, idx):
+        """種類 -> [一組相鄰同種類 block 的 index 串]。中譯本「結論」常分兩小節、原書只一個
+        Conclusions；逐 block zip 會讓第二小節落單，所以相鄰同種類先合成一組。"""
+        out: dict[str | None, list[list[int]]] = {}
+        prev_zone, prev_i = object(), None
+        for i in idx:
+            z = classify_zone(block_title(blocks[i]))
+            if z is not None and z == prev_zone and prev_i == i - 1:
+                out[z][-1].append(i)
+            else:
+                out.setdefault(z, []).append([i])
+            prev_zone, prev_i = z, i
+        return out
 
-    paired: list[tuple[int, int]] = []
+    en_by_zone = by_zone(en_blocks, en_idx)
+    zh_by_zone = by_zone(zh_blocks, zh_idx)
+
+    paired: list[tuple[list[int], list[int]]] = []
     used_en, used_zh = set(), set()
     for zone, en_list in en_by_zone.items():
         if zone is None:
@@ -511,14 +527,16 @@ def align_front_back(en_blocks: list[dict], zh_blocks: list[dict],
         zh_list = zh_by_zone.get(zone, [])
         for a, b in zip(en_list, zh_list):
             paired.append((a, b))
-            used_en.add(a)
-            used_zh.add(b)
+            used_en.update(a)
+            used_zh.update(b)
 
     # 剩下的按原順序位置配對（同樣種類都是 None 或種類數目不對等時的兜底）
     remain_en = [i for i in en_idx if i not in used_en]
-    remain_zh = [i for i in zh_idx if i not in used_zh]
+    # 中譯本自己加的（譯序、導讀、譯後記…）原書一定沒有，不參與按位置兜底配對，直接標中譯本獨有
+    remain_zh = [i for i in zh_idx if i not in used_zh
+                 and classify_zone(block_title(zh_blocks[i])) != "translator_note"]
     for a, b in zip(remain_en, remain_zh):
-        paired.append((a, b))
+        paired.append(([a], [b]))
         used_en.add(a)
         used_zh.add(b)
 
@@ -526,7 +544,8 @@ def align_front_back(en_blocks: list[dict], zh_blocks: list[dict],
     zh_only: list[dict] = []  # zh-only：中譯本獨有
 
     for a, b in paired:
-        en_block, zh_block = en_blocks[a], zh_blocks[b]
+        en_block = {"chunks": [c for i in a for c in en_blocks[i]["chunks"]]}
+        zh_block = {"chunks": [c for i in b for c in zh_blocks[i]["chunks"]]}
         en_text = "\n\n".join(c.get("content") or "" for c in en_block["chunks"])
         paras = moc.split_paras(en_text)
         members = zh_block["chunks"]
@@ -623,6 +642,11 @@ def align_book(en_chunks: list[dict], zh_chunks: list[dict], *,
 
     en_blocks = build_blocks(en, window=window)
     zh_blocks = build_blocks(zh, window=window)
+    # 目錄頁列出全部章名，會被抽到一整串章節鍵、把 chapter_zone 往前撐開，
+    # 結果序／導讀／謝辭都被算進正文、不走前後附件配對（2026-09-28 民主妙法）
+    for b in en_blocks + zh_blocks:
+        if classify_zone(block_title(b)) == "toc":
+            b["keys"] = ()
 
     en_lo, en_hi = chapter_zone(en_blocks)
     zh_lo, zh_hi = chapter_zone(zh_blocks)
@@ -945,6 +969,8 @@ def main() -> None:
     ap.add_argument("--window", type=int, default=250)
     ap.add_argument("--samples", type=int, default=5)
     ap.add_argument("--force", action="store_true", help="略過同一本書檢查（人工核對過才用）")
+    ap.add_argument("--anchors", action="store_true",
+                    help="章內改用錨點校正分配（align_reference_anchors；覆蓋率保證不比純比例差）")
     ap.add_argument("--engine", default="auto",
                     help="保留給日後低覆蓋率時的 LLM 輔助錨定（目前兩本 pilot 用純規則已足夠）")
     args = ap.parse_args()
@@ -955,7 +981,11 @@ def main() -> None:
     zh = load_jsonl(args.zh_id)
     print(f"原文 {len(en)} chunks／中譯 {len(zh)} chunks")
 
-    result = align_book(en, zh, window=args.window)
+    if args.anchors:
+        import align_reference_anchors as ara
+        result = align_book(en, zh, window=args.window, distribute_fn=ara.distribute_with_anchors)
+    else:
+        result = align_book(en, zh, window=args.window)
     samples = _sample_pairs(result["zh_chunks"], n=args.samples)
     print_report(args.orig_id, args.zh_id, result["report"], samples)
 
