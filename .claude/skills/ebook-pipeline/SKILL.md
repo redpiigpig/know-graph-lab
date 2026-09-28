@@ -1927,6 +1927,10 @@ Clean 750+ ebook chunks: convert simplified Chinese → traditional, fix formatt
 
 ## Workflow L — 目錄章節／切塊／頁碼準確度稽核（2026-09-27）
 
+> 2026-09-28 續：交接文件 `docs/SESSION_HANDOFF_ebook_quality_2026-09-28.md`（OCR／目錄章節／註腳／雙欄四線，含可貼 PROMPT）。
+> 新工具 `scripts/relink_missing_footnotes.py`：補「有註文、正文沒 [^N]」的註號（規則步驟＋`--llm` 模型定位，`--scan` 全館盤點）。
+> 🚨 `chapters_via_llm_toc.py` 覆蓋過半就放行，會漏章（Madsen 英文本漏第一、二章），補好的 473 本要再稽核。
+
 `scripts/audit_toc_accuracy.py`（唯讀，讀 Drive `_chunks/*.jsonl` 約 30 分鐘）→ `output/toc_audit/toc_audit.tsv`（一書一列）＋ `summary.md`。
 `audit_book_structure.py` 只數「有沒有章節」，這支驗「對不對」：
 
