@@ -42,9 +42,28 @@ KEEP = ("chunk_index", "chunk_type", "page_number", "page_numbers", "printed_pag
         "chapter_path", "volume", "parent_volume", "format")
 
 
+_PAGE_RE = re.compile(r"\{\{p:([^{}]+)\}\}")
+_BROKEN_PAGE_RE = re.compile(r"(?<!\{)[{｛]\s*p\s*[:：]\s*([^{}｛｝]+?)\s*[}｝](?!\})")
+
+
+def fix_markers(src: str, zh: str) -> str:
+    """模型常把 {{p:6}} 吃成 {p:6}（09-28 聶斯脫里派教會 9 塊壞 3 塊）→ 改回雙括號；
+    原文沒有的 [^N] 註號連結（OCR 上標「shepherd.5」被模型自作主張改成連結，點下去找不到註）→ 改回純數字。"""
+    zh = _BROKEN_PAGE_RE.sub(lambda m: "{{p:" + m.group(1) + "}}", zh)
+    src_refs = set(re.findall(r"\[\^(\d+)\]", src))
+    return re.sub(r"\[\^(\d+)\]", lambda m: m.group(0) if m.group(1) in src_refs else m.group(1), zh)
+
+
+def missing_pages(src: str, zh: str) -> list[str]:
+    have = _PAGE_RE.findall(zh)
+    return [p for p in _PAGE_RE.findall(src) if p not in have]
+
+
 def translate_piece(piece: str) -> str:
-    """Gemini 先、NVIDIA 後；都失敗 raise。截短閘同 translate_ebook_to_zh（中文字 <0.15×原文長度＝截短）。"""
-    last = None
+    """Gemini 先、NVIDIA 後；都失敗 raise。
+    截短閘：≥300 字而中文字 <0.12×原文長度＝截短（09-28 目錄頁 583 字只回「目錄」兩字；原本只驗 ≥1500 字）。
+    頁碼閘：原文的 {{p:N}} 譯文一個都不能少，少了換引擎重譯；全部引擎都掉標記才退而把缺的補在開頭。"""
+    last, best = None, None
     for fn in (te.gemini_translate, te.nvidia_translate):
         for _ in range(2):
             try:
@@ -52,10 +71,18 @@ def translate_piece(piece: str) -> str:
             except Exception as e:  # noqa: BLE001
                 last = e
                 break                                   # 這個引擎不行，換下一個
+            out = fix_markers(piece, out or "")
             cjk = len(re.findall(r"[\u4e00-\u9fff]", out or ""))
-            if out and not (len(piece) >= 1500 and cjk < 0.15 * len(piece)):
+            if not out or (len(piece) >= 300 and cjk < 0.12 * len(piece)):
+                last = RuntimeError(f"truncated ({cjk} CJK / {len(piece)})")
+                continue
+            lost = missing_pages(piece, out)
+            if not lost:
                 return out
-            last = RuntimeError(f"truncated ({cjk} CJK / {len(piece)})")
+            best = best or out
+            last = RuntimeError(f"page markers lost {lost}")
+    if best is not None:                                # 內容完整、只掉頁碼：補在開頭，頁碼至少不丟
+        return "".join("{{p:" + p + "}}" for p in missing_pages(piece, best)) + best
     raise RuntimeError(str(last)[:200])
 
 
@@ -128,7 +155,21 @@ def run_book(bid: str, dry: bool) -> bool | None:
             shutil.copy2(live, src)
     chunks = [json.loads(l) for l in (src if src.exists() else live).open(encoding="utf-8") if l.strip()]
     done = load_progress(bid)
-    todo = [i for i, c in enumerate(chunks) if translatable(c) and i not in done]
+    # 舊版（09-28 前）存進來的譯文沒過頁碼／截短閘：組裝前一律補修，救不回的剔掉重譯
+    for i in list(done):
+        if i >= len(chunks):
+            del done[i]
+            continue
+        src_i = chunks[i].get("content") or ""
+        zh_i = fix_markers(src_i, done[i])
+        cjk = len(re.findall("[一-鿿]", zh_i))
+        if len(src_i) >= 300 and cjk < 0.12 * len(src_i):
+            print(f"  ↺ 塊 {i} 舊譯文過短（{cjk} 字 / 原文 {len(src_i)}），重譯", flush=True)
+            del done[i]
+            continue
+        lost = missing_pages(src_i, zh_i)
+        done[i] = "".join("{{p:" + p + "}}" for p in lost) + zh_i
+    todo =[i for i, c in enumerate(chunks) if translatable(c) and i not in done]
     print(f"  {len(chunks)} 塊，已譯 {len(done)}，待譯 {len(todo)}", flush=True)
     if dry:
         return False
