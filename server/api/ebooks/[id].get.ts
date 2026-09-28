@@ -42,6 +42,9 @@ export default defineEventHandler(async (event) => {
           id: `${id}-${chunkIndex}`,
           page_number: chunk.page_number ?? chunkIndex + 1,
           printed_page: chunk.printed_page ?? null,
+          // 自譯（translate_ebook_to_zh 會留 title_en；library_translate_queue 寫 translation='self'）
+          self_translated: !!chunk.source_text
+            && (!!(chunk as any).title_en || (chunk as any).translation === "self"),
           chapter_path: chunk.chapter_path,
           chunk_type: chunk.chunk_type,
           content: chunk.content,

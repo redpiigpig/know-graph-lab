@@ -103,6 +103,7 @@ $STALL_PER_LANE = @{
     'sbe-b2-s5'      = 90
     'mineru-queue'   = 180   # one log line per BOOK; a 500-page scan runs 30+ min on the GPU
     'spiral-staircase' = 120 # one line per ~20k-char piece; a 3-failure wall sleeps 30 min
+    'library-religion' = 120 # library_translate_queue: one line per chunk; stops a round after 5 engine failures
     'litreview-retrans' = 60 # one line per batch of <=6 paragraphs; NVIDIA deadline 420s + Haiku
 }
 function StallLimit($label) {
@@ -293,6 +294,8 @@ EnsureUntil 'jmeiji-s1' $py @('-X','utf8','scripts\japanese_bible.py','translate
 # The worker prints TRANSLATE_BOOK_COMPLETE only when every source chunk is in the JSONL, R2 took
 # it, and the Chinese-only .docx beside the PDF was written and read back clean - engine errors
 # leave chunks missing, so an outage never retires the lane (STRICT_COMPLETE rule).
+# 2026-09-28 user: translate religious-studies books, thesis-related first (output/translation_queue/religion_queue.tsv)
+EnsureUntil 'library-religion' $py @('-X','utf8','-u','scripts\library_translate_queue.py') 'LIBRARY_QUEUE_COMPLETE'
 EnsureUntil 'spiral-staircase' $py @('-X','utf8','-u','scripts\translate_ebook_to_zh.py','39e70498-9d27-437c-909a-793a927d52d0','--engine','auto','--resume','--max-piece','6000','--docx-out','next-to-source') 'TRANSLATE_BOOK_COMPLETE'
 
 # Collected works -> one Word reader per book on Drive (user 2026-09-23: "Drive needs a Word

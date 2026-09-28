@@ -615,6 +615,8 @@ const pageDhNumber = ref<number | null>(null);
 const pagePdfPage = ref<number | null>(null);
 // 原書印刷頁碼：引用優先用它（PDF 實體頁序會因前言羅馬頁、插頁而錯開，照著引會引錯頁）。
 const pagePrintedPage = ref<number | null>(null);
+// 這一塊是不是我們自己翻譯的（有 source_text 且帶 title_en／translation=self）→ 中文欄頁碼寫 t.N
+const pageSelfTranslated = ref(false);
 const dhJumpInput = ref<string>("");
 const isBilingualMode = computed(() => ebook.value?.display_mode === "bilingual-parallel");
 
@@ -945,8 +947,12 @@ function inlineFmt(s: string, chunkIdx: number | null = null) {
   // Print page markers `{{p:N}}` (injected by extract_epub_extras.py).
   // Rendered as tiny inline pill that doesn't disrupt the prose but lets
   // citation generation pick up the original page number under the cursor.
-  out = out.replace(/\{\{p:(\d+)\}\}/g, (_, n) =>
-    `<span class="page-marker" data-page="${n}" title="原書頁碼 ${n}">[頁${n}]</span>`
+  // 2026-09-28 使用者定：我們自己翻譯的書，中文欄的頁碼寫「t.13」（＝對照原文第 13 頁，論文引原文頁）；
+  // 原文欄、以及轉錄來的中譯本（各自有頁數）照寫數字。中文欄的 chunkIdx < 100000，原文欄有偏移。
+  const tPrefix = pageSelfTranslated.value && chunkIdx !== null && chunkIdx < 100000;
+  out = out.replace(/\{\{p:(\d+)\}\}/g, (_, n) => tPrefix
+    ? `<span class="page-marker" data-page="${n}" data-t="1" title="對照原文第 ${n} 頁">[t.${n}]</span>`
+    : `<span class="page-marker" data-page="${n}" title="原書頁碼 ${n}">[頁${n}]</span>`
   );
   return out;
 }
@@ -1504,6 +1510,7 @@ async function loadPage(page: number) {
   pageDhNumber.value = data?.currentPage?.dh_number ?? null;
   pagePdfPage.value = data?.currentPage?.page_number ?? null;
   pagePrintedPage.value = data?.currentPage?.printed_page ?? null;
+  pageSelfTranslated.value = !!data?.currentPage?.self_translated;
   pageLoading.value = false;
   jumpPage.value = page;
 
@@ -2081,7 +2088,7 @@ async function confirmSaveExcerpt() {
 // page). Works in both single-column and bilingual modes. The user gets
 // raw selection (no citation) by holding Shift+Cmd/Ctrl-C — too far in
 // the weeds for v1; default copy is always augmented.
-function findNearestPageBeforeNode(startNode: Node | null): number | null {
+function findNearestPageBeforeNode(startNode: Node | null): number | string | null {
   if (!startNode) return null;
   // Walk backwards in document order from startNode looking for a
   // .page-marker element. We scope to the article container so we don't
@@ -2111,7 +2118,8 @@ function findNearestPageBeforeNode(startNode: Node | null): number | null {
     best = markers[0];
   }
   const n = parseInt(best.dataset.page || "", 10);
-  return Number.isFinite(n) ? n : null;
+  if (!Number.isFinite(n)) return null;
+  return best.dataset.t === "1" ? `t.${n}` : n;   // 自譯中文欄引原文頁：p. t.13
 }
 
 // Strip parenthetical annotations that contain CJK characters and any
@@ -2146,7 +2154,7 @@ function joinNamesChicago(s: string): string {
   return parts.slice(0, -1).join(", ") + ", and " + parts[parts.length - 1];
 }
 
-function buildChicagoCitation(pageNum: number | null): string {
+function buildChicagoCitation(pageNum: number | string | null): string {
   const b = ebook.value;
   if (!b) return "";
   // Pure English Chicago citation — no Chinese characters.
