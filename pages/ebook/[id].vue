@@ -51,16 +51,24 @@
           </button>
           <!-- Aa 閱讀設定：字級/行距/主題，CSS 變數作用於閱讀區，localStorage 持久化 -->
           <EbookDisplaySettings v-model="displaySettings" />
-          <!-- 🔊 朗讀本頁 — 裝置 SpeechSynthesis（Edge 神經語音免費）；換頁自動停 -->
+          <!-- 🔊 朗讀本頁 — 預設 Gemini 雲端語音（音色自然）；額度用盡自動改裝置語音；換頁自動停 -->
           <button @click="toggleReadAloud"
             :disabled="!tts.supported.value"
-            :title="!tts.supported.value ? '此瀏覽器不支援語音合成' : tts.playing.value ? '停止朗讀' : '朗讀本頁（裝置語音）'"
+            :title="!tts.supported.value ? '此瀏覽器不支援朗讀' : tts.playing.value ? '停止朗讀'
+              : tts.engine.value === 'gemini' ? `朗讀本頁（Gemini 語音・${tts.geminiVoice.value}）` : '朗讀本頁（裝置語音）'"
             :class="['hidden md:flex items-center gap-1 px-2 py-1 rounded-md text-xs transition border flex-shrink-0',
               tts.playing.value
                 ? 'bg-red-100 text-red-800 border-red-300'
                 : 'bg-white text-stone-600 border-stone-200 hover:border-blue-400 hover:text-blue-700 disabled:opacity-40']">
-            <span>{{ tts.playing.value ? '⏹' : '🔊' }}</span><span>{{ tts.playing.value ? '停止' : '朗讀' }}</span>
+            <span>{{ tts.loading.value ? '⏳' : tts.playing.value ? '⏹' : '🔊' }}</span><span>{{ tts.playing.value ? '停止' : '朗讀' }}</span>
           </button>
+          <select v-model="ttsChoice" title="朗讀語音"
+            class="hidden md:block px-1 py-1 rounded-md text-xs border border-stone-200 bg-white text-stone-600 flex-shrink-0 max-w-[7.5rem]">
+            <option v-for="v in ttsGeminiVoices" :key="v" :value="`gemini:${v}`">Gemini・{{ v }}</option>
+            <option v-if="tts.deviceSupported.value" value="device">裝置語音</option>
+          </select>
+          <span v-if="tts.notice.value" class="hidden md:inline text-[11px] text-amber-700 truncate max-w-[14rem]"
+            :title="tts.notice.value">{{ tts.notice.value }}</span>
           <!-- 📄 原頁／原版模式 — 即時渲染真實原檔（PDF→pdf.js 真頁；EPUB→epub.js
                原樣排版）。掃描書／版面亂的書讀真頁比讀轉錄好；對任何有原檔的書
                都當逃生口提供。 -->
@@ -623,6 +631,17 @@ const displaySettings = ref<{ fontScale: number; lineHeight: number; theme: 'lig
 
 // 🔊 朗讀：從「目前渲染的中文閱讀區 DOM」收段落（與畫面 1:1 對齊，正在唸的段落高亮）
 const tts = useReaderTts();
+const ttsGeminiVoices = GEMINI_VOICES;
+// 選單值：「gemini:<音色>」或「device」；改選時停掉正在念的，下次按朗讀用新語音
+const ttsChoice = computed({
+  get: () => tts.engine.value === "gemini" ? `gemini:${tts.geminiVoice.value}` : "device",
+  set: (v: string) => {
+    if (tts.playing.value) { tts.stop(); clearTtsHighlight(); }
+    if (v === "device") { tts.engine.value = "device"; return; }
+    tts.engine.value = "gemini";
+    tts.geminiVoice.value = v.slice("gemini:".length);
+  },
+});
 let ttsEls: HTMLElement[] = [];
 function clearTtsHighlight() {
   for (const el of ttsEls) el.classList.remove("tts-reading");
