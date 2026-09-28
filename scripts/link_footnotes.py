@@ -213,7 +213,7 @@ def eligible_book(chunks: list[dict]) -> str:
     return ""
 
 
-def dry_run_book(ebook_id: str) -> dict | None:
+def dry_run_book(ebook_id: str, apply: bool = False) -> dict | None:
     p = CH / f"{ebook_id}.jsonl"
     if not p.exists():
         return None
@@ -227,6 +227,7 @@ def dry_run_book(ebook_id: str) -> dict | None:
     total_entries = 0
     total_linked = 0
     kinds = {}
+    changed_any = False
     for c in chunks:
         fmt = c.get("format")
         if fmt and fmt not in ("markdown", "text", "md"):
@@ -236,7 +237,21 @@ def dry_run_book(ebook_id: str) -> dict | None:
             total_entries += r["entries"]
             total_linked += r["linked"]
             kinds[r["kind"]] = kinds.get(r["kind"], 0) + 1
-    return {"entries": total_entries, "linked": total_linked, "kinds": kinds}
+            if apply and r.get("changed"):
+                c["content"] = r["new_content"]
+                changed_any = True
+    if apply and changed_any:
+        # 2026-09-28 正式寫入：留 .jsonl.bak_footnotes（已有就不覆蓋），寫回＋推 R2＋更新 DB
+        import shutil
+        sys.path.insert(0, str(PROJECT_ROOT / "scripts"))
+        import standardize_ebook as se  # noqa: E402
+        bak = p.with_suffix(".jsonl.bak_footnotes")
+        if not bak.exists():
+            shutil.copy2(p, bak)
+        out = se.write_jsonl(ebook_id, chunks)
+        se.push_to_r2(ebook_id, out)
+        se.update_db(ebook_id, chunks)
+    return {"entries": total_entries, "linked": total_linked, "kinds": kinds, "written": bool(apply and changed_any)}
 
 
 def fetch_library_ids(limit: int | None = None) -> list[dict]:
@@ -269,6 +284,7 @@ def main() -> int:
     ap.add_argument("--sample", type=int, default=0)
     ap.add_argument("--seed", type=int, default=20260928)
     ap.add_argument("--all", action="store_true")
+    ap.add_argument("--apply", action="store_true", help="正式寫入（留 .jsonl.bak_footnotes）")
     args = ap.parse_args()
 
     if args.ids:
@@ -287,7 +303,7 @@ def main() -> int:
     total_entries = 0
     total_linked = 0
     for row in library:
-        res = dry_run_book(row["id"])
+        res = dry_run_book(row["id"], apply=args.apply)
         if res is None or res.get("skip") or not res.get("entries"):
             continue
         n_books_with_entries += 1
