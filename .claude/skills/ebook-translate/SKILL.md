@@ -620,3 +620,14 @@ Python 測試套件在 `scripts/tests/`（`npm run test:py`），與 Vue 的 vit
 5. **救援**：Drive 網頁 → 檔案 → 管理版本（保留 30 天）。
 
 事故：2026-09-24 獎學金論文連續五次從 md 重建蓋掉修改；2026-09-26 弘青網路學堂文案定稿又從法師修訂稿整份重建，蓋掉使用者在定稿上的修改。
+
+## 電子圖書館外文書中譯佇列（lane `library-religion`，2026-09-28）
+
+- **順序**（使用者定）：跟博論、碩論相關的最先，再來宗教學與宗教史。書單由 `scripts/build_translation_queue.py` 產生到 `output/translation_queue/religion_queue.tsv`。
+- **腳本** `scripts/library_translate_queue.py`：從現有 JSONL 翻，不從原檔重新解析，因為 PDF 重解析會清掉頁碼。第一次處理先存 `{id}.jsonl.src_en` 快照。逐塊譯好就寫進 `output/translation_queue/progress/{id}.jsonl`，全書譯完才一次換檔、推 R2、更新 DB。還沒補章節的一頁一塊書先跳過。
+- **引擎** Gemini 再 NVIDIA，不接 Haiku。成品每塊帶 `translation: "self"`，閱讀器中文欄頁碼顯示 t.N。
+- 🚨 **模型會弄壞標記**（09-28 聶斯脫里派教會前 9 塊壞 3 塊）：
+  - `{{p:6}}` 被吃成 `{p:6}`，閱讀器認不得，頁碼以原文字樣露出。`fix_markers` 改回雙括號，仍缺就換引擎重譯，全部引擎都掉才補在塊首。
+  - OCR 上標註號「shepherd.5」被模型改成 `[^5]` 連結，點下去找不到註。原文沒有的 `[^N]` 一律改回純數字。
+  - 目錄頁 583 字只回「目錄」兩字。截短閘原本只驗 1500 字以上的塊，現在 300 字以上就驗。
+  - 組裝前對進度檔裡的舊譯文再跑一次上述修補，救不回的剔掉重譯。
