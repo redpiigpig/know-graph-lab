@@ -415,10 +415,21 @@ def _flat_len(chunks: list[dict]) -> int:
     return sum(len(c.get("content") or "") for c in chunks) or 1
 
 
-def align_chapter_blocks(en_blocks: list[dict], zh_blocks: list[dict]) -> dict:
+def _default_distribute_fn(paras: list[str], weights: list[int],
+                            members: list[dict]) -> list[str]:
+    """預設段落分配：純累計字數比例（沿用 merge_original_column.distribute）。
+    `members`（本 block 對應的中譯 chunk）留給錨點校正版本用，預設版本不看。"""
+    return moc.distribute(paras, weights)
+
+
+def align_chapter_blocks(en_blocks: list[dict], zh_blocks: list[dict], *,
+                          distribute_fn=_default_distribute_fn) -> dict:
     """章節區的核心：把有章節鍵的 en block 對到 zh 的對應章節 chunk 群，
     段落層按累計字數比例分配。回傳 {"filled": [...更新後的 zh chunk...],
     "matched_chapters": int, "gap_chapters": [(keys, n_zh_chunks), ...]}。
+
+    `distribute_fn(paras, weights, members) -> list[str]`：可替換成錨點校正版本
+    （見 align_reference_anchors.py），預設是純比例分配，行為與改動前完全一致。
     """
     zh_by_key: dict[tuple, list[dict]] = {}
     zh_key_order: list[tuple] = []
@@ -457,7 +468,7 @@ def align_chapter_blocks(en_blocks: list[dict], zh_blocks: list[dict]) -> dict:
         cleaned = moc.strip_running_heads(en_text, title_words) if title_words else en_text
         paras = moc.split_paras(cleaned)
         weights = [len(m.get("content") or "") or 1 for m in members]
-        parts = moc.distribute(paras, weights)
+        parts = distribute_fn(paras, weights, members)
         for m, p in zip(members, parts):
             m["source_text"] = p
             m["source_lang"] = "en"
@@ -593,7 +604,8 @@ def align_notes(en_blocks: list[dict], zh_blocks: list[dict]) -> dict:
 
 
 def align_book(en_chunks: list[dict], zh_chunks: list[dict], *,
-               window: int = 250, apply_translator_notes: bool = True) -> dict:
+               window: int = 250, apply_translator_notes: bool = True,
+               distribute_fn=_default_distribute_fn) -> dict:
     """全書對齊主流程。回傳 {"zh_chunks": [...], "report": {...}}。
 
     `zh_chunks` 是深拷貝過的（不動呼叫端傳進來的原始 list），只有這裡回傳的
@@ -615,7 +627,7 @@ def align_book(en_chunks: list[dict], zh_chunks: list[dict], *,
     en_lo, en_hi = chapter_zone(en_blocks)
     zh_lo, zh_hi = chapter_zone(zh_blocks)
 
-    ch_result = align_chapter_blocks(en_blocks, zh_blocks)
+    ch_result = align_chapter_blocks(en_blocks, zh_blocks, distribute_fn=distribute_fn)
     fb_result = align_front_back(en_blocks, zh_blocks, en_lo, en_hi, zh_lo, zh_hi)
     notes_result = align_notes(en_blocks, zh_blocks)
 
