@@ -80,6 +80,7 @@
               <span class="text-xs text-stone-400">段 {{ (currentPage - 1) * PAGE_SIZE + 1 }}–{{ Math.min(currentPage * PAGE_SIZE, docData.sections.length) }}</span>
             </header>
 
+            <div class="mb-2 flex justify-end"><ReaderTtsControls selector="[data-tts-zh]" :reset-key="currentPage" /></div>
             <!-- Column controls -->
             <div class="grid gap-2 mb-4" :style="{ gridTemplateColumns: gridCols }">
               <div v-for="(col, idx) in columns" :key="idx" class="bg-white border border-gray-200 rounded px-2 py-1 flex items-center gap-1">
@@ -104,7 +105,8 @@
                 </div>
                 <div class="grid gap-px bg-gray-100" :style="{ gridTemplateColumns: gridCols }">
                   <div v-for="(col, idx) in columns" :key="idx"
-                    class="bg-white px-4 py-3 text-[15px] leading-7 text-gray-900 whitespace-pre-line">
+                    class="bg-white px-4 py-3 text-[15px] leading-7 text-gray-900 whitespace-pre-line"
+                    :data-tts-zh="col.category === 'chinese' ? '' : undefined">
                     <template v-if="col.versionCode && s.byVersion[col.versionCode]">{{ s.byVersion[col.versionCode] }}</template>
                     <span v-else class="text-gray-300 italic text-xs">—</span>
                   </div>

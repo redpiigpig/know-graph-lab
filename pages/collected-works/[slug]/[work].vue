@@ -76,9 +76,25 @@
             <!-- ── 三欄逐段（引用號 + 繁中 + 原文欄…）；封面 chunk 不出 body ── -->
             <template v-if="!isCover">
               <!-- ── 三欄逐段 ── -->
-            <div class="mb-4 flex items-baseline gap-2">
+            <div class="mb-4 flex items-baseline gap-2 flex-wrap">
               <h2 class="text-base font-semibold text-stone-800">{{ cp.title }}</h2>
               <span v-if="cp.sub" class="text-xs text-stone-400">{{ cp.sub }}</span>
+              <!-- 🔊 朗讀本頁中文欄：預設 Gemini 語音，額度用盡自動改裝置語音（useReaderTts） -->
+              <span class="ml-auto flex items-center gap-1">
+                <button @click="toggleReadAloud" :disabled="!tts.supported.value"
+                  :class="['flex items-center gap-1 px-2 py-0.5 rounded-md text-xs border transition',
+                    tts.playing.value ? 'bg-red-100 text-red-800 border-red-300'
+                      : 'bg-white text-stone-600 border-stone-200 hover:border-blue-400 hover:text-blue-700']">
+                  <span>{{ tts.loading.value ? '⏳' : tts.playing.value ? '⏹' : '🔊' }}</span>
+                  <span>{{ tts.playing.value ? '停止' : '朗讀' }}</span>
+                </button>
+                <select v-model="ttsChoice" title="朗讀語音"
+                  class="px-1 py-0.5 rounded-md text-xs border border-stone-200 bg-white text-stone-600 max-w-[7.5rem]">
+                  <option v-for="v in ttsGeminiVoices" :key="v" :value="`gemini:${v}`">Gemini・{{ v }}</option>
+                  <option v-if="tts.deviceSupported.value" value="device">裝置語音</option>
+                </select>
+              </span>
+              <p v-if="tts.notice.value" class="w-full text-[11px] text-amber-700">{{ tts.notice.value }}</p>
             </div>
             <!-- column headers -->
             <div class="grid gap-px mb-1 sticky top-14 z-10" :style="{ gridTemplateColumns: gridCols }">
@@ -177,6 +193,45 @@ function splitLead(s: string): { label: string; rest: string } {
 }
 
 const page = ref(Math.max(1, Number(route.query.p) || 1))
+
+// 🔊 朗讀（2026-09-27）：只念中文欄，依畫面順序；正在念的格子淡黃底並捲到中央；換頁自動停
+const tts = useReaderTts()
+const ttsGeminiVoices = GEMINI_VOICES
+const ttsChoice = computed({
+  get: () => tts.engine.value === 'gemini' ? `gemini:${tts.geminiVoice.value}` : 'device',
+  set: (v: string) => {
+    if (tts.playing.value) stopReadAloud()
+    if (v === 'device') { tts.engine.value = 'device'; return }
+    tts.engine.value = 'gemini'
+    tts.geminiVoice.value = v.slice('gemini:'.length)
+  },
+})
+let ttsEls: HTMLElement[] = []
+const TTS_HL = ['bg-amber-50']
+function stopReadAloud() {
+  tts.stop()
+  for (const el of ttsEls) el.classList.remove(...TTS_HL)
+}
+function toggleReadAloud() {
+  if (tts.playing.value) { stopReadAloud(); return }
+  ttsEls = []
+  const texts: string[] = []
+  for (const el of Array.from(document.querySelectorAll('article [lang="zh-Hant"]')) as HTMLElement[]) {
+    const t = (el.innerText || '').trim()
+    if (!t || t === '—') continue
+    ttsEls.push(el)
+    texts.push(t)
+  }
+  tts.speakQueue(texts)
+}
+watch(tts.currentIdx, (i, prev) => {
+  if (prev !== undefined && prev >= 0 && ttsEls[prev]) ttsEls[prev].classList.remove(...TTS_HL)
+  if (i >= 0 && ttsEls[i]) {
+    ttsEls[i].classList.add(...TTS_HL)
+    ttsEls[i].scrollIntoView({ block: 'center', behavior: 'smooth' })
+  }
+})
+watch(page, () => { if (tts.playing.value) stopReadAloud() })
 const jump = ref(page.value)
 
 // Fetch client-side (like /ebook) — the /api/ebooks route requireAuth()s a

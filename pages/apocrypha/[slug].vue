@@ -52,6 +52,7 @@
             :class="p === currentPage ? 'bg-stone-900 text-white border-stone-900' : 'bg-white text-gray-600 border-gray-200 hover:border-stone-300'">{{ p }}</button>
         </div>
 
+        <div class="mb-2 flex justify-end"><ReaderTtsControls selector="[data-tts-zh]" :reset-key="`${currentChapter}-${currentPage}`" /></div>
         <!-- Column controls -->
         <div class="grid gap-3 mb-4" :style="{ gridTemplateColumns: gridCols }">
           <div v-for="(col, idx) in columns" :key="idx" class="bg-white border border-gray-200 rounded-md px-2 py-1.5 flex items-center gap-1">
@@ -78,7 +79,8 @@
                 <div class="bg-stone-50 px-2 py-2 text-xs font-mono font-semibold text-amber-700/80 flex items-start tabular-nums select-none">{{ s.verse }}</div>
                 <div v-for="(col, idx) in columns" :key="idx"
                   class="bg-white px-3 py-2 text-[15px] leading-7 text-gray-900 whitespace-pre-line"
-                  :class="textClassFor(col.versionCode)">
+                  :class="textClassFor(col.versionCode)"
+                  :data-tts-zh="col.category === 'chinese' ? '' : undefined">
                   <template v-if="col.versionCode && s.byVersion[col.versionCode]">
                     <span v-html="renderWithFootnotes(s.byVersion[col.versionCode], s.order_index)" />
                   </template>
@@ -115,7 +117,7 @@
             <article v-for="s in pagedLegacy" :key="s.order_index" :id="`section-${s.order_index}`" class="bg-white border border-gray-200 rounded-md overflow-hidden">
               <div v-if="s.page_number" class="flex items-center gap-2 px-3 py-1 bg-stone-50 border-b border-stone-100 text-[10px] text-stone-500"><span class="font-mono">p.{{ s.page_number }}</span></div>
               <div class="grid gap-px bg-gray-100" :style="{ gridTemplateColumns: gridCols }">
-                <div v-for="(col, idx) in columns" :key="idx" class="bg-white px-4 py-3 text-[15px] leading-7 text-gray-900 whitespace-pre-line" :class="textClassFor(col.versionCode)">
+                <div v-for="(col, idx) in columns" :key="idx" class="bg-white px-4 py-3 text-[15px] leading-7 text-gray-900 whitespace-pre-line" :class="textClassFor(col.versionCode)" :data-tts-zh="col.category === 'chinese' ? '' : undefined">
                   <template v-if="col.versionCode && s.byVersion[col.versionCode]"><span v-html="renderWithFootnotes(s.byVersion[col.versionCode], s.order_index)" /></template>
                   <span v-else class="text-gray-300 italic text-xs">—</span>
                 </div>
