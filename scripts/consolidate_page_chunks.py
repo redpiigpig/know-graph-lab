@@ -55,7 +55,9 @@ def split_page(content: str) -> tuple[str, list[tuple[int, str]]]:
 
 _LEFT = r"(?:(?<=" + _CJK + r")|(?<=[，。、；：！？」』）)\],.;:]))"   # 註號前：中文字或中英標點
 _LEFT_LATIN = r"(?<=[A-Za-z])"                                       # 前是英文字母時，後面要接中文
-_RIGHT_STOP = r"(?![\d°º年月日%％頁])"
+# 2026-09-28：後面接千分位（5,000／1萬7,000）或 } 的不是註號（link_footnotes 曾把「5,000萬」連成 [^5],000）
+_RIGHT_STOP = r"(?![\d°º年月日%％頁}]|[,，]\d)"
+_PAGE_MARK = re.compile(r"\{\{p:[^}]*\}\}")
 
 
 def _variants(n: int) -> list[str]:
@@ -79,6 +81,9 @@ def link_markers(body: str, numbers: list[int]) -> tuple[str, list[int]]:
     第一輪：完整號碼（含 OCR 變體 5°＝50）。
     第二輪（2026-09-27 使用者回報「1930年7」其實是註 17）：還沒找到的號碼，只在前後兩個已連上的
     註號之間，找「掉了開頭位數」的寫法（17→7、123→23），避免在全文裡亂抓。"""
+    # 🚨 頁碼標記 {{p:34}} 先換成等長佔位字元再比對，否則「:34」會被當成註號（09-28 曾破壞 83 本頁碼）
+    marks = _PAGE_MARK.findall(body)
+    body = _PAGE_MARK.sub(lambda m: "" * len(m.group(0)), body)
     found: list[int] = []
     pos = 0
     for n in sorted(numbers):
@@ -109,6 +114,8 @@ def link_markers(body: str, numbers: list[int]) -> tuple[str, list[int]]:
                 body = body[:m.start()] + tag + body[m.end():]
                 found.append(n)
                 break
+    it = iter(marks)
+    body = re.sub("+", lambda m: next(it), body)   # 佔位字元還原成原本的頁碼標記
     return body, sorted(found)
 
 

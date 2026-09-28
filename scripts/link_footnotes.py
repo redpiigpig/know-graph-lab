@@ -210,6 +210,10 @@ def eligible_book(chunks: list[dict]) -> str:
     """回傳空字串＝可處理；否則回略過原因（雙語書一律跳過，交給 ebook-translate 那條線）。"""
     if any(("source_text" in c or "sources" in c) for c in chunks):
         return "bilingual-skip"
+    # 2026-09-28：已合併成一節一塊的書（有 page_numbers）註釋由 consolidate_page_chunks 處理；
+    # 這支再跑一次曾把 {{p:34}} 頁碼標記與「5,000萬」連成註號，83 本全數還原。
+    if any(c.get("page_numbers") for c in chunks):
+        return "consolidated-skip"
     return ""
 
 

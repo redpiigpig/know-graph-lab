@@ -48,3 +48,10 @@ def test_suffix_marker_between_neighbours():
 def test_ascii_paren_and_degree_variants():
     out, found = cp.link_markers("感謝 Ellen Kerrigan)2二人尤其盛情。倒影。1º我的希望", [2, 10])
     assert found == [2, 10] and ")[^2]二人" in out and "。[^10]我的" in out
+
+
+def test_page_markers_and_thousands_not_footnotes():
+    body = "慈濟將募集超過2億5,000萬美元。由1萬7,000名委員組成。分會，\n\n{{p:34}}我所參與的研究{{p:35}}圖2"
+    out, found = cp.link_markers(body, [5, 7, 34, 35])
+    assert found == []
+    assert "{{p:34}}" in out and "{{p:35}}" in out and "5,000" in out and "1萬7,000" in out
