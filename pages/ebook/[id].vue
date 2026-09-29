@@ -2264,6 +2264,30 @@ useHead({ title: computed(() => ebook.value ? `${ebook.value.title} — 閱讀` 
      explicit load keeps render consistent across machines)
    - ZCOOL XiaoWei: 楷書風格的繁中字體，作為 blockquote 引用字體 (近似標楷體) */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700&family=ZCOOL+XiaoWei&display=swap');
+
+/* 段號 `{{s:章-節-段}}` — 不進正文：放在段落左側留白的小灰字（像頁邊碼）。
+   單欄：有段號的欄留左邊距。雙欄：只在中文欄顯示（兩欄同號不重複），整個對照區的中文欄統一留邊距，
+   標題列與段落列才對得齊。放全域 style：scoped 會把屬性選擇器塞進 :has() 裡而失效。 */
+.ebook-prose:has(.para-marker),
+.bilingual-rows:has(.para-marker) .ebook-prose:not(.ebook-prose-en) {
+  padding-left: 3.4rem;
+}
+.bilingual-rows .ebook-prose-en .para-marker { display: none; }
+.ebook-prose p:has(> .para-marker) { position: relative; }
+.ebook-prose .para-marker {
+  position: absolute;
+  left: -3.4rem;
+  width: 3rem;
+  top: 0.45em;
+  text-align: right;
+  text-indent: 0;
+  font-size: 0.62rem;
+  line-height: 1.2;
+  color: #a8a29e;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  user-select: none;
+}
 </style>
 
 <style scoped>
@@ -2720,16 +2744,6 @@ useHead({ title: computed(() => ebook.value ? `${ebook.value.title} — 閱讀` 
 }
 .ebook-prose :deep(mark:hover) { filter: brightness(0.95); }
 
-/* 段號 `{{s:章-節-段}}` — 段首的小灰字，兩欄對照時同列同號 */
-.ebook-prose :deep(.para-marker) {
-  font-size: 0.62em;
-  color: #a8a29e;
-  margin-right: 6px;
-  font-variant-numeric: tabular-nums;
-  vertical-align: 2px;
-  white-space: nowrap;
-  user-select: none;
-}
 /* Print-edition page marker — tiny gray pill from `{{p:N}}` extracted by
    extract_epub_extras.py. Doesn't disrupt prose but discoverable on hover
    and consumed by copy-handler for Chicago citation. */
