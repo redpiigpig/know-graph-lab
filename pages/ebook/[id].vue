@@ -954,6 +954,11 @@ function inlineFmt(s: string, chunkIdx: number | null = null) {
     ? `<span class="page-marker" data-page="${n}" data-t="1" title="對照原文第 ${n} 頁">[t.${n}]</span>`
     : `<span class="page-marker" data-page="${n}" title="原書頁碼 ${n}">[頁${n}]</span>`
   );
+  // 段號 `{{s:章-節-段}}`（rebuild_reference_bilingual.py 寫入）：中文與原文欄同一列同一號，
+  // 用來核對對照有沒有錯位、也可直接引用。錨點 id 只給中文欄，免得兩欄重複。
+  out = out.replace(/\{\{s:([^{}\s]+)\}\}/g, (_, s) =>
+    `<span class="para-marker"${chunkIdx !== null && chunkIdx < 100000 ? ` id="para-${s}"` : ""} title="第 ${s} 段（章-節-段）">${s}</span>`
+  );
   return out;
 }
 // Render markdown to HTML. `chunkIndex` (when provided) is used to mint
@@ -2715,6 +2720,16 @@ useHead({ title: computed(() => ebook.value ? `${ebook.value.title} — 閱讀` 
 }
 .ebook-prose :deep(mark:hover) { filter: brightness(0.95); }
 
+/* 段號 `{{s:章-節-段}}` — 段首的小灰字，兩欄對照時同列同號 */
+.ebook-prose :deep(.para-marker) {
+  font-size: 0.62em;
+  color: #a8a29e;
+  margin-right: 6px;
+  font-variant-numeric: tabular-nums;
+  vertical-align: 2px;
+  white-space: nowrap;
+  user-select: none;
+}
 /* Print-edition page marker — tiny gray pill from `{{p:N}}` extracted by
    extract_epub_extras.py. Doesn't disrupt prose but discoverable on hover
    and consumed by copy-handler for Chicago citation. */
