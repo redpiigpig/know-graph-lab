@@ -62,3 +62,24 @@ def test_build_part_numbers_by_original_paragraphs():
     assert not warns
     assert "{{s:1-1-1}}" in zc and "{{s:1-1-2–3}}" in zc
     assert r.paras(zc).__len__() == r.paras(ec).__len__()
+
+
+def test_pair_notes_by_content_skips_translator_notes():
+    zh = ["(1) 譯註：宗派一詞的譯法。",
+          "(2) 原註：杭廷頓，“The Clash of Civilizations?” Foreign Affairs 72，頁22-49。",
+          "(3) 譯註：參酌《論語》。",
+          "(4) 同上，頁155。"]                      # 沒標「原註」的原書註
+    en = ["1. Samuel P. Huntington, “The Clash of Civilizations?” Foreign Affairs 72, 22-49.",
+          "2. Ibid., 155."]
+    block, kmap, warn = r.pair_notes(zh, en)
+    assert kmap == {1: 2, 2: 4}
+    assert block.startswith("(2) 1. Samuel") and "(4) 2. Ibid." in block
+    assert not warn
+
+
+def test_parse_notes_tolerates_garbled_numbers():
+    page = "\n".join(["CHAPTER 4. DHARMA DRUM MOUNTAIN", "rt. Autobiography of Sheng Yen.",
+                      "p ipidaa", "3. Ibid., 5.", "ro. Hoofprint of the Ox, 7."])
+    g = r.parse_notes([(197, None, page)], set())
+    notes = g["chapter 4. dharma drum mountain"]
+    assert len(notes) == 10 and notes[2].startswith("3.") and notes[9].startswith("ro.")

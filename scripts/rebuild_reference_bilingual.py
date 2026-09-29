@@ -81,7 +81,7 @@ def strip_page_furniture(lines: list[str], running: set[str]) -> list[str]:
     return lines
 
 
-FN_IN_BODY = re.compile(r"(?<=[a-z.,;:”’\")])(\d{1,2}|!)(?=\s|$)")
+FN_IN_BODY = re.compile(r"(?<=[a-z.”’\")])(\d{1,2}|!)(?=\s|$)")
 PARA_END = re.compile(r"[.?!”’\":)\]](\d{1,2}|!)?$")
 FIGURE = re.compile(r"^(Figure|Table|Map)\s+\d+\.")
 
@@ -167,26 +167,108 @@ def pages_to_blocks(pages: list[tuple[int, str | None, str]], running: set[str],
     return out
 
 
-def split_notes(blocks: list[tuple[str, str]]) -> dict[str, list[str]]:
-    """書末 Notes 的區塊 → {節名（PREFACE／CHAPTER 1…）: [逐條註]}。"""
+NOTE_START = re.compile(r"^([0-9IlOoSrZ|]{1,3})\.\s+(.*)$")
+OCR_DIGIT = str.maketrans({"I": "1", "l": "1", "|": "1", "r": "1", "O": "0", "o": "0", "S": "5", "Z": "2"})
+
+
+def _note_no(tok: str) -> int | None:
+    t = tok.translate(OCR_DIGIT)
+    return int(t) if t.isdigit() else None
+
+
+def parse_notes(pages: list[tuple[int, str | None, str]], running: set[str]) -> dict[str, list[str]]:
+    """書末 Notes（逐頁原文）→ {節名小寫（preface／chapter 1. …）: [第 1 條, 第 2 條…]}。
+
+    逐行判：行首「N. 」且 N（OCR 錯字 ro→10、II→11 先換回數字）正好是下一個預期註號才算新的一條，
+    否則是上一條的續行——書目裡常有「3. Aufl.」「vol. 2.」之類，只看格式會切錯。"""
     groups: dict[str, list[str]] = {}
     key = None
-    for kind, text in blocks:
-        if kind == "h":
-            key = text.lower()
-            groups[key] = []
-            continue
-        if key is None:
-            continue
-        for piece in re.split(r"\s(?=(?:\d{1,3}|ro|I\d|\dI|II)\.\s[A-Z“])", text):
-            piece = piece.strip()
-            if not piece:
+    for _, _, raw in pages:
+        for line in strip_page_furniture(raw.split("\n"), running):
+            s = line.strip()
+            if is_caps_heading(s) and not NOTE_START.match(s):
+                key = s.lower()
+                groups[key] = []
                 continue
-            if re.match(r"^(?:\d{1,3}|ro|I\d|\dI|II)\.\s", piece) or not groups[key]:
-                groups[key].append(piece)
-            else:
-                groups[key][-1] += " " + piece
+            if key is None:
+                continue
+            notes = groups[key]
+            m = NOTE_START.match(s) or (None if notes else re.match(r"^(\S{1,3})\.\s+(.*)$", s))
+            n = _note_no(m.group(1)) if m else None
+            if m and not notes and n is None:
+                n = 1                               # 一組的第一條註號糊掉（如「rt.」）照樣當第 1 條
+            if n and len(notes) < n <= len(notes) + 8:
+                # 允許跳號：行首註號被 OCR 吃掉的那條補佔位，後面的號碼才不會整排錯位
+                notes += ["（OCR 缺此註）"] * (n - len(notes) - 1)
+                notes.append(s)
+            elif m and _note_no(m.group(1)) is None and notes and PARA_END.search(notes[-1]):
+                notes.append(s)                     # 註號糊到認不出，但上一條已收尾
+            elif notes:
+                if notes[-1].endswith("-") and s[:1].islower():
+                    notes[-1] = notes[-1][:-1] + s
+                else:
+                    notes[-1] += " " + s
     return groups
+
+
+ORIG_NOTE = re.compile(r"^\((\d+)\)\s*原註")
+TR_NOTE = re.compile(r"^\((\d+)\)\s*譯註")
+
+
+def _note_sim(zh: str, en: str) -> float:
+    """兩條註的相似度：共同的數字（頁碼、年份）＋共同的西文詞（書名、人名）。"""
+    zn, en_ = set(re.findall(r"\d{2,}", zh)), set(re.findall(r"\d{2,}", en))
+    zw = {w.lower() for w in re.findall(r"[A-Za-z]{4,}", zh)}
+    ew = {w.lower() for w in re.findall(r"[A-Za-z]{4,}", en)}
+    return len(zn & en_) + 0.5 * len(zw & ew)
+
+
+def pair_notes(zh_notes: list[str], en_notes: list[str]) -> tuple[str, dict[int, int], str]:
+    """中譯本的註＝原註（翻原書的註）＋譯註混編一個號，而且有的原書註沒標「原註」二字，
+    所以不能數「第 k 條原註」。改用內容做單調序列對齊（共同的頁碼、年份、西文詞；標了「原註」的加分），
+    把英文註掛到配上的中文註號，閱讀器的註釋區按號碼並排。配不上的英文註不丟，接在前一條下面。
+    回傳 (英文註釋區文字, {原書註號: 中文註號}, 警告)。"""
+    zs = [(int(m.group(1)), n) for n in zh_notes if (m := re.match(r"^\((\d+)\)", n))]
+    if not en_notes or not zs:
+        return "", {}, ""
+    n, m = len(zs), len(en_notes)
+    sim = [[_note_sim(z, e) + (0.5 if ORIG_NOTE.match(z) else -0.5 if TR_NOTE.match(z) else 0.0) for e in en_notes] for _, z in zs]
+    best = [[0.0] * (m + 1) for _ in range(n + 1)]
+    for i in range(n - 1, -1, -1):
+        for j in range(m - 1, -1, -1):
+            take = best[i + 1][j + 1] + sim[i][j] if sim[i][j] >= 1.0 else -1.0
+            best[i][j] = max(take, best[i + 1][j], best[i][j + 1])
+    kmap: dict[int, int] = {}
+    i = j = 0
+    while i < n and j < m:
+        if sim[i][j] >= 1.0 and best[i][j] == best[i + 1][j + 1] + sim[i][j]:
+            kmap[j + 1] = zs[i][0]
+            i, j = i + 1, j + 1
+        elif best[i][j] == best[i + 1][j]:
+            i += 1
+        else:
+            j += 1
+    # 錨點之間補配：兩個已配上的註之間，英文剩 x 條、中文剩 x 條原註（或剛好 x 條任何註）就照順序配
+    anchors = [(0, -1)] + sorted((k, next(i for i, (z, _) in enumerate(zs) if z == kmap[k])) for k in kmap)
+    anchors.append((m + 1, n))
+    for (k0, i0), (k1, i1) in zip(anchors, anchors[1:]):
+        ek = list(range(k0 + 1, k1))
+        if not ek:
+            continue
+        zi = [i for i in range(i0 + 1, i1) if ORIG_NOTE.match(zs[i][1])]
+        if len(zi) != len(ek):
+            zi = list(range(i0 + 1, i1))
+        if len(zi) == len(ek):
+            for k, i in zip(ek, zi):
+                kmap[k] = zs[i][0]
+    rows = []
+    for k, t in enumerate(en_notes, 1):
+        rows.append(f"({kmap[k]}) {t}" if k in kmap else t)
+    if rows and not rows[0].startswith("("):
+        rows[0] = f"({zs[0][0]}) {rows[0]}"
+    miss = [k for k in range(1, m + 1) if k not in kmap and "OCR 缺此註" not in en_notes[k - 1]]
+    warn = f"原書註 {m} 條配上 {len(kmap)} 條；沒配上：{miss[:12]}" if miss else ""
+    return "\n\n".join(rows), kmap, warn
 
 
 # ── 中文側 ──────────────────────────────────────────────────────────────────
@@ -481,7 +563,9 @@ def load(path: Path) -> list[dict]:
 
 
 def build(cfg: dict) -> tuple[list[dict], list[str]]:
-    zh = load(CHUNKS / f"{cfg['zh_id']}.jsonl")
+    # 一律從第一次重建前的備份讀，重跑才會得到同樣結果（讀已重建的檔會找不到原本黏在正文裡的節名）
+    orig = CHUNKS / f"{cfg['zh_id']}.jsonl.bak_bilingual"
+    zh = load(orig if orig.exists() else CHUNKS / f"{cfg['zh_id']}.jsonl")
     en_pages = load(CHUNKS / f"{cfg['en_id']}.jsonl.bak_chapters")
     off = cfg["offset"]
 
@@ -490,7 +574,7 @@ def build(cfg: dict) -> tuple[list[dict], list[str]]:
                 for c in en_pages if a <= c["page_number"] <= b]
 
     na, nb = cfg["notes_pages"]
-    notes = split_notes(pages_to_blocks(en_range(na, nb), cfg["running"] | {"Notes"}))
+    notes = parse_notes(en_range(na, nb), cfg["running"] | {"Notes"})
     warns: list[str] = []
     by_top: dict[str, list[dict]] = {}
     order: list[str] = []
@@ -534,12 +618,18 @@ def build(cfg: dict) -> tuple[list[dict], list[str]]:
                 en_blocks = en_blocks[1:]
         zc, ec, w = build_part(label, body, en_blocks, en_title)
         warns += w
-        if notes_key and ec is not None:
-            ns = notes.get(notes_key)
-            if ns:
-                ec += "\n\n#### Notes\n\n" + "\n\n".join(ns)
-            else:
+        if ec is not None:
+            ns = notes.get(notes_key) if notes_key else None
+            if notes_key and not ns:
                 warns.append(f"{label}：書末 Notes 找不到「{notes_key}」（有 {list(notes)}）")
+            block, kmap, w = pair_notes(zh_notes, ns or [])
+            if w:
+                warns.append(f"{label}：{w}")
+            # 英文正文殘存的上標註號：OCR 幾乎全丟、殘存的又常是「!」「2:00」誤判，連過去會跳錯條，一律拿掉；
+            # 英文註改由章末註釋區按中文註號逐條並排
+            ec = REF_RE.sub("", ec)
+            if block:
+                ec += f"\n\n{FOOT_RULE}\n\n{block}"
         if zh_notes:
             zc += f"\n\n{FOOT_RULE}\n\n" + "\n\n".join(zh_notes)
         first["chapter_path"] = display
@@ -594,7 +684,9 @@ def main() -> None:
         sys.path.insert(0, str(Path(__file__).parent))
         import standardize_ebook as se
         src = CHUNKS / f"{cfg['zh_id']}.jsonl"
-        shutil.copy2(src, src.with_name(src.name + ".bak_bilingual"))
+        bak = src.with_name(src.name + ".bak_bilingual")
+        if not bak.exists():                       # 只留第一次的原貌，重跑不可覆蓋
+            shutil.copy2(src, bak)
         o = se.write_jsonl(cfg["zh_id"], chunks)
         print("R2", se.push_to_r2(cfg["zh_id"], o), "bytes")
         se.update_db(cfg["zh_id"], chunks)
