@@ -8,9 +8,6 @@
           <span class="font-semibold text-sm">電子圖書館</span>
         </div>
         <div class="flex items-center gap-2">
-          <NuxtLink to="/transcription-progress"
-            class="w-8 h-8 flex items-center justify-center rounded-lg bg-gray-800 hover:bg-gray-700 text-sm transition"
-            title="轉錄與翻譯進度">🛰</NuxtLink>
           <NuxtLink to="/ebook/help"
             class="w-8 h-8 flex items-center justify-center rounded-lg bg-gray-800 hover:bg-gray-700 text-sm transition" title="使用說明">?</NuxtLink>
           <button @click="showUpload = true"
@@ -130,9 +127,6 @@
 
       <!-- 主內容 -->
       <div class="flex-1 min-w-0">
-        <!-- 🛰 轉錄與翻譯進度欄目（標題列常駐重點數字，點開看全貌） -->
-        <EbookTranscriptionProgressPanel dark collapsible class="mb-6" />
-
         <!-- 搜尋列 -->
         <div class="mb-6">
           <div class="flex gap-3 mb-3">

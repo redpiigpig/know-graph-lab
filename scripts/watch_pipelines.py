@@ -462,6 +462,17 @@ def section_ocr(tasks: dict) -> None:
         if t:
             print(f"    {n}：{t['state']}／{fmt_result(t.get('result'))}／上次 {t.get('last')}")
 
+    # 重轉錄佇列與外文書自譯（2026-09-29 從網站 /transcription-progress 撤下併入這裡）
+    try:
+        ledger = json.loads((LOGS / "reocr_ledger.json").read_text(encoding="utf-8"))
+        print(f"  重轉錄帳本 {len(ledger)} 本：{dict(collections.Counter(e.get('state') for e in ledger.values()))}")
+    except (OSError, ValueError):
+        pass
+    prog = ROOT / "output" / "translation_queue" / "progress"
+    if prog.exists():
+        rows = [(p.stem[:8], sum(1 for _ in p.open(encoding="utf-8"))) for p in sorted(prog.glob("*.jsonl"))]
+        print(f"  外文書自譯（library-religion）進行中 {len(rows)} 本：" + "、".join(f"{i} {n} 塊" for i, n in rows))
+
     # 翻譯艦隊：keeper 每輪重拉的那幾條線還活著沒
     fk = LOGS / "fleet_keeper.log"
     if fk.exists():
