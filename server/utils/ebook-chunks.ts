@@ -29,6 +29,9 @@ export interface ChunkData {
   // treatises or front matter).
   parent_volume?: string | null;
   format?: "markdown" | "text";
+  // rebuild_reference_bilingual.py 重建的「一章一頁」塊：章內 ### 小節要進側欄目錄。
+  // 這類書沒有 volume、舊的 chunk_type 又是 page，不加這個旗標會被當成前言雜項把小節全藏掉。
+  section_anchors?: boolean;
   source_lang?: string | null;
   source_text?: string | null;
   // Multi-language parallel (collected works: 德 GW + 英 CW + 繁中, …).
@@ -414,9 +417,9 @@ export async function loadToc(ebookId: string): Promise<TocEntry[]> {
       //    letter is paginated as「第1-10章」, the page IS the navigation
       //    unit. Listing every internal 第一章/第二章/… as a sub-anchor
       //    defeats the consolidation and clutters the sidebar.
-      const suppressAnchors = FRONTMATTER_NO_ANCHORS.has(chapterTitle)
+      const suppressAnchors = !c.section_anchors && (FRONTMATTER_NO_ANCHORS.has(chapterTitle)
         || c.volume == null
-        || c.chunk_type === "page";
+        || c.chunk_type === "page");
       const sections: TocSection[] = [];
       const seenAnchorTitles = new Set<string>();
       const chapterTitleKey = chapterTitle.replace(/\[\^\d+\]/g, "").replace(/\s+/g, "").trim();

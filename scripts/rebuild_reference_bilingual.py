@@ -633,6 +633,9 @@ def build(cfg: dict) -> tuple[list[dict], list[str]]:
         if zh_notes:
             zc += f"\n\n{FOOT_RULE}\n\n" + "\n\n".join(zh_notes)
         first["chapter_path"] = display
+        first["chunk_type"] = "chapter"
+        if "\n### " in zc:
+            first["section_anchors"] = True        # 章內 ### 小節要進側欄目錄（ebook-chunks.ts loadToc）
         first["content"] = zc
         if ec is not None:
             first["source_text"] = ec
