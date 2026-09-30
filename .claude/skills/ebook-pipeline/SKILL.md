@@ -55,6 +55,18 @@ End-to-end pipeline from Drive folder → reader at `/ebook/[id]`. Single SKILL 
   本機跑網站看得到圖；正式站讀不到 G: 回 404，閱讀器 `onerror` 拿掉 <img>、只留圖說文字。
   （曾先上傳 R2 1,145 張 105MB，已全數刪除；照原比例全館 EPUB 約 6 萬張、壓縮前 5.5GB。）
 - 閱讀器：DOCX／TXT 的段落只隔單一換行，閱讀器會連成一大段 → 重建時改空行分段。
+- **10-01 放寬與修補**：先 `repair_paths`（「 > 」分隔→「 / 」、共同書名層去掉、「第N章」後黏正文→只留「第N章」）再判旗標；
+  BAD_FLAGS 只剩 NO_TOC／RUNNING_HEADER／JUNK_TITLE／THIN_TEXT（BODY_AS_TITLE 多是英文長章名誤擋，
+  SEQ_BROKEN／PRINTED_TOC_MISS 只是可疑、內容照順序保留）；≤8 萬字的短文（DOCX 講章）整篇一頁、段號只編段序。
+  `--new-only` 跳過已有 `.bak_restructure` 的書、單本出錯只記 ERR 不中斷——整晚批次靠這兩個才能斷了接著跑。
+  🚨 整晚批次別用 Bash 的 run_in_background（有時間上限會被砍），用 PowerShell `Start-Process` 起獨立行程。
+- **段落沒切開的 PDF**（540 本，每頁接成一大段）：`scripts/reflow_pdf_paragraphs.py` 回原 PDF 用 PyMuPDF 行位置重建段落
+  （縮排／行距 >2.5 倍／短行句末分段；🚨 行距門檻 1.6 倍會在掃描書把句子從中間切斷；小寫開頭的續段接回），
+  只換 content、其餘欄位不動，字數差 >3% 不寫，留 `.bak_reflow`；之後再跑 restructure。
+- **多語全集**（有 sources 的 86 部）：`scripts/number_multilingual.py`。章節路徑只是流水號、章名不在資料裡，**不合併頁面**，
+  段號「節序-段」以原文為準；段數不等的單原文塊用 `rebuild_reference_bilingual.align` 重對齊、補零寬佔列；留 `.bak_numbering`。
+- 🚨 **會改寫同一本書的腳本不可並行**（重建、重抽段落、補註腳）：讀到寫到一半的檔會把殘缺內容寫回。
+  10-01 用 `output/restructure/night_relay.py` 依序接力。
 - 中文書的複製引用改中文格式（作者著，譯者譯，《書名》（出版社，年），頁 N）；原本英文 Chicago 會把中文全濾掉只剩「(1901), p. 6.」。
 
 ## 2026-07-08 大改版：品質自動化＋全集隔離＋DB 超量救援
