@@ -49,6 +49,8 @@ description: 《基督宗教譜系學》成書管線（/works/christian-genealog
   只數信條是西方中心的偏見。術語要找歷史社會學既有詞彙，不要自創（09-30 討論中）。
 * **兩部**：前半部＝譜系分類本身（重心）；後半部＝拿幾個議題示範（篇幅也不小）。
   番外篇（8-16）改收，但要拆：先講聖化觀與聖事的神學詮釋，再講教制演變。
+* **補書先走 z-lib**（使用者 10-01）：備料清單出來後，缺的書一律先排進 z-lib 獵表；z-lib 找不到的
+  才去公開典藏，再不行才列給使用者去學校借。
 * **文獻回顧以外文一手＋非英美傳統為主**（德語 Konfessionskunde、俄希比較神學、法語天主教、
   東方教會學者、非洲／拉美分類學）。書單：`output/christian-genealogy/litreview_candidates.md`；
   補獵 16 本在 `data/zlib-wanted/genealogy-comparative.jsonl`（第 2 層）。
