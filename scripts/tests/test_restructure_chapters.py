@@ -42,3 +42,16 @@ def test_build_chapter_headings_numbers_and_notes():
     assert text.startswith("## 第一章　甲\n\n### 第一節\n\n{{s:1-1-1}}正文一句。")
     assert "### 第二節\n\n{{s:1-2-1}}續寫[^2]。" in text        # 重複註號重編
     assert "(1) 註一" in text and "(2) 另一條註" in text
+
+
+def test_promote_flat_sections_groups_under_numbered_chapters():
+    cs = [{"chapter_path": t, "content": "x"} for t in
+          ["目錄", "導言", "伊本的理論", "第一章 帝國的誕生", "亞述", "羅馬", "第二章 排斥暴力", "流行病", "結語", "定居的世界"]]
+    out = [c["chapter_path"] for c in r.promote_flat_sections(cs)]
+    assert out == ["目錄", "導言", "導言 / 伊本的理論", "第一章 帝國的誕生", "第一章 帝國的誕生 / 亞述",
+                   "第一章 帝國的誕生 / 羅馬", "第二章 排斥暴力", "第二章 排斥暴力 / 流行病", "結語", "結語 / 定居的世界"]
+
+
+def test_promote_flat_sections_leaves_unnumbered_books_alone():
+    cs = [{"chapter_path": t, "content": "x"} for t in ["宇宙墓碑", "燦爛文化", "後記"]]
+    assert [c["chapter_path"] for c in r.promote_flat_sections(cs)] == ["宇宙墓碑", "燦爛文化", "後記"]

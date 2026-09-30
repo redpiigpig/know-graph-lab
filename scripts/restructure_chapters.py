@@ -95,7 +95,8 @@ def chapter_number(title: str) -> int | None:
 
 
 PART_NAME = re.compile(
-    r"^(總導讀|導讀|自序|序言|代序|序|前言|導論|導言|緒論|引言|結論|結語|後記|跋|譯後記|譯序|謝辭|致謝|"
+    r"^(總導讀|導讀|中譯本序|中譯序|中文版序|譯者序|推薦序|出版說明|自序|序言|代序|序|前言|導論|導言|緒論|引言|"
+    r"結論|結語|後記|跋|譯後記|譯序|謝辭|致謝|"
     r"附錄[一二三四五六七八九十0-9A-Za-z]*|Preface|Foreword|Introduction|Conclusions?|Epilogue|Afterword|"
     r"Acknowledg(?:e)?ments?|Appendix(?:\s*[A-Z0-9]+)?)", re.I)
 
@@ -282,9 +283,37 @@ def mass(chunks: list[dict]) -> int:
     n = 0
     for c in chunks:
         t = c.get("content") or ""
-        t = re.sub(r"\{\{[ps]:[^}]*\}\}|\[\^\d+\]|^\(\d+\)\s|#", "", t, flags=re.M)
+        t = re.sub(r"\{\{[ps]:[^}]*\}\}|\[\^\d+\]|^\(\d+\)\s|#|</?(?:table|tr|td|th|thead|tbody)\b[^<>\n]{0,80}>", "", t, flags=re.M)
+        # ↑ 只去 HTML 表格標籤。寫成 <[^>]+> 會從正文裡落單的「<」一路刪到很遠的「>」，合併跨塊後誤報大量缺字
         n += len(re.findall(r"\w", t))
     return n
+
+
+def is_front(title: str) -> bool:
+    return title in FRONT or bool(re.match(r"^(Copyright|版權|©)", title, re.I))
+
+
+def promote_flat_sections(chunks: list[dict]) -> list[dict]:
+    """章節資料是扁平的（「第一章」與它底下各節同一層）時，把夾在兩個「章」之間的無編號標題
+    改成前一章的節：chapter_path「第一章 X / 節名」。「章」＝有章號的，或序／導言／結語這類部分名。
+    只在全書至少 2 個有章號的標題、且章號標題之間夾著無編號標題時才動。"""
+    tops = [clean_title((c.get("chapter_path") or "").split(" / ")[0]) for c in chunks]
+    if any(" / " in (c.get("chapter_path") or "") for c in chunks):
+        return chunks
+    is_head = [bool(t) and (chapter_number(t) is not None or bool(short_name(t))) for t in tops]
+    if sum(1 for t in tops if t and chapter_number(t) is not None) < 2:
+        return chunks
+    out, parent = [], None
+    for c, t, h in zip(chunks, tops, is_head):
+        c = dict(c)
+        if not t or is_front(t):
+            parent = None if is_front(t) else parent
+        elif h:
+            parent = t
+        elif parent:
+            c["chapter_path"] = f"{parent} / {t}"
+        out.append(c)
+    return out
 
 
 def restructure(chunks: list[dict], meta: dict) -> tuple[list[dict] | None, str, dict]:
@@ -299,8 +328,19 @@ def restructure(chunks: list[dict], meta: dict) -> tuple[list[dict] | None, str,
     flags = set(at.audit(chunks, meta)["flags"]) & BAD_FLAGS
     if flags:
         return None, "稽核旗標 " + ",".join(sorted(flags)), {}
+    work = promote_flat_sections(chunks)
+    if meta.get("file_type") in ("docx", "txt"):
+        # docx／txt 的段落只隔一個換行；閱讀器把單一換行當空白，整章會連成一段。改成空行分段（表格列不動）
+        work = [dict(c, content="\n\n".join(
+            ln for p in rb.paras(c.get("content") or "")
+            for ln in ([p] if p.lstrip().startswith("|") else p.split("\n")) if ln.strip()))
+            for c in work]
+    total = sum(len(c.get("content") or "") for c in work)
+    orphan = sum(len(c.get("content") or "") for c in work[3:] if not (c.get("chapter_path") or "").strip())
+    if total and orphan / total > 0.3:
+        return None, f"章節覆蓋不足（{orphan * 100 // total}% 的內容沒有章名）", {}
     runs: list[tuple[str, list[dict]]] = []
-    for c in chunks:
+    for c in work:
         top = clean_title((c.get("chapter_path") or "").split(" / ")[0])
         key = (c.get("volume"), top)
         if runs and runs[-1][0] == key:
@@ -308,18 +348,25 @@ def restructure(chunks: list[dict], meta: dict) -> tuple[list[dict] | None, str,
         else:
             runs.append((key, [c]))
     keys = [k for k, _ in runs]
-    dup = [k[1] for k, n in collections.Counter(keys).items() if n > 1 and k[1] not in FRONT and k[1]]
+    dup = [k[1] for k, n in collections.Counter(keys).items() if n > 1 and not is_front(k[1]) and k[1]]
     if dup:
         return None, f"章名不連續出現：{dup[:3]}", {}
-    body_runs = [(k, cs) for k, cs in runs if k[1] and k[1] not in FRONT]
+    body_runs = [(k, cs) for k, cs in runs if k[1] and not is_front(k[1])]
     if len(body_runs) < 2:
         return None, "少於 2 章", {}
     junk = [k[1] for k, _ in body_runs if JUNK_TITLE.search(k[1])]
     if junk:
         return None, f"章名疑似OCR亂碼：{junk[:2]}", {}
+    glued = [k[1] for k, _ in body_runs if len(k[1]) > 12 and re.search(r"[，。；！？]", k[1])]
+    if glued:
+        return None, f"章名黏正文：{glued[:2]}", {}
     lens = sorted(len(p) for _, cs in body_runs for c in cs for p in rb.paras(c.get("content") or ""))
     if lens and lens[len(lens) // 2] > 2500:
         return None, f"段落沒切開（段長中位數 {lens[len(lens) // 2]:,} 字）", {}
+    per_ch = sorted(sum(1 for c in cs for p in rb.paras(c.get("content") or "") if is_countable(p))
+                    for _, cs in body_runs)
+    if per_ch[len(per_ch) // 2] < 3:
+        return None, f"章內段落過少（每章段數中位數 {per_ch[len(per_ch) // 2]}）", {}
     labels = dict(zip([k for k, _ in body_runs], chapter_labels([k[1] for k, _ in body_runs])))
     known = rb.printed_map(chunks)
     out: list[dict] = []
