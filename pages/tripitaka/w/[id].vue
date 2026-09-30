@@ -520,20 +520,24 @@ onMounted(async () => {
 // 雜阿含一部就有上百組，全掛書頭會變成一排按鈕
 const compareSets = computed(() => compareIndex.value.filter(c =>
   c.works.includes(id.value) && !(c.anchors || []).some((a: any) => a.work === id.value)))
-const compareByHead = computed(() => {
+// 錨點鍵優先用該經首段 uid（唯一）；舊資料只有標題時退回標題——
+// 增一阿含每一品都有「（四）」，只靠標題會把入口掛到每一品的第四經
+const compareByKey = computed(() => {
   const m = new Map<string, any[]>()
   for (const c of compareIndex.value) for (const a of c.anchors || []) {
     if (a.work !== id.value) continue
-    if (!m.has(a.node)) m.set(a.node, [])
-    m.get(a.node)!.push(c)
+    const k = a.uid ? `u:${a.uid}` : `h:${a.node}`
+    if (!m.has(k)) m.set(k, [])
+    m.get(k)!.push(c)
   }
   return m
 })
-/** 某段若是一經的開頭，回傳該經參與的對讀組 */
+/** 某段若是一經（或一品）的開頭，回傳它參與的對讀組 */
 const tocByI = computed(() => new Map(toc.value.map((n: any) => [n.i, n])))
 function compareAt(s: any) {
   const n: any = tocByI.value.get(s.d)
-  return n && n.uid === s.uid ? (compareByHead.value.get(n.head) ?? []) : []
+  if (!n || n.uid !== s.uid) return []
+  return [...(compareByKey.value.get(`u:${n.uid}`) ?? []), ...(compareByKey.value.get(`h:${n.head}`) ?? [])]
 }
 const pick = reactive<Record<number, number>>({})
 function curOrig(g: { d: number; origs: any[] }) {

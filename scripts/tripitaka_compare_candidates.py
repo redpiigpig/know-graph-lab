@@ -92,7 +92,8 @@ def pali_family() -> list[dict]:
                 head = node_head(wid, seg)
                 if not head:
                     continue
-                zh.append({"work": wid, "node": head, "uid": raw, "chars": chars(wid, seg)})
+                # seg＝該經首段 uid，才是唯一鍵：增一阿含每一品都有「（四）」，靠標題會撞名
+                zh.append({"work": wid, "node": head, "seg": seg, "uid": raw, "chars": chars(wid, seg)})
         # 同一部經重複出現（區間 uid）只留一次
         uniq = {(z["work"], z.get("node")): z for z in zh}
         zh = list(uniq.values())
