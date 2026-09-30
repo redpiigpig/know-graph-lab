@@ -45,7 +45,9 @@ CH = rb.CHUNKS
 OUT = Path(__file__).resolve().parents[1] / "output" / "restructure"
 MAX_CHAPTER = 150_000
 ALLOW_COLLECTED = False          # --collected：只處理 collection=collected-works 的單語全集
-BAD_FLAGS = {"NO_TOC", "BODY_AS_TITLE", "RUNNING_HEADER", "JUNK_TITLE", "PRINTED_TOC_MISS", "SEQ_BROKEN", "THIN_TEXT"}
+# 10-01 放寬：BODY_AS_TITLE 多半是英文長章名（誤擋），改在 repair_paths 修中文「第N章黏正文」再用自己的黏正文閘；
+# SEQ_BROKEN／PRINTED_TOC_MISS 只是可疑，合併照原順序保留內容、有守恆把關，放行
+BAD_FLAGS = {"NO_TOC", "RUNNING_HEADER", "JUNK_TITLE", "THIN_TEXT"}
 FRONT = {"封面", "出版資訊", "出版說明", "版權頁", "版權資訊", "扉頁", "目錄", "目次", "目　錄", "目　次",
          "圖目次", "表目次", "Contents", "Table of Contents", "CONTENTS", "索引", "Index", "INDEX", "Copyright"}
 HEAD_RE = re.compile(r"^(#{1,6})\s+(.*)$", re.S)
@@ -288,6 +290,8 @@ def build_chapter(label: str, top: str, cs: list[dict], known: dict) -> str:
         elif is_countable(p):
             k += 1
             sid = f"{label}-{sec_no}-{k}" if has_sec else f"{label}-{k}"
+            if not label:
+                sid = f"{sec_no}-{k}" if has_sec else str(k)
             numbered.append(f"> {{{{s:{sid}}}}}{p[2:]}" if p.startswith("> ") else f"{{{{s:{sid}}}}}{p}")
         else:
             numbered.append(p)
@@ -321,6 +325,34 @@ def mass(chunks: list[dict]) -> int:
 
 def is_front(title: str) -> bool:
     return title in FRONT or bool(re.match(r"^(Copyright|版權|©)", title, re.I))
+
+
+SHORT_SINGLE_MAX = 80_000
+
+
+def is_short_single(chunks: list[dict]) -> bool:
+    return sum(len(c.get("content") or "") for c in chunks) <= SHORT_SINGLE_MAX
+
+
+def repair_paths(chunks: list[dict]) -> list[dict]:
+    """章節路徑修整：「 > 」分隔改成「 / 」；每塊第一層都一樣（書名）就去掉那層；
+    中文「第N章」後面黏著正文（含句讀、超過 12 字）→ 章名只留「第N章」。"""
+    out = []
+    for c in chunks:
+        cp = (c.get("chapter_path") or "").replace(" > ", " / ")
+        out.append(dict(c, chapter_path=cp))
+    segs = [c["chapter_path"].split(" / ") for c in out if c["chapter_path"]]
+    if segs and all(len(s) >= 2 for s in segs) and len({s[0] for s in segs}) == 1:
+        for c in out:
+            if c["chapter_path"]:
+                c["chapter_path"] = " / ".join(c["chapter_path"].split(" / ")[1:])
+    for c in out:
+        parts = c["chapter_path"].split(" / ")
+        m = re.match(r"^(第\s*[0-9〇零一二兩三四五六七八九十百]+\s*[章講篇回])\s*(.+)$", parts[0])
+        if m and len(m.group(2)) > 12 and re.search(r"[，。；：、]", m.group(2)[:20]):
+            parts[0] = m.group(1)
+            c["chapter_path"] = " / ".join(parts)
+    return out
 
 
 def promote_flat_sections(chunks: list[dict]) -> list[dict]:
@@ -357,10 +389,10 @@ def restructure(chunks: list[dict], meta: dict) -> tuple[list[dict] | None, str,
         return None, "有對照欄（走 rebuild_reference_bilingual）", {}
     if any("{{s:" in (c.get("content") or "") for c in chunks):
         return None, "已有段號", {}
-    flags = set(at.audit(chunks, meta)["flags"]) & BAD_FLAGS
-    if flags:
+    work = promote_flat_sections(repair_paths(chunks))
+    flags = set(at.audit(work, meta)["flags"]) & BAD_FLAGS
+    if flags and not is_short_single(work):
         return None, "稽核旗標 " + ",".join(sorted(flags)), {}
-    work = promote_flat_sections(chunks)
     figures: list = []
     fp = meta.get("file_path") or ""
     if meta.get("file_type") == "epub" and fp and Path(fp).exists():
@@ -393,7 +425,15 @@ def restructure(chunks: list[dict], meta: dict) -> tuple[list[dict] | None, str,
     if dup:
         return None, f"章名不連續出現：{dup[:3]}", {}
     body_runs = [(k, cs) for k, cs in runs if k[1] and not is_front(k[1])]
-    if len(body_runs) < 2:
+    if len(body_runs) < 2 and is_short_single(work):
+        # 短文（DOCX 講章、單篇文章）：整篇一頁，段號只編段序
+        title = clean_title(meta.get("title") or "全文")
+        front = [c for c in work if is_front(clean_title((c.get("chapter_path") or "").split(" / ")[0]))]
+        body = [dict(c, chapter_path=title) for c in work if c not in front]
+        runs = [((c.get("volume"), clean_title((c.get("chapter_path") or "").split(" / ")[0])), [c]) for c in front]
+        runs.append(((None, title), body))
+        body_runs = [((None, title), body)]
+    elif len(body_runs) < 2:
         return None, "少於 2 章", {}
     junk = [k[1] for k, _ in body_runs if JUNK_TITLE.search(k[1])]
     if junk:
@@ -412,6 +452,8 @@ def restructure(chunks: list[dict], meta: dict) -> tuple[list[dict] | None, str,
     if per_ch[len(per_ch) // 2] < 3:
         return None, f"章內段落過少（每章段數中位數 {per_ch[len(per_ch) // 2]}）", {}
     labels = dict(zip([k for k, _ in body_runs], chapter_labels([display_title(k[1]) for k, _ in body_runs])))
+    if len(body_runs) == 1:
+        labels = {body_runs[0][0]: ""}          # 單章書：段號不要章前綴
     known = rb.printed_map(chunks)
     out: list[dict] = []
     for key, cs in runs:
@@ -463,6 +505,7 @@ def main() -> int:
     ap.add_argument("--show")
     ap.add_argument("--apply", action="store_true")
     ap.add_argument("--ids", help="要寫回的書 id 清單檔（一行一個）")
+    ap.add_argument("--new-only", action="store_true", help="跳過已有 .bak_restructure 的書（中斷後接續）")
     ap.add_argument("--collected", action="store_true", help="改處理全集（單語、無 anchors 的）")
     a = ap.parse_args()
     global ALLOW_COLLECTED, OUT
@@ -485,18 +528,23 @@ def main() -> int:
         import standardize_ebook as se
         for bid in ids:
             src = CH / f"{bid}.jsonl"
-            cs = load_original(bid)
-            out, why, st = restructure(cs, meta.get(bid, {}))
-            if out is None:
-                print("SKIP", bid, why, flush=True)
-                continue
             bak = src.with_name(src.name + ".bak_restructure")
-            if not bak.exists():
-                shutil.copy2(src, bak)
-            o = se.write_jsonl(bid, out)
-            se.push_to_r2(bid, o)
-            se.update_db(bid, out)
-            print("OK", bid, {k: (len(v) if k == "figures" else v) for k, v in st.items() if k != "epub"}, flush=True)
+            if a.new_only and bak.exists():
+                continue                           # 已重建過（斷掉重跑時接續用）
+            try:
+                cs = load_original(bid)
+                out, why, st = restructure(cs, meta.get(bid, {}))
+                if out is None:
+                    print("SKIP", bid, why, flush=True)
+                    continue
+                if not bak.exists():
+                    shutil.copy2(src, bak)
+                o = se.write_jsonl(bid, out)
+                se.push_to_r2(bid, o)
+                se.update_db(bid, out)
+                print("OK", bid, {k: (len(v) if k == "figures" else v) for k, v in st.items() if k != "epub"}, flush=True)
+            except Exception as e:  # noqa: BLE001  一本出錯不拖垮整晚的批次
+                print("ERR", bid, f"{type(e).__name__}: {str(e)[:120]}", flush=True)
         return 0
     OUT.mkdir(parents=True, exist_ok=True)
     files = sorted(p for p in CH.glob("*.jsonl") if p.stem in meta
