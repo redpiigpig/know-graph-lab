@@ -196,9 +196,27 @@ def is_countable(p: str) -> bool:
     bare = rb.PAGE_MARK_RE.sub("", p).strip()
     if HEAD_RE.match(p) or rb.FOOT_RULE_RE.match(p) or not re.search(r"\w", bare):
         return False
-    if re.match(r"^\[\d+\]", bare):
+    if re.match(r"^\[\d+\]|^!\[", bare):          # 章末 [N] 註、插圖
         return False
     return not (len(bare) <= 6 and not re.search(r"[。，、；：！？.,;:!?「」“”\"']", bare))
+
+
+ATTRIB = re.compile(r"^(?:\{\{p:[^}]*\}\})*[—―]{1,2}\s*[^\s—―][^。！？\n]{0,60}$")
+JUNK_HEAD = re.compile(r"^#{1,6}\s+(?:\d+[A-Za-z]|[A-Za-z]\d+)$")      # 「#### 2S」：頁碼 OCR 殘渣被當成小標
+
+
+def merge_epigraphs(ps: list[str]) -> list[str]:
+    """卷首引言：一段短文後面緊接一行「——某某」署名 → 合成一段引文（> 引文\\n> ——署名），
+    閱讀器畫成楷體引文、署名靠右，段號只編一個。"""
+    out: list[str] = []
+    for p in ps:
+        prev = out[-1] if out else ""
+        if (ATTRIB.match(p) and prev and is_countable(prev) and not prev.startswith(">")
+                and len(rb.PAGE_MARK_RE.sub("", prev)) <= 400):
+            out[-1] = "> " + prev.replace("\n", " ") + "\n> " + p
+        else:
+            out.append(p)
+    return out
 
 
 def clean_title(t: str) -> str:
@@ -250,6 +268,8 @@ def build_chapter(label: str, top: str, cs: list[dict], known: dict) -> str:
             if tail and tail[-1] not in rb.ZH_END + ".?!:;\"'”’":
                 out[-1] += body.pop(0)
         out += body
+    out = [p for p in out if not JUNK_HEAD.match(p)]
+    out = merge_epigraphs(out)
     # 段號
     numbered, sec_no, k, has_sec = [], 0, 0, any(p.startswith("### ") for p in out)
     for p in out:
@@ -259,7 +279,7 @@ def build_chapter(label: str, top: str, cs: list[dict], known: dict) -> str:
         elif is_countable(p):
             k += 1
             sid = f"{label}-{sec_no}-{k}" if has_sec else f"{label}-{k}"
-            numbered.append(f"{{{{s:{sid}}}}}{p}")
+            numbered.append(f"> {{{{s:{sid}}}}}{p[2:]}" if p.startswith("> ") else f"{{{{s:{sid}}}}}{p}")
         else:
             numbered.append(p)
     text = "\n\n".join(numbered)
@@ -283,7 +303,8 @@ def mass(chunks: list[dict]) -> int:
     n = 0
     for c in chunks:
         t = c.get("content") or ""
-        t = re.sub(r"\{\{[ps]:[^}]*\}\}|\[\^\d+\]|^\(\d+\)\s|#|</?(?:table|tr|td|th|thead|tbody)\b[^<>\n]{0,80}>", "", t, flags=re.M)
+        t = re.sub(r"\{\{[ps]:[^}]*\}\}|\[\^\d+\]|^\(\d+\)\s|#|</?(?:table|tr|td|th|thead|tbody)\b[^<>\n]{0,80}>"
+                   r"|\]\(/api/ebooks/[^)\s]*\)", "", t, flags=re.M)      # 插圖網址不算內容
         # ↑ 只去 HTML 表格標籤。寫成 <[^>]+> 會從正文裡落單的「<」一路刪到很遠的「>」，合併跨塊後誤報大量缺字
         n += len(re.findall(r"\w", t))
     return n
@@ -329,6 +350,15 @@ def restructure(chunks: list[dict], meta: dict) -> tuple[list[dict] | None, str,
     if flags:
         return None, "稽核旗標 " + ",".join(sorted(flags)), {}
     work = promote_flat_sections(chunks)
+    figures: list = []
+    fp = meta.get("file_path") or ""
+    if meta.get("file_type") == "epub" and fp and Path(fp).exists():
+        # 解析時丟掉的插圖放回來：圖說段換成「圖＋圖說」，沒圖說的照原書位置插入（epub_figures.py）
+        import epub_figures as ef
+        try:
+            work, figures, _miss = ef.place_figures(work, ef.find_figures(fp), meta["id"])
+        except Exception as e:  # noqa: BLE001
+            print(f"  ⚠ 插圖略過（{type(e).__name__}: {str(e)[:60]}）", flush=True)
     if meta.get("file_type") in ("docx", "txt"):
         # docx／txt 的段落只隔一個換行；閱讀器把單一換行當空白，整章會連成一段。改成空行分段（表格列不動）
         work = [dict(c, content="\n\n".join(
@@ -401,7 +431,28 @@ def restructure(chunks: list[dict], meta: dict) -> tuple[list[dict] | None, str,
     if abs(after - before) > 100 + 2 * title_w:
         return None, f"內容守恆失敗 {before:,}→{after:,}", {}
     return out, "OK", {"before": len(chunks), "after": len(out), "chapters": len(body_runs),
-                       "mass": (before, after)}
+                       "mass": (before, after), "figures": [f.member for f in figures], "epub": fp if figures else ""}
+
+
+def push_figures(se, bid: str, epub: str, members: list[str]) -> None:
+    """插圖縮圖推 R2 ebook-images/{id}/{檔名}（閱讀器經 /api/ebooks/{id}/image/{檔名} 讀）。"""
+    import posixpath
+    import boto3
+    import epub_figures as ef
+    s3 = boto3.client("s3", region_name="auto", endpoint_url=se.ENV["R2_ENDPOINT"],
+                      aws_access_key_id=se.ENV["R2_ACCESS_KEY"], aws_secret_access_key=se.ENV["R2_SECRET_KEY"])
+    for m in members:
+        body, ctype = ef.image_bytes(epub, m)
+        s3.put_object(Bucket=se.ENV["R2_BUCKET"], Key=f"ebook-images/{bid}/{posixpath.basename(m)}",
+                      Body=body, ContentType=ctype)
+
+
+def load_original(bid: str) -> list[dict]:
+    """一律從第一次重建前的原貌讀（有 .bak_restructure 就讀它），規則改了才能對已重建的書重跑。"""
+    src = CH / f"{bid}.jsonl"
+    bak = src.with_name(src.name + ".bak_restructure")
+    cs = [json.loads(l) for l in (bak if bak.exists() else src).open(encoding="utf-8") if l.strip()]
+    return sorted(cs, key=lambda c: c.get("chunk_index") or 0)
 
 
 def main() -> int:
@@ -416,7 +467,7 @@ def main() -> int:
     meta = at.load_meta()
     print("ebooks", len(meta), flush=True)
     if a.show:
-        cs = [json.loads(l) for l in (CH / f"{a.show}.jsonl").open(encoding="utf-8") if l.strip()]
+        cs = load_original(a.show)
         out, why, st = restructure(cs, meta.get(a.show, {}))
         print(why, st)
         for c in out or []:
@@ -428,7 +479,7 @@ def main() -> int:
         import standardize_ebook as se
         for bid in ids:
             src = CH / f"{bid}.jsonl"
-            cs = [json.loads(l) for l in src.open(encoding="utf-8") if l.strip()]
+            cs = load_original(bid)
             out, why, st = restructure(cs, meta.get(bid, {}))
             if out is None:
                 print("SKIP", bid, why, flush=True)
@@ -436,10 +487,12 @@ def main() -> int:
             bak = src.with_name(src.name + ".bak_restructure")
             if not bak.exists():
                 shutil.copy2(src, bak)
+            if st.get("figures"):
+                push_figures(se, bid, st["epub"], st["figures"])
             o = se.write_jsonl(bid, out)
             se.push_to_r2(bid, o)
             se.update_db(bid, out)
-            print("OK", bid, st, flush=True)
+            print("OK", bid, {k: (len(v) if k == "figures" else v) for k, v in st.items() if k != "epub"}, flush=True)
         return 0
     OUT.mkdir(parents=True, exist_ok=True)
     files = sorted(p for p in CH.glob("*.jsonl") if p.stem in meta)
@@ -448,7 +501,7 @@ def main() -> int:
     rows, reasons = [], collections.Counter()
     for i, p in enumerate(files):
         try:
-            cs = [json.loads(l) for l in p.open(encoding="utf-8") if l.strip()]
+            cs = load_original(p.stem)
             cs.sort(key=lambda c: c.get("chunk_index") or 0)
             out, why, st = restructure(cs, meta[p.stem])
         except Exception as e:  # noqa: BLE001

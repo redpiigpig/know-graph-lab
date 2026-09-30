@@ -193,7 +193,7 @@ def load_meta() -> dict:
     out, off = {}, 0
     while True:
         b = requests.get(te.URL + "/rest/v1/ebooks", headers=H, timeout=120, params={
-            "select": "id,title,file_type,total_pages,collection,parse_error", "order": "id",
+            "select": "id,title,file_type,total_pages,collection,parse_error,file_path", "order": "id",
             "limit": "1000", "offset": str(off)}).json()
         for x in b:
             out[x["id"]] = x

@@ -35,6 +35,25 @@ description: Operate the Know-Graph-Lab ebook pipeline end-to-end. Use when work
 
 End-to-end pipeline from Drive folder → reader at `/ebook/[id]`. Single SKILL covers ingest, parse, OCR, standardize, DB back-fill, and reader-side features.
 
+## 2026-09-30 全館規格：一章一頁、##／###、段號、插圖（`scripts/restructure_chapters.py`）
+
+使用者定：全館書都要「一章一頁、章 `##`／節 `###`、每段段號 `{{s:章-節-段}}`」（中外對照書見 ebook-collected-works〈2026-09-29〉、
+`rebuild_reference_bilingual.py`）。單語書走 `restructure_chapters.py`：`--dry-run` 全館判讀出 `output/restructure/dryrun.tsv`＋`ok_ids.txt`，
+`--show <id>` 看一本，`--apply --ids 檔` 寫回（JSONL＋R2＋DB，留 `.bak_restructure`，**重跑一律從備份讀**，規則改了可直接重跑）。
+- **只做章節可靠的書**（09-30 乾跑 5,682 本→794 本可做）。擋：audit 旗標、章名不連續／亂碼／黏正文（>12 字帶句讀）、
+  章節覆蓋不足（>30% 內容沒章名）、段落沒切開、章內段落過少、合併後單章 >15 萬字、合併後整章接成一段（一頁一段的書）。
+- **內容守恆**：去掉標記、井號、註號、表格標籤、插圖網址後的字數，只准差「各塊標題字數×2＋100」。
+  🚨 兩次誤報都是量尺寫壞不是真丟字：HTML 表格標籤字母算進改前；`<[^>]+>` 從落單「<」刪到遠處「>」。量尺只去表格標籤。
+- **扁平章節歸節**：「第一章」與它的各節同一層時，夾在兩章之間的無編號標題歸前一章的節（序／導言／結語同理）。
+- **段號前綴**：過半正文章有章號→用章號；否則正文章依序 1、2、3；序／導論／結論／附錄／中譯本序用名稱。
+  不編號：標題、註釋、章末 `[N]` 註、插圖、只剩頁碼標記的段、≤6 字無標點的小段標記（「一」「上篇」）。
+- **卷首引言**：短段後緊接「——某某」→ 合成 `> 引文\n> ——署名`，閱讀器畫楷體引文、署名靠右，只編一個段號。
+- **插圖**（`scripts/epub_figures.py`）：EPUB 解析時圖全丟、只剩圖說。照 spine 順序找圖（<8KB 裝飾圖略過），
+  圖說段換成 `![圖說](/api/ebooks/{id}/image/{檔名})`，沒圖說的插在前一段正文之後；比對兩邊都轉簡體（繁轉簡多對一較穩）。
+  縮到寬 1200px 推 R2 `ebook-images/{id}/`，`server/api/ebooks/[id]/image/[name].get.ts` 認登入 cookie 串流。
+- 閱讀器：DOCX／TXT 的段落只隔單一換行，閱讀器會連成一大段 → 重建時改空行分段。
+- 中文書的複製引用改中文格式（作者著，譯者譯，《書名》（出版社，年），頁 N）；原本英文 Chicago 會把中文全濾掉只剩「(1901), p. 6.」。
+
 ## 2026-07-08 大改版：品質自動化＋全集隔離＋DB 超量救援
 
 **品質自動化（取代人工 audit）**

@@ -55,3 +55,21 @@ def test_promote_flat_sections_groups_under_numbered_chapters():
 def test_promote_flat_sections_leaves_unnumbered_books_alone():
     cs = [{"chapter_path": t, "content": "x"} for t in ["宇宙墓碑", "燦爛文化", "後記"]]
     assert [c["chapter_path"] for c in r.promote_flat_sections(cs)] == ["宇宙墓碑", "燦爛文化", "後記"]
+
+
+def test_merge_epigraphs_into_one_quote():
+    ps = ["人類在四五萬年中沒有任何變化。", "——斯蒂芬·傑伊·古爾德（Stephen Jay Gould）", "正文開始。"]
+    assert r.merge_epigraphs(ps) == ["> 人類在四五萬年中沒有任何變化。\n> ——斯蒂芬·傑伊·古爾德（Stephen Jay Gould）",
+                                     "正文開始。"]
+
+
+def test_place_figures_caption_and_anchor():
+    import epub_figures as ef
+    cs = [{"content": "前面這一段正文到這裡結束了喔喔喔。\n\n{{p:6}}維倫多夫的維納斯，約公元前23000年燒製\n\n後文"}]
+    figs = [ef.Figure("a.jpeg", "OEBPS/a.jpeg", "维伦多夫的维纳斯，约公元前23000年烧制", ""),
+            ef.Figure("b.jpeg", "OEBPS/b.jpeg", "", ef.norm("前面這一段正文到這裡結束了喔喔喔。")[-20:])]
+    out, used, miss = ef.place_figures(cs, figs, "x")
+    ps = out[0]["content"].split("\n\n")
+    assert ps[1] == "![](/api/ebooks/x/image/b.jpeg)"
+    assert ps[2] == "{{p:6}}![維倫多夫的維納斯，約公元前23000年燒製](/api/ebooks/x/image/a.jpeg)"
+    assert len(used) == 2 and miss == 0

@@ -1057,6 +1057,15 @@ function renderMarkdown(md: string, chunkIndex: number | null = null): string {
       const joined = h[1].replace(/\n+/g, " ").replace(/\s+/g, " ").trim();
       bodyOut.push(`<h1>${inlineFmt(joined, chunkIndex)}</h1>`);
     }
+    else if ((h = escaped.match(/^((?:\{\{p:[^}]*\}\})*)!\[([^\]]*)\]\((\/api\/ebooks\/[0-9a-f-]{36}\/image\/[A-Za-z0-9._~-]+)\)$/))) {
+      // 書內插圖（scripts/epub_figures.py 從原 EPUB 放回）：圖＋圖說
+      const cap = h[2].trim();
+      bodyOut.push(
+        `<figure class="ebook-figure">${h[1] ? inlineFmt(h[1], chunkIndex) : ""}` +
+        `<img src="${h[3]}" alt="${cap}" loading="lazy" />` +
+        (cap ? `<figcaption>${inlineFmt(cap, chunkIndex)}</figcaption>` : "") + `</figure>`
+      );
+    }
     else if (/^\|/.test(escaped) && /\n\|\s*-{3,}/.test(escaped)) {
       // Markdown table. Books that carry real tables (Howes's 評傳 has a
       // chronology of Uchimura's works) used to arrive as one run-on
@@ -1079,8 +1088,12 @@ function renderMarkdown(md: string, chunkIndex: number | null = null): string {
       bodyOut.push(`<div class="ebook-table-wrap"><table class="ebook-table">${th}<tbody>${tb}</tbody></table></div>`);
     }
     else if (/^&gt;\s/.test(escaped)) {
-      const lines = escaped.split(/\n/).map(ln => ln.replace(/^&gt;\s?/, "")).join("<br>");
-      bodyOut.push(`<blockquote>${inlineFmt(lines, chunkIndex)}</blockquote>`);
+      const raw = escaped.split(/\n/).map(ln => ln.replace(/^&gt;\s?/, ""));
+      // 卷首引言的署名（最後一行「——某某」）置右
+      const attrib = raw.length > 1 && /^[—―]{1,2}/.test(raw[raw.length - 1]) ? raw.pop()! : null;
+      const lines = inlineFmt(raw.join("<br>"), chunkIndex)
+        + (attrib ? `<span class="quote-attrib">${inlineFmt(attrib, chunkIndex)}</span>` : "");
+      bodyOut.push(`<blockquote>${lines}</blockquote>`);
     } else {
       // CCEL EPUBs word-wrap paragraphs with single `\n` between lines.
       // Replacing each \n with <br> created jagged forced-break columns
@@ -2162,6 +2175,18 @@ function joinNamesChicago(s: string): string {
 function buildChicagoCitation(pageNum: number | string | null): string {
   const b = ebook.value;
   if (!b) return "";
+  // 中文書（沒有西文原書名）：英文 Chicago 會把中文全濾掉，只剩「(1901), p. 6.」。
+  // 改用中文格式：作者，《書名》（出版地：出版社，年），頁 N。
+  if (/[一-鿿]/.test(b.title || "") && !cleanEnglishField(b.original_title || "")) {
+    const zhPub = [b.publisher_location, b.publisher].filter(Boolean).join("：");
+    const zhYear = (b.publication_year || "").toString();
+    const inner = [zhPub, zhYear].filter(Boolean).join("，");
+    const who = b.translator
+      ? `${b.author ? `${b.author}著，` : ""}${b.translator}譯，`
+      : (b.author ? `${b.author}，` : "");
+    return `${who}《${b.title}》${inner ? `（${inner}）` : ""}`
+      + (pageNum !== null ? `，頁 ${pageNum}` : "") + "。";
+  }
   // Pure English Chicago citation — no Chinese characters.
   // Example output:
   //   Alexander Roberts, James Donaldson, and A. Cleveland Coxe, eds.,
@@ -2273,7 +2298,8 @@ useHead({ title: computed(() => ebook.value ? `${ebook.value.title} — 閱讀` 
   padding-left: 3.4rem;
 }
 .bilingual-rows .ebook-prose-en .para-marker { display: none; }
-.ebook-prose p:has(> .para-marker) { position: relative; }
+.ebook-prose p:has(> .para-marker),
+.ebook-prose blockquote:has(> .para-marker) { position: relative; }
 .ebook-prose .para-marker {
   position: absolute;
   left: -3.4rem;
@@ -2625,6 +2651,31 @@ useHead({ title: computed(() => ebook.value ? `${ebook.value.title} — 閱讀` 
 }
 .ebook-prose :deep(blockquote p) {
   text-indent: 0;
+}
+/* 書內插圖 */
+.ebook-prose :deep(figure.ebook-figure) {
+  margin: 1.75rem auto;
+  text-align: center;
+}
+.ebook-prose :deep(figure.ebook-figure img) {
+  max-width: 100%;
+  max-height: 70vh;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+.ebook-prose :deep(figure.ebook-figure figcaption) {
+  margin-top: 0.5rem;
+  font-size: 0.85em;
+  color: #78716c;
+  text-indent: 0;
+  line-height: 1.6;
+}
+/* 卷首引言署名：另起一行靠右 */
+.ebook-prose :deep(blockquote .quote-attrib) {
+  display: block;
+  text-align: right;
+  margin-top: 0.35rem;
 }
 .ebook-prose :deep(hr) {
   margin: 2rem 0;
