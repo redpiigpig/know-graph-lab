@@ -67,27 +67,35 @@ function dirs(): string[] {
 export function loadGlossaries(): Map<string, GlossaryEntry[]> {
   if (cache) return cache;
   const out = new Map<string, GlossaryEntry[]>();
-  let files: string[] = [];
-  try {
-    files = fs.readdirSync(dir()).filter((f) => f.endsWith(".jsonl"));
-  } catch {
-    cache = out; // Drive 不在：記住空的，別每次請求都去戳一次檔案系統
-    return out;
-  }
-  for (const f of files) {
-    const code = path.basename(f, ".jsonl");
+  for (const d of dirs()) {
+    let files: string[] = [];
     try {
-      const rows = fs
-        .readFileSync(path.join(dir(), f), "utf8")
-        .split("\n")
-        .filter(Boolean)
-        .map((l) => JSON.parse(l) as GlossaryEntry);
-      out.set(code, rows);
+      // 只認 GLOSSARY_NAMES 登記過的：fgs-dictionary/ 裡還躺著早期爬蟲的
+      // entries.jsonl（1,997 條，已被 FGS.jsonl 取代），照收會讓佛光條目重複一次。
+      files = fs
+        .readdirSync(d)
+        .filter((f) => f.endsWith(".jsonl") && path.basename(f, ".jsonl") in GLOSSARY_NAMES);
     } catch {
-      /* 單一部壞掉不該讓整批查不了 */
+      continue; // Drive 不在或此目錄不存在
+    }
+    for (const f of files) {
+      const code = path.basename(f, ".jsonl");
+      try {
+        const rows = fs
+          .readFileSync(path.join(d, f), "utf8")
+          .split("\n")
+          .filter(Boolean)
+          .map((l) => JSON.parse(l) as GlossaryEntry);
+        out.set(code, rows);
+      } catch {
+        /* 單一部壞掉不該讓整批查不了 */
+      }
     }
   }
-  cache = out;
+  // ⚠️ 空的不快取：G: 卸載後重掛（見 CLAUDE.md），下一次請求要能自己讀回來。
+  // 2026-09-13 起這裡曾呼叫已改名的 dir()，ReferenceError 被 catch 吞掉、快取成空，
+  // 整整兩週任何詞都回「查不到」而頁面看起來正常。
+  if (out.size) cache = out;
   return out;
 }
 
