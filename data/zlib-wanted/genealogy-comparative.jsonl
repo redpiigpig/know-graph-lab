@@ -13,3 +13,13 @@
 {"key": "gc-avis-oxford-ecclesiology", "query": "Oxford Handbook of Ecclesiology Avis", "expect": "Handbook of Ecclesiology", "who": "Avis", "source": "genealogy-comparative", "zh": "艾維斯編《牛津教會論手冊》"}
 {"key": "gc-pannenberg-revelation-history", "query": "Pannenberg Revelation as History", "expect": "Revelation as History", "who": "Pannenberg", "source": "genealogy-comparative", "zh": "潘能伯格編《作為歷史的啟示》"}
 {"key": "gc-karmiris-dogmatika", "query": "Karmiris Ta dogmatika kai symbolika mnemeia", "expect": "dogmatika", "who": "Karmiris", "source": "genealogy-comparative", "zh": "卡爾彌里斯《正教大公教會的教義與信條文獻》"}
+{"key": "gc-pelikan-vindication-tradition", "query": "Jaroslav Pelikan The Vindication of Tradition", "expect": "Vindication of Tradition", "who": "Pelikan", "source": "genealogy-comparative", "zh": "帕利坎《傳統的正當性》"}
+{"key": "gc-hervieu-leger-chain-memory", "query": "Hervieu-Leger Religion as a Chain of Memory", "expect": "Chain of Memory", "who": "Hervieu", "source": "genealogy-comparative", "zh": "赫維厄－雷熱《宗教作為記憶之鏈》"}
+{"key": "gc-shils-tradition", "query": "Edward Shils Tradition", "expect": "Tradition", "who": "Shils", "source": "genealogy-comparative", "zh": "希爾斯《傳統》"}
+{"key": "gc-hobsbawm-invention-tradition", "query": "Hobsbawm Ranger The Invention of Tradition", "expect": "Invention of Tradition", "who": "Hobsbawm", "source": "genealogy-comparative", "zh": "霍布斯邦、蘭傑編《傳統的發明》"}
+{"key": "gc-halbwachs-topographie", "query": "Halbwachs La topographie legendaire des evangiles en Terre sainte", "expect": "topographie", "who": "Halbwachs", "source": "genealogy-comparative", "zh": "哈布瓦赫《福音書在聖地的傳說地形學》"}
+{"key": "gc-congar-tradition-traditions", "query": "Yves Congar Tradition and Traditions", "expect": "Tradition and Traditions", "who": "Congar", "source": "genealogy-comparative", "zh": "康加爾《傳統與諸傳統》"}
+{"key": "gc-meeks-first-urban-christians", "query": "Wayne Meeks The First Urban Christians", "expect": "First Urban Christians", "who": "Meeks", "source": "genealogy-comparative", "zh": "米克斯《最早的城市基督徒》"}
+{"key": "gc-theissen-sociology-early-palestinian", "query": "Gerd Theissen Sociology of Early Palestinian Christianity", "expect": "Early Palestinian Christianity", "who": "Theissen", "source": "genealogy-comparative", "zh": "泰森《早期巴勒斯坦基督教的社會學》"}
+{"key": "gc-schleiermacher-christian-faith", "query": "Schleiermacher The Christian Faith", "expect": "Christian Faith", "who": "Schleiermacher", "source": "genealogy-comparative", "zh": "士來馬赫《基督教信仰》"}
+{"key": "gc-weber-economy-society", "query": "Max Weber Economy and Society", "expect": "Economy and Society", "who": "Weber", "source": "genealogy-comparative", "zh": "韋伯《經濟與社會》"}
