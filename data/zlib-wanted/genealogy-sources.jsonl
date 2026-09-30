@@ -71,3 +71,15 @@
 {"key": "gs-ch5-libertas-kirche-und-weltordnung-tellenbach", "query": "Libertas Kirche und Weltordnung Tellenbach", "expect": "Libertas", "who": "Tellenbach", "source": "genealogy-sources", "zh": "特倫巴赫《自由：敘任權之爭時代的教會與世界秩序》"}
 {"key": "gs-ch5-the-council-of-florence-gill", "query": "The Council of Florence Gill", "expect": "Council of Florence", "who": "Gill", "source": "genealogy-sources", "zh": "吉爾《佛羅倫斯大公會議》"}
 {"key": "gs-ch5-hage-das-orientalische-christentum", "query": "Hage Das orientalische Christentum", "expect": "orientalische Christentum", "who": "Hage", "source": "genealogy-sources", "zh": "哈格《東方基督教》"}
+{"key": "gs-ch8-barrett-schism-and-renewal-in-africa", "query": "Barrett Schism and Renewal in Africa", "expect": "Schism and Renewal", "who": "Barrett", "source": "genealogy-sources", "zh": "巴雷特《非洲的分裂與更新》"}
+{"key": "gs-ch8-thumma-travis-beyond-megachurch-myths", "query": "Thumma Travis Beyond Megachurch Myths", "expect": "Megachurch Myths", "who": "Thumma", "source": "genealogy-sources", "zh": "圖馬、特拉維斯《超越巨型教會的迷思》"}
+{"key": "gs-ch8-chaves-congregations-in-america", "query": "Chaves Congregations in America", "expect": "Congregations in America", "who": "Chaves", "source": "genealogy-sources", "zh": "查維斯《美國的堂會》"}
+{"key": "gs-ch8-christerson-flory-the-rise-of-network-christianity", "query": "Christerson Flory The Rise of Network Christianity", "expect": "Network Christianity", "who": "Christerson", "source": "genealogy-sources", "zh": "克里斯特森、弗洛里《網絡基督教的興起》"}
+{"key": "gs-ch8-donald-miller-reinventing-american-protestantism", "query": "Donald Miller Reinventing American Protestantism", "expect": "Reinventing American Protestantism", "who": "Miller", "source": "genealogy-sources", "zh": "米勒《重塑美國新教》"}
+{"key": "gs-ch8-fenggang-yang-religion-in-china-survival-and-reviv", "query": "Fenggang Yang Religion in China Survival and Revival under Communist Rule", "expect": "Religion in China", "who": "Yang", "source": "genealogy-sources", "zh": "楊鳳崗《中國的宗教》"}
+{"key": "gs-ch8-hunter-chan-protestantism-in-contemporary-china", "query": "Hunter Chan Protestantism in Contemporary China", "expect": "Protestantism in Contemporary China", "who": "Hunter", "source": "genealogy-sources", "zh": "韓德、陳《當代中國的新教》"}
+{"key": "gs-ch8-lalive-d-epinay-el-refugio-de-las-masas", "query": "Lalive d'Epinay El refugio de las masas", "expect": "refugio de las masas", "who": "Lalive", "source": "genealogy-sources", "zh": "拉利夫·德皮奈《群眾的避難所》"}
+{"key": "gs-ch8-geldbach-freikirchen-erbe-gestalt-und-wirkung", "query": "Geldbach Freikirchen Erbe Gestalt und Wirkung", "expect": "Freikirchen", "who": "Geldbach", "source": "genealogy-sources", "zh": "蓋爾德巴赫《自由教會》"}
+{"key": "gs-ch8-mullins-christianity-made-in-japan", "query": "Mullins Christianity Made in Japan", "expect": "Christianity Made in Japan", "who": "Mullins", "source": "genealogy-sources", "zh": "穆林斯《日本製的基督教》"}
+{"key": "gs-ch8-", "query": "梁家麟 香港基督教史", "expect": "香港基督教史", "who": "梁家麟", "source": "genealogy-sources", "zh": "梁家麟《香港基督教史（1807–1997）》"}
+{"key": "gs-ch8-", "query": "邢福增 基督教在中國的失敗", "expect": "基督教在中國的失敗", "who": "邢福增", "source": "genealogy-sources", "zh": "邢福增《基督教在中國的失敗？》"}
