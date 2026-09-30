@@ -152,31 +152,67 @@ def main() -> int:
     ap.add_argument("--ids", required=True)
     ap.add_argument("--apply", action="store_true")
     a = ap.parse_args()
+    import multiprocessing as mp
     import audit_toc_accuracy as at
-    import standardize_ebook as se
     meta = at.load_meta()
+    done = set(DONE.read_text(encoding="utf-8").split()) if DONE.exists() else set()
     for bid in Path(a.ids).read_text(encoding="utf-8").split():
-        m = meta.get(bid, {})
-        src = CH / f"{bid}.jsonl"
-        bak = src.with_name(src.name + ".bak_reflow")
-        try:
-            if m.get("file_type") != "pdf" or not Path(m.get("file_path") or "").exists():
-                print("SKIP", bid, "不是 PDF 或原檔不在", flush=True)
-                continue
-            base = bak if bak.exists() else src
-            cs = [json.loads(l) for l in base.open(encoding="utf-8") if l.strip()]
-            cs.sort(key=lambda c: c.get("chunk_index") or 0)
-            out, why = reflow_book(cs, m["file_path"])
-            print(("OK" if out else "SKIP"), bid, why, flush=True)
-            if out and a.apply:
-                if not bak.exists():
-                    shutil.copy2(src, bak)
-                o = se.write_jsonl(bid, out)
-                se.push_to_r2(bid, o)
-                se.update_db(bid, out)
-        except Exception as e:  # noqa: BLE001
-            print("ERR", bid, f"{type(e).__name__}: {str(e)[:120]}", flush=True)
+        if a.apply and bid in done:
+            continue                               # 已重抽且推完（斷掉重跑時接續用）
+        # 每本在子行程跑、逾時就砍：10-01 凌晨兩次整條停擺，都是 PyMuPDF 零碎讀 Drive 上的 PDF 時等下載等不回來
+        p = mp.Process(target=handle, args=(bid, meta.get(bid, {}), a.apply))
+        p.start()
+        p.join(BOOK_TIMEOUT)
+        if p.is_alive():
+            p.terminate()
+            p.join()
+            print("TIMEOUT", bid, f"超過 {BOOK_TIMEOUT // 60} 分鐘，砍掉跳下一本", flush=True)
     return 0
+
+
+BOOK_TIMEOUT = 900
+DONE = Path(__file__).resolve().parents[1] / "output" / "restructure" / "reflow_done.txt"
+
+
+def handle(bid: str, m: dict, apply: bool) -> None:
+    import os
+    import socket
+    import tempfile
+    socket.setdefaulttimeout(120)      # 10-01 凌晨：沒設逾時的 DB／R2 呼叫也可能掛住
+    import standardize_ebook as se
+    src = CH / f"{bid}.jsonl"
+    bak = src.with_name(src.name + ".bak_reflow")
+    tmp_pdf = None
+    try:
+        if m.get("file_type") != "pdf" or not Path(m.get("file_path") or "").exists():
+            print("SKIP", bid, "不是 PDF 或原檔不在", flush=True)
+            return
+        base = bak if bak.exists() else src
+        cs = [json.loads(l) for l in base.open(encoding="utf-8") if l.strip()]
+        cs.sort(key=lambda c: c.get("chunk_index") or 0)
+        # 先把 PDF 整份複製到本機再讀：一次循序下載，比 PyMuPDF 在 Drive 上零碎讀穩
+        fd, tmp_pdf = tempfile.mkstemp(suffix=".pdf")
+        os.close(fd)
+        shutil.copyfile(m["file_path"], tmp_pdf)
+        out, why = reflow_book(cs, tmp_pdf)
+        print(("OK" if out else "SKIP"), bid, why, flush=True)
+        if out and apply:
+            if not bak.exists():
+                shutil.copy2(src, bak)
+            tmp = src.with_name(src.name + ".tmp")      # 寫完整份再換上，被砍也不會留半個檔
+            with tmp.open("w", encoding="utf-8") as f:
+                for c in out:
+                    f.write(json.dumps(c, ensure_ascii=False) + "\n")
+            os.replace(tmp, src)
+            se.push_to_r2(bid, src)
+            se.update_db(bid, out)
+            with DONE.open("a", encoding="utf-8") as f:
+                f.write(bid + "\n")
+    except Exception as e:  # noqa: BLE001
+        print("ERR", bid, f"{type(e).__name__}: {str(e)[:120]}", flush=True)
+    finally:
+        if tmp_pdf and os.path.exists(tmp_pdf):
+            os.remove(tmp_pdf)
 
 
 if __name__ == "__main__":
