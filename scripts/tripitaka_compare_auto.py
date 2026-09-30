@@ -573,6 +573,68 @@ def pair_chapters(chaps: dict[str, list[str]], lens: dict[str, list[int]] | None
     return []
 
 
+def attach_by_length(groups: list[dict], key: str, olens: list[int], glens: list[float]) -> list[dict]:
+    """把一本原典的各品掛到漢譯的品組上——Gale–Church 式的長度動態規劃。
+
+    原典對漢譯的字數比在各品間大致固定（維摩詰經梵／羅什 4.3–5.5），所以比例最穩的
+    那條對應路徑就是對的。允許 1-1、1-2、2-1、1-3、3-1（兩品併一品），
+    以及少量 0-1／1-0（某本獨有的品）。漢譯側被併的幾組會合成一組。
+    模型不擅長這件事：看不懂梵文開頭，品數不同時就照序號硬配。"""
+    import math
+    O, G = len(olens), len(groups)
+    if not O or not G:
+        return groups
+    r = sum(olens) / max(1.0, sum(glens))
+    beads = [(1, 1, 0.0), (1, 2, 0.35), (2, 1, 0.35), (1, 3, 0.9), (3, 1, 0.9), (0, 1, 2.0), (1, 0, 2.0)]
+    INF = float("inf")
+    dp = [[INF] * (G + 1) for _ in range(O + 1)]
+    back: dict[tuple[int, int], tuple[int, int]] = {}
+    dp[0][0] = 0.0
+    for i in range(O + 1):
+        for j in range(G + 1):
+            if dp[i][j] == INF:
+                continue
+            for a, b, pen in beads:
+                ni, nj = i + a, j + b
+                if ni > O or nj > G:
+                    continue
+                lo, lg = sum(olens[i:ni]), sum(glens[j:nj])
+                cost = pen if (a == 0 or b == 0) else pen + abs(math.log(max(lo, 1) / max(r * lg, 1)))
+                if dp[i][j] + cost < dp[ni][nj]:
+                    dp[ni][nj] = dp[i][j] + cost
+                    back[(ni, nj)] = (i, j)
+    path, cur = [], (O, G)
+    while cur != (0, 0):
+        prev = back[cur]
+        path.append((prev, cur))
+        cur = prev
+    path.reverse()
+    out: list[dict] = []
+    for (i, j), (ni, nj) in path:
+        if nj == j:          # 原典獨有的品：沒有漢譯可並排，略過
+            continue
+        merged = {"label": groups[j].get("label") if nj - j == 1 else
+                  f"{groups[j].get('label')}～{groups[nj - 1].get('label')}", "parts": {}}
+        for g in groups[j:nj]:
+            for k, idx in (g.get("parts") or {}).items():
+                merged["parts"].setdefault(k, []).extend(idx if isinstance(idx, list) else [idx])
+        if ni > i:
+            merged["parts"][key] = list(range(i, ni))
+        out.append(merged)
+    return out
+
+
+def zh_group_lens(groups: list[dict], lens: dict[str, list[int]], zh: list[str]) -> list[float]:
+    """每組的漢譯長度：在場各本平均後乘本數（缺本的組不吃虧）。"""
+    out = []
+    for g in groups:
+        p = g.get("parts") or {}
+        present = [(z, p[z] if isinstance(p[z], list) else [p[z]]) for z in zh if p.get(z) is not None and p.get(z) != []]
+        tot = sum(lens[z][i] for z, idx in present for i in idx)
+        out.append(tot / max(1, len(present)) * len(zh))
+    return out
+
+
 def chapter_jobs(c: dict) -> tuple[str, str, dict[str, dict]] | None:
     """長經 → (slug 前綴, 經名, {本子 id: {lang,label,who,chapters:[(名, 文或句, en?, 錨點)]}})"""
     books: dict[str, dict] = {}
@@ -619,7 +681,23 @@ def run_chapters(c: dict, st: dict) -> tuple[int, int]:
         groups = st[pkey]["groups"]
     else:
         lens = {k: [sum(len(x) for x in ch[1]) for ch in b["chapters"]] for k, b in books.items()}
-        groups = pair_chapters(listing, lens)
+        zh = [k for k, b in books.items() if b["lang"] == "lzh"]
+        orig = [k for k in books if k not in zh]
+        # 1) 漢譯之間：品數相同就按序配；不同才請模型依品名配（中文品名它讀得懂）
+        counts = {len(books[z]["chapters"]) for z in zh}
+        if len(zh) == 1 or len(counts) == 1:
+            n = len(books[zh[0]]["chapters"])
+            # 品名去掉經名前綴（「維摩詰所說經方便品第二」→「方便品第二」），只影響顯示
+            clean = lambda h: re.sub(r"^.{2,12}?經(?=.{1,12}品)", "", h)
+            groups = [{"label": clean(books[zh[0]]["chapters"][i][0]), "parts": {z: [i] for z in zh}} for i in range(n)]
+        else:
+            groups = pair_chapters({z: listing[z] for z in zh})
+        # 2) 原典：長度動態規劃掛上去（見 attach_by_length），逐本做
+        for k in orig:
+            groups = attach_by_length(groups, k, lens[k], zh_group_lens(groups, lens, zh))
+        odd = length_outliers(groups, lens)
+        if odd:
+            raise ValueError("配品後長度比例仍異常，不發布：" + "；".join(odd[:6]))
         st[pkey] = {"groups": groups}
         save_state(st)
     ok = fail = 0
