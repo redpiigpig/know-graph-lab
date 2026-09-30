@@ -44,6 +44,7 @@ import rebuild_reference_bilingual as rb  # noqa: E402
 CH = rb.CHUNKS
 OUT = Path(__file__).resolve().parents[1] / "output" / "restructure"
 MAX_CHAPTER = 150_000
+ALLOW_COLLECTED = False          # --collected：只處理 collection=collected-works 的單語全集
 BAD_FLAGS = {"NO_TOC", "BODY_AS_TITLE", "RUNNING_HEADER", "JUNK_TITLE", "PRINTED_TOC_MISS", "SEQ_BROKEN", "THIN_TEXT"}
 FRONT = {"封面", "出版資訊", "出版說明", "版權頁", "版權資訊", "扉頁", "目錄", "目次", "目　錄", "目　次",
          "圖目次", "表目次", "Contents", "Table of Contents", "CONTENTS", "索引", "Index", "INDEX", "Copyright"}
@@ -219,6 +220,14 @@ def merge_epigraphs(ps: list[str]) -> list[str]:
     return out
 
 
+def display_title(t: str) -> str:
+    """全集的章節路徑是「書名 · p134　第二章 · 節名」：顯示只取最後一段、去掉 p134 頁碼前綴。
+    （chapter_path 本身不改，全集閱讀器的目錄靠它分組。）"""
+    if " · " not in t:
+        return t
+    return re.sub(r"^p\d+[\s　]*", "", t.split(" · ")[-1]).strip() or t
+
+
 def clean_title(t: str) -> str:
     """章名去掉 markdown 殘渣：開頭井號、粗體星號、<u> 標籤。"""
     t = re.sub(r"</?u>|\*\*|__", "", t or "")
@@ -229,7 +238,7 @@ JUNK_TITLE = re.compile(r"[Ͱ-ϿЀ-ӿ]|[一-鿿][A-Za-z](?![A-Za-z])|(?<![A-Za-z
 
 
 def build_chapter(label: str, top: str, cs: list[dict], known: dict) -> str:
-    out: list[str] = [f"## {top}"]
+    out: list[str] = [f"## {display_title(top)}"]
     all_notes: list[str] = []
     offset = 0
     need_renumber = False
@@ -246,7 +255,7 @@ def build_chapter(label: str, top: str, cs: list[dict], known: dict) -> str:
         text = rb.html_tables_to_md(fix_marker(c, known))
         parts = [clean_title(x) for x in (c.get("chapter_path") or "").split(" / ")]
         sec = " / ".join(parts[1:]) if len(parts) > 1 and norm(parts[-1]) != norm(top) else None
-        titles = [top] + ([sec, parts[-1]] if sec else [])
+        titles = [top, display_title(top)] + ([sec, parts[-1]] if sec else [])
         text = strip_leading_titles(text, titles)
         body, notes = split_notes_keep_order(text)
         if need_renumber:
@@ -340,8 +349,10 @@ def promote_flat_sections(chunks: list[dict]) -> list[dict]:
 def restructure(chunks: list[dict], meta: dict) -> tuple[list[dict] | None, str, dict]:
     """回傳 (新 chunks 或 None, 原因／OK, 統計)。"""
     import audit_toc_accuracy as at
-    if meta.get("collection"):
+    if meta.get("collection") and not (ALLOW_COLLECTED and meta["collection"] == "collected-works"):
         return None, f"collection={meta['collection']}", {}
+    if any(c.get("anchors") for c in chunks):
+        return None, "已有標準引用號（全集 anchors，不動）", {}
     if any(c.get("source_text") or c.get("sources") for c in chunks):
         return None, "有對照欄（走 rebuild_reference_bilingual）", {}
     if any("{{s:" in (c.get("content") or "") for c in chunks):
@@ -387,7 +398,10 @@ def restructure(chunks: list[dict], meta: dict) -> tuple[list[dict] | None, str,
     junk = [k[1] for k, _ in body_runs if JUNK_TITLE.search(k[1])]
     if junk:
         return None, f"章名疑似OCR亂碼：{junk[:2]}", {}
-    glued = [k[1] for k, _ in body_runs if len(k[1]) > 12 and re.search(r"[，。；！？]", k[1])]
+    if ALLOW_COLLECTED:   # 全集的散文篇名本來就常帶逗號（「聞聲救難，度一切苦厄」），只擋長句
+        glued = [k[1] for k, _ in body_runs if len(display_title(k[1])) > 30 or "。" in display_title(k[1])]
+    else:
+        glued = [k[1] for k, _ in body_runs if len(k[1]) > 12 and re.search(r"[，。；！？]", k[1])]
     if glued:
         return None, f"章名黏正文：{glued[:2]}", {}
     lens = sorted(len(p) for _, cs in body_runs for c in cs for p in rb.paras(c.get("content") or ""))
@@ -397,7 +411,7 @@ def restructure(chunks: list[dict], meta: dict) -> tuple[list[dict] | None, str,
                     for _, cs in body_runs)
     if per_ch[len(per_ch) // 2] < 3:
         return None, f"章內段落過少（每章段數中位數 {per_ch[len(per_ch) // 2]}）", {}
-    labels = dict(zip([k for k, _ in body_runs], chapter_labels([k[1] for k, _ in body_runs])))
+    labels = dict(zip([k for k, _ in body_runs], chapter_labels([display_title(k[1]) for k, _ in body_runs])))
     known = rb.printed_map(chunks)
     out: list[dict] = []
     for key, cs in runs:
@@ -462,7 +476,12 @@ def main() -> int:
     ap.add_argument("--show")
     ap.add_argument("--apply", action="store_true")
     ap.add_argument("--ids", help="要寫回的書 id 清單檔（一行一個）")
+    ap.add_argument("--collected", action="store_true", help="改處理全集（單語、無 anchors 的）")
     a = ap.parse_args()
+    global ALLOW_COLLECTED, OUT
+    if a.collected:
+        ALLOW_COLLECTED = True
+        OUT = OUT.parent / "restructure_collected"
     import audit_toc_accuracy as at
     meta = at.load_meta()
     print("ebooks", len(meta), flush=True)
@@ -495,7 +514,8 @@ def main() -> int:
             print("OK", bid, {k: (len(v) if k == "figures" else v) for k, v in st.items() if k != "epub"}, flush=True)
         return 0
     OUT.mkdir(parents=True, exist_ok=True)
-    files = sorted(p for p in CH.glob("*.jsonl") if p.stem in meta)
+    files = sorted(p for p in CH.glob("*.jsonl") if p.stem in meta
+                   and (meta[p.stem].get("collection") == "collected-works") == a.collected)
     if a.limit:
         files = files[:a.limit]
     rows, reasons = [], collections.Counter()

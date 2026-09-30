@@ -107,6 +107,9 @@
                 <div v-if="row.heading" :class="headingClass(row.headingLevel)">
                   {{ row.heading }}
                 </div>
+                <div v-else-if="row.isRule" class="flex items-center gap-2 pt-4 pb-1 text-[11px] text-stone-400 tracking-widest">
+                  <span class="flex-1 border-t border-stone-200"></span>註　釋<span class="flex-1 border-t border-stone-200"></span>
+                </div>
                 <article v-else class="bg-white border rounded-md overflow-hidden"
                   :class="[isAphorism ? 'shadow-sm my-2' : '', row.isNote ? 'border-stone-100' : 'border-stone-200']">
                   <!-- 對話錄講者／經院問答角色標籤列 -->
@@ -311,8 +314,18 @@ const rows = computed(() => {
   for (const l of sourceOrder.value) srcParas[l] = paras(c.sources?.[l])
   const zipped = zipParallel(zh, srcParas, sourceOrder.value)
   const anchors: string[] = c.anchors ?? []
+  let inNotes = false
   return zipped.map((r, i) => {
     let zhText = r.zh
+    // 段號 `{{s:章-節-段}}`（restructure_chapters.py 寫入）：從各欄段首拿掉，改顯示在左欄引用號
+    const SID = /^((?:\{\{p:[^}]*\}\})*)(>\s)?\{\{s:([^{}\s]+)\}\}/
+    const sm = SID.exec(zhText)
+    const strip = (s: string) => (s ?? '').replace(SID, (_m, p, q) => `${q ?? ''}${p ?? ''}`)
+    if (sm) zhText = strip(zhText)
+    r = { ...r, cols: Object.fromEntries(Object.entries(r.cols).map(([k, v]) => [k, strip(v as string)])) }
+    // 章末註釋：15 條以上破折號的分隔線之後、以 (N) 起頭的段
+    const isRule = /^[—－-]{15,}$/.test(zhText.trim())
+    if (isRule) inNotes = !inNotes
     const hm = /^(#{1,5})\s+/.exec(zhText)
     const heading = hm ? zhText.replace(/^#{1,5}\s+/, '') : null
     // 論著有章底下的節（`###` 起），層級要看得出來——全部畫成同一條金色橫幅的話，
@@ -336,8 +349,10 @@ const rows = computed(() => {
       zh: zhText,
       cols,
       // 註文段落（`[^4]: …`）在版面上要跟正文分開：小一號、灰底
-      isNote: /^\[\^[^\]]{1,8}\]:/.test(zhText),
-      anchor: anchors[i] ?? (i === 0 && c.page_number != null ? String(c.page_number) : ''),
+      isNote: /^\[\^[^\]]{1,8}\]:/.test(zhText) || (inNotes && /^\(\d+\)\s/.test(zhText)),
+      isRule,
+      // 已有標準引用號（Stephanus／原書頁碼…）優先，沒有才用段號
+      anchor: anchors[i] || (sm ? sm[3] : '') || (i === 0 && c.page_number != null ? String(c.page_number) : ''),
     }
   })
 })
@@ -406,8 +421,21 @@ function md(s: string) {
   // 兩者都要先於一般 markdown 處理，否則 `[^` 會被斜體規則咬掉。
   // 行內頁碼標記：單語書按「一次發言」成塊，塊內換頁就靠這個標出來，
   // 不然合併之後只剩起始頁，引用精度會從「頁」掉到「整段發言」。
-  t = t.replace(/【頁\s*([^】]{1,8})】/g,
-    '<span class="mx-1 align-super select-none text-[0.62em] font-mono text-stone-400">$1</span>')
+  t = t.replace(/【頁\s*([^】]{1,8})】|\{\{p:([^}]{1,8})\}\}/g, (_m, a, b) =>
+    `<span class="mx-1 align-super select-none text-[0.62em] font-mono text-stone-400">${a ?? b}</span>`)
+  // 書內插圖（restructure_chapters.py／epub_figures.py 放回的）
+  const fig = /^((?:<span[^>]*>[^<]*<\/span>)*)!\[([^\]]*)\]\((\/api\/ebooks\/[0-9a-f-]{36}\/image\/[A-Za-z0-9._~-]+)\)$/.exec(t)
+  if (fig) {
+    return `${fig[1]}<figure class="text-center my-2"><img src="${fig[3]}" alt="${fig[2]}" loading="lazy" class="mx-auto max-w-full max-h-[70vh] rounded" />`
+      + (fig[2] ? `<figcaption class="mt-1.5 text-[0.8rem] text-stone-500">${fig[2]}</figcaption>` : '') + '</figure>'
+  }
+  // 引文（> 引文\n> ——署名）：楷體，署名另起一行靠右
+  if (/^&gt;\s/.test(t)) {
+    const ls = t.split('\n').map((l) => l.replace(/^&gt;\s?/, ''))
+    const attrib = ls.length > 1 && /^[—―]{1,2}/.test(ls[ls.length - 1]) ? ls.pop() : null
+    return `<span class="block" style="font-family:'ZCOOL XiaoWei','DFKai-SB','BiauKai','標楷體',serif">${ls.join('<br>')}`
+      + (attrib ? `<span class="block text-right mt-1">${attrib}</span>` : '') + '</span>'
+  }
   t = t.replace(/^\[\^([^\]]{1,8})\]:\s*/,
     '<span class="mr-1.5 font-semibold text-blue-700">$1.</span>')
   t = t.replace(/\[\^([^\]]{1,8})\]/g,

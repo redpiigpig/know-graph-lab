@@ -147,10 +147,21 @@ def place_figures(chunks: list[dict], figs: list[Figure], book_id: str) -> tuple
     return out, used, miss
 
 
+_zips: dict[str, zipfile.ZipFile] = {}
+
+
+def _zip(path: str) -> zipfile.ZipFile:
+    """同一本 EPUB 只開一次（Drive 上的大檔每開一次都要重讀目錄，62MB 的書曾一張圖卡好幾分鐘）。"""
+    if path not in _zips:
+        _zips.clear()
+        _zips[path] = zipfile.ZipFile(path)
+    return _zips[path]
+
+
 def image_bytes(epub_path: str, member: str) -> tuple[bytes, str]:
     """縮到最寬 1200px；有透明就留 PNG，其餘 JPEG q82。回傳 (bytes, content-type)。"""
     from PIL import Image
-    raw = zipfile.ZipFile(epub_path).read(member)
+    raw = _zip(epub_path).read(member)
     im = Image.open(io.BytesIO(raw))
     if im.width > 1200:
         im = im.resize((1200, round(im.height * 1200 / im.width)))
