@@ -15,6 +15,7 @@
 import { GetObjectCommand, S3Client } from "@aws-sdk/client-s3";
 import fs from "node:fs";
 import path from "node:path";
+import { serverSupabaseUser } from "#supabase/server";
 
 const SAFE = /^[A-Za-z0-9][A-Za-z0-9._@~-]{0,95}\.(jpe?g|png|gif)$/i;
 const PREFIX = "fgs-dictionary/";
@@ -40,6 +41,10 @@ function mime(name: string) {
 }
 
 export default defineEventHandler(async (event) => {
+  // 🚨 佛光授權只限自用。<img> 帶不了 Authorization header，所以認登入 cookie。
+  const user = await serverSupabaseUser(event).catch(() => null);
+  if (!user) throw createError({ statusCode: 401, message: "Unauthorized" });
+
   const raw = getRouterParam(event, "name") || "";
   const name = path.basename(decodeURIComponent(raw));
   if (!SAFE.test(name)) {
@@ -48,7 +53,7 @@ export default defineEventHandler(async (event) => {
 
   // 這批圖不會變動，快取可以放長
   setHeader(event, "Content-Type", mime(name));
-  setHeader(event, "Cache-Control", "public, max-age=31536000, immutable");
+  setHeader(event, "Cache-Control", "private, max-age=31536000, immutable");
 
   const cfg = useRuntimeConfig();
   try {
