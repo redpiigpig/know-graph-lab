@@ -8,8 +8,10 @@
   - 都找不到位置就不放（不亂插）。
 比對前兩邊都轉成簡體再去標點：EPUB 多半是簡體、入庫時轉成了繁體，繁轉簡是多對一，比簡轉繁穩。
 
-正文裡寫成 `![圖說](/api/ebooks/{id}/image/{檔名})`，閱讀器畫成 <figure>；
-圖檔縮到最寬 1200px 推 R2 `ebook-images/{id}/{檔名}`（server/api/ebooks/[id]/image/[name].get.ts 串流）。
+正文裡寫成 `![圖說](/api/ebooks/{id}/image/{檔名})`，閱讀器畫成 <figure>。
+🚨 2026-10-01 使用者定：圖只存在 Drive（就是原 EPUB 本身），不上 R2——全館五千多本書 R2 放不下。
+server/api/ebooks/[id]/image/[name].get.ts 直接從 Drive 上的 EPUB 讀圖：本機跑網站看得到，
+正式站讀不到 G: 回 404，閱讀器 onerror 拿掉圖、只留圖說文字。
 """
 from __future__ import annotations
 
@@ -145,29 +147,3 @@ def place_figures(chunks: list[dict], figs: list[Figure], book_id: str) -> tuple
             miss += 1
     out = [dict(c, content="\n\n".join(ps)) for c, ps in zip(chunks, paras)]
     return out, used, miss
-
-
-_zips: dict[str, zipfile.ZipFile] = {}
-
-
-def _zip(path: str) -> zipfile.ZipFile:
-    """同一本 EPUB 只開一次（Drive 上的大檔每開一次都要重讀目錄，62MB 的書曾一張圖卡好幾分鐘）。"""
-    if path not in _zips:
-        _zips.clear()
-        _zips[path] = zipfile.ZipFile(path)
-    return _zips[path]
-
-
-def image_bytes(epub_path: str, member: str) -> tuple[bytes, str]:
-    """縮到最寬 1200px；有透明就留 PNG，其餘 JPEG q82。回傳 (bytes, content-type)。"""
-    from PIL import Image
-    raw = _zip(epub_path).read(member)
-    im = Image.open(io.BytesIO(raw))
-    if im.width > 1200:
-        im = im.resize((1200, round(im.height * 1200 / im.width)))
-    buf = io.BytesIO()
-    if im.mode in ("RGBA", "LA", "P") and member.lower().endswith(".png"):
-        im.save(buf, "PNG", optimize=True)
-        return buf.getvalue(), "image/png"
-    im.convert("RGB").save(buf, "JPEG", quality=82, optimize=True)
-    return buf.getvalue(), "image/jpeg"

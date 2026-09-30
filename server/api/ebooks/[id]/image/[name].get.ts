@@ -1,33 +1,31 @@
 /**
- * 串流電子圖書館書內插圖（EPUB 解析時丟掉、scripts/epub_figures.py 放回正文的那些）。
+ * 書內插圖（scripts/epub_figures.py 在正文放回的 `![圖說](/api/ebooks/{id}/image/{檔名})`）。
  *
  *   GET /api/ebooks/{ebook_id}/image/image00147.jpeg
  *
- * 服務用縮圖在 R2 `ebook-images/{ebook_id}/{檔名}`（restructure_chapters.py --apply 上傳）；
- * 正本仍是 Drive 上的 EPUB。<img> 帶不了 Authorization header，所以認登入 cookie。
+ * 2026-10-01 使用者定：插圖只存在 Drive，不上 R2（全館五千多本書，R2 放不下）。
+ * 所以這裡直接從 Drive 上的原 EPUB（ebooks.file_path）讀出那張圖——
+ * 只有在本機跑網站時讀得到；正式站（Zeabur）讀不到 G:，回 404，閱讀器就只留圖說文字。
  *
- * ⚠️ id 與檔名都會拼進 R2 key，一律限定字元集，不擋就是一條目錄遍歷。
+ * ⚠️ id 與檔名都限定字元集；檔名只拿來比對 EPUB 內的 manifest，不拼路徑。
  */
-import { GetObjectCommand, S3Client } from "@aws-sdk/client-s3";
+import fs from "node:fs";
 import path from "node:path";
 import { serverSupabaseUser } from "#supabase/server";
 
 const SAFE_NAME = /^[A-Za-z0-9][A-Za-z0-9._~-]{0,120}\.(jpe?g|png|gif|webp)$/i;
 const SAFE_ID = /^[0-9a-f-]{36}$/i;
 
-let _r2: S3Client | null = null;
-function getR2() {
-  if (_r2) return _r2;
-  const cfg = useRuntimeConfig();
-  _r2 = new S3Client({
-    region: "auto",
-    endpoint: cfg.r2Endpoint as string,
-    credentials: {
-      accessKeyId: cfg.r2AccessKey as string,
-      secretAccessKey: cfg.r2SecretKey as string,
-    },
-  });
-  return _r2;
+// 同一本書連續讀好幾張圖：開過的 EPUB 留著（最多 3 本，大書一本就上百 MB）
+const cache = new Map<string, any>();
+
+async function openEpub(file: string) {
+  if (cache.has(file)) return cache.get(file);
+  const { EPub } = await import("epub2");
+  const epub = await EPub.createAsync(file);
+  if (cache.size >= 3) cache.delete(cache.keys().next().value!);
+  cache.set(file, epub);
+  return epub;
 }
 
 export default defineEventHandler(async (event) => {
@@ -40,18 +38,19 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 400, message: "圖檔名格式錯誤" });
   }
 
-  try {
-    const res = await getR2().send(
-      new GetObjectCommand({ Bucket: useRuntimeConfig().r2Bucket as string, Key: `ebook-images/${id}/${name}` }),
-    );
-    if (res.Body) {
-      setHeader(event, "Content-Type", res.ContentType || "image/jpeg");
-      setHeader(event, "Cache-Control", "private, max-age=31536000, immutable");
-      if (res.ContentLength) setHeader(event, "Content-Length", String(res.ContentLength));
-      return sendStream(event, res.Body as any);
-    }
-  } catch {
-    /* fallthrough */
+  const { data } = await getAdminClient().from("ebooks").select("file_path").eq("id", id).single();
+  const file = (data?.file_path as string | null) ?? "";
+  if (!file || !/\.epub$/i.test(file) || !fs.existsSync(file)) {
+    // 正式站讀不到 Drive：照使用者的決定，圖不顯示、只留圖說
+    throw createError({ statusCode: 404, message: "插圖只存在 Drive，本機才看得到" });
   }
-  throw createError({ statusCode: 404, message: "找不到這張圖" });
+
+  const epub = await openEpub(file);
+  const item = Object.values(epub.manifest as Record<string, any>)
+    .find((m: any) => typeof m.href === "string" && path.posix.basename(m.href) === name);
+  if (!item) throw createError({ statusCode: 404, message: "找不到這張圖" });
+  const [buf, mime] = await epub.getImageAsync(item.id);
+  setHeader(event, "Content-Type", mime || "image/jpeg");
+  setHeader(event, "Cache-Control", "private, max-age=86400");
+  return buf;
 });

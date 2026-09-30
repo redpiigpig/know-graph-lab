@@ -1062,7 +1062,8 @@ function renderMarkdown(md: string, chunkIndex: number | null = null): string {
       const cap = h[2].trim();
       bodyOut.push(
         `<figure class="ebook-figure">${h[1] ? inlineFmt(h[1], chunkIndex) : ""}` +
-        `<img src="${h[3]}" alt="${cap}" loading="lazy" />` +
+        // 插圖只存在 Drive（使用者定）：正式站讀不到 → 拿掉圖、只留圖說
+        `<img src="${h[3]}" alt="${cap}" loading="lazy" onerror="this.remove()" />` +
         (cap ? `<figcaption>${inlineFmt(cap, chunkIndex)}</figcaption>` : "") + `</figure>`
       );
     }

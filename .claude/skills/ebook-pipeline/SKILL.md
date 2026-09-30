@@ -50,7 +50,10 @@ End-to-end pipeline from Drive folder → reader at `/ebook/[id]`. Single SKILL 
 - **卷首引言**：短段後緊接「——某某」→ 合成 `> 引文\n> ——署名`，閱讀器畫楷體引文、署名靠右，只編一個段號。
 - **插圖**（`scripts/epub_figures.py`）：EPUB 解析時圖全丟、只剩圖說。照 spine 順序找圖（<8KB 裝飾圖略過），
   圖說段換成 `![圖說](/api/ebooks/{id}/image/{檔名})`，沒圖說的插在前一段正文之後；比對兩邊都轉簡體（繁轉簡多對一較穩）。
-  縮到寬 1200px 推 R2 `ebook-images/{id}/`，`server/api/ebooks/[id]/image/[name].get.ts` 認登入 cookie 串流。
+  🚨 **圖只存在 Drive（2026-10-01 使用者定：全館五千多本書，R2 放不下）**：不抽圖、不上 R2，
+  `server/api/ebooks/[id]/image/[name].get.ts` 用 epub2 直接從 Drive 上的原 EPUB（ebooks.file_path）讀圖。
+  本機跑網站看得到圖；正式站讀不到 G: 回 404，閱讀器 `onerror` 拿掉 <img>、只留圖說文字。
+  （曾先上傳 R2 1,145 張 105MB，已全數刪除；照原比例全館 EPUB 約 6 萬張、壓縮前 5.5GB。）
 - 閱讀器：DOCX／TXT 的段落只隔單一換行，閱讀器會連成一大段 → 重建時改空行分段。
 - 中文書的複製引用改中文格式（作者著，譯者譯，《書名》（出版社，年），頁 N）；原本英文 Chicago 會把中文全濾掉只剩「(1901), p. 6.」。
 

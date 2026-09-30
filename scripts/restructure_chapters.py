@@ -448,19 +448,6 @@ def restructure(chunks: list[dict], meta: dict) -> tuple[list[dict] | None, str,
                        "mass": (before, after), "figures": [f.member for f in figures], "epub": fp if figures else ""}
 
 
-def push_figures(se, bid: str, epub: str, members: list[str]) -> None:
-    """插圖縮圖推 R2 ebook-images/{id}/{檔名}（閱讀器經 /api/ebooks/{id}/image/{檔名} 讀）。"""
-    import posixpath
-    import boto3
-    import epub_figures as ef
-    s3 = boto3.client("s3", region_name="auto", endpoint_url=se.ENV["R2_ENDPOINT"],
-                      aws_access_key_id=se.ENV["R2_ACCESS_KEY"], aws_secret_access_key=se.ENV["R2_SECRET_KEY"])
-    for m in members:
-        body, ctype = ef.image_bytes(epub, m)
-        s3.put_object(Bucket=se.ENV["R2_BUCKET"], Key=f"ebook-images/{bid}/{posixpath.basename(m)}",
-                      Body=body, ContentType=ctype)
-
-
 def load_original(bid: str) -> list[dict]:
     """一律從第一次重建前的原貌讀（有 .bak_restructure 就讀它），規則改了才能對已重建的書重跑。"""
     src = CH / f"{bid}.jsonl"
@@ -506,8 +493,6 @@ def main() -> int:
             bak = src.with_name(src.name + ".bak_restructure")
             if not bak.exists():
                 shutil.copy2(src, bak)
-            if st.get("figures"):
-                push_figures(se, bid, st["epub"], st["figures"])
             o = se.write_jsonl(bid, out)
             se.push_to_r2(bid, o)
             se.update_db(bid, out)

@@ -426,7 +426,7 @@ function md(s: string) {
   // 書內插圖（restructure_chapters.py／epub_figures.py 放回的）
   const fig = /^((?:<span[^>]*>[^<]*<\/span>)*)!\[([^\]]*)\]\((\/api\/ebooks\/[0-9a-f-]{36}\/image\/[A-Za-z0-9._~-]+)\)$/.exec(t)
   if (fig) {
-    return `${fig[1]}<figure class="text-center my-2"><img src="${fig[3]}" alt="${fig[2]}" loading="lazy" class="mx-auto max-w-full max-h-[70vh] rounded" />`
+    return `${fig[1]}<figure class="text-center my-2"><img src="${fig[3]}" alt="${fig[2]}" loading="lazy" onerror="this.remove()" class="mx-auto max-w-full max-h-[70vh] rounded" />`
       + (fig[2] ? `<figcaption class="mt-1.5 text-[0.8rem] text-stone-500">${fig[2]}</figcaption>` : '') + '</figure>'
   }
   // 引文（> 引文\n> ——署名）：楷體，署名另起一行靠右
