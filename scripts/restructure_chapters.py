@@ -390,6 +390,11 @@ def restructure(chunks: list[dict], meta: dict) -> tuple[list[dict] | None, str,
         out.append(first)
     for i, c in enumerate(out):
         c["chunk_index"] = i
+    # 合併後再驗一次段落：一頁一段的書，跨頁斷句接回去之後會整章變一段（Taiwan's Buddhist Nuns）
+    chs = [c for c in out if c.get("chunk_type") == "chapter" and "{{s:" in c["content"]]
+    lumpy = [c for c in chs if len(c["content"]) > 5000 and c["content"].count("{{s:") <= 3]
+    if chs and len(lumpy) * 4 > len(chs):
+        return None, f"合併後段落沒切開（{len(lumpy)}/{len(chs)} 章字多但不到 4 段）", {}
     before, after = mass(chunks), mass(out)
     # 只有標題字可以增減（剝掉正文裡重打的章名、補上節名）：容許量＝各塊標題字數兩倍＋100，正文不能少
     title_w = sum(len(re.findall(r"\w", c.get("chapter_path") or "")) for c in chunks)
