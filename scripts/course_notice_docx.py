@@ -183,7 +183,7 @@ def build(key):
     shade(row(t, ['課程名稱', c['name'], '課程代碼', c['code']]).cells[:1])
     row(t, ['開課班級', c['klass'], '選修別', f"{c['elective']}　{c['credits']} 學分"])
     row(t, ['上課時間', c['time'], '上課教室', c['room']])
-    row(t, ['授課教師', CS.TEACHER, '聯絡方式', CS.EMAIL])
+    row(t, ['授課教師', c.get('teacher', CS.TEACHER), '聯絡方式', CS.EMAIL])
     for r in t.rows:
         shade([r.cells[0], r.cells[2]])
     para(doc)
