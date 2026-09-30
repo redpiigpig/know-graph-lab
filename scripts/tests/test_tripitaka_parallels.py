@@ -129,6 +129,20 @@ def test_range_uid_resolves_to_its_start(monkeypatch):
     assert tp.jing_seg("T0099", "1060-1061") == "S1060"
 
 
+def test_samyukta_uses_head_number_not_mulu_n(monkeypatch):
+    """雜阿含的 n（cb:mulu）不是大正藏經號；SC 的 sa379 是標題（三七九）那一經。
+    實例：（三七九）轉法輪經 n=377、（三八一）n=379。認 n 會把 SN 56.12 掛到第 381 經。"""
+    _fake_toc(monkeypatch, "T0099", [
+        {"i": 0, "depth": 1, "type": "jing", "head": "（三七九）", "n": "377",
+         "parent": -1, "uid": "SA379", "juan": 15},
+        {"i": 1, "depth": 1, "type": "jing", "head": "（三八一）", "n": "379",
+         "parent": -1, "uid": "SA381", "juan": 15},
+    ])
+    assert tp.jing_seg("T0099", "379") == "SA379"
+    assert tp.jing_seg("T0099", "381") == "SA381"
+    assert tp.jing_seg("T0099", "377") is None
+
+
 def test_pin_seg(monkeypatch):
     """t213.4 的品號＝跨語言主對齊層，不可丟。"""
     tp._TOC_CACHE["T0213"] = [

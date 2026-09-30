@@ -218,6 +218,16 @@ def sutta_index(work_id: str) -> dict[str, str]:
             continue
         if t not in ("jing", "other"):
             continue
+        # 🚨 雜阿含的 n（cb:mulu）**不是**大正藏經號：1,349 經裡只有 139 經相符，
+        # 其餘差 2–7 號。SC 的 sa 編號是大正藏經號＝標題「（三七九）」。
+        # 2026-10-01 前一直認 n，約九成的巴利對照掛到了隔壁幾經（SN 56.12 掛在
+        # 第 381 經而非轉法輪經 379）——頁面照常顯示，看不出錯。以內容驗證：
+        # SA262 闡陀↔SN 22.90、SA1267 天子夜來↔SN 1.1，都是標題對、n 錯。
+        if work_id == "T0099":
+            no = head_sutta_no(node.get("head") or "")
+            if no is not None:
+                idx.setdefault(str(no), node["uid"])
+            continue
         n = node.get("n")
         if n and str(n).isdigit():
             idx.setdefault(str(int(n)), node["uid"])
