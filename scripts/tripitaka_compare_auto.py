@@ -39,6 +39,7 @@ CATALOG = Path("C:/tmp/cbeta/catalog.json")
 
 MAX_PROMPT_CHARS = 110_000  # nemotron 上下文 128k tokens；漢字約 1 token/字、英梵更省
 MAX_LINE = 160              # 送進提示詞的每句最多幾字（切點判斷用不到全文）
+SMALL_TOTAL = 25_000       # 全部本子合計在這以內就一次整體對齊（巴利系短經驗證過）；超過走星狀
 
 
 # ── 句子切分（保證接回去與原文相同）──────────────────────────────────────
@@ -181,9 +182,9 @@ def versions_of(c: dict) -> tuple[str, str, list[dict], list[str]]:
 
 
 # ── 模型 ────────────────────────────────────────────────────────────────
-def llm(prompt: str, max_tokens: int = 6000) -> str:
+def llm(prompt: str, max_tokens: int = 6000, thinking: bool = False) -> str:
     import translate_ebook_to_zh as te  # 共用 NVIDIA 4 把 key 輪替與節流
-    return te.nvidia_chat(prompt, max_tokens=max_tokens, temperature=0.1, thinking=False)
+    return te.nvidia_chat(prompt, max_tokens=max_tokens, temperature=0.1, thinking=thinking)
 
 
 def parse_json(s: str) -> dict:
@@ -196,7 +197,8 @@ def parse_json(s: str) -> dict:
         import json_repair
         out = json_repair.loads(s[i:j + 1])
         if not isinstance(out, dict):
-            raise ValueError("JSON 無法解析")
+            Path("C:/tmp/cbeta/compare_last_bad.txt").write_text(s, encoding="utf-8")
+            raise ValueError(f"JSON 無法解析：{s[:120]!r}")
         return out
 
 
@@ -221,6 +223,8 @@ REVIEW_PROMPT = """以下是同一部經幾個本子的對齊結果（同源異�
 每個義段列出各本在這一段的開頭與結尾。請找出**對錯位置**的義段——
 也就是某本在這一段放的其實是另一段的內容（例如別本在講譬喻，它卻在講序分或偈頌）。
 
+🚨 先比人名：義段標題或漢譯說的是某人（如目犍連），原典那一格開頭卻是另一人（如 Mahākāśyapa），
+就是錯位——即使只差一段也要列出。原典可能是巴利、梵文或英譯，請實際讀懂再判。
 以下都**不算**問題：譯語不同（如理作意／正思惟）、詳略不同、一本多一句少一句、
 次第小異、某本只有經題或標題、某本缺這一段。
 
@@ -250,6 +254,82 @@ def align(vs: list[dict], feedback: str = "") -> list[dict]:
     return parse_json(raw)["units"]
 
 
+WINDOW_PROMPT = """同一部經的兩個本子。漢譯本裡，上一段結尾是：
+「{prev_tail}」
+這一段（{label}）開頭是：
+「{head}」
+
+下面是另一個本子（{vlabel}）在對應位置附近的句子。哪一句是「這一段」的第一句？
+只回一個數字（句號）；若這個本子沒有這一段，回 null。
+
+{cands}"""
+
+
+def attach_windowed(units: list[dict], ref_txt: dict[int, str], disp: list[str], vlabel: str, W: int = 12) -> list:
+    """長品的原典逐段定位：先用長度比例預估起點，只拿附近 ±W 句問模型「哪一句是本段開頭」。
+    一次丟幾百句要它報句號，nemotron 會整體錯一格，甚至無視格式把每一句都抄一遍；
+    把題目縮到「二十幾句挑一句」就穩了。"""
+    import bisect
+    n = len(units)
+    clen = [len(ref_txt.get(k, "")) for k in range(n)]
+    cum = [0]
+    for l in disp:
+        cum.append(cum[-1] + len(l))
+    r = cum[-1] / max(1, sum(clen))
+    starts: list = [None] * n
+    present = [k for k in range(n) if clen[k]]
+    if not present:
+        return starts
+    starts[present[0]] = 0
+    prev_i, prev_k = 0, present[0]
+    for k in present[1:]:
+        # 從上一個已定位的段起，把中間各段（含沒找到的）的漢譯長度都算進去
+        est = bisect.bisect_left(cum, cum[prev_i] + sum(clen[prev_k:k]) * r)
+        for w in (W, W * 3):                 # 窄窗找不到，放寬一次
+            lo, hi = max(prev_i + 1, est - w), min(len(disp), est + w + 1)
+            if lo >= hi:
+                break
+            cands = "\n".join(f"[{i}] {disp[i][:140]}" for i in range(lo, hi))
+            ans = llm(WINDOW_PROMPT.format(prev_tail=ref_txt[prev_k][-50:], label=units[k].get("label"),
+                                           head=ref_txt[k][:90], vlabel=vlabel, cands=cands), max_tokens=50)
+            m = re.search(r"-?\d+", ans or "")
+            if m and "null" not in (ans or "").lower()[:10] and lo <= int(m.group()) < hi:
+                starts[k] = int(m.group())
+                prev_i, prev_k = starts[k], k
+                break
+    return starts
+
+
+def align_staged(vs: list[dict], feedback: str = "") -> list[dict]:
+    """短的（全部本子合計 ≤ SMALL_TOTAL 字）一次送、整體對齊——巴利系短經實測品質好。
+    長的走「星狀」：①只把一個漢譯參照本切成義段 ②其餘每一本（漢譯、原典都一樣）
+    逐段用小窗定位掛上去。維摩詰經弟子品實測：一次丟多本，模型會整體錯一段，
+    甚至把兩個漢譯本各自切段、根本沒對起來；拆成單本分段＋小窗定位才穩。"""
+    active = [v for v in vs if not v.get("twin")]
+    if sum(len(l) for v in active for l in v["lines"]) <= SMALL_TOTAL:
+        return align(vs, feedback)
+    zh = [v for v in active if v["lang"] == "lzh"] or active
+    ref = sorted(zh, key=lambda v: sum(len(l) for l in v["lines"]))[len(zh) // 2]   # 長度居中者
+    others = [v for v in active if v is not ref]
+    units = align([ref], feedback)
+    # 參照本各段的文字（照句號切；缺段就空著）
+    marks = sorted((s, k) for k, u in enumerate(units)
+                   if isinstance(s := (u.get("starts") or {}).get(ref["id"]), int) and 0 <= s < len(ref["lines"]))
+    ref_txt: dict[int, str] = {}
+    for idx, (s, k) in enumerate(marks):
+        e = marks[idx + 1][0] if idx + 1 < len(marks) else len(ref["lines"])
+        ref_txt[k] = "".join(ref["lines"][s:e])
+    twin_en = {v["twin"]: v for v in vs if v.get("twin")}
+    for v in others:
+        lines = twin_en[v["id"]]["lines"] if v["id"] in twin_en else v["lines"]
+        label = v["label"] + ("（以逐句對齊的英譯呈現）" if v["id"] in twin_en else "")
+        got = attach_windowed(units, ref_txt, lines, label)
+        for k, u in enumerate(units):
+            s = got[k] if k < len(got) else None
+            u.setdefault("starts", {})[v["id"]] = s if isinstance(s, int) else None
+    return units
+
+
 def cut(vs: list[dict], units: list[dict], reordered: set | None = None) -> dict[str, dict[str, str]]:
     """閘 + 切。回 {unit_id: {version_id: 文字}}。
     段序與義段次序不同的本子記進 reordered（同源異流確有換位，如轉法輪經
@@ -259,14 +339,17 @@ def cut(vs: list[dict], units: list[dict], reordered: set | None = None) -> dict
     cells: dict[str, dict[str, str]] = {f"a{k:02d}": {} for k in range(len(units))}
     for v in vs:
         src_id = v.get("twin") or v["id"]
-        starts = []
+        starts, invalid = [], 0
         for k, u in enumerate(units):
             s = (u.get("starts") or {}).get(src_id)
             if s is None:
                 continue
             if not isinstance(s, int) or not (0 <= s < len(v["lines"])):
-                raise ValueError(f"{v['id']} 第 {k} 段起點 {s!r} 超出範圍")
+                invalid += 1      # 超出範圍的切點當作「此本無此段」；只影響歸屬，不動文字
+                continue
             starts.append((k, s))
+        if invalid > max(1, (len(starts) + invalid) * 0.2):
+            raise ValueError(f"{v['id']} 有 {invalid} 個起點超出範圍（共 {len(v['lines'])} 句）")
         if not starts:
             raise ValueError(f"{v['id']} 一個義段都沒有")
         # 照這本自己的句序排；兩段同一個起點＝前一段在這本裡是空的，文字歸後一段。
@@ -308,11 +391,12 @@ def review(vs: list[dict], labels: list[str], cells: dict) -> tuple[list[int], s
     for k, (u, c) in enumerate(cells.items()):
         rows.append(f"## 義段 {k}：{labels[k]}")
         for v in vs:
-            if v.get("twin") or v["id"] not in c:
+            # 藏文不給複核看（它讀不懂，錯位一整段也放行過）；改看同句號的英譯那一欄
+            if v["lang"] == "bo" or v["id"] not in c:
                 continue
             t = c[v["id"]]
             rows.append(f"- {v['label']}：{t[:70]}{' … ' + t[-40:] if len(t) > 110 else ''}")
-    out = parse_json(llm(REVIEW_PROMPT.format(table="\n".join(rows)), max_tokens=1500))
+    out = parse_json(llm(REVIEW_PROMPT.format(table="\n".join(rows)), max_tokens=2500))
     return [int(b) for b in out.get("bad", []) if str(b).lstrip("-").isdigit()], out.get("note", "")
 
 
@@ -356,7 +440,7 @@ def publish(slug: str, title: str, family: str, vs: list[dict], works: list[str]
     for attempt in range(3):
         reordered = set()
         try:
-            units = align(vs, feedback)
+            units = align_staged(vs, feedback)
             cells = cut(vs, units, reordered)
             break
         except ValueError as e:
@@ -496,7 +580,12 @@ def sa_chapters(work: str) -> list[tuple[str, list[str]]]:
         for x in o.get(uid, []):
             if x["lang"] == "sa" and x["ref"] not in seen:
                 seen.add(x["ref"])
-                out.append((x["ref"], [l[1] for l in x["lines"] if l[1].strip()]))
+                # GRETIL 一行常是一整段散文（一品才三四十行），模型切不細、還會報超出範圍的句號。
+                # 按句末標點再切；只在空白處斷，接回去（去空白比對）仍與原文相同。
+                lines = []
+                for l in x["lines"]:
+                    lines += [p for p in re.split(r"(?<=[.|।॥])\s+", l[1].strip()) if p]
+                out.append((x["ref"], lines))
     return out
 
 
@@ -666,7 +755,7 @@ def chapter_jobs(c: dict) -> tuple[str, str, dict[str, dict]] | None:
     return slug, title, books
 
 
-def run_chapters(c: dict, st: dict) -> tuple[int, int]:
+def run_chapters(c: dict, st: dict, retry: bool = False) -> tuple[int, int]:
     job = chapter_jobs(c)
     if not job:
         return 0, 0
@@ -703,7 +792,7 @@ def run_chapters(c: dict, st: dict) -> tuple[int, int]:
     ok = fail = 0
     for gi, g in enumerate(groups, 1):
         gslug = f"{slug}-c{gi:02d}"
-        if st.get(gslug, {}).get("ok") or st.get(gslug, {}).get("err"):
+        if st.get(gslug, {}).get("ok") or (st.get(gslug, {}).get("err") and not retry):
             continue
         vs, works, anchors = [], [], []
         for k, idx in (g.get("parts") or {}).items():
@@ -769,16 +858,18 @@ def main() -> None:
                 continue
             if c["family"] == "bo" and not st.get(key, {}).get("too_long"):
                 continue   # 藏譯系只接短經模式送不下的
-            if st.get(f"{key}#done") and not a.only:
+            if st.get(f"{key}#done") and not a.only and not a.retry_failed:
                 continue
             jobs.append((key, c))
+        # 梵本系先做（維摩詰、法華這幾部有梵藏漢三方，最有價值）；一部要跑好幾小時
+        jobs.sort(key=lambda j: j[1]["family"] != "sa")
         if a.limit:
             jobs = jobs[: a.limit]
         print(f"分品：{len(jobs)} 部", flush=True)
         for i, (key, c) in enumerate(jobs, 1):
             print(f"[{i}/{len(jobs)}] {key}", flush=True)
             try:
-                ok, fail = run_chapters(c, st)
+                ok, fail = run_chapters(c, st, a.retry_failed)
                 st[f"{key}#done"] = {"ok": ok, "fail": fail}
                 print(f"  → {ok} 組上架、{fail} 組未過", flush=True)
             except ValueError as e:
