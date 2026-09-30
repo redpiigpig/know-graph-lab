@@ -8,7 +8,6 @@
 {"key": "gc-frieling-konfessionskunde", "query": "Frieling Geldbach Thöle Konfessionskunde", "expect": "Konfessionskunde", "who": "Frieling", "source": "genealogy-comparative", "zh": "弗里林等《比較信條學：普世合一視野下的定向》"}
 {"key": "gc-heyer-konfessionskunde", "query": "Friedrich Heyer Konfessionskunde", "expect": "Konfessionskunde", "who": "Heyer", "source": "genealogy-comparative", "zh": "海爾《比較信條學》"}
 {"key": "gc-pelikan-credo", "query": "Jaroslav Pelikan Credo Historical and Theological Guide to Creeds", "expect": "Credo", "who": "Pelikan", "source": "genealogy-comparative", "zh": "帕利坎《信經：信經與信仰告白的歷史神學指南》"}
-{"key": "gc-atiya-eastern-christianity", "query": "Aziz Atiya A History of Eastern Christianity", "expect": "History of Eastern Christianity", "who": "Atiya", "source": "genealogy-comparative", "zh": "阿提亞《東方基督教史》"}
 {"key": "gc-sundkler-bantu-prophets", "query": "Sundkler Bantu Prophets in South Africa", "expect": "Bantu Prophets", "who": "Sundkler", "source": "genealogy-comparative", "zh": "桑德克勒《南非的班圖先知》"}
 {"key": "gc-volf-after-our-likeness", "query": "Miroslav Volf After Our Likeness The Church as the Image of the Trinity", "expect": "After Our Likeness", "who": "Volf", "source": "genealogy-comparative", "zh": "沃弗《按我們的形像》"}
 {"key": "gc-avis-oxford-ecclesiology", "query": "Oxford Handbook of Ecclesiology Avis", "expect": "Handbook of Ecclesiology", "who": "Avis", "source": "genealogy-comparative", "zh": "艾維斯編《牛津教會論手冊》"}
