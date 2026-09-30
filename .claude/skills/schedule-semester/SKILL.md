@@ -702,7 +702,12 @@ R0 `1/3/6`＝系級/科目/日期、R1–R2 `1`＝理由/地點、R3 `1/6`＝時
   PPA066（I-Learn 21792）才掛張辰瑋。申請書「影響任課教師」與簽核會卡在這裡，要請系辦更正。
 - 🚨 **公開的 `Sel_Teaching.asp` 教學大綱全系每門課都是空的**（2026-10-01 掃 18 門，內容欄全空），不能拿來判斷有沒有填。
 - 🚨 **I-Learn 學生帳號（`HCU_ILEARN_*`）搜得到老師開的課，但讀不到內容**（`errorcoursecontextnotvalid`）。
-  老師那側是另一個帳號（`redpiigpig`，userid 46259），`.env` 沒有它的密碼；要檢查自己課的大綱得由使用者登入或補帳密。
+  老師那側是另一個帳號，憑證在 `.env`（變數名見該檔）。
+  教師 token 可打 `core_enrol_get_enrolled_users` 拿**即時修課名單**（含角色），與簽到表互核。
+  教職員系統的學生簽到表：`ABS/StdList.asp` 選 `OP_Class=PA1A#4` → POST `ABS/StdList_Print.asp`；🚨 **這頁是 UTF-8 不是 Big5**
+  （只有「上課時間：六」那個字是 Big5 殘字要手補），用 Edge `--headless --print-to-pdf` 存進下載夾再跑 `course_roster.py --write`。
+  PPA001 不在張辰瑋的教職員系統與 I-Learn 課程裡（掛在釋光持名下），名單只能請系辦或光持法師匯出。
+  另有「填寫教學大綱」系統（`affair.hcu.edu.tw` / `210.60.62.69/strategy`），那才是正式教學大綱，I-Learn 國文課只有修課須知。
 
 🚨 **改課日期前先查那個時段教室空不空**，別假設「原教室當然可以用」。
 全校掃法：`GetOpClass.asp` 拿 74 個班別 → 逐班 `CurDataList.asp` → 收 361 列。
