@@ -1,0 +1,108 @@
+{
+ "slug": "pi-sn2.5",
+ "title": "別譯雜阿含經 （三一〇）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。複核標記存疑 1 段：義段5的別譯雜阿含經（三一〇）與雜阿含經（一三一一）內容為流通分（讚歡喜退去），但巴利與漢譯南傳卻在此段落放置了偈頌與說明內容，屬於義段錯位。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "天子來詣"
+  },
+  {
+   "id": "a02",
+   "label": "天子說偈"
+  },
+  {
+   "id": "a03",
+   "label": "世尊答偈"
+  },
+  {
+   "id": "a04",
+   "label": "譬喻說明"
+  },
+  {
+   "id": "a05",
+   "label": "流通分",
+   "doubt": true
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn2.5",
+   "lang": "pi",
+   "label": "巴利 SN2.5",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn2.5",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN2.5",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.310",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （三一〇）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa1311",
+   "lang": "lzh",
+   "label": "雜阿含經 （一三一一）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（三一〇）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一三一一）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn2.5": "Saṁyutta Nikāya 2.5 1. Paṭhamavagga Dāmalisutta Sāvatthinidānaṁ.",
+   "nan-sn2.5": "〔五〕第五　陀摩利〔爾時，世尊〕在舍衛城……",
+   "T0100-sa-2.310": "如是我聞：一時佛在舍衛國祇樹給孤獨園。",
+   "T0099-sa1311": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。"
+  },
+  "a01": {
+   "sn2.5": "Atha kho dāmali devaputto abhikkantāya rattiyā abhikkantavaṇṇo kevalakappaṁ jetavanaṁ obhāsetvā yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ aṭṭhāsi.",
+   "nan-sn2.5": "時，陀摩利天子於黎明，其勝光徧照祇園，往詣世尊處。詣已，禮敬世尊，立於一面。",
+   "T0100-sa-2.310": "時，有天子名曇摩尸，來詣佛所，威光暉赫，遍于祇洹。",
+   "T0099-sa1311": "時，有陀摩尼天子，容色絕妙，於後夜時來詣佛所，稽首佛足，退坐一面。身諸光明遍照祇樹給孤獨園。"
+  },
+  "a02": {
+   "sn2.5": "Ekamantaṁ ṭhito kho dāmali devaputto bhagavato santike imaṁ gāthaṁ abhāsi: “Karaṇīyametaṁ brāhmaṇena, Padhānaṁ akilāsunā; Kāmānaṁ vippahānena, Na tenāsīsate bhavan”ti.",
+   "nan-sn2.5": "立於一面之陀摩利天子，於世尊前，唱此偈曰：精進勿倦怠以捨離愛欲\n依此不欲有婆羅門所行",
+   "T0100-sa-2.310": "却坐一面，而說偈言：「婆羅門今者，斷三有欲結。\n不願求諸有，竟何為所作？」",
+   "T0099-sa1311": "時，彼陀摩尼天子而說偈言：「為婆羅門事，學斷莫疲惓，\n斷除諸愛欲，不求受後身。」"
+  },
+  "a03": {
+   "sn2.5": "“Natthi kiccaṁ brāhmaṇassa, (dāmalīti bhagavā) Katakicco hi brāhmaṇo; Yāva na gādhaṁ labhati nadīsu, Āyūhati sabbagattebhi jantu; Gādhañca laddhāna thale ṭhito yo, Nāyūhatī pāragato hi sova.",
+   "nan-sn2.5": "（世尊曰：陀摩利！）",
+   "T0100-sa-2.310": "爾時，世尊以偈答曰：「婆羅門無作，念作已終訖，\n涉水足盡底，以至于彼岸，\n若足不盡底，不能到彼岸，\n手足必運動，是名有所作。\n以此為方喻，以明無作義，\n曇摩汝當知，已盡於諸漏，\n住於最後身，諸有愛欲過，\n一切悉斷除，超渡生死海。」",
+   "T0099-sa1311": "爾時，世尊說偈答言：「婆羅門無事，所作事已作，\n乃至不得岸，晝夜常勤跪。\n已到彼岸住，於岸復何跪，\n此是婆羅門，專精漏盡禪。\n一切諸憂惱，熾然永已斷，\n是則到彼岸，涅槃無所求。」"
+  },
+  "a04": {
+   "sn2.5": "Esūpamā dāmali brāhmaṇassa, Khīṇāsavassa nipakassa jhāyino; Pappuyya jātimaraṇassa antaṁ, Nāyūhatī pāragato hi so”ti."
+  },
+  "a05": {
+   "nan-sn2.5": "此婆羅門者無有之所行\n婆羅門應作一切終已辦\n人不得足基四肢雖勤動\n亦為流所衝得立土足基\n彼到於彼岸不為流所動\n天子陀摩利此乃諸漏盡\n賢善於禪思以喻婆羅門\n彼達生老終以立於彼岸\n不為所流逝",
+   "T0100-sa-2.310": "爾時，曇摩天子聞佛所說，歡喜頂禮，還于天宮。",
+   "T0099-sa1311": "時，陀摩尼天子聞佛所說，歡喜隨喜，稽首佛足，即沒不現。"
+  }
+ }
+}

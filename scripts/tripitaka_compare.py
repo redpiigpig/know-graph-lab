@@ -442,6 +442,9 @@ def build(slug: str) -> dict:
         "versions": [{k: v[k] for k in ("id", "lang", "label", "who") if k in v}
                      | ({"reorder": v["reorder"]} if v.get("reorder") else {}) for v in cfg["versions"]],
         "works": works,
+        # 阿含的一經：閱讀器在那一經旁邊放入口（整部阿含上千經，不能掛在書頭）
+        "anchors": [{"work": v["src"]["work"], "node": v["src"]["node"]}
+                    for v in cfg["versions"] if v["src"].get("node")],
         "cells": cells,
     }
 
@@ -453,17 +456,9 @@ def main() -> None:
         print(f"[{slug}]")
         data = build(slug)
         (OUT / f"{slug}.json").write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
-    # 索引一律按 SETS 全部重寫，閱讀器用它判斷某部經有沒有異譯對讀
-    index = []
-    for slug in SETS:
-        f = OUT / f"{slug}.json"
-        if f.exists():
-            d = json.loads(f.read_text(encoding="utf-8"))
-            index.append({"slug": slug, "title": d["title"], "family": d["family"],
-                          "works": d["works"], "versions": len(d["versions"])})
-    (OUT / "index.json").write_text(json.dumps(index, ensure_ascii=False, indent=1), encoding="utf-8")
-    print(f"索引 {len(index)} 組 → {OUT / 'index.json'}")
-
+    # 索引與自動對齊共用同一支（掃整個目錄，人工與自動的組一起列）
+    from tripitaka_compare_auto import rebuild_index
+    print(f"索引 {rebuild_index()} 組")
 
 if __name__ == "__main__":
     main()

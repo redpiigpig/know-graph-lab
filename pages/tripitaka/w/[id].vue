@@ -186,6 +186,11 @@
                 <!-- 漢文整經 -->
                 <div class="p-4 min-w-0">
                   <div v-for="s in g.segs" :id="s.uid" :key="s.uid" class="group scroll-mt-20 mb-2">
+                    <div v-if="compareAt(s).length" class="mb-1 flex flex-wrap gap-1">
+                      <NuxtLink v-for="c in compareAt(s)" :key="c.slug" :to="`/tripitaka/compare/${c.slug}`"
+                                class="px-1.5 py-0.5 text-[10px] rounded border border-amber-200 bg-amber-50 text-amber-800 hover:border-amber-400"
+                                :title="(c.labels || []).join('、')">異譯對讀・{{ c.versions }} 本{{ c.auto ? '（自動）' : '' }}</NuxtLink>
+                    </div>
                     <div v-if="s.kind === 'head'" class="text-base font-semibold text-gray-800">{{ s.sources.lzh }}</div>
                     <div v-else-if="s.kind === 'byline'" class="text-xs text-gray-400">{{ s.sources.lzh }}</div>
                     <p v-else
@@ -259,6 +264,12 @@
                   />
                   <p v-else class="text-xs text-gray-300 italic">（無對應）</p>
                 </div>
+              </div>
+
+              <div v-if="compareAt(s).length" class="mt-2 flex flex-wrap gap-1">
+                <NuxtLink v-for="c in compareAt(s)" :key="c.slug" :to="`/tripitaka/compare/${c.slug}`"
+                          class="px-1.5 py-0.5 text-[10px] rounded border border-amber-200 bg-amber-50 text-amber-800 hover:border-amber-400"
+                          :title="(c.labels || []).join('、')">異譯對讀・{{ c.versions }} 本{{ c.auto ? '（自動）' : '' }}</NuxtLink>
               </div>
 
               <!-- 該段的平行經目：巴／梵／藏／中期印度語 -->
@@ -505,7 +516,25 @@ const compareIndex = ref<any[]>([])
 onMounted(async () => {
   try { compareIndex.value = await $fetch<any[]>('/content/tripitaka/compare/index.json') } catch { /* 沒有就不顯示 */ }
 })
-const compareSets = computed(() => compareIndex.value.filter(c => c.works.includes(id.value)))
+// 整部參與對讀的放書頭；只有其中一經參與的（阿含），放到那一經旁邊——
+// 雜阿含一部就有上百組，全掛書頭會變成一排按鈕
+const compareSets = computed(() => compareIndex.value.filter(c =>
+  c.works.includes(id.value) && !(c.anchors || []).some((a: any) => a.work === id.value)))
+const compareByHead = computed(() => {
+  const m = new Map<string, any[]>()
+  for (const c of compareIndex.value) for (const a of c.anchors || []) {
+    if (a.work !== id.value) continue
+    if (!m.has(a.node)) m.set(a.node, [])
+    m.get(a.node)!.push(c)
+  }
+  return m
+})
+/** 某段若是一經的開頭，回傳該經參與的對讀組 */
+const tocByI = computed(() => new Map(toc.value.map((n: any) => [n.i, n])))
+function compareAt(s: any) {
+  const n: any = tocByI.value.get(s.d)
+  return n && n.uid === s.uid ? (compareByHead.value.get(n.head) ?? []) : []
+}
 const pick = reactive<Record<number, number>>({})
 function curOrig(g: { d: number; origs: any[] }) {
   if (pick[g.d] != null) return g.origs[pick[g.d]]

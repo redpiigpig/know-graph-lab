@@ -12,6 +12,10 @@
     <main v-else class="flex-1 px-4 sm:px-6 py-6">
       <div class="max-w-7xl mx-auto">
         <h1 class="text-xl font-bold text-gray-900">{{ data.title }}</h1>
+        <p v-if="data.auto" class="mt-2 text-[11px] text-amber-800 bg-amber-50 border border-amber-200 rounded-lg px-3 py-2 max-w-3xl leading-relaxed">
+          自動對齊：義段由模型提出，腳本逐字切分並把關（格內文字保證是原文），但分段是否恰當未經人工校讀。
+          標 <span class="font-semibold">?</span> 的義段是複核時被標為可能錯位的。
+        </p>
         <p class="mt-1 text-xs text-gray-500 leading-relaxed max-w-3xl">{{ data.intro }}</p>
         <p class="mt-1 text-[11px] text-gray-400 leading-relaxed max-w-3xl">
           佛典沒有跨語言的「節」，此處以<strong>義段</strong>為對齊單位（本站編訂）。
@@ -46,7 +50,8 @@
 
             <section v-for="(u, ui) in data.units" :key="u.id" :id="u.id" class="py-3 border-b border-gray-100 scroll-mt-28">
               <div class="text-[11px] text-indigo-700 mb-1.5">
-                <span class="font-mono text-gray-300 mr-1">{{ ui + 1 }}</span>{{ u.label }}
+                <span class="font-mono text-gray-300 mr-1">{{ ui + 1 }}</span>{{ u.label }}<span
+                  v-if="u.doubt" class="ml-1 font-semibold text-amber-600" title="複核時被標為可能錯位">?</span>
               </div>
               <div class="cmp-grid">
                 <div v-for="v in cols" :key="v.id" class="min-w-0">
@@ -80,7 +85,8 @@ const slug = computed(() => String(route.params.slug))
 interface Ver { id: string; lang: string; label: string; who: string; reorder?: boolean }
 interface Data {
   slug: string; title: string; family: string; intro: string
-  units: { id: string; label: string }[]
+  auto?: boolean
+  units: { id: string; label: string; doubt?: boolean }[]
   versions: Ver[]
   cells: Record<string, Record<string, string>>
 }

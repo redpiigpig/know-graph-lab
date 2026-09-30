@@ -1,0 +1,142 @@
+{
+ "slug": "pi-sn8.5-snp3.3",
+ "title": "別譯雜阿含經 （二五三）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "佛告諸比丘具四支善說"
+  },
+  {
+   "id": "a02",
+   "label": "四支善說之內容"
+  },
+  {
+   "id": "a03",
+   "label": "佛重說四支善說偈"
+  },
+  {
+   "id": "a04",
+   "label": "婆耆沙起座讚佛"
+  },
+  {
+   "id": "a05",
+   "label": "婆耆沙讚佛偈"
+  },
+  {
+   "id": "a06",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn8.5",
+   "lang": "pi",
+   "label": "巴利 SN8.5",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn8.5",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN8.5",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "snp3.3",
+   "lang": "pi",
+   "label": "巴利 SNP3.3",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-snp3.3",
+   "lang": "lzh",
+   "label": "漢譯南傳 SNP3.3",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.253",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （二五三）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa1218",
+   "lang": "lzh",
+   "label": "雜阿含經 （一二一八）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（二五三）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一二一八）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn8.5": "Saṁyutta Nikāya 8.5 1. Vaṅgīsavagga Subhāsitasutta",
+   "nan-sn8.5": "〔五〕第五　善說〔爾時，世尊〕住舍衛城祇樹給孤獨園……",
+   "snp3.3": "Sutta Nipāta 3.3 Subhāsitasutta Evaṁ me sutaṁ—",
+   "nan-snp3.3": "三　善說經",
+   "T0100-sa-2.253": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。",
+   "T0099-sa1218": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。"
+  },
+  "a01": {
+   "sn8.5": "Sāvatthinidānaṁ. Tatra kho bhagavā bhikkhū āmantesi: “bhikkhavo”ti. “Bhadante”ti te bhikkhū bhagavato paccassosuṁ. Bhagavā etadavoca:",
+   "nan-sn8.5": "於此，世尊呼諸比丘：「諸比丘！」「唯然，世尊！」彼等諸比丘奉答世尊。",
+   "snp3.3": "eka samayaṁ bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme. Tatra kho bhagavā bhikkhū āmantesi: “bhikkhavo”ti. “Bhadante”ti te bhikkhū bhagavato paccassosuṁ. Bhagavā etadavoca:",
+   "nan-snp3.3": "如是我聞。一時，世尊住舍衛城祇樹給孤獨園，時世尊告諸比丘曰：「諸比丘！」諸比丘答世尊：「尊師！」",
+   "T0100-sa-2.253": "爾時，佛告諸比丘：「我今欲演說四句偈法，汝等至心諦聽諦聽，我今當說。",
+   "T0099-sa1218": "爾時，世尊告諸比丘：「我今當說四法句。諦聽，善思，當為汝說。"
+  },
+  "a02": {
+   "sn8.5": "“Catūhi, bhikkhave, aṅgehi samannāgatā vācā subhāsitā hoti, no dubbhāsitā; anavajjā ca ananuvajjā ca viññūnaṁ. Katamehi catūhi? Idha, bhikkhave, bhikkhu subhāsitaṁyeva bhāsati no dubbhāsitaṁ, dhammaṁyeva bhāsati no adhammaṁ, piyaṁyeva bhāsati no appiyaṁ, saccaṁyeva bhāsati no alikaṁ. Imehi kho, bhikkhave, catūhi aṅgehi samannāgatā vācā subhāsitā hoti, no dubbhāsitā, anavajjā ca ananuvajjā ca viññūnan”ti. Idamavoca bhagavā.",
+   "nan-sn8.5": "世尊以此宣說：「諸比丘！四支具足之語，乃善說而非惡說。無罪垢，不令識者非難。四支者何？諸比丘！於此語善說而非惡說。語法而非不法。語愛語而非非愛語。語真實而非虛假。諸比丘！此四支具足之語，乃善說而非惡說。無罪垢，不令識者非難。」",
+   "snp3.3": "“Catūhi, bhikkhave, aṅgehi samannāgatā vācā subhāsitā hoti, na dubbhāsitā, anavajjā ca ananuvajjā ca viññūnaṁ. Katamehi catūhi? Idha, bhikkhave, bhikkhu subhāsitaṁyeva bhāsati no dubbhāsitaṁ, dhammaṁyeva bhāsati no adhammaṁ, piyaṁyeva bhāsati no appiyaṁ, saccaṁyeva bhāsati no alikaṁ. Imehi kho, bhikkhave, catūhi aṅgehi samannāgatā vācā subhāsitā hoti, no dubbhāsitā, anavajjā ca ananuvajjā ca viññūnan”ti. Idamavoca bhagavā.",
+   "nan-snp3.3": "世尊如是曰：「諸比丘！具備四支語，為善說而非惡說，無罪而不見責難於諸識者。云何四支？諸比丘！有比丘只語善說、不語惡說；只語法、不語非法；只語愛語、不語不愛語；只語真實語、不語虛偽語。具備此等四支語，為善說而非惡說，無罪而不見責難於諸識者。」世尊如斯說，善逝如斯說已，師〔世尊〕更曰：",
+   "T0100-sa-2.253": "云何名為四句義？「善說最為上，仙聖之所說，\n愛語非麁語，是名為第二。\n實語非妄語，是名為第三。\n說法不非法，是名為第四。\n是名演四句，四句之偈義。」",
+   "T0099-sa1218": "何等為四？「賢聖善說法，是則為最上。\n愛說非不愛，是則為第二。\n諦說非虛妄，是則第三說。\n法說不異言，是則為第四。「諸比丘！是名說四法句。」"
+  },
+  "a03": {
+   "sn8.5": "Idaṁ vatvāna sugato athāparaṁ etadavoca satthā: “Subhāsitaṁ uttamamāhu santo, Dhammaṁ bhaṇe nādhammaṁ taṁ dutiyaṁ; Piyaṁ bhaṇe nāppiyaṁ taṁ tatiyaṁ, Saccaṁ bhaṇe nālikaṁ taṁ catutthan”ti.",
+   "nan-sn8.5": "世尊以此宣說，善逝以此宣說，又作如是言曰：為善人所云第一語於美\n第二語如法勿語不如法\n第三語優美勿以語粗獷\n第四語真實勿以語虛偽",
+   "snp3.3": "Idaṁ vatvāna sugato, athāparaṁ etadavoca satthā: “Subhāsitaṁ uttamamāhu santo, Dhammaṁ bhaṇe nādhammaṁ taṁ dutiyaṁ; Piyaṁ bhaṇe nāppiyaṁ taṁ tatiyaṁ, Saccaṁ bhaṇe nālikaṁ taṁ catutthan”ti.",
+   "nan-snp3.3": "善人最上語善說（此為第一）\n語法不應語非法（此為第二）\n愛語不語不愛語（此為第三）\n語實不語虛偽語（此為第四）（一）"
+  },
+  "a04": {
+   "sn8.5": "Atha kho āyasmā vaṅgīso uṭṭhāyāsanā ekaṁsaṁ uttarāsaṅgaṁ karitvā yena bhagavā tenañjaliṁ paṇāmetvā bhagavantaṁ etadavoca: “paṭibhāti maṁ, bhagavā, paṭibhāti maṁ, sugatā”ti. “Paṭibhātu taṁ, vaṅgīsā”ti bhagavā avoca.",
+   "nan-sn8.5": "時尊者婆耆沙，即從座起，一肩著衣，合掌禮拜世尊，以此白世尊曰：「世尊！我湧思念！善逝！我湧思念！」世尊曰：「婆耆沙！請說。」",
+   "snp3.3": "Atha kho āyasmā vaṅgīso uṭṭhāyāsanā ekaṁsaṁ cīvaraṁ katvā yena bhagavā tenañjaliṁ paṇāmetvā bhagavantaṁ etadavoca: “paṭibhāti maṁ, bhagavā, paṭibhāti maṁ, sugatā”ti. “Paṭibhātu taṁ, vaṅgīsā”ti bhagavā avoca.",
+   "nan-snp3.3": "時尊者婆耆舍由座而起，徧袒一肩，向世尊合掌，白世尊言：「善逝！我已明解世尊所說義。」「婆耆舍！汝言明解。」時婆耆舍尊者於世尊前，以適當諸偈讚歎世尊：",
+   "T0100-sa-2.253": "爾時，婆耆奢在眾會中，而作是念：「佛今演於四句之法，我今欲於一句以一偈讚。」爾時，婆耆奢即從座起，合掌向佛，白佛言：「世尊！我今婆耆奢欲有所說，唯願聽許。」佛告之言：「恣聽汝說。」",
+   "T0099-sa1218": "爾時，尊者婆耆舍於眾會中，作是念：「世尊於四眾中說四法句，我當以四種讚歎稱譽隨喜。」即從座起，整衣服，為佛作禮，合掌白佛言：「世尊！欲有所說。善逝！欲有所說。」佛告婆耆舍：「隨所樂說！」"
+  },
+  "a05": {
+   "sn8.5": "Atha kho āyasmā vaṅgīso bhagavantaṁ sammukhā sāruppāhi gāthāhi abhitthavi: “Tameva vācaṁ bhāseyya, yāyattānaṁ na tāpaye; Pare ca na vihiṁseyya, sā ve vācā subhāsitā. Piyavācaṁva bhāseyya, yā vācā paṭinanditā; Yaṁ anādāya pāpāni, paresaṁ bhāsate piyaṁ. Saccaṁ ve amatā vācā, esa dhammo sanantano; Sacce atthe ca dhamme ca, āhu santo patiṭṭhitā. Yaṁ buddho bhāsate vācaṁ, khemaṁ nibbānapattiyā; Dukkhassantakiriyāya, sā ve vācānamuttamā”ti.",
+   "nan-sn8.5": "時尊者婆耆沙白世尊，以適當之偈予奉讚：人以語其語勿令自己苦\n亦無害他語此為語善語\n人語善故事其語以快耳\n不語他人惡此則云善美\n真實甘露語此乃從古法\n以謂真義法善人悉確立\n佛陀所說語達涅槃安穩\n以至盡苦邊此實無上語",
+   "snp3.3": "Atha kho āyasmā vaṅgīso bhagavantaṁ sammukhā sāruppāhi gāthāhi abhitthavi: “Tameva vācaṁ bhāseyya, yāyattānaṁ na tāpaye; Pare ca na vihiṁseyya, sā ve vācā subhāsitā. Piyavācameva bhāseyya, yā vācā paṭinanditā; Yaṁ anādāya pāpāni, paresaṁ bhāsate piyaṁ. Saccaṁ ve amatā vācā, esa dhammo sanantano; Sacce atthe ca dhamme ca, āhu santo patiṭṭhitā. Yaṁ buddho bhāsati vācaṁ, Khemaṁ nibbānapattiyā; Dukkhassantakiriyāya, Sā ve vācānamuttamā”ti.",
+   "nan-snp3.3": "「勿使自己苦又勿害他人\n只語之應語此實善說語（二）能作歡迎言只應言愛語\n勿用諸惡言愛語言他人（三）真實語甘露是為永遠語\n善人真實義法上言住立（四）佛為達涅槃為盡苦邊際\n說示安穩語諸語實最上」（五）",
+   "T0100-sa-2.253": "爾時，婆耆奢即說偈言：「諸有所說不惱己，亦不害他名善說。\n常當愛語令他喜，亦不造作諸過惡。\n從諸佛口有所說，必得安樂趣涅槃，\n能斷諸苦讚善說，實語甘露最無上，\n實語應語得大利，安立實說善丈夫。」",
+   "T0099-sa1218": "時，尊者婆耆舍即說偈言：「若善說法者，於己不惱迫，\n亦不恐怖他，是則為善說。\n所說愛說者，說令彼歡喜，\n不令彼為惡，是則為愛說。\n諦說知甘露，諦說知無上，\n諦義說法說，正士建立處。\n如佛所說法，安隱涅槃道，\n滅除一切苦，是名善說法。」"
+  },
+  "a06": {
+   "snp3.3": "Subhāsitasuttaṁ tatiyaṁ.",
+   "nan-snp3.3": "善說經竟",
+   "T0099-sa1218": "佛說此經已，諸比丘聞佛所說，歡喜奉行。"
+  }
+ }
+}
