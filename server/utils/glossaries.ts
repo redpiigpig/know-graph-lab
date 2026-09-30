@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { parseJsonl, r2Text } from "./r2-text";
 
 /**
  * 佛學辭典的查詢後端。十三部、13.5 萬條，正本在 Drive 的兩個目錄：
@@ -55,6 +56,7 @@ export const GLOSSARY_NAMES: Record<string, string> = {
  * data/research-data/dila-glossaries.json 的 license 欄）。
  */
 const CORPUS_DIRS = ["dila-glossaries", "fgs-dictionary"];
+const R2_PREFIX = "glossaries/";
 
 let cache: Map<string, GlossaryEntry[]> | null = null;
 
@@ -97,6 +99,29 @@ export function loadGlossaries(): Map<string, GlossaryEntry[]> {
   // 整整兩週任何詞都回「查不到」而頁面看起來正常。
   if (out.size) cache = out;
   return out;
+}
+
+/**
+ * 正式站（Zeabur）讀不到 G:，改讀 R2 `glossaries/<代號>.jsonl.gz`
+ * （scripts/glossaries_to_r2.py 上傳）。本機有 Drive 就不碰 R2。
+ * 查詢端點要先 await 這支，之後 loadGlossaries() 才拿得到東西。
+ */
+let r2Loading: Promise<void> | null = null;
+export async function ensureGlossaries(): Promise<void> {
+  if (loadGlossaries().size) return;
+  r2Loading ??= (async () => {
+    const out = new Map<string, GlossaryEntry[]>();
+    await Promise.all(
+      Object.keys(GLOSSARY_NAMES).map(async (code) => {
+        const body = await r2Text(`${R2_PREFIX}${code}.jsonl`);
+        if (body) out.set(code, parseJsonl<GlossaryEntry>(body));
+      }),
+    );
+    if (out.size) cache = out;
+  })().finally(() => {
+    r2Loading = null;
+  });
+  await r2Loading;
 }
 
 export function glossaryStats() {

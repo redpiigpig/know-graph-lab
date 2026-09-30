@@ -74,6 +74,7 @@
 </template>
 
 <script setup lang="ts">
+import { authedFetch } from "~/composables/useAuthedFetch";
 interface Hit {
   code: string; term: string; variants?: string[]
   domain?: string[]; definition?: string; langs?: Record<string, string>
@@ -127,7 +128,7 @@ async function run() {
   if (!term) return
   pending.value = true
   try {
-    const d = await $fetch<{ total: number; hits: Hit[]; glossaries: Gl[] }>(
+    const d = await authedFetch<{ total: number; hits: Hit[]; glossaries: Gl[] }>(
       '/api/glossary/search', { params: { q: term, limit: 40 } },
     )
     total.value = d.total
@@ -150,7 +151,7 @@ watch(() => props.initial, (v) => {
 onMounted(async () => {
   if (q.value.trim()) return run()
   try {
-    const d = await $fetch<{ glossaries: Gl[] }>('/api/glossary/search')
+    const d = await authedFetch<{ glossaries: Gl[] }>('/api/glossary/search')
     glossaries.value = d.glossaries ?? []
   } catch { /* 查不到辭典清單時，命中後仍會用 code 當名稱 */ }
 })

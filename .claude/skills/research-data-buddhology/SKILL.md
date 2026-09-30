@@ -107,6 +107,19 @@ description: 「當代佛學研究」collection（/research-data/buddhist-studie
 
 ⚠️ 載入器 `server/utils/glossaries.ts` 現在讀**兩個**目錄（`dila-glossaries` 與
 `fgs-dictionary`）。目錄分開就是為了不讓授權不同的兩批混在一起，新增第三部時照這個規矩。
+新增一部要做三件事：`GLOSSARY_NAMES` 登記代號（沒登記的檔一律不載，擋掉
+`fgs-dictionary/entries.jsonl` 那份早期爬蟲殘檔）→ 放 Drive → 跑
+`python -X utf8 scripts/glossaries_to_r2.py`。
+
+### 🚨 辭典查不到的兩個原因（2026-09-30 修）
+
+1. **本機**：09-13 把 `dir()` 改名 `dirs()`，載入器沒跟著改，ReferenceError 被 catch
+   吞掉、快取成空——兩週任何詞都「查不到」而頁面正常。現在空結果不快取。
+2. **正式站**：Zeabur 讀不到 G:，而 JSONL 從來沒上 R2（只上了插圖），所以上線起就是空的。
+   現在 R2 `glossaries/<代號>.jsonl.gz`（13 部 135,152 條、19.9 MB）為服務副本，
+   `ensureGlossaries()` 讀不到 Drive 才讀 R2。**Drive 改了要重跑上傳腳本**，否則正式站是舊的。
+3. `/api/glossary/search` 要登入（`requireAuth`，前端用 `authedFetch`）——佛光授權只限自用。
+   插圖端點 `<img>` 帶不了 header，仍未擋。
 
 ## 🚨 2026-09-12 華語候選清單的抽樣複核：精確率從 45% 到 100%
 

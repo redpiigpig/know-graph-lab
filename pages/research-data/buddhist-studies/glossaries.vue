@@ -112,6 +112,7 @@
 </template>
 
 <script setup lang="ts">
+import { authedFetch } from "~/composables/useAuthedFetch";
 interface Hit {
   code: string; term: string; variants?: string[]
   domain?: string[]; definition?: string; langs?: Record<string, string>
@@ -148,7 +149,7 @@ async function run() {
   if (!term) return
   pending.value = true
   try {
-    const d = await $fetch<{ total: number; hits: Hit[]; glossaries: Gl[] }>('/api/glossary/search', {
+    const d = await authedFetch<{ total: number; hits: Hit[]; glossaries: Gl[] }>('/api/glossary/search', {
       params: { q: term, code: code.value || undefined, def: inDef.value ? 1 : undefined },
     })
     total.value = d.total; hits.value = d.hits; glossaries.value = d.glossaries
@@ -158,7 +159,7 @@ async function run() {
 
 onMounted(async () => {
   try {
-    const d = await $fetch<{ glossaries: Gl[] }>('/api/glossary/search')
+    const d = await authedFetch<{ glossaries: Gl[] }>('/api/glossary/search')
     glossaries.value = d.glossaries ?? []
   } catch { glossaries.value = [] }
 })
