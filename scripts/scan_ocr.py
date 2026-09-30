@@ -70,6 +70,8 @@ _VERTICAL = ("  * 原書是**直排**（由右至左、由上而下）。請照�
 _DIALOGUE = ("  * 這是對談錄，發言以「{a}：」「{b}：」起頭，每一次發言自成一段。\n")
 _MARKS = ("  * 頁面上有前手用鉛筆或原子筆畫的線、方框、底線、圈點與手寫眉批，"
           "**一律忽略**，只轉錄印刷文字。\n")
+_FIGURES = ("  * 照片、插圖與它們的**圖說**（照片下方的說明文字）一律不轉錄；"
+            "整頁只有照片與圖說就當空白頁處理。\n")
 
 
 def build_prompt(book: dict) -> str:
@@ -82,6 +84,10 @@ def build_prompt(book: dict) -> str:
         extra += _DIALOGUE.format(a=sp[0], b=sp[1])
     if book.get("ignore_marks"):
         extra += _MARKS
+    if book.get("skip_figures"):
+        extra += _FIGURES
+    if book.get("note_hint"):
+        extra += f"  * {book['note_hint']}\n"
     return _BASE.format(title=book["title"],
                         layout="直排" if book.get("vertical") else "橫排",
                         extra=extra)
@@ -164,6 +170,10 @@ def main() -> None:
     done = 0
     for bi, (rs, re_) in enumerate(batches, 1):
         pages = ocr_pdf(work, model=args.model, pages=(rs, re_), batch=0, prompt=prompt)
+        # 一次只送一頁時，模型常把 "page" 填成印刷頁碼（自序第 2 頁就填 2），
+        # 被下面的範圍檢查整頁丟掉而且不報錯。單頁單回就不必問它是第幾頁。
+        if rs == re_ and len(pages) == 1:
+            pages[0]["page"] = rs
         for p in pages:
             wp = int(p.get("page", 0))
             if not (rs <= wp <= re_):

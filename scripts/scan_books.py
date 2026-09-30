@@ -54,6 +54,34 @@ BOOKS: dict[str, dict] = {
         "work_pdf": "c:/tmp/chaohwei_vijnapti/work.pdf",
         "ocr_cache": ["c:/tmp/chaohwei_vijnapti/ocr"],
     },
+    # 昭慧法師寫的印順導師傳記（東大圖書 1997 修訂初版，現代佛學叢書）。
+    # 掃描是**左右並排**的跨頁（不是上下疊），所以不走 scan_prep split：
+    # 第 1 張（版權頁＋法相）整張躺著、rotate=270 轉正不拆，其餘張用
+    # split_two_up_pdf.find_split_x 從書溝切開、左頁在前。2026-09-30 先轉前半
+    # （卷首至頁 119），後半待掃；新掃描檔依序加進 sources 後重出 work_pdf。
+    "chaohwei-seeder": {
+        "title": "人間佛教的播種者",
+        "src_dir": r"G:\我的雲端硬碟\資料\知識圖工作室\全集\佛學\昭慧法師\人間佛教的播種者_掃描原檔",
+        "sources": [
+            ("前半", "01_卷首至頁117.pdf", True),
+            ("118-119", "02_頁118-119.pdf", True),
+        ],
+        "rotate": 0,
+        "half_order": "left-first",
+        "vertical": False,
+        "speakers": (),
+        "ignore_marks": False,
+        "skip_figures": True,  # 使用者定調（2026-10-01）：照片與圖說不收
+        # 本書註號是黑底圓圈數字、每章連續編號；不講的話模型一律吐 `[^●]`，
+        # 號碼全丟、同頁兩條註分不開。頁底註文的圈號印得很小常被讀成 ❶，
+        # 以正文註號為準（build 對齊）。
+        "note_hint": ("本書的註號是黑底圓圈數字 ❶❷❸（每一章連續編號，所以一頁上可能是 ❼❽），"
+                      "頁底註文前面也印著同樣的圓圈數字。請換成阿拉伯數字："
+                      "正文 ❶ 寫 `[^1]`、❷ 寫 `[^2]`，頁底對應的註文寫 `[^1]: …`、`[^2]: …`，"
+                      "**不要寫成 `[^●]`**。"),
+        "work_pdf": "c:/tmp/chaohwei_seeder/work.pdf",
+        "ocr_cache": ["c:/tmp/chaohwei_seeder/ocr"],
+    },
 }
 
 
