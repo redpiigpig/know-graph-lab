@@ -685,9 +685,8 @@ Drive 那份 xlsx 是同一套的離線版：`成績`（加權總分公式）與
 使用者決定不改紙本**（2026-09-15）——兩邊不一致是已知且刻意的，以週次表與調課單為準，
 不要再提議重印那份 docx。
 
-⚠️ **9/23 另出一版世界宗教調課單，11/1 地點改成「竹北聖公會聖馬太堂」**（檔名 `…2026.09.23`），
-但 `course_schedule.py`、課程大綱、上表都還是「新竹都城隍廟前／曾櫳震」——2026-10-01 已向使用者確認中，
-定案後兩邊對齊。
+🚨 **PPA001 的 11/1 已改為「竹北聖公會聖馬太堂」**（9/23 調課單；2026-10-01 使用者確認）。上表那列是舊的。
+`course_schedule.py`、大綱、修課須知已對齊；缺席補救影片改用教堂主題（與 BBE150 第 5 週同組）。
 
 ### 教務處〈學生集體校外教學參觀申請書〉（2026-10-01 起，調課單之外還要這張）
 
@@ -708,6 +707,20 @@ R0 `1/3/6`＝系級/科目/日期、R1–R2 `1`＝理由/地點、R3 `1/6`＝時
   （只有「上課時間：六」那個字是 Big5 殘字要手補），用 Edge `--headless --print-to-pdf` 存進下載夾再跑 `course_roster.py --write`。
   PPA001 不在張辰瑋的教職員系統與 I-Learn 課程裡（掛在釋光持名下），名單只能請系辦或光持法師匯出。
   另有「填寫教學大綱」系統（`affair.hcu.edu.tw` / `210.60.62.69/strategy`），那才是正式教學大綱，I-Learn 國文課只有修課須知。
+
+### 上傳到 I-Learn：`scripts/hcu_ilearn_folder.py`（2026-10-01）
+
+Moodle web service 沒有「往資料夾放檔」的函式，所以走網頁表單：token＋privatetoken →
+`tool_mobile_get_autologin_key`（🚨 UA 要帶 `MoodleMobile`，否則 `apprequired`）→ autologin 換網頁 session →
+`modedit.php?update=<cmid>` 表單的 draft 區刪舊檔、`repository_ajax.php?action=upload`（repo_id 4）上傳 → 原樣送回表單。
+`create_folder()` 用 `modedit.php?add=folder` 新增資料夾。一律先 `dry=True` 看新舊檔清單，再正式送；送完用
+`folder_files()` 走 API 核對。
+- 🚨 **autologin 金鑰 6 分鐘內只能產一次**（`autologinkeygenerationlockout`），cookie 存 `output/hcu-ilearn-cookies.pkl` 重用。
+- 🚨 **修課須知 9/8 那版使用者在 Word 裡手改過**（自選影片、分組報告加句子），**不可從 `course_notice_docx.py` 重出**，
+  會把他的改動洗掉。要改就複製 9/8 檔、就地改儲存格，另存 `_2026.10.01修訂.docx`。
+- 大綱走 `course_syllabus_docx.py --sync`（就地改進度與評量）；「實地考察/參訪」勾選 PPA066、PPA001、BBE150，BBE275 不勾。
+- 2026-10-01 上傳三門：各課「課程簡介」夾＝課程大綱 PDF＋修課須知 PDF；「課程簡報」夾＝Drive `簡報\` 的最新 pptx 全換。
+  BBE150 原本沒有課程簡介夾，新建在第 0 節。PPA001 不在教師帳號裡，傳不上去。
 
 🚨 **改課日期前先查那個時段教室空不空**，別假設「原教室當然可以用」。
 全校掃法：`GetOpClass.asp` 拿 74 個班別 → 逐班 `CurDataList.asp` → 收 361 列。

@@ -58,7 +58,7 @@ WORLD_RELIGIONS = {
     # 教學方法：填要打勾的項目（其餘自動改為 ☐）
     'methods_on': [
         '講述', '媒體融入教學', '問題導向學習', '合作學習',
-        '即時互動', '對話教學法', '個別指導',
+        '即時互動', '對話教學法', '個別指導', '實地考察/參訪',
     ],
     # 學習評量：{項目關鍵字: 百分比}，未列者一律 ☐ 0%
     'assessment_on': {
@@ -140,7 +140,8 @@ WR_INTRO_DAY = {
     'elective': '專業必修',
     'hours': '2', 'credits': '2',
     'objective': WORLD_RELIGIONS['objective'],
-    'methods_on': WORLD_RELIGIONS['methods_on'],
+    # BBE275 沒有校外參訪（兩場都是到校演講），不沿用假日班的「實地考察/參訪」
+    'methods_on': [m for m in WORLD_RELIGIONS['methods_on'] if m != '實地考察/參訪'],
     'assessment_on': {'出席': '20%', '課堂參與': '20%',
                       '期中考-筆試': '30%', '期末考-筆試': '30%'},
     'chapters_html': 'public/content/works/world-religions-intro/chapters-wr2',
@@ -212,7 +213,7 @@ CHRISTIANITY = {
         '使學生能用同一組欄位介紹任何一個基督宗教傳統，並指出某個說法漏掉了什麼。'
     ),
     'methods_on': ['講述', '媒體融入教學', '問題導向學習', '合作學習',
-                   '即時互動', '對話教學法', '個別指導'],
+                   '即時互動', '對話教學法', '個別指導', '實地考察/參訪'],
     'assessment_on': {'出席': '20%', '課堂參與': '20%',
                       '期中考-筆試': '30%', '期末考-筆試': '30%'},
     'chapters_html': 'public/content/works/christianity-intro/chapters',
