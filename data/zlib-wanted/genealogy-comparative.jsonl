@@ -1,0 +1,16 @@
+{"key": "gc-campbell-christian-confessions", "query": "Ted Campbell Christian Confessions A Historical Introduction", "expect": "Christian Confessions", "who": "Campbell", "source": "genealogy-comparative", "zh": "坎貝爾《基督宗教諸認信傳統：歷史導論》"}
+{"key": "gc-haight-comparative-ecclesiology", "query": "Roger Haight Christian Community in History Comparative Ecclesiology", "expect": "Comparative Ecclesiology", "who": "Haight", "source": "genealogy-comparative", "zh": "海特《歷史中的基督徒團體》卷二：比較教會論"}
+{"key": "gc-haight-historical-ecclesiology", "query": "Roger Haight Christian Community in History Historical Ecclesiology", "expect": "Historical Ecclesiology", "who": "Haight", "source": "genealogy-comparative", "zh": "海特《歷史中的基督徒團體》卷一：歷史教會論"}
+{"key": "gc-dulles-models-church", "query": "Avery Dulles Models of the Church", "expect": "Models of the Church", "who": "Dulles", "source": "genealogy-comparative", "zh": "杜勒斯《教會的模式》"}
+{"key": "gc-dulles-models-revelation", "query": "Avery Dulles Models of Revelation", "expect": "Models of Revelation", "who": "Dulles", "source": "genealogy-comparative", "zh": "杜勒斯《啟示的模式》"}
+{"key": "gc-karkkainen-ecclesiology", "query": "Karkkainen An Introduction to Ecclesiology", "expect": "Introduction to Ecclesiology", "who": "rkk", "source": "genealogy-comparative", "zh": "卡凱寧《教會論導論》"}
+{"key": "gc-jacobsen-worlds-christians", "query": "Douglas Jacobsen The World's Christians", "expect": "World's Christians", "who": "Jacobsen", "source": "genealogy-comparative", "zh": "雅各布森《世界的基督徒》"}
+{"key": "gc-frieling-konfessionskunde", "query": "Frieling Geldbach Thöle Konfessionskunde", "expect": "Konfessionskunde", "who": "Frieling", "source": "genealogy-comparative", "zh": "弗里林等《比較信條學：普世合一視野下的定向》"}
+{"key": "gc-heyer-konfessionskunde", "query": "Friedrich Heyer Konfessionskunde", "expect": "Konfessionskunde", "who": "Heyer", "source": "genealogy-comparative", "zh": "海爾《比較信條學》"}
+{"key": "gc-pelikan-credo", "query": "Jaroslav Pelikan Credo Historical and Theological Guide to Creeds", "expect": "Credo", "who": "Pelikan", "source": "genealogy-comparative", "zh": "帕利坎《信經：信經與信仰告白的歷史神學指南》"}
+{"key": "gc-atiya-eastern-christianity", "query": "Aziz Atiya A History of Eastern Christianity", "expect": "History of Eastern Christianity", "who": "Atiya", "source": "genealogy-comparative", "zh": "阿提亞《東方基督教史》"}
+{"key": "gc-sundkler-bantu-prophets", "query": "Sundkler Bantu Prophets in South Africa", "expect": "Bantu Prophets", "who": "Sundkler", "source": "genealogy-comparative", "zh": "桑德克勒《南非的班圖先知》"}
+{"key": "gc-volf-after-our-likeness", "query": "Miroslav Volf After Our Likeness The Church as the Image of the Trinity", "expect": "After Our Likeness", "who": "Volf", "source": "genealogy-comparative", "zh": "沃弗《按我們的形像》"}
+{"key": "gc-avis-oxford-ecclesiology", "query": "Oxford Handbook of Ecclesiology Avis", "expect": "Handbook of Ecclesiology", "who": "Avis", "source": "genealogy-comparative", "zh": "艾維斯編《牛津教會論手冊》"}
+{"key": "gc-pannenberg-revelation-history", "query": "Pannenberg Revelation as History", "expect": "Revelation as History", "who": "Pannenberg", "source": "genealogy-comparative", "zh": "潘能伯格編《作為歷史的啟示》"}
+{"key": "gc-karmiris-dogmatika", "query": "Karmiris Ta dogmatika kai symbolika mnemeia", "expect": "dogmatika", "who": "Karmiris", "source": "genealogy-comparative", "zh": "卡爾彌里斯《正教大公教會的教義與信條文獻》"}
