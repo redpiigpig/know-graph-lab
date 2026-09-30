@@ -13,7 +13,14 @@ description: >
 
 # 掃描本轉錄 Skill
 
-> ⚙️ **引擎**：Gemini Vision 為主（`gemini-2.5-flash`；新申請的 key 對這個模型回
+> 🚨 **引擎先用本機 MinerU**（2026-09-16 全館定調，見 [[project_mineru_primary_ocr]]）：
+> `_mineru_venv\Scripts\python.exe scripts/mineru_ocr.py run --pdf <work.pdf> --out <x.jsonl> --device cpu`
+> （單本小批走 CPU、不搶夜班 GPU 鎖；頁碼與註腳它會從 `discarded_blocks` 撿回）。
+> 2026-09-30《人間佛教的播種者》我照本節舊寫法用 Gemini，一晚燒光七把 key 只跑 87/133 頁
+> 而被使用者糾正。Gemini 只在 MinerU 環境壞掉時接手；MinerU 的兩個坑：
+> 獨立成行的「一二三十」會被丟（[[feedback_mineru_drops_stroke_numerals]]）、只能讀 `preproc_blocks`。
+>
+> ⚙️ 舊版說明（Gemini，現為後備）：Gemini Vision（`gemini-2.5-flash`；新申請的 key 對這個模型回
 > **404 "no longer available to new users"**，`ocr_pdf_to_text` 已把這種 404
 > 當成「這把 key 不能用這個模型」而輪替，不會整輪中斷）。2.5-flash 的日額度
 > 用完就改 `--model gemini-flash-latest`（配額獨立，但常回 503 overloaded，
@@ -269,7 +276,16 @@ build＝`scripts/chaohwei_seeder_build.py`；設定＝`scan_books.py` 的 `chaoh
 - **粗黑體的自序**：錯字集中（「太過複雜」→「大通夜悲」）且照印刷換行斷句（6 頁 108 段）。
   人工對照影像校正，存在本夾 `chaohwei_seeder_fix/`（進 git，重跑長不回來），
   build 的 `CACHE` 把它排第一優先。
-- 設定欄 `skip_figures`：使用者定調照片與圖說不收。
+- 設定欄 `skip_figures`：使用者定調照片與圖說不收。prompt 交代了 Gemini 仍會吐
+  （「太虛大師道影」），build 的 `CAPTIONS` 按原文逐條刪。
+- **MinerU vs Gemini 在這份低解析掃描上**（重疊 75 頁、2.5 萬字逐頁比對）：差異大多是
+  字形（爲/為、虚/虛、内/內，MinerU 照印），但 MinerU 有真誤讀：師→帥 11 次、天→大、
+  會→曾/僧、且→目、簡體外洩（说缘给来）。後 46 頁用 MinerU，修正表在
+  `scripts/chaohwei_seeder_mineru.py`；判不了的形近字（目/且）修不到。
+  MinerU 的偶數頁頁碼落在**註腳區最後一行**、長註會折行、一段常被切成兩塊，
+  轉接程式都處理了。Gemini 也有 11 頁照印刷行斷句 → build 的 `unwrap_print_lines`。
+- 🚨 掃描檔本身會重掃：掃描頁 92/94、93/95 是同一張跨頁（頁 80–81）。頁碼帳的去重
+  靠印刷頁碼，頁碼沒撿回來那一份就會**整頁重複出現**而不報錯。
 - 已知未修：頁末「答詞）：」會與下一頁的引文接成一段（`stitch_pages` 共用，動了會
   影響已上架兩本，暫不改）。
 

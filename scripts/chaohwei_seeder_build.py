@@ -42,11 +42,14 @@ PUBLISHER_YEAR = 1995
 # 前面的優先。第一個是人工對照影像校過的頁（自序是粗黑體，OCR 錯字多、又照印刷
 # 換行斷句），重跑腳本長不回來，所以放 repo 裡進版控。
 CACHE = [str(SCRIPT_DIR.parent / ".claude/skills/ebook-scan-transcribe/chaohwei_seeder_fix"),
-         "c:/tmp/chaohwei_seeder/ocr"]
+         "c:/tmp/chaohwei_seeder/ocr",
+         # 88–133 頁：Gemini 額度用完後改本機 MinerU（scripts/chaohwei_seeder_mineru.py 轉格式）
+         "c:/tmp/chaohwei_seeder/ocr_mineru"]
 WORK = "c:/tmp/chaohwei_seeder/work.pdf"
 
 # 掃描頁 1＝版權頁＋印順法師法相、2＝叢書總序的最後一頁（前面沒掃到，半截不收）
 SKIP_WP: set[int] = {1, 2}
+CAPTIONS = {"太虛大師道影", "法尊法師晚年德相", "《佛法概論》未修訂前之附圖"}
 BODY_START_WP = 13  # 掃描頁 12 是目次後的空白頁，13＝正文頁 1
 FRONT_MATTER: list[dict] = [
     {"title": "自序", "wp": (3, 8), "prefix": "自序"},
@@ -105,6 +108,33 @@ def align_note_numbers(text: str) -> str:
 def _sec_key(s: str) -> str:
     # 目次與正文對同一個字常用不同字形（人生佛敎／人生佛教）
     return cb._title_key(s).replace("敎", "教")
+
+
+def unwrap_print_lines(text: str) -> str:
+    """整頁照印刷換行斷句的 OCR（Gemini 在這本有 11 頁如此）→ 還原成一段一行。
+
+    只對「看起來是印刷行」的頁動手：正文行 ≥ 8 行且行長中位數 ≤ 26 字（本書滿行約
+    24 字；正常一段一行的頁中位數在百字以上）。判準：新段首行縮排兩格，所以上一行
+    若印滿（≥ 常見行寬 −1）就是同一段，接回去。註文行不動。
+    """
+    lines = (text or "").split("\n")
+    body = [ln for ln in lines if ln.strip() and not ln.startswith("[^")]
+    if len(body) < 8:
+        return text
+    lens = sorted(len(ln) for ln in body)
+    if lens[len(lens) // 2] > 26:
+        return text
+    full = max(set(lens), key=lens.count)
+    out: list[str] = []
+    last_len = 0            # 上一條**印刷行**的長度（不是已經接好的整段）
+    for ln in lines:
+        if (out and not out[-1].startswith(("[^", "#")) and not ln.startswith("[^")
+                and ln.strip() and last_len >= full - 1):
+            out[-1] += ln
+        else:
+            out.append(ln)
+        last_len = len(ln)
+    return "\n".join(out)
 
 
 def section_titles(toc: str) -> set[str]:
@@ -173,7 +203,12 @@ def build_chunks(chapters: list[dict]) -> list[dict]:
 def load_records() -> list[dict]:
     recs = [r for r in cb.load_cache([Path(c) for c in CACHE], Path(WORK))
             if r["work_page"] not in SKIP_WP]
-    recs = [{**r, "text": align_note_numbers(cb.unescape_linebreaks(r.get("text") or ""))}
+    # 使用者定調照片與圖說不收；prompt 已交代，Gemini 仍吐出來，這裡按原文逐條刪
+    recs = [{**r, "text": "\n".join(ln for ln in cb.unescape_linebreaks(r.get("text") or "").split("\n")
+                                    if ln.strip() not in CAPTIONS)} for r in recs]
+    # 目次頁本來就是一條一行，不能拿去還原段落（它是節標題白名單的來源）
+    unwrap = lambda r, t: unwrap_print_lines(t) if r["work_page"] >= BODY_START_WP else t
+    recs = [{**r, "text": align_note_numbers(unwrap(r, cb.unescape_linebreaks(r.get("text") or "")))}
             for r in recs]
     # 頁碼先修再加前綴再記帳（順序理由見 chaohwei_vijnapti_build.assemble）
     return vb.prefix_front_matter(cb.prepare_records(recs),
