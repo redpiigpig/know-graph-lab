@@ -23,6 +23,12 @@
           title="左漢文、右巴利／漢譯南傳，一經對一經"
           @click="sideBySide = !sideBySide"
         >逐經並排</button>
+        <NuxtLink
+          v-for="c in compareSets" :key="c.slug"
+          :to="`/tripitaka/compare/${c.slug}`"
+          class="px-2.5 py-1 text-[11px] rounded-lg border border-gray-200 bg-white text-gray-500 hover:border-amber-300 transition mr-1.5"
+          :title="`${c.title}：${c.versions} 個本子按義段並排`"
+        >異譯對讀</NuxtLink>
         <!-- 只有漢文時不必顯示語言切換（原文是可展開區塊，不佔欄） -->
         <div v-if="availableLangs.length > 1 && !(sutraGroups && sideBySide)" class="flex items-center gap-1.5">
           <button
@@ -493,6 +499,13 @@ const sutraGroups = computed(() => {
   return paired ? groups : null
 })
 const sideBySide = ref(true)
+
+// 這部經有沒有被收進某一組異譯對讀（scripts/tripitaka_compare.py 產的索引）
+const compareIndex = ref<any[]>([])
+onMounted(async () => {
+  try { compareIndex.value = await $fetch<any[]>('/content/tripitaka/compare/index.json') } catch { /* 沒有就不顯示 */ }
+})
+const compareSets = computed(() => compareIndex.value.filter(c => c.works.includes(id.value)))
 const pick = reactive<Record<number, number>>({})
 function curOrig(g: { d: number; origs: any[] }) {
   if (pick[g.d] != null) return g.origs[pick[g.d]]

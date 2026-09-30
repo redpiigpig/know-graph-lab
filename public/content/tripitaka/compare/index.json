@@ -1,0 +1,41 @@
+[
+ {
+  "slug": "heart-sutra",
+  "title": "般若波羅蜜多心經",
+  "family": "sa",
+  "works": [
+   "DKtoh0021",
+   "T0250",
+   "T0251",
+   "T0252",
+   "T0253",
+   "T0254",
+   "T0255",
+   "T0257"
+  ],
+  "versions": 9
+ },
+ {
+  "slug": "dhammacakka",
+  "title": "轉法輪經",
+  "family": "pi",
+  "works": [
+   "T0099",
+   "T0109",
+   "T0110"
+  ],
+  "versions": 5
+ },
+ {
+  "slug": "samdhinirmocana-1",
+  "title": "解深密經・序品與離言無二",
+  "family": "bo",
+  "works": [
+   "DKtoh0106",
+   "T0675",
+   "T0676",
+   "T0677"
+  ],
+  "versions": 5
+ }
+]

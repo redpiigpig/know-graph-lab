@@ -15,6 +15,9 @@
             <span>{{ fmt(total.segs) }} 段</span>
             <span>{{ fmt(total.parallel) }} 部有原文對照</span>
           </div>
+          <NuxtLink to="/tripitaka/compare"
+                    class="inline-block mt-3 px-3 py-1 text-xs rounded-lg border border-amber-200 bg-white text-amber-700 hover:border-amber-400 transition">
+            異譯對讀：多譯本與原典按義段並排 →</NuxtLink>
         </div>
 
         <div class="mb-5 flex gap-2">

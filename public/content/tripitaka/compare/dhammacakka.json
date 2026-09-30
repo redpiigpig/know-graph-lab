@@ -1,0 +1,227 @@
+{
+ "slug": "dhammacakka",
+ "title": "轉法輪經",
+ "family": "pi",
+ "intro": "佛陀初轉法輪。巴利 SN 56.11 與漢譯南傳是「一諦講完三轉再講下一諦」，雜阿含 379 與義淨本是「四諦先示轉一輪、再勸轉一輪、再證轉一輪」，所以「三轉十二行」只立一個義段，段內各依原本次第。巴利與漢譯南傳的「歡喜奉行」在憍陳如得法眼之前，安世高本先說四諦內容才定義各諦——這幾處是原典本身的次第，照原樣保留。",
+ "units": [
+  {
+   "id": "p00",
+   "label": "經題"
+  },
+  {
+   "id": "p01",
+   "label": "如是我聞"
+  },
+  {
+   "id": "p02",
+   "label": "說法處：鹿野苑"
+  },
+  {
+   "id": "p02b",
+   "label": "自然法輪飛來（安世高本獨有）"
+  },
+  {
+   "id": "p03",
+   "label": "告五比丘"
+  },
+  {
+   "id": "p04",
+   "label": "出家者不應親近二邊"
+  },
+  {
+   "id": "p05",
+   "label": "中道・八正道"
+  },
+  {
+   "id": "p06",
+   "label": "四聖諦的內容"
+  },
+  {
+   "id": "p07",
+   "label": "三轉十二行：示轉・勸轉・證轉"
+  },
+  {
+   "id": "p10",
+   "label": "未淨則不自稱成覺"
+  },
+  {
+   "id": "p11",
+   "label": "已淨故自證菩提"
+  },
+  {
+   "id": "p12",
+   "label": "解脫智見：不受後有"
+  },
+  {
+   "id": "p13",
+   "label": "憍陳如得法眼淨"
+  },
+  {
+   "id": "p14",
+   "label": "阿若憍陳如得名"
+  },
+  {
+   "id": "p15",
+   "label": "諸天展轉傳唱"
+  },
+  {
+   "id": "p16",
+   "label": "大千震動・光明普照"
+  },
+  {
+   "id": "p17",
+   "label": "經名由來・總結"
+  },
+  {
+   "id": "p18",
+   "label": "歡喜奉行"
+  }
+ ],
+ "versions": [
+  {
+   "id": "pi",
+   "lang": "pi",
+   "label": "巴利 SN 56.11",
+   "who": "Mahāsaṅgīti 本・SuttaCentral",
+   "reorder": true
+  },
+  {
+   "id": "zh-nan",
+   "lang": "lzh",
+   "label": "漢譯南傳",
+   "who": "元亨寺版・N18（譯自巴利）",
+   "reorder": true
+  },
+  {
+   "id": "SA379",
+   "lang": "lzh",
+   "label": "雜阿含 379",
+   "who": "求那跋陀羅譯・435–443 年"
+  },
+  {
+   "id": "T0109",
+   "lang": "lzh",
+   "label": "安世高本",
+   "who": "安世高譯《轉法輪經》・約 150 年",
+   "reorder": true
+  },
+  {
+   "id": "T0110",
+   "lang": "lzh",
+   "label": "義淨本",
+   "who": "義淨譯《三轉法輪經》・710 年"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0109",
+  "T0110"
+ ],
+ "cells": {
+  "p00": {
+   "pi": "Saṁyutta Nikāya 56.11 2. Dhammacakkappavattanavagga Dhammacakkappavattanasutta",
+   "zh-nan": "〔一一〕第一　如來所說（一）"
+  },
+  "p01": {
+   "zh-nan": "如是我聞。",
+   "SA379": "如是我聞：",
+   "T0109": "聞如是：",
+   "T0110": "如是我聞："
+  },
+  "p02": {
+   "pi": "Ekaṁ samayaṁ bhagavā bārāṇasiyaṁ viharati isipatane migadāye.",
+   "zh-nan": "一時，世尊住波羅捺國仙人墮處鹿野園。",
+   "SA379": "一時，佛住波羅㮈鹿野苑中仙人住處。",
+   "T0109": "一時，佛在波羅㮈國鹿野樹下坐，時有千比丘諸天神，皆大會側塞空中，",
+   "T0110": "一時，薄伽梵在婆羅痆斯仙人墮處施鹿林中。"
+  },
+  "p02b": {
+   "T0109": "於是有自然法輪，飛來當佛前轉。佛以手撫輪曰：「止！往者吾從無數劫來，為名色轉受苦無量，今者癡愛之意已止，漏結之情已解，諸根已定生死已斷，不復轉於五道也。」輪即止。"
+  },
+  "p03": {
+   "pi": "Tatra kho bhagavā pañcavaggiye bhikkhū āmantesi:",
+   "zh-nan": "於此處，世尊言五比丘曰：",
+   "SA379": "爾時，世尊告五比丘：",
+   "T0109": "於是，佛告諸比丘：「",
+   "T0110": "爾時，世尊告五苾芻曰："
+  },
+  "p04": {
+   "pi": "“Dveme, bhikkhave, antā pabbajitena na sevitabbā. Katame dve? Yo cāyaṁ kāmesu kāmasukhallikānuyogo hīno gammo pothujjaniko anariyo anatthasaṁhito, yo cāyaṁ attakilamathānuyogo dukkho anariyo anatthasaṁhito.",
+   "zh-nan": "「諸比丘！出家者不可親近於二邊。以何為二邊耶？ （一）於諸欲以愛欲貪著為事者，乃下劣、卑賤、凡夫之所行、非聖賢，乃無義相應。（二）以自之煩苦為事者，為苦，非聖賢，乃無義相應。",
+   "T0109": "世間有二事墮邊行，行道弟子捨家者，終身不當與從事。何等二？一為念在貪欲無清淨志，二為猗著身愛不能精進。是故退邊行，不得值佛道德具人。"
+  },
+  "p05": {
+   "pi": "Ete kho, bhikkhave, ubho ante anupagamma majjhimā paṭipadā tathāgatena abhisambuddhā cakkhukaraṇī ñāṇakaraṇī upasamāya abhiññāya sambodhāya nibbānāya saṁvattati. Katamā ca sā, bhikkhave, majjhimā paṭipadā tathāgatena abhisambuddhā cakkhukaraṇī ñāṇakaraṇī upasamāya abhiññāya sambodhāya nibbānāya saṁvattati? Ayameva ariyo aṭṭhaṅgiko maggo, seyyathidaṁ— sammādiṭṭhi sammāsaṅkappo sammāvācā sammākammanto sammāājīvo sammāvāyāmo sammāsati sammāsamādhi. Ayaṁ kho sā, bhikkhave, majjhimā paṭipadā tathāgatena abhisambuddhā cakkhukaraṇī ñāṇakaraṇī upasamāya abhiññāya sambodhāya nibbānāya saṁvattati.",
+   "zh-nan": "諸比丘！如來捨此二邊，以中道現等覺。此為資於眼生、智生、寂靜、證智、等覺、涅槃。 諸比丘！云何乃能如來於中道現等覺，資於眼生、智生、寂靜、證智、等覺、涅槃耶？乃八支聖道是。謂：正見、正思惟、正語、正業、正命、正精進、正念、正定是。諸比丘！此乃如來所現等覺之中道，此乃資於眼生、智生、寂靜、證智、等覺、涅槃。",
+   "T0109": "若此比丘不念貪欲著身愛行，可得受中，如來最正覺得眼得慧，從兩邊度自致泥洹。何謂受中？謂受八直之道，一曰正見，二曰正思，三曰正言，四曰正行，五曰正命，六曰正治，七曰正志，八曰正定。"
+  },
+  "p06": {
+   "pi": "Idaṁ kho pana, bhikkhave, dukkhaṁ ariyasaccaṁ— jātipi dukkhā, jarāpi dukkhā, byādhipi dukkho, maraṇampi dukkhaṁ, appiyehi sampayogo dukkho, piyehi vippayogo dukkho, yampicchaṁ na labhati tampi dukkhaṁ—saṅkhittena pañcupādānakkhandhā dukkhā. Idaṁ kho pana, bhikkhave, dukkhasamudayaṁ ariyasaccaṁ— yāyaṁ taṇhā ponobbhavikā nandirāgasahagatā tatratatrābhinandinī, seyyathidaṁ— kāmataṇhā, bhavataṇhā, vibhavataṇhā. Idaṁ kho pana, bhikkhave, dukkhanirodhaṁ ariyasaccaṁ— yo tassāyeva taṇhāya asesavirāganirodho cāgo paṭinissaggo mutti anālayo. Idaṁ kho pana, bhikkhave, dukkhanirodhagāminī paṭipadā ariyasaccaṁ— ayameva ariyo aṭṭhaṅgiko maggo, seyyathidaṁ— sammādiṭṭhi …pe… sammāsamādhi.",
+   "zh-nan": "諸比丘！苦聖諦者，即是此，謂：生苦、老苦、病苦、死苦、愁悲憂惱苦、遇怨憎者苦、與所愛者別離苦、所求不得苦，略說為五取蘊苦。 諸比丘！苦集諦者，即是此，謂：後有起、喜貪俱行、隨處歡喜之渴愛，謂：欲愛、有愛、無有愛是。 諸比丘！苦滅聖諦者，即是此，謂：於此渴愛無餘、離滅、棄捨、定棄、解脫而無執著。 諸比丘！順苦滅道聖諦者，即是此，所謂八支聖道是。謂：正見、正思惟、正語、正業、正命、正精進、正念、正定是。",
+   "T0109": "若諸比丘本末聞道，當已知甚苦為真諦，已一心受眼受禪思受慧見，覺所念令意解，當知甚苦習盡為真諦，已受眼觀禪思慧見，覺所念令意解，如是盡真諦。何謂為苦？謂生老苦、病苦，憂、悲、惱苦，怨憎會苦，所愛別苦，求不得苦，要從五陰受盛為苦。何謂苦習？謂從愛故而令復有樂性，不離在在貪憙，欲愛、色愛、不色之愛，是習為苦。何謂苦盡？謂覺從愛復有所樂，婬念不受，不念無餘無婬，捨之無復禪，如是為習盡。何謂苦習盡欲受道？謂受行八直道，正見、正思、正言、正行、正命、正治、正志、正定，是為苦習盡受道真諦也。"
+  },
+  "p07": {
+   "pi": "‘Idaṁ dukkhaṁ ariyasaccan’ti me, bhikkhave, pubbe ananussutesu dhammesu cakkhuṁ udapādi, ñāṇaṁ udapādi, paññā udapādi, vijjā udapādi, āloko udapādi. ‘Taṁ kho panidaṁ dukkhaṁ ariyasaccaṁ pariññeyyan’ti me, bhikkhave, pubbe …pe… udapādi. ‘Taṁ kho panidaṁ dukkhaṁ ariyasaccaṁ pariññātan’ti me, bhikkhave, pubbe ananussutesu dhammesu cakkhuṁ udapādi, ñāṇaṁ udapādi, paññā udapādi, vijjā udapādi, āloko udapādi. ‘Idaṁ dukkhasamudayaṁ ariyasaccan’ti me, bhikkhave, pubbe ananussutesu dhammesu cakkhuṁ udapādi, ñāṇaṁ udapādi, paññā udapādi, vijjā udapādi, āloko udapādi. ‘Taṁ kho panidaṁ dukkhasamudayaṁ ariyasaccaṁ pahātabban’ti me, bhikkhave, pubbe …pe… udapādi. ‘Taṁ kho panidaṁ dukkhasamudayaṁ ariyasaccaṁ pahīnan’ti me, bhikkhave, pubbe ananussutesu dhammesu cakkhuṁ udapādi, ñāṇaṁ udapādi, paññā udapādi, vijjā udapādi, āloko udapādi. ‘Idaṁ dukkhanirodhaṁ ariyasaccan’ti me, bhikkhave, pubbe ananussutesu dhammesu cakkhuṁ udapādi, ñāṇaṁ udapādi, paññā udapādi, vijjā udapādi, āloko udapādi. ‘Taṁ kho panidaṁ dukkhanirodhaṁ ariyasaccaṁ sacchikātabban’ti me, bhikkhave, pubbe …pe… udapādi. ‘Taṁ kho panidaṁ dukkhanirodhaṁ ariyasaccaṁ sacchikatan’ti me, bhikkhave, pubbe ananussutesu dhammesu cakkhuṁ udapādi, ñāṇaṁ udapādi, paññā udapādi, vijjā udapādi, āloko udapādi. ‘Idaṁ dukkhanirodhagāminī paṭipadā ariyasaccan’ti me, bhikkhave, pubbe ananussutesu dhammesu cakkhuṁ udapādi, ñāṇaṁ udapādi, paññā udapādi, vijjā udapādi, āloko udapādi. ‘Taṁ kho panidaṁ dukkhanirodhagāminī paṭipadā ariyasaccaṁ bhāvetabban’ti me, bhikkhave, pubbe …pe… udapādi. ‘Taṁ kho panidaṁ dukkhanirodhagāminī paṭipadā ariyasaccaṁ bhāvitan’ti me, bhikkhave, pubbe ananussutesu dhammesu cakkhuṁ udapādi, ñāṇaṁ udapādi, paññā udapādi, vijjā udapādi, āloko udapādi.",
+   "zh-nan": "諸比丘！苦聖諦者，即是此，於先前未聞之法，我眼生、智生、慧生、明生、光明生。諸比丘！應對此苦聖諦徧知……乃至……已徧知，於先前未聞之法，我眼生，智生、慧生、明生、光明生。 諸比丘！苦集聖諦者，即是此，於先前未聞之法，我眼生、智生、慧生、明生、光明生。諸比丘！對此苦集聖諦應斷……乃至……已斷，於先前未聞之法，我眼生、智生、慧生、明生、光明生。 諸比丘！苦滅聖諦者，即是此，於先前未聞之法，我眼生、智生、慧生、明生、光明生。諸比丘！對此苦滅聖諦應現證……乃至……已現證，於先前未聞之法，我眼生、智生、慧生、明生、光明生。 諸比丘！順苦滅道聖諦者，即是此，於先前未聞之法，我眼生、智生、慧生、明生、光明生。諸比丘！對此順苦滅道聖諦應修習……乃至……已修習，於先前未聞之法我眼生、智生、慧生、明生、光明生。",
+   "SA379": "「此苦聖諦，本所未曾聞法，當正思惟。時，生眼、智、明、覺。此苦集、此苦滅、此苦滅道跡聖諦，本所未曾聞法，當正思惟。時，生眼、智、明、覺。「復次，苦聖諦知當復知，本所未聞法，當正思惟。時，生眼、智、明、覺。苦集聖諦已知當斷，本所未曾聞法，當正思惟。時，生眼、智、明、覺。「復次，苦集滅，此苦滅聖諦已知當 作證，本所未聞法，當正思惟。時，生眼、智、明、覺。復次，此苦滅道跡聖諦已知當修，本所未曾聞法，當正思惟。時，生眼、智、明、覺。「復次，比丘！此苦聖諦已知，知已出，所未聞法，當正思惟。時，生眼、智、明、覺。復次，此苦集聖諦已知，已斷出，所未聞法，當正思惟。時，生眼、智、明、覺。「復次，苦滅聖諦已知、已作證出，所未聞法，當正思惟。時，生眼、智、明、覺。復次，苦滅道跡聖諦已知、已修出，所未曾聞法，當正思惟。時，生眼、智、明、覺。",
+   "T0109": "「又是，比丘！苦為真諦，苦由習為真諦，苦習盡為真諦，苦習盡欲受道為真諦，若本在昔未聞是法者，當受眼觀禪行受慧見受覺念令意得解。若令在斯未聞是四諦法者，當受道眼、受禪思、受慧覺，令意行解。若諸在彼不得聞是四諦法者，亦當受眼、受禪、受慧、受覺，令意得解，",
+   "T0110": "「汝等苾芻！此苦聖諦，於所聞法如理作意，能生眼智明覺。汝等苾芻！此苦集、苦滅、順苦滅道聖諦之法，如理作意，能生眼智明覺。「汝等苾芻！此苦聖諦是所了法，如是應知，於所聞法如理作意，能生眼智明覺。「汝等苾芻！此苦集聖諦是所了法，如是應斷，於所聞法如理作意，能生眼智明覺。「汝等苾芻！此苦滅聖諦是所了法，如是應證，於所聞法如理作意，能生眼智明覺。「汝等苾芻！此順苦滅道聖諦是所了法，如是應修，於所聞法如理作意，能生眼智明覺。「汝等苾芻！此苦聖諦是所了法，如是已知，於所聞法如理作意，能生眼智明覺。「汝等苾芻！此苦集聖諦是所了法，如是已斷，於所聞法如理作意，能生眼智明覺。「汝等苾芻！此苦滅聖諦是所了法，如是已證，於所聞法如理作意，能生眼智明覺。「汝等苾芻！此順苦滅道聖諦是所了法，如是已修，於所聞法如理作意，能生眼智明覺。"
+  },
+  "p10": {
+   "pi": "Yāvakīvañca me, bhikkhave, imesu catūsu ariyasaccesu evaṁ tiparivaṭṭaṁ dvādasākāraṁ yathābhūtaṁ ñāṇadassanaṁ na suvisuddhaṁ ahosi, neva tāvāhaṁ, bhikkhave, sadevake loke samārake sabrahmake sassamaṇabrāhmaṇiyā pajāya sadevamanussāya ‘anuttaraṁ sammāsambodhiṁ abhisambuddho’ti paccaññāsiṁ.",
+   "zh-nan": "諸比丘！我於四聖諦以如是三轉十二行相之如實智見尚未達悉皆清淨時，諸比丘！我於天、魔、梵世、沙門、婆羅門、人、天眾生中，不被稱之為無上正等覺之現等覺。",
+   "SA379": "「諸比丘！我於此四聖諦三轉十二行不生眼、智、明、覺者，我終不得於諸天、魔、梵、沙門、婆羅門聞法眾中，為解脫、為出、為離，亦不自證得阿耨多羅三藐三菩提。",
+   "T0109": "是為四諦三轉合十二事，知而未淨者吾不與也。",
+   "T0110": "「汝等苾芻！若我於此四聖諦法未了三轉十二相者，眼智明覺皆不得生，我則不於諸天魔梵、沙門婆羅門一切世間，捨離煩惱心得解脫，不能證得無上菩提。"
+  },
+  "p11": {
+   "pi": "Yato ca kho me, bhikkhave, imesu catūsu ariyasaccesu evaṁ tiparivaṭṭaṁ dvādasākāraṁ yathābhūtaṁ ñāṇadassanaṁ suvisuddhaṁ ahosi, athāhaṁ, bhikkhave, sadevake loke samārake sabrahmake sassamaṇabrāhmaṇiyā pajāya sadevamanussāya ‘anuttaraṁ sammāsambodhiṁ abhisambuddho’ti paccaññāsiṁ.",
+   "zh-nan": "諸比丘！然而我於此四聖諦，如是三轉十二行相之如實智見已達悉皆清淨故，諸比丘！我於天、魔、梵世、沙門、婆羅門、人、天眾生中，稱之為無上正等覺之現等覺。",
+   "SA379": "我已於四聖諦三轉十二行生眼、智、明、覺，故於諸天、魔、梵、沙門、婆羅門聞法眾中，得出、得脫，自證得成阿耨多羅三藐三菩提。」",
+   "T0109": "一切世間諸天人民，若梵、若魔、沙門、梵志，自知證已，受行戒、定、慧、解、度知見成，是為四極。",
+   "T0110": "「汝等苾芻！由我於此四聖諦法解了三轉十二相故，眼智明覺皆悉得生，乃於諸天魔梵、沙門婆羅門一切世間，捨離煩惱心得解脫，便能證得無上菩提。」"
+  },
+  "p12": {
+   "pi": "Ñāṇañca pana me dassanaṁ udapādi: ‘akuppā me vimutti, ayamantimā jāti, natthi dāni punabbhavo’”ti.",
+   "zh-nan": "又，我智生與見，我心解脫不動，此為我最後之生，再不受後有。」",
+   "T0109": "是生後不復有，長離世間無復憂患。」"
+  },
+  "p13": {
+   "pi": "Imasmiñca pana veyyākaraṇasmiṁ bhaññamāne āyasmato koṇḍaññassa virajaṁ vītamalaṁ dhammacakkhuṁ udapādi: “yaṁ kiñci samudayadhammaṁ sabbaṁ taṁ nirodhadhamman”ti.",
+   "zh-nan": "又說示此教時，具壽憍陳如生遠塵離垢之法眼：「有集法者，悉皆有此滅法。」",
+   "SA379": "爾時，世尊說是法時，尊者憍陳如及八萬諸天遠塵離垢，得法眼淨。",
+   "T0109": "佛說是時，賢者阿若拘鄰等及八千姟天，皆遠塵離垢諸法眼生。其千比丘漏盡意解，皆得阿羅漢，及上諸習法應當盡者一切皆轉。",
+   "T0110": "爾時世尊說是法時，具壽憍陳如及八萬諸天，遠塵離垢得法眼淨。"
+  },
+  "p14": {
+   "pi": "Atha kho bhagavā imaṁ udānaṁ udānesi: “aññāsi vata bho, koṇḍañño, aññāsi vata bho, koṇḍañño”ti. Iti hidaṁ āyasmato koṇḍaññassa “aññāsikoṇḍañño” tveva nāmaṁ ahosīti. Paṭhamaṁ.",
+   "zh-nan": "時，世尊稱讚而曰： 「憍陳如悟矣，憍陳如悟矣！」 自此即名具壽憍陳如，稱為阿若憍陳如。",
+   "SA379": "爾時，世尊告尊者憍陳如：「知法未？」憍陳如白佛：「已知。世尊！」復告尊者憍陳如：「知法未？」拘隣白佛：「已知。善逝！」尊者拘隣已知法故，是故名阿若拘隣。",
+   "T0110": "佛告憍陳如：「汝解此法不？」答言：「已解。世尊！」「汝解此法不？」答言：「已解。善逝！」由憍陳如解了法故，因此即名阿若憍陳如（阿若是解了義）。"
+  },
+  "p15": {
+   "pi": "Pavattite ca pana bhagavatā dhammacakke bhummā devā saddamanussāvesuṁ: “etaṁ bhagavatā bārāṇasiyaṁ isipatane migadāye anuttaraṁ dhammacakkaṁ pavattitaṁ appaṭivattiyaṁ samaṇena vā brāhmaṇena vā devena vā mārena vā brahmunā vā kenaci vā lokasmin”ti. Bhummānaṁ devānaṁ saddaṁ sutvā cātumahārājikā devā saddamanussāvesuṁ: “etaṁ bhagavatā bārāṇasiyaṁ isipatane migadāye anuttaraṁ dhammacakkaṁ pavattitaṁ, appaṭivattiyaṁ samaṇena vā brāhmaṇena vā devena vā mārena vā brahmunā vā kenaci vā lokasmin”ti. Cātumahārājikānaṁ devānaṁ saddaṁ sutvā tāvatiṁsā devā …pe… yāmā devā …pe… tusitā devā …pe… nimmānaratī devā …pe… paranimmitavasavattī devā …pe… brahmakāyikā devā saddamanussāvesuṁ: “etaṁ bhagavatā bārāṇasiyaṁ isipatane migadāye anuttaraṁ dhammacakkaṁ pavattitaṁ appaṭivattiyaṁ samaṇena vā brāhmaṇena vā devena vā mārena vā brahmunā vā kenaci vā lokasmin”ti.",
+   "zh-nan": "世尊轉如是法輪時，地居之諸天發聲言曰： 「世尊如是於波羅捺國仙人墮處鹿野苑，轉無上之法輪，沙門、婆羅門、天、魔、梵或世間之任何者，皆不能覆。」 聞得地居諸天之聲之四大天王諸天，發聲言曰： 「世尊如是於波羅捺國仙人墮處鹿野苑，轉無上之法輪，沙門、婆羅門、天、魔、梵、或世間之任何者，皆不能覆。」 聞得四大天王諸天聲之忉利諸天……焰摩諸天……兜率諸天……化樂諸天……他化自在諸天……梵身諸天發聲言曰： 「世尊如是於波羅捺國仙人墮處鹿野苑，轉無上之法輪，沙門、婆羅門、天、魔、梵、或世間任何者，皆不能覆。」",
+   "SA379": "尊者阿若拘隣知法已，地神舉聲唱言：「諸仁者！世尊於波羅㮈國仙人住處鹿野苑中三轉十二行法輪，諸沙門、婆羅門、諸天、魔、梵所未曾轉，多所饒益，多所安樂，哀愍世間，以義饒益，利安天人，增益諸天眾，減損阿修羅眾。」地神唱已，聞虛空神天、四天王天、三十三天、炎魔天、兜率陀天、化樂天、他化自在天展轉傳唱，須臾之間，聞于梵天身。梵天乘聲唱言：「諸仁者，世尊於波羅㮈國仙人住處鹿野苑中三轉十二行法輪，諸沙門、婆羅門、諸天、魔、梵，及世間聞法未所曾轉，多所饒益，多所安樂，以義饒益諸天世人，增益諸天眾，減損阿修羅眾。」",
+   "T0109": "眾祐法輪聲三轉，諸天世間在法地者莫不遍聞，至于第一四天王、忉利天、焰天、兜術天、不驕樂天、化應聲天，至諸梵界須臾遍聞。",
+   "T0110": "是時地居藥叉聞佛說已，出大音聲，告人天曰：「仁等當知，佛在婆羅痆斯仙人墮處施鹿林中，廣說三轉十二行相法輪，由此能於天人魔梵、沙門婆羅門一切世間，為大饒益，令同梵行者速至安隱涅槃之處，人天增盛阿蘇羅減少。」由彼藥叉作如是告，虛空諸天四大王眾皆悉聞知。如是展轉於剎那頃盡六欲天，須臾之間乃至梵天普聞其響，梵眾聞已復皆遍告廣說如前，"
+  },
+  "p16": {
+   "pi": "Itiha tena khaṇena tena layena tena muhuttena yāva brahmalokā saddo abbhuggacchi. Ayañca dasasahassilokadhātu saṅkampi sampakampi sampavedhi, appamāṇo ca uḷāro obhāso loke pāturahosi atikkamma devānaṁ devānubhāvanti.",
+   "zh-nan": "如是於其剎那，其頃刻，其須臾之間，乃至止於梵世之聲已達。又，此十千世界涌震動，示現於無量廣大光明之世間，超越諸天之天威力。",
+   "T0109": "爾時，佛界三千日月萬二千天地皆大震動，"
+  },
+  "p17": {
+   "SA379": "世尊於波羅㮈國仙人住處鹿野苑中轉法輪，是故此經名轉法輪經。",
+   "T0109": "是為佛眾祐，始於波羅㮈以無上法輪轉未轉者，照無數度諸天人從是得道。",
+   "T0110": "因名此經為三轉法輪。"
+  },
+  "p18": {
+   "pi": "Idamavoca bhagavā. Attamanā pañcavaggiyā bhikkhū bhagavato bhāsitaṁ abhinandunti.",
+   "zh-nan": "世尊如是說示已，五比丘歡喜、信受於世尊之所說。",
+   "SA379": "佛說此經已，諸比丘聞佛所說，歡喜奉行。",
+   "T0109": "佛說是已，皆大歡喜。",
+   "T0110": "時五苾芻及人天等，聞佛說已，歡喜奉行。"
+  }
+ }
+}
