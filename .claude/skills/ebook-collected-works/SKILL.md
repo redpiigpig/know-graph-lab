@@ -373,6 +373,10 @@ python scripts/align_reference.py --orig-id <原文ebook_id> --zh-id <中譯eboo
   英文註寫成 `(中文註號) 原文註`，閱讀器註釋區按號碼並排。配不上的英文註接在前一條下面（不丟）。
   民主妙法 257 條配上 247 條。英文正文的上標註號 OCR 幾乎全丟、殘存的多是誤判（「!」「2:00」），一律拿掉。
 - 重跑一律從 `.jsonl.bak_bilingual`（第一次重建前的原貌）讀，`--apply` 不覆蓋這份備份。
+- **全集也套用（2026-10-01）**：`restructure_chapters.py --collected` 只處理單語、沒有 `anchors` 的全集（556 部→216 部寫回）。
+  全集閱讀器 `pages/collected-works/[slug]/[work].vue` 把段首 `{{s:…}}` 搬到左欄引用號（**既有標準引用號如 Stephanus 優先**）、
+  認 `{{p:N}}` 頁碼、`> ` 楷體引文署名靠右、插圖、分隔線後 `(N)` 註。全集章節路徑「書名 · p134　章 · 節」只取最後一段當標題，
+  chapter_path 不改（目錄靠它分組）；散文篇名帶逗號不算黏正文。多語 86 部（有 sources）還沒做，要走對齊。
 - 🚨 **一章一頁會動到側欄目錄**：`loadToc` 把沒有 volume 或 chunk_type=page 的塊當前言、藏掉 ### 小節，
   重建後側欄只剩章名（09-29 使用者問「為何目錄變了」）。章塊要寫 `chunk_type: "chapter"`＋`section_anchors: true`。
   另外目錄只在第一次開書時載入，那一刻伺服器沒讀到書（例如剛推送、Zeabur 重新部署中）就會退化成「每 10 頁一節」，重新整理即恢復。
