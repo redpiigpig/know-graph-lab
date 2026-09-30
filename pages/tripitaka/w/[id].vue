@@ -14,8 +14,17 @@
           title="查佛學辭典（先選取經文可直接帶入）"
           @click="openDict()"
         >📖 辭典</button>
+        <button
+          v-if="sutraGroups"
+          class="px-2.5 py-1 text-[11px] rounded-lg border transition mr-1.5"
+          :class="sideBySide
+            ? 'bg-indigo-600 text-white border-indigo-600'
+            : 'bg-white text-gray-500 border-gray-200 hover:border-indigo-300'"
+          title="左漢文、右巴利／漢譯南傳，一經對一經"
+          @click="sideBySide = !sideBySide"
+        >逐經並排</button>
         <!-- 只有漢文時不必顯示語言切換（原文是可展開區塊，不佔欄） -->
-        <div v-if="availableLangs.length > 1" class="flex items-center gap-1.5">
+        <div v-if="availableLangs.length > 1 && !(sutraGroups && sideBySide)" class="flex items-center gap-1.5">
           <button
             v-for="l in availableLangs"
             :key="l"
@@ -156,7 +165,61 @@
             </div>
           </div>
 
-          <div class="space-y-5">
+          <!-- 逐經並排：一經對一經。經以下不逐句對應，右欄保留原文自己的段號。 -->
+          <div v-if="sutraGroups && sideBySide" class="space-y-6">
+            <p class="text-[11px] text-gray-400 leading-relaxed">
+              一經對一經並排：經號是漢巴兩邊公認的對齊單位；經以下兩本為<strong>同源異流</strong>，
+              段數本來就不同，左右不逐句對應。右欄段號是該語言自身的引用座標（SuttaCentral）。
+            </p>
+            <section
+              v-for="g in sutraGroups" :key="`${g.d}-${g.segs[0].uid}`"
+              class="rounded-xl border bg-white"
+              :class="g.origs.length ? 'border-indigo-100' : 'border-gray-100'"
+            >
+              <div class="grid gap-x-6" :class="g.origs.length ? 'md:grid-cols-2' : ''">
+                <!-- 漢文整經 -->
+                <div class="p-4 min-w-0">
+                  <div v-for="s in g.segs" :id="s.uid" :key="s.uid" class="group scroll-mt-20 mb-2">
+                    <div v-if="s.kind === 'head'" class="text-base font-semibold text-gray-800">{{ s.sources.lzh }}</div>
+                    <div v-else-if="s.kind === 'byline'" class="text-xs text-gray-400">{{ s.sources.lzh }}</div>
+                    <p v-else
+                       class="text-[15px] leading-loose text-gray-800 tracking-wide"
+                       :class="s.kind === 'verse' ? 'whitespace-pre-line pl-4' : ''"
+                       :title="segCite(s)"
+                       v-html="highlight(s, 'lzh')" />
+                  </div>
+                  <p v-if="!g.origs.length && g.segs.some(s => s.kind !== 'head' && s.kind !== 'byline')"
+                     class="text-[11px] text-gray-300 italic">（此經無巴利對應本）</p>
+                </div>
+                <!-- 原文整經 -->
+                <div v-if="g.origs.length" class="p-4 min-w-0 border-t md:border-t-0 md:border-l border-indigo-50 bg-indigo-50/20">
+                  <div class="flex flex-wrap items-center gap-1.5 mb-2">
+                    <button
+                      v-for="(o, oi) in g.origs" :key="oi"
+                      class="px-1.5 py-0.5 rounded border text-[11px] transition"
+                      :class="curOrig(g) === o
+                        ? 'bg-indigo-600 text-white border-indigo-600'
+                        : 'bg-white text-indigo-700 border-indigo-200 hover:border-indigo-400'"
+                      :title="`${o.ref}${o.partial ? '（部分平行）' : ''}`"
+                      @click="pick[g.d] = oi"
+                    >{{ PARALLEL_LANGS[o.lang]?.short || o.lang }} {{ String(o.ref).split('（')[0] }}<span v-if="o.partial"> ～</span></button>
+                  </div>
+                  <div
+                    v-for="(ln, li) in curOrig(g).lines" :key="li"
+                    class="flex gap-2 py-0.5"
+                  >
+                    <span class="font-mono text-[9px] text-gray-300 w-12 flex-shrink-0 pt-1.5 text-right">{{ segLabel(ln[0]) }}</span>
+                    <span
+                      class="leading-relaxed text-gray-700"
+                      :class="curOrig(g).lang.startsWith('zh') ? 'text-[14px] tracking-wide' : 'font-serif text-[14px]'"
+                    >{{ ln[1] }}</span>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <div v-else class="space-y-5">
             <div v-for="s in segments" :id="s.uid" :key="s.uid" class="group scroll-mt-20">
               <!-- 段首：大正藏行號（可引用、可複製） -->
               <button
@@ -405,6 +468,36 @@ const parallelsBySeg = computed(() => {
 })
 function parallelsOf(uid: string) { return parallelsBySeg.value.get(uid) ?? [] }
 function originalsOf(uid: string) { return originals.value[uid] ?? [] }
+
+/**
+ * 逐經並排：以目錄節點（阿含的一「經」）為單位，左漢文整經、右原文整經。
+ * 粒度刻意停在「經」——經號是漢巴兩邊都有共識的對齊單位，經以下的段
+ * 兩本數量本來就不同（同源異流），硬對成逐句是捏造。
+ * 只在「每個有原文的節點恰好一段掛原文」時成立（五部阿含實測皆然），
+ * 否則回 null、退回原本的逐段檢視。
+ */
+const sutraGroups = computed(() => {
+  if (!Object.keys(originals.value).length) return null
+  const groups: { d: number; segs: any[]; origs: any[] }[] = []
+  for (const s of segments.value) {
+    const last = groups[groups.length - 1]
+    if (last && last.d === s.d && s.d >= 0) last.segs.push(s)
+    else groups.push({ d: s.d, segs: [s], origs: [] })
+  }
+  let paired = 0
+  for (const g of groups) {
+    const hits = g.segs.filter(s => originalsOf(s.uid).length)
+    if (hits.length > 1) return null
+    if (hits.length) { g.origs = originalsOf(hits[0].uid); paired++ }
+  }
+  return paired ? groups : null
+})
+const sideBySide = ref(true)
+const pick = reactive<Record<number, number>>({})
+function curOrig(g: { d: number; origs: any[] }) {
+  if (pick[g.d] != null) return g.origs[pick[g.d]]
+  return g.origs.find(o => o.lang === 'pi') ?? g.origs[0]
+}
 
 /** 段首的引用式。漢文是大正藏頁欄行（`…_p0008a13` → `0008a13`）；
  *  甘珠爾是函．葉．行（`DKtoh0113_v51_1b1` → `51.1b1`）——藏學界的定址就是
