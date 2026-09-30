@@ -99,6 +99,9 @@ description: 《基督宗教譜系學》成書管線（/works/christian-genealog
   傾向：希臘正教＝神學家額我略（拜占庭文獻引用僅次聖經；馬克西姆廣度可比奧古斯丁但晚兩百年）；
   敘利亞正教＝安提阿的塞維魯；科普特＝西里爾；東方教會＝狄奧多若；亞美尼亞待查（research_armenian_fathers.md）。
 * 譯名：charisma 用「卡理斯瑪」（遠流康樂、簡惠美譯本），**不加「又譯」**。
+* **逐章備料 10-01 完成**：總表 `output/christian-genealogy/sourcing_summary.md`（各章 `sources_chN.md`，約 1,400 筆；
+  優先書約 195 本已進 z-lib 第 2 層）。新教總表查證 `verify_protestant_table.md`、亞美尼亞 `research_armenian_fathers.md`。
+  🚨 現稿 chapters-c5 與雜誌 10-14 的總表年份不同（循道 1786 vs 1784、復原 1828／1831 vs 1801／1833），以查證報告為準重定。
 * 現稿全書「啟示論」出現 0 次；第12期原稿有「決定什麼算啟示與決定誰算教會是同一動作」，成書時丟了。
 
 ## 🚨 事件四個，時期四個，章五章
