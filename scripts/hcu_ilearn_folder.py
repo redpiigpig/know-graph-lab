@@ -45,7 +45,7 @@ def session():
         s.headers['User-Agent'] = 'Mozilla/5.0'
         s.verify = False
         s.cookies = pickle.load(open(COOKIE, 'rb'))
-        if 'sesskey' in s.get(B + '/my/', timeout=60).text:
+        if 'login/logout.php' in s.get(B + '/my/', timeout=60).text:  # 登入頁也有 sesskey，要看登出連結
             return s
     d = requests.post(B + '/login/token.php', timeout=60, verify=False, data={
         'username': e['HCU_ILEARN_TEACHER_USER'], 'password': e['HCU_ILEARN_TEACHER_PASS'],
