@@ -140,12 +140,33 @@ def download(row: dict, name: str) -> Path:
             if not okhead:
                 raise ValueError(f"檔頭不對 {head!r}")
             tmp.replace(dst)
-            return dst
+            return djvu_to_pdf(dst) if row["ext"] == "djvu" else dst
         except Exception as e:  # noqa: BLE001
             print("   重試", a, e)
             time.sleep(15)
     tmp.unlink(missing_ok=True)
     raise RuntimeError("下載失敗")
+
+
+DDJVU = Path(r"C:\Program Files (x86)\DjVuLibre\ddjvu.exe")
+
+
+def djvu_to_pdf(src: Path) -> Path:
+    """ingest_new_books.py 不收 djvu（會列在 non-ebook files 略過），抓到就轉成 PDF，
+    原檔移到 z-lib/_converted/。轉不成就原樣留著（交人處理），不丟例外。"""
+    import subprocess
+    dst = src.with_suffix(".pdf")
+    if not DDJVU.exists() or dst.exists():
+        return src
+    r = subprocess.run([str(DDJVU), "-format=pdf", "-quality=85", str(src), str(dst)], capture_output=True, timeout=3600)
+    if r.returncode != 0 or not dst.exists() or dst.stat().st_size < 50000:
+        dst.unlink(missing_ok=True)
+        print("   djvu 轉檔失敗，原檔留著：", r.stderr[:200])
+        return src
+    conv = src.parent / "_converted"
+    conv.mkdir(exist_ok=True)
+    src.replace(conv / src.name)
+    return dst
 
 
 def done_keys() -> set[str]:
@@ -163,25 +184,38 @@ def done_keys() -> set[str]:
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--sources", required=True, help="逗號分隔的 source 名（比對獵表每筆的 source 欄）")
+    ap.add_argument("--sources", default="", help="逗號分隔的 source 名（比對獵表每筆的 source 欄）")
+    ap.add_argument("--queue", action="store_true",
+                    help="改讀 zlib_wanted.py 產生的整份排隊清單 output/zlib_wanted_all.jsonl（已排序、已濾黑名單與期刊單篇）")
+    ap.add_argument("--shard", default="", help="k/n：只做清單第 k 份（共 n 份，依序號取餘），多支並跑用")
     ap.add_argument("--apply", action="store_true")
     ap.add_argument("--limit", type=int, default=0)
     ap.add_argument("--reverse", action="store_true", help="從清單尾端往前查；同一份清單可另開一支倒著跑，在中間會合")
     a = ap.parse_args()
-    srcs = set(a.sources.split(","))
+    srcs = set(filter(None, a.sources.split(",")))
     done = done_keys()
     items = []
-    for f in sorted(WANTED.glob("*.jsonl")):
+    files = [ROOT / "output" / "zlib_wanted_all.jsonl"] if a.queue else sorted(WANTED.glob("*.jsonl"))
+    for f in files:
         for line in f.read_text(encoding="utf-8").splitlines():
-            if line.strip():
+            if not line.strip():
+                continue
+            try:
                 it = json.loads(line)
-                if it.get("source") in srcs and it["key"] not in done:
-                    items.append(it)
+            except json.JSONDecodeError:
+                continue
+            if "key" not in it or it["key"] in done:   # 缺 key 的不是獵書格式（見 zlib_wanted.load_curated）
+                continue
+            if a.queue or it.get("source") in srcs:
+                items.append(it)
+    if a.shard:
+        k, n = map(int, a.shard.split("/"))
+        items = [it for i, it in enumerate(items) if i % n == k]
     if a.reverse:
         items.reverse()
     if a.limit:
         items = items[: a.limit]
-    print(f"分母：{len(items)} 筆未處理（來源 {', '.join(sorted(srcs))}）")
+    print(f"分母：{len(items)} 筆未處理（{'整份排隊清單' if a.queue else '來源 ' + ', '.join(sorted(srcs))}{' 分片 ' + a.shard if a.shard else ''}）")
     hit = got = 0
     for i, it in enumerate(items, 1):
         if a.reverse and it["key"] in done_keys():   # 正向那支可能已經抓過（兩支會合時）
@@ -217,6 +251,11 @@ def main() -> int:
     print(f"\n分母 {len(items)}｜對得上 {hit}｜已下載 {got}")
     return 0
 
+
+if __name__ == "__main__" and len(__import__("sys").argv) > 1 and __import__("sys").argv[1] == "--convert-djvu":
+    for f in sorted(DROP.glob("*.djvu")):
+        print(f.name, "→", djvu_to_pdf(f).name)
+    raise SystemExit(0)
 
 if __name__ == "__main__":
     raise SystemExit(main())

@@ -32873,7 +32873,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
     },
     {
           "slug": "stanley-hauerwas",
-          "name": "斯坦利‧霍爾瓦斯",
+          "name": "史丹利‧豪厄瓦斯",
           "nameEn": "Stanley Hauerwas",
           "nameOriginal": "Stanley Hauerwas",
           "lifespan": "1940–",
@@ -33681,7 +33681,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
     },
     {
           "slug": "gustavo-gutierrez",
-          "name": "古斯塔沃‧古鐵雷斯",
+          "name": "古斯塔沃‧古蒂埃雷斯",
           "nameEn": "Gustavo Gutiérrez",
           "nameOriginal": "Gustavo Gutiérrez Merino",
           "lifespan": "1928–2024",
@@ -35500,7 +35500,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
     },
     {
           "slug": "alexander-schmemann",
-          "name": "亞歷山大‧施梅曼",
+          "name": "施美曼",
           "nameEn": "Alexander Schmemann",
           "nameOriginal": "Александр Дмитриевич Шмеман",
           "lifespan": "1921–1983",
@@ -36393,7 +36393,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
     },
     {
           "slug": "dumitru-staniloae",
-          "name": "杜米特魯‧斯塔尼洛埃",
+          "name": "杜米特魯‧斯坦尼洛埃",
           "nameEn": "Dumitru Stăniloae",
           "nameOriginal": "Dumitru Stăniloae",
           "lifespan": "1903–1993",
@@ -37225,7 +37225,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
     },
     {
           "slug": "rudolf-bultmann",
-          "name": "魯道夫‧布特曼",
+          "name": "布爾特曼",
           "nameEn": "Rudolf Bultmann",
           "nameOriginal": "Rudolf Bultmann",
           "lifespan": "1884–1976",
@@ -37704,7 +37704,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
     },
     {
           "slug": "yves-congar",
-          "name": "伊夫‧康加爾",
+          "name": "孔蓋",
           "nameEn": "Yves Congar",
           "nameOriginal": "Yves Congar",
           "lifespan": "1904–1995",
@@ -38434,7 +38434,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
     },
     {
           "slug": "wolfhart-pannenberg",
-          "name": "沃爾夫哈特‧潘寧博",
+          "name": "沃夫哈特‧潘能伯格",
           "nameEn": "Wolfhart Pannenberg",
           "nameOriginal": "Wolfhart Pannenberg",
           "lifespan": "1928–2014",
@@ -38547,7 +38547,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
     },
     {
           "slug": "hans-kung",
-          "name": "漢斯‧龍（孔漢思）",
+          "name": "漢斯‧昆",
           "nameEn": "Hans Küng",
           "nameOriginal": "Hans Küng",
           "lifespan": "1928–2021",
