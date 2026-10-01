@@ -159,6 +159,10 @@ description: 《基督宗教譜系學》成書管線（/works/christian-genealog
   **主流教會**與**獨立教會**（舊天主教會、菲律賓獨立教會、舊禮儀派無司祭派等不認任何牧首，但神學傳統仍歸各自的
   傳統）。用集團當標的，是因為有**歸順他集團**的案例：喬治亞（607 前後與亞美尼亞決裂、轉入拜占庭共融）、馬龍派
   （轉入羅馬）。第5章談。
+* **會議紀錄**（10-01）：32 部 PDF 已歸 Drive `電子圖書館\世界宗教\基督教\教會法典與信條\大公會議紀錄\` 並登錄 ebooks；
+  Mansi OCR 文字檔在同夾 `Mansi_OCR文字檔\`。引用格式與各會議對應版本見 `data/christian-genealogy/council_acts_citation.md`。
+* **教團治理圖譜**（第11章討論草圖）：https://claude.ai/artifact/HM3gb4cfGu4dBZkqj4fPeD（源檔在 session scratchpad，改圖時重寫）。
+* 🚨 譯名：Council of Trent ＝「**脫利騰大公會議**」（台灣天主教官方；討論中我一直寫成「特利騰」，書稿一律用脫利騰）。
 * 譯名：charisma 用「卡理斯瑪」（遠流康樂、簡惠美譯本），**不加「又譯」**。
 * **逐章備料 10-01 完成**：總表 `output/christian-genealogy/sourcing_summary.md`（各章 `sources_chN.md`，約 1,400 筆；
   優先書約 195 本已進 z-lib 第 2 層）。新教總表查證 `verify_protestant_table.md`、亞美尼亞 `research_armenian_fathers.md`。
