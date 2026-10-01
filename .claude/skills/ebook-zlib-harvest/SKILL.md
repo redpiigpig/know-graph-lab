@@ -295,3 +295,12 @@ z-lib/ drop folder 的處理：
 - 詳細記在 [[project_new_book_drop]]（ebook-pipeline SKILL Workflow D「Failure modes」「Target file already exists」段）
 
 關聯：[[project_new_book_drop]]
+
+## 🚨 手動補抓單本（2026-10-01《神的演化》）
+
+- `node scripts/zlib_fetch.mjs --list <一本的清單> --limit 1 --account 3`：**手動跑要指定 `--account`**，
+  不指定就一直用主帳號；排程（`zlib_daily.ps1`）才會自動輪帳號。主帳號額度用完時的長相就是
+  「點了下載鈕等不到 download 事件」，看起來像檔案太大。
+- 同一本 `download-failed` 累積 3 次就被 `doneKeys()` 永久放棄——額度用完造成的失敗也算。
+  手動換帳號前先把帳本裡該 key 的 `download-failed` 行刪掉。
+- 百 MB 級掃描本可用 `ZLIB_DL_TIMEOUT_MS=180000` 拉長等待（預設 60 秒）。
