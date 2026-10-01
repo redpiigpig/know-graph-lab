@@ -36620,7 +36620,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
     },
     {
           "slug": "kallistos-ware",
-          "name": "卡利斯托斯‧韋爾",
+          "name": "加里斯多‧韋爾",
           "nameEn": "Kallistos Ware (Timothy Ware)",
           "nameOriginal": "Kallistos (Timothy) Ware",
           "lifespan": "1934–2022",
@@ -36655,7 +36655,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                 },
                 {
                       "year": "1966",
-                      "text": "晉鐸並受剃度，法名卡利斯托斯（Kallistos）。"
+                      "text": "晉鐸並受剃度，法名加里斯多（Kallistos）。"
                 },
                 {
                       "year": "1979",
