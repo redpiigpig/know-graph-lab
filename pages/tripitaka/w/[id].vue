@@ -163,7 +163,7 @@
                 v-if="columns.length > 1"
                 class="text-gray-300 hover:text-red-500 text-xs px-1 flex-shrink-0"
                 title="移除此欄"
-                @click="columns.splice(ci, 1)"
+                @click="removeColumn(ci)"
               >✕</button>
             </div>
             <button
@@ -533,16 +533,24 @@ function keyLabel(k: string) {
 }
 
 const columns = ref<string[]>([])
+// 讀者自己動過欄位就不再自動改；沒動過時，多譯本資料晚到（頁面先出、對照後載）要重新套預設，
+// 否則只會剩「漢文」一欄（正式站實測）。
+const columnsTouched = ref(false)
 // 預設：本經＋白話＋每種原典語言各一欄，最多四欄。
 // 🚨 預設欄不能寫死 'lzh'：甘珠爾只有藏文，寫死會整部經一個字都不顯示而頁面看起來正常。
 watch(allKeys, (keys) => {
-  const keep = columns.value.filter(k => keys.includes(k))
-  if (keep.length) { columns.value = keep; return }
+  if (columnsTouched.value) {
+    const keep = columns.value.filter(k => keys.includes(k))
+    if (keep.length) { columns.value = keep; return }
+  }
   const pick = ['self', 'zh-mod', 'sa', 'pi', 'bo', 'alt1', 'zh-nan', 'en'].filter(k => keys.includes(k))
   columns.value = pick.slice(0, 4)
 }, { immediate: true })
-function setColumn(i: number, k: string) { columns.value.splice(i, 1, k) }
+watch(id, () => { columnsTouched.value = false })
+function setColumn(i: number, k: string) { columnsTouched.value = true; columns.value.splice(i, 1, k) }
+function removeColumn(i: number) { columnsTouched.value = true; columns.value.splice(i, 1) }
 function addColumn() {
+  columnsTouched.value = true
   const next = allKeys.value.find(k => !columns.value.includes(k))
   if (next) columns.value.push(next)
 }
