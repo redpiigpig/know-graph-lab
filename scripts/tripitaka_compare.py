@@ -1210,6 +1210,83 @@ SETS["vimalakirti-c12"] = {
 }
 
 
+# 法華經：一品一組（slug saddharmapundarika-cNN，NN＝梵本品號）。梵本 27 品（GRETIL，頌號 Saddhp_品.頌）；
+# 羅什 T0262 28 品（提婆達多品併在梵 11、囑累品在第 22）、竺法護《正法華》T0263 27 品、添品 T0264 27 品；
+# 藏譯 Toh 113＋84000 英譯（TMX 品首有「… Chapter N」、品尾有「This concludes …」）。
+# 品次對應見 tripitaka_sanskrit.REGISTRY 的 T0262 chapter_map。
+def _lotus_versions(sa_ch: int, bo_rng: tuple[int, int], heads: dict[str, list[str]],
+                    cuts: dict[str, list], bo_lines: list) -> list[dict]:
+    vs = [{"id": "sa", "lang": "sa", "label": "梵本", "who": "Saddharmapuṇḍarīka・GRETIL（Vaidya 本）",
+           "src": {"orig": "T0262", "lang": "sa", "ref": f"Saddharmapuṇḍarīkasūtra {sa_ch}"}, "cuts": cuts["sa"]}]
+    for w, label, who in [("T0262", "羅什本", "鳩摩羅什譯《妙法蓮華經》・406 年"),
+                          ("T0263", "正法華", "竺法護譯《正法華經》・286 年"),
+                          ("T0264", "添品", "闍那崛多、達摩笈多《添品妙法蓮華經》・601 年")]:
+        vs.append({"id": w, "lang": "lzh", "label": label, "who": who,
+                   "src": {"work": w, "nodes": heads[w], "start": cuts[w][0][1]}, "cuts": cuts[w]})
+    for side, label, who in [("bo", "藏譯", "德格版 Toh 113・84000"), ("en", "84000 英譯", "譯自藏譯・與藏文逐句對齊")]:
+        vs.append({"id": side, "lang": side, "label": label, "who": who,
+                   "src": {"tmx": "toh113", "side": side, "from": bo_rng[0], "to": bo_rng[1]}, "lines": bo_lines})
+    return vs
+
+
+SETS["saddharmapundarika-c01"] = {
+    "title": "法華經・序品第一",
+    "family": "sa",
+    "intro": (
+        "梵本〈因緣品〉（nidānaparivarta）；羅什、添品〈序品〉、正法華〈光瑞品〉。散文按梵本段落，"
+        "彌勒問偈（梵本 1.1–56）、文殊答偈（1.57–100）各一節。人名異譯：文殊＝溥首（正法華）；彌勒＝慈氏＝阿逸多（Ajita）；"
+        "妙光＝超光（正法華）＝Varaprabha；求名＝名聞＝Yaśaskāma；德藏＝首藏＝Śrīgarbha；日月燈明＝Candrasūryapradīpa。"
+    ),
+    "units": [
+        ("l1-00", "經題・歸敬"), ("l1-01", "如是我聞・聲聞菩薩天龍大眾"), ("l1-05", "說無量義經・入無量義處三昧・雨華地動"),
+        ("l1-06", "眉間白毫光照東方萬八千土"), ("l1-07", "彌勒念・問文殊"), ("l1-10", "彌勒問偈（梵 1.1–56）"),
+        ("l1-19", "文殊答：欲雨大法雨"), ("l1-20", "日月燈明佛・二萬佛同名"), ("l1-22", "八王子出家"),
+        ("l1-23", "說無量義・入定放光・二十億菩薩"), ("l1-25", "妙光菩薩・六十小劫說法華"),
+        ("l1-26", "唱當入涅槃・授德藏記"), ("l1-28", "中夜入滅・妙光持經・八子成佛・然燈"),
+        ("l1-29", "求名菩薩・妙光即文殊、求名即彌勒"), ("l1-30", "文殊答偈（梵 1.57–100）"), ("l1-99", "品尾題"),
+    ],
+    "versions": _lotus_versions(
+        1, (0, 246),
+        {"T0262": ["序品第一"], "T0263": ["光瑞品第一"], "T0264": ["妙法蓮華經序品第一"]},
+        {"sa": [("l1-00", "Saddharmapuṇḍarīkasūtram |"), ("l1-01", "evaṃ mayā śrutam"),
+                ("l1-05", "tena khalu punaḥ samayena bhagavāṃścatasṛbhiḥ"),
+                ("l1-06", "atha khalu tasyāṃ velāyāṃ bhagavato bhrūvivarāntarād"),
+                ("l1-07", "atha khalu maitreyasya bodhisattvasya mahāsattvasyaitadabhūt"),
+                ("l1-10", "atha khalu maitreyo bodhisattvo mahāsattvo mañjuśriyaṃ kumārabhūtamābhirgāthābhir"),
+                ("l1-19", "atha khalu mañjuśrīḥ kumārabhūto maitreyaṃ"), ("l1-20", "anusmarāmyahaṃ kulaputrā atīte"),
+                ("l1-22", "tasya khalu punarajita bhagavataścandrasūryapradīpasya tathāgatasyārhataḥ samyaksaṃbuddhasya pūrvaṃ"),
+                ("l1-23", "tena khalu punarajita samayena sa bhagavāṃścandrasūryapradīpas"),
+                ("l1-25", "tena khalu punarajita samayena tasya bhagavataḥ śāsane varaprabho"),
+                ("l1-26", "atha sa bhagavāṃścandrasūryapradīpastathāgato 'rhan samyaksaṃbuddhaḥ ṣaṣṭayantarakalpānām"),
+                ("l1-28", "atha khalvajita sa bhagavāṃścandrasūryapradīpastathāgato 'rhan samyaksaṃbuddhastasyāmeva rātryāṃ"),
+                ("l1-29", "teṣāṃ ca aṣṭānāmantevāsiśatānāmeko"), ("l1-30", "atha khalu mañjuśrīḥ kumārabhūta etamevārthaṃ"),
+                ("l1-99", "ityāryasaddharmapuṇḍarīke")],
+         "T0262": [("l1-01", "如是我聞"), ("l1-05", "爾時世尊，四眾圍遶"), ("l1-06", "爾時佛放眉間白毫相光"),
+                   ("l1-07", "爾時彌勒菩薩作是念"), ("l1-10", "於是彌勒菩薩欲重宣此義，以偈問曰"),
+                   ("l1-19", "爾時文殊師利語彌勒菩薩摩訶薩"), ("l1-20", "「諸善男子！如過去無量無邊"),
+                   ("l1-22", "其最後佛，未出家時有八王子"), ("l1-23", "「是時日月燈明佛說大乘經，名無量義"),
+                   ("l1-25", "時有菩薩，名曰妙光"), ("l1-26", "「日月燈明佛於六十小劫說是經已"),
+                   ("l1-28", "佛授記已，便於中夜、入無餘涅槃"), ("l1-29", "八百弟子中，有一人號曰求名"),
+                   ("l1-30", "爾時文殊師利於大眾中，欲重宣此義")],
+         "T0263": [("l1-01", "聞如是"), ("l1-05", "爾時世尊與四部眾眷屬圍繞"), ("l1-06", "於時佛放面口結光明"),
+                   ("l1-07", "於是彌勒菩薩心自念言"), ("l1-10", "於是慈氏以頌而問溥首曰"), ("l1-19", "於是溥首告慈氏"),
+                   ("l1-20", "又念往故無央數劫"), ("l1-22", "「其日月燈明如來未出家時有八子"),
+                   ("l1-23", "又曰：「阿逸！時日月燈明"), ("l1-25", "而其佛世有菩薩，名曰超光"),
+                   ("l1-26", "「日月燈明六十劫中"), ("l1-28", "佛授決已，尋於夜半而取滅度"),
+                   ("l1-29", "十八人中有一菩薩"), ("l1-30", "於是溥首菩薩，欲重現誼")],
+         "T0264": [("l1-01", "如是我聞"), ("l1-05", "爾時世尊，四眾圍遶"), ("l1-06", "爾時佛放眉間白毫相光"),
+                   ("l1-07", "爾時彌勒菩薩作是念"), ("l1-10", "於是彌勒菩薩，欲重宣此義，以偈問曰"),
+                   ("l1-19", "是時文殊師利語彌勒菩薩摩訶薩"), ("l1-20", "「諸善男子！如過去無量無邊"),
+                   ("l1-22", "其最後佛未出家時，有八王子"), ("l1-23", "「是時日月燈明佛說大乘經"),
+                   ("l1-25", "時有菩薩，名曰妙光"), ("l1-26", "「日月燈明佛，於六十小劫說是經已"),
+                   ("l1-28", "佛授記已，便於中夜入無餘涅槃"), ("l1-29", "八百弟子，中有一人，號曰求名"),
+                   ("l1-30", "爾時文殊師利，於大眾中，欲重宣此義")]},
+        [("l1-00", 0), ("l1-01", 5), ("l1-05", 22), ("l1-06", 28), ("l1-07", 36), ("l1-10", 46), ("l1-19", 131),
+         ("l1-20", 137), ("l1-22", 146), ("l1-23", 152), ("l1-25", 160), ("l1-26", 165), ("l1-28", 168), ("l1-29", 174),
+         ("l1-30", 184), ("l1-99", 245)]),
+}
+
+
 # 無量壽經：五個漢譯＋梵本大本，分四段（slug sukhavativyuha-1…4）。梵本 GRETIL 本沒有節號，
 # 骨架改用菩提流志〈無量壽如來會〉（T0310）在 CBETA 目錄裡的 42 科（法會聖眾第一…地動現瑞第四十二），
 # 各本在對應處下刀。T0360 康僧鎧、T0361 傳支婁迦讖、T0362 傳支謙、T0363 法賢不分品，用 start／end 取段。
