@@ -65,6 +65,11 @@ End-to-end pipeline from Drive folder → reader at `/ebook/[id]`. Single SKILL 
   只換 content、其餘欄位不動，字數差 >3% 不寫，留 `.bak_reflow`；之後再跑 restructure。
 - **多語全集**（有 sources 的 86 部）：`scripts/number_multilingual.py`。章節路徑只是流水號、章名不在資料裡，**不合併頁面**，
   段號「節序-段」以原文為準；段數不等的單原文塊用 `rebuild_reference_bilingual.align` 重對齊、補零寬佔列；留 `.bak_numbering`。
+- **超大章（>15 萬字）改一節一頁**（10-01 使用者選 A）：`split_big_chapter` 在 `###` 處切頁，路徑「章 / 節」、段號照整章不斷號、
+  註釋跟著引用頁走；無節或單節仍過大 → 段落交界處每 6 萬字切、標「（續N）」。497＋5 本寫回。
+- 🚨 **補註腳（relink）寫在重建之後的版本上**：日後若從 `.bak_restructure` 重跑重建，會蓋掉當時補的註腳連結，要重跑 relink。
+- 🚨 **重抽段落的停擺**：PyMuPDF 零碎讀 Drive 上的 PDF 會等下載等不回來（CPU 不動、無網路連線、卡 30 分鐘以上）。
+  現在每本子行程＋15 分鐘逾時、PDF 先整份複製到本機、寫檔先 .tmp 再 os.replace、推完 R2／DB 才記 `reflow_done.txt`。
 - 🚨 **會改寫同一本書的腳本不可並行**（重建、重抽段落、補註腳）：讀到寫到一半的檔會把殘缺內容寫回。
   10-01 用 `output/restructure/night_relay.py` 依序接力。
 - 中文書的複製引用改中文格式（作者著，譯者譯，《書名》（出版社，年），頁 N）；原本英文 Chicago 會把中文全濾掉只剩「(1901), p. 6.」。
