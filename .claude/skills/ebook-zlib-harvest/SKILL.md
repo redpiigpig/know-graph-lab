@@ -304,3 +304,12 @@ z-lib/ drop folder 的處理：
 - 同一本 `download-failed` 累積 3 次就被 `doneKeys()` 永久放棄——額度用完造成的失敗也算。
   手動換帳號前先把帳本裡該 key 的 `download-failed` 行刪掉。
 - 百 MB 級掃描本可用 `ZLIB_DL_TIMEOUT_MS=180000` 拉長等待（預設 60 秒）。
+
+## z-lib 找不到時：LibGen 與 Anna's Archive（2026-10-01）
+
+- **LibGen** `libgen.li`：`index.php?req=…&topics[]=l` 查 → `edition.php?id=` → `ads.php?md5=` → `get.php?md5=&key=` 直接下載，
+  純 urllib 即可；常回 HTTP 500，重試幾輪就過。下載前核對：LibGen 的同作者另一本書會排在前面（邢福增那次就抓錯書）。
+- **Anna's Archive**：`.li` 網域已被停放出售，現用 `annas-archive.gl`；前面有 DDOS-GUARD，curl 403、自動化 Chrome 也要
+  **人工點一次驗證**。`scripts/annas_search.mjs --file q.txt --out hits.json` 用持久 profile `c:/tmp/annas_profile`，卡驗證時
+  會等最多 10 分鐘並印「等待人工驗證」，且約 30 筆後會再跳一次。🚨 結果列的書名連結是 `a.js-vim-focus`；頁面另有一排
+  「最近下載」也是 `/md5/` 連結——抓錯會每筆都回剛好 12 筆無關的書。
