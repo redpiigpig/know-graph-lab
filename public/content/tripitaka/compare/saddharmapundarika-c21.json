@@ -1,0 +1,206 @@
+{
+ "slug": "saddharmapundarika-c21",
+ "title": "法華經・陀羅尼品",
+ "family": "sa",
+ "intro": "梵本〈陀羅尼品〉（dhāraṇīparivarta，第 21）；羅什〈陀羅尼品第二十六〉、添品〈陀羅尼品第二十一〉、正法華〈總持品第二十四〉。藥王、勇施、毘沙門、持國天王、十羅剎女與鬼子母各說神咒護持法師。羅什、添品音寫咒語，正法華意譯（如「奇異所思，意念無意…」）。人名異譯：勇施＝妙勇（正法華）＝Pradānaśūra；毘沙門＝Vaiśravaṇa；第四位天王梵本作增長（Virūḍhaka），羅什、添品作持國，正法華作順怨天王；藍婆＝Lambā、毘藍婆＝Vilambā、皋諦＝Kuntī；鬼子母＝Hārītī。",
+ "units": [
+  {
+   "id": "l21-00",
+   "label": "品題"
+  },
+  {
+   "id": "l21-01",
+   "label": "藥王問持經福・佛答"
+  },
+  {
+   "id": "l21-02",
+   "label": "藥王說咒"
+  },
+  {
+   "id": "l21-03",
+   "label": "佛讚藥王"
+  },
+  {
+   "id": "l21-04",
+   "label": "勇施說咒"
+  },
+  {
+   "id": "l21-05",
+   "label": "毘沙門天王說咒"
+  },
+  {
+   "id": "l21-06",
+   "label": "持國（增長）天王說咒"
+  },
+  {
+   "id": "l21-07",
+   "label": "十羅剎女與鬼子母說咒"
+  },
+  {
+   "id": "l21-v1",
+   "label": "羅剎女偈（梵 21.1–4）"
+  },
+  {
+   "id": "l21-08",
+   "label": "羅剎女願護法師・佛讚"
+  },
+  {
+   "id": "l21-09",
+   "label": "說是品時六萬八千人得無生法忍"
+  },
+  {
+   "id": "l21-99",
+   "label": "品尾題"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本",
+   "who": "Saddharmapuṇḍarīka・GRETIL（Vaidya 本）"
+  },
+  {
+   "id": "T0262",
+   "lang": "lzh",
+   "label": "羅什本",
+   "who": "鳩摩羅什譯《妙法蓮華經》・406 年",
+   "work": "T0262"
+  },
+  {
+   "id": "T0263",
+   "lang": "lzh",
+   "label": "正法華",
+   "who": "竺法護譯《正法華經》・286 年",
+   "work": "T0263"
+  },
+  {
+   "id": "T0264",
+   "lang": "lzh",
+   "label": "添品",
+   "who": "闍那崛多、達摩笈多《添品妙法蓮華經》・601 年",
+   "work": "T0264"
+  },
+  {
+   "id": "bo",
+   "lang": "bo",
+   "label": "藏譯",
+   "who": "德格版 Toh 113・84000"
+  },
+  {
+   "id": "en",
+   "lang": "en",
+   "label": "84000 英譯",
+   "who": "譯自藏譯・與藏文逐句對齊"
+  }
+ ],
+ "works": [
+  "T0262",
+  "T0263",
+  "T0264"
+ ],
+ "anchors": [
+  {
+   "work": "T0262",
+   "node": "妙法蓮華經陀羅尼品第二十六",
+   "uid": "T09n0262_p0058b08"
+  },
+  {
+   "work": "T0263",
+   "node": "正法華經總持品第二十四",
+   "uid": "T09n0263_p0129c26"
+  },
+  {
+   "work": "T0264",
+   "node": "妙法蓮華經陀羅尼品第二十一",
+   "uid": "T09n0264_p0186c11"
+  }
+ ],
+ "cells": {
+  "l21-00": {
+   "sa": "Saddhp_21: dhāraṇīparivartaḥ |"
+  },
+  "l21-01": {
+   "sa": "atha khalu bhaiṣajyarājo bodhisattvo mahāsattva utthāyāsanādekāṃsamuttarāsaṅgaṃ kṛtvā dakṣiṇaṃ jānumaṇḍalaṃ pṛthivyāṃ pratiṣṭhāpya yena bhagavāṃstenāñjaliṃ praṇamya bhagavantametadavocat kiyad bhagavan sa kulaputro vā kuladuhitā vā puṇyaṃ prasavet, ya imaṃ saddharmapuṇḍarīkaṃ dharmaparyāyaṃ dhārayet, kāyagataṃ vā pustakagataṃ vā kṛtvā? evamukte bhagavān bhaiṣajyarājaṃ bodhisattvaṃ mahāsattvametadavocat - yaḥ kaścid bhaiṣajyarāja kulaputro vā kuladuhitā vā aśītigaṅgānadīvālikāsamāni tathāgatakoṭīnayutaśatasahasrāṇi satkuryād gurukuryānmānayet pūjayet, takiṃ manyase bhaiṣajyarāja kiyatkulaputro vā kuladuhitā vā tatonidānaṃ bahu puṇyaṃ prasavet? bhaiṣajyarājo bodhisattvo mahāsattva āha - bahu bhagavan, bahu sugata | bhagavānāha - ārocayāmi te bhaiṣajyarāja, prativedayāmi | yaḥ kaścid bhaiṣajyarāja kulaputro vā kuladuhitā vā asmāt saddharmapuṇḍarīkāddharmaparyāyādantaśa ekāmapi catuṣpadīgāthāṃ dhārayet, vācayet, paryavāpnuyāt, pratipattyā ca saṃpādayet, ataḥ sa bhaiṣajyarāja kulaputro vā kuladuhitā vā tatonidānaṃ bahutaraṃ puṇyaṃ prasavet ||",
+   "T0262": "爾時，藥王菩薩即從座起，偏袒右肩，合掌向佛，而白佛言：「世尊！若善男子、善女人，有能受持法華經者——若讀誦通利，若書寫經卷——得幾所福？」佛告藥王：「若有善男子、善女人，供養八百萬億那由他恒河沙等諸佛。於汝意云何？其所得福，寧為多不？」「甚多，世尊。」佛言：「若善男子、善女人，能於是經，乃至受持一四句偈，讀誦、解義、如說修行，功德甚多。」",
+   "T0263": "於是藥王菩薩，即從座起長跪叉手，前白佛言：「若族姓子及族姓女，聞是《正法華》經典，受持懷抱書寫經卷，獲福如何？」佛言：「族姓子女，受持是經，誦在懷抱書寫經卷，福不可量無以為喻。若族姓子，供養八十億百千姟江河沙諸如來眾，若復受持懷抱書寫是《正法華經》，講說供養。何所福多？於意云何？寧當一心奉持經典，若以衣食供養諸佛。」藥王菩薩白佛言：「若族姓子及族姓女，受《正法華》經典之要，執持書寫一四句頌，講說諷誦若復奉行，具足成就其福最多，勝於供養若干江沙諸佛世尊。」佛言：「甚哉！法之供養，最為第一。」",
+   "T0264": "爾時藥王菩薩即從座起，偏袒右肩合掌向佛，而白佛言：「世尊！若善男子、善女人，有能受持《法華經》者，若讀誦通利，若有書寫經卷，得幾所福？」佛告藥王：「若有善男子、善女人，供養八百萬億那由他恒河沙等諸佛，於汝意云何？其所得福寧為多不？」「甚多，世尊！」佛言：「若善男子、善女人，能於是經，乃至受持一四句偈，讀誦、解義、如說修行，功德甚多。」",
+   "bo": "བླ་གོས་ཕྲག་པ་གཅིག་ཏུ་གཟར་ནས་པུས་མོ་གཡས་པའི་ ལྷ་ང་ས་ལ་བཙུགས་ཏེ། བཅོམ་ལྡན་འདས་ག་ལ་བ་དེ་ལོགས་སུ་ཐལ་མོ་སྦྱར་བ་བཏུད་དེ་བཅོམ་ལྡན་འདས་ལ་འདི་སྐད་ཅེས་གསོལ་ཏོ། །བཅོམ་ལྡན་འདས་དམ་པའི་ཆོས་པད་མ་དཀར་པོའི་ཆོས་ཀྱི་རྣམ་གྲངས་འདི། ལུས་ལ་ཐོགས་སམ་གླེགས་བམ་དུ་བགྱིས་ཏེ་འཛིན་པའི་རིགས་ཀྱི་བུའམ་རིགས་ཀྱི་བུ་མོ་དེ་བསོད་ནམས་ཇི་སྙེད་ཅིག་སྐྱེད་པར་འགྱུར། དེ་སྐད་ཅེས་གསོལ་པ་དང་། བཅོམ་ལྡན་འདས་ཀྱིས་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་སྨན་གྱི་རྒྱལ་པོ་ལ་འདི་སྐད་ཅེས་བཀའ་སྩལ་ཏོ། ། སྨན་གྱི་རྒྱལ་པོ་རིགས་ཀྱི་བུའམ་རིགས་ཀྱི་བུ་མོ་གང་ལ་ལ་དེ་བཞིན་གཤེགས་པ་བྱེ་བ་ཁྲག་ཁྲིག་བརྒྱ་སྟོང་ཕྲག་གང་གཱའི་ཀླུང་བརྒྱད་ཅུའི་བྱེ་མ་སྙེད་ལ་བསྟི་སྟང་དུ་བྱེད། བཙུན་པར་བྱེད། རི་མོར་བྱེད། མཆོད་པར་བྱེད་ན། སྨན་གྱི་རྒྱལ་པོ་འདི་ཇི་སྙམ་དུ་སེམས། རིགས་ཀྱི་བུའམ་རིགས་ཀྱི་བུ་མོ་དེ་གཞི་དེ་ལས་བསོད་ནམས་མང་དུ་སྐྱེད་དམ། གསོལ་པ་བཅོམ་ལྡན་འདས་མང་ལགས་སོ། །བདེ་བར་གཤེགས་པ་མང་ལགས་སོ། །བཅོམ་ལྡན་འདས་ཀྱིས་བཀའ་སྩལ་པ། སྨན་གྱི་རྒྱལ་པོ་ཁྱོད་མོས་པར་བྱའོ། ། ཁོང་དུ་ཆུད་པར་བྱའོ། ། སྨན་གྱི་རྒྱལ་པོ་རིགས་ཀྱི་བུའམ་རིགས་ཀྱི་བུ་མོ་གང་ལ་ལ། དམ་པའི་ཆོས་པད་མ་དཀར་པོའི་ཆོས་ཀྱི་རྣམ་གྲངས་འདི་ལས། ཐ་ན་ཚིག་བཞི་པའི་ཚིགས་སུ་བཅད་པ་གཅིག་ཙམ་ཡང་འཛིན་པ་དང་། ཀློག་པ་དང་། ཀུན་ཆུབ་པར་བྱེད་པ་དང་། ནན་ཏན་གྱིས་བསྒྲུབ་ན། སྨན་གྱི་རྒྱལ་པོ་རིགས་ཀྱི་བུའམ་རིགས་ཀྱི་བུ་མོ་དེ་གཞི་དེ་ལས་དེ་བས་ཆེས་བསོད་ནམས་མང་དུ་སྐྱེད་དོ། །དེ་ནས་བཅོམ་ལྡན་འདས་ལ་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་སྨན་གྱི་རྒྱལ་པོས་འདི་སྐད་ཅེས་གསོལ་ཏོ། །བཅོམ་ལྡན་འདས་གང་དམ་པའི་ཆོས་ཀྱི་རྣམ་གྲངས་འདི་ལུས་ལ་ཐོགས་སམ་གླེགས་བམ་དུ་བགྱིས་ཏེ། འཛིན་པའི་རིགས་ཀྱི་བུའམ་རིགས་ཀྱི་བུ་མོ་དེ་བདག་གིས་བསྲུང་བ་དང་བསྐྱབ་པ་དང་སྦ་བའི་སླད་དུ་གཟུངས་སྔགས་ཀྱི་ཚིག་རྣམས་སྩལ་བར་བགྱིའོ། །ཏདྱ་ཐཱ། ཨནྱེ། མནྱེ། མ་ནེ་མ་མ་ནེ། ཙིཏྟེ་ཙ་རི་ཏེ། ཤ་མེ་ཤ་མ་ཡི་ཏཱ་བི། ཤཱནྟེ། མུཀྟེ། མུཀྟ་ ཏ་མེ། ས་མེ་ཨ་བི། ཤ་མེ་ས་མ་ས་མེ། ཛ་ཡེ། ཀྵ་ཡེ། ཨ་ཀྵ་ཡེ། ཨཀྵི་ཎི།",
+   "en": "Dhāraṇīs Chapter 21  Then the bodhisattva mahāsattva Bhaiṣajyarāja rose from his seat, removed his upper robe from one shoulder, knelt on his right knee, and with his hands together in homage bowed toward the Bhagavān and said to the Bhagavān, “Bhagavān, how much merit will a noble man or noble woman generate by carrying this Dharma teaching The White Lotus of the Good Dharma on their body or making a text of it?” The Bhagavān answered the bodhisattva mahāsattva Bhaiṣajyarāja, “Bhaiṣajyarāja, if a noble man or noble woman were to honor, venerate, worship, and make offerings to hundreds of thousands of quintillions of tathāgatas, as numerous as the grains of sand in eighty Ganges River, what do you think, would that noble man or noble woman generate much merit as a result of that?” “Much merit, Bhagavān,” he answered. “Much merit, Sugata.” “Bhaiṣajyarāja,” the Bhagavān continued, “I declare to you, I proclaim to you, Bhaiṣajyarāja, that the noble man or noble woman who possesses just one verse, or one line from this Dharma teaching The White Lotus of the Good Dharma and reads it, studies it, and assiduously practices it, that noble man or noble woman, Bhaiṣajyarāja, will have even greater merit as a result of that.”"
+  },
+  "l21-02": {
+   "sa": "atha khalu bhaiṣajyarājo bodhisattvo mahāsattvastasyāṃ velāyāṃ bhagavantametadavocat - dāsyāmo vayaṃ bhagavaṃsteṣāṃ kulaputrāṇāṃ kuladuhitṛṇāṃ vā yeṣāmayaṃ saddharmapuṇḍarīko dharmaparyāyaḥ kāyagato vā syāt, pustakagato vā, rakṣāvaraṇaguptaye dhāraṇīmantrapadāni | tadyathā - anye manye mane mamane citte carite same samitā viśānte mukte muktatame same aviṣame samasame jaye kṣaye akṣaye akṣiṇe śānte samite dhāraṇi ālokabhāṣe pratyavekṣaṇi nidhiru abhyantaraniviṣṭe abhyantarapāriśuddhimutkule araḍe paraḍe sukāṅkṣi asamasame buddhavilokite dharmaparīkṣite saṃghanirghoṣaṇi nirghoṇi bhayābhayaviśodhani mantre mantrākṣayate rute rutakauśalye akṣaye akṣayavanatāye vakkule valoḍra amanyanatāye svāhā || imāni bhagavan mantradhāraṇīpadāni dvāṣaṣṭibhirgaṅgānadīvālikāsamairbuddhairbhagavadbhirbhāṣitāni | te sarve buddhā bhagavantastena drugdhāḥ syuḥ, ya evaṃrupān dharmabhāṇakānevaṃrūpān sūtrāntadhārakānatikrāmet ||",
+   "T0262": "爾時藥王菩薩白佛言：「世尊！我今當與說法者陀羅尼呪，以守護之。」即說呪曰：「安爾（一）　曼爾（二）　摩禰（三）　摩摩禰（四）　旨隷（五）　遮梨第（六）　賒咩（羊鳴音）（七）　賒履（冈雉反）多瑋（八）　羶（輸千反）帝（九）　目帝（十）　目多履（十一）　娑履（十二）　阿瑋娑履（十三）　桑履（十四）　娑履（十五）　叉裔（十六）　阿叉裔（十七）　阿耆膩（十八）　羶帝（十九）　賒履（二十）　陀羅尼（二十一）　阿盧伽婆娑（蘇奈反）簸蔗毘叉膩（二十二）　禰毘剃（二十三）　阿便哆（都餓反）邏禰履剃（二十四）　阿亶哆波隷輸地（途賣反）（二十五）　漚究隷（二十六）　牟究隷（二十七）　阿羅隷（二十八）　波羅隷（二十九）　首迦差（初几反）（三十）　阿三磨三履（三十一）　佛䭾毘吉利袠帝（三十二）　達磨波利差（猜離反）帝（三十三）　僧伽涅瞿沙禰（三十四）　婆舍婆舍輸地（三十五）　曼哆邏（三十六）　曼哆邏叉夜多（三十七）　郵樓哆（三十八）　郵樓哆憍舍略（來加反）（三十九）　惡叉邏（四十）　惡叉冶多冶（四十一）　阿婆盧（四十二）　阿摩若（荏蔗反）那多夜（四十三）「世尊！是陀羅尼神咒，六十二億恒河沙等諸佛所說，若有侵毀此法師者，則為侵毀是諸佛已。」時釋迦牟尼",
+   "T0263": "藥王菩薩復白佛言：「我當擁護如是等輩，諸族姓子及族姓女，受此經者斯法師等，以義宿衛長使無患，誦總持句。」又尋呪曰：「奇異所思，意念無意，永久所行，奉修寂然。澹泊志默，解脫濟渡，平等無邪，安和普平。滅盡無盡，莫勝玄默，澹然總持。觀察光耀，有所依倚，恃怙於內，究竟清淨。無有坑坎，亦無高下，無有迴旋，所周旋處。其目清淨，等無所等，覺已越度，而察於法。合眾無音，所說解明，而懷止足。盡除節限，宣暢音響，曉了眾聲，而了文字，無有窮盡，永無力勢，無所思念。」藥王菩薩白曰：「唯然世尊，是總持句，六十二江河沙諸佛所說。假使有犯此呪言者，若復違毀此等法師，為失諸佛世尊道教。」",
+   "T0264": "爾時藥王菩薩白佛言：「世尊！我今當與說法者陀羅尼呪以守護之。」即說呪曰：「怛（都割）姪（地夜）他（一）　安埿（如帝）（二）　曼（莫安）埿（三）　未泥（奴羝）（四）　磨（莫賀）磨泥（五）　質羝（六）　折（之熱）唎[羊*(句-口+瓦)]（七）　攝迷（八）　攝寐多鼻（九）　奢（舒迦）安[羊*(句-口+瓦)]（十）　目訖[羊*(句-口+瓦)]（十一）　目訖跢（都箇）檐（都灆）迷糝（穌灆）迷（十二）　𥣯（烏合）鼻釤迷（十三）　糝磨糝迷（十四）　社（時夜）頤（余羝）（十五）　憩（欹債）頤（十六）　惡憩頤（十七）　惡敧嬭（奴皆）（十八）　奢安[羊*(句-口+瓦)]攝寐（十九）　陁邏膩（奴寄）（二十）　阿（長聲）盧迦婆拪（二十一）　鉢囉[譧-兼+氏]（都夜）鞞剎（駈察）膩（二十二）　鼻鼻𡀔（二十三）　𥣯便（扶延）哆𮟩儞（奴棄）鼻瑟𪙔（都皆）（二十四）　頞（烏割）顛跢波唎秫（鼠出）啼（二十五）　郁（於竹）究犁（二十六）　目究犁（二十七）　頞𮟩第（屠皆二十八）　鉢𮟩第（二十九）　恕（鼠注）迦欹（三十）　頞糝磨糝迷（三十一）　勃地鼻盧吉[羊*(句-口+瓦)]（三十二）　達磨鉢離器[羊*(句-口+瓦)]（三十三）　僧伽涅瞿殺嬭（三十四）　跋耶（余哥）跋夜（余箇）輸達泥（三十五）　曼窒（都結）𠼝（三十六）　曼怛𮟩憩夜[羊*(句-口+瓦)]（三十七）　護路跢憍（俱昭）舍利頤（三十八）　惡叉夜（三十九）　惡叉跋奈（奴箇）多夜（四十）　跋盧優曼禰（奴夜）奈多夜「世尊！是陀羅尼神呪，六十二億恒河沙等諸佛所說，若有侵毀此法師者，則為侵毀是諸佛已。」時釋迦牟尼",
+   "bo": "ཤཱནྟེ། ཤ་མི་ཏེ་དྷཱ་ར་ཎི། ཨཱ་ལོ་ཀ་བྷཱ་སེ། པྲ་ཏྱ་བེཀྵ་ཎི། བི་བི་རུ་ཨ་བྷྱནྟ་ར་ཎི། བིཥྚེ། ཨ་ཏྱནྟ། པ་རི་ཤུད་དྷི། ཨུད་ཀུ་ལོ། མུད་ཀུ་ལེ། ཨར་ཌེ། པ་ར་ཌེ། ཤུ་ཀཱ་ཀྵི། ཨ་ས་མ་ས་མེ། བུད་དྷ་བི་ལོ་ཀི་ཏེ། དྷརྨ་པ་རཱི་ཀྵི་ཏེ། སང་གྷ་ནི་ར་གྷོ་ཥ་ཎི། ནི་ར་གྷོ་ཥ་ཎི། བྷ་ཡཱ་བྷ་ཡ། ཤོ་དྷ་ནི་མནྟྲེ་མནྟྲཱ། ཀྵ་ཡ་ཏྲེ། རུ་དྲ་ཀཽ་ཤ་ལྱེ། ཨ་ཀྵ་ཡེ། ཨ་ཀྵཱ། བ་ན་ཏཱ་ཡཱ་པ་ལོ། ཨ་མནྱ་ན་ཏཱ་ཡ། བཅོམ་ལྡན་འདས་གཟུངས་སྔགས་ཀྱི་ཚིག་འདི་དག་ནི། སངས་རྒྱས་བཅོམ་ལྡན་འདས་གང་གཱའི་ཀླུང་དྲུག་ཅུའི་བྱེ་མ་སྙེད་ཀྱིས་བཤད་པ་སྟེ། གང་གིས་མདོ་སྡེ་འདི་ལྟ་བུ་འཛིན་པ་ཆོས་སྨྲ་བ་འདི་ལྟ་བུ་དེ་དག་དང་འགལ་བར་བགྱིས་ན། སངས་རྒྱས་བཅོམ་ལྡན་འདས་དེ་དག་ཐམས་ཅད་ལ་དེ་འཁུས་པ་ལགས་སོ། །",
+   "en": "Then the bodhisattva mahāsattva Bhaiṣajyarāja said to the Bhagavān, “Bhagavān, we give these dhāraṇī-mantra words to a noble man or noble woman who carries on their body or makes a text of this Dharma teaching and upholds it, so that they may be protected, guarded, and hidden:  “Tadyathā:anye manye mane mamane citte carite śame śamayitā viśānte mukte muktatame same avisame samasame jaye kṣaye akṣaye akṣīṇe śānte śamite dhāraṇi ālokabhāṣe pratyavekṣaṇi viviru abhyantaraniviṣṭe abhyantarapāriśuddhi utkule mutkule arḍe parḍe sukāṅkṣi asamasame buddhavilokite dharmaparīkṣite saṃghanirghoṣaṇi nirghoṣaṇi bhayābhayaśodhani mantre mantrākṣayate rutakauśalye akṣaye akṣayavanatāye vakkule valoḍa amanyanatāya. “Bhagavān, these dhāraṇī-mantra words have been taught by buddha bhagavāns as numerous as the grains of sand in sixty Ganges Rivers. If anyone opposes that kind of dharmabhāṇaka, someone who upholds this sūtra, they will offend all those buddha bhagavāns.”"
+  },
+  "l21-03": {
+   "sa": "atha khalu bhagavān bhaiṣajyarājāya bodhisattvāya mahāsattvāya sādhukāramadāt sādhu sādhu bhaiṣajyarāja, sattvānāmarthaḥ kṛtaḥ | dhāraṇīpadāni bhāṣitāni sattvānāmanukampāmupādaya | rakṣāvaraṇaguptiḥ kṛtā ||",
+   "T0262": "佛讚藥王菩薩言：「善哉，善哉！藥王！汝愍念擁護此法師故，說是陀羅尼，於諸眾生，多所饒益。」",
+   "T0263": "佛歎藥王菩薩大士：「善哉！善哉！若族姓子說總持句為眾生故，愍念擁護多所安隱。」",
+   "T0264": "佛讚藥王菩薩言：「善哉，善哉！藥王！汝愍念擁護此法師故，說是陀羅尼，於諸眾生多所饒益。」",
+   "bo": "དེ་ནས་བཅོམ་ལྡན་འདས་ཀྱིས་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་སྨན་གྱི་རྒྱལ་པོ་ལ་འདི་སྐད་ཅེས་བཀའ་སྩལ་ཏོ། ། སྨན་གྱི་རྒྱལ་པོ་ཁྱོད་ཀྱིས་གཟུངས་སྔགས་ཀྱི་ཚིག་རྣམས་སྨྲས་པས། སེམས་ཅན་མང་པོའི་དོན་བྱས་ཤིང་སྨན་གྱི་རྒྱལ་པོ་སེམས་ཅན་རྣམས་ལ་སྙིང་བརྩེ་བའི་ཕྱིར་བསྲུང་བ་དང་བསྐྱབ་པ་དང་སྦ་བ་བྱས་པ་ལེགས་སོ་ལེགས་སོ་ཞེས་བྱ་བ་བྱིན་ནོ། །",
+   "en": "At this, the Bhagavān congratulated the bodhisattva mahāsattva Bhaiṣajyarāja, saying, “Bhaiṣajyarāja, through your reciting these dhāraṇī-mantra words you have benefited many beings. It is excellent, Bhaiṣajyarāja, excellent that you protect, guard, and conceal through your compassion for beings.”"
+  },
+  "l21-04": {
+   "sa": "atha khalu pradānaśūro bodhisattvo mahāsattvo bhagavantametadavocat - ahamapi bhagavan evaṃrūpāṇāṃ dharmabhāṇakānāmarthāya dhāraṇīpadāni dāsyāmi, yatteṣāmevaṃrūpāṇāṃ dharmabhāṇakānāṃ na kaścidavatāraprekṣī avatāragaveṣī avatāraṃ lapsyate | tadyathā yakṣo vā rākṣaso vā pūtano vā kṛtyo vā kumbhāṇḍo vā preto vā avatāraprekṣī avatāragaveṣī avatāraṃ na lapsyata iti || atha khalu pradānaśūro bodhisattvo mahāsattvastasyāṃ velāyāmimāni dhāraṇīmantrapadāni bhāṣate sma | tadyathā - jvale mahājvale ukke tukke mukke aḍe aḍāvati nṛtye nṛtyāvati iṭṭini viṭṭini ciṭṭini nṛtyani nṛtyāvati svāhā || imāni bhagavan dhāraṇīpadāni gaṅgānadīvālikāsamaistathāgatairarhadbhiḥ samyaksaṃbuddhairbhāṣitāni, anumoditāni ca | te sarve tathāgatāstena drugdhāḥ syuḥ, yastānevaṃrūpān dharmabhāṇakānatikrameta ||",
+   "T0262": "爾時勇施菩薩白佛言：「世尊！我亦為擁護讀誦受持法華經者，說陀羅尼。若此法師得是陀羅尼，若夜叉、若羅剎、若富單那、若吉遮、若鳩槃茶、若餓鬼等，伺求其短，無能得便。」即於佛前而說呪曰：「痤（誓螺反）隷（一）摩訶痤隷（二）郁枳（三）目枳（四）阿隷（五）阿羅婆第（六）涅隷第（七）涅隷多婆第（八）伊緻（猪履反）柅（女氏反）（九）韋緻柅（十）旨緻柅（十一）涅隷𡎰柅（十二）涅犁𡎰婆底（十三）「世尊！是陀羅尼神呪，恒河沙等諸佛所說，亦皆隨喜，若有侵毀此法師者，則為侵毀是諸佛已。」",
+   "T0263": "於時妙勇菩薩前白佛言：「唯然世尊，我身亦為眾生之故，欲令永安。若有奉持此經典者，授總持句，將護如此諸法師等，令無伺求得其便者，鬼神諸魅、溷廁眾鬼、突鬼厭鬼、餓鬼反足，雖欲來嬈，無能得便。」妙勇菩薩專心思惟，說此總持曰：「晃耀大明，炎光演暉，順來富章，悅喜欣然住此，立制永作，無合無集。「是總持句，江河沙等諸佛所說，咸共勸助。若違如來，如是比像諸法師教，還自危亡。」",
+   "T0264": "爾時勇施菩薩白佛言：「世尊！我亦為擁護、讀誦、受持《法華經》者，說陀羅尼；若此法師得是陀羅尼，若夜叉、若羅剎、若富單那、若吉蔗、若鳩槃荼、若餓鬼等，伺求其短無能得便。」即於佛前，而說呪曰：「怛姪他（一）　涉皤（菩播）犁（二）　莫訶涉皤犁（三）　郁雞（四）　目雞（五）　頞第（六）　頞荼（屠迦）皤底（都棄）（七）　涅唎致（都寄）頤（八）　涅唎致耶跋底（九）　壹郅（都筆）儞（十）　比（扶必）郅儞（十一）　質郅儞（十二）　涅唎哲（都八）儞（十三）　涅唎吒（都家反）跋儞（十四）「世尊！是陀羅尼神呪，恒河沙等諸佛所說，亦皆隨喜，若有侵毀此法師者，則為侵毀是諸佛已。」",
+   "bo": "དེ་ནས་བཅོམ་ལྡན་འདས་ལ་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་རབ་ཏུ་སྦྱིན་པས་འདི་སྐད་ཅེས་གསོལ་ཏོ། །བཅོམ་ལྡན་འདས་བདག་ཅག་གིས་ཀྱང་། ཆོས་སྨྲ་བ་འདི་ལྟ་བུ་དག་གི་ཆེད་དུ་གཟུངས་སྔགས་ཀྱི་ཚིག་རྣམས་སྩལ་བར་བགྱི་སྟེ། དེས་ཆོས་སྨྲ་བ་འདི་ལྟ་བུ་དེ་དག་ལ་གླགས་ལྟ་བ་གང་གིས་ཀྱང་གླགས་མི་རྙེད་པ་འདི་ལྟ་སྟེ། གནོད་སྦྱིན་ནམ། སྲིན་པོ་འམ། སྲུལ་པོའམ། གཤེད་བྱེད་དམ། གྲུལ་བུམ་མམ། ཡི་དགས་གླགས་ལྟ་བ་རྣམས་ཀྱིས་གླགས་མི་རྙེད་དོ། །དེ་ནས་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་རབ་ཏུ་སྦྱིན་པས་དེའི་ཚེ་གཟུངས་སྔགས་ཀྱི་ཚིག་འདི་དག་སྨྲས་སོ། །ཏདྱ་ཐཱ། ཛྭ་ལེ། མ་ཧཱ་ཛྭ་ལེ། ཨུཀྐེ། མུཀྐེ། ཨ་ཌེ་ཨ་ཌ་བ་ཏི། ནྲྀ་ཊྱེ་ནྲྀ་ཊྱཱ་བ་ཏི། ཨིཊྚི་ནི། བིཊྚི། ཙིཊྚི་ནི། ནྲྀ་ཊ་ཊི་ནི། ནྲྀ་ཊ་ཊཱུ་བ་ཏི་སྭཱ་ཧཱ། བཅོམ་ལྡན་འདས་གཟུངས་སྔགས་ཀྱི་ཚིག་འདི་དག་ནི་དེ་བཞིན་གཤེགས་ པ་དགྲ་བཅོམ་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་གང་གཱའི་ཀླུང་གི་བྱེ་མ་སྙེད་ཀྱིས་གསུངས་ཤིང་རྗེས་སུ་ཡི་རང་བ་སྟེ། གང་གིས་ཆོས་སྨྲ་བ་འདི་ལྟ་བུ་འདི་དག་དང་འགལ་བར་བགྱིས་ན། དེ་དེ་བཞིན་གཤེགས་པ་དེ་དག་ཐམས་ཅད་ལ་འཁུས་པ་ལགས་སོ། །དེ་ནས་བཅོམ་ལྡན་འདས་ལ་རྒྱལ་པོ་ཆེན་པོ་རྣམ་ཐོས་ཀྱི་བུས་འདི་སྐད་ཅེས་གསོལ་ཏོ། །",
+   "en": "Then the bodhisattva mahāsattva Pradānaśūra said to the Bhagavān, “Bhagavān, I too shall provide the words of a dhāraṇī-mantra for this kind of dharmabhāṇaka. If someone is seeking an opportunity to harm this kind of dharmabhāṇaka, such as a yakṣa, a rākṣasa, a pūtana, a kṛtya, a kumbhāṇḍa, or a preta, through this they will not find an opportunity to do so.” The bodhisattva mahāsattva Pradānaśūra then recited the words of the dhāraṇī-mantra: “Tadyathā:jvale mahājvale ukke mukke aḍe aḍāvati nṛtye nṛtyāvati iṭṭini viṭṭini ciṭṭini nṛtyani nṛtyāvati svāhā. “Bhagavān, these dhāraṇī-mantra words have been taught and rejoiced in by tathāgatas, arhats, perfectly enlightened buddhas as numerous as the grains of sand in the Ganges River. If anyone opposes that kind of dharmabhāṇaka, they will offend all those tathāgatas.”"
+  },
+  "l21-05": {
+   "sa": "atha khalu vaiśravaṇo mahārājo bhagavantametadavocat - ahamapi bhagavan dhāraṇīpadāni bhāṣiṣye teṣāṃ dharmabhāṇakānāṃ hitāya sukhāya anukampāyai rakṣāvaraṇaguptaye || tadyathā - aṭṭe taṭṭe naṭṭe vanaṭṭe anaḍe nāḍi kunaḍi svāhā || ebhirbhagavan dhāraṇīpadaisteṣāṃ dharmabhāṇakānāṃ pudgalānāṃ rakṣāṃ karomi, yojanaśatāccāhaṃ teṣāṃ kulaputrāṇāṃ kuladuhitṛṇāṃ ca evaṃrūpāṇāṃ sūtrāntadhārakāṇāṃ rakṣā kṛtā bhaviṣyati, svastyayanaṃ kṛtaṃ bhaviṣyati ||",
+   "T0262": "爾時毘沙門天王護世者白佛言：「世尊！我亦為愍念眾生、擁護此法師故，說是陀羅尼。」即說呪曰：「阿梨（一）那梨（二）㝹那梨（三）阿那盧（四）那履（五）拘那履（六）「世尊！以是神呪擁護法師，我亦自當擁護持是經者，令百由旬內無諸衰患。」",
+   "T0263": "時毘沙門天王前白佛言：「我亦當演此總持句，加以慈心，為眾生故，擁護法師。「富有調戲無戲，無量無富何富。「以是故，擁護諸法師等，百由旬內無敢犯觸，宿衛將順。諸族姓子，如是比像至學法師乃能受持，以是擁護常獲吉利。」",
+   "T0264": "爾時毘沙門天王護世者白佛言：「世尊！我亦為愍念眾生，擁護此法師故，說是陀羅尼。」即說呪曰：「怛姪他（一）　頞𪘨（都皆）（二）　捺（奴割）𪘨（三）　訥（奴骨）捺𪘨（四）　案那廚（拏句）（五）　那稚（徒寄）（六）　捃（俱運）奈（奴箇）稚「世尊！以是神呪擁護法師，我亦自當擁護持是經者，令百由旬內無諸衰患。」",
+   "bo": "བཅོམ་ལྡན་འདས་བདག་གིས་ཀྱང་ཆོས་སྨྲ་བ་དེ་དག་ལ་གློ་བ་བརྩེ་བས་སྨན་པ་དང་། བདེ་བ་དང་། བསྲུང་བ་དང་། བསྐྱབ་པ་དང་། སྦ་བའི་སླད་དུ་གཟུངས་སྔགས་ཀྱི་ཚིག་རྣམས་བརྗོད་པར་བགྱིའོ། །ཏདྱ་ཐཱ། ཨཊ་ཊ། ནཊ་ཊེ། ཏ་ནཊ་ཊེ། ཨ་ན་ཏེ་ནཱ་ཏི། ཀུ་ན་ཊི་སྭཱ་ཧཱ། བཅོམ་ལྡན་འདས་གཟུངས་སྔགས་ཀྱི་ཚིག་འདི་དག་གིས་ཆོས་སྨྲ་བ་དེ་དག་ལ་དཔག་ཚད་བརྒྱ་ཚུན་ཆད་དུ་བསྲུང་བར་བགྱིའོ། ། རིགས་ཀྱི་བུའམ་རིགས་ཀྱི་བུ་མོ་མདོ་སྡེ་འདི་ལྟ་བུ་འཛིན་ཅིང་། ཆོས་སྨྲ་བ་དེ་དག་ལ་ཡང་བསྲུང་བ་བགྱིས་པར་འགྱུར། བདེ་ལེགས་སུ་བགྱིས་པར་འགྱུར་རོ། །",
+   "en": "Next, the mahārāja Vaiśravaṇa said to the Bhagavān, “Bhagavān, I also shall recite the words of a dhāraṇī-mantra in order to compassionately benefit, bring happiness to, guard, protect, and conceal this kind of dharmabhāṇaka:  “Tadyathā:aṭṭe naṭṭe tanaṭṭe anate nāti kunaṭi svāhā. “Bhagavān, these dhāraṇī-mantra words will protect those dharmabhāṇakas for a hundred yojanas. It will protect those dharmabhāṇakas, the noble men or noble women who uphold such a sūtra, and will bring them good fortune.”"
+  },
+  "l21-06": {
+   "sa": "atha khalu virūḍhako mahārājo tasyāmeva parṣadi saṃnipatito 'bhūt saṃniṣaṇṇaśca kumbhāṇḍakoṭīnayutaśatasahasraiḥ parivṛtaḥ puraskṛtaḥ | sa utthāyāsanādekāṃsamuttarāsaṅgaṃ kṛtvā yena bhagavāṃstenāñjaliṃ praṇāmya bhagavantametadavocat - ahamapi bhagavan dhāraṇīpadāni bhāṣiṣye bahujanahitāya | teṣāṃ ca tathārūpāṇāṃ dharmabhāṇakānāmevaṃrūpāṇāṃ sūtrāntadhārakāṇāṃ rakṣāvaraṇaguptaye dhāraṇīmantrapadāni | tadyathā - agaṇe gaṇe gauri gandhāri caṇḍāli mātaṅgi pukkasi saṃkule vrūsali sisi svāhā || imāni tāni bhagavan dhāraṇīmantrapadāni, yāni dvācatvāriṃśadbhirbuddhakoṭībhirbhāṣitāni | te sarve tena drugdhāḥ syuḥ, yastānevaṃrūpān dharmabhāṇakānatikrameta ||",
+   "T0262": "爾時持國天王在此會中，與千萬億那由他乾闥婆眾，恭敬圍繞，前詣佛所，合掌白佛言：「世尊！我亦以陀羅尼神呪，擁護持法華經者。」即說呪曰：「阿伽禰（一）伽禰（二）瞿利（三）乾陀利（四）旃陀利（五）摩蹬耆（六）常求利（七）浮樓莎柅（八）頞底（九）「世尊！是陀羅尼神呪，四十二億諸佛所說，若有侵毀此法師者，則為侵毀是諸佛已。」",
+   "T0263": "時順怨天王，在彼會坐，與諸香音億百千姟鬼眷屬圍遶，往詣佛所前白佛言：「唯然世尊，我亦當宣此總持句。「無數有數，曜黑持香，凶呪大體，于器順述，暴言至有。「唯然世尊，此總持句，四千二百億諸佛所說。以此總持，擁護供養諸學經者，令無伺求得其便者。」",
+   "T0264": "爾時持國天王在此會中，與千萬億那由他乾闥婆眾恭敬圍遶，前詣佛所，合掌白佛言：「世尊！我亦以陀羅尼神呪，擁護持《法華經》者。」即說呪曰：「怛姪他（一）　惡揭（其羯）嬭（奴皆）揭嬭（二）　瞿唎（三）　犍（伽安）陀唎（四）　旃荼（徒家）利（五）　摩登祇（渠棄）（六）　北羯肆（七）　僧句犁（八）　部𠺕薩利（九）「世尊！是陀羅尼神呪，四十二億諸佛所說，若有侵毀此法師者，則為侵毀是諸佛已。」",
+   "bo": "དེ་ནས་རྒྱལ་པོ་ཆེན་པོ་འཕགས་སྐྱེས་པོ་དྲི་ཟ་བྱེ་བ་ཁྲག་ཁྲིག་བརྒྱ་སྟོང་གིས་ཡོངས་སུ་བསྐོར་ཅིང་མདུན་དུ་བདར་ནས། འཁོར་དེར་འདུས་པར་གྱུར་ཏེ། འདུག་པ་དེ་སྟན་ལས་ལངས་ནས་བླ་གོས་ཕྲག་པ་གཅིག་ཏུ་གཟར་ཏེ། པུས་མོ་གཡས་པའི་ལྷ་ང་ས་ལ་བཙུགས་ནས་བཅོམ་ལྡན་འདས་ག་ལ་བ་དེ་ལོགས་སུ་ཐལ་མོ་སྦྱར་བ་བཏུད་དེ་བཅོམ་ལྡན་འདས་ལ་འདི་སྐད་ཅེས་གསོལ་ཏོ། །བཅོམ་ལྡན་འདས་བདག་གིས་ཀྱང་མདོ་སྡེ་འདི་ལྟ་བུ་འཛིན་པ། ཆོས་སྨྲ་བ་འདི་ལྟ་བུ་དེ་དག་བསྲུང་བ་དང་། བསྐྱབ་པ་དང་། སྦ་བའི་སླད་དུ་གཟུངས་སྔགས་ཀྱི་ཚིག་རྣམས་བརྗོད་པར་བགྱིའོ། །ཏདྱ་ཐཱ། ཨ་ག་ཎེ་ག་ཎེ། གཽ་རི། གན་དྷ་རི། ཙཎྜ་ལི། མ་ཏང་གི། པུཀ་ཀ་སི། སང་ཀུ་ལེ། བྲུ་ཥ་ལཱི་སྭཱ་ཧཱ། བཅོམ་ལྡན་འདས་གཟུངས་སྔགས་ཀྱི་ཚིག་འདི་དག་ནི་སངས་རྒྱས་བྱེ་བ་ཕྲག་བཞི་བཅུ་རྩ་གཉིས་ཀྱིས་གསུངས་ཏེ། གང་ཞིག་ཆོས་སྨྲ་བ་འདི་ལྟ་བུ་དེ་དག་དང་འགལ་བར་བགྱིད་ན། དེ་དག་ཐམས་ཅད་ལ་འཁུས་པ་ལགས་སོ། །དེ་ནས་སྲིན་མོ་འཕྱང་མ་ཞེས་བྱ་བ་དང་། སྲིན་མོ་རྣམ་པར་འཕྱང་མ་ཞེས་བྱ་བ་དང་། སྲིན་མོ་སོ་བརྩེགས་ཞེས་ བྱ་བ་དང་། སྲིན་མོ་མེ་ཏོག་སོ་ཞེས་བྱ་བ་དང་། སྲིན་མོ་ཅོད་པན་སོ་ཞེས་བྱ་བ་དང་། སྲིན་མོ་སྐྲ་ཅན་ཞེས་བྱ་བ་དང་། སྲིན་མོ་མེ་ཞེས་བྱ་བ་དང་། སྲིན་མོ་ཕྲེང་བ་འཆང་ཞེས་བྱ་བ་དང་། སྲིན་མོ་མདུང་ཅན་ཞེས་བྱ་བ་དང་།",
+   "en": "Now the mahārāja Virūḍhaka, leading a following of a hundred thousand quintillion kumbhāṇḍas, joined that assembly. He then rose from his seat, removed his upper robe from one shoulder, knelt on his right knee, and with his hands together in homage bowed toward the Bhagavān and said to the Bhagavān, “Bhagavān, I too will recite the words of a dhāraṇī-mantra for the guarding, protection, and concealment of that kind of dharmabhāṇaka who upholds a sūtra such as this:  “Tadyathā:agaṇe gaṇe gauri gāndhāri cāṇḍāli mātaṅgi pukkasi saṃkule vrūśali svāhā. “Bhagavān, these dhāraṇī-mantra words have been taught by four hundred and twenty million buddhas. If anyone opposes that kind of dharmabhāṇaka, they will offend all those tathāgatas.”"
+  },
+  "l21-07": {
+   "sa": "atha khalu lambā ca nāma rākṣasī vilambā ca nāma rākṣasī kūṭadantī ca nāma rākṣasī puṣpadantī ca nāma rākṣasī makuṭadantī ca nāma rākṣasī keśinī ca nāma rākṣasī acalā ca nāma rākṣasī mālādhārī ca nāma rākṣasī kuntī ca nāma rākṣasī sarvasattvojohārī ca nāma rākṣasī hḥrītī ca nḥma rḥkṣasī saputraparivḥrḥ etḥḥ sarvḥ rḥkṣasyo yena bhagavḥṃstenopasaṃkrḥntḥḥ | upasaṃkramya sarvḥstḥ rḥkṣasya ekasvareṇa bhagavantametadavocan - vayamapi bhagavaṃsteṣḥmevaṃrūpḥṇḥṃ sūtrḥntadhḥrakḥṇḥṃ dharmabhḥṇakḥnḥṃ rakṣḥvaraṇaguptiṃ kariṣyḥmaḥ, svastyayanaṃ ca kariṣyḥmaḥ | yathḥ teṣḥṃ dharmabhḥṇakḥnḥṃ na kaścidavatḥraprekṣī avatḥragaveṣī avatḥraṃ lapsyatīti || atha khalu tāḥ sarvā rākṣasya ekasvareṇa samaṃ saṃgītyā bhagavata imāni dhāraṇīmantrapadāni prayacchanti sma | tadyathā -(Vaidya 235) iti me iti me iti me iti me iti me | nime nime nime nime nime | ruhe ruhe ruhe ruhe ruhe | stuhe stuhe stuhe stuhe stuhe svāhā || imaṃ śīrṣaṃ samāruhya mā kaścid drohī bhavatu dharmabhāṇakānāṃ yakṣo vā rākṣaso vā preto vā piśāco vā pūtano vā kṛtyo va vetālo vā kumbhāṇḍo vā stabdho vā omārako vā ostārako vā apasmārako vā yakṣakṛtyo vā amanuṣyakṛtyo vā manuṣyakṛtyo vā ekāhiko vā dvaitīyako vā traitīyako vā caturthako vā nityajvaro vā viṣamajvaro vā | antaśaḥ svapnāntaragatasyāpi strīrūpāṇi vā puruṣarūpāṇi vā dārakarūpāṇi vā dārikārūpāṇi vā viheṭhāṃ kuryuḥ, nedaṃ sthānaṃ vidyate ||",
+   "T0262": "爾時有羅剎女等，一名藍婆，二名毘藍婆，三名曲齒，四名華齒，五名黑齒，六名多髮，七名無厭足，八名持瓔珞，九名睪帝，十名奪一切眾生精氣，是十羅剎女，與鬼子母，并其子及眷屬，俱詣佛所，同聲白佛言：「世尊！我等亦欲擁護讀誦受持法華經者，除其衰患。若有伺求法師短者，令不得便。」即於佛前，而說呪曰：「伊提履（一）伊提泯（二）伊提履（三）阿提履（四）伊提履（五）泥履（六）泥履（七）泥履（八）泥履（九）泥履（十）樓醯（十一）樓醯（十二）樓醯（十三）樓醯（十四）多醯（十五）多醯（十六）多醯（十七）兜醯（十八）㝹醯（十九）「寧上我頭上，莫惱於法師。若夜叉、若羅剎、若餓鬼、若富單那、若吉遮、若毘陀羅、若犍馱、若烏摩勒伽、若阿跋摩羅、若夜叉吉遮、若人吉遮，若熱病若一日、若二日、若三日、若四日乃至七日，若常熱病，若男形、若女形、若童男形、若童女形，乃至夢中，亦復莫惱。」",
+   "T0263": "時有一魅，名有結縛，復名離結，復名施積，復名施華，復名施黑，復名被髮，復名無著，復名持華，復名何所，復名取一切精，往詣佛所，鬼子母與諸子俱，異口同音前白佛言：「我等，世尊！常當擁護如是比像諸法師等，加施吉祥，令無伺求得法師短。」于時諸魅同共舉聲，宣此總持將順法師：「於是於斯於爾於氏，極甚無我無吾無身無所俱同，已興已生已成，而住而立，亦住嗟歎，亦非消頭，大疾無得加害。「是等之類是我眷屬，令無所犯擁護法師。消除鬼神、諸魅餓鬼、溷神突鬼、蠱道符呪、癡狂顛鬼，化是像來，若鬼神形及非人像，二日三日若至四日，若常熱病。若復夜臥，值惡夢者，若現男女大小諸像，我等擁護，令無伺求得其便者。」",
+   "T0264": "爾時有羅剎女等，一名藍婆，二名毘藍婆，三名曲齒，四名華齒，五名黑齒，六名多髮，七名無厭足，八名持瓔珞，九名睪帝，十名奪一切眾生精氣，是十羅剎女，與鬼子母并其子及眷屬，俱詣佛所，同聲白佛言：「世尊！我亦欲擁護讀誦受持《法華經》者，除其衰患，若有伺求法師短者，令不得便。」即於佛前，而說呪曰：「怛姪他壹底（都棄）迷（此一句五遍道）儞（奴棄）迷（亦五遍）護𡀔醯（呼羝亦五遍道）薩跢（都箇）醯（亦五遍道）「寧上我頭上，莫惱於法師，若夜叉、若羅剎、若餓鬼、若富單那、若吉蔗、若毘陀羅、若乾馱、若烏摩勒伽、若阿跋摩羅、若夜叉吉蔗、若人吉蔗、若熱病、若一日、若二日、若三日、若四日乃至七日、若常熱病、若男形、若女形、若童男形、若童女形，乃至夢中亦復莫惱。」",
+   "bo": "སྲིན་མོ་སེམས་ཅན་ཐམས་ཅད་ཀྱི་མདངས་འཕྲོག་ཅེས་བྱ་བ་དང་། འཕྲོག་མ་བུ་དང་གཡོག་ཏུ་བཅས་པ་དང་། སྲིན་མོ་དེ་དག་ཐམས་ཅད་བཅོམ་ལྡན་འདས་ག་ལ་བ་དེར་དོང་སྟེ་ཕྱིན་ནས། སྲིན་མོ་དེ་དག་ཐམས་ཅད་ཀྱིས་སྒྲ་སྐད་གཅིག་ཏུ་བཅོམ་ལྡན་འདས་ལ་འདི་སྐད་ཅེས་གསོལ་ཏོ། །བཅོམ་ལྡན་འདས་བདག་ཅག་གིས་ཀྱང་མདོ་སྡེ་འདི་འཛིན་པ་ཆོས་སྨྲ་བ་འདི་ལྟ་བུ་དེ་དག་བསྲུང་བ་དང་། བསྐྱབ་པ་དང་། སྦ་བར་བགྱིའོ། །བདེ་ལེགས་སུ་འགྱུར་བར་བགྱིའོ། །ཅི་ནས་ཆོས་སྨྲ་བ་དེ་དག་ལ་གླགས་ལྟ་བ་དང་སྐབས་ཚོལ་བདག་གིས་ཀྱང་གླགས་མི་རྙེད་པར་བགྱིའོ། ། དེ་ནས་སྲིན་མོ་དེ་དག་ཐམས་ཅད་ཀྱིས་སྒྲ་སྐད་གཅིག་ཏུ་ཚིག་འཐུན་པར་བཅོམ་ལྡན་འདས་ལ་གཟུངས་སྔགས་ཀྱི་ཚིག་འདི་དག་ཕུལ་ལོ། །ཏདྱ་ཐཱ། ཨི་ཏི་མེ། ཨི་ཏི་མེ། ཨི་ཏི་མེ། ཨི་ཏི་མེ། ཨི་ཏི་མེ། ནི་མེ། ནི་མེ། ནི་མེ། ནི་མེ། ནི་མེ། རུ་ཧེ། རུ་ཧེ། རུ་ཧེ། རུ་ཧེ། རུ་ཧེ། ཧ་སྟེ། ཧ་སྟེ། ཧ་སྟེ། ཧ་སྟེ། ཧ་སྟེ་སྭཱ་ཧཱ། འདི་སྤྱི་བོར་བཞག་ནས་ཆོས་སྨྲ་བ་རྣམས་ལ་སུ་ཡང་འཁུ་བར་མ་གྱུར་ཅིག །གནོད་སྦྱིན་ནམ། སྲིན་པོའམ། ཡི་དགས་སམ། ཤ་ཟའམ། སྲུལ་པོའམ། གཤེད་བྱེད་དམ། རོ་ལངས་སམ། རེངས་པའམ། གནོན་པོའམ། བརྗེད་བྱེད་ཀྱི་གཟུགས་སམ། གནོད་སྦྱིན་གྱིས་བྱས་པའམ། མིས་བྱས་པའམ། མི་མ་ཡིན་པས་བྱས་པའམ། རིམས་ནད་ཉིན་གཅིག་པའམ། ཉིན་གཉིས་པའམ། ཉིན་གསུམ་པའམ། ཉིན་བཞི་པའམ། རྟག་པའི་རིམས་སམ། ཐ་ན་རྨི་ལམ་ན་ཡང་བུད་མེད་ཀྱི་གཟུགས་སམ། སྐྱེས་པའི་གཟུགས་སམ། ཁྱེའུའི་གཟུགས་སམ། བུ་མོའི་གཟུགས་ཀྱིས་ཐོ་འཚམས་པར་འགྱུར་བ་དེ་ནི་གནས་མ་མཆིས་སོ། །",
+   "en": "Then the rākṣasī named Lambā, the rākṣasī named Vilambā, the rākṣasī named Kūṭadantī, the rākṣasī named Puṣpadantī, the rākṣasī named Makuṭadantī, the rākṣasī named Keśinī, the rākṣasī named Acalā, the rākṣasī named Mālādhārī, the rākṣasī named Kuntī, the rākṣasī named Sarvasattvojohārī, and the rākṣasī named Hārītī, with her children and servants—all those rākṣasīs came to where the Bhagavān was, and having arrived they all said in one voice to the Bhagavān, “Bhagavān, we too will guard, protect, and conceal that kind of dharmabhāṇaka who upholds a sūtra such as this, so that if someone is seeking an opportunity to harm those dharmabhāṇakas they will not find an opportunity to do so.” Then those rākṣasīs in one voice, with the same words, offered these dhāraṇī-mantra words to the Bhagavān: “Tadyathā:itime itime itime itime itime nime nime nime nime nime ruhe ruhe ruhe ruhe ruhe stuhe stuhe stuhe stuhe stuhe svāhā. “If this is placed upon the head, there is no one who will be able to injure the dharmabhāṇakas. A yakṣa, rākṣasa, preta, piśāca, pūtana, kṛtya, vetāla, kumbhāṇḍa, stabdha, ostāraka, or apasmāraka; a kṛtya that is a yakṣa, a kṛtya that is nonhuman, or a kṛtya that is a human; those that cause illness for a day, for two days, for three days, for four days, or permanently; and those who appear in dreams in the form of a woman, the form of a man, or the form of a boy, or the form of a girl so as to cause harm, will not be able to do so.”"
+  },
+  "l21-v1": {
+   "sa": "atha khalu tā rākṣasya evasvareṇa samaṃ saṃgītyā bhagavantamābhirgāthābhiradhyabhāṣanta - saptadhāsya sphuṭenmūrdhā arjakasyeva mañjarī / ya imaṃ mantra śrutvā vai atikrameddharmabhāṇakam // Saddhp_21.1 // yā gatirmātṛghātīnāṃ pitṛghātīna yā gatiḥ / tāṃ gatiṃ pratigacchedyo dharmabhāṇakamatikramet // Saddhp_21.2 // yā gatistilapīḍānāṃ tilakūṭānāṃ ca yā gatiḥ / tāṃ gatiṃ pratigacchedyo dharmabhāṇakamatikramet // Saddhp_21.3 // yā gatistulakūṭānāṃ kāṃsyakūṭāna yā gatiḥ / tāṃ gatiṃ pratigacchedyo dharmabhāṇakamatikramet // Saddhp_21.4 //",
+   "T0262": "即於佛前而說偈言：「若不順我呪，惱亂說法者， 頭破作七分，如阿梨樹枝。 如殺父母罪，亦如壓油殃， 斗秤欺誑人，調達破僧罪。 犯此法師者，當獲如是殃。」",
+   "T0263": "於時諸魅，共於佛前說此頌曰：「犯頭破七分，猶如華菜剖， 當致殺母罪，亦得害父殃。 其有犯法師，皆當獲此釁， 世世不得安，不與諸佛會。 破壞佛寺罪，鬪亂聖眾殃， 如合眾麻油，麻油聚一處。 放火皆燋然，消盡無有餘， 其有犯法師，當獲此罪殃。 猶如稱載峻，罪垢之所聚， 其有犯法師，當獲此重釁。」",
+   "T0264": "即於佛前，而說偈言：「若不順我呪，惱亂說法者； 頭破作七分，如摩利闍迦， 如殺父母罪，亦如壓油殃， 㪷秤欺誑人，調達破僧罪， 犯此法師者，當獲如是殃。」",
+   "bo": "དེ་ནས་སྲིན་མོ་དེ་དག་གིས་སྒྲ་སྐད་གཅིག་ཏུ་ཚིག་འཐུན་པར་བཅོམ་ལྡན་འདས་ལ་ཚིགས་སུ་བཅད་པ་འདི་དག་གསོལ་ཏོ། །གང་གིས་གསང་སྔགས་འདི་ཐོས་ནས། །ཆོས་སྨྲ་བ་དང་འགལ་བགྱིད་པ། །དེའི་མགོ་ཚལ་ པ་བདུན་དུ་འགས། ། ཨརྫ་ཀ་ཡི་དོག་པ་བཞིན། །གང་ཞིག་ཆོས་སྨྲ་འགལ་བགྱིད་པ། །མ་བསད་པ་ཡི་འགྲོ་གང་དང་། །ཕ་བསད་འགྲོ་བ་གང་ལགས་པའི། །འགྲོ་བ་དེ་ནི་དེར་མཆིའོ། ། གང་ཞིག་ཆོས་སྨྲ་འགལ་བགྱིད་པ། །ཏིལ་འཚིར་དག་གི་འགྲོ་གང་དང་། །ཏིལ་རྡུང་འགྲོ་བ་གང་ལགས་པའི། །འགྲོ་བ་དེར་ནི་དེ་མཆིའོ། ། གང་ཞིག་ཆོས་སྨྲ་འགལ་བགྱིད་པ། །སྲང་ལ་གཡོ་བགྱིད་འགྲོ་གང་དང་། །བྲེ་འཆོས་འགྲོ་བ་གང་ལགས་པའི། །འགྲོ་བ་དེར་ནི་དེ་མཆིའོ། །",
+   "en": "Then those rākṣasīs in one voice, with the same words, recited these verses to the Bhagavān: “If someone attacks a dharmabhāṇaka And they hear this mantra Their head will burst into seven pieces Like the foliage of a basil plant. {1}  “Those who attack the dharmabhāṇaka, The way that they are following Is the way of those who kill their mothers; It is the way of those who kill their fathers. {2}  “Those who attack the dharmabhāṇaka, The way that they are following Is the way of the crushers of sesame; It is the way of those with the sesame pestle. {3}  “Those who attack the dharmabhāṇaka, The way that they are following Is the way of those who are fraudulent in weights, The way of those who are fraudulent in measures.”"
+  },
+  "l21-08": {
+   "sa": "evamuktvā tāḥ kuntipramukhā rākṣasyo bhagavantametadūcuḥ - vayamapi bhagavaṃsteṣāmevaṃrūpāṇāṃ dharmabhāṇakānāṃ rakṣāṃ kariṣyāmaḥ, svastyayanaṃ daṇḍaparihāraṃ viṣadūṣaṇaṃ kariṣyāma iti | evamukte bhagavāṃstā rākṣasya etadavocat - sādhu sādhu bhaginyaḥ | yad yūyaṃ teṣāṃ dharmabhāṇakānāṃ rakṣāvaraṇaguptiṃ kariṣyadhve ye 'sya dharmaparyāyasya antaśo nāmadheyamātramapi dhārayiṣyanti | kaḥ punarvādo ya imaṃ dharmaparyāyaṃ sakalasamāptaṃ dhārayiṣyanti, pustakagataṃ vā satkuryuḥ puṣpadhūpagandhamālyavilepanacūrṇacīvaracchatradhvajapatākāvaijayantībhistailapradīpairvā ghṛtapradīpairvā gandhatailapradīpairvā campakatailapradīpairvā vārṣikatailapradīpairvā utpalatailapradīpairvā sumanātailapradīpairvā īddaśairbahuvidhaiḥ pūjāvidhānaśatasahasraiḥ satkariṣyanti gurukariṣyanti, te tvayā kunti saparivārayā rakṣitavyāḥ ||",
+   "T0262": "諸羅剎女說此偈已，白佛言：「世尊！我等亦當身自擁護受持、讀誦、修行是經者，令得安隱，離諸衰患，消眾毒藥。」佛告諸羅剎女：「善哉，善哉！汝等但能擁護受持法華名者，福不可量，何況擁護具足受持，供養經卷——華、香、瓔珞，末香、塗香、燒香，幡蓋、伎樂；燃種種燈：酥燈、油燈、諸香油燈、蘇摩那華油燈、瞻蔔華油燈、婆師迦華油燈、優鉢羅華油燈，如是等百千種供養者。睪帝！汝等及眷屬應當擁護如是法師。」",
+   "T0263": "諸鬼神軍頭等，說此頌已前白佛言：「我等咸護如是比像諸法師等，使常安隱除去怨敵，周匝宿衛令無傷害，若有行毒，毒為不行。」時佛嗟歎諸魅所呪：「善哉！善哉！汝等乃欲護諸法師。若聞此經，宣持名號德不可量，何況具足隨時持說書在經卷，若以供養華香幢 蓋雜香搗香，然燈懸繒，思夷合歡，青蓮紅蓮，黃蓮白蓮，稍著油蘇以用然燈，供養此經勤修不懈，百千億倍福不可限。汝等當護如是比像精進學者。」",
+   "T0264": "諸羅剎女，說此偈已白佛言：「世尊！我等亦當身自擁護受持、讀誦、修行是經者，令得安隱離諸衰患，消眾毒藥。」佛告諸羅剎女：「善哉，善哉！汝等但能擁護受持《法華》名者，福不可量，何況擁護具足受持，供養經卷，華香、瓔珞、末香、塗香、燒香、幡蓋、伎樂；然種種燈，穌燈、油燈、諸香油燈、穌摩那華油燈、瞻蔔華油燈、婆師迦華油燈、優波羅華油燈，如是等百千種供養者，睪諦！汝等及眷屬，應當擁護如是法師。」說此陀羅尼呪品時，六萬八千人得無生法忍。",
+   "bo": "དེ་སྐད་ཅེས་གསོལ་ནས། མདུང་ཅན་ལ་སོགས་པ་སྲིན་མོ་དེ་དག་གིས་བཅོམ་ལྡན་འདས་ལ་འདི་སྐད་ཅེས་གསོལ་ཏོ། །བཅོམ་ལྡན་འདས་བདག་ཅག་གིས་ཀྱང་ཆོས་སྨྲ་བ་འདི་ལྟ་བུ་དེ་དག་ལ་བསྲུང་བར་བགྱིའོ། ། བདེ་ལེགས་སུ་འགྱུར་བ་དང་ཆད་པ་སྤང་བ་དང་དུག་གཞིལ་བར་བགྱིའོ། །དེ་སྐད་ཅེས་གསོལ་པ་དང་། བཅོམ་ལྡན་འདས་ཀྱིས་སྲིན་མོ་དེ་དག་ལ་འདི་སྐད་ཅེས་བཀའ་སྩལ་ཏོ། །ཀྱེ་སྲིན་མོ་དག་ལེགས་སོ་ལེགས་སོ། ། ཁྱོད་ཀྱིས་ཆོས་སྨྲ་བ་དེ་དག་ལ་བསྲུང་བ་དང་། བསྐྱབ་པ་དང་། སྦ་བགྱིས་ཤིག །གང་དག་ཐ་ན་ཆོས་ཀྱི་རྣམ་གྲངས་འདིའི་མིང་ཙམ་འཛིན་པ་དེ་དག་ལ་ཡང་། མདུང་ཅན་ཁྱོད་འཁོར་དང་བཅས་པས་བསྲུང་བར་བྱ་ན། གང་དག་ཆོས་ཀྱི་རྣམ་གྲངས་འདི་མཐའ་དག་ཆུབ་པར་འཛིན་པ་དང་གླེགས་བམ་དུ་བྱས་ཏེ། རིམ་གྲོ་བྱེད་པ་དང་། མེ་ཏོག་དང་། བདུག་པ་དང་། སྤོས་དང་། ཕྲེང་བ་དང་། བྱུག་པ་དང་། ཕྱེ་མ་དང་། ན་བཟའ་དང་། གདུགས་དང་། རྒྱལ་མཚན་དང་། ལྷའི་བ་དན་དང་། འབྲུ་མར་གྱི་མར་མེའམ། མར་གྱི་མར་མེའམ། སྤོས་མར་གྱི་མར་མེའམ། ཙམ་པ་ཀའི་མར་གྱི་མར་མེའམ། པར་ཤ་ཀའི་མར་གྱི་མར་མེའམ། ཨུད་པ་ལའི་མར་གྱི་མར་མེའམ། སྣ་མའི་མར་གྱི་མར་མེའམ། དེ་ལྟ་བུའི་མཆོད་པའི་ཡོ་བྱད་རྣམ་པ་མང་པོ་བརྒྱ་སྟོང་གིས་རིམ་གྲོ་བྱེད་པ་ལྟ་ཅི་སྨོས་ཏེ། མདུང་ཅན་ཁྱོད་གཡོག་དང་བཅས་པས་བསྲུང་བར་བྱའོ། །གཟུངས་སྔགས་ཀྱི་ལེའུ་འདི་བཤད་པ་ན་སྲོག་ཆགས་དྲུག་ཁྲི་བརྒྱད་སྟོང་མི་སྐྱེ་བའི་ཆོས་ལ་བཟོད་པ་ཐོབ་པར་གྱུར་ཏོ། །",
+   "en": "{4}  Kuntī and the other rākṣasīs said to the Bhagavān, “In this way we will protect the dharmabhāṇakas. We will bring them good fortune, prevent punishments, and counter poisons.” The Bhagavān said to the rākṣasīs, “Excellent, O rākṣasīs, excellent! Protect, guard, and conceal those dharmabhāṇakas! You, Kuntī, and your followers should protect even those who only possess the name of this Dharma teaching, let alone those who have learned the entirety of this Dharma teaching, have made texts of it, have honored them, and offered to those texts flowers, incense, perfume, garlands, ointments, powders, clothing, parasols, banners, divine flags, lamps of sesame oil, lamps of ghee, lamps of perfumed oil, lamps of magnolia oil, lamps of gardenia oil, lamps of blue lotus oil, and lamps of royal jasmine oil, honoring them with hundreds of thousands of many kinds of offering such as those. You, Kuntī, and your followers should protect them!”"
+  },
+  "l21-09": {
+   "sa": "asmin khalu punardhāraṇīparivarte nirdiśyamāne aṣṭāṣaṣṭīnāṃ prāṇisahasrāṇāmanutpattikadharmakṣāntipratilābho 'bhūt ||",
+   "T0262": "說是陀羅尼品時，六萬八千人得無生法忍。",
+   "T0263": "佛說是總持品時，六萬八千人，逮得無所從生法忍。"
+  },
+  "l21-99": {
+   "sa": "iti śrīsaddharmapuṇḍarīke dharmaparyāye dhāraṇīparivarto nāmaikaviṃśatimaḥ ||",
+   "bo": "དམ་པའི་ཆོས་པད་མ་དཀར་པོ་ལས་གཟུངས་སྔགས་ཀྱི་ལེའུ་ ཞེས་བྱ་བ་སྟེ་ཉི་ཤུ་རྩ་གཅིག་པའོ།། །།",
+   "en": "This concludes “Dhāraṇīs,” the twenty-first chapter of the Dharma teaching of “The White Lotus of the Good Dharma.”"
+  }
+ }
+}
