@@ -1,0 +1,184 @@
+{
+ "slug": "samdhinirmocana-4",
+ "title": "解深密經・須菩提章（勝義遍一切一味）",
+ "family": "bo",
+ "intro": "藏譯第四章。佛問須菩提世間幾人懷增上慢記別所解；須菩提說林中比丘各依蘊、處、緣起、食、諦、界、念住乃至八聖道記別，佛說勝義遍一切處一味相：為清淨所緣、證一蘊真如即不更求、非因所生、如虛空遍一切色。玄奘本在〈勝義諦相品〉末，流支本為〈須菩提問品〉，真諦本為〈一味品〉——真諦本至此結束，卷末另有觀世音問經名與流通。",
+ "units": [
+  {
+   "id": "sn4-00",
+   "label": "佛問：幾多有情懷增上慢"
+  },
+  {
+   "id": "sn4-01",
+   "label": "須菩提答"
+  },
+  {
+   "id": "sn4-02",
+   "label": "林中諸比丘依蘊處等記別所解"
+  },
+  {
+   "id": "sn4-03",
+   "label": "須菩提思惟：彼皆增上慢"
+  },
+  {
+   "id": "sn4-04",
+   "label": "佛說：勝義遍一切一味，為清淨所緣"
+  },
+  {
+   "id": "sn4-05",
+   "label": "證一蘊真如，不更別求餘法"
+  },
+  {
+   "id": "sn4-06",
+   "label": "若有別異，應從因生而是有為"
+  },
+  {
+   "id": "sn4-07",
+   "label": "虛空喻"
+  },
+  {
+   "id": "sn4-08",
+   "label": "偈頌"
+  },
+  {
+   "id": "sn4-09",
+   "label": "章尾題"
+  },
+  {
+   "id": "sn4-10",
+   "label": "解節經流通：經名・得益"
+  }
+ ],
+ "versions": [
+  {
+   "id": "bo",
+   "lang": "bo",
+   "label": "藏譯",
+   "who": "德格版 Toh 106・84000 翻譯記憶"
+  },
+  {
+   "id": "en",
+   "lang": "en",
+   "label": "84000 英譯",
+   "who": "譯自藏譯・與藏文逐句對齊"
+  },
+  {
+   "id": "T0675",
+   "lang": "lzh",
+   "label": "流支本",
+   "who": "菩提流支譯《深密解脫經》・514 年",
+   "work": "T0675"
+  },
+  {
+   "id": "T0677",
+   "lang": "lzh",
+   "label": "真諦本",
+   "who": "真諦譯《解節經》・約 560 年",
+   "work": "T0677"
+  },
+  {
+   "id": "T0676",
+   "lang": "lzh",
+   "label": "玄奘本",
+   "who": "玄奘譯《解深密經》・647 年",
+   "work": "T0676"
+  }
+ ],
+ "works": [
+  "DKtoh0106",
+  "T0675",
+  "T0676",
+  "T0677"
+ ],
+ "anchors": [
+  {
+   "work": "T0675",
+   "node": "慧命須菩提問品第五",
+   "uid": "T16n0675_p0668a19"
+  },
+  {
+   "work": "T0677",
+   "node": "解節經一味品第四",
+   "uid": "T16n0677_p0713c13"
+  },
+  {
+   "work": "T0676",
+   "range": [
+    "T16n0676_p0691b11",
+    "T16n0676_p0692a26"
+   ]
+  }
+ ],
+ "cells": {
+  "sn4-00": {
+   "bo": "དེ་ནས་བཅོམ་ལྡན་འདས་ཀྱིས་ཚེ་དང་ལྡན་པ་རབ་འབྱོར་ལ་བཀའ་སྩལ་པ། རབ་འབྱོར་ཁྱོད་ཀྱིས་སེམས་ཅན་གྱི་ཁམས་ན་གང་དག་མངོན་པའི་ང་རྒྱལ་གྱིས་མངོན་དུ་ཟིན་ཅིང་ཤེས་པ་བརྡ་སྤྲོད་པར་བྱེད་པའི་སེམས་ཅན་ནི་ཇི་ཙམ་ཞིག་ཡོད་པར་ཤེས། ཁྱོད་ཀྱིས་སེམས་ཅན་གྱི་ཁམས་ན་གང་དག་མངོན་པའི་ང་རྒྱལ་མེད་པར་ཤེས་པ་བརྡ་སྤྲོད་པར་བྱེད་པའི་སེམས་ཅན་ནི་ཇི་ཙམ་ཞིག་ཡོད་པར་ཤེས།",
+   "en": "Then the Blessed One spoke these words to Subhūti: “Subhūti, do you know how many beings in the world  display their knowledge  under the influence of conceit? Do you know how many beings in the world display their knowledge without conceit?”",
+   "T0675": "爾時，世尊依一切處一味等味第一義諦，告慧命須菩提言：「須菩提！汝知一切眾生界中，幾所眾生依我依慢說我所得？須菩提！汝知一切眾生界中，幾所眾生離我離慢說我所得？」",
+   "T0677": "爾時，佛告須菩提言：「須菩提！汝見、汝知幾多眾生，在眾生界有增上慢，由此慢心記自所得？復次，汝見、汝知幾多眾生，在眾生界無增上慢，不由慢心記自所得？」",
+   "T0676": "爾時，世尊告長老善現曰：「善現！汝於有情界中，知幾有情懷增上慢，為增上慢所執持故記別所解？汝於有情界中，知幾有情離增上慢記別所解？」"
+  },
+  "sn4-01": {
+   "bo": "རབ་འབྱོར་གྱིས་གསོལ་པ། བཅོམ་ལྡན་འདས་བདག་ནི་སེམས་ཅན་གྱི་ཁམས་ན་གང་དག་མངོན་པའི་ང་རྒྱལ་མ་མཆིས་པར་ཤེས་པ་བརྡ་སྤྲོད་པར་བགྱིད་པའི་སེམས་ཅན་ནི་ཉུང་ཤས་ཤིག་མཆིས་པར་འཚལ་ལགས་ཀྱི། བཅོམ་ལྡན་འདས་བདག་གིས་སེམས་ཅན་གྱི་ཁམས་ན་གང་དག་མངོན་པའི་ང་རྒྱལ་གྱིས་མངོན་དུ་ཟིན་ཅིང་ཤེས་པ་བརྡ་སྤྲོད་པར་བགྱིད་པའི་སེམས་ཅན་ནི་ཚད་མ་མཆིས་གྲངས་མ་མཆིས། བརྗོད་དུ་མ་མཆིས་པར་འཚལ་ལགས་ཏེ།",
+   "en": "Subhūti answered, “Blessed One, according to my knowledge, there are only a few in the world of beings who present their knowledge without conceit, but countless, innumerable, and inexpressible in number are those who do so under its influence.",
+   "T0675": "須菩提白佛言：「世尊！我於眾生界中，實少見眾生離我我慢說我所得。世尊！而我實見無量阿僧祇不可說眾生，於眾生界中依我我慢說我所得。",
+   "T0677": "須菩提言：「世尊！我見、我知少有眾生，在眾生界無增上慢，不由慢心記自所得。世尊！我見、我知無量、無數、不可稱說諸眾生等，在眾生界有增上慢，由此慢心記自所得。",
+   "T0676": "長老善現白佛言：「世尊！我知有情界中少分有情離增上慢記別所解。世尊！我知有情界中有無量無數不可說有情懷增上慢，為增上慢所執持故記別所解。"
+  },
+  "sn4-02": {
+   "bo": "བཅོམ་ལྡན་འདས་བདག་དུས་གཅིག་ཅིག་ན། དགོན་པ་ནགས་ཁྲོད་ཆེན་པོ་ཞིག་ན་མཆིས་པའི་ཚེ། དེ་ན་བདག་གི་ཉེ་འཁོར་ན་དགེ་སློང་རབ་ཏུ་མང་པོ་དག་ཅིག་ཀྱང་དགོན་པ་ནགས་ཁྲོད་ཆེན་པོ་ན་རྟེན་ཅིང་གནས་ལགས་ཏེ། བདག་གིས་སྔ་དྲོའི་དུས་ཀྱི་ཚེ་དགེ་སློང་ཕན་ཚུན་ནས་མཆིས་ཤིང་མཇལ་ནས། ཆོས་རྣམ་པ་སྣ་ཚོགས་དམིགས་པའི་མངོན་པར་རྟོགས་པ་སྟོན་པས་ཤེས་པ་བརྡ་སྤྲོད་པར་བགྱིད་དེ། དེ་ན་ཁ་ཅིག་ནི་ཕུང་པོ་དམིགས་པ་དང་། ཕུང་པོའི་མཚན་མ་དམིགས་པ་དང་། ཕུང་པོའི་སྐྱེ་བ་དམིགས་པ་དང་། ཕུང་པོའི་འཇིག་པ་དམིགས་པ་དང་། ཕུང་ པོ་འགོག་པ་དམིགས་པ་དང་། ཕུང་པོ་འགོག་པ་མངོན་དུ་བགྱིད་པ་དམིགས་པས་ཤེས་པ་བརྡ་སྤྲོད་པར་བགྱིད། ཁ་ཅིག་ཕུང་པོ་དམིགས་པས་ཇི་ལྟ་བ་དེ་བཞིན་དུ་ཁ་ཅིག་ནི་སྐྱེ་མཆེད་དམིགས་པས། ཁ་ཅིག་རྟེན་ཅིང་འབྲེལ་པར་འབྱུང་བ་དམིགས་པས་ཤེས་པ་བརྡ་སྤྲོད་པར་བགྱིད། ཁ་ཅིག་ནི་ཟས་དམིགས་པ་དང་། ཟས་ཀྱི་མཚན་མ་དམིགས་པ་དང་། ཟས་ཀྱི་སྐྱེ་བ་དམིགས་པ་དང་། ཟས་ཀྱི་འཇིག་པ་དམིགས་པ་དང་། ཟས་འགོག་པ་དམིགས་པ་དང་། ཟས་འགོག་པ་མངོན་དུ་བགྱི་བ་དམིགས་པས་ཤེས་པ་བརྡ་སྤྲོད་པར་བགྱིད། ཁ་ཅིག་ནི་བདེན་པ་དམིགས་པ་དང་། བདེན་པའི་མཚན་ཉིད་དམིགས་པ་དང་། བདེན་པ་ཡོངས་སུ་ཤེས་པ་དམིགས་པ་དང་། བདེན་པ་སྤངས་པ་དམིགས་པ་དང་། བདེན་པ་མངོན་དུ་བགྱི་བ་དམིགས་པ་དང་། བདེན་པ་སྒོམ་པ་དམིགས་པས་ཤེས་པ་བརྡ་སྤྲོད་པར་བགྱིད། ཁ་ཅིག་ནི་ཁམས་ཀྱི་དམིགས་པ་དང་། ཁམས་ཀྱི་མཚན་མ་དམིགས་པ་དང་། ཁམས་སྣ་ཚོགས་པ་ཉིད་དམིགས་པ་དང་། ཁམས་དུ་མ་དམིགས་པ་དང་། ཁམས་འགོག་པ་དམིགས་པ་དང་། ཁམས་འགོག་པ་མངོན་དུ་བགྱི་བ་དམིགས་པས་ཤེས་པ་བརྡ་སྤྲོད་པར་བགྱིད། ཁ་ཅིག་ནི་དྲན་པ་ཉེ་བར་གཞག་པ་དམིགས་པ་དང་། དྲན་པ་ཉེ་བར་གཞག་པའི་མཚན་མ་དམིགས་པ་དང་། དྲན་པ་ཉེ་བར་གཞག་པའི་མི་འཐུན་པའི་ཕྱོགས་དང་། གཉེན་པོ་དམིགས་པ་དང་། དྲན་པ་ཉེ་བར་གཞག་པ་བསྒོམ་པ་དམིགས་པ་དང་། དྲན་པ་ཉེ་བར་གཞག་པ་མ་སྐྱེས་པ་སྐྱེ་བར་དམིགས་པ་དང་། དྲན་པ་ཉེ་བར་གཞག་པ་སྐྱེས་པ་གནས་པ་དང་། མི་བསྐྱུད་པ་དང་། སླར་ཞིང་འབྱུང་བ་དང་། འཕེལ་ཞིང་རྒྱས་པ་དམིགས་པས་ཤེས་པ་བརྡ་སྤྲོད་པར་བགྱིད། ཁ་ཅིག་ནི་དྲན་པ་ཉེ་བར་གཞག་པ་རྣམས་ཇི་ལྟ་བ་དེ་བཞིན་དུ་ཁ་ཅིག་ནི་ཡང་དག་པར་སྤོང་བ་རྣམས་དང་། རྫུ་འཕྲུལ་གྱི་རྐང་པ་རྣམས་དང་། དབང་པོ་རྣམས་དང་། སྟོབས་རྣམས་དང་། བྱང་ཆུབ་ཀྱི་ཡན་ལག་རྣམས་དང་། ཁ་ཅིག་ནི་འཕགས་པའི་ལམ་ཡན་ལག་བརྒྱད་པ་ དམིགས་པ་དང་། འཕགས་པའི་ལམ་ཡན་ལག་བརྒྱད་པའི་མཚན་མ་དམིགས་པ་དང་། འཕགས་པའི་ལམ་ཡན་ལག་བརྒྱད་པའི་མི་འཐུན་པའི་ཕྱོགས་ཀྱི་གཉེན་པོར་དམིགས་པ་དང་། འཕགས་པའི་ལམ་ཡན་ལག་བརྒྱད་པ་བསྒོམ་པ་དམིགས་པ་དང་། འཕགས་པའི་ལམ་ཡན་ལག་བརྒྱད་པ་མ་སྐྱེས་པ་སྐྱེ་བ་དམིགས་པ་དང་། འཕགས་པའི་ལམ་ཡན་ལག་བརྒྱད་པ་སྐྱེས་པ་གནས་པ་དང་། མི་བསྐྱུད་པ་དང་། སླར་ཞིང་འབྱུང་བ་དང་། འཕེལ་ཞིང་རྒྱས་པར་དམིགས་པས་ཤེས་པ་བརྡ་སྤྲོད་པར་བགྱིད་པ་དག་མཐོང་ལགས་སོ། །",
+   "en": "Blessed One, at one time I was staying in a hermitage set in a great forest. There were many monks living in the vicinity who had also established themselves there. At sunrise, I saw them gather together. They showed their knowledge and revealed their understanding by taking various aspects of phenomena as referential objects. “Some showed their knowledge by taking the five aggregates as referential objects: their phenomenal appearance, their arising, their disintegration, their cessation, and the acknowledgment of their cessation. In the same way, some showed their knowledge by taking the twelve sense domains as referential objects, some by taking dependent arising as a referential object. Some showed their knowledge by taking the four kinds of sustenance as referential objects: their phenomenal appearance, their arising, their disintegration, their cessation, and the acknowledgment of their cessation. “Some showed their knowledge by taking the four noble truths as referential objects: their defining characteristic, the comprehension of suffering, the abandoning of the cause of suffering, the actualization of the cessation of suffering, and the practice of the path. “Some showed their knowledge by taking the eighteen constituents as referential objects: their phenomenal appearance, their varieties, their manifoldness, their cessation, and the actualization of their cessation. “Some showed their knowledge by taking the four applications of mindfulness as referential objects: their phenomenal appearance, their adverse factors, their antidotes, their practice, their arising from having been non-arisen, their remaining after they arose, and their maintaining, resuming, or increasing. In the same way, some showed their knowledge by taking as referential objects the four correct self-restraints, as well as the four bases of supernatural powers, the five faculties, the five forces, and the seven branches of awakening. Some showed their knowledge by taking as referential objects the eight branches of the noble path: their phenomenal appearance, the antidotes to their adverse factors, their practice, their arising from having been non-arisen, their remaining after they arose, and their maintaining, resuming, or increasing.",
+   "T0675": "「世尊！如我憶念過去世時住於一處阿蘭若園，爾時多有諸比丘等依於我所四面而住。世尊！我於爾時見彼比丘於日西下一處聚集，取種種法相說所證諦法。世尊！有諸比丘取於陰相說為證法、有諸比丘見陰生相說為證法、有諸比丘見陰滅相說為證法、有諸比丘說陰滅法、有諸比丘說陰滅現證法、有諸比丘見於入相說為證法、有諸比丘取十二因緣相說為證法、有諸比丘取起行相說為證法、有諸比丘取於諦相說為證法、有諸比丘取諦因相說為證法、有諸比丘取知諦相說為證法、有諸比丘取離諦相說為證法、有諸比丘取證諦相說為證法、有諸比丘取修行諦相說為證法、有諸比丘取界法相說為證法、有諸比丘取於界相說為證法、有諸比丘取種種界相說為證法、有諸比丘取無量界相說為證法、有諸比丘取滅界相說為證法、有諸比丘取滅界證相說為證法。「如是，諸比丘取四念處相說為證法、有諸比丘取四念相說為證法、有諸比丘取四念處對對治相說為證法、有諸比丘取四念處修行相說為證法、有諸比丘取未生四念處為生四念處修行相故說為證法、有諸比丘取已生四念處為不失修行相故說為證法、有諸比丘取已生四念處為增廣修行相故說為證法。「如是，諸比丘取正勤、如意、根、力、覺、道，未生、為生、為住、為不忘失、為增廣，取相說為證法。",
+   "T0677": "「世尊！我又一時，住阿練若遠寂林中，有多比丘大眾聚集，去我不遠住練若處。我又一時日中後分，見此大眾互相聚集，隨其所證種種法相，說己修行、記自所得。有諸比丘，由證見陰，記其所得——或有比丘證見陰相，或有比丘證見陰生，或有比丘證陰變異，或有比丘證見陰滅，或有比丘證陰滅道——如於陰中有六證相；或有比丘證見諸入，記自所得，乃至入滅及入滅道；或有比丘證見緣生，記自所得，乃至緣生滅、緣生滅道；或有比丘證見證食；或有比丘證見四諦；或有比丘證見諸界，及界差別并種種界，乃至界滅及界滅道；或有比丘證見念處，及念處相、念處對治、念對治道、念處修習，未生念處證見念生，已生念處證見念住及不忘失增長圓滿，記自所得。如證念處，正懃、如意足、根、力、覺分、聖道，聖道相、聖道對治、聖道對治道、聖道修習，未生聖道證聖道生，已生聖道證聖道住，及不忘失增長圓滿，記自所得。",
+   "T0676": "「世尊！我於一時住阿練若大樹林中，時有眾多苾芻亦於此林依近我住。我見彼諸苾芻於日後分，展轉聚集，依有所得現觀，各說種種相法，記別所解。「於中一類，由得蘊故、得蘊相故、得蘊起故、得蘊盡故、得蘊滅故、得蘊滅作證故，記別所解。如此一類由得蘊故，復有一類由得處故，復有一類得緣起故，當知亦爾。「復有一類由得食故、得食相故、得食起故、得食盡故、得食滅故、得食滅作證故，記別所解。「復有一類由得諦故、得諦相故、得諦遍知故、得諦永斷故、得諦作證故、得諦修習故，記別所解。「復有一類由得界故、得界相故、得界種種性故、得界非一性故、得界滅故、得界滅作證故，記別所解。「復有一類由得念住故、得念住相故、得念住能治所治故、得念住修故、得念住未生令生故、得念住生已堅住不忘倍修增廣故，記別所解。如有一類得念住故；復有一類得正斷故；得神足故；得諸根故；得諸力故；得覺支故，當知亦爾。「復有一類得八支聖道故、得八支聖道相故、得八支聖道能治所治故、得八支聖道修故、得八支聖道未生令生故、得八支聖道生已堅住不忘倍修增廣故，記別所解。"
+  },
+  "sn4-03": {
+   "bo": "མཐོང་ནས་ཀྱང་བདག་འདི་སྙམ་བགྱིད་དེ། ཚེ་དང་ལྡན་པ་འདི་དག་ནི་ཆོས་རྣམ་པ་སྣ་ཚོགས་པའི་མངོན་པར་རྟོགས་པ་སྟོན་པས་ཤེས་པ་བརྡ་སྤྲོད་པར་བགྱིད་ཅིང་ འདི་ལྟར་དོན་དམ་པ་ཐམས་ཅད་དུ་རོ་གཅིག་པའི་མཚན་ཉིད་མ་འཚལ་བས། ཚེ་དང་ལྡན་པ་འདི་དག་ནི་མངོན་པའི་ང་རྒྱལ་ཅན་མངོན་པའི་ང་རྒྱལ་གྱིས་མངོན་དུ་ཟིན་ཅིང་ཤེས་པ་བརྡ་སྤྲོད་པར་བགྱིད་པ་ཤ་སྟག་ལགས་སོ་སྙམ་བགྱིད་ལགས་སོ། ། བཅོམ་ལྡན་འདས་བཅོམ་ལྡན་འདས་ཀྱི་གང་གི་སླད་དུ་འདི་སྐད་ཅེས་དོན་དམ་པ་ནི་ཕྲ་བ། ཟབ་པ་རྟོགས་པར་དཀའ་བ། མཆོག་ཏུ་རྟོགས་པར་དཀའ་བ། ཐམས་ཅད་དུ་རོ་གཅིག་པའི་མཚན་ཉིད་ཡིན་ནོ་ཞེས་བཀའ་སྩལ་པ་ཇི་ཙམ་དུ་བཅོམ་ལྡན་འདས་ཀྱིས་ལེགས་པར་གསུངས་པ་དེ་ནི་ངོ་མཚར་ལགས་ཏེ། བཅོམ་ལྡན་འདས་དོན་དམ་པ་ཐམས་ཅད་དུ་རོ་གཅིག་པའི་མཚན་ཉིད་ནི་བཅོམ་ལྡན་འདས་ཀྱིས་བསྟན་པ་འདི་ཉིད་ལ་ཞུགས་པ། དགེ་སློང་དུ་གྱུར་པའི་སེམས་ཅན་རྣམས་ཀྱིས་ཀྱང་དེ་ལྟར་རྟོགས་པར་དཀའ་བ་ལགས་ན། འདི་ལས་སླད་རོལ་པའི་མུ་སྟེགས་ཅན་རྣམས་ཀྱིས་ལྟ་སྨོས་ཀྱང་ཅི་འཚལ།",
+   "en": "“Then I thought to myself, ‘These venerable monks displayed their knowledge by revealing their understanding by taking various aspects of phenomena as referential objects, but they have not perceived the ultimate, whose defining characteristic is of a single nature  everywhere.’ These venerable persons have conceit and, without doubt, display their knowledge under the influence of conceit. Blessed One, at an earlier time, you spoke these words: ‘The ultimate is subtle, profound, difficult to understand, extremely difficult to understand, and characterized as being of a single nature everywhere.’ How wonderful indeed are these very words of yours! Blessed One, if even those who practice your teaching, such as these beings who became monks, find it difficult to understand in this way the ultimate whose defining characteristic is of a single nature everywhere, what need is there to mention how difficult it is for those outsiders who do not follow your teaching?”",
+   "T0675": "「世尊！我見彼諸比丘生如是念：『是諸比丘以著我相、取我慢相如是說證。何以故？以不能知第一義諦一味等味相。』是故，世尊！我作是念：『世尊出世，希有希有，善說勝法——一切處第一義一味等味——微妙甚深，難覺難知，何況外道而能得解？』」",
+   "T0677": "「世尊！我見此已，作是思惟：『如諸長老隨所證見種種法相，記自所得，此諸長老有增上慢。由此慢心，記自所得，是事決爾。』何以故？如其所說自證見法，當知是人未能了別一味真如遍一切處。「世尊！如世尊言：『一味真實遍一切處，微細甚深，難可通達。』此言希有，是無對說。「世尊！若世尊正教中，勤修觀行諸比丘等，一味真實遍一切處，尚難通達；況諸外道在正教外，豈能證知一味真實？」",
+   "T0676": "「世尊！我見彼已竊作是念：『此諸長老依有所得現觀，各說種種相法，記別所解。當知彼諸長老，一切皆懷增上慢，為增上慢所執持故，於勝義諦遍一切一味相，不能解了。』是故，世尊！甚奇！乃至世尊！善說！如世尊言：『勝義諦相，微細、最微細，甚深、最甚深，難通達、最難通達，遍一切一味相。』世尊！此聖教中修行苾芻，於勝義諦遍一切一味相尚難通達，況諸外道。」"
+  },
+  "sn4-04": {
+   "bo": "བཅོམ་ལྡན་འདས་ཀྱིས་བཀའ་སྩལ་པ། རབ་འབྱོར་དེ་དེ་བཞིན་ནོ། །དེ་དེ་བཞིན་ཏེ། ངས་ནི་དོན་དམ་པ་ཐམས་ཅད་དུ་རོ་གཅིག་པའི་མཚན་ཉིད་ཕྲ་བ། མཆོག་ཏུ་ཕྲ་བ། ཟབ་པ་མཆོག་ཏུ་ཟབ་པ། རྟོགས་པར་དཀའ་བ། མཆོག་ཏུ་རྟོགས་པར་དཀའ་བ། མངོན་པར་རྫོགས་པར་སངས་རྒྱས་ཏེ། མངོན་པར་རྫོགས་པར་སངས་རྒྱས་ནས་ཀྱང་བསྙད་ཅིང་ གསལ་བར་བྱས། རྣམ་པར་ཕྱེ་གདགས་པར་བྱས་རབ་ཏུ་བསྟན་ནོ། ། དེ་ཅིའི་ཕྱིར་ཞེ་ན། རབ་འབྱོར་ཕུང་པོ་རྣམས་ལ་རྣམ་པར་དག་པའི་དམིགས་པ་གང་ཡིན་པ་དེ་ནི་ངས་དོན་དམ་པ་ཡིན་པར་ཡོངས་སུ་བསྟན་ཅིང་། རབ་འབྱོར་སྐྱེ་མཆེད་རྣམས་དང་། རྟེན་ཅིང་འབྲེལ་པར་འབྱུང་བ་དང་། ཟས་རྣམས་དང་། བདེན་པ་རྣམས་དང་། ཁམས་རྣམས་དང་། དྲན་པ་ཉེ་བར་གཞག་པ་རྣམས་དང་། ཡང་དག་པར་སྤོང་བ་རྣམས་དང་། རྫུ་འཕྲུལ་གྱི་རྐང་པ་རྣམས་དང་། དབང་པོ་རྣམས་དང་། སྟོབས་རྣམས་དང་། བྱང་ཆུབ་ཀྱི་ཡན་ལག་རྣམས་དང་། རབ་འབྱོར་འཕགས་པའི་ལམ་ཡན་ལག་བརྒྱད་པ་ལ་རྣམ་པར་དག་པའི་དམིགས་པ་གང་ཡིན་པ་དེ་ནི་དོན་དམ་པ་ཡིན་པར་ཡོངས་སུ་བསྟན་པའི་ཕྱིར་རོ། ། ཕུང་པོ་རྣམས་ལ་རྣམ་པར་དག་པའི་དམིགས་པ་དེ་ཡང་ཐམས་ཅད་དུ་རོ་གཅིག་པ་སྟེ། མཚན་ཉིད་ཐ་དད་པ་མ་ཡིན་ནོ། ། ཕུང་པོ་རྣམས་ལ་ཇི་ལྟ་བ་དེ་བཞིན་དུ་སྐྱེ་མཆེད་རྣམས་ནས། འཕགས་པའི་ལམ་ཡན་ལག་བརྒྱད་པའི་བར་ལ་རྣམ་པར་དག་པའི་དམིགས་པ་དེ་ཡང་ཐམས་ཅད་དུ་རོ་གཅིག་པ་སྟེ། མཚན་ཉིད་ཐ་དད་པ་མ་ཡིན་ནོ། ། རབ་འབྱོར་རྣམ་གྲངས་དེས་ན་ཁྱོད་ཀྱིས་འདི་ལྟར་ཐམས་ཅད་དུ་རོ་གཅིག་པའི་མཚན་ཉིད་གང་ཡིན་པ་དེ་ནི་དོན་དམ་པ་ཡིན་པར་རིག་པར་བྱའོ། །",
+   "en": "The Blessed One replied, “So it is, Subhūti. So it is. I have completely and fully awakened to the ultimate that, being characterized as being of a single nature everywhere, is subtle, extremely subtle, profound, extremely profound, difficult to understand, and extremely difficult to understand. Yet, after I attained complete and perfect awakening, I communicated through words, gave explanations, established distinctions, expressed myself through conventions, and imparted teachings. One might ask why I did this. “Subhūti, it is because I teach that the ultimate is the referential object conducive to purification  within the aggregates, as well as within the sense domains, dependent arising, the sustenances, the truths, the constituents, the applications of mindfulness, the self-restraints, the bases of supernatural powers, the faculties, the forces, the branches of awakening, and, Subhūti, the eightfold path. This referential object conducive to purification within the aggregates is of a single nature everywhere and its defining characteristic is not different from theirs. It is just the same from the sense domains up to the eightfold path: the referential object conducive to purification within these various referential objects is of a single nature everywhere and its defining characteristic is not different from theirs. Subhūti, through this approach, you should thus know that what is characterized as being of a single nature everywhere is the ultimate.",
+   "T0675": "佛告須菩提：「如是，如是。如汝所說，我所證法細微、極微，深、甚深、極甚深，難覺、極難覺。一切處一味等味相第一義諦是我所證，證已為人開示、演說示、極示、開示、現示。何以故？須菩提！所謂陰界入、因緣起行、實諦境界、念處、正勤、如意、根、力、覺、道等，須菩提！我說五陰中清淨觀三十七品是第一義相，一切陰界入、念處、正勤、如意、根、力、覺、道一味等味相。須菩提！依於此義，汝今應知一切處一味等味第一義相。",
+   "T0677": "佛言：「如是，須菩提！如是微細最微細，甚深最甚深，難見最難見，遍一切處一味真實，我覺了已，為他解說，安立正教，開示顯現，令義淺易。何以故？須菩提！於五陰中清淨境界，是我所說名為真實；須菩提！於十二入、十二緣生、四食、四諦、諸界念處，正懃、如意足、根、力、覺分、八聖道中清淨境界，是我所說名為真實。此清淨境界，一切陰處平等一味，無差別相。如於陰中乃至聖道分中，清淨境界平等一味，皆無差別。須菩提！以是義故，應知一味真如遍一切處。",
+   "T0676": "爾時，世尊告長老善現曰：「如是，如是。善現！我於微細最微細、甚深最甚深、難通達最難通達，遍一切一味相勝義諦，現正等覺；現等覺已，為他宣說、顯示、開解、施設、照了。何以故？善現！我已顯示於一切蘊中清淨所緣，是勝義諦。我已顯示於一切處、緣起、食、諦、界、念住、正斷、神足、根、力、覺支、道支中清淨所緣，是勝義諦。此清淨所緣於一切蘊中，是一味相、無別異相；如於蘊中，如是於一切處中，乃至一切道支中，是一味相、無別異相。是故，善現！由此道理，當知勝義諦是遍一切一味相。"
+  },
+  "sn4-05": {
+   "bo": "རབ་འབྱོར་གཞན་ཡང་དགེ་སློང་རྣལ་འབྱོར་སྤྱོད་པ་ནི་ཕུང་པོ་གཅིག་གི་དེ་བཞིན་ཉིད་དོན་དམ་པའི་ཆོས་བདག་མེད་པ་རབ་ཏུ་རྟོགས་ནས་ ཡང་དེ་ལས་གཞན་པའི་ཕུང་པོ་རྣམས་དང་། ཁམས་རྣམས་དང་། སྐྱེ་མཆེད་རྣམས་དང་། རྟེན་ཅིང་འབྲེལ་བར་འབྱུང་བ་དང་། ཟས་རྣམས་དང་། བདེན་པ་རྣམས་དང་། དྲན་པ་ཉེ་བར་གཞག་པ་རྣམས་དང་། ཡང་དག་པར་སྤོང་བ་རྣམས་དང་། རྫུ་འཕྲུལ་གྱི་རྐང་པ་རྣམས་དང་། དབང་པོ་རྣམས་དང་། སྟོབས་རྣམས་དང་། བྱང་ཆུབ་ཀྱི་ཡན་ལག་རྣམས་སོ་སོ་དང་། འཕགས་པའི་ལམ་ཡན་ལག་བརྒྱད་པ་སོ་སོ་ལ་དེ་བཞིན་ཉིད་དོན་དམ་པ་བདག་མེད་པ་ཡོངས་སུ་ཚོལ་བར་མི་བྱེད་ཀྱི་ དེ་བཞིན་ཉིད་ཀྱི་རྗེས་སུ་འབྲང་བ་གཉིས་མེད་པའི་ཤེས་པ་ལ་རྟེན་པ་དེ་ཉིད་ཀྱིས་དོན་ དམ་པ་ཐམས་ཅད་དུ་རོ་གཅིག་པའི་མཚན་ཉིད་ངེས་པར་འཛིན་པ་དང་། མངོན་པར་རྟོགས་པ་ཁོ་ནར་བྱེད་དེ རབ་འབྱོར་རྣམ་གྲངས་དེས་ཀྱང་ཁྱོད་ཀྱིས་འདི་ལྟར་ཐམས་ཅད་དུ་རོ་གཅིག་པའི་མཚན་ཉིད་གང་ཡིན་པ་དེ་དོན་དམ་པ་ཡིན་པར་རིག་པར་བྱའོ། །",
+   "en": "“Moreover, Subhūti, once renunciants who practice yoga have realized in reference to a single aggregate the selflessness of phenomena, which is the ultimate reality, they do not look for this ultimate reality, this selflessness, individually within the other aggregates or in the sense domains, dependent arising, the sustenances, the truths, the constituents, the applications of mindfulness, the self-restraints, the bases of supernatural powers, the faculties, the forces, the branches of awakening, and the eightfold path. Instead, they rely upon the nondual gnosis  that is in accordance with true reality. Through this alone, they infallibly ascertain and realize the ultimate, characterized as being of a single nature everywhere. Subhūti, through this approach, you should thus know that what is characterized as being of a single nature everywhere is the ultimate.",
+   "T0675": "「復次，須菩提！如實修行比丘，如實知一陰如第一義諦法無我，於餘界入、因緣起行界、念處、正勤、如意、根、力、覺、道等，更不別觀真如第一義法無我，惟依隨順真如、依止不二法，證一切處一味等味第一義相。須菩提！汝依此義，應如是知所謂一味等味第一義相。",
+   "T0677": "「復次，須菩提！修行比丘，若已通達一陰真如，人、法無我，不勞更觀一一餘陰所有真如。於十二入、十二緣生、四食、四諦、諸界念處，正勤、如意足、根、力、覺分、八聖道分，若已通達一分真如，人、法無我，不勞更觀餘聖道分所有真如。離無分別後智，無有別觀能順真如觀所餘法一味真實遍一切處。但以無分別後智，隨順前無分別智，觀一切法一味真實，憶持至得。須菩提！以是義故，汝應當知，真實之理遍一切處，唯一味相。",
+   "T0676": "「復次，善現！修觀行苾芻，通達一蘊真如勝義法無我性已，更不尋求各別餘蘊、諸處、緣起、食、諦、界、念住、正斷、神足、根、力、覺支、道支真如勝義法無我性。唯即隨此真如勝義無二智為依止，故於遍一切一味相勝義諦，審察趣證。是故，善現！由此道理，當知勝義諦是遍一切一味相。"
+  },
+  "sn4-06": {
+   "bo": "རབ་འབྱོར་གཞན་ཡང་ཇི་ལྟར་ཕུང་པོ་དང་། སྐྱེ་མཆེད་དང་། རྟེན་ཅིང་འབྲེལ་པར་འབྱུང་བ་དང་། ཟས་དང་། བདེན་པ་དང་། ཁམས་དང་། དྲན་པ་ཉེ་བར་གཞག་པ་དང་། ཡང་དག་པར་སྤོང་བ་དང་། རྫུ་འཕྲུལ་གྱི་རྐང་པ་དང་། དབང་པོ་དང་། སྟོབས་དང་། བྱང་ཆུབ་ཀྱི་ཡན་ལག་འདི་དག་ཕན་ཚུན་མཚན་ཉིད་ཐ་དད་པ་དང་། ཇི་ལྟར་འཕགས་པའི་ལམ་ཡན་ལག་བརྒྱད་པ་ཕན་ཚུན་མཚན་ཉིད་ཐ་དད་པ་ཡིན་པ་དེ་བཞིན་དུ་གལ་ཏེ་ཆོས་དེ་དག་གི་དེ་བཞིན་ཉིད་དོན་དམ་པ་ཆོས་བདག་མེད་པ་ཡང་མཚན་ཉིད་ཐ་དད་པ་ཡིན་པར་གྱུར་ན་ནི། དེས་ན་དེ་བཞིན་ཉིད་དོན་དམ་པ་ཆོས་བདག་མེད་པ་ཡང་རྒྱུ་དང་བཅས་པ་ཡིན་ཞིང་རྒྱུ་ལས་བྱུང་བ་ཡིན་པར་འགྱུར་རོ། ། རྒྱུ་ལས་བྱུང་བ་ཉིད་ཡིན་ན་ནི་འདུས་བྱས་ཡིན་པར་འགྱུར་རོ། ། འདུས་བྱས་ཉིད་ཡིན་ན་ནི་དོན་དམ་པ་ཡིན་པར་མི་འགྱུར་རོ། ། དོན་དམ་པ་མ་ཡིན་ན་ནི་དོན་དམ་པ་གཞན་ཞིག་ཡོངས་སུ་བཙལ་དགོས་པར་འགྱུར་རོ། ། རབ་འབྱོར་གང་གི་ཕྱིར་དོན་དམ་པ་ཆོས་བདག་མེད་པ་རྒྱུ་ལས་བྱུང་བ་མ་ཡིན་པ་དང་། འདུས་བྱས་མ་ཡིན་པ་དང་། དོན་དམ་པ་མ་ཡིན་པ་མ་ཡིན་པ་དང་། དོན་དམ་པ་དེའི་དོན་དམ་པ་གཞན་ཡོངས་སུ་བཙལ་བར་བྱ་མི་དགོས་ཀྱི་ དེ་བཞིན་གཤེགས་པ་རྣམས་བྱུང་ཡང་རུང་མ་བྱུང་ཡང་རུང་སྟེརྟག་པ་རྟག་པའི་དུས་དང་། ཐེར་ཟུག་ཐེར་ཟུག་གི་དུས་སུ་ཆོས་གནས་པར་བྱ་བའི་ཕྱིར་ཆོས་རྣམས་ཀྱི་ཆོས་ཉིད་དབྱིངས་དེ་ནི་རྣམ་པར་གནས་པ་ཁོ་ན་ཡིན་པ་དེའི་ཕྱིར། རབ་འབྱོར་རྣམ་གྲངས་དེས་ཀྱང་ཁྱོད་ཀྱིས་འདི་ལྟར་ཐམས་ཅད་དུ་རོ་གཅིག་པའི་མཚན་ཉིད་གང་ཡིན་པ་ནི་དོན་དམ་པ་ཡིན་པར་རིག་པར་བྱའོ། །",
+   "en": "“Moreover, Subhūti, if ultimate reality itself, the selflessness of phenomena, had a defining characteristic distinct [from the defining characteristics of phenomena] in the way the aggregates, the sense domains, dependent arising, the sustenances, the truths, the constituents, the applications of mindfulness, the self-restraints, the bases of supernatural powers, the faculties, the forces, the branches of awakening, and the eightfold path have defining characteristics distinct from one another, then, on account of this, ultimate reality itself, the selflessness of phenomena, would have causes and arise from causes. If it arose from causes, it would be conditioned. If it were the conditioned, it would not be the ultimate. If it were not the ultimate, one would need to look for some other ultimate. Subhūti, this ultimate, the selflessness of phenomena, does not arise from causes. It is not conditioned. Neither is it the case that it is not the ultimate. One must [therefore] not look for an ultimate other than that ultimate. Thus, whether tathāgatas manifest or not, because it is the case that it permanently and immutably abides within phenomena, only this nature of phenomena, this constituent abiding in phenomena, is constant.  Subhūti, for all these reasons, you should know through this approach that the ultimate is characterized as being of a single nature everywhere.",
+   "T0675": "「復次，須菩提！如彼陰界入、因緣起行界、念處、正勤、如意、根、力、覺、道等彼差別，若真如第一義諦法無我有差別相者，真如證法第一義諦亦應有因；若有因者，應從因生；若從因生，應是有為；若是有為，不應得名第一義諦；若非第一義諦者，應更推求第一義諦。須菩提！是故，真如第一義諦法無我，非從因生，亦非有為法，亦非不第一義諦，亦非為彼第一義諦更求第一義諦；惟是常常時、恒恒時，如來出世、若不出世，法性常住、法體常住、法界常住。須菩提！汝依此義，應知此諸一切法相一味等味第一義諦。",
+   "T0677": "「復次，須菩提！猶如諸陰互有別相，如十二入、十二緣生、四食、四諦、諸界念處，正勤、如意足、根、力、覺分、八聖道分，互有別相，若諸法真如，人、法無我，互有別相，則諸法如如，人、法無我不成真實應由因生。若由因生則成有為，若是有為則非真實，若非真實更應於此求別真實。須菩提！由此真實不從因生，非是有為，非不真實，於中不勞求別真實。何以故？此法恒常，若佛出世，若不出世，法性、法界、法住，皆悉常住。須菩提！以是義故，汝應當知，一味真實等一切處。",
+   "T0676": "「復次，善現！如彼諸蘊展轉異相，如彼諸處、緣起、食、諦、界、念住、正斷、神足、根、力、覺支、道支，展轉異相。若一切法真如勝義法無我性亦異相者，是則真如勝義法無我性亦應有因，從因所生。若從因生應是有為，若是有為應非勝義，若非勝義應更尋求餘勝義諦。善現！由此真如勝義法無我性，不名有因，非因所生，亦非有為，是勝義諦，得此勝義更不尋求餘勝義諦。唯有常常時、恒恒時，如來出世、若不出世，諸法法性安立，法界安住。是故，善現！由此道理，當知勝義諦是遍一切一味相。"
+  },
+  "sn4-07": {
+   "bo": "རབ་འབྱོར་འདི་ལྟ་སྟེ་དཔེར་ན། ནམ་མཁའ་ནི་གཟུགས་ཀྱི་རྣམ་པ་སྣ་ཚོགས་དུ་མ་མཚན་ཉིད་ཐ་དད་པ་ལ་མཚན་མ་མེད་པ་ རྣམ་པར་རྟོག་པ་མེད་པ་འགྱུར་བ་མེད་པ་སྟེ། ཐམས་ཅད་དུ་རོ་གཅིག་པའི་མཚན་ཉིད་ཡིན་ནོ། ། རབ་འབྱོར་དེ་བཞིན་དུ་དོན་དམ་པ་ཡང་མཚན་ཉིད་ཐ་དད་པའི་ཆོས་རྣམས་ལ་ཐམས་ཅད་དུ་རོ་གཅིག་པའི་མཚན་ཉིད་ཡིན་པར་བལྟ་བར་བྱའོ། །",
+   "en": "“Subhūti, it is like this: although there are many varieties of forms with distinct defining characteristics within space, since space itself is free from phenomenal appearances, devoid of conceptions, and without change, its defining characteristic is of a single nature everywhere. Likewise, Subhūti, you should know that the ultimate is characterized as being of a single nature everywhere, within all phenomena whose defining characteristics are distinct from one another.”",
+   "T0675": "「須菩提！譬如無量種種差別，色相無相、無有分別、無有差異，一切處虛空等味一體、一相。須菩提！一切諸法自相差別，一切處一味等味第一義相。」",
+   "T0677": "「須菩提！譬如眾色，種種差別更互不同。於諸色中，虛空無相，無有差別，無有變異，於一切處同一味相。如是諸法，各各別異。汝應當知，於諸法中一味真如，等無差別，亦復如是。」",
+   "T0676": "「善現！譬如種種非一品類異相色中，虛空無相、無分別、無變異、遍一切一味相。如是，異性、異相一切法中，勝義諦遍一切一味相，當知亦然。」"
+  },
+  "sn4-08": {
+   "bo": "དེ་ནས་བཅོམ་ལྡན་འདས་ཀྱིས་དེའི་ཚེ་ཚིགས་སུ་བཅད་པ་འདི་དག་བཀའ་སྩལ་ཏོ། ། དོན་དམ་དེ་ནི་ཐ་དད་མ་ཡིན་ཏེ། །ཀུན་ཏུ་རོ་གཅིག་མཚན་ཉིད་སངས་རྒྱས་གསུང་། ། དེ་ལ་གང་དག་ཐ་དད་ཀུན་རྟོག་པ། །དེ་དག་ང་རྒྱལ་གནས་པ་རྨོངས་པ་ཡིན། །",
+   "en": "Then, at that moment, the Blessed One spoke these verses: “As proclaimed by the buddhas,This ultimate is not distinct from phenomena,And its defining characteristic is everywhere of a single nature. Those who imagine it to be distinct from phenomenaAre conceited and deluded.”",
+   "T0675": "爾時，世尊而說偈言：「如來應說法，一切一味相， 不離第一義，見別是憍慢。」",
+   "T0677": "爾時，世尊說是經已，重說偈言：「法通相一味，諸佛說平等。 若於中執異，是人增上慢。 逆生死流道，微細深難見， 欲染癡覆故，凡人不能得。」",
+   "T0676": "爾時，世尊欲重宣此義，而說頌曰：「此遍一切一味相，勝義諸佛說無異； 若有於中異分別，彼定愚癡依上慢。」"
+  },
+  "sn4-09": {
+   "bo": "རབ་འབྱོར་གྱི་ལེའུ་སྟེ་བཞི་པའོ།། །།",
+   "en": "This was the chapter of Subhūti—the fourth chapter."
+  },
+  "sn4-10": {
+   "T0677": "爾時，觀世音菩薩，右膝著地，合掌恭敬，而白佛言：「世尊！我今從佛聞得如是解節深法，得未曾有，頂戴奉持。世尊！當何名此經？云何受持？」佛告觀世音菩薩：「此經名為『了義正說』，亦名『真實境智正說』，亦名『十地波羅蜜依止正說』。汝等應當如是受持。」佛說是經已，八萬菩薩皆得大乘威德三昧，無量無邊諸菩薩眾於無生法得無生法忍，無數眾生從於諸流心得解脫，無數眾生於大乘法生信樂心。"
+  }
+ }
+}

@@ -1,0 +1,177 @@
+{
+ "slug": "samdhinirmocana-3",
+ "title": "解深密經・善清淨慧菩薩章（勝義與諸行非一非異）",
+ "family": "bo",
+ "intro": "藏譯第三章。善清淨慧說見諸菩薩爭論勝義與諸行相是一是異，佛以三番過失（凡聖、染淨、差別）破一與異，以螺貝白色等喻明不一不異。玄奘本在〈勝義諦相品〉，流支本為〈善清淨慧菩薩問品〉，真諦本為〈過一異品〉。",
+ "units": [
+  {
+   "id": "sn3-00",
+   "label": "善清淨慧白佛：諸菩薩爭論一異"
+  },
+  {
+   "id": "sn3-01",
+   "label": "佛印可：彼等不了勝義"
+  },
+  {
+   "id": "sn3-02",
+   "label": "若一則異生應已見諦，若異則見諦者不離相縛"
+  },
+  {
+   "id": "sn3-03",
+   "label": "結第一番：故非一、非異"
+  },
+  {
+   "id": "sn3-04",
+   "label": "第二番：雜染與清淨"
+  },
+  {
+   "id": "sn3-05",
+   "label": "第三番：遍一切處與差別"
+  },
+  {
+   "id": "sn3-06",
+   "label": "螺貝白色等喻"
+  },
+  {
+   "id": "sn3-07",
+   "label": "結：我覺此勝義而為他說"
+  },
+  {
+   "id": "sn3-08",
+   "label": "偈頌"
+  },
+  {
+   "id": "sn3-09",
+   "label": "章尾題"
+  }
+ ],
+ "versions": [
+  {
+   "id": "bo",
+   "lang": "bo",
+   "label": "藏譯",
+   "who": "德格版 Toh 106・84000 翻譯記憶"
+  },
+  {
+   "id": "en",
+   "lang": "en",
+   "label": "84000 英譯",
+   "who": "譯自藏譯・與藏文逐句對齊"
+  },
+  {
+   "id": "T0675",
+   "lang": "lzh",
+   "label": "流支本",
+   "who": "菩提流支譯《深密解脫經》・514 年",
+   "work": "T0675"
+  },
+  {
+   "id": "T0677",
+   "lang": "lzh",
+   "label": "真諦本",
+   "who": "真諦譯《解節經》・約 560 年",
+   "work": "T0677"
+  },
+  {
+   "id": "T0676",
+   "lang": "lzh",
+   "label": "玄奘本",
+   "who": "玄奘譯《解深密經》・647 年",
+   "work": "T0676"
+  }
+ ],
+ "works": [
+  "DKtoh0106",
+  "T0675",
+  "T0676",
+  "T0677"
+ ],
+ "anchors": [
+  {
+   "work": "T0675",
+   "node": "聖者善清淨慧菩薩問品第四",
+   "uid": "T16n0675_p0667b01"
+  },
+  {
+   "work": "T0677",
+   "node": "解節經過一異品第三",
+   "uid": "T16n0677_p0712c28"
+  },
+  {
+   "work": "T0676",
+   "range": [
+    "T16n0676_p0690a29",
+    "T16n0676_p0691b07"
+   ]
+  }
+ ],
+ "cells": {
+  "sn3-00": {
+   "bo": "དེ་ནས་བཅོམ་ལྡན་འདས་ལ་བྱང་ཆུབ་སེམས་དཔའ་བློ་གྲོས་ཤིན་ཏུ་རྣམ་དག་གིས་འདི་སྐད་ཅེས་གསོལ་ཏོ། ། བཅོམ་ལྡན་འདས་བཅོམ་ལྡན་འདས་ཀྱིས་གང་གི་སླད་དུ་འདི་སྐད་ཅེས་དོན་དམ་པ་ནི་ཕྲ་བ། ཟབ་པ་ཐ་དད་པ་དང་ཐ་དད་པ་མ་ཡིན་པ་ཉིད་ལས་ཡང་དག་པར་འདས་པའི་མཚན་ཉིད་རྟོགས་པར་དཀའ་བ་ཡིན་ནོ་ཞེས་བཀའ་སྩལ་ཏེ ཇི་ཙམ་དུ་བཅོམ་ལྡན་འདས་ཀྱིས་ལེགས་པར་གསུངས་པ་དེ་ནི་ངོ་མཚར་ལགས་སོ། ། བཅོམ་ལྡན་འདས་འདི་ལ་བདག་གིས་ས་ཕྱོགས་ཤིག་ན། བྱང་ཆུབ་སེམས་དཔའ་མོས་པས་སྤྱོད་པའི་ས་ལ་ཞུགས་པ་རབ་ཏུ་མང་པོ་དག་ཅིག །འདི་ལྟ་སྟེ། འདུ་བྱེད་རྣམས་དང་། དོན་དམ་པ་ཐ་དད་པ་དང་། ཐ་དད་པ་མ་ལགས་པ་ཉིད་ལས་བརྩམས་ཏེ། ཕན་ཚུན་ནས་མཆིས་ཤིང་མཆིས་ནས་འདུས་ཏེ་མཆིས་ནས་ དེ་ན་བྱང་ཆུབ་སེམས་དཔའ་ཁ་ཅིག་འདི་སྐད་ཅེས་འདུ་བྱེད་ཀྱི་མཚན་ཉིད་དང་། དོན་དམ་པའི་མཚན་ཉིད་ཐ་དད་པ་མ་ལགས་སོ་ཞེས་མཆི། ཁ་ཅིག་ནི་འདི་སྐད་འདུ་བྱེད་ཀྱི་མཚན་ཉིད་དང་། དོན་དམ་པའི་མཚན་ཉིད་ཐ་དད་པ་མ་ལགས་པ་མ་ལགས་ཀྱི། འདུ་བྱེད་ཀྱི་མཚན་ཉིད་དང་། དོན་དམ་པའི་མཚན་ཉིད་ཐ་དད་པ་ལགས་སོ་ ཞེས་མཆི། ཐེ་ཚོམ་དུ་གྱུར་པའི་བློ་གྲོས་ཅན། ཡིད་གཉིས་སུ་གྱུར་པ་ཁ་ཅིག་ནི་འདི་སྐད་དུ་གང་དག་དེ་སྐད་ཅེས་འདུ་བྱེད་ཀྱི་མཚན་ཉིད་དང་། དོན་དམ་པའི་མཚན་ཉིད་ཐ་དད་པ་ལགས་སོ། །ཞེས་མཆི་བ་དང་། གང་དག་དེ་སྐད་ཅེས་འདུ་བྱེད་ཀྱི་མཚན་ཉིད་དང་། དོན་དམ་པའི་མཚན་ཉིད་ཐ་དད་པ་མ་ལགས་སོ་ཞེས་མཆིས་པའི་བྱང་ཆུབ་སེམས་དཔའ་དེ་དག་ལས་གང་ནི་མེད་པར་མཆི་བ་ལགས། གང་ནི་ཤོབ་བེ་མཆིས་ལགས། གང་ནི་ཚུལ་བཞིན་དུ་ཞུགས་པ་ལགས། གང་ནི་ཚུལ་བཞིན་དུ་མ་ལགས་པར་ཞུགས་པ་ལགས་ཞེས་མཆི་བ་དག་ཅིག་མཐོང་ལགས་སོ། ། བཅོམ་ལྡན་འདས་བདག་འདི་སྙམ་བགྱིད་དེ། རིགས་ཀྱི་བུ་འདི་དག་ཐམས་ཅད་ནི་འདི་ལྟར་དོན་དམ་པ་འདུ་བྱེད་རྣམས་དང་། ཐ་དད་པ་དང་། ཐ་དད་པ་མ་ལགས་པ་ཉིད་ལས་ཡང་དག་པར་འདས་པའི་མཚན་ཉིད་ཕྲ་བ་མ་འཚལ་བ། བྱིས་པ་རྨོངས་པ་མི་གསལ་བ། མི་མཁས་པ། ཚུལ་བཞིན་མ་ལགས་པར་ཞུགས་པ་ཤ་སྟག་ལགས་སོ་སྙམ་བགྱིད་ལགས་སོ། །",
+   "en": "Then the bodhisattva Suviśuddhamati addressed the Blessed One, “Blessed One, at an earlier time, you spoke these words: ‘The ultimate is subtle and profound. Characterized as transcending what is distinct or indistinct  [from conditioned phenomena], it is difficult to understand.’ How wonderful indeed are these words of yours! Blessed One, regarding this point, I once [saw ]many bodhisattvas who, having attained the stage of engagement through aspiration,  assembled in one place to discuss in the following way whether conditioned phenomena and the ultimate are distinct or indistinct. Among them, some declared, ‘The defining characteristic of conditioned phenomena and the defining characteristic of the ultimate are indistinct.’ Others replied, ‘It is not the case that the defining characteristic of conditioned phenomena and the defining characteristic of the ultimate are indistinct, for they are distinct indeed.’ Some others, who were perplexed and lacked certainty, said, ‘Some pretend that the defining characteristic of conditioned phenomena and the defining characteristic of the ultimate are distinct. Some pretend that they are indistinct. Which bodhisattvas speak the truth? Which speak falsity? Which are mistaken? Which are not?’ Blessed One, I thought to myself, ‘So, none of these noble sons understands the ultimate whose subtle defining characteristic transcends whether it is distinct or indistinct from conditioned phenomena. These bodhisattvas are truly  naive, confused, dull, unskilled, and mistaken.’ ”",
+   "T0675": "爾時，聖者善清淨慧菩薩摩訶薩，依第一義過一異相，白佛言：「世尊！世尊善說希有妙法第一義諦——微細極細甚深之義過一異相——所謂難證。世尊！我憶往昔在於一處，見住信行地諸菩薩等集坐一處，思有為行、第一義諦為一、為異？有諸菩薩言：『有為行相異第一義。』復有菩薩作如是言：『非有為行異第一義。』而作是言：『有為之行不異第一義。』復有菩薩生於疑心而起異意，作如是言：『此諸菩薩中，何者是實說？何者虛妄說？何者是正念修行法？何者是邪念修行法？』世尊！我見彼諸菩薩，作是思惟：『此諸善男子等皆是愚癡，非善黠慧，不善知法，墮邪念中。』何以故？以不能知有為之行微細無相，過一異相，第一義相故。」",
+   "T0677": "爾時，淨慧菩薩白佛言：「世尊！是言正說，甚深希有。如世尊說，是真實理，微細甚深，難可通達，謂過一異相。「世尊！我於一時，見一方地大菩薩眾修菩提行，在願樂地。於此方所聚集而坐，為欲思量，諸法實相與諸行法為一、為異？是時眾中，有諸菩薩說如是言：『是真實相不異諸行。』復有菩薩說：『真實相與行不一。』復有菩薩起疑惑心，不信一異，說如是言：『此一異中，何人說實？何人說虛？何者正行？何者邪行？為當執一？為當執異？』「世尊！我見此事，作是思惟：『諸善男子，嬰兒、愚癡，無覺、無了，非如理行。何以故？是善男子，未能通達微細甚深真實之法與諸行等，過一異相。』」",
+   "T0676": "爾時，善清淨慧菩薩白佛言：「世尊！甚奇！乃至世尊！善說！如世尊言：『勝義諦相微細甚深，超過諸法一異性相，難可通達。』世尊！我即於此曾見一處，有眾菩薩等正修行勝解行地，同一會坐，皆共思議勝義諦相與諸行相一異性相。於此會中，一類菩薩作如是言：『勝義諦相與諸行相都無有異。』一類菩薩復作是言：『非勝義諦相與諸行相都無有異；然勝義諦相異諸行相。』有餘菩薩疑惑猶豫，復作是言：『是諸菩薩，誰言諦實？誰言虛妄？誰如理行？誰不如理？』或唱是言：『勝義諦相與諸行相都無有異。』或唱是言：『勝義諦相異諸行相。』世尊！我見彼已竊作是念：『此諸善男子愚癡、頑鈍、不明、不善、不如理行，於勝義諦微細甚深，超過諸行一異性相，不能解了。』」說是語已。"
+  },
+  "sn3-01": {
+   "bo": "བཅོམ་ལྡན་འདས་ཀྱིས་བྱང་ཆུབ་སེམས་དཔའ་བློ་གྲོས་ཤིན་ཏུ་རྣམ་པར་དག་པ་ལ་འདི་སྐད་ཅེས་བཀའ་སྩལ་ཏོ། ། བློ་གྲོས་ཤིན་ཏུ་རྣམ་པར་དག་པ་དེ་དེ་བཞིན་ནོ། །དེ་དེ་བཞིན་ཏེ། རིགས་ཀྱི་བུ་དེ་དག་ཐམས་ཅད་ནི་འདི་ལྟར་དོན་དམ་པ་འདུ་བྱེད་རྣམས་དང་ཐ་དད་པ་དང་། ཐ་དད་པ་མ་ཡིན་པ་ཉིད་ལས་ཡང་དག་པར་འདས་པའི་མཚན་ཉིད་ཕྲ་བ་མི་ཤེས་པ། བྱིས་པ་རྨོངས་པ། མི་གསལ་བ། མི་མཁས་པ། ཚུལ་བཞིན་མ་ཡིན་པར་ཞུགས་པ་ཤ་སྟག་ཡིན་ནོ། ། དེ་ཅིའི་ཕྱིར་ཞེ་ན། བློ་གྲོས་ཤིན་ཏུ་རྣམ་དག་འདུ་བྱེད་རྣམས་ལ་དེ་ལྟར་སོ་སོར་རྟོག་པ་དག་ནི་དོན་དམ་པ་རྟོགས་པའམ། དོན་དམ་པ་མངོན་སུམ་དུ་བྱེད་པ་མ་ཡིན་པའི་ཕྱིར་རོ། །",
+   "en": "The Blessed One replied to the bodhisattva Suviśuddhamati, “So it is, Suviśuddhamati. So it is. Indeed, none of these noble sons understands the ultimate whose subtle defining characteristic transcends whether it is distinct or indistinct from conditioned phenomena. These [bodhisattvas] are truly naive, confused, dull, unskilled, and mistaken. Why is this so? Suviśuddhamati, it is because those who analyze conditioned phenomena in this way neither realize nor actualize the ultimate.",
+   "T0675": "爾時，佛告善清淨慧菩薩摩訶薩言：「善清淨慧！如是，如是。彼諸一切善男子等皆是愚癡，不善黠慧，不知正法，墮邪念中。何以故？以不能知微細行相過一異相，第一義相故。",
+   "T0677": "菩薩說已，佛即告言：「如是，淨慧！如是諸善男子，嬰兒、愚癡，無覺、無了，非如理行。如來通達微細甚深真實之法與諸行等，過一異相。何以故？淨慧！若執如此，依諸行法修真實觀，能達、能證真如之理，無有是處。",
+   "T0676": "爾時，世尊告善清淨慧菩薩曰：「善男子！如是，如是。如汝所說：『彼諸善男子愚癡、頑鈍、不明、不善、不如理行，於勝義諦微細甚深，超過諸行一異性相，不能解了。』何以故？善清淨慧！非於諸行如是行時，名能通達勝義諦相，或於勝義諦而得作證。"
+  },
+  "sn3-02": {
+   "bo": "དེ་ཅིའི་ཕྱིར་ཞེ་ན། བློ་གྲོས་ཤིན་ཏུ་རྣམ་དག་གལ་ཏེ་འདུ་བྱེད་ཀྱི་མཚན་ཉིད་དང་། དོན་དམ་པའི་མཚན་ཉིད་ཐ་དད་པ་མ་ཡིན་པར་གྱུར་ན་ནི་དེས་ན་བྱིས་པ་སོ་སོའི་སྐྱེ་བོ་ཐམས་ཅད་བདེན་པ་མཐོང་བ་ཡིན་པར་ཡང་འགྱུར། སོ་སོའི་སྐྱེ་བོ་ཁོ་ནར་གྱུར་བཞིན་དུ་གྲུབ་པ་དང་།  བདེ་བ་བླ་ན་མེད་པའི་མྱ་ངན་ལས་འདས་པ་འཐོབ་པར་ཡང་འགྱུར། བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་མངོན་པར་རྫོགས་པར་འཚང་རྒྱ་བར་ཡང་འགྱུར་རོ། ། གལ་ཏེ་འདུ་བྱེད་ཀྱི་མཚན་ཉིད་དང་། དོན་དམ་པའི་མཚན་ཉིད་ཐ་དད་པ་ཡིན་པར་གྱུར་ན་ནི། དེས་ན་བདེན་པ་མཐོང་བ་རྣམས་ཀྱང་འདུ་བྱེད་ཀྱི་མཚན་མ་དང་མ་བྲལ་བར་འགྱུར། འདུ་བྱེད་ཀྱི་མཚན་མ་དང་མ་བྲལ་བའི་ཕྱིར་བདེན་པ་མཐོང་བ། མཚན་མའི་འཆིང་བ་ལས་རྣམ་པར་འགྲོལ་བར་ཡང་མི་འགྱུར། མཚན་མའི་འཆིང་བ་ལས་རྣམ་པར་མ་གྲོལ་ན། གནས་ངན་ལེན་གྱི་འཆིང་བ་ལས་ཀྱང་རྣམ་པར་མ་གྲོལ་བར་འགྱུར། འཆིང་བ་དེ་གཉིས་ལས་མ་གྲོལ་ན་བདེན་པ་མཐོང་བས་གྲུབ་པ་དང་། བདེ་བ་བླ་ན་མེད་པའི་མྱ་ངན་ལས་འདས་པ་ཐོབ་པར་ཡང་མི་འགྱུར། བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་མངོན་པར་རྫོགས་པར་འཚང་རྒྱ་བར་ཡང་མི་འགྱུར་རོ། །",
+   "en": "“Why? Suviśuddhamati, if the defining characteristic of conditioned phenomena and the defining characteristic of the ultimate were indistinct, [even] spiritually immature people—all ordinary beings—would, as a consequence, realize the truth. As mere ordinary beings, not only would they attain nirvāṇa, the unsurpassable good,  but they would also fully and completely awaken to unsurpassable complete and perfect awakening. “If the defining characteristic of conditioned phenomena and the defining characteristic of the ultimate were distinct, even those who realize the truth would, as a consequence, not be detached from the phenomenal appearances of conditioned phenomena. Since they would not be detached from the phenomenal appearances of conditioned phenomena, they would also not be liberated from the bondage of phenomenal appearances. If they were not liberated from the bondage of phenomenal appearances, they would not be liberated from the bondage of corruption. If they were not liberated from these two kinds of bondage, those who realize the truth would neither attain nirvāṇa, the unsurpassable good, nor fully and completely awaken to the unsurpassable complete and perfect awakening.",
+   "T0675": "何以故？善清淨慧！若有為行不異第一義相者，一切愚癡諸凡夫等悉亦應見第一義諦即凡夫身，亦應得彼無上清淨涅槃之樂，亦應得彼阿耨多羅三藐三菩提。「善清淨慧！若有為行不異第一義相者，見第一義諦時應見有為行相。若有為行相是有相者，相即是縛，不應得解脫。若見實諦不離相縛者，不應得解亦不得脫煩惱之縛；以不離彼二種縛故，不應得彼無上清淨涅槃之樂，亦不應得阿耨多羅三藐三菩提。",
+   "T0677": "何以故？淨慧！若真如與行相不異者，一切凡夫應見真如。復次，一切眾生正在凡位，應得無上如安涅槃。復次，一切眾生於凡位中，亦應能得無上菩提。若真如相異於行相，一切聖人已見真如，則應不能伏滅行相；由不伏滅諸行相故，雖見真諦不能解脫眾相繫縛；若於眾相不得解脫，亦不解脫麁重繫縛；若不解脫二種繫縛，則不能得無上如安無餘涅槃，亦應不得無上菩提。",
+   "T0676": "何以故？善清淨慧！若勝義諦相與諸行相都無異者：應於今時一切異生皆已見諦；又諸異生皆應已得無上方便安隱涅槃；或應已證阿耨多羅三藐三菩提。若勝義諦相與諸行相一向異者：已見諦者於諸行相應不除遣；若不除遣諸行相者，應於相縛不得解脫；此見諦者於諸相縛不解脫故，於麁重縛亦應不脫；由於二縛不解脫故，已見諦者應不能得無上方便安隱涅槃；或不應證阿耨多羅三藐三菩提。"
+  },
+  "sn3-03": {
+   "bo": "བློ་གྲོས་ཤིན་ཏུ་རྣམ་དག་གང་གི་ཕྱིར་སོ་སོའི་སྐྱེ་བོ་བདེན་པ་མཐོང་བ་མ་ཡིན། སོ་སོའི་སྐྱེ་བོ་ཁོ་ནར་གྱུར་བཞིན་དུ་གྲུབ་པ་དང་། བདེ་བ་བླ་ན་མེད་པའི་མྱ་ངན་ལས་འདས་པ་འཐོབ་པར་ཡང་མི་འགྱུར། བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་མངོན་པར་རྫོགས་པར་འཚང་རྒྱ་བར་མི་འགྱུར་བ་དེའི་ཕྱིར་ འདུ་བྱེད་ཀྱི་མཚན་ཉིད་དང་། དོན་དམ་པའི་མཚན་ཉིད་ཐ་དད་པ་མ་ཡིན་ཞེས་བྱ་བར་མི་རུང་སྟེ དེ་ལ་གང་དག་དེ་སྐད་ཅེས་འདུ་བྱེད་ཀྱི་མཚན་ཉིད་དང་། དོན་དམ་པའི་མཚན་ཉིད་ཐ་དད་པ་མ་ཡིན་ཞེས་ཟེར་བ་དེ་དག་ནི་རྣམ་གྲངས་དེས་ན་ཁྱོད་ཀྱིས་འདི་ལྟར་ཚུལ་བཞིན་མ་ཡིན་པར་ཞུགས་པ་ཡིན་གྱི། ཚུལ་བཞིན་དུ་ཞུགས་པ་མ་ཡིན་པར་རིག་པར་བྱའོ། ། བློ་གྲོས་ཤིན་ཏུ་རྣམ་དག་གང་གི་ཕྱིར་བདེན་པ་མཐོང་བ་རྣམས་འདུ་བྱེད་ཀྱི་མཚན་མ་དང་བྲལ་བ་མ་ཡིན་གྱི། བྲལ་བ་ཁོ་ན་ཡིན་པ་དང་། བདེན་པ་མཐོང་བ་མཚན་མའི་འཆིང་བ་ལས་རྣམ་པར་གྲོལ་བ་མ་ཡིན་གྱི། རྣམ་པར་གྲོལ་བ་ཡིན་པ་དང་། བདེན་པ་མཐོང་བ་གནས་ངན་ལེན་གྱི་འཆིང་བ་ལས་རྣམ་པར་གྲོལ་བ་མ་ཡིན་གྱི། རྣམ་པར་གྲོལ་བ་དང་། འཆིང་བ་དེ་གཉི་ག་ལས་རྣམ་པར་གྲོལ་ན་གྲུབ་པ་དང་། བདེ་བ་བླ་ན་ མེད་པའི་ཕྱིར་མྱ་ངན་ལས་འདས་པ་འཐོབ་པར་འགྱུར་བ་དང་། བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་མངོན་པར་རྫོགས་པར་འཚང་རྒྱ་བར་ཡང་འགྱུར་བ་དེའི་ཕྱིར་ འདུ་བྱེད་ཀྱི་མཚན་ཉིད་དང་། དོན་དམ་པའི་མཚན་ཉིད་ཐ་དད་པ་ཞེས་བྱར་མི་རུང་སྟེ དེ་ལ་གང་དག་དེ་སྐད་ཅེས་འདུ་བྱེད་ཀྱི་མཚན་ཉིད་དང་། དོན་དམ་པའི་མཚན་ཉིད་ཐ་དད་པ་ཞེས་ཟེར་བ་དེ་དག་ནི་རྣམ་གྲངས་དེས་ན་ཁྱོད་ཀྱིས་འདི་ལྟར་ཚུལ་བཞིན་མ་ཡིན་པར་ཞུགས་པ་ཡིན་གྱི། ཚུལ་བཞིན་དུ་ཞུགས་པ་མ་ཡིན་པར་རིག་པར་བྱའོ། །",
+   "en": "“Suviśuddhamati, ordinary beings do not realize the truth and,  as mere ordinary beings, neither do they attain nirvāṇa, the unsurpassable good, nor do they fully and completely awaken to the unsurpassable complete and perfect awakening. For these reasons, it is not correct to say that the defining characteristic of conditioned phenomena and the defining characteristic of the ultimate are indistinct. Regarding this point, you should know through this approach that those who consider the defining characteristic of conditioned phenomena and the defining characteristic of the ultimate to be indistinct are not right but wrong. “Suviśuddhamati, it is not the case that those who realize the truth are not detached from the phenomenal appearance of conditioned phenomena, for they are indeed detached from it.  Neither are they not liberated from the bondage of phenomenal appearance, for they are indeed liberated from it. Nor are they not liberated from the bondage of corruption, for they are indeed liberated from it. Since they are liberated from these two kinds of bondage, not only do they attain nirvāṇa, the unsurpassable good, but they will also fully and completely awaken to the unsurpassable complete and perfect awakening.  For all these reasons, it is not correct to say that the defining characteristic of conditioned phenomena and the defining characteristic of the ultimate are distinct. Regarding this point, you should know through this approach that those who consider the defining characteristic of conditioned phenomena and the defining characteristic of the ultimate to be distinct are not right but wrong.",
+   "T0675": "「善清淨慧！以是義故，愚癡凡夫不見實諦，亦非即此凡夫之身得彼無上清淨涅槃，亦非即彼凡夫之身能得阿耨多羅三藐三菩提。是故，見實諦者不應見彼有為、無為行相一之與異。是故，彼人見有為行相、第一義相，一、異之義不成一、異。善清淨慧！汝當應知，彼諸菩薩言有為之行、第一義相是一、是異者，彼諸菩薩非正念，是邪念。",
+   "T0677": "「淨慧！由諸凡夫不見真如，在凡夫位不得無上如安涅槃，亦不能得無上菩提。以是義故，真如之理與諸行一，是義不然。若有人說：『真如與行相不異。』者，由此義故，當知是人不如理行。「復次，淨慧！一切聖人由見真如，已能伏滅諸法行相，非不能故；已能解脫一切相結及麁重惑，非不解脫。由二解脫，已得無上如安涅槃，乃至已得無上菩提。是故真如與行相異，是義不然。若有人說：『真異行相。』以是義故，當知此人不如理行。",
+   "T0676": "「善清淨慧！由於今時非諸異生皆已見諦；非諸異生已能獲得無上方便安隱涅槃；亦非已證阿耨多羅三藐三菩提。是故勝義諦相與諸行相都無異相，不應道理！若於此中作如是言：『勝義諦相與諸行相都無異者。』由此道理，當知一切非如理行，不如正理。「善清淨慧！由於今時非見諦者於諸行相不能除遣，然能除遣；非見諦者於諸相縛不能解脫，然能解脫；非見諦者於麁重縛不能解脫，然能解脫；以於二障能解脫故，亦能獲得無上方便安隱涅槃；或有能證阿耨多羅三藐三菩提。是故勝義諦相與諸行相，一向異相，不應道理！若於此中作如是言：『勝義諦相與諸行相一向異者。』由此道理，當知一切非如理行，不如正理。"
+  },
+  "sn3-04": {
+   "bo": "བློ་གྲོས་ཤིན་ཏུ་རྣམ་དག་གཞན་ཡང་གལ་ཏེ་འདུ་བྱེད་ཀྱི་མཚན་ཉིད་དང་། དོན་དམ་པའི་མཚན་ཉིད་ཐ་དད་པ་མ་ཡིན་པར་གྱུར་ན་ནི། དེས་ན་ཇི་ལྟར་འདུ་བྱེད་ཀྱི་མཚན་ཉིད་ཀུན་ནས་ཉོན་མོངས་པའི་མཚན་ཉིད་དུ་གཏོགས་པ་དེ་བཞིན་དུ་དོན་དམ་པའི་མཚན་ཉིད་ཀྱང་ཀུན་ནས་ཉོན་མོངས་པའི་མཚན་ཉིད་དུ་གཏོགས་པར་འགྱུར་རོ། ། བློ་གྲོས་ཤིན་ཏུ་རྣམ་དག་གལ་ཏེ་འདུ་བྱེད་ཀྱི་མཚན་ཉིད་དང་། དོན་དམ་པའི་མཚན་ཉིད་ཐ་དད་པ་ཡིན་པར་གྱུར་ན་ ཡང་། དེས་ན་འདུ་བྱེད་ཀྱི་མཚན་ཉིད་ཐམས་ཅད་ལ་དོན་དམ་པའི་མཚན་ཉིད་སྤྱིའི་མཚན་ཉིད་དུ་གྱུར་པ་མ་ཡིན་པར་འགྱུར་རོ། ། བློ་གྲོས་ཤིན་ཏུ་རྣམ་དག་གང་གི་ཕྱིར་དོན་དམ་པའི་མཚན་ཉིད་ཀུན་ནས་ཉོན་མོངས་པའི་མཚན་ཉིད་དུ་གཏོགས་པ་མ་ཡིན་པ་དང་། འདུ་བྱེད་ཀྱི་མཚན་ཉིད་ཐམས་ཅད་ལ་དོན་དམ་པའི་མཚན་ཉིད་སྤྱིའི་མཚན་ཉིད་དུ་གྱུར་པ་ཡིན་པ་དེའི་ཕྱིར་ འདུ་བྱེད་ཀྱི་མཚན་ཉིད་དང་། དོན་དམ་པའི་མཚན་ཉིད་ཐ་དད་པ་མ་ཡིན་ཞེས་བྱ་བར་ཡང་མི་རུང་ལ། དོན་དམ་པའི་མཚན་ཉིད་ཐ་དད་པ་ཞེས་བྱར་ཡང་མི་རུང་སྟེ དེ་ལ་གང་དག་དེ་སྐད་ཅེས་འདུ་བྱེད་ཀྱི་མཚན་ཉིད་དང་། དོན་དམ་པའི་མཚན་ཉིད་ཐ་དད་པ་མ་ཡིན་པ་ཞེས་ཟེར་བ་དང་། དོན་དམ་པའི་མཚན་ཉིད་ཐ་དད་པ་ཞེས་ཟེར་བ་དེ་དག་ན། རྣམ་གྲངས་དེས་ན་ཁྱོད་ཀྱིས་འདི་ལྟར་ཚུལ་བཞིན་མ་ཡིན་པར་ཞུགས་པ་ཡིན་གྱི། ཚུལ་བཞིན་དུ་ཞུགས་པ་མ་ཡིན་པར་རིག་པར་བྱའོ། །",
+   "en": "“Moreover, Suviśuddhamati, if the defining characteristic of conditioned phenomena and the defining characteristic of the ultimate were indistinct, then, just as the defining characteristic of conditioned phenomena is encompassed by the defining characteristic of affliction, so too would the defining characteristic of the ultimate be included in the defining characteristic of affliction. “However, Suviśuddhamati, if the defining characteristic of conditioned phenomena and the defining characteristic of the ultimate were distinct, then the defining characteristic of the ultimate could not be the universal defining characteristic within all the defining characteristics of conditioned phenomena. “Suviśuddhamati, the defining characteristic of the ultimate is not encompassed by the defining characteristic of affliction, and the defining characteristic of the ultimate is the universal defining characteristic within all the defining characteristics of conditioned phenomena. For these reasons, it is not correct to say that the defining characteristic of conditioned phenomena and the defining characteristic of the ultimate are either indistinct or distinct. Regarding this point, you should know through this approach that those pretending that the defining characteristic of conditioned phenomena and the defining characteristic of the ultimate are indistinct or distinct are not right but wrong.",
+   "T0675": "「復次，善清淨慧！若有為行相、第一義相二不異者，如有為行墮在染相，第一義相亦應墮染。善清淨慧！若有為行相離第一義相異者，如是，一切有為之行不應與彼第一義同故。善清淨慧！第一義諦不墮一切煩惱染中，以是得言有為之行、第一義諦得言同相。是故，善清淨慧！汝不應言有為行相、第一義諦有一、有異。",
+   "T0677": "「復次，淨慧！若真如與行相不異者，猶如行相墮於惑相，真相亦爾應墮惑相。復次，淨慧！若真如相異行相者，真如則非諸行通相。淨慧！以此真如不墮惑相，復為一切諸行通相。由是義故，真如與行亦一、亦異，義皆不然。若有人說：『真如與行亦一、亦異。』以是義故，當知是人不如理行。",
+   "T0676": "「復次，善清淨慧！若勝義諦相與諸行相都無異者，如諸行相墮雜染相，此勝義諦相亦應如是墮雜染相。善清淨慧！若勝義諦相與諸行相一向異者，應非一切行相共相，名勝義諦相。善清淨慧！由於今時勝義諦相非墮雜染相；諸行共相名勝義諦相。是故勝義諦相與諸行相都無異相，不應道理；勝義諦相與諸行相一向異相，不應道理！若於此中作如是言：『勝義諦相與諸行相都無有異；或勝義諦相與諸行相一向異者。』由此道理，當知一切非如理行，不如正理。"
+  },
+  "sn3-05": {
+   "bo": "བློ་གྲོས་ཤིན་ཏུ་རྣམ་དག་གཞན་ཡང་གལ་ཏེ་འདུ་བྱེད་ཀྱི་མཚན་ཉིད་དང་། དོན་དམ་པའི་མཚན་ཉིད་ཐ་དད་པ་མ་ཡིན་པར་ གྱུར་ན་ནི། དེས་ན་ཇི་ལྟར་དོན་དམ་པའི་མཚན་ཉིད་འདུ་བྱེད་ཀྱི་མཚན་ཉིད་ཐམས་ཅད་ལ་བྱེ་བྲག་མེད་པ་དེ་བཞིན་དུ་འདུ་བྱེད་ཀྱི་མཚན་ཉིད་ཐམས་ཅད་ཀྱང་བྱེ་བྲག་མེད་པ་དང་། རྣལ་འབྱོར་པ་དག་འདུ་བྱེད་རྣམས་ལ་ཇི་ལྟར་མཐོང་བ་དང་ཇི་ལྟར་ཐོས་པ་དང་ཇི་ལྟར་བྱེ་བྲག་ཕྱེད་པ་དང་ཇི་ལྟར་རྣམ་པར་ཤེས་པ་ལས་གོང་དུ་དོན་དམ་པ་ཡོངས་སུ་འཚོལ་བར་ཡང་མི་འགྱུར་རོ། ། གལ་ཏེ་འདུ་བྱེད་ཀྱི་མཚན་ཉིད་དང་། དོན་དམ་པའི་མཚན་ཉིད་ཐ་དད་པ་ཡིན་པར་གྱུར་ན་ནི། དེས་ན་འདུ་བྱེད་རྣམས་ཀྱི་བདག་མེད་པ་ཙམ་དང་། ངོ་བོ་ཉིད་མེད་པ་ཙམ་ཉིད་དོན་དམ་པའི་མཚན་ཉིད་ཡིན་པར་ཡང་མི་འགྱུར། ཀུན་ནས་ཉོན་མོངས་པའི་མཚན་ཉིད་དང་། རྣམ་པར་བྱང་བའི་མཚན་ཉིད་ཀྱང་དུས་གཅིག་ཏུ་མཚན་ཉིད་ཐ་དད་དུ་གྲུབ་པར་འགྱུར་རོ། ། བློ་གྲོས་ཤིན་ཏུ་རྣམ་དག་གང་གི་ཕྱིར་འདུ་བྱེད་ཀྱི་མཚན་ཉིད་རྣམས་ནི་བྱེ་བྲག་ཡོད་པ་ཡིན་ཏེ། བྱེ་བྲག་མེད་པ་མ་ཡིན་པ་དང་། རྣལ་འབྱོར་པ་དག་འདུ་བྱེད་རྣམས་ལ་ཇི་ལྟར་མཐོང་བ་དང་། ཐོས་པ་དང་། བྱེ་བྲག་ཕྱེད་པ་དང་། རྣམ་པར་ཤེས་པ་ལས་གོང་དུ་དོན་དམ་པ་ཡོངས་སུ་ཚོལ་བར་བྱེད་པ་དང་། དོན་དམ་པ་ནི་འདུ་བྱེད་རྣམས་ཀྱི་བདག་མེད་པས་རབ་ཏུ་ཕྱེ་བ་ཡིན་པ་དང་། ཀུན་ནས་ཉོན་མོངས་པ་དང་། རྣམ་པར་བྱང་བའི་མཚན་ཉིད་ཀྱང་དུས་གཅིག་ཏུ་མཚན་ཉིད་ཐ་དད་དུ་གྲུབ་པ་མེད་པ་དེའི་ཕྱིར་ འདུ་བྱེད་ཀྱི་མཚན་ཉིད་དང་། དོན་དམ་པའི་མཚན་ཉིད་ཐ་དད་པ་མ་ཡིན་པའམ། ཐ་དད་པ་ཞེས་བྱར་མི་རུང་ངོ་། ། དེ་ལ་གང་དག་དེ་སྐད་ཅེས་འདུ་བྱེད་ཀྱི་མཚན་ཉིད་དང་། དོན་དམ་པའི་མཚན་ཉིད་ཐ་དད་པ་མ་ཡིན་པའམ། ཐ་དད་པ་ཞེས་ཟེར་བ་དེ་དག་ནི་རྣམ་གྲངས་དེས་ན། ཁྱོད་ཀྱིས་འདི་ལྟར་ཚུལ་བཞིན་མ་ཡིན་པར་ཞུགས་པ་ཡིན་གྱི། ཚུལ་བཞིན་དུ་ཞུགས་པ་མ་ཡིན་པར་རིག་པར་བྱའོ། །",
+   "en": "“Moreover, Suviśuddhamati, if the defining characteristic of conditioned phenomena and the defining characteristic of the ultimate were not distinct, then, just as the defining characteristic of the ultimate is not specific to any defining characteristic of conditioned phenomena, so too would all defining characteristics of conditioned phenomena not be specific to any conditioned phenomenon, and yogis would also not look for the ultimate beyond whatever they see, hear, distinguish, or know with regard to conditioned phenomena. “However, Suviśuddhamati, if the defining characteristic of conditioned phenomena and the defining characteristic of the ultimate were distinct, then, the mere selflessness and essencelessness of conditioned phenomena would not be the defining characteristic of the ultimate. The defining characteristic of affliction and the defining characteristic of purity themselves would be simultaneously established as distinct defining characteristics of conditioned phenomena. “Suviśuddhamati, the defining characteristics of conditioned phenomena are specific and not unspecific to conditioned phenomena; yogis do look for the ultimate beyond whatever they see, hear, distinguish, or know with regard to conditioned phenomena; the ultimate is indeed characterized by the mere selflessness and essencelessness of conditioned phenomena; and the defining characteristic of affliction and the defining characteristic of purity also are not simultaneously established as distinct defining characteristics of conditioned phenomena. For all these reasons, it is not correct to say that the defining characteristic of conditioned phenomena and the defining characteristic of the ultimate are neither indistinct nor distinct. Regarding this point, you should know through these approaches that those pretending that the defining characteristic of conditioned phenomena and the defining characteristic of the ultimate are indistinct or distinct are not right but wrong.",
+   "T0675": "「復次，善清淨慧！若有為行相、第一義相二不異者，第一義諦不異有為一切諸行，如是一切有為之行亦應不異第一義相；而彼有為異第一義——若不異者，如實行者見聞覺知有為行相，不應更求無上勝法。「善清淨慧！若有為行相、第一義相不異者，即有為行應名無我無自體相，是第一義相。「善清淨慧！復有過失，謂於一時差別異相——此是染相、此是淨相。是故，善清淨慧！第一義相異有為行相，而非不異有為行相。是故，彼諸如實行者見聞覺知，更求勝法。以如實知有為行故，得於無我第一義名，而不一時有染、有淨二相差別。是故，離彼有為行相、第一義相，不一、不異，義亦不成。「善清淨慧！彼諸菩薩作如是言：『有為行相、第一義相，不一、不異者，彼諸菩薩不名善說。』善清淨慧！汝當應知，彼諸菩薩不名正念如實修行，是名邪念。",
+   "T0677": "「復次，淨慧！若真如與行相不異者，如真實相於諸行中通無差別，行相亦爾，應通無別。是故修觀行人，於諸行中，不應過此見、聞、覺、知修勝真觀。復次，若真如相異行相者，以是義故，一切諸行，但惟無我及以無性，應非真實。復次，一時淨、不淨品，各各別相。淨慧！由諸行相但別不通，由觀行人於諸行中，過見、聞、覺、知修勝真觀，由諸行無我、無性所顯是真，乃至淨、不淨品，亦非一時各各別相。以是義故，真如與行亦一亦異，是義不然。若有人說，真如與行亦一、亦異，當知是人不如理行。",
+   "T0676": "「復次，善清淨慧！若勝義諦相與諸行相都無異者，如勝義諦相於諸行相無有差別，一切行相亦應如是無有差別。修觀行者於諸行中，如其所見、如其所聞、如其所覺、如其所知，不應後時更求勝義。若勝義諦相與諸行相一向異者，應非諸行唯無我性、唯無自性之所顯現，是勝義相。又應俱時別相成立，謂雜染相及清淨相。「善清淨慧！由於今時一切行相皆有差別，非無差別；修觀行者於諸行中，如其所見、如其所聞、如其所覺、如其所知，復於後時更求勝義。又即諸行唯無我性、唯無自性之所顯現，名勝義相。又非俱時染淨二相別相成立。是故勝義諦相與諸行相都無有異、或一向異，不應道理！若於此中作如是言：『勝義諦相與諸行相都無有異、或一向異者。』由此道理，當知一切非如理行，不如正理。"
+  },
+  "sn3-06": {
+   "bo": "བློ་གྲོས་ཤིན་ཏུ་རྣམ་དག་འདི་ལྟ་སྟེ་དཔེར་ན། དུང་གི་དཀར་པོ་ཉིད་ནི། དུང་དང་མཚན་ཉིད་ཐ་དད་པ་མ་ཡིན་པའམ། མཚན་ཉིད་ཐ་དད་དུ་གདགས་པར་སླ་བ་མ་ཡིན་ནོ། །དུང་གི་དཀར་པོ་ཉིད་ཇི་ལྟ་བ་བཞིན་དུ་གསེར་གྱི་སེར་པོ་ཉིད་ཀྱང་དེ་བཞིན་ནོ། ། པི་བང་གི་སྒྲའི་སྙན་པ་ཉིད་ཀྱང་པི་བང་གི་སྒྲ་དང་མཚན་ཉིད་ཐ་དད་པ་མ་ཡིན་ པའམ། མཚན་ཉིད་ཐ་དད་པར་གདགས་པར་སླ་བ་མ་ཡིན་ནོ། །ཨ་ག་རུ་ནག་པོའི་དྲི་ཞིམ་པ་ཉིད་ཀྱང་ཨ་ག་རུ་ནག་པོ་དང་མཚན་ཉིད་ཐ་དད་པ་མ་ཡིན་པའམ། མཚན་ཉིད་ཐ་དད་དུ་གདགས་པར་སླ་བ་མ་ཡིན་ནོ། །ན་ལེ་ཤམ་གྱི་ཚ་བ་ཉིད་ཀྱང་ན་ལེ་ཤམ་དང་མཚན་ཉིད་ཐ་དད་པ་མ་ཡིན་པའམ། མཚན་ཉིད་ཐ་དད་དུ་གདགས་པར་སླ་བ་མ་ཡིན་ནོ། །ན་ལེ་ཤམ་གྱི་ཚ་བ་ཉིད་ཇི་ལྟ་བ་བཞིན་ཨ་རུ་རའི་བསྐ་བ་ཉིད་ཀྱང་དེ་བཞིན་ནོ། །འདི་ལྟ་སྟེ་དཔེར་ན། ཤིང་བལ་གྱི་འདའ་བའི་འཇམ་པ་ཉིད་ཀྱང་ཤིང་བལ་གྱི་འདའ་བ་དང་མཚན་ཉིད་ཐ་དད་པ་མ་ཡིན་པའམ། མཚན་ཉིད་ཐ་དད་དུ་གདགས་པར་སླ་བ་མ་ཡིན་ནོ། །འདི་ལྟ་སྟེ་དཔེར་ན། མར་ལ་མར་གྱི་སྙིང་ཁུ་ཡང་མར་དང་མཚན་ཉིད་ཐ་དད་པ་མ་ཡིན་པའམ། མཚན་ཉིད་ཐ་དད་དུ་གདགས་པར་སླ་བ་མ་ཡིན་ནོ། ། འདི་ལྟ་སྟེ་དཔེར་ན། འདུ་བྱེད་ཐམས་ཅད་ལ་མི་རྟག་པ་ཉིད་དང་། ཟག་པ་དང་བཅས་པ་ཐམས་ཅད་ལ་སྡུག་བསྔལ་བ་ཉིད་དང་། ཆོས་ཐམས་ཅད་ལ་གང་བདག་མེད་པ་ཉིད་ཀྱང་དེ་དག་དང་མཚན་ཉིད་ཐ་དད་པ་མ་ཡིན་པའམ། མཚན་ཉིད་ཐ་དད་དུ་གདགས་པར་སླ་བ་མ་ཡིན་ནོ། ། བློ་གྲོས་ཤིན་ཏུ་རྣམ་དག་འདི་ལྟ་སྟེ་དཔེར་ན་འདོད་ཆགས་ཀྱི་མ་ཞི་བའི་མཚན་ཉིད་དང་། ཀུན་ནས་ཉོན་མོངས་པའི་མཚན་ཉིད་ཀྱང་འདོད་ཆགས་དང་མཚན་ཉིད་ཐ་དད་པ་མ་ཡིན་པའམ། མཚན་ཉིད་ཐ་དད་དུ་གདགས་པར་སླ་བ་མ་ཡིན་པ་དང་། འདོད་ཆགས་ཀྱི་ཇི་ལྟ་བ་བཞིན་དུ་ཞེ་སྡང་དང་གཏི་མུག་གི་ཡང་དེ་བཞིན་དུ་རིག་པར་བྱའོ། ། བློ་གྲོས་ཤིན་ཏུ་རྣམ་དག་དེ་བཞིན་དུ་འདུ་བྱེད་ཀྱི་མཚན་ཉིད་དང་། དོན་དམ་པའི་མཚན་ཉིད་ཀྱང་མཚན་ཉིད་ཐ་དད་པ་མ་ཡིན་པའམ། མཚན་ཉིད་ཐ་དད་དུ་གདགས་པར་མི་བཟོད་དོ། །",
+   "en": "“Suviśuddhamati, it is like this: It is not easy to decide  whether the whiteness of the conch is distinct or indistinct from the defining characteristic of the conch, likewise with the yellowness of gold. It is not easy to decide whether the quality of the sound produced by a vīṇā is distinct or indistinct from the defining characteristic of sound, likewise with aloe and its fragrance, pepper and its heat, myrobalan and its astringency, cotton and its softness, and clarified butter and butter. Thus it is not easy to decide whether the impermanence of all conditioned phenomena is distinct or indistinct from the defining characteristic of conditioned phenomena, likewise with the suffering of all beings with outflows and the defining characteristic of beings with outflows, as well as the selflessness of all phenomena and the defining characteristic of phenomena. “Suviśuddhamati, it is like this: It is not easy to decide whether the defining characteristic of restless desire and the defining characteristic of afflictions are distinct or indistinct from the defining characteristic of desire. You should know it is just like this with anger and delusion too. Likewise, Suviśuddhamati, you should not see anything good  in deciding whether the defining characteristic of conditioned phenomena and the defining characteristic of the ultimate are distinct or indistinct.",
+   "T0675": "「善清淨慧！譬如珂白不可說一、不可說異；如是，金黃箜篌妙聲、沈水香味、蓽茇辛味、訶梨勒苦味、苷蔗甜味、兜羅柔軟蘇，乃至醍醐，不可說一、不可說異。善清淨慧！如是，一切有為行體、無常之相，不可說一、不可說異；一切有漏、所有苦相，不可說一、不可說異；一切法中無、我之相，不可說一、不可說異；貪瞋癡染、不寂靜相，不可說一、不可說異。善清淨慧！如是，一切有為之行、第一義相，不可說一、不可說異。",
+   "T0677": "「淨慧！譬如傷佉白色，不可安立與螺一、異；赤色與金不一、不異，亦復如是。譬如毘拏音聲美妙，不可安立與毘拏一、與毘拏異；復如沈香，香氣可愛，不可安立與沈一、異；亦如摩梨遮其味辛辣，不可安立與摩梨遮為一、為異；呵梨勒澁亦復如是。復如綿纊，其觸柔軟，不可安立與綿一、異；蘇與醍醐不一、不異，亦復如是。復如一切有流苦，一切行無常，一切法無我，如是苦等，不可安立與法一、異；亦如貪欲、瞋恚、愚癡、慢等，無寂靜相，不可安立與其一、異。淨慧！如是真如與一切行，不可安立為一、為異。",
+   "T0676": "「善清淨慧！如螺貝上鮮白色性，不易施設與彼螺貝一相異相。如螺貝上鮮白色性；金上黃色亦復如是。如箜篌聲上美妙曲性，不易施設與箜篌聲一相異相。如黑沈上有妙香性，不易施設與彼黑沈一相異相。如胡椒上辛猛利性，不易施設與彼胡椒一相異相。如胡椒上辛猛利性，訶梨淡性亦復如是。如蠧羅綿上有柔軟性，不易施設與蠧羅綿一相異相。如熟酥上所有醍醐，不易施設與彼熟酥一相異相。又如一切行上無常性，一切有漏法上苦性，一切法上補特伽羅無我性，不易施設與彼行等一相異相。又如貪上不寂靜相及雜染相，不易施設此與彼貪一相異相。如於貪上，於瞋、癡上，當知亦爾。如是，善清淨慧！勝義諦相不可施設與諸行相一相異相。"
+  },
+  "sn3-07": {
+   "bo": "བློ་གྲོས་ཤིན་ཏུ་རྣམ་དག་ངས་ནི་དེ་ལྟར་དོན་དམ་པ་ཕྲ་བ་མཆོག་ཏུ་ཕྲ་བ། མཆོག་ཏུ་ཟད་པ། རྟོགས་པར་དཀའ་བ། མཆོག་ཏུ་དཀའ་བ། ཐ་དད་པ་དང་། ཐ་དད་པ་མ་ཡིན་པ་ཉིད་ལས་ཡང་དག་པར་འདས་པའི་མཚན་ཉིད་མངོན་པར་རྫོགས་པར་སངས་རྒྱས་ཏེ། མངོན་པར་རྫོགས་པར་སངས་རྒྱས་ནས་ཀྱང་བསྙད་ཅིང་གསལ་བར་བྱས། རྣམ་པར་ཕྱེ། གདགས་པ་བྱས།  རབ་ཏུ་བསྟན་ཏོ། །",
+   "en": "In this way, Suviśuddhamati, I have completely and fully awakened to the ultimate that is subtle, extremely subtle, [profound], extremely profound, difficult to understand, extremely difficult to understand, and characterized as transcending being distinct or indistinct from conditioned phenomena.  Yet, after I attained complete and perfect awakening, I communicated through words, gave explanations, established distinctions, expressed myself through conventions, and imparted teachings.”",
+   "T0675": "「善清淨慧！如是，我得細微細深甚深難證極難證過一異相第一義諦覺，覺已為人說示、開示、現示、建立。」",
+   "T0677": "「淨慧！如是真如，微細甚深難可通達，我覺了已，為他解說，安立正教，開示顯現，令義淺易。」",
+   "T0676": "「善清淨慧！我於如是微細、極微細，甚深、極甚深，難通達、極難通達，超過諸法一異性相，勝義諦相現正等覺；現等覺已為他宣說、顯示、開解、施設、照了。」"
+  },
+  "sn3-08": {
+   "bo": "དེ་ནས་བཅོམ་ལྡན་འདས་ཀྱིས་དེའི་ཚེ་ཚིགས་སུ་བཅད་པ་འདི་དག་བཀའ་སྩལ་ཏོ། ། འདུ་བྱེད་ཁམས་དང་དོན་དམ་མཚན་ཉིད་ནི། །གཅིག་དང་ཐ་དད་བྲལ་བའི་མཚན་ཉིད་དེ། ། གཅིག་དང་ཐ་དད་དུ་ཡང་གང་རྟོག་པ། །དེ་དག་ཚུལ་བཞིན་མ་ཡིན་ཞུགས་པ་ཡིན། ། སྐྱེ་བ་པོ་ཡིས་ལྷག་མཐོང་དང་། །ཞི་གནས་གོམས་པར་བྱས་ནས་ནི། །གནས་ངན་ལེན་གྱི་འཆིང་བ་དང་། །མཚན་མའི་འཆིང་ལས་རྣམ་གྲོལ་འགྱུར། །",
+   "en": "Then, at that moment, the Blessed One spoke these verses: “The defining characteristics of the domains of conditioned phenomena and of the ultimateAre free from being distinct or indistinct. Those who imagine them to be distinct or indistinct are mistaken. “As beings practice mental stillness and insight,They will be liberated from the bonds of corruptionAnd the bonds of phenomenal appearance.”",
+   "T0675": "爾時，如來而說偈言：「有為界、實諦，一、異相離相， 若分別一、異，彼癡非正念。 彼人為相縛，及為煩惱縛， 修毘婆奢那、奢摩他得脫。」",
+   "T0677": "「佛說經已，重說偈言：「真實與行法，無一異俱相。 若執一異俱，說行不如理， 修行奢摩他，及毘鉢舍那， 是人能解脫，相惑麁重結。」",
+   "T0676": "爾時，世尊欲重宣此義，而說頌曰：「行界勝義相，離一異性相； 若分別一異，彼非如理行。 眾生為相縛，及彼麁重縛； 要勤修止觀，爾乃得解脫。」"
+  },
+  "sn3-09": {
+   "bo": "བློ་གྲོས་ཤིན་ཏུ་རྣམ་དག་གི་ལེའུ་སྟེ་གསུམ་པའོ།། །།",
+   "en": "This was the chapter of the bodhisattva Suviśuddhamati—the third chapter."
+  }
+ }
+}

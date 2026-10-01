@@ -1,0 +1,155 @@
+{
+ "slug": "samdhinirmocana-2",
+ "title": "解深密經・法涌菩薩章（勝義超過尋思）",
+ "family": "bo",
+ "intro": "藏譯第二章。法涌菩薩說見外道論勝義而不能定，佛說勝義超過一切尋思：聖者內證、無相、離言、絕表示、離諍論，以五喻明之。玄奘本在〈勝義諦相品〉中段，流支本為〈曇無竭菩薩問品〉，真諦本為〈過覺觀境品〉。",
+ "units": [
+  {
+   "id": "sn2-00",
+   "label": "法涌白佛：外道共論勝義不能決定"
+  },
+  {
+   "id": "sn2-01",
+   "label": "佛印可：現覺勝義而為他說"
+  },
+  {
+   "id": "sn2-02",
+   "label": "一、勝義是聖者內證"
+  },
+  {
+   "id": "sn2-03",
+   "label": "二至五：無相・不可言說・絕表示・絕諍論"
+  },
+  {
+   "id": "sn2-04",
+   "label": "五喻：苦味不知蜜味……"
+  },
+  {
+   "id": "sn2-05",
+   "label": "結：尋思者不能知勝義"
+  },
+  {
+   "id": "sn2-06",
+   "label": "偈頌"
+  },
+  {
+   "id": "sn2-07",
+   "label": "章尾題"
+  }
+ ],
+ "versions": [
+  {
+   "id": "bo",
+   "lang": "bo",
+   "label": "藏譯",
+   "who": "德格版 Toh 106・84000 翻譯記憶"
+  },
+  {
+   "id": "en",
+   "lang": "en",
+   "label": "84000 英譯",
+   "who": "譯自藏譯・與藏文逐句對齊"
+  },
+  {
+   "id": "T0675",
+   "lang": "lzh",
+   "label": "流支本",
+   "who": "菩提流支譯《深密解脫經》・514 年",
+   "work": "T0675"
+  },
+  {
+   "id": "T0677",
+   "lang": "lzh",
+   "label": "真諦本",
+   "who": "真諦譯《解節經》・約 560 年",
+   "work": "T0677"
+  },
+  {
+   "id": "T0676",
+   "lang": "lzh",
+   "label": "玄奘本",
+   "who": "玄奘譯《解深密經》・647 年",
+   "work": "T0676"
+  }
+ ],
+ "works": [
+  "DKtoh0106",
+  "T0675",
+  "T0676",
+  "T0677"
+ ],
+ "anchors": [
+  {
+   "work": "T0675",
+   "node": "聖者曇無竭菩薩問品第三",
+   "uid": "T16n0675_p0666c12"
+  },
+  {
+   "work": "T0677",
+   "node": "解節經過覺觀境品第二",
+   "uid": "T16n0677_p0712b17"
+  },
+  {
+   "work": "T0676",
+   "range": [
+    "T16n0676_p0689c10",
+    "T16n0676_p0690a27"
+   ]
+  }
+ ],
+ "cells": {
+  "sn2-00": {
+   "bo": "དེ་ནས་བཅོམ་ལྡན་འདས་ལ་བྱང་ཆུབ་སེམས་དཔའ་ཆོས་འཕགས་ཀྱིས་འདི་སྐད་ཅེས་གསོལ་ཏོ། ། བཅོམ་ལྡན་འདས་སྔོན་གྱི་དུས་རྣམས་ཀྱི་ཤིན་ཏུ་སྔ་མ་ཞིག་ན། འདི་ནས་འཇིག་རྟེན་གྱི་ཁམས་གང་གཱའི་ཀླུང་བདུན་ཅུ་རྩ་བདུན་གྱི་བྱེ་མ་སྙེད་འདས་པ་ན། དེ་བཞིན་གཤེགས་པ་གྲགས་པ་རྒྱ་ཆེན་གྱི་སངས་རྒྱས་ཀྱི་ཞིང་འཇིག་རྟེན་གྱི་ཁམས་གྲགས་པ་ཅན་ཞེས་བགྱི་བ་དེར་བདག་མཆིས་པའི་ཚེ། དེ་ན་བདག་གིས་མུ་སྟེགས་ཅན་རང་རང་གི་སྟོན་པ་ལ་སོགས་པ་འབུམ་ཕྲག་བདུན་ཅུ་རྩ་བདུན་འདི་ལྟ་སྟེ། ཆོས་རྣམས་ཀྱི་དོན་དམ་པའི་མཚན་ཉིད་བསམ་པ་ ལས་བརྩམས་ནས་ས་ཕྱོགས་ཞིག་ན་མཆིས་ཤིང་འདུས་ནས་ དེ་དག་ཆོས་རྣམས་ཀྱི་དོན་དམ་པའི་མཚན་ཉིད་སེམས་པར་བགྱིད། འཇལ་བར་བགྱིད། ཉེ་བར་རྟོག་པར་བགྱིད། ཡོངས་སུ་ཚོལ་བར་བགྱིད་ཀྱང་མ་རྟོགས་ནས་ བློ་གྲོས་ཐ་དད་པ་ཡིད་གཉིས་ཅན། བློ་གྲོས་ངན་པ། རྩོད་པ་དང་འགྱེད་པར་གྱུར་པ་དག་གཅིག་ལ་གཅིག་ཁ་སྟོབས་ཀྱིས་གནོན་པ་བགྱིས། ཞེར་འདེབས་པ་བགྱིས། གབ་གབ་བགྱིས། མནན་པ་བགྱིས། ཚར་གཅད་པ་བགྱིས་ཏེ་སོ་སོར་མཆིས་པ་དག་ཅིག་མཐོང་ནས། བཅོམ་ལྡན་འདས་བདག་འདི་སྙམ་བགྱིད་དོ། ། ཀྱེ་མ་དེ་བཞིན་གཤེགས་པ་རྣམས་འཇིག་རྟེན་དུ་འབྱུང་ཞིང་དེ་དག་བྱུང་བས་དོན་དམ་པ་རྟོག་གེ་ཐམས་ཅད་ལས་ཡང་དག་པར་འདས་པའི་མཚན་ཉིད་འདི་ལྟ་བུ་རྟོགས་པ་དང་། མངོན་སུམ་དུ་བགྱི་བ་མཆིས་པ་ནི་ངོ་མཚར་རྨད་དུ་བྱུང་བ་ལགས་སོ་སྙམ་བགྱིད་ལགས་སོ། །",
+   "en": "Then the bodhisattva Dharmodgata spoke these words: “Blessed One, very long ago in ancient times, beyond as many universes as there are grains of sand in seventy-seven Ganges rivers, I was residing in the world Kīrtimat of the tathāgata Viśālakīrti. There I [saw ]7,700,000 non-Buddhists, together with their teachers, who had gathered in one place to consider the ultimate defining characteristic of phenomena. Although they had examined, analyzed, investigated, and considered in detail the ultimate defining characteristic of phenomena, they did not understand it. They had changing opinions, lacked certainty, and were slow-witted as well as argumentative. Insulting one another with harsh words, they became abusive, agitated, unprincipled, and violent. Then, Blessed One, I thought to myself, ‘This is so sad, and yet, how marvelous, how wonderful are the manifestations of the tathāgatas in the world and, through their manifestations, the realization and actualization of the ultimate whose defining characteristic is beyond all speculation!’ ”",
+   "T0675": "爾時，聖者曇無竭菩薩摩訶薩，依於如實第一義諦過諸一切世間覺觀境界之相，白佛言：「世尊！我憶過去世、復過彼過去世，離此世界七十七恒河沙世界、過彼無量恒河沙世界已，有佛國土，號名稱世界，彼中有佛名毘摩羅吉諦如來，住彼國土。我於爾時遊化眾生往彼世界。爾時，見有一外道師止住一處，有七萬七千弟子聚集其所，依第一義相思惟諸法。彼諸外道迭共推覓第一義相、稱量第一義相、思惟第一義相，觀察不見第一義相，生異異意、異異見、異異執著，立異朋黨起於諍論，口力交諍出不善言，迭共相亂起散而去。世尊！我於爾時即生心念：『希有，諸佛如來出世。以依如來出世間故，今得見聞過於一切世間境界第一義相、得證第一義相、見第一義相、證一切滅相。』」",
+   "T0677": "爾時，曇無竭菩薩白佛言：「世尊！從此娑訶世界，向東最遠極東方世界，過七十七恒河沙數世界，有世界曰善名聞，佛號廣大善聞修伽陀住處。我於一時，往彼佛所，即於彼中見一方地，有七十七千諸外道眾，以師為先聚集而坐，為欲思量諸法實相。時外道眾思惟稱量，簡擇安立諸法實相，依其所學求覓實相，無能得者。起種種執，相違鬪諍，乃至言相違害，由口刀杖，互相傷毀，便各分散。我見此已作是思惟：『希有，希有！諸佛世尊，出於世間，由佛出世，過覺觀境，甚深法相，通達覺了，皆得顯現。』」",
+   "T0676": "爾時，法涌菩薩白佛言：「世尊！從此東方過七十二殑伽河沙等世界，有世界，名具大名稱；是中如來，號廣大名稱。我於先日，從彼佛土發來至此。我於彼佛土曾見一處，有七萬七千外道并其師首，同一會坐。為思諸法勝義諦相，彼共思議、稱量、觀察、遍推求時，於一切法勝義諦相，竟不能得。唯除種種意解，別異意解，變異意解，互相違背共興諍論，口出矛𥎞，更相𥎞已、刺已、惱已、壞已，各各離散。世尊！我於爾時，竊作是念：『如來出世，甚奇！希有！由出世故，乃於如是超過一切尋思所行勝義諦相，亦有通達，作證可得。』」說是語已。"
+  },
+  "sn2-01": {
+   "bo": "བཅོམ་ལྡན་འདས་ཀྱིས་བྱང་ཆུབ་སེམས་དཔའ་ཆོས་འཕགས་ལ་འདི་སྐད་ཅེས་བཀའ་སྩལ་ཏོ། ། ཆོས་འཕགས་དེ་དེ་བཞིན་ནོ། །དེ་དེ་བཞིན་ཏེ། ངས་ནི་དོན་དམ་པ་རྟོག་གེ་ཐམས་ཅད་ལས་ཡང་དག་པར་འདས་པའི་མཚན་ཉིད་མངོན་པར་རྫོགས་པར་སངས་རྒྱས་ཏེ། མངོན་པར་རྫོགས་པར་སངས་རྒྱས་ནས་ཀྱང་བསྙད་ཅིང་གསལ་བར་བྱས། རྣམ་པར་ཕྱེ། གདགས་པར་བྱས། རབ་ཏུ་བསྟན་ཏོ། །",
+   "en": "The Blessed One answered to the bodhisattva Dharmodgata: “So it is, Dharmodgata. So it is. I have completely and perfectly awakened to the ultimate characterized as being beyond all speculation. Yet, after I attained complete and perfect awakening, I communicated through words, gave explanations, established distinctions, expressed myself through conventions, and imparted teachings.",
+   "T0675": "爾時，世尊告曇無竭菩薩言：「曇無竭！如是，如是。我覺過諸世間境界第一義相，如是覺已而為人說、以示於人、顯示於人，建立是法。",
+   "T0677": "菩薩說已，佛即告言：「如是，法上！如是實相，過覺觀境。我覺了已，為他解說，安立正教，開示顯現，令義淺易。",
+   "T0676": "爾時，世尊告法涌菩薩曰：「善男子！如是，如是！如汝所說。我於超過一切尋思勝義諦相，現等正覺；現等覺已，為他宣說、顯現、開解、施設、照了。"
+  },
+  "sn2-02": {
+   "bo": "དེ་ཅིའི་ཕྱིར་ཞེ་ན། དོན་དམ་པ་ནི་འཕགས་པ་རྣམས་ཀྱི་སོ་སོ་རང་གི་རིག་པ་ཡིན་པར་ངས་བཤད་ལ། སོ་སོའི་སྐྱེ་བོ་རྣམས་ཀྱི་ཕན་ཚུན་རིག་པར་བྱ་བ་ནི། རྟོག་གེའི་སྤྱོད་ཡུལ་ཡིན་པའི་ཕྱིར་ཏེ། ཆོས་འཕགས་དེའི་ཕྱིར་རྣམ་གྲངས་དེས་ཁྱོད་ཀྱིས་འདི་ལྟར་རྟོག་གེ་ཐམས་ཅད་ལས་ཡང་དག་པར་འདས་པའི་མཚན་ཉིད་གང་ཡིན་པ་ནི་དོན་དམ་པ་ཡིན་པར་རིག་པར་བྱའོ། །",
+   "en": "One might ask why I did this. I have explained that the ultimate is what is cognized by noble beings in a personal and intuitive way,  whereas ordinary beings’ knowledge [resulting from interacting] with one another belongs to the domain of speculation. Therefore, Dharmodgata, you should know in this way through this approach that the ultimate is what is characterized as transcending all speculation.",
+   "T0675": "何以故？我為聖人說我內身自所證法、為諸凡夫說覺觀境界，迭共所知。曇無竭！汝今當依此義而知所謂過諸世間境界是第一義相。",
+   "T0677": "何以故？我說真實，但是聖人自所證見；若是凡夫覺觀境界，自他可證。法上！以是義故，應知實相過於一切覺觀境界。",
+   "T0676": "何以故？我說：『勝義是諸聖者內自所證；尋思所行是諸異生展轉所證。』是故，法涌！由此道理，當知勝義超過一切尋思境相。"
+  },
+  "sn2-03": {
+   "bo": "ཆོས་འཕགས་གཞན་ཡང་དོན་དམ་པ་ནི་མཚན་མ་མེད་པའི་སྤྱོད་ཡུལ་ཡིན་པར་ངས་བཤད་ལ། རྟོག་གེ་ནི་མཚན་མའི་སྤྱོད་ཡུལ་ཡིན་ཏེ། ཆོས་འཕགས་དེའི་ཕྱིར་རྣམ་གྲངས་དེས་ཀྱང་ཁྱོད་ཀྱིས་འདི་ལྟར་རྟོག་གེ་ཐམས་ཅད་ལས་ཡང་དག་པར་འདས་པའི་མཚན་ ཉིད་གང་ཡིན་པ་ནི་དོན་དམ་པ་ཡིན་པར་རིག་པར་བྱའོ། ། ཆོས་འཕགས་གཞན་ཡང་དོན་དམ་པ་ནི་བརྗོད་དུ་མེད་པ་ཡིན་པར་ངས་བཤད་ལ། རྟོག་གེ་ནི་བརྗོད་པའི་སྤྱོད་ཡུལ་ཡིན་ཏེ། ཆོས་འཕགས་དེའི་ཕྱིར་རྣམ་གྲངས་དེས་ཀྱང་ཁྱོད་ཀྱིས་འདི་ལྟར་རྟོག་གེ་ཐམས་ཅད་ལས་ཡང་དག་པར་འདས་པའི་མཚན་ཉིད་གང་ཡིན་པ་ནི། དོན་དམ་པ་ཡིན་པར་རིག་པར་བྱའོ། ། ཆོས་འཕགས་གཞན་ཡང་དོན་དམ་པ་ནི་ཐ་སྙད་ཐམས་ཅད་ཡང་དག་པར་ཆད་པ་ཡིན་པར་ངས་བཤད་ལ། རྟོག་གེ་ནི་ཐ་སྙད་ཀྱི་སྤྱོད་ཡུལ་ཡིན་ཏེ། ཆོས་འཕགས་དེའི་ཕྱིར་རྣམ་གྲངས་དེས་ཀྱང་ཁྱོད་ཀྱིས་འདི་ལྟར་རྟོག་གེ་ཐམས་ཅད་ལས་ཡང་དག་པར་འདས་པའི་མཚན་ཉིད་གང་ཡིན་པ་ནི་དོན་དམ་པ་ཡིན་པར་རིག་པར་བྱའོ། ། ཆོས་འཕགས་གཞན་ཡང་དོན་དམ་པ་ནི་རྩོད་པ་ཐམས་ཅད་ཡང་དག་པར་ཆད་པ་ཡིན་པར་ངས་བཤད་ལ། རྟོག་གེ་ནི་རྩོད་པའི་སྤྱོད་ཡུལ་ཡིན་ཏེ། ཆོས་འཕགས་དེའི་ཕྱིར་རྣམ་གྲངས་དེས་ཀྱང་ཁྱོད་ཀྱིས་འདི་ལྟར་རྟོག་གེ་ཐམས་ཅད་ལས་ཡང་དག་པར་འདས་པའི་མཚན་ཉིད་གང་ཡིན་པ་ནི་དོན་དམ་པ་ཡིན་པར་རིག་པར་བྱའོ། །",
+   "en": "Moreover, Dharmodgata, I have explained that the ultimate represents the domain in which there is no phenomenal appearance,  whereas speculation is the domain of phenomenal appearance. Therefore, Dharmodgata, you should know in this way through this approach that the ultimate is what is characterized as transcending all speculation. Moreover, Dharmodgata, I have explained that the ultimate is inexpressible, whereas speculation is the domain of verbalization. Therefore, Dharmodgata, you should know in this way through this approach that the ultimate is what is characterized as transcending all speculation. Moreover, Dharmodgata, I have explained that the ultimate is free from all conventions, whereas speculation is the domain of conventions. Therefore, Dharmodgata, you should know in this way through this approach that the ultimate is what is characterized as transcending all speculation. Moreover, Dharmodgata, I have explained that the ultimate is devoid of argumentative disputation, whereas speculation is the domain of argumentative disputation. Therefore, Dharmodgata, you should know in this way through this approach that the ultimate is what is characterized as transcending all speculation.",
+   "T0675": "「復次，曇無竭！我說第一義者，是過一切諸相境界，覺觀是名諸相境界；如是，我說第一義者是無言境界，覺觀是名言說境界。曇無竭！我說離諸言語是第一義相，覺觀名字是世諦相；如是，我說離諸諍論是第一義相，覺觀名字是諍論相。曇無竭！依此義相，汝今應知過諸世間覺觀境界是第一義相。",
+   "T0677": "「復次，法上！我說真實非相行處；一切覺觀緣相行處。以是義故，應知實相過覺觀境。「復次，法上！我說真實不可言說；一切覺觀但由言說。故知實相過覺觀境。「復次，法上！我說真實絕於四事，謂見、聞、覺、知；一切覺觀緣四事起。「復次，法上！我說真相離諸鬪諍；一切覺觀鬪諍境界。以是義故，應知實相過覺觀境。",
+   "T0676": "復次，法涌！我說：『勝義無相所行；尋思但行有相境界。』是故，法涌！由此道理，當知勝義超過一切尋思境相。復次，法涌！我說：『勝義不可言說，尋思但行言說境界。』是故，法涌！由此道理，當知勝義超過一切尋思境相。復次，法涌！我說：『勝義絕諸表示，尋思但行表示境界。』是故，法涌！由此道理，當知勝義超過一切尋思境相。復次，法涌！我說：『勝義絕諸諍論，尋思但行諍論境界。』是故，法涌！由此道理，當知勝義超過一切尋思境相。"
+  },
+  "sn2-04": {
+   "bo": "ཆོས་འཕགས་འདི་ལྟ་སྟེ་དཔེར་ན། སྐྱེས་བུ་གང་ཟག་ཇི་སྲིད་འཚོ་བའི་བར་དུ་ཚ་བ་དང་ཁ་བའི་རོ་སྟེན་སྟེན་པས་ནི་སྦྲང་རྩིའི་རོའམ། ཤ་ཁ་རའི་རོ་ལ་བརྟག་པའམ། རྗེས་སུ་དཔག་པའམ། མོས་པར་མི་ནུས་སོ། ། ཡུན་རིང་པོ་ནས་འདོད་པའི་འདོད་ཆགས་ལ་མོས་པ། འདོད་པའི་ཡོངས་སུ་གདུང་བ་དག་གིས་ཡོངས་སུ་གདུངས་པ་ནི་ནང་གི་རབ་ཏུ་དབེན་པའི་བདེ་བ་གཟུགས་དང་། སྒྲ་དང་། དྲི་དང་། རོ་དང་། རེག་བྱའི་མཚན་མ་ཐམས་ཅད་དང་བྲལ་བ་ལ་བརྟག་པའམ། རྗེས་སུ་དཔག་པའམ། མོས་པར་མི་ནུས་སོ། ། ཡུན་རིང་པོ་ནས་ཀུན་ཏུ་སྨྲ་བ་ལ་མོས་པ་ཀུན་ཏུ་སྨྲ་བ་ལ་མངོན་པར་དགའ་བས་ནི་ནང་གི་མི་སྨྲ་བ་འཕགས་པའི་བདེ་བ་ལ་བརྟག་པའམ། རྗེས་སུ་དཔག་པའམ། མོས་པར་མི་ནུས་སོ། ། ཡུན་རིང་པོ་ནས་མཐོང་བ་དང་ཐོས་པ་དང་བྱེ་བྲག་ཕྱེད་པ་དང་། རྣམ་པར་ཤེས་པའི་ཐ་སྙད་ལ་མོས་པ། ཐ་སྙད་ལ་མངོན་པར་དགའ་བས་ནི་ཐ་སྙད་ཐམས་ཅད་ཡང་དག་པར་ཆད་པ། འཇིག་ཚོགས་ འགོག་པའི་མྱ་ངན་ལས་འདས་པ་ལ་བརྟག་པའམ། རྗེས་སུ་དཔག་པའམ། མོས་པར་མི་ནུས་སོ། ། ཆོས་འཕགས་འདི་ལྟ་སྟེ་དཔེར་ན། ཡུན་རིང་པོ་ནས་བདག་གི་ཡོངས་སུ་འཛིན་པ་ཉིད་ཀྱིས་རྩོད་པ་ལ་བརྩོན་པ་རྩོད་པ་ལ་མངོན་པར་དགའ་བས་ནི་བྱང་གི་སྒྲ་མི་སྙན་པ་དག་གི་བདག་གིར་ཡོངས་སུ་འཛིན་པ་མེད་པ་ཉིད་དང་། རྩོད་པ་མེད་པ་ཉིད་ལ་བརྟག་པའམ། རྗེས་སུ་དཔག་པའམ། མོས་པར་མི་ནུས་སོ། །",
+   "en": "“Dharmodgata, it is like this: beings who have only tasted pungent or bitter flavors their entire lives cannot imagine, infer, or appreciate the taste of honey and sugar. Those who have indulged in desire and have been burnt by the torment of desire for a long time cannot imagine, infer, or appreciate the inner happiness of the recluse, which is independent from all phenomenal appearances related to form, sound, smell, taste, and contact. Those who have indulged and taken delight in conversations for a long time cannot imagine, infer, or appreciate the inner happiness of the noble beings who remain silent. Those who have indulged and taken delight in conventions for a long time through seeing, hearing, discriminating, and cognizing cannot imagine, infer, or appreciate the cessation of all conventions, the nirvāṇa that is the extinction of transitory aggregates. Dharmodgata, it is like this: Those who have indulged and taken delight in argumentative disputations for a long time on account of their attachment to the self cannot imagine, infer, or appreciate that there is no attachment to the self and no argumentative disputations in Uttarakuru.",
+   "T0675": "「曇無竭！譬如有人，盡於一形噉辛苦味、樂辛苦味，彼人不能知、不能覺、不能量、不能信石蜜、阿婆婆等甘美之味。「曇無竭！有人長夜信貪欲樂、樂著貪欲、為貪欲火燒內心，身不能知、不能覺、不能量、不能信離諸一切色、聲、香、味、觸無貪欲樂。「曇無竭！有人長夜信分別樂、樂於分別，不能知、不能覺、不能量、不能信內身寂靜無分別樂。「曇無竭！有人長夜樂見聞覺知樂，信樂而行，彼人不能知、不能覺、不能量、不能信內身寂滅離見聞覺知樂。「曇無竭！如人長夜取我我相樂，信樂而行，彼人不能知、不能覺、不能量、不能信北欝單越無我我所樂。",
+   "T0677": "「法上！譬如有人，盡一期壽恒食苦味，復能覺觀、比度、憶持蜜等甜味，無有是處。「復次，譬如有人，恒樂欲塵，塵欲焦熱之所燒然，復能覺觀、比度、憶持不緣塵相，依內離樂，無有是處。「復次，譬如有人，恒樂言諍，邪談話戲，復能覺觀、比度、憶持聖默然定，無有是處。「復次，譬如有人，恒樂恒行見、聞、覺、知，復能覺觀、比度憶持絕四事處，滅離身見是般涅槃，無有是處。「復次，法上！譬如有人，由恒蓄財，樂行征伐，復能覺觀、比度、憶持北欝單越，無有我所無所積蓄，不相鬪諍，是現法樂，無有是處。",
+   "T0676": "「法涌！當知，譬如有人盡其壽量習辛苦味；於蜜、石蜜上妙美味，不能尋思、不能比度、不能信解。或於長夜由欲貪勝解諸欲熾火所燒然故；於內除滅一切色、聲、香、味、觸相妙遠離樂，不能尋思、不能比度、不能信解。或於長夜由言說勝解，樂著世間綺言說故；於內寂靜聖默然樂，不能尋思、不能比度、不能信解。或於長夜由見聞覺知表示勝解，樂著世間諸表示故；於永除斷一切表示薩迦耶滅究竟涅槃，不能尋思、不能比度、不能信解。法涌！當知，譬如有人於其長夜由有種種我所、攝受，諍論勝解，樂著世間諸諍論故；於北拘盧洲無我所、無攝受、離諍論，不能尋思、不能比度、不能信解。"
+  },
+  "sn2-05": {
+   "bo": "ཆོས་འཕགས་དེ་བཞིན་དུ་རྟོག་གེ་པ་ཐམས་ཅད་ཀྱིས་ཀྱང་དོན་དམ་པ་རྟོག་གེ་ཐམས་ཅད་ལས་ཡང་དག་པར་འདས་པའི་མཚན་ཉིད་བརྟག་པའམ། རྗེས་སུ་དཔག་པ་འམ། མོས་པར་མི་ནུས་སོ། །",
+   "en": "“Dharmodgata, likewise, those who [have indulged for a long time in] speculation cannot imagine, infer, or appreciate the ultimate whose defining characteristic transcends all speculation.”",
+   "T0675": "「曇無竭！如是覺觀之人，不能知、不能覺、不能量、不能信離諸覺觀第一義相。」",
+   "T0677": "「法上！如是諸人，在於覺觀，復能思量、比度、憶持非覺觀境，無有是處。」",
+   "T0676": "如是，法涌！諸尋思者，於超一切尋思所行勝義諦相，不能尋思、不能比度、不能信解。」"
+  },
+  "sn2-06": {
+   "bo": "དེ་ནས་བཅོམ་ལྡན་འདས་ཀྱིས་དེའི་ཚེ་ཚིགས་སུ་བཅད་པ་འདི་དག་བཀའ་སྩལ་ཏོ། ། སོ་སོ་རང་རིག་མཚན་ཉིད་སྤྱོད་ཡུལ་ཏེ། །བརྗོད་དུ་མེད་ཅིང་ཐ་སྙད་ཡོངས་ཆད་པ། །རྩོད་དང་བྲལ་བ་དོན་དམ་ཆོས་ཡིན་ཏེ། །དེ་ནི་རྟོག་གེ་ཀུན་ལས་འདས་མཚན་ཉིད། །",
+   "en": "Then, at that moment, the Blessed One spoke these verses: “It is the domain whose characteristic must be intuitively cognized,Beyond all expressions, apart from all conventions, And free from argumentative disputations— Such is the ultimate whose characteristic transcends all speculation.”",
+   "T0675": "爾時，世尊而說偈言：「我說身證法，第一離言境， 離覺觀諍相，無言第一義。」",
+   "T0677": "佛說經竟，重說偈言：「自證無相法，離言絕四事， 無諍法通相，過諸覺觀境。」",
+   "T0676": "爾時，世尊欲重宣此義，而說頌曰：「內證無相之所行，不可言說絕表示， 息諸諍論勝義諦，超過一切尋思相。」"
+  },
+  "sn2-07": {
+   "bo": "ཆོས་འཕགས་ཀྱི་ལེའུ་སྟེ་གཉིས་པའོ།། །།",
+   "en": "This was the chapter of the bodhisattva Dharmodgata—the second chapter."
+  }
+ }
+}
