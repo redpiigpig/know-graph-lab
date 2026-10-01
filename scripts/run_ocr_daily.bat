@@ -136,6 +136,13 @@ echo --- standardize_pdf_lite --- >> "%LOGFILE%"
 "%PY%" scripts\standardize_pdf_lite.py --all --only-fresh >> "%LOGFILE%" 2>&1
 echo step5b exit=%ERRORLEVEL% >> "%LOGFILE%"
 
+REM Step 5c: new-book post-processing (2026-10-01): printed pages, bookmark/TOC chapters,
+REM consolidate, paragraph reflow, one-chapter-per-page + ~5000-char pages + paragraph ids,
+REM epigraphs, EPUB figures, footnote relink (rules). Per-step 15-min timeout; log in postprocess_*.log.
+echo --- postprocess_fresh_books --- >> "%LOGFILE%"
+"%PY%" scripts\postprocess_fresh_books.py --days 3 --limit 40 >> "%LOGFILE%" 2>&1
+echo step5c exit=%ERRORLEVEL% >> "%LOGFILE%"
+
 REM Step 6: quality gate — 對當日動過的書重評分寫回 ebooks.quality_*（純規則零 LLM）。
 REM 記 log 不擋 bat；全館掃描與 REOCR 重轉由 KGLab-Quality-Sweep 夜間任務負責。
 echo --- quality_sweep (recent 1d) --- >> "%LOGFILE%"

@@ -70,6 +70,13 @@ End-to-end pipeline from Drive folder → reader at `/ebook/[id]`. Single SKILL 
 - 🚨 **補註腳（relink）寫在重建之後的版本上**：日後若從 `.bak_restructure` 重跑重建，會蓋掉當時補的註腳連結，要重跑 relink。
 - 🚨 **重抽段落的停擺**：PyMuPDF 零碎讀 Drive 上的 PDF 會等下載等不回來（CPU 不動、無網路連線、卡 30 分鐘以上）。
   現在每本子行程＋15 分鐘逾時、PDF 先整份複製到本機、寫檔先 .tmp 再 os.replace、推完 R2／DB 才記 `reflow_done.txt`。
+- **每頁約五千字**（10-01 使用者定，推翻「導讀一頁呈現」）：`restructure_chapters.paginate`——章 >6,500 字就分頁，節優先、
+  段落次之，段號不變、註釋跟引用頁、續頁沿用路徑（目錄只列一次）。已重建的書用 `scripts/repaginate.py` 就地再分頁（保留補過的註腳）；
+  中英對照頁同列一起切（民主妙法 17→60 頁）。🚨 `pages[-2] += pages.pop()` 會蓋掉前一頁；守恆只准多 ≤50 字（行首註號的量尺偏差）。
+- **新書自動套用**（10-01 使用者：「以後新書也要按這規則」）：`run_ocr_daily.bat` Step 5c 跑 `scripts/postprocess_fresh_books.py`，
+  近 3 天新解析、沒 `.bak_restructure` 的書依序：印刷頁碼→書籤章節→（無章才）讀目錄頁補章節→合併逐頁塊→（整頁一段才）重抽段落
+  →一章一頁＋分頁＋段號→補註腳（規則）。每步子行程限時 15 分鐘，log 在 `scripts/logs/postprocess_*.log`，做過的記 `scripts/state/postprocess_done.txt`。
+  章節不可靠的書仍會被 restructure 擋下（看 log），不硬切；對照書（有 source_text／sources）不走這支。
 - 🚨 **會改寫同一本書的腳本不可並行**（重建、重抽段落、補註腳）：讀到寫到一半的檔會把殘缺內容寫回。
   10-01 用 `output/restructure/night_relay.py` 依序接力。
 - 中文書的複製引用改中文格式（作者著，譯者譯，《書名》（出版社，年），頁 N）；原本英文 Chicago 會把中文全濾掉只剩「(1901), p. 6.」。
