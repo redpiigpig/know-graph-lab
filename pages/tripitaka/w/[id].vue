@@ -570,7 +570,8 @@ function cellHtml(r: Row, k: string) {
 }
 function cellClass(r: Row, k: string) {
   const l = langOfKey(k)
-  const verse = r.type === 'seg' && r.s.kind === 'verse'
+  // 多譯本格子也保留換行：中論逐頌那類，頌文本身是分行的
+  const verse = r.type === 'unit' || r.s.kind === 'verse'
   return [
     verse ? 'whitespace-pre-line' : '',
     l === 'lzh' ? 'text-[16px] tracking-wide' : l === 'bo' ? 'text-[17px]' : 'font-serif text-[15px]',

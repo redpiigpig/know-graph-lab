@@ -432,15 +432,16 @@ def run_one(c: dict) -> dict:
 
 
 def publish(slug: str, title: str, family: str, vs: list[dict], works: list[str],
-            anchors: list[dict]) -> dict:
-    """對齊 → 切 → 複核 → 寫檔。任何一步不合格就 raise ValueError（不寫檔）。"""
+            anchors: list[dict], units_fn=None, intro_extra: str = "") -> dict:
+    """對齊 → 切 → 複核 → 寫檔。任何一步不合格就 raise ValueError（不寫檔）。
+    units_fn：節由原典自己的編號決定時（金剛經梵本 §1–32、中論頌號）由呼叫端給，不讓模型分段。"""
     # 模型偶爾給出不合格的切點或壞掉的 JSON：把錯誤回饋給它再試（「太長」不重試）
     feedback = ""
     reordered: set = set()
     for attempt in range(3):
         reordered = set()
         try:
-            units = align_staged(vs, feedback)
+            units = units_fn(vs) if units_fn else align_staged(vs, feedback)
             cells = cut(vs, units, reordered)
             break
         except ValueError as e:
@@ -458,7 +459,7 @@ def publish(slug: str, title: str, family: str, vs: list[dict], works: list[str]
         raise ValueError(f"複核 {len(bad)}/{len(labels)} 段有問題：{to_trad(note)}")
     data = {
         "slug": slug, "title": to_trad(title), "family": family, "auto": True,
-        "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。"
+        "intro": intro_extra + "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。"
                  + (f"複核標記存疑 {len(bad)} 段：{to_trad(note)}" if bad else ""),
         "units": [{"id": f"a{k:02d}", "label": labels[k], **({"doubt": True} if k in bad else {})}
                   for k in range(len(labels))],
