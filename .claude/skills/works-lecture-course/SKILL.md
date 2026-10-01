@@ -1135,6 +1135,10 @@ B 線＝前人概論怎麼切（比較表）。一次派一個 Sonnet。
   教理問答（十誡／信經／主禱文／聖事）**也可以當一個證據**（但仍是佐證，主證據是禮序本身）。
   十誡成書年代的史學爭議放進階補充。
 - 第三關（全書大綱）開始。缺書 20 種已進 `data/zlib-wanted/user-named.jsonl`（第 2 層）。
+- ✅ 作者定（2026-10-01）：**六大單元就是「章」、底下是「節」；四傳統各自一章**——全書**九章＋序**
+  （耶穌／前史／歷史與派系／一場禮拜／聖道／認信／祈禱／聖事／今天與未來）。
+  🚨 我先排成 34 章（把每個單元拆成多章）被退：「要到這麼多章喔」。大綱 v2 在 `output/christianity-intro/outline_v2.md`。
+  兩軸與原點放在第四章最後一節（從禮拜長出四傳統），不另立導言。
 - 補書不只 z-lib；先查站上既有（梵二 SC／DV 中拉英在 `data/creeds/ecumenical-councils/vatican-ii/`、
   奧斯堡信條與路德小教理在 `data/creeds/protestant-confessions/`、通諭中譯在 `data/encyclicals/`），
   再查 TRC／天主教在線目錄。館藏確認沒有：《天主教教理》全本中譯、《協同書》中譯、Schmemann、Bria、Brown 第二冊。
