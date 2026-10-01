@@ -163,6 +163,9 @@ description: 《基督宗教譜系學》成書管線（/works/christian-genealog
   Mansi OCR 文字檔在同夾 `Mansi_OCR文字檔\`。引用格式與各會議對應版本見 `data/christian-genealogy/council_acts_citation.md`。
 * **教團治理圖譜**（第11章討論草圖）：https://claude.ai/artifact/HM3gb4cfGu4dBZkqj4fPeD（源檔在 session scratchpad，改圖時重寫）。
 * 🚨 譯名：Council of Trent ＝「**脫利騰大公會議**」（台灣天主教官方；討論中我一直寫成「特利騰」，書稿一律用脫利騰）。
+* **新教總表的判準**（10-01 討論中）：會祖＝家族自己紀念的創始者；改革年＝家族自己紀念的起點事件；**立宗年＝家族的
+  定型凝結物出現之年，類型不限——關鍵信條、書籍、聯盟、會議都可以**（使用者 10-01）。加一欄「凝結物類型」，各家族
+  靠不同類型的凝結物定型，本身就是譜系資料。原表的 1536《要義》、1549《公禱書》、1539 門諾之書依此都成立。
 * 譯名：charisma 用「卡理斯瑪」（遠流康樂、簡惠美譯本），**不加「又譯」**。
 * **逐章備料 10-01 完成**：總表 `output/christian-genealogy/sourcing_summary.md`（各章 `sources_chN.md`，約 1,400 筆；
   優先書約 195 本已進 z-lib 第 2 層）。新教總表查證 `verify_protestant_table.md`、亞美尼亞 `research_armenian_fathers.md`。
