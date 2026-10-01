@@ -103,6 +103,13 @@ description: 《宗教歷史地理學》的撰寫與重寫——獨立專書（�
 - **2026-10-01 作者提示：日本學界很愛寫全球史**——岡田英弘《世界史の誕生》、杉山正明（《モンゴル帝国と長いその後》等）
   論證近世由蒙古西征開啟，而非文藝復興。→ 這是 1200 斷點最直接的前人論據；已補進核心書目（另加 Abu-Lughod 1989、
   講談社《興亡の世界史》叢書，Drive 有八旗中譯）。作者提到的《帖木兒之後》是 John Darwin（英國），不屬日本傳統。
+- 🚨 **書目不刪，只分層（2026-10-01 作者質疑後改正）**：我曾把 165 條「刪」到約 60 條，被問「你確定你刪的都是不相關的？」
+  ——不確定，被刪的大多是相關的（Toynbee、Huntington、Braudel、Eisenstadt、Müller、Durkheim、Weber、Troeltsch、
+  J.Z. Smith、Josephson、Park、嚴耕望、Turchin、竺可楨、葛全勝、Osterhammel、Pomeranz、Fowden、Melton、島薗進…）；
+  刪的理由只是「同作者第二本」「離三軸較遠」「未能核實」，這些都不等於不相關。
+  **改為：165 條全數保留為工作書目（`litreview_paradigms.md`）；`litreview_core.md` 只是「先讀、先補」的順序。**
+- z-lib 獵表：`data/zlib-wanted/gods-coordinates.jsonl`，核心缺書 40 本（source `gods-coordinates-core`，第 2 層）＋
+  其餘缺書 62 本（`gods-coordinates`，第 30 層書稿層）。阿拉伯文、梵文原典改用通行英譯名搜。
 - 文獻回顧由我刪到核心：`output/religious-historical-geography/litreview_core.md`（64 條，依導論與三部分組），待作者過目。
 
 ### （已定案，保留提案原文備查）−1200 以前怎麼切、為何從 −1200 起
