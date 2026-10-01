@@ -1131,6 +1131,10 @@ B 線＝前人概論怎麼切（比較表）。一次派一個 Sonnet。
   （🚨 但他們的「第一序」指禮儀行動本身，不是「宗教的自我介紹」，引用時要講清楚差別）。
 - 審稿人最可能拿來對照：McGrath（整體框架）、Küng（中心先於歷史）、Okholm 與 Schmemann（禮拜為骨的新意）、
   《天主教教理》（會問誡命／倫理在哪）、MacCulloch 與 Kim & Kim（非西方是插入還是並行）。
+- ✅ 作者定（2026-10-01）：**十誡歸聖道**——照第一序的敘事，先有西乃的十誡（「十句話」），才有妥拉、才有整本希伯來聖經；
+  教理問答（十誡／信經／主禱文／聖事）**也可以當一個證據**（但仍是佐證，主證據是禮序本身）。
+  十誡成書年代的史學爭議放進階補充。
+- 第三關（全書大綱）開始。缺書 20 種已進 `data/zlib-wanted/user-named.jsonl`（第 2 層）。
 - 補書不只 z-lib；先查站上既有（梵二 SC／DV 中拉英在 `data/creeds/ecumenical-councils/vatican-ii/`、
   奧斯堡信條與路德小教理在 `data/creeds/protestant-confessions/`、通諭中譯在 `data/encyclicals/`），
   再查 TRC／天主教在線目錄。館藏確認沒有：《天主教教理》全本中譯、《協同書》中譯、Schmemann、Bria、Brown 第二冊。
