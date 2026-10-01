@@ -45,7 +45,8 @@ ACO 在歐盟屬公有領域，美國對 1930 後出版部分可能仍有版權�
 | 梵一（1869–70） | — | 1907 拉英對照本 | — |
 | 多特（1618–19） | — | 館內已有 Canons of Dort | Sinnema 等《Acta et Documenta》 |
 
-Mansi 13、16、17、21、22、24、25、27–33、49–53 卷只有 OCR 文字檔（在同夾 `Mansi_OCR文字檔\`），拉丁與希臘有雜訊，**引用必對頁影像**；第 8、23 卷未取得。
+Mansi 第 2–33、49–53 卷 PDF 均已在館（10-01 補齊；第 23 卷仍找不到公開項目）；同夾 `Mansi_OCR文字檔\` 的 OCR 拉丁與希臘有雜訊，**引用必對頁影像**。
+另已在館：Hefele–Leclercq《Histoire des conciles》法文 19 冊（缺 T9、T11 為借閱本）、Hefele 德文《Conciliengeschichte》Bd. 4、6、Price《Constantinople 553》、Hakobyan《Kanonagirk' Hayots'》三冊、多特 Post-Acta、Manning 與 Schaff 的梵一史、默勒《Symbolik》德文 1843（純影像，須 OCR）。明細見 `output/christian-genealogy/bulk_download_report.md`。
 
 ## 三、使用規矩
 
