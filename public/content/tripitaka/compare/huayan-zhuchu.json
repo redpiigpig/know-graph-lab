@@ -1,0 +1,292 @@
+{
+ "slug": "huayan-zhuchu",
+ "title": "華嚴經・諸菩薩住處品",
+ "family": "sa",
+ "intro": "八十華嚴〈諸菩薩住處品〉＝六十華嚴〈菩薩住處品〉＝藏譯第 38 品。心王菩薩列舉十方與諸國的菩薩住處，其中「東北方清涼山，文殊師利與一萬菩薩常住說法」即五台山信仰的經典依據；震旦國那羅延窟亦在其中。六十華嚴把曇無竭（法起）的四大海中住處排在西北方之後（⇅）；巴連弗邑（華氏城）一處八十華嚴無。藏譯把文殊住處記為東方，地名多意譯。",
+ "units": [
+  {
+   "id": "zc-01",
+   "label": "東方仙人山・金剛勝"
+  },
+  {
+   "id": "zc-02",
+   "label": "南方勝峯山・法慧"
+  },
+  {
+   "id": "zc-03",
+   "label": "西方金剛焰山・精進無畏行"
+  },
+  {
+   "id": "zc-04",
+   "label": "北方香積山・香象"
+  },
+  {
+   "id": "zc-05",
+   "label": "東北方清涼山・文殊師利"
+  },
+  {
+   "id": "zc-06",
+   "label": "海中金剛山・法起（曇無竭）"
+  },
+  {
+   "id": "zc-07",
+   "label": "東南方支提山・天冠"
+  },
+  {
+   "id": "zc-08",
+   "label": "西南方光明山・賢勝"
+  },
+  {
+   "id": "zc-09",
+   "label": "西北方香風山・香光"
+  },
+  {
+   "id": "zc-10",
+   "label": "大海中莊嚴窟"
+  },
+  {
+   "id": "zc-11",
+   "label": "毘舍離南善住根"
+  },
+  {
+   "id": "zc-12",
+   "label": "巴連弗邑金燈僧伽藍"
+  },
+  {
+   "id": "zc-13",
+   "label": "摩度羅城滿足窟"
+  },
+  {
+   "id": "zc-14",
+   "label": "俱珍那城法座"
+  },
+  {
+   "id": "zc-15",
+   "label": "清淨彼岸城目真隣陀窟"
+  },
+  {
+   "id": "zc-16",
+   "label": "摩蘭陀國無礙龍王建立"
+  },
+  {
+   "id": "zc-17",
+   "label": "甘菩遮國出生慈"
+  },
+  {
+   "id": "zc-18",
+   "label": "震旦國那羅延窟"
+  },
+  {
+   "id": "zc-19",
+   "label": "疏勒國牛頭山"
+  },
+  {
+   "id": "zc-20",
+   "label": "迦葉彌羅國次第"
+  },
+  {
+   "id": "zc-21",
+   "label": "增長歡喜城尊者窟"
+  },
+  {
+   "id": "zc-22",
+   "label": "菴浮梨摩國見億藏光明"
+  },
+  {
+   "id": "zc-23",
+   "label": "乾陀羅國苫婆羅窟"
+  },
+  {
+   "id": "zc-24",
+   "label": "品尾題"
+  }
+ ],
+ "versions": [
+  {
+   "id": "T0278",
+   "lang": "lzh",
+   "label": "六十華嚴",
+   "who": "佛馱跋陀羅譯〈菩薩住處品〉・421 年",
+   "work": "T0278",
+   "reorder": true
+  },
+  {
+   "id": "T0279",
+   "lang": "lzh",
+   "label": "八十華嚴",
+   "who": "實叉難陀譯〈諸菩薩住處品〉・699 年",
+   "work": "T0279"
+  },
+  {
+   "id": "bo",
+   "lang": "bo",
+   "label": "藏譯",
+   "who": "德格版 Toh 44 第 38 品・84000"
+  },
+  {
+   "id": "en",
+   "lang": "en",
+   "label": "84000 英譯",
+   "who": "譯自藏譯・與藏文逐句對齊"
+  }
+ ],
+ "works": [
+  "T0278",
+  "T0279"
+ ],
+ "anchors": [
+  {
+   "work": "T0278",
+   "node": "大方廣佛華嚴經菩薩住處品第二十七",
+   "uid": "T09n0278_p0589c20"
+  },
+  {
+   "work": "T0279",
+   "node": "諸菩薩住處品第三十二",
+   "uid": "T10n0279_p0241b06"
+  }
+ ],
+ "cells": {
+  "zc-01": {
+   "T0278": "爾時，心王菩薩摩訶薩復告諸菩薩言：「佛子！東方有菩薩住處，名仙人起山，過去諸菩薩常於中住；彼現有菩薩，名金剛勝，於其中止，有三百菩薩眷屬，常為說法。",
+   "T0279": "爾時，心王菩薩摩訶薩於眾會中告諸菩薩言：「佛子！東方有處，名：仙人山，從昔已來，諸菩薩眾於中止住；現有菩薩，名：金剛勝，與其眷屬、諸菩薩眾三百人俱，常在其中而演說法。",
+   "bo": "དེ་ནས་ཡང་བྱང་ཆུབ་སེམས་དཔའ་སེམས་ཀྱི་རྒྱལ་པོས་ཡང་བྱང་ཆུབ་སེམས་དཔའ་དེ་དག་ལ་སྨྲས་པ། ཀྱེ་རྒྱལ་བའི་སྲས་དག ། ཤར་ཕྱོགས་ལོགས་ན་སྔན་ཅད་བྱང་ཆུབ་སེམས་དཔའ་བཞུགས་བཞུགས་པའི་རི་དྲང་སྲོང་འབྱུང་བ་ཞེས་བྱ་བ་ཡོད་དེ། །དེ་ལ་བྱང་ཆུབ་སེམས་དཔའ་རྡོ་རྗེ་དཔལ་ཞེས་བྱ་བ། བྱང་ཆུབ་སེམས་དཔའི་འཁོར་སུམ་བརྒྱ་དང་ལྡན་པ་ཆོས་སྟོན་ཏོ།",
+   "en": "Chapter on the Dwellings of Bodhisattvas  Then the bodhisattva King of Mind spoke again to those bodhisattvas, “O children of the Victorious One! In the east, there is a mountain called Appearance of a Sage, where bodhisattvas in the past have resided. In this dwelling place a bodhisattva called Vajraśrī teaches Dharma surrounded by a retinue of three hundred bodhisattvas. “"
+  },
+  "zc-02": {
+   "T0278": "南方有菩薩住處，名勝樓閣山，過去諸菩薩常於中住；彼現有菩薩，名法慧，有五百菩薩眷屬，常為說法。",
+   "T0279": "南方有處，名：勝峯山，從昔已來，諸菩薩眾於中止住；現有菩薩，名曰：法慧，與其眷屬、諸菩薩眾五百人俱，常在其中而演說法。",
+   "bo": "།ཀྱེ་རྒྱལ་བའི་སྲས་དག་ལྷོ་ཕྱོགས་ལོགས་ན་སྔོན་བྱང་ཆུབ་སེམས་དཔའ་བཞུགས་བཞུགས་པའི་རི་དཔལ་གྱི་ཕུང་པོ་ཞེས་བྱ་བ་ ཡོད་དེ། དེ་ལ་བྱང་ཆུབ་སེམས་དཔའ་ཆོས་ཀྱི་བློ་གྲོས་ཞེས་བྱ་བ་བྱང་ཆུབ་སེམས་དཔའི་འཁོར་ལྔ་བརྒྱ་དང་ལྡན་པ་ཆོས་སྟོན་ཏོ།",
+   "en": "O children of the Victorious One! In the south, there is a mountain called Heap of Glory, where bodhisattvas in the past have resided. In this dwelling place a bodhisattva called Dharmamati teaches Dharma surrounded by a retinue of five hundred bodhisattvas. “"
+  },
+  "zc-03": {
+   "T0278": "西方有菩薩住處，名金剛焰山，過去諸菩薩常於中住；彼現有菩薩，名無畏師子行，有三百菩薩眷屬，常為說法。",
+   "T0279": "西方有處，名：金剛焰山，從昔已來，諸菩薩眾於中止住；現有菩薩，名：精進無畏行，與其眷屬、諸菩薩眾三百人俱，常在其中而演說法。",
+   "bo": "།ཀྱེ་རྒྱལ་བའི་སྲས་དག་ནུབ་ཕྱོགས་ལོགས་ན་སྔོན་བྱང་ཆུབ་སེམས་དཔའ་བཞུགས་བཞུགས་པའི་རི་རྡོ་རྗེའི་འོད་འཕྲོ་བ་ཅན་ཞེས་བྱ་བ་ཡོད་དེ། དེ་ལ་བྱང་ཆུབ་སེམས་དཔའ་སེང་གེའི་འགྲོས་སུ་འགྲོ་བ་ཞེས་བྱ་བ། བྱང་ཆུབ་སེམས་དཔའི་འཁོར་སུམ་བརྒྱ་དང་ལྡན་པ་ཆོས་སྟོན་ཏོ།",
+   "en": "O children of the Victorious One! In the west, there is a mountain called Possessed of Vajra Radiance, where bodhisattvas in the past have resided. In this dwelling place a bodhisattva called Walks with the Gait of a Lion teaches Dharma surrounded by a retinue of three hundred bodhisattvas. “"
+  },
+  "zc-04": {
+   "T0278": "北方有菩薩住處，名香聚山，過去諸菩薩常於中住；彼現有菩薩，名香象，有三千菩薩眷屬，常為說法。",
+   "T0279": "北方有處，名：香積山，從昔已來，諸菩薩眾於中止住；現有菩薩，名曰：香象，與其眷屬、諸菩薩眾三千人俱，常在其中而演說法。",
+   "bo": "།ཀྱེ་རྒྱལ་བའི་སྲས་དག་བྱང་ཕྱོགས་ལོགས་ན། སྔོན་བྱང་ཆུབ་སེམས་དཔའ་བཞུགས་བཞུགས་པའི་རི་སྤོས་ཀྱི་ཕུང་པོ་ཞེས་བྱ་བ་ཡོད་དེ། དེ་ལ་བྱང་ཆུབ་སེམས་དཔའ་སྤོས་ཀྱི་གླང་པོ་ཞེས་བྱ་བ། བྱང་ཆུབ་སེམས་དཔའི་འཁོར་སྟོང་ཕྲག་གསུམ་དང་ལྡན་པ་ཆོས་སྟོན་ཏོ།",
+   "en": "O children of the Victorious One! In the north, there is a mountain called Heap of Incense, where bodhisattvas in the past have resided. In this dwelling place a bodhisattva called Gandhahastin teaches Dharma surrounded by a retinue of three thousand bodhisattvas. “"
+  },
+  "zc-05": {
+   "T0278": "東北方有菩薩住處，名清涼山，過去諸菩薩常於中住；彼現有菩薩，名文殊師利，有一萬菩薩眷屬，常為說法。",
+   "T0279": "東北方有處，名：清涼山，從昔已來，諸菩薩眾於中止住；現有菩薩，名：文殊師利，與其眷屬、諸菩薩眾一萬人俱，常在其中而演說法。",
+   "bo": "།ཀྱེ་རྒྱལ་བའི་སྲས་དག ། ཤར་ཕྱོགས་ལོགས་ན་སྔོན་བྱང་ཆུབ་སེམས་དཔའ་བཞུགས་བཞུགས་པའི་རི་སྤང་རི་ཞེས་བྱ་བ་ཡོད་དེ། །དེ་ལ་བྱང་ཆུབ་སེམས་དཔའ་འཇམ་དཔལ་ཞེས་བྱ་བ། བྱང་ཆུབ་སེམས་དཔའི་འཁོར་སྟོང་ཕྲག་བཅུ་དང་ལྡན་པ་ཆོས་སྟོན་ཏོ།",
+   "en": "O children of the Victorious One! In the east, there is a mountain called Mountain of Meadows,  where bodhisattvas in the past have resided. In this dwelling place a bodhisattva called Mañjuśrī teaches Dharma surrounded by a retinue of ten thousand bodhisattvas. “"
+  },
+  "zc-06": {
+   "T0278": "四大海中有菩薩住處，名枳怛，過去諸菩薩常於中住；彼現有菩薩，名曇無竭，有萬二千菩薩眷屬，常為說法。",
+   "T0279": "海中有處，名：金剛山，從昔已來，諸菩薩眾於中止住；現有菩薩，名曰：法起，與其眷屬、諸菩薩眾千二百人俱，常在其中而演說法。",
+   "bo": "།ཀྱེ་རྒྱལ་བའི་སྲས་དག ། བྱང་དང་ཤར་གྱི་ཕྱོགས་མཚམས་ལོགས་ན། སྔོན་བྱང་ཆུབ་སེམས་དཔའ་བཞུགས་བཞུགས་པའི་རི་རྒྱ་མཚོ་ཆེན་པོ་བཞིའི་གནས་རྡོ་རྗེའི་རི་ཞེས་བྱ་བ་ཡོད་དེ། དེ་ལ་བྱང་ཆུབ་སེམས་དཔའ་ཆོས་ཀྱིས་འཕགས་པ་ཞེས་བྱ་བ། བྱང་ཆུབ་སེམས་དཔའི་འཁོར་བརྒྱ་ཕྲག་བཅུ་གཉིས་དང་ལྡན་པ་ཆོས་སྟོན་ཏོ།",
+   "en": "O children of the Victorious One! In the northeastern direction, there is a mountain called Vajra Mountain, Site of Four Great Oceans, where bodhisattvas in the past have resided. In this dwelling place a bodhisattva called Dharmodgata teaches Dharma surrounded by a retinue of twelve hundred bodhisattvas. “"
+  },
+  "zc-07": {
+   "T0278": "東南方有菩薩住處，名枝堅固，過去諸菩薩常於中住；彼現有菩薩，名天冠，有一千菩薩眷屬，常為說法。",
+   "T0279": "東南方有處，名：支提山，從昔已來，諸菩薩眾於中止住；現有菩薩，名曰：天冠，與其眷屬、諸菩薩眾一千人俱，常在其中而演說法。",
+   "bo": "།ཀྱེ་རྒྱལ་བའི་སྲས་དག ། ཤར་དང་ལྷོའི་ཕྱོགས་མཚམས་ལོགས་ན་སྔོན་བྱང་ཆུབ་སེམས་དཔའ་བཞུགས་བཞུགས་པའི་རི་མཆོད་རྟེན་ཞེས་བྱ་བ་ཡོད་དེ། །དེ་ལ་བྱང་ཆུབ་སེམས་དཔའ་ལྷའི་ཕུང་པོ་ཞེས་བྱ་བ་བྱང་ཆུབ་སེམས་དཔའི་འཁོར་སྟོང་དང་ལྡན་པ་ཆོས་སྟོན་ཏོ།",
+   "en": "O children of the Victorious One! In the southeastern direction, there is a mountain called Stūpa, where bodhisattvas in the past have resided. In this dwelling place a bodhisattva called Divine Aggregates teaches Dharma surrounded by a retinue of one thousand bodhisattvas. “"
+  },
+  "zc-08": {
+   "T0278": "西南方有菩薩住處，名樹提光明山，過去諸菩薩常於中住；彼現有菩薩，名賢首，有三千菩薩眷屬，常為說法。",
+   "T0279": "西南方有處，名：光明山，從昔已來，諸菩薩眾於中止住；現有菩薩，名曰：賢勝，與其眷屬、諸菩薩眾三千人俱，常在其中而演說法。",
+   "bo": "།ཀྱེ་རྒྱལ་བའི་ སྲས་ངག ། ལྷོ་དང་ནུབ་ཀྱི་ཕྱོགས་མཚམས་ལོགས་ན། སྔོན་བྱང་ཆུབ་སེམས་དཔའ་བཞུགས་བཞུགས་པའི་རི་སྐར་མའི་འོད་ཅེས་བྱ་བ་ཡོད་དེ། དེ་ལ་བྱང་ཆུབ་སེམས་དཔའ་བཟང་པོའི་དཔལ་ཞེས་བྱ་བ། བྱང་ཆུབ་སེམས་དཔའི་འཁོར་སྟོང་ཕྲག་གསུམ་དང་ལྡན་པ་ཆོས་སྟོན་ཏོ།",
+   "en": "O children of the Victorious One! In the southwestern direction, there is a mountain called Jyotiṣprabha, where bodhisattvas in the past have resided. In this dwelling place a bodhisattva called Bhadraśrī teaches Dharma surrounded by a retinue of three thousand bodhisattvas. “"
+  },
+  "zc-09": {
+   "T0278": "西北方有菩薩住處，名香風山，過去諸菩薩常於中住；彼現有菩薩，名香光明，有五千菩薩眷屬，常為說法。",
+   "T0279": "西北方有處，名：香風山，從昔已來，諸菩薩眾於中止住；現有菩薩，名曰：香光，與其眷屬、諸菩薩眾五千人俱，常在其中而演說法。",
+   "bo": "།ཀྱེ་རྒྱལ་བའི་སྲས་དག ། ནུབ་དང་བྱང་གི་ཕྱོགས་མཚམས་ལོགས་ན། སྔོན་བྱང་ཆུབ་སེམས་དཔའ་བཞུགས་བཞུགས་པའི་རི་སྤོས་ཀྱི་ངད་ཅན་ཞེས་བྱ་བ་ཡོད་དེ། དེ་ལ་བྱང་ཆུབ་སེམས་དཔའ་སྤོས་ཀྱི་འོད་ཟེར་རབ་ཏུ་འགྱེད་པ་ཞེས་བྱ་བ་བྱང་ཆུབ་སེམས་དཔའི་འཁོར་སྟོང་ཕྲག་ལྔ་དང་ལྡན་པ་ཆོས་སྟོན་ཏོ།",
+   "en": "O children of the Victorious One! In the northwestern direction, there is a mountain called Gandhamādana, where bodhisattvas in the past have resided. In this dwelling place a bodhisattva called Radiating Luminous Incense teaches Dharma surrounded by a retinue of five thousand bodhisattvas. “"
+  },
+  "zc-10": {
+   "T0278": "海中有菩薩住處，名功德莊嚴窟，過去諸菩薩常於中住。",
+   "T0279": "「大海之中復有住處，名：莊嚴窟，從昔已來，諸菩薩眾於中止住。",
+   "bo": "།ཀྱེ་རྒྱལ་བའི་སྲས་དག ། རྒྱ་མཚོ་ཆེན་པོའི་ནང་ན་སྔོན་བྱང་ཆུབ་སེམས་དཔའ་བཞུགས་བཞུགས་པའི་གནས་ཕུག་བཟང་པོ་ཞེས་བྱ་བ་ཡོད་དོ།",
+   "en": "O children of the Victorious One! In the great ocean, there is a place called Good Cave, where bodhisattvas in the past have resided. “"
+  },
+  "zc-11": {
+   "T0278": "毘舍離城南有菩薩住處，名善住，過去諸菩薩常於中住。",
+   "T0279": "毘舍離南有一住處，名：善住根，從昔已來，諸菩薩眾於中止住。",
+   "bo": "།ཀྱེ་རྒྱལ་བའི་སྲས་དག ། ཡུལ་ཤིན་ཏུ་ཡངས་པའི་ལྷོ་ཕྱོགས་ལོགས་ན། སྔོན་བྱང་ཆུབ་སེམས་དཔའ་བཞུགས་བཞུགས་པའི་གནས་རྩ་བ་ཤིན་ཏུ་བརྟན་པ་ཞེས་བྱ་བ་ཡོད་དོ།",
+   "en": "O children of the Victorious One! To the south of Vaiśālī, there is a place called Stable Roots, where bodhisattvas in the past have resided. “"
+  },
+  "zc-12": {
+   "T0278": "巴連弗邑有菩薩住處，名金燈僧伽藍，過去諸菩薩常於中住。",
+   "bo": "།ཡུལ་པ་ཏ་ལའི་བུ་ཞེས་བྱ་བ་ན། སྔོན་བྱང་ཆུབ་སེམས་དཔའ་བཞུགས་བཞུགས་པའི་དགེ་འདུན་གྱི་ཀུན་དགའ་ར་བ་གསེར་གྱི་གླིང་ཞེས་བྱ་བ་ཡོད་དོ།",
+   "en": "In a land called Pāṭaliputra, there is a place called Golden Park of the Saṅgha, where bodhisattvas in the past have resided. “"
+  },
+  "zc-13": {
+   "T0278": "摩瑜羅國有菩薩住處，名長養功德，過去諸菩薩常於中住。",
+   "T0279": "摩度羅城有一住處，名：滿足窟，從昔已來，諸菩薩眾於中止住。",
+   "bo": "།ཡུལ་མ་དུར་ན་སྔོན་བྱང་ཆུབ་སེམས་དཔའ་བཞུགས་བཞུགས་པའི་གནས་ཚིམ་པར་བྱེད་པའི་ཕུག་ཅེས་བྱ་བ་ཡོད་དོ།",
+   "en": "In a land called Mathurā,  there is a place called Satisfying Cave, where bodhisattvas in the past have resided. “"
+  },
+  "zc-14": {
+   "T0278": "拘陳那耶國有菩薩住處，名法座，過去諸菩薩常於中住。",
+   "T0279": "俱珍那城有一住處，名曰：法座，從昔已來，諸菩薩眾於中止住。",
+   "bo": "།ཡུལ་རིལ་བ་གཏོང་བ་ཞེས་བྱ་བ་ན། སྔོན་བྱང་ཆུབ་སེམས་དཔའ་བཞུགས་བཞུགས་པའི་གནས་ཆོས་ཀྱི་སྟན་ཞེས་བྱ་བ་ཡོད་དོ།",
+   "en": "In a land called Relinquishing the Vase, there is a place called Dharma Seat, where bodhisattvas in the past have resided. “"
+  },
+  "zc-15": {
+   "T0278": "清淨彼岸國有菩薩住處，名牟真隣陀功德，過去諸菩薩常於中住。",
+   "T0279": "清淨彼岸城有一住處，名：目真隣陀窟，從昔已來，諸菩薩眾於中止住。",
+   "bo": "།ཡུལ་དགེ་བའི་ཕུལ་དུ་ཕྱིན་པ་ཞེས་བྱ་བ་ན། སྔོན་བྱང་ཆུབ་སེམས་དཔའ་བཞུགས་བཞུགས་པའི་གནས་བཏང་བཟུང་གི་ཕུག་ཅེས་བྱ་བ་ཡོད་དོ།",
+   "en": "In a land called Perfect Virtue, there is a place called Mucilinda Cave, where bodhisattvas in the past have resided. “"
+  },
+  "zc-16": {
+   "T0278": "風地內有菩薩住處，名無礙龍王所造，過去諸菩薩常於中住。",
+   "T0279": "摩蘭陀國有一住處，名：無礙龍王建立，從昔已來，諸菩薩眾於中止住。",
+   "bo": "།ཡུལ་བེའུར་ཞེས་བྱ་བ་ན་སྔོན་བྱང་ཆུབ་སེམས་དཔའ་བཞུགས་བཞུགས་པའི་གནས་ཐུ་བ་ཞེས་བྱ་བ་ཀླུས་བཙུགས་པ་ཡོད་དོ།",
+   "en": "In a land called Vatsa, there is a place, established by nāgas, called Añcala, where bodhisattvas in the past have resided. “"
+  },
+  "zc-17": {
+   "T0278": "甘菩國有菩薩住處，名最上慈，過去諸菩薩常於中住。",
+   "T0279": "甘菩遮國有一住處，名：出生慈，從昔已來，諸菩薩眾於中止住。",
+   "bo": "།ཡུལ་ཀམ་པོ་ཙ་ན་སྔོན་ བྱང་ཆུབ་སེམས་དཔའ་བཞུགས་བཞུགས་པའི་གནས། བྱམས་པས་འཕགས་པ་ཞེས་བྱ་བ་ཡོད་དོ།",
+   "en": "In a land called Kamboja, there is a place called Exalted by Love, where bodhisattvas in the past have resided. “"
+  },
+  "zc-18": {
+   "T0278": "真旦國土有菩薩住處，名那羅延山，過去諸菩薩常於中住。",
+   "T0279": "震旦國有一住處，名：那羅延窟，從昔已來，諸菩薩眾於中止住。",
+   "bo": "།རྒྱ་བའི་གནས་ན། སྔོན་བྱང་ཆུབ་སེམས་དཔའ་བཞུགས་བཞུགས་པའི། གནས་མཐུ་བོ་ཆེའི་ཕུག་པ་ཅེས་བྱ་བ་ཡོད་དོ།",
+   "en": "In a land called China, there is a place called Nārāyaṇa Cave, where bodhisattvas in the past have resided. “"
+  },
+  "zc-19": {
+   "T0278": "邊夷國土有菩薩住處，名牛頭山，過去諸菩薩常於中住。",
+   "T0279": "䟽勒國有一住處，名：牛頭山，從昔已來，諸菩薩眾於中止住。",
+   "bo": "།ཡུལ་ཁ་ཤ་ན་སྔོན་བྱང་ཆུབ་སེམས་དཔའ་བཞུགས་བཞུགས་པའི་གནས། བ་ལང་གི་མགོ་བོ་ཞེས་བྱ་བ་ཡོད་དོ།",
+   "en": "In a land called Khaśa, there is a mountain called Gośṛṇga, where bodhisattvas in the past have resided. “"
+  },
+  "zc-20": {
+   "T0278": "罽賓國土有菩薩住處，名鬱提尸山，過去諸菩薩常於中住。",
+   "T0279": "迦葉彌羅國有一住處，名曰：次第，從昔已來，諸菩薩眾於中止住。",
+   "bo": "།ཁ་ཆེའི་ཡུལ་ན་སྔོན་བྱང་ཆུབ་སེམས་དཔའ་བཞུགས་བཞུགས་པའི། གནས་ཤིན་ཏུ་སྟོན་པ་ཞེས་བྱ་བ་ཡོད་དོ།",
+   "en": "In a land called Kashmir, there is a place called Sudarśaka, where bodhisattvas in the past have resided. “"
+  },
+  "zc-21": {
+   "T0278": "難提拔檀那城有菩薩住處，名梯羅浮訶，過去諸菩薩常於中住。",
+   "T0279": "增長歡喜城有一住處，名：尊者窟，從昔已來，諸菩薩眾於中止住。",
+   "bo": "།ཡུལ་དགའ་བ་འཕེལ་བ་ཞེས་བྱ་བ་ན། སྔོན་བྱང་ཆུབ་སེམས་དཔའ་བཞུགས་བཞུགས་པའི་གནས། གནས་བརྟན་གྱི་ཕུག་ཅེས་བྱ་བ་ཡོད་དོ།",
+   "en": "In a land called Increasing Joy, there is a place called Sthavira Cave, where bodhisattvas in the past have resided. “"
+  },
+  "zc-22": {
+   "T0278": "菴浮梨摩國有菩薩住處，名正治邪曲，過去諸菩薩常於中住。",
+   "T0279": "菴浮梨摩國有一住處，名：見億藏光明，從昔已來，諸菩薩眾於中止住。",
+   "bo": "།ཡུལ་ཆུ་འཛིན་ཅེས་བྱ་བ་ན་སྔོན་བྱང་ཆུབ་སེམས་དཔའ་བཞུགས་བཞུགས་པའི། གནས་ཁྱོར་པོ་སྟོན་པ་ཞེས་བྱ་བ་ཡོད་དོ།",
+   "en": "In a land called Jalandhar, there is a place called Teaching with Hands Folded, where bodhisattvas in the past have resided. “"
+  },
+  "zc-23": {
+   "T0278": "乾陀羅國有菩薩住處，名寂靜窟，過去諸菩薩常於中住。」",
+   "T0279": "乾陀羅國有一住處，名：苫婆羅窟，從昔已來，諸菩薩眾於中止住。」",
+   "bo": "།ཡུལ་ས་འཛིན་གྱི་དཀྱིལ་འཁོར་ན། སྔོན་བྱང་ཆུབ་སེམས་དཔའ་བཞུགས་བཞུགས་པའི་གནས། བརྒྱགས་ཀྱི་ཕུག་ཅེས་བྱ་བ་ཡོད་དོ། །ཤིན་ཏུ་རྒྱས་པ་ཆེན་པོའི་མདོ།",
+   "en": "In the vicinity of the land called Gandhara, there is a place called Cave of Provisions, where bodhisattvas in the past have resided.”"
+  },
+  "zc-24": {
+   "bo": "།སངས་རྒྱས་ཕལ་པོ་ཆེ་ཞེས་བྱ་བ་ལས། བྱང་ཆུབ་སེམས་དཔའི་གནས་ཀྱི་ལེའུ་ཞེས་བྱ་བ་སྟེ། སུམ་ཅུ་བརྒྱད་པའོ།། །། །། །། །། །། །། །། །། །། །། །། །།",
+   "en": "This concludes “The Dwellings of Bodhisattvas,” the thirty-eighth chapter of the extensive sūtra, “The Ornaments of the Buddhas.”"
+  }
+ }
+}
