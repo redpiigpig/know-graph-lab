@@ -1,0 +1,198 @@
+{
+ "slug": "sukhavativyuha-3",
+ "title": "無量壽經（三）・見佛與囑累流通",
+ "family": "sa",
+ "intro": "接第二段。科目照菩提流志本第三十五至第四十二科。梵本、法賢本、菩提流志本有付囑後的偈頌；平等覺經、大阿彌陀經的胎生之說（狐疑者生七寶城中五百歲）在第二段三輩往生裡，此處從缺。梵本卷末另有品題。",
+ "units": [
+  {
+   "id": "sv-35",
+   "label": "三十五 西向禮拜・極樂現前"
+  },
+  {
+   "id": "sv-36",
+   "label": "三十六 彌勒述見"
+  },
+  {
+   "id": "sv-37",
+   "label": "三十七 疑悔處胎・胎生化生"
+  },
+  {
+   "id": "sv-38",
+   "label": "三十八 他方菩薩當生之數"
+  },
+  {
+   "id": "sv-39",
+   "label": "三十九 付囑彌勒・聞名一念・設滿世界火"
+  },
+  {
+   "id": "sv-40",
+   "label": "四十 說頌諄囑"
+  },
+  {
+   "id": "sv-41",
+   "label": "四十一 聞經獲益"
+  },
+  {
+   "id": "sv-42",
+   "label": "四十二 地動現瑞・歡喜奉行"
+  },
+  {
+   "id": "sv-99",
+   "label": "卷末品題（梵本）"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本",
+   "who": "《極樂莊嚴經》大本（Sukhāvatīvyūha）・GRETIL"
+  },
+  {
+   "id": "T0360",
+   "lang": "lzh",
+   "label": "康僧鎧本",
+   "who": "傳康僧鎧譯《佛說無量壽經》・252 年",
+   "work": "T0360"
+  },
+  {
+   "id": "T0361",
+   "lang": "lzh",
+   "label": "平等覺經",
+   "who": "傳支婁迦讖譯《無量清淨平等覺經》",
+   "work": "T0361"
+  },
+  {
+   "id": "T0362",
+   "lang": "lzh",
+   "label": "大阿彌陀經",
+   "who": "傳支謙譯《阿彌陀三耶三佛薩樓佛檀過度人道經》",
+   "work": "T0362"
+  },
+  {
+   "id": "T0363",
+   "lang": "lzh",
+   "label": "法賢本",
+   "who": "法賢譯《大乘無量壽莊嚴經》・991 年",
+   "work": "T0363"
+  },
+  {
+   "id": "T0310",
+   "lang": "lzh",
+   "label": "菩提流志本",
+   "who": "菩提流志譯《大寶積經・無量壽如來會》・713 年",
+   "work": "T0310"
+  }
+ ],
+ "works": [
+  "T0310",
+  "T0360",
+  "T0361",
+  "T0362",
+  "T0363"
+ ],
+ "anchors": [
+  {
+   "work": "T0310",
+   "node": "極樂現前第三十五",
+   "uid": "T11n0310_p0099c09"
+  },
+  {
+   "work": "T0310",
+   "node": "彌勒述見第三十六",
+   "uid": "T11n0310_p0100a06"
+  },
+  {
+   "work": "T0310",
+   "node": "疑悔處胎第三十七",
+   "uid": "T11n0310_p0100a22"
+  },
+  {
+   "work": "T0310",
+   "node": "菩薩當生第三十八",
+   "uid": "T11n0310_p0100c01"
+  },
+  {
+   "work": "T0310",
+   "node": "付囑彌勒第三十九",
+   "uid": "T11n0310_p0100c26"
+  },
+  {
+   "work": "T0310",
+   "node": "說頌諄囑第四十",
+   "uid": "T11n0310_p0101b10"
+  },
+  {
+   "work": "T0310",
+   "node": "聞經獲益第四十一",
+   "uid": "T11n0310_p0101c04"
+  },
+  {
+   "work": "T0310",
+   "node": "地動現瑞第四十二",
+   "uid": "T11n0310_p0101c16"
+  }
+ ],
+ "cells": {
+  "sv-35": {
+   "sa": "api cānanda uttiṣṭha paścānmukho bhūtvā, puṣpāṇy avakīryāñjaliṃ pragṛhya, praṇipata. eṣāsau dig, yatra sa bhagavān amitābhas tathāgato 'rhan samyaksaṃbuddhas tiṣṭhati dhriyate P55 yāpayati, dharmaṃ ca deśayati ; virajo viśuddho, yasya taṃ nāmadheyam anāvaraṇaṃ daśadiśi loke vighuṣṭam ekaikasyāṃ diśi gaṅgānadīvālikāsamā buddhā bhagavanto varṇayanti, stuvanti, praśaṃsanty, asakṛd asakṛd asaṅgavācāprativākyāḥ. evam ukta, āyusmān ānando bhagavantam etad avocat : icchāmy ahaṃ bhagavantaṃ tam amitābham amitaprabham amitāyuṣaṃ tathāgatam arhantaṃ samyaksaṃbuddhaṃ draṣṭum, tāṃś ca bodhisattvān mahāsattvān bahubuddhakoṭīnayutaśatasahasrāvaropitakuśalamūlān. samanantarābhāṣitā cāyuṣmatānandeneyaṃ vāk, atha tāvad eva so 'mitābhas tathāgato 'rhan samyaksaṃbuddhaḥ svapāṇitalāt tathārūpāṃ prabhāṃ prāmuñcat, yayedaṃ koṭīśatasahasratamaṃ buddhakṣetraṃ mahatāvabhāsena sphuṭam abhūt. tena khalv api samayena sarvatra koṭīśatasahasrabuddhakṣetrāṇāṃ, ye kecit kālaparvatā vā, ratnaparvatā vā, merumahāmerumucilindamahāmucilindacakravāḍamahācakravāḍā vā, bhittayo vā, stambhā vā, vṛkṣagahanodyānavimānāni vā divyamānuṣyakāni, tāni sarvāṇi tasya tathāgatasya tayā prabhayābhinirbhinnāny abhūvan, samabhibhūtāni. tad yathāpi nāma puruṣo vyāmamātrake sthito dvitīyaṃ puruṣaṃ pratyavekṣata āditye 'bhyudgata ; evam evāsmin buddhakṣetre bhikṣubhikṣuṇyupāsakopāsikā devanāgayakṣa- gandharvāsuragaruḍakinnaramahoragāś ca tasyāṃ velāyām adrākṣus tam amitābhaṃ tathāgatam arhantaṃ samyaksaṃbuddhaṃ, sumerum iva parvatarājānaṃ sarvakṣetrābhyudgatam, sarvadiso 'bhibhūya, bhāsamānaṃ tapantaṃ virocamānaṃ P56 bibhrājamānaṃ, taṃ ca mahāntaṃ bodhisattvagaṇaṃ, taṃ ca bhikṣusaṃghaṃ, yad idaṃ buddhānubhāvena tasyāḥ prabhayāḥ pariśuddhatvāt. tad yatheyaṃ mahāpṛthivy ekodakajātā bhavet, tatra na vṛkṣā, na parvatā, na dvīpā, na tṛṇagulmauṣadhivanaspatayo, na nadīśvabhraprapātāḥ prajñāyeran, anyatraikārṇavībhūtamahāpṛthivy aikā syāt ; evam eva tasmin buddhakṣetre nāsty anyat kiṃcil liṅgaṃ vā, nimittaṃ vānyatraiva vyāmaprabhāḥ śrāvakās, te ca yojanakoṭīśatasahasraprabhā bodhisattvāḥ, sa ca bhagavān amitābhas tathāgato 'rhan samyaksaṃbuddhas, taṃ ca śrāvakagaṇaṃ taṃ ca bodhisattvagaṇam abhibhūya, sarvā diśaḥ prabhāsayan saṃdṛśyate. tena khalv api samayena tasyāṃ sukhāvatyāṃ lokadhātau bodhisattvāḥ śrāvākadevamanuṣyāś ca sarve ta imāṃ lokadhātuṃ, śākyamuniṃ ca tathāgataṃ mahatā bhikṣusaṃghena parivṛtaṃ paśyanti sma, dharmaṃ ca deśayantam.",
+   "T0360": "佛告阿難：「汝起更整衣服，合掌恭敬，禮無量壽佛。十方國土諸佛如來，常共稱揚讚歎彼佛，無著無閡。」於是，阿難起整衣服，正身西向，恭敬合掌，五體投地禮無量壽佛。白言：「世尊！願見彼佛安樂國土及諸菩薩聲聞大眾。」說是語已，即時無量壽佛放大光明，普照一切諸佛世界，金剛圍山、須彌山王、大小諸山，一切所有皆同一色。譬如劫水彌滿世界，其中萬物沈沒不現，滉瀁浩汗唯見大水；彼佛光明亦復如是，聲聞、菩薩一切光明皆悉隱蔽，唯見佛光明耀顯赫。爾時，阿難即見無量壽佛，威德巍巍如須彌山王，高出一切諸世界上，相好光明靡不照耀。此會四眾一時悉見，彼見此土亦復如是。",
+   "T0361": "佛告阿難：「我哀若曹，令悉見無量清淨佛及諸菩薩、阿羅漢所居國土。若欲見之不？」阿難則大喜，長跪叉手言：「願皆欲見之。」佛言：「若起更被袈裟西向拜——當日沒處——為無量清淨佛作禮，以頭面著地言：『南無無量清淨平等覺。』」阿難言：「諾，受教。」則起更被袈裟西向拜——當日所沒處——為無量清淨佛作禮，以頭腦著地言：「南無無量清淨平等覺。」阿難未起，無量清淨佛便大放光明威神，則遍八方上下諸無央數佛國，天地則皆為大震動。諸天無央數天地、須彌山羅寶、摩訶須彌大山羅寶、諸天地大界、小界，其中諸有大泥犁、小泥犁，諸山林、溪谷、幽冥之處，皆則大明，悉雨大開闢。則阿難、諸菩薩、阿羅漢等，諸天、帝王、人民，悉皆見無量清淨佛及諸菩薩、阿羅漢、國土七寶已，心皆大歡喜踊躍，悉起為無量清淨佛作禮，以頭腦著地，皆言：「南無無量清淨三藐三佛陀。」無量清淨佛放光明威神已，諸無央數天、人民、及蜎飛蠕動之類，皆悉見無量清淨佛光明，莫不慈心歡喜作善者。諸有泥犁、禽獸、薜荔，諸有考治勤苦之處，則皆休止不復治，莫不解脫憂苦者。諸有盲者則皆得視，諸跛躄蹇者則皆得走行，諸病者則皆愈起，諸尫者則皆強健；愚癡者則皆更黠慧，諸有婬泆瞋怒者皆悉慈心作善，諸有被毒者毒皆不行。鍾鼓、琴瑟、箜篌、樂器諸伎，不鼓皆自作音聲；婦女珠環皆自作聲；百鳥、畜獸皆自悲鳴。當是之時莫不歡喜得過度者。則時爾日，諸佛國中諸天人，莫不持天上華香來下於虛空中，悉皆供養，散諸佛及無量清淨佛上。諸天各共大作萬種自然伎樂，樂諸佛及諸菩薩、阿羅漢。當是之時，甚快樂不可言。",
+   "T0362": "佛告阿難：「我哀若曹，令悉見阿彌陀佛，及諸菩薩、阿羅漢所居國土。若欲見之不？」阿難即大歡喜，長跪叉手言：「願皆欲見之。」佛言：「若起，更被袈裟西向拜，當日所沒處，為阿彌陀佛作禮，以頭腦著地言：『南無阿彌陀三耶三佛檀。』」阿難言：「諾！受教。」即起，更被袈裟西向拜，當日所沒處，為彌陀佛作禮，以頭腦著地言：「南無阿彌陀三耶三佛檀。」阿難未起，阿彌陀佛便大放光明威神，則遍八方、上下諸無央數佛國。諸無央數諸天地，即皆為大震動。諸無央數天地，須彌山羅寶，摩訶須彌大山羅寶，諸天地、大界、小界，其中諸大泥犁、小泥犁，諸山林溪谷幽冥之處，即皆大明，悉大開闢。即時阿難，諸菩薩、阿羅漢等，諸天、帝王、人民，悉皆見阿彌陀佛及諸菩薩、阿羅漢國土七寶已，心大歡喜踊躍，悉起，為阿彌陀佛作禮，以頭腦著地，皆言：「南無阿彌陀三耶三佛檀。」阿彌陀佛國放光明威神以，諸無央數天人民，及蜎飛蠕動之類，皆悉見阿彌陀佛光明，莫不慈心歡喜者。諸有泥犁、禽獸、薜荔，諸有考治勤苦之處，即皆休止不復治，莫不解脫憂苦者。諸有盲者即皆得視，諸有聾者即皆得聽，諸有喑者即皆能語，諸有僂者即得申，諸跛癖蹇者即皆走行，諸有病者即皆愈起，諸尫者即皆強健，諸愚癡者即更黠慧，諸有婬者皆是梵行，諸瞋怒者悉皆慈心作善，諸有被毒者毒皆不行。鍾磬、琴瑟、箜篌、樂器諸伎，不鼓皆自作五音聲。婦女珠環皆自作聲，百鳥畜狩皆自悲鳴。當是時，莫不歡喜善樂得過度者。即爾時諸佛國中諸天人民，莫不持天上華香來下，於虛空中悉皆供養，散諸佛及阿彌陀佛上。諸天各共大作萬種自然伎樂，樂諸佛及諸菩薩、阿羅漢。當是之時，其快樂不可言。",
+   "T0363": "佛告阿難：「吾今此土，所有菩薩摩訶薩，已曾供養無量諸佛植眾德本；命終之後，皆得生於極樂世界。阿難！汝起合掌面西頂禮。」爾時，阿難即從座起，合掌面西，頂禮之間忽然得見極樂世界無量壽佛，容顏廣大色相端嚴如黃金山。又聞十方世界諸佛如來，稱揚讚歎無量壽佛種種功德。阿難白言：「彼佛淨剎得未曾有，我亦願樂生於彼土。」世尊告言：「其中生者菩薩摩訶薩，已曾親近無量諸佛植眾德本。汝欲生彼，應當一心歸依瞻仰。」作是語時，無量壽佛於手掌中，放無量光照于東方百千俱胝那由他佛剎。於此世界，所有黑山、雪山、金山、寶山、目真隣陀山、摩訶目真隣陀山、須彌山、鐵圍山、大鐵圍山，大海、江河、叢林、樹木，及天人宮殿，一切境界無不照見，譬如日出明照世間，亦復如是。爾時會中，苾芻、苾芻尼、優婆塞、優婆夷、天、龍、藥叉、乾闥婆、阿修羅、迦樓羅、緊那羅、摩睺羅伽、人非人等，皆見極樂世界種種莊嚴，及見無量壽如來，聲聞、菩薩圍繞恭敬，譬如須彌山王出于大海。爾時，極樂世界，過於西方百千俱胝那由他國，以佛威力如對目前。又見彼土清淨平正，譬如海面無有丘陵、山嶮、草木、雜穢，唯是眾寶莊嚴，聖賢共住。「復次，阿難！又彼無量壽佛，與諸菩薩、聲聞之眾，亦皆得見我身及娑婆世界菩薩、聲聞，人天之眾。」",
+   "T0310": "爾時世尊告阿難言：「此是無量壽佛極樂世界。汝應從坐而起，合掌恭敬五體投地為佛作禮。彼佛名稱遍滿十方，彼一一方恒沙諸佛皆共稱讚無礙無斷。」是時阿難即從坐起，偏袒右肩，西面合掌五體投地，白佛言：「世尊！我今欲見極樂世界無量壽如來，并供養奉事無量百千億那由他佛及菩薩眾，種諸善根。」時無量壽佛即於掌中放大光明，遍照百千俱胝那由他剎。彼諸佛剎所有大小諸山，黑山、寶山、須彌盧山、迷盧山、大迷盧山、目真隣陀山、摩訶目真隣陀山、鐵圍山、大鐵圍山，叢薄園林及諸宮殿天人等物，以佛光明皆悉照見。譬如有人以淨天眼觀一尋地見諸所有，又如日光出現萬物斯覩。彼諸國中比丘、比丘尼、優婆塞、優婆夷，悉見無量壽如來如須彌山王照諸佛剎，時諸佛國皆悉明現如處一尋。以無量壽如來殊勝光明極清淨故，見彼高座及諸聲聞、菩薩等眾。譬如大地洪水盈滿，樹林山河皆沒不現，唯有大水。「如是阿難！彼佛剎中無有他論及異形類，唯除一切大聲聞眾一尋光明，及彼菩薩摩訶薩踰繕那等百千尋光。」彼無量壽如來、應、正等覺光明，映蔽一切聲聞及諸菩薩，令諸有情悉皆得見。彼極樂界菩薩、聲聞、人天眾等，一切皆覩娑婆世界釋迦如來，及比丘眾圍繞說法。"
+  },
+  "sv-36": {
+   "sa": "tatra khalu bhagavān ajitaṃ bodhisattvaṃ mahāsattvam āmantrayate sma : paśyasi tvam ajitāmuṣmin buddhakṣetre guṇālaṃkāravyūhasaṃpadam ; upariṣṭāś cāntarīkṣa ārāmaramaṇīyāni, vanaramaṇīyāny, udyānaramaṇīyāni, nadīpuṣkiriṇīramaṇīyāni, nānāratnamayotpalapadmakumudapuṇḍaṛīkākīrṇāni ; adhastāc ca dharaṇitalam upādāya, yāvad akaniṣṭhabhavanād, gaganatalaṃ puṣpābhikīrṇaṃ, puṣpāvalisamupaśobhitaṃ, nānāstambhapaṅktiparisphuṭaṃ tathāgatābhinirmita- nānādvijasaṃghaniṣevitam. āha : paśyāmi bhagavan, bhagavān āha : paśyasi punas tvam ajitaitān aparān dvijasaṃghān P57 sarvabuddhakṣetrān buddasvareṇābhijijñāpayanti, yenaite bodhisattvā nityam avirahitā buddhānusmṛtyā. āha : paśyāmi bhagavan. bhagavān āha : paśyasi tvam ajitātra buddhakṣetre amūn sattvān yojanaśatasahasrakeṣu vimāneṣv abhirūḍhān, antarīkṣe 'saktān krāmataḥ. āha : paśyāmi bhagavan. bhagavān āha : tat kiṃ manyase 'jita ; asti kiṃcin nānātvaṃ devānāṃ vā paranirmitavaśavartināṃ sukhāvatyām lokadhātau manuṣyaṇāṃ vā. āha : ekam apy ahaṃ bhagavan nānātvaṃ na samanupaśyāmi. yāvad maharddhikā atra sukhāvatyāṃ lokadhātau manuṣyāḥ. bhagavān āha : paśyasi punas tvam ajita tatra sukhāvatyāṃ lokadhātāv ekeṣāṃ manuṣyāṇām udāreṣu padmeṣu garbhāvāsam. āha ; tad yathāpi nāma bhagavan trayaśtriṃśā devā yāmā devā vā, pañcāśadyojanakeṣu vā, yojanaśatikeṣu vā, pañcayojanaśatikeṣu vimāneṣu praviṣṭāḥ krīḍanti, ramanti, paricārayanti ; evam evāhaṃ bhagavan atra sukhāvatyāṃ lokadhātāv ekeṣāṃ manuṣyāṇām udārapadmeṣu garbhāvāsaṃ paśyāmi. santi khalu punar atra bhagavan sattvā ya upapādukāḥ padmeṣu paryaṅkaiḥ prādurbhavanti.",
+   "T0360": "爾時，佛告阿難及慈氏菩薩：「汝見彼國，從地已上至淨居天，其中所有微妙嚴淨自然之物，為悉見不？」阿難對曰：「唯然，已見。」「汝寧復聞無量壽佛大音宣布一切世界化眾生不？」阿難對曰：「唯然，已聞。」「彼國人民乘百千由旬七寶宮殿無所障閡，遍至十方供養諸佛，汝復見不？」對曰：「已見。」「彼國人民有胎生者，汝復見不？」對曰：「已見。」「其胎生者所處宮殿，或百由旬或五百由旬，各於其中受諸快樂，如忉利天，亦皆自然。」",
+   "T0361": "佛告阿難、阿逸菩薩等：「我說無量清淨佛及諸菩薩、阿羅漢、國土自然七寶，當無有異乎？」阿難長跪叉手言：「佛說無量清淨佛國土快善，如佛所說無有一異。」佛言：「我說無量清淨佛功德國土快善，晝夜一劫尚復未竟，我但為若曹小說之耳。」",
+   "T0362": "佛告阿難、阿逸菩薩等：「我說阿彌陀佛及諸菩薩、阿羅漢國土自然七寶，儻無有異乎？」阿難長跪叉手言：「佛說阿彌陀佛國土快善，如佛所言無有一異。」佛言：「我說阿彌陀佛功德國土快善，晝夜盡一劫，尚復未竟。我但為若曹小說之爾。」",
+   "T0363": "爾時，世尊告慈氏菩薩言：「汝見極樂世界功德莊嚴，宮殿、樓閣、園林、臺觀、流泉、浴池不？慈氏！汝見欲界諸天，上至色究竟天，雨種種香花遍滿佛剎，作莊嚴不？汝見菩薩、聲聞淨行之眾，而作佛聲演說妙法，一切佛剎皆得聞聲，獲利樂不？汝見百千俱胝眾生，游處虛空宮殿隨身不？」慈氏菩薩白佛言：「世尊！如佛所說一一皆見。」慈氏白言：「云何此界一類眾生，雖亦修善而不求生？」佛告慈氏：「此等眾生，智慧微淺，分別西方不及天界，是以非樂不求生彼。」慈氏白言：「此等眾生虛妄分別，不求佛剎何免輪迴？」",
+   "T0310": "爾時佛告彌勒菩薩言：「汝頗見具足清淨威德莊嚴佛剎，及見空中樹林園苑涌泉池沼不耶？汝見大地乃至色究竟天，於虛空中散花樹林以為莊嚴。復有眾鳥住虛空界出種種音，猶如佛聲普聞世界。是諸眾鳥皆是化作，非實畜生。汝見是耶？」彌勒白佛言：「唯然已見。」佛復告彌勒菩薩言：「汝見此諸眾生入踰繕那百千宮殿已，遊行虛空無著無礙，遍諸剎土供養諸佛，及見彼有情於晝夜分念佛相續不耶？」彌勒白言：「唯然盡見。」佛復告言：「汝見他化自在天與極樂諸人受用資具有差別不？」彌勒白言：「我不見彼有少差別。」佛告彌勒：「汝見極樂世界人住胎不？」彌勒白言：「世尊！譬如三十三天夜摩天等，入百由旬若五百由旬宮殿之內遊戲歡樂。我見極樂世界人住胎者如夜摩天處於宮殿，又見眾生於蓮華內結加趺坐自然化生。」"
+  },
+  "sv-37": {
+   "sa": "tat ko 'tra bhagavan hetuḥ, kaḥ pratyayo, yad anye punar garbhāvāse prativasanti ; anye punar upapādukāḥ paryaṅkaiḥ padmeṣu prādurbhavanti. bhagavān āha : ye te 'jita bodhisattvā anyeṣu buddhakṣetreṣu sthitāḥ sukhāvatyāṃ lokadhātāv upapattaye vicikitsām P58 utpādayanti, tena cittena kuśalamūlāny avaropayanti, teṣām atra garbhāvāso bhavati. ye punar nirvicikitsāś cchinnakāṃkṣāḥ sukhāvatyāṃ lokadhātāv upapattaye kuśalamūlāny avaropayanti, buddhānāṃ bhagavatām asaṅgajñānam avakalpayanty abhiśraddhadhaty adhimucyante ; tatropapādukāḥ padmeṣu paryaṅkaiḥ prādurbhavanti. ye te 'jita bodhisattvā mahāsattvā anyatrabuddhakṣetrasthāś cittam utpādayanty amitābhasya tathāgatasyārhataḥ samyaksaṃbuddhasya darśanāya, na vicikitsām utpādayanti, na kāṃkṣanty asaṅgabuddhajñānaṃ, svakucalamūlaṃ cābhiśraddhadhati, teṣām aupapādukānāṃ paryaṅkaiḥ padmeṣu prādurbhūtānāṃ muhūrtamātreṇaivaivaṃrūpaḥ kāyo bhavati, tad yathānyeṣāṃ ciropapannānāṃ sattvānām. paśyājita prajñādaurbalyaṃ prajñāvaimātraṃ prajñāparihāṇiṃ prajñāparīttatāṃ, yatra hi nāma pañcavarṣaśatāni parihīṇā bhavanti buddhadarśanād, bodhisattvadarśanāt, saddharmadarśanād, dhārmasaṃkathyāt ; kuśalamūlacaryāyāḥ parihīṇā bhavanti sarvakuśalamūlasaṃpatter, yad idaṃ vicikitsāpatitaiḥ saṃjñāmanasikāraiḥ. tad yathājita rājñaḥ kṣatriyasya mūrdhānābhiṣiktasya bandhanāgāraṃ bhavet, sarvasauvarṇavaiḍūryapratyuptam, avasaktapaṭṭamālyadāmakalāpaṃ, nānāraṅgavitatavitānaṃ, dūṣyapaṭṭasaṃcchannaṃ, nānāmuktakusumābhikīrṇam, udāraṃ, dhūpanirdhūpitaṃ, prāsādaharmyagavākṣavedikātoraṇavicitra- sarvaratnapratimaṇḍitaṃ, hemaratnakaṃkaṇījālasaṃcchannaṃ, caturasraṃ, catuḥsthūṇaṃ caturdvāraṃ, catuḥsopānakam. tatra tasya rājñaḥ putraḥ kenacid eva kṛtyena prakṣipto P59 jāmbūnadasuvarṇamayair nigaḍair baddho bhavati. tasya ca tatra paryaṅkaḥ prajñaptaḥ syād, anekagoṇikāstīrṇas, tūlikāpalālikāstīrṇaḥ, kācilindikasukhasaṃsparśaḥ, kāliṅga- prāvaraṇasottarapaṭacchadana, ubhayāntalohitopadhānaś, citro, darśanīyaḥ. sa tatrābhiniṣaṇṇo vābhinipanno vā bhavet. bahu cāsyānekavidhaṃ śucipraṇītaṃ pānabhojanaṃ tatropanāmyet. tat kiṃ manyase 'jita ; udāras tasya rājaputrasya sa paribhogo bhavet. āha : udāro bhagavan. bhagavān āha : tat kiṃ manyase 'jita ; api tv āsvādayet, sa tan nigamayed vā, tena vā tuṣṭiṃ vidyāt. āha : no hīdaṃ bhagavan. api tu khalu punar yena vyapanītena rājñā tatra bandhanāgāre prakṣipto bhavet, sa tato mokṣam evākāṃkṣayet. abhijātān kumārān amātyān stryāgārān śreṣṭhino gṛhapatīn koṭṭarājño vā paryeṣed, ya enaṃ tato bandhanāgārāt parimocayeyuḥ. kiṃ cāpi bhagavaṃs tasya kumārasya tatra bandhanāgāre nābhiratiḥ. nātra parimucyate, yāvan na rājā prasādam upadarśayati. bhagavān āha : evam evājita, ye te bodhisattvāḥ vicikitsāpatitāḥ kuśalamūlāny avaropayanti, kāṃkṣanti buddhajñānam asamasamajñānaṃ, kiṃ cāpi te buddhanāmaśravaṇena, tena ca cittaprasādamātreṇātra sukhāvatyāṃ lokadhātāv upapadyante. na tu khalv aupapādukāḥ padmeṣu paryaṅkaiḥ prādurbhavanti. api tu padmeṣu garbhāvāse P60 prativasanti. kiṃ cāpi teṣāṃ tatrodyānavimānasaṃjñāḥ saṃtiṣṭhante. nāsty uccāraprasrāvaṃ, nāsti kheṭasiṃhānakaṃ, na pratikūlaṃ manasaḥ pravartate. api tu khalu punaḥ pañca varṣaśatāni virahitā bhavanti buddhadarśanena, dharmaśravaṇena, bodhisattvadarśanena, dharmasāṃkathyaviniścayena, sarvakuśaladharmacaryābhiś ca. kiṃ cāpi te tatra nābhiramante, na tuṣṭiṃ vidanti. api tu khalu punaḥ pūrvāparādhaṃ kṣapayitvā, te bhūyas tataḥ paścān niṣkrāmanti. na caiṣāṃ tato niṣkrāmatāṃ niṣkramaḥ prajñāyata, ūrdhvam adhas tiryag vā. paśyājita ; yatra hi nāma pañcabhir varṣaśatair bahūni buddhakoṭīnayutaśatasahasrāṇy upasthātavyāni, bahvasaṃkhyeyāprameyāni ca kuśalamūlāny avaropayitavyāni ca syuḥ. buddhadharmāś ca parigṛhītavyāḥ. tat sarvaṃ vicikitsādoṣeṇa virāgayanti. paśyājita kiyan mahate 'narthāya bodhisattvānāṃ vicikitsā saṃvartata iti. tasmāt tarhy ajita ; bodhisattvair nirvicikitsair bodhāya cittam utpādya, kṣipraṃ sarvasattvahitasukhādhānāya sāmarthāpratilambhārthaṃ, sukhāvatyāṃ lokadhātāv upapattaye kuśalamūlāni pariṇāmayitavyāni, yatra bhagavān amitāyus tathāgato 'rhan samyaksaṃbuddhaḥ.",
+   "T0360": "爾時，慈氏菩薩白佛言：「世尊！何因何緣彼國人民胎生化生？」佛告慈氏：「若有眾生以疑惑心修諸功德，願生彼國，不了佛智、不思議智、不可稱智、大乘廣智、無等無倫最上勝智，於此諸智疑惑不信；然猶信罪福，修習善本，願生其國。此諸眾生生彼宮殿，壽五百歲，常不見佛、不聞經法、不見菩薩聲聞聖眾，是故於彼國土謂之胎生。若有眾生明信佛智乃至勝智，作諸功德信心迴向，此諸眾生於七寶華中自然化生，加趺而坐，須臾之頃，身相光明，智慧功德如諸菩薩具足成就。「復次，慈氏！他方諸大菩薩發心欲見無量壽佛，恭敬供養及諸菩薩聲聞之眾。彼菩薩等命終得生無量壽國，於七寶華中自然化生。彌勒當知，彼化生者智慧勝故。其胎生者皆無智慧，於五百歲中常不見佛、不聞經法、不見菩薩諸聲聞眾，無由供養於佛、不知菩薩法式、不得修習功德，當知此人宿世之時無有智慧，疑惑所致。」佛告彌勒：「譬如轉輪聖王別有宮室，七寶莊飾，張設床帳，懸諸繒幡。若有諸小王子得罪於王，輒內彼宮中，繫以金鎖，供給飲食、衣服、床蓐、華香、伎樂，如轉輪王無所乏少。於意云何？此諸王子寧樂彼處不？」對曰：「不也，但種種方便求諸大力欲自勉出。」佛告彌勒：「此諸眾生亦復如是。以疑惑佛智生彼宮殿，無有刑罰乃至一念惡事，但於五百歲中不見三寶，不得供養修諸善本。以此為苦，雖有餘樂猶不樂彼處。若此眾生識其本罪，深自悔責求離彼處，即得如意，往詣無量壽佛所恭敬供養，亦得遍至無量無數諸如來所修諸功德。彌勒當知，其有菩薩生疑惑者，為失大利。是故，應當明信諸佛無上智慧。」",
+   "T0363": "佛言：「慈氏！極樂國中有胎生不？」慈氏白言：「不也！世尊！其中生者，譬如欲界諸天，居五百由旬宮殿，自在遊戲，何有胎生？世尊！此界眾生，何因何緣而處胎生？」佛言：「慈氏！此等眾生，所種善根不能離相，不求佛慧妄生分別。深著世樂人間福報，是故胎生。若有眾生，以無相智慧植眾德本，身心清淨遠離分別，求生淨剎趣佛菩提。是人命終，剎那之間於佛淨土坐寶蓮花身相具足。何有胎生？慈氏！汝見愚癡之人，不種善根，但以世智聰辯，妄生分別增益邪心，云何出離生死大難？復有眾生，雖種善根供養三寶作大福田，取相分別情執深重，求出輪迴終不能得。」佛告慈氏：「譬如受灌頂位剎帝利王，置一大獄，於其獄內，安置殿堂、樓閣、鉤欄、窓牖、床榻座具，皆以珍寶嚴飾；所須衣服、飲食無不豐足。爾時灌頂王，驅逐太子禁閉獄中，復與錢財、珍寶、羅紈、匹帛，恣意受用。」佛告慈氏：「於意云何？彼太子得快樂不？」慈氏白言：「不也！世尊！彼中雖有堂殿、樓閣、飲食、衣服、錢帛、金寶隨意受用，身閉牢獄心不自在，唯求出離。」佛告慈氏：「若灌頂王不捨其過，彼諸大臣、長者、居士等，可令太子免禁獄不？」慈氏白言：「王既不捨，云何得出？」佛言：「如是，如是！彼諸眾生，雖復修福供養三寶，虛妄分別求人天果。得報之時，所居器界、宮殿、樓閣，衣服、臥具、飲食、湯藥，一切所須悉皆豐足，而未能出三界獄中，常處輪迴而不自在。假使父母、妻子、男、女眷屬欲相救免，終不能出邪見業王無能捨離。若諸眾生斷妄分別，植諸善本無相、無著，當生佛剎永得解脫。」",
+   "T0310": "時彌勒菩薩復白佛言：「世尊！何因緣故，彼國眾生有胎生者、化生者？」佛告彌勒：「若有眾生墮於疑悔積集善根，希求佛智、普遍智、不思議智、無等智、威德智、廣大智。於自善根不能生信，以此因緣，於五百歲住宮殿中，不見佛、不聞法、不見菩薩及聲聞眾。若有眾生斷除疑悔積集善根，希求佛智乃至廣大智，信已善根。此人於蓮華內結加趺坐忽然化生，瞬息而出。譬如他國有人來至，而此菩薩亦復如是。餘國發心來生極樂，見無量壽佛奉事供養，及諸菩薩聲聞之眾。阿逸多！汝觀殊勝智者，彼因廣慧力故受彼化生，於蓮花中結加趺坐。汝觀下劣之輩，於五百歲中不見佛、不聞法、不見菩薩及聲聞眾，不知菩薩威儀法則，不能修習諸功德故，無因奉事無量壽佛。是諸人等皆為昔緣疑悔所致。譬如剎帝利王其子犯法，幽之內宮、處以花觀，層樓綺殿妙飾奇珍，寶帳金床重敷茵褥，名花布地燒大寶香，服御所資悉皆豐備，而以閻浮金鎖繫其兩足。」佛告彌勒：「於意云何？彼王子心寧樂此不？」答言：「不也。世尊！彼幽縶時常思解脫，求諸親識居士宰官長者近臣。王之太子雖希出離終不從心，乃至剎帝利王心生歡喜方得解脫。」佛告彌勒：「如是如是。若有墮於疑悔，種諸善根希求佛智乃至廣大智，於自善根不能生信。由聞佛名起信心故，雖生彼國，於蓮花中不得出現。彼等眾生處花胎中，猶如園苑宮殿之想。何以故？彼中清淨無諸穢惡，一切無有不可樂者。然彼眾生於五百歲，不見佛、不聞法、不見菩薩及聲聞眾，不得供養奉事諸佛，不得問於菩薩法藏。遠離一切殊勝善根，彼等於中不生欣樂，不能出現修習善法；往昔世中過失盡已然後乃出，彼於出時，心迷上下四方之所。若五百歲無疑惑者，即當供養無量百千俱胝那由他佛，并種無量無邊善根。汝阿逸多！當知疑惑與諸菩薩為大損害。」"
+  },
+  "sv-38": {
+   "sa": "evam ukte, 'jito bodhisattvo bhagavantam etad avocat : kiyantaḥ punar bhagavan bodhisattvā ito buddhakṣetrāt pariniṣpannā, anyeṣāṃ vā buddhānāṃ bhagavatām antikād ye sukhāvatyāṃ lokadhātāv upapatsyante. bhagavān āha : P61 ito hy ajita buddhakṣetrād dvāsaptatikoṭīnayutāni bodhisattvānāṃ pariniṣpannāni, yāni sukhāvatyāṃ lokadhātāv upapatsyante, pariniṣpannānām avaivarttikānāṃ bahubuddhakoṭī- śatasahasrāvaropitaiḥ kuśalamūlaiḥ. kaḥ punar vādas, tataḥ parīttataraiḥ kuśalamūlaiḥ. duṣprasahasya tathāgatasyāntikād aṣṭādaśakoṭīnayutāni bodhisattvānāṃ sukhāvatyāṃ lokadhātāv upapatsyante ; pūrvāntare digbhāge ratnākaro nāma tathāgato viharati. tasyāntikān navatibodhisattvakoṭyaḥ sukhāvatyām lokadhātāv upapatsyante ; jyotiṣprabhasya tathāgatasyāntikād dvāviṃśatibodhisattvakoṭyaḥ sukhāvatyāṃ lokadhātāv upapatsyante ; amitaprabhasya tathāgatasyāntikāt pañcaviṃśatibodhisattvakoṭyaḥ sukhāvatyāṃ lokadhātāv upapatsyante ; lokapradīpasya tathāgatasyāntikāt ṣaṣṭibodhisattvakoṭyaḥ sukhāvatyāṃ lokadhātāv upapatsyante ; nāgābhibhuvas tathāgatasyāntikāt catuḥṣaṣtibodhisattvakoṭyaḥ sukhāvatyām lokadhātāv upapatsyante ; virajaprabhasya tathāgatasyāntikāt pañcaviṃśatibodhisattvakoṭyaḥ sukhāvatyāṃ lokadhātāv upapatsyante ; siṃhasya tathāgatasyāntikād aṣṭādaśabodhisattvasahasrāṇi sukhāvatyāṃ lokadhātāv upapatsyante ; śrīkūṭasya tathāgatasyāntikād ekāśītibodhisattvakoṭīnayutāni sukhāvatyāṃ lokadhātāv upapatsyante ; narendrarājasya tathāgatasyāntikād daśabodhisattvakoṭīnayutāni sukhāvatyāṃ lokadhātāv upapatsyante ; P62 balābhijñasya tathāgatasyāntikād dvādaśabodhisattvasahasrāṇi sukhāvatyāṃ lokadhātāv upapatsyante ; puṣpadhvajasya tathāgatasyāntikāt pañcaviṃśatir vīryaprāptā bodhisattvakoṭya ekaprasthānasaṃsthitā ekenāṣṭāhena navanavatikalpakoṭīnayutaśatasahasrāṇi paścānmukhīkṛtya yāḥ sukhāvatyāṃ lokadhātāv upapatsyante ; jvalanādhipates tathāgatasyāntikād dvādaśabodhisattvakoṭyaḥ sukhāvatyāṃ lokadhātāv upapatsyante ; vaiśāradyaprāptasya tathāgatasyāntikād ekonasaptatir bodhisattvakoṭyo yāḥ sukhāvatyāṃ lokadhātāv upapatsyante ; amitābhasya tathāgatasya darśanāya, vandanāya, paryupāsanāya paripṛcchanāyai paripraśnīkaraṇāya. etenājita paryāyeṇa paripūṛṇakalpakoṭīnayutaṃ nāmadheyāni parikīrtayeyaṃ teṣāṃ tathāgatānām, yebhyas te bodhisattvā upasaṃkrāmanti sukhāvatīṃ lokadhātuṃ tam amitābhaṃ tathāgataṃ draṣṭuṃ vandituṃ paryupāsituṃ, na ca śakyaḥ paryanto 'dhigantum.",
+   "T0360": "彌勒菩薩白佛言：「世尊！於此世界有幾所不退菩薩生彼佛國？」佛告彌勒：「於此世界有六十七億不退菩薩往生彼國。一一菩薩已曾供養無數諸佛，次如彌勒者也；諸小行菩薩及修習少功德者不可稱計，皆當往生。」佛告彌勒：「不但我剎諸菩薩等往生彼國，他方佛土亦復如是。其第一佛名曰遠照，彼有百八十億菩薩皆當往生。其第二佛名曰寶藏，彼有九十億菩薩皆當往生。其第三佛名曰無量音，彼有二百二十億菩薩皆當往生。其第四佛名曰甘露味，彼有二百五十億菩薩皆當往生。其第五佛名曰龍勝，彼有十四億菩薩皆當往生。其第六佛名曰勝力，彼有萬四千菩薩皆當往生。其第七佛名曰師子，彼有五百億菩薩皆當往生。其第八佛名曰離垢光，彼有八十億菩薩皆當往生。其第九佛名曰德首，彼有六十億菩薩皆當往生。其第十佛名曰妙德山，彼有六十億菩薩皆當往生。其第十一佛名曰人王，彼有十億菩薩皆當往生。其第十二佛名曰無上華，彼有無數不可稱計諸菩薩眾——皆不退轉，智慧勇猛，已曾供養無量諸佛，於七日中即能攝取百千億劫大士所修堅固之法——斯等菩薩皆當往生。其第十三佛名曰無畏，彼有七百九十億大菩薩眾、諸小菩薩及比丘等不可稱計皆當往生。」佛語彌勒：「不但此十四佛國中諸菩薩等當往生也，十方世界無量佛國其往生者亦復如是，甚多無數。我但說十方諸佛名號及菩薩、比丘生彼國者，晝夜一劫尚未能竟，我今為汝略說之耳。」",
+   "T0361": "阿逸菩薩則長跪叉手問佛言：「今佛國從是間當有幾阿惟越致菩薩往生無量清淨佛國？願聞之。」佛言：「若欲知者，明聽著心中。」阿逸菩薩言：「受教。」佛言：「從我國當有七百二十億阿惟越致菩薩皆往生無量清淨佛國——一阿惟越致菩薩者，前後供養無央數諸佛，以次如彌勒皆當作佛——及其餘諸小菩薩輩者無央數不可復計，皆當往生無量清淨佛國。」佛告阿逸菩薩：「不但我國中諸菩薩當往生無量清淨佛國，他方異國復有佛亦復如是。第一佛名光遠炤，其國有百八十億菩薩皆當往生無量清淨佛國。他方異國第二佛，佛名寶積，其國有九十億菩薩皆當往生無量清淨佛國。他方異國第三佛，名儒無垢，有二百二十億菩薩皆當往生阿彌陀佛國。他方異國第四佛，名無極光明，其國有二百五十億菩薩皆當往生無量清淨佛國。他方異國第五佛，名於世無上，其國有六百億菩薩皆當往生無量清淨佛國。他方異國第六佛，名勇光，其國有萬四千菩薩皆當往生無量清淨佛國。他方異國第七佛，名具足交絡，其國有十四億菩薩皆當往生無量清淨佛國。他方異國第八佛，名雄慧王，其國有八菩薩皆當往生無量清淨佛國。他方異國第九佛，名多力無過者，其國有八百一十億菩薩皆當往生無量清淨佛國。他方異國第十佛，名吉良，其國有萬億菩薩皆當往生無量清淨佛國。他方異國第十一佛，名慧辯，其國有萬二千菩薩皆當往生無量清淨佛國。他方異國第十二佛，名無上華，其國有諸菩薩無央數不可復計——皆阿惟越致、皆智慧勇猛、各供養無央數諸佛，以一時俱心願欲往生——皆當生無量清淨佛國。他方異國第十三佛，名樂大妙音，其國有七百九十億菩薩皆當往生無量清淨佛國。」佛言：「是諸菩薩——皆阿惟越致——諸比丘僧中及小菩薩輩無央數，皆當往生無量清淨佛國。不獨是十四佛國中諸菩薩當往生也，都八方上下無央數佛國諸菩薩輩各各如是，皆當往生無量清淨佛國。其無央數都共往會，無量清淨佛國大眾多不可復計，我但說八方上下無央數佛名字，晝夜一劫尚未竟。我但復說佛國諸比丘僧眾、菩薩當往生無量清淨佛國人數，說之一劫不休止尚未竟。我但為若曹總攬都小說之耳。」",
+   "T0362": "阿逸菩薩即長跪叉手問佛言：「今佛國土，從是間當有幾何阿惟越致菩薩，往生阿彌陀佛國？願欲聞之。」佛言：「汝欲知者，明聽著心中。」阿逸菩薩言：「受教。」佛言：「從我國當有七百二十億阿惟越致菩薩，皆當往生阿彌陀佛國。一阿惟越致菩薩者，前後供養無央數諸佛。以次如彌勒皆當作佛，及其餘諸小菩薩輩者無央數，不可復計，皆當往生阿彌陀佛國。」佛告阿逸菩薩：「不但我國中諸菩薩當往生阿彌陀佛國，他方異國復有佛，亦復如是。第一佛名頭樓和斯，其國有百八十億菩薩，皆當往生阿彌陀佛國。他方異國，第二佛，名羅隣那阿竭，其國有九十億菩薩，皆當往生阿彌陀佛國。他方異國，第三佛，名朱蹄彼會，其國有二百二十億菩薩，皆當往生阿彌陀佛國。他方異國，第四佛，名阿蜜蔡羅薩，其國有二百五十億菩薩，皆當往生阿彌陀佛國。他方異國，第五佛，名樓波黎波蔡𮜨，其國有六百億菩薩，皆當往生阿彌陀佛國。他方異國，第六佛，名那惟于蔡，其國有萬四千菩薩，皆當往生阿彌陀佛國。他方異國，第七佛，名維黎波羅潘蔡𮜨，其國有十五菩薩，皆當往生阿彌陀佛國。他方異國，第八佛，名和阿蔡，其國有八菩薩，皆當往生阿彌陀佛國。他方異國，第九佛，名尸利群蔡，其國有八百一十億菩薩，皆當往生阿彌陀佛國。他方異國，第十佛，名那他蔡，其國有萬億菩薩，皆當往生阿彌陀佛國。他方異國，第十一佛，名和羅那惟于蔡𮜨，其國有萬二千菩薩，皆當往生阿彌陀佛國。他方異國，第十二佛，名沸霸圖耶蔡，其國有諸菩薩，無央數不可復計，皆阿惟越致，皆智慧勇猛，各供養無央數諸佛，以一時俱心願欲往，皆當生阿彌陀佛國。他方異國，第十三佛，名隨呵閱祇波多蔡，其國有七百九十億菩薩，皆當往生阿彌陀佛國。」佛言：「是諸菩薩皆阿惟越致。諸比丘僧中及小菩薩輩無央數，皆當往生阿彌陀佛國。不獨是十四佛國中諸菩薩當往生也，都八方、上下無央數佛國諸菩薩輩，各各是皆當往生阿彌陀佛國。甚無央數，都共往會阿彌陀佛國，大眾多不可計。我但說八方、上下無央數諸佛名字，晝夜一劫尚未竟。我但復說諸佛國，諸比丘僧、眾菩薩，當往生阿彌陀佛國人數，說之一劫不休止尚未竟。我但為若曹總攬，都小說之爾。」",
+   "T0363": "慈氏菩薩白佛言：「世尊！今此娑婆世界及諸佛剎，有幾多菩薩摩訶薩，得生極樂世界，見無量壽佛，成就阿耨多羅三藐三菩提？」佛言：「慈氏！我此娑婆世界，有七十二俱胝那由他菩薩摩訶薩，已曾供養無量諸佛植眾德本，當生彼國親近供養無量壽佛，成就阿耨多羅三藐三菩提。「復次，阿難！難忍佛剎，有十八俱胝那由他菩薩摩訶薩，生彼國土。寶藏佛剎，有九十俱胝那由他菩薩摩訶薩，生彼國土。火光佛剎，有二十二俱胝那由他菩薩摩訶薩，生彼國土。無量光佛剎，有二十五俱胝那由他菩薩摩訶薩，生彼國土。世燈佛剎，有六十俱胝那由他菩薩摩訶薩，生彼國土。龍樹佛剎，有一千四百菩薩摩訶薩，生彼國土。無垢光佛剎，有二十五俱胝那由他菩薩摩訶薩，生彼國土。師子佛剎，有一千八百菩薩摩訶薩，生彼國土。吉祥峯佛剎，有二千一百俱胝那由他菩薩摩訶薩，生彼國土。仁王佛剎，有一千俱胝那由他菩薩摩訶薩，生彼國土。花幢佛剎，有一俱胝菩薩摩訶薩，生彼國土。光明王佛剎，有十二俱胝菩薩摩訶薩，生彼國土。得無畏佛剎，有六十九俱胝那由他菩薩摩訶薩，生彼國土。悉皆親近供養無量壽佛，不久當成阿耨多羅三藐三菩提。」",
+   "T0310": "爾時彌勒菩薩白佛言：「世尊！於此國界不退菩薩，當生極樂國者，其數幾何？」佛告彌勒：「此佛土中有七十二億菩薩，彼於無量億那由他百千佛所種諸善根成不退轉，當生彼國。況餘菩薩由少善根生彼國者，不可稱計。阿逸多！從難忍如來佛國，有十八億不退菩薩當生極樂世界。東北方寶藏佛國中，有九十億不退菩薩當生彼土。從無量聲如來國中，有二十二億不退菩薩當生彼土。從光明如來國中，有三十二億不退菩薩當生彼土。從龍天如來國中，有十四億不退菩薩當生彼土。從勝天力如來國中，有十二千不退菩薩當生彼土。從師子如來國中，有五百不退菩薩當生彼土。從離塵如來國中，有八十一億不退菩薩當生彼土。從世天如來國中，有六十億不退菩薩當生彼土。從勝積如來國中，有六十億不退菩薩當生彼土。從人王如來國中，有十俱胝不退菩薩當生彼土。從勝花如來國中，有五百菩薩具大精進發趣一乘，於七日中能令眾生離百千億那由他劫生死流轉，彼等亦當生極樂界。從發起精進如來國中，有六十九億不退菩薩當生彼土，到彼國已，供養禮拜無量壽如來及菩薩眾。阿逸多！我若具說諸方菩薩生極樂界，若已到、今到、當到，為供養禮拜瞻仰無量壽佛等者，但說其名窮劫不盡。"
+  },
+  "sv-39": {
+   "sa": "paśyājita kiyat sulabdhalābhās te sattvā ye 'mitābhasya tathāgatasyārhataḥ samyaksaṃbuddhasya nāmadheyaṃ śroṣyanti, napi te sattvā hīnādhimuktikā bhaviṣyanti, ye 'ntaśa ekacittaprasādam api tasmin tathāgate pratilapsyante, 'smiṃś ca dharmaparyāye. tasmāt tarhy ajita ; ārocayāmi vaḥ, prativedayāmi vaḥ, sadevakasya lokasya purato 'sya dharmaparyāyasya sravaṇāya, P63 trisāhasramahāsāhasram api lokadhātum agniparipūṛṇām avagāhyātikramyaikacittotpādam api vipratisāro na kartavyaḥ. tat kasya hetoḥ. bodhisattvakoṭyo hy ajitāśravaṇād eṣām evaṃrūpāṇāṃ dharmaparyāyāṇāṃ vivartante 'nuttarāyāḥ samyaksaṃbodheḥ. tasmād asya dharmaparyāyasyādhyāśayena śravaṇodgrahaṇadhāraṇārthāṃ, paryavāptaye, vistareṇa saṃprakāśanārthāya, bhāvanārthaṃ ca, sumahadvīryam ārabdhavyam. antaśa ekarātrim divasam apy, eka- godohamātram apy antaśaḥ, pustakagatāvaropitam api kṛtvā sulikhito dhārayitavyaḥ, śastṛsaṃjñā ca tatrotpādāya kartavyā, icchadbhiḥ kṣipram aparimitān sattvān avaivarttikāṃś cānuttarāyāṃ samyaksaṃbodhau pratiṣṭhāpayituṃ, taṃ ca tasya bhagavato 'mitābhasya tathāgatasya buddhakṣetraṃ draṣṭum. ātmanaś ca visiṣṭāṃ buddhakṣetraguṇālaṃkāravyūhasaṃpadaṃ parigṛhītum iti. api tu khalv ajita ; atyarthaṃ sulabdhalābhās te sattvā avaropitakuśalamūlāḥ, pūrvajinakṛtādhikārā, buddhādhiṣṭhānādhiṣṭhitāś ca bhaviṣyanti, yeṣām anāgate 'dhvani, yāvat saddharmapralope vartamāna ima evaṃrūpā udārā dharmaparyāyāḥ sarvabuddhasaṃvarṇitāḥ, sarvabuddhapraśastāḥ sarvabuddhānujñātā, mahataḥ, sarvajñajñānasya kṣipram āhārakāḥ śrotāvabhāsam āgacchanti. śrutvā codāraṃ prītiprāmodyaṃ P64 pratilapsyanta, udgrahīṣyanti, dhārayiṣyanti, vācayiṣyanti, paryavāpsyanti, parebhyaś ca vistareṇa saṃprakāśayiṣyanti, bhāvanābhiratāś ca bhaviṣyanty, antaśo likhitvā pūjayiṣyanti, bahu ca te puṇyaṃ prasaviṣyanti, yasya na sukarā saṃkhyā kartum. iti hy ajita yat tathāgatena kṛtyaṃ kṛtaṃ tan mayā. yūṣmābhir idānīṃ nirvicikitsair yogaḥ karaṇīyaḥ. mā saṃśaya tam asaṅgam anāvaraṇaṃ buddhajñānam. mā bhūt sarvākārāvaropeta- ratnamayapadmabandhanāgārapraveśaḥ. durlabho hy ajita buddhotpādaḥ, durlabhā dharmadeśanā, durlabhā kṣaṇasaṃpat. ākhyātājita mayā pūrvakuśalamūlapāramiprāptiḥ. yūyam idānīm abhiyujyata pratipadya vai. asya khalu punar ajita dharmaparyāyasya mahatīṃ parīndanāṃ karomy avipranāśāya. mā buddhadharmāṇām antardhānāya parākramiṣyatha. mā tathāgatājñāṃ ksobha- yiṣyatha.",
+   "T0360": "佛語彌勒：「其有得聞彼佛名號，歡喜踊躍，乃至一念，當知此人為得大利，則是具足無上功德。是故，彌勒！設有大火充滿三千大千世界，要當過此。聞是經法，歡喜信樂，受持讀誦，如說修行。所以者何？多有菩薩欲聞此經而不能得。若有眾生聞此經者，於無上道終不退轉，是故應當專心信受持誦說行。吾今為諸眾生說此經法，令見無量壽佛及其國土一切所有，所當為者皆可求之，無得以我滅度之後復生疑惑。當來之世經道滅盡，我以慈悲哀愍特留此經止住百歲，其有眾生值斯經者，隨意所願皆可得度。」佛語彌勒：「如來興世難值難見、諸佛經道難得難聞；菩薩勝法諸波羅蜜得聞亦難；遇善知識、聞法能行此亦為難；若聞斯經信樂受持，難中之難無過此難。是故我法，如是作、如是說、如是教，應當信順，如法修行。」",
+   "T0361": "佛語阿難阿逸菩薩等：「其世間帝王、人民、善男子、善女人，前世宿命行善所致相祿，迺當聞無量清淨佛聲，慈心歡喜，我代之喜。」佛言：「其有善男子、善女人聞無量清淨佛聲，慈心歡喜，一時踊躍，心意清淨，衣毛為起拔出者，皆前世宿命作佛道——若他方佛故，菩薩、非凡人。其有人民——男子、女人——聞無量清淨佛聲，不信有佛者、不信佛經語、不信有比丘僧、心中狐疑都無所信者，皆故從惡道中來，生愚蒙不解宿命，殃惡未盡、未當得度脫，故心中狐疑不信向耳。」佛言：「我語若曹，若曹所當作善法皆當奉行信之。無得以我般泥洹去後故，若曹及後世人無得復言：『我不信有無量清淨佛國。』我故令若曹悉見無量清淨佛國土，所當為者若自求之。我具為汝曹道說經戒順法，若曹當如佛法持之，無得毀失。「我持是經以累汝曹，汝曹當堅持之，無得為妄增減是經法。我般泥洹去後，經道留止千歲，千歲後經道斷絕，在心所願皆可得道。」佛言：「師開導人耳目，智慧明達，度脫人令得善，舍泥洹之道。常當慈孝，於佛如父母；常念師恩，當念不斷絕，則得道疾。」佛言：「天下有佛者甚難得值，人有信受師法經語深者亦難得值，若有沙門、若師為人說佛經者甚難得值。」",
+   "T0362": "佛語阿難、阿逸菩薩等：「其世間帝王人民，善男子、善女人，前世宿命作善所致相祿巍巍，乃當聞阿彌陀佛聲者，甚快善哉，代之喜。」佛言：「其有善男子、善女人，聞阿彌陀佛聲，慈心歡喜，一時踊躍，心意淨潔衣毛為起，淚即出者，皆前世宿命作佛道。若他方佛故，菩薩非凡人，其有人民男子、女人，聞彌陀佛聲，不信有者，不信經佛語，不信有比丘僧，心中狐疑都無所信者，皆故從惡道中來生，愚癡不解宿命，殃惡未盡，尚未當度脫故，心中狐疑不信向爾。」佛言：「我語若曹，若曹所當作善法，皆當奉行信之，無得疑。我般泥洹去後，汝曹及後世人，無得復言：『我不信有阿彌陀佛國。』我故令若曹悉見阿彌陀佛國土，所當為者各求之。我具為若曹道說經戒慎法，若曹當如佛法持之，無得毀失。我持是經以累若曹，若曹當堅持之，無得為妄增減是經法。我般泥洹去後，經道留止千歲。千歲後經道斷絕，我皆慈哀持留是經法，止住百歲，百歲中竟，乃休止斷絕。在心所願，皆可得道。」佛言：「師開導人耳目，智慧明達度脫人，令得善合泥洹之道。常當孝慈於佛、父母，常當念師恩，常念不絕即得道疾。」佛言：「天下有佛者甚難值，若有沙門、若師為人說經者甚難值。」",
+   "T0363": "佛言：「慈氏！如是功德莊嚴極樂國土，滿彼算數無量之劫，說不能盡。若有善男子、善女人，得聞無量壽佛名號，發一念信心，歸依瞻禮。當知此人非是小乘，於我法中得名第一弟子。」佛告慈氏：「若有苾芻、苾芻尼、優婆塞、優婆夷、天、龍、藥叉、乾闥婆、阿修羅、迦樓羅、緊那羅、摩睺羅伽、人非人等，於此經典書寫、供養、受持、讀誦、為他演說，乃至於一晝夜，思惟彼剎及佛身功德，此人命終速得生彼，成就阿耨多羅三藐三菩提。「復次，慈氏！今此經典甚深微妙，廣利眾生。若有眾生，於此正法受持、讀誦、書寫、供養。彼人臨終，假使三千大千世界滿中大火，亦能超過生彼國土。是人已曾值過去佛受菩提記，一切如來同所稱讚，無上菩提隨意成就。」佛言：「慈氏！佛世難值，正法難聞，如來所行亦應隨行。於此經典作大守護，為諸有情長夜利益，莫令眾生墮在五趣莊嚴獄中；令諸有情種修福善，求生淨剎。」",
+   "T0310": "「阿逸多！汝觀彼諸菩薩摩訶薩善獲利益，若有聞彼佛名能生一念喜愛之心，當獲如上所說功德，心無下劣亦不貢高，成就善根悉皆增上。阿逸多！是故告汝及天人、世間、阿修羅等，今此法門付囑於汝。應當愛樂修習，乃至經一晝夜受持讀誦生希望心，於大眾中為他開示，當令書寫執持經卷，於此經中生導師想。「阿逸多！是故菩薩摩訶薩，欲令無量諸眾生等速疾安住不退轉於阿耨多羅三藐三菩提，及欲見彼廣大莊嚴攝受殊勝佛剎圓滿功德者，應當起精進力聽此法門。假使經過大千世界滿中猛火，為求法故不生退屈諂偽之心，讀誦受持書寫經卷，乃至於須臾頃為他開示，勸令聽聞不生憂惱，設入大火不應疑悔。何以故？彼無量億諸菩薩等皆悉求此微妙法門，尊重聽聞不生違背。是故汝等應求此法。阿逸多！彼諸眾生獲大善利，若於來世乃至正法滅時，當有眾生殖諸善本，已曾供養無量諸佛，由彼如來加威力故，能得如是廣大法門，一切如來稱讚悅可。若於彼法攝取受持，當獲廣大一切智智，隨意所樂種諸善根。若善男子善女人等，於彼法中廣大勝解之者，當能聽聞獲大歡喜，受持讀誦廣為他說常樂修行。阿逸多！無量億數諸菩薩等求請此法不曾厭背，是故汝等諸善男子及善女人，於今來世能於是法，若已求、現求、當求者，皆獲善利。「阿逸多！如來所應作者皆已作之。汝等應當安住無疑種諸善本，應常修學使無疑滯，不入一切種類珍寶成就牢獄。阿逸多！如是等類大威德者，能生廣大佛法異門，由於此法不聽聞故，有一億菩薩退轉阿耨多羅三藐三菩提。阿逸多！佛出世難，離八難身亦為難得。諸佛如來無上之法，十力無畏無礙無著甚深之法，及波羅蜜等菩薩之法，能說法人亦難開示。阿逸多！善說法人非易可遇，堅固深信時亦難遭。是故我今如理宣說，汝等修習應如教住。「汝阿逸多！我以此法門及諸佛法囑累於汝，汝當修行無令滅沒。如是廣大微妙法門，一切諸佛之所稱讚。勿違佛教而棄捨之，當令汝等獲不善利，淪沒長夜備眾危苦。是故我今為大囑累，當令是法久住不滅，應勤修行隨順我教。」"
+  },
+  "sv-40": {
+   "sa": "atha khalu bhagavāṃs tasyāṃ velāyām imā gāthā abhā- ṣata : neme akṛtapuṇyānāṃ śravā bheṣyanti īdṛśāḥ, ye tu te śūra siddhārthāḥ te śroṣyanti imāṃ girāṃ.(1) dṛṣṭo yaiś ca hi saṃbuddho lokanātha prabhaṃkaraḥ, sa gauravaiḥ śruto dharmaḥ prītiṃ prāpsyanti te parāṃ.(2) na śakta hīnebhi kuśīdadṛṣtibhiḥ buddhāna dharmeṣu prasāda vinditum. ye pūrvabuddheṣu akārṣu pūjāṃ, P65 te lokanāthān caryāsu śikṣiṣu.(3) yathāndhakāre puruṣo hy acakṣuḥ mārgaṃ na jāne kutu saṃprakāśayet. sarve tathā śrāvaka buddhajñāne ajānakāḥ kiṃ punar anyasattvāḥ.(4) buddho hi buddhasya guṇā prajānate. na devanāgāsurayakṣaśrāvakāḥ. pratyekabuddhāna pi ko gatī yatho, buddhasya jñāne hi prakāśyamāne.(5) yadi sarvasattvāḥ sugatā bhaveyuḥ viśuddhajñānā paramakovidā, te kalpakoṭīr atha vāpi uttare ekasya buddhasya guṇān katheyuḥ.(6) atrāntare nirvṛta te bhaveyuḥ prakāśyamānā bahukalpakoṭīḥ, na ca buddhajñānasya pramāṇu labhyate, tathā hi jñānāś cariyaṃ jinānāṃ.(7) tasmān naraḥ paṇḍita vijñajātiyaḥ, yo mahya vākyam abhiśraddhadheyuḥ, kṛtsnāṃ sa sākṣī jinajñānarāśiṃ. buddha prajānāti girām udīrayet.(8) kadāci labhyāti manuṣyalābhaḥ, kadāci buddhāna pi prādurbhāvaḥ. śraddhā tha prajñā sucireṇa lapsyate, tasyārthaprajñair janayātha vīryaṃ.(9) ya īdṛśāṃ dharma śruṇitvā śreṣṭhāṃ labhyanti prītiṃ sugataṃ smarantaḥ, te mitram asmākam atītam adhvani, ye buddhā bodhāya janenti cchandam, iti.(10) P66",
+   "T0363": "爾時世尊而說頌曰：「若不往昔修福慧，於此正法不能聞； 已曾供養諸如來，是故汝等聞斯義。 聞已受持及書寫，讀誦、讚演并供養， 如是一心求淨方，決定往生極樂國。 假使大火滿三千，及彼莊嚴諸牢獄； 如是諸難悉能超，皆是如來威德力。 彼佛利樂諸功德，唯佛與佛乃能知； 聲聞、緣覺滿世間，盡其神力莫能測。 假使長壽諸有情，命住無數俱胝劫， 稱讚如來功德身，盡其形壽讚無盡。 大聖法王所說法，利益一切諸群生； 若有受持恭敬者，佛說此人真善友。」",
+   "T0310": "爾時世尊而說頌曰：「若於福德初未修，終不聞斯微妙法； 勇猛能成諸善利，當聞如是甚深經。 彼人曾見諸世尊，能作大光拯濁世， 多聞總持如巨海，彼獲聖賢喜愛心。 懈怠邪見下劣人，不信如來斯正法； 若曾於佛殖眾善，救世之行彼能修。 譬如盲人恒處闇，不能開導於他路； 聲聞於佛智亦然，況餘有情而悟解。 如來功德佛自知，唯有世尊能開示， 天龍夜叉所不及，二乘自絕於名言。 若諸有情當作佛，行超普賢登彼岸， 敷演一佛之功德，時逾多劫不思議， 於是中間身滅度，佛之勝慧莫能量。 是故具足於信聞，及諸善友之攝受， 得聞如是深妙法，當獲愛重諸聖尊。 如來勝智遍虛空，所說義言唯佛悟， 是故博聞諸智士，應信我教如實言。 人趣之身得甚難，如來出世遇亦難， 信慧多時方乃獲，是故修者應精進。 如是妙法已聽聞，常念諸佛而生喜， 彼人往昔真吾友，善能樂欲佛菩提。」"
+  },
+  "sv-41": {
+   "sa": "asmin khalu punar dharmaparyāye bhagavatā bhāṣyamāne dvādaśānāṃ sattvanayutakoṭīnāṃ virajo vigatamalaṃ dharmeṣu dharmacakṣur viśuddhaṃ, caturviṃśatyā koṭībhir anāgāmiphalaṃ prāptam. aṣṭānāṃ bhikṣuśatānām anutpādāyāsravebhyaś cittāni vimuktāni. pañcaviṃśatyā bodhisattvakoṭībhir anutpattikadharmakṣāntipratilabdhāḥ. devamānuṣikāyāś ca prajāyāś catvāriṃśatkoṭīnayutaśatasahasrāṇām anutpattipūrvāṇy anuttarāyāṃ samyaksaṃbodhau cittāny utpannāni sukhāvatyupapattaye ca kuśalamūlāny avaropitāni, bhagavato 'mitābhasya darśanakāmatayā. sarve te tatrotpādyānupūrveṇa mañjusvarā nāma tathāgatā anyeṣu lokadhātuṣūpapatsyante. aśītiś ca nayutakoṭyo dīpaṅkareṇa tathāgatena labdhakṣāntikā avaivartyā anuttarāyāḥ samyaksaṃbodher, amitāyuṣaiva tathāgatena paripācitāḥ pūrvabodhisattvacaryāś carantās, tāś ca sukhāvatyāṃ lokadhātāv upapadya pūrvapraṇidhānacaryāḥ paripūrayiṣyanti.",
+   "T0360": "爾時，世尊說此經法，無量眾生皆發無上正覺之心，萬二千那由他人得清淨法眼，二十二億諸天人民得阿那含，八十萬比丘漏盡意解，四十億菩薩得不退轉，以弘誓功德而自莊嚴，於將來世當成正覺。",
+   "T0361": "佛說是經時，則萬二千億諸天人民皆得天眼徹視，悉一心皆為菩薩道；則二百二十億諸天人民皆得阿那含道；則八百沙門皆得阿羅漢道；則四十億菩薩皆得阿惟越致。佛說經已，諸菩薩、阿羅漢、諸天、帝王、人民皆大歡喜，前趣為佛作禮，遶佛三匝，以頭面著佛足而去。",
+   "T0362": "佛說是經時，即萬二千億諸天人民，皆得天眼徹視，悉一心皆為菩薩道。即二百億諸天人民，皆得阿那含道。即八百沙門，皆得阿羅漢道。即四十億菩薩，皆得阿惟越致。佛說經已，諸菩薩、阿羅漢，諸天、帝王、人民，皆大歡喜，起為佛作禮遶三匝，前以頭面著佛足而去。",
+   "T0363": "爾時，世尊說此法時，有十二俱胝那由他人，遠塵離垢得法眼淨。八百苾芻，漏盡意解心得解脫。天人眾中，有二十二俱胝那由他人，證阿那含果。復有二十五俱胝人，得法忍不退。復有四十俱胝百千那由他人，發阿耨多羅三藐三菩提心，種諸善根，皆願往生極樂世界，見無量壽佛。復有十方佛剎，若現在生及未來生，見無量壽佛者，各有八萬俱胝那由他人，得然燈佛記，名妙音如來，當得阿耨多羅三藐三菩提。彼諸有情，皆是無量壽佛宿願因緣，俱得往生極樂世界。",
+   "T0310": "爾時世尊說是經已，天人世間有萬二千那由他億眾生遠塵離垢得法眼淨；二十億眾生得阿那含果；六千八百比丘諸漏已盡心得解脫；四十億菩薩於無上菩提住不退轉，被大甲冑當成正覺；有二十五億眾生得不退忍；有四萬億那由他百千眾生於無上菩提未曾發意，今始初發種諸善根，願生極樂世界見阿彌陀佛，皆當往生彼如來土，各於異方次第成佛同名妙音。有八萬億那由他眾生，得授記法忍成無上菩提。彼無量壽佛昔行菩薩道時成熟有情，悉皆當生極樂世界，憶念儔昔所發思願皆得成滿。"
+  },
+  "sv-42": {
+   "sa": "tasyāṃ ca velāyām ayaṃ trisāhasramahāsāhasro lokadhātuḥ ṣaḍvikāraṃ prakampitaḥ. vividhāni ca prātihāryāṇi saṃdṛśyanti, jānumātraṃ ca mandaravapuṣpaiḥ pṛthivyāṃ saṃstṛtam abhūt. divyamānuṣikāni ca tūryāṇi saṃvāditāny abhūvan. anumodakāśabdena ca yāvad akaniṣṭhabhavanaṃ vijñaptam abhūt. idam avocad bhagavān āttamanā, ajito bodhisattvo mahāsattva āyuṣmāṃś cānandaḥ, sā ca sarvāvatī parṣat sadevamānuṣyāsuragandharvaś ca loko bhagavato bhāṣitam P67 abhyanandann iti.",
+   "T0360": "爾時，三千大千世界六種震動，大光普照十方國土，百千音樂自然而作，無量妙華芬芬而降。佛說經已，彌勒菩薩及十方來諸菩薩眾，長老阿難、諸大聲聞，一切大眾，聞佛所說靡不歡喜。",
+   "T0363": "佛說是語時，三千大千世界六種震動，雨諸香花積至于膝。復有諸天於虛空中，作妙音樂出隨喜聲；乃至色界諸天，悉皆得聞歎未曾有。爾時，尊者阿難及慈氏菩薩等，并天龍八部一切大眾，聞佛所說，皆大歡喜，信受奉行。",
+   "T0310": "爾時三千大千世界六種震動，并現種種希有神變，放大光明普照世界。無量億那由他百千天人，同時音樂不鼓自鳴，雨天曼陀羅花沒至于膝；乃至阿迦膩吒天，皆作種種殊妙供養。佛說經已，彌勒菩薩等及尊者阿難，一切大眾，聞佛所說，皆大歡喜。"
+  },
+  "sv-99": {
+   "sa": "bhagavato 'mitābhasya guṇaparikīrtanaṃ bodhisattvānām avaivarttikabhūmipraveśaḥ. amitābhasya sukhāvatī-vyūha- parivartaḥ samāptaḥ."
+  }
+ }
+}
