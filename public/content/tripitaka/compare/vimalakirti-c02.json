@@ -1,0 +1,224 @@
+{
+ "slug": "vimalakirti-c02",
+ "title": "維摩詰經・方便品第二",
+ "family": "sa",
+ "intro": "段號依梵本大正大學校訂本（Vkn 品.段）。支謙〈善權品〉、羅什〈方便品〉、玄奘〈顯不思議方便善巧品〉。身如地水火風一段，梵本另有「如虛空」，漢譯只有玄奘本「與虛空等」一句相當。",
+ "units": [
+  {
+   "id": "c2-01",
+   "label": "Vkn 2.1 維摩詰功德・以方便居毘耶離"
+  },
+  {
+   "id": "c2-02",
+   "label": "Vkn 2.2 以六度攝諸眾生"
+  },
+  {
+   "id": "c2-03",
+   "label": "Vkn 2.3 雖為白衣奉持沙門律行"
+  },
+  {
+   "id": "c2-04",
+   "label": "Vkn 2.4 遊諸四衢・入學堂婬舍酒肆"
+  },
+  {
+   "id": "c2-05",
+   "label": "Vkn 2.5–6 長者中尊乃至護世中尊"
+  },
+  {
+   "id": "c2-07",
+   "label": "Vkn 2.7 方便現疾・眾人問疾"
+  },
+  {
+   "id": "c2-08",
+   "label": "Vkn 2.8 是身無常・眾病所集"
+  },
+  {
+   "id": "c2-09",
+   "label": "Vkn 2.9 是身如聚沫等諸喻"
+  },
+  {
+   "id": "c2-10",
+   "label": "Vkn 2.10 是身如地水火風"
+  },
+  {
+   "id": "c2-11",
+   "label": "Vkn 2.11 是身不實・此可患厭"
+  },
+  {
+   "id": "c2-12",
+   "label": "Vkn 2.12 佛身即法身・當發菩提心"
+  },
+  {
+   "id": "c2-13",
+   "label": "Vkn 2.13 無數千人發心"
+  },
+  {
+   "id": "c2-99",
+   "label": "品尾題"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本",
+   "who": "大正大學校訂本（2006）・GRETIL"
+  },
+  {
+   "id": "T0474",
+   "lang": "lzh",
+   "label": "支謙本",
+   "who": "支謙譯《維摩詰經》・約 223–253 年",
+   "work": "T0474"
+  },
+  {
+   "id": "T0475",
+   "lang": "lzh",
+   "label": "羅什本",
+   "who": "鳩摩羅什譯《維摩詰所說經》・406 年",
+   "work": "T0475"
+  },
+  {
+   "id": "T0476",
+   "lang": "lzh",
+   "label": "玄奘本",
+   "who": "玄奘譯《說無垢稱經》・650 年",
+   "work": "T0476"
+  },
+  {
+   "id": "bo",
+   "lang": "bo",
+   "label": "藏譯",
+   "who": "法性戒譯・德格版 Toh 176・84000"
+  },
+  {
+   "id": "en",
+   "lang": "en",
+   "label": "84000 英譯",
+   "who": "譯自藏譯・與藏文逐句對齊"
+  }
+ ],
+ "works": [
+  "T0474",
+  "T0475",
+  "T0476"
+ ],
+ "anchors": [
+  {
+   "work": "T0474",
+   "node": "維摩詰所說經善權品第二",
+   "uid": "T14n0474_p0520c23"
+  },
+  {
+   "work": "T0475",
+   "node": "維摩詰所說經方便品第二",
+   "uid": "T14n0475_p0539a07"
+  },
+  {
+   "work": "T0476",
+   "node": "說無垢稱經顯不思議方便善巧品第二",
+   "uid": "T14n0476_p0560b05"
+  }
+ ],
+ "cells": {
+  "c2-01": {
+   "sa": "Vkn 2.1 tena khalu punaḥ samayena vaiśālyāṃ mahānagaryāṃ vimalakīrtir nāma licchaviḥ prativasati sma / pūrvajinakṛtādhikāraḥ, avaropitakuśalamūlaḥ, bahubuddhaparyupāsitaḥ, pratilabdhakṣāntikaḥ, labdhapratibhānaḥ, mahābhijñāvikrīḍitaḥ, dhāraṇīpratilabdhaḥ, vaiśāradyaprāptaḥ, nihatamārapratyarthikaḥ, gambhīradharmanayasupraviṣṭaḥ, prajñāpāramitānirjātaḥ, upāyakauśalyagatiṃgataḥ, pratibhānasamanvāgataḥ, satvāśayacaritakuśalaḥ, indriyaparāparajñānaniryātaḥ, yathāpratyarhadharmadeśakaḥ, kṛtaniścayaḥ kṛtaśrama iha mahāyāne, suparīkṣitakarmakārī, buddheryāpathapratiṣṭhitaḥ, sāgaravarabuddhyanupraviṣṭaḥ, sarvabuddhastutastomitapraśaṃsitaḥ, sarvaśakrabrahmalokapālanamaskṛtaḥ, sa satvaparipākāyopāyakauśalyena vaiśālyāṃ mahānagaryāṃ prativasati sma /",
+   "T0474": "是時，維耶離大城中有長者名曰維摩詰（漢言無垢稱），在先佛已造行修善，本得法忍，已得辯才，神通不戲，得無所畏，降魔勞怨，深入微妙，出於智度無極，善權方便，博入諸道，令得所願。人根名德，生而具足，造成大道，所作事勝，佛聖善行，皆已得立，覺意如海，而皆已入。諸佛咨嗟，弟子、釋、梵、世主所敬。欲度人故，居維耶離，矜行權道。",
+   "T0475": "爾時毘耶離大城中有長者，名維摩詰，已曾供養無量諸佛，深植善本，得無生忍；辯才無礙，遊戲神通，逮諸總持；獲無所畏，降魔勞怨；入深法門，善於智度，通達方便，大願成就；明了眾生心之所趣，又能分別諸根利鈍，久於佛道，心已純淑，決定大乘；諸有所作，能善思量；住佛威儀，心大如海，諸佛咨嗟，弟子、釋、梵、世主所敬。欲度人故，以善方便居毘耶離；",
+   "T0476": "爾時，廣嚴城中有大菩薩，離呫毘種，名無垢稱，已曾供養無量諸佛，於諸佛所深殖善根，得妙辯才、具無生忍、逮諸總持、遊戲神通，獲無所畏摧魔怨力。入深法門善於智度，通達方便大願成滿，明了有情意樂及行，善知有情諸根勝劣。智度成辦，說法淳熟，於大乘中決定修習，於所作業能善思量。住佛威儀，入心慧海，諸佛咨嗟稱揚顯說，釋、梵、護世常所禮敬，為欲成熟諸有情故，以善方便居廣嚴城。",
+   "bo": "ཡང་དེའི་ཚེ་ཡངས་པའི་གྲོང་ཁྱེར་ཆེན་པོ་ན་ལིད་ཙ་བཱི་དྲི་མ་མེད་པར་གྲགས་པ་ཞེས་བྱ་བ་ཞིག་འདུག་སྟེ། སྔོན་གྱི་རྒྱལ་བ་ལ་ལྷག་པར་བྱ་བ་བྱས་ཤིང་དགེ་བའི་རྩ་བ་བསྐྱེད་པ། སངས་རྒྱས་མང་པོ་ལ་བསྙེན་བཀུར་བྱས་པ། ། བཟོད་པ་ཐོབ་པ། སྤོབས་པ་ཐོབ་པ། མངོན་པར་ཤེས་པ་ཆེན་པོས་རྣམ་པར་རྩེན་པ། གཟུངས་ཐོབ་པ། མི་འཇིགས་པ་ཐོབ་པ། བདུད་དང་ཕྱིར་རྒོལ་བ་བཅོམ་པ། ཆོས་ཀྱི་ཚུལ་ཟབ་མོ་ལ་ཤིན་ཏུ་ཞུགས་པ། ཤེས་རབ་ཀྱི་ཕ་རོལ་ཏུ་ཕྱིན་པ་ལས་ངེས་པར་བྱུང་བ། ཐབས་མཁས་པ་རྟོགས་པར་ཁོང་དུ་ཆུད་པ། སྤོབས་པ་དང་ལྡན་པ། སེམས་ཅན་གྱི་བསམ་པ་དང་སྤྱོད་པ་ལ་མཁས་པ། སེམས་ཅན་གྱི་དབང་པོ་མཆོག་དང་མཆོག་མ་ཡིན་པ་ཤེས་པ་ལས་ངེས་པར་བྱུང་བ་སོ་སོ་ཅི་རིགས་པར་ཆོས་སྟོན་པ། ཐེག་པ་ཆེན་པོ་འདི་ལ་བརྩོན་པར་བྱས་ཤིང་ཤེས་པར་བྱས་པ། ཤིན་ཏུ་བརྟགས་ཏེ་ལས་བྱེད་པ། སངས་རྒྱས་ཀྱི་སྤྱོད་ལམ་ལ་གནས་པ། བློ་དམ་པ་རྒྱ་མཚོ་ལྟ་བུའི་རྗེས་སུ་ཞུགས་པ། སངས་རྒྱས་ཐམས་ཅད་ཀྱིས་བསྟོད་ཅིང་བཀུར་ཏེ་རབ་ཏུ་བསྔགས་པ། བརྒྱ་བྱིན་དང་། ཚངས་པ་དང་། འཇིག་རྟེན་སྐྱོང་བ་ཐམས་ཅད་ཀྱིས་ཕྱག་བྱས་པ་དེ་སེམས་ཅན་ཡོངས་སུ་སྨིན་པར་བྱ་བའི་ཕྱིར་ཐབས་ལ་མཁས་པས་ཡངས་པའི་གྲོང་ཁྱེར་ཆེན་པོ་ན་གནས་ཏེ།",
+   "en": "At that time, there lived in the great city of Vaiśālī a certain Licchavi, Vimalakīrti by name. Having served the ancient buddhas, he had generated the roots of virtue by honoring them and making offerings to them. He had attained tolerance as well as eloquence. He played with the great superknowledges. He had attained the power of retention and the fearlessnesses. He had conquered all demons and opponents. He had penetrated the profound way of the Dharma. He was liberated through the transcendence of wisdom. Having integrated his realization with skill in liberative art, he was expert in knowing the thoughts and actions of living beings. Knowing the strength or weakness of their faculties, and being gifted with unrivaled eloquence, he taught the Dharma appropriately to each. Having applied himself energetically to the Mahāyāna, he understood it and accomplished his tasks with great finesse. He lived with the deportment of a buddha, and his superior intelligence was as wide as an ocean. He was praised, honored, and commended by all the buddhas and was respected by Śakra, Brahmā, and all the Lokapālas. In order to develop living beings with his skill in liberative art, he lived in the great city of Vaiśālī."
+  },
+  "c2-02": {
+   "sa": "Vkn 2.2 akṣayabhogo daridrānāthasatvasaṃgrahāya / pariśuddhaśīlo duḥśīlasaṃgrahāya / kṣamadamaprāpto duṣṭapraduṣṭavyāpannakrudhacittānāṃ satvānāṃ saṃgrahāya / uttaptavīryaḥ kusīdānāṃ satvānāṃ saṃgrahāya / dhyānasmṛtisamādhisthito vibhrāntacittānāṃ satvānāṃ saṃgrahāya / prajñāniścayaprāpto duḥprajñānāṃ satvānāṃ saṃgrahāya /",
+   "T0474": "資財無量，救攝貧民；以善方便，攝諸惡戒；以忍調行，攝諸恚怒；白衣精進，攝懈怠者；禪定正受，攝迷惑意；得智慧律，攝諸邪智。",
+   "T0475": "資財無量，攝諸貧民；奉戒清淨，攝諸毀禁；以忍調行，攝諸恚怒；以大精進，攝諸懈怠；一心禪寂，攝諸亂意；以決定慧，攝諸無智；",
+   "T0476": "具無盡財，攝益貧窮、無依、無怙；具清淨戒，攝益一切有犯有越；以調順忍攝益瞋恨、暴嫉、楚毒；以大精進攝益一切懈怠懶惰；安住靜慮、正念解脫、等持等至，攝益一切諸有亂心；以正決擇攝益一切妄見、惡慧。",
+   "bo": "སེམས་ཅན་མགོན་མེད་པ་དང་དབུལ་པོ་རྣམས་བསྡུ་བའི་ཕྱིར་ལོངས་སྤྱོད་ཟད་མི་ཤེས་པ། སེམས་ཅན་ཚུལ་ཁྲིམས་འཆལ་པ་རྣམས་བསྡུ་བའི་ཕྱིར་ཚུལ་ཁྲིམས་ཡོངས་སུ་དག་པ། སེམས་ཅན་སྡང་བ་དང་། རབ་ཏུ་སྡང་བ་དང་། གནོད་སེམས་ཅན་དང་། ཚུལ་ཁྲིམས་འཆལ་པ་དང་། ཁྲོ་བའི་སེམས་ཅན་རྣམས་བསྡུ་བའི་ཕྱིར་བཟོད་པ་དང་དུལ་བ་ཐོབ་པ། སེམས་ཅན་ལེ་ལོ་ཅན་རྣམས་བསྡུ་བའི་ཕྱིར་བརྩོན་འགྲུས་འབར་བ། ། སེམས་འཁྲུག་པའི་སེམས་ཅན་རྣམས་བསྡུ་བའི་ཕྱིར་བསམ་གཏན་དང་། དྲན་པ་དང་། ཏིང་ངེ་འཛིན་ལ་གནས་པ། ། སེམས་ཅན་འཆལ་པའི་ཤེས་རབ་ཅན་རྣམས་བསྡུ་བའི་ཕྱིར་ཤེས་རབ་རྣམ་པར་ངེས་པ་ཐོབ་པ། །",
+   "en": "His wealth was inexhaustible for the purpose of sustaining the poor and the helpless. He observed a pure morality in order to protect the immoral. He maintained tolerance and self -control in order to reconcile beings who were angry, cruel, violent, and brutal. He blazed with energy in order to inspire people who were lazy. He maintained concentration, mindfulness, and meditation in order to sustain the mentally troubled. He attained decisive wisdom in order to sustain the foolish."
+  },
+  "c2-03": {
+   "sa": "Vkn 2.3 avadātavastradhārī śramaṇeryāpathasaṃpannaḥ / gṛhavāsasthitaḥ kāmadhāturūpadhātvārūpyadhātvasaṃsṛṣṭaḥ / bhāryāputradārāṃś ca saṃdarśayati, sadā ca brahmacārī / parivāraparivṛtaś ca bhavati, sadā ca vivekacārī / ābharaṇavibhūṣitaś ca saṃdṛśyate, sadā ca lakṣaṇaparicchinnaḥ / annapānabhojanajīvaḥ saṃdṛśyate, sadā ca dhyānāhāraḥ / sarvadyūtakaraśālāsu ca saṃdṛśyate, dyūtakrīḍāsaktacittāṃś ca satvān paripācayati, sadā cāpramādacārī / sarvapāṣaṇḍapratyeṣakaś ca / buddhe cābhedyāśayaḥ / sarvalaukikalokottaraśāstravidhijñaś ca / sadā ca dharmārāmaratirataḥ / sarvasaṃgaṇikāsu ca saṃdṛśyate, sarvatra cāgrapūjitaḥ /",
+   "T0474": "雖為白衣，奉持沙門至賢之行；居家為行，不止無色；有妻子婦，自隨所樂常修梵行；雖有家屬，常如閑居；現視嚴身，被服飲食，內常如禪。若在博弈戲樂，輒以度人；受諸異道，導以佛教不離聖典；因諸世間俗教善語，以法樂而樂之。一切見敬，為供養中最；",
+   "T0475": "雖為白衣，奉持沙門清淨律行；雖處居家，不著三界；示有妻子，常修梵行；現有眷屬，常樂遠離；雖服寶飾，而以相好嚴身；雖復飲食，而以禪悅為味；若至博弈戲處，輒以度人；受諸異道，不毀正信；雖明世典，常樂佛法；一切見敬，為供養中最；",
+   "T0476": "雖為白衣而具沙門威儀功德，雖處居家不著三界，示有妻子常修梵行，現有眷屬常樂遠離。雖服寶飾而以相好莊嚴其身、雖現受食而以靜慮等至為味、雖同樂著博弈嬉戲而實恒為成熟有情、雖稟一切外道軌儀而於佛法意樂不壞、雖明一切世間書論而於內苑賞玩法樂、雖現一切邑會眾中而恒為最說法上首。",
+   "bo": "གོས་དཀར་པོ་གྱོན་ལ་དགེ་སྦྱོང་གི་སྤྱོད་པས་ཕུན་སུམ་ཚོགས་པ། ཁྱིམ་གྱི་གནས་ན་གནས་ལ་འདོད་པའི་ཁམས་དང་། གཟུགས་ཀྱི་ཁམས་དང་། གཟུགས་མེད་པའི་ཁམས་དང་། མ་འདྲེས་པ། བུ་དང་། ཆུང་མ་དང་། སླས་རྣམས་ཀྱང་རྟག་ཏུ་ཚངས་པར་སྤྱོད་པ། གཡོག་བྲན་གྱིས་ཡོངས་སུ་བསྐོར་བར་སྣང་ཡང་རབ་ཏུ་དབེན་པར་སྤྱོད་པ། ། རྒྱན་གྱིས་བརྒྱན་པར་སྣང་ཡང་རྟག་ཏུ་མཚན་དང་ལྡན་པ། ཟས་སྐོམ་གྱི་ཟས་ཟ་བར་སྣང་བ་ཡང་རྟག་ཏུ་བསམ་གཏན་གྱི་དགའ་བའི་ཟས་ཟ་བ། རྩེད་མོ་དང་། རྒྱན་པོའི་གྲྭ་ཐམས་ཅད་ན་སྣང་ཡང་རྩེད་མོ་དང་རྒྱན་པོ་ལ་ཆགས་པའི་སེམས་ཅན་རྣམས་ཡོངས་སུ་སྨིན་པར་བྱེད་ཅིང་རྟག་ཏུ་དོན་ཡོད་པར་སྤྱོད་པ། ཡ་མཚན་ཅན་ཐམས་ཅད་ཚོལ་ཡང་སངས་རྒྱས་ལ་མི་ཕྱེད་པའི་བསམ་པ་དང་ལྡན་པ། འཇིག་རྟེན་པ་དང་འཇིག་རྟེན་ལས་འདས་པའི་གསང་སྔགས་དང་བསྟན་བཅོས་ཀྱི་རྣམ་པ་ཤེས་ཀྱང་རྟག་ཏུ་ཆོས་ཀྱི་ཀུན་དགའ་ལ་དགའ་མོས་པ། འདུ་འཛི་ཀུན་གྱི་ནང་ན་སྣང་ཡང་ཐམས་ཅད་ཀྱི་ནང་ན་གཙོ་བོར་མཆོད་པ། །",
+   "en": "He wore the white clothes of the layman, yet lived impeccably like a religious devotee. He lived at home, but remained aloof from the realm of desire, the realm of pure matter, and the immaterial realm. He had a son, a wife, and female attendants, yet always maintained continence. He appeared to be surrounded by servants, yet lived in solitude. He appeared to be adorned with ornaments, yet always was endowed with the auspicious signs and marks. He seemed to eat and drink, yet always took nourishment from the taste of meditation. He made his appearance at the fields of sports and in the casinos, but his aim was always to mature those people who were attached to games and gambling. He visited the fashionable outsider teachers, yet always kept unswerving loyalty to the Buddha. He understood the mundane and transcendental sciences and esoteric practices, yet always took pleasure in the delights of the Dharma. He mixed in all crowds, yet was respected as foremost of all."
+  },
+  "c2-04": {
+   "sa": "Vkn 2.4 dharmavādī ca vṛddhamadhyadahrasahāyakaś ca lokānuvartanāya / sarvavyavahārodyuktaś ca na ca lābhabhogābhilāṣī / sarvacatvaraśrṅgāṭakeṣu ca saṃdṛśyate sarvasatvavainayikatāyai / rājakāryānupraviṣṭaś ca satvārakṣāyai / sarvadharmaśravaṇasāṃkathyeṣu ca saṃdṛśyate hīnayānavicchandanāya mahāyāne samādāpanatayā / sarvalipiśālāsu copasaṃkrāmati dārakaparipācanāya / sarvagaṇikākulāni ca praviśati kāmadoṣasaṃdarśanāya / sarvakallavālagṛhāṇi ca praviśati smṛtisaṃprajanyopasthāpanāya /",
+   "T0474": "所有耆舊，能喜世間一切治生諧偶；雖獲俗利，不以喜悅。遊諸四衢，普持法律；入于王藏，諸講法眾；輒身往視，不樂小道；諸好學者，輒身往勸，誘開童蒙；入諸婬種，除其欲怒；入諸酒會，能立其志。",
+   "T0475": "執持正法，攝諸長幼；一切治生諧偶，雖獲俗利，不以喜悅；遊諸四衢，饒益眾生；入治政法，救護一切；入講論處，導以大乘；入諸學堂，誘開童蒙；入諸婬舍，示欲之過；入諸酒肆，能立其志；",
+   "T0476": "為隨世教於尊卑等所作事業示無與乖，雖不希求世間財寶，然於俗利示有所習。為益含識遊諸市衢、為護群生理諸王務、入講論處導以大乘、入諸學堂誘開童蒙、入諸婬舍示欲之過，為令建立正念正知遊諸伎樂。",
+   "bo": "འཇིག་རྟེན་དང་འཐུན་པར་བྱ་བའི་ཕྱིར་རྒན་རབས་དང་། བར་མ་དང་། གཞོན་ནུའི་གྲོགས་སུ་གྱུར་ཅིང་ཆོས་བཞིན་དུ་སྨྲ་བ། ཐ་སྙད་ཐམས་ཅད་དུ་འཇུག་ཀྱང་རྙེད་པ་དང་ལོངས་སྤྱོད་ལ་རེ་བ་མེད་པ། སེམས་ཅན་ཐམས་ཅད་གདུལ་བའི་ཕྱིར་ལམ་གྱི་བཞི་མདོ་དང་སུམ་མདོ་ཐམས་ཅད་ནའང་སྣང་ལ་སེམས་ཅན་རྣམས་སྲུང་བའི་ཕྱིར་རྒྱལ་པོའི་བྱ་བ་རྣམས་ལ་ཡང་ཞུགས་པ། ཐེག་པ་དམན་པ་ལ་མོས་པ་ཟློག་ཅིང་ཐེག་པ་ཆེན་པོ་ལ་སེམས་ཅན་རྣམས་ཡང་དག་པར་གཟུད་པའི་ཕྱིར་ཆོས་ཉན་པ་དང་། ཡང་དག་པར་བརྗོད་པ་ཐམས་ཅད་ན་ཡང་སྣང་བ། བྱིས་པ་རྣམས་ཡོངས་སུ་སྨིན་པར་བྱ་བའི་ཕྱིར་ཡི་གེའི་གྲྭ་ཁང་ཐམས་ཅད་དུའང་འགྲོ་བ། འདོད་པའི་ཉེས་པ་ཡང་དག་པར་བསྟན་པའི་ཕྱིར་སྨད་འཚོང་གི་ཁྱིམ་ཀུན་དུའང་འཇུག་པ། ། དྲན་པ་ཡང་དག་པར་གཞག་པའི་ཕྱིར་ཆང་འཚོང་བའི་ཁྱིམ་ཐམས་ཅད་དུའང་འཇུག་པ།",
+   "en": "In order to be in harmony with people, he associated with elders, with those of middle age, and with the young, yet always spoke in harmony with the Dharma. He engaged in all sorts of businesses, yet had no interest in profit or possessions. To educate living beings, he would appear at crossroads and on street corners, and to protect them he participated in government. To turn people away from the Individual Vehicle and to engage them in the Mahāyāna, he appeared among listeners and teachers of the Dharma. To develop children, he visited all the schools. To demonstrate the evils of desire, he even entered the brothels. To establish drunkards in correct mindfulness, he entered all the drinking-houses."
+  },
+  "c2-05": {
+   "sa": "Vkn 2.5 śreṣṭhiṣu ca śreṣṭhisaṃmataḥ śreṣṭhadharmārocanatāyai / gṛhapatiṣu ca gṛhapatisaṃmataḥ sarvagrāhodgrahaparicchedāya / kṣatriyeṣu ca kṣatriyasaṃmataḥ kṣāntisauratyabalapratiṣṭhāpanāya / brāhmaṇeṣu ca brāhmaṇasaṃmato mānamadadarpanirghātanāya / āmātyeṣu cāmātyasaṃmataḥ sarvarājakāryasahadharmamyojanāya / kumāreṣu ca kumārasaṃmato rājabhogaiśvaryābhilāṣavinivartanāya / antaḥpureṣu ca kāñcukīyasaṃmataḥ strīkumārikāparipācanāya / Vkn 2.6 prākṛtajanānuvartakaś ca sāmānyapuṇyaviśiṣṭādhyālaṃbanāya / śakreṣu ca śakrasaṃmata aiśvaryānityatvasaṃdarśanāyau / brahmasu ca brahmasaṃmato viśeṣajñānasaṃdarśanāya / lokapāleṣu ca lokapālasaṃmataḥ sarvasatvaparipālanāya / iti hi vimalakīrtir licchavir evam apramāṇopāyakauśalajñānasamanvāgato vaiśālyāṃ mahānagaryāṃ prativasati sma /",
+   "T0474": "入長者種，正長者意，能使樂法；入居士種，正居士意，能除其貪；入君子種，正君子意，能使忍和；入梵志種，正梵志意，使行高遠；入人臣中，正群臣意，為作端首使入正道；入帝王子，能正其意，以孝寬仁率化薄俗；入貴人中，能為雅樂，化正宮女；入庶人中，軟意愍傷，為興福力；入帝釋中，正帝釋意，為自在者，示現無常；入梵天中，正梵天意，能現梵殊勝之慧；入四天王，正天王意，能使擁護一切天下。如是，長者維摩詰不可稱說善權方便無所不入，",
+   "T0475": "若在長者，長者中尊，為說勝法；若在居士，居士中尊，斷其貪著；若在剎利，剎利中尊，教以忍辱；若在婆羅門，婆羅門中尊，除其我慢；若在大臣，大臣中尊，教以正法；若在王子，王子中尊，示以忠孝；若在內官，內官中尊，化政宮女；若在庶民，庶民中尊，令興福力；若在梵天，梵天中尊，誨以勝慧；若在帝釋，帝釋中尊，示現無常；若在護世，護世中尊，護諸眾生：長者維摩詰，以如是等無量方便饒益眾生。",
+   "T0476": "若在長者，長者中尊為說勝法；若在居士，居士中尊斷其貪著；若在剎帝利，剎帝利中尊教以忍辱；若在婆羅門，婆羅門中尊除其我慢；若在大臣，大臣中尊教以正法；若在王子，王子中尊示以忠孝；若在內官，內官中尊化正宮女；若在庶人，庶人中尊修相似福殊勝意樂；若在梵天，梵天中尊示諸梵眾靜慮差別；若在帝釋，帝釋中尊示現自在悉皆無常；若在護世，護世中尊守護一切利益安樂。是無垢稱以如是等不可思議無量善巧方便慧門饒益有情，",
+   "bo": "ཆོས་ཀྱི་མཆོག་བསྟན་པའི་ཕྱིར་ཚོང་དཔོན་གྱི་ནང་དུ་ཡང་ཚོང་དཔོན་དུ་ཀུན་གྱིས་བཀུར་བ། འཛིན་པ་ཐམས་ཅད་ཀྱི་ལེན་པ་ཡོངས་སུ་གཅད་པའི་ཕྱིར་ཁྱིམ་བདག་གི་ནང་དུའང་ཁྱིམ་བདག་ཏུ་ཀུན་གྱིས་བཀུར་བ། ། བཟོད་པ་དང་དེས་པ་དང་། སྟོབས་ལ་རབ་ཏུ་དགོད་པའི་ཕྱིར་རྒྱལ་རིགས་ཀྱི་ནང་དུ་ཡང་རྒྱལ་རིགས་སུ་ཀུན་གྱིས་བཀུར་བ། ང་རྒྱལ་དང་། རྒྱགས་པ་དང་། དྲེགས་པ་ཤིན་ཏུ་གཞོམ་པའི་ཕྱིར་བྲམ་ཟེའི་ནང་དུ་ཡང་བྲམ་ཟེར་ཀུན་གྱིས་བཀུར་བ། རྒྱལ་པོའི་བྱ་བ་ཐམས་ཅད་ཆོས་དང་འཐུན་པར་བསྒོ་བའི་ཕྱིར་བློན་པོའི་ནང་དུ་ཡང་བློན་པོར་ཀུན་གྱིས་བཀུར་བ། རྒྱལ་པོའི་ལོངས་སྤྱོད་དང་དབང་ཕྱུག་ལ་ཆགས་པ་བཟློག་པའི་ཕྱིར་གཞོན་ནུའི་ནང་དུ་ཡང་གཞོན་ནུར་ཀུན་གྱིས་བཀུར་བ། བུད་མེད་གཞོན་ནུ་ཡོངས་སུ་སྨིན་པར་བྱ་བའི་ཕྱིར་བཙུན་མོའི་འཁོར་གྱི་ནང་དུ་ཡང་ཉུང་རུམ་དུ་ཀུན་གྱིས་བཀུར་བ། ཐ་མལ་བའི་བསོད་ནམས་ཁྱད་པར་དུ་འཕགས་པར་དམིགས་པར་བྱ་བའི་ཕྱིར་སྐྱེ་བོ་ཕལ་པ་དང་ཡང་འཐུན་པར་འཇུག་པ། དབང་ཕྱུག་གི་བདག་པོར་བསྟན་པའི་ཕྱིར་བརྒྱ་བྱིན་གྱི་ནང་དུ་ཡང་བརྒྱ་བྱིན་དུ་ཀུན་གྱིས་བཀུར་བ། ཡེ་ཤེས་ཀྱི་ཁྱད་པར་བསྟན་པའི་ཕྱིར་ཚངས་པའི་ནང་དུའང་ཚངས་པར་ཀུན་གྱིས་བཀུར་བ། སེམས་ཅན་ཐམས་ཅད་ཡོངས་སུ་སྨིན་པར་བྱ་བའི་ཕྱིར་འཇིག་རྟེན་སྐྱོང་བའི་ནང་དུ་ཡང་འཇིག་རྟེན་སྐྱོང་བར་ཀུན་གྱིས་བཀུར་བ་སྟེ། ། དེ་ལྟར་ལིད་ཙ་བཱི་དྲི་མ་མེད་པར་གྲགས་པ་ཚད་མེད་པའི་ཐབས་ལ་མཁས་པའི་ཡེ་ཤེས་དང་ལྡན་ཏེ། ཡངས་པའི་གྲོང་ཁྱེར་ཆེན་པོ་ན་གནས་ཤིང་འདུག་གོ།",
+   "en": "He was honored as the merchant among merchants because he demonstrated the priority of the Dharma. He was honored as the landlord among landlords because he renounced the aggressiveness of ownership. He was honored as the warrior among warriors because he cultivated endurance, determination, and fortitude. He was honored as the brahmin among brahmins because he suppressed pride, vanity, and arrogance. He was honored as the official among officials because he regulated the functions of government according to the Dharma. He was honored as the prince of princes because he reversed their attachment to royal pleasures and sovereign power. He was honored as a chamberlain in the royal harem because he brought the young ladies to spiritual maturity. He was compatible with ordinary people because he appreciated the excellence of ordinary merits. He was honored as the Śakra among Śakras because he showed them the temporality of their lordship. He was honored as the Brahmā among Brahmās because he showed them the special excellence of gnosis. He was honored as the Lokapāla among Lokapālas because he fostered the development of all living beings. Thus lived the Licchavi Vimalakīrti in the great city of Vaiśālī, endowed with an infinite knowledge of skill in liberative arts."
+  },
+  "c2-07": {
+   "sa": "Vkn 2.7 sa upāyakauśalyena glānam ātmānam upadarśayati sma / tasya glānasya vaiśālyāṃ mahānagaryāṃ rājarājamahāmātrāmātyakumārapāriṣadyā brāhmaṇagṛhapatayaḥ śreṣṭhinaigamajānapadās tadanyāni ca bahūni prāṇisahasrāṇi glānaparipṛcchakāny upasaṃkrāmanti sma /",
+   "T0474": "其以權道，現身有疾。以其疾故，國王、大臣、長者、居士、群臣、太子并餘眾輩，從而問疾者無數千人。",
+   "T0475": "其以方便，現身有疾。以其疾故，國王、大臣、長者、居士、婆羅門等，及諸王子并餘官屬，無數千人，皆往問疾。",
+   "T0476": "其以方便現身有疾。以其疾故，國王、大臣、長者、居士、婆羅門等，及諸王子并餘官屬無數千人，皆往問疾。",
+   "bo": "དེ་ཐབས་ལ་མཁས་པས་བདག་ཉིད་ན་བ་ལྟ་བུར་བསྟན་ནས་ དེ་ལ་ནད་འདྲི་བའི་ཕྱིར་ཡངས་པའི་གྲོང་ཁྱེར་ཆེན་པོ་ནས་རྒྱལ་པོ་དང་། བློན་པོ་དང་། དབང་པོ་དང་། གཞོན་ནུའི་འཁོར་དང་། བྲམ་ཟེ་དང་། ཁྱིམ་བདག་དང་། ཚོང་དཔོན་དང་། གྲོང་པ་དང་། ཡུལ་གྱི་མི་དང་། དེ་མ་ཡིན་པ་སྲོག་ཆགས་སྟོང་ཕྲག་མང་པོ་ནད་འདྲིར་འོངས་ཏེ། །",
+   "en": "At that time, out of this very skill in liberative art, Vimalakīrti manifested himself as if sick. To inquire after his health, the king, the officials, the lords , the youths, the brahmins, the householders, the businessmen, the townfolk, the countryfolk, and thousands of other living beings came forth from the great city of Vaiśālī and called on the invalid."
+  },
+  "c2-08": {
+   "sa": "Vkn 2.8 teṣām upasaṃkrāntānāṃ vimalakīrtir licchaviḥ / imam eva cāturmahābhautikaṃ kāyam ārabhya dharmaṃ deśayati sma: evam anityo 'yaṃ mārṣāḥ kāyaḥ / evam adhruvaḥ, evam anāsvāsikaḥ, evaṃ durbalaḥ, evam asāraḥ / evaṃ jarjaraḥ, evam itvaraḥ, evaṃ duḥkhaḥ, evam ābādhikaḥ, evaṃ vipariṇāmadharmā, evaṃ bahurogabhājano 'yaṃ mārṣāḥ kāyaḥ / tatra paṇḍitena niśrayo na kartavyaḥ /",
+   "T0474": "其往者，維摩詰輒為說是四大身為死亡法，言：「諸仁者！是身無常，為無強，為無力，為無堅，為苦，為老，為病，為多痛畏。諸仁者！如此身，明智者所不怙。",
+   "T0475": "其往者，維摩詰因以身疾廣為說法：「諸仁者！是身無常、無強、無力、無堅、速朽之法，不可信也！為苦、為惱，眾病所集。諸仁者！如此身，明智者所不怙；",
+   "T0476": "時無垢稱因以身疾廣為說法，言：「諸仁者！是四大種所合成身，無常、無強、無堅、無力。朽故迅速，不可保信，為苦、為惱、眾病之器，多諸過患、變壞之法。諸仁者！如此之身，其聰慧者所不為怙。",
+   "bo": "དེར་ལྷགས་པ་དེ་དག་ལ་ལིད་ཙ་བཱི་དྲི་མ་མེད་པར་གྲགས་པས་འབྱུང་བ་ཆེན་པོ་བཞིའི་ལུས་འདི་ཉིད་ལས་བརྩམས་ནས་ཆོས་སྟོན་ཏེ། ། གྲོགས་པོ་དག་ལུས་འདི་ནི་འདི་ལྟར་མི་རྟག་པ། འདི་ལྟར་མི་བརྟན་པ། འདི་ལྟར་ཡིད་བརྟན་དུ་མི་རུང་བ། འདི་ལྟར་ཉམ་ཆུང་བ། འདི་ལྟར་སྙིང་པོ་མེད་པ། འདི་ལྟར་ཞིག་པ། འདི་ལྟར་ཡུན་ཐུང་བ། འདི་ལྟར་སྡུག་བསྔལ་བ། འདི་ལྟར་ནད་མང་བ། འདི་ལྟར་འགྱུར་བའི་ཆོས་ཅན་ནོ། གྲོགས་པོ་དག་འདི་ལྟར་ལུས་འདི་ནི་ནད་མང་པོའི་སྣོད་དེ། མཁས་པས་དེ་ལ་གནས་པར་མི་བྱའོ། །",
+   "en": "When they arrived, Vimalakīrti taught them the Dharma, beginning his discourse from the actuality of the four main elements: “Friends, this body is so impermanent, fragile, unworthy of confidence, and feeble. It is so insubstantial, perishable, short-lived, painful, filled with diseases, and subject to changes. Thus, my friends, as this body is only a vessel of many sicknesses, wise men do not rely on it."
+  },
+  "c2-09": {
+   "sa": "Vkn 2.9 phenapiṇḍopamo 'yaṃ mārṣāḥ kāyo 'parimardanakṣamaḥ / budbudopamo 'yaṃ kāyo 'cirasthitikaḥ / marīcyupamo 'yaṃ kāyaḥ kleśatṛṣṇāsaṃbhūtaḥ / kadalīskandhopamo 'yaṃ kāyo 'sārakatvāt / yantrabhūto batāyaṃ kāyo 'sthisnāyuvinibaddhaḥ / māyopamo 'yaṃ kāyo viparyāsasaṃbhūtaḥ / svapnopamo 'yaṃ kāyo vitathadarśanaḥ / pratibhāsopamo 'yaṃ kāyaḥ pūrvakarmapratibhāsatayā saṃdṛśyate / pratiśrutkopamo 'yaṃ kāyaḥ pratyayādhīnatvāt / meghopamo 'yaiḥ kāyaś cittākulavigamalakṣaṇaḥ / vidyutsadṛśo 'yaṃ kāyaḥ kṣaṇabhaṅgayukto 'navasthitaḥ / asvāmiko 'yaṃ kāyo nānāpratyayasaṃbhūtaḥ /",
+   "T0474": "是身如聚沫，澡浴強忍；是身如泡，不得久立；是身如野馬，渴愛疲勞；是身如芭蕉，中無有堅；是身如幻，轉受報應；是身如夢，其現恍惚；是身如影，行照而現；是身如響，因緣變失；是身如霧，意無靜相；是身如電，為分散法；",
+   "T0475": "是身如聚沫，不可撮摩；是身如泡，不得久立；是身如炎，從渴愛生；是身如芭蕉，中無有堅；是身如幻，從顛倒起；是身如夢，為虛妄見；是身如影，從業緣現；是身如響，屬諸因緣；是身如浮雲，須臾變滅；是身如電，念念不住；",
+   "T0476": "是身如聚沫不可撮摩、是身如浮泡不得久立、是身如陽焰從諸煩惱渴愛所生、是身如芭蕉都無有實、是身如幻從顛倒起、是身如夢為虛妄見、是身如影從業緣現、是身如響屬諸因緣、是身如雲須臾變滅、是身如電念念不住、",
+   "bo": "གྲོགས་པོ་དག་ལུས་འདི་ནི་བཅང་མི་བཟོད་པ་སྟེ། དབུ་བ་རྡོས་པ་ལྟ་བུའོ། ལུས་འདི་ནི་རིང་དུ་མི་གནས་པ་སྟེ། ཆུའི་ཆུ་བུར་ལྟ་བུའོ། ། ལུས་འདི་ནི་ཉོན་མོངས་པའི་སྲེད་པ་ལས་བྱུང་བ་སྟེ། སྨིག་རྒྱུ་ལྟ་བུའོ། ། ལུས་འདི་ནི་སྙིང་པོ་མེད་པ་སྟེ་ཆུ་ཤིང་གི་སྡོང་པོ་ལྟ་བུའོ། ། ཀྱེ་མ་ལུས་འདི་ནི་རུས་པ་ལ་རྒྱུས་པས་སྦྲེལ་བ་སྟེ་འཁྲུལ་འཁོར་ལྟ་བུའོ། ། ལུས་འདི་ནི་ཕྱིན་ཅི་ལོག་ལས་བྱུང་བ་སྟེ་སྒྱུ་མ་ལྟ་བུའོ། ། ལུས་འདི་ནི་ཡང་དག་པ་མ་ཡིན་པ་མཐོང་བ་སྟེ་རྨི་ལམ་ལྟ་བུའོ། ། ལུས་འདི་ནི་སྔོན་གྱི་ལས་ཀྱིས་གཟུགས་བརྙན་སྣང་བ་སྟེ་གཟུགས་བརྙན་ལྟ་བུའོ། ། ལུས་འདི་ནི་རྐྱེན་ལ་རག་ལུས་པའི་ཕྱིར་བྲག་ཅ་ལྟ་བུའོ། ། ལུས་འདི་ནི་སེམས་འཁྲུག་ཅིང་འགྱེས་པའི་མཚན་ཉིད་དེ་སྤྲིན་ལྟ་བུའོ། ། ལུས་འདི་ནི་སྐད་ཅིག་ཏུ་འཇིག་པ་དང་ལྡན་ཞིང་མི་གནས་པ་སྟེ་གློག་དང་མཚུངས་སོ། ། ལུས་འདི་ནི་རྐྱེན་སྣ་ཚོགས་ལས་བྱུང་བ་སྟེ་བདག་པོ་མེད་པའོ། །",
+   "en": "This body is like a ball of foam, unable to bear any pressure. It is like a water bubble, not remaining very long. It is like a mirage, born from the appetites of the passions. It is like the trunk of the plantain tree, having no core. Alas! This body is like a machine, a nexus of bones and tendons. It is like a magical illusion, consisting of falsifications. It is like a dream, being an unreal vision. It is like a reflection, being the image of former actions. It is like an echo, being dependent on conditioning. It is like a cloud, being characterized by turbulence and dissolution. It is like a flash of lightning, being unstable, and decaying every moment. The body is ownerless, being the product of a variety of conditions."
+  },
+  "c2-10": {
+   "sa": "Vkn 2.10 nirvyāpāro 'yaṃ kāyaḥ pṛthivīsadṛśaḥ / anātmo 'yaṃ kāyo 'psadṛśaḥ / nirjīvo 'yaṃ kāyas tejaḥsadṛśaḥ / niṣpudgalo 'yaṃ kāyo vāyusadṛśaḥ / niḥsvabhāvo 'yaṃ kāya ākāśasadṛśaḥ /",
+   "T0474": "是身無主，為如地；是身非身，為如火；是身非命，為如風；是身非人，為如水；",
+   "T0475": "是身無主，為如地；是身無我，為如火；是身無壽，為如風；是身無人，為如水；",
+   "T0476": "是身無主為如地、是身無我為如水、是身無有情為如火、是身無命者為如風、是身無有補特伽羅與虛空等、",
+   "bo": "ལུས་འདི་ནི་ས་དང་འདྲ་སྟེ་བྱེད་པ་མེད་པའོ། །ལུས་འདི་ནི་ཆུ་དང་འདྲ་སྟེ་བདག་མེད་པའོ། །ལུས་འདི་ནི་མེ་དང་འདྲ་སྟེ་སྲོག་མེད་པའོ། །ལུས་འདི་ནི་རླུང་དང་འདྲ་སྟེ་གང་ཟག་མེད་པའོ། །ལུས་འདི་ནི་ནམ་མཁའ་དང་འདྲ་སྟེ་རང་བཞིན་མེད་པའོ།",
+   "en": "“This body is inert, like the earth; selfless, like water; lifeless, like fire; impersonal, like the wind; and nonsubstantial, like space."
+  },
+  "c2-11": {
+   "sa": "Vkn 2.11 asaṃbhūto 'yaṃ kāyo mahābhūtānām ālayaḥ / śūnyo 'yaṃ kāya ātmātmīyavigataḥ / jaḍo 'yaṃ kāyas tṛṇakāṣṭhakuḍyaloṣṭapratibhāsasadṛśaḥ / niśceṣṭo 'yaṃ kāyo vātayantrayukto vartate / rikto 'yaṃ kāyo 'śucipūtisaṃcayaḥ / tuccho 'yaṃ kāya ucchādanaparimardanavikiraṇavidhvansanadharmā / upadruto 'yaṃ kāyaś caturuttaraiś caturbhī rogaśataiḥ / jīrṇodapānasadṛśo 'yaṃ kāyaḥ sadā jarābhibhūtaḥ / paryantasthāyī batāyaṃ kāyo maraṇaparyavasānaḥ / vadhakāśīviṣaśūnyagrāmopamo 'yaṃ kāyaḥ skandhadhātvāyatanaparigṛhītaḥ / tatra yuṣmābhir evaṃrūpe kāye nirvidvirāga utpādayitavyas tathāgatakāye ca spṛhotpādayitavyā /",
+   "T0474": "是身非有，四大為家；是身為空，無我無性無命無人；是身無我，我者轉離；是身如束薪，筋纏如立；是身非真，但巧風合；是身為荒，不淨腐積；是身為虛偽，而復速朽，為磨滅法；是身為災，一增百病；是身老為怨，以老苦極；是身為窮道，為要當死。諸仁者！此可患厭，當發清淨不婬之行，如佛法身，吾等當學。",
+   "T0475": "是身不實，四大為家；是身為空，離我、我所；是身無知，如草木瓦礫；是身無作，風力所轉；是身不淨，穢惡充滿；是身為虛偽，雖假以澡浴衣食，必歸磨滅；是身為災，百一病惱；是身如丘井，為老所逼；是身無定，為要當死；是身如毒蛇、如怨賊、如空聚，陰、界、諸入所共合成。「諸仁者！此可患厭，當樂佛身。",
+   "T0476": "是身不實四大為家、是身為空離我我所、是身無知如草木等、是身無作風力所轉、是身不淨穢惡充滿、是身虛偽雖假覆蔽飲食將養必歸磨滅、是身多患四百四病之所集成、是身易壞如水隧級常為朽老之所逼迫、是身無定為要當死、是身如怨害周遍毒蛇之所充滿、是身如空聚諸蘊界處所共合成。「諸仁者！於如是身應生厭離，於如來身應起欣樂。",
+   "bo": "ལུས་འདི་ནི་འབྱུང་བ་ཆེན་པོ་རྣམས་ཀྱི་གནས་ཏེ་ཡང་དག་པ་མ་ཡིན་པའོ། ། ལུས་འདི་ནི་བདག་དང་བདག་གི་མེད་པ་སྟེ་སྟོང་པའོ། ། ལུས་འདི་ནི་རྩྭ་དང་། ཤིང་དང་། རྩིག་པ་དང་། བོང་བ་དང་། མིག་ཡོར་ལྟ་བུ་སྟེ་བེམས་པོའོ། ། ལུས་འདི་ནི་རླུང་གི་འཁྲུལ་འཁོར་དང་ལྡན་པས་འབྱུང་སྟེ་ཚོར་བ་མེད་པའོ། ། ལུས་འདི་ནི་རྣག་དང་མི་གཙང་བ་བསགས་པ་སྟེ་གསོག་གོ། ། ལུས་འདི་ནི་རྟག་ཏུ་བསྐུ་བ་དང་། མཉེ་བ་དང་། འཇིག་པ་དང་། འགྱེས་པའི་ཆོས་ཅན་ཏེ་གསོབ་བོ། ། ལུས་འདི་ནི་ནད་བཞི་བརྒྱ་རྩ་བཞིས་གཙེས་པའོ། ། ལུས་འདི་ནི་རྟག་ཏུ་རྒ་བས་ཟིལ་གྱིས་ནོན་པ་སྟེ་ཁྲོན་པ་རྙིང་པ་དང་འདྲ་བའོ། ། ལུས་འདི་ནི་འཆི་བའི་མཐའ་ཡིན་ཏེ་མཐར་མི་གནས་པའོ། ། ལུས་འདི་ནི་ཕུང་པོ་དང་། ཁམས་དང་། སྐྱེ་མཆེད་ཀྱིས་ཡོངས་སུ་ཟིན་པ་སྟེ། གཤེད་མ་དང་སྦྲུལ་གདུག་པ་དང་། གྲོང་སྟོང་པ་ལྟ་བུ་སྟེ། ། ཁྱོད་ཀྱིས་དེ་ལྟ་བུའི་ལུས་དེ་ལ་ཡིད་བྱུང་བ་དང་སྐྱོ་བ་བསྐྱེད་ཅིང་དེ་བཞིན་གཤེགས་པའི་སྐུ་ལ་མོས་པ་བསྐྱེད་པར་བགྱིའོ།",
+   "en": "This body is unreal, being a collocation of the four main elements. It is void, not existing as self or as self-possessed. It is inanimate, being like grass, trees, walls, clods of earth, and illusions. It is insensate, being driven like a windmill. It is filthy, being an agglomeration of pus and excrement. It is false, being fated to be broken and destroyed, in spite of being anointed and massaged. It is afflicted by the four hundred and four diseases. It is like an ancient well, constantly overwhelmed by old age. Its duration is never certain—certain only is its end in death. This body is a combination of aggregates, elements, and sense-media, which are comparable to murderers, poisonous snakes, and an empty town, respectively. Therefore, you should be repelled by such a body. You should despair of it and should arouse your admiration for the body of the Tathāgata."
+  },
+  "c2-12": {
+   "sa": "Vkn 2.12 dharmakāyo hi mārṣāḥ tathāgatakāyo dānanirjātaḥ śīlanirjātaḥ samādhinirjātaḥ prajñānirjāto vimuktinirjāto vimuktijñānadarśananirjātaḥ / maitrīkaruṇāmuditopekṣānirjātaḥ / dānadamasaṃyamanirjātaḥ kṣāntisauratyanirjāto dṛḍhavīryakuśalamūlanirjāto dhyānavimokṣasamādhisamāpattinirjātaḥ śrutaprajñopāyanirjātaḥ / saptatriṃśadbodhipakṣyanirjātaḥ śamathavidarśanānirjāto daśabalanirjātaś caturvaiśāradyanirjātaḥ / aṣṭādaśāveṇikabuddhadharmanirjātaḥ sarvapāramitānirjātaḥ / abhijñāvidyānirjātaḥ sarvākuśaladharmaprahāṇāya nirjātaḥ sarvakuśaladharmaparigrahanirjātaḥ satyanirjāto bhūtanirjāto 'pramādanirjātaḥ / apramāṇaśubhakarmanirjāto mārṣās tathāgatakāyas tatra yuṣmābhiḥ spṛhā kartavyā / sarvasatvānāṃ ca sarvakleśavyādhiprahāṇāyānuttarāyāṃ samyaksaṃbodhau cittāny utpādayitavyāni /",
+   "T0474": "佛法身者，從福祐生，佛身者，從智生，從戒品、定品、慧品、解品、度知見品生，從慈悲喜護生，從布施調意自損生，從忍辱仁愛柔和生，從強行精進功德生，從禪解定意正受生，從智度無極聞德生，從善權方便智謀生，從一切諸度無極生，從三十七道品生，從神通生，從止觀生，從十力生，從四無所畏生，從佛十八法生，從斷一切惡法生，從一切善法合會生，從諦生，從誠生，不可計清淨行為成如來身。如是，仁者！當自勗勉，欲除一切病者，當發行大道。」",
+   "T0475": "所以者何？佛身者即法身也！從無量功德智慧生，從戒、定、慧、解脫、解脫知見生，從慈、悲、喜、捨生，從布施、持戒、忍辱、柔和、勤行精進、禪定、解脫、三昧、多聞、智慧諸波羅蜜生，從方便生，從六通生，從三明生，從三十七道品生，從止觀生，從十力、四無所畏、十八不共法生，從斷一切不善法、集一切善法生，從真實生，從不放逸生：從如是無量清淨法生如來身。諸仁者！欲得佛身、斷一切眾生病者，當發阿耨多羅三藐三菩提心。」",
+   "T0476": "所以者何？如來身者，無量善法共所集成，從修無量殊勝福德智慧所生，從修無量勝戒定慧解脫解脫知見所生，從修慈悲喜捨所生，從修布施、調伏寂靜戒、忍、精進、靜慮、解脫、等持等至、般若、方便、願、力、智生，從修一切到彼岸生，修六通生，修三明生，修三十七菩提分生，修止觀生，從修十力、四無畏生，從修十八不共法生，從斷一切不善法、集一切善法生，從修諦實不放逸生，從修無量清淨業生。「諸仁者！如來之身功德如是，汝等皆應發心求證。汝等欲得如是之身、息除一切有情病者，當發阿耨多羅三藐三菩提心。」",
+   "bo": "གྲོགས་པོ་དག་དེ་བཞིན་གཤེགས་པའི་སྐུ་ནི་ཆོས་ཀྱི་སྐུ་སྟེ་ཡེ་ཤེས་ལས་སྐྱེས་པའོ། ། དེ་བཞིན་གཤེགས་པའི་སྐུ་ནི་བསོད་ནམས་ལས་སྐྱེས་པ། སྦྱིན་པ་ལས་སྐྱེས་པ། ཚུལ་ཁྲིམས་ལས་སྐྱེས་པ། ཏིང་ངེ་འཛིན་ལས་སྐྱེས་པ། ཤེས་རབ་ལས་སྐྱེས་པ། རྣམ་པར་གྲོལ་བ་ལས་སྐྱེས་པ། རྣམ་པར་གྲོལ་བའི་ཡེ་ཤེས་མཐོང་བ་ལས་སྐྱེས་པ། བྱམས་པ་དང་། སྙིང་རྗེ་དང་། དགའ་བ་དང་། བཏང་སྙོམས་ལས་སྐྱེས་པ། སྦྱིན་པ་དང་། དུལ་བ་དང་། ཡང་དག་པར་སྡོམ་པ་ལས་སྐྱེས་པ། དགེ་བ་བཅུའི་ལས་ཀྱི་ལམ་ལས་སྐྱེས་པ། བཟོད་པ་དང་དེས་པ་ལས་སྐྱེས་པ། བརྩོན་འགྲུས་བརྟན་པའི་དགེ་བའི་རྩ་བ་ལས་སྐྱེས་པ། བསམ་གཏན་དང་། རྣམ་པར་ཐར་པ་དང་། ཏིང་ངེ་འཛིན་དང་། སྙོམས་པར་འཇུག་པ་ལས་སྐྱེས་པ། ཐོས་པ་དང་། ཤེས་རབ་དང་། ཐབས་ལས་སྐྱེས་པ། བྱང་ཆུབ་ཀྱི་ཕྱོགས་ཀྱི་ཆོས་སུམ་ཅུ་རྩ་བདུན་ལས་སྐྱེས་པ། ། ཞི་གནས་དང་ལྷག་མཐོང་ལས་སྐྱེས་པ། སྟོབས་བཅུ་ལས་སྐྱེས་པ། མི་འཇིགས་པ་བཞི་ལས་སྐྱེས་པ། སངས་རྒྱས་ཀྱི་ཆོས་མ་འདྲེས་པ་བཅྭ་བརྒྱད་ལས་སྐྱེས་པ། ཕ་རོལ་ཏུ་ཕྱིན་པ་ཐམས་ཅད་ལས་སྐྱེས་པ། མངོན་པར་ཤེས་པ་དང་རིག་པ་ལས་སྐྱེས་པ། ། མི་དགེ་བའི་ཆོས་ཐམས་ཅད་སྤོང་བ་ལས་སྐྱེས་པ། དགེ་བའི་ཆོས་ཐམས་ཅད་ཡང་དག་པར་སྡུད་པ་ལས་སྐྱེས་པ། ཡང་དག་པ་ཉིད་ལས་སྐྱེས་པ། བག་ཡོད་པ་ལས་སྐྱེས་པའོ། ། གྲོགས་པོ་དག་དེ་བཞིན་གཤེགས་པའི་སྐུ་ནི་དགེ་བའི་ལས་ཚད་མེད་པ་ལས་སྐྱེས་པ་སྟེ། ཁྱེད་ཀྱིས་དེ་ལྟ་བུའི་སྐུ་དེ་ལ་མོས་པ་བསྐྱེད་པར་བྱའོ། ། སེམས་ཅན་ཐམས་ཅད་ཀྱི་ཉོན་མོངས་པའི་ནད་རབ་ཏུ་སྤང་བའི་ཕྱིར་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་ཏུ་སེམས་བསྐྱེད་པར་བྱའོ། །",
+   "en": "“Friends, the body of a tathāgata is the body of Dharma, born of gnosis. The body of a tathāgata is born of the stores of merit and wisdom. It is born of morality, of concentration, of wisdom, of the liberations, and of the knowledge and vision of liberation. It is born of love, compassion, joy, and impartiality. It is born of charity, discipline, and self -control. It is born of the path of the ten virtues. It is born of patience and gentleness. It is born of the roots of virtue planted by solid efforts. It is born of the concentrations, the liberations, the meditations, and the absorptions. It is born of learning, wisdom, and liberative art. It is born of the thirty-seven aids to enlightenment. It is born of mental quiescence and transcendental analysis. It is born of the ten powers, the four fearlessnesses, and the eighteen special qualities. It is born of all the transcendences. It is born from sciences and superknowledges. It is born of the abandonment of all evil qualities, and of the gathering of all good qualities. It is born of reality. It is born of conscious awareness. “Friends, the body of a tathāgata is born of innumerable good works. Toward such a body you should turn your aspirations, and, in order to eliminate the sicknesses of the passions of all living beings, you should conceive the spirit of unexcelled, perfect enlightenment.”"
+  },
+  "c2-13": {
+   "sa": "Vkn 2.13 evaṃ vimalakīrtir licchavis tathā saṃnipatitānāṃ teṣāṃ glānaparipṛcchakānāṃ tathā tathā dharmaṃ deśayati yad bahūni satvaśatasahasrāṇy anuttarāyāṃ samyaksaṃbodhau cittāny utpādayanti // //",
+   "T0474": "如是，維摩詰為諸問疾者如應說法，令無數千人發無上正真道意。",
+   "T0475": "如是，長者維摩詰為諸問疾者，如應說法，令無數千人皆發阿耨多羅三藐三菩提心。",
+   "T0476": "是無垢稱為諸集會來問疾者如應說法，令無數千人皆發阿耨多羅三藐三菩提心。",
+   "bo": "དེ་བཞིན་དུ་ལིད་ཙ་བཱི་དྲི་མ་མེད་པར་གྲགས་པས་དེ་ལྟར་ནད་འདྲི་བའི་ཚོགས་པ་དེ་དག་ལ་ཇི་ནས་ སེམས་ཅན་བརྒྱ་སྟོང་མང་པོ་དག་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་ཏུ་སེམས་བསྐྱེད་པ་དེ་ལྟ་དེ་ལྟ་བུར་ཆོས་འཆད་དོ། །།",
+   "en": "While the Licchavi Vimalakīrti thus taught the Dharma to those who had come to inquire about his sickness, many hundreds of thousands of living beings conceived the spirit of unexcelled, perfect enlightenment."
+  },
+  "c2-99": {
+   "sa": "acintyopāyakauśalyaparivarto nāma dvitīyaḥ //"
+  }
+ }
+}
