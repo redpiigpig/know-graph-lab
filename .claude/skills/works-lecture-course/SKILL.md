@@ -1120,6 +1120,17 @@ B 線＝前人概論怎麼切（比較表）。一次派一個 Sonnet。
   有點交融，但順序大體如此。待核：東方遣散線落在聖道之後（信經、主禱文都在信徒那一半；古代慕道期
   「傳授信經」「傳授主禱文」都在受洗前才給），西方（梵二後）的聖道禮儀則包含信經與信友禱詞——兩邊切線位置不同。
   ✅ 作者定（2026-10-01）：**不講切線**。框架維持真理／生命兩分；遣散慕道者不拿來當結構證明。
+
+**第二關 B 線結果（2026-10-01，`output/christianity-intro/intro_comparison.md`，22 本，目錄已核 14／未核 8）**
+- 前人七種切法：編年史、混合（McGrath）、信經／教理式、東正教內部式、世界基督教按洲（Kim & Kim、Irvin & Sunquist）、
+  禮儀神學式（Schmemann、Lathrop、Kavanagh、Wainwright、Okholm）、本質加範式（Küng）。
+- **沒有任何一本概論以一場禮拜貫穿全書**；最近的是 Okholm《Learning Theology through the Church's Worship》(2018，
+  教義照禮拜序排，但只有教義、無歷史與以色列；章名未核）與 Schmemann《For the Life of the World》。
+- **沒有人把以色列做成耶穌之後、寫到兩支分流的前史**（MacCulloch、Irvin & Sunquist 放耶穌前；McGrath 併入聖經章）。
+- 第一序／第二序在概論層級無前例；最近的學理旁證是 Kavanagh／Lathrop 的 theologia prima／secunda
+  （🚨 但他們的「第一序」指禮儀行動本身，不是「宗教的自我介紹」，引用時要講清楚差別）。
+- 審稿人最可能拿來對照：McGrath（整體框架）、Küng（中心先於歷史）、Okholm 與 Schmemann（禮拜為骨的新意）、
+  《天主教教理》（會問誡命／倫理在哪）、MacCulloch 與 Kim & Kim（非西方是插入還是並行）。
 - 補書不只 z-lib；先查站上既有（梵二 SC／DV 中拉英在 `data/creeds/ecumenical-councils/vatican-ii/`、
   奧斯堡信條與路德小教理在 `data/creeds/protestant-confessions/`、通諭中譯在 `data/encyclicals/`），
   再查 TRC／天主教在線目錄。館藏確認沒有：《天主教教理》全本中譯、《協同書》中譯、Schmemann、Bria、Brown 第二冊。
