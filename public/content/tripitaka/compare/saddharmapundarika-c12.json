@@ -1,0 +1,173 @@
+{
+ "slug": "saddharmapundarika-c12",
+ "title": "法華經・勸持品",
+ "family": "sa",
+ "intro": "梵本〈勇猛品〉（utsāhaparivarta，第 12）；羅什〈勸持品第十三〉、添品〈勸持品第十二〉、正法華〈勸說品第十二〉。藥王、大樂說與二萬菩薩誓願、聲聞願他方弘經、摩訶波闍波提與耶輸陀羅授記、八十萬億菩薩師子吼（二十行偈）。人名異譯：摩訶波闍波提憍曇彌＝大敬逵瞿曇彌（正法華）＝Mahāprajāpatī Gautamī；一切眾生喜見＝一切眾生咸敬＝Sarvasattvapriyadarśana；耶輸陀羅＝持名聞（正法華）＝Yaśodharā；具足千萬光相＝具足百千光幢幡。",
+ "units": [
+  {
+   "id": "l12-00",
+   "label": "品題"
+  },
+  {
+   "id": "l12-01",
+   "label": "藥王、大樂說與二萬菩薩誓願弘經"
+  },
+  {
+   "id": "l12-02",
+   "label": "五百阿羅漢、八千學無學願他方說"
+  },
+  {
+   "id": "l12-03",
+   "label": "授摩訶波闍波提記：一切眾生喜見"
+  },
+  {
+   "id": "l12-04",
+   "label": "授耶輸陀羅記：具足千萬光相"
+  },
+  {
+   "id": "l12-05",
+   "label": "比丘尼歡喜偈（梵 12.1）・願他方說"
+  },
+  {
+   "id": "l12-06",
+   "label": "佛視八十萬億菩薩・師子吼誓願"
+  },
+  {
+   "id": "l12-v2",
+   "label": "菩薩誓願偈：忍惡世諸難（梵 12.2–21）"
+  },
+  {
+   "id": "l12-99",
+   "label": "品尾題"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本",
+   "who": "Saddharmapuṇḍarīka・GRETIL（Vaidya 本）"
+  },
+  {
+   "id": "T0262",
+   "lang": "lzh",
+   "label": "羅什本",
+   "who": "鳩摩羅什譯《妙法蓮華經》・406 年",
+   "work": "T0262"
+  },
+  {
+   "id": "T0263",
+   "lang": "lzh",
+   "label": "正法華",
+   "who": "竺法護譯《正法華經》・286 年",
+   "work": "T0263"
+  },
+  {
+   "id": "T0264",
+   "lang": "lzh",
+   "label": "添品",
+   "who": "闍那崛多、達摩笈多《添品妙法蓮華經》・601 年",
+   "work": "T0264"
+  },
+  {
+   "id": "bo",
+   "lang": "bo",
+   "label": "藏譯",
+   "who": "德格版 Toh 113・84000"
+  },
+  {
+   "id": "en",
+   "lang": "en",
+   "label": "84000 英譯",
+   "who": "譯自藏譯・與藏文逐句對齊"
+  }
+ ],
+ "works": [
+  "T0262",
+  "T0263",
+  "T0264"
+ ],
+ "anchors": [
+  {
+   "work": "T0262",
+   "node": "妙法蓮華經勸持品第十三",
+   "uid": "T09n0262_p0035c27"
+  },
+  {
+   "work": "T0263",
+   "node": "正法華經勸說品第十二",
+   "uid": "T09n0263_p0106a26"
+  },
+  {
+   "work": "T0264",
+   "node": "添品妙法蓮華經勸持品第十二",
+   "uid": "T09n0264_p0170b05"
+  }
+ ],
+ "cells": {
+  "l12-00": {
+   "sa": "Saddhp_12: utsāhaparivartaḥ |"
+  },
+  "l12-01": {
+   "sa": "atha khalu bhaiṣajyarājo bodhisattvo mahāsattvo mahāpratibhānaśca bodhisattvo mahāsattvo viṃśatibodhisattvaśatasahasraparivāro bhagavataḥ saṃmukhamimāṃ vācamabhāṣetām - alpotsuko bhagavān bhavatvasminnarthe | vayamimaṃ bhagavan dharmaparyāyaṃ tathāgatasya parinirvṛtasya sattvānāṃ deśayiṣyāmaḥ saṃprakāśayiṣyāmaḥ | kiṃcāpi bhagavan śaṭhakāḥ sattvāstasmin kāle bhaviṣyanti, parīttakuśalamūlā adhimānikā lābhasatkārasaṃniśritā akuśalamūlapratipannā durdamā adhimuktivirahitā anadhimuktibahulāḥ, api tu khalu punarvayaṃ bhagavan kṣāntibalamupadarśayitvā tasmin kāle idaṃ sūtramuddekṣyāmo dhārayiṣyāmo deśayiṣyāmo likhiṣyāmaḥ satkariṣyāmo gurukariṣyāmo mānayiṣyāmaḥ pūjayiṣyāmaḥ | kāyajīvitaṃ ca vayaṃ bhagavan utsṛjya idaṃ sūtraṃ prakāśayiṣyāmaḥ | alpotsuko bhagavān bhavatviti ||",
+   "T0262": "爾時藥王菩薩摩訶薩及大樂說菩薩摩訶薩，與二萬菩薩眷屬俱，皆於佛前作是誓言：「唯願世尊不以為慮。我等於佛滅後，當奉持、讀誦、說此經典。後惡世眾生，善根轉少，多增上慢，貪利供養，增不善根，遠離解脫。雖難可教化，我等當起大忍力，讀誦此經，持說、書寫、種種供養，不惜身命。」",
+   "T0263": "爾時有菩薩，名曰藥王，復有菩薩，名曰大辯，與二萬菩薩俱，於世尊前面自啟白：「惟願大聖，自安宣教，勿以為慮。如來、至真滅度之後，我等當共分布此經講說示人。假使有人𢤱悷自用，性不修調，薄德無福心懷自大，著供養利不備善本，離於解脫難可成就。我等世尊，興忍辱力在於彼世，受此經典書持誦說，供養奉事懷佩在身，除於吾我班宣斯經，報安住恩。」",
+   "T0264": "爾時藥王菩薩摩訶薩，及大樂說菩薩摩訶薩，與二萬菩薩眷屬俱皆於佛前作是誓言：「唯願世尊，不以為慮，我等於佛滅後，當奉持、讀誦說此經典，後惡世眾生善根轉少，多增上慢，貪利供養，增不善根，遠離解脫，雖難可教化，我等當起大忍力，讀誦此經，持說、書寫，種種供養，不惜身命。」",
+   "bo": "དེ་ནས་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་སྨན་གྱི་རྒྱལ་པོ་དང་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་སྤོབས་པ་ཆེན་པོ་གཡོག་བྱང་ཆུབ་སེམས་དཔའ་ཉིས་འབུམ་དང་ལྷན་ཅིག་བཅོམ་ལྡན་འདས་ཀྱི་སྤྱན་སྔར་ཚིག་འདི་སྐད་ཅེས་གསོལ་ཏོ། །བཅོམ་ལྡན་འདས་དོན་འདི་ལ་ཐུགས་ལས་ཆུང་ངུར་མཛད་དུ་གསོལ། བཅོམ་ལྡན་འདས་བདག་ཅག་གིས་དེ་བཞིན་གཤེགས་པ་ཡོངས་སུ་མྱ་ངན་ལས་འདས་ནས། ཆོས་ཀྱི་རྣམ་གྲངས་འདི་སེམས་ཅན་རྣམས་ལ་བསྟན་པར་བགྱིའོ། །ཡང་དག་པར་བསྟན་པར་བགྱིའོ། །བཅོམ་ལྡན་འདས་འདི་ལྟར་ཡང་དེའི་ཚེ། སེམས་ཅན་དམུ་རྒོད་དགེ་བའི་རྩ་བ་ཆུང་བ་ལྷག་པའི་ང་རྒྱལ་ཅན། རྙེད་པ་དང་བཀུར་སྟི་ལ་གནས་པ། མི་དགེ་བའི་རྩ་བ་ལ་ཞུགས་པ། གདུལ་དཀའ་བ་མོས་པ་དང་བྲལ་བ་མ་མོས་པ་མང་བ་དག་འབྱུང་ལགས་མོད་ཀྱི། །བཅོམ་ལྡན་འདས་བདག་ཅག་གིས་བཟོད་པའི་སྟོབས་བསྟན་ཏེ། དེའི་དུས་ན་མདོ་འདི་བསྟན་པར་བགྱི་གཟུང་བར་བགྱི་བཤད་པར་བགྱི་ཡི་གེར་བྲི་བར་བགྱི་བསྟི་སྟང་དུ་བགྱི་རིམ་གྲོར་བགྱི། མཆོད་པར་བགྱིའོ། །བཅོམ་ལྡན་འདས་བདག་ཅག་གིས་ལུས་དང་སྲོག་ཀྱང་བོར་ཏེ་མདོ་འདི་བཤད་པར་བགྱི་ཡིས། བཅོམ་ལྡན་འདས་ཐུགས་ལས་ཆུང་ངུར་མཛད་དུ་གསོལ།",
+   "en": "Resolutions Chapter 12  Then the bodhisattva mahāsattva Bhaiṣajyarāja and the bodhisattva mahāsattva Mahāpratibhāna, together with a following of two hundred thousand bodhisattvas, facing the Bhagavān, said, “Bhagavān, have no concern over this matter. Bhagavān, we will teach, we will expound this Dharma teaching to beings after the nirvāṇa of the Tathāgata. “Bhagavān, in that time beings will be wicked, have few roots of merit, be arrogant, be devoted to gain and honor, engage in roots of demerit, be difficult to guide, have no interest, and be filled with disinterest, but, Bhagavān, we will demonstrate the power of patience and in that time we will teach this sūtra, we will uphold it, we will expound it, we will write it out, we will honor it, we will venerate it, and we will make offerings to it. Bhagavān, we will cast aside body and life and teach this sūtra. Therefore, Bhagavān, have no concern.”"
+  },
+  "l12-02": {
+   "sa": "atha khalu tasyāṃ parṣadi śaikṣāśaikṣāṇāṃ bhikṣūṇāṃ pañcamātrāṇi bhikṣuśatāni bhagavanta metadūcuḥ - vayamapi bhagavan utsahāmahe imaṃ dharmaparyāyaṃ saṃprakāśayitum, api tu khalu punarbhagavan anyāsu lokadhātuṣviti | atha khalu yāvantaste bhagavataḥ śrāvakāḥ śaikṣāśaikṣā bhagavatā vyākṛtā anuttarāyāṃ samyaksaṃbodhau, aṣṭau bhikṣusahasrāṇi, sarvāṇi tāni yena bhagavāṃstenāñjaliṃ praṇamayya bhagavantametadūcuḥ - alpotsuko bhagavān bhavatu | vayamapīmaṃ dharmaparyāyaṃ saṃprakāśayiṣyāmastathāgatasya parinirvṛtasya paścime kāle paścime samaye api tvanyāsu lokadhātuṣu | tatkasya hetoḥ? asyāṃ bhagavan sahāyāṃ lokadhātau adhimānikāḥ sattvā alpakuśalamūlā nityaṃ vyāpannacittāḥ śaṭhā vaṅkajātīyāḥ ||",
+   "T0262": "爾時眾中五百阿羅漢得受記者、白佛言：「世尊！我等亦自誓願，於異國土、廣說此經。」復有學、無學八千人、得受記者，從座而起，合掌向佛作是誓言：「世尊！我等亦當於他國土廣說此經。所以者何？是娑婆國中，人多弊惡，懷增上慢，功德淺薄、瞋濁諂曲，心不實故。」",
+   "T0263": "爾時會中五百比丘學不學者，前白佛言：「唯然世尊！吾等堪任宣布此經。又復大聖，他方世界如來聲聞諸學不學，佛悉授決，當成無上正真之道，一切叉手而禮世尊。」八千比丘復白佛言：「大聖自安，勿以為慮。滅度之後，當廣解說傳此經道，亦當宣布他方世界。所以者何？此忍世界，人多憍慢本德薄少，心常懷亂如火毒然，迷惑三界不能自安。」",
+   "T0264": "爾時眾中，五百阿羅漢得授記者，白佛言：「世尊！我等亦自誓願，於異國土廣說此經。」復有學、無學八千人得授記者，從座而起合掌向佛，作是誓言：「世尊！我等亦當於他國土廣說此經。所以者何？是娑婆國中，人多弊惡，懷增上慢，功德淺薄，瞋濁諂曲，心不實故。」",
+   "bo": "དེ་ནས་འཁོར་དེའི་དགེ་སློང་སློབ་པ་དང་མི་སློབ་པ་དང་དགེ་སློང་ལྔ་བརྒྱ་ཙམ་གྱིས་བཅོམ་ལྡན་འདས་ལ་འདི་སྐད་ཅེས་གསོལ་ཏོ། །བཅོམ་ལྡན་འདས་བདག་ཅག་ཀྱང་འཇིག་རྟེན་གྱི་ཁམས་གཞན་དག་ཏུ། ཆོས་ཀྱི་རྣམ་གྲངས་འདི་རབ་ཏུ་བསྟན་པར་སྤྲོ་ལགས་སོ། ། དེ་ནས་བཅོམ་ལྡན་འདས་ཀྱི་ཉན་ཐོས་སློབ་པ་དང་མི་སློབ་པ་ཇི་སྙེད་པ་དེ་དག་དང་གང་དག་བཅོམ་ལྡན་འདས་ཀྱིས་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་ཏུ་ལུང་བསྟན་པ། དགེ་སློང་བརྒྱད་སྟོང་པོ་དེ་དག་ཐམས་ཅད་ཀྱིས་བཅོམ་ལྡན་འདས་ག་ལ་བ་དེར་ལོགས་སུ་ཐལ་མོ་སྦྱར་བ་བཏུད་ནས་བཅོམ་ལྡན་འདས་ལ་འདི་སྐད་ཅེས་གསོལ་ཏོ། །བཅོམ་ལྡན་འདས་ཐུགས་ལས་ཆུང་ངུར་མཛད་དུ་གསོལ། ། དེ་བཞིན་གཤེགས་པ་ཡོངས་སུ་མྱ་ངན་ལས་འདས་ནས་སླད་མའི་ཚེ་སླད་མའི་དུས་ན་བདག་ཅག་གིས་ཀྱང་ཆོས་ཀྱི་རྣམ་གྲངས་འདི་ འཇིག་རྟེན་གྱི་ཁམས་གཞན་དག་ཏུ་བཤད་པར་བགྱིའོ། ། དེ་ཅིའི་སླད་དུ་ཞེ་ན། བཅོམ་ལྡན་འདས་འཇིག་རྟེན་གྱི་ཁམས་མི་མཇེད་འདིའི་སེམས་ཅན་དག་ནི་ལྷག་པའི་ང་རྒྱལ་ཅན་དགེ་བའི་རྩ་བ་ཆུང་བ། རྟག་ཏུ་གནོད་སེམས་ཀྱི་སེམས་དང་ལྡན་པ། གཡོན་ཅན་ཡོན་པོའི་རང་བཞིན་ཅན་ལགས་པའི་སླད་དུའོ། །",
+   "en": "That assembly’s bhikṣus, both those in training and those who had passed beyond training, and the five hundred bhikṣus, then said to the Bhagavān, “Bhagavān, we too are resolved to teach this Dharma teaching and will do so in other world realms.” Thereupon the Bhagavān gave prophecies of the highest, complete enlightenment to all the Bhagavān’s śrāvakas, both those in training and those who had passed beyond training. All the eight thousand bhikṣus, with their hands together in homage, bowed toward the Bhagavān and said to the Bhagavān, “Bhagavān, do not be concerned. In the later times, in the later era, after the Tathāgata has passed into nirvāṇa, we also will expound this Dharma teaching in other world realms. Why is that? Bhagavān, the beings in this Sahā world realm will be arrogant, with few roots of merit, constantly malicious, deceitful, and dishonest.”"
+  },
+  "l12-03": {
+   "sa": "atha khalu mahāprajāpatī gautamī bhagavato mātṛbhaginī ṣaḍbhirbhikṣuṇīsahasraiḥ sārdhaṃ śaikṣāśaikṣābhirbhikṣuṇībhiḥ utthāyāsanād yena bhagavāṃstenāñjaliṃ praṇamayya bhagavantamullokayantī sthitābhūt | atha khalu bhagavāṃstasyāṃ velāyāṃ mahāprajāpatīṃ gautamīmāmantrayāmāsa - kiṃ tvaṃ gautami durmanasvinī sthitā tathāgataṃ vyavalokayasi? nāhaṃ parikīrtitā vyākṛtā ca anuttarāyāṃ samyaksaṃbodhau | api tu khalu punargautami sarvaparṣadvayākaraṇena vyākṛtāsi | api tu khalu punastvaṃ gautami ita upādāya aṣṭātriṃśatāṃ buddhakoṭīniyutaśatasahasrāṇāmantike satkāraṃ gurukāraṃ mānanāṃ pūjanāmarcanāmapacāyanāṃ kṛtvā bodhisattvā mahāsattvo dharmabhāṇako bhaviṣyasi | imānyapi ṣaḍ bhikṣuṇīsahasrāṇi śaikṣāśaikṣāṇāṃ bhikṣuṇīnāṃ tvayaiva sārdhaṃ teṣāṃ tathāgatānāmarhatāṃ samyaksaṃbuddhānāmantike bodhisattvā dharmabhāṇakā bhaviṣyanti | tataḥ pareṇa paratareṇa bodhisattvacaryāṃ paripūrya sarvasattvapriyadarśano nāma tathāgato 'rhan samyaksaṃbuddho loke bhaviṣyasi vidyācaraṇasaṃpannaḥ sugato lokavidanuttaraḥ puruṣadamyasārathiḥ śāstā devānāṃ ca manuṣyāṇāṃ ca buddho bhagavān | sa ca gautami sarvasattvapriyadarśanastathāgato 'rhan samyaksaṃbuddhastāni ṣaḍ bodhisattvasahasrāṇi paraṃparāvyākaraṇena vyākariṣyatyanuttarāyāṃ samyaksaṃbodhau ||",
+   "T0262": "爾時佛姨母摩訶波闍波提比丘尼，與學、無學比丘尼六千人俱，從座而起，一心合掌，瞻仰尊顏，目不暫捨。於時世尊告憍曇彌：「何故憂色而視如來，汝心將無謂我不說汝名，授阿耨多羅三藐三菩提記耶？憍曇彌！我先總說一切聲聞皆已授記，今汝欲知記者，將來之世，當於六萬八千億諸佛法中為大法師，及六千學、無學比丘尼俱為法師。汝如是漸漸具菩薩道，當得作佛，號一切眾生喜見如來、應供、正遍知、明行足、善逝、世間解、無上士、調御丈夫、天人師、佛、世尊。憍曇彌！是一切眾生喜見佛及六千菩薩，轉次授記得阿耨多羅三藐三菩提。」",
+   "T0263": "爾時大敬逵比丘尼，與六千比丘尼俱，瞻戴尊顏不以為厭，啟白佛言：「道德至尊巍巍無量，超絕虛空無能及者。」佛即告曰：「汝輩瞿曇彌，勿懷悒悒而為愁慼悲顏觀佛，恨言如來而不班宣，獨不見蒙授無上至真正覺之決。一切眾會等共和同，爾乃演布授眾人決，當至無上正真之道，皆一等味味無有異。從是已往，汝當遭值三萬八千億諸佛之眾供養奉事，當為菩薩常為法師，此學不學六千比丘尼，為諸眾生。菩薩法師次第具足菩薩行已，當成為佛，號曰一切眾生咸敬如來、至真、等正覺。成佛以後開化人民，各各展轉共相授決，當成為佛，度脫無數不可計人。」",
+   "T0264": "爾時佛姨母摩訶波闍波提比丘尼，與學、無學比丘尼六千人俱，從座而起，一心合掌，瞻仰尊顏，目不暫捨。於時世尊告憍曇彌：「何故憂色而視如來？汝心將無謂我不說汝名授阿耨多羅三藐三菩提記耶？憍曇彌！我先總說一切聲聞皆已授記，今汝欲知記者，將來之世，當於六萬八千億諸佛法中，為大法師，及六千學、無學比丘尼，俱為法師，如是漸漸具菩薩道，當得作佛，號一切眾生憙見如來、應供、正遍知、明行足、善逝、世間解、無上士、調御丈夫、天人師、佛、世尊。憍曇彌！是一切眾生憙見佛，及六千菩薩轉次授記，得阿耨多羅三藐三菩提。」",
+   "bo": "དེ་ནས་བཅོམ་ལྡན་འདས་ཀྱིས་སྲུ་སྐྱེ་དགུའི་བདག་མོ་ཆེན་མོ་གཽ་ཏ་མཱི་དགེ་སློང་མ་སློབ་པ་དང་མི་སློབ་པ་དགེ་སློང་མ་དྲུག་སྟོང་དང་ལྷན་ཅིག་ཏུ་སྟན་ལས་ལངས་ཏེ། བཅོམ་ལྡན་འདས་ག་ལ་བ་དེ་ལོགས་སུ་ཐལ་མོ་སྦྱར་བ་བཏུད་ནས་བཅོམ་ལྡན་འདས་ལ་ལྟ་ཞིང་འཁོད་དོ། ། དེ་ནས་བཅོམ་ལྡན་འདས་ཀྱིས་དེའི་ཚེ་སྐྱེ་དགུའི་བདག་མོ་ཆེན་མོ་གཽ་ཏ་མཱི་ལ་བཀའ་སྩལ་པ། གཽ་ཏ་མཱི་ཁྱོད་བདག་ནི་དེ་བཞིན་གཤེགས་པས་ཡོངས་སུ་མ་བརྗོད་དེ། བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་ཏུ་ལུང་མ་བསྟན་སྙམ་དུ་ཡིད་མི་བདེ་བར། དེ་བཞིན་གཤེགས་པ་ལ་ལྟ་ཞིང་མ་འདུག་ཤིག ། གཽ་ཏ་མཱི་འདི་ལྟར་འཁོར་ཐམས་ཅད་ལུང་བསྟན་པས་ཁྱོད་ཀྱང་ལུང་བསྟན་ཟིན་ཏོ། ། གཽ་ཏ་མཱི་ཁྱོད་འདི་ནས་བཟུང་སྟེ་སངས་རྒྱས་བྱེ་བ་ཁྲག་ཁྲིག་བརྒྱ་སྟོང་ཕྲག་སུམ་ཅུ་རྩ་བརྒྱད་ཀྱི་ཐད་ན། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་ཆོས་སྨྲ་བར་འགྱུར་རོ། ། སློབ་པ་དང་མི་སློབ་པའི་དགེ་སློང་མ་དྲུག་སྟོང་འདི་དག་དང་ཁྱོད་ལྷན་ཅིག་ཏུ་དེ་བཞིན་གཤེགས་པ་དེ་དག་གི་ཐད་ན་བྱང་ཆུབ་སེམས་དཔའ་ཆོས་སྨྲ་བར་འགྱུར་རོ། ། དེའི་ཕ་རོལ་གྱི་ཡང་ཆེས་ཕ་རོལ་ནས་བྱང་ཆུབ་སེམས་དཔའི་སྤྱོད་པ་ཡོངས་སུ་རྫོགས་པར་བྱས་ཏེ་དེ་བཞིན་གཤེགས་པ་དགྲ་བཅོམ་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་རིག་པ་དང་ཞབས་སུ་ལྡན་པ། བདེ་བར་གཤེགས་པ་འཇིག་རྟེན་མཁྱེན་པ། སྐྱེས་བུ་འདུལ་བའི་ཁ་ལོ་སྒྱུར་བ། བླ་ན་མེད་པ། ལྷ་དང་མི་རྣམས་ཀྱི་སྟོན་པ་སངས་རྒྱས་བཅོམ་ལྡན་འདས་སེམས་ཅན་ཐམས་ཅད་ཀྱིས་མཐོང་ན་དགའ་བ་ཞེས་བྱ་བར་འཇིག་རྟེན་དུ་འབྱུང་བར་འགྱུར་ཏེ། གཽ་ཏ་མཱི་དེ་བཞིན་གཤེགས་པ་དགྲ་བཅོམ་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་སེམས་ཅན་ཐམས་ཅད་ཀྱིས་མཐོང་ན་དགའ་བ་དེས། བྱང་ཆུབ་སེམས་དཔའ་དྲུག་སྟོང་ པོ་དེ་དག་གཅིག་ནས་གཅིག་ཏུ་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་ཏུ་ལུང་སྟོན་པས་ལུང་སྟོན་པར་འགྱུར་རོ། །",
+   "en": "The Bhagavān’s maternal aunt Mahāprajāpatī Gautamī and six thousand bhikṣuṇīs, both bhikṣuṇīs in training and those who had passed beyond training, now arose from their seats at the same time, with their hands together in homage, bowed toward the Bhagavān, and stood there gazing at the Bhagavān. The Bhagavān said to Mahāprajāpatī Gautamī, “Gautamī, do not stand gazing at the Tathāgata, unhappily thinking, ‘The Tathāgata has not spoken to me, has not prophesied the highest, complete enlightenment for me.’ For when I gave a prophecy to the entire assembly, you too, Gautamī, received a prophecy accordingly. “Gautamī, from now on you will be a bodhisattva mahāsattva dharmabhāṇaka under thirty-eight hundred thousand quintillion buddhas. These six thousand bhikṣuṇīs, both bhikṣuṇīs in training and those who have passed beyond training, will be bodhisattva dharmabhāṇakas with you under those tathāgatas. “Beyond that and even further beyond that, you will complete your bodhisattva practice and appear in the world as the tathāgata, the arhat, the perfectly enlightened buddha, the one with perfect wisdom and conduct, the sugata, the knower of the world, the unsurpassable guide who tames beings, the teacher of gods and humans, the buddha, the bhagavān named Sarvasattvapriyadarśana. “Gautamī, the tathāgata, the arhat, the perfectly enlightened buddha Sarvasattvapriyadarśana will give a prophecy to those six thousand bodhisattvas of their successive attainment of the highest, complete enlightenment.”"
+  },
+  "l12-04": {
+   "sa": "atha khalu rāhulamāturyaśodharāyā bhikṣuṇyā etadabhavat - na me bhagavatā nāmadheyaṃ parikīrtitam | atha khalu bhagavān yaśodharāyā bhikṣuṇyāścetasaiva cetaḥparivitarkamājñāya yaśodharāṃ bhikṣuṇīmetadavocat - ārocayāmi te yaśodhare, prativedayāmi te | tvamapi daśānāṃ buddhakoṭīsahasrāṇāmantike satkāraṃ gurukāraṃ mānanāṃ pūjanāmarcanāmapacāyanāṃ kṛtvā bodhisattvo dharmabhāṇako bhaviṣyasi | bodhisattvacaryāṃ ca anupūrveṇa paripūrya raśmiśatasahasraparipūrṇadhvajo nāma tathāgato 'rhan samyaksaṃbuddho loke bhaviṣyasi vidhācaraṇasaṃpannaḥ sugatolokavidanuttaraḥ puruṣadamyasārathiḥ śāstā devānāṃ ca manuṣyāṇāṃ ca buddho bhagavān bhadrāyāṃ lokadhātau | aparimitaṃ ca tasya bhagavato raśmiśatasahasraparipūrṇadhvajasya tathāgatasyārhataḥ samyaksaṃbuddhasyāyuṣpramāṇaṃ bhaviṣyati ||",
+   "T0262": "爾時羅睺羅母耶輸陀羅比丘尼作是念：「世尊於授記中，獨不說我名。」佛告耶輸陀羅：「汝於來世百千萬億諸佛法中修菩薩行，為大法師，漸具佛道。於善國中當得作佛，號具足千萬光相如來、應供、正遍知、明行足、善逝、世間解、無上士、調御丈夫、天人師、佛、世尊。佛壽無量阿僧祇劫。」",
+   "T0263": "於是羅云母比丘尼及持名聞，各心念言：「今佛世尊而不愍念，獨見遺棄。」於是大聖告名聞比丘尼：「今我班宣告語遠近，當於十萬億佛修道，常為法師奉菩薩行，所遵具足當得作佛，號具足百千光幢幡如來、至真、等正覺、明行成為、善逝、世間解、無上士、道法御、天人師，為佛、眾祐，其世界名仁賢。爾時其佛，光明威神無數百千，壽不可限。」",
+   "T0264": "爾時羅睺羅母耶輸陀羅比丘尼作是念：「世尊！於授記中獨不說我名。」佛告耶輸陀羅：「汝於來世百千萬億諸佛法中，修菩薩行，為大法師，漸具佛道，於善國中，當得作佛，號具足千萬光相如來、應供、正遍知、明行足、善逝、世間解、無上士、調御丈夫、天人師、佛、世尊，佛壽無量阿僧祇劫。」",
+   "bo": "དེ་ནས་སྒྲ་གཅན་ཟིན་གྱི་མ་དགེ་སློང་མ་གྲགས་འཛིན་འདི་སྙམ་དུ། བཅོམ་ལྡན་འདས་ཀྱིས་བདག་གི་མིང་མ་སྨོས་སོ་སྙམ་དུ་སེམས་སོ། ། དེ་ནས་བཅོམ་ལྡན་འདས་ཀྱིས་དགེ་སློང་མ་གྲགས་འཛིན་མའི་སེམས་ཀྱི་རྟོགས་པ་ཐུགས་སུ་ཆུད་ནས། དགེ་སློང་མ་གྲགས་འཛིན་ལ་འདི་སྐད་ཅེས་བཀའ་སྩལ་ཏོ། །གྲགས་འཛིན་ཁྱོད་མོས་པར་བྱའོ། །ཁོང་དུ་ཆུད་པར་བྱའོ། །ཁྱོད་ཀྱང་སངས་རྒྱས་བྱེ་བ་སྟོང་ཕྲག་བཅུའི་ཐད་ན་བྱང་ཆུབ་སེམས་དཔའ་ཆོས་སྨྲ་བར་འགྱུར་རོ། །བྱང་ཆུབ་སེམས་དཔའི་སྤྱོད་པ་རིམ་གྱིས་ཡོངས་སུ་རྫོགས་པར་བྱས་ནས། འཇིག་རྟེན་གྱི་ཁམས་བཟང་པོ་ཞེས་བྱ་བར་དེ་བཞིན་གཤེགས་པ་དགྲ་བཅོམ་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་རིག་པ་དང་ཞབས་སུ་ལྡན་པ། བདེ་བར་གཤེགས་པ། འཇིག་རྟེན་མཁྱེན་པ། སྐྱེས་བུ་འདུལ་བའི་ཁ་ལོ་སྒྱུར་བ། བླ་ན་མེད་པ་ལྷ་དང་མི་རྣམས་ཀྱི་སྟོན་པ་སངས་རྒྱས་བཅོམ་ལྡན་འདས་འོད་ཟེར་བརྒྱ་སྟོང་ཡོངས་སུ་རྫོགས་པའི་རྒྱལ་མཚན་ཞེས་བྱ་བར་འཇིག་རྟེན་དུ་འབྱུང་བར་འགྱུར་རོ། ། བཅོམ་ལྡན་འདས་དེ་བཞིན་གཤེགས་པ་དགྲ་བཅོམ་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་འོད་ཟེར་བརྒྱ་སྟོང་ཡོངས་སུ་རྫོགས་པའི་རྒྱལ་མཚན་དེའི་ཚེའི་ཚད་ནི་དཔག་ཏུ་མེད་པར་འགྱུར་རོ། །",
+   "en": "Then the bhikṣuṇī Yaśodharā, the mother of Rāhula, thought, “The Bhagavān has not said my name.” The Bhagavān, knowing the thoughts that were in the mind of Bhikṣuṇī Yaśodharā, said to Bhikṣuṇī Yaśodharā, “Yaśodharā, I declare to you, I make it known to you, that you will be a bodhisattva dharmabhāṇaka under a hundred thousand million buddhas. You will eventually complete your bodhisattva practice and in the world realm named Bhadrā you will appear in the world as the tathāgata, the arhat, the perfectly enlightened buddha, the one with perfect wisdom and conduct, the sugata, the knower of the world, the unsurpassable guide who tames beings, the teacher of gods and humans, the buddha, the bhagavān named Raśmiśatasahasraparipūrṇadhvaja. The lifespan of the tathāgata, the arhat, the perfectly enlightened buddha Raśmiśatasahasraparipūrṇadhvaja will be immeasurable.”"
+  },
+  "l12-05": {
+   "sa": "atha khalu mahāprajāpatī gautamī bhikṣuṇī ṣaḍbhikṣuṇīsahasraparivārā yaśodharā ca bhikṣuṇī caturbhikṣuṇīsahasraparivārā bhagavato 'ntikāt svakaṃ vyākaraṇaṃ śrutvā anuttarāyāṃ samyaksaṃbodhau āścaryaprāptā adbhutaprāptāśca tasyāṃ velāyāmimāṃ gāthāmabhāṣanta - bhagavan vinetāsi vināyako 'si śāstāsi lokasya sadevakasya / āśvāsadātā naradevapūjito vayaṃ pi saṃtoṣita adya nātha // Saddhp_12.1 // atha khalu tā bhikṣuṇyaḥ imāṃ gāthāṃ bhāṣitvā bhagavantametadūcuḥ - vayamapi bhagavan samutsahāmahe imaṃ dharmaparyāyaṃ saṃprakāśayituṃ paścime kāle paścime samaye, api tvanyāsu lokadhātuṣviti ||",
+   "T0262": "爾時摩訶波闍波提比丘尼及耶輸陀羅比丘尼，并其眷屬，皆大歡喜，得未曾有，即於佛前而說偈言：「世尊導師，安隱天人，我等聞記， 心安具足。」諸比丘尼說是偈已，白佛言：「世尊！我等亦能於他方國土廣宣此經。」",
+   "T0263": "時大敬逵及羅云母比丘尼等，得未曾有驚喜悅豫，即說是偈，而嗟歎佛：「世尊所開示，為眾之導師， 開化於世界，并及於天人。 天人所奉事，今者見慰撫， 以為人導師，充滿悅我意。」比丘尼說此頌已，白世尊曰：「唯然大聖！我等信樂是佛法訓，堪任誦讀，又及餘人他方世界。」",
+   "T0264": "爾時摩訶波闍波提比丘尼，及耶輸陀羅比丘尼，并其眷屬，皆大歡喜得未曾有，即於佛前，而說偈言：「世尊導師！安隱天人，我等聞記， 心安具足。」諸比丘尼說是偈已，白佛言：「世尊！我等亦於他方國土廣說斯經。」",
+   "bo": "དེ་ནས་དགེ་སློང་མ་སྐྱེ་དགུའི་བདག་མོ་ཆེན་མོ་གཽ་ཏ་མཱི་དགེ་སློང་མ་གཡོག་འཁོར་དགེ་སློང་མ་དྲུག་སྟོང་དང་། དགེ་སློང་མ་གྲགས་འཛིན་གཡོག་འཁོར་དགེ་སློང་མ་བཞི་སྟོང་དང་། བཅོམ་ལྡན་འདས་ལས་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་ཏུ་བདག་ཅག་ལུང་བསྟན་པ་ཐོབ་ནས་ངོ་མཚར་དང་རྨད་དུ་གྱུར་ཏེ། དེའི་ཚེ་ཚིགས་སུ་བཅད་པ་འདི་དག་གསོལ་ཏོ། །བཅོམ་ལྡན་འདྲེན་པ་རྣམ་པར་འདྲེན་པ་སྟེ། །ལྷར་བཅས་འཇིག་རྟེན་དག་གི་སྟོན་པ་ལགས། ། དབུགས་འབྱིན་ལྷ་དང་མི་ཡིས་མཆོད་པ་སྟེ། ། མགོན་པོ་བདག་ཅག་རྣམས་ཀྱང་དེང་ཚིམ་བགྱིས། ། དེ་ནས་དགེ་སློང་མ་རྣམས་ཀྱིས་ཚིགས་སུ་བཅད་པ་འདི་གསོལ་ནས་བཅོམ་ལྡན་འདས་ལ་འདི་སྐད་ཅེས་གསོལ་ཏོ། །བཅོམ་ལྡན་འདས་བདག་ཅག་ཀྱང་སླད་ མའི་དུས་སླད་མའི་ཚེ་ན། ཆོས་ཀྱི་རྣམ་གྲངས་འདི་འཇིག་རྟེན་གྱི་ཁམས་གཞན་དག་ཏུ་སྟོན་པར་སྤྲོ་ལགས་སོ། །",
+   "en": "At this, Bhikṣuṇī Mahāprajāpatī Gautamī and her following of six thousand bhikṣuṇīs, and Bhikṣuṇī Yaśodharā and her following of four thousand bhikṣuṇīs, were astonished and amazed by obtaining from the Bhagavān the prophecy of their highest, complete enlightenment. At that time they recited this verse: “Bhagavān, you are the Instructor, the Guide, The Teacher of the world and its devas. You bring relief and devas and humans make offerings to you. And today we also, Lord, have been made content.” {1}  Having recited that verse, the bhikṣuṇīs said to the Bhagavān, “Bhagavān, we too are resolved to teach this Dharma teaching in a future time, in a future era, in other world realms.”"
+  },
+  "l12-06": {
+   "sa": "atha khalu bhagavān yena tānyaśītibodhisattvakoṭīnayutaśatasahasrāṇi dhāraṇīpratilabdhānāṃ bodhisattvānāmavaivartikadharmacakrapravartakānāṃ tenāvalokayāmāsa | atha khalu te bodhisattvā mahāsattvāḥ samanantarāvalokitā bhagavatā utthāyāsanebhyo yena bhagavāṃstenāñjaliṃ praṇāmyaivaṃ cintayāmāsuḥ - asmākaṃ bhagavān adhyeṣati asya dharmaparyāyasya saṃprakāśanatāyai | te khalvevamanuvicintya saṃprakampitāḥ parasparamūcuḥ - kathaṃ vayaṃ kulaputrāḥ kariṣyāmo yad bhagavānadhyeṣati asya dharmaparyāyasyānāgate 'dhvani saṃprakāśanatāyai? atha khalu te kulaputrā bhagavato gauraveṇa ātmanaśca purvacaryāpraṇidhānena bhagavato 'bhimukhaṃ siṃhanādaṃ nadante sma - vayaṃ bhagavan anāgate 'dhvani imaṃ dharmaparyāyaṃ tathāgate parinirvṛte daśasu dikṣu gatvā sarvasattvāṃllekhayiṣyāmaḥ pāṭhayiṣyāmaścintāpayiṣyāmaḥ prakāśayiṣyāmo bhagavata evānubhāvena | bhagavāṃśca asmākamanyalokadhātusthito rakṣāvaraṇaguptiṃ kariṣyati ||",
+   "T0262": "爾時世尊視八十萬億那由他諸菩薩摩訶薩。是諸菩薩——皆是阿惟越致，轉不退法輪，得諸陀羅尼——即從座起，至於佛前，一心合掌，而作是念：「若世尊告勅我等持說此經者，當如佛教，廣宣斯法。」復作是念：「佛今默然，不見告勅，我當云何？」時諸菩薩敬順佛意，并欲自滿本願，便於佛前，作師子吼而發誓言：「世尊！我等於如來滅後，周旋往返十方世界，能令眾生書寫此經，受持、讀誦，解說其義，如法修行，正憶念，皆是佛之威力。唯願世尊，在於他方遙見守護。」",
+   "T0263": "於時世尊，顧眄八十億姟百千逮諸總持開士講不退轉法輪。時諸菩薩見佛照臨，尋叉手啟白：「唯願大聖，以斯經典付授我等講說宣布。得此經卷，專惟佛德。」諸族姓子欣仰世尊，俯察己身前世所行平等之願，則於佛前而師子吼：「如來滅度後，若此經法在於十方，我等書寫受持諷誦，思惟其誼分別布路，顯化餘人亦令如斯，承佛聖旨，我之朋黨處殊異土，大聖加恩，將接我等使得成立。」",
+   "T0264": "爾時世尊，視八十萬億那由他諸菩薩摩訶薩；是諸菩薩，皆是阿鞞跋致，轉不退法輪，得諸陀羅尼，即從座起至於佛前，一心合掌而作是念：「若世尊告勅我等持說此經者，當如佛教廣宣斯法。」復作是念：「佛今默然不見告勅，我當云何？」時諸菩薩敬順佛意，并欲自滿本願，便於佛前作師子吼，而發誓言：「世尊！我等於如來滅後，周旋往返十方世界，能令眾生書寫此經，受持、讀誦、解說其義，如法修行，正憶念皆是佛之威力。唯願世尊！在於他方遙見守護。」",
+   "bo": "དེ་ནས་བཅོམ་ལྡན་འདས་ཀྱིས་བྱང་ཆུབ་སེམས་དཔའ་གཟུངས་ཐོབ་པ་ཕྱིར་མི་ལྡོག་པའི་ཆོས་ཀྱི་འཁོར་ལོ་བསྐོར་བའི་བྱང་ཆུབ་སེམས་དཔའ་བརྒྱད་ཁྲི་པོ་དེ་དག་ག་ལ་བ་དེ་ལོགས་སུ་གཟིགས་སོ། ། དེ་ནས་བཅོམ་ལྡན་འདས་ཀྱིས་གཟིགས་མ་ཐག་ཏུ། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་དེ་དག་སྟན་ལས་ལངས་ཏེ། བཅོམ་ལྡན་འདས་ག་ལ་བ་དེ་ལོགས་སུ་ཐལ་མོ་སྦྱར་བ་བཏུད་ནས་འདི་སྙམ་དུ། ཆོས་ཀྱི་རྣམ་གྲངས་འདི་བཤད་པར་བྱ་བའི་ཕྱིར། བཅོམ་ལྡན་འདས་ཀྱིས་བདག་ཅག་ལ་བསྐུལ་བ་མཛད་དོ་སྙམ་དུ་སེམས་སོ། ། དེ་དག་དེ་སྙམ་དུ་བསམས་ནས་ཀུན་གཡོས་ཏེ་ཕན་ཚུན་དུ་སྨྲས་པ། རིགས་ཀྱི་བུ་དག་མ་འོངས་པའི་དུས་ན་ཆོས་ཀྱི་རྣམ་གྲངས་འདི་བཤད་པར་བྱ་བའི་ཕྱིར། བཅོམ་ལྡན་འདས་ཀྱིས་བདག་ཅག་ལ་བསྐུལ་བ་མཛད་ན་བདག་ཅག་གིས་ཇི་ལྟར་བྱ། དེ་ནས་རིགས་ཀྱི་བུ་དེ་དག་བཅོམ་ལྡན་འདས་ལ་གུས་པ་དང་བདག་ཉིད་ཀྱི་སྔོན་གྱི་སྤྱོད་པ་དང་སྨོན་ལམ་གྱིས་བཅོམ་ལྡན་འདས་ཀྱི་སྤྱན་སྔར་སེང་གེའི་སྒྲ་ཕྱུང་བ། བཅོམ་ལྡན་འདས་དེ་བཞིན་གཤེགས་པ་ཡོངས་སུ་མྱ་ངན་ལས་འདས་ནས་བདག་ཅག་ཕྱོགས་བཅུར་མཆིས་ཏེ། བཅོམ་ལྡན་འདས་ཀྱི་མཐུས་ཆོས་ཀྱི་རྣམ་གྲངས་འདི་སེམས་ཅན་རྣམས་ཡི་གེར་འདྲིར་སྩལ་བར་བགྱི་ཀློག་ཏུ་སྩལ་བར་བགྱི་སེམས་སུ་སྩལ་བར་བགྱི་འཆད་དུ་སྩལ་བར་བགྱིའོ། ། བཅོམ་ལྡན་འདས་ཀྱང་འཇིག་རྟེན་གྱི་ཁམས་གཞན་ན་བཞུགས་ཏེ། བདག་ཅག་ལ་བསྲུང་བ་དང་སྐྱོབ་པ་དང་སྦེད་པར་མཛད་པར་འགྱུར་རོ། །",
+   "en": "The Bhagavān now looked toward the eighty thousand bodhisattvas who had attained retention and had turned the irreversible Dharma wheel. As soon as the Bhagavān looked at them, those bodhisattva mahāsattvas rose from their seats. With their hands placed together in homage they bowed toward the Bhagavān and thought, “The Bhagavān is going to exhort us to teach this Dharma teaching.” At that thought, they all trembled and said to each other, “Noble ones, if the Bhagavān exhorts us to teach this Dharma teaching in the future times, how shall we respond?” Then those noble ones, because of their veneration for the Bhagavān and because of their past practice and prayers, roared the lion’s roar in the presence of the Bhagavān. “Bhagavān, in the future time when the Tathāgata has passed into nirvāṇa, we will go into the ten directions, and through the power of the Bhagavān we will have beings write out this Dharma teaching, recite it, contemplate it, and teach it. And the Bhagavān, who will be residing in other world realms, will guard us, protect us, and hide us.”"
+  },
+  "l12-v2": {
+   "sa": "atha khalu te bodhisattvā mahāsattvāḥ samasaṃgītyā bhagavantamābhirgāthābhiradhyabhāṣanta -(Vaidya 164) alpotsukastvaṃ bhagavan bhavasva vayaṃ tadā te parinirvṛtasya / svaṃ paścime kāli subhairavasmin prakāśayiṣyāmida sūtramuttamam // Saddhp_12.2 // ākrośāṃstarjanāṃścaiva daṇḍa-udgūraṇāni ca / bālānāṃ saṃsahiṣyāmo 'dhivāsiṣyāma nāyaka // Saddhp_12.3 // durbuddhinaśca vaṅkāśca śaṭhā bālādhimāninaḥ / aprāpte prāptasaṃjñī ca ghore kālasmi paścime // Saddhp_12.4 // araṇyavṛttakāścaiva kanthāṃ prāvariyāṇa ca / saṃlekhavṛtticāri sma evaṃ vakṣyanti durmatī // Saddhp_12.5 // raseṣu gṛddha saktāśca gṛhīṇāṃ dharma deśayī / satkṛtāśca bhaviṣyanti ṣaḍabhijñā yathā tathā // Saddhp_12.6 // raudracittāśca duṣṭāśca gṛhavittavicintakāḥ / araṇyaguptiṃ praviśitvā asmākaṃ parivādakāḥ // Saddhp_12.7 // asmākaṃ caiva vakṣyanti lābhasatkāraniśritāḥ / tīrthikā batime bhikṣū svāni kāvyāni deśayuḥ // Saddhp_12.8 // svayaṃ sūtrāṇi granthitvā lābhasatkārahetavaḥ / parṣāya madhye bhāṣante asmākamanukuṭṭakāḥ // Saddhp_12.9 // rājeṣu rājaputreṣu rājāmātyeṣu vā tathā / viprāṇāṃ gṛhapatīnāṃ ca anyeṣāṃ cāpi bhikṣuṇām // Saddhp_12.10 // vakṣyantyavarṇamasmākaṃ tīrthyavādaṃ ca kārayī / sarvaṃ vayaṃ kṣamiṣyāmo gauraveṇa maharṣiṇām // Saddhp_12.11 // ye cāsmān kutsayiṣyanti tasmin kālasmi durmatī / ime buddhā bhaviṣyanti kṣamiṣyāmatha sarvaśaḥ // Saddhp_12.12 // kalpasaṃkṣobhamīṣmasmin dāruṇasmi mahābhaye / yakṣarūpā bahu bhikṣū asmākaṃ paribhāṣakāḥ // Saddhp_12.13 // gauraveṇeha lokendre utsahāma suduṣkaram / kṣāntīya kakṣyāṃ bandhitvā sūtrametaṃ prakāśaye // Saddhp_12.14 // anarthikāḥ sma kāyena jīvitena ca nāyaka / arthikāśca sma bodhīya tava nikṣepadhārakāḥ // Saddhp_12.15 // bhagavāneva jānīte yādṛśāḥ pāpabhikṣavaḥ / paścime kāli bheṣyanti saṃdhābhāṣyamajānakāḥ // Saddhp_12.16 // bhṛkuṭī sarva soḍhavyā aprajñaptiḥ punaḥ punaḥ / niṣkāsanaṃ vihārebhyo bandhakuṭṭī bahūvidhā // Saddhp_12.17 // ājñaptiṃ lokanāthasya smarantā kāli paścime / bhāṣiṣyāma idaṃ sūtraṃ parṣanmadhye viśāradāḥ // Saddhp_12.18 // nagareṣvatha grāmeṣu ye bheṣyanti ihārthikāḥ / gatvā gatvāsya dāsyāmo nikṣepaṃ tava nāyaka // Saddhp_12.19 // preṣaṇaṃ tava lokendra kariṣyāmo mahāmune / alpotsuko bhava tvaṃ hi śāntiprāpto sunirvṛtaḥ // Saddhp_12.20 // sarve ca lokapradyotā āgatā ye diśo daśa / satyāṃ vācaṃ prabhāṣāmo adhimuktiṃ vijānasi // Saddhp_12.21 //",
+   "T0262": "即時諸菩薩俱同發聲、而說偈言：「唯願不為慮，於佛滅度後， 恐怖惡世中，我等當廣說。 有諸無智人，惡口罵詈等， 及加刀杖者，我等皆當忍。 惡世中比丘，邪智心諂曲， 未得謂為得，我慢心充滿。 或有阿練若，納衣在空閑， 自謂行真道，輕賤人間者。 貪著利養故，與白衣說法， 為世所恭敬，如六通羅漢。 是人懷惡心，常念世俗事， 假名阿練若，好出我等過， 而作如是言：『此諸比丘等， 為貪利養故，說外道論議； 自作此經典，誑惑世間人， 為求名聞故，分別於是經。』 常在大眾中，欲毀我等故， 向國王大臣，婆羅門居士， 及餘比丘眾，誹謗說我惡， 謂是邪見人，說外道論議。 我等敬佛故，悉忍是諸惡。 為斯所輕言，汝等皆是佛， 如此輕慢言，皆當忍受之。 濁劫惡世中，多有諸恐怖， 惡鬼入其身，罵詈毀辱我。 我等敬信佛，當著忍辱鎧， 為說是經故，忍此諸難事。 我不愛身命，但惜無上道， 我等於來世，護持佛所囑， 世尊自當知。濁世惡比丘， 不知佛方便，隨宜所說法， 惡口而顰蹙，數數見擯出， 遠離於塔寺。如是等眾惡， 念佛告勅故，皆當忍是事。 諸聚落城邑，其有求法者， 我皆到其所，說佛所囑法。 我是世尊使，處眾無所畏， 我當善說法，願佛安隱住。 我於世尊前，諸來十方佛， 發如是誓言，佛自知我心。」",
+   "T0263": "爾時諸菩薩大士同心等意，佛前而說頌曰：「唯然世尊，默然安聖，佛滅度後， 光闡影訓。然後末世，恐有患難， 當普班宣，分別說之。 若撾捶罵詈，以石打擲者， 大聖往來世，鄙當忍此愚。 語言難可了，諛諂癡憍慢， 然後處山巖，無獲謂有得。 無便於智慧，當何以報答， 獨行順心志，懷惡為無忍。 在居貪惡聲，當為說經法， 所講言決除，猶若此六通。 𣧑暴秉毒心，處寂行斯想， 入燕而獨住，不慕罵詈對。 是我等無忍，猗著於利養， 則是外道人，所說為已施。 於經自精進，猶以供養利， 於眾會中說，宣吾等名譽。 若至國王宮，大臣及寮屬， 并梵志長者，若餘比丘所， 謗毀說我惡，所行如邪道， 吾當悉忍此，當奉侍大聖。 爾時離憂慼，若使能忍辱， 以斯佛所說，悉當呵教之。 劫亂比丘諍，𣧑暴大恐懼， 悉罵詈我等，諸比丘如鬼。 在世行恭敬，皆令忍苦患， 以順柔軟性，故當說此經。 吾等不貪身，亦不惜壽命， 當堪奉持此，志願於佛道。 世尊具知之，如𣧑惡比丘， 然後來末世，當分別開解。 顏色常不悅，數數犯不當， 遊行不以時，衣服多不政。 假使今世雄，滅度後末世， 在眾會勇猛，分別說是經。 若行求入城，儻有所慕索， 所在當施與，佛知不令墮。 用愛樂世原，興修仁善心， 少欲行節限，逮善寂滅度。 一切世光曜，十方悉來會， 我當言至誠，悉見心不虛。」",
+   "T0264": "即時諸菩薩，俱同發聲，而說偈言：「唯願不為慮，於佛滅度後， 恐怖惡世中，我等當廣說。 有諸無智人，惡口罵詈等， 及加刀杖者，我等皆當忍。 惡世中比丘，邪智心諂曲， 未得謂為得，我慢心充滿； 或有阿練若，納衣在空閑， 自謂行真道，輕賤人間者； 貪著利養故，與白衣說法， 為世所恭敬，如六通羅漢， 是人懷惡心，常念世俗事， 假名阿練若，好出我等過， 而作如是言：『此諸比丘等， 為貪利養故，說外道論義， 自作此經典，誑惑世間人。』 為求名聞故，分別於是經， 常在大眾中，欲毀我等故， 向國王大臣，婆羅門居士， 及餘比丘眾，誹謗說我惡， 謂是邪見人，說外道論義。 我等敬佛故，悉忍是諸惡； 為斯所輕言，汝等皆是佛， 如此輕慢言，皆當忍受之。 濁劫惡世中，多有諸恐怖， 惡鬼入其身，罵詈毀辱我， 我等敬信佛，當著忍辱鎧。 為說是經故，忍此諸難事， 我不愛身命，但惜無上道； 我等於來世，護持佛所囑。 世尊自當知，濁世惡比丘， 不知佛方便，隨宜所說法， 惡口而嚬蹙，數數見擯出， 遠離於塔寺，如是等眾惡， 念佛告勅故，皆當忍是事。 諸聚落城邑，其有求法者， 我皆到其所，說佛所囑法。 我是世尊使，處眾無所畏， 我當善說法，願佛安隱住。 我於世尊前，諸來十方佛， 發如是誓言，佛悉知我心。」",
+   "bo": "དེ་ནས་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་དེ་དག་གིས་བཅོམ་ལྡན་འདས་ལ་དབྱངས་འཐུན་པར་ཚིགས་སུ་བཅད་པ་འདི་དག་གསོལ་ཏོ། །བཅོམ་ལྡན་འདས་ཁྱོད་ཐུགས་ལས་ཆུང་མཛད་གསོལ། ། ཁྱོད་ནི་མྱ་ངན་འདས་ནས་བདག་ཅག་རྣམས། །ཤིན་ཏུ་མ་རུངས་སླད་མའི་དུས་ཀྱི་ཚེ། །མདོ་སྡེ་དམ་པ་འདི་ནི་བཤད་པར་བགྱི། ། བྱིས་པ་རྣམས་ཀྱིས་སྤྱོས་པ་དང་། །བརྡེག་པ་དང་ནི་དབྱུག་ཐོགས་ཏེ། །གཟས་པ་རྣམས་ནི་བཟོད་པར་བགྱི། །འདྲེན་པ་བག་ལ་ཞ་བར་བགྱི། ། མ་རུངས་སླད་མའི་དུས་ལ་ནི། །ལོག་པའི་བློ་དང་ཡོན་པོ་དང་། ། བྱིས་པ་གཡོ་དང་ང་རྒྱལ་ཅན། །མ་ཐོབ་ཐོབ་པར་འདུ་ཤེས་པ། ། དགོན་པ་དག་ལ་རབ་སེམས་ཤིང་། །ཚེམ་བུ་དག་ཀྱང་བགོས་ནས་ནི། །ཡོ་བྱད་བསྙུངས་ཚུལ་སྤྱོད་དོ་ཞེས། །བློ་ངན་དེ་སྐད་སྨྲ་བར་འགྱུར། ། རོ་བྲོ་ཆགས་ཤིང་ཞེན་པ་རྣམས། །ཁྱིམ་པ་དག་ལ་ཆོས་ཀྱང་འཆད། །མངོན་ཤེས་དྲུག་ཅན་ཇི་བཞིན་དུ། །བསྟི་སྟང་དག་ཀྱང་བགྱིད་པར་འགྱུར། ། གཏུམ་པའི་སེམས་དང་སྡང་སེམས་ལྡན། ཁྱིམ་དང་ནོར་ལ་རྣམ་པར་སེམས། ། དགོན་པ་དབེན་པར་རབ་ཞུགས་ཏེ། ། བདག་ཅག་རྣམས་ལ་སྐུར་པ་འདེབས། །བདག་ཅག་ལ་ནི་འདི་སྐད་མཆི། །རྙེད་དང་བཀུར་སྟི་གནས་པ་སྟེ། །དགེ་སློང་འདི་དག་མུ་སྟེགས་ཅན། །བདག་གི་རང་བཟོ་རབ་ཏུ་འཆད། ། རྙེད་པ་དང་ནི་བཀུར་སྟིའི་ཕྱིར། །རང་གིས་མདོ་སྡེ་བྱས་ནས་སུ། །འཁོར་གྱི་དབུས་སུ་འཆད་བྱེད་ཅེས། །བདག་ཅག་རྣམས་ལ་ཤིན་ཏུ་འཕྱ། ། རྒྱལ་པོ་དང་ནི་རྒྱལ་བུ་དང་། །དེ་བཞིན་རྒྱལ་པོའི་བློན་པོ་དང་། །བྲམ་ཟེ་དང་ནི་ཁྱིམ་བདག་དང་། །དགེ་སློང་གཞན་དག་དྲུང་དུ་ནི། །བདག་ཅག་རྣམས་ལ་མི་བསྔགས་བརྗོད། ། མུ་སྟེགས་ཅན་ཞེས་ཚིག་ཀྱང་བརྗོད། །དྲང་སྲོང་ཆེ་ལ་གུས་པས་ན། །ཐམས་ཅད་བདག་ཅག་བཟོད་པར་བགྱི། ། དེ་ཚེ་ངན་པའི་བློ་གྲོས་ཅན། །བདག་ཅག་རྣམས་ལ་སྨོད་པར་འགྱུར། །འདི་དག་སངས་རྒྱས་འགྱུར་ཞེས་ཏེ། ། རྣམ་པ་ཐམས་ཅད་བཟོད་པར་བགྱི། ། འཁྲུག་པའི་བསྐལ་པ་འཇིག་པ་ལ། །མ་རུངས་འཇིགས་པ་ཆེན་པོའི་ཚེ། །གནོད་སྦྱིན་གཟུགས་ཅན་དགེ་སློང་མང་། །བདག་ཅག་ལ་ནི་མི་སྙན་བརྗོད། ། འཇིག་རྟེན་དབང་ལ་གུས་པ་ཡིས། །ཤིན་ཏུ་དགའ་བ་སྤྲོ་བར་བགྱི། ། བཟོད་པའི་གོ་ཆ་བགོས་ནས་སུ། །མདོ་འདི་རབ་ཏུ་བཤད་པར་བགྱི། ། འདྲེན་པ་བདག་ཅག་ལུས་དང་ནི། །སྲོག་ཀྱང་དོན་དུ་གཉེར་མ་ལགས། ། བདག་ཅག་བྱང་ཆུབ་དོན་གཉེར་བས། །ཁྱོད་ཀྱིས་བཏམས་གཏད་འཛིན་པ་ལགས། ། ལྡེམ་པོར་དགོངས་བཤད་མ་འཚལ་བ། །དགེ་སློང་སྡིག་ཅན་དེ་འདྲ་དག །སླད་མའི་དུས་ན་འབྱུང་བ་ནི། །བཅོམ་ལྡན་ཉིད་ཀྱིས་རབ་ཏུ་མཁྱེན། ། གཙུག་ལག་ཁང་ནས་བསྐྲད་པ་དང་། ། བཅིང་དང་བརྡེག་པ་རྣམ་མང་དང་། །ཕྱིར་ཞིང་བཅས་པ་མ་ལགས་དང་། །ཁྲོ་གཉེར་ཐམས་ཅད་བཟོད་པར་བགྱི། ། འཇིག་རྟེན་མགོན་གྱིས་བཀའ་སྩལ་པ། །དྲན་པར་བགྱིད་པས་སླད་དུས་ན། །འཁོར་གྱི་དབུས་སུ་མི་འཇིགས་པར། །མདོ་འདི་རབ་ཏུ་བཤད་པར་བགྱི། ། འདྲེན་པ་འདི་ནི་འདི་ཚོལ་བ། །གྲོང་ཁྱེར་གྲོང་དུ་གང་བྱུང་བ། །དེ་དག་གན་དུ་མཆིས་ནས་སུ། །ཁྱོད་ཀྱིས་བཏམས་པ་སྩལ་བར་བགྱི། ། འཇིག་རྟེན་དབང་པོ་ཐུབ་པ་ཆེ། །ཁྱོད་ཀྱི་མངག་གཞུག་བདག་ཅག་འཚལ། ། མྱ་ངན་རབ་འདས་ཞི་བརྙེས་པ། །ཐུགས་ལས་ཆུང་ངུར་མཛད་དུ་གསོལ། ། ཕྱོགས་བཅུ་དག་ནས་གང་གཤེགས་པ། །འཇིག་རྟེན་སྒྲོན་མ་ཐམས་ཅད་ཀྱིས། །མོས་པ་རྣམ་པར་མཁྱེན་པས་ན། །བདེན་པའི་ཚིག་ནི་སྨྲ་བར་བགྱིད།",
+   "en": "Thereupon those bodhisattva mahāsattvas together spoke these verses to the Bhagavān: “Do not be concerned, Bhagavān! After you have passed into nirvāṇa, In the very dreadful later era We will teach this supreme sūtra. {2}  “Guide, we will endure it, We will bear it When fools brandishing sticks Abuse us and threaten us. {3}  “In the dreadful future era, The fools will be deceitful, Will lack understanding, will be dishonest and arrogant, And will believe they have attainment when they do not. {4}  “With evil minds they will say, ‘We dwell in solitude, Wear clothing made of patches, And we practice renunciation.’ {5}  “Eager for tastes, and having attachment, They will teach the Dharma to laypeople, And they will be venerated As if they had the six higher knowledges. {6}  “They will have anger and they will have hate. Their thoughts will be on homes and wealth. They will remain in solitude in the forest And they will be maligning us. {7}  “They who are focused on gain and honor Will speak in this way concerning us: ‘These bhikṣus are tīrthikas Who teach what they have made up.’ {8}  “They will strongly malign us, saying, ‘They have created their own sūtra In order to obtain gain and honor, And teach it in the middle of assemblies.’ {9}  “In front of kings and princes, And likewise the king’s ministers, And brahmins and householders, And also in front of other bhikṣus {10}  “They will speak ill of us, Saying that we are tīrthikas. We will endure it all Through our veneration for the great Rishi. {11}  “Those who have evil minds Will at that time mock us, Saying, ‘They will become buddhas.’ But we will endure it all. {12}  “In the disturbed era of destruction, The dreadful time of great fear, Many bhikṣus in the form of yakṣas Will condemn us. {13}  “Because of our veneration for the Lord of the World We will be resolved to do that which is so difficult. We will put on the armor of patience And we will teach this sūtra. {14}  “Guide, we will have no concern For our bodies or even our lives. We will be dedicated to enlightenment And preserving what you have bestowed on us. {15}  “The Bhagavān knows the nature Of those wicked bhikṣus Who will appear in the future times And who will not understand the teaching with implied meaning. {16}  “We will endure all the frowns, Being repeatedly abused, Being expelled from temples, Being bound, and many beatings. {17}  “We will remember in the later times The instructions given by the Lord of the World, And we will fearlessly teach this sūtra In the middle of the assembly. {18}  “Guide, we shall go to the towns And go to the villages Where there are those who seek this, And bestow on them what you have taught. {19}  “Lord of the World, great Muni, We will be your emissaries. You who have attained peace, excellent nirvāṇa, You have no need to be concerned. {20}  “All who are lamps for the world Come from the ten directions; We are speaking words of truth And you know our aspiration.”"
+  },
+  "l12-99": {
+   "sa": "ityāryasaddharmapuṇḍarīke dharmaparyāye utsāhaparivarto nāma dvādaśamaḥ ||",
+   "bo": "དམ་པའི་ཆོས་པད་མ་དཀར་པོ་ལས་སྤྲོ་བར་བྱ་བའི་ལེའུ་ཞེས་བྱ་བ་སྟེ་བཅུ་གཉིས་པའོ།། །།བམ་པོ་དགུ་པ།",
+   "en": "{21}  This concludes “Resolutions,” the twelfth chapter of the Dharma teaching of “The White Lotus of the Good Dharma.”"
+  }
+ }
+}
