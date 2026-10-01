@@ -193,6 +193,9 @@ description: 《基督宗教譜系學》成書管線（/works/christian-genealog
   歐文派、震顫派…）歸「經驗」那條譜系的歷次浮現（暫定，我提）。
 * ✅ **口吻與人稱**（10-01）：學術專書，用「**筆者**」。全書字數依討論的規模而定，不先設上限。
 * **補書：英譯本優先**（10-01）：z-lib 找不到的德法原版，有英譯就先排英譯（genealogy-sources 的 *-en 筆）。
+* 🚨 **不再試寫**（使用者 10-01）：等資料找齊、定義都定好，再全部一起寫。`data/christian-genealogy/drafts/c4-s04-patriarchate.html`
+  只當材料（法規引文已逐字核對可沿用），**不是書稿**。被退的原因：第一部的文字寫了「依本書在第二部所採的定義」——
+  **前面的章不能倚賴後面章的定義**；第一部要用到的概念（教團、正統之父、會祖等）得在第1章或首次出現處先定義。
 * 譯名：charisma 用「卡理斯瑪」（遠流康樂、簡惠美譯本），**不加「又譯」**。
 * **逐章備料 10-01 完成**：總表 `output/christian-genealogy/sourcing_summary.md`（各章 `sources_chN.md`，約 1,400 筆；
   優先書約 195 本已進 z-lib 第 2 層）。新教總表查證 `verify_protestant_table.md`、亞美尼亞 `research_armenian_fathers.md`。
