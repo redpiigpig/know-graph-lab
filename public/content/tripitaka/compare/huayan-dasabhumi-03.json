@@ -1,0 +1,527 @@
+{
+ "slug": "huayan-dasabhumi-03",
+ "title": "華嚴經・十地品（三）發光地",
+ "family": "sa",
+ "intro": "第三地：梵 prabhākarī＝發光地（八十、十地經）＝明地（十住經、六十）＝興光住（漸備經）。讚歎請說、十種深心、觀有為法無常苦、轉趣佛智並於眾生起十種哀愍、發精進求無礙解脫智（推本於多聞）、求法無厭（聞一句勝得三千大千珍寶、投火坑亦不辭）、四禪四無色、四無量、五神通、入出諸禪而不隨禪生、見佛聞法（鍊金喻）、多作帝釋，末為重頌。梵本讚歎偈印在長行之後（⇅）。",
+ "units": [
+  {
+   "id": "d3-00",
+   "label": "讚歎・解脫月請說"
+  },
+  {
+   "id": "d3-01",
+   "label": "十種深心入第三地"
+  },
+  {
+   "id": "d3-02",
+   "label": "觀一切有為法如實相"
+  },
+  {
+   "id": "d3-03",
+   "label": "厭有為趣佛智・於眾生起十種哀愍"
+  },
+  {
+   "id": "d3-04",
+   "label": "發大精進救度・推本無礙解脫智由多聞"
+  },
+  {
+   "id": "d3-05",
+   "label": "求法無厭・捨一切・投火求一句"
+  },
+  {
+   "id": "d3-06",
+   "label": "四禪・四無色定"
+  },
+  {
+   "id": "d3-07",
+   "label": "四無量心"
+  },
+  {
+   "id": "d3-08",
+   "label": "五神通"
+  },
+  {
+   "id": "d3-09",
+   "label": "入出諸禪而不隨禪生"
+  },
+  {
+   "id": "d3-10",
+   "label": "見佛聞法・煩惱轉薄（鍊金喻）"
+  },
+  {
+   "id": "d3-11",
+   "label": "多作帝釋・出家得百千三昧"
+  },
+  {
+   "id": "d3-12",
+   "label": "重頌"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本",
+   "who": "Daśabhūmikasūtra・GRETIL（Vaidya 1967）",
+   "reorder": true
+  },
+  {
+   "id": "T0285",
+   "lang": "lzh",
+   "label": "漸備經",
+   "who": "竺法護譯《漸備一切智德經》・297 年",
+   "work": "T0285"
+  },
+  {
+   "id": "T0286",
+   "lang": "lzh",
+   "label": "十住經",
+   "who": "鳩摩羅什譯《十住經》・五世紀初",
+   "work": "T0286"
+  },
+  {
+   "id": "T0278",
+   "lang": "lzh",
+   "label": "六十華嚴",
+   "who": "佛馱跋陀羅譯《華嚴經》十地品・421 年",
+   "work": "T0278"
+  },
+  {
+   "id": "T0279",
+   "lang": "lzh",
+   "label": "八十華嚴",
+   "who": "實叉難陀譯《華嚴經》十地品・699 年",
+   "work": "T0279"
+  },
+  {
+   "id": "T0287",
+   "lang": "lzh",
+   "label": "十地經",
+   "who": "尸羅達摩譯《佛說十地經》・790 年頃",
+   "work": "T0287"
+  },
+  {
+   "id": "bo",
+   "lang": "bo",
+   "label": "藏譯",
+   "who": "德格版 Toh 44 第 31 品・84000"
+  },
+  {
+   "id": "en",
+   "lang": "en",
+   "label": "84000 英譯",
+   "who": "譯自藏譯・與藏文逐句對齊"
+  }
+ ],
+ "works": [
+  "T0278",
+  "T0279",
+  "T0285",
+  "T0286",
+  "T0287"
+ ],
+ "anchors": [
+  {
+   "work": "T0285",
+   "node": "初發意悅豫住品第一",
+   "uid": "T10n0285_p0458a20"
+  },
+  {
+   "work": "T0285",
+   "node": "漸備一切智德經離垢住品第二",
+   "uid": "T10n0285_p0465c04"
+  },
+  {
+   "work": "T0285",
+   "node": "興光住品第三",
+   "uid": "T10n0285_p0468b24"
+  },
+  {
+   "work": "T0285",
+   "node": "漸備經暉曜住品第四",
+   "uid": "T10n0285_p0471a15"
+  },
+  {
+   "work": "T0285",
+   "node": "難勝住品第五",
+   "uid": "T10n0285_p0473a27"
+  },
+  {
+   "work": "T0285",
+   "node": "漸備經目前住品第六",
+   "uid": "T10n0285_p0475c21"
+  },
+  {
+   "work": "T0285",
+   "node": "玄妙住品第七",
+   "uid": "T10n0285_p0478c26"
+  },
+  {
+   "work": "T0285",
+   "node": "漸備經不動住品第八",
+   "uid": "T10n0285_p0482b02"
+  },
+  {
+   "work": "T0285",
+   "node": "漸備經善哉意住品第九",
+   "uid": "T10n0285_p0485c26"
+  },
+  {
+   "work": "T0285",
+   "node": "金剛藏問菩薩住品第十",
+   "uid": "T10n0285_p0490a05"
+  },
+  {
+   "work": "T0286",
+   "node": "歡喜地第一",
+   "uid": "T10n0286_p0497c06"
+  },
+  {
+   "work": "T0286",
+   "node": "離垢地第二",
+   "uid": "T10n0286_p0504b06"
+  },
+  {
+   "work": "T0286",
+   "node": "明地第三",
+   "uid": "T10n0286_p0506c27"
+  },
+  {
+   "work": "T0286",
+   "node": "焰地第四",
+   "uid": "T10n0286_p0509b19"
+  },
+  {
+   "work": "T0286",
+   "node": "難勝地第五",
+   "uid": "T10n0286_p0511b08"
+  },
+  {
+   "work": "T0286",
+   "node": "現前地第六",
+   "uid": "T10n0286_p0514a05"
+  },
+  {
+   "work": "T0286",
+   "node": "遠行地第七",
+   "uid": "T10n0286_p0517a09"
+  },
+  {
+   "work": "T0286",
+   "node": "不動地第八",
+   "uid": "T10n0286_p0520b06"
+  },
+  {
+   "work": "T0286",
+   "node": "妙善地第九",
+   "uid": "T10n0286_p0524a17"
+  },
+  {
+   "work": "T0286",
+   "node": "法雲地第十",
+   "uid": "T10n0286_p0527c13"
+  },
+  {
+   "work": "T0278",
+   "node": "十地品第二十二之一",
+   "uid": "T09n0278_p0542a05"
+  },
+  {
+   "work": "T0278",
+   "node": "十地品第二十二之二",
+   "uid": "T09n0278_p0548c05"
+  },
+  {
+   "work": "T0278",
+   "node": "十地品第二十二之三",
+   "uid": "T09n0278_p0555b07"
+  },
+  {
+   "work": "T0278",
+   "node": "十地品第二十二之四",
+   "uid": "T09n0278_p0564a05"
+  },
+  {
+   "work": "T0278",
+   "node": "十地品第二十二之五",
+   "uid": "T09n0278_p0571a10"
+  },
+  {
+   "work": "T0279",
+   "node": "十地品第二十六之一",
+   "uid": "T10n0279_p0178b28"
+  },
+  {
+   "work": "T0279",
+   "node": "第一地",
+   "uid": "T10n0279_p0181a10"
+  },
+  {
+   "work": "T0279",
+   "node": "十地品第二十六之二",
+   "uid": "T10n0279_p0185a05"
+  },
+  {
+   "work": "T0279",
+   "node": "第二地",
+   "uid": "T10n0279_p0185a05.2"
+  },
+  {
+   "work": "T0279",
+   "node": "第三地",
+   "uid": "T10n0279_p0187a29"
+  },
+  {
+   "work": "T0279",
+   "node": "十地品第二十六之三",
+   "uid": "T10n0279_p0189b20"
+  },
+  {
+   "work": "T0279",
+   "node": "第四地",
+   "uid": "T10n0279_p0189b20.2"
+  },
+  {
+   "work": "T0279",
+   "node": "第五地",
+   "uid": "T10n0279_p0191a20"
+  },
+  {
+   "work": "T0279",
+   "node": "十地品第二十六之四",
+   "uid": "T10n0279_p0193b17"
+  },
+  {
+   "work": "T0279",
+   "node": "第六地",
+   "uid": "T10n0279_p0193b17.2"
+  },
+  {
+   "work": "T0279",
+   "node": "第七地",
+   "uid": "T10n0279_p0195c22"
+  },
+  {
+   "work": "T0279",
+   "node": "十地品第二十六之五",
+   "uid": "T10n0279_p0198c05"
+  },
+  {
+   "work": "T0279",
+   "node": "第八地",
+   "uid": "T10n0279_p0198c05.2"
+  },
+  {
+   "work": "T0279",
+   "node": "第九地",
+   "uid": "T10n0279_p0201c14"
+  },
+  {
+   "work": "T0279",
+   "node": "十地品第二十六之六",
+   "uid": "T10n0279_p0204c19"
+  },
+  {
+   "work": "T0279",
+   "node": "第十地",
+   "uid": "T10n0279_p0204c19.2"
+  },
+  {
+   "work": "T0287",
+   "node": "菩薩極喜地第一之一",
+   "uid": "T10n0287_p0535a28"
+  },
+  {
+   "work": "T0287",
+   "node": "菩薩極喜地之餘",
+   "uid": "T10n0287_p0539c06"
+  },
+  {
+   "work": "T0287",
+   "node": "菩薩離垢地第二",
+   "uid": "T10n0287_p0542b12"
+  },
+  {
+   "work": "T0287",
+   "node": "菩薩發光地第三",
+   "uid": "T10n0287_p0545a06"
+  },
+  {
+   "work": "T0287",
+   "node": "菩薩焰慧地第四",
+   "uid": "T10n0287_p0547c03"
+  },
+  {
+   "work": "T0287",
+   "node": "菩薩難勝地第五",
+   "uid": "T10n0287_p0549c21"
+  },
+  {
+   "work": "T0287",
+   "node": "菩薩現前地第六之一",
+   "uid": "T10n0287_p0552b06"
+  },
+  {
+   "work": "T0287",
+   "node": "菩薩現前地之餘",
+   "uid": "T10n0287_p0554b06"
+  },
+  {
+   "work": "T0287",
+   "node": "菩薩遠行地第七",
+   "uid": "T10n0287_p0555c03"
+  },
+  {
+   "work": "T0287",
+   "node": "菩薩不動地第八",
+   "uid": "T10n0287_p0559a06"
+  },
+  {
+   "work": "T0287",
+   "node": "菩薩善慧地第九",
+   "uid": "T10n0287_p0563a14"
+  },
+  {
+   "work": "T0287",
+   "node": "菩薩法雲地第十之一",
+   "uid": "T10n0287_p0567a10"
+  },
+  {
+   "work": "T0287",
+   "node": "菩薩法雲地之餘",
+   "uid": "T10n0287_p0570c14"
+  }
+ ],
+ "cells": {
+  "d3-00": {
+   "sa": "3 prabhākarī nāma tṛtīyā bhūmiḥ / upakramagāthāḥ / evaṃ śruṇitva caribhūmimuttamāṃ bodhisattvaviṣaye acintiyām / harṣita jinasutāḥ sagauravāḥ puṣpamegha nabhataḥ pramuñciṣuḥ // 1 // sādhu sādhu girisārasākaya (?) deśito viduna śīlasaṃvaraḥ / sarvasattvakaruṇāya āśayo bhūmiśreṣṭha dvitiyāya gocaraḥ // 2 // bhūtatattva vitathāmananyathā bodhisasattvacaraṇaṃ manoramam / sarvalokahitaśaukhyacintanā deśitaṃ tu paramaprabhāsvaram // 3 // bhūyu bhūyu naradevapūjitāṃ bhūmiśreṣṭha tṛtiyāmudāhara / dharmajñānakriyamukti sūcaya yādṛśo 'nubhava tādṛ(śo) gocaraḥ // 4 // dānaśīlacaraṇaṃ maharṣiṇāṃ kṣāntivīryaśamaprajñupāyatām / maitraśreṣṭha karuṇāya mārgaṇaṃ bhāṣadhvaṃ jinacarīviśodhanam // 5 // vimukticandra uvāca vajragarbhaviśāradam / tṛtīyā saṃkramantānāmāśayaṃ bhaṇa sūraṇa // 6 //",
+   "T0285": "已得聞是最始上法菩薩第二境，不可思議，至真無異；諸佛子等喜，而修恭敬，住於虛空，則雨天華，各宣：「善哉！德如山王，而分布說禁戒之源，心念愍哀一切群黎，唯演尊妙第三行本，所說至誠永無有異；眾菩薩行最為無上，普欲令世一切安隱，以願稱講，第一雅妙，益當供順，天人所敬。第二離垢菩薩尊住，除其愛欲精進造立，建大法慧，如之所為，行布施事，惠施禁戒，成為大聖；忍辱精進，一心寂然，善修智慧，慈心殊勝，愍哀行道，眾祐宣布清淨之行譬如月明，金剛藏踊演第三住，心樂善說莫不欣然，咸發道意。」",
+   "T0286": "諸菩薩聞是，不可思議行， 心皆大歡喜，恭敬無有量。 即時虛空中，雨眾名華香， 如雲而垂下，供養金剛藏。 咸讚言：「善哉，善哉！金剛藏！ 善說諸大人，護持淨戒行。 於諸眾生中，深有憐愍心， 敷演解說是，第二地行處。 菩薩微妙行，真實無有異， 是諸菩薩等，清淨之行處， 為一切眾生，常求諸好事， 第二淨明地，今已解說竟。 天人恭敬者！願說第三地， 善示智所作、菩薩之所行。 願說諸大人，云何行布施、 持戒及忍辱、精進、行禪定， 智慧與方便、并及慈悲心？ 云何行是法，清淨於佛行？」 解脫月菩薩，語金剛藏言： 「菩薩至三地，當以何等心？」",
+   "T0278": "第三地諸菩薩聞是，不可思議行， 心皆大歡喜，恭敬無有量。 即時虛空中，雨眾名華香， 如雲而散下，供養金剛藏。 咸讚言善哉：「善哉金剛藏， 善說諸大人，護持淨戒行， 於一切眾生，深有哀愍心， 敷演解說是，二地之行相。 菩薩微妙行，真實無有異， 是諸菩薩等，清淨之行足， 為一切眾生，常求好事者， 已為具演說，第二離垢地。 天人恭敬者，願說第三地， 善示智所作，菩薩之所行。 願說諸大人，所行布施德， 持戒及忍辱，精進行禪定， 智慧巧方便，并及慈悲心， 云何行是法，淨於諸佛行？」 解脫月菩薩，請金剛藏言： 「菩薩入三地，當以何等心？」",
+   "T0279": "佛子得聞此地行，菩薩境界難思議， 靡不恭敬心歡喜，散華空中為供養， 讚言：「善哉大山王，慈心愍念諸眾生， 善說智者律儀法，第二地中之行相。 是諸菩薩微妙行，真實無異無差別， 為欲利益諸群生，如是演說最清淨。 一切人天供養者，願為演說第三地， 與法相應諸智業，如其境界希具闡！ 大仙所有施戒法，忍辱精進禪智慧， 及以方便慈悲道，佛清淨行願皆說！」 時，解脫月復請言：「無畏大士金剛藏， 願說趣入第三地，柔和心者諸功德！」",
+   "T0287": "佛子聞此地行已，菩薩境界難思議； 靡不恭敬心歡喜，散花空中為供養。 讚言：「善哉！大仙主！慈心愍念諸有情； 善說智者律儀法，第二地中之行相。 是諸菩薩微妙行，真實無異無差別； 為欲利益諸群生，如是演說最清淨。 一切天人供養者，願為演說第三地； 與法相應諸智業，如其境界為具闡。 大仙所有施、淨戒，安忍、精進、靜慮、慧， 及以方便慈悲道，佛清淨道願皆說。」 時解脫月復請言：「無畏大師金剛藏！ 願說趣入第三地，柔和心者之功德。」",
+   "bo": "།།སངས་རྒྱས་རྨད་ག་ཅད་ཅེས་བྱ་བ་ཤིན་ཏུ་རྒྱས་པ་ཆེན་པོའི་མདོ། བམ་པོ་བཅོ་ལྔ་བ། བྱང་ཆུབ་སེམས་དཔའི་སྤྱོད་ཡུལ་བསམ་ཡས་པ། །ས་མཆོག་སྤྱོད་པ་དེ་སྐད་ཐོས་གྱུར་ནས། །རྒྱལ་བའི་སྲས་རྣམས་རབ་ཏུ་དགའ་ཞིང་བསྟི་སྟང་དུ། །མེ་ཏོག་སྤྲིན་ཆར་མངོན་པར་ཀུན་ནས་འབེབས། །རི་ཡི་རྒྱལ་པོ་བོད་པ་ལེགས་སོ་ལེགས། །སེམས་ཅན་ཀུན་ལ་སྙིང་བརྩེ་བསམ་པ་ཡིས། །ས་མཆོག་དམ་པའི་སྤྱོད་ཡུལ་དེ་འདྲ་དང་། །མཁས་པའི་ཚུལ་ཁྲིམས་སྡོམ་པ་ཁྱོད་ཀྱིས་བཤད། །ཡང་དག་དེ་དངོས་མ་ནོར་གཞན་མིན་པའི། །བྱང་ཆུབ་སེམས་དཔའི་སྤྱོད་པ་ཡིད་འོང་ཞིང་། །སེམས་ཅན་ཀུན་ལ་ཕན་དང་བདེ་བ་རབ་སེམས་པ། །ཕུལ་དུ་འོད་གསལ་ཁྱོད་ཀྱིས་བསྟན་པ་བྱས། །ད་དུང་ད་ཆུད་ལྷ་དང་མིས་མཆོད་ཅིང་། །ཆོས་ཀྱི་ཡེ་ཤེས་རིགས་པར་བརྗོད་མཁས་པ། །དེ་དག་སྤྱོད་ཡུལ་ཚུལ་ནི་ཇི་བཞིན་དུ། །ས་ཡི་དམ་པ་གསུམ་པོ་བརྗོད་པར་མཛོད། །དྲང་སྲོང་ཆེན་པོའི་སྦྱིན་ཚུལ་སྤྱོད་ པ་དང་། །བཟོད་པ་བརྩོན་འགྲུས་ཞི་བ་ཤེས་རབ་ཐབས། །བྱམས་པའི་མཆོག་དང་སྙིང་རྗེའི་ལམ་གྱི་རྣམས། །རྒྱལ་སྲས་སྤྱོད་པ་རྣམས་སྦྱང་བསྟན་མཛོད་ཅིག །རྡོ་རྗེའི་སྙིང་པོ་འཇིགས་མྱེད་ལ། །རྣམ་གྲོལ་ཟླ་བས་ཡང་སྨྲས་པ། །གསུམ་ལ་ཡང་དག་འཕར་འགྱུར་བའི། །བསམ་པ་མཁས་པས་བཤད་པར་མཛོད།",
+   "en": "Having heard those words on the conduct of the perfect bhūmi, The bodhisattva’s inconceivable field of activity, The jinaputras were overjoyed and respectful, And they scattered flowers upon the Jina. “Excellent! Excellent! You who are like a mountain, With a motivation of compassion for all beings You have taught the sublime perfect bhūmi’s field of activity And the correct conduct and vows of the wise ones. “What you have taught is true, unmistaken and nothing else. It is the beautiful conduct of the bodhisattvas Wishing to bring benefit and happiness to all beings. You have taught this supreme illumination. “Now still devas and humans are making offerings. You who are skilled in describing correctly the Dharma’s wisdom, Describe the third sublime bhūmi In accordance with the nature of their activity. “The great sages’ practice of generosity, Their patience, diligence, peace, wisdom, methods, Supreme love, and path of compassion—Teach us that training in the practice of the jinaputras.” Then Vimukticandra said To wise Vajragarbha, “Wise one, teach the motivation That causes ascent to the third bhūmi.”"
+  },
+  "d3-01": {
+   "sa": "3 prabhākarī nāma tṛtīyā bhūmiḥ / vajragarbho bodhisattva āha - yo 'yaṃ bhavanto jinaputrā bodhisattvo dvitīyāyāṃ bodhisattvabhūmau supariśodhitādhyāśayastṛtīyāṃ bodhisattvabhūmimākramati, sa daśabhiścittāśayamanaskārairākramati / katamairdaśabhiḥ? yaduta śuddhacittāśayamanaskāreṇa ca sthiracittāśayamanaskāreṇa ca nirviccittāśayamanaskāreṇa ca avirāgacittāśayamanaskāreṇa ca avinivartacittāśayamanaskāreṇa ca dṛḍhacittāśayamanaskāreṇa ca uttaptacittāśayamanaskāreṇa ca atṛptacittāśayamanaskāreṇa ca udāracittāśayamanaskāreṇa ca māhātmyacittāśayamanaskāreṇa ca / ebhirdaśabhiścittāśayamanaskārairākramati /",
+   "T0285": "金剛藏曰：「佛子！菩薩大士，已得究暢第二住地，便入第三，尋當思惟，性行十事。何謂為十？一曰、志性清淨；二曰、性行明達通利；三曰、消滅淡泊其意；四曰、心懷無垢瑕穢；五曰、志念永不退轉；六曰、其心堅固而不怯劣；七曰、其念極上無窮；八曰、性行輕便而不遲鈍；九曰、其行微妙巍巍高玄；十曰、其心弘廣不協局迮。",
+   "T0286": "金剛藏菩薩摩訶薩語解脫月菩薩言：「佛子！諸菩薩摩訶薩深淨心行第二地已、欲得第三地，當以十心得入第三地。何等為十？一、淨心，二、猛利心，三、厭心，四、離心，五、不退心，六、堅心，七、明盛心，八、無足心，九、快心，十、大心。「諸佛子！是菩薩摩訶薩以是十心得入第三地，",
+   "T0278": "金剛藏菩薩語解脫月菩薩言：「佛子！諸菩薩摩訶薩淨第二地已，欲得第三地，當以十種深心。何等為十？一、淨心；二、猛利心；三、厭心；四、離欲心；五、不退心；六、堅心；七、明盛心；八、無足心；九、勝心；十、大心。菩薩以是十心得入第三地。",
+   "T0279": "爾時，金剛藏菩薩告解脫月菩薩言：「佛子！菩薩摩訶薩已淨第二地，欲入第三地，當起十種深心。何等為十？所謂：清淨心、安住心、厭捨心、離貪心、不退心、堅固心、明盛心、勇猛心、廣心、大心。菩薩以是十心，得入第三地。",
+   "T0287": "爾時，金剛藏菩薩告眾菩薩言：「唯諸佛子！若是菩薩，第二地中增上意樂善清淨已，欲入菩薩第三地者，當以十種心之意樂作意而入。何等為十？所謂：以清淨心意樂作意，以安住心意樂作意，以厭離心意樂作意，以離欲心意樂作意，以不退心意樂作意，以堅固心意樂作意，以熾然心意樂作意，以勇健心意樂作意，以勝妙心意樂作意，以廣大心意樂作意，菩薩以是十心意樂作意，證入第三地中。",
+   "bo": "།བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་རྡོ་རྗེའི་སྙིང་པོས་སྨྲས་པ། ཀྱེ་རྒྱལ་བའི་སྲས་དག །དེ་ལྟར་བྱང་ཆུབ་སེམས་དཔའ་ས་གཉིས་པ་ལ་བསམ་པ་ཤིན་ཏུ་སྦྱངས་པ་ནི་ས་གསུམ་པ་ཡོངས་སུ་གནོན་ཏོ། དེ་སེམས་ཀྱི་བསམ་པ་ཡིད་ལ་བྱ་བ་བཅུས་ཡོངས་སུ་གནོན་ཏེ། བཅུ་གང་ཞེ་ན། འདི་ལྟ་སྟེ། དག་པའི་སེམས་ཀྱི་བསམ་པ་ཡིད་ལ་བྱ་བ་དང་། མི་གཡོ་བའི་སེམས་ཀྱི་བསམ་པ་ཡིད་ལ་བྱ་བ་དང་། སྐྱོ་བའི་སེམས་ཀྱི་བསམ་པ་ཡིད་ལ་བྱ་བ་དང་། འདོད་ཆགས་དང་བྲལ་བའི་སེམས་ཀྱི་བསམ་པ་ཡིད་ལ་བྱ་བ་དང་། ཕྱིར་མི་ལྡོག་པའི་སེམས་ཀྱི་བསམ་པ་ཡིད་ལ་བྱ་བ་དང་། བརྟན་པའི་སེམས་ཀྱི་བསམ་པ་ཡིད་ལ་བྱ་བ་དང་། སྦྱོངས་བའི་སེམས་ཀྱི་བསམ་པ་ཡིད་ལ་བྱ་བ་དང་། རློམ་པའི་སེམས་ཀྱི་བསམ་པ་ཡིད་ལ་བྱ་བ་དང་། རླབས་པོ་ཆེའི་སེམས་ཀྱི་བསམ་པ་ཡིད་ལ་བྱ་བ་དང་། བདག་ཉིད་ཆེ་བའི་སེམས་ཀྱི་བསམ་པ་ཡིད་ལ་བྱ་བའོ།",
+   "en": "The bodhisattva mahāsattva Vajragarbha said, “O jinaputras! In that way through purifying his higher motivation on the second bodhisattva bhūmi he ascends to the third bhūmi. He ascends through ten kinds of focusing on his mind’s orientation. What are those ten? They are (1) focusing on the orientation of a pure mind, (2) focusing on the orientation of a stable mind, (3) focusing on the orientation of a disenchanted mind, (4) focusing on the orientation of a mind without desire, (5) focusing on the orientation of an irreversible mind, (6) focusing on the orientation of a resolute mind, (7) focusing on the orientation of a refined mind, (8) focusing on the orientation of an insatiable mind, (9) focusing on the orientation of a sublime mind, and (10) focusing on the orientation of an exalted mind."
+  },
+  "d3-02": {
+   "sa": "sa khalu punarbhavanto jinaputrā bodhisattvastṛtīyāyāṃ bodhisattvabhūmau sthito 'nityatāṃ ca sarvasaṃskāragatasya yathābhūtaṃ pratyavekṣate, duḥkhatāṃ ca aśubhatāṃ ca anāśvāsikatāṃ ca vipralopatāṃ ca acirasthitikatāṃ ca kṣaṇikotpādanirodhatāṃ ca pūrvantāsaṃbhavatāṃ ca aparāntāsaṃkrāntitāṃ ca pratyutpannāvyavasthitatāṃ ca sarvasaṃskāragatasya pratyavekṣate /",
+   "T0285": "假使菩薩住第三地，觀諸萬物一切無常、苦、空、不淨、不可保信，悉歸壞敗不久存立，適起尋滅，本無所成，當來未至，現在無住；察於一切萬物所有，皆歸沒盡，已得入此無所有地，悉是憂惱，危厄眾難患害合會，結在憎愛之業，多有愁慼，咸以無常，婬怒癡火，甚為熾盛，因為成立，無所依怙，察此一切猶如幻化；一切萬物，悉為恐懼，無有救護，心數動移，便以違失本之慧。",
+   "T0286": "能觀一切有為法如實相，所謂：無常苦空、無我不淨、不久敗壞、不可信相、念念生滅又不生不滅，不從前際來、不去至後際、現在不住。菩薩如是觀一切有為法真實相，知此諸法無作、無起，無來、無去。而諸眾生憂、悲、苦惱、憎愛所繫，無有停積、無定生處，但為貪、恚、癡火所然，增長後世苦惱火聚，無有實性、猶如幻化。",
+   "T0278": "菩薩住明地，能觀一切有為法如實相；所謂：無常、苦、無我、不淨、不久敗壞、不可信相、不生不滅、不從前際來、不去至後際、現在不住；菩薩如是觀一切有為法真實相，知諸法無作、無起、無來、無去，而諸眾生憂悲苦惱，憎愛所繫，無有停積，無定生處；但為貪、恚、癡火所然，增長後世苦惱大聚，無有實性猶如幻化。",
+   "T0279": "「佛子！菩薩摩訶薩住第三地已，觀一切有為法如實相。所謂：無常、苦、不淨、不安隱，敗壞、不久住，剎那生滅，非從前際生，非向後際去，非於現在住。又觀此法無救、無依，與憂、與悲，苦惱同住，愛憎所繫，愁慼轉多，無有停積，貪、恚、癡火熾然不息，眾患所纏，日夜增長，如幻不實。",
+   "T0287": "唯諸佛子！菩薩住此第三地時，觀察一切諸有為行，皆見無常、有苦、不淨、不可依怙，終皆敗壞、不得久住，剎那生滅、前際不來、後際不去、現在不住。菩薩如是無倒觀察一切行時，復觀見身無有救者、無所依怙，與憂、與歎、與惱相應，愛憎所繫多苦愁惱，無有停積。以貪、恚、癡猛火熾然共眾病長，",
+   "bo": "།ཀྱེ་རྒྱལ་བའི་སྲས་དག །བྱང་ཆུབ་སེམས་དཔའ་བྱང་ཆུབ་སེམས་དཔའི་ས་གསུམ་པ་ལ་གནས་པ་ནི་འདུ་བྱེད་ཀྱི་རྣམ་པ་ཐམས་ཅད་ལ་མི་རྟག་པ་ཡང་དག་པར་ཇི་ལྟ་བ་བཞིན་དུ་རབ་ཏུ་རྟོག་གོ །སྡུག་བསྔལ་བ་དང་། བདག་མེད་པ་དང་། མི་སྡུག་པ་དང་། ཡིད་བརྟན་དུ་མི་རུང་བ་དང་། རྣམ་པར་འཇིགས་པ་དང་། རིང་དུ་མི་གནས་པ་དང་། སྐད་ཅིག་ཏུ་འབྱུང་ཞིང་འགག་པ་དང་། མི་ཟད་ཅིང་མི་སྐྱེ་མི་འགག་པ་དང་། སྔོན་གྱི་མཐའ་ཀུན་ནས་མ་བྱུང་བ་དང་། ཕྱི་མའི་མཐའ་ འཕོ་བ་མེད་པ་དང་། ད་ལྟར་བྱུང་བ་མི་གནས་པར་རབ་ཏུ་རྟོག་གོ །",
+   "en": "“O jinaputras, the bodhisattva who is on the third bodhisattva bhūmi realizes correctly, just as it is, that (1) all that is composite is impermanent. (2) He sees the nature of that which is composite to be suffering,  (3) unpleasantness, (4) unreliability, (5) destruction, (6) transitoriness, (7) momentary arising and ceasing, (8) nonarising in the past, (9) nontransference into the future, and (10) nonpresence in the present."
+  },
+  "d3-03": {
+   "sa": "sa evaṃbhūtaṃ sarvasaṃskāragataṃ saṃpaśyannanabhisaraṃ nirākrandaṃ saśokaṃ saparidevaṃ sopāyāsaṃ priyāpriyavinibaddha duḥkhadaurmanasyopāyāsābahulamasaṃnicayabhūtaṃ rāgadveṣamohāgnisaṃpradīptamanekavyādhivivardhitaṃ ca ātmabhāvaṃ saṃpaśyan bhūyasyā mātrayā sarvasaṃskārebhyaścittamuccālayati, tathāgatajñāne ca saṃpreṣayati / sa tathāgatajñānasyācintyatāṃ ca samanupaśyati, atulyatāṃ ca aprameyatāṃ ca durāsadatāṃ ca asaṃspṛṣṭatāṃ ca nirupadravatāṃ ca nirupāyāsatāṃ ca abhayapuragamanīyatāṃ ca apunarāvṛttitāṃ ca bahujanaparitrāṇatāṃ ca samanupaśyati / sa evamapramāṇatāṃ ca tathāgatajñānasya samanupaśyan evaṃ bahūpadravatāṃ ca sarvasaṃskāragatasya vyupaparīkṣamāṇo bhūyasyā mātrayā sattvānāmantike daśa cittāśayānupasthāpayati / katamān daśa? yaduta anāthātrāṇāpratiśaraṇacittāśayatāṃ ca nityadaridrapratiśaraṇacittāśayatāṃ ca rāgadveṣamohāgnisaṃpradīptapratiśaraṇacittāśayatāṃ ca bhavacārakāvaruddhapratiśaraṇacittāśayatāṃ ca satatasamitaklaśagahenāvṛtaprasuptapratiśaraṇacittāśayatāṃ ca vilokanasamarthapratiśaraṇacittāśayatāṃ ca kuśaladharmacchandarahitapratiśaraṇacittāśayatāṃ ca buddhadharmapramuṣitapratiśaraṇacittāśayatāṃ ca saṃsārasrotonuvāhipratiśaraṇacittāśayatāṃ ca mokṣopāyapraṇaṣṭapratiśaraṇacittāśayatāṃ ca / imān daśa cittāśayanupasthāpayati //",
+   "T0285": "見如來慧不可思議，不可限量，不可稱載，極遠巍巍，無有雜碎，亦無眾厄，無為常存，無畏第一，不復退轉多所濟護。所見平等，已見如來無量聖慧，覩眾危厄，益加愍哀念于眾生，心行十事。何謂為十？一曰、心念將濟孤獨危困；二曰、常化貧乏使入道法；三曰、消于婬怒癡火所然熾盛；四曰、其心周旋生死而不造亂；五曰、其心常欲蠲除塵勞之穢覺未覺者；六曰、其心顯燿令習自在；七曰、勸導離善法者使樂大雅；八曰、其心忘失佛法令入正道；九曰、其心迷惑隨生死流使返其源；十曰、其心見在愚徑而懷恐懼令立無畏。",
+   "T0286": "見如是已，於一切有為法轉復厭離，趣佛智慧。「是菩薩知如來智慧不可思議、不可稱量、有大勢力、無能勝者、無有雜相、無有衰惱憂悲之苦，能至無畏安隱大城不復轉還、能救無量苦惱眾生。如是，見知佛智無量、見有為法無量苦惱，於一切眾生轉生殊勝十心。何等為十？眾生可愍、孤獨無救、貧窮無所依止、三毒之火熾然不息、閉在三有牢固之獄、常住煩惱諸惡刺林、無正觀力、於善法中欲樂心薄、失諸佛妙法而常隨順生死水行、驚畏涅槃。",
+   "T0278": "見如是已，於一切有為法，轉復厭離，趣佛智慧；是菩薩知如來智慧不可思議，不可稱量；有大勢力，無能勝者、無有雜相、無有衰惱、能至無畏安隱大城，能救無量苦惱眾生。如是見知佛智無量，見有為法無量苦惱，於一切眾生，轉生殊勝十心。何等為十？眾生可愍，孤獨無救，貧無依止，三毒之火熾然不息，閉在三有牢固之獄，常住煩惱諸惡刺林，無正觀力，於善法中欲樂心薄，失佛妙法而常隨順生死水流，怖畏涅槃。",
+   "T0279": "見如是已，於一切有為倍增厭離，趣佛智慧，見佛智慧不可思議、無等無量、難得無雜、無惱無憂，至無畏城，不復退還，能救無量苦難眾生。菩薩如是見如來智慧無量利益，見一切有為無量過患，則於一切眾生生十種哀愍心。何等為十？所謂：見諸眾生孤獨無依，生哀愍心；見諸眾生貧窮困乏，生哀愍心；見諸眾生三毒火然，生哀愍心；見諸眾生諸有牢獄之所禁閉，生哀愍心；見諸眾生煩惱稠林恒所覆障，生哀愍心；見諸眾生不善觀察，生哀愍心；見諸眾生無善法欲，生哀愍心；見諸眾生失諸佛法，生哀愍心；見諸眾生隨生死流，生哀愍心；見諸眾生失解脫方便，生哀愍心。是為十。",
+   "T0287": "見如是已，從一切行令心勝進趣如來智印。此菩薩見如來智不可思議，無等、無量、難得、無雜、無災、無惱，至無畏城不復退還，能救無量諸苦有情。菩薩如是見如來智無量利益、見一切行無量災患，則此轉更於有情所，發起十種心之意樂。何等為十？所謂：孤獨無依心之意樂，常恒貧窮心之意樂，以貪、恚、癡猛火熾然心之意樂，於有牢獄之所禁閉心之意樂，常無間斷以諸煩惱稠林所覆心之意樂，不能觀察心之意樂，無善法欲心之意樂，迷失佛法心之意樂，隨生死流心之意樂，失解脫道心之意樂，發此十種心之意樂。",
+   "bo": "དེ་འདུ་བྱེད་ཀྱི་རྣམ་པ་དེ་ལྟ་བུ་ལ་རབ་ཏུ་རྟོག་པའི་ཚེ་མངོན་པར་འཇིག་པ་དང་། མྱ་ངན་ཅན་སྨྲེ་སྔགས་འདོན་པ་ཅན་དང་། འཁྲུག་པ་ཅན་ཡིད་དུ་འོང་བ་དང་། ཡིད་དུ་མི་འོང་བས་རྣམ་པར་བཅིངས་པ། སྡུག་བསྔལ་དང་ཡིད་མི་བདེ་བ་མང་བ་བསྩགས་པ་མེད་པ་ལས་བྱུང་བ། འདོད་ཆགས་དང་ཞེ་སྡང་དང་། གཏི་མུག་གི་མྱེ་རབ་ཏུ་འབར་བ། ནད་དུ་མས་རྣམ་པར་བསྐྱེད་པ། སྒྱུ་མའི་རང་བཞིན་ལྟ་བུར་མཐོང་ནས་དེ་དེ་བས་ཀྱང་འདུ་བྱེད་ཐམས་ཅད་ལས་སེམས་གྱེན་དུ་བསྐྱོད་ཅིང་། དེ་བཞིན་གཤེགས་པའི་ཡེ་ཤེས་ལ་རབ་ཏུ་གཏོང་སྟེ། དེས་དེ་བཞིན་གཤེགས་པའི་ཡེ་ཤེས་བསམ་གྱིས་མི་ཁྱབ་པ་འང་རྗེས་སུ་མཐོང་སྟེ། མཚུངས་པ་མྱེད་པ་དང་། གཞལ་དུ་མེད་པ་དང་། རྙེད་པར་དཀའ་བ་དང་། མ་འདྲེས་པ་དང་། གནོད་པ་མེད་པ་དང་། འཁྲུག་པ་མེད་པ་དང་། མི་འཇིགས་པའི་གྲོང་རྡལ་དུ་འགྲོ་བ་དང་། ཕྱིར་མྱི་ལྡོག་པ་དང་། འགྲོ་བ་མང་པོ་ཡོངས་སུ་སྐྱོབ་པ་ཡང་དག་པར་རྗེས་སུ་མཐོང་ངོ་། །དེས་དེ་བཞིན་གཤེགས་པའི་ཡེ་ཤེས་དེ་ལྟར་ཚད་མེད་པ་མཐོང་སྟེ། འདུ་བྱེད་ཀྱི་རྣམ་པ་དེ་ལྟར་སྡུག་བསྔལ་མང་པོས་གཙེས་པ་མཐོང་ནས། སེམས་ཅན་ཐམས་ཅད་ལ་དེ་བས་ཀྱང་ཤས་ཆེར་སེམས་ཀྱི་བསམ་པ་བཅུ་ཉེ་བར་གཞོག་སྟེ། བཅུ་གང་ཞེ་ན། འདི་ལྟ་སྟེ། མགོན་མེད་པ་དང་། སྐྱབས་མེད་པ་དང་། རྟེན་མེད་པའི་སེམས་ཀྱི་བསམ་པ་དང་། རྟག་ཏུ་འཕོངས་པའི་སེམས་ཀྱི་བསམ་པ་དང་། འདོད་ཆགས་དང་། ཞེ་སྡང་དང་། གཏི་མུག་གི་མེ་ཀུན་ནས་འབར་བའི་སེམས་ཀྱི་བསམ་པ་དང་། སྲིད་པའི་བཙོན་རས་བཟུང་བའི་སེམས་ཀྱི་བསམ་པ་དང་། རྟག་ཏུ་རྒྱུན་མི་འཆད་པར་ཉོན་མོངས་པའི་ཐིབས་པོས་བསྒྲིབས་པའི་སེམས་ཀྱི་བསམ་པ་དང་། བརྟག་པའི་མཐུ་མེད་པའི་སེམས་ཀྱི་ བསམ་པ་དང་། དགེ་བའི་ཆོས་ལ་མོས་པ་མེད་པའི་སེམས་ཀྱི་བསམ་པ་དང་། སངས་རྒྱས་ཀྱི་ཆོས་ཐམས་ཅད་ལས་ཤིན་ཏུ་གོལ་བའི་སེམས་ཀྱི་བསམ་པ་དང་། འཁོར་བའི་རྒྱུད་ཀྱི་རྗེས་སུ་འབབ་པའི་སེམས་ཀྱི་བསམ་པ་དང་། ཐར་པའི་ལམ་གྱིས་སྡངས་པའི་སེམས་ཀྱི་བསམ་པ་དང་། །སེམས་ཀྱི་བསམ་པ་འདི་བཅུ་ཉེ་བར་གཞོག་གོ །",
+   "en": "“When he sees in that way the nature of composite phenomena, he sees that they are accompanied by (1) destruction, (2) weeping, (3) misery, (4) wailing, (5) distress, (6) bondage by pleasure and displeasure, (7) great suffering, unhappiness, and distress, (8) being nonaccumulative,  (9) the burning fires of desire, anger, and ignorance, (10) and numerous various illnesses.  “He elevates his motivation, more than ever before, higher than composite phenomena, and he aims for the wisdom of the tathāgatas. “He sees the wisdom of the tathāgatas as (1) inconceivable, (2) unequaled, (3) unfathomable, (4) hard to obtain, (5) unique, (6) invulnerable, (7) undisturbed, (8) having arrived at the city of no fear, (9) irreversible, (10) and protecting many beings. “In that way, he sees the wisdom of the tathāgatas as beyond measure and sees that composite phenomena have numerous misfortunes. More than ever before he develops ten perceptions of all beings. What are these ten? (1) He perceives them as being without a protector, without a refuge, and without a support; (2) as being continually destitute; (3) as burning with the fires of desire, anger, and ignorance; (4) as being imprisoned in the dungeon of existence; (5) as being continuously enveloped in the darkness of the kleśas; (6) as having the thoughts of a mind that does not have the power to examine; (7) as having no aspiration to good qualities; (8) as having gone astray from the entire Dharma of the Buddha; (9) as being swept along in the current of saṃsāra; and (10) as being terrified by the path to liberation. Those are the ten perceptions he acquires."
+  },
+  "d3-04": {
+   "sa": "sa evaṃ bahūpadravaṃ sattvadhātuṃ samanupaśyan evaṃ vīryamārabhate - mayaivaite sattvāḥ paritrātavyāḥ parimocayitavyāḥ paritoṣayitavyāḥ saṃropayitavyā vinetavyāḥ parinirvāpayitavyā iti / sa evaṃ nirvidanugataśca sarvasaṃskāragatyā upekṣānugataśca sarvasattveṣu anuśaṃsānugataśca sarvajñajñāne tathāgatajñānapratiśaraṇaḥ sarvasattvaparitrāṇāyābhiyuktaḥ evaṃ vyupaparīkṣate - katamena khalu upāyamārgeṇa śakyā ime sattvā evaṃ bahuduḥkhopakleśaprapatitā abhyuddhartum, atyantasukhe ca nirvāṇe pratiṣṭhāpayitum, sarvadharmaniḥsaṃśayatāṃ cānuprāpayitumiti? tasya bodhisattvasyaivaṃ bhavati - nānyatra anāvaraṇavimokṣajñānasthānāt / tacca anāvaraṇajñānavimokṣasthānam nānyatra sarvadharmayathāvadavabodhāt / sa ca sarvadharmayathāvadavabodho nānyatra apracārānutpādacāriṇyāḥ prajñāyāḥ / sa ca prajñāloko nānyatra dhyānakauśalyaviniścayabuddhipratyavekṣaṇāt / tacca dhyānakauśalyaviniścayabuddhipratyavekṣaṇaṃ nānyatra śrutakauśalyāditi //",
+   "T0285": "彼已覩察眾生無數危厄，三界之患，輒修精進，吾當將濟一切群黎，度之解脫令致清淨，使得超越，化之立之，勸之寤之，開之示之，令至滅度。已能如是，達至無為，普入萬性，如斯將濟一切眾生，所化若茲具一切智如來聖慧，心念勤修，擁護眾生。又自思之：『以何因緣，以何方便，化此無數眾生之類，墮在苦惱塵勞之厄，所遭焚燒，使立永安，令無復異，住在無礙三脫之門？』已立斯法，開化他人，以無罣礙三脫慧門，無復異行，解一切法，知無所行，了本真諦，導之為行，行無所行；以此慧明，不復觀聽，猗他之義，唯學佛道。又心念言：『何所為具一切佛法之根本也？』唯以博聞分別義理，以觀此慧益加增修。",
+   "T0286": "是菩薩見眾生如是多諸衰惱，發大精進：『是諸眾生我應救、我應解、應令清淨、應令得脫、應著善處、應令安住、應令歡喜、應知所宜、應令得度、應使滅苦。』「菩薩如是善遠離一切有為法，深念一切眾生，見諸佛一切智有無量利益，即時欲具佛智慧救度眾生故，勤行菩薩道。「作是思惟：『以何因緣、以何方便，是諸眾生墮在大苦諸煩惱中，當拔出之，使得永住畢竟常樂？』即時知住無礙解脫智慧中者乃可得此。是無礙智慧解脫，不離通達諸法如實智、無行行慧。『如是智慧之明從何而得？當知不離多聞決定智慧。』「復作是念：『無礙解脫等諸佛法以何為本？不離聞法為本。』",
+   "T0278": "是菩薩見諸眾生如是衰惱，發大精進，是眾生等，我應救、我應解、應令清淨、應令得脫、應著善處、應令安住、應令歡喜、應令知所宜、應令得度、應使滅苦。「菩薩如是厭離一切有為法，深念眾生，見一切智無量利益，即時欲具佛智慧，救度眾生，勤行菩薩道；作是思惟：『此諸眾生墮在大苦諸煩惱中，以何方便而拔濟之，使得永住畢竟之樂；即時知住無礙解脫智慧中者，乃可得此是無礙解脫智慧，不離通達諸法如實智無行行慧；如是慧明，從何而得？當知不離多聞決定智慧。』復作是念：『一切佛法以何為本？不離聞法為本。』",
+   "T0279": "菩薩如是見眾生界無量苦惱，發大精進，作是念言：『此等眾生，我應救，我應脫，我應淨，我應度；應著善處，應令安住，應令歡喜，應令知見，應令調伏，應令涅槃。』菩薩如是厭離一切有為，如是愍念一切眾生，知一切智智有勝利益，欲依如來智慧救度眾生，作是思惟：『此諸眾生墮在煩惱大苦之中，以何方便而能拔濟，令住究竟涅槃之樂？』便作是念：『欲度眾生令住涅槃，不離無障礙解脫智；無障礙解脫智，不離一切法如實覺；一切法如實覺，不離無行無生行慧光；無行無生行慧光，不離禪善巧決定觀察智；禪善巧決定觀察智，不離善巧多聞。』",
+   "T0287": "菩薩如是見有情界眾災患已，發大精進作是念言：『此諸有情，我應救濟應令解脫，應令清淨、應當拔出、應令趣入、應令安住、應令歡喜、應令愛樂、應令調伏、應令寂滅。』菩薩如是於彼諸行深心厭離，於諸有情興悲戀心，於佛妙智見大勝利，以如來智為所依止；為救有情勤修加行，作是思惟：『此諸有情墮在眾苦煩惱雜染，以何等道而能拔濟，令住究竟常樂涅槃？』即此菩薩便作是念：『此皆不離以無障礙智解脫處；此無障礙智解脫，不離一切法如實覺；此一切法如實覺悟，不離無行無生行慧；此慧光明，不離靜慮善巧決擇妙慧觀察；復此靜慮善巧決擇妙慧觀察，皆不離於多聞善巧。』",
+   "bo": "དེ་ནས་དེ་ལྟར་སེམས་ཅན་གྱི་ཁམས་གཙེ་བ་མང་པོ་ཅན་མཐོང་ནས། བརྩོན་འགྲུས་འདི་ལྟར་རྩོམ་སྟེ། སེམས་ཅན་འདི་དག་ནི་བདག་གིས་བསྐྱབ་པར་བྱ་བ་ཡོངས་སུ་དགྲོལ་བར་བྱ་བ། ཡོངས་སུ་སྦྱང་བར་བྱ་བ། ཤིན་ཏུ་གདོན་པར་བྱ་བ་རབ་ཏུ་དགོད་པར་བྱ་བ། ཤིན་ཏུ་བརྟན་པར་བྱ་བ། ཡོངས་སུ་ཚིམ་པར་བྱ་བ། གནས་སུ་ཕྱིན་པར་བྱ་བ། རྣམ་པར་གདུལ་བར་བྱ་བ་དང་ཡོངས་སུ་མྱ་ངན་ལས་འདའ་བར་བྱ་བ་ཡིན་ནོ། །ཞེས་ནས་དེ་དེ་ལྟར་འདུ་བྱེད་ཀྱི་རྣམ་པ་ཐམས་ཅད་ལས་སྐྱོ་བའི་རྗེས་སུ་སོང་ཞིང་སེམས་ཅན་ཐམས་ཅད་ལ་རབ་ཏུ་ལྟ་བའི་རྗེས་སུ་སོང་བ་དང་། ཐམས་ཅད་མཁྱེན་པའི་ཡེ་ཤེས་ལ་ཐམས་ཅད་མཁྱེན་པའི་ཡེ་ཤེས་ཀྱི་རྗེས་སུ་སོང་ཞིང་། དེ་བཞིན་གཤེགས་པའི་ཡེ་ཤེས་ལ་རབ་ཏུ་རྟེན་པས་སེམས་ཅན་ཐམས་ཅད་ཡོངས་སུ་བསྐྱབ་པར་བྱ་བ་ལ་བརྩོན་པ་དེ་འདི་ལྟར་ཡོངས་སུ་རྟོག་སྟེ། རྒྱུ་དང་གཞི་དང་ཚུལ་དང་ཐབས་གང་ཞིག་གིས་འདི་ལྟ་བུར་སྡུག་བསྔལ་དང་། ཉེ་བའི་ཉོན་མོངས་པར་ལྟུང་བའི་སེམས་ཅན་འདི་དག་མངོན་པར་གདོན་པར་ནུས་རྒྱུ་དང་གཞི་དང་ཚུལ་དང་ཐབས་གང་ཞིག་གིས་ནི་ཤིན་ཏུ་བདེ་བའི་མྱ་ངན་ལས་འདས་པར་དགོད་པར་ནུས་སྙམ་ནས། །དེ་ལ་བྱང་ཆུབ་སེམས་དཔའ་འདི་སྙམ་དུ་སེམས་ཏེ། བསྒྲིབས་པ་མེད་པའི་ཡེ་ཤེས་རྣམ་པར་ཐར་པའི་གནས་མ་གཏོགས་པར་གཞན་གྱིས་མི་ནུས་སོ། །བསྒྲིབས་པ་མེད་པའི་ཡེ་ཤེས་རྣམ་པར་ཐར་པའི་གནས་དེ་ཡང་ཆོས་ཐམས་ཅད་ ཡང་དག་པར་ཇི་ལྟ་བ་བཞིན་དུ་ཁོང་དུ་ཆུད་པ་མ་གཏོགས་པར་གཞན་གྱིས་ཐོབ་པར་མི་ནུས་སོ། །ཆོས་ཐམས་ཅད་ཡང་དག་པ་ཇི་ལྟ་བ་བཞིན་དུ་ཁོང་དུ་ཆུད་པ་ཡང་རྒྱུ་བ་མེད་ཅིང་སྐྱེ་བ་མེད་པ་ལ་སྤྱོད་པའི་ཤེས་རབ་མ་གཏོགས་པར་གཞན་གྱིས་ཁོང་དུ་ཆུད་པར་མི་ནུས་སོ། །ཤེས་རབ་ཀྱི་སྣང་བ་དེ་ཡང་བསམ་གཏན་ལ་མཁས་ཤིང་རྟོགས་པའི་བློས་རབ་ཏུ་རྟོག་པ་མེད་པར་གཞན་གྱིས་ཐོབ་པར་མི་རུང་ངོ་། །བསམ་གཏན་ལ་མཁས་ཤིང་རྟོགས་པའི་བློས་རབ་ཏུ་རྟོག་པ་དེ་ཡང་ཐོས་པས་མཁས་པ་མྱེད་པར་མི་འབྱུང་ངོ་།",
+   "en": "“Then, seeing that the realm of beings has many misfortunes, he engages in this kind of diligence: (1) ‘I will protect these beings, (2) I will liberate them, (3) I will purify them, (4) I will raise them up, (5) I will establish them,  (6) I will make them stable,  (7) I will satisfy them,  (8) I will nurture them, (9) I will tame them, and (10) I will cause them to enter nirvāṇa.’ “He is thus disenchanted with the nature of composite phenomena, considers all beings, puts his trust in the wisdom of the tathāgatas as omniscient wisdom, and is dedicated to protecting beings. He considers in this way: ‘Through what method or path can I raise up these beings who have fallen into suffering and the kleśas, and bring them to the ultimate happiness of nirvāṇa?’ “The bodhisattva concludes, ‘That can only come from unobscured wisdom, the state of liberation. Unobscured wisdom, the state of liberation, can only come from the realization of the exact nature of all phenomena. The realization of the exact nature of all phenomena can only come from the wisdom of nonoccurrence, nonarising. The light of that wisdom can only come from skill in dhyāna and certainty of realization. Skill in dhyāna and certainty of realization can only come from becoming learned through listening.’"
+  },
+  "d3-05": {
+   "sa": "sa evaṃ pratyavekṣitajñāno bhūyasyā mātrayā saddharmaparyeṣaṇābhiyukto viharati / rātridivaṃ dharmaśravaṇārthiko dharmakāmātṛptāpratiprasrabdho buddhardharmaparyeṣṭihetoḥ / dharmārāmo dharmarato dharmapratiśaraṇo dharmanimno dharmapravaṇo dharmaprāgbhāro dharmaparāyaṇo dharmalayano dharmatrāṇo dharmānudharmacārī / sa evaṃ buddhadharmaparyeṣaṇābhiyukto nāsti tatkiṃcid dravyavittajātaṃ vā dhanadhānyakośakoṣṭhāgārajātaṃ vā hiraṇyasuvarṇamaṇimuktāvajravaiḍūryaśaṅkhaśilāpravālajātarūparajatajātaṃ vā yāvatsarvāṅgapratyaṅgaparityāgo vā yanna parityajati tayā dharmakāmatayā / na ca tasmādduṣkarasaṃjñī bhavati anyatra tasminneva dharmabhāṇakapudgale duṣkarasaṃjñī bhavati yo 'syaikadharmapadamapi deśayati / sa dharmahetornāsti tatkiṃcidupātaṃ bāhyaṃ vastu yanna parityajati / nāsti tatkiciṃdādhyātmikaṃ vastu yanna parityajati / nāsti tatkiṃcidguruparicaryopasthānaṃ yannopādatte / nāsti sā kācid mānābhimānotsarganirmāṇopacāratā yāṃ nopādatte / nāsti sā kācitkāyikī pīḍā yāṃ nopādatte / sa citro bhavatyaśrutadharmapada śravaṇena, na tveva trisāhasramahāsāhasralokadhātupratimena ratnarāśipratilambhena / sa citro bhavatyekasubhāṣitagāthāśravaṇena na tveva cakravartirājyapratilambhena / sa citro bhavatyaśrutadharmapadaśravaṇena bodhisattvacaryāpariśodhanena na tveva śakratvabrahmatvapratilambhena bahukalpaśatasahasraparyavasānena / sacedidaṃ kaścidevaṃ brūyāt - evamahaṃ tulyamidaṃ dharmapadaṃ samyaksaṃbuddhopanītaṃ bodhisattvacaryāpariśodhanaṃ saṃśrāvayeyam, sacettvaṃ mahatyāmagnikhadāyāṃ saṃprajvalitāyāmekajvālībhūtāyāmātmānaṃ prapātayeḥ, mahāntaṃ ca duḥkhavedanopakramaṃ svaśarīreṇopādadyā iti / tasyaivaṃ bhavati - utsahe 'hamekasyāpi dharmapadasya samyaksaṃbuddhopanītasya bodhisattvacaryāpariśodhanasyārthāya trisāhasramahāsāhasralokadhātāvagniparipūrṇe brahmalokādātmānamutsraṣṭum, kiṃ punaḥ prākṛtāyāṃ agnikhadāyām / api tu khalu punaḥ sarvairnirayāpāyaduḥkhasaṃvāsairapyasmābhirbuddhadharmāḥ paryeṣitavyāḥ, kiṃ punarmanuṣyaduḥkhasaṃvāsairiti / sa evaṃrūpeṇa vīryārambheṇa dharmān paryeṣate / yathāśruteṣu dharmeṣu ca yoniśaḥ pratyavakṣeṇajātīyo bhavati / tāṃśca dharmān śrutvā svacittanidhyaptyā eko rahogata evaṃ mīmāṃsate - dharmānudharmapratipattyā ime buddhadharmā anugantavyā na kevalaṃ vākkarmapariśuddhyeti /",
+   "T0285": "勤求正法，專精奉行，夙夜思法，欲聽受之，不以為厭；樂法不廢，發生好法、求法、導法、志法、由法、流法、歸法、救法、護法、行法，善求道法；不慕世間無限寶物，無用諸藏盈滿之珍，已得自在，發意布施；不念有難唯思法師，於世難值甚為希有，以用法故無所愛惜，內外所有咸以布施；所可惠施，若施眷屬、田地、財寶、帑藏、珍琦、瓔珞、妻子、男女、頭目、手足、耳鼻、肌肉、支體、衣食，及己身命，用經典故，無所貪悋，皆能惠施。用法典故，極重愛樂，所用安已，明珠、如意、貴價璝琦；布施之時，謙下卑言，所可放施，不懷悔恨，身心不惱；其有受者，因是令度，所不聞法，聞之欣然，勝得三千大千國土滿中珍寶，寧聞一偈不用梵釋轉輪王位，修無央數百千劫行；或有來謂：『卿今所興習，是平等正覺之業，菩薩淨行，假欲得聞此大正法，自投大火，更無極苦苦惱之患；越斯大火，若使己身，遭是困厄，乃成佛道。』即念言：『今我身求經，道寧愛樂一句法，不用此身，正使此三千世界滿中火至梵天，求法故自投中，況小火也；設命墮在一切地獄，苦痛不安，故當勤慕，求于法典，況復值遇人間之惱。』以此方便，求于經典，若使聞法，如法觀察，一心解達；彼若聽經，自伏己心，念志上道，識如是意，在於經典，而行要法，慕樂佛道，終不唐舉；口言清淨，照察如是，",
+   "T0286": "菩薩如是念已，一切求法時轉加精進，日夜常樂聽法，無有厭足，心無休息。喜法、愛法、依法、隨法、重法、究竟法、歸法、救法、隨順行法，菩薩如是方便求法。「所有珍寶、財物、金銀……等庫藏無所匱惜，於此物中不生難想，但於說法者生難遭想。為求法故，於內外物無不能捨。世間所有可布施者——所謂國土、人民、眷屬、田業、財物、摩尼寶珠、金銀庫藏、象馬輦輿、眾寶瓔珞、諸嚴身之具、妻子、男女，及支節、手、足、耳、目、鼻、舌，舉身施與無所愛惜。又為求法故，於說法者盡心恭敬、供養、給侍，破除憍慢、我慢、大慢諸惡苦惱，無理等事悉能忍受。深求法故，若得一句未曾聞法，勝得滿三千大千世界珍寶；得聞正法一偈，勝得轉輪聖王、釋提桓因、梵天王處無量劫住。「是菩薩，若有人來作是言：『我與汝佛所說法一句，能淨菩薩所行道，令汝得聞。若能入大火坑受大苦者，當以相與。』是菩薩作是念：『我受一句法故，尚於三千大千世界火坑從梵天投下，何況墮小火坑？我等求法應盡受一切，諸地獄苦猶應求法，何況人中諸小苦惱？』為求法故，發如是心。又，如所聞法，心常喜樂，悉能正觀。「是菩薩聞諸法已，降伏其心，於空閑處心作是念：『如說行者乃得佛法，不可但以口之所言。』",
+   "T0278": "菩薩如是知已，一切求法，轉加精勤，日夜聽受，無有厭足，喜法、愛法、依法、順法、滿法、辯法、究竟法、歸法、救法、隨順行法。菩薩如是方便求法，所有珍寶無所遺惜，於此物中不生難想，但於說法者，生難遭想。為求法故，於內外物無不能捨，國土、人民、摩尼七寶、象馬、輦輿、眾寶、瓔珞、嚴身之具、妻妾、男女、肢節、手足，舉身施與，無所愛惜。又為求法故，於說法者，盡心恭敬供養給侍，破除憍慢、我慢、大慢，諸惡苦惱，悉能忍受。深求法故，若得一句未曾聞法，勝得三千大千世界滿中珍寶；得聞一偈，勝得轉輪聖王、釋提桓因、梵天王處無量劫住。是菩薩若有人來作如是言：『我有佛所說法一句能淨菩薩道，汝今若能入大火阬受大苦者，當以相與。』是菩薩作是念：『我受一句法故，設令三千大千世界大火滿中，尚從梵天而自投下，何況小火；我盡受一切諸地獄苦，猶應求法，何況人中諸小苦惱。為求法故，發如是心，又如所聞法，心常喜樂，悉能正觀。』是菩薩聞諸法已，降伏其心，於空閑處，心作是念：『如說行者，乃得佛法，但以口言，無有是處。』",
+   "T0279": "菩薩如是觀察了知已，倍於正法勤求修習，日夜唯願聞法、喜法、樂法、依法、隨法、解法、順法、到法、住法、行法。菩薩如是勤求佛法，所有珍財皆無吝惜，不見有物難得可重，但於能說佛法之人生難遭想。是故，菩薩於內外財，為求佛法悉能捨施。無有恭敬而不能行，無有憍慢而不能捨，無有承事而不能作，無有勤苦而不能受。若聞一句未曾聞法，生大歡喜，勝得三千大千世界滿中珍寶；若聞一偈未聞正法，生大歡喜，勝得轉輪聖王位；若得一偈未曾聞法，能淨菩薩行，勝得帝釋梵王位住無量百千劫。若有人言：『我有一句佛所說法，能淨菩薩行。汝今若能入大火阬，受極大苦，當以相與。』菩薩爾時作如是念：『我以一句佛所說法，淨菩薩行故，假使三千大千世界大火滿中，尚欲從於梵天之上投身而下，親自受取，況小火阬而不能入！然我今者為求佛法，應受一切地獄眾苦，何況人中諸小苦惱！』菩薩如是發勤精進求於佛法，如其所聞觀察修行。此菩薩得聞法已，攝心安住，於空閑處作是思惟：『如說修行乃得佛法，非但口言而可清淨。』",
+   "T0287": "菩薩以是善觀察智，專為訪求正法而行，日夜慕法聞法無厭，玩法、樂法、依法、靡法、住法、須法、怙法、歸法、法隨、法行。菩薩如是為求佛法修正行時，無有少物或資生具，或財穀倉庫而不能捨，於此終無難作之想，唯於說法補特伽羅生難遭想；為佛法故無有少分執受外物而不能捨，無少內物而不能捨，無有師長不誓承事，除慢、過慢，下意受行，無有身苦而不誓受。若聞佛法一四句頌歡喜踊躍，勝得三千大千世界充滿其中大珍寶聚。若聞一頌善說正法，歡喜勝得轉輪王位。聞未聞法是佛所說，能引正等覺、能淨菩薩行歡喜踊躍，勝得一切釋梵王等，住百千劫極尊貴位。設有告言：『我有一句佛所說法，能引正等覺、能淨菩薩行，汝今若能投極熾然大焰火坑受劇苦者，當為汝說。』菩薩聞已作是念言：『我為一句佛所說法，能引等正覺、能淨菩薩行，正使火坑量等三千大千世界，滿中熾火，我從梵天尚投身入，況小火坑。又復我等為求佛法，尚應久處大捺落迦諸險惡趣受大苦惱，況於人中諸餘小苦而不能受。』菩薩發起如是精進求正法已，如其所聞而能如理內審觀察。聞正法已，獨居靜處心自決了作是思惟：『以正修行法隨法行，方得名為隨順佛法，非但純以語業演說而得清淨。』",
+   "bo": "།ཞེས་དེ་དེ་ལྟར་ཤིན་ཏུ་བརྟགས་པའི་ཤེས་པ་དང་ལྡན་པས་དེ་བས་ཀྱང་ཤས་ཆེར་དམ་པའི་ཆོས་ཚོལ་བ་ལ་མངོན་པར་བརྩོན་པར་གནས་ཏེ་ཉིན་མཚན་དུ་ཆོས་མཉན་པ་དོན་དུ་གཉེར་བ་ཡིན། སངས་རྒྱས་ཀྱི་ཆོས་བཙལ་བའི་དོན་དུ་ཆོས་ལ་མོས་ཤིང་ངོམས་མི་ཤེས་ལ་རྒྱུན་མི་འཆད་པ་ཡིན། ཆོས་ལ་དགའ་ཞིང་སྤྲོ་བ་དང་། ཆོས་ལ་རབ་ཏུ་འཇུག་པ་ཡིན། ཆོས་ལ་གཞོལ་ཞིང་ཆོས་ལ་འབབ་པ་དང་། ཆོས་ལ་འབབ་པ་ཡིན། ཆོས་ལ་རྟེན་ཅིང་ཆོས་ལ་སྐྱབས་ཚོལ་བ་དང་། ཆོས་ལ་མཐུ་ཚོལ་བ་ཡིན། ཆོས་དང་གཉེར་བའི་ཆོས་ལ་མངོན་པར་བརྩོན་པ་ཡིན་ཏེ། དེ་དེ་ལྟར་ཆོས་ཚོལ་བ་ལ་མངོན་པར་བརྩོན་པས་རིན་པོ་ཆེའི་རྣམ་པ་འམ། དབྱིག་གི་རྣམ་པ་འམ། ནོར་དང་། འབྲུའི་མཛོད་དང་བང་བ་གང་ཡང་རུང་སྟེ། ཡོངས་སུ་མི་གཏོང་བ་དེ་ལྟ་བུ་གང་ཡང་མྱེད་དོ། །ཆོས་སྨྲ་བའི་གང་ཟག་དེ་འབའ་ཞིག་ལ་དཀའ་བའི་འདུ་ཤེས་སུ་གྱུར་པ་ལས་ཕར་དེ་དག་གཞན་ལ་ཅུང་ཟད་ཀྱང་དཀའ་བའི་འདུ་ཤེས་མྱི་བསྐྱེད་དོ། །དེ་ནི་ཆོས་ཀྱི་དོན་དུ་ཕྱི་རོལ་གྱི་དངོས་པོ་ཉེ་བར་བཟུང་བ་ཡོངས་སུ་མི་གཏོང་བ་དེ་གང་ཡང་མྱེད་དོ། །ནང་གི་དངོས་པོ་ཡོངས་སུ་མི་གཏོང་བར་བྱ་བ་དེ་ལྟ་བུ་འང་ཅུང་ཟད་ཀྱང་མྱེད་དོ། །གང་འདི་དག་འདི་ལྟ་སྟེ། གཡོག་འཁོར་ཡོངས་སུ་གཏང་ བའམ། རྒྱལ་སྲིད་ཡོངས་སུ་གཏང་བའམ། ལོངས་སྤྱོད་ཡོངས་སུ་གཏང་བ་འམ། ནོར་དང་འབྲུ་དང་། ནོར་བུ་དང་། གསེར་གྱི་མཛོད་དང་། བང་བ་ཡོངས་སུ་གཏང་བ་དང་། རྟ་དང་གླང་པོ་དང་། ཤིང་རྟ་དང་། བཞོན་པ་ཡོངས་སུ་གཏང་བ་འམ་རིན་པོ་ཆེའི་རྒྱན་དང་ལྷབ་ལྷུབ་ཡོངས་སུ་གཏང་བ་དང་། ཆུང་མ་དང་བུ་དང་བུ་མོ་ཡོངས་སུ་གཏང་བ་འམ། མགོ་དང་རྐ་ལག་དང་ཡན་ལག་གི་དམ་པ་ཡོངས་སུ་གཏང་བ་འམ། ལུས་ཐམས་ཅད་ཡོངས་སུ་གཏད་བར་བྱ་བ་ཡང་རུང་སྟེ། དེ་དག་ཐམས་ཅད་ཆོས་ཀྱི་དོན་དུ་ཡོངས་སུ་མི་གཏོང་བ་གང་ཡང་མྱེད་དོ། །བླ་མ་ལ་བསྙེན་བཀུར་དང་རིམ་གྲོ་བྱ་བ་གང་ཡང་རུང་སྟེ། ཉམས་སུ་མི་ལེན་པ་གང་ཡང་མེད་དོ། །ང་རྒྱལ་དང་ལྷག་པའི་ང་རྒྱལ་ཡོངས་སུ་གཏང་བས། ང་རྒྱལ་མེད་པ་ལ་སྤྱད་པ་གང་ཡང་རུང་སྟེ། ཉམས་སུ་མི་ལེན་པ་གང་ཡང་མྱེད་དོ། །ལུས་ཀྱི་གནོད་པ་གང་ཡང་རུང་སྟེ། ཉམས་སུ་མི་ལེན་པ་གང་ཡང་མྱེད་དོ། །དེ་མ་ཐོས་པའི་ཆོས་ཀྱི་ཚིག་གཅིག་ཐོས་པ་ནོར་ཆེ་བར་འཛིན་གྱིས། སྟོང་གསུམ་གྱི་སྟོང་ཆེན་པོའི་འཇིག་རྟེན་གྱི་ཁམས་ཡོངས་སུ་གང་བའི་རིན་པོ་ཆེའི་ཕུང་པོ་ཐོབ་པས་མ་ཡིན་ནོ། །ལེགས་པར་བཤད་པའི་ཚིགས་སུ་བཅད་པ་གཅིག་ཐོས་པས་སེམས་དགའ་བར་འགྱུར་གྱི། བརྒྱ་བྱིན་དང་ཚངས་པ་དང་། འཁོར་ལོས་སྒྱུར་བའི་རྒྱལ་བོའི་སྲིད་ལ་བསྐལ་པ་བརྒྱ་སྟོང་མང་པོའི་མཐར་ཐུག་པར་གནས་པས་ནི་མ་ཡིན་ནོ། །དེ་ལ་ལ་ལ་ཞིག་བརྒྱ་ལ་འདི་སྐད་དུ་ཟེར་ཏེ། གལ་ཏེ་ཁྱོད་ཀྱིས་མེའི་དོང་ཆེན་པོར་ལུས་བོར་ཏེ། སྡུག་བསྔལ་གྱི་ཚོར་བའི་ཕུང་པོ་ཆེན་པོ་རང་གི་ལུས་ཀྱིས་ཉམས་སུ་བླང་བར་ནུས་ན། ངས་ཁྱོད་ལ་ཆོས་ཀྱི་ཚིག་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་ཀྱིས་བསྟན་པ། བྱང་ཆུབ་སེམས་དཔའི་སྤྱོད་པ་ཡོངས་སུ་སྤྱོད་པ་འདི་བཤད་པར་བྱའོ། །ཞེ་ན་ཡང་དེ་འདི་སྙམ་དུ་སེམས་ཏེ་ཆོས་ཀྱི་ཚིག་ ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་ཀྱིས་བསྟན་པ་བྱང་ཆུབ་སེམས་དཔའི་སྤྱོད་པ་ཡོངས་སུ་སྦྱོང་བའི་དོན་དུ་ནི་སྟོང་གསུམ་གྱི་སྟོང་ཆེན་པོའི་འཇིག་རྟེན་གྱི་ཁམས་མེས་གང་བར་ཡང་ཚངས་པའི་འཇིག་རྟེན་ནས་བདག་གིས་བདག་དོར་བར་མོས་ན་མེའི་དོང་ཐ་མལ་པ་ནི་འདི་ལྟ་ཞིག་ཏུ་བདག་དོར་བ་ལྟ་ཅི་སྨོས་ཀྱིས། དེ་བས་སེམས་ཅན་དམྱལ་བའི་སྡུག་བསྔལ་ཐམས་ཅད་ཉམས་སུ་བབ་པས་ཀྱང་བདག་གིས་ཆོས་བཙལ་བར་བྱའི་མྱེའི་སྡུག་བསྔལ་དང་འགྲོགས་པ་ལྟ་ཁྱད་དུ་བསད་དོ་ཞེས་ནས་དེ་རྣམ་པ་དེ་ལྟ་བུའི་བརྩོན་འགྲུས་རྩོམ་པས་ཆོས་ཡོངས་སུ་ཚོལ་ལོ། །ཇི་སྐད་དུ་ཐོས་པའི་ཆོས་རྣམས་ལ་ཡང་ཚུལ་བཞིན་དུ་རབ་ཏུ་རྟོགས་པའི་ངང་ཚུལ་ཅན་ཡིན་ཏེ། དེས་ཆོས་དེ་དག་ཐོས་ནས་ཀྱང་རྗེས་ལ་རང་གི་སེམས་རྟོག་པར་བཞག་པས་གཅིག་པུ་དབེན་པ་ན་འདུག་ཅིང་འདི་ལྟར་རྟོག་གོ །ཆོས་དང་གཉེར་བའི་ཆོས་ལ་ནན་ཏན་དུ་བྱ་བས་སངས་རྒྱས་ཀྱི་ཆོས་ཁོང་དུ་ཆུད་པར་བྱ་བའི་ཚིག་གི་ལམ་ཡོངས་སུ་དག་པ་འབའ་ཞིག་གིས་མ་ཡིན་ནོ་ཞེས་ཏེ།",
+   "en": "“He has that kind of knowledge through examination, and more than ever he is engaged in diligently seeking for the sublime Dharma. He is dedicated to listening to the Dharma day and night, he fulfills his insatiable desire for the Dharma, he is constantly seeking the Buddha’s Dharma, he delights in the Dharma, he enjoys the Dharma, he depends on the Dharma, he is focused on the Dharma, he is intent upon the Dharma, he is predisposed to the Dharma, he is devoted to the Dharma, he clings to the Dharma, he protects the Dharma, and he has the correct practice of the Dharma. “He is so dedicated to seeking the Dharma that there is nothing precious, no wealth, no riches, no grain store, and no treasury that he will not give away. Because of his delight in the Dharma, he does not perceive it as a hardship. Otherwise, when a dharmabhāṇaka recites even one word he will perceive it as a hardship. “There is nothing that he has externally acquired that he will not give away for the sake of the Dharma, and there is nothing of himself that he will not give away. What are these? He will give away his servants, he will give away his kingdom, he will give away his possessions, and he will give away his wealth and grain and his jewels, gold, and treasury. He will give away his horses, elephants, chariots, and steeds. He will give away his precious jewelry and ornaments. He will give away his wives, his sons, and his daughters. He will give away his head, feet, hands, and limbs. He will give away his entire body. There is none of this that he will not give away for the sake of the Dharma. “There is nothing that he will not do in order to serve and attend the guru. There is nothing that he will not do, eliminating pride and arrogance and serving humbly. There is nothing that would be physically painful that he will not do. He is made happy by hearing one word of Dharma that he has not heard before, and not by great wealth, not by obtaining a mass of jewels that would fill the great universe of a thousand million worlds. He is made happy by hearing one verse of the excellent teaching and not by becoming Śakra, Brahmā, or a cakravartin king for many hundreds of thousands of eons. “If someone were to declare to him, ‘If you can throw your body into this great pit of fire and experience that vast sensation of physical suffering, I will teach to you one word of the perfect Buddha’s Dharma, which teaches the refinement of the bodhisattva’s conduct,’ then he would think, ‘In order to receive one word of the perfect Buddha’s Dharma teaching on purifying the bodhisattva conduct, I would leap from the Brahmā realm into a fire that fills the great universe of a thousand million worlds, not to mention throw myself into an ordinary pit of fire like this. I would experience the sufferings of hell in order to seek the Buddha’s Dharma, not to mention experience human suffering.’  “He seeks the Dharma with that kind of dedication. When he has heard the Dharma, he gives it his complete attention. He rejoices in the Dharma that he has heard and reflects on it while remaining in solitude. That is how he contemplates the Dharma.  “His correct practice of the true Dharma is not solely the pure path of the learned words of the Buddha’s Dharma."
+  },
+  "d3-06": {
+   "sa": "so 'syāṃ prabhākaryāṃ bodhisattvabhūmau sthito bodhisattvo dharmānudharmapratipattihetorviviktaṃ kāmairviviktaṃ pāpakairakuśaladharmaiḥ savitarkaṃ savicāraṃ vivekajaṃ prītisukhaṃ prathamaṃ dhyānamupasaṃpadya viharati / sa vitarkavicārāṇāṃ vyupaśamādadhyātmasaṃprasādāccetasa ekotībhāvādavitarkamavicāraṃ samādhijaṃ prītisukhaṃ dvitīyaṃ dhyānamupasaṃpadya viharati / sa prītervirāgādupekṣako viharati smṛtimān saṃprajānan / sukhaṃ ca kāyena pratisaṃvedayati yattadāryā ācakṣante - upekṣakaḥ smṛtimān / sukhavihārī niṣprītikaṃ tṛtīyaṃ dhyānamupasaṃpadya viharati / sa sukhasya ca prahāṇādduḥkhasya ca prahāṇātpūrvameva ca saumanasyadaurmanasyayorastaṃgamādaduḥkhāsukhamupekṣāsmṛtipariśuddhaṃ caturthaṃ dhyānamupasaṃpadya viharati / sa sarvaśo rūpasaṃjñānāṃ samatikramāt pratighasaṃjñānāmastaṃgamānnānātvasaṃjñānāmamanasikārādanantakamākāśamityākāśānantyāyatanamupasaṃpadya (Dbh 21) viharati / sa sarvaśa ākāśānantyāyatanasamatikramādanantaṃ vijñānamiti vijñānānantyāyatanamupasaṃpadya viharati / sa sarvaśo vijñānānantyāyatanasamatikramānnāsti kiṃcidityākiṃcanyāyatanamupasaṃpadya viharati / sa sarvaśa ākiṃcanyāyatanasamatikramānnaivasaṃjñānāsaṃjñāyatanamupasaṃpadya viharati tenānabhiratipadasthānena nānyatra dharmānudharmapratipattimupādāya //",
+   "T0285": "住菩薩地，寂除情欲；消滅諸惡不善之法，專惟善業，歡悅安隱，成第一禪。又除想念，其內寂然，而心一矣，無復思想，隨時順行，歡悅安隱，成第二禪。又好喜離，欲造恬泊行，其心寂默，身意快然，猶如眾聖所言，觀察其心，安隱行第三禪。又除其樂，棄捐眾苦消竭前本，無樂無苦，專精永然其心清淨，行第四禪。彼則越度一切色想，已超色想，逮有無想；入于名號，因時思念若干名想，輒以修行無量虛空虛空之想；彼已越度諸虛空想，因修奉行無量識慧之想，彼則越度諸虛空想，便無所著，修無所有；已度一切無所有業，因修無想，亦不離想，則不樂餘；所興發處，唯奉道法，",
+   "T0286": "菩薩如是能住明地，即離諸欲、惡不善法，有覺、有觀，離生喜樂，入初禪；滅覺觀，內清淨、心一處，無覺無觀，定生喜樂，入二禪；離喜故，行捨心、念安慧、身受樂，諸賢聖能說、能捨，常念受樂，入三禪；斷苦斷樂故、先滅憂喜故，不苦、不樂，行捨念淨，入四禪。是菩薩過一切色相，滅一切有對相，不念一切別異相故，知無邊虛空，即入虛空無色定處；過一切虛空相，知無邊識，即入識無色定處；過一切識相，知無所有，即入無所有無色定處；過一切無所有處，知非有想非無想安隱，即入無色非有想非無想處；但隨順諸法行故而不樂著。",
+   "T0278": "菩薩如是則離欲惡不善法，有覺有觀，離生喜樂，入初禪；滅覺觀，內清淨，心一處，無覺無觀，定生喜樂，入二禪；離喜，行捨，成就念慧，身受樂，諸賢聖能說能捨，常念受樂，入三禪；斷棄苦樂，憂喜已滅，不苦不樂，行捨念淨，入四禪。是菩薩過一切色相，滅一切有對相，不念一切別異相故，知無邊虛空即入虛空無色定處；過一切虛空相，知無邊識即入識無色定處；過一切識相，知無所有即入無所有無色定處；過一切無所有處，知非有想、非無想安隱，即入非有想非無想無色定處；順諸法行而不樂著。",
+   "T0279": "「佛子！是菩薩住此發光地時，即離欲惡不善法，有覺有觀，離生喜樂，住初禪；滅覺觀，內淨一心，無覺無觀，定生喜樂，住第二禪；離喜住捨，有念正知，身受樂，諸聖所說能捨有念受樂，住第三禪；斷樂，先除苦喜憂滅，不苦不樂，捨念清淨，住第四禪；超一切色想，滅有對想，不念種種想，入無邊虛空，住虛空無邊處；超一切虛空無邊處，入無邊識，住識無邊處；超一切識無邊處，入無少所有，住無所有處；超一切無所有處，住非有想非無想處。但隨順法故，行而無所樂著。",
+   "T0287": "菩薩住是發光地時，為欲修行法隨法行，離欲離諸惡不善法，有尋有伺，離生喜樂，入初靜慮具足安住。尋伺寂靜內等淨故一心趣故，無尋無伺定生喜樂，入第二靜慮具足安住。於喜離欲安住於捨，正念正知，有身受樂，於是處所，諸聖宣說具足捨念及以正知，住身受樂入第三靜慮具足安住。樂斷苦斷先喜憂沒，不苦不樂捨念清淨，入第四靜慮具足安住。又此菩薩超一切種色之想故，滅沒一切有對想故，以不作意種種想故，知無邊虛空，入空無邊處具足安住。超一切種空無邊處，知無邊識，入識無邊處具足安住。超一切種識無邊處，知無所有，入無所有處具足安住。超一切種無所有處，知非想非非想，入於非想非非想處具足安住。但為隨順法隨法行，不以樂著安足處也。",
+   "bo": "བྱང་ཆུབ་སེམས་དཔའ་དེ་བྱང་ཆུབ་སེམས་དཔའི་ས་འོད་བྱེད་པ་ལ་གནས་ཤིང་། འདོད་པ་རྣམས་ལས་དབེན། སྡིག་ཏོ་དང་མི་དགེ་བའི་ཆོས་རྣམས་ལས་དབེན་ཞིང་རྣམ་པར་རྟོག་པ་ཅན་རྣམ་པར་དཔྱོད་པ་ཅན། དབེན་པ་ལས་སྐྱེས་པའི་དགའ་བ་དང་། བདེ་བའི་བསམ་གཏན་དང་པོ་ལ་ཉེ་བར་བསྒྲུབས་ཏེ་གནས་སོ། །དེ་རྣམ་པར་རྟོག་པ་དང་། རྣམ་པར་དཔྱོད་པ་རྣམ་པར་ཞི་སྟེ། ནང་ཤིན་ཏུ་དང་ཞིང་སེམས་ཀྱི་རྒྱུད་གཅིག་ཏུ་གྱུར་པས་རྣམ་པར་རྟོག་པ་དང་། རྣམ་པར་དཔྱོད་པ་མྱེད་པ། ཏིང་ངེ་འཛིན་ལས་སྐྱེས་པའི་དགའ་བ་དང་། བདེ་བ་བསམ་གཏན་གཉིས་པ་ཉེ་བར་བསྒྲུབས་ཏེ་གནས་སོ། །དེ་དགའ་བ་ལ་འདོད་ཆགས་དང་བྲལ་ཏེ་བཏང་སྙོམས་སུ་གནས་པས། དྲན་པ་དང་ལྡན་ཞིང་རབ་ཏུ་ཤེས་པར་བདེ་བ་ཡང་ལུས་ཀྱིས་རབ་ཏུ་ཚོར་ཏེ། འཕགས་པ་རྣམས་ཀྱི་བཏང་སྙོམས་པ་དྲན་པ་ཅན་དགའ་བ་མེད་ལ་བདེ་བ་ལ་གནས་པའོ། །ཞེས་བྱ་བར་བསམ་གཏན་གསུམ་པ་ལ་ཉེ་བར་བསྒྲུབས་ཏེ་གནས་སོ། །དེ་བདེ་བ་ཡང་སྤངས། སྡུག་བསྔལ་བ་ཡང་སྤངས་ལ་བདེ་བའི་ཡིད་དང་། ཉམ་ང་བའི་ཡིད་ཀྱང་སྔར་ནུབ་པས་སྡུག་བསྔལ་ཡང་མེད། བདེ་བ་ཡང་མེད་པའི་བཏང་སྙོམས་དྲན་པས་ཡོངས་སུ་དག་པའི་བསམ་གཏན་བཞི་པ་ལ་ཉེ་བར་བསྒྲུབས་ཏེ་གནས་སོ། །དེ་གཟུགས་སུ་འདུ་ཤེས་པ་ལས་རྣམ་པ་ཐམས་ཅད་དུ་འདས་ནས། ཐོགས་པའི་འདུ་ཤེས་རྣམས་ནུབ་སྟེ། འདུ་ཤེས་སྣ་ཚོགས་ཡིད་ལ་མི་བྱེད་པས་མཐའ་ཡས་ནམ་མཁའ་ཞེས་ཏེ། ནམ་མཁའ་མཐའ་ཡས་པའི་སྐྱེ་མཆེད་ལ་ཉེ་བར་བསྒྲུབས་ཏེ་གནས་སོ། །དེ་ནམ་མཁའ་མཐའ་ཡས་པའི་སྐྱེ་མཆེད་ལས་རྣམ་པ་ཐམས་ཅད་དུ་འདས་ནས་མཐའ་ཡས་རྣམ་ཤེས་ཤེས་ཏེ་རྣམ་པར་ཤེས་པ་མཐའ་ཡས་པའི་སྐྱེ་མཆེད་ལ་ཉེ་བར་བསྒྲུབས་ཏེ་གནས་སོ། །དེ་རྣམ་པར་ཤེས་པའི་སྐྱེ་མཆེད་ལས་རྣམ་པ་ཐམས་ཅད་དུ་འདས་ནས་མ་ཡོད་ཅུང་ཟད་ཅེས་ཏེ་ཅུང་ཟད་ཀྱང་མེད་པའི་སྐྱེ་མཆེད་ལ་ཉེ་བར་བསྒྲུབས་ཏེ་གནས་སོ། །དེ་ཅུང་ཟད་ཀྱང་མེད་པའི་སྐྱེ་མཆེད་ལས་རྣམ་པ་ཐམས་ཅད་དུ་འདས་ནས། འདུ་ཤེས་མེད་འདུ་ཤེས་མེད་མིན་གྱིན་གྱི་སྐྱེ་མཆེད་ལ་ཉེ་བར་བསྒྲུབས་ཏེ་གནས་སོ། །དེ་ཆོས་དང་གཉེར་བའི་ཆོས་ལ་ནན་ཏན་དུ་བྱ་བ་མ་གཏོགས་པར་དེ་ཡང་མངོན་པར་དགའ་བའི་གནས་དང་། རྟེན་པ་ཡིན་པས་དེ་བྱམས་པ་དང་ལྡན་པའི་སེམས་ཡངས་པ། རྒྱ་ཆེ་བ་གཉིས་སུ་མྱེད་པ་ཚད་མྱེད་པ་ཁོན་མེད་པ། ལྟོད་པ་མེད་པ་བསྒྲིབས་པ་མེད་པ། གནོད་པ་མྱེད་པ། ཐམས་ཅད་དུ་ཁྱབ་པས་འཇིག་རྟེན་གྱི་ཁམས་ཆོས་ཀྱི་དབྱིངས་ཀྱིས་ཀླས་པ། ནམ་མཁའི་མཐས་གཏུགས་པ་ཐམས་ཅད་རྒྱས་པར་བཀང་ནས་ཉེ་བར་བསྒྲུབས་ཏེ་གནས་སོ། །དེ་བཞིན་དུ་སྙིང་རྗེ་དང་ལྡན་པ་དང་། དགའ་བ་དང་ལྡན་པ།",
+   "en": "The bodhisattva who is on the bodhisattva bhūmi called Shining has no desires, has no bad actions or negative qualities, and has contemplation and examination. Solitude brings him joy and bliss, which is attaining and remaining in the first dhyāna. “Then contemplation and examination cease; there is great internal clarity, the mind becomes one-pointed without contemplation or examination, and there is both the joy and bliss of samādhi, so that he accomplishes and remains in the second dhyāna. “Then he remains in equanimity with no desire for that joy, so that with mindfulness there is awareness of the bliss, and there is the physical sensation of it. The equanimity of the noble ones has mindfulness that is without joy but remains in bliss. “This means that he accomplishes and remains in the third dhyāna. “Then he eliminates bliss and eliminates suffering. Pleasant and unpleasant states of mind cease so that that he accomplishes and remains in the fourth dhyāna, in which there is no suffering or bliss, and the pure mindfulness of equanimity. “The perception of forms is transcended, and the perception of obstacles ceases, so that there is no mental engagement with various perceptions, so that there is what is called infinite space. Thus he accomplishes and remains in the āyatana of infinite space. Then that āyatana of infinite space is transcended and there is what is called infinite consciousness, so that he accomplishes and remains in the āyatana of infinite consciousness. Then that āyatana of infinite consciousness is transcended and there is what is called nothingness, so that he accomplishes and remains in the āyatana of nothingness. Then that āyatana of nothingness is transcended and there is what is called neither perception nor nonperception, so that he accomplishes and remains in the āyatana of neither perception nor nonperception.  “Thus he accomplishes the practice of the Dharma’s true Dharma by nothing other than the state of nondelight."
+  },
+  "d3-07": {
+   "sa": "sa maitrīsahagatena cittena vipulena mahadgatenādvayenāpramāṇenāvaireṇāsapatnenānāvaraṇenāvyābādhena sarvatrānugatena dharmadhātuparame loke ākāśadhātuparyavasāne sarvāvantaṃ lokaṃ spharitvopasaṃpadya viharati / evaṃ karuṇāsahagatena cittena / muditāsahagatena cittena / upekṣāsahagatena cittena viharati //",
+   "T0285": "因修慈心，廣大無際，不可限量，無怨不恨，欲護眾生，一志普周，遵行悅豫，慈念十方，哀喜行護，亦復如是。其心廣大，愍護無際，無怨不恨，欲濟眾生，救護十方，具四等心，一切蒙安。",
+   "T0286": "「是菩薩以慈心高廣無量，無瞋、無恨、無惱害，以信解力遍滿一方、二方、三方、四方，四維上下亦復如是。悲心、喜心、捨心高廣無量，無瞋恨、無惱害，以信解力遍滿一方、第二、三、四方，四維上下亦復如是。",
+   "T0278": "是菩薩以慈心廣大無量，無瞋恨，無惱害，以信解力遍滿十方；悲、喜、捨心，亦復如是。",
+   "T0279": "「佛子！此菩薩心隨於慈，廣大無量不二，無怨無對，無障無惱，遍至一切處，盡法界、虛空界，遍一切世間；住悲、喜、捨亦復如是。",
+   "T0287": "「復次，菩薩修慈俱心，廣大無二、無量、無恨、無怨、無障、無所惱害，遍至一切極於法界盡虛空性，諸世界中以慈普覆一切世間具足安住。修悲俱心、修喜俱心亦復如是。修捨俱心廣大無二、無量、無恨、無怨、無障、無所惱害，遍至一切極於法界盡虛空性，諸世界中以捨普覆一切世間具足安住。",
+   "bo": "བཏང་སྙོམས་དང་ལྡན་པའི་སེམས་ཡངས་པ། རྒྱ་ཆེ་བ་ གཉིས་སུ་མེད་པ། ཚད་མེད་པ་ཁོ་ན་མེད་པ་ལྟོད་པ་མེད་པ་བསྒྲིབས་པ་མེད་པ། གནོད་པ་མེད་པ་ཐམས་ཅད་དུ་ཁྱབ་པས་འཇིག་རྟེན་གྱི་ཁམས་ཆོས་ཀྱི་དབྱིངས་ཀྱིས་ཀླས་པ། ནམ་མཁའི་མཐས་གཏུགས་པ་ཐམས་ཅད་རྒྱས་པར་བཀང་ནས་ཉེ་བར་བསྒྲུབས་ཏེ་གནས་སོ།",
+   "en": "“He has an expansive loving mind that is vast, nondual, immeasurable, without hostility, nondependent, unobscured, nonharmful, and all-pervading, so that it fills all worlds, the realm of phenomena, reaches the limits of space, and spreads everywhere."
+  },
+  "d3-08": {
+   "sa": "so 'nekavidhāṃ ṛddhividhiṃ pratyanubhavati / pṛthivīmapi kampayati / eko 'pi bhūtvā bahudhā bhavati / bahudhāpi bhūtvaiko bhavati / āvirbhāvaṃ tirobhāvamapi pratyanubhavati / tiraḥkuḍyaṃ tiraḥprākāraṃ parvatamapyasajjan gacchati tadyathāpi nāma ākāśe / ākāśe 'pi paryaṅkena krāmati tadyathāpi nāma pakṣiśakuniḥ / pṛthivyāmapyunmajjananimajjanaṃ karoti tadyathāpi nāma udake / udake 'pyamañjan gacchati tadyathāpi pṛthivyām / dhūmayati prajvalati, tadyathāpi nāma mahānagniskandhaḥ / svakāyādapi mahāvāridhārā utsṛjati tadyathāpi nāma mahāmeghaḥ / yābhirvāridhārābhirayaṃ trisāhasramahāsāhasro lokadhāturādīptaḥ pradīptaḥ saṃprajvalito 'gninā ekajvālībhūto nirvāpyate / imāvapi candrasūryāvevaṃmaharddhikau evaṃmahānubhāvau pāṇinā parāmṛśati parimārṣṭi yāvadbrahmalokamapi kāyena vaśaṃ vartayati // sa divyena śrotradhātunā [viśuddhenā]tikrāntamānuṣyakena ubhayān śabdān śṛṇoti divyān mānuṣyākān, sūkṣmānaudārikāṃśca / ye dūre 'ntike vā antaśo daṃśamaśakakīṭamakṣikāṇāmapi śabdān śṛṇoti / [eṣā divyaśrotrābhijñā] // sa parasattvānāṃ parapudgalānāṃ cetasaiva cittaṃ yathābhūtaṃ prajānāti / sarāgaṃ cittaṃ sarāgacittamiti yathābhūtaṃ prajānāti / virāgaṃ cittaṃ virāgacittamiti prajānāti / sadoṣaṃ ... vigatadoṣaṃ ... samohaṃ ... vigatamohaṃ ... sakleśaṃ ... niḥkleśaṃ ... parīttaṃ ... vipulaṃ ... mahadgataṃ ... apramāṇaṃ ... saṃkṣiptaṃ ... [vistīrṇaṃ] ... samāhitaṃ ... asamāhitaṃ ... vimuktaṃ ... avimuktaṃ ... sāṅganam ... anaṅganam ... audārikaṃ cittamaudārikacittamiti yathābhūtaṃ prajānāti / anaudārikaṃ cittamanaudārikaṃ cittamiti yathābhūtaṃ prajānāti / iti parasattvānāṃ parapudgalānāṃ cetasaiva cittaṃ yathābhūtaṃ prajānāti / [ityeṣā paracittajñānāmijñā] // so 'nekavidhaṃ pūrvanivāsamanusmarati / ekāmapi jātimanusmarati / dve tisraścatasraḥ pañca daśa viṃśatiḥ triṃśataṃ catvāriṃśataṃ pañcāśataṃ jātiśatamanusmarati / anekānyapi jātiśatāni / (Dbh 22) anekānyapi jātiśatasahasrāṇi / saṃvartakalpamapi vivartakalpamapi / anekānapi saṃvartavivartakalpānapyanusmarati / kalpaśatamapi kalpasahasramapi kalpakoṭīmapi kalpakoṭīśatamapi kalpakoṭīsahasramapi kalpakoṭīśatasahasramapi yāvadanekānyapi kalpakoṭīniyutaśatasahasrāṇyanusmarati - amutrāhamāsaṃ evaṃnāmā / evaṃgotraḥ evaṃjātiḥ evamāhāra evamāyuḥpramāṇaḥ evaṃ cirasthitikaḥ evaṃ sukhaduḥkhapratisaṃvedī / so 'haṃ tataścyuto 'tropapannaḥ / tataścyuta ihopapannaḥ / iti sākāraṃ soddeśaṃ sanimittamanekavidhaṃ pūrvanivāsamanusmarati / [eṣā pūrvanivāsānusmṛtyabhijñā] // sa divyena cakṣuṣā viśuddhenātikrāntamānuṣyakeṇa sattvān paśyati cyavamānānupapadyamānān suvarṇān durvarṇān sugatān durgatān praṇītān hīnān / yathākarmopagān sattvān yathābhūtaṃ prajānāti - ime bhavantaḥ sattvāḥ kāyaduścaritena samanvāgatā vāgduścaritena samanvāgatā [manoduścaritena samanvāgatāḥ] / āryāṇāmapavādakā mithyādṛṣṭayaḥ mithyādṛṣṭikarmasamādānahetostaddhetuṃ tatpratyayaṃ kāyasya bhadātparaṃ maraṇādapāyadurgativinipātanirayeṣūpapadyante / ime punarbhavantaḥ sattvāḥ kāyasucaritena samanvāgatā [vāksucaritena samanvāgatā manaḥsucaritena samanvāgatā] āryāṇāmanapavādakāḥ / samyagdṛṣṭikarmasamādānahetostaddhetuṃ tatpratyayaṃ kāyasya bhedāt paraṃ maraṇātsugatau svarge devalokeṣūpapadyanta iti / [prajānāti / evaṃ] divyena cakṣuṣā viśuddhenātikrāntamanuṣyeṇa sākāraṃ soddeśaṃ sanimittaṃ sattvān paśyati / cyavamānānupapadyamānān ... yathābhūtaṃ paśyati //",
+   "T0285": "又彼修成若干變化，神足示現，震動天地，以一身化為無數身，以無數身，還合一身；徹越虛空，通過牆壁，入出太山，須彌鐵圍，無所罣礙，如遊虛空，虛空中坐；猶如飛鳥出沒于地，如入在水，履水上行如行于地，身出烟火如大炬然；察是日月，神足巍巍，威神無極，遊行四域，消除闇冥，以手捫摸日月宮殿，其身遠超，上至梵天。耳之徹聽，清淨洞達，過於天人；聞其言聲諸天人民。又復了知眾生心念，所念如是，知有欲心無欲之心，有恚心無恚心，有癡心無癡心，有塵勞心，無塵勞心，小心大心，多心少心，要心無要心，亂心正心，定心不定心，解脫心無脫心，最上心無上心，審見本末，皆悉知之；如是一切分別眾生諸心所念，善惡禍福，道俗真偽，靡所不達。又識無限前宿所居，一生十生，百生千生，不可稱載宿命時事，悉識別之；劫壞劫成，悉知無數不可計會天地成敗；吾曾更歷國土處所，名姓如是，所遊飲食，壽命長短，衣服好醜，所遭苦樂，彼沒生此，此沒生彼，此沒生此，彼沒生彼，周遍沒來生，尋復還返；以是比類，曉知無限前宿所更，已復清淨。清淨天眼，過諸天眼，見人生死善惡所歸，尊卑貴賤，如所作受，又此眾生身行善，口言善，心念善，不謗聖賢，奉修正見，壽盡身散，得上天生；又若眾生，身行惡，口言惡，心念惡，誹謗聖賢，或於邪見，壽盡身散，墮于地獄；以淨天眼，普見天人，蜎飛蠕動蚑行之類，所行禍福善惡所趣。",
+   "T0286": "「是菩薩有種種神通力：能動大地、一身為多身、多身為一身、現滅還出、石壁山障皆能徹過如行虛空、於虛空中加趺而去猶如飛鳥，入出於地如水無異，履水如地、身出烟焰如大火聚、日月有大神德威力而能以手捫摸摩之、身力自在乃至梵世。是菩薩以清淨天耳過於人耳，悉聞人天音聲遠近。是菩薩以他心智如實知他心，染心如實知染心、離染心如實知離染心、瞋心離瞋心、癡心離癡心、垢心離垢心、小心大心、散亂心如實知散亂心、定心不定心、縛心解心、有上心無上心如實知有上心無上心；如是，以自心知他心。是菩薩念知宿命諸所生處，所謂一世、二世，三、四、五世，乃至十、二十、三十、四十、五十，乃至百世、千世、萬世、百千萬億那由他世。一劫、二劫，乃至百千萬億那由他無量劫數，其中諸劫無量成壞、於諸劫中所經因緣，悉能念知，我生彼處、如是種族、如是姓名、如是飲食、如是苦樂、如是久住，我於彼死生於此間、於此間死生於彼間。如是，種種相貌因緣悉能念知。是菩薩天眼清淨過於人眼，見眾生生死，形色好醜、善惡、貧賤富貴、趣善惡道、隨業受報，皆如實知，所謂是諸眾生成就身惡業、成就口惡業、成就意惡業、距逆賢聖、受邪見教，起罪業因緣故，身死墮惡道、生在地獄；是諸眾生成就善身業、善口業、善意業、不逆賢聖、信受正見，行善業因緣故，死後生善處天上。",
+   "T0278": "是菩薩有神通力能動大地，一身為多身，多身為一身，現沒還出，石壁皆過，如行虛空，於虛空中，跏趺而去；猶如飛鳥，履水如地，入地如水；身出煙焰，如大火聚；日月威德而能以手捫摸摩之身力自在，乃至梵世。是菩薩天耳清淨，過天人耳，悉聞人天音聲遠近。是菩薩以他心智，如實知他心、欲心；如實知欲心、離欲心；如實知離欲心、瞋心、離瞋心；癡心、離癡心；垢心、離垢心；小心、大心；廣心、狹心；亂心、無亂心；定心、不定心；縛心、解心；有上心、無上心；如實知有上心、無上心。是菩薩念知宿命諸所生處，一世、二世乃至百千萬億那由他世；一劫、二劫乃至百千萬億那由他劫，其中諸劫無量成壞，於諸劫中所經因緣，悉能念知，我生彼處，如是種族、如是姓名、如是飲食、如是苦樂、如是久住；我於彼死，生於此間；於此間死，生於彼間，如是種種悉能念知。是菩薩天眼清淨，過天人眼，見諸眾生死此生彼，形色好惡，貧賤富貴，趣善惡道，隨業受報，皆如實知。所謂：是諸眾生成就身惡業、口惡業、意惡業、拒逆賢聖、受邪見教，起罪業因緣故，身壞命終，墮於惡道；是諸眾生成就身善業、口善業、意善業，不逆賢聖，信受正見，行善業因緣故，身壞命終生於善處。",
+   "T0279": "「佛子！此菩薩得無量神通力，能動大地；以一身為多身，多身為一身，或隱或顯；石壁山障，所往無礙，猶如虛空；於虛空中跏趺而去，同於飛鳥；入地如水，履水如地；身出煙焰，如大火聚；復雨於水，猶如大雲；日月在空，有大威力，而能以手捫摸摩觸；其身自在，乃至梵世。此菩薩天耳清淨過於人耳，悉聞人、天若近若遠所有音聲，乃至蚊蚋、虻蠅等聲亦悉能聞。此菩薩以他心智，如實而知他眾生心。所謂：有貪心，如實知有貪心；離貪心，如實知離貪心；有瞋心、離瞋心，有癡心、離癡心，有煩惱心、無煩惱心，小心、廣心，大心、無量心，略心、非略心，散心、非散心，定心、非定心，解脫心、非解脫心，有上心、無上心，雜染心、非雜染心，廣心、非廣心，皆如實知。菩薩如是以他心智知眾生心。此菩薩念知無量宿命差別，所謂：『念知一生，念知二生、三生、四生，乃至十生、二十、三十，乃至百生、無量百生、無量千生、無量百千生，成劫、壞劫、成壞劫、無量成壞劫，我曾在某處，如是名，如是姓，如是種族，如是飲食，如是壽命，如是久住，如是苦樂。我於彼死，生於某處，從某處死，生於此處，如是形狀，如是相貌，如是言音。』如是過去無量差別，皆能憶念。此菩薩天眼清淨過於人眼，見諸眾生生時、死時、好色、惡色，善趣、惡趣，隨業而去。若彼眾生成就身惡行，成就語惡行，成就意惡行，誹謗賢聖；具足邪見及邪見業因緣，身壞命終，必墮惡趣，生地獄中。若彼眾生成就身善行，成就語善行，成就意善行，不謗賢聖，具足正見；正見業因緣，身壞命終，必生善趣諸天之中。菩薩天眼皆如實知。",
+   "T0287": "復次，菩薩受用無量諸神變事震動大地，一身為多身、多身為一身，或顯、或隱，迅疾無礙，牆壁山嶂皆能徹過如行於空，於虛空中跏趺而去猶如飛鳥，出沒於地猶若水中，履水如地，身出煙焰如大火聚，從身注水喻如大雲，此之日月有大神德有大威勢，以手捫摸，乃至梵世轉身自在；以天耳界清淨過人，悉聞人天二種音聲，若近、若遠乃至蚊蚋、蜣蜋等悉聞其聲。以他心智如實而知他有情心，所謂有貪心如實知有貪心，離貪心如實知離貪心，有瞋離瞋，有癡離癡，有染離染，狹小、廣大無量聚散，住定、出定，已得解脫、未得解脫，有亹、無亹，麁心、細心皆如實知。菩薩如是以他心智，於他有情他數取趣心之所念心自了知。以宿住智隨念無量諸宿住事，謂能隨念自他一生，二、三、四、五，至十、二十、三、四、五十，乃至百生、多百、多千、多百千生，成劫、壞劫及成壞劫，乃至隨念無量成壞劫，隨念百劫，隨念千劫、百千劫、俱胝劫、百俱胝劫、千俱胝劫、百千俱胝劫，乃至無量百千俱胝那庾多劫皆能隨念。謂我宿生曾在某處，如是名、如是姓、如是種族、如是形貌、如是飲食、如是壽量、如是久住、如是苦樂，從彼處沒來生此處，從此處沒往生於彼，如是形貌、如是言說，若略、若廣諸宿住事皆能隨念。以天眼界清淨過人，見諸有情死時、生時，好色、惡色、善趣、惡趣、若劣、若勝，隨業所行，諸有情類皆如實知。謂彼有情成就身、語及意惡行，誹謗賢聖、具足邪見，由邪見業現受因緣，身壞命終墮險惡趣生捺落迦。復彼有情成就身、語及意善行，讚美賢聖、成就正見，由正見業現受因緣，身壞命終當昇善趣，生於天中受諸快樂。菩薩如是以天眼界清淨過人，以共形貌、以共言說，見諸有情死時、生時、好色、惡色、善趣、惡趣、若劣、若勝，隨業所行，諸有情類皆如實知。",
+   "bo": "།དེ་རྫུ་འཕྲུལ་གྱིས་རྣམ་པ་དུ་མ་མྱོང་བར་བྱེད་དེས་འདི་ཡང་གཡོ་བར་བྱེད་དོ། །གཅིག་ཏུ་གྱུར་ནས་མང་པོར་འགྱུར་རོ། །མང་པོར་གྱུར་ནས་གཅིག་ཏུ་འགྱུར་རོ། །སྣང་བ་དང་མི་སྣང་བ་ལ་འང་རབ་ཏུ་སྤྱོད་དེ་རྩིག་པ་ལ་ཐགས་ཐོགས་མེད་པ་དང་། ར་བ་ལ་ཐགས་ཐོགས་མེད་པ་དང་། རི་ལ་ཡང་དཔེར་ན་ནམ་མཁའ་བཞིན་དུ་ཐགས་ཐོགས་མེད་ཅིང་ཆགས་པ་མེད་པར་འགྲོའོ། །དཔེར་ན་ནམ་མཁའ་ལ་ལྡིང་བའི་བྱ་བཞིན་དུ་ནམ་མཁའ་ལ་འང་དཀྱིལ་མོ་དཀྲུང་གིས་གནས་པར་བྱེད་དོ། །ཆུ་བཞིན་དུས་ལའང་ནུབ་ཅིང་འབྱུང་བ་སྟོན་ཏོ། །ས་བཞིན་དུ་ཆུ་ལ་ཡང་འབྱིང་བ་མེད་པར་འགྲོའོ། །མྱེའི་ཕུང་པོ་ཆེན་པོ་བཞིན་དུ་དུ་བ་འཐུལ་ལོ། །མེ་ལྕེ་འབར་རོ། །སྤྲིན་ཆེན་པོ་བཞིན་དུ་ལུས་ལས་ཆར་འབེབས་སོ། །ཉི་མ་དང་ཟླ་བ་འདི་དག་འདི་ལྟར་རྫུ་འཕྲུལ་ཆེ་ཞིང་འདི་ལྟར་མཐུ་ཆེ་ལ། འདི་ལྟར་དབང་ཆེ་བར་གྲགས་པ་དག་ཀྱང་ལག་པས་ཉུག་ཅིང་རེག་པར་བྱེད་དོ། །ཚངས་པའི་འཇིག་རྟེན་གྱི་བར་དུ་ཡང་ལུས་ཀྱིས་དབང་བསྒྱུར་ཏེ། དེ་ལྷའི་རྣ་བའི་ཁམས་རྣམ་པར་དག་པ་མྱི་ལས་འདས་པས་ལྷ་དང་མིའི་སྒྲ་གཉིས་ཀ་ཡང་ཉན་ཏོ། རིང་ཡང་རུང་ཉེ་ཡང་རུང་སྟེ་ཆུང་ངུ་ན་སྦྲང་བུ་དང་། ཤ་སྦྲང་དང་། བུང་བ་དང་། སྲིན་བུའི་སྒྲ་ཡང་ཐོས་སོ། །དེ་སེམས་ཅན་ཕ་རོལ་དང་གང་ཟག་ཕ་རོལ་གྱི་སེམས་ཀྱང་སེམས་ཀྱིས་ཡང་དག་པ་ཇི་ལྟ་བ་བཞིན་དུ་རབ་ཏུ་ཤེས་ཏེ། འདོད་ཆགས་དང་བཅས་པའི་སེམས་ལ་འདོད་ཆགས་དང་བཅས་པའི་སེམས་ཤེས་ཡང་དག་པ་ཇི་ལྟ་བ་བཞིན་དུ་རབ་ཏུ་ཤེས་སོ། ། འདོད་ཆགས་དང་བྲལ་བའི་སེམས་ལ་འདོད་ཆགས་དང་བྲལ་བའི་སེམས་ཞེས་ཡང་དག་པ་ཇི་ལྟ་བ་བཞིན་དུ་རབ་ཏུ་ཤེས་སོ། །ཞེ་སྡང་དང་བཅས་པ་དང་། ཞེ་སྡང་དང་བྲལ་བ་དང་། གཏི་མུག་དང་བཅས་པ་དང་། གཏི་མུག་དང་བྲལ་བ་དང་། ཉོན་མོངས་པ་དང་བཅས་པ་དང་། ཉོན་མོངས་པ་དང་བྲལ་བ་དང་། ཆེ་བ་དང་། ཆུང་བ་དང་། ཡངས་པ་དང་། དོག་པ་དང་། མཉམ་པར་བཞག་པ་དང་། མཉམ་པར་མ་བཞག་པ་དང་། རྣམ་པར་གྲོལ་བ་དང་། རྣམ་པར་མ་གྲོལ་བ་དང་། སྐྱོན་ཅན་དང་། སྐྱོན་མེད་པ་དང་། སེམས་རྒྱ་ཆེན་པོ་ལ་སེམས་རྒྱ་ཆེན་པོའོ་ཞེས་ཡང་དག་པ་ཇི་ལྟ་བ་བཞིན་དུ་རབ་ཏུ་ཤེས་སོ། །སེམས་རྒྱ་ཆུང་ངུ་ལ་སེམས་རྒྱ་ཆུང་ངུའོ་ཞེས་ཡང་དག་པ་ཇི་ལྟ་བ་བཞིན་དུ་རབ་ཏུ་ཤེས་ཏེ། དེ་ལྟར་ན་སེམས་ཅན་ཕ་རོལ་དང་། གང་ཟག་ཕ་རོལ་གྱི་སེམས་སེམས་ཀྱིས་ཡང་དག་པ་ཇི་ལྟ་བ་བཞིན་དུ་རབ་ཏུ་ཤེས་སོ། །དེ་རྣམ་པ་དུ་མར་སྔོན་གྱི་གནས་རྗེས་སུ་དྲན་ཏེ། ཚེ་རབས་གཅིག་ཀྱང་རྗེས་སུ་དྲན་ནོ། །གཉིས་དང་། གསུམ་དང་། བཞི་དང་། ལྔ་དང་། བཅུ་དང་། ཉི་ཤུ་དང་། སུམ་ཅུ་དང་། བཞི་བཅུ་དང་། ལྔ་བཅུ་དང་། ཚེ་རབས་བརྒྱ་ཡང་རྗེས་སུ་དྲན་ནོ། །ཚེ་རབས་བརྒྱ་ཕྲག་དུ་མ་དང་། ཚེ་རབས་སྟོང་ཕྲག་དུ་མ་དང་། ཚེ་རབས་བརྒྱ་སྟོང་ཕྲག་དུ་མ་དང་། ཚེ་རབས་བྱེ་བ་ཕྲག་བརྒྱ་སྟོང་ཕྲག་དུ་མ་ནས། ཚེ་རབས་བྱེ་བ་ཁྲག་ཁྲིག་བརྒྱ་སྟོང་ཕྲག་དུ་མའི་བར་དུ་རྗེས་སུ་དྲན་ནོ། །འདུ་བའི་བསྐལ་པ་དུ་མ་དང་། འཇིག་པའི་བསྐལ་པ་དུ་མ་དང་། འདུ་བ་དང་འཇིག་པའི་བསྐལ་པ་དུ་མ་ཡང་རྗེས་སུ་དྲན་ནོ། །བསྐལ་པ་བརྒྱ་ཡང་རྗེས་སུ་དྲན་ནོ། །བསྐལ་པ་སྟོང་དང་། བསྐལ་པ་སྟོང་ཕྲག་བརྒྱ་དང་། བསྐལ་པ་བྱེ་བ་སྟོང་ཕྲག་བརྒྱ་ནས། བསྐལ་པ་བྱེ་བ་བརྒྱ་སྟོང་དུ་མའི་བར་དུ་རྗེས་སུ་དྲན་ནོ། །བསྐལ་པ་ཁྲག་ཁྲིག་དང་བསྐལ་པ་ཁྲག་ཁྲིག་བརྒྱ་དང་། བསྐལ་པ་ཁྲག་ཁྲིག་སྟོང་དང་། བསྐལ་ པ་ཁྲག་ཁྲིག་སྟོང་ཕྲག་བརྒྱ་དང་། བསྐལ་པ་བྱེ་བ་ཁྲག་ཁྲིག་བརྒྱ་སྟོང་ནས། བསྐལ་བ་བྱེ་བ་ཁྲག་ཁྲིག་བརྒྱ་སྟོང་དུ་མའི་བར་དུ་རྗེས་སུ་དྲན་ཏེ། བདག་ནི་ཆེ་གེ་མོ་ཞིག་ན་འདུག་འདུག་གོ །མིང་ནི་འདི་ཞེས་བྱའོ། །རིགས་ནི་འདི་ཡིན་ནོ། །རུས་ནི་འདི་ཡིན་ནོ། །ཁ་ཟས་ནི་འདི་ཟོས་སོ་ཚེ་ནི་འདི་ཙམ་ཞིག་ཏུ་གྱུར་ཏོ། །འདི་སྲིད་ཅིག་ཏུ་རིང་དུ་གནས་སོ། །བདེ་བ་དང་ཉོན་མོངས་པ་ནི་འདི་ལྟ་བུ་ཞིག་མྱོང་ངོ་། །དེ་ནས་ཤི་འཕོས་ནས་ཆེ་གེ་མོ་ཞིག་ཏུ་སྐྱེས་སོ། །དེ་ནས་ཀྱང་ཤི་འཕོས་ནས་འདི་ལྟ་བུ་ཞིག་ཏུ་སྐྱེས་སོ། །ཞེས་ས་ཚིགས་དང་བཅས། མཚན་མ་དང་བཅས། དན་རྟགས་དང་བཅས་པར་རྣམ་པ་དུ་མར་སྔོན་གྱི་གནས་རྗེས་སུ་དྲན་ནོ། །དེས་ལྷའི་མིག་རྣམ་པར་དག་ཅིང་མི་ལས་འདས་པས་སེམས་ཅན་རྣམས་ཤི་འཕོ་བ་དང་། སྐྱེ་བ་དང་། ཁ་དོག་སྡུག་པ་དང་། ཁ་དོག་མི་སྡུག་པ་དང་། བདེ་བའི་ལམ་དུ་ཕྱིན་པ་དང་། ངན་སོང་དུ་སོང་བ་དང་། ངན་པ་དང་། བཟང་པོ་ཐམས་ཅད་རབ་ཏུ་མཐོང་ངོ་། །ལས་ཇི་ལྟ་བ་བཞིན་དུ་རྗེས་སུ་འབྲང་བའི་སེམས་ཅན་རྣམས་ཡང་དག་པ་ཇི་ལྟ་བ་བཞིན་དུ་རབ་ཏུ་ཤེས་ཏེ། སེམས་ཅན་འདི་དག་ནི་ལུས་ཀྱིས་ངན་དུ་སྤྱོད་པ་དང་ལྡན་པ། ངག་གིས་ངན་དུ་སྤྱོད་པ་དང་ལྡན་པ། ཡིད་ཀྱིས་ངན་དུ་སྤྱོད་པ་དང་ལྡན་པ། འཕགས་པ་རྣམས་ལ་སྐུར་པ་འདེབས་པ་ལོག་པར་ལྟ་བ་ཅན་དག་སྟེ། ལོག་པར་ལྟ་བའི་ལས་རབ་ཏུ་བླངས་པའི་རྒྱུས་ལུས་ཞིག་སྟེ། ཤི་བའི་འོག་ཏུ་ངན་སོང་ངན་འགྲོ་ལོག་པར་ལྟུང་བ་སེམས་ཅན་དམྱལ་བར་སྐྱེའོ། ཞེས་བྱ་བ་དང་། སེམས་ཅན་འདི་དག་ནི་ལུས་ཀྱིས་ལེགས་པར་སྤྱོད་པ་དང་ལྡན་པ། ངག་གིས་ལེགས་པར་སྤྱོད་པ་དང་ལྡན་པ། ཡིད་ཀྱིས་ལེགས་པར་སྤྱོད་པ་དང་ལྡན་པ། འཕགས་པ་ལ་སྐུར་བ་མི་འདེབས་པ་ཡང་དག་པར་ལྟ་བ་ ཅན་དག་སྟེ། ཡང་དག་པར་ལྟ་བའི་ལས་རབ་ཏུ་བླངས་པའི་རྒྱུས་ལུས་ཞིག་སྟེ། ཤི་བའི་འོག་ཏུ་བདེ་འགྲོ་མཐོ་རིས་ཀྱི་འཇིག་རྟེན་དུ་ལྷར་སྐྱེའོ་ཞེས་བྱ་བར་རབ་ཏུ་ཤེས་ཏེ། དེ་ལྟར་ན་ལྷའི་མྱིག་རྣམ་པར་དག་པ་མི་ལས་འདས་པས་སེམས་ཅན་འཆི་བ་དང་། སྐྱེ་བ་དང་། ཁ་དོག་སྡུག་པ་དང་། ཁ་དོག་མི་སྡུག་པ་དང་། བདེ་འགྲོར་སོང་བ་དང་། ངན་སོང་དུ་སོང་བ་དང་། ངན་པ་དང་། བཟང་པོ་ཐམས་ཅད་ས་ཚིགས་དང་བཅས། མཚན་མ་དང་བཅས། དན་རྟགས་དང་བཅས་པར་རབ་ཏུ་མཐོང་ཏེ། །ལས་ཇི་ལྟ་བ་བཞིན་དུ་རྗེས་སུ་འབྲང་བའི་སེམས་ཅན་རྣམས་ཀྱང་ཡང་དག་པ་ཇི་ལྟ་བ་བཞིན་དུ་རབ་ཏུ་ཤེས་སོ།",
+   "en": "“He demonstrates various miracles. He makes the earth shake, he makes one thing become many and many things become one, he can appear and disappear, he can pass through walls, he can pass through ramparts, he can pass freely through mountains as if they were space, he can sit cross-legged in the air, he can sink into the earth as if it were water, he stands on water as if it were earth, he emits smoke as if he were a fire, he blazes with fire, and rain falls from his body as if he were a great cloud. With his miraculous prowess and his great powers, he can touch the sun and the moon with his hand, and the power of his body extends up to the Brahmā realm. With his superhuman, pure, divine hearing he listens to what both humans and deities say. He hears sounds whether they are faraway or near, even small sounds like those of gnats, mosquito, bugs, and flies. “He knows exactly what is in the minds of other beings and other individuals. He knows a mind that has desire to be a mind that has desire, knowing it exactly for what it is. He knows a mind without desire to be a mind without desire, knowing it exactly for what it is. He knows exactly if the mind has anger or is without anger, has ignorance or is without ignorance, has the kleśas or is without the kleśas, is great or small, is wide or narrow, is in meditation or is not in meditation, is liberated or is not liberated, and has faults or is without faults, and he knows a mind that is vast to be vast. He knows a mind that is limited to be a mind that is limited, knowing it to be exactly what it is. “In that way, he knows perfectly the minds of other beings, the minds of other individuals. He remembers many previous lifetimes: he remembers one previous lifetime, two, three, four, five, ten, twenty, thirty, forty, fifty, and a hundred previous lives. He remembers many hundreds of previous lives, many thousands of previous lives, many hundreds of thousands of previous lives, many hundreds of thousands of millions of previous lives, and many quintillions of previous lives. “He remembers many eons of creation, many eons of destruction, and many eons of creation and destruction. He remembers many hundreds of eons, many thousands of eons, many hundreds of thousands of eons, many tens of millions  of eons, many billions of eons, many tens of billions of eons, many trillions of eons, and many quintillions of eons. “He says, ‘I lived in such and such a place, I had this name, I had this family, I had this clan, I ate this food, my lifetime was this long, I remained for this long, and I experienced this happiness and unhappiness, then when I died I was reborn in such and such a place. Then when I died there, I was reborn in such and such a place.’ In that way he remembers many details of his previous lifetimes, such as his appearance, location, and omens. “With his superhuman pure divine sight he sees the deaths of beings, their rebirths, their good color or bad color, and whether they go on the path to happiness or to the lower realms, seeing all that is good or bad. “He knows perfectly what kind of karma beings have created: ‘These beings have done bad actions with their bodies, they have done bad actions with their speech, they have done bad actions with their minds, they have maligned the noble ones, and they have wrong views. As the result of the karma they have acquired by holding wrong views they will acquire a body. After death they will fall into the lower realms, into the bad existences, and be reborn in the hells. “ ‘These beings have done good actions with their bodies, done good actions with their speech, and done good actions with their minds. They have not maligned the noble ones, and they have correct views. As the result of the karma they have acquired by holding correct views, they will acquire a body. After death they will be reborn in the higher realms, in happy existences.’ “In that way, with divine, superhuman pure sight he sees the death of beings who have passed away, their birth, their good color or bad color, whether they have gone to happy existences or bad existences; he sees all the good and bad, with their dispositions, signs, and omens. He knows exactly what kind of karma beings have to follow."
+  },
+  "d3-09": {
+   "sa": "sa imāni dhyānāni vimokṣān samādhīn samāpattīśca samāpadyate, vyuttiṣṭhete / na ca teṣāṃ vaśenopapadyate 'nyatra yatra bodhyaṅgaparipūriṃ paśyati tatra saṃcintya praṇidhānavaśenopapadyate / tatkasya hetoḥ? tathā hi tasya bodhisattvasyopāyakauśalyābhinirhatā cittasaṃtatiḥ //",
+   "T0285": "又以一心三昧正受，若從定起，不用此德，有所向生，唯覩具足菩薩道品，願有所濟，故示現生；",
+   "T0286": "「是菩薩於諸禪定解脫三昧能入、能出，而不隨生，但見何處有助菩提法處，以願力故，能生其中。",
+   "T0278": "是菩薩於諸禪定解脫三昧，能入、能出而不隨生；有助菩提法處；以願力故，能生其中。",
+   "T0279": "此菩薩於諸禪三昧、三摩鉢底能入能出，然不隨其力受生，但隨能滿菩提分處，以意願力而生其中。",
+   "T0287": "而此菩薩於彼靜慮、解脫、等持及諸等至，隨意入出，而不由彼威力受生，若見彼處速能圓滿菩提分法故，以願力而生其中。",
+   "bo": "།དེ་བསམ་གཏན་དང་། རྣམ་པར་ཐར་བ་དང་། ཏིང་ངེ་འཛིན་དང་སྙོམས་པར་འཇུག་པ་འདི་དག་ལ་སྙོམས་པར་འཇུག་ཅིང་རྣམ་པར་ལྡང་ཡང་གང་དུ་བྱང་ཆུབ་ཀྱི་ཡན་ལག་ཡོངས་སུ་རྫོགས་པར་འགྱུར་བའི་གནས་མ་གཏོགས་པར་དེ་དག་གི་དབང་གིས་མི་སྐྱེའོ།",
+   "en": "“He rests in meditation in these dhyānas, liberations, samādhis, and samāpattis and arises from them. He does not fall under their power but sees the completion of the factors for enlightenment."
+  },
+  "d3-10": {
+   "sa": "tasya asyāṃ prabhākaryāṃ bodhisattvabhūmau sthitasya bodhisattvasya bahavo buddhā ābhāsamāgacchanti / peyālaṃ / pariṇāmayati / tāṃśca tathāgatānarhataḥ samyaksaṃbuddhān paryupāste / teṣāṃ ca dharmadeśanāṃ satkṛtya śṛṇoti udgṛhṇāti dhārayati / śrutvā ca yathābhajamānaṃ pratipattyā samādayati / sa sarvadharmāṇāmasaṃkrāntitāṃ ca avināśitāṃ ca pratītya pratyayatayā vyavalokayati // tasya bhūyasyā mātrayā sarvāṇi kāmabandhanāni tanūni bhavanti / sarvāṇi rūpabandhanāni sarvāṇi bhavabandhanāni sarvāṇyavidyābandhanāni tanūni bhavanti / dṛṣṭikṛtabandhanāni ca pūrvameva prahīṇāni bhavanti / tasya asyāṃ prabhākaryāṃ bodhisattvabhūmau sthitasya bodhisattvasya ... peyālaṃ ... anupacayaṃ mithyārāgaḥ prahāṇaṃ gacchati anupacayaṃ mithyādoṣaḥ prahāṇaṃ gacchati, anupacayaṃ mithyāmohaḥ prahāṇaṃ gacchati / tāni cāsya kuśalamūlānyuttapyante pariśuddhyanti karmaṇyāni (Dbh 23) ca bhavanti / tadyathāpi nāma bhavanto jinaputrāstadeva jātarūpaṃ kuśalasya karmārasya hastagataṃ tulyadharaṇameva pramāṇenāvatiṣṭhate, evameva bhavanto jinaputrā bodhisattvasya asyāṃ prabhākaryāṃ bodhisattvabhūmau sthitasya anekān kalpān yāvadanekāni kalpakoṭiniyutaśatasahasrāṇi ... .prahāṇaṃ gacchanti / tasya bhūyasyā mātrayā kṣāntisauratyāśayatā ca pariśuddhyati, sākhilyamādhuryāśayatā ca akopyāśayatā ca akṣubhitāśayatā ca alubhitāśayatā ca anunnāmavanāmāśayatā ca sarvakṛtapratikṛtānāṃ niḥkāṅkṣāśayatā ca sattvakṛtapratikṛtānāṃ kāṅkṣāśayatā ca aśāṭhyamāyāvitāśayatā ca agahanāśayatā ca pariśuddhyati / tasya caturbhyaḥ saṃgrahavastubhyo 'rthacaryā atiriktatamā bhavati / daśabhyaḥ pāramitābhyaḥ kṣāntipāramitā atiriktatamā bhavati / na ca pariśeṣāsu na samudāgacchati yathābalaṃ yathābhajamānam /",
+   "T0285": "住于菩薩興光之地，見於十方無數億千兆載諸佛，奉事供養，衣服飲食，床褥臥具，病瘦醫藥；歸命諸佛，聽所演法，已聞受法，隨器授與，未曾越法，不毀佛教；各各觀察，益以愍哀，普如己身，親族無異，欲解諸縛，於無央數億百千劫兆載姟限，斷邪見欲，心不在言，亦除邪瞋愚癡之態；如金寶師工治寶矣，以作臂釧，釵鐶，瓔珞，㻉瑤之屬，無不成好。菩薩如是，住興光地，則以無言，消諸所見，諸婬怒癡；以是德本，增行巍巍，清白日甚，漸備仁和忍辱之原，將順戒禁而無所犯，心不懷恨不抱怒亂，志性無諂，心懷詳序，而不卒暴；一切所作，不以究竟，所作成辦，不行諛諂；無虛偽時，性無所受，行甚清淨；彼以四恩，而宣愛敬，行益利義；內志篤厚，十度無極，忍辱精進，所度無極，慇懃修此；亦復勸化餘諸菩薩，謹慎清淨，",
+   "T0286": "「是菩薩住明地中，見數百千萬億那由他諸佛，恭敬、供養、尊重、讚歎衣服、飲食、臥具、醫藥，親近諸佛聽受經法；聽受法已，隨力而行。「是菩薩爾時觀諸法不生不滅，眾緣而有。於百千萬億劫所集欲縛漸得微薄，一切有縛、一切無明縛皆悉微薄，不復積集；不積集故，斷於邪貪、邪瞋、邪癡。「諸佛子！譬如真金，巧師鍊治轉更精好，光明倍勝；菩薩亦如是，住在明地、不集三縛故，斷於邪貪、邪瞋、邪癡，諸善根轉增明淨。是菩薩忍辱心、柔軟心、美妙心、不壞心、不動心、不濁心、不高心、不下心、一切所作不望報心、他少有作當生報心、不諂曲心、不染亂心轉勝明淨。「爾時，菩薩於四攝法中愛語利益偏多，十波羅蜜中忍辱波羅蜜、精進波羅蜜轉多，餘助菩提法皆轉明淨。",
+   "T0278": "「是菩薩住於明地，見數百千萬億那由他諸佛、世尊，恭敬供養，尊重讚歎，衣服、飲食、臥具、醫藥、親近諸佛、聽受經法，如說修行。是菩薩觀諸法不生不滅，眾緣而有；於百千億劫，所集欲縛、有縛、無明縛，皆悉微薄，不復積集；不積集故，斷於邪貪、邪瞋、邪癡；譬如真金巧師鍊治，轉更精好，光明倍勝。菩薩亦如是住在明地，不集三縛故，斷於邪貪、邪瞋、邪癡，一切善根轉增明淨。是菩薩忍辱心、美妙心、不壞心、不動心、不濁心、不高下心、一切所作不望報心、他少有所作當生報心、不諂曲心、不染亂心、轉勝明淨。菩薩爾時於四攝法，愛語、利益偏多；十波羅蜜，忍辱波羅蜜、精進波羅蜜偏勝，餘助菩提法，皆轉明淨。",
+   "T0279": "「佛子！是菩薩住此發光地，以願力故，得見多佛。所謂：見多百佛，見多千佛，見多百千佛，乃至見多百千億那由他佛。悉以廣大心、深心，恭敬尊重，承事供養，衣服、飲食、臥具、湯藥，一切資生悉以奉施，亦以供養一切眾僧，以此善根迴向阿耨多羅三藐三菩提。於其佛所，恭敬聽法，聞已受持，隨力修行。此菩薩觀一切法，不生不滅，因緣而有；見縛先滅，一切欲縛、色縛、有縛、無明縛皆轉微薄；於無量百千億那由他劫不積集故，邪貪、邪瞋及以邪癡，悉得除斷，所有善根轉更明淨。佛子！譬如真金善巧鍊治，稱兩不減，轉更明淨。菩薩亦復如是，住此發光地，不積集故，邪貪、邪瞋及以邪癡，皆得除斷，所有善根轉更明淨。此菩薩忍辱心、柔和心、諧順心、悅美心、不瞋心、不動心、不濁心、無高下心、不望報心、報恩心、不諂心、不誑心、無譣詖心皆轉清淨。此菩薩於四攝中，利行偏多；十波羅蜜中，忍波羅蜜偏多；餘非不修，但隨力隨分。",
+   "T0287": "「菩薩住此發光地已，由廣大見及由願力，現見多佛、多百佛、多千佛、多百千佛、多百千那庾多佛、多俱胝佛、多百俱胝佛、多千俱胝佛、多百千俱胝佛、多百千俱胝那庾多佛。菩薩見是如來、應、正等覺已，悉以廣大增上意樂，恭敬、尊重、承事、供養，奉施衣服、飲食、臥具、病緣醫藥、諸資生具，奉獻菩薩諸妙樂具，於僧伽眾而作恭敬，以此善根迴向無上正等菩提；殷重奉事諸佛如來，於其佛所恭敬聽法，聞已受持隨分修行。「復次，菩薩觀一切法，無有移轉亦無壞滅，因緣而有；而此菩薩一切欲縛皆轉微薄；一切色縛、一切有縛、諸無明縛皆轉微薄；一切見縛先已除斷。菩薩住是發光地中，於無量劫、無量百劫、無量千劫、無量百千劫、無量百千那庾多劫、無量俱胝劫、無量百俱胝劫、無量千俱胝劫、無量百千俱胝劫、無量百千俱胝那庾多劫，不積集故邪貪除斷，不積集故邪瞋除斷，不積集故邪癡除斷，所有善根轉更明淨。唯諸佛子！譬如真金，善巧金師自手鍊治，離諸垢已稱量不減；菩薩住此發光地中亦復如是，無量百劫乃至無量百千俱胝那庾多劫，由不積集邪貪除斷，由不積集邪恚除斷，由不積集邪癡除斷，所有善根轉更明淨。又此菩薩轉更安忍，柔和意樂而得清淨。又悅美意樂，不瞋意樂，不動意樂，不濁意樂，無高下意樂，不希有情意下意樂，不望酬報意樂，無諂誑意樂，不稠林意樂，皆轉清淨。而此菩薩四攝事中利行偏多，十到彼岸中忍到彼岸而得增上，餘到彼岸隨力隨分非不修行。",
+   "bo": "།བྱང་ཆུབ་སེམས་དཔའི་ས་འོད་བྱེད་པ་འདི་ལ་གནས་པའི་ཚེ། དེའི་ལྟ་བ་རྒྱ་ཆེན་པོ་དང་། སྨོན་ལམ་གྱི་སྟོབས་ཀྱིས་སངས་རྒྱས་མང་པོ་སྣང་བར་འགྱུར་ཏེ། ལྟ་བ་རྒྱ་ཆེན་པོ་དང་སྨོན་ལམ་གྱི་སྟོབས་ཀྱིས་སངས་རྒྱས་བརྒྱ་ཕྲག་མང་པོ་དང་། སངས་རྒྱས་སྟོང་ཕྲག་མང་པོ་དང་། སངས་རྒྱས་བརྒྱ་སྟོང་ཕྲག་མང་པོ་དང་། སངས་རྒྱས་བྱེ་བ་བརྒྱ་སྟོང་ཕྲག་མང་པོ་དང་། སངས་རྒྱས་ཁྲག་ཁྲིག་མང་པོ་དང་། སངས་རྒྱས་ཁྲག་ཁྲིག་བརྒྱ་ཕྲག་མང་པོ་དང་། སངས་རྒྱས་ཁྲག་ཁྲིག་སྟོང་ཕྲག་མང་པོ་དང་། སངས་རྒྱས་ཁྲག་ཁྲིག་བརྒྱ་སྟོང་ཕྲག་མང་པོ་དང་། སངས་རྒྱས་བྱེ་བ་ཁྲག་ཁྲིག་བརྒྱ་སྟོང་རབ་ཏུ་སྣང་བར་འགྱུར་རོ། །དེས་དེ་བཞིན་གཤེགས་པ་དགྲ་བཅོམ་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་མཐོང་ནས། བསམ་པ་རྒྱ་ཆེན་པོས་རིམ་གྲོ་བྱེད་དོ། །བཀུར་སྟི་བྱེད་དོ། །བསྟི་སྟང་བྱེད་དོ། །མཆོད་པ་བྱེད་དོ། །ན་བཟའ་དང་། བསོད་སྙོམས་དང་། གཟིམས་ཆ་དང་། སྙུན་གྱི་ རྐྱེན་སྨན་དང་། ཡོ་བྱད་དག་ཀྱང་འབུལ་ཞིང་བྱང་ཆུབ་སེམས་དཔའི་བདེ་བའི་ཡོ་བྱད་ཐམས་ཅད་ཀྱང་ཡོངས་སུ་འབུལ་ལོ། །དགེ་འདུན་གྱི་ཚོགས་རྣམས་ལ་ཡང་ཡང་དག་པར་མཆོད་པ་བྱེད་དེ། དགེ་བའི་རྩ་བ་དེ་དག་ཀྱང་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་ཏུ་ཡོངས་སུ་བསྔོའོ། །དེ་བཞིན་གཤེགས་པ་དགྲ་བཅོམ་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་དེ་དག་ལ་བསྙེན་བཀུར་བྱེད་ཅིང་དེ་དག་ལས་རིམ་གྲོར་ཆོས་ཉན་ཏོ། །ལེན་ཏོ་འཛིན་ཏོ། །ཐོས་ནས་ཀྱང་ཅི་ཚུལ་དུ་ནན་ཏན་གྱིས་ཡང་དག་པར་སྒྲུབ་སྟེ། དེ་ཆོས་ཐམས་ཅད་ལ་འཕོ་བ་མྱེད་པ་དང་། འཇིག་པ་མེད་པ་དང་རྟེན་ཅིང་འབྲེལ་བར་འབྱུང་བ་ཤེས་པས་རབ་ཏུ་ལྟ་ཞིང་རྟོག་པས་ཀྱང་འདོད་པའི་བཅིངས་པ་ཐམས་ཅད་བསྲབས་པར་འགྱུར་རོ། །སྲིད་པའི་བཅིངས་པ་ཐམས་ཅད་བསྲབས་པར་འགྱུར་རོ། །མ་རིག་པའི་བཅིངས་པ་ཐམས་ཅད་བསྲབས་པར་འགྱུར་རོ། །ལྟ་བ་ལས་བྱུང་བའི་བཅིངས་པ་རྣམས་ནི་སྔ་ནས་ཀྱང་བྱང་བ་ཡིན་ཏེ། བྱང་ཆུབ་སེམས་དཔའི་ས་འོད་བྱེད་པ་འདི་ལ་གནས་པའི་བྱང་ཆུབ་སེམས་དཔའི་ལོག་པའི་འདོད་ཆགས་ནི་བསྐལ་པ་དུ་མ་དང་བསྐལ་པ་བརྒྱ་ཕྲག་དུ་མ་དང་། བསྐལ་པ་སྟོང་ཕྲག་དུ་མ་དང་། བསྐལ་པ་བརྒྱ་སྟོང་ཕྲག་དུ་མ་དང་། བསྐལ་པ་བྱེ་བ་བརྒྱ་སྟོང་ཕྲག་དུ་མ་དང་། བསྐལ་པ་ཁྲག་ཁྲིག་ཕྲག་དུ་མ་དང་། བསྐལ་པ་ཁྲག་ཁྲིག་བརྒྱ་ཕྲག་དུ་མ་དང་། བསྐལ་པ་ཁྲག་ཁྲིག་སྟོང་ཕྲག་དུ་མ་དང་། བསྐལ་པ་ཁྲག་ཁྲིག་བརྒྱ་སྟོང་ཕྲག་དུ་མ་དང་། བསྐལ་པ་བྱེ་བ་ཁྲག་ཁྲིག་བརྒྱ་སྟོང་ཕྲག་དུ་མར་སྤངས་ཤིང་མི་སྩོགས་པར་གནས་སོ། །ལོག་པའི་ཞེ་སྡང་སྤངས་ཤིང་ཞེ་སྡང་མི་སྩོགས་པར་གནས་སོ། །ལོག་པའི་གཏི་མུག་སྤངས་ཤིང་མི་སྩོགས་པར་གནས་ཏེ། དགེ་བའི་རྩ་བ་དེ་དག་ཀྱང་ཡོངས་སུ་བྱང་བ་དང་། ཡོངས་སུ་དག་པ་དང་། ལས་སུ་རུང་བར་གྱུར་པས་གནས་སོ། །ཀྱེ་རྒྱལ་བའི་སྲས་དག །འདི་ལྟ་སྟེ་དཔེར་ན། གསེར་གྱི་ས་ལེ་ སྦྲམ་དེ་ཉིད་མགར་བ་མཁས་པའི་ལག་ན་སྤྱོད་ན་སྲང་གྲངས་ཅི་ཡོད་པའི་ཚད་བཞིན་དུ་འདུག་གོ །ཀྱེ་རྒྱལ་བའི་སྲས་དག །དེ་བཞིན་དུ་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ། བྱང་ཆུབ་སེམས་དཔའི་ས་འོད་བྱེད་པ་འདི་ལ་གནས་པའི་ལོག་པའི་འདོད་ཆགས་ཀྱང་འགྲིབ་པ་མེད་པར་འབྱང་བར་འགྱུར་རོ། །ལོག་པའི་ཞེ་སྡང་ཡང་འགྲིབ་པ་མེད་པར་འབྱང་བར་འགྱུར་རོ། །ལོག་པའི་གཏི་མུག་ཀྱང་འགྲིབ་པ་མེད་པར་འབྱང་བར་འགྱུར་རོ། །དགེ་བའི་རྩ་བ་དེ་དག་ཀྱང་རབ་ཏུ་འབྱང་ཞིང་ཡོངས་སུ་དག་པ་དང་། ལས་སུ་རུང་བར་འགྱུར་རོ། །དེའི་བཟོད་པ་དང་དེས་པ་ཡང་དེ་བས་ཀྱང་ཡོངས་སུ་དག་པར་འགྱུར་རོ། །གྲོགས་ལ་བདེ་ཞིང་ངེས་པའི་བསམ་པ་དང་། མི་འཁྲུགས་པའི་བསམ་པ་དང་། གློང་བ་མེད་པའི་བསམ་པ་དང་། རྙོག་པ་མེད་པའི་བསམ་པ་དང་། མཐོན་དམན་མེད་པའི་བསམ་པ་དང་། སེམས་ཅན་ལ་ཕན་འདོགས་པས་ལན་མི་རེ་བའི་བསམ་པ་དང་། ཕན་བཏགས་པ་ལ་ཕྱིར་ལན་གློན་པའི་བསམ་པ་དང་། གཡོ་མེད་ཅིང་སྒྱུ་མེད་པའི་བསམ་པ་དང་། ཐིབས་པོ་མེད་པའི་བསམ་པ་ཡོངས་སུ་དག་པར་འགྱུར་ཏེ། དེའི་བསྡུ་བའི་དངོས་པོ་བཞི་ལས་དོན་སྒྲུབ་པ་ཤས་ཆེ་བ་ཡིན། ཕ་རོལ་ཏུ་ཕྱིན་པ་བཅུ་ལས་བཟོད་པའི་ཕ་རོལ་ཏུ་ཕྱིན་པ་ཤས་ཆེ་བ་ཡིན་ཏེ། ལྷག་མ་རྣམས་ཀྱང་ཅི་ཚུལ་ཅི་ནུས་སུ་ཡང་དག་པར་མི་བསྒྲུབ་པ་མ་ཡིན་ཏེ་ཀྱེ་རྒྱལ་བའི་སྲས་དག །འདི་ནི་བྱང་ཆུབ་སེམས་དཔའི་ས་འོད་བྱེད་པ་ཞེས་བྱ་བ་སྟེ། བྱང་ཆུབ་སེམས་དཔའི་ས་གསུམ་པའོ།",
+   "en": "“When he is on this bodhisattva bhūmi called Shining, many buddhas will appear to him because of his vast view and the power of his prayers, because of his vast view and the power of his prayers. Many hundreds of buddhas, many thousands of buddhas, many hundreds of thousands of buddhas, many millions of buddhas, many tens of millions of buddhas, many billions of buddhas, many tens of billions of buddhas, many trillions of buddhas, and many quintillions of buddhas will appear to him. He will see those tathāgatas, those arhats, those samyaksambuddhas, and with a vast motivation he will serve them, worship them, honor them, make offerings to them, and supply them with robes, alms, bowls, beds, medicine for when they are ill, and implements. He will also offer all the articles that bring happiness to a bodhisattva. He will also offer to the assemblies of the Saṅgha. He will dedicate all those roots of goodness to the highest complete enlightenment. “In that way, he will serve those tathāgatas, arhats, samyaksambuddhas and, attending them, will listen to the Dharma, acquire it, and possess it. When they have heard it, in what way do they diligently practice it? He knows that all phenomena do not depart and are not destroyed but arise through dependent origination. Because of this view and understanding, the bondage of desire will become weaker, the bondage of existence will become weaker, the bondage of ignorance will become weaker, and the bondage of views will become more purified. The bodhisattva who is on the Shining bodhisattva bhūmi will forsake and not accumulate incorrect desires for many eons, for many hundreds of eons, many thousands of eons, many hundreds of thousands of eons, many tens of millions  of eons, many billions of eons, many tens of billions of eons, many trillions of eons, and many quintillions of eons. Those roots of goodness will be purified; they will become completely pure and usable. “O jinaputras! By analogy, gold to the weight of a dharaṇa in the hands of a skilled goldsmith can be made perfect. In the same way, the one who is on this Shining bodhisattva bhūmi is unobscured by bad desire, unobscured by bad anger, and unobscured by bad ignorance. The roots of goodness arise, are pure, and are effective. His patience and gentleness are even more purified. He is entirely pleasant to be with. He is never angry. He is never disturbed. He is never unsettled. He is never unstable. He wishes to repay good actions. He is without deception or deceit. He is not incomprehensible. “From among the four methods of attracting beings, he primarily practices accomplishing benefit. “From among the ten perfections, the perfection of patience predominates, and the other perfections are not accomplished fully and completely.  “O jinaputras! This is the bodhisattva bhūmi named Shining, which is the third bodhisattva bhūmi."
+  },
+  "d3-11": {
+   "sa": "iyaṃ bhavanto jinaputrā bodhisattvasya prabhākarī nāma tṛtīyā bodhisattvabhūmiḥ samāsanirdeśataḥ, yasyāṃ pratiṣṭhito bodhisattvo bhūyastvena indro bhavati devarājastridaśādhipatiḥ kṛtī prabhuḥ sattvānāṃ kāmarāgavinivartanopāyopasaṃhārāya kuśalaḥ sattvān kāmapaṅkādabhyuddhartum, yacca kiṃcit ... peyālaṃ ... yathārūpeṇa vīryārambheṇa ekakṣaṇalavamuhūrtena samādhiśatasahasraṃ ca pratilabhate ... // prabhākarī nāma tṛtiyā bhūmiḥ //",
+   "T0285": "是為菩薩諸大士等第三住法，名曰興光。菩薩住此，諸根通達，若作天王，執權方便，有所造立，若行布施，作行敬愛，設修利益，其心常一；念佛不捨，致普具，念一切智業：『以何等行，為諸眾生，致于最尊；得普敏達，為眾導師乎？』發意之頃，精進超絕，一時悉逮百千三昧。」",
+   "T0286": "「諸佛子！是名諸菩薩第三明地。「菩薩摩訶薩住是地中，多作釋提桓因，智慧猛利，能以方便因緣轉諸眾生，令離淫欲。所作善業，若布施、若愛語、若利益、若同事，皆不離念佛、念法、乃至不離念具足一切種智。常生是心：『我當何時於眾生中為首、為尊、乃至於一切眾生為依止者？』是人若欲勤加精進，於須臾間能得十萬三昧，乃至能示十萬菩薩以為眷屬——隨其願力，神通自在不可算數，若干百千萬億那由他劫不可計知。」",
+   "T0278": "諸佛子！是名略說菩薩第三明地。菩薩住是地中，多作釋提桓因，智慧猛利，能以方便，轉諸眾生，令離婬欲；所作善業，布施、愛語、利益、同事，皆不離念佛，不離念法，乃至不離念具足一切種智。常生是心：『我當於一切眾生為首、為勝，乃至於一切眾生為依止者。』是菩薩若欲勤行精進，於須臾間，能得十萬三昧，乃至能示十萬菩薩以為眷屬。若以願力神通自在過於此數，若干百千萬億那由他劫不可計知。」",
+   "T0279": "「佛子！是名菩薩第三發光地。菩薩住此地，多作三十三天王，能以方便，令諸眾生捨離貪欲。布施、愛語、利行、同事——，如是一切諸所作業，皆不離念佛，不離念法，不離念僧，乃至不離念具足一切種、一切智智。復作是念：『我當於一切眾生中為首、為勝、為殊勝、為妙、為微妙、為上、為無上，乃至為一切智智依止者。』若勤行精進，於一念頃，得百千三昧，得見百千佛，知百千佛神力，能動百千佛世界，乃至示現百千身，一一身百千菩薩以為眷屬；若以菩薩殊勝願力自在示現，過於此數，百劫、千劫乃至百千億那由他劫不能數知。」",
+   "T0287": "「唯諸佛子！是名略說菩薩第三發光地也。菩薩安住於此地中，受生多分作釋天帝，有自在力，善化有情令離欲貪，善拔救護沒欲泥者。諸所作業，或以布施、或以愛語、或以利行、或以同事，此等一切悉皆不離佛作意、法作意、僧伽作意、菩薩作意、菩薩行作意、到彼岸作意、諸地作意、佛力作意、無所畏作意、佛不共法作意，乃至不離一切行相勝妙相應一切智智作意。復作願言：『我當一切有情中，為首、為勝、為殊勝、為妙、為微妙、為上、為無上、為導、為將、為帥，乃至願得一切智智所依止處。』若樂發起如是精進，棄捨一切家屬財位歸依聖教淨信出家，即一剎那頃瞬息須臾，能證百千諸三摩地；能見百千諸佛如來，彼佛加持皆能解了；能動百千世界，能往百千剎土，能照百千世界，能成熟百千有情，能住壽百千劫，於前後際能入百千劫。於百千法門能正思擇，示現百千身身，身皆能現百千菩薩眷屬圍遶。從此以上，是諸菩薩有願力者，由勝願故，所有遊戲，或身、或光明、或神通、或眼、或境界、或音聲、或行、或莊嚴、或勝解、或所作，此等乃至爾所百千俱胝那庾多劫不易可數。」",
+   "bo": "།དེ་ལ་གནས་པའི་བྱང་ཆུབ་སེམས་དཔའ་ནི་ཕལ་ཆེར་ལྷའི་རྒྱལ་པོ་དབང་པོར་འགྱུར་ཏེ་སེམས་ཅན་རྣམས་ཀྱི་འདོད་པའི་འདོད་ཆགས་རྣམ་པར་བཟློག་པའི་ཐབས་ཉེ་བར་བསྒྲུབ་པ་ལ་མཁས་ཤིང་མཐུ་ཡོད་པ་ཡིན། དེ་སྦྱིན་པ་འམ། ངག་སྙན་པ་འམ། དོན་བསྒྲུབ་པ་འམ། དོན་མཐུན་པའི་དགེ་བའི་རྩ་བ་གང་ཅི་རྩོམ་ཡང་རུང་སྟེ།  དེ་ཐམས་ཅད་ཇི་ལྟར་ན། སེམས་ཅན་ཐམས་ཅད་ཀྱི་མཆོག་ཏུ་འགྱུར། གཙོ་བོར་འགྱུར། ཐུ་བོར་འགྱུར། ཕུལ་དུ་འགྱུར། དམ་པར་འགྱུར། བླ་ན་མེད་པར་འགྱུར། འདྲེན་པར་འགྱུར། རྣམ་པར་འདྲེན་པར་འགྱུར། ཡོངས་སུ་འདྲེན་པར་འགྱུར་བ་ནས་ཐམས་ཅད་མཁྱེན་པའི་ཡེ་ཤེས་ལ་རྟེན་པའི་བར་དུ་འགྱུར་སྙམ་སྟེ། སངས་རྒྱས་ཡིད་ལ་བྱ་བ་དང་། ཆོས་ཡིད་ལ་བྱ་བ་དང་། དགེ་འདུན་ཡིད་ལ་བྱ་བ་དང་། བྱང་ཆུབ་སེམས་དཔའ་ཡིད་ལ་བྱ་བ་དང་། བྱང་ཆུབ་སེམས་དཔའི་སྤྱོད་པ་ཡིད་ལ་བྱ་བ་དང་། བྱང་ཆུབ་སེམས་དཔའི་ས་ཡིད་ལ་བྱ་བ་དང་། ཕ་རོལ་ཏུ་ཕྱིན་པ་ཡིད་ལ་བྱ་བ་དང་། སྟོབས་ཡིད་ལ་བྱ་བ་དང་། མི་འཇིགས་པ་ཡིད་ལ་བྱ་བ་དང་། སངས་རྒྱས་ཀྱི་ཆོས་མ་འདྲེས་པ་ཡིད་ལ་བྱ་བ་ནས། རྣམ་པའི་མཆོག་ཐམས་ཅད་དང་ལྡན་པའི་ཐམས་ཅད་མཁྱེན་པའི་ཡེ་ཤེས་ཀྱི་བར་དུ་ཡིད་ལ་བྱ་བ་དང་མི་འབྲལ་བ་ཡིན་ཏེ། དེ་འདོད་ན་སྐད་ཅིག་ཡུད་ཙམ་ཐང་ཅིག་ཏུ་ཏིང་ངེ་འཛིན་བརྒྱ་སྟོང་རབ་ཏུ་ཐོབ་ཅིང་དེ་དག་ལ་སྙོམ་པར་འཇུག་པ་དང་། སངས་རྒྱས་བརྒྱ་སྟོང་མཐོང་བ་དང་། དེ་དག་གི་བྱིན་གྱི་རླབ་ཀྱང་ཡང་དག་པར་ཤེས་པ་དང་། འཇིག་རྟེན་གྱི་ཁམས་བརྒྱ་སྟོང་སྐྱོད་པ་དང་། སངས་རྒྱས་ཀྱི་ཞིང་བརྒྱ་སྟོང་དུ་འགྲོ་བ་དང་། འཇིག་རྟེན་གྱི་ཁམས་བརྒྱ་སྟོང་སྣང་བར་བྱེད་པ་དང་། སེམས་ཅན་བརྒྱ་སྟོང་ཡོངས་སུ་སྨིན་པར་བྱེད་པ་དང་། བསྐལ་པ་བརྒྱ་སྟོང་དུ་གནས་པར་བྱ་བ་དང་། སྔོན་གྱི་མཐའ་དང་ཕྱི་མའི་མཐའི་བསྐལ་པ་བརྒྱ་སྟོང་ལ་རབ་ཏུ་འཇུག་པ་དང་། ཆོས་ཀྱི་སྒོ་བརྒྱ་སྟོང་རྣམ་པར་འབྱེད་པ་དང་། ལུས་བརྒྱ་སྟོང་ཡོངས་སུ་བསྟན་པ་དང་། ལུས་རེ་རེ་ལ་ཡང་བྱང་ཆུབ་སེམས་དཔའི་འཁོར་བརྒྱ་སྟོང་ཡང་དག་པར་བསྟན་པར་བྱ་བའི་བརྩོན་འགྲུས་ཀྱི་རྣམ་པ་དེ་ལྟ་བུ་རྩོམ་མོ། ། དེ་ཡན་ཅད་བྱང་ཆུབ་སེམས་དཔའི་སྨོན་ལམ་གྱི་མཐུ་ཅན་རྣམས་ སྨོན་ལམ་གྱི་ཁྱད་པར་གྱིས་རྣམ་པར་འཕྲུལ་ཏེ། དེ་དག་གི་ལུས་སམ་འོད་དམ། རྫུ་འཕྲུལ་ལམ། མྱིག་གམ་སྤྱོད་ཡུལ་ལམ་དབྱངས་སམ། སྤྱོད་པ་འམ། རྒྱན་ཏམ། བྱིན་གྱི་རླབས་སམ། མོས་པ་འམ། མངོན་པར་འདུ་བྱེད་པ་དག་ཀྱང་བསྐལ་པ་དུ་མ་དང་། བསྐལ་པ་བརྒྱ་ཕྲག་དུ་མ་དང་། བསྐལ་བ་སྟོང་ཕྲག་དུ་མ་དང་། བསྐལ་པ་བརྒྱ་སྟོང་ཕྲག་དུ་མ་དང་། བསྐལ་པ་བྱེ་བ་ཁྲག་ཁྲིག་བརྒྱ་སྟོང་ཕྲག་དུ་མའི་བར་གྱིས་ཀྱང་བགྲང་བར་དཀའ་འོ།",
+   "en": "“The bodhisattva who is on that bhūmi predominantly becomes Indra, king of the devas. He is skilled and has the ability to eliminate the fault of desire and passion in all beings. “In whatever roots of goodness he accomplishes through kind words, actions that benefit others, and practicing what he preaches, among all beings he becomes supreme, the best, the foremost, the highest, the most excellent, the unsurpassable, the guide, the leader, the commander, and so on, up until becoming the omniscient one who is relied on. His mind is always focused on the Buddha, focused on the Dharma, focused on the Saṅgha, focused on the bodhisattvas, focused on bodhisattva conduct, focused on the bodhisattva bhūmis, focused on the perfections, focused on the strengths, focused on the confidences, focused on the unique qualities of buddhahood, and so on, up until being focused on the omniscient wisdom endowed with the supreme aspects. “If he wishes to, he can apply himself in such a way that in just one instant he attains and rests in a hundred thousand samādhis, sees a hundred thousand buddhas and knows their blessings, causes a hundred thousand worlds to shake, goes to a hundred thousand buddha realms, illuminates a hundred thousand worlds, ripens a hundred thousand beings, remains for a hundred thousand eons, enters a hundred thousand previous eons and a hundred thousand future eons, opens a hundred thousand Dharma doors, manifests a hundred thousand bodies, and manifests each body having a retinue of a hundred thousand bodhisattvas. “From this time onward the bodhisattvas, with the power of prayer and through particular prayers, manifest bodies, light, miracles, sights, activities, voices, conduct, displays, blessings, transformations, and manifestations for many eons, for many hundreds of eons, many thousands of eons, many hundreds of thousands of eons, and so on, until many quintillions of eons, which are difficult to enumerate.”"
+  },
+  "d3-12": {
+   "sa": "upasaṃhāragāthāḥ / te śuddha-āśaya guṇākara tīkṣṇacittā nirviṇṇa rāgavigatā anivartiyāśca / dṛḍhacitta taptadhṛtiyukti udāravegā māhātmyatāśayavidū tṛtiyākramanti // 7 // atra sthitā vidu prabhākaribhūmideśe duḥkhaṃ anityamaśuciṃ ca pralopadharmam / acirasthitāka kṣaṇikaṃ ca nirodhakaṃ ca vicinanti saṃskṛtagatīkamanāgatīkam // 8 // te rogabhūtasahaśokaparadevanaṃ ca sopāyasaṃ ca priya apriyatānubaddham / duḥkhadaurmanasyanilayaṃ jvalitāgnikalpaṃ paśyanti saṃskṛtamananta samujjvalanti // 9 // udvigna sarva tribhave anapekṣacittā jñānābhilāṣa sugatānamananyabuddhiḥ / avicintiyaṃ atuliyaṃ asamantapāraṃ saṃpaśyate nirupatāpa jināna jñānam // 10 // te buddhajñāna nirupadravamīkṣamāṇā atrāṇa nātharahitā vrajate caranti / nityaṃ daridra tribhiragnibhi saṃpradīptā bhavacārake dukhaśatairvinibaddhacittāḥ // 11 // kleśāvṛtāśca avilokana chandahīnāḥ sugatāna dharmaratanānupranaṣṭa bālāḥ / saṃsārasrota-anuvāhina mokṣatrastā me trāyitavya dṛḍha vīrya samārabhante // 12 // jñānābhilāṣa anapekṣa jagārthacārī vyuparīkṣate katama hetu jagasya mokṣe / nānyatra nāvaraṇajñāna tathāgatānāṃ jñānaṃ ca prajñaprabhavaṃ sugatānanantam // 13 // prajñā śrutāttu iti cintayi bodhisattvo jñātvā tamārabhati vīrya śrutārthacārī / rātriṃdivaṃ śravaṇahetu ananyakarmā arthārthiko bhavati dharmaparāyaṇaśca // 14 // maṇimuktiratnanilayān priyabāndhavāṃśca rājyaṃ ananta vividhān pura sthānaśreṣṭhān / bhāryāsutāṃśca parivāra manonukūlān anapekṣacittu tyajate vidu dharmahetoḥ // 15 // śira hastapāda nayana svakamātmamāṃsaṃ jihvā ca daṃṣṭra śrava nāsika śoṇitaṃ ca / hṛdayaṃ tupādya priya majja parityajanti nā duṣkaretamatha duṣkara yacchṛṇoti // 16 // yadi kaścidenamupagamya vadeyya evaṃ yadi agnigarbha prapate jvalitāpi ghoram / prāpiṣya dharmaratanaṃ sugatopanītaṃ śrutvā adīnamanasaḥ prapate guṇārthī // 17 // ekasya dharmapada artha sumerumūrdhnā trisahasra agnirucitaṃ api brahmalokāt / sūdūrlabhā imi jinasya udārabodhiḥ ye mānuṣyeṇa sukha labhyati evarūpam // 18 // yāvattareṇa pavararṣiṇa jñānalābhastāvattaraṃ dukhamavīcikamutsahyami / kiṃ vā punarvividhamānuṣaduḥkhaskandhaṃ hantābhyupemi varadharmipadārthiduḥkham // 19 // dharmaṃ ca śrutva puna yoniṣu cintayāti dhyānāpramāṇa caturaśca tathā arūpyā / pañcāpyabhijña pravarā abhinirharanti nā cāpi teṣu vaśitā upapadya yāti // 20 // atra sthitā guṇadharā bahubuddhakoṭyaḥ pūjyanti niścitamanā śṛṇuvanti dharmam / tanubhūtva mithyapagatāḥ pariśuddhayanti svarṇe yathā vigatadoṣa pramāṇatulyam // 21 // atra sthitā guṇadharāstridaśādhipatyaṃ kārenti īśvara nivartitu kāmarāgāḥ / marusaṃgha nekavividhān kuśalāna mārge sthāpentyananyamana buddhaguṇābhilāṣe // 22 // atra sthitā jinasutā viriyārabhante labdhvā samādhina sahasraśataṃ anūnam / paśyanti buddhavara lakṣaṇacitrigātrāṃ bhūyo ataḥ praṇidhiśreṣṭha guṇāpramāṇāḥ // 23 // ityeṣā tṛtiyā bhūminirdiṣṭā sugatātmajāḥ / sarvalokahitaiṣīṇāṃ bodhisattvānanuttamā // 24 //",
+   "T0285": "時金剛藏菩薩大士，欲復重散此義所歸，說此頌曰：「斯等性清淨，德室心通達； 貪欲患消除，成不退轉業。 興發堅固志，強勇進微妙； 其意甚廣大，因是入三住。 已立於此地，宣布光曜住； 說非常苦空，不淨毀散法。 為不得久存，須臾虛無聲； 選擇悉有為，無來無所往。 由是致疾病，遭愁憂涕泣； 與眾惱俱合，受結著恩愛。 苦患不可意，常熾然三火； 以見有為業，發起無限難。 若厭於三處，其心無所慕； 欲求諸佛慧，其意不變異。 無量不可思，所度無等倫； 覩彼眾滅度，諸最勝聖慧。 已見於諸佛，永無眾患厄； 無救離依怙，扶濟使得出。 常貧於道法，為三火所災； 犯所有苦惱，百種縛其心。 重敬眾塵勞，無明志下賤； 已失威神力，違安住道寶。 流墮生死淵，恐怖求解脫； 我應擁護之，堅強等精進。 志樂於尊慧，不貪世人榮； 觀察何等宜，逮致至解道。 無他諸罣礙，成諸如來慧； 其慧為智明，是眾安住樂。 以聞智專惟，成菩薩聖慧； 適聽所說法，尋精進奉行。 夙夜欲啟受，無餘因緣業； 以法而樂義，以法廣救護。 明月珠眾寶，所愛敬親里； 國土廣無極，具足豐盛尊。 妻子及男女，眷屬諸走使； 以經典之故，布施不悋此。 頭目及手足，己身之肌肉； 目見而口言，施血如流江。 見害屠割刑，所重髓布施； 不以此為苦，不聞法為患。 假使有來者，口宣如是辭； 猶如火所起，自投炎赫盛。 若聽安住說，微妙法要寶； 聞之甚思惟，功勳義章句； 一句法義故，頂戴須彌山。 設使三千世，滿火至梵天； 我聞法善利，其意達玄妙； 若人聞致是，任如是苦惱。 正使於中死，求得道慧明； 雖遭此眾難，忍苦不以患。 何況人身苦，若干之厄難； 我之所戀慕，惟志求聞法。 若得數聞法，隨時而思惟； 四禪四等心，悅豫三昧定。 承於五神通，漸備具足行； 以是由自在，不墮所向生。 住立此軌德，順無數億佛； 意常奉供養，聽受斯經典。 曉了離邪住，啟顙清淨行； 猶若金無垢，號曰為紫磨。 住是雅功勳，報處忉利宮； 造立為豪尊，迴轉處魔天。 魔天若干會，功德諸章句； 以住無以意，唯求佛功德。 佛子已住此，慇懃慕精進； 逮致三昧定，其數各百千。 覩見諸佛最，相好若干種； 加益極微妙，功勳尊無量。 是為第三住，安住身自說； 普愍諸世間，諸菩薩無上。」 時諸天人聞大行，微妙巍巍所住地； 眾祐諸子懷踊躍，則以天華散佛上。 會在地樹持衣被，嗟歎稱揚此經典； 魔后可敬柔軟好，鼓樂歌頌勝妙法。 「其自在天歡悅句，以月明寶貢安住； 口宣我等故有佛，興發德時度彼岸。 其最法勝何故然，獨歎菩薩行第一； 我今得聽妙道地，於百千劫難得聞。 益加宣布愍諸天，諸佛之子行殊勝； 得聞此軟聖眾會，當得服行寂無地。 如月除患盛，已興安住談； 第四所遊行，演行最為上。」",
+   "T0286": "爾時，金剛藏菩薩欲令此義轉明故而說偈言：「菩薩以是心，能得第三地： 淨心、猛、厭心、離心、不退心、 堅心、堪、受心、快心及大心， 以如是等心，得入於三地。 智者住明地，觀有為作法， 不淨無常苦，無我壞敗相， 無有牢固性，不久念念滅， 如是思惟知，無有來去相。 見諸有為法，如病如癰瘡， 愛心所纏縛，生諸憂悲苦。 但為貪恚癡，猛火所焚燒， 從無始世來，熾然常不息。 即時於一切，三界生厭離， 惡賤有為法，心無所貪著。 但求諸佛智，無量無邊限， 甚深難思議，清淨無諸苦。 如是見佛智，無諸苦惱已， 哀愍諸眾生，貧窮無福慧， 三毒火常然，無有救護者； 墮在地獄中，百種苦所切； 放逸凡夫人，沒諸煩惱聚； 盲冥無所見，失諸佛法寶； 常隨生死水，無怖空怖畏。 我於是眾生，當勤度脫之， 精進求智慧，為作饒益者。 思惟何方便，可以得救護？ 唯有諸如來，深妙無礙智。 此智何為因？唯從智慧生。 思惟是智慧，但從多聞生， 如是籌量已，勤求多聞法。 日夜常精進，聽受無厭惓， 讀誦愛樂法，唯法以為貴。 為欲求法故，以諸珍寶等、 所親愛妻子、隨意諸眷屬、 國土及城邑、資生諸好物， 歡喜而施與，心無所戀惜。 頭目耳鼻舌、牙齒及手足、 支節身血肉、心肝及髓腦， 以此等施人，猶不以為難； 若得聞正法，是為最甚難。 假令有一人，語此菩薩言： 『汝今若能入，是大猛火聚， 然後當與汝，諸佛所說法。』 聞已即歡喜，自投於火聚。 『設使大千界，火聚滿其中， 須彌梵世下，不足以為難； 若為求一句，諸佛所說法， 救諸苦惱者，得之甚為難。 始從初發心，乃至成佛道， 我於其中間，盡此諸劫數， 為欲求諸法，備受阿鼻苦， 何況於人間，小小諸苦惱？』 以聽法因緣，能得正憶念； 正憶念因緣，能生諸禪定， 深妙等三昧，及五神通事， 次第皆能起，自在不隨生。 菩薩住是地，能以決定心， 多供養諸佛，聽受所說法。 斷邪、愛、恚等，餘煩惱微薄， 猶如成鍊金，調和得其所。 菩薩住是地，功德藏充滿， 多作忉利王，自在化婬欲。 愛佛功德故，化導無量眾， 悉能令得住，無上佛道中。 菩薩住是地，能以柔軟心， 勤行於精進，得百千三昧。 悉得見諸佛，相好莊嚴身， 其心轉猛利，願力者殊勝。 常為諸眾生，勤求好事者， 分別解說此，第三明地已。」",
+   "T0278": "時，金剛藏菩薩欲重明此義，以偈頌曰：「菩薩深信心，能得第三地， 清淨猛利心，厭離欲不退， 堅堪受無厭，勝大悉具足， 以如是等心，得入於三地。 智者住明地，觀有為作法， 不淨無常苦，無我壞敗相， 無有牢固性，不久念念滅， 如是思惟知，無有來去相。 見諸有為法，如病如癰瘡， 愛心所纏縛，生諸憂悲苦。 但為貪恚癡，猛火所焚燒， 從無始世來，熾然常不息。 即時於一切，三界生厭離， 惡賤有為法，心無所貪著。 但求諸佛智，無量無邊限， 甚深難思議，清淨無諸苦。 如是見佛智，無諸苦惱已， 哀愍諸眾生，貧窮無福慧。 三毒火常然，無有救護者， 墮在地獄中，無量苦所切。 放逸凡夫人，沒諸煩惱海， 盲冥無所見，失諸佛法寶。 常隨生死流，無怖空怖畏， 我於是眾生，當勤度脫之。 精進求智慧，為作饒益者， 思惟何方便，可以得救護。 唯有諸如來，深妙無礙智， 此智何為因，無行行慧生。 思惟是智慧，從於多聞起， 如是籌量已，勤求多聞法。 日夜常精進，聽受無厭倦， 讀誦愛樂法，唯法以為貴。 為欲求法故，以諸珍寶等， 所親愛妻子，隨意諸眷屬， 國土及城邑，資生諸寶物， 歡喜而施與，心無所戀惜。 頭目耳鼻舌，牙齒及手足， 肢節身血肉，心肝及髓腦， 以此等施人，猶不以為難， 若得聞正法，是為甚希有。 假令有一人，語此菩薩言， 汝今若能入，是大猛火聚， 然後當與汝，諸佛所說法。 聞已即歡喜，自投無有疑。 設使三千界，大火滿其中， 須彌梵世下，不足以為難。 若為求一句，諸佛所說法， 救諸苦惱者，得之為甚難。 從初始發心，乃至成佛道， 我於其中間，盡此諸劫數， 為欲求法故，備受阿鼻苦， 何況於人間，小小諸苦惱。 以聽法因緣，能得正憶念， 正憶念因緣，能生諸禪定， 深妙等三昧，及五神通事， 次第皆能起，自在不隨生。 菩薩住是地，能以決定心， 多供養諸佛，聽受所說法。 斷邪愛恚癡，諸縛悉微薄， 猶如成鍊金，調和得其所。 菩薩住是地，福德藏充滿， 多作忉利王，自在化婬欲。 愛佛功德故，化導無量眾， 悉能令得住，無上佛道中。 菩薩住是地，能以柔軟心， 勤行於精進，得百千三昧。 見百千諸佛，相好莊嚴身， 其心轉猛利，願力者殊勝。 常為諸眾生，勤求好事者， 分別解說此，第三明地竟。」",
+   "T0279": "爾時，金剛藏菩薩欲重宣其義而說頌曰：「清淨安住明盛心，厭離無貪無害心， 堅固勇猛廣大心，智者以此入三地。 菩薩住此發光地，觀諸行法苦無常， 不淨敗壞速歸滅，無堅無住無來往。 觀諸有為如重病，憂悲苦惱惑所纏， 三毒猛火恒熾然，無始時來不休息。 厭離三有不貪著，專求佛智無異念， 難測難思無等倫，無量無邊無逼惱。 見佛智已愍眾生，孤獨無依無救護， 三毒熾然常困乏，住諸有獄恒受苦， 煩惱纏覆盲無目，志樂下劣喪法寶， 隨順生死怖涅槃，我應救彼勤精進。 將求智慧益眾生，思何方便令解脫？ 不離如來無礙智，彼復無生慧所起。 心念此慧從聞得，如是思惟自勤勵， 日夜聽習無間然，唯以正法為尊重。 國城財貝諸珍寶，妻子眷屬及王位， 菩薩為法起敬心，如是一切皆能捨。 頭目耳鼻舌牙齒，手足骨髓心血肉， 此等皆捨未為難，但以聞法為最難。 設有人來語菩薩：『孰能投身大火聚， 我當與汝佛法寶！』聞已投之無怯懼。 假使火滿三千界，身從梵世而投入， 為求法故不為難，況復人間諸小苦！ 從初發意至得佛，其間所有阿鼻苦， 為聞法故皆能受，何況人中諸苦事！ 聞已如理正思惟，獲得四禪無色定， 四等五通次第起，不隨其力而受生。 菩薩住此見多佛，供養聽聞心決定， 斷諸邪惑轉清淨，如鍊真金體無減。 住此多作忉利王，化導無量諸天眾， 令捨貪心住善道，一向專求佛功德。 佛子住此勤精進，百千三昧皆具足， 見百千佛相嚴身，若以願力復過是。 一切眾生普利益，彼諸菩薩最上行， 如是所有第三地，我依其義已解釋。」",
+   "T0287": "爾時，金剛藏菩薩，欲重宣此義而說頌曰：「清淨安住厭離心，離欲無退及堅固； 熾然勇健勝妙廣，以此十心入三地。 菩薩住於此地中，觀行無常、苦、不淨， 無怙、敗壞、不久停，遷變、無住、無來往。 觀身無救、無依怙，有憂、有惱、續愛憎， 多苦不停或火然，與病俱有無休息。 厭離三有求佛智，見彼妙智不思議； 無等、無量難證悟，無雜、無災、無逼惱， 歸大寂滅無退轉，能救無量苦有情。 見佛智已愍眾生，孤獨無依無救護， 三毒熾然常困乏，住諸有獄恒受苦， 煩惱習覆無慧目，志樂下劣喪法寶， 隨順生死怖涅槃，我應救彼勤精進。 將求智慧益有情，思何方便令解脫？ 不離處佛無礙智，斯由覺法如實理； 覺由無行無生慧，慧從定發定由聞。 如是思惟自策勵，日夜聽習尊重法； 為聞正法起敬心，國城、資具、諸珍寶， 妻子、眷屬及王位，如是一切皆能捨； 頭、目、耳、鼻、舌、牙齒，手、足、骨髓、心血、肉， 此等皆捨未為難，但於法師生難想。 設有人等語菩薩，孰能投身大火坑； 我當與汝佛法寶，聞以投之無怯懼。 假使火滿三千界，身從梵世而投入； 為求法故不為難，況復人間諸小苦。 從初發意至菩提，其中設有無間苦； 為聞法故皆能受，何況人中諸苦事。 聞已如理正思惟，獲四靜慮、四等至， 四無量心、五神通，不隨其勢而受生。 菩薩住此見多佛，供養聽聞心決定； 斷諸邪惑轉淨明，如鍊真金體無減。 住此多作釋天帝，化導無量諸有情； 令捨貪心住善道，一切專求佛功德。 住此精進剎那頃，能證百千三摩地； 見百千佛相嚴身，若具願力復過是。 一切有情普利樂，彼諸菩薩最上行； 如是所有第三地，我依其義已解釋。」菩薩發光地第三竟",
+   "bo": "།དེ་ནས་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་རྡོ་རྗེའི་སྙིང་པོས་སའི་དོན་འདི་ཉིད་ཡང་བརྟག་པ་དང་བསྟན་པར་བྱ་བའི་ཕྱིར། །དེའི་ཚ་ཚིགས་སུ་བཅད་པ་འདི་དག་སྨྲས་སོ། །དེ་དག་ཡོན་ཏན་འབྱུང་གནས་བསམ་དག་སེམས་དེས་པ། །སྐྱོ་ཞིང་འདོད་ཆགས་བྲལ་ཏེ་འཚེ་མེད་སེམས་དང་ལྡན། །སེམས་བསྐྱེད་བསྟན་པ་དགའ་ལྡན་རྒྱ་ཆེན་ཤུགས་ཅན་རྣམས། །མཁས་པ་བདག་ཉིད་ཆེ་བའི་སེམས་ལྡན་གསུམ་པ་གནོན། །འོད་བྱེད་ས་ཕྱོགས་འདི་ལ་གནས་པའི་མཁས་པ་ནི། །སྡུག་བསྔལ་མི་རྟག་མི་སྡུག་རབ་ཏུ་འཇིག་ཆོས་དང་། །རིང་པོར་མི་གནས་སྐད་ཅིག་སྙིང་པོ་མེད་པ་ནི། །འདུས་བྱས་རྣམ་པ་འོང་བ་མེད་ལ་རབ་ཏུ་རྟོག ། ནད་དུ་གྱུར་པ་མྱ་ངན་སྨྲེ་སྔགས་འདོན་དང་བཅས། །གནོད་དང་འཁྲུག་དང་སྡུག་དང་མི་སྡུག་རྗེས་འབྲང་བ། །སྡུག་བསྔལ་ཡིད་བློང་ཕུང་པོ་འབར་བའི་མེ་འདྲ་བར། །འདུས་བྱས་མཐའ་ཡས་ཀུན་ནས་འབར་མཐོང་དེ་ལས་སྐྱེད། །སྲིད་པ་གསུམ་པོ་ཀུན་ལས་སྐྱོ་ཞིང་ལྟོས་སེམས་མེད། །བདེ་གཤེགས་ཡེ་ཤེས་འདོད་ཅིང་བློ་གཞན་མེད་པ་སྟེ། །བསམ་དུ་མེད་ཅིང་གཞལ་ཡས་ཕ་རོལ་མཐའ་ཡས་པའི། །རྒྱལ་བའི་ཡེ་ཤེས་གནོད་མེད་དེ་དག་རབ་ཏུ་མཐོང་། །དེ་དག་སངས་རྒྱས་ཡེ་ཤེས་གནོད་མེད་མཐོང་གྱུར་ནས། །སྐྱབས་མེད་མགོན་དང་བྲལ་བ་རབ་ཏུ་དགྲོལ་བའི་ཕྱིར། །རྟག་ཏུ་དབུལ་ཞིང་མེ་གསུམ་ཀུན་ནས་འབར་གྱུར་དང་། །སྲིད་པའི་བཙོན་རར་ སྡུག་བསྔལ་སྣ་བརྒྱས་སེམས་བསྐོར་ཅིང་། །ཉོན་མོངས་བསྒྲིབས་དང་རྣམ་པར་ལྟ་དང་འདོད་ཉམས་པ། །བདེ་གཤེགས་ཆོས་ཀྱི་དགའ་བ་སྟོར་བའི་བྱིས་པ་རྣམས། །འཁོར་བའི་རྒྱུད་དུ་འབབ་ཅིང་ཐར་བས་སྔངས་གྱུར་པ། །བདག་གིས་སྐྱབས་པ་ཡིན་ཞེས་བརྩོན་འགྲུས་དམ་དུ་རྩོམ། །ཡེ་ཤེས་འདོད་པས་ལྟོས་པ་མེད་པར་འགྲོ་དོན་བྱེད། །གང་རྒྱུས་རྣམ་ཐར་ལམ་གྱི་རྒྱུ་ནི་གང་ཞེས་རྟོག །བདེ་གཤེགས་ཡེ་ཤེས་བསྒྲིབས་པ་མེད་ལས་གཞན་མེད་ན། །བདེ་གཤེགས་ཡེ་ཤེས་དེ་ཡང་ཤེས་རབ་མཐུས་འབྱུང་སྟེ། །ཤེས་རབ་ཐོས་ལས་འབྱུང་བར་བྱང་ཆུབ་སེམས་དཔའ་རྟོག །དེ་ལྟར་ཤེས་ནས་ཐོས་དོན་སྤྱད་པར་བརྩོན་འགྲུས་རྩོམ། །ཉིན་མཚན་ཉན་པའི་རྒྱུར་སྤྱོད་བྱ་བ་གཞན་མྱེད་པར། །ཆོས་ཀྱི་དོན་གཉེར་ཆོས་ལ་རབ་ཏུ་བརྟེན་པ་ཡིན། །ནོར་བུ་མུ་ཏིག་རིན་ཆེན་ཚོགས་དང་མཛའ་གཉེན་དང་། །སྲིད་ལོངས་དུ་མ་ཕོ་བྲང་ཕུན་ལྡན་དམ་པ་དང་། །ཆུང་མ་དག་དང་བུ་དང་མཐུན་པར་སྤྱོད་པའི་འཁོར། །ལྟོས་མེད་སེམས་ཀྱིས་མཁས་པ་ཆོས་ཀྱི་དོན་དུ་གཏོང་། མགོ་དང་རྐ་ལག་མྱིག་དང་དེ་བཞིན་བདག་གི་ཤ། །ལྕེ་དང་མཆེ་བ་རྣ་བ་སྣ་དང་ཁྲག་རྣམས་དང་། །ཕངས་པའི་རྐང་དང་སྙིང་ཕྱུང་ཡོངས་སུ་གཏོང་བ་བྱེད། །འདི་ནི་དཀའ་བར་མི་བརྩི་ཐོས་པ་དེ་དཀར་བརྩི། །ལ་ལ་དེ་དྲུང་འོངས་ཤིང་འདི་སྐད་སྨྲར་གྱུར་ཏེ། །དེ་སྟེ་མེ་ལྕེ་མི་ཟད་འབར་དོང་མཆོང་ཕོད་ན། །བདེ་གཤེགས་བསྟན་ཆོས་རིན་ཆེན་བཤད་དོ་ཞེས་ན་ཡང་། །ཐོས་ནས་མི་དམའི་ཡིད་ཀྱིས་ཡོན་ཏན་དོན་དུ་མཆོང་། །ཆོས་ཀྱི་ཚིག་གཅིག་དོན་དུ་རི་རབ་རྩེས་བརྟག་པར། །སྟོང་གསུམ་མེས་བཀང་ཚངས་རིས་ཡུལ་ནས་མཆོངས་གྱུར་ཀྱང་། །ད་དུང་རྒྱལ་བའི་བྱང་ཆུབ་ཡངས་པ་ཐོབ་དཀའ་ན། །དེ་སྟེ་ཐ་མལ་མི་བདེས་རྙེད་འགྱུར་ཤིན་ཏུ་བདེ། །དྲང་སྲོང་མཆོག་གི་ཡེ་ཤེས་འཐོབ་འགྱུར་ཇི་སྲིད་པ། །དེ་སྲིད་བར་དུ་མནར་མེད་སྡུག་བསྔལ་ བཟོད་བྱ་ན། །མི་ཡི་སྡུག་བསྔལ་ཕུང་པོ་སྣ་ཚོགས་ཅི་སྨོས་ཀྱིས། །ཆོས་རབ་མཉན་པའི་དོན་དུ་བདག་གིས་ཉམས་བླང་ཞེས། །ཆོས་རྣམས་ཐོས་པར་གྱུར་ནས་ཚུལ་བཞིན་སེམས་པར་བྱེད། །བསམ་གཏན་ཚད་མེད་དེ་བཞིན་གཟུགས་མེད་རྣམ་པ་བཞི། མངོན་པར་ཤེས་པའི་དམ་པ་ལྔ་པོ་མངོན་སྒྲུབ་ཀྱང་། །དེ་དག་དབང་གིས་སྐྱེ་བར་དེ་དག་འགྱུར་བ་མིན། །ལེགས་ལྡན་འདི་གནས་སངས་རྒྱས་ཁྲག་ཁྲིག་མང་པོ་ལ། །མཆོད་པ་བྱེད་ཅིང་དེས་རྟོགས་ཡིད་ཀྱིས་ཆོས་ཀྱང་ཉན། །སྲབས་པར་གྱུར་ཅིང་ལོག་བྲལ་ཡོངས་སུ་དག་པར་འགྱུར། །སྐྱོན་མེད་གསེར་སྦྲམ་ཇི་ལྟར་སྲང་ལ་བཅལ་བ་བཞིན། །དེ་གནས་ཡོན་ཏན་ལྡན་པ་ལྷ་ཡི་བདག་པོ་སྟེ། །དབང་སྒྱུར་དོན་བྱེད་འདོད་པའི་ནད་ཀྱི་རྣམ་པ་སེལ། །ལྷ་མང་སྣ་ཚོགས་དུ་མ་དགེ་བའི་ལམ་ལ་དགོད། །སངས་རྒྱས་ཡོན་ཏན་མངོན་འདོད་བསམ་པ་གཞན་ཡང་མྱེད། །འདི་ལ་གནས་པའི་རྒྱལ་སྲས་བརྩོན་འགྲུས་རབ་རྩོམ་སྟེ། །བརྒྱ་ཕྲག་སྟོང་ལས་མི་ཉུང་ཏིང་འཛིན་ཐོབ་པ་ཡིན། །མཚན་རབ་སྐུ་བརྒྱན་སངས་རྒྱས་རྣམས་ཀྱང་རབ་ཏུ་མཐོང་། །ཡན་ཅད་སྨོན་ལམ་རབ་ལྡན་ཡོན་ཏན་བསམ་མི་ཁྱབ། ། དེ་ལྟར་ས་མཆོག་གསུམ་པ་འདི། །འཇིག་རྟེན་ཀུན་ལ་ཕན་བརྩོན་པའི། །བྱང་ཆུབ་སེམས་དཔའི་མཆོག་རྣམས་ལ། །རྒྱལ་བའི་སྲས་ཀྱིས་བསྟན་པ་ཡིན། ། འོད་བྱེད་པ་ཞེས་བྱ་བ་སྟེ། བྱང་ཆུབ་སེམས་དཔའི་ས་གསུམ་པའོ།",
+   "en": "Then the bodhisattva mahāsattva Vajragarbha, in order to teach the meaning of this bhūmi and to analyze it, recited these verses: “They have pure intention, are the source of qualities, and are constant. They are disenchanted, have no desires, and are irreversible. They have resolute motivation, refined, insatiable application, and sublime power, Are wise with exalted intention, and reach the third bhūmi. “The wise ones on this bhūmi called Shining know That composite phenomena have the qualities of impermanence, foulness, and destruction And are transitory, are momentary, and cease. They regard the nature of composite phenomena to be without origination. “They see composite phenomena as an infinite fire Where one falls ill, where there is misery and wailing, Distress, and the bondage of pleasure and displeasure, A place of suffering and unhappiness like a blazing inferno. “They are disenchanted with the three existences and indifferent to them. They desire the wisdom of the sugatas and are intent on nothing else. They see the wisdom of the jinas as inconceivable, Unequaled, the incomparable ultimate, and inviolable. “Desiring the invulnerable wisdom of the buddhas, They engage in constant diligence while thinking, ‘I will protect those who are wandering forsaken without protector or refuge, Always destitute and burned by the three fires,  “ ‘Their minds bound by hundreds of sufferings in the dungeon of existence, Enveloped by the kleśas, having incorrect view and no aspiration, Childlike beings have no delight in the teaching of the sugatas, And they are swept away by the current of saṃsāra and terrified of liberation.’ “They desire knowledge and impartially benefit beings. They consider, ‘What is the cause for the liberation of beings?’ The bodhisattva concludes, ‘There is none other than the unobscured knowledge of the tathāgatas, A knowledge that arises from the infinite wisdom of the sugatas,  “ ‘And that wisdom comes from listening to the Dharma.’ Knowing that, they practice with diligence the meaning they have heard. Day and night, they act only in order to listen to the Dharma. They are devoted to the Dharma and wish to accomplish its meaning. “The wise, for the sake of the Dharma, give away without holding back Their precious jewels and pearls, their friends and family, Their endless kingdoms, their perfect, sublime palaces, Their wives, their sons, and their faithful retinues. “They give their heads, legs, arms, and eyes, their own flesh, Their tongues, teeth, noses, ears, and blood. They even pull out their hearts and their marrow And do not see it as a hardship they have to endure. “If someone were to come and say to them, ‘If you dare to leap into that fiercely blazing fire pit I will teach you the precious teaching of the Sugata,’ Hearing that, for the sake of qualities they would jump in without hesitation. “They say, ‘For the sake of one word of Dharma, which is like the summit of Sumeru, I would jump from the realm of Brahmā into a fire that fills the universe. The enlightenment of the Jina is hard to obtain, While the happiness of humans is easy to obtain. “ ‘In order to attain the wisdom of the supreme sage, I would endure the suffering of the Avīci hell. So, needless to say, in order to hear the Dharma I would take on a mass of all kinds of human suffering.’ “Having heard the Dharma, they contemplate it accordingly And attain the immeasurable dhyānas and similarly The four formless states and the five sublime clairvoyances, But those powers do not cause them to be reborn. “On this bhūmi these possessors of qualities make offerings To many millions  of buddhas and listen with certainty to the Dharma. They reach subtlety, are free from wrong, and become purified. They become faultless to the same extent as refined gold. “Those on this bhūmi are endowed with qualities and become lords of gods. They attain the power to eliminate the illness of desire. They bring many kinds of deities to the path of goodness. They desire only the qualities of buddhahood and think of nothing else. “The bodhisattvas on this bhūmi practice with diligence. They attain no less than a hundred thousand samādhis. They see the buddhas, their bodies adorned with wonderful signs, And moreover have powerful prayers and inconceivable qualities.” In that way the supreme third bhūmi Was taught to the bodhisattvas, To the supreme bodhisattvas Who diligently benefit all beings. That which is called Shining Is the third bodhisattva bhūmi."
+  }
+ }
+}
