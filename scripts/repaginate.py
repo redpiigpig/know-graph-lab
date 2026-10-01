@@ -130,7 +130,8 @@ def main() -> int:
             out, split = repaginate(cs)
             if not split:
                 print("SAME", bid, flush=True)
-            elif rc.mass(cs) != rc.mass(out):
+            elif not (0 <= rc.mass(out) - rc.mass(cs) <= 50):
+                # 只准「多」幾個字：mass 會扣掉行首的「(N) 」，註釋換頁後不在行首就少扣，屬量尺偏差；少字一律不寫
                 print("SKIP", bid, f"守恆失敗 {rc.mass(cs)}→{rc.mass(out)}", flush=True)
                 continue
             else:
