@@ -462,10 +462,11 @@ const blocks = computed(() => cmpSets.value.map(set => {
     const ids = descendants(roots)
     for (const s of segments.value) if (ids.has(s.d) && s.kind !== 'head' && s.kind !== 'byline') covered.add(s.uid)
   } else if (self) {
-    const txt = set.units.map(u => set.cells[u.id]?.[self.id] ?? '').join('')
+    // 去掉所有空白再比：切段時換行改成了空格，偈頌段原文卻是逐句換行
+    const txt = set.units.map(u => set.cells[u.id]?.[self.id] ?? '').join('').replace(/\s+/g, '')
     for (const s of segments.value) {
       if (s.kind === 'head' || s.kind === 'byline') continue
-      const t = String(s.sources?.lzh ?? '').trim()
+      const t = String(s.sources?.lzh ?? '').replace(/\s+/g, '')
       if (t.length >= 2 && txt.includes(t)) covered.add(s.uid)
     }
   }
