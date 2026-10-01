@@ -1165,6 +1165,10 @@ B 線＝前人概論怎麼切（比較表）。一次派一個 Sonnet。
   （Oden、Griffith、Nicolini-Zani、翁紹軍、Atiya、Papadakis–Meyendorff、Riley-Smith）。
   觀察：拜占庭本身與加洛林一手薄；十字軍、托缽修會、胡斯威克里夫一手未入表；亞美尼亞、喬治亞、多馬基督徒、努比亞、
   阿拉伯語基督教、科普特與衣索比亞一手偏薄（只有景教那條線夠）。
+- 第三章下半備料完成（`sources_ch03b.md`，62 筆，核實 41／部分 19；必備缺 28，其中 17 已在獵表）；新增 10 本進獵表
+  （Moffett 卷二、Oberman、O'Malley、Hsia、Neill、Hempton、Ajayi、Stanley、Mullin–Richey、Koschorke）。
+  發現：Drive `_corpus\edinburgh`（1910 愛丁堡報告）與 `_corpus\ecumenical`（WCC 文獻 1,452 檔）已在手，普世運動一手不必再找。
+  待作者定：日本切支丹（Boxer、Elison、Higashibaba）、韓國、剛果、衣索比亞（Páez）、哈里斯、宋尚節傳是否補進 §5、§7。
 - 補書不只 z-lib；先查站上既有（梵二 SC／DV 中拉英在 `data/creeds/ecumenical-councils/vatican-ii/`、
   奧斯堡信條與路德小教理在 `data/creeds/protestant-confessions/`、通諭中譯在 `data/encyclicals/`），
   再查 TRC／天主教在線目錄。館藏確認沒有：《天主教教理》全本中譯、《協同書》中譯、Schmemann、Bria、Brown 第二冊。
