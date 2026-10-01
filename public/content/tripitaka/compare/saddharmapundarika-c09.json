@@ -1,0 +1,221 @@
+{
+ "slug": "saddharmapundarika-c09",
+ "title": "法華經・授學無學人記品第九",
+ "family": "sa",
+ "intro": "梵本〈阿難、羅睺羅與二千比丘授記品〉；羅什、添品〈授學無學人記品〉、正法華〈授阿難羅云決品〉。阿難、羅睺羅、學無學二千人三次授記，各散文一節、偈一節。人名異譯：羅睺羅＝羅云（正法華）＝Rāhula；山海慧自在通王＝海持覺娛樂神通（正法華）＝Sāgaravaradharabuddhivikrīḍitābhijña；空王佛＝超空如來（正法華）；蹈七寶華＝度七寶蓮華＝Saptaratnapadmavikrāntagāmin；寶相＝寶英（正法華）＝Ratnaketu。",
+ "units": [
+  {
+   "id": "l9-00",
+   "label": "品題"
+  },
+  {
+   "id": "l9-01",
+   "label": "阿難、羅睺羅求記"
+  },
+  {
+   "id": "l9-02",
+   "label": "學無學二千人起立"
+  },
+  {
+   "id": "l9-03",
+   "label": "授阿難記：山海慧自在通王"
+  },
+  {
+   "id": "l9-v1",
+   "label": "阿難授記偈（梵 9.1–5）"
+  },
+  {
+   "id": "l9-04",
+   "label": "八千新發意菩薩疑・空王佛所同發心"
+  },
+  {
+   "id": "l9-05",
+   "label": "阿難憶念本願・偈（梵 9.6–7）"
+  },
+  {
+   "id": "l9-06",
+   "label": "授羅睺羅記：蹈七寶華"
+  },
+  {
+   "id": "l9-v8",
+   "label": "羅睺羅授記偈（梵 9.8–11）"
+  },
+  {
+   "id": "l9-07",
+   "label": "授二千人記：同號寶相"
+  },
+  {
+   "id": "l9-v12",
+   "label": "二千人授記偈（梵 9.12–16）"
+  },
+  {
+   "id": "l9-08",
+   "label": "學無學二千人歡喜偈（梵 9.17–18）"
+  },
+  {
+   "id": "l9-99",
+   "label": "品尾題"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本",
+   "who": "Saddharmapuṇḍarīka・GRETIL（Vaidya 本）"
+  },
+  {
+   "id": "T0262",
+   "lang": "lzh",
+   "label": "羅什本",
+   "who": "鳩摩羅什譯《妙法蓮華經》・406 年",
+   "work": "T0262"
+  },
+  {
+   "id": "T0263",
+   "lang": "lzh",
+   "label": "正法華",
+   "who": "竺法護譯《正法華經》・286 年",
+   "work": "T0263"
+  },
+  {
+   "id": "T0264",
+   "lang": "lzh",
+   "label": "添品",
+   "who": "闍那崛多、達摩笈多《添品妙法蓮華經》・601 年",
+   "work": "T0264"
+  },
+  {
+   "id": "bo",
+   "lang": "bo",
+   "label": "藏譯",
+   "who": "德格版 Toh 113・84000"
+  },
+  {
+   "id": "en",
+   "lang": "en",
+   "label": "84000 英譯",
+   "who": "譯自藏譯・與藏文逐句對齊"
+  }
+ ],
+ "works": [
+  "T0262",
+  "T0263",
+  "T0264"
+ ],
+ "anchors": [
+  {
+   "work": "T0262",
+   "node": "妙法蓮華經授學無學人記品第九",
+   "uid": "T09n0262_p0029b22"
+  },
+  {
+   "work": "T0263",
+   "node": "正法華經授阿難羅云決品第九",
+   "uid": "T09n0263_p0097c27"
+  },
+  {
+   "work": "T0264",
+   "node": "添品妙法蓮華經授學無學人記品第九",
+   "uid": "T09n0264_p0164a11"
+  }
+ ],
+ "cells": {
+  "l9-00": {
+   "sa": "Saddhp_9: ānandādivyākaraṇaparivartaḥ |"
+  },
+  "l9-01": {
+   "sa": "atha khalvāyuṣmānānandastasyāṃ velāyāmevaṃ cintayāmāsa - apyeva nāma vayamevaṃrūpaṃ vyākaraṇaṃ pratilabhemahi | evaṃ ca cintayitvā anuvicintya prārthayitvā utthāyāsanād bhagavataḥ pādayornipatya, āyuṣmāṃśca rāhulo 'pyevaṃ cintayitvā anuvicintya prārthayitvā bhagavataḥ pādayornipatya evaṃ vācamabhāṣata - asmākamapi tāvad bhagavan avasaro bhavatu | asmākamapi tāvat sugata avasaro bhavatu | asmākaṃ hi bhagavān pitā janako layanaṃ trāṇaṃ ca | vayaṃ hi bhagavan sadevamānuṣāsure loke 'tīva citrīkṛtāḥ - bhagavataścaite putraḥ bhagavataścopasthāyakāḥ bhagavataśca dharmakośaṃ dhārayantīti | tannāma bhagavan kṣiprameva pratirūpaṃ bhaved yad bhagavānasmākaṃ vyākuryādanuttarāyāṃ samyaksaṃbodhau ||",
+   "T0262": "爾時阿難、羅睺羅而作是念：「我等每自思惟：『設得受記，不亦快乎。』」即從座起，到於佛前，頭面禮足，俱白佛言：「世尊！我等於此亦應有分，唯有如來，我等所歸。又我等為一切世間天、人、阿修羅所見知識——阿難常為侍者，護持法藏；羅睺羅是佛之子——若佛見授阿耨多羅三藐三菩提記者，我願既滿，眾望亦足。」",
+   "T0263": "於是賢者阿難自念言：「我寧可蒙受決例乎？」心念此已發願乙密，即從坐起稽首佛足。賢者羅云，復前自投世尊足下，俱共白言：「唯為我等演甘露味，大聖是父靡不明徹，無歸得歸、無救得救、無護得護，於諸天、人阿須倫，興立莊嚴若干種變。阿難、羅云，則是佛子亦是侍者，持聖法藏，惟願世尊，孚令我等所願具足，授無上正真。」",
+   "T0264": "爾時阿難、羅睺羅，而作是念：「我等每自思惟，設得授記，不亦快乎。」即從座起到於佛前，頭面禮足，俱白佛言：「世尊！我等於此亦應有分，唯有如來我等所歸，又我等為一切世間天、人、阿脩羅，所見知識，阿難常為侍者，護持法藏，羅睺羅是佛之子，若佛見授阿耨多羅三藐三菩提記者，我願既滿，眾望亦足。」",
+   "bo": "དེ་ནས་དེའི་ཚེ་ཚེ་དང་ལྡན་པ་ཀུན་དགའ་བོ་འདི་སྙམ་དུ་བདག་ཀྱང་ལུང་བསྟན་པ་དེ་ལྟ་བུ་ཐོབ་པར་བྱའོ། ། སྙམ་དུ་སེམས་ཏེ། དེ་འདི་སྙམ་དུ་བསམས་ཤིང་རྗེས་སུ་རྣམ་པར་བསམས་ཏེ་སྨོན་ནས་སྟན་ལས་ལངས་ཏེ། བཅོམ་ལྡན་འདས་ཀྱི་ཞབས་ལ་གཏུགས་སོ། ། ཚེ་དང་ལྡན་པ་སྒྲ་གཅན་ཟིན་གྱིས་ཀྱང་། དེ་སྙམ་དུ་བསམས་ཏེ་རྗེས་སུ་རྣམ་པར་བསམས་ཤིང་སྨོན་ནས། བཅོམ་ལྡན་འདས་ཀྱི་ཞབས་ལ་གཏུགས་ཏེ་ཚིག་འདི་སྐད་ཅེས་གསོལ་ཏོ། །བཅོམ་ལྡན་འདས་བདག་ཅག་ལ་ཡང་སྐབས་དབྱེ་བར་གསོལ། བདེ་བར་གཤེགས་པ་བདག་ཅག་ལ་སྐབས་དབྱེ་བར་གསོལ། བཅོམ་ལྡན་འདས་ནི་བདག་ཅག་གི་ཕ་དང་སྐྱེད་པ་དང་སྐྱབས་དང་གནས་དང་དཔུང་གཉེན་ལགས་སོ། །བཅོམ་ལྡན་འདས་བདག་ཀྱང་བཅོམ་ལྡན་འདས་ཀྱི་སྲས། བཅོམ་ལྡན་འདས་ཀྱི་ཞབས་འབྲིང་བ་སྟེ། བཅོམ་ལྡན་འདས་ཀྱི་ཆོས་ཀྱི་མཛོད་འཛིན་པ་ལགས་སོ། །ཞེས་ལྷ་དང་མི་དང་ལྷ་མ་ཡིན་དུ་བཅས་པའི་འཇིག་རྟེན་ན་ཤིན་ཏུ་རི་མོ་བགྱིད་པར་གྱུར་ཏོ། ། དེའི་སླད་དུ་བཅོམ་ལྡན་འདས་ཀྱིས་བདག་ཅག་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་ཏུ་མྱུར་དུ་ལུང་བསྟན་ན། བཅོམ་ལྡན་འདས་འཐུན་པ་ལགས་སོ། །",
+   "en": "The Prophecies to Ānanda, Rāhula, and Two Thousand Bhikṣus Chapter 9  At that time, Brother Ānanda thought, “May I obtain a prophecy like these!” Thinking that, contemplating it, and wishing for it, he rose from his seat and bowed down to the Bhagavān’s feet. Brother Rāhula also, thinking, contemplating, and wishing for the same thing, bowed down to the Bhagavān’s feet, and they said, “Bhagavān, may we have such an opportunity! Sugata, may we have such an opportunity! Bhagavān, you are our father, our progenitor, our refuge, our support, and our protector. Bhagavān, we are honored by the world with its devas, humans, and asuras as the sons of the Bhagavān, the attendants of the Bhagavān, and the keepers of the Dharma treasure of the Bhagavān. Therefore, Bhagavān, it would be fitting if the Bhagavān were quickly to give us the prophecy of our attainment of the highest, complete enlightenment.”"
+  },
+  "l9-02": {
+   "sa": "anye ca dve bhikṣusahasre sātireke śaikṣāśaikṣāṇāṃ śrāvakāṇāmutthāyāsanebhya ekāṃsamuttarāsaṅgaṃ kṛtvā añjaliṃ pragṛhya bhagavato 'bhimukhaṃ bhagavantamullokayamāne tasthatuḥ etāmeva cintāmanuvicintayamāne yaduta idameva buddhajñānam - apyeva nāma vayamapi vyākaraṇaṃ pratilabhemahi anuttarāyāṃ samyaksaṃbodhāviti ||",
+   "T0262": "爾時，學、無學聲聞弟子二千人，皆從座起，偏袒右肩，到於佛前，一心合掌，瞻仰世尊，如阿難、羅睺羅所願，住立一面。",
+   "T0263": "又餘聲聞合二千人，與塵勞俱，皆從坐起，偏袒右肩一心叉手，瞻戴尊顏我等逮見。",
+   "T0264": "爾時學、無學聲聞弟子二千人，皆從座起，偏袒右肩到於佛前，一心合掌，瞻仰世尊，如阿難、羅睺羅所願，住立一面。",
+   "bo": "གཞན་ཡང་དགེ་སློང་ཉིས་སྟོང་ལྷག་ཙམ་སློབ་པ་དང་མི་སློབ་པ་དེ་དག་སྟན་ལས་ལངས་ཏེ་བླ་གོས་ཕྲག་པ་གཅིག་ཏུ་གཟར་ནས་ཐལ་མོ་སྦྱར་ཏེ་བཅོམ་ལྡན་འདས་ཀྱི་སྤྱན་སྔ་ན། བཅོམ་ལྡན་འདས་ལ་ལྟ་ཞིང་འདུག་ནས་བསམས་པ་འདི་ཉིད་འདི་ལྟ་སྟེ། སངས་རྒྱས་ཀྱི་ཡེ་ཤེས་འདི་ཉིད་ལ་རྗེས་སུ་སེམས་ཏེ། བདག་ཅག་ཀྱང་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་ཏུ་ལུང་བསྟན་པ་ཐོབ་པར་གྱུར་ཅིག་སྙམ་མོ། །དེ་ནས་བཅོམ་ལྡན་འདས་ཀྱིས་ཚེ་དང་ལྡན་པ་ ཀུན་དགའ་བོ་ལ་བཀའ་སྩལ་པ།",
+   "en": "Moreover, more than two thousand bhikṣus, those in training and those passed beyond training, rose from their seats, removed their upper robe from one shoulder, and with hands together in homage stood facing the Bhagavān, gazing upon him and contemplating the wisdom of the Buddha, and thought, “May we also obtain the prophecy of our attainment of the highest, complete enlightenment!”"
+  },
+  "l9-03": {
+   "sa": "atha khalu bhagavānāyuṣmantamānandamāmantrayate sma - bhaviṣyasi tvamānanda anāgate 'dhvani sāgaravaradharabuddhivikrīḍitābhijño nāma tathāgato 'rhan samyaksaṃbuddho vidyācaraṇasaṃpannaḥ sugato lokavidanuttaraḥ puruṣadamyasārathiḥ śāstā devānāṃ ca manuṣyāṇāṃ ca buddho bhagavān | dvāṣaṣṭīnāṃ buddhakoṭīnāṃ satkāraṃ kṛtvā, gurukāraṃ mānanāṃ pūjanāṃ ca kṛtvā, teṣāṃ buddhānāṃ bhagavatāṃ saddharmaṃ dhārayitvā, śāsanaparigrahaṃ ca kṛtvā anuttarāṃ samyaksaṃbodhimabhisaṃbhotsyasi | sa tvamānanda anuttarāṃ samyaksaṃbodhiṃ saṃbuddhaḥ samāno viṃśatigaṅgānadīvālukāsamāni bodhisattvakoṭīnayutaśatasahasrāṇi paripācayiṣyasyanuttarāyāṃ samyaksaṃbodhau | samṛddhaṃ ca te buddhakṣetraṃ bhaviṣyati vaiḍūryamayaṃ ca | anavanāmitavaijayantī ca nāma sā lokadhāturbhaviṣyati | manojñaśabdābhigarjitaśca nāma sa kalpo bhaviṣyati | aparimitāṃśca kalpāṃstasya bhagavataḥ sāgaravaradharabuddhivikrīḍitābhijñasya tathāgatasyārhataḥ samyaksaṃbuddhasya āyuṣpramāṇaṃ bhaviṣyati, yeṣāṃ kalpānāṃ na śakyaṃ gaṇanayā paryanto 'dhigantum | tāvadasaṃkhyeyāni tāni kalpakoṭīnayutaśatasahasrāṇi tasya bhagavata āyuṣpramāṇaṃ bhaviṣyati | yāvacca ānanda tasya bhagavataḥ sāgaravaradharabuddhivikrīḍitābhijñasya tathāgatasyārhataḥ samyaksaṃbuddhasyāyuṣpramāṇaṃ bhaviṣyati, taddviguṇaṃ parinirvṛtasya saddharmaḥ sthāsyati | yāvāṃstasya bhagavataḥ saddharmaḥ sthāsyati, taddviguṇaḥ saddharmapratirūpakaṃ sthāsyati | tasya khalu punarānanda sāgaravaradharabuddhivikrīḍitābhijñasya tathāgatasya daśasu dikṣu bahūni gaṅgānadīvālukāsamāni buddhakoṭīnayutaśatasahasrāṇi varṇaṃ bhāṣiṣyanti ||",
+   "T0262": "爾時佛告阿難：「汝於來世當得作佛，號山海慧自在通王如來、應供、正遍知、明行足、善逝、世間解、無上士、調御丈夫、天人師、佛、世尊。當供養六十二億諸佛，護持法藏，然後得阿耨多羅三藐三菩提。教化二十千萬億恒河沙諸菩薩等，令成阿耨多羅三藐三菩提。國名常立勝幡，其土清淨，琉璃為地。劫名妙音遍滿。其佛壽命，無量千萬億阿僧祇劫，若人於千萬億無量阿僧祇劫中算數校計，不能得知。正法住世倍於壽命，像法住世復倍正法。阿難！是山海慧自在通王佛，為十方無量千萬億恒河沙等諸佛如來所共讚歎，稱其功德。」",
+   "T0263": "佛告阿難：「汝於來世，當得作佛，號海持覺娛樂神通如來、至真、等正覺、明行成為、善逝、世間解、無上士、道法御、天人師，為佛、眾祐，先當供養六十二億佛，恭順奉侍，執持正法將護經典，然後究竟成最正覺。於是開化二十百千江河沙等天人，使發無上正真道意。其佛國土清淨無瑕，地紺琉璃，竪諸幢幡，自然莊嚴世界平正，無沙礫石、山陵谿谷，地皆柔軟如天綩綖，劫名柔和，無有雷震。時佛壽命不可計數億百千姟，無可為喻難得崖底，諸弟子眾受道教者，不可計會億百千姟無能限量。阿難成佛為大聖時，所以名曰海持覺娛樂神通，其土人民多神變周旋。如來滅度後法住過倍，像法存立復倍正法。十方無量江河沙等億百千佛，悉當歎頌彼佛功德。」",
+   "T0264": "爾時佛告阿難：「汝於來世當得作佛，號山海慧自在通王如來、應供、正遍知、明行足、善逝、世間解、無上士、調御丈夫、天人師、佛、世尊；當供養六十二億諸佛護持法藏，然後得阿耨多羅三藐三菩提；教化二十千萬億恒河沙諸菩薩等，令成阿耨多羅三藐三菩提；國名常立勝幡，其土清淨，琉璃為地，劫名妙音遍滿；其佛壽命，無量千萬億阿僧祇劫，若人於千萬億無量阿僧祇劫中，算數校計不能得知；正法住世倍於壽命，像法住世復倍正法。阿難！是山海慧自在通王佛，為十方無量千萬億恒河沙等諸佛如來所共讚歎稱其功德。」",
+   "bo": "ཀུན་དགའ་བོ་ཁྱོད་མ་འོངས་པའི་དུས་ན་བཅོམ་ལྡན་འདས་དེ་བཞིན་གཤེགས་པ་དགྲ་བཅོམ་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་རིག་པ་དང་ཞབས་སུ་ལྡན་པ། བདེ་བར་གཤེགས་པ། འཇིག་རྟེན་མཁྱེན་པ། སྐྱེས་བུ་འདུལ་བའི་ཁ་ལོ་སྒྱུར་བ། བླ་ན་མེད་པ་ལྷ་དང་མི་རྣམས་ཀྱི་སྟོན་པ། སངས་རྒྱས་བཅོམ་ལྡན་འདས་རྒྱ་མཚོ་མཆོག་འཆང་བློ་རྣམ་པར་རོལ་པའི་མངོན་པར་ཤེས་པ་ཞེས་བྱ་བར་འཇིག་རྟེན་དུ་འབྱུང་སྟེ། སངས་རྒྱས་བྱེ་བ་ཕྲག་དྲུག་ཅུ་རྩ་གཉིས་ལ་བསྟི་སྟང་དུ་བྱས། བཙུན་པར་བྱས། རི་མོར་བྱས་མཆོད་པར་བྱས་ཏེ། སངས་རྒྱས་བཅོམ་ལྡན་འདས་དེ་དག་གི་དམ་པའི་ཆོས་བླངས་ཤིང་བསྟན་པ་ཡོངས་སུ་བཟུང་སྟེ། བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་མངོན་པར་རྫོགས་པར་སངས་རྒྱས་ནས། བྱང་ཆུབ་སེམས་དཔའ་བྱེ་བ་ཁྲག་ཁྲིག་བརྒྱ་སྟོང་ཕྲག་གང་གཱའི་ཀླུང་ཉི་ཤུའི་བྱེ་མ་སྙེད་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་ཏུ་ཡོངས་སུ་སྨིན་པར་བྱེད་པར་འགྱུར་རོ། ། ཁྱོད་ཀྱི་སངས་རྒྱས་ཀྱི་ཞིང་དེ་ཤིན་ཏུ་འབྱོར་ཅིང་། ས་གཞི་བཻ་དཱུརྱ་ལས་གྲུབ་པར་འགྱུར་རོ། ། འཇིག་རྟེན་གྱི་ཁམས་དེ་ནི་མ་བསྙལ་བའི་རྒྱལ་མཚན་ཞེས་བྱ་བར་འགྱུར་རོ། ། བསྐལ་པ་དེ་ནི་ཡིད་དུ་འོང་བའི་སྒྲ་མངོན་པར་བསྒྲགས་པ་ཞེས་བྱ་བར་འགྱུར་རོ། ། བཅོམ་ལྡན་འདས་དེ་བཞིན་གཤེགས་པ་དགྲ་བཅོམ་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་རྒྱ་མཚོ་མཆོག་འཆང་བློ་རྣམ་པར་རོལ་པའི་མངོན་པར་ཤེས་པ་དེའི་ཚེའི་ཚད་ནི་བསྐལ་པ་དཔག་ཏུ་མེད་པར་འགྱུར་ཏེ། བཅོམ་ལྡན་འདས་དེའི་ཚེའི་ཚད་ནི་བགྲང་བས་མཐར་ཕྱིན་པར་མི་ནུས་པའི་བསྐལ་པ་བྱེ་བ་ཁྲག་ཁྲིག་བརྒྱ་སྟོང་གྲངས་མེད་པར་འགྱུར་རོ། ། ཀུན་དགའ་བོ་བཅོམ་ལྡན་འདས་དེ་བཞིན་གཤེགས་པ་དགྲ་བཅོམ་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་རྒྱ་མཚོ་མཆོག་འཆང་བློ་རྣམ་པར་རོལ་པའི་མངོན་པར་ཤེས་པ་དེའི་ཚེའི་ཚད་ཇི་ཙམ་དུ་འགྱུར་བ་དེའི་ཉིས་འགྱུར་དུ་ཡོངས་སུ་མྱ་ངན་ལས་འདས་ནས་དམ་པའི་ཆོས་གནས་པར་འགྱུར་རོ། །བཅོམ་ལྡན་འདས་དེའི་དམ་པའི་ཆོས་ཅི་ཙམ་དུ་གནས་པར་འགྱུར་བ་དེའི་ཉིས་གྱུར་དུ་དམ་པའི་ཆོས་ཀྱི་གཟུགས་བརྙན་གནས་པར་འགྱུར་རོ། ། ཡང་ཀུན་དགའ་བོ་ བཅོམ་ལྡན་འདས་དེ་བཞིན་གཤེགས་པ་དགྲ་བཅོམ་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་རྒྱ་མཚོ་མཆོག་འཆང་བློ་རྣམ་པར་རོལ་པའི་མངོན་པར་ཤེས་པ་དེ་ལ་ཕྱོགས་བཅུའི་སངས་རྒྱས་བྱེ་བ་ཁྲག་ཁྲིག་བརྒྱ་སྟོང་ཕྲག་མང་པོ་གང་གཱའི་ཀླུང་གི་བྱེ་མ་སྙེད་དག་བསྔགས་པ་བརྗོད་པར་འགྱུར་རོ། །",
+   "en": "Then the Bhagavān said to Brother Ānanda, “You, Ānanda, in a future time, will appear in the world as the tathāgata, the arhat, the perfectly enlightened buddha, the one with perfect wisdom and conduct, the sugata, the knower of the world, the unsurpassable guide who tames beings, the teacher of gods and humans, the buddha, the bhagavān named Sāgaravaradharabuddhivikrīḍitābhijña. “You will honor, venerate, show respect for, and make offerings to six hundred and twenty million buddhas, receive the Dharma from them, and uphold their teaching. You will attain the highest, complete enlightenment and ripen for complete enlightenment hundreds of thousands of quintillions of bodhisattvas as numerous as the grains of sands in two hundred million Ganges Rivers. “Your buddha realm will be fully endowed with a ground made of beryl. That realm will be named Anavanāmitavaijayantī. That eon will be named Manojñaśabdābhigarjita. The lifespan of the bhagavān, the tathāgata, the arhat, the perfectly enlightened buddha Sāgaravaradharabuddhivikrīḍitābhijña will be innumerable eons. One could not conclude measuring the lifespan of that bhagavān. It will be countless hundreds of thousands of quintillions of eons. “Ānanda, the Dharma of the bhagavān, the tathāgata, the arhat, the perfectly enlightened buddha Sāgaravaradharabuddhivikrīḍitābhijña will remain after his nirvāṇa for twice as long as his lifespan. “Ānanda, the bhagavān, the tathāgata, the arhat, the perfectly enlightened buddha Sāgaravaradharabuddhivikrīḍitābhijña will be praised in the ten directions by many hundreds of thousands of quintillions of buddhas as numerous as the grains of sand in ten million Ganges Rivers.”"
+  },
+  "l9-v1": {
+   "sa": "atha khalu bhagavāṃstasyāṃ velāyāmimā gāthā abhāṣata - ārocayāmi ahu bhikṣusaṃghe ānandabhadro mama dharmadhārakaḥ / Vaidya 138 anāgate 'dhvāni jino bhaviṣyati pūjitva ṣaṣṭiṃ sugatāna koṭyaḥ // Saddhp_9.1 // nāmena so sāgarabuddhidhārī abhijñaprāpto iti tatra viśrutaḥ / pariśuddhakṣetrasmi sudarśanīye anonatāyāṃ dhvajavaijayantyām // Saddhp_9.2 // tahi bodhisattvā yathā gaṅgavālikāstataśca bhūyo paripācayiṣyati / maharddhikaśco sa jino bhaviṣyati daśaddiśe lokavighuṣṭaśabdaḥ // Saddhp_9.3 // amitaṃ ca tasyāyu tadā bhaviṣyati yaḥ sthāsyate lokahitānukampakaḥ / parinirvṛtasyāpi jinasya tāyino dviguṇaṃ ca saddharmu sa tasya sthāsyati // Saddhp_9.4 // pratirūpakaṃ taddviguṇena bhūyaḥ saṃsthāsyate tasya jinasya śāsane / tadāpi sattvā yathā gaṅgavālikā hetuṃ janeṣyantiha buddhabodhau // Saddhp_9.5 //",
+   "T0262": "爾時世尊欲重宣此義，而說偈言：「我今僧中說，阿難持法者， 當供養諸佛，然後成正覺， 號曰：山海慧自在通王佛。 其國土清淨，名常立勝幡， 教化諸菩薩，其數如恒沙。 佛有大威德，名聞滿十方。 壽命無有量，以愍眾生故， 正法倍壽命，像法復倍是。 如恒河沙等、無數諸眾生， 於此佛法中，種佛道因緣。」",
+   "T0263": "於時世尊，而讚歎頌曰：「今佛頒宣，諸比丘眾，仁者阿難， 總持吾法，於當來世，成為最勝， 供養諸佛，六十二億，名曰海持， 覺乘神通。於此博聞，彼成大道， 其土清淨，顯現微妙，自然跱立， 無數幢幡。諸菩薩眾，如江河沙， 皆是如來，之所建發。悉如最勝， 無極神足，其德名聞，流遍十方。 欲計壽命，無量難限，教化世間， 多所愍傷。假使其佛，滅度之後， 正法當住，過倍其數。像法存立， 轉復過倍，最勝宣發，教化若茲。 又此眾生，如江河沙，興報應心， 立以佛道。」",
+   "T0264": "爾時世尊，欲重宣此義，而說偈言：「我今僧中說，阿難持法者， 當供養諸佛，然後成正覺； 號曰山海慧，自在通王佛； 其國土清淨，名常立勝幡， 教化諸菩薩，其數如恒沙； 佛有大威德，名聞滿十方， 壽命無有量，以愍眾生故， 正法倍壽命，像法復倍是； 如恒河沙等，無數諸眾生， 於此佛法中，種佛道因緣。」",
+   "bo": "དེ་ནས་བཅོམ་ལྡན་འདས་ཀྱིས་དེའི་ཚེ་ཚིགས་སུ་བཅད་པ་འདི་དག་བཀའ་སྩལ་ཏོ། །ངས་ནི་དགེ་སློང་དགེ་འདུན་མོས་པར་བྱ། །ཀུན་དགའ་བཟང་པོ་ང་ཡི་ཆོས་འཛིན་པ། །བདེ་གཤེགས་བྱེ་བ་དྲུག་ཅུ་མཆོད་བྱས་ནས། །མ་འོངས་དུས་ཀྱི་ཚེ་ན་རྒྱལ་བར་འགྱུར། ། དེ་ཡི་མིང་ནི་རྒྱ་མཚོ་བློ་འཛིན་ཏེ། །མངོན་པར་ཤེས་ཐོབ་ཅེས་ཀྱང་དེ་ན་གྲགས། །བལྟ་ན་སྡུག་པ་ཡོངས་སུ་དག་པའི་ཞིང་། །མ་བསྙལ་རྒྱལ་མཚན་རྒྱལ་བའི་བ་དན་ནོ། ། བྱང་ཆུབ་སེམས་དཔའ་གང་གཱའི་བྱེ་སྙེད་དེར། །དེ་བས་ལྷག་པར་ཡོངས་སུ་སྨིན་པར་བྱེད། ། རྒྱལ་བ་དེ་ནི་རྫུ་འཕྲུལ་ཆེ་བར་འགྱུར། །ཕྱོགས་བཅུའི་འཇིག་རྟེན་དུ་ནི་སྒྲ་ཡང་གྲགས། ། དེ་ཚེ་ཚེ་ཡང་དཔག་ཏུ་མེད་པར་འགྱུར། ། འཇིག་རྟེན་རྣམས་ལ་ཕན་ཞིང་བརྩེ་ཕྱིར་གནས། ། སྐྱོབ་པ་དེ་ནི་མྱ་ངན་འདས་འོག་ཏུ། །ཉིས་གྱུར་དེ་ཡི་དམ་ཆོས་གནས་པར་འགྱུར། ། དེ་ནས་གཟུགས་བརྙན་དེ་ཡི་ཉིས་གྱུར་དུ། །གནས་ཏེ་རྒྱལ་བ་དེ་ཡི་བསྟན་པ་ལ། །དེ་ནས་སེམས་ཅན་གང་གཱའི་བྱེ་མ་སྙེད། །སངས་རྒྱས་བྱང་ཆུབ་འདི་ལ་རྒྱུ་ཡང་སྐྱེད། །",
+   "en": "Then the Bhagavān recited these verses: “I declare to you, the saṅgha of bhikṣus, Good Ānanda, the holder of my teaching, Will in the future become a jina After making offerings to six hundred million sugatas. {1}  “His name will be Sāgarabuddhidhārin And he will be renowned as Abhijñaprāpta In the beautiful, completely pure realm Anavanatā Dhvajavaijayantī. {2}  “There he will ripen bodhisattvas More numerous than the Ganges sands. He will be a jina with great miraculous powers And will be renowned in the worlds in the ten directions. {3}  “At that time his lifespan will be immeasurable. He will remain as beneficial and compassionate to the world. After that protector has passed into nirvāṇa His Dharma will remain for twice as long. {4}  “Then its outer form will remain for twice as long as that, And within the teachings of that jina There will be beings as numerous as the sands of the Ganges Who will create the cause for the enlightenment of buddhahood.”"
+  },
+  "l9-04": {
+   "sa": "atha khalu tasyāṃ parṣadi navayānasaṃprasthitānāmaṣṭānāṃ bodhisattvasahasrāṇāmetadabhavat - na bodhisattvānāmapi tāvadasmābhirevamudāraṃ vyākaraṇaṃ śrutapūrvam, kaḥ punarvādaḥ śrāvakāṇām? kaḥ khalvatra heturbhaviṣyati, kaḥ pratyaya iti? atha khalu bhagavāṃsteṣāṃ bodhisattvānāṃ cetasaiva cetaḥ parivitarkamājñāya tān bodhisattvānāmantrayāmāsa - samamasmābhiḥ kulaputrā ekakṣaṇe ekamuhūrte mayā ca ānandena ca anuttarāyāṃ samyaksaṃbodhau cittamutpāditaṃ dharmagaganābhyudgatarājasya tathāgatasyārhataḥ samyaksaṃbuddhasya saṃmukham | tatraiṣa kulaputrā bāhuśrutye ca satatasamitamabhiyukto 'bhūt, ahaṃ ca vīryārambhe 'bhiyuktaḥ | tena mayā kṣiprataramanuttarā samyaksaṃbodhirabhisaṃbuddhā | ayaṃ punarānandabhadro buddhānāṃ bhagavatāṃ saddharmakośadhara eva bhavati sma - yaduta bodhisattvānāṃ pariniṣpattihetoḥ praṇidhānametatkulaputrā asya kulaputrasyeti ||",
+   "T0262": "爾時會中新發意菩薩八千人，咸作是念：「我等尚不聞諸大菩薩得如是記，有何因緣而諸聲聞得如是決？」爾時世尊知諸菩薩心之所念，而告之曰：「諸善男子！我與阿難等，於空王佛所，同時發阿耨多羅三藐三菩提心。阿難常樂多聞，我常勤精進，是故我已得成阿耨多羅三藐三菩提，而阿難護持我法，亦護將來諸佛法藏，教化成就諸菩薩眾，其本願如是，故獲斯記。」",
+   "T0263": "爾時新發意八萬菩薩，各自念言：「怪未曾聞古來未有，吾等焉用菩薩誼為？諸聲聞類頑嚚之儔，乃復授決當獲大道。何因若茲？」世尊即知其心所念，便告之曰：「諸族姓子及比丘聽，佛法平等。族姓子，這發無上正真道意，前於超空如來、至真、等正覺所，而現在博聽眾經，常修精進，來至吾所欲建慇懃。由是緣故，速得無上正真道成最正覺。仁賢阿難，為佛世尊奉持法藏，修菩薩行，出家之緣意履雅願，以諸族姓子用相託付。」",
+   "T0264": "爾時會中，新發意菩薩八千人，咸作是念：「我等尚不聞諸大菩薩得如是記，有何因緣，而諸聲聞得如是決？」爾時世尊知諸菩薩心之所念，而告之曰：「諸善男子！我與阿難等，於空王佛所，同時發阿耨多羅三藐三菩提心，阿難常樂多聞，我常勤精進，是故我已得成阿耨多羅三藐三菩提；而阿難護持我法，亦護將來諸佛法藏，教化成就諸菩薩眾，其本願如是，故獲斯記。」",
+   "bo": "དེ་ནས་འཁོར་དེ་ན་བྱང་ཆུབ་སེམས་དཔའ་ཐེག་པ་ལ་གསར་དུ་ཡང་དག་པར་ཞུགས་པ་བརྒྱ་སྟོང་འདི་སྙམ་དུ་སེམས་ཏེ། བྱང་ཆུབ་སེམས་དཔའ་རྣམས་ལ་ཡང་དེ་ལྟ་བུར་རྒྱ་ཆེར་ལུང་བསྟན་པ། བདག་ཅག་གིས་སྔོན་མ་ཐོས་ན་ཉན་ཐོས་རྣམས་ལ་ལྟ་ཅི་སྨོས་ཏེ། འདི་ལ་རྒྱུ་གང་དང་རྐྱེན་ཅི་ཞིག་ཡོད་སྙམ་མོ། ། དེ་ནས་བཅོམ་ལྡན་འདས་ཀྱིས་བྱང་ཆུབ་སེམས་དཔའ་དེ་དག་གི་སེམས་ཀྱི་རྣམ་པར་རྟོག་པ་ཐུགས་ཀྱིས་ཐུགས་སུ་ཆུད་ནས། བྱང་ཆུབ་སེམས་དཔའ་དེ་དག་ལ་བཀའ་སྩལ་པ། རིགས་ཀྱི་བུ་དག་སྐད་ཅིག་ཡུད་ཙམ་གཅིག་ལ་མཉམ་དུ་ང་དང་ཀུན་དགའ་བོ་དེ་བཞིན་གཤེགས་པ་དགྲ་བཅོམ་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་ཆོས་ཀྱི་ནམ་མཁའ་མངོན་འཕགས་རྒྱལ་པོའི་སྤྱན་སྔར། བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་ ཏུ་སེམས་བསྐྱེད་དེ། དེ་ནས་རིགས་ཀྱི་བུ་འདི་ནི་རྟག་ཏུ་རྒྱུན་མི་ཆད་པར་མང་དུ་ཐོས་པ་ལ་བརྩོན་པར་གྱུར་ཏོ། །ང་ནི་བརྩོན་འགྲུས་རྩོམ་པ་ལ་བརྩོན་ཏེ། དེའི་ཕྱིར་ང་མྱུར་དུ་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་ཏུ་མངོན་པར་རྫོགས་པར་སངས་རྒྱས་སོ། །ཀུན་དགའ་བོ་བཟང་པོ་འདི་ནི་སངས་རྒྱས་བཅོམ་ལྡན་འདས་རྣམས་ཀྱི་དམ་པའི་ཆོས་ཀྱི་མཛོད་འཛིན་པར་འགྱུར་ཏེ་རིགས་ཀྱི་བུ་དག་འདི་ལྟ་སྟེ། བྱང་ཆུབ་སེམས་དཔའ་རྣམས་ཡོངས་སུ་གྲུབ་པར་བྱ་བའི་ཕྱིར། རིགས་ཀྱི་བུ་འདིའི་སྨོན་ལམ་ནི་འདི་ཡིན་ནོ། །",
+   "en": "{5}  In that assembly at that time there were eight thousand bodhisattvas, who had newly entered the yāna, who thought, “We have never before heard such an extensive prophecy for bodhisattvas, let alone for the śrāvakas. What could be the cause, what could be the reason for this?” The Bhagavān, knowing the thoughts and contemplation in the minds of those bodhisattvas, said to those bodhisattvas, “Noble sons, Ānanda and I together, at the same moment, developed the aspiration to the highest, complete enlightenment in front of the tathāgata, the arhat, the perfectly enlightened buddha Dharmagaganābhyudgatarāja. This noble son has been continuously dedicated to receiving many teachings, while I was dedicated to diligent practice. That is why I have quickly attained the highest, complete enlightenment of perfect buddhahood, and it is why this good Ānanda will be the keeper of the Dharma treasures of the buddha bhagavāns. Noble sons, it is the prayer of this noble son that this will be the cause for bodhisattvas reaching perfection.”"
+  },
+  "l9-05": {
+   "sa": "atha khalvāyuṣmānānando bhagavato 'ntikādātmano vyākaraṇaṃ śrutvā anuttarāyāṃ samyaksaṃbodhau, ātmanaśca buddhakṣetraguṇavyūhān śrutvā, pūrvapraṇidhānacaryāṃ ca śrutvā, tuṣṭa udagra āttamanaskaḥ pramuditaḥ prītisaumanasyajāto 'bhūt | tasmiṃśca samaye bahūnāṃ buddhakoṭīnayutaśatasahasrāṇāṃ saddharmamanusmarati sma, ātmanaśca purvapraṇidhānam || atha khalvāyuṣmānānandastasyāṃ velāyāmimā gāthā abhāṣata - āścaryabhūtā jina aprameyā ye smārayanti mama dharmadeśanām / parinirvṛtānāṃ hi jināna tāyināṃ samanusmarāmī yatha adya śvo vā // Saddhp_9.6 // niṣkāṅkṣaprāpto 'smi sthito 'smi bodhaye upāyakauśalya mamedamīddaśam / paricārako 'haṃ sugatasya bhomi saddharma dhāremi ca bodhikāraṇāt // Saddhp_9.7 //",
+   "T0262": "阿難面於佛前，自聞授記及國土莊嚴，所願具足，心大歡喜，得未曾有。即時憶念過去無量千萬億諸佛法藏，通達無礙，如今所聞，亦識本願。爾時阿難而說偈言：「世尊甚希有，令我念過去， 無量諸佛法，如今日所聞。 我今無復疑，安住於佛道， 方便為侍者，護持諸佛法。」",
+   "T0263": "爾時阿難自親從佛，聞已無量空無之誼，當得成佛授國土決，聞本行願歡喜悅豫，尋即憶念無央數億百千之姟諸正覺典。又觀本行所履之跡前後劫數。即歎頌曰：「我本聞有，無量諸佛，悉念為余， 說經典時。諸有滅度，最勝大聖， 余皆憶識，如所聞說。得立佛道， 心不懷疑，如是比者，善權方便。 而為安住，立侍者地，以大道故， 奉持正法。」",
+   "T0264": "阿難面於佛前，自聞授記及國土莊嚴，所願具足，心大歡喜，得未曾有；即時憶念過去無量千萬億諸佛法藏，通達無礙如今所聞，亦識本願。爾時阿難而說偈言：「世尊甚希有，令我念過去， 無量諸佛法，如今日所聞； 我今無復疑，安住於佛道， 方便為侍者，護持諸佛法。」",
+   "bo": "དེ་ནས་ཚེ་དང་ལྡན་པ་ཀུན་དགའ་བོས་བཅོམ་ལྡན་འདས་ལས་བདག་ཉིད་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་ཏུ་ལུང་བསྟན་པ་ཐོས། བདག་གི་སངས་རྒྱས་ཀྱི་ཞིང་གི་ཡོན་ཏན་བཀོད་པ་ཐོས། སྔོན་གྱི་སྨོན་ལམ་དང་སྤྱོད་པ་ཡང་ཐོས་ནས་ཚིམ་ཞིང་མགུ་ལ་ཡི་རངས་ཏེ་རབ་ཏུ་དགའ་ཞིང་དགའ་བ་དང་ཡིད་བདེ་བ་སྐྱེས་པར་གྱུར་ཏེ། དེའི་ཚེ་སངས་རྒྱས་བྱེ་བ་ཁྲག་ཁྲིག་བརྒྱ་སྟོང་མང་པོའི་དམ་པའི་ཆོས་དང་བདག་གི་སྔོན་གྱི་སྨོན་ལམ་དྲན་ནོ། ། དེ་ནས་ཚེ་དང་ལྡན་པ་ཀུན་དགའ་བོས་དེའི་ཚེ་ཚིགས་སུ་བཅད་པ་འདི་དག་གསོལ་ཏོ། །ངོ་མཚར་གྱུར་པ་རྒྱལ་བ་དཔག་མེད་པས། ། སྐྱོབ་པ་ཡོངས་སུ་མྱ་ངན་འདས་རྣམས་ཀྱི། །ཆོས་བསྟན་པ་དག་བདག་ལ་དྲན་མཛད་པས། ། ཁར་སང་དེ་རིང་བཞིན་དུ་དྲན་པར་གྱུར། ། ཐེ་ཙོམ་མ་མཆིས་བྱང་ཆུབ་དོན་དུ་གནས། ། བདག་གི་ཐབས་ལ་མཁས་པ་འདི་འདྲ་སྟེ། ། བདག་ནི་བདེ་བར་གཤེགས་པའི་ཞབས་འབྲིང་ལགས། །བྱང་ཆུབ་དོན་དུ་དམ་པའི་ཆོས་ཀྱང་འཛིན། །",
+   "en": "Brother Ānanda heard from the Bhagavān the prediction of his own attainment of the highest, complete enlightenment. He heard the description of the qualities of his own buddha realm, and he heard of his past prayer and conduct. Then he was contented, delighted, elated, and joyful, and he became glad and happy. At that time he remembered the Dharma of the many hundreds of thousands of quintillions of buddhas, and the prayer that he had made in the past. Then Ānanda recited these verses: “The countless jinas are so wonderful. They have caused me to remember the Dharma teachings. I remember, as if it were today or yesterday, The protectors, the jinas, who have passed into nirvāṇa. {6}  “I am free of doubt, I am fixed upon enlightenment. This is the nature of my skill in methods. I am the attendant of the Sugata And I hold the Dharma for the sake of enlightenment.”"
+  },
+  "l9-06": {
+   "sa": "atha khalu bhagavānāyuṣmantaṃ rāhulabhadramāmantrayate sma - bhaviṣyasi tvaṃ rāhulabhadra anāgate 'dhvani saptaratnapadmavikrāntagāmī nāma tathāgato 'rhan samyaksaṃbuddho vidyācaraṇasaṃpannaḥ sugato lokavidanuttaraḥ puruṣadamyasārathiḥ śāstā devānāṃ ca manuṣyāṇāṃ ca buddho bhagavān daśalokadhātuparamāṇurajaḥsamāṃstathāgatānarhataḥ samyaksaṃbuddhān satkṛtya gurukṛtya mānayitvā pūjayitvā arcayitvā | sadā teṣāṃ buddhānāṃ bhagavatāṃ jyeṣṭhaputro bhaviṣyasi tadyathāpi nāma mamaitarhi | tasya khalu punā rāhulabhadra bhagavataḥ saptaratnapadmavikrāntagāminastathāgatasyārhataḥ samyaksaṃbuddhasya evaṃrūpamevāyuṣpramāṇaṃ bhaviṣyati, evaṃ rūpaiva sarvākāraguṇasaṃpad bhaviṣyati tadyathāpi nāma tasya bhagavataḥ sāgaravaradharabuddhivikrīḍitābhijñasya tathāgatasyārhataḥ samyaksaṃbuddhasya sarvākāraguṇopetā buddhakṣetraguṇavyūhā bhaviṣyanti | tasyāpi rāhula sāgaravaradharabuddhivikrīḍitābhijñasya tathāgatasyārhataḥ samyaksaṃbuddhasya tvameva jyeṣṭhaputro bhaviṣyasi | tataḥ paścāt pareṇānuttarāṃ samyaksaṃbodhimabhisaṃbhotsyasīti ||",
+   "T0262": "爾時佛告羅睺羅：「汝於來世當得作佛，號蹈七寶華如來、應供、正遍知、明行足、善逝、世間解、無上士、調御丈夫、天人師、佛、世尊。當供養十世界微塵等數諸佛如來，常為諸佛而作長子，猶如今也。是蹈七寶華佛，國土莊嚴，壽命劫數，所化弟子，正法、像法，亦如山海慧自在通王如來無異，亦為此佛而作長子。過是已後，當得阿耨多羅三藐三菩提。」",
+   "T0263": "於是世尊告賢者羅云：「羅云思之，汝當來世當得作佛，號度七寶蓮華如來、至真、等正覺、明行成為、善逝、世間解、無上士、道法御、天人師，為佛、眾祐，則當供事如十世界塵數如來，當為諸佛現作尊子，亦復如今為吾息也。其度七寶蓮華如來，國土、壽命、教化眾生、所有莊嚴，亦如海持覺娛樂神通世界清淨，羅云當為其佛尊子，過是已後當得無上正真道成最正覺。」",
+   "T0264": "爾時佛告羅睺羅：「汝於來世當得作佛，號蹈七寶華如來、應供、正遍知、明行足、善逝、世間解、無上士、調御丈夫、天人師、佛、世尊。當供養十世界微塵等數諸佛如來，常為諸佛而作長子，猶如今也。是蹈七寶華佛，國土莊嚴，壽命劫數，所化弟子，正法、像法，亦如山海慧自在通王如來無異。亦為此佛而作長子，過是已後，當得阿耨多羅三藐三菩提。」",
+   "bo": "དེ་ནས་བཅོམ་ལྡན་འདས་ཀྱིས་ཚེ་དང་ལྡན་པ་སྒྲ་གཅན་ཟིན་ལ་བཀའ་སྩལ་པ། སྒྲ་གཅན་ཟིན་ཁྱོད་མ་འོངས་པའི་དུས་ན་དེ་བཞིན་གཤེགས་པ་དགྲ་བཅོམ་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་འཇིག་རྟེན་གྱི་ཁམས་བཅུའི་རྡུལ་ཕྲ་རབ་ཀྱི་རྡུལ་སྙེད་ལ་བསྟི་སྟང་དུ་བྱས། བཙུན་པར་བྱས། རི་མོ་བྱས། མཆོད་པར་བྱས་ནས་དེ་བཞིན་གཤེགས་པ་དགྲ་བཅོམ་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་རིག་པ་དང་ཞབས་སུ་ལྡན་པ། བདེ་བར་གཤེགས་པ། འཇིག་རྟེན་མཁྱེན་པ། སྐྱེས་བུ་འདུལ་བའི་ཁ་ལོ་སྒྱུར་བ། བླ་ན་མེད་པ་ལྷ་དང་མི་རྣམས་ཀྱི་ སྟོན་པ། སངས་རྒྱས་བཅོམ་ལྡན་འདས་རིན་པོ་ཆེ་སྣ་བདུན་གྱི་པད་མ་ལ་གོམ་པས་འགྲོ་བ་ཞེས་བྱ་བར་འགྱུར་རོ། ། རྟག་ཏུ་ཡང་སངས་རྒྱས་བཅོམ་ལྡན་འདས་དེ་དག་གི་སྲས་ཐུ་བོར་འགྱུར་ཏེ་འདི་ལྟ་སྟེ་དཔེར་ན། དེ་ལྟར་ང་ཡི་བཞིན་ནོ། ། སྒྲ་གཅན་ཟིན་བཅོམ་ལྡན་འདས་དེ་བཞིན་གཤེགས་པ་དགྲ་བཅོམ་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་རིན་པོ་ཆེ་སྣ་བདུན་གྱི་པད་མ་ལ་གོམ་པས་འགྲོ་བ་དེའི་ཚེའི་ཚད་ཀྱང་འདི་ལྟ་བུར་འགྱུར། ཡོན་ཏན་རྣམ་པ་མང་པོ་ཐམས་ཅད་ཕུན་སུམ་ཚོགས་པ་ཡང་འདི་ལྟ་བུར་འགྱུར་ཏེ། ཇི་ལྟར་བཅོམ་ལྡན་འདས་དེ་བཞིན་གཤེགས་པ་དགྲ་བཅོམ་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་རྒྱ་མཚོ་མཆོག་འཆང་བློ་རྣམ་པར་རོལ་པའི་མངོན་པར་ཤེས་པའི་ཡོན་ཏན་རྣམ་པ་ཐམས་ཅད་དང་ལྡན་པའི་སངས་རྒྱས་ཀྱི་ཞིང་གི་ཡོན་ཏན་བཀོད་པ་བཞིན་དུ་འགྱུར་རོ། ། སྒྲ་གཅན་ཟིན་དེ་བཞིན་གཤེགས་པ་དགྲ་བཅོམ་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་རྒྱ་མཚོ་མཆོག་འཆང་བློ་རྣམ་པར་རོལ་པའི་མངོན་པར་ཤེས་པ་དེ་ཡི་སྲས་ཐུ་བོར་ཡང་ཁྱོད་ཉིད་འགྱུར་ཏེ། དེ་ཡི་འོག་ཏུ་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་མངོན་པར་རྫོགས་པར་འཚང་རྒྱ་བར་འགྱུར་རོ། །",
+   "en": "{7}  Then the Bhagavān said to Brother Rāhula, “You, Rāhula, in a future time will honor, venerate, show respect for, and make offerings to tathāgatas, arhats, perfectly enlightened buddhas as numerous as the atoms in ten worlds. Then you will become the tathāgata, the arhat, the perfectly enlightened buddha, the one with perfect wisdom and conduct, the sugata, the knower of the world, the unsurpassable guide who tames beings, the teacher of gods and humans, the buddha, the bhagavān named Saptaratnapadmavikrāntagāmin. “You will constantly be the eldest son of those buddha bhagavāns, as you are for me. Rāhula, the lifespan of the bhagavān, the tathāgata, the arhat, the perfectly enlightened buddha Saptaratnapadmavikrāntagāmin will be the same as that of the bhagavān, the tathāgata, the arhat, the perfectly enlightened buddha Sāgaravaradharabuddhivikrīḍitābhijña. The perfection of all his many qualities will be like his, and he will have the same display of the qualities of his buddha realm as Sāgaravaradharabuddhivikrīḍitābhijña. “Rāhula, you will be the eldest son of the tathāgata, the arhat, the perfectly enlightened buddha Sāgaravaradharabuddhivikrīḍitābhijña, and after that you will attain the highest, complete enlightenment of perfect buddhahood.”"
+  },
+  "l9-v8": {
+   "sa": "atha khalu bhagavāṃstasyāṃ velāyāmimā gāthā abhāṣata - ayaṃ mamā rāhula jyeṣṭhaputro yo auraso āsi kumārabhāve / bodhiṃ pi prāptasya mamaiṣa putro dharmasya dāyādyadharo maharṣiḥ // Saddhp_9.8 // anāgate 'dhve bahubuddhakoṭyo yān drakṣyase yeṣa pramāṇu nāsti / sarveṣa teṣāṃ hi jināna putro bhaviṣyatī bodhi gaveṣamāṇaḥ // Saddhp_9.9 // ajñātacaryā iya rāhulasya praṇidhānametasya ahaṃ prajānami / karoti saṃvarṇana lokabandhuṣu ahaṃ kilā putra tathāgatasya // Saddhp_9.10 // guṇāna koṭīnayutāprameyāḥ pramāṇu yeṣāṃ na kadācidasti / ye rāhulasyeha mamaurasatya tathā hi eṣo sthitu bodhikāraṇāt // Saddhp_9.11 //",
+   "T0262": "爾時世尊欲重宣此義，而說偈言：「我為太子時，羅睺為長子， 我今成佛道，受法為法子。 於未來世中，見無量億佛， 皆為其長子，一心求佛道。 羅睺羅密行，唯我能知之， 現為我長子，以示諸眾生。 無量億千萬，功德不可數， 安住於佛法，以求無上道。」",
+   "T0263": "時佛頌曰：「羅云是我，尊上長子，幼少精童， 柔和殊妙。斯佛之子，當得大道， 常以法施，多所悅喜。無數億佛， 所見哀念，欲得算計，無能限量。 普為最勝，諸佛之子，當成大道， 眾比丘像。又此羅云，所行溫雅， 興立殊願，奉吾正戒。諮嗟宣揚， 世雄導師，言我今是，如來之子。 諸德無量，億姟之數，設有思念， 莫能限量。其羅云者，佛之長子， 今所通履，住佛道故。」",
+   "T0264": "爾時世尊，欲重宣此義，而說偈言：「我為太子時，羅睺為長子； 我今成佛道，受法為法子， 於未來世中，見無量億佛， 皆為其長子，一心求佛道。 羅睺羅密行，惟我能知之， 現為我長子，以示諸眾生， 無量億千萬，功德不可數， 安住於佛法，以求無上道。」",
+   "bo": "དེ་ནས་བཅོམ་ལྡན་འདས་ཀྱིས་དེའི་ཚེ་ཚིགས་སུ་བཅད་པ་འདི་དག་བཀའ་སྩལ་ཏོ། །སྒྲ་གཅན་ཟིན་འདི་ང་ཡི་བུ་ཐུ་བོ། །གཞོན་ནུར་གྱུར་པའི་ཚེ་ན་སྙིང་གི་བུ། ། བྱང་ཆུབ་ཐོབ་ཀྱང་ང་ཡི་བུ་ཡིན་ཏེ། །དྲང་སྲོང་ཆེན་པོ་ཆོས་ཀྱི་བགོ་སྐལ་འཛིན། ། མ་འོངས་དུས་ན་སངས་རྒྱས་བྱེ་མང་པོ། །དེ་དག་ཚད་མེད་པ་ནི་མཐོང་བར་འགྱུར། །བྱང་ཆུབ་ཡོངས་སུ་བཙལ་བར་བྱ་བའི་ཕྱིར། །རྒྱལ་བ་དེ་དག་ཀུན་གྱི་སྲས་སུ་འགྱུར། ། སྒྲ་གཅན་ཟིན་གྱིས་སྤྱོད་འདི་མི་ཤེས་ཏེ། །འདི་ཡི་སྨོན་ལམ་དག་ནི་ངས་ཤེས་སོ། ། བདག་ནི་དེ་བཞིན་གཤེགས་པའི་སྲས་པོ་ཞེས། །འཇིག་རྟེན་གཉེན་ལ་ཡང་དག་སྤྱོམས་པར་བྱེད། ། སྒྲ་གཅན་ཟིན་པ་ང་ཡི་བུ་འདི་ཡི། །ཡོན་ཏན་བྱེ་བ་ཁྲག་ཁྲིག་དཔག་ཏུ་མེད། །དེ་ལ་ནམ་ཡང་ཚད་གཟུང་ཡོད་མེད་དེ། ། དེ་ལྟར་འདི་ནི་བྱང་ཆུབ་དོན་དུ་གནས། ། དེ་ནས་བཅོམ་ལྡན་འདས་ཀྱིས་ཉན་ཐོས་སློབ་པ་དང་མི་སློབ་པ་ཉིས་སྟོང་པོ་དེ་དག་བཅོམ་ལྡན་འདས་ཀྱི་སྤྱན་ སྔ་ན། བཅོམ་ལྡན་འདས་ལ་ལྟ་ཞིང་སེམས་དང་བ་དང་སེམས་མཉེན་པ་དང་སེམས་འཇམ་པར་བཅོམ་ལྡན་འདས་ཀྱིས་གཟིགས་ཏེ།",
+   "en": "Then the Bhagavān recited these verses: “This Rāhula, my eldest son, Was my own son when he was a child. Even after enlightenment, he is my son, A great rishi who holds the inheritance of Dharma. {8}  “In the future, he will see many Countless millions of buddhas; Because he is seeking enlightenment He will be the son of all those jinas. {9}  “This activity of Rāhula is not known, But I know the prayers he has made. He lauds the friends of the world, Saying, ‘I am the son of the Tathāgata!’ {10}  “Rāhula, who is my own son, Has countless quintillions of qualities That can never be measured. Thus he remains for the sake of enlightenment.” {11}  The Bhagavān looked upon two thousand śrāvakas, both those in training and those who had passed beyond training, who in the presence of the Bhagavān were gazing upon the Bhagavān with tranquil minds, placid minds, and gentle minds."
+  },
+  "l9-07": {
+   "sa": "adrākṣītkhalu punarbhagavāṃste dve śrāvakasahasre śaikṣāśaikṣāṇāṃ śrāvakāṇāṃ bhagavantamavalokayamāne abhimukhaṃ prasannacitte mṛducitte mārdavacitte | atha khalu bhagavāṃstasyāṃ velāyāmāyuṣmantamānandamāmantrayate sma - paśyasi tvamānanda ete dve śrāvakasahasre śaikṣāśaikṣāṇāṃ śrāvakāṇām? āha - paśyāmi bhagavan, paśyāmi sugata | bhagavānāha - sarva evaite ānanda dve bhikṣu sahasre samaṃ bodhisattvacaryāṃ samudānayiṣyanti, pañcāśallokadhātuparamāṇurajaḥsamāṃśca buddhān bhagavataḥ satkṛtya gurukṛtya mānayitvā pūjayitvā arcayitvā apacāyitvā saddharma ca dhārayitvā paścime samucchraye ekakṣaṇenaikamuhūrtenaikalavenaikasaṃnipātena daśasu dikṣvanyonyāsu lokadhātuṣu sveṣu sveṣu buddhakṣetreṣvanuttarāṃ samyaksaṃbodhimabhisaṃbhotsyante | ratnaketurājā nāma tathāgatā arhantaḥ samyaksaṃbuddhā bhaviṣyanti | paripūrṇaṃ caiṣāṃ kalpamāyuṣpramāṇaṃ bhaviṣyati | samāścaiṣāṃ buddhakṣetraguṇavyūhā bhaviṣyanti | samaḥ śrāvakagaṇo bodhisattvagaṇaśca bhaviṣyati | samaṃ caiṣāṃ parinirvāṇaṃ bhaviṣyati | samaścaiṣāṃ saddharmaḥ sthāsyati ||",
+   "T0262": "爾時世尊見學、無學二千人，其意柔軟，寂然清淨，一心觀佛。佛告阿難：「汝見是學、無學二千人不？」「唯然，已見。」「阿難！是諸人等，當供養五十世界微塵數諸佛如來，恭敬尊重，護持法藏。末後同時於十方國各得成佛，皆同一號，名曰寶相如來、應供、正遍知、明行足、善逝、世間解、無上士、調御丈夫、天人師、佛、世尊。壽命一劫。國土莊嚴，聲聞、菩薩，正法、像法、皆悉同等。」",
+   "T0263": "爾時阿難、羅云，俱白佛言：「今我等見二千聲聞，學弟子戒心懷忻然，瞻戴尊顏，道法正典不可思議，願及是時。」佛告阿難、羅云：「寧見二千聲聞學弟子法戒者乎？」阿難白佛言：「唯然見之。」佛告阿難：「斯黨同行等學大乘，當供養五百世界塵數如來執持正典，然於後世一時同集，布於十方各各異土，逮成無上正真道為最正覺，號寶英如來、至真、等正覺、明行成為、善逝、世間解、無上士、道法御、天人師，為佛、眾祐。其壽一劫，覺慧平等，諸聲聞同多少無差，諸菩薩眾亦復如是。滅度之後正法住立，數亦無異。」",
+   "T0264": "爾時世尊，見學、無學二千人，其意柔軟，寂然清淨一心觀佛。佛告阿難：「汝見是學、無學二千人不？」「唯然已見。」「阿難！是諸人等，當供養五十世界微塵數諸佛如來，恭敬、尊重、護持法藏，末後同時，於十方國各得成佛，皆同一號，名曰寶相如來、應供、正遍知、明行足、善逝、世間解、無上士、調御丈夫、天人師、佛、世尊，壽命一劫，國土莊嚴，聲聞、菩薩，正法、像法，皆悉同等。」",
+   "bo": "དེ་ནས་བཅོམ་ལྡན་འདས་ཀྱིས་ཚེ་དང་ལྡན་པ་ཀུན་དགའ་བོ་ལ་བཀའ་སྩལ་པ། ཀུན་དགའ་བོ་ཉན་ཐོས་སློབ་པ་དང་མི་སློབ་པ་ཉིས་སྟོང་པོ་འདི་དག་མཐོང་ངམ། གསོལ་པ། བཅོམ་ལྡན་འདས་མཐོང་ལགས་སོ། ། བདེ་བར་གཤེགས་པ་མཐོང་ལགས་སོ། ། བཅོམ་ལྡན་འདས་ཀྱིས་བཀའ་སྩལ་པ། ཀུན་དགའ་བོ་དགེ་སློང་ཉིས་སྟོང་པོ་དེ་དག་ཐམས་ཅད་མཉམ་དུ་བྱང་ཆུབ་སེམས་དཔའི་སྤྱོད་པ་ཡང་དག་པར་སྒྲུབ་པར་འགྱུར་ཏེ། སངས་རྒྱས་བཅོམ་ལྡན་འདས་འཇིག་རྟེན་གྱི་ཁམས་ལྔ་བཅུའི་རྡུལ་ཕྲ་རབ་ཀྱི་རྡུལ་སྙེད་ལ་བསྟི་སྟང་བྱས། བཙུན་པར་བྱས། རི་མོར་བྱས། མཆོད་པ་བྱས། དམ་པའི་ཆོས་བཟུང་ནས། ལུས་ཐ་མ་ལ་སྐད་ཅིག་ཐང་ཅིག་ཡུད་ཙམ་གཅིག་ལ་ཕྱོགས་བཅུའི་འཇིག་རྟེན་གྱི་ཁམས་གཞན་དང་གཞན་དག་གི་སངས་རྒྱས་ཀྱི་ཞིང་རྣམས་སུ་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་ཏུ་མངོན་པར་རྫོགས་པར་འཚང་རྒྱ་བར་འགྱུར་ཏེ། དེ་བཞིན་གཤེགས་པ་དགྲ་བཅོམ་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་རིན་པོ་ཆེའི་མེ་ཏོག་གི་རྒྱལ་པོ་ཞེས་བྱ་བར་འཇིག་རྟེན་དུ་འབྱུང་སྟེ། དེ་དག་གི་ཚེའི་ཚད་ནི་བསྐལ་པ་ཚང་བར་འགྱུར། དེ་དག་གི་སངས་རྒྱས་ཀྱི་ཞིང་གི་ཡོན་ཏན་བཀོད་པ་ཡང་མཚུངས་པར་འགྱུར་རོ། ། དེ་དག་གི་ཉན་ཐོས་ཀྱི་ཚོགས་དང་། བྱང་ཆུབ་སེམས་དཔའི་ཚོགས་ཀྱང་མཉམ་པར་འགྱུར་རོ། ། དེ་དག་མཉམ་དུ་ཡོངས་སུ་མྱ་ངན་ལས་འདའ་བར་འགྱུར་རོ། ། དེ་དག་གི་དམ་པའི་ཆོས་ཀྱང་མཉམ་པར་གནས་པར་འགྱུར་རོ། །",
+   "en": "Then the Bhagavān asked Brother Ānanda, “Ānanda, do you see these two thousand śrāvakas, both those in training and those who have passed beyond training?” “I see them, Bhagavān,” he answered. “I see them, Sugata.” “Ānanda,” said the Bhagavān, “all those two thousand bhikṣus will together practice the conduct of a bodhisattva. They will honor, venerate, show respect for, and make offerings to buddha bhagavāns as numerous as the atoms in fifty worlds, and be holders of their Dharma. Then in their last lives, in the same instant, the same moment, the same second, they will attain the highest, complete enlightenment of perfect buddhahood, each in their own buddha realm among the worlds in the ten directions. They will be tathāgatas, arhats, perfectly enlightened buddhas named Ratnaketurāja. Their lifespans will be an entire eon. Their buddha realms will have the same display of qualities. Their gatherings of śrāvakas and gatherings of bodhisattvas will also be the same in number. They will all pass into nirvāṇa at the same time. Their Dharma also will remain for the same length of time.”"
+  },
+  "l9-v12": {
+   "sa": "atha khalu bhagavāṃstasyāṃ velāyāmimā gāthā abhāṣata - dve vai sahasre ime śrāvakāṇāṃ ānanda ye te mama agrataḥ sthitāḥ / tān vyākaromī ahamadya paṇḍitānanāgate 'dhvāni tathāgatatve // Saddhp_9.12 // ananta aupamyanidarśanehi buddhāna agryāṃ kariyāṇa pūjām / ārāgayiṣyanti mamāgrabodhiṃ sthihitva carimasmi samucchrayasmin // Saddhp_9.13 // ekena nāmena daśaddiśāsu kṣaṇasmi ekasmi tathā muhūrte / Vaidya 141 niṣadya ca drumapravarāṇa mūle buddhā bhaviṣyanti spṛśitva jñānam // Saddhp_9.14 // ekaṃ ca teṣāmiti nāma bheṣyati ratnasya ketūtiha loki viśrutāḥ / samāni kṣetrāṇi varāṇi teṣāṃ samo gaṇaḥ śrāvakabodhisattvāḥ // Saddhp_9.15 // ṛddhiprabhūtā iha sarvi loke samantataste daśasu ddiśāsu / dharmaṃ prakāśetva yadāpi nirvṛtāḥ saddharmu teṣāṃ samameva sthāsyati // Saddhp_9.16 //",
+   "T0262": "爾時世尊欲重宣此義，而說偈言：「是二千聲聞，今於我前住， 悉皆與授記，未來當成佛。 所供養諸佛，如上說塵數， 護持其法藏，後當成正覺。 各於十方國，悉同一名號， 俱時坐道場，以證無上慧， 皆名為寶相。國土及弟子， 正法與像法，悉等無有異。 咸以諸神通，度十方眾生， 名聞普周遍，漸入於涅槃。」",
+   "T0263": "時佛頌曰：「此諸聲聞，二千朋黨，今悉住立， 於世尊前。斯等聖智，佛皆授決， 將來之世，便當成佛。而顯示現， 無量譬喻，覩見諸佛，悉當供養。 便當逮獲，無上尊道，住於道行， 猶得自在。其名行異，遊處十方， 悉當忍辱，須臾不變。當復獨處， 坐叢樹下，當得佛道，成就慧誼。 皆當成覺，號同一等，名曰寶英， 流聞世界。其佛國土，平等殊特， 諸聲聞眾，等亦如是。神足光明， 皆遍世間，周流一切，十方國土。 分別經法，有所依猗，正法存立， 等無有異。」",
+   "T0264": "爾時世尊欲重宣此義，而說偈言：「是二千聲聞，今於我前住， 悉皆與授記，未來當成佛。 所供養諸佛，如上說塵數， 護持其法藏，後當成正覺。 各於十方國，悉同一名號， 俱時坐道場，以證無上慧。 皆名為寶相，國土及弟子， 正法與像法，悉等無有異。 咸以諸神通，度十方眾生， 名聞普周遍，漸入於涅槃。」",
+   "bo": "དེ་ནས་བཅོམ་ལྡན་འདས་ཀྱིས་དེའི་ཚེ་ཚིགས་སུ་བཅད་པ་འདི་དག་བཀའ་སྩལ་ཏོ། །ཀུན་དགའ་གང་དག་ང་ཡི་མདུན་འཁོད་པ། །ཉན་ཐོས་ཉིས་སྟོང་འདི་དག་ཐམས་ཅད་ནི། ། མ་འོངས་དུས་ན་དེ་བཞིན་གཤེགས་འགྱུར་ཞེས། ། ངས་ནི་མཁས་རྣམས་དེ་རིང་ལུང་བསྟན་ཏོ། ། དཔེ་བསྟན་པ་ནི་མཐའ་ཡས་རྣམ་དག་གིས། །སངས་རྒྱས་རྣམས་ལ་མཆོད་པ་མཆོག་བྱས་ནས། །ཐ་མའི་ལུས་དེ་ལ་ནི་གནས་ནས་སུ། །དེ་ཡི་བྱང་ཆུབ་ མཆོག་འདི་ཐོབ་པར་འགྱུར། ། ཕྱོགས་བཅུ་རྣམས་སུ་མིང་ནི་གཅིག་འགྱུར་ཏེ། །སྐད་ཅིག་དེ་བཞིན་ཡུད་ཙམ་གཅིག་ལ་ནི། །ཤིང་མཆོག་རྣམས་ཀྱི་དྲུང་དུ་འཁོད་ནས་སུ། ། ཡེ་ཤེས་ཐོབ་སྟེ་སངས་རྒྱས་རྣམས་སུ་འགྱུར། ། དེ་དག་རྣམས་ཀྱི་མིང་ནི་གཅིག་གྱུར་ཏེ། །རིན་ཆེན་ཏོག་ཅེས་བྱ་བར་འཇིག་རྟེན་གྲགས། ། དེ་དག་རྣམས་ཀྱི་ཞིང་མཆོག་མཚུངས་པར་འགྱུར། །ཉན་ཐོས་བྱང་ཆུབ་སེམས་དཔའི་ཚོགས་ཀྱང་མཉམ། ། རྫུ་འཕྲུལ་གྱུར་པ་འང་འཇིག་རྟེན་འདི་ཀུན་ན། །མཉམ་ཞིང་དེ་དག་ཕྱོགས་བཅུ་རྣམས་སུ་ཡང་། །ཆོས་བཤད་ནས་ནི་མཉམ་དུ་མྱ་ངན་འདའ། །དེ་དག་དམ་ཆོས་མཉམ་དུ་གནས་པར་འགྱུར། ། དེ་ནས་སློབ་པ་དང་མི་སློབ་པའི་ཉན་ཐོས་དེ་དག །བཅོམ་ལྡན་འདས་ལས་མངོན་སུམ་དུ་རང་རང་གི་ལུང་བསྟན་པ་ཐོས་ནས་ཚིམ་ཞིང་མགུ་ལ་ཡི་རངས་ཏེ་རབ་ཏུ་དགའ་ཞིང་དགའ་བ་དང་ཡིད་བདེ་བ་སྐྱེས་ནས།",
+   "en": "Then the Bhagavān recited these verses: “Ānanda, those who are assembled before me, All of these two thousand śrāvakas. Will in the future become tathāgatas. Today I make this prophecy about these wise ones. {12}  “As is taught in endless analogies, They will make supreme offerings to the buddhas, And then when they are within their last bodies They will attain this supreme enlightenment. {13}  “In the ten directions, having the same name, In the same instant, the same moment, They will be seated at the foot of the supreme tree. They will attain wisdom and become buddhas. {14}  “They will all have the same name: They will be renowned in the world as Ratnaketu. Their supreme realms will be the same, Their śrāvaka and bodhisattva assemblies will be the same. {15}  “With miraculous powers in these worlds, And equally throughout the ten directions, They will teach the Dharma and their nirvāṇa, And the duration of their Dharma will be the same.” {16}  Those śrāvakas, both those in training and those who had passed beyond training, upon hearing directly from the Bhagavān the prophecies for each of them, became contented, delighted, elated, and joyful, and became glad and happy."
+  },
+  "l9-08": {
+   "sa": "atha khalu te śaikṣāśaikṣāḥ śrāvakā bhagavato 'ntikāt saṃmukhaṃ svāni svāni vyākaraṇāni śrutvā tuṣṭā udagrā āttamanaskāḥ pramuditāḥ prītisaumanasyajātā bhagavantaṃ gāthābhyāmadhyabhāṣanta - tṛptāḥ sma lokapradyota śrutvā vyākaraṇaṃ idam / amṛtena yathā siktāḥ sukhitāḥ sama tathāgata // Saddhp_9.17 // nāsmākaṃ kāṅkṣā vimatirna bheṣyāma narottamāḥ / adyāsmābhiḥ sukhaṃ prāptaṃ śrutvā vyākaraṇaṃ idam // Saddhp_9.18 //",
+   "T0262": "爾時學、無學二千人，聞佛授記，歡喜踊躍，而說偈言：「世尊慧燈明，我聞授記音， 心歡喜充滿，如甘露見灌。」",
+   "T0263": "於是諸學聞佛授決，歡喜踊躍，不能自勝，以頌讚佛：「聞佛授我決，世光見飽滿， 如甘露見灌，已獲無極安。」",
+   "T0264": "爾時學、無學二千人，聞佛授記歡喜踊躍，而說偈言：「世尊慧燈明，我聞授記音， 心歡喜充滿，如甘露見灌。」",
+   "bo": "བཅོམ་ལྡན་འདས་ལ་ཚིགས་སུ་བཅད་པ་འདི་དག་གསོལ་ཏོ། །ལུང་བསྟན་པ་འདི་ཐོས་པས་ན། །འཇིག་རྟེན་སྒྲོན་མ་བདག་ཅག་ངོམས། ། བདུད་རྩི་ཇི་ལྟར་གཏོར་བ་བཞིན། །དེ་བཞིན་གཤེགས་པ་བདག་ཅག་བདེ། ། བདག་ཅག་མི་མཆོག་མི་འགྱུར་ཞེས། །བདག་ཅག་ཡིད་གཉིས་དོགས་མ་མཆིས། ། ལུང་བསྟན་པ་ནི་འདི་ཐོས་པས། །དེ་རིང་བདག་ཅག་བདེ་བ་ཐོབ། །",
+   "en": "Thereupon they recited these verses to the Bhagavān: “Lamp of the World, we have been made content Through having heard this prophecy. Tathāgata, we have become as happy As if we were sprinkled with amrita. {17}  “We do not have any doubt or uncertainty, Thinking, ‘We will not become supreme humans.’ Today we have attained happiness Through having heard this prophecy.”"
+  },
+  "l9-99": {
+   "sa": "ityāryasaddharmapuṇḍarīke dharmaparyāye ānandarāhulābhyāmanyābhyāṃ ca dvābhyāṃ bhikṣusahasrābhyāṃ vyākaraṇaparivarto nāma navamaḥ ||",
+   "bo": "དམ་པའི་ཆོས་པད་མ་དཀར་པོ་ལས། ཀུན་དགའ་བོ་དང་སྒྲ་གཅན་ཟིན་དང་དགེ་སློང་ཉིས་སྟོང་ལུང་བསྟན་པའི་ལེའུ་ཞེས་བྱ་བ་སྟེ་དགུ་པའོ།། །།དེ་ནས་བཅོམ་ལྡན་འདས་ཀྱིས་བྱང་ཆུབ་སེམས་དཔའ་སྨན་གྱི་རྒྱལ་པོ་ལ་སོགས་པ་བྱང་ཆུབ་སེམས་དཔའ་བརྒྱད་ཁྲི་པོ་དེ་དག་ལ་བཀའ་སྩལ་པ། སྨན་གྱི་རྒྱལ་པོ་འཁོར་འདིའི་ལྷ་དང་། ཀླུ་དང་། གནོད་སྦྱིན་དང་། དྲི་ཟ་དང་། ལྷ་མ་ཡིན་དང་། ནམ་མཁའ་ལྡིང་དང་། མིའམ་ཅི་དང་། ལྟོ་འཕྱེ་ཆེན་པོ་དང་།",
+   "en": "{18}  This concludes “The Prophecies to Ānanda, Rāhula, and Two Thousand Bhikṣus,” the ninth chapter of the Dharma teaching of “The White Lotus of the Good Dharma.”"
+  }
+ }
+}
