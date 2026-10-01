@@ -1,0 +1,195 @@
+{
+ "slug": "sa-mmk-c21",
+ "title": "中論・觀成壞品第二十一",
+ "family": "sa",
+ "auto": true,
+ "intro": "一頌一節，頌號依梵本（MMK 品.頌）；漢譯欄為該頌加青目釋。本品頌數不等（漢 20／梵 21），逐頌由模型比對。自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "MMK 21.1"
+  },
+  {
+   "id": "a01",
+   "label": "MMK 21.2"
+  },
+  {
+   "id": "a02",
+   "label": "MMK 21.3"
+  },
+  {
+   "id": "a03",
+   "label": "MMK 21.4"
+  },
+  {
+   "id": "a04",
+   "label": "MMK 21.5"
+  },
+  {
+   "id": "a05",
+   "label": "MMK 21.6"
+  },
+  {
+   "id": "a06",
+   "label": "MMK 21.7"
+  },
+  {
+   "id": "a07",
+   "label": "MMK 21.8"
+  },
+  {
+   "id": "a08",
+   "label": "MMK 21.9"
+  },
+  {
+   "id": "a09",
+   "label": "MMK 21.10"
+  },
+  {
+   "id": "a10",
+   "label": "MMK 21.11"
+  },
+  {
+   "id": "a11",
+   "label": "MMK 21.12"
+  },
+  {
+   "id": "a12",
+   "label": "MMK 21.13"
+  },
+  {
+   "id": "a13",
+   "label": "MMK 21.14"
+  },
+  {
+   "id": "a14",
+   "label": "MMK 21.15"
+  },
+  {
+   "id": "a15",
+   "label": "MMK 21.16"
+  },
+  {
+   "id": "a16",
+   "label": "MMK 21.17"
+  },
+  {
+   "id": "a17",
+   "label": "MMK 21.18"
+  },
+  {
+   "id": "a18",
+   "label": "MMK 21.19"
+  },
+  {
+   "id": "a19",
+   "label": "MMK 21.20"
+  },
+  {
+   "id": "a20",
+   "label": "MMK 21.21"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本（月稱本所存頌）",
+   "who": "GRETIL・MMK 頌號"
+  },
+  {
+   "id": "T1564",
+   "lang": "lzh",
+   "label": "羅什本（頌＋青目釋）",
+   "who": "鳩摩羅什譯・409 年",
+   "work": "T1564"
+  }
+ ],
+ "works": [
+  "T1564"
+ ],
+ "anchors": [
+  {
+   "work": "T1564",
+   "node": "中論觀成壞品第二十一（二十偈）",
+   "uid": "T30n1564_p0027c11"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sa": "vinā vā saha vā nāsti vibhavaḥ saṃbhavena vai /\nvinā vā saha vā nāsti saṃbhavo vibhavena vai // MMK_21.1 //"
+  },
+  "a01": {
+   "sa": "bhaviṣyati kathaṃ nāma vibhavaḥ saṃbhavaṃ vinā /\nvinaiva janma maraṇaṃ vibhavo nodbhavaṃ vinā // MMK_21.2 //"
+  },
+  "a02": {
+   "sa": "saṃbhavenaiva vibhavaḥ kathaṃ saha bhaviṣyati /\nna janma maraṇaṃ caivaṃ tulyakālaṃ hi vidyate // MMK_21.3 //",
+   "T1564": "問曰：一切世間事現是壞敗相，是故有壞。答曰：「離成及共成，是中無有壞；\n離壞及共壞，是中亦無成。」若有成、若無成，俱無壞。若有壞、若無壞，俱無成。何以故？「若離於成者，云何而有壞？\n如離生有死，是事則不然。\n成壞共有者，云何有成壞？\n如世間生死，一時俱不然。\n若離於壞者，云何當有成？\n無常未曾有，不在諸法時。」若離成，壞不可得。何以故？若離成有壞者，則不因成有壞，壞則無因，又無成法而可壞。成名眾緣合，壞名眾緣散，若離成有壞者，無成誰當壞？如無瓶，不得言瓶壞，是故離成無壞。若謂共成有壞者，是亦不然。何以故？法先別成而後有合，合法不離異。若壞離異，壞則無因，是故共成亦無壞。若離壞共壞無有成者，若離壞有成，成則為常，常是不壞相。而實不見有法常不壞相，是故離壞無成。若謂共壞有成者，是亦不然。成壞相違，云何一時有？如人有髮無髮不得一時俱，成壞亦爾，是故共壞有成是事不然。何以故？若謂分別法者，說成中常有壞。是事不然。何以故？若成中常有壞，則不應有住法；而實有住，是故若離壞共壞不應有成。復次："
+  },
+  "a03": {
+   "sa": "bhaviṣyati kathaṃ nāma saṃbhavo vibhavaṃ vinā /\nanityatā hi bhāveṣu na kadācin na vidyate // MMK_21.4 //"
+  },
+  "a04": {
+   "sa": "saṃbhavo vibhavenaiva kathaṃ saha bhaviṣyati /\nna janma maraṇaṃ caiva tulyakālaṃ hi vidyate // MMK_21.5 //"
+  },
+  "a05": {
+   "sa": "sahānyonyena vā siddhir vinānyonyena vā yayoḥ /\nna vidyate tayoḥ siddhiḥ kathaṃ nu khalu vidyate // MMK_21.6 //",
+   "T1564": "「成壞共無成，離亦無有成，\n是二俱不可，云何當有成？」若成壞共亦無成、離亦無成。若共成則二法相違，云何一時？若離則無因。二門俱不成，云何當有成？若有應說。問曰：現有盡滅相法。是盡滅相法，亦說盡亦說不盡，如是則應有成壞。答曰："
+  },
+  "a06": {
+   "sa": "kṣayasya saṃbhavo nāsti nākṣayasyāsti saṃbhavaḥ /\nkṣayasya vibhavo nāsti vibhavo nākṣayasya ca // MMK_21.7 //",
+   "T1564": "「盡則無有成，不盡亦無成；\n盡則無有壞，不盡亦不壞。」諸法日夜中念念常滅盡，過去如水流不住，是則名盡。是事不可取、不可說，如野馬無決定性可得。如是盡無決定性可得，云何可得分別說有成？是故言盡亦不成。成無故，亦不應有壞，是故說盡亦無有壞。又念念生滅常相續不斷故名不盡，如是法決定常住不斷。云何可得分別說言今是成時？是故說無盡亦無成。成無故無壞，是故說不盡亦無壞。如是推求，實事不可得，故無成無壞。問曰：且置成壞。但令有法，有何咎？答曰："
+  },
+  "a07": {
+   "sa": "saṃbhavo vibhavaś caiva vinā bhāvaṃ na vidyate /\nsaṃbhavaṃ vibhavaṃ caiva vinā bhāvo na vidyate // MMK_21.8 //",
+   "T1564": "「若離於成壞，是亦無有法；\n若當離於法，亦無有成壞。」離成壞無法者，若法無成無壞，是法應或無或常。而世間無有常法，汝說離成壞有法，是事不然。問曰：若離法但有成壞，有何咎？答曰：離法有成壞，是亦不然。何以故？若離法，誰成誰壞。是故離法有成壞，是事不然。復次：「若法性空者，誰當有成壞？\n若性不空者，亦無有成壞。」若諸法性空，空何有成壞？若諸法性不空，不空則決定有，亦不應有成壞。復次：「成壞若一者，是事則不然；\n成壞若異者，是事亦不然。」推求成壞一則不可得。何以故？異相故、種種分別故。又成壞異亦不可得。何以故？無有別故、亦無因故。復次：「若謂以眼見，而有生滅者，\n則為是癡妄，而見有生滅。」若謂以眼見有生滅者，云何以言說破？是事不然。何以故？眼見生滅者，則是愚癡顛倒故。見諸法性空、無決定、如幻如夢，但凡夫先世顛倒因緣得此眼，今世憶想分別因緣故，言眼見生滅。第一義中實無生滅，是事已於〈破相品〉中廣說。復次："
+  },
+  "a08": {
+   "sa": "saṃbhavo vibhavaś caiva na śūnyasyopapadyate /\nsaṃbhavo vibhavaś caiva nāśūnyasyopapadyate // MMK_21.9 //"
+  },
+  "a09": {
+   "sa": "saṃbhavo vibhavaś caiva naika ity upapadyate /\nsaṃbhavo vibhavaś caiva na nānety upapadyate // MMK_21.10 //"
+  },
+  "a10": {
+   "sa": "dṛśyate saṃbhavaścaiva vibhavaś caiva te bhavet /\ndṛśyate saṃbhavaścaiva mohād vibhava eva ca // MMK_21.11 //"
+  },
+  "a11": {
+   "sa": "na bhāvāj jāyate bhāvo bhāvo 'bhāvān na jāyate /\nnābhāvāj jāyate 'bhāvo 'bhāvo bhāvān na jāyate // MMK_21.12 //",
+   "T1564": "「從法不生法，亦不生非法；\n從非法不生，法及於非法。」從法不生法者，若失若至，二俱不然。從法生法，若至若失，是則無因，無因則墮斷常。若已至從法生法，是法至已而名為生，則為是常，又生已更生，又亦無因生。是事不然。若已失從法生法者，是則失因，生者無因，是故從失亦不生法。從法不生非法者，非法名無所有、法名有，云何從有相生無相？是故從法不生非法。從非法不生法者，非法名為無，無云何生有？若從無生有者，是則無因，無因則有大過，是故不從非法生法。不從非法生非法者，非法名無所有，云何從無所有生無所有？如兔角不生龜毛，是故不從非法生非法。問曰：法非法雖種種分別故無生，但法應生法。答曰："
+  },
+  "a12": {
+   "sa": "na svato jāyate bhāvaḥ parato naiva jāyate /\nna svataḥ parataś caiva jāyate jāyate kutaḥ // MMK_21.13 //",
+   "T1564": "「法不從自生，亦不從他生，\n不從自他生，云何而有生？」法未生時無所有故，又即自不生故，是故法不自生。若法未生則亦無他，無他故不得言從他生。又未生則無自，無自亦無他，共亦不生。若三種不生，云何從法有法生？復次："
+  },
+  "a13": {
+   "sa": "bhāvam abhyupapannasya śāśvatocchedadarśanam /\nprasajyate sa bhāvo hi nityo 'nityo 'tha vā bhavet // MMK_21.14 //",
+   "T1564": "「若有所受法，即墮於斷常，\n當知所受法，為常為無常。」受法者，分別是善是不善、常無常等，是人必墮若常見若斷見。何以故？所受法應有二種：若常、若無常。二俱不然。何以故？若常即墮常邊，若無常即墮斷邊。問曰："
+  },
+  "a14": {
+   "sa": "bhāvam abhyupapannasya naivocchedo na śāśvatam /\nudayavyayasaṃtānaḥ phalahetvor bhavaḥ sa hi // MMK_21.15 //",
+   "T1564": "「所有受法者，不墮於斷常，\n因果相續故，不斷亦不常。」有人雖信受分別說諸法，而不墮斷常。如經說五陰無常苦空無我，而不斷滅；雖說罪福無量劫數不失，而不是常。何以故？是法因果常生滅相續故往來不絕，生滅故不常，相續故不斷。答曰："
+  },
+  "a15": {
+   "sa": "udayavyayasaṃtānaḥ phalahetvor bhavaḥ sa cet /\nvyayasyāpunarutpatter hetūcchedaḥ prasajyate // MMK_21.16 //",
+   "T1564": "「若因果生滅，相續而不斷；\n滅更不生故，因即為斷滅。」若汝說諸法因果相續故不斷不常。若滅法已滅更不復生，是則因斷。若因斷，云何有相續？已滅不生故。復次：「法住於自性，不應有有無；\n涅槃滅相續，則墮於斷滅。」法決定在有相中，爾時無無相，如瓶定在瓶相，爾時無失壞相。隨有瓶時無失壞相，無瓶時亦無失壞相。何以故？若無瓶則無所破，以是義故滅不可得。離滅故亦無生。何以故？生滅相因待故。又有常等過故，是故不應於一法而有有無。又汝先說因果生滅相續故，雖受諸法不墮斷常。是事不然。何以故？汝說因果相續故有三有相續，滅相續名涅槃。若爾者，涅槃時應墮斷滅，以滅三有相續故。復次："
+  },
+  "a16": {
+   "sa": "sadbhāvasya svabhāvena nāsadbhāvaś ca yujyate /\nnirvāṇakāle cocchedaḥ praśamād bhavasaṃtateḥ // MMK_21.17 //"
+  },
+  "a17": {
+   "sa": "carame na niruddhe ca prathamo yujyate bhavaḥ /\ncarame nāniruddhe ca prathamo yujyate bhavaḥ // MMK_21.18 //",
+   "T1564": "「若初有滅者，則無有後有；\n初有若不滅，亦無有後有。」初有名今世有，後有名來世有。若初有滅次有後有，是即無因。是事不然，是故不得言初有滅有後有。若初有不滅，亦不應有後有。何以故？若初有未滅而有後有者，是則一時有二有。是事不然，是故初有不滅無有後有。問曰：後有不以初有滅生、不以不滅生，但滅時生。答曰：「若初有滅時，而後有生者，\n滅時是一有，生時是一有。」若初有滅時後有生者，即二有一時俱：一有是滅時，一有是生時。問曰：滅時生時二有俱者則不然。但現見初有滅時後有生。答曰："
+  },
+  "a18": {
+   "sa": "nirudhyamāne carame prathamo yadi jāyate /\nnirudhyamāna ekaḥ syāj jāyamāno 'paro bhavet // MMK_21.19 //"
+  },
+  "a19": {
+   "sa": "na cen nirudhyamānaś ca jāyamānaś ca yujyate /\nsārdhaṃ ca mriyate yeṣu teṣu skandheṣu jāyate // MMK_21.20 //",
+   "T1564": "「若言於生滅，而謂一時者，\n則於此陰死，即於此陰生。」若生時滅時一時無二有，而謂初有滅時後有生者，今應隨在何陰中死，即於此陰生，不應餘陰中生。何以故？死者即是生者。如是死生相違法，不應一時一處。是故汝先說滅時生時一時無二有，但現見初有滅時後有生者，是事不然。復次："
+  },
+  "a20": {
+   "sa": "evaṃ triṣv api kāleṣu na yuktā bhavasaṃtatiḥ /\ntriṣu kāleṣu yā nāsti sā kathaṃ bhavasaṃtatiḥ // MMK_21.21 //",
+   "T1564": "「三世中求有，相續不可得，\n若三世中無，何有有相續？」三有名欲有、色有、無色有。無始生死中不得實智故，常有三有相續。今於三世中諦求不可得。若三世中無有，當於何處有有相續？當知有有相續，皆從愚癡顛倒故有，實中則無。"
+  }
+ }
+}

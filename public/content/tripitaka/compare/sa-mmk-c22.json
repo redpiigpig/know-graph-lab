@@ -1,0 +1,164 @@
+{
+ "slug": "sa-mmk-c22",
+ "title": "中論・觀如來品第二十二",
+ "family": "sa",
+ "auto": true,
+ "intro": "一頌一節，頌號依梵本（MMK 品.頌）；漢譯欄為該頌加青目釋。本品漢梵頌數相等，按頌序對應。自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "MMK 22.1"
+  },
+  {
+   "id": "a01",
+   "label": "MMK 22.2"
+  },
+  {
+   "id": "a02",
+   "label": "MMK 22.3"
+  },
+  {
+   "id": "a03",
+   "label": "MMK 22.4"
+  },
+  {
+   "id": "a04",
+   "label": "MMK 22.5"
+  },
+  {
+   "id": "a05",
+   "label": "MMK 22.6"
+  },
+  {
+   "id": "a06",
+   "label": "MMK 22.7"
+  },
+  {
+   "id": "a07",
+   "label": "MMK 22.8"
+  },
+  {
+   "id": "a08",
+   "label": "MMK 22.9"
+  },
+  {
+   "id": "a09",
+   "label": "MMK 22.10"
+  },
+  {
+   "id": "a10",
+   "label": "MMK 22.11"
+  },
+  {
+   "id": "a11",
+   "label": "MMK 22.12"
+  },
+  {
+   "id": "a12",
+   "label": "MMK 22.13"
+  },
+  {
+   "id": "a13",
+   "label": "MMK 22.14"
+  },
+  {
+   "id": "a14",
+   "label": "MMK 22.15"
+  },
+  {
+   "id": "a15",
+   "label": "MMK 22.16"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本（月稱本所存頌）",
+   "who": "GRETIL・MMK 頌號"
+  },
+  {
+   "id": "T1564",
+   "lang": "lzh",
+   "label": "羅什本（頌＋青目釋）",
+   "who": "鳩摩羅什譯・409 年",
+   "work": "T1564"
+  }
+ ],
+ "works": [
+  "T1564"
+ ],
+ "anchors": [
+  {
+   "work": "T1564",
+   "node": "觀如來品第二十二（十六偈）",
+   "uid": "T30n1564_p0029c04"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sa": "skandhā na nānyaḥ skandhebhyo nāsmin skandhā na teṣu saḥ /\ntathāgataḥ skandhavān na katamo 'tra tathāgataḥ // MMK_22.1 //",
+   "T1564": "問曰：一切世中尊，唯有如來正遍知號為法王，一切智人是則應有。答曰：今諦思惟，若有應取；若無何所取？何以故？如來，「非陰不離陰，此彼不相在；\n如來不有陰，何處有如來？」若如來實有者，為五陰是如來？為離五陰有如來？為如來中有五陰？為五陰中有如來？為如來有五陰。是事皆不然。五陰非是如來。何以故？生滅相故。五陰生滅相，若如來是五陰，如來即是生滅相。若生滅相者，如來即有無常斷滅等過。又受者受法則一，受者是如來、受法是五陰。是事不然，是故如來非是五陰。離五陰亦無如來，若離五陰有如來者，不應有生滅相。若爾者，如來有常等過。又眼等諸根不能見知，但是事不然，是故離五陰亦無如來。如來中亦無五陰。何以故？若如來中有五陰，如器中有果、水中有魚者，則為有異。若異者，即有如上常等過，是故如來中無五陰。又五陰中無如來。何以故？若五陰中有如來，如床上有人、器中有乳者，如是則有別異，如上說過，是故五陰中無如來。如來亦不有五陰。何以故？若如來有五陰，如人有子，如是則有別異。若爾者，有如上過。是事不然，是故如來不有五陰。如是五種求不可得，何等是如來？問曰：如是義求如來不可得，而五陰和合有如來。答曰："
+  },
+  "a01": {
+   "sa": "buddhaḥ skandhān upādāya yadi nāsti svabhāvataḥ /\nsvabhāvataś ca yo nāsti kutaḥ sa parabhāvataḥ // MMK_22.2 //",
+   "T1564": "「陰合有如來，則無有自性；\n若無有自性，云何因他有？」若如來五陰和合故有，即無自性。何以故？因五陰和合有故。問曰：如來不以自性有，但因他性有。答曰：若無自性，云何因他性有？何以故？他性亦無自性。又無相待因故，他性不可得，不可得故不名為他。復次："
+  },
+  "a02": {
+   "sa": "pratītya parabhāvaṃ yaḥ so 'nātmety upapadyate /\nyaś cānātmā sa ca kathaṃ bhaviṣyati tathāgataḥ // MMK_22.3 //",
+   "T1564": "「法若因他生，是即為非我；\n若法非我者，云何是如來？」若法因眾緣生，即無有我。如因五指有拳，是拳無有自體。如是因五陰名我，是我即無自體。我有種種名，或名眾生、人、天、如來等。若如來因五陰有，即無自性，無自性故無我。若無我，云何說名如來？是故偈中說「法若因他生，是即為非我；若法非我者，云何是如來？」復次："
+  },
+  "a03": {
+   "sa": "yadi nāsti svabhāvaś ca parabhāvaḥ kathaṃ bhavet /\nsvabhāvaparabhāvābhyām ṛte kaḥ sa tathāgataḥ // MMK_22.4 //",
+   "T1564": "「若無有自性，云何有他性？\n離自性他性，何名為如來？」若無自性，他性亦不應有。因自性故名他性，此無故彼亦無，是故自性、他性二俱無。若離自性、他性，誰為如來？復次："
+  },
+  "a04": {
+   "sa": "skandhān yady anupādāya bhavet kaścit tathāgataḥ /\nsa idānīm upādadyād upādāya tato bhavet // MMK_22.5 //",
+   "T1564": "「若不因五陰，先有如來者，\n以今受陰故，則說為如來。"
+  },
+  "a05": {
+   "sa": "skandhāṃś cāpy anupādāya nāsti kaścit tathāgataḥ /\nyaś ca nāsty anupādāya sa upādāsyate katham // MMK_22.6 //",
+   "T1564": "今實不受陰，更無如來法，\n若以不受無，今當云何受？"
+  },
+  "a06": {
+   "sa": "na bhavaty anupādattam upādānaṃ ca kiṃ cana /\nna cāsti nirupādānaḥ kathaṃ cana tathāgataḥ // MMK_22.7 //",
+   "T1564": "若其未有受，所受不名受，\n無有無受法，而名為如來。"
+  },
+  "a07": {
+   "sa": "tattvānyatvena yo nāsti mṛgyamāṇaś ca pañcadhā /\nupādānena sa kathaṃ prajñapyate tathāgataḥ // MMK_22.8 //",
+   "T1564": "若於一異中，如來不可得，\n五種求亦無，云何受中有？"
+  },
+  "a08": {
+   "sa": "yad apīdam upādānaṃ tat svabhāvān na vidyate /\nsvabhāvataś ca yan nāsti kutas tat parabhāvataḥ // MMK_22.9 //",
+   "T1564": "又所受五陰，不從自性有，\n若無自性者，云何有他性？」若未受五陰先有如來者，是如來今應受五陰已作如來，而實未受五陰時先無如來，今云何當受？又不受五陰者，五陰不名為受，無有無受而名為如來。又如來一異中求不可得，五陰中五種求亦不可得。若爾者，云何於五陰中說有如來？又所受五陰，不從自性有。若謂從他性有。若不從自性有。云何從他性有？何以故？以無自性故，又他性亦無。復次："
+  },
+  "a09": {
+   "sa": "evaṃ śūnyam upādānam upādātā ca sarvaśaḥ /\nprajñapyate ca śūnyena kathaṃ śūnyas tathāgataḥ // MMK_22.10 //",
+   "T1564": "「以如是義故，受空受者空，\n云何當以空，而說空如來？」以是義思惟，受及受者皆空。若受空者，云何以空受而說空如來？問曰：汝謂受空、受者空，則定有空耶？答曰？不然。何以故？"
+  },
+  "a10": {
+   "sa": "śūnyam iti na vaktavyam aśūnyam iti vā bhavet /\nubhayaṃ nobhayaṃ ceti prajñaptyarthaṃ tu kathyate // MMK_22.11 //",
+   "T1564": "「空則不可說，非空不可說，\n共不共叵說，但以假名說。」諸法空則不應說，諸法不空亦不應說，諸法空不空亦不應說，非空非不空亦不應說。何以故？但破相違故以假名說。如是正觀思惟，諸法實相中不應以諸難為難。何以故？"
+  },
+  "a11": {
+   "sa": "śāśvatāśāśvatādy atra kutaḥ śānte catuṣṭayam /\nantānantādi cāpy atra kutaḥ śānte catuṣṭayam // MMK_22.12 //",
+   "T1564": "「寂滅相中無，常無常等四；\n寂滅相中無，邊無邊等四。」諸法實相如是微妙寂滅，但因過去世起四種邪見：世間有常、世間無常、世間常無常、世間非常非無常；寂滅中盡無。何以故？諸法實相畢竟清淨不可取，空尚不受，何況有四種見。四種見皆因受生，諸法實相無所因受。四種見皆以自見為貴、他見為賤，諸法實相無有此彼。是故說寂滅中無四種見。如因過去世有四種見，因未來世有四種見亦如是。世間有邊、世間無邊、世間有邊無邊、世間非有邊非無邊。問曰：若如是破如來者，則無如來耶？答曰："
+  },
+  "a12": {
+   "sa": "ghanagrāho gṛhītas tu yenāstīti tathāgataḥ /\nnāstīti sa vikalpayan nirvṛtasyāpi kalpayet // MMK_22.13 //",
+   "T1564": "「邪見深厚者，則說無如來；\n如來寂滅相，分別有亦非。」邪見有二種：一者破世間樂；二者破涅槃道。破世間樂者是麁邪見，言無罪無福，無如來等賢聖。起是邪見，捨善為惡，則破世間樂。破涅槃道者，貪著於我，分別有無，起善滅惡。起善故得世間樂，分別有無故不得涅槃。是故若言無如來者，是深厚邪見，乃失世間樂，何況涅槃！若言有如來，亦是邪見。何以故？如來寂滅相，而種種分別故。是故寂滅相中，分別有如來亦為非。"
+  },
+  "a13": {
+   "sa": "svabhāvataś ca śūnye 'smiṃś cintā naivopapadyate /\nparaṃ nirodhād bhavati buddho na bhavatīti vā // MMK_22.14 //",
+   "T1564": "「如是性空中，思惟亦不可，\n如來滅度後，分別於有無。」諸法實相性空故，不應於如來滅後思惟若有、若無、若有無。如來從本已來畢竟空，何況滅後！"
+  },
+  "a14": {
+   "sa": "prapañcayanti ye buddhaṃ prapañcātītam avyayam /\nte prapañcahatāḥ sarve na paśyanti tathāgatam // MMK_22.15 //",
+   "T1564": "「如來過戲論，而人生戲論，\n戲論破慧眼，是皆不見佛。」戲論名憶念取相分別此彼。言佛滅不滅等，是人為戲論，覆慧眼故，不能見如來法身。此〈如來品〉中，初中後思惟，如來定性不可得。是故偈說："
+  },
+  "a15": {
+   "sa": "tathāgato yatsvabhāvas tatsvabhāvam idaṃ jagat /\ntathāgato niḥsvabhāvo niḥsvabhāvam idaṃ jagat // MMK_22.16 //",
+   "T1564": "「如來所有性，即是世間性；\n如來無有性，世間亦無性。」此品中思惟推求，如來性即是一切世間性。問曰：何等是如來性？答曰：如來無有性，同世間無性。"
+  }
+ }
+}

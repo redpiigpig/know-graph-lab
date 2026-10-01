@@ -1,0 +1,126 @@
+{
+ "slug": "sa-mmk-c26",
+ "title": "中論・觀十二因緣品第二十六",
+ "family": "sa",
+ "auto": true,
+ "intro": "一頌一節，頌號依梵本（MMK 品.頌）；漢譯欄為該頌加青目釋。本品頌數不等（漢 9／梵 12），逐頌由模型比對。自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "MMK 26.1"
+  },
+  {
+   "id": "a01",
+   "label": "MMK 26.2"
+  },
+  {
+   "id": "a02",
+   "label": "MMK 26.3"
+  },
+  {
+   "id": "a03",
+   "label": "MMK 26.4"
+  },
+  {
+   "id": "a04",
+   "label": "MMK 26.5"
+  },
+  {
+   "id": "a05",
+   "label": "MMK 26.6"
+  },
+  {
+   "id": "a06",
+   "label": "MMK 26.7"
+  },
+  {
+   "id": "a07",
+   "label": "MMK 26.8"
+  },
+  {
+   "id": "a08",
+   "label": "MMK 26.9"
+  },
+  {
+   "id": "a09",
+   "label": "MMK 26.10"
+  },
+  {
+   "id": "a10",
+   "label": "MMK 26.11"
+  },
+  {
+   "id": "a11",
+   "label": "MMK 26.12"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本（月稱本所存頌）",
+   "who": "GRETIL・MMK 頌號"
+  },
+  {
+   "id": "T1564",
+   "lang": "lzh",
+   "label": "羅什本（頌＋青目釋）",
+   "who": "鳩摩羅什譯・409 年",
+   "work": "T1564"
+  }
+ ],
+ "works": [
+  "T1564"
+ ],
+ "anchors": [
+  {
+   "work": "T1564",
+   "node": "中論觀十二因緣品第二十六（九偈）",
+   "uid": "T30n1564_p0036b17"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sa": "punarbhavāya saṃskārān avidyānivṛtas tridhā /\nabhisaṃskurute yāṃs tair gatiṃ gacchati karmabhiḥ // MMK_26.1 //"
+  },
+  "a01": {
+   "sa": "vijñānaṃ saṃniviśate saṃskārapratyayaṃ gatau /\nsaṃniviṣṭe 'tha vijñāne nāmarūpaṃ niṣicyate // MMK_26.2 //",
+   "T1564": "問曰：汝以摩訶衍說第一義道，我今欲聞說聲聞法入第一義道。答曰：「眾生癡所覆，為後起三行，\n以起是行故，隨行墮六趣。\n以諸行因緣，識受六道身，\n以有識著故，增長於名色。"
+  },
+  "a02": {
+   "sa": "niṣikte nāmarūpe tu ṣaḍāyatanasaṃbhavaḥ /\nṣaḍāyatanam āgamya saṃsparśaḥ saṃpravartate // MMK_26.3 //",
+   "T1564": "名色增長故，因而生六入，\n情塵識和合，而生於六觸。\n因於六觸故，即生於三受，\n以因三受故，而生於渴愛。"
+  },
+  "a03": {
+   "sa": "cakṣuḥ pratītya rūpaṃ ca samanvāhāram eva ca /\nnāmarūpaṃ pratītyaivaṃ vijñānaṃ saṃpravartate // MMK_26.4 //"
+  },
+  "a04": {
+   "sa": "saṃnipātas trayāṇāṃ yo rūpavijñānacakṣuṣām /\nsparśaḥ sa tasmāt sparśāc ca vedanā saṃpravartate // MMK_26.5 //"
+  },
+  "a05": {
+   "sa": "vedanāpratyayā tṛṣṇā vedanārthaṃ hi tṛṣyate /\ntṛṣyamāṇa upādānam upādatte caturvidham // MMK_26.6 //"
+  },
+  "a06": {
+   "sa": "upādāne sati bhava upādātuḥ pravartate /\nsyād dhi yady anupādāno mucyeta na bhaved bhavaḥ // MMK_26.7 //",
+   "T1564": "因愛有四取，因取故有有，\n若取者不取，則解脫無有。\n從有而有生，從生有老死，\n從老死故有，憂悲諸苦惱。"
+  },
+  "a07": {
+   "sa": "pañca skandhāḥ sa ca bhavo bhavāj jātiḥ pravartate /\njarāmaraṇaduḥkhādi śokāḥ saparidevanāḥ // MMK_26.8 //"
+  },
+  "a08": {
+   "sa": "daurmanasyam upāyāsā jāter etat pravartate /\nkevalasyaivam etasya duḥkhaskandhasya saṃbhavaḥ // MMK_26.9 //",
+   "T1564": "如是等諸事，皆從生而有，\n但以是因緣，而集大苦陰。"
+  },
+  "a09": {
+   "sa": "saṃsāramūlaṃ saṃskārān avidvān saṃskaroty ataḥ /\navidvān kārakas tasmān na vidvāṃs tattvadarśanāt // MMK_26.10 //",
+   "T1564": "是謂為生死，諸行之根本，\n無明者所造，智者所不為。"
+  },
+  "a10": {
+   "sa": "avidyāyāṃ niruddhāyāṃ saṃskārāṇām asaṃbhavaḥ /\navidyāyā nirodhas tu jñānasyāsyaiva bhāvanāt // MMK_26.11 //"
+  },
+  "a11": {
+   "sa": "tasya tasya nirodhena tat tan nābhipravartate /\nduḥkhaskandhaḥ kevalo 'yam evaṃ samyag nirudhyate // MMK_26.12 //",
+   "T1564": "以是事滅故，是事則不生，\n但是苦陰聚，如是而正滅。」凡夫為無明所盲故，以身口意業，為後身起六趣諸行。隨所起行有上中下，識入六趣隨行受身。以識著因緣故名色集，名色集故有六入，六入因緣故有六觸，六觸因緣故有三受，三受因緣故生渴愛，渴愛因緣故有四取，四取取時以身口意業起罪福，令後三有相續。從有而有生，從生而有老死，從老死有憂悲苦惱種種眾患，但有大苦陰集。是故知凡夫無智，起此生死諸行根本。智者所不起，以如實見故，則無明滅。無明滅故諸行亦滅，以因滅故果亦滅，如是修習觀十二因緣生滅智故是事滅，是事滅故乃至生老死憂悲大苦陰皆如實正滅，正滅者畢竟滅。是十二因緣生滅義，如阿毘曇、修多羅中廣說。"
+  }
+ }
+}
