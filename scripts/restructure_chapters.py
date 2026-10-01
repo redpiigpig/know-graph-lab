@@ -445,7 +445,108 @@ def promote_flat_sections(chunks: list[dict]) -> list[dict]:
     return out
 
 
+FLAT_REASONS = ("章節覆蓋不足", "章名不連續出現", "稽核旗標 NO_TOC", "稽核旗標 RUNNING_HEADER", "少於 2 章",
+                "章內段落過少", "章名黏正文")
+
+
 def restructure(chunks: list[dict], meta: dict) -> tuple[list[dict] | None, str, dict]:
+    """先照章節重建；章節資料不可靠（FLAT_REASONS）時改走無章節模式。"""
+    out, why, st = restructure_by_chapters(chunks, meta)
+    if out is None and why.startswith(FLAT_REASONS) and "JUNK_TITLE" not in why and "THIN_TEXT" not in why:
+        out2, why2, st2 = flat_restructure(chunks, meta)
+        if out2 is not None:
+            return out2, f"OK 無章節模式（{why[:30]}）", st2
+        return None, f"{why}；無章節模式也不行：{why2}", {}
+    return out, why, st
+
+
+LINE_END = re.compile(r"[。！？」』）)!?.:：;；\"”’]\s*$")
+LINE_START_NEW = re.compile(r"^\s*(?:[IVXLC]+\.|\d{1,3}[.、．]|[（(]?[一二三四五六七八九十]+[）)、．.]|第[一二三四五六七八九十百\d]+[章節篇])")
+
+
+def split_wrapped_lines(content: str) -> str:
+    """PDF 抽字「一行一換行」、整頁只用單一換行串起來的段（閱讀器把單一換行當空白，整頁變一段）：
+    按行重新分段——這行明顯比一般行短且句末標點收尾＝段落結束；「II.」「1.」「第X章」開頭另起新段。
+    只把換行改成空行，不增減字。行數少於 4、或像表格／詩行（多數行很短）的段不動。"""
+    out = []
+    for para in re.split(r"\n{2,}", content):
+        lines = para.split("\n")
+        if len(lines) < 4 or para.lstrip().startswith(("|", "#", ">")):
+            out.append(para)
+            continue
+        lens = sorted(len(l.strip()) for l in lines if l.strip())
+        med = lens[len(lens) // 2] if lens else 0
+        if med < 15:                       # 多數行很短：詩、目錄、表格，不動
+            out.append(para)
+            continue
+        cur: list[str] = []
+        pieces: list[str] = []
+        for ln in lines:
+            if cur and LINE_START_NEW.match(ln):
+                pieces.append("\n".join(cur))
+                cur = []
+            cur.append(ln)
+            if len(ln.strip()) < 0.8 * med and LINE_END.search(ln):
+                pieces.append("\n".join(cur))
+                cur = []
+        if cur:
+            pieces.append("\n".join(cur))
+        out.append("\n\n".join(p for p in pieces if p.strip()))
+    return "\n\n".join(out)
+
+
+def flat_restructure(chunks: list[dict], meta: dict) -> tuple[list[dict] | None, str, dict]:
+    """無章節模式（2026-10-01）：章節資料不可靠（覆蓋不足、書眉當章名、章名不連續、長書沒章節…）的書，
+    不捏造也不重組章節——照原書順序，每頁約五千字，段號用全書流水號；書裡原本就有的真標題
+    （EPUB 的 ####、### 等）照樣成節、優先在那裡換頁。註釋、引言、插圖、守恆同一般模式。"""
+    work = [dict(c, content=split_wrapped_lines(c.get("content") or "")) for c in chunks]
+    if meta.get("file_type") in ("docx", "txt"):
+        work = [dict(c, content="\n\n".join(
+            ln for p in rb.paras(c.get("content") or "")
+            for ln in ([p] if p.lstrip().startswith("|") else p.split("\n")) if ln.strip()))
+            for c in work]
+    fp = meta.get("file_path") or ""
+    figures: list = []
+    if meta.get("file_type") == "epub" and fp and Path(fp).exists():
+        import epub_figures as ef
+        try:
+            work, figures, _ = ef.place_figures(work, ef.find_figures(fp), meta["id"])
+        except Exception:  # noqa: BLE001
+            pass
+    # 開頭的封面／版權頁／目錄原樣保留（只看前 6 塊，避免把正文裡的「目錄」當前附頁）
+    front = []
+    for c in work[:6]:
+        if is_front(clean_title((c.get("chapter_path") or "").split(" / ")[0])):
+            front.append(c)
+        else:
+            break
+    body = work[len(front):]
+    if not body:
+        return None, "沒有正文", {}
+    lens = sorted(len(p) for c in body for p in rb.paras(c.get("content") or ""))
+    if lens and lens[len(lens) // 2] > 2500:
+        return None, f"段落沒切開（段長中位數 {lens[len(lens) // 2]:,} 字）", {}
+    title = clean_title(meta.get("title") or "全文")
+    known = rb.printed_map(chunks)
+    text = build_chapter("", title, [dict(c, chapter_path="") for c in body], known)
+    base = dict(body[0])
+    base["printed_page"] = known.get(base.get("page_number")) or rb.infer_printed(base.get("page_number") or 0, known)
+    pages = paginate(text, title, base, known)
+    out = [dict(c) for c in front] + pages
+    for i, c in enumerate(out):
+        c["chunk_index"] = i
+    lumpy = [c for c in pages if len(c["content"]) > 2500 and c["content"].count("{{s:") <= 1]
+    if pages and len(lumpy) * 4 > len(pages):
+        return None, "合併後段落沒切開", {}
+    before, after = mass(chunks), mass(out)
+    title_w = sum(len(re.findall(r"\w", c.get("chapter_path") or "")) for c in chunks)
+    if abs(after - before) > 100 + 2 * title_w + len(re.findall(r"\w", title)):
+        return None, f"內容守恆失敗 {before:,}→{after:,}", {}
+    return out, "OK", {"before": len(chunks), "after": len(out), "chapters": 0, "mass": (before, after),
+                       "figures": [f.member for f in figures], "epub": fp if figures else ""}
+
+
+def restructure_by_chapters(chunks: list[dict], meta: dict) -> tuple[list[dict] | None, str, dict]:
     """回傳 (新 chunks 或 None, 原因／OK, 統計)。"""
     import audit_toc_accuracy as at
     if meta.get("collection") and not (ALLOW_COLLECTED and meta["collection"] == "collected-works"):
@@ -456,7 +557,7 @@ def restructure(chunks: list[dict], meta: dict) -> tuple[list[dict] | None, str,
         return None, "有對照欄（走 rebuild_reference_bilingual）", {}
     if any("{{s:" in (c.get("content") or "") for c in chunks):
         return None, "已有段號", {}
-    work = promote_flat_sections(repair_paths(chunks))
+    work = promote_flat_sections(repair_paths([dict(c, content=split_wrapped_lines(c.get("content") or "")) for c in chunks]))
     flags = set(at.audit(work, meta)["flags"]) & BAD_FLAGS
     if flags and not is_short_single(work):
         return None, "稽核旗標 " + ",".join(sorted(flags)), {}
