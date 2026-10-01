@@ -1,0 +1,153 @@
+{
+ "slug": "samdhinirmocana-5",
+ "title": "解深密經・廣慧菩薩章（心意識相）",
+ "family": "bo",
+ "intro": "藏譯第五章＝玄奘本〈心意識相品〉＝流支本〈廣慧菩薩問品〉。佛說一切種子心識隨六趣受生，名阿陀那識、阿賴耶識、心；依之六識俱轉，如瀑流起浪、明鏡現像；而如實不見阿陀那等，方名勝義善巧。「阿陀那識甚深細，一切種子如瀑流」偈出此。",
+ "units": [
+  {
+   "id": "sn5-00",
+   "label": "廣慧問：何謂心意識祕密善巧"
+  },
+  {
+   "id": "sn5-01",
+   "label": "佛讚問"
+  },
+  {
+   "id": "sn5-02",
+   "label": "一切種子心識於六趣成熟"
+  },
+  {
+   "id": "sn5-03",
+   "label": "名阿陀那識・阿賴耶識・心"
+  },
+  {
+   "id": "sn5-04",
+   "label": "依止此識六識俱轉"
+  },
+  {
+   "id": "sn5-05",
+   "label": "瀑流・明鏡喻"
+  },
+  {
+   "id": "sn5-06",
+   "label": "合法"
+  },
+  {
+   "id": "sn5-07",
+   "label": "不見阿陀那等，方名勝義善巧"
+  },
+  {
+   "id": "sn5-08",
+   "label": "偈頌"
+  },
+  {
+   "id": "sn5-09",
+   "label": "章尾題"
+  }
+ ],
+ "versions": [
+  {
+   "id": "bo",
+   "lang": "bo",
+   "label": "藏譯",
+   "who": "德格版 Toh 106・84000 翻譯記憶"
+  },
+  {
+   "id": "en",
+   "lang": "en",
+   "label": "84000 英譯",
+   "who": "譯自藏譯・與藏文逐句對齊"
+  },
+  {
+   "id": "T0675",
+   "lang": "lzh",
+   "label": "流支本",
+   "who": "菩提流支譯《深密解脫經》・514 年",
+   "work": "T0675"
+  },
+  {
+   "id": "T0676",
+   "lang": "lzh",
+   "label": "玄奘本",
+   "who": "玄奘譯《解深密經》・647 年",
+   "work": "T0676"
+  }
+ ],
+ "works": [
+  "DKtoh0106",
+  "T0675",
+  "T0676"
+ ],
+ "anchors": [
+  {
+   "work": "T0675",
+   "node": "聖者廣慧菩薩問品第六",
+   "uid": "T16n0675_p0669a06"
+  },
+  {
+   "work": "T0676",
+   "node": "心意識相品第三",
+   "uid": "T16n0676_p0692a27"
+  }
+ ],
+ "cells": {
+  "sn5-00": {
+   "bo": "དེ་ནས་བཅོམ་ལྡན་འདས་ལ་བྱང་ཆུབ་སེམས་དཔའ་བློ་གྲོས་ཡངས་པས་ཞུ་བ་ཞུས་པ། བཅོམ་ལྡན་འདས་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དང་ཡིད་དང་རྣམ་པར་ཤེས་པའི་གསང་བ་ལ་མཁས་པ། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དང་ཡིད་དང་རྣམ་པར་ཤེས་པའི་གསང་བ་ལ་མཁས་པ་ཞེས་བགྱི་ནབཅོམ་ལྡན་འདས་ཇི་ཙམ་གྱིས་ན་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དང་ཡིད་དང་རྣམ་པར་ཤེས་པའི་གསང་བ་ལ་མཁས་པ་ལགས། དེ་བཞིན་གཤེགས་པ་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དང་ཡིད་དང་རྣམ་པར་ཤེས་པའི་གསང་བ་ལ་མཁས་པར་འདོགས་ན་ཡང་ཇི་ཙམ་གྱིས་འདོགས་ལགས།",
+   "en": "Then, the bodhisattva Viśālamati asked the Blessed One, “Blessed One, when bodhisattvas who are skilled in the secrets of mind, thought, and cognition are called ‘skilled in the secrets of mind, thought, and cognition,’ what does it mean? When they are designated in this way, what does it refer to?”",
+   "T0675": "爾時，聖者廣慧菩薩摩訶薩，依於心相，白佛言：「世尊！如來說諸菩薩善知心意意識深密法者，世尊！云何菩薩善知心意意識深密之法？世尊！以何義故如來說諸菩薩善知心意意識深密之法？」",
+   "T0676": "爾時，廣慧菩薩摩訶薩白佛言：「世尊！如世尊說：『於心意識祕密善巧菩薩。』於心意識祕密善巧菩薩者，齊何名為於心意識祕密善巧菩薩？如來齊何施設彼為於心意識祕密善巧菩薩？」說是語已。"
+  },
+  "sn5-01": {
+   "bo": "བཅོམ་ལྡན་འདས་ཀྱིས་བྱང་ཆུབ་སེམས་དཔའ་བློ་གྲོས་ཡངས་པ་ལ་འདི་སྐད་ཅེས་བཀའ་སྩལ་ཏོ། ། བློ་གྲོས་ཡངས་པ་ཁྱོད་དེ་ལྟར་སྐྱེ་བོ་མང་པོ་ལ་ཕན་པ་དང་། སྐྱེ་བོ་མང་པོ་ལ་བདེ་བ་དང་། འཇིག་རྟེན་ལ་སྙིང་བརྩེ་བ་དང་། ལྷ་དང་མིར་བཅས་པའི་སྐྱེ་དགུའི་དོན་དང་ཕན་པ་དང་བདེ་བའི་ཕྱིར་ཞུགས་ཏེ དེ་བཞིན་གཤེགས་པ་ལ་ཁྱོད་དོན་འདི་ཉིད་འདྲི་བར་སེམས་པ་ནི་ལེགས་སོ་ལེགས་སོ། ། བློ་གྲོས་ཡངས་པ་དེའི་ཕྱིར་ཉོན་ཅིག་དང་། སེམས་དང་ཡིད་དང་རྣམ་པར་ཤེས་པའི་གསང་བ་ལ་མཁས་པ་ཁྱོད་ལ་བཤད་པར་བྱའོ། །",
+   "en": "The Blessed One answered, “Viśālamati, you are asking this for the benefit and happiness of many beings, out of compassion for the world, and for the welfare, benefit, and happiness of all beings, including gods and humans. Your intention is excellent when questioning the Tathāgata on this specific point. Therefore, listen, Viśālamati. I will explain to you in which way bodhisattvas are skilled in the secrets of mind, thought, and cognition.",
+   "T0675": "爾時，世尊告廣慧菩薩言：「善哉，善哉。廣慧！汝今乃能問於如來如此深義。廣慧！汝能為與一切眾生安隱樂具，悉令滿足。廣慧！汝為哀愍一切天人，多所安樂、多所饒益，乃能問我如是之義。善哉，廣慧！諦聽，諦聽。我為汝說心意意識深密之義。",
+   "T0676": "爾時，世尊告廣慧菩薩摩訶薩曰：「善哉，善哉！廣慧！汝今乃能請問如來如是深義；汝今為欲利益安樂無量眾生，哀愍世間、及諸天、人、阿素洛等；為令獲得義利安樂，故發斯問。汝應諦聽，吾當為汝說心意識祕密之義。"
+  },
+  "sn5-02": {
+   "bo": "བློ་གྲོས་ཡངས་པ་འགྲོ་བ་དྲུག་གི་འཁོར་བ་འདི་ན་སེམས་ཅན་གང་དང་གང་དག་སེམས་ཅན་གྱི་རིས་གང་དང་གང་དུ་ཡང་སྒོ་ང་ནས་སྐྱེ་བའི་སྐྱེ་གནས་སམ། ཡང་ན་མངལ་ནས་སྐྱེ་བའམ། ཡང་ན་དྲོད་གཤེར་ལས་སྐྱེ་བའམ།  ཡང་ན་རྫུས་ཏེ་སྐྱེ་བའི་སྐྱེ་གནས་སུ་ལུས་མངོན་པར་འགྲུབ་ཅིང་འབྱུང་བར་འགྱུར་བ་དེར་དང་པོར་འདི་ལྟར་ལེན་པ་རྣམ་པ་གཉིས་པོ་རྟེན་དང་བཅས་པའི་དབང་པོ་གཟུགས་ཅན་ལེན་པ་དང་། མཚན་མ་དང་མིང་དང་རྣམ་པར་རྟོག་པ་ལ་ཐ་སྙད་འདོགས་པའི་སྤྲོས་པའི་བག་ཆགས་ལེན་པ་ལ་རྟེན་ནས། ས་བོན་ཐམས་ཅད་པའི་སེམས་རྣམ་པར་སྨིན་ཅིང་འཇུག་ལ་རྒྱས་ཤིང་འཕེལ་བ་དང་ཡངས་པར་འགྱུར་རོ། ། དེ་ལ་གཟུགས་ཅན་གྱི་ཁམས་ན་ནི་ལེན་པ་གཉི་ག་ཡོད་ལ། གཟུགས་ཅན་མ་ཡིན་པའི་ཁམས་ན་ནི་ལེན་པ་གཉིས་སུ་མེད་དོ། །",
+   "en": "“Viśālamati, when such and such beings are reborn and manifest  in this saṃsāra comprised of six destinies, in any class of beings or state of birth, be it egg-born, womb-born, moisture-born, or spontaneously generated,  there is first a twofold appropriation: the appropriation of the physical sense faculties together with their supports, and the appropriation of mental imprints producing the elaboration of conventional expressions with regard to phenomenal appearances, names, and conceptualizations. In dependence upon this twofold appropriation, the mind containing all the seeds matures, merges [with the embryo], grows, increases, and expands. This twofold appropriation occurs in the realm of form but it does not appear in the realm of the formless.",
+   "T0675": "「廣慧！於諸六道生死之中，何等何等眾生——卵生、胎生、濕生、化生——受身、生身及增長身？初有一切種子心生，和合不同，差別增長，廣所成就，依二種取。何等二種？一者、謂依色心根取，二者、依於不分別相言語戲論熏集而取。廣慧！色界中依二種取生，無色界中非二種取生。",
+   "T0676": "「廣慧當知，於六趣生死彼彼有情，墮彼彼有情眾中，或在卵生、或在胎生、或在濕生、或在化生，身分生起，於中最初一切種子心識成熟、展轉、和合、增長、廣大。依二執受：一者、有色諸根及所依執受；二者、相名分別言說戲論習氣執受。有色界中具二執受，無色界中不具二種。"
+  },
+  "sn5-03": {
+   "bo": "བློ་གྲོས་ཡངས་པ་རྣམ་པར་ཤེས་པ་དེ་ནི་ལེན་པའི་རྣམ་པར་ཤེས་པ་ཞེས་ཀྱང་བྱ་སྟེ། འདི་ལྟར་དེས་ལུས་འདི་བཟུང་ཞིང་བླངས་པའི་ཕྱིར་རོ། ། ཀུན་གཞི་རྣམ་པར་ཤེས་པ་ཞེས་ཀྱང་བྱ་སྟེ། འདི་ལྟར་དེ་ལུས་འདི་ལ་གྲུབ་པ་དང་བདེ་བ་གཅིག་པའི་དོན་གྱིས་ཀུན་ཏུ་སྦྱོར་བ་དང་རབ་ཏུ་སྦྱོར་བར་བྱེད་པའི་ཕྱིར་རོ། ། སེམས་ཞེས་ཀྱང་བྱ་སྟེ། འདི་ལྟར་དེ་ནི་གཟུགས་དང་སྒྲ་དང་དྲི་དང་རོ་དང་རེག་བྱ་དང་ཆོས་ཀུན་ཏུ་བསྩགས་པ་དང་ཉེ་བར་བསྩགས་པ་ཡིན་པའི་ཕྱིར་རོ། །",
+   "en": "“Viśālamati, this cognition is also called ‘appropriating cognition’ because it grasps and appropriates the body. It is also called ‘subliminal cognition,’ because it dwells and lies hidden in this body, sharing a common destiny. It is also called ‘mind,’ because it is accumulated  and developed by visual forms, sounds, smells, flavors, tangible objects, and phenomena.",
+   "T0675": "「廣慧！彼識名阿陀那識。何以故？以彼阿陀那識取此身相應身故。廣慧！亦名阿梨耶識。何以故？以彼身中住著故、一體相應故。廣慧！亦名為心。何以故？以彼心為色、聲、香、味、觸、法增長故。",
+   "T0676": "「廣慧！此識亦名阿陀那識。何以故？由此識於身隨逐執持故。亦名阿賴耶識。何以故？由此識於身攝受、藏隱、同安危義故。亦名為心。何以故？由此識色聲香味觸等積集滋長故。"
+  },
+  "sn5-04": {
+   "bo": "བློ་གྲོས་ཡངས་པ་ལེན་པའི་རྣམ་པར་ཤེས་པ་དེ་ལ་རྟེན་ཅིང་གནས་ནས་རྣམ་པར་ཤེས་པའི་ཚོགས་དྲུག་པོ་འདི་ལྟ་སྟེ། མིག་གི་རྣམ་པར་ཤེས་པ་དང་། རྣ་བ་དང་སྣ་དང་ལྕེ་དང་ལུས་དང་ཡིད་ཀྱི་རྣམ་པར་ཤེས་པ་དག་འབྱུང་ངོ་། ། དེ་ལ་རྣམ་པར་ཤེས་པ་དང་བཅས་པའི་མིག་དང་གཟུགས་རྣམས་ལ་བརྟེན་ནས། མིག་གི་རྣམ་པར་ཤེས་པ་འབྱུང་སྟེ། མིག་གི་རྣམ་པར་ཤེས་པ་དེ་དང་ལྷན་ཅིག་རྗེས་སུ་འཇུག་པ། དུས་མཚུངས་པ། སྤྱོད་ཡུལ་མཚུངས་པ། རྣམ་པར་རྟོག་པའི་ཡིད་ཀྱི་རྣམ་པར་ཤེས་པ་ཡང་འབྱུང་ངོ་། ། བློ་གྲོས་ཡངས་པ་དེ་ལ་རྣམ་པར་ཤེས་པ་དང་བཅས་པའི་རྣ་བ་དང་སྣ་དང་ལྕེ་དང་རྣམ་པར་ཤེས་པ་དང་བཅས་པའི་ལུས་དང་རེག་བྱ་རྣམས་ལ་བརྟེན་ནས་ལུས་ཀྱི་རྣམ་པར་ཤེས་པ་འབྱུང་སྟེ ལུས་ཀྱི་རྣམ་པར་ཤེས་པ་དེ་དང་ལྷན་ཅིག་རྗེས་སུ་འཇུག་པ། དུས་མཚུངས་པ། སྤྱོད་ཡུལ་མཚུངས་པ། རྣམ་པར་རྟོག་པའི་ཡིད་ཀྱི་རྣམ་པར་ཤེས་པ་ཡང་འབྱུང་ངོ་། ། གལ་ཏེ་མིག་གི་རྣམ་པར་ཤེས་པ་གཅིག་ལྷན་ཅིག་འབྱུང་ན་ནི་མིག་གི་རྣམ་པར་ཤེས་པ་དང་སྤྱོད་ ཡུལ་མཚུངས་པ། རྣམ་པར་རྟོག་པའི་ཡིད་ཀྱི་རྣམ་པར་ཤེས་པ་གཅིག་ཁོ་ན་ལྷན་ཅིག་འབྱུང་ངོ་། ། གལ་ཏེ་རྣམ་པར་ཤེས་པའི་ཚོགས་གཉིས་སམ། གསུམ་མམ་བཞི་ལྷན་ཅིག་གམ། ལྔ་ཅར་ལྷན་ཅིག་འབྱུང་ན་ཡང་དེར་རྣམ་པར་ཤེས་པའི་ཚོགས་ལྔ་པོ་དག་དང་། སྤྱོད་ཡུལ་མཚུངས་པ་རྣམ་པར་རྟོག་པའི་ཡིད་ཀྱི་རྣམ་པར་ཤེས་པ་ཡང་གཅིག་ཁོ་ན་ལྷན་ཅིག་འབྱུང་ངོ་། །",
+   "en": "“Viśālamati, taking this appropriating cognition as support and basis, the six kinds of cognition,  that is, visual, auditive, olfactory, gustatory, tactile, and mental cognitions, arise. Among these, a visual cognition arises on the basis of the eye, which is connected with a visual cognition and a visual form. Simultaneously and in conformity with this visual cognition, a mental cognition that conceptualizes the object arises at the same time, having the same object. [Likewise,] Viśālamati, an auditive, olfactory, gustatory, or tactile cognition arises on the basis of a sense faculty connected to a cognition, such as the ear, nose, tongue, or body, and a sound, smell, flavor, or tangible object. Simultaneously and in conformity with this auditive, olfactory, gustatory, or tactile cognition, a mental cognition that conceptualizes the object arises at the same time, having the same object. If only one visual cognition arises at one time, then only one mental cognition that conceptualizes the object arises simultaneously, having the same object. If two, three, four, or five cognitions arise simultaneously, then also in that case, having the same object as the group of five cognitions, only one mental cognition that conceptualizes this object arises simultaneously.",
+   "T0675": "「廣慧！依彼阿陀那識能生六種識，所謂眼、耳、鼻、舌、身、意識身。廣慧！若一境界現前，一識身起，無分別意識即共眼識一時俱生。廣慧！若二、三、四、五境界現前，五識身起，無分別意識即與五識一時俱生。",
+   "T0676": "「廣慧！阿陀那識為依止、為建立故，六識身轉，謂眼識、耳、鼻、舌、身、意識。此中有識：眼及色為緣生眼識，與眼識俱隨行，同時、同境，有分別意識轉。有識：耳、鼻、舌、身，及聲、香、味、觸為緣，生耳、鼻、舌、身識，與耳、鼻、舌、身識俱隨行，同時、同境，有分別意識轉。廣慧！若於爾時一眼識轉，即於此時唯有一分別意識，與眼識同所行轉。若於爾時二、三、四、五諸識身轉，即於此時唯有一分別意識，與五識身同所行轉。"
+  },
+  "sn5-05": {
+   "bo": "བློ་གྲོས་ཡངས་པ་འདི་ལྟ་སྟེ་དཔེར་ན། ཆུའི་ཀླུང་ཆེན་པོ་འབབ་པ་ལ་གལ་ཏེ་རླབས་ཅིག་འབྱུང་བའི་རྐྱེན་ཉེ་བར་གནས་པར་གྱུར་ན་རླབས་ཀྱང་གཅིག་ཁོ་ན་འབྱུང་ངོ་། ། གལ་ཏེ་རླབས་གཉིས་སམ། གལ་ཏེ་རབ་ཏུ་མང་པོ་དག་འབྱུང་བའི་རྐྱེན་ཉེ་བར་གནས་པར་གྱུར་ན་རླབས་རབ་ཏུ་མང་པོ་དག་འབྱུང་ཞིང་ཆུའི་ཀླུང་དེ་རང་གི་རྒྱུན་གྱིས་རྒྱུན་འཆད་པར་ཡང་མི་འགྱུར་ལ། ཡོངས་སུ་ཟད་པར་ཡང་མི་འགྱུར་རོ། ། མེ་ལོང་གི་དཀྱིལ་འཁོར་ཤིན་ཏུ་ཡོངས་སུ་དག་པ་ལ་ཡང་གལ་ཏེ་གཟུགས་བརྙན་གཅིག་འབྱུང་བའི་རྐྱེན་ཉེ་བར་གནས་པར་གྱུར་ན། གཟུགས་བརྙན་ཡང་གཅིག་ཁོ་ན་འབྱུང་ངོ་། ། གལ་ཏེ་གཟུགས་བརྙན་གཉིས་སམ། གལ་ཏེ་རབ་ཏུ་མང་པོ་དག་འབྱུང་བའི་རྐྱེན་ཉེ་བར་གནས་པར་གྱུར་ན། གཟུགས་བརྙན་རབ་ཏུ་མང་པོ་དག་འབྱུང་ཞིང་ མེ་ལོང་གི་དཀྱིལ་འཁོར་དེ་གཟུགས་བརྙན་གྱི་དངོས་པོར་ཡོངས་སུ་འགྱུར་བ་ཡང་མ་ཡིན་ལ་ཡོངས་སུ་སྦྱོར་བར་ཡང་མི་མངོན་ནོ། །",
+   "en": "“Viśālamati, it is like this: If the conditions for the arising of a single wave in a large stream of water are present, then only one wave arises. If the conditions for the arising of two or many waves are present, then two or many waves arise.  However, the river [itself] neither stops as a stream of water nor becomes exhausted. If the conditions for the arising of a single reflection in a perfectly polished mirror are present, then only one reflection arises. If the conditions for the arising of two or many reflections are present, then two or many reflections arise.  However, the mirror neither transforms itself into the object corresponding to the reflection nor manifests reflections by being in close contact [with the reflected objects].",
+   "T0675": "「廣慧！譬如流水，若一緣起即生一波，若二、若三乃至眾多因緣俱起即生眾波。廣慧！而彼流水亦不斷絕。「復次，廣慧！譬如無垢清淨明鏡，若有一像因緣現前，即見一像，若有二、三、眾多像現，即能具見眾多異像。廣慧！而彼明鏡為彼種種諸像不異。",
+   "T0676": "「廣慧！譬如大瀑水流，若有一浪生緣現前，唯一浪轉；若二、若多浪生緣現前，有多浪轉。然此瀑水自類恒流無斷無盡。又如善淨鏡面，若有一影生緣現前，唯一影起；若二、若多影生緣現前，有多影起。非此鏡面轉變為影，亦無受用滅盡可得。"
+  },
+  "sn5-06": {
+   "bo": "བློ་གྲོས་ཡངས་པ་དེ་བཞིན་དུ་ཆུ་ཀླུང་ལྟ་བུ་དང་། མེ་ལོང་ལྟ་བུའི་ལེན་པའི་རྣམ་པར་ཤེས་པ་དེ་ལ་རྟེན་ཅིང་གནས་ནས། གལ་ཏེ་མིག་གི་རྣམ་པར་ཤེས་པ་གཅིག་ལན་ཅིག་འབྱུང་བའི་རྐྱེན་ཉེ་བར་གནས་པར་གྱུར་ན་ཡང་མིག་གི་རྣམ་པར་ཤེས་པ་གཅིག་ཁོ་ན་ལན་ཅིག་འབྱུང་ངོ་། ། གལ་ཏེ་རྣམ་པར་ཤེས་པའི་ཚོགས་ལྔ་ཅར་གྱི་བར་དག་ལན་ཅིག་འབྱུང་བའི་རྐྱེན་ཉེ་བར་གནས་པར་གྱུར་ན་ཡང་རྣམ་པར་ཤེས་པའི་ཚོགས་ལྔ་ཅར་ལན་ཅིག་འབྱུང་ངོ་། །",
+   "en": "Viśālamati, similarly, taking this appropriating cognition as support and basis, as in the examples of the river and the mirror, if the conditions for the arising of one visual cognition are present, then only one visual cognition arises. If the conditions for the simultaneous arising of up to five cognitions are present, then up to five cognitions simultaneously arise.",
+   "T0675": "「廣慧！如彼流水、明鏡像等，依止阿陀那識、住持阿陀那識，若一眼識因緣現前，即一意識共彼眼識同時取境。廣慧！若五識身五種因緣一時現前，無分別意識即共五識一時取境。",
+   "T0676": "「如是，廣慧！由似瀑流阿陀那識為依止、為建立故，若於爾時有一眼識生緣現前，即於此時一眼識轉；若於爾時乃至有五識身生緣現前，即於此時五識身轉。"
+  },
+  "sn5-07": {
+   "bo": "བློ་གྲོས་ཡངས་པ་དེ་ལྟར་བྱང་ཆུབ་སེམས་དཔའ་ཆོས་ཀྱི་ལུགས་ཤེས་པ་ལ་བརྟེན་ཅིང་ཆོས་ཀྱི་ལུགས་ཤེས་པ་ལ་གནས་ནས། སེམས་དང་ཡིད་དང་རྣམ་པར་ཤེས་པའི་གསང་བ་ལ་མཁས་པ་ཡིན་ཡང་དེ་བཞིན་གཤེགས་པ་ནི་བྱང་ཆུབ་སེམས་ སེམས་དཔའ་དང་ཡིད་དང་རྣམ་པར་ཤེས་པའི་གསང་བ་ལ་མཁས་པར་འདོགས་ན་དེ་ཙམ་གྱིས་ཐམས་ཅད་ཀྱི་ཐམས་ཅད་དུ་མི་འདོགས་སོ། ། བློ་གྲོས་ཡངས་པ་གང་གི་ཕྱིར་བྱང་ཆུབ་སེམས་དཔའ་ནང་གི་སོ་སོ་ནང་གི་ལེན་པ་མི་མཐོང་། ལེན་པའི་རྣམ་པར་ཤེས་པ་ཡང་མི་མཐོང་ལ། དེ་ཡང་ཡང་དག་པ་ཇི་ལྟ་བ་བཞིན་དུ་ཡིན་པ་དང་། ཀུན་གཞི་ཡང་མི་མཐོང་ཀུན་གཞི་རྣམ་པར་ཤེས་པ་ཡང་མི་མཐོང་། བསྩགས་པ་ཡང་མི་མཐོང་། སེམས་ཀྱང་མི་མཐོང་། མིག་ཀྱང་མི་མཐོང་། གཟུགས་ཀྱང་མི་མཐོང་། མིག་གི་རྣམ་པར་ཤེས་པ་ཡང་མི་མཐོང་། རྣ་བ་ཡང་མི་མཐོང་། སྒྲ་ཡང་མི་མཐོང་། རྣ་བའི་རྣམ་པར་ཤེས་པ་ཡང་མི་མཐོང་། སྣ་ཡང་མི་མཐོང་། དྲི་ཡང་མི་མཐོང་། སྣའི་རྣམ་པར་ཤེས་པ་ཡང་མི་མཐོང་། ལྕེ་ཡང་མི་མཐོང་། རོ་ཡང་མི་མཐོང་། ལྕེའི་རྣམ་པར་ཤེས་པ་ཡང་མི་མཐོང་། ལུས་ཀྱང་མི་མཐོང་། རེག་བྱ་ཡང་མི་མཐོང་། ལུས་ཀྱི་རྣམ་པར་ཤེས་པ་ཡང་མི་མཐོང་། བློ་གྲོས་ཡངས་པ་གང་གི་ཕྱིར་བྱང་ཆུབ་སེམས་དཔའ་ནང་གི་སོ་སོ་རང་གི་ཡིད་ཀྱང་མི་མཐོང་། ཆོས་རྣམས་ཀྱང་མི་མཐོང་། ཡིད་ཀྱི་རྣམ་པར་ཤེས་པ་ཡང་མི་མཐོང་ལ། དེ་ཡང་ཡང་དག་པ་ཇི་ལྟ་བ་བཞིན་དུ་ཡིན་པ་དེ་ནི། བྱང་ཆུབ་སེམས་དཔའ་དོན་དམ་པ་ལ་མཁས་པ་ཞེས་བྱ་སྟེ། དེ་བཞིན་གཤེགས་པ་ཡང་བྱང་ཆུབ་སེམས་དཔའ་དོན་དམ་པ་ལ་མཁས་པ་ནི་སེམས་དང་ཡིད་དང་། རྣམ་པར་ཤེས་པའི་གསང་བ་ལ་མཁས་པ་ཡིན་པར་འདོགས་སོ། ། བློ་གྲོས་ཡངས་པ་དེ་ཙམ་གྱིས་ན་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དང་ཡིད་དང་རྣམ་པར་ཤེས་པའི་གསང་བ་ལ་མཁས་པ་ཡིན་ལ། དེ་བཞིན་གཤེགས་པ་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དང་ཡིད་དང་རྣམ་པར་ཤེས་པའི་གསང་བ་ལ་མཁས་པར་འདོགས་ན་ཡང་དེ་ཙམ་གྱིས་འདོགས་སོ། །",
+   "en": "“Viśālamati, taking in this way the knowledge  of this doctrine as a support and basis, bodhisattvas are skilled in the secrets of mind, thought, and cognition. Yet, when the Tathāgata designates the bodhisattvas as skilled in the secrets of mind, thought, and cognition, they are not designated as completely skilled merely on account of this. Viśālamati, [I call bodhisattvas ‘skilled in the ultimate’ ]as soon as  they, by themselves and in their own experience,  neither perceive the appropriation nor the appropriating cognition but [instead perceive] in accordance with the truth; as soon as they neither perceive the subliminal nor the subliminal cognition; neither the accumulated nor the mind;  neither the eye, nor the form, nor the visual cognition; neither the ear, nor the sound, nor the auditive cognition; neither the nose, nor the smell, nor the olfactory cognition; neither the tongue, nor the flavor, nor the gustatory cognition; and neither the body, nor the tangible object, nor the tactile cognition. Viśālamati, I call bodhisattvas ‘skilled in the ultimate’ as soon as they, by themselves and in their own experience, neither perceive thought, nor phenomena, nor mental cognition but instead perceive in accordance with the truth. Viśālamati, the Tathāgata designates as skilled in the secrets of mind, thought, and cognition the bodhisattvas who are skilled in the ultimate. Viśālamati, for this reason, bodhisattvas are skilled in the secrets of mind, thought, and cognition. Also, when the Tathāgata designates them as such, it is for this reason.”",
+   "T0675": "「廣慧！如是，菩薩摩訶薩依法住智，如實善知心意意識深密之法。廣慧！而佛不說諸菩薩等是善解知心意意識深密之法。廣慧！若菩薩不見內外阿陀那、不見阿陀那識，能如實知；不見阿梨耶、不見阿梨耶識、不戲論心，不見眼、不見色、不見眼識，不見耳、不見聲、不見耳識，不見鼻、不見香、不見鼻識，不見舌、不見味、不見舌識，不見身、不見觸、不見身識，廣慧！菩薩不見內外意、不見內外法、不見內外意識，能如實知。廣慧！我說如是諸菩薩等善知第一義。廣慧！是故，我說菩薩應知心意意識深密之法。廣慧！菩薩如是解知心意意識深密法已，我說是人是真菩薩。」",
+   "T0676": "「廣慧！如是菩薩雖由法住智為依止、為建立故，於心意識祕密善巧。然諸如來不齊於此，施設彼為於心意識一切祕密善巧菩薩。廣慧！若諸菩薩於內各別：如實不見阿陀那、不見阿陀那識；不見阿賴耶、不見阿賴耶識；不見積集、不見心；不見眼色及眼識；不見耳聲及耳識；不見鼻香及鼻識；不見舌味及舌識；不見身觸及身識；不見意法及意識；是名勝義善巧菩薩；如來施設彼為勝義善巧菩薩。廣慧！齊此名為於心意識一切祕密善巧菩薩；如來齊此施設彼為於心意識一切祕密善巧菩薩。」"
+  },
+  "sn5-08": {
+   "bo": "དེ་ནས་བཅོམ་ལྡན་འདས་ཀྱིས་དེའི་ཚེ་ཚིགས་སུ་བཅད་པ་འདི་དག་བཀའ་སྩལ་ཏོ། ། ལེན་པའི་རྣམ་པར་ཤེས་པ་ཟབ་ཅིང་ཕྲ། ། ས་བོན་ཐམས་ཅད་ཆུ་བོའི་ཀླུང་ལྟར་འབབ། ། བདག་ཏུ་རྟོག་པར་གྱུར་ན་མི་རུང་ཞེས། །བྱིས་པ་རྣམས་ལ་ངས་ནི་དེ་མ་བསྟན། །",
+   "en": "Then, at that moment, the Blessed One spoke these verses: “Profound and subtle is the appropriating cognition. Containing all the seeds, it flows like a stream of water. I did not teach it to the immature,Lest they would imagine it to be a self.”",
+   "T0675": "爾時，世尊而說偈言：「諸種阿陀那，能生於諸法， 我說水、鏡喻，不為愚人說。」",
+   "T0676": "爾時，世尊欲重宣此義，而說頌曰：「阿陀那識甚深細，一切種子如瀑流， 我於凡愚不開演，恐彼分別執為我。」"
+  },
+  "sn5-09": {
+   "bo": "བློ་གྲོས་ཡངས་པའི་ལེའུ་ སྟེ་ལྔ་པའོ།། །།",
+   "en": "This was the chapter of Viśālamati—the fifth chapter."
+  }
+ }
+}
