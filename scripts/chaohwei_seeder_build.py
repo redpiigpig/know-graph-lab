@@ -45,12 +45,21 @@ CACHE = [str(SCRIPT_DIR.parent / ".claude/skills/ebook-scan-transcribe/chaohwei_
          "c:/tmp/chaohwei_seeder/ocr",
          # 88–133 頁：Gemini 額度用完後改本機 MinerU（scripts/chaohwei_seeder_mineru.py 轉格式）
          "c:/tmp/chaohwei_seeder/ocr_mineru"]
-WORK = "c:/tmp/chaohwei_seeder/work.pdf"
+# 前半 work.pdf（133 頁）＋後半 work_b.pdf 前 89 頁（頁 120–208），合成全書工作檔
+WORK = "c:/tmp/chaohwei_seeder/work_full.pdf"
 
 # 掃描頁 1＝版權頁＋印順法師法相、2＝叢書總序的最後一頁（前面沒掃到，半截不收）
 SKIP_WP: set[int] = {1, 2}
-CAPTIONS = {"太虛大師道影", "法尊法師晚年德相", "《佛法概論》未修訂前之附圖"}
-BODY_START_WP = 13  # 掃描頁 12 是目次後的空白頁，13＝正文頁 1
+CAPTIONS = {"太虛大師道影", "法尊法師晚年德相", "《佛法概論》未修訂前之附圖",
+            "福嚴精舍落成", "四十四年農曆正月菲律賓信願寺弘法後合影", "四十五年於重慶南路靜室養病中",
+            "妙雲蘭若掩關中攝"}
+# 長圖說按開頭比（OCR 會在括號、標點上有出入）
+CAPTION_PREFIXES = ("四十七年春攝於福嚴精舍，前排坐者", "作者與印公合影")
+# 圖說被黏在正文行首的（Gemini 還原段落時接上去），只剝掉圖說那幾個字
+CAPTION_INLINE = ("四十一年四月攝於香港",)
+BODY_START_WP = 13
+# 掃描頁 157＝頁 143（第十四章末半頁，頁碼沒讀到；前後是 142 與 145，158 是空白的 144）
+PRINTED_FIX = {157: "143"}  # 掃描頁 12 是目次後的空白頁，13＝正文頁 1
 FRONT_MATTER: list[dict] = [
     {"title": "自序", "wp": (3, 8), "prefix": "自序"},
     {"title": "目次", "wp": (9, 11), "prefix": "目次"},
@@ -74,7 +83,12 @@ CHAPTERS: list[dict] = [
     {"title": "十二‧山雨欲來風滿樓", "start": "103", "end": "108"},
     {"title": "十三‧《佛法概論》事件", "start": "109", "end": "118"},
     {"title": "十四‧繁忙的弘法生活", "start": "119", "end": "144"},
-    # 待掃：十五 145／十六 155／十七 179／十八 201／主要參考資料 205／後記 207
+    {"title": "十五‧從孤獨中超脫", "start": "145", "end": "154"},
+    {"title": "十六‧卅年靜居歲月", "start": "155", "end": "178"},
+    {"title": "十七‧留下不朽的篇章", "start": "179", "end": "200"},
+    {"title": "十八‧寒潭清水，映月無痕", "start": "201", "end": "204"},
+    {"title": "主要參考資料", "start": "205", "end": "206"},
+    {"title": "後記", "start": "207", "end": "208"},
 ]
 
 
@@ -203,9 +217,14 @@ def build_chunks(chapters: list[dict]) -> list[dict]:
 def load_records() -> list[dict]:
     recs = [r for r in cb.load_cache([Path(c) for c in CACHE], Path(WORK))
             if r["work_page"] not in SKIP_WP]
+    # 連續兩頁讀不到頁碼時 fill_one_page_gaps 補不了（只補唯一解的一格），逐頁看過影像後手填
+    recs = [{**r, "printed": PRINTED_FIX.get(r["work_page"], r.get("printed") or "")} for r in recs]
+    for cap in CAPTION_INLINE:
+        recs = [{**r, "text": (r.get("text") or "").replace(cap, "")} for r in recs]
     # 使用者定調照片與圖說不收；prompt 已交代，Gemini 仍吐出來，這裡按原文逐條刪
     recs = [{**r, "text": "\n".join(ln for ln in cb.unescape_linebreaks(r.get("text") or "").split("\n")
-                                    if ln.strip() not in CAPTIONS)} for r in recs]
+                                    if ln.strip() not in CAPTIONS
+                                    and not ln.strip().startswith(CAPTION_PREFIXES))} for r in recs]
     # 目次頁本來就是一條一行，不能拿去還原段落（它是節標題白名單的來源）
     unwrap = lambda r, t: unwrap_print_lines(t) if r["work_page"] >= BODY_START_WP else t
     recs = [{**r, "text": align_note_numbers(unwrap(r, cb.unescape_linebreaks(r.get("text") or "")))}

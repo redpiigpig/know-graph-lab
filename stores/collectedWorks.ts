@@ -8420,7 +8420,9 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1995,
           category: '印順與人間佛教',
           languages: ['zh'],
-          status: 'planned',
+          status: 'done',
+          ebookId: 'c4a01957-0000-4000-8000-000000000003',
+          note: '東大圖書，現代佛學叢書；1995 年初版、1997 年修訂初版。印順導師傳記。依紙本掃描轉錄，照片與圖說不收。',
         },
         {
           title: '悲情觀音',
