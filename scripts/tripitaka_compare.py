@@ -1215,7 +1215,8 @@ SETS["vimalakirti-c12"] = {
 # 藏譯 Toh 113＋84000 英譯（TMX 品首有「… Chapter N」、品尾有「This concludes …」）。
 # 品次對應見 tripitaka_sanskrit.REGISTRY 的 T0262 chapter_map。
 def _lotus_versions(sa_ch: int, bo_rng: tuple[int, int], heads: dict[str, list[str]],
-                    cuts: dict[str, list], bo_lines: list) -> list[dict]:
+                    cuts: dict[str, list], bo_lines: list, reorder: frozenset = frozenset()) -> list[dict]:
+    """reorder：哪幾本的段落次序與梵本不同（切點照該本原文先後排，義段 id 不必遞增）。"""
     vs = [{"id": "sa", "lang": "sa", "label": "梵本", "who": "Saddharmapuṇḍarīka・GRETIL（Vaidya 本）",
            "src": {"orig": "T0262", "lang": "sa", "ref": f"Saddharmapuṇḍarīkasūtra {sa_ch}"}, "cuts": cuts["sa"]}]
     for w, label, who in [("T0262", "羅什本", "鳩摩羅什譯《妙法蓮華經》・406 年"),
@@ -1226,6 +1227,9 @@ def _lotus_versions(sa_ch: int, bo_rng: tuple[int, int], heads: dict[str, list[s
     for side, label, who in [("bo", "藏譯", "德格版 Toh 113・84000"), ("en", "84000 英譯", "譯自藏譯・與藏文逐句對齊")]:
         vs.append({"id": side, "lang": side, "label": label, "who": who,
                    "src": {"tmx": "toh113", "side": side, "from": bo_rng[0], "to": bo_rng[1]}, "lines": bo_lines})
+    for v in vs:
+        if v["id"] in reorder:
+            v["reorder"] = True
     return vs
 
 
@@ -2518,6 +2522,66 @@ SETS["saddharmapundarika-c24"] = {
                    ("l24-v20", "真觀清淨觀"), ("l24-09", "爾時持地菩薩"), ("l24-10", "說是〈普門品〉時")]},
         [("l24-01", 0), ("l24-02", 5), ("l24-03", 9), ("l24-04", 13), ("l24-05", 17), ("l24-06", 22), ("l24-07", 31),
          ("l24-08", 50), ("l24-v1", 58), ("l24-v20", 80), ("l24-v28", 96), ("l24-09", 105), ("l24-10", 106), ("l24-99", 107)]),
+}
+
+# 第 25 品：羅什、添品把獻瓔珞與授記（梵本第 20–21 段）提到王出家之前，故這兩本 reorder；正法華與梵本同序。
+SETS["saddharmapundarika-c25"] = {
+    "title": "法華經・妙莊嚴王本事品",
+    "family": "sa",
+    "intro": (
+        "梵本〈妙莊嚴王本事品〉（śubhavyūharājapūrvayogaparivarta，第 25）；羅什〈妙莊嚴王本事品第二十七〉、添品〈第二十五〉、"
+        "正法華〈淨復淨王品第二十五〉。二子現神變化父、白母出家、王與眷屬詣佛、出家修行、昇空讚子、獻瓔珞、授記、本事。"
+        "羅什與添品把獻瓔珞、授記移到王出家之前，正法華與梵本同序。人名異譯：妙莊嚴＝淨復淨（正法華）＝Śubhavyūha；"
+        "淨德＝離垢施＝Vimaladattā；淨藏＝離垢藏＝Vimalagarbha；淨眼＝Vimalanetra；雲雷音宿王華智＝總水雷音宿華慧王"
+        "（正法華）＝Jaladharagarjitaghoṣasusvaranakṣatrarājasaṃkusumitābhijña；娑羅樹王＝Śālendrarāja；華德＝Padmaśrī；"
+        "藥王、藥上＝藥王、超藥（正法華）。"
+    ),
+    "units": [
+        ("l25-00", "品題"), ("l25-01", "雲雷音宿王華智佛・妙莊嚴王與二子・母令現神變"), ("l25-02", "二子現神變化父"),
+        ("l25-03", "從空中下・白母求出家"), ("l25-v1", "二子與母偈（梵 25.1–3）"), ("l25-04", "白父母共詣佛所"),
+        ("l25-05", "後宮受持・二子修行・眷屬同詣佛所"), ("l25-06", "佛為王說法・王以國付弟出家修道"),
+        ("l25-07", "八萬四千歲後昇空讚二子為善知識"), ("l25-08", "佛答：善知識是大因緣"), ("l25-09", "王從空下讚佛"),
+        ("l25-10", "我從今日不復自隨心行"), ("l25-11", "解瓔珞散佛・化成寶臺"), ("l25-12", "授記：娑羅樹王佛"),
+        ("l25-13", "妙莊嚴即華德・淨德即光照莊嚴相・二子即藥王藥上"), ("l25-14", "說品時八萬四千人得法眼淨"),
+        ("l25-99", "品尾題"),
+    ],
+    "versions": _lotus_versions(
+        25, (4288, 4410),
+        {"T0262": ["妙法蓮華經妙莊嚴王本事品第二十七"], "T0263": ["正法華經淨復淨王品第二十五"],
+         "T0264": ["添品妙法蓮華經妙莊嚴王本事品第二十五"]},
+        {"sa": [("l25-00", "Saddhp_25: śubhavyūharājapūrvayogaparivartaḥ |"), ("l25-01", "atha khalu bhagavān sarvāvantaṃ"),
+                ("l25-02", "atha khalu kulaputrā vimalagarbho dārako vimalanetraśca dārakastasyāṃ velāyāṃ saptatāla"),
+                ("l25-03", "atha khalu kulaputrāstau dvau dārakau tato"),
+                ("l25-v1", "atha khalu kulaputrā vimalagarbho dārako vimalanetraśca dārakastasyāṃ velāyāṃ svamātaraṃ"),
+                ("l25-04", "atha khalu kulaputrāstau dvau dārakāvime"), ("l25-05", "tena khalu punaḥ kulaputrāḥ samayena tasya rājñaḥ"),
+                ("l25-06", "atha khalu kulaputrāḥ sa bhagavān jaladhara"),
+                ("l25-07", "atha khalu kulaputrāḥ sa rājāḥ śubhavyūho gaganatale"), ("l25-08", "evamukte bhagavān jaladhara"),
+                ("l25-09", "atha khalu kulaputrāḥ sa rājā śubhavyūhastato"), ("l25-10", "atha khalu kulaputrāḥ sa rāja śubhavyūha iyadbhir"),
+                ("l25-11", "atha khalu sa rājā śubhavyūhaḥ sā ca vimaladattā"),
+                ("l25-12", "atha khalu bhagavān jaladharagarjitaghoṣasusvaranakṣatrarājasaṃkusumitābhijñastathāgataścatasraḥ"),
+                ("l25-13", "syāt khalu punaḥ kulaputrāḥ yuṣmākaṃ"), ("l25-14", "asmin khalu punaḥ pūrvayogaparivarte"),
+                ("l25-99", "iti śrīsaddharmapuṇḍarīke")],
+         "T0262": [("l25-01", "爾時佛告諸大眾"), ("l25-02", "於是二子念其父故"), ("l25-03", "於是二子從空中下"),
+                   ("l25-v1", "「爾時二子欲重宣其意"), ("l25-04", "「於是二子白父母言"), ("l25-05", "時妙莊嚴王後宮"),
+                   ("l25-06", "「爾時彼佛為王說法"), ("l25-11", "爾時妙莊嚴王及其夫人，解頸"),
+                   ("l25-12", "時雲雷音宿王華智佛告四眾言"), ("l25-07", "即昇虛空"),
+                   ("l25-08", "「爾時，雲雷音宿王華智佛告妙莊嚴王言"), ("l25-09", "妙莊嚴王即從虛空中下"),
+                   ("l25-10", "我從今日"), ("l25-13", "佛告大眾：「於意云何"), ("l25-14", "佛說是妙莊嚴王本事品時")],
+         "T0263": [("l25-01", "佛告族姓子：「乃往過去"), ("l25-02", "「時二太子輒受母教，其身踊住在虛空中"),
+                   ("l25-03", "於時二子，從虛空下"), ("l25-v1", "「時二太子為母說偈曰"), ("l25-04", "「爾時二太子，歎是法頌"),
+                   ("l25-05", "佛言：「族姓子！爾時淨復淨王宮內"), ("l25-06", "時佛見淨復淨王"), ("l25-07", "其身即時踊在虛空"),
+                   ("l25-08", "佛告王曰：『如是如是"), ("l25-09", "於是佛語族姓子曰"), ("l25-11", "其王正后離垢施者，解身"),
+                   ("l25-12", "於時世尊告四部眾"), ("l25-13", "能仁如來告族姓子"), ("l25-14", "佛說是往古宿世本所行時")],
+         "T0264": [("l25-01", "爾時佛告諸大眾"), ("l25-02", "「於是二子，念其父故"), ("l25-03", "「於是二子從空中下"),
+                   ("l25-v1", "爾時二子，欲重宣其意"), ("l25-04", "「於是二子白父母言"), ("l25-05", "時妙莊嚴王，後宮"),
+                   ("l25-06", "爾時彼佛，為王說法"), ("l25-11", "爾時妙莊嚴王及其夫人，解頸"),
+                   ("l25-12", "「時雲雷音宿王華智佛告四眾言"), ("l25-07", "即昇虛空"),
+                   ("l25-08", "「爾時雲雷音宿王華智佛告妙莊嚴王言"), ("l25-09", "「妙莊嚴王，即從虛空中下"),
+                   ("l25-10", "我從今日"), ("l25-13", "佛告大眾：「於意云何"), ("l25-14", "佛說是〈妙莊嚴王本事品〉時")]},
+        [("l25-01", 0), ("l25-02", 22), ("l25-03", 36), ("l25-v1", 39), ("l25-04", 48), ("l25-05", 57), ("l25-06", 64),
+         ("l25-07", 71), ("l25-08", 76), ("l25-09", 85), ("l25-10", 87), ("l25-11", 95), ("l25-12", 101), ("l25-13", 107),
+         ("l25-14", 120), ("l25-99", 121)],
+        reorder=frozenset({"T0262", "T0264"})),
 }
 
 
