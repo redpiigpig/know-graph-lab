@@ -15,10 +15,20 @@ CLASS_ROOT = Path(r"G:\我的雲端硬碟\玄奘\博一上\教學")
 MIRROR_ROOT = Path(r"G:\我的雲端硬碟\資料\知識圖工作室\教學")
 
 # 兩邊的資料夾名不一樣（課堂夾用空格、鏡射夾用底線）
+# 🚨 鏡射夾「115-1_世界宗教文化導論」同時裝日間部 BBE275 與假日班 PPA001（二年制），
+#    課堂端卻是兩個夾。PPA001／二年制的檔只對到「（假日）」夾，否則會整批灌進 BBE275 那夾
+#    （2026-10-01 使用者發現）。第三欄是只收哪些檔的判斷式，None＝全收。
+def weekend(rel: Path) -> bool:
+    # 假日班的授課大綱檔名沒帶課號（BBE275 那份才帶「（BBE275宗教系1A）」），要點名認
+    return ("PPA001" in rel.name or "二年制" in rel.name
+            or rel.stem == "115.1世界宗教文化導論")
+
+
 COURSES = [
-    ("115-1 世界宗教文化導論", "115-1_世界宗教文化導論"),
-    ("115-1 基督宗教概論", "115-1_基督宗教概論"),
-    ("115-1 宗教系國文", "115-1_宗教系國文講義"),
+    ("115-1 世界宗教文化導論", "115-1_世界宗教文化導論", lambda r: not weekend(r)),
+    ("115-1世界宗教文化導論（假日）", "115-1_世界宗教文化導論", weekend),
+    ("115-1 基督宗教概論", "115-1_基督宗教概論", None),
+    ("115-1 宗教系國文", "115-1_宗教系國文講義", None),
 ]
 
 SKIP = {"desktop.ini", "Thumbs.db", ".DS_Store"}
@@ -54,9 +64,12 @@ def main() -> None:
     args = ap.parse_args()
 
     total = {"missing": 0, "newer": 0, "same": 0}
-    for class_dir, mirror_dir in COURSES:
+    for class_dir, mirror_dir, keep in COURSES:
         a_root, b_root = CLASS_ROOT / class_dir, MIRROR_ROOT / mirror_dir
         a, b = files(a_root), files(b_root)
+        if keep:
+            a = {r: p for r, p in a.items() if keep(r)}
+            b = {r: p for r, p in b.items() if keep(r)}
         print(f"\n=== {class_dir}  （課堂 {len(a)} 檔／鏡射 {len(b)} 檔）")
 
         for rel in sorted(a.keys() | b.keys()):
