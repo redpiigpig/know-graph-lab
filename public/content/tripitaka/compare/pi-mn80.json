@@ -1,0 +1,417 @@
+{
+ "slug": "pi-mn80",
+ "title": "鞞摩肅經",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "經名與序分"
+  },
+  {
+   "id": "a01",
+   "label": "鞞摩那修自頌最上色光"
+  },
+  {
+   "id": "a02",
+   "label": "世尊問何為最上色光"
+  },
+  {
+   "id": "a03",
+   "label": "鞞摩那修答色光無上"
+  },
+  {
+   "id": "a04",
+   "label": "世尊追問何色為上"
+  },
+  {
+   "id": "a05",
+   "label": "鞞摩那修重答色光無上"
+  },
+  {
+   "id": "a06",
+   "label": "世尊譬人求國中第一美女"
+  },
+  {
+   "id": "a07",
+   "label": "問美女種族與容貌"
+  },
+  {
+   "id": "a08",
+   "label": "答不知美女種族"
+  },
+  {
+   "id": "a09",
+   "label": "世尊指出未說明色光"
+  },
+  {
+   "id": "a10",
+   "label": "琉璃寶珠與螢火蟲光比喻"
+  },
+  {
+   "id": "a11",
+   "label": "問琉璃金精與螢火孰勝"
+  },
+  {
+   "id": "a12",
+   "label": "答螢火勝於琉璃金"
+  },
+  {
+   "id": "a13",
+   "label": "問螢火與油燈孰勝"
+  },
+  {
+   "id": "a14",
+   "label": "答油燈勝於螢火"
+  },
+  {
+   "id": "a15",
+   "label": "問油燈與大火孰勝"
+  },
+  {
+   "id": "a16",
+   "label": "答大火勝於油燈"
+  },
+  {
+   "id": "a17",
+   "label": "問大火與太白星孰勝"
+  },
+  {
+   "id": "a18",
+   "label": "答太白星勝於大火"
+  },
+  {
+   "id": "a19",
+   "label": "問太白星與月光孰勝"
+  },
+  {
+   "id": "a20",
+   "label": "答月光勝於太白星"
+  },
+  {
+   "id": "a21",
+   "label": "問月光與日光孰勝"
+  },
+  {
+   "id": "a22",
+   "label": "答日光勝於月光"
+  },
+  {
+   "id": "a23",
+   "label": "世尊結論日月光不及諸天"
+  },
+  {
+   "id": "a24",
+   "label": "世尊不說色光最上"
+  },
+  {
+   "id": "a25",
+   "label": "世尊責螢火為最下卻稱最上"
+  },
+  {
+   "id": "a26",
+   "label": "五欲功德說明"
+  },
+  {
+   "id": "a27",
+   "label": "隨欲所樂名為欲樂"
+  },
+  {
+   "id": "a28",
+   "label": "鞞摩那修讚歎世尊說法"
+  },
+  {
+   "id": "a29",
+   "label": "世尊說異見者不知義理"
+  },
+  {
+   "id": "a30",
+   "label": "鞞摩那修怒罵世尊惡意"
+  },
+  {
+   "id": "a31",
+   "label": "世尊說不知過去未來者為呵責"
+  },
+  {
+   "id": "a32",
+   "label": "世尊說置前際後際得正法"
+  },
+  {
+   "id": "a33",
+   "label": "譬童子縛解不知前縛"
+  },
+  {
+   "id": "a34",
+   "label": "鞞摩那修讚歎願歸依優婆塞"
+  },
+  {
+   "id": "a35",
+   "label": "世尊許可出家學道"
+  },
+  {
+   "id": "a36",
+   "label": "鞞摩那修出家得阿羅漢"
+  },
+  {
+   "id": "a37",
+   "label": "經終結集與分攝"
+  }
+ ],
+ "versions": [
+  {
+   "id": "mn80",
+   "lang": "pi",
+   "label": "巴利 MN80",
+   "who": "Mahāsaṅgīti 本・SuttaCentral",
+   "reorder": true
+  },
+  {
+   "id": "nan-mn80",
+   "lang": "lzh",
+   "label": "漢譯南傳 MN80",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0026-ma209",
+   "lang": "lzh",
+   "label": "中阿含經 （二〇九）中阿含晡利多品鞞摩那修經第八（第五後誦）",
+   "who": "東晉 瞿曇僧伽提婆譯"
+  },
+  {
+   "id": "T0090",
+   "lang": "lzh",
+   "label": "鞞摩肅經",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0026",
+  "T0090"
+ ],
+ "anchors": [
+  {
+   "work": "T0026",
+   "node": "（二〇九）中阿含晡利多品鞞摩那修經第八（第五後誦）",
+   "uid": "T01n0026_p0786b13"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "mn80": "Majjhima Nikāya 80",
+   "nan-mn80": "第八〇　鞞摩那修經",
+   "T0026-ma209": "我聞如是：一時，佛遊舍衛國，在勝林給孤獨園。",
+   "T0090": "聞如是：一時，婆伽婆在舍衛城祇樹給孤獨園。於是，鞞摩肅（姓也）異學，中食後行，彷徉而行至世尊所。"
+  },
+  "a01": {
+   "mn80": "Vekhanasasutta Evaṁ me sutaṁ— ekaṁ samayaṁ bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme. Atha kho vekhanaso paribbājako yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavatā saddhiṁ sammodi. Sammodanīyaṁ kathaṁ sāraṇīyaṁ vītisāretvā ekamantaṁ aṭṭhāsi. Ekamantaṁ ṭhito kho vekhanaso paribbājako bhagavato santike udānaṁ udānesi: “ayaṁ paramo vaṇṇo, ayaṁ paramo vaṇṇo”ti.",
+   "nan-mn80": "如是我聞。——",
+   "T0026-ma209": "爾時，異學鞞摩那修中後仿佯往詣佛所，相問訊已，問曰：「瞿曇！",
+   "T0090": "到已白世尊曰：「唯，瞿曇！"
+  },
+  "a02": {
+   "mn80": "“Kiṁ pana tvaṁ, kaccāna, evaṁ vadesi: ‘ayaṁ paramo vaṇṇo, ayaṁ paramo vaṇṇo’ti? Katamo, kaccāna, so paramo vaṇṇo”ti?",
+   "nan-mn80": "一時，世尊住舍衛城祇陀林給孤獨園。爾時，普行者鞞摩那修（遊行者）詣世尊處，詣已，問候世尊，交談銘感話語而立於一面，立於一面之普行者鞞摩那修，於世尊之近傍唱優陀那（自頌）言：「是為最上之色光，是為最上之色光。」",
+   "T0026-ma209": "最色最色。瞿曇！最色。」世尊問曰：「迦旃！何等色也？」異學鞞摩那修答曰：「瞿曇！",
+   "T0090": "形色極無上妙。」"
+  },
+  "a03": {
+   "mn80": "“Yasmā, bho gotama, vaṇṇā añño vaṇṇo uttaritaro vā paṇītataro vā natthi so paramo vaṇṇo”ti.",
+   "nan-mn80": "「迦旃延！汝又何故作如是言：是為最上之色光，是為最上之色光。其最上之色光者為何耶？」",
+   "T0026-ma209": "若色更無有色最上、最妙、最勝，瞿曇！",
+   "T0090": "「此，迦旃延！云何為色妙？」「此，瞿曇！謂色妙極妙，更無有妙最勝者，最妙最好彼色最妙，彼色最上最好。」"
+  },
+  "a04": {
+   "mn80": "“Katamo pana so, kaccāna, vaṇṇo yasmā vaṇṇā añño vaṇṇo uttaritaro vā paṇītataro vā natthī”ti?",
+   "nan-mn80": "「尊者瞿曇！即是比色光更勝之色光，或為無與倫比之優異色光，是即為最上之色光。」",
+   "T0026-ma209": "彼色最勝，彼色最上。」",
+   "T0090": "「猶若，迦旃延！"
+  },
+  "a05": {
+   "mn80": "“Yasmā, bho gotama, vaṇṇā añño vaṇṇo uttaritaro vā paṇītataro vā natthi so paramo vaṇṇo”ti.",
+   "nan-mn80": "「迦旃延！然而，其較此色光更勝之色光，或為無與倫比之優異色光，其色光又為何耶？」",
+   "T0026-ma209": "世尊告曰：「迦旃！",
+   "T0090": "有人作是說：『人中有妙者我欲婬之。』"
+  },
+  "a06": {
+   "mn80": "“Dīghāpi kho te esā, kaccāna, phareyya: ‘yasmā, bho gotama, vaṇṇā añño vaṇṇo uttaritaro vā paṇītataro vā natthi so paramo vaṇṇo’ti vadesi, tañca vaṇṇaṁ na paññapesi.",
+   "nan-mn80": "「尊者瞿曇！其為較此色光更勝之色光，或為無與倫比之優異色光，即是最上之色光。」",
+   "T0026-ma209": "猶如有人作如是說：『若此國中有女最妙，我欲得彼。』",
+   "T0090": "或有作是言：『汝謂此人中妙者，字是姓是像是？"
+  },
+  "a07": {
+   "mn80": "Tamenaṁ evaṁ vadeyyuṁ: ‘ambho purisa, yaṁ tvaṁ janapadakalyāṇiṁ icchasi kāmesi, jānāsi taṁ janapadakalyāṇiṁ—khattiyī vā brāhmaṇī vā vessī vā suddī vā’ti?",
+   "nan-mn80": "「迦旃延！此為無結論者。汝謂：『尊者瞿曇！其為較此色光更勝之色光，或為無與倫比之優異色光，即為最上之色光。』但未曾說示對其色光。譬如：迦旃延！有人作斯言曰：『我於此國中欲求第一美女愛之。』眾人於是對彼作如是言：『你啊！汝求愛之第一美女為剎帝利女耶？或為婆羅門女耶？或為毘舍女耶？或首陀女耶？汝知之耶？』如是之問，彼答曰：『否！』眾人於是又對彼作如是言：『你啊！汝求愛之第一美女為如是名耶？如是姓耶？……乃至……或長身耶？或短身耶？或中身耶？或其皮膚色為黑耶、或為褐色耶？或為黃色耶？住何處之村、或街、或市耶？汝知否？』如是之問，彼答曰：『否！』眾人於是又對彼作如是言：『你啊！汝對不知亦未見者求愛耶？』如是之問，彼答：『誠然！』迦旃延！汝對彼作如何思耶？如是，其人之所說，豈非不合於正理耶？」",
+   "T0026-ma209": "彼若有人如是問者：『君知國中有女最妙，如是姓、如是名、如是生耶？",
+   "T0090": "若長若短若中？若端正不端正？若白黑？若剎利女、婆羅門女、居士女、工師女？"
+  },
+  "a08": {
+   "mn80": "Iti puṭṭho ‘no’ti vadeyya. Tamenaṁ evaṁ vadeyyuṁ: ‘ambho purisa, yaṁ tvaṁ janapadakalyāṇiṁ icchasi kāmesi, jānāsi taṁ janapadakalyāṇiṁ evaṁnāmā evaṅgottāti vāti …pe… dīghā vā rassā vā majjhimā vā kāḷī vā sāmā vā maṅguracchavī vāti … amukasmiṁ gāme vā nigame vā nagare vā’ti? Iti puṭṭho ‘no’ti vadeyya.",
+   "nan-mn80": "「確實如是。尊者瞿曇！如是，其人之所說是不合於正理。」",
+   "T0026-ma209": "為長短麤細，為白、黑，為不白不黑？",
+   "T0090": "東方南方西方北方？』"
+  },
+  "a09": {
+   "mn80": "Tamenaṁ evaṁ vadeyyuṁ: ‘ambho purisa, yaṁ tvaṁ na jānāsi na passasi, taṁ tvaṁ icchasi kāmesī’ti? Iti puṭṭho ‘āmā’ti vadeyya. Taṁ kiṁ maññasi, kaccāna, nanu evaṁ sante tassa purisassa appāṭihīrakataṁ bhāsitaṁ sampajjatī”ti?",
+   "nan-mn80": "「迦旃延！汝亦如是，汝謂：『尊者瞿曇！較其色光更勝之色光，或無與倫比之優異色光、其即為最上之色光。』但汝未說示其色光。」",
+   "T0026-ma209": "為剎利女，為梵志、居士、工師女？為東方、南方、西方、北方耶？』彼人答曰：『我不知也。』復問彼人：『君不知、不見國中有女最妙，如是姓、如是名、如是生，長短麤細、白、黑、不白不黑，剎利女，梵志、居士、工師女，東方、南方、西方、北方者，而作是說：「我欲得彼女耶？」』如是。迦旃！汝作是說：『彼妙色最妙色，彼色最勝，彼色最上。』問汝彼色，然不知也。」",
+   "T0090": "問已不能報。」「汝不知不見，謂此人中妙至北方，而言欲婬。」「此，迦旃延！汝所言彼色為最妙，彼色為最上，彼色無上，問色已不能知。」"
+  },
+  "a10": {
+   "mn80": "Seyyathāpi, kaccāna, puriso evaṁ vadeyya: ‘ahaṁ yā imasmiṁ janapade janapadakalyāṇī, taṁ icchāmi taṁ kāmemī’ti.",
+   "nan-mn80": "「尊者瞿曇！譬如琉璃寶珠之清淨，玉質殊妙，八楞而善加修治，置於紅色之褐布上時、光輝、閃耀、明照。當我無病死後，即有如是之色光。」",
+   "T0026-ma209": "異學鞞摩那修白曰：「瞿曇！猶如紫磨，極妙金精，金師善磨，瑩治令淨，藉以白練，安著日中，其色極妙，光明照耀。如是，瞿曇！我說彼妙色最妙色，彼色最勝，彼色最上。」世尊告曰：「迦旃！我今問汝，隨所解答。",
+   "T0090": "「猶若，瞿曇！閻浮檀金，巧工師子極磨治淨著白器中，形色極妙，色有所照。是故，瞿曇！我作是說，色為最妙，色為最勝，彼色為最勝，彼色無上，彼色最上。」「是故，迦旃延！我還問汝，隨所思還報之。"
+  },
+  "a11": {
+   "mn80": "“Taṁ kiṁ maññasi, kaccāna, yo vā maṇi veḷuriyo subho jātimā aṭṭhaṁso suparikammakato paṇḍukambale nikkhitto bhāsate ca tapate ca virocati ca, yo vā rattandhakāratimisāya kimi khajjopanako imesaṁ ubhinnaṁ vaṇṇānaṁ katamo vaṇṇo abhikkantataro ca paṇītataro cā”ti? “Yvāyaṁ, bho gotama, rattandhakāratimisāya kimi khajjopanako, ayaṁ imesaṁ ubhinnaṁ vaṇṇānaṁ abhikkantataro ca paṇītataro cā”ti. “Taṁ kiṁ maññasi, kaccāna, yo vā rattandhakāratimisāya kimi khajjopanako, yo vā rattandhakāratimisāya telappadīpo, imesaṁ ubhinnaṁ vaṇṇānaṁ katamo vaṇṇo abhikkantataro ca paṇītataro cā”ti? “Yvāyaṁ, bho gotama, rattandhakāratimisāya telappadīpo, ayaṁ imesaṁ ubhinnaṁ vaṇṇānaṁ abhikkantataro ca paṇītataro cā”ti.",
+   "nan-mn80": "「迦旃延！汝作如何思耶？琉璃寶珠之清淨、玉質殊妙、八楞而善為修治、置於紅色之褐布上時，光輝、閃耀、明照，與闇夜之螢光，此兩者之色光中，何者之色光較秀、較優耶？」",
+   "T0026-ma209": "迦旃！於意云何？謂紫磨金精，藉以白練，安著日中，其色極妙，光明照耀，及螢火蟲在夜闇中光明照耀，於中光明，何者最上、為最勝耶？」異學鞞摩那修答曰：「瞿曇！",
+   "T0090": "於，迦旃延！意云何：此閻浮檀金，巧師子極磨治淨，著白器中形色有照，謂此即照虫於闇冥時，色妙色有所照，誰光最勝最上最妙最好說？」「此，瞿曇！即照虫於閻浮檀金，光明最勝最上最好最妙說。」「於，迦旃延！意云何：即照虫於闇冥時，光明有所照；謂油燈明於闇冥時，光明有所照；誰光明最勝最妙最好最上？」"
+  },
+  "a12": {
+   "mn80": "“Addhā kho, bho gotama, evaṁ sante tassa purisassa appāṭihīrakataṁ bhāsitaṁ sampajjatī”ti. “Evameva kho tvaṁ, kaccāna, ‘yasmā, bho gotama, vaṇṇā añño vaṇṇo uttaritaro vā paṇītataro vā natthi so paramo vaṇṇo’ti vadesi; tañca vaṇṇaṁ na paññapesī”ti. “Seyyathāpi, bho gotama, maṇi veḷuriyo subho jātimā aṭṭhaṁso suparikammakato paṇḍukambale nikkhitto bhāsate ca tapate ca virocati ca, evaṁ vaṇṇo attā hoti arogo paraṁ maraṇā”ti.",
+   "nan-mn80": "「尊者瞿曇！彼闇夜之螢光，才是此兩者色光中之較秀，較優者。」",
+   "T0026-ma209": "螢火光明於紫磨金精光明，最上、為最勝也。」世尊問曰：「迦旃！",
+   "T0090": "「唯，瞿曇！油燈光明於即照虫，光明最勝最上最妙最好。」"
+  },
+  "a13": {
+   "mn80": "“Taṁ kiṁ maññasi, kaccāna, yo vā rattandhakāratimisāya telappadīpo, yo vā rattandhakāratimisāya mahāaggikkhandho, imesaṁ ubhinnaṁ vaṇṇānaṁ katamo vaṇṇo abhikkantataro ca paṇītataro cā”ti?",
+   "nan-mn80": "「迦旃延！汝作如何思之耶？闇夜之螢光與闇夜之油燈光，於此兩者色光中，何者之色光為較秀、較優耶？」",
+   "T0026-ma209": "於意云何？謂螢火蟲在夜闇中光明照耀，及燃油燈在夜闇中光明照耀，於中光明，何者最上、為最勝耶？」異學鞞摩那修答曰：「瞿曇！",
+   "T0090": "「於，迦旃延！意云何：謂油燈光明於夜闇冥有所照，謂此大火積於夜闇冥光明有所照，誰光明最勝最上妙好？」"
+  },
+  "a14": {
+   "mn80": "“Yvāyaṁ, bho gotama, rattandhakāratimisāya mahāaggikkhandho, ayaṁ imesaṁ ubhinnaṁ vaṇṇānaṁ abhikkantataro ca paṇītataro cā”ti. “Taṁ kiṁ maññasi, kaccāna, yo vā rattandhakāratimisāya mahāaggikkhandho, yā vā rattiyā paccūsasamayaṁ viddhe vigatavalāhake deve osadhitārakā, imesaṁ ubhinnaṁ vaṇṇānaṁ katamo vaṇṇo abhikkantataro ca paṇītataro cā”ti? “Yvāyaṁ, bho gotama, rattiyā paccūsasamayaṁ viddhe vigatavalāhake deve osadhitārakā, ayaṁ imesaṁ ubhinnaṁ vaṇṇānaṁ abhikkantataro ca paṇītataro cā”ti.",
+   "nan-mn80": "「尊者瞿曇！彼闇夜之油燈光，於此兩者色光中，是較秀、較優者。」",
+   "T0026-ma209": "燃燈光明於螢火蟲光明，最上、為最勝也。」世尊問曰：「迦旃！",
+   "T0090": "「唯，瞿曇！火積光明於油燈，光明最勝上妙好。」"
+  },
+  "a15": {
+   "mn80": "“Taṁ kiṁ maññasi, kaccāna, yā vā rattiyā paccūsasamayaṁ viddhe vigatavalāhake deve osadhitārakā, yo vā tadahuposathe pannarase viddhe vigatavalāhake deve abhido aḍḍharattasamayaṁ cando, imesaṁ ubhinnaṁ vaṇṇānaṁ katamo vaṇṇo abhikkantataro ca paṇītataro cā”ti?",
+   "nan-mn80": "「迦旃延！汝作如何思耶？闇夜之油燈火與闇夜之大火聚，於此兩者色光中，何者為較秀、較優耶？」",
+   "T0026-ma209": "於意云何？謂燃油燈在夜闇中光明照耀，及燃大木積火在夜闇中光明照耀，於中光明，何者最上、為最勝耶？」異學鞞摩那修答曰：「瞿曇！",
+   "T0090": "「於，迦旃延！意云何：謂火積於闇冥時光明有所照；"
+  },
+  "a16": {
+   "mn80": "“Yvāyaṁ, bho gotama, tadahuposathe pannarase viddhe vigatavalāhake deve abhido aḍḍharattasamayaṁ cando, ayaṁ imesaṁ ubhinnaṁ vaṇṇānaṁ abhikkantataro ca paṇītataro cā”ti. “Taṁ kiṁ maññasi, kaccāna,",
+   "nan-mn80": "「尊者瞿曇！彼闇夜之大火聚……是較優者。」",
+   "T0026-ma209": "燃大木積火之光明於燃油燈光明，最上、為最勝也。」世尊問曰：「迦旃！",
+   "T0090": "謂星過夜半天晴無雲曀，光明有所照；"
+  },
+  "a17": {
+   "mn80": "yo vā tadahuposathe pannarase viddhe vigatavalāhake deve abhido aḍḍharattasamayaṁ cando, yo vā vassānaṁ pacchime māse saradasamaye viddhe vigatavalāhake deve abhido majjhanhikasamayaṁ sūriyo, imesaṁ ubhinnaṁ vaṇṇānaṁ katamo vaṇṇo abhikkantataro ca paṇītataro cā”ti? “Yvāyaṁ, bho gotama, vassānaṁ pacchime māse saradasamaye viddhe vigatavalāhake deve abhido majjhanhikasamayaṁ sūriyo—ayaṁ imesaṁ ubhinnaṁ vaṇṇānaṁ abhikkantataro ca paṇītataro cā”ti.",
+   "nan-mn80": "「迦旃延！汝作如何思耶？闇夜之大火聚與拂曉皎明無雲天空之太白星，於此兩者色光中，何者之色光較秀、較優耶？」",
+   "T0026-ma209": "於意云何？謂燃大木積火在夜闇中光明照耀，及太白星平旦無曀光明照耀，於中光明，何者最上、為最勝耶？」異學鞞摩那修答曰：「瞿曇！",
+   "T0090": "誰光明最勝上妙好？」"
+  },
+  "a18": {
+   "mn80": "“Ato kho te, kaccāna, bahū hi bahutarā devā ye imesaṁ candimasūriyānaṁ ābhā nānubhonti, tyāhaṁ pajānāmi. Atha ca panāhaṁ na vadāmi:",
+   "nan-mn80": "「尊者瞿曇！彼拂曉皎明無雲天空之太白星……是較優者。」",
+   "T0026-ma209": "太白星光於燃大木積火光，最上、為最勝也。」世尊問曰：「迦旃！",
+   "T0090": "「唯，瞿曇！星光明於火積，光明最勝上妙好。」"
+  },
+  "a19": {
+   "mn80": "‘yasmā vaṇṇā añño vaṇṇo uttaritaro ca paṇītataro ca natthī’ti. Atha ca pana tvaṁ, kaccāna, ‘yvāyaṁ vaṇṇo kiminā khajjopanakena nihīnataro ca patikiṭṭhataro ca so paramo vaṇṇo’ti vadesi; tañca vaṇṇaṁ na paññapesi.",
+   "nan-mn80": "「迦旃延！汝作如何思耶？拂曉之皎明無雲天空之太白星，與十五日布薩日皎明無雲天空之中夜圓月，於此兩者之色光中，何者之色光是較秀、較優耶？」",
+   "T0026-ma209": "於意云何？謂太白星平旦無曀光明照耀，及月殿光夜半無曀光明照耀，於中光明，何者最上、為最勝耶？」異學鞞摩那修答曰：「瞿曇！",
+   "T0090": "「於，迦旃延！意云何：謂星過夜半已，天晴無雲蔽，光明有所照；謂月夜欲半，天無雲蔽，光明有所照；誰光明最勝上妙好？」"
+  },
+  "a20": {
+   "mn80": "Pañca kho ime, kaccāna, kāmaguṇā. Katame pañca?",
+   "nan-mn80": "「尊者瞿曇！彼十五日布薩日，皎潔無雲天空之中夜明月……是較優。」",
+   "T0026-ma209": "月殿光明於太白星光，最上、為最勝也。」世尊問曰：「迦旃！",
+   "T0090": "「唯，瞿曇！月光明於星，光明最勝上妙好。」"
+  },
+  "a21": {
+   "mn80": "Cakkhuviññeyyā rūpā iṭṭhā kantā manāpā piyarūpā kāmūpasaṁhitā rajanīyā, sotaviññeyyā saddā …pe…",
+   "nan-mn80": "「迦旃延！汝作如何思耶？十五日布薩日、皎明無雲天空之中夜圓月與雨期最後月、秋時、皎明無雲天空之日中太陽……乃至……是何者較優耶？」",
+   "T0026-ma209": "於意云何？謂月殿光夜半無曀光明照曜，及日殿光秋時向中，天淨無曀光明照耀，於中光明，何者最上、為最勝耶？」異學鞞摩那修答曰：「瞿曇！",
+   "T0090": "「於，迦旃延！意云何：謂月夜欲半，天晴無雲蔽，光明有所照；謂日於夏時，日中光明有所照；誰光明最勝上妙好？」"
+  },
+  "a22": {
+   "mn80": "ghānaviññeyyā gandhā … jivhāviññeyyā rasā …",
+   "nan-mn80": "「尊者瞿曇！雨期最後月、秋時、皎明無雲天空之日中太陽……是較優。」",
+   "T0026-ma209": "日殿光明於月殿光，最上、為最勝也。」世尊告曰：「迦旃！",
+   "T0090": "「唯，瞿曇！日光明於月，光明最勝上妙好。」"
+  },
+  "a23": {
+   "mn80": "kāyaviññeyyā phoṭṭhabbā iṭṭhā kantā manāpā piyarūpā kāmūpasaṁhitā rajanīyā—",
+   "nan-mn80": "「迦旃延！又，此等日月之光亦不及眾多之諸天，此為我知之者，但我不言：『其色光為最勝之色光，或為無與倫比最優之色光。』然而，迦旃延！汝稱：『彼螢光為最劣、最弱者，其為最上之色光。』但汝未說示其色光。」",
+   "T0026-ma209": "多有諸天，今此日月雖有大如意足，有大威德，有大福祐，有大威神，然其光明故不及諸天光明也。",
+   "T0090": "「此，迦旃延！彼多有天諸謂如是威神，極有所能，光明所不及，我本在中坐，本在中有所說，我不作是說，光明最勝光明最上光明最妙。"
+  },
+  "a24": {
+   "mn80": "ime kho, kaccāna, pañca kāmaguṇā.",
+   "nan-mn80": "迦旃延！有此等五種之欲。云何為五？眼所識之色、可愛、可樂、可喜、可意、引欲、唆情者等是。耳所識之聲……乃至……鼻所識之香……乃至……舌所識之味……乃至……身所識之觸、可愛、可樂、可喜、可意、引欲、唆情者等是。迦旃延！此等為五種之欲。",
+   "T0026-ma209": "我昔曾與諸天共集，共彼論事，我之所說，可彼天意，然我不作是說，彼妙色最妙色，彼色最勝，彼色最上。",
+   "T0090": "汝，迦旃延！謂即照虫光明最下最不如，而說言是最上最勝最妙耶？"
+  },
+  "a25": {
+   "mn80": "Yaṁ kho, kaccāna, ime pañca kāmaguṇe paṭicca uppajjati sukhaṁ somanassaṁ idaṁ vuccati kāmasukhaṁ. Iti kāmehi kāmasukhaṁ, kāmasukhā kāmaggasukhaṁ tattha aggamakkhāyatī”ti.",
+   "nan-mn80": "「迦旃延！實則緣此等五種之欲而生，由欲樂生最上欲樂，此謂之此等中之最上。」",
+   "T0026-ma209": "迦旃！而汝於螢火蟲光色最弊最醜，說彼妙色最妙色，彼色最勝，彼色最上，問已不知。」於是，異學鞞摩那修為世尊面訶責已，內懷憂慼，低頭默然，失辯無言，如有所伺。於是，世尊面訶責已，復令歡悅，告曰：「迦旃！",
+   "T0090": "問光明已而不能知。」於是鞞摩肅異學，被世尊面責，默然住無有言，身面污，迴面無言默然住。於是世尊面責鞞摩肅已，還欲令言，告鞞摩肅異學曰：「復次，迦旃延！"
+  },
+  "a26": {
+   "mn80": "Evaṁ vutte, vekhanaso paribbājako bhagavantaṁ etadavoca: “acchariyaṁ, bho gotama, abbhutaṁ, bho gotama. Yāva subhāsitañcidaṁ bhotā gotamena: ‘kāmehi kāmasukhaṁ, kāmasukhā kāmaggasukhaṁ tattha aggamakkhāyatī’ti. ‘Kāmehi, bho gotama, kāmasukhaṁ, kāmasukhā kāmaggasukhaṁ, tattha aggamakkhāyatī’”ti “dujjānaṁ kho etaṁ, kaccāna, tayā aññadiṭṭhikena aññakhantikena aññarucikena aññatrayogena aññatrācariyakena— kāmā vā kāmasukhaṁ vā kāmaggasukhaṁ vā. Ye kho te, kaccāna, bhikkhū arahanto khīṇāsavā vusitavanto katakaraṇīyā ohitabhārā anuppattasadatthā parikkhīṇabhavasaṁyojanā sammadaññāvimuttā te kho etaṁ jāneyyuṁ—",
+   "nan-mn80": "如是說時，普行者鞞摩那修白世尊言：「稀有哉！尊者瞿曇！是未曾有哉！尊者瞿曇！依尊者瞿曇所說：『由諸欲生欲樂、由欲樂生最上欲樂。』是謂此等中之最上。」",
+   "T0026-ma209": "有五欲功德，可喜、意、令樂欲相應樂，眼知色，耳知聲，鼻知香，舌知味，身知觸。迦旃！色或有愛者，或不愛者。若有一人，彼於此色可意、稱意、樂意、足意、滿願意，彼於餘色雖最上、最勝，而不欲、不思、不願、不求，彼於此色最勝、最上。迦旃！如是聲、香、味、觸。迦旃！觸或有愛者，或不愛者。若有一人，彼於此觸可意、稱意、樂意、足意、滿願意。彼於餘觸雖最上、最勝，而不欲、不思、不願、不求。彼於此觸最勝、最上。」",
+   "T0090": "有五姓欲愛念愛色近婬染著，眼知色、耳知聲、鼻知香、舌知味、身知細滑。此，迦旃延！或有愛色，或有不愛色，謂或有一於色歡喜具滿，喜意所念亦滿，於彼色於餘色，不欲不思，不欲得不願求，是彼色最為妙最為上。此，迦旃延！或有一愛聲香味細滑，或有一不愛滑，或有一細滑者歡喜具滿，喜意所念亦滿，於彼細滑更餘細滑，不欲不思，不欲得不願求，是彼細滑最上最妙。」"
+  },
+  "a27": {
+   "mn80": "kāmā vā kāmasukhaṁ vā kāmaggasukhaṁ vā”ti. Evaṁ vutte, vekhanaso paribbājako kupito anattamano bhagavantaṁyeva khuṁsento bhagavantaṁyeva vambhento bhagavantaṁyeva vadamāno:",
+   "nan-mn80": "「迦旃延！此為依彼異見者、異信者、異樂者、異瑜伽者、異修行者、難知為欲、欲樂、或最上欲樂。迦旃延！比丘之阿羅漢、漏盡、安住於所住，應作已作，棄重擔、逮達己利、斷盡有結、依正智得解脫者可知此也。即知為欲、欲樂、或最上之欲樂。」",
+   "T0026-ma209": "於是，異學鞞摩那修叉手向佛，白曰：「瞿曇！",
+   "T0090": "於是鞞摩肅異學叉手向世尊，白世尊曰：「甚奇，瞿曇！"
+  },
+  "a28": {
+   "mn80": "“samaṇo gotamo pāpito bhavissatī”ti bhagavantaṁ etadavoca:",
+   "nan-mn80": "如是說時，普行者鞞摩那修忿怒不悅，罵詈世尊，毀謗世尊，謂世尊：「沙門瞿曇為是惡意。」對世尊言曰：「如是，此處或有沙門婆羅門不知過去，不見未來，但自認：『此生已盡、梵行已成、應作已作，再不到此如今狀態。』彼等之如此所說為可笑，為虛名，是無實而虛妄。」",
+   "T0026-ma209": "甚奇！甚特！沙門瞿曇為我無量方便說欲樂、欲樂第一。瞿曇！猶如因草火燃木火，因木火燃草火，如是沙門瞿曇為我無量方便說欲樂、欲樂第一。」世尊告曰：「止！止！",
+   "T0090": "而沙門瞿曇無量方便，為我說婬樂求婬樂。猶若，瞿曇！草木因火然，火因草木然。如是我，沙門瞿曇！以無量方便說於婬，說婬樂求婬樂止。」"
+  },
+  "a29": {
+   "mn80": "“evameva panidhekacce samaṇabrāhmaṇā ajānantā pubbantaṁ, apassantā aparantaṁ atha ca pana ‘khīṇā jāti, vusitaṁ brahmacariyaṁ, kataṁ karaṇīyaṁ, nāparaṁ itthattāyāti—pajānāmā’ti—paṭijānanti. Tesamidaṁ bhāsitaṁ hassakaṁyeva sampajjati, nāmakaṁyeva sampajjati, rittakaṁyeva sampajjati, tucchakaṁyeva sampajjatī”ti. “Ye kho te, kaccāna, samaṇabrāhmaṇā ajānantā pubbantaṁ, apassantā aparantaṁ, ‘khīṇā jāti, vusitaṁ brahmacariyaṁ, kataṁ karaṇīyaṁ, nāparaṁ itthattāyāti—pajānāmā’ti—paṭijānanti; tesaṁ soyeva sahadhammiko niggaho hoti. Api ca, kaccāna, tiṭṭhatu pubbanto, tiṭṭhatu aparanto. Etu viññū puriso asaṭho amāyāvī ujujātiko, ahamanusāsāmi ahaṁ dhammaṁ desemi.",
+   "nan-mn80": "「迦旃延！沙門婆羅門而不知過去，不見未來，於自認：『生已盡、梵行已成、應作已作，再不到如今之狀態』者，是為正當之呵責。然而迦旃延！過去且擱置，未來且置擱，我之弟子有智、不詐誑、詐瞞，質直之人，且來，我當予教化，我以法說示，如我所教而行者，不久可自知自見。如此是由正縛，亦即無明之縛而解脫者。迦旃延！譬如幼稚、無智、仰臥之嬰兒，於其頭部等五處以布巾包縛，彼童子成長諸根成熟後，則其束縛脫落，彼即了知：『我已解脫，而已無縛。』迦旃延！如此是有智，無詐誑、詐瞞、質直之人，且來，我當予教化，說示以我法，如我所教而行者，不久可自知自見。正如此由是正縛，亦即由無明之縛而解脫者。」",
+   "T0026-ma209": "迦旃！汝長夜異見、異忍、異樂、異欲、異意故，不得盡知我所說義。迦旃！謂我弟子初夜後夜常不眠臥，正定正意，修習道品，生已盡，梵行已立，所作已辦，不更受有，知如真，彼盡知我所說。」",
+   "T0090": "「迦旃延！汝為不善於此長夜作異見、作異忍、作異欲、作異求，我此所說等與等知其義。此，迦旃延！我弟子諸比丘，晨起及暮常不眠臥，常行講論必成等道，具足分別，生得盡、梵行已成、所作已辦、名色已有，知如真。我此所說，等與等知其義。」"
+  },
+  "a30": {
+   "mn80": "Yathānusiṭṭhaṁ tathā paṭipajjamāno nacirasseva sāmaññeva ñassati sāmaṁ dakkhiti—",
+   "nan-mn80": "如是說時，普行者鞞摩那修白世尊言：「偉哉！尊者瞿曇！偉哉！尊者瞿曇！……乃至……尊者瞿曇！自今日以後，願我終生歸依而為優婆塞。得予受持。」",
+   "T0026-ma209": "於是，異學鞞摩那修向佛瞋恚，生憎嫉、不可，欲誣謗世尊，欲墮世尊，如是誣謗世尊，如是墮世尊，語曰：「瞿曇！有沙門、梵志，不知世前際，不知世後際，不知無窮生死，而記說得究竟智，生已盡，梵行已立，所作已辦，不更受有，知如真。瞿曇！我如是念：『云何此沙門、梵志，不知世前際，亦不知世後際，不知無窮生死，而記說得究竟智，生已盡，梵行已立，所作已辦，不更受有，知如真耶？』」於是，世尊便作是念：「此異學鞞摩那修向我瞋恚，生憎嫉、不可，欲誣謗我，欲墮於我，如是誣謗我，如是墮我，而語我曰：『瞿曇！",
+   "T0090": "於是鞞摩肅異學，於世尊極瞋恚，極懷恨不歡喜，說世尊、誹世尊、罵世尊：「如此，沙門瞿曇！為非。」罵說已，白世尊曰：「此，瞿曇！或有一沙門婆羅門，不知過去世，不知當來世，無量生世間，而記說聖，生已盡、梵行已成、所作已辦、名色已有，知如真。是故，瞿曇！我作是念：『云何或一沙門婆羅門，不知過去世，不知當來世，無量生世間，而記說聖，生已盡、梵行已成、所作已辦、名色已有，知如真？』"
+  },
+  "a31": {
+   "mn80": "evaṁ kira sammā bandhanā vippamokkho hoti, yadidaṁ avijjā bandhanā. Seyyathāpi, kaccāna, daharo kumāro mando uttānaseyyako kaṇṭhapañcamehi bandhanehi baddho assa suttabandhanehi; tassa vuddhimanvāya indriyānaṁ paripākamanvāya tāni bandhanāni mucceyyuṁ; so mokkhomhīti kho jāneyya no ca bandhanaṁ. Evameva kho, kaccāna, etu viññū puriso asaṭho amāyāvī ujujātiko, ahamanusāsāmi, ahaṁ dhammaṁ desemi; yathānusiṭṭhaṁ tathā paṭipajjamāno nacirasseva sāmaññeva ñassati, sāmaṁ dakkhiti:",
+   "T0026-ma209": "有一沙門梵志，不知世前際，不知世後際，不知無窮生死，而記說得究竟智，生已盡，梵行已立，所作已辦，不更受有，知如真。』瞿曇！我作是念：『云何此沙門、梵志，不知世前際，不知世後際，不知無窮生死，而記說得究竟智，生已盡，梵行已立，所作已辦，不更受有，知如真耶？』」世尊知已，告曰：「迦旃！",
+   "T0090": "」於是世尊作是念：「念此鞞摩肅異學於我極瞋恚、極懷恨、不歡喜，誹謗我、罵詈我：『此，沙門瞿曇！我罵說之！』而白我曰：『此，瞿曇！或有一沙門婆羅門，不知過去世至知如真？』」世尊知已，告鞞摩肅異學曰：「此，迦旃延！"
+  },
+  "a32": {
+   "mn80": "‘evaṁ kira sammā bandhanā vippamokkho hoti, yadidaṁ avijjā bandhanā’”ti. Evaṁ vutte, vekhanaso paribbājako bhagavantaṁ etadavoca: “abhikkantaṁ, bho gotama …pe… upāsakaṁ maṁ bhavaṁ gotamo dhāretu ajjatagge pāṇupetaṁ saraṇaṁ gatan”ti.",
+   "T0026-ma209": "若有沙門、梵志，不知世前際，不知世後際，不知無窮生死，而記說得究竟智，生已盡，梵行已立，所作已辦，不更受有，知如真者，彼應如是說：『置世前際，置世後際。』迦旃！我如是說：『置世前際，置世後際。』設不憶一生，我弟子比丘來，不䛕諂、無欺誑、質直，我教化之。若隨我教化，如是行者，必得知正法。",
+   "T0090": "或一沙門婆羅門，不知過去世，至知如真，彼時應作是言：『置過去世，置當來世，不應念一生。』復次，迦旃延！我作是說：『置過去世，置當來世，不應念一生。我弟子諸比丘，不諛諂亦不幻，質直行，我教授之、我為說法，如所設則能學，近於法知有善。』"
+  },
+  "a33": {
+   "mn80": "Vekhanasasuttaṁ niṭṭhitaṁ dasamaṁ. Paribbājakavaggo niṭṭhito tatiyo. Tassuddānaṁ Puṇḍarī aggisaha kathināmo, Dīghanakho puna bhāradvājagotto; Sandakaudāyimuṇḍikaputto, Maṇiko tathākaccāno varavaggo.",
+   "T0026-ma209": "迦旃！猶如嬰孩童子，少年柔軟，仰向臥，父母縛彼手足，彼於後轉大，諸根成就，父母解彼手足，彼唯憶解縛時，不憶縛時也。如是，迦旃！我如是說：『置世前際，置世後際。』設令不憶一生，我弟子比丘來，不諛諂、不欺誑、質直，我教化之。若隨我教化，如是行者，必得知正法。迦旃！譬若因油因炷而燃燈也，無人益油，亦不易炷者，前油已盡，後不更益，無所受已，自速滅也。如是，迦旃！我如是說：『置世前際，置世後際。』設令不憶一生，我弟子比丘來，不諛諂、不欺誑、質直，我教化之。若隨我教化，如是行者，必得知正法。迦旃！猶如十木聚，二十、三十、四十、五十、六十木聚，以火燒之，洞然俱熾，遂見火焰，後無有人更益草、木、糠、糞掃者，前薪已盡，後不更益，無所受已，自速滅也。如是，迦旃！我如是說：『置世前際，置世後際。』設令不憶一生，我弟子比丘來，不諛諂、不欺誑、質直，我教化之。若隨我教化，如是行者，必得知正法。」",
+   "T0090": "猶若，迦旃延！年少童男，彼父母或繫手足，於彼時有智生，彼父母解手足，彼但憶解不憶縛。如是，迦旃延！我作是說：『置過去世，至知有善。』猶若，迦旃延！因油燈炷則得然，或有人不更著油、不更易炷，前者皆盡後亦不益，不久速滅。如是，迦旃延！我作是說：『置過去世，至知有善。』猶若，迦旃延！有十積木，二十三十四十五十六十積木，火燒然而然，則知有大火積。或有人更不著薪、不著草、不著牛糞、不著䴸、不著掃，不久皆盡亦不更著，不久速滅。如是，迦旃延！我作是說：『置過去世，至知有善。』」說此時，鞞摩肅異學，遠塵離垢諸法眼生。於是鞞摩肅異學，見法得法，了法清淨法，離邪離疑，更無尊天不復信他，離諸猶豫得立果，於世尊境界得無畏法。"
+  },
+  "a34": {
+   "T0026-ma209": "說此法時，異學鞞摩那修遠塵離垢，諸法法眼生。於是，異學鞞摩那修見法得法，覺白淨法，更無餘尊，不復由他，斷疑度惑，無有猶豫，已住果證，於世尊法得無所畏，稽首佛足，白曰：「世尊！願得從佛出家學道，受具足，得比丘，行梵行。」",
+   "T0090": "從坐起，頭面禮世尊足：「唯，世尊！"
+  },
+  "a35": {
+   "T0026-ma209": "世尊告曰：「善哉！比丘！行梵行也。」異學從佛得出家學道，即受具足，得比丘，行梵行。",
+   "T0090": "我寧可得於世尊學道，受具足為比丘，於世尊所行於梵行。」「此比丘當行梵行！」彼鞞摩肅，則於世尊學道，受具足為比丘。"
+  },
+  "a36": {
+   "T0026-ma209": "尊者鞞摩那修出家學道，受具足已，知法見法，乃至得阿羅訶。",
+   "T0090": "尊者鞞摩肅，學道受具足，知法至成阿羅漢。佛如是說。鞞摩肅聞世尊所說，歡喜而樂。"
+  },
+  "a37": {
+   "T0026-ma209": "佛說如是。尊者鞞摩那修及諸比丘，聞佛所說，歡喜奉行。鞞摩那修經第八竟（二千一百四十七字）"
+  }
+ }
+}

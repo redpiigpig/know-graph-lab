@@ -1,0 +1,191 @@
+{
+ "slug": "pi-mn7",
+ "title": "梵志計水淨經",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "經名與序分"
+  },
+  {
+   "id": "a01",
+   "label": "佛告諸比丘：穢心導至惡趣"
+  },
+  {
+   "id": "a02",
+   "label": "穢淨布的譬喻"
+  },
+  {
+   "id": "a03",
+   "label": "心之穢具與斷除"
+  },
+  {
+   "id": "a04",
+   "label": "具戒法慧比丘不受穢食"
+  },
+  {
+   "id": "a05",
+   "label": "四無量心修習"
+  },
+  {
+   "id": "a06",
+   "label": "解脫智與三明"
+  },
+  {
+   "id": "a07",
+   "label": "比丘內心自洗之結語"
+  },
+  {
+   "id": "a08",
+   "label": "梵志詢問沐浴"
+  },
+  {
+   "id": "a09",
+   "label": "梵志稱讚佛陀"
+  },
+  {
+   "id": "a10",
+   "label": "梵志請求出家"
+  },
+  {
+   "id": "a11",
+   "label": "梵志得證阿羅漢果"
+  },
+  {
+   "id": "a12",
+   "label": "經結歡喜奉行"
+  }
+ ],
+ "versions": [
+  {
+   "id": "mn7",
+   "lang": "pi",
+   "label": "巴利 MN7",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-mn7",
+   "lang": "lzh",
+   "label": "漢譯南傳 MN7",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0125-ea13.5",
+   "lang": "lzh",
+   "label": "增壹阿含經 （五）",
+   "who": "東晉 瞿曇僧伽提婆譯",
+   "reorder": true
+  },
+  {
+   "id": "T0026-ma93",
+   "lang": "lzh",
+   "label": "中阿含經 （九三）中阿含穢品水淨梵志經第七（第二小土城誦）",
+   "who": "東晉 瞿曇僧伽提婆譯"
+  },
+  {
+   "id": "T0051",
+   "lang": "lzh",
+   "label": "梵志計水淨經",
+   "who": "失譯"
+  }
+ ],
+ "works": [
+  "T0026",
+  "T0051",
+  "T0125"
+ ],
+ "anchors": [
+  {
+   "work": "T0125",
+   "node": "（五）",
+   "uid": "T02n0125_p0573c01"
+  },
+  {
+   "work": "T0026",
+   "node": "（九三）中阿含穢品水淨梵志經第七（第二小土城誦）",
+   "uid": "T01n0026_p0575a20"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "mn7": "Majjhima Nikāya 7 Vatthasutta Evaṁ me sutaṁ— ekaṁ samayaṁ bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme.",
+   "nan-mn7": "第七　布喻經如是我聞。——",
+   "T0125-ea13.5": "聞如是：一時，佛在舍衛國祇樹給孤獨園。爾時，世尊與數千萬眾，前後圍遶而為說法。爾時，江側婆羅門身負重擔，便至世尊所。到已捨擔，一面在世尊所，默然而住。爾時，彼婆羅門作是思惟：「今日沙門瞿曇與數千萬眾，前後圍遶而為說法。我今清淨，與沙門瞿曇等無有異。所以然者，沙門瞿曇食好粳糧，種種餚饌，今我食菓蓏以自濟命。」",
+   "T0026-ma93": "我聞如是：一時，佛遊欝鞞羅尼連然河岸，在阿耶惒羅尼拘類樹下，初得道時。於是，有一水淨梵志，中後仿佯往詣佛所。",
+   "T0051": "聞如是：一時，婆伽婆在欝鞞羅（摩竭附邊）水岸上，獨在樹下初成等覺。彼時，有計水淨婆羅門，過中食後彷徉行至世尊所，世尊遙見計水淨婆羅門從遠而來。"
+  },
+  "a01": {
+   "mn7": "Tatra kho bhagavā bhikkhū āmantesi: “bhikkhavo”ti. “Bhadante”ti te bhikkhū bhagavato paccassosuṁ. Bhagavā etadavoca:",
+   "nan-mn7": "一時，世尊在舍衛城祇陀林給孤獨園。爾時，世尊呼諸比丘曰：「諸比丘！」彼等比丘應世尊曰：「世尊！」世尊乃曰：",
+   "T0125-ea13.5": "爾時，世尊以知婆羅門心中所念，告諸比丘：「其有眾生以二十一結染著心者，當觀彼人必墮惡趣，不生善處。",
+   "T0026-ma93": "世尊遙見水淨梵志來，因水淨梵志故，告諸比丘：「若有二十一穢污於心者，必至惡處，生地獄中。云何二十一穢？邪見心穢、非法欲心穢、惡貪心穢、邪法心穢、貪心穢、恚心穢、睡眠心穢、調悔心穢、疑惑心穢、瞋纏心穢、不語結心穢、慳心穢、嫉心穢、欺誑心穢、諛諂心穢、無慙心穢、無愧心穢、慢心穢、大慢心穢、慢慠心穢、放逸心穢。若有此二十一穢污於心者，必至惡處，生地獄中。",
+   "T0051": "世尊見計水淨婆羅門已，為彼故便告諸比丘：「若有二十一結著意者，當墮惡趣生泥犁中。云何為二十一？邪見意著結，非法欲欺世間邪法，貪瞋恚、懈怠、睡眠、調戲、無恥、疑、瞋恨恚、慳嫉不捨、諛諂、多無羞無恥無、妬嫉增上妬嫉、放逸意結。"
+  },
+  "a02": {
+   "mn7": "“Seyyathāpi, bhikkhave, vatthaṁ saṅkiliṭṭhaṁ malaggahitaṁ; tamenaṁ rajako yasmiṁ yasmiṁ raṅgajāte upasaṁhareyya—yadi nīlakāya yadi pītakāya yadi lohitakāya yadi mañjiṭṭhakāya durattavaṇṇamevassa aparisuddhavaṇṇamevassa. Taṁ kissa hetu? Aparisuddhattā, bhikkhave, vatthassa. Evameva kho, bhikkhave, citte saṅkiliṭṭhe, duggati pāṭikaṅkhā. Seyyathāpi, bhikkhave, vatthaṁ parisuddhaṁ pariyodātaṁ; tamenaṁ rajako yasmiṁ yasmiṁ raṅgajāte upasaṁhareyya—yadi nīlakāya yadi pītakāya yadi lohitakāya yadi mañjiṭṭhakāya—surattavaṇṇamevassa parisuddhavaṇṇamevassa. Taṁ kissa hetu? Parisuddhattā, bhikkhave, vatthassa. Evameva kho, bhikkhave, citte asaṅkiliṭṭhe, sugati pāṭikaṅkhā.",
+   "nan-mn7": "「諸比丘！於此，有穢垢之布，染工欲將其染為或藍、或黃、或紅、或暗紅色，彼以此浸於染色中，其色將為壞色而不得鮮明。何以故？以此布不淨故。如是，若比丘心穢時，可豫想彼必至惡趣。又，若有清淨、皎潔之布，染工欲將其染為或藍、或黃、或紅、或深紅色，彼以此浸於染色中，其色將為好色而鮮明。何以故？以此布清淨故。如是，若比丘心清淨，可豫想彼必至善趣。",
+   "T0125-ea13.5": "猶如白㲲新衣，久久朽故，多諸塵垢，意欲染成其色，青、黃、赤、黑終不得成。何以故？以有塵垢故。如是，比丘！若有人以此二十一結染著心者，當觀其人必墮惡趣，不生善處。「設復有人無此二十一結染著心者，當知斯人必生天上，不墮地獄中。猶如新淨白㲲，隨意欲作何色，青、黃、赤、黑，必成其色，終不敗壞。所以然者，以其淨故。此亦如是，其有無此二十一結染著心者，當觀其人必生天上，不墮惡趣。「若彼賢聖弟子起瞋恚心結，觀已，便能息之。起恚害心結、起睡眠心結、起調戲心結、起疑心結、起怒心結、起忌心結、起惱心結、起疾心結、起憎心結、起無慚心結、起無愧心結、起幻心結、起姦心結、起偽心結、起諍心結、起憍心結、起慢心結、起妬心結、起增上慢心結、起貪心結。",
+   "T0026-ma93": "猶垢膩衣持與染家，彼染家得，或以淳灰、或以澡豆、或以土漬極浣，令淨此垢膩衣。染家雖治，或以淳灰、或以澡豆、或以土漬極浣令淨，然此污衣故有穢色。如是，若有二十一穢污於心者，必至惡處，生地獄中。云何二十一穢？邪見心穢、非法欲心穢、惡貪心穢、邪法心穢、貪心穢、恚心穢、睡眠心穢、調悔心穢、疑惑心穢、瞋纏心穢、不語結心穢、慳心穢、嫉心穢、欺誑心穢、諛諂心穢、無慙心穢、無愧心穢、慢心穢、大慢心穢、慢慠心穢、放逸心穢。若有此二十一穢污於心者，必至惡處，生地獄中。「若有二十一穢不污心者，必至善處，生於天上。云何二十一穢？邪見心穢、非法欲心穢、惡貪心穢、邪法心穢、貪心穢、恚心穢、睡眠心穢、調悔心穢、疑惑心穢、瞋纏心穢、不語心心穢、慳心穢、嫉心穢、欺誑心穢、諛諂心穢、無慙心穢、無愧心穢、慢心穢、大慢心穢、憍慠心穢、放逸心穢。若有此二十一穢不污心者，必至善處，生於天上。猶如白淨波羅奈衣持與染家，彼染家得，或以淳灰、或以澡豆、或以土漬極浣令淨；此白淨波羅奈衣，染家雖治，或以淳灰、或以澡豆、或以土漬極浣令淨，然此白淨波羅奈衣本已淨而復淨。如是若有二十一穢不污心者，必至善處，生於天上。云何二十一穢？邪見心穢、非法欲心穢、惡貪心穢、邪法心穢、貪心穢、恚心穢、睡眠心穢、調悔心穢、疑惑心穢、瞋纏心穢、不語結心穢、慳心穢、嫉心穢、欺誑心穢、諛諂心穢、無慙心穢、無愧心穢、慢心穢、大慢心穢、憍慠心穢、放逸心穢。若有此二十一穢不污心者，必至善處，生於天上。",
+   "T0051": "若有此二十一結著意者，墮惡趣生泥犁中，猶若穢垢小兒衣，彼主與染師、若染弟子，持衣鹵土、若牛糞、若土以漬之，浣濯洗令極淨。雖彼染師及染弟子持彼垢穢小兒衣，以鹵土、以灰、以牛糞、以土清淨濯洗令極淨，彼小兒衣故有黑膩。如是，若有二十一結著意者，便墮惡趣生泥犁中。云何二十一？邪見意著結至放逸意著結者。若有此二十一結著意者，墮惡趣生泥犁中；若有無二十一結著意者，便生善處天上。云何二十一？邪見意著結至放逸意著結；若無此二十一結著意者，便生善處天上。猶若波羅㮈以成衣，彼主授與染師、若染弟子，彼染師染弟子，持鹵土、灰、牛糞以漬之，浣濯洗極令淨。雖彼波羅㮈以成衣，彼染師染弟子，以鹵以灰、牛糞上以漬之，浣濯洗極令淨，波羅㮈以成衣，極清淨白。如是，若有無二十一結著意者，便生善處天上。云何為二十一？邪見意結至放逸意著者，便生善處天上。"
+  },
+  "a03": {
+   "mn7": "Katame ca, bhikkhave, cittassa upakkilesā? Abhijjhāvisamalobho cittassa upakkileso, byāpādo cittassa upakkileso, kodho cittassa upakkileso, upanāho cittassa upakkileso, makkho cittassa upakkileso, paḷāso cittassa upakkileso, issā cittassa upakkileso, macchariyaṁ cittassa upakkileso, māyā cittassa upakkileso, sāṭheyyaṁ cittassa upakkileso, thambho cittassa upakkileso, sārambho cittassa upakkileso, māno cittassa upakkileso, atimāno cittassa upakkileso, mado cittassa upakkileso, pamādo cittassa upakkileso. Sa kho so, bhikkhave, bhikkhu ‘abhijjhāvisamalobho cittassa upakkileso’ti—iti viditvā abhijjhāvisamalobhaṁ cittassa upakkilesaṁ pajahati; ‘byāpādo cittassa upakkileso’ti— iti viditvā byāpādaṁ cittassa upakkilesaṁ pajahati; ‘kodho cittassa upakkileso’ti— iti viditvā kodhaṁ cittassa upakkilesaṁ pajahati; ‘upanāho cittassa upakkileso’ti— iti viditvā upanāhaṁ cittassa upakkilesaṁ pajahati; ‘makkho cittassa upakkileso’ti— iti viditvā makkhaṁ cittassa upakkilesaṁ pajahati; ‘paḷāso cittassa upakkileso’ti— iti viditvā paḷāsaṁ cittassa upakkilesaṁ pajahati; ‘issā cittassa upakkileso’ti— iti viditvā issaṁ cittassa upakkilesaṁ pajahati; ‘macchariyaṁ cittassa upakkileso’ti— iti viditvā macchariyaṁ cittassa upakkilesaṁ pajahati; ‘māyā cittassa upakkileso’ti— iti viditvā māyaṁ cittassa upakkilesaṁ pajahati; ‘sāṭheyyaṁ cittassa upakkileso’ti— iti viditvā sāṭheyyaṁ cittassa upakkilesaṁ pajahati; ‘thambho cittassa upakkileso’ti— iti viditvā thambhaṁ cittassa upakkilesaṁ pajahati; ‘sārambho cittassa upakkileso’ti— iti viditvā sārambhaṁ cittassa upakkilesaṁ pajahati; ‘māno cittassa upakkileso’ti— iti viditvā mānaṁ cittassa upakkilesaṁ pajahati; ‘atimāno cittassa upakkileso’ti— iti viditvā atimānaṁ cittassa upakkilesaṁ pajahati; ‘mado cittassa upakkileso’ti— iti viditvā madaṁ cittassa upakkilesaṁ pajahati; ‘pamādo cittassa upakkileso’ti— iti viditvā pamādaṁ cittassa upakkilesaṁ pajahati. Yato kho, bhikkhave, bhikkhuno ‘abhijjhāvisamalobho cittassa upakkileso’ti—iti viditvā abhijjhāvisamalobho cittassa upakkileso pahīno hoti, ‘byāpādo cittassa upakkileso’ti— iti viditvā byāpādo cittassa upakkileso pahīno hoti; ‘kodho cittassa upakkileso’ti— iti viditvā kodho cittassa upakkileso pahīno hoti; ‘upanāho cittassa upakkileso’ti— iti viditvā upanāho cittassa upakkileso pahīno hoti; ‘makkho cittassa upakkileso’ti— iti viditvā makkho cittassa upakkileso pahīno hoti; ‘paḷāso cittassa upakkileso’ti— iti viditvā paḷāso cittassa upakkileso pahīno hoti; ‘issā cittassa upakkileso’ti— iti viditvā issā cittassa upakkileso pahīno hoti; ‘macchariyaṁ cittassa upakkileso’ti— iti viditvā macchariyaṁ cittassa upakkileso pahīno hoti; ‘māyā cittassa upakkileso’ti— iti viditvā māyā cittassa upakkileso pahīno hoti; ‘sāṭheyyaṁ cittassa upakkileso’ti— iti viditvā sāṭheyyaṁ cittassa upakkileso pahīno hoti; ‘thambho cittassa upakkileso’ti— iti viditvā thambho cittassa upakkileso pahīno hoti; ‘sārambho cittassa upakkileso’ti— iti viditvā sārambho cittassa upakkileso pahīno hoti; ‘māno cittassa upakkileso’ti— iti viditvā māno cittassa upakkileso pahīno hoti; ‘atimāno cittassa upakkileso’ti— iti viditvā atimāno cittassa upakkileso pahīno hoti; ‘mado cittassa upakkileso’ti— iti viditvā mado cittassa upakkileso pahīno hoti; ‘pamādo cittassa upakkileso’ti— iti viditvā pamādo cittassa upakkileso pahīno hoti. So buddhe aveccappasādena samannāgato hoti: ‘itipi so bhagavā arahaṁ sammāsambuddho vijjācaraṇasampanno sugato lokavidū anuttaro purisadammasārathi satthā devamanussānaṁ buddho bhagavā’ti; dhamme aveccappasādena samannāgato hoti: ‘svākkhāto bhagavatā dhammo sandiṭṭhiko akāliko ehipassiko opaneyyiko paccattaṁ veditabbo viññūhī’ti; saṅghe aveccappasādena samannāgato hoti: ‘suppaṭipanno bhagavato sāvakasaṅgho, ujuppaṭipanno bhagavato sāvakasaṅgho, ñāyappaṭipanno bhagavato sāvakasaṅgho, sāmīcippaṭipanno bhagavato sāvakasaṅgho, yadidaṁ cattāri purisayugāni, aṭṭha purisapuggalā. Esa bhagavato sāvakasaṅgho āhuneyyo pāhuneyyo dakkhiṇeyyo añjalikaraṇīyo, anuttaraṁ puññakkhettaṁ lokassā’ti. Yathodhi kho panassa cattaṁ hoti vantaṁ muttaṁ pahīnaṁ paṭinissaṭṭhaṁ, so ‘buddhe aveccappasādena samannāgatomhī’ti labhati atthavedaṁ, labhati dhammavedaṁ, labhati dhammūpasaṁhitaṁ pāmojjaṁ. Pamuditassa pīti jāyati, pītimanassa kāyo passambhati, passaddhakāyo sukhaṁ vedeti, sukhino cittaṁ samādhiyati; ‘dhamme …pe… saṅghe aveccappasādena samannāgatomhī’ti labhati atthavedaṁ, labhati dhammavedaṁ, labhati dhammūpasaṁhitaṁ pāmojjaṁ; pamuditassa pīti jāyati, pītimanassa kāyo passambhati, passaddhakāyo sukhaṁ vedeti, sukhino cittaṁ samādhiyati. ‘Yathodhi kho pana me cattaṁ vantaṁ muttaṁ pahīnaṁ paṭinissaṭṭhan’ti labhati atthavedaṁ, labhati dhammavedaṁ, labhati dhammūpasaṁhitaṁ pāmojjaṁ; pamuditassa pīti jāyati, pītimanassa kāyo passambhati, passaddhakāyo sukhaṁ vedeti, sukhino cittaṁ samādhiyati.",
+   "nan-mn7": "諸比丘！何為心穢者？貪欲是心之穢，瞋是心之穢，忿是心之穢，恨是心之穢，覆是心之穢，惱害是心之穢，嫉是心之穢，慳是心之穢，詐瞞是心之穢，誑是心之穢，頑迷是心之穢，性急是心之穢，慢是心之穢，過慢是心之穢，憍是心之穢，放逸是心之穢，若比丘知：『貪欲邪貪是心之穢』而捨離此貪欲邪貪心之穢。知：『瞋是心之穢』而捨離瞋此心之穢。知：『忿、恨、覆、惱害、嫉、慳、詐瞞、誑、頑迷、性急、慢、過慢、憍、放逸，各心之穢』而捨離忿、恨、覆、惱害、嫉、慳、詐瞞、誑、頑迷、性急、慢、過慢、憍、放逸，此等各心之穢也。比丘！如是，彼比丘知：『貪欲邪貪是心之穢』而捨離此貪欲邪貪心之穢，知：『瞋、忿、恨、覆、惱害、嫉、慳、詐瞞、誑、頑迷、性急、慢、過慢、憍、放逸，各心之穢』而捨離瞋……乃至……放逸、此等心之穢也。〔於是，〕彼對佛持絕對之信，即彼世尊是應供、等正覺者、明行足、善逝、世間解、無上士、調御丈夫、天人師、覺者、世尊也。又，對法持絕對之信，即從世尊所善說之法，是自現所證者、非時間者、是『來見』者之導入〔涅槃〕者、從智者自身得知也。又，對僧伽持絕對之信，即世尊之聲聞眾是善入者、直入者、理入者、正入者，即成四雙八輩，此等世尊之聲聞眾，是應供養、應請待（款待）、應布施、應合掌（致敬），於此世是無上福田也。如是，彼遂捨棄、排除、解脫、捨離、離脫，彼以『我對佛持絕對之信』而對義得信受，對法得信受，得俱法之歡喜，對歡喜者生喜悅，喜悅者身輕安，身輕安者受（覺）樂，受樂者得心定；又，彼以『我對法持絕對之信』而對義得信受，對法得信受，得俱法之歡喜，對歡喜者生喜悅，喜悅者身輕安，身輕安者受樂，受樂者得心定；又，彼以『我對僧伽持絕對之信』而對義得信受，對法得信受，得俱法之歡喜，對歡喜者生喜悅，喜悅者身輕安，身輕安者受樂，受樂者得心定；又，彼以『我遂捨棄、排除、解脫、捨離、離脫』而對義得信受，對法得信受則得俱法之歡喜，對歡喜者生喜悅，喜悅者身輕安，身輕安者受樂，受樂者得心定。",
+   "T0125-ea13.5": "云何為二十一結？瞋心結、恚害心結、睡眠心結、調戲心結、疑是心結、怒為心結、忌為心結、惱為心結、疾為心結、憎為心結、無慚心結、無愧心結、幻為心結、姦為心結、偽為心結、諍為心結、憍為心結、慢為心結，妬為心結、增上慢為心結、貪為心結，諸比丘！若有人有此二十一結染著心者，當觀其人必墮惡趣，不生善處。",
+   "T0026-ma93": "「若知邪見是心穢者，知已便斷。"
+  },
+  "a04": {
+   "mn7": "Sa kho so, bhikkhave, bhikkhu evaṁsīlo evaṁdhammo evaṁpañño sālīnañcepi piṇḍapātaṁ bhuñjati vicitakāḷakaṁ anekasūpaṁ anekabyañjanaṁ, nevassa taṁ hoti antarāyāya. Seyyathāpi, bhikkhave, vatthaṁ saṅkiliṭṭhaṁ malaggahitaṁ acchodakaṁ āgamma parisuddhaṁ hoti pariyodātaṁ, ukkāmukhaṁ vā panāgamma jātarūpaṁ parisuddhaṁ hoti pariyodātaṁ; evameva kho, bhikkhave, bhikkhu evaṁsīlo evaṁdhammo evaṁpañño sālīnañcepi piṇḍapātaṁ bhuñjati vicitakāḷakaṁ anekasūpaṁ anekabyañjanaṁ, nevassa taṁ hoti antarāyāya.",
+   "nan-mn7": "諸比丘！具如是戒、如是法、如是慧之彼比丘，〔即使受〕白淨米之施食，添加種種調味、藥味而食者，對彼不為障害。恰如穢垢之布，放入清澄之水中，則成為清淨、皎潔；又，如金礦放入坩堝（鎔解、精鍊爐）中，則成為清淨、皎潔，如是，比丘具足如是戒、如是法、如是慧，雖受添加種種調味、藥味之白淨米之施食，對彼實不為障害也。"
+  },
+  "a05": {
+   "mn7": "So mettāsahagatena cetasā ekaṁ disaṁ pharitvā viharati, tathā dutiyaṁ, tathā tatiyaṁ, tathā catutthaṁ. Iti uddhamadho tiriyaṁ sabbadhi sabbattatāya sabbāvantaṁ lokaṁ mettāsahagatena cetasā vipulena mahaggatena appamāṇena averena abyāpajjena pharitvā viharati; karuṇāsahagatena cetasā …pe… muditāsahagatena cetasā …pe… upekkhāsahagatena cetasā ekaṁ disaṁ pharitvā viharati, tathā dutiyaṁ, tathā tatiyaṁ, tathā catutthaṁ. Iti uddhamadho tiriyaṁ sabbadhi sabbattatāya sabbāvantaṁ lokaṁ upekkhāsahagatena cetasā vipulena mahaggatena appamāṇena averena abyāpajjena pharitvā viharati.",
+   "nan-mn7": "彼以慈心徧滿一方而住之，如是，於二方、三方、四方、上、下、橫、徧一切處、全世界，以廣大、廣博、無量、無恚、無害之慈心徧滿而住之；以悲心……乃至……以喜心……以捨心徧滿一方而住之，如是，於二方、三方、四方、上、下、橫、徧一切處、全世界，以廣大、廣博、無量、無恚、無害之捨心徧滿而住之。",
+   "T0125-ea13.5": "「若彼賢聖弟子無瞋、無恚、無有愚惑，心意和悅，以慈心普滿一方而自娛樂，二方、三方、四方亦爾。四維上下，於一切中，一切亦一切，一切世間以無限無量，不可稱計，心無恚怒而自遊戲。以此慈心，遍滿其中，得歡喜已，心意便正。「復以悲心普滿一方而自娛樂，二方、三方、四方亦爾，四維上下，於一切中，一切亦一切，一切世間以無量無限，不可稱計，心無恚怒而自遊戲。以此悲心，遍滿其中，得歡喜已，心意便正。「復以喜心普滿一方而自娛樂，二方、三方、四方亦爾，四維上下，於一切中，一切亦一切，一切世間，以無量無限不可稱計，心無恚怒而自遊戲。以此喜心，遍滿其中，得歡喜已，心意便正。「復以護心普滿一方而自娛樂，二方、三方、四方亦爾，四維上下，於一切中，一切亦一切，一切世間以無量無限不可稱計，心無恚怒而自遊戲。以此護心，遍滿其中，得歡喜已，心意便正。「便於如來所成於信根，根本不移，豎高顯幢，不可移動。諸天、龍、神、阿須倫、沙門、婆羅門，或世人民，於中得歡喜，心意便正。此是如來、至真、等正覺、明行成為、善逝、世間解、無上士、道法御、天人師，號佛、眾祐，於中得歡喜，心意便正，亦復成就於法。如來法者，甚為清淨，不可移動，人所愛敬。如是智者當作是觀，便於中而得歡喜，亦復成就於眾。如來聖眾甚為清淨，性行純和，法法成就，戒成就、三昧成就、智慧成就、解脫成就、解脫見慧成就。聖眾者，四雙八輩，此是如來聖眾，可愛可貴，實可承事。於中得歡喜，心意便正。「彼復以此三昧，心清淨無瑕穢，諸結便盡，亦無沾污，性行柔軟，逮於神通，便得自識無量宿命事，所從來處，靡不知之。若一生、二生、三生、四生、五生、十生、二十生、三十生、四十生、五十生、百生、千生、百千生，成敗劫、不成敗劫、成敗不成敗劫、無數成敗劫、無數不成敗劫，我曾在彼，字某、名某、姓某，如是生、如是食、受如是苦樂，受命長短，從彼終生彼間，從彼終生此間。如是自識無數宿命事。「復以此三昧，心清淨無瑕穢，知眾生心所念之事。彼復以天眼觀眾生類，有生者、有終者，善色、醜色，善趣、惡趣，若好、若醜，隨眾生行所作果報，皆悉知之。或有眾生，身行惡、口行惡、心行惡，誹謗賢聖，邪見造邪見行，身壞命終，生三惡道，趣泥𪏭中。或復有眾生，身行善、口行善、意行善，不誹謗賢聖，正見、無有邪見，身壞命終，生天上善處。是謂清淨天眼觀眾生類：有生者、有終者，善色、醜色，善趣、惡趣，若好、若醜，隨眾生行所作果報，皆悉知之。「彼復以此三昧，心清淨無瑕穢，無有結使，心性柔軟，逮於神通。復以漏盡通而自娛樂。",
+   "T0026-ma93": "如是非法欲心穢、惡貪心穢、邪法心穢、貪心穢、恚心穢、睡眠心穢、調悔心穢、疑惑心穢、瞋纏心穢、不語結心穢、慳心穢、嫉心穢、欺誑心穢、諛諂心穢、無慙心穢、無愧心穢、慢心穢、大慢心穢、憍慠心穢，若知放逸是心穢者，知已便斷，彼心與慈俱，遍滿十方成就遊。如是二三四方、四維上下，普周一切，心與慈俱，無結、無怨、無恚、無諍，極廣甚大，無量善修，遍滿一切世間成就遊。如是，悲、喜心與捨俱，無結、無怨、無恚、無諍，極廣甚大，無量善修，遍滿一切世間成就遊。",
+   "T0051": "邪見意結，見已當棄，至放逸意著結，見已當棄，彼意與慈俱滿一方正受住。如是二三四上下一切諸方，意與慈俱無二無恚，極廣極大，無極分別，滿諸方已正受住。"
+  },
+  "a06": {
+   "mn7": "So ‘atthi idaṁ, atthi hīnaṁ, atthi paṇītaṁ, atthi imassa saññāgatassa uttari nissaraṇan’ti pajānāti. Tassa evaṁ jānato evaṁ passato kāmāsavāpi cittaṁ vimuccati, bhavāsavāpi cittaṁ vimuccati, avijjāsavāpi cittaṁ vimuccati. Vimuttasmiṁ vimuttamiti ñāṇaṁ hoti. ‘Khīṇā jāti, vusitaṁ brahmacariyaṁ, kataṁ karaṇīyaṁ, nāparaṁ itthattāyā’ti pajānāti.",
+   "T0125-ea13.5": "彼觀此苦，如實知之；復觀苦習，復觀苦盡，復觀苦出要，如實知之。彼作是觀已，欲漏心得解脫，有漏心、無明漏心得解脫。已得解脫，便得解脫智：生死已盡，梵行已立，所作已辦，更不復受有，如實知之。如是，比丘！賢聖弟子心得解脫，雖復食粳糧、善美種種餚饍，摶若須彌，終無有罪。所以然者，以無欲、盡愛故，以無瞋、盡恚故，以無愚癡、盡愚癡故，是謂比丘中比丘！"
+  },
+  "a07": {
+   "mn7": "Ayaṁ vuccati, bhikkhave: ‘bhikkhu sināto antarena sinānenā’”ti.",
+   "nan-mn7": "彼知：『此是存在、此是卑賤、此是高貴、超越此想之處有出離。』彼如是知、如是見，從欲漏心得解脫、從有漏心得解脫、從無明漏心得解脫，『於解脫者有解脫』之智存，彼知『〔此〕生已盡，梵行已立，所作已作，不更受此存在之狀態。』此為比丘應以內心之洗浴而洗浴也。」",
+   "T0125-ea13.5": "則內極沐浴已。」",
+   "T0026-ma93": "梵志！是謂洗浴內心，非浴外身。」",
+   "T0051": "如是意與悲、喜、護，俱滿一切諸方已正受住，是為婆羅門內外洗淨，非外淨也。」"
+  },
+  "a08": {
+   "mn7": "Tena kho pana samayena sundarikabhāradvājo brāhmaṇo bhagavato avidūre nisinno hoti. Atha kho sundarikabhāradvājo brāhmaṇo bhagavantaṁ etadavoca: “gacchati pana bhavaṁ gotamo bāhukaṁ nadiṁ sināyitun”ti? “Kiṁ, brāhmaṇa, bāhukāya nadiyā? Kiṁ bāhukā nadī karissatī”ti? “Lokkhasammatā hi, bho gotama, bāhukā nadī bahujanassa, puññasammatā hi, bho gotama, bāhukā nadī bahujanassa, bāhukāya pana nadiyā bahujano pāpakammaṁ kataṁ pavāhetī”ti. Atha kho bhagavā sundarikabhāradvājaṁ brāhmaṇaṁ gāthāhi ajjhabhāsi: “Bāhukaṁ adhikakkañca, gayaṁ sundarikaṁ mapi; Sarassatiṁ payāgañca, atho bāhumatiṁ nadiṁ; Niccampi bālo pakkhando, kaṇhakammo na sujjhati. Kiṁ sundarikā karissati, Kiṁ payāgā kiṁ bāhukā nadī; Veriṁ katakibbisaṁ naraṁ, Na hi naṁ sodhaye pāpakamminaṁ. Suddhassa ve sadā phaggu, Suddhassuposatho sadā; Suddhassa sucikammassa, Sadā sampajjate vataṁ; Idheva sināhi brāhmaṇa, Sabbabhūtesu karohi khemataṁ. Sace musā na bhaṇasi, sace pāṇaṁ na hiṁsasi; Sace adinnaṁ nādiyasi, saddahāno amaccharī; Kiṁ kāhasi gayaṁ gantvā, udapānopi te gayā”ti.",
+   "nan-mn7": "爾時，婆羅門孫陀利伽．巴羅多瓦奢（Sundarika-bharadvāja）在世尊附近而坐，此婆羅門孫陀利伽．巴羅多瓦奢白世尊曰：「卿瞿曇！去巴富加（Bāhukā）河行沐浴耶？」〔世尊答曰：〕「婆羅門！巴富加河究竟為何河？巴富加河究竟有何用耶？」〔婆羅門曰：〕「卿瞿曇眾人均以為巴富加河實為得解脫之道，與眾人福德，而於巴富加河中〔洗浴〕，因其可為眾人洗除惡業也。」於是，世尊對婆羅門孫陀利伽．巴羅多瓦奢以偈說曰：",
+   "T0125-ea13.5": "爾時，江側婆羅門白世尊曰：「瞿曇沙門！可往至孫陀羅江側沐浴。」世尊告曰：「云何，婆羅門！名之為孫陀羅江水？」婆羅門曰：「孫陀羅江水是福之深淵，世之光明，其有人物在彼河水浴者，一切諸惡皆悉除盡。」爾時，世尊便說此偈：「此身無數劫，經歷彼河浴；\n及諸小陂池，靡不悉周遍。\n愚者常樂彼，闇行不清淨；\n宿罪內充軀，彼河焉能救？\n淨者常快樂，禁戒清亦快；\n清者作清行，彼願必果成。\n設護不與取，行慈不殺生；\n守誠不妄語，心等無增減。\n汝今於此浴，必獲安隱處；\n彼河何所至，猶盲投乎冥。」",
+   "T0026-ma93": "爾時，梵志語世尊曰：「瞿曇！可詣多水河浴。」世尊問曰：「梵志！若詣多水河浴者，彼得何等？」梵志答曰：「瞿曇！彼多水河者，此是世間齋潔之相、度相、福相。瞿曇！若詣多水河浴者，彼則淨除於一切惡。」爾時，世尊為彼梵志而說頌曰：「妙好首梵志，若入多水河，\n是愚常遊戲，不能淨黑業。\n好首何往泉，何義多水河，\n人作不善業，清水何所益？\n淨者無垢穢，淨者常說戒，\n淨者清白業，常得清淨行。\n若汝不殺生，常不與不取，\n真諦不妄語，常正念正知。\n梵志如是學，一切眾生安，\n梵志何還家，家泉無所淨。\n梵志汝當學，淨洗以善法，\n何須弊惡水，但去身體垢。」",
+   "T0051": "「沙門瞿曇！往詣水浴。」「汝婆羅門！瞿曇水洗者，一切世間應戒故、應福故、應度故。」「此瞿曇！一切世間水洗者，除一切惡故，在水淨洗濡，凡愚常樂。」「此不得除黑黑行，用彼水淨，為在水，何所見？人作諸惡行，此水何所能淨者？有堅牢淨者，當持戒行、行清淨行，行清淨行常得應戒，若不殺盜、不妄語為得等度，梵志當住此作一切善，為得安隱。"
+  },
+  "a09": {
+   "mn7": "Evaṁ vutte, sundarikabhāradvājo brāhmaṇo bhagavantaṁ etadavoca: “abhikkantaṁ, bho gotama, abhikkantaṁ, bho gotama. Seyyathāpi, bho gotama, nikkujjitaṁ vā ukkujjeyya, paṭicchannaṁ vā vivareyya, mūḷhassa vā maggaṁ ācikkheyya, andhakāre vā telapajjotaṁ dhāreyya—cakkhumanto rūpāni dakkhantīti; evamevaṁ bhotā gotamena anekapariyāyena dhammo pakāsito. Esāhaṁ bhavantaṁ gotamaṁ saraṇaṁ gacchāmi dhammañca bhikkhusaṅghañca.",
+   "T0125-ea13.5": "爾時，婆羅門白世尊曰：「止！止！瞿曇！猶如軁者得伸，闇者見明，迷者示道，於闇室然明，無目者為作眼目。如是，沙門瞿曇！無數方便說此妙法，願聽為道。」",
+   "T0026-ma93": "梵志白佛曰：「我亦作是念，\n淨洗以善法，何須弊惡水。」\n梵志聞佛教，心中大歡喜，\n即時禮佛足，歸命佛法眾。"
+  },
+  "a10": {
+   "mn7": "Labheyyāhaṁ bhoto gotamassa santike pabbajjaṁ, labheyyaṁ upasampadan”ti. Alattha kho sundarikabhāradvājo brāhmaṇo bhagavato santike pabbajjaṁ, alattha upasampadaṁ.",
+   "nan-mn7": "「巴富阿帝伽伽耶孫陀利\n薩羅娑縛底或是巴耶伽\n及波富摩底愚人常浸入\n黑業不得淨孫陀利伽及\n巴耶巴富加敵意有罪過\n不淨深惡業淨者常春齋\n淨者常布薩淨者淨白業\n常得清淨行梵志如是浴\n生類皆安穩若汝不妄語\n又若不殺生不與則不取\n樹信不貪欲何為行伽耶\n伽耶於貴公不過是水糟」",
+   "T0125-ea13.5": "爾時，江側婆羅門即得作道，受具足戒。所以族姓子，出家學道，修無上梵行：生死已盡，梵行已立，所作已辦，更不復受有，如實知之。",
+   "T0026-ma93": "梵志白曰：「世尊！我已知。善逝！我已解。我今自歸佛、法及比丘眾，唯願世尊受我為優婆塞，從今日始，終身自歸，乃至命盡。」",
+   "T0051": "汝婆羅門！何須還家？何須水及家？汝婆羅門！寧求淨善法，何須弊惡水？但除塵垢穢。」「瞿曇或作是念：『寧求淨善法，不須弊惡水，用除塵垢穢。』已竟，瞿曇！已竟，瞿曇！我今歸世尊、法及比丘僧。世尊！我持優婆塞，從今日始，盡命離殺而歸佛。」佛如是說。彼諸比丘聞世尊所說，歡喜而歸。"
+  },
+  "a11": {
+   "mn7": "Acirūpasampanno kho panāyasmā bhāradvājo eko vūpakaṭṭho appamatto ātāpī pahitatto viharanto nacirasseva—yassatthāya kulaputtā sammadeva agārasmā anagāriyaṁ pabbajanti, tadanuttaraṁ—brahmacariyapariyosānaṁ diṭṭheva dhamme sayaṁ abhiññā sacchikatvā upasampajja vihāsi. “Khīṇā jāti, vusitaṁ brahmacariyaṁ, kataṁ karaṇīyaṁ, nāparaṁ itthattāyā”ti abbhaññāsi. Aññataro kho panāyasmā bhāradvājo arahataṁ ahosīti.",
+   "nan-mn7": "如是說時，婆羅門孫陀利伽．巴羅多瓦奢白世尊曰：「偉哉！卿瞿曇！偉哉！卿瞿曇！恰如使倒者立起，如使覆蓋者露現，如迷者教以道，如闇中持來油燈，使有眼者見諸色。如是，卿瞿曇以種種方便說法，我今歸依卿瞿曇，歸依法及僧伽，願得卿瞿曇之許可，進入我出家。」於是，婆羅門孫陀利．伽巴羅多瓦奢得世尊之許可，而得出家。於此處，新出家之尊者巴羅多瓦奢孤獨、別住、不放逸、勇猛、精進而住。不久，〔此〕世間之善男子從在家成為出家行者，修滿無上之梵行，於現法自知、〔自〕作證、逮得，知「〔此〕生已盡，梵行已立，所作已作，不更受此存在之狀態。」於此，尊者巴羅多瓦奢即成為一阿羅漢。",
+   "T0125-ea13.5": "是時，尊者孫陀羅諦利即成阿羅漢。"
+  },
+  "a12": {
+   "mn7": "Vatthasuttaṁ niṭṭhitaṁ sattamaṁ.",
+   "T0125-ea13.5": "爾時，尊者孫陀羅諦利聞佛所說，歡喜奉行。",
+   "T0026-ma93": "佛說如是。好首水淨梵志及諸比丘，聞佛所說，歡喜奉行。水淨梵志經第七竟（一千二百一十字）"
+  }
+ }
+}

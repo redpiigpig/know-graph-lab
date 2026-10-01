@@ -1,0 +1,240 @@
+{
+ "slug": "pi-mn72",
+ "title": "別譯雜阿含經 （一九六）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "經題與序分"
+  },
+  {
+   "id": "a01",
+   "label": "婆蹉初問常住見"
+  },
+  {
+   "id": "a02",
+   "label": "婆蹉問非常住見"
+  },
+  {
+   "id": "a03",
+   "label": "婆蹉問有邊見"
+  },
+  {
+   "id": "a04",
+   "label": "婆蹉問無邊見"
+  },
+  {
+   "id": "a05",
+   "label": "婆蹉問命即身見"
+  },
+  {
+   "id": "a06",
+   "label": "婆蹉問命異身見"
+  },
+  {
+   "id": "a07",
+   "label": "婆蹉問如來有後見"
+  },
+  {
+   "id": "a08",
+   "label": "婆蹉問如來無後見"
+  },
+  {
+   "id": "a09",
+   "label": "婆蹉問如來有無後見"
+  },
+  {
+   "id": "a10",
+   "label": "婆蹉問如來非有非無後見"
+  },
+  {
+   "id": "a11",
+   "label": "世尊說見之過患"
+  },
+  {
+   "id": "a12",
+   "label": "世尊說諸見皆為愚痴"
+  },
+  {
+   "id": "a13",
+   "label": "世尊說如來所見"
+  },
+  {
+   "id": "a14",
+   "label": "婆蹉問無生處"
+  },
+  {
+   "id": "a15",
+   "label": "世尊以火喻答問"
+  },
+  {
+   "id": "a16",
+   "label": "婆蹉答火喻"
+  },
+  {
+   "id": "a17",
+   "label": "世尊結論火喻"
+  },
+  {
+   "id": "a18",
+   "label": "婆蹉請說譬喻"
+  },
+  {
+   "id": "a19",
+   "label": "婆蹉說娑羅樹譬喻"
+  },
+  {
+   "id": "a20",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "mn72",
+   "lang": "pi",
+   "label": "巴利 MN72",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-mn72",
+   "lang": "lzh",
+   "label": "漢譯南傳 MN72",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.196",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （一九六）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa962",
+   "lang": "lzh",
+   "label": "雜阿含經 （九六二）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（一九六）",
+   "uid": "T02n0100_p0444c29"
+  },
+  {
+   "work": "T0099",
+   "node": "（九六二）",
+   "uid": "T02n0099_p0245b26"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "mn72": "Majjhima Nikāya 72",
+   "nan-mn72": "第七十二　婆蹉衢多火〔喻〕經",
+   "T0100-sa-2.196": "如是我聞：一時，佛在王舍城迦蘭陀竹林。",
+   "T0099-sa962": "如是我聞：一時，佛住王舍城迦蘭陀竹園。"
+  },
+  "a01": {
+   "mn72": "Aggivacchasutta Evaṁ me sutaṁ— ekaṁ samayaṁ bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme. Atha kho vacchagotto paribbājako yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavatā saddhiṁ sammodi. Sammodanīyaṁ kathaṁ sāraṇīyaṁ vītisāretvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho vacchagotto paribbājako bhagavantaṁ etadavoca: “Kiṁ nu kho, bho gotama, ‘sassato loko, idameva saccaṁ moghamaññan’ti— evaṁdiṭṭhi bhavaṁ gotamo”ti? “Na kho ahaṁ, vaccha, evaṁdiṭṭhi: ‘sassato loko, idameva saccaṁ moghamaññan’”ti.",
+   "nan-mn72": "如是我聞。——",
+   "T0100-sa-2.196": "爾時，犢子梵志往詣佛所，問訊佛已，在一面坐。問佛言：「瞿曇！汝頗作是見，作是論：『世界是常，唯我解了，餘人不知。』作是說不？」佛告犢子：「我不作是見，不作是說：『唯我能知，餘人不解。』",
+   "T0099-sa962": "爾時，婆蹉種出家來詣佛所，與世尊面相問訊，問訊已，退坐一面，白佛言：「瞿曇！"
+  },
+  "a02": {
+   "mn72": "“Kiṁ pana, bho gotama, ‘asassato loko, idameva saccaṁ moghamaññan’ti— evaṁdiṭṭhi bhavaṁ gotamo”ti? “Na kho ahaṁ, vaccha, evaṁdiṭṭhi: ‘asassato loko, idameva saccaṁ moghamaññan’”ti.",
+   "nan-mn72": "一時，世尊住舍衛城之祇陀林，給孤獨園。爾時，婆蹉姓之普行者詣世尊處。詣已，問訊世尊，交換友誼禮讓之語後，坐於一面。坐於一面之婆蹉姓普行者對世尊言：",
+   "T0100-sa-2.196": "」犢子又問：「汝若不作如是說者，一切世界悉無常耶？」佛告犢子：「我亦不作如是說言：『世界無常，唯我能知，餘人不解。』」犢子又問：「汝頗復作如是論言：『世界亦常無常，唯我能知，餘人不解。』作是說耶？」佛告犢子：「我亦不作如是說言：『一切世界，亦常無常，唯我獨了，餘人不知。』」犢子又問：「汝頗復作如是說言：『一切世界非常非無常，非非常非非無常，唯我能解，餘人不了。』作是說耶？」佛告犢子：「我亦不作如是說言：『一切世界，非常非無常，非非常非非無常，唯我能知，餘人不解。』",
+   "T0099-sa962": "云何瞿曇作如是見、如是說：『世間常，此是真實，餘則虛妄。』"
+  },
+  "a03": {
+   "mn72": "“Kiṁ nu kho, bho gotama, ‘antavā loko, idameva saccaṁ moghamaññan’ti— evaṁdiṭṭhi bhavaṁ gotamo”ti? “Na kho ahaṁ, vaccha, evaṁdiṭṭhi: ‘antavā loko, idameva saccaṁ moghamaññan’”ti.",
+   "nan-mn72": "「卿瞿曇！究竟如何：『世界是常住也，唯此是真實也，其餘是虛偽也。』卿瞿曇有如是見否？」〔世尊曰：〕「婆蹉！予實無『世界是常住也，唯此是真實也，其他是虛偽也』之見。」〔婆蹉曰：〕「卿瞿曇！又，究竟如何：『世界是非常住也，唯此是真實也，其餘是虛偽也。』卿瞿曇有如是見否？」〔世尊曰：〕「婆蹉！予實無『世界是非常住也，唯此是真實也，其他是虛偽』之見。」〔婆蹉曰：〕「卿瞿曇！又，究竟如何：『世界是有邊也，唯此是真實也，其他是虛偽也。』卿瞿曇有如是見否？」〔世尊曰：〕「婆蹉！予實無『世界是有邊也，唯此是真實也，其他是虛偽』之見。」〔婆蹉曰：〕「卿瞿曇！又，究竟如何：『世界是無邊也，唯此是真實也，其他是虛偽也。』卿瞿曇有如是見否？」〔世尊曰：〕「婆蹉！予實無『世界是無邊也，唯此是真實也，其他是虛偽也』之見也。」〔婆蹉曰：〕「卿瞿曇！又，究竟如何：『其命即是其身也，唯此是真實也，其他是虛偽也。』卿瞿曇有如是見否？」〔世尊曰：〕「婆蹉！予實無『其命〔即是〕其身也，唯此是真實也，其他是虛偽也』之見。」〔婆蹉曰：〕「卿瞿曇！究竟如何『異命與異身也唯此是真實也，其他是虛偽也。』卿瞿曇有如是見否？」〔世尊曰：〕「婆蹉！予實無『異命是異身。唯此是真實也，其他是虛偽』之見。」〔婆蹉曰：〕「卿瞿曇！『如來死後尚存，唯此是真實也，其他是虛偽也。』卿瞿曇有如是見否？」〔世尊曰：〕「婆蹉！予實無『如來死後尚存，唯此是真實也，其他是虛偽』之見。」〔婆蹉曰：〕「卿瞿曇！又，究竟如何：『如來死後無存，唯此是真實也，其他是虛偽也。』卿瞿曇有如是見否？」〔世尊曰：〕「婆蹉！予實無『如來死後無存，唯此是真實也，其他是虛偽』之見。」〔婆蹉曰：〕「卿瞿曇！究竟如何：『如來死後亦有亦無，唯此是真實也，其他是虛偽也。』卿瞿曇有如是見否？」〔世尊曰：〕「婆蹉！予實無『如來死後亦有亦無，唯此是真實也，其他是虛偽』之見。」〔婆蹉曰：〕「卿瞿曇！又，究竟如何：『如來死後非有亦非無，唯此是真實也，其他是虛偽也。』卿瞿曇有如是見否？」〔世尊曰：〕「婆蹉！予實無『如來死後非有亦非無，唯此是真實也，其他是虛偽』之見。」"
+  },
+  "a04": {
+   "mn72": "“Kiṁ pana, bho gotama, ‘anantavā loko, idameva saccaṁ moghamaññan’ti— evaṁdiṭṭhi bhavaṁ gotamo”ti? “Na kho ahaṁ, vaccha, evaṁdiṭṭhi: ‘anantavā loko, idameva saccaṁ moghamaññan’”ti.",
+   "nan-mn72": "〔婆蹉曰：〕「卿瞿曇！究竟為何：『世界是常住也，唯此是真實也，其他是虛偽也。』沙門瞿曇有如是見否？正有如是問時，〔汝言：〕『婆蹉！予實無「世界是常住也，唯此是真實也，其他是虛偽」之見。』〔婆蹉曰：〕卿瞿曇！又，究竟如何：『世界是非常住也，唯此是真實也，其他是虛偽也。』沙門瞿曇有如是見否？正有如是問時，汝言：『婆蹉！予實無「世界是非常住也，唯此是真實也，其他是虛偽」之見。』……乃至……卿瞿曇！究竟如何：『如來死後亦有亦無，唯此是真實也，其他是虛偽也。』沙門瞿曇有如是見否？正有如是問時，汝言：『婆蹉！予實無「如來死後亦有亦無，唯此是真實也，其他是虛偽」之見。』卿瞿曇！又，究竟如何：『如來死後非有亦非無，唯此是真實也，其他是虛偽也。』沙門瞿曇有如是見否？正有如是問時，汝言：『婆蹉！予實無「如來死後非有亦非無，唯此是真實也，其他是虛偽」之見。』卿瞿曇正觀如何過患，而為如是此等一切成見之不隨行者耶？」",
+   "T0100-sa-2.196": "」犢子復問：「世界有邊，世界無邊，亦有邊亦無邊，非有邊非無邊，非非有邊非非無邊。",
+   "T0099-sa962": "耶？」佛告婆蹉種出家：「我不作如是見、如是說：『世間常，是則真實，餘則虛妄。』"
+  },
+  "a05": {
+   "mn72": "“Kiṁ nu kho, bho gotama, ‘taṁ jīvaṁ taṁ sarīraṁ, idameva saccaṁ moghamaññan’ti— evaṁdiṭṭhi bhavaṁ gotamo”ti? “Na kho ahaṁ, vaccha, evaṁdiṭṭhi: ‘taṁ jīvaṁ taṁ sarīraṁ, idameva saccaṁ moghamaññan’”ti.",
+   "nan-mn72": "〔世尊曰：〕「婆蹉！『世界是常住也。』此乃見之謬誤、見之稠林、見之險道、見之歪曲、見之動轉、見之結縛、伴苦、伴惱害、伴愁悶、伴熱惱，不為厭離、不為離欲、不為滅盡、不為寂止、不為通智、不為正覺、不為涅槃轉起之。婆蹉！『世界是非常住也。』……乃至……婆蹉！『世界是有邊也。』……婆蹉！『世界是無邊也。』……婆蹉！『其命〔與〕其身同。』……婆蹉！『其命〔異〕身異也。』……婆蹉！『如來死後有。』……婆蹉！『如來死後無。』……婆蹉！『如來死後亦有亦無。』……婆蹉！『如來死後非有亦非無。』此乃見之謬誤、見之稠林、見之險道、見之歪曲、見之動轉、見之結縛也。伴苦、伴惱害、伴愁悶、伴熱惱，不為厭離、不為離欲、不為滅盡、不為寂止、不為通智、不為正覺、不為涅槃轉起之。婆蹉！予正觀此過患時，而為如是此等一切成見之不隨行者也。」〔婆蹉曰：〕「然，卿瞿曇有任何見之謬誤否？」〔世尊曰：〕「婆蹉！所謂見之謬誤者，其為如來所除卻也。婆蹉！以如來實有此見：『如色、如色之集、如色之滅；如受、如受之集、如受之滅；如想、如想之集、如想之滅；如行、如行之集、如行之滅；如識、如識之集、如識之滅也。』是故，予說：『如來對一切妄想、一切顛倒、一切我見、我所見、慢隨眠等，為滅盡而以離、欲、滅、捨、捨棄、無所取而為解脫者。』」"
+  },
+  "a06": {
+   "mn72": "“Kiṁ pana, bho gotama, ‘aññaṁ jīvaṁ aññaṁ sarīraṁ, idameva saccaṁ moghamaññan’ti— evaṁdiṭṭhi bhavaṁ gotamo”ti? “Na kho ahaṁ, vaccha, evaṁdiṭṭhi: ‘aññaṁ jīvaṁ aññaṁ sarīraṁ, idameva saccaṁ moghamaññan’”ti.",
+   "nan-mn72": "〔婆蹉曰：〕「卿瞿曇！有如是心解脫之比丘，往生何處耶？」〔世尊曰：〕「婆蹉！謂『往生』實不合適。」〔婆蹉曰：〕「卿瞿曇！依此〔說法〕實無往生否？」〔世尊曰：〕「婆蹉！謂『無往生』實不合適。」〔婆蹉曰：〕「卿瞿曇！依此〔說法〕實亦有往生亦無往生否？」〔世尊曰：〕「婆蹉！謂『亦有往生亦無往生』實不合適。」〔婆蹉曰：〕「卿瞿曇！依此〔說法〕實非有往生亦非無往生否？」〔世尊曰：〕「婆蹉！謂『非有往生亦非無往生』實不合適也。」",
+   "T0100-sa-2.196": "身即是命，命即是身，身異命異。",
+   "T0099-sa962": "」「云何瞿曇作如是見、如是說：『世間無常、常無常、非常非無常，有邊、無邊、邊無邊、非邊非無邊，命即是身、命異身異，如來有後死、無後死、有無後死、非有非無後死。』？」"
+  },
+  "a07": {
+   "mn72": "“Kiṁ nu kho, bho gotama, ‘hoti tathāgato paraṁ maraṇā, idameva saccaṁ moghamaññan’ti— evaṁdiṭṭhi bhavaṁ gotamo”ti? “Na kho ahaṁ, vaccha, evaṁdiṭṭhi: ‘hoti tathāgato paraṁ maraṇā, idameva saccaṁ moghamaññan’”ti.",
+   "nan-mn72": "〔婆蹉曰：〕「卿瞿曇！予問『有如是心解脫之比丘，往生何處耶？』之時，汝言：『婆蹉！謂「往生」實不合適。』卿瞿曇！予問：『依此〔說法〕實無往生否？』之時，汝言：『婆蹉！謂「無往生」實不合適。』卿瞿曇！予問『依此〔說法〕實亦有往生亦無往生否？』之時，汝言：『婆蹉！謂「亦有往生亦無往生」實不合適。』卿瞿曇！予問：『依此〔說法〕實非有往生亦非無往生否？』之時，汝言：『婆蹉！謂「非有往生亦非無往生」實不合適。』卿瞿曇！於此，我顯示無智、顯示迷妄、凡〔我〕與卿瞿曇會談之前，僅有之諸信仰，彼〔信仰〕，我今已令之消失矣。」"
+  },
+  "a08": {
+   "mn72": "“Kiṁ pana, bho gotama, ‘na hoti tathāgato paraṁ maraṇā, idameva saccaṁ moghamaññan’ti— evaṁdiṭṭhi bhavaṁ gotamo”ti? “Na kho ahaṁ, vaccha, evaṁdiṭṭhi: ‘na hoti tathāgato paraṁ maraṇā, idameva saccaṁ moghamaññan’”ti."
+  },
+  "a09": {
+   "mn72": "“Kiṁ nu kho, bho gotama, ‘hoti ca na ca hoti tathāgato paraṁ maraṇā, idameva saccaṁ moghamaññan’ti— evaṁdiṭṭhi bhavaṁ gotamo”ti? “Na kho ahaṁ, vaccha, evaṁdiṭṭhi: ‘hoti ca na ca hoti tathāgato paraṁ maraṇā, idameva saccaṁ moghamaññan’”ti."
+  },
+  "a10": {
+   "mn72": "“Kiṁ pana, bho gotama, ‘neva hoti na na hoti tathāgato paraṁ maraṇā, idameva saccaṁ moghamaññan’ti— evaṁdiṭṭhi bhavaṁ gotamo”ti? “Na kho ahaṁ, vaccha, evaṁdiṭṭhi: ‘neva hoti na na hoti tathāgato paraṁ maraṇā, idameva saccaṁ moghamaññan’”ti. “‘Kiṁ nu kho, bho gotama, sassato loko, idameva saccaṁ moghamaññanti— evaṁdiṭṭhi bhavaṁ gotamo’ti iti puṭṭho samāno ‘na kho ahaṁ, vaccha, evaṁdiṭṭhi— sassato loko, idameva saccaṁ moghamaññan’ti vadesi. ‘Kiṁ pana, bho gotama, asassato loko, idameva saccaṁ moghamaññanti— evaṁdiṭṭhi bhavaṁ gotamo’ti iti puṭṭho samāno ‘na kho ahaṁ, vaccha, evaṁdiṭṭhi— asassato loko, idameva saccaṁ moghamaññan’ti vadesi. ‘Kiṁ nu kho, bho gotama, antavā loko, idameva saccaṁ moghamaññanti— evaṁdiṭṭhi bhavaṁ gotamo’ti iti puṭṭho samāno ‘na kho ahaṁ, vaccha, evaṁdiṭṭhi— antavā loko, idameva saccaṁ moghamaññan’ti vadesi. ‘Kiṁ pana, bho gotama, anantavā loko, idameva saccaṁ moghamaññanti— evaṁdiṭṭhi bhavaṁ gotamo’ti iti puṭṭho samāno ‘na kho ahaṁ, vaccha, evaṁdiṭṭhi— anantavā loko, idameva saccaṁ moghamaññan’ti vadesi. ‘Kiṁ nu kho, bho gotama, taṁ jīvaṁ taṁ sarīraṁ, idameva saccaṁ moghamaññanti— evaṁdiṭṭhi bhavaṁ gotamo’ti iti puṭṭho samāno ‘na kho ahaṁ, vaccha, evaṁdiṭṭhi— taṁ jīvaṁ taṁ sarīraṁ, idameva saccaṁ moghamaññan’ti vadesi. ‘Kiṁ pana, bho gotama, aññaṁ jīvaṁ aññaṁ sarīraṁ, idameva saccaṁ moghamaññanti— evaṁdiṭṭhi bhavaṁ gotamo’ti iti puṭṭho samāno ‘na kho ahaṁ, vaccha, evaṁdiṭṭhi— aññaṁ jīvaṁ aññaṁ sarīraṁ, idameva saccaṁ moghamaññan’ti vadesi. ‘Kiṁ nu kho, bho gotama, hoti tathāgato paraṁ maraṇā, idameva saccaṁ moghamaññanti— evaṁdiṭṭhi bhavaṁ gotamo’ti iti puṭṭho samāno ‘na kho ahaṁ, vaccha, evaṁdiṭṭhi— hoti tathāgato paraṁ maraṇā, idameva saccaṁ moghamaññan’ti vadesi. ‘Kiṁ pana, bho gotama, na hoti tathāgato paraṁ maraṇā, idameva saccaṁ moghamaññanti— evaṁdiṭṭhi bhavaṁ gotamo’ti iti puṭṭho samāno ‘na kho ahaṁ, vaccha, evaṁdiṭṭhi— na hoti tathāgato paraṁ maraṇā, idameva saccaṁ moghamaññan’ti vadesi. ‘Kiṁ nu kho, bho gotama, hoti ca na ca hoti tathāgato paraṁ maraṇā, idameva saccaṁ moghamaññanti— evaṁdiṭṭhi bhavaṁ gotamo’ti iti puṭṭho samāno ‘na kho ahaṁ, vaccha, evaṁdiṭṭhi— hoti ca na ca hoti tathāgato paraṁ maraṇā, idameva saccaṁ moghamaññan’ti vadesi. ‘Kiṁ pana, bho gotama, neva hoti na na hoti tathāgato paraṁ maraṇā, idameva saccaṁ moghamaññanti— evaṁdiṭṭhi bhavaṁ gotamo’ti iti puṭṭho samāno ‘na kho ahaṁ, vaccha, evaṁdiṭṭhi— neva hoti na na hoti tathāgato paraṁ maraṇā, idameva saccaṁ moghamaññan’ti vadesi.",
+   "T0100-sa-2.196": "眾生神我，死此生彼，為有為無，亦有亦無，非有非無，非非有非非無。瞿曇！汝今作是說耶？」佛告犢子：「我不作是見，不作是論說言，世界有邊無邊，乃至非非有非非無。」",
+   "T0099-sa962": "佛告婆蹉種出家：「我不作如是見、如是說，乃至非有非無後死。」"
+  },
+  "a11": {
+   "mn72": "Kiṁ pana bho gotamo ādīnavaṁ sampassamāno evaṁ imāni sabbaso diṭṭhigatāni anupagato”ti?",
+   "T0100-sa-2.196": "犢子復言：「瞿曇！汝今於斯法中，見何過患，不取一見？」",
+   "T0099-sa962": "爾時，婆蹉種出家白佛言：「瞿曇！於此見，見何等過患，而於此諸見，一切不說？」"
+  },
+  "a12": {
+   "mn72": "“‘Sassato loko’ti kho, vaccha, diṭṭhigatametaṁ diṭṭhigahanaṁ diṭṭhikantāro diṭṭhivisūkaṁ diṭṭhivipphanditaṁ diṭṭhisaṁyojanaṁ sadukkhaṁ savighātaṁ saupāyāsaṁ sapariḷāhaṁ, na nibbidāya na virāgāya na nirodhāya na upasamāya na abhiññāya na sambodhāya na nibbānāya saṁvattati. ‘Asassato loko’ti kho, vaccha …pe… ‘antavā loko’ti kho, vaccha …pe… ‘anantavā loko’ti kho, vaccha …pe… ‘taṁ jīvaṁ taṁ sarīran’ti kho, vaccha …pe… ‘aññaṁ jīvaṁ aññaṁ sarīran’ti kho, vaccha …pe… ‘hoti tathāgato paraṁ maraṇā’ti kho, vaccha …pe… ‘na hoti tathāgato paraṁ maraṇā’ti kho, vaccha …pe… ‘hoti ca na ca hoti tathāgato paraṁ maraṇā’ti kho, vaccha …pe… ‘neva hoti na na hoti tathāgato paraṁ maraṇā’ti kho, vaccha, diṭṭhigatametaṁ diṭṭhigahanaṁ diṭṭhikantāro diṭṭhivisūkaṁ diṭṭhivipphanditaṁ diṭṭhisaṁyojanaṁ sadukkhaṁ savighātaṁ saupāyāsaṁ sapariḷāhaṁ, na nibbidāya na virāgāya na nirodhāya na upasamāya na abhiññāya na sambodhāya na nibbānāya saṁvattati. Imaṁ kho ahaṁ, vaccha, ādīnavaṁ sampassamāno evaṁ imāni sabbaso diṭṭhigatāni anupagato”ti.",
+   "T0100-sa-2.196": "佛告犢子：「我亦不言世界是常，唯此事實，餘皆愚闇。彼見結障，彼見所行及所觀處，彼見塵埃垢穢不淨，見結與苦俱能為害，能與憂惱，能令行人受欝𭵱熱，生諸憂患。若與見結相應，即是孾愚，亦名無聞，亦名凡夫，能令生死迴流增長。」復告犢子：「世間常無常，亦常無常，非常非無常。世界有邊，及以無邊，亦有邊亦無邊，非有邊非無邊。眾生神我，死此生彼，若有若無，亦有亦無，非有非無，非非有非非無。若有人計斯見者，名為孾愚，亦名無聞，亦名凡夫，增長生死煩惱垢污，能令行人受欝𭵱熱，生諸憂患，無有安樂。以是義故，我於此見，無所執著。」",
+   "T0099-sa962": "佛告婆蹉種出家：「若作是見，世間常，此則真實，餘則虛妄者，此是倒見、此是觀察見、此是動搖見、此是垢污見、此是結見，是苦、是閡、是惱、是熱，見結所繫，愚癡無聞凡夫於未來世，生、老、病、死、憂、悲、惱、苦生。婆蹉種出家！若作是見，世間無常、常無常、非常非無常，有邊、無邊、邊無邊、非有邊非無邊，是命是身、命異身異，如來有後死、無後死、有無後死、非有非無後死。此是倒見，乃至憂、悲、惱、苦生。」"
+  },
+  "a13": {
+   "mn72": "“Atthi pana bhoto gotamassa kiñci diṭṭhigatan”ti? “Diṭṭhigatanti kho, vaccha, apanītametaṁ tathāgatassa. Diṭṭhañhetaṁ, vaccha, tathāgatena: ‘iti rūpaṁ, iti rūpassa samudayo, iti rūpassa atthaṅgamo; iti vedanā, iti vedanāya samudayo, iti vedanāya atthaṅgamo; iti saññā, iti saññāya samudayo, iti saññāya atthaṅgamo; iti saṅkhārā, iti saṅkhārānaṁ samudayo, iti saṅkhārānaṁ atthaṅgamo; iti viññāṇaṁ, iti viññāṇassa samudayo, iti viññāṇassa atthaṅgamo’ti. Tasmā tathāgato sabbamaññitānaṁ sabbamathitānaṁ sabbaahaṅkāramamaṅkāramānānusayānaṁ khayā virāgā nirodhā cāgā paṭinissaggā anupādā vimuttoti vadāmī”ti.",
+   "T0100-sa-2.196": "犢子又問：「汝若不計如是見者，汝今所計，為是何見？」佛告犢子：「如來世尊，於久遠來諸有見者，悉皆除捨，都無諸見，雖有所見，心無取著。所謂見苦聖諦，見苦集諦，見苦滅諦，見至苦滅道諦，我悉明了，知見是已，視一切法皆是貪愛諸煩惱結，是我我所，名見取著，亦名憍慢。如斯之法，是可患厭，是故皆應當斷除之。既斷除已，獲得涅槃，寂滅清淨，如是正解脫。諸比丘等，若更受身於三有者，無有是處。」",
+   "T0099-sa962": "婆蹉種出家白佛：「瞿曇！何所見？」佛告婆蹉種出家：「如來所見已畢。婆蹉種出家！然如來見，謂見此苦聖諦、此苦集聖諦、此苦滅聖諦、此苦滅道跡聖諦；作如是知、如是見已，於一切見、一切受、一切生，一切我、我所見、我慢繫著使，斷滅、寂靜、清涼、真實，如是等解脫。比丘！生者不然，不生亦不然。」婆蹉白佛：「瞿曇！何故說言生者不然？」"
+  },
+  "a14": {
+   "mn72": "“Evaṁ vimuttacitto pana, bho gotama, bhikkhu kuhiṁ upapajjatī”ti? “Upapajjatīti kho, vaccha, na upeti”. “Tena hi, bho gotama, na upapajjatī”ti? “Na upapajjatīti kho, vaccha, na upeti”. “Tena hi, bho gotama, upapajjati ca na ca upapajjatī”ti? “Upapajjati ca na ca upapajjatīti kho, vaccha, na upeti”. “Tena hi, bho gotama, neva upapajjati na na upapajjatī”ti? “Neva upapajjati na na upapajjatīti kho, vaccha, na upeti”. “‘Evaṁ vimuttacitto pana, bho gotama, bhikkhu kuhiṁ upapajjatī’ti iti puṭṭho samāno ‘upapajjatīti kho, vaccha, na upetī’ti vadesi. ‘Tena hi, bho gotama, na upapajjatī’ti iti puṭṭho samāno ‘na upapajjatīti kho, vaccha, na upetī’ti vadesi. ‘Tena hi, bho gotama, upapajjati ca na ca upapajjatī’ti iti puṭṭho samāno ‘upapajjati ca na ca upapajjatīti kho, vaccha, na upetī’ti vadesi. ‘Tena hi, bho gotama, neva upapajjati na na upapajjatī’ti iti puṭṭho samāno ‘neva upapajjati na na upapajjatīti kho, vaccha, na upetī’ti vadesi. Etthāhaṁ, bho gotama, aññāṇamāpādiṁ, ettha sammohamāpādiṁ. Yāpi me esā bhoto gotamassa purimena kathāsallāpena ahu pasādamattā sāpi me etarahi antarahitā”ti. “Alañhi te, vaccha, aññāṇāya, alaṁ sammohāya. Gambhīro hāyaṁ, vaccha, dhammo duddaso duranubodho santo paṇīto atakkāvacaro nipuṇo paṇḍitavedanīyo. So tayā dujjāno aññadiṭṭhikena aññakhantikena aññarucikena aññatrayogena aññatrācariyakena. Tena hi, vaccha, taññevettha paṭipucchissāmi; yathā te khameyya tathā naṁ byākareyyāsi.",
+   "T0100-sa-2.196": "犢子言：「瞿曇！汝於今者，見何因緣，說無生處？」"
+  },
+  "a15": {
+   "mn72": "Taṁ kiṁ maññasi, vaccha, sace te purato aggi jaleyya, jāneyyāsi tvaṁ: ‘ayaṁ me purato aggi jalatī’”ti?",
+   "T0100-sa-2.196": "佛告犢子：「我還問汝，隨汝意答。譬如有人，於汝目前然大火聚，汝知是火然，不知此火聚，在汝前滅，汝知滅不？若復有人，來問汝言：『此火滅已，為至東方，南西北方，乃至下方，亦復如是。斯諸方中，為至何處？』若如是者，當云何答？」",
+   "T0099-sa962": "佛告婆蹉：「我今問汝，隨意答我。婆蹉！猶如有人於汝前然火，汝見火然不？即於汝前火滅，汝見火滅不？」"
+  },
+  "a16": {
+   "mn72": "“Sace me, bho gotama, purato aggi jaleyya, jāneyyāhaṁ: ‘ayaṁ me purato aggi jalatī’”ti.",
+   "T0100-sa-2.196": "犢子言：「瞿曇！若人問我，當如實答，若有草木及牛馬糞，此火與薪相得，便然不滅。草木牛糞，若都盡者，此火則滅，不至方所。」",
+   "T0099-sa962": "婆蹉白佛：「如是，瞿曇！」"
+  },
+  "a17": {
+   "mn72": "“Sace pana taṁ, vaccha, evaṁ puccheyya: ‘yo te ayaṁ purato aggi jalati ayaṁ aggi kiṁ paṭicca jalatī’ti, evaṁ puṭṭho tvaṁ, vaccha, kinti byākareyyāsī”ti? “Sace maṁ, bho gotama, evaṁ puccheyya: ‘yo te ayaṁ purato aggi jalati ayaṁ aggi kiṁ paṭicca jalatī’ti, evaṁ puṭṭho ahaṁ, bho gotama, evaṁ byākareyyaṁ: ‘yo me ayaṁ purato aggi jalati ayaṁ aggi tiṇakaṭṭhupādānaṁ paṭicca jalatī’”ti. “Sace te, vaccha, purato so aggi nibbāyeyya, jāneyyāsi tvaṁ: ‘ayaṁ me purato aggi nibbuto’”ti? “Sace me, bho gotama, purato so aggi nibbāyeyya, jāneyyāhaṁ: ‘ayaṁ me purato aggi nibbuto’”ti. “Sace pana taṁ, vaccha, evaṁ puccheyya: ‘yo te ayaṁ purato aggi nibbuto so aggi ito katamaṁ disaṁ gato— puratthimaṁ vā dakkhiṇaṁ vā pacchimaṁ vā uttaraṁ vā’ti, evaṁ puṭṭho tvaṁ, vaccha, kinti byākareyyāsī”ti? “Na upeti, bho gotama, yañhi so, bho gotama, aggi tiṇakaṭṭhupādānaṁ paṭicca ajali tassa ca pariyādānā aññassa ca anupahārā anāhāro nibbutotveva saṅkhyaṁ gacchatī”ti. “Evameva kho, vaccha, yena rūpena tathāgataṁ paññāpayamāno paññāpeyya taṁ rūpaṁ tathāgatassa pahīnaṁ ucchinnamūlaṁ tālāvatthukataṁ anabhāvaṅkataṁ āyatiṁ anuppādadhammaṁ. Rūpasaṅkhayavimutto kho, vaccha, tathāgato gambhīro appameyyo duppariyogāḷho— seyyathāpi mahāsamuddo. Upapajjatīti na upeti, na upapajjatīti na upeti, upapajjati ca na ca upapajjatīti na upeti, neva upapajjati na na upapajjatīti na upeti. Yāya vedanāya tathāgataṁ paññāpayamāno paññāpeyya sā vedanā tathāgatassa pahīnā ucchinnamūlā tālāvatthukatā anabhāvaṅkatā āyatiṁ anuppādadhammā. Vedanāsaṅkhayavimutto kho, vaccha, tathāgato gambhīro appameyyo duppariyogāḷho— seyyathāpi mahāsamuddo. Upapajjatīti na upeti, na upapajjatīti na upeti, upapajjati ca na ca upapajjatīti na upeti, neva upapajjati na na upapajjatīti na upeti. Yāya saññāya tathāgataṁ paññāpayamāno paññāpeyya sā saññā tathāgatassa pahīnā ucchinnamūlā tālāvatthukatā anabhāvaṅkatā āyatiṁ anuppādadhammā. Saññāsaṅkhayavimutto kho, vaccha, tathāgato gambhīro appameyyo duppariyogāḷho— seyyathāpi mahāsamuddo. Upapajjatīti na upeti, na upapajjatīti na upeti, upapajjati ca na ca upapajjatīti na upeti, neva upapajjati na na upapajjatīti na upeti. Yehi saṅkhārehi tathāgataṁ paññāpayamāno paññāpeyya te saṅkhārā tathāgatassa pahīnā ucchinnamūlā tālāvatthukatā anabhāvaṅkatā āyatiṁ anuppādadhammā. Saṅkhārasaṅkhayavimutto kho, vaccha, tathāgato gambhīro appameyyo duppariyogāḷho— seyyathāpi mahāsamuddo. Upapajjatīti na upeti, na upapajjatīti na upeti, upapajjati ca na ca upapajjatīti na upeti, neva upapajjati na na upapajjatīti na upeti. Yena viññāṇena tathāgataṁ paññāpayamāno paññāpeyya taṁ viññāṇaṁ tathāgatassa pahīnaṁ ucchinnamūlaṁ tālāvatthukataṁ anabhāvaṅkataṁ āyatiṁ anuppādadhammaṁ. Viññāṇasaṅkhayavimutto kho, vaccha, tathāgato gambhīro appameyyo duppariyogāḷho— seyyathāpi mahāsamuddo. Upapajjatīti na upeti, na upapajjatīti na upeti, upapajjati ca na ca upapajjatīti na upeti, neva upapajjati na na upapajjatīti na upetī”ti. Evaṁ vutte, vacchagotto paribbājako bhagavantaṁ etadavoca:",
+   "T0100-sa-2.196": "佛告犢子：「如是！如是。若言色是如來，受想行識是如來者，無有是處。何以故？如來已斷如斯色故，受想行識，亦復如是，皆悉已斷。譬如有人斷多羅樹，斷已不生，如來亦爾，斷五陰已，不復受生。寂滅無想，是無生法。」",
+   "T0099-sa962": "佛告婆蹉：「若有人問汝：『向者火然，今在何處？為東方去耶？西方、南方、北方去耶？』如是問者，汝云何說？」婆蹉白佛：「瞿曇！若有來作如是問者，我當作如是答：『若有於我前然火，薪草因緣故然，若不增薪，火則永滅，不復更起，東方、南方、西方、北方去者，是則不然。』」佛告婆蹉：「我亦如是說，色已斷已知，受、想、行、識已斷已知，斷其根本，如截多羅樹頭，無復生分，於未來世永不復起。若至東方，南、西、北方，是則不然，甚深廣大，無量無數永滅。」"
+  },
+  "a18": {
+   "T0100-sa-2.196": "犢子言：「瞿曇！我於今者，樂說譬喻，唯願聽說。」佛告之曰：「隨汝意說。」",
+   "T0099-sa962": "婆蹉白佛：「我當說譬。」佛告婆蹉：「為知是時。」婆蹉白佛：「瞿曇！"
+  },
+  "a19": {
+   "mn72": "“seyyathāpi, bho gotama, gāmassa vā nigamassa vā avidūre mahāsālarukkho. Tassa aniccatā sākhāpalāsā palujjeyyuṁ, tacapapaṭikā palujjeyyuṁ, pheggū palujjeyyuṁ; so aparena samayena apagatasākhāpalāso apagatatacapapaṭiko apagataphegguko suddho assa, sāre patiṭṭhito; evameva bhoto gotamassa pāvacanaṁ apagatasākhāpalāsaṁ apagatatacapapaṭikaṁ apagatapheggukaṁ suddhaṁ, sāre patiṭṭhitaṁ.",
+   "nan-mn72": "世尊曰：「婆蹉！汝當然無智、〔汝〕當然迷妄。婆蹉！此法是甚深、難見、難隨覺，寂靜、殊勝、超越尋伺境界，聰敏之智者當知之也。故，彼具異見者、具異信忍者、具異愛好者、具異觀行者、具異修行者是難知者也。婆蹉！今我以此問，就實如汝〔意〕其回答之。婆蹉！對此，汝如何思耶？若汝之前，燃火時，汝可知：『予之前，此火燃燒』否？」〔婆蹉曰：〕「卿瞿曇！若予之前，已燃火時，予可知：『予之前，此火燃燒。』」〔世尊曰〕「婆蹉！又，若如是問：『汝之前，此火燃燒，此火緣何而燃耶？』婆蹉！如是詢問，然，汝如何回答耶？」〔婆蹉曰：〕「卿瞿曇！若如是問我：『汝之前，此火燃燒，此火緣何而燃耶？』如是詢問，卿瞿曇！我當如是答：『予之前，此火燃燒，此火緣於草、薪、燃料而燃也。』」〔世尊曰：〕「婆蹉！若汝之前，彼火消滅，汝可知：『予之前，此火已熄滅』否？」〔婆蹉曰：〕「卿瞿曇！若予之前，彼火熄滅，我當知：『予之前，此火已熄滅也。』」〔世尊曰：〕「婆蹉！若如是問：『汝之前，此火已熄滅，彼火是由此處至何方耶？或東方、或西方、或北方、或南方耶？』婆蹉！如是詢問，然，汝如何回答耶？」〔婆蹉曰：〕「卿瞿曇！不適合也；卿瞿曇！實彼火緣於草、薪、燃料而燃，因其〔燃料〕之滅盡，又，其他之〔燃料〕不持來；彼可謂『無〔火之〕食〔燃料〕而熄滅』之名稱也。」〔世尊曰：〕「實如是，婆蹉！凡以色施設如來使知者，其色為如來所捨，斷其根本，如截多羅樹頭，成為非有，未來為不生法。婆蹉！如來實是解脫色之名稱者，〔智〕甚深者、不可量者、難以深解者，猶如大海；云『（如來）往生』是不適當，云『（如來）不往生』是不適當，云『（如來）往生亦不往生』是不適當，言『（如來）不往生亦非不往生』是不適當。又，凡以受施設如來使知者，其受為如來所捨，斷其根本，如截多羅樹頭，成非有，未來為不生法。婆蹉！如來實是解脫受之名稱者〔智〕甚深者，不可量者，難以深解者，猶如大海；云：『如來往生』是不適當，云『（如來）不往生』是不適當，云『（如來）往生亦不往生』是不適當，云『（如來）不往生亦非不往生』是不適當。凡以想施設如來使知者，其想（凡夫之知見）為如來所捨，斷其根本，如截多羅樹頭，成為非有，未來為不生法；婆蹉！如來實是解脫想之名稱者，〔智〕甚深者，不可量者……乃至……云『不往生亦非不往生』是不適當也。凡以諸行施設如來使知者，其諸行為如來所捨，斷其根本，如截多羅樹頭，成為非有，未來為不生法。婆蹉！如來實是解脫諸行之名稱者，〔智〕甚深者，不可量者……乃至……云『（如來）不往生亦非不往生』是不適當也。凡以識施設如來使知者，其識為如來所捨，斷其根本，如截多羅樹頭，成為非有，未來為不生法。婆蹉！如來實是解脫識之名稱者，〔智〕甚深者，不可量者，難以深解者，猶如大海。云『往生』是不適當，云『不往生』是不適當，云『往生亦不往生』是不適當，云『不往生亦非不往生』是不適當。」",
+   "T0100-sa-2.196": "犢子即言：「譬如去於城邑聚落不遠，平博之處有娑羅林，是娑羅林已百千年，枝葉悉墮，唯貞實在。汝今瞿曇，亦復如是，已斷一切煩惱結縛，四倒邪惑，皆悉滅盡，唯有堅固真法身在。瞿曇！當知我今緣務，將欲還歸。」",
+   "T0099-sa962": "譬如近城邑聚落，有好淨地，生堅固林，有一大堅固樹，其生已來經數千歲，日夜既久，枝葉零落，皮膚枯朽，唯幹獨立。如是，瞿曇！如來法、律離諸枝條柯葉，唯空幹堅固獨立。」"
+  },
+  "a20": {
+   "mn72": "Abhikkantaṁ, bho gotama …pe… upāsakaṁ maṁ bhavaṁ gotamo dhāretu ajjatagge pāṇupetaṁ saraṇaṁ gatan”ti. Aggivacchasuttaṁ niṭṭhitaṁ dutiyaṁ.",
+   "nan-mn72": "如是說已，婆蹉姓之普行者白世尊曰：「卿瞿曇！猶如於村里或鄉鎮附近，有大娑羅樹，彼之無常性，破壞枝、葉、破壞外皮、皮材，破壞膚材；彼〔樹〕以他日枝、葉脫落，外皮、皮材脫落，膚材脫落，唯於心材住立。如是，卿瞿曇之教語是枝、葉脫落，外皮、皮材脫落、膚材脫落，唯於心材確立。希有哉，卿瞿曇！希有哉，卿瞿曇！『猶如扶起顛倒者，揭露被覆者，對迷路者告（以道），於黑闇中持油燈，使有眼者見諸色。』實如是，卿瞿曇以種種方便說示教法。此予歸依師尊瞿曇，〔歸依〕法，〔歸依〕比丘僧伽。願師尊瞿曇，容受予自今以後終生歸依〔佛、法、僧〕為優婆塞。」",
+   "T0100-sa-2.196": "佛言：「宜知是時。」犢子梵志聞佛所說，歡喜而去。",
+   "T0099-sa962": "爾時，婆蹉出家聞佛所說，歡喜隨喜，從坐起去。"
+  }
+ }
+}
