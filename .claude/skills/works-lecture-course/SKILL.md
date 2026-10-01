@@ -1161,6 +1161,10 @@ B 線＝前人概論怎麼切（比較表）。一次派一個 Sonnet。
   金口約翰講道、路德〈論猶太人及其謊言〉等細節放進階補充。
 - **2026-10-02 作者交代「繼續一整晚」**：第四關其餘各章依序自動備料（三上、三下、五、六、七、八、九、序），
   每章一個 Sonnet、一次一個；必備且無替代的書自動進獵表，重要級與需作者判斷的事一律記「暫定」留早上確認。
+- 第三章上半備料完成（`sources_ch03a.md`，63 筆，核實 46／部分 17；必備缺 25，其中 17 已在獵表）；新增 7 本進獵表
+  （Oden、Griffith、Nicolini-Zani、翁紹軍、Atiya、Papadakis–Meyendorff、Riley-Smith）。
+  觀察：拜占庭本身與加洛林一手薄；十字軍、托缽修會、胡斯威克里夫一手未入表；亞美尼亞、喬治亞、多馬基督徒、努比亞、
+  阿拉伯語基督教、科普特與衣索比亞一手偏薄（只有景教那條線夠）。
 - 補書不只 z-lib；先查站上既有（梵二 SC／DV 中拉英在 `data/creeds/ecumenical-councils/vatican-ii/`、
   奧斯堡信條與路德小教理在 `data/creeds/protestant-confessions/`、通諭中譯在 `data/encyclicals/`），
   再查 TRC／天主教在線目錄。館藏確認沒有：《天主教教理》全本中譯、《協同書》中譯、Schmemann、Bria、Brown 第二冊。
