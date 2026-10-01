@@ -1210,6 +1210,94 @@ SETS["vimalakirti-c12"] = {
 }
 
 
+# 無量壽經：五個漢譯＋梵本大本，分四段（slug sukhavativyuha-1…4）。梵本 GRETIL 本沒有節號，
+# 骨架改用菩提流志〈無量壽如來會〉（T0310）在 CBETA 目錄裡的 42 科（法會聖眾第一…地動現瑞第四十二），
+# 各本在對應處下刀。T0360 康僧鎧、T0361 傳支婁迦讖、T0362 傳支謙、T0363 法賢不分品，用 start／end 取段。
+# 藏譯 Toh 49 無 84000 TMX，不收。
+def _sukh_versions(ends: dict[str, str], starts: dict[str, str], t0310_nodes: list[str],
+                   cuts: dict[str, list]) -> list[dict]:
+    meta = [
+        ("sa", "sa", "梵本", "《極樂莊嚴經》大本（Sukhāvatīvyūha）・GRETIL"),
+        ("T0360", "lzh", "康僧鎧本", "傳康僧鎧譯《佛說無量壽經》・252 年"),
+        ("T0361", "lzh", "平等覺經", "傳支婁迦讖譯《無量清淨平等覺經》"),
+        ("T0362", "lzh", "大阿彌陀經", "傳支謙譯《阿彌陀三耶三佛薩樓佛檀過度人道經》"),
+        ("T0363", "lzh", "法賢本", "法賢譯《大乘無量壽莊嚴經》・991 年"),
+        ("T0310", "lzh", "菩提流志本", "菩提流志譯《大寶積經・無量壽如來會》・713 年"),
+    ]
+    vs = []
+    for vid, lang, label, who in meta:
+        if vid == "sa":
+            src = {"gretil": "sa_sukhAvatIvyUha"}
+        elif vid == "T0310":
+            src = {"work": "T0310", "nodes": t0310_nodes}
+        else:
+            src = {"work": vid}
+        if vid in starts:
+            src["start"] = starts[vid]
+        elif vid != "sa":
+            src["start"] = cuts[vid][0][1]
+        if vid in ends:
+            src["end"] = ends[vid]
+        vs.append({"id": vid, "lang": lang, "label": label, "who": who, "src": src, "cuts": cuts[vid]})
+    return vs
+
+
+# 第一段（科 1–9）：序分、古佛、法藏讚佛、攝受佛土、發願、重誓偈、修行。
+# T0361、T0362 沒有讚佛偈與重誓偈（第 8 科從缺），T0362 法藏以散文向佛請願；
+# 兩本「後自致得作佛…今現在」一段提前在第 6 科。梵本第 3 科從佛第二次答阿難（sādhu … udāraḥ）起，
+# 第一次答（諸天教汝耶）與各漢譯一樣留在第 2 科。
+SETS["sukhavativyuha-1"] = {
+    "title": "無量壽經（一）・序分與法藏因地",
+    "family": "sa",
+    "intro": (
+        "五個漢譯與梵本大本並排。梵本無通行節號，科目借菩提流志本在 CBETA 目錄中的四十二科（本段第一至第九）。"
+        "願數各本不同：康僧鎧、菩提流志四十八願，梵本四十七願，法賢三十六願，平等覺經、大阿彌陀經二十四願，"
+        "願文整段並排、不逐願對齊。法藏＝曇摩迦留（平等覺）＝曇摩迦（大阿彌陀）＝作法（法賢）＝法處（菩提流志）＝Dharmākara；"
+        "世自在王＝世饒王、樓夷亘羅＝Lokeśvararāja。"
+    ),
+    "units": [
+        ("sv-00", "歸敬（梵本）"), ("sv-01", "一 法會聖眾"), ("sv-02", "二 阿難啟請・問佛光顏"),
+        ("sv-03", "三 佛許宣說・優曇華喻"), ("sv-04", "四 古佛出興・錠光以來諸佛"),
+        ("sv-05", "五 法藏出家・讚佛偈"), ("sv-06", "六 請說佛土・攝受淨剎・五劫思惟"),
+        ("sv-07", "七 發大誓願"), ("sv-08", "八 重誓偈・地動雨華"), ("sv-09", "九 修菩薩行"),
+    ],
+    "versions": _sukh_versions(
+        {"sa": "evam ukte, āyuṣmān ānando bhagavantam etad avocat : kiṃ punar bhagavan sa dharmākaro",
+         "T0360": "阿難白佛：「法藏菩薩為已成佛", "T0361": "佛言：「無量清淨佛光明最尊第一",
+         "T0362": "佛言：「阿彌陀佛，光明最尊第一", "T0363": "爾時，阿難聞佛說彼作法苾芻菩薩之行"},
+        {},
+        ["法會聖眾第一", "阿難啟請第二", "佛許宣說第三", "古佛出興第四", "法處讚佛第五", "攝受淨剎第六",
+         "發大誓願第七", "說頌自要第八", "修菩薩行第九"],
+        {"sa": [("sv-00", "P1"), ("sv-01", "evaṃ mayā śrutam"), ("sv-02", "atha khalv āyuṣmān ānanda utthāyāsanād"),
+                ("sv-03", "evam ukte, bhagavān āyuṣmantam ānandam etad avocat : sādhu sādhv ānanda ; udāraḥ"),
+                ("sv-04", "bhagavāṃs tasyaitad avocat : bhūtapūrva"), ("sv-05", "tasya khalu punar ānanda lokeśvararājasya"),
+                ("sv-06", "atha khalu ānanda sa dharmākaro bhikṣus taṃ"),
+                ("sv-07", "athānanda sa dharmākaro bhikṣus tasyāṃ velāyāṃ"),
+                ("sv-08", "atha khalv ānanda sa dharmākaro bhikṣur imān"), ("sv-09", "evaṃrūpayānanda praṇidhisaṃpadā")],
+         "T0360": [("sv-01", "我聞如是"), ("sv-02", "爾時，世尊諸根悅豫"), ("sv-03", "佛言：「善哉，阿難！所問甚快"),
+                   ("sv-04", "佛告阿難：「乃往過去"), ("sv-05", "時有國王，聞佛說法"),
+                   ("sv-06", "佛告阿難：「法藏比丘說此頌已"), ("sv-07", "比丘白佛：『唯垂聽察"),
+                   ("sv-08", "佛告阿難：「爾時，法藏比丘說此願已"), ("sv-09", "於是法藏比丘具足修滿如是大願")],
+         "T0361": [("sv-01", "佛在王舍國靈鷲山中"), ("sv-02", "於時佛坐，思念正道"),
+                   ("sv-03", "佛言：「善哉，阿難！若所問者甚深快善"), ("sv-04", "佛語阿難：「前已過去劫"),
+                   ("sv-05", "「世饒王聞經道"), ("sv-06", "「法寶藏比丘說此唱讚"), ("sv-07", "佛言：「何等為二十四願者"),
+                   ("sv-09", "佛告阿難：「無量清淨佛為菩薩時")],
+         "T0362": [("sv-01", "佛在羅閱祇耆闍崛山中"), ("sv-02", "時佛坐息思念正道"),
+                   ("sv-03", "佛言：「善哉，善哉！賢者阿難"), ("sv-04", "佛告阿難：「前已過去事"),
+                   ("sv-05", "乃爾時世有大國王"), ("sv-06", "白佛言：『我欲求佛為菩薩道"), ("sv-07", "佛言：「何為二十四願"),
+                   ("sv-09", "佛告阿難：「阿彌陀為菩薩時")],
+         "T0363": [("sv-01", "如是我聞"), ("sv-02", "爾時，尊者阿難即從座起"), ("sv-03", "佛告阿難：「善哉，善哉！汝為利益"),
+                   ("sv-04", "佛告阿難：「如過去無量無邊"), ("sv-05", "而於法中，有一苾芻，名曰作法"),
+                   ("sv-06", "爾時，世尊告阿難言：「彼作法苾芻說是偈已"), ("sv-07", "爾時，作法苾芻聞佛聖旨"),
+                   ("sv-08", "爾時作法苾芻，向彼佛前"), ("sv-09", "「復次，阿難！時作法苾芻，對世自在王如來")],
+         "T0310": [("sv-01", "如是我聞"), ("sv-02", "爾時尊者阿難從坐而起"), ("sv-03", "佛告阿難：「善哉善哉！汝今快問"),
+                   ("sv-04", "爾時佛告阿難：「往昔過阿僧祇"), ("sv-05", "「阿難！彼佛法中有一比丘名曰法處"),
+                   ("sv-06", "「復次阿難！法處比丘讚佛德已"), ("sv-07", "「法處白言：『唯願世尊大慈留聽"),
+                   ("sv-08", "爾時佛告阿難：「彼法處比丘於世間自在王如來前發此願已"),
+                   ("sv-09", "佛告阿難：「彼法處比丘於世間自在王如來。及諸天人")]}),
+}
+
+
 # ── 讀原文 ──────────────────────────────────────────────────────────────────
 def read_jsonl(work: str) -> list[dict]:
     return [json.loads(l) for l in (TRIP / f"{work}.jsonl").read_text(encoding="utf-8").splitlines() if l.strip()]
@@ -1278,6 +1366,21 @@ def orig_lines(src: dict) -> list[str]:
     raise SystemExit(f"  ✗ {src['orig']}: orig.json 沒有 {src['lang']} {want or ''}")
 
 
+def clip(whole: str, src: dict) -> str:
+    """原典長經分段對讀：只取 start 那幾個字起、end 那幾個字前（無量壽經梵本大本）。"""
+    if "start" in src:
+        i = whole.find(src["start"])
+        if i < 0:
+            raise SystemExit(f"  ✗ 找不到起點「{src['start']}」")
+        whole = whole[i:]
+    if "end" in src:
+        j = whole.find(src["end"])
+        if j < 0:
+            raise SystemExit(f"  ✗ 找不到截止點「{src['end']}」")
+        whole = whole[:j]
+    return whole
+
+
 def norm(s: str) -> str:
     return re.sub(r"\s+", "", s)
 
@@ -1297,7 +1400,7 @@ def cut_version(v: dict, unit_order: list[str]) -> dict[str, str]:
             pieces.append((u, " ".join(lines[start:end])))
         whole = " ".join(lines)
     else:
-        whole = zh_text(v["src"]) if "work" in v["src"] else "\n".join(orig_lines(v["src"]))
+        whole = zh_text(v["src"]) if "work" in v["src"] else clip("\n".join(orig_lines(v["src"])), v["src"])
         pos = []
         at = 0
         for u, snip in v["cuts"]:
