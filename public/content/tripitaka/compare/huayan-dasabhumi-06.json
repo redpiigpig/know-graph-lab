@@ -1,0 +1,555 @@
+{
+ "slug": "huayan-dasabhumi-06",
+ "title": "華嚴經・十地品（六）現前地",
+ "family": "sa",
+ "intro": "第六地：梵 abhimukhī＝現前地（漸備經作目前住）。本地即十二因緣觀：十平等法、得隨順忍、以大悲觀世間生滅、一一有支釋義、無作者與「三界唯心」（有支皆依一心）、各支二種業用、有支相緣不斷與三道、三世與三苦、十種逆順觀而入空、無相、無願三解脫門、空三昧等與十種意樂、般若增上見佛（琉璃、月光喻）、多作善化天王，末為重頌。漸備經此地譯文極自由，切點按內容落在最近的對應句。梵本讚歎偈印在長行之後（⇅）。",
+ "units": [
+  {
+   "id": "d6-00",
+   "label": "讚歎・解脫月請說"
+  },
+  {
+   "id": "d6-01",
+   "label": "十平等法入第六地"
+  },
+  {
+   "id": "d6-02",
+   "label": "得明利隨順忍"
+  },
+  {
+   "id": "d6-03",
+   "label": "大悲觀世間生滅・凡夫著我而起有支"
+  },
+  {
+   "id": "d6-04",
+   "label": "一一有支釋義"
+  },
+  {
+   "id": "d6-05",
+   "label": "無作者・三界唯心"
+  },
+  {
+   "id": "d6-06",
+   "label": "有支各二種業用"
+  },
+  {
+   "id": "d6-07",
+   "label": "有支相緣不斷・煩惱業苦三道"
+  },
+  {
+   "id": "d6-08",
+   "label": "三世觀待・三苦・因緣生滅"
+  },
+  {
+   "id": "d6-09",
+   "label": "十種逆順觀緣起・空無相無願現前"
+  },
+  {
+   "id": "d6-10",
+   "label": "修三解脫門・大悲不捨・不住有為"
+  },
+  {
+   "id": "d6-11",
+   "label": "空三昧等現前・十種意樂"
+  },
+  {
+   "id": "d6-12",
+   "label": "般若增上・見佛（琉璃、月光喻）"
+  },
+  {
+   "id": "d6-13",
+   "label": "多作善化天王"
+  },
+  {
+   "id": "d6-14",
+   "label": "重頌"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本",
+   "who": "Daśabhūmikasūtra・GRETIL（Vaidya 1967）",
+   "reorder": true
+  },
+  {
+   "id": "T0285",
+   "lang": "lzh",
+   "label": "漸備經",
+   "who": "竺法護譯《漸備一切智德經》・297 年",
+   "work": "T0285"
+  },
+  {
+   "id": "T0286",
+   "lang": "lzh",
+   "label": "十住經",
+   "who": "鳩摩羅什譯《十住經》・五世紀初",
+   "work": "T0286"
+  },
+  {
+   "id": "T0278",
+   "lang": "lzh",
+   "label": "六十華嚴",
+   "who": "佛馱跋陀羅譯《華嚴經》十地品・421 年",
+   "work": "T0278"
+  },
+  {
+   "id": "T0279",
+   "lang": "lzh",
+   "label": "八十華嚴",
+   "who": "實叉難陀譯《華嚴經》十地品・699 年",
+   "work": "T0279"
+  },
+  {
+   "id": "T0287",
+   "lang": "lzh",
+   "label": "十地經",
+   "who": "尸羅達摩譯《佛說十地經》・790 年頃",
+   "work": "T0287"
+  },
+  {
+   "id": "bo",
+   "lang": "bo",
+   "label": "藏譯",
+   "who": "德格版 Toh 44 第 31 品・84000"
+  },
+  {
+   "id": "en",
+   "lang": "en",
+   "label": "84000 英譯",
+   "who": "譯自藏譯・與藏文逐句對齊"
+  }
+ ],
+ "works": [
+  "T0278",
+  "T0279",
+  "T0285",
+  "T0286",
+  "T0287"
+ ],
+ "anchors": [
+  {
+   "work": "T0285",
+   "node": "初發意悅豫住品第一",
+   "uid": "T10n0285_p0458a20"
+  },
+  {
+   "work": "T0285",
+   "node": "漸備一切智德經離垢住品第二",
+   "uid": "T10n0285_p0465c04"
+  },
+  {
+   "work": "T0285",
+   "node": "興光住品第三",
+   "uid": "T10n0285_p0468b24"
+  },
+  {
+   "work": "T0285",
+   "node": "漸備經暉曜住品第四",
+   "uid": "T10n0285_p0471a15"
+  },
+  {
+   "work": "T0285",
+   "node": "難勝住品第五",
+   "uid": "T10n0285_p0473a27"
+  },
+  {
+   "work": "T0285",
+   "node": "漸備經目前住品第六",
+   "uid": "T10n0285_p0475c21"
+  },
+  {
+   "work": "T0285",
+   "node": "玄妙住品第七",
+   "uid": "T10n0285_p0478c26"
+  },
+  {
+   "work": "T0285",
+   "node": "漸備經不動住品第八",
+   "uid": "T10n0285_p0482b02"
+  },
+  {
+   "work": "T0285",
+   "node": "漸備經善哉意住品第九",
+   "uid": "T10n0285_p0485c26"
+  },
+  {
+   "work": "T0285",
+   "node": "金剛藏問菩薩住品第十",
+   "uid": "T10n0285_p0490a05"
+  },
+  {
+   "work": "T0286",
+   "node": "歡喜地第一",
+   "uid": "T10n0286_p0497c06"
+  },
+  {
+   "work": "T0286",
+   "node": "離垢地第二",
+   "uid": "T10n0286_p0504b06"
+  },
+  {
+   "work": "T0286",
+   "node": "明地第三",
+   "uid": "T10n0286_p0506c27"
+  },
+  {
+   "work": "T0286",
+   "node": "焰地第四",
+   "uid": "T10n0286_p0509b19"
+  },
+  {
+   "work": "T0286",
+   "node": "難勝地第五",
+   "uid": "T10n0286_p0511b08"
+  },
+  {
+   "work": "T0286",
+   "node": "現前地第六",
+   "uid": "T10n0286_p0514a05"
+  },
+  {
+   "work": "T0286",
+   "node": "遠行地第七",
+   "uid": "T10n0286_p0517a09"
+  },
+  {
+   "work": "T0286",
+   "node": "不動地第八",
+   "uid": "T10n0286_p0520b06"
+  },
+  {
+   "work": "T0286",
+   "node": "妙善地第九",
+   "uid": "T10n0286_p0524a17"
+  },
+  {
+   "work": "T0286",
+   "node": "法雲地第十",
+   "uid": "T10n0286_p0527c13"
+  },
+  {
+   "work": "T0278",
+   "node": "十地品第二十二之一",
+   "uid": "T09n0278_p0542a05"
+  },
+  {
+   "work": "T0278",
+   "node": "十地品第二十二之二",
+   "uid": "T09n0278_p0548c05"
+  },
+  {
+   "work": "T0278",
+   "node": "十地品第二十二之三",
+   "uid": "T09n0278_p0555b07"
+  },
+  {
+   "work": "T0278",
+   "node": "十地品第二十二之四",
+   "uid": "T09n0278_p0564a05"
+  },
+  {
+   "work": "T0278",
+   "node": "十地品第二十二之五",
+   "uid": "T09n0278_p0571a10"
+  },
+  {
+   "work": "T0279",
+   "node": "十地品第二十六之一",
+   "uid": "T10n0279_p0178b28"
+  },
+  {
+   "work": "T0279",
+   "node": "第一地",
+   "uid": "T10n0279_p0181a10"
+  },
+  {
+   "work": "T0279",
+   "node": "十地品第二十六之二",
+   "uid": "T10n0279_p0185a05"
+  },
+  {
+   "work": "T0279",
+   "node": "第二地",
+   "uid": "T10n0279_p0185a05.2"
+  },
+  {
+   "work": "T0279",
+   "node": "第三地",
+   "uid": "T10n0279_p0187a29"
+  },
+  {
+   "work": "T0279",
+   "node": "十地品第二十六之三",
+   "uid": "T10n0279_p0189b20"
+  },
+  {
+   "work": "T0279",
+   "node": "第四地",
+   "uid": "T10n0279_p0189b20.2"
+  },
+  {
+   "work": "T0279",
+   "node": "第五地",
+   "uid": "T10n0279_p0191a20"
+  },
+  {
+   "work": "T0279",
+   "node": "十地品第二十六之四",
+   "uid": "T10n0279_p0193b17"
+  },
+  {
+   "work": "T0279",
+   "node": "第六地",
+   "uid": "T10n0279_p0193b17.2"
+  },
+  {
+   "work": "T0279",
+   "node": "第七地",
+   "uid": "T10n0279_p0195c22"
+  },
+  {
+   "work": "T0279",
+   "node": "十地品第二十六之五",
+   "uid": "T10n0279_p0198c05"
+  },
+  {
+   "work": "T0279",
+   "node": "第八地",
+   "uid": "T10n0279_p0198c05.2"
+  },
+  {
+   "work": "T0279",
+   "node": "第九地",
+   "uid": "T10n0279_p0201c14"
+  },
+  {
+   "work": "T0279",
+   "node": "十地品第二十六之六",
+   "uid": "T10n0279_p0204c19"
+  },
+  {
+   "work": "T0279",
+   "node": "第十地",
+   "uid": "T10n0279_p0204c19.2"
+  },
+  {
+   "work": "T0287",
+   "node": "菩薩極喜地第一之一",
+   "uid": "T10n0287_p0535a28"
+  },
+  {
+   "work": "T0287",
+   "node": "菩薩極喜地之餘",
+   "uid": "T10n0287_p0539c06"
+  },
+  {
+   "work": "T0287",
+   "node": "菩薩離垢地第二",
+   "uid": "T10n0287_p0542b12"
+  },
+  {
+   "work": "T0287",
+   "node": "菩薩發光地第三",
+   "uid": "T10n0287_p0545a06"
+  },
+  {
+   "work": "T0287",
+   "node": "菩薩焰慧地第四",
+   "uid": "T10n0287_p0547c03"
+  },
+  {
+   "work": "T0287",
+   "node": "菩薩難勝地第五",
+   "uid": "T10n0287_p0549c21"
+  },
+  {
+   "work": "T0287",
+   "node": "菩薩現前地第六之一",
+   "uid": "T10n0287_p0552b06"
+  },
+  {
+   "work": "T0287",
+   "node": "菩薩現前地之餘",
+   "uid": "T10n0287_p0554b06"
+  },
+  {
+   "work": "T0287",
+   "node": "菩薩遠行地第七",
+   "uid": "T10n0287_p0555c03"
+  },
+  {
+   "work": "T0287",
+   "node": "菩薩不動地第八",
+   "uid": "T10n0287_p0559a06"
+  },
+  {
+   "work": "T0287",
+   "node": "菩薩善慧地第九",
+   "uid": "T10n0287_p0563a14"
+  },
+  {
+   "work": "T0287",
+   "node": "菩薩法雲地第十之一",
+   "uid": "T10n0287_p0567a10"
+  },
+  {
+   "work": "T0287",
+   "node": "菩薩法雲地之餘",
+   "uid": "T10n0287_p0570c14"
+  }
+ ],
+ "cells": {
+  "d6-00": {
+   "sa": "6 abhimukhī nāma ṣaṣṭhī bhūmiḥ / upakramagāthāḥ / caraṇavara śruṇitvā bhūmiśreṣṭhaṃ vidūnāṃ gagani sugataputrā harṣitāḥ puṣpavarṣī / maṇiratana udārā ābhayuktā viśuddhā abhikira sugatasya sādhviti vyāharantaḥ // 1 // maruta śatasahasrā harṣitā antarīkṣe diviya rucira citrā ratnacūrṇā udārāḥ / abhikira sugatebhyo gandhamālyānulepān chatradhvajāpatākāhāracandrārdhahārān // 2 // marupati vaśavartī sarvadevagaṇena upari khaga paṭhitvā megha ratnāmayāni / abhikiriṣu prasannaḥ pūjanārthaṃ jinasya sādhu sugataputrā vyāharī hṛṣṭacittāḥ // 3 // amaravadhusahasrāṇyantarīkṣe sthitāni gīta ruta manojñā vādyasaṃgītiyuktā / sarvarutasvarebhyo eva śabdā ravante jina kṛtu sumanojñaiḥ kleśatāpasya hantā // 4 // śūnya prakṛtiśāntā sarvadharmānimittāḥ khagapathasamatulyā nirvikalpā viśuddhāḥ / gatisthitivinirvṛttā niṣprapañcā aśeṣā tathatasama tathatvāddharmatā nirvikalpā // 5 // yaiḥ punaranubuddhāḥ sarvadharmeva teṣāṃ bhāvi tatha abhāve iñjanā nāsti kācit / kṛpa karuṇa jage ca mocanārthaṃ prayuktāste hi sugataputrā aurasā dharmajātāḥ // 6 // dānacari carante sarva hitvā nimittaṃ śīlasudhṛtacittāṃ ādiśāntā praśāntāḥ / jagati kṛta kṣamante akṣayā dharmajñānī viriyabalaupetāḥ sarvadharmāviviktāḥ // 7 // dhyānanayapraviṣṭā jīrṇakleśā viśuddhāḥ sarvaviditavastū ādiśūnyādhimuktāḥ / Dbh 87 jñānakriyabalāḍhyā nityayuktā jagārthaṃ te hi sugataputrāḥ śāntapāpā mahātmāḥ // 8// īdṛśā rutasahasra bhaṇitvā khe sthitāḥ sumadhurā surakanyāḥ / tūṣṇibhūta jinamīkṣi prasannā dharmagauravaratā marukanyāḥ // 9 // vimukticandra abravīdvajragarbhaṃ viśāradam / kīdṛśākāraniṣpattiḥ pañcamāyāmanantaram // 10 //",
+   "T0285": "時諸佛子，聞班宣此諸菩薩行，從地踊上，住虛空中，歡喜雨華，明月珠寶，瓔珞衣服，光明清淨，供散佛上，口歎善哉。一切神明，處虛空中，百千之眾，莫不踊躍。時諸天下殊妙雜寶，貢奉眾祐，香華塗香，繒幡幢蓋，諸魔眷屬，自在天子，諸天俱來，在於其上，遊步虛無，雨諸寶華，其心悅豫，供養最勝，意抱無量，口宣善哉。諸佛之子眾神皆集，無數億千，亦住於上，鼓眾妓樂，其音清和，又一切妓，暢如斯音，佛響仁和，棄散惡塵，本淨空寂，消眾法想，猶如虛無，等無思念，行步清淨，住立成就，不著於俗，永無放逸，無本平等，而悉真正，法無想念，若有曉了，諸法悉無，則成無本，無所有業，輒無所思，愍傷眾生，精修救度，是為佛子法王諸子修布施行，皆捨相著，其戒堅固，心性恬怕，為眾生忍，無盡法慧，授精進力，令諸法寂，入禪定門，淨除眾塵，察諸萬物，信解空無，聖慧力成，為一切護。是諸佛子，高德除穢，如是聲有百千，自然宣柔和音，最勝大聖。尋默然時諸天玉女，眾如食息，還復天上，金剛藏歎志勇猛，化得行成第五住地，遂致究竟，莫能廢哉。",
+   "T0286": "諸菩薩聞說，上地之行相， 在於虛空中，雨眾妙珍寶、 放清淨光明，供養於世尊， 咸讚言：「善哉，善哉！金剛藏！」 時有無量億，諸天皆歡喜， 於上虛空中，雨眾寶末香， 光明相綺錯，微妙甚可樂， 眾香華瓔珞、幡蓋雨佛上。 他化自在王，與諸眷屬等， 雨眾妙寶物，雰雰如雲下， 歌頌供養佛，稱歎金剛藏， 咸讚言：「善哉，善哉，快說此。」 千萬億天女，於上虛空中， 作眾天音樂，歌歎佛功德， 咸作如是言：「如來之所說， 微妙無有量，能滅諸煩惱。 諸法本性空，無有毫末相， 空無有分別，同若如虛空。 無有去住相，亦無有戲論， 本來常清淨，如如無分別。 若人能通達，一切諸法性， 於有於無中，其心不動搖。 但以大悲心，為度諸眾生， 是名諸佛子，從佛口法生。 常行於布施，利益諸眾生； 本來雖善淨，持戒而堅心； 雖知法無傷，而行於忍辱； 雖知法性離，而行於精進； 雖先滅煩惱，而入於諸禪； 雖先解法空，而選擇諸法。 寂滅智雖多，而求利世間， 能滅諸惡者，名之為大人。」 如是諸天女，百千種妙音， 稱讚歌頌已，皆默然觀佛。 解脫月菩薩，請金剛藏言： 「當以何相貌，得成第六地？」",
+   "T0278": "第六地諸菩薩聞說，上地之行相， 在於虛空中，雨眾妙珍寶， 放清淨光明，供養於世尊， 咸讚言善哉，善哉金剛藏。 無量億諸天，心皆大歡喜， 於上虛空中，雨種種珍寶， 光明相綺錯，微妙甚可樂， 香華諸瓔珞，幡蓋散佛上， 他化自在王，與諸眷屬等， 雨眾妙寶物，雰雰如雪下， 歌頌供養佛，稱歎金剛藏， 咸讚言善哉，快說諸地行。 千萬億天女，於上虛空中， 作天眾妓樂，歌歎佛功德。 咸作如是言：「如來之所說， 微妙無有量，能滅諸煩惱。 諸法本性空，無有毫末相， 空無有分別，同若如虛空。 無有去住相，亦無有戲論， 本來常清淨，如如無分別。 若人能通達，一切諸法性， 於有於無中，其心不動搖。 但以大悲心，為度諸眾生， 是名諸佛子，從佛口法生。 常行於布施，利益諸眾生， 本來雖清淨，持戒而堅心， 雖本心無傷，而行於忍辱， 雖知法性離，而行於精進， 雖先滅煩惱，而入於諸禪， 雖先解法空，而分別諸法。 寂滅智雖多，而求利世間， 能滅諸惡者，名之為大人。」 如是諸天女，百千種妙音， 稱讚歌頌已，默然而觀佛。 解脫月菩薩，請金剛藏言： 「當以何行相，得成第六地？」",
+   "T0279": "菩薩既聞諸勝行，其心歡喜雨妙華， 放淨光明散寶珠，供養如來稱善說。 百千天眾皆欣慶，共在空中散眾寶， 華鬘瓔珞及幢幡，寶蓋塗香咸供佛。 自在天王并眷屬，心生歡喜住空中， 散寶成雲持供養，讚言：「佛子快宣說！」 無量天女空中住，共以樂音歌讚佛， 音中悉作如是言：「佛語能除煩惱病。 法性本寂無諸相，猶如虛空不分別， 超諸取著絕言道，真實平等常清淨。 若能通達諸法性，於有於無心不動。 為欲救世勤修行，此佛口生真佛子。 不取眾相而行施，本絕諸惡堅持戒， 解法無害常堪忍，知法性離具精進， 已盡煩惱入諸禪，善達性空分別法， 具足智力能博濟，滅除眾惡稱大士。」 如是妙音千萬種，讚已默然瞻仰佛。 解脫月語金剛藏：「以何行相入後地？」",
+   "T0287": "菩薩既聞諸勝行，其心歡喜雨妙花； 放淨光明散寶珍，供養如來稱善說。 百千天眾皆欣慶，共在空中雨眾寶； 花鬘、纓珞及幢幡，寶蓋、塗香咸供佛。 自在天王并眷屬，心生歡喜在空中； 散寶成雲持供養，讚言佛子快宣說。 無量天女空中住，共以樂音歌讚佛； 聲中悉作如是言：「佛語能除煩惱病， 法性本寂無諸相；猶如虛空離分別， 超諸取著絕言道，真實等品常清淨。 若能通達諸法性，即於有無心不動； 為欲救世勤修行，此佛口生真佛子。 不取眾相而行施，本絕諸惡堅持戒， 解法無生常堪忍，知法性離具精進， 煩惱已盡而入禪，善達性空分別法， 具足智力能廣濟，滅除眾惡稱大士。」 如是妙音千萬種，讚已默然瞻仰佛； 解脫月言：「金剛藏！以何行相入後地？」",
+   "bo": "།མཁས་པ་རྣམས་ཀྱི་ས་མཆོག་སྤྱོད་པ་རབ་ཐོབ་ནས། །རྒྱལ་སྲས་དགའ་ཞིང་མཁའ་ལས་མེ་ཏོག་ཆར་འབེབས་སོ། །ནོར་བུ་རིན་ཆེན་རྣམ་དག་འོད་གསལ་རྒྱ་ཆེན་འབྱུང་བ་དག །བདེ་བར་གཤེགས་ལ་མངོན་འཐོར་དགེ་ཞེས་རྣམ་པར་བརྗོད། ལྷ་རྣམས་བརྒྱ་ཕྲག་སྟོང་གྲངས་དགའ་ཞིང་བར་སྣང་ལས། །ལྷ་རྫས་ཡིད་འོང་རིན་ཆེན་སྣ་ཚོགས་ཕྱེ་མའི་རྣམས། །བདེ་བར་གཤེགས་ལ་མངོན་འཐོར་བྱུག་པ་ཕྲེང་བ་སྤོས། །གདུགས་དང་རྒྱལ་མཚན་བ་དན་སེ་མོ་དོ་ཡང་འབུལ། ལྷའི་དབང་པོ་དབང་བསྒྱུར་ལྷ་ཚོགས་མང་པོ་དང་། །སྟེང་གི་མཁའ་ལ་འཁོད་ཅིང་རིན་ཆེན་སྤྲིན་ཡངས་པ། །རྒྱལ་བ་མཆོད་པའི་དོན་དུ་བདེ་བར་གཤེགས་ལ་འཐོར། །དགའ་བའི་སེམས་ཀྱིས་རྒྱལ་སྲས་ལེགས་ཞེས་རྣམ་པར་བརྗོད། །བར་སྣང་གནས་ནས་ལྷ་ཡི་བུ་མོ་སྟོང་གིས་ཀྱང་། །གླུ་དབྱངས་ཡིད་འོང་རོལ་མོའི་སྒྲ་དབྱངས་སྙན་པ་ཕྱུང་། །སྒྲ་རྣམས་ཀུན་གྱི་དབྱངས་ལས་འདི་སྐད་ཚིག་ཀྱང་བྱུང་། །རྒྱལ་བའི་གསུང་ནི་ཡིད་འོང་ཉོན་མོངས་གདུང་བ་སེལ། །ཆོས་རྣམས་ཐམས་ཅད་སྟོང་ཞིང་དངོས་ཞི་མཚན་མ་མེད། །ནམ་མཁའི་དབྱིངས་དང་མཚུངས་མཉམ་རྣམ་དག་རྣམ་མི་རྟོག །འགྲོ་དང་གནས་ལས་རྣམ་འདས་མ་ལུས་སྤྲོས་པ་མེད། །དེ་བཞིན་ཉིད་དུ་ཆོས་རྣམས་ཡང་དག་མཉམ་མི་རྟོག །ཆོས་རྣམས་ཀུན་ལ་སྣང་བ་ཁོང་དུ་སུས་ཆུད་པ། །དེ་ལ་དངོས་དང་དངོས་མེད་གཡོ་བ་གང་ཡང་མེད། །སྙིང་རྗེ་བརྩེ་བས་འགྲོ་བ་དགྲོལ་ཕྱིར་བརྩོན་པ་ནི། །དེ་དང་དེ་དག་རྒྱལ་སྲས་ཆོས་ཀྱི་སྐུ་སྐྱེས་པའོ། །མཚན་མ་ཐམས་ཅད་སྤངས་ཤིང་སྦྱིན་པའི་སྤྱད་པ་སྤྱོད། ། ཚུལ་ཁྲིམས་ཤིན་ཏུ་སེམས་དམ་སྔོན་ནས་ཞི་ཞིང་དུ་ལ། །འགྲོ་བའི་དོན་དུ་ཆོས་ཀྱི་ཡེ་ཤེས་མཉམས་བཟོད། །བརྩོན་འགྲུས་སྟོབས་དང་ལྡན་ཞིང་ཆོས་རྣམས་ཀུན་གྱིས་དབེན། །ཉོན་མོངས་བསྩལ་ཞིང་རྣམ་དག་བསམ་གཏན་ཚུལ་ལ་ཞུགས། །དངོས་པོ་ཐམས་ཅད་སྔ་ནས་ཞི་ཞིང་རྣམ་པར་ཕྱེ། །ཡེ་ཤེས་སྤྱོད་དང་སྟོབས་ཕྱུག་རྟག་ཏུ་འགྲོ་དོན་བརྩོན། །རྒྱལ་སྲས་དེ་དག་སྡིག་ཞི་ཆེ་བ་ཉིད་དང་ལྡན། །དེ་སྐད་སྒྲ་དབྱངས་སྙན་པ་སྟོང་གྲངས་བརྗོད་བྱས་ནས། །ལྷའི་བུ་མོ་མི་སྨྲ་དད་པར་ཐུབ་ལ་ལྟ། །རྡོ་རྗེའི་སྙིང་པོ་འཇིགས་མེད་ལ། ཐར་པའི་ཟླ་བས་ཡང་སྨྲས་པ།",
+   "en": "Having heard  this perfect conduct of the wise, The jinaputras who were in the sky sent down a rain of flowers And sprinkled pure, radiant, sublime, precious jewels Upon the Sugata and declared, “Well done!” A hundred thousand delighted deities who were in the sky Sprinkled a variety of beautiful divine precious powders, Perfumed garlands, parasols, banners, pennants, And sixty-four-string necklaces upon the Sugata. Vaśavartin, who is the lord of the deities, and a host of all the devas Residing in the sky above Scattered clouds of jewels as an offering to the Jina, And with delight they said, “Well done, jinaputras!” A thousand goddesses  who were residing in the sky, With the sound of beautiful songs, with songs and music combined, With the sound of all melodies, sang these words: “The Jina’s beautiful speech eliminates the torment of the kleśas. “All phenomena are free of concepts, are empty, and have the nature of peace. They are the same as space, pure and without thought. They transcend going or staying and are free of every conceptual elaboration. They are truly equal in their true nature; the nature of phenomena is beyond thought.  “Those who have understood all phenomena Are completely unaffected by existence and nonexistence. With love and compassion, for the sake of liberation, they act in this world. These jinaputras, these bodhisattvas,  are born from the Dharma. “They practice generosity, disregarding all concepts. Their minds firm in correct conduct, peaceful to begin with, they are at peace. They have patience in the world, and their Dharma wisdom is indestructible. They have diligence and strength and are detached from all phenomena. “Having entered dhyāna and being purified, their kleśas faded away. They know all things and are first of all focused upon emptiness. They have the power of wisdom’s activity and are constantly engaged in benefiting beings. They are jinaputras, great beings, in whom all evil has ceased.” In that way they sang Thousands of beautiful songs, And then the goddesses were silent, Gazing upon the Muni with faith. Then Vimukticandra said To eloquent  Vajragarbha, “What kind of attainments are there Consequent to the fifth bhūmi?”"
+  },
+  "d6-01": {
+   "sa": "6 abhimukhī nāma ṣaṣṭhī bhūmiḥ / vajragarmo bodhisattva āha - yo 'yaṃ bhavanto jinaputrā bodhisattvaḥ pañcamyāṃ bodhisattvabhūmau suparipūrṇamārgaḥ ṣaṣṭhīṃ bodhisattvabhūmimavatarati / sa daśabhirdharmasamatābhiravatarati / katamābhirdaśabhiḥ? yaduta sarvadharmānimittasamatayā ca sarvadharmālakṣaṇasamatayā ca sarvadharmānutpādasamatayā ca sarvadharmājātatayā ca sarvadharmaviviktasamatayā ca sarvadharmādiviśuddhisamatayā ca sarvadharmaniṣprapañcasamatayā ca sarvadharmānāvyūhānirvyūhasamatayā ca sarvadharmamāyāsvapnapratibhāsapratiśrutkodakacandrapratibimbanirmāṇasamatayā ca sarvadharmabhāvābhāvādvayasamatayā ca / ābhirdaśabhirdharmasamatābhiravatarati //",
+   "T0285": "金剛藏曰：「諸佛子聽！菩薩大士，以能修成第五住者，輒超進入第六住地，則行十法。何謂為十？了一切法皆無有想，而普平等；諸相平坦，永無形類；悉無所生，超絕無侶；皆無所起，故曰平等；為甚清淨，調定真正；皆無放逸，不為馳騁；無應不應，無䨥無隻；寂寞坦然，而無倫匹；猶幻夢影，山中呼響，水月現像等亦如化；所行道業，而無二意；是為十法。",
+   "T0286": "金剛藏菩薩言：「諸佛子！菩薩摩訶薩已能具足五地行、欲入六地，當以十平等法得入於六地。何等為十？一、以無性故，一切法平等；二、以無想故，一切法平等；三、以無生故，一切法平等；四、以無滅故，一切法平等；五、以本來清淨故，一切法平等；六、以無戲論故，一切法平等；七、以不取不捨故，一切法平等；八、以離故，一切法平等；九、以幻夢影響、水中月、鏡像焰化故，一切法平等；十、以有無不二故，一切法平等。諸佛子！諸菩薩摩訶薩具足五地行，以是十平等法能入第六地。",
+   "T0278": "金剛藏菩薩言：「佛子！菩薩摩訶薩已具足五地，欲入六地，當以十平等法。何等為十？一、以無性故，一切法平等；二、以無相故，一切法平等；三、以無生故，一切法平等；四、以無成故，一切法平等；五、以本來清淨故，一切法平等；六、以無戲論故，一切法平等；七、以不取不捨故，一切法平等；八、以離故，一切法平等；九、以幻夢影響水中月故，一切法平等；十、以有無不二故，一切法平等。菩薩以是十平等法，得入第六地。",
+   "T0279": "爾時，金剛藏菩薩告解脫月菩薩言：「佛子！菩薩摩訶薩已具足第五地，欲入第六現前地，當觀察十平等法。何等為十？所謂：一切法無相故平等，無體故平等，無生故平等，無成故平等，本來清淨故平等，無戲論故平等，無取捨故平等，寂靜故平等，如幻、如夢、如影、如響、如水中月、如鏡中像、如焰、如化故平等，有、無不二故平等。",
+   "T0287": "爾時，金剛藏菩薩告眾菩薩言：「唯諸佛子！若是菩薩，第五地中所修之道善圓滿已，欲入菩薩第六地者，當以十種法平等性而入。何等為十？所謂：以一切法無相平等，以一切法無自相平等，以一切法無起平等，以一切法無生平等，以一切法寂淨平等，以一切法本來清淨平等，以一切法無戲論平等，以一切法不取、不捨平等，以一切法如幻、如夢、如影、如響、如水中月、如鏡中像、如陽焰水、如化平等，以一切法有無不二平等，以此十種法平等性入第六地。",
+   "bo": "།ས་མཆོག་ལྔ་ཡི་གོང་མ་དེ། །རྣམ་པ་ཅི་འདྲས་འགྲུབ་པར་འགྱུར། །བྱང་ཆུབ་སེམས་དཔའ་རྡོ་རྗེའི་སྙིང་པོས་སྨྲས་པ། །ཀྱེ་རྒྱལ་བའི་སྲས་དག་དེ་ལྟར་བྱང་ཆུབ་སེམས་དཔའི་ས་ལྔ་པ་ལ། སའི་ལམ་ཡོངས་སུ་རྫོགས་པའི་བྱང་ཆུབ་སེམས་དཔའ་དེ་ནི་བྱང་ཆུབ་སེམས་དཔའི་ས་དྲུག་པ་ལ་འཇུག་གོ །དེ་ཆོས་མཉམ་པ་ཉིད་བཅུས་འཇུག་སྟེ། བཅུ་གང་ཞེ་ན་འདི་ལྟ་སྟེ། ཆོས་ཐམས་ཅད་མཚན་མ་མེད་པ་མཉམ་པ་ཉིད་དང་། ཆོས་ཐམས་ཅད་མཚན་ཉིད་མེད་པ་མཉམ་པ་ཉིད་དང་། ཆོས་ཐམས་ཅད་མི་སྐྱེ་བ་མཉམ་པ་ཉིད་དང་། ཆོས་ཐམས་ཅད་མ་བྱུང་བ་མཉམ་པ་ཉིད་དང་། ཆོས་ཐམས་ཅད་དབེན་པ་མཉམ་པ་ཉིད་དང་། ཆོས་ཐམས་ཅད་སྔ་ནས་རྣམ་པར་དག་པ་མཉམ་པ་ཉིད་དང་། ཆོས་ཐམས་ཅད་སྤྲོས་པ་མེད་པ་མཉམ་པ་ཉིད་དང་། ཆོས་ཐམས་ཅད་བླང་བ་མེད་པ་དང་། དོར་བ་མེད་པ་མཉམ་པ་ཉིད་དང་། ཆོས་ཐམས་ཅད་སྒྱུ་མ་དང་རྨི་ལམ་དང་མིག་ཡོར་དང་སྒྲ་བརྙན་དང་། ཆུའི་ཟླ་བ་དང་། གཟུགས་བརྙན་དང་། སྤྲུལ་པ་དང་མཚུངས་པ་མཉམ་པ་ཉིད་དང་། ཆོས་ཐམས་ཅད་དངོས་པོ་ཡོད་པ་དང་། དངོས་པོ་མེད་པ་དང་། གཉིས་ཀ་མ་ཡིན་པ་མཉམ་པ་ཉིད་དེ།",
+   "en": "The bodhisattva Vajragarbha said, “O jinaputras! The bodhisattva who has completed the path of the fifth bodhisattva bhūmi enters the sixth bodhisattva bhūmi. He enters it through the ten kinds of sameness of phenomena. What are these ten? He enters the sixth bhūmi through these ten kinds of sameness: (1) the sameness of all phenomena in being without features; (2) the sameness of all phenomena in being without characteristics; (3) the sameness of all phenomena in being without birth; (4) the sameness of all phenomena in being without production; (5) the sameness of all phenomena in being isolated; (6) the sameness of all phenomena in being primordially pure; (7) the sameness of all phenomena in being without elaboration; (8) the sameness of all phenomena being without adoption and without rejection;  (9) the sameness of all phenomena in being like illusions, dreams, hallucinations, echoes, the moon on water, reflections, and apparitions; and (10) the sameness of all phenomena in being without the duality of existence and nonexistence."
+  },
+  "d6-02": {
+   "sa": "sa evaṃsvabhāvān sarvadharmān pratyavakṣemāṇo 'nusṛjan anulomayan avilomayan śraddadhan abhiyan pratiyan avikalpayan anusaran vyavalokayan pratipadyamānaḥ ṣaṣṭhīmabhimukhīṃ bodhisattvabhūmimanuprāpnoti tīkṣṇayā ānulomikyā kṣāntyā / na ca tāvadanutpattikadharmakṣāntimukhamanuprāpnoti //",
+   "T0285": "從第五地，逮第六住，作是行已，自然觀是一切諸法，計校思惟，反覆察之，不令錯亂近第六住。自然目見，以逮成此，則得通利，柔順法忍。不從迷惑，尚未逮近無所從生法忍，稍以近之能致自然，",
+   "T0286": "「諸佛子！若菩薩摩訶薩能如是觀一切法性、能忍隨順，得第六地；無生法忍，雖未現前，心已明利，成就順忍。",
+   "T0278": "菩薩如是觀一切法性能忍，隨順得第六地，無生法忍雖未現前，心已成就明利順忍。",
+   "T0279": "菩薩如是觀一切法自性清淨，隨順無違，得入第六現前地，得明利隨順忍，未得無生法忍。",
+   "T0287": "菩薩如是觀察隨瑩，隨順不逆一切諸法平等性故，通達第六現前智地。但以猛利須心而證，猶未現得無生忍門。",
+   "bo": "ཀྱེ་རྒྱལ་བའི་སྲས་དག །ཆོས་མཉམ་པ་ཉིད་བཅུ་པོ་འདི་དག་གིས་བྱང་ཆུབ་ སེམས་དཔའ་ས་དྲུག་པ་ལ་འཇུག་གོ །དེ་ཆོས་ཐམས་ཅད་ལ་རང་བཞིན་དེ་འདྲ་བར་རབ་ཏུ་རྟོག་ཅིང་དཔྱོད་པ་དང་། འཐུན་པར་སེམས་ཤིང་མི་འཐུན་པར་མི་བྱེད་པས་བྱང་ཆུབ་སེམས་དཔའི་ས་དྲུག་པ་འཐུན་པའི་བཟོད་པ་རྣོན་པོས་འཐོབ་སྟེ། འོན་ཀྱང་ད་དུང་མི་སྐྱེ་བའི་ཆོས་ལ་བཟོད་པ་མངོན་དུ་གྱུར་པ་ནི་ཐོབ་པ་མ་ཡིན་ནོ།",
+   "en": "“He examines that nature of all phenomena, clarifying it,  being in concord with it, and not contradicting it.  He attains the sixth bodhisattva bhūmi, Manifested, through this sharp concordant patience but has not yet attained entry into the true patience that comes from knowing phenomena to be unproduced."
+  },
+  "d6-03": {
+   "sa": "sa evaṃsvabhāvān sarvadharmānanugacchan bhūyasyā mātrayā mahākaruṇāpūrvaṃgamatvena mahākaruṇādhipateyatayā mahākaruṇāparipūrṇārthaṃ lokasya saṃbhavaṃ ca vibhavaṃ ca vyavalokayate / tasya lokasya saṃbhavaṃ ca vibhavaṃ ca vyavalokayata evaṃ bhavati - yāvatyo lokasamudācāropapattayaḥ sarvāḥ, tā ātmābhiniveśato bhavanti / ātmābhiniveśavigamato na bhavanti lokasamudācāropapattaya iti / tasyaivaṃ bhavati - tena khalu punarime bālabuddhya ātmābhiniviṣṭā ajñānatimirāvṛtā bhāvābhāvābhilāṣiṇo 'yoniśomanasikāraprasṛtā vipathaprayātā mithyānucāriṇaḥ puṇyāpuṇyāneñjyānabhisaṃskārānupacinvanti / teṣāṃ taiḥ saṃskārairavaropitaṃ cittabījaṃ sāsravaṃ sopādānamāyatyāṃ jātijarāmaraṇapunarbhavābhinirvṛttisaṃbhavopagataṃ bhavati / karmakṣetrālayamavidyāndhakāraṃ tṛṣṇāsnehamasmimānapariṣyandanataḥ / dṛṣṭikṛtajālapravṛddhyā ca nāmarūpāṅkuraḥ prādurbhavati / prādurbhūto vivardhate / vivṛddhe nāmarūpe pañcānāmindriyāṇāṃ pravṛttirbhavati / pravṛttānāmindriyāṇāmanyonya(saṃ)nipātataḥ sparśaḥ / sparśasya saṃnipātato vedanā prādurbhavati / vedanāyāstata uttare 'bhinandanā bhavati / tṛṣṇābhinandanata upādānaṃ vivardhate / upādāne vivṛddhe bhavaḥ saṃbhavati / bhave saṃbhūte skandhapañcakamunmajjati / unmagnaṃ skandhapañcakaṃ gatipañcake 'nupūrvaṃ mlāyati / mlānaṃ vigacchati / mlānavigamājjvaraparidāhaḥ / jvaraparidāhanidānāḥ sarvaśokaparidevaduḥkhadaurmanasyopāyāsāḥ samudāgacchanti / teṣāṃ na kaścitsamudānetā / svabhāvānābhogābhyāṃ ca vigacchanti / na caiṣāṃ kaścidvigamayitā / evaṃ bodhisattvo 'nulomākāraṃ pratītyasamutpādaṃ pratyavekṣate //",
+   "T0285": "入於一切諸法處所，轉能進前，致於大哀，為尊元首，顯燿大哀，具無極悲。解世五趣，有無合散，以觀如是，名第六住。乃暢世習所可由生，皆從倚已，吾我所致，以覺欲事。世無所有，懷愚意者，倚著吾我，因其無智，而成癡冥。慕樂生處，習不順業，志務犇逸，反邪之行，積累若干，罪福興衰。萬物無常，由無益生，解是所行，心善自修，消除諸漏，至真本無；其發善德，故當還返，周遊生死報應之地，所作是田，神識是種，無明之本，則是闇冥；愛是潤澤，貢高自大是其志性，長養諸見羅網眾結；使因得是，自生名色；轉增名色，則成諸根；諸根已成，起若干種所更習事；習事以起，便有痛痒；從痛痒故，便有喜樂，則益所受；以益所受，輒成所有；發意合成以成發念，因成五陰五體之形；尋至五趣，漸稍生著，以至諸著；眾猗悉備，由是發起惱熱燒炙一切憂慼啼哭之苦。諸不善業，本空無形，不了得習，無亂別者；皆復自然，稍習無蓋，故致得此；有解斯義，便無所慕。",
+   "T0286": "「是菩薩觀一切法如是相，大悲為首，增長具足，更以勝觀觀世間生滅相。故作是念：『世間所有受身生處皆以貪著我故，若離著我則無世間生處。諸凡夫人愚癡所盲，貪著於我，常樂求有，恒隨邪念行邪妄道，習起三行——罪行、福行、不動行——以是行故，起熱心種子。有漏、有取心故，起生死身，所謂業為地、識為種子、無明覆蔽、愛水為潤，我心溉灌，種種諸見令得增長，生名色牙；因名色故，生諸根；諸根合故，有觸生；從觸生受；樂受故，生渴愛；渴愛增長故，有四取；四取因緣故，起業於有；起五陰身名為生、五陰衰變名為老、衰變滅名為死，老死因緣有憂、悲、熱惱眾苦聚集。是十二因緣無有集者，自然而集；無有散者，自然而散。因緣合則有，因緣散則無。』",
+   "T0278": "是菩薩觀一切法如是相，大悲為首，增長大悲故，觀世間生滅相。作是念：『世間所有受身生處，皆以貪著我故，若離著我則無生處；一切凡夫常隨邪念，行邪妄道，愚癡所盲，貪著於我，習起三行，罪行、福行、不動行，以是行故，起有漏心種子，有漏有取心故，起生死身；所謂業為地，識為種子，無明覆蔽，愛水為潤，我心溉灌，種種諸見，令得增長；生名色芽，因名色故生諸根，諸根合故有觸，從觸生受，樂受故生愛，愛增長故有取，取因緣故有有，於有起五陰身名為生，五陰變名為老，五陰滅名為死，老死因緣，有憂悲熱惱眾苦聚集；是十二因緣無有集者，無有散者，緣合則有，緣散則無。』菩薩如是於六地中，隨順觀十二因緣。",
+   "T0279": "「佛子！此菩薩摩訶薩如是觀已，復以大悲為首、大悲增上、大悲滿足，觀世間生滅，作是念：『世間受生皆由著我，若離此著，則無生處。』復作是念：『凡夫無智，執著於我，常求有、無，不正思惟，起於妄行，行於邪道；罪行、福行、不動行，積集增長，於諸行中植心種子，有漏有取，復起後有生及老死。所謂：業為田，識為種，無明闇覆，愛水為潤，我慢溉灌，見網增長，生名色芽，名色增長生五根，諸根相對生觸，觸對生受，受後希求生愛，愛增長生取，取增長生有；有生已，於諸趣中起五蘊身，名生；生已衰變為老，終歿為死。於老死時，生諸熱惱；因熱惱故，憂愁悲歎，眾苦皆集。此因緣故，集無有集者，任運而滅亦無滅者。』菩薩如是隨順觀察緣起之相。",
+   "T0287": "菩薩隨行如是自性一切法時，以大悲愍為先導故，以大悲愍為增上故，為欲圓滿大悲愍故，觀諸世間合散生滅。菩薩觀此世生滅時，作是思惟：『世間所有受生施設，一切皆由我執而起，若離我執即無世間受生施設。』復作是念：『此諸異生愚癡無智執著於我，無明眩瞖之所覆蔽，求有非有隨不如理，作意馳散，奔騖僻路隨邪而行，集福非福不動諸行，而彼有情諸行所植有漏有取心之種子，復續來世生及老死，中有、後有業田攝藏。無明闇覆、愛水滋潤、我慢溉灌、見網增盛，生名色種芽，生已增長，名色長已五根流轉，諸根轉已遞互與識相對有觸，由觸相對諸受發生，自後於受欣樂名愛，愛增長取，取增生有，由有生已五蘊發生，五蘊起已於五趣中漸漸衰變，衰已失壞，衰失壞故有諸熱惱，因熱惱故一切愁歎，及苦憂惱眾苦皆集，此之一切無有集者，任運而滅亦無滅者。』菩薩如是隨順行相觀察緣起。",
+   "bo": "།དེ་ཆོས་ཐམས་ཅད་ལ་རང་བཞིན་དེ་ལྟར་རྟོག་པའི་ཚེ། དེ་བས་ཀྱང་སྙིང་རྗེ་ཆེན་པོ་སྔོན་དུ་འགྲོ་བ་དང་། སྙིང་རྗེ་ཆེན་པོ་ལ་དབང་སྒྱུར་བས་སྙིང་རྗེ་ཆེན་པོ་ཡོངས་སུ་རྫོགས་པར་བྱ་བའི་ཕྱིར་འཇིག་རྟེན་འབྱུང་བ་དང་། འཇིག་པ་ལ་རྣམ་པར་ལྟའོ། །དེ་འཇིག་རྟེན་འབྱུང་བ་དང་། འཇིག་པ་ལ་ལྟ་བའི་ཚེ་འདི་སྙམ་སྟེ། འཇིག་རྟེན་ཀུན་ཏུ་རྒྱུ་བའི་སྐྱེ་བ་ཇི་སྙེད་ཡོད་པ་དེ་དག་ཐམས་ཅད་བདག་ཏུ་མངོན་པར་ཞེན་པ་ལས་འབྱུང་སྟེ། བདག་ཏུ་མངོན་པར་ཞེན་པ་དང་བྲལ་ན་འབྱུང་བ་ཡང་མེད་པར་འགྱུར་རོ། །བྱིས་པའི་བློ་ཅན་བདག་ཏུ་མངོན་པར་ཞེན་པ་མི་ཤེས་པའི་རབ་རིབ་ཀྱིས་བསྒྲིབས་པ། ཡོད་པ་དང་། མེད་པ་ལ་མངོན་པར་མོས་པ། ཚུལ་བཞིན་མ་ཡིན་པ་ཡིད་ལ་བྱེད་པ་ལ་གཞོལ་བ། ཡང་དག་པ་མ་ཡིན་པར་རབ་ཏུ་ཞུགས་པ། ལོག་པའི་རྗེས་སུ་འབྲང་བ་དེ་དག་ནི་བསོད་ནམས་དང་བསོད་ནམས་མ་ཡིན་པའི་འདུ་བྱེད་ཉེ་བར་སྩོགས་ཏེ། འདུ་བྱེད་དེ་དག་གིས་ཡོངས་སུ་བསྒོས་པའི་སེམས་ཀྱིས་བོན་ཟག་པ་དང་བཅས་པ། ཉེ་བར་ལེན་པ་དང་བཅས་པ་ནི་མ་འོངས་པའི་སྐྱེ་བ་དང་། རྒ་ཤི་དང་། ཡང་སྲིད་པ་མངོན་པར་འགྲུབ་པ་འབྱུང་བར་ཉེ་བར་སོང་བ་ཡིན་ཏེ། ལས་ཀྱི་ཞིང་གི་གཞི་དང་། མ་རིག་པའི་མུན་པ་དང་སྲེད་པའི་སྣུམ་དང་། ངའི་ང་རྒྱལ་གྱིས་བརླན་པའི་ལྟ་བའི་རྣམ་པ་དང་འདྲ་བ་རབ་ཏུ་འཕེལ་བས་མིང་དང་གཟུགས་ཀྱི་མྱི་གུ་འབྱུང་སྟེ། བྱུང་ནས་རྣམ་པར་འཕེལ་ལོ། །མིང་དང་གཟུགས་ཀྱི་མྱི་གུ་རྣམ་པར་འཕེལ་ནས་དབང་པོ་ལྔ་འབྱུང་བར་འགྱུར་རོ། །དབང་པོ་ལྔ་བྱུང་ནས་ཕན་ཚུན་འདུས་ཤིང་འཕྲད་པས་ རེག་པར་འགྱུར་རོ། །རེག་པ་འདུས་པས་ཚོར་བ་འབྱུང་ངོ་། །ཚོར་ནས་དེའི་རྗེས་སུ་མངོན་པར་སྨོན་པས་སྲེད་པ་འབྱུང་ངོ་། །སྲེད་པ་ནི་ཉེ་བར་ལེན་པ་རྣམ་པར་འཕེལ་བར་བྱེད་དོ། །ཉེ་བར་ལེན་པ་རྣམ་པར་འཕེལ་བ་ལས་སྲིད་པ་འབྱུང་བར་འགྱུར་རོ། །སྲིད་པ་བྱུང་ནས་ཕུང་པོ་ལྔ་པོ་འབྱུང་བར་འགྱུར་ཏེ། ཕུང་པོ་ལྔ་བྱུང་ནས་ལམ་གྱི་རྒྱུད་ལྔར་རིམ་གྱིས་དེངས་པར་འགྱུར་རོ། །དེངས་ནས་འབྲལ་བར་འགྱུར་ཏེ་དེངས་ཤིང་བྲལ་བས། མི་དགའ་ཞིང་ཡོངས་སུ་གདུང་བར་འགྱུར་རོ། །མི་དགའ་བ་དང་ཡོངས་སུ་གདུང་བའི་རྒྱུས་མྱ་ངན་དང་སྨྲེ་སྔགས་འདོན་པ་དང་། སྡུག་བསྔལ་བ་དང་། ཡིད་མི་བདེ་བ་དང་། འཁྲུག་པ་འབྱུང་བར་འགྱུར། ཡང་དེ་དག་ལས་སུ་འང་འབྱུང་བར་བྱེད་པ་མེད་དོ། །རང་བཞིན་དང་ལྷུན་གྱིས་གྲུབ་པར་འཇིག་པར་འགྱུར་ཡང་དེ་དག་ལ་འཇིག་པར་བྱེད་པ་སུ་འང་མེད་དོ་ཞེས་དེ་ལྟར།",
+   "en": "“He observes that nature of phenomena, and with increased all-preceding compassion and mastery of compassion, he looks at the origination and destruction of the world in order to fully perfect compassion. “When he looks at the origination of the world, he thinks, ‘All the activities that arise in every world are produced by attachment to the self. If attachment to the self were to cease, there would be no arising of these activities in the world.’ “He thinks, ‘These beings with childlike understanding have attachment to the self, are enclosed in the darkness of ignorance, and wish for existence and nonexistence; their attention is devoted to the meaningless; they follow wrong paths, seek that which is false, and accumulate meritorious, nonmeritorious, and motionless formations.  Tainted mental seeds, which are endowed with grasping, are planted  by those formations, which result in the future generation of birth, old age, death, and rebirth. The basis of the field of karma, the darkness of ignorance, the oil of craving, the water of egotism, and the vast net of false views produce the sprouts of “name-and-form.” Once produced, they develop. When name-and-form have developed there is the generation of the five senses. The coming together of the five senses creates contact. The occurrence of contact generates sensation. Sensation is followed by yearning. From yearning and craving comes the development of grasping. When grasping has developed, becoming occurs. When becoming has occurred, the five skandhas manifest. The manifested five skandhas eventually decay in the five existences. Having decayed, they expire. Through their decay and expiration there is the torment of sorrow. The torment of sorrow causes all misery, lamentation, suffering, unhappiness, and distress to arise, but no one makes them occur.  They cease naturally and effortlessly; there is no one who makes them cease.’"
+  },
+  "d6-04": {
+   "sa": "tasyaivaṃ bhavati - satyeṣvanabhijñānaṃ paramārthato 'vidyā / avidyāprakṛtasya karmaṇo vipākaḥ saṃskārāḥ / saṃskārasaṃniśritaṃ prathamaṃ cittaṃ vijñānam / vijñānasahajāścatvāra upādānaskandhā (Dbh 31) nāmarūpam / nāmarūpavivṛddhiḥ ṣaḍāyatanam / indriyaviṣayavijñāgatrayasamavadhānaṃ sāsravaṃ sparśaḥ / sparśasahajā vedanā / vedanādhyavasānaṃ tṛṣṇā / tṛṣṇāvivṛddhirupādānam / upādānaprasṛtaṃ sāsravaṃ karma bhavaḥ / karmaniṣyando jātiḥ skandhonmajjanam / skandhaparipāko jarā / jīrṇasya skandhabhedo maraṇam / mriyamāṇasya vigacchataḥ saṃmūḍhasya sābhiṣvaṅgasya hṛdayasaṃtāpaḥ śokaḥ / śokasamutthitā vākpralāpāḥ paridevaḥ / pañcendriyanipāto duḥkham / manodṛṣṭinipāto daurmanasyam / duḥkhadaurmanasyabahulatvasaṃbhūtā upāyāsāḥ / evamayaṃ kevalo duḥkhaskandho duḥkhavṛkṣo 'bhinirvartate kārakavedakavirahita iti //",
+   "T0285": "菩薩如是，樂于柔順，觀十二緣，則自思惟，以是至誠，是所生識。究竟無慧，無明之業，本為清淨，成行報應。所行以成，神識在先，神識之侶，有受四陰，則致名色迷惑之事。諸衰六入，諸根境界，輒成神識。因為同伴，與諸漏更，更成痛痒，因愛適長，益於所受。以御所受，則成漏業，從所作生興生身陰，斯生之內，因致老羸，身陰散壞，致於死亡。與愚冥俱，甚可恐畏。此從危害，至住結網，致口言辭，是生五根，苦起意根，從其憂愁，多所戚患，因成受有，以是緣故，退生苦樹，造立所作，",
+   "T0286": "「菩薩摩訶薩如是於六地中隨順觀十二因緣，又作是念：『不如實知諸諦第一義故，有無明覆心；無明業果是名諸行，依諸行有初識；與識共生有四取陰，依止取陰有名色；名色成就有六入，諸根行塵故有識，從是和合生有漏觸；觸共生有受；貪樂於受名為愛；愛增長名為取；從取起有漏業；有業、有果報五陰名為生；五陰熟名為老熟；五陰壞名為死。死別離時，愚人貪著心熱名為憂悲、發聲啼哭。五識名為苦、意識名憂、憂苦轉多名為惱，如是，但生大苦樹、大苦聚。",
+   "T0278": "「又作是念：『不如實知第一義故有無明，無明起業是名行，依行有初識，與識共生有四取陰，依止取陰有名色，名色成就有六入，根塵合故有觸，觸因緣生受，貪樂受名為愛，愛增長名為取，從取起業名為有，業報五陰名為生，五陰變名為老，五陰壞名為死；死別離時，貪著心熱名為悲；發聲啼哭，五識為苦，意識為憂，憂苦轉多名為惱；如是但生大苦積聚。",
+   "T0279": "佛子！此菩薩摩訶薩復作是念：『於第一義諦不了故名：無明，所作業果是行，行依止初心是識，與識共生四取蘊為名色，名色增長為六處，根、境、識三事和合是觸，觸共生有受，於受染著是愛，愛增長是取，取所起有漏業為有，從業起蘊為生，蘊熟為老，蘊壞為死；死時離別，愚迷貪戀，心胸煩悶為愁，涕泗諮嗟為歎，在五根為苦，在意地為憂，憂苦轉多為惱。如是但有苦樹增長，無我、無我所，無作、無受者。』",
+   "T0287": "「復次，菩薩作是思惟：『以勝義相於諦無知名為無明，無明所作業果名行，行為依止初心名識，與識俱生餘四取蘊說為名色，名色增長說為六處，根、境與識三事和合名有漏觸，俱生名受，於受味著名為渴愛，渴愛增長是名為取，從取起有漏業名為有，業等流諸蘊起名為生，蘊熟為老，蘊壞名死，臨死欲壞愚迷之者有貪戀故心熱名愁，由愁發語號嘷喟歎，五根相對不悅名苦，意識相對不悅名憂，憂苦所生吁嗞名惱，純大苦對如是增成，於中永無作者、受者。』",
+   "bo": "བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་ལུགས་སུ་མཐུན་པར་རྟེན་ཅིང་འབྲེལ་བར་འབྱུང་བ་ལ་རབ་ཏུ་རྟོག་གོ །དེ་འདི་སྙམ་དུ་སེམས་ཏེ་བདེན་པར་མངོན་པར་མི་ཤེས་པ་ནི་ཡང་དག་པར་མ་རིག་པ་སྟེ། མ་རིག་པས་བྱས་པའི་ལས་ཀྱི་རྣམ་པར་སྨིན་པ་ནི་འདུ་བྱེད་རྣམས་སོ། །འདུ་བྱེད་ལ་གནས་པའི་སེམས་དང་པོ་ནི་རྣམ་པར་ཤེས་པའོ། །རྣམ་པར་ཤེས་པ་དང་། ལྷན་ཅིག་ཏུ་སྐྱེས་པའི་ཉེ་བར་ལེན་པའི་ཕུང་པོ་བཞི་ནི་མིང་དང་གཟུགས་སོ། །མིང་དང་གཟུགས་རྣམ་པར་འཕེལ་བ་ནི་དྲུག་གི་སྐྱེ་མཆེད་དོ། །དབང་པོ་དང་ཡུལ་དང་རྣམ་པར་ཤེས་པ་གསུམ་ཕྲད་པ་ཟག་པ་དང་བཅས་པ་ནི་རེག་པའོ། །རེག་པའི་རྗེས་ལས་སྐྱེས་པ་ནི་ཚོར་བའོ། །ཚོར་བ་ལ་ཆགས་པ་ནི་སྲེད་པའོ། །སྲེད་པ་རྣམ་པར་འཕེལ་བ་ནི་ཉེ་བར་ལེན་པའོ། །ཉེ་བར་ལེན་པ་ལས་བྱུང་བའི་ལས་ཟག་པ་དང་བཅས་པ་ནི་སྲིད་པའོ། །ལས་དང་རྒྱུ་མཐུན་པའི་འབྲས་བུ་ནི་སྐྱེ་བའོ། །སྐྱེ་བ་ནི་ཕུང་པོ་ འབྱུང་བའོ། །ཕུང་པོ་ཡོངས་སུ་སྨིན་པ་ནི་རྒ་བའོ། །རྒས་ནས་ཕུང་པོ་འཇིག་པ་ནི་འཆི་བའོ། །འཆི་ཞིང་འབྲལ་བའི་ཚེ་མོས་ཤིང་ཆགས་པར་གྱུར་པའི་སེམས་ལ་ཡོངས་སུ་གདུང་བ་ནི་མྱ་ངན་ཏོ། །མྱ་ངན་ལས་བྱུང་བའི་ཚིག་ཏུ་རྗོད་པ་ནི་སྨྲེ་སྔགས་འདོན་པའོ། །དབང་པོ་ལྔའི་ཉམས་སུ་བབ་པ་ནི་སྡུག་བསྔལ་ལོ། །ཡིད་ཀྱི་ལྟ་བའི་ཉམས་སུ་བབ་པ་ནི་ཡིད་མི་བདེ་བའོ། །སྡུག་བསྔལ་དང་ཡིད་མི་བདེ་བ་མང་པོ་བྱུང་བ་ནི་འཁྲུགས་པ་སྟེ། དེ་ལྟར་ན་སྡུག་བསྔལ་གྱི་ཕུང་པོ་ཆེན་པོ་དང་སྡུག་བསྔལ་གྱི་སྡོང་པོ་འབའ་ཤིག་བྱེད་པ་པོ་དང་། ཚོར་བ་པོ་མེད་པ་མངོན་པར་གྲུབ་པར་འགྱུར་རོ།",
+   "en": "“The bodhisattva mahāsattva  examines in that way the natural succession of dependent origination.  “He thinks in this way: ‘Ignorance of the ultimate is due to not understanding the truths. Formations are the ripening of the karma created by ignorance. Consciousness is the first mind that is supported by the formations. Connate with consciousness are the four perpetuating skandhas, which are called name-and-form. “ ‘The development of name-and-form is the six sensory bases. The tainted meeting of sensory faculty, object, and consciousness is contact. Connate  with contact is sensation. Clinging to sensations is craving. Craving develops into grasping. The tainted karma that comes from grasping is becoming. The natural result of the karma is birth. Birth is the arising of the skandhas. The ripening of the skandhas is aging. The breaking apart of the skandhas through aging is death. Separation, bewilderment,  clinging, and anguish at death is misery.  Expressing words that arise from misery is lamentation. When the five sense faculties are affected, that is suffering. When this affects the mind’s view, that is unhappiness. When much suffering and unhappiness occur, there is distress. In that way this entire mass of suffering, this tree of suffering, is produced. It is devoid of a doer or an experiencer.’"
+  },
+  "d6-05": {
+   "sa": "tasyaivaṃ bhavati - kārakābhiniveśataḥ kriyāḥ prajñāyante / yatra kārako nāsti, kriyāpi tatra paramārthato nopalabhyate / tasyaivaṃ bhavati - cittamātramidaṃ yadidaṃ traidhātukam / yānyapīmāni dvādaśa bhavāṅgāni tathāgatena prabhedaśo vyākhyātāni, api sarvāṇyeva tāni cittasamāśritāni / tatkasya hetoḥ? yasmin vastuni hi rāgasaṃyuktaṃ cittamutpadyate tadvijñānam / vastusaṃskāre 'smimoho 'vidyā / avidyācittasahajaṃ nāmarūpam / nāmarūpavivṛddhiḥ ṣaḍāyatanam / ṣaḍāyatanabhāgīyaḥ sparśaḥ / sparśasahajā vedanā / vedayato 'vitṛptistṛṣṇā / tṛṣṇārtasya saṃgraho 'parityāga upādānam / eṣāṃ bhavāṅgānāṃ saṃbhavo bhavaḥ / bhavonmajjanaṃ jātiḥ / jātiparipāko jarā / jarāpagamo maraṇamiti //",
+   "T0285": "被自思察，由倚所作，用知所作，方當作者，計彼有作，則無所作，本末無相也，亦不可得。又復思惟，其三界者，心之所為，其計於斯十二緣起。五趣所歸，如來至真之所解暢，又此一切一種一心，同時俱成。所以者何？若諸根等，心生貪欲，悉由神識生死之癡，因從無明，其名色者，心為伴侶，而立迷惑，從其名色，名色以成，為六衰入，從致所更，為痛痒侶，痛痒意愛，所以有愛，從不捨受，發起眾難，由此緣合，而致所有，因倚致生，其興羅網，誓願老死，",
+   "T0286": "如是，十二因緣苦聚，無我、無我所，無作者、無使作者。』「菩薩作是念：『若有作者，則有作事；若無作者，則無作事。第一義中，無作者、無作事。』又作是念：『三界虛妄，但是心作。』「如來說所有十二因緣分是皆依心。所以者何？隨事生貪欲心，是心即是識。事是行，行誑心故，名無明；識所依處名名色；以入生貪心名六入；三事和合有觸；觸共生名受；貪著所受名為渴愛；渴愛不捨名為取；是和合故，名為有；此有更有有相續，名為生；生變熟，名為老；老壞，名為死。",
+   "T0278": "是十二因緣，無我、無我所，無作者、無使作者，若有作者則有作事，若無作者則無作事，第一義中無作者、無作事。』「又作是念：『三界虛妄但是心作；十二緣分是皆依心，所以者何？隨事生欲心，是心即是識，事是行，行誑心故名無明，識所依處名名色，名色增長名六入，三事和合有觸，觸共生名受，貪著所受名為愛，愛不捨名為取，彼和合故名為有，有所起名為生，生變名為老，老壞名為死。",
+   "T0279": "復作是念：『若有作者，則有作事；若無作者，亦無作事，第一義中俱不可得。』佛子！此菩薩摩訶薩復作是念：『三界所有，唯是一心。如來於此分別演說十二有支，皆依一心，如是而立。何以故？隨事貪欲與心共生，心是識，事是行，於行迷惑是無明，與無明及心共生是名色，名色增長是六處，六處三分合為觸，觸共生是受，受無厭足是愛，愛攝不捨是取，彼諸有支生是有，有所起名：生，生熟為老，老壞為死。』",
+   "T0287": "復作是念：『由執作者方有作用；既無作者，以勝義諦作用亦無。』即此菩薩作是思惟：所言三界，此唯是心，如來於此分別演說十二有支，皆依一心如是而立。何以故？若於事中貪欲相應，心起是識事即是行，於行迷惑是即無明，行與無明及心共生是謂名色，名色增長是謂六處，六處分是謂觸，觸共生是受，受用之時無厭是愛，愛逼攝受不捨是取，彼有支生起是有，有所起名生，生熟為老，老壞為死。",
+   "bo": "།དེ་འདི་སྙམ་དུ་སེམས་ཏེ་བྱེད་པ་པོ་ལ་མངོན་པར་ཆགས་པས་ལས་རྣམས་ཡོད་པར་གྱུར་ཏོ། །གང་ན་བྱེད་པ་པོ་མེད་པ་དེ་ན་དོན་དམ་པར་ལས་ཀྱང་མི་དམིགས་སོ། །དེ་འདི་སྙམ་དུ་སེམས་ཏེ། འདི་ལྟར་ཁམས་གསུམ་པ་འདི་ནི་སེམས་ཙམ་སྟེ། གང་འདི་སྲིད་པའི་ཡན་ལག་བཅུ་གཉིས་དེ་བཞིན་གཤེགས་པས་རབ་ཏུ་ཕྱེ་སྟེ། བཀའ་སྩལ་པ་དེ་དག་ཐམས་ཅད་ཀྱང་སེམས་གཅིག་ལ་གནས་པ་དག་གོ། །དེ་ཅིའི་ཕྱིར་ཞེ་ན། དངོས་པ་གང་ལ་འདོད་ཆགས་དང་ལྡན་པའི་སེམས་སྐྱེས་པ་དེ་ནི་རྣམ་པར་ཤེས་པའོ། །དངོས་པོ་ནི་འདུ་བྱེད་དོ། །འདུ་བྱེད་ལ་མགོ་རྨོངས་པ་ནི་མ་རིག་པའོ། །མ་རིག་པའི་སེམས་དང་ལྷན་ཅིག་སྐྱེས་པ་ནི་མིང་དང་གཟུགས་སོ། །མིང་དང་གཟུགས་རྣམ་པར་འཕེལ་བ་ནི་དྲུག་གི་སྐྱེ་མཆེད་དོ། །དྲུག་གི་སྐྱེ་མཆེད་དང་འབྲེལ་བ་ནི་རེག་པའོ། །རེག་པ་དང་ལྷན་ཅིག་སྐྱེས་པ་ནི་ཚོར་བའོ། །ཚོར་བས་མི་ངོམས་པ་ནི་སྲེད་པའོ། །སྲེད་པས་མནར་ཏེ་སྡུད་ཅིང་མེ་གཏོང་བ་ནི་ཉེ་བར་ལེན་པའོ། །སྲིད་པའི་ཡན་ལག་འབྱུང་བ་འདི་དག་ནི་སྲིད་པའོ། །སྲིད་པ་འབྱུང་བ་ནི་སྐྱེ་བའོ། །སྐྱེ་བ་ཡོངས་སུ་སྨིན་པ་ནི་རྒ་བའོ། །རྒ་བ་དང་བྲལ་བ་ནི་འཆི་བའོ།",
+   "en": "“He thinks, ‘When there is the mistaken belief in a doer, there is the conception of actions. Where there is no doer, actions also cannot ultimately be found.’ “He thinks, ‘These three realms are mind only. These twelve components of becoming, the division into which was taught by the Tathāgata, are also all based in a single  mind. Why is that? Consciousness is the arising of a mind joined by desire to an object. The object is a formation. Delusion concerning that formation is ignorance. Connate with a mind of ignorance is name-and-form. The development of name-and-form results in the six sensory bases. The connection with the six sensory bases is contact. Connate with contact is sensation. A lack of satisfaction with sensation is craving. Oppressed by craving, clinging to what is accumulated is grasping. The combination  of these components is becoming. The emergence of becoming is birth. The ripening of birth is aging. The termination of aging is death."
+  },
+  "d6-06": {
+   "sa": "tatra avidyā dvividhakāryapratyupasthānā bhavati / ālambanataḥ sattvān saṃmohayati, hetuṃ ca dadāti saṃskārābhinirvṛttaye / saṃskārā api dvividhakāryapratyupasthānā bhavanti / anāgatavipākābhinirvṛtti ca kurvanti, hetuṃ ca dadati vijñānābhinirvṛttaye / vijñānamapi dvividhakāryapratyupasthānaṃ bhavati / bhavapratisaṃdhiṃ ca karoti, hetuṃ ca dadāti nāmarūpābhinirvṛttaye / nāmarūpamapi dvividhakāryapratyupasthānaṃ bhavati / anyonyopastambhanaṃ ca karoti, hetuṃ ca dadāti ṣaḍāyatanābhinirvṛttaye / ṣaḍāyatanamapi dvividhakāryapratyupasthānaṃ bhavati / svaviṣayavibhaktitāṃ cādarśayati, hetuṃ ca dadāti sparśābhinirvṛttaye / sparśo 'pi dvividhakāryapratyupasthāno bhavati / ālambanasparśanaṃ ca karoti, hetuṃ ca dadāti vedanābhinirvṛttaye / vedanāpi dvividhakāryapratyupasthānā bhavati / iṣṭāniṣṭobhayavimuktānubhavanaṃ ca karoti, hetuṃ ca dadāti tṛṣṇābhinirvṛttaye / tṛṣṇāpi dvividhakāryapratyupasthānā bhavati / saṃrajanīyavastusaṃrāgaṃ ca karoti, hetuṃ ca dadātyupādānābhinirvṛttaye / upādānamapi dvividhakāryapratyupasthānaṃ bhavati / saṃkleśabandhanaṃ ca karoti, hetuṃ ca dadāti bhavābhinirvṛttaye / bhavo 'pi dvividhakāryapratyupasthāno bhavati / anyabhavagatipratyadhiṣṭhānaṃ ca karoti, hetuṃ ca dadāti jātyabhinirvṛttaye / jātirapi dvividhakāryapratyupasthānā bhavati / skandhonmajjanaṃ ca karoti, hetuṃ ca dadāti jarābhiniṃvṛttaye / jarāpi dvividhakāryapratyupasthānā bhavati / indriyapariṇāmaṃ ca karoti, hetuṃ ca dadāti maraṇasamavadhānābhinirvṛttaye / maraṇamapi dvividhakāryapratyupasthānaṃ bhavati - saṃskāravidhvaṃsanaṃ ca karoti, aparijñānānucchedaṃ ceti //",
+   "T0285": "從神識中，因致此有，別知名色緣對；而其名色，各各有趣，六情衰入，已覩已界，能入寂寞，更習緣故；從其更習，意念致之，生痛痒緣；從痛痒故，便復作行，善惡好醜；從恩愛緣，致樂塵勞貪婬之事；從愛緣故，致結縛獄；從有緣故，致於他生，生現在處，不可解從；生緣因發，生五陰本，致老之緣，以致老耄，諸根便熟，則致死亡。",
+   "T0286": "「此中無明有二種作：一者、緣中癡，二者、為生諸行因。行亦有二種作：一者、生未來世果報，二者、與識作因。識亦有二種作：一者、能令有相續，二者、與名色作因。名色亦有二種作：一者、互相助成，二者、與六入作因。六入亦有二種作：一者、能緣六塵，二者、能與觸作因。觸亦有二種作：一者、能觸所緣，二者、能與受作因。受亦有二種作：一者、覺憎愛事，二者、與愛作因。愛亦有二種作：一者、所可染中生貪心，二者、與取作因。取亦有二種作：一者、能增長煩惱，二者、與有作因。有亦有二種作：一者、能於餘道中生，二者、與生作因。生亦有二種作：一者、能起五陰，二者、與老作因。老亦有二種作：一者、令諸根熟，二者、與死作因。死亦有二種作：一者、壞五陰身，二者、以不見知故，而令相續不絕。",
+   "T0278": "又無明有二種作：一者、緣中癡，二者、為行作因；行亦有二種作：一者、生未來世果報，二者、與識作因；識亦有二種作：一者、能受生，二者、與名色作因；名色亦有二種作：一者、令識起相續，二者、與六入作因；六入亦有二種作：一者、能緣六塵，二者、能與觸作因；觸亦有二種作：一者、能觸所緣，二者、能與受作因；受亦有二種作：一者、覺憎愛事，二者、與愛作因；愛亦有二種作：一者、於可染中生貪心，二者、與取作因；取亦有二種作：一者、能增長煩惱，二者、與有作因；有亦有二種作：一者、能於餘道中生，二者、與生作因；生亦有二種作：一者、能起五陰，二者、與老作因；老亦有二種作：一者、令諸根熟，二者、與死作因；死亦有二種作：一者、壞五陰身，二者、以不見知故而令相續不絕。",
+   "T0279": "「佛子！此中無明有二種業，一令眾生迷於所緣，二與行作生起因。行亦有二種業，一能生未來報，二與識作生起因。識亦有二種業，一令諸有相續，二與名色作生起因。名色亦有二種業，一互相助成，二與六處作生起因。六處亦有二種業，一各取自境界，二與觸作生起因。觸亦有二種業，一能觸所緣，二與受作生起因。受亦有二種業，一能領受愛憎等事，二與愛作生起因。愛亦有二種業，一染著可愛事，二與取作生起因。取亦有二種業，一令諸煩惱相續，二與有作生起因。有亦有二種業，一能令於餘趣中生，二與生作生起因。生亦有二種業，一能起諸蘊，二與老作生起因。老亦有二種業，一令諸根變異，二與死作生起因。死亦有二種業，一能壞諸行，二不覺知故相續不絕。",
+   "T0287": "此中無明有二種所作：一、所緣故迷惑有情；二、為諸行生起與因。諸行亦有二種所作：一、能生起未來異熟；二、為於識生起與因。識亦有二種所作：一、能續有；二、為名色生起與因。名色亦有二種所作：一、互相資助；二、為六處生起與因。六處亦有二種所作：一、能現示自境差別；二、為於觸生起與因。觸亦有二種所作：一、能觸所緣；二、為於受生起與因。受亦有二種所作：一、能領納愛、非愛境及二相違；二、為於愛生起與因。愛亦有二種所作：一、令可染事中染著；二、為於取生起與因。取亦有二種所作：一、能續雜染；二、為於有生起與因。有亦有二種所作：一、令後有異趣現前；二、為於生生起與因。生亦有二種所作：一、能起諸蘊；二、為於老生起與因。老亦有二種所作：一、令諸根有衰變異；二、共死會合生起與因。死亦有二種所作：一、能壞諸行；二、非遍知斷。",
+   "bo": "།དེ་ལ་མ་ རིག་པ་ནི་བྱ་བ་གཉིས་སུ་ཉེ་བར་གནས་པ་ཡིན་ཏེ། སེམས་ཅན་རྣམས་ཀྱང་དམིགས་པ་ལ་རྨོངས་པར་བྱེད་དོ། །འདུ་བྱེད་མངོན་པར་འགྲུབ་པའི་རྒྱུ་ཡང་འབྱིན་ཏོ། །འདུ་བྱེད་རྣམས་ཀྱང་བྱ་བ་གཉིས་སུ་ཉེ་བར་གནས་པ་ཡིན་ཏེ། མ་འོངས་པའི་རྣམ་པར་སྨིན་པ་ཡང་མངོན་པར་འགྲུབ་པར་བྱེད་དོ། །རྣམ་པར་ཤེས་པ་མངོན་པར་འགྲུབ་པའི་རྒྱུ་ཡང་འབྱིན་ཏོ། །རྣམ་པར་ཤེས་པ་འང་བྱ་བ་གཉིས་སུ་ཉེ་བར་གནས་པ་ཡིན་ཏེ། སྲིད་པའི་ཉིང་གི་མཚམས་ཀྱང་སྦྱོར་རོ། །མིང་དང་གཟུགས་མངོན་པར་འགྲུབ་པའི་རྒྱུ་ཡང་འབྱིན་ཏོ། །མིང་དང་གཟུགས་ཀྱང་བྱ་བ་གཉིས་སུ་ཉེ་བར་གནས་པ་ཡིན་ཏེ། ཕན་ཚུན་ཉེ་བར་རྟོན་པ་ཡང་བྱེད་དོ། །སྐྱེ་མཆེད་དྲུག་མངོན་པར་འགྲུབ་པའི་རྒྱུ་ཡང་འབྱིན་ཏོ། །དྲུག་གི་སྐྱེ་མཆེད་ཀྱང་བྱ་བ་གཉིས་སུ་ཉེ་བར་གནས་པ་ཡིན་ཏེ། རང་གི་ཡུལ་རྣམ་པར་ཕྱེ་བ་ཡང་སྟོན་ཏོ། །རེག་པ་མངོན་པར་འགྲུབ་པའི་རྒྱུ་ཡང་འབྱིན་ཏོ། །རེག་པ་ཡང་བྱ་བ་གཉིས་སུ་ཉེ་བར་གནས་པ་ཡིན་ཏེ། དམྱིགས་པ་ལ་རེག་པར་ཡང་བྱེད་དོ། །ཚོར་བ་མངོན་པར་འགྲུབ་པའི་རྒྱུ་ཡང་འབྱིན་ཏོ། །ཚོར་བ་ཡང་བྱ་བ་གཉིས་སུ་ཉེ་བར་གནས་པ་ཡིན་ཏེ། ཡིད་དུ་འོང་བ་དང་ཡིད་དུ་མི་འོང་བ་དང་གཉིས་ཀ་མ་ཡིན་པར་ཚོར་བ་ཡང་སྐྱེད་དོ། །སྲེད་པ་མངོན་པར་འགྲུབ་པའི་རྒྱུ་ཡང་འབྱིན་ཏོ། །སྲེད་པ་ཡང་བྱ་བ་གཉིས་སུ་ཉེ་བར་གནས་པ་ཡིན་ཏེ། ཆགས་པར་འགྱུར་བའི་དངོས་པོ་ལ་མངོན་པར་ཆགས་པར་ཡང་བྱེད་དོ། །ཉེ་བར་ལེན་པ་མངོན་པར་འགྲུབ་པའི་རྒྱུ་ཡང་འབྱིན་ཏོ། །ཉེ་བར་ལེན་པ་ཡང་བྱ་བ་གཉིས་སུ་ཉེ་བར་གནས་པ་ཡིན་ཏེ། ཀུན་ནས་ཉོན་མོངས་པས་འཆིང་བ་ཡང་བྱེད་དོ། །སྲིད་པ་མངོན་པར་འབྱུང་བའི་རྒྱུ་ཡང་འབྱིན་ཏོ། །སྲིད་པ་ཡང་བྱ་བ་གཉིས་སུ་ཉེ་བར་གནས་པ་ཡིན་ཏེ། སྲིད་པའི་རྒྱུད་གཞན་དུ་ཡང་གནས་པར་བྱེད་དོ་སྐྱེ་བ་མངོན་པར་འགྲུབ་པའི་རྒྱུ་ཡང་འབྱིན་ཏོ། །སྐྱེ་བ་ཡང་བྱ་བ་གཉིས་སུ་ཉེ་བར་གནས་པ་ཡིན་ཏེ། ཕུང་པོ་འབྱུང་བར་ཡང་བྱེད་དོ། །རྒ་བ་མངོན་པར་འགྲུབ་པའི་རྒྱུ་ཡང་འབྱིན་ཏོ། །རྒ་བ་ཡང་བྱ་བ་གཉིས་སུ་ཉེ་བར་གནས་པ་ཡིན་ཏེ། དབང་པོ་ཡོངས་སུ་འགྱུར་བར་ཡང་བྱེད་དོ། །འཆི་བར་འགྱུར་བའི་རྒྱུ་ཡང་འབྱིན་ཏོ། །འཆི་བ་ཡང་བྱ་བ་གཉིས་སུ་ཉེ་བར་གནས་པ་ཡིན་ཏེ་འདུ་བྱེད་འཇིག་པར་ཡང་བྱེད་དོ། །ཡོངས་སུ་མ་ཤེས་པ་རྒྱུན་མི་འཆད་པའི་རྒྱུ་ཡང་འབྱིན་ཏོ།",
+   "en": "“ ‘Ignorance has two kinds of activity: it causes beings to be deluded concerning objects of perception, and it provides the cause for the production of formations. Formations also have two kinds of activity: they establish the production of future ripening, and they provide the cause for the production of consciousness. Consciousness also has two activities: it creates the transition to becoming, and it provides the cause for the production of name-and form. Name-and-form also has two activities: it creates mutual dependence, and it provides the cause for the production of the six sensory bases. The six sensory bases also have two activities: they reveal the distinctions between their own ranges of perception, and they provide the cause for the production of contact. Contact also has two activities: it creates contact with the object, and it provides the cause for the production of sensation. Sensation also has two activities: it creates experiences that are pleasant, unpleasant, or neither, and it provides the cause for the production of craving. Craving also has two activities: it creates desire for attractive sensory objects, and it provides the cause for the production of grasping. Grasping also has two activities: it creates the bondage by the kleśas, and it provides the cause for the production of becoming. Becoming also has two activities: it creates the basis for another state of existence, and it provides the cause for the production of birth. Birth also has two activities: it creates the emergence of the skandhas, and it provides the cause for the production of aging. Aging also has two activities: it creates change in the faculties, and it provides the cause for the production of death. Death also has two activities: it creates the destruction of composite  phenomena, and it provides the cause for the uninterrupted continuity of the lack of understanding."
+  },
+  "d6-07": {
+   "sa": "tatra avidyāpratyayāḥ saṃskārā ityavidyāpratyayatā saṃskārāṇāmanucchedo 'nupastambhaśca / saṃskārapratyayaṃ vijñānamiti saṃskārapratyayatā vijñānānāmanucchedo 'nupastambhaśca / peyālaṃ ... jātipratyayatā jarāmaraṇasyānucchedo 'nupastambhaśca / avidyānirodhātsaṃskāranirodha ityavidyāpratyayatābhāvātsaṃskārāṇāṃ vyupaśamo 'nupastambhaśca / peyālaṃ ... jātipratyayatābhāvājjarāmaraṇasya vyupaśamo 'nupastambhaśca // tatra avidyā tṛṣṇopādānaṃ ca kleśavartmano 'vyavacchedaḥ / saṃskārā bhavaśca karmavartmano 'vyavacchedaḥ / pariśeṣaṃ duḥkhavartmano 'vyavacchedaḥ / pravibhāgataḥ pūrvāntāparāntanirodhavartmano vyavacchedaḥ / evameva trivartma nirātmakamātmātmīyarahitaṃ saṃbhavati ca asaṃbhavayogena, vibhavati ca avibhavayogena svabhāvato naḍakalāpasadṛśam //",
+   "T0285": "以至死者，有十二事，發緣起處，其身陰壞，而不能斷，未曾永絕。從無明緣，則致眾行、名色、六入、習更、痛、愛、受、有、生、老病死愁憂啼哭。無明緣故，無有斷絕，不可究暢，如是有餘。無明適消，眾行便滅，由是有耳，如是有餘。彼以無明恩愛所受，長益塵勞，無斷絕時，及行所作，往返報應，報應展轉，根無拔時，盡其餘殃者，苦痛輒轉，亦無休息，以無明矣。為去來今，見縛流布，宜當斷絕，如是三轉，三轉無我，以離吾我，無明滅去，自然之業無有處所。猶如葦屋，若池清淨，",
+   "T0286": "「是中，無明緣諸行者，無明令行不斷，助成行故；行緣識者令識不斷，助成識故；識緣名色者，令名色不斷，助成名色故；乃至生緣老、死、憂、悲、苦惱，生不斷相續助成故。無明滅故則諸行滅，乃至老、死，憂、悲、苦惱亦如是。是中無明若無，諸行亦無，因滅則果滅，餘分亦如是。「是中無明、愛、取是三分，不斷煩惱道；諸行及有不斷業道；餘因緣分不斷苦道。先際後際相續不斷故，是三道不斷；是三道離我、我所而有生滅，如二竹相對而住，不堅似堅。",
+   "T0278": "又無明緣諸行者，無明令行不斷，助成行故；行緣識者，令識不斷，助成識故；識緣名色者，令名色不斷，助成名色故；乃至生緣老死，憂悲苦惱者，令死不斷，助成死故；無明滅故，則諸行滅，乃至生滅故，老死憂悲苦惱滅，因滅故果亦滅。又無明、愛、取是三分不斷煩惱道，行有二分不斷業道，餘因緣分不斷苦道，先、後際相續故，是三道不斷，是三道離我、我所而有生滅。",
+   "T0279": "「佛子！此中無明緣行，乃至生緣老死者，由無明乃至生為緣，令行乃至老死不斷，助成故。無明滅則行滅，乃至生滅則老死滅者，由無明乃至生不為緣，令諸行乃至老死斷滅，不助成故。佛子！此中無明、愛、取不斷是煩惱道，行、有不斷是業道，餘分不斷是苦道；前後際分別滅三道斷，如是三道離我、我所，但有生滅，猶如束蘆。",
+   "T0287": "「復次，於中無明緣行者，無明緣性，謂行不斷復有扶助。行緣識者，於行緣性，謂識不斷復有扶助。識緣名色者，於識緣性，謂名色不斷復有扶助。名色緣六處者，名色緣性，謂六處不斷復有扶助。六處緣觸者，六處緣性，謂觸不斷復有扶助。觸緣受者，於觸緣性，謂受不斷復有扶助。受緣愛者，於受緣性，謂愛不斷復有扶助。愛緣取者，於愛緣性，謂取不斷復有扶助。取緣有者，於取緣性，謂有不斷復有扶助。有緣生者，於有緣性，謂生不斷復有扶助。生緣老死者，於生緣性，謂老死不斷復有扶助。無明滅故行滅者，由於無明緣性無故，諸行斷滅更無扶助。行滅故識滅者，由於諸行緣性無故，識亦斷滅更無扶助。識滅故名色滅者，由於識緣性無故，名色斷滅更無扶助。名色滅故六處滅者，由於名色緣性無故，六處斷滅更無扶助。六處滅故觸滅者，由於六處緣性無故，觸亦斷滅更無扶助。觸滅故受滅者，由於觸緣性無故，受亦斷滅更無扶助。受滅故愛滅者，由於受緣性無故，愛亦斷滅更無扶助。愛滅故取滅者，由於愛緣性無故，取亦斷滅更無扶助。取滅故有滅者，由於取緣性無故，有亦斷滅更無扶助。有滅故生滅者，由於有緣性無故，生亦斷滅更無扶助。生滅故老死滅者，由於生緣性無故，老死斷滅更無扶助。「復次，於中無明、愛、取，是謂煩惱流不斷絕；行、有是業流不斷絕；餘支是苦流不斷絕。以差別故前後際滅，是流斷絕如是三流，悉是無我，離我、我所，自性生滅猶若束蘆。",
+   "bo": "།དེ་ལ་མ་རིག་པའི་རྐྱེན་གྱིས་འདུ་བྱེད་རྣམས་སོ། །ཞེས་བྱ་བ་ནི་མ་རིག་པའི་རྐྱེན་གྱིས་འདུ་བྱེད་རྣམས་རྒྱུན་མི་འཆད་ཅིང་རྟོན་པའོ། །འདུ་བྱེད་ཀྱི་རྐྱེན་གྱིས་རྣམ་པར་ཤེས་པའོ། །ཞེས་བྱ་བ་ནི་འདུ་བྱེད་ཀྱི་རྐྱེན་གྱིས་རྣམ་པར་ཤེས་པ་རྒྱུན་མི་འཆད་ཅིང་རྟོན་པའོ། །རྣམ་པར་ཤེས་པའི་རྐྱེན་གྱིས་མིང་དང་གཟུགས་ཤེས་བྱ་བ་ནི་རྣམ་པར་ཤེས་བའི་རྐྱེན་གྱིས་མིང་དང་གཟུགས་རྒྱུན་མི་འཆད་ཅིང་རྟོན་པའོ། །མིང་དང་གཟུགས་ཀྱི་རྐྱེན་གྱིས་དྲུག་གི་སྐྱེ་མཆེད་ཅེས་བྱ་བ་ནི་མིང་དང་གཟུགས་ཀྱི་རྐྱེན་གྱིས་དྲུག་གི་སྐྱེ་མཆེད་རྒྱུན་མི་འཆད་ཅིང་རྟོན་པའོ། །དྲུག་གི་སྐྱེ་མཆེད་ཀྱི་རྐྱེན་གྱིས་རེག་པའོ། ཞེས་བྱ་བ་ནི་དྲུག་གི་སྐྱེ་མཆེད་ཀྱི་རྐྱེན་གྱིས་རེག་པ་རྒྱུན་མི་འཆད་ཅིང་རྟོན་པའོ། །རེག་པའི་རྐྱེན་གྱིས་ཚོར་བའོ། །ཞེས་བྱ་བ་ནི་རེག་པའི་རྐྱེན་གྱིས་ཚོར་བ་རྒྱུན་མི་འཆད་ཅིང་སྟོན་པའོ། །ཚོར་བའི་རྐྱེན་གྱིས་སྲེད་པའོ། །ཞེས་བྱ་བ་ནི་ཚོར་བའི་རྐྱེན་གྱིས་སྲེད་པ་རྒྱུན་མི་འཆད་ཅིང་རྟོན་པའོ། ། སྲེད་པའི་རྐྱེན་གྱིས་ཉེ་བར་ལེན་པའོ། །ཞེས་བྱ་བ་ནི་སྲེད་པའི་རྐྱེན་གྱིས་ཉེ་བར་ལེན་པ་རྒྱུན་མི་འཆད་ཅིང་རྟོན་པའོ། ། ཉེ་བར་ལེན་པའི་རྐྱེན་གྱིས་སྲིད་པའོ། །ཞེས་བྱ་བ་ནི་ལེན་པའི་རྐྱེན་གྱིས་སྲིད་པ་རྒྱུན་མི་འཆད་ཅིང་རྟོན་པའོ། །སྲིད་པའི་རྐྱེན་གྱིས་སྐྱེ་བའོ། །ཞེས་བྱ་བ་ནི་སྲིད་པའི་རྐྱེན་གྱིས་སྐྱེ་བ་རྒྱུན་མི་འཆད་ཅིང་རྟོན་པའོ། །སྐྱེ་བའི་རྐྱེན་གྱིས་རྒ་ཤིའོ་ཞེས་བྱ་བ་ནི་སྐྱེ་བའི་རྐྱེན་གྱིས་རྒ་ཤི་རྒྱུན་མི་ འཆད་ཅིང་རྟོན་པའོ། །མ་རིག་པ་འགགས་པས་འདུ་བྱེད་རྣམས་འགག་གོ། །ཞེས་བྱ་བ་ནི་མ་རིག་པའི་རྐྱེན་མེད་པས་འདུ་བྱེད་རྣམས་ཉེ་བར་ཞི་ཞིང་རྟོན་པ་མེད་པའོ། ། འདུ་བྱེད་འགགས་པས་རྣམ་པར་ཤེས་པ་འགག་གོ། །ཞེས་བྱ་བ་ནི་འདུ་བྱེད་ཀྱི་རྐྱེན་མེད་པས་རྣམ་པར་ཤེས་པ་ཉེ་བར་ཞི་ཞིང་རྟོན་པ་མེད་པའོ། ། རྣམ་པར་ཤེས་པ་འགགས་པས་མིང་དང་གཟུགས་འགག་གོ། །ཞེས་བྱ་བ་ནི་རྣམ་པར་ཤེས་པའི་རྐྱེན་མེད་པས་མིང་དང་གཟུགས་ཉེ་བར་ཞི་ཞིང་རྟོན་པ་མེད་པའོ། །མིང་དང་གཟུགས་འགགས་པས་དྲུག་གི་སྐྱེ་མཆེད་འགག་གོ། །ཞེས་བྱ་བ་ནི་མིང་དང་གཟུགས་ཀྱི་རྐྱེན་མེད་པས་དྲུག་གི་སྐྱེ་མཆེད་ཉེ་བར་ཞི་ཞིང་རྟོན་པ་མེད་པའོ། །དྲུག་གི་སྐྱེ་མཆེད་འགགས་པས་རེག་པ་འགག་གོ། །ཞེས་བྱ་བ་ནི་དྲུག་གི་སྐྱེ་མཆེད་ཀྱི་རྐྱེན་མེད་པས་རེག་པ་ཉེ་བར་ཞི་ཞིང་རྟོན་པ་མེད་པའོ། །རེག་པ་འགགས་པས་ཚོར་བ་འགག་གོ །ཞེས་བྱ་བ་ནི་རེག་པའི་རྐྱེན་མེད་པས་ཚོར་བ་ཉེ་བར་ཞི་ཞིང་རྟོན་པ་མེད་པའོ། །ཚོར་བ་འགགས་པས་སྲེད་པ་འགག་གོ །ཞེས་བྱ་བ་ནི་ཚོར་བའི་རྐྱེན་མེད་པས་སྲེད་པ་ཉེ་བར་ཞི་ཞིང་རྟོན་པ་མེད་པའོ། །སྲིད་པ་འགགས་པས་ལེན་པ་འགག་གོ །ཞེས་བྱ་བ་ནི་སྲེད་པའི་རྐྱེན་མེད་པས་ལེན་པ་ཉེ་བར་ཞི་ཞིང་རྟོན་པ་མེད་པའོ། །ཉེ་བར་ལེན་པ་འགགས་པས་སྲིད་པ་འགག་གོ །ཞེས་བྱ་བ་ནི་ཉེ་བར་ལེན་པའི་རྐྱེན་མེད་པས་སྲིད་པ་ཉེ་བར་ཞི་ཞིང་རྟོན་པ་མེད་པའོ། །སྲིད་པ་འགགས་པས་སྐྱེ་བ་འགག་གོ །ཞེས་བྱ་བ་ནི་སྲིད་པའི་རྐྱེན་མེད་པས་སྐྱེ་བ་ཉེ་བར་ཞི་ཞིང་རྟོན་པ་མེད་པའོ། སྐྱེ་བ་འགགས་པས་རྒ་ཤི་འགག་གོ །ཞེས་བྱ་བ་ནི་སྐྱེ་བའི་རྐྱེན་མེད་པས་རྒ་ཤི་ཉེ་བར་ཞི་ཞིང་རྟོན་པ་མེད་པའོ། །དེ་ལ་མ་རིག་པ་དང་སྲིད་པ་དང་ཉེ་བར་ལེན་པ་ནི་ཉོན་མོངས་པའི་ལམ་གྱི་རྒྱུན་མི་འཆད་པའོ། །འདུ་བྱེད་དང་སྲིད་པ་ནི་ ལས་ཀྱི་ལམ་གྱི་རྒྱུན་མི་འཆད་པའོ། །ལྷག་མ་རྣམས་ནི་སྡུག་བསྔལ་གྱི་ལམ་གྱི་རྒྱུན་མི་འཆད་པའོ། །རབ་ཏུ་རྣམ་པར་ཕྱེ་བས་སྔུན་གྱི་མཐའ་དང་ཕྱི་མའི་མཐའ་འགགས་པས་ལམ་གྱི་རྒྱུན་མི་འཆད་པའོ། །དེ་ལྟར་ལམ་འདི་གསུམ་ནི་བདག་མེད་ཅིང་བདག་དང་བདག་གི་དང་བྲལ་བར་འབྱུང་ཞིང་འཇིག་པ་སྟེ། རང་བཞིན་གྱིས་མདུང་ཁྱིམ་ལྟ་བུའོ།",
+   "en": "“ ‘It is said, “the formations are dependent upon ignorance,” which means that ignorance as a condition is the continuation of the formations and a basis for the formations. It is said, “consciousness is dependent upon the formations,” which means that the formations as a condition are the continuation of consciousness and a basis for consciousness. It is said, “name-and-form are dependent upon consciousness,” which means that consciousness as a condition is the continuation of name-and-form and a basis for name-and-form. It is said, “the six sensory bases are dependent upon name-and-form,” which means that name-and-form as a condition is the continuation of the six sensory bases and a basis for the six sensory bases. It is said, “contact is dependent upon the six sensory bases,” which means that the six sensory bases as a condition are the continuation of contact and a basis for contact. It is said, “sensation is dependent upon contact,” which means that contact as a condition is the continuation of sensation and a basis for sensation. It is said, “craving is dependent upon sensation,” which means that sensation as a condition is the continuation of craving and a basis for craving. It is said, “grasping is dependent upon craving,” which means that craving as a condition is the continuation of grasping and a basis for grasping. It is said, “becoming is dependent upon grasping,” which means that grasping as a condition is the continuation of becoming and a basis for becoming. It is said, “birth is dependent upon becoming,” which means that becoming as a condition is the continuation of birth and a basis for birth. It is said, “aging and death is dependent upon birth,” which means that birth as a condition is the continuation of aging and death and a basis for aging and death. “ ‘It is said, “Through the cessation of ignorance there is the cessation of the formations,” which means that when there is no ignorance as a condition, there is the discontinuity of the formations and the absence of a basis for formations. It is said, “Through the cessation of formation there is the cessation of consciousness,” which means that when there is no formation as a condition, there is the discontinuity of consciousness and the absence of a basis for consciousness. It is said, “Through the cessation of consciousness there is the cessation of the six sensory bases,” which means that when there is no consciousness as a condition, there is the discontinuity of the six sensory bases and the absence of a basis for the six sensory bases.  It is said, “Through the cessation of the six sensory bases there is the cessation of contact,” which means that when there are no six sensory bases as a condition, there is the discontinuity of contact and the absence of a basis for contact. It is said, “Through the cessation of contact there is the cessation of sensation,” which means that when there is no contact as a condition, there is the discontinuity of sensation and the absence of a basis for sensation. It is said, “Through the cessation of sensation there is the cessation of craving,” which means that when there is no sensation as a condition, there is the discontinuity of craving and the absence of a basis for craving. It is said, “Through the cessation of craving there is the cessation of becoming,” which means that when there is no craving as a condition, there is the discontinuity and lack of support for becoming. It is said, “Through the cessation of becoming there is the cessation of birth,” which means that when there is no becoming as a condition, there is the discontinuity and lack of support for birth. It is said, “Through the cessation of birth there is the cessation of aging and death,” which means that when there is no birth as a condition, there is the discontinuity and lack of support for aging and death. “ ‘Ignorance, craving,  and grasping are the uninterrupted presence  of the kleśas. Formation and becoming are the uninterrupted presence of karma. The others are the uninterrupted presence of suffering. “ ‘In terms of this subdivision, when there is the cessation of that which precedes and that which succeeds, their presence is discontinued. In that way these three processes have no self, no being, no soul, no spirit, and no person, and there is the absence of anything that belongs to a self and there is nothing that pertains to a self. They arise and cease. They are like a bundle of reeds."
+  },
+  "d6-08": {
+   "sa": "api tu khalu punaryaducyate - avidyāpratyayāḥ saṃskārā ityeṣā paurvāntikyapekṣā / vijñānaṃ yāvadvedanetyeṣā pratyutpannāpekṣā / tṛṣṇa yāvadbhava ityeṣā aparāntikyapekṣā / ata urdhvamasya pravṛttiriti / avidyānirodhātsaṃskāranirodha ityapekṣāvyavaccheda eṣaḥ // api tu khalu punastriduḥkhatā dvādaśa bhavāṅgānyupādāya / tatra avidyā saṃskārā yāvatṣaḍāyatanamityeṣā saṃskāraduḥkhatā / sparśo vedanā caiṣā duḥkhaduḥkhatā / pariśeṣāṇi bhavāṅgānyeṣā pariṇāmaduḥkhatā / avidyānirodhātsaṃskāranirodha iti triduḥkhatāvyavaccheda eṣaḥ // avidyāpratyayāḥ saṃskārā iti hetupratyayaprabhavatvaṃ saṃskārāṇām / evaṃ pariśeṣāṇām / avidyānirodhātsaṃskāranirodha ityabhāvaḥ saṃskārāṇām / evaṃ pariśeṣāṇām // avidyāpratyāḥ saṃskārā ityutpādavinibandha eṣaḥ / evaṃ pariśeṣāṇām / avidyānirodhātsaṃskāranirodha iti vyayavinibandha eṣaḥ / evaṃ pariśeṣāṇām // avidyāpratyayāḥ saṃskārā iti bhāvānulomaparīkṣā / evaṃ pariśeṣāṇām / avidyānirodhātsaṃskāranirodha iti kṣayavyayāvinivandha eṣaḥ / evaṃ pariśeṣāṇām //",
+   "T0285": "若苦眾惱，無明之故，則有行矣，是為本宿，未曾諸痛，因其識故，乃致痛痒，是為現在之痛痒行也。從愛致有，是為將來痛痒之原，從此以上，則無所生。無明適消，眾行便滅，亦為斷絕，有苦三患，十二報應，從因緣起，彼從無明，致于六入，是能滅行。眾行已滅，因是別致，眾行如是，有餘二事，自縛苦更痛痒。尚有餘盡別離之苦，無明適消，諸行便滅，三苦永斷。從無明故，致諸行矣，從作緣故，致眾行耳，如是有餘。無明適消，眾行便滅，是為所有，一切諸行，有是餘故。有無明行，以權方便，開解大縛，有是餘故，而有輪轉。",
+   "T0286": "「無明因緣諸行者，即是過去世事；識、名色、六入、觸受是現在事；愛、取、有、生、老、死是未來世事，於是有三世出。無明滅故諸行滅，名為斷相續說。「十二因緣說名三苦：無明、行、識、名色、六入名為行苦；觸受名為苦苦；愛、取、有、生、死，憂、悲、苦惱名為壞苦。無明滅故，諸行滅，乃至老、死，名為斷三苦相續說。「因無明，諸行生；餘亦如是。無明滅，諸行滅，以諸行體性空故；餘亦如是。「無明因緣諸行，以生縛說；餘亦如是。無明滅故，諸行滅，以滅縛說；餘亦如是。「無明因緣諸行，是隨順無所有觀說；無明滅，諸行滅，是隨順盡觀說；餘亦如是。",
+   "T0278": "又無明及行是過去事，識、名色、六入、觸、受是現在事，愛、取、有、生、老死是未來事，於是有三世轉；無明滅故諸行滅，名為斷三世相續說。又十二因緣說名三苦：無明、行、識、名色、六入，名為行苦，觸、受名為苦苦，愛、取、有、生、老死、憂、悲、苦、惱名為壞苦；無明滅故，諸行滅，乃至生滅故，老死滅，名為斷三苦相續說。又因無明諸行生，無明滅諸行滅，以諸行性空故，餘亦如是。無明因緣諸行生，以生縛說，無明滅故諸行滅，以滅縛說，餘亦如是。又無明因緣諸行生，是隨順無所有觀說，無明滅諸行滅，是隨順盡觀說，餘亦如是。",
+   "T0279": "復次，無明緣行者，是觀過去；識乃至受，是觀現在；愛乃至有，是觀未來。於是以後，展轉相續。無明滅行滅者，是觀待斷。復次，十二有支名為三苦，此中無明、行乃至六處是行苦，觸、受是苦苦，餘是壞苦；無明滅行滅者，是三苦斷。復次，無明緣行者，無明因緣能生諸行；無明滅行滅者，以無無明，諸行亦無，餘亦如是。又無明緣行者，是生繫縛；無明滅行滅者，是滅繫縛。餘亦如是。又無明緣行者，是隨順無所有觀；無明滅行滅者，是隨順盡滅觀。餘亦如是。",
+   "T0287": "「復次，所說無明緣行是前世觀待；識乃至受是現世觀待；愛乃至有是後世觀待，由是於後相續流轉。無明滅故行滅者是觀待斷絕。復由如是十二有支有三苦性：此中諸行乃至六處是行苦性；觸、受此二是苦苦性；所餘有支是壞苦性。無明滅故行滅者，是三苦性究竟斷滅。無明緣行者是則顯行，從因從緣所生之性，餘亦如是。無明滅故行滅者此則顯示，行無自性，餘亦如是。無明緣行者，是生連縛，餘亦如是。無明滅故行滅者，是滅連縛，餘亦如是。無明緣行者，是隨順有觀，餘亦如是。無明滅故行滅者，是隨順盡滅觀，餘亦如是。",
+   "bo": "།དེ་ལྟར་མ་རིག་པའི་རྐྱེན་གྱིས་འདུ་བྱེད་རྣམས་ཤེས་བྱ་བ་འདི་ནི་སྔོན་གྱི་མཐའ་ལ་བལྟས་པའོ། །རྣམ་པར་ཤེས་པ་དང་མིང་དང་གཟུགས་དང་དྲུག་གི་སྐྱེ་མཆེད་དང་རེག་པ་དང་། ཚོར་བ་འདི་དག་ནི་ད་ལྟར་བྱུང་བ་ལ་བལྟས་པའོ། །སྲེད་པ་དང་ཉེ་བར་ལེན་པ་དང་སྲིད་པ་དང་། སྐྱེ་བ་ཞེས་བྱ་བ་འདི་ནི་ཕྱི་མའི་མཐའ་ལ་བལྟས་པ་སྟེ། དེ་ཕན་ཆད་དུ་འང་དེ་དག་རྒྱུན་དུ་འབྱུང་ངོ་། །མ་རིག་པ་འགགས་པས་འདུ་བྱེད་རྣམས་འགག་ཅེས་བྱ་བ་འདི་ནི་ལྟ་བ་རྒྱུན་ཆད་པ་སྟེ་ལྷག་མ་རྣམས་ཀྱང་དེ་བཞིན་ནོ། །ཡང་འདི་ལྟར་སྲིད་པའི་ཡན་ལག་བཅུ་གཉིས་པོ་འདི་དག་གི་རྒྱུས་སྡུག་བསྔལ་གསུམ་འབྱུང་སྟེ། དེ་ལ་མ་རིག་པ་དང་འདུ་བྱེད་དང་རྣམ་པར་ཤེས་པ་དང་མིང་དང་། གཟུགས་དང་། དྲུག་གི་སྐྱེ་མཆེད་ཅེས་བྱ་བ་ནི། འདུ་བྱེད་ཀྱི་སྡུག་བསྔལ་ལོ། །རེག་པ་དང་ཚོར་བ་ཞེས་བྱ་བ་འདི་ནི་སྡུག་བསྔལ་གྱི་ཡང་སྡུག་བསྔལ་ལོ། །སྲེད་པ་དང་ཉེ་བར་ལེན་པ་དང་། སྲིད་པ་དང་། སྐྱེ་བ་ནས་འཁྲུག་པ་ཞེས་བྱ་བའི་བར་འདི་ནི་འགྱུར་བའི་སྡུག་བསྔལ་ལོ། །མ་རིག་པ་འགགས་པས་འདུ་བྱེད་རྣམས་འགག་ཅེས་བྱ་བ་འདི་ནི་སྡུག་བསྔལ་གསུམ་གྱི་རྒྱུན་ཆད་པའོ། །མ་རིག་པའི་རྐྱེན་གྱིས་འདུ་བྱེད་རྣམས་ཤེས་བྱ་བ་ནི་འདུ་བྱེད་རྣམས་རྒྱུ་དང་རྐྱེན་ལས་བྱུང་བ་སྟེ། ལྷག་མ་རྣམས་ཀྱང་དེ་བཞིན་ནོ། །མ་རིག་པ་འགགས་པས་འདུ་བྱེད་འགག་ཅེས་བྱ་བ་ནི། འདུ་བྱེད་རྣམས་མེད་པ་སྟེ། ལྷག་མ་རྣམས་ཀྱང་དེ་བཞིན་ནོ། །མ་རིག་པའི་རྐྱེན་ གྱིས་འདུ་བྱེད་རྣམས་ཤེས་བྱ་བ་ནི་སྐྱེ་བ་རྣམ་པར་འབྲེལ་བ་སྟེ། ལྷག་མ་རྣམས་ཀྱང་དེ་བཞིན་ནོ། །མ་རིག་པ་འགགས་པས་འདུ་བྱེད་འགག་ཅེས་བྱ་བ་ནི། འཇིག་པ་རྣམ་པར་འབྲེལ་བ་སྟེ། ལྷག་མ་རྣམས་ཀྱང་དེ་བཞིན་ནོ། །མ་རིག་པའི་རྐྱེན་གྱིས་འདུ་བྱེད་རྣམས་ཤེས་བྱ་བ་ནི་སྲིད་པ་ལུགས་སུ་འཐུན་པར་བརྟག་པ་སྟེ། ལྷག་མ་རྣམས་ཀྱང་དེ་བཞིན་ནོ། །མ་རིག་པ་འགགས་པས་འདུ་བྱེད་འགག་ཅེས་བྱ་བ་ནི་ཟད་པ་དང་འཇིག་པའི་ལུགས་སུ་འཐུན་པར་བརྟག་པ་སྟེ། ལྷག་མ་རྣམས་ཀྱང་དེ་བཞིན་ནོ།",
+   "en": "“ ‘Also, when it is said, “The formations have ignorance as their condition,” it means that they are related to the past. Consciousness, name-and-form, the six sensory bases, contact, and sensation are related to the present. Craving, grasping, becoming, and birth are related to the future. It is said, “This continues onwards.” It is said, “Through the cessation of ignorance there is the cessation of the formations,” which means that the relationship is discontinued. “ ‘Moreover, the three sufferings arise in the twelve components of existence. Ignorance, the formations, consciousness, name-and-form, and the six sensory bases are the suffering of composite phenomena. Contact and sensation are the suffering of suffering. Craving, grasping, becoming, birth, and so on, up to distress, are the suffering of change. “ ‘It is said, “Through the cessation of ignorance there is the cessation of the formations,” which means that the continuity of the three sufferings ceases. “ ‘It is said, “The formations have ignorance as their condition,” which means that the formations arise from cause and condition. It is the same for the rest. “ ‘It is said, “Through the cessation of ignorance there is the cessation of the formations,” which means the extinction of the formations. It is the same for the rest. “ ‘It is said, “The formations have ignorance as their condition,” which means this is a connection through production. It is the same for the rest. “ ‘It is said, “Through the cessation of ignorance there is the cessation of the formations,” which means this is a connection through elimination. It is the same for the rest. “ ‘It is said, “The formations have ignorance as their condition,” which means an analysis of progressive generation. It is the same for the rest. “ ‘It is said, “Through the cessation of ignorance there is the cessation of the formations,” which means an analysis of progressive termination and elimination. It is the same for the rest.’"
+  },
+  "d6-09": {
+   "sa": "sa evaṃ dvādaśākāraṃ pratītyasamutpādaṃ pratyavekṣate 'nulomapratilomaṃ yaduta bhavāṅgānusaṃdhitaśca ekacittasamavasaraṇataśca svakarmāsaṃbhedataśca avinirbhāgataśca trivartmānuvartanataśca pūrvāntapratyutpannāparāntāvekṣaṇataśca triduḥkhatāsamudayataśca hetupratyayaprabhavataśca utpādavyayavinibandhanataśca abhāvākṣayatāpratyavekṣaṇataśca // tasyaivaṃ dvādaśākāraṃ pratītyasamutpādaṃ pratyavekṣamāṇasya nirātmato niḥsattvato nirjīvato niṣpudgalataḥ kārakavedakarahitato 'svāmikato hetupratyayādhīnataḥ svabhāvaśūnyato viviktato 'svabhāvataśca prakṛtyā pratyavekṣamāṇasya śūnyatāvimokṣamukhamājātaṃ bhavati // tasyaivaṃ bhavāṅgānāṃ svabhāvanirodhātyantavimokṣapratyupasthānato na kiṃciddharmanimittamutpadyate / ato 'sya ānimittavimokṣamukhamājātaṃ bhavati // tasyaivaṃ śūnyatānimittamavatīrṇasya na kaścidabhilāṣa utpadyate anyatra mahākaruṇāpūrvakātsattvaparipācanāt / evamasya apraṇihitavimokṣamukhamājātaṃ bhavati //",
+   "T0285": "彼當以故觀十二緣起滅所趣，反覆察之，由從因有，勤勤倚著，御身口意，因自作緣，供養所致，無有生業，其三迴轉，使不復轉，宿本無痛，習更三苦，修行報應諸緣起耳。假如有人，舉其負債，而在解縛，觀察無盡，無所有盡。彼觀此緣，緣適起時，識當來事，悉當了之。無我無人，無壽無命，自然為空，寂然恬怕有所造作，因遭得報，遵空脫門。心性懷此，如是滅盡，以無有餘，現在之處所也。思惟專志，無相脫門，以故知之，無所慕樂，唯志大哀，教授開化宿本眾生，是為心抱無願脫門，",
+   "T0286": "「如是，逆順十種觀十二因緣法，所謂因緣分次第、身心所攝、自助成法、不相捨離、隨三道行、分別先後際故、三苦差別故、從因緣起、生滅縛故、無所有盡觀故。「爾時，菩薩隨十二因緣觀無我、無眾生、無壽命者，無人性空、離作者、使作者，無主屬眾、因緣無所有。「如是觀時，空解脫門現在前；滅此事，餘不相續故，名無相解脫門現在前；知此二種更不樂生，唯除大悲心教化眾生，無願解脫門現在前。",
+   "T0278": "如是逆順十種觀十二因緣法，所謂：因緣分次第，心所攝，自助成法，不相捨離，隨三道行，分別先、後際，三苦差別，從因緣起，生滅縛，無所有盡觀。』「是菩薩隨十二因緣，無我、無人、無眾生、無壽命者、離作者、使作者、無主，屬眾因緣，如是觀時，空解脫門現在前；滅此事餘不相續故，無相解脫門現在前；知此二種，更不樂有，唯大悲心，教化眾生，無願解脫門現在前；",
+   "T0279": "「佛子！菩薩摩訶薩如是十種逆順觀諸緣起。所謂：有支相續故，一心所攝故，自業差別故，不相捨離故，三道不斷故，觀過去、現在、未來故，三苦聚集故，因緣生滅故，生滅繫縛故，無所有、盡觀故。「佛子，菩薩摩訶薩以如是十種相觀諸緣起，知無我、無人、無壽命、自性空、無作者、無受者，即得空解脫門現在前。觀諸有支皆自性滅，畢竟解脫，無有少法相生，即時得無相解脫門現在前。如是入空、無相已，無有願求，唯除大悲為首，教化眾生，即時得無願解脫門現在前。",
+   "T0287": "菩薩如是以十行相順逆觀察諸緣起法，所謂：有支相續故、入一心故、自業差別故、不相捨離故、三流不斷故、前今後世觀待理故、三苦集故、因緣所生故、生滅連縛故、觀有盡故。菩薩以是十種行相觀諸緣起，由以無我、無壽命者、無數取趣自性空寂，離作者、受者觀緣起故，空解脫門而現在前，即此菩薩彼諸有支自性滅故，究竟解脫現證住故，無少法相後生起者，由是無相解脫門而現在前。又此菩薩如是趣入空無相已，無餘願求唯除大悲，為先導故成熟有情，由是無願解脫門而現在前。",
+   "bo": "།ཞེས་དེ་ལྟར་རྟེན་ཅིང་འབྲེལ་བར་འབྱུང་བ་ལ་ལུགས་སུ་འཐུན་པ་དང་། མི་འཐུན་པའི་ཚུལ་དུ་རབ་ཏུ་རྟོག་སྟེ། འདི་ལྟར་སྲིད་པའི་ཡན་ལག་རྗེས་སུ་འབྲེལ་བ་དང་། སེམས་གཅིག་ཏུ་ཡང་དག་པར་འདུ་བ་དང་། རང་གི་ལས་མ་འདྲེས་པ་དང་། ཆེད་དུ་བྱེད་པ་མེད་པ་དང་ལམ་གསུམ་གྱི་རྒྱུད་དུ་འགྲང་བ་དང་། སྔོན་གྱི་མཐའ་དང་ད་ལྟར་བྱུང་བ་དང་། ཕྱི་མའི་མཐའ་ལ་བལྟ་བ་དང་། སྡུག་བསྔལ་གསུམ་འབྱུང་བ་དང་། རྒྱུ་དང་རྐྱེན་ལས་བྱུང་བ་དང་། སྐྱེ་བ་དང་འཇིག་པ་རྣམ་པར་འབྲེལ་བ་དང་། སྲིད་པའི་ལུགས་སུ་འཐུན་པ་དང་། ཟད་པར་འགྱུར་བར་རབ་ཏུ་རྟོག་པའོ། །དེ་དེ་ལྟར་རྟེན་ཅིང་འབྲེལ་བར་འབྱུང་བ་ལ་རྣམ་པ་བཅུར་རབ་ཏུ་རྟོག་ཅིང་བདག་མེད་པ་དང་། སྲོག་མེད་པ་དང་། གང་ཟག་མེད་པ་དང་། ངོ་བོ་ཉིད་ཀྱིས་སྟོང་པ་དང་། རང་བཞིན་གྱིས་བྱེད་པ་པོ་དང་། ཚོར་བ་པོ་མེད་པར་རབ་ཏུ་རྟོག་པའི་ཚེ། སྟོང་པ་ཉིད་ཀྱི་རྣམ་པར་ཐར་པའི་སྒོ་སྐྱེས་པ་ཡིན། སྲིད་པའི་ཡན་ལག་འདི་དག་གི་རང་བཞིན་འགགས་ཤིང་རྣམ་པར་ཐར་པ་ལ་ཤིན་ཏུ་ཉེ་བར་གནས་པས་ཆོས་ཀྱི་མཚན་མ་གང་ཡང་མི་སྐྱེ་སྟེ་དེས་དེའི་མཚན་མ་མེད་པའི་རྣམ་པར་ཐར་པའི་སྒོ་སྐྱེས་པ་ཡིན། དེ་ལྟར་དེ་སྟོང་པ་ཉིད་དང་མཚན་མ་མེད་པ་ལ་ཞུགས་པས་སྙིང་རྗེ་ཆེན་པོ་སྔོན་དུ་གཏོང་ ཞིང་སེམས་ཅན་ཡོངས་སུ་སྨིན་པར་བྱ་བ་མ་གཏོགས་པར་འདོད་པ་གང་ཡང་མི་སྐྱེ་སྟེ་དེས་དེའི་སྨོན་པ་མེད་པའི་རྣམ་པར་ཐར་པའི་སྒོ་སྐྱེས་པ་ཡིན།",
+   "en": "“He thus investigates ten aspects of dependent origination in their progressive development and negation: he investigates (1) the sequential connection of the components of existence; (2) their combination in one mind; (3) each having its own distinct activity; (4) their not being separate from one another; (5) their following the three processes; (6) their relationship to the past, the present, and the future; (7) their aggregation of the three sufferings; (8) their arising from causes and conditions; (9) their connection through generation and elimination; and (10) the process of becoming  and of termination. “In that way, through his examination of the ten aspects of dependent origination, he examines no self, no being, no soul, no person, emptiness by nature, and the natural absence of a doer or experiencer,  and there arises the door to liberation that is emptiness. “In that way he comes near to liberation through the cessation of the nature of the components of existence, and there arises the door to liberation that is featurelessness. “In that way he comprehends  emptiness and featurelessness; there does not arise any desire whatsoever other than for ripening beings, which is preceded by compassion, and there arises the door to liberation that is aspirationlessness."
+  },
+  "d6-10": {
+   "sa": "ya imāni trīṇi vimokṣamukhāni bhāvayan ātmaparasaṃjñāpagato kārakavedakasaṃjñāpagato bhāvābhāvasaṃjñāpagato bhūyasyā mātrayā mahākaruṇāpuraskṛtaḥ prayujyate 'pariniṣpannānāṃ bodhyaṅgānāṃ pariniṣpattaye, tasyaivaṃ bhavati - saṃyogātsaṃskṛtaṃ pravartate / visaṃyogānna pravartate / sāmagryā saṃskṛtaṃ pravartate / visāmagryā na pravartate / hanta vayamevaṃ bahudoṣaduṣṭaṃ saṃskṛtaṃ viditvā asya saṃyogasya asyāḥ sāmagryā vyavacchedaṃ kariṣyāmaḥ, na cātyantopaśamaṃ sarvasaṃskārāṇāmavirāgayiṣyāmaḥ sattvaparipācanatāyai // evamasya bhavanto jinaputrāḥ saṃskāragataṃ bahudoṣaduṣṭaṃ svabhāvarahitamanutpannāniruddhaṃ prakṛtyā pratyavekṣamāṇasya mahākaruṇābhinirhārataśca sattvakāryānutsargataśca saṅgajñānābhimukho nāma prajñāpāramitāvihāro 'bhimukhībhavatyavabhāsayogena / sa evaṃ jñānasamanvāgataḥ prajñāpāramitāvihārāvabhāsito bodhyaṅgāhārakāṃśca pratyayānupasaṃharati / na ca saṃskṛtasaṃvāsena saṃvasati / svabhāvopaśamaṃ ca saṃskārāṇāṃ pratyavekṣate / na ca tatrāvatiṣṭhate bodhyaṅgāparityaktatvāt //",
+   "T0285": "以能奉行，是三脫門，則以消除彼我之行及見作相，去於有無諸相之著，復加進抱，大哀為無，益便精進，化諸凡夫未成道者，使得究暢。以能成就，輒達法會，轉通法會，不復退還。具備和同，以進仁和，成就不退。若覩如是，所生瞋結瑕穢之病，由此合會，適以合會致此眾患，猶如江水流無休息，心自念言：『不用餘行，永修寂然，開化眾生。』如是佛子！若能行此，處在無恨，殃毒惡世，導御自然。觀本淨者，不起不滅，遵奉大哀，化順眾生，行智度無極，號無礙慧門，漸修熟志，學至照曜，合會道明，成慧如是。正道大業，道利應時，服食道義，不與邪業而俱合會。因僉觀察，自然寂滅，亦不往彼道品具足，親自覩解，目前道地，便入於空。",
+   "T0286": "「菩薩修行是三解脫門，離彼我相、離作者受者相、離有無相，悲心轉增。以重悲心故，勤行精進，未滿助菩提法欲令滿足。菩薩作是念：『有為和合故增，離散則滅；眾緣具故增，不具故滅。我今知有為法多過故，不應具和合因緣，亦不畢竟滅有為法，為教化眾生故。』「諸佛子！菩薩如是知有為法多過無性，離堅固相，無生、無滅，與大慈悲和合，不捨眾生，即時得無障礙般若波羅蜜，光明現在前。得如是智慧具足修集，取阿耨多羅三藐三菩提因緣而不與有為法共住，觀有為法性寂滅相亦不住其中，欲具足無上菩提分故。",
+   "T0278": "菩薩修行三解脫門，離彼我相，離作者、受者相，離有、無相，悲心轉增，以悲心故，勤行精進，未滿菩提法，欲令滿足。菩薩作是念：『有為法和合故增，離散則減；緣具故增，不具則減；我知有為法過故，不應和合具諸因緣；化眾生故，亦不畢竟滅有為法。菩薩如是知有為法無性，離堅固相，無生無滅，與大慈悲和合，不捨眾生即得無障礙般若波羅蜜光明現在前；得是智慧具足，修集阿耨多羅三藐三菩提因緣，而不住有為法；觀有為法性寂滅相，亦不住其中，欲具足無上菩提法故。』",
+   "T0279": "菩薩如是修三解脫門，離彼、我想，離作者、受者想，離有、無想。「佛子！此菩薩摩訶薩大悲轉增，精勤修習，為未滿菩提分法令圓滿故，作是念：『一切有為，有和合則轉，無和合則不轉；緣集則轉，緣不集則不轉。我如是知有為法多諸過患，當斷此和合因緣；然為成就眾生故，亦不畢竟滅於諸行。』佛子！菩薩如是觀察有為多諸過患，無有自性，不生不滅，而恒起大悲，不捨眾生，即得般若波羅蜜現前，名：無障礙智光明。成就如是智光明已，雖修習菩提分因緣而不住有為中，雖觀有為法自性寂滅亦不住寂滅中，以菩提分法未圓滿故。",
+   "T0287": "菩薩如是修習此三解脫門時，離自、他想，遠離作者及受者想，離有、無想，大悲為首，於未修證諸覺分法為修證故，轉復修行，作是思惟：『由相應故有為法轉，由不相應不能流轉；由和合故有為流轉，若無和合則不流轉；我已解了諸有為法，如是多咎污染而轉，是故我今當斷相應及彼和合。然為成熟諸有情故，不應永滅一切有為。』唯諸佛子！菩薩如是，觀諸有為多咎污染，永無自性本性畢竟不生不滅。觀察此時興大悲故，不捨一切有情聚故，名無著智現前般若波羅蜜多住，以寄現故而現在前。菩薩成就如是智已，慧到彼岸住之所照，引發能引覺分眾緣，然非有住而住之。觀有為法自性寂滅不住，於彼菩提分法未圓滿。",
+   "bo": "དེ་རྣམ་པར་ཐར་པའི་སྒོ་གསུམ་པོ་འདི་དག་སྒོམ་པས་བདག་དང་ཕ་རོལ་གྱི་འདུ་ཤེས་དང་བྲལ་བ་དང་། བྱེད་པ་པོ་དང་། ཚོར་བ་པོའི་འདུ་ཤེས་དང་བྲལ་བ་དང་། ཡོད་པ་དང་མེད་པའི་འདུ་ཤེས་དང་བྲལ་བས། བྱང་ཆུབ་ཀྱི་ཡན་ལག་ཡོངས་སུ་མ་རྫོགས་པ་རྣམས་ཡོངས་སུ་རྫོགས་པར་བྱ་བའི་ཕྱིར་སྙིང་རྗེ་ཆེན་པོ་སྔོན་དུ་བཏང་སྟེ། དེ་བས་ཀྱང་ཤིན་ཏུ་བརྩོན་པར་བྱེད་དོ། །དེ་འདི་སྙམ་དུ་སེམས་ཏེ། འདུ་བ་ཡོད་པས་ནི་འདུས་བྱས་འཕེལ་བར་འགྱུར་རོ། །འདུ་བ་དང་བྲལ་བས་ནི་འཕེལ་བ་མེད་དོ། །རྒྱུ་རྐྱེན་དང་ལྡན་པས་ནི་འདུ་བྱེད་འཕེལ་བར་འགྱུར་རོ། །རྒྱུ་རྐྱེན་དང་མི་ལྡན་པས་ནི་འཕེལ་བ་མེད་དོ། །དེ་ལྟ་བས་ན་བདག་གིས་དེ་ལྟ་བུའི་འདུས་བྱས་ཉེས་པ་མང་པོའི་སྐྱོན་ཅན་ཤེས་པར་བྱས་ཏེ་འདུ་བ་དང་རྒྱུ་རྐྱེན་དང་ལྡན་པ་འདི་དག་རྒྱུན་གཅད་པར་བྱའོ། །སེམས་ཅན་ཡོངས་སུ་སྨིན་པར་བྱ་བའི་ཕྱིར་འདུ་བྱེད་རྣམས་ཤིན་ཏུ་ཞི་བ་འང་མངོན་དུ་མི་བྱའོ་ཞེས་ཏེ། ཀྱེ་རྒྱལ་བའི་སྲས་དག་དེ་དེ་ལྟར་འདུ་བྱེད་ཀྱི་རྣམ་པ་དེ་ལྟར་ཉེས་པ་མང་པོའི་སྐྱོན་ཅན་སྙིང་པོ་དང་རང་བཞིན་མེད་པ་སྐྱེ་བ་མེད་པ་འགག་པ་མེད་པའི་རང་བཞིན་དུ་རབ་ཏུ་རྟོག་པ་དང་སྙིང་རྗེ་ཆེན་པོ་རབ་ཏུ་བསྒྲུབ་པ་དང་། སེམས་ཅན་ཡོངས་སུ་མི་གཏོང་བས་ཆགས་པ་མེད་པའི་ཡེ་ཤེས་མངོན་སུམ་ཞེས་བྱ་བ་ཤེས་རབ་ཀྱི་ཕ་རོལ་ཏུ་ཕྱིན་པ་ལ་གནས་པ་སྣང་བའི་ཚུལ་དུ་མངོན་སུམ་དུ་འགྱུར་རོ། །དེ་དེ་ལྟ་བུའི་ཡེ་ཤེས་དང་ལྡན་ཞིང་ཤེས་རབ་ཀྱི་ཕ་རོལ་ཏུ་ཕྱིན་པ་ལ་གནས་པས་སྣང་བར་གྱུར་ནས་ཀྱང་། བྱང་ཆུབ་ཀྱི་ཡན་ལག་ཡོངས་སུ་སྡུད་པའི་རྐྱེན་ཉེ་བར་སྩོགས་ཤིང་ཡང་དག་པར་སྡུད་དོ། །འདུས་བྱས་དང་འགྲོགས་པར་ཡང་མི་གནས་སོ། །འདུ་བྱེད་རྣམས་རང་བཞིན་གྱིས་ཞི་བ་ཡང་རབ་ ཏུ་རྟོག་གོ །འོན་ཀྱང་བྱང་ཆུབ་ཀྱི་ཡན་ལག་རྣམས་མ་རྫོགས་པའི་ཕྱིར་དེ་ལ་མི་གནས་ཏེ།",
+   "en": "“He who meditates on these three doors to liberation is freed from the identifications of self and other, freed from the identifications of doer and experiencer, and freed from the identifications of existence and nonexistence. With all-preceding great compassion there is even greater application, and the incomplete factors for enlightenment are completed. “He thinks, ‘When there are combinations,  composite phenomena arise. When there are no combinations, they do not arise. When there are entireties,  composite phenomena arise. When there is the absence of the entirety of necessary factors, composite phenomena do not arise. We, thus knowing that composite phenomena are guilty of having many faults, shall put an end to  their combinations and entireties, but in order to ripen beings we will not manifest the complete cessation of composite phenomena.’ “O jinaputras! In that way, while comprehending the nature of that which is composite to be guilty of many faults, to be devoid of an inherent nature, and to be without birth or termination, he develops great compassion, he does not abandon beings, and by engaging with manifestation he manifests the state of the perfection of wisdom, which is called the manifestation of unimpeded wisdom. “He who has that kind of wisdom, who manifests being in the state of the perfection of wisdom, accumulates the conditions for acquiring the factors for enlightenment. He does not remain in involvement with that which is composite. He regards the cessation that is the nature of composite phenomena, but he does not remain absorbed within that, so as not to be lacking in the factors for enlightenment."
+  },
+  "d6-11": {
+   "sa": "tasya asyāmabhimukhyāṃ bodhisattvabhūmau sthitasya bodhisattvasya avatāraśūnyatā ca nāma samādhirājāyate / svabhāvaśūnyatā ... paramārthaśūnyatā ... paramaśūnyatā ... mahāśūnyatā ... saṃprayogaśūnyatā ... abhinirhāraśūnyatā yathāvadavikalpaśūnyatā sāpekṣaśūnyatā vinirbhāgāvinirbhāgaśūnyatā nāma samādhirājāyate / tasyaivaṃpramukhāni daśa śūnyatāsamādhimukhaśatasahasrāṇyāmukhībhavanti / evamānimittasamādhimukhaśataśahasrāṇi apraṇihitasamādhimukhaśatasahasrāṇyāmukhībhavanti / tasya bhūyasyā mātrayā asyāmabhimukhyāṃ bodhisattvabhūmau sthitasya bodhisattvasyabhedyāśayatā ca paripūryate / niyatāśayatā ... kalyāṇāśayatā ... gambhīrāśayatā ... apratyudāvartyāśayatā ... apratiprastrabdhāśayatā ... vimalāśayatā ... anantāśayatā ... jñānābhilāṣāśayatā ... upāyaprajñāsaṃprayogāśayatā ca paripūryate // tasyaite daśa bodhisattvāśayāḥ svanugatā bhavanti tathāgatabodhau / apratyudāvartanīyavīryaśca bhavati sarvaparapravādibhiḥ / samavasṛtaśca bhavati jñānabhūmau / vinivṛttaśca bhavati śrāvakapratyekabuddhabhūmibhyaḥ / ekāntikaśca bhavati buddhajñānābhimukhatāyām / asaṃhāryaśca bhavati sarvamārakleśasamudācāraiḥ / supratiṣṭhitaśca bhavati bodhisattvajñānālokatāyām / suparibhāvitaśca bhavati śūnyatānimittāpraṇihitadharmasamudācāraiḥ / saṃprayuktaśca bhavatyupāyaprajñāvicāraiḥ / vyavakīrṇaśca bhavati bodhipākṣikadharmābhinirhāraiḥ / tasya asyāmabhimukhyāṃ bodhisattvabhūmau sthitasya prajñāpāramitāvihāro 'tiriktatara ājāto bhavati, tīkṣṇā cānulomikī tṛtīyā kṣāntireṣāṃ dharmāṇāṃ yathāvadanulomatayā na vilomatayā //",
+   "T0285": "惟解定意，其定意名入空自然空定，究竟空定，第一空定，為無極空定意，為合會空定意，所奉行空定意，真無念空定意，為等察空定意，離業無物空定意。如是比像，逮得一萬三昧門，自然目前，無相無願，亦復如是。「轉復進修，親近逮至諸菩薩住，其心充滿，性不可壞，心性了了，性行真正，其性深遠，意不可轉，意無休息，其意弘廣，心思無限，意慕樂慧，其意集會，善權智慧，爾乃備悉。此菩薩性，遂致淳和，在如來道，永不迴轉，能化異學一切邪術等順慧地，不墮弟子緣覺之地，專一增進，目見佛慧，而無等倫，捨塵勞行，得堅固志，住菩薩慧。而熟修奉空無相願，遵承法教，隨時應宜，善權智慧，不復毀散道品法行。",
+   "T0286": "菩薩住現前地中，得快空三昧、性空三昧、第一義空三昧、第一空三昧、大空三昧、合空三昧、生空三昧、如實不分別空三昧、攝空三昧、離不離空三昧。如是等萬空三昧門現在前；無相、無願三昧亦如是。「是菩薩住現前地中，志心、決定心、妙心、深心、不轉心、不捨心、廣心、無邊心、樂智心、慧方便和合心，如是等心轉勝增長故，隨順阿耨多羅三藐三菩提，一切外道論師不能傾動；入於智地，轉聲聞、辟支佛，決定向佛智，一切眾魔及諸煩惱所不能制。安住菩薩智慧明中，善修應空、無相、無願解脫門，專以慧方便行助菩提法。",
+   "T0278": "「菩薩住現前地，得勝空三昧、性空三昧、第一義空三昧、究竟空三昧、大空三昧、合空三昧、生空三昧、如實離虛妄空三昧、略空三昧、離分別不分別空三昧，如是等萬空三昧門現在前，無相、無願三昧亦如是。是菩薩住現前地，深心、決定心、真心、甚深心、不轉心、不捨心、廣心、無邊心、樂智心、慧方便和合心，如是等心轉勝增長，隨順阿耨多羅三藐三菩提，一切論師不能傾動；入於智地，轉聲聞、辟支佛地，決定向佛智，一切眾魔及諸煩惱所不能壞；安住菩薩智慧明中，修空、無相、無願解脫門，專以智慧方便行助菩提法。",
+   "T0279": "「佛子！菩薩住此現前地，得入空三昧、自性空三昧、第一義空三昧、第一空三昧、大空三昧、合空三昧、起空三昧、如實不分別空三昧、不捨離空三昧、離不離空三昧。此菩薩得如是十空三昧門為首，百千空三昧皆悉現前；如是十無相、十無願三昧門為首，百千無相、無願三昧門皆悉現前。「佛子！菩薩住此現前地，復更修習滿足不可壞心、決定心、純善心、甚深心、不退轉心、不休息心、廣大心、無邊心、求智心、方便慧相應心，皆悉圓滿。「佛子！菩薩以此心順佛菩提，不懼異論，入諸智地，離二乘道，趣於佛智，諸煩惱魔無能沮壞，住於菩薩智慧光明，於空、無相、無願法中皆善修習，方便智慧恒共相應，菩提分法常行不捨。",
+   "T0287": "菩薩住此現前地中，名入空性三摩地而現在前。自性空性三摩地，勝義空性三摩地，最上空性三摩地，大空性三摩地，相應空性三摩地，引發空性三摩地，如理無分別空性三摩地，有顧戀空性三摩地，離不離空性三摩地，而悉現前。此菩薩如是上首於空性門，百萬三摩地而現在前，如是於無相門百萬三摩地，於無願門百萬三摩地皆現在前。「唯諸佛子！菩薩住此現前地中，不壞意樂轉更圓滿；決定意樂、賢善意樂、甚深意樂、不退轉意樂、不休息意樂、無垢意樂、無邊意樂、求智意樂、方便與慧相應意樂皆得圓滿。於是菩薩此諸意樂，順佛菩提對諸異論，精進不退入於智地。捨離聲聞、獨覺乘地，一向決定趣於佛智，以諸魔怨煩惱現行不可映奪，善住菩薩智光明中，善修習空、無相、無願法之現行，恒與方便慧觀相應，間雜引發菩提分法。",
+   "bo": "དེ་བྱང་ཆུབ་སེམས་དཔའི་ས་མངོན་སུམ་འདི་ལ་གནས་པའི་ཚེ་འཇུག་པ་སྟོང་པ་ཞེས་བྱ་བའི་ཏིང་ངེ་འཛིན་སྐྱེ་བར་འགྱུར་རོ། །རང་བཞིན་སྟོང་པ་ཉིད་དང་། དོན་དམ་པ་སྟོང་པ་ཉིད་དང་། ཆེན་པོ་སྟོང་པ་ཉིད་དང་། འདུ་བ་སྟོང་པ་ཉིད་དང་། མངོན་པར་བསྒྲུབ་པ་སྟོང་པ་ཉིད་དང་། ཡང་དག་པ་ཇི་ལྟ་བ་བཞིན་དུ་རྣམ་པར་རྟོག་པའི་སྟོང་པ་ཉིད་དང་། ལྟོས་པ་སྟོང་པ་ཉིད་དང་། ཐ་དད་པ་དང་ཐ་དད་པ་མེད་པ་སྟོང་པ་ཉིད་ཅེས་བྱ་བའི་ཏིང་ངེ་འཛིན་ཀྱང་སྐྱེ་བར་འགྱུར་ཏེ། དེ་དག་ལ་སྩོགས་པ་སྟོང་པ་ཉིད་ཀྱི་སྒོའི་ཏིང་ངེ་འཛིན་བརྒྱ་སྟོང་ཕྲག་བཅུ་དེ་ལ་མངོན་སུམ་དུ་འགྱུར་རོ། །དེ་བཞིན་དུ་མཚན་མ་མེད་པའི་སྒོའི་ཏིང་ངེ་འཛིན་བརྒྱ་སྟོང་ཕྲག་བཅུ་དང་སྨོན་པ་མེད་པའི་སྒོའི་ཏིང་ངེ་འཛིན་བརྒྱ་སྟོང་ཕྲག་བཅུ་མངོན་སུམ་དུ་འགྱུར་རོ། །དེ་ལྟར་བྱང་ཆུབ་སེམས་དཔའི་ས་མངོན་སུམ་འདི་ལ་གནས་པའི་བྱང་ཆུབ་སེམས་དཔའ་དེ་ཕྱིར་ཞིང་མི་ཕྱེད་པའི་བསམ་པ་ཡོངས་སུ་རྫོགས་པ་འཐོབ་པོ། །ངེས་པའི་བསམ་པ་དང་དགེ་བའི་བསམ་པ་དང་། ཟབ་པའི་བསམ་པ་དང་། ཕྱིར་མི་ལྡོག་པའི་བསམ་པ་དང་། རྒྱུན་མི་འཆད་པའི་བསམ་པ་དང་། དྲི་མ་མེད་པའི་བསམ་པ་དང་། མཐའ་ཡས་པའི་བསམ་པ་དང་། ཡེ་ཤེས་ལ་མངོན་པར་མོས་པའི་བསམ་པ་དང་། ཐབས་དང་ཤེས་རབ་ཏུ་ལྡན་པའི་བསམ་པ་ཡོངས་སུ་རྫོགས་པ་འཐོབ་སྟེ། བྱང་ཆུབ་སེམས་དཔའི་བསམ་པ་འདི་བཅུ་ནི། དེ་བཞིན་གཤེགས་པའི་བྱང་ཆུབ་ཀྱི་རྗེས་སུ་སོང་བ་ཡིན། ཕས་ཀྱི་རྒོལ་བ་ཐམས་ཅད་ཀྱི་ཕྱིར་མི་ལྡོག་པ་ཡིན། ཡེ་ཤེས་ཀྱི་ས་ལ་ཡང་དག་པར་གཞོལ་བ་ཡིན། ཉན་ཐོས་དང་། རང་སངས་རྒྱས་ཀྱིས་ལས་རྣམ་པར་ལོག་པ་ཡིན། སངས་རྒྱས་ཀྱི་ཡེ་ཤེས་མངོན་དུ་བྱ་བ་ལ་ཤིན་ཏུ་ངེས་པ་ཡིན། བདུད་དང་ཉོན་མོངས་པ་ ཀུན་ནས་རྒྱུ་བ་ཐམས་ཅད་ཀྱིས་མི་འཕྲོགས་པ་ཡིན། བྱང་ཆུབ་སེམས་དཔའི་སྣང་བ་ལ་ཤིན་ཏུ་གནས་པ་ཡིན། སྟོང་པ་ཉིད་དང་། མཚན་མ་མེད་པ་དང་། སྨོན་པ་མེད་པའི་ཆོས་ཡང་དག་པར་སྤྱད་པ་ཡོངས་སུ་བསྒོམས་པ་ཡིན། ཐབས་དང་། ཤེས་རབ་དང་། ཡེ་ཤེས་རྣམ་པར་དཔྱད་པ་དང་ལྡན་པ་ཡིན། བྱང་ཆུབ་ཀྱི་ཕྱོགས་ཀྱི་ཆོས་མངོན་པར་བསྒྲུབ་པ་དང་། རྣམ་པར་འདྲེས་པ་ཡིན།",
+   "en": "“When the bodhisattva is on the Manifested bodhisattva bhūmi, there arises the samādhi named entering emptiness.  There also arise the samādhis named emptiness of inherent nature, ultimate emptiness, supreme emptiness, great emptiness, emptiness of engagement, emptiness of accomplishment, emptiness of correct comprehension, emptiness of dependency, emptiness of separation, and emptiness of nonseparation. There also manifest hundreds of thousands of other entrances into the samādhi of emptiness. In that way there also manifest hundreds of thousands of entrances into the samādhi of featurelessness and hundreds of thousands of entrances into the samādhi of aspirationlessness. “Even more, the bodhisattva residing on this Manifested bodhisattva bhūmi completely attains undivided motivation. He completely attains definite contemplation, good contemplation, profound motivation, irreversible motivation, uninterrupted motivation, stainless motivation, infinite motivation, motivation that aspires to wisdom, and motivation that has method and wisdom. Those ten motivations of the bodhisattva are in accord with the enlightenment of a tathāgata. “He cannot be countered by any opposing teacher;  he reaches the bhūmi of wisdom; he turns away from the śrāvaka and pratyekabuddha bhūmis; he solely manifests the wisdom of the buddhas; he cannot be surpassed by any of the activities of the māras or kleśas; he remains in the light of a bodhisattva’s wisdom; he is completely immersed in the practice of the Dharma of emptiness, featurelessness, and aspirationlessness; he is engaged in analysis through method, wisdom, and knowledge; and he is permeated by the accomplishment of the factors for enlightenment."
+  },
+  "d6-12": {
+   "sa": "tasya asyāmabhimukhyāṃ bodhisattvabhūmau sthitasya bodhisattvasya yathāvatsamāpattiprajñājñānālokatayā prayujyate, pratipattitaścādhārayati / sa bhūyasyā mātrayā tathāgatadharmakośaprāpto bhavati / tasya asyāmabhimukhyāṃ bodhisattvabhūmau sthitasya anekān kalpāṃstāni kuśalamūlāni bhūyasyā mātrayā uttaptaprabhāsvaratarāṇi bhavanti / anekāni kalpaśatāni ... . / tāni kuśalamūlāni bhūyasyā mātrayottaptaprabhāsvaratarāṇi bhavanti / tadyathāpi nāma bhavanto jinaputrāstadeva jātarūpaṃ vaiḍūryaparisṛṣṭaṃ bhūyasyā mātrayottaptaprabhāsvarataraṃ bhavati, evameva bhavanto jinaputrā bodhisattvasya asyāmabhimukhyāṃ bodhisattvabhūmau sthitasya tāni kuśalamūlānyupāyaprajñājñānavicāritāni bhūyasyā mātrayottaptaprabhāsvaratarāṇi bhavanti, bhūyo bhūyaśca praśamāsaṃhāryatāṃ gacchanti / tadyathāpi nāma bhavanto jinaputrāścandrābhā sattvāśrayāṃśca prahlādayati asaṃhāryā ca bhavati catasṛbhirvātamaṇḍalībhiḥ, evameva bhavanto jinaputra bodhisattvasya asyāmabhimukhyāṃ bodhisattvabhūmau sthitasya tāni kuśalamūlānyanekeṣāṃ sattvakoṭinayutaśatasahasrāṇāṃ kleśajvālāḥ praśamayanti, prahlādayanti, asaṃhāryāṇi ca bhavanti caturbhirmārāvacaraiḥ / tasya daśabhyaḥ pāramitābhyaḥ prajñāpāramitā atiriktatamā bhavati, na ca pariśeṣā na samudāgacchati yathābalaṃ yathābhajamānam /",
+   "T0285": "彼住菩薩，目見道地，智度無極，益復超異，今日成就，通利應道，疾逮第三忍，名曰柔順，是謂道法；轉而順從，彼以住此目見菩薩第六道地。見不可計億百千姟兆載諸佛，尋時供養，下意奉事，進其衣食，床臥坐具，病瘦醫藥，在諸佛所，出家捐業，行作沙門，受聽經典，如所聞之，奉行智慧，勤修聖達，所行求義，即能逮致，轉修覺進如來法藏。逮大法明，在不可數億百千劫兆載無限，成功德本，遂顯巍巍，猶如佛子上寶琉璃，洗治發明，其光灼灼，菩薩如斯，住是目前菩薩道地，其德日增，行善權智，益加顯發，以此德本，轉增寂然，遊步無侶，猶如佛子。其月大光，照眾生心，使各坦然，其四大風，所御宮殿，獨而無侶。",
+   "T0286": "「是菩薩住現前地，於般若波羅蜜中得轉勝行、得第三上順忍。以順是法無有違逆故，菩薩住是現前地中得見數百、數千佛、乃至數百千萬億佛，供養、恭敬、尊重、讚歎，衣服、飲食、臥具、醫藥，親近諸佛，於諸佛所聽法；聽法已，如實隨智慧光明故如所說行，令諸佛歡喜。是人轉勝知諸佛法藏，乃至無量百千萬億劫諸善根轉妙明淨。「諸佛子！譬如真金，以琉璃磨瑩，光色轉勝。菩薩住此現前地，以慧方便故，善根轉勝，明淨寂滅，餘地所不及。諸佛子！譬如月明能令眾生身得清淨，四種風吹不能遏絕。菩薩摩訶薩住是現前地，善根轉勝，能滅無量眾生煩惱之火，四種惡魔所不能壞。",
+   "T0278": "是菩薩住現前地，於般若波羅蜜偏勝，得明上順忍，以順是法無有違逆。「菩薩住現前地，得見數百千萬億佛，恭敬供養，尊重讚歎，衣服、飲食、臥具、醫藥，親近諸佛於諸佛所聽受正法，如說修行令佛歡喜，是人轉勝，知佛法藏，乃至無量百千萬億劫，一切善根，轉妙明淨。譬如真金，以瑠璃磨瑩，光色轉勝；菩薩住現前地，以慧方便故，一切善根轉勝明淨，餘地不及。譬如月明，能令眾生身得清涼，四種風吹，不能遏絕，菩薩住現前地，善根轉勝，能滅眾生煩惱之火，四種惡魔所不能壞。",
+   "T0279": "佛子！菩薩住此現前地中，得般若波羅蜜行增上，得第三明利順忍，以於諸法如實相隨順無違故。「佛子！菩薩住此現前地已，以願力故，得見多佛。所謂：見多百佛，乃至見多百千億那由他佛。悉以廣大心、深心，供養恭敬，尊重讚歎，衣服、飲食、臥具、湯藥，一切資生悉以奉施，亦以供養一切眾僧，以此善根迴向阿耨多羅三藐三菩提。於諸佛所，恭敬聽法，聞已受持，得如實三昧智慧光明，隨順修行，憶持不捨。又得諸佛甚深法藏，經於百劫，經於千劫，乃至無量百千億那由他劫，所有善根轉更明淨。譬如真金，以毘瑠璃寶數數磨瑩，轉更明淨；此地菩薩所有善根亦復如是，以方便慧，隨逐觀察，轉更明淨，轉復寂滅，無能映蔽。譬如月光，照眾生身，令得清涼，四種風輪所不能壞；此地菩薩所有善根亦復如是，能滅無量百千億那由他眾生煩惱熾火，四種魔道所不能壞。此菩薩，十波羅蜜中，般若波羅蜜偏多；餘非不修，但隨力隨分。",
+   "T0287": "菩薩住此現前地時，慧到彼岸住得增上，及證第三猛利順忍，以於諸法如理隨順不違逆故。「菩薩住此現前地中，以廣大見及以願力，現見多佛、多百佛、多千佛、多百千佛、多百千那庾多佛、多俱胝佛、多百俱胝佛、多千俱胝佛、多百千俱胝佛、多百千俱胝那庾多佛。菩薩見是如來、應供、正等覺已，悉以廣大增上意樂，恭敬、尊重、承事、供養，奉施衣服、飲食、臥具、病緣醫藥、諸資生具，奉獻菩薩諸妙樂具，於僧伽眾而作恭敬，以此善根迴向無上正等菩提，殷重承事諸佛如來，恭敬尊重以希有想聽聞正法，聞已受持，以無顛倒等持慧智光明，修行堅固正行憶持不忘，轉更得入如來法藏。於是菩薩住此第六現前地者，於無量劫此諸善根轉復熾然、轉更明淨，無量百劫、無量千劫、無量百千劫、無量百千那庾多劫、無量俱胝劫、無量百俱胝劫、無量千俱胝劫、無量百千俱胝劫、無量百千俱胝那庾多劫，此諸善根轉復熾然、轉更明淨。唯諸佛子！譬如金師，以所鍊金作莊嚴具，以瑠璃寶瑩飾廁填，轉得熾然、轉更明淨。唯諸佛子！菩薩住此現前地中，此諸善根亦復如是，以方便慧隨所思察，轉得熾然、轉更明淨，展轉寂滅無能映奪。又諸佛子！譬如月光，能令有情身得悅豫，非四風轉所能斷壞。唯諸佛子！菩薩住此現前地中，此諸善根亦復如是，能滅無量百千俱胝那庾多有情煩惱火焰，非四魔道所能斷壞。彼於十種波羅蜜多慧到彼岸而得增上，餘到彼岸隨力隨分，非不修行。",
+   "bo": "དེ་ལྟར་དེ་བྱང་ཆུབ་སེམས་དཔའི་ས་མངོན་སུམ་འདི་ལ་གནས་པའི་ཚེ། ཤེས་རབ་ཀྱི་ཕ་རོལ་ཏུ་ཕྱིན་པ་ལ་གནས་པའི་ཤས་ཆེ་བ་ཡིན། ཆོས་དེ་དག་ལ་ཚུལ་བཞིན་དུ་འཐུན་པར་བྱེད་ཅིང་མི་མཐུན་པར་མི་བྱེད་པས་འཐུན་པའི་བཟོད་པ་གསུམ་པ་རབ་ཏུ་རྣོ་བ་རབ་ཏུ་སྐྱེས་པ་ཡིན། དེ་ལྟར་དེ་བྱང་ཆུབ་སེམས་དཔའི་ས་མངོན་སུམ་འདི་ལ་གནས་པའི་ཚེ་དེའི་ལྟ་བ་རྒྱ་ཆེན་པོ་དང་སྨོན་ལམ་གྱི་སྟོབས་ཀྱིས་སངས་རྒྱས་མང་པོ་སྣང་བར་འགྱུར་ཏེ། ལྟ་བ་རྒྱ་ཆེན་པོ་དང་། སྨོན་ལམ་གྱི་སྟོབས་ཀྱིས་སངས་རྒྱས་བརྒྱ་ཕྲག་མང་པོ་དང་། སངས་རྒྱས་སྟོང་ཕྲག་མང་པོ་དང་སངས་རྒྱས་བརྒྱ་སྟོང་ཕྲག་མང་པོ་དང་། སངས་རྒྱས་བྱེ་བ་བརྒྱ་སྟོང་ཕྲག་མང་པོ་དང་། སངས་རྒྱས་ཁྲག་ཁྲིག་ཕྲག་མང་པོ་དང་། སངས་རྒྱས་ཁྲག་ཁྲིག་བརྒྱ་ཕྲག་མང་པོ་དང་། སངས་རྒྱས་ཁྲག་ཁྲིག་སྟོང་ཕྲག་མང་པོ་དང་། སངས་རྒྱས་ཁྲག་ཁྲིག་བརྒྱ་སྟོང་ཕྲག་མང་པོ་དང་། སངས་རྒྱས་བྱེ་བ་ཁྲག་ཁྲིག་བརྒྱ་སྟོང་ཕྲག་མང་པོ་སྣང་བར་འགྱུར་རོ། །དེས་དེ་བཞིན་གཤེགས་པ་དགྲ་བཅོམ་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་དེ་དག་མཐོང་ནས་བསམ་པ་རྒྱ་ཆེན་པོས་རིམ་གྲོ་བྱེད་དོ། །བཀུར་སྟི་བྱེད་དོ། །བསྟི་སྟང་བྱེད་དོ། །མཆོད་པ་བྱེད་དོ། །ན་བཟའ་དང་། བསོད་སྙོམས་དང་། གཟིམས་ཆ་དང་། སྙུན་གྱི་རྐྱེན་སྨན་དང་ཡོ་བྱད་དག་ཀྱང་འབུལ་ཞིང་བྱང་ཆུབ་སེམས་དཔའི་བདེ་བའི་ཡོ་བྱད་ཐམས་ཅད་ཀྱང་ཡོངས་སུ་འབུལ་ལོ། །དགེ་འདུན་གྱི་ ཚོགས་རྣམས་ལ་ཡང་ཡང་དག་པར་མཆོད་པ་བྱེད་དེ་དགེ་བའི་རྩ་བ་དེ་དག་ཀྱང་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་ཏུ་ཡོངས་སུ་བསྔོའོ། །དེ་བཞིན་གཤེགས་པ་དགྲ་བཅོམ་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་དེ་དག་ལ་བསྙེན་བཀུར་བྱེད་ཅིང་རིམ་གྲོ་དང་། བཀུར་སྟིས་ནན་ཏན་ཏུ་ཆོས་ཉན་ཅིང་ལེན་ཏོ། །འཛིན་ཏོ། །ཐོས་ནས་ཀྱང་ཡང་དག་པ་ཇི་ལྟ་བ་བཞིན་དུ་སྙོམས་པར་འཇུག་པ་དང་། ཤེས་རབ་དང་ཡེ་ཤེས་ཀྱི་སྣང་བས་རབ་ཏུ་བརྩོན་པར་བྱེད་དེ་ནན་ཏན་གྱིས་ཡོངས་སུ་འཛིན་པས་དེ་སྔོན་པས་ཀྱང་དེ་བཞིན་གཤེགས་པའི་ཆོས་ཀྱི་མཛོད་རབ་ཏུ་ཐོབ་པ་ཡིན། དེ་ལྟར་དེ་བྱང་ཆུབ་སེམས་དཔའི་ས་མངོན་སུམ་འདི་ལ་གནས་པའི་ཚེ། དགེ་བའི་རྩ་བ་དེ་དག་ཀྱང་བསྐལ་པ་དུ་མ་དང་། བསྐལ་པ་བརྒྱ་ཕྲག་དུ་མ་དང་། བསྐལ་པ་སྟོང་ཕྲག་དུ་མ་དང་། བསྐལ་པ་བརྒྱ་སྟོང་ཕྲག་དུ་མ་དང་། བསྐལ་པ་བྱེ་བ་བརྒྱ་སྟོང་ཕྲག་དུ་མ་དང་། བསྐལ་པ་ཁྲག་ཁྲིག་ཕྲག་དུ་མ་དང་། བསྐལ་པ་ཁྲག་ཁྲིག་བརྒྱ་ཕྲག་དུ་མ་དང་། བསྐལ་པ་ཁྲག་ཁྲིག་སྟོང་ཕྲག་དུ་མ་དང་། བསྐལ་པ་ཁྲག་ཁྲིག་བརྒྱ་སྟོང་ཕྲག་དུ་མ་དང་། བསྐལ་པ་བྱེ་བ་ཁྲག་ཁྲིག་བརྒྱ་སྟོང་ཕྲག་དུ་མར་སྔོན་བས་ཀྱང་ཆེས་བྱང་བ་དང་། ཅེས་འོད་གསལ་ཞིང་དང་བར་གནས་སོ། །ཀྱེ་རྒྱལ་བའི་སྲས་དག །འདི་ལྟ་སྟེ་དཔེར་ན། གསེར་གྱི་ས་ལེ་སྦྲམ་དེ་ཉིད་བཻ་ཌཱུརྱས་བཏབ་ན་སྔོན་བས་ཀྱང་ཤིན་ཏུ་འཚེར་ལ་འོད་གསལ་ཞིང་དང་བར་འགྱུར་རོ། །ཀྱེ་རྒྱལ་བའི་སྲས་དག །དེ་བཞིན་དུ་བྱང་ཆུབ་སེམས་དཔའི་ས་མངོན་སུམ་འདི་ལ་གནས་པའི་བྱང་ཆུབ་སེམས་དཔའི་དགེ་བའི་རྩ་བ་དེ་དག་ཀྱང་ཤེས་རབ་དང་ཡེ་ཤེས་ཀྱིས་ཤིན་ཏུ་བརྟགས་པས་སྔོན་བས་ཀྱང་ཤིན་ཏུ་བྱང་ལ་འོད་གསལ་ཞིང་དང་བ་ཡིན་ཏེ། ཕྱི་ཕྱིར་ཞིང་ཡང་རབ་ཏུ་ཞི་བས་མི་འཕྲོགས་པར་འགྱུར་རོ། །ཀྱེ་རྒྱལ་བའི་སྲས་དག །འདི་ལྟ་སྟེ་དཔེར་ན། ཟླ་བའི་འོད་ནི་སེམས་ ཅན་གྱི་ལུས་ཀྱང་སིམ་པར་བྱེད་ལ། རླུང་གི་དཀྱིལ་འཁོར་ཆེན་པོ་བཞིས་ཀྱང་མི་འཕྲོགས་པ་ཡིན། ཀྱེ་རྒྱལ་བའི་སྲས་དག །དེ་བཞིན་དུ་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ། བྱང་ཆུབ་སེམས་དཔའི་ས་མངོན་སུམ་འདི་ལ་གནས་པའི་དགེ་བའི་རྩ་བ་དེ་དག་སྔོན་བས་ཀྱང་སེམས་ཅན་དུ་མའི་བསམ་པའི་ཉོན་མོངས་པ་འབར་བ་ཡང་ཞི་ཞིང་སིམ་པར་བྱེད་ལ། བདུད་ཀྱི་ལམ་གྱི་རྒྱུད་བཞིས་ཀྱང་མི་འཕྲོགས་པ་ཡིན། དེའི་ཕ་རོལ་ཏུ་ཕྱིན་པ་བཅུ་ལས་ཤེས་རབ་ཀྱི་ཕ་རོལ་ཏུ་ཕྱིན་པའི་ཤས་ཆེ་བ་ཡིན་ཏེ། ལྷག་མ་རྣམས་ཀྱང་ཅི་ཚུལ་ཅི་ནུས་སུ་ཡང་དག་པར་མི་བསྒྲུབ་པ་མ་ཡིན་ནོ། །ཀྱེ་རྒྱལ་བའི་སྲས་དག །འདི་ནི་བྱང་ཆུབ་སེམས་དཔའི་ས་མངོན་སུམ་ཞེས་བྱ་བ་སྟེ། བྱང་ཆུབ་སེམས་དཔའི་ས་དྲུག་པའོ།",
+   "en": "“Thus when he is on the Manifested bodhisattva bhūmi, there arises a superior state of the perfection of wisdom, and with the third sharp concordant patience he acts in accord with these qualities and not contrary to them. “When he is in that way residing on this Manifested bodhisattva bhūmi, many buddhas will appear to him because of his vast view and the power of his prayers. Because of his vast view and the power of his prayers, many hundreds of buddhas, many thousands of buddhas, many hundreds of thousands of buddhas, many millions of buddhas, many tens of millions of buddhas, many billions of buddhas, many tens of billions of buddhas, many trillions of buddhas, and many quintillions of buddhas will appear to him. He will see those tathāgatas, those arhats, those samyaksambuddhas, and with a vast motivation he will serve them, worship them, honor them, make offerings to them, supply them with robes, alms, bowls, beds, medicine for when they are ill, and implements. He will also offer all the articles that bring happiness to a bodhisattva. He will also offer to the assemblies of the Saṅgha. He will dedicate all those roots of goodness to the highest complete enlightenment. He serves those tathāgata arhat samyaksambuddhas, and he listens to the Dharma with respect, reverence, and honor and remembers it. Having heard it he correctly applies himself to the light of meditation, wisdom, and knowledge  and possesses its attainment. He becomes, even more than before, someone who possesses the treasure of the Dharma of the tathāgatas. “The roots of goodness of the bodhisattva who resides on the bodhisattva bhūmi Manifested become purer, clearer, and brighter over many eons. They become purer, clearer, and brighter over many hundreds of eons, many thousands of eons, many hundreds of thousands of eons, many millions of eons, many tens of millions of eons, many billions of eons, many tens of billions of eons, many trillions of eons, and many quintillions of eons. “O jinaputras! This is like when gold is adorned with beryl and it becomes clearer, purer, and brighter.  “O jinaputras! In that same way the roots of goodness of the bodhisattva who is on the sixth bodhisattva bhūmi, Manifested, become purer, clearer, and brighter through the analysis of method, wisdom, and knowledge, and furthermore become indestructible peace. “O jinaputras! It is like this: to give an analogy, moonlight soothes the bodies of beings and cannot be destroyed by the four circles of the air. “O jinaputras! In that same way the roots of goodness of the bodhisattva mahāsattva who is on the sixth bodhisattva bhūmi, Manifested, pacify and soothe the fire of the kleśas in many quintillions  of beings and cannot be destroyed by the activities of the four māras. “From among the ten perfections, the perfection of wisdom predominates, and the other perfections are not accomplished fully and completely.  “O jinaputras! That in brief is the bodhisattva bhūmi that is the sixth bodhisattva bhūmi, which is named Manifested."
+  },
+  "d6-13": {
+   "sa": "iyaṃ bhavanto jinaputrā bodhisattvasya abhimukhī nāma ṣaṣṭhī bodhisattvabhūmiḥ samāsanirdeśataḥ, yasyāṃ pratiṣṭhito bodhisattvo bhūyastvena sunirmito bhavati devarājaṃ kṛtī prabhuḥ sattvānāmabhimānapratiprasrabdhaye kuśalaḥ sattvānyābhimānikadharmebhyo vinivartayitum / asaṃhāryaśca bhavati sarvaśrāvakaparipṛcchāyāṃ kuśalaḥ sattvān pratītyasamutpāde 'vatārayitum / yacca kiṃcit ... . // abhimukhī nāma ṣaṣṭī bhūmiḥ //",
+   "T0285": "「菩薩如是，以住目前菩薩道地，德本日增，照除無數眾生塵勞，拔愛欲瑕，總四魔徑，獨步無侶，是為佛子菩薩大士以近目前第六菩薩所逮道地。遵修住此，善能變化，設為天王，其四大者，覩之降息，獨步三界而無疇匹，聲聞、緣覺不敢諮問，所行德本，布施愛敬，利益等利，化眾生心，不捨佛道至皆具足。念一切智，何所陳生，最第一願，勢力堅強，導御開化，成其普智，發意之頃，如是比像，無極精進，須臾之頃，逮致億百千諸三昧定。開化無數億百千姟諸菩薩眾，覩諸眷屬菩薩願力，而有殊特，有所感動莫能稱計行若干億百千姟劫，不可為喻。」",
+   "T0286": "「諸佛子！是名諸菩薩摩訶薩現前地。「菩薩住是地中，多作善化自在天王，智慧猛利，能破一切增上慢者，聲聞問難不能窮盡。有所施作，布施、愛語、利益、同事，皆不離念佛、念法、念諸菩薩伴，乃至不離念一切種智。常發願言：『我於一切眾生為首、為尊，乃至於一切眾生為依止者。』是菩薩若欲勤行精進，於須臾間得十萬億三昧，乃至能示十萬億菩薩眷屬——若以願力，能過是數，不可稱計若干百千萬億劫。」",
+   "T0278": "諸佛子！是名略說菩薩現前地。菩薩住是地，多作善化自在天王，智慧猛利，能破一切增上慢者、聲聞問難，不能窮盡，有所施作，布施、愛語、利益、同事皆不離念佛，不離念法，乃至不離念具足一切種智。常生是心：『我當於一切眾生為首、為勝，乃至於一切眾生為依止者。』是菩薩若欲勤行精進於須臾間，得百千億三昧，乃至能示百千億菩薩以為眷屬。若以願力能過是數若干百千萬億劫不可計知。」",
+   "T0279": "「佛子！是名：略說菩薩摩訶薩第六現前地。菩薩住此地，多作善化天王，所作自在，一切聲聞所有問難無能退屈，能令眾生除滅我慢、深入緣起。布施、愛語、利行、同事——如是一切諸所作業，皆不離念佛，乃至不離念具足一切種、一切智智。復作是念：『我當於一切眾生中為首、為勝，乃至為一切智智依止者。』此菩薩若勤行精進，於一念頃，得百千億三昧，乃至示現百千億菩薩以為眷屬；若以願力自在示現，過於此數，乃至百千億那由他劫不能數知。」",
+   "T0287": "「唯諸佛子！是名略說菩薩第六現前智地。菩薩安住於此地時，受生多作妙化天王，能作自在善化有情，令增上慢畢竟休息。常以一切聲聞問難不可映奪，能令有情證入緣起。諸所作業，或以布施、或以愛語、或以利行、或以同事，此等一切悉皆不離佛作意、法作意、僧伽作意、菩薩作意、菩薩行作意、到彼岸作意、諸地作意、佛力作意、無所畏作意、佛不共法作意，乃至不離一切行相妙相應一切智智作意。常作願言：『我當一切諸有情中，為首、為勝、為殊勝、為妙、為微妙、為上、為無上、為導、為將、為帥，乃至願得一切智智所依止處。』若樂發起如是精進，由是精進一剎那頃瞬息須臾，證入菩薩百千俱胝諸三摩地，能見百千俱胝諸佛，彼佛加持皆能解了；能動百千俱胝世界，能往百千俱胝佛剎，能照百千俱胝世界，成熟百千俱胝有情，住壽百千俱胝大劫，於前後際各能入百千俱胝劫，思擇百千俱胝法門，能示現百千俱胝身，身身能現百千俱胝菩薩眷屬圍遶。從此以上是諸菩薩有願力者，由勝願故，所有遊戲，或身、或光明、或神通、或眼、或境界、或音聲、或行、或莊嚴、或勝解、或所作，此等乃至爾所百千俱胝那庾多劫不易可數。」",
+   "bo": "།དེ་ལ་གནས་པའི་བྱང་ཆུབ་སེམས་དཔའ་ནི་ཕལ་ཆེར་ལྷའི་རྒྱལ་པོ་རབ་འཕྲུལ་དགར་འགྱུར་ཏེ། སེམས་ཅན་ཐམས་ཅད་ཀྱི་ལྷག་པའི་ང་རྒྱལ་ཞི་བར་བྱ་བ་ལ་མཁས་ཤིང་མཐུ་ཡོད་པ་ཡིན། ཉན་པ་ཐམས་ཅད་ཀྱི་ཡོངས་སུ་དྲི་བས་མི་འཕྲོགས་པ་ཡིན། དེ་སྦྱིན་པ་འམ། ངག་སྙན་པ་འམ། དོན་བསྒྲུབ་པ་འམ། དོན་མཐུན་པས་དགེ་བའི་རྩ་བ་གང་ཅི་རྩོམ་ཡང་རུང་སྟེ། དེ་ཐམས་ཅད་ཇི་ལྟར་ན་སེམས་ཅན་ཐམས་ཅད་ཀྱི་མཆོག་ཏུ་འགྱུར། གཙོ་བོར་འགྱུར་ཐུ་བོར་འགྱུར། ཕུལ་དུ་འགྱུར། དམ་པར་འགྱུར། བླ་ན་མེད་པར་འགྱུར། འདྲེན་པར་འགྱུར། ཡོངས་སུ་འདྲེན་པར་འགྱུར་བ་ནས། ཐམས་ཅད་མཁྱེན་པའི་ཡེ་ཤེས་ལ་བརྟེན་པའི་བར་དུ་འགྱུར་སྙམ་སྟེ། སངས་རྒྱས་ཡིད་ལ་བྱ་བ་དང་། ཆོས་ཡིད་ལ་བྱ་བ་དང་། དགེ་འདུན་ཡིད་ལ་བྱ་བ་དང་། བྱང་ཆུབ་སེམས་དཔའ་ཡིད་ལ་བྱ་བ་དང་། བྱང་ཆུབ་སེམས་དཔའི་སྤྱོད་པ་ཡིད་ལ་བྱ་བ་དང་། བྱང་ཆུབ་སེམས་དཔའི་ས་ཡིད་ལ་བྱ་བ་དང་། ཕ་རོལ་ཏུ་ཕྱིན་པ་ཡིད་ལ་བྱ་བ་དང་། སྟོབས་ཡིད་ལ་བྱ་བ་དང་།  མི་འཇིགས་པ་ཡིད་ལ་བྱ་བ་དང་། སངས་རྒྱས་ཀྱི་ཆོས་མ་འདྲེས་པ་ཡིད་ལ་བྱ་བ་ནས། རྣམ་པའི་མཆོག་ཐམས་ཅད་དང་ལྡན་པའི་ཐམས་ཅད་མཁྱེན་པའི་ཡེ་ཤེས་ཀྱི་བར་དུ་ཡིད་ལ་བྱ་བ་དང་མི་འབྲལ་བ་ཡིན་ཏེ། དེ་འདོད་ན་སྐད་ཅིག་ཡུད་ཙམ་ཐང་ཅིག་ཏུ་ཏིང་ངེ་འཛིན་ཁྲག་ཁྲིག་བརྒྱ་སྟོང་རབ་ཏུ་འཐོབ་ཅིང་དེ་དག་ལ་མཉམ་པར་གཞོག་པ་དང་། སངས་རྒྱས་ཁྲག་ཁྲིག་བརྒྱ་སྟོང་མཐོང་བ་དང་། དེ་དག་གི་བྱིན་གྱི་རླབས་ཀྱང་ཡང་དག་པར་ཤེས་པ་དང་། འཇིག་རྟེན་གྱི་ཁམས་ཁྲག་ཁྲིག་བརྒྱ་སྟོང་སྐྱོད་པ་དང་། སངས་རྒྱས་ཀྱི་ཞིང་ཁྲག་ཁྲིག་བརྒྱ་སྟོང་དུ་འགྲོ་བ་དང་། འཇིག་རྟེན་གྱི་ཁམས་ཁྲག་ཁྲིག་བརྒྱ་སྟོང་སྣང་བར་བྱ་བ་དང་། སེམས་ཅན་ཁྲག་ཁྲིག་བརྒྱ་སྟོང་ཡོངས་སུ་སྨིན་པར་བྱ་བ་དང་། བསྐལ་པ་ཁྲག་ཁྲིག་བརྒྱ་སྟོང་དུ་གནས་པར་བྱ་བ་དང་། སྔོན་གྱི་མཐའ་དང་། ཕྱི་མའི་མཐའི་བསྐལ་པ་ཁྲག་ཁྲིག་བརྒྱ་སྟོང་ལ་རབ་ཏུ་འཇུག་པ་དང་། ཆོས་ཀྱི་སྒོ་ཁྲག་ཁྲིག་བརྒྱ་སྟོང་རྣམ་པར་འབྱེད་པ་དང་། ལུས་བྱེ་བ་ཁྲག་ཁྲིག་བརྒྱ་སྟོང་ཡོངས་སུ་བསྟན་པ་དང་། ལུས་རེ་རེ་ལ་ཡང་བྱང་ཆུབ་སེམས་དཔའི་འཁོར་ཁྲག་ཁྲིག་བརྒྱ་སྟོང་ཡང་དག་པར་བསྟན་པར་བྱ་བའི་བརྩོན་འགྲུས་ཀྱི་རྣམ་པ་དེ་ལྟ་བུ་རྩོམ་མོ། ། དེ་ཡན་ཅད་བྱང་ཆུབ་སེམས་དཔའ་སྨོན་ལམ་གྱི་མཐུ་ཅན་རྣམས་སྨོན་ལམ་གྱི་ཁྱད་པར་གྱིས་རྣམ་པར་འཕྲུལ་ཏེ་དེ་དག་གི་ལུས་སམ། འོད་དམ་རྫུ་འཕྲུལ་ལམ། མིག་གམ་སྤྱོད་ཡུལ་ལམ། དབྱངས་སམ། སྤྱོད་པ་འམ། རྒྱན་ཏམ་བྱིན་གྱི་རླབས་སམ། མོས་པ་འམ། མངོན་པར་འདུ་བྱེད་པ་དག་ཀྱང་བསྐལ་པ་དུ་མ་དང་། བསྐལ་བ་བརྒྱ་ཕྲག་དུ་མ་དང་། བསྐལ་པ་སྟོང་ཕྲག་དུ་མ་དང་། བསྐལ་པ་བརྒྱ་སྟོང་ཕྲག་དུ་མ་དང་། བསྐལ་པ་བྱེ་བ་ཁྲག་ཁྲིག་བརྒྱ་སྟོང་ཕྲག་དུ་མའི་བར་གྱིས་ཀྱང་བགྲང་བར་དཀའོ།",
+   "en": "“The bodhisattva who is on that bhūmi usually becomes the deva king Sunirmita. He is wise and powerful in pacifying pride in beings. He is not impeded by questions from any śrāvaka. “In whatever roots of goodness he accomplishes through generosity, kind words, actions that benefit others, and practicing what he preaches, he becomes supreme, the best, the foremost, the highest, the most excellent, the unsurpassable, the guide, the leader, the commander, and so on, up until becoming the omniscient one who is relied on. His mind is always focused on the Buddha, focused on the Dharma, focused on the Saṅgha, focused on the bodhisattvas, focused on bodhisattva conduct, focused on the bodhisattva bhūmis, focused on the perfections, focused on the strengths, focused on the confidences, focused on the unique qualities of buddhahood, and so on, up until being focused on the omniscient wisdom endowed with the supreme aspects. “If he wishes to, he can apply himself in such a way that in just one instant he attains and rests in a trillion samādhis, sees a trillion buddhas and knows their blessings, causes a trillion worlds to shake, goes to a trillion buddha realms, illuminates a trillion worlds, ripens a trillion beings, remains for a trillion eons, enters a trillion previous eons and a trillion future eons, opens a trillion Dharma doors, manifests a trillion bodies, and manifests each body having a retinue of a trillion bodhisattvas. “From this time onward the bodhisattvas who have the power of prayer through particular prayers manifest bodies, light, miracles, sights, activities, voices, conduct, displays, blessings, transformations, and manifestations for many eons, for many hundreds of eons, many thousands of eons, many hundreds of thousands of eons, and so on, until many quintillions of eons, which are difficult to enumerate.”"
+  },
+  "d6-14": {
+   "sa": "upasaṃhāragāthāḥ / paripūrṇamārgacaraṇā vidu pañcamāyāṃ dharmānimittata alakṣaṇatā ajātā / anutpāda ādipariśuddhyatiniṣprapañcā bhāvetva jñānamati ṣaṣṭhi samākramanti // 11 // dharmā vivikta apratigraha nirvikalpā māyāsvabhāva dvayabhāvatu viprayuktā / anulomayanta avilomanta dharmanetrī jñānānvitāḥ pravara ṣaṣṭhi samākramanti // 12 // tīkṣṇānulomasthita jñānabalopapetāḥ samudāgamaṃ vibhavu prekṣiṣu sarvaloke / mohāndhakāraprabhavaṃ jagasaṃbhavātmā tasyaiva mohavigamena pravṛti nāsti // 13 // vicinanti pratyayakṛtiṃ paramārthaśūnyāṃ kriya hetupratyayasamajña kriyāvirodhau / yāthāvataḥ karakapetakriyāṃ viditvā vicinanti saṃskṛta ghanābhrasamaṃ nirīham // 14// satyeṣu 'jñānu paramārthatu sā avidyā karmā ca cetanabalena vibhāgaprāptam / cittaṃ niśritya sahajaṃ puna nāmarūpam evaṃmukhā bhavati yāva dukhasya skandhaḥ // 15 // te cittamātra ti traidhātukamotaranti api cā bhavāṅga iti dvādaśa ekacitte / Dbh 88 saṃrāgu jātu api cittu prabhāvitastu evaṃ ca saṃbhavakṣayaṃ puna cittabhāgam // 16 // kāryaṃ avidyadvaya kurvati mohabhāve mohebhi hetu vahate puna cetanāyāḥ / evaṃ ca yāva jaradhvaṃsanaskandhabhedam anu sarva duḥkhaprabhavaṃ kṣayataḥ abhāvaḥ // 17 // ucchedu no bhavati pratyayatāmavidyā nocchedyatāpi kara prahāya saṃnirodham / moho teṣu ca upādānaṃ kleśavartma karma bhavaṃ ca api cetana śeṣa duḥkhā // 18 // mohaṃ tu āyatana saṃskṛtaduḥkha teṣāṃ sparśaṃ ca vedana sukhādukhatāya duḥkhā / śeṣānamaṅganapariṇāmaduḥkhavṛddhiḥ vyuccheda tasya duḥkhatā na hi ātmamasti // 19 // adhveṣu pūrvaṃ tamacetanasaṃskṛtasya vijñāna vedana vivartati pratyutpannam aparāntu teṣu prabhavo dukhasaṃbhaveyam āpekṣa cchedu prasaraṃ ca nirīkṣayantaḥ // 20 // mohasya pratyayatu saṃbhavate vibandhā vinibandhanavyayakṣaye sati pratyayānām / hetośca mūlaprabhavaṃ na tu hetubhedaṃ vyuparīkṣate ca jina jñāna svabhāvaśūnyam // 21 // anuloma mohaprabhavaṃ ca prabhāvataśca pratilomahetu kṣayato bhava sarvacchedyam / gambhīrapratyayatamasya sato 'sataśca vyuparīkṣate daśavidhaṃ aniketabuddhiḥ // 22 // saṃdhī bhavāṅgatu tathāpi ca karmasthānam avibhāgatastrividhu vartmani pūrvataśca / triyahetu duḥkhavibhavā udaya vyayaṃ ca abhāvato 'kṣayata pratyaya ānulomam // 23 // evaṃ pratītyasamutpāda samotaranti māyopamaṃ vitatha vedakarmāpanītam / Dbh 89 svapnopamaṃ ca tathatā pratibhāsa caiva bālāna mohana marīcisamasvabhāvam // 24 // yā eva bhāvana sa śūnyata paṇḍitānāṃ rati pratyayāna bhavate idamānimittam / jānitva jātu vitathaṃ praṇidhātu nāsti anyatra sattvakṛpayā upapadyanti // 25 // evaṃ vimokṣamukha bhāvayi te mahātmā kṛpabuddhi bhūya tatha buddhaguṇābhilāṣī / saṃyogasaṃskṛtikṛta vyuparīkṣamāṇo niyatāśayo bhavati naikaguṇopapetaḥ // 26 // pūrṇā sahasra daśa śūnyataye samādhī tatha ānimittavaradaṃ ca vimokṣa tāyī // 27 // pralhādayanti jagadāśaya candra-ābhā vahamānu vāta caturo asaṃhāryaprāptā / atikramya mārapathamābha jinaurasānāṃ praśamenti kleśaparitāpa dukhārditānām // 28 // iha bhūmideśupagatā marutādhipāste bhontī sunirmita kṛtāvadhimānaghātī / yaṃ caiva ārabhiṣu jñānapathopapetā asaṃhārya śrāvakagatī atikrānta dhīrāḥ // 29 // ākāṅkṣamāṇu sugatātmaja vīryaprāptāḥ koṭīśatasahasrapūrṇa samādhi labdhāḥ / paśyanti ekakṣaṇi buddha daśaddiśāsu pratapanti sūrya eva madhyagu grīṣmakāle // 30 // gambhīra durdṛśā sūkṣma durjñeyā jinaśrāvakaiḥ / ṣaṣṭhī bhūmirmahātmānāmākhyātā sugatātmajāḥ // 31 //",
+   "T0285": "時金剛藏菩薩大士，欲廣解散此義所歸，即說頌曰：「以能具備悉，第五之道地； 因法為瑞應，無相無所生。 不起甚清淨，以為無放逸； 奉行聖慧意，便入第六住。 諸法為寂寞，靜然無想念； 自然猶幻化，解脫於生死。 以致柔順忍，法自無所亂； 其慧轉殊勝，則勤修六住。 聰達住柔順，頻入明慧力； 觀察一切世，從習而有報。 由愚癡盲冥，而有己人物； 欲度脫斯等，故興修勤行。 從選擇因緣，本末悉為空； 所作緣報應，和會致諍亂。 猶若有所作，便覩造所見； 選擇親近眾，猶如蜂採華。 假使慧察之，本末為明冥； 思想緣罪福，得報以癡果。 從思想已故，名色為伴侶； 如是致有難，乃成五陰苦。 因其我心所，墮入在三界； 又是諸所趣，十二悉一心。 從貪婬而生，心行亦如之； 有盡亦如斯，復為心所誤。 由無明癡故，造立十二苦； 愚冥之因緣，數施諸想念。 如是之所致，老病俱散身； 又一切諸患，由當盡冥壞。 從癡無明緣，因是無斷絕； 思想若消滅，因緣則斷除。 以起愚恩愛，而緣致塵勞； 勤苦之惱患，想念有餘害。 從諸入致癡，故有生死苦； 更樂及痛痒，從苦復至苦。 有復餘受身，展轉復長苦； 斷除諸苦惱，則乃無吾我。 本無有痛痒，亦無諸想念； 其神識所更，現在而往返。 用當來受行，故成諸苦惱； 又所消滅者，觀之所永盡。 由愚癡因緣，自然成覺了； 因其患厭故，滅除諸因緣。 因其因緣故，於是斷諸緣； 觀諸卑賤士，自然為永空。 柔順及愚冥，承其行業意； 逮之乃盡癡，蒙此皆斷緣。 深妙之因緣，解之虛無相； 察省十事分，了其不可別。 有計諸所趣，罪福處未來； 其財業三品，從本來展轉。 剖判三苦行，起滅之處所； 無所有陰盡，柔順解因緣。 因緣起如是，所入暢平等； 譬如現幻化，愛欲業若斯。 如夢之所覩，形影亦如是； 冥騃愚癡類，自然猶野馬。 其解如是行，彼智乃了空； 諸緣為恍惚，奉此無堅相。 以能了如此，亦無有志願； 唯欲願愍傷，一切眾生類。 其大志寬弘，如是行脫門； 心轉加慈愍，思樂佛功德。 勤修憂眾生，實思察其元； 無諸情慼患，逮無量功勳。 承空三昧具，識本百千劫； 勇猛士如是，無相亦無願。 建立斯道業，柔順尊法忍； 其慧應無為，脫門為善寶。 如是性寬弘，供養於大聖； 應寂然除憒，志順最勝命。 逮成覺意定，益增加清淨； 猶琉璃紫金，彫治益光榮。 以照眾生意，猶月之弘光； 四品風遊行，獨步無等倫。 因越魔徑路，最勝光美妙； 消滅眾塵勞，燋炙諸苦痛。 天師大錠鐐，宣布此慧住； 善化立道意，變消心懷風。 所可奉聖慧，演章句所講； 勇士已超越，聲聞所不逮。 發意須精進，已逮安住業； 宿世已獲致，億百千三昧。 須臾見無數，十方諸現佛； 其德照曜世，猶日秋時月。 微妙深難了，勝聲聞不及； 眾雄自由講，第六之道地。」",
+   "T0286": "爾時，金剛藏菩薩欲令此義明了故，而說偈言：「諸菩薩已得，具足行五地， 知諸法無相，無相無生滅， 本來常清淨，無有諸戲論， 修集如是智，得入第六地。 諸法常離相，不取亦不捨； 性空猶如幻，離二無分別。 若能順如是，微妙之理趣， 心無有違逆，得入第六地。 住於利順忍，智慧得力故， 觀察於一切，世間生滅相。 悉知諸世間，皆從癡闇出， 癡闇若滅者，則無諸世間。 觀擇因緣法，隨順第一義， 而不壞緣報，所作及假名。 如實無作者，亦無有受者， 如是觀有為，如雲無實事。 不知真諦義，名之為無明， 從是則生思，身口行得報。 從行故有識，即生於名色， 如是生世間，至生、死、苦聚。 了知於三界，但從心而有； 知十二因緣，在於一心中。 如是則生、死，但從心而出， 心若得滅者，生、死則亦滅。 無明二種作，作癡、作於業， 乃至於老、死，破散壞五陰。 從於此事邊，具出於苦惱， 是事若盡者，苦惱則亦盡。 無明若具足，相續則不斷； 因緣若不具，則斷於相續。 無明及愛、取，即是煩惱道、 行、有是業道，餘則是苦道。 癡至於六入，是名為行苦， 觸受是苦苦，餘分是壞苦， 滅三苦相續，則更無有我。 無明及諸行，則是過去世； 識與及於受，是則為現在； 從愛而生苦，則是未來世； 無明若滅者，是則無有苦。 癡從眾緣生，則生於諸縛； 眾緣若滅者，則滅於諸縛。 從因而生果，因滅則果滅， 如是觀諸法，自性則皆空。 隨順於無明，則有世間出； 若逆於無明，是則斷於有。 從是則有是，是無則無是， 如是十種觀，甚深因緣法。 觀因緣相續，去來及現在， 不離一心中，分別有三道。 從三種苦觀，及以生滅法， 無所有而盡，能行逆順觀。 菩薩如是入，十二因緣法， 知空猶如幻，如夢亦如影， 如焰亦如化，虛誑無作者， 亦無有受者，但誑於愚人。 如是觀因緣，智者所修空， 無緣則無相，知此二虛假。 其諸一切有，於中無所願， 但以大悲心，愍度眾生故。 如是諸大士，修習解脫門， 悲心愛樂佛，無量諸功德。 知諸有為法，皆從和合有， 即得萬空定，無相願亦爾。 智慧轉增進，入於上順忍， 得於諸菩薩，無為智解脫。 如是諸善根，轉勝明淨利， 供養無量佛，諸佛所稱讚。 常於諸佛所，出家學佛道， 到諸佛法藏，善根轉增長； 猶以琉璃寶，瑩磨於真金， 光明轉清淨，其喻亦如是。 如於虛空中，滿月光清淨， 四種風所吹，不能令遏絕； 菩薩智慧光，滅諸煩惱熱， 四魔不能制，其喻亦如是。 菩薩住是地，多作善化王， 諸根悉猛利，能破增上慢。 所作諸善業，皆隨順智慧， 聲聞諸問難，不能得窮盡。 是佛子若欲，如是勤精進， 能得於百千，億數諸三昧， 得見於百千，億數十方佛， 如春清了時，日光明則淨。 如是第六地，深妙難知見， 聲聞所不了，大士略說竟。」",
+   "T0278": "時，金剛藏菩薩欲重明此義，以偈頌曰：「諸菩薩已得，具足五地行， 知諸法無性，無相無生滅。 本來常清淨，無有諸戲論， 諸法常離相，不取亦不捨， 性空猶如幻，離二無分別， 隨順如是行，得入第六地。 住明利順忍，以智慧力故， 觀察於一切，世間生滅相。 悉知諸世間，皆從無明有， 無明若滅者，則無有世間。 觀察因緣法，隨順第一義， 而不壞緣報，所作及假名， 如實無作者，亦無有受者， 如是觀有為，如雲無實事。 不知真諦義，名之為無明， 從是則生思，身口業行果。 從行故有識，即生於名色， 如是次第起，生死苦惱聚。 了達於三界，但從貪心有， 知十二因緣，在於一心中。 如是則生死，但從心而起， 心若得滅者，生死則亦盡。 無明二種作，緣癡作於業， 乃至於老死，壞散五陰聚。 從於此事邊，具出於苦惱， 是事若盡者，苦惱則亦滅。 無明若具足，相續則不滅， 因緣若盡者，相續則亦斷。 無明及愛取，即是煩惱道， 行及有是業，餘分則是苦。 癡行為過去，識名色六入， 觸受是現在，餘則未來世。 癡業識名色，六入名為行， 觸受是苦苦，餘分則是壞。 癡從眾緣生，則有於諸縛， 眾緣若滅者，諸縛則亦斷。 從因而生果，因滅則果滅， 如是觀諸法，自性則皆空。 隨順於無明，則有諸世間， 若能不隨順，是則斷於有。 從是則有是，是無則無是， 如是十種觀，甚深因緣法。 因緣分次第，去來及現在， 作不捨一心，分別有三道。 三種苦差別，生滅於縛法， 無所有及盡，能行逆順觀。 菩薩如是入，十二因緣法， 知空如夢幻，無作者受者。 如是觀因緣，智者修於空， 事滅不相續，入於無相行。 知此二虛假，於中無所願， 但以大悲心，愍度於眾生。 如是諸大士，修習解脫門， 悲心愛樂佛，無量諸功德。 知諸有為法，皆從和合有， 得萬空三昧，無相無願定。 智慧轉增進，入於上順忍， 得於諸菩薩，無礙智解脫。 如是諸善根，轉勝利明淨， 供養無量佛，諸佛所稱讚。 於諸如來所，出家學佛道， 入諸佛法藏，善根轉增長。 猶以瑠璃寶，瑩磨於真金， 光明轉清淨，餘所不能及。 如月行虛空，清涼被一切， 四種風所吹，不能令遏絕。 菩薩智慧光，滅諸煩惱火， 四魔不能壞，其義亦如是。 菩薩住是地，多作善化王， 諸根悉猛利，能破增上慢。 所作諸善業，皆悉隨智慧， 聲聞諸問難，不能得窮盡。 是佛子若欲，如是勤精進， 須臾即能得，百千億三昧。 見於百千億，十方世界佛， 如秋清涼時，月光明淨好。 如是第六地，深妙難知見， 聲聞所不了，大士略說竟。」",
+   "T0279": "爾時，金剛藏菩薩欲重宣其義而說頌曰：「菩薩圓滿五地已，觀法無相亦無性， 無生無成本清淨，無有戲論無取捨， 體相寂滅如幻等，有無不二離分別， 隨順法性如是觀，此智得成入六地。 明利順忍智具足，觀察世間生滅相， 以癡闇力世間生，若滅癡闇世無有。 觀諸因緣實義空，不壞假名和合用， 無作無受無思念，諸行如雲遍興起。 不知真諦名無明，所作思業愚癡果， 識起共生是名色，如是乃至眾苦聚。 了達三界依心有，十二因緣亦復然， 生死皆由心所作，心若滅者生死盡。 無明所作有二種，緣中不了為行因， 如是乃至老終歿，從此苦生無有盡。 無明為緣不可斷，彼緣若盡悉皆滅， 愚癡愛取煩惱支，行有是業餘皆苦。 癡至六處是行苦，觸受增長是苦苦， 所餘有支是壞苦，若見無我三苦滅。 無明與行為過去，識至於受現在轉， 愛取有生未來苦，觀待若斷邊際盡。 無明為緣是生縛，於緣得離縛乃盡， 從因生果離則斷，觀察於此知性空。 隨順無明起諸有，若不隨順諸有斷， 此有彼有無亦然，十種思惟心離著。 有支相續一心攝，自業不離及三道， 三際三苦因緣生，繫縛起滅順無盡。 如是普觀緣起行，無作無受無真實， 如幻如夢如光影，亦如愚夫逐陽焰。 如是觀察入於空，知緣性離得無相， 了其虛妄無所願，唯除慈愍為眾生。 大士修行解脫門，轉益大悲求佛法， 知諸有為和合作，志樂決定勤行道。 空三昧門具百千，無相無願亦復然， 般若順忍皆增上，解脫智慧得成滿。 復以深心多供佛，於佛教中修習道， 得佛法藏增善根，如金瑠璃所磨瑩。 如月清涼被眾物，四風來觸無能壞； 此地菩薩超魔道，亦息群生煩惱熱。 此地多作善化王，化導眾生除我慢， 所作皆求一切智，悉已超勝聲聞道。 此地菩薩勤精進，獲諸三昧百千億， 亦見若干無量佛，譬如盛夏空中日。 甚深微妙難見知，聲聞獨覺無能了， 如是菩薩第六地，我為佛子已宣說。」",
+   "T0287": "爾時，金剛藏菩薩欲重宣此義而說頌言：「菩薩已淨第五地，觀法無相、無自性， 無起、無生常寂靜，性本清淨無戲論。 亦無取捨、如幻等，有、無不二離分別； 隨順法性如是觀，由此智入第六地。 猛利順忍智具足，觀諸世間生滅相； 知由我執世間生，除我執已世無有。 如理通達緣起空，不壞假立和合用； 無作、無受、無命者，諸行如雲遍興起。 於諦無知名無明，癡所造業果名行， 生時初心名為識，俱生餘蘊是名色， 即此增長名六處，三和謂觸俱生受， 欣受名愛，愛增取，有漏業有，蘊起生， 蘊熟名老、蘊壞死，純大苦聚如是集。 了達三界唯是心，十二有支依心有； 生死皆由心所作，若心滅者生死盡。 無明所作有二種，由緣迷故與行因； 如是乃至老終歿，從此苦生無有盡。 無明緣性謂諸行，不斷而復有助成； 由斯無故諸行斷，更無扶助餘亦爾。 癡、愛、取是煩惱流，行、有是業餘皆苦； 無明與行為過去，識至於受是現在， 愛、取、有生未來苦，觀待斷是苦邊際。 行至六處是行苦，觸、受增長是苦苦， 所餘有支是壞苦，若見無我三苦滅。 以從因緣行等起，緣離則斷故性空； 無明為緣是生縛，於緣得離縛乃除。 隨順無明起諸有，若不隨順諸有斷； 由此彼有無亦然，十種思惟心離著。 有支相續一心攝，自業不離及三流； 三際三苦因緣生，連縛起滅順無盡。 如是普觀緣起行，無作、無受、無自性， 如幻、如夢、如光影，亦如愚夫逐陽焰。 觀是入空解脫門，知緣性離入無相； 了其虛妄無所願，唯除慈愍救有情。 大師修行解脫門，轉益大悲求佛法； 知有為從和合有，志樂決定勤精進。 證空等持具百萬，無相、無願亦復然； 般若順忍皆增上，解脫智慧得成滿。 復以意樂供多佛，於佛教中修習道； 得佛法藏增善根，如金瑠璃所瑩飾。 如月清涼被眾物，四風來觸無能壞； 此聖能超四魔道，息世惑熱亦如是。 住此多作善化王，化導有情除我慢； 所作皆求一切智，悉已超勝聲聞道。 此地精勤獲百千，俱胝菩薩三摩地； 亦見若干無量佛，譬如盛夏空中日。 甚深微妙難見知，聲聞、獨覺無能了； 如是菩薩第六地，我為佛子已宣說。」菩薩現前地第六竟",
+   "bo": "།དེ་ནས་བྱང་ཆུབ་སེམས་དཔའ་ རྡོ་རྗེའི་སྙིང་པོས་སའི་དོན་འདི་ཉིད་ཡང་བརྟག་པར་བྱ་བ་དང་། བསྟན་པར་བྱ་བའི་ཕྱིར་དེའི་ཚེ་ཚིགས་སུ་བཅད་པ་འདི་དག་སྨྲས་སོ། །མཁས་པས་ལམ་གྱི་སྤྱོད་པ་ལྔ་པོར་ཡོངས་རྫོགས་ནས། །ཆོས་རྣམས་མཚན་མེད་མཚན་ཉིད་མེད་དང་མ་སྐྱེས་དང་། །མ་བྱུང་སྔ་ནས་ཡོངས་སུ་ཞི་ཞིང་སྤྲོས་མེད་པ། །ཡོངས་སུ་བསྒོམ་པས་ཡེ་ཤེས་བློ་ཅན་དྲུག་པ་གནོན། །ཆོས་རྣམས་དབེན་ཞིང་ལེན་མེད་རྣམ་པར་རྟོག་མེད་དང་། །སྒྱུ་མའི་རང་བཞིན་གཉིས་ཀའི་དངོས་ལམ་རྣམ་གྲོལ་བས། །ཆོས་ཀྱི་ཚུལ་ལ་འགལ་མེད་རྗེས་སུ་འཐུན་བྱེད་ཅིང་། །ཡེ་ཤེས་ལྡན་པའི་དམ་པ་དྲུག་པ་ཡོངས་སུ་གནོན། །འཐུན་པ་རྣོ་ལ་གནས་ཤིང་ཡེ་ཤེས་སྟོབས་ལྡན་པ། །འཇིག་རྟེན་ཀུན་གྱི་འབྱུང་དང་འཇིག་ལ་རབ་ཏུ་རྟོག །གཏི་མུག་མུན་པས་འགྲོ་བ་འབྱུང་བ་ཀུན་ཏུ་སྐྱེད། །གཏི་མུག་དེ་ཉིད་བྲལ་བས་འབྱུང་བ་མེད་པ་ཡིན། ། རྐྱེན་གྱི་རྣམ་པ་དོན་དམ་སྟོང་པར་རྣམ་པར་འབྱེད། །བྱ་བ་མི་འགལ་རྒྱུ་རྐྱེན་བྱེད་པ་མཉམ་པར་ཤེས། །ཡང་དག་ཇི་བཞིན་བྱེད་པ་མེད་པར་ལས་ཤེས་ནས། །འདུས་བྱས་སྤྲིན་སྡུག་ལྟ་བུར་བྱེད་པ་མེད་པར་ཤེས། ། བདེན་པ་མི་ཤེས་དེ་ནི་ཡང་དག་མ་རིག་པ། །ལས་ནི་སེམས་ཀྱི་སྟོབས་ཀྱིས་མགོ་རྨོངས་བྱུང་བར་གྱུར། །སེམས་ལ་རྟེན་ཏེ་ལྷན་ཅིག་བྱུང་བ་མིང་དང་གཟུགས། །དེ་ལྟར་སྡུག་བསྔལ་ཕུང་པོ་ཆེན་པོའི་བར་དུ་འབྱུང་། །ཁམས་གསུམ་སེམས་ཀྱི་རྒྱུ་ལས་བྱུང་བར་དེ་འཇུག་སྟེ། །སྲིད་པའི་ཡན་ལག་བཅུ་གཉིས་འདི་དག་སེམས་གཅིག་རྟེན། །འདོད་ཆགས་སྐྱེས་པ་དེ་ལས་སེམས་སུ་བརྗོད་པ་ཡིན། །དེ་བཞིན་སྲིད་པའི་དངོས་པོ་སེམས་ཀྱི་རྣམ་པའོ། །མ་རིག་བྱ་བ་གཉིས་བྱེད་རྨོངས་པའི་དངོས་པོ་ལ། །རྨོངས་པར་བྱས་ཤིང་དེ་ནས་སེམས་པའི་རྒྱུ་ཡང་འབྱིན། །དེ་བཞིན་རྒ་བ་ཕུང་པོ་གཞིག་བྱ་འཇིག་བྱེད་པར། །དེ་ལས་སྡུག་བསྔལ་མིང་ཐོགས་ཐམས་ཅད་མི་ཟད་འབྱུང་། མ་རིག་རྐྱེན་གྱིས་ཆད་པར་འགྱུར་བ་ཡོད་པ་མ་ནི། །རྣམ་པར་ཆད་ཅིང་རྒྱུ་རྐྱེན་བྲལ་བས་ཡོད་པ་འགག ། གཏི་མུག་སྲེད་པ་ཉེར་ལེན་ཉོན་མོངས་ལམ་ཡིན་ཏེ། །ལས་དང་སྲིད་པ་སེམས་པ་ལྷག་མ་སྡུག་བསྔལ་ཡིན། །གཏི་མུག་སྐྱེ་མཆེད་བར་དུ་འདུས་བྱས་སྡུག་བསྔལ་ཏེ། །རེག་དང་ཚོར་བ་དེ་དག་སྡུག་བསྔལ་སྡུག་བསྔལ་ཡིན། །ཡན་ལག་ལྷག་མ་འགྱུར་བའི་སྡུག་བསྔལ་རྣམས་འཕེལ་བ། །བདག་མེད་ཤེས་པས་སྡུག་བསྔལ་གསུམ་པོ་འཆད་པར་འགྱུར། །མུན་པ་སེམས་དང་འདུས་བྱས་འདི་ནི་སྔོན་ལྟས་ཡིན། །རྣམ་པར་ཤེས་ནས་ཚོར་བའི་རྒྱུད་ཏུ་ད་ལྟར་བྱུང་། །སྲེད་དང་སྲིད་པར་སྡུག་བསྔལ་འབྱུང་བ་ཕྱི་མའི་མཐའ། །འགགས་ཤིང་ཟད་པ་དེ་དག་ལྟ་བ་ཆད་པ་ཡིན། གཏི་མུག་རྐྱེན་གྱིས་དེ་དག་རྣམ་པར་འབྲེལ་བ་འབྱུང་། །ཟད་པས་བྱང་ཆུབ་རྐྱེན་རྣམས་རྣམ་པར་འབྲེལ་བ་ཡིན། །རྒྱུ་ལས་རྒྱུ་འབྱུང་མེད་ན་རྒྱུ་ཡི་རྒྱུན་ཆད་འགྱུར། །བདེ་ཕན་ཤེས་ལྡན་རང་བཞིན་སྟོང་པ་དེ་ལྟར་རྟོག ། རྒྱུད་དུ་འཐུན་པ་གཏི་མུག་མུན་ལས་བྱུང་བ་ཡིན། །མི་འཐུན་བཟློག་པ་གཏི་མུག་ཟད་པས་མི་འབྱུང་བའོ། །ཟབ་པའི་རྐྱེན་དང་དེ་དག་ཡོད་དང་མེད་པ་ལས། །གནས་པ་མེད་བློ་རྣམ་པ་བཅུར་ནི་དེ་ལྟར་རྟོག །སྲིད་པའི་ཡན་ལག་མཚམས་དང་སེམས་གཅིག་ལས་འཐུན་དང་། །ཆེད་དུ་མི་བྱེད་རྒྱུད་གསུམ་རྗེས་འབྲང་སྔོན་མཐའ་དང་། །སྡུག་བསྔལ་གསུམ་དང་རྒྱུས་བྱུང་སྐྱེ་དང་འཇིག་པ་དང་། །སྲིད་པའི་མཐར་ཕྱིན་ཟད་དང་རྐྱེན་གྱི་ལུགས་འཐུན་པར། །དེ་ལྟར་རྟེན་འབྲེལ་འབྱུང་ལ་ཡང་དག་འཇུག་བྱེད་པས། །སྒྱུ་འདྲ་ཡང་དག་མ་ཡིན་ཚོར་བར་བྱེད་མེད་ཅིང་། །རྨི་ལམ་འདྲ་བ་དེ་བཞིན་མིག་ཡོར་འདྲ་བ་སྟེ། །བྱིས་པ་བསླུ་བའི་སྨིག་རྒྱུ་རང་བཞིན་མཚུངས་མཉམ་པ། །དེ་ལྟར་བསྒོམ་པ་མཁས་པའི་སྟོང་པ་ཉིད་ཀྱི་སྒོ། །རྐྱེན་རྣམས་མེད་པ་དེ་ནི་མཚན་མ་མེད་པ་སྟེ། །ལོག་པར་ཤེས་པས་ནམ་ཡང་སྨོན་པ་མེད་པ་ཡིན། །གཞན་དུ་སེམས་ཅན་སྙིང་བརྩེའི་དོན་དུ་སྐྱེ་བ་འཛིན། །དེ་འདྲའི་རྣམ་ཐར་སྒོ་ལ་སྒོམ་བྱེད་མཐུ་ཆེ་བ། ། སྙིང་བརྩེའི་བློ་ལྡན་སངས་རྒྱས་ཡོན་ཏན་མངོན་འདོད་ཅིང་། །འདུས་བྱས་འདུས་པ་མཁས་པ་ཡོངས་སུ་རྟོག་བྱེད་པས། །བསམ་པ་ངེས་ཤིང་གཅིག་མིན་ལེགས་དང་ལྡན་པ་ཡིན། །སྟོང་ཉིད་ཏིང་འཛིན་སྟོང་ཕྲག་བཅུ་རྣམས་ཡོངས་སུ་རྒྱས། དེ་བཞིན་བརྟན་པ་མཚན་མ་མེད་དང་སྨོན་མེད་ལྡན། །ཤེས་རབ་ཤས་ཆེ་འཐུན་པའི་བཟོད་པ་མཆོག་ཅན་ཏེ། །མཁས་པའི་རྣམ་ཐར་ཡེ་ཤེས་ཆགས་པ་མེད་དང་ལྡན། །དེ་འདྲའི་བསམ་པས་དྲང་སྲོང་ཆེ་མང་མཆོད་བྱེད་པས། །རྒྱལ་བའི་བསྟན་པ་འདི་ལ་ཤིན་ཏུ་བསྔགས་པ་ཡིན། །དེ་ནི་སངས་རྒྱས་མཛོད་ཐོབ་ཁོང་དུ་ཆུད་པས་ན། །བཻ་ཌཱུཪྻས་བཏབ་གསེར་མཆོག་བཞིན་དུ་སྔོན་བས་གསལ། །ཟླ་བའི་འོད་ནི་འགྲོ་བའི་ལུས་ལ་སིམ་པར་བྱེད། །རླུང་བཞི་ལངས་པས་ཡོངས་སུ་འཕྲོགས་པར་མི་ནུས་སོ། །རྒྱལ་སྲས་འོད་ཀྱང་བདུད་ཀྱི་ལམ་ལས་ཤིན་ཏུ་འདས། །ཉོན་མོངས་ཡོངས་སུ་གདུང་དང་སྡུག་བསྔལ་ནད་ཀྱང་སེལ། །ས་འདི་ཕྱོགས་སུ་ཕྱིན་པ་ལྷ་ཡི་བདག་པོར་འགྱུར། །འཕྲུལ་དགའི་དམ་པ་ལྷག་པའི་ང་རྒྱལ་སེལ་ལ་མཁས། །ཡེ་ཤེས་ལམ་དང་ལྡན་པ་དེ་ནི་ཅི་རྩོམ་ཡང་། །ཉན་ཐོས་ལམ་ལས་འདས་ཏེ་བརྟན་ཞིང་མི་འཕྲོགས་པའོ། །བདེ་གཤེགས་སྲས་པོ་བརྩོན་འགྲུས་ལྡན་པ་འདོད་གྱུར་ན། །ཏིང་འཛིན་བྱེ་བ་བརྒྱ་སྟོང་ཚང་བ་ཐོབ་པར་བྱེད། །སྐད་ཅིག་གཅིག་ཏུ་ཕྱོགས་བཅུར་སངས་རྒྱས་མང་པོ་ལྟ། །དཔྱིད་ཀྱི་ཉི་མ་གསལ་ཞིང་ལྷན་པར་བྱེད་པ་བཞིན། །ཟབ་ཅིང་བལྟ་དཀའ་ཕྲ་བ་སྟེ། །ཉན་ཐོས་ང་རྒྱལ་ཤེས་མི་ནུས། །བདག་ཉིད་ཆེ་ལ་ས་དྲུག་པ། །རྒྱལ་བའི་སྲས་ཀྱིས་བཤད་པ་ཡིན། །མངོན་སུམ་པ་ཞེས་བྱ་བ་སྟེ། བྱང་ཆུབ་སེམས་དཔའི་ས་དྲུག་པའོ།།",
+   "en": "Then the bodhisattva Vajragarbha, in order to analyze and teach the meaning of this bhūmi, recited these verses: “The wise who have completed the practice of the path through the five bhūmis And have meditated on the absence of features in phenomena, the absence of characteristics, The absence of birth, the absence of production, primordial purity,  and the absence of elaboration—With wisdom and understanding they ascend to the sixth bhūmi. “Without attachment, grasping, and conceptuality toward phenomena That have the nature of illusion and are devoid of the two kinds of being, Being in accord with and not contradicting the nature of phenomena,  They who possess wisdom ascend to the excellent  sixth bhūmi. “They remain in sharp concord and possess the power of wisdom. They regard the arising and destruction of all worlds. Origination from the darkness of ignorance is the nature of the creation of beings; When there is the cessation of ignorance it does not occur. “They discern that the formation of conditions is ultimately empty. They know the equality of actions, causes, and conditions, which is not contrary to action. Knowing perfectly that actions do not have a doer, They observe composite phenomena to be like massed  clouds, devoid of action. “Not knowing the truth, ignorant of the ultimate, There is karma through the power of the mind and the creation of division. Based on the mind there is connate name-and-form and so on, Until the arising of the great aggregation of suffering. “They overcome  the three realms as being ‘mind only.’ These twelve components of becoming are in a single mind. They are born from desire; they are the manifestation of the mind. Thus, creation and destruction also are aspects of the mind. “Ignorance has two effects: it creates a state of delusion, And it also provides the cause for mentation And so on, up till aging, destruction, and the breaking apart of the skandhas, And thus the entirety of all suffering that has no cessation. “Ignorance as a condition is uninterrupted, But  when there is the absence of creation  there is cessation. Ignorance, craving, and grasping are the path of the kleśas. Actions  and becoming are mentation, and the rest are suffering. “Ignorance up to the sensory bases are the suffering of composite phenomena. Contact and sensation are the suffering of suffering. The remaining components increase the suffering of change. By knowing selflessness the three sufferings are ended. “The mind in darkness and the formations take place  in the past. Consciousness and so on, up to sensation, occur in the present. Craving, becoming, and suffering arise in the future. Observing this is the cessation of their connection and continuity. “Ignorance as a condition gives rise to bondage. Freedom from bondage is the cessation of conditions. The source of arising is a cause; it is not without a cause. The wisdom of the jinas observes the empty nature. “There is coming into existence through the process of generation from ignorance. All coming into existence ceases through the negation that destroys the cause. As a result of the profound conditions existing or not existing, Ten aspects  are observed by the nondwelling mind: “(1) One mind, (2) the connection of the components of coming into existence, (3) The stages of activity, (4) inseparability,  (5) three processes, (6) the past, (7) The three sufferings, (8) the causes of arising,  (9) generation and elimination, (10) The cessation that is the conclusion of becoming, and the development  that is the result of conditions. “In that way they comprehend dependent origination, Which is like apparitions, untrue, without sensation or action, Like dreams and similarly like illusions, And like the optical illusions seen by ignorant, childlike beings. “Those who meditate in that way have the emptiness  of the wise. That absence of conditions is featurelessness; Knowing that what appears is unreal, there is no aspiration, Yet they take birth because of their compassion for beings. “In that way the doors to liberation are meditated upon by those great beings. The compassion in their minds increases,  and they desire the qualities of buddhahood. They  observe that composite phenomena are created through aggregation. There is definite motivation, and they possess numerous qualities. “They accomplish ten thousand emptiness samādhis, And likewise the absence of features and aspirationlessness. They have greater wisdom and supreme concordant patience. They have the liberation of the wise and possess unimpeded wisdom. “With that motivation they make offerings to a multitude of sages. They greatly praise this teaching of the Jina. They obtain the treasure of the buddhas and fully accomplish it. Like gold adorned by beryls they become even brighter than before. “The light of the moon soothes the bodies of beings. Though the four winds rise they cannot take it away. The light of the bodhisattvas  transcends the path of the māras, Eliminating the pain of the kleśas and the illness of suffering. “Those who have reached this bhūmi become lords of gods, Sunirmitas, who are skilled in dispelling pride. Whatever they do through the path of wisdom Transcends the path of the śrāvakas, is stable, and cannot be taken away. “These bodhisattvas,  who are endowed with diligence, Wish to attain in one instant a trillion samādhis. They see numerous buddhas in the ten directions, Shining as brightly as the summer  sun. “The jinaputras have taught The sixth bhūmi of the great beings, Which is profound, difficult to see, subtle, And cannot be understood by the śrāvakas and pratyekabuddhas. “That which is named Manifested Is the sixth bodhisattva bhūmi.”"
+  }
+ }
+}
