@@ -197,7 +197,8 @@ description: 《基督宗教譜系學》成書管線（/works/christian-genealog
   no-usable-hit 6、download-failed 2、not-found 1）。🚨 **臺大圖書館幫不上**：用 Primo 公開 API（`ntu.primo.exlibrisgroup.com/
   primaws/rest/pub/pnxs`，inst/vid＝`886NTU_INST`，不必登入）逐筆查這 66 本，電子版零本；紙本只有邢福增《基督教在中國的
   失敗？》、Koselleck *Sediments of Time*，其餘命中的（Dagron、Tellenbach、Blondel、de Lubac 英譯）z-lib 本來就有。
-  德法神學專著要找神學院圖書館（輔大、台神），不是綜合大學。
+  德法神學專著要找神學院圖書館（輔大、台神），不是綜合大學。連訂閱全文索引（scope＝MyInst_and_CI）一起查也是零本電子書。
+  校友帳號不能從校外連線使用電子資源，只能到館內用；但這 66 本台大根本沒有訂，到館內也下載不到。
 * 🚨 **不再試寫**（使用者 10-01）：等資料找齊、定義都定好，再全部一起寫。`data/christian-genealogy/drafts/c4-s04-patriarchate.html`
   只當材料（法規引文已逐字核對可沿用），**不是書稿**。被退的原因：第一部的文字寫了「依本書在第二部所採的定義」——
   **前面的章不能倚賴後面章的定義**。🚨 但也**不是把概念都搬到第1章先定義**（我曾這樣提議被糾正）：
