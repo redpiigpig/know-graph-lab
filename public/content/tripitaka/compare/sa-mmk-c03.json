@@ -1,0 +1,104 @@
+{
+ "slug": "sa-mmk-c03",
+ "title": "中論・觀六情品第三",
+ "family": "sa",
+ "auto": true,
+ "intro": "一頌一節，頌號依梵本（MMK 品.頌）；漢譯欄為該頌加青目釋。本品頌數不等（漢 8／梵 9），逐頌由模型比對。自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "MMK 3.1"
+  },
+  {
+   "id": "a01",
+   "label": "MMK 3.2"
+  },
+  {
+   "id": "a02",
+   "label": "MMK 3.3"
+  },
+  {
+   "id": "a03",
+   "label": "MMK 3.4"
+  },
+  {
+   "id": "a04",
+   "label": "MMK 3.5"
+  },
+  {
+   "id": "a05",
+   "label": "MMK 3.6"
+  },
+  {
+   "id": "a06",
+   "label": "MMK 3.7"
+  },
+  {
+   "id": "a07",
+   "label": "MMK 3.8"
+  },
+  {
+   "id": "a08",
+   "label": "MMK 3.9"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本（月稱本所存頌）",
+   "who": "GRETIL・MMK 頌號"
+  },
+  {
+   "id": "T1564",
+   "lang": "lzh",
+   "label": "羅什本（頌＋青目釋）",
+   "who": "鳩摩羅什譯・409 年",
+   "work": "T1564"
+  }
+ ],
+ "works": [
+  "T1564"
+ ],
+ "anchors": [
+  {
+   "work": "T1564",
+   "node": "中論觀六情品第三（八偈）",
+   "uid": "T30n1564_p0005c15"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sa": "darśanaṃ śravaṇaṃ ghrāṇaṃ rasanaṃ sparśanaṃ manaḥ /\nindriyāṇi ṣaḍ eteṣāṃ draṣṭavyādīni gocaraḥ // MMK_3.1 //",
+   "T1564": "問曰：經中說有六情，所謂：「眼耳及鼻舌、身意等六情，\n此眼等六情，行色等六塵。」此中眼為內情、色為外塵，眼能見色，乃至意為內情、法為外塵，意能知法。答曰：無也。何以故？"
+  },
+  "a01": {
+   "sa": "svam ātmānaṃ darśanaṃ hi tat tam eva na paśyati /\nna paśyati yad ātmānaṃ kathaṃ drakṣyati tat parān // MMK_3.2 //",
+   "T1564": "「是眼則不能，自見其己體；\n若不能自見，云何見餘物？」是眼不能見自體。何以故？如燈能自照亦能照他。眼若是見相，亦應自見亦應見他。而實不爾，是故偈中說「若眼不自見，何能見餘物？」問曰：眼雖不能自見，而能見他。如火能燒他，不能自燒。答曰：「火喻則不能，成於眼見法；\n去未去去時，已總答是事。」汝雖作火喻，不能成眼見法。是事〈去來品〉中已答，如已去中無去、未去中無去、去時中無去；如已燒、未燒、燒時俱無有燒，如是已見、未見、見時俱無見相。復次："
+  },
+  "a02": {
+   "sa": "na paryāpto 'gnidṛṣṭānto darśanasya prasiddhaye /\nsadarśanaḥ sa pratyukto gamyamānagatāgataiḥ // MMK_3.3 //"
+  },
+  "a03": {
+   "sa": "nāpaśyamānaṃ bhavati yadā kiṃ cana darśanam /\ndarśanaṃ paśyatīty evaṃ katham etat tu yujyate // MMK_3.4 //",
+   "T1564": "「見若未見時，則不名為見；\n而言見能見，是事則不然。」眼未對色則不能見，爾時不名為見，因對色名為見。是故偈中說「未見時無見」，云何以見能見？復次二處俱無見法。何以故？「見不能有見，非見亦不見；\n若已破於見，則為破見者。」見不能見，先已說過故。非見亦不見，無見相故。若無見相，云何能見？見法無故，見者亦無。何以故？若離見有見者，無眼者亦應以餘情見。若以見見，則見中有見相。見者無見相，是故偈中說「若已破於見，則為破見者。」復次："
+  },
+  "a04": {
+   "sa": "paśyati darśanaṃ naiva naiva paśyaty adarśanam /\nvyākhyāto darśanenaiva draṣṭā cāpy avagamyatām // MMK_3.5 //"
+  },
+  "a05": {
+   "sa": "draṣṭā nāsty atiraskṛtya tiraskṛtya ca darśanam /\ndraṣṭavyaṃ darśanaṃ caiva draṣṭary asati te kutaḥ // MMK_3.6 //",
+   "T1564": "「離見不離見，見者不可得；\n以無見者故，何有見可見？」若有見，見者則不成；若無見，見者亦不成。見者無故，云何有見可見？若無見者，誰能用見法分別外色？是故偈中說「以無見者故，何有見可見？」復次："
+  },
+  "a06": {
+   "sa": "pratītya mātāpitarau yathoktaḥ putrasaṃbhavaḥ /\ncakṣūrūpe pratītyaivamukto vijñānasaṃbhavaḥ // MMK_3.7 //"
+  },
+  "a07": {
+   "sa": "draṣṭavyadarśanābhāvād vijñānādicatuṣṭayam /\nnāstīty upādānādīni bhaviṣyanti punaḥ katham // MMK_3.8 //",
+   "T1564": "「見可見無故，識等四法無；\n四取等諸緣，云何當得有？」見、可見法無故，識、觸、受、愛四法皆無。以無愛等故，四取等十二因緣分亦無。復次：「耳鼻舌身意，聲及聞者等，\n當知如是義，皆同於上說。」如見、可見法空，屬眾緣故無決定。餘耳等五情聲等五塵，當知亦同見可見法，義同故不別說。"
+  },
+  "a08": {
+   "sa": "vyākhyātaṃ śravaṇaṃ ghrāṇaṃ rasanaṃ sparśanaṃ manaḥ /\ndarśanenaiva jānīyāc chrotṛśrotavyakādi ca // MMK_3.9 //"
+  }
+ }
+}
