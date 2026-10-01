@@ -1,0 +1,151 @@
+{
+ "slug": "suvarnaprabhasa-c01",
+ "title": "金光明經・序品",
+ "family": "sa",
+ "intro": "梵本〈nidānaparivarta〉＝藏譯第一章＝曇無讖、合部〈序品〉＝義淨〈序品〉。全品是偈（梵本 Suv 1.1–25）：說處、四方四佛加持、此經懺悔法消災、諸天護持、聞經功德。義淨本另列與會大眾。",
+ "units": [
+  {
+   "id": "s1-00",
+   "label": "經題・歸敬"
+  },
+  {
+   "id": "s1-01",
+   "label": "如是我聞・說處・與會大眾"
+  },
+  {
+   "id": "s1-02",
+   "label": "經王・四方四佛加持"
+  },
+  {
+   "id": "s1-03",
+   "label": "懺悔法功德・消除眾災"
+  },
+  {
+   "id": "s1-04",
+   "label": "四王諸天護持"
+  },
+  {
+   "id": "s1-05",
+   "label": "聞經、為他說、供養之功德"
+  },
+  {
+   "id": "s1-06",
+   "label": "品尾題"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本",
+   "who": "Nobel 校訂本・GRETIL"
+  },
+  {
+   "id": "bo",
+   "lang": "bo",
+   "label": "藏譯",
+   "who": "德格版 Toh 557・84000 翻譯記憶"
+  },
+  {
+   "id": "en",
+   "lang": "en",
+   "label": "84000 英譯",
+   "who": "譯自藏譯・與藏文逐句對齊"
+  },
+  {
+   "id": "T0663",
+   "lang": "lzh",
+   "label": "曇無讖本",
+   "who": "曇無讖譯《金光明經》・五世紀初",
+   "work": "T0663"
+  },
+  {
+   "id": "T0664",
+   "lang": "lzh",
+   "label": "合部本",
+   "who": "寶貴合《合部金光明經》・597 年",
+   "work": "T0664"
+  },
+  {
+   "id": "T0665",
+   "lang": "lzh",
+   "label": "義淨本",
+   "who": "義淨譯《金光明最勝王經》・703 年",
+   "work": "T0665"
+  }
+ ],
+ "works": [
+  "T0663",
+  "T0664",
+  "T0665"
+ ],
+ "anchors": [
+  {
+   "work": "T0663",
+   "node": "金光明經序品第一",
+   "uid": "T16n0663_p0335b05"
+  },
+  {
+   "work": "T0664",
+   "node": "序品第一",
+   "uid": "T16n0664_p0359c13"
+  },
+  {
+   "work": "T0665",
+   "node": "序品第一",
+   "uid": "T16n0665_p0403a03"
+  }
+ ],
+ "cells": {
+  "s1-00": {
+   "sa": "Suvarṇaprabhāsasūtram // suvarṇaprabhāsottamasūtrendrarājaḥ // // nidānaparivartaḥ // om namaḥ śrīsarvabuddhabodhisattvebhyaḥ / om namaḥ śrībhagavatyai āryaprajñāpāramitāyai // tadyathā / om śrutismṛtigativijaye svāhā // yasmin pāramitā daśottamaguṇāstaistairnayaiḥ sūcitāḥ sarvajñena jagaddhitāya daśa ca prakhyāpitā bhūmayaḥ / ucchedadhruvavarjitā ca vimalā proktā gatirmadhyamā tatsūtraṃ svarṇaprabhānigaditaṃ śṛṇvantu bodhyarthinaḥ //",
+   "bo": "༄༅༅། །རྒྱ་གར་སྐད་དུ། ཨཱརྱ་སུ་བརྞ་པྲ་བྷཱ་སོཏྟ་མ་སཱུ་ཏྲེནྡྲ་རཱ་ཛ་ནཱ་མ་མ་ཧཱ་ཡཱ་ན་སཱུ་ཏྲ། བོད་སྐད་དུ། འཕགས་པ་གསེར་འོད་དམ་པ་མདོ་སྡེའི་དབང་པོའི་རྒྱལ་པོ་ཞེས་བྱ་བ་ཐེག་པ་ཆེན་པོའི་མདོ། བམ་པོ་དང་པོ།  འདས་པ་དང་། མ་བྱོན་པ་དང་། ད་ལྟར་བྱུང་བའི་སངས་རྒྱས་དང་། བྱང་ཆུབ་སེམས་དཔའ་དང་། རང་སངས་རྒྱས་དང་། འཕགས་པ་ཉན་ཐོས་ཐམས་ཅད་ལ་ཕྱག་འཚལ་ལོ། །",
+   "en": "The Noble Mahāyāna Sūtra The Lord King of Sūtras, The Sublime Golden Light  Chapter 1: The Introduction I pay homage to all the buddhas, bodhisattvas, pratyekabuddhas, and noble śrāvakas in the past, future, and present."
+  },
+  "s1-01": {
+   "sa": "śrutaṃ mayaikasamaye gṛdhrakūṭe tathāgataḥ // vijahāra dharmadhātau gambhīre buddhagocare // Suv_1.1 // bodhisattvasamuccayayā mahākuladevatayā, sarasvatyā ca mahādevatayā, śriyā ca mahādevatayā, dṛḍhayā ca mahāpṛthivīdevatayā, hārītyā ca mahādevatayā, evaṃ pramukhābhirmahādevatābhiranekadevanāgayakṣarākṣasagandharvāsuragaruḍakinnaramahoragamanuṣyāmanuṣyaiḥ sārdham / athāyuṣmānānando bhagavantametadavocat / kiṃ tāsāṃ bhagavandharmavinayaṃ bhaviṣyatīti?",
+   "bo": "འདི་སྐད་བདག་གིས་ཐོས་པ་དུས་གཅིག་ན། བྱ་རྒོད་ཕུང་པོ་ཆོས་ཀྱི་དབྱིངས། །ཟབ་མོ་སངས་རྒྱས་སྤྱོད་ཡུལ་ན། །དེ་བཞིན་གཤེགས་པ་བཞུགས་ནས་ནི། །",
+   "en": "Thus did I hear at one time. The Tathāgata was dwelling On Vulture Peak, in the Dharma realm, The profound buddha field of activity.",
+   "T0663": "如是我聞：一時佛住王舍大城耆闍崛山。是時如來遊於無量甚深法性諸佛行處，過諸菩薩所行清淨。",
+   "T0664": "如是我聞：一時佛在王舍大城耆闍崛山。是時，如來遊於無量甚深法性——諸佛行處——過諸菩薩所行清淨。",
+   "T0665": "如是我聞：一時薄伽梵，在王舍城鷲峯山頂，於最清淨甚深法界，諸佛之境如來所居，與大苾芻眾九萬八千人，皆是阿羅漢——能善調伏如大象王，諸漏已除，無復煩惱，心善解脫，慧善解脫，所作已畢，捨諸重擔，逮得己利，盡諸有結，得大自在，住清淨戒，善巧方便，智慧莊嚴，證八解脫，已到彼岸——其名曰：具壽阿若憍陳如，具壽阿說侍多，具壽婆濕波，具壽摩訶那摩，具壽婆帝利迦，大迦攝波，優樓頻螺迦攝，伽耶迦攝，那提迦攝，舍利子，大目乾連；惟阿難陀住於學地。如是等諸大聲聞，各於晡時從定而起，往詣佛所，頂禮佛足，右遶三匝，退坐一面。復有菩薩摩訶薩，百千萬億人俱——有大威德，如大龍王，名稱普聞，眾所知識，施戒清淨，常樂奉持，忍行精勤，經無量劫，超諸靜慮，繫念現前，開闡慧門，善修方便，自在遊戲，微妙神通，逮得總持，辯才無盡，斷諸煩惱，累染皆亡，不久當成一切種智，降魔軍眾而擊法鼓，制諸外道，令起淨心，轉妙法輪，度人天眾，十方佛土悉已莊嚴，六趣有情無不蒙益，成就大智，具足大忍，住大慈悲心，有大堅固力，歷事諸佛，不般涅槃，發弘誓心，盡未來際，廣於佛所深種淨因，於三世法悟無生忍，逾於二乘所行境界，以大善巧化導世間，於大師教悉能敷演，祕密之法，甚深空性，皆已了知，無復疑惑——其名曰：無障礙轉法輪菩薩，常發心轉法輪菩薩，常精進菩薩，不休息菩薩，慈氏菩薩，妙吉祥菩薩，觀自在菩薩，總持自在王菩薩，大辯莊嚴王菩薩，妙高山王菩薩，大海深王菩薩，寶幢菩薩，大寶幢菩薩，地藏菩薩，虛空藏菩薩，寶手自在菩薩，金剛手菩薩，歡喜力菩薩，大法力菩薩，大莊嚴光菩薩，大金光莊嚴菩薩，淨戒菩薩，常定菩薩，極清淨慧菩薩，堅固精進菩薩，心如虛空菩薩，不斷大願菩薩，施藥菩薩，療諸煩惱病菩薩，醫王菩薩，歡喜高王菩薩，得上授記菩薩，大雲淨光菩薩，大雲持法菩薩，大雲名稱喜樂菩薩，大雲現無邊稱菩薩，大雲師子吼菩薩，大雲牛王吼菩薩，大雲吉祥菩薩，大雲寶德菩薩，大雲日藏菩薩，大雲月藏菩薩，大雲星光菩薩，大雲火光菩薩，大雲電光菩薩，大雲雷音菩薩，大雲慧雨充遍菩薩，大雲清淨雨王菩薩，大雲花樹王菩薩，大雲青蓮花香菩薩，大雲寶栴檀香清涼身菩薩，大雲除闇菩薩，大雲破瞖菩薩。如是等無量大菩薩眾，各於晡時，從定而起，往詣佛所，頂禮佛足，右遶三匝，退坐一面。復有梨車毘童子五億八千，其名曰：師子光童子，師子慧童子，法授童子，因陀羅授童子，大光童子，大猛童子，佛護童子，法護童子，僧護童子，金剛護童子，虛空護童子，虛空吼童子，寶藏童子，吉祥妙藏童子，如是等人而為上首，悉皆安住無上菩提，於大乘中，深信歡喜。各於晡時，往詣佛所，頂禮佛足，右遶三匝，退坐一面。復有四萬二千天子，其名曰：喜見天子，喜悅天子，日光天子，月髻天子，明慧天子，虛空淨慧天子，除煩惱天子，吉祥天子，如是等天子而為上首，皆發弘願，護持大乘，紹隆正法，能使不絕。各於晡時，往詣佛所，頂禮佛足，右遶三匝，退坐一面。復有二萬八千龍王：蓮華龍王，𧫦羅葉龍王，大力龍王，大吼龍王，小波龍王，持駛水龍王，金面龍王，如意龍王，如是等龍王而為上首，於大乘法，常樂受持，發深信心，稱揚擁護。各於晡時，往詣佛所，頂禮佛足，右遶三匝，退坐一面。復有三萬六千諸藥叉眾，毘沙門天王而為上首。其名曰：菴婆藥叉，持菴婆藥叉，蓮花光藏藥叉，蓮花面藥叉，顰眉藥叉，現大怖藥叉，動地藥叉，吞食藥叉，是等藥叉悉皆愛樂如來正法，深心護持，不生疲懈。各於晡時，往詣佛所，頂禮佛足，右遶三匝，退坐一面。復有四萬九千揭路茶王，香象勢力王而為上首，及餘健闥婆，阿蘇羅，緊那羅，莫呼洛伽等，山林河海一切神仙，并諸大國所有王眾，中宮后妃，淨信男女，人天大眾悉皆雲集，咸願擁護無上大乘，讀誦受持，書寫流布。各於晡時，往詣佛所，頂禮佛足，右遶三匝，退坐一面。如是等聲聞、菩薩、人天大眾、龍神八部，既雲集已，各各至心合掌恭敬，瞻仰尊容，目未曾捨，願樂欲聞殊勝妙法。"
+  },
+  "s1-02": {
+   "sa": "bhagavānāha gāthābhiḥ / bhāvanaṃ ca na duḥpṛcchayā virajaskaṃ samādhiṃ dharmasāraṃ pratiṣṭhitam / śuddheṣu virajaskeṣu bodhisattvottameṣu ca / nidānaṃ sūtrarājendraṃ svarṇaprabhāsottamamidam // Suv_1.2 // tato gambhīraśravaṇena gambhīravyupaparīkṣaṇena / dikṣu catasṛṣu buddhairadhiṣṭhānamadhiṣṭhitam // Suv_1.3 // akṣobhyarājaḥ pūrvasmindakṣiṇe ratnaketunā / paścimāyāmamitābha uttare dundubhisvaraḥ // Suv_1.4 //",
+   "bo": "དག་ཅིང་རྡུལ་རྣམས་མེད་པ་ཡི། །བྱང་ཆུབ་སེམས་དཔའ་མཆོག་རྣམས་ལ། །མདོ་སྡེའི་དབང་པོའི་རྒྱལ་པོ་སྟེ། ། མཉན་ན་ཤིན་ཏུ་ཟབ་པ་དང་། །ཡོངས་སུ་བརྟགས་ན་ཟབ་པ་ཉིད། །གསེར་འོད་དམ་པ་འདི་འཆད་དོ། ། ཕྱོགས་བཞིར་སངས་རྒྱས་རྣམས་ཀྱིས་ནི། །བྱིན་གྱི་རླབས་ཀྱིས་བྱིན་བརླབས་པ། །མི་འཁྲུགས་པས་ནི་ཤར་ཕྱོགས་ སུ། །རིན་ཆེན་ཏོག་གིས་ལྷོ་ཕྱོགས་སུ། །འོད་དཔག་མེད་ཀྱིས་ནུབ་ཕྱོགས་སུ། །",
+   "en": "He taught this Sublime Golden Light— Which is the lord king of sūtras— To the supreme bodhisattvas, Who are pure and immaculate. It is profound to listen to And profound to analyze. It has received the blessings Of the buddhas in the four directions:  The Buddha Akṣobhya in the east, The Buddha Ratnaketu in the south, The Buddha Amitābha in the west, And the Buddha Dundubhisvara in the north.",
+   "T0663": "是金光明，諸經之王！若有聞者， 則能思惟，無上微妙，甚深之義。 如是經典，常為四方，四佛世尊， 之所護持：東方阿閦、南方寶相、 西無量壽、北微妙聲。",
+   "T0664": "「是金光明，諸經之王，若有聞者則能思惟無上微妙甚深之義。如是經典常為四方四佛世尊之所護持：「東方阿閦、南方寶相、西無量壽、 北微妙聲。",
+   "T0665": "爾時，薄伽梵於日晡時，從定而起，觀察大眾，而說頌曰：「金光明妙法，最勝諸經王； 甚深難得聞，諸佛之境界。 我當為大眾，宣說如是經； 并四方四佛，威神共加護： 東方阿閦尊，南方寶相佛， 西方無量壽，北方天鼓音。"
+  },
+  "s1-03": {
+   "sa": "taṃ pravakṣyāmyadhiṣṭhānaṃ māṅgalyadeśanottamam / sarvapāpavināśārthaṃ sarvapāpakṣayaṃkaram // Suv_1.5 // sarvasaukhyapradātāraṃ sarvaduḥkhavināśanam / mūlaṃ sarvajñatattvasya sarvaśrīsamalaṅkṛtam // Suv_1.6 // upahatendriyā ye hi sattvā naṣṭā hatāyuṣaḥ / alakṣmyā pariviṣṭā hi devatāsu parāṅmukhāḥ // Suv_1.7 // kāntayā te janā dviṣṭāḥ kuṭumbādiṣvapadrutāḥ / parasparaviruddhā vā arthanāśairupadrutāḥ // Suv_1.8 // śokāyāseṣvanarthe ca bhaye vyasana eva ca / grahanakṣatrapīḍāyāṃ kākhordadāruṇagrahaiḥ // Suv_1.9 // pāpakaṃ paśyati svapnaṃ śokāyāsasamucchritam / tena ca snānaśucinā śrotavyaṃ sūtramuttamam // Suv_1.10 // śṛṇvanti ya idaṃ sūtraṃ gambhīraṃ buddhagocaram / prasannacittāḥ sumanasaḥ śucivastrairalaṅkṛtāḥ // Suv_1.11 // teṣāṃ sarve tathā nityamupasargāḥ sudāruṇāḥ / tejasā cāsya sūtrasya śāmyante sarvaprāṇinām // Suv_1.12 //",
+   "bo": "རྔ་སྒྲ་ཡིས་ནི་བྱང་ཕྱོགས་སུ། །སྡིག་པ་ཐམས་ཅད་གཞིག་པའི་ཕྱིར། །བཤད་པ་དམ་པ་བཀྲ་ཤིས་པ། །སྡིག་པའི་ལས་རྣམས་ཟད་བྱེད་པ། ། བདེ་བ་ཐམས་ཅད་སྦྱིན་བྱེད་པ། །སྡུག་བསྔལ་ཐམས་ཅད་འཇིག་བྱེད་པ། ། ཐམས་ཅད་མཁྱེན་པ་ཉིད་ཀྱི་གཞི། །དཔལ་ཀུན་གྱིས་ནི་ལེགས་བརྒྱན་པ། །བྱིན་གྱིས་བརླབས་ཏེ་བརྗོད་པར་བྱ། །སེམས་ཅན་གང་དག་དབང་པོ་ཉམས། །ཚེ་ཟད་པ་དང་ཚེ་ཉམས་དང་། །ཕུན་སུམ་ཚོགས་མིན་གང་ཆགས་དང་། །ལྷ་རྣམས་རྒྱབ་ཀྱིས་ཕྱོགས་པ་དང་། །མཛའ་སྡུག་སྐྱེ་བོ་སྡང་བ་དང་། །བྲན་བཟའ་ལ་སོགས་གཙེས་པ་དང་། །ཕན་ཚུན་མཐུན་པ་མ་ཡིན་དང་། །ནོར་འགྲིབས་པས་ནི་གནོད་པ་དང་། ། མྱ་ངན་ངལ་དང་གནོད་པ་དང་། །འཇིགས་པ་དང་ནི་ཕོངས་པ་དང་། །གཟའ་དང་རྒྱུ་སྐར་བྱད་སྟེམས་དང་། །མི་བཟད་གདོན་གྱིས་ཉེན་པ་དང་། །མྱ་ངན་ངལ་ལས་བྱུང་བ་ཡི། །རྨི་ལམ་སྡིག་པ་མཐོང་ན་ཡང་། །དེས་ནི་རབ་བཀྲུས་གཙང་མ་ཡིན། །མདོ་སྡེ་དམ་པ་མཉན་པར་བྱ། །གང་དག་ཡིད་དགེ་སེམས་དང་ཞིང་། ། གོས་གཙང་རྣམས་ཀྱིས་རབ་བརྒྱན་ཏེ། །ཟབ་མོ་སངས་རྒྱས་སྤྱོད་ཡུལ་བ། །མདོ་སྡེ་མཉན་པར་བྱེད་ན་ནི། །མདོ་སྡེ་འདི་ཡི་གཟི་བརྗིད་ཀྱིས། །སྲོག་ཆགས་ཀུན་གྱི་གནོད་པ་དག །ཤིན་ཏུ་མི་བཟད་འདི་འདྲ་བ། །དེ་དག་རྟག་ཏུ་ཞི་བར་འགྱུར། །",
+   "en": "“I will teach that which is blessed, Which is a teaching of supreme auspiciousness, In order to eliminate all bad actions. “It will bestow every happiness; It will eliminate all suffering. It is the basis of omniscience, And it is adorned by every splendor. “Beings with impaired faculties, Whose lives are in decline and ending; Those who are beset by misfortune, Who have been forsaken by the devas,  “Who are hated by their spouses and other people, Who are tormented by family and servants, Who are in conflict with others, And who are oppressed by loss of wealth;  “Those who are miserable, tired, and ruined, Who are frightened and in distress, Who are oppressed by planets and lunar asterisms, And who are afflicted by dreadful demons;  “And those who see evil in their dreams Arising from misery and fatigue Should wash themselves clean And listen to this supreme sūtra. “For those who listen to this sūtra, This profound field of the buddhas, With a lucid mind and good motivation, And dressed in clean clothes—  “For all those beings All those dreadful misfortunes Will always come to an end Through the brilliance of this sūtra.",
+   "T0663": "我今當說， 懺悔等法，所生功德，為無有上； 能壞諸苦，盡不善業，一切種智， 而為根本；無量功德，之所莊嚴； 滅除諸苦，與無量樂。諸根不具、 壽命損減、貧窮困苦、諸天捨離、 親厚鬪訟、王法所加、各各忿諍、 財物損耗、愁憂恐怖、惡星災異、 眾邪蠱道、變怪相續、臥見惡夢、 晝則愁惱，當淨洗浴，聽是經典。 至心清淨，著淨絜衣，專聽諸佛， 甚深行處。是經威德，能悉消除， 如是諸惡，令其寂滅。",
+   "T0664": "「我今當說懺悔等法，所生功德為無有上，能壞諸苦、盡不善業：「一切種智，而為根本，無量功德， 之所莊嚴，滅除諸苦、與無量樂。 諸根不具、壽命損減、貧窮困苦、 諸天捨離、親厚鬪訟、王法所加、 各各忿諍、財物損耗、愁憂恐怖、 惡星災異、眾邪蠱道、變怪相續、 臥見惡夢、晝則愁惱，當淨洗浴， 聽是經典。至心清淨，著淨潔衣， 專聽是經，甚深行處。是經威德， 能悉消除，如是諸惡，令其寂滅。",
+   "T0665": "我復演妙法，吉祥懺中勝， 能滅一切罪，淨除諸惡業。 及消眾苦患，常與無量樂， 一切智根本，諸功德莊嚴。 眾生身不具，壽命將損減， 諸惡相現前，天神皆捨離。 親友懷瞋恨，眷屬悉分離， 彼此共乖違，珍財皆散失。 惡星為變怪，或被邪蠱侵， 若復多憂愁，眾苦之所逼， 睡眠見惡夢，因此生煩惱。 是人當澡浴，應著鮮潔衣， 於此妙經王，甚深佛所讚， 專注心無亂，讀誦聽受持。 由此經威力，能離諸災橫， 及餘眾苦難，無不皆除滅。"
+  },
+  "s1-04": {
+   "sa": "svayaṃ te lokapālāśca sāmātyāḥ sagaṇeśvarāḥ / teṣāṃ rakṣāṃ kariṣyanti hyanekairyakṣakoṭibhiḥ // Suv_1.13 // sarasvatī mahādevī tathā nairañjanavāsinī / hārītī bhūtamātā ca dṛḍhā pṛthivīdevatā // Suv_1.14 // brahmendraistridaśendraiśca maharddhikinnareśvaraiḥ / garuḍendraistathā sārdhaṃ yakṣagandharvapannagaiḥ // Suv_1.15 // te ca tatropasaṃkramya sasainyabalavāhanāḥ / teṣāṃ rakṣāṃ kariṣyanti divārātrau samāhitāḥ // Suv_1.16 //",
+   "bo": "འཇིག་རྟེན་སྐྱོང་བ་བདག་ཉིད་དང་། །བློན་པོ་ཚོགས་ཀྱི་དབང་ཕྱུག་བཅས། །གནོད་སྦྱིན་བྱེ་བ་དུ་མ་ཡིས། །དེ་དག་ལ་ནི་སྲུང་བར་བྱེད། །ལྷ་མོ་ཆེན་མོ་དབྱངས་ཅན་དང་། །ནཻ་རཉྫ་ ནར་གནས་པ་དང་། །འབྱུང་པོའི་མ་མོ་འཕྲོག་མ་དང་། ། ས་ཡི་ལྷ་མོ་བརྟན་མ་དང་། །ཚངས་པའི་དབང་དང་ལྷ་དབང་དང་། །ཀླུ་དབང་མཐུ་ཆེན་རྣམས་དང་ནི། །མི་འམ་ཅི་དབང་ལྷ་མིན་དབང་། །དེ་བཞིན་ནམ་མཁའ་ལྡིང་དབང་རྣམས། །སྡེ་དང་སྟོབས་དང་བཞོན་པ་དང་། །བཅས་ཏེ་དེ་དག་དེར་ལྷགས་ནས། །ཉིན་དང་མཚན་མོ་མི་གཡེལ་བར། །",
+   "en": "“The guardians of the world themselves And their ministers and army generals, As well as a multitude of millions of yakṣas, Will be their protectors. “The great goddess Sarasvatī And Nairañjanavasinī, Hārītī, the mother of spirits, And Dṛḍhā, the goddess of the earth;  “The lords of Brahmā devas, lords of the devas; The greatly powerful lords of the nāgas; And the lords of the kinnaras, the lords of the asuras, And similarly the lords of the garuḍas  “Will come to the place where those people are, Accompanied by troops and steeds, And will be their protectors, Attentive day and night.",
+   "T0663": "護世四王、 將諸官屬、并及無量，夜叉之眾， 悉來擁護，持是經者。大辯天神、 尼連河神、鬼子母神、地神堅牢、 大梵尊天、三十三天、大神龍王、 緊那羅王、迦樓羅王、阿修羅王、 與其眷屬，悉共至彼，擁護是人， 晝夜不離。",
+   "T0664": "護世四王，將諸官屬，并及無量， 夜叉之眾，悉來擁護，是持經典； 大辯天神、尼連河神、鬼子母神、 地神堅牢、大梵尊天、三十三天、 大神龍王、緊那羅王、迦樓羅王、 阿修羅王、與其眷屬，悉共至彼， 擁護是人，晝夜不離。",
+   "T0665": "護世四王眾，及大臣眷屬， 無量諸藥叉，一心皆擁衛。 大辯才天女，尼連河水神， 訶利底母神，堅牢地神眾， 梵王帝釋主，龍王緊那羅， 及金翅鳥王，阿蘇羅天眾， 如是天神等，并將其眷屬， 皆來護是人，晝夜常不離。"
+  },
+  "s1-05": {
+   "sa": "idaṃ sūtraṃ prakāśiṣye gambhīraṃ buddhagocaram / rahasyaṃ sarvabuddhānāṃ durlabhaṃ kalpakoṭibhiḥ // Suv_1.17 // śṛṇvanti ya idaṃ sūtraṃ ye cānye śrāvayanti ca / ye kecidanumodante ye ca pūjāṃ karonti hi // Suv_1.18 // te pūjitā bhaviṣyanti hyanekaiḥ kalpakoṭibhiḥ / devanāgamanuṣyaiśca kinnarāsuraguhyakaiḥ // Suv_1.19 // puṇyaskandhamaparyantamasaṃkhyeyamacintitam / yatteṣāṃ prasṛtaṃ bhoti kṛtapuṇyāna prāṇinām // Suv_1.20 // pragṛhītā bhaviṣyanti sarvabuddhairdiśo daśa / gambhīracaritebhiśca bodhisattvaistathaiva ca // Suv_1.21 // caukṣacīvaraprāvṛtya sugandhajalapāvanaiḥ / maitrīcittaṃ samutthāpya pūjitavyamatandritaiḥ // Suv_1.22 // vipulaṃ vimalaṃ cittamātmānaṃ prakariṣyati / prasādayaṃśca cetāṃsi śṛṇudhvaṃ sūtramuttamam // Suv_1.23 // svāgataṃ ca manuṣyeṣu sulabdhaṃ manuṣaṃ phalam / sujīvitāśca jīvanti sūtraṃ śṛṇvanti ye tvidam // Suv_1.24 // uptakuśalamūlāste bahubuddhaprakāśitāḥ / yeṣāmidaṃ karṇapuṭe deśitaṃ saṃpraviśyatīti // Suv_1.25 //",
+   "bo": "དེ་དག་ལ་ནི་སྲུང་བར་བྱེད། །ཟབ་མོ་སངས་རྒྱས་སྤྱོད་ཡུལ་བ། །སངས་རྒྱས་ཀུན་གྱི་གསང་བ་སྟེ། །བསྐལ་པ་བྱེ་བར་རྙེད་དཀའ་བ། །མདོ་འདི་རབ་ཏུ་བཤད་པར་བྱ། ། གང་དག་མདོ་འདི་ཉན་པ་དང་། །གང་དག་གཞན་ལ་ཐོས་བྱེད་དང་། །གང་སུ་རྗེས་སུ་ཡི་རང་དང་། །གང་དག་མཆོད་པ་བྱེད་པ་རྣམས། །དེ་དག་ལྷ་དང་ཀླུ་དག་དང་། །མི་དང་མི་འམ་ཅི་དག་དང་། །ལྷ་མིན་གནོད་སྦྱིན་དུ་མ་ཡིས། ། བསྐལ་པ་བྱེ་བར་མཆོད་པར་འགྱུར། །སྲོག་ཆགས་བསོད་ནམས་མེད་པ་རྣམས། །དེ་དག་བསོད་ནམས་ཕུང་པོ་ནི། །མཐའ་ཡས་གྲངས་ཀྱང་མེད་པ་དང་། །བསམ་གྱིས་མི་ཁྱབ་སྐྱེ་བར་འགྱུར། ། ཕྱོགས་བཅུའི་རྫོགས་པའི་སངས་རྒྱས་དང་། །དེ་བཞིན་ཟབ་མོར་སྤྱོད་པ་ཡིས། །བྱང་ཆུབ་སེམས་དཔའ་རྣམས་ཀྱིས་ཀྱང་། །རབ་ཏུ་གཟུང་བར་འགྱུར་བ་ཡིན། ། གཙང་མའི་གོས་རྣམས་རབ་བགོས་ལ། །དྲི་ཞིམ་པ་ཡི་གོས་འཆང་ཞིང་། །བྱམས་པའི་སེམས་ནི་ཉེར་བཞག་ནས། །གཡེལ་བ་མེད་པར་མཆོད་པར་བྱ། ། རང་གི་སེམས་ནི་དྲི་མེད་ཅིང་། །རྒྱ་ཆེ་བར་ཡང་རབ་བྱེད་ལ། །སེམས་ཀྱང་ཤིན་ཏུ་དང་བྱེད་ཀྱིས། །མདོ་སྡེ་དམ་པ་མཉན་པར་གྱིས། ། གང་དག་མདོ་འདི་ཉན་པ་ནི། །དེ་དག་མི་ནང་ལེགས་པར་འོངས། །མི་ཡི་སྲིད་པ་ལེགས་པར་ཐོབ། །འཚོ་བ་བདེ་བས་འཚོ་བར་འགྱུར། ། གང་གི་རྣ་བའི་བུ་གར་ཡང་། །བཤད་པ་འདི་ནི་གྲག་འགྱུར་བ། །དེ་དག་དགེ་རྩ་སྦྱངས་པ་སྟེ། །སངས་རྒྱས་མང་པོས་རབ་ཏུ་བསྔགས། །",
+   "en": "“I will elucidate this sūtra, Which is the profound field of the buddhas, Which is the secret of all buddhas, And which is difficult to obtain in a million eons. “Those who hear this sūtra And cause others to hear it, And those who rejoice in this sūtra, And those who make offerings to it,  “Throughout millions of eons Will themselves receive offerings From devas, nāgas, and humans, And from kinnaras, asuras, and yakṣas. “For beings who create this merit, There will arise for them An infinite, incalculable, Inconceivable mass of merit. “They will be taken into the care Of the perfect buddhas in the ten directions, And similarly by the bodhisattvas Who have profound activity. “Having put on clean clothes, Wearing perfumed clothing, And having a loving mind, They should offer without distraction. “They should make their Own minds pure and vast, And with minds filled with faith, They should listen to this sublime sūtra. “Those who listen to this sūtra Will be welcomed among humans, Will attain an excellent human existence, And will live happy lives. “Those in whose ears This teaching sounds Will plant good roots And be praised by many buddhas.”",
+   "T0663": "我今所說，諸佛世尊， 甚深祕密，微妙行處，億百千劫， 甚難得值。若得聞經、若為他說、 若心隨喜、若設供養，如是之人， 於無量劫，常為諸天、八部所敬。 如是修行，生功德者，得不思議， 無量福聚；亦為十方，諸佛世尊、 深行菩薩，之所護持。著淨衣服、 以上妙香，慈心供養，常不遠離； 身意清淨，無諸垢穢，歡喜悅豫， 深樂是典。若得聽聞，當知善得， 人身人道，及以正命；若聞懺悔， 執持在心，是上善根，諸佛所讚。",
+   "T0664": "我今所說， 諸佛世尊，甚深祕密、微妙行處， 億百千劫，甚難得值。若得聞經、 若為他說、若心隨喜、若設供養， 如是之人，於無量劫，常為諸天， 八部所敬。如是修行，生功德者， 得不思議，無量福聚；亦為十方， 諸佛世尊、深行菩薩，之所護持。 著淨衣服，以上妙香，慈心供養， 常不遠離。身意清淨，無有垢穢， 歡喜悅豫，深樂是典。若得聽聞， 當知善得，人身人道，及以正命； 若聞懺悔，執持在心，是上善根， 諸佛所讚。」",
+   "T0665": "我當說是經，甚深佛行處； 諸佛祕密教，千萬劫難逢。 若有聞是經，能為他演說， 若心生隨喜，或設於供養； 如是諸人等，當於無量劫， 常為諸天人，龍神所恭敬。 此福聚無量，數過於恒沙， 讀誦是經者，當獲斯功德。 亦為十方尊，深行諸菩薩， 擁護持經者，令離諸苦難。 供養是經者，如前澡浴身， 飲食及香花，恒起慈悲意。 若欲聽是經，令心淨無垢； 常生歡喜念，能長諸功德。 若以尊重心，聽聞是經者； 善生於人趣，遠離諸苦難。 彼人善根熟，諸佛之所讚； 方得聞是經，及以懺悔法。」"
+  },
+  "s1-06": {
+   "sa": "iti śrīsuvarṇaprabhāsottamasūtrendrarāje nidānaparivartto nāma prathamaḥ //",
+   "bo": "གསེར་འོད་དམ་པ་མདོ་སྡེའི་དབང་པོའི་རྒྱལ་པོ་ལས། གླེང་གཞིའི་ལེའུ་ཞེས་བྱ་བ་སྟེ་དང་པོའོ།། །།",
+   "en": "This concludes “The Introduction,” the first chapter of “The Lord King of Sūtras, The Sublime Golden Light.”"
+  }
+ }
+}

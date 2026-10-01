@@ -1,0 +1,120 @@
+{
+ "slug": "suvarnaprabhasa-c03",
+ "title": "金光明經・夢見金鼓品",
+ "family": "sa",
+ "intro": "梵本〈Svapna〉＝藏譯第三章：妙幢（信相）夢見金鼓、婆羅門擊鼓說懺悔偈，醒後詣佛。漢譯三本都併在下一品（曇無讖、合部〈懺悔品〉，義淨〈夢見金鼓懺悔品〉）之首。",
+ "units": [
+  {
+   "id": "s3-00",
+   "label": "夢見金鼓・十方諸佛・婆羅門擊鼓"
+  },
+  {
+   "id": "s3-01",
+   "label": "醒憶偈頌・詣佛所"
+  },
+  {
+   "id": "s3-02",
+   "label": "向佛說夢中所聞"
+  },
+  {
+   "id": "s3-03",
+   "label": "品尾題"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本",
+   "who": "Nobel 校訂本・GRETIL"
+  },
+  {
+   "id": "bo",
+   "lang": "bo",
+   "label": "藏譯",
+   "who": "德格版 Toh 557・84000 翻譯記憶"
+  },
+  {
+   "id": "en",
+   "lang": "en",
+   "label": "84000 英譯",
+   "who": "譯自藏譯・與藏文逐句對齊"
+  },
+  {
+   "id": "T0663",
+   "lang": "lzh",
+   "label": "曇無讖本",
+   "who": "曇無讖譯《金光明經》・五世紀初",
+   "work": "T0663"
+  },
+  {
+   "id": "T0664",
+   "lang": "lzh",
+   "label": "合部本",
+   "who": "寶貴合《合部金光明經》・597 年",
+   "work": "T0664"
+  },
+  {
+   "id": "T0665",
+   "lang": "lzh",
+   "label": "義淨本",
+   "who": "義淨譯《金光明最勝王經》・703 年",
+   "work": "T0665"
+  }
+ ],
+ "works": [
+  "T0663",
+  "T0664",
+  "T0665"
+ ],
+ "anchors": [
+  {
+   "work": "T0663",
+   "range": [
+    "T16n0663_p0336b12",
+    "T16n0663_p0336b17"
+   ]
+  },
+  {
+   "work": "T0664",
+   "range": [
+    "T16n0664_p0365b21",
+    "T16n0664_p0365b28"
+   ]
+  },
+  {
+   "work": "T0665",
+   "range": [
+    "T16n0665_p0411a19",
+    "T16n0665_p0411a19"
+   ]
+  }
+ ],
+ "cells": {
+  "s3-00": {
+   "sa": "// Svapnaparivartaḥ // atha khalu ruciraketurnāma bodhisattvaḥ svuptaḥ svapnāntaragataḥ suvarṇāṃ suvarṇamayīṃ bherīmadrākṣīt / samantādavabhāsamānāṃ tadyathāpi nāma sūryamaṇḍalaṃ sarvāsu dikṣvaprameyānasaṃkhyeyānbuddhānadrākṣīdratnavṛkṣamūle siṃhāsane vaiḍūryamaye pratiniṣaṇṇānanekaśatasahasrikāyāṃ pariṣadāyāṃ parivṛtāyāṃ puraskṛtāyāṃ dharmadeśayamānān / tatra ca brāhmaṇarūpeṇa puruṣamadrākṣīt tāṃ bherīṃ parāhantam / tatra bherīśabdādimāmevaṃrūpāṃ gāthāṃ niścaramāṇāmaśrauṣīt /",
+   "bo": "དེ་ནས་བྱང་ཆུབ་སེམས་དཔའ་མཛེས་པའི་ཏོག་གཉིད་ཀྱིས་ལོག་པའི་རྨི་ལམ་ན། གསེར་གྱི་རྔ་ཀུན་ཏུ་སྣང་བ་འདི་ལྟ་སྟེ། ཉི་མའི་དཀྱིལ་འཁོར་འདྲ་བ་ཞིག་མཐོང་ངོ་། ། ཕྱོགས་ཐམས་ཅད་ན་ཡང་སངས་རྒྱས་བཅོམ་ལྡན་འདས་གྲངས་མེད་དཔག་ཏུ་མེད་པ་དག་རིན་པོ་ཆེའི་ཤིང་དྲུང་ན། རིན་པོ་ཆེ་བཻ་ཌཱུརྱའི་ཁྲི་རྣམས་ལ་བཞུགས་ཤིང་འཁོར་བརྒྱ་སྟོང་དུ་མས་ཡོངས་སུ་བསྐོར་ཏེ། མདུན་གྱིས་བལྟས་ནས་ཆོས་སྟོན་པ་མཐོང་ངོ་། ། དེ་ནས་ཡང་སྐྱེས་བུ་བྲམ་ཟེའི་གཟུགས་ལྟ་བུ་ཞིག་རྔ་དེ་རྡུང་བ་མཐོང་སྟེ། རྔའི་སྒྲ་དེ་ལས་བསྟན་པའི་ཚིགས་སུ་བཅད་པ་འདི་ལྟ་བུ་དག་བྱུང་བ་ཐོས་སོ། །",
+   "en": "Chapter 3: The Dream  The bodhisattva Ruciraketu then went to sleep and in a dream saw a golden drum that was shining brightly like the disk of the sun. In all directions, there were countless, innumerable buddha bhagavats seated upon precious beryl thrones at the foot of precious trees, encircled by assemblies of many hundreds of thousands. Looking straight ahead, they were teaching the Dharma. Then he saw a person who appeared to be a brahmin beating that drum, and he heard a teaching in verse come from the drumbeats.",
+   "T0663": "爾時信相菩薩，即於其夜夢見金鼓，其狀姝大，其明普照喻如日光；復於光中得見十方無量無邊諸佛世尊，眾寶樹下坐琉璃座，與無量百千眷屬圍繞而為說法。見有一人似婆羅門，以枹擊鼓出大音聲，其聲演說懺悔偈頌。",
+   "T0664": "爾時，信相菩薩即於其夜夢見金鼓，其狀姝大，其明普照，喻如日光。復於光中得見十方無量無邊諸佛世尊，眾寶樹下坐琉璃座，與無量百千眷屬圍遶而為說法。見有一人似婆羅門，以桴擊鼓出大音聲，其聲演說懺悔偈頌。",
+   "T0665": "爾時，妙幢菩薩親於佛前聞妙法已，歡喜踊躍，一心思惟，還至本處。於夜夢中見大金鼓，光明晃耀猶如日輪，於此光中得見十方無量諸佛，於寶樹下坐琉璃座，無量百千大眾圍遶而為說法。見一婆羅門桴擊金鼓，出大音聲，聲中演說微妙伽他明懺悔法。妙幢聞已，皆悉憶持，繫念而住。至天曉已與無量百千大眾圍遶，將諸供具出王舍城，詣鷲峯山，至世尊所，禮佛足已布設香花，右遶三匝，退坐一面，合掌恭敬，瞻仰尊顏，白佛言：「世尊！我於夢中見婆羅門以手執桴，擊妙金鼓，出大音聲，聲中演說微妙伽他明懺悔法，我皆憶持。惟願世尊降大慈悲，聽我所說。」即於佛前，而說頌曰："
+  },
+  "s3-01": {
+   "sa": "atha khalu ruciraketurbodhisattvaḥ prativibuddhaḥ samanantaraṃ tāṃ dharmadeśanāgāthāmanusmarati sma / anusmaramāṇastasyā rātryā atyayena rājagṛhānmahānagarānniṣkramyānekaiḥ prāṇisahasraiḥ sārdhaṃ yena gṛdhrakūṭaḥ parvatarājo yena bhagavāṃstenopasaṃkrānta upasaṃkramya bhagavataḥ pādau śirasā vanditvā bhagavantaṃ tripradakṣiṇīkṛtyaikānte nyaṣīdat /",
+   "bo": "དེ་ནས་བྱང་ཆུབ་སེམས་དཔའ་མཛེས་པའི་ཏོག་གཉིད་སད་མ་ཐག་ཏུ། བསྟན་པའི་ཚིགས་སུ་བཅད་པ་དེ་དག་རྗེས་སུ་དྲན་ནོ། ། རྗེས་སུ་དྲན་ནས་ཀྱང་དེའི་མཚན་མོ་ཟད་པ་དང་། རྒྱལ་པོའི་ཁབ་ཀྱི་གྲོང་ཁྱེར་ཆེན་པོ་ནས་བྱུང་སྟེ། སྲོག་ཆགས་སྟོང་ཕྲག་དུ་མ་དང་ལྷན་ཅིག་ཏུ་བྱ་རྒོད་ཕུང་པོའི་རི་ག་ལ་བ་དང་། བཅོམ་ལྡན་འདས་ག་ལ་བ་དེར་སོང་སྟེ་ཕྱིན་ནས། བཅོམ་ལྡན་འདས་ཀྱི་ཞབས་ལ་མགོ་བོས་ཕྱག་འཚལ་ཏེ། བཅོམ་ལྡན་འདས་ལ་ལན་གསུམ་བསྐོར་བ་བྱས་ནས་ཕྱོགས་གཅིག་ཏུ་འདུག་གོ། །",
+   "en": "As soon as the bodhisattva Ruciraketu awoke from his sleep, he remembered the verses that were taught. Having remembered them, when the night was over, he left the city of Rājagṛha, and together with many thousands of people he went to Vulture Peak Mountain and into the presence of the Bhagavat. He bowed down to the feet of the Bhagavat and circumambulated the Bhagavat three times, keeping him to his right, and then sat down to one side.",
+   "T0663": "時信相菩薩，從夢寤已，至心憶念夢中所聞懺悔偈頌，過夜至旦出王舍城。爾時亦有無量無邊百千眾生，與菩薩俱往耆闍崛山至於佛所。至佛所已，頂禮佛足右繞三匝，却坐一面敬心合掌，瞻仰尊顏目不暫捨，以其夢中所見金鼓及懺悔偈，向如來說：",
+   "T0664": "時信相菩薩從夢寤已，至心憶念夢中所聞懺悔偈頌，過夜至旦出王舍城。爾時，亦有無量無邊百千眾生與菩薩俱往耆闍崛山至於佛所。至佛所已，頂禮佛足，右遶三匝，却坐一面，敬心合掌，瞻仰尊顏，以其夢中所見金鼓及懺悔偈向如來說："
+  },
+  "s3-02": {
+   "sa": "atha khalu ruciraketurbodhisattvo yena bhagavāṃstenāñjaliṃ praṇamya yāścaiva tāḥ svapnāntare dundubhiśabdena deśanāgāthāḥ śrutāstā uvāca /",
+   "bo": "ཕྱོགས་གཅིག་ཏུ་འདུག་ནས་བྱང་ཆུབ་སེམས་དཔའ་མཛེས་པའི་ཏོག་གིས། བཅོམ་ལྡན་འདས་ག་ལ་བ་དེ་ལོགས་སུ་ཐལ་མོ་སྦྱར་བ་བཏུད་ནས། རྨི་ལམ་ན་གང་རྔའི་སྒྲ་ལས་བསྟན་པའི་ཚིགས་སུ་བཅད་པ་ཐོས་པ་དེ་དག་གསོལ་ཏོ། །",
+   "en": "Seated to one side, the bodhisattva Ruciraketu, with his palms together in homage, bowed toward the Bhagavat and recited the teaching in verse that he had heard from the sound of the drum in his dream."
+  },
+  "s3-03": {
+   "sa": "iti śrīsuvarṇaprabhāsottamasūtrendrarāje svapnaparivarto nāma tṛtīyaḥ //",
+   "bo": "གསེར་འོད་དམ་པ་མདོ་སྡེའི་དབང་པོའི་རྒྱལ་པོ་ལས། རྨི་ལམ་མཐོང་བའི་ལེའུ་ཞེས་བྱ་བ་སྟེ་གསུམ་པའོ།། །།",
+   "en": "This concludes “The Dream,” the third chapter of “The Lord King of Sūtras, The Sublime Golden Light.”"
+  }
+ }
+}
