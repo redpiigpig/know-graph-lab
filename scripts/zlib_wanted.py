@@ -84,6 +84,9 @@ PRIORITY = {
     "genealogy-comparative": 2,
     # 同一本書逐章備料（output/christian-genealogy/sources_chN.md）各章建議優先補的書，10-01 起。
     "genealogy-sources": 2,
+    # 全集：梅延多夫與當代各東方教會神學家（10-01 使用者點名），與其他全集同層。
+    "collected-eastern-theologians": 12,
+    "collected-pelikan-harnack": 12,
     # 內村鑑三／矢內原忠雄那條全集線正在跑（10 卷有 8 卷過九成），缺的是研究它們
     # 的上游專書。兩份加起來只有 11 筆，一天就消化完，卻原本排在第 1,700／4,081
     # 本——等於永遠拿不到。這種「量小但正擋著工作」的清單就該提到最前面。
