@@ -73,3 +73,18 @@ def test_place_figures_caption_and_anchor():
     assert ps[1] == "![](/api/ebooks/x/image/b.jpeg)"
     assert ps[2] == "{{p:6}}![維倫多夫的維納斯，約公元前23000年燒製](/api/ebooks/x/image/a.jpeg)"
     assert len(used) == 2 and miss == 0
+
+
+def test_split_big_chapter_by_sections_and_notes():
+    import rebuild_reference_bilingual as rb
+    old = r.MAX_CHAPTER
+    r.MAX_CHAPTER = 200
+    try:
+        text = ("## 第一章\n\n{{s:1-0-1}}引言。\n\n### 甲\n\n{{s:1-1-1}}" + "甲" * 120 + "[^1]\n\n### 乙\n\n{{s:1-2-1}}"
+                + "乙" * 120 + "[^2]\n\n" + rb.FOOT_RULE + "\n\n(1) 註一\n\n(2) 註二")
+        pages = r.split_big_chapter(text, "第一章", [{"page_number": 5}], {})
+        assert [p["chapter_path"] for p in pages] == ["第一章", "第一章 / 甲", "第一章 / 乙"]
+        assert "(1) 註一" in pages[1]["content"] and "(2) 註二" in pages[2]["content"]
+        assert pages[2]["content"].startswith("## 第一章\n\n### 乙")
+    finally:
+        r.MAX_CHAPTER = old
