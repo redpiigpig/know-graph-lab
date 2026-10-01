@@ -462,7 +462,7 @@ def publish(slug: str, title: str, family: str, vs: list[dict], works: list[str]
                  + (f"複核標記存疑 {len(bad)} 段：{to_trad(note)}" if bad else ""),
         "units": [{"id": f"a{k:02d}", "label": labels[k], **({"doubt": True} if k in bad else {})}
                   for k in range(len(labels))],
-        "versions": [{**{k: v[k] for k in ("id", "lang", "label", "who")},
+        "versions": [{**{k: v[k] for k in ("id", "lang", "label", "who", "work") if k in v},
                       **({"reorder": True} if v["id"] in reordered else {})} for v in vs],
         "works": sorted(set(works)), "anchors": anchors,
         "cells": cells,
@@ -809,7 +809,7 @@ def run_chapters(c: dict, st: dict, retry: bool = False) -> tuple[int, int]:
                            "lines": [ln for i in idx for ln in b["chapters"][i][2]], "join": " ", "twin": "bo"})
             if b.get("work"):
                 works.append(b["work"])
-                anchors.append(b["chapters"][idx[0]][3])
+                anchors.extend(b["chapters"][i][3] for i in idx)   # 併品時每一品都要錨，閱讀器才知道整段被涵蓋
         if len([v for v in vs if not v.get("twin")]) < 2:
             continue
         if c.get("dk"):

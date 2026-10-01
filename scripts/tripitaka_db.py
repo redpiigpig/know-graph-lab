@@ -318,7 +318,9 @@ def cmd_sync_drive():
     print(f"{len(files)} 檔 → {dst}")
     for i, f in enumerate(files, 1):
         t = dst / f.name
-        if t.exists() and t.stat().st_size == f.stat().st_size:
+        # 🚨 不能只比大小：目錄檔欄位 seg→uid 改名時大小完全一樣，870 個 toc 因此
+        # 一直沒同步，線上側欄目次全指向 #undefined。大小相同時再比修改時間。
+        if t.exists() and t.stat().st_size == f.stat().st_size and t.stat().st_mtime >= f.stat().st_mtime:
             continue
         shutil.copy2(f, t)
         if i % 200 == 0:

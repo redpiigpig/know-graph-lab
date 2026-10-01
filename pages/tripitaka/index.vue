@@ -17,7 +17,7 @@
           </div>
           <NuxtLink to="/tripitaka/compare"
                     class="inline-block mt-3 px-3 py-1 text-xs rounded-lg border border-amber-200 bg-white text-amber-700 hover:border-amber-400 transition">
-            異譯對讀：多譯本與原典按義段並排 →</NuxtLink>
+            多譯本對照目錄（漢譯異本與梵巴藏原典並排）→</NuxtLink>
         </div>
 
         <div class="mb-5 flex gap-2">

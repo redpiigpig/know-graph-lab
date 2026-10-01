@@ -439,11 +439,14 @@ def build(slug: str) -> dict:
     return {
         "slug": slug, "title": cfg["title"], "family": cfg["family"], "intro": cfg["intro"],
         "units": [{"id": u, "label": l} for u, l in cfg["units"]],
-        "versions": [{k: v[k] for k in ("id", "lang", "label", "who") if k in v}
+        "versions": [{k: v[k] for k in ("id", "lang", "label", "who") if k in v} | ({"work": v["src"]["work"]} if v["src"].get("work") else {})
                      | ({"reorder": v["reorder"]} if v.get("reorder") else {}) for v in cfg["versions"]],
         "works": works,
         # 阿含的一經：閱讀器在那一經旁邊放入口（整部阿含上千經，不能掛在書頭）
-        "anchors": [{"work": v["src"]["work"], "node": v["src"]["node"]}
+        # uid＝該經首段，閱讀器靠它定位（標題在增一阿含會撞名）
+        "anchors": [{"work": v["src"]["work"], "node": v["src"]["node"],
+                     "uid": next((n["uid"] for n in (json.loads((TRIP / f"{v['src']['work']}.toc.json")
+                                  .read_text(encoding="utf-8"))["toc"]) if n["head"] == v["src"]["node"]), None)}
                     for v in cfg["versions"] if v["src"].get("node")],
         "cells": cells,
     }

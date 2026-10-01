@@ -1,11 +1,11 @@
 <template>
   <div class="flex flex-col bg-slate-50 min-h-dvh">
-    <AppHeader title="異譯對讀" :back="{ to: '/tripitaka', label: '佛教大藏經' }" :editable="false" />
+    <AppHeader title="多譯本對照目錄" :back="{ to: '/tripitaka', label: '佛教大藏經' }" :editable="false" />
     <main class="flex-1 px-4 sm:px-6 py-8">
       <div class="max-w-3xl mx-auto">
-        <h1 class="text-xl font-bold text-gray-900">異譯對讀</h1>
+        <h1 class="text-xl font-bold text-gray-900">多譯本對照目錄</h1>
         <p class="mt-1 text-xs text-gray-500 leading-relaxed">
-          同一部經的多個漢譯本，與梵、巴利、藏原典按義段並排——像聖經的多譯本對照。
+          下列經文在閱讀器裡可以多欄並排（同一部經的多個漢譯本，與梵、巴利、藏原典），點進去即是該經的閱讀頁。
           佛典沒有跨語言共通的「節」，義段由本站編訂，各格文字逐字取自原典。
           <span class="text-amber-700">「自動」</span>表示義段由模型提出、腳本逐字切分把關，未經人工校讀。
         </p>
@@ -43,7 +43,7 @@
 
 <script setup lang="ts">
 definePageMeta({ middleware: 'auth' })
-useHead({ title: '異譯對讀 — 佛教大藏經' })
+useHead({ title: "多譯本對照目錄 — 佛教大藏經" })
 interface Item { slug: string; title: string; family: string; auto?: boolean; works: string[]; versions: number; labels?: string[] }
 const { data } = await useFetch<Item[]>('/content/tripitaka/compare/index.json', { server: false })
 const q = ref('')

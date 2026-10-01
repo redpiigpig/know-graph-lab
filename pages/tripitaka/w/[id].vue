@@ -14,34 +14,6 @@
           title="查佛學辭典（先選取經文可直接帶入）"
           @click="openDict()"
         >📖 辭典</button>
-        <button
-          v-if="sutraGroups"
-          class="px-2.5 py-1 text-[11px] rounded-lg border transition mr-1.5"
-          :class="sideBySide
-            ? 'bg-indigo-600 text-white border-indigo-600'
-            : 'bg-white text-gray-500 border-gray-200 hover:border-indigo-300'"
-          title="左漢文、右巴利／漢譯南傳，一經對一經"
-          @click="sideBySide = !sideBySide"
-        >逐經並排</button>
-        <NuxtLink
-          v-for="c in compareSets" :key="c.slug"
-          :to="`/tripitaka/compare/${c.slug}`"
-          class="px-2.5 py-1 text-[11px] rounded-lg border border-gray-200 bg-white text-gray-500 hover:border-amber-300 transition mr-1.5"
-          :title="`${c.title}：${c.versions} 個本子按義段並排`"
-        >異譯對讀</NuxtLink>
-        <!-- 只有漢文時不必顯示語言切換（原文是可展開區塊，不佔欄） -->
-        <div v-if="availableLangs.length > 1 && !(sutraGroups && sideBySide)" class="flex items-center gap-1.5">
-          <button
-            v-for="l in availableLangs"
-            :key="l"
-            class="px-2.5 py-1 text-[11px] rounded-lg border transition"
-            :class="shown.has(l)
-              ? 'bg-amber-600 text-white border-amber-600'
-              : 'bg-white text-gray-500 border-gray-200 hover:border-amber-300'"
-            :title="PARALLEL_LANGS[l]?.label || l"
-            @click="toggle(l)"
-          >{{ PARALLEL_LANGS[l]?.short || l }}</button>
-        </div>
       </template>
     </AppHeader>
 
@@ -141,7 +113,7 @@
           <a
             v-for="n in tocInJuan"
             :key="n.i"
-            :href="`#${n.uid}`"
+            :href="`#${nodeUid(n)}`"
             class="block py-1 text-xs text-gray-600 hover:text-amber-700 truncate"
             :style="{ paddingLeft: `${n.depth * 10}px` }"
             :title="n.head"
@@ -150,8 +122,8 @@
       </aside>
 
       <!-- 正文 -->
-      <main class="flex-1 min-w-0 px-6 py-8">
-        <div class="max-w-4xl mx-auto">
+      <main class="flex-1 min-w-0 px-4 sm:px-6 py-6">
+        <div class="max-w-7xl mx-auto">
           <div class="mb-6 pb-4 border-b border-gray-200">
             <h1 class="text-xl font-bold text-gray-900" :class="work.canon === 'DK' ? 'font-serif' : ''">
               {{ displayTitle }}
@@ -171,180 +143,130 @@
             </div>
           </div>
 
-          <!-- 逐經並排：一經對一經。經以下不逐句對應，右欄保留原文自己的段號。 -->
-          <div v-if="sutraGroups && sideBySide" class="space-y-6">
-            <p class="text-[11px] text-gray-400 leading-relaxed">
-              一經對一經並排：經號是漢巴兩邊公認的對齊單位；經以下兩本為<strong>同源異流</strong>，
-              段數本來就不同，左右不逐句對應。右欄段號是該語言自身的引用座標（SuttaCentral）。
-            </p>
-            <section
-              v-for="g in sutraGroups" :key="`${g.d}-${g.segs[0].uid}`"
-              class="rounded-xl border bg-white"
-              :class="g.origs.length ? 'border-indigo-100' : 'border-gray-100'"
+          <!-- 欄位選擇：照聖經對照頁，一欄一個下拉，同一語言在下拉裡選版本 -->
+          <div class="grid gap-2 mb-4" :style="{ gridTemplateColumns: colGrid }">
+            <div
+              v-for="(k, ci) in columns" :key="ci"
+              class="bg-white border border-gray-200 rounded-md px-2 py-1.5 flex items-center gap-1 min-w-0"
             >
-              <div class="grid gap-x-6" :class="g.origs.length ? 'md:grid-cols-2' : ''">
-                <!-- 漢文整經 -->
-                <div class="p-4 min-w-0">
-                  <div v-for="s in g.segs" :id="s.uid" :key="s.uid" class="group scroll-mt-20 mb-2">
-                    <div v-if="compareAt(s).length" class="mb-1 flex flex-wrap gap-1">
-                      <NuxtLink v-for="c in compareAt(s)" :key="c.slug" :to="`/tripitaka/compare/${c.slug}`"
-                                class="px-1.5 py-0.5 text-[10px] rounded border border-amber-200 bg-amber-50 text-amber-800 hover:border-amber-400"
-                                :title="(c.labels || []).join('、')">異譯對讀・{{ c.versions }} 本{{ c.auto ? '（自動）' : '' }}</NuxtLink>
-                    </div>
-                    <div v-if="s.kind === 'head'" class="text-base font-semibold text-gray-800">{{ s.sources.lzh }}</div>
-                    <div v-else-if="s.kind === 'byline'" class="text-xs text-gray-400">{{ s.sources.lzh }}</div>
-                    <p v-else
-                       class="text-[15px] leading-loose text-gray-800 tracking-wide"
-                       :class="s.kind === 'verse' ? 'whitespace-pre-line pl-4' : ''"
-                       :title="segCite(s)"
-                       v-html="highlight(s, 'lzh')" />
-                  </div>
-                  <p v-if="!g.origs.length && g.segs.some(s => s.kind !== 'head' && s.kind !== 'byline')"
-                     class="text-[11px] text-gray-300 italic">（此經無巴利對應本）</p>
-                </div>
-                <!-- 原文整經 -->
-                <div v-if="g.origs.length" class="p-4 min-w-0 border-t md:border-t-0 md:border-l border-indigo-50 bg-indigo-50/20">
-                  <div class="flex flex-wrap items-center gap-1.5 mb-2">
-                    <button
-                      v-for="(o, oi) in g.origs" :key="oi"
-                      class="px-1.5 py-0.5 rounded border text-[11px] transition"
-                      :class="curOrig(g) === o
-                        ? 'bg-indigo-600 text-white border-indigo-600'
-                        : 'bg-white text-indigo-700 border-indigo-200 hover:border-indigo-400'"
-                      :title="`${o.ref}${o.partial ? '（部分平行）' : ''}`"
-                      @click="pick[g.d] = oi"
-                    >{{ PARALLEL_LANGS[o.lang]?.short || o.lang }} {{ String(o.ref).split('（')[0] }}<span v-if="o.partial"> ～</span></button>
-                  </div>
-                  <div
-                    v-for="(ln, li) in curOrig(g).lines" :key="li"
-                    class="flex gap-2 py-0.5"
-                  >
-                    <span class="font-mono text-[9px] text-gray-300 w-12 flex-shrink-0 pt-1.5 text-right">{{ segLabel(ln[0]) }}</span>
-                    <span
-                      class="leading-relaxed text-gray-700"
-                      :class="curOrig(g).lang.startsWith('zh') ? 'text-[14px] tracking-wide' : 'font-serif text-[14px]'"
-                    >{{ ln[1] }}</span>
-                  </div>
-                </div>
-              </div>
-            </section>
+              <span class="text-[10px] tracking-wide text-gray-400 mr-1 flex-shrink-0">{{ LANG_NAME[langOfKey(k)] || '' }}</span>
+              <select
+                :value="k"
+                class="flex-1 min-w-0 text-xs text-gray-800 bg-transparent border-none focus:outline-none cursor-pointer truncate"
+                @change="setColumn(ci, ($event.target as HTMLSelectElement).value)"
+              >
+                <optgroup v-for="g in keyGroups" :key="g.lang" :label="LANG_NAME[g.lang] || g.lang">
+                  <option v-for="o in g.keys" :key="o" :value="o">{{ keyLabel(o) }}</option>
+                </optgroup>
+              </select>
+              <button
+                v-if="columns.length > 1"
+                class="text-gray-300 hover:text-red-500 text-xs px-1 flex-shrink-0"
+                title="移除此欄"
+                @click="columns.splice(ci, 1)"
+              >✕</button>
+            </div>
+            <button
+              v-if="columns.length < allKeys.length"
+              class="bg-white border border-dashed border-gray-300 rounded-md px-2 py-1.5 text-xs text-gray-500 hover:border-amber-400 hover:text-amber-700"
+              @click="addColumn"
+            >+ 對照欄</button>
           </div>
 
-          <div v-else class="space-y-5">
-            <div v-for="s in segments" :id="s.uid" :key="s.uid" class="group scroll-mt-20">
-              <!-- 段首：大正藏行號（可引用、可複製） -->
-              <button
-                class="font-mono text-[10px] text-gray-300 group-hover:text-amber-600 transition mb-0.5"
-                :title="`複製引用式 ${s.seg}`"
-                @click="copy(s.seg)"
-              >{{ segCite(s) }}</button>
+          <div class="space-y-1.5">
+            <template v-for="(r, ri) in rows" :key="ri">
+              <!-- 品題／經題 -->
+              <h3 v-if="r.type === 'seg' && r.s.kind === 'head'" :id="r.s.uid"
+                  class="scroll-mt-28 pt-4 pb-1 text-base font-semibold text-gray-800">{{ r.s.sources.lzh }}</h3>
+              <p v-else-if="r.type === 'seg' && r.s.kind === 'byline'" :id="r.s.uid"
+                 class="scroll-mt-28 text-xs text-gray-400 pb-1">{{ r.s.sources.lzh }}</p>
 
-              <div v-if="s.kind === 'head'" class="text-base font-semibold text-gray-800 pt-2">
-                {{ s.sources.lzh }}
-              </div>
-              <div v-else-if="s.kind === 'byline'" class="text-xs text-gray-400">
-                {{ s.sources.lzh }}
-              </div>
-
-              <!-- 逐段對照：每一語言一欄 -->
-              <div v-else :class="cols.length > 1 ? 'grid gap-4' : ''" :style="gridStyle">
-                <div v-for="l in cols" :key="l">
-                  <div
-                    v-if="cols.length > 1"
-                    class="text-[10px] text-gray-400 mb-1 uppercase tracking-wide"
-                  >{{ PARALLEL_LANGS[l]?.short || l }}</div>
-                  <p
-                    v-if="s.sources[l]"
-                    class="leading-loose text-gray-800"
-                    :class="[
-                      s.kind === 'verse' ? 'whitespace-pre-line pl-6 text-[15px]' : 'text-[15px]',
-                      l === 'lzh' || l.startsWith('zh') ? 'tracking-wide' : 'font-serif text-[14px]',
-                    ]"
-                    v-html="highlight(s, l)"
-                  />
-                  <p v-else class="text-xs text-gray-300 italic">（無對應）</p>
+              <!-- 多譯本段落的開頭說明 -->
+              <div v-if="r.type === 'unit' && r.first"
+                   class="mt-3 mb-1 px-3 py-2 rounded-md border text-[11px] leading-relaxed"
+                   :class="r.b.set.auto ? 'bg-amber-50 border-amber-200 text-amber-900' : 'bg-emerald-50 border-emerald-200 text-emerald-900'">
+                <span class="font-semibold">多譯本對照・{{ r.b.set.title }}</span>
+                <span class="ml-1">（{{ r.b.set.versions.length }} 本，以義段為一節；佛典無跨語言通用的節號，義段為本站編訂{{ r.b.set.auto ? '；自動對齊、未經人工校讀，標 ? 者複核存疑' : '' }}）</span>
+                <div class="mt-0.5 text-gray-500">
+                  <span v-for="(k, ci) in columns" :key="ci" class="mr-3">
+                    {{ LANG_NAME[langOfKey(k)] }}：{{ r.b.keys.get(k)?.label || (k === 'zh-mod' ? '（白話無此段落對應）' : '此本未收') }}
+                  </span>
                 </div>
               </div>
 
-              <div v-if="compareAt(s).length" class="mt-2 flex flex-wrap gap-1">
-                <NuxtLink v-for="c in compareAt(s)" :key="c.slug" :to="`/tripitaka/compare/${c.slug}`"
-                          class="px-1.5 py-0.5 text-[10px] rounded border border-amber-200 bg-amber-50 text-amber-800 hover:border-amber-400"
-                          :title="(c.labels || []).join('、')">異譯對讀・{{ c.versions }} 本{{ c.auto ? '（自動）' : '' }}</NuxtLink>
-              </div>
-
-              <!-- 該段的平行經目：巴／梵／藏／中期印度語 -->
-              <div v-if="parallelsOf(s.uid).length" class="mt-2 flex flex-wrap items-center gap-1.5">
-                <span class="text-[10px] text-gray-400">原文對應</span>
-                <span
-                  v-for="(p, pi) in parallelsOf(s.uid)"
-                  :key="pi"
-                  class="px-1.5 py-0.5 rounded border text-[11px]"
-                  :class="[
-                    PARALLEL_SOURCES[p.src]?.cls || 'bg-gray-50 text-gray-600 border-gray-200',
-                    p.note === '部分平行' ? 'opacity-70' : '',
-                  ]"
-                  :title="`${PARALLEL_SOURCES[p.src]?.label || p.src}：${PARALLEL_SOURCES[p.src]?.desc || ''}${p.note ? '（' + p.note + '）' : ''}`"
-                >
-                  <span class="font-medium">{{ PARALLEL_LANGS[p.lang]?.short || p.lang }}</span>
-                  {{ p.ref }}<span v-if="p.note === '部分平行'"> ～</span>
-                </span>
-              </div>
-
-              <!-- 該段對應的原典全文（巴／梵／藏）。
-                   刻意做成可展開，而非左右並排：原文那一側是「一整部經」，
-                   漢文這一側只是該經的起首段。並排會讓人誤以為逐句對得上。 -->
-              <details
-                v-for="(o, oi) in originalsOf(s.uid)"
-                :key="`o${oi}`"
-                class="mt-2 rounded-lg border border-indigo-200 bg-indigo-50/40 overflow-hidden"
+              <!-- 一節：左邊節號，右邊各欄（聖經對照頁同款） -->
+              <article
+                v-if="r.type === 'unit' || (r.s.kind !== 'head' && r.s.kind !== 'byline')"
+                :id="r.type === 'seg' ? r.s.uid : `${r.b.set.slug}-${r.u.id}`"
+                class="scroll-mt-28 bg-white border border-gray-200 rounded-md overflow-hidden"
               >
-                <summary class="px-3 py-1.5 text-[11px] text-indigo-800 cursor-pointer hover:bg-indigo-50 flex items-center gap-2">
-                  <span class="font-medium">{{ PARALLEL_LANGS[o.lang]?.label || o.lang }}原文</span>
-                  <span class="text-indigo-600">{{ o.ref }}</span>
-                  <span class="text-indigo-400">{{ o.lines.length }} 段</span>
-                  <span v-if="o.partial" class="text-amber-700">部分平行</span>
-                </summary>
-                <div class="px-3 py-2 border-t border-indigo-100 bg-white/60 max-h-96 overflow-y-auto">
-                  <p class="text-[10px] text-gray-400 mb-2 leading-relaxed">
-                    以下為{{ PARALLEL_LANGS[o.lang]?.label || o.lang }}該經全文，段號為該語言自身的引用座標；
-                    與左側漢文為<strong>同源異流的兩個本子</strong>，段落並非一一對應。
-                  </p>
-                  <div
-                    v-for="(ln, li) in o.lines"
-                    :key="li"
-                    class="flex gap-2 py-0.5 text-[13px]"
-                  >
-                    <span class="font-mono text-[9px] text-gray-300 w-20 flex-shrink-0 pt-1">{{ segLabel(ln[0]) }}</span>
-                    <span class="font-serif text-gray-700 leading-relaxed">{{ ln[1] }}</span>
+                <div v-if="r.type === 'unit'" class="px-3 pt-1.5 text-[11px] text-indigo-700 bg-stone-50 border-b border-gray-100">
+                  {{ r.u.label }}<span v-if="r.u.doubt" class="ml-1 font-semibold text-amber-600" title="複核時被標為可能錯位">?</span>
+                </div>
+                <div class="grid gap-px bg-gray-100" :style="{ gridTemplateColumns: `auto ${colGrid}` }">
+                  <div class="bg-stone-50 px-2 py-2 flex items-start">
+                    <button v-if="r.type === 'seg'"
+                            class="font-mono text-[10px] text-stone-500 hover:text-amber-600"
+                            :title="`複製引用式 ${r.s.seg}`" @click="copy(r.s.seg)">{{ segCite(r.s) }}</button>
+                    <span v-else class="font-mono text-sm font-semibold text-stone-700">{{ r.k + 1 }}</span>
+                  </div>
+                  <div v-for="(k, ci) in columns" :key="ci" class="bg-white px-3 py-2 min-w-0">
+                    <p v-if="cellText(r, k)"
+                       class="leading-loose text-gray-800 break-words"
+                       :class="cellClass(r, k)"
+                       v-html="cellHtml(r, k)" />
+                    <span v-else class="text-gray-300 italic text-xs">—</span>
                   </div>
                 </div>
-              </details>
 
-              <!-- 該段的漢梵巴詞條 -->
-              <div v-if="termsOf(s.uid).length" class="mt-1.5 flex flex-wrap gap-1.5">
-                <span
-                  v-for="(t, ti) in termsOf(s.uid)"
-                  :key="ti"
-                  class="px-1.5 py-0.5 rounded border border-sky-200 bg-sky-50 text-[11px] text-sky-800"
-                  title="CBETA 詞條對照"
-                >
-                  {{ t.zh }}
-                  <span class="text-sky-600 font-serif">
-                    {{ Object.entries(t.forms).map(([k, v]) => `${k === 'sa' ? '梵' : k === 'pi' ? '巴' : k}: ${v}`).join('　') }}
-                  </span>
-                </span>
-              </div>
-
-              <!-- 校勘註 -->
-              <details v-if="s.notes?.length" class="mt-1">
-                <summary class="text-[11px] text-gray-400 cursor-pointer hover:text-gray-600">
-                  校勘 {{ s.notes.length }} 條
-                </summary>
-                <ul class="mt-1 pl-4 text-[11px] text-gray-500 space-y-0.5">
-                  <li v-for="(n, ni) in s.notes" :key="ni">{{ n.text }}</li>
-                </ul>
-              </details>
-            </div>
+                <!-- 段落層的附加資訊（只有一般段落有） -->
+                <div v-if="r.type === 'seg' && (parallelsOf(r.s.uid).length || originalsOf(r.s.uid).length || termsOf(r.s.uid).length || r.s.notes?.length)"
+                     class="px-3 py-2 border-t border-gray-100 space-y-1.5">
+                  <div v-if="parallelsOf(r.s.uid).length" class="flex flex-wrap items-center gap-1.5">
+                    <span class="text-[10px] text-gray-400">原文對應</span>
+                    <span
+                      v-for="(p, pi) in parallelsOf(r.s.uid)" :key="pi"
+                      class="px-1.5 py-0.5 rounded border text-[11px]"
+                      :class="[PARALLEL_SOURCES[p.src]?.cls || 'bg-gray-50 text-gray-600 border-gray-200', p.note === '部分平行' ? 'opacity-70' : '']"
+                      :title="`${PARALLEL_SOURCES[p.src]?.label || p.src}：${PARALLEL_SOURCES[p.src]?.desc || ''}${p.note ? '（' + p.note + '）' : ''}`"
+                    ><span class="font-medium">{{ PARALLEL_LANGS[p.lang]?.short || p.lang }}</span> {{ p.ref }}<span v-if="p.note === '部分平行'"> ～</span></span>
+                  </div>
+                  <!-- 整經原典（尚未切成義段的）：可展開，不與左側逐段並排 -->
+                  <details v-for="(o, oi) in originalsOf(r.s.uid)" :key="`o${oi}`"
+                           class="rounded-lg border border-indigo-200 bg-indigo-50/40 overflow-hidden">
+                    <summary class="px-3 py-1.5 text-[11px] text-indigo-800 cursor-pointer hover:bg-indigo-50 flex items-center gap-2">
+                      <span class="font-medium">{{ PARALLEL_LANGS[o.lang]?.label || o.lang }}原文</span>
+                      <span class="text-indigo-600">{{ o.ref }}</span>
+                      <span class="text-indigo-400">{{ o.lines.length }} 段</span>
+                      <span v-if="o.partial" class="text-amber-700">部分平行</span>
+                    </summary>
+                    <div class="px-3 py-2 border-t border-indigo-100 bg-white/60 max-h-96 overflow-y-auto">
+                      <p class="text-[10px] text-gray-400 mb-2 leading-relaxed">
+                        以下為{{ PARALLEL_LANGS[o.lang]?.label || o.lang }}該經全文，段號為該語言自身的引用座標；
+                        與漢文為<strong>同源異流的兩個本子</strong>，段落並非一一對應。
+                      </p>
+                      <div v-for="(ln, li) in o.lines" :key="li" class="flex gap-2 py-0.5 text-[13px]">
+                        <span class="font-mono text-[9px] text-gray-300 w-20 flex-shrink-0 pt-1">{{ segLabel(ln[0]) }}</span>
+                        <span class="font-serif text-gray-700 leading-relaxed">{{ ln[1] }}</span>
+                      </div>
+                    </div>
+                  </details>
+                  <div v-if="termsOf(r.s.uid).length" class="flex flex-wrap gap-1.5">
+                    <span v-for="(t, ti) in termsOf(r.s.uid)" :key="ti"
+                          class="px-1.5 py-0.5 rounded border border-sky-200 bg-sky-50 text-[11px] text-sky-800" title="CBETA 詞條對照">
+                      {{ t.zh }}
+                      <span class="text-sky-600 font-serif">{{ Object.entries(t.forms).map(([k, v]) => `${k === 'sa' ? '梵' : k === 'pi' ? '巴' : k}: ${v}`).join('　') }}</span>
+                    </span>
+                  </div>
+                  <details v-if="r.s.notes?.length">
+                    <summary class="text-[11px] text-gray-400 cursor-pointer hover:text-gray-600">校勘 {{ r.s.notes.length }} 條</summary>
+                    <ul class="mt-1 pl-4 text-[11px] text-gray-500 space-y-0.5">
+                      <li v-for="(n, ni) in r.s.notes" :key="ni">{{ n.text }}</li>
+                    </ul>
+                  </details>
+                </div>
+              </article>
+            </template>
           </div>
 
           <div v-if="juans.length > 1" class="mt-10 pt-5 border-t border-gray-200 flex justify-between text-sm">
@@ -375,6 +297,7 @@ import { PARALLEL_LANGS, PARALLEL_SOURCES, divisionByKey } from '~/data/tripitak
 
 definePageMeta({ middleware: 'auth' })
 const route = useRoute()
+const router = useRouter()
 const id = computed(() => String(route.params.id))
 
 const supabase = useSupabaseClient()
@@ -404,36 +327,6 @@ useHead(() => ({ title: `${displayTitle.value} — 佛教大藏經` }))
 const divLabel = computed(() => divisionByKey(work.value?.division_key)?.label ?? '佛教大藏經')
 const backTo = computed(() => work.value ? `/tripitaka/${work.value.division_key}` : '/tripitaka')
 
-// 漢文永遠在最左；其餘語言按實際有資料的出現
-const availableLangs = computed(() => {
-  const s = new Set<string>()
-  for (const seg of segments.value) for (const k of Object.keys(seg.sources || {})) s.add(k)
-  const order = ['lzh', 'zh-nan', 'zh-mod', 'pi', 'sa', 'bo', 'en']
-  return order.filter(l => s.has(l))
-})
-const shown = ref<Set<string>>(new Set(['lzh']))
-// 有白話就預設打開 —— 文言與白話並排正是這一欄存在的理由，
-// 不該讓使用者自己去點才看得到。
-//
-// 🚨 預設欄不能寫死 'lzh'。甘珠爾只有 bo 一欄，硬寫 lzh 會讓 cols 算出空陣列，
-//    於是整部經一個字都不顯示——而且頁面框架、段號、側欄全都正常出得來，
-//    看起來像「這部經是空的」而不是「欄位選錯了」。
-watch(availableLangs, (langs) => {
-  const next = new Set([...shown.value].filter(l => langs.includes(l)))
-  if (langs.includes('zh-mod')) next.add('zh-mod')
-  if (!next.size && langs.length) next.add(langs[0])
-  shown.value = next
-}, { immediate: true })
-const cols = computed(() => availableLangs.value.filter(l => shown.value.has(l)))
-const gridStyle = computed(() =>
-  cols.value.length > 1 ? { gridTemplateColumns: `repeat(${cols.value.length}, minmax(0, 1fr))` } : {},
-)
-function toggle(l: string) {
-  const next = new Set(shown.value)
-  if (next.has(l) && next.size > 1) next.delete(l)
-  else next.add(l)
-  shown.value = next
-}
 
 /** 分頁按鈕按函分組。Toh 8 有 12 函 55 段，攤平成一排認不出在哪一函。 */
 const pageVols = computed(() => {
@@ -486,63 +379,194 @@ const parallelsBySeg = computed(() => {
 function parallelsOf(uid: string) { return parallelsBySeg.value.get(uid) ?? [] }
 function originalsOf(uid: string) { return originals.value[uid] ?? [] }
 
-/**
- * 逐經並排：以目錄節點（阿含的一「經」）為單位，左漢文整經、右原文整經。
- * 粒度刻意停在「經」——經號是漢巴兩邊都有共識的對齊單位，經以下的段
- * 兩本數量本來就不同（同源異流），硬對成逐句是捏造。
- * 只在「每個有原文的節點恰好一段掛原文」時成立（五部阿含實測皆然），
- * 否則回 null、退回原本的逐段檢視。
- */
-const sutraGroups = computed(() => {
-  if (!Object.keys(originals.value).length) return null
-  const groups: { d: number; segs: any[]; origs: any[] }[] = []
-  for (const s of segments.value) {
-    const last = groups[groups.length - 1]
-    if (last && last.d === s.d && s.d >= 0) last.segs.push(s)
-    else groups.push({ d: s.d, segs: [s], origs: [] })
-  }
-  let paired = 0
-  for (const g of groups) {
-    const hits = g.segs.filter(s => originalsOf(s.uid).length)
-    if (hits.length > 1) return null
-    if (hits.length) { g.origs = originalsOf(hits[0].uid); paired++ }
-  }
-  return paired ? groups : null
-})
-const sideBySide = ref(true)
+// ── 多譯本對照（原「異譯對讀」頁，併入閱讀器）────────────────────────────
+// 資料是 scripts/tripitaka_compare*.py 產的 public/content/tripitaka/compare/*.json：
+// 同一部經的多個漢譯本＋梵／巴／藏原典，按義段（本站編訂，佛典沒有跨語言節號）切好。
+// 本頁某些段落若被某一組涵蓋，就在那個位置改以「義段」為一節多欄並排，其餘段落照常。
+interface CmpVer { id: string; lang: string; label: string; who?: string; work?: string; reorder?: boolean }
+interface CmpSet {
+  slug: string; title: string; auto?: boolean; units: { id: string; label: string; doubt?: boolean }[]
+  versions: CmpVer[]; works: string[]; anchors?: any[]; cells: Record<string, Record<string, string>>
+}
+const cmpIndex = ref<any[]>([])
+const cmpSets = ref<CmpSet[]>([])
 
-// 這部經有沒有被收進某一組異譯對讀（scripts/tripitaka_compare.py 產的索引）
-const compareIndex = ref<any[]>([])
-onMounted(async () => {
-  try { compareIndex.value = await $fetch<any[]>('/content/tripitaka/compare/index.json') } catch { /* 沒有就不顯示 */ }
-})
-// 整部參與對讀的放書頭；只有其中一經參與的（阿含），放到那一經旁邊——
-// 雜阿含一部就有上百組，全掛書頭會變成一排按鈕
-const compareSets = computed(() => compareIndex.value.filter(c =>
-  c.works.includes(id.value) && !(c.anchors || []).some((a: any) => a.work === id.value)))
-// 錨點鍵優先用該經首段 uid（唯一）；舊資料只有標題時退回標題——
-// 增一阿含每一品都有「（四）」，只靠標題會把入口掛到每一品的第四經
-const compareByKey = computed(() => {
-  const m = new Map<string, any[]>()
-  for (const c of compareIndex.value) for (const a of c.anchors || []) {
-    if (a.work !== id.value) continue
-    const k = a.uid ? `u:${a.uid}` : `h:${a.node}`
-    if (!m.has(k)) m.set(k, [])
-    m.get(k)!.push(c)
+// 目錄節點的首段：本機新格式叫 uid，Drive／R2 舊檔叫 seg（兩種都要認）
+const nodeUid = (n: any) => n?.uid ?? n?.seg
+const tocByI = computed(() => new Map(toc.value.map((n: any) => [n.i, n])))
+
+async function loadCompare() {
+  cmpSets.value = []
+  try {
+    if (!cmpIndex.value.length) cmpIndex.value = await $fetch<any[]>('/content/tripitaka/compare/index.json')
+  } catch { return }
+  // 本頁有段落的節點（含祖先）：阿含一部有上百組，只載這一卷碰得到的
+  const onPage = new Set<string>()
+  for (const d of new Set(segments.value.map((s: any) => s.d))) {
+    let n: any = tocByI.value.get(d)
+    while (n) { onPage.add(`u:${nodeUid(n)}`); onPage.add(`h:${n.head}`); n = tocByI.value.get(n.parent) }
+  }
+  const want = cmpIndex.value.filter((c: any) => {
+    if (!c.works.includes(id.value)) return false
+    const mine = (c.anchors || []).filter((a: any) => a.work === id.value)
+    return !mine.length || mine.some((a: any) => onPage.has(a.uid ? `u:${a.uid}` : `h:${a.node}`))
+  })
+  const got = await Promise.all(want.slice(0, 80).map((c: any) =>
+    $fetch<CmpSet>(`/content/tripitaka/compare/${c.slug}.json`).catch(() => null)))
+  cmpSets.value = got.filter(Boolean) as CmpSet[]
+}
+
+/** 版本屬於哪一部漢文經：新資料有 work；舊資料從 id 前綴推（T0099-sa379 → T0099）。 */
+const vWork = (v: CmpVer) => v.work ?? (v.id.match(/^[TX]\d{4}[A-Za-z]?/)?.[0] ?? null)
+
+/** 一組裡的各版本 → 欄位鍵。本經＝self；其他漢譯＝alt1, alt2…；原典按語言（同語言多本加 #2）。 */
+function keyMap(set: CmpSet): Map<string, CmpVer> {
+  const m = new Map<string, CmpVer>()
+  const self = set.versions.find(v => vWork(v) === id.value)
+  let alt = 0
+  const cnt: Record<string, number> = {}
+  for (const v of set.versions) {
+    let k: string
+    if (v === self) k = 'self'
+    else if (/漢譯南傳/.test(v.label) || v.id.startsWith('nan-') || v.id === 'zh-nan') k = 'zh-nan'
+    else if (v.lang === 'lzh') k = `alt${++alt}`
+    else k = v.lang
+    if (k !== 'self' && !k.startsWith('alt')) {
+      cnt[k] = (cnt[k] || 0) + 1
+      if (cnt[k] > 1) k = `${k}#${cnt[k]}`
+    }
+    m.set(k, v)
   }
   return m
-})
-/** 某段若是一經（或一品）的開頭，回傳它參與的對讀組 */
-const tocByI = computed(() => new Map(toc.value.map((n: any) => [n.i, n])))
-function compareAt(s: any) {
-  const n: any = tocByI.value.get(s.d)
-  if (!n || n.uid !== s.uid) return []
-  return [...(compareByKey.value.get(`u:${n.uid}`) ?? []), ...(compareByKey.value.get(`h:${n.head}`) ?? [])]
 }
-const pick = reactive<Record<number, number>>({})
-function curOrig(g: { d: number; origs: any[] }) {
-  if (pick[g.d] != null) return g.origs[pick[g.d]]
-  return g.origs.find(o => o.lang === 'pi') ?? g.origs[0]
+
+function descendants(roots: number[]): Set<number> {
+  const out = new Set<number>(roots)
+  let grew = true
+  while (grew) {
+    grew = false
+    for (const n of toc.value) if (!out.has(n.i) && out.has(n.parent)) { out.add(n.i); grew = true }
+  }
+  return out
+}
+
+/** 每一組在本頁涵蓋哪些段：有錨點（阿含的一經、長經的一品）照目錄子樹；整部的就比對文字。 */
+const blocks = computed(() => cmpSets.value.map(set => {
+  const keys = keyMap(set)
+  const self = keys.get('self')
+  const covered = new Set<string>()
+  const mine = (set.anchors || []).filter((a: any) => a.work === id.value)
+  if (mine.length) {
+    const roots = toc.value.filter((n: any) => mine.some((a: any) => a.uid ? nodeUid(n) === a.uid : n.head === a.node))
+      .map((n: any) => n.i)
+    const ids = descendants(roots)
+    for (const s of segments.value) if (ids.has(s.d) && s.kind !== 'head' && s.kind !== 'byline') covered.add(s.uid)
+  } else if (self) {
+    const txt = set.units.map(u => set.cells[u.id]?.[self.id] ?? '').join('')
+    for (const s of segments.value) {
+      if (s.kind === 'head' || s.kind === 'byline') continue
+      const t = String(s.sources?.lzh ?? '').trim()
+      if (t.length >= 2 && txt.includes(t)) covered.add(s.uid)
+    }
+  }
+  return { set, keys, covered }
+}).filter(b => b.covered.size))
+
+type Row = { type: 'seg'; s: any } | { type: 'unit'; b: any; u: any; k: number; first: boolean }
+/** 頁面的一列一列：一般段落一列；被某組涵蓋的段落換成該組的各義段。 */
+const rows = computed<Row[]>(() => {
+  const out: Row[] = []
+  const owner = new Map<string, any>()
+  for (const b of blocks.value) for (const u of b.covered) if (!owner.has(u)) owner.set(u, b)
+  const done = new Set<any>()
+  for (const s of segments.value) {
+    const b = owner.get(s.uid)
+    if (!b) { out.push({ type: 'seg', s }); continue }
+    if (done.has(b)) continue
+    done.add(b)
+    b.set.units.forEach((u: any, k: number) => out.push({ type: 'unit', b, u, k, first: k === 0 }))
+  }
+  return out
+})
+
+// ── 欄位（聖經對照頁同款：一欄一個下拉，同一語言在下拉裡選版本）──────────
+const LANG_NAME: Record<string, string> = { lzh: '漢文', sa: '梵文', pi: '巴利', bo: '藏文', en: '英譯' }
+/** 本經自己的語言：漢文藏是 lzh；德格甘珠爾只有 bo */
+const selfLang = computed(() => segments.value.some((s: any) => s.sources?.lzh) ? 'lzh'
+  : (Object.keys(segments.value[0]?.sources || {})[0] || 'lzh'))
+const segLangs = computed(() => {
+  const s = new Set<string>()
+  for (const seg of segments.value) for (const k of Object.keys(seg.sources || {})) s.add(k)
+  return s
+})
+function langOfKey(k: string) {
+  if (k === 'self') return selfLang.value
+  if (k.startsWith('alt') || k === 'zh-nan' || k === 'zh-mod') return 'lzh'
+  return k.split('#')[0]
+}
+/** 本頁可選的欄位鍵 → 它在各組裡的實際名稱（只有一種名稱時下拉直接顯示該名） */
+const keyNames = computed(() => {
+  const m = new Map<string, Set<string>>()
+  const add = (k: string, name: string) => { if (!m.has(k)) m.set(k, new Set()); m.get(k)!.add(name) }
+  add('self', work.value?.title_zh || work.value?.title_bo || '本經')
+  for (const l of segLangs.value) if (l !== selfLang.value) add(l === 'zh-mod' ? 'zh-mod' : l, l === 'zh-mod' ? '白話（本站自譯）' : (PARALLEL_LANGS[l]?.label || l))
+  for (const b of blocks.value) for (const [k, v] of b.keys) if (k !== 'self') add(k, v.label)
+  return m
+})
+const KEY_ORDER = (k: string) => {
+  const base: Record<string, number> = { self: 0, 'zh-mod': 1, alt: 2, 'zh-nan': 3, sa: 4, pi: 5, bo: 6, en: 7 }
+  const head = k.startsWith('alt') ? 'alt' : k.split('#')[0]
+  return (base[head] ?? 9) * 100 + (parseInt(k.replace(/\D/g, '') || '0'))
+}
+const allKeys = computed(() => [...keyNames.value.keys()].sort((a, b) => KEY_ORDER(a) - KEY_ORDER(b)))
+const keyGroups = computed(() => {
+  const g = new Map<string, string[]>()
+  for (const k of allKeys.value) { const l = langOfKey(k); if (!g.has(l)) g.set(l, []); g.get(l)!.push(k) }
+  return [...g.entries()].map(([lang, keys]) => ({ lang, keys }))
+})
+function keyLabel(k: string) {
+  const names = [...(keyNames.value.get(k) ?? [])]
+  if (names.length === 1) return names[0]
+  if (k === 'self') return '本經'
+  if (k.startsWith('alt')) return `異譯 ${k.slice(3)}`
+  return `${PARALLEL_LANGS[k.split('#')[0]]?.label || k}${k.includes('#') ? ' ' + k.split('#')[1] : ''}（各段不同本）`
+}
+
+const columns = ref<string[]>([])
+// 預設：本經＋白話＋每種原典語言各一欄，最多四欄。
+// 🚨 預設欄不能寫死 'lzh'：甘珠爾只有藏文，寫死會整部經一個字都不顯示而頁面看起來正常。
+watch(allKeys, (keys) => {
+  const keep = columns.value.filter(k => keys.includes(k))
+  if (keep.length) { columns.value = keep; return }
+  const pick = ['self', 'zh-mod', 'sa', 'pi', 'bo', 'alt1', 'zh-nan', 'en'].filter(k => keys.includes(k))
+  columns.value = pick.slice(0, 4)
+}, { immediate: true })
+function setColumn(i: number, k: string) { columns.value.splice(i, 1, k) }
+function addColumn() {
+  const next = allKeys.value.find(k => !columns.value.includes(k))
+  if (next) columns.value.push(next)
+}
+const colGrid = computed(() => `repeat(${Math.max(1, columns.value.length)}, minmax(0, 1fr))`)
+
+function cellText(r: Row, k: string): string {
+  if (r.type === 'seg') {
+    const l = k === 'self' ? selfLang.value : k
+    return k.startsWith('alt') || k.includes('#') ? '' : String(r.s.sources?.[l] ?? '')
+  }
+  const v = r.b.keys.get(k)
+  return v ? String(r.b.set.cells[r.u.id]?.[v.id] ?? '') : ''
+}
+function cellHtml(r: Row, k: string) {
+  if (r.type === 'seg' && k === 'self') return highlight(r.s, selfLang.value)
+  return cellText(r, k).replace(/[&<>]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' } as any)[c])
+}
+function cellClass(r: Row, k: string) {
+  const l = langOfKey(k)
+  const verse = r.type === 'seg' && r.s.kind === 'verse'
+  return [
+    verse ? 'whitespace-pre-line' : '',
+    l === 'lzh' ? 'text-[16px] tracking-wide' : l === 'bo' ? 'text-[17px]' : 'font-serif text-[15px]',
+  ]
 }
 
 /** 段首的引用式。漢文是大正藏頁欄行（`…_p0008a13` → `0008a13`）；
@@ -606,6 +630,20 @@ async function load() {
   } finally {
     pending.value = false
   }
+  await loadCompare()
+  await goToHash()
+}
+
+/** 網址帶 #段落或經首 uid（例如從多譯本對照目錄點進來）：
+ *  目標不在這一卷就換到它所在的卷，再捲過去。 */
+async function goToHash() {
+  const h = decodeURIComponent((typeof window !== 'undefined' ? window.location.hash : '').slice(1))
+  if (!h) return
+  await nextTick()
+  const el = document.getElementById(h)
+  if (el) { el.scrollIntoView({ block: 'start' }); return }
+  const n: any = toc.value.find((x: any) => nodeUid(x) === h)
+  if (n?.juan && n.juan !== juan.value) await router.replace({ query: { ...route.query, juan: n.juan }, hash: `#${h}` })
 }
 onMounted(load)
 watch(() => [route.params.id, route.query.juan, route.query.page], load)
