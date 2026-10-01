@@ -1,0 +1,512 @@
+{
+ "slug": "huayan-dasabhumi-00",
+ "title": "華嚴經・十地品（品首）",
+ "family": "sa",
+ "intro": "十地品在梵本自成一經（Daśabhūmikasūtra），漢譯有竺法護《漸備一切智德經》、羅什《十住經》、尸羅達摩《十地經》三部別行本，加上六十、八十華嚴的十地品，藏譯為華嚴第 31 品。品首：他化自在天宮集會、金剛藏入三昧受諸佛加持、說十地名而默然、解脫月三請、佛放眉間光、金剛藏說偈許說。梵本此段有略寫（peyālaṃ），解脫月與金剛藏往返的散文漢譯較詳；漢譯各有長行加重頌，梵本只存部分偈頌。人名異譯：解脫月＝月解脫（漸備經）＝Vimukticandra；十地＝十住（漸備經、十住經）。",
+ "units": [
+  {
+   "id": "d0-01",
+   "label": "如是我聞・他化自在天宮・菩薩大眾"
+  },
+  {
+   "id": "d0-02",
+   "label": "金剛藏入三昧・十方諸佛現前讚歎"
+  },
+  {
+   "id": "d0-03",
+   "label": "諸佛與金剛藏身、辯、智等加持"
+  },
+  {
+   "id": "d0-04",
+   "label": "摩頂・出定・說十地名"
+  },
+  {
+   "id": "d0-05",
+   "label": "說名默然・大眾渴仰・解脫月偈問（梵頌 1–5）"
+  },
+  {
+   "id": "d0-06",
+   "label": "金剛藏偈答：此法難信（梵頌 6–11）"
+  },
+  {
+   "id": "d0-07",
+   "label": "解脫月再請"
+  },
+  {
+   "id": "d0-08",
+   "label": "金剛藏：恐劣解者生疑"
+  },
+  {
+   "id": "d0-09",
+   "label": "解脫月三請・字母喻"
+  },
+  {
+   "id": "d0-10",
+   "label": "大眾同聲偈請（梵頌 12–16）"
+  },
+  {
+   "id": "d0-11",
+   "label": "佛放眉間光・光雲中說偈（梵頌 17–23）"
+  },
+  {
+   "id": "d0-12",
+   "label": "金剛藏觀十方說偈許說（梵頌 24–33）"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本",
+   "who": "Daśabhūmikasūtra・GRETIL（Vaidya 1967）"
+  },
+  {
+   "id": "T0285",
+   "lang": "lzh",
+   "label": "漸備經",
+   "who": "竺法護譯《漸備一切智德經》・297 年",
+   "work": "T0285"
+  },
+  {
+   "id": "T0286",
+   "lang": "lzh",
+   "label": "十住經",
+   "who": "鳩摩羅什譯《十住經》・五世紀初",
+   "work": "T0286"
+  },
+  {
+   "id": "T0278",
+   "lang": "lzh",
+   "label": "六十華嚴",
+   "who": "佛馱跋陀羅譯《華嚴經》十地品・421 年",
+   "work": "T0278"
+  },
+  {
+   "id": "T0279",
+   "lang": "lzh",
+   "label": "八十華嚴",
+   "who": "實叉難陀譯《華嚴經》十地品・699 年",
+   "work": "T0279"
+  },
+  {
+   "id": "T0287",
+   "lang": "lzh",
+   "label": "十地經",
+   "who": "尸羅達摩譯《佛說十地經》・790 年頃",
+   "work": "T0287"
+  },
+  {
+   "id": "bo",
+   "lang": "bo",
+   "label": "藏譯",
+   "who": "德格版 Toh 44 第 31 品・84000"
+  },
+  {
+   "id": "en",
+   "lang": "en",
+   "label": "84000 英譯",
+   "who": "譯自藏譯・與藏文逐句對齊"
+  }
+ ],
+ "works": [
+  "T0278",
+  "T0279",
+  "T0285",
+  "T0286",
+  "T0287"
+ ],
+ "anchors": [
+  {
+   "work": "T0285",
+   "node": "初發意悅豫住品第一",
+   "uid": "T10n0285_p0458a20"
+  },
+  {
+   "work": "T0285",
+   "node": "漸備一切智德經離垢住品第二",
+   "uid": "T10n0285_p0465c04"
+  },
+  {
+   "work": "T0285",
+   "node": "興光住品第三",
+   "uid": "T10n0285_p0468b24"
+  },
+  {
+   "work": "T0285",
+   "node": "漸備經暉曜住品第四",
+   "uid": "T10n0285_p0471a15"
+  },
+  {
+   "work": "T0285",
+   "node": "難勝住品第五",
+   "uid": "T10n0285_p0473a27"
+  },
+  {
+   "work": "T0285",
+   "node": "漸備經目前住品第六",
+   "uid": "T10n0285_p0475c21"
+  },
+  {
+   "work": "T0285",
+   "node": "玄妙住品第七",
+   "uid": "T10n0285_p0478c26"
+  },
+  {
+   "work": "T0285",
+   "node": "漸備經不動住品第八",
+   "uid": "T10n0285_p0482b02"
+  },
+  {
+   "work": "T0285",
+   "node": "漸備經善哉意住品第九",
+   "uid": "T10n0285_p0485c26"
+  },
+  {
+   "work": "T0285",
+   "node": "金剛藏問菩薩住品第十",
+   "uid": "T10n0285_p0490a05"
+  },
+  {
+   "work": "T0286",
+   "node": "歡喜地第一",
+   "uid": "T10n0286_p0497c06"
+  },
+  {
+   "work": "T0286",
+   "node": "離垢地第二",
+   "uid": "T10n0286_p0504b06"
+  },
+  {
+   "work": "T0286",
+   "node": "明地第三",
+   "uid": "T10n0286_p0506c27"
+  },
+  {
+   "work": "T0286",
+   "node": "焰地第四",
+   "uid": "T10n0286_p0509b19"
+  },
+  {
+   "work": "T0286",
+   "node": "難勝地第五",
+   "uid": "T10n0286_p0511b08"
+  },
+  {
+   "work": "T0286",
+   "node": "現前地第六",
+   "uid": "T10n0286_p0514a05"
+  },
+  {
+   "work": "T0286",
+   "node": "遠行地第七",
+   "uid": "T10n0286_p0517a09"
+  },
+  {
+   "work": "T0286",
+   "node": "不動地第八",
+   "uid": "T10n0286_p0520b06"
+  },
+  {
+   "work": "T0286",
+   "node": "妙善地第九",
+   "uid": "T10n0286_p0524a17"
+  },
+  {
+   "work": "T0286",
+   "node": "法雲地第十",
+   "uid": "T10n0286_p0527c13"
+  },
+  {
+   "work": "T0278",
+   "node": "十地品第二十二之一",
+   "uid": "T09n0278_p0542a05"
+  },
+  {
+   "work": "T0278",
+   "node": "十地品第二十二之二",
+   "uid": "T09n0278_p0548c05"
+  },
+  {
+   "work": "T0278",
+   "node": "十地品第二十二之三",
+   "uid": "T09n0278_p0555b07"
+  },
+  {
+   "work": "T0278",
+   "node": "十地品第二十二之四",
+   "uid": "T09n0278_p0564a05"
+  },
+  {
+   "work": "T0278",
+   "node": "十地品第二十二之五",
+   "uid": "T09n0278_p0571a10"
+  },
+  {
+   "work": "T0279",
+   "node": "十地品第二十六之一",
+   "uid": "T10n0279_p0178b28"
+  },
+  {
+   "work": "T0279",
+   "node": "第一地",
+   "uid": "T10n0279_p0181a10"
+  },
+  {
+   "work": "T0279",
+   "node": "十地品第二十六之二",
+   "uid": "T10n0279_p0185a05"
+  },
+  {
+   "work": "T0279",
+   "node": "第二地",
+   "uid": "T10n0279_p0185a05.2"
+  },
+  {
+   "work": "T0279",
+   "node": "第三地",
+   "uid": "T10n0279_p0187a29"
+  },
+  {
+   "work": "T0279",
+   "node": "十地品第二十六之三",
+   "uid": "T10n0279_p0189b20"
+  },
+  {
+   "work": "T0279",
+   "node": "第四地",
+   "uid": "T10n0279_p0189b20.2"
+  },
+  {
+   "work": "T0279",
+   "node": "第五地",
+   "uid": "T10n0279_p0191a20"
+  },
+  {
+   "work": "T0279",
+   "node": "十地品第二十六之四",
+   "uid": "T10n0279_p0193b17"
+  },
+  {
+   "work": "T0279",
+   "node": "第六地",
+   "uid": "T10n0279_p0193b17.2"
+  },
+  {
+   "work": "T0279",
+   "node": "第七地",
+   "uid": "T10n0279_p0195c22"
+  },
+  {
+   "work": "T0279",
+   "node": "十地品第二十六之五",
+   "uid": "T10n0279_p0198c05"
+  },
+  {
+   "work": "T0279",
+   "node": "第八地",
+   "uid": "T10n0279_p0198c05.2"
+  },
+  {
+   "work": "T0279",
+   "node": "第九地",
+   "uid": "T10n0279_p0201c14"
+  },
+  {
+   "work": "T0279",
+   "node": "十地品第二十六之六",
+   "uid": "T10n0279_p0204c19"
+  },
+  {
+   "work": "T0279",
+   "node": "第十地",
+   "uid": "T10n0279_p0204c19.2"
+  },
+  {
+   "work": "T0287",
+   "node": "菩薩極喜地第一之一",
+   "uid": "T10n0287_p0535a28"
+  },
+  {
+   "work": "T0287",
+   "node": "菩薩極喜地之餘",
+   "uid": "T10n0287_p0539c06"
+  },
+  {
+   "work": "T0287",
+   "node": "菩薩離垢地第二",
+   "uid": "T10n0287_p0542b12"
+  },
+  {
+   "work": "T0287",
+   "node": "菩薩發光地第三",
+   "uid": "T10n0287_p0545a06"
+  },
+  {
+   "work": "T0287",
+   "node": "菩薩焰慧地第四",
+   "uid": "T10n0287_p0547c03"
+  },
+  {
+   "work": "T0287",
+   "node": "菩薩難勝地第五",
+   "uid": "T10n0287_p0549c21"
+  },
+  {
+   "work": "T0287",
+   "node": "菩薩現前地第六之一",
+   "uid": "T10n0287_p0552b06"
+  },
+  {
+   "work": "T0287",
+   "node": "菩薩現前地之餘",
+   "uid": "T10n0287_p0554b06"
+  },
+  {
+   "work": "T0287",
+   "node": "菩薩遠行地第七",
+   "uid": "T10n0287_p0555c03"
+  },
+  {
+   "work": "T0287",
+   "node": "菩薩不動地第八",
+   "uid": "T10n0287_p0559a06"
+  },
+  {
+   "work": "T0287",
+   "node": "菩薩善慧地第九",
+   "uid": "T10n0287_p0563a14"
+  },
+  {
+   "work": "T0287",
+   "node": "菩薩法雲地第十之一",
+   "uid": "T10n0287_p0567a10"
+  },
+  {
+   "work": "T0287",
+   "node": "菩薩法雲地之餘",
+   "uid": "T10n0287_p0570c14"
+  }
+ ],
+ "cells": {
+  "d0-01": {
+   "sa": "// Daśabhūmikasūtram // 1 pramuditā nāma prathamā bhūmiḥ / evaṃ mayā śrutam / ekasmin samaye bhagavān paranirmitavaśavartiṣu devabhuvaneṣu viharati sma acirābhisaṃbuddho dvitīye saptāhe vaśavartino devarājasya vimāne maṇiratnagarbhe prabhāsvare prāsāde mahatā bodhisattvagaṇena sārdhaṃ sarvairavaivartikairekajātipratibaddhaiḥ / yaduta anuttarāyāṃ samyaksaṃbodhāvanyonyalokadhātusaṃnipatitaiḥ / sarvaiḥ sarvabodhisattvajñānaviṣayagocarapratilabdhavihāribhiḥ sarvatathāgatajñānaviṣayapraveśāvatārāpratiprasrabdhagocaraiḥ sarvajagatparipācanavinayayathākālakṣaṇādhiṣṭhānasarvakriyāsaṃdarśanakuśalaiḥ sarvabodhisattvapraṇidhānābhinirhārāpratiprasrabdhagocaraiḥ kalpārthakṣetracaryāsaṃvāsibhiḥ sarvabodhisattvapuṇyajñānarddhisaṃbhārasuparipūrṇākṣayasarvajagadupajīvyatāpratipannaiḥ sarvabodhisattvaprajñopāyaparamapāramitāprāptaiḥ saṃsāranirvāṇamukhasaṃdarśanakuśalaiḥ bodhisattvacaryopādānāvyavacchinnaiḥ sarvabodhisattvadhyānavimokṣasamādhisamāpatyabhijñājñānavikrīḍitābhijñāsarvakriyāsaṃdarśanakuśalaiḥ sarvabodhisattvarddhibalavaśitāprāptānabhisaṃskāracittakṣaṇasarvatathāgataparṣanmaṇḍalopasaṃkramaṇapūrvaṃgamakathāpuruṣaiḥ sarvatathāgatadharmacakrasaṃdhāraṇavipulabuddhapūjopasthānābhyutthitaiḥ sarvabodhisattvakarmasamādānasamatāprayogasarvalokadhātukāyapratibhāsaprāptaiḥ sarvadharmadhātvasaṅgasvararutaghoṣānuravitasarvatryadhvāsaṅgacittajñānaviṣayaspharaṇaiḥ sarvabodhisattvaguṇapratipattisuparipūrṇānabhilāpyakalpādhiṣṭhānasaṃprakāśanāparikṣīṇaguṇavarṇanirdeśakaiḥ / yadidamvajragarbheṇa ca bodhisattvena mahāsattvena / ratnagarbheṇa ca / padmagarbheṇa ca / śrīgarbheṇa ca / padmaśrīgarbheṇa ca / ādityagarbheṇa ca / sūryagarbheṇa ca / kṣitigarbheṇa ca / śaśivimalagarbheṇa ca / sarvavyūhālaṃkārapratibhāsasaṃdarśanagarbheṇa ca / jñānavairocanagarbheṇa ca / ruciraśrīgarbheṇa ca / candanaśrīgarbheṇa ca / puṣpaśrīgarbheṇa ca / kusumaśrīgarbheṇa ca / utpalaśrīgarbheṇa ca / devaśrīgarbheṇa ca / puṇyaśrīgarbheṇa ca / anāvaraṇajñānaviśuddhigarbheṇa ca / guṇaśrīgarbheṇa ca / nārāyaṇaśrīgarbheṇa ca / amalagarbheṇa ca / vimalagarbheṇa ca / vicitrapratibhānālaṃkāragarbheṇa ca / mahāraśmijālāvabhāsagarbheṇa ca / vimalaprabhāsaśrītejorājagarbheṇa ca / sarvalakṣaṇapratimaṇḍitaviśuddhiśrīgarbheṇa ca / vajrārciḥśrīvatsālaṃkāragarbheṇa ca / jyotirjvalanārciḥśrīgarbheṇa ca / nakṣatrarājaprabhāvabhāsagarbheṇa ca / gaganakośānāvaraṇajñānagarbheṇa ca / anāvaraṇasvaramaṇḍalamadhuranirghoṣagarbheṇa ca / dhāraṇīmukhasarvajagatpraṇidhisaṃdhāraṇagarbheṇa ca / sāgaravyūhagarbheṇa ca / (Dbh 2) meruśrīgarbheṇa ca / sarvaguṇaviśuddhigarbheṇa ca / tathāgataśrīgarbheṇa ca / buddhaśrīgarbheṇa ca / vimukticandreṇa ca bodhisattvena mahāsattvena / evaṃpramukhair aparimāṇāprameyāsaṃkhyeyācintyātulyāmāpyānantāparyantāsīmāprāptānabhilāpyānabhilāpyairbodhisattvairmahāsattvaiḥ sārdhaṃ nānābuddhakṣetrasaṃnipatitairvajragarbhabodhisattvapūrvaṃgamaiḥ //",
+   "T0285": "聞如是：一時，佛遊第六他化自在天上天王宮如意藏珠妙寶殿上，與大菩薩眾不可計俱，各從他方諸佛國來，普集會此，金剛藏菩薩等。",
+   "T0286": "如是我聞：一時佛在他化自在天王宮摩尼寶殿上，與大菩薩眾俱，皆於阿耨多羅三藐三菩提不退轉，從他方界俱來集會。此諸菩薩一切菩薩智慧行處悉得自在，諸如來智慧入處悉皆得入，善能教化一切世間，隨時普示神通等事。於念念中皆能成辦具足一切菩薩所願，於一切世界、一切劫、一切國土常修諸菩薩行。具足一切菩薩所有福德智慧而無窮盡，能為一切而作饒益、能到一切菩薩智慧方便彼岸、能示眾生生死及涅槃門。不斷一切菩薩所行，善遊一切菩薩禪定解脫三昧、神通明慧，諸所施為善能示現，一切菩薩無作神足皆悉已得，於一念頃能至十方諸佛大會，勸發諮請受持法輪。常以大心供養諸佛，常能修習諸大菩薩所行事業。其身普現無量世界；其音遍聞，無所不至；其心通達，明見三世一切菩薩。所有功德具足修習。如是，諸菩薩摩訶薩功德無量無邊，於無數劫說不可盡。其名曰：金剛藏菩薩摩訶薩、寶藏菩薩、蓮華藏菩薩、德藏菩薩、蓮華德藏菩薩、日藏菩薩、月藏菩薩、淨月藏菩薩、照一切世間莊嚴藏菩薩、智慧照明藏菩薩、妙德藏菩薩、栴檀德藏菩薩、華德藏菩薩、優鉢羅華德藏菩薩、天德藏菩薩、福德藏菩薩、無閡清淨智德藏菩薩、功德藏菩薩、那羅延德藏菩薩、無垢藏菩薩、離垢藏菩薩、種種樂說莊嚴藏菩薩、大光明網藏菩薩、淨明威德王藏菩薩、大金山光明威德王藏菩薩、一切相莊嚴淨德藏菩薩、金剛焰德相莊嚴藏菩薩、焰熾藏菩薩、宿王光照藏菩薩、虛空無閡妙音藏菩薩、陀羅尼功德持一切世間願藏菩薩、海莊嚴藏菩薩、須彌德藏菩薩、淨一切功德藏菩薩、如來藏菩薩、佛德藏菩薩、解脫月菩薩。如是等菩薩摩訶薩，無量無邊、不可思議、不可稱說，金剛藏菩薩摩訶薩而為上首。",
+   "T0278": "爾時，世尊在他化自在天王宮摩尼寶殿上，與大菩薩眾俱，於阿耨多羅三藐三菩提皆不退轉，從他方世界俱來集會。此諸菩薩，一切菩薩智慧行處悉得自在，諸佛如來智慧入處悉皆得入；善能教化一切世間，於念念中普能示現神通等事；具足一切菩薩所願，於一切世、一切劫、一切國土，常修一切諸菩薩行；具足菩薩福德智慧而無窮盡。能為一切而作饒益；能到一切菩薩智慧方便彼岸；能令眾生背生死道向涅槃門；不斷一切菩薩所行；善遊一切菩薩禪定解脫三昧神通明慧，諸所施為善能示現。一切菩薩無作神足皆悉已得，於一念頃能至十方諸佛大會，勸發諮請受持法輪，常以大心供養諸佛，常能修習諸大菩薩所行事業；其身普現無量世界，其音遍聞無所不至，其心通達明見三世一切菩薩所有功德具足修習。如是諸菩薩摩訶薩功德無量無邊，於無數劫說不可盡。其名曰：金剛藏菩薩、寶藏菩薩、蓮華藏菩薩、德藏菩薩、蓮華德藏菩薩、日藏菩薩、月藏菩薩、淨月藏菩薩、照一切世間莊嚴藏菩薩、智慧照明藏菩薩、妙德藏菩薩、栴檀德藏菩薩、華德藏菩薩、優鉢羅華德藏菩薩、天德藏菩薩、福德藏菩薩、無礙清淨智德藏菩薩、功德藏菩薩、那羅延德藏菩薩、無垢藏菩薩、離垢藏菩薩、種種樂說莊嚴藏菩薩、大光明網藏菩薩、淨明威德王藏菩薩、大金山光明威德王藏菩薩、一切相莊嚴淨德藏菩薩、金剛焰德相莊嚴藏菩薩、焰熾藏菩薩、宿王光照藏菩薩、虛空無礙妙音藏菩薩、陀羅尼功德持一切世間願藏菩薩、海莊嚴藏菩薩、須彌德藏菩薩、淨一切功德藏菩薩、如來藏菩薩、佛德藏菩薩、解脫月菩薩。如是等菩薩摩訶薩無量無邊，不可思議、不可稱說，金剛藏菩薩而為上首。",
+   "T0279": "爾時，世尊在他化自在天王宮摩尼寶藏殿，與大菩薩眾俱。其諸菩薩皆於阿耨多羅三藐三菩提不退轉，悉從他方世界來集；住一切菩薩智所住境，入一切如來智所入處；勤行不息，善能示現種種神通諸所作事，教化調伏一切眾生而不失時；為成菩薩一切大願，於一切世、一切劫、一切剎，勤修諸行，無暫懈息；具足菩薩福智助道，普益眾生而恒不匱；到一切菩薩智慧方便究竟彼岸，示入生死及以涅槃而不廢捨；修菩薩行，善入一切菩薩禪定、解脫三昧、三摩鉢底、神通明智，諸所施為皆得自在；獲一切菩薩自在神力，於一念頃無所動作，悉能往詣一切如來道場眾會，為眾上首，請佛說法，護持諸佛正法之輪；以廣大心供養承事一切諸佛，常勤修習一切菩薩所行事業；其身普現一切世間，其音普及十方法界，心智無礙，普見三世；一切菩薩所有功德悉已修行而得圓滿，於不可說劫說不能盡。其名曰：金剛藏菩薩、寶藏菩薩、蓮華藏菩薩、德藏菩薩、蓮華德藏菩薩、日藏菩薩、蘇利耶藏菩薩、無垢月藏菩薩、於一切國土普現莊嚴藏菩薩、毘盧遮那智藏菩薩、妙德藏菩薩、栴檀德藏菩薩、華德藏菩薩、俱蘇摩德藏菩薩、優鉢羅德藏菩薩、天德藏菩薩、福德藏菩薩、無礙清淨智德藏菩薩、功德藏菩薩、那羅延德藏菩薩、無垢藏菩薩、離垢藏菩薩、種種辯才莊嚴藏菩薩、大光明網藏菩薩、淨威德光明王藏菩薩、金莊嚴大功德光明王藏菩薩、一切相莊嚴淨德藏菩薩、金剛焰德相莊嚴藏菩薩、光明焰藏菩薩、星宿王光照藏菩薩、虛空無礙智藏菩薩、妙音無礙藏菩薩、陀羅尼功德持一切眾生願藏菩薩、海莊嚴藏菩薩、須彌德藏菩薩、淨一切功德藏菩薩、如來藏菩薩、佛德藏菩薩、解脫月菩薩……。如是等無數無量、無邊無等、不可數、不可稱、不可思、不可量、不可說諸菩薩摩訶薩眾，金剛藏菩薩而為上首。",
+   "T0287": "如是我聞：一時，薄伽梵成道未久，第二七日，住於他化自在天中，自在天王宮摩尼寶藏殿，與大菩薩無量眾俱。其諸菩薩悉從異佛剎來集，皆於無上正等菩提，得不退轉，一生所繫，當證正覺。所謂：已得安住一切菩薩智所行境，皆能趣入一切如來智所行處，無有休息；善能示現，種種神通諸所作事，應時無滯，成熟調伏一切有情；利樂他事皆不虛棄，引發一切菩薩願，劫世剎土量等修行，暫無休息；一切菩薩，福智資糧，善備無盡，令諸世間，共所受用；已到一切菩薩智慧方便彼岸，示入生死及涅槃門，而不廢捨修菩薩行；善能遊戲解了，趣入一切菩薩靜慮、解脫、等持、等至、神通、明智，於是一切諸所作事，皆得善巧；由獲一切菩薩神通威力自在，以無功用隨心剎那，悉能往詣一切如來道場眾會，而為上首請佛說法；受持一切如來法輪，廣能供養、承事諸佛；常勤修習，一切菩薩所行事業；其身普現一切世間，言音無礙，清徹法界心智無滯，普見三世一切境界。一切菩薩所有祕藏功德正行悉已圓滿，設加無量不可說劫讚其功德亦不能盡。其名曰：金剛藏菩薩、寶藏菩薩、蓮華藏菩薩、德藏菩薩、蓮花德藏菩薩、日藏菩薩、曜藏菩薩、地藏菩薩、無垢月藏菩薩、示一切莊嚴光明藏菩薩、智慧普照明藏菩薩、旃檀德藏菩薩、妙吉祥藏菩薩、花德藏菩薩、拘蘇摩德藏菩薩、優鉢羅德藏菩薩、天德藏菩薩、福德藏菩薩、無礙淨智藏菩薩、功德勝藏菩薩、那羅延德藏菩薩、無垢藏菩薩、離垢藏菩薩、種種辯才莊嚴藏菩薩、大光明網照藏菩薩、離垢威德光明王藏菩薩、無礙妙音美響藏菩薩、總持功德能度一切有情願藏菩薩、大海莊嚴藏菩薩、蘇迷盧德藏菩薩、示現一切功德清淨藏菩薩、如來德藏菩薩、佛德藏菩薩、淳金微妙大威德王光明藏菩薩、一切相莊嚴淨藏菩薩、金剛焰胸萬字相莊嚴菩薩、星宿王光照藏菩薩、虛空庫無礙智藏菩薩、解脫月菩薩，如是等菩薩摩訶薩無量無數，不可思議、不可量、不可稱、無邊無際、無有分齊、不可說不可說，皆從異異佛剎來集，金剛藏菩薩而為上首。",
+   "bo": "ཤིན་ཏུ་རྒྱས་པ་ཆེན་པོའི་མདོ། །སངས་རྒྱས་རྨད་གཅད་ཅེས་བྱ་བ་ལས་ས་བཅུ་པའི་ལེའུ་སྟེ། བམ་པོ་བཅུ་གསུམ་པ། དེ་ནས་བཅོམ་ལྡན་འདས་ལྷའི་རྒྱལ་པོ་དབང་སྒྱུར་གྱི་གནས་ཀྱི་ནོར་བུ་རིན་པོ་ཆེ་དམ་པའི་ཁང་པ་ན། བྱང་ཆུབ་སེམས་དཔའི་དགེ་འདུན་ཆེན་པོ་ཐམས་ཅད་ཀྱང་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་ལས་ཕྱིར་མི་ལྡོག་པ། འཇིག་རྟེན་གྱི་ཁམས་གཞན་དང་གཞན་ནས་འདུས་པ་ཤ་སྟག་ཀུན་ཀྱང་བྱང་ཆུབ་སེམས་དཔའི་ཡེ་ཤེས་ཀྱི་ཡུལ་དང་སྤྱོད་ཡུལ་ཐམས་ཅད་རབ་ཏུ་ཐོབ་པས་གནས་པ། དེ་བཞིན་གཤེགས་པ་ཐམས་ཅད་ཀྱི་ཡེ་ཤེས་ཀྱི་ཡུལ་ལ་འཇུག་ཅིང་གཞོལ་བའི་སྤྱོད་ཡུལ་མ་བཏང་བ། འགྲོ་བ་ཐམས་ཅད་ཡོངས་སུ་སྨིན་པར་བྱ་བ་དང་། གདུལ་བར་བྱ་བའི་དུས་ བཞིན་དུ་ཐོགས་པ་མེད་པའི་བྱིན་གྱི་རླབས་རྣམ་པ་ཐ་དད་པས་བྱ་བ་ཐམས་ཅད་ཡང་དག་པར་སྟོན་པ་ལ་མཁས་པ། བྱང་ཆུབ་སེམས་དཔའི་སྨོན་ལམ་ཐམས་ཅད་མངོན་པར་བསྒྲུབ་ཅིང་བསྐལ་པ་དང་ཞིང་དང་དུས་སུ་སྤྱོད་པ་ལ་གནས་པའི་རྒྱུན་མི་གཅོད་པ། །བྱང་ཆུབ་སེམས་དཔའི་བསོད་ནམས་དང་ཡེ་ཤེས་དང་རྫུ་འཕྲུལ་གྱི་ཚོགས་ཡོངས་སུ་རྫོགས་ཤིང་འགྲོ་བ་ཐམས་ཅད་ཉེ་བར་འཚོ་བ་མི་ཟད་པ་ལ་རབ་ཏུ་ཞུགས་པ། བྱང་ཆུབ་སེམས་དཔའི་ཤེས་རབ་དང་། ཐབས་ཐམས་ཅད་ཀྱི་ཕ་རོལ་ཏུ་ཕྱིན་པ་དམ་པ་ཐོབ་པ། བྱང་ཆུབ་སེམས་དཔའི་སྤྱོད་པས་འཁོར་བ་དང་། མྱ་ངན་ལས་འདས་པའི་སྒོ་ཡང་དག་པར་བསྟན་ཅིང་ཤིན་ཏུ་བསྒྲུབ་པའི་རྒྱུན་མི་གཅོད་པ། བྱང་ཆུབ་སེམས་དཔའི་བསམ་གཏན་དང་། རྣམ་པར་ཐར་པ་དང་། ཏིང་ངེ་འཛིན་དང་སྙོམས་པར་འཇུག་པ་དང་། མངོན་པར་ཤེས་པ་དང་། རིག་པ་དང་ཡེ་ཤེས་ལ་རྣམ་པར་རོལ་པའི་མངོན་པར་ཤེས་པས་བྱ་བ་ཐམས་ཅད་ཡང་དག་པར་སྟོན་པ་ལ་མཁས་པ། བྱང་ཆུབ་སེམས་དཔའི་རྫུ་འཕྲུལ་དང་སྟོབས་དང་། དབང་ཐམས་ཅད་ཐོབ་ཅིང་མངོན་པར་འདུ་བྱ་བ་མེད་པའི་སེམས་སྐད་ཅིག་གིས་དེ་བཞིན་གཤེགས་པ་ཐམས་ཅད་ཀྱི་འཁོར་གྱི་དཀྱིལ་འཁོར་དུ་འདོད་པ་ལ་སྔུན་དུ་འདྲེན་པའི་གཏམ་གྱི་སྐྱེས་བུ་དམ་པ་དེ་བཞིན་གཤེགས་པ་ཐམས་ཅད་ཀྱི་ཆོས་ཀྱི་འཁོར་ལོ་ཡང་དག་པར་གཟུང་བ་དང་། སངས་རྒྱས་ལ་མཆོད་པ་དང་། རིམ་གྲོ་རྒྱ་ཆེན་པོ་བྱ་བའི་དོན་དུ་མངོན་པར་བརྩོན་པ། བྱང་ཆུབ་སེམས་དཔའི་ལས་ཐམས་ཅད་ཡང་དག་པར་བླང་བ་མཉམ་པ་ཉིད་ཀྱི་སྦྱོར་བས་འཇིག་རྟེན་གྱི་ཁམས་ཐམས་ཅད་དུ་ལུས་ཀྱི་གཟུགས་བརྙན་རབ་ཏུ་འབྱུང་བ་ཆོས་ཀྱི་དབྱིངས་ཐམས་ཅད་དུ་ཆགས་པ་མེད་པའི་དབྱངས་རབ་ཏུ་སྒྲོག་པས་དུས་གསུམ་ཐམས་ཅད་དུ་ཆགས་པ་མེད་པའི་སེམས་དང་། ཡེ་ཤེས་ཀྱི་ཡུལ་རྒྱས་པར་འགེངས་པ། བྱང་ཆུབ་སེམས་དཔའི་ཡོན་ཏན་དང་ནན་ཏན་ཡོངས་སུ་རྫོགས་པ་ཐམས་ཅད་བསྐལ་པ་བརྗོད་དུ་ མེད་པར་རྒྱུན་མི་ཆད་པར་ཡང་དག་པར་བསྟན་པ་ལ་ཡོན་ཏན་བསྔགས་ཤིང་བརྗོད་པ་ཟད་མི་ཤེས་པ་ཤ་སྟག་སྟེ། འདི་ལྟར་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་རྡོ་རྗེའི་སྙིང་པོ་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་རིན་པོ་ཆེའི་སྙིང་པོ་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་པད་མོའི་སྙིང་པོ་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་དཔལ་གྱི་སྙིང་པོ་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་པད་མོ་དཔལ་གྱི་སྙིང་པོ་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་ཉི་མའི་སྙིང་པོ་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་གཙང་བའི་སྙིང་པོ་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་སའི་སྙིང་པོ་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་ཟླ་བ་དྲི་མ་མྱེད་པའི་སྙིང་པོ་དང་། །བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་རྒྱན་རྣམ་པར་བཀོད་པ་ཐམས་ཅད་རབ་ཏུ་སྣང་བར་སྟོན་པའི་སྙིང་པོ་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་ཡེ་ཤེས་རྣམ་པར་སྣང་བའི་སྙིང་པོ་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་དཔལ་ཡིད་དུ་འོང་བའི་སྙིང་པོ་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་ཙན་དན་དཔལ་གྱི་སྙིང་པོ་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་མེ་ཏོག་དཔལ་གྱི་སྙིང་པོ་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་མེ་ཏོག་རྒྱས་པ་དཔལ་གྱི་སྙིང་པོ་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་དཔལ་ལྷའི་སྙིང་པོ་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་བསོད་ནམས་དཔལ་གྱི་སྙིང་པོ་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་བསྒྲིབས་པ་མྱེད་པའི་ཡེ་ཤེས་རྣམ་པར་དག་པའི་དཔལ་གྱི་སྙིང་པོ་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་ཡོན་ཏན་དཔལ་གྱི་སྙིང་པོ་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་མཐུ་ཆེན་དཔལ་གྱི་སྙིང་པོ་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་ དྲི་མ་མེད་པའི་སྙིང་པོ་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་དྲི་མ་དང་བྲལ་བའི་སྙིང་པོ་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་སྤོབས་པ་སྣ་ཚོགས་རྒྱན་གྱི་སྙིང་པོ་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་འོད་ཟེར་གྱི་དྲ་བ་ཆེན་པོ་རབ་ཏུ་སྣང་བའི་སྙིང་པོ་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་འོད་དྲི་མ་མེད་པའི་དཔལ་གྱི་གཟི་བརྗིད་བཟང་པོའི་སྙིང་པོ་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་གསེར་བཟང་ཞིང་དྲི་མ་མེད་པའི་དབྱིག་གིས་སྤྲས་པའི་གཟི་བརྗིད་མཛེས་པའི་སྙིང་པོ་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་མཚན་ཐམས་ཅད་ཀྱིས་བརྒྱན་པས་རྣམ་པར་དག་པའི་དཔལ་གྱི་སྙིང་པོ་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་དཔལ་གྱི་བེ་འུ་རྡོ་རྗེ་འོད་འཕྲོ་བས་བརྒྱན་པའི་སྙིང་པོ་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་འོད་འབར་ཞིང་འཕྲོ་བའི་དཔལ་གྱི་སྙིང་པོ་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་སྐར་མའི་རྒྱལ་པོ་འོད་རབ་ཏུ་སྣང་བའི་སྙིང་པོ་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་ནམ་མཁའི་མཛོད་ཡེ་ཤེས་བསྒྲིབས་པ་མེད་པའི་སྙིང་པོ་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་དབྱངས་ཀྱི་དཀྱིལ་འཁོར་བསྒྲིབས་པ་མེད་ཅིང་ང་རོ་སྙན་པའི་སྙིང་པོ་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་གཟུངས་ཀྱི་སྙིང་པོ་ཡོན་ཏན་གྱི་འགྲོ་བ་ཐམས་ཅད་ཀྱི་སྨོན་ལམ་ཡང་དག་པར་འཛིན་པའི་སྙིང་པོ་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་རྒྱ་མཚོའི་རྒྱན་གྱི་སྙིང་པོ་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་རི་རབ་དཔལ་གྱི་སྙིང་པོ་དང་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་ཡོན་ཏན་ཐམས་ཅད་རྣམ་པར་དག་པའི་སྙིང་པོ་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་དེ་བཞིན་གཤེགས་པའི་སྙིང་པོ་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་ སངས་རྒྱས་དཔལ་གྱི་སྙིང་པོ་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་རྣམ་པར་གྲོལ་བའི་ཟླ་བ་དང་། དེ་དག་ལ་སྩོགས་པ་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་ཚད་མེད་པ་གཞལ་དུ་མེད་པ། གྲངས་མེད་པ་བསམ་གྱིས་མི་ཁྱབ་པ། མཚུངས་པ་མྱེད་པ་དཔག་ཏུ་མེད་པ། ཀུན་ཏུ་མཐའ་ཡས་པ། མུ་མེད་པས་མཚམས་མྱེད་པ། བརྗོད་དུ་མྱེད་པའི་ཡང་བརྗོད་དུ་མེད་པ། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་རྡོ་རྗེའི་སྙིང་པོ་ལ་སྩོགས་པའི་སངས་རྒྱས་ཀྱི་ཞིང་སྣ་ཚོགས་ནས་འདུས་པ་ཤ་སྟག་དང་། ཐབས་གཅིག་ཏུ་བཞུགས་སོ།",
+   "en": "The Mahāvaipulya Sūtra “A Multitude of Buddhas” Chapter 31: The Ten Bhūmis  Then  the Bhagavat was in the deva king Vaśavartin’s divine palace of precious jewels, together with a great saṅgha of bodhisattvas. They were all irreversible and one lifetime away  from attaining the highest complete enlightenment.  They had gathered there from various worlds. They dwelled in the attainment of the scope and range of the wisdom of all bodhisattvas. They maintained the range of activity that approaches and enters the scope of the wisdom of all tathāgatas. They were skilled in manifesting at the proper moment in time all the activities of unimpeded blessings that would ripen and guide all beings. They had a range of activity that continually fulfilled the prayers of all bodhisattvas, and they continued in their conduct throughout eons, realms, and times. They had completed the accumulations of the merit, wisdom, and miraculous powers of all  bodhisattvas, and they had unceasingly cared for all beings. They had attained the highest perfection of the wisdom and methods of all bodhisattvas. They had unceasing accomplishment of bodhisattva conduct, manifesting the doorways of saṃsāra and nirvāṇa. They were skilled in manifesting all the activities  that come from being adept in the dhyānas, liberations, samādhis, samāpattis, clairvoyances, and wisdom  of all bodhisattvas. They had attained mastery of the miraculous powers  of all bodhisattvas. Without performing any action, they went in a mind’s instant to the assemblies of the followers of all tathāgatas as individuals who would be their foremost interlocutors. They maintained the Dharma wheels of all tathāgatas. They engaged in a multitude of offerings and acts of service to the buddhas. They manifested the appearance of bodies in all worlds and with equanimity engaged in undertaking the activities of all bodhisattvas. The unimpeded sound of their voices resounded throughout the entire realm of phenomena so that the three times were pervaded by the scope of the unimpeded wisdom of their minds. They had the perfection of the acquisition  of the qualities of all bodhisattvas and taught them continuously for uncountable eons by unceasingly expressing praises of these qualities.  These bodhisattvas were the bodhisattva mahāsattva Vajragarbha, the bodhisattva mahāsattva Ratnagarbha, the bodhisattva mahāsattva Padmagarbha, the bodhisattva mahāsattva Śrīgarbha, the bodhisattva mahāsattva Padmaśrīgarbha, the bodhisattva mahāsattva Sūryagarbha, the bodhisattva mahāsattva Śucigarbha, the bodhisattva mahāsattva Kṣitigarbha, the bodhisattva mahāsattva Śaśivimalagarbha, the bodhisattva mahāsattva Sarvavyūhālaṃkārapratibhāsasaṃdarśanagarbha, the bodhisattva mahāsattva Jñānavairocanagarbha, the bodhisattva mahāsattva Ruciraśrīgarbha, the bodhisattva mahāsattva Candanaśrīgarbha, the bodhisattva mahāsattva Puṣpaśrīgarbha, the bodhisattva mahāsattva Kusumaśrīgarbha, the bodhisattva mahāsattva Utpalaśrīgarbha,  the bodhisattva mahāsattva Devaśrīgarbha, the bodhisattva mahāsattva Puṇyaśrīgarbha, the bodhisattva mahāsattva Anāvaraṇajñānaviśuddhigarbha, the bodhisattva mahāsattva Guṇaśrīgarbha, the bodhisattva mahāsattva Nārāyaṇaśrīgarbha, the bodhisattva mahāsattva Amalagarbha, the bodhisattva mahāsattva Vimalagarbha, the bodhisattva mahāsattva Vicitrapratibhāṇālaṃkāragarbha, the bodhisattva mahāsattva Mahāraśmijālāvabhāsagarbha, the bodhisattva mahāsattva Vimalaprabhāsaśrītejorājagarbha, the bodhisattva mahāsattva Suvarṇabhadravimalavasucitratejolalitagarbha, the bodhisattva mahāsattva Sarvalakṣaṇapratimaṇḍitaviśuddhiśrīgarbha, the bodhisattva mahāsattva Vajrārciḥśrīvatsālaṃkāragarbha, the bodhisattva mahāsattva Jyotirjvalanārciḥśrīgarbha, the bodhisattva mahāsattva Nakṣatrarājaprabhāvabhāsagarbha, the bodhisattva mahāsattva Gaganakośānāvaraṇajñānagarbha, the bodhisattva mahāsattva Anāvaraṇasvaramaṇḍalamadhuranirghoṣagarbha, the bodhisattva mahāsattva Dhāraṇīmukhasarvajagatpraṇidhisaṃdhāraṇagarbha, the bodhisattva mahāsattva Sāgaravyūhagarbha, the bodhisattva mahāsattva Meruśrīgarbha, the bodhisattva mahāsattva Sarvaguṇaviśuddhigarbha, the bodhisattva mahāsattva Tathāgataśrīgarbha, the bodhisattva mahāsattva Buddhaśrīgarbha, the bodhisattva mahāsattva Vimukticandra, and so on. These boundless, innumerable, countless, inconceivable, unequaled, measureless, infinite, endless, unlimited, and most indescribable of indescribable bodhisattva mahāsattvas such as Vajragarbha had all gathered there from various buddha realms."
+  },
+  "d0-02": {
+   "sa": "atha khalu vajragarbho bodhisattvayāṃ velāyāṃ buddhānubhāvena mahāyānaprabhāsaṃ nāma bodhisattvasamādhiṃ samāpadyate sma / samanantarasamāpannaśca vajragarbho bodhisattva imaṃ mahāyānaprabhāsaṃ nāma bodhisattvasamādhim,atha tāvadeva daśasu dikṣu daśabuddhakṣetrakoṭiparamāṇurajaḥsamānāṃ lokadhātūnāmapareṇa daśabuddhakṣetrakoṭiparamāṇurajaḥsamāstathāgatā mukhānyupardaṣayāmāsuṃ yadidaṃ vajragarbhasamanāmakā eva / te cainaṃ buddhā bhagavanta evamūcuḥ - sādhu sādhu bho jinaputra, yastvamimaṃ mahāyānaprabhāsaṃ bodhisattvasamādhiṃ samāpadyase / api tu khalu punastvaṃ kulaputra, amī daśasu dikṣu daśabuddhakṣetrakoṭiparamāṇurajaḥsamānāṃ lokadhātūnāmapareṇa daśabuddhakṣetrakoṭiparamāṇurajaḥsamāstathāgatā adhitiṣṭhanti sarve vajragarbhasamanāmānaḥ asyaiva bhagavato vairocanasya pūrvapraṇidhānādhiṣṭhānena tava ca puṇyajñānaviśeṣeṇa sarvabodhisattvānāṃ ca acintyabuddhadharmālokaprabhāvanājñānabhūmyavatāraṇāya / sarvakuśalamūlasaṃgrahaṇāya / sarvabuddhadharmanirdeśāya / asaṃbhinnajñānavyavadānāya / sarvalokadharmānupalepāya / lokottarakuśalamūlapariśodhanāya / acintyajñānaviṣayādhigamāya / yāvatsarvajñānaviṣayādhigamāya / yadidaṃ daśānāṃ bodhisattvabhūmīnāmārambhapratilambhāya / yathāvadbodhisattvabhūmivyavasthānanirdeśāya / sarvabuddhadharmādhyālambanāya / anāsravadharmapravibhāgavibhāvanāya / suvicitavicayamahāprajñālokakauśalyāya / sunistīritakauśalyajñānamukhāvatāraṇāya / yathārhasthānāntaraprabhāvanāmandapratibhānālokāya / mahāpratisaṃvidbhūministīraṇāya / bodhicittasmṛtyasaṃpramoṣāya / sarvasattvadhātuparipācanāya / sarvatrānugataviniścayakauśalyapratilambhāya / api tu khalu punaḥ kulaputra pratibhātu te 'yaṃ dharmālokamukhaprabhedakauśalyadharmaparyāyo buddhānubhāvena tathāgatajñānālokādhiṣṭhānena svakuśalamūlapariśodhanāya dharmadhātusuparyavadāpanāya sattvadhātvanugrahāya dharmakāyajñānaśārīrāya sarvabuddhābhiṣekasaṃpratīcchanāya sarvalokābhyudgatātmabhāvasaṃdarśanāya sarvalokagatisamatikramāya lokottadharmagatipariśodhanāya sarvajñajñānaparipūraṇāya //",
+   "T0285": "爾時，金剛藏菩薩承佛威神，以大慧光三昧正受，適定意已；應時十方諸佛剎土，一一諸方，如十億佛剎滿中諸塵若干億國，諸如來現，邊有菩薩，其號各各曰金剛藏；十方亦然，皆同一號。時此諸佛，俱讚曰：「善哉，善哉！汝乃以此大慧光菩薩三昧，而以正受，在十方佛土，各如十億滿中諸塵諸如來等之所建立，一切等號，悉是照明，如來至真，本願所致，而建立此，亦是仁者慧淨所致，復是一切諸菩薩等，不可思議法光聖旨，住明智地，多所度脫，攝取一切眾德之本，皆曉諸佛本所行成，愍念十方，解了善權，敷演道化，普弘法慧，周流十方；所講經誼，盡令堅住，其智慧明無能毀者，隨時建立僉使得安；遊諸世間不著方俗，度世清淨，莊嚴善本，入不可議慧之境界，通一切智，高遠聖道，乃能招致諸菩薩等，十住行無。如開士眾所當建立，有所宣布，往返周旋，執無漏法，光明咸照，而善思惟，撰於離心，曉了隨時。大慧光明，其未善度，至聖道門，使得度脫而無所著。住於內行，專精奉修無上大乘，其辯才慧不可稱載，威曜普照消除闇冥，已超眾行班宣無極，住在佛地逮菩薩意，愍念眾生未曾忘捨，遊入一切諸佛至真善權方便，決眾結網。承佛聖旨，自恣講說，演此法門靡不解了，如來在世，故為建立，亦是卿本善願所致。清淨行業，而諦莊嚴一切法界，又救眾生之所惑亂，以致法身至聖慧體，具足諸佛本所志願，其身所行，皆越世俗，普過世間無益之業，嚴飾清淨，度世之法。",
+   "T0286": "爾時，金剛藏菩薩摩訶薩承佛威神，入菩薩大智慧光明三昧，即時十方世界於一方過十億佛土微塵數世界，乃有如來名金剛藏；如是次第，十億佛土微塵數諸佛皆現其身名金剛藏；十方世界皆亦如是。同聲讚言：「善哉善哉！金剛藏！乃能入是菩薩大智慧光明三昧。如是，十方世界微塵數等諸佛皆同一號，加汝威神，又盧舍那佛本願力故、又汝有大智慧故、又與一切菩薩不可思議諸佛法明——所謂令入智慧地故、攝一切善根故、善分別選擇一切佛法故、廣知諸法故、決定說諸法故、無分別智善分別故、一切世間法不能污故、出世間善根清淨故、得不可思議智力故、得一切智人智處故、又得菩薩十地故、如實說菩薩十地差別故、分別說無漏法不著故、大智慧光明善擇以自莊嚴故、令入具足智門故、隨所應住次第說故、得無閡樂說光明故、具足大無閡智地不忘失菩薩心故、教化成就一切眾生性故、得一切遍至決定智故。「又，金剛藏！汝當說此法門差別，所謂諸佛神力故、汝能堪受如來神力故、自善根清淨故、清淨法性性故、饒益眾生性故、令眾生得清淨法身智身故、於一切佛得受記故、得一切世間最高大身故、過一切世間道故、出世間善根清淨故。」",
+   "T0278": "爾時，金剛藏菩薩摩訶薩承佛威神，入菩薩大智慧光明三昧。即時十方世界於一方過億佛土微塵數世界，有十億佛土微塵數佛皆現其身，名金剛藏；十方世界皆亦如是，同聲讚言：「善哉！善哉！金剛藏！乃能入是菩薩大智慧光明三昧，如是十方世界微塵數等諸佛皆同一號，加汝威神。所謂：盧舍那佛本願力故；本威神力故；汝有大智慧故；欲宣一切菩薩不可思議諸佛法明故。所謂：入智慧地故；攝一切善根故；善分別一切佛法故；廣法智故；決定說諸法故；無分別智善分別故；一切世間法不能染故；出世間善根清淨故；得不可思議智力故；得一切智人智境界故。所謂：如實說菩薩十地差別故；菩薩安住十地故；分別說無漏法故；大智慧光明善分別以自莊嚴故；入具足智門故；隨所應住次第說故；得無礙樂說光明故；具足大無礙智地故；不忘失菩薩心故；教化成熟一切眾生界故；得至一切處決定智故。「金剛藏！汝當說此法門差別。所謂：諸佛神力故；汝能堪受如來智慧神力故；自善根清淨故；清淨法界故；饒益眾生故；入法身智身故；於一切佛得授記故；得一切世間高大身故；過一切世間道故；淨出世間善根故。」",
+   "T0279": "爾時，金剛藏菩薩承佛神力，入菩薩大智慧光明三昧。入是三昧已，即時十方各過十億佛剎微塵數世界外，各有十億佛剎微塵數諸佛，同名：金剛藏，而現其前，作如是言：「善哉善哉！金剛藏！乃能入是菩薩大智慧光明三昧。善男子！此是十方各十億佛剎微塵數諸佛共加於汝，以毘盧遮那如來、應、正等覺本願力故，威神力故，亦是汝勝智力故，欲令汝為一切菩薩說不思議諸佛法光明故。所謂：令入智地故，攝一切善根故，善揀擇一切佛法故，廣知諸法故，善能說法故，無分別智清淨故，一切世法不染故，出世善根清淨故，得不思議智境界故，得一切智人智境界故；又令得菩薩十地始終故，如實說菩薩十地差別相故，緣念一切佛法故，修習分別無漏法故，善選擇觀察大智光明巧莊嚴故，善入決定智門故，隨所住處次第顯說無所畏故，得無礙辯才光明故，住大辯才地善決定故，憶念菩薩心不忘失故，成熟一切眾生界故，能遍至一切處決定開悟故。善男子！汝當辯說此法門差別善巧法。所謂：承佛神力如來智明所加故，淨自善根故，普淨法界故，普攝眾生故，深入法身、智身故，受一切佛灌頂故，得一切世間最高大身故，超一切世間道故，清淨出世善根故，滿足一切智智故。」",
+   "T0287": "爾時，金剛藏菩薩，承佛神力，入於菩薩妙三摩地，名大乘光明。入此定已，即時十方各過十俱胝佛剎微塵數世界之外，各有十俱胝佛剎微塵數諸佛如來，同名金剛藏；皆現其面，俱作是言：「善哉，善哉！佛子！汝今乃能入是大乘光明菩薩等持。然善男子！今彼十方各十俱胝佛剎微塵數諸佛如來共加持汝，以此世尊毘盧遮那本願威神力所持故，為一切菩薩趣入，能顯不可思議佛法光明。諸智地中為令攝受一切善根，為擇一切佛法善巧，為廣知法，為正演說善成立法，為無分別智得清淨，為一切魔法不染，為出世法善根得淨，為證不思議智所行境，乃至為證佛智境界；又為一切菩薩十地發趣及得，為如實說諸菩薩地安立善巧，為正緣慮諸佛妙法，為修無漏法之差別，為善選擇決定大慧光明善巧，為趣入於決定智門，為獲顯示如所應處無畏辯說，為證廣大無礙解地，為菩提心念不遺失，為善成熟諸有情界，為一切處通達決定選擇辯才。然善男子！汝當辯說此法差別善巧法門。所謂：由承諸佛威神力故，已諸如來智慧光明所加持故，已善圓淨自善根故，已善瑩飾真法界故，已普攝益諸有情故，已證法身智所依故，已從諸佛受灌頂故，已現超過一切世間最大身故，已越一切世間趣故，已淨出世正法趣故，已能圓滿一切智智故。」",
+   "bo": "།དེ་ནས་དེའི་ཚེ་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་རྡོ་རྗེའི་སྙིང་པོ་སངས་རྒྱས་ཀྱི་མཐུས་ཐེག་པ་ཆེན་པོ་རབ་ཏུ་སྣང་བ་ཞེས་བྱ་བའི་ཏིང་ངེ་འཛིན་ལ་སྙོམས་པར་ཞུགས་སོ། །བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་རྡོ་རྗེའི་སྙིང་པོས་བྱང་ཆུབ་སེམས་དཔའི་ཏིང་ངེ་འཛིན་ཐེག་པ་ཆེན་པོ་རབ་ཏུ་སྣང་བ་དེ་ལ་མཉམ་པར་བཞག་མ་ཐག་ཏུ། དེ་ནས་དེའི་ཚེ་ཕྱོགས་བཅུའི་འཇིག་རྟེན་གྱི་ཕྱོགས་རེ་རེའི་འཇིག་རྟེན་གྱི་ཁམས་སངས་རྒྱས་ཀྱི་ཞིང་བྱེ་བ་ཕྲག་བཅུའི་རྡུལ་ཤིན་ཏུ་ཕྲ་བ་སྙེད་ཀྱི་ཕ་རོལ་ནས། སངས་རྒྱས་བཅོམ་ལྡན་འདས་སངས་རྒྱས་ཀྱི་ཞིང་བྱེ་བ་ཕྲག་བཅུའི་རྡུལ་ཤིན་ཏུ་ཕྲ་བ་སྙེད་ཀུན་ཀྱང་མཚན་རྡོ་རྗེའི་སྙིང་པོ་ཞེས་བྱ་བར་མཐུན་པ་ཤ་སྟག་གིས་ཞལ་མངོན་པར་བསྟན་ཏེ། སངས་རྒྱས་བཅོམ་ལྡན་འདས་དེ་དག་གིས་དེ་ལ་འདི་སྐད་ཅེས་བཀའ་སྩལ་ཏོ། །རྒྱལ་བའི་བུ་དེ་ལྟར་ཁྱོད་བྱང་ཆུབ་སེམས་དཔའི་ཏིང་ངེ་འཛིན་ཐེག་པ་ཆེན་པོ་རབ་ཏུ་སྣང་བ་ལ་སྙོམས་པར་ཞུགས་པ་ལེགས་སོ་ལེགས་སོ། །འདི་ལྟར་རིགས་ཀྱི་བུ་ཁྱོད་ལ་ཕྱོགས་བཅུའི་སངས་རྒྱས་བཅོམ་ལྡན་འདས་སངས་རྒྱས་ཀྱི་ཞིང་བྱེ་བ་ཕྲག་བཅུའི་རྡུལ་ཤིན་ཏུ་ཕྲ་བ་སྙེད་ཀུན་ཀྱང་མཚན་རྡོ་རྗེའི་སྙིང་པོ་ཞེས་བྱ་བར་མཐུན་པ་ཤ་སྟག་གིས། བཅོམ་ལྡན་འདས་དེ་བཞིན་གཤེགས་པ་དགྲ་བཅོམ་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་རྣམ་པར་སྣང་མཛད་འདིའི་སྔོན་གྱི་སྨོན་ལམ་གྱི་ བྱིན་གྱི་རླབས་དང་། ཁྱོད་ཉིད་ཀྱི་ཡེ་ཤེས་ཀྱི་ཁྱད་པར་གྱིས་བྱང་ཆུབ་སེམས་དཔའ་ཐམས་ཅད་ལ་སངས་རྒྱས་ཀྱི་ཆོས་སྣང་བ་བསམ་གྱིས་མི་ཁྱབ་པ་རབ་ཏུ་བརྗོད་ཅིང་ཡེ་ཤེས་ཀྱིས་ལ་འཇུག་པར་བྱ་བ་དང་། དགེ་བའི་རྩ་བ་ཐམས་ཅད་ཡང་དག་པར་བསྡུ་བ་དང་། སངས་རྒྱས་ཀྱི་ཆོས་ཐམས་ཅད་རབ་ཏུ་དབྱེ་བ་ལ་མཁས་པར་བྱ་བ་དང་། ཆོས་ཐམས་ཅད་ལ་ཡེ་ཤེས་ཤིན་ཏུ་ཡངས་པར་བྱ་བ་དང་། ཤིན་ཏུ་ལེགས་པར་གནས་པའི་ཆོས་རབ་ཏུ་བསྟན་པ་དང་། ཡེ་ཤེས་ཐ་མྱི་དད་པ་རྣམ་པར་སྦྱང་བ་དང་འཇིག་རྟེན་གྱི་ཆོས་ཐམས་ཅད་ཀྱིས་གོས་པ་མྱེད་པར་བྱ་བ་དང་། འཇིག་རྟེན་ལས་འདས་པའི་དགེ་བའི་རྩ་བ་ཡོངས་སུ་དག་པར་བྱ་བ་དང་། ཡེ་ཤེས་བསམ་གྱིས་མི་ཁྱབ་པའི་ཡུལ་ཁོང་དུ་ཆུད་པར་བྱ་བ་ནས་ཐམས་ཅད་མཁྱེན་པའི་ཡེ་ཤེས་ཀྱི་ཡུལ་གྱི་བར་དུ་ཁོང་དུ་ཆུད་པར་བྱ་བ་དང་། འདི་ལྟར་བྱང་ཆུབ་སེམས་དཔའི་ས་བཅུ་བརྩམ་པ་རབ་ཏུ་འཐོབ་པར་བྱ་བ་དང་། བྱང་ཆུབ་སེམས་དཔའི་ས་མ་ནོར་བར་མངོན་པར་རྣམ་པར་དགོད་པ་ཤིན་ཏུ་བསྟན་པ་དང་། སངས་རྒྱས་ཀྱི་ཆོས་ཐམས་ཅད་ལ་ཡང་དག་པར་དམྱིགས་པར་བྱ་བ་དང་། ཟག་པ་མེད་པའི་ཆོས་ཀྱི་བྱེ་བྲག་རྣམ་པར་བསྒོམ་པ་དང་། རྣམ་པར་དབྱེ་བ་ཤིན་ཏུ་རྣམ་པར་ཕྱེ་བའི་ཤེས་རབ་ཀྱི་སྣང་བ་ཆེན་པོ་ལ་མཁས་པའི་ཡེ་ཤེས་ཀྱི་རྒྱན་ཐོབ་པར་བྱ་བ་དང་། ཤིན་ཏུ་བརྟགས་པའི་ཡེ་ཤེས་ཀྱི་སྒོ་ལ་འཇུག་པར་བྱ་བ་དང་། གནས་ཀྱི་རྣམ་པ་ཅི་རིགས་སུ་བརྗོད་པ་དང་། སྤོབས་པའི་སྣང་བ་དམའ་བ་མྱེད་པ་ཐོབ་པར་བྱ་བ་དང་། ཐ་དད་པ་ཡང་དག་པར་ཤེས་པ་ཆེན་པོའི་ས་ཤིན་ཏུ་རྟོགས་པར་བྱ་བ་དང་། བྱང་ཆུབ་ཀྱི་སེམས་ལ་དྲན་པ་ཉམས་པ་མེད་པར་བྱ་བ་དང་། སེམས་ཅན་གྱི་ཁམས་ཐམས་ཅད་ཡོངས་སུ་སྨྱིན་པར་བྱ་བ་དང་། ཐམས་ཅད་དུ་སོང་བའི་བློ་རྣམ་པར་གདོན་མི་ཟ་བ་ལ་མཁས་པ་རབ་ཏུ་ཐོབ་པར་བྱ་བའི་ཕྱིར་བྱིན་གྱིས་བརླབ་པ་མཛད་དོ། །དེ་བས་ན་རིགས་ཀྱི་བུ་ཁྱོད་ཀྱིས་ ཆོས་ཀྱི་སྒོ་རབ་ཏུ་དབྱེ་བ་ལ་མཁས་པར་འགྱུར་བའི་ཆོས་ཀྱི་རྣམ་གྲངས་འདི་ལ་སངས་རྒྱས་ཀྱི་མཐུ་དང་། དེ་བཞིན་གཤེགས་པའི་ཡེ་ཤེས་སྣང་བའི་བྱིན་གྱི་རླབས་ཀྱིས་རང་གི་དགེ་བའི་རྩ་བ་ཡོངས་སུ་དག་པར་བྱ་བ་དང་། ཆོས་ཀྱི་དབྱིངས་ཤིན་ཏུ་སྦྱངས་པ་དང་། སེམས་ཅན་གྱི་ཁམས་ཐམས་ཅད་ལ་ཕན་གདགས་པ་དང་། ཆོས་ཀྱི་སྐུའི་ཡེ་ཤེས་ཀྱི་ལུས་ལ་འཇུག་པར་བྱ་བ་དང་། སངས་རྒྱས་ཐམས་ཅད་ཀྱིས་དབང་བསྐུར་བ་ཡང་དག་པར་བླང་བ་དང་། འཇིག་རྟེན་གྱི་ཁམས་ཐམས་ཅད་དུ་ཤིན་ཏུ་འཕགས་པའི་ལུས་འབྱུང་བར་བྱ་བ་དང་། འཇིག་རྟེན་གྱི་ལམ་གྱི་རྒྱུད་ཐམས་ཅད་ལས་ཡང་དག་པར་འདའ་བར་བྱ་བ་དང་། འཇིག་རྟེན་ལས་འདས་པའི་ཆོས་ཀྱི་ཚུལ་ཡོངས་སུ་དག་པར་བྱ་བ་དང་། ཐམས་ཅད་མཁྱེན་པའི་ཡེ་ཤེས་ཡོངས་སུ་རྫོགས་པར་བྱ་བའི་ཕྱིར་སྤོབས་པ་སྐྱེད་ཅིག །",
+   "en": "Then at that time the bodhisattva mahāsattva Vajragarbha, through the power of the Buddha, entered the samādhi called the radiance of the Mahāyāna. As soon as the bodhisattva mahāsattva Vajragarbha entered the samādhi called the radiance of the Mahāyāna, buddha bhagavats who all had the name Vajragarbha and were as numerous as the atoms in a hundred million buddha realms, who were from beyond worlds in the ten directions as numerous as the atoms in a hundred million buddha realms, appeared to him. Those buddha bhagavats said these words: “O noble son! It is excellent, excellent that you have entered the samādhi called the radiance of the Mahāyāna. In this way, noble son, the buddhas, the bhagavats in the ten directions, who are as numerous as the atoms in a hundred million buddha realms, and who all have the same name as you, which is Vajragarbha, because of the blessing of the previous prayers of this bhagavat tathāgata arhat samyaksambuddha  Vairocana  and because of your particular wisdom,  give you their blessing so that through your teaching all bodhisattvas will (1) enter the bhūmis of the wisdom of the radiance of the Buddha’s inconceivable Dharma, (2) completely accumulate all roots of goodness, (3) become skilled in examining the entire Dharma of the Buddha, (4) possess a vast wisdom of the entire Dharma, (5) teach the perfectly preserved Dharma, (6) have the purified wisdom of indivisibility,  (7) be unstained by all worldly qualities, (8) purify the transcendent roots of goodness, (9) realize the scope of inconceivable wisdom, and (10) ultimately attain the scope of omniscient wisdom.  “This is for the purpose of commencing upon and attaining  the ten bhūmis of the bodhisattvas  through (1) the teaching that presents the bodhisattva bhūmis, (2) a focus on the entire Dharma of the Buddha, (3) meditation on the different kinds of immaculate qualities,  (4) skill  in the great light of wisdom that has analyzed the perfectly analyzed,  (5) entry through the door of knowledge through perfect examination,  (6) the bright  illumination  of the eloquence of  explaining every kind of opposing  standpoint, (7) the realization of the level of great discerning knowledge, (8) the continuous remembering of bodhicitta, (9) the ripening of all realms of beings, and (10) the acquisition of skillfulness through certainty in the comprehension of everything.    “Therefore, noble son, be eloquent  in this Dharma teaching, which is being skillful in the different doors of the Dharma,  so that through the power of the buddhas and the blessing of the light of the wisdom of the tathāgatas there will be (1) the complete purification of your roots of goodness, (2) the complete purification of the essence of phenomena,  (3) benefit for all the realms of beings, (4) the dharmakāya, which is the body  of wisdom, (5) the consecration received from all the buddhas, (6) the appearance of a body in all worlds, (7) the transcendence of all worldly existences, (8) the complete purification of the way of world-transcending qualities, and (9) the perfection of omniscient wisdom.”"
+  },
+  "d0-03": {
+   "sa": "atha khalu te buddhā bhagavanto vajragarbhasya bodhisattvasya anabhibhūtātmabhāvatāṃ copasaṃharanti sma / asaṅgapratibhānanirdeśatāṃ ca suviśobhitajñānavibhaktipraveśatāṃ ca smṛtyasaṃprabhoṣādhiṣṭhānatāṃ ca suviniścitamatikauśalyatāṃ ca sarvatrānugatabuddhyanutsargatāṃ ca samyaksaṃbuddhabalānavamṛdyatāṃ ca tathāgatavaiśāradyānavalīnatāṃ ca sarvajñajñānapratisaṃvidvibhāgadharmanayanistīraṇatāṃ ca sarvatathāgatasuvibhaktakāyavākcittālaṃkārābhinirhāratāṃ copasaṃharanti sma / tatkasmāddhetoḥ? yathāpi nāma asyaiva samādherdharmatāpratilambhena pūrvaṃ praṇidhānābhirhāreṇa ca supariśodhitādhyāśayatayā ca svavadātajñānamaṇḍalatayā ca susaṃbhṛtasaṃbhāratayā ca sukṛtaparikarmatayā (Dbh 3) ca apramāṇasmṛtibhājanatayā ca prabhāsvarādhimuktiviśodhanatayā ca supratividvadhāraṇīmukhāsaṃbhedanatayā ca dharmadhātujñānamudrāsumudritatayā ca //",
+   "T0285": "諸佛世尊，為金剛藏菩薩大士，無所悋惜，各現己身，宣布無限辯才之義，分別決解甚清淨慧，懷抱不忘，建立顯示，隨時便宜，暢眾疑心，普入一切諸佛所念，諸等正覺十力所由，如來所致四無所畏，而不怯弱，宣布至教，一切智業，諸分別辯，超越得入體解道法，入諸如來身、口、心行。所以者何？皆由此定，成就所致，亦由本願，行通巍巍，其心清淨，而無沾污。內性明了，常懷清淨，威燿弘炤，入于慧場。諸所行業，靡不備焉，斯所造立，而悉具足，其道器意，不可限量，信志清淨，巍巍普達，逮總持門，無所破壞，常以法界慧門之印，善印一切。」",
+   "T0286": "即時十方諸佛示金剛藏真實無上佛身，與無障礙樂說之辯、與善分別清淨智慧、與善憶念不忘、與善決定意、與遍至一切智處、與諸佛無壞力、與諸佛無所畏不怯弱、與諸佛無礙智分別諸法善開法門、與一切諸佛上妙身口意所作。何以故？以得菩薩大智慧光明三昧法故，亦是菩薩本願力故、志心清淨故、智慧明白故、善集助道法故、善修本事故、能持無量念故、信解清淨光明法故、善得陀羅尼門無分別故、以智印善印法性故。",
+   "T0278": "即時十方諸佛與金剛藏真實無上身，與無障礙樂說辯，與善分別清淨智慧，與善憶念不忘，與善決定慧，與至一切智處，與諸佛無壞力，與諸佛無所畏，與諸佛無礙智分別諸法善開法門，與一切諸佛上妙身、口、意業。何以故？以得菩薩大智慧光明三昧故，亦是菩薩本願力故，直心清淨故，智慧明白故，善集助道法故，善修本業故，念持無量法故，信解清淨光明法故，善得陀羅尼門不可壞故，法界智印善印故。",
+   "T0279": "爾時，十方諸佛與金剛藏菩薩無能映奪身，與無礙樂說辯，與善分別清淨智，與善憶念不忘力，與善決定明了慧，與至一切處開悟智，與成道自在力，與如來無所畏，與一切智人觀察分別諸法門辯才智，與一切如來上妙身、語、意具足莊嚴。何以故？得此三昧法如是故，本願所起故，善淨深心故，善淨智輪故，善積集助道故，善修治所作故，念其無量法器故，知其清淨信解故，得無錯謬總持故，法界智印善印故。",
+   "T0287": "爾時十方彼諸如來，與金剛藏菩提薩埵無映奪身，與無罣礙演說辯才，與入微妙清淨智辯，與無忘失念所加持，與善決定慧之善巧，與不棄捨周遍行智，與正等覺力無有能摧伏，與如來無所畏令無怯弱，與以一切智智所攝大無礙解辯法理趣決定安立，賜與引發一切如來善分別身、語、意莊嚴。所以者何？由此菩薩獲彼大乘光明等持，法爾如故，以本誓願所引發故，善淨增上妙意樂故，已善瑩飾淨智輪故，已善積集諸資糧故，已善鍊治所作事故，以無量念而為器故，明朗勝解得清淨故，善達無雜總持門故，法界智印之所印故。",
+   "bo": "དེ་ནས་སངས་རྒྱས་བཅོམ་ལྡན་འདས་དེ་དག་གིས་བྱང་ཆུབ་སེམས་དཔའ་རྡོ་རྗེའི་སྙིང་པོ་ལ་ཟིལ་གྱིས་མི་ནོན་པར་ལུས་ཉེ་བར་བསྒྲུབ་པ་མཛད་དོ། །ཐོགས་པ་མྱེད་པའི་སྤོབས་པས་ཤིན་ཏུ་སྟོན་པ་ཉེ་བར་བསྒྲུབ་པ་མཛད་དོ། །ཤིན་ཏུ་སྦྱངས་པའི་ཡེ་ཤེས་རྣམ་པར་ཕྱེ་བ་ལ་འཇུག་པ་ཉེ་བར་བསྒྲུབ་པ་མཛད་དོ། །དྲན་པ་ཉམས་པ་མྱེད་པའི་བྱིན་གྱི་རླབས་ཉེ་བར་བསྒྲུབ་པ་མཛད་དོ། །བློ་གྲོས་ཤིན་ཏུ་ངེས་པར་རྟོགས་པས་མཁས་པ་ཉེ་བར་བསྒྲུབ་པ་མཛད་དོ། །ཐམས་ཅད་ཀྱི་རྗེས་སུ་སོང་བའི་བློའི་རྗེས་སུ་འགྲོ་བ་ཉེ་བར་བསྒྲུབ་པ་མཛད་དོ། །ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་ཀྱི་སྟོབས་ཐུབ་པ་མྱེད་པ་ཉེ་བར་བསྒྲུབ་པ་མཛད་དོ། །དེ་བཞིན་གཤེགས་པའི་མྱི་འཇིགས་པ་ཆེ་ཞིང་ཞུམ་པ་མྱེད་པ་ཉེ་བར་བསྒྲུབ་པ་མཛད་དོ། །ཐམས་ཅད་མཁྱེན་པའི་ཡེ་ཤེས་དང་ཐ་དད་པ་ཡང་དག་པར་མཁྱེན་པས་རྣམ་པར་དབྱེ་བའི་ཆོས་ཀྱི་ཚུལ་ཤིན་ཏུ་རྟོག་པར་བྱ་བ་ཉེ་བར་བསྒྲུབ་པ་མཛད་དོ། །དེ་བཞིན་གཤེགས་པ་ཐམས་ཅད་ཀྱི་སྐུ་དང་། གསུང་དང་ཐུགས་ཀྱི་རྒྱན་ཤིན་ཏུ་རྣམ་པར་ ཕྱེ་བ་མངོན་པར་བསྡུ་བ་ཉེ་བར་བསྒྲུབ་པ་མཛད་དོ། །དེ་ཅིའི་ཕྱིར་ཞེ་ན། དེ་ནི་ཏིང་ངེ་འཛིན་དེ་ཉིད་ཀྱི་ཆོས་ཉིད་རབ་ཏུ་ཐོབ་པ་དང་། སྔོན་གྱི་སྨོན་ལམ་གྱིས་མངོན་པར་བསྒྲུབས་པ་དང་ལྷག་པའི་བསམ་པ་ཤིན་ཏུ་རྣམ་པར་སྦྱངས་པ་དང་། ཡེ་ཤེས་ཀྱི་དཀྱིལ་འཁོར་ཤིན་ཏུ་སྦྱངས་པ་དང་། ཚོགས་ཤིན་ཏུ་བསྩགས་པ་དང་། ཡོངས་སུ་སྦྱང་བ་ཤིན་ཏུ་བྱས་པ་དང་། དྲན་པའི་སྣོད་ཚད་མེད་པ་དང་། མོས་པ་རྣམ་པར་དག་ཅིང་འོད་ཤིན་ཏུ་གསལ་བ་དང་། གཟུངས་ཀྱི་སྒོ་ཐ་མི་དད་པ་ཐོབ་པ་དང་། ཆོས་ཀྱི་དབྱིངས་ཀྱི་ཡེ་ཤེས་ཀྱི་ཕྱག་རྒྱས་ཤིན་ཏུ་བཏབ་པའི་ཕྱིར་རོ།",
+   "en": "Then those buddha bhagavats provided the bodhisattva Vajragarbha with (1) an unsurpassable body, (2) unimpeded eloquence in teaching, (3) the process of analysis through completely purified wisdom, (4) the blessing of unfailing memory, (5) skill in definitive understanding,  (6) the judgment that is never lost in any situation,  (7) the invincible strengths  of a complete buddha, (8) the strengths  and confidences of the tathāgatas, who will never be discouraged, (9) the accomplishment of the different aspects of the Dharma through the discerning knowledge of omniscient wisdom, and (10) the adornment of the unique aspects of the body, speech, and mind of the tathāgatas. Why did this happen? It was because he (1) had attained the intrinsic nature of that samādhi, (2) had accomplished a previous prayer,  (3) had perfectly purified higher motivation, (4) had the perfectly clarified circle  of wisdom, (5) had perfectly accumulated the accumulations, (6) had become perfectly immaculate,  (7) had become a vessel for limitless memory, (8) had the purity of clear motivation, and (9) had perfectly realized the distinct  doors of retention, and because he had (10) applied the seal of the knowledge of the essence of the Dharma."
+  },
+  "d0-04": {
+   "sa": "atha khalu te buddhā bhagavantastatrasthā eva ṛddhyanubhāvena dakṣiṇān pāṇīn prasārya vajragarbhasya bodhisattvasya śīrṣaṃ saṃpramārjayanti sma / samanantaraspṛṣṭaśca vajragarbho bodhisattvastairbuddhairbhagavadbhiḥ, atha tāvadeva samādhestasmād vyutthāya tān bodhisattvānāmantrayate sma - suviniścitamidaṃ bhavanto jinaputrā bodhisattvapraṇidhānamasaṃbhinnamanavalokyaṃ dharmadhātuvipulaṃ ākāśadhātuparyavasānamaparāntakoṭiniṣṭhaṃ sarvasattvadhātuparitrāṇam / yatra hi nāma bhavanto jinaputrā bodhisattvā atītānāmapi buddhānāṃ bhagavatāṃ jñānabhūmimavataranti, anāgatānāmapi buddhānāṃ bhagavatāṃ jñānabhūmimavataranti pratyutpannānāmapi buddhānāṃ bhagavatāṃ jñānabhūmimavataranti, tatra bhavanto jinaputrā daśa bodhisattvabhūmayo buddhānāṃ bhagavatāṃ jñānabhūmimavataranti, tatra bhavanto jinaputrāśca daśa bodhisattvabhūmayo 'tītānāgatapratyutpannairbuddhairbhagadbhirbhāṣitāśca bhāṣiṣyante ca bhāṣyante ca, yāḥ saṃdhāya ahaṃ evaṃ vadāmi / katamā daśa? yaduta pramuditā ca nāma bodhisattvabhūmiḥ / vimalā ca nāma / prabhākarī ca nāma / arciṣmatī ca nāma / sudurjayā ca nāma / abhimukhī ca nāma / dūraṃgamā ca nāma / acalā ca nāma / sādhumatī ca nāma / dharmameghā ca nāma bodhisattvabhūmiḥ / imā bhavanto jinaputrā daśa bodhisattvānāṃ bodhisattvabhūmayaḥ, yā atītānāgatapratyutpannaīrbuddhairbhagavadbhirbhāṣitāśca bhāṣiṣyante ca bhāṣyante ca / nāhaṃ bhavanto jinaputrāstaṃ buddhakṣetraprasaraṃ samanupaśyāmi, yatra tathāgatā imā daśa bodhisattvabhūmīrna prakāśayanti / tatkasya hetoḥ? sāmutkarṣiko 'yaṃ bhavanto jinaputrā bodhisattvānāṃ mahāsattvānāṃ bodhi(sattva)mārgapariśodhanadharmamukhāloko yadidaṃ daśabhūmiprabhedavyavasthānam / acintyamidaṃ bhavanto jinaputrāḥ sthānaṃ yadidaṃ bhūmijñānamiti //",
+   "T0285": "是諸佛世尊，各自顯現，各申右臂，皆共手摩金剛藏菩薩頭首。時金剛藏為諸世尊，所見摩頭，道德巍巍遂得成就，威耀光光如佛無異。爾時尋即從三昧起，請諸菩薩而解言曰：「諸最勝子！吾已明達諸菩薩願，破壞疑網，則無所壞，世無所生亦無罪釁，法界弘廣亦無遠近，其所遊居譬如虛空，以是救濟，擁護十方一切眾生。所以然者，族姓子知，過去菩薩，往古諸佛，由此慧地而得過度，當來現在亦復如是。諸佛子知，我向者云，菩薩之地，為何謂也。諸菩薩學有十道地，因得成就無上正覺，去來今佛之所講說：初菩薩住名曰悅豫，第二菩薩住名曰離垢，第三菩薩住名曰興光，第四菩薩住名曰暉曜，第五菩薩住名曰難勝，第六菩薩住名曰目見，第七菩薩住名曰玄妙，第八菩薩住名曰不動，第九菩薩住名曰善哉意，第十菩薩住名曰法雨，是諸菩薩十住道地也。我觀十方去來今佛，諸如來至真，無不講此十住之業。所以者何？諸佛子等，是十住者，令諸菩薩，現在親近清淨道無為諸法門，名顯遠照于十方無數佛土，三界眾生咸蒙得濟，照天下如日明，療眾病如醫王，度眾人如船師，曜十方如月盛，活一切猶如地，安眾生如時雨，含道法如虛空，正堅住如須彌，宣布此教，則得堅立在十道地，又解此地不可思議諸菩薩住，僉入聖慧。」",
+   "T0286": "爾時，十方諸佛皆伸右手摩金剛藏菩薩頂。金剛藏菩薩即從三昧起，起已，告諸菩薩言：「諸佛子！是諸菩薩事先皆善自決定，無有過、無分別，清淨明了，廣大如法性、究竟如虛空，遍覆一切十方諸佛世界眾生，為救度一切世間、為一切諸佛神力所護。何以故？諸菩薩摩訶薩入過去諸佛智地，亦入未來、現在諸佛智地。「諸佛子！何等是諸菩薩摩訶薩智地？諸佛子！菩薩摩訶薩智地有十。過去、未來、現在諸佛已說、今說、當說，為是地故，我如是說。何等為十？一名喜地，二名淨地，三名明地，四名焰地，五名難勝地，六名現前地，七名深遠地，八名不動地，九名善慧地，十名法雲地。諸佛子！是十地者，三世諸佛已說、今說、當說，我不見有諸佛國土不說是菩薩十地者。何以故？此十地是菩薩最上妙道、最上明淨法門，所謂分別十住事。「諸佛子！是事不可思議，所謂菩薩摩訶薩隨順諸地智慧。」",
+   "T0278": "爾時，十方諸佛，皆申右手摩金剛藏菩薩頂；金剛藏菩薩即從三昧起，告諸菩薩言：「諸佛子！是諸菩薩願決定，無有過，不可壞，廣大如法界，究竟如虛空，遍覆一切十方諸佛世界眾生，為救度一切世間，為一切諸佛神力所護。何以故？諸菩薩摩訶薩入過去諸佛智地，亦入未來、現在諸佛智地。「何等是諸菩薩摩訶薩智地？菩薩摩訶薩智地有十，過去、未來、現在諸佛已說、今說、當說，為是地故，我如是說。何等為十？一曰歡喜，二曰離垢，三曰明，四曰焰，五曰難勝，六曰現前，七曰遠行，八曰不動，九曰善慧，十曰法雲。是十地者，三世諸佛已說、今說、當說，我不見有諸佛國土不說是十地者。何以故？此十地是菩薩最上妙道，最上明淨法門；所謂：分別十地事。諸佛子！是事不可思議，所謂：菩薩隨順諸地智慧。」",
+   "T0279": "爾時，十方諸佛各伸右手摩金剛藏菩薩頂。摩頂已，金剛藏菩薩從三昧起，普告一切菩薩眾言：「諸佛子！諸菩薩願善決定，無雜不可見，廣大如法界，究竟如虛空，盡未來際遍一切佛剎，救護一切眾生，為一切諸佛所護，入過去、未來、現在諸佛智地。佛子！何等為菩薩摩訶薩智地？佛子！菩薩摩訶薩智地有十種，過去、未來、現在諸佛，已說、當說、今說；我亦如是說。何等為十？一者歡喜地，二者離垢地，三者發光地，四者焰慧地，五者難勝地，六者現前地，七者遠行地，八者不動地，九者善慧地，十者法雲地。佛子！此菩薩十地，三世諸佛已說、當說、今說。佛子！我不見有諸佛國土，其中如來不說此十地者。何以故？此是菩薩摩訶薩向菩提最上道，亦是清淨法光明門，所謂：分別演說菩薩諸地。佛子！此處不可思議，所謂諸菩薩隨證智。」",
+   "T0287": "爾時，十方彼佛世尊，不起于座，以神通力，各申右手摩金剛藏大菩薩頂。時金剛藏菩提薩埵，蒙彼十方佛摩頂已，即從定起，普告一切菩薩眾言：「唯諸佛子！是菩薩願，決定無雜不可照了廣大法界盡虛空性，窮未來際能救一切諸有情類。唯諸佛子！菩薩安處於此願中，方能入於過去諸佛世尊智地，乃能入於未來諸佛世尊智地，亦能入於現在諸佛世尊智地。唯諸佛子！一切菩薩有十智地，是以過去、未來、現在諸佛，已說、當說、今說，由此密意我作是言。何等為十？一名極喜地，二名離垢，三名發光，四名焰慧，五名難勝，六名現前，七名遠行，八名不動，九名善慧，十名法雲。唯諸佛子！此名一切菩薩十地。是以過去、未來、現在諸佛，已說、當說、今說。唯諸佛子！我不見有諸佛國界，彼中如來不歎說此菩薩十地者。所以者何？是諸菩薩增上勝妙，能淨一切諸菩薩道法門光明，謂即十地安立解釋。唯諸佛子！當知此處不可思議，謂於諸地安立法中自所證智。」",
+   "bo": "།དེ་ནས་སངས་རྒྱས་བཅོམ་ལྡན་འདས་དེ་དག་གིས་དེ་དག་ན་བཞུགས་བཞིན་དུ་རྫུ་འཕྲུལ་གྱི་མཐུས་སོ་སོ་ནས་ཕྱག་གཡས་པ་བརྐྱང་སྟེ། བྱང་ཆུབ་སེམས་དཔའ་རྡོ་རྗེའི་སྙིང་པོའི་མགོ་ལ་བྱུག་པ་མཛད་དོ། །སངས་རྒྱས་བཅོམ་ལྡན་འདས་དེ་དག་གིས་བྱང་ཆུབ་སེམས་དཔའ་རྡོ་རྗེའི་སྙིང་པོ་ལ་རེག་མ་ཐག་ཏུ་དེ་ཉིད་ཀྱི་ཚེ་ཏིང་ངེ་འཛིན་དེ་ལས་ལངས་ནས། བྱང་ཆུབ་སེམས་དཔའ་དེ་དག་ལ་སྨྲས་པ། ཀྱེ་རྒྱལ་བའི་སྲས་དག །བྱང་ཆུབ་སེམས་དཔའི་སྨོན་ལམ་འདི་ནི་ཤིན་ཏུ་རྣམ་པར་གདོན་མི་ཟ་བ་སྟེ། ཐ་མི་དད་པ་བལྟར་མེད་པ་ཆོས་ཀྱི་དབྱིངས་ཀྱིས་ཀླས་པར་ཡངས་པ། ནམ་མཁའི་དབྱིངས་ཀྱི་མཐར་ཐུག་པ། ཕྱི་མའི་མཐའི་མུར་ཐུག་པ་སངས་རྒྱས་ཀྱི་ཞིང་ཐམས་ཅད་དང་། སེམས་ཅན་གྱི་ཁམས་ཐམས་ཅད་དུ་རྒྱས་པར་ཁྱབ་པ། འགྲོ་བ་ཐམས་ཅད་ཡོངས་སུ་སྐྱོབ་པ། དེ་བཞིན་གཤེགས་པ་ཐམས་ཅད་ཀྱི་བྱིན་གྱིས་བརླབས་པ་སྟེ། ཀྱེ་རྒྱལ་བའི་སྲས་དག་དེ་ནི་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་རྣམས་འདས་པའི་སངས་རྒྱས་བཅོམ་ལྡན་འདས་རྣམས་ཀྱི་ཡེ་ཤེས་ཀྱི་ས་ལ་ཡང་རབ་ཏུ་འཇུག་པར་འགྱུར་རོ། །མ་བྱོན་པའི་སངས་རྒྱས་བཅོམ་ལྡན་འདས་རྣམས་ཀྱི་ཡེ་ཤེས་ཀྱི་ས་ལ་ཡང་རབ་ཏུ་འཇུག་པར་འགྱུར་རོ། །ད་ལྟར་བྱུང་བའི་སངས་རྒྱས་བཅོམ་ལྡན་འདས་རྣམས་ཀྱི་ཡེ་ཤེས་ཀྱི་ས་ལ་ཡང་ རབ་ཏུ་འཇུག་པར་འགྱུར་རོ། །ཀྱེ་རྒྱལ་བའི་སྲས་དག །དེ་ལ་བཅུ་པོ་འདི་དག་ནི་བྱང་ཆུབ་སེམས་དཔའ་རྣམས་ཀྱི་ཡེ་ཤེས་ཀྱིས་རྣམས་ཏེ། གང་ལ་བསམས་ཏེ་བདག་གིས་དེ་སྐད་དུ་སྨྲས་པ་དེ་དག་ནི། འདས་པ་དང་། མ་བྱོན་པ་དང་། ད་ལྟར་བྱུང་བའི་སངས་རྒྱས་བཅོམ་ལྡན་འདས་རྣམས་ཀྱིས་གསུངས་སོ། །གསུང་ངོ་། །གསུང་བར་འགྱུར་རོ། །བཅུ་གང་ཞེ་ན། འདི་ལྟ་སྟེ། རབ་ཏུ་དགའ་བ་ཞེས་བྱ་བ་བྱང་ཆུབ་སེམས་དཔའི་ས་དང་པོ་དང་། དྲི་མ་དང་བྲལ་བ་ཞེས་བྱ་བ་བྱང་ཆུབ་སེམས་དཔའི་ས་གཉིས་པ་དང་། འོད་བྱེད་པ་ཞེས་བྱ་བ་བྱང་ཆུབ་སེམས་དཔའི་ས་གསུམ་པ་དང་། འོད་འཕྲོ་བ་ཅན་ཞེས་བྱ་བ་བྱང་ཆུབ་སེམས་དཔའི་ས་བཞི་པ་དང་། རྒྱལ་བར་དཀའ་བ་ཞེས་བྱ་བ་བྱང་ཆུབ་སེམས་དཔའི་ས་ལྔ་པ་དང་། མངོན་སུམ་པ་ཞེས་བྱ་བ་བྱང་ཆུབ་སེམས་པས་ས་དྲུག་པ་དང་། རིང་དུ་སོང་བ་ཞེས་བྱ་བ་བྱང་ཆུབ་སེམས་དཔའི་ས་བདུན་པ་དང་། མི་གཡོ་བ་ཞེས་བྱ་བ་བྱང་ཆུབ་སེམས་དཔའི་ས་བརྒྱད་པ་དང་། ལེགས་པའི་བློ་གྲོས་ཞེས་བྱ་བ་བྱང་ཆུབ་སེམས་དཔའི་ས་དགུ་པ་དང་། ཆོས་ཀྱི་སྤྲིན་ཅེས་བྱ་བ་བྱང་ཆུབ་སེམས་དཔའི་ས་བཅུ་པ་སྟེ། ཀྱེ་རྒྱལ་བའི་སྲས་དག །དེ་རྣམས་ནི་བྱང་ཆུབ་སེམས་དཔའ་རྣམས་ཀྱི་བྱང་ཆུབ་སེམས་དཔའི་ས་བཅུ་པ་སྟེ། དེ་ནི་འདས་པ་དང་། མ་བྱོན་པ་དང་། ད་ལྟར་བྱུང་བའི་སངས་རྒྱས་བཅོམ་ལྡན་འདས་རྣམས་ཀྱིས་གསུངས་སོ། །གསུང་ངོ་། །གསུང་བར་འགྱུར་རོ། ། ཀྱེ་རྒྱལ་བའི་སྲས་དག །བདག་གིས་ནི་སངས་རྒྱས་ཀྱི་ཞིང་གང་ན་འང་དེ་བཞིན་གཤེགས་པ་དག་བཅོམ་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་རྣམས། བྱང་ཆུབ་སེམས་དཔའི་ས་བཅུ་པོ་འདི་དག་མི་གསུང་བ་དེ་ལྟ་བུ་མ་མཐོང་ངོ་། །དེ་ཅིའི་ཕྱིར་ཞེ་ན། ཀྱེ་རྒྱལ་བའི་སྲས་དག །བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་རྣམས་ཀྱི་བྱང་ཆུབ་སེམས་དཔའི་ལམ་ཡོངས་སུ་སྦྱོང་བའི་ཆོས་སྣང་བའི་སྒོ་འདི་ནི་ཡང་དག་ཕུལ་ཞེས་བྱ་བ་ཡིན་ཏེ། འདི་ལྟར་བྱང་ཆུབ་སེམས་དཔའི་ས་རྣམ་པར་དགོད་པ་ ཤིན་ཏུ་བསྟན་པའོ། །ཀྱེ་རྒྱལ་བའི་སྲས་དག་གནས་འདི་ནི་བསམ་གྱིས་མི་ཁྱབ་པ་སྟེ། འདི་ལྟར་བྱང་ཆུབ་སེམས་དཔའ་རྣམས་ཀྱིས་ཤེས་པའོ། །དེ་ནས་དེ་ལྟར་བྱང་ཆུབ་སེམས་དཔའ་རྡོ་རྗེའི་སྙིང་པོས་བྱང་ཆུབ་སེམས་དཔའི་ས་བཅུ་པོ་འདི་དག་མིང་ཙམ་ཞིག་བརྗོད་དེ་ཅང་མི་ཟེར་བར་འདུག་ནས།",
+   "en": "Those buddha bhagavats who were present there extended their right hands through their miraculous power and stroked the bodhisattva Vajragarbha’s head. As soon as the bodhisattva Vajragarbha was touched by those buddha bhagavats, he arose from that samādhi and said to the bodhisattvas, “O jinaputras! This bodhisattva aspiration (1) is perfectly certain,  (2) is not separate,  (3) cannot be viewed,  (4) is the vast essence of the Dharma,  (5) extends to the limits of space,  (6) reaches the ultimate conclusion,  and (7) is the protection of the realm of beings. “O jinaputras! The bodhisattva mahāsattvas enter the wisdom bhūmis of the buddha bhagavats of the past. They enter the wisdom bhūmis of the buddha bhagavats of the future. They enter the wisdom bhūmis of the buddha bhagavats of the present. “O jinaputras! There are ten bodhisattva bhūmis that are entering the wisdom bhūmis of the buddha bhagavats.    “O jinaputras! What I say to you is what the buddha bhagavats of the past, future, and present have taught, will teach, and are teaching. “What are these ten? They are the following: (1) Perfect Joy is the first bhūmi of the bodhisattva, (2) Stainless is the second bhūmi of the bodhisattva, (3) Shining is the third bhūmi of the bodhisattva, (4) Brilliance is the fourth bhūmi of the bodhisattva, (5) Difficult to Conquer is the fifth bhūmi of the bodhisattva, (6) Manifested is the sixth bhūmi of the bodhisattva, (7) Gone Far is the seventh bhūmi of the bodhisattva, (8) Unwavering is the eighth bhūmi of the bodhisattva, (9) Perfect Understanding is the ninth bhūmi of the bodhisattva, and (10) Cloud of Dharma is the tenth bhūmi of the bodhisattva. “O jinaputras! These are the ten bodhisattva bhūmis of the bodhisattvas that the buddha bhagavats of the past, future, and present have taught, will teach, and are teaching. “O jinaputras! I see that throughout all buddha realms there are no tathāgata arhat samyaksambuddhas who do not teach these ten bodhisattva bhūmis. Why is that? O jinaputras! The light from this doorway to the Dharma of purifying the bodhisattva path of the bodhisattva mahāsattvas is called most excellent. It is an inconceivable presentation of the classification of the ten bhūmis of the bodhisattvas. O jinaputras! That is this level of the knowledge of the bhūmis.”    Thus the bodhisattva Vajragarbha spoke merely the names of these ten bodhisattva bhūmis, became silent, and did not elucidate any further."
+  },
+  "d0-05": {
+   "sa": "atha khalu vajragarbho bodhisattva āsāṃ daśānāṃ bodhisattvabhūmīnāṃ nāmadheyamātraṃ parikīrtya tūṣṇīṃ babhūva, na bhūyaḥ prabhedaśo nirdiśati sma / atha khalu sā sarvāvatī bodhisattvaparṣat paritṛṣitā babhūva āsāṃ daśānāṃ bodhisattvabhūmīnāṃ nāmadheyamātraśravaṇena bhūmivibhāgānudīraṇena ca / tasyā etadabhavat - ko nu khalvatra hetuḥ kaśca pratyayaḥ, yadvajragarbho bodhisattva āsāṃ bodhisattvabhūmīnāṃ nāmadheyamātraṃ parikīrtya tūṣṇīṃbhāvena atināmayati, na bhūyaḥ prabhedaśo nirdiśatīti? tena khalu punaḥ samayena tasminneva bodhisattvaparṣatsaṃnipāte vimukticandro nāma bodhisattvastasyā bodhisattvaparṣadaścittāśayavicāramājñāya vajragarbhaṃ bodhisattvaṃ gāthābhigītena parigṛcchati sma- kimarthaṃ śuddhasaṃkalpasmṛtijñānaguṇānvita / samudīryottamā bhūmīrna prakāśayase vibho // 1 // viniścitā ime sarve bodhisattvā mahāyaśaḥ / kasmādudīrya bhūmīśca(stvaṃ) pravibhāgaṃ na bhāṣase // 2 // śrotukāmā ime sarve jinaputrā viśāradāḥ / vibhajyārthagatiṃ samyaragbhūmīnāṃ samudāhara // 3 // parṣadvi viprasanneyaṃ kausīdyāpagatā śubhā / śuddhā pratiṣṭhitā sāre guṇajñānasamanvitā // 4 // nirīkṣamāṇā anyonyaṃ sthitāḥ sarve sagauravāḥ / kṣaudraṃ hyaneḍakaṃ yadvatkāṅkṣanti tvamṛtopamam // 5 //",
+   "T0285": "時金剛藏菩薩，粗舉其要，歎此菩薩十住地業，尋即默然，不復重解。於是大眾，咸懷飢虛，聞此菩薩十住道名，欲令分別重敷演義，聞者僉解，心懷入道，離諸顛倒，各心念言：「金剛藏菩薩今何以故，粗舉其要，宣於十住菩薩之業，稱歎其號而更默然，不復重散解了本末？」時彼會中有一菩薩，名月解脫，亦來俱會。時月解脫菩薩大士，知彼眾會開士所念，以偈歎頌，問金剛藏此義所歸：「淨念以何故，懷慧稱功勳； 明智宣十住，不重解所入？ 諸菩薩勇猛，心各抱猶豫； 云何說義名，不聞道地處？ 咸欲悉共聞，最勝子無畏； 決義入平等，所行住道地。 眾會僉悅豫，清淨除諛諂； 堅住解明地，功勳慧平均。 一切立恭敬，展轉相承望； 求微妙無瑕，志無上甘露。",
+   "T0286": "是時金剛藏菩薩摩訶薩說諸菩薩十地名已，默然而住，不復分別義趣。爾時，一切菩薩眾聞說菩薩十地名已，咸皆渴仰，欲聞解釋，各作是念：「何因何緣金剛藏菩薩說菩薩十地名已默然而住，不更解釋？」時大菩薩眾中有菩薩摩訶薩名解脫月，知諸菩薩心之所念，以偈問金剛藏菩薩言：「淨智念慧人！何故說菩薩， 諸地名號已，默然不解釋？ 今諸大菩薩，心皆懷猶豫： 『何故說是名，而不演其義？』 大智諸菩薩，咸皆欲聽聞， 如是諸地義，願為分別說。 是諸菩薩眾，清淨無瑕穢、 安住堅實法、具足智功德， 皆以恭敬心，瞻仰於仁者， 願欲聞所說，如渴思甘露。」",
+   "T0278": "金剛藏菩薩說諸菩薩十地名已，默然而住，不復分別；時，一切菩薩聞說菩薩十地名已，咸皆渴仰，欲聞解釋，各作是念：「何因何緣金剛藏菩薩說十地名已，默然而住？」時，大菩薩眾中，有菩薩名解脫月，知諸菩薩心之所念，以偈問曰：「淨念智慧人，何故說菩薩， 諸地名號已，默然不解釋？ 今諸大菩薩，心皆懷猶豫， 何故說是名，而不演其義？ 大智諸菩薩，咸皆欲聽聞， 如是諸地義，願為分別說。 是諸菩薩眾，清淨無瑕穢， 安住堅實中，具足智功德。 皆以恭敬心，瞻仰於仁者， 願欲聞所說，如渴思甘露。」",
+   "T0279": "爾時，金剛藏菩薩說此菩薩十地名已，默然而住，不復分別。是時，一切菩薩眾聞菩薩十地名，不聞解釋，咸生渴仰，作如是念：「何因何緣，金剛藏菩薩唯說菩薩十地名而不解釋？」解脫月菩薩知諸大眾心之所念，以頌問金剛藏菩薩曰：「何故淨覺人，念智功德具， 說諸上妙地，有力不解釋？ 一切咸決定，勇猛無怯弱， 何故說地名，而不為開演？ 諸地妙義趣，此眾皆欲聞， 其心無怯弱，願為分別說！ 眾會悉清淨，離懈怠嚴潔， 能堅固不動，具功德智慧。 相視咸恭敬，一切悉專仰， 如蜂念好蜜，如渴思甘露。」",
+   "T0287": "爾時，金剛藏菩薩，標斯十地名已默然而住，不復分別而解釋之。是時一切諸菩薩眾，聞說菩薩十地名已，不聞解釋，咸生渴仰作如是念：「何因何緣是金剛藏菩提薩埵，唯說菩薩十地名已，默然而住更不解釋？」爾時，於此菩薩眾中有一菩薩名解脫月，知諸大眾心之所念，即以頌問金剛藏菩薩曰：「何故正覺者，念智功德具； 標諸上妙地，自在不解釋？ 一切咸決定，菩薩大名稱； 何故說地名，而不演其義？ 一切諸佛子，無畏皆樂聞； 願為正分別，說諸地義趣。 眾會悉清淨，離懈怠嚴整， 鮮潔住堅實，具足功德智； 相視咸恭敬，一切悉專仰； 唯望法甘露，如蜂念淨蜜。」",
+   "bo": "དེ་ལས་རབ་ཏུ་ཕྱེ་སྟེ་མ་བཤད་པ་དང་། དེ་ནས་བྱང་ཆུབ་སེམས་དཔའི་འཁོར་དེ་དག་ཐམས་ཅད་བྱང་ཆུབ་སེམས་དཔའི་ས་བཅུ་པོ་དེ་དག་གི་མིང་ཙམ་ཞིག་ཐོས་ལས་རབ་ཏུ་ཕྱེ་སྟེ། མི་བརྗོད་པས་སྐོམ་པར་གྱུར་ནས་དེ་དག་འདི་སྙམ་དུ་སེམས་ཏེ། དེ་ལྟར་བྱང་ཆུབ་སེམས་དཔའ་རྡོ་རྗེའི་སྙིང་པོས་བྱང་ཆུབ་སེམས་དཔའི་ས་བཅུ་པོ་དེ་དག་གི་མིང་ཙམ་ཞིག་བརྗོད་དེ་ཅང་མི་ཟེར་བར་འདུག་ནས། དེ་ལས་རབ་ཏུ་ཕྱེ་ཞིང་མི་སྟོན་པ་དེ་ལ་རྒྱུ་ནི་གང་རྐྱེན་ནི་ཅི་ཞིག་ཡོད་སྙམ་པ་དང་། དེའི་ཚེ་བྱང་ཆུབ་སེམས་དཔའི་འཁོར་འདུས་པ་དེ་ན་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་རྣམ་པར་གྲོལ་བའི་ཟླ་བ་ཞེས་བྱ་བ་འདུས་ཤིང་འདུག་འདུག་སྟེ། དེ་ནས་བྱང་ཆུབ་སེམས་དཔའ་རྣམ་པར་གྲོལ་བའི་ཟླ་བས། བྱང་ཆུབ་སེམས་དཔའི་འཁོར་དེ་དག་གི་སེམས་ཀྱི་ཡོངས་སུ་རྟོག་པ་སེམས་ཀྱིས་ཡོངས་སུ་ཤེས་ནས། བྱང་ཆུབ་སེམས་དཔའ་རྡོ་རྗེའི་སྙིང་པོ་ལ་ཀླུའི་དབྱངས་ཀྱིས་ཚིགས་སུ་བཅད་དེ་དོན་དེ་དྲིས་སོ། །ཅི་ཕྱིར་རྟོག་པ་རྣམ་དག་ཅིང་། །དྲན་དང་ཡེ་ཤེས་ལྡན་པ་ཡིས། །ས་ཡི་མཆོག་ནི་བརྗོད་བྱས་ཏེ། །མཁས་པས་རྣམ་པར་ཕྱེ་མི་བཤད། །འདི་ཀུན་ངེས་པར་རྟོགས་པ་སྟེ། །བྱང་ཆུབ་སེམས་དཔའ་གྲགས་ཆེན་ཡིན། །ཅི་ཕྱིར་ཁྱོད་ཀྱིས་བརྗོད་དེ། །རབ་ཏུ་ཕྱེ་བ་བཤད་མི་བགྱི། །རྒྱལ་སྲས་འཇིགས་མེད་འདི་དག་ནི། །ཀུན་ཀྱང་ཤིན་ཏུ་ཉན་པར་འདོད། ། ས་ཡི་དོན་ཚུལ་ཡང་དག་ཏུ། །རྣམ་པར་ཕྱེ་སྟེ་བཤད་པར་མཛོད། ། འཁོར་འདི་ཤིན་ཏུ་རྣམ་དང་སྟེ། །ལེ་ལོ་མེད་ཅིང་དགེ་དང་ལྡན། །དག་པའི་མཆོག་ལ་གནས་པ་སྟེ། །ཡོན་ཏན་ཡེ་ཤེས་ལྡན་པ་ཡི། ། ཕན་ཚུན་གཅིག་ལ་གཅིག་ལྟ་ཞིང་། །ཀུན་ཀྱང་རིམ་གྲོ་བཅས་པར་གནས། །སྦྲང་རྩི་ཇི་ལྟར་སྤང་མྱིན་པ། །དེ་ལྟར་བདུད་རྩི་མཆོག་ཀྱང་འདོད།",
+   "en": "All the bodhisattvas of the assembly heard just the names of the ten bodhisattva bhūmis with no further elucidation or description. Therefore, they yearned for that, thinking, “The bodhisattva Vajragarbha thus spoke just the names of the ten bodhisattva bhūmis and said no more. What is the cause and condition for his not giving any further elucidation?” At that time, the bodhisattva mahāsattva Vimukticandra was present in that gathered assembly of bodhisattvas. The bodhisattva Vimukticandra, knowing what was being thought in the minds of the assembly of bodhisattvas, addressed these questions in verse to the bodhisattva Vajragarbha: “Why did you, lord, endowed with the qualities Of pure thoughts, mindfulness, and wisdom, Mention the supreme bhūmis But not explain them? “All those here are certainly Bodhisattvas of great renown. Why did you speak of the bhūmis But not teach their details? “All these fearless Bodhisattvas wish to listen. Describe perfectly the meaning Of the different bhūmis. “This assembly is perfectly pure, Free of indolence, and splendid. Its members reside in supreme purity. They possess qualities and wisdom. “They are looking from one to the other And are all waiting respectfully. They long for it like a bee  for honey And cannot give up this supreme amrita."
+  },
+  "d0-06": {
+   "sa": "tasya śrutvā mahāprajño vajragarbho viśāradaḥ / parṣatsaṃtoṣaṇārthaṃ hi bhāṣate sma jinātmajaḥ // 6 // duṣkaraṃ paramametadadbhutaṃ bodhisattvacaritapradarśanam / bhūmikāraṇavibhāga uttamo buddhabhāvasamudāgamo yataḥ // 7 // sūkṣma durdṛśa vikalpavarjitaḥścittabhūmivigato durāsadaḥ / gocaro hi viduṣāmanāsravo yatra muhyati jagacchave sati // 8 // vajropamaṃ hṛdayaṃ sthāpayitvā buddhajñānaṃ paramaṃ cādhimucya / anātmānaṃ cittabhūmiṃ viditvā śakyaṃ śrotuṃ jñānametatsusūkṣmam // 9 // antarīkṣa iva raṅgacitraṇā mārutaḥ khagapathāśrito yathā / jñānamevamiha bhāgaśaḥ kṛtaṃ durdṛśaṃ bhagavatāmanāsravam // 10 // tasya me bhavati buddhirīdṛśī durlabho jagati yo 'sya vedakaḥ / śraddhadhīta ca ya etaduttamaṃ na prakāśayitumutsahe yataḥ // 11 //",
+   "T0285": "因聞金剛藏，無畏大智慧； 常歡悅來眾，仁宜與佛談。 未曾最難及，顯菩薩所行； 分別如道地，所由最上勝。 棄想微難見，常住遠離心； 柔仁行成慧，面聞所歸趣。 所止如金剛，第一解佛慧； 立心捨吾我，乃聞此上智。 如來盡虛無，離欲亦如空； 慧如地無漏，興別最難見。 道無念如此，信者甚難值； 佛慧不可議，故默不重說。」",
+   "T0286": "金剛藏菩薩，聞說是事已， 欲令大眾悅，即時說頌言： 「諸菩薩所行，第一難思議， 分別是諸地，諸佛之根本。 微妙甚難見，非心所能及， 從佛智慧出，若聞則迷沒。 持心如金剛，深信佛智慧， 以為第一妙，心無有疑難， 遠離計我心，及心所行地， 如是諸菩薩，爾乃能聽聞。 寂滅無漏智，分別說甚難， 如畫於虛空、如執空中風。 我念佛智慧，第一難思議， 眾生少能信，是故我默然。」",
+   "T0278": "時，金剛藏菩薩聞說是已，欲令眾悅，以偈答曰：「諸菩薩所行，第一難思議， 分別是十地，諸佛之根本。 微妙甚難見，非心所能及， 從佛智慧出，若聞則迷沒。 持心如金剛，深信佛智慧， 以為第一妙，心無有疑難。 遠離計我心，及心所行地， 如是諸菩薩，爾乃能聽聞。 寂滅無漏智，分別說甚難， 如畫於虛空，如執於疾風。 我念佛智慧，第一難思議， 眾生少能信，是故我默然。」",
+   "T0279": "爾時，大智無所畏金剛藏菩薩聞說是已，欲令眾會心歡喜故，為諸佛子而說頌言：「菩薩行地事，最上諸佛本， 顯示分別說，第一希有難。 微細難可見，離念超心地， 出生佛境界，聞者悉迷惑。 持心如金剛，深信佛勝智， 知心地無我，能聞此勝法。 如空中彩畫，如空中風相， 牟尼智如是，分別甚難見。 我念佛智慧，最勝難思議， 世間無能受，默然而不說。」",
+   "T0287": "大智無畏者，金剛藏聞是， 欲令大眾悅，以頌詶佛子： 「雖作最勝甚希有，此能顯示菩薩行； 辯地能作最微妙，由此佛地有修證。 微細難見離分別，遠離心地難證悟； 智者境界純無漏，世間聞者悉迷惑。 安心不動如金剛，信解佛智最殊勝； 了知無我唯心地，此能聞斯微細智。 如以眾彩畫虛空，如風依於鳥路行； 無漏佛智亦如是，雖為分別而難見。 故今吾興如是智，世間難有知此者； 及能信此最勝法，是故不任廣解釋。」",
+   "bo": "།རྡོ་རྗེའི་སྙིང་པོ་འཇིགས་མེད་པ། །ཤེས་རབ་ཆེན་པོས་དེ་ཐོས་ནས། །འཁོར་རྣམས་དགའ་བར་བྱ་བའི་ཕྱིར། །བདེ་བར་གཤེགས་པའི་སྲས་ལ་སྨྲས། །སངས་རྒྱས་སྐུར་བ་ཡང་དག་འབྱུང་བས་ན། །བྱང་ཆུབ་སེམས་དཔའི་སྤྱོད་པ་རབ་བསྟན་ཅིང་། །ས་རྒྱུ་དམ་པ་རྣམ་པར་དབྱེ་བྱ་བ། །དེ་ནི་རྨད་འབྱུང་མཆོག་ཏུ་དགའ་བ་ཡིན། །ཕྲ་ཞིང་བལྟ་དཀའ་རྣམ་པར་རྟོག་པ་སྤངས། །སེམས་ཀྱིས་དང་བྲལ་བས་བསྒྲུབ་པར་དཀའ། །མཁས་པ་རྣམས་ཀྱི་ཟག་མེད་སྤྱོད་ཡུལ་ཏེ། །འགྲོ་བ་རྣམས་ཀྱིས་དེ་ཐོས་མོས་པར་འགྱུར། །རྡོ་རྗེ་ལྟ་བུར་བསམ་པ་རབ་གཞག་སྟེ། །སངས་རྒྱས་ཡེ་ཤེས་མཆོག་ལ་མོས་བྱས་ཤིང་། །བདག་མེད་པ་ཡི་སེམས་ཀྱིས་ཤེས་ན། །ཡེ་ཤེས་དམ་པ་འདི་བཟོད་མཉན་པར་ནུས། །ཇི་ལྟར་བར་སྣང་ཚོན་རིས་བྲིས་པ་དང་། །ནམ་མཁའི་དབྱིངས་ལ་རླུང་གནས་ཇི་བཞིན་དུ། །དེ་ལྟར་ཡེ་ཤེས་ཟག་པ་མེད་པ་ཡང་། །ཤིན་ཏུ་བལྟ་དཀའ་ཐུབ་པས་རྣམ་པར་ཕྱེ། །དེ་ལ་བདག་གིས་སེམས་ནི་འདི་སྙམ་བྱེད། །སངས་རྒྱས་ཡེ་ཤེས་དམ་པ་བསམ་ཡས་ལ། །འགྲོ་བ་གང་རྣམས་དད་པར་བྱེད་དཀོན་ཞེས། །དེ་ཡི་ཕྱིར་ན་མ་སྨྲས་མ་བཤད་དོ།",
+   "en": "“They heard you, Vajragarbha, Eloquent and greatly wise. Speak to the sons of the sugatas In order to delight the assembly. “This is the difficult, marvelous, perfect Teaching of bodhisattva conduct, The supreme elucidation of the cause of the bhūmis Through which the state of buddhahood is reached. “It is subtle, difficult to see, beyond thought, Beyond the level of the mind, and difficult to accomplish. It is the undefiled domain of the wise, And beings are bewildered when they hear of it. “When one has been established in the vajra-like essence, Has aspired to the supreme wisdom of buddhahood, And has seen the absence of self in the level of the mind, Then one is able to listen to this most subtle wisdom. “Just like colors drawn in the sky, Just like the path of the wind through the air, It is difficult to see the different aspects Of the immaculate wisdom of the bhagavats. “This is what I conclude: You did not dare teach That supreme wisdom Because beings would have no faith in it.”"
+  },
+  "d0-07": {
+   "sa": "evamukte vimukticandro bodhisattvo vajragarbhaṃ bodhisattvametadavocat - supariśuddho batāyaṃ bho jinaputra parṣatsaṃnipātaḥ supariśodhitādhyāśayānāṃ bodhisattvānāṃ supariśodhitasaṃkalpānāṃ sucaritacaraṇānāṃ suparyupāsitabahubuddhakoṭiśatasahasrāṇāṃ susaṃbhṛtasaṃbhārāṇāmaparimitaguṇajñānasamanvāgatānāmapagatavimatisaṃdehānāmanaṅgaṇānāṃ supratiṣṭhitādhyāśayādhimuktīnāmaparapratyayānāmeṣu buddhadharmeṣu / tatsādhu bho jinaputra, prabhāṣasva / pratyakṣavihāriṇo hyate bodhisattvā atra sthāne //",
+   "T0285": "月解脫菩薩，謂金剛藏：「佛子當察！諸來會者，性行淳淑，清淨離穢，其志仁和，悉諸菩薩，斯行真正，積功累德，每生自克，六度無極，以自莊嚴，四等四恩，習權方便，功勳遠著，名德無量。大慈大哀，欲興道化，分流法教，救濟三界諸危厄眾，消眾冥如日明，生道品如良田，成正覺如虛空，長弘教如流水，除狐疑如日光，療三毒如醫王，度生死譬船師。是故佛子！仁者善哉，宜當班宣現在學行，令此道地緣修所歸，使諸會者各得開解，如冥覩明，應病授藥，使無餘疑。」時月解脫菩薩大士，欲令此義重散本末，顯示歸趣，為金剛藏說此頌曰：「茂盛願講說，殊特最上法； 人中上所行，諸菩薩之業。 敷演說其教，所住之道地； 聖慧甚清淨，巍巍仁和業。 諸會者清淨，不可計第一； 堅住在正路，志性懷篤信。 善累功積德，奉無數億佛； 各欲得決解，尋現逮十住。」",
+   "T0286": "解脫月菩薩聞說此已，語金剛藏菩薩言：「佛子！是大菩薩眾深心清淨，善行菩薩道、善集助道法、善能供養恭敬諸佛，於無量佛多種善根，成就無量深厚功德，離癡、疑、悔，無有貪著及諸結閡，深心信解，安住不動，於是法中不隨他教。是故，佛子！當承佛力敷演此義，是諸菩薩於是深法皆能證知。」時解脫月欲重宣此義而說偈言：「願說安隱法，菩薩無上行， 分別於諸地，令智慧清淨。 眾智淨無垢，安住深信解， 於諸無量佛，證知十地義。」",
+   "T0278": "解脫月菩薩聞說此已，語金剛藏菩薩言：「佛子！是大菩薩眾直心清淨，善行菩薩道，善集助道法，善恭敬供養諸佛；於無量佛多種善根，成就無量深厚功德，離癡疑悔，無有貪著及諸結礙，深心信解，安住不動，於是法中不隨他教。是故，佛子！當承佛力敷演此義，是諸菩薩於是深法皆能證知。」時，解脫月菩薩欲重宣此義，以偈頌曰：「願說安隱法，菩薩無上行， 分別於諸地，令智慧清淨。 眾智淨無垢，安住深信解， 於諸無量佛，證知十地義。」",
+   "T0279": "爾時，解脫月菩薩聞是說已，白金剛藏菩薩言：「佛子！今此眾會皆悉已集，善淨深心，善潔思念，善修諸行，善集助道，善能親近百千億佛，成就無量功德善根，捨離癡惑，無有垢染，深心信解，於佛法中不隨他教。善哉佛子！當承佛神力而為演說，此諸菩薩於如是等甚深之處皆能證知。」爾時，解脫月菩薩欲重宣其義而說頌曰：「願說最安隱，菩薩無上行， 分別於諸地，智淨成正覺。 此眾無諸垢，志解悉明潔， 承事無量佛，能知此地義。」",
+   "T0287": "爾時，解脫月菩薩聞是語已，白金剛藏菩薩言：「佛子！今此眾會皆悉清淨，其諸菩薩善淨意樂、善潔思念、善修諸行，已善承事無量百千俱胝諸佛，善集資糧，成就無量種種功德，永離疑惑無諸垢亹，善住增上意樂勝解，於佛法中不隨他教。善哉！佛子演說此義，是諸菩薩於如是處現證而住。」爾時解脫月菩薩，欲重宣此義而說頌曰：「願說最安隱，菩薩無上行； 分別於諸地，智淨成正覺。 此眾無諸亹，志解悉明潔； 承事無量佛，能知此地義。」",
+   "bo": "།དེ་སྐད་སྨྲས་པ་དང་། བྱང་ཆུབ་སེམས་དཔའ་རྣམ་པར་གྲོལ་བའི་ཟླ་བས། བྱང་ཆུབ་སེམས་དཔའ་རྡོ་རྗེའི་སྙིང་པོ་ལ་འདི་སྐད་སྨྲས་སོ། ། ཀྱེ་རྒྱལ་བའི་སྲས་འཁོར་འདི་ནི་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་ཆོས་འདི་དག་ལ་བསམ་པ་ཤིན་ཏུ་སྦྱངས་པ། ཀུན་ཏུ་རྟོག་པ་ཡོངས་སུ་སྦྱངས་པ་སྤྱད་པར་བྱ་བ་ཤིན་ཏུ་སྤྱོད་པ། ཚོགས་ཤིན་ཏུ་བསྩགས་པ། སངས་རྒྱས་བྱེ་བ་ཁྲག་ཁྲིག་བརྒྱ་སྟོང་ཤིན་ཏུ་བསྙེན་བཀུར་བ། ཡོན་ཏན་དང་ཡེ་ཤེས་ཚད་མེད་པ་དང་ལྡན་པ། ཐེ་ཙོམ་དང་ནེམ་ནུར་མེད་པ། ཉོན་མོངས་པ་དང་བྲལ་བ། མོས་པ་དང་ ལྷག་པའི་བསམ་པ་ལ་རབ་ཏུ་གནས་པ། གཞན་གྱི་དྲིང་མི་འཇོག་པ་ཤ་སྟག་ཚོགས་པས་ཡོངས་སུ་དག་པ་ཡིན་གྱིས། ཀྱེ་རྒྱལ་བའི་སྲས་དེ་བཞིན་གཤེགས་པའི་བྱིན་གྱིས་ལེགས་པར་བཤད་པ་མཛོད་ཅིག་དང་། བྱང་ཆུབ་སེམས་དཔའ་འདི་དག་ཐམས་ཅད་ནི་རྣམ་པ་འདི་ལྟ་བུའི་གནས་ཟབ་མོ་ལ་མངོན་སུམ་དུ་གནས་པ་ཤ་སྟག་གོ །དེ་ནས་བྱང་ཆུབ་སེམས་དཔའ་རྣམ་པར་གྲོལ་བའི་ཟླ་བས་དོན་འདི་ཉིད་གསལ་བར་བཟླས་པའི་ཕྱིར། བྱང་ཆུབ་སེམས་དཔའ་རྡོ་རྗེའི་སྙིང་པོ་ལ་ཚིགས་སུ་བཅད་དེ་སྨྲས་པ། །བྱང་ཆུབ་སེམས་པས་སྤྱོད་པ་བླ་མེད་པ། །ས་རྣམས་རབ་ཕྱེ་རྣམ་དགོད་བརྟགས་པ་ཡི། །ཡེ་ཤེས་སྦྱོང་ཞིང་བྱང་ཆུབ་ཐོབ་བྱེད་པ། །མཆོག་དང་དམ་པ་ཞི་བའི་ཆོས་རྣམས་ཤོད། །འཁོར་འདི་དག་པ་ཉོན་མོངས་མེད་པའི་མཆོག །མོས་དང་བསམ་པ་ཤིན་ཏུ་སྦྱངས་པ་སྟེ། །སངས་རྒྱས་བྱེ་བ་མང་ལ་སྤྱད་པ་སྤྱད། །ས་འདི་བརྟགས་ལ་ཡིད་ཆེས་ལྡན་པ་ཡིན།",
+   "en": "Then the bodhisattva Vimukticandra spoke these words to the bodhisattva Vajragarbha: “O jinaputra! This is a very pure assembly of gathered bodhisattva mahāsattvas who (1) have very pure higher motivation, (2) have very pure thoughts, (3) have practiced excellent conduct, (4) have served excellently many trillions  of buddhas, (5) have excellently gathered the accumulations,  (6) possess limitless qualities and wisdom, (7) are free of doubt and uncertainty, (8) are free of blemish, (9) are resolute in their motivation and aspiration, and (10) are within the Dharma of the buddhas and do not rely on anything else. “O jinaputra, through the blessing of the tathāgatas teach well all these bodhisattvas who are present before you in this place.”  The bodhisattva Vimukticandra, in order to repeat his meaning clearly, recited these verses to the bodhisattva Vajragarbha:    “Teach the supreme Dharma of sublime peace, Which presents and differentiates the bhūmis Of the unsurpassable conduct of the bodhisattva That purifies wisdom and causes enlightenment. “Those in this assembly are supreme, free of the kleśas. With perfectly pure motivation and thought, They have practiced with many trillions  of buddhas And have examined and gained conviction in this bhūmi.”"
+  },
+  "d0-08": {
+   "sa": "vajragarbha āha - kiṃcāpi bho jinaputra ayaṃ bodhisattvaparṣatsaṃnipātaḥ supariśuddhaḥ / peyālaṃ / atha ca punarye 'nye imānyevaṃrūpāṇyacintyāni sthānāni śṛṇuyuḥ, śrutvā ca vimatisaṃdehamutpādayeyuḥ, teṣāṃ tatsyāddīrgharātramanarthāya ahitāya duḥkhāya / iyaṃ me kāruṇyacittatā, yena tūṣṇīṃbhāvamevābhirocayāmi //",
+   "T0285": "金剛藏菩薩，報月解脫：「佛子察之！今此眾會，四面雲集，云何見之？所念應宜，柔弱仁和，清淨無瑕，豈離狐疑無猶豫乎？於斯法要，寧有高行，不依他人，無戴仰耶？不從他教，進退不安，懷抱久病，不可療治，堅住羅網，未出深塹，六十二疑，四倒五蓋，火林蛇室，十二牽連，十重之閣，三坑三戶，三流之逸遊在曠野，未向佛門，設聞此法，躊躇不進。或復有人，若聞於此不可思議，如是道住，各懷異心，聞之狐疑不肯篤信，由此惑亂，長夜不安，永失利義，捨根取枝。吾故向者默然不言，慈愍此等，無辭為住樂無所樂。」又說偈言：「豈見於眾會，智慧淨無垢； 善敷演聖道，諸根通深妙。 而無所戴仰，無動等如山； 志性無瞋恨，思平如水正。 習修何所行，其慧無等倫； 住在樂所識，為求義慧信。 適聞恐猶豫，便墮于惡趣； 以故愍念此，不說慧住地。」",
+   "T0286": "爾時，金剛藏菩薩言：「佛子！是諸大眾雖皆清淨，離癡、疑、悔，於此事中不隨他教，其餘樂小法者，聞是甚深難思議事或生疑、悔，是人長夜受諸衰惱，我愍此等是故默然。」爾時，金剛藏菩薩欲明了此義而說偈言：「是眾雖清淨，深智離疑悔， 其心已決定，不復隨他教， 無動如須彌、不亂如大海。 其餘不久行，智慧未明了， 隨識不隨智，聞已生疑悔， 彼將墜惡趣，愍念故不說。」",
+   "T0278": "金剛藏菩薩言：「佛子！是諸大眾雖皆清淨離癡疑悔，於是法中不隨他教；其餘樂小法者，聞是甚深難思議事，或生疑悔，是人長夜受諸衰惱；我愍此等，是故默然。」時，金剛藏菩薩欲重宣此義，以偈頌曰：「是眾雖清淨，深智離疑悔， 其心已決定，不復隨他教。 無動如須彌，不亂如大海， 其餘不久行，智慧未明了。 隨識不隨智，聞已生疑悔， 彼將墮惡道，愍念故不說。」",
+   "T0279": "爾時，金剛藏菩薩言：「佛子！雖此眾集善淨思念，捨離愚癡及以疑惑，於甚深法不隨他教；然有其餘劣解眾生，聞此甚深難思議事，多生疑惑，於長夜中受諸衰惱。我愍此等，是故默然。」爾時，金剛藏菩薩欲重宣其義而說頌曰：「雖此眾淨廣智慧，甚深明利能決擇， 其心不動如山王，不可傾覆猶大海。 有行未久解未得，隨識而行不隨智， 聞此生疑墮惡道，我愍是等故不說。」",
+   "T0287": "時金剛藏菩薩言：「佛子！雖此眾會皆悉清淨，其諸菩薩善淨意樂、善潔思念、善修諸行，已善能承事無量百千俱胝諸佛，善集資糧，成就無量種種功德，永離疑惑無諸垢釁，善住增上意樂勝解，於佛法中不隨他教。然有其餘劣解有情，聞此甚深難思議處忽生疑惑，是彼長夜能引無義無利眾苦。我愍此等，故樂默然。」爾時，金剛藏菩薩，欲重宣此義而說頌曰：「雖此眾淨廣智慧，甚深明利能決擇； 其心不動如山王，不可傾覆猶大海。 有行未久解未得，隨識而行不隨智； 聞此生疑墮惡道，我愍是等故不說。」",
+   "bo": "།དེ་ནས་བྱང་ཆུབ་སེམས་དཔའ་རྡོ་རྗེའི་སྙིང་པོས་བྱང་ཆུབ་སེམས་དཔའ་རྣམ་པར་གྲོལ་བའི་ཟླ་བ་ལ་འདི་སྐད་ཅེས་སྨྲས་སོ། ། ཀྱེ་རྒྱལ་བའི་སྲས་འཁོར་འདི་ལྟར་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་ཆོས་ཀྱི་རྣམ་པ་འདི་ལྟ་བུའི་གནས་ཟབ་མོ་ལ་བསམ་པ་ཤིན་ཏུ་སྦྱངས་པ། ཀུན་ཏུ་རྟོག་པ་ཡོངས་སུ་སྦྱངས་པ། སྤྱོད་པ་ཤིན་ཏུ་སྤྱད་པ། ཚོགས་ཤིན་ཏུ་བསྩགས་པ། སངས་རྒྱས་བྱེ་བ་ཁྲག་ཁྲིག་བརྒྱ་སྟོང་ལ་དགེ་བའི་རྩ་བ་ཤིན་ཏུ་བསྩགས་པ། ཡོན་ཏན་དང་ཡེ་ཤེས་ཚད་མེད་པ་དང་ལྡན་པ། ཐེ་ཙོམ་དང་ནེམ་ནུར་མེད་པ། ཉོན་མོངས་པ་དང་བྲལ་བ། མོས་པ་དང་ལྷག་པའི་བསམ་པ་ལ་རབ་ཏུ་གནས་པ། གཞན་གྱི་དྲིང་མི་འཇོག་པ་ཤ་སྟག་ཚོགས་པས་ཤིན་ཏུ་དག་པ་ཡང་ཡིན་ན། འོན་ཀྱང་སེམས་ཅན་མོས་པ་ཆུང་ངུ་གཞན་དག་གིས་ཟབ་མོའི་རྣམ་པ་འདི་ལྟ་བུ་བསམ་གྱིས་མི་ཁྱབ་པའི་གནས་དག་ཐོས་པར་གྱུར་ལ་ཐོས་ནས་ཀྱང་ཐེ་ཙོམ་དང་ཡིད་གཉིས་སུ་གྱུར་ན། དེ་དག་ལ་ཡུན་རིང་པོར་གནོད་པ་དང་། དོན་མེད་པ་དང་། མི་བདེ་བའི་རྒྱུར་འགྱུར་བས་འདི་ལྟ་ཞིག་ཏུ་སྙིང་བརྩེ་བའི་ཕྱིར་བདག་ནི་ ཅང་མི་ཟེར་བར་འདུག་པ་ཉིད་དུ་མོས་སོ། །དེ་ནས་བྱང་ཆུབ་སེམས་དཔའ་རྡོ་རྗེའི་སྙིང་པོས་དོན་འདི་ཉིད་གསལ་བར་བསྟན་པའི་ཕྱིར་ཚིགས་སུ་བཅད་པ་འདི་དག་སྨྲས་སོ། །འཁོར་འདི་རྣམ་དག་ཤེས་རབ་ཡངས་པ་སྟེ། །ཟབ་ཅིང་གསལ་བའི་སྤྱོད་ལྡན་རྟོག་ཤེས་ཤིང་། །གཞན་དྲིང་མྱི་འཇོག་རི་རྒྱལ་བཞིན་མི་གཡོ། །བསམ་རྟོག་མི་འཁྲུག་རྒྱ་མཚོ་ཆེན་པོ་འདྲ། །འོན་ཀྱང་མ་རྟོགས་མི་ཤེས་མ་སྦྱང་བ། །རྣམ་ཤེས་ཡུལ་ནས་དོན་ལ་ཤེས་མེད་པས། ཐོས་ཤིང་མ་ཆེས་ཕྲལ་དུ་ངན་སོང་ལྟུང་། །དེ་དག་སྙིང་བརྩེས་ཡེ་ཤེས་ས་མ་བཤད།",
+   "en": "The bodhisattva Vajragarbha said these words to the bodhisattva Vimukticandra: “O jinaputra, this very pure assembly of gathered bodhisattva mahāsattvas (1) has very pure higher motivation, (2) has very pure thoughts, (3) has practiced excellent conduct, (4) has excellently served trillions of buddhas, (5) has excellently gathered the accumulations,  (6) possesses limitless qualities and wisdom, (7) is free of doubt and uncertainty, (8) is free of blemish, (9) is resolute in its motivation and aspiration, and (10) is within the Dharma of the buddhas and does not rely on anything else. “However, other beings with lesser aspiration will have doubts and uncertainty if they hear such inconceivable subjects as these, which for a long time will not bring them benefit but will harm them and cause them unhappiness. Therefore, I remained silent out of compassion for them.” Then Vajragarbha recited these verses in order to make his meaning clear: “Those in this assembly are pure; they have vast wisdom And possess profound clear conduct and knowledge from examination. They do not depend on anything else and are as unshakable as the king of mountains. Their thoughts are undisturbed and like a great ocean. “However, those who do not understand, do not know, and have not trained Will not know this meaning when it is an object of their consciousness. When they hear it they will disbelieve it and go immediately to the lower realms, So from compassion for them I did not teach the wisdom bhūmis.”"
+  },
+  "d0-09": {
+   "sa": "atha khalu vimukticandro bodhisattvaḥ punareva vajragarbhaṃ bodhisattvametamevārthamadhyeṣate sma - tatsādhu bho jinaputra, prabhāṣasva / tathāgatasyaivānubhāvena imānyevaṃrūpāṇyacintyāni sthānāni svārakṣitāni śraddheyāni bhaviṣyanti / taskasya hetoḥ? tathā hi bho jinaputra asmin bhūminirdeśe bhāṣyamāṇe dharmatāpratilambha eṣa yatsarvabuddhasamanvāhāro bhavati / sarve bodhisattvāśca asyā eva jñānabhūmerārakṣārthamautsukyamāpadyante / tatkasya hetoḥ? eṣā hyādicaryā / eṣa samudāgamo buddhadharmāṇām / tadyathāpi nāma bho jinaputra sarvalipyakṣarasaṃkhyānirdeśo mātṛkāpūrvaṃgamo mātṛkāparyavasānaḥ nāsti sa lipyakṣarasaṃkhyānirdeśo yo vinā mātṛkānirdeśam, evameva bho jinaputra sarve buddhadharmā bhūmipūrvaṃgamāśca caryāpariniṣpattito bhūmiparyavasānāḥ svayaṃbhūjñānādhigamatayā / tasmāttarhi bho jinaputra, prabhāṣasva / tathāgatā eva arhantaḥ samyaksaṃbuddhā ārakṣāmadhiṣṭhāsyanti //",
+   "T0285": "月解脫菩薩，復謂金剛藏：「仁者顧意，承佛威神，宣如來旨，感動十方，反偽向真，消諸垢塵，盪滌結滯，裂三界網，通無極慧，唯敷演之，如是比像不可思議，善當將養，寬弘之士，必當信樂無猶豫者。所以者何？佛子當知！若講此教，將致道法，一切菩薩，皆念諸佛，識達經義，擁護奉此行慧道地，靡不蒙賴咸得安隱。所以者何？斯之所行，必歸平等，諸佛道法，猶如佛子，一切書䟽唯說文字，此悉由意心為源首，從志因緣而有所倚，書本無文，所演文字，心之源空，宣之虛無。如是佛子，一切佛法，住為源首，因行而成，依於道地，至自然慧。是故唯說，顧愍一切，如來、至真、等正覺道力助卿，建立分別如此文字，令其坦然，將護正法，因得久存，使無餘結。」又說偈言：「善哉演清淨，解入一切智； 普遊諸道要，至覺成聖慧。 諸在十方佛，安住最道勝； 慧室至境界，皆共愍念之。 立此親近慧，行是究竟迹； 諸佛無比法，悉由無量業。 猶書意合集，因心事為首； 此住意如是，解暢至佛道。」",
+   "T0286": "解脫月菩薩言：「佛子！願承佛力善分別此不可思議法、佛所護念事，令人易信解。所以者何？善說十地義，十方諸佛法應護念，一切菩薩護是事故，勤行精進。何以故？是菩薩最上所行，得至一切諸佛法故。譬如所有經書皆初章所攝，初章為本，無有一字不入初章者。如是，佛子！十地者，是一切佛法之根本，菩薩具足行是十地，能得一切智慧。是故，佛子！願說此義。諸佛護念，加以神力，令人信受，不可破壞。」爾時，解脫月菩薩欲顯此義而說偈言：「善哉智慧子！清淨行具足。 願說十地行，所入十地法， 具足於智慧，得以成菩提。 所有十方佛，最勝人中尊， 皆共護念汝，說是十地義。 十地為根本，是名智行處， 亦為究竟道，佛無量法聚。 譬如諸文字，皆攝在初章； 諸佛功德智，十地為根本。」",
+   "T0278": "解脫月菩薩言：「佛子！願承佛力，善分別此不可思議法，佛所護念事，令易信解；所以者何？善說十地義，十方諸佛法應護念；一切菩薩護是事故，勤行精進。何以故？是菩薩最上所行，得至一切諸佛法故。譬如一切文字，皆初章所攝，初章為本，無有一字不入初章者；如是，佛子！十地者，是一切佛法之根本；菩薩具足行是十地，能得一切智慧。是故，佛子！願說此義，諸佛護念，加以神力，令人信受，不可破壞。」時，解脫月菩薩欲明顯此義，以偈頌曰：「善哉智慧子，清淨行具足， 願說十地行，所入十地法， 具足於智慧，得以成菩提。 所有十方佛，最勝人中尊， 皆共護念汝，說是十地義。 十地為根本，是名智行處， 亦為究竟道，佛無量法聚。 譬如諸文字，皆攝在初章， 諸佛功德智，十地為根本。」",
+   "T0279": "爾時，解脫月菩薩重白金剛藏菩薩言：「佛子！願承佛神力分別說此不思議法，此人當得如來護念而生信受。何以故？說十地時，一切菩薩法應如是，得佛護念。得護念故，於此智地能生勇猛。何以故？此是菩薩最初所行，成就一切諸佛法故。譬如書字、數說，一切皆以字母為本、字母究竟，無有少分離字母者。佛子！一切佛法皆以十地為本，十地究竟修行成就，得一切智。是故，佛子！願為演說！此人必為如來所護，令其信受。」爾時，解脫月菩薩欲重宣其義而說頌曰：「善哉佛子願演說，趣入菩提諸地行！ 十方一切自在尊，莫不護念智根本。 此安住智亦究竟，一切佛法所從生， 譬如書數字母攝，如是佛法依於地。」",
+   "T0287": "爾時，解脫月菩薩，復白金剛藏菩薩言：「善哉！佛子！願說勿疑。由佛神力佛所護念，此如是等不思議處皆得可信。所以者何？唯佛子！說此十地解釋之時，法爾如是，謂一切佛皆悉護念，一切菩薩為欲衛護此智地故皆發勇悍。所以者何？此是菩薩最初正行，亦是一切佛法修證。唯佛子！譬如一切書字數說，字母為始、字母為終，無有少分書字數說離字母者。佛子！一切佛法亦復如是，以地為始發修行故，以地為終證佛智故。是故佛子！願為演說，諸佛、應供、正遍等覺加持護念。」爾時，解脫月菩薩，欲重宣此義而說頌言：「善哉佛子願演說，趣入菩提諸地行； 十方一切自在尊，無不護念智根本。 此正行始此智終，一切佛法從此起； 如諸書等字母攝，佛法依地亦如是。」",
+   "bo": "དེ་ནས་བྱང་ཆུབ་སེམས་དཔའ་རྣམ་པར་གྲོལ་བའི་ཟླ་བས་ཡང་བྱང་ཆུབ་སེམས་དཔའ་རྡོ་རྗེའི་སྙིང་པོ་ལ་གསོལ་བ་བཏབ་པ། ཀྱེ་རྒྱལ་བའི་སྲས་ལེགས་པར་བཤད་པ་མཛོད་ཅིག་དང་། དེ་བཞིན་གཤེགས་པའི་བྱིན་གྱིས་རྣམ་པ་འདི་ལྟ་བུ་བསམ་གྱིས་མྱི་ཁྱབ་པའི་གནས་འདི་དག་ཀྱང་གཞན་དུ་མི་འགྱུར་བ་དང་། ལེགས་པར་ཡིད་ཆེས་པར་འགྱུར་རོ། །དེ་ཅིའི་ཕྱིར་ཞེ་ན། ཀྱེ་རྒྱལ་བའི་སྲས་དེ་ནི་འདི་ལྟར་ས་ཤིན་ཏུ་བསྟན་པ་འདི་བཤད་པའི་ཚེ་ཆོས་ཉིད་རབ་ཏུ་ཐོབ་པས། སངས་རྒྱས་ཐམས་ཅད་ཀྱིས་ཀྱང་དགོངས་པར་འགྱུར། བྱང་ཆུབ་སེམས་དཔའ་ཐམས་ཅད་ཀྱང་ཡེ་ཤེས་ཀྱིས་འདི་ཡོངས་སུ་བསྲུང་བའི་དོན་དུ་རབ་ཏུ་བརྩོན་པར་བྱེད་དོ། །དེ་ཡང་ཅིའི་ཕྱིར་ཞེ་ན། འདི་ནི་སྤྱོད་པའི་ས་དང་པོ་སྟེ། འདི་ནི་སངས་རྒྱས་ཀྱི་ཆོས་ཐམས་ཅད་ཡང་དག་པར་འགྲུབ་པའི་གཞི་ཡིན་ནོ། །ཀྱེ་རྒྱལ་བའི་སྲས་འདི་ལྟ་སྟེ་དཔེར་ན། ཡི་གེ་དང་འབྲུ་འགྲངས་པ་ཇི་སྙེད་དུ་བསྟན་པ་དེ་དག་ཐམས་ཅད་ཀྱི་སྔོན་དུ་འགྲོ་བའང་ཡི་གེའི་ཕྱི་མོའོ། །ཐ་མར་ཡང་ཡི་གེའི་ཕྱི་མོ་ལ་ཐུག་སྟེ། ཡི་གེའི་ཕྱི་མོ་བསྟན་པས་མ་ཁྱབ་པ་དེ་ལྟ་བུའི་ཡི་གེ་དང་འབྲུ་འགྲངས་པ་བསྟན་པ་ནི་གང་ཡང་མེད་དོ། །ཀྱེ་རྒྱལ་བའི་སྲས་དེ་བཞིན་དུ་སངས་རྒྱས་ཀྱི་ཆོས་ཐམས་ཅད་ཀྱང་སྤྱོད་པས་རབ་ཏུ་འགྲུབ་པས་ས་སྔོན་དུ་འགྲོ་བའོ། །རང་བྱུང་གི་ཡེ་ཤེས་ཀྱི་མཐར་ཐུག་པར་འགྱུར་བས། སའི་མཐར་ཐུག་པའོ་དེ་བས་ན། ཀྱེ་རྒྱལ་ བའི་སྲས་ཤོད་ཅིག་དང་། དེ་བཞིན་གཤེགས་པ་དགྲ་བཅོམ་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་རྣམས་ཀྱང་ཡོངས་སུ་བསྲུང་བའི་ཕྱིར་བྱིན་གྱིས་རློབ་པ་མཛད་དོ། །དེ་ནས་བྱང་ཆུབ་སེམས་དཔའ་རྣམ་པར་གྲོལ་བའི་ཟླ་བས་དོན་འདི་ཉིད་གསལ་བར་བཟླས་པའི་ཕྱིར། །བྱང་ཆུབ་སེམས་དཔའ་རྡོ་རྗེའི་སྙིང་པོ་ལ་ཚིགས་སུ་བཅད་དེ་སྨྲས་པ། ། ས་དང་སྤྱོད་འཇུག་བྱང་ཆུབ་འགྱུར་བ་ཡེ་ཤེས་སྒྲུབ་བྱེད་པ། །སྤྱོད་པ་རྣམ་དག་ཐམས་ཅད་མཁྱེན་པའི་སྲས་ཀྱིས་ལེགས་པར་ཤོད། །ཕྱོགས་བཅུའི་རྒྱལ་བ་བདེ་གཤེགས་ཀུན་མགོན་འདྲེན་པ་ཇི་སྙེད་པ། །ཁྱུ་མཆོག་དེ་ཀུན་ཡེ་ཤེས་འབྱུང་གནས་སྟོན་ལ་དགོངས་པ་མཛད། །འདི་ནི་དང་པོ་ཞུགས་པའི་ཤེས་སྤྱོད་འདི་མཐར་ཐུག་སྟེ། །རྒྱལ་བའི་ཆོས་རབ་གཞལ་ཡས་ཇི་སྙེད་དེ་དག་འབྱུང་གནས་འདི། །ཡི་གེ་འགྲངས་པ་ཕྱི་མོའི་རྗེས་འགྲོ་སྔོན་དུ་དེ་འགྲོ་ལྟར། །དེ་བཞིན་ས་མཆོག་བློ་ཡི་ཡུལ་དུ་ཐ་མ་ཐུག་པར་འདོང་།",
+   "en": "Then the bodhisattva Vimukticandra repeated this request to the bodhisattva Vajragarbha: “O jinaputra! Teach it well. Through the power of the tathāgatas these inconceivable subjects will be well protected  and will be believed in. Why is that? O jinaputra! When you give this teaching on the bhūmis to these jinaputras, there will be an understanding of the true nature, which is what all buddhas are intent upon, and all the bodhisattvas will long to protect this wisdom bhūmi. Why is that? Because this is both the initial conduct and complete attainment  of the Buddhadharma. “O jinaputra! By analogy, the alphabet precedes the teaching of written letters and words.  Without the alphabet being learned, written letters and words cannot be taught. “O jinaputra! In the same way, through the accomplishment of conduct the bhūmis precede all the qualities of buddhahood, and self-arisen wisdom is attained through the conclusion of the bhūmis. Therefore, O jinaputra, give your teaching! The tathāgata arhat samyaksambuddhas will oversee  its protection.” Then the bodhisattva Vimukticandra, in order to repeat this clearly, recited these verses to the bodhisattva Vajragarbha: “Son of the omniscient one! Teach well every pure conduct: The bhūmis, engagement in conduct, enlightenment, and the attainment of wisdom. The jinas in the ten directions, all sugatas, every protector and guide—All those leaders are intent upon the teaching of the source of wisdom.  “This initial wisdom and conduct is the ultimate conclusion. It is the source of all the countless qualities of the jinas, Just as the alphabet precedes and accompanies letters and words. We wish for the supreme bhūmis that are similarly the ultimate conclusion for the realm of the mind.”"
+  },
+  "d0-10": {
+   "sa": "atha khalu te sarve bodhisattvā ekasvarasaṃgītena tasyāṃ velāyāṃ vajragarbhaṃ bodhisattvaṃ gāthābhigītenaiva tamarthamadhyeṣante sma- pravaravaravimalabuddhe svabhidhānānantaghaṭitapratibha / pravyāhara madhuravarāṃ vācaṃ paramārthasaṃyuktām // 12 // smṛtidhṛtiviśuddhabuddhe daśabalabalalābhamāśayaviśuddhim / pratisaṃviddaśavicayaṃ bhāṣasva daśottamā bhūmīḥ // 13 // śamaniyamanibhṛtasumanāḥ prahīṇamadamānadṛṣṭisaṃkleśā / niṣkāṅkṣā parṣadiyaṃ prārthayate bhāṣitāni tava // 14 // tṛṣita iva śītamudakaṃ bubhukṣito 'nnaṃ subheṣajamivārtaḥ / kṣaudramiva sa madhukaragaṇastava vācamudīkṣate parṣat // 15 // tatsādhu vimalabuddhe bhūmiviśeṣān vadasva virajaskān / daśabalayuktāsaṅgāṃ sugatagatimudīrayannikhilām // 16 //",
+   "T0285": "於是一切菩薩，各各發心，咸共勸助，欲令宣揚仁本興意，誓為一切，勤勞積功，累無量德；猶如虛空，欲濟危厄，不難劫數，周遊生死，心常慺慺，欲濟一切心無所著；行如蓮華在泥塗中，三界之苦不以為拘，唯懷愍傷，拔惱根株，三世之樹永令無餘。時諸菩薩，同時舉聲，勸歎金剛藏菩薩，而說頌曰：「最勝殊特志覺遠，辯才無量心念具； 宣傳柔軟至佛教，第一至真甚微妙。 其意堅固行清淨，不捨功勳十種力； 以分別辯故造行，唯願當演上道法。 心之所念如明珠，意寂以見消塵欲； 今此眾會離狐疑，咸皆願樂仁所說。 虛渴言教如望泉，飢服仁者病待醫； 甘美之餅在目前，如是欣樂甘露味。 故善垂念廣其志，宣殊勝住除垢塵； 調寂正安不捨無，講眾祐行無患難。」",
+   "T0286": "爾時，諸菩薩一時同聲以偈請金剛藏菩薩言：「上妙智慧人！樂說無有量， 德重如山王，哀愍說十地。 戒念慧清淨，說是十地義， 十力之根本，無閡智本行。 戒定慧功德，集在仁者心， 憍慢諸邪見，皆悉已滅盡。 是眾無疑心，唯願聞善說， 譬如渴思水、如飢思美食、 如病思良醫、如蜂欲食蜜， 我等亦如是，聞甘露法味。 是故曠大意，願開初地門， 乃至第十地，次第為我說。」",
+   "T0278": "爾時，諸菩薩一時同聲以偈請金剛藏菩薩言：「上妙智慧人，樂說無有量， 德重如山王，哀愍說十地。 戒念慧清淨，說是十地義， 十力之根本，無礙智本行。 戒定慧功德，集在仁者心， 憍慢諸邪見，皆悉已滅盡。 是眾無疑心，唯願聞善說， 譬病思良醫，如飢思美膳。 我等亦如是，聞甘露法味， 是故曠大意，願開初地門， 乃至第十地，次第為我說。」",
+   "T0279": "爾時，諸大菩薩眾一時同聲向金剛藏菩薩而說頌言：「上妙無垢智，無邊分別辯， 宣暢深美言，第一義相應。 念持清淨行，十力集功德， 辯才分別義，說此最勝地。 定戒集正心，離我慢邪見， 此眾無疑念，唯願聞善說！ 如渴思冷水，如飢念美食， 如病憶良藥，如蜂貪好蜜； 我等亦如是，願聞甘露法！ 善哉廣大智，願說入諸地， 成十力無礙，善逝一切行！」",
+   "T0287": "爾時，此諸大菩薩眾，亦為此義一時同聲，而以頌請金剛藏菩薩曰：「上妙無垢智，善說無邊辯； 宣揚美妙言，勝義相應理。 念持清淨慧，為十力意樂； 無礙解決擇，說殊勝十地。 此眾離憍慢，及見疑雜染； 戒定審悅意，唯願聞善說。 如渴思冷水，如飢念美食， 如病憶良藥，如眾蜂嗜蜜， 此眾亦如是，願聞甘露法。 善哉清淨智，說無垢地位； 顯十力相應，無礙善逝道。」",
+   "bo": "།དེ་ནས་བྱང་ཆུབ་སེམས་དཔའ་དེ་དག་ཐམས་ཅད་ཀྱི་དབྱངས་ཀྱི་ང་རོ་གཅིག་ཏུ་གླུའི་དབྱངས་ཀྱིས་ཚིགས་སུ་བཅད་དེ། བྱང་ཆུབ་སེམས་དཔའ་རྡོ་རྗེའི་སྙིང་པོ་ལ་དོན་འདི་ཉིད་ཀྱི་ཕྱིར། གསོལ་བ་བཏབ་པ། བློ་ཡངས་དམ་པའི་ཕུལ་མངའ་བ། །སྤོབས་པ་མཐའ་ཡས་རྣམ་པར་དབྱེ་བ་རྟོགས་མཁྱེན་པས། །ཡིད་དུ་འོང་བའི་གསུང་དབྱངས་ཀྱིས། །ཀུན་ལ་ཕན་དོན་དམ་པ་བཤད་པ་མཛོད། །དྲན་དང་དགའ་བས་སྤྱོད་དག་པ། །སྟོབས་བཅུའི་སྟོབས་ཀྱིས་ཤུགས་སྩོགས་ཡོན་ཏན་ལྡན་པ་ཡི། །ས་ཡི་དམ་པ་མཆོག་གི་རྣམས། །ཐ་དད་ཡང་དག་དོན་མཁྱེན་སྤྱོད་པས་ཤོད། །ཞི་སྡོམ་བསྒྲུབ་པའི་ཡིད་ལྡན་པ། །ང་རྒྱལ་དྲེགས་དང་ལྟ་བའི་ཉོན་མོངས་ཞིར་གྱུར་པས། །འཁོར་འདིར་ཐེ་ཙོམ་བྲལ་བ་སྟེ། །ཁྱོད་ཀྱིས་ལེགས་པར་བཤད་དོ་རེ་ཞིག་སྡོད། །སྐོམ་པ་བསིལ་བའི་ཆུ་འདོད་བཞིན། །བཀྲེས་པ་ཁ་ཟས་ནད་པ་སྨན་རབ་འདོད་པ་དང་། བུང་བ་སྦྲང་རྩི་འདོད་ པ་ལྟར། །དེ་བཞིན་འཁོར་འདི་ཁྱོད་ཀྱི་ཚིག་ལ་སྡོད། ། དེ་བས་ཤིན་ཏུ་བློ་ཡངས་པས། །རྡུལ་མེད་རྣམས་ལས་ཡི་དམ་པ་ ཇུག་པ་ཤོད། །ཆགས་མེད་སྟོབས་བཅུའི་ཚོགས་གྱུར་པ། །བདེ་གཤེགས་སྤྱོད་པ་མ་ལུས་བཤད་པར་མཛོད།",
+   "en": "Then all the bodhisattvas sang together in one voice, making a request to the bodhisattva Vajragarbha through the verses of a song: “You have the supreme, highest understanding. You are eloquent  and possess infinite brilliance. Speak with your supreme beautiful voice, That which possesses the ultimate truth.    “With pure understanding  endowed with unwavering  memory, Pure motivation,  and the attainment of the strength of the ten strengths, And having analyzed the ten bhūmis  with your own discrimination, Give the teaching of the supreme ten bhūmis. “They have good minds that are peaceful and restrained. They are free of arrogance, pride, and view-originated kleśas. Those of the assembly are free from doubt, And they long to hear your teaching. “Just as the thirsty long for cool water, The hungry want food, and the sick want medicine,  And just as swarms of bees yearn for honey, In that way this assembly yearns for your words. “You have excellent, stainless understanding. Teach with clarity the different bhūmis, Describing completely the way of the sugatas, Which is without impediment and possesses the ten strengths.”"
+  },
+  "d0-11": {
+   "sa": "atha khalu tasyāṃ velāyāṃ bhagavataḥ śākyamunerūrṇākośād bodhisattvabalāloko nāma raśmirniścacāra asaṃkhyeyāsaṃkhyeyaraśmiparivārā / sā sarvāsu daśasu dikṣu sarvalokadhātuprasarānavabhāsya sarvāpāyaduḥkhāni pratiprasrabhya sarvamārabhavanāni dhyāmīkṛtya aparimitāni buddhaparṣanmaṇḍalānyavabhāsya acintyaṃ buddhaviṣayākāraprabhāvaṃ nidarśya sarvāsu daśasu dikṣu sarvalokadhātuprasareṣu sarvatathāgataparṣanmaṇḍaleṣu dharmadeśanādhiṣṭhānādhiṣṭhitān bodhisattvānavabhāsya acintyaṃ buddhavikurvaṇaṃ saṃdarśya uparyantarīkṣe mahāraśmighanābhrajālakūṭāgāraṃ kṛtvā tasthau / teṣāmapi buddhānāṃ bhagavatāmūrṇākośebhya evameva bodhisattvabalālokā nāma raśmayo niśceruḥ / niścarya asaṃkhyeyāsaṃkhyeyaraśmiparivārāstāḥ sarvāsu....pe...buddhavikurvaṇamādarśya idaṃ bhagavataḥ śākyamuneḥ parṣanmaṇḍalaṃ vajragarbhasya bodhisattvasyātmabhāvamavabhāsya uparyantarīkṣe evameva mahāraśmighanābhrajālakūṭāgāraṃ kṛtvā tasthuḥ / iti hi ābhiśca bhagavataḥ śākyamunerūrṇākośaprasṛtābhī raśmibhiste lokadhātavastāni ca buddhaparṣanmaṇḍalāni teṣāṃ ca bodhisattvānāṃ kāyā āsanāni ca sphuṭānyavabhāsitāni saṃdṛśyante sma / teṣāṃ ca aparimāṇeṣu lokadhātuṣu buddhānāṃ bhagavatāmūrṇākośaprasṛtābhī raśmibhirayaṃ trisāhasramahāsāhasralokadhāturidaṃ ca bhagavataḥ śākyamuneḥ parṣanmaṇḍalaṃ vajragarbhasya ca bodhisattvasya kāya āsanaṃ sphuṭamavabhāsitaṃ saṃdṛśyante sma / atha khalu tato mahāraśmighanābhrajālakūṭāgārādvuddhānubhāvena ayamevaṃrūpaḥ śabdo niścarati sma- asamasamākāśamairdaśabalavṛṣabhairanantamukhyaguṇaiḥ / śākyakulajasya dharmairdevamanuṣyottamaiḥ kṛtamadhiṣṭhānam // 17 // anubhāvātsugatānāṃ kośaṃ vivṛṇuṣva dharmarājānām / caryāvarāmudārāṃ prabhedaśo jñānabhūmiṃ ca // 18 // adhiṣṭhitāste sugatairdhāritā bodhisattvaiśca / yeṣāṃ śrotrapathāgataḥ śreṣṭho yo dharmaparyāyaḥ // 19 // daśa bhūmīrvirajasaḥ pūrayitvānupūrveṇa / balāni daśa ca prāpya jinatāmarpayiṣyanti // 20 // sāgarajale nimagnāḥ kalpoddāheṣu prakṣiptāḥ / bhavyāste dharmaparyāyamimaṃ śrotumasaṃdigdhāḥ // 21 // ye tu vimatisaktāḥ saṃśayaiścābhyupetāḥ / sarvaśo na hi teṣāṃ prāpsyate śrotrametat // 22 // bhūmijñānapathaṃ śreṣṭhaṃ praveśasthānasaṃkramam / anupūrveṇa bhāṣasva caryāviṣayameva ca // 23 //",
+   "T0285": "於是世尊有諸菩薩至聖光明，號曰力勢，佛從眉間，演此光燿，興無數明，普照十方一切佛土，消滅一切諸所惡趣，勤苦休息，不復考治，皆安隱，照斯如來，一切道場；十方佛國，建立法講，靡不周悉不可思議諸佛境界。其光則還，繞佛三匝，上住虛空，合成大光，光明煒煒，立交露帳。又有諸佛興出世間，自然威曜，從其眉間，演如是倫，諸菩薩等，力勢光明，現如此比，神足變化，照斯忍界，曜是能仁，眾會道場及金剛藏師子之座，乃住虛空，成光交露帳。是能仁佛，眉間毫跱，光明廣遠，照諸闇冥，十方佛界，眾會道場，莫不蒙明光，咸顯現在諸菩薩，大士屋宇，一切晃現。其於十方諸佛國土，現諸如來所可演出，眉間光燿，皆復照燿此忍世界，能仁眾會菩薩道場，周照師子高廣之座。在金剛藏菩薩身，現於大光，巍巍晃然，珠交露帳，各有坐佛，自從口出如是輩聲，而歎頌曰：「喻之無等倫，譬之如虛空； 十力境界尊，功勳不可量。 殊勝最上特，普世為無上； 建立第一業，釋師子之法。 講眾安住子，蒙導師恩慈； 法王人中帝，演眉間光明。 班宣佛道慧，入妙眾行無； 賴十力垂顧，分別普化眾。 安住已建立，斯聞能宣照； 寶法為上尊，是寂其志性。 一切住無穢，具足滿本願； 因十力最勝，志求上尊路。 海水尚可盡，一切數知限； 若人欲度此，不可卒得聞。 其能離志念，永除眾狐疑； 一切未有愍，照以此經典。 是故辯才尊，緣住慧徑路； 所處奉斯行，遊步依本業。 至行入境界，普到佛聖智； 愍一切眾生，布散此法因。」",
+   "T0286": "爾時，釋迦牟尼佛從眉間白毫相放菩薩力明光焰，百千阿僧祇光以為眷屬。放斯光已，普照十方諸佛世界靡不周遍，三惡道苦皆得休息，悉照十方諸佛大會說法之眾，顯現如來不思議力。是光明遍照十方諸佛大會諸菩薩身已，於上虛空中成大光明雲臺。十方諸佛亦復如是，從眉間白毫相俱放菩薩力明光焰，百千阿僧祇光以為眷屬，普現如來不思議力，悉照一切諸佛大會及照娑婆世界釋迦牟尼佛、大眾、并照金剛藏菩薩摩訶薩及師子座。照已，於上虛空中成大光明雲臺。時諸大光明雲臺中，諸佛神力故，而說偈言：「無等等諸佛，功德如虛空， 十力無畏等，最尊世間主。 於釋迦佛前，而現此神力， 以佛力開現，法王師子藏。 說諸地所行、諸地義差別， 承諸佛力說，無有能壞者。 若人聞法寶，則為諸佛護， 漸次具諸地，得以成佛道。 若人堪任聞，雖在於大海， 及劫盡火中，必得聞此經； 若人癡疑悔，終不能得聞。 是故今佛子，說諸地智道、 入勢力觀法，次第而修行， 得至於餘地，各得所利益。 利一切世間，願說勿令斷。」",
+   "T0278": "爾時，釋迦牟尼佛從眉間白毫相，放菩薩力光明，百千阿僧祇光以為眷屬，普照十方諸佛世界，靡不周遍，三惡道苦皆得休息；悉照十方諸佛大會說法之眾，顯現如來不思議力。是光明遍照十方諸佛大會諸菩薩身已，於上虛空中，成大光明雲臺；十方諸佛亦復如是，從眉間白毫俱放菩薩力光明，百千阿僧祇光以為眷屬，普現如來不思議力，悉照一切諸佛大會，及娑婆世界釋迦牟尼佛一切大眾，并金剛藏菩薩及師子座。照已，於上虛空中成大光明雲臺。時，諸大光明雲臺中，諸佛神力故，而說頌曰：「無等等諸佛，功德如虛空， 十力無畏等，最尊世間主。 於釋迦佛前，而現此神力， 以佛力開現，法王無畏藏。 說諸地所行，諸地義差別， 承諸佛神力，無有能壞者。 若人聞法寶，則為諸佛護， 漸次具諸地，得以成佛道。 若人堪任聞，雖在於大海， 及劫盡火中，必得聞此經， 若人癡疑悔，終不能得聞。 是故今佛子，說諸地智道， 入勢力觀法，次第而修行。 得至於餘地，各得所利益， 利一切世間，願說勿令斷。」",
+   "T0279": "爾時，世尊從眉間出清淨光明，名：菩薩力焰明，百千阿僧祇光明以為眷屬，普照十方一切世界靡不周遍，三惡道苦皆得休息；又照一切如來眾會，顯現諸佛不思議力；又照十方一切世界，一切諸佛所加說法菩薩之身；作是事已，於上虛空中成大光明雲網臺而住。時，十方諸佛悉亦如是，從眉間出清淨光明，其光名號、眷屬、作業悉同於此，又亦照此娑婆世界佛及大眾，并金剛藏菩薩身、師子座已，於上虛空中成大光明雲網臺。時，光臺中，以諸佛威神力故而說頌言：「佛無等等如虛空，十力無量勝功德， 人間最勝世中上，釋師子法加於彼。 佛子當承諸佛力，開此法王最勝藏， 諸地廣智勝妙行，以佛威神分別說。 若為善逝力所加，當得法寶入其心， 諸地無垢次第滿，亦具如來十種力。 雖住海水劫火中，堪受此法必得聞， 其有生疑不信者，永不得聞如是義。 應說諸地勝智道，入住展轉次修習， 從行境界法智生，利益一切眾生故。」",
+   "T0287": "爾時，世尊釋迦牟尼，從白毫相放無數光，名照菩薩力，無數光明以為眷屬，其光普照十方世界靡不周遍，諸惡趣苦皆令休息，映蔽一切諸魔宮殿，悉照無量諸佛眾會，顯示諸佛不可思議境界行相威力遊戲。照於十方諸世界中，及於一切諸佛眾會，以佛神力所加說法菩薩身已，於上空中成大光雲網臺而住。彼諸世尊亦復如是，從白毫相放無數光，無數光明以為眷屬，其光普照十方世界靡不周遍，諸惡趣苦皆令休息，映蔽一切諸魔宮殿，悉照無量諸佛眾會，顯示諸佛不可思議境界行相威力遊戲。照於十方諸世界中及於一切諸佛眾會，以佛神力所加說法菩薩之身，顯不思議諸佛遊戲，并照世尊釋迦牟尼大會之眾及金剛藏菩薩身已，於上空中亦復成就大光明雲網臺而住。由是世尊釋迦牟尼，從白毫相所流光明，彼彼世界彼佛眾會，及彼菩薩身與法座，皆現了然於此得見。由彼無量佛剎土中，諸佛世尊從白毫相所流光明，此之三千大千世界，及此世尊釋迦牟尼大會之眾，并金剛藏菩提薩埵身及法座，皆現了然於彼得見。爾時，從此光雲網臺出是頌曰：「佛無等等如虛空，十力自在無邊眾； 於釋師子妙法中，天人最上今加汝。 佛子當承佛神力，開此法王妙法藏； 顯示微妙廣大行，分別建立諸智地。 若有聞此勝法門，亦蒙善逝所加護； 十方一切諸菩薩，悉皆攝持及護念。 當能修集諸正行，次第成滿無垢地； 能證十力等功德，契悟無上正等覺。 雖住海水劫火中，無疑堪聞此法門； 其有疑惑不信者，永復不聞如是義。 當說最勝地智道，證入安住及昇進； 修行境界如次說，利樂一切有情故。」",
+   "bo": "།དེ་ནས་དེའི་ཚེ་བཅོམ་ལྡན་འདས་ཤཱཀྱ་ཐུབ་པའི་མཛོད་སྤུ་ནས། བྱང་ཆུབ་སེམས་དཔའི་སྟོབས་སྣང་བ་ཞེས་བྱ་བའི་འོད་ཟེར་འཁོར་གྱི་འོད་ཟེར་བརྒྱ་སྟོང་གྲངས་མེད་པ་དང་ལྡན་པ་བྱུང་ངོ་། །དེ་བྱུང་ནས་ཕྱོགས་བཅུ་ཐམས་ཅད་ཀྱི་འཇིག་རྟེན་གྱི་ཁམས་འབྱམ་ཀླས་པ་ཐམས་ཅད་མ་ལུས་པར་སྣང་བར་བྱས་ནས། སེམས་ཅན་ཐམས་ཅད་ཀྱི་ངན་སོང་གི་སྡུག་བསྔལ་ཐམས་ཅད་རྩེ་ཟིལ་བར་བྱས་ཏེ། བདུད་ཀྱི་ཁྱིམ་ཐམས་ཅད་ཟིལ་གྱིས་མནན་ནས། དེ་བཞིན་གཤེགས་པ་ཐམས་ཅད་ཀྱི་འཁོར་གྱི་དཀྱིལ་འཁོར་སྣང་བར་བྱས་ཏེ། སངས་རྒྱས་ཀྱི་ཡུལ་གྱི་རྣམ་པ་བསམ་གྱིས་མྱི་ཁྱབ་པའི་མཐུ་བསྟན་ནས། ཕྱོགས་བཅུ་ཐམས་ཅད་ཀྱི་འཇིག་རྟེན་གྱི་ཁམས་འབྱམ་ཀླས་པ་ཐམས་ཅད་དུ་དེ་བཞིན་གཤེགས་པ་ཐམས་ཅད་ཀྱི་འཁོར་གྱི་དཀྱིལ་འཁོར་དུ་ཆོས་བསྟན་པའི་བྱིན་གྱི་རླབས་ཀྱིས་བྱིན་དུ་བརླབས་པའི་བྱང་ཆུབ་སེམས་དཔའི་ལུས་སྣང་བར་བྱས་ཏེ། སངས་རྒྱས་ཀྱི་རྣམ་པར་འཕྲུལ་བ་བསམ་གྱིས་མི་ཁྱབ་པ་བསྟན་ནས། སྟེང་གི་བར་སྣང་ལ་འོད་ཟེར་སྟུག་པོའི་སྤྲིན་གྱི་དྲ་བའི་ཁང་པ་བརྩེགས་པ་ཆེན་པོར་བྱས་ཏེ་འདུག་གོ །དེ་བཞིན་དུ་སངས་རྒྱས་བཅོམ་ལྡན་འདས་དེ་དག་གི་མཛོད་སྤུ་དག་ནས་ཀྱང་བྱང་ཆུབ་སེམས་དཔའི་འོད་སྣང་བ་ཞེས་བྱ་བའི་འོད་ཟེར་འཁོར་གྱི་འོད་ཟེར་གྲངས་མྱེད་པ་དང་ལྡན་པ་དག་བྱུང་བར་གྱུར་ཏོ། །བྱུང་ནས་ཀྱང་དེ་དག་གིས་ཕྱོགས་བཅུ་ཐམས་ཅད་དུ་འཇིག་རྟེན་གྱི་ཁམས་འབྱམ་ཀླས་པ་ཀུན་ཏུ་དེ་བཞིན་གཤེགས་པ་ཐམས་ཅད་ཀྱི་འཁོར་གྱི་དཀྱིལ་འཁོར་དུ་ཆོས་བསྟན་པའི་བྱིན་གྱིས་བྱིན་དུ་བརླབས་པའི་བྱང་ཆུབ་སེམས་དཔའ་རྣམས་སྣང་བར་བྱས་ཏེ། སངས་རྒྱས་ཀྱི་རྣམ་པར་ འཕྲུལ་པ་བསམ་གྱིས་མྱི་ཁྱབ་པ་བསྟན་ནས། འཇིག་རྟེན་གྱི་ཁམས་མི་མཇེད་འདི་ཡང་སྣང་བར་བྱས། བཅོམ་ལྡན་འདས་ཤཱཀྱ་ཐུབ་པ་དེ་བཞིན་གཤེགས་པའི་འཁོར་གྱི་དཀྱིལ་འཁོར་འདིའང་སྣང་བར་བྱས་ཏེ། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་རྡོ་རྗེའི་སྙིང་པོའི་ལུས་ཀྱང་སྣང་བར་བྱས་ནས། སྟེང་གི་བར་སྣང་ལ་དེ་བཞིན་དུ་འོད་ཟེར་སྟུག་པོའི་སྤྲིན་གྱི་དྲ་བའི་ཁང་པ་བརྩེགས་པ་ཆེན་པོར་བྱས་ཏེ་འཁོད་དོ། །དེ་ནས་འོད་ཟེར་སྟུག་པོའི་སྤྲིན་གྱི་དྲ་བའི་ཁང་པ་བརྩེགས་པ་ཆེན་པོ་དེ་དག་ནས་སངས་རྒྱས་ཀྱི་བྱིན་གྱིས་སྒྲའི་རྣམ་པ་འདི་ལྟ་བུ་འདི་བྱུང་ངོ་། །མི་མཉམ་མཉམ་དང་མཉམ་པ་མཁའ་དང་མཉམ་པ་དག །སྟོབས་བཅུའི་ཁྱུ་མཆོག་མཐུ་ལྡན་ཚད་མེད་ཡོན་ཏན་ཅན། །འཇིག་རྟེན་ཀུན་མཆོག་མི་ཡི་དམ་པ་ཕུལ་གྱི་རྣམས། ཤཱཀྱ་སེང་གེའི་ཆོས་ལ་བྱིན་རླབས་དམ་པ་མཛད། །བདེ་གཤེགས་སྲས་པོ་འདྲེན་པའི་བྱིན་གྱིས་བཤད་པར་གྱིས། །ཆོས་རྒྱལ་ཁྱུ་མཆོག་རྣམས་ཀྱི་མཛོད་ཀྱི་དམ་པ་ཕྱེ། །ས་ཡི་ཡེ་ཤེས་རྣམ་ཕྱེ་སྤྱོད་མཆོག་རབ་ཡངས་པ། །སྟོབས་བཅུའི་བྱིན་གྱིས་མ་ཐོགས་མྱུར་དུ་བསྟན་པ་གྱིས། །གང་གི་རྣ་ལམ་བསམ་པར་ཆོས་དམ་རིན་ཆེན་འདི། །སོང་བར་གྱུར་པ་དེ་དག་བདེ་གཤེགས་བྱིན་གྱིས་བརླབས། །རྡུལ་མེད་ས་ཀུན་རིམ་གྱིས་རབ་ཏུ་རྫོགས་བྱས་ནས། །སྟོབས་བཅུ་ལྡན་པའི་རྒྱལ་བ་དམ་པར་འགྲུབ་པར་འགྱུར། །རྒྱ་མཚོའི་ཆུ་བྱུང་གྱུར་ཅིང་བསྐལ་པའི་མྱེས་གདུངས་ཀྱང་། །གལ་ཏེ་སྣོད་གྱུར་སེམས་ཅན་དེ་དག་འདི་ལ་ཉན། །གང་རྣམས་ཐེ་ཙོམ་ཟ་ཞིང་ཡིད་གཉིས་བྱེད་པ་ནི། །དེ་དག་རྣ་བས་རྣམ་པ་ཀུན་ཏུ་ཐོས་མི་འགྱུར། །དེ་ཕྱིར་ས་ཡི་ཡེ་ཤེས་ལམ་མཆོག་བསྟན་པར་གྱིས། །གནས་དང་རྒྱུད་དང་འཕྲོ་བ་རིམ་གྱིས་རབ་ཏུ་ཤོད། །སྤྱོད་དང་ཡུལ་དང་ཆོས་དང་ཡེ་ཤེས་ཚུལ་རྣམས་ཀྱི། །ཆོས་ཀྱི་ཚུལ་ཡང་འགྲོ་བ་ཀུན་ལ་ཕན་ཕྱིར་ཤོད། །",
+   "en": "Then at that time, there shone from the Bhagavat Śākyamuni’s ūrṇā hair a light ray called the light of bodhisattva power accompanied by a retinue of countless hundreds of thousands of light rays. They illuminated all infinite worlds in the ten directions, ended the suffering of all beings in the lower existences, darkened all the palaces of the māras, illuminated the gathered assemblies of all tathāgatas, revealed the range of activity of the buddhas, illuminated the bodhisattvas who had been authorized with the authorization to teach in all the gathered assemblies of tathāgatas in every world throughout all the ten directions, revealed countless manifestations of buddhas, and then formed a network of clouds of light rays as vast kūṭāgāra halls situated in the sky. Then there shone from the ūrṇā hairs of the buddha bhagavats light rays called the light of bodhisattva power, which illuminated the bodhisattvas who had been authorized with the authorization to teach in all the gathered assemblies of tathāgatas in every world throughout all the ten directions; revealed countless manifestations of buddhas; illuminated this Sahā universe; illuminated the gathered assembly of this tathāgata, the Bhagavat Śākyamuni; illuminated the body and seat of the bodhisattva mahāsattva Vajragarbha; and formed a network of clouds of light rays as a great kūṭāgāra hall situated in the sky. From that kūṭāgāra hall made of a network of clouds of light rays, there came these words through the power of the Buddha:  “They who are equal to space,  equal to the unequaled,  The leaders who have the ten strengths, who have limitless qualities,  They who are supreme among humans and deities, Have given their blessing to the Dharma  of the one born in the Śākya clan. “With the authority  of the sugatas, open the treasure of the Dharma kings, Which is the vast supreme conduct and the division of the wisdom bhūmis. Those to whose ears comes this principal Dharma teaching Will be blessed by the sugatas and cared for by the bodhisattvas. “When they have completed The unblemished ten bhūmis, They will also attain the ten strengths And will attain buddhahood. “Those who are without doubt Will hear this Dharma teaching Even if they are sunk in the ocean Or thrown into the fire of the eon’s end.  “Those who remain in doubt And those who become uncertain Will never at any time Be able to attain hearing it.    “Therefore, teach well, according to their order, The entry into, remaining in, and ascending The supreme path of the wisdom bhūmis Together with their range of conducts.”"
+  },
+  "d0-12": {
+   "sa": "atha khalu vajragarbho bodhisattvo daśa diśo vyavalokya bhūyasyā mātrayā tasyāḥ parṣadaḥ saṃprasādarnārthaṃ tasyāṃ velāyāmimā gāthā abhāṣata- sūkṣmaṃ durājñeyapadaṃ maharṣiṇāmakalpakalpāpagataṃ suduḥspṛśam / anāvilaṃ paṇḍitavijñaveditaṃ svabhāvaśāntaṃ hyanirodhasaṃbhavam // 24 // svabhāvaśūnyaṃ praśamādvayakṣayaṃ gatyā vimuktaṃ samatāptinirvṛtam / anantamadhyaṃ vacasānudīritaṃ triyaghvavimuktaṃ nabhasā samānakam // 25 // śāntaṃ praśāntaṃ sugatapraveditaṃ sarvairudāhārapadaiḥ sudurvacam / bhūmiśca caryāpi ca tasya tādṛśī vaktuṃ suduḥkhaḥ kuta eva śrotum // 26 // taccintayā cittapathaiśca varjitaṃ jñānābhinirhāramunīndraveditam / na skandhadhātvāyatanaprabhāvitaṃ na cittagamyaṃ na manovicintitam // 27 // yathāntarīkṣe śakuneḥ padaṃ budhairvaktuṃ na śakyaṃ na ca darśanopagam / tathaiva sarvā jinaputra bhūmayo vaktuṃ na śakyāḥ kuta eva śrotum // 28 // pradeśamātraṃ tu tato 'bhidhāsye maitrīkṛpābhyāṃ praṇidhānataśca / yathānupūrvaṃ na ca cittagocaraṃ jñānena tāḥ pūrayatāṃ yathāśayam // 29 // etādṛśo gocara durdṛśo 'sya vaktuṃ na śakyaḥ sa hi svāśayasthaḥ / kiṃ tu pravakṣyāmi jinānubhāvataḥ śṛṇvantu sarve sahitāḥ sagauravāḥ // 30 // jñānapraveśaḥ sa hi tādṛśo 'sya vaktuṃ na kalpairapi śakyate yat / samāsatastacchṛṇuta bravīmyahaṃ dharmārthatattvaṃ nikhilaṃ yathāsthitam // 31 // sagauravāḥ santa(ḥ) sajjā bhavanto vakṣyāmyahaṃ sādhu jinānubhāvataḥ / udīrayiṣye varadharmaghoṣaṃ dṛṣṭāntayuktaṃ sahitaṃ samākṣaram // 32 // suduṣkaraṃ tadvacasāpi vaktuṃ yaścāprameyaḥ sugatānubhāvaḥ / mayi praviṣṭaḥ sa ca raśmimūrtiryasyānubhāvena mamāsti śaktiḥ // 33 //",
+   "T0285": "於是金剛藏菩薩，觀于十方，欲令眾會重懷悅豫，渴仰於法，興發大哀無極之慈，應時因是，嗟歎此頌：「大聖之道法，微妙甚深遠； 無念以捨念，清澄永難了。 聖明達玄微，智慧解所行； 自然業寂安，柔仁無諍亂。 自然空淨法，寂寞除苦患； 遊居至解脫，逮平等滅度。 無限無極義，言辭近超度； 以越于三世，行等猶虛空。 諸眾祐所行，寂然甚淡泊； 一切之行業，徑路難逮解。 此等行如地，志性亦若斯； 甚難可講說，何能分別了。 以去棄心意，永無心句迹； 諸眾祐所行，智慧消言食。 亦復無所行，無陰眾衰入； 聖達依慧業，其心無想念。 猶如有飛鳥，遊行在虛空； 不可以言辭，何況欲覩見。 安住自然慧，如是行道住； 其心所行念，不可分別知。 何所有入處，殊勝慧土地； 愍傷常慈哀，志願普備悉。 漸以具眾行，心亦無想念； 猶如心本性，智慧以明了。 如斯行之業，微妙甚難解； 自己志性無，不可卒達知。 何況能宣布，安住之所念； 一切共恭敬，明聽玄妙教。 以入正真慧，如行道之住； 若於億千劫，不可盡究竟。 等俱咸悅豫，普共且專聽； 至誠妙真義，無厭亦無異。 不以為憒亂，猶如成大海； 今當具敷演，諸眾祐道行。 又當班宣說，殊特之法音； 牽引眾譬喻，正真等文字。 其所講分別，甚難可解散； 安住行業事，如是不可量。 今已得逮入，吾我之自然； 咸樂如一渧，且聽所宣言。」",
+   "T0286": "爾時，金剛藏菩薩觀察十方，欲令大眾增益信敬而說偈言：「諸佛聖主道，微妙甚難解， 非思量所得，唯智者行處。 其性從本來，寂然無生滅； 從本以來空，滅除諸苦惱； 遠離於諸趣，等同涅槃相。 無中亦無後，非言辭所說， 出過於三世，其相如虛空。 諸佛所行處，清淨深寂滅， 言說所難及；地行亦如是， 說之猶尚難，何況以示人？ 諸佛之智慧，離諸心數道， 不可得思議，非有陰界入， 但以智可知，非識之所及。 如空迹難說，何可示其相？ 十地義如是，非無邊心知。 是事雖為難，發願行慈悲， 漸次具諸地，非心所能及。 如是諸地行，微妙甚難見， 不可以心知，當承佛力說。 汝等當恭敬，咸共一心聽， 諸地相入行，修習出法門。 於無量億劫，說之不可盡， 今如實略說，其義無有餘。 一心恭敬待，今承佛力說， 大音唱因喻，義名不相違。 佛神力無量，今皆在我身， 我之所說者，如大海一渧。」",
+   "T0278": "爾時，金剛藏菩薩觀察十方，欲令大眾增益信敬，以偈頌曰：「諸佛聖主道，微妙甚難解， 非思量所得，唯智者行處。 其性從本來，寂然無生滅， 從本已來空，滅除諸苦惱。 遠離於諸趣，等同涅槃相， 無中亦無後，非言辭所說。 出過於三世，其相如虛空， 諸佛所行處，清淨深寂滅。 言說所難及，地行亦如是， 說之猶尚難，何況以示人？ 諸佛之智慧，離諸心數道， 不可得思議，非有陰界入。 但以智可知，非識之所及， 如空迹難說，何可示其相？ 十地義如是，非心意所行， 是事雖為難，發願行慈悲。 漸次具諸地，智者所能及， 如是諸地行，微妙甚難見。 不可以心知，當承佛力說， 汝等當恭敬，咸共一心聽。 智慧所隨順，諸地相入行， 於無量億劫，說之不可盡。 今如實略說，其義無有餘， 一心恭敬待，今承佛力說， 大音唱因諭，義名不相違。 佛神力無量，今皆在我身， 我之所說者，如大海一渧。」",
+   "T0279": "爾時，金剛藏菩薩觀察十方，欲令大眾增淨信故而說頌曰：「如來大仙道，微妙難可知， 非念離諸念，求見不可得。 無生亦無滅，性淨恒寂然， 離垢聰慧人，彼智所行處。 自性本空寂，無二亦無盡， 解脫於諸趣，涅槃平等住。 非初非中後，非言辭所說， 出過於三世，其相如虛空。 寂滅佛所行，言說莫能及； 地行亦如是，難說難可受。 智起佛境界，非念離心道， 非蘊界處門，智知意不及。 如空中鳥迹，難說難可示； 如是十地義，心意不能了。 慈悲及願力，出生入地行， 次第圓滿心，智行非慮境。 是境界難見，可知不可說， 佛力故開演，汝等應敬受。 如是智入行，億劫說不盡， 我今但略說，真實義無餘。 一心恭敬待，我承佛力說， 勝法微妙音，譬諭字相應。 無量佛神力，咸來入我身， 此處難宣示，我今說少分。",
+   "T0287": "爾時，金剛藏菩薩觀察十方，欲令大眾增淨信故而說頌言：「微細難知大仙道，不可分別離分別； 難證無濁慧者境，性常寂靜無生滅。 性空能寂無二盡，離趣平等至涅槃； 無邊中緣無所證，出過三世等虛空。 寂靜寂滅佛所證，以諸言趣難宣說； 此地及行亦如是，說猶甚難何況聽！ 遠離思惟及心道，此智所引牟尼境； 非蘊、界、處所顯了，非心所測、意所思。 譬如空中諸鳥跡，智者叵宣難可示； 諸佛子地亦如是，說尚極難何況聽！ 今當但說此一分，由大慈悲及願力； 如其漸次非心境，以智能滿如意樂。 如是此境極難見，叵說唯住自意樂； 然承佛力我今說，汝等一心恭敬聽。 如是智門及正行，億劫宣說猶難盡； 我今略說汝等聽，真實法義盡如理。 仁者專心恭敬待，我承佛力當善說； 宣揚微妙正法音，譬喻相應協倫字。 此以言詞難顯了，而蒙無量佛神力； 光形聚入於我身，由是我今能演說。",
+   "bo": "དེ་ནས་བྱང་ཆུབ་སེམས་དཔའ་རྡོ་རྗེའི་སྙིང་པོས་ཕྱོགས་བཅུར་བལྟས་ནས། འཁོར་ཐམས་ཅད་དེ་བས་ཀྱང་དད་པར་བྱ་བའི་ཕྱིར་དེའི་ཚེ་ཚིགས་སུ་བཅད་ པ་འདི་དག་སྨྲས་སོ། །ཕྲ་ལ་ཤེས་དཀའ་དྲང་སྲོང་ཆེན་པོའི་ལམ། །མི་རྟོག་རྟོག་ཡུལ་མ་ཡིན་ལྟ་བར་དཀའ། །རང་བཞིན་ཞི་ཞིང་འགག་མེད་འབྱུང་བ་མེད། །མཁས་གསལ་ཤེས་པས་ཁོང་དུ་ཆུད་པ་ཡིན། །ངོ་བོ་ཉིད་སྟོང་ཞི་ཞིང་སྡུག་བསྔལ་ཟད། །རྒྱུད་ལས་རྣམ་གྲོལ་མཉམ་པར་མྱ་ངན་འདས། །མཐའ་དང་དབུས་མེད་ཚིག་གིས་བརྗོད་དུ་མེད། །དུས་གསུམ་གྲོལ་བ་ནམ་མཁའ་འདྲ་ཞིང་མཚུངས། །བདེ་གཤེགས་སྤྱོད་ཡུལ་ཞི་ཞིང་ཉེ་བར་ཞི། །སྨྲ་བའི་ལམ་རྣམས་ཀུན་གྱིས་བརྗོད་པར་དཀའ། །དེ་དག་ས་དང་སྤྱོད་པ་དེ་འདྲ་བས། །སྨྲ་བར་དཀའ་ན་བསྟན་པར་ག་ལ་ནུས། །དེ་ནི་བསམ་ཡས་སེམས་ལམ་རྣམ་པར་སྤངས། །ཡེ་ཤེས་མངོན་བསྒྲུབས་རྒྱལ་བའི་སྤྱོད་ཡུལ་ཏེ། །ཕུང་པོ་སྐྱེ་མཆེད་ཁམས་ཀྱིས་སྐྱེད་པ་མིན། །སེམས་ཀྱིས་མི་ཤེས་ཡིད་ཀྱིས་རྣམ་མ་བརྟགས། །ཇི་ལྟར་བར་སྣང་གནས་ཀྱི་བྱ་ཡི་རྗེས། །ཤིན་ཏུ་སྨྲ་དཀའ་བསྟན་པར་མི་ནུས་པ། །དེ་ལྟར་བདེ་གཤེགས་སྲས་ཀྱི་ས་རྣམས་ཀྱང་། །ཡིད་དང་སེམས་ཀྱི་ཡུལ་གྱིས་ཤེས་མི་ནུས། །འོན་ཀྱང་བྱམས་དང་སྙིང་རྗེ་སྨོན་ལམ་གྱིས། །དེ་ལས་ཕྱོགས་ཙམ་རིམ་པའི་ཚུལ་བཞིན་དུ། །བཤད་པར་བྱ་སྟེ་སེམས་ཀྱི་སྤྱོད་ཡུལ་མིན། །ཡེ་ཤེས་ཚུལ་གྱིས་རྫོགས་པར་བྱ་བའོ། །དེ་འདྲའི་སྤྱོད་ཡུལ་ཕྲ་ཞིང་བལྟ་དཀའ་བ། །རང་རིག་ཡིན་པས་བརྗོད་པར་མི་ནུས་ཀྱང་། །འོན་ཀྱང་བདེ་བར་གཤེགས་པའི་མཐུས་བརྗོད་ཀྱིས། །ཐམས་ཅད་མཐུན་པར་ནན་ཏན་གྱིས་དེ་ཉོན། །ཡེ་ཤེས་ས་དང་སྤྱོད་འཇུག་ཅི་འདྲ་བ། །བསྐལ་པ་བྱེ་བར་ཟད་པར་མི་ནུས་ཏེ། །ཡང་དག་དོན་དངོས་གཞན་མིན་གནས་པ་ལས། །མདོ་ཙམ་བཤད་ཀྱིས་དེ་དག་མཉན་པར་གྱིས། །མཐུན་ཞིང་ནན་ཏན་ཡོད་པར་སྟ་གོན་གནས། །བདེ་གཤེགས་བྱིན་གྱིས་བདག་གིས་བཤད་པར་བྱ། །དཔེ་ལྡན་འཐད་ལ་ཡི་གེ་མཉམ་པ་ཡི། །ཆོས་སྒྲ་དམ་པ་བདག་གིས་བརྗོད་པར་བྱ། །འདི་ནི་ཚིག་གིས་བརྗོད་པར་ཤིན་ཏུ་དཀའ། །དེ་ལྟར་ཚད་མེད་བདེ་གཤེགས་ མཐུ་དག་ལས། །ཆུ་ཐིགས་གཅིག་འདྲ་བདག་གི་ལུས་འདི་ལ། །དེ་རིང་ཞུགས་ཀྱིས་བཤད་པ་མཉན་པར་གྱིས།",
+   "en": "Then the bodhisattva Vajragarbha looked into the ten directions and spoke these verses so that the assembly would have faith: “The path of the great sages is subtle, difficult to understand, Inconceivable,  beyond concepts, and difficult to reach. It is clearly known by those with expert knowledge. Its nature is peace; it is without cessation or origination. “Its nature is empty, tranquil,  nondual, and unending. It is liberation from existences, the attainment of equality. It has no middle or end; it cannot be described in words. It is liberated from the three times and is the same as space. “It is peace, extreme peace, and is known by the sugatas. It is indescribable in any form of words. If the bhūmis and conducts are like this And difficult to speak of, how can they be heard? “It is beyond thought, beyond the path of the mind. It is the attainment of wisdom that is known by the lord of munis. It cannot be produced by the skandhas, sensory elements, or sensory bases. It is inaccessible to the mind and cannot be investigated by the intellect. “Just as the wise can neither describe nor show  The track of a bird in the sky, None of the bodhisattva bhūmis Can be described, so how can they be heard? “However, through love, compassion, and prayer I shall give just an indication of them. Though their succession is not within the scope of the mind, That which is thought is fulfilled by wisdom. “That range of conduct is difficult to see. I cannot describe what is in my mind. However, through the power of the jinas, I shall teach it; Therefore, you should all respectfully listen. “I could not describe in eons  This wisdom that is to be entered, But listen to this summary that I shall give Of the entire true meaning of the Dharma. “Be prepared with complete respect, For I shall teach well through the power of the jinas. I shall speak the words of the sublime Dharma With appropriate examples and in even meter. “It is very difficult to teach this in words, But the immeasurable power of the sugatas Has entered me in the form of light rays,  And through that power I am now able."
+  }
+ }
+}
