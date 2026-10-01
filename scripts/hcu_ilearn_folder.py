@@ -109,7 +109,8 @@ def _draft_files(s, sesskey, itemid):
     return [x['filename'] for x in r.get('list', [])]
 
 
-def _edit(s, url, files, names=None, dry=False, extra=None):
+def _edit(s, url, files, names=None, dry=False, extra=None, keep=()):
+    """keep：留在資料夾裡不換的舊檔名（例如本機那份正被 PowerPoint 開著、讀不出來）。"""
     names = names or {}
     t = s.get(url, timeout=60).text
     fields = _form(t)
@@ -118,12 +119,14 @@ def _edit(s, url, files, names=None, dry=False, extra=None):
     ctx = re.search(r'"ctx_id"\s*:\s*"?(\d+)', t) or re.search(r'contextid["\s:=]+"?(\d+)', t)
     ctx = ctx.group(1)
     old = _draft_files(s, sesskey, itemid)
-    new = [names.get(p, p.name) for p in files]
+    new = [names.get(p, p.name) for p in files] + [k for k in keep]
     print(f'  舊檔 {len(old)}：', *old, sep='\n    ')
     print(f'  新檔 {len(new)}：', *new, sep='\n    ')
     if dry:
         return
     for fn in old:
+        if fn in keep:
+            continue
         s.post(B + '/repository/draftfiles_ajax.php', params={'action': 'delete'}, timeout=60,
                data={'sesskey': sesskey, 'itemid': itemid, 'filepath': '/', 'filename': fn})
     for p in files:
@@ -150,9 +153,9 @@ def _edit(s, url, files, names=None, dry=False, extra=None):
     print('  ✔ 已儲存')
 
 
-def replace_folder(s, cmid, files, names=None, dry=False):
+def replace_folder(s, cmid, files, names=None, dry=False, keep=()):
     print(f'資料夾 cmid={cmid}')
-    _edit(s, f'{B}/course/modedit.php?update={cmid}', files, names, dry)
+    _edit(s, f'{B}/course/modedit.php?update={cmid}', files, names, dry, keep=keep)
 
 
 def create_folder(s, course, section, name, files, names=None, dry=False):
