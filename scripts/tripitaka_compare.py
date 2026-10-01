@@ -2188,6 +2188,53 @@ SETS["saddharmapundarika-c17"] = {
          ("l17-99", 62)]),
 }
 
+SETS["saddharmapundarika-c18"] = {
+    "title": "法華經・法師功德品",
+    "family": "sa",
+    "intro": (
+        "梵本〈說法者功德品〉（dharmabhāṇakānuśaṃsāparivarta，第 18）；羅什〈法師功德品第十九〉、添品〈法師功德品第十八〉、"
+        "正法華〈歎法師品第十八〉。持經者六根清淨：眼、耳、鼻、舌、身、意各散文一節、偈一節。"
+        "常精進＝常應時（正法華）＝Satatasamitābhiyukta。"
+    ),
+    "units": [
+        ("l18-00", "品題"), ("l18-01", "總說六根功德・眼根八百功德"), ("l18-v1", "眼根偈（梵 18.1–6）"),
+        ("l18-02", "耳根千二百功德"), ("l18-v7", "耳根偈（梵 18.7–21）"), ("l18-03", "鼻根八百功德"),
+        ("l18-v22", "鼻根偈（梵 18.22–51）"), ("l18-04", "舌根千二百功德"), ("l18-v52", "舌根偈（梵 18.52–60）"),
+        ("l18-05", "身根八百功德"), ("l18-v61", "身根偈（梵 18.61–66）"), ("l18-06", "意根千二百功德"),
+        ("l18-v67", "意根偈（梵 18.67–76）"), ("l18-99", "品尾題"),
+    ],
+    "versions": _lotus_versions(
+        18, (3547, 3727),
+        {"T0262": ["妙法蓮華經法師功德品第十九"], "T0263": ["正法華經歎法師品第十八"], "T0264": ["添品妙法蓮華經法師功德品第十八"]},
+        {"sa": [("l18-00", "Saddhp_18: dharmabhāṇakānuśaṃsāparivartaḥ |"), ("l18-01", "atha khalu bhagavān satatasamitābhiyuktaṃ"),
+                ("l18-v1", "atha khalu bhagavāṃstasyāṃ velāyāmimā gāthā abhāṣata -"),
+                ("l18-02", "punaraparaṃ satatasamitābhiyukta sa kulaputro vā kuladuhitā vā imaṃ dharmaparyāyaṃ saṃprakāśayamānaḥ"),
+                ("l18-v7", "idamavocadbhagavān"), ("l18-03", "punaraparaṃ satatasamitābhiyukta asya bodhisattvasya mahāsattvasya imaṃ"),
+                ("l18-v22", "atha khalu bhagavāṃstasyāṃ velāyāmimā gāthā abhāṣata -"),
+                ("l18-04", "punaraparaṃ satatasamitābhiyukta sa kulaputro vā kuladuhitā vā imaṃ dharmaparyāyaṃ dhārayamāṇo"),
+                ("l18-v52", "atha khalu bhagavāṃstasyāṃ velāyāmimā gāthā abhāṣata -"),
+                ("l18-05", "punaraparaṃ satatasamitābhiyukta sa bodhisattvo"),
+                ("l18-v61", "atha khalu bhagavāṃstasyāṃ velāyāmimā gāthā abhāṣata -"),
+                ("l18-06", "punaraparaṃ satatasamitābhiyukta asya bodhisattvasya mahāsattvasya tathāgate"),
+                ("l18-v67", "atha khalu bhagavāṃstasyāṃ velāyāmimā gāthā abhāṣata -"), ("l18-99", "iti śrīsaddharmapuṇḍarīke")],
+         "T0262": [("l18-01", "爾時佛告常精進菩薩摩訶薩"), ("l18-v1", "爾時世尊欲重宣此義"), ("l18-02", "「復次，常精進"),
+                   ("l18-v7", "爾時世尊欲重宣此義"), ("l18-03", "「復次，常精進"), ("l18-v22", "爾時世尊欲重宣此義"),
+                   ("l18-04", "「復次，常精進"), ("l18-v52", "爾時世尊欲重宣此義，而說偈言：「是人舌根淨"),
+                   ("l18-05", "「復次，常精進"), ("l18-v61", "爾時世尊欲重宣此義"), ("l18-06", "「復次，常精進"),
+                   ("l18-v67", "爾時世尊欲重宣此義")],
+         "T0263": [("l18-01", "爾時世尊，告常應時菩薩大士"), ("l18-v1", "於時世尊而歎頌曰"), ("l18-02", "佛復告常應時菩薩"),
+                   ("l18-v7", "佛說此已欲重解誼"), ("l18-03", "佛復告常應時菩薩"), ("l18-v22", "於是世尊，而歎頌曰"),
+                   ("l18-04", "佛復告族姓子"), ("l18-v52", "於是世尊，而歎頌曰"), ("l18-05", "佛復告族姓子"),
+                   ("l18-v61", "於時世尊，而歎頌曰"), ("l18-06", "佛復告族姓子"), ("l18-v67", "於時世尊，而歎頌曰")],
+         "T0264": [("l18-01", "爾時佛告常精進菩薩摩訶薩"), ("l18-v1", "爾時世尊，欲重宣此義"), ("l18-02", "「復次，常精進"),
+                   ("l18-v7", "爾時世尊，欲重宣此義"), ("l18-03", "「復次，常精進"), ("l18-v22", "爾時世尊，欲重宣此義"),
+                   ("l18-04", "「復次，常精進"), ("l18-v52", "爾時世尊，欲重宣此義，而說偈言：「是人舌根淨"),
+                   ("l18-05", "「復次，常精進"), ("l18-v61", "爾時世尊，欲重宣此義"), ("l18-06", "「復次，常精進"),
+                   ("l18-v67", "爾時世尊，欲重宣此義")]},
+        [("l18-01", 0), ("l18-v1", 4), ("l18-02", 12), ("l18-v7", 17), ("l18-03", 36), ("l18-v22", 63), ("l18-04", 99),
+         ("l18-v52", 125), ("l18-05", 138), ("l18-v61", 145), ("l18-06", 153), ("l18-v67", 163), ("l18-99", 179)]),
+}
+
 
 # 無量壽經：五個漢譯＋梵本大本，分四段（slug sukhavativyuha-1…4）。梵本 GRETIL 本沒有節號，
 # 骨架改用菩提流志〈無量壽如來會〉（T0310）在 CBETA 目錄裡的 42 科（法會聖眾第一…地動現瑞第四十二），
