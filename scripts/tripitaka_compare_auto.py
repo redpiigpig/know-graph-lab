@@ -184,7 +184,15 @@ def versions_of(c: dict) -> tuple[str, str, list[dict], list[str]]:
 # ── 模型 ────────────────────────────────────────────────────────────────
 def llm(prompt: str, max_tokens: int = 6000, thinking: bool = False) -> str:
     import translate_ebook_to_zh as te  # 共用 NVIDIA 4 把 key 輪替與節流
-    return te.nvidia_chat(prompt, max_tokens=max_tokens, temperature=0.1, thinking=thinking)
+    # 一時斷線（ConnectionError，筆電換網路、睡醒）別讓整批崩潰：等一下再試，三次都不行才放棄
+    for attempt in range(3):
+        try:
+            return te.nvidia_chat(prompt, max_tokens=max_tokens, temperature=0.1, thinking=thinking)
+        except RuntimeError as e:
+            if "conn" not in str(e) or attempt == 2:
+                raise
+            time.sleep(120)
+    return ""
 
 
 def parse_json(s: str) -> dict:
@@ -265,7 +273,8 @@ WINDOW_PROMPT = """同一部經的兩個本子。漢譯本裡，上一段結尾�
 {cands}"""
 
 
-def attach_windowed(units: list[dict], ref_txt: dict[int, str], disp: list[str], vlabel: str, W: int = 12) -> list:
+def attach_windowed(units: list[dict], ref_txt: dict[int, str], disp: list[str], vlabel: str, W: int = 12,
+                    heads: dict[int, str] | None = None) -> list:
     """長品的原典逐段定位：先用長度比例預估起點，只拿附近 ±W 句問模型「哪一句是本段開頭」。
     一次丟幾百句要它報句號，nemotron 會整體錯一格，甚至無視格式把每一句都抄一遍；
     把題目縮到「二十幾句挑一句」就穩了。"""
@@ -290,8 +299,10 @@ def attach_windowed(units: list[dict], ref_txt: dict[int, str], disp: list[str],
             if lo >= hi:
                 break
             cands = "\n".join(f"[{i}] {disp[i][:140]}" for i in range(lo, hi))
-            ans = llm(WINDOW_PROMPT.format(prev_tail=ref_txt[prev_k][-50:], label=units[k].get("label"),
-                                           head=ref_txt[k][:90], vlabel=vlabel, cands=cands), max_tokens=50)
+            # heads：參照本是梵文時給模型看的中文譯句（它讀不懂梵文，然燈佛在候選裡也回「沒有」）
+            hd = heads or {}
+            ans = llm(WINDOW_PROMPT.format(prev_tail=(hd.get(prev_k) or ref_txt[prev_k])[-50:], label=units[k].get("label"),
+                                           head=(hd.get(k) or ref_txt[k])[:120], vlabel=vlabel, cands=cands), max_tokens=50)
             m = re.search(r"-?\d+", ans or "")
             if m and "null" not in (ans or "").lower()[:10] and lo <= int(m.group()) < hi:
                 starts[k] = int(m.group())
@@ -321,7 +332,8 @@ def align_staged(vs: list[dict], feedback: str = "") -> list[dict]:
         ref_txt[k] = "".join(ref["lines"][s:e])
     twin_en = {v["twin"]: v for v in vs if v.get("twin")}
     for v in others:
-        lines = twin_en[v["id"]]["lines"] if v["id"] in twin_en else v["lines"]
+        # disp：給模型看的句子（藏文看英譯；梵文看逐句中譯，見 curated.gloss_lines）
+        lines = twin_en[v["id"]]["lines"] if v["id"] in twin_en else (v.get("disp") or v["lines"])
         label = v["label"] + ("（以逐句對齊的英譯呈現）" if v["id"] in twin_en else "")
         got = attach_windowed(units, ref_txt, lines, label)
         for k, u in enumerate(units):
@@ -448,6 +460,15 @@ def publish(slug: str, title: str, family: str, vs: list[dict], works: list[str]
             if attempt == 2 or str(e).startswith("太長"):
                 raise
             feedback = "\n\n⚠ 上一次的輸出不合格：" + str(e) + "。請重新輸出合格的 JSON。"
+    # 閘：某本只掛上極少數節＝定位失敗，不是那本真的缺（金剛經首跑羅什本 33 節只掛上 4 節，
+    # 其餘全併進前一節的格子裡，閘與複核都放行）。心經羅什本本就缺序分，覆蓋 54%，不會誤殺。
+    if len(units) >= 6:
+        for v in vs:
+            if v.get("twin"):
+                continue
+            got = sum(1 for c in cells.values() if c.get(v["id"]))
+            if got / len(units) < 0.3:
+                raise ValueError(f"{v['id']} 只掛上 {got}/{len(units)} 節，定位失敗")
     labels = [to_trad(str(u.get("label") or f"第{k + 1}段"))[:20] for k, u in enumerate(units)]
     dbg = Path("C:/tmp/cbeta/compare_auto_debug") / f"{slug}.txt"
     dbg.parent.mkdir(parents=True, exist_ok=True)

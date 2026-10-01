@@ -90,6 +90,45 @@ def texts_by_unit(v: dict, units: list[dict]) -> dict[int, str]:
     return out
 
 
+def gloss_heads(texts: dict[int, str], lang_name: str = "梵文") -> dict[int, str]:
+    """把各節開頭譯成一句中文，給定位用（模型直接讀梵文會漏認，譯成中文再比對就穩）。
+    實測：§10 的 dīpaṃkara 原文它認不出然燈佛，譯成中文後四節全對。"""
+    out: dict[int, str] = {}
+    keys = sorted(texts)
+    for i in range(0, len(keys), 16):
+        chunk = keys[i:i + 16]
+        rows = "\n".join(f"[{j}] {texts[k][:240]}" for j, k in enumerate(chunk))
+        try:
+            got = A.parse_json(A.llm(f"把下面幾段{lang_name}佛經的開頭各譯成一句白話中文（只譯大意、保留人名專名）。"
+                                     f"只輸出 JSON：{{\"zh\":[共 {len(chunk)} 個字串]}}\n\n{rows}",
+                                     max_tokens=3000)).get("zh") or []
+        except Exception:
+            got = []
+        for j, k in enumerate(chunk):
+            if j < len(got) and isinstance(got[j], str):
+                out[k] = got[j]
+    return out
+
+
+def gloss_lines(lines: list[str], lang_name: str = "梵文") -> list[str]:
+    """梵文逐句譯成一句中文，只給模型定位用（頁面顯示的仍是梵文原文）。
+    阿彌陀經梵本直接給模型看只掛上 3/22 節。譯不出來的句子保留原文。"""
+    out = list(lines)
+    for i in range(0, len(lines), 20):
+        chunk = lines[i:i + 20]
+        rows = "\n".join(f"[{j}] {t[:200]}" for j, t in enumerate(chunk))
+        try:
+            got = A.parse_json(A.llm(f"把下面每一句{lang_name}佛經各譯成一句白話中文（只譯大意、保留人名專名）。"
+                                     f"只輸出 JSON：{{\"zh\":[共 {len(chunk)} 個字串]}}\n\n{rows}",
+                                     max_tokens=4000)).get("zh") or []
+        except Exception:
+            got = []
+        for j in range(len(chunk)):
+            if j < len(got) and isinstance(got[j], str) and got[j].strip():
+                out[i + j] = got[j]
+    return out
+
+
 def fixed_units(ref_id: str, marks: list[tuple[str, int]], hub_id: str):
     """節由參照本（梵本）決定；hub（羅什本）先掛上，其餘漢譯掛到 hub；最後替各節取中文小標。"""
     def fn(vs: list[dict]) -> list[dict]:
@@ -100,10 +139,13 @@ def fixed_units(ref_id: str, marks: list[tuple[str, int]], hub_id: str):
         twin_en = {v["twin"]: v for v in vs if v.get("twin")}
         order = [hub] + [v for v in vs if v is not ref and v is not hub and not v.get("twin")]
         hub_txt: dict[int, str] = {}
+        heads = gloss_heads(ref_txt) if ref["lang"] != "lzh" else None
         for v in order:
             base = ref_txt if v is hub or v["lang"] != "lzh" else hub_txt
-            disp = twin_en[v["id"]]["lines"] if v["id"] in twin_en else v["lines"]
-            got = A.attach_windowed(units, base, disp, v["label"])
+            disp = twin_en[v["id"]]["lines"] if v["id"] in twin_en else (v.get("disp") or v["lines"])
+            # 漢譯掛梵本才需要中文譯句；梵本對梵本（吉爾吉特本）直接比
+            use = heads if (base is ref_txt and v["lang"] == "lzh") else None
+            got = A.attach_windowed(units, base, disp, v["label"], heads=use)
             for k, u in enumerate(units):
                 u["starts"][v["id"]] = got[k] if k < len(got) else None
             if v is hub:
@@ -125,12 +167,10 @@ def fixed_units(ref_id: str, marks: list[tuple[str, int]], hub_id: str):
 
 def vajracchedika() -> dict:
     lines, marks = sentences_with_sections(gretil_paras("sa_vajracchedikA-prajJApAramitA"))
-    gil, _ = sentences_with_sections(gretil_paras("sa_vajracchedikA-prajJApAramitA-gilgit"))
+    # 吉爾吉特寫本是殘本（只存一部分），逐節掛不上會被覆蓋率閘擋下，不收
     vs = [
         {"id": "sa", "lang": "sa", "label": "梵本（Vaidya 校訂本）", "who": "GRETIL・節號 §1–32",
          "lines": lines, "join": " "},
-        {"id": "sa-gilgit", "lang": "sa", "label": "梵本（吉爾吉特寫本）", "who": "GRETIL・Gilgit 寫本",
-         "lines": gil, "join": " "},
         zh_version("T0235", "羅什本"),
         zh_version("T0236a", "菩提流支本（甲）"),
         zh_version("T0236b", "菩提流支本（乙）"),
@@ -154,7 +194,8 @@ def amitabha() -> dict:
     vs = [
         zh_version("T0366", "羅什本"),
         zh_version("T0367", "玄奘本（稱讚淨土佛攝受經）"),
-        {"id": "sa", "lang": "sa", "label": "梵本（小本極樂莊嚴經）", "who": "GRETIL", "lines": sa, "join": " "},
+        {"id": "sa", "lang": "sa", "label": "梵本（小本極樂莊嚴經）", "who": "GRETIL", "lines": sa, "join": " ",
+         "disp": gloss_lines(sa)},
         {"id": "bo", "lang": "bo", "label": "藏譯", "who": "德格版 Toh 115・84000",
          "lines": [bo[i] for i in keep], "join": " "},
         {"id": "en", "lang": "en", "label": "84000 英譯", "who": "譯自藏譯・與藏文逐句對齊",
@@ -234,8 +275,10 @@ def madhyamaka() -> list[dict]:
                 pick = None
                 if cand:
                     e = sa_start[k + 1] if k + 1 < len(sa_start) else len(sa_lines)
+                    verse = " ".join(sa_lines[sa_start[k]:e])
+                    zh_gloss = gloss_heads({0: verse}).get(0, "")
                     ans = A.llm(VERSE_PICK_PROMPT.format(
-                        sa=" ".join(sa_lines[sa_start[k]:e]),
+                        sa=verse + (f"\n（大意：{zh_gloss}）" if zh_gloss else ""),
                         cands="\n".join(f"[{j}] {zh_lines[zh_sloka[j]].strip()}" for j in cand)), max_tokens=20)
                     m = re.search(r"\d+", ans or "")
                     if m and "null" not in (ans or "").lower()[:8] and int(m.group()) in cand:
@@ -255,6 +298,8 @@ def madhyamaka() -> list[dict]:
         ]
         title = re.sub(r"^中論", "", pin["head"]).split("（")[0]
         slug = f"sa-mmk-c{ci:02d}"
+        if (A.OUT / f"{slug}.json").exists():      # 已做好的品不重跑（一品要好幾分鐘）
+            continue
         try:
             r = A.publish(slug, f"中論・{title}", "sa", vs, ["T1564"],
                           [{"work": "T1564", "node": pin["head"], "uid": pin["uid"]}],
