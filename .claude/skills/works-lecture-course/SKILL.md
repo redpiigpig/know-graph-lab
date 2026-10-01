@@ -1145,6 +1145,9 @@ B 線＝前人概論怎麼切（比較表）。一次派一個 Sonnet。
   第四章備料完成（`output/christianity-intro/sources_ch04.md`，62 筆；必備缺 23、重要缺 22），待作者刪減。
   觀察：二世紀沒有任何單一文本撐得起四站（只能靠按功能認定＋Bradshaw「別把片段拼成一條線」）；
   非西方最缺教堂空間與古代禮儀；禮儀史標準書（Taft、Jungmann、Dix、Talley、Senn、White）館藏全無。
+  暫定刪減（作者回「繼續」未逐項表態）：刪《遺訓》、游斯丁法文批判本與拉丁《彌撒經書》（有 ANF／中文替代）；
+  必備其餘 16 本進 `data/zlib-wanted/user-named.jsonl`（含台灣主教團中文《彌撒經書》）；
+  台灣長老教會《教會禮拜與聖禮典手冊》z-lib 不會有，列給作者購買；重要級 22 本待作者定。
 - 補書不只 z-lib；先查站上既有（梵二 SC／DV 中拉英在 `data/creeds/ecumenical-councils/vatican-ii/`、
   奧斯堡信條與路德小教理在 `data/creeds/protestant-confessions/`、通諭中譯在 `data/encyclicals/`），
   再查 TRC／天主教在線目錄。館藏確認沒有：《天主教教理》全本中譯、《協同書》中譯、Schmemann、Bria、Brown 第二冊。
