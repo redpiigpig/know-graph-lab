@@ -384,8 +384,8 @@ def mass(chunks: list[dict]) -> int:
     """內容守恆用：去掉所有標記、井號、註號後的字元數。"""
     n = 0
     for c in chunks:
-        t = c.get("content") or ""
-        t = re.sub(r"\{\{[ps]:[^}]*\}\}|\[\^\d+\]|^\(\d+\)\s|#|</?(?:table|tr|td|th|thead|tbody)\b[^<>\n]{0,80}>"
+        t = re.sub(r"\{\{[ps]:[^}]*\}\}", "", c.get("content") or "")   # 先拿掉標記，「{{s:2-9}}(1) 」的 (1) 才在行首被剔除
+        t = re.sub(r"\[\^\d+\]|^\(\d+\)\s|#|</?(?:table|tr|td|th|thead|tbody)\b[^<>\n]{0,80}>"
                    r"|\]\(/api/ebooks/[^)\s]*\)", "", t, flags=re.M)      # 插圖網址不算內容
         # ↑ 只去 HTML 表格標籤。寫成 <[^>]+> 會從正文裡落單的「<」一路刪到很遠的「>」，合併跨塊後誤報大量缺字
         n += len(re.findall(r"\w", t))
