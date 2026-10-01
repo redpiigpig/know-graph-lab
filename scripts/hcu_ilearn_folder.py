@@ -172,3 +172,13 @@ def folder_files(token, course):
             if m['modname'] == 'folder':
                 out[m['id']] = (m['name'], [c['filename'] for c in m.get('contents') or []])
     return out
+
+
+def set_section(s, section_id, name, summary_html=''):
+    """改課程頁某一週次單元的名稱與說明（editsection.php 表單）。"""
+    t = s.get(f'{B}/course/editsection.php?id={section_id}&sr', timeout=60).text
+    fields = [(k, v) for k, v in _form(t) if k not in ('name', 'summary_editor[text]')]
+    fields += [('name', name), ('summary_editor[text]', summary_html), ('submitbutton', '儲存變更')]
+    r = s.post(f'{B}/course/editsection.php', data=fields, timeout=60)
+    if 'editsection.php' in r.url:
+        raise SystemExit(f'單元 {section_id} 儲存失敗')
