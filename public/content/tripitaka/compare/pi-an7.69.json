@@ -1,0 +1,162 @@
+{
+ "slug": "pi-an7.69",
+ "title": "園生樹經",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "晝度樹的七個階段"
+  },
+  {
+   "id": "a02",
+   "label": "樹花開遍百由旬與諸天娛樂"
+  },
+  {
+   "id": "a03",
+   "label": "聖弟子出家對應樹葉凋落"
+  },
+  {
+   "id": "a04",
+   "label": "聖弟子除不善法遊初禪對應樹作灰色"
+  },
+  {
+   "id": "a05",
+   "label": "聖弟子息覺觀遊二禪對應樹生羅網"
+  },
+  {
+   "id": "a06",
+   "label": "聖弟子念護身樂遊三禪對應樹生雹節"
+  },
+  {
+   "id": "a07",
+   "label": "聖弟子苦樂已盡遊四禪對應樹漸漸開敷"
+  },
+  {
+   "id": "a08",
+   "label": "聖弟子盡漏成無礙解脫對應樹盡敷開花"
+  },
+  {
+   "id": "a09",
+   "label": "諸天稱讚漏盡聖弟子德"
+  },
+  {
+   "id": "a10",
+   "label": "結分：流通與讚歎"
+  }
+ ],
+ "versions": [
+  {
+   "id": "an7.69",
+   "lang": "pi",
+   "label": "巴利 AN7.69",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "T0125-ea39.2",
+   "lang": "lzh",
+   "label": "增壹阿含經 （二）",
+   "who": "東晉 瞿曇僧伽提婆譯"
+  },
+  {
+   "id": "T0026-ma2",
+   "lang": "lzh",
+   "label": "中阿含經 （二）中阿含七法品晝度樹經第二（初一日誦）",
+   "who": "東晉 瞿曇僧伽提婆譯"
+  },
+  {
+   "id": "T0028",
+   "lang": "lzh",
+   "label": "園生樹經",
+   "who": "宋 施護譯"
+  }
+ ],
+ "works": [
+  "T0026",
+  "T0028",
+  "T0125"
+ ],
+ "anchors": [
+  {
+   "work": "T0125",
+   "node": "（二）",
+   "uid": "T02n0125_p0729b11"
+  },
+  {
+   "work": "T0026",
+   "node": "（二）中阿含七法品晝度樹經第二（初一日誦）",
+   "uid": "T01n0026_p0422a18"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "an7.69": "Aṅguttara Nikāya 7.69 7. Mahāvagga Pāricchattakasutta",
+   "T0125-ea39.2": "聞如是：一時，佛在舍衛國祇樹給孤獨園。爾時，世尊告諸比丘：「三十三天晝度樹，本縱廣五十由旬，高百由旬，東、西、南、北蔭覆五十由旬，三十三天在彼四月自相娛樂。",
+   "T0026-ma2": "我聞如是：一時，佛遊舍衛國，在勝林給孤獨園。",
+   "T0028": "如是我聞：一時，佛在舍衛國祇樹給孤獨園，與苾芻眾俱。是時佛告諸苾芻言：「汝等當知，彼三十三天中有一大樹名為園生，其樹盤根及五由旬，高百由旬，所有枝葉覆五十由旬。"
+  },
+  "a01": {
+   "an7.69": "“Yasmiṁ, bhikkhave, samaye devānaṁ tāvatiṁsānaṁ pāricchattako koviḷāro paṇḍupalāso hoti, attamanā, bhikkhave, devā tāvatiṁsā tasmiṁ samaye honti: ‘paṇḍupalāso dāni pāricchattako koviḷāro nacirasseva dāni pannapalāso bhavissatī’ti. Yasmiṁ, bhikkhave, samaye devānaṁ tāvatiṁsānaṁ pāricchattako koviḷāro pannapalāso hoti, attamanā, bhikkhave, devā tāvatiṁsā tasmiṁ samaye honti: ‘pannapalāso dāni pāricchattako koviḷāro nacirasseva dāni jālakajāto bhavissatī’ti. Yasmiṁ, bhikkhave, samaye devānaṁ tāvatiṁsānaṁ pāricchattako koviḷāro jālakajāto hoti, attamanā, bhikkhave, devā tāvatiṁsā tasmiṁ samaye honti: ‘jālakajāto dāni pāricchattako koviḷāro nacirasseva dāni khārakajāto bhavissatī’ti. Yasmiṁ, bhikkhave, samaye devānaṁ tāvatiṁsānaṁ pāricchattako koviḷāro khārakajāto hoti, attamanā, bhikkhave, devā tāvatiṁsā tasmiṁ samaye honti: ‘khārakajāto dāni pāricchattako koviḷāro nacirasseva dāni kuṭumalakajāto bhavissatī’ti. Yasmiṁ, bhikkhave, samaye devānaṁ tāvatiṁsānaṁ pāricchattako koviḷāro kuṭumalakajāto hoti, attamanā, bhikkhave, devā tāvatiṁsā tasmiṁ samaye honti: ‘kuṭumalakajāto dāni pāricchattako koviḷāro nacirasseva dāni korakajāto bhavissatī’ti. Yasmiṁ, bhikkhave, samaye devānaṁ tāvatiṁsānaṁ pāricchattako koviḷāro korakajāto hoti, attamanā, bhikkhave, devā tāvatiṁsā tasmiṁ samaye honti: ‘korakajāto dāni pāricchattako koviḷāro nacirasseva dāni sabbaphāliphullo bhavissatī’ti.",
+   "T0125-ea39.2": "比丘當知，或有是時，彼晝度樹華葉凋落，萎黃在地。爾時，諸天見此瑞應，普懷歡喜，欣情內發：『此樹不久當更生華實。』「比丘當知，或有是時，彼樹華實皆悉凋落，捐棄在地。是時，三十三天倍復歡喜，自相謂言：『此樹不久當作灰色。』「比丘當知，復經歷數時，彼樹便作灰色。是時，三十三天已見此樹而作灰色，甚懷喜悅，自相謂言：『而今此樹已作灰色，不久當生羅網。』是時，三十三天見此晝度樹已生羅網，不久當生雹節。爾時，三十三天見已，復懷歡喜：『此樹今日已生雹節，不久當復開敷。』「比丘當知，三十三天已見此樹漸漸開敷，各懷歡喜：『此樹不久漸漸開敷，不久當盡著華。』「比丘當知，或有是時，彼樹普悉開敷，皆懷歡喜：『此樹今日皆悉著華。』爾時，此香逆風，百由旬內無不聞香者。",
+   "T0026-ma2": "爾時，世尊告諸比丘：「若三十三天晝度樹葉萎黃，是時，三十三天悅樂歡喜，晝度樹葉不久當落。復次，三十三天晝度樹葉已落，是時，三十三天悅樂歡喜，晝度樹葉不久當還生。復次，三十三天晝度樹葉已還生，是時，三十三天悅樂歡喜，晝度樹不久當生網。復次，三十三天晝度樹已生網，是時，三十三天悅樂歡喜，晝度樹不久當生如鳥喙。復次，三十三天晝度樹已生如鳥喙，是時，三十三天悅樂歡喜，晝度樹不久當開如鉢。復次，三十三天晝度樹已開如鉢，是時，三十三天悅樂歡喜，晝度樹不久當盡敷開。",
+   "T0028": "彼天子眾依時往彼樹下遊觀，其樹即生半努鉢羅舍。時諸天子見是事已，即生歡喜適悅快樂。其後非久，復生尸囉拏鉢羅舍，諸天子眾依時往彼遊觀，轉增適悅快樂。又復非久即生寶網，以覆其上而為莊嚴。彼天子眾依時往彼樹下遊觀，轉復增於適悅快樂。又復非久生叉囉迦，彼天子眾依時往彼樹下遊觀，見是事已，轉復增於適悅快樂。又復非久生俱砧摩羅迦，彼天子眾依時往彼樹下遊觀，轉復增於適悅快樂。又復非久生迦迦寫，彼天子眾依時遊觀，轉增適悅。"
+  },
+  "a02": {
+   "an7.69": "Yasmiṁ, bhikkhave, samaye devānaṁ tāvatiṁsānaṁ pāricchattako koviḷāro sabbaphāliphullo hoti, attamanā, bhikkhave, devā tāvatiṁsā pāricchattakassa koviḷārassa mūle dibbe cattāro māse pañcahi kāmaguṇehi samappitā samaṅgībhūtā paricārenti. Sabbaphāliphullassa kho pana, bhikkhave, pāricchattakassa koviḷārassa samantā paññāsayojanāni ābhāya phuṭaṁ hoti, anuvātaṁ yojanasataṁ gandho gacchati, ayamānubhāvo pāricchattakassa koviḷārassa.",
+   "T0125-ea39.2": "爾時，諸天四月之中於彼自相娛樂，樂不可計。",
+   "T0026-ma2": "若晝度樹已盡敷開，光所照、色所映、香所熏，周百由延，是時，三十三天於中夏四月，以天五欲功德具足而自娛樂，是謂三十三天於晝度樹下集會娛樂也。",
+   "T0028": "又復非久彼園生樹滿樹開華，其華清淨異香殊妙，微風吹動，其香馥郁五十由旬，大風所吹滿百由旬，復有殊妙光明照於八十由旬。其樹既開華已，彼天子眾見樹開華，轉倍於前生大快樂，於夏四月居其樹下適悅娛樂。」佛告諸苾芻：「汝等當知，彼園生樹有如是事，妙華異香人所愛樂；諸聲聞人亦復如是。"
+  },
+  "a03": {
+   "an7.69": "Evamevaṁ kho, bhikkhave, yasmiṁ samaye ariyasāvako agārasmā anagāriyaṁ pabbajjāya ceteti, paṇḍupalāso, bhikkhave, ariyasāvako tasmiṁ samaye hoti devānaṁva tāvatiṁsānaṁ pāricchattako koviḷāro. Yasmiṁ, bhikkhave, samaye ariyasāvako kesamassuṁ ohāretvā kāsāyāni vatthāni acchādetvā agārasmā anagāriyaṁ pabbajito hoti, pannapalāso, bhikkhave, ariyasāvako tasmiṁ samaye hoti devānaṁva tāvatiṁsānaṁ pāricchattako koviḷāro.",
+   "T0125-ea39.2": "「此亦如是，若賢聖弟子意欲出家學道時，如似彼樹始欲凋落。「復次，賢聖弟子捐棄妻財，以信堅固，出家學道，剃除鬚髮，如似彼樹葉落在地。",
+   "T0026-ma2": "「如是義，聖弟子亦復爾，思念出家，是時聖弟子名為葉黃，猶三十三天晝度樹葉萎黃也。復次，聖弟子剃除鬚髮，著袈裟衣，至信、捨家、無家、學道，是時聖弟子名為葉落，猶三十三天晝度樹葉落也。",
+   "T0028": "彼樹初生半努鉢羅舍時，即如聲聞人初發信心出家向道；復次彼樹生尸囉拏鉢羅舍時，即如聲聞人剃除鬚髮、被袈裟衣，成聲聞相；"
+  },
+  "a04": {
+   "an7.69": "Yasmiṁ, bhikkhave, samaye ariyasāvako vivicceva kāmehi …pe… paṭhamaṁ jhānaṁ upasampajja viharati, jālakajāto, bhikkhave, ariyasāvako tasmiṁ samaye hoti devānaṁva tāvatiṁsānaṁ pāricchattako koviḷāro.",
+   "T0125-ea39.2": "「比丘當知，若賢聖弟子無貪欲想，除不善法，念持歡喜，遊志一禪，似彼晝度樹而作灰色。",
+   "T0026-ma2": "復次，聖弟子離欲、離惡不善之法，有覺、有觀，離生喜樂，得初禪成就遊，是時，聖弟子名葉還生，猶三十三天晝度樹葉還生也。",
+   "T0028": "復次彼樹生寶網時，即如聲聞人厭離諸欲、捨不善法，遠離種種思惟分別，獲得初禪離生喜樂定。"
+  },
+  "a05": {
+   "an7.69": "Yasmiṁ, bhikkhave, samaye ariyasāvako vitakkavicārānaṁ vūpasamā …pe… dutiyaṁ jhānaṁ upasampajja viharati, khārakajāto, bhikkhave, ariyasāvako tasmiṁ samaye hoti devānaṁva tāvatiṁsānaṁ pāricchattako koviḷāro.",
+   "T0125-ea39.2": "「復次，賢聖弟子有覺、有觀息，內有歡喜，專其一心，無覺、無觀、遊心二禪，如似彼樹而生羅網。",
+   "T0026-ma2": "復次，聖弟子覺觀已息，內靜、一心，無覺無觀，定生喜樂，得第二禪成就遊，是時，聖弟子名為生網，猶三十三天晝度樹生網也。",
+   "T0028": "「復次彼樹生叉曪迦時，即如聲聞人外相善寂、內心靜住，離諸思惟、定心一想，獲得二禪定生喜樂定。"
+  },
+  "a06": {
+   "an7.69": "Yasmiṁ, bhikkhave, samaye ariyasāvako pītiyā ca virāgā …pe… tatiyaṁ jhānaṁ upasampajja viharati, kuṭumalakajāto, bhikkhave, ariyasāvako tasmiṁ samaye hoti devānaṁva tāvatiṁsānaṁ pāricchattako koviḷāro.",
+   "T0125-ea39.2": "「復次，賢聖弟子念而有護，自覺身有樂，諸賢聖所救，護念具足，遊在三禪，如似彼樹而生雹節。",
+   "T0026-ma2": "復次，聖弟子離於喜欲，捨無求遊，正念正智而身覺樂，謂聖所說、聖所捨、念、樂住、空，得第三禪成就遊，是時，聖弟子名生如鳥喙，猶三十三天晝度樹如鳥喙也。",
+   "T0028": "「復次彼樹生俱砧摩羅迦時，即如聲聞人離諸喜愛，身得輕安適悅妙樂，獲得第三禪離喜妙樂定。"
+  },
+  "a07": {
+   "an7.69": "Yasmiṁ, bhikkhave, samaye ariyasāvako sukhassa ca pahānā dukkhassa ca pahānā …pe… catutthaṁ jhānaṁ upasampajja viharati, korakajāto, bhikkhave, ariyasāvako tasmiṁ samaye hoti devānaṁva tāvatiṁsānaṁ pāricchattako koviḷāro.",
+   "T0125-ea39.2": "「復次，賢聖弟子苦樂已盡，先無愁憂，無苦無樂，護念清淨，遊志四禪，如似彼樹漸漸開敷。",
+   "T0026-ma2": "復次，聖弟子樂滅、苦滅，喜憂本已滅，不苦不樂、捨、念、清淨，得第四禪成就遊，是時，聖弟子名生如鉢，猶三十三天晝度樹如鉢也。",
+   "T0028": "「復次彼樹生迦迦寫時，即如聲聞人斷除一切憂苦喜樂住平等心，獲得第四禪捨念清淨定。"
+  },
+  "a08": {
+   "an7.69": "Yasmiṁ, bhikkhave, samaye ariyasāvako āsavānaṁ khayā …pe… sacchikatvā upasampajja viharati, sabbaphāliphullo, bhikkhave, ariyasāvako tasmiṁ samaye hoti devānaṁva tāvatiṁsānaṁ pāricchattako koviḷāro.",
+   "T0125-ea39.2": "「復次，賢聖弟子盡有漏，成無漏心解脫、智慧解脫，現法中而自娛樂：生死已盡，梵行已立，所作已辦，更不復受胎，如實知之。如似彼樹皆悉敷花。「是時，賢聖弟子戒德之香，遍聞四遠，無不稱譽者，四月之中而自娛樂，遊心四禪，具足行本。",
+   "T0026-ma2": "「復次，聖弟子諸漏已盡，心解脫、慧解脫，於現法中自知自覺，自作證成就遊，生已盡，梵行已立，所作已辦，不更受有，知如真，是時，聖弟子名盡敷開，猶三十三天晝度樹盡敷開也。",
+   "T0028": "「復次彼樹開敷妙華，異香遍聞，人所愛樂時，即如聲聞人諸漏已盡、非漏隨增，證無學果不受後有，人天瞻敬受大供養，同彼華開其事如是。」佛告諸苾芻：「汝等當知，彼三十三天諸天子眾，各各色相殊異嚴好種種莊飾，居善法堂集會圍繞，聽受帝釋天主宣說妙法。汝諸苾芻！各獲果證清淨圓滿，梵行具足一切見敬，圍繞世尊聽受妙法，同彼天眾亦復如是。」"
+  },
+  "a09": {
+   "an7.69": "Tasmiṁ, bhikkhave, samaye bhummā devā saddamanussāventi: ‘eso itthannāmo āyasmā itthannāmassa āyasmato saddhivihāriko amukamhā gāmā vā nigamā vā agārasmā anagāriyaṁ pabbajito āsavānaṁ khayā anāsavaṁ cetovimuttiṁ paññāvimuttiṁ diṭṭheva dhamme sayaṁ abhiññā sacchikatvā upasampajja viharatī’ti. Bhummānaṁ devānaṁ saddaṁ sutvā cātumahārājikā devā …pe… tāvatiṁsā devā … yāmā devā … tusitā devā … nimmānaratī devā … paranimmitavasavattī devā … brahmakāyikā devā saddamanussāventi: ‘eso itthannāmo āyasmā itthannāmassa āyasmato saddhivihāriko amukamhā gāmā vā nigamā vā agārasmā anagāriyaṁ pabbajito āsavānaṁ khayā anāsavaṁ cetovimuttiṁ paññāvimuttiṁ diṭṭheva dhamme sayaṁ abhiññā sacchikatvā upasampajja viharatī’ti. Itiha tena khaṇena tena muhuttena yāva brahmalokā saddo abbhuggacchati, ayamānubhāvo khīṇāsavassa bhikkhuno”ti.",
+   "T0026-ma2": "彼為漏盡阿羅訶比丘，三十三天集在善法正殿，咨嗟稱歎：『某尊弟子於某村邑剃除鬚髮，著袈裟衣，至信、捨家、無家、學道，諸漏已盡，心解脫、慧解脫，於現法中自知自覺，自作證成就遊，生已盡，梵行已立，所作已辦，不更受有，知如真。』是謂漏盡阿羅訶共集會也，如三十三天晝度樹下共集會也。」"
+  },
+  "a10": {
+   "an7.69": "Pañcamaṁ.",
+   "T0125-ea39.2": "是故，諸比丘！當求方便，成戒德之香。如是，比丘！當作是學。」爾時，諸比丘聞佛所說，歡喜奉行。",
+   "T0026-ma2": "佛說如是。彼諸比丘聞佛所說，歡喜奉行。晝度樹經第二竟（七百五十二字）",
+   "T0028": "爾時諸苾芻聞佛宣說園生樹已，各各心生歡喜踊躍，信受奉行。"
+  }
+ }
+}

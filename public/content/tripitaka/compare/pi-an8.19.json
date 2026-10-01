@@ -1,0 +1,247 @@
+{
+ "slug": "pi-an8.19",
+ "title": "增壹阿含經 （四）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "阿修羅問海中奇特法數"
+  },
+  {
+   "id": "a02",
+   "label": "阿修羅答海中八奇特法之初：漸深廣"
+  },
+  {
+   "id": "a03",
+   "label": "阿修羅答海中八奇特法之二：潮不失時"
+  },
+  {
+   "id": "a04",
+   "label": "阿修羅答海中八奇特法之三：深廣無邊"
+  },
+  {
+   "id": "a05",
+   "label": "阿修羅答海中八奇特法之四：一味鹹"
+  },
+  {
+   "id": "a06",
+   "label": "阿修羅答海中八奇特法之五：眾寶充滿"
+  },
+  {
+   "id": "a07",
+   "label": "阿修羅答海中八奇特法之六：眾神所居"
+  },
+  {
+   "id": "a08",
+   "label": "阿修羅答海中八奇特法之七：不容死屍"
+  },
+  {
+   "id": "a09",
+   "label": "阿修羅答海中八奇特法之八：諸河入海同名"
+  },
+  {
+   "id": "a10",
+   "label": "阿修羅結答海中八奇特法"
+  },
+  {
+   "id": "a11",
+   "label": "阿修羅問法中奇特法數"
+  },
+  {
+   "id": "a12",
+   "label": "佛答法中八奇特法之初：漸學漸修"
+  },
+  {
+   "id": "a13",
+   "label": "佛答法中八奇特法之二：戒律具足不越敘"
+  },
+  {
+   "id": "a14",
+   "label": "佛答法中八奇特法之三：一味聖道"
+  },
+  {
+   "id": "a15",
+   "label": "佛答法中八奇特法之四：種種珍寶（覺意等）"
+  },
+  {
+   "id": "a16",
+   "label": "佛答法中八奇特法之五：眾生盡取滅度"
+  },
+  {
+   "id": "a17",
+   "label": "佛答法中八奇特法之六：一味解脫味"
+  },
+  {
+   "id": "a18",
+   "label": "佛答法中八奇特法之七：多種珍寶（三十七道"
+  },
+  {
+   "id": "a19",
+   "label": "佛答法中八奇特法之八：聖眾大神皆居"
+  },
+  {
+   "id": "a20",
+   "label": "佛結答法中八奇特法"
+  },
+  {
+   "id": "a21",
+   "label": "阿修羅讚歎法勝於海"
+  },
+  {
+   "id": "a22",
+   "label": "結束與奉行"
+  }
+ ],
+ "versions": [
+  {
+   "id": "an8.19",
+   "lang": "pi",
+   "label": "巴利 AN8.19",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "T0125-ea42.4",
+   "lang": "lzh",
+   "label": "增壹阿含經 （四）",
+   "who": "東晉 瞿曇僧伽提婆譯",
+   "reorder": true
+  },
+  {
+   "id": "T0026-ma35",
+   "lang": "lzh",
+   "label": "中阿含經 （三五）中阿含未曾有法品阿修羅經第四（初一日誦）",
+   "who": "東晉 瞿曇僧伽提婆譯"
+  }
+ ],
+ "works": [
+  "T0026",
+  "T0125"
+ ],
+ "anchors": [
+  {
+   "work": "T0125",
+   "node": "（四）",
+   "uid": "T02n0125_p0752c24"
+  },
+  {
+   "work": "T0026",
+   "node": "（三五）中阿含未曾有法品阿修羅經第四（初一日誦）",
+   "uid": "T01n0026_p0475c17"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "an8.19": "Aṅguttara Nikāya 8.19 2. Mahāvagga Pahārādasutta",
+   "T0125-ea42.4": "聞如是：一時，佛在舍衛國鹿野苑中，與大比丘眾五百人俱。是時，波呵羅阿須倫及牟提輪天子，非時至世尊所，頭面禮足，在一面坐。",
+   "T0026-ma35": "我聞如是：一時，佛遊鞞蘭若，在黃蘆園。爾時，婆羅邏阿修羅王、牟梨遮阿修羅子，色像巍巍，光耀暐曄，夜將向旦，往詣佛所，禮世尊足，却住一面。"
+  },
+  "a01": {
+   "an8.19": "Ekaṁ samayaṁ bhagavā verañjāyaṁ viharati naḷerupucimandamūle. Atha kho pahārādo asurindo yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ aṭṭhāsi. Ekamantaṁ ṭhitaṁ kho pahārādaṁ asurindaṁ bhagavā etadavoca: “Api pana, pahārāda, asurā mahāsamudde abhiramantī”ti? “Abhiramanti, bhante, asurā mahāsamudde”ti. “Kati pana, pahārāda, mahāsamudde acchariyā abbhutā dhammā, ye disvā disvā asurā mahāsamudde abhiramantī”ti? “Aṭṭha, bhante, mahāsamudde acchariyā abbhutā dhammā, ye disvā disvā asurā mahāsamudde abhiramanti. Katame aṭṭha?",
+   "T0125-ea42.4": "是時，如來問阿須倫曰：「汝等甚樂大海中乎？」阿須倫白佛言：「實樂，非為不樂。」世尊告曰：「大海之中有何奇特之法，汝等見已，於中娛樂？」阿須倫白佛言：「大海之中有八未曾有之法，諸阿須倫娛樂其中。",
+   "T0026-ma35": "世尊問曰：「婆羅邏！大海中阿修羅無有衰退阿修羅壽、阿修羅色、阿修羅樂、阿修羅力，諸阿修羅樂大海中耶？」婆羅邏阿修羅王、牟梨遮阿修羅子答曰：「世尊！我大海中諸阿修羅無有衰退於阿修羅壽、阿修羅色、阿修羅樂、阿修羅力，諸阿修羅樂大海中。」世尊復問曰：「婆羅邏！大海中有幾未曾有法，令諸阿修羅見已樂中。」婆羅邏答曰：「世尊！我大海中有八未曾有法，令諸阿修羅見已樂中。"
+  },
+  "a02": {
+   "an8.19": "Mahāsamuddo, bhante, anupubbaninno anupubbapoṇo anupubbapabbhāro, na āyatakeneva papāto. Yampi, bhante, mahāsamuddo anupubbaninno anupubbapoṇo anupubbapabbhāro, na āyatakeneva papāto; ayaṁ, bhante, mahāsamudde paṭhamo acchariyo abbhuto dhammo, yaṁ disvā disvā asurā mahāsamudde abhiramanti.",
+   "T0125-ea42.4": "云何為八？於是，大海之中極深且廣，是謂初未曾有之法。「復次，大海有此神德，四大江河，一一河者將從五百以投大海，便失本名字，是謂第二之法也。",
+   "T0026-ma35": "云何為八？世尊！我大海從下至上，周迴漸廣，均調轉上，以成於岸，其水常滿，未曾流出。世尊！若我大海從下至上，周迴漸廣，均調轉上，以成於岸，其水常滿，未曾流出者，是謂我大海中第一未曾有法，諸阿修羅見已樂中。"
+  },
+  "a03": {
+   "an8.19": "Puna caparaṁ, bhante, mahāsamuddo ṭhitadhammo velaṁ nātivattati. Yampi, bhante, mahāsamuddo ṭhitadhammo velaṁ nātivattati; ayaṁ, bhante, mahāsamudde dutiyo acchariyo abbhuto dhammo yaṁ disvā disvā asurā mahāsamudde abhiramanti.",
+   "T0125-ea42.4": "「復次，大海以時朝賀，不失時節，是謂第四未曾有之法。",
+   "T0026-ma35": "「復次，世尊！我大海潮未曾失時。世尊！若我大海潮未曾失時者，是謂我大海中第二未曾有法，諸阿修羅見已樂中。"
+  },
+  "a04": {
+   "an8.19": "Puna caparaṁ, bhante, mahāsamuddo na matena kuṇapena saṁvasati. Yaṁ hoti mahāsamudde mataṁ kuṇapaṁ, taṁ khippameva tīraṁ vāheti, thalaṁ ussāreti. Yampi, bhante, mahāsamuddo na matena kuṇapena saṁvasati, yaṁ hoti mahāsamudde mataṁ kuṇapaṁ, taṁ khippameva tīraṁ vāheti, thalaṁ ussāreti; ayaṁ, bhante, mahāsamudde tatiyo acchariyo abbhuto dhammo, yaṁ disvā disvā asurā mahāsamudde abhiramanti.",
+   "T0026-ma35": "「復次，世尊！我大海水甚深無底，極廣無邊。世尊！若我大海甚深無底，極廣無邊者，是謂我大海中第三未曾有法，諸阿修羅見已樂中。"
+  },
+  "a05": {
+   "an8.19": "Puna caparaṁ, bhante, yā kāci mahānadiyo, seyyathidaṁ— gaṅgā yamunā aciravatī sarabhū mahī, tā mahāsamuddaṁ patvā jahanti purimāni nāmagottāni, ‘mahāsamuddo’ tveva saṅkhaṁ gacchanti. Yampi, bhante, yā kāci mahānadiyo, seyyathidaṁ—gaṅgā yamunā aciravatī sarabhū mahī, tā mahāsamuddaṁ patvā jahanti purimāni nāmagottāni, ‘mahāsamuddo’ tveva saṅkhaṁ gacchanti; ayaṁ, bhante, mahāsamudde catuttho acchariyo abbhuto dhammo, yaṁ disvā disvā asurā mahāsamudde abhiramanti.",
+   "T0125-ea42.4": "「復次，大海皆同一味，是謂第三之法也。",
+   "T0026-ma35": "「復次，世尊！我大海水鹹，皆同一味。世尊！若我大海水鹹，皆同一味者，是謂我大海中第四未曾有法，諸阿修羅見已樂中。"
+  },
+  "a06": {
+   "an8.19": "Puna caparaṁ, bhante, yā ca loke savantiyo mahāsamuddaṁ appenti yā ca antalikkhā dhārā papatanti, na tena mahāsamuddassa ūnattaṁ vā pūrattaṁ vā paññāyati. Yampi, bhante, yā ca loke savantiyo mahāsamuddaṁ appenti yā ca antalikkhā dhārā papatanti, na tena mahāsamuddassa ūnattaṁ vā pūrattaṁ vā paññāyati; ayaṁ, bhante, mahāsamudde pañcamo acchariyo abbhuto dhammo, yaṁ disvā disvā asurā mahāsamudde abhiramanti.",
+   "T0125-ea42.4": "「復次，大海之中出若干種珍寶，硨𤦲、瑪瑙、真珠、琥珀、水精、琉璃，是謂第七未曾有之法。",
+   "T0026-ma35": "「復次，世尊！我大海中多有珍寶，無量璝異，種種珍琦，充滿其中，珍寶名者，謂金、銀、水精、琉璃、摩尼、真珠、碧玉、白珂、螺璧、珊瑚、虎珀、馬瑙、瑇瑁、赤石、琁珠。世尊！若我大海中多有珍寶，無量璝異、種種珍琦，充滿其中，珍寶名者，謂金、銀、水精、琉璃、摩尼、真珠、碧玉、白珂、螺璧、珊瑚、虎珀、馬瑙、瑇瑁、赤石、琁珠者，是謂我大海中第五未曾有法，諸阿修羅見已樂中。"
+  },
+  "a07": {
+   "an8.19": "Puna caparaṁ, bhante, mahāsamuddo ekaraso loṇaraso. Yampi, bhante, mahāsamuddo ekaraso loṇaraso; ayaṁ, bhante, mahāsamudde chaṭṭho acchariyo abbhuto dhammo, yaṁ disvā disvā asurā mahāsamudde abhiramanti.",
+   "T0125-ea42.4": "「復次，大海鬼神所居，有形之類無不在大海中者，是謂第五未曾有之法。「復次，大海之中皆容極大之形，百由旬形，乃至七千由旬形，亦不逼迮，是謂第六未曾有之法。",
+   "T0026-ma35": "「復次，世尊！我大海中大神所居，大神名者，謂阿修羅、乾塔惒、羅剎、魚摩竭、龜、鼉、婆留泥、帝麑、帝麑伽羅、提帝麑伽羅。復次，大海中甚奇！甚特！眾生身體有百由延，有二百由延，有 三百由延，有至七百由延，身皆居海中。世尊！若大海中大神所居，大神名者，謂阿修羅、乾塔惒、羅剎、魚摩竭、龜、鼉、婆留泥、帝麑、帝麑伽羅、提帝麑伽羅。復次，大海中甚奇！甚特！眾生身體有百由延，有二百由延，有三百由延，有至七百由延，身皆居海中者，是謂我大海中第六未曾有法，諸阿修羅見已樂中。"
+  },
+  "a08": {
+   "an8.19": "Puna caparaṁ, bhante, mahāsamuddo bahuratano anekaratano. Tatrimāni ratanāni, seyyathidaṁ—muttā maṇi veḷuriyo saṅkho silā pavāḷaṁ rajataṁ jātarūpaṁ lohitako masāragallaṁ. Yampi, bhante, mahāsamuddo bahuratano anekaratano; tatrimāni ratanāni, seyyathidaṁ—muttā maṇi veḷuriyo saṅkho silā pavāḷaṁ rajataṁ jātarūpaṁ lohitako masāragallaṁ; ayaṁ, bhante, mahāsamudde sattamo acchariyo abbhuto dhammo, yaṁ disvā disvā asurā mahāsamudde abhiramanti.",
+   "T0026-ma35": "「復次，世尊！我大海清淨，不受死屍。若有命終者，過夜風便吹著岸上。世尊！若我大海清淨，不受死屍。若有命終者，過夜風便吹著岸上者，是謂我大海中第七未曾有法，諸阿修羅見已樂中。"
+  },
+  "a09": {
+   "an8.19": "Puna caparaṁ, bhante, mahāsamuddo mahataṁ bhūtānaṁ āvāso. Tatrime bhūtā—timi timiṅgalo timirapiṅgalo asurā nāgā gandhabbā. Santi mahāsamudde yojanasatikāpi attabhāvā, dviyojanasatikāpi attabhāvā, tiyojanasatikāpi attabhāvā, catuyojanasatikāpi attabhāvā, pañcayojanasatikāpi attabhāvā. Yampi, bhante, mahāsamuddo mahataṁ bhūtānaṁ āvāso; tatrime bhūtā—timi timiṅgalo timirapiṅgalo asurā nāgā gandhabbā; santi mahāsamudde yojanasatikāpi attabhāvā …pe… tiyojana … catuyojana … pañcayojanasatikāpi attabhāvā; ayaṁ, bhante, mahāsamudde aṭṭhamo acchariyo abbhuto dhammo, yaṁ disvā disvā asurā mahāsamudde abhiramanti.",
+   "T0125-ea42.4": "「復次，大海之中下有金沙，又有須彌山，四寶所成，是謂第八未曾有之法。",
+   "T0026-ma35": "「復次，世尊！我大海閻浮洲中有五大河，一曰恒伽，二曰搖尤那，三曰舍牢浮，四曰阿夷羅婆提，五曰摩企，悉入大海，既入中已，各捨本名，皆曰大海。世尊！若我大海閻浮洲中有五大河，一曰恒伽，二曰搖尤那，三曰舍牢浮，四曰阿夷羅婆提，五曰摩企，悉入大海，既入中已，各捨本名，皆曰大海者，是謂我大海中第八未曾有法，諸阿修羅見已樂中。"
+  },
+  "a10": {
+   "an8.19": "Ime kho, bhante, mahāsamudde aṭṭha acchariyā abbhutā dhammā, ye disvā disvā asurā mahāsamudde abhiramantīti.",
+   "T0125-ea42.4": "此名八未曾有之法，使諸阿須倫娛樂其中。」",
+   "T0026-ma35": "「世尊！是謂我大海中有八未曾有法，諸阿修羅見已樂中。"
+  },
+  "a11": {
+   "an8.19": "Api pana, bhante, bhikkhū imasmiṁ dhammavinaye abhiramantī”ti? “Abhiramanti, pahārāda, bhikkhū imasmiṁ dhammavinaye”ti. “Kati pana, bhante, imasmiṁ dhammavinaye acchariyā abbhutā dhammā, ye disvā disvā bhikkhū imasmiṁ dhammavinaye abhiramantī”ti? “Aṭṭha, pahārāda, imasmiṁ dhammavinaye acchariyā abbhutā dhammā, ye disvā disvā bhikkhū imasmiṁ dhammavinaye abhiramanti. Katame aṭṭha?",
+   "T0125-ea42.4": "是時，阿須倫白世尊：「如來法中有何奇特，使諸比丘見已，娛樂其中？」佛告阿須倫曰：「有八未曾有之法，使諸比丘娛樂其中。",
+   "T0026-ma35": "世尊！於佛正法、律中有幾未曾有法，令諸比丘見已樂中。」世尊答曰：「婆羅邏！我正法、律中亦有八未曾有法，令諸比丘見已樂中。"
+  },
+  "a12": {
+   "an8.19": "Seyyathāpi, pahārāda, mahāsamuddo anupubbaninno anupubbapoṇo anupubbapabbhāro, na āyatakeneva papāto; evamevaṁ kho, pahārāda, imasmiṁ dhammavinaye anupubbasikkhā anupubbakiriyā anupubbapaṭipadā, na āyatakeneva aññāpaṭivedho. Yampi, pahārāda, imasmiṁ dhammavinaye anupubbasikkhā anupubbakiriyā anupubbapaṭipadā, na āyatakeneva aññāpaṭivedho; ayaṁ, pahārāda, imasmiṁ dhammavinaye paṭhamo acchariyo abbhuto dhammo, yaṁ disvā disvā bhikkhū imasmiṁ dhammavinaye abhiramanti.",
+   "T0125-ea42.4": "云何為八？又我法中戒律具足，無放逸行，是謂初未曾有之法。諸比丘見已，娛樂其中，如彼大海極深且廣。",
+   "T0026-ma35": "云何為八？婆羅邏！如大海從下至上，周迴漸廣，均調轉上，以成於岸，其水常滿，未曾流出。婆羅邏！我正法、律亦復如是，漸作漸學，漸盡漸教。婆羅邏！若我正法、律中漸作漸學，漸盡漸教者，是謂我正法、律中第一未曾有法，令諸比丘見已樂中。「復次，婆羅邏！如大海潮，未曾失時。"
+  },
+  "a13": {
+   "an8.19": "Seyyathāpi, pahārāda, mahāsamuddo ṭhitadhammo velaṁ nātivattati; evamevaṁ kho, pahārāda, yaṁ mayā sāvakānaṁ sikkhāpadaṁ paññattaṁ taṁ mama sāvakā jīvitahetupi nātikkamanti. Yampi, pahārāda, mayā sāvakānaṁ sikkhāpadaṁ paññattaṁ taṁ mama sāvakā jīvitahetupi nātikkamanti; ayaṁ, pahārāda, imasmiṁ dhammavinaye dutiyo acchariyo abbhuto dhammo, yaṁ disvā disvā bhikkhū imasmiṁ dhammavinaye abhiramanti.",
+   "T0125-ea42.4": "「復次，我法中有四種姓，於我法中作沙門，不錄前名，更作餘字，猶如彼海，四大江河皆投于海而同一味，更無餘名，是謂第二未曾有之法。「復次，我法中施設禁戒，相隨亦不越敘，是謂第三未曾有之法。",
+   "T0026-ma35": "婆羅邏！我正法、律亦復如是，為比丘、比丘尼、優婆塞、優婆私施設禁戒，諸族姓子乃至命盡，終不犯戒。婆羅邏！若我正法、律中為比丘、比丘尼、優婆塞、優婆私施設禁戒，諸族姓子乃至命盡，終不犯戒者，是謂我正法、律中第二未曾有法，令諸比丘見已樂中。「復次，婆羅邏！如大海水，甚深無底，極廣無邊。婆羅邏！我正法、律亦復如是，諸法甚深，甚深無底，極廣無邊。婆羅邏！若我正法、律中諸法甚深，甚深無底，極廣無邊者，是謂我正法、律中第三未曾有法，令諸比丘見已樂中。「復次，婆羅邏！"
+  },
+  "a14": {
+   "an8.19": "Seyyathāpi, pahārāda, mahāsamuddo na matena kuṇapena saṁvasati. Yaṁ hoti mahāsamudde mataṁ kuṇapaṁ, taṁ khippameva tīraṁ vāheti thalaṁ ussāreti; evamevaṁ kho, pahārāda, yo so puggalo dussīlo pāpadhammo asucisaṅkassarasamācāro paṭicchannakammanto assamaṇo samaṇapaṭiñño abrahmacārī brahmacāripaṭiñño antopūti avassuto kasambujāto, na tena saṅgho saṁvasati; khippameva naṁ sannipatitvā ukkhipati. Kiñcāpi so hoti majjhe bhikkhusaṅghassa sannisinno, atha kho so ārakāva saṅghamhā saṅgho ca tena. Yampi, pahārāda, yo so puggalo dussīlo pāpadhammo asucisaṅkassarasamācāro paṭicchannakammanto assamaṇo samaṇapaṭiñño abrahmacārī brahmacāripaṭiñño antopūti avassuto kasambujāto, na tena saṅgho saṁvasati; khippameva naṁ sannipatitvā ukkhipati; kiñcāpi so hoti majjhe bhikkhusaṅghassa sannisinno, atha kho so ārakāva saṅghamhā saṅgho ca tena; ayaṁ, pahārāda, imasmiṁ dhammavinaye tatiyo acchariyo abbhuto dhammo, yaṁ disvā disvā bhikkhū imasmiṁ dhammavinaye abhiramanti.",
+   "T0125-ea42.4": "「復次，我法中皆同一味，所謂賢聖八品道味，是謂第四未曾有之法也，如彼大海悉同一味。「復次，我法中種種法充滿其中，所謂四意斷、四神足、五根、五力、七覺意、八真直行，諸比丘見已，娛樂其中，如彼大海諸神居其中，是謂第五未曾有之法。",
+   "T0026-ma35": "如大海水鹹，皆同一味，婆羅邏！我正法、律亦復如是，無欲為味，覺味、息味及道味。婆羅邏！若我正法、律中無欲為味，覺味、息味及道味者，是謂我正法、律中第四未曾有法，令諸比丘見已樂中。「復次，婆羅邏！"
+  },
+  "a15": {
+   "an8.19": "Seyyathāpi, pahārāda, yā kāci mahānadiyo, seyyathidaṁ—gaṅgā yamunā aciravatī sarabhū mahī, tā mahāsamuddaṁ patvā jahanti purimāni nāmagottāni, ‘mahāsamuddo’ tveva saṅkhaṁ gacchanti; evamevaṁ kho, pahārāda, cattārome vaṇṇā—khattiyā, brāhmaṇā, vessā, suddā, te tathāgatappavedite dhammavinaye agārasmā anagāriyaṁ pabbajitvā jahanti purimāni nāmagottāni, ‘samaṇā sakyaputtiyā’ tveva saṅkhaṁ gacchanti. Yampi, pahārāda, cattārome vaṇṇā—khattiyā, brāhmaṇā, vessā, suddā, te tathāgatappavedite dhammavinaye agārasmā anagāriyaṁ pabbajitvā jahanti purimāni nāmagottāni, ‘samaṇā sakyaputtiyā’ tveva saṅkhaṁ gacchanti; ayaṁ, pahārāda, imasmiṁ dhammavinaye catuttho acchariyo abbhuto dhammo, yaṁ disvā disvā bhikkhū imasmiṁ dhammavinaye abhiramanti.",
+   "T0125-ea42.4": "「復次，我法中有種種珍寶。",
+   "T0026-ma35": "如大海中多有珍寶，無量璝異、種種珍琦，充滿其中，珍寶名者，謂金、銀、水精、琉璃、摩尼、真珠、碧玉、白珂、螺璧、珊瑚、虎珀、馬瑙、瑇𤦛、赤石、琁珠。"
+  },
+  "a16": {
+   "an8.19": "Seyyathāpi, pahārāda, yā ca loke savantiyo mahāsamuddaṁ appenti yā ca antalikkhā dhārā papatanti, na tena mahāsamuddassa ūnattaṁ vā pūrattaṁ vā paññāyati; evamevaṁ kho, pahārāda, bahū cepi bhikkhū anupādisesāya nibbānadhātuyā parinibbāyanti, na tena nibbānadhātuyā ūnattaṁ vā pūrattaṁ vā paññāyati. Yampi, pahārāda, bahū cepi bhikkhū anupādisesāya nibbānadhātuyā parinibbāyanti, na tena nibbānadhātuyā ūnattaṁ vā pūrattaṁ vā paññāyati; ayaṁ, pahārāda, imasmiṁ dhammavinaye pañcamo acchariyo abbhuto dhammo, yaṁ disvā disvā bhikkhū imasmiṁ dhammavinaye abhiramanti.",
+   "T0125-ea42.4": "「復次，我法中諸有眾生類，剃除鬚髮，著三法衣，出家學道，於無餘涅槃界而取滅度。然我法中無有增減，如彼大海，諸河投之無有增減，是謂第七未曾有之法，諸比丘見已，娛樂其中。「復次，我法中有金剛三昧，有滅盡三昧，一切光明三昧，得不起三昧，種種三昧不可稱計，諸比丘見已娛樂，如彼大海下有金沙，是謂第八未曾有之法。諸比丘見已，娛樂其中。"
+  },
+  "a17": {
+   "an8.19": "Seyyathāpi, pahārāda, mahāsamuddo ekaraso loṇaraso; evamevaṁ kho, pahārāda, ayaṁ dhammavinayo ekaraso, vimuttiraso. Yampi, pahārāda, ayaṁ dhammavinayo ekaraso, vimuttiraso; ayaṁ, pahārāda, imasmiṁ dhammavinaye chaṭṭho acchariyo abbhuto dhammo, yaṁ disvā disvā bhikkhū imasmiṁ dhammavinaye abhiramanti."
+  },
+  "a18": {
+   "an8.19": "Seyyathāpi, pahārāda, mahāsamuddo bahuratano anekaratano; tatrimāni ratanāni, seyyathidaṁ—muttā maṇi veḷuriyo saṅkho silā pavāḷaṁ rajataṁ jātarūpaṁ lohitako masāragallaṁ; evamevaṁ kho, pahārāda, ayaṁ dhammavinayo bahuratano anekaratano. Tatrimāni ratanāni, seyyathidaṁ—cattāro satipaṭṭhānā, cattāro sammappadhānā, cattāro iddhipādā, pañcindriyāni, pañca balāni, satta bojjhaṅgā, ariyo aṭṭhaṅgiko maggo. Yampi, pahārāda, ayaṁ dhammavinayo bahuratano anekaratano; tatrimāni ratanāni, seyyathidaṁ—cattāro satipaṭṭhānā, cattāro sammappadhānā, cattāro iddhipādā, pañcindriyāni, pañca balāni, satta bojjhaṅgā, ariyo aṭṭhaṅgiko maggo; ayaṁ, pahārāda, imasmiṁ dhammavinaye sattamo acchariyo abbhuto dhammo, yaṁ disvā disvā bhikkhū imasmiṁ dhammavinaye abhiramanti.",
+   "T0125-ea42.4": "所謂念覺意寶、法覺意寶、精進覺意寶、喜覺意寶、猗覺意寶、定覺意寶、護覺意寶，是謂第六未曾有之法。諸比丘見已，娛樂其中，如彼大海出種種珍寶。",
+   "T0026-ma35": "婆羅邏！我正法、律亦復如是，多有珍寶，無量璝異，種種珍琦，充滿其中，珍寶名者，謂四念處、四正勤、四如意足、五根、五力、七覺支、八支聖道。婆羅邏！若我正法、律中多有珍寶，無量璝異，種種珍琦，充滿其中，珍寶名者，謂四念處、四正勤、四如意足、五根、五力、七覺支、八支聖道者，是謂我正法、律中第五未曾有法，令諸比丘見已樂中。「復次，婆羅邏！"
+  },
+  "a19": {
+   "an8.19": "Seyyathāpi, pahārāda, mahāsamuddo mahataṁ bhūtānaṁ āvāso; tatrime bhūtā—timi timiṅgalo timirapiṅgalo asurā nāgā gandhabbā; santi mahāsamudde yojanasatikāpi attabhāvā, dviyojanasatikāpi attabhāvā, tiyojanasatikāpi attabhāvā, catuyojanasatikāpi attabhāvā, pañcayojanasatikāpi attabhāvā; evamevaṁ kho, pahārāda, ayaṁ dhammavinayo mahataṁ bhūtānaṁ āvāso; tatrime bhūtā—sotāpanno sotāpattiphalasacchikiriyāya paṭipanno, sakadāgāmī sakadāgāmiphalasacchikiriyāya paṭipanno, anāgāmī anāgāmiphalasacchikiriyāya paṭipanno, arahā arahattāya paṭipanno. Yampi, pahārāda, ayaṁ dhammavinayo mahataṁ bhūtānaṁ āvāso; tatrime bhūtā—sotāpanno sotāpattiphalasacchikiriyāya paṭipanno, sakadāgāmī sakadāgāmiphalasacchikiriyāya paṭipanno, anāgāmī anāgāmiphalasacchikiriyāya paṭipanno, arahā arahattāya paṭipanno; ayaṁ, pahārāda, imasmiṁ dhammavinaye aṭṭhamo acchariyo abbhuto dhammo, yaṁ disvā disvā bhikkhū imasmiṁ dhammavinaye abhiramanti.",
+   "T0026-ma35": "如大海中大神所居，大神名者，謂阿修羅、乾塔惒、羅剎、魚摩竭、龜、鼉、婆留泥、帝麑、帝麑伽羅、提帝麑伽羅。復次，大海中甚奇！甚特！眾生身體有百由延，有二百由延，有三百由延，有至七百由延，身皆居海中。婆羅邏！我正法、律亦復如是，聖眾大神皆居其中，大神名者，謂阿羅訶、向阿羅訶、阿那含、向阿那含、斯陀含、向斯陀含、須陀洹、向須陀洹。婆羅邏！若我正法、律中聖眾大神皆居其中，大神名者，謂阿羅訶、向阿羅訶、阿那含、向阿那含、斯陀含、向斯陀含、須陀洹、向須陀洹者，是謂我正法、律中第六未曾有法，令諸比丘見已樂中。「復次，婆羅邏！如大海清淨，不受死屍，若有命終者，過夜風便吹著岸上。婆羅邏！我正法、律亦復如是，聖眾清淨，不受死尸。若有不精進人惡生，非梵行稱梵行，非沙門稱沙門，彼雖墮在聖眾之中，然去聖眾遠，聖眾亦復去離彼遠。婆羅邏！若我正法、律中聖眾清淨，不受死屍。若有不精進人惡生，非梵行稱梵行，非沙門稱沙門，彼雖墮在聖眾之中，然去聖眾遠，聖眾亦復去離彼遠者，是謂我正法、律中第七未曾有法，令諸比丘見已樂中。「復次，婆羅邏！如大海閻浮洲中有五大河，一曰恒伽，二曰搖尤那，三曰舍牢浮，四曰阿夷羅婆提，五曰摩企，悉入大海，既入中已，各捨本名，皆曰大海。婆羅邏！我正法、律亦復如是，剎利種族姓子，剃除鬚髮，著袈裟衣，至信、捨家、無家、學道，彼捨本名，同曰沙門，梵志種、居士種、工師種族姓子，剃除鬚髮，著袈裟衣，至信、捨家、無家、學道，彼捨本名，同曰沙門。婆羅邏！若我正法、律中剎利種族姓子剃除鬚髮，著袈裟衣，至信、捨家、無家、學道，彼捨本名，同曰沙門，梵志種、居士種、工師種族姓子，剃除鬚髮，著袈裟衣，至信、捨家、無家、學道，彼捨本名，同曰沙門者，是謂我正法、律中第八未曾有法，令諸比丘見已樂中。"
+  },
+  "a20": {
+   "an8.19": "Ime kho, pahārāda, imasmiṁ dhammavinaye aṭṭha acchariyā abbhutā dhammā, ye disvā disvā bhikkhū imasmiṁ dhammavinaye abhiramantī”ti. Navamaṁ.",
+   "T0125-ea42.4": "於我法中有此八未曾有之法，諸比丘甚自娛樂。」",
+   "T0026-ma35": "「婆羅邏！是謂正法、律中有八未曾有法，令諸比丘見已樂中。"
+  },
+  "a21": {
+   "T0125-ea42.4": "是時，阿須倫白世尊曰：「如來法中使有一未曾有法者，勝彼海中八未曾有之法，百倍、千倍不可為比，所謂賢聖八道是也。善哉，世尊！快說斯言。」爾時，世尊暫與說法，所謂施論、戒論、生天之論，欲不淨想，漏為大患，出要為妙。爾時，以見彼心開意解，諸佛世尊常所說法：苦、習、盡、道，盡與說之。",
+   "T0026-ma35": "婆羅邏！於意云何？若我正法、律中有八未曾有法，若汝大海中有八未曾有法，此二種未曾有法，何者為上、為勝、為妙、為最？」婆羅邏白曰：「世尊！我大海中有八未曾有法，不及如來八未曾有法，不如千倍萬倍，不可比，不可喻，不可稱，不可數，但世尊八未曾有法為上、為勝、為妙、為最。"
+  },
+  "a22": {
+   "T0125-ea42.4": "爾時，阿須倫便作是念：「應有五諦，今世尊但說四諦，與諸天說五諦。」是時，天子即於座上得法眼淨，阿須倫白世尊言：「善哉！世尊！快說斯言，今欲還所在。」世尊告曰：「宜知是時。」即從座起，頭面禮足，復道而去。時，天子語阿須倫曰：「汝今所念極為不善，云：『如來與諸天說五諦，與我說四諦。』所以然者，諸佛世尊終無二言，諸佛終不捨眾生，說法亦無懈倦，說法亦復無盡，亦復不選擇人與說法，平等心而說法，有四諦，苦、習、盡、道。汝今莫作是念，而呰如來言有五諦。」是時，阿須倫報曰：「我今所造不善，自當懺悔！要當至如來所便問此義。」爾時，阿須倫及天子聞佛所說，歡喜奉行。",
+   "T0026-ma35": "世尊！我今自歸於佛、法及比丘眾，唯願世尊受我為優婆塞，從今日始，終身自歸，乃至命盡。」佛說如是。婆羅邏阿修羅王及諸比丘，聞佛所說，歡喜奉行。阿修羅經第四竟（二千三百六十二字）"
+  }
+ }
+}

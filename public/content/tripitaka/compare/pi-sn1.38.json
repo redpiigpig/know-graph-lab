@@ -1,0 +1,145 @@
+{
+ "slug": "pi-sn1.38",
+ "title": "別譯雜阿含經 （二八七）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "佛陀足傷與忍受苦痛"
+  },
+  {
+   "id": "a02",
+   "label": "世尊調整僧伽梨臥姿"
+  },
+  {
+   "id": "a03",
+   "label": "諸天神讚嘆世尊如龍象等六種譬喻"
+  },
+  {
+   "id": "a04",
+   "label": "第八天神讚嘆世尊具禪定解脫"
+  },
+  {
+   "id": "a05",
+   "label": "第八天神說偈：非彼清淨心等"
+  },
+  {
+   "id": "a06",
+   "label": "諸天神禮拜退去"
+  },
+  {
+   "id": "a07",
+   "label": "偈頌：五百歲誦婆羅門典等"
+  },
+  {
+   "id": "a08",
+   "label": "偈頌：為欲所迫持戒所縛等"
+  },
+  {
+   "id": "a09",
+   "label": "偈頌：心居憍慢欲等"
+  },
+  {
+   "id": "a10",
+   "label": "流通分：諸天神稽首佛足即沒不現"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn1.38",
+   "lang": "pi",
+   "label": "巴利 SN1.38",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn1.38",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN1.38",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.287",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （二八七）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa1289",
+   "lang": "lzh",
+   "label": "雜阿含經 （一二八九）",
+   "who": "劉宋 求那跋陀羅譯",
+   "reorder": true
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（二八七）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一二八九）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn1.38": "Saṁyutta Nikāya 1.38 4. Satullapakāyikavagga Sakalikasutta Evaṁ me sutaṁ—",
+   "nan-sn1.38": "〔三八〕第八　岩石之破片",
+   "T0100-sa-2.287": "如是我聞：一時，佛在王舍城毘婆山側七葉窟中。",
+   "T0099-sa1289": "如是我聞：一時，佛住王舍城金婆羅山金婆羅鬼神住處石室中。"
+  },
+  "a01": {
+   "sn1.38": "ekaṁ samayaṁ bhagavā rājagahe viharati maddakucchismiṁ migadāye. Tena kho pana samayena bhagavato pādo sakalikāya khato hoti. Bhusā sudaṁ bhagavato vedanā vattanti sārīrikā vedanā dukkhā tibbā kharā kaṭukā asātā amanāpā; tā sudaṁ bhagavā sato sampajāno adhivāseti avihaññamāno.",
+   "nan-sn1.38": "如是我聞。爾時，世尊住王舍城摩達屈支之鹿野苑。",
+   "T0100-sa-2.287": "時佛為佉陀羅刺脚，極為苦痛，如來默受，雖復苦痛，無所請求。",
+   "T0099-sa1289": "爾時，世尊金鎗刺足，未經幾時，起身苦痛；能得捨心，正智正念，堪忍自安，無退減想。彼有山神天子八人，作是念：「今日世尊住王舍城金婆羅山金婆羅鬼神住處石室中，金鎗刺足，起身苦痛而能捨心，正念正智，堪忍自安，無所退減，我等當往面前讚嘆。」"
+  },
+  "a02": {
+   "sn1.38": "Atha kho bhagavā catugguṇaṁ saṅghāṭiṁ paññāpetvā dakkhiṇena passena sīhaseyyaṁ kappeti pāde pādaṁ accādhāya sato sampajāno.",
+   "nan-sn1.38": "爾時，世尊之足，為岩石破片所傷。世尊甚感痛楚；身之所受非常強烈，心中頗有不快。世尊以正心正念之忍耐，而不為之所惱。時，世尊將僧伽梨疊為四重，正心正念，兩足相疊，以作右脇師子臥。"
+  },
+  "a03": {
+   "sn1.38": "Atha kho sattasatā satullapakāyikā devatāyo abhikkantāya rattiyā abhikkantavaṇṇā kevalakappaṁ maddakucchiṁ obhāsetvā yena bhagavā tenupasaṅkamiṁsu; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ aṭṭhaṁsu. Ekamantaṁ ṭhitā kho ekā devatā bhagavato santike imaṁ udānaṁ udānesi: “nāgo vata, bho, samaṇo gotamo; nāgavatā ca samuppannā sārīrikā vedanā dukkhā tibbā kharā kaṭukā asātā amanāpā sato sampajāno adhivāseti avihaññamāno”ti. Atha kho aparā devatā bhagavato santike imaṁ udānaṁ udānesi: “sīho vata, bho, samaṇo gotamo; sīhavatā ca samuppannā sārīrikā vedanā dukkhā tibbā kharā kaṭukā asātā amanāpā sato sampajāno adhivāseti avihaññamāno”ti. Atha kho aparā devatā bhagavato santike imaṁ udānaṁ udānesi: “ājānīyo vata, bho, samaṇo gotamo; ājānīyavatā ca samuppannā sārīrikā vedanā dukkhā tibbā kharā kaṭukā asātā amanāpā sato sampajāno adhivāseti avihaññamāno”ti. Atha kho aparā devatā bhagavato santike imaṁ udānaṁ udānesi: “nisabho vata, bho, samaṇo gotamo; nisabhavatā ca samuppannā sārīrikā vedanā dukkhā tibbā kharā kaṭukā asātā amanāpā sato sampajāno adhivāseti avihaññamāno”ti. Atha kho aparā devatā bhagavato santike imaṁ udānaṁ udānesi: “dhorayho vata, bho, samaṇo gotamo; dhorayhavatā ca samuppannā sārīrikā vedanā dukkhā tibbā kharā kaṭukā asātā amanāpā sato sampajāno adhivāseti avihaññamāno”ti. Atha kho aparā devatā bhagavato santike imaṁ udānaṁ udānesi: “danto vata, bho, samaṇo gotamo; dantavatā ca samuppannā sārīrikā vedanā dukkhā tibbā kharā kaṭukā asātā amanāpā sato sampajāno adhivāseti avihaññamāno”ti.",
+   "nan-sn1.38": "時，七百沙睹羅巴天神等，夜中往詣世尊處，其勝光徧照摩達屈支。詣已，禮敬世尊，立於一面。立於一面之一天神，於世尊前，發此歡喜語曰：「沙門瞿曇實是龍象。不為所生起之強烈苦痛，不愉之身苦所惱，正心正念得堪忍，是為依其龍象之性。」時，其他之天神，於世尊前，發此歡喜語曰：「沙門瞿曇實是師子，不為所生起之強烈苦痛，不愉之身苦所惱，正心正念得堪忍，是依其師子之性。」時，其他之天神，於世尊前，發此歡喜語曰：「沙門瞿曇實是良駿。不為所生起之強烈苦痛，不愉之身苦所惱，正心正念得堪忍，是依其良駿之性。」時，其他之天神，於世尊前，發此歡喜語曰：「沙門瞿曇實是牡牛，不為所生起之強烈苦痛，不愉之身苦所惱，正心正念得堪忍，是依其牡牛之性。」時，其他之天神，於世尊前，發此歡喜語曰：「沙門瞿曇實是忍耐強牛，不為所生起之強烈苦痛，不愉之身苦所惱，正心正念得堪忍，是依其忍耐強牛之性。」時，其他之天神，於世尊前，發此歡喜語曰：「沙門瞿曇是調馴，不為所生起之強烈苦痛，不愉之身苦所惱，正心正念得堪忍，是依此調馴之性。」",
+   "T0100-sa-2.287": "爾時，有八天子顏容端正，來詣佛所。中有一天言：「沙門瞿曇實是丈夫人中師子，雖受苦痛，不捨念覺，心無惱異，若復有人於瞿曇大師子所生誹謗者，當知是人甚大愚癡。」第二天亦作是說：「瞿曇沙門丈夫龍象，雖受苦痛，不捨念覺，心無惱異，若復有人於瞿曇龍象所生誹謗者，當知是人甚大愚癡。」第三天復作是言：「沙門瞿曇如善乘牛。」第四天復作是言：「沙門瞿曇如善乘馬。」第五天復作是言：「沙門瞿曇猶如牛王。」第六天復作是言：「沙門瞿曇無上丈夫。」第七天復作是言：「沙門瞿曇人中蓮花。」",
+   "T0099-sa1289": "作是念已，往詣佛所，稽首禮足，退住一面。第一天神說偈嘆言：「沙門瞿曇，人中師子，身遭苦痛，\n堪忍自安，正智正念，無所退減。」"
+  },
+  "a04": {
+   "sn1.38": "Atha kho aparā devatā bhagavato santike imaṁ udānaṁ udānesi:",
+   "nan-sn1.38": "時，其他之天神，於世尊前，發此歡喜語曰：",
+   "T0100-sa-2.287": "第八天復作是言：「沙門瞿曇猶如分陀利，觀彼禪寂，極為善定，終不矜高，亦不卑下。止故解脫，解脫故止。」",
+   "T0099-sa1289": "第五天子復說偈言：「觀彼三昧定，善住於正受，\n解脫離諸塵，不踊亦不沒，\n其心安隱住，而得心解脫。」第六天子復說偈言：「經歷五百歲，誦婆羅門典，\n精勤修苦行，不解脫離塵，\n是則卑下類，不得度彼岸。」第七天子復說偈言：「為欲之所迫，持戒之所縛，\n勇捍行苦行，經歷於百年，\n其心不解脫，不離於塵垢，\n是則卑下類，不度於彼岸。」第八天子復說偈言：「心居憍慢欲，不能自調伏，\n不得三昧定，牟尼之正受，\n獨一居山林，其心常放逸，\n於彼死魔軍，不得度彼岸。」"
+  },
+  "a05": {
+   "sn1.38": "“passa samādhiṁ subhāvitaṁ cittañca suvimuttaṁ, na cābhinataṁ na cāpanataṁ na ca sasaṅkhāraniggayhavāritagataṁ. Yo evarūpaṁ purisanāgaṁ purisasīhaṁ purisaājānīyaṁ purisanisabhaṁ purisadhorayhaṁ purisadantaṁ atikkamitabbaṁ maññeyya kimaññatra adassanā”ti.",
+   "nan-sn1.38": "「善修三昧與見解脫心，不躍上，不沈下，於有行發而非抑。其行制伏煩惱，如是人中之龍象，人中之師子，人中之良駿，人中之牡牛，人中之忍耐強牛，人中之調馴者，有人若想侵害是人中之調順者，彼何以非無智耶？」人於百歲間學習五吠陀\n精修嚴苦行婆羅門行人\n彼等之心行乃非正解脫\n彼等其性劣不得達彼岸\n渴愛之所囚禁戒之所縛\n百年雖強烈以修嚴苦行\n彼等之心行乃非正解脫\n彼等其性劣不得達彼岸\n於此不調馴憍慢與愛欲\n不使心靜者不得有寂默\n雖獨住森林亦行於放逸\n於死魔領域不得度彼岸\n以捨憍慢行令心善寂靜\n諸行皆清淨由是得解脫\n單獨住森林不行於放逸\n渡脫死魔域可到達彼岸",
+   "T0100-sa-2.287": "時第八天即說偈言：「非彼清淨心，假使滿百千，\n通達五比施，為於戒取縛，\n沒溺愛欲海，不能度彼岸。」"
+  },
+  "a06": {
+   "T0100-sa-2.287": "爾時，八天說此偈已，頂禮佛足，還其所止。垂下及遮止名稱及技能\n彈琴并棄捨種別、善丈夫\n慳貪不惠施八天為第十"
+  },
+  "a07": {
+   "sn1.38": "“Pañcavedā sataṁ samaṁ, Tapassī brāhmaṇā caraṁ; Cittañca nesaṁ na sammā vimuttaṁ, Hīnattharūpā na pāraṅgamā te. Taṇhādhipannā vatasīlabaddhā, Lūkhaṁ tapaṁ vassasataṁ carantā; Cittañca nesaṁ na sammā vimuttaṁ, Hīnattharūpā na pāraṅgamā te. Na mānakāmassa damo idhatthi, Na monamatthi asamāhitassa; Eko araññe viharaṁ pamatto, Na maccudheyyassa tareyya pāran”ti. “Mānaṁ pahāya susamāhitatto, Sucetaso sabbadhi vippamutto; Eko araññe viharamappamatto, Sa maccudheyyassa tareyya pāran”ti.",
+   "T0099-sa1289": "第二天子復讚嘆言：「大士之大龍，大士之牛王，\n大士夫勇力，大士夫良馬，\n大士夫上首，大士夫之勝。」"
+  },
+  "a08": {
+   "T0099-sa1289": "第三天子復讚嘆言：「此沙門瞿曇，士夫分陀利，\n身生諸苦痛，而能行捨心，\n正智正念住，堪忍以自安，\n而無所退減。」"
+  },
+  "a09": {
+   "T0099-sa1289": "第四天子復讚嘆言：「若有於沙門瞿曇士夫分陀利所說違反嫌責，當知斯等長夜當得不饒益苦，唯除不知真實者。」"
+  },
+  "a10": {
+   "T0099-sa1289": "時，彼山神天子八人各各讚嘆已，稽首佛足，即沒不現。"
+  }
+ }
+}

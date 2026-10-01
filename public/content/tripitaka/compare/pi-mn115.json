@@ -1,0 +1,236 @@
+{
+ "slug": "pi-mn115",
+ "title": "佛說四品法門經",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "愚智恐怖譬喻"
+  },
+  {
+   "id": "a02",
+   "label": "阿難問界善巧"
+  },
+  {
+   "id": "a03",
+   "label": "十八界說"
+  },
+  {
+   "id": "a04",
+   "label": "六界說（地水火風空識）"
+  },
+  {
+   "id": "a05",
+   "label": "六界說（欲恚害無欲無恚無害）"
+  },
+  {
+   "id": "a06",
+   "label": "六界說（樂苦喜憂捨無明）"
+  },
+  {
+   "id": "a07",
+   "label": "三界說（欲色無色）"
+  },
+  {
+   "id": "a08",
+   "label": "二界說（有為無為）"
+  },
+  {
+   "id": "a09",
+   "label": "阿難問處善巧"
+  },
+  {
+   "id": "a10",
+   "label": "十二處說"
+  },
+  {
+   "id": "a11",
+   "label": "阿難問緣起善巧"
+  },
+  {
+   "id": "a12",
+   "label": "十二支緣起說"
+  },
+  {
+   "id": "a13",
+   "label": "阿難問處非處善巧"
+  },
+  {
+   "id": "a14",
+   "label": "處非處說"
+  },
+  {
+   "id": "a15",
+   "label": "結歡喜分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "mn115",
+   "lang": "pi",
+   "label": "巴利 MN115",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-mn115",
+   "lang": "lzh",
+   "label": "漢譯南傳 MN115",
+   "who": "元亨寺版（譯自巴利）",
+   "reorder": true
+  },
+  {
+   "id": "T0026-ma181",
+   "lang": "lzh",
+   "label": "中阿含經 （一八一）中阿含心品多界經第十（第四分別誦）",
+   "who": "東晉 瞿曇僧伽提婆譯"
+  },
+  {
+   "id": "T1537-t1537.20",
+   "lang": "lzh",
+   "label": "阿毘達磨法蘊足論 多界品第二十之一",
+   "who": "尊者大目乾連造 唐 玄奘譯"
+  },
+  {
+   "id": "T0776",
+   "lang": "lzh",
+   "label": "佛說四品法門經",
+   "who": "宋 法賢譯",
+   "reorder": true
+  }
+ ],
+ "works": [
+  "T0026",
+  "T0776",
+  "T1537"
+ ],
+ "anchors": [
+  {
+   "work": "T0026",
+   "node": "（一八一）中阿含心品多界經第十（第四分別誦）"
+  },
+  {
+   "work": "T1537",
+   "node": "多界品第二十之一"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "mn115": "Majjhima Nikāya 115 Bahudhātukasutta Evaṁ me sutaṁ— ekaṁ samayaṁ bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme. Tatra kho bhagavā bhikkhū āmantesi: “bhikkhavo”ti. “Bhadante”ti te bhikkhū bhagavato paccassosuṁ.",
+   "nan-mn115": "第一一五　多界經如是我聞。——",
+   "T0026-ma181": "我聞如是：一時，佛遊舍衛國，在勝林給孤獨園。",
+   "T1537-t1537.20": "一時薄伽梵在室羅筏，住逝多林給孤獨園。",
+   "T0776": "如是我聞：一時，佛在舍衛國祇樹給孤獨園，與大眾俱。"
+  },
+  "a01": {
+   "mn115": "Bhagavā etadavoca: “Yāni kānici, bhikkhave, bhayāni uppajjanti sabbāni tāni bālato uppajjanti, no paṇḍitato; ye keci upaddavā uppajjanti sabbe te bālato uppajjanti, no paṇḍitato; ye keci upasaggā uppajjanti sabbe te bālato uppajjanti, no paṇḍitato. Seyyathāpi, bhikkhave, naḷāgārā vā tiṇāgārā vā aggi mutto kūṭāgārānipi dahati ullittāvalittāni nivātāni phusitaggaḷāni pihitavātapānāni; evameva kho, bhikkhave, yāni kānici bhayāni uppajjanti sabbāni tāni bālato uppajjanti, no paṇḍitato; ye keci upaddavā uppajjanti sabbe te bālato uppajjanti, no paṇḍitato; ye keci upasaggā uppajjanti sabbe te bālato uppajjanti, no paṇḍitato. Iti kho, bhikkhave, sappaṭibhayo bālo, appaṭibhayo paṇḍito; saupaddavo bālo, anupaddavo paṇḍito; saupasaggo bālo, anupasaggo paṇḍito. Natthi, bhikkhave, paṇḍitato bhayaṁ, natthi paṇḍitato upaddavo, natthi paṇḍitato upasaggo. Tasmātiha, bhikkhave, ‘paṇḍitā bhavissāma vīmaṁsakā’ti— evañhi vo, bhikkhave, sikkhitabban”ti.",
+   "nan-mn115": "一時，世尊住舍衛城祇陀林給孤獨園。時，世尊告諸比丘：「諸比丘！」彼諸比丘應答世尊：「世尊！」世尊乃如是說：「諸比丘！凡諸怖畏之生起，其一切，由愚者起，非由賢者。凡諸困厄之生起，其一切，由愚者起，非由賢者。凡諸過患之生起，其一切，由愚者起，非由賢者。諸比丘！譬如，或葭葺之家屋，由草葺出火者，諸重閣，假令上下塗抹以防風，門戶雖堅固締關、閉窗，亦能燒起，恰是如此。諸比丘！凡諸怖畏之起，其一切，由愚者起，非由賢者。凡諸困厄之起，其一切，由愚者起，非由賢者。凡諸過患之起，由愚者起，非由賢者。如是，諸比丘！愚者有怖畏，賢者無怖畏。愚者有困厄，賢者無困厄。愚者有過患，賢者無過患。諸比丘！賢者無怖畏，賢者無困厄，賢者無過患。諸比丘！故『我等應為賢者，應為有思慮者。』如是，諸比丘！汝等應修學。」如是說時，尊者阿難，如是白世尊：「世尊！然，於如何範圍，可云賢者有思慮之比丘？」〔世尊曰：〕「阿難！只要比丘有界善巧、處善巧、緣起善巧、處、非處善巧者，於如是之範圍，阿難！可云為賢者有思慮之比丘也。」",
+   "T0026-ma181": "爾時，尊者阿難獨安靖處宴坐思惟，心作是念：「諸有恐怖，彼一切從愚癡生，不從智慧。諸有遭事、災患、憂慼，彼一切從愚癡生，不從智慧。」於是，尊者阿難則於晡時，從宴坐起，往詣佛所，稽首佛足，却住一面，白曰：「世尊！我今獨安靖處宴坐思惟，心作是念：『諸有恐怖，彼一切從愚癡生，不從智慧。諸有遭事、災患、憂慼，彼一切從愚癡生，不從智慧。』」世尊告曰：「如是。阿難！如是。阿難！諸有恐怖，彼一切從愚癡生，不從智慧。諸有遭事、災患、憂慼，彼一切從愚癡生，不從智慧。阿難！猶如從葦𧂐草𧂐生火，燒樓閣堂屋。阿難！如是諸有恐怖，從愚癡生，不從智慧。諸有遭事、災患、憂慼，彼一切從愚癡生，不從智慧。阿難！昔過去時若有恐怖，彼一切亦從愚癡生，不從智慧。諸有遭事、災患、憂慼，彼一切從愚癡生，不從智慧。阿難！當來時諸有恐怖，彼一切從愚癡生，不從智慧。諸有遭事、災患、憂慼，彼一切從愚癡生，不從智慧。阿難！今現在諸有恐怖，從愚癡生，不從智慧。諸有遭事、災患、憂慼，彼一切從愚癡生，不從智慧。阿難！是為愚癡有恐怖，智慧無恐怖。愚癡有遭事、災患、憂慼，智慧無遭事、災患、憂慼。阿難！諸有恐怖、遭事、災患、憂慼，彼一切從愚癡可得，不從智慧。」於是，尊者阿難悲泣淚出，叉手向佛，白曰：「世尊！云何比丘愚癡非智慧？」世尊答曰：「阿難！若有比丘不知界，不知處，不知因緣，不知是處、非處者，阿難！如是比丘愚癡非智慧。」尊者阿難白曰：「世尊！如是比丘愚癡非智慧。世尊！云何比丘智慧非愚癡？」世尊答曰：「阿難！若有比丘知界、知處、知因緣，知是處、非處者。阿難！如是比丘智慧非愚癡。」",
+   "T1537-t1537.20": "時阿難陀獨居靜室作是思惟：「諸起怖畏及起災患擾惱事者，皆是愚夫、非諸智者。」既思惟已，於日後分從靜室出，往世尊所，頂禮雙足退住一面，以所思事具白世尊。佛印可言：「如是如是。諸起怖畏及起災患擾惱事者，皆是愚夫、非諸智者。如置火在乾蘆草舍、樓堂臺觀，亦被焚燒。愚夫亦爾，以無智故，起諸怖畏及災患等。慶喜當知，過去未來現在，怖畏災患擾惱，皆愚夫生、非諸智者，以諸智者不起彼故。慶喜當知，愚夫有怖畏、智者無怖畏。愚夫有災患、智者無災患。愚夫有擾惱、智者無擾惱。是故慶喜應知愚夫及智者法，知已遠離諸愚夫法，於智者法應正受行。」阿難陀言：「齊何施設諸愚夫數？」佛言：「若有於界、處、蘊及於緣起、處非處法不善巧者，是愚夫數。」阿難陀言：「齊何施設諸智者數？」佛言：「若有於界處蘊及於緣起、處非處法得善巧者，是智者數。」",
+   "T0776": "爾時，尊者阿難獨止靜室，心生是念：「世間有情，所有驚怖，乃至災害、障難、疾病、過咎。已生、當生者，皆是愚人所有；智者即無。」尊者阿難思惟如是事已，從座而起，往詣佛所。到佛所已，頭面禮足，修奉已畢，住立一面，而白佛言：「世尊！我獨靜室，心生是念：『世間所有驚怖等事，皆是愚人所有；智者即無。』惟願世尊，為我解說。」佛告阿難：「汝今諦聽，當為汝說。」阿難白言：「唯然。世尊！願樂欲聞。」佛言：「阿難！如是世間所有驚怖等事，已生、當生，所謂災害、障難、疾病、過咎等，皆是愚人所有；智者即無。阿難！譬如有人堆積乾葦為火所燃，而彼愚人驚怖等事，亦復如是。阿難！如是過去、未來、現在世中，愚人有災害，智者無災害；愚人有障難，智者無障難；愚人有疾病，智者無疾病；愚人有過咎，智者無過咎。阿難！當知是愚人法，是智者法，知彼愚人法已，當可遠離行智者法。如是，阿難！汝應當學。」阿難白佛言：「世尊！何名愚人？」佛告阿難：「愚人者，愚為不了。世間愚人，於法不了，故名為愚。不了者何？不了法境有四品類，所謂不了界法、不了處法、不了緣起法、不了處非處法。阿難！於如是法，不能了達，是故得名為愚人也。」阿難白言：「世尊！如是，如是。不了四法，得名愚人。又復云何得名智者？」佛告阿難：「言智人者，於法揀擇，善了是非，故名智人。善了者何？善了法境，亦四品類，所謂善了界法、善了處法、善了緣生法、善了處非處法。善能了知如是等法，是故得名為智人也。」阿難復白佛言：「善了此法，得名智者。"
+  },
+  "a02": {
+   "mn115": "Evaṁ vutte, āyasmā ānando bhagavantaṁ etadavoca: “kittāvatā nu kho, bhante, paṇḍito bhikkhu ‘vīmaṁsako’ti alaṁvacanāyā”ti? “Yato kho, ānanda, bhikkhu dhātukusalo ca hoti, āyatanakusalo ca hoti, paṭiccasamuppādakusalo ca hoti, ṭhānāṭhānakusalo ca hoti— ettāvatā kho, ānanda, paṇḍito bhikkhu ‘vīmaṁsako’ti alaṁvacanāyā”ti. “Kittāvatā pana, bhante, ‘dhātukusalo bhikkhū’ti alaṁvacanāyā”ti?",
+   "nan-mn115": "〔阿難曰：〕「然者，世尊！於如何之範圍，可云有界善巧之比丘？」",
+   "T0026-ma181": "尊者阿難白曰：「世尊！如是比丘智慧非愚癡。世尊！云何比丘知界？」世尊答曰：「阿難！",
+   "T1537-t1537.20": "阿難陀言：「云何智者於界善巧？」",
+   "T0776": "而此智者，了何界法？」佛告阿難：「汝能善問，當為汝說。"
+  },
+  "a03": {
+   "mn115": "“Aṭṭhārasa kho imā, ānanda, dhātuyo— cakkhudhātu, rūpadhātu, cakkhuviññāṇadhātu; sotadhātu, saddadhātu, sotaviññāṇadhātu; ghānadhātu, gandhadhātu, ghānaviññāṇadhātu; jivhādhātu, rasadhātu, jivhāviññāṇadhātu; kāyadhātu, phoṭṭhabbadhātu, kāyaviññāṇadhātu; manodhātu, dhammadhātu, manoviññāṇadhātu. Imā kho, ānanda, aṭṭhārasa dhātuyo yato jānāti passati— ettāvatāpi kho, ānanda, ‘dhātukusalo bhikkhū’ti alaṁvacanāyā”ti. “Siyā pana, bhante, aññopi pariyāyo, yathā ‘dhātukusalo bhikkhū’ti alaṁvacanāyā”ti? “Siyā, ānanda.",
+   "nan-mn115": "〔世尊曰：〕「阿難！此等之十八界：即眼界、色界、眼識界，耳界、聲界、耳識界，鼻界、香界、鼻識界，舌界、味界、舌識界，身界、所觸界、身識界，意界、法界、意識界也。阿難！只要知見此等十八界，於如是之範圍，阿難！可云有界善巧之比丘也。」〔阿難曰：〕「然者，世尊！可云界善巧之比丘，有其他之教法耶？」",
+   "T0026-ma181": "若有比丘見十八界知如真，眼界、色界、眼識界，耳界、聲界、耳識界、鼻界、香界、鼻識界，舌界、味界、舌識界，身界、觸界、身識界，意界、法界、意識界。阿難！見此十八界知如真。",
+   "T1537-t1537.20": "佛言：「智者於十八界如實知見，是界善巧。謂如實知見，眼界色界眼識界、耳界聲界耳識界、鼻界香界鼻識界、舌界味界舌識界、身界觸界身識界、意界法界意識界。",
+   "T0776": "言界法者，而有多種，所謂眼界、色界、眼識界；耳界、聲界、耳識界；鼻界、香界、鼻識界；舌界、味界、舌識界；身界、觸界、身識界；意界、法界、意識界。如是十八界，彼智慧者，如實了達。"
+  },
+  "a04": {
+   "mn115": "Chayimā, ānanda, dhātuyo— pathavīdhātu, āpodhātu, tejodhātu, vāyodhātu, ākāsadhātu, viññāṇadhātu. Imā kho, ānanda, cha dhātuyo yato jānāti passati— ettāvatāpi kho, ānanda, ‘dhātukusalo bhikkhū’ti alaṁvacanāyā”ti. “Siyā pana, bhante, aññopi pariyāyo, yathā ‘dhātukusalo bhikkhū’ti alaṁvacanāyā”ti? “Siyā, ānanda. Chayimā, ānanda, dhātuyo— sukhadhātu, dukkhadhātu, somanassadhātu, domanassadhātu, upekkhādhātu, avijjādhātu. Imā kho, ānanda, cha dhātuyo yato jānāti passati— ettāvatāpi kho, ānanda, ‘dhātukusalo bhikkhū’ti alaṁvacanāyā”ti. “Siyā pana, bhante, aññopi pariyāyo, yathā ‘dhātukusalo bhikkhū’ti alaṁvacanāyā”ti? “Siyā, ānanda.",
+   "nan-mn115": "〔世尊曰：〕「阿難！有。阿難！此等之六界：即地界、水界、風界、火界、空界、識界也。阿難！只要知見此等六界，於如是之範圍，阿難！亦可云界善巧之比丘。」〔阿難曰：〕「然者，世尊！可云界善巧之比丘，又有其他之教法耶？」",
+   "T0026-ma181": "復次，阿難！見六界知如真，地界、水界、火界、風界、空界、識界。阿難！見此六界知如真。",
+   "T1537-t1537.20": "復於六界如實知見是界善巧，謂如實知見地界、水界、火界、風界、空界、識界。",
+   "T0776": "「復有六界，所謂地界、水界、火界、風界、空界、識界，如是六界，彼智慧者，如實了達。"
+  },
+  "a05": {
+   "mn115": "Chayimā, ānanda, dhātuyo— kāmadhātu, nekkhammadhātu, byāpādadhātu, abyāpādadhātu, vihiṁsādhātu, avihiṁsādhātu. Imā kho, ānanda, cha dhātuyo yato jānāti passati— ettāvatāpi kho, ānanda, ‘dhātukusalo bhikkhū’ti alaṁvacanāyā”ti. “Siyā pana, bhante, aññopi pariyāyo, yathā ‘dhātukusalo bhikkhū’ti alaṁvacanāyā”ti? “Siyā, ānanda.",
+   "nan-mn115": "〔世尊曰：〕「阿難！有。此等之六界：即欲界、出離界、恚界、無恚界、害界、無害界也。阿難！只要知見此等之六界，於如是之範圍，阿難！可云界善巧之比丘。」〔阿難曰：〕「然者，世尊！可云為界善巧之比丘，又有其他之教法耶？」",
+   "T0026-ma181": "復次，阿難！見六界知如真，欲界、恚界、害界，無欲界、無恚界、無害界。阿難！見此六界知如真。",
+   "T1537-t1537.20": "復於六界如實知見是界善巧，謂如實知見欲界、恚界、害界、無欲界、無恚界、無害界。",
+   "T0776": "「復有六界，所謂貪欲界、瞋恚界、不瞋界、殺害界、不殺界、出離界，如是六界，彼智慧者，如實了達。「復有四界，所謂受界、想界、行界、識界，如是四界，彼智慧者，如實了達。"
+  },
+  "a06": {
+   "mn115": "Tisso imā, ānanda, dhātuyo— kāmadhātu, rūpadhātu, arūpadhātu. Imā kho, ānanda, tisso dhātuyo yato jānāti passati— ettāvatāpi kho, ānanda, ‘dhātukusalo bhikkhū’ti alaṁvacanāyā”ti. “Siyā pana, bhante, aññopi pariyāyo, yathā ‘dhātukusalo bhikkhū’ti alaṁvacanāyā”ti? “Siyā, ānanda.",
+   "nan-mn115": "〔世尊曰：〕「阿難！有。阿難！此等之六界：即樂界、苦界、喜界、憂界、捨界、無明界也。阿難！只要知見此等之六界，於如是之範圍，阿難！亦可云有界善巧之比丘。」〔阿難曰：〕「然者，世尊！可云界善巧之比丘，又有其他之教法耶？」",
+   "T0026-ma181": "復次，阿難！見六界知如真，樂界、苦界、喜界、憂界、捨界、無明界。阿難！見此六界知如真。復次，阿難！見四界知如真，覺界、想界、行界、識界。阿難！見此四界知如真。",
+   "T1537-t1537.20": "復於六界如實知見是界善巧，謂如實知見樂界、苦界、喜界、憂界、捨界、無明界。復於四界如實知見是界善巧，謂如實知見受界、想界、行界、識界。",
+   "T0776": "「復有六界，所謂喜界、樂界、苦界、捨界、煩惱界、無明界，如是六界，彼智慧者，如實了達。"
+  },
+  "a07": {
+   "mn115": "Dve imā, ānanda, dhātuyo— saṅkhatādhātu, asaṅkhatādhātu. Imā kho, ānanda, dve dhātuyo yato jānāti passati— ettāvatāpi kho, ānanda, ‘dhātukusalo bhikkhū’ti alaṁvacanāyā”ti. “Kittāvatā pana, bhante, ‘āyatanakusalo bhikkhū’ti alaṁvacanāyā”ti? “Cha kho panimāni, ānanda, ajjhattikabāhirāni āyatanāni—",
+   "nan-mn115": "〔世尊曰：〕「阿難！有。此等之三界：即欲界、色界、無色界也。阿難！只要知見此等之三界，於如是之範圍，阿難！亦可云界善巧之比丘。」〔阿難曰：〕「然者，世尊！可云界善巧之比丘，又有其他之教耶？」",
+   "T0026-ma181": "復次，阿難！見三界知如真，欲界、色界、無色界。阿難！見此三界知如真。復次，阿難！見三界知如真，色界、無色界、滅界。阿難！見此三界知如真。「復次，阿難！見三界知如真，過去界、未來界、現在界。阿難！見此三界知如真。復次，阿難！見三界知如真，妙界、不妙界、中界。阿難！見此三界知如真。復次，阿難！見三界知如真，善界、不善界、無記界。阿難！見此三界知如真。復次，阿難！見三界知如真，學界、無學界、非學非無學界。阿難！見此三界知如真。復次，阿難！見二界知如真，有漏界、無漏界。阿難！見此二界知如真。",
+   "T1537-t1537.20": "復於三界如實知見是界善巧，謂如實知見欲界、色界、無色界。復於三界如實知見是界善巧，謂如實知見色界、無色界、滅界。復於三界如實知見是界善巧，謂如實知見過去界、未來界、現在界。復於三界如實知見是界善巧，謂如實知見劣界、中界、妙界。復於三界如實知見是界善巧，謂如實知見善界、不善界、無記界。復於三界如實知見是界善巧，謂如實知見學界、無學界、非學非無學界。復於二界如實知見是界善巧，謂如實知見有漏界、無漏界。",
+   "T0776": "「復有三界，所謂欲界、色界、無色界，如是三界，彼智慧者，如實了達。「復有三界，所謂下界、中界、上界，如是三界，彼智慧者，如實了達。「復有三界，所謂善界、不善界、無記界，如是三界，彼智慧者，如實了達。「復有三界，所謂有學界、無學界、學無學界，如是三界，彼智慧者，如實了達。「復有二界，所謂有漏界、無漏界，如是二界，彼智慧者，如實了達。"
+  },
+  "a08": {
+   "mn115": "cakkhu ceva rūpā ca sotañca saddā ca ghānañca gandhā ca jivhā ca rasā ca kāyo ca phoṭṭhabbā ca mano ca dhammā ca. Imāni kho, ānanda, cha ajjhattikabāhirāni āyatanāni yato jānāti passati— ettāvatā kho, ānanda, ‘āyatanakusalo bhikkhū’ti alaṁvacanāyā”ti. “Kittāvatā pana, bhante, ‘paṭiccasamuppādakusalo bhikkhū’ti alaṁvacanāyā”ti?",
+   "nan-mn115": "〔世尊曰：〕「阿難！有。此等之二界：即有為界與無為界也。阿難！只要此等之二界，於如是之範圍，阿難！亦可云界善巧之比丘。」",
+   "T0026-ma181": "復次，阿難！見二界知如真，有為界、無為界、阿難！見此二界知如真。阿難！見此六十二界知如真。阿難！如是比丘知界。」",
+   "T1537-t1537.20": "復於二界如實知見是界善巧，謂如實知見有為界、無為界。是名智者於界善巧。」",
+   "T0776": "「復有二界，所謂有為界、無為界，如是二界，彼智慧者，如實了達。「阿難！如是等界，諸有智者，善能了達。」阿難白佛言：「世尊！"
+  },
+  "a09": {
+   "mn115": "“Idhānanda, bhikkhu evaṁ pajānāti: ‘imasmiṁ sati idaṁ hoti, imassuppādā idaṁ uppajjati,",
+   "nan-mn115": "〔阿難曰：〕「然者，世尊！於如何之範圍，可云處善巧之比丘？」",
+   "T0026-ma181": "尊者阿難白曰：「世尊！如是比丘知界。世尊！云何比丘知處？」世尊答曰：「阿難！",
+   "T1537-t1537.20": "阿難陀言：「云何智者於處善巧？」",
+   "T0776": "彼智慧者，如是了達諸界法已，又復云何，了達處法？」"
+  },
+  "a10": {
+   "mn115": "imasmiṁ asati idaṁ na hoti, imassa nirodhā idaṁ nirujjhati, yadidaṁ— avijjāpaccayā saṅkhārā, saṅkhārapaccayā viññāṇaṁ, viññāṇapaccayā nāmarūpaṁ,",
+   "nan-mn115": "〔世尊曰：〕「阿難！又有此等六內外處：即眼與色、耳與聲、鼻與香、舌與味、身與所觸、意與諸法也。阿難！只要知見此等之六內外處，於如是之範圍，可云處善巧之比丘。」",
+   "T0026-ma181": "若有比丘見十二處知如真，眼處、色處，耳處、聲處，鼻處、香處，舌處、味處，身處、觸處，意處、法處。阿難！見此十二處知如真。阿難！如是比丘知處。」尊者阿難白曰：「世尊！",
+   "T1537-t1537.20": "佛言：「智者於十二處如實知見是處善巧，謂如實知見眼處色處、耳處聲處、鼻處香處、舌處味處、身處觸處、意處法處，是名智者於處善巧。」阿難陀言：「云何智者於蘊善巧？」佛言：「智者於五蘊如實知見是蘊善巧，謂如實知見色蘊、受蘊、想蘊、行蘊、識蘊，是名智者於蘊善巧。」",
+   "T0776": "佛告阿難：「言處法者，謂十二處：眼處、色處、耳處、聲處、鼻處、香處、舌處、味處、身處、觸處、意處、法處。此十二處，智慧之者，如實了達。」阿難白佛言：「世尊！"
+  },
+  "a11": {
+   "mn115": "nāmarūpapaccayā saḷāyatanaṁ, saḷāyatanapaccayā phasso,",
+   "nan-mn115": "〔阿難曰：〕「然者，世尊！於如何範圍，可云緣起善巧之比丘？」",
+   "T0026-ma181": "如是比丘知處。云何比丘知因緣？」世尊答曰：「阿難！",
+   "T1537-t1537.20": "阿難陀言：「云何智者於緣起善巧？」",
+   "T0776": "智者如是了達十二處已，又復云何了緣生法？」佛告阿難：「智者應知，十二緣法，從因緣起，由因緣故，即有諸法。"
+  },
+  "a12": {
+   "mn115": "phassapaccayā vedanā, vedanāpaccayā taṇhā, taṇhāpaccayā upādānaṁ, upādānapaccayā bhavo, bhavapaccayā jāti, jātipaccayā jarāmaraṇaṁ sokaparidevadukkhadomanassūpāyāsā sambhavanti. Evametassa kevalassa dukkhakkhandhassa samudayo hoti. Avijjāya tveva asesavirāganirodhā saṅkhāranirodho, saṅkhāranirodhā viññāṇanirodho, viññāṇanirodhā nāmarūpanirodho, nāmarūpanirodhā saḷāyatananirodho, saḷāyatananirodhā phassanirodho, phassanirodhā vedanānirodho, vedanānirodhā taṇhānirodho, taṇhānirodhā upādānanirodho, upādānanirodhā bhavanirodho, bhavanirodhā jātinirodho, jātinirodhā jarāmaraṇaṁ sokaparidevadukkhadomanassūpāyāsā nirujjhanti. Evametassa kevalassa dukkhakkhandhassa nirodho hoti’. Ettāvatā kho, ānanda, ‘paṭiccasamuppādakusalo bhikkhū’ti alaṁvacanāyā”ti. “Kittāvatā pana, bhante, ‘ṭhānāṭhānakusalo bhikkhū’ti alaṁvacanāyā”ti? “Idhānanda, bhikkhu ‘aṭṭhānametaṁ anavakāso yaṁ diṭṭhisampanno puggalo kañci saṅkhāraṁ niccato upagaccheyya, netaṁ ṭhānaṁ vijjatī’ti pajānāti; ‘ṭhānañca kho etaṁ vijjati yaṁ puthujjano kañci saṅkhāraṁ niccato upagaccheyya, ṭhānametaṁ vijjatī’ti pajānāti; ‘aṭṭhānametaṁ anavakāso yaṁ diṭṭhisampanno puggalo kañci saṅkhāraṁ sukhato upagaccheyya, netaṁ ṭhānaṁ vijjatī’ti pajānāti; ‘ṭhānañca kho etaṁ vijjati yaṁ puthujjano kañci saṅkhāraṁ sukhato upagaccheyya, ṭhānametaṁ vijjatī’ti pajānāti. ‘Aṭṭhānametaṁ anavakāso yaṁ diṭṭhisampanno puggalo kañci dhammaṁ attato upagaccheyya, netaṁ ṭhānaṁ vijjatī’ti pajānāti,",
+   "nan-mn115": "〔世尊曰：〕「於此，阿難！有比丘如是知：此有時即彼有；此生時即彼生；此無時即彼無；此滅時即彼滅；即緣無明有行；緣行有識；緣識有名色；緣名色有六處；緣六處有觸；緣觸有受；緣受有愛；緣愛有取；緣取有有；緣有有生；緣生有老死、憂、悲、苦、惱、愁之生也。如是有彼一切苦蘊之集。然而，無明之無餘離欲滅故行滅；行滅故識滅；識滅故名色滅；名色滅故六處滅；六處滅故觸滅；觸滅故受滅；受滅故愛滅；愛滅故取滅；取滅故有滅；有滅故生滅；生滅故老死、憂、悲、苦、惱、愁滅也。如是，此一切苦蘊滅。阿難！於如是之範圍，實可云緣起善巧之比丘。」",
+   "T0026-ma181": "若有比丘見因緣及從因緣起知如真，因此有彼，無此無彼，此生彼生，此滅彼滅，謂緣無明有行乃至緣生有老死；若無明滅則行滅，乃至生滅則老死滅。阿難！如是比丘知因緣。」尊者阿難白曰：「世尊！如是比丘知因緣。",
+   "T1537-t1537.20": "佛言：「智者於十二支緣起順逆如實知見是緣起善巧，謂如實知見依此有彼有、此生故彼生，謂無明緣行、行緣識、識緣名色、名色緣六處、六處緣觸、觸緣受、受緣愛、愛緣取、取緣有、有緣生、生緣老死發生愁歎苦憂擾惱，如是便集純大苦蘊。及如實知依此無彼無、此滅故彼滅，謂無明滅故行滅、行滅故識滅、識滅故名色滅、名色滅故六處滅、六處滅故觸滅、觸滅故受滅、受滅故愛滅、愛滅故取滅、取滅故有滅、有滅故生滅、生滅故老死愁歎苦憂擾惱滅，如是便滅純大苦蘊。是名智者於緣起善巧。」",
+   "T0776": "因緣者何？所謂無明緣行，行緣識，識緣名色，名色緣六處，六處緣觸，觸緣受，受緣愛，愛緣取，取緣有，有緣生，生緣老死、憂悲、苦惱，如是即一大苦蘊集。若了如上緣生之法，因緣性空，緣聚即有，緣散即無；緣法無故，即無諸法。所謂無明滅即行滅，行滅即識滅，識滅即名色滅，名色滅即六處滅，六處滅即觸滅，觸滅即受滅，受滅即愛滅，愛滅即取滅，取滅即有滅，有滅即生滅，生滅即老死憂悲苦惱滅，如是即一大苦蘊滅。如是生滅之法，智者應當如實了達。」阿難白佛言：「世尊！"
+  },
+  "a13": {
+   "mn115": "‘ṭhānañca kho etaṁ vijjati yaṁ puthujjano kañci dhammaṁ attato upagaccheyya, ṭhānametaṁ vijjatī’ti pajānāti. ‘Aṭṭhānametaṁ anavakāso yaṁ diṭṭhisampanno puggalo mātaraṁ jīvitā voropeyya, netaṁ ṭhānaṁ vijjatī’ti pajānāti;",
+   "nan-mn115": "〔阿難曰：〕「然者，世尊！於如何之範圍，可云處、非處善巧之比丘？」",
+   "T0026-ma181": "云何比丘知是處、非處？」世尊答曰：「阿難！",
+   "T1537-t1537.20": "阿難陀言：「云何智者於處非處善巧？」",
+   "T0776": "彼智慧者，於緣生法，如實知已，復云何了處非處法？」"
+  },
+  "a14": {
+   "mn115": "‘ṭhānañca kho etaṁ vijjati yaṁ puthujjano mātaraṁ jīvitā voropeyya, ṭhānametaṁ vijjatī’ti pajānāti. ‘Aṭṭhānametaṁ anavakāso yaṁ diṭṭhisampanno puggalo pitaraṁ jīvitā voropeyya …pe… arahantaṁ jīvitā voropeyya, ṭhānametaṁ vijjatī’ti pajānāti; ‘aṭṭhānametaṁ anavakāso yaṁ diṭṭhisampanno puggalo duṭṭhacitto tathāgatassa lohitaṁ uppādeyya, netaṁ ṭhānaṁ vijjatī’ti pajānāti; ‘ṭhānañca kho etaṁ vijjati yaṁ puthujjano duṭṭhacitto tathāgatassa lohitaṁ uppādeyya, ṭhānametaṁ vijjatī’ti pajānāti. ‘Aṭṭhānametaṁ anavakāso yaṁ diṭṭhisampanno puggalo saṅghaṁ bhindeyya, netaṁ ṭhānaṁ vijjatī’ti pajānāti; ‘ṭhānañca kho etaṁ vijjati yaṁ puthujjano saṅghaṁ bhindeyya, ṭhānametaṁ vijjatī’ti pajānāti. ‘Aṭṭhānametaṁ anavakāso yaṁ diṭṭhisampanno puggalo aññaṁ satthāraṁ uddiseyya, netaṁ ṭhānaṁ vijjatī’ti pajānāti; ‘ṭhānañca kho etaṁ vijjati yaṁ puthujjano aññaṁ satthāraṁ uddiseyya, ṭhānametaṁ vijjatī’ti pajānāti. ‘Aṭṭhānametaṁ anavakāso yaṁ ekissā lokadhātuyā dve arahanto sammāsambuddhā apubbaṁ acarimaṁ uppajjeyyuṁ, netaṁ ṭhānaṁ vijjatī’ti pajānāti; ‘ṭhānañca kho etaṁ vijjati yaṁ ekissā lokadhātuyā eko arahaṁ sammāsambuddho uppajjeyya, ṭhānametaṁ vijjatī’ti pajānāti. ‘Aṭṭhānametaṁ anavakāso yaṁ ekissā lokadhātuyā dve rājāno cakkavattino apubbaṁ acarimaṁ uppajjeyyuṁ, netaṁ ṭhānaṁ vijjatī’ti pajānāti; ‘ṭhānañca kho etaṁ vijjati yaṁ ekissā lokadhātuyā eko rājā cakkavattī uppajjeyya, ṭhānametaṁ vijjatī’ti pajānāti. ‘Aṭṭhānametaṁ anavakāso yaṁ itthī arahaṁ assa sammāsambuddho, netaṁ ṭhānaṁ vijjatī’ti pajānāti; ‘ṭhānañca kho etaṁ vijjati yaṁ puriso arahaṁ assa sammāsambuddho, ṭhānametaṁ vijjatī’ti pajānāti. ‘Aṭṭhānametaṁ anavakāso yaṁ itthī rājā assa cakkavattī, netaṁ ṭhānaṁ vijjatī’ti pajānāti; ‘ṭhānañca kho etaṁ vijjati yaṁ puriso rājā assa cakkavattī, ṭhānametaṁ vijjatī’ti pajānāti. ‘Aṭṭhānametaṁ anavakāso yaṁ itthī sakkattaṁ kareyya … mārattaṁ kareyya … brahmattaṁ kareyya, netaṁ ṭhānaṁ vijjatī’ti pajānāti; ‘ṭhānañca kho etaṁ vijjati yaṁ puriso sakkattaṁ kareyya … mārattaṁ kareyya … brahmattaṁ kareyya, ṭhānametaṁ vijjatī’ti pajānāti. ‘Aṭṭhānametaṁ anavakāso yaṁ kāyaduccaritassa iṭṭho kanto manāpo vipāko nibbatteyya, netaṁ ṭhānaṁ vijjatī’ti pajānāti; ‘ṭhānañca kho etaṁ vijjati yaṁ kāyaduccaritassa aniṭṭho akanto amanāpo vipāko nibbatteyya, ṭhānametaṁ vijjatī’ti pajānāti. ‘Aṭṭhānametaṁ anavakāso yaṁ vacīduccaritassa …pe… yaṁ manoduccaritassa iṭṭho kanto manāpo vipāko nibbatteyya, netaṁ ṭhānaṁ vijjatī’ti pajānāti; ṭhānañca kho etaṁ vijjati yaṁ vacīduccaritassa …pe… yaṁ manoduccaritassa aniṭṭho akanto amanāpo vipāko nibbatteyya, ṭhānametaṁ vijjatīti pajānāti. ‘Aṭṭhānametaṁ anavakāso yaṁ kāyasucaritassa aniṭṭho akanto amanāpo vipāko nibbatteyya, netaṁ ṭhānaṁ vijjatī’ti pajānāti; ‘ṭhānañca kho etaṁ vijjati yaṁ kāyasucaritassa iṭṭho kanto manāpo vipāko nibbatteyya, ṭhānametaṁ vijjatī’ti pajānāti. ‘Aṭṭhānametaṁ anavakāso yaṁ vacīsucaritassa …pe… yaṁ manosucaritassa aniṭṭho akanto amanāpo vipāko nibbatteyya, netaṁ ṭhānaṁ vijjatī’ti pajānāti; ‘ṭhānañca kho etaṁ vijjati yaṁ vacīsucaritassa …pe… yaṁ manosucaritassa iṭṭho kanto manāpo vipāko nibbatteyya, ṭhānametaṁ vijjatī’ti pajānāti. ‘Aṭṭhānametaṁ anavakāso yaṁ kāyaduccaritasamaṅgī taṁnidānā tappaccayā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjeyya, netaṁ ṭhānaṁ vijjatī’ti pajānāti; ‘ṭhānañca kho etaṁ vijjati yaṁ kāyaduccaritasamaṅgī taṁnidānā tappaccayā kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjeyya, ṭhānametaṁ vijjatī’ti pajānāti. ‘Aṭṭhānametaṁ anavakāso yaṁ vacīduccaritasamaṅgī …pe… yaṁ manoduccaritasamaṅgī taṁnidānā tappaccayā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjeyya, netaṁ ṭhānaṁ vijjatī’ti pajānāti; ‘ṭhānañca kho etaṁ vijjati yaṁ vacīduccaritasamaṅgī …pe… yaṁ manoduccaritasamaṅgī taṁnidānā tappaccayā kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjeyya, ṭhānametaṁ vijjatī’ti pajānāti. ‘Aṭṭhānametaṁ anavakāso yaṁ kāyasucaritasamaṅgī taṁnidānā tappaccayā kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjeyya, netaṁ ṭhānaṁ vijjatī’ti pajānāti; ‘ṭhānañca kho etaṁ vijjati yaṁ kāyasucaritasamaṅgī taṁnidānā tappaccayā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjeyya, ṭhānametaṁ vijjatī’ti pajānāti. ‘Aṭṭhānametaṁ anavakāso yaṁ vacīsucaritasamaṅgī …pe… yaṁ manosucaritasamaṅgī taṁnidānā tappaccayā kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjeyya, netaṁ ṭhānaṁ vijjatī’ti pajānāti; ‘ṭhānañca kho etaṁ vijjati yaṁ vacīsucaritasamaṅgī …pe… yaṁ manosucaritasamaṅgī taṁnidānā tappaccayā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjeyya, ṭhānametaṁ vijjatī’ti pajānāti. Ettāvatā kho, ānanda, ‘ṭhānāṭhānakusalo bhikkhū’ti alaṁvacanāyā”ti.",
+   "nan-mn115": "〔世尊曰：〕「阿難！於此有比丘，知『如是無處、無容，見具足之人，認為一切行是常者，無如是處。』知『有處：凡夫之認為一切行是常，有如是處。』知『如是無處、無容：見具足之人，認為一切行是樂者，無如是處。』知『有如處：凡夫之認為一切行是樂者，有如是處。』知『如是無處、無容：見具足之人，認為一切行有我，無如是處。』知『有如是處：凡夫認為一切法有我者，有如是處。』知『如是無處、無容：見具足之人，奪母之命者，無如是處。』知『如是無處、無容：見具足之人，奪父之命者……乃至……奪阿羅漢之命者……乃至……』知『如是無處、無容：見具足之人，惡心令出如來之身血者，無如是處。』知『有如是處：凡夫之惡心者，令出如來之身血者，有如是處。』知『如是無處、無容：見具足之人，令破僧伽者，無如是處。』知『有如是處：凡夫之令破僧伽者，有如是處。』知『如是無處、無容：見具足之人，仰望其他大師者，無如是處。』知『有如是處：凡夫之仰望其他大師者，有如是處。』知『如是無處、無容：一世界於非前、非後出世二阿羅漢、正等覺者，無如是處。』知『有如是處：於一世界出生一阿羅漢、正等覺者，有如是處。』知『如是無處、無容：一世界於非前、非後，出生二轉輪王者，無如是處。』知『有如是處：於一世界出生一轉輪王者，有如是處。』知『如是無處、無容：女人之成為阿羅漢、正等覺者，無如是處。』知『有如是處：士夫之成為阿羅漢、正等覺者有如是處。』知『如是無處、無容：女人之成為轉輪王者，無如是處。』知『有如是處：士夫之成為轉輪王者，有如是處。』知『如是無處、無容：女人之成為帝釋者，無如是處。』知『有如是處：士夫之成為帝釋者，有如是處。』知『如是無處、無容：女人之為魔王者，無如是處。』知『有如是處：士夫之成為魔王者，有如是處。』知『如是無處、無容：女人之為梵天者，無如是處。』知『有如是處：士夫之成為梵天者，有如是處。』知『如是無處，無容：身為惡行之人，得生可愛、可喜、可樂之果者，無如是處。』知『有如是處：身為惡行之人，得生不可愛、不可喜、不可樂之果者，有如是處。』知『無如是處、無容：語惡行之人……乃至……意惡行之人，得生可愛、可喜、可樂之果者，無如是處。』知『有如是處：意惡行之人，得生不可愛、不可喜、不可樂之果者，有如是處。』知『如是無處、無容：身為善行之人，得生不可愛、不可喜、不可樂之果者，無如是處。』知『有如是處：身為善行之人，得生可愛、可喜、可樂之果者，有如是處。』知『如是無處、無容：語善行之人……乃至……意善行之人，得生不可愛、不可喜，不可樂之果者，無如是處。』知『有如是處：意善行之人，得生可愛、可喜、可樂之果者，有如是處。』知『如是無處、無容：身成就惡行之人，由其因，由其緣，身壞命終後，得生善趣、天界者，無如是處。』知『有如是處：身成就惡行之人，由其因，由其緣，身壞命終後，得生無幸處、惡趣、險難處、地獄者，有如是處。』知『如是無處、無容：語成就惡行之人……乃至……意成就惡行者，由其因，由其緣，身壞命終後，得生善趣、天界者，無如是處。』知『有如是處：意成就惡行之人，由其因，由其緣，身壞命終後，得生無幸處、惡處、險處、地獄者，有如是處。』知『如是無處、無容：身成就善行之人，由其因，由其緣，身壞命終後，得生無幸處、惡趣、險難處、地獄者，無如是處。』知『有如是處：身成就行之人，由其因，由其緣，身壞命終後，得生善趣、天界者，有如是處。』知『如是無處、無容：語成就善行之人……乃至……意成就善行之人，由其因，由其緣，身壞命終後，得生無幸處、惡趣、險難處、地獄者，無如是處。』知『有如是處：意成就之善人，由其因，由其緣，身壞命終後，得生善趣、天界者，有如是處。』阿難！應於如是之範圍，可云處、非處善巧之比丘也。」〔世尊〕如是說已，尊者阿難，如是白世尊：「希有哉！世尊！未曾哉！世尊！世尊！應以如何名此教法？」",
+   "T0026-ma181": "若有比丘見處是處知如真，見非處是非處知如真。阿難！若世中有二轉輪王並治者，終無是處，若世中有一轉輪王治者，必有是處。阿難！若世中有二如來者，終無是處，若世中有一如來者，必有是處。阿難！若見諦人故害父母，殺阿羅訶，破壞聖眾，惡心向佛，出如來血者，終無是處。若凡夫人故害父母，殺阿羅訶，破壞聖眾，惡心向佛，出如來血者，必有是處。阿難！若見諦人故犯戒，捨戒罷道者，終無是處。若凡夫人故犯戒，捨戒罷道者，必有是處。若見諦人捨離此內，從外求尊、求福田者，終無是處。若凡夫人捨離此內，從外求尊、求福田者，必有是處。「阿難！若見諦人從餘沙門、梵志作是說：『諸尊！可見則見，可知則知。』者，終無是處。若凡夫人從餘沙門、梵志作是說：『諸尊！可見則見，可知則知。』者，必有是處。阿難！若見諦人信卜問吉凶者，終無是處。若凡夫人信卜問吉凶者，必有是處。阿難！若見諦人從餘沙門、梵志卜問吉凶相應，見有苦有煩，見是真者，終無是處。若凡夫人從餘沙門、梵志卜問吉凶相應，見有苦有煩，見是真者，必有是處。「阿難！若見諦人生極苦甚重苦，不可愛、不可樂、不可思、不可念乃至斷命，捨離此內，更從外求。或有沙門、梵志，或持一句呪，二句、三句、四句、多句、百千句呪，令脫我苦，是求苦、習苦、趣苦、苦盡者，終無是處。若凡夫人捨離此內，更從外求，或有沙門、梵志持一句呪，二句、三句、四句、多句、百千句呪，令脫我苦，是求苦、習苦、趣苦、苦盡者，必有是處。阿難！若見諦人受八有者，終無是處，若凡夫人受八有者，必有是處。「阿難！若身惡行，口、意惡行，因此緣此，身壞命終，趣至善處，生於天中者，終無是處。若身惡行，口、意惡行，因此緣此，身壞命終，趣至惡處，生地獄中者，必有是處。阿難！若身妙行，口、意妙行，因此緣此，身壞命終，趣至惡處，生地獄中者，終無是處。若身妙行，口、意妙行，因此緣此，身壞命終，趣至善處，生天中者，必有是處。阿難！若身惡行，口、意惡行，受樂報者，終無是處。阿難！若身惡行，口、意惡行，受苦報者，必有是處。阿難！若身妙行，口、意妙行，受苦報者，終無是處。若身妙行，口、意妙行，受樂報者，必有是處。「阿難！若不斷五蓋——心穢、慧羸，心正立四念處者，終無是處。若斷五蓋——心穢、慧羸，心正立四念處者，必有是處。阿難！若不斷五蓋——心穢、慧羸，心不正立四念處，欲修七覺意者，終無是處。若斷五蓋——心穢、慧羸，心正立四念處，修七覺意者，必有是處。阿難！若不斷五蓋——心穢、慧羸，心不正立四念處，不修七覺意，欲得無上正盡覺者，終無是處。若斷五蓋——心穢、慧羸，心正立四念處，修七覺意，得無上正盡覺者，必有是處。阿難！若不斷五蓋——心穢、慧羸，心不正立四念處，不修七覺意，不得無上正盡覺，盡苦邊者，終無是處。若斷五蓋——心穢、慧羸，心正立四念處，修七覺意，得無上正盡覺，盡苦邊者，必有是處。阿難！如是比丘知是處、非處。」尊者阿難白曰：「世尊！如是比丘知是處、非處。」於是，尊者阿難叉手向佛，白曰：「世尊！此經名何？云何奉持？」世尊告曰：「阿難！當受持此多界、法界、甘露界、多鼓、法鼓、甘露鼓、法鏡、四品。是故稱此經名曰多界。」",
+   "T1537-t1537.20": "佛言：「智者於處非處如實知見是處非處善巧，謂如實知無處無容身語意惡行，感可愛可樂可欣可意異熟。有處有容身語意惡行，感不可愛不可樂不可欣不可意異熟。無處無容身語意妙行，感不可愛不可樂不可欣不可意異熟。有處有容身語意妙行，感可愛可樂可欣可意異熟。無處無容行身語意惡行已，由此因緣身壞命終生諸善趣。有處有容行身語意惡行已，由此因緣身壞命終墮諸惡趣。無處無容行身語意妙行已，由此因緣身壞命終墮諸惡趣。有處有容行身語意妙行已，由此因緣身壞命終生諸善趣。是處非處善巧。復如實知見無處無容非前非後有二輪王生一世界。有處有容非前非後有一輪王生一世界。無處無容非前非後有二如來生一世界。有處有容非前非後有一如來生一世界。是處非處善巧。復如實知見無處無容女作輪王、帝釋、魔王、梵王，及證獨覺菩提、或證無上正等菩提。有處有容男作輪王帝釋魔王梵王、及證獨覺菩提或證無上正等菩提。是處非處善巧。復如實知見無處無容具聖見者，故思害母、害父、害阿羅漢、破和合僧及起惡心出佛身血。有處有容諸異生者作五無間。無處無容具聖見者，故思斷眾生命。有處有容諸異生者，故思斷眾生命。無處無容具聖見者，故思越諸學處。有處有容諸異生者，故思越諸學處。無處無容具聖見者，捨勝學處趣劣學處，或求外道為師、或求外道為福田、或瞻仰外道沙門婆羅門面、或種種占卜諸吉祥事執為清淨，或受第八有。有處有容諸異生者，有如是事。是處非處善巧。復如實知見無處無容未斷五蓋令心染污、令慧力羸、障礙道品、違涅槃者，心善安住四念住中。有處有容已斷五蓋令心染污、令慧力羸、障礙道品、違涅槃者，心善安住四念住中。無處無容未斷五蓋廣說乃至違涅槃者，心未善住四念住中而能修習七等覺支。有處有容已斷五蓋廣說乃至違涅槃者，心已善住四念住中乃能修習七等覺支。無處無容未斷五蓋廣說乃至違涅槃者，心未善住四念住中而能修習七等覺支，而證聲聞獨覺無上菩提。有處有容已斷五蓋廣說乃至違涅槃者，心已善住四念住中已，能修習七等覺支，乃能證得聲聞獨覺無上菩提。是名智者於處非處善巧。」阿難陀曰：「今此法門，其名何等？云何奉持？」佛告慶喜：「今此法門，名為四轉、亦名大法鏡、亦名甘露鼓、亦名多界，應如是持。」",
+   "T0776": "佛告阿難：「非處法者，謂身、口、意造不善業，而獲所樂善果報者，無有是處。若身、口、意造諸善業，而復獲於不善報者，亦無是處。言是處者，謂身、口、意造諸善業，而獲所樂勝妙果報，斯有是處。若身、口、意造不善業，而獲所感不善果報，亦有是處。「又復，阿難！言非處者，謂身、口、意造不善業，如所希求殊勝之果，由此因緣，命終之後，若生人天，無有是處。若身、口、意造於善業，墮惡趣者，亦無是處。言是處者，謂身、口、意造諸善業，生人天者，斯有是處。若造惡業，墮惡趣者，亦有是處。「又復，阿難！世間若有二佛出世，無有是處。一佛出世，斯有是處；又復世有二輪王出，亦無是處。一輪王出，斯有是處。如是若有女人，為轉輪王，治化世間，乃至為彼四王天主、忉利天主、大梵天王，及成緣覺無上菩提者，如是等事，無有是處。若有 男子，具大人相，福慧莊嚴，為轉輪王，出於世間，乃至得成無上菩提，斯有是處。「又復，阿難！若正見人，殺父、害母、殺阿羅漢、破和合僧、出佛身血，造於如是五逆業者，無有是處。若異生凡夫愚癡邪見，造五逆者，斯有是處。「又復，阿難！若正見人，受具戒品，自犯戒已，於阿闍梨而生毀謗，作如是言：『此阿闍梨不善戒法，亦復不能受持禁戒，我當揀擇別阿闍梨，受學戒法。』作是言已，詣餘沙門婆羅門所，選擇師受彼人，或見沙門婆羅門，作諸戲論。不律儀者，依稟於彼為阿闍梨，而求寂靜出離三有，無有是處。如是等事，若愚癡邪見，作此求者，斯有是處。「又復，阿難！若人不斷根本煩惱及隨煩惱，由煩惱故損減善根，障礙智慧，覆蓋涅盤真寂靜法。彼人若了四念處者，無有是處。若人斷除根本煩惱及隨煩惱，善能了解四念處法，求趣涅盤者，斯有是處。「又復，阿難！若人不斷煩惱，善了四念處，能證七覺支，趣向涅盤者，無有是處。若人斷除煩惱法已，了四念處，證七覺支，趣向涅盤者，斯有是處。「又復，阿難！若人不斷煩惱，而了四念處，證七覺支，盡苦邊際，趣向涅盤，成緣覺菩提，乃至無上正等正覺者，無有是處。若斷煩惱，了四念處，證七覺支，盡苦邊際，趣向涅盤，成緣覺菩提，乃至無上正等正覺者，斯有是處。」佛告阿難：「智者如是，如實了達處非處法。汝等應當如理而學。」爾時，阿難白佛言：「世尊！我聞如是未曾有法，得甘露味，深自慶快。世尊！當何名此經，我等云何受持？」"
+  },
+  "a15": {
+   "mn115": "Evaṁ vutte, āyasmā ānando bhagavantaṁ etadavoca: “acchariyaṁ, bhante, abbhutaṁ, bhante. Konāmo ayaṁ, bhante, dhammapariyāyo”ti? “Tasmātiha tvaṁ, ānanda, imaṁ dhammapariyāyaṁ ‘bahudhātuko’tipi naṁ dhārehi, ‘catuparivaṭṭo’tipi naṁ dhārehi, ‘dhammādāso’tipi naṁ dhārehi, ‘amatadundubhī’tipi naṁ dhārehi, ‘anuttaro saṅgāmavijayo’tipi naṁ dhārehī”ti. Idamavoca bhagavā. Attamano āyasmā ānando bhagavato bhāsitaṁ abhinandīti. Bahudhātukasuttaṁ niṭṭhitaṁ pañcamaṁ.",
+   "nan-mn115": "〔世尊曰：〕「是故，阿難！汝應受持此教法為多界〔經、〕四轉〔經、〕法鏡〔經、〕不死鼓〔經、〕無上戰勝〔經。〕」世尊如是說已，尊者阿難歡喜，而隨喜世尊之所說。",
+   "T0026-ma181": "佛說如是。尊者阿難及諸比丘，聞佛所說，歡喜奉行。多界經第十竟（二千二百三十六字）",
+   "T1537-t1537.20": "時阿難陀歡喜敬受。云何眼界？謂如眼根。云何色界？謂如色處。云何眼識界？謂眼色為緣所生眼識，此中眼為增上、色為所緣，於眼所識色，諸了別異了別各別了別色，是名眼識界。餘五三界，隨其所應，廣說亦爾。云何地界？謂地界有二種：一、內；二、外。云何內地界？謂此身內所有各別堅性堅類有執有受。此復云何？謂髮毛爪齒乃至糞穢。復有所餘身內各別堅性堅類有執有受，是名內地界。云何外地界？謂此身外諸外所攝堅性堅類無執無受。此復云何？謂大地山、諸石瓦礫、蜯蛤蝸牛、銅鐵錫鑞、末尼真珠、瑠璃螺貝、珊瑚璧玉、金銀石藏杵藏、頗胝迦、赤珠右旋、沙土草木、枝葉花果。或復有地依水輪住，復有所餘在此身外堅性堅類無執無受，是名外地界。前內此外，總名地界。云何水界？謂水界有二種：一、內；二、外。云何內水界？謂此身內所有各別濕性濕類有執有受。此復云何？謂諸淚汗乃至小便。復有所餘身內各別濕性濕類有執有受，是名內水界。云何外水界？謂此身外諸外所攝濕性濕類無執無受。此復云何？謂根莖枝葉花果等汁露、酒乳酪酥油蜜糖、池沼陂湖、殑伽河、鹽母那河、薩剌渝河、頞氏羅筏底河、莫呬河、東海西海南海北海、四大海水。或復有水依風輪住，復有所餘在此外濕性濕類無執無受，是名外水界。前內此外，總名水界。云何火界？謂火界有二種：一、內：二、外。云何內火界？謂此身內所有各別暖性暖類有執有受。此復云何？謂此身中諸所有熱等熱遍熱，由此所食所噉所飲正易消化，若此增盛令身燋熱。復有所餘身內各別暖性暖類有執有受，是名內火界。云何外火界？謂此身外諸外所攝暖性暖類無執無受。此復云何？謂地暖火、日藥末尼、宮殿星宿火聚燈焰、燒村燒城燒川燒野、燒十二十三十四十五十百千或無量擔薪草等火熾盛烔然，或在山澤河池巖窟房舍殿堂樓觀草木根莖枝葉花果等暖。復有所餘熱性熱類無執無受，是名外火界。前內此外，總名火界。云何風界？謂風界有二種：一、內；二外。云何內風界？謂此身內所有各別動性動類有執有受。此復云何？謂此身中，或上行風、或下行風、或傍行風、脇風背風、胸風肚風、心風臍風、嗢鉢羅風、蓽鉢羅風、刀風劍風針風、結風纏風、掣風努風強風、隨支節風、入出息風。復有所餘身內各別動性動類有執有受，是名內風界。云何外風界？謂此身外諸外所攝動性動類無執無受。此復云何？謂東風西風南風北風、有塵風無塵風、旋風暴風吠嵐婆風、小風大風無量風、風輪風、依空行風。復有所餘動性動類無執無受，是名外風界。前內此外，總名風界。云何空界？謂空界有二種：一、內；二、外。云何內空界？謂此身內所有各別空性空類有執有受。此復云何？謂此身中隨皮肉血骨髓等空、眼穴耳穴鼻穴面門咽喉心腹腸肚等穴，由此通貯所飲所食及令下棄。復有所餘身內各別空性空類，是名內空界。云何外空界？謂此身外諸外所攝空性空類無執無受。此復云何？謂外空逈隣呵伽色，是名外空界。前內此外，總名空界。云何識界？謂五識身及有漏意識，是名識界。云何欲界？謂於欲境諸貪等貪乃至貪類貪生，總名欲界。復次欲貪及欲貪相應受想行識，并所等起身業語業不相應行，總名欲界。云何恚界？謂於有情欲為損害乃至現為過患，總名恚界。復次瞋恚及瞋恚相應受想行識，并所等起身業語業不相應行，總名恚界。云何害界？謂以手塊刀杖等物，隨一苦具捶打有情，諸損等損害等害，瞋恚所起能起苦事，總名害界。復次諸害及害相應受想行識，并所等起身業語業不相應行，總名害界。云何無欲界？謂於欲界思惟過患，如是欲界是不善法、是下賤者信解受持，佛及弟子、賢貴善士共所呵厭，能為自害、能為他害、能為俱害、能滅智慧、能礙彼類、能障涅槃，受持此法不生通慧、不引菩提、不證涅槃。如是思惟，發勤精進乃至勵意不息，是名無欲界。復次為斷欲界，於無欲界思惟功德，如是無欲界是善法、是尊勝者信解受持，佛及弟子、賢貴善士共所欣讚，不為自害、不為他害、不為俱害、增長智慧、不礙彼類、不障涅槃，受持此法能生通慧、能引菩提、能證涅槃。如是思惟，發勤精進乃至勵意不息，是名無欲界。復次思惟欲界，如病如癰、如箭惱害、無常苦空非我轉動、勞倦羸篤、是失壞法、迅速不停、衰朽非恒、不可保信、是變壞法。如是思惟，發勤精進，是名無欲界。復次為斷欲界，思惟彼滅是滅是離、思惟彼道是道是出。如是思惟，發勤精進乃至勵意不息，是名無欲界。復次若思惟捨心定及道、捨心定相應，并無想定、滅定、擇滅。如是思惟，發勤精進乃至勵意不息，是名無欲界。復次無欲及無欲相應受想行識，并所發起身業語業不相應行，總名無欲界。云何無恚界？謂於恚界思惟過患，如是恚界是不善法乃至不證涅槃。如是思惟，發勤精進乃至勵意不息，是名無恚界。復次為斷恚界，於無恚界思惟功德，如是無恚界是善法乃至能證涅槃。如是思惟，發勤精進乃至勵意不息，是名無恚界。復次思惟恚界，如病如癰乃至是變壞法。如是思惟，發勤精進，是名無恚界。復次為斷恚界，思惟彼滅是滅是離、思惟彼道是道是出。如是思惟，發勤精進乃至勵意不息。是名無恚界。復次若思惟慈心定及道、慈心定相應。如是思惟，發勤精進乃至勵意不息。是名無恚界。復次無恚及無恚相應受想行識，并所等起身業語業不相應行，總名無恚界。云何無害界？謂於害界思惟過患，如是害界是不善法乃至不證涅槃。如是思惟，發勤精進乃至勵意不息，是名無害界。復次為斷害界，於無害界思惟功德，如是不害界是善法乃至能證涅槃。如是思惟，發勤精進乃至勵意不息，是名無害界。復次思惟害界，如病如癰乃至是變壞法。如是思惟，發勤精進，是名無害界。復次為斷害界，思惟彼滅是滅是離、思惟彼道是道是出。如是思惟，發勤精進乃至勵意不息，是名無害界。復次若思惟悲心定及道、悲心定相應。如是思惟，發勤精進乃至勵意不息，是名無害界。復次無害及無害相應受想行識，并所等起身業語業不相應行，總名無害界。云何樂界？謂順樂觸所起身樂心樂，平等受受所攝，是名樂界。復次脩第三靜慮順樂受觸所起心樂，平等受受所攝，是名樂界。云何苦界？謂順苦觸所起身苦，不平等受受所攝，是名苦界。云何喜界？謂順喜觸所起心喜，平等受受所攝，是名喜界。復次脩初二靜慮，順喜觸所起心喜，平等受受所攝，是名喜界。云何憂界？謂順憂觸所起心憂，不平等受受所攝，是名憂界。云何捨界？謂順捨觸所起身捨心捨，非平等非不平等受受所攝，是名捨界。復次脩未至定靜慮中間第四靜慮及無色定，順不苦不樂觸所起心捨，非平等非不平等受受所攝，是名捨界。云何無明界？謂三界無知，是名無明界。云何受界？謂六受身，即眼觸所生受乃至意觸所生受。是名受界。云何想界？謂六想身，即眼觸所生想乃至意觸所生想，是名想界。云何行界？謂六思身，即眼觸所生思乃至意觸所生思，是名行界。云何識界？謂六識身，即眼識乃至意識，是名識界。云何欲界，謂有諸法欲貪隨增，是名欲界。復次欲界繫十八界、十二處、五蘊，是名欲界。復次下從無間地獄，上至他化自在天，於中所有色受想行識，是名欲界。云何色界？謂有諸法色貪隨增，是名色界。復次色界繫十四界、十處、五蘊，是名色界。復次下從梵眾天，上至色究竟天，於中所有色受想行識，是名色界。云何無色界？謂有諸法無色貪隨增，是名無色界。復次無色界繫三界、二處、四蘊，是名無色界。復次如欲色界，處定建立不相雜亂，非無色界有如是事。然依定生勝劣差別，建立上下。下從空無邊處，上至非想非非想處，於中所有受想行識，是名無色界。云何色界？謂欲、色界，總名色界。云何無色界？謂四無色，是名無色界。云何滅界？謂擇滅、非擇滅，是名滅界。復次諸有色法，總名色界。除擇滅、非擇滅，餘無色法，是名無色界。擇滅、非擇滅，是名滅界。云何過去界？謂過去五蘊，是名過去界。云何未來界？謂未來五蘊，是名未來界。云何現在界？謂現在五蘊，是名現在界。云何劣界。謂不善有覆無記法，是名劣界。云何中界？謂有漏善及無覆無記法，是名中界。云何妙界？謂無漏善法，是名妙界。云何善界？謂善身語業、心心所法、不相應行及擇滅，是名善界。云何不善界？謂不善身語業、心心所法、不相應行，是名不善界。云何無記界？謂無記色、心心所法、不相應行，及虛空、非擇滅，是名無記界。云何學界？謂學五蘊，是名學界。云何無學界？謂無學五蘊，是名無學界。云何非學非無學界？謂有漏五蘊，及虛空、擇滅、非擇滅，是名非學非無學界。云何有漏界，謂有漏五蘊，是名有漏界。云何無漏界？謂無漏五蘊，及虛空、擇滅、非擇滅，是名無漏界。云何有為界？謂五蘊，是名有為界。云何無為界？謂虛空及二滅，是名無為界。嗢拕南曰：界有六十二，十八界為初，\n三六一四種，六三兩種二。",
+   "T0776": "佛告阿難：「是經名為『四品法門』，亦名『法鏡』，亦名『甘露鼓』，亦名『多界』，如是名字，汝當受持。」爾時，尊者阿難及諸大眾聞佛所說，皆大歡喜，信受奉行。"
+  }
+ }
+}

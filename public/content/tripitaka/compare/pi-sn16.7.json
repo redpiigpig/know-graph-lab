@@ -1,0 +1,127 @@
+{
+ "slug": "pi-sn16.7",
+ "title": "別譯雜阿含經 （一一四）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。複核標記存疑 1 段：義段4的雜阿含經（一一三九）內容實為佛問迦葉因緣，屬於義段3的內容，故為錯位。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "佛請迦葉教授"
+  },
+  {
+   "id": "a02",
+   "label": "迦葉白佛難教授"
+  },
+  {
+   "id": "a03",
+   "label": "佛問迦葉因緣"
+  },
+  {
+   "id": "a04",
+   "label": "迦葉答不信者退失善法",
+   "doubt": true
+  },
+  {
+   "id": "a05",
+   "label": "以月盈虛喻無信者退失"
+  },
+  {
+   "id": "a06",
+   "label": "具信者增長善法之喻"
+  },
+  {
+   "id": "a07",
+   "label": "佛讚迦葉說法"
+  },
+  {
+   "id": "a08",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn16.7",
+   "lang": "pi",
+   "label": "巴利 SN16.7",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "T0100-sa-2.114",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （一一四）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa1139",
+   "lang": "lzh",
+   "label": "雜阿含經 （一一三九）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（一一四）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一一三九）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn16.7": "Saṁyutta Nikāya 16.7 1. Kassapavagga Dutiyaovādasutta Rājagahe viharati veḷuvane. Atha kho āyasmā mahākassapo yena bhagavā tenupasaṅkami …pe…",
+   "T0100-sa-2.114": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。爾時，尊者摩訶迦葉住舊園林毘舍佉講堂中。時，尊者迦葉於日沒時，從禪定起，往至佛所，禮佛足已，在一面坐。",
+   "T0099-sa1139": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。爾時，尊者摩訶迦葉住舍衛國東園鹿子母講堂，晡時從禪覺，詣世尊所，稽首禮足，退坐一面。"
+  },
+  "a01": {
+   "sn16.7": "ekamantaṁ nisinnaṁ kho āyasmantaṁ mahākassapaṁ bhagavā etadavoca:",
+   "T0100-sa-2.114": "佛告迦葉：「汝可教授諸比丘等，當為說法。所以者何？我恒教授，汝亦應爾。我常為諸比丘說法，汝亦應爾。」",
+   "T0099-sa1139": "佛告迦葉：「汝當教授、教誡諸比丘！為諸比丘說法教誡、教授。所以者何？我常為諸比丘說法教誡、教授，汝亦應爾。」"
+  },
+  "a02": {
+   "sn16.7": "“ovada, kassapa, bhikkhū;",
+   "T0100-sa-2.114": "迦葉白佛：「是諸比丘，難可教授，不能受語。」",
+   "T0099-sa1139": "尊者摩訶迦葉白佛言：「世尊！"
+  },
+  "a03": {
+   "sn16.7": "karohi, kassapa, bhikkhūnaṁ dhammiṁ kathaṁ.",
+   "T0100-sa-2.114": "佛告迦葉：「汝於今者，見何因緣，而不為說？」",
+   "T0099-sa1139": "今諸比丘難可為說法，若說法者，當有比丘不忍、不喜。」"
+  },
+  "a04": {
+   "sn16.7": "Ahaṁ vā, kassapa, bhikkhū ovadeyyaṁ tvaṁ vā; ahaṁ vā bhikkhūnaṁ dhammiṁ kathaṁ kareyyaṁ tvaṁ vā”ti. “Dubbacā kho, bhante, etarahi bhikkhū, dovacassakaraṇehi dhammehi samannāgatā akkhamā appadakkhiṇaggāhino anusāsaniṁ.",
+   "T0100-sa-2.114": "迦葉對曰：「若不信者，退失善法，便生懈怠，無有慚愧，愚癡無智，貪著他物，有恚害心，睡蓋所覆，掉動不停，於法疑惑，深著我見，具於煩惱垢污之心，喜瞋失念，無暫定，有如是等種種不善惡法，決定具有。",
+   "T0099-sa1139": "佛告迦葉：「汝見何等因緣而作是說？」"
+  },
+  "a05": {
+   "sn16.7": "Yassa kassaci, bhante, saddhā natthi kusalesu dhammesu, hirī natthi kusalesu dhammesu, ottappaṁ natthi kusalesu dhammesu, vīriyaṁ natthi kusalesu dhammesu, paññā natthi kusalesu dhammesu, tassa yā ratti vā divaso vā āgacchati, hāniyeva pāṭikaṅkhā kusalesu dhammesu, no vuddhi. Seyyathāpi, bhante, kāḷapakkhe candassa yā ratti vā divaso vā āgacchati, hāyateva vaṇṇena, hāyati maṇḍalena, hāyati ābhāya, hāyati ārohapariṇāhena. Evameva kho, bhante, yassa kassaci saddhā natthi kusalesu dhammesu …pe… hirī natthi … ottappaṁ natthi … vīriyaṁ natthi … paññā natthi … kusalesu dhammesu tassa yā ratti vā divaso vā āgacchati, hāniyeva pāṭikaṅkhā kusalesu dhammesu, no vuddhi. ‘Assaddho purisapuggalo’ti, bhante, parihānametaṁ; ‘ahiriko purisapuggalo’ti, bhante, parihānametaṁ; ‘anottappī purisapuggalo’ti, bhante, parihānametaṁ; ‘kusīto purisapuggalo’ti, bhante, parihānametaṁ; ‘duppañño purisapuggalo’ti, bhante, parihānametaṁ; ‘kodhano purisapuggalo’ti, bhante, parihānametaṁ; ‘upanāhī purisapuggalo’ti, bhante, parihānametaṁ; ‘na santi bhikkhū ovādakā’ti, bhante, parihānametaṁ.",
+   "T0100-sa-2.114": "如斯等人，尚無少善，況復增進善法，無有退失？若復有人，具於信心，不退善法，精進不倦，能修慚愧，有智之人，具行善法，無有貪想，遠離瞋嫌，除睡眠蓋，心不掉動，無有疑惑，不著身見，心淨無染，不喜瞋恚，能住心念，具於禪定，善法不退，若有具上種種善法，我尚不說彼人善法停住，況不增長？",
+   "T0099-sa1139": "摩訶迦葉白佛言：「世尊！若有比丘於諸善法無信敬心，若聞說法，彼則退沒。若惡智人於諸善法無精進、慚愧、智慧，聞說法者，彼則退沒，若人貪欲、瞋恚、睡眠、掉悔、疑惑，身行慠暴，忿恨失念，不定無智，聞說法者，彼則退沒。世尊！如是比諸惡人者，尚不能令心住善法，況復增進！當知是輩，隨其日夜，善法退減，不能增長。"
+  },
+  "a06": {
+   "sn16.7": "Yassa kassaci, bhante, saddhā atthi kusalesu dhammesu, hirī atthi kusalesu dhammesu, ottappaṁ atthi kusalesu dhammesu, vīriyaṁ atthi kusalesu dhammesu, paññā atthi kusalesu dhammesu, tassa yā ratti vā divaso vā āgacchati, vuddhiyeva pāṭikaṅkhā kusalesu dhammesu, no parihāni. Seyyathāpi, bhante, juṇhapakkhe candassa yā ratti vā divaso vā āgacchati, vaḍḍhateva vaṇṇena, vaḍḍhati maṇḍalena, vaḍḍhati ābhāya, vaḍḍhati ārohapariṇāhena. Evameva kho, bhante, yassa kassaci saddhā atthi kusalesu dhammesu … hirī atthi …pe… ottappaṁ atthi … vīriyaṁ atthi … paññā atthi kusalesu dhammesu tassa yā ratti vā divaso vā āgacchati, vuddhiyeva pāṭikaṅkhā kusalesu dhammesu, no parihāni. ‘Saddho purisapuggalo’ti, bhante, aparihānametaṁ; ‘hirimā purisapuggalo’ti, bhante, aparihānametaṁ; ‘ottappī purisapuggalo’ti, bhante, aparihānametaṁ; ‘āraddhavīriyo purisapuggalo’ti, bhante, aparihānametaṁ; ‘paññavā purisapuggalo’ti, bhante, aparihānametaṁ; ‘akkodhano purisapuggalo’ti, bhante, aparihānametaṁ; ‘anupanāhī purisapuggalo’ti, bhante, aparihānametaṁ; ‘santi bhikkhū ovādakā’ti, bhante, aparihānametan”ti.",
+   "T0100-sa-2.114": "如斯等人，於日夜中，善法增長。」",
+   "T0099-sa1139": "「世尊！若有士夫於諸善法信心清淨，是則不退；於諸善法精進、慚愧、智慧，是則不退，不貪，不恚、睡眠、掉悔、疑惑，是則不退；身不弊暴，心不染污，不忿，不恨，定心正念智慧，是則不退。如是人者，於諸善法日夜增長，況復心住，此人日夜常求勝進，終不退減。」"
+  },
+  "a07": {
+   "sn16.7": "“Sādhu sādhu, kassapa. Yassa kassaci, kassapa, saddhā natthi kusalesu dhammesu …pe… hirī natthi … ottappaṁ natthi … vīriyaṁ natthi … paññā natthi kusalesu dhammesu tassa yā ratti vā divaso vā āgacchati, hāniyeva pāṭikaṅkhā kusalesu dhammesu, no vuddhi. Seyyathāpi, kassapa, kāḷapakkhe candassa yā ratti vā divaso vā āgacchati, hāyateva vaṇṇena …pe… hāyati ārohapariṇāhena. Evameva kho, kassapa, yassa kassaci saddhā natthi kusalesu dhammesu …pe… hirī natthi … ottappaṁ natthi … vīriyaṁ natthi … paññā natthi kusalesu dhammesu tassa yā ratti vā divaso vā āgacchati, hāniyeva pāṭikaṅkhā kusalesu dhammesu, no vuddhi. ‘Assaddho purisapuggalo’ti, kassapa, parihānametaṁ; ahiriko …pe… anottappī … kusīto … duppañño … kodhano … ‘upanāhī purisapuggalo’ti, kassapa, parihānametaṁ; ‘na santi bhikkhū ovādakā’ti, kassapa, parihānametaṁ. Yassa kassaci, kassapa, saddhā atthi kusalesu dhammesu …pe… hirī atthi … ottappaṁ atthi … vīriyaṁ atthi … paññā atthi kusalesu dhammesu tassa yā ratti vā divaso vā āgacchati, vuddhiyeva pāṭikaṅkhā kusalesu dhammesu, no parihāni. Seyyathāpi, kassapa, juṇhapakkhe candassa yā ratti vā divaso vā āgacchati, vaḍḍhateva vaṇṇena, vaḍḍhati maṇḍalena, vaḍḍhati ābhāya, vaḍḍhati ārohapariṇāhena. Evameva kho, kassapa, yassa kassaci saddhā atthi kusalesu dhammesu hirī atthi … ottappaṁ atthi … vīriyaṁ atthi … paññā atthi kusalesu dhammesu tassa yā ratti vā divaso vā āgacchati, vuddhiyeva pāṭikaṅkhā kusalesu dhammesu, no parihāni. ‘Saddho purisapuggalo’ti, kassapa, aparihānametaṁ; hirimā …pe… ottappī … āraddhavīriyo … paññavā … akkodhano … ‘anupanāhī purisapuggalo’ti, kassapa, aparihānametaṁ; ‘santi bhikkhū ovādakā’ti, kassapa, aparihānametan”ti.",
+   "T0100-sa-2.114": "佛告迦葉：「如是！如是！如汝所說。若不信者，退失善法，乃至如斯等人，尚無少善，況復增長？若復有人，具信心者，不退善法，乃至我尚不說彼人善法停住，況不增長？」",
+   "T0099-sa1139": "佛告迦葉：「如是，如是。於諸善法無信心者，是則退減……」亦如迦葉次第廣說。"
+  },
+  "a08": {
+   "sn16.7": "Sattamaṁ.",
+   "T0100-sa-2.114": "時，諸比丘聞佛所說，歡喜奉行。",
+   "T0099-sa1139": "時，尊者摩訶迦葉聞佛所說，歡喜隨喜，從座起，作禮而去。"
+  }
+ }
+}

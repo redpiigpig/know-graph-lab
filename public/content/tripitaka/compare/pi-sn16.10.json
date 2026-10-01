@@ -1,0 +1,203 @@
+{
+ "slug": "pi-sn16.10",
+ "title": "別譯雜阿含經 （一一八）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "阿難請見比丘尼"
+  },
+  {
+   "id": "a02",
+   "label": "迦葉同意前往"
+  },
+  {
+   "id": "a03",
+   "label": "抵達比丘尼精舍"
+  },
+  {
+   "id": "a04",
+   "label": "迦葉為比丘尼說法"
+  },
+  {
+   "id": "a05",
+   "label": "偷羅難陀比丘尼發難"
+  },
+  {
+   "id": "a06",
+   "label": "迦葉問阿難其言"
+  },
+  {
+   "id": "a07",
+   "label": "針師喻論議"
+  },
+  {
+   "id": "a08",
+   "label": "阿難自陳未得月譬讚歎"
+  },
+  {
+   "id": "a09",
+   "label": "迦葉引月譬說自身功德"
+  },
+  {
+   "id": "a10",
+   "label": "阿難承認迦葉得月譬讚歎"
+  },
+  {
+   "id": "a11",
+   "label": "進一步論證迦葉功德"
+  },
+  {
+   "id": "a12",
+   "label": "阿難再次承認"
+  },
+  {
+   "id": "a13",
+   "label": "進一步論證漏盡通等功德"
+  },
+  {
+   "id": "a14",
+   "label": "阿難最終承認"
+  },
+  {
+   "id": "a15",
+   "label": "結語：七寶譬喻"
+  },
+  {
+   "id": "a16",
+   "label": "偷羅難陀比丘尼退失"
+  },
+  {
+   "id": "a17",
+   "label": "終結"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn16.10",
+   "lang": "pi",
+   "label": "巴利 SN16.10",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "T0100-sa-2.118",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （一一八）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa1143",
+   "lang": "lzh",
+   "label": "雜阿含經 （一一四三）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（一一八）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一一四三）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn16.10": "Saṁyutta Nikāya 16.10 1. Kassapavagga Upassayasutta Evaṁ me sutaṁ— ekaṁ samayaṁ āyasmā mahākassapo sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme.",
+   "T0100-sa-2.118": "如是我聞：一時，佛在王舍城，耆闍崛山迦蘭陀竹林。爾時，尊者摩訶迦葉、尊者阿難在耆闍崛山中。",
+   "T0099-sa1143": "如是我聞：一時，佛住王舍城迦蘭陀竹園。尊者摩訶迦葉、尊者阿難住耆闍崛山。"
+  },
+  "a01": {
+   "sn16.10": "Atha kho āyasmā ānando pubbaṇhasamayaṁ nivāsetvā pattacīvaramādāya yenāyasmā mahākassapo tenupasaṅkami; upasaṅkamitvā āyasmantaṁ mahākassapaṁ etadavoca:",
+   "T0100-sa-2.118": "于時阿難食時已到，語尊者摩訶迦葉言：「大德！食時已到，可共乞食。」於是摩訶迦葉著衣持鉢，與阿難出耆闍崛山，入王舍城乞食。阿難語摩訶迦葉言：「日時猶早，我欲至彼比丘尼精舍，觀諸比丘尼等所行法式。」",
+   "T0099-sa1143": "時，尊者阿難詣尊者摩訶迦葉所，語尊者摩訶迦葉言：「今可共出耆闍崛山，入王舍城乞食。」尊者摩訶迦葉默然而許。時，尊者摩訶迦葉、尊者阿難著衣持鉢，入王舍城乞食。"
+  },
+  "a02": {
+   "sn16.10": "“āyāma, bhante kassapa, yena aññataro bhikkhunupassayo tenupasaṅkamissāmā”ti. “Gaccha tvaṁ, āvuso ānanda, bahukicco tvaṁ bahukaraṇīyo”ti. Dutiyampi kho āyasmā ānando āyasmantaṁ mahākassapaṁ etadavoca: “āyāma, bhante kassapa, yena aññataro bhikkhunupassayo tenupasaṅkamissāmā”ti. “Gaccha tvaṁ, āvuso ānanda, bahukicco tvaṁ bahukaraṇīyo”ti. Tatiyampi kho āyasmā ānando āyasmantaṁ mahākassapaṁ etadavoca: “āyāma, bhante kassapa, yena aññataro bhikkhunupassayo tenupasaṅkamissāmā”ti.",
+   "T0100-sa-2.118": "迦葉答言：「可爾。」",
+   "T0099-sa1143": "尊者阿難語尊者摩訶迦葉：「日時太早，可共暫過比丘尼精舍。」"
+  },
+  "a03": {
+   "sn16.10": "Atha kho āyasmā mahākassapo pubbaṇhasamayaṁ nivāsetvā pattacīvaramādāya āyasmatā ānandena pacchāsamaṇena yena aññataro bhikkhunupassayo tenupasaṅkami; upasaṅkamitvā paññatte āsane nisīdi.",
+   "T0100-sa-2.118": "即時共詣比丘尼精舍。爾時，諸比丘尼遙見二尊者來，即敷床座。既敷座已，白二尊者：「可就此坐。」時，二尊者即就其坐。諸比丘尼既見坐已，稽首禮足，在一面立。",
+   "T0099-sa1143": "即便往過。時，諸比丘尼遙見尊者摩訶迦葉、尊者阿難從遠而來，疾敷床座，請令就坐。時，諸比丘尼禮尊者摩訶迦葉、阿難足已，退坐一面。"
+  },
+  "a04": {
+   "sn16.10": "Atha kho sambahulā bhikkhuniyo yenāyasmā mahākassapo tenupasaṅkamiṁsu; upasaṅkamitvā āyasmantaṁ mahākassapaṁ abhivādetvā ekamantaṁ nisīdiṁsu. Ekamantaṁ nisinnā kho tā bhikkhuniyo āyasmā mahākassapo dhammiyā kathāya sandassesi samādapesi samuttejesi sampahaṁsesi. Atha kho āyasmā mahākassapo tā bhikkhuniyo dhammiyā kathāya sandassetvā samādapetvā samuttejetvā sampahaṁsetvā uṭṭhāyāsanā pakkāmi.",
+   "T0100-sa-2.118": "爾時，摩訶迦葉為比丘尼種種說法，示教利喜。",
+   "T0099-sa1143": "尊者摩訶迦葉為諸比丘尼種種說法，示、教、照、喜。"
+  },
+  "a05": {
+   "sn16.10": "Atha kho thullatissā bhikkhunī anattamanā anattamanavācaṁ nicchāresi: “kiṁ pana ayyo mahākassapo, ayyassa ānandassa vedehamunino sammukhā dhammaṁ bhāsitabbaṁ maññati? Seyyathāpi nāma sūcivāṇijako sūcikārassa santike sūciṁ vikketabbaṁ maññeyya; evameva ayyo mahākassapo ayyassa ānandassa vedehamunino sammukhā dhammaṁ bhāsitabbaṁ maññatī”ti.",
+   "T0100-sa-2.118": "於彼眾中，有比丘尼名偷羅難陀，聞說法要，心不甘樂，即出惡言：「今者云何長老迦葉在阿難前為比丘尼而說法要？如賣針人，至針師門，求欲賣針，終不可售。今者迦葉，亦復如是，云何乃在阿難前而說於法？」作是語已，嘿然而住。",
+   "T0099-sa1143": "示、教、照、喜已，時偷羅難陀比丘尼不喜悅，說如是惡言：「云何？阿梨摩訶迦葉於阿梨阿難，鞞提訶牟尼前為比丘尼說法？譬如販針兒於針師家賣，阿梨摩訶迦葉亦復如是，於阿梨阿難，鞞提訶牟尼前為諸比丘尼說法。」尊者摩訶迦葉聞偷羅難陀比丘尼心不喜悅，口說惡言。"
+  },
+  "a06": {
+   "sn16.10": "Assosi kho āyasmā mahākassapo thullatissāya bhikkhuniyā imaṁ vācaṁ bhāsamānāya.",
+   "T0100-sa-2.118": "時，摩訶迦葉以淨天耳聞其所言，語長老阿難：「汝見是偷羅難陀比丘尼心不喜樂悅心，出麁言不？」",
+   "T0099-sa1143": "聞已，語尊者阿難：「汝看！"
+  },
+  "a07": {
+   "sn16.10": "Atha kho āyasmā mahākassapo āyasmantaṁ ānandaṁ etadavoca: “kiṁ nu kho, āvuso ānanda, ahaṁ sūcivāṇijako, tvaṁ sūcikāro; udāhu ahaṁ sūcikāro, tvaṁ sūcivāṇijako”ti?",
+   "T0100-sa-2.118": "是時阿難語迦葉言：「彼說何事？」迦葉答言：「彼作是說：『云何迦葉在阿難比提醯子牟尼之前而說法要？以汝同彼針師之子，以我名為賣針之人。』",
+   "T0099-sa1143": "是偷羅難陀比丘尼心不喜悅，口說惡言。云何？阿難！我是販針兒，汝是針師，於汝前賣耶？」尊者阿難語尊者摩訶迦葉：「且止！當忍！此愚癡老嫗，智慧薄少，不曾修習故。」「阿難！汝豈聞世尊、如來、應、等正覺所知見，於大眾中說月譬經，教誡、教授。比丘！當如月譬住，常如新學。如是廣說為說，阿難！如月譬住，常如新學耶？」"
+  },
+  "a08": {
+   "sn16.10": "“Khama, bhante kassapa, bālo mātugāmo”ti.",
+   "T0100-sa-2.118": "」尊者阿難語迦葉言：「止！止！尊者！孾愚少智，不足具責，唯願大德聽其懺悔。」",
+   "T0099-sa1143": "阿難答言：「不也，尊者摩訶迦葉！」「阿難！汝聞世尊、如來、應、等正覺所知所見說言：『比丘！"
+  },
+  "a09": {
+   "sn16.10": "“Āgamehi tvaṁ, āvuso ānanda, mā te saṅgho uttari upaparikkhi. Taṁ kiṁ maññasi, āvuso ānanda, api nu tvaṁ bhagavato sammukhā bhikkhusaṅghe upanīto: ‘ahaṁ, bhikkhave, yāvade ākaṅkhāmi vivicceva kāmehi vivicca akusalehi dhammehi savitakkaṁ savicāraṁ vivekajaṁ pītisukhaṁ paṭhamaṁ jhānaṁ upasampajja viharāmi. Ānandopi, bhikkhave, yāvade ākaṅkhati vivicceva kāmehi vivicca akusalehi dhammehi savitakkaṁ savicāraṁ vivekajaṁ pītisukhaṁ paṭhamaṁ jhānaṁ upasampajja viharatī’”ti? “No hetaṁ, bhante”.",
+   "T0100-sa-2.118": "迦葉即語長老阿難言：「如來、世尊、多陀阿伽度、阿羅呵、三藐三佛陀為教導故，引彼月喻，日漸增長，能具慚愧。離於無慚，忍于罵辱，禁制身心，往返人間，為導於我，為說於汝，同彼月耶？」阿難答言：「如來世雄，實不說我同於彼月。」迦葉復言：「唯佛、世尊、多陀阿伽度、阿羅呵、三藐三佛陀、等正覺知者，說我同彼月初生時，日漸增長，能具慚愧。離於無慚，忍于罵辱，禁制身心，往返諸家。」",
+   "T0099-sa1143": "當如月譬住，常如新學，其唯摩訶迦葉比丘！』？」"
+  },
+  "a10": {
+   "sn16.10": "“Ahaṁ kho, āvuso, bhagavato sammukhā bhikkhusaṅghe upanīto:",
+   "T0100-sa-2.118": "阿難白言：「實爾。」",
+   "T0099-sa1143": "阿難答言：「如是，尊者摩訶迦葉！」"
+  },
+  "a11": {
+   "sn16.10": "‘ahaṁ, bhikkhave, yāvade ākaṅkhāmi vivicceva kāmehi vivicca akusalehi dhammehi savitakkaṁ savicāraṁ vivekajaṁ pītisukhaṁ paṭhamaṁ jhānaṁ upasampajja viharāmi. Kassapopi, bhikkhave, yāvade ākaṅkhati vivicceva kāmehi vivicca akusalehi dhammehi …pe… paṭhamaṁ jhānaṁ upasampajja viharatī’ti …pe….",
+   "T0100-sa-2.118": "尊者迦葉語阿難言：「如來世尊於無量百千大眾之前，稱我名字言：『是大德有慚愧人，智慧深遠，喻似於己。』佛告比丘：『我今離於欲惡不善，有覺有觀，喜樂一心，入於初禪，晝夜常在如是定中。",
+   "T0099-sa1143": "「阿難！汝曾為世尊、如來、應、等正覺所知所見，於無量大眾中請汝來坐耶？又復世尊以同己廣大之德稱歎汝：『阿難離欲、惡不善法，乃至漏盡通。』"
+  },
+  "a12": {
+   "sn16.10": "(Navannaṁ anupubbavihārasamāpattīnaṁ pañcannañca abhiññānaṁ evaṁ vitthāro veditabbo.)",
+   "T0100-sa-2.118": "迦葉比丘亦常離於欲惡不善，有覺有觀，喜樂一心，入於初禪，晝夜恒在如是定中。』",
+   "T0099-sa1143": "稱歎？」答言：「不也，尊者摩訶迦葉！」"
+  },
+  "a13": {
+   "sn16.10": "Taṁ kiṁ maññasi, āvuso ānanda, api nu tvaṁ bhagavato sammukhā bhikkhusaṅghe upanīto:",
+   "T0100-sa-2.118": "」阿難答言：「實爾。",
+   "T0099-sa1143": "「如是，阿難！世尊、如來、應、等正覺於無量大眾中，口自說言：『善來摩訶迦葉！"
+  },
+  "a14": {
+   "sn16.10": "‘ahaṁ, bhikkhave, āsavānaṁ khayā anāsavaṁ cetovimuttiṁ paññāvimuttiṁ diṭṭheva dhamme sayaṁ abhiññā sacchikatvā upasampajja viharāmi. Ānandopi, bhikkhave, āsavānaṁ khayā anāsavaṁ cetovimuttiṁ paññāvimuttiṁ diṭṭheva dhamme sayaṁ abhiññā sacchikatvā upasampajja viharatī’”ti? “No hetaṁ, bhante”. “Ahaṁ kho, āvuso, bhagavato sammukhā bhikkhusaṅghe upanīto: ‘ahaṁ, bhikkhave, āsavānaṁ khayā anāsavaṁ cetovimuttiṁ paññāvimuttiṁ diṭṭheva dhamme sayaṁ abhiññā sacchikatvā upasampajja viharāmi. Kassapopi, bhikkhave, āsavānaṁ khayā anāsavaṁ cetovimuttiṁ paññāvimuttiṁ diṭṭheva dhamme sayaṁ abhiññā sacchikatvā upasampajja viharatī’ti.",
+   "T0100-sa-2.118": "迦葉！」二三四禪，慈悲喜捨及四禪定、三明、六通，亦復如是。",
+   "T0099-sa1143": "請汝半座。』復於大眾中以同己廣大功德，離欲、惡不善法，乃至漏盡通，稱歎摩訶迦葉耶？」阿難答言：「如是，尊者摩訶迦葉！」"
+  },
+  "a15": {
+   "sn16.10": "Sattaratanaṁ vā, āvuso, nāgaṁ aḍḍhaṭṭhamaratanaṁ vā tālapattikāya chādetabbaṁ maññeyya, yo me cha abhiññā chādetabbaṁ maññeyyā”ti."
+  },
+  "a16": {
+   "sn16.10": "Cavittha ca pana thullatissā bhikkhunī brahmacariyamhāti."
+  },
+  "a17": {
+   "sn16.10": "Dasamaṁ.",
+   "T0100-sa-2.118": "爾時，尊者摩訶迦葉於比丘尼大眾之前，作師子吼已，從坐而起，即還所止。",
+   "T0099-sa1143": "時，摩訶迦葉於比丘尼眾中師子吼已。"
+  }
+ }
+}

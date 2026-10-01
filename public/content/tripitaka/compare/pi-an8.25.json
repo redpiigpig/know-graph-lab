@@ -1,0 +1,99 @@
+{
+ "slug": "pi-an8.25",
+ "title": "別譯雜阿含經 （一五四）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "優婆塞具足三寶"
+  },
+  {
+   "id": "a02",
+   "label": "優婆塞具足戒"
+  },
+  {
+   "id": "a03",
+   "label": "優婆塞自利不利他"
+  },
+  {
+   "id": "a04",
+   "label": "優婆塞自利利他"
+  },
+  {
+   "id": "a05",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "an8.25",
+   "lang": "pi",
+   "label": "巴利 AN8.25",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "T0100-sa-2.154",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （一五四）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa929",
+   "lang": "lzh",
+   "label": "雜阿含經 （九二九）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（一五四）"
+  },
+  {
+   "work": "T0099",
+   "node": "（九二九）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "an8.25": "Aṅguttara Nikāya 8.25 3. Gahapativagga Mahānāmasutta",
+   "T0100-sa-2.154": "如是我聞：一時，佛在迦毘羅衛國尼拘陀林。時釋摩男往詣佛所，修敬已畢，在一面坐，而白佛言：「世尊！",
+   "T0099-sa929": "如是我聞：一時，佛住迦毘羅衛國尼拘律園中。爾時，釋氏摩訶男來詣佛所，稽首佛足，退坐一面，白佛言：「世尊！"
+  },
+  "a01": {
+   "an8.25": "Ekaṁ samayaṁ bhagavā sakkesu viharati kapilavatthusmiṁ nigrodhārāme. Atha kho mahānāmo sakko yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho mahānāmo sakko bhagavantaṁ etadavoca: “kittāvatā nu kho, bhante, upāsako hotī”ti? “Yato kho, mahānāma, buddhaṁ saraṇaṁ gato hoti, dhammaṁ saraṇaṁ gato hoti, saṅghaṁ saraṇaṁ gato hoti; ettāvatā kho, mahānāma, upāsako hotī”ti.",
+   "T0100-sa-2.154": "云何名優婆塞具丈夫志？廣說如上。復當云何滿足諸行？」",
+   "T0099-sa929": "云何名優婆塞？」佛告摩訶男：「優婆塞者，在家清白，乃至盡壽，歸依三寶，為優婆塞，證知我！」摩訶男白佛：「世尊！云何為滿足一切優婆塞事？」"
+  },
+  "a02": {
+   "an8.25": "“Kittāvatā pana, bhante, upāsako sīlavā hotī”ti? “Yato kho, mahānāma, upāsako pāṇātipātā paṭivirato hoti, adinnādānā paṭivirato hoti, kāmesumicchācārā paṭivirato hoti, musāvādā paṭivirato hoti, surāmerayamajjapamādaṭṭhānā paṭivirato hoti; ettāvatā kho, mahānāma, upāsako sīlavā hotī”ti.",
+   "T0100-sa-2.154": "佛告摩訶男：「優婆塞雖具足信，未具禁戒，是名有信，不具於戒。欲求具足信戒之者，當勤方便，求使具足，是名信戒滿足優婆塞。」佛復告摩訶男：「優婆塞雖具信戒，捨不具足，為具足故，勤修方便，令得具足。」時，摩訶男白佛言：「世尊！我於今者，具信、戒、捨，具足三支。」佛告摩訶男：「雖具三事，然不數往僧坊精舍，以是因緣，名不具足，應勤方便，數往塔寺。」時，摩訶男言諸優婆塞：「我今應當具足信戒，及以捨心，詣於塔寺。」佛告摩訶男：「若能具足信、戒、捨心，數詣塔寺，親近眾僧，是名具足。」佛告摩訶男：「雖復具足如上四事，若不聽法，名不具足。」摩訶男言：「我能聽法。」佛復告摩訶男：「雖能聽經，若不受持，亦名不具。雖能受持，不解其義，亦名不具。雖解義趣，而未能得如說修行，亦名不具。若能具足信、戒、捨心，數往塔寺聽法，受持、解其義趣，如說修行，是則名為滿足之行。摩訶男雖復具足信、戒、捨心，數詣塔寺，親近眾僧，然猶未能專心聽法，是亦名為行不具足。以斯義故，應當方便專心聽法。雖能聽法，若不受持，亦名不具，是故應當受持正法。雖能受持，若不解義，亦名不具，是故應當解其言趣。雖解義味，若復不能如說修行，亦名不具，是故應當如說修行。若能具足信心，持戒及捨心等，數往僧坊，專心聽法，受持莫忘，解其義趣，信戒捨心，往詣塔寺，聽受經法，受持不忘，解其義趣。若復不能如說修行，是亦名為不具足也。摩訶男！優婆塞以信心故，則能持戒。以持戒故，能具捨心。具捨心故，能往詣僧坊。往詣僧坊故，能專心聽法。專心聽法故，則能受持。能受持故，解其義趣。解其義趣，能如說修行。能如說修行故，勤作方便，能令滿足。」時摩訶男復白佛言：「世尊！",
+   "T0099-sa929": "佛告摩訶男：「若優婆塞有信無戒，是則不具，當勤方便，具足淨戒。具足信、戒而不施者，是則不具；以不具故，精勤方便，修習布施，令其具足滿。信、戒、施滿，不能隨時往詣沙門，聽受正法，是則不具；以不具故，精勤方便，隨時往詣塔寺，見諸沙門，不一心聽受正法，是不具足。信、戒、施、聞修習滿足，聞已不持，是不具足；以不具足故，精勤方便，隨時往詣沙門，專心聽法，聞則能持。不能觀察諸法深義，是不具足；不具足故，精勤方便，信、戒、施、聞，聞則能持，持已，觀察甚深妙義，而不隨順知法次法向，是則不具，以不具故，精勤方便，信、戒、施、聞，受持觀察，了達深義，隨順行法次法向。摩訶男！是名滿足一切種優婆塞事。」摩訶男白佛：「世尊！"
+  },
+  "a03": {
+   "an8.25": "“Kittāvatā pana, bhante, upāsako attahitāya paṭipanno hoti, no parahitāyā”ti? “Yato kho, mahānāma, upāsako attanāva saddhāsampanno hoti, no paraṁ saddhāsampadāya samādapeti; attanāva sīlasampanno hoti, no paraṁ sīlasampadāya samādapeti; attanāva cāgasampanno hoti, no paraṁ cāgasampadāya samādapeti; attanāva bhikkhūnaṁ dassanakāmo hoti, no paraṁ bhikkhūnaṁ dassane samādapeti; attanāva saddhammaṁ sotukāmo hoti, no paraṁ saddhammassavane samādapeti; attanāva sutānaṁ dhammānaṁ dhāraṇajātiko hoti, no paraṁ dhammadhāraṇāya samādapeti; attanāva sutānaṁ dhammānaṁ atthūpaparikkhitā hoti, no paraṁ atthūpaparikkhāya samādapeti; attanāva atthamaññāya dhammamaññāya dhammānudhammappaṭipanno hoti, no paraṁ dhammānudhammappaṭipattiyā samādapeti. Ettāvatā kho, mahānāma, upāsako attahitāya paṭipanno hoti, no parahitāyā”ti.",
+   "T0100-sa-2.154": "云何優婆塞具足幾支，自利未利於他？」佛告摩訶男：「具足八支能自利益，未利於他。何等為八？優婆塞自己有信，不能教他。自持淨戒，不能教人令持禁戒。自修於捨，不能教人令行布施。自往詣塔寺，親近比丘，不能教人往詣塔寺，親近比丘。自能聽法，不能教人令聽正法。自能受持，不能教人受持。自能解義，不能教人令解其義。自能如說修行，不教他人如說修行。是名具足八支，唯能自利不能利他。」",
+   "T0099-sa929": "云何名優婆塞能自安慰，不安慰他？」佛告摩訶男：「若優婆塞能自立戒，不能令他立於正戒；自持淨戒，不能令他持戒具足；自行布施，不能以施建立於他；自詣塔寺見諸沙門，不能勸他令詣塔寺往見沙門；自專聽法，不能勸人樂聽正法；聞法自持，不能令他受持正法；自能觀察甚深妙義，不能勸人令觀深義；自知深法能隨順行法次法向，不能勸人令隨順行法次法向。摩訶男！如是八法成就者，是名優婆塞能自安慰，不安慰他。」摩訶男白佛：「世尊！"
+  },
+  "a04": {
+   "an8.25": "“Kittāvatā pana, bhante, upāsako attahitāya ca paṭipanno hoti parahitāya cā”ti? “Yato kho, mahānāma, upāsako attanā ca saddhāsampanno hoti, parañca saddhāsampadāya samādapeti; attanā ca sīlasampanno hoti, parañca sīlasampadāya samādapeti; attanā ca cāgasampanno hoti, parañca cāgasampadāya samādapeti; attanā ca bhikkhūnaṁ dassanakāmo hoti, parañca bhikkhūnaṁ dassane samādapeti; attanā ca saddhammaṁ sotukāmo hoti, parañca saddhammassavane samādapeti; attanā ca sutānaṁ dhammānaṁ dhāraṇajātiko hoti, parañca dhammadhāraṇāya samādapeti; attanā ca sutānaṁ dhammānaṁ atthūpaparikkhitā hoti, parañca atthūpaparikkhāya samādapeti, attanā ca atthamaññāya dhammamaññāya dhammānudhammappaṭipanno hoti, parañca dhammānudhammappaṭipattiyā samādapeti. Ettāvatā kho, mahānāma, upāsako attahitāya ca paṭipanno hoti parahitāya cā”ti.",
+   "T0100-sa-2.154": "時摩訶男復白佛言：「具足幾法，能自利益，亦利於他？」佛告之曰：「若能具足十六支者，如是之人，能自他利。自生信心，教人令得。自行受持，教人受持。自行捨心，亦復教人令行捨心。身自往詣僧坊塔寺，亦復教人往詣僧坊，親近比丘。自能聽法，亦復教人令聽正法。自能受持，亦復教人令受持法。自解義趣，亦復教人解其義味。自如說行，亦復教人如說修行。若能具足十六支，此則名為自利利他。如斯之人，若在剎利眾，若婆羅門眾，若居士眾，若沙門眾，隨所至處，能為此眾作大照明，猶如日光，除諸闇冥，當知是人，甚為希有。」佛說是已，釋摩男禮佛而退。",
+   "T0099-sa929": "優婆塞成就幾法自安安他？」佛告摩訶男：「若優婆塞成就十六法者，是名優婆塞自安安他。何等為十六？摩訶男！若優婆塞具足正信，建立他人；自持淨戒，亦以淨戒建立他人；自行布施，教人行施；自詣塔寺見諸沙門，亦教人往見諸沙門；自專聽法，亦教人聽；自受持法，教人受持；自觀察義，教人觀察；自知深義，隨順修行法次法向，亦復教人解了深義，隨順修行法次法向。摩訶男！如是十六法成就者，是名優婆塞能自安慰，亦安慰他人。「摩訶男！若優婆塞成就如是十六法者，彼諸大眾悉詣其所，謂婆羅門眾、剎利眾、長者眾、沙門眾，於諸眾中威德顯曜。譬如日輪，初、中及後，光明顯照。如是，優婆塞十六法成就者，初、中及後，威德顯照。如是，摩訶男！若優婆塞十六法成就者，世間難得。」"
+  },
+  "a05": {
+   "an8.25": "Pañcamaṁ.",
+   "T0100-sa-2.154": "時諸比丘聞佛所說，歡喜奉行。",
+   "T0099-sa929": "佛說此經已，釋氏摩訶男聞佛所說，歡喜隨喜，即從坐起，作禮而去。"
+  }
+ }
+}

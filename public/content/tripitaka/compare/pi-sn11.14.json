@@ -1,0 +1,109 @@
+{
+ "slug": "pi-sn11.14",
+ "title": "別譯雜阿含經 （五一）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "貧人具五德生天"
+  },
+  {
+   "id": "a02",
+   "label": "天眾稱讚其德"
+  },
+  {
+   "id": "a03",
+   "label": "帝釋制止譏議"
+  },
+  {
+   "id": "a04",
+   "label": "帝釋說偈"
+  },
+  {
+   "id": "a05",
+   "label": "結分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn11.14",
+   "lang": "pi",
+   "label": "巴利 SN11.14",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn11.14",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN11.14",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.51",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （五一）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa1223",
+   "lang": "lzh",
+   "label": "雜阿含經 （一二二三）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（五一）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一二二三）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn11.14": "Saṁyutta Nikāya 11.14 2. Dutiyavagga Daliddasutta",
+   "nan-sn11.14": "〔一四〕第四　貧人"
+  },
+  "a01": {
+   "sn11.14": "Ekaṁ samayaṁ bhagavā rājagahe viharati veḷuvane kalandakanivāpe. Tatra kho bhagavā bhikkhū āmantesi: “bhikkhavo”ti. “Bhadante”ti te bhikkhū bhagavato paccassosuṁ.",
+   "nan-sn11.14": "爾時，世尊住舍衛城竹林栗鼠養餌所。",
+   "T0100-sa-2.51": "如是我聞：一時，佛在王舍城迦蘭陀竹林。爾時，王舍城中有一貧人，極為窮困，甚可憐愍，於佛法中，生清淨信，能淨持戒，少讀誦經，亦能小施。",
+   "T0099-sa1223": "如是我聞：一時，佛住王舍城迦蘭陀竹園。"
+  },
+  "a02": {
+   "sn11.14": "Bhagavā etadavoca: “Bhūtapubbaṁ, bhikkhave, aññataro puriso imasmiṁyeva rājagahe manussadaliddo ahosi manussakapaṇo manussavarāko. So tathāgatappavedite dhammavinaye saddhaṁ samādiyi, sīlaṁ samādiyi, sutaṁ samādiyi, cāgaṁ samādiyi, paññaṁ samādiyi. So tathāgatappavedite dhammavinaye saddhaṁ samādiyitvā sīlaṁ samādiyitvā sutaṁ samādiyitvā cāgaṁ samādiyitvā paññaṁ samādiyitvā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajji devānaṁ tāvatiṁsānaṁ sahabyataṁ. So aññe deve atirocati vaṇṇena ceva yasasā ca.",
+   "nan-sn11.14": "其時，世尊言諸比丘：「諸比丘！」",
+   "T0100-sa-2.51": "有此四事因緣果報，身壞命終，生忉利天勝妙善處。此新生天有三事勝：一色貌勝，二名稱勝，三壽命勝。",
+   "T0099-sa1223": "時，王舍城中有一士夫，貧窮辛苦，而住佛、法、僧，受持禁戒，多聞廣學，力行惠施，正見成就。彼身壞命終，得生天上，生三十三天，有三事勝於餘三十三天。何等為三？一者天壽，二者天色，三者天名稱。諸三十三天見是天子三事特勝，天壽、天色、天名稱勝。"
+  },
+  "a03": {
+   "sn11.14": "Tatra sudaṁ, bhikkhave, devā tāvatiṁsā ujjhāyanti khiyyanti vipācenti: ‘acchariyaṁ vata bho, abbhutaṁ vata bho. Ayañhi devaputto pubbe manussabhūto samāno manussadaliddo ahosi manussakapaṇo manussavarāko; so kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapanno devānaṁ tāvatiṁsānaṁ sahabyataṁ. So aññe deve atirocati vaṇṇena ceva yasasā cā’ti.",
+   "nan-sn11.14": "彼等比丘奉答世尊：「唯然，世尊！」",
+   "T0100-sa-2.51": "諸天見已，皆共恭敬，往帝釋所，白帝釋言：「有新生天，有三事勝於餘諸天。」",
+   "T0099-sa1223": "餘諸天見已，往詣天帝釋所，作如是言：「憍尸迦當知，有一天子始生此天，於先諸天三事特勝，天壽、天色及天名稱。」"
+  },
+  "a04": {
+   "sn11.14": "Atha kho, bhikkhave, sakko devānamindo deve tāvatiṁse āmantesi: ‘mā kho tumhe, mārisā, etassa devaputtassa ujjhāyittha. Eso kho, mārisā, devaputto pubbe manussabhūto samāno tathāgatappavedite dhammavinaye saddhaṁ samādiyi, sīlaṁ samādiyi, sutaṁ samādiyi, cāgaṁ samādiyi, paññaṁ samādiyi. So tathāgatappavedite dhammavinaye saddhaṁ samādiyitvā sīlaṁ samādiyitvā sutaṁ samādiyitvā cāgaṁ samādiyitvā paññaṁ samādiyitvā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapanno devānaṁ tāvatiṁsānaṁ sahabyataṁ. So aññe deve atirocati vaṇṇena ceva yasasā cā’ti.",
+   "nan-sn11.14": "世尊以此宣說：",
+   "T0100-sa-2.51": "帝釋言：「我先曾見，彼新生天，本為人時，貧窮困苦，極為寒悴，直以信心，向於三寶，能淨持戒，少多修施，今得生此忉利天上。」爾時，帝釋即說偈言：「若於三寶生淨信，其心堅固不動轉，\n持所受戒不毀犯，當知此人不名貧。",
+   "T0099-sa1223": "時，天帝釋告彼天子：「諸仁者！我見此人於王舍城作一士夫，貧窮辛苦，於如來法、律得信向心，乃至正見成就。身壞命終，來生此天，於諸三十三天三事特勝，天壽、天色及天名稱。」時，天帝釋即說偈言：「正信於如來，決定不傾動，\n受持真實戒，聖戒無厭者。\n於佛心清淨，成就於正見，\n當知非貧苦，不空而自活。"
+  },
+  "a05": {
+   "sn11.14": "Atha kho, bhikkhave, sakko devānamindo deve tāvatiṁse anunayamāno tāyaṁ velāyaṁ imā gāthāyo abhāsi: ‘Yassa saddhā tathāgate, acalā suppatiṭṭhitā; Sīlañca yassa kalyāṇaṁ, ariyakantaṁ pasaṁsitaṁ. Saṅghe pasādo yassatthi, ujubhūtañca dassanaṁ; Adaliddoti taṁ āhu, amoghaṁ tassa jīvitaṁ. Tasmā saddhañca sīlañca, pasādaṁ dhammadassanaṁ; Anuyuñjetha medhāvī, saraṁ buddhāna sāsanan’”ti.",
+   "nan-sn11.14": "「諸比丘！此王舍城有可憐之貧困者窮人。彼於如來所說之法與律，執持信，執持戒，執持聞，執持捨，執持慧。彼如是於如來所說之法與律，執持信，執持戒，執持聞，執持捨，執持慧，死後生忉利天為伴之善趣、天界。彼之容貌榮光，超越其他諸天。諸比丘！因此忉利之諸天謂譏嫌、愚癡，而作細言：『實希有，實未曾有。此天子以前為人時，可憐貧困窮苦，死後生忉利天為伴之善趣、天界、其容貌榮光，超越其他諸天。』諸比丘！時，天帝釋呼忉利諸天：『友！汝等勿譏嫌此天子。此天子以前為人時，於如來所說之法與律，執持信，執持戒，執持聞，執持捨，執持慧。彼依如來所說之法與律，執持信，執持戒、執持聞，執持捨，執持慧，死後生忉利天為伴之善趣、天界，其容貌與榮光，超越其他之諸天。』諸比丘！時天帝釋寬恕忉利諸天，此時唱彼等偈：如來於不動有堅實信仰\n愛樂於聖者其戒甚善美\n僧伽有信樂其見若正直\n稱彼不貧窮其人活不虛\n然憶念佛教賢者應隨從\n信戒法知見」",
+   "T0100-sa-2.51": "名為智慧壽命人，以敬無上三寶故，\n得生天上受勝樂，是故應當作斯學。」爾時，諸天聞此偈已，歡喜信受，作禮還宮。",
+   "T0099-sa1223": "故於佛法僧，當生清淨信，\n智慧力增明，思念佛正教。」佛說此經已，諸比丘聞佛所說，歡喜奉行。"
+  }
+ }
+}

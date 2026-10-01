@@ -1,0 +1,129 @@
+{
+ "slug": "pi-an6.52",
+ "title": "增壹阿含經 （八）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "剎利問答"
+  },
+  {
+   "id": "a02",
+   "label": "梵志問答"
+  },
+  {
+   "id": "a03",
+   "label": "居士問答"
+  },
+  {
+   "id": "a04",
+   "label": "婦人問答"
+  },
+  {
+   "id": "a05",
+   "label": "盜賊問答"
+  },
+  {
+   "id": "a06",
+   "label": "沙門問答"
+  },
+  {
+   "id": "a07",
+   "label": "讚歎與結論"
+  },
+  {
+   "id": "a08",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "an6.52",
+   "lang": "pi",
+   "label": "巴利 AN6.52",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "T0125-ea37.8",
+   "lang": "lzh",
+   "label": "增壹阿含經 （八）",
+   "who": "東晉 瞿曇僧伽提婆譯",
+   "reorder": true
+  },
+  {
+   "id": "T0026-ma149",
+   "lang": "lzh",
+   "label": "中阿含經 （一四九）梵志品何欲經第八（第三念誦）",
+   "who": "東晉 瞿曇僧伽提婆譯"
+  }
+ ],
+ "works": [
+  "T0026",
+  "T0125"
+ ],
+ "anchors": [
+  {
+   "work": "T0125",
+   "node": "（八）",
+   "uid": "T02n0125_p0714b13"
+  },
+  {
+   "work": "T0026",
+   "node": "（一四九）梵志品何欲經第八（第三念誦）",
+   "uid": "T01n0026_p0660c01"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "an6.52": "Aṅguttara Nikāya 6.52 5. Dhammikavagga Khattiyasutta",
+   "T0125-ea37.8": "聞如是：一時，佛在舍衛國祇樹給孤獨園。爾時，生漏梵志往至世尊所，共相問訊，在一面坐。",
+   "T0026-ma149": "我聞如是：一時，佛遊舍衛國，在勝林給孤獨園。爾時，生聞梵志中後彷徉，往詣佛所，共相問訊，却坐一面，白曰：「瞿曇！欲有所問，聽乃敢陳。」世尊告曰：「恣汝所問。」"
+  },
+  "a01": {
+   "an6.52": "Atha kho jāṇussoṇi brāhmaṇo yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavatā saddhiṁ sammodi. Sammodanīyaṁ kathaṁ sāraṇīyaṁ vītisāretvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho jāṇussoṇi brāhmaṇo bhagavantaṁ etadavoca: “Khattiyā, bho gotama, kiṁadhippāyā, kiṁupavicārā, kiṁadhiṭṭhānā, kiṁabhinivesā, kiṁpariyosānā”ti? “Khattiyā kho, brāhmaṇa, bhogādhippāyā paññūpavicārā balādhiṭṭhānā pathavībhinivesā issariyapariyosānā”ti.",
+   "T0125-ea37.8": "爾時，生漏梵志白世尊言：「瞿曇！剎利今日意欲何求？有何行業？為著何教？為究竟何事？婆羅門意欲何求？有何行業？為著何教？究竟何事？國王今日意欲何求？有何行業？為著何教？為究竟何事？盜賊今日意欲何求？有何行業？為著何教？為究竟何事？女人今日意欲何求？有何行業？為著何教？為究竟何事？」爾時，世尊告梵志曰：「剎利種者，常好鬪訟，多諸技術，好喜作務，所要究竟終不中休。」",
+   "T0026-ma149": "梵志即便問曰：「瞿曇！剎利何欲、何行、何立、何依、何訖耶？」世尊答曰：「剎利者，欲得財物，行於智慧，所立以刀，依於人民，以自在為訖。」"
+  },
+  "a02": {
+   "an6.52": "“Brāhmaṇā pana, bho gotama, kiṁadhippāyā, kiṁupavicārā, kiṁadhiṭṭhānā, kiṁabhinivesā, kiṁpariyosānā”ti? “Brāhmaṇā kho, brāhmaṇa, bhogādhippāyā paññūpavicārā mantādhiṭṭhānā yaññābhinivesā brahmalokapariyosānā”ti.",
+   "T0125-ea37.8": "梵志問曰：「梵志意何所求？」世尊告曰：「梵志意好呪術，要作居家，樂閑靜之處，意在梵天。」",
+   "T0026-ma149": "生聞梵志問曰：「瞿曇！"
+  },
+  "a03": {
+   "an6.52": "“Gahapatikā pana, bho gotama, kiṁadhippāyā, kiṁupavicārā, kiṁadhiṭṭhānā, kiṁabhinivesā, kiṁpariyosānā”ti? “Gahapatikā kho, brāhmaṇa, bhogādhippāyā paññūpavicārā sippādhiṭṭhānā kammantābhinivesā niṭṭhitakammantapariyosānā”ti.",
+   "T0125-ea37.8": "又問曰：「國王意何所求？」世尊告曰：「梵志當知，王意所欲得國政，意在兵仗，貪著財寶。」",
+   "T0026-ma149": "居士何欲、何行、何立、何依、何訖耶？」世尊答曰：「居士者，欲得財物，行於智慧，立以技術，依於作業，以作業竟為訖。」生聞梵志問曰：「瞿曇！"
+  },
+  "a04": {
+   "an6.52": "“Itthī pana, bho gotama, kiṁadhippāyā, kiṁupavicārā, kiṁadhiṭṭhānā, kiṁabhinivesā, kiṁpariyosānā”ti? “Itthī kho, brāhmaṇa, purisādhippāyā alaṅkārūpavicārā puttādhiṭṭhānā asapattībhinivesā issariyapariyosānā”ti.",
+   "T0125-ea37.8": "「女人意何所求？」世尊告曰：「女人意在男子，貪著財寶，心繫男女，心欲自由。」",
+   "T0026-ma149": "婦人何欲、何行、何立、何依、何訖耶？」世尊答曰：「婦人者，欲得男子，行於嚴飾，立以兒子，依於無對，以自在為訖。」生聞梵志問曰：「瞿曇！"
+  },
+  "a05": {
+   "an6.52": "“Corā pana, bho gotama, kiṁadhippāyā, kiṁupavicārā, kiṁadhiṭṭhānā, kiṁabhinivesā, kiṁpariyosānā”ti? “Corā kho, brāhmaṇa, ādānādhippāyā gahanūpavicārā satthādhiṭṭhānā andhakārābhinivesā adassanapariyosānā”ti.",
+   "T0125-ea37.8": "「盜賊意何所求？」世尊告曰：「賊意盜竊，心在姦邪，欲使人類不知所作。」",
+   "T0026-ma149": "偷劫何欲、何行、何立、何依、何訖耶？」世尊答曰：「偷劫者，欲不與取，行隱藏處，所立以刀，依於闇冥，以不見為訖。」生聞梵志問曰：「瞿曇！梵志何欲、何行、何立、何依、何訖耶？」世尊答曰：「梵志者，欲得財物，行於智慧，立以經書，依於齋戒，以梵天為訖。」生聞梵志問曰：「瞿曇！"
+  },
+  "a06": {
+   "an6.52": "“Samaṇā pana, bho gotama, kiṁadhippāyā, kiṁupavicārā, kiṁadhiṭṭhānā, kiṁabhinivesā, kiṁpariyosānā”ti? “Samaṇā kho, brāhmaṇa, khantisoraccādhippāyā paññūpavicārā sīlādhiṭṭhānā ākiñcaññābhinivesā nibbānapariyosānā”ti.",
+   "T0125-ea37.8": "世尊告曰：「戒德具足，心遊道法，意在四諦，欲至涅槃。此是比丘之所求也。」是時，生漏梵志白世尊言：「如是。世尊！比丘所行意不可移轉，其義實爾，瞿曇！涅槃者極為快樂。如來所說乃為過多，猶如盲者得視，聾者得聽，在闇者見明，今日如來所說亦復如是，而無有異。我今國事猥多，欲還所止。」世尊告曰：「宜知是時。」是時，生漏梵志即從坐起，繞佛三匝，便退而去。",
+   "T0026-ma149": "沙門何欲、何行、何立、何依、何訖耶？」世尊答曰：「沙門者，欲得真諦，行於智慧，所立以戒，依於無處，以涅槃為訖。」"
+  },
+  "a07": {
+   "an6.52": "“Acchariyaṁ, bho gotama, abbhutaṁ, bho gotama. Khattiyānampi bhavaṁ gotamo jānāti adhippāyañca upavicārañca adhiṭṭhānañca abhinivesañca pariyosānañca. Brāhmaṇānampi bhavaṁ gotamo jānāti …pe… gahapatīnampi bhavaṁ gotamo jānāti … itthīnampi bhavaṁ gotamo jānāti … corānampi bhavaṁ gotamo jānāti … samaṇānampi bhavaṁ gotamo jānāti adhippāyañca upavicārañca adhiṭṭhānañca abhinivesañca pariyosānañca. Abhikkantaṁ, bho gotama …pe… upāsakaṁ maṁ bhavaṁ gotamo dhāretu ajjatagge pāṇupetaṁ saraṇaṁ gatan”ti.",
+   "T0125-ea37.8": "爾時，梵志白世尊言：「甚奇！甚特！盡知爾許之變，如實不虛。今日比丘意何所求？」",
+   "T0026-ma149": "生聞梵志白曰：「世尊！我已知。善逝！我已解。世尊！我今自歸於佛、法及比丘眾，唯願世尊受我為優婆塞，從今日始，終身自歸，乃至命盡。」"
+  },
+  "a08": {
+   "an6.52": "Dasamaṁ.",
+   "T0125-ea37.8": "爾時，生漏梵志聞佛所說，歡喜奉行。",
+   "T0026-ma149": "佛說如是。生聞梵志聞佛所說，歡喜奉行。何欲經第八竟（四百二十二字）"
+  }
+ }
+}

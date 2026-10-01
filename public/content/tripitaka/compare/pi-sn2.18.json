@@ -1,0 +1,140 @@
+{
+ "slug": "pi-sn2.18",
+ "title": "別譯雜阿含經 （一六九）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "天子現身問候"
+  },
+  {
+   "id": "a02",
+   "label": "問答：喜與悲"
+  },
+  {
+   "id": "a03",
+   "label": "天子質疑：不喜不悲之狀"
+  },
+  {
+   "id": "a04",
+   "label": "世尊自證：離喜離悲"
+  },
+  {
+   "id": "a05",
+   "label": "天子再問：離喜離悲之因"
+  },
+  {
+   "id": "a06",
+   "label": "世尊答：喜與惱相生"
+  },
+  {
+   "id": "a07",
+   "label": "天子讚歎：離喜離惱之聖者"
+  },
+  {
+   "id": "a08",
+   "label": "流通分：天子歡喜而去"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn2.18",
+   "lang": "pi",
+   "label": "巴利 SN2.18",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn2.18",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN2.18",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.169",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （一六九）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa585",
+   "lang": "lzh",
+   "label": "雜阿含經 （五八五）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（一六九）"
+  },
+  {
+   "work": "T0099",
+   "node": "（五八五）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn2.18": "Saṁyutta Nikāya 2.18 2. Anāthapiṇḍikavagga Kakudhasutta Evaṁ me sutaṁ—",
+   "nan-sn2.18": "〔一八〕第八　覺陀",
+   "T0100-sa-2.169": "如是我聞：一時，佛在釋翅鳩羅脾大斯聚落。爾時，世尊剃除鬚髮，未久之間，晨朝早起，正身端坐，以衣覆頭。",
+   "T0099-sa585": "如是我聞：一時，佛住釋氏優羅提那塔所。爾時，世尊新剃鬚髮，於後夜時結加趺坐，直身正意，繫念在前，以衣覆頭。"
+  },
+  "a01": {
+   "sn2.18": "ekaṁ samayaṁ bhagavā sākete viharati añjanavane migadāye.",
+   "nan-sn2.18": "如是我聞，爾時，世尊，住沙計多安闍那林之鹿野苑。",
+   "T0100-sa-2.169": "時彼鳩羅脾大斯聚落之中，有一天神來至佛所，而問佛言：「汝憂愁耶？」",
+   "T0099-sa585": "時，優羅提那塔邊有天神住，放身光明，遍照精舍，白佛言：「沙門憂耶？」"
+  },
+  "a02": {
+   "sn2.18": "Atha kho kakudho devaputto abhikkantāya rattiyā abhikkantavaṇṇo kevalakappaṁ añjanavanaṁ obhāsetvā yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ aṭṭhāsi. Ekamantaṁ ṭhito kho kakudho devaputto bhagavantaṁ etadavoca: “nandasi, samaṇā”ti? “Kiṁ laddhā, āvuso”ti? “Tena hi, samaṇa, socasī”ti? “Kiṁ jīyittha, āvuso”ti?",
+   "nan-sn2.18": "時，覺陀天子於黎明，其勝光徧照安闍那林，往詣世尊處。詣已，禮敬世尊，立於一面。",
+   "T0100-sa-2.169": "佛言：「我無所失，何故憂愁？」天神復言：「汝歡喜耶？」佛答之曰：「我無所得，何故歡喜？」",
+   "T0099-sa585": "佛告天神：「何所忘失？」天神復問：「沙門為歡喜耶？」佛告天神：「為何所得？」"
+  },
+  "a03": {
+   "sn2.18": "“Tena hi, samaṇa, neva nandasi na ca socasī”ti? “Evamāvuso”ti. “Kacci tvaṁ anagho bhikkhu, kacci nandī na vijjati; Kacci taṁ ekamāsīnaṁ, aratī nābhikīratī”ti.",
+   "nan-sn2.18": "立於一面之覺陀天子，向世尊言此曰：「比丘！汝歡喜否？」〔世尊曰〕：「友！得到何耶？」天子曰：「比丘，然而悲否？」〔世尊曰：〕「友！失落何耶？」〔天子曰：〕「比丘！然而汝亦不喜，亦不悲乎？」〔世尊曰：〕「友！唯然！」",
+   "T0100-sa-2.169": "復言：「沙門汝不憂愁不歡喜耶？」",
+   "T0099-sa585": "天神復問：「沙門不憂不喜耶？」"
+  },
+  "a04": {
+   "sn2.18": "“Anagho ve ahaṁ yakkha, atho nandī na vijjati; Atho maṁ ekamāsīnaṁ, aratī nābhikīratī”ti.",
+   "nan-sn2.18": "〔天子：〕比丘汝不悲汝亦不歡喜\n唯獨寂寞坐不足思不著",
+   "T0100-sa-2.169": "佛言：「誠如所言。」天即說偈言：「比丘汝云何，得無煩惱耶？\n汝無少歡喜，獨坐於林野，\n是處難忍樂。而汝於今者，\n不為不忍樂，之所覆蔽障。」爾時，世尊以偈答曰：「我都無煩惱，安住得解脫。\n亦無有歡喜，不樂所不亂，\n天神應當知，是故能獨住。」",
+   "T0099-sa585": "佛告天神：「如是，如是。」爾時，天神即說偈言：「為離諸煩惱，為無有歡喜，\n云何獨一住？非不樂所壞。」爾時，世尊說偈答言：「我無惱解脫，亦無有歡喜，\n不樂不能壞，故獨一而住。」"
+  },
+  "a05": {
+   "sn2.18": "“Kathaṁ tvaṁ anagho bhikkhu, kathaṁ nandī na vijjati; Kathaṁ taṁ ekamāsīnaṁ, aratī nābhikīratī”ti.",
+   "nan-sn2.18": "〔世尊：〕夜叉我不悲亦無有歡喜\n唯獨寂靜坐無著思不足",
+   "T0100-sa-2.169": "天神復以偈問言：「比丘汝今者，何故無煩惱？\n云何無歡喜？而獨住林野，\n不為彼不樂，之所覆蔽障？」",
+   "T0099-sa585": "時，彼天神復說偈言：「云何得無惱？"
+  },
+  "a06": {
+   "sn2.18": "“Aghajātassa ve nandī, nandījātassa ve aghaṁ; Anandī anagho bhikkhu, evaṁ jānāhi āvuso”ti.",
+   "nan-sn2.18": "〔天子：〕比丘何不悲如何亦不喜\n唯獨寂寞坐不足思不著",
+   "T0100-sa-2.169": "爾時，世尊以偈答曰：「歡喜即煩惱，煩惱即歡喜。\n我無喜煩惱，天神應當知。」",
+   "T0099-sa585": "云何無歡喜？\n云何獨一住？非不樂所壞。」爾時世尊說偈答言：「煩惱生歡喜，喜亦生煩惱，\n無惱亦無喜，天神當護持。」"
+  },
+  "a07": {
+   "sn2.18": "“Cirassaṁ vata passāmi, brāhmaṇaṁ parinibbutaṁ; Anandiṁ anaghaṁ bhikkhuṁ,",
+   "nan-sn2.18": "〔世尊：〕有悲者有喜有喜者有悲\n比丘無喜悲如是友當知〔天子：〕無喜亦無悲超愛世比丘\n涅槃婆羅門實久我所見",
+   "T0100-sa-2.169": "天神復說偈言：「比丘快善哉！而無諸煩惱，\n亦無有歡喜，無歡喜善哉！",
+   "T0099-sa585": "時，彼天神復說偈言：「善哉無煩惱，善哉無歡喜，\n善哉獨一住，不為不喜壞。"
+  },
+  "a08": {
+   "sn2.18": "tiṇṇaṁ loke visattikan”ti.",
+   "T0100-sa-2.169": "善哉處閑獨！不樂所不亂。」天神復以偈讚言：「往昔已曾見，婆羅門涅槃，\n嫌怖久捨離，能度世間愛。」爾時，此天說此偈已，歡喜還宮。",
+   "T0099-sa585": "久見婆羅門，逮得般涅槃，\n一切怖已過，永超世恩愛。」時，彼天神聞佛所說，歡喜隨喜，稽首佛足，即沒不現。"
+  }
+ }
+}

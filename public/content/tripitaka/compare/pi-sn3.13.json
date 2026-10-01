@@ -1,0 +1,122 @@
+{
+ "slug": "pi-sn3.13",
+ "title": "別譯雜阿含經 （七三）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。複核標記存疑 1 段：義段5的別譯雜阿含經（七三）與雜阿含經（一一五〇）內容偏離，前者講王減食身體變小，後者卻轉為欝多羅受偈並引用佛偈，實屬對錯位置",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "王食過度求佛"
+  },
+  {
+   "id": "a02",
+   "label": "佛說偈勸節食"
+  },
+  {
+   "id": "a03",
+   "label": "王命善見誦偈"
+  },
+  {
+   "id": "a04",
+   "label": "善見受命誦偈"
+  },
+  {
+   "id": "a05",
+   "label": "王漸節食身體變好",
+   "doubt": true
+  },
+  {
+   "id": "a06",
+   "label": "王歡喜讚佛二利"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn3.13",
+   "lang": "pi",
+   "label": "巴利 SN3.13",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn3.13",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN3.13",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.73",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （七三）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa1150",
+   "lang": "lzh",
+   "label": "雜阿含經 （一一五〇）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（七三）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一一五〇）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn3.13": "Saṁyutta Nikāya 3.13 2. Dutiyavagga Doṇapākasutta",
+   "nan-sn3.13": "〔一三〕第三　大食〔爾時，世尊〕在舍衛城……。其時拘薩羅國之波斯匿王常食一陀那之飯食。",
+   "T0100-sa-2.73": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。",
+   "T0099-sa1150": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。"
+  },
+  "a01": {
+   "sn3.13": "Sāvatthinidānaṁ. Tena kho pana samayena rājā pasenadi kosalo doṇapākakuraṁ bhuñjati. Atha kho rājā pasenadi kosalo bhuttāvī mahassāsī yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdi.",
+   "nan-sn3.13": "時，拘薩羅之波斯匿王食後，就大息而詣世尊〔處〕。詣已，禮敬世尊，坐於其傍。",
+   "T0100-sa-2.73": "爾時，波斯匿王身體肥大，喘息極麁，往詣佛所，頂禮佛足，在一面坐。佛告王言：「王今身體極為重大，至於動轉，出入息時，極為大難。」王白佛言：「如是，如是。如世尊教，今患此身，以為慚愧，用自譏呵。」",
+   "T0099-sa1150": "時，波斯匿王其體肥大，舉體流汗，來詣佛所，稽首佛足，退坐一面，氣息長喘。爾時，世尊告波斯匿王：「大王身體極肥盛。」大王白佛言：「如是，世尊！患身肥大，常以此身極肥大故，慚恥厭苦。」"
+  },
+  "a02": {
+   "sn3.13": "Atha kho bhagavā rājānaṁ pasenadiṁ kosalaṁ bhuttāviṁ mahassāsiṁ viditvā tāyaṁ velāyaṁ imaṁ gāthaṁ abhāsi: “Manujassa sadā satīmato, Mattaṁ jānato laddhabhojane; Tanukassa bhavanti vedanā, Saṇikaṁ jīrati āyupālayan”ti.",
+   "nan-sn3.13": "時，世尊知拘薩羅國波斯匿王飯食已訖，曾作大息，其時而唱此偈曰：以常持正念取食知量人\n則少有其苦遲老得壽長",
+   "T0100-sa-2.73": "爾時，世尊即說偈言：「夫人常當自憶念，若得飲食應知量，\n身體輕便受苦少，正得消化護命長。」",
+   "T0099-sa1150": "爾時，世尊即說偈言：「人當自繫念，每食知節量，\n是則諸受薄，安消而保壽。」"
+  },
+  "a03": {
+   "sn3.13": "Tena kho pana samayena sudassano māṇavo rañño pasenadissa kosalassa piṭṭhito ṭhito hoti. Atha kho rājā pasenadi kosalo sudassanaṁ māṇavaṁ āmantesi: “ehi tvaṁ, tāta sudassana, bhagavato santike imaṁ gāthaṁ pariyāpuṇitvā mama bhattābhihāre bhattābhihāre bhāsa. Ahañca te devasikaṁ kahāpaṇasataṁ kahāpaṇasataṁ niccaṁ bhikkhaṁ pavattayissāmī”ti.",
+   "nan-sn3.13": "爾時，善見摩納立於拘薩羅國波斯匿王之後。時，拘薩羅國波斯匿王呼善見摩納：「善見！汝在我食時，於世尊前暗唱此偈！我常日日施百錢與汝。」",
+   "T0100-sa-2.73": "爾時，烏帶摩納在於眾中。王告摩納言：「汝能受持此偈，於我食時，常能為我誦此偈不？若能誦者，我當賞汝日百金錢，我之所食常當聽汝先我前食。」",
+   "T0099-sa1150": "時，有一年少，名欝多羅，於會中坐。時，波斯匿王告欝多羅：「汝能從世尊受向所說偈，每至食時，為我誦不？若能爾者，賜金錢十萬，亦常與食。」"
+  },
+  "a04": {
+   "sn3.13": "“Evaṁ, devā”ti kho sudassano māṇavo rañño pasenadissa kosalassa paṭissutvā bhagavato santike imaṁ gāthaṁ pariyāpuṇitvā rañño pasenadissa kosalassa bhattābhihāre sudaṁ bhāsati: “Manujassa sadā satīmato, Mattaṁ jānato laddhabhojane; Tanukassa bhavanti vedanā, Saṇikaṁ jīrati āyupālayan”ti.",
+   "nan-sn3.13": "善見摩納答覆拘薩羅國之波斯匿王曰：「大王！承教。」則暗〔誦〕在世尊前之偈，於拘薩羅國之波斯匿王食時即歌此偈：以常持正念取食知量人\n則少有其苦遲老得壽長",
+   "T0100-sa-2.73": "烏帶摩納爾時答言：「我能。」佛重為波斯匿王種種說法，示教利喜，默然而住。波斯匿王禮佛而退，烏帶摩納小在後住，受持此偈。佛告摩納：「王若食時，恒為王說如此上偈。」",
+   "T0099-sa1150": "欝多羅白王：「奉教當誦。」時，波斯匿王聞佛所說，歡喜隨喜，作禮而去。"
+  },
+  "a05": {
+   "sn3.13": "Atha kho rājā pasenadi kosalo anupubbena nāḷikodanaparamatāya saṇṭhāsi.",
+   "nan-sn3.13": "時，拘薩羅國之波斯匿王，即漸次滿足於一陀那量之飯食。",
+   "T0100-sa-2.73": "爾時，波斯匿王日日減食，身體日日轉小，漸得輕便。波斯匿王後至佛所，身體輕便，轉得端正。",
+   "T0099-sa1150": "時，欝多羅知王去已，至世尊前，受所說偈，於王食時，食食為誦，白言大王：「如佛世尊、如來、應、等正覺所知所見，而說斯偈：「『人當自繫念，每食知節量，\n是則諸受薄，安消而保壽。』"
+  },
+  "a06": {
+   "sn3.13": "Atha kho rājā pasenadi kosalo aparena samayena susallikhitagatto pāṇinā gattāni anumajjanto tāyaṁ velāyaṁ imaṁ udānaṁ udānesi: “ubhayena vata maṁ so bhagavā atthena anukampi— diṭṭhadhammikena ceva atthena samparāyikena cā”ti.",
+   "nan-sn3.13": "如是拘薩羅國之波斯匿王，即較以往身體康健，以手撫其身體，當時發此歡喜語：「世尊實以二利哀憐我：是現在之利與未來之利。」",
+   "T0100-sa-2.73": "白佛言：「世尊！我於今者奉佛勅教，現身之中受無量樂。南無佛、婆伽婆、至真、等正覺！知我現報現前利益，由節食故。」得勝、毀壞、從佛教一法、福田、可厭患\n明闇、石山、著一衣諸王、喘息名跋瞿",
+   "T0099-sa1150": "」如是，波斯匿王漸至後時，身體𦟛細，容貌端正，處樓閣上，向佛住處合掌恭敬，右膝著地，三說是言：「南無敬禮世尊、如來、應、等正覺，南無敬禮世尊、如來、應、等正覺，與我現法利益、後世利益、現法後世利益，以其飯食知節量故。」"
+  }
+ }
+}

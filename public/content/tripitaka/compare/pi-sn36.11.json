@@ -1,0 +1,128 @@
+{
+ "slug": "pi-sn36.11",
+ "title": "雜阿含經 （四七三）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "比丘請問三受義"
+  },
+  {
+   "id": "a02",
+   "label": "佛答三受皆苦之理"
+  },
+  {
+   "id": "a03",
+   "label": "諸行無常變易說受苦"
+  },
+  {
+   "id": "a04",
+   "label": "諸行滅盡次第"
+  },
+  {
+   "id": "a05",
+   "label": "諸行止息次第"
+  },
+  {
+   "id": "a06",
+   "label": "輕安次第"
+  },
+  {
+   "id": "a07",
+   "label": "偈頌"
+  },
+  {
+   "id": "a08",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn36.11",
+   "lang": "pi",
+   "label": "巴利 SN36.11",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn36.11",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN36.11",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0099-sa473",
+   "lang": "lzh",
+   "label": "雜阿含經 （四七三）",
+   "who": "劉宋 求那跋陀羅譯"
+  },
+  {
+   "id": "T0099-sa474",
+   "lang": "lzh",
+   "label": "雜阿含經 （四七四）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099"
+ ],
+ "anchors": [
+  {
+   "work": "T0099",
+   "node": "（四七三）"
+  },
+  {
+   "work": "T0099",
+   "node": "（四七四）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn36.11": "Saṁyutta Nikāya 36.11 2. Rahogatavagga",
+   "nan-sn36.11": "〔一一〕第一　獨坐※二",
+   "T0099-sa473": "如是我聞：一時，佛住王舍城迦蘭陀竹園。",
+   "T0099-sa474": "如是我聞：一時，佛住王舍城迦蘭陀竹園。"
+  },
+  "a01": {
+   "sn36.11": "Rahogatasutta Atha kho aññataro bhikkhu yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho so bhikkhu bhagavantaṁ etadavoca: “idha mayhaṁ, bhante, rahogatassa paṭisallīnassa evaṁ cetaso parivitakko udapādi— tisso vedanā vuttā bhagavatā. Sukhā vedanā, dukkhā vedanā, adukkhamasukhā vedanā— imā tisso vedanā vuttā bhagavatā.",
+   "nan-sn36.11": "時，有一比丘來詣世尊住處，禮拜世尊，坐於一面。",
+   "T0099-sa473": "時，有異比丘獨一靜處禪思，念言：「世尊說三受——樂受、苦受、不苦不樂受，又說諸所有受悉皆是苦，此有何義？」是比丘作是念已，從禪起，往詣佛所，稽首禮足，退住一面，白佛言：「世尊！我於靜處禪思，念言：『世尊說三受——樂受、苦受、不苦不樂受，又說諸所有受悉皆是苦，此有何義？』",
+   "T0099-sa474": "爾時，尊者阿難獨一靜處禪思，念言：「世尊說三受——樂受、苦受、不苦不樂受，又復說諸所有受悉皆是苦，此有何義？」作是念已，從禪起，詣世尊所，稽首禮足，退住一面，白佛言：「世尊！我獨一靜處禪思，念言：『如世尊說三受——樂受、苦受、不苦不樂受，又說一切諸受悉皆是苦，此有何義？』"
+  },
+  "a02": {
+   "sn36.11": "Vuttaṁ kho panetaṁ bhagavatā: ‘yaṁ kiñci vedayitaṁ taṁ dukkhasmin’ti. Kiṁ nu kho etaṁ bhagavatā sandhāya bhāsitaṁ: ‘yaṁ kiñci vedayitaṁ taṁ dukkhasmin’”ti? “Sādhu sādhu, bhikkhu. Tisso imā, bhikkhu, vedanā vuttā mayā. Sukhā vedanā, dukkhā vedanā, adukkhamasukhā vedanā— imā tisso vedanā vuttā mayā. Vuttaṁ kho panetaṁ, bhikkhu, mayā: ‘yaṁ kiñci vedayitaṁ, taṁ dukkhasmin’ti.",
+   "nan-sn36.11": "坐於一面之彼比丘，向世尊曰：「大德！我獨坐靜思，心起如是念：『世尊說示三種受，為樂受、苦受、非苦非樂受是。』世尊說此三種受。然而世尊！又如是說如何感受，亦為苦。凡如何感受，亦為苦者，此世尊依何而說耶？」",
+   "T0099-sa474": "」佛告阿難：「我以一切行無常故，一切行變易法故，說諸所有受悉皆是苦。"
+  },
+  "a03": {
+   "sn36.11": "Taṁ kho panetaṁ, bhikkhu, mayā saṅkhārānaṁyeva aniccataṁ sandhāya bhāsitaṁ: ‘yaṁ kiñci vedayitaṁ taṁ dukkhasmin’ti. Taṁ kho panetaṁ, bhikkhu, mayā saṅkhārānaṁyeva khayadhammataṁ …pe… vayadhammataṁ …pe… virāgadhammataṁ …pe… nirodhadhammataṁ …pe… vipariṇāmadhammataṁ sandhāya bhāsitaṁ: ‘yaṁ kiñci vedayitaṁ taṁ dukkhasmin’ti.",
+   "nan-sn36.11": "「比丘！善哉，善哉！比丘！余說三種之受，乃樂受、苦受、非苦非樂受是。余說此三種受也。然而余又說任何之感受，亦皆是苦。凡任何之感受，皆是苦者，比丘！余乃依諸行無常而說。比丘！凡任何之感受皆是苦，余依此說諸行是破壞之法，消亡之法，離欲之法，滅盡之法，變壞之法。",
+   "T0099-sa473": "」佛告比丘：「我以一切行無常故，一切諸行變易法故，說諸所有受悉皆是苦。」",
+   "T0099-sa474": "又復，阿難！我以諸行漸次寂滅故說，以諸行漸次止息故說，一切諸受悉皆是苦。」阿難白佛言：「云何？世尊！以諸受漸次寂滅故說？」佛告阿難：「初禪正受時，言語寂滅，第二禪正受時，覺觀寂滅，第三禪正受時，喜心寂滅，第四禪正受時，出入息寂滅；空入處正受時，色想寂滅，識入處正受時，空入處想寂滅，無所有入處正受時，識入處想寂滅，非想非非想入處正受時，無所有入處想寂滅，想受滅正受時，想受寂滅，是名漸次諸行寂滅。」阿難白佛言：「世尊！云何漸次諸行止息？」佛告阿難：「初禪正受時，言語止息，二禪正受時，覺觀止息，三禪正受時，喜心止息，四禪正受時，出入息止息；空入處正受時，色想止息，識入處正受時，空入處想止息，無所有入處正受時，識入處想止息，非想非非想入處正受時，無所有入處想止息，想受滅正受時，想受止息，是名漸次諸行止息。」阿難白佛：「世尊！是名漸次諸行止息。」佛告阿難：「復有勝止息、奇特止息、上止息、無上止息。如是止息，於餘止息無過上者。」阿難白佛：「何等為勝止息、奇特止息、上止息、無上止息，諸餘止息無過上者？」佛告阿難：「於貪欲心不樂、解脫，恚、癡心不樂、解脫，是名勝止息、奇特止息、上止息、無上止息，諸餘止息無過上者。」"
+  },
+  "a04": {
+   "sn36.11": "Atha kho pana, bhikkhu, mayā anupubbasaṅkhārānaṁ nirodho akkhāto. Paṭhamaṁ jhānaṁ samāpannassa vācā niruddhā hoti. Dutiyaṁ jhānaṁ samāpannassa vitakkavicārā niruddhā honti. Tatiyaṁ jhānaṁ samāpannassa pīti niruddhā hoti. Catutthaṁ jhānaṁ samāpannassa assāsapassāsā niruddhā honti. Ākāsānañcāyatanaṁ samāpannassa rūpasaññā niruddhā hoti. Viññāṇañcāyatanaṁ samāpannassa ākāsānañcāyatanasaññā niruddhā hoti. Ākiñcaññāyatanaṁ samāpannassa viññāṇañcāyatanasaññā niruddhā hoti. Nevasaññānāsaññāyatanaṁ samāpannassa ākiñcaññāyatanasaññā niruddhā hoti. Saññāvedayitanirodhaṁ samāpannassa saññā ca vedanā ca niruddhā honti. Khīṇāsavassa bhikkhuno rāgo niruddho hoti, doso niruddho hoti, moho niruddho hoti.",
+   "nan-sn36.11": "然而依此，比丘！余亦次第說諸行之滅盡。逮達初禪者，言語滅；逮達第二禪者，尋伺滅；逮達第三禪者，喜滅；逮達第四禪者，入息出息滅；逮達空無邊處者，色想滅；逮達識無邊處者，空無邊處想滅；逮達無所有處者，識無邊處想滅；逮達非想非非想處者，無所有處想滅；逮達想受滅者，想與受滅。漏盡之比丘，貪欲滅，嗔恚滅，愚癡滅。"
+  },
+  "a05": {
+   "sn36.11": "Atha kho, bhikkhu, mayā anupubbasaṅkhārānaṁ vūpasamo akkhāto. Paṭhamaṁ jhānaṁ samāpannassa vācā vūpasantā hoti. Dutiyaṁ jhānaṁ samāpannassa vitakkavicārā vūpasantā honti …pe… saññāvedayitanirodhaṁ samāpannassa saññā ca vedanā ca vūpasantā honti. Khīṇāsavassa bhikkhuno rāgo vūpasanto hoti, doso vūpasanto hoti, moho vūpasanto hoti.",
+   "nan-sn36.11": "依此，比丘！余乃次第說諸行之止息。逮達初禪者，言語止息；逮達第二禪者，尋伺止息……逮達想受滅者，想受止息。漏盡之比丘，貪欲止息，瞋恚止息，愚癡止息。"
+  },
+  "a06": {
+   "sn36.11": "Chayimā, bhikkhu, passaddhiyo. Paṭhamaṁ jhānaṁ samāpannassa vācā paṭippassaddhā hoti. Dutiyaṁ jhānaṁ samāpannassa vitakkavicārā paṭippassaddhā honti. Tatiyaṁ jhānaṁ samāpannassa pīti paṭippassaddhā hoti. Catutthaṁ jhānaṁ samāpannassa assāsapassāsā paṭippassaddhā honti. Saññāvedayitanirodhaṁ samāpannassa saññā ca vedanā ca paṭippassaddhā honti. Khīṇāsavassa bhikkhuno rāgo paṭippassaddho hoti, doso paṭippassaddho hoti, moho paṭippassaddho hotī”ti. Paṭhamaṁ.",
+   "nan-sn36.11": "比丘！此等之六者，是輕安。逮達初禪者，言語輕安；逮達第二禪者，尋伺輕安；逮達第三禪者，喜輕安；逮達第四禪者，入息出息輕安；逮達想受滅者，想與受輕安。漏盡之比丘，是貪欲輕安，瞋恚輕安，愚癡輕安也。」"
+  },
+  "a07": {
+   "T0099-sa473": "爾時，世尊即說偈言：「知諸行無常，皆是變易法，\n故說受悉苦，正覺之所知。\n比丘勤方便，正智不傾動，\n於諸一切受，𭶑慧能了知。\n悉知諸受已，現法盡諸漏，\n身死不墮數，永處般涅槃。」"
+  },
+  "a08": {
+   "T0099-sa473": "佛說是經已，諸比丘聞佛所說，歡喜奉行。",
+   "T0099-sa474": "佛說此經已，尊者阿難聞佛所說，歡喜奉行。"
+  }
+ }
+}

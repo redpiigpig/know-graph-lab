@@ -1,0 +1,109 @@
+{
+ "slug": "pi-sn3.5",
+ "title": "別譯雜阿含經 （五六）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "經題與卷名"
+  },
+  {
+   "id": "a01",
+   "label": "波斯匿王請問自護不護"
+  },
+  {
+   "id": "a02",
+   "label": "世尊開示內外守護之義"
+  },
+  {
+   "id": "a03",
+   "label": "世尊重申善惡行與自護之關係"
+  },
+  {
+   "id": "a04",
+   "label": "偈頌：自護之修行"
+  },
+  {
+   "id": "a05",
+   "label": "流通分：聞法歡喜奉行"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn3.5",
+   "lang": "pi",
+   "label": "巴利 SN3.5",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn3.5",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN3.5",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.56",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （五六）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa1229",
+   "lang": "lzh",
+   "label": "雜阿含經 （一二二九）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（五六）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一二二九）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn3.5": "Saṁyutta Nikāya 3.5",
+   "nan-sn3.5": "〔五〕第五　自護",
+   "T0100-sa-2.56": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。",
+   "T0099-sa1229": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。"
+  },
+  "a01": {
+   "sn3.5": "1. Paṭhamavagga Attarakkhitasutta Sāvatthinidānaṁ.",
+   "nan-sn3.5": "坐於一面之拘薩羅國波斯匿王，白世尊曰：",
+   "T0100-sa-2.56": "爾時，波斯匿王於空閑處，作是思惟：「云何護己？云何不護己？」復自念言：「若人修善，名為護己；若人行惡，名不護己。」思惟是已，即從坐起，往詣佛所，禮佛足已，在一面坐。",
+   "T0099-sa1229": "爾時，波斯匿王獨靜思惟，作如是念：「云何自護？云何不自護？」復作是念：「若有行身惡行、行口惡行、行意惡行者，當知斯等為不自護。若復行身善行、行口善行、行意善行者，當知斯等則為自護。」"
+  },
+  "a02": {
+   "sn3.5": "Ekamantaṁ nisinno kho rājā pasenadi kosalo bhagavantaṁ etadavoca: “idha mayhaṁ, bhante, rahogatassa paṭisallīnassa evaṁ cetaso parivitakko udapādi: ‘kesaṁ nu kho rakkhito attā, kesaṁ arakkhito attā’ti? Tassa mayhaṁ, bhante, etadahosi: ‘ye kho keci kāyena duccaritaṁ caranti, vācāya duccaritaṁ caranti, manasā duccaritaṁ caranti; tesaṁ arakkhito attā. Kiñcāpi te hatthikāyo vā rakkheyya, assakāyo vā rakkheyya, rathakāyo vā rakkheyya, pattikāyo vā rakkheyya; atha kho tesaṁ arakkhito attā. Taṁ kissa hetu? Bāhirā hesā rakkhā, nesā rakkhā ajjhattikā; tasmā tesaṁ arakkhito attā. Ye ca kho keci kāyena sucaritaṁ caranti, vācāya sucaritaṁ caranti, manasā sucaritaṁ caranti; tesaṁ rakkhito attā. Kiñcāpi te neva hatthikāyo rakkheyya, na assakāyo rakkheyya, na rathakāyo rakkheyya, na pattikāyo rakkheyya; atha kho tesaṁ rakkhito attā. Taṁ kissa hetu? Ajjhattikā hesā rakkhā, nesā rakkhā bāhirā; tasmā tesaṁ rakkhito attā’”ti.",
+   "nan-sn3.5": "「世尊！我獨坐靜觀生如是念：『何人乃護自我；何人不護自我耶？』世尊！我如是思念：『任何人依身以行惡行、依語以行惡行、依意以行惡行者，其人即是不護自我。彼等如何受象軍之善護、馬軍之善護、車軍之善護、步軍之善護、但不護彼等之自我。何以故，此等外在之守護，此等非為內在之守護。是故非守護彼等之自我。任何人依身以行善行、依語以行善行、依意以行善行者，其人乃護自我者。彼等雖云無任何象軍之守護、無馬軍之守護、無車軍之守護、無步軍之守護、但有守護彼等之自我。何以故？此等乃內在之守護，此等非外在之守護。是故乃守護彼等之自我。』」",
+   "T0100-sa-2.56": "白佛言：「世尊！我於靜處作是思惟：『云何護己？云何不護己？』復作是念：『若修善行，名為護己；若行不善，名不護己。』",
+   "T0099-sa1229": "從禪覺已，往詣佛所，稽首佛足，退坐一面，白佛言：「世尊！我獨靜思惟，而作是念：『云何為自護？云何為不自護？』復作是念：『若有行身惡行、行口惡行、行意惡行者，當知斯等為不自護。若復行身善行、行口善行、行意善行者，當知斯等則為自護。』"
+  },
+  "a03": {
+   "sn3.5": "“Evametaṁ, mahārāja, evametaṁ, mahārāja. Ye hi keci, mahārāja, kāyena duccaritaṁ caranti …pe… tesaṁ arakkhito attā. Taṁ kissa hetu? Bāhirā hesā, mahārāja, rakkhā, nesā rakkhā ajjhattikā; tasmā tesaṁ arakkhito attā. Ye hi keci, mahārāja, kāyena sucaritaṁ caranti, vācāya sucaritaṁ caranti, manasā sucaritaṁ caranti; tesaṁ rakkhito attā. Kiñcāpi te neva hatthikāyo rakkheyya, na assakāyo rakkheyya, na rathakāyo rakkheyya, na pattikāyo rakkheyya; atha kho tesaṁ rakkhito attā. Taṁ kissa hetu? Ajjhattikā hesā, mahārāja, rakkhā, nesā rakkhā bāhirā; tasmā tesaṁ rakkhito attā”ti.",
+   "nan-sn3.5": "「大王！如是，大王！如是。任何人依身、語、意以行惡行者，其人不護自我。任何人依身、語、意以行善行者，其人乃護自我。」",
+   "T0100-sa-2.56": "」佛告大王：「實爾！實爾！若以四兵象兵、馬兵、車兵、步兵圍遶自身，不名護己。何以故？非內護故。若人身口意善，雖無四兵，是名護己。何以故？有內護故。此內護者，勝於外護，故名護己。」",
+   "T0099-sa1229": "」佛告大王：「如是，大王！如是，大王！若有行身惡行、行口惡行、行意惡行者，當知斯等為不自護，而彼自謂能自防護。象軍、馬軍、車軍、步軍以自防護，雖謂自護，實非自護。所以者何？雖護於外，不護於內。是故，大王！名不自護。大王！若復有行身善行、行口善行、行意善行者，當知斯等則為自護。彼雖不以象、馬、車、步四軍自防，而實自護。所以者何？護其內者，名善自護，非謂防外。」"
+  },
+  "a04": {
+   "sn3.5": "Idamavoca …pe… “Kāyena saṁvaro sādhu, sādhu vācāya saṁvaro; Manasā saṁvaro sādhu, sādhu sabbattha saṁvaro; Sabbattha saṁvuto lajjī, rakkhitoti pavuccatī”ti.",
+   "nan-sn3.5": "〔世尊宣說此已……乃至……〕善哉自制身善哉自制語\n善哉自制意善哉制一切\n自制知恥者云為守護人",
+   "T0100-sa-2.56": "佛即說偈言：「若人欲自護，當護身口意，\n修行於善法，有慚亦有愧。\n不護三業者，邪見及眠睡，\n障蔽諸善法，隨從於惡魔。\n則為自毀傷，是以應自護，\n修定及智慧，常念佛所教。」",
+   "T0099-sa1229": "爾時，世尊復說偈言：「善護於身口，及意一切業，\n慚愧而自防，是名善守護。」"
+  },
+  "a05": {
+   "T0100-sa-2.56": "佛說是已，諸比丘聞佛所說，歡喜奉行。",
+   "T0099-sa1229": "時，波斯匿王聞佛所說，歡喜隨喜，作禮而去。"
+  }
+ }
+}

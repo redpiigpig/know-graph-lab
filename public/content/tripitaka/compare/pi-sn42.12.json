@@ -1,0 +1,127 @@
+{
+ "slug": "pi-sn42.12",
+ "title": "別譯雜阿含經 （一二七）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "聚落主來詣佛所"
+  },
+  {
+   "id": "a02",
+   "label": "世尊說二邊"
+  },
+  {
+   "id": "a03",
+   "label": "三種欲樂者"
+  },
+  {
+   "id": "a04",
+   "label": "三種自苦方便"
+  },
+  {
+   "id": "a05",
+   "label": "中道說明"
+  },
+  {
+   "id": "a06",
+   "label": "八聖道開示"
+  },
+  {
+   "id": "a07",
+   "label": "聚落主得法眼淨"
+  },
+  {
+   "id": "a08",
+   "label": "聚落主歸依三寶"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn42.12",
+   "lang": "pi",
+   "label": "巴利 SN42.12",
+   "who": "Mahāsaṅgīti 本・SuttaCentral",
+   "reorder": true
+  },
+  {
+   "id": "T0100-sa-2.127",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （一二七）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa912",
+   "lang": "lzh",
+   "label": "雜阿含經 （九一二）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（一二七）"
+  },
+  {
+   "work": "T0099",
+   "node": "（九一二）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn42.12": "Saṁyutta Nikāya 42.12 1. Gāmaṇivagga Rāsiyasutta",
+   "T0100-sa-2.127": "如是我聞：一時，佛在瞻波國竭城祇池岸。",
+   "T0099-sa912": "如是我聞：一時，佛住瞻婆國揭伽池側。"
+  },
+  "a01": {
+   "sn42.12": "Atha kho rāsiyo gāmaṇi yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho rāsiyo gāmaṇi bhagavantaṁ etadavoca: “sutaṁ metaṁ, bhante, ‘samaṇo gotamo sabbaṁ tapaṁ garahati, sabbaṁ tapassiṁ lūkhajīviṁ ekaṁsena upavadati upakkosatī’ti. Ye te, bhante, evamāhaṁsu: ‘samaṇo gotamo sabbaṁ tapaṁ garahati, sabbaṁ tapassiṁ lūkhajīviṁ ekaṁsena upavadati upakkosatī’ti, kacci te, bhante, bhagavato vuttavādino, na ca bhagavantaṁ abhūtena abbhācikkhanti, dhammassa cānudhammaṁ byākaronti, na ca koci sahadhammiko vādānuvādo gārayhaṁ ṭhānaṁ āgacchatī”ti? “Ye te, gāmaṇi, evamāhaṁsu: ‘samaṇo gotamo sabbaṁ tapaṁ garahati, sabbaṁ tapassiṁ lūkhajīviṁ ekaṁsena upavadati upakkosatī’ti, na me te vuttavādino, abbhācikkhanti ca pana maṁ te asatā tucchā abhūtena.",
+   "T0100-sa-2.127": "時，聚落主號王頂髮，來詣佛所，頂禮尊足，在一面坐。",
+   "T0099-sa912": "時，有王頂聚落主來詣佛所，稽首佛足，退坐一面。"
+  },
+  "a02": {
+   "sn42.12": "Dveme, gāmaṇi, antā pabbajitena na sevitabbā— yo cāyaṁ kāmesu kāmasukhallikānuyogo hīno gammo pothujjaniko anariyo anatthasaṁhito, yo cāyaṁ attakilamathānuyogo dukkho anariyo anatthasaṁhito.",
+   "T0100-sa-2.127": "佛告之曰：「此世間中，多有眾生依二種法：一貪欲樂，二名習於無益。身事非聖之法，徒受無益損減。習於欲樂，是名下賤繫累之法。",
+   "T0099-sa912": "爾時，世尊告王頂聚落主：「今者眾生依於二邊。何等為二？一者樂著卑下、田舍、常人凡夫五欲。二者自苦方便，不正、非義饒益。"
+  },
+  "a03": {
+   "sn42.12": "Tayo kho me, gāmaṇi, kāmabhogino santo saṁvijjamānā lokasmiṁ. Katame tayo? Idha, gāmaṇi, ekacco kāmabhogī adhammena bhoge pariyesati, sāhasena adhammena bhoge pariyesitvā sāhasena na attānaṁ sukheti na pīṇeti na saṁvibhajati na puññāni karoti. Idha pana, gāmaṇi, ekacco kāmabhogī adhammena bhoge pariyesati sāhasena. Adhammena bhoge pariyesitvā sāhasena attānaṁ sukheti pīṇeti, na saṁvibhajati na puññāni karoti. Idha pana, gāmaṇi, ekacco kāmabhogī adhammena bhoge pariyesati sāhasena. Adhammena bhoge pariyesitvā sāhasena attānaṁ sukheti pīṇeti saṁvibhajati puññāni karoti. Idha pana, gāmaṇi, ekacco kāmabhogī dhammādhammena bhoge pariyesati sāhasenapi asāhasenapi. Dhammādhammena bhoge pariyesitvā sāhasenapi asāhasenapi na attānaṁ sukheti, na pīṇeti, na saṁvibhajati, na puññāni karoti. Idha pana, gāmaṇi, ekacco kāmabhogī dhammādhammena bhoge pariyesati sāhasenapi asāhasenapi. Dhammādhammena bhoge pariyesitvā sāhasenapi asāhasenapi attānaṁ sukheti pīṇeti, na saṁvibhajati, na puññāni karoti. Idha pana, gāmaṇi, ekacco kāmabhogī dhammādhammena bhoge pariyesati, sāhasenapi asāhasenapi. Dhammādhammena bhoge pariyesitvā sāhasenapi asāhasenapi attānaṁ sukheti pīṇeti saṁvibhajati puññāni karoti. Idha pana, gāmaṇi, ekacco kāmabhogī dhammena bhoge pariyesati asāhasena. Dhammena bhoge pariyesitvā asāhasena na attānaṁ sukheti, na pīṇeti, na saṁvibhajati, na puññāni karoti. Idha pana, gāmaṇi, ekacco kāmabhogī dhammena bhoge pariyesati asāhasena. Dhammena bhoge pariyesitvā asāhasena attānaṁ sukheti pīṇeti, na saṁvibhajati, na puññāni karoti. Idha pana, gāmaṇi, ekacco kāmabhogī dhammena bhoge pariyesati asāhasena. Dhammena bhoge pariyesitvā asāhasena attānaṁ sukheti pīṇeti saṁvibhajati puññāni karoti. Te ca bhoge gadhito mucchito ajjhopanno anādīnavadassāvī anissaraṇapañño paribhuñjati. Idha pana, gāmaṇi, ekacco kāmabhogī dhammena bhoge pariyesati asāhasena. Dhammena bhoge pariyesitvā asāhasena attānaṁ sukheti pīṇeti saṁvibhajati puññāni karoti. Te ca bhoge agadhito amucchito anajjhopanno ādīnavadassāvī nissaraṇapañño paribhuñjati. Tatra, gāmaṇi, yvāyaṁ kāmabhogī adhammena bhoge pariyesati sāhasena, adhammena bhoge pariyesitvā sāhasena na attānaṁ sukheti, na pīṇeti, na saṁvibhajati, na puññāni karoti. Ayaṁ, gāmaṇi, kāmabhogī tīhi ṭhānehi gārayho. Katamehi tīhi ṭhānehi gārayho? Adhammena bhoge pariyesati sāhasenāti, iminā paṭhamena ṭhānena gārayho. Na attānaṁ sukheti na pīṇetīti, iminā dutiyena ṭhānena gārayho. Na saṁvibhajati, na puññāni karotīti, iminā tatiyena ṭhānena gārayho. Ayaṁ, gāmaṇi, kāmabhogī imehi tīhi ṭhānehi gārayho. Tatra, gāmaṇi, yvāyaṁ kāmabhogī adhammena bhoge pariyesati sāhasena, adhammena bhoge pariyesitvā sāhasena attānaṁ sukheti pīṇeti, na saṁvibhajati, na puññāni karoti. Ayaṁ, gāmaṇi, kāmabhogī dvīhi ṭhānehi gārayho, ekena ṭhānena pāsaṁso. Katamehi dvīhi ṭhānehi gārayho? Adhammena bhoge pariyesati sāhasenāti, iminā paṭhamena ṭhānena gārayho. Na saṁvibhajati, na puññāni karotīti, iminā dutiyena ṭhānena gārayho. Katamena ekena ṭhānena pāsaṁso? Attānaṁ sukheti pīṇetīti, iminā ekena ṭhānena pāsaṁso. Ayaṁ, gāmaṇi, kāmabhogī imehi dvīhi ṭhānehi gārayho, iminā ekena ṭhānena pāsaṁso. Tatra, gāmaṇi, yvāyaṁ kāmabhogī adhammena bhoge pariyesati sāhasena, adhammena bhoge pariyesitvā sāhasena attānaṁ sukheti pīṇeti saṁvibhajati puññāni karoti. Ayaṁ, gāmaṇi, kāmabhogī ekena ṭhānena gārayho, dvīhi ṭhānehi pāsaṁso. Katamena ekena ṭhānena gārayho? Adhammena bhoge pariyesati sāhasenāti, iminā ekena ṭhānena gārayho. Katamehi dvīhi ṭhānehi pāsaṁso? Attānaṁ sukheti pīṇetīti, iminā paṭhamena ṭhānena pāsaṁso. Saṁvibhajati puññāni karotīti, iminā dutiyena ṭhānena pāsaṁso. Ayaṁ, gāmaṇi, kāmabhogī, iminā ekena ṭhānena gārayho, imehi dvīhi ṭhānehi pāsaṁso. Tatra, gāmaṇi, yvāyaṁ kāmabhogī dhammādhammena bhoge pariyesati sāhasenapi asāhasenapi, dhammādhammena bhoge pariyesitvā sāhasenapi asāhasenapi na attānaṁ sukheti, na pīṇeti, na saṁvibhajati, na puññāni karoti. Ayaṁ, gāmaṇi, kāmabhogī ekena ṭhānena pāsaṁso, tīhi ṭhānehi gārayho. Katamena ekena ṭhānena pāsaṁso? Dhammena bhoge pariyesati asāhasenāti, iminā ekena ṭhānena pāsaṁso. Katamehi tīhi ṭhānehi gārayho? Adhammena bhoge pariyesati sāhasenāti, iminā paṭhamena ṭhānena gārayho. Na attānaṁ sukheti, na pīṇetīti, iminā dutiyena ṭhānena gārayho. Na saṁvibhajati, na puññāni karotīti, iminā tatiyena ṭhānena gārayho. Ayaṁ, gāmaṇi, kāmabhogī iminā ekena ṭhānena pāsaṁso, imehi tīhi ṭhānehi gārayho. Tatra, gāmaṇi, yvāyaṁ kāmabhogī dhammādhammena bhoge pariyesati sāhasenapi asāhasenapi, dhammādhammena bhoge pariyesitvā sāhasenapi asāhasenapi attānaṁ sukheti pīṇeti, na saṁvibhajati, na puññāni karoti. Ayaṁ, gāmaṇi, kāmabhogī dvīhi ṭhānehi pāsaṁso, dvīhi ṭhānehi gārayho. Katamehi dvīhi ṭhānehi pāsaṁso? Dhammena bhoge pariyesati asāhasenāti, iminā paṭhamena ṭhānena pāsaṁso. Attānaṁ sukheti pīṇetīti, iminā dutiyena ṭhānena pāsaṁso. Katamehi dvīhi ṭhānehi gārayho? Adhammena bhoge pariyesati sāhasenāti, iminā paṭhamena ṭhānena gārayho. Na saṁvibhajati, na puññāni karotīti, iminā dutiyena ṭhānena gārayho. Ayaṁ, gāmaṇi, kāmabhogī imehi dvīhi ṭhānehi pāsaṁso, imehi dvīhi ṭhānehi gārayho. Tatra, gāmaṇi, yvāyaṁ kāmabhogī dhammādhammena bhoge pariyesati sāhasenapi asāhasenapi, dhammādhammena bhoge pariyesitvā sāhasenapi asāhasenapi attānaṁ sukheti pīṇeti saṁvibhajati puññāni karoti. Ayaṁ, gāmaṇi, kāmabhogī tīhi ṭhānehi pāsaṁso, ekena ṭhānena gārayho. Katamehi tīhi ṭhānehi pāsaṁso? Dhammena bhoge pariyesati asāhasenāti, iminā paṭhamena ṭhānena pāsaṁso. Attānaṁ sukheti pīṇetīti, iminā dutiyena ṭhānena pāsaṁso. Saṁvibhajati puññāni karotīti, iminā tatiyena ṭhānena pāsaṁso. Katamena ekena ṭhānena gārayho? Adhammena bhoge pariyesati sāhasenāti, iminā ekena ṭhānena gārayho. Ayaṁ, gāmaṇi, kāmabhogī imehi tīhi ṭhānehi pāsaṁso, iminā ekena ṭhānena gārayho. Tatra, gāmaṇi, yvāyaṁ kāmabhogī dhammena bhoge pariyesati asāhasena, dhammena bhoge pariyesitvā asāhasena, na attānaṁ sukheti, na pīṇeti, na saṁvibhajati, na puññāni karoti. Ayaṁ, gāmaṇi, kāmabhogī ekena ṭhānena pāsaṁso, dvīhi ṭhānehi gārayho. Katamena ekena ṭhānena pāsaṁso? Dhammena bhoge pariyesati asāhasenāti, iminā ekena ṭhānena pāsaṁso. Katamehi dvīhi ṭhānehi gārayho? Na attānaṁ sukheti, na pīṇetīti, iminā paṭhamena ṭhānena gārayho. Na saṁvibhajati, na puññāni karotīti, iminā dutiyena ṭhānena gārayho. Ayaṁ, gāmaṇi, kāmabhogī iminā ekena ṭhānena pāsaṁso, imehi dvīhi ṭhānehi gārayho. Tatra, gāmaṇi, yvāyaṁ kāmabhogī dhammena bhoge pariyesati asāhasena, dhammena bhoge pariyesitvā asāhasena attānaṁ sukheti pīṇeti, na saṁvibhajati, na puññāni karoti. Ayaṁ, gāmaṇi, kāmabhogī dvīhi ṭhānehi pāsaṁso, ekena ṭhānena gārayho. Katamehi dvīhi ṭhānehi pāsaṁso? Dhammena bhoge pariyesati asāhasenāti, iminā paṭhamena ṭhānena pāsaṁso. Attānaṁ sukheti pīṇetīti, iminā dutiyena ṭhānena pāsaṁso. Katamena ekena ṭhānena gārayho? Na saṁvibhajati, na puññāni karotīti, iminā ekena ṭhānena gārayho. Ayaṁ, gāmaṇi, kāmabhogī imehi dvīhi ṭhānehi pāsaṁso, iminā ekena ṭhānena gārayho. Tatra, gāmaṇi, yvāyaṁ kāmabhogī dhammena bhoge pariyesati asāhasena, dhammena bhoge pariyesitvā asāhasena attānaṁ sukheti pīṇeti saṁvibhajati puññāni karoti, te ca bhoge gadhito mucchito ajjhopanno anādīnavadassāvī anissaraṇapañño paribhuñjati. Ayaṁ, gāmaṇi, kāmabhogī tīhi ṭhānehi pāsaṁso, ekena ṭhānena gārayho. Katamehi tīhi ṭhānehi pāsaṁso? Dhammena bhoge pariyesati asāhasenāti, iminā paṭhamena ṭhānena pāsaṁso. Attānaṁ sukheti pīṇetīti, iminā dutiyena ṭhānena pāsaṁso. Saṁvibhajati puññāni karotīti, iminā tatiyena ṭhānena pāsaṁso. Katamena ekena ṭhānena gārayho? Te ca bhoge gadhito mucchito ajjhopanno anādīnavadassāvī anissaraṇapañño paribhuñjatīti, iminā ekena ṭhānena gārayho. Ayaṁ, gāmaṇi, kāmabhogī imehi tīhi ṭhānehi pāsaṁso, iminā ekena ṭhānena gārayho. Tatra, gāmaṇi, yvāyaṁ kāmabhogī dhammena bhoge pariyesati asāhasena, dhammena bhoge pariyesitvā asāhasena attānaṁ sukheti pīṇeti saṁvibhajati puññāni karoti. Te ca bhoge agadhito amucchito anajjhopanno ādīnavadassāvī nissaraṇapañño paribhuñjati. Ayaṁ, gāmaṇi, kāmabhogī catūhi ṭhānehi pāsaṁso. Katamehi catūhi ṭhānehi pāsaṁso? Dhammena bhoge pariyesati asāhasenāti, iminā paṭhamena ṭhānena pāsaṁso. Attānaṁ sukheti pīṇetīti, iminā dutiyena ṭhānena pāsaṁso. Saṁvibhajati puññāni karotīti, iminā tatiyena ṭhānena pāsaṁso. Te ca bhoge agadhito amucchito anajjhopanno ādīnavadassāvī nissaraṇapañño paribhuñjatīti, iminā catutthena ṭhānena pāsaṁso. Ayaṁ, gāmaṇi, kāmabhogī imehi catūhi ṭhānehi pāsaṁso.",
+   "T0100-sa-2.127": "受欲樂者，凡有三種。云何為三？一者、聚非法財，殘害物命，自樂己身，而為己身作正樂因，此亦不名供養父母，亦不名與妻子及其僮僕，亦非親友、知識、眷屬、輔弼己者，亦復不名為供養供給沙門、婆羅門，諸福田等。若如是者，不修上道，不作樂因，不得樂報，是名第一欲樂。設受欲樂，或時如法，或不如法，或為殘害，或不殘害，以樂己身，安樂父母、妻子、僮僕、親友、眷屬、輔弼己者，悉皆供養供給，與正安樂，然不施與沙門、婆羅門，及諸福田，亦復不修正道，不作樂因，不求樂報，不作生天因緣，是名第二欲樂。」佛復告聚落主：「若有集於財寶，如法而聚，而為殘害，以如法故，不造殘惡故，修自己身，正受其樂，亦名正理供養父母，及與妻子、僮僕、親友、眷屬、輔成己者，皆名正與安樂，正事給養。時時供養沙門、婆羅門，修立福田，修於上道，種於樂因，求樂果報，作生天因緣，是名第三受於欲樂。我今為諸受欲樂者，皆悉同說。設受欲樂，我說下賤。設受欲樂，我說為中。設受欲樂，我說為上。何者下賤？非法聚財，又不非法聚財，自樂己身，而為己身作正樂因，此亦不供養，亦不名與妻子、僮僕、親友、眷屬，亦不隨時供養沙門、婆羅門諸福田等，不修上道，不作樂因，不得樂報，不作生天因緣，是名為下。何等名中？設受欲樂，或時如法，或不如法，或為殘害，以自樂身，亦復安樂父母、妻子、僮僕、親屬，乃至不作生天因緣，是名為中。云何名上？所謂如法聚財，不作殘害，身正受樂，正理供養父母及與妻子、僮僕、親友，乃至能作生天因緣，是名為上。",
+   "T0099-sa912": "聚落主！有三種樂受欲樂，卑下、田舍、常人凡夫；有三種自苦方便，不正、非義饒益。「聚落主！何等為三種卑下、田舍、常人凡夫樂受欲樂？有受欲者，非法濫取，不以安樂自供，不供養父母、給足兄弟、妻子、奴婢、眷屬、朋友、知識，亦不隨時供養沙門、婆羅門、仰求勝處安樂果報、未來生天，是名世間第一受欲。「復次，聚落主！受欲樂者，以法、非法濫取財物，以樂自供，供養父母，給足、兄弟、妻子、奴婢、眷屬、朋友、知識，而不隨時供養沙門、婆羅門、仰求勝處安樂果報、未來生天，是名第二受欲樂者。「復次，聚落主！有受欲樂者，以法求財，不以濫取，以樂自供，供養父母，給足兄弟、妻子、奴婢、眷屬、知識，隨時供養沙門、婆羅門，仰求勝處安樂果報，未來生天，是名第三受欲樂者。「聚落主！我不一向說受欲平等，我說受欲者其人卑下，我說受欲者是其中人，我說受欲者是其勝人。「何等為卑下受欲者？謂非法濫取，乃至不仰求勝處安樂果報、未來生天，是名我說卑下者受欲。「何等為中人受欲？謂受欲者以法、非法而求財物，乃至不求未來生天，是名我說第二中人受欲。「何等為我說勝人受欲？謂彼以法求財，乃至未來生天，是名我說第三勝人受欲。"
+  },
+  "a04": {
+   "sn42.12": "Tayome, gāmaṇi, tapassino lūkhajīvino santo saṁvijjamānā lokasmiṁ. Katame tayo? Idha, gāmaṇi, ekacco tapassī lūkhajīvī saddhā agārasmā anagāriyaṁ pabbajito hoti: ‘appeva nāma kusalaṁ dhammaṁ adhigaccheyyaṁ, appeva nāma uttari manussadhammā alamariyañāṇadassanavisesaṁ sacchikareyyan’ti. So attānaṁ ātāpeti paritāpeti, kusalañca dhammaṁ nādhigacchati, uttari ca manussadhammā alamariyañāṇadassanavisesaṁ na sacchikaroti. Idha pana, gāmaṇi, ekacco tapassī lūkhajīvī saddhā agārasmā anagāriyaṁ pabbajito hoti: ‘appeva nāma kusalaṁ dhammaṁ adhigaccheyyaṁ, appeva nāma uttari manussadhammā alamariyañāṇadassanavisesaṁ sacchikareyyan’ti. So attānaṁ ātāpeti paritāpeti, kusalañhi kho dhammaṁ adhigacchati, uttari manussadhammā alamariyañāṇadassanavisesaṁ na sacchikaroti. Idha pana, gāmaṇi, ekacco tapassī lūkhajīvī saddhā agārasmā anagāriyaṁ pabbajito hoti: ‘appeva nāma kusalaṁ dhammaṁ adhigaccheyyaṁ, appeva nāma uttari manussadhammā alamariyañāṇadassanavisesaṁ sacchikareyyan’ti. So attānaṁ ātāpeti paritāpeti, kusalañca dhammaṁ adhigacchati, uttari ca manussadhammā alamariyañāṇadassanavisesaṁ sacchikaroti. Tatra, gāmaṇi, yvāyaṁ tapassī lūkhajīvī attānaṁ ātāpeti paritāpeti, kusalañca dhammaṁ nādhigacchati, uttari ca manussadhammā alamariyañāṇadassanavisesaṁ na sacchikaroti. Ayaṁ, gāmaṇi, tapassī lūkhajīvī tīhi ṭhānehi gārayho. Katamehi tīhi ṭhānehi gārayho? Attānaṁ ātāpeti paritāpetīti, iminā paṭhamena ṭhānena gārayho. Kusalañca dhammaṁ nādhigacchatīti, iminā dutiyena ṭhānena gārayho. Uttari ca manussadhammā alamariyañāṇadassanavisesaṁ na sacchikarotīti, iminā tatiyena ṭhānena gārayho. Ayaṁ, gāmaṇi, tapassī lūkhajīvī, imehi tīhi ṭhānehi gārayho. Tatra, gāmaṇi, yvāyaṁ tapassī lūkhajīvī attānaṁ ātāpeti paritāpeti, kusalañhi kho dhammaṁ adhigacchati, uttari ca manussadhammā alamariyañāṇadassanavisesaṁ na sacchikaroti. Ayaṁ, gāmaṇi, tapassī lūkhajīvī dvīhi ṭhānehi gārayho, ekena ṭhānena pāsaṁso. Katamehi dvīhi ṭhānehi gārayho? Attānaṁ ātāpeti paritāpetīti, iminā paṭhamena ṭhānena gārayho. Uttari ca manussadhammā alamariyañāṇadassanavisesaṁ na sacchikarotīti, iminā dutiyena ṭhānena gārayho. Katamena ekena ṭhānena pāsaṁso? Kusalañhi kho dhammaṁ adhigacchatīti, iminā ekena ṭhānena pāsaṁso. Ayaṁ, gāmaṇi, tapassī lūkhajīvī imehi dvīhi ṭhānehi gārayho, iminā ekena ṭhānena pāsaṁso. Tatra, gāmaṇi, yvāyaṁ tapassī lūkhajīvī attānaṁ ātāpeti paritāpeti, kusalañca dhammaṁ adhigacchati, uttari ca manussadhammā alamariyañāṇadassanavisesaṁ sacchikaroti. Ayaṁ, gāmaṇi, tapassī lūkhajīvī ekena ṭhānena gārayho, dvīhi ṭhānehi pāsaṁso. Katamena ekena ṭhānena gārayho? Attānaṁ ātāpeti paritāpetīti, iminā ekena ṭhānena gārayho. Katamehi dvīhi ṭhānehi pāsaṁso? Kusalañca dhammaṁ adhigacchatīti, iminā paṭhamena ṭhānena pāsaṁso. Uttari ca manussadhammā alamariyañāṇadassanavisesaṁ sacchikarotīti, iminā dutiyena ṭhānena pāsaṁso. Ayaṁ, gāmaṇi, tapassī lūkhajīvī iminā ekena ṭhānena gārayho, imehi dvīhi ṭhānehi pāsaṁso. Tisso imā, gāmaṇi, sandiṭṭhikā nijjarā akālikā ehipassikā opaneyyikā paccattaṁ veditabbā viññūhi. Katamā tisso? Yaṁ ratto rāgādhikaraṇaṁ attabyābādhāyapi ceteti, parabyābādhāyapi ceteti, ubhayabyābādhāyapi ceteti. Rāge pahīne nevattabyābādhāya ceteti, na parabyābādhāya ceteti, na ubhayabyābādhāya ceteti. Sandiṭṭhikā nijjarā akālikā ehipassikā opaneyyikā paccattaṁ veditabbā viññūhi. Yaṁ duṭṭho dosādhikaraṇaṁ attabyābādhāyapi ceteti, parabyābādhāyapi ceteti, ubhayabyābādhāyapi ceteti. Dose pahīne nevattabyābādhāya ceteti, na parabyābādhāya ceteti, na ubhayabyābādhāya ceteti. Sandiṭṭhikā nijjarā akālikā ehipassikā opaneyyikā paccattaṁ veditabbā viññūhi. Yaṁ mūḷho mohādhikaraṇaṁ attabyābādhāyapi ceteti, parabyābādhāyapi ceteti, ubhayabyābādhāyapi ceteti. Mohe pahīne nevattabyābādhāya ceteti, na parabyābādhāya ceteti, na ubhayabyābādhāya ceteti. Sandiṭṭhikā nijjarā akālikā ehipassikā opaneyyikā paccattaṁ veditabbā viññūhi. Imā kho, gāmaṇi, tisso sandiṭṭhikā nijjarā akālikā ehipassikā opaneyyikā paccattaṁ veditabbā viññūhī”ti.",
+   "T0100-sa-2.127": "「何等無益三種苦身？所謂苦非聖法，無有義利，若有苦身，心已變壞。初犯禁戒，身心內外一切俱熱，追念此事，無時暫離。現在之世，不離煩熱，終不能得過人之法，是名初無益苦身法。若復有人，雖不犯戒，心亦不變，然復稱於身心二業，內外俱適，修學是事，現在之世，不離煩惱，終不能得過人之法，是名第二無益苦身。復次若更有人，雖不犯戒，心不變異，然復稱於身心二業，內外俱適，修念此事，現在之世，不離惱熱，有少增進過人之法，或得少智，或得見法，或少禪定，是名第三無益苦身。「聚落主！我亦不說無益苦行都為一種，有一苦行名為下品，復有苦行名為中品，又有苦行名為上品。云何名下？初毀戒時，心已變壞，身心內外一切俱熱，追念此事，無時暫離，於現在世，不離煩惱，終不能得過人之法，是名為下。云何名中？若復有人，雖不犯戒，心亦不變，然復稱於身心二業，內外俱適，修學此事，於現在世，不離惱熱，亦不能得過人之法，是名為中。云何名上？若更有人，雖不犯戒，心不變異，然復稱於身心二業，內外俱適，修學此事，於今現在，不能永斷一切煩惱，有少增進過人之法，或得少智，或得見法，或觸禪樂，是名為上。",
+   "T0099-sa912": "「何等為三種自苦方便？是苦非法、不正、非義饒益？有一自苦枯槁活，初始犯戒、污戒，彼修種種苦行，精勤方便住處住，彼不能現法得離熾然、過人法、勝妙知見安樂住。聚落主！是名第一自苦方便枯槁活。「復次，自苦方便枯槁活，始不犯戒、污戒，而修種種苦行，亦不由此現法得離熾然、過人法、勝妙知見安樂住，是名第二自苦方便枯槁活。「復次，自苦方便枯槁活，不初始犯戒、污戒，然修種種苦行方便，亦不能現法離熾然、得過人法、勝妙知見安樂住，是名第三自苦方便枯槁活。「聚落主！我不說一切自苦方便枯槁活悉等，我說有自苦方便是卑劣人，有說自苦方便是中人，有說自苦方便是勝人。「何等自苦方便卑劣人？若彼自苦方便，初始犯戒、污戒，乃至不得勝妙知見安樂住，是名我說自苦方便卑劣人。「何等為自苦方便中人？若彼自苦方便，不初始犯戒、污戒，乃至不得勝妙知見安樂住，是名我說自苦方便中間人。「何等為自苦方便勝人？若彼自苦方便枯槁活，不初始犯戒、污戒，乃至不得勝妙知見安樂住，是名我說自苦方便勝人。「聚落主！是名三種自苦方便，是苦非法、不正、非義饒益。"
+  },
+  "a05": {
+   "sn42.12": "Ete te, gāmaṇi, ubho ante anupagamma majjhimā paṭipadā tathāgatena abhisambuddhā—cakkhukaraṇī ñāṇakaraṇī upasamāya abhiññāya sambodhāya nibbānāya saṁvattati. Katamā ca sā, gāmaṇi, majjhimā paṭipadā tathāgatena abhisambuddhā—cakkhukaraṇī ñāṇakaraṇī upasamāya abhiññāya sambodhāya nibbānāya saṁvattati?",
+   "T0100-sa-2.127": "「為，聚落主！除是二邊，趣向於道，所謂三種欲樂，及以三種無益苦身，趣向中道。何等名為捨於三種欲樂之事，及以三種無益苦身，向中道耶？聚落主！貪染欲樂，惱害自身，亦惱害他，自他俱害，現集諸惡，於當來世，亦集諸惡。以此因緣，心煩悲憂，受諸苦惱。設盡欲結，亦無自苦，亦不苦他，亦復無有自他之苦，現在之世，不集諸苦，於未來世，亦復不集一切眾苦，以是義故，得現法樂，離眾惱熱，不擇時節，得近涅槃。於現在世，能得道果，智者自知，明了無滯，不隨他教，是名初中道。",
+   "T0099-sa912": "「聚落主！有道有跡，不向三種受欲隨順方便，卑下、田舍、常人凡夫，不向三種自苦方便，是苦非法、不正、非義饒益。聚落主！何等為道，何等為跡，不向三種受欲、三種自苦方便？聚落主！為欲貪障閡故，或欲自害，或欲害他，或欲俱害，現法後世得斯罪報，心法憂苦。瞋恚、癡所障，或欲自害，或欲害他，或欲俱害，現法後世得斯罪報，心法憂苦。若離貪障，不欲方便自害、害他、自他俱害，不現法後世受斯罪報；彼心、心法常受喜樂，如是離瞋恚、愚癡障閡，不欲自害，不欲害他、自他俱害，不現法後世受斯罪報；彼心、心法常受安樂，於現法中，遠離熾然，不待時節，親近涅槃，即此身現緣自覺知。"
+  },
+  "a06": {
+   "sn42.12": "Ayameva ariyo aṭṭhaṅgiko maggo, seyyathidaṁ— sammādiṭṭhi …pe… sammāsamādhi. Ayaṁ kho sā, gāmaṇi, majjhimā paṭipadā tathāgatena abhisambuddhā—cakkhukaraṇī ñāṇakaraṇī upasamāya abhiññāya sambodhāya nibbānāya saṁvattati.",
+   "T0100-sa-2.127": "聚落主！復有中道，離於惱熱，不擇時節，得近涅槃，智者自知，不隨他教，所謂正見、正語、正業、正命、正定、正方便、正志、正念，是名第二中道。」",
+   "T0099-sa912": "聚落主！如此現法永離熾然，不待時節，親近涅槃，即此現身緣自覺知者，為八聖道——正見乃至正定。」"
+  },
+  "a07": {
+   "sn42.12": "Evaṁ vutte, rāsiyo gāmaṇi bhagavantaṁ etadavoca:",
+   "T0100-sa-2.127": "說是法時，王頂髮聚落主遠塵離垢，得法眼淨。",
+   "T0099-sa912": "當其世尊說是法時，王頂聚落主遠塵離垢，得法眼淨。"
+  },
+  "a08": {
+   "sn42.12": "“abhikkantaṁ, bhante …pe… upāsakaṁ maṁ bhagavā dhāretu ajjatagge pāṇupetaṁ saraṇaṁ gatan”ti. Dvādasamaṁ.",
+   "T0100-sa-2.127": "爾時，王頂髮聚落主知法、見法、得法，度疑彼岸，離於疑惑，不隨他教，不受異見，於佛法中，得自在辯。即從坐起，整衣服，合掌向佛，白佛言：「世尊！我於今日，已得出過，歸依於佛，亦復歸依法僧二寶，我持優婆塞戒，從今盡壽，歸依三寶。」爾時，王頂髮聚落主聞佛所說，歡喜踊躍，頂禮而去。",
+   "T0099-sa912": "時，王頂聚落主見法、得法、知法、深入於法，度疑不由於他，於正法、律得無所畏。即從坐起，整衣服，合掌白佛：「我今已度。世尊！歸佛、歸法、歸比丘僧，從今盡壽為優婆塞。」時，聞佛所說，歡喜隨喜，作禮而去。"
+  }
+ }
+}

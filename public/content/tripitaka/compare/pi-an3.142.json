@@ -1,0 +1,99 @@
+{
+ "slug": "pi-an3.142",
+ "title": "別譯雜阿含經 （一四五）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "善馬與善人之總說"
+  },
+  {
+   "id": "a02",
+   "label": "第一種善人：捷疾具足、非色具足、非形體具"
+  },
+  {
+   "id": "a03",
+   "label": "第二種善人：捷疾具足、色具足、非形體具足"
+  },
+  {
+   "id": "a04",
+   "label": "第三種善人：捷疾具足、色具足、形體具足"
+  },
+  {
+   "id": "a05",
+   "label": "結歡喜奉行"
+  }
+ ],
+ "versions": [
+  {
+   "id": "an3.142",
+   "lang": "pi",
+   "label": "巴利 AN3.142",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "T0100-sa-2.145",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （一四五）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa919",
+   "lang": "lzh",
+   "label": "雜阿含經 （九一九）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（一四五）"
+  },
+  {
+   "work": "T0099",
+   "node": "（九一九）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "an3.142": "Aṅguttara Nikāya 3.142 14. Yodhājīvavagga Assājānīyasutta",
+   "T0100-sa-2.145": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。",
+   "T0099-sa919": "如是我聞：一時，佛住王舍城迦蘭陀竹園。"
+  },
+  "a01": {
+   "an3.142": "“Tayo ca, bhikkhave, bhadre assājānīye desessāmi tayo ca bhadre purisājānīye. Taṁ suṇātha, sādhukaṁ manasi karotha, bhāsissāmī”ti. “Evaṁ, bhante”ti kho te bhikkhū bhagavato paccassosuṁ. Bhagavā etadavoca:",
+   "T0100-sa-2.145": "爾時，佛告諸比丘：「譬如世間善乘之馬，凡有三種，人亦如是。有三種人，其第一者，駿疾、色、乘，悉皆具足。",
+   "T0099-sa919": "爾時，世尊告諸比丘：「世間有三種良馬。何等為三？謂有馬捷疾具足、非色具足、非形體具足。有馬捷疾具足、色具足、非形體具足。有馬捷疾具足、色具足、形體具足。如是於此法、律有三種善男子。何等為三？有善男子捷疾具足、非色具足、非形體具足，有善男子捷疾具足、色具足、非形體具足，有善男子捷疾具足、色具足、形體具足。"
+  },
+  "a02": {
+   "an3.142": "“Katame ca, bhikkhave, tayo bhadrā assājānīyā? Idha, bhikkhave, ekacco bhadro assājānīyo …pe… javasampanno ca hoti vaṇṇasampanno ca ārohapariṇāhasampanno ca. Ime kho, bhikkhave, tayo bhadrā assājānīyā.",
+   "T0100-sa-2.145": "若有人於佛法中，如實知見四真諦，已斷於三漏，所謂欲漏、有漏、無明漏，解脫知見具足，盡諸有結，心得自在，生死已盡，梵行已立，所作已辦，不受後有，得阿羅漢，是名駿疾具足。",
+   "T0099-sa919": "「何等為善男子捷疾具足、非色具足、非形體具足？謂善男子此苦聖諦如實知，此苦集聖諦如實知，此苦滅聖諦如實知，此苦滅道跡聖諦如實知。如是知、如是見已，欲有漏心解脫、有有漏心解脫、無明有漏心解脫：『我生已盡，梵行已立，所作已作，自知不受後有。』是名捷疾具足。云何非色具足？若有問阿毘曇、律，乃至不能為決定解說，是名色不具足。何等非形體具足？謂非名聞大德，乃至不感湯藥、眾具，是名形體不具足，是名善男子捷疾具足、非色具足、非形體具足。"
+  },
+  "a03": {
+   "an3.142": "Katame ca, bhikkhave, tayo bhadrā purisājānīyā? Idha, bhikkhave, ekacco bhadro purisājānīyo …pe… javasampanno ca hoti vaṇṇasampanno ca ārohapariṇāhasampanno ca. Kathañca, bhikkhave, bhadro purisājānīyo …pe… javasampanno ca hoti vaṇṇasampanno ca ārohapariṇāhasampanno ca?",
+   "T0100-sa-2.145": "餘如上說。云何第二？二事具足，一不具足。",
+   "T0099-sa919": "「何等為善男子捷疾具足、色具足、非形體具足？謂善男子此苦聖諦如實知，乃至不受後有，是名捷疾具足。云何色具足？謂若有問阿毘曇、毘尼，乃至能為決定解說，是名色具足。何等為非形體具足？謂非名聞大德，乃至不能感湯藥、眾具，是名善男子捷疾具足、色具足、非形體具足。"
+  },
+  "a04": {
+   "an3.142": "Idha, bhikkhave, bhikkhu āsavānaṁ khayā anāsavaṁ cetovimuttiṁ paññāvimuttiṁ diṭṭheva dhamme sayaṁ abhiññā sacchikatvā upasampajja viharati. Idamassa javasmiṁ vadāmi. Abhidhamme kho pana abhivinaye pañhaṁ puṭṭho vissajjeti, no saṁsādeti. Idamassa vaṇṇasmiṁ vadāmi. Lābhī kho pana hoti cīvarapiṇḍapātasenāsanagilānappaccayabhesajjaparikkhārānaṁ. Idamassa ārohapariṇāhasmiṁ vadāmi.",
+   "T0100-sa-2.145": "於佛法中，如實知見四真諦已，乃至得阿羅漢，若通問難。",
+   "T0099-sa919": "「何等為善男子捷疾具足、色具足、形體具足？謂善男子此苦聖諦如實知，乃至不受後有，是名捷疾具足。何等為色具足？謂善男子若有問阿毘曇、毘尼，乃至能為決定解說，是名色具足。何等為形體具足？謂善男子名聞大德，乃至能感湯藥、眾具，是名形體具足，是名善男子捷疾具足、色具足、形體具足。」"
+  },
+  "a05": {
+   "an3.142": "Evaṁ kho, bhikkhave, bhadro purisājānīyo javasampanno ca hoti vaṇṇasampanno ca ārohapariṇāhasampanno ca. Ime kho, bhikkhave, tayo bhadrā purisājānīyā”ti. Dasamaṁ.",
+   "T0100-sa-2.145": "餘如上說。云何第三？三事具足。是人於佛法中，如實知見四真諦已，乃至有福德，能得利養，是名三事具足。」佛說是已，時，諸比丘聞佛所說，歡喜奉行。",
+   "T0099-sa919": "佛說此經已，諸比丘聞佛所說，歡喜奉行。"
+  }
+ }
+}

@@ -1,0 +1,112 @@
+{
+ "slug": "pi-an6.63",
+ "title": "漏分佈經",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "諸漏總說"
+  },
+  {
+   "id": "a02",
+   "label": "諸漏分項：欲漏"
+  },
+  {
+   "id": "a03",
+   "label": "諸漏分項：覺（受）漏"
+  },
+  {
+   "id": "a04",
+   "label": "諸漏分項：想漏"
+  },
+  {
+   "id": "a05",
+   "label": "諸漏分項：業漏"
+  },
+  {
+   "id": "a06",
+   "label": "諸漏分項：苦漏"
+  },
+  {
+   "id": "a07",
+   "label": "結歸：此為義釋"
+  }
+ ],
+ "versions": [
+  {
+   "id": "an6.63",
+   "lang": "pi",
+   "label": "巴利 AN6.63",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "T0026-ma111",
+   "lang": "lzh",
+   "label": "中阿含經 （一一一）中阿含林品達梵行經第五（第二小土城誦）",
+   "who": "東晉 瞿曇僧伽提婆譯",
+   "reorder": true
+  },
+  {
+   "id": "T0057",
+   "lang": "lzh",
+   "label": "漏分布經",
+   "who": "後漢 安世高譯",
+   "reorder": true
+  }
+ ],
+ "works": [
+  "T0026",
+  "T0057"
+ ],
+ "anchors": [
+  {
+   "work": "T0026",
+   "node": "（一一一）中阿含林品達梵行經第五（第二小土城誦）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "an6.63": "Aṅguttara Nikāya 6.63 6. Mahāvagga Nibbedhikasutta “Nibbedhikapariyāyaṁ vo, bhikkhave, dhammapariyāyaṁ desessāmi. Taṁ suṇātha, sādhukaṁ manasi karotha, bhāsissāmī”ti. “Evaṁ, bhante”ti kho te bhikkhū bhagavato paccassosuṁ.",
+   "T0026-ma111": "我聞如是：一時，佛遊拘樓瘦，在劍磨瑟曇拘樓都邑。爾時，世尊告諸比丘：「我當為汝說法，初妙、中妙、竟亦妙，有文有義，具足清淨，顯現梵行，謂名達梵行，能盡諸漏。汝等諦聽，善思念之。」時，諸比丘受教而聽。",
+   "T0057": "聞如是：一時，佛在拘留國行治處名為法。時，拘留國人會在。時，佛告：「諸比丘！」比丘應：「唯然。」比丘從佛聞。佛便告如是：「比丘聽。當為說法，上起亦利、中起亦利、遍竟亦利，有利有方便，具足現意行。當為聽真，諦受為念聽說。」比丘應：「唯如是。」"
+  },
+  "a01": {
+   "an6.63": "Bhagavā etadavoca: “Katamo ca so, bhikkhave, nibbedhikapariyāyo dhammapariyāyo? Kāmā, bhikkhave, veditabbā, kāmānaṁ nidānasambhavo veditabbo, kāmānaṁ vemattatā veditabbā, kāmānaṁ vipāko veditabbo, kāmanirodho veditabbo, kāmanirodhagāminī paṭipadā veditabbā. Vedanā, bhikkhave, veditabbā, vedanānaṁ nidānasambhavo veditabbo, vedanānaṁ vemattatā veditabbā, vedanānaṁ vipāko veditabbo, vedanānirodho veditabbo, vedanānirodhagāminī paṭipadā veditabbā. Saññā, bhikkhave, veditabbā, saññānaṁ nidānasambhavo veditabbo, saññānaṁ vemattatā veditabbā, saññānaṁ vipāko veditabbo, saññānirodho veditabbo, saññānirodhagāminī paṭipadā veditabbā. Āsavā, bhikkhave, veditabbā, āsavānaṁ nidānasambhavo veditabbo, āsavānaṁ vemattatā veditabbā, āsavānaṁ vipāko veditabbo, āsavanirodho veditabbo, āsavanirodhagāminī paṭipadā veditabbā. Kammaṁ, bhikkhave, veditabbaṁ, kammānaṁ nidānasambhavo veditabbo, kammānaṁ vemattatā veditabbā, kammānaṁ vipāko veditabbo, kammanirodho veditabbo, kammanirodhagāminī paṭipadā veditabbā. Dukkhaṁ, bhikkhave, veditabbaṁ, dukkhassa nidānasambhavo veditabbo, dukkhassa vemattatā veditabbā, dukkhassa vipāko veditabbo, dukkhanirodho veditabbo, dukkhanirodhagāminī paṭipadā veditabbā. ‘Kāmā, bhikkhave, veditabbā, kāmānaṁ nidānasambhavo veditabbo, kāmānaṁ vemattatā veditabbā, kāmānaṁ vipāko veditabbo, kāmanirodho veditabbo, kāmanirodhagāminī paṭipadā veditabbā’ti, iti kho panetaṁ vuttaṁ. Kiñcetaṁ paṭicca vuttaṁ?",
+   "T0026-ma111": "世尊告曰：「汝等當知漏，知漏所因生，知漏有報，知漏勝如，知漏滅盡，知漏滅道。汝等當知覺，知覺所因生，知覺有報，知覺勝如，知覺滅盡，知覺滅道。汝等當知想，知想所因生，知想有報，知想勝如，知想滅盡，知想滅道。汝等當知欲，知欲所因生，知欲有報，知欲勝如，知欲滅盡，知欲滅道。汝等當知業，知業所因生，知業有報，知業勝如，知業滅盡，知業滅道。汝等當知苦，知苦所因生，知苦有報，知苦勝如，知苦滅盡，知苦滅道。「云何知漏？謂有三漏：欲漏、有漏、無明漏，是謂知漏。云何知漏所因生？謂無明也。因無明則便有漏，是謂知漏所因生。云何知漏有報？謂無明纏者，為諸漏所漬，彼因此受報，或得善處，或得惡處，是謂知漏有報。云何知漏勝如？謂或有漏生地獄中，或有漏生畜生中，或有漏生餓鬼中，或有漏生天上，或有漏生人間，是謂知漏勝如。云何知漏滅盡？謂無明滅，漏便滅，是謂知漏滅盡。云何知漏滅道？謂八支聖道，正見乃至正定為八，是謂知漏滅道。若比丘如是知漏，知漏所因生，知漏受報，知漏勝如，知漏滅盡，知漏滅道者，是謂達梵行，能盡一切漏。",
+   "T0057": "比丘便從佛聞。便說是：「比丘！當知漏，亦當知漏從本有，亦當知從漏受殃，亦當知漏分布，亦當知漏盡，亦當知受何行令漏畢。「比丘！當知痛，亦當知痛從本有，亦當知從痛受殃，亦當知痛分布，亦當知痛盡，亦當知受何行令痛畢。"
+  },
+  "a02": {
+   "an6.63": "Pañcime, bhikkhave, kāmaguṇā— cakkhuviññeyyā rūpā iṭṭhā kantā manāpā piyarūpā kāmūpasaṁhitā rajanīyā, sotaviññeyyā saddā … ghānaviññeyyā gandhā … jivhāviññeyyā rasā … kāyaviññeyyā phoṭṭhabbā iṭṭhā kantā manāpā piyarūpā kāmūpasaṁhitā rajanīyā. Api ca kho, bhikkhave, nete kāmā kāmaguṇā nāmete ariyassa vinaye vuccanti— Saṅkapparāgo purisassa kāmo, Nete kāmā yāni citrāni loke; Saṅkapparāgo purisassa kāmo, Tiṭṭhanti citrāni tatheva loke; Athettha dhīrā vinayanti chandanti. Katamo ca, bhikkhave, kāmānaṁ nidānasambhavo? Phasso, bhikkhave, kāmānaṁ nidānasambhavo. Katamā ca, bhikkhave, kāmānaṁ vemattatā? Añño, bhikkhave, kāmo rūpesu, añño kāmo saddesu, añño kāmo gandhesu, añño kāmo rasesu, añño kāmo phoṭṭhabbesu. Ayaṁ vuccati, bhikkhave, kāmānaṁ vemattatā. Katamo ca, bhikkhave, kāmānaṁ vipāko? Yaṁ kho, bhikkhave, kāmayamāno tajjaṁ tajjaṁ attabhāvaṁ abhinibbatteti puññabhāgiyaṁ vā apuññabhāgiyaṁ vā, ayaṁ vuccati, bhikkhave, kāmānaṁ vipāko. Katamo ca, bhikkhave, kāmanirodho? Phassanirodho, bhikkhave, kāmanirodho. Ayameva ariyo aṭṭhaṅgiko maggo kāmanirodhagāminī paṭipadā, seyyathidaṁ— sammādiṭṭhi, sammāsaṅkappo, sammāvācā, sammākammanto, sammāājīvo, sammāvāyāmo, sammāsati, sammāsamādhi. Yato kho, bhikkhave, ariyasāvako evaṁ kāme pajānāti, evaṁ kāmānaṁ nidānasambhavaṁ pajānāti, evaṁ kāmānaṁ vemattataṁ pajānāti, evaṁ kāmānaṁ vipākaṁ pajānāti, evaṁ kāmanirodhaṁ pajānāti, evaṁ kāmanirodhagāminiṁ paṭipadaṁ pajānāti, so imaṁ nibbedhikaṁ brahmacariyaṁ pajānāti kāmanirodhaṁ. Kāmā, bhikkhave, veditabbā …pe… kāmanirodhagāminī paṭipadā veditabbāti, iti yaṁ taṁ vuttaṁ idametaṁ paṭicca vuttaṁ. Vedanā, bhikkhave, veditabbā …pe… vedanānirodhagāminī paṭipadā veditabbāti, iti kho panetaṁ vuttaṁ. Kiñcetaṁ paṭicca vuttaṁ?",
+   "T0026-ma111": "「云何知欲？謂有五欲功德，可愛、可喜、美色、欲想應、甚可樂。云何為五？眼知色，耳知聲，鼻知香，舌知味，身知觸，是謂知欲。云何知欲所因生？謂更樂也。因更樂則便有欲，是謂知欲所因生。云何知欲有報？謂隨欲種愛樂著而住彼，因此受報有福處、無福處、不動處，是謂知欲有報。云何知欲勝如？謂或有欲欲色，或有欲欲聲，或有欲欲香，或有欲欲味，或有欲欲觸，是謂知欲勝如。云何知欲滅盡？謂更樂滅欲便滅，是謂知欲滅盡。云何知欲滅道？謂八支聖道，正見乃至正定為八，是謂知欲滅道。若比丘如是知欲，知欲所因生，知欲受報，知欲勝如，知欲滅盡，知欲滅道者，是謂達梵行，能盡一切欲。",
+   "T0057": "「比丘！當知愛欲，亦當知愛欲從本有，亦當知從愛欲受殃，亦當知愛欲分布，亦當知愛欲盡，亦當知受何行令愛欲畢。"
+  },
+  "a03": {
+   "an6.63": "Tisso imā, bhikkhave, vedanā— sukhā vedanā, dukkhā vedanā, adukkhamasukhā vedanā. Katamo ca, bhikkhave, vedanānaṁ nidānasambhavo? Phasso, bhikkhave, vedanānaṁ nidānasambhavo. Katamā ca, bhikkhave, vedanānaṁ vemattatā? Atthi, bhikkhave, sāmisā sukhā vedanā, atthi nirāmisā sukhā vedanā, atthi sāmisā dukkhā vedanā, atthi nirāmisā dukkhā vedanā, atthi sāmisā adukkhamasukhā vedanā, atthi nirāmisā adukkhamasukhā vedanā. Ayaṁ vuccati, bhikkhave, vedanānaṁ vemattatā. Katamo ca, bhikkhave, vedanānaṁ vipāko? Yaṁ kho, bhikkhave, vediyamāno tajjaṁ tajjaṁ attabhāvaṁ abhinibbatteti puññabhāgiyaṁ vā apuññabhāgiyaṁ vā, ayaṁ vuccati, bhikkhave, vedanānaṁ vipāko. Katamo ca, bhikkhave, vedanānirodho? Phassanirodho, bhikkhave, vedanānirodho. Ayameva ariyo aṭṭhaṅgiko maggo vedanānirodhagāminī paṭipadā, seyyathidaṁ— sammādiṭṭhi …pe… sammāsamādhi. Yato kho, bhikkhave, ariyasāvako evaṁ vedanaṁ pajānāti, evaṁ vedanānaṁ nidānasambhavaṁ pajānāti, evaṁ vedanānaṁ vemattataṁ pajānāti, evaṁ vedanānaṁ vipākaṁ pajānāti, evaṁ vedanānirodhaṁ pajānāti, evaṁ vedanānirodhagāminiṁ paṭipadaṁ pajānāti. So imaṁ nibbedhikaṁ brahmacariyaṁ pajānāti vedanānirodhaṁ. Vedanā, bhikkhave, veditabbā …pe… vedanānirodhagāminī paṭipadā veditabbāti, iti yaṁ taṁ vuttaṁ idametaṁ paṭicca vuttaṁ. Saññā, bhikkhave, veditabbā …pe… saññānirodhagāminī paṭipadā veditabbāti, iti kho panetaṁ vuttaṁ. Kiñcetaṁ paṭicca vuttaṁ?",
+   "T0026-ma111": "「云何知覺？謂有三覺：樂覺、苦覺、不苦不樂覺，是謂知覺。云何知覺所因生？謂更樂也。因更樂則便有覺，是謂知覺所因生。云何知覺有報？謂愛也。愛為覺報，是謂知覺有報。云何知覺勝如？謂比丘者，覺樂覺時便知覺樂覺，覺苦覺時便知覺苦覺，覺不苦不樂覺時便知覺不苦不樂覺，樂身、苦身、不苦不樂身，樂心、苦心、不苦不樂心，樂食、苦食、不苦不樂食，樂無食、苦無食、不苦不樂無食，樂欲、苦欲、不苦不樂欲，樂無欲、苦無欲覺、不苦不樂無欲覺時，便知覺不苦不樂無欲覺，是謂知覺勝如。云何知覺滅盡？謂更樂滅，覺便滅，是謂知覺滅盡。云何知覺滅道？謂八支聖道，正見乃至正定為八，是謂知覺滅道。若比丘如是知覺，知覺所因生，知覺有報，知覺勝如，知覺滅盡，知覺滅道者，是謂達梵行，能盡一切覺。"
+  },
+  "a04": {
+   "an6.63": "Chayimā, bhikkhave, saññā— rūpasaññā, saddasaññā, gandhasaññā, rasasaññā, phoṭṭhabbasaññā, dhammasaññā. Katamo ca, bhikkhave, saññānaṁ nidānasambhavo? Phasso, bhikkhave, saññānaṁ nidānasambhavo. Katamā ca, bhikkhave, saññānaṁ vemattatā? Aññā, bhikkhave, saññā rūpesu, aññā saññā saddesu, aññā saññā gandhesu, aññā saññā rasesu, aññā saññā phoṭṭhabbesu, aññā saññā dhammesu. Ayaṁ vuccati, bhikkhave, saññānaṁ vemattatā. Katamo ca, bhikkhave, saññānaṁ vipāko? Vohāravepakkaṁ, bhikkhave, saññaṁ vadāmi. Yathā yathā naṁ sañjānāti tathā tathā voharati, evaṁ saññī ahosinti. Ayaṁ vuccati, bhikkhave, saññānaṁ vipāko. Katamo ca, bhikkhave, saññānirodho? Phassanirodho, bhikkhave, saññānirodho. Ayameva ariyo aṭṭhaṅgiko maggo saññānirodhagāminī paṭipadā, seyyathidaṁ— sammādiṭṭhi …pe… sammāsamādhi. Yato kho, bhikkhave, ariyasāvako evaṁ saññaṁ pajānāti, evaṁ saññānaṁ nidānasambhavaṁ pajānāti, evaṁ saññānaṁ vemattataṁ pajānāti, evaṁ saññānaṁ vipākaṁ pajānāti, evaṁ saññānirodhaṁ pajānāti, evaṁ saññānirodhagāminiṁ paṭipadaṁ pajānāti, so imaṁ nibbedhikaṁ brahmacariyaṁ pajānāti saññānirodhaṁ. Saññā, bhikkhave, veditabbā …pe… saññānirodhagāminī paṭipadā veditabbāti. Iti yaṁ taṁ vuttaṁ idametaṁ paṭicca vuttaṁ. Āsavā, bhikkhave, veditabbā …pe… āsavanirodhagāminī paṭipadā veditabbāti, iti kho panetaṁ vuttaṁ. Kiñcetaṁ paṭicca vuttaṁ? Tayome, bhikkhave, āsavā— kāmāsavo, bhavāsavo, avijjāsavo. Katamo ca, bhikkhave, āsavānaṁ nidānasambhavo? Avijjā, bhikkhave, āsavānaṁ nidānasambhavo. Katamā ca, bhikkhave, āsavānaṁ vemattatā? Atthi, bhikkhave, āsavā nirayagamanīyā, atthi āsavā tiracchānayonigamanīyā, atthi āsavā pettivisayagamanīyā, atthi āsavā manussalokagamanīyā, atthi āsavā devalokagamanīyā. Ayaṁ vuccati, bhikkhave, āsavānaṁ vemattatā. Katamo ca, bhikkhave, āsavānaṁ vipāko? Yaṁ kho, bhikkhave, avijjāgato tajjaṁ tajjaṁ attabhāvaṁ abhinibbatteti puññabhāgiyaṁ vā apuññabhāgiyaṁ vā, ayaṁ vuccati, bhikkhave, āsavānaṁ vipāko. Katamo ca, bhikkhave, āsavanirodho? Avijjānirodho, bhikkhave, āsavanirodho. Ayameva ariyo aṭṭhaṅgiko maggo āsavanirodhagāminī paṭipadā, seyyathidaṁ— sammādiṭṭhi …pe… sammāsamādhi. Yato kho, bhikkhave, ariyasāvako evaṁ āsave pajānāti, evaṁ āsavānaṁ nidānasambhavaṁ pajānāti, evaṁ āsavānaṁ vemattataṁ pajānāti, evaṁ āsavānaṁ vipākaṁ pajānāti, evaṁ āsavānaṁ nirodhaṁ pajānāti, evaṁ āsavānaṁ nirodhagāminiṁ paṭipadaṁ pajānāti, so imaṁ nibbedhikaṁ brahmacariyaṁ pajānāti āsavanirodhaṁ. Āsavā, bhikkhave, veditabbā …pe… āsavanirodhagāminī paṭipadā veditabbāti. Iti yaṁ taṁ vuttaṁ idametaṁ paṭicca vuttaṁ.",
+   "T0026-ma111": "「云何知想？謂有四想。比丘者，小想亦知，大想亦知，無量想亦知，無所有處想亦知，是謂知想。云何知想所因生？謂更樂也。因更樂則便有想，是謂知想所因生。云何知想有報？謂說也。隨其想便說，是謂知想有報。云何知想勝如？謂或有想想色，或有想想聲，或有想想香，或有想想味，或有想想觸，是謂知想勝如。云何知想滅盡？謂更樂滅想便滅，是謂知想滅盡。云何知想滅道？謂八支聖道，正見乃至正定為八，是謂知想滅道。若比丘如是知想，知想所因生，知想有報，知想勝如，知想滅盡，知想滅道者，是謂達梵行，能盡一切想。",
+   "T0057": "「比丘！當知思想，亦當知思想從本有，亦當知從思想受殃，亦當知思想分布，亦當知思想盡，亦當知受何行令思想畢。"
+  },
+  "a05": {
+   "an6.63": "Kammaṁ, bhikkhave, veditabbaṁ …pe… kammanirodhagāminī paṭipadā veditabbāti, iti kho panetaṁ vuttaṁ. Kiñcetaṁ paṭicca vuttaṁ? Cetanāhaṁ, bhikkhave, kammaṁ vadāmi. Cetayitvā kammaṁ karoti— kāyena vācāya manasā. Katamo ca, bhikkhave, kammānaṁ nidānasambhavo? Phasso, bhikkhave, kammānaṁ nidānasambhavo. Katamā ca, bhikkhave, kammānaṁ vemattatā? Atthi, bhikkhave, kammaṁ nirayavedanīyaṁ, atthi kammaṁ tiracchānayonivedanīyaṁ, atthi kammaṁ pettivisayavedanīyaṁ, atthi kammaṁ manussalokavedanīyaṁ, atthi kammaṁ devalokavedanīyaṁ. Ayaṁ vuccati, bhikkhave, kammānaṁ vemattatā. Katamo ca, bhikkhave, kammānaṁ vipāko? Tividhāhaṁ, bhikkhave, kammānaṁ vipākaṁ vadāmi— diṭṭheva dhamme, upapajje vā, apare vā pariyāye. Ayaṁ vuccati, bhikkhave, kammānaṁ vipāko. Katamo ca, bhikkhave, kammanirodho? Phassanirodho, bhikkhave, kammanirodho. Ayameva ariyo aṭṭhaṅgiko maggo kammanirodhagāminī paṭipadā, seyyathidaṁ— sammādiṭṭhi …pe… sammāsamādhi. Yato kho, bhikkhave, ariyasāvako evaṁ kammaṁ pajānāti, evaṁ kammānaṁ nidānasambhavaṁ pajānāti, evaṁ kammānaṁ vemattataṁ pajānāti, evaṁ kammānaṁ vipākaṁ pajānāti, evaṁ kammanirodhaṁ pajānāti, evaṁ kammanirodhagāminiṁ paṭipadaṁ pajānāti, so imaṁ nibbedhikaṁ brahmacariyaṁ pajānāti kammanirodhaṁ. Kammaṁ, bhikkhave, veditabbaṁ …pe… kammanirodhagāminī paṭipadā veditabbāti, iti yaṁ taṁ vuttaṁ idametaṁ paṭicca vuttaṁ.",
+   "T0026-ma111": "「云何知業？謂有二業：思、已思業，是謂知業。云何知業所因生？謂更樂也。因更樂則便有業，是謂知業所因生。云何知業有報？謂或有業黑、有黑報，或有業白、有白報，或有業黑白、黑白報，或有業不黑不白、無報，業業盡，是謂知業有報。云何知業勝如？謂或有業生地獄中，或有業生畜生中，或有業生餓鬼中，或有業生天上，或有業生人間，是謂知業勝如。云何知業滅盡？謂更樂滅業便滅，是謂知業滅盡。云何知業滅道？謂八支聖道，正見乃至正定為八，是謂知業滅道。若比丘如是知業，知業所因生，知業有報，知業勝如，知業滅盡，知業滅道者，是謂達梵行，能盡一切業。",
+   "T0057": "「比丘！當知行，亦當知行從本有，亦當知從行受殃，亦當知行分布，亦當知行盡，亦當知受何行令行畢。"
+  },
+  "a06": {
+   "an6.63": "Dukkhaṁ, bhikkhave, veditabbaṁ, dukkhassa nidānasambhavo veditabbo, dukkhassa vemattatā veditabbā, dukkhassa vipāko veditabbo, dukkhanirodho veditabbo, dukkhanirodhagāminī paṭipadā veditabbāti. Iti kho panetaṁ vuttaṁ, kiñcetaṁ paṭicca vuttaṁ? Jātipi dukkhā, jarāpi dukkhā, byādhipi dukkho, maraṇampi dukkhaṁ, sokaparidevadukkhadomanassupāyāsāpi dukkhā, yampicchaṁ na labhati tampi dukkhaṁ, saṅkhittena pañcupādānakkhandhā dukkhā. Katamo ca, bhikkhave, dukkhassa nidānasambhavo? Taṇhā, bhikkhave, dukkhassa nidānasambhavo. Katamā ca, bhikkhave, dukkhassa vemattatā? Atthi, bhikkhave, dukkhaṁ adhimattaṁ, atthi parittaṁ, atthi dandhavirāgi, atthi khippavirāgi. Ayaṁ vuccati, bhikkhave, dukkhassa vemattatā. Katamo ca, bhikkhave, dukkhassa vipāko? Idha, bhikkhave, ekacco yena dukkhena abhibhūto pariyādinnacitto socati kilamati paridevati, urattāḷiṁ kandati, sammohaṁ āpajjati, yena vā pana dukkhena abhibhūto pariyādinnacitto bahiddhā pariyeṭṭhiṁ āpajjati: ‘ko ekapadaṁ dvipadaṁ jānāti imassa dukkhassa nirodhāyā’ti? Sammohavepakkaṁ vāhaṁ, bhikkhave, dukkhaṁ vadāmi pariyeṭṭhivepakkaṁ vā. Ayaṁ vuccati, bhikkhave, dukkhassa vipāko. Katamo ca, bhikkhave, dukkhanirodho? Taṇhānirodho, bhikkhave, dukkhanirodho. Ayameva ariyo aṭṭhaṅgiko maggo dukkhassa nirodhagāminī paṭipadā, seyyathidaṁ— sammādiṭṭhi …pe… sammāsamādhi. Yato kho, bhikkhave, ariyasāvako evaṁ dukkhaṁ pajānāti, evaṁ dukkhassa nidānasambhavaṁ pajānāti, evaṁ dukkhassa vemattataṁ pajānāti, evaṁ dukkhassa vipākaṁ pajānāti, evaṁ dukkhanirodhaṁ pajānāti, evaṁ dukkhanirodhagāminiṁ paṭipadaṁ pajānāti, so imaṁ nibbedhikaṁ brahmacariyaṁ pajānāti dukkhanirodhaṁ. Dukkhaṁ, bhikkhave, veditabbaṁ, dukkhassa nidānasambhavo veditabbo, dukkhassa vemattatā veditabbā, dukkhassa vipāko veditabbo, dukkhanirodho veditabbo, dukkhanirodhagāminī paṭipadā veditabbāti. Iti yaṁ taṁ vuttaṁ idametaṁ paṭicca vuttaṁ.",
+   "T0026-ma111": "「云何知苦？謂生苦、老苦、病苦、死苦、怨憎會苦、愛別離苦、所求不得苦、略五盛陰苦，是謂知苦。云何知苦所因生？謂愛也。因愛生苦，是謂知苦所因生。云何知苦有報？謂或有苦微遲滅，或有苦微疾滅，或有苦盛遲滅，或有苦盛疾滅，苦苦盡，是謂知苦有報。云何知苦勝如？謂不多聞愚癡凡夫，不遇善知識，不御聖法法，身生覺極苦甚重苦，命將欲絕，出此從外，更求於彼。或有沙門、梵志，持一句呪，或二、三、四、多句呪，或持百句呪，彼治我苦，如是因求生苦，因習生苦，苦滅，是謂知苦勝如。云何知苦滅盡？謂愛滅苦便滅，是謂知苦滅盡。云何知苦滅道？謂八支聖道，正見乃至正定為八，是謂知苦滅道。若比丘如是知苦，知苦所因生，知苦有報，知苦勝如，知苦滅盡。知苦滅道者，是謂達梵行，能盡一切苦。」佛說如是。彼諸比丘聞佛所說，歡喜奉行。達梵行經第五竟（一千六百四十二字）",
+   "T0057": "「比丘！當知苦，亦當知苦從本有，亦當知從苦受殃，亦當知苦分布，亦當知苦盡，亦當知受何行令苦畢。「比丘！當知漏，亦當知漏從本有，亦當知從漏受殃，亦當知漏分布，亦當知漏盡，亦當知受何行令漏畢。「何等為當知漏？謂有三漏：一為欲漏，二為有漏，三為癡漏；如是為知漏。「何等為當知漏從本有？謂癡為漏本，從是本有；如是為知漏從本有。「何等為當知從漏受殃？謂從癡行漏，所行如從，殃亦如行受，或墮好處或墮惡處；如是為知從漏受殃。「何等為當知漏分布？謂墮地獄是為行異，或墮畜生是為行異，或墮餓鬼是為行異，或墮天上是為行異，或墮人中是為行異；如是為知漏分布。「何等為當知漏盡？謂癡已盡，漏便盡、如便盡；如是為知漏盡。「何等為當知受行令漏畢？謂是八種道行：一為直見，二為直更，三為直語，四為直行，五為直業，六為直方便，七為直念，八為直定；如是為知受行令漏畢。若諸比丘！比丘已知漏如是，知漏從本有如是，知從漏受殃如是，知漏分布如是，知漏盡如是，知受行令漏畢如是，是名為比丘悔厭世間，行清淨，得道令漏盡畢。「比丘！當知痛，亦當知痛從本有，亦當知從痛受殃，亦當知痛分布，亦當知痛盡，亦當知受何行令痛畢。「何等為當知痛？謂有三痛：一為樂痛，二為苦痛，三為亦不樂亦不苦痛；如是為知痛。「何等為當知痛從本有？謂本思望；如是為知痛從本有。「何等為當知從痛受殃？謂有所思，更是為苦；如是為知從痛受殃。「何等為當知痛分布？在比丘！比丘樂痛更，樂痛更知；苦痛更，苦痛更知；不樂不苦痛更，不樂不苦痛更知；樂痛身更，樂痛身更知；苦痛身更，苦痛身更知；不樂不苦痛身更，不樂不苦痛身更知；樂痛念更，樂痛念更知；苦痛念更，苦痛念更知；不樂不苦痛念更，不樂不苦痛念更知；樂痛望得，樂痛望得知；苦痛望得，苦痛望得知；不樂不苦痛望得，不樂不苦痛望得知；樂痛不望得，樂痛不望得知；苦痛不望得，苦痛不望得知；不樂不苦痛不望得，不樂不苦痛不望得知。樂痛家中居，樂痛家中居知；苦痛家中居，苦痛家中居知；不樂不苦痛家中居，不樂不苦痛家中居知；樂痛離家中居，樂痛離家中居知；苦痛離家中居，苦痛離家中居知；不樂不苦痛離家中居，不樂不苦痛離家中居知；如是為知痛分布。「何等為當知痛盡？謂念思却，痛便盡；如是為知痛盡。「何等為當知受行令痛畢？謂是八種道行：一為直見，二為直更，三為直語，四為直行，五為直業，六為直方便，七為直念，八為直定；如是為知受行令痛畢。若比丘！比丘已知痛如是，知痛從本有如是，知從痛受殃如是，知痛分布如是，知痛盡如是，知受行令痛畢如是，名為比丘悔厭世間，行清淨，得道令痛盡畢。「比丘！當知思想，亦當知思想從本有，亦當知從思想受殃，亦當知思想分布，亦當知思想盡，亦當知受何行令思想畢。「何等為當知思想？謂有四思想：一為少思想，二為多思想，三為無有量思想，四為無所有不用思想；如是為知思想。「何等為當知思想從本有？謂本為思想；如是為知思想從本有。「何等為當知從思想受殃？謂如思想為，如思想行，是名為行；如是為知從思想受殃。「何等為當知思想分布？謂色思想為異，聲思想亦異，香思想亦異，味思想亦異，身更麤細思想亦異；如是為知思想分布。「何等為當知思想盡？謂思想已盡，思想便盡；如是為知思想盡。「何等為當知受行令思想畢？謂是八種道行：一為直見，二為直更，三為直語，四為直行，五為直業，六為直方便，七為直念，八為直定；如是為知受行令思想畢。若諸比丘！比丘已知思想如是，知思想從本有如是，知從思想受殃如是，知思想分布如是，知思想盡如是，知受行令思想畢如是，是名為比丘悔厭世間，行清淨，得道令思想盡畢。「比丘！當知愛欲，亦當知愛欲從本有，亦當知從愛欲受殃，亦當知愛欲分布，亦當知愛欲盡，亦當知受何行令愛欲畢。「何等為當知愛欲？謂愛欲為五種欲，得欲、最在心欲、愛色隨意可貪相近。何等為五？一為眼可色欲，得欲、最在心欲、愛色隨意可貪相近；二為耳可聲欲，得欲、最在心欲、愛色隨意可貪相近；三為鼻可香欲，得欲、最在心欲、愛色隨意可貪相近；四為口得味欲，得欲、最在心欲、愛色隨意可貪相近；五為身得麤細更知欲，得欲、最在心欲、愛色隨意可貪相近；如是為知愛欲。「何等為當知愛欲從本有？謂本為思；如是為知愛欲從本有。「何等為當知從愛欲受殃？若為所愛欲已，生欲望諍待向待，便如殃思待，便從是致殃隨，或好處或惡處；如是為知從愛欲受殃。「何等為當知愛欲分布？謂色愛欲為異，聲愛欲亦異，香愛欲亦異，味愛欲亦異，身更麤細愛欲亦異；如是為知愛欲分布。「何等為當知愛欲盡？謂思已盡，愛便盡；如是為知愛欲盡。「何等為當知受行令愛欲畢？謂是八種道行：一為直見，二為直更，三為直語，四為直行，五為直業，六為直方便，七為直念，八為直定；如是為知受行令愛欲畢。若諸比丘！已知愛欲如是，知愛欲從本有如是，知從愛欲受殃如是，知愛欲分布如是，知愛欲盡如是，知受行令愛欲畢如是，是名為比丘悔厭世間，行清淨，得道令愛欲盡畢。「比丘！當知行，亦當知行從本有，亦當知從行受殃福，亦當知行分布，亦當知行盡，亦當知受何行令行畢。「何等為當知行？謂所思念向、不離，是為行；如是為知行。「何等為當知行從本有？謂從愛欲有為，從愛行有本；如是為知行從本有。「何等為當知從行受殃福？謂有黑行為黑殃，令致墮下；有清白行，令清白福，行得上上；是為知從行受殃福。「何等為當知行分布？謂有黑行，從黑受殃；有清白行，從清白受清白福；有黑白行，令致黑白殃福；有亦非黑亦非清白行，令從是受福；行行盡畢，如是為知行分布。「何等為當知行盡？謂愛已盡，行便盡；如是為知行盡。「何等為當知受行令行畢？謂是八種道行：一為直見，二為直更，三為直語，四為直行，五為直業，六為直方便，七為直念，八為直定；如是為知受行令行畢。若諸比丘！比丘已知行如是，知行從本有如是，知從行受殃如是，知行分布如是，知行盡如是，知受行令行畢如是，是名為比丘悔厭世間，行清淨，得道令行盡畢。「比丘！當知苦，亦當知苦從本有，亦當知從苦受殃，亦當知苦分布，亦當知苦盡，亦當知受何行令苦畢。「何等為當知苦？謂當知生為苦，當知老為苦，當知病為苦，當知死為苦，當知近不相於為苦，當知愛別離為苦，當知所求不得為苦，當知卒五陰為苦；如是為知苦。「何等為當知苦從本有？謂本為癡，癡為苦本；如是為知苦從本有。「何等為當知從苦受殃？謂癡、未聞經、世間人，已身中更苦痛劇，劇苦最痛所不可意，應當從是念斷。為從外求念外有為，依外從求，為有沙門婆羅門，一言二言三言四言五言百言，持呪祠，令從是能得解身苦，如是求苦殃或苦殃；如是為知從苦受殃。「何等為當知苦分布？謂有苦少受殃久，或有苦少受殃疾解，或有苦多受殃久，或有苦多受殃疾解；如是為知苦分布。「何等為當知苦盡？謂癡已盡，苦便盡；如是為知苦盡。「何等為當知受行令苦畢？謂是八種道行：一為直見，二為直更，三為直語，四為直行，五為直業，六為直方便，七為直念，八為直定；如是為知受行令苦畢。若諸比丘！比丘已知苦如是，知苦從本有如是，知從苦受殃如是，知苦分布如是，知苦盡如是，知受行令苦畢如是，是名為比丘悔厭世間，行清淨，得道令苦盡畢。」佛說如是。比丘受著意，佛所說樂行，從行致清淨無為。"
+  },
+  "a07": {
+   "an6.63": "Ayaṁ kho so, bhikkhave, nibbedhikapariyāyo dhammapariyāyo”ti. Navamaṁ."
+  }
+ }
+}

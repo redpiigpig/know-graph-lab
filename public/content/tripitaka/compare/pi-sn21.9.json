@@ -1,0 +1,100 @@
+{
+ "slug": "pi-sn21.9",
+ "title": "別譯雜阿含經 （七）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "低沙請問"
+  },
+  {
+   "id": "a02",
+   "label": "世尊開示"
+  },
+  {
+   "id": "a03",
+   "label": "偈頌"
+  },
+  {
+   "id": "a04",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn21.9",
+   "lang": "pi",
+   "label": "巴利 SN21.9",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn21.9",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN21.9",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.7",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （七）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa1068",
+   "lang": "lzh",
+   "label": "雜阿含經 （一〇六八）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（七）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一〇六八）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn21.9": "Saṁyutta Nikāya 21.9 1. Bhikkhuvagga Tissasutta",
+   "nan-sn21.9": "〔九〕第九　低沙〔爾時，世尊〕住舍衛城。",
+   "T0100-sa-2.7": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。",
+   "T0099-sa1068": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。"
+  },
+  "a01": {
+   "sn21.9": "Sāvatthiyaṁ viharati. Atha kho āyasmā tisso bhagavato pitucchāputto yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdi dukkhī dummano assūni pavattayamāno. Atha kho bhagavā āyasmantaṁ tissaṁ etadavoca: “kiṁ nu kho tvaṁ, tissa, ekamantaṁ nisinno dukkhī dummano assūni pavattayamāno”ti? “Tathā hi pana maṁ, bhante, bhikkhū samantā vācāyasannitodakena sañjambharimakaṁsū”ti.",
+   "nan-sn21.9": "爾時，世尊叔父之子低沙，來詣世尊之處，詣已，禮敬世尊，悲哀而沈默、落淚，坐於一面。爾時，世尊對尊者低沙曰：「低沙！汝何故悲哀、沈默、落淚坐於一面耶？」「大德！時諸比丘對我以所有之語嘲笑、毀謗。」",
+   "T0100-sa-2.7": "爾時，有比丘名曰窒師，是佛姑子。恃佛故，恒懷憍慢，不敬長老有德比丘，無有慚愧，每常多言。若諸比丘少有所說，便生瞋恚。時，諸比丘見其如是，往詣佛所，合掌禮足，在一面坐。白佛言：「世尊！窒師比丘常生憍慢，自說我是佛姑之子，輕慢諸餘長老比丘，恒多言說。若諸比丘少有所說，便生瞋忿。」佛告諸比丘：「汝等今者可往喚彼窒師比丘。」諸比丘等受佛教已，往喚窒師。窒師受勅，即詣佛所，禮佛足已，在一面立。",
+   "T0099-sa1068": "爾時，尊者低沙自念，我是世尊姑子兄弟故，不修恭敬，無所顧錄，亦不畏懼，不堪諫止。時，有眾多比丘往詣佛所，稽首佛足，退坐一面，白佛言：「世尊！尊者低沙自念是世尊姑子兄弟故，不修恭敬，無所顧錄，亦不畏懼，不堪諫止。」爾時，世尊告一比丘：「汝往詣低沙比丘所，語言：『低沙！大師語汝！』」時，彼比丘受世尊教，往語低沙比丘言：「世尊語汝！」低沙比丘即詣佛所，稽首佛足，退住一面。"
+  },
+  "a02": {
+   "sn21.9": "“Tathāhi pana tvaṁ, tissa, vattā no ca vacanakkhamo; na kho te taṁ, tissa, patirūpaṁ kulaputtassa saddhā agārasmā anagāriyaṁ pabbajitassa, yaṁ tvaṁ vattā no ca vacanakkhamo. Etaṁ kho te, tissa, patirūpaṁ kulaputtassa saddhā agārasmā anagāriyaṁ pabbajitassa: ‘yaṁ tvaṁ vattā ca assa vacanakkhamo cā’”ti. Idamavoca bhagavā.",
+   "nan-sn21.9": "「低沙！汝非如是，然汝對其語不能忍者。低沙！汝非如是，如對其語不能忍，則良家之子由信出家為無家，於汝不適也。汝對其語忍之，則此良家之子由信出家為無家，於汝適宜者。」",
+   "T0100-sa-2.7": "如來爾時告窒師言：「汝見諸長宿比丘無恭敬心，無慚無愧，自多言說。若諸比丘少有所說，便生瞋忿。為實爾不？」窒師白言：「實爾，世尊。」佛告窒師：「汝今若是我姑之子，應於宿德長老諸比丘深生恭敬，有慚有愧，應自少語。聞他所說，宜應忍受。」",
+   "T0099-sa1068": "佛告低沙：「汝實作是念：『我是世尊姑子兄弟，不修恭敬，無所顧錄，亦不畏懼，不堪忍諫。』不？」低沙白佛：「實爾。世尊！」佛告低沙：「汝不應爾！汝應念言：『我是世尊姑子兄弟故，應修恭敬畏懼，堪忍諫止。』"
+  },
+  "a03": {
+   "sn21.9": "Idaṁ vatvāna sugato athāparaṁ etadavoca satthā: “Kiṁ nu kujjhasi mā kujjhi, Akkodho tissa te varaṁ; Kodhamānamakkhavinayatthañhi,",
+   "nan-sn21.9": "世尊說此，善逝仰此，師更如言曰：何故忿無忿\n低沙以無忿\n汝等是最勝\n降伏忿慢慳\n低沙住梵行",
+   "T0100-sa-2.7": "爾時，世尊即說偈言：「恒應修善莫生瞋，若生瞋恚名不善。",
+   "T0099-sa1068": "」爾時，世尊即說偈言：「善哉汝低沙，離瞋恚為善，\n莫生瞋恚心，瞋恚者非善。"
+  },
+  "a04": {
+   "sn21.9": "Tissa brahmacariyaṁ vussatī”ti. Navamaṁ.",
+   "T0100-sa-2.7": "窒師汝今於我所，宜應斷瞋及憍慢，\n習行諸善修梵行，若如是者我慶悅。」佛說是已，諸比丘聞佛所說，歡喜奉行。",
+   "T0099-sa1068": "若能離瞋慢，修行軟下心，\n然後於我所，修行於梵行。」佛說此經已，低沙比丘聞佛所說，歡喜隨喜，作禮而去。"
+  }
+ }
+}

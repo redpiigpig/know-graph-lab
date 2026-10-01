@@ -1,0 +1,107 @@
+{
+ "slug": "pi-sn1.15-sn9.12",
+ "title": "別譯雜阿含經 （三五五）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。複核標記存疑 1 段：義段2的巴利SN9.12與漢譯南傳SN9.12內容與義段1重複，實際應為世尊偈答，卻誤放為與義段1相同的敘述內容，構成對錯位置。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "經題與章節標題"
+  },
+  {
+   "id": "a01",
+   "label": "經文敘述與天神偈問"
+  },
+  {
+   "id": "a02",
+   "label": "世尊或比丘偈答",
+   "doubt": true
+  },
+  {
+   "id": "a03",
+   "label": "流通分或結證"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn1.15",
+   "lang": "pi",
+   "label": "巴利 SN1.15",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn1.15",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN1.15",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "sn9.12",
+   "lang": "pi",
+   "label": "巴利 SN9.12",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn9.12",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN9.12",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.355",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （三五五）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa1335",
+   "lang": "lzh",
+   "label": "雜阿含經 （一三三五）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（三五五）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一三三五）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn1.15": "Saṁyutta Nikāya 1.15 2. Nandanavagga Saṇamānasutta",
+   "nan-sn1.15": "〔一五〕大林鳴（寂靜身）",
+   "sn9.12": "Saṁyutta Nikāya 9.12 1. Vanavagga Majjhanhikasutta",
+   "nan-sn9.12": "〔一二〕第十二　中午（鳴動）",
+   "T0099-sa1335": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。"
+  },
+  "a01": {
+   "sn1.15": "“Ṭhite majjhanhike kāle, sannisīvesu pakkhisu; Saṇateva brahāraññaṁ, taṁ bhayaṁ paṭibhāti man”ti.",
+   "nan-sn1.15": "〔天神：〕麗日正盛時鳥停不飛動\n以鳴於大林恐怖以襲我",
+   "sn9.12": "Ekaṁ samayaṁ aññataro bhikkhu kosalesu viharati aññatarasmiṁ vanasaṇḍe. Atha kho tasmiṁ vanasaṇḍe adhivatthā devatā yena so bhikkhu tenupasaṅkami; upasaṅkamitvā tassa bhikkhuno santike imaṁ gāthaṁ abhāsi: “Ṭhite majjhanhike kāle, sannisīvesu pakkhisu; Saṇateva brahāraññaṁ, taṁ bhayaṁ paṭibhāti maṁ.",
+   "nan-sn9.12": "爾時，比丘住拘薩羅國之茂林。時，住其林一天神，來到比丘之處。到已，走近此比丘，以言偈曰：",
+   "T0100-sa-2.355": "爾時，復有一比丘，遊俱薩羅國，止一林中，於其日中，盛熱之時，心生不樂。",
+   "T0099-sa1335": "時，有異比丘於拘薩羅人間，住一林中，入晝正受。"
+  },
+  "a02": {
+   "sn1.15": "“Ṭhite majjhanhike kāle, sannisīvesu pakkhisu; Saṇateva brahāraññaṁ, sā rati paṭibhāti man”ti.",
+   "nan-sn1.15": "〔世尊：〕麗日正盛時鳥停不飛動\n於是大林鳴其樂現於我",
+   "sn9.12": "Ṭhite majjhanhike kāle, sannisīvesu pakkhisu; Saṇateva brahāraññaṁ, sā rati paṭibhāti man”ti.",
+   "nan-sn9.12": "在日之炎盛鳥停枝不動\n大林聲鳴放恐怖以襲我〔比丘：〕在日之炎盛鳥停枝不動\n大林聲鳴放我滿其快樂",
+   "T0100-sa-2.355": "時此比丘即說偈言：「日中既盛熱，林木甚欝蒸，\n眾禽以熱故，各自停不飛，\n布穀厲其聲，我聞生驚懼。」",
+   "T0099-sa1335": "時，彼比丘日中時，不樂心生，而說偈言：「於此日中時，眾鳥悉靜默，\n空野忽有聲，令我心恐怖。」"
+  },
+  "a03": {
+   "T0100-sa-2.355": "彼林天神聞此偈已，即說偈言：「日中盛熱時，眾鳥皆停住，\n布穀厲聲鳴，汝應生快樂，\n不應生怖懼，此處當畏誰？」",
+   "T0099-sa1335": "時，彼林中住止天神而說偈言：「於今日中時，眾鳥悉寂靜，\n空野忽有聲，應汝不樂心，\n汝當捨不樂，專樂修正受。」時，彼天子說偈覺悟彼比丘已，時，彼比丘專精思惟，捨除煩惱，得阿羅漢。"
+  }
+ }
+}

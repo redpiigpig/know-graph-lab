@@ -1,0 +1,153 @@
+{
+ "slug": "pi-mn11",
+ "title": "增壹阿含經 （二）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "佛告諸比丘說四沙門"
+  },
+  {
+   "id": "a02",
+   "label": "異學質問沙門數"
+  },
+  {
+   "id": "a03",
+   "label": "外道答說四沙門"
+  },
+  {
+   "id": "a04",
+   "label": "外道問四種清淨"
+  },
+  {
+   "id": "a05",
+   "label": "外道答四種清淨"
+  },
+  {
+   "id": "a06",
+   "label": "二見說明"
+  },
+  {
+   "id": "a07",
+   "label": "四取說明"
+  },
+  {
+   "id": "a08",
+   "label": "四取因緣說明"
+  },
+  {
+   "id": "a09",
+   "label": "結說佛能盡分別諸受"
+  },
+  {
+   "id": "a10",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "mn11",
+   "lang": "pi",
+   "label": "巴利 MN11",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-mn11",
+   "lang": "lzh",
+   "label": "漢譯南傳 MN11",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0125-ea27.2",
+   "lang": "lzh",
+   "label": "增壹阿含經 （二）",
+   "who": "東晉 瞿曇僧伽提婆譯",
+   "reorder": true
+  },
+  {
+   "id": "T0026-ma103",
+   "lang": "lzh",
+   "label": "中阿含經 （一〇三）因品師子吼經第七（第二小土城誦）",
+   "who": "東晉 瞿曇僧伽提婆譯"
+  }
+ ],
+ "works": [
+  "T0026",
+  "T0125"
+ ],
+ "anchors": [
+  {
+   "work": "T0125",
+   "node": "（二）",
+   "uid": "T02n0125_p0643c02"
+  },
+  {
+   "work": "T0026",
+   "node": "（一〇三）因品師子吼經第七（第二小土城誦）",
+   "uid": "T01n0026_p0590b05"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "mn11": "Majjhima Nikāya 11 Cūḷasīhanādasutta Evaṁ me sutaṁ—",
+   "nan-mn11": "第十一　獅子吼小經如是我聞。——",
+   "T0125-ea27.2": "聞如是：一時，佛在舍衛國祇樹給孤獨園。爾時，眾多比丘入舍衛城。時，眾多比丘便作是念：「然我等乞食日猶故早，我等可往至外道異學村與共論義。」是時，眾多比丘便往至外道村中。到已，共相問訊，在一面坐已，在一面坐。爾時，異學問道人曰：「沙門瞿曇與諸弟子而說此法：『汝等比丘，盡當學此法，悉當了知，以了知已，當共奉行。』我等亦與諸弟子而說此法：『汝等盡當而學此法，悉當了知，以了知已，當共奉行。』沙門瞿曇與我等有何等異？有何增減？所謂彼說法，我亦說法，彼教誨，我亦教誨。」爾時，眾多比丘聞此語已，亦不言是，復不言非，即從坐起而去。爾時，眾多比丘自相謂曰：「我等當以此義，往白世尊！」爾時，眾多比丘入舍衛城乞食，食已，收攝衣鉢，以尼師檀著左肩上，往詣世尊所，頭面禮足，在一面坐。",
+   "T0026-ma103": "我聞如是：一時，佛遊拘樓瘦，在劒磨瑟曇拘樓都邑。"
+  },
+  "a01": {
+   "mn11": "ekaṁ samayaṁ bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme. Tatra kho bhagavā bhikkhū āmantesi: “bhikkhavo”ti. “Bhadante”ti te bhikkhū bhagavato paccassosuṁ. Bhagavā etadavoca: “Idheva, bhikkhave, samaṇo, idha dutiyo samaṇo, idha tatiyo samaṇo, idha catuttho samaṇo; suññā parappavādā samaṇebhi aññehīti. Evametaṁ, bhikkhave, sammā sīhanādaṁ nadatha.",
+   "nan-mn11": "一時，世尊在舍衛城祇陀林給孤獨園。爾時，世尊呼諸比丘曰：「諸比丘！」彼等比丘應世尊曰：「世尊！」世尊如是曰：",
+   "T0125-ea27.2": "爾時，眾多比丘以此因緣，具白世尊。爾時，世尊告諸比丘：「若彼外道作此問者，汝等當以此語報彼曰：『為一究竟？為眾多究竟乎？』或能彼梵志平等說者，應作是說：『是一究竟，非眾多究竟。』彼究竟者，為是有欲究竟？為無欲究竟？所謂彼究竟者，謂無欲究竟。云何彼究竟者，有恚究竟？為無恚究竟？所謂彼究竟者，無恚究竟，非有恚究竟。云何有癡究竟？無癡究竟？所謂彼究竟者，無癡究竟。云何彼究竟者，為是有愛究竟？為無愛究竟？所謂彼究竟者，無愛究竟。云何彼究竟者，有受究竟？為無受究竟？所謂彼究竟者，無受究竟。云何彼究竟者，為是智者？為非智者？所謂智者所究竟。此究竟者，為是怒者所究竟？為非怒者所究竟？所謂此究竟，彼當作是說，非怒者所究竟。",
+   "T0026-ma103": "爾時，世尊告諸比丘：「此中有第一沙門，第二、第三、第四沙門，此外更無沙門、梵志，異道一切空無沙門、梵志。汝等隨在眾中，作如是正師子吼。"
+  },
+  "a02": {
+   "mn11": "Ṭhānaṁ kho panetaṁ, bhikkhave, vijjati yaṁ aññatitthiyā paribbājakā evaṁ vadeyyuṁ: ‘ko panāyasmantānaṁ assāso, kiṁ balaṁ, yena tumhe āyasmanto evaṁ vadetha— idheva samaṇo, idha dutiyo samaṇo, idha tatiyo samaṇo, idha catuttho samaṇo; suññā parappavādā samaṇebhi aññehī’ti? Evaṁvādino, bhikkhave, aññatitthiyā paribbājakā evamassu vacanīyā:",
+   "nan-mn11": "「諸比丘！『於此，有〔第一〕沙門（須陀洹果），又是處，有第二沙門、第三沙門、第四沙門（即斯陀含果，阿那含果、阿羅漢果）。然，於外道無可稱為沙門者也。』如是，汝等可作真正獅子吼。諸比丘！若有外道之行者問曰：『諸賢！依何確信依何力，諸賢作如是說耶？即：於此處，有〔第一沙門〕，又於此處，有第二沙門、第三沙門、第四沙門。然，於外道無可稱為沙門者何耶？』諸比丘！對作如是說之外道，應如是說，即：『諸賢！我等是從彼世尊、知者、見者、應供、等正覺者所說彼四法，其我等，我等於正見，故我等云是處有沙門……第四沙門；於外道無可稱為沙門者也。其四者何耶？曰：〔諸賢！〕我等對師有淨信；我等對法有淨信；於戒有成就圓滿；不論在家、出家，凡順從同法者，皆是我等之所愛、所好也。諸賢！此等四法，是我等從彼世尊、知者、見者、應供、等正覺者所說也。其我等，我等於正見故，我等云是處有沙門……第四沙門，於外道無可稱為沙門者也。』諸比丘！又，若有外道如次說：『諸賢！我等亦對吾師有淨信，彼是我等之師；我等亦對於法有淨信，此乃我等之法；我等亦於戒有成就圓滿，此等乃我等之戒。我等凡順從同法者，在家出家者，亦為我等所愛、所好也。諸賢！若然，於此，諸師與我等之間有如何區別、如何趣向、如何差異耶？』諸比丘！對作如是說之外道，〔應如是言：〕『諸賢！究竟是一耶？或種種耶？』對此，若外道即作正確解答：『究竟是一也，非種種也。』又問：『諸賢！彼之究竟是對有貪欲者或對離貪者耶？』對此，若外道作正確解答：『彼之究竟是對離貪者，非對有貪欲者也。』又更問：『諸賢！彼之究竟是對有瞋恚者？或對離瞋者耶？』對此，外道即作正確解答：『彼之究竟是對瞋恚者，或對離瞋恚者耶？』對此，外道作正確解答：『彼之究竟是對離瞋者，非對瞋恚者也。』復問：『諸賢！彼之究竟是對愚癡者？或對離癡者耶？』對此，外道作正確解答：『彼之究竟是對離癡者，非對愚癡者也。』復問：『諸賢！彼之究竟是對有渴愛者，或對離渴愛者耶？』對此，外道正確解答：『彼之究竟是對離渴愛者，非對有渴愛者也。』復問：『諸賢！彼之究竟是對有取者，或對無取者耶？』對此，外道正確解答：『彼之究竟是對無取者，非對有取者也。』復問：『諸賢！彼之究竟是對賢者，或對愚者耶？』對此，外道正確解答：『彼之究竟是對賢者，非對愚者也。』復問：『諸賢！彼之究竟是對樂觀者、或悲觀者耶？非對不樂觀者、不悲觀者耶？』對此，外道正確解答：『彼之究竟是非對不樂觀者、不悲觀者，非對樂觀者、悲觀者也。』復問：『諸賢！彼之究竟是對喜障、或樂障者耶？或對喜無障、樂無障者耶？』對此，外道正確解答：『彼之究竟是對喜無障、樂無障者，非對喜障、樂障者也。』",
+   "T0026-ma103": "比丘！或有異學來問汝等：『諸賢！汝有何行，有何力，有何智，令汝等作如是說：「此有第一沙門，第二、第三、第四沙門，此外更無沙門、梵志，異道一切空無沙門、梵志。汝等隨在眾中，作如是正師子吼。」』「比丘！汝等應如是答異學：『諸賢！我世尊有知有見，如來、無所著、等正覺說四法，因此四法故，令我等作如是說：「此有第一沙門，第二、第三、第四沙門，此外更無沙門、梵志，異道一切空無沙門、梵志，我等隨在眾中，作如是正師子吼。」云何為四？諸賢！我等信尊師、信法、信戒德具足，愛敬同道，恭恪奉事。諸賢！我世尊有知有見，如來、無所著、等正覺說此四法，因此四法故，令我等作如是說：「此有第一沙門，第二、第三、第四沙門，此外更無沙門、梵志，異道一切空無沙門、梵志，我等隨在眾中，作如是正師子吼。」』「比丘！異學或復作是說：『諸賢！我等亦信尊師，謂我尊師也。信法，謂我法也。戒德具足，謂我戒也。愛敬同道，恭恪奉事，謂我同道出家及在家者也。諸賢！沙門瞿曇及我等此二種說，有何勝，有何意，有何差別耶？』比丘！汝等應如是問異學：『諸賢！"
+  },
+  "a03": {
+   "mn11": "‘atthi kho no, āvuso, tena bhagavatā jānatā passatā arahatā sammāsambuddhena cattāro dhammā akkhātā ye mayaṁ attani sampassamānā evaṁ vadema— idheva samaṇo, idha dutiyo samaṇo, idha tatiyo samaṇo, idha catuttho samaṇo; suññā parappavādā samaṇebhi aññehīti. Katame cattāro? Atthi kho no, āvuso, satthari pasādo, atthi dhamme pasādo, atthi sīlesu paripūrakāritā; sahadhammikā kho pana piyā manāpā— gahaṭṭhā ceva pabbajitā ca. Ime kho no, āvuso, tena bhagavatā jānatā passatā arahatā sammāsambuddhena cattāro dhammā akkhātā ye mayaṁ attani sampassamānā evaṁ vadema— idheva samaṇo, idha dutiyo samaṇo, idha tatiyo samaṇo, idha catuttho samaṇo; suññā parappavādā samaṇebhi aññehī’ti."
+  },
+  "a04": {
+   "mn11": "Ṭhānaṁ kho panetaṁ, bhikkhave, vijjati yaṁ aññatitthiyā paribbājakā evaṁ vadeyyuṁ: ‘amhākampi kho, āvuso, atthi satthari pasādo yo amhākaṁ satthā, amhākampi atthi dhamme pasādo yo amhākaṁ dhammo, mayampi sīlesu paripūrakārino yāni amhākaṁ sīlāni, amhākampi sahadhammikā piyā manāpā— gahaṭṭhā ceva pabbajitā ca. Idha no, āvuso, ko viseso ko adhippayāso kiṁ nānākaraṇaṁ yadidaṁ tumhākañceva amhākañcā’ti?"
+  },
+  "a05": {
+   "mn11": "Evaṁvādino, bhikkhave, aññatitthiyā paribbājakā evamassu vacanīyā: ‘kiṁ panāvuso, ekā niṭṭhā, udāhu puthu niṭṭhā’ti? Sammā byākaramānā, bhikkhave, aññatitthiyā paribbājakā evaṁ byākareyyuṁ: ‘ekāvuso, niṭṭhā, na puthu niṭṭhā’ti. ‘Sā panāvuso, niṭṭhā sarāgassa udāhu vītarāgassā’ti? Sammā byākaramānā, bhikkhave, aññatitthiyā paribbājakā evaṁ byākareyyuṁ: ‘vītarāgassāvuso, sā niṭṭhā, na sā niṭṭhā sarāgassā’ti. ‘Sā panāvuso, niṭṭhā sadosassa udāhu vītadosassā’ti? Sammā byākaramānā, bhikkhave, aññatitthiyā paribbājakā evaṁ byākareyyuṁ: ‘vītadosassāvuso, sā niṭṭhā, na sā niṭṭhā sadosassā’ti. ‘Sā panāvuso, niṭṭhā samohassa udāhu vītamohassā’ti? Sammā byākaramānā, bhikkhave, aññatitthiyā paribbājakā evaṁ byākareyyuṁ: ‘vītamohassāvuso, sā niṭṭhā, na sā niṭṭhā samohassā’ti. ‘Sā panāvuso, niṭṭhā sataṇhassa udāhu vītataṇhassā’ti? Sammā byākaramānā, bhikkhave, aññatitthiyā paribbājakā evaṁ byākareyyuṁ: ‘vītataṇhassāvuso, sā niṭṭhā, na sā niṭṭhā sataṇhassā’ti. ‘Sā panāvuso, niṭṭhā saupādānassa udāhu anupādānassā’ti? Sammā byākaramānā, bhikkhave, aññatitthiyā paribbājakā evaṁ byākareyyuṁ: ‘anupādānassāvuso, sā niṭṭhā, na sā niṭṭhā saupādānassā’ti. ‘Sā panāvuso, niṭṭhā viddasuno udāhu aviddasuno’ti? Sammā byākaramānā, bhikkhave, aññatitthiyā paribbājakā evaṁ byākareyyuṁ: ‘viddasuno, āvuso, sā niṭṭhā, na sā niṭṭhā aviddasuno’ti. ‘Sā panāvuso, niṭṭhā anuruddhappaṭiviruddhassa udāhu ananuruddhaappaṭiviruddhassā’ti? Sammā byākaramānā, bhikkhave, aññatitthiyā paribbājakā evaṁ byākareyyuṁ: ‘ananuruddhaappaṭiviruddhassāvuso, sā niṭṭhā, na sā niṭṭhā anuruddhappaṭiviruddhassā’ti. ‘Sā panāvuso, niṭṭhā papañcārāmassa papañcaratino udāhu nippapañcārāmassa nippapañcaratino’ti? Sammā byākaramānā, bhikkhave, aññatitthiyā paribbājakā evaṁ byākareyyuṁ: ‘nippapañcārāmassāvuso, sā niṭṭhā nippapañcaratino, na sā niṭṭhā papañcārāmassa papañcaratino’ti."
+  },
+  "a06": {
+   "mn11": "Dvemā, bhikkhave, diṭṭhiyo— bhavadiṭṭhi ca vibhavadiṭṭhi ca. Ye hi keci, bhikkhave, samaṇā vā brāhmaṇā vā bhavadiṭṭhiṁ allīnā bhavadiṭṭhiṁ upagatā bhavadiṭṭhiṁ ajjhositā, vibhavadiṭṭhiyā te paṭiviruddhā. Ye hi keci, bhikkhave, samaṇā vā brāhmaṇā vā vibhavadiṭṭhiṁ allīnā vibhavadiṭṭhiṁ upagatā vibhavadiṭṭhiṁ ajjhositā, bhavadiṭṭhiyā te paṭiviruddhā. Ye hi keci, bhikkhave, samaṇā vā brāhmaṇā vā imāsaṁ dvinnaṁ diṭṭhīnaṁ samudayañca atthaṅgamañca assādañca ādīnavañca nissaraṇañca yathābhūtaṁ nappajānanti, te sarāgā te sadosā te samohā te sataṇhā te saupādānā te aviddasuno te anuruddhappaṭiviruddhā te papañcārāmā papañcaratino; te na parimuccanti jātiyā jarāya maraṇena sokehi paridevehi dukkhehi domanassehi upāyāsehi; ‘na parimuccanti dukkhasmā’ti vadāmi. Ye ca kho keci, bhikkhave, samaṇā vā brāhmaṇā vā imāsaṁ dvinnaṁ diṭṭhīnaṁ samudayañca atthaṅgamañca assādañca ādīnavañca nissaraṇañca yathābhūtaṁ pajānanti, te vītarāgā te vītadosā te vītamohā te vītataṇhā te anupādānā te viddasuno te ananuruddhaappaṭiviruddhā te nippapañcārāmā nippapañcaratino; te parimuccanti jātiyā jarāya maraṇena sokehi paridevehi dukkhehi domanassehi upāyāsehi; ‘parimuccanti dukkhasmā’ti vadāmi.",
+   "nan-mn11": "諸比丘！有此等二見，即：有見與無有見也。諸比丘！沙門、婆羅門而著有見、喜好有見、被有見所縛者，以無有見為障礙；又，沙門、婆羅門而著無有見，喜好無有見、被無有見所縛者，以有見為障礙。諸比丘！我說：實則，沙門、婆羅門而不如實知此等二見之集、滅、味、患、出離者，彼等是貪欲者、瞋恚者、愚癡者，有欲、有取，愚者，而喜樂觀者、悲觀者、喜障、樂障者也，彼等非徹底脫離生、老、死、愁、悲、苦、憂、惱，不解脫苦惱。然而，諸比丘！我說：沙門、婆羅門而如實知此等二見之集、滅、味、患、出離者，彼等是離貪者、離瞋者、離癡者離欲、無取、為智者而不樂觀不悲觀者、喜無障、樂無障者而徹底脫離脫生、老、死、愁、悲、苦、憂、惱，解脫苦也。",
+   "T0125-ea27.2": "「比丘！有此二見，云何為二見？所謂有見、無見。諸有沙門、婆羅門不知此二見之本末，彼便有欲心、有瞋恚心、有愚癡心、有愛心、有受心，彼是無知。彼有怒心，不與行相應，彼人不脫生、老、病、死、愁、憂、苦、惱，辛酸萬端不脫於苦。諸有沙門、婆羅門如實而知之，彼便無愚癡、瞋恚之心，恒與行相應，便得脫生、老、病、死。今說苦之元本。如是，比丘！有此妙法，斯名平等之法。諸不行平等法者，則墮五見。",
+   "T0026-ma103": "為一究竟，為眾多究竟耶？』比丘！若異學如是答：『諸賢！有一究竟，無眾多究竟。』比丘！汝等復問異學：『諸賢！為有欲者得究竟是耶？為無欲者得究竟是耶？』比丘！若異學如是答：『無欲者得究竟是，非有欲者得究竟是。』比丘！汝等復問異學：『諸賢！為有恚者得究竟是耶？為無恚者得究竟是耶？』比丘！若異學如是答：『無恚者得究竟是，非有恚者得究竟是。』比丘！汝等復問異學：『諸賢！為有癡者得究竟是耶？為無癡者得究竟是耶？』比丘，若異學如是答：『諸賢！無癡者得究竟是，非有癡者得究竟是。』「比丘！汝等復問異學：『諸賢！為有愛、有受者得究竟是耶？為無愛、無受者得究竟是耶？』比丘！若異學如是答：『諸賢！無愛、無受者得究竟是，非有愛、有受者得究竟是。』比丘！汝等復問異學：『諸賢！為無慧、不說慧者得究竟是耶？為有慧、說慧者得究竟是耶？』比丘！若異學如是答：『諸賢！有慧、說慧者得究竟是，非無慧、不說慧者得究竟是。』比丘！汝等復問異學：『諸賢！為有憎、有諍者得究竟是耶？為無憎、無諍者得究竟是耶？』比丘！若異學如是答：『諸賢！無憎、無諍者得究竟是，非有憎、有諍者得究竟是。』「比丘！汝等為異學應如是說：『諸賢！是為如汝等說有一究竟是，非眾多究竟是；無欲者得究竟是，非有欲者得究竟是；無恚者得究竟是，非有恚者得究竟是；無癡者得究竟是，非有癡者得究竟是；無愛、無受者得究竟是，非有愛、有受者得究竟是；有慧、說慧者得究竟是，非無慧、不說慧者得究竟是；無憎、無諍者得究竟是，非有憎、有諍者得究竟是。若有沙門、梵志依無量見，彼一切依猗二見，有見及無見也。若依有見者，彼便著有見，依猗有見，猗住有見，憎諍無見。若依無見者，彼便著無見，依猗無見，猗住無見，憎諍有見。「『若有沙門、梵志不知因、不知習、不知滅、不知盡、不知味、不知患、不知出要如真者，彼一切有欲、有恚、有癡、有愛、有受、無慧、非說慧、有憎、有諍，彼則不離生老病死，亦不能脫愁慼啼哭、憂苦懊惱，不得苦邊。若有沙門、梵志於此二見知因、知習、知滅、知盡、知味、知患、知出要如真者，彼一切無欲、無恚、無癡、無愛、無受、有慧、說慧、無憎、無諍，彼則得離生老病死，亦能得脫愁慼啼哭、憂苦懊惱，則得苦邊。「『或有沙門、梵志施設斷受，然不施設斷一切受，施設斷欲受，不施設斷戒受、見受、我受。所以者何？彼沙門、梵志不知三處如真。是故彼雖施設斷受，然不施設斷一切受。復有沙門、梵志施設斷受，然不施設斷一切受，施設斷欲受、戒受，不施設斷見受、我受。所以者何？彼沙門、梵志不知二處如真，是故彼雖施設斷受，然不施設斷一切受。復有沙門、梵志施設斷受，然不施設斷一切受，施設斷欲受、戒受、見受，不施設斷我受，所以者何？彼沙門、梵志不知一處如真，是故彼雖施設斷受，然不施設斷一切受。如是法、律，若信尊師者，彼非正、非第一，若信法者，亦非正、非第一，若具足戒德者，亦非正、非第一，若愛敬同道、恭恪奉事者，亦非正、非第一。「『若有如來出世，無所著、等正覺、明行成為、善逝、世間解、無上士、道法御、天人師，號佛、眾祐，彼施設斷受，於現法中施設斷一切受，施設斷欲受、戒受、見受、我受。"
+  },
+  "a07": {
+   "mn11": "Cattārimāni, bhikkhave, upādānāni. Katamāni cattāri? Kāmupādānaṁ, diṭṭhupādānaṁ, sīlabbatupādānaṁ, attavādupādānaṁ. Santi, bhikkhave, eke samaṇabrāhmaṇā sabbupādānapariññāvādā paṭijānamānā. Te na sammā sabbupādānapariññaṁ paññapenti— kāmupādānassa pariññaṁ paññapenti, na diṭṭhupādānassa pariññaṁ paññapenti, na sīlabbatupādānassa pariññaṁ paññapenti, na attavādupādānassa pariññaṁ paññapenti. Taṁ kissa hetu? Imāni hi te bhonto samaṇabrāhmaṇā tīṇi ṭhānāni yathābhūtaṁ nappajānanti. Tasmā te bhonto samaṇabrāhmaṇā sabbupādānapariññāvādā paṭijānamānā; te na sammā sabbupādānapariññaṁ paññapenti— kāmupādānassa pariññaṁ paññapenti, na diṭṭhupādānassa pariññaṁ paññapenti, na sīlabbatupādānassa pariññaṁ paññapenti, na attavādupādānassa pariññaṁ paññapenti. Santi, bhikkhave, eke samaṇabrāhmaṇā sabbupādānapariññāvādā paṭijānamānā. Te na sammā sabbupādānapariññaṁ paññapenti— kāmupādānassa pariññaṁ paññapenti, diṭṭhupādānassa pariññaṁ paññapenti, na sīlabbatupādānassa pariññaṁ paññapenti, na attavādupādānassa pariññaṁ paññapenti. Taṁ kissa hetu? Imāni hi te bhonto samaṇabrāhmaṇā dve ṭhānāni yathābhūtaṁ nappajānanti. Tasmā te bhonto samaṇabrāhmaṇā sabbupādānapariññāvādā paṭijānamānā; te na sammā sabbupādānapariññaṁ paññapenti— kāmupādānassa pariññaṁ paññapenti, diṭṭhupādānassa pariññaṁ paññapenti, na sīlabbatupādānassa pariññaṁ paññapenti, na attavādupādānassa pariññaṁ paññapenti. Santi, bhikkhave, eke samaṇabrāhmaṇā sabbupādānapariññāvādā paṭijānamānā. Te na sammā sabbupādānapariññaṁ paññapenti— kāmupādānassa pariññaṁ paññapenti, diṭṭhupādānassa pariññaṁ paññapenti, sīlabbatupādānassa pariññaṁ paññapenti, na attavādupādānassa pariññaṁ paññapenti. Taṁ kissa hetu? Imañhi te bhonto samaṇabrāhmaṇā ekaṁ ṭhānaṁ yathābhūtaṁ nappajānanti. Tasmā te bhonto samaṇabrāhmaṇā sabbupādānapariññāvādā paṭijānamānā; te na sammā sabbupādānapariññaṁ paññapenti— kāmupādānassa pariññaṁ paññapenti, diṭṭhupādānassa pariññaṁ paññapenti, sīlabbatupādānassa pariññaṁ paññapenti, na attavādupādānassa pariññaṁ paññapenti. Evarūpe kho, bhikkhave, dhammavinaye yo satthari pasādo so na sammaggato akkhāyati; yo dhamme pasādo so na sammaggato akkhāyati; yā sīlesu paripūrakāritā sā na sammaggatā akkhāyati; yā sahadhammikesu piyamanāpatā sā na sammaggatā akkhāyati. Taṁ kissa hetu? Evañhetaṁ, bhikkhave, hoti yathā taṁ durakkhāte dhammavinaye duppavedite aniyyānike anupasamasaṁvattanike asammāsambuddhappavedite. Tathāgato ca kho, bhikkhave, arahaṁ sammāsambuddho sabbupādānapariññāvādo paṭijānamāno sammā sabbupādānapariññaṁ paññapeti— kāmupādānassa pariññaṁ paññapeti, diṭṭhupādānassa pariññaṁ paññapeti, sīlabbatupādānassa pariññaṁ paññapeti, attavādupādānassa pariññaṁ paññapeti. Evarūpe kho, bhikkhave, dhammavinaye yo satthari pasādo so sammaggato akkhāyati; yo dhamme pasādo so sammaggato akkhāyati; yā sīlesu paripūrakāritā sā sammaggatā akkhāyati; yā sahadhammikesu piyamanāpatā sā sammaggatā akkhāyati. Taṁ kissa hetu? Evañhetaṁ, bhikkhave, hoti yathā taṁ svākkhāte dhammavinaye suppavedite niyyānike upasamasaṁvattanike sammāsambuddhappavedite.",
+   "nan-mn11": "諸比丘！此等有四取，何者為四？是愛取、見取、戒禁取及我論取也。或沙門、婆羅門雖自稱了知一切取論者，但彼等對一切取非能正確了知。即：雖了知愛取，並不了知見取、不了知戒禁取、不了知我論取。其故何耶？實彼等沙門、婆羅門不如實了知此等三事也。是故，彼等沙門、婆羅門雖自稱是一切取之了知論者，但彼等不正確了知一切取，即：雖彼表示了知愛取、不了知見取、不了知戒禁取、不了知我論取。諸比丘！又，或沙門、婆羅門雖自稱是一切取之了知論者，彼等不正確了知一切取，即：彼雖了知愛取、了知見取、但不了知戒禁取、不了知我論取也。其故何耶？實彼沙門、婆羅門不如實知此等二事也。是故，彼等沙門、婆羅門雖自稱是一切取之了知論者，彼等不正確了知一切取，即：彼雖了知愛取、見取、並不了知戒禁取、我論取。諸比丘！或沙門、婆羅門雖自稱是一切取之了知論者，彼等不正確了知一切取，即：彼雖了知愛取、見取、戒禁取，而不了知我論取。其故何耶？實彼等沙門、婆羅門不如實知此一事也。是故，彼等沙門、婆羅門雖自稱一切取之了知論者，彼等不正確了知一切取。即：雖彼了知愛取、見取、戒禁取，而不了知我論取。諸比丘！於如是法、律，雖言對師有淨信，但彼不謂達完全也；又，雖言對法有淨信，但不謂彼已達完全者；於戒雖言圓滿成就，不謂彼已達完全者；雖言於從同為順從法者而愛、喜好，但並不表示彼已達完全者。於順從同法者雖言愛、喜，其不謂完全達到其故何耶？彼是惡說、惡示、不導致解脫、不資益寂靜，此法此律非圓滿等正覺者所說。",
+   "T0125-ea27.2": "「今當說四受，云何為四受？所謂欲受、見受、戒受、我受，是謂四受。若有沙門、婆羅門盡知欲受之名，彼雖知欲受之名，復不相應者，彼盡分別諸受之名，先分別欲受之名，而不分別見受、戒受、我受之名。所以然者，以彼沙門、婆羅門不能分別此三受之名。是故，或有沙門、婆羅門盡分別此諸受，彼便分別欲受、見受，不分別戒受、我受。所以然者，以彼沙門、婆羅門不能分別二受。若使沙門、婆羅門盡能分別諸受，或復有不具者，彼便能分別欲受、見受、戒受，不分別我受。所以然者，以彼沙門、婆羅門不能分別我受故。是故，復有沙門、婆羅門盡分別諸受，然復有不具者。「此名四受，有何等義？云何分別？所謂四受者，由愛而生。如是，比丘！有是妙法所應分別。若有不行此諸受，此不名為平等。所以然者，諸法之義難了難解。如此非法之義者，非三耶三佛之所說也。"
+  },
+  "a08": {
+   "mn11": "Ime ca, bhikkhave, cattāro upādānā. Kiṁnidānā kiṁsamudayā kiṁjātikā kiṁpabhavā? Ime cattāro upādānā taṇhānidānā taṇhāsamudayā taṇhājātikā taṇhāpabhavā. Taṇhā cāyaṁ, bhikkhave, kiṁnidānā kiṁsamudayā kiṁjātikā kiṁpabhavā? Taṇhā vedanānidānā vedanāsamudayā vedanājātikā vedanāpabhavā. Vedanā cāyaṁ, bhikkhave, kiṁnidānā kiṁsamudayā kiṁjātikā kiṁpabhavā? Vedanā phassanidānā phassasamudayā phassajātikā phassapabhavā. Phasso cāyaṁ, bhikkhave, kiṁnidāno kiṁsamudayo kiṁjātiko kiṁpabhavo? Phasso saḷāyatananidāno saḷāyatanasamudayo saḷāyatanajātiko saḷāyatanapabhavo. Saḷāyatanañcidaṁ, bhikkhave, kiṁnidānaṁ kiṁsamudayaṁ kiṁjātikaṁ kiṁpabhavaṁ? Saḷāyatanaṁ nāmarūpanidānaṁ nāmarūpasamudayaṁ nāmarūpajātikaṁ nāmarūpapabhavaṁ. Nāmarūpañcidaṁ, bhikkhave, kiṁnidānaṁ kiṁsamudayaṁ kiṁjātikaṁ kiṁpabhavaṁ? Nāmarūpaṁ viññāṇanidānaṁ viññāṇasamudayaṁ viññāṇajātikaṁ viññāṇapabhavaṁ. Viññāṇañcidaṁ, bhikkhave, kiṁnidānaṁ kiṁsamudayaṁ kiṁjātikaṁ kiṁpabhavaṁ? Viññāṇaṁ saṅkhāranidānaṁ saṅkhārasamudayaṁ saṅkhārajātikaṁ saṅkhārapabhavaṁ. Saṅkhārā cime, bhikkhave, kiṁnidānā kiṁsamudayā kiṁjātikā kiṁpabhavā? Saṅkhārā avijjānidānā avijjāsamudayā avijjājātikā avijjāpabhavā.",
+   "nan-mn11": "諸比丘！如來、應供、等正覺者宣稱一切取之了知論者。示正確了知一切取，即：了知愛取、了知見取、示了知戒禁取、示了知我論取。諸比丘！於如是法、律，對師言有淨信者，彼可示達完全者；對法言有淨信者，彼可謂達完全者；於戒言圓滿成就者，彼應謂已達完全者；言於順從同法者，而謂愛、喜者，彼應謂已達完全者也。其故何耶？諸比丘！彼是善說、是善示、是導致解脫、資益寂靜，示等正覺者以如是於法、律也。",
+   "T0125-ea27.2": "「此四受由何而生？然此四受由愛而生，由愛而長。成就此受，彼便不能起於諸受；以不起諸受，則不恐懼，以不恐懼，便般涅槃：生死已盡，梵行已立，所造已辦，更不復受有，如實知之。如是，比丘！有此妙法，如實而知之，具足諸法、法行之本。所以然者，以其此法極微妙故，諸佛之所說，則於諸行無有缺漏。於是，比丘！有初沙門、第二沙門、第三沙門、第四沙門，更無復有沙門出此上者、能勝此者，作如是師子之吼。」",
+   "T0026-ma103": "此四受何因、何習，從何而生，以何為本？此四受因無明，習無明，從無明生，以無明為本。"
+  },
+  "a09": {
+   "mn11": "Yato ca kho, bhikkhave, bhikkhuno avijjā pahīnā hoti vijjā uppannā, so avijjāvirāgā vijjuppādā neva kāmupādānaṁ upādiyati, na diṭṭhupādānaṁ upādiyati, na sīlabbatupādānaṁ upādiyati, na attavādupādānaṁ upādiyati. Anupādiyaṁ na paritassati, aparitassaṁ paccattaññeva parinibbāyati. ‘Khīṇā jāti, vusitaṁ brahmacariyaṁ, kataṁ karaṇīyaṁ, nāparaṁ itthattāyā’ti pajānātī”ti. Idamavoca bhagavā.",
+   "nan-mn11": "諸比丘！此等四取是以何為緣？以何為集！以何為種？以何為因耶？曰：此等四取以渴愛為緣、渴愛為集、渴愛為種、渴愛為因也。諸比丘！又，此渴愛是以何為緣？以何為集？以何為種？以何為因耶？曰：渴愛是以受為緣、受為集、受為種、受為因也。諸比丘！又，此受是以何為緣？以何為集？以何為種？以何為因耶？曰：受是以觸為緣、觸為集、觸為種、觸為因也。諸比丘！此觸是以何為緣？以何為集？以何為種？以何為因耶？曰：觸是以六處為緣、六處為集、六處為種、六處為因也。復次，諸比丘！此六處是以何為緣？以何為集？以何為種？以何為因耶？曰：六處是以名色為緣、名色為集、名色為種、名色為因也。諸比丘！此之名色是以何為緣？以何為集？以何為種？以何為因耶？曰：名色是以識為緣、識為集、識為種、識為因也。復次，諸比丘！此之識是以何為緣？以何為集？以何為種？以何為因耶？曰：識是以行為緣、行為集、行為種、行為因也。諸比丘！此等行是以何為緣？以何為集？以何為種？以何為因耶？曰：行是以無明為緣、無明為集、無明為種、無明為因也。諸比丘！無明已捨、明已生之比丘，以離無明、明生而不取愛取、不取見取、不取戒禁取、不取我論取。不取者不焦躁，不焦躁者自證般涅槃，知生已盡，梵行已立，所作已作，不更受有此存在之狀態也。」",
+   "T0125-ea27.2": "比丘當知，如來盡能分別一切諸受，以能分別一切諸受，則與相應，則能分別欲受、見受、我受、戒受。是故，如來盡分別諸受，則與法共相應，無有相違。",
+   "T0026-ma103": "若有比丘無明已盡，明已生者，彼便從是不復更受欲受、戒受、見受、我受，彼不受已，則不恐怖，不恐怖已，便斷因緣，必般涅槃，生已盡，梵行已立，所作已辦，不更受有，知如真。如是正法、律，若信尊師者，是正、是第一，若信法者，是正、是第一，若戒德具足者，是正、是第一，若愛敬同道、恭恪奉事者，是正、是第一。』「諸賢！我等有是行，有是力，有是智，因此故令我等作如是說，此有第一沙門，第二、第三、第四沙門，此外更無沙門、梵志，異道一切空無沙門、梵志。以是故，我等隨在眾中，作如是正師子吼。」"
+  },
+  "a10": {
+   "mn11": "Attamanā te bhikkhū bhagavato bhāsitaṁ abhinandunti. Cūḷasīhanādasuttaṁ niṭṭhitaṁ paṭhamaṁ.",
+   "nan-mn11": "世尊如是說已，諸比丘歡喜信受世尊之所說。",
+   "T0125-ea27.2": "諸比丘聞佛所說，歡喜奉行。",
+   "T0026-ma103": "佛說如是。彼諸比丘聞佛所說，歡喜奉行。師子吼經第七竟（一千六百九十字）"
+  }
+ }
+}

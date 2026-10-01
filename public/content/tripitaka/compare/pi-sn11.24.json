@@ -1,0 +1,120 @@
+{
+ "slug": "pi-sn11.24",
+ "title": "別譯雜阿含經 （三七）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。複核標記存疑 1 段：義段5的別譯雜阿含經（三七）與雜阿含經（一一〇八）內容偏離原本偈頌，改為釋提桓因說法，實際屬於流通分內容，與巴利、南傳的偈頌段落不對應，屬於錯位。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "二比丘爭執"
+  },
+  {
+   "id": "a02",
+   "label": "眾比丘白佛"
+  },
+  {
+   "id": "a03",
+   "label": "佛陀詢問事由"
+  },
+  {
+   "id": "a04",
+   "label": "佛陀說愚者與智者"
+  },
+  {
+   "id": "a05",
+   "label": "釋提桓因過去偈頌",
+   "doubt": true
+  },
+  {
+   "id": "a06",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn11.24",
+   "lang": "pi",
+   "label": "巴利 SN11.24",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn11.24",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN11.24",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.37",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （三七）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa1108",
+   "lang": "lzh",
+   "label": "雜阿含經 （一一〇八）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（三七）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一一〇八）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn11.24": "Saṁyutta Nikāya 11.24 3. Tatiyavagga Accayasutta Sāvatthiyaṁ …pe… ārāme.",
+   "nan-sn11.24": "〔二四〕第四　罪過（無忿）〔爾時，世尊〕住舍衛城祇樹給孤獨園……",
+   "T0100-sa-2.37": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。爾時，世尊晨朝時到，著衣持鉢，入城乞食。食已，洗足，攝坐具，詣得眼林中，遍觀察已，於閑靜處，在樹下，結加趺坐，住於天住。",
+   "T0099-sa1108": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。爾時，世尊晨朝著衣持鉢，入舍衛城乞食。乞食已，還精舍，舉衣鉢，洗足已，持尼師壇，著右肩上，至安陀林，布尼師壇，坐一樹下，入晝正受。"
+  },
+  "a01": {
+   "sn11.24": "Tena kho pana samayena dve bhikkhū sampayojesuṁ. Tatreko bhikkhu accasarā. Atha kho so bhikkhu tassa bhikkhuno santike accayaṁ accayato deseti; so bhikkhu nappaṭiggaṇhāti.",
+   "nan-sn11.24": "其時，又有二比丘爭議。一比丘犯罪，另比丘以彼比丘當謝罪，彼比丘不許諾，因而起爭議。",
+   "T0100-sa-2.37": "爾時，耆陀精舍中，有二比丘於僧斷事時，共生忿諍，一小默然忍，一瞋熾盛。彼熾盛者，自見己過，而來歸向默忍比丘，求欲懺悔。默忍比丘，不受其懺。",
+   "T0099-sa1108": "爾時，祇桓中有兩比丘諍起，一人罵詈，一人默然。其罵詈者，即便改悔懺謝於彼，而彼比丘不受其懺，以不受懺故。"
+  },
+  "a02": {
+   "sn11.24": "Atha kho sambahulā bhikkhū yena bhagavā tenupasaṅkamiṁsu; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdiṁsu. Ekamantaṁ nisinnā kho te bhikkhū bhagavantaṁ etadavocuṁ:",
+   "nan-sn11.24": "時，甚多比丘來詣世尊處，禮敬世尊坐於一面，以此事白世尊：",
+   "T0100-sa-2.37": "如是展轉，諸比丘等共相論說，出大音聲。如來爾時住於天住，以淨天耳過於人耳，遙聞是聲，即從坐起，至於僧中，在於僧前，敷座而坐。佛告諸比丘：「我於今朝著衣持鉢，入城乞食，乃至來入林中靜坐，聞諸比丘高聲大喚，為作何事？」",
+   "T0099-sa1108": "時，精舍中眾多比丘共相勸諫，高聲閙亂。爾時，世尊以淨天耳過於人耳，聞祇桓中高聲閙亂。聞已，從禪覺，還精舍，於大眾前敷座而坐，告諸比丘：「我今晨朝乞食，還至安陀林，坐禪入晝正受，聞精舍中高聲大聲，紛紜閙亂，竟為是誰？」"
+  },
+  "a03": {
+   "sn11.24": "“idha, bhante, dve bhikkhū sampayojesuṁ, tatreko bhikkhu accasarā. Atha kho so, bhante, bhikkhu tassa bhikkhuno santike accayaṁ accayato deseti, so bhikkhu nappaṭiggaṇhātī”ti.",
+   "nan-sn11.24": "「世尊！二比丘起爭；一比丘犯罪，另比丘以彼比丘當謝罪，彼比丘不許諾。」",
+   "T0100-sa-2.37": "爾時，比丘即白佛言：「世尊！耆陀精舍有二比丘僧斷事時，共生忿諍。一比丘者，小自默忍；其一比丘，熾盛多語。熾盛比丘，自知己過，歸誠懺悔，默忍比丘，不受其懺。展轉共道，出大音聲。」",
+   "T0099-sa1108": "比丘白佛：「此精舍中有二比丘諍起，一比丘罵，一者默然。時，罵比丘尋向悔謝，而彼不受。緣不受故，多人勸諫，故致大聲，高聲閙亂。」"
+  },
+  "a04": {
+   "sn11.24": "“Dveme, bhikkhave, bālā. Yo ca accayaṁ accayato na passati, yo ca accayaṁ desentassa yathādhammaṁ nappaṭiggaṇhāti— ime kho, bhikkhave, dve bālā. Dveme, bhikkhave, paṇḍitā. Yo ca accayaṁ accayato passati, yo ca accayaṁ desentassa yathādhammaṁ paṭiggaṇhāti— ime kho, bhikkhave, dve paṇḍitā.",
+   "nan-sn11.24": "「諸比丘！於罪不見為罪之比丘，不許諾此如法以謝罪之比丘，兩者俱為愚者。」諸比丘！於罪見為罪之比丘，如法以謝罪，比丘許諾於此，此兩具賢者。",
+   "T0100-sa-2.37": "佛告比丘：「云何愚癡，不受他懺？",
+   "T0099-sa1108": "佛告比丘：「云何？比丘！愚癡之人，人向悔謝，不受其懺，若人懺而不受者，是愚癡人，長夜當得不饒益苦。"
+  },
+  "a05": {
+   "sn11.24": "Bhūtapubbaṁ, bhikkhave, sakko devānamindo sudhammāyaṁ sabhāyaṁ deve tāvatiṁse anunayamāno tāyaṁ velāyaṁ imaṁ gāthaṁ abhāsi: ‘Kodho vo vasamāyātu, Mā ca mittehi vo jarā; Agarahiyaṁ mā garahittha, Mā ca bhāsittha pesuṇaṁ; Atha pāpajanaṁ kodho, Pabbatovābhimaddatī’”ti.",
+   "nan-sn11.24": "諸比丘！遠昔天帝釋於正法殿，寬恕忉利諸天，其說此偈曰：勿往忿領域友情勿荒老\n勿以譏不譏勿云離間語\n如山倒擠人忿擠於惡者",
+   "T0100-sa-2.37": "諸比丘！當知昔日釋提桓因在善法堂諸天眾中，而說偈言：「『譬如用瓢器，斟酥以益燈，\n火然轉熾盛，反更燒瓢器。\n瞋心亦如是，還自燒善根，\n我終不含怒，瞋已尋復散。\n不如水㳬流，迴復無窮已，\n雖瞋不惡口，不觸汝所諱。\n所諱如要脈，我終不傷害，\n調伏於身已，於己即有利。\n無瞋無害者，彼即是賢聖，\n亦賢聖弟子，常應親近之。\n諸有瞋恚者，重障猶如山。\n若有瞋恚時，能少禁制者，\n是名為善業，如轡制惡馬。』",
+   "T0099-sa1108": "諸比丘！過去世時，釋提桓因有三十三天共諍，說偈教誡言：「『於他無害心，瞋亦不纏結，\n懷恨不經久，於瞋以不住。\n雖復瞋恚盛，不發於麁言，\n不求彼開節，揚人之虛短。\n常當自防護，以義內省察，\n不怒亦不害，常與賢聖俱。\n若與惡人俱，剛彊猶山石，\n盛恚能自持，如制逸馬車。\n我說為善御，非謂執繩者。』」佛告諸比丘：「釋提桓因於三十三天為自在王，常行忍辱，亦復讚歎行忍者。"
+  },
+  "a06": {
+   "T0100-sa-2.37": "」佛告諸比丘：「釋提桓因處天王位，天中自在，尚能修忍，讚嘆忍者，況汝比丘，出家毀形，而當不忍讚嘆於忍？」佛說是已，諸比丘聞佛所說，歡喜奉行。",
+   "T0099-sa1108": "汝等比丘正信非家，出家學道，當行忍辱，讚歎忍者，應當學！」佛說此經已，諸比丘聞佛所說，歡喜奉行。"
+  }
+ }
+}

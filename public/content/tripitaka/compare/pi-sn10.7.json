@@ -1,0 +1,145 @@
+{
+ "slug": "pi-sn10.7",
+ "title": "別譯雜阿含經 （三二一）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。複核標記存疑 1 段：義段2的巴利原文是世尊開示比丘，但漢譯南傳卻放了『爾時，世尊住舍衛城祇樹給孤獨園』，這明顯屬於序分或住處說明，與本段『比丘專心聽法』的主旨不符，屬於對錯位置。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "世尊說法"
+  },
+  {
+   "id": "a02",
+   "label": "比丘專心聽法",
+   "doubt": true
+  },
+  {
+   "id": "a03",
+   "label": "夜叉女勸子默聽"
+  },
+  {
+   "id": "a04",
+   "label": "夜叉女偈頌"
+  },
+  {
+   "id": "a05",
+   "label": "富那婆藪回應"
+  },
+  {
+   "id": "a06",
+   "label": "夜叉女讚歎"
+  },
+  {
+   "id": "a07",
+   "label": "富那婆藪自說偈頌"
+  },
+  {
+   "id": "a08",
+   "label": "母親結偈"
+  },
+  {
+   "id": "a09",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn10.7",
+   "lang": "pi",
+   "label": "巴利 SN10.7",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn10.7",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN10.7",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.321",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （三二一）",
+   "who": "失譯",
+   "reorder": true
+  },
+  {
+   "id": "T0099-sa1322",
+   "lang": "lzh",
+   "label": "雜阿含經 （一三二二）",
+   "who": "劉宋 求那跋陀羅譯",
+   "reorder": true
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（三二一）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一三二二）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn10.7": "Saṁyutta Nikāya 10.7 1. Indakavagga Punabbasusutta",
+   "nan-sn10.7": "〔七〕第七　富那婆藪",
+   "T0100-sa-2.321": "如是我聞：一時，佛在摩竭提國富那婆修夜叉母宮。",
+   "T0099-sa1322": "如是我聞：一時，佛在摩竭提國人間遊行，與大眾俱，到富那婆藪鬼子母住處宿。"
+  },
+  "a01": {
+   "sn10.7": "Ekaṁ samayaṁ bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme.",
+   "T0100-sa-2.321": "佛於其夜，在彼宮宿，其子夜叉婆修，及女優怛羅，夜中啼泣。",
+   "T0099-sa1322": "爾時，世尊為諸比丘說四聖諦相應法，所謂苦聖諦、苦集聖諦、苦滅聖諦、苦滅道跡聖諦。"
+  },
+  "a02": {
+   "sn10.7": "Tena kho pana samayena bhagavā bhikkhū nibbānapaṭisaṁyuttāya dhammiyā kathāya sandasseti samādapeti samuttejeti sampahaṁseti.",
+   "nan-sn10.7": "爾時，世尊住舍衛城祇樹給孤獨園。"
+  },
+  "a03": {
+   "sn10.7": "Te ca bhikkhū aṭṭhiṁ katvā manasi katvā sabbacetasā samannāharitvā ohitasotā dhammaṁ suṇanti.",
+   "nan-sn10.7": "其時，世尊就有關涅槃，說法教示、利益、鼓勵比丘等。彼等諸比丘、深切注意、虔誠、心意集中、傾耳諦聽。"
+  },
+  "a04": {
+   "sn10.7": "Atha kho punabbasumātā yakkhinī puttake evaṁ tosesi: “Tuṇhī uttarike hohi, tuṇhī hohi punabbasu; Yāvāhaṁ buddhaseṭṭhassa, dhammaṁ sossāmi satthuno. Nibbānaṁ bhagavā āha, sabbaganthappamocanaṁ; Ativelā ca me hoti, asmiṁ dhamme piyāyanā. Piyo loke sako putto, piyo loke sako pati; Tato piyatarā mayhaṁ, assa dhammassa magganā. Na hi putto pati vāpi, piyo dukkhā pamocaye; Yathā saddhammassavanaṁ, dukkhā moceti pāṇinaṁ. Loke dukkhaparetasmiṁ, Jarāmaraṇasaṁyute; Jarāmaraṇamokkhāya, Yaṁ dhammaṁ abhisambudhaṁ; Taṁ dhammaṁ sotumicchāmi,",
+   "nan-sn10.7": "時，富那婆藪母之夜叉女，以言告其子等：",
+   "T0100-sa-2.321": "其母爾時慰撫男女，欲令不啼，即說偈言：「富那婆修，及優怛羅，汝等今者，\n宜止啼聲。佛之世雄，所說法要，\n使我得聞，非父非母，能脫苦惱。\n唯有世尊，善巧說法，能令聞者，\n永離諸苦。一切眾生，隨於欲流，\n沒生死海，我欲聽法，斷斯欲流。",
+   "T0099-sa1322": "爾時，富那婆藪鬼母，兒富那婆藪及鬼女欝多羅，二鬼小兒夜啼。時，富那婆藪鬼母教其男女故，而說偈言：「汝富那婆藪，欝多羅莫啼，\n令我得聽聞，如來所說法。\n非父母能令，其子解脫苦，\n聞如來說法，其苦得解脫。\n世人隨愛欲，為眾苦所迫，\n如來為說法，令破壞生死。"
+  },
+  "a05": {
+   "sn10.7": "Tuṇhī hohi punabbasū”ti.",
+   "nan-sn10.7": "靜默鬱多羅富那婆當默\n我暫聞思惟無上佛師教\n世尊說涅槃解脫諸結縛\n我甚愛此法世我子可愛\n世我夫可愛然而求此法\n有勝過此等子夫雖可愛\n不能脫苦惱聽聞正法者\n令人解苦惱於世敗此惱\n迷之於老死為解脫老死\n證悟於正法我願聞此法\n富那婆當默",
+   "T0100-sa-2.321": "富那婆修，及優怛羅，是故汝等，\n宜應默然。」",
+   "T0099-sa1322": "我今欲聞法，汝等當默然，\n時富那婆藪，鬼女欝多羅。"
+  },
+  "a06": {
+   "sn10.7": "“Ammā na byāharissāmi, tuṇhībhūtāyamuttarā; Dhammameva nisāmehi, saddhammassavanaṁ sukhaṁ; Saddhammassa anaññāya, ammā dukkhaṁ carāmase. Esa devamanussānaṁ, sammūḷhānaṁ pabhaṅkaro; Buddho antimasārīro, dhammaṁ deseti cakkhumā”ti.",
+   "nan-sn10.7": "〔富那婆藪：〕母我乃不語靜默鬱多羅\n傾耳於法者聞法為快樂\n因不知正法母我迷苦惱\n此乃與迷於人天光輝者\n最後身佛陀有眼今說法〔夜叉女：〕善哉如是語我子寢我懷\n我子乃賢哉我子今愛樂\n無上佛所說無染淨白法\n子富那婆藪我今日心安\n解脫於輪迴以見於聖諦\n我子鬱多羅汝亦聞於我",
+   "T0100-sa-2.321": "善哉聞沙門，所說法之要。」",
+   "T0099-sa1322": "母今但善聽，世尊所說法。」"
+  },
+  "a07": {
+   "sn10.7": "“Sādhu kho paṇḍito nāma, putto jāto uresayo; Putto me buddhaseṭṭhassa, dhammaṁ suddhaṁ piyāyati.",
+   "T0100-sa-2.321": "時富那婆修，即說偈言：「我今隨母教，更不生音聲，\n小妹優怛羅，爾今亦默然，\n願聽彼沙門，說於微妙法。\n佛於摩竭提，人中最為上，\n廣為諸眾生，演說斷苦法。\n說苦能生苦，說苦出要道，\n說賢聖八道，安隱趣涅槃。",
+   "T0099-sa1322": "悉受其母語，默然而靜聽，\n語母言善哉，我亦樂聞法。\n此正覺世尊，於摩竭勝山，\n為諸眾生類，演說脫苦法。\n說苦及苦因，苦滅滅苦道，\n從此四聖諦，安隱趣涅槃。"
+  },
+  "a08": {
+   "sn10.7": "Punabbasu sukhī hohi, ajjāhamhi samuggatā;",
+   "T0100-sa-2.321": "母以偈答：「汝是知見者，所說稱我心，\n汝善讚歎彼，世間之導師。\n以汝等默故，令我見四諦，\n優怛羅後時，亦當見四諦。」",
+   "T0099-sa1322": "時，富那婆藪鬼母即說偈言：「奇哉智慧子，善能隨我心，\n汝富那婆藪，善歎佛導師。"
+  },
+  "a09": {
+   "sn10.7": "Diṭṭhāni ariyasaccāni, uttarāpi suṇātu me”ti.",
+   "T0099-sa1322": "汝富那婆藪，及汝欝多羅，\n當生隨喜心，我已見聖諦。」時，富那婆藪鬼母說是偈時，鬼子男女隨喜默然。"
+  }
+ }
+}

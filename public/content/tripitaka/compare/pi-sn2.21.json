@@ -1,0 +1,99 @@
+{
+ "slug": "pi-sn2.21",
+ "title": "別譯雜阿含經 （三〇一）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "天子現身說偈問法"
+  },
+  {
+   "id": "a02",
+   "label": "天子偈問（重複偈頌）"
+  },
+  {
+   "id": "a03",
+   "label": "世尊偈答"
+  },
+  {
+   "id": "a04",
+   "label": "流通分（天子歡喜離去）"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn2.21",
+   "lang": "pi",
+   "label": "巴利 SN2.21",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn2.21",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN2.21",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.301",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （三〇一）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa1302",
+   "lang": "lzh",
+   "label": "雜阿含經 （一三〇二）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（三〇一）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一三〇二）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn2.21": "Saṁyutta Nikāya 2.21 3. Nānātitthiyavagga Sivasutta Evaṁ me sutaṁ— ekaṁ samayaṁ bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme.",
+   "nan-sn2.21": "〔二一〕第一　濕婆如是我聞，爾時，世尊住舍衛城祇樹給孤獨園。時濕婆天子於黎明，其勝光徧照祇園，往詣世尊處，詣已，禮敬世尊，立於一面。",
+   "T0100-sa-2.301": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。",
+   "T0099-sa1302": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。"
+  },
+  "a01": {
+   "sn2.21": "Atha kho sivo devaputto abhikkantāya rattiyā abhikkantavaṇṇo kevalakappaṁ jetavanaṁ obhāsetvā yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ aṭṭhāsi.",
+   "nan-sn2.21": "立於一面之濕婆天子，於世尊前，唱此偈曰：",
+   "T0100-sa-2.301": "時有一天名曰尸毘，威光顯曜，顏色殊常，遍于祇洹，赫然大明，頂禮佛足，却坐一面，而說偈言：「應共誰止住？",
+   "T0099-sa1302": "時，有尸毘天子，容色絕妙，於後夜時來詣佛所，稽首佛足，退坐一面。其身光明遍照祇樹給孤獨園。"
+  },
+  "a02": {
+   "sn2.21": "Ekamantaṁ ṭhito kho sivo devaputto bhagavato santike imā gāthāyo abhāsi: “Sabbhireva samāsetha, sabbhi kubbetha santhavaṁ; Sataṁ saddhammamaññāya, seyyo hoti na pāpiyo. Sabbhireva samāsetha, sabbhi kubbetha santhavaṁ; Sataṁ saddhammamaññāya, paññā labbhati nāññato. Sabbhireva samāsetha, sabbhi kubbetha santhavaṁ; Sataṁ saddhammamaññāya, sokamajjhe na socati. Sabbhireva samāsetha, sabbhi kubbetha santhavaṁ; Sataṁ saddhammamaññāya, ñātimajjhe virocati. Sabbhireva samāsetha, sabbhi kubbetha santhavaṁ; Sataṁ saddhammamaññāya, sattā gacchanti suggatiṁ. Sabbhireva samāsetha, sabbhi kubbetha santhavaṁ; Sataṁ saddhammamaññāya, sattā tiṭṭhanti sātatan”ti.",
+   "nan-sn2.21": "只與善人坐只與善人交\n知善人正法為善不為惡\n只與善人坐只與善人交\n知善人正法依他不能得\n而得之智慧只與善人坐\n只與善人交知善人正法\n悲中無有悲只與善人坐\n只與善人交知善人正法\n輝耀親族中只與善人坐\n只與善人交知善人正法\n人人行善趣只與善人坐\n只與善人交知善人正法\n人人有幸福",
+   "T0100-sa-2.301": "宜與誰和合？\n於誰得正法，獲勝無過患？」",
+   "T0099-sa1302": "時，彼尸毘天子說偈問佛：「何人應同止？何等人共事？\n應知何等法，是轉勝非惡？」"
+  },
+  "a03": {
+   "sn2.21": "Atha kho bhagavā sivaṁ devaputtaṁ gāthāya paccabhāsi: “Sabbhireva samāsetha, sabbhi kubbetha santhavaṁ; Sataṁ saddhammamaññāya, sabbadukkhā pamuccatī”ti.",
+   "nan-sn2.21": "時世尊以偈答濕婆天子曰：只與善人坐只與善人交\n知善人正法可脫一切苦",
+   "T0100-sa-2.301": "爾時，世尊以偈答曰：「應共賢聖住，宜與賢和合，\n從賢諮正法，獲勝無𠎝過。」",
+   "T0099-sa1302": "爾時，世尊說偈答言：「與正士同止，正士共其事，\n應知正士法，是轉勝非惡。」"
+  },
+  "a04": {
+   "T0100-sa-2.301": "時尸毘天子聞佛所說，歡喜頂禮，還于天宮。",
+   "T0099-sa1302": "時，彼尸毘天子聞佛所說，歡喜隨喜，稽首佛足，即沒不現。"
+  }
+ }
+}

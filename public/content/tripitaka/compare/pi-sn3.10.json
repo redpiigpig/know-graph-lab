@@ -1,0 +1,121 @@
+{
+ "slug": "pi-sn3.10",
+ "title": "別譯雜阿含經 （六二）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。複核標記存疑 1 段：義段5的巴利與漢譯南傳內容實為偈頌（應屬義段4），而別譯與雜阿含才是真正的流通分，顯示巴利與漢譯南傳在此段錯置了內容。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "眾比丘入城乞食聞王縛人"
+  },
+  {
+   "id": "a02",
+   "label": "比丘白佛王縛人事"
+  },
+  {
+   "id": "a03",
+   "label": "世尊說偈"
+  },
+  {
+   "id": "a04",
+   "label": "偈頌"
+  },
+  {
+   "id": "a05",
+   "label": "流通分",
+   "doubt": true
+  },
+  {
+   "id": "a06",
+   "label": "嗢陀南"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn3.10",
+   "lang": "pi",
+   "label": "巴利 SN3.10",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn3.10",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN3.10",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.62",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （六二）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa1235",
+   "lang": "lzh",
+   "label": "雜阿含經 （一二三五）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（六二）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一二三五）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn3.10": "Saṁyutta Nikāya 3.10 1. Paṭhamavagga Bandhanasutta Tena kho pana samayena raññā pasenadinā kosalena mahājanakāyo bandhāpito hoti, appekacce rajjūhi appekacce andūhi appekacce saṅkhalikāhi.",
+   "nan-sn3.10": "〔一〇〕第十　縛",
+   "T0100-sa-2.62": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。",
+   "T0099-sa1235": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。"
+  },
+  "a01": {
+   "sn3.10": "Atha kho sambahulā bhikkhū pubbaṇhasamayaṁ nivāsetvā pattacīvaramādāya sāvatthiṁ piṇḍāya pavisiṁsu. Sāvatthiyaṁ piṇḍāya caritvā pacchābhattaṁ piṇḍapātapaṭikkantā yena bhagavā tenupasaṅkamiṁsu; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdiṁsu. Ekamantaṁ nisinnā kho te bhikkhū bhagavantaṁ etadavocuṁ:",
+   "nan-sn3.10": "又，其時，拘薩羅國之波斯匿王，捕縛甚多人。有者以繩、有者以網、有者以鎖〔縛之〕。",
+   "T0100-sa-2.62": "爾時波斯匿王，收攝剎利、毘舍、首陀羅、沙門、婆羅門，持戒、破戒出家，乃至伎兒、旃陀羅等，悉皆繫閉。",
+   "T0099-sa1235": "時，波斯匿王忿諸國人，多所囚執，若剎利、若婆羅門、若鞞舍、若首陀羅、若旃陀羅，持戒、犯戒，在家、出家，悉皆被錄，或鏁、或杻械、或以繩縛。"
+  },
+  "a02": {
+   "sn3.10": "“idha, bhante, raññā pasenadinā kosalena mahājanakāyo bandhāpito, appekacce rajjūhi appekacce andūhi appekacce saṅkhalikāhī”ti.",
+   "nan-sn3.10": "時，甚多比丘等，於晨早，著衣持鉢，入舍衛城行乞。舍衛城行乞食已，收放鉢後，詣世尊處。詣而禮敬世尊，坐於一面。",
+   "T0100-sa-2.62": "時，諸比丘入城乞食，聞如是上事，食已，洗足，往詣佛所，頂禮佛足，在一面坐，白佛言：「世尊！",
+   "T0099-sa1235": "時，有眾多比丘晨朝著衣持鉢，入舍衛城乞食，聞波斯匿王多所攝錄，乃至或鏁、或縛，乞食畢，還精舍，舉衣鉢，洗足已，往詣佛所，稽首佛足，退坐一面，白佛言：「世尊！"
+  },
+  "a03": {
+   "sn3.10": "Atha kho bhagavā etamatthaṁ viditvā tāyaṁ velāyaṁ imā gāthāyo abhāsi:",
+   "nan-sn3.10": "坐於一面之彼等諸比丘，白世尊曰：「世尊！彼拘薩羅國之波斯匿王，捕縛甚多人：有者以繩、有者以網、有者以鎖〔縛之〕。」",
+   "T0100-sa-2.62": "我等入城乞食，聞波斯匿王收攝剎利、毘舍、首陀羅、沙門、婆羅門、出家持戒、破戒，及伎兒、旃陀羅等，悉皆繫閉。」",
+   "T0099-sa1235": "我等今日眾多比丘入城乞食，聞波斯匿王多所收錄，乃至鏁縛。」"
+  },
+  "a04": {
+   "sn3.10": "“Na taṁ daḷhaṁ bandhanamāhu dhīrā, Yadāyasaṁ dārujaṁ pabbajañca; Sārattarattā maṇikuṇḍalesu, Puttesu dāresu ca yā apekkhā. Etaṁ daḷhaṁ bandhanamāhu dhīrā, Ohārinaṁ sithilaṁ duppamuñcaṁ; Etampi chetvāna paribbajanti, Anapekkhino kāmasukhaṁ pahāyā”ti.",
+   "nan-sn3.10": "時，世尊了知此義，於其時誦此偈曰：",
+   "T0100-sa-2.62": "爾時，世尊聞斯語已，即說偈言：「王者繫縛人，以鐵木及繩，\n賢聖觀斯事，深知非牢縛。\n若戀於妻子，錢財及珍寶，\n如是繫縛人，堅牢過於彼。\n妻子及財寶，愚人生繫著，\n其實如瀑流，漂沒諸凡夫。\n是以宜速逝，趣向於解脫。」",
+   "T0099-sa1235": "爾時，世尊即說偈言：「非繩鏁杻械，名曰堅固縛，\n染污心顧念，錢財寶妻子，\n是縛長且固，雖緩難可脫，\n慧者不顧念，世間五欲樂，\n是則斷諸縛，安隱永超世。」"
+  },
+  "a05": {
+   "sn3.10": "Paṭhamo vaggo.",
+   "nan-sn3.10": "鐵繩以及木或以葦之網\n賢者不云縛以心為迷醉\n寶玉及珠環又心繫妻子\n賢者云強縛牽引於此人\n雖緩亦難離無欲捨欲樂\n斷此而出家",
+   "T0100-sa-2.62": "佛說是已，諸比丘聞佛所說，歡喜奉行。",
+   "T0099-sa1235": "佛說此經已，諸比丘聞佛所說，歡喜奉行。"
+  },
+  "a06": {
+   "sn3.10": "Tassuddānaṁ Daharo puriso jarā, piyaṁ attānarakkhito; Appakā aḍḍakaraṇaṁ, mallikā yaññabandhananti.",
+   "nan-sn3.10": "此嗢陀南：幼少人及王愛者並自護\n少數與裁斷末利供與縛",
+   "T0100-sa-2.62": "三菩提及母愛己及護己\n捕魚并鹿穽慳并及命終\n祠祀及繫縛"
+  }
+ }
+}

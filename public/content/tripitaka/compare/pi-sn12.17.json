@@ -1,0 +1,168 @@
+{
+ "slug": "pi-sn12.17",
+ "title": "佛為阿支羅迦葉自化作苦經",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。複核標記存疑 1 段：義段10的內容實為義段9的重複或變體，而義段9在巴利本中已完整呈現，漢譯南傳SN12.17卻將義段9的內容切斷，將「四月別住試練」的後半段獨立成義段10，實為同一義段的錯位分割，導致義段10內容實為義段9的延續，構成對錯位。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "阿支羅迦葉三次請問"
+  },
+  {
+   "id": "a02",
+   "label": "世尊許可提問"
+  },
+  {
+   "id": "a03",
+   "label": "問答：苦是自作、他作等五種"
+  },
+  {
+   "id": "a04",
+   "label": "世尊答非無苦，苦是有"
+  },
+  {
+   "id": "a05",
+   "label": "阿支羅迦葉重複世尊答辭"
+  },
+  {
+   "id": "a06",
+   "label": "請世尊說苦法"
+  },
+  {
+   "id": "a07",
+   "label": "世尊說緣起法門"
+  },
+  {
+   "id": "a08",
+   "label": "阿支羅迦葉讚歎並求出家"
+  },
+  {
+   "id": "a09",
+   "label": "世尊說異學者出家須四月試練"
+  },
+  {
+   "id": "a10",
+   "label": "阿支羅迦葉願別住四年",
+   "doubt": true
+  },
+  {
+   "id": "a11",
+   "label": "阿支羅迦葉出家證果"
+  },
+  {
+   "id": "a12",
+   "label": "流通分：牛觸殺事及供養"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn12.17",
+   "lang": "pi",
+   "label": "巴利 SN12.17",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn12.17",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN12.17",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0099-sa302",
+   "lang": "lzh",
+   "label": "雜阿含經 （三〇二）",
+   "who": "劉宋 求那跋陀羅譯"
+  },
+  {
+   "id": "T0499",
+   "lang": "lzh",
+   "label": "佛為阿支羅迦葉自化作苦經",
+   "who": "失譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0499"
+ ],
+ "anchors": [
+  {
+   "work": "T0099",
+   "node": "（三〇二）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn12.17": "Saṁyutta Nikāya 12.17 2. Āhāravagga Acelakassapasutta",
+   "nan-sn12.17": "〔一七〕第七　阿支羅如是我聞。爾時世尊住王舍城竹林栗鼠養餌所。一時，世尊清晨，著衣持鉢，入王舍城行乞。",
+   "T0099-sa302": "如是我聞：一時，佛住王舍城耆闍崛山。爾時，世尊晨朝著衣持鉢，出耆闍崛山，入王舍城乞食。",
+   "T0499": "如是我聞：一時，佛住王舍城耆闍崛山。爾時，世尊晨朝著衣持鉢，出耆闍崛山，入王舍城乞食。"
+  },
+  "a01": {
+   "sn12.17": "Evaṁ me sutaṁ— ekaṁ samayaṁ bhagavā rājagahe viharati veḷuvane kalandakanivāpe. Atha kho bhagavā pubbaṇhasamayaṁ nivāsetvā pattacīvaramādāya rājagahaṁ piṇḍāya pāvisi. Addasā kho acelo kassapo bhagavantaṁ dūratova āgacchantaṁ. Disvāna yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavatā saddhiṁ sammodi. Sammodanīyaṁ kathaṁ sāraṇīyaṁ vītisāretvā ekamantaṁ aṭṭhāsi. Ekamantaṁ ṭhito kho acelo kassapo bhagavantaṁ etadavoca:",
+   "nan-sn12.17": "阿支羅迦葉，見世尊從遠處來，見已而走近世尊，近而與世尊俱相致問及交談、可記憶之語，而立於一面。立於一面之阿支羅迦葉，白世尊言：「我等向尊者瞿曇以問瑣事，若蒙尊者瞿曇允諾，請答所問。」「迦葉！今乃非問之時，我等即將行入聚落。」阿支羅迦葉，再白世尊言：「我等向尊者瞿曇以問瑣事，若尊者瞿曇允諾、請答所問。」「迦葉，今乃非問之時，我等將行入聚落。」阿支羅迦葉三度如是曰……非問之時，我等將行入聚落。",
+   "T0099-sa302": "時，有阿支羅迦葉為營小事，出王舍城，向耆闍崛山，遙見世尊。見已，詣佛所，白佛言：「瞿曇！欲有所問，寧有閑暇見答與不？」佛告迦葉：「今非論時，我今入城乞食，來還則是其時，當為汝說。」第二亦如是說，第三復問：「瞿曇！何為我作留難？瞿曇！云何有異？我今欲有所問，為我解說。」",
+   "T0499": "時有阿支羅迦葉，為營小事，出王舍城，向耆闍崛山。遙見世尊，見已詣佛所，白佛言：「瞿曇！欲有所問，寧有閑暇見答與不？」佛告迦葉：「今非論時，我今入城乞食，來還則是其時，當為汝說。」第二亦如是說，第三復問：「瞿曇！何為我作留難？瞿曇！云何有異？我今欲有所問，為我解說。」"
+  },
+  "a02": {
+   "sn12.17": "“puccheyyāma mayaṁ bhavantaṁ gotamaṁ kañcideva desaṁ, sace no bhavaṁ gotamo okāsaṁ karoti pañhassa veyyākaraṇāyā”ti. “Akālo kho tāva, kassapa, pañhassa; antaragharaṁ paviṭṭhamhā”ti. Dutiyampi kho acelo kassapo bhagavantaṁ etadavoca: “puccheyyāma mayaṁ bhavantaṁ gotamaṁ kañcideva desaṁ, sace no bhavaṁ gotamo okāsaṁ karoti pañhassa veyyākaraṇāyā”ti. “Akālo kho tāva, kassapa, pañhassa; antaragharaṁ paviṭṭhamhā”ti. Tatiyampi kho acelo kassapo …pe… antaragharaṁ paviṭṭhamhāti.",
+   "nan-sn12.17": "如是說時，阿支羅迦葉向世尊如是言：「非多，我等唯欲向尊者瞿曇稍問而已。」「迦葉！汝欲問者、即問之。」",
+   "T0099-sa302": "佛告阿支羅迦葉：「隨汝所問。」",
+   "T0499": "佛告阿支羅迦葉：「隨汝所問。」"
+  },
+  "a03": {
+   "sn12.17": "Evaṁ vutte, acelo kassapo bhagavantaṁ etadavoca: “na kho pana mayaṁ bhavantaṁ gotamaṁ bahudeva pucchitukāmā”ti. “Puccha, kassapa, yadākaṅkhasī”ti. “Kiṁ nu kho, bho gotama, ‘sayaṅkataṁ dukkhan’ti? ‘Mā hevaṁ, kassapā’ti bhagavā avoca. ‘Kiṁ pana, bho gotama, paraṅkataṁ dukkhan’ti? ‘Mā hevaṁ, kassapā’ti bhagavā avoca. ‘Kiṁ nu kho, bho gotama, sayaṅkatañca paraṅkatañca dukkhan’ti? ‘Mā hevaṁ, kassapā’ti bhagavā avoca. ‘Kiṁ pana, bho gotama, asayaṅkāraṁ aparaṅkāraṁ adhiccasamuppannaṁ dukkhan’ti? ‘Mā hevaṁ, kassapā’ti bhagavā avoca.",
+   "nan-sn12.17": "「瞿曇！苦是自作耶？如何？」世尊曰：「迦葉！並不然！」「瞿曇！苦是他作耶？如何？」世尊曰：「迦葉！並不然！」「瞿曇！苦是自作而他作耶？」世尊曰：「迦葉！並不然！」「瞿曇！苦非自作、非他作、是無因生耶？如何？」世尊曰：「迦葉！並不然！」",
+   "T0099-sa302": "阿支羅迦葉白佛言：「云何，瞿曇！苦自作耶？」佛告迦葉：「苦自作者，此是無記。」迦葉復問：「云何，瞿曇！苦他作耶？」佛告迦葉：「苦他作者，此亦無記。」迦葉復問：「苦自他作耶？」佛告迦葉：「苦自他作，此亦無記。」迦葉復問：「云何，瞿曇！苦非自非他無因作耶？」佛告迦葉：「苦非自非他無因作者，此亦無記。」迦葉復問：「云何 ，瞿曇！所問：『苦自作耶？』答言：『無記』；『他作耶？』『自他作耶？』『非自非他無因作耶？』答言：『無記』？",
+   "T0499": "阿支羅迦葉白佛言：「云何——瞿曇！——苦自作耶？」佛告迦葉：「苦自作者，此是無記。」迦葉復問：「云何——瞿曇！——苦他作耶？」佛告迦葉：「苦他作者，此亦無記。」迦葉復問：「苦自、他作耶？」佛告迦葉：「苦自、他作，此亦無記。」迦葉復問：「云何——瞿曇！——苦非自非他、無因作耶？」佛告迦葉：「苦非自非他、無因作者，此亦無記。」迦葉復問：「瞿曇！所問：『苦自作耶？』答言：『無記』；『他作耶？』『自、他作耶？』『非自非他、無因作耶？』"
+  },
+  "a04": {
+   "sn12.17": "‘Kiṁ nu kho, bho gotama, natthi dukkhan’ti? ‘Na kho, kassapa, natthi dukkhaṁ. Atthi kho, kassapa, dukkhan’ti. ‘Tena hi bhavaṁ gotamo dukkhaṁ na jānāti, na passatī’ti. ‘Na khvāhaṁ, kassapa, dukkhaṁ na jānāmi, na passāmi. Jānāmi khvāhaṁ, kassapa, dukkhaṁ; passāmi khvāhaṁ, kassapa, dukkhan’”ti.",
+   "nan-sn12.17": "「瞿曇！苦是無耶？如何？」世尊曰：「迦葉！苦非無，迦葉！苦是有。」「然則，尊者瞿曇，不知苦，不見苦耶？」「迦葉！我非不知苦，非不見苦；迦葉！我知苦；迦葉！我見苦。」「『瞿曇！苦是自作耶？如何？』之問，沙門答云：『迦葉，不然。』『瞿曇！苦是他作耶？』如何？之問，沙門答云：『迦葉！並不然。』『瞿曇！苦是自作而他作耶？如何？』之間，沙門答云：『迦葉！並不然。』『瞿曇！苦是非自作、非他作、無因生耶？如何？』之問，沙門答云：『迦葉！並不然。』『瞿曇！苦是無，如何？』之問，沙門答云：『迦葉！苦非無、苦是有。』『然則，尊者瞿曇乃不知苦、不見苦耶？』之問，沙門答云：『迦葉！我非不知苦；迦葉！我非不見苦；迦葉！我知苦；迦葉！我見苦。』大德！世尊請以苦示我。大德！世尊請以苦說示於我。」「迦葉！如作者與受者是同一，汝先以苦是自作者，如是之所說者，是墮於常見者。迦葉！如作者與受者是相異，於受重壓者苦是他作者，如是之所說者，是墮於斷見者。",
+   "T0099-sa302": "今無此苦耶？」佛告迦葉：「非無此苦，然有此苦。」",
+   "T0499": "答言：『無記』——今無此苦耶？」佛告迦葉：「非無此苦，然有此苦。」"
+  },
+  "a05": {
+   "sn12.17": "“Kiṁ nu kho, bho gotama, ‘sayaṅkataṁ dukkhan’ti iti puṭṭho samāno ‘mā hevaṁ, kassapā’ti vadesi. ‘Kiṁ pana, bho gotama, paraṅkataṁ dukkhan’ti iti puṭṭho samāno ‘mā hevaṁ, kassapā’ti vadesi. ‘Kiṁ nu kho, bho gotama, sayaṅkatañca paraṅkatañca dukkhan’ti iti puṭṭho samāno ‘mā hevaṁ, kassapā’ti vadesi. ‘Kiṁ pana, bho gotama, asayaṅkāraṁ aparaṅkāraṁ adhiccasamuppannaṁ dukkhan’ti iti puṭṭho samāno ‘mā hevaṁ, kassapā’ti vadesi. ‘Kiṁ nu kho, bho gotama, natthi dukkhan’ti iti puṭṭho samāno ‘na kho, kassapa, natthi dukkhaṁ, atthi kho, kassapa, dukkhan’ti vadesi. ‘Tena hi bhavaṁ gotamo dukkhaṁ na jānāti na passatī’ti iti puṭṭho samāno ‘na khvāhaṁ, kassapa, dukkhaṁ na jānāmi na passāmi. Jānāmi khvāhaṁ, kassapa, dukkhaṁ; passāmi khvāhaṁ, kassapa, dukkhan’ti vadesi."
+  },
+  "a06": {
+   "sn12.17": "Ācikkhatu ca me, bhante, bhagavā dukkhaṁ. Desetu ca me, bhante, bhagavā dukkhan”ti.",
+   "T0099-sa302": "迦葉白佛言：「善哉！瞿曇！說有此苦，為我說法，令我知苦見苦。」",
+   "T0499": "迦葉白佛言：「善哉！瞿曇！說有此苦，為我說法，令我知苦見苦。」"
+  },
+  "a07": {
+   "sn12.17": "“‘So karoti so paṭisaṁvedayatī’ti kho, kassapa, ādito sato ‘sayaṅkataṁ dukkhan’ti iti vadaṁ sassataṁ etaṁ pareti. ‘Añño karoti añño paṭisaṁvedayatī’ti kho, kassapa, vedanābhitunnassa sato ‘paraṅkataṁ dukkhan’ti iti vadaṁ ucchedaṁ etaṁ pareti. Ete te, kassapa, ubho ante anupagamma majjhena tathāgato dhammaṁ deseti: ‘avijjāpaccayā saṅkhārā; saṅkhārapaccayā viññāṇaṁ …pe… evametassa kevalassa dukkhakkhandhassa samudayo hoti. Avijjāya tveva asesavirāganirodhā saṅkhāranirodho; saṅkhāranirodhā viññāṇanirodho …pe… evametassa kevalassa dukkhakkhandhassa nirodho hotī’”ti.",
+   "nan-sn12.17": "迦葉！如來說：離此等兩極端之法。緣無明而有行，緣行而有識……如是則為全苦蘊之集。由無明之無餘、離貪滅，乃行滅，由行滅乃識滅……如是則是全苦蘊之滅。」",
+   "T0099-sa302": "佛告迦葉：「若受即自受者，我應說苦自作。若他受他即受者，是則他作。若受自受、他受復與苦者，如是者自他作，我亦不說。若不因自他，無因而生苦者，我亦不說。離此諸邊，說其中道，如來說法，此有故彼有，此起故彼起，謂緣無明行，乃至純大苦聚集，無明滅則行滅，乃至純大苦聚滅。」",
+   "T0499": "佛告迦葉：「若受即自受者，我應說苦自作；若他受他即受者，是則他作；若受自受、受他受復與苦者，如是者自他作，我亦不說；若不因自、他，無因而生苦者，我亦不說。離此諸邊，說其中道。如來說法此有故彼有，此起故彼起；謂緣無明行乃至純大苦聚集，無明滅則行滅，乃至純大苦聚滅。」"
+  },
+  "a08": {
+   "sn12.17": "Evaṁ vutte, acelo kassapo bhagavantaṁ etadavoca: “abhikkantaṁ, bhante, abhikkantaṁ, bhante. Seyyathāpi, bhante, nikkujjitaṁ vā ukkujjeyya …pe… ‘cakkhumanto rūpāni dakkhantī’ti; evamevaṁ bhagavatā anekapariyāyena dhammo pakāsito. Esāhaṁ, bhante, bhagavantaṁ saraṇaṁ gacchāmi dhammañca bhikkhusaṅghañca. Labheyyāhaṁ, bhante, bhagavato santike pabbajjaṁ, labheyyaṁ upasampadan”ti.",
+   "nan-sn12.17": "如是說時，阿支羅迦葉白世尊言：「大德！最殊勝；大德！最殊勝；大德！譬如能使倒者復起……如暗中持來燈火，有眼之士可以見物，世尊為說種種法。大德！我歸依世尊！歸依法與僧伽。大德！唯我欲於世尊之處出家，得具足戒。」",
+   "T0099-sa302": "佛說此經已，阿支羅迦葉遠塵離垢，得法眼淨。",
+   "T0499": "佛說此經已，阿支羅迦葉遠塵離垢，得法眼淨。"
+  },
+  "a09": {
+   "sn12.17": "“Yo kho, kassapa, aññatitthiyapubbo imasmiṁ dhammavinaye ākaṅkhati pabbajjaṁ, ākaṅkhati upasampadaṁ, so cattāro māse parivasati. Catunnaṁ māsānaṁ accayena āraddhacittā bhikkhū pabbājenti upasampādenti bhikkhubhāvāya. Api ca mayā puggalavemattatā viditā”ti. “Sace, bhante, aññatitthiyapubbo imasmiṁ dhammavinaye ākaṅkhati pabbajjaṁ, ākaṅkhati upasampadaṁ, cattāro māse parivasati. Catunnaṁ māsānaṁ accayena āraddhacittā bhikkhū pabbājenti upasampādenti bhikkhubhāvāya. Ahaṁ cattāri vassāni parivasissāmi, catunnaṁ vassānaṁ accayena āraddhacittā bhikkhū pabbājentu upasampādentu bhikkhubhāvāyā”ti.",
+   "nan-sn12.17": "「迦葉！曾為異學者，願於此法與律出家，欲受具足戒者，得經四月之別住試練後，欲作比丘，方可出家，使受具足戒成為比丘。雖然，我亦知人之有差別。」"
+  },
+  "a10": {
+   "nan-sn12.17": "「大德！若曾為異學者，若願於此法與律出家，而欲受具足戒者，須四月別住，經四月別住之試練後，欲作比丘者，可使出家，使受具足戒成為比丘，則我願別住四年，經四年別住之試練後，出家為比丘，使受具足戒成為比丘。」"
+  },
+  "a11": {
+   "sn12.17": "Alattha kho acelo kassapo bhagavato santike pabbajjaṁ, alattha upasampadaṁ. Acirūpasampanno ca panāyasmā kassapo eko vūpakaṭṭho appamatto ātāpī pahitatto viharanto nacirasseva—yassatthāya kulaputtā sammadeva agārasmā anagāriyaṁ pabbajanti tadanuttaraṁ—brahmacariyapariyosānaṁ diṭṭheva dhamme sayaṁ abhiññā sacchikatvā upasampajja vihāsi. “Khīṇā jāti, vusitaṁ brahmacariyaṁ, kataṁ karaṇīyaṁ, nāparaṁ itthattāyā”ti abbhaññāsi. Aññataro ca panāyasmā kassapo arahataṁ ahosīti. Sattamaṁ.",
+   "nan-sn12.17": "如是，阿支羅迦葉於世尊之處得出家，受具足戒。",
+   "T0099-sa302": "時，阿支羅迦葉見法、得法、知法、入法，度諸狐疑，不由他知、不因他度，於正法、律心得無畏，合掌白佛言：「世尊！",
+   "T0499": "時，阿支羅迦葉見法得法，知法入法，度諸狐疑，不由他知，不因他度，於正法律，心得無畏，合掌白佛言：「世尊！我今已度，我從今日歸依佛、歸依法、歸依僧，盡形壽作優婆塞，證知我。」阿支羅迦葉聞佛所說，歡喜隨喜，作禮而去。"
+  },
+  "a12": {
+   "nan-sn12.17": "尊者迦葉，受具足戒不久、獨退居、不放逸、精勤、住於專注，不久以正良家之子，出家而為無家，對無上之究竟梵行，於現法自知，入住實證，知生已盡，梵行已成，應作已作，更不來此再生。如是，尊者迦葉，成為一阿羅漢。",
+   "T0099-sa302": "我今已度，我從今日，歸依佛、歸依法、歸依僧，盡壽作優婆塞，證知我。」阿支羅迦葉聞佛所說，歡喜隨喜，作禮而去。時，阿支羅迦葉辭世尊去不久，為護犢牸牛所觸殺，於命終時，諸根清淨，顏色鮮白。爾時，世尊入城乞食。時，有眾多比丘亦入王舍城乞食，聞有傳說：「阿支羅迦葉從世尊聞法，辭去不久，為牛所觸殺，於命終時，諸根清淨，顏色鮮白。」諸比丘乞食已，還出，舉衣鉢，洗足，詣世尊所，稽首禮足，退坐一面，白佛言：「世尊！我今晨朝眾多比丘入城乞食，聞阿支羅迦葉從世尊聞法、律，辭去不久，為護犢牛所觸殺，於命終時，諸根清淨，顏色鮮白。世尊！彼生何趣？何處受生？彼何所得？」佛告諸比丘：「彼已見法、知法、次法、不受於法，已般涅槃，汝等當往供養其身。」爾時，世尊為阿支羅迦葉受第一記。",
+   "T0499": "時，阿支羅迦葉辭世尊去，不久為護犢牸牛所觸殺，於命終時，諸根清淨，顏色鮮白。爾時，世尊入城乞食。時有眾多比丘，亦入王舍城乞食，聞有傳說阿支羅迦葉從世尊聞法，辭去不久，為牛所觸殺，於命終時，諸根清淨，顏色鮮白。諸比丘乞食已還出，舉衣鉢洗足，詣世尊所，稽首禮足，退座一面，白佛言：「世尊！我今晨朝眾多比丘，入城乞食，聞阿支羅迦葉從世尊聞法律，辭去不久，為護犢牛所觸殺，於命終時，諸根清淨，顏色鮮白。世尊！彼生何趣？何處受生？彼何所得？」佛告諸比丘：「彼已見法知法，次法不受於法，已般涅槃，汝等當往供養其身。」爾時，世尊為阿支羅迦葉受第一記。"
+  }
+ }
+}

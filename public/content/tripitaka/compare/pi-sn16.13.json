@@ -1,0 +1,126 @@
+{
+ "slug": "pi-sn16.13",
+ "title": "別譯雜阿含經 （一二一）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "迦葉請問正法衰減之因"
+  },
+  {
+   "id": "a02",
+   "label": "佛答以像法出現為正法滅沒之因"
+  },
+  {
+   "id": "a03",
+   "label": "金寶喻（真法與像法之比喻）"
+  },
+  {
+   "id": "a04",
+   "label": "正法不為地水火風所壞，惡人壞法"
+  },
+  {
+   "id": "a05",
+   "label": "像法句味相似導致正法滅沒"
+  },
+  {
+   "id": "a06",
+   "label": "五種導致正法滅沒之因（不恭敬等）"
+  },
+  {
+   "id": "a07",
+   "label": "五種導致正法久住之因（恭敬等）"
+  },
+  {
+   "id": "a08",
+   "label": "結分：勸修恭敬等五法"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn16.13",
+   "lang": "pi",
+   "label": "巴利 SN16.13",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "T0100-sa-2.121",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （一二一）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa906",
+   "lang": "lzh",
+   "label": "雜阿含經 （九〇六）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（一二一）"
+  },
+  {
+   "work": "T0099",
+   "node": "（九〇六）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn16.13": "Saṁyutta Nikāya 16.13 1. Kassapavagga Saddhammappatirūpakasutta Evaṁ me sutaṁ— ekaṁ samayaṁ bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme.",
+   "T0100-sa-2.121": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。爾時，尊者摩訶迦葉住舍衛國西園林中毘舍佉講堂。彼大迦葉於日沒時，從禪定起，往詣佛所，頂禮佛足，在一面坐。",
+   "T0099-sa906": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。"
+  },
+  "a01": {
+   "sn16.13": "Atha kho āyasmā mahākassapo yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho āyasmā mahākassapo bhagavantaṁ etadavoca: “ko nu kho, bhante, hetu ko paccayo, yena pubbe appatarāni ceva sikkhāpadāni ahesuṁ bahutarā ca bhikkhū aññāya saṇṭhahiṁsu? Ko pana, bhante, hetu ko paccayo, yenetarahi bahutarāni ceva sikkhāpadāni appatarā ca bhikkhū aññāya saṇṭhahantī”ti?",
+   "T0100-sa-2.121": "而白佛言：「世尊！以何因緣，如來初始制戒之時，極為尠少，修行者多？今日何故，制戒轉增，履行者少？」",
+   "T0099-sa906": "爾時，尊者摩訶迦葉住舍衛國東園鹿子母講堂，晡時從禪覺，往詣佛所，稽首禮足，退坐一面，白佛言：「世尊！何因何緣，世尊先為諸聲聞少制戒時，多有比丘心樂習學；今多為聲聞制戒，而諸比丘少樂習學？」"
+  },
+  "a02": {
+   "sn16.13": "“Evañcetaṁ, kassapa, hoti sattesu hāyamānesu saddhamme antaradhāyamāne, bahutarāni ceva sikkhāpadāni honti appatarā ca bhikkhū aññāya saṇṭhahanti. Na tāva, kassapa, saddhammassa antaradhānaṁ hoti yāva na saddhammappatirūpakaṁ loke uppajjati. Yato ca kho, kassapa, saddhammappatirūpakaṁ loke uppajjati, atha saddhammassa antaradhānaṁ hoti.",
+   "T0100-sa-2.121": "佛告迦葉：「如是，如是。眾生命濁、結使濁、眾生濁、劫濁、見濁，眾生轉惡，正法亦末，是故如來為諸弟子多制禁戒，少有比丘，能順佛語，受持禁戒，諸眾生等，漸漸退沒。",
+   "T0099-sa906": "佛言：「如是，迦葉！命濁、煩惱濁、劫濁、眾生濁、見濁，眾生善法退減故，大師為諸聲聞多制禁戒，少樂習學。"
+  },
+  "a03": {
+   "sn16.13": "Seyyathāpi, kassapa, na tāva jātarūpassa antaradhānaṁ hoti yāva na jātarūpappatirūpakaṁ loke uppajjati. Yato ca kho, kassapa, jātarūpappatirūpakaṁ loke uppajjati, atha kho jātarūpassa antaradhānaṁ hoti. Evameva kho, kassapa, na tāva saddhammassa antaradhānaṁ hoti yāva na saddhammappatirūpakaṁ loke uppajjati. Yato ca kho, kassapa, saddhammappatirūpakaṁ loke uppajjati, atha saddhammassa antaradhānaṁ hoti.",
+   "T0100-sa-2.121": "譬如金寶漸漸損減，乃至相似金出。如來正法亦復如是，漸漸損減，像法乃出。像法出故，正法滅沒。迦葉當知，譬如海中所有船舫，多載眾寶，船必沈沒。如來教法亦復如是，以漸滅沒。",
+   "T0099-sa906": "迦葉！譬如劫欲壞時，真寶未滅，有諸相似偽寶出於世間；偽寶出已，真寶則沒。如是，迦葉！如來正法欲滅之時，有相似像法生；相似像法出世間已，正法則滅。譬如大海中，船載多珍寶，則頓沈沒；"
+  },
+  "a04": {
+   "sn16.13": "Na kho, kassapa, pathavīdhātu saddhammaṁ antaradhāpeti, na āpodhātu saddhammaṁ antaradhāpeti, na tejodhātu saddhammaṁ antaradhāpeti, na vāyodhātu saddhammaṁ antaradhāpeti;",
+   "T0100-sa-2.121": "如來正法，不因地沒，亦非水火風之所壞。若我法中，生於惡欲，行惡威儀，成就眾惡。法言非法，非法言法，非是毘尼說言毘尼，犯說非犯，非犯說犯，輕罪說重，重罪說輕。",
+   "T0099-sa906": "如來正法則不如是漸漸消滅。"
+  },
+  "a05": {
+   "sn16.13": "atha kho idheva te uppajjanti moghapurisā ye imaṁ saddhammaṁ antaradhāpenti. Seyyathāpi, kassapa, nāvā ādikeneva opilavati; na kho, kassapa, evaṁ saddhammassa antaradhānaṁ hoti.",
+   "T0100-sa-2.121": "如斯之事，出於世者，皆由像法句味相似，令佛正法漸漸滅沒。",
+   "T0099-sa906": "如來正法不為地界所壞，不為水、火、風界所壞，乃至惡眾生出世，樂行諸惡、欲行諸惡、成就諸惡，非法言法、法言非法、非律言律、律言非律，以相似法，句味熾然，如來正法於此則沒。"
+  },
+  "a06": {
+   "sn16.13": "Pañca khome, kassapa, okkamaniyā dhammā saddhammassa sammosāya antaradhānāya saṁvattanti. Katame pañca? Idha, kassapa, bhikkhū bhikkhuniyo upāsakā upāsikāyo satthari agāravā viharanti appatissā, dhamme agāravā viharanti appatissā, saṅghe agāravā viharanti appatissā, sikkhāya agāravā viharanti appatissā, samādhismiṁ agāravā viharanti appatissā— ime kho, kassapa, pañca okkamaniyā dhammā saddhammassa sammosāya antaradhānāya saṁvattanti.",
+   "T0100-sa-2.121": "迦葉當知，有五因緣能令法滅，一切咸共忘失章句，善法退轉。何等為五？不恭敬佛、不尊重佛、不供養佛、不能至心歸命於佛，然復依止佛法而住。不敬法、不尊重法、不供養法，於正法中不能至心，然依法住。不恭敬戒、不尊重戒、不供養戒、不能至心持所受戒，然依戒住。不恭敬教授、不尊重教授、不供養教授。不能至心向教授者，以不恭敬、尊重、供養，亦不至心向教授故，然復依此教授而住。於同梵行、佛所讚者不恭敬、不尊重、不供養、不能至心禮拜問訊，然猶依彼而得安住。迦葉！以此上來五因緣故，能令正法，漸漸滅沒，衰退忘失。",
+   "T0099-sa906": "「迦葉！有五因緣能令如來正法沈沒。何等為五？若比丘於大師所，不敬不重，不下意供養；於大師所，不敬不重，不下意供養已，然復依猗而住。若法、若學、若隨順教、若諸梵行大師所稱歎者，不敬不重，不下意供養，而依止住。是名，迦葉！五因緣故，如來正法於此沈沒。"
+  },
+  "a07": {
+   "sn16.13": "Pañca khome, kassapa, dhammā saddhammassa ṭhitiyā asammosāya anantaradhānāya saṁvattanti. Katame pañca? Idha, kassapa, bhikkhū bhikkhuniyo upāsakā upāsikāyo satthari sagāravā viharanti sappatissā, dhamme sagāravā viharanti sappatissā, saṅghe sagāravā viharanti sappatissā, sikkhāya sagāravā viharanti sappatissā, samādhismiṁ sagāravā viharanti sappatissā— ime kho, kassapa, pañca dhammā saddhammassa ṭhitiyā asammosāya anantaradhānāya saṁvattantī”ti.",
+   "T0100-sa-2.121": "「迦葉！復有五因緣故，能令正法久住於世，不沒不退，不忘不失。何等為五？恭敬世尊、尊重於佛、供養於佛、常能至心歸依於佛。於法於戒，及以教授、同梵行者，亦應供養、恭敬、尊重、至心向之，以此五種善因緣故，能使正法久住於世，不沒不退，不忘不失。",
+   "T0099-sa906": "「迦葉！有五因緣令如來法、律不沒、不忘、不退。何等為五？若比丘於大師所，恭敬尊重，下意供養，依止而住，若法、若學、若隨順教、若諸梵行大師所稱歎者，恭敬尊重，下意供養，依止而住。迦葉！是名五因緣如來法、律不沒、不忘、不退。"
+  },
+  "a08": {
+   "sn16.13": "Terasamaṁ. Kassapavaggo paṭhamo. Tassuddānaṁ Santuṭṭhañca anottappī, candūpamaṁ kulūpakaṁ; Jiṇṇaṁ tayo ca ovādā, jhānābhiññā upassayaṁ; Cīvaraṁ paraṁmaraṇaṁ, saddhammappatirūpakanti. Kassapasaṁyuttaṁ samattaṁ.",
+   "T0100-sa-2.121": "以是義故，應當恭敬佛、法、教授、同梵行者。」諸比丘等聞佛所說，歡喜奉行。月喻、施與角勝、無信佛為根本\n極老、納衣重是時、眾減少\n外道、法損壞",
+   "T0099-sa906": "是故，迦葉！當如是學：『於大師所，當修恭敬尊重，下意供養，依止而住；若法、若學、若隨順教、若諸梵行，大師所讚歎者，恭敬尊重，下意供養，依止而住。』」佛說是經已，尊者摩訶迦葉歡喜隨喜，作禮而去。"
+  }
+ }
+}

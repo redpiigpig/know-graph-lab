@@ -1,0 +1,153 @@
+{
+ "slug": "pi-sn42.7",
+ "title": "別譯雜阿含經 （一三〇）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "尼乾陀設難"
+  },
+  {
+   "id": "a02",
+   "label": "聚落主請問佛"
+  },
+  {
+   "id": "a03",
+   "label": "佛答常利益眾生"
+  },
+  {
+   "id": "a04",
+   "label": "三種田譬"
+  },
+  {
+   "id": "a05",
+   "label": "上田譬比丘"
+  },
+  {
+   "id": "a06",
+   "label": "中田譬優婆塞"
+  },
+  {
+   "id": "a07",
+   "label": "下田譬外道"
+  },
+  {
+   "id": "a08",
+   "label": "三種水器譬"
+  },
+  {
+   "id": "a09",
+   "label": "水器譬應用"
+  },
+  {
+   "id": "a10",
+   "label": "水器譬結義"
+  },
+  {
+   "id": "a11",
+   "label": "聚落主歡喜"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn42.7",
+   "lang": "pi",
+   "label": "巴利 SN42.7",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "T0100-sa-2.130",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （一三〇）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa915",
+   "lang": "lzh",
+   "label": "雜阿含經 （九一五）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（一三〇）"
+  },
+  {
+   "work": "T0099",
+   "node": "（九一五）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn42.7": "Saṁyutta Nikāya 42.7",
+   "T0100-sa-2.130": "如是我聞：一時，佛在那羅乾陀城賣疊林中。",
+   "T0099-sa915": "如是我聞：一時，佛住那羅聚落好衣菴羅園中。"
+  },
+  "a01": {
+   "sn42.7": "1. Gāmaṇivagga",
+   "T0100-sa-2.130": "爾時，閉口姓聚落主而作是念：「我今欲見沙門瞿曇，不見我師尼乾陀者，不得往彼。」即時往詣尼乾陀所，頂禮其足，在一面坐。時，尼乾陀即告之曰：「今我教汝，作二種難，令彼瞿曇既不得吐，又不得嚥。」閉口姓即問之曰：「阿闍梨！以何二難能令瞿曇不得吐嚥？」復告之曰：「汝當往詣彼瞿曇所，作如是言：『汝可不為利益安樂一切眾生？汝亦讚嘆利益安樂一切眾生之法，若言不為利益安樂一切眾生，與世凡愚有何差別？若言我欲利益安樂眾生，何不一切等同說法？云何而有不為說者？』",
+   "T0099-sa915": "時，有刀師氏聚落主，先是尼揵弟子，詣尼揵所，禮尼揵足，退坐一面。爾時，尼揵語聚落主：「汝能共沙門瞿曇作蒺䔧論，令沙門瞿曇不得語、不得不語？」聚落主白尼揵：「阿梨！何等為蒺䔧論，令沙門瞿曇不得語、不得不語耶？」尼揵語聚落主：「汝往沙門瞿曇所，作如是言：『瞿曇不常欲安慰一切眾生、讚歎安慰一切眾生耶？』若言不者，應語言：『瞿曇與凡愚夫有何等異？』若言常欲安慰一切眾生，讚歎安慰一切眾生者，復應問言：『若欲安慰一切眾生者，以何等故，或為一種人說法？或不為一種人說法？』作如是問者，是名蒺䔧論，令彼沙門瞿曇不得語、不得不語。」"
+  },
+  "a02": {
+   "sn42.7": "Khettūpamasutta Ekaṁ samayaṁ bhagavā nāḷandāyaṁ viharati pāvārikambavane. Atha kho asibandhakaputto gāmaṇi yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho asibandhakaputto gāmaṇi bhagavantaṁ etadavoca:",
+   "T0100-sa-2.130": "」時，聚落主受其教已，往詣佛所，粗相問訊，在一面坐。即白佛言：「汝實不欲利益安樂諸眾生耶？",
+   "T0099-sa915": "爾時，聚落主受尼揵勸進已，往詣佛所，恭敬問訊已，退坐一面，白佛言：「瞿曇豈不欲常安慰一切眾生，歎說安慰一切眾生？」"
+  },
+  "a03": {
+   "sn42.7": "“nanu, bhante, bhagavā sabbapāṇabhūtahitānukampī viharatī”ti? “Evaṁ, gāmaṇi, tathāgato sabbapāṇabhūtahitānukampī viharatī”ti. “Atha kiñcarahi, bhante, bhagavā ekaccānaṁ sakkaccaṁ dhammaṁ deseti, ekaccānaṁ no tathā sakkaccaṁ dhammaṁ desetī”ti?",
+   "T0100-sa-2.130": "豈不常讚如是法乎？」佛告之曰：「我於長夜，常欲利益一切眾生，亦恒讚嘆如是之法。」閉口姓言：「若如是者，何不為諸眾生等同說法，有不說者？」",
+   "T0099-sa915": "佛告聚落主：「如來長夜慈愍安慰一切眾生，亦常歎說安慰一切眾生。」聚落主白佛言：「若然者，如來何故為一種人說法？又復不為一種人說法？」"
+  },
+  "a04": {
+   "sn42.7": "“Tena hi, gāmaṇi, taññevettha paṭipucchissāmi. Yathā te khameyya tathā naṁ byākareyyāsi. Taṁ kiṁ maññasi, gāmaṇi, idhassu kassakassa gahapatino tīṇi khettāni—ekaṁ khettaṁ aggaṁ, ekaṁ khettaṁ majjhimaṁ, ekaṁ khettaṁ hīnaṁ jaṅgalaṁ ūsaraṁ pāpabhūmi. Taṁ kiṁ maññasi, gāmaṇi, asu kassako gahapati bījāni patiṭṭhāpetukāmo kattha paṭhamaṁ patiṭṭhāpeyya, yaṁ vā aduṁ khettaṁ aggaṁ, yaṁ vā aduṁ khettaṁ majjhimaṁ, yaṁ vā aduṁ khettaṁ hīnaṁ jaṅgalaṁ ūsaraṁ pāpabhūmī”ti? “Asu, bhante, kassako gahapati bījāni patiṭṭhāpetukāmo yaṁ aduṁ khettaṁ aggaṁ tattha patiṭṭhāpeyya. Tattha patiṭṭhāpetvā yaṁ aduṁ khettaṁ majjhimaṁ tattha patiṭṭhāpeyya. Tattha patiṭṭhāpetvā yaṁ aduṁ khettaṁ hīnaṁ jaṅgalaṁ ūsaraṁ pāpabhūmi tattha patiṭṭhāpeyyapi, nopi patiṭṭhāpeyya. Taṁ kissa hetu? Antamaso gobhattampi bhavissatī”ti.",
+   "T0100-sa-2.130": "佛告之曰：「我今問汝，隨所樂答。譬如世人，有三種田：有一上田良美𱦗壤，極為上好。第二田者，適處其中好。第三田者，曠野邊遠，沙鹵鹹惡。有諸田夫，先於何田而下種子？」閉口姓言：「為利益者，先種良田，望獲大利。」佛告之言：「若良田盡，次種何田？」閉口姓言：「次種中者。種中田已，次種下田。亦復擲子，亦望後時少有所獲。」",
+   "T0099-sa915": "佛告聚落主：「我今問汝，隨意答我。聚落主！譬如有三種田，有一種田沃壤肥澤，第二田中，第三田𭏩薄，云何？聚落主！彼田主先於何田耕治下種？」聚落主言：「瞿曇！於最沃壤肥澤者，先耕下種。」「聚落主！復於何田次耕下種？」聚落主言：「瞿曇！當於中田次耕下種。」佛告聚落主：「復於何田次耕下種？」聚落主言：「當於最下𭏩薄之田，次耕下種。」佛告聚落主：「何故如是？」聚落主言：「不欲廢田存種而已。」"
+  },
+  "a05": {
+   "sn42.7": "“Seyyathāpi, gāmaṇi, yaṁ aduṁ khettaṁ aggaṁ; evameva mayhaṁ bhikkhubhikkhuniyo. Tesāhaṁ dhammaṁ desemi—ādikalyāṇaṁ majjhekalyāṇaṁ pariyosānakalyāṇaṁ, sātthaṁ sabyañjanaṁ kevalaparipuṇṇaṁ parisuddhaṁ brahmacariyaṁ pakāsemi. Taṁ kissa hetu? Ete hi, gāmaṇi, maṁdīpā maṁleṇā maṁtāṇā maṁsaraṇā viharanti.",
+   "T0100-sa-2.130": "佛告之曰：「欲知上田，如我弟子，諸比丘、比丘尼，我為說法初中後善，成於己利，句義微妙，滿足利益，具足清白，顯發梵行。彼比丘、比丘尼聽我法已，依止我住，歸依於我，依憑於我，我為舟主，而濟渡之。我為開眼，令得視瞻，住於安樂。彼等聞已，各作是言：『佛為我說，我等咸當盡心修行，便於我等長夜利益，得義得樂。』",
+   "T0099-sa915": "佛告聚落主：「我亦如是，如彼沃壤肥澤田者，我諸比丘、比丘尼亦復如是。我常為彼演說正法，初、中、後善，善義善味，純一滿淨，梵行清白，開示顯現。彼聞法已，依於我舍、我洲、我覆、我蔭、我趣，常以淨眼，觀我而住，作如是念：『佛所說法，我悉受持，令我長夜以義饒益，安隱樂住。』"
+  },
+  "a06": {
+   "sn42.7": "Seyyathāpi, gāmaṇi, yaṁ aduṁ khettaṁ majjhimaṁ; evameva mayhaṁ upāsakaupāsikāyo. Tesaṁ pāhaṁ dhammaṁ desemi—ādikalyāṇaṁ majjhekalyāṇaṁ pariyosānakalyāṇaṁ, sātthaṁ sabyañjanaṁ kevalaparipuṇṇaṁ parisuddhaṁ brahmacariyaṁ pakāsemi. Taṁ kissa hetu? Ete hi, gāmaṇi, maṁdīpā maṁleṇā maṁtāṇā maṁsaraṇā viharanti.",
+   "T0100-sa-2.130": "彼中田者，如我弟子優婆塞、優婆夷，我為說法初中後善，成就己利，句義微妙，滿足利益，具足清白，顯發梵行。彼優婆塞、優婆夷聽我法已，依止於我，歸依於我，依憑於我，我為舟主，而濟渡之。我為開眼，令得視瞻，住於安樂。彼等聞已，各作是言：『佛為我說，我等咸當至心修行，便於我等，長夜利益，得義得樂。』",
+   "T0099-sa915": "「聚落主！如彼中田者，我弟子優婆塞、優婆夷亦復如是。我亦為彼演說正法，初、中、後善，善義善味，純一滿淨，梵行清白，開發顯示。彼聞法已，依於我舍、我洲、我覆、我蔭、我趣，常以淨眼，觀察我住，作如是念：『世尊說法，我悉受持，令我長夜以義饒益，安隱樂住。』"
+  },
+  "a07": {
+   "sn42.7": "Seyyathāpi, gāmaṇi, yaṁ aduṁ khettaṁ hīnaṁ jaṅgalaṁ ūsaraṁ pāpabhūmi; evameva mayhaṁ aññatitthiyā samaṇabrāhmaṇaparibbājakā. Tesaṁ pāhaṁ dhammaṁ desemi—ādikalyāṇaṁ majjhekalyāṇaṁ pariyosānakalyāṇaṁ sātthaṁ sabyañjanaṁ, kevalaparipuṇṇaṁ parisuddhaṁ brahmacariyaṁ pakāsemi. Taṁ kissa hetu? Appeva nāma ekaṁ padampi ājāneyyuṁ taṁ nesaṁ assa dīgharattaṁ hitāya sukhāyāti.",
+   "T0100-sa-2.130": "欲知下田沙鹵惡者，如諸外道，我亦為說初中後善，乃至顯發梵行。彼諸外道各能聽受，隨其所樂，乃至一句，解其義趣，亦為彼等，於長夜中，救濟利益，得義得樂。」時，閉口姓聞佛所說，而作是言：「希有！瞿曇，善說美喻。」",
+   "T0099-sa915": "「聚落主！如彼田家最下田者，如是我為諸外道異學尼揵子輩，亦為說法，初、中、後善，善義善味，純一滿淨，梵行清白，開示顯現，然於彼等少聞法者，亦為其說，多聞法者，亦為其說。然其彼眾於我善說法中，得一句法，知其義者，亦復長夜以義饒益，安隱樂住。」時，聚落主白佛：「甚奇！世尊！善說如是三種田譬。」"
+  },
+  "a08": {
+   "sn42.7": "Seyyathāpi, gāmaṇi, purisassa tayo udakamaṇikā—eko udakamaṇiko acchiddo ahārī aparihārī, eko udakamaṇiko acchiddo hārī parihārī, eko udakamaṇiko chiddo hārī parihārī.",
+   "T0100-sa-2.130": "佛告之曰：「為成斯義，更說譬喻。如世人有三種瓫：有一水瓫，堅完不損，無有孔裂，亦無滲漏。其第二瓫，亦完不破，無有孔裂，少有滲漏。第三瓫者，亦破亦漏。",
+   "T0099-sa915": "佛告聚落主：「汝聽我更說譬類。譬如士夫有三水器，不穿不壞，亦不津漏。第二器不穿不壞，而有津漏。第三器者，穿壞津漏。"
+  },
+  "a09": {
+   "sn42.7": "Taṁ kiṁ maññasi, gāmaṇi, asu puriso udakaṁ nikkhipitukāmo kattha paṭhamaṁ nikkhipeyya, yo vā so udakamaṇiko acchiddo ahārī aparihārī, yo vā so udakamaṇiko acchiddo hārī parihārī, yo vā so udakamaṇiko chiddo hārī parihārī”ti? “Asu, bhante, puriso udakaṁ nikkhipitukāmo, yo so udakamaṇiko acchiddo ahārī aparihārī tattha nikkhipeyya, tattha nikkhipitvā, yo so udakamaṇiko acchiddo hārī parihārī tattha nikkhipeyya, tattha nikkhipitvā, yo so udakamaṇiko chiddo hārī parihārī tattha nikkhipeyyapi, nopi nikkhipeyya. Taṁ kissa hetu? Antamaso bhaṇḍadhovanampi bhavissatī”ti.",
+   "T0100-sa-2.130": "彼人注水，應先何器？」對曰：「先於不破漏者。完器滿已，注第二器。其第二器雖完不破，然小滲漏。」佛復告言：「滿是瓫已，更注何處？其第三瓫，雖復漏破，亦應注水，為未漏間，暫得用故。",
+   "T0099-sa915": "云何？聚落主！彼士夫三種器中，常持淨水著何等器中？」聚落主言：「瞿曇！當以不穿不壞、不津漏者，先以盛水。」佛告聚落主：「次復應以何器盛水？」聚落主言：「瞿曇！當持彼器不穿不壞而津漏者，次以盛水。」佛告聚落主：「彼器滿已，復以何器為後盛水？」聚落主言：「以穿壞津漏之器最後盛水。所以者何？須臾之間，供小用故。」"
+  },
+  "a10": {
+   "sn42.7": "“Seyyathāpi, gāmaṇi, yo so udakamaṇiko acchiddo ahārī aparihārī; evameva mayhaṁ bhikkhubhikkhuniyo. Tesāhaṁ dhammaṁ desemi—ādikalyāṇaṁ majjhekalyāṇaṁ pariyosānakalyāṇaṁ sātthaṁ sabyañjanaṁ, kevalaparipuṇṇaṁ parisuddhaṁ brahmacariyaṁ pakāsemi. Taṁ kissa hetu? Ete hi, gāmaṇi, maṁdīpā maṁleṇā maṁtāṇā maṁsaraṇā viharanti. Seyyathāpi, gāmaṇi, yo so udakamaṇiko acchiddo hārī parihārī; evameva mayhaṁ upāsakaupāsikāyo. Tesāhaṁ dhammaṁ desemi—ādikalyāṇaṁ majjhekalyāṇaṁ pariyosānakalyāṇaṁ sātthaṁ sabyañjanaṁ, kevalaparipuṇṇaṁ parisuddhaṁ brahmacariyaṁ pakāsemi. Taṁ kissa hetu? Ete hi, gāmaṇi, maṁdīpā maṁleṇā maṁtāṇā maṁsaraṇā viharanti. Seyyathāpi, gāmaṇi, yo so udakamaṇiko chiddo hārī parihārī; evameva mayhaṁ aññatitthiyā samaṇabrāhmaṇaparibbājakā. Tesāhaṁ dhammaṁ desemi—ādikalyāṇaṁ majjhekalyāṇaṁ pariyosānakalyāṇaṁ sātthaṁ sabyañjanaṁ kevalaparipuṇṇaṁ parisuddhaṁ brahmacariyaṁ pakāsemi. Taṁ kissa hetu? Appeva nāma ekaṁ padampi ājāneyyuṁ, taṁ nesaṁ assa dīgharattaṁ hitāya sukhāyā”ti.",
+   "T0100-sa-2.130": "其第一瓫喻我弟子諸比丘、比丘尼，我為說法，乃至令其得義得樂。其第二瓫喻我弟子諸優婆塞、優婆夷，我為說法，乃至得義得樂。其第三瓫喻諸外道，我為說法，若少聽受，乃至令其得義得樂。」",
+   "T0099-sa915": "佛告聚落主：「如彼士夫不穿不壞、不津漏器，諸弟子比丘、比丘尼亦復如是。我常為彼演說正法，乃至長夜以義饒益，安隱樂住。如第二器不穿不壞而津漏者，我諸弟子優婆塞、優婆夷亦復如是。我常為彼演說正法，乃至長夜以義饒益，安隱樂住，如第三器穿壞津漏者，外道異學諸尼揵輩亦復如是。我亦為彼演說正法，初、中、後善，善義善味，純一滿淨，梵行清白，開示顯現。多亦為說，少亦為說。彼若於我說一句法，知其義者，亦得長夜安隱樂住。」"
+  },
+  "a11": {
+   "sn42.7": "Evaṁ vutte, asibandhakaputto gāmaṇi bhagavantaṁ etadavoca: “abhikkantaṁ, bhante, abhikkantaṁ, bhante …pe… upāsakaṁ maṁ bhagavā dhāretu ajjatagge pāṇupetaṁ saraṇaṁ gatan”ti. Sattamaṁ.",
+   "T0100-sa-2.130": "時，閉口姓聚落主聞佛所說，心生驚怖，憂愁厭惡，身毛為竪，起禮佛足，而作是言：「我今誠心向佛懺悔！我甚愚癡，猶如孾兒，所作不善，面於佛前，虛妄不實，下賤妄語。唯願哀愍，聽我懺悔！」佛告之曰：「知汝至心，汝實知罪，實知愚癡，猶如孾兒，所作不善。汝於如來阿羅呵所，虛妄下賤，作斯妄語。汝今知罪，誠心懺悔，善法日增，惡事退減。今我愍汝，受汝懺悔，令汝善法增長，常不退失。」時，閉口姓聚落主聞佛所說，歡喜奉行，頂禮而去。",
+   "T0099-sa915": "時，刀師氏聚落主聞佛所說，心大恐怖，身毛皆竪，前禮佛足悔過：「世尊！如愚如癡，不善不辯，於世尊所不諦真實，虛偽妄說！」聞佛所說，歡喜隨喜，禮足而去。"
+  }
+ }
+}

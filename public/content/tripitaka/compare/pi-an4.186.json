@@ -1,0 +1,131 @@
+{
+ "slug": "pi-an4.186",
+ "title": "意經",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "初問：誰將世間去？誰為染著？誰起自在？"
+  },
+  {
+   "id": "a02",
+   "label": "佛答：心將世間去，心為染著，心起自在"
+  },
+  {
+   "id": "a03",
+   "label": "第二問：何謂多聞比丘？"
+  },
+  {
+   "id": "a04",
+   "label": "佛答：多聞比丘之義（經、偈等八種）"
+  },
+  {
+   "id": "a05",
+   "label": "第三問：何謂多聞比丘明達智慧？"
+  },
+  {
+   "id": "a06",
+   "label": "佛答：聞四聖諦以慧正見者，是名明達智慧"
+  },
+  {
+   "id": "a07",
+   "label": "第四問：何謂多聞比丘聰明大智？"
+  },
+  {
+   "id": "a08",
+   "label": "佛答：聰明大智者，不害自他，利益世間"
+  },
+  {
+   "id": "a09",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "an4.186",
+   "lang": "pi",
+   "label": "巴利 AN4.186",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "T0026-ma172",
+   "lang": "lzh",
+   "label": "中阿含經 （一七二）中阿含心品心經第一",
+   "who": "東晉 瞿曇僧伽提婆譯"
+  },
+  {
+   "id": "T0082",
+   "lang": "lzh",
+   "label": "意經",
+   "who": "西晉 竺法護譯"
+  }
+ ],
+ "works": [
+  "T0026",
+  "T0082"
+ ],
+ "anchors": [
+  {
+   "work": "T0026",
+   "node": "（一七二）中阿含心品心經第一"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "an4.186": "Aṅguttara Nikāya 4.186 19. Brāhmaṇavagga Ummaggasutta",
+   "T0026-ma172": "我聞如是：一時，佛遊舍衛國，在勝林給孤獨園。",
+   "T0082": "聞如是：一時，婆伽婆在舍衛城祇樹給孤獨園。"
+  },
+  "a01": {
+   "an4.186": "Atha kho aññataro bhikkhu yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho so bhikkhu bhagavantaṁ etadavoca: “kena nu kho, bhante, loko nīyati, kena loko parikassati, kassa ca uppannassa vasaṁ gacchatī”ti? “Sādhu sādhu, bhikkhu. Bhaddako kho te, bhikkhu, ummaggo, bhaddakaṁ paṭibhānaṁ, kalyāṇī paripucchā. Evañhi tvaṁ, bhikkhu, pucchasi: ‘kena nu kho, bhante, loko nīyati, kena loko parikassati, kassa ca uppannassa vasaṁ gacchatī’”ti? “Evaṁ, bhante”.",
+   "T0026-ma172": "爾時，有一比丘獨安靖處宴坐思惟，心作是念：「誰將世間去？誰為染著？誰起自在？」彼時，比丘則於晡時從宴坐起，往詣佛所，稽首禮足，却坐一面，白曰：「世尊！我今獨安靖處宴坐思惟，心作是念：『誰將世間去？誰為染著？誰起自在？』」世尊聞已，歎曰：「善哉！善哉！比丘！謂有賢道而有賢觀，極妙辯才，有善思惟。『誰將世間去？誰為染著？誰起自在？』比丘！所問為如是耶？」比丘答曰：「如是。世尊！」世尊告曰：「比丘！",
+   "T0082": "彼時，有異比丘獨坐房中，意作是念：「以何故世間牽？以何故受於苦？以何故生已，生已入隨從？」於是彼比丘從下晡起，起已往詣世尊所，到已禮世尊足却坐一面。彼比丘却坐一面已，白世尊曰：「唯，世尊！我今日獨在房中意生是念：『以何故世間牽？以何故受於苦？以何故生已，生已入隨從？』」「善哉，善哉！比丘！有賢道、有賢觀、善辯才，所念善。『以何故世間牽？以何故受於苦？以何故生已，生已入隨從？』汝比丘！作如是問不？」「唯然，世尊！」"
+  },
+  "a02": {
+   "an4.186": "“Cittena kho, bhikkhu, loko nīyati, cittena parikassati, cittassa uppannassa vasaṁ gacchatī”ti. “Sādhu, bhante”ti kho so bhikkhu bhagavato bhāsitaṁ abhinanditvā anumoditvā bhagavantaṁ uttari pañhaṁ apucchi:",
+   "T0026-ma172": "心將世間去，心為染著，心起自在。比丘！彼將世間去，彼為染著，彼起自在。比丘！多聞聖弟子非心將去，非心染著，非心自在。比丘！多聞聖弟子不隨心自在，而心隨多聞聖弟子。」比丘白曰：「善哉！善哉！唯然。世尊！」彼時，比丘聞佛所說，歡喜奉行。",
+   "T0082": "「此比丘！以意故世間牽，以意故受於苦，生意生意已入隨從，比丘！而令世間牽、受於苦、生已生已入隨從。比丘！聖弟子無所著，以彼牽、以彼去、彼生已生已則隨從。此比丘！聖弟子阿羅漢，能自御意，不自隨意。」「善哉，世尊！」彼比丘，聞世尊所說，善樂善然可已，重問世尊曰：「唯世尊！"
+  },
+  "a03": {
+   "an4.186": "“‘bahussuto dhammadharo, bahussuto dhammadharo’ti, bhante, vuccati. Kittāvatā nu kho, bhante, bahussuto dhammadharo hotī”ti? “Sādhu sādhu, bhikkhu. Bhaddako kho te, bhikkhu ummaggo, bhaddakaṁ paṭibhānaṁ, kalyāṇī paripucchā. Evañhi tvaṁ, bhikkhu, pucchasi: ‘bahussuto dhammadharo, bahussuto dhammadharoti, bhante, vuccati. Kittāvatā nu kho, bhante, bahussuto dhammadharo hotī’”ti? “Evaṁ, bhante”.",
+   "T0026-ma172": "問曰：「世尊！多聞比丘，說多聞比丘。世尊！云何多聞比丘？云何施設多聞比丘？」世尊聞已，歎曰：「善哉！善哉！比丘！謂有賢道而有賢觀，極妙辯才，有善思惟。『世尊！多聞比丘，說多聞比丘。世尊！云何多聞比丘？云何施設多聞比丘？』比丘！所問為如是耶？」比丘答曰：「如是。世尊！」世尊告曰：「比丘！",
+   "T0082": "言多聞比丘，言多聞比丘者，唯世尊！幾所故名多聞比丘？如來說幾比丘多聞？」「善哉，善哉！比丘！賢道、賢觀、辯才，所言善。『世尊！多聞多聞比丘者，唯世尊！幾所故名多聞比丘？如來說幾是多聞比丘？』汝比丘！作是問不？」「唯然，世尊！」"
+  },
+  "a04": {
+   "an4.186": "“Bahū kho, bhikkhu, mayā dhammā desitā— suttaṁ, geyyaṁ, veyyākaraṇaṁ, gāthā, udānaṁ, itivuttakaṁ, jātakaṁ, abbhutadhammaṁ, vedallaṁ. Catuppadāya cepi, bhikkhu, gāthāya atthamaññāya dhammamaññāya dhammānudhammappaṭipanno hoti bahussuto dhammadharoti alaṁvacanāyā”ti. “Sādhu, bhante”ti kho so bhikkhu bhagavato bhāsitaṁ abhinanditvā anumoditvā bhagavantaṁ uttari pañhaṁ apucchi:",
+   "T0026-ma172": "我所說甚多，謂正經、歌詠、記說、偈他、因緣、撰錄、本起、此說、生處、廣解、未曾有法及說義。比丘！若有族姓子，我所說四句偈，知義知法，趣法向法，趣順梵行。比丘！說多聞比丘無復過是。比丘！如是多聞比丘，如來如是施設多聞比丘。」比丘白曰：「善哉！善哉！唯然。世尊！」彼時，比丘聞佛所說，歡喜奉行。",
+   "T0082": "「我多說比丘，契（一也）、歌（二也）、記（三也）、偈（四也）、所因（五也）、法句（六也）、譬喻（七也）、所應（八也）、生（九也）、方等（十也）、未曾（十一也）、法說（十二）。比丘族姓子，四句偈向我說者，則知義知法，應法所行等與法俱，如法行說。如是比丘則是多聞，如是比丘為多聞，如是如來說比丘多聞。」「善哉，世尊！」彼比丘，聞世尊所說，善思惟念，善樂善然可已，重問世尊曰：「唯世尊！"
+  },
+  "a05": {
+   "an4.186": "“‘sutavā nibbedhikapañño, sutavā nibbedhikapañño’ti, bhante, vuccati. Kittāvatā nu kho, bhante, sutavā nibbedhikapañño hotī”ti? “Sādhu sādhu, bhikkhu. Bhaddako kho te, bhikkhu, ummaggo, bhaddakaṁ paṭibhānaṁ, kalyāṇī paripucchā. Evañhi tvaṁ, bhikkhu, pucchasi: ‘sutavā nibbedhikapañño, sutavā nibbedhikapaññoti, bhante, vuccati. Kittāvatā nu kho, bhante, sutavā nibbedhikapañño hotī’”ti? “Evaṁ, bhante”.",
+   "T0026-ma172": "問曰：「世尊！多聞比丘明達智慧，說多聞比丘明達智慧。世尊！云何多聞比丘明達智慧？云何施設多聞比丘明達智慧？」世尊聞已，歎曰：「善哉！善哉！比丘！謂有賢道而有賢觀，極妙辯才，有善思惟。『世尊！多聞比丘明達智慧，說多聞比丘明達智慧。世尊！云何多聞比丘明達智慧？云何施設多聞比丘明達智慧？』比丘！所問為如是耶？」比丘答曰：「如是。世尊！」世尊告曰：「比丘！",
+   "T0082": "比丘聞已，比丘聞已智慧捷疾。唯世尊！所幾名為比丘聞已，名為捷疾智慧？如來說幾比丘聞已智慧捷疾？」「善哉，善哉！比丘！賢道、賢觀、辯才，所言善。『唯世尊！比丘聞已，比丘聞已智慧捷疾。世尊！說幾比丘聞已智慧捷疾？』汝比丘問此不？」「唯然，世尊！」"
+  },
+  "a06": {
+   "an4.186": "“Idha, bhikkhu, bhikkhuno ‘idaṁ dukkhan’ti sutaṁ hoti, paññāya cassa atthaṁ ativijjha passati; ‘ayaṁ dukkhasamudayo’ti sutaṁ hoti, paññāya cassa atthaṁ ativijjha passati; ‘ayaṁ dukkhanirodho’ti sutaṁ hoti, paññāya cassa atthaṁ ativijjha passati; ‘ayaṁ dukkhanirodhagāminī paṭipadā’ti sutaṁ hoti, paññāya cassa atthaṁ ativijjha passati. Evaṁ kho, bhikkhu, sutavā nibbedhikapañño hotī”ti. “Sādhu, bhante”ti kho so bhikkhu bhagavato bhāsitaṁ abhinanditvā anumoditvā bhagavantaṁ uttari pañhaṁ apucchi:",
+   "T0026-ma172": "若比丘聞此苦，復以慧正見苦如真者，聞苦習、苦滅、苦滅道，復以慧正見苦滅道如真者，比丘！如是多聞比丘明達智慧，如來如是施設多聞比丘明達智慧。」比丘白曰：「善哉！善哉！唯然。世尊！」彼時，比丘聞佛所說，歡喜奉行。",
+   "T0082": "「此比丘！彼比丘聞苦已，以智慧知如真，苦習、苦盡、苦盡住處，此則為聞彼以智慧知如真，苦習、苦盡、苦盡住處，此則為聞彼以智慧知如真。如是比丘！彼比丘聞已智慧捷疾，如來說比丘如是聞已智慧捷疾。」「善哉，世尊！」彼比丘聞世尊所說，善樂善然可已，重問世尊曰：「唯世尊！"
+  },
+  "a07": {
+   "an4.186": "“‘paṇḍito mahāpañño, paṇḍito mahāpañño’ti, bhante, vuccati. Kittāvatā nu kho, bhante, paṇḍito mahāpañño hotī”ti? “Sādhu sādhu, bhikkhu. Bhaddako kho te, bhikkhu, ummaggo, bhaddakaṁ paṭibhānaṁ, kalyāṇī paripucchā. Evañhi tvaṁ bhikkhu pucchasi: ‘paṇḍito mahāpañño, paṇḍito mahāpaññoti, bhante, vuccati. Kittāvatā nu kho, bhante, paṇḍito mahāpañño hotī’”ti? “Evaṁ, bhante”.",
+   "T0026-ma172": "問曰：「世尊！聰明比丘𭶑慧廣慧，說聰明比丘𭶑慧廣慧。世尊！云何聰明比丘𭶑慧廣慧？云何施設聰明比丘𭶑慧廣慧？」世尊聞已，歎曰：「善哉！善哉！比丘，謂有賢道而有賢觀，極妙辯才，有善思惟。『世尊！云何聰明比丘𭶑慧廣慧？云何施設聰明比丘𭶑慧廣慧？』比丘！所問為如是耶？」比丘答曰：「如是。",
+   "T0082": "比丘聰明辯才捷疾，比丘聰明智慧捷疾者，唯世尊！幾所名為比丘聰明智慧捷疾？如來說幾比丘聰明智慧辯才捷疾？」「善哉，善哉！比丘！賢道、賢觀、辯才，所言善。『唯世尊！比丘聰明智慧捷疾，比丘聰明辯才捷疾者，世尊！說幾所名為比丘聰明智慧辯才捷疾？如來說幾比丘聰明智慧辯才捷疾？』汝比丘問此不？」「唯然，世尊！」"
+  },
+  "a08": {
+   "an4.186": "“Idha, bhikkhu, paṇḍito mahāpañño nevattabyābādhāya ceteti na parabyābādhāya ceteti na ubhayabyābādhāya ceteti attahitaparahitaubhayahitasabbalokahitameva cintayamāno cinteti. Evaṁ kho, bhikkhu, paṇḍito mahāpañño hotī”ti.",
+   "T0026-ma172": "世尊！」世尊告曰：「若比丘不念自害，不念害他，亦不念俱害，比丘但念自饒益及饒益他，饒益多人，愍傷世間，為天、為人求義及饒益，求安隱快樂。比丘！如是聰明比丘𭶑慧廣慧，如是如來施設聰明比丘𭶑慧廣慧。」比丘白曰：「善哉！善哉！唯然。世尊！」彼時，比丘聞佛所說，善受善持，善誦習已，即從坐起，稽首佛足，繞三匝而還。",
+   "T0082": "「此比丘！謂比丘亦不自念、不念他、不二念，比丘但念意已，自饒益及饒益他、饒益多人，愍世間故，以義饒益天及人。如是比丘聰明智慧捷疾，如來說比丘聰明辯才智慧捷疾。」「善哉，世尊！」"
+  },
+  "a09": {
+   "an4.186": "Chaṭṭhaṁ.",
+   "T0026-ma172": "彼時，比丘聞世尊教，在遠離獨住，心無放逸，修行精勤。彼在遠離獨住，心無放逸，修行精勤已，族姓子所為，剃除鬚髮，著袈裟衣，至信、捨家、無家、學道者，唯無上梵行訖，於現法中自知自覺，自作證成就遊，生已盡，梵行已立，所作已辦，不更受有，知如真。彼尊者知法已，乃至得阿羅訶。佛說如是。彼諸比丘聞佛所說，歡喜奉行。心經第一竟（千五十四字）",
+   "T0082": "彼比丘聞世尊所說，善思惟念，受持誦讀已，從坐起禮世尊足，繞世尊，離世尊還。彼世尊以此喻為說之，獨在靜處不亂志寂靜住。彼獨在靜處不亂志寂靜住已，謂族姓子，所為剃鬚髮已被著袈裟信樂出家，棄家學道，彼無上行梵行，見法成神通作證住，生已盡、梵行已成、所作已辦、名色已有，知如真。彼尊者已知法，至成阿羅漢。佛如是說，彼比丘聞世尊所說，歡喜而樂。"
+  }
+ }
+}

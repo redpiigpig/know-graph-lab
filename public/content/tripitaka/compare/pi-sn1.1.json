@@ -1,0 +1,101 @@
+{
+ "slug": "pi-sn1.1",
+ "title": "別譯雜阿含經 （一八〇）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "天神來問度瀑流"
+  },
+  {
+   "id": "a02",
+   "label": "世尊答以不住不求度瀑流"
+  },
+  {
+   "id": "a03",
+   "label": "天神讚歎並說偈頌"
+  },
+  {
+   "id": "a04",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn1.1",
+   "lang": "pi",
+   "label": "巴利 SN1.1",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn1.1",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN1.1",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.180",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （一八〇）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa1267",
+   "lang": "lzh",
+   "label": "雜阿含經 （一二六七）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（一八〇）",
+   "uid": "T02n0100_p0438c12"
+  },
+  {
+   "work": "T0099",
+   "node": "（一二六七）",
+   "uid": "T02n0099_p0348b07"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn1.1": "Saṁyutta Nikāya 1.1 1. Naḷavagga Oghataraṇasutta",
+   "nan-sn1.1": "〔一〕瀑流"
+  },
+  "a01": {
+   "sn1.1": "Evaṁ me sutaṁ— ekaṁ samayaṁ bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme. Atha kho aññatarā devatā abhikkantāya rattiyā abhikkantavaṇṇā kevalakappaṁ jetavanaṁ obhāsetvā yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ aṭṭhāsi. Ekamantaṁ ṭhitā kho sā devatā bhagavantaṁ etadavoca:",
+   "nan-sn1.1": "如是我聞，爾時，世尊住舍衛城祇樹給孤獨園。",
+   "T0100-sa-2.180": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。時有一天，光色倍常，於其夜中，來詣佛所，威光顯照，遍于祇洹，晃然大明，却坐一面，而問佛言：「瞿曇！",
+   "T0099-sa1267": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。時，有一天子，容色絕妙，於後夜時來詣佛所，稽首佛足，退坐一面。"
+  },
+  "a02": {
+   "sn1.1": "“kathaṁ nu tvaṁ, mārisa, oghamatarī”ti? “Appatiṭṭhaṁ khvāhaṁ, āvuso, anāyūhaṁ oghamatarin”ti. “Yathākathaṁ pana tvaṁ, mārisa, appatiṭṭhaṁ anāyūhaṁ oghamatarī”ti? “Yadāsvāhaṁ, āvuso, santiṭṭhāmi tadāssu saṁsīdāmi; yadāsvāhaṁ, āvuso, āyūhāmi tadāssu nibbuyhāmi. Evaṁ khvāhaṁ, āvuso, appatiṭṭhaṁ anāyūhaṁ oghamatarin”ti.",
+   "nan-sn1.1": "爾時，有天神於黎明放其殊勝妙光，徧照祇園，詣世尊處。詣已，敬禮世尊，立於一面。",
+   "T0100-sa-2.180": "汝為能度瀑駛流耶？」爾時，世尊答言：「實爾！」天言：「瞿曇！如此駛流，深廣無際，傍無攀緣，中無安足，而能得度，甚為奇特。」佛言：「實爾。」天復問曰：「瞿曇！汝今云何於此駛流，無可攀挽，無安足處，而能得度？」佛答天曰：「若我懈怠，必為沈沒。若為沈沒，必為所漂。若我精進，必不沈沒。若不沈沒，不為所漂。我於如是大洪流中，無可攀挽，無安足處，而能得度此大駛流。」",
+   "T0099-sa1267": "身諸光明遍照祇樹給孤獨園。時，彼天子白佛言：「世尊！比丘！比丘度駛流耶？」佛言：「如是，天子！」天子復問：「無所攀緣，亦無所住，度駛流耶？」佛言：「如是，天子！」天子復問：「無所攀緣，亦無所住而度駛流，其義云何？」佛言：「天子！我如是如是抱，如是如是直進，則不為水之所㵱。如是如是不抱。如是如是不直進，則為水所㵱。如是，天子！名為無所攀緣，亦無所住而度駛流。」"
+  },
+  "a03": {
+   "sn1.1": "“Cirassaṁ vata passāmi, brāhmaṇaṁ parinibbutaṁ; Appatiṭṭhaṁ anāyūhaṁ, tiṇṇaṁ loke visattikan”ti.",
+   "nan-sn1.1": "立一面已，彼天神白世尊曰：「友！卿如何度瀑流耶？」〔世尊曰〕：「友！我不住不求以度瀑流。」「友！卿如何不住不求以度瀑流耶？」〔世尊曰〕：「友！我住時沈，求時溺。友！我如是不住不求以度瀑流。」",
+   "T0100-sa-2.180": "天即讚言：「善哉！善哉！比丘於此駛流，無所攀挽，而能得度，甚為希有！」",
+   "T0099-sa1267": "時，彼天子復說偈言：「久見婆羅門，逮得般涅槃，\n一切怖已過，永超世恩愛。」"
+  },
+  "a04": {
+   "sn1.1": "Idamavoca sā devatā. Samanuñño satthā ahosi. Atha kho sā devatā: “samanuñño me satthā”ti bhagavantaṁ abhivādetvā padakkhiṇaṁ katvā tatthevantaradhāyīti.",
+   "nan-sn1.1": "「不住與不求度世間執著\n涅槃婆羅門久久我見知」彼天神作如是言得大師嘉賞、認證，天神知得大師、認證，敬禮世尊右繞而去。",
+   "T0100-sa-2.180": "天復以偈讚言：「我昔已曾見，婆羅門涅槃，\n久捨於嫌怖，能度世間愛。」爾時，此天說此偈已，歡喜還宮。牟鋑及天女四轉輪、髻髮\n睡厭、極難盡伊尼延、駛流\n無縛著解脫而能得濟度",
+   "T0099-sa1267": "時，彼天子聞佛所說，歡喜隨喜，稽首佛足，即沒不現。"
+  }
+ }
+}

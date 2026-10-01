@@ -1,0 +1,140 @@
+{
+ "slug": "pi-sn7.1",
+ "title": "別譯雜阿含經 （八一）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "婆羅門妻歸敬三寶"
+  },
+  {
+   "id": "a02",
+   "label": "夫婆羅門詬罵與挑戰"
+  },
+  {
+   "id": "a03",
+   "label": "妻答非難破"
+  },
+  {
+   "id": "a04",
+   "label": "夫詣佛所對話"
+  },
+  {
+   "id": "a05",
+   "label": "偈問與偈答"
+  },
+  {
+   "id": "a06",
+   "label": "夫歸敬三寶請求出家"
+  },
+  {
+   "id": "a07",
+   "label": "出家證果"
+  },
+  {
+   "id": "a08",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn7.1",
+   "lang": "pi",
+   "label": "巴利 SN7.1",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn7.1",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN7.1",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.81",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （八一）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa1158",
+   "lang": "lzh",
+   "label": "雜阿含經 （一一五八）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（八一）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一一五八）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn7.1": "Saṁyutta Nikāya 7.1 1. Arahantavagga Dhanañjānīsutta Evaṁ me sutaṁ— ekaṁ samayaṁ bhagavā rājagahe viharati veḷuvane kalandakanivāpe.",
+   "nan-sn7.1": "〔一〕第一　陀然闍仁如是我聞。爾時，世尊住王舍城竹林栗鼠養餌所。",
+   "T0100-sa-2.81": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。",
+   "T0099-sa1158": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。"
+  },
+  "a01": {
+   "sn7.1": "Tena kho pana samayena aññatarassa bhāradvājagottassa brāhmaṇassa dhanañjānī nāma brāhmaṇī abhippasannā hoti buddhe ca dhamme ca saṅghe ca. Atha kho dhanañjānī brāhmaṇī bhāradvājagottassa brāhmaṇassa bhattaṁ upasaṁharantī upakkhalitvā tikkhattuṁ udānaṁ udānesi: “Namo tassa bhagavato arahato sammāsambuddhassa. Namo tassa bhagavato arahato sammāsambuddhassa. Namo tassa bhagavato arahato sammāsambuddhassā”ti.",
+   "nan-sn7.1": "其時，有婆羅墮婆闍姓之婆羅門妻，名陀然闍仁，信樂佛、法、僧。",
+   "T0100-sa-2.81": "爾時，舍衛城中婆私吒婆羅門女，於佛法僧前，心信清淨，歸依三寶，心不生疑，苦習滅道，亦不生疑，得見四諦，逮第一果，見法同等。",
+   "T0099-sa1158": "時，舍衛國中婆肆吒婆羅門女信佛、法、僧，歸佛、歸法、歸比丘僧。於佛、法、僧已離狐疑，於苦習盡道亦離疑惑；見諦得果，得無間慧。其夫是婆羅豆婆遮種姓婆羅門。"
+  },
+  "a02": {
+   "sn7.1": "Evaṁ vutte, bhāradvājagotto brāhmaṇo dhanañjāniṁ brāhmaṇiṁ etadavoca: “evamevaṁ panāyaṁ vasalī yasmiṁ vā tasmiṁ vā tassa muṇḍakassa samaṇassa vaṇṇaṁ bhāsati. Idāni tyāhaṁ, vasali, tassa satthuno vādaṁ āropessāmī”ti.",
+   "nan-sn7.1": "時，陀然闍仁，將近於運食與婆羅墮婆闍姓之婆羅門，發三次之歡喜語：「歸命彼世尊、應供、正等覺者……乃至……歸命彼世尊、應供、正等覺者。」",
+   "T0100-sa-2.81": "其夫婆羅門姓，婆羅突邏闍為夫所使，足趺倒地，從地起已，叉手合掌，向佛方所，而作是言：「南無佛陀、如來、至真、等正覺，真金之色，圓光一尋，身體方整，如尼拘陀樹，說法第一，第七仙聖，解脫世雄，我之世尊。」爾時，其夫婆羅門聞婦此語，極生瞋忿，而罵詈言：「汝是顛狂旃陀羅也。誰今為此癡旃陀羅，作蠱道也？更無如汝極下賤者，汝於三明大婆羅門所不能恭敬，方禮禿頭瘦黑之人，如此沙門，共耶那邏延斷人種者，極相讚嘆。",
+   "T0099-sa1158": "每至左右所為作時，有小得失，即稱南無佛，向如來所住方面，隨方合掌，三說是言：「南無多陀阿伽度、阿羅呵、三藐三佛陀，身純金色，圓光一尋，方身圓滿如尼拘律樹，善說妙法，牟尼之尊，仙人上首，是我大師！」時，夫婆羅門聞之，瞋恚不喜，語其婦言：「為鬼著耶？無有此義，捨諸三明大德婆羅門，而稱歎彼禿頭沙門。黑闇之分，世所不稱。我今當往共汝大師論議，足知勝如。」"
+  },
+  "a03": {
+   "sn7.1": "“Na khvāhaṁ taṁ, brāhmaṇa, passāmi sadevake loke samārake sabrahmake sassamaṇabrāhmaṇiyā pajāya sadevamanussāya, yo tassa bhagavato vādaṁ āropeyya arahato sammāsambuddhassa. Api ca tvaṁ, brāhmaṇa, gaccha, gantvā vijānissasī”ti.",
+   "nan-sn7.1": "如是言已，婆羅墮婆闍姓之婆羅門，以此謂陀然闍仁曰：「此賣女不論何時、常語彼禿頭沙門之功德。賣女！今我應論破汝師。」",
+   "T0100-sa-2.81": "汝若信樂極深厚者，咄我於今，請與汝師，共相講論。」婦語夫言：「我都不見若沙門、婆羅門、若天、若魔、若梵，有能與佛共講論者。」",
+   "T0099-sa1158": "婦語夫言：「不見諸天、魔、梵、沙門、婆羅門、諸神、世人，能共世尊——如來、應、等正覺，金色之身，圓光一尋，如尼拘律樹圓滿之身，言說微妙，仙人上首，我之大師——共論議者。然今婆羅門且往，自可知之！」"
+  },
+  "a04": {
+   "sn7.1": "Atha kho bhāradvājagotto brāhmaṇo kupito anattamano yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavatā saddhiṁ sammodi. Sammodanīyaṁ kathaṁ sāraṇīyaṁ vītisāretvā ekamantaṁ nisīdi.",
+   "nan-sn7.1": "「否也！婆羅門！包含世界於天界、魔界、梵天界，包含沙門、婆羅門人天之眾中，不見得能論破我彼世尊、應供、正等覺者。然則，汝婆羅門！去！去即當自知。」時，婆羅墮婆闍之婆羅門、忿怒不喜而詣世尊處。詣已，與世尊相致問交談而坐一面。",
+   "T0100-sa-2.81": "其婦復言：「南無佛陀、如來、至真、等正覺，真金之色，身體方整，圓光一尋，如尼拘陀樹，說法第一，第七仙聖，解脫世雄，我之世尊，汝自知。」",
+   "T0099-sa1158": "時，婆羅門即往詣佛，面相問訊慰勞已，退坐一面。"
+  },
+  "a05": {
+   "sn7.1": "Ekamantaṁ nisinno kho bhāradvājagotto brāhmaṇo bhagavantaṁ gāthāya ajjhabhāsi: “Kiṁsu chetvā sukhaṁ seti, kiṁsu chetvā na socati; Kissassu ekadhammassa, vadhaṁ rocesi gotamā”ti. “Kodhaṁ chetvā sukhaṁ seti, kodhaṁ chetvā na socati; Kodhassa visamūlassa, madhuraggassa brāhmaṇa; Vadhaṁ ariyā pasaṁsanti, tañhi chetvā na socatī”ti.",
+   "nan-sn7.1": "坐一面之婆羅墮婆闍姓婆羅門，以偈言世尊曰：殺何物樂寢殺何物不悲\n殺害何一法瞿曇卿讚歎",
+   "T0100-sa-2.81": "時，婆羅門即詣佛所，問訊已訖，在一面坐，說偈問曰：「摧壞何物得安眠？除却何法獲無憂？\n是何一法能死滅？瞿曇沙門為我說。」爾時，世尊說偈答言：「摧壞瞋恚得安眠，除滅瞋恚得無憂，\n瞋恚詐親能死害，摩納如是應當知，\n滅除瞋恚聖所讚，能害彼者得無憂。」爾時，世尊為婆羅門如應說法，示教利喜，次第為說施論、戒論、生天之論，欲為不淨苦惱之本，出要為樂，廣示眾善白淨之法。",
+   "T0099-sa1158": "而說偈言：「為殺於何等，而得安隱眠？\n為殺於何等，令心得無憂？\n為殺於何等，瞿曇所稱歎？」爾時，世尊知婆羅門心之所念，而說偈言：「殺於瞋恨者，而得安隱眠，\n殺於瞋恚者，而心得無憂。\n瞋恚為毒本，能害甘種子，\n能害於彼者，賢聖所稱歎。\n若能害彼者，其心得無憂？」"
+  },
+  "a06": {
+   "sn7.1": "Evaṁ vutte, bhāradvājagotto brāhmaṇo bhagavantaṁ etadavoca: “abhikkantaṁ, bho gotama, abhikkantaṁ, bho gotama. Seyyathāpi, bho gotama, nikkujjitaṁ vā ukkujjeyya, paṭicchannaṁ vā vivareyya, mūḷhassa vā maggaṁ ācikkheyya, andhakāre vā telapajjotaṁ dhāreyya: ‘cakkhumanto rūpāni dakkhantī’ti; evamevaṁ bhotā gotamena anekapariyāyena dhammo pakāsito.",
+   "nan-sn7.1": "〔世尊：〕殺忿是樂寢殺忿無有悲\n婆羅門毒根以為最上蜜\n忿怒之殺害聖者是讚賞\n如是之殺法其殺無有悲",
+   "T0100-sa-2.81": "時，婆羅門聞佛所說，心開意解，踊躍歡喜。佛知摩納心意調濡，踊躍歡喜，心無狐疑，堪任法器，為說一法，堪任解悟，如諸佛法，為說四諦，苦習盡道，廣為說已。時，婆羅突邏闍聞佛所說，如白淨㲲易受染色，即於坐上，見四真諦，了達諸法，得法真際，度疑彼岸，不隨於他，得無所畏，即從坐起，合掌向佛白言：「世尊！我已出離。今欲歸依佛法僧寶，盡我形壽為優婆塞，不殺、不盜、不婬、不妄語、不飲酒。」即於佛所，得不壞信，禮佛歸家。其婦見夫如上歎佛，「我師如是，汝共語耶？」夫答婦言：「我不見世間若沙門、若婆羅門、若天、若魔、若梵，有能與佛共論議者。」復語婦言：「與我衣來。」婦即與之，既得衣已，往詣佛所，頂禮佛足，在一面坐，白佛言：「世尊！唯願聽我於佛法中出家學道。」",
+   "T0099-sa1158": "時，婆羅豆婆遮婆羅門聞佛所說，示、教、照、喜，次第說法，謂說施，說戒，說生天法，說欲味著為災患煩惱，清淨、出要、遠離，隨順福利清淨，分別廣說。譬如清淨白㲲易為染色，如是婆羅豆婆遮婆羅門即於座上，於四聖諦得無間等，所謂苦、集、滅、道。是婆羅門見法、得法、知法、入法，度諸疑惑，不由他度，於正法、律得無所畏。即從座起，偏露右肩，合掌白佛：「已度，世尊！已度，善逝！我今歸佛、歸法、歸比丘僧已，盡其壽命為優婆塞，證知我！」時，婆羅豆婆遮婆羅門聞佛所說，歡喜隨喜，作禮而去，還歸自家。其婦優婆夷遙見夫來，見已，白言：「已與如來、應、等正覺——純金色身，圓光一尋，如尼拘律樹圓滿之身，妙說之上，仙人之首，大牟尼尊，為我大師——共論議耶？」其夫答言：「我未甞見諸天、魔、梵、沙門、婆羅門、諸神、世人，有能與如來、應、等正覺——真金色身，圓光一尋，如尼拘律樹圓滿之身，妙說之上，諸仙之首，牟尼之尊，汝之大師——共論議也。汝今與我作好法衣，我持至世尊所出家學道。」時，婦悉以鮮潔白㲲，令作法衣。時，婆羅門持衣往詣世尊所，稽首禮足，退住一面，白言：「世尊！我今可得於世尊法中出家學道，修梵行不？」"
+  },
+  "a07": {
+   "sn7.1": "Esāhaṁ, bhante, bhagavantaṁ gotamaṁ saraṇaṁ gacchāmi dhammañca bhikkhusaṅghañca. Labheyyāhaṁ bhoto gotamassa santike pabbajjaṁ, labheyyaṁ upasampadan”ti. Alattha kho bhāradvājagotto brāhmaṇo bhagavato santike pabbajjaṁ, alattha upasampadaṁ. Acirūpasampanno kho panāyasmā bhāradvājo eko vūpakaṭṭho appamatto ātāpī pahitatto viharanto nacirasseva—yassatthāya kulaputtā sammadeva agārasmā anagāriyaṁ pabbajanti tadanuttaraṁ—brahmacariyapariyosānaṁ diṭṭheva dhamme sayaṁ abhiññā sacchikatvā upasampajja vihāsi.",
+   "nan-sn7.1": "如是言已，婆羅墮婆闍姓之婆羅門，以此白世尊曰：「瞿曇！是最勝。瞿曇是最勝。瞿曇！猶如令倒者起，覆者顯露，示迷者以道，如有眼者得見物形，如闇中之燈明，如是瞿曇請說種種法。我歸命世尊瞿曇、法、僧伽。我得於世尊瞿曇之處出家及具足戒！」婆羅墮婆闍姓之婆羅門，得於世尊之處出家及具足戒。",
+   "T0100-sa-2.81": "佛即然許，命一比丘，度使出家。既出家已，稱出家法，獨已專精。",
+   "T0099-sa1158": "佛告婆羅門：「汝今可得於此法、律出家學道，修諸梵行。」即出家已，獨靜思惟：「所以善男子剃除鬚髮，著袈裟衣，出家學道……。」乃至得阿羅漢，心善解脫。"
+  },
+  "a08": {
+   "sn7.1": "“Khīṇā jāti, vusitaṁ brahmacariyaṁ, kataṁ karaṇīyaṁ, nāparaṁ itthattāyā”ti abbhaññāsi. Aññataro ca panāyasmā bhāradvājo arahataṁ ahosīti.",
+   "nan-sn7.1": "得具足戒不久，尊者婆羅墮婆闍，單獨隱棲，不放逸、虔誠、精勤而住，彼正是良家之子，為成就無上梵行，由家〔出〕無家而出家，於現法得入自知自證。「知生已盡，梵行已立，所作已辦，不受後有。」於此婆羅墮婆闍，成為一阿羅漢。",
+   "T0100-sa-2.81": "餘如婆羅突邏闍經中廣說，乃至得阿羅漢，心得好解脫。佛說是已，諸比丘聞佛所說，歡喜奉行。"
+  }
+ }
+}

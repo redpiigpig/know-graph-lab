@@ -1,0 +1,104 @@
+{
+ "slug": "pi-an4.13-an4.69",
+ "title": "雜阿含經 （八七五）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。複核標記存疑 1 段：義段 4 的偈頌僅出現在 雜阿含經（八七六），而巴利經 AN4.13 與 AN4.69 無此段，但雜阿含經（八七六）卻將此偈頌放在經終後，實際內容應屬於經文本體的一部分，卻被錯誤地獨立成段，且與巴利經對應的結論段（義段 3）內容不符，顯示此段位置錯誤，實為另一段（如結論或偈頌）被誤置於此。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "經題與卷名"
+  },
+  {
+   "id": "a01",
+   "label": "四正斷之名稱"
+  },
+  {
+   "id": "a02",
+   "label": "四正斷之詳細說明"
+  },
+  {
+   "id": "a03",
+   "label": "結論與讚歎"
+  },
+  {
+   "id": "a04",
+   "label": "偈頌",
+   "doubt": true
+  },
+  {
+   "id": "a05",
+   "label": "經終"
+  }
+ ],
+ "versions": [
+  {
+   "id": "an4.13",
+   "lang": "pi",
+   "label": "巴利 AN4.13",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "an4.69",
+   "lang": "pi",
+   "label": "巴利 AN4.69",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "T0099-sa875",
+   "lang": "lzh",
+   "label": "雜阿含經 （八七五）",
+   "who": "劉宋 求那跋陀羅譯"
+  },
+  {
+   "id": "T0099-sa876",
+   "lang": "lzh",
+   "label": "雜阿含經 （八七六）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099"
+ ],
+ "anchors": [
+  {
+   "work": "T0099",
+   "node": "（八七五）"
+  },
+  {
+   "work": "T0099",
+   "node": "（八七六）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "an4.13": "Aṅguttara Nikāya 4.13 2. Caravagga Padhānasutta",
+   "an4.69": "Aṅguttara Nikāya 4.69 7. Pattakammavagga Padhānasutta"
+  },
+  "a01": {
+   "an4.13": "“Cattārimāni, bhikkhave, sammappadhānāni.",
+   "an4.69": "“Cattārimāni, bhikkhave, padhānāni. Katamāni cattāri? Saṁvarappadhānaṁ, pahānappadhānaṁ, bhāvanāppadhānaṁ, anurakkhaṇāppadhānaṁ.",
+   "T0099-sa875": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。爾時，世尊告諸比丘：「有四正斷。",
+   "T0099-sa876": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。爾時，世尊告諸比丘：「有四正斷。"
+  },
+  "a02": {
+   "an4.13": "Katamāni cattāri? Idha, bhikkhave, bhikkhu anuppannānaṁ pāpakānaṁ akusalānaṁ dhammānaṁ anuppādāya chandaṁ janeti vāyamati vīriyaṁ ārabhati cittaṁ paggaṇhāti padahati; uppannānaṁ pāpakānaṁ akusalānaṁ dhammānaṁ pahānāya chandaṁ janeti vāyamati vīriyaṁ ārabhati cittaṁ paggaṇhāti padahati; anuppannānaṁ kusalānaṁ dhammānaṁ uppādāya chandaṁ janeti vāyamati vīriyaṁ ārabhati cittaṁ paggaṇhāti padahati; uppannānaṁ kusalānaṁ dhammānaṁ ṭhitiyā asammosāya bhiyyobhāvāya vepullāya bhāvanāya pāripūriyā chandaṁ janeti vāyamati vīriyaṁ ārabhati cittaṁ paggaṇhāti padahati.",
+   "an4.69": "Katamañca, bhikkhave, saṁvarappadhānaṁ? Idha, bhikkhave, bhikkhu anuppannānaṁ pāpakānaṁ akusalānaṁ dhammānaṁ anuppādāya chandaṁ janeti vāyamati vīriyaṁ ārabhati cittaṁ paggaṇhāti padahati. Idaṁ vuccati, bhikkhave, saṁvarappadhānaṁ. Katamañca, bhikkhave, pahānappadhānaṁ? Idha, bhikkhave, bhikkhu uppannānaṁ pāpakānaṁ akusalānaṁ dhammānaṁ pahānāya chandaṁ janeti vāyamati vīriyaṁ ārabhati cittaṁ paggaṇhāti padahati. Idaṁ vuccati, bhikkhave, pahānappadhānaṁ. Katamañca, bhikkhave, bhāvanāppadhānaṁ? Idha, bhikkhave, bhikkhu anuppannānaṁ kusalānaṁ dhammānaṁ uppādāya chandaṁ janeti vāyamati vīriyaṁ ārabhati cittaṁ paggaṇhāti padahati. Idaṁ vuccati, bhikkhave, bhāvanāppadhānaṁ. Katamañca, bhikkhave, anurakkhaṇāppadhānaṁ? Idha, bhikkhave, bhikkhu uppannānaṁ kusalānaṁ dhammānaṁ ṭhitiyā asammosāya bhiyyobhāvāya vepullāya bhāvanāya pāripūriyā chandaṁ janeti vāyamati vīriyaṁ ārabhati cittaṁ paggaṇhāti padahati. Idaṁ vuccati, bhikkhave, anurakkhaṇāppadhānaṁ.",
+   "T0099-sa875": "何等為四？一者斷斷，二者律儀斷，三者隨護斷，四者修斷。」",
+   "T0099-sa876": "何等為四？一者斷斷，二者律儀斷，三者隨護斷，四者修斷。」"
+  },
+  "a03": {
+   "an4.13": "Imāni kho, bhikkhave, cattāri sammappadhānānīti. Sammappadhānā māradheyyābhibhūtā, Te asitā jātimaraṇabhayassa pāragū; Te tusitā jetvā māraṁ savāhiniṁ te anejā, Sabbaṁ namucibalaṁ upātivattā te sukhitā”ti.",
+   "an4.69": "Imāni kho, bhikkhave, cattāri padhānānīti. Saṁvaro ca pahānañca, bhāvanā anurakkhaṇā; Ete padhānā cattāro, desitādiccabandhunā; Yo hi bhikkhu idhātāpī, khayaṁ dukkhassa pāpuṇe”ti.",
+   "T0099-sa875": "佛說此經已，諸比丘聞佛所說，歡喜奉行。"
+  },
+  "a04": {
+   "T0099-sa876": "爾時世尊即說偈言：「斷斷及律儀，隨護與修習，\n如此四正斷，諸佛之所說。」"
+  },
+  "a05": {
+   "an4.13": "Tatiyaṁ.",
+   "an4.69": "Navamaṁ.",
+   "T0099-sa876": "佛說此經已，諸比丘聞佛所說，歡喜奉行。"
+  }
+ }
+}

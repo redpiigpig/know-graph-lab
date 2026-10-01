@@ -1,0 +1,248 @@
+{
+ "slug": "pi-mn141",
+ "title": "四諦經",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "世尊宣說四諦開示"
+  },
+  {
+   "id": "a02",
+   "label": "讚歎舍利弗目犍連"
+  },
+  {
+   "id": "a03",
+   "label": "世尊入室"
+  },
+  {
+   "id": "a04",
+   "label": "舍利弗問答開頭"
+  },
+  {
+   "id": "a05",
+   "label": "舍利弗重述佛說四諦"
+  },
+  {
+   "id": "a06",
+   "label": "苦聖諦解說"
+  },
+  {
+   "id": "a07",
+   "label": "生老病死等細分"
+  },
+  {
+   "id": "a08",
+   "label": "憂悲苦惱愁等細分"
+  },
+  {
+   "id": "a09",
+   "label": "所求不得苦"
+  },
+  {
+   "id": "a10",
+   "label": "五取蘊苦"
+  },
+  {
+   "id": "a11",
+   "label": "苦聖諦結論"
+  },
+  {
+   "id": "a12",
+   "label": "集聖諦解說"
+  },
+  {
+   "id": "a13",
+   "label": "滅聖諦解說"
+  },
+  {
+   "id": "a14",
+   "label": "道聖諦解說"
+  },
+  {
+   "id": "a15",
+   "label": "八正道細分"
+  },
+  {
+   "id": "a16",
+   "label": "道聖諦結論"
+  },
+  {
+   "id": "a17",
+   "label": "重複結尾偈頌"
+  },
+  {
+   "id": "a18",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "mn141",
+   "lang": "pi",
+   "label": "巴利 MN141",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-mn141",
+   "lang": "lzh",
+   "label": "漢譯南傳 MN141",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0125-ea27.1",
+   "lang": "lzh",
+   "label": "增壹阿含經 （一）",
+   "who": "東晉 瞿曇僧伽提婆譯"
+  },
+  {
+   "id": "T0026-ma31",
+   "lang": "lzh",
+   "label": "中阿含經 （三一）中阿含舍梨子相應品分別聖諦經第十一（初一日誦）",
+   "who": "東晉 瞿曇僧伽提婆譯"
+  },
+  {
+   "id": "T0032",
+   "lang": "lzh",
+   "label": "四諦經",
+   "who": "後漢 安世高譯"
+  }
+ ],
+ "works": [
+  "T0026",
+  "T0032",
+  "T0125"
+ ],
+ "anchors": [
+  {
+   "work": "T0125",
+   "node": "（一）",
+   "uid": "T02n0125_p0643a26"
+  },
+  {
+   "work": "T0026",
+   "node": "（三一）中阿含舍梨子相應品分別聖諦經第十一（初一日誦）",
+   "uid": "T01n0026_p0467a29"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "mn141": "Majjhima Nikāya 141 Saccavibhaṅgasutta",
+   "nan-mn141": "第一四一　諦分別經如是我聞。——",
+   "T0125-ea27.1": "聞如是：一時，佛在舍衛國祇樹給孤獨園。",
+   "T0026-ma31": "我聞如是：一時，佛遊舍衛國，在勝林給孤獨園。",
+   "T0032": "聞如是：一時，佛在舍衛國祇樹給孤獨園。"
+  },
+  "a01": {
+   "mn141": "Evaṁ me sutaṁ— ekaṁ samayaṁ bhagavā bārāṇasiyaṁ viharati isipatane migadāye. Tatra kho bhagavā bhikkhū āmantesi: “bhikkhavo”ti. “Bhadante”ti te bhikkhū bhagavato paccassosuṁ. Bhagavā etadavoca: “Tathāgatena, bhikkhave, arahatā sammāsambuddhena bārāṇasiyaṁ isipatane migadāye anuttaraṁ dhammacakkaṁ pavattitaṁ appaṭivattiyaṁ samaṇena vā brāhmaṇena vā devena vā mārena vā brahmunā vā kenaci vā lokasmiṁ, yadidaṁ— catunnaṁ ariyasaccānaṁ ācikkhanā desanā paññāpanā paṭṭhapanā vivaraṇā vibhajanā uttānīkammaṁ. Katamesaṁ catunnaṁ? Dukkhassa ariyasaccassa ācikkhanā desanā paññāpanā paṭṭhapanā vivaraṇā vibhajanā uttānīkammaṁ, dukkhasamudayassa ariyasaccassa ācikkhanā desanā paññāpanā paṭṭhapanā vivaraṇā vibhajanā uttānīkammaṁ, dukkhanirodhassa ariyasaccassa ācikkhanā desanā paññāpanā paṭṭhapanā vivaraṇā vibhajanā uttānīkammaṁ, dukkhanirodhagāminiyā paṭipadāya ariyasaccassa ācikkhanā desanā paññāpanā paṭṭhapanā vivaraṇā vibhajanā uttānīkammaṁ. Tathāgatena, bhikkhave, arahatā sammāsambuddhena bārāṇasiyaṁ isipatane migadāye anuttaraṁ dhammacakkaṁ pavattitaṁ appaṭivattiyaṁ samaṇena vā brāhmaṇena vā devena vā mārena vā brahmunā vā kenaci vā lokasmiṁ, yadidaṁ— imesaṁ catunnaṁ ariyasaccānaṁ ācikkhanā desanā paññāpanā paṭṭhapanā vivaraṇā vibhajanā uttānīkammaṁ.",
+   "nan-mn141": "一時，世尊住波羅奈城仙人墮處鹿野苑。於其處世尊告諸比丘：「諸比丘！」彼等比丘奉答世尊：「世尊！」世尊如是曰：「諸比丘！由如來、阿羅漢、正等覺者，於波羅奈城仙人墮處鹿野苑，轉無上法輪。〔即〕沙門或婆羅門、或天、或魔、或梵天、或世界中之任何者亦未曾轉之。即此四聖諦之開示、宣說、施設、建立、解明、分別、顯發。四者何耶？苦聖諦之開示、宣說、施設、建立、解明、分別……顯發。苦滅聖諦之開示……顯發。苦滅道聖諦之開示……顯發。諸比丘！由如來、阿羅漢、正等覺者，於波羅奈城仙人墮處鹿野苑，轉無上法輪。沙門……或世界中之任何者，亦未曾轉。即此如是四聖諦之……顯發。",
+   "T0125-ea27.1": "爾時，世尊告諸比丘：「是謂，比丘！我等常所說法，所謂四諦，以無數方便而觀察此法，分別其義，廣與人演。云何為四？所謂苦諦之法，以無數方便而觀察此法，分別其義，廣與人演；以無數方便說習、盡、道諦，而觀察此法，分別其義，廣與人演。",
+   "T0026-ma31": "爾時，世尊告諸比丘：「此是正行說法，謂四聖諦廣攝、廣觀、分別、發露、開仰、施設、顯示、趣向。過去諸如來、無所著、等正覺，彼亦有此正行說法，謂四聖諦廣攝、廣觀、分別、發露、開仰、施設、顯示、趣向。未來諸如來、無所著、等正覺，彼亦有此正行說法，謂四聖諦廣攝、廣觀、分別、發露、開仰、施設、顯示、趣向。我今現如來、無所著、等正覺，亦有此正行說法，謂四聖諦廣攝、廣觀、分別、發露、開仰、施設、顯示、趣向。",
+   "T0032": "是時，佛告諸比丘：「比丘！」應：「唯然。」比丘便從佛聞。佛便說是：「比丘！真正法說，為是四諦。具思惟見、開了分別發見。若所有比丘過世時，從如來無所著正覺是，亦從是正說，為是四諦。具思惟見、開了分別發見。從是四諦，若所有比丘從後世來者，從如來無所著正覺是，為從是正法，真為賢者四諦。具如上說。今有比丘見在，如來無所著正覺是，亦從是正諦，說如是四諦，具思惟見、開了分別發見。」"
+  },
+  "a02": {
+   "mn141": "Sevatha, bhikkhave, sāriputtamoggallāne; bhajatha, bhikkhave, sāriputtamoggallāne. Paṇḍitā bhikkhū anuggāhakā sabrahmacārīnaṁ. Seyyathāpi, bhikkhave, janetā, evaṁ sāriputto; seyyathāpi jātassa āpādetā, evaṁ moggallāno. Sāriputto, bhikkhave, sotāpattiphale vineti, moggallāno uttamatthe. Sāriputto, bhikkhave, pahoti cattāri ariyasaccāni vitthārena ācikkhituṁ desetuṁ paññāpetuṁ paṭṭhapetuṁ vivarituṁ vibhajituṁ uttānīkātun”ti. Idamavoca bhagavā.",
+   "nan-mn141": "諸比丘！近習於舍利弗、目犍連。諸比丘！親近舍利弗、目犍連。〔彼二人是〕賢者比丘，為諸梵行者之誘助者。諸比丘！有如，舍利弗乃如是；有如所生〔兒〕之養者，目犍連乃如是。諸比丘！舍利弗乃導於須陀洹；目犍連乃〔導〕於最上義。諸比丘！舍利弗得詳細開示、宣說、施設、建立、解明、分別、顯發四聖諦。」世尊如是說，如是說已，善逝從座起而入精舍。",
+   "T0125-ea27.1": "「汝等比丘，當親近舍利弗比丘，承事供養。所以然者，彼舍利弗比丘以無數方便，說此四諦，廣與人演。當舍利弗比丘與諸眾生及四部眾，分別其義，廣與人演，時不可計眾生諸塵垢盡，得法眼淨。「汝等比丘，當親近舍利弗、目犍連比丘，承事供養。所以然者，舍利弗比丘！眾生之父母，以生已長養令大者，目犍連比丘！所以然者，舍利弗比丘與人說法要，成四諦；目犍連比丘與人說法要，成第一義，成無漏行。汝等當親近舍利弗、目犍連比丘。」",
+   "T0026-ma31": "「舍梨子比丘聰慧、速慧、捷慧、利慧、廣慧、深慧、出要慧、明達慧、辯才慧，舍梨子比丘成就實慧。所以者何？謂我略說此四聖諦，舍梨子比丘則能為他廣教、廣觀、分別、發露、開仰、施設、顯現、趣向。舍梨子比丘廣教、廣示此四聖諦，分別、發露、開仰、施設、顯現、趣向時，令無量人而得於觀，舍梨子比丘能以正見為導御也。目乾連比丘能令立於最上真際，謂究竟漏盡。舍梨子比丘生諸梵行，猶如生母，目連比丘長養諸梵行，猶如養母，是以諸梵行者，應奉事供養恭敬禮拜舍梨子、目乾連比丘。所以者何？舍梨子、目乾連比丘為諸梵行者求義及饒益，求安隱快樂。」",
+   "T0032": "佛復告比丘舍利曰：「比丘！慧、疾慧、走慧、利慧、方慧、深徹慧、惡慧，不厭能見慧、珍寶慧隨。比丘舍利曰能，比丘舍利曰所，是賢者四諦，平說具能。舍利曰比丘為奇人，具說思惟，能見能開，能了能分，別發能見，今多少隨道法。是舍利曰比丘，最無有過，從邪能還。舍利曰比丘能令隨道，目揵連比丘能令竟道；舍利曰比丘如母生，目揵連比丘如母供養。當目揵連比丘如是覺者，舍利曰、目揵連，當可事、當為供、當可往問。舍利曰比丘、目揵連比丘，為同學者致樂念，令無有他。」"
+  },
+  "a03": {
+   "mn141": "Idaṁ vatvāna sugato uṭṭhāyāsanā vihāraṁ pāvisi.",
+   "T0125-ea27.1": "世尊作是語已，還入靜室。",
+   "T0026-ma31": "爾時，世尊說如是已，即從坐起，入室燕坐。",
+   "T0032": "佛已說如是，從坐起，入寺室，頃思惟在。"
+  },
+  "a04": {
+   "mn141": "Tatra kho āyasmā sāriputto acirapakkantassa bhagavato bhikkhū āmantesi: “āvuso bhikkhave”ti. “Āvuso”ti kho te bhikkhū āyasmato sāriputtassa paccassosuṁ. Āyasmā sāriputto etadavoca:",
+   "T0125-ea27.1": "世尊去未久，爾時舍利弗告諸比丘：「其有能得四諦法者，彼人快得善利。",
+   "T0026-ma31": "於是，尊者舍梨子告諸比丘：「諸賢！世尊為我等出世，謂為他廣教、廣示此四聖諦，分別、發露、開仰、施設、顯現、趣向。",
+   "T0032": "時賢者舍利曰比丘，為利故、令佛在世間故，今為說是四諦：「何等為四？"
+  },
+  "a05": {
+   "mn141": "“Tathāgatena, āvuso, arahatā sammāsambuddhena bārāṇasiyaṁ isipatane migadāye anuttaraṁ dhammacakkaṁ pavattitaṁ appaṭivattiyaṁ samaṇena vā brāhmaṇena vā devena vā mārena vā brahmunā vā kenaci vā lokasmiṁ, yadidaṁ— catunnaṁ ariyasaccānaṁ ācikkhanā desanā paññāpanā paṭṭhapanā vivaraṇā vibhajanā uttānīkammaṁ. Katamesaṁ catunnaṁ? Dukkhassa ariyasaccassa ācikkhanā desanā paññāpanā paṭṭhapanā vivaraṇā vibhajanā uttānīkammaṁ, dukkhasamudayassa ariyasaccassa ācikkhanā desanā paññāpanā paṭṭhapanā vivaraṇā vibhajanā uttānīkammaṁ, dukkhanirodhassa ariyasaccassa ācikkhanā desanā paññāpanā paṭṭhapanā vivaraṇā vibhajanā uttānīkammaṁ, dukkhanirodhagāminiyā paṭipadāya ariyasaccassa ācikkhanā desanā paññāpanā paṭṭhapanā vivaraṇā vibhajanā uttānīkammaṁ.",
+   "nan-mn141": "於此，尊者舍利弗於世尊去後不久言諸比丘：「友之諸比丘！」彼等諸比丘答舍利弗曰：「友！」舍利弗乃如是曰：「友等！由如來、阿羅漢、正等覺者，於波羅奈城仙人墮處鹿野苑，轉無上法輪……苦滅道聖諦之開示、宣說、施設、建立、解明、分別、顯發。"
+  },
+  "a06": {
+   "mn141": "Katamañcāvuso, dukkhaṁ ariyasaccaṁ? Jātipi dukkhā, jarāpi dukkhā, maraṇampi dukkhaṁ, sokaparidevadukkhadomanassupāyāsāpi dukkhā, yampicchaṁ na labhati tampi dukkhaṁ; saṅkhittena pañcupādānakkhandhā dukkhā.",
+   "nan-mn141": "友等！然者，如何為苦之聖諦？是生苦、老苦、死苦、憂、悲、苦、惱、愁苦、所求不得，此皆是苦。略言之乃五取蘊之苦。",
+   "T0125-ea27.1": "云何為四？所謂苦諦，以無數方便廣演其義。",
+   "T0026-ma31": "云何為四？謂苦聖諦，苦習、苦滅、苦滅道聖諦。諸賢！云何苦聖諦？謂生苦、老苦、病苦、死苦、怨憎會苦、愛別離苦、所求不得苦、略五盛陰苦。",
+   "T0032": "一為苦，二為習，三為盡，四為道，四諦受行令滅苦。何等為，賢者！苦諦？從生苦，從老苦，為病苦，為死苦，不哀相逢、苦離哀苦、所求不得是亦苦、倉卒五種苦生。"
+  },
+  "a07": {
+   "mn141": "Katamā cāvuso, jāti? Yā tesaṁ tesaṁ sattānaṁ tamhi tamhi sattanikāye jāti sañjāti okkanti abhinibbatti khandhānaṁ pātubhāvo āyatanānaṁ paṭilābho, ayaṁ vuccatāvuso: ‘jāti’. Katamā cāvuso, jarā? Yā tesaṁ tesaṁ sattānaṁ tamhi tamhi sattanikāye jarā jīraṇatā khaṇḍiccaṁ pāliccaṁ valittacatā āyuno saṁhāni indriyānaṁ paripāko, ayaṁ vuccatāvuso: ‘jarā’. Katamañcāvuso, maraṇaṁ? Yā tesaṁ tesaṁ sattānaṁ tamhā tamhā sattanikāyā cuti cavanatā bhedo antaradhānaṁ maccu maraṇaṁ kālaṅkiriyā khandhānaṁ bhedo kaḷevarassa nikkhepo jīvitindriyassupacchedo, idaṁ vuccatāvuso: ‘maraṇaṁ’.",
+   "nan-mn141": "友等！然者，如何為生？彼彼之有情於彼彼之有情類中生、出生、出現、生起、興起、諸蘊之現前、諸處（感官）之獲得，友等！此等言生。友等！然者，如何為老？彼彼之有情於彼彼之有情中老、老衰、齒落、髮白、皮皺、青之衰損、諸根之毀熟，友等！此言老。友等！然者，如何為死？彼彼之有情於彼彼之有情中死去、死亡、破滅、滅沒、死滅、死、命終、諸蘊之破壞、身體之投棄，友等！此言死。",
+   "T0026-ma31": "諸賢！說生苦者，此說何因？諸賢！生者，謂彼眾生、彼彼眾生種類，生則生，出則出，成則成，興起五陰，已得命根，是名為生。諸賢！生苦者，謂眾生生時，身受苦受、遍受、覺、遍覺，心受苦受、遍受、覺、遍覺，身心受苦受、遍受，覺、遍覺，身熱受、遍受、覺、遍覺，心熱受、遍受、覺、遍覺，身心熱受、遍受、覺、遍覺，身壯熱煩惱憂慼受、遍受，覺、遍覺，心壯熱煩惱憂慼受、遍受、覺、遍覺，身心壯熱煩惱憂慼受、遍受、覺、遍覺。諸賢！說生苦者，因此故說。「諸賢！說老苦者，此說何因？諸賢！老者，謂彼眾生、彼彼眾生種類，彼為老耄，頭白齒落，盛壯日衰，身曲脚戾，體重氣上，拄杖而行，肌縮皮緩，皺如麻子，諸根毀熟，顏色醜惡，是名為老。諸賢！老苦者，謂眾生老時，身受苦受、遍受、覺、遍覺，心受苦受、遍受、覺、遍覺，身心受苦受、遍受、覺、遍覺，身熱受、遍受、覺、遍覺，心熱受、遍受、覺、遍覺，身心熱受、遍受、覺、遍覺，身壯熱煩惱憂慼受、遍受、覺、遍覺，心壯熱煩惱憂慼受、遍受、覺、遍覺，身心壯熱煩惱憂慼受、遍受、覺、遍覺。諸賢！說老苦者，因此故說。「諸賢！說病苦者，此說何因？諸賢！病者，謂頭痛、眼痛、耳痛、鼻痛、面痛、脣痛、齒痛、舌痛、𪘽痛、咽痛、風喘、咳嗽、喝吐、喉啤、癲癎、癕癭、經溢、赤膽、壯熱、枯槁、痔𭼟、下利，若有如是比餘種種病，從更樂觸生，不離心，立在身中，是名為病。諸賢！病苦者，謂眾生病時，身受苦受、遍受、覺、遍覺，心受苦受、遍受、覺、遍覺，身心受苦受、遍受、覺、遍覺，身熱受、遍受、覺、遍覺，心熱受、遍受、覺、遍覺，身心熱受、遍受、覺、遍覺，身壯熱煩惱憂慼受、遍受、覺、遍覺，心壯熱煩惱憂慼受、遍受、覺、遍覺，身心壯熱煩惱憂慼受、遍受、覺、遍覺。諸賢！說病苦者，因此故說。「諸賢！說死苦者，此說何因？諸賢！死者，謂彼眾生、彼彼眾生種類，命終無常，死喪散滅，壽盡破壞，命根閉塞，是名為死。諸賢！死苦者，謂眾生死時，身受苦受、遍受、覺、遍覺，心受苦受、遍受、覺、遍覺，身心受苦受、遍受、覺、遍覺，身熱受、遍受、覺、遍覺，心熱受、遍受、覺、遍覺，身心熱受、遍受、覺、遍覺，身壯熱煩惱憂慼受、遍受、覺、遍覺，心壯熱煩惱憂慼受、遍受、覺、遍覺，身心壯熱煩惱憂慼受、遍受、覺、遍覺。諸賢！說死苦者，因此故說。「諸賢！說怨憎會苦者，此說何因？諸賢！怨憎會者，謂眾生實有內六處，不愛眼處，耳、鼻、舌、身、意處，彼同會一，有攝、和、習，共合為苦，如是外處，更樂、覺、想、思、愛、亦復如是。諸賢！眾生實有六界，不愛地界，水、火、風、空、識界，彼同會一，有攝、和、習，共合為苦，是名怨憎會。諸賢！怨憎會苦者，謂眾生怨憎會時，身受苦受、遍受、覺、遍覺，心受苦受、遍受、覺、遍覺，身心受苦受、遍受、覺、遍覺。諸賢！說怨憎會苦者，因此故說。「諸賢！說愛別離苦者，此說何因？諸賢！愛別離苦者，謂眾生實有內六處，愛眼處，耳、鼻、舌、身、意處，彼異分散，不得相應，別離不會，不攝、不習、不和合為苦，如是外處，更樂、覺、想、思、愛，亦復如是。諸賢！眾生實有六界，愛地界，水、火、風、空、識界，彼異分散，不得相應，別離不會，不攝、不習、不和合為苦，是名愛別離。諸賢！愛別離苦者，謂眾生別離時，身受苦受、遍受、覺、遍覺，心受苦受、遍受、覺、遍覺，身心受苦受、遍受、覺、遍覺。諸賢！說愛別離苦者，因此故說。",
+   "T0032": "賢者！苦生為何等？若是人彼彼人種，從生增生，以隨以有欲成，五陰已生，命根已得，是名為生。生，賢者！苦。何因緣生苦？為生者人令身有故更苦，從更復更，從痛復痛，令意更苦。從更復更，從受復受，令身意更苦。從更復更，知受復受，令身待受惱。從更復更，覺受復受，意念熱惱。從更復更，知受復受，令身意熱惱。從更復更，從受苦復苦，身熱疲熱惱。從更復更，從受復受，意熱惱疲令熱憂。從更復更，從受復受，令身意惱熱疲。從念熱惱，從更復更，從受復受，生，賢者！苦上說苦，是故說從是有老。「賢者！苦老為何等？所各各疲疲人，其為是老，皺白力動以老，僂拄杖、鬢髮墮、黑子生𭣛𭣛、根已熟、身欲壞、色已轉、老已壽，是名為老。老，賢者！苦。何因緣說老苦？以人老身更苦，從更復更，行受復受，意念更苦。從更復更，作受復作受，身意亦苦。從更復更，行受復受，身熱惱。從更復更，從受復受，意念熱惱。從更復更，從受復受，身意熱惱。從更復更，從受復受，身熱疲憂惱。從更相更，從受相受，意念熱惱疲惱憂。從更相更，從受相受，身意念熱疲憂惱。從更相更，從受復受，是故，賢者！說老苦。上說苦，為是故說。「病，賢者！苦。病為何等？有頭病、有腹病、有耳病、有鼻病、有口病、有脣病、有舌病、有咽喉病、有噦病、有變病、有下病、有熱病、有淋瀝病、有顛病、有咽癅病、有尋尋病、有骨節病、有皮病、有肪病、有血熱病、有痰病，是亦餘若干，皆從猗生，不得離是，皆在著身。病，賢者！苦。何因緣病苦？人受故令身更苦，從更復更從受復受，意念苦。從更復更，從受復受，并身意念更苦。從更復更，從受復受，身熱惱。從更復更，從受復受，令意熱惱。從更復更，從受復受，身意念熱惱。從更復更，從受復受，身熱疲憂惱。從更復更，從受復受，意熱疲憂惱。從更復更，從受復受，身意念熱疲憂惱。從更復更，從受復受，所說病，賢者！苦。是故說，亦從是因緣有。「死，賢者！苦。死為何等？所為人有，所為人有在生死，處處為捨身廢壞滅，不復見命，已盡五陰、已捨命根、已滅死時，是名為死。賢者！苦，何因緣死苦？死者人為身更苦，從更復更，從受復受，意念更苦。從更復更，從受復受，身意念更苦。從更復更，從受復受，令身熱惱。從更復更，從受復受，令意念熱惱。從更復更，從受復受，令身意熱惱。從更復更，從受復受，身熱疲悔惱。從更復更，從受復受，令身意念熱疲悔惱。從更復更，從受復受。死，賢者！苦，為是因緣說，亦從是因緣有說。「不相哀相逢會，賢者！苦。不相哀相逢會，為何等有？賢者！人六自入，不哀不可，是從是相逢會。有是一壞相，離本相聚會、共事相離，是為苦。如是外亦爾，識亦爾，思亦爾，痛亦爾，思想亦爾，念為亦爾，愛亦爾，六行亦爾。有，賢者！人為六種持不哀。何等六種？若地種，若水種、火種、風種、空種、識種。是一會相，有合聚，共會共事，是為苦。不相哀會，賢者！苦。何因緣不相哀會，賢者！苦？不相哀共事會，賢者！人令身更苦，從更復更，從受復受，令意更苦。從更復更，從受復受，令身意念更苦。從更復更，從受復受，令身意念熱。從更復更，從受復受，令身熱疲苦惱。從更復更，從受復受，令意念熱疲苦惱。從更復更，從受復受，令身意念熱疲苦惱。從更復更，從受復受，不相哀相逢會，賢者！苦。是故所說亦從是，故從是說。「哀相別離，賢者！苦。哀別離為何等？有是，賢者！人為所，自所入哀，令從是相別離亡，相別相離、不相俱，不會、不共居、不相逢、不更，是為苦。如是自外亦爾，識亦爾，更愛亦爾，痛亦爾，念為亦爾，愛亦爾，六持亦爾。有，賢者！人為哀六持，地持、水持、火持、風持、空持、識持，令從是相別離亡，相別相離、不會、遠離、不共居、不相會、不共更，是為苦。是離，哀賢者！苦，為是故說，亦從是因緣說。「若求不得是亦苦，是故復說。世間法，賢者！為人，若意生栽為莫生，是亦可舍。老法，賢者！為人，如是欲生為栽莫老，是意不舍。病法，賢者！人，病已受為是欲生，令我莫有，苦是欲舍。死法者，賢者，人已應受死，有是欲生，令我莫死，得不從是舍。有，賢者！人，已生痛，不可、不貪、意不用，為是欲生令是所生，痛不可貪、意不用，令是為可、令是為欲、令是為意不得，從欲斷。有，賢者！人為求思想，亦念不可、不用意，不可有是意生，令是意生者，思想求不用、不可意、不可為欲是意，用可可意，為令我是意當用、當可不得，從是得斷。有是，賢者！人，有更用可可意，設有是意生所，是更已生用可可意，令是常不離，是欲不當斷。設有，賢者！人，生是思想，念愛可意欲，得為是欲生，令是思想念生欲可意欲，得令是常堅勿相離，令是願莫斷。所求不得是亦苦，是故說亦從是因緣故說。「本為五陰苦，是故復說，令從是法。是法非常，厄病為壞，疾、敗、老、不堅、不信，欲、轉、離，為是故本五陰苦。過世，賢者！同是苦諦，未來世，賢者！亦是苦諦，現在世，賢者！亦是苦諦，是無有異，不倒不惑。如有諦如，是如應賢者諦賢者諦。賢者！是諦知見解得應，如是諦覺，是故名為賢者諦。"
+  },
+  "a08": {
+   "mn141": "Katamo cāvuso, soko? Yo kho, āvuso, aññataraññatarena byasanena samannāgatassa aññataraññatarena dukkhadhammena phuṭṭhassa soko socanā socitattaṁ antosoko antoparisoko, ayaṁ vuccatāvuso: ‘soko’. Katamo cāvuso, paridevo? Yo kho, āvuso, aññataraññatarena byasanena samannāgatassa aññataraññatarena dukkhadhammena phuṭṭhassa ādevo paridevo ādevanā paridevanā ādevitattaṁ paridevitattaṁ, ayaṁ vuccatāvuso: ‘paridevo’. Katamañcāvuso, dukkhaṁ? Yaṁ kho, āvuso, kāyikaṁ dukkhaṁ kāyikaṁ asātaṁ kāyasamphassajaṁ dukkhaṁ asātaṁ vedayitaṁ, idaṁ vuccatāvuso: ‘dukkhaṁ’. Katamañcāvuso, domanassaṁ? Yaṁ kho, āvuso, cetasikaṁ dukkhaṁ cetasikaṁ asātaṁ manosamphassajaṁ dukkhaṁ asātaṁ vedayitaṁ, idaṁ vuccatāvuso: ‘domanassaṁ’. Katamo cāvuso, upāyāso? Yo kho, āvuso, aññataraññatarena byasanena samannāgatassa aññataraññatarena dukkhadhammena phuṭṭhassa āyāso upāyāso āyāsitattaṁ upāyāsitattaṁ, ayaṁ vuccatāvuso: ‘upāyāso’.",
+   "nan-mn141": "友等！然者，如何為憂？友等！或具不幸者、或得苦法者之憂、憂慼、憂心、內憂、內徧憂，友等！此言憂。友等！然者，如何為悲？友等！或具不幸者、或得苦法者之悲、徧悲、哭悲、徧哭悲、哭悲之性、徧哭悲之性，友等！此言悲。友等！然者，如何為苦？友等！彼身之苦、身之不快、身觸所生之苦、不快之所受，友等！此言苦。友等！然者，如何為惱？友等！心之不快、意觸所生之苦、不快之所受，友等！此言惱。友等！然者，如何為愁？友等！或具不幸者、或得苦法者之悲愁、悲愁之性、愁之性，友等！此言愁。"
+  },
+  "a09": {
+   "mn141": "Katamañcāvuso, yampicchaṁ na labhati tampi dukkhaṁ? Jātidhammānaṁ, āvuso, sattānaṁ evaṁ icchā uppajjati: ‘aho vata mayaṁ na jātidhammā assāma; na ca vata no jāti āgaccheyyā’ti. Na kho panetaṁ icchāya pattabbaṁ. Idampi: ‘yampicchaṁ na labhati tampi dukkhaṁ’. Jarādhammānaṁ, āvuso, sattānaṁ …pe… byādhidhammānaṁ, āvuso, sattānaṁ … maraṇadhammānaṁ, āvuso, sattānaṁ … sokaparidevadukkhadomanassupāyāsadhammānaṁ, āvuso, sattānaṁ evaṁ icchā uppajjati: ‘aho vata mayaṁ na sokaparidevadukkhadomanassupāyāsadhammā assāma; na ca vata no sokaparidevadukkhadomanassupāyāsā āgaccheyyun’ti. Na kho panetaṁ icchāya pattabbaṁ. Idampi: ‘yampicchaṁ na labhati tampi dukkhaṁ’.",
+   "nan-mn141": "友等！然者，如何為所求不得，此亦苦耶？友等！於諸生法之有情，如是之希求生：『彼實非我等之生法，又彼實於我等不生來。』然雖如是亦不可得達。此即：『所求不得，此亦苦也。』友等！諸老法於有情……乃至……友等！諸病法於有情……乃至……友等！諸死法於有情……乃至……友等！諸憂、悲、苦、惱、愁法於有情，如是之希望生：『此實非我等之憂、悲、苦、惱、愁法。又實彼憂、悲、苦、惱、愁之不來於我。』然，雖如是希求不可得達也。如是乃『所求不得亦苦。』",
+   "T0026-ma31": "「諸賢！說所求不得苦者，此說何因？諸賢！謂眾生生法，不離生法，欲得令我而不生者，此實不可以欲而得，老法、死法、愁憂慼法，不離憂慼法，欲得令我不憂慼者，此亦不可以欲而得。諸賢！眾生實生苦而不可樂、不可愛念，彼作是念：『若我生苦而不可樂、不可愛念者，欲得轉是，令可愛念。』此亦不可以欲而得。諸賢！眾生實生樂而可愛念，彼作是念：『若我生樂可愛念者，欲得令是常恒久住不變易法。』此亦不可以欲而得。諸賢！眾生實生思想而不可樂、不可愛念，彼作是念：『若我生思想而不可樂、不可愛念者，欲得轉是，令可愛念。』此亦不可以欲而得。諸賢！眾生實生思想而可愛念，彼作是念：『若我生思想可愛念者，欲得令是常恒久住不變易法。』此亦不可以欲而得。諸賢！說所求不得苦者，因此故說。"
+  },
+  "a10": {
+   "mn141": "Katame cāvuso, saṅkhittena pañcupādānakkhandhā dukkhā? Seyyathidaṁ—rūpupādānakkhandho, vedanupādānakkhandho, saññupādānakkhandho, saṅkhārupādānakkhandho, viññāṇupādānakkhandho. Ime vuccantāvuso: ‘saṅkhittena pañcupādānakkhandhā dukkhā’.",
+   "nan-mn141": "友等！然者，如何略而言五取蘊是苦？所謂色取蘊、受取蘊、想取蘊、行取蘊、識取蘊，友等！此言略而言五取蘊是苦。",
+   "T0125-ea27.1": "云何為苦諦？所謂生苦、老苦、病苦、死苦、憂悲惱苦、怨憎會苦、恩愛別苦、所求不得苦，取要言之，五盛陰苦，是謂苦諦。",
+   "T0026-ma31": "「諸賢！說略五盛陰苦者，此說何因？謂色盛陰，覺、想、行、識盛陰。諸賢！說略五盛陰苦者，因此故說。「諸賢！過去時是苦聖諦，未來、現在時是苦聖諦，真諦不虛，不離於如，亦非顛倒，真諦審實，合如是諦，聖所有，聖所知，聖所見，聖所了，聖所得，聖所等正覺，是故說苦聖諦。"
+  },
+  "a11": {
+   "mn141": "Idaṁ vuccatāvuso: ‘dukkhaṁ ariyasaccaṁ’.",
+   "nan-mn141": "友等！如是言苦之聖諦。"
+  },
+  "a12": {
+   "mn141": "Katamañcāvuso, dukkhasamudayaṁ ariyasaccaṁ? Yāyaṁ taṇhā ponobbhavikā nandīrāgasahagatā tatratatrābhinandinī, seyyathidaṁ— kāmataṇhā bhavataṇhā vibhavataṇhā, idaṁ vuccatāvuso: ‘dukkhasamudayaṁ ariyasaccaṁ’.",
+   "nan-mn141": "友等！然者，如何為苦集之聖諦？凡彼愛之生起而與喜、貪俱行，於彼之處為所勝喜，即所謂彼欲愛、有愛、無有愛。友等！此言苦集之聖諦。",
+   "T0026-ma31": "「諸賢！云何愛習苦習聖諦？謂眾生實有愛內六處，眼處，耳、鼻、舌、身、意處，於中若有愛、有膩、有染、有著者，是名為習。諸賢！多聞聖弟子知我如是知此法，如是見，如是了，如是視，如是覺，是謂愛習苦習聖諦，如是知之。云何知耶？若有愛妻、子、奴婢、給使、眷屬、田地、屋宅、店肆、出息財物，為所作業，有愛、有膩、有染、有著者，是名為習；彼知此愛習，苦習聖諦，如是外處，更樂、覺、想、思、愛，亦復如是。諸賢！眾生實有愛六界，地界，水、火、風、空、識界，於中若有愛、有膩、有染、有著者，是名為習。諸賢！多聞聖弟子知我如是知此法，如是見，如是了，如是視，如是覺，是謂愛習苦習聖諦，如是知之。云何知耶？若有愛妻、子、奴婢、給使、眷屬、田地、屋宅、店肆、出息財物，為所作業，有愛、有膩、有染、有著者，是名為習，彼知是愛習苦習聖諦。諸賢！過去時是愛習苦習聖諦，未來、現在時是愛習苦習聖諦，真諦不虛，不離於如，亦非顛倒，真諦審實，合如是諦，聖所有，聖所知，聖所見，聖所了，聖所得，聖所等正覺，是故說愛習苦習聖諦。",
+   "T0032": "「何等為，賢者！苦習賢者諦？或人，賢者！六自，入身相愛，彼所愛著近往，是為習。如自身，外身亦爾，識更知行哀。有，賢者！人為六持愛：一為地、二為水、三為火、四為風、五為空、六為識。彼所愛著，相近往發，是為習。如是何應？若人在兒子，亦妻、從使御者、田地舍宅、坐肆臥具，便息為愛，著近更發往求，當知是愛習為苦習賢者諦。過世，賢者！時亦是愛習為苦習賢者習，未來世時亦是愛習為苦習賢者習，今現世時亦是愛習為苦習賢者習。如是不異，如有不倒不惑，真諦正如。有，賢者！諦，為賢者諦，更見解得，相應如有覺。是故，苦習名為賢者諦。"
+  },
+  "a13": {
+   "mn141": "Katamañcāvuso, dukkhanirodhaṁ ariyasaccaṁ? Yo tassāyeva taṇhāya asesavirāganirodho cāgo paṭinissaggo mutti anālayo, idaṁ vuccatāvuso: ‘dukkhanirodhaṁ ariyasaccaṁ’.",
+   "nan-mn141": "友等！然者，如何為苦滅之聖諦？凡彼愛無餘離欲而滅，捨、捨離、解脫、不執藏。友等！此言苦滅之聖諦。",
+   "T0125-ea27.1": "云何苦習諦？所謂愛結是也。云何為盡諦？所謂盡諦者，愛欲結永盡無餘，是謂盡諦。",
+   "T0026-ma31": "「諸賢！云何愛滅苦滅聖諦？謂眾生實有愛內六處，眼處、耳、鼻、舌、身、意處，彼若解脫，不染不著、斷捨吐盡、無欲、滅、止沒者，是名苦滅。諸賢！多聞聖弟子知我如是知此法，如是見，如是了，如是視，如是覺，是謂愛滅苦滅聖諦，如是知之。云何知耶？若有不愛妻、子、奴婢、給使、眷屬、田地、屋宅、店肆、出息財物，不為所作業，彼若解脫，不染不著、斷捨吐盡、無欲、滅、止沒者，是名苦滅，彼知是愛滅苦滅聖諦，如是外處，更樂、覺、想、思、愛亦復如是。諸賢！眾生實有愛六界，地界，水、火、風、空、識界，彼若解脫，不染不著、斷捨吐盡、無欲、滅、止沒者，是名苦滅。諸賢！多聞聖弟子知我如是知此法，如是見，如是了，如是視，如是覺，是謂愛滅苦滅聖諦，如是知之。云何知耶？若有不愛妻、子、奴婢、給使、眷屬、田地、屋宅、店肆、出息財物，不為所作業，彼若解脫，不染不著，斷捨吐盡、無欲、滅、止沒者，是名苦滅，彼知是愛滅苦滅聖諦。諸賢！過去時是愛滅苦滅聖諦，未來、現在時是愛滅苦滅聖諦，真諦不虛，不離於如，亦非顛倒，真諦審實，合如是諦，聖所有，聖所知，聖所見，聖所了，聖所得，聖所等正覺，是故說愛滅苦滅聖諦。",
+   "T0032": "「何等為，賢者！苦盡賢者諦？有，賢者！為人六自身中種入，為不受，得從是解，不共更，已斷、已捨、相離、已盡、不復望、已滅、寂然，是苦滅。如是內身，外亦爾，識相近，更思想，念行望，愛亦爾。有，賢者！人六持不愛：一地、二水、三火、四風、五空、六識。從是得解，不共更，已斷、已捨、已棄、已異、不用、寂然，是為苦盡。是亦為何等？若人無有愛著，在兒、在家、在使、在御、田地舍宅、居肆臥具、賣買利息，無有愛著，不相近、意生發求，無有是，當知是愛盡為苦盡賢者諦。過世，賢者！時是亦愛盡為苦盡賢者諦，未來世亦爾，今現在世時亦是愛盡為苦盡賢者諦。如是不異，如有不惑不倒，真諦是如有，是故苦已盡名為賢者諦。「何等為，賢者！"
+  },
+  "a14": {
+   "mn141": "Katamañcāvuso, dukkhanirodhagāminī paṭipadā ariyasaccaṁ?",
+   "T0125-ea27.1": "云何為道諦？所謂賢聖八品道是。",
+   "T0026-ma31": "「諸賢！云何苦滅道聖諦？",
+   "T0032": "苦盡受行賢者諦？"
+  },
+  "a15": {
+   "mn141": "Ayameva ariyo aṭṭhaṅgiko maggo, seyyathidaṁ— sammādiṭṭhi, sammāsaṅkappo, sammāvācā, sammākammanto, sammāājīvo, sammāvāyāmo, sammāsati, sammāsamādhi. Katamā cāvuso, sammādiṭṭhi? Yaṁ kho, āvuso, dukkhe ñāṇaṁ, dukkhasamudaye ñāṇaṁ, dukkhanirodhe ñāṇaṁ, dukkhanirodhagāminiyā paṭipadāya ñāṇaṁ, ayaṁ vuccatāvuso: ‘sammādiṭṭhi’. Katamo cāvuso, sammāsaṅkappo? Nekkhammasaṅkappo, abyāpādasaṅkappo, avihiṁsāsaṅkappo, ayaṁ vuccatāvuso: ‘sammāsaṅkappo’. Katamā cāvuso, sammāvācā? Musāvādā veramaṇī, pisuṇāya vācāya veramaṇī, pharusāya vācāya veramaṇī, samphappalāpā veramaṇī, ayaṁ vuccatāvuso: ‘sammāvācā’. Katamo cāvuso, sammākammanto? Pāṇātipātā veramaṇī, adinnādānā veramaṇī, kāmesumicchācārā veramaṇī, ayaṁ vuccatāvuso: ‘sammākammanto’. Katamo cāvuso, sammāājīvo? Idhāvuso, ariyasāvako micchāājīvaṁ pahāya sammāājīvena jīvikaṁ kappeti, ayaṁ vuccatāvuso: ‘sammāājīvo’. Katamo cāvuso, sammāvāyāmo? Idhāvuso, bhikkhu anuppannānaṁ pāpakānaṁ akusalānaṁ dhammānaṁ anuppādāya chandaṁ janeti vāyamati vīriyaṁ ārabhati cittaṁ paggaṇhāti padahati, uppannānaṁ pāpakānaṁ akusalānaṁ dhammānaṁ pahānāya chandaṁ janeti vāyamati vīriyaṁ ārabhati cittaṁ paggaṇhāti padahati, anuppannānaṁ kusalānaṁ dhammānaṁ uppādāya chandaṁ janeti vāyamati vīriyaṁ ārabhati cittaṁ paggaṇhāti padahati, uppannānaṁ kusalānaṁ dhammānaṁ ṭhitiyā asammosāya bhiyyobhāvāya vepullāya bhāvanāya pāripūriyā chandaṁ janeti vāyamati vīriyaṁ ārabhati cittaṁ paggaṇhāti padahati, ayaṁ vuccatāvuso: ‘sammāvāyāmo’. Katamā cāvuso, sammāsati? Idhāvuso, bhikkhu kāye kāyānupassī viharati ātāpī sampajāno satimā vineyya loke abhijjhādomanassaṁ. Vedanāsu vedanānupassī viharati …pe… citte cittānupassī viharati … dhammesu dhammānupassī viharati ātāpī sampajāno satimā vineyya loke abhijjhādomanassaṁ, ayaṁ vuccatāvuso: ‘sammāsati’. Katamo cāvuso, sammāsamādhi? Idhāvuso, bhikkhu vivicceva kāmehi vivicca akusalehi dhammehi savitakkaṁ savicāraṁ vivekajaṁ pītisukhaṁ paṭhamaṁ jhānaṁ upasampajja viharati, vitakkavicārānaṁ vūpasamā ajjhattaṁ sampasādanaṁ cetaso ekodibhāvaṁ avitakkaṁ avicāraṁ samādhijaṁ pītisukhaṁ dutiyaṁ jhānaṁ upasampajja viharati, pītiyā ca virāgā upekkhako ca viharati …pe… tatiyaṁ jhānaṁ …pe… catutthaṁ jhānaṁ upasampajja viharati, ayaṁ vuccatāvuso: ‘sammāsamādhi’.",
+   "nan-mn141": "友等！然者，如何為苦滅道之聖諦？此即八支聖道，即此正見、正思惟、正語、正業、正命、正精進、正念、正定也。友等！然者，如何為正見？友等！於彼苦之智、於苦集之智、於苦滅之智，於苦滅道之智。友等！此言正見。友等！然者，如何為正思惟？出離之思惟（出離覺）、無恚之思惟（無恚覺）、不恚之思惟（不害覺），友等！此言正思惟。友等！然者，如何為正語？離虛誑語、離離間語、離粗惡語、離雜穢語。友等！此言正語。友等！然而，如何為正業？離殺生、離偷盜、於諸欲之〔境〕離邪行。友等！此言正業。友等！然者，如何為正命？友等！茲有聖弟子，捨邪命依正命而生活。友等！此言正命。友等！然者，如何為正精進？友等！茲有比丘，未起之諸惡、為令不善法之不起而意志生，而行精進、精勤、熱心、策勵心、已起之諸惡、為令捨不善法而意志生……熱心。為起未起之諸善而意志生……熱心。為令持續已起之諸善法、不錯亂、增長、廣大、增修而意志生……熱心。友等！此言正精進。友等！然者，如何為正念？友等！茲有比丘，於身隨觀身而住，熱心而有正知、有念、於世間調伏貪、憂。於諸受……乃至……於心……乃至……於諸法，隨觀法而住，熱心……以調伏貪、憂。友等！此言正念。友等！然者，如何為正定？友等！茲有比丘，離諸欲、離諸惡不善法，有尋、有伺，由離生喜、樂，具足初禪而住。尋、伺止息故，內心安靜，心一趣性而無尋、無伺、由定生喜、樂，具足第二禪……乃至……第三禪……乃至……第四禪而住。友等！此言正定。",
+   "T0125-ea27.1": "正見、正治、正語、正方便、正命、正業、正念、正定，是謂道諦也。彼眾生快得善利，乃能聞此四諦之法。」",
+   "T0026-ma31": "謂正見、正志、正語、正業、正命、正方便、正念、正定。諸賢！云何正見？謂聖弟子念苦是苦時，習是習、滅是滅，念道是道時，或觀本所作，或學念諸行，或見諸行災患，或見涅槃止息，或無著念觀善心解脫時，於中擇、遍擇、次擇，擇法、視、遍視，觀察明達，是名正見。「諸賢！云何正志？謂聖弟子念苦是苦時，習是習、滅是滅，念道是道時，或觀本所作，或學念諸行，或見諸行災患，或見涅槃止息，或無著念觀善心解脫時，於中心伺、遍伺、隨順伺，可念則念，可望則望，是名正志。「諸賢！云何正語？謂聖弟子念苦是苦時，習是習、滅是滅，念道是道時，或觀本所作，或學念諸行，或見諸行災患，或見涅槃止息，或無著念觀善心解脫時，於中除口四妙行，諸餘口惡行遠離除斷，不行不作，不合不會，是名正語。「諸賢！云何正業？謂聖弟子念苦是苦時，習是習、滅是滅，念道是道時，或觀本所作，或學念諸行，或見諸行災患，或見涅槃止息，或無著念觀善心解脫時，於中除身三妙行，諸餘身惡行遠離除斷，不行不作，不合不會，是名正業。「諸賢！云何正命？謂聖弟子念苦是苦時，習是習、滅是滅，念道是道時，或觀本所作，或學念諸行，或見諸行災患，或見涅槃止息，或無著念觀善心解脫時，於中非無理求，不以多欲無厭足，不為種種伎術呪說邪命活，但以法求衣，不以非法，亦以法求食、床座，不以非法，是名正命。「諸賢！云何正方便？謂聖弟子念苦是苦時，習是習、滅是滅，念道是道時，或觀本所作，或學念諸行，或見諸行災患，或見涅槃止息，或無著念觀善心解脫時，於中若有精進方便，一向精勤求，有力趣向，專著不捨，亦不衰退，正伏其心，是名正方便。「諸賢！云何正念？謂聖弟子念苦是苦時，習是習、滅是滅，念道是道時，或觀本所作，或學念諸行，或見諸行災患，或見涅槃止息，或無著念觀善心解脫時，於中若心順念、背不向念、念遍、念憶、復憶、心心、不忘心之所應，是名正念。「諸賢！云何正定？謂聖弟子念苦是苦時，習是習、滅是滅，念道是道時，或觀本所作，或學念諸行，或見諸行災患，或見涅槃止息，或無著念觀善心解脫時，於中若心住、禪住、順住，不亂不散，攝止正定，是名正定。",
+   "T0032": "有是，賢者！八種道：一直見、二直治、三直語、四直行、五直業、六直方便、七直念、八直定。「何等為，賢者！直見？若，賢者！道德弟子為苦念苦，為習念習，為盡念盡，為道念道，得分別觀，能得法觀，能受想，能觀想，能可想，能受行，是名為直見。亦觀持宿，亦念道德，蚤行見行悔受止、無為、念寂然、止從不著、如得脫、意分別、觀行相、行意在法、觀相不離相會受，是名為正直見，是名為道德諦。「何等為，賢者！正直治？若，賢者！道德弟子，苦為苦念，習為習念，盡為盡念，道為道念，若行隨投念復念，是名為直治。亦觀宿命持，亦所學行相念、從行觀悔、無為、寂然受、止從無所著、得脫意、觀止、所求所投念行隨行，是名為直治，是名為道德諦。「何等為，賢者！正直語？同，賢者！道德弟子！為從苦念苦，為從習念習，為從盡念盡，為從道念道，止四口犯、有餘口惡行，從是得止離。止、相離、攝守、不可作，不作從受罪，無有罪，已止，是為直語。亦復為持宿觀，已入行行念道、從行悔意止、無為、度世、寂然、可意、止、無所著，如得解脫意分別觀，除四口惡行，離、止、相離、攝守、不可作、不作從受罪、無有罪、已止，是名為直語，是名為道德諦。「何等為，賢者！正直行？念為，賢者！道德弟子，從苦為念苦，從習為念習，從盡為念盡，從道為念道，除身三惡行亦餘身惡行，從是止、離、攝守、不可作、不作從受罪、無有罪、已止，是名為直行。亦持觀宿命，亦從道德行，念世間行見悔，止、無為、度世見、寂然止、從無為度世、不著、如得脫意得觀，除身三惡行亦除身惡行，離、止、相離、攝守、不可作、從受罪無有、罪已止，是名為正直行，是名為道德諦。「何等為，賢者！正直業？若，賢者！道德弟子，苦從苦念，苦習從習念，習盡從盡念，盡道從道行得念，所不應求、所不可行，若干畜生業，從邪行欲自活，是名為邪業。亦持宿命行觀，從行得道，念世間行觀悔，止、度世、無為觀、寂然、止得度世、不著、如得脫意從得觀，不應求不求，若干畜生業行自活命，離、止、相離、攝守、不可作、從受罪無有、罪已止，是名為正直業，是名為道德諦。「何等為，賢者！正直方便？賢者！道德弟子，苦為念苦，習為念習，盡為念盡，道為念道，所精進、所方便、所出、所住止、所能、所敷、所喜，不毀不滅念正止，是名為正直方便。亦有持宿命觀，亦從得行念，從世間行見悔，止見、度世、無為、寂然、止從、不著、已得道觀解脫意，所精進、所方便、所出、所住止、所敷、所喜、不毀滅念正攝止，是名為正直方便，是名為道德諦。「何等為，賢者！直正念？若，賢者！道德弟子，苦為念苦，習為念習，盡為念盡，道為念道，相念從念，念念不忘，少言、念不離，是名為正直念。亦觀持宿命，亦從得道行，念世間行不可悔，攝、止、度世、無為、寂然、止見、一德、無所著、如解脫意觀念想念，從念念、念不忘、少言、念不離，是名為直正念，是名為道德諦。「何等為，賢者！直正定？若，賢者！道德弟子，苦為念苦，習為念習，盡為念盡，道為念道，意止故不動不走，已攝止故意念在一，是名為直正定。亦觀持宿命，亦從得解意念，見世間行悔，攝、止、度世、無為、見可如、得無所著、從解脫因緣意向觀所意止，正安一、不惑、不走、攝止、念定在二念，是名為正直定，是名為道德諦。過世，賢者！亦是苦盡受賢者諦，後世未來時亦從是受行賢者諦，今現世時亦從是受行滅苦賢者諦，如是不異，如有不失不惑，真諦如本如有德道德諦，賢者！是諦更見得應解脫，是故為苦盡。從是行名為道德諦。從後斂說，苦、苦習、盡亦見道，佛所說行無有量。」"
+  },
+  "a16": {
+   "mn141": "Idaṁ vuccatāvuso: ‘dukkhanirodhagāminī paṭipadā ariyasaccaṁ’.",
+   "nan-mn141": "友等！如是言苦滅道之聖諦。",
+   "T0026-ma31": "「諸賢！過去時是苦滅道聖諦，未來、現在時是苦滅道聖諦，真諦不虛，不離於如，亦非顛倒，真諦審實，合如是諦，聖所有，聖所知，聖所見，聖所了，聖所得，聖所等正覺，是故說苦滅道聖諦。」"
+  },
+  "a17": {
+   "mn141": "Tathāgatenāvuso, arahatā sammāsambuddhena bārāṇasiyaṁ isipatane migadāye anuttaraṁ dhammacakkaṁ pavattitaṁ appaṭivattiyaṁ samaṇena vā brāhmaṇena vā devena vā mārena vā brahmunā vā kenaci vā lokasmiṁ, yadidaṁ— imesaṁ catunnaṁ ariyasaccānaṁ ācikkhanā desanā paññāpanā paṭṭhapanā vivaraṇā vibhajanā uttānīkamman”ti.",
+   "nan-mn141": "友等！由如來、阿羅漢、正等覺者，於波羅奈城仙人墮處鹿野苑，轉無上法輪。沙門或婆羅門、或天、或魔、或梵天、或世界中之任何者亦未曾轉。此，即此等四聖諦之開示、宣說、施設、建立、解明、分別、顯發也。」",
+   "T0026-ma31": "於是頌曰：「佛明達諸法，見無量善德，\n苦習滅道諦，善顯現分別。」尊者舍梨子所說如是。"
+  },
+  "a18": {
+   "mn141": "Idamavoca āyasmā sāriputto. Attamanā te bhikkhū āyasmato sāriputtassa bhāsitaṁ abhinandunti. Saccavibhaṅgasuttaṁ niṭṭhitaṁ ekādasamaṁ.",
+   "nan-mn141": "尊者舍利弗如是說已，歡喜之彼等諸比丘，隨喜尊者舍利弗之所說。——",
+   "T0125-ea27.1": "爾時，尊者舍利弗當說此法，無量不可計眾生聞此法時，諸塵垢盡，得法眼淨。「我等亦快得善利，世尊與我說法，安處福地。」「是故，四部之眾，求於方便，行此四諦。如是，諸比丘！當作是學。」爾時，諸比丘聞佛所說，歡喜奉行。",
+   "T0026-ma31": "彼諸比丘聞尊者舍梨子所說，歡喜奉行。分別聖諦經第十一竟（三千四百二十五字）",
+   "T0032": "舍利曰說如是，比丘受行。持宿命觀（《大安般》云「信本因緣」，知從宿命有，名直見。）（《義決》云「知前事」，如後事是也）。"
+  }
+ }
+}

@@ -1,0 +1,101 @@
+{
+ "slug": "pi-sn4.6",
+ "title": "別譯雜阿含經 （二八）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "魔王現身喻"
+  },
+  {
+   "id": "a02",
+   "label": "世尊知魔說偈"
+  },
+  {
+   "id": "a03",
+   "label": "偈頌"
+  },
+  {
+   "id": "a04",
+   "label": "魔王退散"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn4.6",
+   "lang": "pi",
+   "label": "巴利 SN4.6",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn4.6",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN4.6",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.28",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （二八）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa1089",
+   "lang": "lzh",
+   "label": "雜阿含經 （一〇八九）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（二八）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一〇八九）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn4.6": "Saṁyutta Nikāya 4.6 1. Paṭhamavagga Sappasutta Evaṁ me sutaṁ— ekaṁ samayaṁ bhagavā rājagahe viharati veḷuvane kalandakanivāpe.",
+   "nan-sn4.6": "〔六〕第六　蛇如是我聞。爾時，世尊住王舍城竹林栗鼠養餌所。",
+   "T0100-sa-2.28": "如是我聞：一時，佛在王舍城耆闍崛山。爾時，世尊於其中夜露地經行，洗足已，入靜房中，整身端坐，繫念在前。",
+   "T0099-sa1089": "如是我聞：一時，佛住王舍城耆闍崛山中。爾時，世尊夜起經行，至後夜時，洗足入房，正身端坐，繫念在前。"
+  },
+  "a01": {
+   "sn4.6": "Tena kho pana samayena bhagavā rattandhakāratimisāyaṁ abbhokāse nisinno hoti, devo ca ekamekaṁ phusāyati. Atha kho māro pāpimā bhagavato bhayaṁ chambhitattaṁ lomahaṁsaṁ uppādetukāmo mahantaṁ sapparājavaṇṇaṁ abhinimminitvā yena bhagavā tenupasaṅkami. Seyyathāpi nāma mahatī ekarukkhikā nāvā; evamassa kāyo hoti. Seyyathāpi nāma mahantaṁ soṇḍikākiḷañjaṁ; evamassa phaṇo hoti. Seyyathāpi nāma mahatī kosalikā kaṁsapāti; evamassa akkhīni bhavanti. Seyyathāpi nāma deve gaḷagaḷāyante vijjullatā niccharanti; evamassa mukhato jivhā niccharati. Seyyathāpi nāma kammāragaggariyā dhamamānāya saddo hoti; evamassa assāsapassāsānaṁ saddo hoti.",
+   "nan-sn4.6": "爾時，世尊，闇夜中坐於露地，雨絲霏霏下降。時，惡魔波旬欲使世尊生起恐怖，毛髮豎立，化作大蛇王相。來詣世尊前。其軀體大如木舟，其頭如酒屋之箕，其兩眼如拘薩羅國之銅鉢，其口如雷鳴，出電光。吐舌，其呼吸聲如鐵工之火具音。",
+   "T0100-sa-2.28": "魔王波旬作是念言：「瞿曇沙門在王舍城耆闍崛山中，露地經行。我當往彼，而作嬈亂。」爾時，魔王即自變形作蟒蛇身，其形長大，猶如大船。雙目晃朗，如憍薩羅鉢。吐舌炎炎，又如掣電。出入息聲，如大雷震。住於佛前，以身遶佛，引頸舉頭，當佛頂上。",
+   "T0099-sa1089": "時，魔波旬作是念：「今沙門瞿曇住王舍城耆闍崛山中，夜起經行，後夜入房，正身端坐，繫念在前。我今當往，為作留難。」即化作大龍，遶佛身七匝，舉頭臨佛頂上，身如大船，頭如大帆，眼如銅鑪，舌如曳電，出息入息若雷雹聲。"
+  },
+  "a02": {
+   "sn4.6": "Atha kho bhagavā “māro ayaṁ pāpimā” iti viditvā māraṁ pāpimantaṁ gāthāhi ajjhabhāsi:",
+   "nan-sn4.6": "時，世尊知是惡魔波旬，以偈語惡魔波旬曰：",
+   "T0100-sa-2.28": "爾時，世尊知魔嬈亂，而說偈言：「我處于閑寂，繫心正解脫，\n安禪修其身，如昔諸佛法。",
+   "T0099-sa1089": "爾時，世尊作是念：「惡魔波旬欲作嬈亂。」"
+  },
+  "a03": {
+   "sn4.6": "“Yo suññagehāni sevati, Seyyā so muni attasaññato; Vossajja careyya tattha so, Patirūpañhi tathāvidhassa taṁ. Carakā bahū bheravā bahū, Atho ḍaṁsasarīsapā bahū; Lomampi na tattha iñjaye, Suññāgāragato mahāmuni. Nabhaṁ phaleyya pathavī caleyya, Sabbepi pāṇā uda santaseyyuṁ; Sallampi ce urasi pakappayeyyuṁ, Upadhīsu tāṇaṁ na karonti buddhā”ti.",
+   "nan-sn4.6": "空舍自制御勝哉彼牟尼\n於此行放棄如是相應彼\n野獸之往來蚊虻毒蛇多\n充滿諸恐怖大聖行空舍\n無有損一毛虛空裂地震\n生者皆恐嚇縱向於胸位\n投擲利猛槍諸佛不被護",
+   "T0100-sa-2.28": "毒蛇極猛暴，狀貌甚可畏，\n蚊虻及蚤蝨，種種諸惱觸，\n不動我一毛，況能令我畏？\n假使虛空裂，大地皆振動，\n一切諸眾生，皆生大驚懼，\n欲令我怖畏，終無有是處。\n設復有毒箭，中于我心者，\n當于被箭時，終不求救護，\n然復此毒箭，亦不能中我。」",
+   "T0099-sa1089": "即說偈言：「猶如空舍宅，牟尼心虛寂，\n於中而旋轉，佛身亦如是。\n無量凶惡龍，蚊虻蠅蚤等，\n普集食其身，不能動毛髮。\n破裂於虛空，傾覆於大地，\n一切眾生類，悉來作恐怖。\n刀矛槍利箭，悉來害佛身，\n如是諸暴害，不能傷一毛。」"
+  },
+  "a04": {
+   "sn4.6": "Atha kho māro pāpimā “jānāti maṁ bhagavā, jānāti maṁ sugato”ti dukkhī dummano tatthevantaradhāyīti.",
+   "nan-sn4.6": "時，惡魔波旬：「世尊已知我，善逝已知我。」即形體沒其處。",
+   "T0100-sa-2.28": "爾時，魔王聞佛說偈，而作是念：「瞿曇沙門已知我心。」生大怖畏，憂愁悔恨，即變形去，還于天宮。",
+   "T0099-sa1089": "時，魔波旬作是念：「沙門瞿曇已知我心。」內懷憂慼，即沒不現。"
+  }
+ }
+}

@@ -1,0 +1,99 @@
+{
+ "slug": "pi-sn16.4",
+ "title": "別譯雜阿含經 （一一二）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "佛告比丘欲往檀越家之念"
+  },
+  {
+   "id": "a02",
+   "label": "不稱意之比丘生羞恥愁憂"
+  },
+  {
+   "id": "a03",
+   "label": "迦葉比丘之正念與行"
+  },
+  {
+   "id": "a04",
+   "label": "結勸比丘當如是學"
+  },
+  {
+   "id": "a05",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn16.4",
+   "lang": "pi",
+   "label": "巴利 SN16.4",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "T0100-sa-2.112",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （一一二）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa1137",
+   "lang": "lzh",
+   "label": "雜阿含經 （一一三七）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（一一二）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一一三七）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn16.4": "Saṁyutta Nikāya 16.4 1. Kassapavagga Kulūpakasutta",
+   "T0100-sa-2.112": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。",
+   "T0099-sa1137": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。"
+  },
+  "a01": {
+   "sn16.4": "Sāvatthiyaṁ viharati. “Taṁ kiṁ maññatha, bhikkhave, kathaṁrūpo bhikkhu arahati kulūpako hotuṁ, kathaṁrūpo bhikkhu na arahati kulūpako hotun”ti? Bhagavaṁmūlakā no, bhante, dhammā …pe… bhagavā etadavoca: “Yo hi koci, bhikkhave, bhikkhu evaṁcitto kulāni upasaṅkamati: ‘dentuyeva me, mā nādaṁsu; bahukaññeva me dentu, mā thokaṁ; paṇītaññeva me dentu, mā lūkhaṁ; sīghaññeva me dentu, mā dandhaṁ; sakkaccaññeva me dentu, mā asakkaccan’ti.",
+   "T0100-sa-2.112": "爾時，佛告諸比丘：「若有比丘將欲往詣於檀越家，先作是念：『若有所施，當速與我，勿令遲晚，至心施我，莫不至誠，願使多得，勿令寡少。惠我精細，勿得麁澁。』若作是念，決定意者，往檀越家。檀越雖與，不至心施，不恭敬與，雖施飲食，不令豐足，與其麁澁，不與精細，設有施與，遲緩不速。",
+   "T0099-sa1137": "爾時，世尊告諸比丘：「若有比丘欲入他家，作如是念，彼當施我，莫令不施，頓施非漸施，多施非少施，勝施非陋施，速施非緩施。"
+  },
+  "a02": {
+   "sn16.4": "Tassa ce, bhikkhave, bhikkhuno evaṁcittassa kulāni upasaṅkamato na denti, tena bhikkhu sandīyati; so tatonidānaṁ dukkhaṁ domanassaṁ paṭisaṁvedayati. Thokaṁ denti, no bahukaṁ …pe… lūkhaṁ denti, no paṇītaṁ … dandhaṁ denti, no sīghaṁ, tena bhikkhu sandīyati; so tatonidānaṁ dukkhaṁ domanassaṁ paṭisaṁvedayati. Asakkaccaṁ denti, no sakkaccaṁ; tena bhikkhu sandīyati; so tatonidānaṁ dukkhaṁ domanassaṁ paṭisaṁvedayati. Evarūpo kho, bhikkhave, bhikkhu na arahati kulūpako hotuṁ.",
+   "T0100-sa-2.112": "而此比丘，不稱意故，羞恥愁憂，生損減心。而此比丘應作是念：『至檀越舍，彼非己家，云何而得稱遂其心？何故生念，欲令檀越速施不遲，乃至精細，不用麁澁？』若作是念，設無所得，心不悔恨，離於增減，無有怨嫌。設彼檀越少有所施，不至心與，遲晚不速，乃至與麁，不與精細，如是比丘心不嫌恨，亦不愧恥，心無增減。",
+   "T0099-sa1137": "以如是心而至他家，若他不施，乃至緩施，是比丘心則屈辱。以是因緣，其心退沒，自生障閡。"
+  },
+  "a03": {
+   "sn16.4": "Yo ca kho, bhikkhave, bhikkhu evaṁcitto kulāni upasaṅkamati: ‘taṁ kutettha labbhā parakulesu— dentuyeva me, mā nādaṁsu; bahukaññeva me dentu, mā thokaṁ; paṇītaññeva me dentu, mā lūkhaṁ; sīghaññeva me dentu, mā dandhaṁ; sakkaccaññeva me dentu, mā asakkaccan’ti. Tassa ce, bhikkhave, bhikkhuno evaṁcittassa kulāni upasaṅkamato na denti; tena bhikkhu na sandīyati; so na tatonidānaṁ dukkhaṁ domanassaṁ paṭisaṁvedayati. Thokaṁ denti, no bahukaṁ; tena bhikkhu na sandīyati; so na tatonidānaṁ dukkhaṁ domanassaṁ paṭisaṁvedayati. Lūkhaṁ denti, no paṇītaṁ; tena bhikkhu na sandīyati; so na tatonidānaṁ dukkhaṁ domanassaṁ paṭisaṁvedayati. Dandhaṁ denti, no sīghaṁ; tena bhikkhu na sandīyati; so na tatonidānaṁ dukkhaṁ domanassaṁ paṭisaṁvedayati. Asakkaccaṁ denti, no sakkaccaṁ; tena bhikkhu na sandīyati; so na tatonidānaṁ dukkhaṁ domanassaṁ paṭisaṁvedayati.",
+   "T0100-sa-2.112": "迦葉比丘作如是心，至檀越所，斯非己家，云何而得自稱其意，望彼至心，速施不遲，乃至精細，莫得麁澁？迦葉比丘作如是念，至檀越家，雖不得施，都無慚恥，心不損減。",
+   "T0099-sa1137": "「若復比丘欲入他家，作如是念：『出家之人卒至他家，何由得施非不施，頓施非漸施，多施非少施，勝施非陋施，速施非緩施？』作如是念而至他家。"
+  },
+  "a04": {
+   "sn16.4": "Evarūpo kho, bhikkhave, bhikkhu arahati kulūpako hotuṁ. Kassapo, bhikkhave, evaṁcitto kulāni upasaṅkamati: ‘taṁ kutettha labbhā parakulesu— dentuyeva me, mā nādaṁsu; bahukaññeva me dentu, mā thokaṁ; paṇītaññeva me dentu, mā lūkhaṁ; sīghaññeva me dentu, mā dandhaṁ; sakkaccaññeva me dentu, mā asakkaccan’ti. Tassa ce, bhikkhave, kassapassa evaṁcittassa kulāni upasaṅkamato na denti; tena kassapo na sandīyati; so na tatonidānaṁ dukkhaṁ domanassaṁ paṭisaṁvedayati. Thokaṁ denti, no bahukaṁ; tena kassapo na sandīyati; so na tatonidānaṁ dukkhaṁ domanassaṁ paṭisaṁvedayati. Lūkhaṁ denti, no paṇītaṁ; tena kassapo na sandīyati; so na tatonidānaṁ dukkhaṁ domanassaṁ paṭisaṁvedayati. Dandhaṁ denti, no sīghaṁ; tena kassapo na sandīyati; so na tatonidānaṁ dukkhaṁ domanassaṁ paṭisaṁvedayati. Asakkaccaṁ denti, no sakkaccaṁ; tena kassapo na sandīyati; so na tatonidānaṁ dukkhaṁ domanassaṁ paṭisaṁvedayati.",
+   "T0100-sa-2.112": "是故比丘，應作是心，至於他家。不應生念，速施於我，乃至精細。是故汝等當作是學，如迦葉比丘往檀越家。」",
+   "T0099-sa1137": "若彼不施，乃至緩施，是比丘心不屈辱，亦不退沒，不生障礙，唯迦葉比丘作如是念而入他家。是故，諸比丘！當如是學，作如是念而入他家，出家之人卒至他家，何由得施非不施，乃至速施非緩施？」"
+  },
+  "a05": {
+   "sn16.4": "Kassapena vā hi vo, bhikkhave, ovadissāmi yo vā panassa kassapasadiso. Ovaditehi ca pana vo tathattāya paṭipajjitabban”ti. Catutthaṁ.",
+   "T0100-sa-2.112": "時，諸比丘聞佛所說，歡喜奉行。",
+   "T0099-sa1137": "佛說此經已，諸比丘聞佛所說，歡喜奉行。"
+  }
+ }
+}

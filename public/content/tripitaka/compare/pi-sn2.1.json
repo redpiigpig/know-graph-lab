@@ -1,0 +1,111 @@
+{
+ "slug": "pi-sn2.1",
+ "title": "別譯雜阿含經 （三一六）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "天子來現光明"
+  },
+  {
+   "id": "a02",
+   "label": "天子請問比丘教法"
+  },
+  {
+   "id": "a03",
+   "label": "佛許其說"
+  },
+  {
+   "id": "a04",
+   "label": "天子說偈頌"
+  },
+  {
+   "id": "a05",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn2.1",
+   "lang": "pi",
+   "label": "巴利 SN2.1",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn2.1",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN2.1",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.316",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （三一六）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa1317",
+   "lang": "lzh",
+   "label": "雜阿含經 （一三一七）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（三一六）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一三一七）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn2.1": "Saṁyutta Nikāya 2.1 1. Paṭhamavagga Paṭhamakassapasutta Evaṁ me sutaṁ—",
+   "nan-sn2.1": "〔一〕第一　迦葉 （其一）",
+   "T0100-sa-2.316": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。",
+   "T0099-sa1317": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。"
+  },
+  "a01": {
+   "sn2.1": "ekaṁ samayaṁ bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme.",
+   "nan-sn2.1": "如是我聞。爾時，世尊住舍衛城祇樹給孤獨園。",
+   "T0100-sa-2.316": "時有天子名曰迦葉，身光倍常，來詣佛所，所出光明遍照祇洹，却坐一面，而白佛言：「比丘！",
+   "T0099-sa1317": "時，有迦葉天子，容色絕妙，於後夜時來詣佛所，稽首佛足，退坐一面。其身光明遍照祇樹給孤獨園。"
+  },
+  "a02": {
+   "sn2.1": "Atha kho kassapo devaputto abhikkantāya rattiyā abhikkantavaṇṇo kevalakappaṁ jetavanaṁ obhāsetvā yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ aṭṭhāsi. Ekamantaṁ ṭhito kho kassapo devaputto bhagavantaṁ etadavoca: “bhikkhuṁ bhagavā pakāsesi, no ca bhikkhuno anusāsan”ti.",
+   "nan-sn2.1": "其時，迦葉天子於黎明，其勝光徧照祇園，往詣世尊處。詣已，禮敬世尊，立於一面。",
+   "T0100-sa-2.316": "我今欲說比丘勝利。」",
+   "T0099-sa1317": "時，彼迦葉天子白佛言：「世尊！我今當說比丘及比丘功德。」"
+  },
+  "a03": {
+   "sn2.1": "“Tena hi, kassapa, taññevettha paṭibhātū”ti.",
+   "nan-sn2.1": "立於一面之迦葉天子，向世尊謂曰：「世尊請以比丘之教，開示比丘及我等。」",
+   "T0100-sa-2.316": "佛告迦葉：「恣汝所說。」",
+   "T0099-sa1317": "佛告天子：「隨汝所說。」"
+  },
+  "a04": {
+   "sn2.1": "“Subhāsitassa sikkhetha, samaṇūpāsanassa ca; Ekāsanassa ca raho, cittavūpasamassa cā”ti.",
+   "nan-sn2.1": "「迦葉！善哉！然則當為汝說能起之事。」",
+   "T0100-sa-2.316": "爾時，迦葉即說偈言：「比丘能具念，心得善解脫，\n諸欲有所求，逮得無垢處。\n能知於世間，有垢及無垢，\n捨離一切有，亦無諸畜積，\n是名為比丘，有勝利功德。」",
+   "T0099-sa1317": "時，迦葉天子而說偈言：「比丘修正念，其心善解脫，\n晝夜常勤求，懷有諸功德。\n了知於世間，滅除一切有，\n比丘得無憂，心無所染著。「世尊！是名比丘，是名比丘功德。」"
+  },
+  "a05": {
+   "sn2.1": "Idamavoca kassapo devaputto; samanuñño satthā ahosi. Atha kho kassapo devaputto “samanuñño me satthā”ti bhagavantaṁ abhivādetvā padakkhiṇaṁ katvā tatthevantaradhāyīti.",
+   "nan-sn2.1": "以修說微妙以修沙門行\n獨住於一座靜心以修法迦葉天子作如是言，請大師嘉賞。迦葉天子知受大師之嘉賞，禮敬世尊，右繞而形沒於其處。",
+   "T0100-sa-2.316": "時迦葉天子說此偈已，歡喜頂禮，還于天宮。",
+   "T0099-sa1317": "佛告迦葉：「善哉！善哉！如汝所說。」迦葉天子聞佛所說，歡喜隨喜，稽首佛足，即沒不現。"
+  }
+ }
+}

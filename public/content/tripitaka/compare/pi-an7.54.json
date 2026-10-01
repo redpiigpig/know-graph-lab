@@ -1,0 +1,115 @@
+{
+ "slug": "pi-an7.54",
+ "title": "邪見經",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "異學梵志請問"
+  },
+  {
+   "id": "a02",
+   "label": "阿難答：世尊捨置諸見"
+  },
+  {
+   "id": "a03",
+   "label": "異學梵志追問知見之由"
+  },
+  {
+   "id": "a04",
+   "label": "阿難答：世尊如實知見"
+  },
+  {
+   "id": "a05",
+   "label": "異學梵志自歸於阿難"
+  },
+  {
+   "id": "a06",
+   "label": "阿難勸歸於佛"
+  },
+  {
+   "id": "a07",
+   "label": "異學梵志歸依三寶"
+  },
+  {
+   "id": "a08",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "an7.54",
+   "lang": "pi",
+   "label": "巴利 AN7.54",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "T0026-ma220",
+   "lang": "lzh",
+   "label": "中阿含經 （二二〇）中阿含例品見經第九（第五後誦）",
+   "who": "東晉 瞿曇僧伽提婆譯"
+  },
+  {
+   "id": "T0093",
+   "lang": "lzh",
+   "label": "邪見經",
+   "who": "失譯"
+  }
+ ],
+ "works": [
+  "T0026",
+  "T0093"
+ ],
+ "anchors": [
+  {
+   "work": "T0026",
+   "node": "（二二〇）中阿含例品見經第九（第五後誦）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "an7.54": "Aṅguttara Nikāya 7.54 6. Abyākatavagga Abyākatasutta",
+   "T0026-ma220": "我聞如是：一時，佛般涅槃後不久，尊者阿難遊王舍城，在竹林迦蘭哆園。於是，有一異學梵志，是尊者阿難未出家時友，中後彷徉，往詣尊者阿難所，共相問訊，却坐一面，語尊者阿難：「欲有所問，聽我問耶？」尊者阿難答曰：「梵志！欲問便問，我聞已當思。」",
+   "T0093": "聞如是：一時，尊者阿難，在羅閱祇城迦蘭陀竹園。世尊般涅槃不久，於是有異邪命，是尊者阿難𩮰角友，中食後行彷徉而行至尊者阿難所，到已共尊者阿難面相慰勞。面相慰勞已，却坐一面。"
+  },
+  "a01": {
+   "an7.54": "Atha kho aññataro bhikkhu yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho so bhikkhu bhagavantaṁ etadavoca: “ko nu kho, bhante, hetu ko paccayo yena sutavato ariyasāvakassa vicikicchā nuppajjati abyākatavatthūsū”ti? “Diṭṭhinirodhā kho, bhikkhu, sutavato ariyasāvakassa vicikicchā nuppajjati abyākatavatthūsu.",
+   "T0026-ma220": "異學梵志即便問曰：「所謂此見捨置除却，不盡通說，謂世有常，世無有常，世有底，世無底，命即是身，為命異身異，如來終，如來不終，如來終不終，如來亦非終亦非不終耶？沙門瞿曇知此諸見如應知耶？」尊者阿難答曰：「梵志！",
+   "T0093": "彼邪命却坐一面已，語尊者阿難曰：「我欲有所問，聽我所問。」「當問，賢者！」邪命聞已知之。「此阿難！彼沙門瞿曇！棄邪見、除邪見，不記說世間有常、世間無常，世間有邊、世間無邊，命是身是、命異身異，有如此命終、無有命終、有此無有此、無有命終。此阿難！彼沙門瞿曇！知邪見，應如此知耶？」"
+  },
+  "a02": {
+   "an7.54": "‘Hoti tathāgato paraṁ maraṇā’ti kho, bhikkhu, diṭṭhigatametaṁ; ‘na hoti tathāgato paraṁ maraṇā’ti kho, bhikkhu, diṭṭhigatametaṁ; ‘hoti ca na ca hoti tathāgato paraṁ maraṇā’ti kho, bhikkhu, diṭṭhigatametaṁ; ‘neva hoti na na hoti tathāgato paraṁ maraṇā’ti kho, bhikkhu, diṭṭhigatametaṁ. Assutavā, bhikkhu, puthujjano diṭṭhiṁ nappajānāti, diṭṭhisamudayaṁ nappajānāti, diṭṭhinirodhaṁ nappajānāti, diṭṭhinirodhagāminiṁ paṭipadaṁ nappajānāti. Tassa sā diṭṭhi pavaḍḍhati, so na parimuccati jātiyā jarāya maraṇena sokehi paridevehi dukkhehi domanassehi upāyāsehi. ‘Na parimuccati dukkhasmā’ti vadāmi. Sutavā ca kho, bhikkhu, ariyasāvako diṭṭhiṁ pajānāti, diṭṭhisamudayaṁ pajānāti, diṭṭhinirodhaṁ pajānāti, diṭṭhinirodhagāminiṁ paṭipadaṁ pajānāti. Tassa sā diṭṭhi nirujjhati, so parimuccati jātiyā jarāya maraṇena sokehi paridevehi dukkhehi domanassehi upāyāsehi. ‘Parimuccati dukkhasmā’ti vadāmi. Evaṁ jānaṁ kho, bhikkhu, sutavā ariyasāvako evaṁ passaṁ ‘hoti tathāgato paraṁ maraṇā’tipi na byākaroti; ‘na hoti tathāgato paraṁ maraṇā’tipi na byākaroti; ‘hoti ca na ca hoti tathāgato paraṁ maraṇā’tipi na byākaroti; ‘neva hoti na na hoti tathāgato paraṁ maraṇā’tipi na byākaroti. Evaṁ jānaṁ kho, bhikkhu, sutavā ariyasāvako evaṁ passaṁ evaṁ abyākaraṇadhammo hoti abyākatavatthūsu. Evaṁ jānaṁ kho, bhikkhu, sutavā ariyasāvako evaṁ passaṁ na chambhati, na kampati, na vedhati, na santāsaṁ āpajjati abyākatavatthūsu. ‘Hoti tathāgato paraṁ maraṇā’ti kho, bhikkhu, taṇhāgatametaṁ …pe… saññāgatametaṁ …pe… maññitametaṁ …pe… papañcitametaṁ …pe… upādānagatametaṁ …pe… ‘hoti tathāgato paraṁ maraṇā’ti kho, bhikkhu, vippaṭisāro eso; ‘na hoti tathāgato paraṁ maraṇā’ti kho, bhikkhu, vippaṭisāro eso; ‘hoti ca na ca hoti tathāgato paraṁ maraṇā’ti kho, bhikkhu, vippaṭisāro eso; ‘neva hoti na na hoti tathāgato paraṁ maraṇā’ti kho, bhikkhu, vippaṭisāro eso. Assutavā, bhikkhu, puthujjano vippaṭisāraṁ nappajānāti, vippaṭisārasamudayaṁ nappajānāti, vippaṭisāranirodhaṁ nappajānāti, vippaṭisāranirodhagāminiṁ paṭipadaṁ nappajānāti. Tassa so vippaṭisāro pavaḍḍhati, so na parimuccati jātiyā jarāya maraṇena sokehi paridevehi dukkhehi domanassehi upāyāsehi. ‘Na parimuccati dukkhasmā’ti vadāmi. Sutavā ca kho, bhikkhu, ariyasāvako vippaṭisāraṁ pajānāti, vippaṭisārasamudayaṁ pajānāti, vippaṭisāranirodhaṁ pajānāti, vippaṭisāranirodhagāminiṁ paṭipadaṁ pajānāti. Tassa so vippaṭisāro nirujjhati, so parimuccati jātiyā …pe… ‘… dukkhasmā’ti vadāmi. Evaṁ jānaṁ kho, bhikkhu, sutavā ariyasāvako evaṁ passaṁ ‘hoti tathāgato paraṁ maraṇā’tipi na byākaroti …pe… ‘neva hoti na na hoti tathāgato paraṁ maraṇā’tipi na byākaroti. Evaṁ jānaṁ kho, bhikkhu, sutavā ariyasāvako evaṁ passaṁ evaṁ abyākaraṇadhammo hoti abyākatavatthūsu. Evaṁ jānaṁ kho, bhikkhu, sutavā ariyasāvako evaṁ passaṁ na chambhati, na kampati, na vedhati, na santāsaṁ āpajjati abyākatavatthūsu. Ayaṁ kho, bhikkhu, hetu ayaṁ paccayo yena sutavato ariyasāvakassa vicikicchā nuppajjati abyākatavatthūsū”ti. Paṭhamaṁ.",
+   "T0026-ma220": "所謂此見，世尊、如來、無所著、正盡覺捨置除却，不盡通說，謂世有常，世無有常，世有底，世無底，命即是身，為命異身異，如來終，如來不終，如來終不終，如來亦非終亦非不終耶？世尊、如來、無所著、正盡覺知此諸見如應也。」",
+   "T0093": "「此婆羅門！彼世尊有智、有知見，如來、無所著、等正覺，棄邪見、除邪見，不記說世間有常至無有命終。此婆羅門！彼世尊有智、有見知，此邪見，如來、無所著、等正覺應如此知。」"
+  },
+  "a03": {
+   "T0026-ma220": "異學梵志又復問曰：「所謂此見，沙門瞿曇捨置除却，不盡通說，謂世有常，世無有常，世有底，世無底，命即是身，為命異身異，如來終，如來不終，如來終不終，如來亦非終亦非不終耶？沙門瞿曇云何知此諸見如應耶？」尊者阿難答曰：「梵志！",
+   "T0093": "「此阿難！彼沙門瞿曇！棄邪見、除邪見，不記說世間有常至無有命終。云何，阿難！彼沙門瞿曇，知此邪見？"
+  },
+  "a04": {
+   "T0026-ma220": "所謂此見，世尊、如來、無所著、正盡覺捨置除却，不盡通說，謂世有常，世無有常，世有底，世無底，命即是身，為命異身異，如來終，如來不終，如來終不終，如來亦非終亦非不終耶？異學梵志如是具、如是受、如是趣、如是生、如是至後世，所謂此是世尊、如來、無所著、正盡覺捨置除却，不盡通說，謂世有常，世無有常，世有底，世無底，命即是身，為命異身異，如來終，如來不終，如來終不終，如來亦非終亦非不終耶？如是知此諸見，此諸見應如是知。」",
+   "T0093": "此云何知？」「此婆羅門！彼世尊有智、有見，如來、無所著、等正覺，棄邪見、除邪見，不記說世間有常至無有命終。此婆羅門！此邪見者，相應、等相應，如是趣、如是生，及後世。此婆羅門！彼世尊如是知，有知、有見，如來、無所著、等正覺，知邪見，當如是知。」"
+  },
+  "a05": {
+   "T0026-ma220": "異學梵志白曰：「我今自歸於阿難。」尊者阿難告曰：「梵志！",
+   "T0093": "「是故，阿難！我今歸汝。」「汝婆羅門！莫歸於我，如我所歸世尊，汝亦當歸之。」"
+  },
+  "a06": {
+   "T0026-ma220": "汝莫自歸於我，如我自歸於佛，汝亦應自歸。」"
+  },
+  "a07": {
+   "T0026-ma220": "異學梵志白曰：「阿難！我今自歸於佛、法及比丘眾，唯願世尊受我為優婆塞，從今日始，終身自歸，乃至命盡。」",
+   "T0093": "「是故，阿難！我今便歸彼世尊、法及比丘僧，我於彼世尊為優婆塞，從今日始離於殺，今日歸尊者。」"
+  },
+  "a08": {
+   "T0026-ma220": "尊者阿難所說如是。彼異學梵志聞尊者阿難所說，歡喜奉行。見經第九竟（六百二十五字）",
+   "T0093": "阿難如是說。彼邪命聞尊者阿難所說，歡喜而樂。"
+  }
+ }
+}

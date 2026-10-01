@@ -1,0 +1,112 @@
+{
+ "slug": "pi-sn16.12",
+ "title": "別譯雜阿含經 （一二〇）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "外道四問如來死後存亡"
+  },
+  {
+   "id": "a02",
+   "label": "舍利弗答皆為無記"
+  },
+  {
+   "id": "a03",
+   "label": "外道譏舍利弗不能答"
+  },
+  {
+   "id": "a04",
+   "label": "舍利弗詣迦葉問佛不答之故"
+  },
+  {
+   "id": "a05",
+   "label": "迦葉解釋佛不答之緣"
+  },
+  {
+   "id": "a06",
+   "label": "結論：如來愛盡得解脫"
+  },
+  {
+   "id": "a07",
+   "label": "流通分：讚美別去"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn16.12",
+   "lang": "pi",
+   "label": "巴利 SN16.12",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "T0100-sa-2.120",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （一二〇）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa905",
+   "lang": "lzh",
+   "label": "雜阿含經 （九〇五）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（一二〇）"
+  },
+  {
+   "work": "T0099",
+   "node": "（九〇五）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn16.12": "Saṁyutta Nikāya 16.12 1. Kassapavagga",
+   "T0100-sa-2.120": "如是我聞：一時，佛在王舍城耆闍崛山迦蘭陀竹林。爾時，尊者舍利弗及大迦葉俱在彼山。",
+   "T0099-sa905": "如是我聞：一時，佛住王舍城迦蘭陀竹園。爾時，尊者摩訶迦葉、尊者舍利弗、住耆闍崛山中。"
+  },
+  "a01": {
+   "sn16.12": "Paraṁmaraṇasutta Ekaṁ samayaṁ āyasmā ca mahākassapo āyasmā ca sāriputto bārāṇasiyaṁ viharanti isipatane migadāye. Atha kho āyasmā sāriputto sāyanhasamayaṁ paṭisallānā vuṭṭhito yenāyasmā mahākassapo tenupasaṅkami; upasaṅkamitvā āyasmatā mahākassapena saddhiṁ sammodi. Sammodanīyaṁ kathaṁ sāraṇīyaṁ vītisāretvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho āyasmā sāriputto āyasmantaṁ mahākassapaṁ etadavoca:",
+   "T0100-sa-2.120": "時，彼國中有諸異見六師徒黨，來詣尊者舍利弗所，問訊已訖，在一面坐，而作是言：「如來世尊頗說於我死此生彼，如是說不？」",
+   "T0099-sa905": "時，有眾多外道出家詣尊者舍利弗，與尊者面相問訊慰勞已，退坐一面，語尊者舍利弗言：「云何？"
+  },
+  "a02": {
+   "sn16.12": "“kiṁ nu kho, āvuso kassapa, hoti tathāgato paraṁ maraṇā”ti? “Abyākataṁ kho etaṁ, āvuso, bhagavatā: ‘hoti tathāgato paraṁ maraṇā’”ti. “Kiṁ panāvuso, na hoti tathāgato paraṁ maraṇā”ti? “Evampi kho, āvuso, abyākataṁ bhagavatā: ‘na hoti tathāgato paraṁ maraṇā’”ti. “Kiṁ nu kho, āvuso, hoti ca na ca hoti tathāgato paraṁ maraṇā”ti? “Abyākataṁ kho etaṁ, āvuso, bhagavatā: ‘hoti ca na ca hoti tathāgato paraṁ maraṇā’”ti. “Kiṁ panāvuso, neva hoti, na na hoti tathāgato paraṁ maraṇā”ti? “Evampi kho, āvuso, abyākataṁ bhagavatā: ‘neva hoti na na hoti tathāgato paraṁ maraṇā’”ti. “Kasmā cetaṁ, āvuso, abyākataṁ bhagavatā”ti? “Na hetaṁ, āvuso, atthasaṁhitaṁ nādibrahmacariyakaṁ na nibbidāya na virāgāya na nirodhāya na upasamāya na abhiññāya na sambodhāya na nibbānāya saṁvattati. Tasmā taṁ abyākataṁ bhagavatā”ti. “Atha kiñcarahāvuso, byākataṁ bhagavatā”ti? “Idaṁ ‘dukkhan’ti kho, āvuso, byākataṁ bhagavatā; ayaṁ ‘dukkhasamudayo’ti byākataṁ bhagavatā; ayaṁ ‘dukkhanirodho’ti byākataṁ bhagavatā; ayaṁ ‘dukkhanirodhagāminī paṭipadā’ti byākataṁ bhagavatā”ti. “Kasmā cetaṁ, āvuso, byākataṁ bhagavatā”ti? “Etañhi, āvuso, atthasaṁhitaṁ etaṁ ādibrahmacariyakaṁ etaṁ nibbidāya virāgāya nirodhāya upasamāya abhiññāya sambodhāya nibbānāya saṁvattati. Tasmā taṁ byākataṁ bhagavatā”ti.",
+   "T0100-sa-2.120": "舍利弗答言：「如斯之事，佛所不說。」外道六師復作是言：「若如是者，說於我身在此間耶？更不生耶？」舍利弗言：「如斯之事，佛亦不說。」外道復言：「我於此死，亦生於彼，亦不生彼，如是說耶？」舍利弗言：「佛亦不說。」外道復言：「我死之後，非生非不生耶？」舍利弗言：「佛亦不說。」",
+   "T0099-sa905": "舍利弗！如來有後生死耶？」舍利弗言：「諸外道！世尊說言，此是無記。」又問：「云何？舍利弗！如來無後生死耶？」舍利弗答言：「諸外道！世尊說言，此是無記。」又問：「舍利弗！如來有後生死、無後生死耶？」舍利弗答言：「世尊說言，此是無記。」又問舍利弗：「如來非有後生死、非無後生死耶？」舍利弗答言：「諸外道！世尊說言，此是無記。」諸外道出家又問尊者舍利弗：「云何所問如來有後生死、無後生死、有後無後、非有後非無後，一切答言：『世尊說，此是無記。』？云何為上座，如愚如癡，不善不辯，如嬰兒無自性智？」作此語已，從坐起去。"
+  },
+  "a03": {
+   "T0100-sa-2.120": "外道復言：「我先問汝，死此生彼，乃至非生非不生，悉不見答。汝若名為宿舊出家，應廣解義，為我分別。今者觀汝不能答我，便是童蒙，無智愚人。」時，彼外道作是語已，即從坐起，還其所止。"
+  },
+  "a04": {
+   "T0100-sa-2.120": "爾時，尊者摩訶迦葉去舍利弗不遠，外道去後，舍利弗即詣於彼大迦葉所，以外道問，向迦葉說：「如來何故，如是四問，默然不答？何以故，不引相似比類而答於彼？我昔曾聞，有人問佛：『於此死已，受後有不？』佛默然不答。又問：『死後不受有耶？』佛亦不答。又問：『我此死已，亦受後有，亦不受耶？』佛亦不答。又問：『我死之後，非受於有，非不受有耶？』",
+   "T0099-sa905": "爾時，尊者摩訶迦葉、尊者舍利弗相去不遠，各坐樹下，晝日禪思。尊者舍利弗知諸外道出家去已，詣尊者摩訶迦葉所，共相問訊慰勞已，退坐一面。以向與諸外道出家所論說事，具白尊者摩訶迦葉：「尊者摩訶迦葉！何因何緣世尊不記說，後有生死、後無生死、後有後無、非有非無生死耶？」"
+  },
+  "a05": {
+   "T0100-sa-2.120": "佛亦不答。」尊者迦葉語舍利弗言：「如來寧可說色滅已，生於後有，乃至非生非不生。世尊於彼色所盡處，正智解脫，然都無有死此生彼，死此不生彼，亦生亦不生，非生非不生，是故不答。如斯之義，甚深廣大，無量無邊，無有算數，乃至盡滅。受想乃至識，死此生彼，乃至非生非不生，亦復如是。",
+   "T0099-sa905": "尊者摩訶迦葉語舍利弗言：「若說如來後有生死者，是則為色；若說如來無後生死，是則為色；若說如來有後生死、無後生死，是則為色；若說如來非有後、非無後生死，是則為色。如來者，色已盡，心善解脫。言有後生死者，此則不然；無後生死、有後無後、非有後非無後生死，此亦不然。如來者，色已盡，心善解脫，甚深廣大，無量無數，寂滅涅槃。"
+  },
+  "a06": {
+   "T0100-sa-2.120": "此是動轉，此是憍慢，此是放逸，此是有為造作之業，此是愛結，此愛生彼愛不生，彼愛亦生彼，亦不生彼愛，非生彼非不生彼，如來愛盡得善解脫，愛盡生彼，有亦無也。不生彼，有亦無也。生彼不生彼，亦無也。非不有生彼，非不無生彼，亦無也。此義甚深，廣大無邊，無有算數，至於盡滅。大德舍利弗當知，以是因緣故，如來於問中，而不正答，死此生彼，此死不生彼，亦生彼亦不生彼，非生非不生。」",
+   "T0099-sa905": "「舍利弗！若說如來有後生死者，是則為受、為想、為行、為識、為動、為慮、為虛誑、為有為、為愛，乃至非有非無後有亦如是說。如來者，愛已盡，心善解脫，是故說後有者不然，後無、後有無、後非有非無者不然，如來者，愛已盡，心善解脫，甚深廣大，無量無數，寂滅涅槃。舍利弗！如是因、如是緣，故有問世尊：『如來若有、若無、若有無、若非有非無後生死？』"
+  },
+  "a07": {
+   "sn16.12": "Dvādasamaṁ.",
+   "T0100-sa-2.120": "此二大人互相讚美，各還所止。",
+   "T0099-sa905": "不可記說。」時，二正士共論議已，各還本處。"
+  }
+ }
+}

@@ -1,0 +1,225 @@
+{
+ "slug": "pi-mn107",
+ "title": "數經",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "算數家請問階段學"
+  },
+  {
+   "id": "a02",
+   "label": "佛答以調象馬為喻"
+  },
+  {
+   "id": "a03",
+   "label": "教導比丘具足戒"
+  },
+  {
+   "id": "a04",
+   "label": "守護六根門"
+  },
+  {
+   "id": "a05",
+   "label": "正知出入等行"
+  },
+  {
+   "id": "a06",
+   "label": "遠離閑靜坐禪"
+  },
+  {
+   "id": "a07",
+   "label": "斷五蓋修四禪"
+  },
+  {
+   "id": "a08",
+   "label": "對上座長老之教"
+  },
+  {
+   "id": "a09",
+   "label": "算數家問弟子皆得涅槃"
+  },
+  {
+   "id": "a10",
+   "label": "佛答有得有不得"
+  },
+  {
+   "id": "a11",
+   "label": "問涅槃存因緣"
+  },
+  {
+   "id": "a12",
+   "label": "王舍城譬喻（第一人）"
+  },
+  {
+   "id": "a13",
+   "label": "王舍城譬喻（第二人）"
+  },
+  {
+   "id": "a14",
+   "label": "自稱導師無私"
+  },
+  {
+   "id": "a15",
+   "label": "結論涅槃道譬喻"
+  },
+  {
+   "id": "a16",
+   "label": "算數家讚歎請求歸依"
+  },
+  {
+   "id": "a17",
+   "label": "譬喻善人如娑羅林"
+  },
+  {
+   "id": "a18",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "mn107",
+   "lang": "pi",
+   "label": "巴利 MN107",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-mn107",
+   "lang": "lzh",
+   "label": "漢譯南傳 MN107",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0026-ma144",
+   "lang": "lzh",
+   "label": "中阿含經 （一四四）中阿含梵志品算數目揵連經第三（第三念誦）",
+   "who": "東晉 瞿曇僧伽提婆譯"
+  },
+  {
+   "id": "T0070",
+   "lang": "lzh",
+   "label": "數經",
+   "who": "西晉 法炬譯"
+  }
+ ],
+ "works": [
+  "T0026",
+  "T0070"
+ ],
+ "anchors": [
+  {
+   "work": "T0026",
+   "node": "（一四四）中阿含梵志品算數目揵連經第三（第三念誦）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "mn107": "Majjhima Nikāya 107",
+   "nan-mn107": "第一〇七　算數家目犍連經",
+   "T0026-ma144": "我聞如是：一時，佛遊舍衛國，在東園鹿子母堂。爾時，算數梵志目揵連中後彷徉，往詣佛所，共相問訊，却坐一面，白曰：「瞿曇！我欲有所問，聽乃敢陳。」世尊告曰：「目揵連！恣汝所問，莫自疑難。」",
+   "T0070": "聞如是：一時，婆伽婆在舍衛城東園中鹿講堂。彼時數婆羅門，中食後行彷徉，而行至世尊所。到已，共世尊面相慰勞。面相慰勞已，却坐一面。彼數婆羅門却坐一面已，白世尊曰：「此瞿曇！我欲有所問，聽我所問。」「聽汝問，婆羅門！"
+  },
+  "a01": {
+   "mn107": "Gaṇakamoggallānasutta Evaṁ me sutaṁ— ekaṁ samayaṁ bhagavā sāvatthiyaṁ viharati pubbārāme migāramātupāsāde. Atha kho gaṇakamoggallāno brāhmaṇo yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavatā saddhiṁ sammodi. Sammodanīyaṁ kathaṁ sāraṇīyaṁ vītisāretvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho gaṇakamoggallāno brāhmaṇo bhagavantaṁ etadavoca: “Seyyathāpi, bho gotama, imassa migāramātupāsādassa dissati anupubbasikkhā anupubbakiriyā anupubbapaṭipadā yadidaṁ— yāva pacchimasopānakaḷevarā; imesampi hi, bho gotama, brāhmaṇānaṁ dissati anupubbasikkhā anupubbakiriyā anupubbapaṭipadā yadidaṁ— ajjhene; imesampi hi, bho gotama, issāsānaṁ dissati anupubbasikkhā anupubbakiriyā anupubbapaṭipadā yadidaṁ— issatthe. Amhākampi hi, bho gotama, gaṇakānaṁ gaṇanājīvānaṁ dissati anupubbasikkhā anupubbakiriyā anupubbapaṭipadā yadidaṁ— saṅkhāne. Mayañhi, bho gotama, antevāsiṁ labhitvā paṭhamaṁ evaṁ gaṇāpema: ‘ekaṁ ekakaṁ, dve dukā, tīṇi tikā, cattāri catukkā, pañca pañcakā, cha chakkā, satta sattakā, aṭṭha aṭṭhakā, nava navakā, dasa dasakā’ti; satampi mayaṁ, bho gotama, gaṇāpema, bhiyyopi gaṇāpema. Sakkā nu kho, bho gotama, imasmimpi dhammavinaye evameva anupubbasikkhā anupubbakiriyā anupubbapaṭipadā paññapetun”ti?",
+   "nan-mn107": "如是我聞。——",
+   "T0026-ma144": "算數目揵連則便問曰：「瞿曇！此鹿子母堂漸次第作，轉後成訖。瞿曇！此鹿子母堂椷梯，初昇一隥，後二、三、四。瞿曇！如是此鹿子母堂漸次第上。瞿曇！此御象者，亦漸次第調御成訖，謂因鈎故。瞿曇！此御馬者，亦漸次第調御成訖，謂因䩙故。瞿曇！此剎利亦漸次第至成就訖，謂因捉弓箭故。瞿曇！此諸梵志亦漸次第至成就訖，謂因學經書故。瞿曇！我等學算數，以算數存命，亦漸次第至成就訖。若有弟子，或男或女，始教一一數，二、二、三、三、十、百、千、萬，次第至上。瞿曇！如是我等學算數，以算數存命，漸次第至成訖。沙門瞿曇！此法、律中，云何漸次第作至成就訖？」",
+   "T0070": "隨意所樂。」「此瞿曇！此鹿講堂次第作、次第成。瞿曇！此鹿講堂初上減梯，如是二三四。瞿曇！如是此鹿講堂次第得上。瞿曇！此御象者，次第教授、次第學，謂手執鈎。瞿曇！此乘馬者，次第教授、次第學，謂已䩭靽。此瞿曇！謂剎利種，次第教授、次第學，謂執弓箭。瞿曇！此婆羅門，次第教授、次第學，謂學詩章。瞿曇！我等學數，數以存命。若數弟子，謂有小兒，被初一二數之，二三二三、若十若百、若增多。如是，瞿曇！我等學數，數以存命，次第教授、次第學，謂學數。沙門瞿曇！於此法律，以何教授、何所學而可知？」"
+  },
+  "a02": {
+   "mn107": "“Sakkā, brāhmaṇa, imasmimpi dhammavinaye anupubbasikkhā anupubbakiriyā anupubbapaṭipadā paññapetuṁ. Seyyathāpi, brāhmaṇa, dakkho assadammako bhaddaṁ assājānīyaṁ labhitvā paṭhameneva mukhādhāne kāraṇaṁ kāreti, atha uttariṁ kāraṇaṁ kāreti;",
+   "nan-mn107": "一時，世尊住舍衛城東園鹿母講堂。爾時，算數家目犍連婆羅門走近彼世尊。近已，與世尊共交可喜可樂問候之語。相交〔談〕已，坐於一面。坐於一面已，算數家目犍連婆羅門白世尊言：「尊者瞿曇！譬如於此鹿母講堂雖已到達，有追順之學，有追順之所行，有追順之道——即如是可達最後之階段。又復次，尊者瞿曇！實則此等婆羅門亦有追順之學，追順之所行，追順之道——即對吠陀之學習。復次，尊者瞿曇！實則此等之射手亦有追順之學，追順之所行，追順之道。——即為對於射術。復次，尊者瞿曇！實則我等團隊之團隊生活、亦有追順之學，追順之所行，追順之道。——即為對於算數。尊者瞿曇！蓋我等諸弟子，所得先使如是數算。——一、一者，二、二者，三、三者，四、四者，五、五者，六、六者，七、七者，八、八者，九、九者，十、十者，——如是至百。尊者瞿曇！使我等數算者。如是，尊者瞿曇！於此聖法律，亦得施設追順之學，追順之所行，追順之道耶？」",
+   "T0026-ma144": "世尊告曰：「目揵連！若有正說漸次第作，乃至成訖。目揵連！我法、律中謂正說。所以者何？目揵連！我於此法、律漸次第作至成就訖。",
+   "T0070": "「汝數，目犍連！若作是說，為等說不？"
+  },
+  "a03": {
+   "mn107": "evameva kho, brāhmaṇa, tathāgato purisadammaṁ labhitvā paṭhamaṁ evaṁ vineti: ‘ehi tvaṁ, bhikkhu, sīlavā hohi, pātimokkhasaṁvarasaṁvuto viharāhi ācāragocarasampanno aṇumattesu vajjesu bhayadassāvī, samādāya sikkhassu sikkhāpadesū’ti. Yato kho, brāhmaṇa, bhikkhu sīlavā hoti, pātimokkhasaṁvarasaṁvuto viharati ācāragocarasampanno aṇumattesu vajjesu bhayadassāvī, samādāya sikkhati sikkhāpadesu, tamenaṁ tathāgato uttariṁ vineti:",
+   "nan-mn107": "「婆羅門！於此聖法律，亦得與以施設追順之學，追順之所行，追順之道。婆羅門！譬如善巧之調馬師，獲良性、良類之馬，最初先使端正頭部，次行更進一步之所作，如是，婆羅門！如來獲可應御之人，最初亦如是調御。——汝比丘！汝須為具戒者。守護別解脫律儀，住於具足正行與行處。見微罪亦怖畏，受持為學學處。而汝婆羅門！比丘為正具戒者。守護別解脫律儀，住具足正行與行處，見微罪亦怖畏，受持為學學處，如來對彼更予調御。——『汝比丘！汝於諸根須應守其門，以眼雖見色，但不為相所捉，亦勿為細相所捉。若對眼根住於不制，則貪與憂，諸有罪與不善法可流注而來故，應專心於制，護眼根、應入眼根之控制。以耳雖聞聲……乃至……以鼻雖嗅香……乃至……以舌雖嚐味……乃至……以身雖觸可觸之物……乃至……以意雖識法，然不為相所捉、亦勿為細相所捉。若對此意根住於不制，則貪與憂、諸有罪及不善法可注流而來故，應專心將其控制。護意根，應入意根之控制。』而汝婆羅門！比丘之於端正諸根護門故，如來對其作更進之調御也。——汝比丘！汝於食應知量，以正思惟取食。勿為娛、為誇、為飾、為莊嚴。應為此身之存續，為維持、為止害、為得善持聖行。如是，我滅原來之受，不使再生新受也。如是我一生應無罪、又可住於安穩。如是不斷思惟者也。婆羅門！比丘之於正食知量故，汝來對彼作更進之調御。——『汝比丘！汝應專修住於警寤。晝間依經行與坐禪，依諸蓋法使心清淨。夜之初分，依經行與坐禪，依諸蓋法，使心清淨。於夜之中分，以右脇臥如獅子，足疊於足，有念、有正知、經常不斷作意可起之想。而於夜之後分起離，依經行與坐禪，依諸蓋法，更應使心清淨。』婆羅門！比丘專修警寤故，對此，如來更進作調御。——『汝比丘！汝宜成就念與正知。或往或還，宜作正知，或前視或顧視，宜作正知，或仰或伏，宜作正知。持僧伽梨衣與鉢與衣，亦宜作正知。或食或飲或噉食或味食，宜作正知。於大小便行，亦宜作正知。或行或立或坐或寢或醒或語或默，宜作正知。』婆羅門！比丘成就正念與正知故，對彼，如來作更進之調御。——『汝比丘！汝只須一人受離牀座，至森中、樹下、山上、洞窟，山窩、墓地，林中、露地、積堆。』彼比丘受孤獨之牀座，至森林中、樹下、山上、洞窟、山窩、墓地、樹林中、露地、積堆。彼食後，由行乞還，結跏趺，身向正直，常使正念現前而坐。彼對世間斷貪欲，住於離貪欲之心，由斷貪欲將心清淨。斷瞋恚，離害他意之心，庇護一切生物，住於哀愍，由斷瞋恚而將心清淨。斷惛眠，遠離惛眠，有光明想，有念、住於正知。由斷惛眠而將心清淨。斷掉悔，為不掉，於內住於靜寂心，由斷掉悔將心清淨。斷疑，度疑，住於無疑念，於諸善法，由斷疑念將心清淨。——彼斷此等五蓋，心之隨煩惱以智使之無力，正離諸愛欲，離諸不善法、有尋、有伺，由離愛欲與不善法，住於成就生喜與樂之初禪定。對諸尋伺使為靜寂，於內成靜穩，心為一境性，無尋、無伺，住於成就由定生喜與樂之第二禪定。依『遠離喜、住於捨心，有念、有正知，身感得樂，彼諸聖者之捨心、即為有念、住於樂者。』之說示，此為住於成就第三禪定。不只亦斷樂、斷苦、前已有之心喜心憂亦並消滅，因之無苦無樂，而為捨心，住於成就有正念、清淨之第四禪定。誠然，婆羅門！實有諸比丘，為學人而志未果，而獲得住於無上絕對之安穩，唯對彼等我作如上類之教說。更有諸比丘，為阿羅漢，諸漏已盡、成就圓滿，所作悉作，重擔已卸，逮得己之利益，徧盡有結，有平等慧，已成解脫，對彼此等諸法為正導現世安樂之生活，且導正念、正智。」",
+   "T0026-ma144": "目揵連！若年少比丘初來學道，始入法、律者，如來先教：『比丘！汝來身護命清淨，口、意護命清淨。』目揵連！若比丘身護命清淨，口、意護命清淨者，如來復上教：『比丘！汝來觀內身如身，至觀覺、心、法如法。』目揵連！若比丘觀內身如身，至觀覺、心、法如法者，如來復上教：『比丘！汝來觀內身如身，莫念欲相應念，至觀覺、心、法如法，莫念非法相應念。』「目揵連！若比丘觀內身如身，不念欲相應念，至觀覺、心、法如法，不念非法相應念者，如來復上教：『比丘！",
+   "T0070": "次第教授、次第學，行戒教學。此目犍連！若作是說，為次第說不？於我法律，何以故，此目犍連！於我法律次第有教授、次第行戒次第學？此目犍連！謂彼為比丘初學不久，至此法律亦未從如來教語之。此比丘！身行等淨其行，口意等淨其行。此目犍連！若比丘，身行等淨其行，口意等淨其行，彼如來無上御之。「此比丘，當內身身相觀行止，至痛意法法相觀行止。此目犍連！謂比丘內身身相觀行止，至痛意法法相觀行止，彼如來無上御之。"
+  },
+  "a04": {
+   "mn107": "‘ehi tvaṁ, bhikkhu, indriyesu guttadvāro hohi, cakkhunā rūpaṁ disvā mā nimittaggāhī hohi mānubyañjanaggāhī. Yatvādhikaraṇamenaṁ cakkhundriyaṁ asaṁvutaṁ viharantaṁ abhijjhādomanassā pāpakā akusalā dhammā anvāssaveyyuṁ tassa saṁvarāya paṭipajjāhi; rakkhāhi cakkhundriyaṁ, cakkhundriye saṁvaraṁ āpajjāhi. Sotena saddaṁ sutvā …pe… ghānena gandhaṁ ghāyitvā …pe… jivhāya rasaṁ sāyitvā …pe… kāyena phoṭṭhabbaṁ phusitvā …pe… manasā dhammaṁ viññāya mā nimittaggāhī hohi mānubyañjanaggāhī. Yatvādhikaraṇamenaṁ manindriyaṁ asaṁvutaṁ viharantaṁ abhijjhādomanassā pāpakā akusalā dhammā anvāssaveyyuṁ tassa saṁvarāya paṭipajjāhi; rakkhāhi manindriyaṁ, manindriye saṁvaraṁ āpajjāhī’ti. Yato kho, brāhmaṇa, bhikkhu indriyesu guttadvāro hoti, tamenaṁ tathāgato uttariṁ vineti: ‘ehi tvaṁ, bhikkhu, bhojane mattaññū hohi. Paṭisaṅkhā yoniso āhāraṁ āhāreyyāsi— neva davāya na madāya na maṇḍanāya na vibhūsanāya, yāvadeva imassa kāyassa ṭhitiyā yāpanāya vihiṁsūparatiyā brahmacariyānuggahāya—iti purāṇañca vedanaṁ paṭihaṅkhāmi, navañca vedanaṁ na uppādessāmi, yātrā ca me bhavissati anavajjatā ca phāsuvihāro cā’ti. Yato kho, brāhmaṇa, bhikkhu bhojane mattaññū hoti, tamenaṁ tathāgato uttariṁ vineti:",
+   "T0026-ma144": "汝來守護諸根，常念閉塞，念欲明達，守護念心而得成就，恒起正知，若眼見色，然不受相，亦不味色，謂忿諍故，守護眼根。心中不生貪伺、憂慼、惡不善法，趣向彼故，守護眼根。如是耳、鼻、舌、身，若意知法，然不受相，亦不味法，謂忿諍故，守護意根。心中不生貪伺、憂慼、惡不善法，趣向彼故，守護意根。』「目揵連！若比丘守護諸根，常念閉塞，念欲明達，守護念心而得成就，恒起正知，若眼見色，然不受相，亦不味色，謂忿諍故，守護眼根。心中不生貪伺、憂慼、惡不善法，趣向彼故，守護眼根。如是耳、鼻、舌、身，若意知法，然不受相，亦不味法，謂忿諍故，守護意根。心中不生貪伺、憂慼、惡不善法，趣向彼故，守護意根者，如來復上教：『比丘！",
+   "T0070": "「此比丘，當守護根門，自護其意護意念，俱自行精進，彼眼見色，當莫受想、莫受他想，謂增上因緣故。護眼根無耻貪憂慼意，不在惡不善法，彼在中學護於眼根；如是耳鼻舌身意根，身意知法，莫受想、莫受他想，謂增上因緣故。是意根無耻貪憂慼意，不善法不在意住，彼在中學自護意根。此目犍連！若比丘，具足諸根門，自護其意，意無染護意，意與念俱等行精進，彼眼見色，亦不受想、不受他想，謂增上緣故。具足眼根無耻貪憂慼意，不在惡不善法，彼在中學自護眼根；如是耳鼻舌身意知法，亦不受想，至彼在中學自護意根，彼如來無上御之。"
+  },
+  "a05": {
+   "mn107": "‘ehi tvaṁ, bhikkhu, jāgariyaṁ anuyutto viharāhi, divasaṁ caṅkamena nisajjāya āvaraṇīyehi dhammehi cittaṁ parisodhehi, rattiyā paṭhamaṁ yāmaṁ caṅkamena nisajjāya āvaraṇīyehi dhammehi cittaṁ parisodhehi, rattiyā majjhimaṁ yāmaṁ dakkhiṇena passena sīhaseyyaṁ kappeyyāsi pāde pādaṁ accādhāya sato sampajāno uṭṭhānasaññaṁ manasikaritvā, rattiyā pacchimaṁ yāmaṁ paccuṭṭhāya caṅkamena nisajjāya āvaraṇīyehi dhammehi cittaṁ parisodhehī’ti. Yato kho, brāhmaṇa, bhikkhu jāgariyaṁ anuyutto hoti, tamenaṁ tathāgato uttariṁ vineti:",
+   "T0026-ma144": "汝來正知出入，善觀分別，屈伸低仰，儀容庠序，善著僧伽梨及諸衣鉢，行住坐臥、眠寤語默，皆正知之。』「目揵連！若比丘正知出入，善觀分別，屈伸低仰，儀容庠序，善著僧伽梨及諸衣鉢，行住坐臥、眠寤語默，皆正知者，如來復上教：『比丘！",
+   "T0070": "「此比丘，過已過當為等行觀，已觀屈申持僧伽梨衣鉢，若行若住若坐，若眠若覺若說若默，當為等行。此目犍連！若比丘，過已過至行於等行，彼如來無上御之。"
+  },
+  "a06": {
+   "mn107": "‘ehi tvaṁ, bhikkhu, satisampajaññena samannāgato hohi, abhikkante paṭikkante sampajānakārī, ālokite vilokite sampajānakārī, samiñjite pasārite sampajānakārī, saṅghāṭipattacīvaradhāraṇe sampajānakārī, asite pīte khāyite sāyite sampajānakārī, uccārapassāvakamme sampajānakārī, gate ṭhite nisinne sutte jāgarite bhāsite tuṇhībhāve sampajānakārī’ti. Yato kho, brāhmaṇa, bhikkhu satisampajaññena samannāgato hoti, tamenaṁ tathāgato uttariṁ vineti: ‘ehi tvaṁ, bhikkhu, vivittaṁ senāsanaṁ bhajāhi araññaṁ rukkhamūlaṁ pabbataṁ kandaraṁ giriguhaṁ susānaṁ vanapatthaṁ abbhokāsaṁ palālapuñjan’ti. So vivittaṁ senāsanaṁ bhajati araññaṁ rukkhamūlaṁ pabbataṁ kandaraṁ giriguhaṁ susānaṁ vanapatthaṁ abbhokāsaṁ palālapuñjaṁ. So pacchābhattaṁ piṇḍapātapaṭikkanto nisīdati pallaṅkaṁ ābhujitvā, ujuṁ kāyaṁ paṇidhāya, parimukhaṁ satiṁ upaṭṭhapetvā. So abhijjhaṁ loke pahāya vigatābhijjhena cetasā viharati, abhijjhāya cittaṁ parisodheti; byāpādapadosaṁ pahāya abyāpannacitto viharati sabbapāṇabhūtahitānukampī, byāpādapadosā cittaṁ parisodheti; thinamiddhaṁ pahāya vigatathinamiddho viharati ālokasaññī sato sampajāno, thinamiddhā cittaṁ parisodheti; uddhaccakukkuccaṁ pahāya anuddhato viharati ajjhattaṁ vūpasantacitto, uddhaccakukkuccā cittaṁ parisodheti; vicikicchaṁ pahāya tiṇṇavicikiccho viharati akathaṅkathī kusalesu dhammesu, vicikicchāya cittaṁ parisodheti.",
+   "T0026-ma144": "汝來獨住遠離，在無事處，或至樹下空安靜處、山巖石室、露地穰積，或至林中，或住在塚間。汝已在無事處，或至樹下空安靜處，敷尼師檀，結加趺坐，正身正願，及念不向，斷除貪伺，心無有諍。見他財物、諸生活具，莫起貪伺，欲令我得，汝於貪伺淨除其心。如是瞋恚、睡眠、調悔、斷疑、度惑，於諸善法無有猶豫，汝於疑惑淨除其心。",
+   "T0070": "「此比丘，知牀臥已而受之，若在靜處，若在樹下、空靜處、山間窟中，露坐草蓐、林間塚間，彼若在靜處，依敷尼師檀結加趺坐，正身意願，意最在前，除貪嫉意無瞋恚住，莫於他財發於貪，謂他物令我有，淨除貪意。"
+  },
+  "a07": {
+   "mn107": "So ime pañca nīvaraṇe pahāya cetaso upakkilese paññāya dubbalīkaraṇe vivicceva kāmehi vivicca akusalehi dhammehi savitakkaṁ savicāraṁ vivekajaṁ pītisukhaṁ paṭhamaṁ jhānaṁ upasampajja viharati. Vitakkavicārānaṁ vūpasamā ajjhattaṁ sampasādanaṁ …pe… dutiyaṁ jhānaṁ upasampajja viharati. Pītiyā ca virāgā … tatiyaṁ jhānaṁ upasampajja viharati. Sukhassa ca pahānā … catutthaṁ jhānaṁ upasampajja viharati.",
+   "T0026-ma144": "汝斷此五蓋——心穢、慧羸，離欲，離惡不善之法，至得第四禪成就遊。』目揵連！若比丘離欲、離惡不善之法，至得第四禪成就遊者，目揵連！",
+   "T0070": "如是瞋恚懈怠、睡眠調戲羞耻，除疑貪，離邪離疑、離諸猶豫法，淨於疑意，彼棄五蓋意著結，智慧羸於婬解脫，至住四禪。如是，目犍連！比丘於婬解脫至住四禪。"
+  },
+  "a08": {
+   "mn107": "Ye kho te, brāhmaṇa, bhikkhū sekkhā apattamānasā anuttaraṁ yogakkhemaṁ patthayamānā viharanti tesu me ayaṁ evarūpī anusāsanī hoti. Ye pana te bhikkhū arahanto khīṇāsavā vusitavanto katakaraṇīyā ohitabhārā anuppattasadatthā parikkhīṇabhavasaṁyojanā sammadaññāvimuttā tesaṁ ime dhammā diṭṭhadhammasukhavihārāya ceva saṁvattanti, satisampajaññāya cā”ti.",
+   "T0026-ma144": "如來為諸年少比丘多有所益，謂訓誨教訶。目揵連！若有比丘、長老、上尊、舊學梵行，如來復上教，謂究竟訖一切漏盡。」",
+   "T0070": "如是，目犍連！如來為初學比丘多有所益，謂教學教行。「謂目犍連！彼諸比丘上尊，諸王所識，無懈怠住，行於梵行，如來無上御之。謂至竟盡有漏盡，一切沙門瞿曇弟子，如是教授、如是教學，至竟盡近涅槃。"
+  },
+  "a09": {
+   "mn107": "Evaṁ vutte, gaṇakamoggallāno brāhmaṇo bhagavantaṁ etadavoca: “kiṁ nu kho bhoto gotamassa sāvakā bhotā gotamena evaṁ ovadīyamānā evaṁ anusāsīyamānā sabbe accantaṁ niṭṭhaṁ nibbānaṁ ārādhenti udāhu ekacce nārādhentī”ti?",
+   "nan-mn107": "如是教誡時，算數家目犍連婆羅門向世尊作如是言：「云何？尊者瞿曇之諸弟子，受尊者瞿曇授如是之教諭，授如是之教誡已、能皆得趣究竟之涅槃耶？某者為不得耶？」",
+   "T0026-ma144": "算數目揵連即復問曰：「沙門瞿曇！一切弟子如是訓誨，如是教訶，盡得究竟智必涅槃耶？」",
+   "T0070": "此目犍連！非一向或一不或一向。」"
+  },
+  "a10": {
+   "mn107": "“Appekacce kho, brāhmaṇa, mama sāvakā mayā evaṁ ovadīyamānā evaṁ anusāsīyamānā accantaṁ niṭṭhaṁ nibbānaṁ ārādhenti, ekacce nārādhentī”ti.",
+   "nan-mn107": "「婆羅門！我諸弟子之某者、原依授如是之教諭，授如是之教誡已，得趣究竟之涅槃；然某者不得。」",
+   "T0026-ma144": "世尊答曰：「目揵連！不一向得，或有得者，或不得者。」"
+  },
+  "a11": {
+   "mn107": "“Ko nu kho, bho gotama, hetu ko paccayo yaṁ tiṭṭhateva nibbānaṁ, tiṭṭhati nibbānagāmī maggo, tiṭṭhati bhavaṁ gotamo samādapetā; atha ca pana bhoto gotamassa sāvakā bhotā gotamena evaṁ ovadīyamānā evaṁ anusāsīyamānā appekacce accantaṁ niṭṭhaṁ nibbānaṁ ārādhenti, ekacce nārādhentī”ti? “Tena hi, brāhmaṇa, taṁyevettha paṭipucchissāmi. Yathā te khameyya tathā naṁ byākareyyāsi. Taṁ kiṁ maññasi, brāhmaṇa, kusalo tvaṁ rājagahagāmissa maggassā”ti? “Evaṁ, bho, kusalo ahaṁ rājagahagāmissa maggassā”ti.",
+   "nan-mn107": "「尊者瞿曇！若然，有云何之因，云何之緣，正涅槃存，導涅槃之道存，有尊瞿曇為導師、而尊瞿曇之諸弟子，受尊者瞿曇如是教諭，如是教誨已，某者得趣究竟涅槃；而某者為不得耶？」「婆羅門！就今敢為此問，如汝認為適宜，應如是為說。婆羅門！對此作如何思量耶？汝對至王舍城之道，善知否？」",
+   "T0026-ma144": "算數目揵連復更問曰：「瞿曇！此中何因何緣，有涅槃、有涅槃道？沙門瞿曇現在導師，或有比丘如是訓誨，如是教訶，得究竟涅槃，或復不得耶？」世尊告曰：「目揵連！我還問汝，隨所解答。目揵連！於意云何？汝知王舍城處，諳彼道耶？」算數目揵連答曰：「唯然。我知王舍城處，亦諳彼道。」世尊問曰：「目揵連！",
+   "T0070": "「此瞿曇！有何因有何緣，言有涅槃求涅槃道？沙門瞿曇！住能教授，或一比丘，如是教授、如是教學，至竟盡至竟向涅槃，或一不如是。」「是故，目犍連！我還問汝，隨汝所樂而還報之。於目犍連意云何？善知退羅閱祇道路不？」「唯瞿曇！我善知退羅閱祇道路。」"
+  },
+  "a12": {
+   "mn107": "“Taṁ kiṁ maññasi, brāhmaṇa, idha puriso āgaccheyya rājagahaṁ gantukāmo. So taṁ upasaṅkamitvā evaṁ vadeyya: ‘icchāmahaṁ, bhante, rājagahaṁ gantuṁ; tassa me rājagahassa maggaṁ upadisā’ti. Tamenaṁ tvaṁ evaṁ vadeyyāsi: ‘ehambho purisa, ayaṁ maggo rājagahaṁ gacchati. Tena muhuttaṁ gaccha, tena muhuttaṁ gantvā dakkhissasi amukaṁ nāma gāmaṁ, tena muhuttaṁ gaccha, tena muhuttaṁ gantvā dakkhissasi amukaṁ nāma nigamaṁ; tena muhuttaṁ gaccha, tena muhuttaṁ gantvā dakkhissasi rājagahassa ārāmarāmaṇeyyakaṁ vanarāmaṇeyyakaṁ bhūmirāmaṇeyyakaṁ pokkharaṇīrāmaṇeyyakan’ti. So tayā evaṁ ovadīyamāno evaṁ anusāsīyamāno ummaggaṁ gahetvā pacchāmukho gaccheyya.",
+   "nan-mn107": "「如是，尊者！我對至王舍城之道，善知。」「婆羅門！對此作如何思量？此處有一人，向王舍城行來。彼來近汝，作如是語：『吾君！我願至王舍城、請教我至王舍城之道。』對彼，汝作如是言：『如是，吾君！此道為通王舍城。暫就此行之。暫行已，可見各各之邑名。如是再暫行，其再暫行已，可見各各之街名。如是再暫行。再暫行已，可見王舍城之美園，美林、美土地、美池。』彼對汝作如是諭，如是告，汝非但未遵行，且取錯誤之道，面向背道而去。時有第二人，為往王舍城而行來，彼近汝作如是語：『吾君！我願至王舍城，請教我至王舍城之道。』對彼，汝如是曰：『吾君！此道為通王舍城。就此道暫行，就此暫行，可見各各邑名。就其再暫行去，就其暫行已，可見各各之街名，就其再暫行之，就其再暫行已，可見王舍城之美園，美林、美土地、美池也。』彼依汝如是所教，如是所告，可安全行至王舍城——婆羅門！若然，云何之因，云何之緣，王舍城正存，向王舍城之道存，汝為導者，但汝如是所教，如是所告已，一人取誤道向背面行去；一人安全能至王舍城耶？」",
+   "T0026-ma144": "若有人來欲見彼王，至王舍城。其人問汝：『我欲見王，至王舍城，算數目揵連知王舍城處，諳彼道徑，可示語我耶？』汝告彼人曰：『從此東行至彼某村，從某村去當至某邑，如是展轉至王舍城。若王舍城外有好園林，其地平正，樓觀浴池，若干華樹，俠長流河，又有清泉，盡見盡知。』彼人聞汝語，受汝教已，從此東行，須臾不久，便捨正道，從惡道還。若王舍城外有好園林，其地平正，樓觀浴池，若干華樹，俠長流河，又有清泉，彼盡不見，亦不知也。",
+   "T0070": "「若有人來，欲至羅閱祇到王所，到汝所而作是言：『目犍連婆羅門善知數羅閱祇行道路，我欲到羅閱祇至王所而問道路。』汝當作是言：『汝當以此道正而去，正去已趣彼村，趣彼村已至彼處，是故汝次第當至羅閱祇。謂於羅閱祇，園地快樂，林快樂地快樂，池快樂河水流冷，安隱快樂。當知此、當見此。』彼當受汝教等受其教，受教已以彼道直至彼。直至彼已，反取邪道背而行。"
+  },
+  "a13": {
+   "mn107": "Atha dutiyo puriso āgaccheyya rājagahaṁ gantukāmo. So taṁ upasaṅkamitvā evaṁ vadeyya: ‘icchāmahaṁ, bhante, rājagahaṁ gantuṁ; tassa me rājagahassa maggaṁ upadisā’ti. Tamenaṁ tvaṁ evaṁ vadeyyāsi: ‘ehambho purisa, ayaṁ maggo rājagahaṁ gacchati. Tena muhuttaṁ gaccha, tena muhuttaṁ gantvā dakkhissasi amukaṁ nāma gāmaṁ; tena muhuttaṁ gaccha, tena muhuttaṁ gantvā dakkhissasi amukaṁ nāma nigamaṁ; tena muhuttaṁ gaccha, tena muhuttaṁ gantvā dakkhissasi rājagahassa ārāmarāmaṇeyyakaṁ vanarāmaṇeyyakaṁ bhūmirāmaṇeyyakaṁ pokkharaṇīrāmaṇeyyakan’ti. So tayā evaṁ ovadīyamāno evaṁ anusāsīyamāno sotthinā rājagahaṁ gaccheyya.",
+   "T0026-ma144": "「復有人來欲見彼王，至王舍城。其人問汝：『我欲見王，至王舍城。算數目揵連知王舍城處，諳彼道徑，可示語我耶？』汝告彼人曰：『從此東行至彼某村，從某村去當至某邑，如是展轉至王舍城。若王舍城外有好園林，其地平正，樓觀浴池，若干華樹，俠長流河，又有清泉，盡見盡知。』彼人聞汝語，受汝教已，即從此東行至彼某村，從某村去得至某邑，如是展轉至王舍城。若王舍城外有好園林，其地平正，樓觀浴池，若干華樹，俠長流河，又有清泉，盡見盡知。「目揵連！此中何因何緣，有彼王舍城，有王舍城道？汝現在導師，彼第一人隨受汝教，於後不久，捨平正道，從惡道還。若王舍城外有好園林，其地平正，樓觀浴池，若干華樹，俠長流河，又有清泉，彼盡不見，亦不知耶？彼第二人隨受汝教，從平正道展轉得至於王舍城，若王舍城外有好園林，其地平正，樓觀浴池，若干華樹，俠長流河，又有清泉，彼盡見盡知耶？」",
+   "T0070": "彼於羅閱祇，園地快樂至安隱快樂，彼亦不知、彼亦不見。若有人來，有王事欲至羅閱祇，而到汝所，當作是言：『目犍連婆羅門善知數羅閱祇道路，我欲至羅閱祇，我今問汝道。』汝當作是言：『汝以此道直而往至，直往已至彼村，至彼村已至彼處。彼次第到羅閱祇，謂彼羅閱祇，園地快樂至安隱快樂，彼知彼見。』此目犍連！何因何緣，有彼羅閱祇？有羅閱祇道路？汝住教授，彼初人得教授，亦不受教授，而取邪道背而去，謂於羅閱祇，園地快樂至安隱快樂，彼亦不知彼亦不見。彼二人如教授，受其教取其道，次第到羅閱祇，謂於羅閱祇，園地快樂至安隱快樂，彼便知彼便見。」"
+  },
+  "a14": {
+   "mn107": "Ko nu kho, brāhmaṇa, hetu ko paccayo yaṁ tiṭṭhateva rājagahaṁ, tiṭṭhati rājagahagāmī maggo, tiṭṭhasi tvaṁ samādapetā; atha ca pana tayā evaṁ ovadīyamāno evaṁ anusāsīyamāno eko puriso ummaggaṁ gahetvā pacchāmukho gaccheyya, eko sotthinā rājagahaṁ gaccheyyā”ti? “Ettha kyāhaṁ, bho gotama, karomi? Maggakkhāyīhaṁ, bho gotamā”ti.",
+   "nan-mn107": "「尊者瞿曇！對此我得云何耶？尊者瞿曇！我只為教導者。」",
+   "T0026-ma144": "算數目揵連答曰：「瞿曇！我都無事，有彼王舍城，有王舍城道。我現在導師，彼第一人不隨我教，捨平正道，從惡道還，若王舍城外有好園林，其地平正，樓觀浴池，若干華樹，俠長流河，又有清泉，彼盡不見，亦不知耶？彼第二人隨順我教，從平正道展轉得至於王舍城，若王舍城外有好園林，其地平正，樓觀浴池，若干華樹，俠長流河，又有清泉，彼盡見盡知耶？」世尊告曰：「如是。",
+   "T0070": "「此瞿曇！我當如何？有彼羅閱祇，有羅閱祇道路，我住教授，彼初來人，如所教不受教，取邪道反而往，謂於羅閱祇，園地快樂至安隱快樂，彼亦不知彼亦不見。彼二人如教授，受其教取其道，次第到羅閱祇，謂於羅閱祇，園地快樂至安隱快樂，彼當知彼當見。」「如是，目犍連！"
+  },
+  "a15": {
+   "mn107": "“Evameva kho, brāhmaṇa, tiṭṭhateva nibbānaṁ, tiṭṭhati nibbānagāmī maggo, tiṭṭhāmahaṁ samādapetā; atha ca pana mama sāvakā mayā evaṁ ovadīyamānā evaṁ anusāsīyamānā appekacce accantaṁ niṭṭhaṁ nibbānaṁ ārādhenti, ekacce nārādhenti. Ettha kyāhaṁ, brāhmaṇa, karomi? Maggakkhāyīhaṁ, brāhmaṇa, tathāgato”ti.",
+   "nan-mn107": "「又婆羅門！恰正如是。涅槃正存，導涅槃之道存，我亦為導師，而我諸弟子，對我如是所教諭、如是所教誨已、某者得趣究竟涅槃；某者為尚不得。對此，婆羅門！我得云何耶？婆羅門！如來只為教導者。」如是之所教誡，算數家目犍連對世尊作如是言：「尊者瞿曇！此處有諸人、為不信、為生活而由居家之生活入於出家、欺譎、誑偽、傲慢、不遜、虛飾、騷擾、玩弄饒舌，於諸根門不善守，食不知量，不專修警寤，不欣求心平等，對諸學處，無甚深之恭敬心，多所作而煥緩，於眾會，而先人而行，閒居而無專事、懶惰而勤心薄，忘念而無正知，心不定而迷亂，惡慧而宛如聾啞。——如是人等，尊者瞿曇，不與俱住。然有諸善男子，有信而由居家之生活入於出家，無欺，無誑，無慢，無不遜，無虛飾，靜穩，不饒舌，於諸根善護門，食知量，專修警寤，欣求心平等，對諸學處具獻最深之恭敬心，所作不多，亦不煥緩，於眾會無專橫之事，閒居時先於人而勤奮精進努力，念確立，知現前，心寂定，靜穩，有慧，非聾啞之類。——如是人等，尊者瞿曇得與俱住。尊者瞿曇！例如一切根香中、黑栴香為其最上。一切樹香中，赤栴檀香為其最上，一切華香中，婆尸迦香為其最上。正如是，尊者瞿曇之教誡於今日之諸法中為最上。奇哉！尊者瞿曇！奇哉！尊者瞿曇！尊者瞿曇！例如，尊者瞿曇！將若伏者與以仰向，將若覆者離覆，對若迷者教之以道，若於闇中取來明燈，如『有眼之大眾見諸色』恰如是，尊者瞿曇以種種異門說法。此我歸命尊者瞿曇，歸命法及比丘眾者。願尊者瞿曇攝受我為優婆塞。自今以後，願盡生命歸依。」——",
+   "T0026-ma144": "目揵連！我亦無事，有彼涅槃、有涅槃道。我為導師，為諸比丘如是訓誨，如是教訶，得究竟涅槃，或有不得。目揵連！但各自隨比丘所行。爾時世尊便記彼行，謂究竟漏盡耳。」算數目揵連白曰：「瞿曇！我已知。瞿曇！我已解。瞿曇！猶如良地有娑羅林，彼中有守娑羅林人，明健不懈，諸娑羅根以時鋤掘，平高填下，糞沃溉灌，不失其時。若其邊有穢惡草生，盡拔棄之；若有橫曲不調直者，盡𭃞治之；若有極好中直樹者，便權養護，隨時鋤掘，糞沃溉灌，不失其時。如是良地娑羅樹林轉茂盛好。瞿曇！如是有人諛諂、欺誑、極不庶幾無信、懈怠、無念、無定、惡慧、心狂、諸根掉亂，持戒寬緩，不廣修沙門。瞿曇！如是之人不能共事。",
+   "T0070": "我亦當如何？有彼涅槃、有涅槃道，我住教授，或一比丘，如是教授、如是教令，至竟盡近涅槃；或一不如此。此目犍連！謂彼比丘於中受教，於世尊眾中受教授所記，謂至竟盡有漏盡。」「已過瞿曇！已過瞿曇！猶若，瞿曇！極好地有娑羅林樹，彼守娑羅樹林者勤修無懈，彼自以力俱彼娑羅樹根，以時穿毀視之，以糞投中、以水溉之，若有不滿以土滿之，若邊有草拔已棄之，若邊有蔓草弊惡曲戾不直，此所防盡拔已棄之，謂彼棄新生，極長彼初生，隨時水治，以糞投中以水溉之。如是，瞿曇！好地娑羅樹林，於後時極大轉增。如是，瞿曇！謂彼人諛諂為幻，不信懈怠亂志不定，惡智意亂根不定，戒行不勤，不極分別沙門行。沙門瞿曇！不共彼宿，不共如此人住。何以故？瞿曇！如是，彼人為壞梵行者。瞿曇謂彼人無有諛諂，亦無有邪意，信行精進，意常住應於定智慧，順敬戒學，多分別沙門行。沙門瞿曇！為無所著，共如此人宿止。"
+  },
+  "a16": {
+   "mn107": "Evaṁ vutte, gaṇakamoggallāno brāhmaṇo bhagavantaṁ etadavoca: “yeme, bho gotama, puggalā assaddhā jīvikatthā na saddhā agārasmā anagāriyaṁ pabbajitā saṭhā māyāvino ketabino uddhatā unnaḷā capalā mukharā vikiṇṇavācā indriyesu aguttadvārā bhojane amattaññuno jāgariyaṁ ananuyuttā sāmaññe anapekkhavanto sikkhāya na tibbagāravā bāhulikā sāthalikā okkamane pubbaṅgamā paviveke nikkhittadhurā kusītā hīnavīriyā muṭṭhassatino asampajānā asamāhitā vibbhantacittā duppaññā eḷamūgā, na tehi bhavaṁ gotamo saddhiṁ saṁvasati. Ye pana te kulaputtā saddhā agārasmā anagāriyaṁ pabbajitā asaṭhā amāyāvino aketabino anuddhatā anunnaḷā acapalā amukharā avikiṇṇavācā indriyesu guttadvārā bhojane mattaññuno jāgariyaṁ anuyuttā sāmaññe apekkhavanto sikkhāya tibbagāravā nabāhulikā nasāthalikā okkamane nikkhittadhurā paviveke pubbaṅgamā āraddhavīriyā pahitattā upaṭṭhitassatino sampajānā samāhitā ekaggacittā paññavanto aneḷamūgā, tehi bhavaṁ gotamo saddhiṁ saṁvasati. Seyyathāpi, bho gotama, ye keci mūlagandhā, kālānusāri tesaṁ aggamakkhāyati; ye keci sāragandhā, lohitacandanaṁ tesaṁ aggamakkhāyati; ye keci pupphagandhā, vassikaṁ tesaṁ aggamakkhāyati; evameva bhoto gotamassa ovādo paramajjadhammesu. Abhikkantaṁ, bho gotama, abhikkantaṁ, bho gotama. Seyyathāpi, bho gotama, nikkujjitaṁ vā ukkujjeyya, paṭicchannaṁ vā vivareyya, mūḷhassa vā maggaṁ ācikkheyya, andhakāre vā telapajjotaṁ dhāreyya: ‘cakkhumanto rūpāni dakkhantī’ti; evamevaṁ bhotā gotamena anekapariyāyena dhammo pakāsito. Esāhaṁ bhavantaṁ gotamaṁ saraṇaṁ gacchāmi dhammañca bhikkhusaṅghañca.",
+   "T0026-ma144": "所以者何？瞿曇！如是人者，穢污梵行。瞿曇！若復有人不有諛諂，亦不欺誑，庶幾有信，精進不懈，有念、有定，亦有智慧，極恭敬戒，廣修沙門。瞿曇！如是之人，能共事也。所以者何？瞿曇！如是人者，清淨梵行。「瞿曇！猶諸根香，沈香為第一。所以者何？瞿曇！彼沈香者，於諸根香為最上故。瞿曇！猶諸娑羅樹香，赤栴檀為第一。所以者何？瞿曇！赤栴檀者於諸娑羅樹香為最上故。瞿曇！猶諸水華，青蓮華為第一。所以者何？瞿曇！青蓮華者於諸水華為最上故。瞿曇！猶諸陸華，修摩那花為第一。所以者何？瞿曇！修摩那花者於諸陸花為最上故。",
+   "T0070": "何以故？瞿曇！如此人者，於梵行者為應法清淨。猶若，瞿曇！諸有根香，迦羅為最上。何以故？瞿曇！彼迦羅諸根香首。猶若，瞿曇！諸有娑羅香，赤栴檀是彼之首，何以故？瞿曇！諸娑羅香，赤栴檀為首故。猶若，瞿曇！諸水中華，青憂鉢為首。何以故？瞿曇！諸水華，青憂鉢為首故。猶若，瞿曇！諸陸地華，須牟尼婆利師為首。何以故？瞿曇！諸陸地華，婆利師為首故。猶若，瞿曇！諸世之論，沙門瞿曇論為最。何以故？沙門瞿曇論，能攝一切異學故。"
+  },
+  "a17": {
+   "T0026-ma144": "瞿曇！猶如世中諸有論士，沙門瞿曇為最第一。所以者何？沙門瞿曇論士能伏一切外道異學故。世尊！我今自歸於佛、法及比丘眾，唯願世尊受我為優婆塞，從今日始，終身自歸，乃至命盡。」"
+  },
+  "a18": {
+   "mn107": "Upāsakaṁ maṁ bhavaṁ gotamo dhāretu ajjatagge pāṇupetaṁ saraṇaṁ gatan”ti. Gaṇakamoggallānasuttaṁ niṭṭhitaṁ sattamaṁ.",
+   "T0026-ma144": "佛說如是。算數目揵連及諸比丘，聞佛所說，歡喜奉行。算數目揵連經第三竟（二千三百五十四字）",
+   "T0070": "是故，唯世尊！我今自歸法及比丘僧。唯世尊！我今持優婆塞，從今日始盡命離殺生，今自歸。」佛如是說。常數目犍連婆羅門聞佛所說，歡喜而樂。"
+  }
+ }
+}

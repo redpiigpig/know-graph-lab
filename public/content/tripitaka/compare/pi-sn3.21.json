@@ -1,0 +1,131 @@
+{
+ "slug": "pi-sn3.21",
+ "title": "別譯雜阿含經 （六九）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "波斯匿王請問四種人"
+  },
+  {
+   "id": "a02",
+   "label": "由闇入闇者"
+  },
+  {
+   "id": "a03",
+   "label": "由闇入明者"
+  },
+  {
+   "id": "a04",
+   "label": "由明入闇者"
+  },
+  {
+   "id": "a05",
+   "label": "由明入明者"
+  },
+  {
+   "id": "a06",
+   "label": "結語"
+  },
+  {
+   "id": "a07",
+   "label": "偈頌"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn3.21",
+   "lang": "pi",
+   "label": "巴利 SN3.21",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn3.21",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN3.21",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.69",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （六九）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa1146",
+   "lang": "lzh",
+   "label": "雜阿含經 （一一四六）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（六九）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一一四六）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn3.21": "Saṁyutta Nikāya 3.21",
+   "nan-sn3.21": "〔二一〕第一　人〔爾時，世尊〕在舍衛城……",
+   "T0100-sa-2.69": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。",
+   "T0099-sa1146": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。"
+  },
+  "a01": {
+   "sn3.21": "3. Tatiyavagga Puggalasutta Sāvatthinidānaṁ. Atha kho rājā pasenadi kosalo yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdi. Ekamantaṁ nisinnaṁ kho rājānaṁ pasenadiṁ kosalaṁ bhagavā etadavoca:",
+   "nan-sn3.21": "時，拘薩羅國之波斯匿王，往詣世尊處。詣已，禮敬世尊，於一面坐，世尊謂於一面坐之拘薩羅國波斯匿王曰：「大王！世間有四種人。」",
+   "T0100-sa-2.69": "爾時，波斯匿王往詣佛所，頂禮佛足，在一面坐。白佛言：「世尊！婆羅門種常生婆羅門家，剎利種常生剎利家不？」佛告王曰：「汝今不應作如是語。",
+   "T0099-sa1146": "時，波斯匿王來詣佛所，稽首佛足，退坐一面，白佛言：「云何？世尊！為婆羅門死還生自姓婆羅門家，剎利、鞞舍、首陀羅家耶？」佛言：「大王！何得如是？大王當知，有四種人。何等為四？有一種人，從冥入冥；有一種人，從冥入明；有一種人，從明入冥；有一種人，從明入明。"
+  },
+  "a02": {
+   "sn3.21": "“cattārome, mahārāja puggalā santo saṁvijjamānā lokasmiṁ. Katame cattāro? Tamotamaparāyano, tamojotiparāyano, jotitamaparāyano, jotijotiparāyano. Kathañca, mahārāja puggalo tamotamaparāyano hoti? Idha, mahārāja, ekacco puggalo nīce kule paccājāto hoti, caṇḍālakule vā venakule vā nesādakule vā rathakārakule vā pukkusakule vā dalidde appannapānabhojane kasiravuttike, yattha kasirena ghāsacchādo labbhati. So ca hoti dubbaṇṇo duddasiko okoṭimako bavhābādho kāṇo vā kuṇī vā khañjo vā pakkhahato vā, na lābhī annassa pānassa vatthassa yānassa mālāgandhavilepanassa seyyāvasathapadīpeyyassa. So kāyena duccaritaṁ carati, vācāya duccaritaṁ carati, manasā duccaritaṁ carati. So kāyena duccaritaṁ caritvā vācāya duccaritaṁ caritvā manasā duccaritaṁ caritvā, kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjati. Seyyathāpi, mahārāja, puriso andhakārā vā andhakāraṁ gaccheyya, tamā vā tamaṁ gaccheyya, lohitamalā vā lohitamalaṁ gaccheyya. Tathūpamāhaṁ, mahārāja, imaṁ puggalaṁ vadāmi. Evaṁ kho, mahārāja, puggalo tamotamaparāyano hoti.",
+   "nan-sn3.21": "「四種者何耶？」「乃：由闇入闇，由闇入明，由明入闇，由明入明者是。大王！如何之為由闇入闇耶？大王！今有人生卑賤家、生於旃陀羅家、作竹籠家、獵夫家、作皮家、清潔夫家，貧窮而缺乏飲食，生計困難，難得衣食、醜陋，畸軀而駝背，多病、獨眼、曲手、跛足、半身不遂，不得飲食、衣服、車乘、華鬘、香、塗香、寢牀、住居、燈光。彼身為惡行、語為惡行、意為惡行。彼為此身、語、意之惡行，身體毀壞死後，墮於苦處、惡處、地獄。大王！譬喻人由闇入闇，由闇入闇，即由血暗入血暗。大王！我說譬喻此人。大王！如是等人是由闇入闇。",
+   "T0100-sa-2.69": "何以故？有四種人：一者從明入明，二者從明入冥，三者從冥入明，四者從冥入冥。何謂從冥入冥？若有眾生生於下賤、貧窮之者，或生魁膾技巧之家，或身羸瘦，其形極黑，聾盲瘖瘂，諸根不具，為他作使，不得自在。如此之人，或身行惡業，或口作惡業，或心念不善，身壞命終，墮於地獄，是名從冥入冥。如從廁出，復入一廁，我說此人從冥入冥。「若如此人，生於下賤及魁膾技巧，或身羸瘦，其形極黑，聾盲瘖瘂，諸根不具，為他走使，不得自在，是名為冥。若如此人，能身行善，能口行善，能意行善，身壞命終，得生天上。如此人從地而起，得昇於床。從床而起，得乘於車。從車而起，得乘於馬。",
+   "T0099-sa1146": "「大王！云何為一種人從冥入冥？謂有人生卑姓家，若生旃陀羅家、魚獵家、竹作家、車師家，及餘種種下賤工巧業家，貧窮短命，形體憔悴，而復修行卑賤之家，亦復為人下賤作使，是名為冥。處斯冥中，復行身惡行、行口惡行、行意惡行，以是因緣，身壞命終，當生惡趣，墮泥梨中。猶如有人從闇入闇，從廁入廁，以血洗血，捨惡受惡；從冥入冥者亦復如是。是故名為從冥入冥。"
+  },
+  "a03": {
+   "sn3.21": "Kathañca, mahārāja, puggalo tamojotiparāyano hoti? Idha, mahārāja, ekacco puggalo nīce kule paccājāto hoti, caṇḍālakule vā venakule vā nesādakule vā rathakārakule vā pukkusakule vā dalidde appannapānabhojane kasiravuttike, yattha kasirena ghāsacchādo labbhati. So ca kho hoti dubbaṇṇo duddasiko okoṭimako bavhābādho, kāṇo vā kuṇī vā khañjo vā pakkhahato vā, na lābhī annassa pānassa vatthassa yānassa mālāgandhavilepanassa seyyāvasathapadīpeyyassa. So kāyena sucaritaṁ carati, vācāya sucaritaṁ carati, manasā sucaritaṁ carati. So kāyena sucaritaṁ caritvā vācāya sucaritaṁ caritvā manasā sucaritaṁ caritvā, kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjati. Seyyathāpi, mahārāja, puriso pathaviyā vā pallaṅkaṁ āroheyya, pallaṅkā vā assapiṭṭhiṁ āroheyya, assapiṭṭhiyā vā hatthikkhandhaṁ āroheyya, hatthikkhandhā vā pāsādaṁ āroheyya. Tathūpamāhaṁ, mahārāja, imaṁ puggalaṁ vadāmi. Evaṁ kho, mahārāja, puggalo tamojotiparāyano hoti.",
+   "nan-sn3.21": "大王！如何之人是由闇入明耶？大王！如今有人生卑賤、旃陀羅家、作竹籠家、獵夫家、皮匠家、清潔夫家，貧窮而缺乏飲食，生計困難，難得衣食，醜陋奇而駝背、多病、獨眼、曲手、跛足、半身不遂，不得飲食、衣服、車乘、華鬘、香、塗香、寢牀、住居、燈光。彼身行善行，口行善行、意行善行。彼於身語意善行。身體毀壞死後，生善趣天界。大王！譬喻有人由地乘輿，由輿移乘馬背，由馬背移乘象，由象肩移登高樓。大王！正如我以此人為喻。大王！如是之人是由闇入明。",
+   "T0100-sa-2.69": "從馬而起，得乘於象。從象而起，得昇宮殿。以是緣故，我說從冥入明。",
+   "T0099-sa1146": "「云何名為從冥入明？謂有世人生卑姓家，乃至為人作諸鄙業，是名為冥。然其彼人於此冥中，行身善行、行口善行、行意善行，以是因緣，身壞命終，生於善趣，受天化生。譬如有人登床跨馬，從馬昇象；從冥入明亦復如是。是名有人從冥入明。"
+  },
+  "a04": {
+   "sn3.21": "Kathañca, mahārāja, puggalo jotitamaparāyano hoti? Idha, mahārāja, ekacco puggalo ucce kule paccājāto hoti, khattiyamahāsālakule vā brāhmaṇamahāsālakule vā gahapatimahāsālakule vā, aḍḍhe mahaddhane mahābhoge pahūtajātarūparajate pahūtavittūpakaraṇe pahūtadhanadhaññe. So ca hoti abhirūpo dassanīyo pāsādiko, paramāya vaṇṇapokkharatāya samannāgato, lābhī annassa pānassa vatthassa yānassa mālāgandhavilepanassa seyyāvasathapadīpeyyassa. So kāyena duccaritaṁ carati, vācāya duccaritaṁ carati, manasā duccaritaṁ carati. So kāyena duccaritaṁ caritvā vācāya duccaritaṁ caritvā manasā duccaritaṁ caritvā, kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjati. Seyyathāpi, mahārāja, puriso pāsādā vā hatthikkhandhaṁ oroheyya, hatthikkhandhā vā assapiṭṭhiṁ oroheyya, assapiṭṭhiyā vā pallaṅkaṁ oroheyya, pallaṅkā vā pathaviṁ oroheyya, pathaviyā vā andhakāraṁ paviseyya. Tathūpamāhaṁ, mahārāja, imaṁ puggalaṁ vadāmi. Evaṁ kho, mahārāja, puggalo jotitamaparāyano hoti.",
+   "nan-sn3.21": "大王！如何之為人由明入闇耶？大王！於今有人生高貴家。生大富剎帝利家、大富婆羅門家、大富家主之家、富而有大財、大產、多金銀、多資財、多財穀之家。彼等美貌、見好、似樂見蓮葉具最上美色之皮膚。得飲食、衣服、車乘、華鬘、香、塗香、寢牀、住居、明燈。彼身為惡行、口為惡行、意為惡行。彼者身、口、意為惡行、身體毀壞死後，墮惡趣、苦處、地獄。大王！譬喻人由高樓下至象肩、由象肩下至馬背，由馬背下至輿，由輿下至地面，由地面降入於闇〔處〕。大王！我說譬喻此人，大王！如是之人，是由明入暗。",
+   "T0100-sa-2.69": "「何謂從明入冥？若有人生於剎利家，或復生於婆羅門家，或生大長者家，多饒財寶，巨富無量，庫藏盈溢，多諸僕從，輔相大臣，親友眷屬，亦甚眾多，身形端正，有大威力，如是之人，是名為明。若此之人，身行惡業，口行惡業，意行惡業，身壞命終，墮於地獄。如人從宮殿下墮於象上，從象上下而乘於馬，從馬上下而乘於車，從車上下而坐於床，從床而下墮落於地，從地而墮墜於糞坑，我說此人從明入冥。",
+   "T0099-sa1146": "「云何有人從明入冥？謂有世人生富樂家，若剎利大姓、婆羅門大姓家、長者大姓家，及餘種種富樂家生，多諸錢財，奴婢、客使，廣集知識，受身端正，聰明黠慧，是名為明。於此明中，行身惡行、行口惡行、行意惡行，以是因緣，身壞命終，生於惡趣，墮泥梨中。譬如有人從高樓下乘於大象，下象乘馬，下馬乘輿，下輿坐床、下床墮地，從地落坑，從明入冥者亦復如是。"
+  },
+  "a05": {
+   "sn3.21": "Kathañca, mahārāja, puggalo jotijotiparāyano hoti? Idha, mahārāja, ekacco puggalo ucce kule paccājāto hoti, khattiyamahāsālakule vā brāhmaṇamahāsālakule vā gahapatimahāsālakule vā, aḍḍhe mahaddhane mahābhoge pahūtajātarūparajate pahūtavittūpakaraṇe pahūtadhanadhaññe. So ca hoti abhirūpo dassanīyo pāsādiko, paramāya vaṇṇapokkharatāya samannāgato, lābhī annassa pānassa vatthassa yānassa mālāgandhavilepanassa seyyāvasathapadīpeyyassa. So kāyena sucaritaṁ carati, vācāya sucaritaṁ carati, manasā sucaritaṁ carati. So kāyena sucaritaṁ caritvā vācāya sucaritaṁ caritvā manasā sucaritaṁ caritvā, kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjati. Seyyathāpi, mahārāja, puriso pallaṅkā vā pallaṅkaṁ saṅkameyya, assapiṭṭhiyā vā assapiṭṭhiṁ saṅkameyya, hatthikkhandhā vā hatthikkhandhaṁ saṅkameyya, pāsādā vā pāsādaṁ saṅkameyya. Tathūpamāhaṁ, mahārāja, imaṁ puggalaṁ vadāmi. Evaṁ kho, mahārāja, puggalo jotijotiparāyano hoti.",
+   "nan-sn3.21": "大王！如何之人為由明入明耶？大王！於今有人生高貴家，生大富剎帝利家、大富婆羅門家、大富家主之家、富而有大財、大產、多金銀、多資財、多財穀之家。得飲食、衣服、車乘、華鬘、香、塗香、寢牀、住居、明燈。彼之身為善行、口為善行、意為善行。彼者身、口、意為善行，身體毀壞死後，生善趣、天界。大王！譬喻有人，由輿移至馬背、由馬背移至象肩、由象肩移至高樓。大王！我說譬喻比人，大王！如是之人，是由明入明。",
+   "T0100-sa-2.69": "「何謂從明入明？若有人生於剎利大婆羅門家，或生長者，多饒財寶，巨富無量，庫藏盈溢，多諸僕從，輔相大臣，親友眷屬，亦甚眾多，身形端正，有大威力，此名為明。如此之人，身行善業，口行善業，意行善業，身壞命終，得生天上。如似從一宮殿至於宮殿，從象至象，從馬至馬，從車至車，從床至床。",
+   "T0099-sa1146": "「云何有人從明入明？謂有世人生富樂家，乃至形相端嚴，是名為明。於此明中，行身善行、行口善行、行意善行，以是因緣，身壞命終，生於善趣，受天化生。譬如有人從樓觀至樓觀。如是，乃至從床至床；從明入明者亦復如是。"
+  },
+  "a06": {
+   "sn3.21": "Ime kho, mahārāja, cattāro puggalā santo saṁvijjamānā lokasmin”ti.",
+   "nan-sn3.21": "大王！世有如此〔四種之〕眾人。」",
+   "T0100-sa-2.69": "如此之人，我說從明入明。」",
+   "T0099-sa1146": "是名有人從明入明。」"
+  },
+  "a07": {
+   "sn3.21": "Idamavoca …pe… “Daliddo puriso rāja, assaddho hoti maccharī; Kadariyo pāpasaṅkappo, micchādiṭṭhi anādaro. Samaṇe brāhmaṇe vāpi, aññe vāpi vanibbake; Akkosati paribhāsati, natthiko hoti rosako. Dadamānaṁ nivāreti, yācamānāna bhojanaṁ; Tādiso puriso rāja, mīyamāno janādhipa; Upeti nirayaṁ ghoraṁ, tamotamaparāyano. Daliddo puriso rāja, saddho hoti amaccharī; Dadāti seṭṭhasaṅkappo, abyaggamanaso naro. Samaṇe brāhmaṇe vāpi, aññe vāpi vanibbake; Uṭṭhāya abhivādeti, samacariyāya sikkhati. Dadamānaṁ na vāreti, yācamānāna bhojanaṁ; Tādiso puriso rāja, mīyamāno janādhipa; Upeti tidivaṁ ṭhānaṁ, tamojotiparāyano. Aḍḍho ce puriso rāja, assaddho hoti maccharī; Kadariyo pāpasaṅkappo, micchādiṭṭhi anādaro. Samaṇe brāhmaṇe vāpi, aññe vāpi vanibbake; Akkosati paribhāsati, natthiko hoti rosako. Dadamānaṁ nivāreti, yācamānāna bhojanaṁ; Tādiso puriso rāja, mīyamāno janādhipa; Upeti nirayaṁ ghoraṁ, jotitamaparāyano. Aḍḍho ce puriso rāja, saddho hoti amaccharī; Dadāti seṭṭhasaṅkappo, abyaggamanaso naro. Samaṇe brāhmaṇe vāpi, aññe vāpi vanibbake; Uṭṭhāya abhivādeti, samacariyāya sikkhati. Dadamānaṁ na vāreti, yācamānāna bhojanaṁ; Tādiso puriso rāja, mīyamāno janādhipa; Upeti tidivaṁ ṭhānaṁ, jotijotiparāyano”ti.",
+   "nan-sn3.21": "〔世尊如此宣說……乃至……〕貧者無信仰心卑而吝惜\n慳嗇有惡思邪見無敬心\n嘲罵乞食者沙門婆羅門\n惱不為人思妨與乞食者\n如是人死後往恐懼地獄\n此由闇入闇貧窮有信仰\n無有卑吝心行施思崇高\n心靜不混亂對他乞食者\n沙門婆羅門從座立敬禮\n平安行修身乞食不妨食\n如是人死後生於忉利天\n此由闇入明雖富無信仰\n心卑心吝惜慳嗇有惡思\n邪見無敬心嘲罵乞食者\n沙門婆羅門惱不為人思\n妨與乞食者如是人死後\n往恐懼地獄此由明入闇\n富貴有信仰無有卑吝心\n行施思崇高心靜不混亂\n對他乞食者沙門婆羅門\n從座立敬禮平安行修身\n對於乞食者不妨與之食\n如是人死後生於忉利天\n此由明入明",
+   "T0100-sa-2.69": "爾時，世尊即說偈言：「大王汝當知，貧窮不信者，\n瞋恚懷嫉妬，恒起惡覺觀。\n邪見無恭敬，沙門婆羅門，\n持戒及多聞，見則加罵辱。\n設有少財物，無有奉施心，\n毀罵施與者。如此之業緣，\n必墮於地獄，是業墮地獄，\n名從闇入闇。大王今當知，\n貧窮好施者，有信無瞋恚，\n慚愧而好施，沙門婆羅門，\n持戒及多聞，起敬禮問訊，\n常行正善行，自施讚施者，\n受者亦讚嘆。如是至後世，\n生三十三天，此名從此闇，\n將入於明處。大王又當知，\n大富而不信，心常懷瞋恚，\n常起貪嫉妬，邪見不恭敬，\n沙門婆羅門，持戒及多聞，\n見則加罵辱，無有奉施心。\n從此而命終，墮於惡地獄，\n名從明入闇。大王又當知，\n大富信無瞋，慚愧得具足，\n能捨大慳心，沙門婆羅門，\n持戒及多聞，起敬而問訊，\n常行於正善，自施讚施者，\n受者所歎譽。捨此身命已，\n以是果報故，生三十三天，\n此名從於明，而入於明處。」佛說是已，諸比丘聞佛所說，歡喜奉行。",
+   "T0099-sa1146": "爾時，世尊復說偈言：「貧窮困苦者，不信增瞋恨，\n慳貪惡邪想，癡惑不恭敬。\n見沙門道士，持戒多聞者，\n毀呰而不譽，障他施及受。\n如斯等士夫，從此至他世，\n當墮泥梨中，從冥入於冥。\n若有貧窮人，信心少瞋恨，\n常生慚愧心，惠施離慳垢。\n見沙門梵志，持戒多聞者，\n謙虛而問訊，隨宜善供給。\n勸人令施與，歎施及受者，\n如是修善人，從此至他世。\n善趣上生天，從冥而入明，\n有富樂士夫，不信多瞋恨。\n慳貪疾惡想，邪惑不恭敬，\n見沙門梵志，毀呰而不譽。\n障他人施惠，亦斷受施者，\n如是惡士夫，從此至他世。\n當生苦地獄，從明入冥中，\n若有富士夫，信心不瞋恨。\n常起慚愧心，惠施離瞋姤，\n見沙門梵志，持戒多聞者。\n先奉迎問訊，隨宜給所須，\n勸人令供養，歎施及受者。\n如是等士夫，從此至他世，\n生三十三天，從明而入明。」佛說此經已，波斯匿王聞佛所說，歡喜隨喜，作禮而去。"
+  }
+ }
+}

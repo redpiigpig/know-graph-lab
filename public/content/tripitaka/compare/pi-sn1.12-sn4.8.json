@@ -1,0 +1,118 @@
+{
+ "slug": "pi-sn1.12-sn4.8",
+ "title": "別譯雜阿含經 （一四二）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。複核標記存疑 1 段：義段 3 的內容在別譯雜阿含經（一四二）為天神讚偈，但在雜阿含經（一〇〇四）卻是世尊答偈（涅槃讚），與其他本在同段落的內容不符，屬於對錯位置。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "天神說偈（歡喜偈）"
+  },
+  {
+   "id": "a02",
+   "label": "世尊答偈（憂偈）"
+  },
+  {
+   "id": "a03",
+   "label": "天神讚偈（涅槃讚）",
+   "doubt": true
+  },
+  {
+   "id": "a04",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn1.12",
+   "lang": "pi",
+   "label": "巴利 SN1.12",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn1.12",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN1.12",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "sn4.8",
+   "lang": "pi",
+   "label": "巴利 SN4.8",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn4.8",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN4.8",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.142",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （一四二）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa1004",
+   "lang": "lzh",
+   "label": "雜阿含經 （一〇〇四）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（一四二）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一〇〇四）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn1.12": "Saṁyutta Nikāya 1.12 2. Nandanavagga Nandatisutta Sāvatthinidānaṁ.",
+   "nan-sn1.12": "〔一二〕歡喜",
+   "sn4.8": "Saṁyutta Nikāya 4.8 1. Paṭhamavagga Nandatisutta Evaṁ me sutaṁ— ekaṁ samayaṁ bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme.",
+   "nan-sn4.8": "〔八〕第八　歡喜如是我聞。爾時，世尊住舍衛城祇樹給孤獨園。",
+   "T0100-sa-2.142": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。",
+   "T0099-sa1004": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。時，有天子容色絕妙，於後夜時來詣佛所，稽首佛足，退坐一面。"
+  },
+  "a01": {
+   "sn1.12": "Ekamantaṁ ṭhitā kho sā devatā bhagavato santike imaṁ gāthaṁ abhāsi: “Nandati puttehi puttimā, Gomā gohi tatheva nandati; Upadhīhi narassa nandanā, Na hi so nandati yo nirūpadhī”ti.",
+   "nan-sn1.12": "立於一面之天神，於世尊面前，而唱偈曰：",
+   "sn4.8": "Atha kho māro pāpimā yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavato santike imaṁ gāthaṁ abhāsi: “Nandati puttehi puttimā, Gomā gobhi tatheva nandati; Upadhīhi narassa nandanā, Na hi so nandati yo nirūpadhī”ti.",
+   "nan-sn4.8": "時，惡魔波旬來詣世尊前。詣已，向世尊唱此偈曰：",
+   "T0100-sa-2.142": "時，有一天光色倍常，於其夜中，來詣佛所，威光顯赫，照于祇洹，赫然大明，却坐一面，而說偈言：「若人有子孫，則便生歡喜。\n財寶及六畜，有則皆歡喜。\n若人受身時，亦復生歡喜。\n若見無身者，則無歡悅心。」",
+   "T0099-sa1004": "身諸光明遍照祇樹給孤獨園。"
+  },
+  "a02": {
+   "sn1.12": "“Socati puttehi puttimā, Gomā gohi tatheva socati; Upadhīhi narassa socanā, Na hi so socati yo nirūpadhī”ti.",
+   "nan-sn1.12": "有子依子喜牛主依牛喜\n人喜依四依無依即無喜〔世尊：〕有子依子悲牛主依牛悲\n人悲依於依無依即無悲",
+   "sn4.8": "“Socati puttehi puttimā, Gomā gobhi tatheva socati; Upadhīhi narassa socanā, Na hi so socati yo nirūpadhī”ti.",
+   "nan-sn4.8": "有子依子喜牛主依牛喜\n人喜依所依無依則無喜",
+   "T0100-sa-2.142": "爾時，世尊以偈答言：「若人有子孫，則能生憂惱。\n財寶及六畜，斯是苦惱本。\n若復受身者，則為憂惱患。\n若不受身者，則名寂滅樂。」",
+   "T0099-sa1004": "時，彼天子而說偈言：「母子更相喜，牛主樂其牛，\n眾生樂有餘，無樂無餘者。」"
+  },
+  "a03": {
+   "T0100-sa-2.142": "天復說偈讚言：「往昔已曾見，婆羅門涅槃，\n嫌怖久棄捨，能度世間愛。」",
+   "T0099-sa1004": "爾時，世尊說偈答言：「母子更相憂，牛主憂其牛，\n有餘眾生憂，無餘則無憂。」"
+  },
+  "a04": {
+   "sn4.8": "Atha kho māro pāpimā “jānāti maṁ bhagavā, jānāti maṁ sugato”ti dukkhī dummano tatthevantaradhāyīti.",
+   "nan-sn4.8": "〔世尊：〕有子依子悲牛主依牛悲\n人喜悲所依無依則無悲時，惡魔波旬：「世尊已知我！善逝已知我。」形體即沒於其處。",
+   "T0100-sa-2.142": "爾時，此天聞佛所說，歡喜而去。",
+   "T0099-sa1004": "時，彼天子復說偈言：「久見婆羅門，逮得般涅槃，\n一切怖已過，永超世恩愛。」時，彼天子聞佛所說，歡喜隨喜，稽首佛足，即沒不現。"
+  }
+ }
+}

@@ -1,0 +1,245 @@
+{
+ "slug": "pi-sn36.21",
+ "title": "別譯雜阿含經 （二一一）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "屍婆請問前世因論"
+  },
+  {
+   "id": "a02",
+   "label": "佛說膽汁等生起感受"
+  },
+  {
+   "id": "a03",
+   "label": "佛說痰等生起感受"
+  },
+  {
+   "id": "a04",
+   "label": "佛說風等生起感受"
+  },
+  {
+   "id": "a05",
+   "label": "佛說三聚等生起感受"
+  },
+  {
+   "id": "a06",
+   "label": "佛說時候等生起感受"
+  },
+  {
+   "id": "a07",
+   "label": "佛說逆運等生起感受"
+  },
+  {
+   "id": "a08",
+   "label": "佛說痙攣等生起感受"
+  },
+  {
+   "id": "a09",
+   "label": "佛說業異熟生起感受"
+  },
+  {
+   "id": "a10",
+   "label": "結論：前世因論是邪見"
+  },
+  {
+   "id": "a11",
+   "label": "屍婆讚歎並請求歸依"
+  },
+  {
+   "id": "a12",
+   "label": "偈頌：八種感受生起"
+  },
+  {
+   "id": "a13",
+   "label": "異論：過去業盡論"
+  },
+  {
+   "id": "a14",
+   "label": "佛破過去業盡論：現在苦樂由自他作"
+  },
+  {
+   "id": "a15",
+   "label": "自害苦行說明"
+  },
+  {
+   "id": "a16",
+   "label": "他害與時節害說明"
+  },
+  {
+   "id": "a17",
+   "label": "世間真實非虛妄"
+  },
+  {
+   "id": "a18",
+   "label": "五因五緣生心法憂苦"
+  },
+  {
+   "id": "a19",
+   "label": "五因五緣不起心法憂苦"
+  },
+  {
+   "id": "a20",
+   "label": "八正道離熾然"
+  },
+  {
+   "id": "a21",
+   "label": "屍婆得法眼淨"
+  },
+  {
+   "id": "a22",
+   "label": "屍婆請出家"
+  },
+  {
+   "id": "a23",
+   "label": "佛許出家，屍婆證阿羅漢"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn36.21",
+   "lang": "pi",
+   "label": "巴利 SN36.21",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn36.21",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN36.21",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.211",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （二一一）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa977",
+   "lang": "lzh",
+   "label": "雜阿含經 （九七七）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（二一一）"
+  },
+  {
+   "work": "T0099",
+   "node": "（九七七）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn36.21": "Saṁyutta Nikāya 36.21 3. Aṭṭhasatapariyāyavagga Sīvakasutta",
+   "nan-sn36.21": "〔二一〕第一　尸婆爾時，世尊住王舍城之竹林迦蘭陀園。",
+   "T0100-sa-2.211": "如是我聞：一時，佛在王舍城迦蘭陀竹林。",
+   "T0099-sa977": "如是我聞：一時，佛住王舍城迦蘭陀竹園。"
+  },
+  "a01": {
+   "sn36.21": "Ekaṁ samayaṁ bhagavā rājagahe viharati veḷuvane kalandakanivāpe. Atha kho moḷiyasīvako paribbājako yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavatā saddhiṁ sammodi. Sammodanīyaṁ kathaṁ sāraṇīyaṁ vītisāretvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho moḷiyasīvako paribbājako bhagavantaṁ etadavoca: “santi, bho gotama, eke samaṇabrāhmaṇā evaṁvādino evaṁdiṭṭhino: ‘yaṁ kiñcāyaṁ purisapuggalo paṭisaṁvedeti sukhaṁ vā dukkhaṁ vā adukkhamasukhaṁ vā sabbaṁ taṁ pubbekatahetū’ti. Idha bhavaṁ gotamo kimāhā”ti?",
+   "nan-sn36.21": "時，普行沙門尸婆來詣世尊住處。與世尊共相交談親睦、慇懃之話後，坐於一面。坐於一面之普行沙門尸婆，白世尊言：「尊瞿曇！或有沙門、婆羅門作如是語、如是見者：『凡此個人之所感者，或樂或苦或非苦非樂，其皆由前世所作之因也。』尊瞿曇對此作如何言之耶？」",
+   "T0100-sa-2.211": "爾時，尸蔔梵志往詣佛所，問訊已訖，在一面坐，而作是言：「瞿曇！",
+   "T0099-sa977": "爾時，尸婆外道出家來詣佛所，與世尊面相問訊慰勞已，退坐一面，白佛言：「瞿曇！"
+  },
+  "a02": {
+   "sn36.21": "“Pittasamuṭṭhānānipi kho, sīvaka, idhekaccāni vedayitāni uppajjanti. Sāmampi kho etaṁ, sīvaka, veditabbaṁ yathā pittasamuṭṭhānānipi idhekaccāni vedayitāni uppajjanti. Lokassapi kho etaṁ, sīvaka, saccasammataṁ yathā pittasamuṭṭhānānipi idhekaccāni vedayitāni uppajjanti. Tatra, sīvaka, ye te samaṇabrāhmaṇā evaṁvādino evaṁdiṭṭhino: ‘yaṁ kiñcāyaṁ purisapuggalo paṭisaṁvedeti sukhaṁ vā dukkhaṁ vā adukkhamasukhaṁ vā sabbaṁ taṁ pubbekatahetū’ti. Yañca sāmaṁ ñātaṁ tañca atidhāvanti, yañca loke saccasammataṁ tañca atidhāvanti. Tasmā tesaṁ samaṇabrāhmaṇānaṁ micchāti vadāmi.",
+   "nan-sn36.21": "「尸婆！由膽汁生，或有起此感受。尸婆！如由膽汁生，於此處起此感受，其應自知。如由膽汁生，於此處起此感受，其亦為世之真實所認定。於此，尸婆！某某沙門婆羅門之『凡個人所感受者，或樂或苦或非苦非樂，是皆由前世所為之因。』作如是語、如是見者，皆過於自之所知，是過於世所認知之真實，然則余謂此等沙門、婆羅門之所見，是邪。"
+  },
+  "a03": {
+   "sn36.21": "Semhasamuṭṭhānānipi kho, sīvaka …pe…",
+   "nan-sn36.21": "尸婆！由粘液生，或有起此感受……"
+  },
+  "a04": {
+   "sn36.21": "vātasamuṭṭhānānipi kho, sīvaka …pe…",
+   "nan-sn36.21": "尸婆！由風生，或有起此感受……"
+  },
+  "a05": {
+   "sn36.21": "sannipātikānipi kho, sīvaka …pe…",
+   "nan-sn36.21": "尸婆！由膽汁等三聚和合生，或有起此感受……"
+  },
+  "a06": {
+   "sn36.21": "utupariṇāmajānipi kho, sīvaka …pe…",
+   "nan-sn36.21": "尸婆！由時候之變化生，或有起此感受……"
+  },
+  "a07": {
+   "sn36.21": "visamaparihārajānipi kho, sīvaka …pe…",
+   "nan-sn36.21": "尸婆！由逢逆運生，或有起此感受……"
+  },
+  "a08": {
+   "sn36.21": "opakkamikānipi kho, sīvaka …pe…",
+   "nan-sn36.21": "尸婆！於痙攣性，或有此感受而起……"
+  },
+  "a09": {
+   "sn36.21": "kammavipākajānipi kho, sīvaka, idhekaccāni vedayitāni uppajjanti. Sāmampi kho etaṁ, sīvaka, veditabbaṁ. Yathā kammavipākajānipi idhekaccāni vedayitāni uppajjanti; lokassapi kho etaṁ, sīvaka, saccasammataṁ. Yathā kammavipākajānipi idhekaccāni vedayitāni uppajjanti;",
+   "nan-sn36.21": "尸婆！於業異熟性，或有此感受而起……」"
+  },
+  "a10": {
+   "sn36.21": "tatra, sīvaka, ye te samaṇabrāhmaṇā evaṁvādino evaṁdiṭṭhino: ‘yaṁ kiñcāyaṁ purisapuggalo paṭisaṁvedeti sukhaṁ vā dukkhaṁ vā adukkhamasukhaṁ vā sabbaṁ taṁ pubbekatahetū’ti. Yañca sāmaṁ ñātaṁ tañca atidhāvanti yañca loke saccasammataṁ tañca atidhāvanti. Tasmā ‘tesaṁ samaṇabrāhmaṇānaṁ micchā’ti vadāmī”ti."
+  },
+  "a11": {
+   "sn36.21": "Evaṁ vutte, moḷiyasīvako paribbājako bhagavantaṁ etadavoca: “abhikkantaṁ, bho gotama, abhikkantaṁ, bho gotama …pe… upāsakaṁ maṁ bhavaṁ gotamo dhāretu ajjatagge pāṇupetaṁ saraṇaṁ gatan”ti.",
+   "nan-sn36.21": "如是說已，普行沙門尸婆白世尊曰：「妙哉，尊瞿曇！妙哉，尊瞿曇！尊瞿曇譬如起覆、發掩、對迷者示之以道，如暗中舉燈火，使有眼者見形。如是尊瞿曇以種種方便說法。余當歸依尊瞿曇，亦歸依法與比丘眾。尊瞿曇！當自今日起，以至終生，請攝受余歸依為信士。」"
+  },
+  "a12": {
+   "sn36.21": "“Pittaṁ semhañca vāto ca, Sannipātā utūni ca; Visamaṁ opakkamikaṁ, Kammavipākena aṭṭhamī”ti. Paṭhamaṁ.",
+   "nan-sn36.21": "膽汁、粘液、風三種之聚和，時候、逆運、痙攣、業異熟為第八。"
+  },
+  "a13": {
+   "T0100-sa-2.211": "若有婆羅門作是說：『隨所作業，悉是過去，本所作因，於現在世，所作諸業，能增過去不善之因。現在之世，若不造業，則能破壞生死之橋，四流永絕，更不流轉。以業盡故，苦亦得盡，苦盡則苦邊際盡。』瞿曇！此事云何？」佛告尸蔔：「如汝所言，彼諸沙門、婆羅門等，作如是說：『隨所造業，悉是過去本業因緣，乃至盡苦邊際。』",
+   "T0099-sa977": "有一沙門婆羅門作如是見、如是說：『若人有所知覺，彼一切本所作因，修諸苦行，令過去業盡，更不造新業，斷於因緣，於未來世無復諸漏。諸漏盡故業盡，業盡故苦盡，苦盡者究竟苦邊。』今瞿曇所說云何？」佛告尸婆：「彼沙門婆羅門實爾洛漠說耳，不審不數，愚癡不善不辯。"
+  },
+  "a14": {
+   "T0100-sa-2.211": "若如是者，以何因緣，於現在世，而有種種風、冷、病等四大增損？若如是者，為自所作？為他所作？」尸蔔白佛：「他之所作。」佛告尸蔔：「云何自己所作？",
+   "T0099-sa977": "所以者何？或從風起苦，眾生覺知；或從痰起，或從唌唾起，或等分起，或自害，或他害，或因節氣。"
+  },
+  "a15": {
+   "T0100-sa-2.211": "常拔鬚髮，或舉手立，不在床坐。或復蹲坐，以之為業。或復坐臥於棘刺之上，或邊椽坐臥，或坐臥灰土，或牛屎塗地，於其中坐臥。或翹一足，隨日而轉，盛夏之月，五熱炙身，或食菜，或食稗子，或食舍樓伽，或食糟，或食油滓，或食牛糞。或日三事火，或於冬節，凍氷襯體。有如是等無量苦身法，是名自己所作。",
+   "T0099-sa977": "彼自害者，或拔髮、或拔鬚，或常立舉手，或蹲地，或臥灰土中，或臥棘刺上，或臥杵上、或板上，或牛屎塗地而臥其上，或臥水中，或日三洗浴，或一足而立，身隨日轉。如是眾苦精勤有行，尸婆！"
+  },
+  "a16": {
+   "T0100-sa-2.211": "云何名為從他作苦？為他手足，及以力杖、瓦石打擲，如是等苦，是則名為從他得苦。一切世人，四大增損，或為風冷而起是患。如是等患，現所見事，云何彼諸婆羅門等，若作是見，言以此故，能盡苦際，即是自作過咎。如是等咎，一切世人，皆共知之，彼自虛說，以五因緣故，能令身心受諸苦惱。",
+   "T0099-sa977": "是名自害。他害者，或為他手石、刀、杖等，種種害身，是名他害。尸婆！若復時節所害，冬則大寒，春則大熱，夏寒暑俱，是名節氣所害。"
+  },
+  "a17": {
+   "T0099-sa977": "世間真實，非為虛妄。尸婆！世間有此真實，為風所害，乃至節氣所害，彼眾生如實覺知。汝亦自有此患，風、痰、唌唾，乃至節氣所害覺，如是如實覺知。尸婆！若彼沙門婆羅門言一切人所知覺者皆是本所造因，捨世間真實事而隨自見，作虛妄說。"
+  },
+  "a18": {
+   "T0100-sa-2.211": "何等為五？所謂貪欲、瞋恚、掉悔、疑，如斯五法，能令眾生現在之世身心苦惱。",
+   "T0099-sa977": "「尸婆！有五因五緣生心法憂苦。何等為五？謂因貪欲纏，緣貪欲纏，生心法憂苦；因瞋恚、睡眠、掉悔、疑纏，緣瞋恚、睡眠、掉悔、疑纏，生彼心法憂苦，尸婆！是名五因五緣生心法憂苦。"
+  },
+  "a19": {
+   "T0100-sa-2.211": "復有五因緣故，於現在世，能令身心常得快樂，不受苦惱。何等為五？所謂能斷貪欲之心，則於現在，能令身心受法快樂。何以故？以有貪欲、瞋恚、掉悔故，能令眾生受諸苦惱，若能斷除，則受快樂，無有憂患，是故應當斷除如是貪欲、瞋恚、掉悔。若斷除者，無熱無惱，不待時節，當得解脫，必趣涅槃，尸蔔！是名現在所得法。",
+   "T0099-sa977": "尸婆！有五因五緣不生心法憂苦。何等為五？謂因貪欲纏，緣貪欲纏，生彼心法憂苦者，離彼貪欲纏，不起心法憂苦，是名五因五緣不起心法憂苦。現法得離熾然，不待時節，通達現見，緣自覺知。"
+  },
+  "a20": {
+   "T0100-sa-2.211": "復有現前所得法，所謂正見、正語、正業、正命、正方便、正志、正念、正定。」",
+   "T0099-sa977": "尸婆！復有現法離熾然，不待時節，通達現見，緣自覺知，謂八正道——正見乃至正定。」"
+  },
+  "a21": {
+   "T0100-sa-2.211": "說是法時，尸蔔梵志遠離塵垢，於諸法中，得法眼淨。",
+   "T0099-sa977": "說是法時，尸婆外道出家遠塵離垢，得法眼淨。時，尸婆外道出家見法、得法、知法、入法，離諸狐疑，不由於他，入正法、律，得無所畏。"
+  },
+  "a22": {
+   "T0100-sa-2.211": "既得道已，即整衣服，合掌向佛，而白佛言：「世尊！唯願如來慈哀憐愍，聽我出家。」",
+   "T0099-sa977": "即從坐起，整衣服，合掌白佛：「世尊！我今可得於正法、律出家、受具足，得比丘分耶？」"
+  },
+  "a23": {
+   "T0100-sa-2.211": "如來即聽出家，既出家已，於空靜處，慇懃精進，得阿羅漢。",
+   "T0099-sa977": "佛告尸婆：「汝今得出家……」如上說，乃至「心善解脫，得阿羅漢。」"
+  }
+ }
+}

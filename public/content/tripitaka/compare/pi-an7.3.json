@@ -1,0 +1,101 @@
+{
+ "slug": "pi-an7.3",
+ "title": "雜阿含經 （六八八）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。複核標記存疑 1 段：義段2的巴利本是偈頌，但雜阿含經（六八八）在此段卻放了流通分的內容（偈頌+結束），屬於對錯位置。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "七力說明"
+  },
+  {
+   "id": "a02",
+   "label": "偈頌",
+   "doubt": true
+  },
+  {
+   "id": "a03",
+   "label": "勸學七力"
+  },
+  {
+   "id": "a04",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "an7.3",
+   "lang": "pi",
+   "label": "巴利 AN7.3",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "T0099-sa688",
+   "lang": "lzh",
+   "label": "雜阿含經 （六八八）",
+   "who": "劉宋 求那跋陀羅譯"
+  },
+  {
+   "id": "T0099-sa689",
+   "lang": "lzh",
+   "label": "雜阿含經 （六八九）",
+   "who": "劉宋 求那跋陀羅譯"
+  },
+  {
+   "id": "T0099-sa690",
+   "lang": "lzh",
+   "label": "雜阿含經 （六九〇）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099"
+ ],
+ "anchors": [
+  {
+   "work": "T0099",
+   "node": "（六八八）"
+  },
+  {
+   "work": "T0099",
+   "node": "（六八九）"
+  },
+  {
+   "work": "T0099",
+   "node": "（六九〇）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "an7.3": "Aṅguttara Nikāya 7.3 1. Dhanavagga Saṅkhittabalasutta Evaṁ me sutaṁ— ekaṁ samayaṁ bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme …pe…",
+   "T0099-sa688": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。",
+   "T0099-sa689": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。",
+   "T0099-sa690": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。"
+  },
+  "a01": {
+   "an7.3": "sattimāni, bhikkhave, balāni. Katamāni satta? Saddhābalaṁ, vīriyabalaṁ, hirībalaṁ, ottappabalaṁ, satibalaṁ, samādhibalaṁ, paññābalaṁ. Imāni kho, bhikkhave, satta balānīti.",
+   "T0099-sa688": "爾時，世尊告諸比丘：「有七力。",
+   "T0099-sa689": "爾時，世尊告諸比丘：「有七力……」如上說。",
+   "T0099-sa690": "爾時，世尊告諸比丘：「有七力……」如上說。"
+  },
+  "a02": {
+   "an7.3": "Saddhābalaṁ vīriyañca, hirī ottappiyaṁ balaṁ; Satibalaṁ samādhi ca, paññā ve sattamaṁ balaṁ; Etehi balavā bhikkhu, sukhaṁ jīvati paṇḍito. Yoniso vicine dhammaṁ, paññāyatthaṁ vipassati; Pajjotasseva nibbānaṁ, vimokkho hoti cetaso”ti.",
+   "T0099-sa688": "何等為七？信力、精進力、慚力、愧力、念力、定力、慧力。」",
+   "T0099-sa690": "差別者，爾時，世尊即說偈言：「信力精進力，及說慚愧力，\n念力定慧力，是名為七力。\n七力成就者，疾斷諸有漏。」"
+  },
+  "a03": {
+   "T0099-sa689": "差別者：「是故，比丘！當如是學：『我當成就信力。』如是精進力、慚力、愧力、念力、定力、慧力亦當學。」"
+  },
+  "a04": {
+   "an7.3": "Tatiyaṁ.",
+   "T0099-sa688": "爾時，世尊即說偈言：「信力精進力，慚力及愧力，\n正念定慧力，是說名七力，\n成就七力者，得盡諸有漏。」佛說此經已，諸比丘聞佛所說，歡喜奉行。",
+   "T0099-sa689": "佛說此經已，諸比丘聞佛所說，歡喜奉行。",
+   "T0099-sa690": "佛說此經已，諸比丘聞佛所說，歡喜奉行。"
+  }
+ }
+}

@@ -1,0 +1,124 @@
+{
+ "slug": "pi-an7.66",
+ "title": "薩缽多酥哩踰捺野經",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "諸行無常總說"
+  },
+  {
+   "id": "a02",
+   "label": "一日至七日出世的譬喻"
+  },
+  {
+   "id": "a03",
+   "label": "結論：一切行無常"
+  },
+  {
+   "id": "a04",
+   "label": "過去善眼大師因緣說"
+  },
+  {
+   "id": "a05",
+   "label": "佛自說為善眼大師"
+  },
+  {
+   "id": "a06",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "an7.66",
+   "lang": "pi",
+   "label": "巴利 AN7.66",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "T0125-ea40.1",
+   "lang": "lzh",
+   "label": "增壹阿含經 （一）",
+   "who": "東晉 瞿曇僧伽提婆譯"
+  },
+  {
+   "id": "T0026-ma8",
+   "lang": "lzh",
+   "label": "中阿含經 （八）中阿含七法品七日經第八（初一日誦）",
+   "who": "東晉 瞿曇僧伽提婆譯"
+  },
+  {
+   "id": "T0030",
+   "lang": "lzh",
+   "label": "薩鉢多酥哩踰捺野經",
+   "who": "宋 法賢譯"
+  }
+ ],
+ "works": [
+  "T0026",
+  "T0030",
+  "T0125"
+ ],
+ "anchors": [
+  {
+   "work": "T0125",
+   "node": "（一）",
+   "uid": "T02n0125_p0735b20"
+  },
+  {
+   "work": "T0026",
+   "node": "（八）中阿含七法品七日經第八（初一日誦）",
+   "uid": "T01n0026_p0428c07"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "an7.66": "Aṅguttara Nikāya 7.66 7. Mahāvagga Sattasūriyasutta",
+   "T0125-ea40.1": "聞如是：一時，佛在舍衛國祇樹給孤獨園。爾時，眾多比丘食後皆集普會講堂，作如是論議：「此須彌山極為廣大，非眾山之所及，甚奇！甚特！高廣極峻。如是，不久當復壞敗，無有遺餘，依須彌山更有大山，亦復壞敗。」爾時，世尊以天耳聞眾多比丘而作是論，即從座起，往至彼講堂所，即就坐。爾時，世尊告諸比丘：「汝等在此為何等論？欲何所施行？」諸比丘對曰：「諸人集此，論其法事，向所論說，皆自如法。」世尊告曰：「善哉！比丘！汝等出家正應法論，亦復不捨賢聖默然。所以然者。若比丘集聚一處，當施行二事。云何為二？一者當共法論，二者當賢聖默然。汝等論此二事，終獲安隱，不失時宜。汝等向者，作何等如法之義？」諸比丘對曰：「今眾多比丘來集此堂，作如是論議：『甚奇！甚特！此須彌山極高廣大，然此須彌山如是不久當復敗壞，及諸四面鐵圍山亦當如是壞敗。』向者，集此作如法論也。」",
+   "T0026-ma8": "我聞如是：一時，佛遊鞞舍離，在㮈氏樹園。",
+   "T0030": "如是我聞：一時，佛在毘舍梨國猨猴井樓閣精舍。"
+  },
+  "a01": {
+   "an7.66": "Evaṁ me sutaṁ— ekaṁ samayaṁ bhagavā vesāliyaṁ viharati ambapālivane. Tatra kho bhagavā bhikkhū āmantesi: “bhikkhavo”ti. “Bhadante”ti te bhikkhū bhagavato paccassosuṁ. Bhagavā etadavoca: “Aniccā, bhikkhave, saṅkhārā; adhuvā, bhikkhave, saṅkhārā; anassāsikā, bhikkhave, saṅkhārā. Yāvañcidaṁ, bhikkhave, alameva sabbasaṅkhāresu nibbindituṁ alaṁ virajjituṁ alaṁ vimuccituṁ.",
+   "T0125-ea40.1": "世尊告曰：「汝等欲聞此世間境界壞敗之變乎？」諸比丘白佛言：「今正是時，唯願世尊以時演說，使眾生之類心得解脫。」世尊告諸比丘曰：「汝等善思念之，藏在心懷。」諸比丘對曰：「如是。世尊！」爾時，諸比丘從佛受教。世尊告曰：「須彌山者極為廣大，非眾山所及。若比丘欲知須彌山，出水上高八萬四千由旬，入水亦深八萬四千由旬。然須彌山四種寶所造：金、銀、水精、琉璃；又有四角，亦四種所造：金、銀、水精、琉璃；金城銀郭，銀城金郭，水精城琉璃郭，琉璃城水精郭。然須彌山上有五種天在彼居止，皆由宿緣而住彼間。云何為五？所謂彼銀城中，有細脚天在彼居止；彼金城中，有尸利沙天在彼居止；水精城中，有歡悅天在彼居止；琉璃城中，有力盛天在彼居止；金、銀城中間，毘沙門天王在彼居住，將諸閱叉不可稱計。金城、水精城中間，有毘留博叉天王，將諸龍神在彼居止；水精城、琉璃城中間，有毘留勒叉天王在彼居止；琉璃城、銀城中間，有提頭賴吒天王在彼居止。「比丘當知，須彌山下有阿須倫居止。若阿須倫欲與三十三天共鬪時，先與細脚天共鬪；設得勝，復至金城與尸利沙天共鬪；已勝尸利沙天，復至水精城與歡悅天共鬪；已勝彼，復至琉璃城；已勝彼天，便共三十三天共鬪。「比丘當知，須彌山頂三十三天在彼居止，晝夜照明，光自相照，故致此耳。依須彌山，日月流行，日天子城郭縱廣五十一由旬，月天子城郭縱廣三十九由旬，最大星縱廣一由旬，最小星縱廣二百步。須彌山頂東、西、南、北，縱廣八萬四千由旬，近須彌山南有大鐵圍山，長八萬四千里，高八萬里。又此山表，有尼彌陀山圍彼山；去尼彌陀山，復有山名佉羅山；去此山，復更有山名俾沙山；去此山，復更有山名馬頭山；復更有山名毘那耶山；次毘那耶有山名鐵圍大鐵圍山。「鐵圍中間有八大地獄，一一地獄有十六隔子。然彼鐵圍山於閻浮里地多所饒益，閻浮里地設無鐵圍山者，此間恒當臭處。鐵圍山表有香積山，香積山側有八萬四千白象王，止住彼間，各有六牙，金銀校飾。彼香山中有八萬四千窟，諸象在彼居止，皆金、銀、水精、琉璃所造。最上象者，釋提桓因躬自乘之，最下者，轉輪聖王乘之。香積山側有摩陀池水，皆生優鉢蓮華、拘牟頭華，然彼諸象掘根而食。摩陀池水側復有山名優闍伽羅，然彼山皆生若干種草木，鳥狩虫蠡悉在彼間。依彼山，皆有神通得道之人而往彼間。次復有山名般荼婆，次復有山名耆闍崛山，此是閻浮里地所依之處。",
+   "T0026-ma8": "爾時，世尊告諸比丘：「一切行無常，不久住法、速變易法、不可猗法，如是諸行不當樂著，當患厭之，當求捨離，當求解脫。所以者何？有時不雨，當不雨時，一切諸樹、百穀、藥木皆悉枯槁，摧碎滅盡，不得常住。是故一切行無常，不久住法、速變易法、不可猗法，如是諸行不當樂著，當患厭之，當求捨離，當求解脫。",
+   "T0030": "爾時世尊告苾芻言：「汝今諦聽！諸行無常是生滅法，無堅無實，是不究竟、是不堪任、是不可樂，汝等當知，勤加精進而求解脫。苾芻！時不久住，念念遷移，過此已後劫欲末時，天不降雨人間亢旱，大地所有樹木叢林、百穀苗稼、一切華菓，皆悉枯乾都不成就。苾芻當知，諸行無常是生滅法，無堅無實，是不究竟、是不堪任、是不可樂，汝等宜令勤加精進而求解脫。"
+  },
+  "a02": {
+   "an7.66": "Sineru, bhikkhave, pabbatarājā caturāsītiyojanasahassāni āyāmena, caturāsītiyojanasahassāni vitthārena, caturāsītiyojanasahassāni mahāsamudde ajjhogāḷho, caturāsītiyojanasahassāni mahāsamuddā accuggato. Hoti kho so, bhikkhave, samayo yaṁ kadāci karahaci dīghassa addhuno accayena bahūni vassāni bahūni vassasatāni bahūni vassasahassāni bahūni vassasatasahassāni devo na vassati. Deve kho pana, bhikkhave, avassante ye kecime bījagāmabhūtagāmā osadhitiṇavanappatayo te ussussanti visussanti, na bhavanti. Evaṁ aniccā, bhikkhave, saṅkhārā; evaṁ adhuvā, bhikkhave, saṅkhārā …pe… alaṁ vimuccituṁ. Hoti kho so, bhikkhave, samayo yaṁ kadāci karahaci dīghassa addhuno accayena dutiyo sūriyo pātubhavati. Dutiyassa, bhikkhave, sūriyassa pātubhāvā yā kāci kunnadiyo kusobbhā tā ussussanti visussanti, na bhavanti. Evaṁ aniccā, bhikkhave, saṅkhārā …pe… alaṁ vimuccituṁ. Hoti kho so, bhikkhave, samayo yaṁ kadāci karahaci dīghassa addhuno accayena tatiyo sūriyo pātubhavati. Tatiyassa, bhikkhave, sūriyassa pātubhāvā yā kāci mahānadiyo, seyyathidaṁ— gaṅgā, yamunā, aciravatī, sarabhū, mahī, tā ussussanti visussanti, na bhavanti. Evaṁ aniccā, bhikkhave, saṅkhārā …pe… alaṁ vimuccituṁ. Hoti kho so, bhikkhave, samayo yaṁ kadāci karahaci dīghassa addhuno accayena catuttho sūriyo pātubhavati. Catutthassa, bhikkhave, sūriyassa pātubhāvā ye te mahāsarā yato imā mahānadiyo pavattanti, seyyathidaṁ— anotattā, sīhapapātā, rathakārā, kaṇṇamuṇḍā, kuṇālā, chaddantā, mandākiniyā, tā ussussanti visussanti, na bhavanti. Evaṁ aniccā, bhikkhave, saṅkhārā …pe… alaṁ vimuccituṁ. Hoti kho so, bhikkhave, samayo yaṁ kadāci karahaci dīghassa addhuno accayena pañcamo sūriyo pātubhavati. Pañcamassa, bhikkhave, sūriyassa pātubhāvā yojanasatikānipi mahāsamudde udakāni ogacchanti, dviyojanasatikānipi mahāsamudde udakāni ogacchanti, tiyojanasatikānipi, catuyojanasatikānipi, pañcayojanasatikānipi, chayojanasatikānipi, sattayojanasatikānipi mahāsamudde udakāni ogacchanti; sattatālampi mahāsamudde udakaṁ saṇṭhāti, chatālampi, pañcatālampi, catutālampi, titālampi, dvitālampi, tālamattampi mahāsamudde udakaṁ saṇṭhāti; sattaporisampi mahāsamudde udakaṁ saṇṭhāti, chaporisampi, pañcaporisampi, catuporisampi, tiporisampi, dviporisampi, porisampi, aḍḍhaporisampi, kaṭimattampi, jaṇṇukāmattampi, gopphakamattampi mahāsamudde udakaṁ saṇṭhāti. Seyyathāpi, bhikkhave, saradasamaye thullaphusitake deve vassante tattha tattha gopadesu udakāni ṭhitāni honti; evamevaṁ kho, bhikkhave, tattha tattha gopphakamattāni mahāsamudde udakāni ṭhitāni honti. Pañcamassa, bhikkhave, sūriyassa pātubhāvā aṅgulipabbamattampi mahāsamudde udakaṁ na hoti. Evaṁ aniccā, bhikkhave, saṅkhārā …pe… alaṁ vimuccituṁ. Hoti kho so, bhikkhave, samayo yaṁ kadāci karahaci dīghassa addhuno accayena chaṭṭho sūriyo pātubhavati. Chaṭṭhassa, bhikkhave, sūriyassa pātubhāvā ayañca mahāpathavī sineru ca pabbatarājā dhūmāyanti sandhūmāyanti sampadhūmāyanti. Seyyathāpi, bhikkhave, kumbhakārapāko ālepito paṭhamaṁ dhūmeti sandhūmeti sampadhūmeti; evamevaṁ kho, bhikkhave, chaṭṭhassa sūriyassa pātubhāvā ayañca mahāpathavī sineru ca pabbatarājā dhūmāyanti sandhūmāyanti sampadhūmāyanti. Evaṁ aniccā, bhikkhave, saṅkhārā …pe… alaṁ vimuccituṁ. Hoti kho so, bhikkhave, samayo yaṁ kadāci karahaci dīghassa addhuno accayena sattamo sūriyo pātubhavati. Sattamassa, bhikkhave, sūriyassa pātubhāvā ayañca mahāpathavī sineru ca pabbatarājā ādippanti pajjalanti ekajālā bhavanti. Imissā ca, bhikkhave, mahāpathaviyā sinerussa ca pabbatarājassa jhāyamānānaṁ dayhamānānaṁ acci vātena khittā yāva brahmalokāpi gacchati. Sinerussa, bhikkhave, pabbatarājassa jhāyamānassa dayhamānassa vinassamānassa mahatā tejokhandhena abhibhūtassa yojanasatikānipi kūṭāni palujjanti dviyojanasatikānipi, tiyojanasatikānipi, catuyojanasatikānipi, pañcayojanasatikānipi kūṭāni palujjanti. Imissā ca, bhikkhave, mahāpathaviyā sinerussa ca pabbatarājassa jhāyamānānaṁ dayhamānānaṁ neva chārikā paññāyati na masi. Seyyathāpi, bhikkhave, sappissa vā telassa vā jhāyamānassa dayhamānassa neva chārikā paññāyati na masi; evamevaṁ kho, bhikkhave, imissā ca mahāpathaviyā sinerussa ca pabbatarājassa jhāyamānānaṁ dayhamānānaṁ neva chārikā paññāyati na masi.",
+   "T0125-ea40.1": "「比丘當知，或有是時，若此世間欲壞敗時，然天不降雨，所種生苗不復長大，諸有小河泉源皆悉枯竭。一切諸行皆歸無常，不得久住。比丘當知，或有是時，此四大駛河，所謂恒伽、私頭、死陀、婆叉，亦復枯竭而無遺餘。如是，比丘！無常百變，正謂此耳。「比丘！或有是時，若此世間有二日出時，是時百草樹木皆悉凋落。如是，比丘！無常變易，不得久停，是時諸泉源小水皆悉枯竭。比丘當知，若二日出時，爾時四大海水百由旬內皆悉枯竭，漸漸至七百由旬，水自然竭。「比丘當知，若世間三日出現時，四大海水千由旬內，水自然竭，漸漸乃至七千由旬，水自然竭。「比丘當知，若四日出現世時，四大海水深千由旬在。如是，比丘！一切諸行皆悉無常，不得久住。「比丘當知，或有是時。若世間有五日出時，是時四大海水，餘有七百由旬水，漸漸至百由旬。比丘當知，若五日出時，是時海水一由旬在，漸漸水竭而無遺餘。若五日出時，餘正有七尺水在，五日出時，海水盡竭無有遺餘。比丘當知，一切行無常，不得久住。「比丘當知，或有是時，六日出時，此地厚六萬八千由旬皆悉烟出，須彌山亦漸漸融壞。若六日出時，此三千大千國土皆悉融壞，猶如陶家燒瓦器也。是時，三千大千剎土，亦復如是，洞然火出，靡不周遍。比丘當知，若六日出時，八大地獄亦復消滅，人民命終。依須彌山五種之天，亦復命終，三十三天、豔天，乃至他化自在天，亦復命終，宮殿皆空。若六日出時，是時須彌山及三千大千剎土，皆悉洞然而無遺餘。如是，比丘！一切行無常，不得久住。「比丘當知，或有是時，若七日出，是時此地雖厚六萬八千由旬及三千大千剎土，皆悉火起。若復七日出時，此須彌山漸漸融壞，百千由旬自然崩落，永無有餘，亦復不見塵烟之分，況見灰乎！是時，三十三天乃至他化自在天宮殿，皆悉火然，此間火炎乃至梵天上。新生天子在彼天宮者，由來不見劫燒，見此炎光，普懷恐懼，畏為火所燒。然彼舊生天子等曾見劫燒，便來慰勞後生天子：『汝等勿懷恐懼，此火終不來至此間。』比丘當知，七日出時，從此間至六天，乃至三千大千剎土，悉為灰土，亦無形質之兆。",
+   "T0026-ma8": "「復次，有時二日出世，二日出時，諸溝渠川流皆悉竭盡，不得常住。是故一切行無常，不久住法、速變易法、不可猗法，如是諸行不當樂著，當患厭之，當求捨離，當求解脫。「復次，有時三日出世，三日出時，諸大江河皆悉竭盡，不得常住。是故一切行無常，不久住法、速變易法，不可猗法，如是諸行不當樂著，當患厭之，當求捨離，當求解脫。「復次，有時四日出世，四日出時，諸大泉源從閻浮洲五河所出：一曰恒伽，二曰搖尤那，三曰舍牢浮，四曰阿夷羅婆提，五曰摩企，彼大泉源皆悉竭盡，不得常住。是故一切行無常，不久住法、速變易法，不可猗法，如是諸行不當樂著，當患厭之，當求捨離，當求解脫。「復次，有時五日出世，五日出時，大海水減一百由延，轉減乃至七百由延；五日出時，海水餘有七百由延，轉減乃至一百由延；五日出時，大海水減一多羅樹，轉減乃至七多羅樹；五日出時，海水餘有七多羅樹，轉減乃至一多羅樹；五日出時，海水減一人，轉減乃至七人；五日出時，海水餘有七人，轉減乃至一人；五日出時，海水減至頸、至肩、至腰、至䐀、至膝、至踝，有時海水消盡，不足沒指。是故一切行無常，不久住法、速變易法、不可猗法，如是諸行不當樂著，當患厭之，當求捨離，當求解脫。「復次，有時六日出世，六日出時，一切大地須彌山王皆悉烟起，合為一烟，譬如陶師始爨竈時，皆悉烟起，合為一烟。如是六日出時，一切大地須彌山王皆悉烟起，合為一烟。是故一切行無常，不久住法、速變易法，不可猗法，如是諸行不當樂著，當患厭之，當求捨離，當求解脫。",
+   "T0030": "苾芻！劫相末時二日出現，炎照世間，熱相轉盛，大地所有樹木叢林、根莖枝葉，一切破壞都無所有。苾芻！如是無常不可久保，汝等今者宜加精進速求解脫。「復次，苾芻！劫相末時三日出現，炎照世間，熱相盛前，損物轉甚，大地所有諸小江河、一切泉源，悉皆竭盡無餘少水。苾芻當知，如是無常誰能可免？是故我今殷勤勸汝，速求解脫。復次，苾芻！劫相末時四日出現，炎照世間，熱相盛前，大地所有無熱惱池四流大河，恒河、信度河、細多河、嚩芻河，悉皆乾枯無餘少水。苾芻當知，如是無常誰能可免？汝自思惟，無復怠慢，速求解脫。「復次，苾芻！劫相末時五日出現，炎照世間，熱相盛前，大地所有大海之水，漸漸減少，一百由旬、二百由旬、三百由旬至一千由旬；日既炎盛天雨彌愆，海又復減至二千由旬、三千由旬乃至七千由旬，如是減已，海中餘水亦有七千由旬。「復次，苾芻！如是海水七千由旬，漸漸復減，至六千由旬、五千由旬、四千由旬，乃至有七百由旬。「復次，苾芻！如是海水七百由旬，漸漸復減，至六百由旬、五百由旬、四百由旬，乃至有七由旬。「復次，苾芻！如是海水七由旬，漸漸復減，至六由旬、五由旬、四由旬，乃至有七俱盧舍。「復次，苾芻！如是海水七俱盧舍，漸漸復減，至六俱盧舍、五俱盧舍、四俱盧舍，乃至有七多羅樹。「復次，苾芻！如是海水七多羅樹，漸漸復減，至六多羅樹、五多羅樹、四多羅樹，乃至有七人量。「復次，苾芻！如是海水七人量，漸漸復減，至六人量、五人量、四人量，乃至一人量，至人項、至人脇、至人臍、至人腰、至人膝、至人踝，至人一指量，即時枯乾。於是世間唯有大地山川，別無所有。」"
+  },
+  "a03": {
+   "an7.66": "Evaṁ aniccā, bhikkhave, saṅkhārā; evaṁ adhuvā, bhikkhave, saṅkhārā; evaṁ anassāsikā, bhikkhave, saṅkhārā. Yāvañcidaṁ, bhikkhave, alameva sabbasaṅkhāresu nibbindituṁ alaṁ virajjituṁ alaṁ vimuccituṁ. Tatra, bhikkhave, ko mantā ko saddhātā: ‘ayañca pathavī sineru ca pabbatarājā dayhissanti vinassissanti, na bhavissantī’ti aññatra diṭṭhapadehi?",
+   "T0125-ea40.1": "如是，比丘！一切行無常，不可久保，皆歸於盡。爾時，人民命終，盡生他方剎土，若生天上。設復地獄中眾生宿罪已畢，生天上、若他方剎土；設彼地獄眾生罪未畢者，復移至他方剎土。比丘當知。若七日出時，無復日月光明、星宿之兆，是時日月已滅，無復晝夜。是謂，比丘！由緣報故，致此壞敗。",
+   "T0026-ma8": "「復次，有時七日出世，七日出時，一切大地須彌山王洞燃俱熾，合為一㷿；如是七日出時，一切大地須彌山王洞燃俱熾，合為一㷿，風吹火㷿，乃至梵天。是時，晃昱諸天始生天者，不諳世間成敗，不見世間成敗，不知世間成敗，見大火已，皆恐怖毛竪而作是念：『火不來至此耶？火不來至此耶？』前生諸天諳世間成敗，見世間成敗，知世間成敗，見大火已，慰勞諸天曰：『莫得恐怖，火法齊彼，終不至此。』七日出時，須彌山王百由延崩散壞滅盡，二百由延、三百由延，乃至七百由延崩散壞滅盡；七日出時，須彌山王及此大地燒壞消滅，無餘栽燼，如燃酥油，煎熬消盡，無餘烟墨；如是七日出時，須彌山王及此大地無餘烖燼。是故一切行無常，不久住法、速變易法、不可猗法，如是諸行不當樂著，當患厭之，當求捨離，當求解脫。「我今為汝說須彌山王當崩壞盡，誰有能信？唯見諦者耳，我今為汝說大海水當竭消盡，誰有能信？唯見諦者耳。我今為汝說一切大地當燒燃盡，誰有能信？",
+   "T0030": "佛言：「苾芻！諸行無常，生滅不住，無實無堅，汝等於斯速求解脫。「復次，苾芻！劫相末時六日出現，大地炎熱山石銷鎔，須彌山王微有煙生，如燒瓦窯黑煙上起，亦復如是。於是世間無堪觀察。苾芻！如是無常生滅不住，汝等宜應勤加精進，捨貪愛心，速求解脫。「復次苾芻！劫相末時七日出現，炎熱至極忽然火起，如燒十束柴，百束千束萬束、百千萬束，乃至小千世界及六欲諸天，都為火聚。燒欲界已，梵世初禪火亦自起，焚燒器界所有宮殿，高百由旬，或二百由旬、三百由旬，乃至高七千由旬，如是宮殿皆為火聚。隣及二禪彼有新生梵眾，見下火焰，心大驚怖求避火難。爾時二禪先生天曰：『汝以宿善來生我宮，但自安心，莫生驚怖，此下地火不久即滅。』如是言已，忽起大風吹去煙焰，及其灰燼都無所有。譬如有人於虛空中，以其酥油然一燈燭，燈焰滅後黑煙與灰全無少許，彼火滅後亦復如是。」佛言：「苾芻！有為之法生滅不住，是顛倒法，無堅無實，是不究竟、是不可樂，遠離貪愛，速求解脫。若無貪愛，何因何緣，大地諸天破壞不現？」"
+  },
+  "a04": {
+   "an7.66": "Bhūtapubbaṁ, bhikkhave, sunetto nāma satthā ahosi titthakaro kāmesu vītarāgo. Sunettassa kho pana, bhikkhave, satthuno anekāni sāvakasatāni ahesuṁ. Sunetto, bhikkhave, satthā sāvakānaṁ brahmalokasahabyatāya dhammaṁ desesi. Ye kho pana, bhikkhave, sunettassa satthuno brahmalokasahabyatāya dhammaṁ desentassa sabbena sabbaṁ sāsanaṁ ājāniṁsu te kāyassa bhedā paraṁ maraṇā sugatiṁ brahmalokaṁ upapajjiṁsu. Ye na sabbena sabbaṁ sāsanaṁ ājāniṁsu te kāyassa bhedā paraṁ maraṇā appekacce paranimmitavasavattīnaṁ devānaṁ sahabyataṁ upapajjiṁsu, appekacce nimmānaratīnaṁ devānaṁ sahabyataṁ upapajjiṁsu, appekacce tusitānaṁ devānaṁ sahabyataṁ upapajjiṁsu, appekacce yāmānaṁ devānaṁ sahabyataṁ upapajjiṁsu, appekacce tāvatiṁsānaṁ devānaṁ sahabyataṁ upapajjiṁsu, appekacce cātumahārājikānaṁ devānaṁ sahabyataṁ upapajjiṁsu, appekacce khattiyamahāsālānaṁ sahabyataṁ upapajjiṁsu, appekacce brāhmaṇamahāsālānaṁ sahabyataṁ upapajjiṁsu, appekacce gahapatimahāsālānaṁ sahabyataṁ upapajjiṁsu. Atha kho, bhikkhave, sunettassa satthuno etadahosi: ‘na kho metaṁ patirūpaṁ yohaṁ sāvakānaṁ samasamagatiyo assaṁ abhisamparāyaṁ, yannūnāhaṁ uttari mettaṁ bhāveyyan’ti. Atha kho, bhikkhave, sunetto satthā satta vassāni mettaṁ cittaṁ bhāvesi. Satta vassāni mettaṁ cittaṁ bhāvetvā satta saṁvaṭṭavivaṭṭakappe nayimaṁ lokaṁ punarāgamāsi. Saṁvaṭṭamāne sudaṁ, bhikkhave, loke ābhassarūpago hoti. Vivaṭṭamāne loke suññaṁ brahmavimānaṁ upapajjati. Tatra sudaṁ, bhikkhave, brahmā hoti mahābrahmā abhibhū anabhibhūto aññadatthudaso vasavattī. Chattiṁsakkhattuṁ kho pana, bhikkhave, sakko ahosi devānamindo. Anekasatakkhattuṁ rājā ahosi cakkavattī dhammiko dhammarājā cāturanto vijitāvī janapadatthāvariyappatto sattaratanasamannāgato. Parosahassaṁ kho panassa puttā ahesuṁ sūrā vīraṅgarūpā parasenappamaddanā.",
+   "T0125-ea40.1": "「比丘復當知，劫還成就時，或有是時，火還自滅，虛空之中有大雲起，漸漸降雨。是時，此三千大千剎土，水遍滿其中，水乃至梵天上。比丘當知，是時此水漸漸停住而自消滅。復有風起，名曰隨嵐，吹此水聚著一處。是時，彼風起千須彌山、千祇彌陀山、千尼彌陀山、千佉羅山、千伊沙山、千毘那山、千鐵圍山、千大鐵圍山；復生八千地獄，復生千馬頭山、千香積山、千般荼婆山、千優闍伽山、千閻浮提、千瞿耶尼、千弗于逮、千欝單曰；復生千海水；復生千四天王宮、千三十三天、千豔天、千兜術天、千化自在天、千他化自在天。「比丘當知，或有是時，水滅地復還生。是時，地上自然有地肥，極為香美，勝於甘露。欲知彼地肥氣味，猶如甜蒲桃酒。",
+   "T0026-ma8": "唯見諦者耳。所以者何？比丘！昔有大師名曰善眼，為外道仙人之所師宗，捨離欲愛，得如意足。善眼大師有無量百千弟子，善眼大師為諸弟子說梵世法，若善眼大師為說梵世法時，諸弟子等有不具足奉行法者，彼命終已，或生四王天，或生三十三天，或生㷿摩天，或生兜率哆天，或生化樂天，或生他化樂天。若善眼大師為說梵世法時，諸弟子等設有具足奉行法者，彼修四梵室，捨離於欲，彼命終已，得生梵天。彼時善眼大師而作是念：『我不應與弟子等同俱至後世共生一處，我今寧可更修增上慈。修增上慈已，命終得生晃昱天中。』彼時善眼大師則於後時更修增上慈，修增上慈已，命終得生晃昱天中。善眼大師及諸弟子學道不虛，得大果報。「諸比丘！於意云何？昔善眼大師為外道仙人之所師宗，捨離欲愛，得如意足者，汝謂異人耶？",
+   "T0030": "「復次，苾芻！如過去世有佛出現，名妙眼如來，有無量無邊聲聞之眾，及諸梵天離欲神通外道之眾。彼妙眼如來為諸聲聞，說甚深了義清淨梵行之法。時諸苾芻等，得一切戒法圓滿，隨意修行，或作四無量觀，斷下欲染，生於梵世；或有隨意樂生他化自在天、樂生化樂天、樂生兜率天、樂生夜摩天、樂生忉利天、樂生四天王天、樂生剎帝利家、樂生婆羅門家、樂生長者居士之家。爾時妙眼如來作是念：『我今令彼聲聞眾等，同行同生，同其威力，入於慈氏第二禪定。』如是念已，即入慈氏第二禪定。時諸無量百千聲聞及外道等，皆修彼定，俱得生於梵天之上。」"
+  },
+  "a05": {
+   "an7.66": "So imaṁ pathaviṁ sāgarapariyantaṁ adaṇḍena asatthena dhammena abhivijiya ajjhāvasi. So hi nāma, bhikkhave, sunetto satthā evaṁ dīghāyuko samāno evaṁ ciraṭṭhitiko aparimutto ahosi: jātiyā jarāya maraṇena sokehi paridevehi dukkhehi domanassehi upāyāsehi, ‘aparimutto dukkhasmā’ti vadāmi. Taṁ kissa hetu? Catunnaṁ dhammānaṁ ananubodhā appaṭivedhā. Katamesaṁ catunnaṁ? Ariyassa, bhikkhave, sīlassa ananubodhā appaṭivedhā, ariyassa samādhissa ananubodhā appaṭivedhā, ariyāya paññāya ananubodhā appaṭivedhā, ariyāya vimuttiyā ananubodhā appaṭivedhā. Tayidaṁ, bhikkhave, ariyaṁ sīlaṁ anubuddhaṁ paṭividdhaṁ, ariyo samādhi anubodho paṭividdho, ariyā paññā anubodhā paṭividdhā, ariyā vimutti anubodhā paṭividdhā, ucchinnā bhavataṇhā, khīṇā bhavanetti, natthi dāni punabbhavo”ti.",
+   "T0125-ea40.1": "比丘當知，或有此時，光音天自相謂言：『我等欲至閻浮提，觀看彼地形還復之時。』光音天子來下世間，見地上有此地肥，便以指甞著口中而取食之。是時，天子食地肥多者，轉無威神，又無光明，身體遂重而生骨肉，即失神足，不復能飛；又彼天子食地肥少，身體不重，亦復不失神足，亦能在虛空中飛行。「是時，天子失神足者，皆共呼哭自相謂言：『我等今日極為窮厄，復失神足。』即住世間，不能復還天上，遂食此地肥。各各相視顏色。彼時天子欲意多者，便成女人，遂行情欲，共相娛樂。是謂，比丘！初世成時，有此婬法，流布世間，是舊常之法，女人必出於世；亦復舊法，非適今也。是時，餘光音天見此天子以墮落，皆來呵罵而告之曰：『汝等何為行此不淨之行？』是時，眾生復作是念：『我等當作方便，宜共止宿，使人不見。』轉轉作屋舍，自覆形體。是謂，比丘！有此因緣，今有屋舍。「比丘當知，或有是時，地肥自然入地，後轉生粳米，極為鮮淨；亦無皮表，極為香好，令人肥白；朝收暮生，暮收朝生。是謂，比丘！爾時始有此粳米之名生。比丘！或有是時，人民懈怠不勤生活。彼人便作是念：『我今何為日日收此粳米？應當二日一收。』是時，彼人二日一收粳米。爾時，人民展轉懷妊，由此轉有生分。「復有眾生語彼眾生言：『我等共取粳米。』是時，彼人報曰：『吾以取二日食糧。』此人聞已，復生此念：『我當儲四日食糧。』即時辦四日食糧。復有眾生語彼眾生：『可共相將外收粳米。』此人報曰：『吾以收四日食糧。』彼人聞已，便生此念：『吾當辦八日食糧。』即辦八日食儲。爾時，彼粳米更不復生。「是時，眾生各生此念：『世間有大災患，今此粳米遂不如本，今當分此粳米。』即時分粳米。爾時眾生復生此念：『我今可自藏粳米，當盜他粳米。』是時，彼眾生自藏粳米，便盜他粳米。彼主見盜粳米，語彼人曰：『汝何故取吾粳米？今捨汝罪，後莫更犯。』爾時，世間初有此盜心。是時，復有眾生聞此語，復自生念：『我今可藏此已粳米，當盜他粳米。』是時，彼眾生便捨己物，而取他物。彼主見已，語彼人曰：『汝今何為取我粳米乎？』然彼人默然不對。是時，物主即時手拳相加，自今已後，更莫相侵。「是時，眾多人民聞眾生相盜，各共運集，自相謂言：『世間有此非法，各共相盜。今當立守田人，使守護田。其有眾生聰明高才者，當立為守田主。』是時，即選擇田主而語之曰：『汝等當知，世間有此非法竊盜，汝今守田當雇其直，諸人民來取他粳米者，即懲其罪。』爾時，即安田主。比丘當知，爾時，其守田者，號為剎利種，皆是舊法，非為非法。」爾時，世尊便說此偈：「始有剎利種，姓中之上者，\n聰明高才人，天人所敬待。「爾時，其有人民侵他物者，是時剎利取懲罰之。然復彼人不改其𠎝，故復犯之。是時剎利之主勅作刀杖，取彼人而梟其首。爾時，世間初有此殺生。是時，眾多人民聞此教令：『其有竊盜粳米者，剎利主即取殺之。』皆懷恐懼，衣毛皆竪，各作草盧於中坐禪，修其梵行，而一其心，捨離家業、妻子、兒婦獨靜其志，修於梵行。因此已來，而有婆羅門之名姓。是時，便有此二種姓出現世間。「比丘當知，彼時由盜故便有殺生，由殺故便有刀杖。是時，剎利主告人民曰：『其有端政高才者，當使統此人民。』又告之曰：『其有人民竊盜者，使懲其罪。』爾時，便有此毘舍種姓，出現於世。「爾時，多有眾生便生此念：『今日眾生之類各共殺生，皆由業之所致也，今可來往周旋以自生活。』爾時，便有首陀羅種姓，出現世間。」爾時，世尊便說此偈：「初有剎利種，次有婆羅門，\n第三名毘舍，次復首陀姓。\n有此四種姓，漸漸而相生，\n皆是天身來，而同為一色。「比丘當知，爾時，有此殺、盜心，無復有此自然粳米。「爾時，便有五種穀子：一者根子，二者莖子，三者枝子，四者華子，五者果子，及餘所生之種子，是謂五種之子。皆是他方剎土風吹使來，取用作種以此自濟。如是，比丘！世間有此瑞應，便有生、老、病、死，致使今日有五盛陰身，不得盡於苦際，此名為劫成敗時之變易也。吾與汝說，諸佛世尊常所應行，今盡與汝說之。當樂閑居靜處，當念坐禪，勿起懈怠，今不精誠，後悔無益。此是我之教誨也。」",
+   "T0026-ma8": "莫作斯念，當知即是我也。我於爾時名善眼大師，為外道仙人之所師宗，捨離欲愛，得如意足；我於爾時有無量百千弟子，我於爾時為諸弟子說梵世法。我說梵世法時，諸弟子等有不具足奉行法者，彼命終已，或生四王天，或生三十三天，或生㷿摩天，或生兜率哆天，或生化樂天，或生他化樂天。我說梵世法時，諸弟子等設有具足奉行法者，修四梵室，捨離於欲，彼命終已，得生梵天。我於爾時而作是念：『我不應與弟子等同俱至後世共生一處，我今寧可更修增上慈。修增上慈已，命終得生晃昱天中。』我於後時更修增上慈，修增上慈已，命終得生晃昱天中。我於爾時及諸弟子學道不虛，得大果報。我於爾時親行斯道，為自饒益，亦饒益他，饒益多人，愍傷世間，為天、為人求義及饒益，求安隱快樂，爾時說法不至究竟，不究竟白淨，不究竟梵行，不究竟梵行訖，爾時不離生、老、病、死、啼哭、憂慼，亦未能得脫一切苦。「比丘！我今出世，如來、無所著、等正覺、明行成為、善逝、世間解、無上士、道法御、天人師，號佛、眾祐；我今自饒益，亦饒益他，饒益多人，愍傷世間，為天、為人求義及饒益，求安隱快樂；我今說法得至究竟，究竟白淨，究竟梵行；究竟梵行訖，我今已離生、老、病、死、啼哭、憂慼，我今已得脫一切苦。」",
+   "T0030": "佛言：「苾芻！往昔妙眼如來者，非別有佛，即我身是。彼諸眾等雖生二禪免下火難，未離貪、瞋、癡種，不能解脫生老病死。苾芻！如來、應、正等覺，為天人師，遠離貪、瞋、癡等一切煩惱，解脫生老病死憂悲苦惱，復為梵天聲聞眾等，隨應宣說清淨法行。各各聞已，或有斷盡分別及欲俱生，證阿那含果；或有斷盡分別及六品俱生，證斯陀含果；或有雖盡分別未斷俱生，證須陀洹果，受天人報經七生已，成阿羅漢。」佛言：「苾芻！如是出家，如是梵行，如是證果，得離苦際而成解脫。"
+  },
+  "a06": {
+   "an7.66": "Idamavoca bhagavā. Idaṁ vatvāna sugato athāparaṁ etadavoca satthā: “Sīlaṁ samādhi paññā ca, vimutti ca anuttarā; Anubuddhā ime dhammā, gotamena yasassinā. Iti buddho abhiññāya, dhammamakkhāsi bhikkhunaṁ; Dukkhassantakaro satthā, cakkhumā parinibbuto”ti. Dutiyaṁ.",
+   "T0125-ea40.1": "爾時，諸比丘聞佛所說，歡喜奉行。",
+   "T0026-ma8": "佛說如是。彼諸比丘聞佛所說，歡喜奉行。七日經第八竟（千七百一字）",
+   "T0030": "汝今志意，捨離貪愛，趣求覺路。」爾時世尊說此法已，時彼苾芻聞佛所說，心大歡喜，信受奉行。"
+  }
+ }
+}

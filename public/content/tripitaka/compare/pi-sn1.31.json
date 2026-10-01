@@ -1,0 +1,91 @@
+{
+ "slug": "pi-sn1.31",
+ "title": "別譯雜阿含經 （二八五）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "諸天請問偈頌"
+  },
+  {
+   "id": "a02",
+   "label": "世尊答偈"
+  },
+  {
+   "id": "a03",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn1.31",
+   "lang": "pi",
+   "label": "巴利 SN1.31",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn1.31",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN1.31",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.285",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （二八五）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa1287",
+   "lang": "lzh",
+   "label": "雜阿含經 （一二八七）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（二八五）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一二八七）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn1.31": "Saṁyutta Nikāya 1.31 4. Satullapakāyikavagga Sabbhisutta",
+   "nan-sn1.31": "〔三一〕第一　與善人為伴如是我聞。爾時，世尊住舍衛城祇樹給孤獨園。",
+   "T0100-sa-2.285": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。",
+   "T0099-sa1287": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。"
+  },
+  "a01": {
+   "sn1.31": "Evaṁ me sutaṁ— ekaṁ samayaṁ bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme. Atha kho sambahulā satullapakāyikā devatāyo abhikkantāya rattiyā abhikkantavaṇṇā kevalakappaṁ jetavanaṁ obhāsetvā yena bhagavā tenupasaṅkamiṁsu; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ aṭṭhaṁsu. Ekamantaṁ ṭhitā kho ekā devatā bhagavato santike imaṁ gāthaṁ abhāsi: “Sabbhireva samāsetha, sabbhi kubbetha santhavaṁ; Sataṁ saddhammamaññāya, seyyo hoti na pāpiyo”ti. Atha kho aparā devatā bhagavato santike imaṁ gāthaṁ abhāsi: “Sabbhireva samāsetha, sabbhi kubbetha santhavaṁ; Sataṁ saddhammamaññāya, paññā labbhati nāññato”ti. Atha kho aparā devatā bhagavato santike imaṁ gāthaṁ abhāsi: “Sabbhireva samāsetha, sabbhi kubbetha santhavaṁ; Sataṁ saddhammamaññāya, sokamajjhe na socatī”ti. Atha kho aparā devatā bhagavato santike imaṁ gāthaṁ abhāsi: “Sabbhireva samāsetha, sabbhi kubbetha santhavaṁ; Sataṁ saddhammamaññāya, ñātimajjhe virocatī”ti. Atha kho aparā devatā bhagavato santike imaṁ gāthaṁ abhāsi: “Sabbhireva samāsetha, sabbhi kubbetha santhavaṁ; Sataṁ saddhammamaññāya, sattā gacchanti suggatin”ti. Atha kho aparā devatā bhagavato santike imaṁ gāthaṁ abhāsi: “Sabbhireva samāsetha, sabbhi kubbetha santhavaṁ; Sataṁ saddhammamaññāya, sattā tiṭṭhanti sātatan”ti. Atha kho aparā devatā bhagavantaṁ etadavoca: “kassa nu kho, bhagavā, subhāsitan”ti?",
+   "nan-sn1.31": "爾時，甚多沙睹羅巴天群、其勝光徧照祇園。於黎明往詣世尊處，詣已禮敬世尊，立於一面。立於一面之一天神，於世尊前，而唱此偈曰：唯與善人坐唯與善人交\n知善之正法為善不為惡爾時，其他天神，於世尊前，亦唱此偈曰：唯與善人坐唯與善人交\n知善之正法依他不能得\n而得之智慧爾時，其他之天神，於世尊前，亦唱此偈曰：唯與善人坐唯與善人交\n知善之正法悲中無有悲爾時，其他之天神，於世尊前，亦唱此偈曰：唯與善人坐唯與善人交\n知善之正法輝耀親族中爾時，其他之天神，於世尊前，亦唱此偈曰：唯與善人坐唯與善人交\n知善之正法人人行善趣爾時，其他之天神，於世尊前，亦唱此偈曰：唯與善人坐唯與善人交\n知善之正法人人有幸福",
+   "T0100-sa-2.285": "爾時，有天光明倍常，來至佛所，頭面禮佛，在一面坐，而說偈言：「應共誰止住？",
+   "T0099-sa1287": "時，有天子容色絕妙，於後夜時來詣佛所，稽首佛足，其身光明遍照祇樹給孤獨園。時，彼天子說偈問佛：「與何人同處，復與誰共事，\n知何等人法，名為勝非惡？」"
+  },
+  "a02": {
+   "sn1.31": "“Sabbāsaṁ vo subhāsitaṁ pariyāyena, api ca mamapi suṇātha— Sabbhireva samāsetha, sabbhi kubbetha santhavaṁ; Sataṁ saddhammamaññāya, sabbadukkhā pamuccatī”ti.",
+   "nan-sn1.31": "爾時，其他之天神，以此向世尊曰：「世尊！誰之〔偈〕為善說耶？」〔世尊曰：〕依汝等各各之善說。然則，亦聞我偈：",
+   "T0100-sa-2.285": "復應親近誰？\n從誰所受法，得利不生惡？」爾時，世尊以偈答曰：「應共善人住，親近於善者，\n從彼人受法，得利不生惡。\n應共善人住，親近於善者，\n從彼人受法，智者得利樂。\n應共善人住，親近於善者，\n從彼人受法，智者得名譽。\n親近於善者，從彼人受法，\n智者得解慧，是故應共住。\n親近於善者，從彼人受法，\n親族中尊勝，能離於憂愁，\n於一切苦中，而能得解脫。\n遠離諸惡趣，能斷一切縛，\n純受上妙樂，得近於涅槃。」",
+   "T0099-sa1287": "爾時，世尊說偈答言：「與正士同遊，正士同其事，\n解知正士法，是則勝非惡。」時，彼天子復說偈言：「久見婆羅門，逮得般涅槃，\n一切怖已過，永超世恩愛。」"
+  },
+  "a03": {
+   "sn1.31": "Idamavoca bhagavā. Attamanā tā devatāyo bhagavantaṁ abhivādetvā padakkhiṇaṁ katvā tatthevantaradhāyiṁsūti.",
+   "nan-sn1.31": "唯與善人坐唯與善人交\n知善之正法當脫一切苦",
+   "T0100-sa-2.285": "天復以偈讚言：「往昔已曾見，婆羅門涅槃，\n嫌怖久棄捨，能度世間愛。」爾時，此天說此偈已，歡喜而去。",
+   "T0099-sa1287": "時，彼天子聞佛所說，歡喜隨喜，稽首佛足，即沒不現。"
+  }
+ }
+}

@@ -1,0 +1,186 @@
+{
+ "slug": "pi-sn16.3",
+ "title": "別譯雜阿含經 （一一一）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "經名與序分"
+  },
+  {
+   "id": "a01",
+   "label": "月譬喻：比丘入家應如月"
+  },
+  {
+   "id": "a02",
+   "label": "迦葉比丘具足月譬德行"
+  },
+  {
+   "id": "a03",
+   "label": "請問何種比丘堪入諸家"
+  },
+  {
+   "id": "a04",
+   "label": "眾生歸依佛陀為法根本"
+  },
+  {
+   "id": "a05",
+   "label": "佛現虛空運手示無染著"
+  },
+  {
+   "id": "a06",
+   "label": "無染著心入家之比丘可往返人間"
+  },
+  {
+   "id": "a07",
+   "label": "迦葉比丘亦具無染著心入家"
+  },
+  {
+   "id": "a08",
+   "label": "第二次虛空運手重說迦葉德行"
+  },
+  {
+   "id": "a09",
+   "label": "問何種比丘為人說法"
+  },
+  {
+   "id": "a10",
+   "label": "眾生再歸依佛陀請求說法"
+  },
+  {
+   "id": "a11",
+   "label": "佛說不清淨說法：為求利養"
+  },
+  {
+   "id": "a12",
+   "label": "佛說清淨說法：為利益眾生離苦"
+  },
+  {
+   "id": "a13",
+   "label": "迦葉比丘具足清淨說法"
+  },
+  {
+   "id": "a14",
+   "label": "結囑：應學迦葉說法"
+  },
+  {
+   "id": "a15",
+   "label": "經終結束"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn16.3",
+   "lang": "pi",
+   "label": "巴利 SN16.3",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "T0100-sa-2.111",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （一一一）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa1136",
+   "lang": "lzh",
+   "label": "雜阿含經 （一一三六）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（一一一）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一一三六）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn16.3": "Saṁyutta Nikāya 16.3 1. Kassapavagga Candūpamāsutta",
+   "T0100-sa-2.111": "佛在王舍城迦蘭陀竹林。",
+   "T0099-sa1136": "如是我聞：一時，佛住舍衛國迦蘭陀竹園。"
+  },
+  "a01": {
+   "sn16.3": "Sāvatthiyaṁ viharati. “Candūpamā, bhikkhave, kulāni upasaṅkamatha— apakasseva kāyaṁ, apakassa cittaṁ, niccanavakā kulesu appagabbhā. Seyyathāpi, bhikkhave, puriso jarudapānaṁ vā olokeyya pabbatavisamaṁ vā nadīviduggaṁ vā— apakasseva kāyaṁ, apakassa cittaṁ; evameva kho, bhikkhave, candūpamā kulāni upasaṅkamatha— apakasseva kāyaṁ, apakassa cittaṁ, niccanavakā kulesu appagabbhā.",
+   "T0100-sa-2.111": "爾時，世尊告諸比丘：「汝等皆當勤修善行，漸漸增長，如月初生。」時，有比丘初始受戒，漸修慚愧，善持威儀，往返人間，柔和恭順，不為佷戾，能制身心，如明眼人避深空井，及山峻岸。比丘亦爾，如月初生，漸漸增長，善行日新。",
+   "T0099-sa1136": "爾時，世尊告諸比丘：「當如月譬住，如新學，慚愧軟下，攝心斂形而入他家。如明目士夫臨深登峰，攝心斂形，難速前進。如是，比丘如月譬住，亦如新學，慚愧軟下，御心斂形而入他家。"
+  },
+  "a02": {
+   "sn16.3": "Kassapo, bhikkhave, candūpamo kulāni upasaṅkamati— apakasseva kāyaṁ, apakassa cittaṁ, niccanavako kulesu appagabbho.",
+   "T0100-sa-2.111": "佛復告諸比丘：「今此會中，迦葉比丘勤修善行，如月初生，漸漸增長，漸修慚愧，往返人間，能制身心，柔和恭順，終不佷戾，如明眼人能避深井，遠離峻谷，迦葉比丘亦復如是。」",
+   "T0099-sa1136": "迦葉比丘如月譬住，亦如新學，慚愧軟下諸高慢，御心控形而入他家。如明目士夫臨深登峰，御心控形，正觀而進。」"
+  },
+  "a03": {
+   "sn16.3": "Taṁ kiṁ maññatha, bhikkhave, kathaṁrūpo bhikkhu arahati kulāni upasaṅkamitun”ti?",
+   "T0100-sa-2.111": "佛告比丘：「何等比丘與法相應，堪至諸家？」",
+   "T0099-sa1136": "佛告比丘：「於意云何？比丘為何等像類應入他家？」"
+  },
+  "a04": {
+   "sn16.3": "“Bhagavaṁmūlakā no, bhante, dhammā bhagavaṁnettikā bhagavaṁpaṭisaraṇā. Sādhu vata, bhante, bhagavantaṁyeva paṭibhātu etassa bhāsitassa attho. Bhagavato sutvā bhikkhū dhāressantī”ti.",
+   "T0100-sa-2.111": "時，諸比丘白佛言：「世尊！如來則是諸法根本，諸法之導，法所依憑。善哉！世尊！願為我等敷演斯義，我等聞已，至心受持。」佛復告諸比丘：「諦聽！諦聽！至心憶念。若有比丘，無所染著，不愛縛家，不生增減，心無嫌恨，亦不嫉妬。見他利養，心生歡喜。見他施彼，亦不忿恨。於修福者，咸皆隨喜。又不自讚己有德行，諸所言說，恒為一切。見餘比丘，同至他家，終不譏毀，於自他所，心無高下。若諸比丘能修善心，如向所說，乃名隨順，如法周旋，往返人間。」",
+   "T0099-sa1136": "諸比丘白佛言：「世尊是法根、法眼、法依，唯願廣說！諸比丘聞已，當受奉行。」佛告諸比丘：「諦聽，善思，當為汝說。若有比丘於他家心不縛著貪樂，於他得利，他作功德，欣若在己，不生嫉想，亦不自舉，亦不下人。如是像類比丘應入他家。」"
+  },
+  "a05": {
+   "sn16.3": "Atha kho bhagavā ākāse pāṇiṁ cālesi.",
+   "T0100-sa-2.111": "爾時，世尊於虛空中而自運手，告諸比丘：「今我此手，不著於空，不縛於空，無有嫌隙，亦無瞋恚，此手寧有縛著、增減已不？」諸比丘即白佛言：「世尊！此空中手無縛無著，無有增減。」",
+   "T0099-sa1136": "爾時，世尊以手捫摸虛空，告諸比丘：「我今此手，寧著空、縛空、染空不？」比丘白佛：「不也，世尊！」"
+  },
+  "a06": {
+   "sn16.3": "“Seyyathāpi, bhikkhave, ayaṁ ākāse pāṇi na sajjati na gayhati na bajjhati; evameva kho, bhikkhave, yassa kassaci bhikkhuno kulāni upasaṅkamato kulesu cittaṁ na sajjati na gayhati na bajjhati: ‘labhantu lābhakāmā, puññakāmā karontu puññānī’ti; yathāsakena lābhena attamano hoti sumano, evaṁ paresaṁ lābhena attamano hoti sumano; evarūpo kho, bhikkhave, bhikkhu arahati kulāni upasaṅkamituṁ.",
+   "T0100-sa-2.111": "佛告比丘：「如是，如是。若有比丘心無縛著，如空運手，乃可出入，往返諸家，不生增減，不生懊惱，亦不嫉妬。見他利養，心生歡喜。見他布施，不與於己，亦不忿恨。見修福者，普皆隨喜，乃至心無高下。」",
+   "T0099-sa1136": "佛告比丘：「比丘之法常如是：不著、不縛、不染心而入他家。"
+  },
+  "a07": {
+   "sn16.3": "Kassapassa, bhikkhave, kulāni upasaṅkamato kulesu cittaṁ na sajjati na gayhati na bajjhati: ‘labhantu lābhakāmā, puññakāmā karontu puññānī’ti; yathāsakena lābhena attamano hoti sumano; evaṁ paresaṁ lābhena attamano hoti sumano.",
+   "T0100-sa-2.111": "佛告比丘：「迦葉比丘亦復如是，往返人間，心無縛著，乃至心無高下。」",
+   "T0099-sa1136": "唯迦葉比丘以不著、不縛、不染之心而入他家，於他得利及作功德，欣若在己，不生嫉想、不自舉、不下人，其唯迦葉比丘應入他家。」爾時，世尊復以手捫摸虛空，告諸比丘：「於意云何？我今此手，寧著空、縛空、染空以不？」諸比丘白佛言：「不也，世尊！」佛告比丘：「其唯迦葉比丘心常如是，以不著、不縛、不染之心入於他家。」"
+  },
+  "a08": {
+   "T0100-sa-2.111": "佛復空中第二運手，告諸比丘：「如上所說，乃至迦葉比丘亦復如是。」"
+  },
+  "a09": {
+   "sn16.3": "Taṁ kiṁ maññatha, bhikkhave, kathaṁrūpassa bhikkhuno aparisuddhā dhammadesanā hoti, kathaṁrūpassa bhikkhuno parisuddhā dhammadesanā hotī”ti?",
+   "T0100-sa-2.111": "佛告比丘：「云何比丘出入諸家，為人說法？云何得名清淨說法？云何名為不清淨說？」",
+   "T0099-sa1136": "爾時，世尊告諸比丘：「何等像類比丘應清淨說法？」"
+  },
+  "a10": {
+   "sn16.3": "“Bhagavaṁmūlakā no, bhante, dhammā bhagavaṁnettikā bhagavaṁpaṭisaraṇā. Sādhu vata, bhante, bhagavantaṁyeva paṭibhātu etassa bhāsitassa attho. Bhagavato sutvā bhikkhū dhāressantī”ti. “Tena hi, bhikkhave, suṇātha, sādhukaṁ manasi karotha, bhāsissāmī”ti. “Evaṁ, bhante”ti kho te bhikkhū bhagavato paccassosuṁ.",
+   "T0100-sa-2.111": "時，諸比丘白佛言：「世尊！如來則是諸法根本，法之所導，法所依憑。善哉！世尊！願為敷演，我等聞已，至心受持。」",
+   "T0099-sa1136": "諸比丘白佛：「世尊是法根、法眼、法依，唯願廣說！諸比丘聞已，當受奉行。」"
+  },
+  "a11": {
+   "sn16.3": "Bhagavā etadavoca: “Yo hi koci, bhikkhave, bhikkhu evaṁcitto paresaṁ dhammaṁ deseti: ‘aho vata me dhammaṁ suṇeyyuṁ, sutvā ca pana dhammaṁ pasīdeyyuṁ, pasannā ca me pasannākāraṁ kareyyun’ti; evarūpassa kho, bhikkhave, bhikkhuno aparisuddhā dhammadesanā hoti.",
+   "T0100-sa-2.111": "佛告諸比丘：「諦聽！諦聽！至心憶念。若有比丘為人說法，作如是念：『我為彼人而說於法，當令彼人信敬於我，能多與我飲食、衣服、病瘦醫藥。』若作是說者，是名不淨。",
+   "T0099-sa1136": "佛告比丘：「諦聽，善思，當為汝說。若有比丘作如是心為人說法：『何等人於我起淨信心，為本已當得供養衣被、飲食、臥具、湯藥。』如是說者，名不清淨說法。"
+  },
+  "a12": {
+   "sn16.3": "Yo ca kho, bhikkhave, bhikkhu evaṁcitto paresaṁ dhammaṁ deseti: ‘svākkhāto bhagavatā dhammo sandiṭṭhiko akāliko ehipassiko opaneyyiko paccattaṁ veditabbo viññūhīti. Aho vata me dhammaṁ suṇeyyuṁ, sutvā ca pana dhammaṁ ājāneyyuṁ, ājānitvā ca pana tathattāya paṭipajjeyyun’ti. Iti dhammasudhammataṁ paṭicca paresaṁ dhammaṁ deseti, kāruññaṁ paṭicca anuddayaṁ paṭicca anukampaṁ upādāya paresaṁ dhammaṁ deseti. Evarūpassa kho, bhikkhave, bhikkhuno parisuddhā dhammadesanā hoti.",
+   "T0100-sa-2.111": "若有比丘為人說法，欲令聽者證解佛法，除現在苦，離諸熱惱，不擇時節，導示善趣，為其顯現，乃至能令知者自知，不從他教，離於生老病死、憂悲苦惱，能令聽者聞其所說，如法修行。為令聽者於長夜中，得法、得義、得利、得安，如是說者，名為清淨慈悲之說。憐愍利益，欲使正法得久住故，如是說法名為清淨。是故比丘應作是念，為人說法，當作是學。",
+   "T0099-sa1136": "「若復比丘為人說法，作如是念：『世尊顯現正法、律，離諸熾然，不待時節，即此現身，緣自覺知，正向涅槃，而諸眾生沈溺老、病、死、憂、悲、惱、苦，如此眾生聞正法者，以義饒益，長夜安樂。』以是正法因緣，以慈心、悲心、哀愍心、欲令正法久住心而為人說，是名清淨說法。"
+  },
+  "a13": {
+   "sn16.3": "Kassapo, bhikkhave, evaṁcitto paresaṁ dhammaṁ deseti: ‘svākkhāto bhagavatā dhammo sandiṭṭhiko akāliko ehipassiko opaneyyiko paccattaṁ veditabbo viññūhīti. Aho vata me dhammaṁ suṇeyyuṁ, sutvā ca pana dhammaṁ ājāneyyuṁ, ājānitvā ca pana tathattāya paṭipajjeyyun’ti. Iti dhammasudhammataṁ paṭicca paresaṁ dhammaṁ deseti, kāruññaṁ paṭicca anuddayaṁ paṭicca anukampaṁ upādāya paresaṁ dhammaṁ deseti.",
+   "T0100-sa-2.111": "第三亦如上所說，迦葉比丘能如是說，為令聽者證解佛法，乃至欲令正法得久住故，憐愍利益，作如是說，是名清淨，稱可佛法。」",
+   "T0099-sa1136": "唯迦葉比丘有如是清淨心為人說法，以如來正法、律，乃至令法久住心而為人說。"
+  },
+  "a14": {
+   "sn16.3": "Kassapena vā hi vo, bhikkhave, ovadissāmi yo vā panassa kassapasadiso, ovaditehi ca pana vo tathattāya paṭipajjitabban”ti.",
+   "T0099-sa1136": "是故，諸比丘！當如是學、如是說法，於如來正法、律，乃至令法久住心為人說法。」"
+  },
+  "a15": {
+   "sn16.3": "Tatiyaṁ.",
+   "T0100-sa-2.111": "時，諸比丘聞佛所說，歡喜奉行。",
+   "T0099-sa1136": "佛說此經已，諸比丘聞佛所說，歡喜奉行。"
+  }
+ }
+}

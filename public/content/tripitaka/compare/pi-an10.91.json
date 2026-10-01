@@ -1,0 +1,205 @@
+{
+ "slug": "pi-an10.91",
+ "title": "伏婬經",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "居士問行欲人數"
+  },
+  {
+   "id": "a02",
+   "label": "佛答十種行欲者"
+  },
+  {
+   "id": "a03",
+   "label": "第一種：非法求財，不自養，不施福"
+  },
+  {
+   "id": "a04",
+   "label": "第二種：非法求財，自養，不施福"
+  },
+  {
+   "id": "a05",
+   "label": "第三種：非法求財，自養，施福"
+  },
+  {
+   "id": "a06",
+   "label": "第四種：法非法求財，不自養，不施福"
+  },
+  {
+   "id": "a07",
+   "label": "第五種：法非法求財，自養，不施福"
+  },
+  {
+   "id": "a08",
+   "label": "第六種：法非法求財，自養，施福"
+  },
+  {
+   "id": "a09",
+   "label": "第七種：如法求財，不自養，不施福"
+  },
+  {
+   "id": "a10",
+   "label": "第八種：如法求財，自養，不施福"
+  },
+  {
+   "id": "a11",
+   "label": "第九種：如法求財，自養，施福"
+  },
+  {
+   "id": "a12",
+   "label": "第十種：如法求財，自養，施福，見災患知出"
+  },
+  {
+   "id": "a13",
+   "label": "評論十種行欲者之善惡"
+  },
+  {
+   "id": "a14",
+   "label": "偈頌：非法求財與法求財之比較"
+  },
+  {
+   "id": "a15",
+   "label": "譬喻：牛乳酪酥酥精之階層"
+  },
+  {
+   "id": "a16",
+   "label": "結論：最上行欲者之譬喻應用"
+  },
+  {
+   "id": "a17",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "an10.91",
+   "lang": "pi",
+   "label": "巴利 AN10.91",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "T0026-ma126",
+   "lang": "lzh",
+   "label": "中阿含經 （一二六）大品行欲經第十（第三念誦）",
+   "who": "東晉 瞿曇僧伽提婆譯",
+   "reorder": true
+  },
+  {
+   "id": "T0065",
+   "lang": "lzh",
+   "label": "伏婬經",
+   "who": "西晉 法炬譯",
+   "reorder": true
+  }
+ ],
+ "works": [
+  "T0026",
+  "T0065"
+ ],
+ "anchors": [
+  {
+   "work": "T0026",
+   "node": "（一二六）大品行欲經第十（第三念誦）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "an10.91": "Aṅguttara Nikāya 10.91",
+   "T0026-ma126": "我聞如是：一時，佛遊舍衛國，在勝林給孤獨園。爾時，給孤獨居士往詣佛所，稽首佛足，却坐一面，白曰：「世尊！",
+   "T0065": "聞如是：一時，婆加婆在舍衛城祇樹給孤獨園。彼時，居士阿那邠祁至世尊所，到已禮世尊足，却住一面。阿那邠祁居士却住一面已，白世尊曰：「唯，世尊！"
+  },
+  "a01": {
+   "an10.91": "10. Upālivagga Kāmabhogīsutta Ekaṁ samayaṁ bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme.",
+   "T0026-ma126": "世中為有幾人行欲？」世尊告曰：「居士！",
+   "T0065": "世間有幾伏婬而可知者？」"
+  },
+  "a02": {
+   "an10.91": "Atha kho anāthapiṇḍiko gahapati yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdi. Ekamantaṁ nisinnaṁ kho anāthapiṇḍikaṁ gahapatiṁ bhagavā etadavoca: “Dasayime, gahapati, kāmabhogī santo saṁvijjamānā lokasmiṁ. Katame dasa?",
+   "T0026-ma126": "世中凡有十人行欲。",
+   "T0065": "「汝居士！世間有十伏婬。云何為十？此居士，或一伏婬，非法行婬干彼，非法求婬干（無所方便為苦）已，亦不自安身，亦不安父母及妻子、客使奴婢、沙門婆羅門，不有益事，為善得善得生天上。"
+  },
+  "a03": {
+   "an10.91": "Idha, gahapati, ekacco kāmabhogī adhammena bhoge pariyesati sāhasena; adhammena bhoge pariyesitvā sāhasena na attānaṁ sukheti na pīṇeti na saṁvibhajati na puññāni karoti.",
+   "T0026-ma126": "云何為十？居士，有一行欲人，非法無道求索財物，彼非法無道求財物已，不自養安隱及父母、妻子、奴婢、作使，亦不供養沙門、梵志，令昇上與樂俱而受樂報，生天長壽。如是有一行欲人也。",
+   "T0065": "如是，居士！是一伏婬。「復次，居士，或一伏婬，非法求婬干彼，非法求婬干已，自安身、父母妻子、客使奴婢，而不施沙門婆羅門，為善得善身生善處。"
+  },
+  "a04": {
+   "an10.91": "Idha pana, gahapati, ekacco kāmabhogī adhammena bhoge pariyesati sāhasena; adhammena bhoge pariyesitvā sāhasena attānaṁ sukheti pīṇeti, na saṁvibhajati na puññāni karoti.",
+   "T0026-ma126": "復次，居士！有一行欲人，非法無道求索財物，彼非法無道求財物已，能自養安隱及父母、妻子、奴婢、作使，而不供養沙門、梵志，令昇上與樂俱而受樂報，生天長壽。如是有一行欲人也。",
+   "T0065": "如是，居士！是一伏婬。「復次，居士！或一伏婬，非法求干彼，非法求干已，自安隱身、父母妻子、客使奴婢，能施沙門婆羅門，為善得善身生善處。"
+  },
+  "a05": {
+   "an10.91": "Idha pana, gahapati, ekacco kāmabhogī adhammena bhoge pariyesati sāhasena; adhammena bhoge pariyesitvā sāhasena attānaṁ sukheti pīṇeti saṁvibhajati puññāni karoti.",
+   "T0026-ma126": "復次，居士！有一行欲人，非法無道求索財物，彼非法無道求財物已，能自養安隱及父母、妻子、奴婢、作使，亦供養沙門、梵志，令昇上與樂俱而受樂報，生天長壽。如是有一行欲人也。",
+   "T0065": "如是，居士！是一伏婬。「復次，居士！或一伏婬，如法求財，彼如法求財已，不自安樂身，不為父母、不為妻子、不為奴婢，亦不施沙門婆羅門，為善得善身生善處。"
+  },
+  "a06": {
+   "an10.91": "Idha pana, gahapati, ekacco kāmabhogī dhammādhammena bhoge pariyesati sāhasenapi asāhasenapi; dhammādhammena bhoge pariyesitvā sāhasenapi asāhasenapi na attānaṁ sukheti na pīṇeti na saṁvibhajati na puññāni karoti.",
+   "T0026-ma126": "「復次，居士！有一行欲人，法非法求索財物，彼法非法求財物已，不自養安隱及父母、妻子、奴婢、作使，亦不供養沙門、梵志，令昇上與樂俱而受樂報，生天長壽。如是有一行欲人也。",
+   "T0065": "如是，居士，是一伏婬。"
+  },
+  "a07": {
+   "an10.91": "Idha pana, gahapati, ekacco kāmabhogī dhammādhammena bhoge pariyesati sāhasenapi asāhasenapi; dhammādhammena bhoge pariyesitvā sāhasenapi asāhasenapi attānaṁ sukheti pīṇeti, na saṁvibhajati na puññāni karoti.",
+   "T0026-ma126": "復次，居士！有一行欲人，法非法求索財物，彼法非法求財物已，能自養安隱及父母、妻子、奴婢、作使，而不供養沙門、梵志，令昇上與樂俱而受樂報，生天長壽。如是有一行欲人也。",
+   "T0065": "「復次，居士！或一伏婬，如法求財，彼如法求財已，而自安樂身，及父母妻子奴婢，不施與沙門婆羅門，為善得善身生善處。"
+  },
+  "a08": {
+   "an10.91": "Idha pana, gahapati, ekacco kāmabhogī dhammādhammena bhoge pariyesati sāhasenapi asāhasenapi; dhammādhammena bhoge pariyesitvā sāhasenapi asāhasenapi attānaṁ sukheti pīṇeti saṁvibhajati puññāni karoti.",
+   "T0026-ma126": "復次，居士！有一行欲人，法非法求索財物，彼法非法求財物已，能自養安隱及父母、妻子、奴婢、作使，亦供養沙門、梵志，令昇上與樂俱而受樂報，生天長壽。如是有一行欲人也。」",
+   "T0065": "如是，居士！是一伏婬。「復次，居士！或一伏婬，如法求財，彼如法求財已，而自安樂身，及父母妻子奴婢，施與沙門婆羅門，為善得善身生善處。"
+  },
+  "a09": {
+   "an10.91": "Idha pana, gahapati, ekacco kāmabhogī dhammena bhoge pariyesati asāhasena; dhammena bhoge pariyesitvā asāhasena na attānaṁ sukheti na pīṇeti na saṁvibhajati na puññāni karoti.",
+   "T0026-ma126": "「復次，居士！有一行欲人，如法以道求索財物，彼如法以道求財物已，不自養安隱及父母、妻子、奴婢、作使，亦不供養沙門、梵志，令昇上與樂俱而受樂報，生天長壽。如是有一行欲人也。",
+   "T0065": "如是，居士！是一伏婬。「復次，居士！或一伏婬，如法求財不干彼，如法求財不干已，亦不自安樂身，亦不為父母妻子奴婢，亦不施與沙門婆羅門，為善得善身生善處。"
+  },
+  "a10": {
+   "an10.91": "Idha pana, gahapati, ekacco kāmabhogī dhammena bhoge pariyesati asāhasena; dhammena bhoge pariyesitvā asāhasena attānaṁ sukheti pīṇeti, na saṁvibhajati na puññāni karoti.",
+   "T0026-ma126": "復次，居士！有一行欲人，如法以道求索財物，彼如法以道求財物已，能自養安隱及父母、妻子、奴婢、作使，而不供養沙門、梵志，令昇上與樂俱而受樂報，生天長壽。如是有一行欲行人也。",
+   "T0065": "如是，居士！是一伏婬。「復次，居士！或一伏婬，如法求財不干彼，如法求財不干已，自得安樂身及父母妻子奴婢，不施與沙門婆羅門，為善得善身生善處。"
+  },
+  "a11": {
+   "an10.91": "Idha pana, gahapati, ekacco kāmabhogī dhammena bhoge pariyesati asāhasena; dhammena bhoge pariyesitvā asāhasena attānaṁ sukheti pīṇeti saṁvibhajati puññāni karoti. Te ca bhoge gathito mucchito ajjhosanno anādīnavadassāvī anissaraṇapañño paribhuñjati.",
+   "T0026-ma126": "「復次，居士！有一行欲人，如法以道求索財物，彼如法以道求財物已，能自養安隱及父母、妻子、奴婢、作使，亦供養沙門、梵志，令昇上與樂俱而受樂報，生天長壽。得財物已，染著縛繳，繳已染著，不見災患，不知出要而用。如是有一行欲人也。復次，居士！有一行欲人，如法以道求索財物，彼如法以道求財物已，能自養安隱及父母、妻子、奴婢、作使，亦供養沙門、梵志，令昇上與樂俱而受樂報，生天長壽。",
+   "T0065": "如是，居士！是一伏婬。「復次，居士！或一伏婬，如法求財不干彼，如法求財不干已，自得安樂身，及父母妻子奴婢，施與沙門婆羅門，為善得善身生善處。彼得錢財，於中染著、極染著，不見禍變，亦不知棄，而貪食之。如是，居士！是一伏婬。「復次，居士！或一伏婬，如法求錢財不干彼，如法求錢財不干已，自得安隱身，及父母妻子奴婢，施與沙門婆羅門，為善得善身生善處。"
+  },
+  "a12": {
+   "an10.91": "Idha pana, gahapati, ekacco kāmabhogī dhammena bhoge pariyesati asāhasena; dhammena bhoge pariyesitvā asāhasena attānaṁ sukheti pīṇeti saṁvibhajati puññāni karoti. Te ca bhoge agathito amucchito anajjhosanno ādīnavadassāvī nissaraṇapañño paribhuñjati.",
+   "T0026-ma126": "得財物已，不染不著，不縛不繳，不繳已染著，見災患，知出要而用。如是有一行欲人也。",
+   "T0065": "彼得錢財，亦不染亦不著，亦不於中樂，亦不於中住，亦知是禍變，亦能棄捨而食之。如是，居士！是一伏婬。「此居士！彼或一伏婬，非法求錢財干彼，非法求錢財干已，亦不自安隱身，亦不安隱父母、妻子奴婢，亦不施與沙門婆羅門，為善得善身生善處。"
+  },
+  "a13": {
+   "an10.91": "Tatra, gahapati, yvāyaṁ kāmabhogī adhammena bhoge pariyesati sāhasena, adhammena bhoge pariyesitvā sāhasena na attānaṁ sukheti na pīṇeti na saṁvibhajati na puññāni karoti, ayaṁ, gahapati, kāmabhogī tīhi ṭhānehi gārayho. ‘Adhammena bhoge pariyesati sāhasenā’ti, iminā paṭhamena ṭhānena gārayho. ‘Na attānaṁ sukheti na pīṇetī’ti, iminā dutiyena ṭhānena gārayho. ‘Na saṁvibhajati na puññāni karotī’ti, iminā tatiyena ṭhānena gārayho.",
+   "T0026-ma126": "「居士！若有一行欲人，非法無道求索財物，彼非法無道求財物已，不自養安隱及父母、妻子、奴婢、作使，亦不供養沙門、梵志，令昇上與樂俱而受樂報，生天長壽者，此行欲人於諸行欲人為最下也。居士！若有一行欲人，法非法求索財物，彼法非法求財物已，自養安隱及父母、妻子、奴婢、作使，亦供養沙門、梵志，令昇上與樂俱而受樂報，生天長壽者，此行欲人於諸行欲人為最上也。「居士！若有一行欲人，如法以道求索財物，彼如法以道求財物已，自養安隱及父母、妻子、奴婢、作使，亦供養沙門、梵志，令昇上與樂俱而受樂報，生天長壽。得財物已，不染不著，不縛不繳，不繳已染著，見災患，知出要而用者，此行欲人於諸行欲人為最第一、最大、最上、最勝、最尊，為最妙也。",
+   "T0065": "是為，居士！如是伏婬。伏婬我說此弊惡。「此居士！或一伏婬，非法求錢財干彼，非法求錢財干已，自安隱身，及父母妻子奴婢，不施與沙門婆羅門，為善得善身生善處。此居士！此伏婬此，伏婬此小勝小勝。「此居士！彼或一伏婬，如法求錢財不干彼，如法求錢財不干已，自得安樂身，及父母妻子奴婢，施與沙門婆羅門，為善得善身生善處。彼得錢財，不染不著、不持不樂，知是禍變、棄捨離而食之。如是。居士！食婬最勝最妙、最上最好、無上勝。"
+  },
+  "a14": {
+   "an10.91": "Ayaṁ, gahapati, kāmabhogī imehi tīhi ṭhānehi gārayho. Tatra, gahapati, yvāyaṁ kāmabhogī adhammena bhoge pariyesati sāhasena, adhammena bhoge pariyesitvā sāhasena attānaṁ sukheti pīṇeti na saṁvibhajati na puññāni karoti, ayaṁ, gahapati, kāmabhogī dvīhi ṭhānehi gārayho ekena ṭhānena pāsaṁso. ‘Adhammena bhoge pariyesati sāhasenā’ti, iminā paṭhamena ṭhānena gārayho. ‘Attānaṁ sukheti pīṇetī’ti, iminā ekena ṭhānena pāsaṁso. ‘Na saṁvibhajati na puññāni karotī’ti iminā dutiyena ṭhānena gārayho. Ayaṁ, gahapati, kāmabhogī imehi dvīhi ṭhānehi gārayho iminā ekena ṭhānena pāsaṁso. Tatra, gahapati, yvāyaṁ kāmabhogī adhammena bhoge pariyesati sāhasena, adhammena bhoge pariyesitvā sāhasena attānaṁ sukheti pīṇeti saṁvibhajati puññāni karoti, ayaṁ, gahapati, kāmabhogī ekena ṭhānena gārayho dvīhi ṭhānehi pāsaṁso. ‘Adhammena bhoge pariyesati sāhasenā’ti, iminā ekena ṭhānena gārayho. ‘Attānaṁ sukheti pīṇetī’ti, iminā paṭhamena ṭhānena pāsaṁso. ‘Saṁvibhajati puññāni karotī’ti, iminā dutiyena ṭhānena pāsaṁso. Ayaṁ, gahapati, kāmabhogī iminā ekena ṭhānena gārayho, imehi dvīhi ṭhānehi pāsaṁso. Tatra, gahapati, yvāyaṁ kāmabhogī dhammādhammena bhoge pariyesati sāhasenapi asāhasenapi, dhammādhammena bhoge pariyesitvā sāhasenapi asāhasenapi na attānaṁ sukheti na pīṇeti na saṁvibhajati na puññāni karoti, ayaṁ, gahapati, kāmabhogī ekena ṭhānena pāsaṁso tīhi ṭhānehi gārayho. ‘Dhammena bhoge pariyesati asāhasenā’ti, iminā ekena ṭhānena pāsaṁso. ‘Adhammena bhoge pariyesati sāhasenā’ti, iminā paṭhamena ṭhānena gārayho. ‘Na attānaṁ sukheti na pīṇetī’ti, iminā dutiyena ṭhānena gārayho. ‘Na saṁvibhajati na puññāni karotī’ti, iminā tatiyena ṭhānena gārayho. Ayaṁ, gahapati, kāmabhogī iminā ekena ṭhānena pāsaṁso imehi tīhi ṭhānehi gārayho. Tatra, gahapati, yvāyaṁ kāmabhogī dhammādhammena bhoge pariyesati sāhasenapi asāhasenapi, dhammādhammena bhoge pariyesitvā sāhasenapi asāhasenapi attānaṁ sukheti pīṇeti na saṁvibhajati na puññāni karoti, ayaṁ, gahapati, kāmabhogī dvīhi ṭhānehi pāsaṁso dvīhi ṭhānehi gārayho. ‘Dhammena bhoge pariyesati asāhasenā’ti, iminā paṭhamena ṭhānena pāsaṁso. ‘Adhammena bhoge pariyesati sāhasenā’ti, iminā paṭhamena ṭhānena gārayho. ‘Attānaṁ sukheti pīṇetī’ti, iminā dutiyena ṭhānena pāsaṁso. ‘Na saṁvibhajati na puññāni karotī’ti, iminā dutiyena ṭhānena gārayho. Ayaṁ, gahapati, kāmabhogī imehi dvīhi ṭhānehi pāsaṁso imehi dvīhi ṭhānehi gārayho. Tatra, gahapati, yvāyaṁ kāmabhogī dhammādhammena bhoge pariyesati sāhasenapi asāhasenapi, dhammādhammena bhoge pariyesitvā sāhasenapi asāhasenapi attānaṁ sukheti pīṇeti saṁvibhajati puññāni karoti, ayaṁ, gahapati, kāmabhogī tīhi ṭhānehi pāsaṁso ekena ṭhānena gārayho. ‘Dhammena bhoge pariyesati asāhasenā’ti, iminā paṭhamena ṭhānena pāsaṁso. ‘Adhammena bhoge pariyesati sāhasenā’ti, iminā ekena ṭhānena gārayho. ‘Attānaṁ sukheti pīṇetī’ti, iminā dutiyena ṭhānena pāsaṁso. ‘Saṁvibhajati puññāni karotī’ti, iminā tatiyena ṭhānena pāsaṁso. Ayaṁ, gahapati, kāmabhogī imehi tīhi ṭhānehi pāsaṁso iminā ekena ṭhānena gārayho. Tatra, gahapati, yvāyaṁ kāmabhogī dhammena bhoge pariyesati asāhasena, dhammena bhoge pariyesitvā asāhasena na attānaṁ sukheti na pīṇeti na saṁvibhajati na puññāni karoti, ayaṁ, gahapati, kāmabhogī ekena ṭhānena pāsaṁso dvīhi ṭhānehi gārayho. ‘Dhammena bhoge pariyesati asāhasenā’ti, iminā ekena ṭhānena pāsaṁso. ‘Na attānaṁ sukheti na pīṇetī’ti, iminā paṭhamena ṭhānena gārayho. ‘Na saṁvibhajati na puññāni karotī’ti, iminā dutiyena ṭhānena gārayho. Ayaṁ, gahapati, kāmabhogī iminā ekena ṭhānena pāsaṁso imehi dvīhi ṭhānehi gārayho. Tatra, gahapati, yvāyaṁ kāmabhogī dhammena bhoge pariyesati asāhasena, dhammena bhoge pariyesitvā asāhasena attānaṁ sukheti pīṇeti na saṁvibhajati na puññāni karoti, ayaṁ, gahapati, kāmabhogī dvīhi ṭhānehi pāsaṁso ekena ṭhānena gārayho. ‘Dhammena bhoge pariyesati asāhasenā’ti, iminā paṭhamena ṭhānena pāsaṁso. ‘Attānaṁ sukheti pīṇetī’ti, iminā dutiyena ṭhānena pāsaṁso. ‘Na saṁvibhajati na puññāni karotī’ti iminā ekena ṭhānena gārayho. Ayaṁ, gahapati, kāmabhogī imehi dvīhi ṭhānehi pāsaṁso iminā ekena ṭhānena gārayho. Tatra, gahapati yvāyaṁ kāmabhogī dhammena bhoge pariyesati asāhasena, dhammena bhoge pariyesitvā asāhasena attānaṁ sukheti pīṇeti saṁvibhajati puññāni karoti, te ca bhoge gathito mucchito ajjhosanno anādīnavadassāvī anissaraṇapañño paribhuñjati, ayaṁ, gahapati, kāmabhogī tīhi ṭhānehi pāsaṁso ekena ṭhānena gārayho. ‘Dhammena bhoge pariyesati asāhasenā’ti, iminā paṭhamena ṭhānena pāsaṁso. ‘Attānaṁ sukheti pīṇetī’ti, iminā dutiyena ṭhānena pāsaṁso. ‘Saṁvibhajati puññāni karotī’ti, iminā tatiyena ṭhānena pāsaṁso. ‘Te ca bhoge gathito mucchito ajjhosanno anādīnavadassāvī anissaraṇapañño paribhuñjatī’ti, iminā ekena ṭhānena gārayho. Ayaṁ, gahapati, kāmabhogī imehi tīhi ṭhānehi pāsaṁso iminā ekena ṭhānena gārayho. Tatra, gahapati, yvāyaṁ kāmabhogī dhammena bhoge pariyesati asāhasena, dhammena bhoge pariyesitvā asāhasena attānaṁ sukheti pīṇeti saṁvibhajati puññāni karoti, te ca bhoge agathito amucchito anajjhosanno ādīnavadassāvī nissaraṇapañño paribhuñjati, ayaṁ, gahapati, kāmabhogī catūhi ṭhānehi pāsaṁso. ‘Dhammena bhoge pariyesati asāhasenā’ti, iminā paṭhamena ṭhānena pāsaṁso. ‘Attānaṁ sukheti pīṇetī’ti, iminā dutiyena ṭhānena pāsaṁso. ‘Saṁvibhajati puññāni karotī’ti, iminā tatiyena ṭhānena pāsaṁso. ‘Te ca bhoge agathito amucchito anajjhosanno ādīnavadassāvī nissaraṇapañño paribhuñjatī’ti, iminā catutthena ṭhānena pāsaṁso. Ayaṁ, gahapati, kāmabhogī imehi catūhi ṭhānehi pāsaṁso. Ime kho, gahapati, dasa kāmabhogī santo saṁvijjamānā lokasmiṁ. Imesaṁ kho, gahapati, dasannaṁ kāmabhogīnaṁ yvāyaṁ kāmabhogī dhammena bhoge pariyesati asāhasena, dhammena bhoge pariyesitvā asāhasena attānaṁ sukheti pīṇeti saṁvibhajati puññāni karoti, te ca bhoge agathito amucchito anajjhosanno ādīnavadassāvī nissaraṇapañño paribhuñjati, ayaṁ imesaṁ dasannaṁ kāmabhogīnaṁ aggo ca seṭṭho ca pāmokkho ca uttamo ca pavaro ca.",
+   "T0026-ma126": "於是，世尊說此頌曰：「若非法求財，及法非法求，\n不供不自用，亦不施為福，\n二俱皆有惡，於行欲最下。\n若如法求財，自身懃所得，\n供他及自用，亦以施為福，\n二俱皆有德，於行欲最上。\n若得出要慧，行欲住在家，\n見災患知足，節儉用財物，\n彼得出欲慧，於行欲最上。」",
+   "T0065": "說頌偈曰：「非法聚錢財，如法如法施；\n不施不食之，亦不施為福，\n二俱為慳濁，惡行食此婬。\n如法求錢財，欲以施為福，\n亦施及食之，亦能作福德，\n二俱不慳濁，皆有此伏婬。\n有能行智慧，伏婬隨所行，\n知變有知足，知足而食之。"
+  },
+  "a15": {
+   "an10.91": "Seyyathāpi, gahapati, gavā khīraṁ, khīramhā dadhi, dadhimhā navanītaṁ, navanītamhā sappi, sappimhā sappimaṇḍo. Sappimaṇḍo tattha aggamakkhāyati.",
+   "T0026-ma126": "猶如因牛有乳，因乳有酪，因酪有生酥，因生酥有熟酥，因熟酥有酥精，酥精者，為最第一、最大、最上、最勝、最尊，為最妙也。",
+   "T0065": "猶若，居士！有牛乳，因乳有酪，因酪有醍醐，因醍醐有酥，因酥有酪酥，此是最勝最妙無上說。"
+  },
+  "a16": {
+   "an10.91": "Evamevaṁ kho, gahapati, imesaṁ dasannaṁ kāmabhogīnaṁ yvāyaṁ kāmabhogī dhammena bhoge pariyesati asāhasena, dhammena bhoge pariyesitvā asāhasena attānaṁ sukheti pīṇeti saṁvibhajati puññāni karoti, te ca bhoge agathito amucchito anajjhosanno ādīnavadassāvī nissaraṇapañño paribhuñjati, ayaṁ imesaṁ dasannaṁ kāmabhogīnaṁ aggo ca seṭṭho ca pāmokkho ca uttamo ca pavaro cā”ti.",
+   "T0026-ma126": "如是，居士！此行欲人於諸行欲人為最第一、最大、最上、最勝、最尊，為最妙也。」",
+   "T0065": "如是，居士！此諸伏婬如是伏婬，最勝最妙、極妙最上、無上無上。"
+  },
+  "a17": {
+   "an10.91": "Paṭhamaṁ.",
+   "T0026-ma126": "佛說如是。給孤獨居士及諸比丘，聞佛所說，歡喜奉行。行欲經第十竟（千二百五十三字）",
+   "T0065": "有能行智慧，最妙能伏婬。」佛如是說，居士阿那邠祁聞世尊所說，歡喜而樂。"
+  }
+ }
+}

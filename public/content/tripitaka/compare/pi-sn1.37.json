@@ -1,0 +1,138 @@
+{
+ "slug": "pi-sn1.37",
+ "title": "別譯雜阿含經 （一〇五）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "諸天集會"
+  },
+  {
+   "id": "a02",
+   "label": "四淨居天發心詣佛"
+  },
+  {
+   "id": "a03",
+   "label": "諸天現身禮佛"
+  },
+  {
+   "id": "a04",
+   "label": "第一梵天偈"
+  },
+  {
+   "id": "a05",
+   "label": "第二梵天偈"
+  },
+  {
+   "id": "a06",
+   "label": "第三梵天偈"
+  },
+  {
+   "id": "a07",
+   "label": "第四梵天偈"
+  },
+  {
+   "id": "a08",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn1.37",
+   "lang": "pi",
+   "label": "巴利 SN1.37",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn1.37",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN1.37",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.105",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （一〇五）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa1192",
+   "lang": "lzh",
+   "label": "雜阿含經 （一一九二）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（一〇五）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一一九二）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn1.37": "Saṁyutta Nikāya 1.37",
+   "T0100-sa-2.105": "如是我聞：一時，佛在釋翅迦毘羅衛林，與五百大比丘眾俱，皆是阿羅漢，諸漏已盡，所作已辦，捨於重擔，逮得己利，盡於後有，無復結使，正智解脫。",
+   "T0099-sa1192": "如是我聞：一時，佛住迦毘羅衛迦毘羅衛林中，與五百比丘俱，皆是羅漢，諸漏已盡，所作已作，離諸重擔，逮得己利，盡諸有結，正智心善解脫。"
+  },
+  "a01": {
+   "sn1.37": "4. Satullapakāyikavagga Samayasutta Evaṁ me sutaṁ— ekaṁ samayaṁ bhagavā sakkesu viharati kapilavatthusmiṁ mahāvane mahatā bhikkhusaṅghena saddhiṁ pañcamattehi bhikkhusatehi sabbeheva arahantehi; dasahi ca lokadhātūhi devatā yebhuyyena sannipatitā honti bhagavantaṁ dassanāya bhikkhusaṅghañca.",
+   "nan-sn1.37": "〔三七〕第七　會",
+   "T0100-sa-2.105": "復有十世界大威德諸天，來至佛所，問訊佛僧。於時，世尊說於隨順涅盤之法。",
+   "T0099-sa1192": "爾時，世尊為諸大眾說涅槃相應法。時，有十方世界大眾威力諸天皆悉來會，供養世尊及比丘僧。"
+  },
+  "a02": {
+   "sn1.37": "Atha kho catunnaṁ suddhāvāsakāyikānaṁ devatānaṁ etadahosi: “ayaṁ kho bhagavā sakkesu viharati kapilavatthusmiṁ mahāvane mahatā bhikkhusaṅghena saddhiṁ pañcamattehi bhikkhusatehi sabbeheva arahantehi; dasahi ca lokadhātūhi devatā yebhuyyena sannipatitā honti bhagavantaṁ dassanāya bhikkhusaṅghañca. Yannūna mayampi yena bhagavā tenupasaṅkameyyāma; upasaṅkamitvā bhagavato santike paccekaṁ gāthaṁ bhāseyyāmā”ti.",
+   "nan-sn1.37": "如是我聞。爾時，世尊與諸阿羅漢之五百比丘，共住於釋迦族迦毘羅城之大林。十世界之多數諸天，亦為謁見世尊及比丘眾而會集。",
+   "T0100-sa-2.105": "有四梵身天各作是念：「今佛在釋翅迦羅衛林，與五百比丘僧俱，皆是大阿羅漢，諸漏已盡，所作已辦，捨於重擔，逮得己利，盡於後有，無復結使，正智解脫。復有十世界大威德天，來至佛所，問訊佛僧，世尊為其說於隨順涅盤之法。我於今者，當往於彼佛世尊所。」",
+   "T0099-sa1192": "復有諸梵天王住於梵世，作是念：「今日佛住迦毘羅衛國……」如上廣說，乃至「供養世尊及諸大眾，我今當往各各讚歎！」"
+  },
+  "a03": {
+   "sn1.37": "Atha kho tā devatā—seyyathāpi nāma balavā puriso samiñjitaṁ vā bāhaṁ pasāreyya pasāritaṁ vā bāhaṁ samiñjeyya; evameva—suddhāvāsesu devesu antarahitā bhagavato purato pāturahesuṁ. Atha kho tā devatā bhagavantaṁ abhivādetvā ekamantaṁ aṭṭhaṁsu.",
+   "nan-sn1.37": "爾時，四淨居之諸天如是思念：〔今〕世尊與諸阿羅漢之五百比丘共住於釋迦族迦毘羅城之大林，十世界之多數諸天，為謁見世尊及比丘眾而會集。我等亦詣世尊之處。詣已，於世尊前，各唱其偈。如是彼等諸天，恰如有力人之伸屈臂腕，屈伸臂腕，如是沒於淨居天，現於世尊處。",
+   "T0100-sa-2.105": "時，梵身天作是念已，即於彼沒，譬如壯士屈申臂頃，來至佛所，頂禮佛足，在一面立。",
+   "T0099-sa1192": "作是念已，譬如力士屈伸臂頃，從梵天沒，住於佛前。"
+  },
+  "a04": {
+   "sn1.37": "Ekamantaṁ ṭhitā kho ekā devatā bhagavato santike imaṁ gāthaṁ abhāsi: “Mahāsamayo pavanasmiṁ, Devakāyā samāgatā; Āgatamha imaṁ dhammasamayaṁ, Dakkhitāye aparājitasaṅghan”ti.",
+   "nan-sn1.37": "爾時，彼等諸天，禮敬世尊，立於一面，立於一面之一天神，於世尊前唱偈曰：林中大集會天眾共會集\n見無敗僧伽我等亦來赴\n此法之集會",
+   "T0100-sa-2.105": "時，第一梵身天而說偈言：「今於此林中，集會於大眾，\n是故我等來，正欲觀眾僧，\n不以不善心，壞僧破和合。」",
+   "T0099-sa1192": "第一梵天即說偈言：「於此大林中，大眾普雲集，\n十方諸天眾，皆悉來恭敬，\n故我遠來禮，最勝難伏僧。」"
+  },
+  "a05": {
+   "sn1.37": "Atha kho aparā devatā bhagavato santike imaṁ gāthaṁ abhāsi: “Tatra bhikkhavo samādahaṁsu, Cittamattano ujukaṁ akaṁsu; Sārathīva nettāni gahetvā, Indriyāni rakkhanti paṇḍitā”ti.",
+   "nan-sn1.37": "爾時，其他之天神，於世尊前，唱此偈曰：於此比丘等自心靜且直\n如御執手綱賢者守諸根",
+   "T0100-sa-2.105": "第二梵身天復說偈言：「比丘誠實心，宜應務精勤，\n猶如善御者，制馬令調順，\n比丘亦如是，應制御諸根。」",
+   "T0099-sa1192": "第二梵天復說偈言：「是諸比丘僧，真實心精進，\n於此大林中，攝諸根求度。」"
+  },
+  "a06": {
+   "sn1.37": "Atha kho aparā devatā bhagavato santike imaṁ gāthaṁ abhāsi: “Chetvā khīlaṁ chetvā palighaṁ, Indakhīlaṁ ūhacca manejā; Te caranti suddhā vimalā, Cakkhumatā sudantā susunāgā”ti.",
+   "nan-sn1.37": "爾時，其他之天神，於世尊前，唱此偈曰：割柱碎閂銓除柵離貪欲\n有眼者清淨不污於遊行\n善調若幼象",
+   "T0100-sa-2.105": "第三梵身天復說偈言：「譬如野馬被羇繫，拔柱蹋塹安隱出，\n諸比丘等亦如是，拔三毒柱斷欲塹，\n世尊導師之所調，能出是等大龍象。」",
+   "T0099-sa1192": "第三梵天次說偈言：「善方便消融，恩愛深利刺；\n堅固不傾動，如因陀羅幢。\n度深塹水流，清淨不求欲，\n善度之導師，諸調伏大龍。」"
+  },
+  "a07": {
+   "sn1.37": "Atha kho aparā devatā bhagavato santike imaṁ gāthaṁ abhāsi: “Ye keci buddhaṁ saraṇaṁ gatāse, Na te gamissanti apāyabhūmiṁ; Pahāya mānusaṁ dehaṁ, Devakāyaṁ paripūressantī”ti.",
+   "nan-sn1.37": "爾時，其他之天神，唱此偈曰：誰歸命於佛不墮於惡趣\n此人以捨身應滿於天集",
+   "T0100-sa-2.105": "第四梵身天復說偈言：「諸有歸依於佛者，人中捨形得天身。」",
+   "T0099-sa1192": "第四梵天次說偈言：「歸依於佛者，終不墮惡趣；\n能斷人中身，得天身受樂。」"
+  },
+  "a08": {
+   "T0100-sa-2.105": "時，四梵身天各說偈已，在於僧中，敬心戰慄，作禮而去。",
+   "T0099-sa1192": "各說偈已，四梵天身即沒不現。"
+  }
+ }
+}

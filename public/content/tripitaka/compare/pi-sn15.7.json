@@ -1,0 +1,112 @@
+{
+ "slug": "pi-sn15.7",
+ "title": "別譯雜阿含經 （三四三）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。複核標記存疑 1 段：義段4的別譯雜阿含經（三四三）與雜阿含經（九五〇）內容顯然屬於流通分（義段5），而非結論段，構成錯位。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "比丘問劫數"
+  },
+  {
+   "id": "a02",
+   "label": "請求譬喻"
+  },
+  {
+   "id": "a03",
+   "label": "譬喻：四聲聞憶劫"
+  },
+  {
+   "id": "a04",
+   "label": "結論：劫數不可數",
+   "doubt": true
+  },
+  {
+   "id": "a05",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn15.7",
+   "lang": "pi",
+   "label": "巴利 SN15.7",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn15.7",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN15.7",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.343",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （三四三）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa950",
+   "lang": "lzh",
+   "label": "雜阿含經 （九五〇）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（三四三）"
+  },
+  {
+   "work": "T0099",
+   "node": "（九五〇）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn15.7": "Saṁyutta Nikāya 15.7 1. Paṭhamavagga Sāvakasutta",
+   "nan-sn15.7": "〔七〕第七　聲聞〔爾時，世尊〕住舍衛城。",
+   "T0100-sa-2.343": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。",
+   "T0099-sa950": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。爾時，世尊告諸比丘：「眾生無始生死，長夜輪轉，不知苦之本際。」"
+  },
+  "a01": {
+   "sn15.7": "Sāvatthiyaṁ viharati. Atha kho sambahulā bhikkhū yena bhagavā …pe… ekamantaṁ nisinnā kho te bhikkhū bhagavantaṁ etadavocuṁ: “kīvabahukā nu kho, bhante, kappā abbhatītā atikkantā”ti? “Bahukā kho, bhikkhave, kappā abbhatītā atikkantā. Te na sukarā saṅkhātuṁ:",
+   "nan-sn15.7": "爾時，眾多之比丘，來詣世尊之處……坐於一面之彼等諸比丘，白世尊言：「大德！經過幾多劫耶？」",
+   "T0100-sa-2.343": "爾時，眾中有一比丘，從坐而起，整衣服，長跪合掌，白佛言：「世尊！從昔已來，多少劫過？」",
+   "T0099-sa950": "時，有異比丘從坐起，整衣服，為佛作禮，右膝著地，合掌白佛：「世尊！"
+  },
+  "a02": {
+   "sn15.7": "‘ettakā kappā iti vā, ettakāni kappasatāni iti vā, ettakāni kappasahassāni iti vā, ettakāni kappasatasahassāni iti vā’”ti. “Sakkā pana, bhante, upamaṁ kātun”ti?",
+   "nan-sn15.7": "「諸比丘！經過已多劫。此等為多劫，或為多百劫，或為多千劫、或為多百千劫，不能算數。」",
+   "T0100-sa-2.343": "佛告比丘：「吾可說之，汝不能解。」比丘白佛言：「可作方喻說不？」",
+   "T0099-sa950": "過去有幾劫？」佛告比丘：「我悉能說，汝知甚難。」比丘白佛：「可說譬不？」"
+  },
+  "a03": {
+   "sn15.7": "“Sakkā, bhikkhave”ti bhagavā avoca. “Idhassu, bhikkhave, cattāro sāvakā vassasatāyukā vassasatajīvino. Te divase divase kappasatasahassaṁ kappasatasahassaṁ anussareyyuṁ. Ananussaritāva, bhikkhave, tehi kappā assu, atha kho te cattāro sāvakā vassasatāyukā vassasatajīvino vassasatassa accayena kālaṁ kareyyuṁ.",
+   "nan-sn15.7": "「大德！唯然，可得作譬喻耶？」",
+   "T0100-sa-2.343": "佛言：「可作方喻。假設有人，年滿百歲，於一日中，晨起、日中及日暮，三時各憶百千劫事，如是日日憶念，滿足百年，猶不能得過去劫數邊際。",
+   "T0099-sa950": "佛言：「可說。譬如，比丘！有士夫壽命百歲，晨朝憶念三百千劫，日中憶念三百千劫，日暮憶念三百千劫。如是日日憶念劫數，百年命終，不能憶念劫數邊際。"
+  },
+  "a04": {
+   "sn15.7": "Evaṁ bahukā kho, bhikkhave, kappā abbhatītā atikkantā. Te na sukarā saṅkhātuṁ: ‘ettakā kappā iti vā, ettakāni kappasatāni iti vā, ettakāni kappasahassāni iti vā, ettakāni kappasatasahassāni iti vā’ti.",
+   "nan-sn15.7": "「諸比丘！可得作〔譬喻〕。」世尊曰：「諸比丘！此處有四聲聞百歲之壽、百歲之命，彼等日日憶念百千劫，諸比丘！諸劫為由彼等之所憶念。時彼等四聲聞百歲之壽、百歲之命，過百歲而歿。",
+   "T0100-sa-2.343": "劫數長遠，亦復如是。",
+   "T0099-sa950": "比丘當知，過去劫數無量如是，過去無量劫數，長夜受苦，積骨成山，髓血成流，乃至地獄、畜生、餓鬼惡趣。"
+  },
+  "a05": {
+   "sn15.7": "Taṁ kissa hetu? Anamataggoyaṁ, bhikkhave, saṁsāro …pe… alaṁ vimuccitun”ti. Sattamaṁ.",
+   "nan-sn15.7": "諸比丘！如是經過多劫，彼等為多劫，或為多百劫，或為多千劫，或為多百千劫，不可算數。所以者何？諸比丘！輪迴乃無始……足於解脫。」",
+   "T0100-sa-2.343": "眾生於是長遠劫中，受眾苦極麁澁痛苦，心不生憙，數受地獄、餓鬼、畜生，入於惡趣。是故比丘，應斷後有，勤修方便，絕離諸有。汝等比丘，應作是學。」諸比丘聞佛所說，歡喜奉行。",
+   "T0099-sa950": "如是，比丘！無始生死，長夜輪轉，不知苦之本際。是故，比丘！當如是學：『斷除諸有，莫令增長。』」佛說此經已，諸比丘聞佛所說，歡喜奉行。"
+  }
+ }
+}

@@ -1,0 +1,151 @@
+{
+ "slug": "pi-sn42.3",
+ "title": "別譯雜阿含經 （一二三）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "戰將初問"
+  },
+  {
+   "id": "a02",
+   "label": "佛初止說"
+  },
+  {
+   "id": "a03",
+   "label": "戰將再三問"
+  },
+  {
+   "id": "a04",
+   "label": "佛說戰將之過"
+  },
+  {
+   "id": "a05",
+   "label": "三邪惡業說明"
+  },
+  {
+   "id": "a06",
+   "label": "邪見導致惡趣"
+  },
+  {
+   "id": "a07",
+   "label": "戰將悲泣"
+  },
+  {
+   "id": "a08",
+   "label": "佛問悲泣原因"
+  },
+  {
+   "id": "a09",
+   "label": "戰將解釋悲泣理由"
+  },
+  {
+   "id": "a10",
+   "label": "戰將發願改過"
+  },
+  {
+   "id": "a11",
+   "label": "佛讚歡喜結束"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn42.3",
+   "lang": "pi",
+   "label": "巴利 SN42.3",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "T0100-sa-2.123",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （一二三）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa908",
+   "lang": "lzh",
+   "label": "雜阿含經 （九〇八）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（一二三）"
+  },
+  {
+   "work": "T0099",
+   "node": "（九〇八）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn42.3": "Saṁyutta Nikāya 42.3 1. Gāmaṇivagga Yodhājīvasutta",
+   "T0100-sa-2.123": "如是我聞：一時，佛在王舍城迦蘭陀竹林。時，彼城中有善鬪將，為聚落主，往詣佛所，頂禮佛足，問訊已訖，在一面坐。",
+   "T0099-sa908": "如是我聞：一時，佛住王舍城迦蘭陀竹園。"
+  },
+  "a01": {
+   "sn42.3": "Atha kho yodhājīvo gāmaṇi yena bhagavā tenupasaṅkami; upasaṅkamitvā …pe… ekamantaṁ nisinno kho yodhājīvo gāmaṇi bhagavantaṁ etadavoca: “sutaṁ metaṁ, bhante, pubbakānaṁ ācariyapācariyānaṁ yodhājīvānaṁ bhāsamānānaṁ: ‘yo so yodhājīvo saṅgāme ussahati vāyamati, tamenaṁ ussahantaṁ vāyamantaṁ pare hananti pariyāpādenti, so kāyassa bhedā paraṁ maraṇā parajitānaṁ devānaṁ sahabyataṁ upapajjatī’ti. Idha bhagavā kimāhā”ti?",
+   "T0100-sa-2.123": "白佛言：「世尊！我於昔者，曾從宿舊耆老邊聞：『若欲戰時，要當莊嚴所持器仗，牢自防護，勇猛直進，無有怯弱，能破前敵，傷殺物命，使餘軍眾皆悉退散。作是事已，命終得生箭莊嚴天。』",
+   "T0099-sa908": "爾時，戰鬪活聚落主來詣佛所，恭敬問訊，問訊已，退坐一面，白佛言：「瞿曇！我聞古昔戰鬪活耆年宿士作是言：『若戰鬪活，身被重鎧，手執利器，將士先鋒，堪能方便摧伏怨敵，緣此業報，生箭降伏天。』於瞿曇法中，其義云何？」"
+  },
+  "a02": {
+   "sn42.3": "“Alaṁ, gāmaṇi, tiṭṭhatetaṁ; mā maṁ etaṁ pucchī”ti.",
+   "T0100-sa-2.123": "」彼時鬪將作如是問，佛告之曰：「止！不須說。汝於今者，所問義趣，甚為不善。」",
+   "T0099-sa908": "佛告戰鬪活：「且止！"
+  },
+  "a03": {
+   "sn42.3": "Dutiyampi kho …pe…",
+   "T0100-sa-2.123": "第二第三，亦如是問。",
+   "T0099-sa908": "莫問此義。」如是再三問，亦再三止之，猶問不已。"
+  },
+  "a04": {
+   "sn42.3": "tatiyampi kho yodhājīvo gāmaṇi bhagavantaṁ etadavoca: “sutaṁ metaṁ, bhante, pubbakānaṁ ācariyapācariyānaṁ yodhājīvānaṁ bhāsamānānaṁ: ‘yo so yodhājīvo saṅgāme ussahati vāyamati, tamenaṁ ussahantaṁ vāyamantaṁ pare hananti pariyāpādenti, so kāyassa bhedā paraṁ maraṇā parajitānaṁ devānaṁ sahabyataṁ upapajjatī’ti. Idha bhagavā kimāhā”ti?",
+   "T0100-sa-2.123": "佛復告言：「汝已慇懃三問於我，汝若能受，當為汝說。諸有戰者，牢自莊嚴，善知鬪術，最為陣首，勇猛前進。如是戰將，豈不作意方便，欲得傷害彼諸軍眾，作是念言：『云何當繫縛於彼、傷害於彼，令其壞盡。』寧可不生如是念耶？",
+   "T0099-sa908": "佛告聚落主：「我今問汝，隨汝意答。聚落主！於意云何？若戰鬪活，身被甲冑，為戰士先鋒，堪能方便摧伏怨敵，此人豈不先起傷害之心，欲攝縛枷鏁，斫刺殺害於彼耶？」聚落主白佛：「如是，世尊！」"
+  },
+  "a05": {
+   "sn42.3": "“Addhā kho tyāhaṁ, gāmaṇi, na labhāmi: ‘alaṁ, gāmaṇi, tiṭṭhatetaṁ; mā maṁ etaṁ pucchī’ti. Api ca tyāhaṁ byākarissāmi.",
+   "T0100-sa-2.123": "戰將！汝於眾生所起三邪惡業。何等名為三邪惡業？所謂即是身口意也。若以如是三不善業，身壞命終，得生天者，無有是處。",
+   "T0099-sa908": "佛告聚落主：「為戰鬪活，有三種惡邪，若身若口若意；以此三種惡邪因緣，身壞命終，得生善趣箭降伏天者，無有是處。」"
+  },
+  "a06": {
+   "sn42.3": "Yo so, gāmaṇi, yodhājīvo saṅgāme ussahati vāyamati, tassa taṁ cittaṁ pubbe gahitaṁ dukkaṭaṁ duppaṇihitaṁ: ‘ime sattā haññantu vā bajjhantu vā ucchijjantu vā vinassantu vā mā vā ahesuṁ iti vā’ti. Tamenaṁ ussahantaṁ vāyamantaṁ pare hananti pariyāpādenti; so kāyassa bhedā paraṁ maraṇā parajito nāma nirayo tattha upapajjatīti. Sace kho panassa evaṁ diṭṭhi hoti: ‘yo so yodhājīvo saṅgāme ussahati vāyamati tamenaṁ ussahantaṁ vāyamantaṁ pare hananti pariyāpādenti, so kāyassa bhedā paraṁ maraṇā parajitānaṁ devānaṁ sahabyataṁ upapajjatī’ti, sāssa hoti micchādiṭṭhi. Micchādiṭṭhikassa kho panāhaṁ, gāmaṇi, purisapuggalassa dvinnaṁ gatīnaṁ aññataraṁ gatiṁ vadāmi— nirayaṁ vā tiracchānayoniṁ vā”ti.",
+   "T0100-sa-2.123": "戰將！汝今若如是見者，即是邪見。邪見之業必生二處，或在地獄，或墮畜生。」",
+   "T0099-sa908": "佛告聚落主：「若古昔戰鬪活耆年宿士，作如是見、作如是說，若諸戰鬪活，身被甲冑，手執利器，命敵先登，堪能方便摧伏怨敵，以是因緣，生箭降伏天者，是則邪見。邪見之人，應生二處，若地獄趣、若畜生趣。」"
+  },
+  "a07": {
+   "sn42.3": "Evaṁ vutte, yodhājīvo gāmaṇi parodi, assūni pavattesi.",
+   "T0100-sa-2.123": "爾時，鬪將聞佛語已，悲泣流淚。",
+   "T0099-sa908": "說是語時，彼聚落主悲泣流淚！"
+  },
+  "a08": {
+   "sn42.3": "“Etaṁ kho tyāhaṁ, gāmaṇi, nālatthaṁ: ‘alaṁ, gāmaṇi, tiṭṭhatetaṁ; mā maṁ etaṁ pucchī’”ti.",
+   "T0100-sa-2.123": "佛復告曰：「我以是故，三請不說。今為汝說，何故涕泣？」",
+   "T0099-sa908": "佛告聚落主：「以是義故，我先再三語汝：『且止！"
+  },
+  "a09": {
+   "sn42.3": "“Nāhaṁ, bhante, etaṁ rodāmi yaṁ maṁ bhagavā evamāha; api cāhaṁ, bhante, pubbakehi ācariyapācariyehi yodhājīvehi dīgharattaṁ nikato vañcito paluddho: ‘yo so yodhājīvo saṅgāme ussahati vāyamati, tamenaṁ ussahantaṁ vāyamantaṁ pare hananti pariyāpādenti, so kāyassa bhedā paraṁ maraṇā parajitānaṁ devānaṁ sahabyataṁ upapajjatī’”ti. “Abhikkantaṁ, bhante …pe… ajjatagge pāṇupetaṁ saraṇaṁ gatan”ti. Tatiyaṁ.",
+   "T0100-sa-2.123": "時，彼鬪將白佛言：「世尊！我不為聞是說故，而生悲惱；憐愍諸鬪戰者，長夜愚闇，孾孩無智，所作不善，常為此事，於未來世，當受大苦。如是惡業，而實不得生於天中。若以此業，而生彼箭莊嚴天者，實無是處。",
+   "T0099-sa908": "不為汝說。』」聚落主白佛言：「我不以瞿曇語故悲泣，我念古昔諸鬪戰活耆年宿士愚癡，不善不辨，長夜，欺誑作如是言：『若戰鬪活，身被甲冑，手執利器，命敵先登，乃至得生箭降伏天。』是故悲泣。我今定思：『諸戰鬪活，惡業因緣，身壞命終，生箭降伏天者，無有是處。』"
+  },
+  "a10": {
+   "T0100-sa-2.123": "世尊！我從今更不作於如是邪見。」",
+   "T0099-sa908": "瞿曇！我從今日，捨諸惡業，歸佛、歸法、歸比丘僧。」"
+  },
+  "a11": {
+   "T0100-sa-2.123": "佛即讚言：「善哉！善哉！汝所說者，甚為希有。」爾時，鬪將聞佛所說，頂禮還去。",
+   "T0099-sa908": "佛告聚落主：「此真實要。」時，戰鬪活聚落主聞佛所說，歡喜隨喜，即從坐起，作禮而去。"
+  }
+ }
+}

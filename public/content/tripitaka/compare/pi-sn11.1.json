@@ -1,0 +1,144 @@
+{
+ "slug": "pi-sn11.1",
+ "title": "別譯雜阿含經 （四三）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "佛告諸比丘過去阿修羅與天鬪爭"
+  },
+  {
+   "id": "a02",
+   "label": "天帝釋三次召須毘羅往戰"
+  },
+  {
+   "id": "a03",
+   "label": "須毘羅三次奉答而耽放逸"
+  },
+  {
+   "id": "a04",
+   "label": "天帝釋以偈勸須毘羅往戰"
+  },
+  {
+   "id": "a05",
+   "label": "須毘羅與帝釋互說偈頌（懶惰與安樂）"
+  },
+  {
+   "id": "a06",
+   "label": "偈頌續說：懶惰者得樂，帝釋勸往涅槃"
+  },
+  {
+   "id": "a07",
+   "label": "須毘羅終決起兵與阿修羅戰"
+  },
+  {
+   "id": "a08",
+   "label": "天眾得勝，阿修羅退敗"
+  },
+  {
+   "id": "a09",
+   "label": "佛結說天帝釋精進，勸諸比丘當學"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn11.1",
+   "lang": "pi",
+   "label": "巴利 SN11.1",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn11.1",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN11.1",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.43",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （四三）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa1114",
+   "lang": "lzh",
+   "label": "雜阿含經 （一一一四）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（四三）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一一一四）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn11.1": "Saṁyutta Nikāya 11.1 1. Paṭhamavagga Suvīrasutta",
+   "nan-sn11.1": "〔一〕第一　須毘羅如是我聞。爾時，世尊住舍衛城祇樹給孤獨園。世尊於此言諸比丘：「諸比丘！」彼等諸比丘奉答世尊：「唯然！世尊！」",
+   "T0100-sa-2.43": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。",
+   "T0099-sa1114": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。"
+  },
+  "a01": {
+   "sn11.1": "Evaṁ me sutaṁ— ekaṁ samayaṁ bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme. Tatra kho bhagavā bhikkhū āmantesi: “bhikkhavo”ti. “Bhadante”ti te bhikkhū bhagavato paccassosuṁ.",
+   "nan-sn11.1": "世尊以此宣說：",
+   "T0100-sa-2.43": "爾時，世尊告諸比丘：「昔阿修羅集諸四兵象馬車步，悉皆嚴備鬪戰之具，欲詣忉利天宮，與諸天共鬪。爾時，帝釋聞阿修羅莊嚴四兵，即告須毘羅天子：『我聞阿脩羅莊嚴四兵，汝亦莊嚴四兵，往與共鬪。』須毘羅白言：『此事最善。』",
+   "T0099-sa1114": "爾時，世尊告諸比丘：「過去世時，阿修羅王興四種兵——象兵、馬兵、車兵、步兵。時，三十三天欲共鬪戰。"
+  },
+  "a02": {
+   "sn11.1": "Bhagavā etadavoca: “Bhūtapubbaṁ, bhikkhave, asurā deve abhiyaṁsu. Atha kho, bhikkhave, sakko devānamindo suvīraṁ devaputtaṁ āmantesi: ‘ete, tāta suvīra, asurā deve abhiyanti. Gaccha, tāta suvīra, asure paccuyyāhī’ti.",
+   "nan-sn11.1": "「諸比丘！遠昔阿修羅攻擊諸天。諸比丘！時天帝釋呼須毘羅天子：『愛子須毘羅！今此等阿修羅攻擊諸天。愛子須毘羅！汝往迎討阿修羅！』諸比丘！須毘羅天子奉答天帝釋：『唯然！尊者。』而耽於放逸。",
+   "T0100-sa-2.43": "作是語已，縱逸著樂，不憶此事。帝釋聞阿脩羅已來出城，復召須毘羅言：『阿脩羅今已出城，汝可莊嚴四兵往彼共鬪。』須毘羅白言：『憍尸迦！此是善事。』須毘羅仍爾著樂，不修戰備。阿脩羅莊嚴四兵，已至須彌山上，漸欲近來。帝釋復言：『我聞阿修羅漸來逼近，汝將四兵，可往擊之。』",
+   "T0099-sa1114": "時，天帝釋聞阿修羅王興四種兵——象兵、馬兵、車兵、步兵，來欲共戰。聞已，即告宿毘梨天子言：『阿公知不？阿修羅興四種兵——象兵、馬兵、車兵、步兵，欲與三十三天共戰。阿公可勅三十三天興四種兵——象兵、馬兵、車兵、步兵，與彼阿修羅共戰。』爾時，宿毘梨天子受帝釋教，還自天宮，慢緩寬縱，不勤方便。「阿修羅眾已出在道路，帝釋聞已，復告宿毘梨天子：『阿公！阿修羅軍已在道路，阿公可速告令起四種兵與阿修羅戰。』宿毘梨天子受帝釋教已，即復還宮，懈怠寬縱。「時，阿修羅王軍已垂至，釋提桓因聞阿修羅軍已在近路，復告宿毘梨天子：『阿公知不？阿修羅軍已在近路，阿公！速告諸天起四種兵。』"
+  },
+  "a03": {
+   "sn11.1": "‘Evaṁ, bhaddantavā’ti kho, bhikkhave, suvīro devaputto sakkassa devānamindassa paṭissutvā pamādaṁ āpādesi. Dutiyampi kho, bhikkhave, sakko devānamindo suvīraṁ devaputtaṁ āmantesi: ‘ete, tāta suvīra, asurā deve abhiyanti. Gaccha, tāta suvīra, asure paccuyyāhī’ti. ‘Evaṁ, bhaddantavā’ti kho, bhikkhave, suvīro devaputto sakkassa devānamindassa paṭissutvā dutiyampi pamādaṁ āpādesi. Tatiyampi kho, bhikkhave, sakko devānamindo suvīraṁ devaputtaṁ āmantesi: ‘ete, tāta suvīra, asurā deve abhiyanti. Gaccha, tāta suvīra, asure paccuyyāhī’ti. ‘Evaṁ, bhaddantavā’ti kho, bhikkhave, suvīro devaputto sakkassa devānamindassa paṭissutvā tatiyampi pamādaṁ āpādesi.",
+   "nan-sn11.1": "諸比丘！……再度〔乃至〕諸比丘！天帝釋三度呼須毘羅天子：『愛子須毘羅！此等阿修羅，今攻擊諸天。愛子須毘羅！汝往迎討阿修羅。』諸比丘！『唯然！尊命。』須毘羅天子奉答天帝釋，而耽於放逸。"
+  },
+  "a04": {
+   "sn11.1": "Atha kho, bhikkhave, sakko devānamindo suvīraṁ devaputtaṁ gāthāya ajjhabhāsi:",
+   "nan-sn11.1": "諸比丘！時天帝釋，以偈語須毘羅天子：",
+   "T0100-sa-2.43": "須毘羅即說偈言：「『若有清閑無事處，唯願與我如此處。』",
+   "T0099-sa1114": "「時，宿毘梨天子即說偈言：「『若有不起處，無為安隱樂，\n得如是處者，無作亦無憂。"
+  },
+  "a05": {
+   "sn11.1": "‘Anuṭṭhahaṁ avāyāmaṁ, sukhaṁ yatrādhigacchati; Suvīra tattha gacchāhi, mañca tattheva pāpayā’ti.",
+   "nan-sn11.1": "無勵無勤勉達安樂處者\n須毘羅前往我亦往其處",
+   "T0100-sa-2.43": "「帝釋即說偈答言：「『若有如此閑樂處，汝當將我共至彼。』「須毘羅復說偈言：「『我今懈怠不欲起，雖具聞知不莊嚴，\n天女五欲光四塞，唯願帝釋與此願。』「帝釋以偈答言：「『若有如此懈墮處，百千天女而圍遶，\n五欲自恣受快樂，汝若往彼與我俱。』",
+   "T0099-sa1114": "當與我是處，令我得安隱。』「爾時，帝釋說偈答言：「『若有不起處，無為安隱樂，\n若得是處者，無作亦無憂。\n汝得是處者，亦應將我去。』"
+  },
+  "a06": {
+   "sn11.1": "‘Alasvassa anuṭṭhātā, na ca kiccāni kāraye; Sabbakāmasamiddhassa, taṁ me sakka varaṁ disā’ti. ‘Yatthālaso anuṭṭhātā, accantaṁ sukhamedhati; Suvīra tattha gacchāhi, mañca tattheva pāpayā’ti. ‘Akammunā devaseṭṭha, sakka vindemu yaṁ sukhaṁ; Asokaṁ anupāyāsaṁ, taṁ me sakka varaṁ disā’ti. ‘Sace atthi akammena, koci kvaci na jīvati; Nibbānassa hi so maggo, suvīra tattha gacchāhi; Mañca tattheva pāpayā’ti.",
+   "nan-sn11.1": "〔須毘羅：〕懶惰無勤勉不為所應為\n一切愛欲繁示其最勝處〔帝釋：〕懶惰無勤勵得無限樂者\n須毘羅去往我亦往其處〔須毘羅：〕我天主帝釋無作悲絕望\n得安樂道者示其最勝道〔帝釋：〕若是無所作決無有老者\n此實涅槃道須毘羅去往\n我亦往其處",
+   "T0100-sa-2.43": "「須毘羅復說偈言：「『天王若無事役處，與我無苦受斯樂。』「帝釋以偈答言：「『汝須毘羅有如是，我當與汝同是樂，\n頗曾見聞無事業，而得生活受樂者？\n汝今若有如是處，可疾速往可隨汝，\n汝當畏事好閑處，應當速疾向涅槃。』",
+   "T0099-sa1114": "「宿毘梨天子復說偈言：「『若處無方便，不起安隱樂，\n若得彼處者，無作亦無憂。\n當與我是處，令我得安隱。』「時，天帝釋復說偈答言：「『若處無方便，不起安隱樂，\n若人得是處，無作亦無憂。\n汝得是處者，亦應將我去。』「宿毘梨天子復說偈言：「『若處不放逸，不起安隱樂，\n若人得是處，無作亦無憂。\n當與我是處，令得安隱樂。』「時，天帝釋復說偈言：「『若處不放逸，不起安隱樂，\n若人得是處，無作亦無憂。\n汝得是處者，亦應將我去。』「宿毘梨復說偈言：「『懶惰無所起，不知作已作，\n行欲悉皆會，當與我是處。』「時，天帝釋復說偈言：「『懶惰無所起，得究竟安樂，\n汝得彼處者，亦應將我去。』「宿毘梨天子復說偈言：「『無事亦得樂，無作亦無憂，\n若與我是處，令我得安樂。』「天帝釋復說偈言：「『若見若復聞，眾生無所作，\n汝得是處者，亦應將我去。\n汝若畏所作，不念於有為，\n但當速淨除，涅槃之徑路。』"
+  },
+  "a07": {
+   "T0100-sa-2.43": "「聞是語已，須毘羅即集四兵，出與阿脩羅戰。",
+   "T0099-sa1114": "「時，宿毘梨天子嚴四兵——象兵、馬兵、車兵、步兵，與阿修羅戰，摧阿修羅眾，諸天得勝，還歸天宮。」"
+  },
+  "a08": {
+   "T0100-sa-2.43": "時，諸天得勝，阿脩羅退壞，阿脩羅已種種莊嚴而來還宮。」"
+  },
+  "a09": {
+   "sn11.1": "So hi nāma, bhikkhave, sakko devānamindo sakaṁ puññaphalaṁ upajīvamāno devānaṁ tāvatiṁsānaṁ issariyādhipaccaṁ rajjaṁ kārento uṭṭhānavīriyassa vaṇṇavādī bhavissati. Idha kho taṁ, bhikkhave, sobhetha, yaṁ tumhe evaṁ svākkhāte dhammavinaye pabbajitā samānā uṭṭhaheyyātha ghaṭeyyātha vāyameyyātha appattassa pattiyā anadhigatassa adhigamāya, asacchikatassa sacchikiriyāyā”ti.",
+   "nan-sn11.1": "諸比丘！其實天帝釋，自生功德果報，以統理忉利天，應是勤勉精進之稱讚者。諸比丘！汝等於此，於此善說之法與律出家。未達者為達，未到者為到，未實現者為實現而勤勉、奮勵、精進者，汝等能顯耀此事。」",
+   "T0100-sa-2.43": "佛告諸比丘：「釋提桓因處天王位得大自在，猶自精勤，讚嘆精進，況復汝等，信心出家，被服法衣，而當不勤精進，讚嘆精進？若能精進，讚嘆精進，如是為應出家之法。」佛說是已，諸比丘聞佛所說，歡喜奉行。",
+   "T0099-sa1114": "佛告諸比丘：「釋提桓因興四種兵，與阿修羅戰，精勤得勝。諸比丘！釋提桓因於三十三天為自在王，常以精勤方便，亦常讚歎精勤之德。汝等比丘正信非家，出家學道，當勤精進，讚歎精勤。」佛說此經已，諸比丘聞佛所說，歡喜奉行。"
+  }
+ }
+}

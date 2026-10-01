@@ -1,0 +1,142 @@
+{
+ "slug": "pi-dn20",
+ "title": "大三摩惹經",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "四淨居天現身"
+  },
+  {
+   "id": "a02",
+   "label": "四淨居天請問偈"
+  },
+  {
+   "id": "a03",
+   "label": "四淨居天偈頌"
+  },
+  {
+   "id": "a04",
+   "label": "世尊告諸比丘天集緣起"
+  },
+  {
+   "id": "a05",
+   "label": "世尊偈說諸天名號"
+  },
+  {
+   "id": "a06",
+   "label": "諸天來集名號說明"
+  },
+  {
+   "id": "a07",
+   "label": "魔軍來亂"
+  },
+  {
+   "id": "a08",
+   "label": "佛降魔軍偈頌"
+  },
+  {
+   "id": "a09",
+   "label": "眾會歡喜流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "dn20",
+   "lang": "pi",
+   "label": "巴利 DN20",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-dn20",
+   "lang": "lzh",
+   "label": "漢譯南傳 DN20",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0001-da19",
+   "lang": "lzh",
+   "label": "長阿含經 （一九）佛說長阿含第二分大會經第十五",
+   "who": "後秦 佛陀耶舍共竺佛念譯"
+  },
+  {
+   "id": "T0019",
+   "lang": "lzh",
+   "label": "大三摩惹經",
+   "who": "宋 法天譯"
+  }
+ ],
+ "works": [
+  "T0001",
+  "T0019"
+ ],
+ "anchors": [
+  {
+   "work": "T0001",
+   "node": "（一九）佛說長阿含第二分大會經第十五"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "dn20": "Dīgha Nikāya 20 Mahāsamayasutta",
+   "nan-dn20": "二〇　大會經如是我聞。一時，世尊與五百大比丘眾皆是阿羅漢俱住釋迦族迦毘羅衛城之大林園。而十方世界之眾多諸天，為見世尊及比丘眾而集來。",
+   "T0001-da19": "如是我聞：一時，佛在釋翅提國迦維林中，與大比丘眾五百人俱，盡是羅漢，復有十方諸神妙天皆來集會，禮敬如來及比丘僧。時，四淨居天即於天上各自念言：「今者，世尊在釋翅提迦維林中，與大比丘眾五百人俱，盡得阿羅漢，復有十方諸神妙天皆來集會，禮敬如來及比丘僧。",
+   "T0019": "如是我聞：一時，佛在迦毘羅林，與大苾芻眾，皆阿羅漢——諸漏已盡，所作已辦，逮得己利，盡諸有結，心得自在——如是五千五百人俱。爾時，十方復有釋梵大威德諸天，與諸眷屬恭敬圍繞，身色端嚴，光明照耀，來迦毗羅林，詣世尊前，頭面禮足，住立一面。時，四大梵王各以伽陀而頌佛德。第一梵王，而說頌曰：「此大三摩惹，宣揚妙法音，\n我佛無能勝，天人普來集。」第二梵王，而說頌曰：「歷大僧祇劫，修行深信心，\n守護眼等根，不住諸塵境。」第三梵王，而說頌曰：「戒定慧真實，清淨無垢染，\n如帝釋金剛，堅固不可壞。」第四梵王，而說頌曰：「若人歸依佛，永不墮惡道，\n彼人命終時，速得生天上。」"
+  },
+  "a01": {
+   "dn20": "Evaṁ me sutaṁ— ekaṁ samayaṁ bhagavā sakkesu viharati kapilavatthusmiṁ mahāvane mahatā bhikkhusaṅghena saddhiṁ pañcamattehi bhikkhusatehi sabbeheva arahantehi; dasahi ca lokadhātūhi devatā yebhuyyena sannipatitā honti bhagavantaṁ dassanāya bhikkhusaṅghañca. Atha kho catunnaṁ suddhāvāsakāyikānaṁ devatānaṁ etadahosi: “ayaṁ kho bhagavā sakkesu viharati kapilavatthusmiṁ mahāvane mahatā bhikkhusaṅghena saddhiṁ pañcamattehi bhikkhusatehi sabbeheva arahantehi; dasahi ca lokadhātūhi devatā yebhuyyena sannipatitā honti bhagavantaṁ dassanāya bhikkhusaṅghañca.",
+   "nan-dn20": "時，四淨居天曰：",
+   "T0001-da19": "我等今者亦可往共詣世尊所，各當以偈稱讚如來。」時，四淨居天猶如力士屈伸臂頃，於彼天沒，至釋翅提迦維林中。爾時，四淨居天到已，頭面禮足，在一面立。"
+  },
+  "a02": {
+   "dn20": "Yannūna mayampi yena bhagavā tenupasaṅkameyyāma; upasaṅkamitvā bhagavato santike paccekaṁ gāthaṁ bhāseyyāmā”ti. Atha kho tā devatā seyyathāpi nāma balavā puriso samiñjitaṁ vā bāhaṁ pasāreyya pasāritaṁ vā bāhaṁ samiñjeyya; evameva—suddhāvāsesu devesu antarahitā bhagavato purato pāturahesuṁ. Atha kho tā devatā bhagavantaṁ abhivādetvā ekamantaṁ aṭṭhaṁsu.",
+   "nan-dn20": "「今彼世尊與五百大比丘眾皆是阿羅漢俱住釋迦族迦毘羅衛城之大林園。而十方世界之眾多諸天，為見世尊及比丘眾而集來。我等亦詣世尊之處，詣已，於世尊前，各各唱偈者如何？」",
+   "T0001-da19": "時，一淨居天即於佛前，以偈讚曰：「今日大眾會，諸天神普集；\n皆為法故來，欲禮無上眾。」說此偈已，退一面立。"
+  },
+  "a03": {
+   "dn20": "Ekamantaṁ ṭhitā kho ekā devatā bhagavato santike imaṁ gāthaṁ abhāsi: “Mahāsamayo pavanasmiṁ, Devakāyā samāgatā; Āgatamha imaṁ dhammasamayaṁ, Dakkhitāye aparājitasaṅghan”ti. Atha kho aparā devatā bhagavato santike imaṁ gāthaṁ abhāsi: “Tatra bhikkhavo samādahaṁsu, Cittamattano ujukaṁ akaṁsu; Sārathīva nettāni gahetvā, Indriyāni rakkhanti paṇḍitā”ti. Atha kho aparā devatā bhagavato santike imaṁ gāthaṁ abhāsi: “Chetvā khīlaṁ chetvā palighaṁ, Indakhīlaṁ ūhacca manejā; Te caranti suddhā vimalā, Cakkhumatā sudantā susunāgā”ti. Atha kho aparā devatā bhagavato santike imaṁ gāthaṁ abhāsi: “Ye keci buddhaṁ saraṇaṁ gatāse, Na te gamissanti apāyabhūmiṁ; Pahāya mānusaṁ dehaṁ, Devakāyaṁ paripūressantī”ti.",
+   "nan-dn20": "如是，彼等諸天，猶如大力士之伸屈臂、屈伸臂之迅速，由淨居天沒形而現於世尊前。其時，彼等諸天，禮拜世尊，卻立一面。立於一面之一天神，實於世尊前如次唱偈：大會此林園\n來集諸天族\n吾等來法會\n見無能勝僧其時，其他天神亦於世尊前，如次唱偈：於此諸比丘\n心靜正精神\n如御執手綱\n諸賢護諸根其時，其他之天神，於世尊前亦唱偈：斷除諸羈絆\n切斷各門閂\n破城門柱石\n離欲而步遊\n離垢成清淨\n具眼之彼等\n如善馴壯象復次，其他天神，於世尊前亦唱偈：歸依於佛者\n皆無赴惡趣\n若捨此人身\n當得生天身",
+   "T0001-da19": "時，一淨居天復作頌曰：「比丘見眾穢，端心自防護；\n欲如海吞流，智者護諸根。」說是偈已，退一面立。時，一淨居天復作頌曰：「斷刺平愛坑，及填無明壍；\n獨遊清淨場，如善象調御。」說此偈已，退一面立。時，一淨居天復作頌曰：「諸歸依佛者，終不墮惡趣；\n捨此人中形，受天清淨身。」爾時，四淨居天說此偈已，世尊印可，即禮佛足，遶佛三匝，忽然不現。"
+  },
+  "a04": {
+   "dn20": "1. Devatāsannipāta Atha kho bhagavā bhikkhū āmantesi: “yebhuyyena, bhikkhave, dasasu lokadhātūsu devatā sannipatitā honti, tathāgataṁ dassanāya bhikkhusaṅghañca. Yepi te, bhikkhave, ahesuṁ atītamaddhānaṁ arahanto sammāsambuddhā, tesampi bhagavantānaṁ etapparamāyeva devatā sannipatitā ahesuṁ seyyathāpi mayhaṁ etarahi. Yepi te, bhikkhave, bhavissanti anāgatamaddhānaṁ arahanto sammāsambuddhā, tesampi bhagavantānaṁ etapparamāyeva devatā sannipatitā bhavissanti seyyathāpi mayhaṁ etarahi.",
+   "nan-dn20": "爾時，世尊告諸比丘眾曰：「諸比丘！由十方世界，眾多諸天來會見世尊及諸比丘。誰亦有於遠昔之應供、等正覺者，為彼等世尊，有此等最高諸天之來集，猶如今日之為我。諸比丘！誰亦有於遙遠未來之應供、等正覺者，為彼等世尊，有此等最高之諸天當集來，猶如今日之為我。諸比丘！我為汝等告諸天族之名，諸比丘！我為汝等宣說諸天族之名。諸比丘！我為汝等教示諸天族之名。諦聽，善憶念，我當告汝等。」彼等諸比丘應諾世尊：「唯然，世尊。」",
+   "T0001-da19": "其去未久，佛告諸比丘：「今者諸天大集，今者諸天大集，十方諸神妙天無不來此禮覲如來及比丘僧。諸比丘！過去諸如來、至真、等正覺亦有諸天大集，如我今日；當來諸如來、至真、等正覺亦有諸天大集，如我今日。諸比丘！今者諸天大集，十方諸神妙天無不來此禮覲如來及比丘僧，亦當稱彼名號，為其說偈。",
+   "T0019": "爾時，世尊以淨天眼，普觀大會，人天之眾無量無數，告苾芻眾言：「過去如來、應、正等覺，集會人天，而為說法，亦復如是。我於今日，普集人天，欲為說法。汝等受持，若人勇猛，決定無畏，猶如師子，深信堅固而無所著，大地山間乃至梵世，皆得涅槃。」說是法時，復有一千七百有學天人及無數諸天，光明照耀，來詣佛所。佛告苾芻：「汝等諦聽，我觀彼等諸來天眾，應以聲聞所樂之法，而可度之。」"
+  },
+  "a05": {
+   "dn20": "Ācikkhissāmi, bhikkhave, devakāyānaṁ nāmāni; kittayissāmi, bhikkhave, devakāyānaṁ nāmāni; desessāmi, bhikkhave, devakāyānaṁ nāmāni. Taṁ suṇātha, sādhukaṁ manasikarotha, bhāsissāmī”ti. “Evaṁ, bhante”ti kho te bhikkhū bhagavato paccassosuṁ. Bhagavā etadavoca: “Silokamanukassāmi, yattha bhummā tadassitā; Ye sitā girigabbharaṁ, pahitattā samāhitā. Puthūsīhāva sallīnā, lomahaṁsābhisambhuno; Odātamanasā suddhā, vippasannamanāvilā. Bhiyyo pañcasate ñatvā, vane kāpilavatthave; Tato āmantayī satthā, sāvake sāsane rate. ‘Devakāyā abhikkantā, te vijānātha bhikkhavo’; Te ca ātappamakaruṁ, sutvā buddhassa sāsanaṁ. Tesaṁ pāturahu ñāṇaṁ, amanussānadassanaṁ; Appeke satamaddakkhuṁ, sahassaṁ atha sattariṁ. Sataṁ eke sahassānaṁ, amanussānamaddasuṁ; Appekenantamaddakkhuṁ, disā sabbā phuṭā ahuṁ. Tañca sabbaṁ abhiññāya, vavatthitvāna cakkhumā; Tato āmantayī satthā, sāvake sāsane rate. ‘Devakāyā abhikkantā, te vijānātha bhikkhavo; Ye vohaṁ kittayissāmi, girāhi anupubbaso’.",
+   "nan-dn20": "世尊如次曰：我以偈推測\n有地之處所\n彼等寄其處\n住於山窟者\n確固心決定\n恰有豎毛髮\n屈縮如獅子\n持守潔白心\n清淨清明白\n迦毘羅林園\n知有五百餘\n喜教諸弟子\n教主告此言\n天族接近來\n諸比丘彼等\n善為識認知\n聽聞佛陀教\n彼等實誠心比丘當明白\n非人相識生\n或者見為百\n然或見七萬\n或者有人見\n非人之百千\n或見無邊數\n有甚多方處\n彼等知諸天\n具眼師說明\n喜教弟子等\n立即告此曰\n天族接近來\n諸比丘彼等\n善為識認知\n我讚彼等詩\n正次宣汝等",
+   "T0001-da19": "比丘當知：「諸依地山谷，隱藏見可畏；\n身著純白衣，潔淨無垢穢。\n天人聞此已，皆歸於梵天；\n今我稱其名，次第無錯謬。\n諸天眾今來，比丘汝當知；\n世間凡人智，百中不見一。\n何由乃能見，鬼神七萬眾？\n若見十萬鬼，猶不見一邊；\n何況諸鬼神，周遍於天下。」"
+  },
+  "a06": {
+   "dn20": "Sattasahassā te yakkhā, bhummā kāpilavatthavā; Iddhimanto jutimanto, vaṇṇavanto yasassino; Modamānā abhikkāmuṁ, bhikkhūnaṁ samitiṁ vanaṁ. Chasahassā hemavatā, yakkhā nānattavaṇṇino; Iddhimanto jutimanto, vaṇṇavanto yasassino; Modamānā abhikkāmuṁ, bhikkhūnaṁ samitiṁ vanaṁ. Sātāgirā tisahassā, yakkhā nānattavaṇṇino; Iddhimanto jutimanto, vaṇṇavanto yasassino; Modamānā abhikkāmuṁ, bhikkhūnaṁ samitiṁ vanaṁ. Iccete soḷasasahassā, yakkhā nānattavaṇṇino; Iddhimanto jutimanto, vaṇṇavanto yasassino; Modamānā abhikkāmuṁ, bhikkhūnaṁ samitiṁ vanaṁ. Vessāmittā pañcasatā, yakkhā nānattavaṇṇino; Iddhimanto jutimanto, vaṇṇavanto yasassino; Modamānā abhikkāmuṁ, bhikkhūnaṁ samitiṁ vanaṁ. Kumbhīro rājagahiko, vepullassa nivesanaṁ; Bhiyyo naṁ satasahassaṁ, yakkhānaṁ payirupāsati; Kumbhīro rājagahiko, sopāgā samitiṁ vanaṁ. Purimañca disaṁ rājā, dhataraṭṭho pasāsati; Gandhabbānaṁ adhipati, mahārājā yasassiso. Puttāpi tassa bahavo, indanāmā mahabbalā; Iddhimanto jutimanto, vaṇṇavanto yasassino; Modamānā abhikkāmuṁ, bhikkhūnaṁ samitiṁ vanaṁ. Dakkhiṇañca disaṁ rājā, virūḷho taṁ pasāsati; Kumbhaṇḍānaṁ adhipati, mahārājā yasassiso. Puttāpi tassa bahavo, indanāmā mahabbalā; Iddhimanto jutimanto, vaṇṇavanto yasassino; Modamānā abhikkāmuṁ, bhikkhūnaṁ samitiṁ vanaṁ. Pacchimañca disaṁ rājā, virūpakkho pasāsati; Nāgānañca adhipati, mahārājā yasassiso. Puttāpi tassa bahavo, indanāmā mahabbalā; Iddhimanto jutimanto, vaṇṇavanto yasassino; Modamānā abhikkāmuṁ, bhikkhūnaṁ samitiṁ vanaṁ. Uttarañca disaṁ rājā, kuvero taṁ pasāsati; Yakkhānañca adhipati, mahārājā yasassiso. Puttāpi tassa bahavo, indanāmā mahabbalā; Iddhimanto jutimanto, vaṇṇavanto yasassino; Modamānā abhikkāmuṁ, bhikkhūnaṁ samitiṁ vanaṁ. Purimaṁ disaṁ dhataraṭṭho, dakkhiṇena virūḷhako; Pacchimena virūpakkho, kuvero uttaraṁ disaṁ. Cattāro te mahārājā, samantā caturo disā; Daddallamānā aṭṭhaṁsu, vane kāpilavatthave. Tesaṁ māyāvino dāsā, āguṁ vañcanikā saṭhā; Māyā kuṭeṇḍu viṭeṇḍu, viṭucca viṭuṭo saha. Candano kāmaseṭṭho ca, kinnighaṇḍu nighaṇḍu ca; Panādo opamañño ca, devasūto ca mātali. Cittaseno ca gandhabbo, naḷorājā janesabho; Āgā pañcasikho ceva, timbarū sūriyavacchasā. Ete caññe ca rājāno, gandhabbā saha rājubhi; Modamānā abhikkāmuṁ, bhikkhūnaṁ samitiṁ vanaṁ. Athāguṁ nāgasā nāgā, vesālā sahatacchakā; Kambalassatarā āguṁ, pāyāgā saha ñātibhi. Yāmunā dhataraṭṭhā ca, āgū nāgā yasassino; Erāvaṇo mahānāgo, sopāgā samitiṁ vanaṁ. Ye nāgarāje sahasā haranti, Dibbā dijā pakkhi visuddhacakkhū; Vehāyasā te vanamajjhapattā, Citrā supaṇṇā iti tesa nāmaṁ. Abhayaṁ tadā nāgarājānamāsi, Supaṇṇato khemamakāsi buddho; Saṇhāhi vācāhi upavhayantā, Nāgā supaṇṇā saraṇamakaṁsu buddhaṁ. Jitā vajirahatthena, samuddaṁ asurāsitā; Bhātaro vāsavassete, iddhimanto yasassino. Kālakañcā mahābhismā, asurā dānaveghasā; Vepacitti sucitti ca, pahārādo namucī saha. Satañca baliputtānaṁ, sabbe verocanāmakā; Sannayhitvā balisenaṁ, rāhubhaddamupāgamuṁ; ‘Samayo dāni bhaddante, bhikkhūnaṁ samitiṁ vanaṁ’. Āpo ca devā pathavī, tejo vāyo tadāgamuṁ; Varuṇā vāraṇā devā, somo ca yasasā saha. Mettā karuṇā kāyikā, āguṁ devā yasassino; Dasete dasadhā kāyā, sabbe nānattavaṇṇino. Iddhimanto jutimanto, vaṇṇavanto yasassino; Modamānā abhikkāmuṁ, bhikkhūnaṁ samitiṁ vanaṁ. Veṇḍudevā sahali ca, asamā ca duve yamā; Candassūpanisā devā, candamāguṁ purakkhatvā. Sūriyassūpanisā devā, sūriyamāguṁ purakkhatvā; Nakkhattāni purakkhatvā, āguṁ mandavalāhakā. Vasūnaṁ vāsavo seṭṭho, sakkopāgā purindado; Dasete dasadhā kāyā, sabbe nānattavaṇṇino. Iddhimanto jutimanto, vaṇṇavanto yasassino; Modamānā abhikkāmuṁ, bhikkhūnaṁ samitiṁ vanaṁ. Athāguṁ sahabhū devā, jalamaggi sikhāriva; Ariṭṭhakā ca rojā ca, umāpupphanibhāsino. Varuṇā sahadhammā ca, accutā ca anejakā; Sūleyyarucirā āguṁ, āguṁ vāsavanesino; Dasete dasadhā kāyā, sabbe nānattavaṇṇino. Iddhimanto jutimanto, vaṇṇavanto yasassino; Modamānā abhikkāmuṁ, bhikkhūnaṁ samitiṁ vanaṁ. Samānā mahāsamanā, mānusā mānusuttamā; Khiḍḍāpadosikā āguṁ, āguṁ manopadosikā. Athāguṁ harayo devā, ye ca lohitavāsino; Pāragā mahāpāragā, āguṁ devā yasassino; Dasete dasadhā kāyā, sabbe nānattavaṇṇino. Iddhimanto jutimanto, vaṇṇavanto yasassino; Modamānā abhikkāmuṁ, bhikkhūnaṁ samitiṁ vanaṁ. Sukkā karambhā aruṇā, āguṁ veghanasā saha; Odātagayhā pāmokkhā, āguṁ devā vicakkhaṇā. Sadāmattā hāragajā, missakā ca yasassino; Thanayaṁ āga pajjunno, yo disā abhivassati. Dasete dasadhā kāyā, sabbe nānattavaṇṇino; Iddhimanto jutimanto, vaṇṇavanto yasassino; Modamānā abhikkāmuṁ, bhikkhūnaṁ samitiṁ vanaṁ. Khemiyā tusitā yāmā, kaṭṭhakā ca yasassino; Lambītakā lāmaseṭṭhā, jotināmā ca āsavā; Nimmānaratino āguṁ, athāguṁ paranimmitā. Dasete dasadhā kāyā, sabbe nānattavaṇṇino; Iddhimanto jutimanto, vaṇṇavanto yasassino; Modamānā abhikkāmuṁ, bhikkhūnaṁ samitiṁ vanaṁ. Saṭṭhete devanikāyā, sabbe nānattavaṇṇino; Nāmanvayena āgacchuṁ, ye caññe sadisā saha. ‘Pavuṭṭhajātimakhilaṁ, oghatiṇṇamanāsavaṁ; Dakkhemoghataraṁ nāgaṁ, candaṁva asitātigaṁ’. Subrahmā paramatto ca, puttā iddhimato saha; Sanaṅkumāro tisso ca, sopāga samitiṁ vanaṁ. Sahassaṁ brahmalokānaṁ, mahābrahmābhitiṭṭhati; Upapanno jutimanto, bhismākāyo yasassiso. Dasettha issarā āguṁ, paccekavasavattino; Tesañca majjhato āga, hārito parivārito. Te ca sabbe abhikkante, sainde deve sabrahmake;",
+   "nan-dn20": "迦毘羅夜叉\n其數正七千\n具神通光明\n儼容有名聲\n彼等喜進來\n比丘眾林園\n雪山之夜叉\n六千有容色\n各各皆不一\n具神通光明\n儼容有名聲\n彼等喜進來\n比丘眾林園\n娑多山夜叉\n三千有容色\n各各皆不一\n具神通光明\n儼容有名聲\n彼等喜進來\n比丘眾林園\n都合之夜叉\n有一萬六千\n容色各各異\n具神通光明\n儼容有名聲\n彼等喜進來\n比丘眾林園毘波密夜叉\n五百有容色\n各各皆不一\n具神通光明\n儼容有名聲\n彼等喜進來\n比丘眾林園\n百千多夜叉\n完全奉事彼\n在於王舍城\n彼金毘羅神\n亦集來林園而提頭賴吒\n持國天王者\n乃支配東方\n諸乾闥婆長\n有名聞大王\n彼有甚多子\n皆因陀羅與\n別名有大力\n具神通光明\n儼容有名聲\n彼等喜進來\n比丘眾林園\n復次毘樓勒\n增長天王即\n支配彼南方\n諸鳩槃荼長\n有名聞大王\n彼有甚多子\n皆因陀羅及\n別名有大力\n儼容有名聲\n彼等喜進來\n比丘眾林園\n復次毘樓博\n又廣目天王\n支配彼西方\n實彼諸龍長\n有名聞大王\n彼有甚多子\n皆因陀羅及\n別名有大力\n具神通光明\n儼容有名聲\n彼等喜進來\n比丘眾林園\n復次俱毘羅\n多聞天王者\n支配彼北方\n彼實夜叉長\n有名聞大王\n彼有甚多子\n皆因陀羅及\n別名有大力\n具神通光明\n儼然有名聲\n彼等喜進來\n比丘眾林園\n於東方是提\n頭賴吒天王\n於南方即是\n毘樓勒天王\n於西方是毘\n樓博叉天王\n於北方即是\n俱毘羅天王\n此等四天王\n徧照於四方\n立迦毘羅林彼等有幻偽\n有虛妄惡心\n之部下跟來\n摩野屈典都\n以及耶典都\n伊都質以及\n伊都闍共俱\n旃陀那乃至\n加摩世致者\n彼迦尼延豆\n以及尼乾陀\n與彼波那墟\n及嗚呼曼奴\n天御摩頭羅\n以及乾闥婆\n支多羅斯那\n那羅王以及\n闍尼沙乃至\n珍浮樓以及\n修利婆折斯\n般闍尸呵來\n此等他諸王\n乾闍婆諸王\n亦歡喜進來\n比丘眾林園時那陀瑟龍\n俱來毘舍離\n以及怛叉迦\n及加毘羅攝\n乃至波耶伽\n與親族共來\n耶無那以及\n提頭賴吒之\n名聲諸龍來\n乃至彼大龍\n伊羅婆陀亦\n來集於林園\n龍王速運去\n有淨眼有翼\n天再生者鳥\n彼等從天空\n飛來林園中\n美名金翅鳥\n其時諸龍王\n無有何怖異\n避難金翅鳥\n之安隱處者\n是佛之所造\n互相呼愛語\n諸龍金翅鳥\n歸依於佛陀因為金剛手\n而被打失敗\n阿修羅住海\n婆三婆同胞\n具神通名聲\n大怖畏迦羅\n康奢阿修羅\n達那耶伽沙\n與毘摩質多\n及蘇唧怛囉\n乃至波羅陀\n以共那無夷\n又稱毘慮遮\n跋黎子等百\n合有力軍勢\n羅耶跋兜樓\n諸賢者今集\n比丘眾林園水地火風之\n諸天來到此\n水天水天族\n蘇摩耶舍之\n諸天具共為\n慈悲天一族\n有名聲諸天\n於此等十之\n十種天族者\n各各異容色\n具神通光明\n儼然有名聲\n彼等喜進來\n比丘眾林園鞞弩毘紐與\n舍伽利諸天\n阿沙摩及其\n雙子之夜摩\n月天諸侍者\n供奉月天來\n日天諸侍者\n恭敬日天來\n遲遲諸雲神\n來侍於諸星\n婆籔天之主\n婆娑婆帝釋\n名普仁達達\n亦群集到來\n於此等十之\n十種天族者\n各各異容色\n具神通光明\n儼容有名聲\n彼等喜進來\n比丘眾林園時諸沙哈夫\n天如是之來\n如頂燃火焰\n以乃阿栗吒\n乃至櫨耶天\n麻華之風情\n縛嚕拏天及\n遮婆陀暮天\n以及阿周陀\n至阿尼輸天\n輝斯禮耶來\n毘沙門伊灑\n等亦雲集來\n於此等十之\n十種天族者\n各各異容色\n具神通光明\n儼容有名聲\n彼等喜進來\n比丘眾林園沙摩那以及\n摩呵沙摩那\n麼㝹沙乃至\n摩㝹疏多摩\n乞陀波頭灑\n摩㝹波頭灑\n時呵羅諸天\n穿著紅衣之\n彼等魯毘達\n諸天具集來\n有名聲諸神\n波羅迦摩呵\n波羅迦亦來\n於此等十之\n十種天族者\n各各異容色\n具神通光明\n儼容有名聲\n彼等喜進來\n比丘眾林園叔伽阿羅那\n伽羅摩以及\n鞞摩尼沙來\n烏達提奇呵\n鞞波羅微那\n之諸天始來\n薩陀摩多及\n哈羅加奢與\n有名彌沙來\n降雨於四方\n波純提轟轟\n鳴火雷而來\n於此等十之\n十種天族者\n各各異容色\n具神通光明\n儼容有名聲\n彼等喜進來\n比丘眾林園差摩與兜率\n夜摩及伽沙\n之有名聲者\n藍鞞以及主\n藍婆天乃至\n火天之樹提\n及阿灑瓦天\n化樂諸天來\n又他化自在\n之諸天亦來\n於此等十之\n十種天族者\n各各異容色\n具神通光明\n儼容有名聲\n彼等喜進來\n比丘眾林園此等六十之\n天族群等者\n各各異容色\n從名及種族\n他等諸天共\n如斯言而來\n令我等而見\n捨離生拔取\n三毒之杭者\n已渡彼暴流\n達於無漏者\n渡暴流如龍\n如月出黑闇神通具足者\n之子善梵天\n共婆羅末陀\n常童子底沙\n會集來林園\n大梵千梵界\n為王而君臨\n彼光輝具足\n有怖畏體軀\n有名聲於此\n各各有自在\n十自在者來\n此等之正中\n哈利吒是受\n圍繞而來臨",
+   "T0001-da19": "地神有七千悅叉若干種，皆有神足、形貌、色像、名稱，懷歡喜心來到比丘眾林中。時，有雪山神將六千鬼悅叉若干種，皆有神足、形貌、色像、名稱，懷歡喜心來到比丘眾林中。有一舍羅神將三千鬼悅叉若干種，皆有神足、形貌、色像、名稱，懷歡喜心來到比丘眾林中。此萬六千鬼神悅叉若干種，皆有神足、形貌、色像、名稱，懷歡喜心來到比丘眾林中。復有毘波蜜神，住在馬國，將五百鬼，皆有神足、威德。復有金毘羅神，住王舍城毘富羅山，將無數鬼神恭敬圍遶。復有東方提頭賴吒天王，領乾沓惒神，有大威德，有九十一子，盡字因陀羅，皆有大神力。南方毗樓勒天王，領諸龍王，有大威德，有九十一子，亦字因陀羅，有大神力。西方毗樓博叉天王，領諸鳩槃茶鬼，有大威德，有九十一子，亦字因陀羅，有大神力。北方天王名毗沙門，領諸悅叉鬼，有大威德，有九十一子，亦字因陀羅，有大神力。此四天王護持世者，有大威德，身放光明，來詣迦維林中。爾時，世尊欲降其幻偽虛妄之心，故結呪曰：「摩拘樓羅摩拘樓羅　毗樓羅毗樓羅　[旃-方+示]陀那加摩世致　迦尼延豆　尼延豆　波那攎嗚呼奴奴主　提婆蘇暮　摩頭羅　支多羅斯那　乾沓波　那羅主　闍尼沙　尸呵　無蓮陀羅　鼻波蜜多羅　樹塵陀羅　那閭尼呵　斗浮樓　輸支婆迹婆」如是，諸王乾沓婆及羅剎皆有神足、形貌、色像，懷歡喜心來詣比丘眾林中。爾時，世尊復結呪曰：「阿醯　那陀瑟　那頭　毗舍離　沙呵　帶叉蛇　婆提　提頭賴吒　帝婆　沙呵　若利耶　加毘羅　攝波那伽　阿陀伽摩　天提伽　伊羅婆陀　摩呵那伽　毘摩那伽多　陀伽陀餘　那伽羅闍　婆呵沙呵　叉奇提　婆提羅帝　婆提羅帝　毘枚大迹閦　毘呵四　婆嚀　阿婆婆四　質多羅　速和尼那　求四多　阿婆由　那伽羅除　阿四　修跋羅　薩帝奴　阿伽　佛陀灑　失羅嚀　婆耶　憂羅頭婆延樓　素槃㝹　佛頭　舍羅㝹　伽類樓」爾時，世尊為阿修羅而結呪曰：「祇陀　跋闍　呵諦　三物第　阿修羅　阿失陀　婆延地　婆三婆四　伊弟阿陀　提婆摩　天地　伽黎妙　摩呵祕摩　阿修羅　陀那祕羅陀　鞞摩質兜樓　修質諦麗　婆羅呵黎　無夷連那婆　舍黎阿細　跋黎　弗多羅那　薩鞞　鞞樓耶那那迷　薩那迷諦　婆黎　細如　羅耶跋兜樓　伊呵菴婆羅迷　三摩由伊　陀那　跋陀若　比丘那　三彌涕　泥拔」爾時，世尊復為諸天而結呪曰：「阿浮　提婆　萆犁醯陛　提豫　婆由　多陀㝹　跋樓㝹　婆樓尼　世帝蘇彌　耶舍阿頭　彌多羅婆　伽羅那移婆　阿邏　提婆　摩天梯與　陀舍提舍　伽予　薩鞞　那難多羅婆跋那　伊地槃大　讎地　槃那槃大　耶舍卑㝹　暮陀婆那　阿醯揵大　比丘那　婆朱弟　婆尼　鞞弩　提步　舍伽利　阿醯地　勇迷　那剎帝隷富羅息幾大　阿陀蔓　陀羅　婆羅鞞栴大蘇　婆尼捎　提婆　阿陀[旃-方+示]陀　富羅翅支大　蘇黎耶蘇婆尼捎　提婆　阿陀　蘇提耶　富羅翅大　摩伽陀　婆蘇因　圖攎阿頭　釋拘　富羅大攎　叔伽　伽羅摩　羅那阿大　鞞摩尼婆　嗚婆提　奇呵　波羅無呵　鞞婆羅　微阿尼　薩陀摩多　阿呵黎　彌沙阿尼鉢讎[菟-(色-巴)+(〦-一)]歎奴阿　攎余提舍阿醯跋沙　賒摩　摩呵賒摩　摩[菟-(色-巴)+(〦-一)]沙阿　摩[菟-(色-巴)+(〦-一)]䟽多摩　乞陀波頭灑阿陀摩　[菟-(色-巴)+(〦-一)]波頭灑阿　醯阿羅夜　提婆　阿陀　黎陀夜　婆私　波羅　摩訶　波羅阿陀　提婆摩天　梯夜　差摩　兜率陀　夜摩　伽沙尼阿尼　藍鞞藍婆折帝　樹提　那摩伊灑　念摩羅提　阿陀醯　波羅念彌大　阿醯　提婆　提婆　闍蘭提　阿奇　尸吁波　摩阿栗吒攎耶　嗚摩　浮浮　尼婆私遮婆　陀暮　阿周陀　阿尼　輸豆檀耶　[菟-(色-巴)+(〦-一)]阿頭　阿邏　毘沙門伊灑」此是六十種天。爾時，世尊復為六十八五通婆羅門而結呪曰：「羅耶梨沙耶何醯犍大婆尼　伽毘羅跋兜鞞地闍[菟-(色-巴)+(〦-一)]阿頭差暮薩提　鴦祇鞞地牟尼阿頭閉𤛆耶差伽　尸梨沙婆呵若[菟-(色-巴)+(〦-一)]阿頭梵摩提婆提那婆鞞地牟尼阿頭　拘薩梨伊尼攎摩闍邏　鴦祇邏野般闍阿樓嗚猿頭　摩訶羅野阿拘提樓杙[菟-(色-巴)+(〦-一)]阿頭　六閉俱薩梨阿樓伽陵倚伽夷羅檀醯罪否符野福都盧梨灑先陀步　阿頭　提那伽否婆呵移伽耶羅野多陀阿伽度　婆羅蔓陀[菟-(色-巴)+(〦-一)]迦牧羅野阿頭　因陀羅樓迷迦符陀攎暮摩伽醯阿勅傷俱卑予阿頭醯蘭若伽否鞞梨味余梨多他阿伽度　阿醯婆好羅子彌都盧多陀阿伽度　婆斯佛離首陀羅羅予多陀阿伽度　伊梨耶差摩訶羅予先阿步多陀阿伽度　般闍婆予婆梨地翅阿羅予多陀阿伽度　鬱阿蘭摩訶羅予便被婆梨摩梨輸婆醯大　那摩阿槃地苦摩梨羅予阿具斯利陀那婆地阿頭　翅鞞羅予尸伊昵彌昵摩呵羅予復婆樓多陀阿伽度　跋陀婆利摩呵羅予俱薩梨摩提輸尸漢提苫婆梨羅予修陀羅樓多他阿伽度　阿呵因頭樓阿頭摩羅予余蘇利與他鞞地提步阿呵鞞利四阿頭　恒阿耶樓婆羅目遮耶暮阿夷[菟-(色-巴)+(〦-一)]阿頭一摩耶舍枇那婆　差摩羅予何梨揵度余枇度鉢支余是數波那路摩蘇羅予耶賜多由醯蘭若蘇槃那祕愁度致夜數羅舍　波羅鞞陀鬱陀婆呵婆灑婆呵婆婆謀娑呵沙貪覆賒大賒法闍沙麗羅陀　那摩般枝[病-丙+(白/(ㄎ*戈))]多哆羅乾沓婆　沙呵婆薩多提蘇鞞羅予阿醯揵[病-丙+(白/(ㄎ*戈))]　比丘三彌地婆尼地婆尼」爾時，復有千五通婆羅門，如來亦為結呪。時，此世界第一梵王及諸梵天皆有神通，有一梵童子名曰提舍，有大神力。復有十方餘梵天王，各與眷屬圍遶而來。復越千世界，有大梵王見諸大眾在世尊所，尋與眷屬圍遶而來。",
+   "T0019": "爾時，復有七千大藥叉，具大神通威德，光明照耀，與諸眷屬，恭敬圍繞，來迦毗羅林。復有六千大藥叉，住金山上，具大神通威德，光明照耀，與諸眷屬，恭敬圍繞，來迦毘羅林。復有三千大藥叉，住娑多山，具大神通威德，光明照耀，與諸眷屬，恭敬圍繞，來迦毘羅林。復有供毘羅等百千藥叉，住王舍城尾布羅山，具大神通威德，光明照耀，與諸眷屬，恭敬圍繞，來迦毘羅林。復有濕嚩彌怛囉、半左始、尾濕嚩彌嚩等藥叉大將，具大神通威德，光明照耀，與諸眷屬，來迦毘羅林。復有東方護世天王、乾闥婆主，名地里多囉瑟姹囉，具大神通無量威德，身色妙好，光明熾盛，與其眷屬，恭敬圍繞，來迦毘羅林，集會聽法；南方護世天王、鳩槃拏主，名尾嚕茶迦，具大神通無量威德，身色妙好，光明熾盛，與其眷屬，恭敬圍繞，來迦毘羅林，集會聽法；西方護世天王，是大龍主，名尾嚕博叉，具大神通無量威德，身色妙好，光明熾盛，與其眷屬，恭敬圍繞，來迦毘羅林，集會聽法；北方護世天王、大藥叉主，名俱吠囉，具大神通無量威德，身色妙好，光明熾盛，與其眷屬，恭敬圍繞，來迦毘羅林，集會聽法；復有四大天王侍從鬼神，所謂摩野、迦致、尾枳致、䟦里虞、䟦里俱致等，皆有神通勢力，我慢無明，形貌麤惡，種種變化，與其眷屬，恭敬圍繞，來迦毘羅林，集會聽法。復有藥叉神將，所謂印捺囉、謨嚩嚕拏、鉢囉惹鉢帝、婆囉捺嚩惹、伊舍曩、贊難曩、迦麼、悉里瑟吒、俱儞建吒、儞建吒、滿尼摩尼摩尼左囉、鉢囉拏那、烏波半左迦、娑多儗里、海摩嚩多布囉拏佉禰囉俱尾吒虞波羅藥叉、阿吒嚩俱曩囉囉惹𡁠、曩里沙婆唧怛囉細曩、巘駄里嚩、禰里伽設帝摩多隸、半左羅巘拏穌謨摩曩彌里具，并其眷屬，怛里頗梨、怛里建吒計，乃至世間行者，俱有神通威德，光明照耀，恭敬圍繞，來迦毘羅林，集會聽法。復有諸大毒龍，所謂怛叉迦、劍末羅濕嚩多嚕、鉢囉鉢多、鉢囉惹虞、莎虞曩娑賀掃那娑俱、地里多囉瑟吒囉、俱祖囉、愛囉嚩尼龍等，瞋恚暴惡，有大神通威德，光明熾盛，與諸眷屬，恭敬圍繞，來迦毘羅林，集會聽法。復有金翅鳥，名曰無畏，與其飛禽清淨眼等并諸眷屬，亦具神通威德，光明照耀，恭敬圍繞，來迦毘羅林，集會聽法。復有無能勝金剛手，海內住者，一切怖畏藥叉，并其眷屬，皆具神通威德，光明照耀，恭敬圍繞，來迦毘羅林，集會聽法。復有阿修羅眾，所謂尾麼唧怛囉、穌唧怛囉、鉢囉賀、那母唧隸，及一百末隸阿修羅子，并諸眷屬，具大神通無量威德，光明照耀，恭敬圍繞，來迦毘羅林，集會聽法。復有四大王天、忉利天、夜摩天、兜率陀天、化樂天、他化自在天，及諸天眾，皆具神通威德，光明照耀，恭敬圍繞，來迦毘羅林，集會聽法。復有名天，所謂嚩嚕拏天、嚩嚕尼天、穌摩天、畢里瑟吒天、阿誐摩天、蜜怛囉嚩嚕尼天、地天、水天、火天、風天，如是十天，具大威德，神通變現，并其眷屬，光明照耀，恭敬圍繞，來迦毘羅林，集會聽法。復有那羅延天、娑賀梨左天、日天、月天、星宿天、帝釋天、莫伽天、一切最尊賢聖天，并二眷屬天等，如是十天，具大神通無量威德，光明照耀，恭敬圍繞，來迦毘羅林，集會聽法。復有諸天女等，所謂娑呬迦天女、如火焰天女、阿里瑟吒天女、穌摩天女、烏多摩天女、補瑟波嚩悉儞天女、左囉迦天女、穌跋捺囉天女、羯叉阿左喻多天女、鉢囉捺喻麼曩天女、莎儞迦等，無數天女，并諸眷屬，具大神通無量威德，身相端嚴，光明照耀，恭敬圍繞，來迦毘羅林，集會聽法。復有大藥叉女，所謂舍摩藥叉女、摩賀舍摩藥叉女、摩耨沙藥叉女、摩耨數怛摩藥叉女、訖里拏藥叉女、鉢囉謨沙藥叉女、摩曩鉢囉努沙迦藥叉女、末囉賀藥叉女、摩賀末囉藥叉女、苾芻牟尼迦藥叉女，如是十大藥叉女，亦具神通威德，光明照耀，與諸眷屬，恭敬圍繞，來迦毘羅林，集會聽法。復有十大藥叉女，所謂輸訖羅藥叉女、羯拏末羅藥叉女、迦嚕拏藥叉女、儞羅迦嚩悉儞藥叉女、阿嚩那多計舍藥叉女、鉢囉目契閉多迦嚩悉泥藥叉女、娑那摩多藥叉女、賀里帝藥叉女、嚕唧迦藥叉女，如是藥叉女等，亦具神通威德，光明照耀，與諸眷屬，恭敬圍繞，來迦毘羅林，集會聽法。復有賀里帝及童男童女眷屬，亦具威德神通，光明照耀，與諸眷屬，恭敬圍繞，來迦毘羅林，集會聽法。如是十方梵王帝釋天人八部、諸大苾芻，無量無數，皆來集會。"
+  },
+  "a07": {
+   "dn20": "Mārasenā abhikkāmi, passa kaṇhassa mandiyaṁ. ‘Etha gaṇhatha bandhatha, rāgena baddhamatthu vo; Samantā parivāretha, mā vo muñcittha koci naṁ’.",
+   "nan-dn20": "因陀羅梵天\n以及相具來\n彼等對諸天\n魔軍之進行\n見康哈緩漫\n然縛之捕之\n彼實愛欲縛\n由四方被圍\n誰無解放彼\n斯摩哈勢那\n遣使康哈軍\n手打於地面\n為令恐怖響\n猶如雨期雲\n如電光雷鳴\n由此彼忿怒\n退散不自制",
+   "T0001-da19": "爾時，魔王見諸大眾在世尊所，懷毒害心，即自念言：「我當將諸鬼兵往壞彼眾，圍遶盡取，不令有遺。」時，即召四兵，以手拍車，聲如霹靂，諸有見者無不驚怖，放大風雨、雷電、霹靂，向迦維林圍繞大眾。",
+   "T0019": "爾時，會中有大黑神，名祖蹲那，具大神通。勇猛暴惡，惱害人天，障修善事，以手拍地，發大惡聲，於虛空中，化大風雲電雹雷閃種種惡相，眾皆驚怖。"
+  },
+  "a08": {
+   "dn20": "Iti tattha mahāseno, kaṇho senaṁ apesayi; Pāṇinā talamāhacca, saraṁ katvāna bheravaṁ. Yathā pāvussako megho, thanayanto savijjuko; Tadā so paccudāvatti, saṅkuddho asayaṁvase. Tañca sabbaṁ abhiññāya, vavatthitvāna cakkhumā; Tato āmantayī satthā, sāvake sāsane rate. ‘Mārasenā abhikkantā, te vijānātha bhikkhavo’; Te ca ātappamakaruṁ, sutvā buddhassa sāsanaṁ; Vītarāgehi pakkāmuṁ, nesaṁ lomāpi iñjayuṁ. ‘Sabbe vijitasaṅgāmā, bhayātītā yasassino; Modanti saha bhūtehi,",
+   "nan-dn20": "而知其一切\n具眼師說明\n喜教弟子等\n立即告之曰\n魔軍之進來\n汝等諸比丘\n必知識彼等\n彼等聞佛教\n自然而緊張\n由離愛欲人\n彼魔自退卻\n令動一毛髮\n即歸戰勝利\n越恐怖譽高\n聞此彼眾生\n諸天共歡喜",
+   "T0001-da19": "佛告諸比丘樂此眾者：「汝等當知，今日魔眾懷惡而來。」於是頌曰：「汝今當敬順，建立於佛法；\n當滅此魔眾，如象壞花藂。\n專念無放逸，具足於淨戒；\n定意自念惟，善護其志意。\n若於正法中，能不放逸者；\n則度老死地，永盡諸苦本。\n諸弟子聞已，當勤加精進；\n超度於眾欲，一毛不傾動。\n此眾為最勝，有大智名聞；\n弟子皆勇猛，為眾之所敬。」爾時，諸天、神、鬼、五通仙人皆集迦維園中，見魔所為，怪未曾有。",
+   "T0019": "佛即觀察，說聲：「聞法。」魔既聞已，歸依息惡，與諸苾芻，同住聲聞乘。"
+  },
+  "a09": {
+   "dn20": "sāvakā te janesutā’”ti. Mahāsamayasuttaṁ niṭṭhitaṁ sattamaṁ.",
+   "T0001-da19": "佛說此法時，八萬四千諸天遠塵離垢，得法眼淨。諸天、龍、鬼、神、阿修羅、迦樓羅、真陀羅、摩睺羅伽、人與非人聞佛所說，歡喜奉行。",
+   "T0019": "是時，眾會見佛降魔，踊躍歡喜，信受奉行。"
+  }
+ }
+}

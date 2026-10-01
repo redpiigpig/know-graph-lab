@@ -1,0 +1,156 @@
+{
+ "slug": "pi-an7.15",
+ "title": "鹹水喻經",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "七種水喻總說"
+  },
+  {
+   "id": "a02",
+   "label": "沒水底者"
+  },
+  {
+   "id": "a03",
+   "label": "出水還沒者"
+  },
+  {
+   "id": "a04",
+   "label": "出水觀看者"
+  },
+  {
+   "id": "a05",
+   "label": "出水而住者"
+  },
+  {
+   "id": "a06",
+   "label": "欲渡水者"
+  },
+  {
+   "id": "a07",
+   "label": "欲至彼岸者"
+  },
+  {
+   "id": "a08",
+   "label": "已至彼岸者"
+  },
+  {
+   "id": "a09",
+   "label": "結論與流通"
+  }
+ ],
+ "versions": [
+  {
+   "id": "an7.15",
+   "lang": "pi",
+   "label": "巴利 AN7.15",
+   "who": "Mahāsaṅgīti 本・SuttaCentral",
+   "reorder": true
+  },
+  {
+   "id": "T0125-ea39.3",
+   "lang": "lzh",
+   "label": "增壹阿含經 （三）",
+   "who": "東晉 瞿曇僧伽提婆譯"
+  },
+  {
+   "id": "T0026-ma4",
+   "lang": "lzh",
+   "label": "中阿含經 （四）中阿含七法品水喻經第四（初一日誦）",
+   "who": "東晉 瞿曇僧伽提婆譯",
+   "reorder": true
+  },
+  {
+   "id": "T0029",
+   "lang": "lzh",
+   "label": "鹹水喻經",
+   "who": "失譯"
+  }
+ ],
+ "works": [
+  "T0026",
+  "T0029",
+  "T0125"
+ ],
+ "anchors": [
+  {
+   "work": "T0125",
+   "node": "（三）",
+   "uid": "T02n0125_p0729c24"
+  },
+  {
+   "work": "T0026",
+   "node": "（四）中阿含七法品水喻經第四（初一日誦）",
+   "uid": "T01n0026_p0424a13"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "an7.15": "Aṅguttara Nikāya 7.15 2. Anusayavagga Udakūpamāsutta",
+   "T0125-ea39.3": "聞如是：一時，佛在舍衛國祇樹給孤獨園。",
+   "T0026-ma4": "我聞如是：一時，佛遊舍衛國，在勝林給孤獨園。",
+   "T0029": "聞如是：一時，婆伽婆在舍衛城祇樹給孤獨園。爾時世尊告諸比丘：「我與汝等說水喻七事，諦聽諦思念之，我當說。」對曰：「如是，世尊！」爾時諸比丘從佛聞教。"
+  },
+  "a01": {
+   "an7.15": "“Sattime, bhikkhave, udakūpamā puggalā santo saṁvijjamānā lokasmiṁ. Katame satta?",
+   "T0125-ea39.3": "爾時，世尊告諸比丘：「我今當說七事水喻，人亦如是。諦聽！諦聽！善思念之。」諸比丘對曰：「如是。世尊！」世尊告曰：「彼云何七事水喻而似人？猶如有人沒在水底，如復有人暫出水還沒，如復有人出水觀看，如復有人出頭而住，如復有人於水中行，如復有人出水而欲到彼岸，如復有人已到彼岸。是謂，比丘！七事水喻出現於世。",
+   "T0026-ma4": "爾時，世尊告諸比丘：「我當為汝說七水人。諦聽，諦聽！善思念之。」時，諸比丘受教而聽。佛言：「云何為七？或有一人常臥水中；或復有人出水還沒；或復有人出水而住；或復有人出水而住，住已而觀；或復有人出水而住，住已而觀，觀已而渡；或復有人出水而住，住已而觀，觀已而渡，渡已至彼岸；或復有人出水而住，住已而觀，觀已而渡，渡已至彼岸，至彼岸已，謂住岸人。如是，我當復為汝說七水喻人。諦聽，諦聽！善思念之。」時，諸比丘受教而聽。佛言：「云何為七？或有人常臥；或復有人出已還沒；或復有人出已而住；或復有人出已而住，住已而觀；或復有人出已而住，住已而觀，觀已而渡；或復有人出已而住，住已而觀，觀已而渡，渡已至彼岸；或復有人出已而住，住已而觀，觀已而渡，渡已至彼岸，至彼岸已，謂住岸梵志。此七水喻人，我略說也。如上所說，如上施設。汝知何義？何所分別？有何因緣？」時，諸比丘白世尊曰：「世尊為法本，世尊為法主，法由世尊，唯願說之，我等聞已，得廣知義。」佛便告曰：「汝等諦聽！善思念之。我當為汝分別其義。」時，諸比丘受教而聽。",
+   "T0029": "世尊告曰：「云何，比丘！水喻七事？若人沒於水；從水出頭復還沒水；或出頭遍觀四方；或出頭不復沒水；或有人欲行出水；或有人欲至彼岸；或有人已至彼岸，淨志得立彼岸。"
+  },
+  "a02": {
+   "an7.15": "Idha, bhikkhave, ekacco puggalo sakiṁ nimuggo nimuggova hoti;",
+   "T0125-ea39.3": "「彼云何人沒在水底而不得出？於是，或有一人，不善之法遍滿其體，當經歷劫數，不可療治，是謂此人沒在水底。",
+   "T0026-ma4": "佛言：「云何有人常臥？謂或有人為不善法之所覆蓋，染汙所染，受惡法報，造生死本，是謂有人常臥。猶人沒溺，臥于水中，我說彼人亦復如是，是謂初水喻人，世間諦如有也。",
+   "T0029": "「彼云何人沒溺於水？或有一人以不善法盡纏裹身，純罪熟，至地獄一劫受罪不可療治，是謂此人常沒溺於水，是謂初入水沒溺。"
+  },
+  "a03": {
+   "an7.15": "idha pana, bhikkhave, ekacco puggalo ummujjitvā nimujjati;",
+   "T0125-ea39.3": "「彼何等人出水還沒？或有一人信根漸薄，雖有善法而不牢固，彼身、口、意行善，後復身、口、意行不善法，身壞命終，生地獄中，是謂此人出水還沒。",
+   "T0026-ma4": "「云何有人出已還沒？謂人既出，得信善法，持戒、布施、多聞、智慧，修習善法，彼於後時失信不固，失持戒、布施、多聞、智慧而不堅固，是謂有人出已還沒。猶人溺水，既出還沒，我說彼人亦復如是，是謂第二水喻人，世間諦如有也。",
+   "T0029": "「彼云何人出頭還沒入水？或有一人作是沒溺，有信於善法，懷慙愧，求其方便，於諸善法皆懷慙愧，彼出於水還沒溺水，是謂二人沒溺於水。"
+  },
+  "a04": {
+   "an7.15": "idha pana, bhikkhave, ekacco puggalo ummujjitvā vipassati viloketi;",
+   "T0125-ea39.3": "「彼何等人出水觀看？於是，或有人有信善根，身、口、意行，更不增益其法，自守而住，彼身壞命終，生阿須倫中，是謂此人出水而觀。",
+   "T0026-ma4": "「云何有人出已而住，住已而觀？謂人既出，得信善法，持戒、布施、多聞、智慧，修習善法，彼於後時信固不失，持戒、布施、多聞、智慧，堅固不失，住善法中，知苦如真，知苦習、知苦滅、知苦滅道如真。彼如是知、如是見，三結便盡，謂身見、戒取、疑，三結已盡，得須陀洹，不墮惡法，定趣正覺，極受七有，天上、人間七往來已，便得苦際，是謂有人出已而住，住已而觀。猶人溺水，出已而住，住已而觀，我說彼人亦復如是，是謂第四水喻人，世間諦如有也。",
+   "T0029": "「彼云何人出水遍觀四方？或有一人出水，彼有信於善法，有慙愧心，有勇猛意，於諸不善法皆有慙愧。彼出水上，不復沒溺於水。此諸賢，是謂三人喻彼出水。"
+  },
+  "a05": {
+   "an7.15": "idha pana, bhikkhave, ekacco puggalo ummujjitvā ṭhito hoti;",
+   "T0125-ea39.3": "「彼何等人出水住者？於是，或有人有信精進，斷三結使，更不退轉，必至究竟成無上道，是謂此人出水而住。",
+   "T0026-ma4": "「云何有人出已而住？謂人既出，得信善法，持戒、布施、多聞、智慧，修習善法，彼於後時信固不失，持戒、布施、多聞、智慧，堅固不失，是謂有人出已而住，猶人溺水，出已而住，我說彼人亦復如是，是謂第三水喻人，世間諦如有也。",
+   "T0029": "「彼云何人出水住？或有一人作是出水，有信於善法，有慙愧，有精進，於諸善法皆懷慙愧，彼於三結使盡，成須陀洹而不退轉，必當還所獲，是謂四人喻彼出水住。"
+  },
+  "a06": {
+   "an7.15": "idha pana, bhikkhave, ekacco puggalo ummujjitvā patarati;",
+   "T0125-ea39.3": "「彼何等人欲渡水者？於是，或有人信根精進，恒懷慚愧，斷三結使，婬、怒、癡薄，來至此世而斷苦際，是謂此人欲渡水者。",
+   "T0026-ma4": "「云何有人出已而住，住已而觀，觀已而渡？謂人既出，得信善法，持戒、布施、多聞、智慧，修習善法。彼於後時信固不失，持戒，布施、多聞、智慧，堅固不失，住善法中，知苦如真，知苦習、知苦滅、知苦滅道如真，如是知、如是見，三結便盡，謂身見、戒取、疑，三結已盡，婬、怒、癡薄，得一往來天上、人間，一往來已，便得苦際，是謂有人出已而住，住已而觀，觀已而渡。猶人溺水，出已而住，住已而觀，觀已而渡，我說彼人亦復如是，是謂第五水喻人，世間諦如有也。",
+   "T0029": "「彼云何人出水欲至彼岸？或有一人作如是出水，彼有信於善法，有慙愧，有勇猛意，於諸善法悉懷慙愧，彼盡三結使，貪欲、瞋恚、愚癡薄，成斯陀含，來至此間而盡苦本，是謂彼人喻彼水欲至彼岸。"
+  },
+  "a07": {
+   "an7.15": "idha pana, bhikkhave, ekacco puggalo ummujjitvā patigādhappatto hoti;",
+   "T0125-ea39.3": "「彼何等人欲至彼岸？或有人信根精進，斷下五結，成阿那含，即彼般涅槃，更不來此世，是謂此人欲至彼岸者也。",
+   "T0026-ma4": "「云何有人出已而住，住已而觀，觀已而渡，渡已至彼岸？謂人既出，得信善法，持戒、布施、多聞、智慧，修習善法，彼於後時信固不失，持戒、布施、多聞、智慧，堅固不失，住善法中，知苦如真，知苦習、知苦滅、知苦滅道如真，如是知、如是見，五下分結盡，謂貪欲、瞋恚、身見、戒取、疑，五下分結盡已，生於彼間，便般涅槃，得不退法，不還此世，是謂有人出已而住，住已而觀，觀已而渡，渡已至彼岸。猶人溺水，出已而住，住已而觀，觀已而渡，渡已至彼岸，我說彼人亦復如是，是謂第六水喻人，世間諦如有也。",
+   "T0029": "「云何彼人已至彼岸？或有一人便出水，有信於善法，有慙愧，有勇猛意，於諸善法皆懷慙愧，彼便盡五下分結，成阿那含，於彼般涅槃，不復來至此間，是謂六人喻彼出水已至彼岸。"
+  },
+  "a08": {
+   "an7.15": "idha pana, bhikkhave, ekacco puggalo ummujjitvā tiṇṇo hoti pāraṅgato thale tiṭṭhati brāhmaṇo. Kathañca, bhikkhave, puggalo sakiṁ nimuggo nimuggova hoti? Idha, bhikkhave, ekacco puggalo samannāgato hoti ekantakāḷakehi akusalehi dhammehi. Evaṁ kho, bhikkhave, puggalo sakiṁ nimuggo nimuggova hoti. Kathañca, bhikkhave, puggalo ummujjitvā nimujjati? Idha, bhikkhave, ekacco puggalo ummujjati sādhu saddhā kusalesu dhammesu, sādhu hirī …pe… sādhu ottappaṁ … sādhu vīriyaṁ … sādhu paññā kusalesu dhammesūti. Tassa sā saddhā neva tiṭṭhati no vaḍḍhati hāyatiyeva, tassa sā hirī …pe… tassa taṁ ottappaṁ … tassa taṁ vīriyaṁ … tassa sā paññā neva tiṭṭhati no vaḍḍhati hāyatiyeva. Evaṁ kho, bhikkhave, puggalo ummujjitvā nimujjati. Kathañca, bhikkhave, puggalo ummujjitvā ṭhito hoti? Idha, bhikkhave, ekacco puggalo ummujjati sādhu saddhā kusalesu dhammesu, sādhu hirī …pe… sādhu ottappaṁ … sādhu vīriyaṁ … sādhu paññā kusalesu dhammesūti. Tassa sā saddhā neva hāyati no vaḍḍhati ṭhitā hoti. Tassa sā hirī …pe… tassa taṁ ottappaṁ … tassa taṁ vīriyaṁ … tassa sā paññā neva hāyati no vaḍḍhati ṭhitā hoti. Evaṁ kho, bhikkhave, puggalo ummujjitvā ṭhito hoti. Kathañca, bhikkhave, puggalo ummujjitvā vipassati viloketi? Idha, bhikkhave, ekacco puggalo ummujjati sādhu saddhā kusalesu dhammesu, sādhu hirī …pe… sādhu ottappaṁ … sādhu vīriyaṁ … sādhu paññā kusalesu dhammesūti. So tiṇṇaṁ saṁyojanānaṁ parikkhayā sotāpanno hoti avinipātadhammo niyato sambodhiparāyaṇo. Evaṁ kho, bhikkhave, puggalo ummujjitvā vipassati viloketi. Kathañca, bhikkhave, puggalo ummujjitvā patarati? Idha, bhikkhave, ekacco puggalo ummujjati sādhu saddhā kusalesu dhammesu, sādhu hirī …pe… sādhu ottappaṁ … sādhu vīriyaṁ … sādhu paññā kusalesu dhammesūti. So tiṇṇaṁ saṁyojanānaṁ parikkhayā rāgadosamohānaṁ tanuttā sakadāgāmī hoti, sakideva imaṁ lokaṁ āgantvā dukkhassantaṁ karoti. Evaṁ kho, bhikkhave, puggalo ummujjitvā patarati. Kathañca, bhikkhave, puggalo ummujjitvā patigādhappatto hoti? Idha, bhikkhave, ekacco puggalo ummujjati sādhu saddhā kusalesu dhammesu, sādhu hirī …pe… sādhu ottappaṁ … sādhu vīriyaṁ … sādhu paññā kusalesu dhammesūti. So pañcannaṁ orambhāgiyānaṁ saṁyojanānaṁ parikkhayā opapātiko hoti tattha parinibbāyī anāvattidhammo tasmā lokā. Evaṁ kho, bhikkhave, puggalo ummujjitvā patigādhappatto hoti. Kathañca, bhikkhave, puggalo ummujjitvā tiṇṇo hoti pāraṅgato thale tiṭṭhati brāhmaṇo. Idha, bhikkhave, ekacco puggalo ummujjati sādhu saddhā kusalesu dhammesu, sādhu hirī …pe… sādhu ottappaṁ … sādhu vīriyaṁ … sādhu paññā kusalesu dhammesūti. So āsavānaṁ khayā anāsavaṁ cetovimuttiṁ paññāvimuttiṁ diṭṭheva dhamme sayaṁ abhiññā sacchikatvā upasampajja viharati. Evaṁ kho, bhikkhave, puggalo ummujjitvā tiṇṇo hoti pāraṅgato thale tiṭṭhati brāhmaṇo.",
+   "T0125-ea39.3": "「何等人已至彼岸者？於是，或有一人，信根精進而懷慚愧，盡有漏成無漏，於現法中而自娛樂；生死已盡，梵行已立，所作已辦，更不復受胎，如實知之。於此無餘涅槃界而般涅槃，是謂此人已渡彼岸者也。",
+   "T0026-ma4": "「云何有人出已而住，住已而觀，觀已而渡，渡已至彼岸，至彼岸已謂住岸梵志？謂人既出，得信善法，持戒、布施、多聞、智慧，修習善法，彼於後時信固不失，持戒、布施、多聞、智慧，堅固不失，住善法中，知苦如真，知苦習、知苦滅、知苦滅道如真，如是知、如是見，欲漏心解脫，有漏、無明漏心解脫，解脫已，便知解脫，生已盡，梵行已立，所作已辦，不更受有，知如真，是謂有人出已而住，住已而觀，觀已而渡，渡已至彼岸，至彼岸已，謂住岸梵志。猶人溺水，出已而住，住已而觀，觀已而渡，渡已至彼岸，至彼岸已，謂住岸人。我說彼人亦復如是，是謂第七水喻人，世間諦如有也。",
+   "T0029": "「彼云何人已至彼岸，淨志得立彼岸？或有一人而出水上，有信於善法，有慙愧，有勇猛意，於諸善法皆懷慙愧；或有一人盡有漏成無漏，念解脫、智慧解脫，於現法中疾得證通，而自娛樂盡生死源。梵行已立，所作已辦，更不復受母胎。是謂彼人喻彼水已立彼出岸。"
+  },
+  "a09": {
+   "an7.15": "Ime kho, bhikkhave, satta udakūpamā puggalā santo saṁvijjamānā lokasmin”ti. Pañcamaṁ.",
+   "T0125-ea39.3": "「是謂，比丘！有此七人水喻向汝等說，諸佛世尊所應修行接度人民，今已施行。當在閑居靜處，若在樹下，當念坐禪，勿起懈怠。此是我之教誨。」爾時，諸比丘聞佛所說，歡喜奉行。",
+   "T0026-ma4": "我向所言，當為汝說七水人者，因此故說。」佛說如是。彼諸比丘聞佛所說，歡喜奉行。水喻經第四竟（千三百八十八字）",
+   "T0029": "「如是，比丘！此七人，我今與汝等說七人喻水。諸世尊與諸聲聞所應當說，有大慈，欲使獲安隱，皆使得度，所謂閑居處、樹下、空處露坐，汝等坐禪勿有懈怠；今不精勤後備有悔。是謂我所教勅。」爾時諸比丘聞佛所說，歡喜奉行。"
+  }
+ }
+}

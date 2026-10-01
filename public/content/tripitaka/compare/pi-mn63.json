@@ -1,0 +1,148 @@
+{
+ "slug": "pi-mn63",
+ "title": "箭喻經",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "摩羅迦子內心疑惑"
+  },
+  {
+   "id": "a02",
+   "label": "摩羅迦子請世尊"
+  },
+  {
+   "id": "a03",
+   "label": "世尊反問摩羅迦子"
+  },
+  {
+   "id": "a04",
+   "label": "摩羅迦子答非也"
+  },
+  {
+   "id": "a05",
+   "label": "世尊斥摩羅迦子愚痴"
+  },
+  {
+   "id": "a06",
+   "label": "世尊說箭喻譬喻"
+  },
+  {
+   "id": "a07",
+   "label": "結論：不答非義"
+  },
+  {
+   "id": "a08",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "mn63",
+   "lang": "pi",
+   "label": "巴利 MN63",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-mn63",
+   "lang": "lzh",
+   "label": "漢譯南傳 MN63",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0026-ma221",
+   "lang": "lzh",
+   "label": "中阿含經 （二二一）中阿含例品箭喻經第十（第五後誦）",
+   "who": "東晉 瞿曇僧伽提婆譯"
+  },
+  {
+   "id": "T1509-t1509.15",
+   "lang": "lzh",
+   "label": "大智度論 大智度論釋大莊嚴品第十五",
+   "who": "龍樹菩薩造 後秦 鳩摩羅什譯"
+  },
+  {
+   "id": "T0094",
+   "lang": "lzh",
+   "label": "箭喻經",
+   "who": "失譯"
+  }
+ ],
+ "works": [
+  "T0026",
+  "T0094",
+  "T1509"
+ ],
+ "anchors": [
+  {
+   "work": "T0026",
+   "node": "（二二一）中阿含例品箭喻經第十（第五後誦）"
+  },
+  {
+   "work": "T1509",
+   "node": "大智度論釋大莊嚴品第十五"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "mn63": "Majjhima Nikāya 63",
+   "nan-mn63": "第六十三　摩羅迦小經",
+   "T0026-ma221": "我聞如是：一時，佛遊舍衛國，在勝林給孤獨園。",
+   "T1509-t1509.15": "【經】爾時，富樓那彌多羅尼子白佛言：「世尊！我亦樂說所以為摩訶薩！」佛言：「便說！」富樓那彌多羅尼子言：「是菩薩大莊嚴，是菩薩發趣大乘，是菩薩乘於大乘；以是故，是菩薩名摩訶薩。」舍利弗語富樓那言：「云何名菩薩摩訶薩大莊嚴？」富樓那語舍利弗：「菩薩摩訶薩不分別為爾所人故住檀波羅蜜，行檀波羅蜜；為一切眾生故住檀波羅蜜，行檀波羅蜜。不為爾所人故，住尸羅波羅蜜，行尸羅波羅蜜，羼提波羅蜜，毘梨耶波羅蜜，禪波羅蜜，般若波羅蜜；為一切眾生故，住般若波羅蜜，行般若波羅蜜。菩薩摩訶薩大莊嚴，不齊限眾生，我當度若干人，不度餘人；不言：『我令若干人至阿耨多羅三藐三菩提，餘人不至。』是菩薩摩訶薩普為一切眾生故大莊嚴。復作是念：『我當自具足檀波羅蜜，亦令一切眾生行檀波羅蜜；自具足尸羅波羅蜜，羼提波羅蜜，毘梨耶波羅蜜，禪波羅蜜；自具足般若波羅蜜，亦令一切眾生行般若波羅蜜。』「復次，舍利弗！菩薩摩訶薩行檀波羅蜜時，所有布施應薩婆若心，共一切眾生，迴向阿耨多羅三藐三菩提。舍利弗！是名菩薩摩訶薩行檀波羅蜜時檀波羅蜜大莊嚴。復次，舍利弗！菩薩摩訶薩行檀波羅蜜時，應薩婆若心布施，不向聲聞、辟支佛地。舍利弗！是名菩薩摩訶薩行檀波羅蜜時尸羅波羅蜜大莊嚴。復次，舍利弗！菩薩摩訶薩行檀波羅蜜時，應薩婆若心布施，是諸施法信忍欲，是名行檀波羅蜜時羼提波羅蜜大莊嚴。復次，舍利弗！菩薩摩訶薩行檀波羅蜜時，應薩婆若心布施，勤修不息，是名行檀波羅蜜時毘梨耶波羅蜜大莊嚴。復次，舍利弗！菩薩摩訶薩行檀波羅蜜時，應薩婆若心布施，攝心不起聲聞、辟支佛意，是名行檀波羅蜜時禪波羅蜜大莊嚴。復次，舍利弗！菩薩摩訶薩行檀波羅蜜時，應薩婆若心布施，觀諸法如幻，不得施者，不得所施物，不得受者，是名行檀波羅蜜時般若波羅蜜大莊嚴。如是，舍利弗！若菩薩摩訶薩應薩婆若心，不取不得諸波羅蜜相，當知是菩薩摩訶薩大莊嚴。「復次，舍利弗！菩薩摩訶薩行尸羅波羅蜜時，應薩婆若心布施，共一切眾生，迴向阿耨多羅三藐三菩提，是名菩薩摩訶薩行尸羅波羅蜜時檀波羅蜜。復次，舍利弗！菩薩摩訶薩行尸羅波羅蜜時，諸法信忍欲，是名菩薩摩訶薩行尸羅波羅蜜時羼提波羅蜜。復次，舍利弗！菩薩摩訶薩行尸羅波羅蜜時，勤修不息，是名菩薩摩訶薩行尸羅波羅蜜時毘梨耶波羅蜜。復次，舍利弗！菩薩摩訶薩行尸羅波羅蜜時，不受聲聞、辟支佛心，是名菩薩摩訶薩行尸羅波羅蜜時禪波羅蜜。復次，舍利弗！菩薩摩訶薩行尸羅波羅蜜時，觀一切法如幻，亦不念有是戒，用無所得故，是名菩薩摩訶薩行尸羅波羅蜜時般若波羅蜜。如是，舍利弗！菩薩摩訶薩行尸羅波羅蜜時，攝諸波羅蜜，以是故名大莊嚴。「復次，舍利弗！菩薩摩訶薩行羼提波羅蜜時，應薩婆若心布施，共一切眾生，迴向阿耨多羅三藐三菩提，是為菩薩摩訶薩行羼提波羅蜜時檀波羅蜜。復次，舍利弗！菩薩摩訶薩行羼提波羅蜜時，不受聲聞、辟支佛心，但受薩婆若心，是名菩薩摩訶薩行羼提波羅蜜時尸羅波羅蜜。復次，舍利弗！菩薩摩訶薩行羼提波羅蜜時，應薩婆若心，身心精進，不休不息，是名菩薩摩訶薩行羼提波羅蜜時毘梨耶波羅蜜。復次，舍利弗！菩薩摩訶薩行羼提波羅蜜時，攝心一處，雖有苦事，心不散亂，是名菩薩摩訶薩行羼提波羅蜜時禪波羅蜜。復次，舍利弗！菩薩摩訶薩行羼提波羅蜜時，應薩婆若心，觀諸法空，無作者，無受者；若有呵罵割截者，心如幻夢，是名菩薩摩訶薩行羼提波羅蜜時般若波羅蜜。「復次，舍利弗！菩薩摩訶薩行毘梨耶波羅蜜時，應薩婆若心布施時，不令身心懈怠，是名菩薩摩訶薩行毘梨耶波羅蜜時檀波羅蜜。復次，舍利弗！菩薩摩訶薩行毘梨耶波羅蜜時，應薩婆若心，始終具足清淨持戒，是名菩薩摩訶薩行毘梨耶波羅蜜時尸羅波羅蜜。復次，舍利弗！菩薩摩訶薩行毘梨耶波羅蜜時，應薩婆若心，修行忍辱，是名菩薩摩訶薩行毘梨耶波羅蜜時羼提波羅蜜。復次，舍利弗！菩薩摩訶薩行毘梨耶波羅蜜時，應薩婆若心，攝心離欲，入諸禪定，是名菩薩摩訶薩行毘梨耶波羅蜜時禪波羅蜜。復次，舍利弗！菩薩摩訶薩行毘梨耶波羅蜜時，應薩婆若心，不取一切諸法相，於不取相亦不著，是名菩薩摩訶薩行毘梨耶波羅蜜時般若波羅蜜。如是，舍利弗！菩薩摩訶薩行毘梨耶波羅蜜時，攝諸波羅蜜。「復次，舍利弗！菩薩摩訶薩行禪波羅蜜時，應薩婆若心，定心布施，不令心亂，是名菩薩摩訶薩行禪那波羅蜜時檀波羅蜜。復次，舍利弗！菩薩摩訶薩行禪波羅蜜時，應薩婆若心持戒，禪定力故，破戒諸法不令得入，是名菩薩摩訶薩行禪波羅蜜時尸羅波羅蜜。復次，舍利弗！菩薩摩訶薩行禪波羅蜜時，應薩婆若心，慈悲定故，忍諸惱害，是名菩薩摩訶薩行禪波羅蜜時羼提波羅蜜。復次，舍利弗！菩薩摩訶薩行禪波羅蜜時，應薩婆若心，於禪不味不著，常求增進，從一禪至一禪，是名菩薩摩訶薩行禪波羅蜜時毘梨耶波羅蜜。復次，舍利弗！菩薩摩訶薩行禪波羅蜜時，應薩婆若心，於一切法無所依止，亦不隨禪生，是名菩薩摩訶薩行禪波羅蜜時般若波羅蜜。如是，舍利弗！菩薩摩訶薩行禪波羅蜜時，攝諸波羅蜜。「復次，舍利弗！菩薩摩訶薩行般若波羅蜜時，應薩婆若心，布施內外所有，無所愛惜，不見與者、受者及以財物，是名菩薩摩訶薩行般若波羅蜜時檀波羅蜜。復次，舍利弗！菩薩摩訶薩行般若波羅蜜時，應薩婆若心，持戒、破戒二事不見故，是名菩薩摩訶薩行般若波羅蜜時尸羅波羅蜜。復次，舍利弗！菩薩摩訶薩行般若波羅蜜時，應薩婆若心，不見訶者、罵者，打者、殺者，亦不見用是空能忍辱，是名菩薩摩訶薩行般若波羅蜜時羼提波羅蜜。復次，舍利弗！菩薩摩訶薩行般若波羅蜜時，應薩婆若心，觀諸法畢竟空，以大悲心故，行諸善法，是名菩薩摩訶薩行般若波羅蜜時毘梨耶波羅蜜。復次，舍利弗！菩薩摩訶薩行般若波羅蜜時，應薩婆若心，入禪定，觀諸禪離相、空相、無相相、無作相，是名菩薩摩訶薩行般若波羅蜜時禪波羅蜜。如是，舍利弗！菩薩摩訶薩行般若波羅蜜時，攝諸波羅蜜。舍利弗！如是名為菩薩摩訶薩大莊嚴。「是大莊嚴菩薩，十方諸佛歡喜，於大眾中稱名讚歎：『某世界某菩薩摩訶薩大莊嚴，成就眾生，淨佛世界！』」【論】釋曰：富樓那聞上二大弟子說摩訶薩義，而佛可言：「善哉！」又富樓那，佛大眾中讚歎法師之上，復欲說摩訶薩義，白佛言：「我亦樂說。」佛即聽許。問曰：須菩提說般若波羅蜜主，舍利弗應問須菩提，今何以故乃問富樓那？答曰：此二人同是婆羅門，俱以母字為名；此二人佛法中俱大——舍利弗智慧中大；富樓那說法種種莊嚴，牽引眾情，說法中大。是故二人等，等故於佛前共論。又富樓那先已共舍利弗論議，善能相答，如《七車譬喻經》中說，已共為親厚，好共論理；須菩提無是因緣。又富樓那說摩訶薩義，是故應問，云何乃問須菩提？所說「摩訶薩」義者，所謂是人大莊嚴。如人遠行，重有資糧；又如破賊，備諸器仗。是菩薩亦如是，欲破魔入煩惱賊故，行六波羅蜜以自莊嚴。是人無量劫來久住生死，集諸福德、智慧以為資糧，三種乘中為趣大乘故，發心行六波羅蜜，乘是大乘。舍利弗問富樓那：「聲聞、辟支佛亦趣道，何以不名大莊嚴，而但說菩薩大莊嚴？」富樓那答言：「聲聞、辟支佛雖行布施等六事，有量有限，自為度身，及餘眾生可度者度，是故不名大莊嚴。菩薩所度，不分別、不齊限為若干眾生故布施乃至智慧，不作是念：『我度若干人令得三乘，不能度若干人；令若干人得阿耨多羅三藐三菩提，若干人不能度。』菩薩作是莊嚴，令一切眾生盡入大乘作佛。菩薩行大莊嚴，自行檀波羅蜜，亦令一切眾生行檀波羅蜜，乃至般若波羅蜜亦如是。」問曰：云何名「大莊嚴」？答曰：為度眾生故、為阿耨多羅三藐三菩提故，行諸善福功德者，略說是六波羅蜜。如富樓那次第說：若菩薩為一切智慧故，行檀波羅蜜，是福德共一切眾生。「共」者，此布施福德，我及眾生共等，我以此迴向阿耨多羅三藐三菩提。「迴向」者，於此福德，不求人王、天王、世間禪定樂；為眾生，乃至涅槃樂亦不求，持此果報，盡為度眾生故求佛法。如是等相，是名「檀波羅蜜大莊嚴」。是菩薩行布施時，若見諸辟支佛、阿羅漢現大神通，得漏盡，入涅槃，於中不貪不著，一心修佛道，是名「檀波羅蜜生尸羅波羅蜜」。布施時，有人惡口罵詈，刀杖毀害，所不應乞者而強乞，不瞋不悔，入諸法相中，所謂畢竟空，是名「檀波羅蜜生羼提波羅蜜」。行布施時，和合財物、守護施彼，身心不懈不息，是名「檀波羅蜜生毘梨耶波羅蜜」。布施時，一心念佛，念諸佛法，不令聲聞、辟支佛心入；因是布施，即入禪定，是名「檀波羅蜜生禪波羅蜜」。布施時，菩薩作是念：「施者、受者、財物，因緣和合生故無自性，無自性故空，如幻、如夢。」眾生空故，無受者、無施者；法空故，無財物，是名「檀波羅蜜生般若波羅蜜」。若菩薩為一切智故，不取諸波羅蜜相，而能行諸波羅蜜，是名「菩薩大莊嚴」。此中一波羅蜜備生諸波羅蜜，此經中自分別其義。古今語異，義不了故，助分別說，開論議門。餘五波羅蜜，亦應如是隨義說。問曰：何以但檀波羅蜜中說生六波羅蜜，餘波羅蜜中但說生五？答曰：若後五波羅蜜中各各生六，亦無咎。六波羅蜜非一時、非一念法，無量劫中集六種功德和合名為六波羅蜜。先生小，後生中、大，有何咎？一切諸法皆初小後大，以是故，諸餘波羅蜜各各應生六。復次，一切諸佛說法時，檀波羅蜜為初門。如經中說：「佛常初為眾生說布施、說持戒、說生天，說五欲味，先說世間苦惱、道德利益，後為說四諦。」以是故，初說檀。問曰：佛何以故說檀為初門？答曰：攝眾生法，無過於檀；大小貴賤，乃至畜生，檀皆攝之；乃至怨家得施則為中人，中人得施則成親善。諸佛三十二相、八十隨形好，諸功德具足、所願如意，皆從布施得。如寶掌菩薩等七寶從手中出，給施眾生；亦能令眾生歡喜柔軟，可任得涅槃。如是等義，故檀波羅蜜為初。問曰：富樓那何以故說「一波羅蜜中生諸波羅蜜為大莊嚴」？答曰：是波羅蜜各各別，行力勢少。譬如兵人未集，則無戰力；若大軍都集莊嚴，執持器仗，則能破敵。菩薩亦如是，六波羅蜜一時莊嚴，能破諸煩惱魔人賊，疾得阿耨多羅三藐三菩提。以是故說「一波羅蜜中具諸波羅蜜」。「十方諸佛稱名讚歎」、「成就眾生」、「淨佛世界」，如先說。【經】慧命舍利弗問富樓那彌多羅尼子：「云何菩薩摩訶薩發趣大乘？」富樓那語舍利弗：「菩薩摩訶薩行六波羅蜜時，離諸欲，離諸惡不善法，有覺有觀，離生喜樂入初禪乃至入第四禪中，以慈廣大，無二、無量，無怨、無恨、無惱心行，遍滿一方、二三四方、四維、上下，遍一切世間。悲、喜、捨心，亦如是。是菩薩入禪時、起時，諸禪、無量心及支，共一切眾生，迴向薩婆若，是名菩薩摩訶薩禪波羅蜜發趣大乘。是菩薩摩訶薩住禪、無量心，作是念：『我當得一切種智，為斷一切眾生煩惱故，當說法。』是名菩薩摩訶薩行禪波羅蜜時檀波羅蜜。若菩薩摩訶薩應薩婆若心，修初禪，住初禪，二、三、四禪亦如是，不受餘心——所謂聲聞、辟支佛心。是名菩薩摩訶薩行禪波羅蜜時尸羅波羅蜜。若菩薩摩訶薩應薩婆若心入諸禪，作是念：『我為斷一切眾生煩惱故當說法，是諸心欲樂忍。』是名菩薩摩訶薩行禪波羅蜜時羼提波羅蜜。若菩薩摩訶薩應薩婆若心，入諸禪，諸善根皆迴向薩婆若，勤修不息，是名菩薩摩訶薩行禪波羅蜜時毘梨耶波羅蜜。若菩薩摩訶薩應薩婆若心，入四禪及支，觀無常相、苦相、無我相、空相、無相相、無作相，共一切眾生，迴向薩婆若，是名菩薩摩訶薩行禪波羅蜜時般若波羅蜜。舍利弗！是名菩薩摩訶薩發趣大乘。「復次，菩薩摩訶薩行慈心，作是念：『我當安樂一切眾生；入悲心，我當救濟一切眾生；入喜心，我當度一切眾生；入捨心，我當令一切眾生得諸漏盡。』是名菩薩摩訶薩行無量心時檀波羅蜜。復次，菩薩摩訶薩，是諸禪無量心，不向聲聞辟支佛地，但迴向薩婆若，是名菩薩摩訶薩行無量心時尸羅波羅蜜。復次，舍利弗！菩薩摩訶薩行四無量心，不貪聲聞、辟支佛地，但忍樂欲薩婆若，是名菩薩摩訶薩行無量心時羼提波羅蜜。若菩薩摩訶薩應薩婆若心，行四無量心，但行清淨行，是名菩薩摩訶薩行無量心時毘梨耶波羅蜜。復次，菩薩摩訶薩入禪、入無量心時，亦不隨禪、無量心生，是名菩薩摩訶薩行無量心時方便般若波羅蜜。舍利弗！是名菩薩摩訶薩發趣大乘。「復次，舍利弗！菩薩摩訶薩發趣大乘，一切種修四念處，乃至一切種修八聖道分；一切種修三解脫門，乃至十八不共法，是名菩薩摩訶薩發趣大乘。「復次，舍利弗！菩薩摩訶薩內空中智慧，用無所得故；乃至無法有法空中智慧，用無所得故，是名菩薩摩訶薩發趣大乘。復次，舍利弗，菩薩摩訶薩一切法中不亂不定智慧，是名菩薩摩訶薩發趣大乘。「復次，舍利弗！菩薩摩訶薩發趣大乘，非常、非無常智慧，非樂、非苦，非實、非虛，非我、非無我智慧，是名菩薩摩訶薩發趣大乘，用無所得故。「復次，舍利弗！菩薩摩訶薩智，不行過去世、不行未來世、不行現在世，亦非不知三世，是名菩薩摩訶薩發趣大乘，用無所得故。「復次，菩薩摩訶薩發趣大乘智，不行欲界、不行色界、不行無色界，亦非不知欲界、色界、無色界，用無所得故，是名菩薩摩訶薩發趣大乘。「復次，菩薩摩訶薩發趣大乘智，不行世間法、不行出世間法，不行有為法、不行無為法，不行有漏法、不行無漏法，亦非不知世間法出世間法、有為無為、有漏無漏法，用無所得故。舍利弗！是名菩薩摩訶薩發趣大乘。」【論】問曰：六波羅蜜中，若逆說，則應說般若波羅蜜，次說禪；若順，應先說檀波羅蜜；今何以乃說禪波羅蜜為首？答曰：發大莊嚴，無有眾生能破壞者。若菩薩無禪定，心未離欲，雖行餘波羅蜜則易壞；行禪波羅蜜，能入慈無量，是時無能壞。如說：行慈三昧者，刀不能傷，水火不害。亦有神通力種種變化，能發大莊嚴。如佛說：鳥無兩翼，不能飛翔；菩薩無神通力，不能發大莊嚴。入禪波羅蜜中，能生慈無量、五神通故，物無能傷。以是故，今此說禪波羅蜜為首。問曰：四禪中有種種功德，皆可行六波羅蜜，今何以但說四無量心中行六波羅蜜？答曰：四無量心，取眾生相，緣眾生，菩薩常為眾生故行道。是四無量等中有慈悲心，能利益眾生；餘八背捨、九次第等無如是利益。問曰：菩薩住五神通，能廣利益眾生，何以故不說？答曰：大悲是菩薩根本。又五神通先已說，後當說四無量心，未說故今說。若菩薩但行四無量心，不名發趣大乘；六波羅蜜和合故，名為「發趣大乘」。四無量心生六波羅蜜，富樓那此中自說因緣。問曰：云何一切種修四念處乃至十八不共法？答曰：有二種：信行性，法行性。信行性觀無常、苦，或但觀無常，或但觀苦；法行性人觀空、無我，或但觀空，或但觀無我。菩薩度眾生故，一切門皆修皆學。復次，發大乘者，以十八空破十八種法，亦捨是十八種空智慧。復次，若菩薩觀諸法常定，亦不取定相，是名「不定不亂智慧」。復次，畏墮常、樂顛倒故，不觀諸法常、樂等；畏墮斷滅故，不觀無常等。復次，若菩薩三世、三界中智慧，不觀、不行、不取相，知皆虛妄而不墮無明。復次，世間、出世間中，亦非智、非不智。非智者，空故，無空相故，畢竟清淨故。非不智者，觀無常、苦、空等入般若波羅蜜中故。非不行智，不行者，遮見、斷法愛，離依止故。無非智者，是中無愚癡，異於凡夫故。又行者持戒、修禪定、習諸觀，云何言「非智」？如《佛利眾生經》中說：「行者捨諸法，亦不依止慧，\n亦無所分別，是為決定智！」（釋第十五品竟）",
+   "T0094": "聞如是：一時，婆伽婆在舍衛城祇樹給孤獨園。"
+  },
+  "a01": {
+   "mn63": "Cūḷamālukyasutta Evaṁ me sutaṁ— ekaṁ samayaṁ bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme. Atha kho āyasmato mālukyaputtassa rahogatassa paṭisallīnassa evaṁ cetaso parivitakko udapādi: “yānimāni diṭṭhigatāni bhagavatā abyākatāni ṭhapitāni paṭikkhittāni: ‘sassato loko’tipi, ‘asassato loko’tipi, ‘antavā loko’tipi, ‘anantavā loko’tipi, ‘taṁ jīvaṁ taṁ sarīran’tipi, ‘aññaṁ jīvaṁ aññaṁ sarīran’tipi, ‘hoti tathāgato paraṁ maraṇā’tipi, ‘na hoti tathāgato paraṁ maraṇā’tipi, ‘hoti ca na ca hoti tathāgato paraṁ maraṇā’tipi, ‘neva hoti na na hoti tathāgato paraṁ maraṇā’tipi— tāni me bhagavā na byākaroti. Yāni me bhagavā na byākaroti taṁ me na ruccati, taṁ me nakkhamati.",
+   "nan-mn63": "如是我聞。——一時，世尊在舍衛城之祇陀林給孤獨園。爾時，獨住宴坐之具壽摩羅迦子心生如是思惟：「凡此等之見，世尊不記說、捨置、拒絕〔回答〕，即——世界為常住，世界為無常；世界為有邊，世界為無邊；命即身，命與身異；如來死後有，如來死後無有，如來死後亦有亦無有，如來死後非有非非有；此等世尊對予不記說。世尊對予不記說此等，予不悅此、予不忍此。予今詣世尊問此義，若世尊對予說：『世界為常住也。』或『世界為無常也。』或『世界為有邊也。』或『世界為無邊也。』或『命即身也。』或『命與身異也。』或『如來死後有。』或『如來死後無。』或『如來死後亦有亦無。』或『如來死後非有非無有』者，則予從於世尊所修梵行。若世尊對予不說：『世界為常住也。』或『世界為無常也。』……乃至……或『如來死後為非有非無』者，則予將放棄修學而還俗。」",
+   "T0026-ma221": "爾時，尊者鬘童子獨安靖處，燕坐思惟，心作是念：「所謂此見，世尊捨置除却，不盡通說，謂世有常，世無有常，世有底，世無底，命即是身，為命異身異，如來終，如來不終，如來終不終，如來亦非終亦非不終耶？我不欲此，我不忍此，我不可此。若世尊為我一向說世有常者，我從彼學梵行。若世尊不為我一向說世有常者，我當難詰彼，捨之而去。如是世無有常，世有底，世無底，命即是身，為命異身異，如來終，如來不終，如來終不終，如來亦非終亦非不終耶？若世尊為我一向說此是真諦，餘皆虛妄言者，我從彼學梵行，若世尊不為我一向說此是真諦，餘皆虛妄言者，我當難詰彼，捨之而去。」",
+   "T0094": "彼時，尊者摩羅鳩摩羅，獨在靜處，有是念生：「謂世尊棄邪見、除邪見，不記說世間有常、世間無常，世間有邊、世間無邊，命是身、命異身異，有如此命終、無有命終、有此無有此、無有命終。我不能忍、我所不用、我所不樂。世尊若一向記世間有常者，我當從行梵行；若世尊不一向記世間，世間有常者，論已當離去。如是世間，世間有邊、世間無有邊，命是身、命異身異，有如此命終、無有命終、有此無有此、無有命終。若世尊一向記我言真諦、餘者愚癡者，我當行梵行。若世尊不一向記我言真諦、餘者愚癡者，我問已當離還。」"
+  },
+  "a02": {
+   "mn63": "Sohaṁ bhagavantaṁ upasaṅkamitvā etamatthaṁ pucchissāmi. Sace me bhagavā byākarissati: ‘sassato loko’ti vā ‘asassato loko’ti vā …pe… ‘neva hoti na na hoti tathāgato paraṁ maraṇā’ti vā— evāhaṁ bhagavati brahmacariyaṁ carissāmi; no ce me bhagavā byākarissati: ‘sassato loko’ti vā ‘asassato loko’ti vā …pe… ‘neva hoti na na hoti tathāgato paraṁ maraṇā’ti vā— evāhaṁ sikkhaṁ paccakkhāya hīnāyāvattissāmī”ti.",
+   "nan-mn63": "於是，具壽摩羅迦子從晡時宴默而起，詣世尊處。詣已，頂禮世尊坐於一面。坐於一面之具壽摩羅迦子白世尊曰：「師尊！予獨住宴坐時，心生如次思惟：『此等之見，世尊不記說、捨置、拒絕〔回答〕，即——世界為常住，世界為無常……乃至……如來死後非有非無——關於此等，世尊未曾對予記說，世尊對予不記說此等，予不悅此、予不忍此也。』予今詣世尊問此義，若世尊對予說：『世界為常住也。』或『世界為無常也。』……乃至……或『如來死後非有非無』者，則予將於世尊處修梵行。若世尊對予不說：『世界為常住也。』或『世界為無常也。』……乃至……或『如來死後非有非無』者，予則放棄修學而將還俗。若世尊知：『世界為常住。』世尊宜對予說：『世界為常住。』若世尊知：『世界為無常。』世尊宜對予說：『世界為無常。』又，若世尊不知：『世界為常住。』或『世界為無常。』實因不知、不見者，則言『予不知、予不見』為正當也。若世尊知：『世界為有邊。』世尊宜對予說：『世界為有邊。』若世尊知：『世界為無邊。』則世尊宜對予說：『世界為無邊。』又，若世尊不知：『世界為有邊』或『世界為無邊。』實因不知、不見者，則言：『予不知，予不見』為正當也。若世尊知：『命即身也。』則應對予說：『命即身也。』若世尊知：『命與身異也。』則應對予說：『命與身異也。』又，若世尊不知：『命即身也。』或『命與身異也。』實因不知、不見者，則言『予不知、予不見』為正當也。若世尊知：『如來死後有。』則應對予說：『如來死後有。』若世尊知：『如來死後無。』則應對予說：『如來死後無。』又，若世尊不知：『如來死後有。』或『如來死後無。』實因不知、不見者，則言『予不知，予不見』為正當也。若世尊知：『如來死後亦有亦無。』則應對予說：『如來死後亦有亦無。』若世尊知：『如來死後非有非無。』則應對予說：『如來死後非有非無。』又，若世尊不知：『如來死後亦有亦無。』或『如來死後非有非無。』實因不知、不見者，則言『予不知、予不見』為正當也。」",
+   "T0026-ma221": "於是，尊者鬘童子則於晡時，從燕坐起，往詣佛所，稽首作禮，却坐一面，白曰：「世尊！我今獨安靖處，燕坐思惟，心作是念：『所謂此見，世尊捨置除却，不盡通說，謂世有常，世無有常，世有底，世無底，命即是身，為命異身異，如來終，如來不終，如來終不終，如來亦非終亦非不終耶？我不欲此，我不忍此，我不可此。若世尊一向知世有常者，世尊！當為我說。若世尊不一向知世有常者，當直言不知也。如是世無有常，世有底，世無底，命即是身，為命異身異，如來終，如來不終，如來終不終，如來亦非終亦非不終耶？若世尊一向知此是真諦，餘皆虛妄言者，世尊！當為我說。若世尊不一向知此是真諦，餘皆虛妄言者，當直言不知也。』",
+   "T0094": "於是尊者摩羅鳩摩羅從下晡起，至世尊所，到已禮世尊足，却坐一面。尊者摩羅鳩摩羅却坐一面已，白世尊曰：「唯世尊！我在靜處，有是念生：『謂世尊棄邪見、除邪見，不記說世間有常乃至無有命終。此者我不欲，我不能忍、不能樂。若世尊一向知世間有常者，世尊當記之；世尊若一向不知世間有常者，但直言我不能知。如是世間無常至無有命終，若世尊一向知我言真諦、餘者愚癡，世尊當記之；若世尊不知我言真諦、餘者愚癡者，直言我不能知。』"
+  },
+  "a03": {
+   "mn63": "Atha kho āyasmā mālukyaputto sāyanhasamayaṁ paṭisallānā vuṭṭhito yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho āyasmā mālukyaputto bhagavantaṁ etadavoca: “Idha mayhaṁ, bhante, rahogatassa paṭisallīnassa evaṁ cetaso parivitakko udapādi— yānimāni diṭṭhigatāni bhagavatā abyākatāni ṭhapitāni paṭikkhittāni: ‘sassato loko’tipi, ‘asassato loko’tipi …pe…",
+   "nan-mn63": "〔世尊曰：〕「摩羅迦子，予曾否對汝言：『來！摩羅迦子！汝應於予處修梵行，予願為汝說世界為常住也，或世界為無常也……乃至……或如來死後非有非無』耶？」〔摩羅迦子答曰：〕「實不然也，師尊！」〔世尊曰：〕「或汝對予如是言：『師尊！予願於世尊處修梵行，世尊當為予說世界為常住也，或世界為無常也……乃至……或如來死後非有非無』耶？」〔摩羅迦子答曰：〕「實不然，師尊！」〔世尊曰：〕「摩羅迦子！然予實未對汝言：『來！摩羅迦子！汝應於予處修梵行，予願為汝說世界為常住也，或世界為無常也……乃至……或如來死後非有非無。』汝亦實未對予言：『師尊！予欲於世尊處修梵行。世尊當為予言世界為常住也或世界為無常也……乃至……或如來死後為非有非無』如是，愚人！是誰拒絕誰耶？",
+   "T0026-ma221": "」世尊問曰：「鬘童子！我本頗為汝如是說世有常，汝來從我學梵行耶？」",
+   "T0094": "」「此摩羅鳩摩羅！我前頗向汝說。若我記世間有常，汝便從我行梵行耶？」"
+  },
+  "a04": {
+   "mn63": "‘neva hoti na na hoti tathāgato paraṁ maraṇā’tipi— tāni me bhagavā na byākaroti. Yāni me bhagavā na byākaroti taṁ me na ruccati, taṁ me nakkhamati. Sohaṁ bhagavantaṁ upasaṅkamitvā etamatthaṁ pucchissāmi.",
+   "nan-mn63": "摩羅迦子！有人可能如是言：『世尊對予不說：「世界為常住也，或世界為無常也……乃至……或如來死後為非有非無」之期間，則予不在世尊處修梵行。』然而，摩羅迦子！或許是如來還未說此時，彼人可能命終矣。摩羅迦子！猶有人被塗厚毒之箭所射，彼之親友、同事、親族、血緣為彼遣請箭醫〔療治〕。然彼言：『尚未知射予之人是王族耶？婆羅門耶？庶民耶？或奴隸族耶之期間，此箭不得取出。』又彼言：『在未知射予之人是何名、是何姓之期間，此箭不得取出。』彼又如是言：『在未知射予之人為高、為中、為矮之期間，此箭不得取出。』彼又如是言：『在未知射予之人為黑色、或黃色、或金色皮膚之期間，此箭不得取出。』彼又言：『在未知射予之人，為在此或在彼村里之人耶？或聚落之人耶？或城市之人耶之期間，此箭不得取出。』彼又如是言：『在未知射予之弓為一般之弓耶？或為勁弩之期間，此箭不得取出。』彼又如是言：『在未知射予之弓弦為阿拘之弦耶？或山塔之弦耶？或筋之弦耶？或摩樓瓦之弦耶？或乳葉樹之弦之期間，此箭不得取出。』彼又如是言：『在未知射予之箭簳為蘆耶？為改良蘆之期間，此箭不得取出。』彼又如是言：『在未知射予之箭簳之矢羽為鷲或鷺耶？或鷹耶？或孔雀耶？或施蒂羅哈奴〔之羽〕之期間，此箭不得取出。』彼又如是言：『在未知射予之箭幹是何筋以圈紮耶？或牛耶？或水牛耶？或鹿耶？或猿〔筋〕之期間，此箭不得取出。』彼又如是言：『在未知射予之箭是普通箭耶？或尖箭耶？或鉤箭耶？或那羅奢耶？或犢齒箭耶？或夾竹桃葉箭之期間，此箭不得取出。』摩羅迦子！如是，以彼人未知此，然而彼人可能已命終矣。摩羅迦子！如是若有人言：『世尊對予不說：「世界為常住也、或世界為無常也……乃至……或如來死後為非有非無」之期間，則予不於世尊處修梵行。』然而，摩羅迦子！在如來尚未說此時，則彼人可能命終矣。",
+   "T0026-ma221": "鬘童子答曰：「不也。世尊！」「如是，世無有常，世有底，世無底，命即是身，為命異身異，如來終，如來不終，如來終不終，如來亦非終亦非不終耶？我本頗為汝如是說此是真諦，餘皆虛妄言，汝來從我學梵行耶？」鬘童子答曰：「不也。世尊！」「鬘童子！汝本頗向我說，若世尊為我一向說世有常者，我當從世尊學梵行耶？」",
+   "T0094": "「不也。唯世尊！」「如是世間無常至無有命終，若我記我言真諦、餘者愚癡者，汝當從我行梵行耶？」「不也。唯世尊！」「汝摩羅鳩摩羅前頭向我說：『若世尊一向記世間有常者，我當從行梵行耶？』」「不也。唯世尊！」「如是世間無常至無有命終，若世尊記我言真諦、餘者愚癡者，我當從行梵行耶？」「不也。唯世尊！」「此摩羅鳩摩羅！"
+  },
+  "a05": {
+   "mn63": "Sace me bhagavā byākarissati: ‘sassato loko’ti vā, ‘asassato loko’ti vā …pe… ‘neva hoti na na hoti tathāgato paraṁ maraṇā’ti vā— evāhaṁ bhagavati, brahmacariyaṁ carissāmi. No ce me bhagavā byākarissati: ‘sassato loko’ti vā, ‘asassato loko’ti vā …pe… ‘neva hoti na na hoti tathāgato paraṁ maraṇā’ti vā— evāhaṁ sikkhaṁ paccakkhāya hīnāyāvattissāmīti. Sace bhagavā jānāti: ‘sassato loko’ti, ‘sassato loko’ti me bhagavā byākarotu; sace bhagavā jānāti: ‘asassato loko’ti, ‘asassato loko’ti me bhagavā byākarotu. No ce bhagavā jānāti: ‘sassato loko’ti vā, ‘asassato loko’ti vā, ajānato kho pana apassato etadeva ujukaṁ hoti yadidaṁ: ‘na jānāmi, na passāmī’ti. Sace bhagavā jānāti: ‘antavā loko’ti, ‘anantavā loko’ti me bhagavā byākarotu; sace bhagavā jānāti: ‘anantavā loko’ti, ‘anantavā loko’ti me bhagavā byākarotu. No ce bhagavā jānāti: ‘antavā loko’ti vā, ‘anantavā loko’ti vā, ajānato kho pana apassato etadeva ujukaṁ hoti yadidaṁ: ‘na jānāmi, na passāmī’ti. Sace bhagavā jānāti: ‘taṁ jīvaṁ taṁ sarīran’ti, ‘taṁ jīvaṁ taṁ sarīran’ti me bhagavā byākarotu; sace bhagavā jānāti: ‘aññaṁ jīvaṁ aññaṁ sarīran’ti, ‘aññaṁ jīvaṁ aññaṁ sarīran’ti me bhagavā byākarotu. No ce bhagavā jānāti: ‘taṁ jīvaṁ taṁ sarīran’ti vā, ‘aññaṁ jīvaṁ aññaṁ sarīran’ti vā, ajānato kho pana apassato etadeva ujukaṁ hoti yadidaṁ: ‘na jānāmi, na passāmī’ti. Sace bhagavā jānāti: ‘hoti tathāgato paraṁ maraṇā’ti, ‘hoti tathāgato paraṁ maraṇā’ti me bhagavā byākarotu; sace bhagavā jānāti: ‘na hoti tathāgato paraṁ maraṇā’ti, ‘na hoti tathāgato paraṁ maraṇā’ti me bhagavā byākarotu. No ce bhagavā jānāti: ‘hoti tathāgato paraṁ maraṇā’ti vā, ‘na hoti tathāgato paraṁ maraṇā’ti vā, ajānato kho pana apassato etadeva ujukaṁ hoti yadidaṁ: ‘na jānāmi na passāmī’ti. Sace bhagavā jānāti: ‘hoti ca na ca hoti tathāgato paraṁ maraṇā’ti, ‘hoti ca na ca hoti tathāgato paraṁ maraṇā’ti me bhagavā byākarotu; sace bhagavā jānāti: ‘neva hoti na na hoti tathāgato paraṁ maraṇā’ti, ‘neva hoti na na hoti tathāgato paraṁ maraṇā’ti me bhagavā byākarotu. No ce bhagavā jānāti: ‘hoti ca na ca hoti tathāgato paraṁ maraṇā’ti vā, ‘neva hoti na na hoti tathāgato paraṁ maraṇā’ti vā, ajānato kho pana apassato etadeva ujukaṁ hoti yadidaṁ: ‘na jānāmi, na passāmī’”ti. “Kiṁ nu tāhaṁ, mālukyaputta, evaṁ avacaṁ: ‘ehi tvaṁ, mālukyaputta, mayi brahmacariyaṁ cara, ahaṁ te byākarissāmi: “sassato loko”ti vā, “asassato loko”ti vā, “antavā loko”ti vā, “anantavā loko”ti vā, “taṁ jīvaṁ taṁ sarīran”ti vā, “aññaṁ jīvaṁ aññaṁ sarīran”ti vā, “hoti tathāgato paraṁ maraṇā”ti vā, “na hoti tathāgato paraṁ maraṇā”ti vā, “hoti ca na ca hoti tathāgato paraṁ maraṇā”ti vā, “neva hoti na na hoti tathāgato paraṁ maraṇā”ti vā’”ti? “No hetaṁ, bhante”. “Tvaṁ vā pana maṁ evaṁ avaca: ‘ahaṁ, bhante, bhagavati brahmacariyaṁ carissāmi, bhagavā me byākarissati: “sassato loko”ti vā, “asassato loko”ti vā, “antavā loko”ti vā, “anantavā loko”ti vā, “taṁ jīvaṁ taṁ sarīran”ti vā, “aññaṁ jīvaṁ aññaṁ sarīran”ti vā, “hoti tathāgato paraṁ maraṇā”ti vā, “na hoti tathāgato paraṁ maraṇā”ti vā, “hoti ca na ca hoti tathāgato paraṁ maraṇā”ti vā, “neva hoti na na hoti tathāgato paraṁ maraṇā”ti vā’”ti? “No hetaṁ, bhante”. “Iti kira, mālukyaputta, nevāhaṁ taṁ vadāmi: ‘ehi tvaṁ, mālukyaputta, mayi brahmacariyaṁ cara, ahaṁ te byākarissāmi: “sassato loko”ti vā, “asassato loko”ti vā …pe… “neva hoti na na hoti tathāgato paraṁ maraṇāti vā”’ti; napi kira maṁ tvaṁ vadesi: ‘ahaṁ, bhante, bhagavati brahmacariyaṁ carissāmi, bhagavā me byākarissati: “sassato loko”ti vā “asassato loko”ti vā …pe… “neva hoti na na hoti tathāgato paraṁ maraṇā”ti vā’ti. Evaṁ sante, moghapurisa, ko santo kaṁ paccācikkhasi? Yo kho, mālukyaputta, evaṁ vadeyya: ‘na tāvāhaṁ bhagavati brahmacariyaṁ carissāmi yāva me bhagavā na byākarissati: “sassato loko”ti vā, “asassato loko”ti vā …pe… “neva hoti na na hoti tathāgato paraṁ maraṇā”ti vā’ti, abyākatameva taṁ, mālukyaputta, tathāgatena assa, atha so puggalo kālaṁ kareyya.",
+   "nan-mn63": "摩羅迦子！『於有見「世界為常住也」之時，則有梵行住。』無如是事也。『於有見「世界為無常也」之時，則有梵行住。』亦無是事也。摩羅迦子！於有見『世界為常住也』之時，或於有見『世界為無常也』之時，有生、有老、有死，正有愁、悲、苦、憂、惱。以其為〔生、老……憂、惱〕等故予於現法教以征服。摩羅迦子！『於有見「世界為有邊」之時，則有梵行住。』無有是事也。摩羅迦子！『於有見「世界為無邊」之時，則有梵行住。』亦無是事也。摩羅迦子！於有見『世界為有邊』之時，或於有見『世界為無邊』之時，有生、有老、有死、正有愁、悲、苦、憂、惱也。以其為〔生、老……憂、惱〕等故予於現法教以征服。摩羅迦子！『於有見「命即身也」之時，則有梵行住。』無有是事也。摩羅迦子！『於有見「命與身異」之時，則有梵行住。』亦無是事也。摩羅迦子！『於有見「命即身也」之時，或於有見「命與身異」之時，有生、有老、有死，正有愁、悲、苦、憂、惱也。』以其為〔生、老……憂、惱〕等故予於現法教以征服。摩羅迦子！『於有見「如來死後為有」之時，則有梵行住。』無有是事也。摩羅迦子！『於有見「如來死後無無」之時，則有梵行住。』亦無是事也。摩羅迦子！於有見『如來死後為有』之時，或於有見『如來死後為無』之時，有生、有老、有死，正有愁、悲、苦、憂、惱也。以其為〔生、老……憂、惱〕等故予於現法教以征服。摩羅迦子！『於有見「如來死後為亦有亦無」之時，則有梵行住。』無有是事也。摩羅迦子！『於有見「如來死後為非有非無」之時，則有梵行住。』亦無是事也。摩羅迦子！於有見『如來死後為亦有亦無』之時，或於有見『如來為死後非有非無』之時，有生、有老、有死，正有愁、悲、苦、憂、惱也。以其為〔生、老、……憂、惱〕等故予於現法教以施設征服。",
+   "T0026-ma221": "鬘童子答曰：「不也。世尊！」「如是，世無有常，世有底，世無底，命即是身，為命異身異，如來終，如來不終，如來終不終，如來亦非終亦非不終耶？鬘童子！汝本頗向我說，若世尊為我一向說此是真諦，餘皆虛妄言者，我當從世尊學梵行耶？」鬘童子答曰：「不也。世尊！」世尊告曰：「鬘童子，我本不向汝有所說，汝本亦不向我有所說，汝愚癡人！何故虛妄誣謗我耶？」於是，尊者鬘童子為世尊面訶責數，內懷憂慼，低頭默然，失辯無言，如有所伺。於是，世尊面訶鬘童子已，告諸比丘：「若有愚癡人作如是念：『若世尊不為我一向說世有常者，我不從世尊學梵行。』彼愚癡人竟不得知，於其中間而命終也。如是，世無有常，世有底，世無底，命即是身，為命異身異，如來終，如來不終，如來終不終，如來亦非終亦非不終耶？若有愚癡人作如是念：『若世尊不為我一向說此是真諦，餘皆虛妄言者，我不從世尊學梵行。』彼愚癡人竟不得知，於其中間而命終也。",
+   "T0094": "我本不向汝說，汝本不向我說，汝愚癡人！無所因而罵耶？」於是尊者摩羅鳩摩羅面被世尊責，默然無言，身面汗，迴其面默然無言。彼時世尊，面責摩羅鳩摩羅已，告諸比丘：「若有愚癡人，作是念：『我不從世尊行梵行，要令世尊一向記世間有常。』彼愚癡人不自知，中間當命終。『如是世間無常至無有命終，我不從世尊行梵行，要令世尊記我言真諦、餘者愚癡。』彼人不自知，中間命終。"
+  },
+  "a06": {
+   "mn63": "Seyyathāpi, mālukyaputta, puriso sallena viddho assa savisena gāḷhapalepanena. Tassa mittāmaccā ñātisālohitā bhisakkaṁ sallakattaṁ upaṭṭhapeyyuṁ. So evaṁ vadeyya: ‘na tāvāhaṁ imaṁ sallaṁ āharissāmi yāva na taṁ purisaṁ jānāmi yenamhi viddho, khattiyo vā brāhmaṇo vā vesso vā suddo vā’ti; so evaṁ vadeyya: ‘na tāvāhaṁ imaṁ sallaṁ āharissāmi yāva na taṁ purisaṁ jānāmi yenamhi viddho, evaṁnāmo evaṅgotto iti vā’ti; so evaṁ vadeyya: ‘na tāvāhaṁ imaṁ sallaṁ āharissāmi yāva na taṁ purisaṁ jānāmi yenamhi viddho, dīgho vā rasso vā majjhimo vā’ti; so evaṁ vadeyya: ‘na tāvāhaṁ imaṁ sallaṁ āharissāmi yāva na taṁ purisaṁ jānāmi yenamhi viddho, kāḷo vā sāmo vā maṅguracchavī vā’ti; so evaṁ vadeyya: ‘na tāvāhaṁ imaṁ sallaṁ āharissāmi yāva na taṁ purisaṁ jānāmi yenamhi viddho, amukasmiṁ gāme vā nigame vā nagare vā’ti; so evaṁ vadeyya: ‘na tāvāhaṁ imaṁ sallaṁ āharissāmi yāva na taṁ dhanuṁ jānāmi yenamhi viddho, yadi vā cāpo yadi vā kodaṇḍo’ti; so evaṁ vadeyya: ‘na tāvāhaṁ imaṁ sallaṁ āharissāmi yāva na taṁ jiyaṁ jānāmi yāyamhi viddho, yadi vā akkassa yadi vā saṇhassa yadi vā nhārussa yadi vā maruvāya yadi vā khīrapaṇṇino’ti; so evaṁ vadeyya: ‘na tāvāhaṁ imaṁ sallaṁ āharissāmi yāva na taṁ kaṇḍaṁ jānāmi yenamhi viddho, yadi vā gacchaṁ yadi vā ropiman’ti; so evaṁ vadeyya: ‘na tāvāhaṁ imaṁ sallaṁ āharissāmi yāva na taṁ kaṇḍaṁ jānāmi yenamhi viddho, yassa pattehi vājitaṁ yadi vā gijjhassa yadi vā kaṅkassa yadi vā kulalassa yadi vā morassa yadi vā sithilahanuno’ti; so evaṁ vadeyya: ‘na tāvāhaṁ imaṁ sallaṁ āharissāmi yāva na taṁ kaṇḍaṁ jānāmi yenamhi viddho, yassa nhārunā parikkhittaṁ yadi vā gavassa yadi vā mahiṁsassa yadi vā bheravassa yadi vā semhārassā’ti; so evaṁ vadeyya: ‘na tāvāhaṁ imaṁ sallaṁ āharissāmi yāva na taṁ sallaṁ jānāmi yenamhi viddho, yadi vā sallaṁ yadi vā khurappaṁ yadi vā vekaṇḍaṁ yadi vā nārācaṁ yadi vā vacchadantaṁ yadi vā karavīrapattan’ti— aññātameva taṁ, mālukyaputta, tena purisena assa, atha so puriso kālaṁ kareyya. Evameva kho, mālukyaputta, yo evaṁ vadeyya: ‘na tāvāhaṁ bhagavati brahmacariyaṁ carissāmi yāva me bhagavā na byākarissati: “sassato loko”ti vā “asassato loko”ti vā …pe… “neva hoti na na hoti tathāgato paraṁ maraṇā”ti vā’ti— abyākatameva taṁ, mālukyaputta, tathāgatena assa, atha so puggalo kālaṁ kareyya. ‘Sassato loko’ti, mālukyaputta, diṭṭhiyā sati brahmacariyavāso abhavissāti, evaṁ no. ‘Asassato loko’ti, mālukyaputta, diṭṭhiyā sati brahmacariyavāso abhavissāti, evampi no. ‘Sassato loko’ti vā, mālukyaputta, diṭṭhiyā sati, ‘asassato loko’ti vā diṭṭhiyā sati attheva jāti, atthi jarā, atthi maraṇaṁ, santi sokaparidevadukkhadomanassupāyāsā; yesāhaṁ diṭṭheva dhamme nighātaṁ paññapemi. ‘Antavā loko’ti, mālukyaputta, diṭṭhiyā sati brahmacariyavāso abhavissāti, evaṁ no. ‘Anantavā loko’ti, mālukyaputta, diṭṭhiyā sati brahmacariyavāso abhavissāti, evampi no. ‘Antavā loko’ti vā, mālukyaputta, diṭṭhiyā sati, ‘anantavā loko’ti vā diṭṭhiyā sati attheva jāti, atthi jarā, atthi maraṇaṁ, santi sokaparidevadukkhadomanassupāyāsā; yesāhaṁ diṭṭheva dhamme nighātaṁ paññapemi. ‘Taṁ jīvaṁ taṁ sarīran’ti, mālukyaputta, diṭṭhiyā sati brahmacariyavāso abhavissāti, evaṁ no. ‘Aññaṁ jīvaṁ aññaṁ sarīran’ti, mālukyaputta, diṭṭhiyā sati brahmacariyavāso abhavissāti, evampi no. ‘Taṁ jīvaṁ taṁ sarīran’ti vā, mālukyaputta, diṭṭhiyā sati, ‘aññaṁ jīvaṁ aññaṁ sarīran’ti vā diṭṭhiyā sati attheva jāti …pe… nighātaṁ paññapemi. ‘Hoti tathāgato paraṁ maraṇā’ti, mālukyaputta, diṭṭhiyā sati brahmacariyavāso abhavissāti, evaṁ no. ‘Na hoti tathāgato paraṁ maraṇā’ti, mālukyaputta, diṭṭhiyā sati brahmacariyavāso abhavissāti, evampi no. ‘Hoti tathāgato paraṁ maraṇā’ti vā, mālukyaputta, diṭṭhiyā sati, ‘na hoti tathāgato paraṁ maraṇā’ti vā diṭṭhiyā sati attheva jāti …pe… yesāhaṁ diṭṭheva dhamme nighātaṁ paññapemi. ‘Hoti ca na ca hoti tathāgato paraṁ maraṇā’ti, mālukyaputta, diṭṭhiyā sati brahmacariyavāso abhavissāti, evaṁ no. ‘Neva hoti na na hoti tathāgato paraṁ maraṇā’ti, mālukyaputta, diṭṭhiyā sati brahmacariyavāso abhavissāti, evampi no. ‘Hoti ca na ca hoti tathāgato paraṁ maraṇā’ti, mālukyaputta, diṭṭhiyā sati, ‘neva hoti na na hoti tathāgato paraṁ maraṇā’ti vā diṭṭhiyā sati attheva jāti …pe… yesāhaṁ diṭṭheva dhamme nighātaṁ paññapemi.",
+   "T0026-ma221": "「猶如有人身被毒箭，因毒箭故，受極重苦。彼見親族憐念愍傷，為求利義饒益安隱，便求箭醫。然彼人者方作是念：『未可拔箭，我應先知彼人如是姓、如是名、如是生，為長、短、麤、細，為黑、白、不黑不白，為剎利族，梵志、居士、工師族，為東方、南方、西方、比方耶？未可拔箭，我應先知彼弓為柘、為桑、為槻、為角耶？未可拔箭，我應先知弓扎，彼為是牛筋、為麞鹿筋、為是絲耶？未可拔箭，我應先知弓色為黑、為白、為赤、為黃耶？未可拔箭，我應先知弓弦為筋、為絲、為紵、為麻耶？未可拔箭，我應先知箭簳為木、為竹耶？未可拔箭，我應先知箭纏為是牛筋、為麞鹿筋、為是絲耶？未可拔箭，我應先知箭羽為飄𪁢毛、為鵰鷲毛、為鵾鷄毛、為鶴毛耶？未可拔箭，我應先知箭𨮹為錍、為矛、為鈹刀耶？未可拔箭，我應先知作箭𨮹師如是姓、如是名、如是生，為長、短、麤、細，為黑、白、不黑不白，為東方、西方、南方、北方耶？』彼人竟不得知，於其中間而命終也。「若有愚癡人作如是念：『若世尊不為我一向說世有常者，我不從世尊學梵行。』彼愚癡人竟不得知，於其中間而命終也。如是，世無有常，世有底，世無底，命即是身，為命異身異，如來終，如來不終，如來終不終，如來亦非終亦非不終耶？若有愚癡人作如是念：『若世尊不為我一向說此是真諦，餘皆虛妄言者，我不從世尊學梵行。』彼愚癡人竟不得知，於其中間而命終也。「世有常，因此見故，從我學梵行者，此事不然。如是，世無有常，世有底，世無底，命即是身，為命異身異，如來終，如來不終，如來終不終，如來亦非終亦非不終耶？因此見故，從我學梵行者，此事不然。世有常，有此見故，不從我學梵行者，此事不然。如是，世無有常，世有底，世無底，命即是身，為命異身異，如來終，如來不終，如來終不終，如來亦非終亦非不終耶？有此見故，不從我學梵行者，此事不然。「世有常，無此見故，從我學梵行者，此事不然。如是，世無有常，世有底，世無底，命即是身，為命異身異，如來終，如來不終，如來終不終，如來亦非終亦非不終耶？無此見故，從我學梵行者，此事不然。世有常，無此見故，從我學梵行者，此事不然。如是，世無有常，世有底，世無底，命即是身，為命異身異，如來終，如來不終，如來終不終，如來亦非終亦非不終耶？無此見故，不從我學梵行者，此事不然。「世有常者，有生、有老、有病、有死，愁慼、啼哭、憂苦、懊惱，如是此淳大苦陰生。如是，世無常，世有底，世無底，命即是身，為命異身異，如來終，如來不終，如來終不終，如來亦非終亦非不終者，有生、有老、有病、有死，愁慼、啼哭、憂苦、懊惱，如是此淳大苦陰生。",
+   "T0094": "猶若有人身中毒箭，彼親屬慈愍之，欲令安隱、欲饒益之，求索除毒箭師。於是彼人作是念：『我不除箭，要知彼人己姓是、字是、像是，若長若短若中，若黑若白，若剎利姓、若婆羅門姓、若居士姓、若工師姓，若東方南方西方北方誰以箭中我？我不除毒箭，要當知彼弓，為是薩羅木、為是多羅木、為是翅羅鴦掘梨木？我不除毒箭，要當知彼筋，若牛筋、若羊筋、若氂牛筋，而用纏彼弓？我不除毒箭，要知彼弓弝，為白骨耶、為黑漆耶、為赤漆耶？我不除毒箭，我要當知彼弓弦，為牛筋、羊筋、氂牛筋耶？我不除毒箭，要當知彼箭，為是舍羅木、為是竹耶、為是羅蛾梨木耶？我不除毒箭，要當知彼箭筋，為是牛筋、羊筋、氂牛筋耶，而用纏箭耶？我不除毒箭，要當知彼毛羽，是孔雀耶、為是鶬鶴耶、為是鷲耶，取彼翅用作羽？我不除毒箭，要當知彼鐵，為是婆蹉耶、為是婆羅耶、為是那羅耶、為是伽羅鞞耶？我不除毒箭，要當知彼鐵師，姓是、字是、像是，若長若短若中，若黑若白，若在東方若南方若西方若北方？』彼人亦不能知，於中間當命終。如是，若有愚癡人作是念：『我不從彼世尊行梵行，要令世尊記世間是常。』彼愚癡人不自知，於中間當命終。如是世間非是常、世間有邊至無有命終。若有愚癡人作是念：『我不從彼世尊行梵行，要令世尊作是記我言真諦、餘者愚癡。』彼愚癡人不自知，於中間當命終。世間有常，有此邪見，亦當於我行於梵行。如是世間無常至無有命終，此邪見者，亦當於我行梵行。世間有常，有此邪見，不應從我行梵行。如是世間無常至無有命終，有此邪見，不應從我行梵行。世間有常，無此邪見，亦當從我行梵行。如是世間無常至無有命終，無此邪見者，亦當從我行梵行。世間有常，無此邪見，不應從我行梵行。如是世間無常至無有命終，無此邪見，不應從我行梵行。世間有常，有生有老有病有死，有憂慼啼哭不樂，如是此大苦陰是習。如是世間無常至無有命終，有生有老，至大苦陰是習。"
+  },
+  "a07": {
+   "mn63": "Tasmātiha, mālukyaputta, abyākatañca me abyākatato dhāretha; byākatañca me byākatato dhāretha. Kiñca, mālukyaputta, mayā abyākataṁ? ‘Sassato loko’ti mālukyaputta, mayā abyākataṁ; ‘asassato loko’ti— mayā abyākataṁ; ‘antavā loko’ti— mayā abyākataṁ; ‘anantavā loko’ti— mayā abyākataṁ; ‘taṁ jīvaṁ taṁ sarīran’ti— mayā abyākataṁ; ‘aññaṁ jīvaṁ aññaṁ sarīran’ti— mayā abyākataṁ; ‘hoti tathāgato paraṁ maraṇā’ti— mayā abyākataṁ; ‘na hoti tathāgato paraṁ maraṇā’ti— mayā abyākataṁ; ‘hoti ca na ca hoti tathāgato paraṁ maraṇā’ti— mayā abyākataṁ; ‘neva hoti na na hoti tathāgato paraṁ maraṇā’ti— mayā abyākataṁ. Kasmā cetaṁ, mālukyaputta, mayā abyākataṁ? Na hetaṁ, mālukyaputta, atthasaṁhitaṁ na ādibrahmacariyakaṁ na nibbidāya na virāgāya na nirodhāya na upasamāya na abhiññāya na sambodhāya na nibbānāya saṁvattati. Tasmā taṁ mayā abyākataṁ. Kiñca, mālukyaputta, mayā byākataṁ? ‘Idaṁ dukkhan’ti, mālukyaputta, mayā byākataṁ; ‘ayaṁ dukkhasamudayo’ti— mayā byākataṁ; ‘ayaṁ dukkhanirodho’ti— mayā byākataṁ; ‘ayaṁ dukkhanirodhagāminī paṭipadā’ti— mayā byākataṁ. Kasmā cetaṁ, mālukyaputta, mayā byākataṁ? Etañhi, mālukyaputta, atthasaṁhitaṁ etaṁ ādibrahmacariyakaṁ nibbidāya virāgāya nirodhāya upasamāya abhiññāya sambodhāya nibbānāya saṁvattati. Tasmā taṁ mayā byākataṁ.",
+   "nan-mn63": "是故，摩羅迦子！由予不記說，當受持不記說；又，由予記說，當受持記說。摩羅迦子！由予不記說者為何耶？由予不記說：『世界為常住也』；由予不記說『世界為無常也』；由予不記說『世界為有邊也』；由予不記說『世界為無邊也』；由予不記說『命即身也』；由予不記說『命與身異也』；由予不記說『如來死後為有』；由予不記說『如來死後為無』；由予不記說『如來死後亦有亦無』；由予不記說『如來死後為非有非無。』摩羅迦子！由何故予對此不記說之耶？摩羅迦子！實此非義利相應，此非梵行根本，不導至厭、離欲、滅盡、寂靜、通智、正覺、涅槃也。摩羅迦子！然由予記說者為何耶？由予記說：『此為苦也。』由予記說『此為苦集也。』由予記說『此為苦之滅也。』由予記說『此為苦滅之道也。』摩羅迦子！由何故，予對此記說之耶？摩羅迦子！實此義相應、此為梵行根本，導至厭、離欲、滅盡、寂靜、通智、正覺、涅槃也。摩羅迦子！是故，由予不記說者當受持不記說；又，由予記說者當受持記說。」",
+   "T0026-ma221": "「世有常，我不一向說此。以何等故，我不一向說此？此非義相應，非法相應，非梵行本，不趣智、不趣覺、不趣涅槃，是故我不一向說此。如是，世無常，世有底，世無底，命即是身，為命異身異，如來終，如來不終，如來終不終，如來亦非終亦非不終，我不一向說此。以何等故，我不一向說此？此非義相應，非法相應，非梵行本，不趣智、不趣覺、不趣涅槃，是故我不一向說此也。何等法我一向說耶？此義我一向說，苦、苦習、苦滅、苦滅道跡，我一向說。以何等故，我一向說此？此是義相應，是法相應，是梵行本，趣智、趣覺、趣於涅槃，是故我一向說此。是為不可說者則不說，可說者則說，當如是持，當如是學。」",
+   "T0094": "世間有常，此不可記；如是世間無常至無有命終，此不可記。云何不可記？此非是義，亦非法，非是梵行，不成神通，不至等道，不與涅槃相應，是故不可記。云何是我所一向記？此苦我一向記。苦習、苦盡住處，我一向記。何以故？我一向記，此是義，是法，得成神通，行梵行，至等道，與涅槃相應，是故我一向記之。"
+  },
+  "a08": {
+   "mn63": "Tasmātiha, mālukyaputta, abyākatañca me abyākatato dhāretha; byākatañca me byākatato dhārethā”ti. Idamavoca bhagavā. Attamano āyasmā mālukyaputto bhagavato bhāsitaṁ abhinandīti. Cūḷamālukyasuttaṁ niṭṭhitaṁ tatiyaṁ.",
+   "nan-mn63": "世尊如是說已，悅意之具壽摩羅迦子大喜世尊之所說！",
+   "T0026-ma221": "佛說如是。彼諸比丘聞佛所說，歡喜奉行。箭喻經第十竟（二千二十七字）",
+   "T0094": "所可不記者當棄彼，我所記者當持之。」佛如是說。彼諸比丘聞世尊所說，歡喜而樂。"
+  }
+ }
+}

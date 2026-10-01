@@ -1,0 +1,81 @@
+{
+ "slug": "pi-sn15.2",
+ "title": "別譯雜阿含經 （三三四）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "輪迴無始譬喻"
+  },
+  {
+   "id": "a02",
+   "label": "結義勸修"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn15.2",
+   "lang": "pi",
+   "label": "巴利 SN15.2",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn15.2",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN15.2",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.334",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （三三四）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa941",
+   "lang": "lzh",
+   "label": "雜阿含經 （九四一）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（三三四）"
+  },
+  {
+   "work": "T0099",
+   "node": "（九四一）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn15.2": "Saṁyutta Nikāya 15.2 1. Paṭhamavagga Pathavīsutta Sāvatthiyaṁ viharati.",
+   "nan-sn15.2": "〔二〕第二　地〔爾時，世尊〕住舍衛城。",
+   "T0100-sa-2.334": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。",
+   "T0099-sa941": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。"
+  },
+  "a01": {
+   "sn15.2": "“Anamataggoyaṁ, bhikkhave, saṁsāro. Pubbā koṭi na paññāyati avijjānīvaraṇānaṁ sattānaṁ taṇhāsaṁyojanānaṁ sandhāvataṁ saṁsarataṁ. Seyyathāpi, bhikkhave, puriso imaṁ mahāpathaviṁ kolaṭṭhimattaṁ kolaṭṭhimattaṁ mattikāguḷikaṁ karitvā nikkhipeyya: ‘ayaṁ me pitā, tassa me pitu ayaṁ pitā’ti, apariyādinnāva bhikkhave, tassa purisassa pitupitaro assu, athāyaṁ mahāpathavī parikkhayaṁ pariyādānaṁ gaccheyya. Taṁ kissa hetu? Anamataggoyaṁ, bhikkhave, saṁsāro. Pubbā koṭi na paññāyati avijjānīvaraṇānaṁ sattānaṁ taṇhāsaṁyojanānaṁ sandhāvataṁ saṁsarataṁ.",
+   "nan-sn15.2": "〔爾時，世尊曰：〕「諸比丘！輪迴無始，眾生為無明所覆、渴愛所縛、不知流轉輪迴之本際。諸比丘！譬如有人，以大地作棗種子大之土丸，以〔數〕而置之謂：『此是我父，此是我父之父。』諸比丘！彼人數其父之父不能終盡，此大地已至終盡矣。所以者何？諸比丘！輪迴無始、眾生為無明所覆、渴愛所縛，不知流轉輪迴之本際。",
+   "T0100-sa-2.334": "爾時，佛告諸比丘：「生死長遠，無有邊際，無有能知其根源者。一切眾生皆為無明之所覆蓋，愛所纏縛，流轉生死，無有窮已；過去億劫恒受眾苦，一切無有能得知者。」",
+   "T0099-sa941": "爾時，世尊告諸比丘：「眾生無始生死，長夜輪轉，不知苦之本際。云何？比丘！此大地土泥悉以為丸，如婆羅果，以數汝等長夜生死以來所依父母；土丸既盡，所依父母其數不盡。"
+  },
+  "a02": {
+   "sn15.2": "Evaṁ dīgharattaṁ vo, bhikkhave, dukkhaṁ paccanubhūtaṁ tibbaṁ paccanubhūtaṁ byasanaṁ paccanubhūtaṁ, kaṭasī vaḍḍhitā. Yāvañcidaṁ, bhikkhave, alameva sabbasaṅkhāresu nibbindituṁ, alaṁ virajjituṁ, alaṁ vimuccitun”ti. Dutiyaṁ.",
+   "nan-sn15.2": "諸比丘！如是長夜受苦、受痛、受失，增大其墓所。諸比丘！是以於諸行足厭、足於厭離，足於解脫。」",
+   "T0100-sa-2.334": "復告比丘：「假設有人，丸大地土，猶如豆粒，以此豆粒欲數過去所受生母，盡此地土，亦不能得盡其邊際。」餘如上說。「是故汝等，應作是學，學斷後有，懃求方便，斷於後有。」佛說是已，諸比丘聞佛所說，歡喜奉行。",
+   "T0099-sa941": "比丘！眾生無始生死，長夜輪轉，不知苦之本際，其數如是。是故，比丘！當勤方便，斷除諸有，莫令增長，當如是學。」佛說此經已，諸比丘聞佛所說，歡喜奉行。"
+  }
+ }
+}

@@ -1,0 +1,176 @@
+{
+ "slug": "pi-an7.61",
+ "title": "離睡經",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "經題與序分"
+  },
+  {
+   "id": "a01",
+   "label": "佛陀現前目揵連睡眠"
+  },
+  {
+   "id": "a02",
+   "label": "世尊問目揵連睡眠狀況"
+  },
+  {
+   "id": "a03",
+   "label": "對治睡眠的八種方便（一）"
+  },
+  {
+   "id": "a04",
+   "label": "對治睡眠的八種方便（二）"
+  },
+  {
+   "id": "a05",
+   "label": "對治睡眠的八種方便（三）"
+  },
+  {
+   "id": "a06",
+   "label": "對治睡眠的八種方便（四）"
+  },
+  {
+   "id": "a07",
+   "label": "對治睡眠的八種方便（五）"
+  },
+  {
+   "id": "a08",
+   "label": "對治睡眠的八種方便（六）"
+  },
+  {
+   "id": "a09",
+   "label": "對治睡眠的八種方便（七）"
+  },
+  {
+   "id": "a10",
+   "label": "對治睡眠的八種方便（八）"
+  },
+  {
+   "id": "a11",
+   "label": "結語：當學如是"
+  },
+  {
+   "id": "a12",
+   "label": "目揵連請問究竟梵行"
+  },
+  {
+   "id": "a13",
+   "label": "世尊說斷愛盡漏之道"
+  },
+  {
+   "id": "a14",
+   "label": "結證：得至究竟"
+  }
+ ],
+ "versions": [
+  {
+   "id": "an7.61",
+   "lang": "pi",
+   "label": "巴利 AN7.61",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "T0026-ma83",
+   "lang": "lzh",
+   "label": "中阿含經 （八三）中阿含長壽王品長老上尊睡眠經第十二（第二小土城誦）",
+   "who": "東晉 瞿曇僧伽提婆譯"
+  },
+  {
+   "id": "T0047",
+   "lang": "lzh",
+   "label": "離睡經",
+   "who": "西晉 竺法護譯"
+  }
+ ],
+ "works": [
+  "T0026",
+  "T0047"
+ ],
+ "anchors": [
+  {
+   "work": "T0026",
+   "node": "（八三）中阿含長壽王品長老上尊睡眠經第十二（第二小土城誦）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "an7.61": "Aṅguttara Nikāya 7.61 6. Abyākatavagga Pacalāyamānasutta",
+   "T0026-ma83": "我聞如是：一時，佛遊婆耆瘦，在鼉山怖林鹿野園中。爾時，尊者大目揵連遊摩竭國，在善知識村中。於是，尊者大目揵連獨安靜處宴坐思惟而便睡眠。",
+   "T0047": "聞如是：一時，婆伽婆在婆祇尸牧摩鼻量鹿野苑中。彼時，尊者大目乾連在摩竭善知識村。"
+  },
+  "a01": {
+   "an7.61": "Evaṁ me sutaṁ— ekaṁ samayaṁ bhagavā bhaggesu viharati susumāragire bhesakaḷāvane migadāye. Tena kho pana samayena āyasmā mahāmoggallāno magadhesu kallavāḷaputtagāme pacalāyamāno nisinno hoti. Addasā kho bhagavā dibbena cakkhunā visuddhena atikkantamānusakena āyasmantaṁ mahāmoggallānaṁ magadhesu kallavāḷaputtagāme pacalāyamānaṁ nisinnaṁ. Disvā— seyyathāpi nāma balavā puriso samiñjitaṁ vā bāhaṁ pasāreyya, pasāritaṁ vā bāhaṁ samiñjeyya; evamevaṁ—bhaggesu susumāragire bhesakaḷāvane migadāye antarahito magadhesu kallavāḷaputtagāme āyasmato mahāmoggallānassa sammukhe pāturahosi. Nisīdi bhagavā paññatte āsane.",
+   "T0026-ma83": "世尊遙知尊者大目揵連獨安靜處宴坐思惟而便睡眠。世尊知已，即入如其像定，以如其像定，猶若力士屈申臂頃，從婆耆瘦鼉山怖林鹿野園中忽沒不現，往摩竭國善知識村尊者大目揵連前。",
+   "T0047": "彼尊者大目乾連，獨在靜處經行而睡，世尊知尊者大目乾連獨在靜處經行而睡。彼時世尊知尊者大目乾連獨在靜處經行睡已，即如其像三昧正受，以三昧意，猶若力士屈申臂頃，世尊亦如是，在婆祇尸牧摩鼻量鹿野苑中忽然不現，至摩竭善知識村，在尊者大目乾連前。"
+  },
+  "a02": {
+   "an7.61": "Nisajja kho bhagavā āyasmantaṁ mahāmoggallānaṁ etadavoca: “Pacalāyasi no tvaṁ, moggallāna, pacalāyasi no tvaṁ, moggallānā”ti? “Evaṁ, bhante”.",
+   "T0026-ma83": "於是，世尊從定而寤，告曰：「大目揵連！汝著睡眠。大目揵連！汝著睡眠。」尊者大目揵連白世尊曰：「唯然。世尊！」佛復告曰：「大目揵連！",
+   "T0047": "彼時世尊從三昧起，告尊者大目乾連曰：「汝目乾連！汝目乾連！汝欲睡？」「唯然。世尊！」「為何以念而欲睡耶？"
+  },
+  "a03": {
+   "an7.61": "“Tasmātiha, moggallāna, yathāsaññissa te viharato taṁ middhaṁ okkamati, taṁ saññaṁ mā manasākāsi, taṁ saññaṁ mā bahulamakāsi. Ṭhānaṁ kho panetaṁ, moggallāna, vijjati yaṁ te evaṁ viharato taṁ middhaṁ pahīyetha.",
+   "T0026-ma83": "如所相著睡眠，汝莫修彼相，亦莫廣布，如是睡眠便可得滅。若汝睡眠故不滅者，大目揵連！",
+   "T0047": "莫行想，莫分別想，莫多分別，如是睡當離。汝若睡不離者，汝，目乾連！"
+  },
+  "a04": {
+   "an7.61": "No ce te evaṁ viharato taṁ middhaṁ pahīyetha, tato tvaṁ, moggallāna, yathāsutaṁ yathāpariyattaṁ dhammaṁ cetasā anuvitakkeyyāsi anuvicāreyyāsi, manasā anupekkheyyāsi.",
+   "T0026-ma83": "當隨本所聞法，隨而受持廣布誦習，如是睡眠便可得滅。若汝睡眠故不滅者，大目揵連！",
+   "T0047": "如所聞法，如所誦法，廣當誦習，如是睡當離。若不離者，汝，目乾連！"
+  },
+  "a05": {
+   "an7.61": "Ṭhānaṁ kho panetaṁ vijjati yaṁ te evaṁ viharato taṁ middhaṁ pahīyetha. No ce te evaṁ viharato taṁ middhaṁ pahīyetha, tato tvaṁ, moggallāna, yathāsutaṁ yathāpariyattaṁ dhammaṁ vitthārena sajjhāyaṁ kareyyāsi.",
+   "T0026-ma83": "當隨本所聞法，隨而受持為他廣說，如是睡眠便可得滅。若汝睡眠故不滅者，大目揵連！",
+   "T0047": "如所聞法，如所誦法，當廣為他說，如是睡當離。若不離者，汝，目乾連！"
+  },
+  "a06": {
+   "an7.61": "Ṭhānaṁ kho panetaṁ vijjati yaṁ te evaṁ viharato taṁ middhaṁ pahīyetha.",
+   "T0026-ma83": "當隨本所聞法，隨而受持、心念、心思，如是睡眠便可得滅。若汝睡眠故不滅者，大目揵連！",
+   "T0047": "如所誦法，如所聞法，意當念當行，如是睡當離。若不離者，汝，目乾連！"
+  },
+  "a07": {
+   "an7.61": "No ce te evaṁ viharato taṁ middhaṁ pahīyetha, tato tvaṁ, moggallāna, ubho kaṇṇasotāni āviñcheyyāsi, pāṇinā gattāni anumajjeyyāsi.",
+   "T0026-ma83": "當以兩手捫摸於耳，如是睡眠便可得滅。「若汝睡眠故不滅者，大目揵連！",
+   "T0047": "當以冷水洗眼及洗身支節，如是睡當離。若不離者，汝，目乾連！"
+  },
+  "a08": {
+   "an7.61": "Ṭhānaṁ kho panetaṁ vijjati yaṁ te evaṁ viharato taṁ middhaṁ pahīyetha.",
+   "T0026-ma83": "當以冷水澡洗面目及灑身體，如是睡眠便可得滅。若汝睡眠故不滅者，大目揵連！",
+   "T0047": "當以兩手相挑兩耳，如是睡當離。若不離者，汝，目乾連！"
+  },
+  "a09": {
+   "an7.61": "No ce te evaṁ viharato taṁ middhaṁ pahīyetha, tato tvaṁ, moggallāna, uṭṭhāyāsanā udakena akkhīni anumajjitvā disā anuvilokeyyāsi, nakkhattāni tārakarūpāni ullokeyyāsi.",
+   "T0026-ma83": "當從室出，外觀四方，瞻視星宿，如是睡眠便可得滅。若汝睡眠故不滅者，大目揵連！",
+   "T0047": "當起出講堂，四方視及觀星宿，如是睡當離。若不離者，汝，目乾連！"
+  },
+  "a10": {
+   "an7.61": "Ṭhānaṁ kho panetaṁ vijjati yaṁ te evaṁ viharato taṁ middhaṁ pahīyetha.",
+   "T0026-ma83": "當從室出，而至屋頭，露地經行，守護諸根，心安在內，於後前想，如是睡眠便可得滅。若汝睡眠故不滅者，大目揵連！",
+   "T0047": "當在空處仿佯行，當護諸根，意念諸施，後當具想，如是睡當離。若不離者，汝，目乾連！"
+  },
+  "a11": {
+   "an7.61": "No ce te evaṁ viharato taṁ middhaṁ pahīyetha, tato tvaṁ, moggallāna, ālokasaññaṁ manasi kareyyāsi, divāsaññaṁ adhiṭṭhaheyyāsi— yathā divā tathā rattiṁ yathā rattiṁ tathā divā. Iti vivaṭena cetasā apariyonaddhena sappabhāsaṁ cittaṁ bhāveyyāsi. Ṭhānaṁ kho panetaṁ vijjati yaṁ te evaṁ viharato taṁ middhaṁ pahīyetha. No ce te evaṁ viharato taṁ middhaṁ pahīyetha, tato tvaṁ, moggallāna, pacchāpuresaññī caṅkamaṁ adhiṭṭhaheyyāsi antogatehi indriyehi abahigatena mānasena. Ṭhānaṁ kho panetaṁ vijjati yaṁ te evaṁ viharato taṁ middhaṁ pahīyetha. No ce te evaṁ viharato taṁ middhaṁ pahīyetha, tato tvaṁ, moggallāna, dakkhiṇena passena sīhaseyyaṁ kappeyyāsi pāde pādaṁ accādhāya sato sampajāno uṭṭhānasaññaṁ manasi karitvā. Paṭibuddhena ca te, moggallāna, khippaññeva paccuṭṭhātabbaṁ: ‘na seyyasukhaṁ na passasukhaṁ na middhasukhaṁ anuyutto viharissāmī’ti. Evañhi te, moggallāna, sikkhitabbaṁ. Tasmātiha, moggallāna, evaṁ sikkhitabbaṁ: ‘na uccāsoṇḍaṁ paggahetvā kulāni upasaṅkamissāmī’ti. Evañhi te, moggallāna, sikkhitabbaṁ. Sace, moggallāna, bhikkhu uccāsoṇḍaṁ paggahetvā kulāni upasaṅkamati, santi hi, moggallāna, kulesu kiccakaraṇīyāni. Yehi manussā āgataṁ bhikkhuṁ na manasi karonti, tatra bhikkhussa evaṁ hoti: ‘kosu nāma idāni maṁ imasmiṁ kule paribhindi, virattarūpā dānime mayi manussā’ti. Itissa alābhena maṅkubhāvo, maṅkubhūtassa uddhaccaṁ, uddhatassa asaṁvaro, asaṁvutassa ārā cittaṁ samādhimhā. Tasmātiha, moggallāna, evaṁ sikkhitabbaṁ: ‘na viggāhikakathaṁ kathessāmī’ti. Evañhi te, moggallāna, sikkhitabbaṁ. Viggāhikāya, moggallāna, kathāya sati kathābāhullaṁ pāṭikaṅkhaṁ, kathābāhulle sati uddhaccaṁ, uddhatassa asaṁvaro, asaṁvutassa ārā cittaṁ samādhimhā. Nāhaṁ, moggallāna, sabbeheva saṁsaggaṁ vaṇṇayāmi. Na panāhaṁ, moggallāna, sabbeheva saṁsaggaṁ na vaṇṇayāmi. Sagahaṭṭhapabbajitehi kho ahaṁ, moggallāna, saṁsaggaṁ na vaṇṇayāmi. Yāni ca kho tāni senāsanāni appasaddāni appanigghosāni vijanavātāni manussarāhasseyyakāni paṭisallānasāruppāni tathārūpehi senāsanehi saṁsaggaṁ vaṇṇayāmī”ti.",
+   "T0026-ma83": "當捨經行道，至經行道頭，敷尼師檀，結跏趺坐，如是睡眠便可得滅。若汝睡眠故不滅者，大目揵連！當還入室，四疊優多羅僧以敷床上，襞僧伽梨作枕，右脇而臥，足足相累，心作明想，立正念正智，常欲起想。「大目揵連！莫計床樂眠臥安快，莫貪財利，莫著名譽。所以者何？我說一切法不可與會，亦說與會。大目揵連！我說何法不可與會？大目揵連！若道俗法共合會者，我說此法不可與會。大目揵連！若道俗法共合會者，便多有所說，若多有所說者，則便有調，若有調者，便心不息。大目揵連！若心不息者，便心離定。大目揵連！是故我說不可與會。大目揵連！我說何法可與共會？大目揵連！彼無事處，我說此法可與共會，山林樹下空安靜處，高巖石室寂無音聲，遠離，無惡，無有人民，隨順宴坐。大目揵連！我說此法可與共會。「大目揵連！汝若入村行乞食者，當以厭利，厭供養、恭敬，汝若於利、供養、恭敬心作厭已，便入村乞食。大目揵連！莫以高大意入村乞食。所以者何？諸長者家有如是事，比丘來乞食，令長者不作意，比丘便作是念：『誰壞我長者家？所以者何？我入長者家，長者不作意。』因是生憂，因憂生調，因調生心不息，因心不息，心便離定。大目揵連！汝說法時莫以諍說，若諍說者，便多有所說，因多說故，則便生調，因生調故，便心不息，因心不息故，便心離定。大目揵連！汝說法時莫強，說法如師子。大目揵連！汝說法時，下意說法，捨力、滅力、破壞於力，當以不強，說法如師子。",
+   "T0047": "當還離仿佯，舉尼師壇敷著床上，結跏趺坐，如是睡當離。若不離者，汝，目乾連！當還入講堂，四疊敷欝多羅僧著床上，舉僧伽梨著頭前，右脇著床上，足足相累，當作明想，當無亂意，常作起想思惟住。「汝，目乾連！莫樂床、莫樂右脇眠、莫樂睡、莫樂世間恭敬以為味。何以故？目乾連！我不說近一切法，我亦不說不近一切法。云何，目乾連！我說不近一切法？汝，目乾連！我說不親近白衣。目乾連！若親近白衣住者，但有論俱不與誦俱，因彼論便有諛諂憍慢，因有憍慢便有嫉妬，因嫉妬不知息。汝，目乾連！若有不息已，三昧便遠離，是為，目乾連！我說此不親近法。云何，目乾連！我說親近法？目乾連！當至靜處草蓐為床，默然不言，遠離諸惡、離人眾，常當坐思惟。是為，目乾連！我說親近法。「目乾連！若入村乞食，當莫求利報，當莫求恭敬。汝，目乾連！息利報恭敬意已，當入村乞食。汝，目乾連！入村乞食，當莫以想入他家。何以故？目乾連！居士家多有俗緣。若比丘入居士家不共言，彼比丘便作是念：『誰有向此居士護說我，而令居士不共我言？』便有恚心，有恚已便有貢高，因有貢高便有不息。目乾連！有不息意已，便遠離三昧。汝，目乾連！若說法時當莫見勝負，當作不勝意。若作勝意便有多論，因多論便有貢高，因貢高便有嫉妬，因嫉妬便有不息。目乾連！不息已，我說遠離三昧。汝，目乾連！若說法時當作有益，當決定說，當莫非他說，當如師子吼論。"
+  },
+  "a12": {
+   "an7.61": "Evaṁ vutte, āyasmā mahāmoggallāno bhagavantaṁ etadavoca:",
+   "T0026-ma83": "大目揵連！當學如是。」爾時，尊者大目揵連即從坐起，偏袒著衣，叉手向佛，白曰：「世尊！云何比丘得至究竟，究竟白淨、究竟梵行、究竟梵行訖？」",
+   "T0047": "如是，目乾連！當如是學。」於是尊者大目乾連從坐起，一面著衣，叉手向世尊，白世尊曰：「唯世尊！"
+  },
+  "a13": {
+   "an7.61": "“kittāvatā nu kho, bhante, bhikkhu saṅkhittena taṇhāsaṅkhayavimutto hoti accantaniṭṭho accantayogakkhemī accantabrahmacārī accantapariyosāno seṭṭho devamanussānan”ti? “Idha, moggallāna, bhikkhuno sutaṁ hoti: ‘sabbe dhammā nālaṁ abhinivesāyā’ti; evañcetaṁ, moggallāna, bhikkhuno sutaṁ hoti: ‘sabbe dhammā nālaṁ abhinivesāyā’ti. So sabbaṁ dhammaṁ abhijānāti, sabbaṁ dhammaṁ abhiññāya sabbaṁ dhammaṁ parijānāti. Sabbaṁ dhammaṁ pariññāya yaṁ kiñci vedanaṁ vediyati sukhaṁ vā dukkhaṁ vā adukkhamasukhaṁ vā. So tāsu vedanāsu aniccānupassī viharati, virāgānupassī viharati, nirodhānupassī viharati, paṭinissaggānupassī viharati. So tāsu vedanāsu aniccānupassī viharanto virāgānupassī viharanto nirodhānupassī viharanto paṭinissaggānupassī viharanto na kiñci loke upādiyati, anupādiyaṁ na paritassati, aparitassaṁ paccattaṁyeva parinibbāyati.",
+   "T0026-ma83": "世尊告曰：「大目揵連！比丘若覺樂、覺苦、覺不苦不樂者，彼此覺觀無常、觀興衰、觀斷、觀無欲、觀滅、觀捨。彼此覺觀無常、觀興衰、觀斷、觀無欲、觀滅、觀捨已，不受此世；因不受世已，便不疲勞；",
+   "T0047": "云何比丘，至竟盡、至竟無垢、至竟行梵行？」「此目乾連！若比丘所有病痛，若苦若樂若不苦不樂，當觀彼痛是無常住，當觀是敗壞，當觀是無染，當觀是盡，當觀是正，當觀是止住處，當如是觀彼痛。當觀彼痛無常住，當觀是敗壞，當觀是無染，當觀是盡，當觀是止，當觀是止住；"
+  },
+  "a14": {
+   "an7.61": "‘Khīṇā jāti, vusitaṁ brahmacariyaṁ, kataṁ karaṇīyaṁ, nāparaṁ itthattāyā’ti pajānāti. Ettāvatā kho, moggallāna, bhikkhu saṅkhittena taṇhāsaṅkhayavimutto hoti accantaniṭṭho accantayogakkhemī accantabrahmacārī accantapariyosāno seṭṭho devamanussānan”ti. Aṭṭhamaṁ.",
+   "T0026-ma83": "因不疲勞已，便般涅槃，生已盡，梵行已立，所作已辦，不更受有，知如真。大目揵連！如是比丘得至究竟，究竟白淨、究竟梵行、究竟梵行訖。」佛說如是。尊者大目揵連聞佛所說，歡喜奉行。長老上尊睡眠經第十二竟（千一百三十七字）",
+   "T0047": "便不著此世間，不著已便不恐怖，不恐怖已捨有餘般涅槃，生便盡，梵行已成，所作已辦，名色已有知如真。是為，目乾連比丘！至竟盡、至竟無垢、至竟梵行、至竟行梵行。」佛如是說。尊者目乾連聞世尊所說，歡喜而樂。"
+  }
+ }
+}

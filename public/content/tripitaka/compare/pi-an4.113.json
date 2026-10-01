@@ -1,0 +1,122 @@
+{
+ "slug": "pi-an4.113",
+ "title": "別譯雜阿含經 （一四八）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "四種良馬譬喻"
+  },
+  {
+   "id": "a02",
+   "label": "四種善男子之第一種"
+  },
+  {
+   "id": "a03",
+   "label": "四種善男子之第二種"
+  },
+  {
+   "id": "a04",
+   "label": "四種善男子之第三種"
+  },
+  {
+   "id": "a05",
+   "label": "四種善男子之第四種"
+  },
+  {
+   "id": "a06",
+   "label": "結歸四種善男子"
+  },
+  {
+   "id": "a07",
+   "label": "結歸四種丈夫調順之乘"
+  },
+  {
+   "id": "a08",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "an4.113",
+   "lang": "pi",
+   "label": "巴利 AN4.113",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "T0100-sa-2.148",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （一四八）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa922",
+   "lang": "lzh",
+   "label": "雜阿含經 （九二二）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（一四八）"
+  },
+  {
+   "work": "T0099",
+   "node": "（九二二）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "an4.113": "Aṅguttara Nikāya 4.113 12. Kesivagga Patodasutta",
+   "T0100-sa-2.148": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。",
+   "T0099-sa922": "如是我聞：一時，佛住王舍城迦蘭陀竹園。"
+  },
+  "a01": {
+   "an4.113": "“Cattārome, bhikkhave, bhadrā assājānīyā santo saṁvijjamānā lokasmiṁ. Katame cattāro?",
+   "T0100-sa-2.148": "爾時，世尊告諸比丘：「有四種馬，賢人應乘，是世間所有。何等為四？其第一者，見舉鞭影，即便驚悚，隨御者意。其第二者，鞭觸身毛，即便驚悚，稱御者意。其第三者，鞭觸身肉，然後乃驚，隨御者意。其第四者，鞭徹肉骨，然後乃驚，稱御者意。",
+   "T0099-sa922": "爾時，世尊告諸比丘：「世有四種良馬，有良馬駕以平乘，顧其鞭影馳駃，善能觀察御者形勢，遲速左右，隨御者心。是名，比丘！世間良馬第一之德。復次，比丘！世間良馬不能顧影而自驚察，然以鞭杖觸其毛尾則能驚速察御者心，遲速左右，是名世間第二良馬。復次，比丘！若世間良馬不能顧影，及觸皮毛能隨人心，而以鞭杖小侵皮肉則能驚察，隨御者心，遲速左右。是名，比丘！第三良馬。復次，比丘！世間良馬不能顧其鞭影，及觸皮毛，小侵膚肉，乃以鐵錐刺身，徹膚傷骨，然後方驚，牽車著路，隨御者心，遲速左右，是名世間第四良馬。"
+  },
+  "a02": {
+   "an4.113": "Idha, bhikkhave, ekacco bhadro assājānīyo patodacchāyaṁ disvā saṁvijjati saṁvegaṁ āpajjati: ‘kiṁ nu kho maṁ ajja assadammasārathi kāraṇaṁ kāressati, kimassāhaṁ paṭikaromī’ti. Evarūpopi, bhikkhave, idhekacco bhadro assājānīyo hoti. Ayaṁ, bhikkhave, paṭhamo bhadro assājānīyo santo saṁvijjamāno lokasmiṁ.",
+   "T0100-sa-2.148": "丈夫之乘，亦有四種。何等為四？其第一者，聞他聚落，若男若女，為病所惱，極為困篤，展轉欲死。聞是語已，於世俗法，深知厭惡。以厭惡故，至心修善，是名丈夫調順之乘，如見鞭影，稱御者意。",
+   "T0099-sa922": "「如是於正法、律有四種善男子。何等為四？謂善男子聞他聚落有男子、女人疾病困苦，乃至死，聞已，能生恐怖，依正思惟，如彼良馬顧影則調，是名第一善男子於正法、律能自調伏。"
+  },
+  "a03": {
+   "an4.113": "Puna caparaṁ, bhikkhave, idhekacco bhadro assājānīyo na heva kho patodacchāyaṁ disvā saṁvijjati saṁvegaṁ āpajjati, api ca kho lomavedhaviddho saṁvijjati saṁvegaṁ āpajjati: ‘kiṁ nu kho maṁ ajja assadammasārathi kāraṇaṁ kāressati, kimassāhaṁ paṭikaromī’ti. Evarūpopi, bhikkhave, idhekacco bhadro assājānīyo hoti. Ayaṁ, bhikkhave, dutiyo bhadro assājānīyo santo saṁvijjamāno lokasmiṁ.",
+   "T0100-sa-2.148": "其第二者，見於己身聚落之中，若男若女，有得重病，遂至困篤，即便命終。覩斯事已，深生厭患。以厭患故，至心修善，是名丈夫調順之乘，如觸身毛，稱御者意。",
+   "T0099-sa922": "復次，善男子不能聞他聚落若男、若女老、病、死苦，能生怖畏，依正思惟；見他聚落若男、若女老、病、死苦，則生怖畏，依正思惟，如彼良馬觸其毛尾，能速調伏，隨御者心，是名第二善男子於正法、律能自調伏。"
+  },
+  "a04": {
+   "an4.113": "Puna caparaṁ, bhikkhave, idhekacco bhadro assājānīyo na heva kho patodacchāyaṁ disvā saṁvijjati saṁvegaṁ āpajjati nāpi lomavedhaviddho saṁvijjati saṁvegaṁ āpajjati, api ca kho cammavedhaviddho saṁvijjati saṁvegaṁ āpajjati: ‘kiṁ nu kho maṁ ajja assadammasārathi kāraṇaṁ kāressati, kimassāhaṁ paṭikaromī’ti. Evarūpopi, bhikkhave, idhekacco bhadro assājānīyo hoti. Ayaṁ, bhikkhave, tatiyo bhadro assājānīyo santo saṁvijjamāno lokasmiṁ.",
+   "T0100-sa-2.148": "其第三者，雖復見於己聚落中有病死者，不生厭惡。見於己身所有親族、輔弼己者，遇病困篤，遂至命終，然後乃能於世間法，生厭惡心。以厭惡故，勤修善行，是名丈夫調順之乘，如觸毛肉，稱御者意。",
+   "T0099-sa922": "復次，善男子不能聞、見他聚落中男子、女人老、病、死苦，生怖畏心，依正思惟，然見聚落、城邑有善知識及所親近老、病、死苦，則生怖畏，依正思惟，如彼良馬，觸其膚肉，然後調伏，隨御者心，是名善男子於聖法、律而自調伏。"
+  },
+  "a05": {
+   "an4.113": "Puna caparaṁ, bhikkhave, idhekacco bhadro assājānīyo na heva kho patodacchāyaṁ disvā saṁvijjati saṁvegaṁ āpajjati nāpi lomavedhaviddho saṁvijjati saṁvegaṁ āpajjati nāpi cammavedhaviddho saṁvijjati saṁvegaṁ āpajjati, api ca kho aṭṭhivedhaviddho saṁvijjati saṁvegaṁ āpajjati: ‘kiṁ nu kho maṁ ajja assadammasārathi kāraṇaṁ kāressati, kimassāhaṁ paṭikaromī’ti. Evarūpopi, bhikkhave, idhekacco bhadro assājānīyo hoti. Ayaṁ, bhikkhave, catuttho bhadro assājānīyo santo saṁvijjamāno lokasmiṁ.",
+   "T0100-sa-2.148": "其第四者，雖復見之所有親族、輔弼己者，遇病喪亡，而猶不生厭惡之心。若身自病，極為困篤，受大苦惱，情甚不樂，然後乃生厭惡之心。以厭惡故，修諸善行，是名丈夫善調之乘，如見鞭觸肉骨，隨御者意。」",
+   "T0099-sa922": "復次，善男子不能聞、見他聚落中男子、女人及所親近老、病、死苦，生怖畏心，依正思惟；然於自身老、病、死苦能生厭怖，依正思惟，如彼良馬侵肌徹骨，然後乃調，隨御者心，是名第四善男子於聖法、律能自調伏。」"
+  },
+  "a06": {
+   "an4.113": "Ime kho, bhikkhave, cattāro bhadrā assājānīyā santo saṁvijjamānā lokasmiṁ."
+  },
+  "a07": {
+   "an4.113": "Evamevaṁ kho, bhikkhave, cattārome bhadrā purisājānīyā santo saṁvijjamānā lokasmiṁ. Katame cattāro? Idha, bhikkhave, ekacco bhadro purisājānīyo suṇāti: ‘amukasmiṁ nāma gāme vā nigame vā itthī vā puriso vā dukkhito vā kālaṅkato vā’ti. So tena saṁvijjati, saṁvegaṁ āpajjati. Saṁviggo yoniso padahati. Pahitatto kāyena ceva paramasaccaṁ sacchikaroti, paññāya ca ativijjha passati. Seyyathāpi so, bhikkhave, bhadro assājānīyo patodacchāyaṁ disvā saṁvijjati saṁvegaṁ āpajjati; tathūpamāhaṁ, bhikkhave, imaṁ bhadraṁ purisājānīyaṁ vadāmi. Evarūpopi, bhikkhave, idhekacco bhadro purisājānīyo hoti. Ayaṁ, bhikkhave, paṭhamo bhadro purisājānīyo santo saṁvijjamāno lokasmiṁ. Puna caparaṁ, bhikkhave, idhekacco bhadro purisājānīyo na heva kho suṇāti: ‘amukasmiṁ nāma gāme vā nigame vā itthī vā puriso vā dukkhito vā kālaṅkato vā’ti, api ca kho sāmaṁ passati itthiṁ vā purisaṁ vā dukkhitaṁ vā kālaṅkataṁ vā. So tena saṁvijjati, saṁvegaṁ āpajjati. Saṁviggo yoniso padahati. Pahitatto kāyena ceva paramasaccaṁ sacchikaroti, paññāya ca ativijjha passati. Seyyathāpi so, bhikkhave, bhadro assājānīyo lomavedhaviddho saṁvijjati saṁvegaṁ āpajjati; tathūpamāhaṁ, bhikkhave, imaṁ bhadraṁ purisājānīyaṁ vadāmi. Evarūpopi, bhikkhave, idhekacco bhadro purisājānīyo hoti. Ayaṁ, bhikkhave, dutiyo bhadro purisājānīyo santo saṁvijjamāno lokasmiṁ. Puna caparaṁ, bhikkhave, idhekacco bhadro purisājānīyo na heva kho suṇāti: ‘amukasmiṁ nāma gāme vā nigame vā itthī vā puriso vā dukkhito vā kālaṅkato vā’ti, nāpi sāmaṁ passati itthiṁ vā purisaṁ vā dukkhitaṁ vā kālaṅkataṁ vā, api ca khvassa ñāti vā sālohito vā dukkhito vā hoti kālaṅkato vā. So tena saṁvijjati, saṁvegaṁ āpajjati. Saṁviggo yoniso padahati. Pahitatto kāyena ceva paramasaccaṁ sacchikaroti, paññāya ca ativijjha passati. Seyyathāpi so, bhikkhave, bhadro assājānīyo cammavedhaviddho saṁvijjati saṁvegaṁ āpajjati; tathūpamāhaṁ, bhikkhave, imaṁ bhadraṁ purisājānīyaṁ vadāmi. Evarūpopi, bhikkhave, idhekacco bhadro purisājānīyo hoti. Ayaṁ, bhikkhave, tatiyo bhadro purisājānīyo santo saṁvijjamāno lokasmiṁ. Puna caparaṁ, bhikkhave, idhekacco bhadro purisājānīyo na heva kho suṇāti: ‘amukasmiṁ nāma gāme vā nigame vā itthī vā puriso vā dukkhito vā kālaṅkato vā’ti, nāpi sāmaṁ passati itthiṁ vā purisaṁ vā dukkhitaṁ vā kālaṅkataṁ vā, nāpissa ñāti vā sālohito vā dukkhito vā hoti kālaṅkato vā, api ca kho sāmaññeva phuṭṭho hoti sārīrikāhi vedanāhi dukkhāhi tibbāhi kharāhi kaṭukāhi asātāhi amanāpāhi pāṇaharāhi. So tena saṁvijjati, saṁvegaṁ āpajjati. Saṁviggo yoniso padahati. Pahitatto kāyena ceva paramasaccaṁ sacchikaroti, paññāya ca ativijjha passati. Seyyathāpi so, bhikkhave, bhadro assājānīyo aṭṭhivedhaviddho saṁvijjati saṁvegaṁ āpajjati; tathūpamāhaṁ, bhikkhave, imaṁ bhadraṁ purisājānīyaṁ vadāmi. Evarūpopi, bhikkhave, idhekacco bhadro purisājānīyo hoti. Ayaṁ, bhikkhave, catuttho bhadro purisājānīyo santo saṁvijjamāno lokasmiṁ. Ime kho, bhikkhave, cattāro bhadrā purisājānīyā santo saṁvijjamānā lokasmin”ti."
+  },
+  "a08": {
+   "an4.113": "Tatiyaṁ.",
+   "T0100-sa-2.148": "時諸比丘聞佛所說，歡喜奉行。",
+   "T0099-sa922": "佛說此經已，諸比丘聞佛所說，歡喜奉行。"
+  }
+ }
+}

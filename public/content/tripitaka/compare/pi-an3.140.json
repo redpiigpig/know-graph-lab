@@ -1,0 +1,108 @@
+{
+ "slug": "pi-an3.140",
+ "title": "別譯雜阿含經 （一四三）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "三種不調之馬的譬喻"
+  },
+  {
+   "id": "a02",
+   "label": "三種調士夫的類比"
+  },
+  {
+   "id": "a03",
+   "label": "捷疾具足、色不具足、形體不具足之人"
+  },
+  {
+   "id": "a04",
+   "label": "捷疾具足、色具足、形體不具足之人"
+  },
+  {
+   "id": "a05",
+   "label": "捷疾具足、色具足、形體具足之人"
+  },
+  {
+   "id": "a06",
+   "label": "結語與流通"
+  }
+ ],
+ "versions": [
+  {
+   "id": "an3.140",
+   "lang": "pi",
+   "label": "巴利 AN3.140",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "T0100-sa-2.143",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （一四三）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa917",
+   "lang": "lzh",
+   "label": "雜阿含經 （九一七）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（一四三）"
+  },
+  {
+   "work": "T0099",
+   "node": "（九一七）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "an3.140": "Aṅguttara Nikāya 3.140 14. Yodhājīvavagga",
+   "T0100-sa-2.143": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。",
+   "T0099-sa917": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。"
+  },
+  "a01": {
+   "an3.140": "Assakhaḷuṅkasutta “Tayo ca, bhikkhave, assakhaḷuṅke desessāmi tayo ca purisakhaḷuṅke. Taṁ suṇātha, sādhukaṁ manasi karotha, bhāsissāmī”ti.",
+   "T0100-sa-2.143": "爾時，世尊告諸比丘：「世有三種不調之馬，一切世人現悉知之。或有馬行步駿疾，然無好色，是則名為乘不具足。或復有馬，行步駿疾，雖有好色，是亦名為乘不具足。或有良馬，行步駿疾，然有好色，是則名為乘得具足。",
+   "T0099-sa917": "爾時，世尊告諸比丘：「世間有三種調馬。何等為三種？有馬捷疾具足、色不具足、形體不具足。有馬色具足、捷疾具足形體不具足。有馬捷疾具足、色具足、形體具足。"
+  },
+  "a02": {
+   "an3.140": "“Evaṁ, bhante”ti kho te bhikkhū bhagavato paccassosuṁ. Bhagavā etadavoca:",
+   "T0100-sa-2.143": "人亦三種，如彼三種不調之馬。此三種人，於佛教法現所知見。何等為三？有人駿疾具足，色及可乘然不具足。或復有人，駿疾具足，顏色具足，乘不具足。或復有人，駿疾顏色及以可乘，悉皆具足。",
+   "T0099-sa917": "如是有三種調士夫相。"
+  },
+  "a03": {
+   "an3.140": "“Katame ca, bhikkhave, tayo assakhaḷuṅkā? Idha, bhikkhave, ekacco assakhaḷuṅko javasampanno hoti; na vaṇṇasampanno, na ārohapariṇāhasampanno.",
+   "T0100-sa-2.143": "「何者是駿疾具足，色不具足，乘不具足？如法中人，如實知苦，如實知苦集，如實知苦滅，如實知向盡苦道，如是知見已，斷於三結，所謂身見、戒取、疑。斷此三結，得須陀洹，不墮惡趣，於道決定，乃至人天七生，盡于苦際，是名駿疾具足。云何色不具足？若有問難阿毘曇、毘尼，不能善通，於深問難，不能了達，句味相順，不能稱說，不能如理而為具說，是名色不具足。云何可乘不具足？少於福德，所生之處，無有福德，不得利養、衣服、飲食、臥具、湯藥，是名乘不具足。是名駿疾具足，色不具足，乘不具足。",
+   "T0099-sa917": "何等為三？有士夫捷疾具足、色不具足、形體不具足。有士夫捷疾具足、色具足、形體不具足。有士夫捷疾具足、色具足、形體具足。「比丘！何等為不調士夫捷疾具足、色不具足、形體不具足，有士夫於此苦如實知，此苦集、此苦滅、此苦滅道跡如實知，如是觀者三結斷，身見、戒取、疑。此三結斷得須陀洹，不墮惡趣法，決定正趣三菩提，七有天人往生，究竟苦邊，是名捷疾具足。何等為非色具足？若有問阿毘曇、律，不能以具足句味，次第隨順，具足解說，是名色不具足。云何形體不具足？非大德名聞，感致衣被、飲食、床臥、湯藥、眾具，是名士夫捷疾具足、色不具足、形體不具足。"
+  },
+  "a04": {
+   "an3.140": "Idha pana, bhikkhave, ekacco assakhaḷuṅko javasampanno ca hoti vaṇṇasampanno ca; na ārohapariṇāhasampanno.",
+   "T0100-sa-2.143": "「云何駿疾具足，顏色具足，乘不具足？何者駿疾具足？如法中人，如實知苦，如實知苦集，如實知苦滅，如實知苦滅道，知見是已，斷於三結，所謂身見、戒取、疑。斷三結已，得須陀洹，不墮惡趣，於道決定，乃至七生人天，盡於苦際，是名駿疾具足。云何名色具足？若有問難阿毘曇、毘尼，能善解說，句味相應，稱理顯說，是名色得具足。云何名為乘不具足？少於福德，不能生便有大福德，不得利養、衣服、飲食、臥具、湯藥。是名駿疾及色得于具足，乘不具足。",
+   "T0099-sa917": "「何等為捷疾具足、色具足、形體不具足？謂士夫此苦如實知，此苦集、此苦滅、此苦滅道跡如實知，乃至究竟苦邊，是捷疾具足。何等為色具足？若問阿毘曇、律，乃至能為解說，是名色具足。何等為形體不具足？非大德名聞，不能感致衣被、飲食、臥具、湯藥，是名士夫捷疾具足、色具足、形體不具足。"
+  },
+  "a05": {
+   "an3.140": "Idha pana, bhikkhave, ekacco assakhaḷuṅko javasampanno ca hoti vaṇṇasampanno ca ārohapariṇāhasampanno ca. Ime kho, bhikkhave, tayo assakhaḷuṅkā. Katame ca, bhikkhave, tayo purisakhaḷuṅkā? Idha, bhikkhave, ekacco purisakhaḷuṅko javasampanno hoti; na vaṇṇasampanno, na ārohapariṇāhasampanno. Idha pana, bhikkhave, ekacco purisakhaḷuṅko javasampanno ca hoti vaṇṇasampanno ca; na ārohapariṇāhasampanno. Idha pana, bhikkhave, ekacco purisakhaḷuṅko javasampanno ca hoti vaṇṇasampanno ca ārohapariṇāhasampanno ca. Kathañca, bhikkhave, purisakhaḷuṅko javasampanno hoti; na vaṇṇasampanno na ārohapariṇāhasampanno? Idha, bhikkhave, bhikkhu ‘idaṁ dukkhan’ti yathābhūtaṁ pajānāti …pe… ‘ayaṁ dukkhanirodhagāminī paṭipadā’ti yathābhūtaṁ pajānāti. Idamassa javasmiṁ vadāmi. Abhidhamme kho pana abhivinaye pañhaṁ puṭṭho saṁsādeti, no vissajjeti. Idamassa na vaṇṇasmiṁ vadāmi. Na kho pana lābhī hoti cīvarapiṇḍapātasenāsanagilānappaccayabhesajjaparikkhārānaṁ. Idamassa na ārohapariṇāhasmiṁ vadāmi. Evaṁ kho, bhikkhave, purisakhaḷuṅko javasampanno hoti; na vaṇṇasampanno, na ārohapariṇāhasampanno. Kathañca, bhikkhave, purisakhaḷuṅko javasampanno ca hoti vaṇṇasampanno ca; na ārohapariṇāhasampanno? Idha, bhikkhave, bhikkhu ‘idaṁ dukkhan’ti yathābhūtaṁ pajānāti …pe… ‘ayaṁ dukkhanirodhagāminī paṭipadā’ti yathābhūtaṁ pajānāti. Idamassa javasmiṁ vadāmi. Abhidhamme kho pana abhivinaye pañhaṁ puṭṭho vissajjeti, no saṁsādeti. Idamassa vaṇṇasmiṁ vadāmi. Na pana lābhī hoti cīvarapiṇḍapātasenāsanagilānappaccayabhesajjaparikkhārānaṁ. Idamassa na ārohapariṇāhasmiṁ vadāmi. Evaṁ kho, bhikkhave, purisakhaḷuṅko javasampanno ca hoti vaṇṇasampanno ca; na ārohapariṇāhasampanno. Kathañca, bhikkhave, purisakhaḷuṅko javasampanno ca hoti vaṇṇasampanno ca ārohapariṇāhasampanno ca? Idha, bhikkhave, bhikkhu ‘idaṁ dukkhan’ti yathābhūtaṁ pajānāti …pe… ‘ayaṁ dukkhanirodhagāminī paṭipadā’ti yathābhūtaṁ pajānāti. Idamassa javasmiṁ vadāmi. Abhidhamme kho pana abhivinaye pañhaṁ puṭṭho vissajjeti, no saṁsādeti. Idamassa vaṇṇasmiṁ vadāmi. Lābhī kho pana hoti cīvarapiṇḍapātasenāsanagilānappaccayabhesajjaparikkhārānaṁ. Idamassa ārohapariṇāhasmiṁ vadāmi. Evaṁ kho, bhikkhave, purisakhaḷuṅko javasampanno ca hoti vaṇṇasampanno ca ārohapariṇāhasampanno ca.",
+   "T0100-sa-2.143": "「云何名為駿疾、色、乘悉皆具足？何等駿疾？如此法中如實知苦，如實知苦集，如實知苦滅，如實知苦滅道。既知見已，斷於三結，得須陀洹，七生人天，不墮惡趣，是名駿疾具足。云何色得具足？若有問難阿毘曇、毘尼，能為通釋，句味相順，稱理顯說，是名色得具足。云何名為乘得具足？若多福德，生便有福，能得利養、衣服、飲食、臥具、湯藥。是名乘得具足，是名第三駿疾、色、乘，悉皆具足。」",
+   "T0099-sa917": "「何等為士夫捷疾具足、色具足、形體具足？謂士夫此苦如實知，此苦集、此苦滅、此苦滅道跡如實知，乃至究竟苦邊，是名捷疾具足。何等為色具足，若問阿毘曇、律，乃至能解說，是名色具足。何等為形體具足，大德名聞，乃至臥具、湯藥，是名形體具足，是名士夫捷疾具足、色具足、形體具足。」"
+  },
+  "a06": {
+   "an3.140": "Ime kho, bhikkhave, tayo purisakhaḷuṅkā”ti. Aṭṭhamaṁ.",
+   "T0100-sa-2.143": "諸比丘聞佛所說，歡喜奉行。",
+   "T0099-sa917": "佛說此經已，諸比丘聞佛所說，歡喜奉行。"
+  }
+ }
+}

@@ -1,0 +1,107 @@
+{
+ "slug": "pi-sn3.4",
+ "title": "別譯雜阿含經 （五五）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "經題與序分"
+  },
+  {
+   "id": "a01",
+   "label": "王獨靜思惟愛惡己"
+  },
+  {
+   "id": "a02",
+   "label": "世尊開示愛惡自我之依善惡行"
+  },
+  {
+   "id": "a03",
+   "label": "世尊重申愛惡自我之結論"
+  },
+  {
+   "id": "a04",
+   "label": "偈頌：自愛不作惡，得樂及護身"
+  },
+  {
+   "id": "a05",
+   "label": "流通分：歡喜奉行"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn3.4",
+   "lang": "pi",
+   "label": "巴利 SN3.4",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn3.4",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN3.4",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.55",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （五五）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa1228",
+   "lang": "lzh",
+   "label": "雜阿含經 （一二二八）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（五五）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一二二八）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn3.4": "Saṁyutta Nikāya 3.4 1. Paṭhamavagga Piyasutta Sāvatthinidānaṁ.",
+   "nan-sn3.4": "〔四〕第四　愛者",
+   "T0100-sa-2.55": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。",
+   "T0099-sa1228": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。"
+  },
+  "a01": {
+   "sn3.4": "Ekamantaṁ nisinno kho rājā pasenadi kosalo bhagavantaṁ etadavoca: “idha mayhaṁ, bhante, rahogatassa paṭisallīnassa evaṁ cetaso parivitakko udapādi: ‘kesaṁ nu kho piyo attā, kesaṁ appiyo attā’ti?",
+   "nan-sn3.4": "〔爾時，世尊〕住舍衛城……",
+   "T0100-sa-2.55": "爾時，波斯匿王在空閑處獨靜思惟：「夫為人者，云何愛己？云何惡己？」復作是念：「若身口意行於善業，遠離諸惡，是名愛己。若身口意行不善業，作眾惡行，名不愛己。」波斯匿王思惟是已，從靜處起，往詣佛所，頂禮佛足，在一面坐，即白佛言：「世尊！我獨靜處，作是思惟：『云何名愛己？云何不愛己？若能於身口意行善，是名愛己；若身口意行不善業，名不愛己。』",
+   "T0099-sa1228": "時，波斯匿王獨一靜處，禪思思惟，作是念：「云何為自念？云何為不自念？」復作是念：「若有行身惡行、行口惡行、行意惡行者，當知斯等為不自念。若復行身善行、行口善行、行意善行者，當知斯等則為自念。」從禪覺已，往詣佛所，稽首佛足，退住一面，白佛言：「世尊！我於靜處獨一思惟，作是念：『云何為自念？云何為不自念？』復作是念：『若有行身惡行、行口惡行、行意惡行者，當知斯等為不自念。若復行身善行、行口善行、行意善行者，當知斯等則為自念。』"
+  },
+  "a02": {
+   "sn3.4": "Tassa mayhaṁ, bhante, etadahosi: ‘ye ca kho keci kāyena duccaritaṁ caranti, vācāya duccaritaṁ caranti, manasā duccaritaṁ caranti; tesaṁ appiyo attā. Kiñcāpi te evaṁ vadeyyuṁ: “piyo no attā”ti, atha kho tesaṁ appiyo attā’. Taṁ kissa hetu? Yañhi appiyo appiyassa kareyya, taṁ te attanāva attano karonti; tasmā tesaṁ appiyo attā. Ye ca kho keci kāyena sucaritaṁ caranti, vācāya sucaritaṁ caranti, manasā sucaritaṁ caranti; tesaṁ piyo attā. Kiñcāpi te evaṁ vadeyyuṁ: ‘appiyo no attā’ti; atha kho tesaṁ piyo attā. Taṁ kissa hetu? Yañhi piyo piyassa kareyya, taṁ te attanāva attano karonti; tasmā tesaṁ piyo attā”ti.",
+   "nan-sn3.4": "坐於一面之拘薩羅國波斯匿王白世尊曰：「世尊，我於此獨坐靜觀，生如是思念：『自我為何人所愛者，不為何人所愛者乎？』世尊，我生如是思念：『任何人皆依身以行惡行、依語以行惡行、依意以行惡行。此等諸人乃非愛自我者。假若彼等雖云：「我等乃自我之愛者。」但彼等卻非自我之愛者。不論如何，非愛者所以為非愛者，乃彼等之自所作為。是故彼等非自我之愛者。",
+   "T0100-sa-2.55": "」佛言：「大王！實爾。若人身口意行惡者，是名不愛己。何以故？彼為惡者，雖有怨讎，不必速能有所傷害；自造惡業，毀害甚深，是以自作惡業，名為不愛己。又有為己故，作殺盜婬，是為損己。若人身口意行善者，設作是念：『我捨所愛居家妻子。』名不愛己，實是愛己。何以故？如此之人，雖有親友、父母、兄弟，恩徹骨髓，至其衰老，不能得救。要自身口意修行善，能自濟度，是名愛己。」",
+   "T0099-sa1228": "」佛告大王：「如是，大王！如是，大王！若有行身惡行、行口惡行、行意惡行者，當知斯等為不自念。彼雖自謂：『為自愛念。』而實非自念。所以者何？無有惡知識所作惡不念者，所不念不愛者，所不愛所作如其自為自己所作者，是故斯等為不自念。「若復，大王！行身善行、行口善行、行意善行者，當知斯等則為自念，斯等自謂：『不自愛惜己身。』然其斯等實為自念。所以者何？無有善友，於善友所作念者，念作愛者，愛作如自為己所作者，是故斯等則為自念。」"
+  },
+  "a03": {
+   "sn3.4": "“Evametaṁ, mahārāja, evametaṁ, mahārāja. Ye hi keci, mahārāja, kāyena duccaritaṁ caranti, vācāya duccaritaṁ caranti, manasā duccaritaṁ caranti; tasmā tesaṁ appiyo attā. Kiñcāpi te evaṁ vadeyyuṁ: ‘piyo no attā’ti, atha kho tesaṁ appiyo attā. Taṁ kissa hetu? Yañhi, mahārāja, appiyo appiyassa kareyya, taṁ te attanāva attano karonti; tasmā tesaṁ appiyo attā. Ye ca kho keci, mahārāja, kāyena sucaritaṁ caranti, vācāya sucaritaṁ caranti, manasā sucaritaṁ caranti; tesaṁ piyo attā. Kiñcāpi te evaṁ vadeyyuṁ: ‘appiyo no attā’ti; atha kho tesaṁ piyo attā. Taṁ kissa hetu? Yañhi, mahārāja, piyo piyassa kareyya, taṁ te attanāva attano karonti; tasmā tesaṁ piyo attā”ti.",
+   "nan-sn3.4": "任何人皆依身以行善行、依語以行善行、依意以行善行、此等之諸人乃自我之愛者。假若彼等雖云：「我等乃非自我之愛者。」但彼等卻是自我之愛者。不論如何，愛者所以為愛者，乃彼等之自所作為。是故彼等乃自我之愛者。』」"
+  },
+  "a04": {
+   "sn3.4": "Idamavoca …pe… “Attānañce piyaṁ jaññā, na naṁ pāpena saṁyuje; Na hi taṁ sulabhaṁ hoti, sukhaṁ dukkaṭakārinā. Antakenādhipannassa, jahato mānusaṁ bhavaṁ; Kiñhi tassa sakaṁ hoti, kiñca ādāya gacchati; Kiñcassa anugaṁ hoti, chāyāva anapāyinī. Ubho puññañca pāpañca, yaṁ macco kurute idha; Tañhi tassa sakaṁ hoti, taṁva ādāya gacchati; Taṁvassa anugaṁ hoti, chāyāva anapāyinī. Tasmā kareyya kalyāṇaṁ, nicayaṁ samparāyikaṁ; Puññāni paralokasmiṁ, patiṭṭhā honti pāṇinan”ti.",
+   "nan-sn3.4": "「大王！如是，大王！如是。任何人依身、語、意以行惡行，此諸人乃非自我之愛者。任何人依身、語、意以行善行，此諸人乃自我之愛者。」〔世尊於此宣說已……乃至……〕知自可愛者勿自連結惡\n以行惡行人難得於安樂\n所囚於死魔以捨生命者\n有何是彼物彼行而取何\n功德惡之二是人此世作\n此為彼身物彼行而取此\n如添影之形此二從隨彼\n是故以行善為善積未來\n功德於後世乃人渡津頭",
+   "T0100-sa-2.55": "佛即說偈言：「若人自愛己，不以惡加彼，\n無有造作惡，得於快樂者。\n若人自愛己，應修諸善業，\n速疾能獲得，種種諸快樂。\n夫欲愛己者，應當自擁護，\n譬如邊表城，曠野多賊盜。\n得值無難時，應當自隱藏，\n若其失無難，值難苦無窮。」",
+   "T0099-sa1228": "爾時，世尊復說偈言：「謂為自念者，不應造惡行，\n終不因惡行，令己得安樂。\n謂為自念者，終不造惡行，\n造諸善業者，令己得安樂。\n若自愛念者，善護而自護，\n如善護國王，外防邊境城。\n若自愛念者，極善自寶藏，\n如善守之王，內防邊境城。\n如是自寶藏，剎那無間缺，\n剎那缺致憂，惡道長受苦。」"
+  },
+  "a05": {
+   "T0100-sa-2.55": "佛說是已，諸比丘聞佛所說，歡喜奉行。",
+   "T0099-sa1228": "佛說此經已，波斯匿王聞佛所說，歡喜隨喜，作禮而去。"
+  }
+ }
+}

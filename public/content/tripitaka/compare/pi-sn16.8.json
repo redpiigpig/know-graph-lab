@@ -1,0 +1,108 @@
+{
+ "slug": "pi-sn16.8",
+ "title": "別譯雜阿含經 （一一五）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "迦葉請問教授"
+  },
+  {
+   "id": "a02",
+   "label": "過去比丘之讚歎與感化"
+  },
+  {
+   "id": "a03",
+   "label": "新學比丘之效法與利益"
+  },
+  {
+   "id": "a04",
+   "label": "現在比丘之失德與惡感化"
+  },
+  {
+   "id": "a05",
+   "label": "結論與勸學"
+  },
+  {
+   "id": "a06",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn16.8",
+   "lang": "pi",
+   "label": "巴利 SN16.8",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "T0100-sa-2.115",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （一一五）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa1140",
+   "lang": "lzh",
+   "label": "雜阿含經 （一一四〇）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（一一五）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一一四〇）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn16.8": "Saṁyutta Nikāya 16.8 1. Kassapavagga Tatiyaovādasutta Rājagahe kalandakanivāpe.",
+   "T0100-sa-2.115": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。",
+   "T0099-sa1140": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。"
+  },
+  "a01": {
+   "sn16.8": "Atha kho āyasmā mahākassapo yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdi. Ekamantaṁ nisinnaṁ kho āyasmantaṁ mahākassapaṁ bhagavā etadavoca: “ovada, kassapa, bhikkhū; karohi, kassapa, bhikkhūnaṁ dhammiṁ kathaṁ. Ahaṁ vā, kassapa, bhikkhūnaṁ ovadeyyaṁ tvaṁ vā; ahaṁ vā bhikkhūnaṁ dhammiṁ kathaṁ kareyyaṁ tvaṁ vā”ti.",
+   "T0100-sa-2.115": "爾時，尊者摩訶迦葉住舊園林毘舍佉講堂。時，尊者迦葉於日沒時，從禪定起，往詣佛所，頂禮佛足，在一面坐。佛告迦葉：「汝可教授諸比丘等，為其說法。所以者何？我常教授，汝亦應爾。我常為彼而說法要，汝亦應爾。」迦葉白佛言：「世尊！是諸比丘不能受語，難可教授。」佛告迦葉：「汝何以故，而不教授，為其說法？」迦葉對曰：「世尊是法根本，是法之導，法所依憑。善哉！世尊，願為敷演，我聞語已，至心受持。」佛告迦葉：「汝今善聽，受持憶念，吾當為汝分別解說。」迦葉白佛：「唯然，世尊，願樂欲聞。」",
+   "T0099-sa1140": "爾時，尊者摩訶迦葉住舍衛國東園鹿子母講堂，晡時從禪覺，來詣佛所，稽首佛足，退坐一面。爾時，世尊告摩訶迦葉：「汝當為諸比丘說法教誡、教授。所以者何？我常為諸比丘說法教誡、教授，汝亦應爾。」尊者摩訶迦葉白佛言：「世尊！今諸比丘難可為說法教誡、教授，有諸比丘聞所說法，不忍、不喜。」佛告摩訶迦葉：「汝何因緣作如是說？」摩訶迦葉白佛言：「世尊是法根、法眼、法依，唯願世尊為諸比丘說法，諸比丘聞已，當受奉行。」佛告迦葉：「諦聽，善思，當為汝說。」"
+  },
+  "a02": {
+   "sn16.8": "“Dubbacā kho, bhante, etarahi bhikkhū, dovacassakaraṇehi dhammehi samannāgatā, akkhamā, appadakkhiṇaggāhino anusāsanin”ti. “Tathā hi pana, kassapa, pubbe therā bhikkhū āraññikā ceva ahesuṁ āraññikattassa ca vaṇṇavādino, piṇḍapātikā ceva ahesuṁ piṇḍapātikattassa ca vaṇṇavādino, paṁsukūlikā ceva ahesuṁ paṁsukūlikattassa ca vaṇṇavādino, tecīvarikā ceva ahesuṁ tecīvarikattassa ca vaṇṇavādino, appicchā ceva ahesuṁ appicchatāya ca vaṇṇavādino, santuṭṭhā ceva ahesuṁ santuṭṭhiyā ca vaṇṇavādino, pavivittā ceva ahesuṁ pavivekassa ca vaṇṇavādino, asaṁsaṭṭhā ceva ahesuṁ asaṁsaggassa ca vaṇṇavādino, āraddhavīriyā ceva ahesuṁ vīriyārambhassa ca vaṇṇavādino. Tatra yo hoti bhikkhu āraññiko ceva āraññikattassa ca vaṇṇavādī, piṇḍapātiko ceva piṇḍapātikattassa ca vaṇṇavādī, paṁsukūliko ceva paṁsukūlikattassa ca vaṇṇavādī, tecīvariko ceva tecīvarikattassa ca vaṇṇavādī, appiccho ceva appicchatāya ca vaṇṇavādī, santuṭṭho ceva santuṭṭhiyā ca vaṇṇavādī, pavivitto ceva pavivekassa ca vaṇṇavādī, asaṁsaṭṭho ceva asaṁsaggassa ca vaṇṇavādī, āraddhavīriyo ceva vīriyārambhassa ca vaṇṇavādī, taṁ therā bhikkhū āsanena nimantenti: ‘ehi, bhikkhu, ko nāmāyaṁ bhikkhu, bhaddako vatāyaṁ bhikkhu, sikkhākāmo vatāyaṁ bhikkhu; ehi, bhikkhu, idaṁ āsanaṁ nisīdāhī’ti.",
+   "T0100-sa-2.115": "佛告迦葉：「昔有比丘自修阿練若行，讚嘆修阿練若行者，自行乞食，著糞掃衣，讚嘆乞食著、糞掃衣者。少欲知足，常樂空閑寂靜之處，勤修精進，心不馳散，恒樂禪定，自盡諸漏，讚盡漏者。以是之故，一切比丘咸來親近，而問訊之。而此比丘語諸來者：『善來比丘！可就此坐。汝名為何？是誰弟子？履行賢良，應沙門法。夫出家者，宜應如汝，作於沙門。若見汝者，學汝所為，不久必當獲於己利。』",
+   "T0099-sa1140": "佛告迦葉：「昔日，阿練若比丘於阿練若比丘所，歎說阿練若法，於乞食比丘所，歎說乞食功德；於糞掃衣比丘所，歎說糞掃衣功德。若少欲知足，修行遠離，精勤方便，正念正定，智慧漏盡，身作證比丘所，隨其所行，讚歎稱說。迦葉！若於阿練若所，歎說阿練若法，乃至漏盡比丘所，歎說漏盡身作證。若見其人，悉共語言，隨宜慰勞善來者：『汝名何等？為誰弟子？』讓座令坐，歎其賢善，如其法像類，有沙門義、有沙門欲。如是讚嘆時，若彼同住同遊者，則便決定隨順彼行，不久亦當同其所見，同其所欲。」"
+  },
+  "a03": {
+   "sn16.8": "Tatra, kassapa, navānaṁ bhikkhūnaṁ evaṁ hoti: ‘yo kira so hoti bhikkhu āraññiko ceva āraññikattassa ca vaṇṇavādī, piṇḍapātiko ceva …pe… paṁsukūliko ceva … tecīvariko ceva … appiccho ceva … santuṭṭho ceva … pavivitto ceva … asaṁsaṭṭho ceva … āraddhavīriyo ceva vīriyārambhassa ca vaṇṇavādī, taṁ therā bhikkhū āsanena nimantenti— ehi, bhikkhu, ko nāmāyaṁ bhikkhu, bhaddako vatāyaṁ bhikkhu, sikkhākāmo vatāyaṁ bhikkhu; ehi, bhikkhu, idaṁ āsanaṁ nisīdāhī’ti. Te tathattāya paṭipajjanti; tesaṁ taṁ hoti dīgharattaṁ hitāya sukhāya.",
+   "T0100-sa-2.115": "新學比丘，覩斯事已，而作是念：『彼有比丘，共相恭敬，我今亦當習學其行，自修阿練若行，讚嘆修阿練若行者，自行乞食，著糞掃衣，讚嘆乞食著糞掃衣者。少欲知足，常樂空閑寂靜之處，勤修精進，心不馳散，恒樂禪定，自盡諸漏，讚盡漏者。以是之故，一切比丘咸來親近，安慰問訊。而此比丘語諸來者：「善來比丘！可就此坐。汝名為何？是誰弟子？履行賢良，應沙門法。出家之人，宜應如汝，作於沙門。若見汝者，學汝所為，不久必當獲己義利。」』諸新學者，若生是念，長夜利益，得義得樂，名自濟拔，能令正法得久住世，是人進趣，終不退沒。」",
+   "T0099-sa1140": "佛告迦葉：「若是年少比丘見彼阿練若比丘來讚歎阿練若法，乃至漏盡身作證，彼年少比丘應起出迎，恭敬禮拜問訊，乃至彼同住者，不久當得自義饒益。如是恭敬者，長夜當得安樂饒益。」"
+  },
+  "a04": {
+   "sn16.8": "Etarahi pana, kassapa, therā bhikkhū na ceva āraññikā na ca āraññikattassa vaṇṇavādino, na ceva piṇḍapātikā na ca piṇḍapātikattassa vaṇṇavādino, na ceva paṁsukūlikā na ca paṁsukūlikattassa vaṇṇavādino, na ceva tecīvarikā na ca tecīvarikattassa vaṇṇavādino, na ceva appicchā na ca appicchatāya vaṇṇavādino, na ceva santuṭṭhā na ca santuṭṭhiyā vaṇṇavādino, na ceva pavivittā na ca pavivekassa vaṇṇavādino, na ceva asaṁsaṭṭhā na ca asaṁsaggassa vaṇṇavādino, na ceva āraddhavīriyā na ca vīriyārambhassa vaṇṇavādino. Tatra yo hoti bhikkhu ñāto yasassī lābhī cīvarapiṇḍapātasenāsanagilānappaccayabhesajjaparikkhārānaṁ taṁ therā bhikkhū āsanena nimantenti: ‘ehi, bhikkhu, ko nāmāyaṁ bhikkhu, bhaddako vatāyaṁ bhikkhu, sabrahmacārikāmo vatāyaṁ bhikkhu; ehi, bhikkhu, idaṁ āsanaṁ nisīdāhī’ti. Tatra, kassapa, navānaṁ bhikkhūnaṁ evaṁ hoti: ‘yo kira so hoti bhikkhu ñāto yasassī lābhī cīvarapiṇḍapātasenāsanagilānappaccayabhesajjaparikkhārānaṁ taṁ therā bhikkhū āsanena nimantenti— ehi, bhikkhu, ko nāmāyaṁ bhikkhu, bhaddako vatāyaṁ bhikkhu, sabrahmacārikāmo vatāyaṁ bhikkhu; ehi, bhikkhu, idaṁ āsanaṁ nisīdāhī’ti.",
+   "T0100-sa-2.115": "佛告迦葉：「若有比丘生則有福，初始出家，多得利養，衣服、湯藥、床敷 、臥具，四事豐饒。復有比丘，見是比丘，親近談語，安慰問訊。時，此比丘語彼比丘：『汝名何等？是誰弟子？生則有福，多得利養，衣服、湯藥、床敷、臥具，四事豐饒。若有比丘親近汝者，四事不乏。』若有新學比丘，覩斯事已，應作是念：『彼有生福比丘，共相恭敬，我今亦當修如是行，衣服、臥具、飲食、湯藥，四事供養，亦常豐饒。』",
+   "T0099-sa1140": "佛告迦葉：「今日比丘見彼來者，知見大德，能感財利、衣被、飲食、床臥、湯藥者，與共言語，恭敬問訊，歎言善來：『何某名字？為誰弟子？』歎其福德，能感大利、衣被、飲食、臥具、湯藥。若與尊者相習近者，亦當豐足衣被、飲食、臥具、湯藥。若復年少比丘見彼來者，大智大德，能感財利、衣被、飲食、臥具、湯藥者，疾起出迎，恭敬問訊，歎言善來大智大德，能感大利、衣被、飲食、臥具、湯藥。迦葉！如是年少比丘，長夜當得非義不饒益苦。「如是，迦葉！斯等比丘為沙門患，為梵行溺，為大映障、惡不善法、煩惱之患，重受諸有，熾燃生死，未來苦報，生、老、病、死、憂、悲、苦、惱。"
+  },
+  "a05": {
+   "sn16.8": "Te tathattāya paṭipajjanti. Tesaṁ taṁ hoti dīgharattaṁ ahitāya dukkhāya. Yañhi taṁ, kassapa, sammā vadamāno vadeyya:",
+   "T0100-sa-2.115": "若新學比丘作如是意，學如是事已，是名長夜衰耗，都無利益，及以利樂，非沙門法，受諸苦惱，名自輕毀，梵行不立，沒于淤泥，為惡所欺，具於結使，數受諸有，名生熱惱，獲得苦報，必當受於生老病死。」",
+   "T0099-sa1140": "是故，迦葉！當如是學：『為阿練若，於阿練若所，稱譽讚歎糞掃衣、乞食，少欲知足，修行遠離，精勤方便，正念正定，正智漏盡，身作證者，稱譽讚歎。』"
+  },
+  "a06": {
+   "sn16.8": "‘upaddutā brahmacārī brahmacārūpaddavena abhipatthanā brahmacārī brahmacāriabhipatthanenā’ti, etarahi taṁ, kassapa, sammā vadamāno vadeyya: ‘upaddutā brahmacārī brahmacārūpaddavena abhipatthanā brahmacārī brahmacāriabhipatthanenā’”ti. Aṭṭhamaṁ.",
+   "T0100-sa-2.115": "時，大迦葉及諸比丘聞佛所說，歡喜奉行。",
+   "T0099-sa1140": "當如是學。」佛說此經已，尊者摩訶迦葉聞佛所說，歡喜隨喜，作禮而去。"
+  }
+ }
+}

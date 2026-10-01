@@ -1,0 +1,80 @@
+{
+ "slug": "pi-an8.42-an8.43",
+ "title": "優陂夷墮舍迦經",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "八戒齋功德殊勝"
+  },
+  {
+   "id": "a02",
+   "label": "請問八戒齋具足之義"
+  },
+  {
+   "id": "a03",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "an8.42",
+   "lang": "pi",
+   "label": "巴利 AN8.42",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "an8.43",
+   "lang": "pi",
+   "label": "巴利 AN8.43",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "T0088",
+   "lang": "lzh",
+   "label": "優陂夷墮舍迦經",
+   "who": "失譯"
+  },
+  {
+   "id": "T0089",
+   "lang": "lzh",
+   "label": "八關齋經",
+   "who": "劉宋 沮渠京聲譯"
+  }
+ ],
+ "works": [
+  "T0088",
+  "T0089"
+ ],
+ "anchors": [],
+ "cells": {
+  "a00": {
+   "an8.42": "Aṅguttara Nikāya 8.42 5. Uposathavagga Vitthatūposathasutta",
+   "an8.43": "Aṅguttara Nikāya 8.43 5. Uposathavagga Visākhāsutta Ekaṁ samayaṁ bhagavā sāvatthiyaṁ viharati pubbārāme migāramātupāsāde. Atha kho visākhā migāramātā yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdi. Ekamantaṁ nisinnaṁ kho visākhaṁ migāramātaraṁ bhagavā etadavoca:",
+   "T0088": "聞如是：一時，佛在舍衛國止。城東出，有女人子字蕪耶樓，人呼為蕪耶樓母，佛在蕪耶樓母家殿上坐。有一女人奉持教戒，字墮舍迦，以月十五日朝起沐浴，有七子婦皆使沐浴著好衣，日未中因飯，飯已澡手，將七子婦至佛所，前為佛作禮。佛言：「就座。」皆却就座。佛問優陂夷墮舍迦：「今日何等沐浴著好衣，與子婦俱至佛所？」墮舍迦言：「今日十五日我齋戒，我聞一月當六齋，我與子婦俱共齋，不敢懈慢。」",
+   "T0089": "聞如是：一時，婆伽婆在舍衛城祇樹給孤獨園。"
+  },
+  "a01": {
+   "an8.42": "“Aṭṭhaṅgasamannāgato, bhikkhave, uposatho upavuttho mahapphalo hoti mahānisaṁso mahājutiko mahāvipphāro.",
+   "an8.43": "“aṭṭhaṅgasamannāgato kho, visākhe, uposatho upavuttho mahapphalo hoti mahānisaṁso mahājutiko mahāvipphāro.",
+   "T0088": "佛告墮舍迦：「佛正齋法有八戒，使人得度世道，不復墮三惡處，所生常有福祐，亦從八戒本因緣致成佛。「何等為佛正齋法？是間有賢善人持戒，一月六日齋，月八日一齋，十四日一齋，十五日一齋，二十三日一齋，二十九日一齋，三十日一齋。齋日朝起，告家中言：『今日我身齋，家中今一日，且莫飲酒、莫鬪諍、莫道說錢財，家中事意所念、口所說，當如阿羅漢。』阿羅漢無殺意，齋日持戒亦當如阿羅漢，無殺意、無捶擊意，念畜生及虫蛾，使常生，如阿羅漢意，是為一戒。今日與夜持殺意使不得殺，持意如是，為佛一戒。」佛言：「齋日持意當如阿羅漢無貪心，無所貪慕於世間，無貪毛菜之意。齋日如是持意如阿羅漢，富有者，當念作布施，貧無有者，常當念施，是為二戒。」佛言：「齋日持意當如阿羅漢，阿羅漢不畜婦亦不念婦，亦不貪女人亦無婬意。齋日如是持意如阿羅漢，是為三戒。」佛言：「齋日持意當如阿羅漢，不妄語、不傷人意，語即說佛經，不語者但念諸善。齋日如是持意如阿羅漢，是為四戒。」佛言：「齋日持意當如阿羅漢，阿羅漢不飲酒，不念酒、不思酒，用酒為惡。齋日如是持意如阿羅漢，是為五戒。」佛言：「齋日持意當如阿羅漢，阿羅漢意不在歌舞，聞亦不喜音樂聲，亦不在香華氣。齋日如是持意如阿羅漢，是為六戒。」佛言：「齋日持意當如阿羅漢，阿羅漢不於高好床臥，意亦不念高好床上臥。齋日如是持意如阿羅漢，是為七戒。」佛言：「齋日持意當如阿羅漢，阿羅漢日中及食，日中已後至明不得復食，得飲蜜漿。齋日如是持意如阿羅漢，是為八戒。」佛復告優陂夷墮舍迦：「是間有人，頭髮有垢自沐其頭，沐已其人便喜言：『我頭垢已去。』有人持八戒一日一夜者，明日即喜，喜者便念：『佛經戒廼如是。』其有人，心中有惡意即去，善意即還。」佛言：「有人身體饒垢入水中治，身垢皆去。出水即喜言：『我垢去身輕。』其有人齋戒一日一夜，明日即喜念佛正語，自念：『當何時得道，使我心不復動、不復走，使我心一，志無為之道。』」佛言：「有人衣多垢，以得灰浣之垢去，其人即喜。其有人齋戒一日一夜，明日即喜，便念比丘僧，言：『比丘僧中，有須陀洹、斯陀含、阿那含、阿羅漢。』念比丘僧如是。」佛言：「如人有鏡，鏡有垢，磨去其垢鏡即明。其有人齋戒一日一夜，有慈心於天下，心開如明如鏡者，不當有瞋怒意。其有人一日一夜齋戒，閱哀天下，淨心自思自端其意，自思念身中惡露如是，如是者不當復瞋怒。」佛告優陂夷墮舍迦：「持八戒齋一日一夜不失者，勝持金銀珠璣施與比丘僧也。天下有十六大國，一者名鴦迦，二者名摩竭，三者名迦夷，四者名拘薛羅，五者名鳩溜，六者名般闍荼，七者名阿波耶，八者名阿洹提渝，九者名脂提渝，十者名越祇渝，十一者名速摩，十二者名速賴吒，十三者名越蹉，十四者名末羅，十五者名渝匿，十六者名劍善提。是十六大國中珍寶物施與比丘僧，不如齋戒一日一夜也。齋戒使人得度世道，以財寶施與，不能使人得道。今我得佛道，本從是八戒起。」佛告墮舍迦：「天下人多憂家事，我用是故，使一月六齋持八戒。若有賢善人，欲急得阿羅漢道者，若欲疾得佛道者，若欲生天上者，能自端其心、一其意者，一月十五日齋亦善，二十日齋亦善；人多憂家事，故與一月六齋。六日齋者，譬如海水不可斛量，其有齋戒一日一夜者，其福不可計。」",
+   "T0089": "爾時，世尊告諸比丘：「我今當說聖八關齋。諦聽諦聽，善思念之，我今當說。」對曰：「如是世尊！」爾時，彼比丘從佛受教。世尊告曰：「於是比丘！若信族姓子族姓女，欲知聖八關齋，便教某甲當作是說：『猶如阿羅漢，盡形壽不殺生，亦不教人殺生，無怨恨心當懷慚愧，有慈心愍一切眾生。我字某名某，為阿羅漢所教，自今日始，隨意所欲不復殺生，無怨恨心常懷慚愧，有慈心愍一切眾生。猶如阿羅漢，盡形壽不盜、好施，亦不教人盜，常樂閑處。如是我字某名某，為阿羅漢所教，隨意所欲不復盜竊，常懷惠施，樂閑居處。猶如阿羅漢，盡形壽不習不淨行，常修梵行，清淨無穢而自娛樂。如是我字某名某，為阿羅漢所教，自今已後不復婬妷，清淨無穢。猶如阿羅漢，盡形壽不妄語，常行審諦，最尊最貴，諸尊長為世所貴。如是我字某名某，為彼阿羅漢所教，自今已後更不復妄語，亦不教人使習妄語，當行審諦，為世尊長不行妄語。猶如阿羅漢，亦不飲酒，如是我字某名某，自今已後隨意所欲亦不飲酒，亦不教人使飲酒。猶如阿羅漢，盡形壽不犯齋，隨時食。如是我字某名某，今一日一夜隨意所欲亦不犯齋，亦不教人使犯齋，隨時食。猶如阿羅漢，盡形壽不於高好床坐。如是我字某名某，今一日一夜不於高廣床坐，亦不教人使坐。猶如阿羅漢，盡形壽不習歌舞戲樂，亦不著紋飾香熏塗身。今一日一夜不習歌舞戲樂，亦不著紋飾香熏塗身。』「如是修行聖八關齋，於是八關齋中功德不可限量，言有爾所福、爾所功德、爾所福報，如是眾多福不可稱計。諸比丘！譬如五大流水皆同一處，所謂恒伽、謠婆奴、新頭、阿脂耶、婆提摩棄，彼水所流處不可限量，言有爾所水、有爾所瓶水，有爾所千瓶百千瓶水。"
+  },
+  "a02": {
+   "an8.42": "Kathaṁ upavuttho ca, bhikkhave, aṭṭhaṅgasamannāgato uposatho mahapphalo hoti mahānisaṁso mahājutiko mahāvipphāro? Idha, bhikkhave, ariyasāvako iti paṭisañcikkhati: ‘yāvajīvaṁ arahanto pāṇātipātaṁ pahāya pāṇātipātā paṭiviratā nihitadaṇḍā nihitasatthā lajjī dayāpannā, sabbapāṇabhūtahitānukampino viharanti. Ahampajja imañca rattiṁ imañca divasaṁ pāṇātipātaṁ pahāya pāṇātipātā paṭivirato nihitadaṇḍo nihitasattho lajjī dayāpanno, sabbapāṇabhūtahitānukampī viharāmi. Imināpaṅgena arahataṁ anukaromi, uposatho ca me upavuttho bhavissatī’ti. Iminā paṭhamena aṅgena samannāgato hoti …pe…. ‘Yāvajīvaṁ arahanto uccāsayanamahāsayanaṁ pahāya uccāsayanamahāsayanā paṭiviratā nīcaseyyaṁ kappenti—mañcake vā tiṇasanthārake vā. Ahampajja imañca rattiṁ imañca divasaṁ uccāsayanamahāsayanaṁ pahāya uccāsayanamahāsayanā paṭivirato nīcaseyyaṁ kappemi—mañcake vā tiṇasanthārake vā. Imināpaṅgena arahataṁ anukaromi, uposatho ca me upavuttho bhavissatī’ti. Iminā aṭṭhamena aṅgena samannāgato hoti. Evaṁ upavuttho kho, bhikkhave, aṭṭhaṅgasamannāgato uposatho mahapphalo hoti mahānisaṁso mahājutiko mahāvipphāro. Kīvamahapphalo hoti kīvamahānisaṁso kīvamahājutiko kīvamahāvipphāro? Seyyathāpi, bhikkhave, yo imesaṁ soḷasannaṁ mahājanapadānaṁ pahūtarattaratanānaṁ issariyādhipaccaṁ rajjaṁ kāreyya, seyyathidaṁ— aṅgānaṁ magadhānaṁ kāsīnaṁ kosalānaṁ vajjīnaṁ mallānaṁ cetīnaṁ vaṅgānaṁ kurūnaṁ pañcālānaṁ macchānaṁ sūrasenānaṁ assakānaṁ avantīnaṁ gandhārānaṁ kambojānaṁ, aṭṭhaṅgasamannāgatassa uposathassa etaṁ kalaṁ nāgghati soḷasiṁ. Taṁ kissa hetu? Kapaṇaṁ, bhikkhave, mānusakaṁ rajjaṁ dibbaṁ sukhaṁ upanidhāya. Yāni, bhikkhave, mānusakāni paññāsa vassāni, cātumahārājikānaṁ devānaṁ eso eko rattindivo. Tāya rattiyā tiṁsarattiyo māso. Tena māsena dvādasamāsiyo saṁvaccharo. Tena saṁvaccharena dibbāni pañca vassasatāni cātumahārājikānaṁ devānaṁ āyuppamāṇaṁ. Ṭhānaṁ kho panetaṁ, bhikkhave, vijjati yaṁ idhekacco itthī vā puriso vā aṭṭhaṅgasamannāgataṁ uposathaṁ upavasitvā kāyassa bhedā paraṁ maraṇā cātumahārājikānaṁ devānaṁ sahabyataṁ upapajjeyya. Idaṁ kho panetaṁ, bhikkhave, sandhāya bhāsitaṁ: ‘kapaṇaṁ mānusakaṁ rajjaṁ dibbaṁ sukhaṁ upanidhāya’. Yāni, bhikkhave, mānusakāni vassasatāni, tāvatiṁsānaṁ devānaṁ eso eko rattindivo. Tāya rattiyā tiṁsarattiyo māso. Tena māsena dvādasamāsiyo saṁvaccharo. Tena saṁvaccharena dibbaṁ vassasahassaṁ tāvatiṁsānaṁ devānaṁ āyuppamāṇaṁ. Ṭhānaṁ kho panetaṁ, bhikkhave, vijjati yaṁ idhekacco itthī vā puriso vā aṭṭhaṅgasamannāgataṁ uposathaṁ upavasitvā kāyassa bhedā paraṁ maraṇā tāvatiṁsānaṁ devānaṁ sahabyataṁ upapajjeyya. Idaṁ kho panetaṁ, bhikkhave, sandhāya bhāsitaṁ: ‘kapaṇaṁ mānusakaṁ rajjaṁ dibbaṁ sukhaṁ upanidhāya’. Yāni, bhikkhave, mānusakāni dve vassasatāni, yāmānaṁ devānaṁ eso eko rattindivo. Tāya rattiyā tiṁsarattiyo māso. Tena māsena dvādasamāsiyo saṁvaccharo. Tena saṁvaccharena dibbāni dve vassasahassāni yāmānaṁ devānaṁ āyuppamāṇaṁ. Ṭhānaṁ kho panetaṁ, bhikkhave, vijjati yaṁ idhekacco itthī vā puriso vā aṭṭhaṅgasamannāgataṁ uposathaṁ upavasitvā kāyassa bhedā paraṁ maraṇā yāmānaṁ devānaṁ sahabyataṁ upapajjeyya. Idaṁ kho panetaṁ, bhikkhave, sandhāya bhāsitaṁ: ‘kapaṇaṁ mānusakaṁ rajjaṁ dibbaṁ sukhaṁ upanidhāya’. Yāni, bhikkhave, mānusakāni cattāri vassasatāni, tusitānaṁ devānaṁ eso eko rattindivo. Tāya rattiyā tiṁsarattiyo māso. Tena māsena dvādasamāsiyo saṁvaccharo. Tena saṁvaccharena dibbāni cattāri vassasahassāni tusitānaṁ devānaṁ āyuppamāṇaṁ. Ṭhānaṁ kho panetaṁ, bhikkhave, vijjati yaṁ idhekacco itthī vā puriso vā aṭṭhaṅgasamannāgataṁ uposathaṁ upavasitvā kāyassa bhedā paraṁ maraṇā tusitānaṁ devānaṁ sahabyataṁ upapajjeyya. Idaṁ kho panetaṁ, bhikkhave, sandhāya bhāsitaṁ: ‘kapaṇaṁ mānusakaṁ rajjaṁ dibbaṁ sukhaṁ upanidhāya’. Yāni, bhikkhave, mānusakāni aṭṭha vassasatāni, nimmānaratīnaṁ devānaṁ eso eko rattindivo. Tāya rattiyā tiṁsarattiyo māso. Tena māsena dvādasamāsiyo saṁvaccharo. Tena saṁvaccharena dibbāni aṭṭha vassasahassāni nimmānaratīnaṁ devānaṁ āyuppamāṇaṁ. Ṭhānaṁ kho panetaṁ, bhikkhave, vijjati yaṁ idhekacco itthī vā puriso vā aṭṭhaṅgasamannāgataṁ uposathaṁ upavasitvā kāyassa bhedā paraṁ maraṇā nimmānaratīnaṁ devānaṁ sahabyataṁ upapajjeyya. Idaṁ kho panetaṁ, bhikkhave, sandhāya bhāsitaṁ: ‘kapaṇaṁ mānusakaṁ rajjaṁ dibbaṁ sukhaṁ upanidhāya’. Yāni, bhikkhave, mānusakāni soḷasa vassasatāni, paranimmitavasavattīnaṁ devānaṁ eso eko rattindivo. Tāya rattiyā tiṁsarattiyo māso. Tena māsena dvādasamāsiyo saṁvaccharo. Tena saṁvaccharena dibbāni soḷasa vassasahassāni paranimmitavasavattīnaṁ devānaṁ āyuppamāṇaṁ. Ṭhānaṁ kho panetaṁ, bhikkhave, vijjati yaṁ idhekacco itthī vā puriso vā aṭṭhaṅgasamannāgataṁ uposathaṁ upavasitvā kāyassa bhedā paraṁ maraṇā paranimmitavasavattīnaṁ devānaṁ sahabyataṁ upapajjeyya. Idaṁ kho panetaṁ, bhikkhave, sandhāya bhāsitaṁ: ‘kapaṇaṁ mānusakaṁ rajjaṁ dibbaṁ sukhaṁ upanidhāyā’ti. Pāṇaṁ na haññe na cadinnamādiye, Musā na bhāse na ca majjapo siyā; Abrahmacariyā virameyya methunā, Rattiṁ na bhuñjeyya vikālabhojanaṁ. Mālaṁ na dhāre na ca gandhamācare, Mañce chamāyaṁ va sayetha santhate; Etañhi aṭṭhaṅgikamāhuposathaṁ, Buddhena dukkhantagunā pakāsitaṁ. Cando ca suriyo ca ubho sudassanā, Obhāsayaṁ anupariyanti yāvatā; Tamonudā te pana antalikkhagā, Nabhe pabhāsanti disāvirocanā. Etasmiṁ yaṁ vijjati antare dhanaṁ, Muttā maṇi veḷuriyañca bhaddakaṁ; Siṅgīsuvaṇṇaṁ atha vāpi kañcanaṁ, Yaṁ jātarūpaṁ haṭakanti vuccati. Aṭṭhaṅgupetassa uposathassa, Kalampi te nānubhavanti soḷasiṁ; Candappabhā tāragaṇā ca sabbe. Tasmā hi nārī ca naro ca sīlavā, Aṭṭhaṅgupetaṁ upavassuposathaṁ; Puññāni katvāna sukhudrayāni,",
+   "an8.43": "Kathaṁ upavuttho ca, visākhe, aṭṭhaṅgasamannāgato uposatho mahapphalo hoti mahānisaṁso mahājutiko mahāvipphāro? Idha, visākhe, ariyasāvako iti paṭisañcikkhati: ‘yāvajīvaṁ arahanto pāṇātipātaṁ pahāya pāṇātipātā paṭiviratā nihitadaṇḍā nihitasatthā lajjī dayāpannā, sabbapāṇabhūtahitānukampino viharanti. Ahampajja imañca rattiṁ imañca divasaṁ pāṇātipātaṁ pahāya pāṇātipātā paṭivirato nihitadaṇḍo nihitasattho lajjī dayāpanno, sabbapāṇabhūtahitānukampī viharāmi. Imināpaṅgena arahataṁ anukaromi, uposatho ca me upavuttho bhavissatī’ti. Iminā paṭhamena aṅgena samannāgato hoti …pe…. ‘Yāvajīvaṁ arahanto uccāsayanamahāsayanaṁ pahāya uccāsayanamahāsayanā paṭiviratā nīcaseyyaṁ kappenti—mañcake vā tiṇasanthārake vā. Ahampajja imañca rattiṁ imañca divasaṁ uccāsayanamahāsayanaṁ pahāya uccāsayanamahāsayanā paṭivirato nīcaseyyaṁ kappemi—mañcake vā tiṇasanthārake vā. Imināpaṅgena arahataṁ anukaromi, uposatho ca me upavuttho bhavissatī’ti. Iminā aṭṭhamena aṅgena samannāgato hoti. Evaṁ upavuttho kho, visākhe, aṭṭhaṅgasamannāgato uposatho mahapphalo hoti mahānisaṁso mahājutiko mahāvipphāro. Kīvamahapphalo hoti, kīvamahānisaṁso, kīvamahājutiko, kīvamahāvipphāro? Seyyathāpi, visākhe, yo imesaṁ soḷasannaṁ mahājanapadānaṁ pahūtarattaratanānaṁ issariyādhipaccaṁ rajjaṁ kāreyya, seyyathidaṁ— aṅgānaṁ magadhānaṁ kāsīnaṁ kosalānaṁ vajjīnaṁ mallānaṁ cetīnaṁ vaṅgānaṁ kurūnaṁ pañcālānaṁ macchānaṁ sūrasenānaṁ assakānaṁ avantīnaṁ gandhārānaṁ kambojānaṁ, aṭṭhaṅgasamannāgatassa uposathassa etaṁ kalaṁ nāgghati soḷasiṁ. Taṁ kissa hetu? Kapaṇaṁ, visākhe, mānusakaṁ rajjaṁ dibbaṁ sukhaṁ upanidhāya. Yāni, visākhe, mānusakāni paññāsa vassāni, cātumahārājikānaṁ devānaṁ eso eko rattindivo. Tāya rattiyā tiṁsarattiyo māso. Tena māsena dvādasamāsiyo saṁvaccharo. Tena saṁvaccharena dibbāni pañca vassasatāni cātumahārājikānaṁ devānaṁ āyuppamāṇaṁ. Ṭhānaṁ kho panetaṁ, visākhe, vijjati yaṁ idhekacco itthī vā puriso vā aṭṭhaṅgasamannāgataṁ uposathaṁ upavasitvā kāyassa bhedā paraṁ maraṇā cātumahārājikānaṁ devānaṁ sahabyataṁ upapajjeyya. Idaṁ kho panetaṁ, visākhe, sandhāya bhāsitaṁ: ‘kapaṇaṁ mānusakaṁ rajjaṁ dibbaṁ sukhaṁ upanidhāya’. Yaṁ, visākhe, mānusakaṁ vassasataṁ, tāvatiṁsānaṁ devānaṁ eso eko rattindivo. Tāya rattiyā tiṁsarattiyo māso. Tena māsena dvādasamāsiyo saṁvaccharo. Tena saṁvaccharena vassasahassaṁ tāvatiṁsānaṁ devānaṁ āyuppamāṇaṁ. Ṭhānaṁ kho panetaṁ, visākhe, vijjati yaṁ idhekacco itthī vā puriso vā aṭṭhaṅgasamannāgataṁ uposathaṁ upavasitvā kāyassa bhedā paraṁ maraṇā tāvatiṁsānaṁ devānaṁ sahabyataṁ upapajjeyya. Idaṁ kho panetaṁ, visākhe, sandhāya bhāsitaṁ: ‘kapaṇaṁ mānusakaṁ rajjaṁ dibbaṁ sukhaṁ upanidhāya’. Yāni, visākhe, mānusakāni dve vassasatāni …pe… cattāri vassasatāni …pe… aṭṭha vassasatāni …pe… soḷasa vassasatāni paranimmitavasavattīnaṁ devānaṁ eso eko rattindivo. Tāya rattiyā tiṁsarattiyo māso. Tena māsena dvādasamāsiyo saṁvaccharo. Tena saṁvaccharena dibbāni soḷasa vassasahassāni paranimmitavasavattīnaṁ devānaṁ āyuppamāṇaṁ. Ṭhānaṁ kho panetaṁ, visākhe, vijjati yaṁ idhekacco itthī vā puriso vā aṭṭhaṅgasamannāgataṁ uposathaṁ upavasitvā kāyassa bhedā paraṁ maraṇā paranimmitavasavattīnaṁ devānaṁ sahabyataṁ upapajjeyya. Idaṁ kho panetaṁ, visākhe, sandhāya bhāsitaṁ: ‘kapaṇaṁ mānusakaṁ rajjaṁ dibbaṁ sukhaṁ upanidhāyā’ti. Pāṇaṁ na haññe na cadinnamādiye, Musā na bhāse na ca majjapo siyā; Abrahmacariyā virameyya methunā, Rattiṁ na bhuñjeyya vikālabhojanaṁ. Mālaṁ na dhāre na ca gandhamācare, Mañce chamāyaṁ va sayetha santhate; Etañhi aṭṭhaṅgikamāhuposathaṁ, Buddhena dukkhantagunā pakāsitaṁ. Cando ca suriyo ca ubho sudassanā, Obhāsayaṁ anupariyanti yāvatā; Tamonudā te pana antalikkhagā, Nabhe pabhāsanti disāvirocanā. Etasmiṁ yaṁ vijjati antare dhanaṁ, Muttā maṇi veḷuriyañca bhaddakaṁ; Siṅgīsuvaṇṇaṁ atha vāpi kañcanaṁ, Yaṁ jātarūpaṁ haṭakanti vuccati. Aṭṭhaṅgupetassa uposathassa, Kalampi te nānubhavanti soḷasiṁ; Candappabhā tāragaṇā ca sabbe. Tasmā hi nārī ca naro ca sīlavā, Aṭṭhaṅgupetaṁ upavassuposathaṁ; Puññāni katvāna sukhudrayāni,"
+  },
+  "a03": {
+   "an8.42": "Aninditā saggamupenti ṭhānan”ti. Dutiyaṁ.",
+   "an8.43": "Aninditā saggamupenti ṭhānan”ti. Tatiyaṁ.",
+   "T0088": "佛告墮舍迦：「且將子婦歸，誦念是正齋法八戒也。」優陂夷墮舍迦，前為佛作禮而去。",
+   "T0089": "如是聖八關齋福不可稱量，言有爾所福、爾所功德、爾所果報，此大福不可稱計。」爾時諸比丘聞佛所說，歡喜奉行。"
+  }
+ }
+}

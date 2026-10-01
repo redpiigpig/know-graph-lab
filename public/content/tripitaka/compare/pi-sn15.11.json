@@ -1,0 +1,92 @@
+{
+ "slug": "pi-sn15.11",
+ "title": "別譯雜阿含經 （三三六）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。複核標記存疑 1 段：義段3的巴利原文是結勸勸厭離解脫，但漢譯南傳在此段加入了『輪迴乃無始……足於解脫』的內容，這實際上屬於義段1或義段2的論述，構成內容位置的錯置。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "世尊說法：輪迴無始"
+  },
+  {
+   "id": "a02",
+   "label": "譬喻：見苦當知己受"
+  },
+  {
+   "id": "a03",
+   "label": "結勸：當厭離解脫",
+   "doubt": true
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn15.11",
+   "lang": "pi",
+   "label": "巴利 SN15.11",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn15.11",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN15.11",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.336",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （三三六）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa943",
+   "lang": "lzh",
+   "label": "雜阿含經 （九四三）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（三三六）"
+  },
+  {
+   "work": "T0099",
+   "node": "（九四三）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn15.11": "Saṁyutta Nikāya 15.11 2. Dutiyavagga Duggatasutta",
+   "nan-sn15.11": "〔一一〕第一　苦惱一時，世尊住舍衛城。",
+   "T0100-sa-2.336": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。",
+   "T0099-sa943": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。"
+  },
+  "a01": {
+   "sn15.11": "Ekaṁ samayaṁ bhagavā sāvatthiyaṁ viharati. Tatra kho …pe… “Anamataggoyaṁ, bhikkhave, saṁsāro. Pubbā koṭi na paññāyati avijjānīvaraṇānaṁ sattānaṁ taṇhāsaṁyojanānaṁ sandhāvataṁ saṁsarataṁ.",
+   "nan-sn15.11": "爾時，〔世尊曰：〕",
+   "T0100-sa-2.336": "爾時，佛告諸比丘：「生死長遠。」",
+   "T0099-sa943": "爾時，世尊告諸比丘：「眾生無始生死，長夜輪轉，不知苦之本際。"
+  },
+  "a02": {
+   "sn15.11": "Yaṁ, bhikkhave, passeyyātha duggataṁ durūpetaṁ niṭṭhamettha gantabbaṁ: ‘amhehipi evarūpaṁ paccanubhūtaṁ iminā dīghena addhunā’ti. Taṁ kissa hetu …pe…",
+   "nan-sn15.11": "「諸比丘！輪迴乃無始，眾生為無明所覆、渴愛所縛，不知流轉輪迴之本際。",
+   "T0100-sa-2.336": "餘如上說。「若見眾生受極苦毒，憂愁懊惱，當作是念：『我從昔來無量劫中，亦受如是無量苦惱，生死長遠。』",
+   "T0099-sa943": "諸比丘！若見眾生受諸苦惱，當作是念：『我長夜輪轉生死以來，亦曾更受如是之苦，其數無量，當勤方便，斷除諸有，莫令增長。』"
+  },
+  "a03": {
+   "sn15.11": "yāvañcidaṁ, bhikkhave, alameva sabbasaṅkhāresu nibbindituṁ alaṁ virajjituṁ alaṁ vimuccitun”ti. Paṭhamaṁ.",
+   "nan-sn15.11": "諸比丘！汝等見此處具有必然之苦惱與不幸時，對此處應必作一結論：『我等亦長時如是受之矣。』所以者何？諸比丘！輪迴乃無始……足於解脫。」",
+   "T0100-sa-2.336": "」餘如上說。「汝等比丘，當作是學，應懃方便，斷於後有，莫作起有因緣。」諸比丘聞佛所說，歡喜奉行。",
+   "T0099-sa943": "」佛說此經已，諸比丘聞佛所說，歡喜奉行。"
+  }
+ }
+}

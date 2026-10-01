@@ -1,0 +1,189 @@
+{
+ "slug": "pi-an10.96",
+ "title": "別譯雜阿含經 （二〇一）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "阿難沐浴"
+  },
+  {
+   "id": "a02",
+   "label": "外道至河"
+  },
+  {
+   "id": "a03",
+   "label": "聲聞相問"
+  },
+  {
+   "id": "a04",
+   "label": "外道問身份"
+  },
+  {
+   "id": "a05",
+   "label": "阿難答沙門釋子"
+  },
+  {
+   "id": "a06",
+   "label": "外道請問"
+  },
+  {
+   "id": "a07",
+   "label": "阿難許可問答"
+  },
+  {
+   "id": "a08",
+   "label": "十四無記問答"
+  },
+  {
+   "id": "a09",
+   "label": "外道追問不知見"
+  },
+  {
+   "id": "a10",
+   "label": "阿難自稱知見"
+  },
+  {
+   "id": "a11",
+   "label": "外道問所知見內容"
+  },
+  {
+   "id": "a12",
+   "label": "阿難說知見內容"
+  },
+  {
+   "id": "a13",
+   "label": "外道問名字"
+  },
+  {
+   "id": "a14",
+   "label": "阿難答名阿難"
+  },
+  {
+   "id": "a15",
+   "label": "外道讚歎並退去"
+  }
+ ],
+ "versions": [
+  {
+   "id": "an10.96",
+   "lang": "pi",
+   "label": "巴利 AN10.96",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "T0100-sa-2.201",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （二〇一）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa967",
+   "lang": "lzh",
+   "label": "雜阿含經 （九六七）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（二〇一）"
+  },
+  {
+   "work": "T0099",
+   "node": "（九六七）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "an10.96": "Aṅguttara Nikāya 10.96 10. Upālivagga Kokanudasutta",
+   "T0100-sa-2.201": "如是我聞：一時，佛在王舍城迦蘭陀竹林。",
+   "T0099-sa967": "如是我聞：一時，佛住王舍城迦蘭陀竹園。"
+  },
+  "a01": {
+   "an10.96": "Ekaṁ samayaṁ āyasmā ānando rājagahe viharati tapodārāme. Atha kho āyasmā ānando rattiyā paccūsasamayaṁ paccuṭṭhāya yena tapodā tenupasaṅkami gattāni parisiñcituṁ. Tapodāya gattāni parisiñcitvā paccuttaritvā ekacīvaro aṭṭhāsi gattāni pubbāpayamāno.",
+   "T0100-sa-2.201": "爾時，尊者阿難於是夜中，詣多跋河，脫其衣裳，置于岸上，入河澡浴，著一浴衣，即出于水，待自身乾。",
+   "T0099-sa967": "爾時，尊者阿難陀於後夜時，向㯓補河邊，脫衣置岸邊，入水洗手足。還上岸，著一衣，摩拭身體。"
+  },
+  "a02": {
+   "an10.96": "Kokanudopi kho paribbājako rattiyā paccūsasamayaṁ paccuṭṭhāya yena tapodā tenupasaṅkami gattāni parisiñcituṁ.",
+   "T0100-sa-2.201": "時有外道，名具迦那提，往至彼河。",
+   "T0099-sa967": "時，俱迦那外道出家亦至水邊。"
+  },
+  "a03": {
+   "an10.96": "Addasā kho kokanudo paribbājako āyasmantaṁ ānandaṁ dūratova āgacchantaṁ.",
+   "T0100-sa-2.201": "尊者阿難聞彼行聲，及𡄇咳聲，外道亦聞尊者之聲。",
+   "T0099-sa967": "尊者阿難聞其行聲，聞聲已，即便謦咳作聲。"
+  },
+  "a04": {
+   "an10.96": "Disvāna āyasmantaṁ ānandaṁ etadavoca:",
+   "T0100-sa-2.201": "外道問言：「汝為是誰？」",
+   "T0099-sa967": "俱迦那外道出家聞有人聲，而問言：「為何等人？」"
+  },
+  "a05": {
+   "an10.96": "“kvettha, āvuso”ti?",
+   "T0100-sa-2.201": "阿難答言：「我是沙門。」「沙門甚多，汝今為是何等沙門？」",
+   "T0099-sa967": "尊者阿難答言：「沙門。」俱迦那外道言：「何等沙門？」"
+  },
+  "a06": {
+   "an10.96": "“Ahamāvuso, bhikkhū”ti.",
+   "T0100-sa-2.201": "阿難答言：「我是釋子。」",
+   "T0099-sa967": "尊者阿難答言：「釋種子。」"
+  },
+  "a07": {
+   "an10.96": "“Katamesaṁ, āvuso, bhikkhūnan”ti?",
+   "T0100-sa-2.201": "外道言：「我欲問難，汝若閑暇，聽我所問。」",
+   "T0099-sa967": "俱迦那外道言：「欲有所問，寧有閑暇見答以不？」"
+  },
+  "a08": {
+   "an10.96": "“Samaṇānaṁ, āvuso, sakyaputtiyānan”ti.",
+   "T0100-sa-2.201": "阿難答言：「欲問便問，聽已當知。」",
+   "T0099-sa967": "尊者阿難答言：「隨意所問，知者當答。」"
+  },
+  "a09": {
+   "an10.96": "“Puccheyyāma mayaṁ āyasmantaṁ kiñcideva desaṁ, sace āyasmā okāsaṁ karoti pañhassa veyyākaraṇāyā”ti.",
+   "T0100-sa-2.201": "外道問言：「我死此生彼以不？」",
+   "T0099-sa967": "俱迦那言：「云何 如來死後有耶？」"
+  },
+  "a10": {
+   "an10.96": "“Pucchāvuso, sutvā vedissāmā”ti.",
+   "T0100-sa-2.201": "阿難言：「如來不說。」",
+   "T0099-sa967": "阿難答言：「世尊所說，此是無記。」"
+  },
+  "a11": {
+   "an10.96": "“Kiṁ nu kho, bho, ‘sassato loko, idameva saccaṁ moghamaññan’ti—evaṁdiṭṭhi bhavan”ti?",
+   "T0100-sa-2.201": "又問：「我死此不生彼，亦生亦不生，非生非非生彼不？」",
+   "T0099-sa967": "復問：「如來死後無耶？"
+  },
+  "a12": {
+   "an10.96": "“Na kho ahaṁ, āvuso, evaṁdiṭṭhi:",
+   "T0100-sa-2.201": "阿難又言：「如斯等問，佛悉不答。」",
+   "T0099-sa967": "死後有無耶？非有非無耶？」阿難言：「世尊所說，此是無記。」"
+  },
+  "a13": {
+   "an10.96": "‘sassato loko, idameva saccaṁ moghamaññan’”ti.",
+   "T0100-sa-2.201": "外道言：「我今問汝，死此生彼，乃至非生非非生，悉不見答，汝寧不知如此事乎？」",
+   "T0099-sa967": "俱迦那外道言：「云何 『如來死後有』，答言：『無記』？"
+  },
+  "a14": {
+   "an10.96": "“Kiṁ pana, bho, ‘asassato loko, idameva saccaṁ moghamaññan’ti—evaṁdiṭṭhi bhavan”ti?",
+   "T0100-sa-2.201": "阿難言：「如是之事，我悉知見，非不知見。」",
+   "T0099-sa967": "『死後無』、『死後有無』、『死後非有非無』，答言：『無記』？"
+  },
+  "a15": {
+   "an10.96": "“Na kho ahaṁ, āvuso, evaṁdiṭṭhi: ‘asassato loko, idameva saccaṁ moghamaññan’”ti. “Kiṁ nu kho, bho, antavā loko …pe… anantavā loko … taṁ jīvaṁ taṁ sarīraṁ … aññaṁ jīvaṁ aññaṁ sarīraṁ … hoti tathāgato paraṁ maraṇā … na hoti tathāgato paraṁ maraṇā … hoti ca na ca hoti tathāgato paraṁ maraṇā … neva hoti na na hoti tathāgato paraṁ maraṇā, idameva saccaṁ moghamaññanti—evaṁdiṭṭhi bhavan”ti? “Na kho ahaṁ, āvuso, evaṁdiṭṭhi: ‘neva hoti na na hoti tathāgato paraṁ maraṇā, idameva saccaṁ moghamaññan’”ti. “Tena hi bhavaṁ na jānāti, na passatī”ti? “Na kho ahaṁ, āvuso, na jānāmi na passāmi. Jānāmahaṁ, āvuso, passāmī”ti. “‘Kiṁ nu kho, bho, sassato loko, idameva saccaṁ moghamaññanti— evaṁdiṭṭhi bhavan’ti, iti puṭṭho samāno: ‘na kho ahaṁ, āvuso, evaṁdiṭṭhi— sassato loko, idameva saccaṁ moghamaññan’ti vadesi. ‘Kiṁ pana, bho, asassato loko, idameva saccaṁ moghamaññanti— evaṁdiṭṭhi bhavan’ti, iti puṭṭho samāno: ‘na kho ahaṁ, āvuso, evaṁdiṭṭhi— asassato loko, idameva saccaṁ moghamaññan’ti vadesi. Kiṁ nu kho, bho, antavā loko …pe… anantavā loko … taṁ jīvaṁ taṁ sarīraṁ … aññaṁ jīvaṁ aññaṁ sarīraṁ … hoti tathāgato paraṁ maraṇā … na hoti tathāgato paraṁ maraṇā … hoti ca na ca hoti tathāgato paraṁ maraṇā … neva hoti na na hoti tathāgato paraṁ maraṇā, idameva saccaṁ moghamaññanti— evaṁdiṭṭhi bhavanti, iti puṭṭho samāno: ‘na kho ahaṁ, āvuso, evaṁdiṭṭhi— neva hoti na na hoti tathāgato paraṁ maraṇā, idameva saccaṁ moghamaññan’ti vadesi. ‘Tena hi bhavaṁ na jānāti na passatī’ti, iti puṭṭho samāno: ‘na kho ahaṁ, āvuso, na jānāmi na passāmi. Jānāmahaṁ, āvuso, passāmī’ti vadesi. Yathā kathaṁ panāvuso, imassa bhāsitassa attho daṭṭhabbo”ti? “‘Sassato loko, idameva saccaṁ moghamaññan’ti kho, āvuso, diṭṭhigatametaṁ. ‘Asassato loko, idameva saccaṁ moghamaññan’ti kho, āvuso, diṭṭhigatametaṁ. Antavā loko …pe… anantavā loko … taṁ jīvaṁ taṁ sarīraṁ … aññaṁ jīvaṁ aññaṁ sarīraṁ … hoti tathāgato paraṁ maraṇā … na hoti tathāgato paraṁ maraṇā … hoti ca na ca hoti tathāgato paraṁ maraṇā … ‘neva hoti na na hoti tathāgato paraṁ maraṇā, idameva saccaṁ moghamaññan’ti kho, āvuso, diṭṭhigatametaṁ. Yāvatā, āvuso, diṭṭhi yāvatā diṭṭhiṭṭhānaṁ diṭṭhiadhiṭṭhānaṁ diṭṭhipariyuṭṭhānaṁ diṭṭhisamuṭṭhānaṁ diṭṭhisamugghāto, tamahaṁ jānāmi tamahaṁ passāmi. Tamahaṁ jānanto tamahaṁ passanto kyāhaṁ vakkhāmi: ‘na jānāmi na passāmī’ti? Jānāmahaṁ, āvuso, passāmī”ti. “Ko nāmo āyasmā, kathañca panāyasmantaṁ sabrahmacārī jānantī”ti? “‘Ānando’ti kho me, āvuso, nāmaṁ. ‘Ānando’ti ca pana maṁ sabrahmacārī jānantī”ti. “Mahācariyena vata kira, bho, saddhiṁ mantayamānā na jānimha: ‘āyasmā ānando’ti. Sace hi mayaṁ jāneyyāma: ‘ayaṁ āyasmā ānando’ti, ettakampi no nappaṭibhāyeyya. Khamatu ca me āyasmā ānando”ti. Chaṭṭhaṁ.",
+   "T0100-sa-2.201": "外道言：「汝所知見，為何謂也？」阿難答言：「我所知見，見彼處所，見眾生行，乃至知見彼所從生，知見結業，舉動所作，見煩惱結，如墨聚集，無聞凡愚，與見結相應，順於未來，長處生死。我所知見，其事如是，豈可謂為不知見乎？」外道俱迦那即問之曰：「汝名何等？」阿難答言：「我名阿難。」外道復言：「善哉，善哉！大師弟子，我今乃至共相談論，而不知汝乃是阿難，我若知汝，終不能得共相抗對。」時彼外道聞阿難所說，歡喜而去。",
+   "T0099-sa967": "云何 為不知不見耶？」阿難答言：「非不知、非不見，悉知、悉見。」復問阿難：「云何知？云何見？」阿難答言：「見可見處，見所起處，見纏斷處，此則為知，此則為見。我如是知、如是見，云何說言不知、不見？」俱迦那外道復問：「尊者何名？」阿難陀答言：「我名阿難陀。」俱迦那外道言：「奇哉！大師弟子，而共論議！我若知是尊者阿難陀者，不敢發問。」說是語已，即捨而去。"
+  }
+ }
+}

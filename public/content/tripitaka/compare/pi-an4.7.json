@@ -1,0 +1,83 @@
+{
+ "slug": "pi-an4.7",
+ "title": "增壹阿含經 （七）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "四眾稱揚"
+  },
+  {
+   "id": "a02",
+   "label": "偈頌"
+  },
+  {
+   "id": "a03",
+   "label": "結誡流通"
+  }
+ ],
+ "versions": [
+  {
+   "id": "an4.7",
+   "lang": "pi",
+   "label": "巴利 AN4.7",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "T0125-ea27.7",
+   "lang": "lzh",
+   "label": "增壹阿含經 （七）",
+   "who": "東晉 瞿曇僧伽提婆譯"
+  },
+  {
+   "id": "T0099-sa873",
+   "lang": "lzh",
+   "label": "雜阿含經 （八七三）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0125"
+ ],
+ "anchors": [
+  {
+   "work": "T0125",
+   "node": "（七）",
+   "uid": "T02n0125_p0645c18"
+  },
+  {
+   "work": "T0099",
+   "node": "（八七三）",
+   "uid": "T02n0099_p0220c04"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "an4.7": "Aṅguttara Nikāya 4.7 1. Bhaṇḍagāmavagga Sobhanasutta",
+   "T0125-ea27.7": "聞如是：一時，佛在舍衛國祇樹給孤獨園。",
+   "T0099-sa873": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。"
+  },
+  "a01": {
+   "an4.7": "“Cattārome, bhikkhave, viyattā vinītā visāradā bahussutā dhammadharā dhammānudhammappaṭipannā saṅghaṁ sobhenti. Katame cattāro? Bhikkhu, bhikkhave, viyatto vinīto visārado bahussuto dhammadharo dhammānudhammappaṭipanno saṅghaṁ sobheti. Bhikkhunī, bhikkhave, viyattā vinītā visāradā bahussutā dhammadharā dhammānudhammappaṭipannā saṅghaṁ sobheti. Upāsako, bhikkhave, viyatto vinīto visārado bahussuto dhammadharo dhammānudhammappaṭipanno saṅghaṁ sobheti. Upāsikā, bhikkhave, viyattā vinītā visāradā bahussutā dhammadharā dhammānudhammappaṭipannā saṅghaṁ sobheti. Ime kho, bhikkhave, cattāro viyattā vinītā visāradā bahussutā dhammadharā dhammānudhammappaṭipannā saṅghaṁ sobhentīti.",
+   "T0125-ea27.7": "爾時，世尊告諸比丘：「今有四人，聰明勇悍，博古明今，法法成就。云何為四？比丘多聞博古明今，在大眾中最為第一。比丘尼多聞博古明今，在大眾中最為第一，優婆塞多聞博古明今，在大眾中最為第一，優婆斯多聞博古明今，在大眾中最為第一。是謂，比丘！有此四人在大眾中最為第一。」",
+   "T0099-sa873": "爾時，世尊告諸比丘：「有四種善好調伏眾。何等為四？謂比丘調伏、比丘尼調伏、優婆塞調伏、優婆夷調伏，是名四眾。」"
+  },
+  "a02": {
+   "an4.7": "Yo hoti viyatto ca visārado ca, Bahussuto dhammadharo ca hoti; Dhammassa hoti anudhammacārī, Sa tādiso vuccati saṅghasobhano.",
+   "T0125-ea27.7": "爾時，世尊便說此偈：「勇悍無所畏，多聞能說法，\n在眾為師子，能除怯弱法。\n比丘戒成就，比丘尼多聞，\n優婆塞有信，優婆斯亦爾。\n在眾為第一，若能和順眾，\n欲知此義者，如日初出時。",
+   "T0099-sa873": "爾時，世尊即說偈言：「若才辯無畏，多聞通達法，\n行法次法向，是則為善眾。\n比丘持淨戒，比丘尼多聞，\n優婆塞淨信，優婆夷亦然，\n是名為善眾。"
+  },
+  "a03": {
+   "an4.7": "Bhikkhu ca sīlasampanno, bhikkhunī ca bahussutā; Upāsako ca yo saddho, yā ca saddhā upāsikā; Ete kho saṅghaṁ sobhenti, ete hi saṅghasobhanā”ti. Sattamaṁ.",
+   "T0125-ea27.7": "「是故，諸比丘！當學博古明今，法法成就。如是，諸比丘！當作是學。」爾時，諸比丘聞佛所說，歡喜奉行。",
+   "T0099-sa873": "如日光自照，\n如則善好僧，是則僧中好，\n是法令僧好，如日光自照。」佛說此經已，諸比丘聞佛所說，歡喜奉行。如調伏，如是辯、柔和、無畏、多聞、通達法、說法、法次法向、隨順法行，亦如是說。"
+  }
+ }
+}

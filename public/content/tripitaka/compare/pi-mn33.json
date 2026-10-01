@@ -1,0 +1,132 @@
+{
+ "slug": "pi-mn33",
+ "title": "佛說放牛經",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "牧牛喻：十一不善法"
+  },
+  {
+   "id": "a02",
+   "label": "比丘喻：十一不善法"
+  },
+  {
+   "id": "a03",
+   "label": "牧牛喻：十一善法"
+  },
+  {
+   "id": "a04",
+   "label": "比丘喻：十一善法"
+  },
+  {
+   "id": "a05",
+   "label": "結歡喜"
+  }
+ ],
+ "versions": [
+  {
+   "id": "mn33",
+   "lang": "pi",
+   "label": "巴利 MN33",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-mn33",
+   "lang": "lzh",
+   "label": "漢譯南傳 MN33",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0125-ea49.1",
+   "lang": "lzh",
+   "label": "增壹阿含經 （一）",
+   "who": "東晉 瞿曇僧伽提婆譯"
+  },
+  {
+   "id": "T0099-sa1249",
+   "lang": "lzh",
+   "label": "雜阿含經 （一二四九）",
+   "who": "劉宋 求那跋陀羅譯"
+  },
+  {
+   "id": "T0123",
+   "lang": "lzh",
+   "label": "佛說放牛經",
+   "who": "後秦 鳩摩羅什譯"
+  },
+  {
+   "id": "T1509-t1509.2",
+   "lang": "lzh",
+   "label": "大智度論 2 報應品",
+   "who": "龍樹菩薩造 後秦 鳩摩羅什譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0123",
+  "T0125",
+  "T1509"
+ ],
+ "anchors": [
+  {
+   "work": "T0125",
+   "node": "（一）",
+   "uid": "T02n0125_p0785c24"
+  },
+  {
+   "work": "T0099",
+   "node": "（一二四九）",
+   "uid": "T02n0099_p0342c11"
+  },
+  {
+   "work": "T1509",
+   "node": "2 報應品",
+   "uid": "T25n1509_p0314b25"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "mn33": "Majjhima Nikāya 33 Mahāgopālakasutta Evaṁ me sutaṁ— ekaṁ samayaṁ bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme. Tatra kho bhagavā bhikkhū āmantesi: “bhikkhavo”ti. “Bhadante”ti te bhikkhū bhagavato paccassosuṁ. Bhagavā etadavoca:",
+   "nan-mn33": "第三十三　牧牛者大經如是我聞。——一時，世尊在舍衛城祇陀林給孤獨園。爾時世尊呼諸比丘言：「諸比丘！」彼等比丘應諾：「世尊！」世尊乃說：",
+   "T0125-ea49.1": "聞如是：一時，佛在舍衛國祇樹給孤獨園。爾時，世尊告諸比丘：「其有眾生，修行殺生，廣布殺生，種地獄罪，餓鬼、畜生行；若生人中，壽命極短。所以然者，由害他命。「若有眾生盜他物者，種三惡道之罪；若生人中，恒遭貧匱，食不充口，衣不蓋形。皆由盜故，劫奪物者，即斷他命根。「若有眾生，好喜貪泆，種三惡道；若生人中，門不貞良，竊盜淫泆。「若有眾生妄語者，種地獄罪；若生人中，為人所輕，言不信受，為人所賤。所以然者，皆由前世妄語所致。「若有眾生兩舌者，種三惡道之罪；設生人中，心恒不定，常懷愁憂。所以然者，由彼人兩頭傳虛言故。「若有眾生麁言者，種三惡道之罪；若生人中，為人醜弊，常喜罵呼。所以然者，由彼人言不專正之所致也。「若有眾生鬪亂彼此，種三惡道之罪；設生人中，多諸怨憎，親親離散。所以然者，皆由前世鬪亂之所致也。「若有眾生嫉妬者，種三惡道；若生人中，乏諸衣裳。所以然者，由彼人起貪嫉故。「若有眾生起害意，種三惡道；設生人中，恒多虛妄，不解至理，心亂不定。所以然者，皆由前世恚怒所致也，無有慈仁。「若有眾生，行邪見者，種三惡道；若生人中，乃在邊地，不生中國，不覩三尊道法之義，或復聾、盲、瘖瘂，身形不正，不解善法、惡法之趣。所以然者，皆由前世無信根故，亦不信沙門、婆羅門、父母、兄弟。「比丘知之，由此十惡之報，致此殃舋。是故，比丘！當離十惡，修行正見。如是，比丘！當作是學。」爾時，諸比丘聞佛所說，歡喜奉行。",
+   "T0099-sa1249": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。",
+   "T0123": "聞如是：一時，婆伽婆在舍衛國祇樹給孤獨園。"
+  },
+  "a01": {
+   "mn33": "“Ekādasahi, bhikkhave, aṅgehi samannāgato gopālako abhabbo gogaṇaṁ pariharituṁ phātiṁ kātuṁ. Katamehi ekādasahi? Idha, bhikkhave, gopālako na rūpaññū hoti, na lakkhaṇakusalo hoti, na āsāṭikaṁ hāretā hoti, na vaṇaṁ paṭicchādetā hoti, na dhūmaṁ kattā hoti, na titthaṁ jānāti, na pītaṁ jānāti, na vīthiṁ jānāti, na gocarakusalo hoti anavasesadohī ca hoti. Ye te usabhā gopitaro gopariṇāyakā te na atirekapūjāya pūjetā hoti. Imehi kho, bhikkhave, ekādasahi aṅgehi samannāgato gopālako abhabbo gogaṇaṁ pariharituṁ phātiṁ kātuṁ.",
+   "T0099-sa1249": "爾時，世尊告諸比丘：「若牧牛人成就十一法者，不能令牛增長，亦不能擁護大群牛，令等安樂。何等為十一？謂不知色、不知相、不去蟲、不能覆護其瘡、不能起烟、不知擇路、不知擇處、不知度處、不知食處、盡𤛓其乳、不善料理能領群者，是名十一法成就，不能黨護大群牛。",
+   "T0123": "是時，佛告諸比丘：「有十一法，放牛兒不知放牛便宜，不曉養牛。何等十一？一者放牛兒不知色，二者不知相，三者不知摩刷，四者不知護瘡，五者不知作烟，六者不知擇道行，七者不知愛牛，八者不知何道渡水，九者不知逐好水草，十者𤛓牛不遺殘，十一者不知分別養可用不可用。如是十一事，放牛兒不曉養護其牛者，牛終不滋息，日日有減。"
+  },
+  "a02": {
+   "mn33": "Evameva kho, bhikkhave, ekādasahi dhammehi samannāgato bhikkhu abhabbo imasmiṁ dhammavinaye vuddhiṁ virūḷhiṁ vepullaṁ āpajjituṁ. Katamehi ekādasahi? Idha, bhikkhave, bhikkhu na rūpaññū hoti, na lakkhaṇakusalo hoti, na āsāṭikaṁ hāretā hoti, na vaṇaṁ paṭicchādetā hoti, na dhūmaṁ kattā hoti, na titthaṁ jānāti, na pītaṁ jānāti, na vīthiṁ jānāti, na gocarakusalo hoti, anavasesadohī ca hoti. Ye te bhikkhū therā rattaññū cirapabbajitā saṅghapitaro saṅghapariṇāyakā te na atirekapūjāya pūjetā hoti. Kathañca, bhikkhave, bhikkhu na rūpaññū hoti? Idha, bhikkhave, bhikkhu yaṁ kiñci rūpaṁ sabbaṁ rūpaṁ ‘cattāri mahābhūtāni, catunnañca mahābhūtānaṁ upādāyarūpan’ti yathābhūtaṁ nappajānāti. Evaṁ kho, bhikkhave, bhikkhu na rūpaññū hoti. Kathañca, bhikkhave, bhikkhu na lakkhaṇakusalo hoti? Idha, bhikkhave, bhikkhu ‘kammalakkhaṇo bālo, kammalakkhaṇo paṇḍito’ti yathābhūtaṁ nappajānāti. Evaṁ kho, bhikkhave, bhikkhu na lakkhaṇakusalo hoti. Kathañca, bhikkhave, bhikkhu na āsāṭikaṁ hāretā hoti? Idha, bhikkhave, bhikkhu uppannaṁ kāmavitakkaṁ adhivāseti, nappajahati na vinodeti na byantī karoti na anabhāvaṁ gameti. Uppannaṁ byāpādavitakkaṁ …pe… uppannaṁ vihiṁsāvitakkaṁ …pe… uppannuppanne pāpake akusale dhamme adhivāseti, nappajahati na vinodeti na byantī karoti na anabhāvaṁ gameti. Evaṁ kho, bhikkhave, bhikkhu na āsāṭikaṁ hāretā hoti. Kathañca, bhikkhave, bhikkhu na vaṇaṁ paṭicchādetā hoti? Idha, bhikkhave, bhikkhu cakkhunā rūpaṁ disvā nimittaggāhī hoti anubyañjanaggāhī. Yatvādhikaraṇamenaṁ cakkhundriyaṁ asaṁvutaṁ viharantaṁ abhijjhādomanassā pāpakā akusalā dhammā anvāssaveyyuṁ, tassa saṁvarāya na paṭipajjati, na rakkhati cakkhundriyaṁ, cakkhundriye na saṁvaraṁ āpajjati. Sotena saddaṁ sutvā …pe… ghānena gandhaṁ ghāyitvā …pe… jivhāya rasaṁ sāyitvā …pe… kāyena phoṭṭhabbaṁ phusitvā …pe… manasā dhammaṁ viññāya nimittaggāhī hoti anubyañjanaggāhī. Yatvādhikaraṇamenaṁ manindriyaṁ asaṁvutaṁ viharantaṁ abhijjhādomanassā pāpakā akusalā dhammā anvāssaveyyuṁ, tassa saṁvarāya na paṭipajjati, na rakkhati manindriyaṁ, manindriye na saṁvaraṁ āpajjati. Evaṁ kho, bhikkhave, bhikkhu na vaṇaṁ paṭicchādetā hoti. Kathañca, bhikkhave, bhikkhu na dhūmaṁ kattā hoti? Idha, bhikkhave, bhikkhu yathāsutaṁ yathāpariyattaṁ dhammaṁ na vitthārena paresaṁ desetā hoti. Evaṁ kho, bhikkhave, bhikkhu na dhūmaṁ kattā hoti. Kathañca, bhikkhave, bhikkhu na titthaṁ jānāti? Idha, bhikkhave, bhikkhu ye te bhikkhū bahussutā āgatāgamā dhammadharā vinayadharā mātikādharā, te kālena kālaṁ upasaṅkamitvā na paripucchati, na paripañhati: ‘idaṁ, bhante, kathaṁ? Imassa ko attho’ti? Tassa te āyasmanto avivaṭañceva na vivaranti, anuttānīkatañca na uttānīkaronti, anekavihitesu ca kaṅkhāṭhānīyesu dhammesu kaṅkhaṁ na paṭivinodenti. Evaṁ kho, bhikkhave, bhikkhu na titthaṁ jānāti. Kathañca, bhikkhave, bhikkhu na pītaṁ jānāti? Idha, bhikkhave, bhikkhu tathāgatappavedite dhammavinaye desiyamāne na labhati atthavedaṁ, na labhati dhammavedaṁ, na labhati dhammūpasaṁhitaṁ pāmojjaṁ. Evaṁ kho, bhikkhave, bhikkhu na pītaṁ jānāti. Kathañca, bhikkhave, bhikkhu na vīthiṁ jānāti? Idha, bhikkhave, bhikkhu ariyaṁ aṭṭhaṅgikaṁ maggaṁ yathābhūtaṁ nappajānāti. Evaṁ kho, bhikkhave, bhikkhu na vīthiṁ jānāti. Kathañca, bhikkhave, bhikkhu na gocarakusalo hoti? Idha, bhikkhave, bhikkhu cattāro satipaṭṭhāne yathābhūtaṁ nappajānāti. Evaṁ kho, bhikkhave, bhikkhu na gocarakusalo hoti. Kathañca, bhikkhave, bhikkhu anavasesadohī hoti? Idha, bhikkhave, bhikkhuṁ saddhā gahapatikā abhihaṭṭhuṁ pavārenti cīvarapiṇḍapātasenāsanagilānappaccayabhesajjaparikkhārehi, tatra bhikkhu mattaṁ na jānāti paṭiggahaṇāya. Evaṁ kho, bhikkhave, bhikkhu anavasesadohī hoti. Kathañca, bhikkhave, bhikkhu ye te bhikkhū therā rattaññū cirapabbajitā saṅghapitaro saṅghapariṇāyakā te na atirekapūjāya pūjetā hoti? Idha, bhikkhave, bhikkhu ye te bhikkhū therā rattaññū cirapabbajitā saṅghapitaro saṅghapariṇāyakā, tesu na mettaṁ kāyakammaṁ paccupaṭṭhāpeti āvi ceva raho ca; na mettaṁ vacīkammaṁ paccupaṭṭhāpeti āvi ceva raho ca; na mettaṁ manokammaṁ paccupaṭṭhāpeti āvi ceva raho ca. Evaṁ kho, bhikkhave, bhikkhu ye te bhikkhū therā rattaññū cirapabbajitā saṅghapitaro saṅghapariṇāyakā te na atirekapūjāya pūjetā hoti. Imehi kho, bhikkhave, ekādasahi dhammehi samannāgato bhikkhu abhabbo imasmiṁ dhammavinaye vuddhiṁ virūḷhiṁ vepullaṁ āpajjituṁ.",
+   "nan-mn33": "「諸比丘！具足十一支之牧牛者，不能擁護增長牛群，云何為十一？諸比丘！是牧牛者不知色、不通相、不除蟲卵、不處置瘡痍、不起煙、不知渡處、不知應飲之物、不知道路、不通知牧場、無餘搾乳（留給牛犢）、不以最上恭敬以恭敬牡牛、牛父、牛群首領。諸比丘！具足此等十一支之牧牛者不能擁護增長牛群。諸比丘！如是又比丘具足十一法，此於法、律不能增大、興隆、成滿。云何為十一？曰：諸比丘！是比丘不知色、不通相、不除蟲卵、不處理瘡痍、不起煙、不知渡處、不知可飲之物、不知道路、不知行處、無餘搾乳、不以最上恭敬，以恭敬比丘、長老、耆宿、久修行者、僧伽之父、僧伽之首領。諸比丘！云何比丘不知色？諸比丘！言是比丘不如實知任何色、所有之色是依四大、及四大之色。諸比丘！如是比丘謂不知色。諸比丘！云何比丘不通相？諸比丘！言是比丘不如實知有此業相者是愚人也、有此業相者是賢人。諸比丘！如是比丘謂不通相。諸比丘！云何比丘不除蟲卵？諸比丘！言此比丘以受生起欲之想念，不捨、不除、不滅、不斷、以受生起瞋之想念……乃至……以受生害之想念……以受返復而起之惡不善法、不捨、不除、不滅、不斷。諸比丘！如是之比丘謂不除蟲卵。諸比丘！云何比丘不處理瘡痍？諸比丘！此比丘以眼見、執色相、執隨相。如是不防護眼根而住者，雖流入貪欲、憂慼、惡不善法，不為其防護，不護眼根、於眼根不生防護。以耳聞聲……乃至……以鼻嗅香……以舌嚐味……以身觸之所觸者……以意識法，於此等執相、執隨相。如是不防護意根而住者，流入貪欲、憂慼、惡不善之法，不為其防護、不護意根、於意根不生防護。諸比丘！如是謂比丘不處理瘡痍。諸比丘！云何比丘不起煙？諸比丘！言此比丘如所聞、如所受持、而不為其他廣說法。諸比丘！如是比丘謂不起煙。諸比丘！云何比丘不知渡處？諸比丘！言此比丘彼等多聞而通阿含、持法、持律、持智母之比丘，隨時而詣，不尋不問：『賢者！此如何？此如何之意義？』因此對彼，彼等尊者不顯所不顯，不開所不開，於法有種種疑問，而不除去疑問。諸比丘！如是比丘謂不知渡處。諸比丘！云何比丘不知飲水之處？諸比丘！言此比丘依如來所教說法、律時，對利義不得信受，對於法不得信受，不得隨伴法之歡喜。諸比丘！如是比丘謂不知應飲之物。諸比丘！云何比丘不知道路？諸比丘！言此比丘不如實知八支聖道。諸比丘！如是比丘謂不知道路。諸比丘！云何比丘不知行處？諸比丘！言此比丘不如實知四念處。諸比丘！如是比丘謂不知行處。諸比丘！云何比丘無餘搾乳？諸比丘！言此比丘對有信之居士持來布施衣服、飲食、牀座、醫藥資具，其時比丘受之而不知限度。諸比丘！如是比丘謂無餘搾乳。諸比丘！云何比丘不以最上之恭敬恭敬彼等比丘、長老、耆宿、久修行者、僧伽之父、僧伽之首領，諸比丘！言此比丘對彼等比丘、長老、耆宿、久修行者、僧伽之父、僧伽之首領，於正於反，不作慈身業，不作慈口業，不作慈意業。諸比丘！如是比丘謂不以最上之恭敬恭敬彼等比丘、長老、耆宿、久修行者、僧伽之父、僧伽之首領。諸比丘！具足此等十一法之比丘於法、律，不能增大、興隆、圓滿。",
+   "T0099-sa1249": "「如是，比丘成就十一法者，不能自安，亦不安他。何等為十一？謂不知色、不知相、不能除其害蟲、不覆其瘡、不能起烟、不知正路、不知止處、不知度處、不知食處、盡𤛓其乳、若有上座多聞耆舊，久修梵行，大師所歎，不向諸明智修梵行者稱譽其德，悉令宗敬、奉事、供養。「云何名不知色？諸所有色，彼一切四大，及四大造，是名為色不如實知。「云何不知相？事業是過相，事業是慧相，是不如實知，是名不知相。「云何名不知去蟲？所起欲覺能安，不離、不覺、不滅，所起瞋恚、害覺能安，不離，不覺、不滅，是名不去蟲。「云何不覆瘡？謂眼見色，隨取形相，不守眼根，世間貪憂，惡不善法，心隨生漏，不能防護；耳、鼻、舌、身、意根亦復如是。是名不覆其瘡。「云何不起烟？如所聞，如所受法，不能為人分別顯示，是名不起烟。「云何不知正道？八正道及聖法、律是名為道，彼不如實知，是名不知道。「云何不知止處？謂於如來所知法，不得歡喜、悅樂、勝妙、出離、饒益，是名不知止處。「云何不知度處？謂彼不知修多羅、毘尼、阿毘曇，不隨時往到其所，諮問請受：『云何為善？云何不善？云何有罪？云何無罪？作何等法為勝非惡？』於隱密法不能開發，於顯露法不能廣問，於甚深句義自所知者，不能廣宣顯示，是名不知度處。「云何不知放牧處？謂四念處及賢聖法、律是名放牧處，於此不如實知，是名不知放牧處。「云何為盡𤛓其乳？彼剎利、婆羅門長者自在施與衣被、飲食、床臥、醫藥、資生眾具，彼比丘受者不知限量，是名盡𤛓其乳。「云何為上座大德多聞耆舊，乃至不向諸勝智梵行者所稱其功德，令其宗重承事供養，令得悅樂？謂比丘不稱彼上座，乃至令諸智慧梵行者往詣其所，以隨順身、口、意業承望奉事，是名不於上座多聞耆舊，乃至令智慧梵行往詣其所，承望奉事，令得悅樂。",
+   "T0123": "比丘！不知行十一事，如放牛兒者，終不成沙門，此法中終不種法律根栽，無有葉枝覆蔭；不行十一事強為沙門者，死墮三惡道。何等比丘十一行？比丘不知色，不知相，應摩刷不知摩刷，應護瘡不知護瘡，應作烟不知作烟，不知擇道行，不知愛牛，不知何道渡水，不知食處，不知敬長老。「比丘！云何不知色？比丘！不知四大，不知四大所造色，比丘！如是不知。比丘！云何不知相？比丘！不知癡因緣相、不知黠因緣相。云何不知癡因緣相？比丘！不知黑緣，不知白緣，不知黑白緣。云何不知黠相？不知黑緣，不知白緣，不知白黑緣。比丘！如是不知相。比丘！云何應摩刷而不摩刷？比丘！設欲心發便樂著，不捨、不忘、不斷絕，起愚癡貪慳及餘惡心，盡懷不吐捨。如是，比丘！應摩刷而不摩刷也。比丘！云何應護瘡而不護瘡？比丘！見色起想、聞聲愛著，思想形體不知為惡，不護眼根、耳、鼻、舌、身、心，盡馳外塵而不能護。如是，比丘！應護瘡而不護瘡。云何，比丘！應作烟而不作烟？比丘！所學聞不知為人說。如是，比丘！應起烟而不起烟。云何，比丘！不知擇道行？比丘！不入直道行，行於非道。云何行非道？比丘！入婬女里及酒會博戲處。如是，比丘！為不知行道。云何比丘不知愛？比丘！講說法寶時，不至心愛樂聽。如是，比丘！為不知愛。云何，比丘！不知渡水？比丘！不知四諦。何等四諦？比丘！不知苦諦、苦習諦、苦盡諦、苦盡道諦。如是，比丘！為不知渡水。云何，比丘！不知食處？比丘！不知四意止。何等四意止？比丘！不知內觀身、外觀身、內外觀身，不知內觀痛、外觀痛、內外觀痛，不知內觀意、外觀意、內外觀意，不知內觀法、外觀法、內外觀法。如是，比丘！為不知食處。云何，比丘！不知食不盡？比丘！設為國王長者清信士女請食，設種種餚饌至心進上，比丘不知齊限，食已有餘復欲持歸。如是，比丘！為不知食不盡。云何，比丘！不知敬長老？比丘！恭敬供養之云何不知？設有長老比丘，久習道德學問廣博，小比丘不至心禮敬，見之不起不為避坐，輕慢調戲不以善心待。如是，比丘！不知敬長老。其有比丘，不知行十一法，於吾法中不應為沙門，不種法律根栽，無枝葉覆蔭皆自朽壞，不如還為白衣。若強為沙門者必入三惡道。"
+  },
+  "a03": {
+   "mn33": "Ekādasahi, bhikkhave, aṅgehi samannāgato gopālako bhabbo gogaṇaṁ pariharituṁ phātiṁ kātuṁ. Katamehi ekādasahi? Idha, bhikkhave, gopālako rūpaññū hoti, lakkhaṇakusalo hoti, āsāṭikaṁ hāretā hoti, vaṇaṁ paṭicchādetā hoti, dhūmaṁ kattā hoti, titthaṁ jānāti, pītaṁ jānāti, vīthiṁ jānāti, gocarakusalo hoti, sāvasesadohī ca hoti. Ye te usabhā gopitaro gopariṇāyakā te atirekapūjāya pūjetā hoti. Imehi kho, bhikkhave, ekādasahi aṅgehi samannāgato gopālako bhabbo gogaṇaṁ pariharituṁ phātiṁ kātuṁ.",
+   "T0099-sa1249": "「彼牧牛者成就十一法，堪能令彼群牛增長，擁護群牛，令其悅樂。何等為十一？謂知色、知相，如上清淨分說，乃至能領群者，隨時料理，令得安樂，是名牧牛者十一事成就，能令群牛增長擁護，令得安樂。",
+   "T0123": "「比丘！知放牛兒十一行養護，其能使滋息。云何十一？此放牛兒為：知色，知相，摩刷，護瘡，起烟，擇道，渡水，愛牛，逐水草，𤛓知遺殘齊限多少，分別牛好惡，養視可用者。如是放牛者，便能養護增益其牛。」佛於是頌曰：「放牛兒審諦，牛主有福德，\n六頭牛六年，成六十不減。\n放牛兒聰明，知分別諸相，\n如此放牛兒，先世佛所譽。「如是十一法，比丘當行，便能於是法中種法律根栽，枝葉茂盛覆蔭大地，不復朽壞。"
+  },
+  "a04": {
+   "mn33": "Evameva kho, bhikkhave, ekādasahi dhammehi samannāgato bhikkhu bhabbo imasmiṁ dhammavinaye vuddhiṁ virūḷhiṁ vepullaṁ āpajjituṁ. Katamehi ekādasahi? Idha, bhikkhave, bhikkhu rūpaññū hoti, lakkhaṇakusalo hoti, āsāṭikaṁ hāretā hoti, vaṇaṁ paṭicchādetā hoti, dhūmaṁ kattā hoti, titthaṁ jānāti, pītaṁ jānāti, vīthiṁ jānāti, gocarakusalo hoti, sāvasesadohī ca hoti. Ye te bhikkhū therā rattaññū cirapabbajitā saṅghapitaro saṅghapariṇāyakā te atirekapūjāya pūjetā hoti. Kathañca, bhikkhave, bhikkhu rūpaññū hoti? Idha, bhikkhave, bhikkhu yaṁ kiñci rūpaṁ sabbaṁ rūpaṁ ‘cattāri mahābhūtāni, catunnañca mahābhūtānaṁ upādāyarūpan’ti yathābhūtaṁ pajānāti. Evaṁ kho, bhikkhave, bhikkhu rūpaññū hoti. Kathañca, bhikkhave, bhikkhu lakkhaṇakusalo hoti? Idha, bhikkhave, bhikkhu kammalakkhaṇo bālo, kammalakkhaṇo paṇḍitoti yathābhūtaṁ pajānāti. Evaṁ kho, bhikkhave, bhikkhu lakkhaṇakusalo hoti. Kathañca, bhikkhave, bhikkhu āsāṭikaṁ hāretā hoti? Idha, bhikkhave, bhikkhu uppannaṁ kāmavitakkaṁ nādhivāseti, pajahati vinodeti byantī karoti anabhāvaṁ gameti. Uppannaṁ byāpādavitakkaṁ …pe… uppannaṁ vihiṁsāvitakkaṁ …pe… uppannuppanne pāpake akusale dhamme nādhivāseti, pajahati vinodeti byantī karoti anabhāvaṁ gameti. Evaṁ kho, bhikkhave, bhikkhu āsāṭikaṁ hāretā hoti. Kathañca, bhikkhave, bhikkhu vaṇaṁ paṭicchādetā hoti? Idha, bhikkhave, bhikkhu cakkhunā rūpaṁ disvā na nimittaggāhī hoti nānubyañjanaggāhī. Yatvādhikaraṇamenaṁ cakkhundriyaṁ asaṁvutaṁ viharantaṁ abhijjhādomanassā pāpakā akusalā dhammā anvāssaveyyuṁ tassa saṁvarāya paṭipajjati, rakkhati cakkhundriyaṁ, cakkhundriye saṁvaraṁ āpajjati. Sotena saddaṁ sutvā …pe… ghānena gandhaṁ ghāyitvā …pe… jivhāya rasaṁ sāyitvā …pe… kāyena phoṭṭhabbaṁ phusitvā …pe… manasā dhammaṁ viññāya na nimittaggāhī hoti nānubyañjanaggāhī. Yatvādhikaraṇamenaṁ manindriyaṁ asaṁvutaṁ viharantaṁ abhijjhādomanassā pāpakā akusalā dhammā anvāssaveyyuṁ tassa saṁvarāya paṭipajjati, rakkhati manindriyaṁ, manindriye saṁvaraṁ āpajjati. Evaṁ kho, bhikkhave, bhikkhu vaṇaṁ paṭicchādetā hoti. Kathañca, bhikkhave, bhikkhu dhūmaṁ kattā hoti? Idha, bhikkhave, bhikkhu yathāsutaṁ yathāpariyattaṁ dhammaṁ vitthārena paresaṁ desetā hoti. Evaṁ kho, bhikkhave, bhikkhu dhūmaṁ kattā hoti. Kathañca, bhikkhave, bhikkhu titthaṁ jānāti? Idha, bhikkhave, bhikkhu ye te bhikkhū bahussutā āgatāgamā dhammadharā vinayadharā mātikādharā te kālena kālaṁ upasaṅkamitvā paripucchati, paripañhati: ‘idaṁ, bhante, kathaṁ? Imassa ko attho’ti? Tassa te āyasmanto avivaṭañceva vivaranti, anuttānīkatañca uttānīkaronti, anekavihitesu ca kaṅkhāṭhānīyesu dhammesu kaṅkhaṁ paṭivinodenti. Evaṁ kho, bhikkhave, bhikkhu titthaṁ jānāti. Kathañca bhikkhave, bhikkhu pītaṁ jānāti? Idha, bhikkhave, bhikkhu tathāgatappavedite dhammavinaye desiyamāne labhati atthavedaṁ, labhati dhammavedaṁ, labhati dhammūpasaṁhitaṁ pāmojjaṁ. Evaṁ kho, bhikkhave, bhikkhu pītaṁ jānāti. Kathañca, bhikkhave, bhikkhu vīthiṁ jānāti? Idha, bhikkhave, bhikkhu ariyaṁ aṭṭhaṅgikaṁ maggaṁ yathābhūtaṁ pajānāti. Evaṁ kho, bhikkhave, bhikkhu vīthiṁ jānāti. Kathañca, bhikkhave, bhikkhu gocarakusalo hoti? Idha, bhikkhave, bhikkhu cattāro satipaṭṭhāne yathābhūtaṁ pajānāti. Evaṁ kho, bhikkhave, bhikkhu gocarakusalo hoti. Kathañca, bhikkhave, bhikkhu sāvasesadohī hoti? Idha, bhikkhave, bhikkhuṁ saddhā gahapatikā abhihaṭṭhuṁ pavārenti cīvarapiṇḍapātasenāsanagilānappaccayabhesajjaparikkhārehi. Tatra bhikkhu mattaṁ jānāti paṭiggahaṇāya. Evaṁ kho, bhikkhave, bhikkhu sāvasesadohī hoti. Kathañca, bhikkhave, bhikkhu ye te bhikkhū therā rattaññū cirapabbajitā saṅghapitaro saṅghapariṇāyakā, te atirekapūjāya pūjetā hoti? Idha, bhikkhave, bhikkhu ye te bhikkhū therā rattaññū cirapabbajitā saṅghapitaro saṅghapariṇāyakā tesu mettaṁ kāyakammaṁ paccupaṭṭhāpeti āvi ceva raho ca; mettaṁ vacīkammaṁ paccupaṭṭhāpeti āvi ceva raho ca; mettaṁ manokammaṁ paccupaṭṭhāpeti āvi ceva raho ca. Evaṁ kho, bhikkhave, bhikkhu ye te bhikkhū therā rattaññū cirapabbajitā saṅghapitaro saṅghapariṇāyakā te atirekapūjāya pūjetā hoti. Imehi kho, bhikkhave, ekādasahi dhammehi samannāgato bhikkhu bhabbo imasmiṁ dhammavinaye vuddhiṁ virūḷhiṁ vepullaṁ āpajjitun”ti.",
+   "nan-mn33": "諸比丘！具足十一支之牧牛者，得擁護增大牛群。云何為十一？言此牧牛者知色、通相、除蟲卵、處理瘡痍、起煙、知渡處、知飲之物、知道路、知牧場、餘留奶乳、以最上之恭敬恭敬彼等牡牛、牛父、牛群之首領。諸比丘！具足此等十一支之牧牛者，得擁護增大牛群。諸比丘！如是，具足十一法之比丘亦能於此法、律，得增大、興隆、圓滿，云何為十一？言此比丘知色、通相、除蟲卵、處理瘡痍、起煙、渡處、應飲之物、道路、通行處、搾奶乳留存，以最上之恭敬恭敬彼等比丘、長老、耆宿、久修行者、僧伽之父、僧伽之首領。諸比丘！云何比丘知色？諸比丘！言此比丘於任何色，如實知諸色是依四大及四大之色也。諸比丘！如是比丘謂知色。諸比丘！云何比丘是通相？諸比丘！言此比丘如實知：『有此之業相者是愚人、有此業相者是賢人也。』諸比丘！如是比丘是通於相。諸比丘！云何比丘以除蟲卵？諸比丘！言此比丘不受生欲之想念，捨之、除之、滅之、斷之。將生之瞋念、想念……乃至……將生害之想念……不受返復生起惡不善法，捨之、除之、滅之、斷之。諸比丘！如是比丘是除蟲卵。諸比丘！云何比丘以處理瘡痍，諸比丘！言此比丘以眼見色、不執相、不執隨相，雖如是不防護彼之眼根而住，若將生起貪欲、憂慼、惡不善之法者，為其防護、以護眼根、於眼根生防護。以耳聞聲……乃至……以鼻嗅香……以舌嚐味……以身觸所觸者……以意識法，不執相、不執隨相，如是防護彼意根而住，若將生起貪欲、憂慼、惡不善之法者，為其防護，以護意根、於意根生防護。諸比丘！如是比丘是處理瘡痍。諸比丘！云何比丘以起煙？諸比丘！言此比丘如所聞而所受持，為其他廣說法。諸比丘！如是比丘謂起煙。諸比丘！云何比丘是知渡處？諸比丘！言此比丘對彼等多聞而通阿含、持法、持律、持智母之比丘，隨時而詣，尋問：『賢者！此如何？此之意義如何？』對於彼，彼等尊者以顯所不顯、以開所不開、於有種種疑問之法以除疑問。諸比丘！如是比丘是謂知渡處。諸比丘！云何比丘是謂知應飲之物？諸比丘！言此比丘依如來之所教，說法、律之時，對其利義得信受、對於法得信受，得隨伴法之歡喜。諸比丘！如是比丘是謂知應飲之物。諸比丘！云何比丘知道路？諸比丘！言此比丘如實知八支聖道。諸比丘！如是比丘是謂知道路。諸比丘！云何比丘知行處？諸比丘！言此比丘如實知四念處。諸比丘！如是比丘謂知行處。諸比丘！云何比丘是餘存搾奶乳？諸比丘！言是比丘對有正信之居士持來衣服、飲食、牀座、醫藥資具之布施，其時比丘受之而知限度。諸比丘！如是比丘是謂知餘存搾奶乳。諸比丘！云何比丘是以最上之恭敬恭敬彼等比丘、長老、耆宿、久修行者、僧伽之父，僧伽之首領？諸比丘！言此比丘，對彼等比丘、長老、耆宿、久修行者、僧伽之父、僧伽之首領、於正於反，皆作慈身業、作慈口業、作慈意業。諸比丘！如是謂比丘以最上之恭敬恭敬彼等比丘、長老、耆宿、久修行者、僧伽之父、僧伽之首領。諸比丘！具足此等十一法之比丘，於此法、律，得增大、興隆、圓滿。」",
+   "T0099-sa1249": "如是，比丘成就十一法者，能自安樂，亦能安他。何等十一？謂知色、知相乃至十一……」如清淨分廣說，「是名比丘十一事成就，自安安他。」",
+   "T0123": "何等十一？比丘知色、知相、知摩刷、知覆瘡、知時作烟、知行道、知愛、知渡水、知食處、知不盡、知敬長老舊學耆艾恭敬供養。云何比丘知色？比丘！知四大造起色，如是，比丘！為知色。云何比丘知相？比丘！別癡別黠。云何癡？非所思而思、非所行而行、非所說而說，是為癡。云何為黠？思可思、行可行、說可說，是為黠。能別癡黠，是為知相。云何比丘應摩刷知摩刷？比丘！設生欲心能制遠避如吐惡見，設起瞋恚慳貪及餘諸惡，能制遠避如吐惡見。如是，比丘！應刷知刷。云何比丘應護瘡而護？比丘！眼見色不分別好惡、守護眼根不著外色、遠捨諸惡護於眼根，耳聽聲、鼻嗅香、舌嗜味、身貪細滑意多念，制不令著，護此諸根不染外塵如吐惡見。如是，比丘！為知護瘡。云何比丘時時放烟？比丘！如所學所聞所知，以是廣說，如是比丘為知放烟。云何比丘知行道？比丘行審諦八道，知不可行處，婬里、酒家、博戲處，終不妄入，如是比丘為知行道。云何比丘知愛？比丘！見說法寶時，至心聽受踊躍愛樂，如是比丘名為知愛。云何比丘知渡水處？比丘！知四諦。云何四諦？苦諦、苦習諦、苦盡諦、苦盡道諦。如是比丘為知渡水。云何比丘知食處？比丘！知四意止。云何四意止？比丘！觀內身、觀外身、觀內外身，觀內痛、觀外痛、觀內外痛，觀內意觀、外意觀、內外意，觀內法、觀外法、觀內外法，如是比丘為知食處。云何比丘知食不盡？比丘！若國王長者清信士女，以信樂心請於比丘，供養飲食種種餚饌，加敬進勸，比丘知節供身則止，思惟佛語：『施者雖豐，當自知限，不為盡受。』如是比丘知食不盡。云何比丘知敬長老舊學耆艾恭敬供養？比丘！當親近是輩禮敬供養，出入迎逆見來避坐，任力進上，勿以懈慢。如是比丘知，敬長老。比丘！能行是十一事者，於此法中種法律根栽枝葉滋茂，多所覆蔭清淨無垢。」爾時，世尊以偈頌曰：「有信精進學，受食知節限，\n恭敬於長老，是行佛稱譽。\n如此十一法，比丘學是者，\n晝夜定心意，六年得羅漢。」"
+  },
+  "a05": {
+   "mn33": "Idamavoca bhagavā. Attamanā te bhikkhū bhagavato bhāsitaṁ abhinandunti. Mahāgopālakasuttaṁ niṭṭhitaṁ tatiyaṁ.",
+   "nan-mn33": "世尊如是說已。彼等比丘歡喜信受世尊之所說。",
+   "T0099-sa1249": "佛說此經已，諸比丘聞佛所說，歡喜奉行。",
+   "T0123": "諸比丘聞佛所說，歡喜受行。",
+   "T1509-t1509.2": "【經】佛告舍利弗：「若菩薩摩訶薩行般若波羅蜜能作是功德，是時四天王皆大歡喜，意念言：『我等當以四鉢奉上菩薩，如前天王奉先佛鉢。』」【論】問曰：前品說已具，今何以重說？答曰：前雖歎般若波羅蜜，事未具足，聞者無厭，是故復說。復次，初品但讚般若波羅蜜力，今讚行者能作是功德，四天王等歡喜奉鉢。復次，以菩薩能具諸願行，故佛安慰、勸進，言有此果報，終不虛也。復次，般若波羅蜜有二種果：一者、成佛度眾生；二者、雖未成佛，受世間果報——轉輪聖王、釋、梵天王主三千世界，世間福樂供養之事，悉皆備足。今以世間果報以示眾生，故說是事。復次，世間欲成大業，多有壞亂者；菩薩則不然，內心既定，外事亦應。如是等因緣，故說此品。問曰：菩薩增益六波羅蜜時，諸天、世人何因緣故喜？答曰：諸天皆因十善、四禪、四無量故生；是諸功德，皆由諸佛菩薩故有。若佛出世，增益諸天眾，減損阿修羅種；若佛不在世，阿修羅種多，諸天減少；以種雜福不清淨故。若諸佛出世，能斷諸天疑網，能成大事。如釋提桓因命欲終時，心懷怖畏，求佛自救，遍不知處。雖見出家之人，山澤閑處，所供養者，皆亦不能斷其疑網。爾時毘首羯磨天白釋提桓因言：「尸毘王苦行奇特，世所希有！諸智人言：『是人不久當得作佛！』」釋提桓因言：「是事難辦！何以知之？如魚子、菴羅樹華、發心菩薩，是三事因時雖多，成果甚少。今當試之！」帝釋自化為鷹，毘首羯磨化作鴿，鴿投於王，王自割身肉，乃至舉身上稱以代鴿命，地為震動。是時釋提桓因等心大歡喜，散眾天華，歎未曾有；如是決定大心，成佛不久！復次，凡夫人肉眼，無有智慧，苦身求財，以自生活；聞菩薩增益六波羅蜜，成佛不久，猶尚歡喜，何況諸天！問曰：四天王天、三十三天有阿修羅難；上諸天等無有此患，何以歡喜？答曰：上諸天雖無阿修羅患，若佛不出世，生其天上者少；設有生者，五欲不妙。所以者何？但修不淨福故。色界諸天宮殿，光明、壽命，亦復如是。復次，諸天中有智慧者，能知禪味、五欲悉皆無常；唯佛出世，能令得常樂涅槃。以世間樂、涅槃樂皆由佛菩薩得，是故歡喜。譬如甘美果樹茂盛成就，人大歡喜，以樹有種種利益：有庇其蔭者，有用其華，食其果實。菩薩亦如是，能以離不善法蔭遮三惡苦熱，能與人天富樂之華，令諸賢聖得三乘之果，是故歡喜。問曰：諸天供養事多，何以奉鉢？答曰：四天王奉鉢，餘天供養。諸天供養，各有定法：如佛初生時，釋提桓因以天衣奉承佛身，梵天王躬自執蓋，四天王四邊防護。淨居諸天欲令菩薩生厭離心故，化作老、病、死人及沙門身。又出家時，四天王勅使者捧舉馬足，自四邊侍護菩薩。天帝釋取髮，於其天上城東門外立髮塔；又持菩薩寶衣，於城南門外立衣塔；佛至樹下時，奉上好草。執金剛菩薩常執金剛衛護菩薩；梵天王請佛轉法輪。如是等，各有常法。以是故，四天王奉鉢。四鉢義，如先說。問曰：佛一身何以受四鉢？答曰：四王力等，不可偏受。又令見佛神力，合四鉢為一，心喜信淨，作是念：「我等從菩薩初生至今成佛，所修供養，功德不虛。」問曰：四天王壽命五百歲，菩薩過無量阿僧祇劫然後成佛；今之四天，非是後天，何以故喜？答曰：同一姓故；譬如貴姓胤流百世，不以遠故為異。或時行者，見菩薩增益六波羅蜜時，心作是願：「是菩薩成佛時，我當奉鉢。」是故得生。復次，四天王壽五百歲；人間五十歲，為四天王處一日一夜；亦三十日為一月，十二月為一歲；以此歲壽五百歲，為人間九百萬歲。菩薩能作是功德者，或近成佛，初生四天王，足可得值。問曰：如摩訶衍經中說：有佛以喜為食，不食揣食。如天王佛衣服儀容，與白衣無異，不須鉢食，何以言「四天王定應奉鉢」？答曰：定者，為用鉢者故，不說不用。復次，用鉢諸佛多，不用鉢者少，是故以多為定。【經】「三十三天乃至他化自在天亦皆歡喜，意念言：『我等當給侍供養菩薩，減損阿修羅種，增益諸天眾。』三千大千世界，四天王天乃至阿迦尼吒天皆大歡喜，意念言：『我等當請是菩薩轉法輪。』」【論】釋曰：是諸天等，以華香瓔珞，禮拜恭敬，聽法讚歎等供養；亦作是念：「人修淨福，阿修羅種減，增益三十三天，我諸天亦得增益。」問曰：上六種天已說，何以故更說「三千大千世界中，乃至阿迦尼吒天歡喜供養」？答曰：先說一須彌山上六天，此說三千大千世界諸天；先但說欲界，今此說欲界、色界諸天請佛轉法輪；上雖說淨居諸天種種供養勸助，今請轉法輪事大故。問曰：三藏中但說「梵天請轉法輪」，今何以說「四天王乃至阿迦尼吒天」？答曰：欲界天近故前來。色界都名為梵，若說梵王請佛，已說餘天。又梵為色界初門，說初故，後亦說。復次，眾生有佛無佛常識梵天，以梵天為世間祖父，為世人故說梵天。法輪相，如先說。【經】「舍利弗！是菩薩摩訶薩行般若波羅蜜，增益六波羅蜜時，諸善男子、善女人各各歡喜，意念言：『我等當為是人作父母、妻子、親族、知識。』」【論】問曰：前已說「能作是功德」，今何以復說「增益六波羅蜜」？答曰：先說總相，今說別相。復次，前所說功德中（前品中功德也）種種無量，聞者厭惓；今但略說六波羅蜜，則盡攝諸功德。復次，為天說故，「能作諸功德」；為人說故，「增益六波羅蜜」。何以知之？如後說「善男子、善女人」，以是故知。問曰：四天王天乃至阿迦尼吒天，何以不說「善天」，而但人中說「善男子、善女人」？答曰：諸天皆有天眼、天耳、他心智，知供養菩薩，故不別說其善。人以肉眼見，無知；善者，能知供養，以少故，別說善者。善者，從佛聞法，或從弟子、菩薩聞；或聞受記當作佛，又聞佛讚歎其名者，故知修善。問曰：何以但說男子、女人善，不說二根、無根者善？答曰：無根，所謂無得道相，是故不說。如毘尼中不得出家，以其失男女相故。其心不定，以小因緣故便瞋；結使多故，著於世事；多懷疑網，不樂道法；雖能少修福事，智慧淺薄，不能深入；本性轉易，是故不說。聲聞法如是說。摩訶衍中，譬如大海，無所不容；是無根人或時修善，但以少故不說。所謂少者，於男女中，是人最少，是人修善者少；譬如白人，雖復鬚髮、黶子黑，不名黑人。二根人結使多雜，亦行男事、亦行女事，其心邪曲，難可勉濟；譬如稠林曳木，曲者難出。又如阿修羅，其心不端故，常疑於佛，謂佛助天。佛為說五眾，謂有六眾，不為說一；若說四諦，謂有五諦，不說一事。二根人亦如是，心多邪曲故，不任得道。以是故，但說男子、女人中善者。善相者，有慈悲心，能忍惡罵。如《法句．罵品》中說：「能忍惡罵人，是名人中上！」譬如好良馬，可中為王乘。復次，以五種邪語及鞭杖、打害、縛繫等不能毀壞其心，是名為善相。復次，三業無失，樂於善人；不毀他善，不顯己德；隨順眾人，不說他過；不著世樂，不求名譽，信樂道德之樂；自業清淨，不惱眾生；心貴實法，輕賤世事；唯好直信，不隨他誑；為一切眾生得樂故，自捨己樂；令一切眾生得離苦故，以身代之。如是等無量名為善人相。是相多在男、女，故說「善男子、善女人」。問曰：善男子、善女人何因能作是願？答曰：善男子、善女人自知福薄、智慧尠少，習近菩薩，欲求過度；譬如沈石雖重，依船得度。又善男子、善女人聞菩薩不從一世、二世而得成道，無央數世往來生死，便作是念：「我當與為因緣。」復次，菩薩積德厚故，在所生處，眾生皆來敬仰菩薩，以蒙利益重故。若見菩薩捨壽，則生是願：「我當與菩薩作父母、妻子、眷屬。」所以者何？知習近善人，增益功德故；譬如積集眾香，香氣轉多。如菩薩先世為國王太子，見閻浮提人貧窮，欲求如意珠，入於大海，至龍王宮。龍見太子威德殊妙，即起迎逆，延前供養，而問之言：「何能遠來？」太子答曰：「我憐閻浮提眾生故，欲求如意寶珠以饒益之！」龍言：「能住我宮，受供一月，當以相與！」太子即住一月，為龍王讚歎多聞，龍即與珠；是如意珠，能雨一由旬。龍言：「太子有相，不久作佛，我當作多聞第一弟子。」時，太子復至一龍宮得珠，雨二由旬，二月讚歎神通力。龍言：「太子作佛不久，我當作神足第一弟子。」復至一龍宮得珠，雨三由旬，三月讚歎智慧。龍言：「太子作佛不久，我當作智慧第一弟子。」諸龍與珠已，言：「盡汝壽命，珠當還我。」菩薩許之。太子得珠，至閻浮提；一珠能雨飲食，一珠能雨衣服，一珠能雨七寶，利益眾生。又如須摩提菩薩，見燃燈佛，從須羅娑女買五莖花，不肯與之；即以五百金錢得五莖花，女猶不與，而要之言：「願我世世常為君妻，當以相與！」菩薩以供養佛故，即便許之。又妙光菩薩，長者女見其身有二十八相，生愛敬心，住在門下。菩薩既到，女即解頸琉璃珠，著菩薩鉢中，心作是願：「我當世世為此人婦！」此女二百五十劫中，集諸功德；後生喜見婬女園蓮花中，喜見養育為女，至年十四，女工、世智，皆悉備足。爾時，有閻浮提王，名為財主，太子名德主，有大悲心，時出城入園遊觀，諸婬女等導引歌讚。德主太子散諸寶物、衣服、飲食；譬如龍雨，無不周遍。喜德女見太子，自造歌偈而讚太子，愛眼視之，目未曾眴，而自發言：「世間之事，我悉知之，以我此身，奉給太子！」太子問言：「汝為屬誰？若有所屬，此非我宜。」爾時，喜見婬女答太子言：「我女生年日月時節，皆與太子同。此女非我腹生，我晨朝入園，見蓮花中有此女生，我因養育，畜以為女。無以我故而輕此女！此女六十四能，無不悉備；女工技術、經書、醫方，皆悉了達；常懷慚愧，內心忠直，無有嫉妬，無邪婬想。我女德儀如是，太子必應納之！」德主太子答語女言：「姊！我發阿耨多羅三藐三菩提心，修菩薩道，無所愛惜。國財妻子，象馬七珍，有所求索，不逆人意；若汝生男女及以汝身，有人求者，當以施之，莫生憂悔！或時捨汝出家，為佛弟子，淨居山藪，汝亦勿愁！」喜德女答言：「假令地獄火來，燒滅我身，終亦不悔！我亦不為婬欲戲樂故而以相好，我為勸助阿耨多羅三藐三菩提故奉事正士！」女又白太子言：「我昨夜夢見妙日身佛，坐道樹下，可往觀之！」太子見女端正，又聞佛出，以此二因緣故，共載一車，俱詣佛所。佛為說法，太子得無量陀羅尼門；女得調伏心志。太子爾時，以五百寶花供養於佛，以求阿耨多羅三藐三菩提。太子白父王言：「我得見妙日身佛，大得善利。」父王聞已，捨所愛重之物以與太子，與其官屬國內人民，俱詣佛所。佛為說法，王得一切法無闇燈陀羅尼。時王思惟：「不可以白衣法攝治國土、受於五欲而可得道！」作是思惟已，立德主太子為王，出家求道。是時太子於月十五日六寶來應，喜德妻變為寶女。如《不可思議經》中廣說如是等因緣。故知善男子、善女人世世願為菩薩父母、妻子、眷屬。【經】「爾時，四天王乃至阿迦尼吒天皆大歡喜，各自念言：『我等當作方便，令是菩薩離於婬欲，從初發意常作童真，莫使與色欲共會；若受五欲，障生梵天，何況阿耨多羅三藐三菩提！』以是故，舍利弗！菩薩摩訶薩斷婬欲出家者，應得阿耨多羅三藐三菩提，非不斷欲。」【論】問曰：諸天何以作是願？答曰：世間中有五欲第一，無不愛樂；於五欲中，觸為第一，能繫人心；如人墮在深泥，難可拯濟。以是故，諸天方便，令菩薩遠離婬欲。復次，若受餘欲，猶不失智慧；婬欲會時，身心慌迷，無所省覺，深著自沒！以是故，諸天令菩薩離之。問曰：云何令離？答曰：如釋迦文菩薩在淨飯王宮欲出城遊觀，淨居諸天化為老、病、死人，令其心厭；又令夜半見諸宮人妓直惡露不淨、涕唾流涎、屎尿塗漫；菩薩見已，即便穢厭。或時諸天令女人惡心妬忌，不識恩德，惡口欺誑，無所省察；菩薩見已，即生念言：「身雖似人，其心可惡！」即便捨之。欲使菩薩從初發心，常作童真行，不與色欲共會。何以故？婬欲為諸結之本！佛言：「寧以利刀割截身體，不與女人共會！刀截雖苦，不墮惡趣；婬欲因緣，於無量劫數受地獄苦。」人受五欲，尚不生梵世，何況阿耨多羅三藐三菩提！或有人言：「菩薩雖受五欲，心不著故，不妨於道。」以是故經言：「受五欲尚不生梵世。梵世，無始眾生皆得生中；受五欲者尚所應得而不得之，何況阿耨多羅三藐三菩提本所不得而欲得之！」以是故，菩薩應作童真，修行梵行，當得阿耨多羅三藐三菩提。梵行菩薩，不著世間故，速成菩薩道；若婬欲者，譬如膠漆，難可得離。所以者何？身受欲樂，婬欲根深！是故出家法中，婬戒在初，又亦為重。【經】舍利弗白佛言：「世尊！菩薩摩訶薩要當有父母、妻子、親族、知識耶？」佛告舍利弗：「或有菩薩有父母、妻子、親族、知識；或有菩薩，從初發意斷婬欲，修童真行，乃至得阿耨多羅三藐三菩提，不犯色欲；或有菩薩方便力故，受五欲已，出家得阿耨多羅三藐三菩提。」【論】釋曰：是三種菩薩，初者、如世間人受五欲，後捨離出家，得菩提道。二者、大功德牢固，初發心時斷於婬欲，乃至成佛道。是菩薩，或法身，或肉身；或離欲，或未離欲。三者、清淨法身菩薩，得無生法忍，住六神通。為教化眾生故，與眾生同事而攝取之。或作轉輪聖王，或作閻浮提王、長者、剎利，隨其所須而利益之。【經】「譬如幻師、若幻弟子，善知幻法，幻作五欲，於中共相娛樂。於汝意云何？是人於此五欲，頗實受不？」舍利弗言：「不也！世尊！」佛告舍利弗：「菩薩摩訶薩以方便力故化作五欲，於中受樂，成就眾生，亦復如是。是菩薩摩訶薩不染於欲，種種因緣，毀訾五欲：欲為熾然，欲為穢惡，欲為毀壞，欲為如怨！是故，舍利弗！當知菩薩為眾生故受五欲。」【論】問曰：三種菩薩中，何以獨為一種菩薩作譬喻？答曰：一者、如人法，不斷婬欲；二者、常斷婬欲，修於淨行；三者、亦修淨行，現受婬欲——以人不了故，為作譬喻。問曰：何以不以夢、化等為喻？答曰：夢非五情所知，但內心憶想故生；人以五情所見，變失無常，可以得解。化雖五情所知，而見者甚少。佛為度可度眾生，幻是眾人所信，是故為喻。如幻師以幻術故，於眾人中現希有事，令人歡喜；菩薩幻師亦如是，以五神通術故，於眾生中化作五欲，共相娛樂，化度眾生。眾生有二種：在家、出家。為度出家眾生故，現作聲聞、辟支佛、佛及諸出家外道師；在家眾生，或有見出家者得度，或有見在家同受五欲而可化度。菩薩常以種種因緣，毀訾五欲。「欲為熾然」者，若未失時，三毒火然；若其失時，無常火然。二火然故，名為「熾然」，都無樂時。「欲為穢惡」者，諸佛、菩薩、阿羅漢等諸離欲者，皆所穢賤。譬如人見狗食糞，賤而愍之不得好食，而噉不淨；受欲之人，亦復如是，不得內心離欲之樂，而於色欲不淨求樂。「欲為毀壞」者，著五欲因緣故，天王、人王、諸富貴者，亡國、危身，無不由之！「欲如怨」者，失人善利；亦如刺客，外如親善，內心懷害；五欲如是，喪失善心，奪人慧命。五欲之生，正為破壞眾善、毀敗德業故出。又知五欲如鉤賊魚、如摾害鹿、如燈焚蛾，是故說「欲如怨」。怨家之害，不過一世；著五欲因緣，墮三惡道，無量世受諸苦毒。【經】舍利弗白佛言：「菩薩摩訶薩云何應行般若波羅蜜？」佛告舍利弗：「菩薩摩訶薩行般若波羅蜜時，不見菩薩，不見菩薩字，不見般若波羅蜜，亦不見我行般若波羅蜜，亦不見我不行般若波羅蜜。何以故？菩薩、菩薩字性空，空中無色，無受、想、行、識；離色亦無空，離受、想、行、識亦無空。空即是色，色即是空；空即是受、想、行、識，受、想、行、識即是空。何以故？舍利弗！但有名字故謂為菩提，但有名字故謂為菩薩，但有名字故謂為空。所以者何？諸法實性，無生、無滅、無垢、無淨故。菩薩摩訶薩如是行，亦不見生，亦不見滅；亦不見垢，亦不見淨。何以故？名字是因緣和合作法，但以分別憶想假名說。是故菩薩摩訶薩行般若波羅蜜時，不見一切名字，不見故不著。」【論】問曰：是事，舍利弗上已問，今何以重問？答曰：先因佛說「欲以一切種知一切法，當學般若波羅蜜」故問，非自意問。復次，今舍利弗聞上種種讚般若功德，心歡喜，尊重般若故，問「云何應行」；如病人聞歎良藥，便問「云何應服」。問曰：先已問「住不住法，行檀波羅蜜，施者、受者、財物不可得故，如是等為行般若」，今何以復問行？答曰：上總問諸波羅蜜，此但問般若；上廣讚歎般若為主，此直問行般若。復次，上雖廣歎般若波羅蜜，時會渴仰欲得；是故舍利弗為眾人故，問「行般若波羅蜜」。般若波羅蜜功德無量無盡，佛智慧亦無量無盡；若舍利弗不發問，則佛讚歎無窮已；若舍利弗不問者，則無因緣故則不應止。問曰：般若功德尊重，若佛廣讚有何不可？答曰：讚歎般若，聞者歡喜尊重，則增其福德；若聞說般若，則增其智慧。不但以福德因緣故可成佛道，要須智慧得成；是故不須但讚歎。人聞讚歎，心已清淨，渴仰欲得般若；如為渴人，廣讚歎美飲，不解於渴，即便應與之。如是等因緣故，舍利弗今問行般若。問曰：如人有眼見，方知所趣處，然後能行。菩薩亦如是，先念佛道，知般若，見已，身然後應行；今何以言「不見菩薩及般若」？若不見，云何得行？答曰：此中不言常不見，但明入般若觀時，不見菩薩及般若波羅蜜；般若波羅蜜為令眾生知實法故出。此菩薩名字，眾緣和合假稱。如後品中廣說。般若波羅蜜名字亦如是，眾法和合故，假名為般若波羅蜜。般若波羅蜜雖是假名，而能破諸戲論；以自性無故，說言「不可見」。如火從眾緣和合，假名為火，雖無實事而能燒物。問曰：若入般若中不見，出則便見，何者可信？答曰：上言「般若為實法故出」，是則可信；出般若波羅蜜，不實，故不可信。問曰：若「入般若中不見，出則見」者，當知非法常空，以般若力故空！答曰：世俗法故，言行、言入般若波羅蜜；諸觀戲論滅故，無出、無入。若諸賢聖不以名字說，則不得以教化凡夫；當取說意，莫著語言！問曰：若般若中貴一切法空，此中何以先說眾生空破我？答曰：初聞般若，不得便說一切法空。我，不可以五情求得，但憶想分別生我想，無而謂有。又意情中無有定緣，但憶想分別、顛倒因緣故，於空五眾中而生我想。若聞無我，則易可解。色等諸法，現眼所見；若初言空無，則難可信。今先破我，次破我所法；破我、我所法故，則一切法盡空。如是離欲，名為得道。復次，般若波羅蜜，無一定法故。「不見我行般若，不見不行」者，如凡夫不得般若，故名「不行」；菩薩則不然，但行空般若，故說「不見不行」。復次，佛為法王，觀餘菩薩其智甚少，雜諸結使，不名為行。譬如國王雖得少物，不名為得；佛亦如是教諸菩薩，雖有少行，不名為行。復次，行般若波羅蜜者生憍慢，言「我有般若波羅蜜」，取是相；若不行者，心自懈沒而懷憂悴。是故言「不見我行與不行」。復次，「不見我行般若波羅蜜」者，破著有見；「不見我不行般若波羅蜜」者，破著無見。復次，不見我行般若波羅蜜者，止諸法戲調；不見我不行者，止懈怠心故。譬如乘馬，疾則制之，遲則鞭之。如是等分別「行」、「不行」。復次，佛自說因緣，所謂「菩薩、菩薩字性空」。是中雖但說菩薩字空，而五眾亦空。「空中無色，離色亦無空」者，「空」名法空，法空中乃無一毫法，何況麁色！「空亦不離色」，所以者何？破色故有空，云何言離色！受、想、行、識亦如是。何以故？佛自更說因緣，所謂「但有名字謂為菩提，但有名字謂為菩薩，但有名字謂為空」。問曰：先已說此事，今何以重說？答曰：先說「不見菩薩，不見菩薩字，不見般若波羅蜜」；今說「不見」因緣，所謂「但有名謂為菩提，但有名謂為菩薩，但有名謂為空」。上菩薩、此菩薩義同。「菩薩字」，即如「菩薩」中說。般若波羅蜜分為二分：成就者名為「菩提」，未成就者名為「空」。「生相」實不可得故，名為「無生」。所以者何？若先生後法，若先法後生，若生法一時，皆不可得，如先說。無生故「無滅」，若法不生不滅如虛空，云何有垢有淨？譬如虛空，萬歲雨亦不濕、大火燒不熱、烟亦不著。所以者何？本自無生故。菩薩能如是觀，不見離是不生不滅法有生有滅、有垢有淨。何以故？佛自說因緣：「一切法皆憶想分別，因緣和合故，強以名說。」不可說者是實義，可說者皆是名字。「菩薩行般若波羅蜜，不見一切名字」者，先略說名字，所謂菩薩、菩薩字，般若波羅蜜、菩提字；今廣說一切名字皆不可見，不見故不著——不著者，不可得故。如諸眼中，慧眼第一；菩薩以慧眼遍求不見，乃至不見細微一法，是故不著。問曰：若菩薩一切法中不著，何得不入涅槃？答曰：是事處處已說，今此中略說：大悲心故，十方佛念故，本願未滿故，精進波羅蜜力故，般若波羅蜜、方便二事和合故，所謂不著於不著故。如是等種種因緣故說「菩薩雖不著諸法，而不入涅槃」。"
+  }
+ }
+}

@@ -1,0 +1,130 @@
+{
+ "slug": "pi-an10.58-an8.83",
+ "title": "諸法本經",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "異學所問"
+  },
+  {
+   "id": "a02",
+   "label": "比丘請求佛說"
+  },
+  {
+   "id": "a03",
+   "label": "佛答應說法"
+  },
+  {
+   "id": "a04",
+   "label": "眾比丘領受"
+  },
+  {
+   "id": "a05",
+   "label": "佛宣說根本答覆"
+  },
+  {
+   "id": "a06",
+   "label": "異學再問六種義理"
+  },
+  {
+   "id": "a07",
+   "label": "佛以六種法答覆"
+  },
+  {
+   "id": "a08",
+   "label": "結誡與流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "an10.58",
+   "lang": "pi",
+   "label": "巴利 AN10.58",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "an8.83",
+   "lang": "pi",
+   "label": "巴利 AN8.83",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "T0026-ma113",
+   "lang": "lzh",
+   "label": "中阿含經 （一一三）中阿含林品諸法本經第七（第二小土城誦）",
+   "who": "東晉 瞿曇僧伽提婆譯"
+  },
+  {
+   "id": "T0059",
+   "lang": "lzh",
+   "label": "諸法本經",
+   "who": "吳 支謙譯"
+  }
+ ],
+ "works": [
+  "T0026",
+  "T0059"
+ ],
+ "anchors": [
+  {
+   "work": "T0026",
+   "node": "（一一三）中阿含林品諸法本經第七（第二小土城誦）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "an10.58": "Aṅguttara Nikāya 10.58 6. Sacittavagga Mūlakasutta",
+   "an8.83": "Aṅguttara Nikāya 8.83 9. Sativagga Mūlakasutta",
+   "T0026-ma113": "我聞如是：一時，佛遊舍衛國，在勝林給孤獨園。",
+   "T0059": "聞如是：一時，佛在舍衛國祇樹給孤獨園。"
+  },
+  "a01": {
+   "an10.58": "“Sace, bhikkhave, aññatitthiyā paribbājakā evaṁ puccheyyuṁ: ‘kiṁmūlakā, āvuso, sabbe dhammā, kiṁsambhavā sabbe dhammā, kiṁsamudayā sabbe dhammā, kiṁsamosaraṇā sabbe dhammā, kiṁpamukhā sabbe dhammā, kiṁadhipateyyā sabbe dhammā, kiṁuttarā sabbe dhammā, kiṁsārā sabbe dhammā, kiṁogadhā sabbe dhammā, kiṁpariyosānā sabbe dhammā’ti, evaṁ puṭṭhā tumhe, bhikkhave, tesaṁ aññatitthiyānaṁ paribbājakānaṁ kinti byākareyyāthā”ti?",
+   "an8.83": "“Sace, bhikkhave, aññatitthiyā paribbājakā evaṁ puccheyyuṁ: ‘kiṁmūlakā, āvuso, sabbe dhammā, kiṁsambhavā sabbe dhammā, kiṁsamudayā sabbe dhammā, kiṁsamosaraṇā sabbe dhammā, kiṁpamukhā sabbe dhammā, kiṁadhipateyyā sabbe dhammā, kiṁuttarā sabbe dhammā, kiṁsārā sabbe dhammā’ti, evaṁ puṭṭhā tumhe, bhikkhave, tesaṁ aññatitthiyānaṁ paribbājakānaṁ kinti byākareyyāthā”ti?",
+   "T0026-ma113": "爾時，世尊告諸比丘：「若諸異學來問汝等：『一切諸法以何為本？』"
+  },
+  "a02": {
+   "an10.58": "“Bhagavaṁmūlakā no, bhante, dhammā bhagavaṁnettikā bhagavaṁpaṭisaraṇā. Sādhu vata, bhante, bhagavantaṁyeva paṭibhātu etassa bhāsitassa attho. Bhagavato sutvā bhikkhū dhāressantī”ti.",
+   "an8.83": "“Bhagavaṁmūlakā no, bhante, dhammā, bhagavaṁnettikā bhagavaṁpaṭisaraṇā. Sādhu, bhante, bhagavantaṁyeva paṭibhātu etassa bhāsitassa attho. Bhagavato sutvā bhikkhū dhāressantī”ti."
+  },
+  "a03": {
+   "an10.58": "“Tena hi, bhikkhave, suṇātha, sādhukaṁ manasi karotha, bhāsissāmī”ti.",
+   "an8.83": "“Tena hi, bhikkhave, desessāmi."
+  },
+  "a04": {
+   "an10.58": "“Evaṁ, bhante”ti kho te bhikkhū bhagavato paccassosuṁ.",
+   "an8.83": "Taṁ suṇātha, sādhukaṁ manasi karotha, bhāsissāmī”ti. “Evaṁ, bhante”ti kho te bhikkhū bhagavato paccassosuṁ."
+  },
+  "a05": {
+   "an10.58": "Bhagavā etadavoca:",
+   "an8.83": "Bhagavā etadavoca:",
+   "T0026-ma113": "汝等應當如是答彼：『一切諸法以欲為本。』",
+   "T0059": "佛告諸比丘：「聽吾說諸法本。」對曰：「唯然。」"
+  },
+  "a06": {
+   "an10.58": "“Sace, bhikkhave, aññatitthiyā paribbājakā evaṁ puccheyyuṁ: ‘kiṁmūlakā, āvuso, sabbe dhammā, kiṁsambhavā sabbe dhammā, kiṁsamudayā sabbe dhammā, kiṁsamosaraṇā sabbe dhammā, kiṁpamukhā sabbe dhammā, kiṁ adhipateyyā sabbe dhammā, kiṁuttarā sabbe dhammā, kiṁsārā sabbe dhammā, kiṁogadhā sabbe dhammā, kiṁpariyosānā sabbe dhammā’ti,",
+   "an8.83": "“sace, bhikkhave, aññatitthiyā paribbājakā evaṁ puccheyyuṁ: ‘kiṁmūlakā, āvuso, sabbe dhammā, kiṁsambhavā sabbe dhammā, kiṁsamudayā sabbe dhammā, kiṁsamosaraṇā sabbe dhammā, kiṁpamukhā sabbe dhammā, kiṁadhipateyyā sabbe dhammā, kiṁuttarā sabbe dhammā, kiṁsārā sabbe dhammā’ti,",
+   "T0026-ma113": "彼若復問：『以何為和？』當如是答：『以更樂為和。』彼若復問：『以何為來？』當如是答：『以覺為來。』彼若復問：『以何為有？』當如是答：『以思想為有。』彼若復問：『以何為上主？』當如是答：『以念為上主。』彼若復問：『以何為前？』當如是答：『以定為前。』彼若復問：『以何為上？』",
+   "T0059": "世尊曰：「若有外道異學有來問者：『何謂法本？』"
+  },
+  "a07": {
+   "an10.58": "evaṁ puṭṭhā tumhe, bhikkhave, tesaṁ aññatitthiyānaṁ paribbājakānaṁ evaṁ byākareyyātha: ‘chandamūlakā, āvuso, sabbe dhammā, manasikārasambhavā sabbe dhammā, phassasamudayā sabbe dhammā, vedanāsamosaraṇā sabbe dhammā, samādhippamukhā sabbe dhammā, satādhipateyyā sabbe dhammā, paññuttarā sabbe dhammā, vimuttisārā sabbe dhammā, amatogadhā sabbe dhammā, nibbānapariyosānā sabbe dhammā’ti.",
+   "an8.83": "evaṁ puṭṭhā tumhe, bhikkhave, tesaṁ aññatitthiyānaṁ paribbājakānaṁ evaṁ byākareyyātha: ‘chandamūlakā, āvuso, sabbe dhammā, manasikārasambhavā sabbe dhammā, phassasamudayā sabbe dhammā, vedanāsamosaraṇā sabbe dhammā, samādhippamukhā sabbe dhammā, satādhipateyyā sabbe dhammā, paññuttarā sabbe dhammā, vimuttisārā sabbe dhammā’ti,",
+   "T0026-ma113": "當如是答：『以慧為上。』彼若復問：『以何為真？』當如是答：『以解脫為真。』彼若復問：『以何為訖？』當如是答：『以涅槃為訖。』",
+   "T0059": "當答言：『欲為諸法本。何謂習？更為習。何謂同趣？痛為同趣。何謂致有？念為致有。何謂明道？思惟為明道。何謂第一？三昧為第一。何謂最上？智慧為最上。何謂牢固？解脫為牢固。何謂畢竟？泥洹為畢竟。』「如是，諸比丘！"
+  },
+  "a08": {
+   "an10.58": "Evaṁ puṭṭhā tumhe, bhikkhave, tesaṁ aññatitthiyānaṁ paribbājakānaṁ evaṁ byākareyyāthā”ti. Aṭṭhamaṁ.",
+   "an8.83": "evaṁ puṭṭhā tumhe, bhikkhave, tesaṁ aññatitthiyānaṁ paribbājakānaṁ evaṁ byākareyyāthā”ti. Tatiyaṁ.",
+   "T0026-ma113": "是為，比丘！欲為諸法本，更樂為諸法和，覺為諸法來，思想為諸法有，念為諸法上主，定為諸法前，慧為諸法上，解脫為諸法真，涅槃為諸法訖。是故比丘當如是學。「習出家學道心，習無常想，習無常苦想，習苦無我想，習不淨想，習惡食想，習一切世間不可樂想，習死想。知世間好惡，習如是想心。知世間習有，習如是想心。知世間習、滅、味、患、出要如真，習如是想心。若比丘得習出家學道心者，得習無常想，得習無常苦想，得習苦無我想，得習不淨想，得習惡食想，得習一切世間不可樂想，得習死想。知世間好惡，得習如是想心。知世間習有，得習如是想心。知世間習、滅、味、患、出要如真，得習如是想心者，是謂比丘斷愛除結，正知正觀諸法已，便得苦邊。」佛說如是。彼諸比丘聞佛所說，歡喜奉行。諸法本經第七竟（四百五十七字）",
+   "T0059": "欲為諸法本，更為諸法習，痛為諸法同趣，念為諸法致有，思惟為諸法明道，三昧為諸法第一，智慧為諸法最上，解脫為諸法牢固，泥洹為諸法畢竟。「諸比丘！當學是，常當有去家之想念，非常想念，非常苦想念，苦非身想念，穢食想念，不淨想念，死亡想念，一切世間無樂想念，知世間邪正想念，別世間有無想念。世間所習所取歡樂變失及其歸趣，當如事以正見知之。諸比丘！念是為斷愛棄欲，入正慧得苦際。」佛說經已，皆歡喜奉行。"
+  }
+ }
+}

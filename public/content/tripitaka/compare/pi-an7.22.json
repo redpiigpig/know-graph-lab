@@ -1,0 +1,167 @@
+{
+ "slug": "pi-an7.22",
+ "title": "增壹阿含經 （二）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "王欲攻伐跋耆"
+  },
+  {
+   "id": "a02",
+   "label": "王命使臣詢佛"
+  },
+  {
+   "id": "a03",
+   "label": "使臣至佛所問訊"
+  },
+  {
+   "id": "a04",
+   "label": "佛初答七不衰法"
+  },
+  {
+   "id": "a05",
+   "label": "使臣請廣說義"
+  },
+  {
+   "id": "a06",
+   "label": "佛廣說七不衰法（第一）"
+  },
+  {
+   "id": "a07",
+   "label": "佛廣說七不衰法（第二）"
+  },
+  {
+   "id": "a08",
+   "label": "佛廣說七不衰法（第三）"
+  },
+  {
+   "id": "a09",
+   "label": "佛廣說七不衰法（第四）"
+  },
+  {
+   "id": "a10",
+   "label": "佛廣說七不衰法（第五）"
+  },
+  {
+   "id": "a11",
+   "label": "佛廣說七不衰法（第六）"
+  },
+  {
+   "id": "a12",
+   "label": "佛廣說七不衰法（第七）"
+  },
+  {
+   "id": "a13",
+   "label": "佛說六慰勞法"
+  },
+  {
+   "id": "a14",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "an7.22",
+   "lang": "pi",
+   "label": "巴利 AN7.22",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "T0125-ea40.2",
+   "lang": "lzh",
+   "label": "增壹阿含經 （二）",
+   "who": "東晉 瞿曇僧伽提婆譯"
+  },
+  {
+   "id": "T0026-ma142",
+   "lang": "lzh",
+   "label": "中阿含經 （一四二）中阿含梵志品雨勢經第一",
+   "who": "東晉 瞿曇僧伽提婆譯"
+  }
+ ],
+ "works": [
+  "T0026",
+  "T0125"
+ ],
+ "anchors": [
+  {
+   "work": "T0125",
+   "node": "（二）",
+   "uid": "T02n0125_p0738a11"
+  },
+  {
+   "work": "T0026",
+   "node": "（一四二）中阿含梵志品雨勢經第一",
+   "uid": "T01n0026_p0648a24"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "an7.22": "Aṅguttara Nikāya 7.22 3. Vajjisattakavagga Vassakārasutta Evaṁ me sutaṁ—",
+   "T0125-ea40.2": "聞如是：一時，佛在羅閱城迦蘭陀竹園所，與大比丘眾五百人俱。",
+   "T0026-ma142": "我聞如是：一時，佛遊王舍城，在鷲巖山中。"
+  },
+  "a01": {
+   "an7.22": "ekaṁ samayaṁ bhagavā rājagahe viharati gijjhakūṭe pabbate. Tena kho pana samayena rājā māgadho ajātasattu vedehiputto vajjī abhiyātukāmo hoti. So evamāha: “ahaṁ hime vajjī evaṁmahiddhike evaṁmahānubhāve ucchecchāmi, vajjī vināsessāmi, vajjī anayabyasanaṁ āpādessāmī”ti.",
+   "T0125-ea40.2": "是時，摩竭國王阿闍世，在群臣中而作是說：「此拔祇國極為熾盛，人民眾多，吾當攻伐，攝彼邦土。」",
+   "T0026-ma142": "爾時，摩竭陀王未生怨鞞陀提子，與跋耆相憎，常在眷屬數作是說：「跋耆國人有大如意足，有大威德，有大福祐，有大威神，我當斷滅跋耆人種，破壞跋耆，令跋耆人遭無量厄。」"
+  },
+  "a02": {
+   "an7.22": "Atha kho rājā māgadho ajātasattu vedehiputto vassakāraṁ brāhmaṇaṁ māgadhamahāmattaṁ āmantesi: “ehi tvaṁ, brāhmaṇa, yena bhagavā tenupasaṅkama; upasaṅkamitvā mama vacanena bhagavato pāde sirasā vandāhi, appābādhaṁ appātaṅkaṁ lahuṭṭhānaṁ balaṁ phāsuvihāraṁ puccha: ‘rājā, bhante, māgadho ajātasattu vedehiputto bhagavato pāde sirasā vandati, appābādhaṁ appātaṅkaṁ lahuṭṭhānaṁ balaṁ phāsuvihāraṁ pucchatī’ti. Evañca vadehi: ‘rājā, bhante, māgadho ajātasattu vedehiputto vajjī abhiyātukāmo. So evamāha— ahaṁ hime vajjī evaṁmahiddhike evaṁmahānubhāve ucchecchāmi, vajjī vināsessāmi, vajjī anayabyasanaṁ āpādessāmī’ti. Yathā te bhagavā byākaroti, taṁ sādhukaṁ uggahetvā mama āroceyyāsi. Na hi tathāgatā vitathaṁ bhaṇantī”ti.",
+   "T0125-ea40.2": "是時，阿闍世王告婆利迦婆羅門曰：「汝今往至世尊所，持吾姓名，往問訊世尊，禮敬承事云：『王阿闍世白世尊言：「意欲攻伐拔祇國，為可爾不？」』設如來有所說者，汝善思惟，來向吾說。所以然者，如來語終不有二。」",
+   "T0026-ma142": "於是，摩竭陀王未生怨鞞陀提子聞世尊遊王舍城，在鷲巖山中，便告大臣雨勢曰：「我聞沙門瞿曇遊王舍城，在鷲巖山中。雨勢！汝往至沙門瞿曇所，汝持我名問訊聖體安快無病，氣力如常耶？當作是語：『瞿曇！摩竭陀王未生怨鞞陀提子問訊聖體安快無病，氣力如常耶？瞿曇！摩竭陀王未生怨鞞陀提子與跋耆相憎，常在眷屬數作是說：「跋耆國人有大如意足，有大威德，有大福祐，有大威神，我當斷滅跋耆人種，破壞跋耆，令跋耆人遭無量厄。」沙門瞿曇當何所說？』雨勢！若沙門瞿曇有所說者，汝善受持。所以者何？如是之人，終不妄說。」大臣雨勢受王教已，乘最好乘，與五百乘俱出王舍城，即便往詣鷲巖山中。"
+  },
+  "a03": {
+   "an7.22": "“Evaṁ, bho”ti kho vassakāro brāhmaṇo māgadhamahāmatto rañño māgadhassa ajātasattussa vedehiputtassa paṭissutvā yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavatā saddhiṁ sammodi. Sammodanīyaṁ kathaṁ sāraṇīyaṁ vītisāretvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho vassakāro brāhmaṇo māgadhamahāmatto bhagavantaṁ etadavoca: “rājā, bho gotama, māgadho ajātasattu vedehiputto bhoto gotamassa pāde sirasā vandati, appābādhaṁ appātaṅkaṁ lahuṭṭhānaṁ balaṁ phāsuvihāraṁ pucchati. Rājā, bho gotama, māgadho ajātasattu vedehiputto vajjī abhiyātukāmo. So evamāha: ‘ahaṁ hime vajjī evaṁmahiddhike evaṁmahānubhāve ucchecchāmi, vajjī vināsessāmi, vajjī anayabyasanaṁ āpādessāmī’”ti. Tena kho pana samayena āyasmā ānando bhagavato piṭṭhito ṭhito hoti bhagavantaṁ bījayamāno.",
+   "T0125-ea40.2": "是時，婆羅門受王教勅，往至世尊所，共相問訊，在一面坐。是時，婆羅門白佛言：「王阿闍世禮敬世尊，承事問訊，又復重白：『意欲往攻伐拔祇大國。』先來問佛為可爾不？」爾時，彼婆羅門以衣覆頭脚，著象牙屐，腰帶利劍，不應說法。",
+   "T0026-ma142": "登鷲巖山，下車步進，往詣佛所，便與世尊共相問訊，却坐一面，白曰：「瞿曇！摩竭陀王未生怨鞞陀提子問訊聖體安快無病，氣力如常耶？瞿曇！摩竭陀王未生怨鞞陀提子與跋耆相憎，常在眷屬數作是說：『跋耆國人有大如意足，有大威德，有大福祐，有大威神，我當斷滅跋耆人種，破壞跋耆，令跋耆人遭無量厄。』沙門瞿曇當何所說？」"
+  },
+  "a04": {
+   "an7.22": "Atha kho bhagavā āyasmantaṁ ānandaṁ āmantesi: “kinti te, ānanda, sutaṁ: ‘vajjī abhiṇhaṁ sannipātā sannipātabahulā’”ti? “Sutaṁ metaṁ, bhante: ‘vajjī abhiṇhaṁ sannipātā sannipātabahulā’”ti. “Yāvakīvañca, ānanda, vajjī abhiṇhaṁ sannipātā bhavissanti sannipātabahulā; vuddhiyeva, ānanda, vajjīnaṁ pāṭikaṅkhā, no parihāni. Kinti te, ānanda, sutaṁ: ‘vajjī samaggā sannipatanti, samaggā vuṭṭhahanti, samaggā vajjikaraṇīyāni karontī’”ti? “Sutaṁ metaṁ, bhante: ‘vajjī samaggā sannipatanti, samaggā vuṭṭhahanti, samaggā vajjikaraṇīyāni karontī’”ti. “Yāvakīvañca, ānanda, vajjī samaggā sannipatissanti, samaggā vuṭṭhahissanti, samaggā vajjikaraṇīyāni karissanti; vuddhiyeva, ānanda, vajjīnaṁ pāṭikaṅkhā, no parihāni. Kinti te, ānanda, sutaṁ: ‘vajjī apaññattaṁ na paññāpenti, paññattaṁ na samucchindanti, yathāpaññatte porāṇe vajjidhamme samādāya vattantī’”ti? “Sutaṁ metaṁ, bhante: ‘vajjī apaññattaṁ na paññāpenti, paññattaṁ na samucchindanti, yathāpaññatte porāṇe vajjidhamme samādāya vattantī’”ti. “Yāvakīvañca, ānanda, vajjī apaññattaṁ na paññāpessanti, paññattaṁ na samucchindissanti, yathāpaññatte porāṇe vajjidhamme samādāya vattissanti; vuddhiyeva, ānanda, vajjīnaṁ pāṭikaṅkhā, no parihāni. Kinti te, ānanda, sutaṁ: ‘vajjī ye te vajjīnaṁ vajjimahallakā te sakkaronti garuṁ karonti mānenti pūjenti, tesañca sotabbaṁ maññantī’”ti? “Sutaṁ metaṁ, bhante: ‘vajjī ye te vajjīnaṁ vajjimahallakā te sakkaronti garuṁ karonti mānenti pūjenti, tesañca sotabbaṁ maññantī’”ti. “Yāvakīvañca, ānanda, vajjī ye te vajjīnaṁ vajjimahallakā te sakkarissanti garuṁ karissanti mānessanti pūjessanti, tesañca sotabbaṁ maññissanti; vuddhiyeva, ānanda, vajjīnaṁ pāṭikaṅkhā, no parihāni. Kinti te, ānanda, sutaṁ: ‘vajjī yā tā kulitthiyo kulakumāriyo tā na okassa pasayha vāsentī’”ti? “Sutaṁ metaṁ, bhante: ‘vajjī yā tā kulitthiyo kulakumāriyo tā na okassa pasayha vāsentī’”ti. “Yāvakīvañca, ānanda, vajjī yā tā kulitthiyo kulakumāriyo tā na okassa pasayha vāsessanti; vuddhiyeva, ānanda, vajjīnaṁ pāṭikaṅkhā, no parihāni. Kinti te, ānanda, sutaṁ: ‘vajjī yāni tāni vajjīnaṁ vajjicetiyāni abbhantarāni ceva bāhirāni ca tāni sakkaronti garuṁ karonti mānenti pūjenti, tesañca dinnapubbaṁ katapubbaṁ dhammikaṁ baliṁ no parihāpentī’”ti? “Sutaṁ metaṁ, bhante: ‘vajjī yāni tāni vajjīnaṁ vajjicetiyāni abbhantarāni ceva bāhirāni ca tāni sakkaronti garuṁ karonti mānenti pūjenti, tesañca dinnapubbaṁ katapubbaṁ dhammikaṁ baliṁ no parihāpentī’”ti. “Yāvakīvañca, ānanda, vajjī yāni tāni vajjīnaṁ vajjicetiyāni abbhantarāni ceva bāhirāni ca tāni sakkarissanti garuṁ karissanti mānessanti pūjessanti, tesañca dinnapubbaṁ katapubbaṁ dhammikaṁ baliṁ no parihāpessanti; vuddhiyeva, ānanda, vajjīnaṁ pāṭikaṅkhā, no parihāni. Kinti te, ānanda, sutaṁ: ‘vajjīnaṁ arahantesu dhammikā rakkhāvaraṇagutti susaṁvihitā—kinti anāgatā ca arahanto vijitaṁ āgaccheyyuṁ, āgatā ca arahanto vijite phāsuṁ vihareyyun’”ti? “Sutaṁ metaṁ, bhante: ‘vajjīnaṁ arahantesu dhammikā rakkhāvaraṇagutti susaṁvihitā bhavissati—kinti anāgatā ca arahanto vijitaṁ āgaccheyyuṁ, āgatā ca arahanto vijite phāsuṁ vihareyyun’”ti. “Yāvakīvañca, ānanda, vajjīnaṁ arahantesu dhammikā rakkhāvaraṇagutti susaṁvihitā bhavissati: ‘kinti anāgatā ca arahanto vijitaṁ āgaccheyyuṁ, āgatā ca arahanto vijite phāsuṁ vihareyyun’ti; vuddhiyeva, ānanda, vajjīnaṁ pāṭikaṅkhā, no parihānī”ti.",
+   "T0125-ea40.2": "是時，世尊告阿難曰：「若拔祇人民修七法者，終不為外寇所壞。云何為七？若當拔祇國人民，盡集一處而不散者，便不為他國所壞，是謂初法不為外寇所敗。「復次，阿難！拔祇國人上下和順，拔祇人民不為外人所擒。是謂，阿難，第二之法不為外寇所壞。「復次，阿難！若拔祇國人亦不婬他，著他女人色，是謂第三之法不為外寇所壞。「復次，阿難！若拔祇國不從此間而傳至彼，亦復不從彼間傳來至此，是謂第四之法不為外寇所壞。「復次，阿難！若拔祇國人供養沙門、婆羅門，承事禮敬梵行人者，是謂第五之法，是時便不為外寇所獲。「復次，阿難！若拔祇國人民不貪著他財寶者，是謂第六法不為外寇所壞。「復次，阿難！若拔祇國人民皆同一心，不向神寺，專精其意，便不為外寇所壞也，是謂第七之法不為外寇所壞。",
+   "T0026-ma142": "世尊聞已，告曰：「雨勢！我昔曾遊於跋耆國，彼國有寺名遮惒邏。雨勢！爾時我為跋耆國人說七不衰法，跋耆國人則能受行七不衰法。雨勢！若跋耆國人行七不衰法而不犯者，跋耆必勝，則為不衰。」"
+  },
+  "a05": {
+   "an7.22": "Atha kho bhagavā vassakāraṁ brāhmaṇaṁ māgadhamahāmattaṁ āmantesi: “ekamidāhaṁ, brāhmaṇa, samayaṁ vesāliyaṁ viharāmi sārandade cetiye. Tatrāhaṁ, brāhmaṇa, vajjīnaṁ ime satta aparihāniye dhamme desesiṁ. Yāvakīvañca, brāhmaṇa, ime satta aparihāniyā dhammā vajjīsu ṭhassanti, imesu ca sattasu aparihāniyesu dhammesu vajjī sandississanti; vuddhiyeva, brāhmaṇa, vajjīnaṁ pāṭikaṅkhā, no parihānī”ti. “Ekamekenapi, bho gotama, aparihāniyena dhammena samannāgatānaṁ vajjīnaṁ vuddhiyeva pāṭikaṅkhā, no parihāni; ko pana vādo sattahi aparihāniyehi dhammehi. Akaraṇīyā ca, bho gotama, vajjī raññā māgadhena ajātasattunā vedehiputtena yadidaṁ yuddhassa, aññatra upalāpanāya, aññatra mithubhedā. Handa ca dāni mayaṁ, bho gotama, gacchāma, bahukiccā mayaṁ bahukaraṇīyā”ti. “Yassadāni tvaṁ, brāhmaṇa, kālaṁ maññasī”ti.",
+   "T0125-ea40.2": "是謂，阿難！彼拔祇人修此七法者，終不為外人所壞。」是時，梵志白佛言：「設當彼人成就一法，猶不可壞，何況七法而可壞乎？止！止！世尊！國事猥多，欲還所止。」爾時，梵志即從座起而去。",
+   "T0026-ma142": "大臣雨勢白世尊曰：「沙門瞿曇略說此事，不廣分別，我等不能得解此義，願沙門瞿曇廣分別說，當令我等得知此義。」世尊告曰：「雨勢！諦聽，善思念之，我當為汝廣說此義。」"
+  },
+  "a06": {
+   "T0125-ea40.2": "彼梵志不遠，爾時世尊告諸比丘：「我今當說七不退轉法，汝等諦聽！善思念之。」諸比丘白佛言：「唯然，世尊！」爾時，諸比丘從佛受教。世尊告曰：「云何為七不退轉之法？比丘當知，若比丘共集一處，皆共和順，上下相奉，轉進於上，修諸善法而不退轉，亦不為魔所得便，是謂初法不退轉。「復次，眾僧和合順從其教，轉進於上而不退轉，不為魔王所壞，是謂第二之法不退轉也。「復次，比丘！不著事務，不修世榮，轉進於上，不為魔天所得其便，是謂第三不退轉之法也。「復次，比丘！不諷誦雜書，終日策役其情意，轉進於上，不為魔王得其便，是謂第四不退轉之法也。「復次，比丘！勤修其法，除去睡眠，恒自警寤，轉進於上，不為弊魔而得其便，是謂第五不退轉之法。「復次，比丘！不學算術，亦不使人習之，樂閑靜之處，修習其法，轉進於上，不為弊魔得其便也。是謂第六不退轉之法。「復次，比丘！起一切世間不可樂想，習於禪行，忍諸法教，轉進於上，不為魔所得其便，是謂七不退轉法也。若有比丘成就此七法，共和順者，便不為魔得其便也。」爾時，世尊說此偈言：「除去於事業，又非思惟亂，\n設不行此者，亦不得三昧。\n能樂於法者，分別其法義，\n比丘樂此行，便致三昧定。",
+   "T0026-ma142": "大臣雨勢受教而聽。是時，尊者阿難執拂侍佛，世尊迴顧問曰：「阿難！頗聞跋耆數數集會，多聚集耶？」尊者阿難白曰：「世尊！我聞跋耆數數集會，多聚集也。」世尊即告大臣雨勢：「若彼跋耆數數集會，多聚集者，跋耆必勝，則為不衰。」世尊復問尊者阿難：「頗聞跋耆共俱集會，俱作跋耆事，共俱起耶？」尊者阿難白曰：「世尊！我聞跋耆共俱集會，俱作跋耆事，共俱起也。」世尊復告大臣雨勢：「若彼跋耆共俱集會，俱作跋耆事，共俱起者，跋耆必勝，則為不衰。」世尊復問尊者阿難：「頗聞跋耆未施設者不更施設，本所施設而不改易，舊跋耆法善奉行耶？」尊者阿難白曰：「世尊！我聞跋耆未施設者不更施設，本所施設而不改易，舊跋耆法善奉行也。」世尊復告大臣雨勢：「若彼跋耆未施設者不更施設，本所施設而不改易，舊跋耆法善奉行者，跋耆必勝，則為不衰。」世尊復問尊者阿難：「頗聞跋耆不以力勢而犯他婦、他童女耶？」尊者阿難白曰：「世尊！我聞跋耆不以力勢而犯他婦、他童女也。」世尊復告大臣雨勢：「若彼跋耆不以力勢而犯他婦、他童女者跋耆必勝，則為不衰。」世尊復問尊者阿難：「頗聞跋耆有名德尊重者，跋耆悉共宗敬、恭奉、供養，於彼聞教則受耶？」尊者阿難白曰：「世尊！我聞跋耆有名德尊重者，跋耆悉共宗敬、恭奉、供養，於彼聞教則受。」世尊復告大臣雨勢：「若彼跋耆有名德尊重者，跋耆悉共宗敬、恭奉、供養，於彼聞教則受者，跋耆必勝，則為不衰。」世尊復問尊者阿難：「頗聞跋耆所有舊寺，跋耆悉共修飾，遵奉、供養、禮事，本之所施常作不廢，本之所為不減損耶？」尊者阿難白曰：「世尊！我聞跋耆所有舊寺，跋耆悉共修飾，遵奉、供養、禮事，本之所施常作不廢，本之所為不減損也。」世尊復告大臣雨勢：「若彼跋耆所有舊寺，跋耆悉共修飾，遵奉、供養、禮事，本之所施常作不廢，本之所為不減損者，跋耆必勝，則為不衰。」世尊復問尊者阿難：「頗聞跋耆悉共擁護諸阿羅訶，極大愛敬，常願未來阿羅訶者而欲令來，既已來者樂恒久住，常使不乏衣被、飲食、床榻、湯藥、諸生活具耶？」尊者阿難白曰：「世尊！我聞跋耆悉共擁護諸阿羅訶，極大愛敬，常願未來阿羅訶者而欲令來，既已來者樂恒久住，常使不乏衣被、飲食、床榻、湯藥、諸生活具。」世尊復告大臣雨勢：「若彼跋耆悉共擁護諸阿羅訶，極大愛敬，常願未來阿羅訶者而欲令來，既已來者樂恒久住，常使不乏衣被、飲食、床榻、湯藥、諸生活具者，跋耆必勝，則為不衰。雨勢！跋耆行此七不衰法，諸受持此七不衰法者，跋耆必勝，則為不衰。」於是，大臣雨勢即從坐起，偏袒著衣，叉手向佛，白曰：「瞿曇！設彼跋耆成就一不衰法者，摩竭陀王未生怨鞞陀提子不能伏彼，況復具七不衰法耶？瞿曇！我國事多，請退還歸。」世尊報曰：「欲去隨意。」於是，大臣雨勢聞佛所說，則善受持，起繞世尊三匝而去。大臣雨勢去後不久。於是，世尊迴顧告曰：「阿難！若有比丘依鷲巖山處處住者，宣令一切盡集講堂，一切集已，便來白我。」尊者阿難即受佛教：「唯然。世尊！」是時，尊者阿難便行宣令：「若有比丘依鷲巖山處處住者，今令一切盡集講堂。」一切集已，還詣佛所，稽首作禮，却住一面，白曰：「世尊！我已宣令：『若有比丘依鷲巖山處處住者，悉令一切盡集講堂。』今皆已集，唯願世尊自知其時。」於是，世尊將尊者阿難往詣講堂，於比丘眾前敷座而坐，告諸比丘：「今為汝說七不衰法，汝等諦聽，善思念之。」時，諸比丘白曰：「唯然。」佛言：「云何為七？若比丘數數集會，多聚集者，比丘必勝，則法不衰。若比丘共齊集會，俱作眾事，共俱起者，比丘必勝，則法不衰。若比丘未施設事不更施設，本所施設而不改易，我所說戒善奉行者，比丘必勝，則法不衰。若比丘此『未來有愛，喜、欲共俱，愛樂彼彼』有起不隨者，比丘必勝，則法不衰。若比丘有長老上尊俱學梵行，比丘悉共宗敬、恭奉、供養，於彼聞教則受者，比丘必勝，則法不衰。若比丘有無事處山林高巖，閑居靜處，寂無音聲，遠離，無惡，無有人民，隨順宴坐，樂住不離者，比丘必勝，則法不衰。若比丘悉共擁護諸梵行者，至重愛敬，常願未來諸梵行者而欲令來，既已來者樂恒久住，常使不乏衣被、飲食、床榻、湯藥、諸生活具者，比丘必勝，則法不衰。若比丘行此七不衰法，受持不犯者，比丘必勝，則法不衰。」"
+  },
+  "a07": {
+   "T0026-ma142": "於是，世尊復告諸比丘曰：「我為汝等更說七不衰法，汝等諦聽，善思念之。」時，諸比丘白曰：「唯然。」佛言：「云何為七？若比丘尊師，恭敬、極重供養、奉事者，比丘必勝，則法不衰。若比丘法、眾、戒、不放逸、供給、定，恭敬、極重供養、奉事者，比丘必勝，則法不衰。若比丘行此七不衰法，受持不犯者，比丘必勝，則法不衰。」"
+  },
+  "a08": {
+   "T0026-ma142": "世尊復告諸比丘曰：「我為汝等更說七不衰法，汝等諦聽，善思念之。」時，諸比丘白曰：「唯然。」佛言：「云何為七？若比丘不行於業，不樂於業，不習業者，比丘必勝，則法不衰。不行譁說，不樂譁說，不習譁說者；不行聚會，不樂聚會，不習聚會者；"
+  },
+  "a09": {
+   "T0026-ma142": "不行雜合，不樂雜合，不習雜合者；不行睡眠，不樂睡眠，不習睡眠者；不為利，不為譽，不為他人行梵行者；不為暫爾，不為德勝，於其中間捨方便，令德勝者；比丘必勝，則法不衰。若比丘行此七不衰法，受持不犯者，比丘必勝，則法不衰。」"
+  },
+  "a10": {
+   "T0026-ma142": "世尊復告諸比丘曰：「我為汝等更說七不衰法，汝等諦聽，善思念之。」時，諸比丘白曰：「唯然。」佛言：「云何為七？若比丘成就信財、戒財、慚財、愧財、博聞財、施財，成就慧財者，比丘必勝，則法不衰。若比丘行此七不衰法，受持不犯者，比丘必勝，則法不衰。」世尊復告諸比丘曰：「我為汝等更說七不衰法，汝等諦聽，善思念之。」"
+  },
+  "a11": {
+   "T0026-ma142": "時，諸比丘白曰：「唯然。」佛言：「云何為七？若比丘成就信力、精進力、慚力、愧力、念力、定力，成就慧力者，比丘必勝，則法不衰。若比丘行此七不衰法，受持不犯者，比丘必勝，則法不衰。」世尊復告諸比丘曰：「我為汝等更說七不衰法，汝等諦聽，善思念之。」"
+  },
+  "a12": {
+   "T0026-ma142": "時，諸比丘白曰：「唯然。」佛言：「云何為七？若比丘修念覺支，依捨離、依無欲、依滅盡，趣向出要，擇法、精進、喜、息、定；修捨覺支，依捨離、依無欲、依滅盡，趣向出要者，比丘必勝，則法不衰。若比丘行此七不衰法，受持不犯者，比丘必勝，則法不衰。」世尊復告諸比丘曰：「我為汝等更說七不衰法，汝等諦聽，善思念之。」時，諸比丘白曰：「唯然。」佛言：「云何為七？若比丘應與面前律與面前律，應與憶律與憶律，應與不癡律與不癡律，應與自發露與自發露，應與居與居，應與展轉與展轉，眾中起諍，當以如棄糞掃止諍法止之者，比丘必勝，則法不衰。若比丘行此七不衰法，受持不犯者，比丘必勝，則法不衰。」"
+  },
+  "a13": {
+   "T0026-ma142": "世尊復告諸比丘曰：「今為汝等說六慰勞法，汝等諦聽，善思念之。」時，諸比丘白曰：「唯然。」佛言：「云何為六？以慈身業向諸梵行，是慰勞法，愛法樂法，令愛令重，令奉令敬，令修令攝，得沙門，得一心，得精進，得涅槃。如是慈口業、慈意業。若有法利，如法得利，自所飯食，至在鉢中，如是利分，布施諸梵行，是慰勞法。愛法樂法，令愛令重，令奉令敬，令修令攝，得沙門，得一心，得精進，得涅槃。若有戒不缺、不穿、無穢、無黑，如地不隨他，聖所稱譽，具善受持，如是戒分，布施諸梵行，是慰勞法。愛法樂法，令愛令重，令奉令敬，令修令攝，得沙門，得一心，得精進，得涅槃。若有見是聖出要，明了深達，能正盡苦，如是見分，布施諸梵行，是慰勞法。愛法樂法，令愛令重，令奉令敬，令修令攝，得沙門，得一心，得精進，得涅槃。我向所言六慰勞法者，因此故說。」"
+  },
+  "a14": {
+   "an7.22": "Atha kho vassakāro brāhmaṇo māgadhamahāmatto bhagavato bhāsitaṁ abhinanditvā anumoditvā uṭṭhāyāsanā pakkāmīti. Dutiyaṁ.",
+   "T0125-ea40.2": "「是故，比丘！當求方便，成此七法。如是，諸比丘！當作是學。」爾時，諸比丘聞佛所說，歡喜奉行。",
+   "T0026-ma142": "佛說如是。彼諸比丘聞佛所說，歡喜奉行。雨勢經第一竟（三千七字）"
+  }
+ }
+}

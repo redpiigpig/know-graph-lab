@@ -1,0 +1,184 @@
+{
+ "slug": "pi-sn16.6",
+ "title": "別譯雜阿含經 （一一三）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "迦葉請求教授比丘"
+  },
+  {
+   "id": "a02",
+   "label": "佛陀應允並解釋職責"
+  },
+  {
+   "id": "a03",
+   "label": "迦葉指出比丘難教授"
+  },
+  {
+   "id": "a04",
+   "label": "兩比丘爭論多聞"
+  },
+  {
+   "id": "a05",
+   "label": "阿難勸止並懺悔"
+  },
+  {
+   "id": "a06",
+   "label": "世尊派遣比丘喚兩爭論者"
+  },
+  {
+   "id": "a07",
+   "label": "兩比丘承命詣佛"
+  },
+  {
+   "id": "a08",
+   "label": "世尊質問爭論內容"
+  },
+  {
+   "id": "a09",
+   "label": "兩比丘承認爭論"
+  },
+  {
+   "id": "a10",
+   "label": "佛陀質疑其依據"
+  },
+  {
+   "id": "a11",
+   "label": "兩比丘否認十二部經有此說"
+  },
+  {
+   "id": "a12",
+   "label": "佛陀闡明十二部經目的"
+  },
+  {
+   "id": "a13",
+   "label": "兩比丘懺悔認過"
+  },
+  {
+   "id": "a14",
+   "label": "佛陀開示懺悔之義"
+  },
+  {
+   "id": "a15",
+   "label": "結分：眾生歡喜奉行"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn16.6",
+   "lang": "pi",
+   "label": "巴利 SN16.6",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "T0100-sa-2.113",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （一一三）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa1138",
+   "lang": "lzh",
+   "label": "雜阿含經 （一一三八）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（一一三）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一一三八）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn16.6": "Saṁyutta Nikāya 16.6 1. Kassapavagga Ovādasutta Rājagahe veḷuvane.",
+   "T0100-sa-2.113": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。",
+   "T0099-sa1138": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。"
+  },
+  "a01": {
+   "sn16.6": "Atha kho āyasmā mahākassapo yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdi. Ekamantaṁ nisinnaṁ kho āyasmantaṁ mahākassapaṁ bhagavā etadavoca:",
+   "T0100-sa-2.113": "爾時，尊者摩訶迦葉在彼舍衛舊園林中毘舍佉講堂。時，尊者摩訶迦葉即於其夜，從定而起，從定起已，往詣佛所，頂禮佛足，在一面坐。",
+   "T0099-sa1138": "爾時，尊者摩訶迦葉住舍衛國東園鹿子母講堂。時，尊者摩訶迦葉晡時從禪覺，往詣佛所，稽首禮足，退坐一面。"
+  },
+  "a02": {
+   "sn16.6": "“ovada, kassapa, bhikkhū; karohi, kassapa, bhikkhūnaṁ dhammiṁ kathaṁ. Ahaṁ vā, kassapa, bhikkhū ovadeyyaṁ tvaṁ vā; ahaṁ vā bhikkhūnaṁ dhammiṁ kathaṁ kareyyaṁ tvaṁ vā”ti.",
+   "T0100-sa-2.113": "佛告迦葉：「汝當教授諸比丘等，指導教照禪定之法，為說法要。何以故？我恒教授是比丘等，汝亦應爾。我常為諸比丘說於法要，汝亦應爾。」",
+   "T0099-sa1138": "爾時，世尊告尊者摩訶迦葉：「汝當為諸比丘說法教誡、教授。所以者何？我常為諸比丘說法教誡、教授，汝亦應爾。」尊者摩訶迦葉白佛言：「世尊！"
+  },
+  "a03": {
+   "sn16.6": "“Dubbacā kho, bhante, etarahi bhikkhū, dovacassakaraṇehi dhammehi samannāgatā, akkhamā, appadakkhiṇaggāhino anusāsaniṁ.",
+   "T0100-sa-2.113": "迦葉白佛：「是諸比丘不能受語，難可教授。」佛告迦葉：「汝於今者，以何因緣，不為說法？」",
+   "T0099-sa1138": "今世比丘難可教授，或有比丘不忍聞說。」佛告摩訶迦葉：「汝何因緣作如是說？」摩訶迦葉白佛言：「世尊！"
+  },
+  "a04": {
+   "sn16.6": "Idhāhaṁ, bhante, addasaṁ bhaṇḍañca nāma bhikkhuṁ ānandassa saddhivihāriṁ abhijikañca nāma bhikkhuṁ anuruddhassa saddhivihāriṁ aññamaññaṁ sutena accāvadante: ‘ehi, bhikkhu, ko bahutaraṁ bhāsissati, ko sundarataraṁ bhāsissati, ko cirataraṁ bhāsissatī’”ti.",
+   "T0100-sa-2.113": "迦葉復白佛言：「今二比丘：一是阿難共行弟子，名曰難荼。二是目連弟子，名阿毘浮。是二弟子互諍勝負，各自稱言：『我知見勝，我所說勝。』互共相引，欲決知見，及以言說：『為我說妙，為汝說妙？為我句義具足，為汝句義具足？』",
+   "T0099-sa1138": "我見有兩比丘，一名槃稠，是阿難弟子；二名阿浮毘，是摩訶目揵連弟子。彼二人共諍多聞，各言：『汝來當共論議，誰所知多？"
+  },
+  "a05": {
+   "T0100-sa-2.113": "」爾時，阿難侍於世尊，以扇扇佛。爾時，阿難語迦葉言：「止！止！尊者！聽我懺悔，如此比丘，新入佛法，愚無智慧，未有所解。」尊者迦葉語阿難言：「爾止！阿難！汝莫僧中作偏黨語。」",
+   "T0099-sa1138": "誰所知勝？』」時，尊者阿難住於佛後，以扇扇佛，語尊者摩訶迦葉言：「且止！尊者摩訶迦葉！且忍！尊者迦葉！此年少比丘少智、惡智。」尊者摩訶迦葉語尊者阿難言：「汝且默然！莫令我於僧中問汝事。」時，尊者阿難即默然住。"
+  },
+  "a06": {
+   "sn16.6": "Atha kho bhagavā aññataraṁ bhikkhuṁ āmantesi:",
+   "T0100-sa-2.113": "爾時，世尊告一比丘：「汝可往喚彼二比丘。」",
+   "T0099-sa1138": "爾時，世尊告一比丘：「汝往至彼槃禂比丘、阿浮毘比丘所，作是言：『大師語汝。』"
+  },
+  "a07": {
+   "T0100-sa-2.113": "時，彼比丘奉教往喚語二比丘言：「世尊喚汝。」時，二比丘承佛勅命，即往佛所，頂禮佛足，在一面立。",
+   "T0099-sa1138": "」時，彼比丘即受教，至槃禂比丘、阿浮毘比丘所，作是言：「大師語汝。」時，槃禂比丘、阿浮毘比丘答言奉教，即俱往佛所，稽首禮足，退住一面。"
+  },
+  "a08": {
+   "sn16.6": "“ehi tvaṁ, bhikkhu, mama vacanena bhaṇḍañca bhikkhuṁ ānandassa saddhivihāriṁ abhijikañca bhikkhuṁ anuruddhassa saddhivihāriṁ āmantehi: ‘satthā āyasmante āmantetī’”ti.",
+   "T0100-sa-2.113": "爾時，世尊告二比丘：「汝等二人實作是語：『我讀誦多，我所知多，我所說言句偈不闕，欲決勝負。』",
+   "T0099-sa1138": "爾時，世尊告二比丘：「汝等二人，實共諍論，各言：『汝來試共論議，誰多誰勝』耶？」"
+  },
+  "a09": {
+   "sn16.6": "“Evaṁ, bhante”ti kho so bhikkhu bhagavato paṭissutvā yena te bhikkhū tenupasaṅkami; upasaṅkamitvā te bhikkhū etadavoca:",
+   "T0100-sa-2.113": "為有是不？」時，二比丘白佛言：「實爾，世尊。」",
+   "T0099-sa1138": "二比丘白佛言：「實爾。"
+  },
+  "a10": {
+   "sn16.6": "“satthā āyasmante āmantetī”ti. “Evamāvuso”ti kho te bhikkhū tassa bhikkhuno paṭissutvā yena bhagavā tenupasaṅkamiṁsu; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdiṁsu. Ekamantaṁ nisinne kho te bhikkhū bhagavā etadavoca: “saccaṁ kira tumhe, bhikkhave, aññamaññaṁ sutena accāvadatha: ‘ehi, bhikkhu, ko bahutaraṁ bhāsissati, ko sundarataraṁ bhāsissati, ko cirataraṁ bhāsissatī’”ti? “Evaṁ, bhante”. “Kiṁ nu kho me tumhe, bhikkhave, evaṁ dhammaṁ desitaṁ ājānātha: ‘etha tumhe, bhikkhave, aññamaññaṁ sutena accāvadatha— ehi, bhikkhu, ko bahutaraṁ bhāsissati, ko sundarataraṁ bhāsissati, ko cirataraṁ bhāsissatī’”ti? “No hetaṁ, bhante”. “No ce kira me tumhe, bhikkhave, evaṁ dhammaṁ desitaṁ ājānātha, atha kiñcarahi tumhe, moghapurisā, kiṁ jānantā kiṁ passantā evaṁ svākkhāte dhammavinaye pabbajitā samānā aññamaññaṁ sutena accāvadatha: ‘ehi, bhikkhu, ko bahutaraṁ bhāsissati, ko sundarataraṁ bhāsissati, ko cirataraṁ bhāsissatī’”ti.",
+   "T0100-sa-2.113": "佛復告言：「汝若解我所說修多羅、祇夜、授記、說偈、優他那、尼他那、伊帝目多伽、本生、毘佛略、未曾有、優波提舍、本事是十二部，汝若讀誦，令通利者，是等經中，為有勝負以不？」",
+   "T0099-sa1138": "世尊！」佛告二比丘：「汝等持我所說修多羅、祇夜、受記、伽陀、優陀那、尼陀那、阿波陀那、伊帝目多伽、闍多伽、毘富羅、阿浮多達摩、優波提舍等法，而共諍論，各言：『汝來試共論議，誰多誰勝』耶？」"
+  },
+  "a11": {
+   "T0100-sa-2.113": "時，二比丘白佛言：「世尊！是十二部實無是說。」",
+   "T0099-sa1138": "二比丘白佛：「不也，世尊！」佛告二比丘：「汝等不以我所說修多羅，乃至優波提舍，而自調伏，自止息，自求涅槃耶？」二比丘白佛：「如是，世尊！」"
+  },
+  "a12": {
+   "T0100-sa-2.113": "佛復告二比丘言：「說十二部經，為欲除滅諍訟勝負。汝今云何作如是說？汝等愚人，作如是解，我豈可有如是說耶？若生諍訟，此非佛法，又復不應出家之法。我佛法中，終不如是我勝汝負，乃至我所說法句義具足，汝之所說句義不足。如是諍訟，實非我說。汝二比丘！如斯之事，汝應作不？」",
+   "T0099-sa1138": "佛告二比丘：「汝知我所說修多羅，乃至優波提舍，汝愚癡人應共諍論，誰多誰勝耶？」"
+  },
+  "a13": {
+   "sn16.6": "Atha kho te bhikkhū bhagavato pādesu sirasā nipatitvā bhagavantaṁ etadavocuṁ: “accayo no, bhante, accagamā, yathābāle yathāmūḷhe yathāakusale, ye mayaṁ evaṁ svākkhāte dhammavinaye pabbajitā samānā aññamaññaṁ sutena accāvadimha: ‘ehi, bhikkhu, ko bahutaraṁ bhāsissati, ko sundarataraṁ bhāsissati, ko cirataraṁ bhāsissatī’ti. Tesaṁ no, bhante, bhagavā accayaṁ accayato paṭiggaṇhātu āyatiṁ saṁvarāyā”ti. “Taggha tumhe, bhikkhave, accayo accagamā yathābāle yathāmūḷhe yathāakusale, ye tumhe evaṁ svākkhāte dhammavinaye pabbajitā samānā aññamaññaṁ sutena accāvadittha: ‘ehi, bhikkhu, ko bahutaraṁ bhāsissati, ko sundarataraṁ bhāsissati, ko cirataraṁ bhāsissatī’ti. Yato ca kho tumhe, bhikkhave, accayaṁ accayato disvā yathādhammaṁ paṭikarotha, taṁ vo mayaṁ paṭiggaṇhāma.",
+   "T0100-sa-2.113": "時，二比丘即禮佛足，白佛言：「我等聞佛所說，自知有過。實如孾愚，無所知解。作不應作，所作不善，乃共相決種種勝負，實有是過。唯願世尊憐愍我故，聽許懺悔。」",
+   "T0099-sa1138": "時，二比丘前禮佛足，重白佛言：「悔過！世尊！悔過！善逝！我愚我癡，不善不辯，而共諍論。」"
+  },
+  "a14": {
+   "T0100-sa-2.113": "佛言：「知汝誠心慇重懺悔，汝實孾愚，無所知解，所作不善，不如佛教，非出家法，乃諍勝負，各云多知，乃至我所言說句義具足，汝不具足。如是勝負，實不應作。吾今受汝誠心懺悔，使汝善法增長，無有退失。何以故？若能至心，實知有罪，然後懺悔，後莫復作。如是懺者，善法增長，無有退失。」",
+   "T0099-sa1138": "佛告二比丘：「實知罪悔過，愚癡，不善不辯，而共諍論。今已自知罪，自見罪，知見悔過，於未來世律儀戒生。我今受汝，憐愍故，令汝善法增長，終不退減。所以者何？若有自知罪，自見罪，知見悔過，於未來世律儀戒生，終不退減。」"
+  },
+  "a15": {
+   "sn16.6": "Vuddhi hesā, bhikkhave, ariyassa vinaye yo accayaṁ accayato disvā yathādhammaṁ paṭikaroti āyatiñca saṁvaraṁ āpajjatī”ti. Chaṭṭhaṁ.",
+   "T0100-sa-2.113": "諸比丘聞佛所說，歡喜頂禮而去。",
+   "T0099-sa1138": "時，二比丘聞佛所說，歡喜隨喜，作禮而去。"
+  }
+ }
+}

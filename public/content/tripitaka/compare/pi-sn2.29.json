@@ -1,0 +1,125 @@
+{
+ "slug": "pi-sn2.29",
+ "title": "別譯雜阿含經 （三〇五）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "阿難請問舍利弗德行"
+  },
+  {
+   "id": "a02",
+   "label": "世尊讚歎舍利弗十六種德"
+  },
+  {
+   "id": "a03",
+   "label": "須屍摩天子讚歎舍利弗"
+  },
+  {
+   "id": "a04",
+   "label": "須屍摩天子眾讚歎並現瑞色"
+  },
+  {
+   "id": "a05",
+   "label": "須屍摩天子說偈讚歎舍利弗"
+  },
+  {
+   "id": "a06",
+   "label": "世尊以偈答須屍摩天子"
+  },
+  {
+   "id": "a07",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn2.29",
+   "lang": "pi",
+   "label": "巴利 SN2.29",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn2.29",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN2.29",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.305",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （三〇五）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa1306",
+   "lang": "lzh",
+   "label": "雜阿含經 （一三〇六）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（三〇五）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一三〇六）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn2.29": "Saṁyutta Nikāya 2.29 3. Nānātitthiyavagga Susimasutta",
+   "nan-sn2.29": "〔二九〕第九　須尸摩舍衛城因緣。",
+   "T0100-sa-2.305": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。",
+   "T0099-sa1306": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。"
+  },
+  "a01": {
+   "sn2.29": "Sāvatthinidānaṁ.",
+   "nan-sn2.29": "時，尊者阿難往詣世尊處，禮敬世尊坐於一面。世尊對坐於一面之阿難宣說：「阿難！汝亦喜舍利弗否？」",
+   "T0100-sa-2.305": "時有天子名須尸摩，與其眷屬五百人俱，來詣佛所，頂禮佛足，在一面坐。",
+   "T0099-sa1306": "時，有須深天子與五百眷屬，容色絕妙，於後夜時來詣佛所，稽首佛足，退坐一面。其身光明遍照祇樹給孤獨園。"
+  },
+  "a02": {
+   "sn2.29": "Atha kho āyasmā ānando yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdi. Ekamantaṁ nisinnaṁ kho āyasmantaṁ ānandaṁ bhagavā etadavoca: “tuyhampi no, ānanda, sāriputto ruccatī”ti? “Kassa hi nāma, bhante, abālassa aduṭṭhassa amūḷhassa avipallatthacittassa āyasmā sāriputto na rucceyya? Paṇḍito, bhante, āyasmā sāriputto. Mahāpañño, bhante, āyasmā sāriputto. Puthupañño, bhante, āyasmā sāriputto. Hāsapañño, bhante, āyasmā sāriputto. Javanapañño, bhante, āyasmā sāriputto. Tikkhapañño, bhante, āyasmā sāriputto. Nibbedhikapañño, bhante, āyasmā sāriputto. Appiccho, bhante, āyasmā sāriputto. Santuṭṭho, bhante, āyasmā sāriputto. Pavivitto, bhante, āyasmā sāriputto. Asaṁsaṭṭho, bhante, āyasmā sāriputto. Āraddhavīriyo, bhante, āyasmā sāriputto. Vattā, bhante, āyasmā sāriputto. Vacanakkhamo, bhante, āyasmā sāriputto. Codako, bhante, āyasmā sāriputto. Pāpagarahī, bhante, āyasmā sāriputto. Kassa hi nāma, bhante, abālassa aduṭṭhassa amūḷhassa avipallatthacittassa āyasmā sāriputto na rucceyyā”ti? “Evametaṁ, ānanda, evametaṁ, ānanda. Kassa hi nāma, ānanda, abālassa aduṭṭhassa amūḷhassa avipallatthacittassa sāriputto na rucceyya? Paṇḍito, ānanda, sāriputto. Mahāpañño, ānanda, sāriputto. Puthupañño, ānanda, sāriputto. Hāsapañño, ānanda, sāriputto. Javanapañño, ānanda, sāriputto. Tikkhapañño, ānanda, sāriputto. Nibbedhikapañño, ānanda, sāriputto. Appiccho, ānanda, sāriputto. Santuṭṭho, ānanda, sāriputto. Pavivitto, ānanda, sāriputto. Asaṁsaṭṭho, ānanda, sāriputto. Āraddhavīriyo, ānanda, sāriputto. Vattā, ānanda, sāriputto. Vacanakkhamo, ānanda, sāriputto. Codako, ānanda, sāriputto. Pāpagarahī, ānanda, sāriputto. Kassa hi nāma, ānanda, abālassa aduṭṭhassa amūḷhassa avipallatthacittassa sāriputto na rucceyyā”ti?",
+   "nan-sn2.29": "〔阿難曰：〕「世尊！不愚、不污、不迷亂、不亂心者，有誰不喜歡尊者舍利弗者！世尊！尊者舍利弗是賢者。世尊！尊者舍利弗是大慧。世尊！尊者舍利弗是廣慧。世尊！尊者舍利弗是速慧。世尊！尊者舍利弗是迅慧。世尊！尊者舍利弗是銳慧。世尊！尊者舍利弗是貫通慧。世尊！尊者舍利弗是小欲。世尊！尊者舍利弗是知足。世尊！尊者舍利弗是遠離。世尊！尊者舍利弗是不共住。世尊！尊者舍利弗是精進。世尊！尊者舍利弗是辯者。世尊！尊者舍利弗是聽忠言之人。世尊！尊者舍利弗忠告者。世尊！尊者舍利弗是惡之責難者。世尊！不愚、不污、不迷亂、不亂心者，有誰不喜歡尊者舍利弗者！」〔世尊曰：〕「阿難！確實如是，阿難！確實如是。阿難！不愚、不污、不迷亂、不亂心者，有誰有不喜歡舍利弗者！阿難！舍利弗是賢者、是大慧、廣慧、速慧、迅慧、銳慧、貫通慧、小欲、知足、遠離、不共住、精進、辯者、聽忠言者、忠告者、惡之責難者。」",
+   "T0100-sa-2.305": "爾時，世尊告阿難言：「世若有人，能稱實說，彼當應言：『舍利弗比丘持戒多聞，少欲知定，樂於閑靜，精勤修定，有大念力，成就智慧，速疾智利智，善知出要，深解出乘，滿足實智。』」阿難白佛言：「世尊！誠如聖教，若稱實說，彼應當言：『舍利弗比丘持戒多聞，最為第一，乃至成就實智。』",
+   "T0099-sa1306": "爾時，世尊告尊者阿難：「汝何難於尊者舍利弗善說法，心喜樂不？」阿難白佛：「如是，世尊！何等人不愚、不癡、有智慧，於尊者舍利弗善說法中，心不欣樂。所以者何？彼尊者舍利弗持戒多聞，少欲知足，精勤遠離，正念堅住，智慧正受，捷疾智慧、利智慧、出離智慧、決定智慧、大智慧、廣智慧、深智慧、無等智慧，智寶成就，善能教化，示、教、照、喜，亦常讚歎示、教、照、喜，常為四眾說法不惓。」佛告阿難：「如是，如是，如汝所說。阿難！為何等人不愚、不癡、有智慧，聞尊者舍利弗善說諸法而不歡喜？所以者何？舍利弗比丘持戒多聞，少欲知足，精勤正念，智慧正受，超智、捷智、利智、出智、決定智、大智、廣智、深智、無等智，智寶成就，善能教化，示、教、照、喜，亦常讚歎示、教、照、喜，常為四眾說法不惓。」"
+  },
+  "a03": {
+   "sn2.29": "Atha kho susimo devaputto āyasmato sāriputtassa vaṇṇe bhaññamāne mahatiyā devaputtaparisāya parivuto yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ aṭṭhāsi. Ekamantaṁ ṭhito kho susimo devaputto bhagavantaṁ etadavoca: “Evametaṁ, bhagavā, evametaṁ, sugata. Kassa hi nāma, bhante, abālassa aduṭṭhassa amūḷhassa avipallatthacittassa āyasmā sāriputto na rucceyya? Paṇḍito, bhante, āyasmā sāriputto. Mahāpañño, bhante, puthupañño, bhante, hāsapañño, bhante, javanapañño, bhante, tikkhapañño, bhante, nibbedhikapañño, bhante, appiccho, bhante, santuṭṭho, bhante, pavivitto, bhante, asaṁsaṭṭho, bhante, āraddhavīriyo, bhante, vattā, bhante, vacanakkhamo, bhante, codako, bhante, pāpagarahī, bhante, āyasmā sāriputto. Kassa hi nāma, bhante, abālassa aduṭṭhassa amūḷhassa avipallatthacittassa āyasmā sāriputto na rucceyya? Ahampi hi, bhante, yaññadeva devaputtaparisaṁ upasaṅkamiṁ, etadeva bahulaṁ saddaṁ suṇāmi: ‘paṇḍito āyasmā sāriputto; mahāpañño āyasmā, puthupañño āyasmā, hāsapañño āyasmā, javanapañño āyasmā, tikkhapañño āyasmā, nibbedhikapañño āyasmā, appiccho āyasmā, santuṭṭho āyasmā, pavivitto āyasmā, asaṁsaṭṭho āyasmā, āraddhavīriyo āyasmā, vattā āyasmā, vacanakkhamo āyasmā, codako āyasmā, pāpagarahī āyasmā sāriputto’ti. Kassa hi nāma, bhante, abālassa aduṭṭhassa amūḷhassa avipallatthacittassa āyasmā sāriputto na rucceyyā”ti?",
+   "nan-sn2.29": "時，須尸摩天子於讚歎彼尊者舍利弗之德中，為天子大眾所圍繞而詣世尊處。詣已，禮敬世尊、立於一面。立於一面之須尸摩天子，以此告世尊曰：「世尊！不愚、不污、不迷亂、不亂心者，有誰不喜歡尊者舍利弗者！尊者舍利弗是賢者……乃至……惡之責難者也、不愚、不污、不迷亂、不亂心者，有誰不喜歡尊者舍利弗者！」"
+  },
+  "a04": {
+   "sn2.29": "Atha kho susimassa devaputtassa devaputtaparisā āyasmato sāriputtassa vaṇṇe bhaññamāne attamanā pamuditā pītisomanassajātā uccāvacā vaṇṇanibhā upadaṁseti. Seyyathāpi nāma maṇi veḷuriyo subho jātimā aṭṭhaṁso suparikammakato paṇḍukambale nikkhitto bhāsate ca tapate ca virocati ca; evamevaṁ susimassa devaputtassa devaputtaparisā āyasmato sāriputtassa vaṇṇe bhaññamāne attamanā pamuditā pītisomanassajātā uccāvacā vaṇṇanibhā upadaṁseti. Seyyathāpi nāma nikkhaṁ jambonadaṁ dakkhakammāraputtaukkāmukhasukusalasampahaṭṭhaṁ paṇḍukambale nikkhittaṁ bhāsate ca tapate ca virocati ca; evamevaṁ susimassa devaputtassa devaputtaparisā āyasmato sāriputtassa vaṇṇe bhaññamāne attamanā pamuditā pītisomanassajātā uccāvacā vaṇṇanibhā upadaṁseti. Seyyathāpi nāma saradasamaye viddhe vigatavalāhake deve rattiyā paccūsasamayaṁ osadhitārakā bhāsate ca tapate ca virocati ca; evamevaṁ susimassa devaputtassa devaputtaparisā āyasmato sāriputtassa vaṇṇe bhaññamāne attamanā pamuditā pītisomanassajātā uccāvacā vaṇṇanibhā upadaṁseti. Seyyathāpi nāma saradasamaye viddhe vigatavalāhake deve ādicco nabhaṁ abbhussakkamāno sabbaṁ ākāsagataṁ tamagataṁ abhivihacca bhāsate ca tapate ca virocati ca; evamevaṁ susimassa devaputtassa devaputtaparisā āyasmato sāriputtassa vaṇṇe bhaññamāne attamanā pamuditā pītisomanassajātā uccāvacā vaṇṇanibhā upadaṁseti.",
+   "nan-sn2.29": "時，須尸摩天之天子眾，於讚歎尊者舍利之德時，以生喜悅、歡喜而顯其勝色光。譬喻清淨而好性質，八角善磨之吠琉璃珠置於黃毛布上，其光之輝照。如是須尸摩天子之天事眾，讚歎尊者舍利弗之德時，生喜悅、歡喜而顯其勝色光。譬喻由精巧金工師，以作巧妙之閻浮河金之頸飾，置於黃毛布之上，以輝耀其光。如是須尸摩天子之天子眾……乃至……顯……。譬如夜將曉，明星輝照之光……〔乃至〕……譬如秋季太陽昇於澄雲之空，以拂虛空所有之暗，以輝耀其光。如是須尸摩天子之天子眾，於讚歎尊者舍利弗之德時，以顯其勝色光。",
+   "T0100-sa-2.305": "」時諸天子聞於如來及與阿難讚舍利弗，天之容貌轉復端嚴，其身光曜，倍更殊常，遍照祇洹，赫然大明。",
+   "T0099-sa1306": "世尊如是如是向尊者阿難，如是如是稱嘆舍利弗所說，如是如是須深天子眷屬內心歡喜，身光增明，清淨照耀。"
+  },
+  "a05": {
+   "sn2.29": "Atha kho susimo devaputto āyasmantaṁ sāriputtaṁ ārabbha bhagavato santike imaṁ gāthaṁ abhāsi: “Paṇḍitoti samaññāto, sāriputto akodhano; Appiccho sorato danto, satthuvaṇṇābhato isī”ti.",
+   "nan-sn2.29": "時，須尸摩天子關於尊者舍利弗，於世尊前，唱此偈曰：無忿而小欲柔和而調順\n擔師譽聖者知舍利弗智",
+   "T0100-sa-2.305": "時須尸摩天子顏貌威光轉熾盛已，合掌向佛，而說偈言：「舍利弗多聞，咸稱為大智，\n持戒善調順，世尊所讚歎。」",
+   "T0099-sa1306": "爾時，須深天子內懷歡喜，發身淨光照耀已，而說偈言：「舍利弗多聞，明智平等慧，\n持戒善調伏，得不起涅槃，\n持此後邊身，降伏於魔軍。」時，彼須深天子及五百眷屬聞佛所說，歡喜隨喜，稽首佛足，即沒不現。"
+  },
+  "a06": {
+   "sn2.29": "Atha kho bhagavā āyasmantaṁ sāriputtaṁ ārabbha susimaṁ devaputtaṁ gāthāya paccabhāsi: “Paṇḍitoti samaññāto, sāriputto akodhano; Appiccho sorato danto, kālaṁ kaṅkhati sudanto”ti.",
+   "nan-sn2.29": "時，世尊關於尊者舍利弗，以偈答須尸摩天子曰：無忿而小欲柔和而調順\n善調之庸人如待薪資金\n用以待死時舍利弗智者\n為世所皆知",
+   "T0100-sa-2.305": "世尊復以偈答曰：「舍利弗多聞，咸稱為大智，\n持戒善調順，世尊所讚歎，\n得無生寂滅，破魔住後身。」"
+  },
+  "a07": {
+   "T0100-sa-2.305": "時須尸摩聞佛所說，歡喜頂禮，還于天宮。"
+  }
+ }
+}

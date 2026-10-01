@@ -1,0 +1,132 @@
+{
+ "slug": "pi-sn22.96",
+ "title": "中阿含經 （六一）中阿含王相應品牛糞喻經第四（初一日誦）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "比丘思惟問五蘊常住"
+  },
+  {
+   "id": "a02",
+   "label": "佛答五蘊無常住"
+  },
+  {
+   "id": "a03",
+   "label": "佛以牛糞喻示無我"
+  },
+  {
+   "id": "a04",
+   "label": "佛說過去王位與八萬四千具足"
+  },
+  {
+   "id": "a05",
+   "label": "唯一受用顯無常無我"
+  },
+  {
+   "id": "a06",
+   "label": "諸行過去滅盡變易"
+  },
+  {
+   "id": "a07",
+   "label": "結勸厭離解脫"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn22.96",
+   "lang": "pi",
+   "label": "巴利 SN22.96",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn22.96",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN22.96",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0026-ma61",
+   "lang": "lzh",
+   "label": "中阿含經 （六一）中阿含王相應品牛糞喻經第四（初一日誦）",
+   "who": "東晉 瞿曇僧伽提婆譯"
+  },
+  {
+   "id": "T0099-sa264",
+   "lang": "lzh",
+   "label": "雜阿含經 （二六四）",
+   "who": "劉宋 求那跋陀羅譯",
+   "reorder": true
+  }
+ ],
+ "works": [
+  "T0026",
+  "T0099"
+ ],
+ "anchors": [
+  {
+   "work": "T0026",
+   "node": "（六一）中阿含王相應品牛糞喻經第四（初一日誦）"
+  },
+  {
+   "work": "T0099",
+   "node": "（二六四）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn22.96": "Saṁyutta Nikāya 22.96 10. Pupphavagga Gomayapiṇḍasutta Sāvatthinidānaṁ.",
+   "nan-sn22.96": "〔九六〕第四　牛糞一～二〔爾時，世尊〕住舍衛城……時，有一人……坐。",
+   "T0026-ma61": "我聞如是：一時，佛遊舍衛國，在勝林給孤獨園。",
+   "T0099-sa264": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。"
+  },
+  "a01": {
+   "sn22.96": "Ekamantaṁ nisinno kho so bhikkhu bhagavantaṁ etadavoca: “atthi nu kho, bhante, kiñci rūpaṁ yaṁ rūpaṁ niccaṁ dhuvaṁ sassataṁ avipariṇāmadhammaṁ sassatisamaṁ tatheva ṭhassati? Atthi nu kho, bhante, kāci vedanā yā vedanā niccā dhuvā sassatā avipariṇāmadhammā sassatisamaṁ tatheva ṭhassati? Atthi nu kho, bhante, kāci saññā yā saññā …pe… atthi nu kho, bhante, keci saṅkhārā ye saṅkhārā niccā dhuvā sassatā avipariṇāmadhammā sassatisamaṁ tatheva ṭhassanti? Atthi nu kho, bhante, kiñci viññāṇaṁ, yaṁ viññāṇaṁ niccaṁ dhuvaṁ sassataṁ avipariṇāmadhammaṁ sassatisamaṁ tatheva ṭhassatī”ti?",
+   "nan-sn22.96": "坐於一面之彼比丘白世尊言：「大德！有少分色是常、恒、永住而不變易法，有相似永住而應正住者耶？大德！有少分受是常、恒、永住而不變易法，相似永住而應正住者耶？大德！有少分想是……乃至……大德！有少分行是常、恒、永住而不變易法，相似永住而應正住者耶？大德！有少分識是常、恒、永住而不變易法，相似永住而應正住者耶？」",
+   "T0026-ma61": "爾時，有一比丘在安靜處，燕坐思惟而作是念：「頗復有色常住不變，而一向樂，恒久存耶？頗有覺、想、行、識常住不變，而一向樂，恒久存耶？」彼一比丘則於晡時從燕坐起，往詣佛所，稽首作禮，却坐一面，白曰：「世尊！我今在安靜處燕坐思惟而作是念：『頗復有色常住不變，而一向樂，恒久存耶？頗有覺、想、行、識常住不變，而一向樂，恒久存耶？』",
+   "T0099-sa264": "爾時，有異比丘於禪中思惟，作是念：「頗有色常、恒、不變易、正住耶？如是受、想、行、識，常、恒、不變易、正住耶？」是比丘晡時從禪起，往詣佛所，頭面禮足，却住一面，白佛言：「世尊！我於禪中思惟，作是念：『頗有色常、恒、不變易、正住耶？如是受、想、行、識，常、恒、不變易、正住耶？』今白世尊：頗有色常、恒、不變易、正住耶？頗有受、想、行、識，常、恒、不變易、正住耶？」"
+  },
+  "a02": {
+   "sn22.96": "“Natthi kho, bhikkhu, kiñci rūpaṁ, yaṁ rūpaṁ niccaṁ dhuvaṁ sassataṁ avipariṇāmadhammaṁ sassatisamaṁ tatheva ṭhassati. Natthi kho, bhikkhu, kāci vedanā … kāci saññā … keci saṅkhārā … kiñci viññāṇaṁ, yaṁ viññāṇaṁ niccaṁ dhuvaṁ sassataṁ avipariṇāmadhammaṁ sassatisamaṁ tatheva ṭhassatī”ti.",
+   "nan-sn22.96": "「比丘！無有少分色是常、恒、永住而有不變易法，相似永住應正住者。一〇～一三比丘！無有少分受……想……行……識是常、恒、永住而不變易法，相似永住而應正住者。」",
+   "T0026-ma61": "」佛告比丘：「無有一色常住不變，而一向樂，恒久存者，無有覺、想、行、識常住不變，而一向樂，恒久存者。」",
+   "T0099-sa264": "世尊！」「比丘！如是少土，我不可得。若我可得者，則是常、恒、不變易、正住法。」"
+  },
+  "a03": {
+   "sn22.96": "Atha kho bhagavā parittaṁ gomayapiṇḍaṁ pāṇinā gahetvā taṁ bhikkhuṁ etadavoca: “ettakopi kho, bhikkhu, attabhāvapaṭilābho natthi nicco dhuvo sassato avipariṇāmadhammo sassatisamaṁ tatheva ṭhassati. Ettako cepi, bhikkhu, attabhāvapaṭilābho abhavissa nicco dhuvo sassato avipariṇāmadhammo, nayidaṁ brahmacariyavāso paññāyetha sammā dukkhakkhayāya. Yasmā ca kho, bhikkhu, ettakopi attabhāvapaṭilābho natthi nicco dhuvo sassato avipariṇāmadhammo, tasmā brahmacariyavāso paññāyati sammā dukkhakkhayāya.",
+   "nan-sn22.96": "時，世尊手執小牛糞摶，以告彼比丘曰：「比丘！無有如是分之自性，獲得常、恒、永住而有不變易之法，相似永住而應正住者。比丘！若有如是分之自性，獲得常、恒、永住而有不變易法者，梵行住者則無能正盡苦。比丘！無有如是分之自性，獲得常、恒、永住而有不變易法故，梵行住者有能正盡苦。",
+   "T0026-ma61": "於是，世尊以手指爪抄少牛糞，告曰：「比丘！汝今見我以手指爪抄少牛糞耶？」比丘白曰：「見也。世尊！」佛復告曰：「比丘！如是，無有少色常住不變，而一向樂，恒久存也。如是，無有少覺、想、行、識常住不變，而一向樂，恒久存也。",
+   "T0099-sa264": "爾時，世尊手執小土摶，告彼比丘言：「汝見我手中土摶不？」比丘白佛：「已見。"
+  },
+  "a04": {
+   "sn22.96": "Bhūtapubbāhaṁ, bhikkhu, rājā ahosiṁ khattiyo muddhāvasitto. Tassa mayhaṁ, bhikkhu, rañño sato khattiyassa muddhāvasittassa caturāsītinagarasahassāni ahesuṁ kusāvatīrājadhānippamukhāni. Tassa mayhaṁ, bhikkhu, rañño sato khattiyassa muddhāvasittassa caturāsītipāsādasahassāni ahesuṁ dhammapāsādappamukhāni. Tassa mayhaṁ, bhikkhu, rañño sato khattiyassa muddhāvasittassa caturāsītikūṭāgārasahassāni ahesuṁ mahābyūhakūṭāgārappamukhāni. Tassa mayhaṁ, bhikkhu, rañño sato khattiyassa muddhāvasittassa caturāsītipallaṅkasahassāni ahesuṁ dantamayāni sāramayāni sovaṇṇamayāni goṇakatthatāni paṭikatthatāni paṭalikatthatāni kadalimigapavarapaccattharaṇāni sauttaracchadāni ubhatolohitakūpadhānāni. Tassa mayhaṁ, bhikkhu, rañño sato khattiyassa muddhāvasittassa caturāsītināgasahassāni ahesuṁ sovaṇṇālaṅkārāni sovaṇṇaddhajāni hemajālapaṭicchannāni uposathanāgarājappamukhāni. Tassa mayhaṁ, bhikkhu, rañño sato khattiyassa muddhāvasittassa caturāsītiassasahassāni ahesuṁ sovaṇṇālaṅkārāni sovaṇṇaddhajāni hemajālapaṭicchannāni valāhakaassarājappamukhāni. Tassa mayhaṁ, bhikkhu, rañño sato khattiyassa muddhāvasittassa caturāsītirathasahassāni ahesuṁ sovaṇṇālaṅkārāni sovaṇṇaddhajāni hemajālapaṭicchannāni vejayantarathappamukhāni. Tassa mayhaṁ, bhikkhu, rañño sato khattiyassa muddhāvasittassa caturāsītimaṇisahassāni ahesuṁ maṇiratanappamukhāni.",
+   "nan-sn22.96": "比丘！於前生我為剎帝利之灌頂王。比丘！我為剎帝利之灌頂王時，有八萬四千之都城，拘舍婆提城為上首。比丘！我為剎帝利之灌頂王時，有八萬四千之宮殿，達摩殿為上首。比丘！我為剎帝利之灌頂王時，有八萬四千之重閣，摩訶由訶閣為上首。比丘！我為剎帝利之灌頂王時，有八萬四千之牀，乃牙之所成，堅材之所成，金所成，銀所成。鋪以深毛之黑毛氈，鋪以白羊毛毯，以鋪有花樣之羊毛布，鋪以迦達利鹿之最勝毛毯，於上具張蓋，兩側有丹枕。比丘！我為剎帝利之灌頂王時，有八萬四千之象，以金莊嚴之，以具金幢，金網覆於上，布薩象為上首。比丘！我為剎帝利之灌頂王時，有八萬四千之馬，以金莊嚴之，具以金幢，金網覆於上，婆羅訶馬王為上首。比丘！我為剎帝利之灌頂王時，有八萬四千之車，以金莊嚴之，具以金幢，金網覆於上，毘闍那難提車為上首。比丘！我為剎帝利之灌頂王時，有八萬四千之摩尼珠，珠寶為上首。比丘！我……乃至……有八萬四千之女，須跋陀妃為上首。比丘！我……乃至……有八萬四千之剎帝利，從臣而主兵臣寶為上首。比丘！我……乃至……有八萬四千之乳牛，以黃麻莊嚴之，具以之搾乳桶。比丘！我……乃至……有八萬四千俱底之衣服，是芻摩細衣，憍奢耶細衣，欽婆羅細衣，古貝細衣。比丘！我……乃至……有八萬四千之釜飲食，以供朝夕飲食。",
+   "T0026-ma61": "所以者何？比丘！我憶昔時長夜作福，長作福已，長受樂報。比丘！我在昔時七年行慈，七反成敗，不來此世，世敗壞時，生晃昱天，世成立時，來下生空梵宮殿中，於彼梵中作大梵天，餘處千反，作自在天王，三十六反，作天帝釋，復無量反，作剎利頂生王。「比丘！我作剎利頂生王時，有八萬四千大象，被好乘具，眾寶校飾，白珠珞覆，于娑賀象王為首。比丘！我作剎利頂生王時，有八萬四千馬，被好乘具，眾寶莊飾，金銀珓珞，䭷馬王為首。比丘！我作剎利頂生王時，有八萬四千車，四種校飾，莊以眾好、師子、虎豹斑文之皮，織成雜色，種種莊飾，極利疾名樂聲車為首。比丘！我作剎利頂生王時，有八萬四千大城，極大富樂，多有人民，拘舍惒堤王城為首。比丘！我作剎利頂生王時，有八萬四千樓，四種寶樓，金、銀、琉璃及水精，正法殿為首。「比丘！我作剎利頂生王時，有八萬四千御座，四種寶座，金、銀、琉璃及水精，敷以氍氀、毾𣰆，覆以錦綺羅縠，有襯體被，兩頭安枕，加陵伽波惒邏、波遮悉多羅那。比丘！我作剎利頂生王時，有八萬四千雙衣，初摩衣、錦衣、繒衣、劫貝衣、加陵伽波惒邏衣。比丘！我作剎利頂生王時，有八萬四千女，身體光澤，晈潔明淨，美色過人，小不及天，姿容端正，覩者歡悅，眾寶瓔珞嚴飾具足，盡剎利種女，餘族無量。比丘！我作剎利頂生王時，有八萬四千種食，晝夜常供，為我故設，欲令我食。「比丘！彼八萬四千種食中，有一種食，極美淨潔，無量種味，是我常所食。比丘！彼八萬四千女中，有一剎利女，最端正姝好，常奉侍我。比丘！彼八萬四千雙衣中，有一雙衣，或初摩衣、或錦衣、或繒衣、或劫貝衣、或加陵伽波惒邏衣，是我常所著。比丘！彼八萬四千御座中，有一御座，或金、或銀、或琉璃、或水精，敷以氍氀、毾𣰆，覆以錦綺羅縠，有襯體被，兩頭安枕，加陵伽波惒邏、波遮悉多羅那，是我常所臥。",
+   "T0099-sa264": "佛告比丘：「我自憶宿命，長夜修福，得諸勝妙可愛果報之事。曾於七年中，修習慈心，經七劫成壞，不還此世。七劫壞時生光音天，七劫成時還生梵世，空宮殿中作大梵王，無勝、無上，領千世界。從是已後，復三十六反，作天帝釋。復百千反，作轉輪聖王，領四天下，正法治化，七寶具足，所謂輪寶、象寶、馬寶、摩尼寶、玉女寶、主藏臣寶、主兵臣寶；千子具足，皆悉勇健；於四海內，其地平正，無諸毒刺，不威、不迫，以法調伏。「灌頂王法有八萬四千龍象，皆以眾寶莊嚴而挍餝之，寶網覆上，建立寶幢，布薩象王最為導首，朝、晡二時自會殿前。我時念言：『是大群象，日日再反往來，蹈殺眾生無數，願令四萬二千象百年一來。』即如所願，八萬四千象中，四萬二千象百年一至。「灌頂王法復有八萬四千匹馬，亦以純金為諸乘具，金網覆上，婆羅馬王為其導首。「灌頂王法有八萬四千四種寶車，所謂金車、銀車、琉璃車、頗梨車，師子、虎、豹皮、雜色欽婆羅以為覆襯，跋求毗闍耶難提音聲之車為其導首。「灌頂王法領八萬四千城，安隱豐樂，人民熾盛，拘舍婆提城而為上首。「灌頂王法有八萬四千四種宮殿，所謂金、銀、琉璃、頗梨、摩尼琉璃，由訶而為上首。「比丘！灌頂王法有八萬四千四種寶床，所謂金、銀、琉璃、頗梨，種種繒褥、氍氀、𣯾㲪、迦陵伽臥具以敷其上，安置丹枕。「復次，比丘！灌頂王法復有八萬四千四種衣服，所謂迦尸細衣、芻摩衣、頭鳩羅衣、拘沾婆衣。「復次，比丘！灌頂王法有八萬四千玉女，所謂剎利女、似剎利女，況復餘女。「復次，比丘！灌頂王法有八萬四千飲食，眾味具足。"
+  },
+  "a05": {
+   "sn22.96": "Tassa mayhaṁ, bhikkhu …pe… caturāsītiitthisahassāni ahesuṁ subhaddādevippamukhāni. Tassa mayhaṁ, bhikkhu …pe… caturāsītikhattiyasahassāni ahesuṁ anuyantāni pariṇāyakaratanappamukhāni. Tassa mayhaṁ, bhikkhu …pe… caturāsītidhenusahassāni ahesuṁ dukūlasandānāni kaṁsūpadhāraṇāni. Tassa mayhaṁ, bhikkhu …pe… caturāsītivatthakoṭisahassāni ahesuṁ khomasukhumāni koseyyasukhumāni kambalasukhumāni kappāsikasukhumāni. Tassa mayhaṁ, bhikkhu …pe… caturāsītithālipākasahassāni ahesuṁ; sāyaṁ pātaṁ bhattābhihāro abhihariyittha. Tesaṁ kho pana, bhikkhu, caturāsītiyā nagarasahassānaṁ ekaññeva taṁ nagaraṁ hoti yamahaṁ tena samayena ajjhāvasāmi—kusāvatī rājadhānī. Tesaṁ kho pana, bhikkhu, caturāsītiyā pāsādasahassānaṁ ekoyeva so pāsādo hoti yamahaṁ tena samayena ajjhāvasāmi—dhammo pāsādo. Tesaṁ kho pana, bhikkhu, caturāsītiyā kūṭāgārasahassānaṁ ekaññeva taṁ kūṭāgāraṁ hoti yamahaṁ tena samayena ajjhāvasāmi—mahābyūhaṁ kūṭāgāraṁ. Tesaṁ kho pana, bhikkhu, caturāsītiyā pallaṅkasahassānaṁ ekoyeva so pallaṅko hoti yamahaṁ tena samayena paribhuñjāmi—dantamayo vā sāramayo vā sovaṇṇamayo vā rūpiyamayo vā. Tesaṁ kho pana, bhikkhu, caturāsītiyā nāgasahassānaṁ ekoyeva so nāgo hoti yamahaṁ tena samayena abhiruhāmi—uposatho nāgarājā. Tesaṁ kho pana, bhikkhu, caturāsītiyā assasahassānaṁ ekoyeva so asso hoti yamahaṁ tena samayena abhiruhāmi—valāhako assarājā. Tesaṁ kho pana, bhikkhu, caturāsītiyā rathasahassānaṁ ekoyeva so ratho hoti yamahaṁ tena samayena abhiruhāmi—vejayanto ratho. Tesaṁ kho pana, bhikkhu, caturāsītiyā itthisahassānaṁ ekāyeva sā itthī hoti yā maṁ tena samayena paccupaṭṭhāti—khattiyānī vā velāmikā vā. Tesaṁ kho pana, bhikkhu, caturāsītiyā vatthakoṭisahassānaṁ ekaññeva taṁ vatthayugaṁ hoti yamahaṁ tena samayena paridahāmi—khomasukhumaṁ vā koseyyasukhumaṁ vā kambalasukhumaṁ vā kappāsikasukhumaṁ vā. Tesaṁ kho pana, bhikkhu, caturāsītiyā thālipākasahassānaṁ ekoyeva so thālipāko hoti yato nāḷikodanaparamaṁ bhuñjāmi tadupiyañca sūpeyyaṁ.",
+   "nan-sn22.96": "復次，比丘！其時有八萬四千之都城，我唯居一都城，即拘舍婆提城。比丘！其時有八萬四千之宮殿，我唯居一宮殿，則達摩殿。比丘！其時有八萬四千之重閣，我唯居一重閣，即摩訶由訶閣。比丘！其時有八萬四千之牀，我唯用牙所成，或堅材所成，或金所成，或銀所成。比丘！其時雖有八萬四千之象，我唯乘一象，即布薩象。比丘！其時雖有八萬四千之馬，我唯乘一馬，即婆羅訶馬王。比丘！其時雖有八萬四千之車，我唯乘一車，即毘闍那難提車。比丘！其時雖八萬四千之女，唯一之女奉侍於我，即剎帝利女，或耶羅美迦女。比丘！其時雖有八萬四千俱底之衣服，我唯著一套衣，即芻摩細衣，或憍奢耶細衣，或欽婆羅細衣，或古貝細衣。比丘！雖有八萬四千之釜飲食，我唯食一釜食，乃至那厘量之飯，及於此相應之羹。",
+   "T0026-ma61": "比丘！彼八萬四千樓觀中，有一樓觀，或金、或銀、或琉璃、或水精，名正法殿，是我常所住。「比丘！彼八萬四千大城中，而有一城，極大富樂，多有人民，名拘舍惒堤，是我常所居。比丘！彼八萬四千車中，而有一車，莊以眾好、師子、虎豹斑文之皮，織成雜色，種種莊飾，極利疾名樂聲車，是我常所載，至觀望園觀。比丘！彼八萬四千馬中，而有一馬，體紺青色，頭像如烏，名䭷馬王，是我常所騎，至觀望園觀。比丘！彼八萬四千大象中，而有一象，舉體極白，七支盡正，名于娑賀象王，是我常所乘，至觀望園觀。「比丘！我作此念：『是何業果，為何業報，令我今日有大如意足，有大威德，有大福祐，有大威神？』比丘！我復作此念：『是三業果，為三業報，令我今日有大如意足，有大威德，有大福祐，有大威神。一者布施，二者調御，三者守護。』比丘！汝觀彼一切所有盡滅，如意足亦失。比丘！於意云何？色為有常，為無常耶？」答曰：「無常也。世尊！」復問曰：「若無常者，是苦，非苦耶？」答曰：「苦、變易也。世尊！」復問曰：「若無常、苦、變易法者，是多聞聖弟子頗受是我，是我所，我是彼所耶？」",
+   "T0099-sa264": "比丘！八萬四千玉女中，唯以一人以為給侍；八萬四千寶衣，唯著一衣；八萬四千寶床，唯臥一床；八萬四千宮殿，唯處一殿；八萬四千城，唯居一城，名拘舍婆提；八萬四千寶車，唯乘一車，名毘闍耶難提瞿沙，出城遊觀；八萬四千寶馬，唯乘一馬，名婆羅訶，毛尾紺色；八萬四千龍象，唯乘一象，名布薩陀，出城遊觀。「比丘！此是何等業報，得如是威德自在耶？此是三種業報，云何為三？一者布施，二者調伏，三者修道。比丘當知，凡夫染習五欲，無有厭足，聖人智慧成滿，而常知足。"
+  },
+  "a06": {
+   "sn22.96": "Iti kho, bhikkhu, sabbe te saṅkhārā atītā niruddhā vipariṇatā. Evaṁ aniccā kho, bhikkhu, saṅkhārā. Evaṁ addhuvā kho, bhikkhu, saṅkhārā. Evaṁ anassāsikā kho, bhikkhu, saṅkhārā.",
+   "nan-sn22.96": "比丘！一切諸行皆為過去而滅盡所變易。比丘！如是諸行是無常也。比丘！如是諸行是無恒。比丘！如是諸行是不安。",
+   "T0026-ma61": "答曰：「不也。世尊！」復問曰：「比丘！於意云何？覺、想、行、識為有常，為無常耶？」答曰：「無常也。世尊！」復問曰：「若無常者，是苦，非苦耶？」答曰：「苦、變易也。世尊！」復問曰：「若無常、苦、變易法者，是多聞聖弟子頗受是我，是我所，我是彼所耶？」",
+   "T0099-sa264": "比丘！一切諸行，過去盡滅、過去變易，彼自然眾具及以名稱，皆悉磨滅。"
+  },
+  "a07": {
+   "sn22.96": "Yāvañcidaṁ, bhikkhu, alameva sabbasaṅkhāresu nibbindituṁ, alaṁ virajjituṁ, alaṁ vimuccitun”ti. Catutthaṁ.",
+   "nan-sn22.96": "比丘！故應厭患、應離，應解脫於一切諸行。」",
+   "T0026-ma61": "答曰：「不也。世尊！」「是故，比丘！汝應如是學。若有色，或過去、或未來、或現在，或內、或外，或麤、或細，或好、或惡，或近、或遠，彼一切非我，非我所，我非彼所，當以慧觀知如真。若有覺、想、行、識，或過去、或未來、或現在，或內、或外，或麤、或細，或好、或惡，或近、或遠，彼一切非我，非我所，我非彼所，當以慧觀知如真。比丘！若多聞聖弟子如是觀者，彼便厭色，厭覺、想、行、識，厭已便無欲，無欲已便解脫，解脫已便知解脫，生已盡，梵行已立，所作已辦，不更受有，知如真。」於是，彼比丘聞佛所說，善受善持，即從坐起，稽首佛足，繞三匝而去。彼比丘受佛化已，獨住遠離，心無放逸，修行精勤，彼獨住遠離，心無放逸，修行精勤已，族姓子所為，剃除鬚髮，著袈裟衣，至信、捨家、無家、學道者，唯無上梵行訖，於現法中自知自覺，自作證成就遊，生已盡，梵行已立，所作已辦，不更受有，知如真。如是彼比丘知法已，乃至得阿羅訶。佛說如是。彼諸比丘聞佛所說，歡喜奉行。牛糞喻經第四竟（千六百三十三字）",
+   "T0099-sa264": "是故，比丘！永息諸行，厭離、斷欲、解脫。比丘！色為常？無常？」比丘白佛言：「無常。世尊！」「若無常者，是苦耶？」比丘白佛言：「是苦。世尊！」「比丘！若無常、苦，是變易法，聖弟子寧復於中計我、異我、相在不？」比丘白佛：「不也，世尊！」「如是受、想、行、識，為常、為無常？」比丘白佛言：「無常。世尊！」「若無常者，是苦耶？」比丘白佛言：「是苦。世尊！」「比丘！若無常、苦，是變易法，聖弟子寧復於中計我、異我、相在不？」比丘白佛：「不也，世尊！」佛告比丘：「諸所有色，若過去、若未來、若現在，若內、若外，若麤、若細，若好、若醜，若遠、若近，彼一切非我、不異我、不相在。如是受、想、行、識，若過去、若未來、若現在，若內、若外，若麁、若細，若好、若醜，若遠、若近，彼一切非我、不異我、不相在。比丘！於色當生厭離、厭、離欲、解脫。如是於受、想、行、識，當生厭、離欲、解脫，解脫知見：『我生已盡，梵行已立，所作已作，自知不受後有。』」時，彼比丘聞佛所說，踊躍歡喜，作禮而去。常念土摶譬教授，獨一靜處，精勤思惟，不放逸住；不放逸住已，所以善男子剃除鬚髮，正信非家，出家學道，為究竟無上梵行，見法自知身作證：「我生已盡，梵行已立，所作已作，自知不受後有。」時，彼尊者亦自知法，心得解脫，成阿羅漢。"
+  }
+ }
+}

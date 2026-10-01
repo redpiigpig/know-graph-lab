@@ -1,0 +1,165 @@
+{
+ "slug": "pi-an8.30",
+ "title": "阿那律八念經",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "阿那律思惟八大人念"
+  },
+  {
+   "id": "a02",
+   "label": "世尊現身讚歎"
+  },
+  {
+   "id": "a03",
+   "label": "阿那律請問戒聞勝劣"
+  },
+  {
+   "id": "a04",
+   "label": "世尊說偈答戒聞勝劣"
+  },
+  {
+   "id": "a05",
+   "label": "阿那律復念八大人念"
+  },
+  {
+   "id": "a06",
+   "label": "世尊稱讚並重說八大人念"
+  },
+  {
+   "id": "a07",
+   "label": "世尊勸修八大人念得果"
+  },
+  {
+   "id": "a08",
+   "label": "八種譬喻說明修行果報"
+  },
+  {
+   "id": "a09",
+   "label": "流通分：阿那律修行證果"
+  },
+  {
+   "id": "a10",
+   "label": "阿那律證阿羅漢偈"
+  },
+  {
+   "id": "a11",
+   "label": "結束分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "an8.30",
+   "lang": "pi",
+   "label": "巴利 AN8.30",
+   "who": "Mahāsaṅgīti 本・SuttaCentral",
+   "reorder": true
+  },
+  {
+   "id": "T0125-ea42.6",
+   "lang": "lzh",
+   "label": "增壹阿含經 （六）",
+   "who": "東晉 瞿曇僧伽提婆譯",
+   "reorder": true
+  },
+  {
+   "id": "T0026-ma74",
+   "lang": "lzh",
+   "label": "中阿含經 （七四）中阿含長壽王品八念經第三（第二小土城誦）",
+   "who": "東晉 瞿曇僧伽提婆譯"
+  },
+  {
+   "id": "T0046",
+   "lang": "lzh",
+   "label": "阿那律八念經",
+   "who": "後漢 支曜譯"
+  }
+ ],
+ "works": [
+  "T0026",
+  "T0046",
+  "T0125"
+ ],
+ "anchors": [
+  {
+   "work": "T0125",
+   "node": "（六）",
+   "uid": "T02n0125_p0754a12"
+  },
+  {
+   "work": "T0026",
+   "node": "（七四）中阿含長壽王品八念經第三（第二小土城誦）",
+   "uid": "T01n0026_p0540c19"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "an8.30": "Aṅguttara Nikāya 8.30 3. Gahapativagga Anuruddhamahāvitakkasutta",
+   "T0125-ea42.6": "聞如是：一時，尊者阿那律遊在四佛所居之處。",
+   "T0026-ma74": "我聞如是：一時，佛遊婆奇瘦，在鼉山怖林鹿野園中。爾時，尊者阿那律陀在枝提瘦水渚林中。",
+   "T0046": "聞如是：一時，佛在誓牧山求師樹下。"
+  },
+  "a01": {
+   "an8.30": "Ekaṁ samayaṁ bhagavā bhaggesu viharati suṁsumāragire bhesakaḷāvane migadāye. Tena kho pana samayena āyasmā anuruddho cetīsu viharati pācīnavaṁsadāye.",
+   "T0125-ea42.6": "是時，阿那律在閑靜之處，便作是念：「諸釋迦文佛弟子之中，戒德、智慧成就者皆依戒律，於此正法中而得長養；諸聲聞之中不具足戒律者，斯等之類皆離正法，不與戒律相應。如今此二法，戒與聞何者為勝？我今可以此因緣之本，往問如來是事如何？」阿那律復作是念：「此法，知足者之所行，非無厭者之所行；少欲者之所行，非為多欲者之所行；此法，應閑居者之所行，非在憒閙之所行；此法，持戒人之所行，非犯戒者之所行；三昧者之所行，非亂者之所行；智慧者之所行，非愚者之所行；多聞者之所行，非少聞者之所行。」",
+   "T0026-ma74": "彼時，尊者阿那律陀在安靜處燕坐思惟，心作是念：「道從無欲，非有欲得。道從知足，非無厭得。道從遠離，非樂聚會，非住聚會，非合聚會得。道從精勤，非懈怠得。道從正念，非邪念得。道從定意，非亂意得。道從智慧，非愚癡得。」",
+   "T0046": "賢者阿那律，在彼禪空澤中坐思惟言：「道法少欲，多欲非道；道法知足，無厭非道；道法隱處，樂眾非道；道法精進，懈怠非道；道法制心，放蕩非道；道法定意，多念非道；道法智慧，愚闇非道。」"
+  },
+  "a02": {
+   "an8.30": "Atha kho bhagavā āyasmato anuruddhassa cetasā cetoparivitakkamaññāya—seyyathāpi nāma balavā puriso samiñjitaṁ vā bāhaṁ pasāreyya, pasāritaṁ vā bāhaṁ samiñjeyya; evamevaṁ—bhaggesu susumāragire bhesakaḷāvane migadāye antarahito cetīsu pācīnavaṁsadāye āyasmato anuruddhassa sammukhe pāturahosi. Nisīdi bhagavā paññatte āsane. Āyasmāpi kho anuruddho bhagavantaṁ abhivādetvā ekamantaṁ nisīdi.",
+   "T0125-ea42.6": "爾時，世尊在舍衛城祇樹給孤獨園。是時，王波斯匿請如來及比丘僧，夏坐九十日。是時，阿那律漸漸人間，將五百比丘遊化，轉至舍衛國，到如來所，頭面禮足，在一面坐。",
+   "T0026-ma74": "於是，世尊以他心智知尊者阿那律陀心中所念、所思、所行。世尊知已，即入如其像定，以如其像定猶若力士屈申臂頃，如是世尊從婆奇瘦鼉山怖林鹿野園中忽沒不現，住枝提瘦水渚林中尊者阿那律陀前。",
+   "T0046": "佛以聖心逆知其意，譬如力士屈申臂頃飛到其前，讚言：「善哉善哉！"
+  },
+  "a03": {
+   "T0125-ea42.6": "時，阿那律白世尊言：「我在閑靜之處，思惟此義：『戒與聞，此二法何者最勝乎？』"
+  },
+  "a04": {
+   "T0125-ea42.6": "」是時，世尊與阿那律便說此偈：「戒勝聞勝耶？汝今起狐疑。\n戒勝於聞者，於中何狐疑？「所以然者，阿那律當知，若比丘戒成就者，便得定意；已得定意，便獲智慧；已得智慧，便得多聞；已得多聞，便得解脫；已得解脫，於無餘涅槃而取滅度。以此明之，戒為最勝。」是時，阿那律向世尊說此八大人念。"
+  },
+  "a05": {
+   "an8.30": "Atha kho āyasmato anuruddhassa rahogatassa paṭisallīnassa evaṁ cetaso parivitakko udapādi: “appicchassāyaṁ dhammo, nāyaṁ dhammo mahicchassa; santuṭṭhassāyaṁ dhammo, nāyaṁ dhammo asantuṭṭhassa; pavivittassāyaṁ dhammo, nāyaṁ dhammo saṅgaṇikārāmassa; āraddhavīriyassāyaṁ dhammo, nāyaṁ dhammo kusītassa; upaṭṭhitassatissāyaṁ dhammo, nāyaṁ dhammo muṭṭhassatissa; samāhitassāyaṁ dhammo, nāyaṁ dhammo asamāhitassa; paññavato ayaṁ dhammo, nāyaṁ dhammo duppaññassā”ti.",
+   "T0125-ea42.6": "是時，阿那律思惟此八大人念：「今我可往至世尊所，而問此義。」"
+  },
+  "a06": {
+   "an8.30": "Ekamantaṁ nisinnaṁ kho āyasmantaṁ anuruddhaṁ bhagavā etadavoca: “Sādhu sādhu, anuruddha. Sādhu kho tvaṁ, anuruddha, yaṁ taṁ mahāpurisavitakkaṁ vitakkesi: ‘appicchassāyaṁ dhammo, nāyaṁ dhammo mahicchassa; santuṭṭhassāyaṁ dhammo, nāyaṁ dhammo asantuṭṭhassa; pavivittassāyaṁ dhammo, nāyaṁ dhammo saṅgaṇikārāmassa; āraddhavīriyassāyaṁ dhammo, nāyaṁ dhammo kusītassa; upaṭṭhitassatissāyaṁ dhammo, nāyaṁ dhammo muṭṭhassatissa; samāhitassāyaṁ dhammo, nāyaṁ dhammo asamāhitassa; paññavato ayaṁ dhammo, nāyaṁ dhammo duppaññassā’ti.",
+   "T0125-ea42.6": "佛告阿那律曰：「善哉！善哉！阿那律！汝今所念者，正是大人之所思惟也。少欲知足、在閑居之處、戒成就、三昧成就、智慧成就、解脫成就、多聞成就。",
+   "T0026-ma74": "是時，世尊便從定覺，歎尊者阿那律陀曰：「善哉，善哉！阿那律陀！謂汝在安靜處燕坐思惟，心作是念：『道從無欲，非有欲得。道從知足，非無厭得。道從遠離，非樂聚會，非住聚會，非合聚會得。道從精勤，非懈怠得。道從正念，非邪念得。道從定意，非亂意得。道從智慧，非愚癡得。』",
+   "T0046": "阿那律！汝所念者為大士念。聽吾語汝大士八念，善思行之。當學四禪撿意觀法而無中止，必獲大利，不失所願。何謂四禪？惟棄欲惡不善之法，意以歡喜，為一禪行。以捨惡念專心守一，不用歡喜，為二禪行。歡喜以止，惟如法觀覺見苦樂，為三禪行。又棄苦樂，憂喜悉斷而住清淨，為四禪行。"
+  },
+  "a07": {
+   "an8.30": "Tena hi tvaṁ, anuruddha, imampi aṭṭhamaṁ mahāpurisavitakkaṁ vitakkehi: ‘nippapañcārāmassāyaṁ dhammo nippapañcaratino, nāyaṁ dhammo papañcārāmassa papañcaratino’ti. Yato kho tvaṁ, anuruddha, ime aṭṭha mahāpurisavitakke vitakkessasi, tato tvaṁ, anuruddha, yāvadeva ākaṅkhissasi, vivicceva kāmehi vivicca akusalehi dhammehi savitakkaṁ savicāraṁ vivekajaṁ pītisukhaṁ paṭhamaṁ jhānaṁ upasampajja viharissasi. Yato kho tvaṁ, anuruddha, ime aṭṭha mahāpurisavitakke vitakkessasi, tato tvaṁ, anuruddha, yāvadeva ākaṅkhissasi, vitakkavicārānaṁ vūpasamā ajjhattaṁ sampasādanaṁ cetaso ekodibhāvaṁ avitakkaṁ avicāraṁ samādhijaṁ pītisukhaṁ dutiyaṁ jhānaṁ upasampajja viharissasi. Yato kho tvaṁ, anuruddha, ime aṭṭha mahāpurisavitakke vitakkessasi, tato tvaṁ, anuruddha, yāvadeva ākaṅkhissasi, pītiyā ca virāgā upekkhako ca viharissasi sato ca sampajāno sukhañca kāyena paṭisaṁvedissasi yaṁ taṁ ariyā ācikkhanti: ‘upekkhako satimā sukhavihārī’ti tatiyaṁ jhānaṁ upasampajja viharissasi. Yato kho tvaṁ, anuruddha, ime aṭṭha mahāpurisavitakke vitakkessasi, tato tvaṁ, anuruddha, yāvadeva ākaṅkhissasi, sukhassa ca pahānā dukkhassa ca pahānā pubbeva somanassadomanassānaṁ atthaṅgamā adukkhamasukhaṁ upekkhāsatipārisuddhiṁ catutthaṁ jhānaṁ upasampajja viharissasi.",
+   "T0125-ea42.6": "汝今，阿那律！當建是意，思惟八大人念。云何為八？此法精進者之所行，非懈怠者之所行。所以然者，彌勒菩薩應三十劫當成無上正真等正覺，我以精進之力超越成佛。「阿那律知之，諸佛世尊皆同一類，同其戒律、解脫、智慧而無有異，亦復同空，無相、願，有三十二相、八十種好，而莊嚴其身，視無厭足，無能見頂者，皆悉不異。唯有精進不同，於過去當來諸佛世尊，精進者，吾最為勝。是故，阿那律！此第八大人之念，此為最為上，為尊為貴，為無有喻。",
+   "T0026-ma74": "「阿那律陀！汝從如來更受第八大人之念，受已，便思道從不戲、樂不戲、行不戲，非戲、非樂戲、非行戲得。阿那律陀！若汝成就此大人八念者，汝必能離欲、離惡不善之法，至得第四禪成就遊。阿那律陀！若汝成就大人八念，而復得此四增上心，現法樂居，易不難得者，如王、王臣有好緘簏，盛滿種種衣，中前欲著，便取著之，中時、中後若欲著衣，便取著之，隨意自在。",
+   "T0046": "已學如是，而後惟行八大人念。四禪為撿意法，快見於行，得利願疾，不復中止。"
+  },
+  "a08": {
+   "an8.30": "Yato kho tvaṁ, anuruddha, ime ca aṭṭha mahāpurisavitakke vitakkessasi, imesañca catunnaṁ jhānānaṁ ābhicetasikānaṁ diṭṭhadhammasukhavihārānaṁ nikāmalābhī bhavissasi akicchalābhī akasiralābhī, tato tuyhaṁ, anuruddha, seyyathāpi nāma gahapatissa vā gahapatiputtassa vā nānārattānaṁ dussānaṁ dussakaraṇḍako pūro; evamevaṁ te paṁsukūlacīvaraṁ khāyissati santuṭṭhassa viharato ratiyā aparitassāya phāsuvihārāya okkamanāya nibbānassa. Yato kho tvaṁ, anuruddha, ime ca aṭṭha mahāpurisavitakke vitakkessasi, imesañca catunnaṁ jhānānaṁ ābhicetasikānaṁ diṭṭhadhammasukhavihārānaṁ nikāmalābhī bhavissasi akicchalābhī akasiralābhī, tato tuyhaṁ, anuruddha, seyyathāpi nāma gahapatissa vā gahapatiputtassa vā sālīnaṁ odano vicitakāḷako anekasūpo anekabyañjano; evamevaṁ te piṇḍiyālopabhojanaṁ khāyissati santuṭṭhassa viharato ratiyā aparitassāya phāsuvihārāya okkamanāya nibbānassa. Yato kho tvaṁ, anuruddha, ime ca aṭṭha mahāpurisavitakke vitakkessasi, imesañca catunnaṁ jhānānaṁ ābhicetasikānaṁ diṭṭhadhammasukhavihārānaṁ nikāmalābhī bhavissasi akicchalābhī akasiralābhī, tato tuyhaṁ, anuruddha, seyyathāpi nāma gahapatissa vā gahapatiputtassa vā kūṭāgāraṁ ullittāvalittaṁ nivātaṁ phusitaggaḷaṁ pihitavātapānaṁ; evamevaṁ te rukkhamūlasenāsanaṁ khāyissati santuṭṭhassa viharato ratiyā aparitassāya phāsuvihārāya okkamanāya nibbānassa. Yato kho tvaṁ, anuruddha, ime ca aṭṭha mahāpurisavitakke vitakkessasi, imesañca catunnaṁ jhānānaṁ ābhicetasikānaṁ diṭṭhadhammasukhavihārānaṁ nikāmalābhī bhavissasi akicchalābhī akasiralābhī, tato tuyhaṁ, anuruddha, seyyathāpi nāma gahapatissa vā gahapatiputtassa vā pallaṅko gonakatthato paṭikatthato paṭalikatthato kadalimigapavarapaccattharaṇo sauttaracchado ubhatolohitakūpadhāno; evamevaṁ te tiṇasanthārakasayanāsanaṁ khāyissati santuṭṭhassa viharato ratiyā aparitassāya phāsuvihārāya okkamanāya nibbānassa. Yato kho tvaṁ, anuruddha, ime ca aṭṭha mahāpurisavitakke vitakkessasi, imesañca catunnaṁ jhānānaṁ ābhicetasikānaṁ diṭṭhadhammasukhavihārānaṁ nikāmalābhī bhavissasi akicchalābhī akasiralābhī, tato tuyhaṁ, anuruddha, seyyathāpi nāma gahapatissa vā gahapatiputtassa vā nānābhesajjāni, seyyathidaṁ—sappi navanītaṁ telaṁ madhu phāṇitaṁ; evamevaṁ te pūtimuttabhesajjaṁ khāyissati santuṭṭhassa viharato ratiyā aparitassāya phāsuvihārāya okkamanāya nibbānassa. Tena hi tvaṁ, anuruddha, āyatikampi vassāvāsaṁ idheva cetīsu pācīnavaṁsadāye vihareyyāsī”ti. “Evaṁ, bhante”ti kho āyasmā anuruddho bhagavato paccassosi. Atha kho bhagavā āyasmantaṁ anuruddhaṁ iminā ovādena ovaditvā—seyyathāpi nāma balavā puriso samiñjitaṁ vā bāhaṁ pasāreyya, pasāritaṁ vā bāhaṁ samiñjeyya; evamevaṁ—cetīsu pācīnavaṁsadāye antarahito bhaggesu susumāragire bhesakaḷāvane migadāye pāturahosīti. Nisīdi bhagavā paññatte āsane. Nisajja kho bhagavā bhikkhū āmantesi: “aṭṭha kho, bhikkhave, mahāpurisavitakke desessāmi, taṁ suṇātha …pe… katame ca, bhikkhave, aṭṭha mahāpurisavitakkā? Appicchassāyaṁ, bhikkhave, dhammo, nāyaṁ dhammo mahicchassa; santuṭṭhassāyaṁ, bhikkhave, dhammo, nāyaṁ dhammo asantuṭṭhassa; pavivittassāyaṁ, bhikkhave, dhammo, nāyaṁ dhammo saṅgaṇikārāmassa; āraddhavīriyassāyaṁ, bhikkhave, dhammo, nāyaṁ dhammo kusītassa; upaṭṭhitassatissāyaṁ, bhikkhave, dhammo, nāyaṁ dhammo muṭṭhassatissa; samāhitassāyaṁ, bhikkhave, dhammo, nāyaṁ dhammo asamāhitassa; paññavato ayaṁ, bhikkhave, dhammo, nāyaṁ dhammo duppaññassa; nippapañcārāmassāyaṁ, bhikkhave, dhammo nippapañcaratino, nāyaṁ dhammo papañcārāmassa papañcaratino. ‘Appicchassāyaṁ, bhikkhave, dhammo, nāyaṁ dhammo mahicchassā’ti, iti kho panetaṁ vuttaṁ. Kiñcetaṁ paṭicca vuttaṁ? Idha, bhikkhave, bhikkhu appiccho samāno ‘appicchoti maṁ jāneyyun’ti na icchati, santuṭṭho samāno ‘santuṭṭhoti maṁ jāneyyun’ti na icchati, pavivitto samāno ‘pavivittoti maṁ jāneyyun’ti na icchati, āraddhavīriyo samāno ‘āraddhavīriyoti maṁ jāneyyun’ti na icchati, upaṭṭhitassati samāno ‘upaṭṭhitassatīti maṁ jāneyyun’ti na icchati, samāhito samāno ‘samāhitoti maṁ jāneyyun’ti na icchati, paññavā samāno ‘paññavāti maṁ jāneyyun’ti na icchati, nippapañcārāmo samāno ‘nippapañcārāmoti maṁ jāneyyun’ti na icchati. ‘Appicchassāyaṁ, bhikkhave, dhammo, nāyaṁ dhammo mahicchassā’ti, iti yaṁ taṁ vuttaṁ idametaṁ paṭicca vuttaṁ. ‘Santuṭṭhassāyaṁ, bhikkhave, dhammo, nāyaṁ dhammo asantuṭṭhassā’ti, iti kho panetaṁ vuttaṁ, kiñcetaṁ paṭicca vuttaṁ? Idha, bhikkhave, bhikkhu santuṭṭho hoti itarītaracīvarapiṇḍapātasenāsanagilānapaccayabhesajjaparikkhārena. ‘Santuṭṭhassāyaṁ, bhikkhave, dhammo, nāyaṁ dhammo asantuṭṭhassā’ti, iti yaṁ taṁ vuttaṁ idametaṁ paṭicca vuttaṁ. ‘Pavivittassāyaṁ, bhikkhave, dhammo, nāyaṁ dhammo saṅgaṇikārāmassā’ti, iti kho panetaṁ vuttaṁ, kiñcetaṁ paṭicca vuttaṁ? Idha, bhikkhave, bhikkhuno pavivittassa viharato bhavanti upasaṅkamitāro bhikkhū bhikkhuniyo upāsakā upāsikāyo rājāno rājamahāmattā titthiyā titthiyasāvakā. Tatra bhikkhu vivekaninnena cittena vivekapoṇena vivekapabbhārena vivekaṭṭhena nekkhammābhiratena aññadatthu uyyojanikapaṭisaṁyuttaṁyeva kathaṁ kattā hoti. ‘Pavivittassāyaṁ, bhikkhave, dhammo, nāyaṁ dhammo saṅgaṇikārāmassā’ti, iti yaṁ taṁ vuttaṁ idametaṁ paṭicca vuttaṁ. ‘Āraddhavīriyassāyaṁ, bhikkhave, dhammo, nāyaṁ dhammo kusītassā’ti, iti kho panetaṁ vuttaṁ, kiñcetaṁ paṭicca vuttaṁ? Idha, bhikkhave, bhikkhu āraddhavīriyo viharati akusalānaṁ dhammānaṁ pahānāya kusalānaṁ dhammānaṁ upasampadāya thāmavā daḷhaparakkamo anikkhittadhuro kusalesu dhammesu. ‘Āraddhavīriyassāyaṁ, bhikkhave, dhammo, nāyaṁ dhammo kusītassā’ti, iti yaṁ taṁ vuttaṁ idametaṁ paṭicca vuttaṁ. ‘Upaṭṭhitassatissāyaṁ, bhikkhave, dhammo, nāyaṁ dhammo muṭṭhassatissā’ti, iti kho panetaṁ vuttaṁ. Kiñcetaṁ paṭicca vuttaṁ? Idha, bhikkhave, bhikkhu satimā hoti paramena satinepakkena samannāgato, cirakatampi cirabhāsitampi saritā anussaritā. ‘Upaṭṭhitassatissāyaṁ, bhikkhave, dhammo, nāyaṁ dhammo, muṭṭhassatissā’ti, iti yaṁ taṁ vuttaṁ idametaṁ paṭicca vuttaṁ. ‘Samāhitassāyaṁ, bhikkhave, dhammo, nāyaṁ dhammo asamāhitassā’ti, iti kho panetaṁ vuttaṁ. Kiñcetaṁ paṭicca vuttaṁ? Idha, bhikkhave, bhikkhu vivicceva kāmehi …pe… catutthaṁ jhānaṁ upasampajja viharati. ‘Samāhitassāyaṁ, bhikkhave, dhammo, nāyaṁ dhammo asamāhitassā’ti, iti yaṁ taṁ vuttaṁ idametaṁ paṭicca vuttaṁ. ‘Paññavato ayaṁ, bhikkhave, dhammo, nāyaṁ dhammo duppaññassā’ti, iti kho panetaṁ vuttaṁ. Kiñcetaṁ paṭicca vuttaṁ? Idha, bhikkhave, bhikkhu paññavā hoti udayatthagāminiyā paññāya samannāgato ariyāya nibbedhikāya sammā dukkhakkhayagāminiyā. ‘Paññavato ayaṁ, bhikkhave, dhammo, nāyaṁ dhammo duppaññassā’ti, iti yaṁ taṁ vuttaṁ idametaṁ paṭicca vuttaṁ. ‘Nippapañcārāmassāyaṁ, bhikkhave, dhammo nippapañcaratino, nāyaṁ dhammo papañcārāmassa papañcaratino’ti, iti kho panetaṁ vuttaṁ. Kiñcetaṁ paṭicca vuttaṁ? Idha, bhikkhave, bhikkhuno papañcanirodhe cittaṁ pakkhandati pasīdati santiṭṭhati vimuccati. ‘Nippapañcārāmassāyaṁ, bhikkhave, dhammo, nippapañcaratino, nāyaṁ dhammo papañcārāmassa papañcaratino’ti, iti yaṁ taṁ vuttaṁ idametaṁ paṭicca vuttan”ti.",
+   "T0125-ea42.6": "猶如由乳有酪，由酪有酥，由酥有醍醐，然復醍醐於中最上，為無有比。此亦如是，精進之念，於八大人念中最上，實無有比！「是故，阿那律！當奉八大人念，亦當與四部眾分別其義。設當八大人念流布在世者，令我弟子皆當成須陀洹道、斯陀含道、阿那含道、阿羅漢道。所以然者，我法，少欲者之所行，非多欲者所行也；我法，知足者之所行，非無厭者之所行也；我法，閑居者之所行，非眾中者之所行也；我法，持戒者之所行，非犯戒者之所行也；我法，定者之所行，非亂者所行也；我法，智者之所行，非愚者之所行也；我法，多聞者之所行，非少聞者所行也；我法，精進者之所行，非懈怠者所行也。",
+   "T0026-ma74": "阿那律陀！汝亦如是，得糞掃衣為第一服，汝心無欲，行此住止行。「阿那律陀！若汝成就大人八念，而復得此四增上心，現法樂居，易不難得者，如王、王臣有好廚宰，種種淨妙甘美餚饍。阿那律陀！汝亦如是，常行乞食為第一饌，汝心無欲，行此住止行。「阿那律陀！若汝成就大人八念，而復得此四增上心，現法樂居，易不難得者，如王、王臣有好屋舍，或樓閣宮殿。阿那律陀！汝亦如是，依樹下止為第一舍，汝心無欲，行此住止行。「阿那律陀！若汝成就大人八念，而復得此四增上心，現法樂居，易不難得者，如王、王臣有好床座，敷以氍氀、毾𣰆，覆以錦綺、羅縠，有襯體被，兩頭安枕，加陵伽波惒邏、波遮悉哆羅那。阿那律陀！汝亦如是，草座葉座為第一座，汝心無欲，行此住止行。「阿那律陀！若汝成就大人八念，而復得此四增上心，現法樂居，易不難得者，如是汝若遊東方，必得安樂，無眾苦患；若遊南方、西方、北方者，必得安樂，無眾苦患。「阿那律陀！若汝成就大人八念，而復得此四增上心，現法樂居，易不難得者，我尚不說汝諸善法住，況說衰退？但當晝夜增長善法而不衰退。「阿那律陀！若汝成就大人八念，而復得此四增上心，現法樂居，易不難得者，汝於二果必得其一，或於現世得究竟智，或復有餘得阿那含。「阿那律陀！汝當成就此大人八念，亦應得此四增上心，現法樂居，易不難得已，然後於枝提瘦水渚林中受夏坐也。」爾時，世尊為尊者阿那律陀說法，勸發渴仰，成就歡喜，無量方便為彼說法，勸發渴仰。成就歡喜已，入如其像定，以如其像定，猶若力士屈申臂頃，如是世尊從枝提瘦水渚林中忽沒不見，住婆奇瘦鼉山怖林鹿野園中。彼時，尊者阿難執拂侍佛。於是，世尊便從定覺，迴顧告曰：「阿難！若有比丘遊鼉山怖林鹿野園中者，令彼一切皆集講堂，集講堂已，還來白我。」尊者阿難受佛教已，稽首禮足，即行宣勅：「諸有比丘遊鼉山怖林鹿野園中者，令彼一切皆集講堂。」集講堂已，還詣佛所，頭面禮足，却住一面，白曰：「世尊！諸有比丘遊鼉山怖林鹿野園中者，已令一切皆集講堂，唯願世尊自當知時。」於是，世尊將尊者阿難往詣講堂，於比丘眾前敷座而坐，坐已，告曰：「諸比丘！我今為汝說大人八念，汝等諦聽，善思念之。」時，諸比丘受教而聽。佛言：「大人八念者，謂道從無欲，非有欲得。道從知足，非無厭得。道從遠離，非樂聚會，非住聚會，非合聚會得。道從精勤，非懈怠得。道從正念，非邪念得。道從定意，非亂意得。道從智慧，非愚癡得。道從不戲、樂不戲、行不戲，非戲、非樂戲、非行戲得。「云何道從無欲，非有欲得？謂比丘得無欲，自知得無欲，不令他人知我無欲，得知足、得遠離、得精勤、得正念、得定意、得智慧、得不戲；自知得不戲，不欲令他知我無欲，是謂道從無欲，非有欲得。「云何道從知足，非無厭得？謂比丘行知足，衣取覆形，食取充軀，是謂道從知足，非無厭得。「云何道從遠離，非樂聚會，非住聚會，非合聚會得？謂比丘行遠離，成就二遠離，身及心俱遠離，是謂道從遠離，非樂聚會，非住聚會，非合聚會得。「云何道從精勤，非懈怠得？謂比丘常行精進，斷惡不善，修諸善法，恒自起意，專一堅固，為諸善本不捨方便，是謂道從精勤，非懈怠得。「云何道從正念，非邪念得？謂比丘觀內身如身，觀內覺、心、法如法，是謂道從正念，非邪念得。「云何道從定意，非亂意得？謂比丘離欲、離惡不善之法，至得第四禪成就遊，是謂道從定意，非亂意得。「云何道從智慧，非愚癡得？謂比丘修行智慧，觀興衰法，得如是智，聖慧明達，分別曉了，以正盡苦，是謂道從智慧，非愚癡得。「云何道從不戲、樂不戲、行不戲，非戲、非樂戲、非行戲得？謂比丘意常滅戲，樂住無餘涅槃，心恒樂住，歡喜意解，是謂道從不戲、樂不戲、行不戲，非戲、非樂戲、非行戲得。",
+   "T0046": "又少欲者，其義譬如王有邊臣，主諸椷簏滿中綵衣，而汝自樂著麁弊者，少欲知足，隱處精進，制心定意，智慧捨家，不以戲慢，無有差跌，必安隱人，至泥洹門。是八大人念，惟四禪撿意觀法，其義譬如王有邊臣，監主厨宰和調五味，而汝自樂乞食，趣得救身不以快心。其義譬如王有遊觀樓閣，而汝自樂山澤樹間燕處精進，無欲於世。其義譬如王有邊臣，主諸良藥及酪酥醍醐石蜜，而汝自樂有疾以服，小便趣得除惱。以行八念，思惟四禪，精進不虧，心無差跌，必自安隱至泥洹門。」佛說是已，即還誓牧告諸弟子：「道當少欲，無得多欲；道當知足，無畜遺餘；道當隱處，無樂眾會；道當精進，無得懈怠；道當制心，無得放逸；道當定意，無得亂念；道當智慧，無得愚闇。「比丘當少欲者快，謂身自少欲，不使眾人知我少欲，義當從是。「比丘知足，謂應器法衣牀臥病藥，得食足止，不畜遺餘，義當從是。「比丘隱處，謂避人間，不入眾會，遠居山澤巖石樹間。如有四輩，若王大臣來從問道，為說清淨欲令疾去。譬如貧人負豪姓債，為主所牽抴，欲離不樂潛隱遠遁，義當從是。「比丘精進，謂斷非法，勤行經道未常懈惓，上中後夜經行坐臥，常覺寤意念淨以除五蓋，義當從是。「比丘制心，棄欲惡法，坐意惟觀，以斷苦樂，得四禪行，義當從是。「比丘定意，謂常一心，觀身觀意觀法，不為猗行，攝念就道捨癡惱想，義當從是。「比丘智慧，謂知四諦：苦、習、盡、道。何謂苦諦？生苦、老苦、病苦、死苦、憂悲惱苦、恩愛別苦、怨憎會苦、所欲不得苦、合五盛陰苦。生苦者，謂人隨行所墮，受胞成生，已出形現，根入受長。老者，謂人根熟形變，髮白齒落、筋緩皮皺、僂步拄杖。病者，謂人罪行所致，癰疽瘡膿癎癲長病，亦百餘種。死者，謂人命逝形壞，溫消氣絕魂神離逝。是皆為苦。何謂習諦？謂婬心樂喜而生恩愛，志在貪欲，令復有漏，眾行滋盛以著自縛。所謂愛者，眼愛色、耳愛聲、鼻愛香、舌愛味、身愛細滑、心愛所欲；但觀其常樂在望，安以為利，呼言是我有，以著自縛，從是故色痛想行識五陰愛盛，見常貪樂，謂是我有，以著自縛。所謂色者，精神所受地氣、水氣、火氣、風氣，變化為形；以所愛著，令眼識色、耳識聲、鼻識香、舌識味、身識細滑、意識法著，信為習諦。何謂盡諦？不受不入，愛盡無餘，縛著已解，如慧見者，不復有一切故。世間人無所見，五陰所著；計數已盡，愛縛都解，已從慧見非常、苦、空、非身故斷，是為盡諦。何謂道諦？謂八直道，正見、正思、正言、正行、正治、正命、正志、正定。何謂正見？正見有二：有俗、有道。知有仁義，知有父母，知有沙門梵志，知有得道真人，知有今世後世，知有善惡罪福，從此到彼以行為證，是為世間正見。已解四諦：苦、習、盡、道，已得慧見，空淨非身，是為道正見。正思亦有二：思學問、思和敬、思誡慎、思無害，是為世間正思；思出處、思忍默、思滅愛盡著，是為道正思。正言亦有二：不兩舌、不惡罵、不妄言、不綺語，是為世間正言；離口四過，講誦道語，心不造為，盡無復餘，是為道正言。正行亦有二：身行善、口言善、心念善，是為世間正行；身口精進，心念空淨，消蕩滅著，是為道正行。正治亦有二：不殺盜婬，不自貢高，修德自守，是為世間正治；離身三惡，除斷苦習，滅愛求度，是為道正治。正命亦有二：求財以道不貪苟得，不詐紿心於人，是為世間正命；以離邪業，捨世占候，不犯道禁，是為道正命。正志亦有二：不嫉妬、不恚怒、不事邪，是為世間正志；離心三惡，行四意端，清淨無為，是為道正志。正定亦有二：性體淳調，守善安固，心不邪曲，是為世間正定；得四意志，惟空、無想、不願，見泥洹源，是為道正定，是為道諦。"
+  },
+  "a09": {
+   "an8.30": "Atha kho āyasmā anuruddho āyatikampi vassāvāsaṁ tattheva cetīsu pācīnavaṁsadāye vihāsi. Atha kho āyasmā anuruddho eko vūpakaṭṭho appamatto ātāpī pahitatto viharanto nacirasseva—yassatthāya kulaputtā sammadeva agārasmā anagāriyaṁ pabbajanti, tadanuttaraṁ—brahmacariyapariyosānaṁ diṭṭheva dhamme sayaṁ abhiññā sacchikatvā upasampajja vihāsi. “Khīṇā jāti, vusitaṁ brahmacariyaṁ, kataṁ karaṇīyaṁ, nāparaṁ itthattāyā”ti abbhaññāsi. Aññataro ca panāyasmā anuruddho arahataṁ ahosīti.",
+   "T0125-ea42.6": "是故，阿那律！四部之眾當求方便，行此八大人念。如是，阿那律！當作是學。」爾時，阿那律聞佛所說，歡喜奉行。",
+   "T0026-ma74": "「諸比丘！阿那律陀比丘成就此大人八念已，然後枝提瘦水渚林中受夏坐也。我以此教彼在遠離獨住，心無放逸，修行精勤。彼在遠離獨住，心無放逸，修行精勤已，族姓子所為，剃除鬚髮，著袈裟衣，至信、捨家、無家、學道者，唯無上梵行訖，於現法中自知自覺，自作證成就遊，生已盡，梵行已立，所作已辦，不更受有，知如真。」",
+   "T0046": "比丘捨家棄捐恩愛，安靜思道無所戀慕，意不隨欲淨無罣礙，是為道法，義當從是。」"
+  },
+  "a10": {
+   "an8.30": "Atha kho āyasmā anuruddho arahattappatto tāyaṁ velāyaṁ imā gāthāyo abhāsi: “Mama saṅkappamaññāya, satthā loke anuttaro; Manomayena kāyena, iddhiyā upasaṅkami. Yathā me ahu saṅkappo, tato uttari desayi; Nippapañcarato buddho, nippapañcaṁ adesayi. Tassāhaṁ dhammamaññāya, vihāsiṁ sāsane rato; Tisso vijjā anuppattā, kataṁ buddhassa sāsanan”ti.",
+   "T0026-ma74": "是時，尊者阿那律陀得阿羅呵，心正解脫，得長老上尊，則於爾時而說頌曰：「遙知我思念，無上世間師，\n正身心入定，乘虛忽來到。\n如我心所念，為說而復過，\n諸佛樂不戲，遠離一切戲。\n既從彼知法，樂住正法中，\n逮得三昧達，佛法作已辦。\n我不樂於死，亦不願於生，\n隨時任所適，立正念正智。\n鞞耶離竹林，我壽在彼盡，\n當在竹林下，無餘般涅槃。」",
+   "T0046": "賢者阿那律聞佛說經，開導其意受行三月，漏盡意解，得三治以為證已，自覺得羅漢，便說偈言：「夫欲而無厭，樂眾以放意，\n是行以致苦，修惡多所著。\n少欲知道行，知慚不自見，\n是法墮清淨，遠惡致度世。\n道意不貪生，亦無樂死別，\n吾以如空定，諸苦得待時。\n從佛受教命，守行棄欲惡，\n所身患已捨，得利就無為。\n自致至三治，已拔恩愛根，\n當於維沙聚，竹園般泥洹。」"
+  },
+  "a11": {
+   "an8.30": "Dasamaṁ. Gahapativaggo tatiyo. Tassuddānaṁ Dve uggā dve ca hatthakā, mahānāmena jīvako; Dve balā akkhaṇā vuttā, anuruddhena te dasāti.",
+   "T0026-ma74": "佛說如是，尊者阿那律陀及諸比丘，聞佛所說，歡喜奉行。八念經第三竟（千九百五十四字）"
+  }
+ }
+}

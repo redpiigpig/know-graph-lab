@@ -1,0 +1,184 @@
+{
+ "slug": "pi-sn3.20",
+ "title": "別譯雜阿含經 （六〇）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "王問長者來處"
+  },
+  {
+   "id": "a02",
+   "label": "長者財富與陋習"
+  },
+  {
+   "id": "a03",
+   "label": "長者過去惡業因緣"
+  },
+  {
+   "id": "a04",
+   "label": "施食福報與後悔過失"
+  },
+  {
+   "id": "a05",
+   "label": "殺異母弟之惡業報"
+  },
+  {
+   "id": "a06",
+   "label": "餘業導致現生無子財入官府"
+  },
+  {
+   "id": "a07",
+   "label": "長者墮大叫喚地獄"
+  },
+  {
+   "id": "a08",
+   "label": "王確認長者墮地獄"
+  },
+  {
+   "id": "a09",
+   "label": "佛再確認長者墮地獄"
+  },
+  {
+   "id": "a10",
+   "label": "偈頌：財富不隨身唯業隨行"
+  },
+  {
+   "id": "a11",
+   "label": "佛說偈頌：善惡業隨人如影隨形"
+  },
+  {
+   "id": "a12",
+   "label": "結分：歡喜奉行"
+  },
+  {
+   "id": "a13",
+   "label": "結誦（ udāna ）"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn3.20",
+   "lang": "pi",
+   "label": "巴利 SN3.20",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn3.20",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN3.20",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.60",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （六〇）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa1233",
+   "lang": "lzh",
+   "label": "雜阿含經 （一二三三）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（六〇）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一二三三）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn3.20": "Saṁyutta Nikāya 3.20 2. Dutiyavagga Dutiyaaputtakasutta",
+   "nan-sn3.20": "〔二〇〕第十　無子（其二）",
+   "T0100-sa-2.60": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。爾時，城中有大長者，名摩訶男。無有子胤，遇患命終。爾時，國法若不生男，命終之後，家財入官。以是之故，摩訶南所有財產，應入國主。",
+   "T0099-sa1233": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。爾時，舍衛國有長者，名摩訶男，命終無有兒息。波斯匿王以無子、無親屬之財，悉入王家。"
+  },
+  "a01": {
+   "sn3.20": "Atha kho rājā pasenadi kosalo divā divassa yena bhagavā tenupasaṅkami; upasaṅkamitvā ekamantaṁ nisinnaṁ kho rājānaṁ pasenadiṁ kosalaṁ bhagavā etadavoca: “handa kuto nu tvaṁ, mahārāja, āgacchasi divā divassā”ti?",
+   "nan-sn3.20": "時，拘薩羅國之波斯匿王，日中詣世尊處。詣已，禮敬世尊，坐於一面，對一面坐之拘薩羅國波斯匿王，世尊問曰：「大王！王日中從何而來耶？」",
+   "T0100-sa-2.60": "時，波斯匿王身體坌塵，往詣佛所，既頂禮已，却坐一面。佛告王曰：「今日何故，身體坌塵，顏容改常，而來至此？」",
+   "T0099-sa1233": "波斯匿王日日挍閱財物，身蒙塵土，來詣佛所，稽首佛足，退坐一面。爾時，世尊告波斯匿王：「大王！從何所來？身蒙塵土，似有疲惓。」"
+  },
+  "a02": {
+   "sn3.20": "“Idha, bhante, sāvatthiyaṁ seṭṭhi gahapati kālaṅkato. Tamahaṁ aputtakaṁ sāpateyyaṁ rājantepuraṁ atiharitvā āgacchāmi. Sataṁ, bhante, satasahassāni hiraññasseva, ko pana vādo rūpiyassa. Tassa kho pana, bhante, seṭṭhissa gahapatissa evarūpo bhattabhogo ahosi— kaṇājakaṁ bhuñjati bilaṅgadutiyaṁ. Evarūpo vatthabhogo ahosi— sāṇaṁ dhāreti tipakkhavasanaṁ. Evarūpo yānabhogo ahosi— jajjararathakena yāti paṇṇachattakena dhāriyamānenā”ti.",
+   "nan-sn3.20": "「世尊，於今舍衛城之長者家主死。彼無子，我來接收其財產。世尊，其金即有千萬金，銀當更不待言。世尊！〔如是巨富〕之長者家主，以如是受用所食：為混糠之酸粥；如是受用衣：為縫合三片之大麻粗布。如是受用車：老舊朽車又持用木葉之蓋傘。」",
+   "T0100-sa-2.60": "波斯匿王白佛言：「世尊！舍衛城中，有大長者，名摩訶南，昨日命終，以無子故，所有財寶，稅入于宮，視其財寶，冒涉風塵，是以坌身。」佛問王曰：「摩訶南實巨富耶？」王即答言：「實爾！世尊。云何大富？金銀珍寶數千億萬，不可稱計，況復餘財。雖有珍寶，多諸儲積，以慳貪故，惜不噉食，所可食者，秕稗雜糠，極為麁澁。若作羹時，煮薑一罷，煮已還取，賣為財用。所可著者，唯衣麁布，五總麁弊，以為內衣。乘朽故車，連綴樹葉，以為繖蓋。未曾見其修少布施沙門、婆羅門、貧窮乞兒。」佛言：「如此愚人，非善丈夫。",
+   "T0099-sa1233": "波斯匿王白佛：「世尊！此國長者摩訶男命終，有無子之財，悉入王家。瞻視料理，致令疲勞，塵土坌身，從其舍來。」佛問波斯匿王：「彼摩訶男長者大富多財耶？」波斯匿王白佛：「大富，世尊！錢財甚多，百千巨億金錢寶物，況復餘財！世尊！彼摩訶男在世之時，麤衣惡食……」如上廣說。"
+  },
+  "a03": {
+   "sn3.20": "“Evametaṁ, mahārāja, evametaṁ, mahārāja.",
+   "nan-sn3.20": "「大王！如是，大王！如是。大王！往昔其長者家主，令供食於多伽羅尸棄辟支佛之行乞。令『供食於沙門』即從座起而去，來反後悔於『此食不如予下僕為勝。』又為財產而奪兄弟一子之生命。",
+   "T0100-sa-2.60": "何以故？雖有財寶，不能開意正直受樂，又復不能供養父母及與妻子，亦不賜與奴婢僕使，不時時施與沙門及婆羅門，亦復不求生天善報。」佛告王曰：「此摩訶南乃往昔時，已曾於多伽羅瑟辟支佛所，種少善根。爾時布施飲食，不至心施，不信心施，不手自施，不恭敬施，撩擲而與。布施已訖，後復生悔，作是念言：『我之飲食，云何與此剃頭沙門？不如自與家中僕使。』於其捨身，得生舍衛城第一巨富大長者家。",
+   "T0099-sa1233": "佛告波斯匿王：「彼摩訶男過去世時，遇多迦羅尸棄辟支佛，施一飯食，非淨信心，不恭敬與，不自手與，施後變悔，言：『此飯食自可供給我諸僕使，無辜持用，施於沙門！』"
+  },
+  "a04": {
+   "sn3.20": "Bhūtapubbaṁ so, mahārāja, seṭṭhi gahapati taggarasikhiṁ nāma paccekasambuddhaṁ piṇḍapātena paṭipādesi. ‘Detha samaṇassa piṇḍan’ti vatvā uṭṭhāyāsanā pakkāmi. Datvā ca pana pacchā vippaṭisārī ahosi: ‘varametaṁ piṇḍapātaṁ dāsā vā kammakarā vā bhuñjeyyun’ti.",
+   "nan-sn3.20": "大王！其長者家主、依令施食多伽羅尸棄辟支佛行乞之業果，七返生天界，七返之餘業，七返於此舍衛城，置長者之位。",
+   "T0100-sa-2.60": "雖復生彼富長者家，由先施食有悔心故，自然不憙著好衣裳，亦復不喜食於美食，鞍馬車乘嚴飾之具，悉不喜樂。",
+   "T0099-sa1233": "由是施福，七反往生三十三天，七反生此舍衛國中最勝族姓，最富錢財。以彼施辟支佛時，不淨信心，不手自與，不恭敬與，施後隨悔故，在所生處，雖得財富，猶故受用麤衣、麤食、麤弊臥具、屋舍、車乘，初不嘗得上妙色、聲、香、味、觸，以自安身。"
+  },
+  "a05": {
+   "sn3.20": "Bhātu ca pana ekaputtakaṁ sāpateyyassa kāraṇā jīvitā voropesi."
+  },
+  "a06": {
+   "sn3.20": "Yaṁ kho so, mahārāja, seṭṭhi gahapati taggarasikhiṁ paccekasambuddhaṁ piṇḍapātena paṭipādesi, tassa kammassa vipākena sattakkhattuṁ sugatiṁ saggaṁ lokaṁ upapajji. Tasseva kammassa vipākāvasesena imissāyeva sāvatthiyā sattakkhattuṁ seṭṭhittaṁ kāresi. Yaṁ kho so, mahārāja, seṭṭhi gahapati datvā pacchā vippaṭisārī ahosi: ‘varametaṁ piṇḍapātaṁ dāsā vā kammakarā vā bhuñjeyyun’ti, tassa kammassa vipākena nāssuḷārāya bhattabhogāya cittaṁ namati, nāssuḷārāya vatthabhogāya cittaṁ namati, nāssuḷārāya yānabhogāya cittaṁ namati, nāssuḷārānaṁ pañcannaṁ kāmaguṇānaṁ bhogāya cittaṁ namati. Yaṁ kho so, mahārāja, seṭṭhi gahapati bhātu ca pana ekaputtakaṁ sāpateyyassa kāraṇā jīvitā voropesi, tassa kammassa vipākena bahūni vassāni bahūni vassasatāni bahūni vassasahassāni bahūni vassasatasahassāni niraye paccittha. Tasseva kammassa vipākāvasesena idaṁ sattamaṁ aputtakaṁ sāpateyyaṁ rājakosaṁ paveseti.",
+   "nan-sn3.20": "大王！此長者家主、依施後反悔『此食不如予下僕為勝』之業果，其心不傾向於善食之受用，不傾向於善衣之受用，不傾向於善車乘之受用。不傾向五欲之善受用。",
+   "T0100-sa-2.60": "大王當知，摩訶南於昔往日，其家豪富，為錢財故，殺異母弟，以是因緣，入於地獄，無量年歲受諸苦惱，由是之故，錢財七返，常沒於官。",
+   "T0099-sa1233": "「復次，大王！時，彼摩訶男長者殺其異母兄，取其財物，緣斯罪故，經百千歲，墮地獄中，彼餘罪報生舍衛國，七反受身，常以無子，財沒入王家。"
+  },
+  "a07": {
+   "sn3.20": "Tassa kho, mahārāja, seṭṭhissa gahapatissa purāṇañca puññaṁ parikkhīṇaṁ, navañca puññaṁ anupacitaṁ.",
+   "nan-sn3.20": "大王！其長者家主，依由為財產而殺兄弟之子其業果，得多年、多百年、多千年、多百千年受苦於地獄。依其餘業，當七返無子，其財富則被沒入王庫。大王！其長者家主，乃舊功德盡已，不積新功德。大王！其長者今日被煮於大叫喚地獄。」",
+   "T0100-sa-2.60": "摩訶南於多伽羅瑟辟支佛所，施食因緣，受福已盡，如大罪人，捨身之後，入于地獄，摩訶南捨身，亦復如是，入大叫喚地獄。」",
+   "T0099-sa1233": "大王！摩訶男長者今此壽終，過去施報盡，於此身，以彼慳貪，於財放逸，因造過惡，於此命終已，墮地獄受極苦惱！」"
+  },
+  "a08": {
+   "sn3.20": "Ajja pana, mahārāja, seṭṭhi gahapati mahāroruve niraye paccatī”ti.",
+   "nan-sn3.20": "「世尊！長者家主即如是生於大叫喚地獄。」",
+   "T0100-sa-2.60": "時，波斯匿王復白佛言：「世尊！彼摩訶南捨身實入大叫喚地獄耶？」",
+   "T0099-sa1233": "波斯匿王白佛言：「世尊！摩訶男長者命終已，入地獄受苦痛耶？」"
+  },
+  "a09": {
+   "sn3.20": "“Evaṁ, bhante, seṭṭhi gahapati mahāroruvaṁ nirayaṁ upapanno”ti. “Evaṁ, mahārāja, seṭṭhi gahapati mahāroruvaṁ nirayaṁ upapanno”ti. Idamavoca …pe….",
+   "nan-sn3.20": "「大王！長者家主如是生於大叫喚地獄。」",
+   "T0100-sa-2.60": "佛言：「實入。」",
+   "T0099-sa1233": "佛言：「如是，大王！"
+  },
+  "a10": {
+   "sn3.20": "“Dhaññaṁ dhanaṁ rajataṁ jātarūpaṁ, Pariggahaṁ vāpi yadatthi kiñci; Dāsā kammakarā pessā, Ye cassa anujīvino. Sabbaṁ nādāya gantabbaṁ, sabbaṁ nikkhippagāminaṁ;",
+   "nan-sn3.20": "穀物富金銀如何為所有\n奴下男傭人及他從屬者\n悉皆不隨行一切皆離去\n依於身之行以及口意行\n唯此彼身物即隨之而行\n一切皆依業如影之隨形\n然則行善事積善為未來\n功德是後世眾人渡津場",
+   "T0100-sa-2.60": "時，王聞已，悲泣流淚，王整衣服，偏袒右肩，合掌說偈：「錢財穀帛并珍寶，奴婢僕使及眷屬，\n一切無隨無隨者，亦不能取其少分。\n為死所侵捨故尸，一切財寶雖羅列，\n都無一物是儲有，亦復不能持少去。\n為有何物隨逐人，譬如有影隨其形，\n善惡受報必不失，唯此隨人猶如影。」",
+   "T0099-sa1233": "已入地獄！」時，波斯匿王念彼悲泣，以衣拭淚，而說偈言：「財物真金寶，象馬莊嚴具，\n奴僕諸僮使，及諸田宅等。\n一切皆遺棄，裸神獨遊往，\n福運數已窮，永捨於人身。\n彼今何所有，何所持而去，\n於何事不捨，如影之隨形。」"
+  },
+  "a11": {
+   "sn3.20": "Yañca karoti kāyena, vācāya uda cetasā. Tañhi tassa sakaṁ hoti, taṁva ādāya gacchati; Taṁvassa anugaṁ hoti, chāyāva anapāyinī. Tasmā kareyya kalyāṇaṁ, nicayaṁ samparāyikaṁ; Puññāni paralokasmiṁ,",
+   "T0100-sa-2.60": "爾時，世尊以偈答言：「善惡隨逐人，譬如影隨形，\n隨其所趣向，未曾相捨離。\n譬如少資糧，越險增苦惱，\n行惡亦如是，不能至善徑。\n譬如豐資糧，安樂越險道，\n修福者亦爾，安隱至善處。\n譬如久別離，至於曠遠處，\n安隱得還家，其心甚悅豫，\n妻子及眷屬，歡喜極快樂。\n修善者亦爾，善業來迎接，\n亦如離眷屬，會合得歡喜，\n是以應積善，當為後世故。\n欲得後世福，應修行正行，\n今不被譏呵，後受於快樂。」",
+   "T0099-sa1233": "爾時，世尊說偈答言：「唯有罪福業，若人已作者，\n是則己之有，彼則常持去。\n生死未曾捨，如影之隨形，\n如人少資糧，涉遠遭苦難。\n不修功德者，必經惡道苦，\n如人豐資糧，安樂以遠遊。\n修德淳厚者，善趣長受樂，\n如人遠遊行，歲久安隱歸。\n宗親善知識，歡樂欣集會，\n善修功德者，此沒生他世。\n彼諸親眷屬，見則心歡喜，\n是故當修福，積集期永久。\n福德能為人，建立他世樂，\n福德天所歎，等修正行故。\n現世人不毀，終則生天上。」"
+  },
+  "a12": {
+   "sn3.20": "patiṭṭhā honti pāṇinan”ti.",
+   "T0100-sa-2.60": "佛說是已，諸比丘聞佛所說，歡喜奉行。",
+   "T0099-sa1233": "佛說此經已，波斯匿王聞佛所說，歡喜隨喜，作禮而去。"
+  },
+  "a13": {
+   "sn3.20": "Dutiyo vaggo. Tassuddānaṁ Jaṭilā pañca rājāno, Doṇapākakurena ca; Saṅgāmena dve vuttāni, Mallikā dve appamādena ca; Aputtakena dve vuttā, Vaggo tena pavuccatīti.",
+   "nan-sn3.20": "此嗢陀南：結髮之行者以及於五王\n擊戰故事二姬二不放逸\n無子二故事依此云一品"
+  }
+ }
+}

@@ -1,0 +1,111 @@
+{
+ "slug": "pi-sn4.13",
+ "title": "別譯雜阿含經 （二九）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "世尊足傷與正念忍受"
+  },
+  {
+   "id": "a02",
+   "label": "魔波旬偈問世尊眠眠"
+  },
+  {
+   "id": "a03",
+   "label": "世尊答偈：非懶非醉，具足法財"
+  },
+  {
+   "id": "a04",
+   "label": "世尊以毒箭喻說眠無損"
+  },
+  {
+   "id": "a05",
+   "label": "魔波旬退散"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn4.13",
+   "lang": "pi",
+   "label": "巴利 SN4.13",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn4.13",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN4.13",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.29",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （二九）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa1090",
+   "lang": "lzh",
+   "label": "雜阿含經 （一〇九〇）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（二九）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一〇九〇）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn4.13": "Saṁyutta Nikāya 4.13 2. Dutiyavagga Sakalikasutta Evaṁ me sutaṁ—",
+   "nan-sn4.13": "〔一三〕第三　巖石之破片如是我聞。爾時世尊住王舍城摩達屈闍之鹿野苑。",
+   "T0100-sa-2.29": "如是我聞：一時，佛在王舍城曼直林中。",
+   "T0099-sa1090": "如是我聞：一時，佛住王舍城毘婆羅山七葉樹林石室中。"
+  },
+  "a01": {
+   "sn4.13": "ekaṁ samayaṁ bhagavā rājagahe viharati maddakucchismiṁ migadāye. Tena kho pana samayena bhagavato pādo sakalikāya khato hoti, bhusā sudaṁ bhagavato vedanā vattanti sārīrikā dukkhā tibbā kharā kaṭukā asātā amanāpā. Tā sudaṁ bhagavā sato sampajāno adhivāseti avihaññamāno. Atha kho bhagavā catugguṇaṁ saṅghāṭiṁ paññapetvā dakkhiṇena passena sīhaseyyaṁ kappesi pāde pādaṁ accādhāya sato sampajāno.",
+   "nan-sn4.13": "爾時，世尊其足被石片所傷。世尊足痛、銳、烈，苦痛不快。世尊正念正心，以克服、忍耐。",
+   "T0100-sa-2.29": "佛於初夜坐禪經行。初夜以訖，洗足入室，右脇著地，足足相累，繫心在明，作於起想。魔王波旬知佛心已，而作是念：「沙門瞿曇在王舍城曼直林中，於其初夜，坐禪經行。至中夜前，洗足入房，右脇著地，足足相累，繫心在明，作於起想。我今當往，而作壞亂。」",
+   "T0099-sa1090": "爾時，世尊夜起露地，或坐或經行。至後夜時，洗足入室，安身臥息，右脇著地，足足相累，繫念明相，正念正智，作起覺想。時，魔波旬作是念：「沙門瞿曇住王舍城毘婆羅山七葉樹林石室中，夜起露地若坐若行，至後夜時，洗足入室而坐，右脇臥息，足足相累，繫念明相，正念正智，作起覺想。我今當往，為作留難。」"
+  },
+  "a02": {
+   "sn4.13": "Atha kho māro pāpimā yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ gāthāya ajjhabhāsi: “Mandiyā nu kho sesi udāhu kāveyyamatto, Atthā nu te sampacurā na santi; Eko vivitte sayanāsanamhi, Niddāmukho kimidaṁ soppase vā”ti.",
+   "nan-sn4.13": "時，惡魔波旬來詣世尊處。詣已，以偈言世尊曰：",
+   "T0100-sa-2.29": "爾時，魔王化作摩納，在如來前，而說偈言：「云何無事務，而作於睡眠？\n安寢不𭔏寤，如似醉人眠。\n人無財業者，乃可自恣睡，\n大有諸財業，歡樂快睡眠。」",
+   "T0099-sa1090": "化作年少，往住佛前，而說偈言：「為因我故眠，為是後邊故，\n多有錢財寶，何故守空閑？\n獨一無等侶，而著於睡眠。」"
+  },
+  "a03": {
+   "sn4.13": "“Na mandiyā sayāmi nāpi kāveyyamatto, Atthaṁ sameccāhamapetasoko; Eko vivitte sayanāsanamhi, Sayāmahaṁ sabbabhūtānukampī.",
+   "nan-sn4.13": "懶惰於寢眠耽著作詩耶\n汝為事不多獨自離市里\n住何寢意臥",
+   "T0100-sa-2.29": "爾時，世尊知魔來嬈亂，而說偈言：「我非無作睡，亦非醉而眠。\n我無世財故，是以今睡眠，\n我多得法財，是以安睡眠。\n我於睡眠中，乃至出入息，\n皆能有利益，未甞有損減。\n寤則無疑慮，睡眠無所畏。",
+   "T0099-sa1090": "爾時，世尊作是念：「惡魔波旬欲作嬈亂。」即說偈言：「不因汝故眠，非為最後邊，\n亦無多錢財，唯集無憂寶。"
+  },
+  "a04": {
+   "sn4.13": "Yesampi sallaṁ urasi paviṭṭhaṁ, Muhuṁ muhuṁ hadayaṁ vedhamānaṁ; Tepīdha soppaṁ labhare sasallā, Tasmā ahaṁ na supe vītasallo. Jaggaṁ na saṅke napi bhemi sottuṁ, Rattindivā nānutapanti māmaṁ; Hāniṁ na passāmi kuhiñci loke, Tasmā supe sabbabhūtānukampī”ti.",
+   "nan-sn4.13": "〔世尊：〕非依懶惰臥亦非作詩臥\n離愁我事了獨自離市里\n我哀憐一切有情以為臥\n以箭貫串胸心臟逆猛烈\n受傷亦在眠我為無傷者\n何故不成眠覺之無躊躇\n眼之無恐怖日夜無悔苦\n不見逆世間憐諸有情臥",
+   "T0100-sa-2.29": "譬如有毒箭，人射中其心，\n數數受苦痛，猶尚能得睡。\n我毒箭已拔，何故而不睡？」",
+   "T0099-sa1090": "哀愍世間故，右脇而臥息，\n覺亦不疑惑，眠亦不恐怖。\n若晝若復夜，無增亦無損，\n為哀眾生眠，故無有損減。\n正復以百槍，貫身常掘動，\n猶得安隱眠，已離內槍故。」"
+  },
+  "a05": {
+   "sn4.13": "Atha kho māro pāpimā “jānāti maṁ bhagavā, jānāti maṁ sugato”ti dukkhī dummano tatthevantaradhāyīti.",
+   "nan-sn4.13": "時，惡魔波旬苦惱以：「世尊已知我，善逝已知我。」而萎身隱形沒於其處。",
+   "T0100-sa-2.29": "魔聞是偈，作是念：「沙門瞿曇已知我心。」心懷憂惱，於即還宮。",
+   "T0099-sa1090": "時，魔波旬作是念：「沙門瞿曇已知我心。」內懷憂慼，即沒不現。"
+  }
+ }
+}

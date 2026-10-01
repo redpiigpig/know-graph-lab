@@ -1,0 +1,158 @@
+{
+ "slug": "pi-an11.9",
+ "title": "別譯雜阿含經 （一五一）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "世尊教誡"
+  },
+  {
+   "id": "a02",
+   "label": "惡馬喻"
+  },
+  {
+   "id": "a03",
+   "label": "五蓋譬喻"
+  },
+  {
+   "id": "a04",
+   "label": "善馬喻"
+  },
+  {
+   "id": "a05",
+   "label": "問答：禪不依何法"
+  },
+  {
+   "id": "a06",
+   "label": "佛答：觀空寂"
+  },
+  {
+   "id": "a07",
+   "label": "偈頌：讚歎禪者"
+  },
+  {
+   "id": "a08",
+   "label": "重問：禪不依何法"
+  },
+  {
+   "id": "a09",
+   "label": "重偈：讚歎禪者"
+  },
+  {
+   "id": "a10",
+   "label": "佛答：伏諸想"
+  },
+  {
+   "id": "a11",
+   "label": "重偈：讚歎禪者"
+  },
+  {
+   "id": "a12",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "an11.9",
+   "lang": "pi",
+   "label": "巴利 AN11.9",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "T0100-sa-2.151",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （一五一）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa926",
+   "lang": "lzh",
+   "label": "雜阿含經 （九二六）",
+   "who": "劉宋 求那跋陀羅譯",
+   "reorder": true
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（一五一）"
+  },
+  {
+   "work": "T0099",
+   "node": "（九二六）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "an11.9": "Aṅguttara Nikāya 11.9",
+   "T0100-sa-2.151": "如是我聞：一時，佛在那提迦國瓫寔迦精舍。",
+   "T0099-sa926": "如是我聞：一時，佛住那梨聚落深谷精舍。"
+  },
+  "a01": {
+   "an11.9": "1. Nissayavagga",
+   "T0100-sa-2.151": "爾時，世尊告大迦旃延：「定意莫亂，當如善乘，調攝諸根，勿同惡馬，諸根馳散。",
+   "T0099-sa926": "爾時，世尊告詵陀迦旃延：「當修真實禪，莫習強良禪，如強良馬，繫槽櫪上，彼馬不念：『我所應作、所不應作。』"
+  },
+  "a02": {
+   "an11.9": "Saddhasutta",
+   "T0100-sa-2.151": "猶如惡馬繫之槽上，唯念水草，餘無所知。",
+   "T0099-sa926": "但念穀草。如是，丈夫於貪欲纏多所修習故，彼以貪欲心思惟，於出離道不如實知，心常馳騁，隨貪欲纏而求正受；"
+  },
+  "a03": {
+   "an11.9": "Ekaṁ samayaṁ bhagavā nātike viharati giñjakāvasathe. Atha kho āyasmā saddho yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdi. Ekamantaṁ nisinnaṁ kho āyasmantaṁ saddhaṁ bhagavā etadavoca: “Ājānīyajhāyitaṁ kho, saddha, jhāya; mā khaḷuṅkajhāyitaṁ. Kathañca, khaḷuṅkajhāyitaṁ hoti? Assakhaḷuṅko hi, saddha, doṇiyā baddho ‘yavasaṁ yavasan’ti jhāyati. Taṁ kissa hetu? Na hi, saddha, assakhaḷuṅkassa doṇiyā baddhassa evaṁ hoti: ‘kiṁ nu kho maṁ ajja assadammasārathi kāraṇaṁ kāressati, kimassāhaṁ paṭikaromī’ti.",
+   "T0100-sa-2.151": "若不得食，斷絕羇靽。亦如有人多與欲結相應，以貪欲故，多有嫌恨之心，多起欲覺，以有欲覺，生諸惱害，種種惡覺由斯而生。以是事故，不知出要，終不能識欲之體相。若復有人，躭好睡眠，以常眠故，多起亂想，種種煩惱從之生長。以是義故，不知出要、對治之法。若復有人，多生掉悔，以其常生掉悔心故，於諸法相不能分明。當知掉悔為散亂因，以是因緣，不知出要、對治之法。若復有人，多生疑心，以疑心故，於諸法中猶豫不了。以斯義故，不知出要、對治之法。",
+   "T0099-sa926": "瞋恚、睡眠、掉悔、疑多修習故，於出離道不如實知，以疑蓋心思惟，以求正受。"
+  },
+  "a04": {
+   "an11.9": "So doṇiyā baddho ‘yavasaṁ yavasan’ti jhāyati. Evamevaṁ kho, saddha, idhekacco purisakhaḷuṅko araññagatopi rukkhamūlagatopi suññāgāragatopi kāmarāgapariyuṭṭhitena cetasā viharati kāmarāgaparetena uppannassa ca kāmarāgassa nissaraṇaṁ yathābhūtaṁ nappajānāti. So kāmarāgaṁyeva antaraṁ katvā jhāyati pajjhāyati nijjhāyati avajjhāyati, byāpādapariyuṭṭhitena cetasā viharati … thinamiddhapariyuṭṭhitena cetasā viharati … uddhaccakukkuccapariyuṭṭhitena cetasā viharati … vicikicchāpariyuṭṭhitena cetasā viharati vicikicchāparetena, uppannāya ca vicikicchāya nissaraṇaṁ yathābhūtaṁ nappajānāti. So vicikicchaṁyeva antaraṁ katvā jhāyati pajjhāyati nijjhāyati avajjhāyati. So pathavimpi nissāya jhāyati, āpampi nissāya jhāyati, tejampi nissāya jhāyati, vāyampi nissāya jhāyati, ākāsānañcāyatanampi nissāya jhāyati, viññāṇañcāyatanampi nissāya jhāyati, ākiñcaññāyatanampi nissāya jhāyati, nevasaññānāsaññāyatanampi nissāya jhāyati, idhalokampi nissāya jhāyati, paralokampi nissāya jhāyati, yampidaṁ diṭṭhaṁ sutaṁ mutaṁ viññātaṁ pattaṁ pariyesitaṁ anuvicaritaṁ manasā, tampi nissāya jhāyati. Evaṁ kho, saddha, purisakhaḷuṅkajhāyitaṁ hoti.",
+   "T0100-sa-2.151": "如善乘馬，繫之櫪上，其心都不思於水草，不絕羇靽。譬如有人心無欲結，但有淨想，以不染著是欲想故，亦復不生掉悔疑等睡眠之蓋，以其不生五蓋之心因緣力故，便知出要、對治之法。比丘，如是不依於彼地水火風，亦復不依四無色定而生禪法，不依此世，不依他世，亦復不依日月星辰，不依見聞，不依識識，不依智知，不依推求心識境界，亦不依止覺知，獲得無所依止禪。若有比丘，不依如是諸地禪法，得深定故，釋提桓因、三十三天及諸梵眾，皆悉合掌恭敬尊重，歸依是人。",
+   "T0099-sa926": "「詵陀！若真生馬繫槽櫪上，不念水草，但作是念：『駕乘之事。』如是，丈夫不念貪欲纏，住於出離如實知，不以貪欲纏而求正受，亦不瞋恚、睡眠、掉悔、疑纏，多住於出離；瞋恚、睡眠、掉悔、疑纏如實知，不以疑纏而求正受。「如是，詵陀！比丘如是禪者，不依地修禪，不依水、火、風、空、識、無所有、非想非非想而修禪。不依此世、不依他世，非日、月，非見、聞、覺、識，非得非求，非隨覺，非隨觀而修禪。"
+  },
+  "a05": {
+   "an11.9": "Kathañca, saddha, ājānīyajhāyitaṁ hoti? Bhadro hi, saddha, assājānīyo doṇiyā baddho na ‘yavasaṁ yavasan’ti jhāyati. Taṁ kissa hetu? Bhadrassa hi, saddha, assājānīyassa doṇiyā baddhassa evaṁ hoti: ‘kiṁ nu kho maṁ ajja assadammasārathi kāraṇaṁ kāressati, kimassāhaṁ paṭikaromī’ti. So doṇiyā baddho na ‘yavasaṁ yavasan’ti jhāyati. Bhadro hi, saddha, assājānīyo yathā iṇaṁ yathā bandhaṁ yathā jāniṁ yathā kaliṁ evaṁ patodassa ajjhoharaṇaṁ samanupassati. Evamevaṁ kho, saddha, bhadro purisājānīyo araññagatopi rukkhamūlagatopi suññāgāragatopi na kāmarāgapariyuṭṭhitena cetasā viharati na kāmarāgaparetena, uppannassa ca kāmarāgassa nissaraṇaṁ yathābhūtaṁ pajānāti, na byāpādapariyuṭṭhitena cetasā viharati … na thinamiddhapariyuṭṭhitena cetasā viharati … na uddhaccakukkuccapariyuṭṭhitena cetasā viharati … na vicikicchāpariyuṭṭhitena cetasā viharati na vicikicchāparetena, uppannāya ca vicikicchāya nissaraṇaṁ yathābhūtaṁ pajānāti. So neva pathaviṁ nissāya jhāyati, na āpaṁ nissāya jhāyati, na tejaṁ nissāya jhāyati, na vāyaṁ nissāya jhāyati, na ākāsānañcāyatanaṁ nissāya jhāyati, na viññāṇañcāyatanaṁ nissāya jhāyati, na ākiñcaññāyatanaṁ nissāya jhāyati, na nevasaññānāsaññāyatanaṁ nissāya jhāyati, na idhalokaṁ nissāya jhāyati, na paralokaṁ nissāya jhāyati, yampidaṁ diṭṭhaṁ sutaṁ mutaṁ viññātaṁ pattaṁ pariyesitaṁ anuvicaritaṁ manasā, tampi nissāya na jhāyati;",
+   "T0100-sa-2.151": "我等今者，不知當依何法則而得禪定？」爾時，尊者薄迦梨在佛後立，以扇扇佛，即白佛言：「世尊！云何比丘修諸禪定，不依四大及四無色，乃至不依覺觀之想？若如是者，諸比丘等云何而得如是禪定？釋提桓因及諸大眾合掌恭敬，尊重讚嘆得斯定者，而作是言：『此善男子，丈夫中上，依止何事而修諸禪？』",
+   "T0099-sa926": "時，跋迦利白佛言：「世尊！"
+  },
+  "a06": {
+   "an11.9": "jhāyati ca pana.",
+   "T0100-sa-2.151": "」佛告薄迦梨：「若有比丘深修禪定，觀彼大地悉皆虛偽，都不見有真實地想，水火風種，及四無色，此世、他世、日月星辰、識知見聞、推求覺觀、心意境界，及以於彼智不及處，亦復如是，皆悉虛偽，無有實法，但以假號，因緣和合，有種種名，觀斯空寂，不見有法，及以非法。」"
+  },
+  "a07": {
+   "an11.9": "Evaṁ jhāyiñca pana, saddha, bhadraṁ purisājānīyaṁ saindā devā sabrahmakā sapajāpatikā ārakāva namassanti: ‘Namo te purisājañña, namo te purisuttama; Yassa te nābhijānāma, yampi nissāya jhāyasī’”ti. Evaṁ vutte, āyasmā saddho bhagavantaṁ etadavoca:",
+   "T0100-sa-2.151": "爾時，世尊即說偈言：「汝今薄迦梨，應當如是知，\n習於坐禪法，觀察無所有。\n天主憍尸迦，及三十三天，\n世界根本主，大梵天王等，\n合掌恭敬禮，稽首人中尊，\n咸皆稱斯言：『南無善丈夫！\n我等不知汝，依憑何法則，\n而得是深定，諸人所不了。』」說斯法時，大迦旃延遠塵離垢，得法眼淨。薄迦梨比丘煩惱永滅，不受後生，盡諸有結。",
+   "T0099-sa926": "「詵陀！比丘如是修禪者，諸天主、伊濕波羅、波闍波提恭敬合掌，稽首作禮而說偈言：「『南無大士夫，南無士之上，\n以我不能知，依何而禪定？』」爾時，有尊者跋迦利住於佛後，執扇扇佛。"
+  },
+  "a08": {
+   "an11.9": "“kathaṁ jhāyī pana, bhante, bhadro purisājānīyo neva pathaviṁ nissāya jhāyati, na āpaṁ nissāya jhāyati, na tejaṁ nissāya jhāyati, na vāyaṁ nissāya jhāyati, na ākāsānañcāyatanaṁ nissāya jhāyati, na viññāṇañcāyatanaṁ nissāya jhāyati, na ākiñcaññāyatanaṁ nissāya jhāyati, na nevasaññānāsaññāyatanaṁ nissāya jhāyati, na idhalokaṁ nissāya jhāyati, na paralokaṁ nissāya jhāyati, yampidaṁ diṭṭhaṁ sutaṁ mutaṁ viññātaṁ pattaṁ pariyesitaṁ anuvicaritaṁ manasā, tampi nissāya na jhāyati; jhāyati ca pana?",
+   "T0099-sa926": "若比丘云何入禪，而不依地、水、火、風，乃至覺觀，而修禪定？"
+  },
+  "a09": {
+   "an11.9": "Kathaṁ jhāyiñca pana, bhante, bhadraṁ purisājānīyaṁ saindā devā sabrahmakā sapajāpatikā ārakāva namassanti: ‘Namo te purisājañña, namo te purisuttama; Yassa te nābhijānāma, yampi nissāya jhāyasī’”ti.",
+   "T0099-sa926": "云何比丘禪，諸天主、伊濕波羅、波闍波提合掌恭敬，稽首作禮而說偈言：「『南無大士夫，南無士之上，\n以我不能知，依何而禪定？』"
+  },
+  "a10": {
+   "an11.9": "“Idha, saddha, bhadrassa purisājānīyassa pathaviyaṁ pathavisaññā vibhūtā hoti, āpasmiṁ āposaññā vibhūtā hoti, tejasmiṁ tejosaññā vibhūtā hoti, vāyasmiṁ vāyosaññā vibhūtā hoti, ākāsānañcāyatane ākāsānañcāyatanasaññā vibhūtā hoti, viññāṇañcāyatane viññāṇañcāyatanasaññā vibhūtā hoti, ākiñcaññāyatane ākiñcaññāyatanasaññā vibhūtā hoti, nevasaññānāsaññāyatane nevasaññānāsaññāyatanasaññā vibhūtā hoti, idhaloke idhalokasaññā vibhūtā hoti, paraloke paralokasaññā vibhūtā hoti, yampidaṁ diṭṭhaṁ sutaṁ mutaṁ viññātaṁ pattaṁ pariyesitaṁ anuvicaritaṁ manasā, tatrāpi saññā vibhūtā hoti. Evaṁ jhāyī kho, saddha, bhadro purisājānīyo neva pathaviṁ nissāya jhāyati …pe… yampidaṁ diṭṭhaṁ sutaṁ mutaṁ viññātaṁ pattaṁ pariyesitaṁ anuvicaritaṁ manasā, tampi nissāya na jhāyati; jhāyati ca pana.",
+   "T0099-sa926": "」佛告跋迦利：「比丘於地想能伏地想，於水、火、風想、無量空入處想、識入處想、無所有入處、非想非非想入處想。此世他世，日、月、見、聞、覺、識，若得若求，若覺若觀，悉伏彼想。跋迦利！比丘如是禪者，不依地、水、火、風，乃至不依覺、觀而修禪。"
+  },
+  "a11": {
+   "an11.9": "Evaṁ jhāyiñca pana, saddha, bhadraṁ purisājānīyaṁ saindā devā sabrahmakā sapajāpatikā ārakāva namassanti: ‘Namo te purisājañña, namo te purisuttama; Yassa te nābhijānāma, yampi nissāya jhāyasī’”ti.",
+   "T0099-sa926": "跋迦利！比丘如是禪者，諸天主、伊濕波羅、波闍波提恭敬合掌，稽首作禮而說偈言：「『南無大士夫，南無士之上，\n以我不能知，何所依而禪？』"
+  },
+  "a12": {
+   "an11.9": "Navamaṁ.",
+   "T0100-sa-2.151": "時諸比丘聞佛所說，歡喜奉行。惡馬、調順馬賢乘、三及四\n鞭影并調乘有過、八種惡\n迦旃延離垢十事悉皆竟",
+   "T0099-sa926": "」佛說此經時，詵陀迦旃延比丘遠塵離垢，得法眼淨。跋迦利比丘不起諸漏，心得解脫。佛說此經已，跋迦利比丘聞佛所說，歡喜奉行。"
+  }
+ }
+}

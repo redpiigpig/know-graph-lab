@@ -1,0 +1,108 @@
+{
+ "slug": "pi-sn20.2",
+ "title": "雜阿含經 （二二）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "以指端土示眾"
+  },
+  {
+   "id": "a02",
+   "label": "比丘答問"
+  },
+  {
+   "id": "a03",
+   "label": "佛說譬喻意義"
+  },
+  {
+   "id": "a04",
+   "label": "結勸修不放逸"
+  },
+  {
+   "id": "a05",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn20.2",
+   "lang": "pi",
+   "label": "巴利 SN20.2",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn20.2",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN20.2",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0101-sa-3.22",
+   "lang": "lzh",
+   "label": "雜阿含經 （二二）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa1256",
+   "lang": "lzh",
+   "label": "雜阿含經 （一二五六）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0101"
+ ],
+ "anchors": [
+  {
+   "work": "T0101",
+   "node": "（二二）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一二五六）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn20.2": "Saṁyutta Nikāya 20.2 1. Opammavagga Nakhasikhasutta",
+   "nan-sn20.2": "〔二〕第二　指端"
+  },
+  "a01": {
+   "sn20.2": "Sāvatthiyaṁ viharati.",
+   "nan-sn20.2": "〔爾時，世尊〕住舍衛城。",
+   "T0101-sa-3.22": "聞如是：一時佛在舍衛國，行在祇樹給孤獨園。",
+   "T0099-sa1256": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。"
+  },
+  "a02": {
+   "sn20.2": "Atha kho bhagavā parittaṁ nakhasikhāyaṁ paṁsuṁ āropetvā bhikkhū āmantesi: “Taṁ kiṁ maññatha, bhikkhave, katamaṁ nu kho bahutaraṁ, yo cāyaṁ mayā paritto nakhasikhāyaṁ paṁsu āropito yā cāyaṁ mahāpathavī”ti?",
+   "nan-sn20.2": "爾時，世尊以指端上少量之土，示諸比丘曰：",
+   "T0101-sa-3.22": "佛便以爪甲頭取土已取，便告比丘：「比丘！知是云何？何等為多？爪頭土何如地土多？」",
+   "T0099-sa1256": "爾時，世尊以爪抄土，告諸比丘：「於意云何？"
+  },
+  "a03": {
+   "sn20.2": "“Etadeva, bhante, bahutaraṁ yadidaṁ mahāpathavī. Appamattakoyaṁ bhagavatā paritto nakhasikhāyaṁ paṁsu āropito. Saṅkhampi na upeti upanidhimpi na upeti kalabhāgampi na upeti mahāpathaviṁ upanidhāya bhagavatā paritto nakhasikhāyaṁ paṁsu āropito”ti.",
+   "nan-sn20.2": "「諸比丘！汝等對此作如何思惟耶？此我指端所示少量之土與此大地，何者為多耶？」",
+   "T0101-sa-3.22": "比丘可便報：「佛爪甲上土少，不可比地土，無有比，亦非百倍，亦非千倍，亦非萬倍，亦非億倍，亦無有數，亦無有數喻亦無聚，亦不可說譬喻，是地土甚多。」",
+   "T0099-sa1256": "我爪上土多，為大地土多？」比丘白佛：「世尊！爪上土甚少少耳，其大地土無量無數，不可為比。」"
+  },
+  "a04": {
+   "sn20.2": "“Evameva kho, bhikkhave, appakā te sattā ye manussesu paccājāyanti; atha kho eteyeva bahutarā sattā ye aññatra manussehi paccājāyanti. Tasmātiha, bhikkhave, evaṁ sikkhitabbaṁ: ‘appamattā viharissāmā’ti. Evañhi vo, bhikkhave, sikkhitabban”ti.",
+   "nan-sn20.2": "「大德！此大地土為多，世尊所示指端之土為少。世尊所示指端之土與大地相比，不可數算之倍數所能及。」「諸比丘！同此，由人界沒生於人間之眾生為少，由人界沒生於他界之眾生為多。",
+   "T0101-sa-3.22": "佛便告比丘：「如是人所不知智黠眼行如地土，如是人所為智黠眼行如爪上土。如是人所為智黠眼行，如是可學智黠眼行無有過，黠生當為自活，如是比丘欲行道者可學。」佛說如是。",
+   "T0099-sa1256": "佛告諸比丘：「如是，眾生能數數下至彈指頃，於一切眾生修習慈心者，如甲上土耳；其諸眾生不能數數下至如彈指頃，於一切眾生修習慈心者，如大地土。"
+  },
+  "a05": {
+   "sn20.2": "Dutiyaṁ.",
+   "nan-sn20.2": "諸比丘！然則汝等應如是學：『我等住於不放逸。』諸比丘！汝等應如是學。」",
+   "T0099-sa1256": "是故，諸比丘！常當數數於一切眾生修習慈心。」佛說此經已，諸比丘聞佛所說，歡喜奉行。"
+  }
+ }
+}

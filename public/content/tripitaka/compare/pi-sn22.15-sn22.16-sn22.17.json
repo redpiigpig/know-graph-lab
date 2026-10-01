@@ -1,0 +1,128 @@
+{
+ "slug": "pi-sn22.15-sn22.16-sn22.17",
+ "title": "雜阿含經 （一〇）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "色受想行識無常苦無我觀"
+  },
+  {
+   "id": "a02",
+   "label": "聖弟子觀五蘊得解脫"
+  },
+  {
+   "id": "a03",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn22.15",
+   "lang": "pi",
+   "label": "巴利 SN22.15",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn22.15",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN22.15",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "sn22.16",
+   "lang": "pi",
+   "label": "巴利 SN22.16",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn22.16",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN22.16",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "sn22.17",
+   "lang": "pi",
+   "label": "巴利 SN22.17",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn22.17",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN22.17",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0099-sa10",
+   "lang": "lzh",
+   "label": "雜阿含經 （一〇）",
+   "who": "劉宋 求那跋陀羅譯"
+  },
+  {
+   "id": "T0099-sa9",
+   "lang": "lzh",
+   "label": "雜阿含經 （九）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099"
+ ],
+ "anchors": [
+  {
+   "work": "T0099",
+   "node": "（一〇）"
+  },
+  {
+   "work": "T0099",
+   "node": "（九）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn22.15": "Saṁyutta Nikāya 22.15 2. Aniccavagga Yadaniccasutta",
+   "nan-sn22.15": "〔一五〕第四　無常者（一）一～二",
+   "sn22.16": "Saṁyutta Nikāya 22.16 2. Aniccavagga Yaṁdukkhasutta",
+   "nan-sn22.16": "〔一六〕第五　無常者（二）一～二",
+   "sn22.17": "Saṁyutta Nikāya 22.17 2. Aniccavagga Yadanattāsutta",
+   "nan-sn22.17": "〔一七〕第六　無常者（三）一～二"
+  },
+  "a01": {
+   "sn22.15": "Sāvatthinidānaṁ. “Rūpaṁ, bhikkhave, aniccaṁ. Yadaniccaṁ taṁ dukkhaṁ; yaṁ dukkhaṁ tadanattā; yadanattā taṁ ‘netaṁ mama, nesohamasmi, na meso attā’ti evametaṁ yathābhūtaṁ sammappaññāya daṭṭhabbaṁ. Vedanā aniccā. Yadaniccaṁ taṁ dukkhaṁ; yaṁ dukkhaṁ tadanattā; yadanattā taṁ ‘netaṁ mama, nesohamasmi, na meso attā’ti evametaṁ yathābhūtaṁ sammappaññāya daṭṭhabbaṁ. Saññā aniccā …pe… saṅkhārā aniccā … viññāṇaṁ aniccaṁ. Yadaniccaṁ taṁ dukkhaṁ; yaṁ dukkhaṁ tadanattā; yadanattā taṁ ‘netaṁ mama, nesohamasmi, na meso attā’ti evametaṁ yathābhūtaṁ sammappaññāya daṭṭhabbaṁ.",
+   "nan-sn22.15": "〔爾時，世尊〕在舍衛城……乃至……「諸比丘！色是無常，無常者是苦，苦者是無我，無我者非我所，非我，非我之我。應以正慧如實作如是觀。受是無常，無常者是苦，苦者是無我，無我者非我所，非我，非我之我。應以正慧如實作如是觀。想是無常……行是無常……",
+   "sn22.16": "Sāvatthinidānaṁ. “Rūpaṁ, bhikkhave, dukkhaṁ. Yaṁ dukkhaṁ tadanattā; yadanattā taṁ ‘netaṁ mama, nesohamasmi, na meso attā’ti evametaṁ yathābhūtaṁ sammappaññāya daṭṭhabbaṁ. Vedanā dukkhā … saññā dukkhā … saṅkhārā dukkhā … viññāṇaṁ dukkhaṁ. Yaṁ dukkhaṁ tadanattā; yadanattā taṁ ‘netaṁ mama, nesohamasmi, na meso attā’ti evametaṁ yathābhūtaṁ sammappaññāya daṭṭhabbaṁ.",
+   "nan-sn22.16": "〔爾時，世尊〕在舍衛城……乃至……「諸比丘！色是苦，苦者是無我，無我者非我所，非我，非我之我。受是苦……想是苦……行是苦……",
+   "sn22.17": "Sāvatthinidānaṁ. “Rūpaṁ, bhikkhave, anattā. Yadanattā taṁ ‘netaṁ mama, nesohamasmi, na meso attā’ti evametaṁ yathābhūtaṁ sammappaññāya daṭṭhabbaṁ. Vedanā anattā … saññā anattā … saṅkhārā anattā … viññāṇaṁ anattā. Yadanattā taṁ ‘netaṁ mama, nesohamasmi, na meso attā’ti evametaṁ yathābhūtaṁ sammappaññāya daṭṭhabbaṁ.",
+   "nan-sn22.17": "〔爾時，世尊〕在舍衛城……乃至……「諸比丘！色是無我，無我者非我所，非我，非我之我。應以正慧如實作如是觀。四～六受是無我……想是無我……行是無我……",
+   "T0099-sa10": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。爾時，世尊告諸比丘：「色無常，無常即苦，苦即非我，非我者即非我所。如是觀者，名真實觀。如是受、想、行、識無常，無常即苦，苦即非我，非我者即非我所。",
+   "T0099-sa9": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。爾時，世尊告諸比丘：「色無常，無常即苦，苦即非我，非我者亦非我所。如是觀者，名真實正觀。如是受、想、行、識無常，無常即苦，苦即非我，非我者亦非我所。"
+  },
+  "a02": {
+   "sn22.15": "Evaṁ passaṁ …pe…",
+   "nan-sn22.15": "識是無常，無常者是苦，苦者是無我，無我者非我所，非我，非我之我。應以正慧如實作如是觀。",
+   "sn22.16": "Evaṁ passaṁ …pe…",
+   "nan-sn22.16": "識是苦，苦者是無我，無我者非我所，非我，非我之我。應以正慧如實作如是觀。",
+   "sn22.17": "Evaṁ passaṁ, bhikkhave …pe…",
+   "nan-sn22.17": "識是無我，無我者非我所，非我，非我之我。應以正慧如實作如是觀。",
+   "T0099-sa10": "如是觀者，名真實觀。「聖弟子！如是觀者，於色解脫，於受、想、行、識解脫。",
+   "T0099-sa9": "如是觀者，名真實觀。「聖弟子！如是觀者，厭於色，厭受、想、行、識，厭故不樂，不樂故得解脫。"
+  },
+  "a03": {
+   "sn22.15": "nāparaṁ itthattāyā’ti pajānātī”ti. Catutthaṁ.",
+   "nan-sn22.15": "諸比丘！有聞之聖弟子……乃至……知……不受後有。」",
+   "sn22.16": "nāparaṁ itthattāyā’ti pajānātī”ti. Pañcamaṁ.",
+   "nan-sn22.16": "諸比丘！有聞之聖弟子……乃至……知……不受後有。」",
+   "sn22.17": "nāparaṁ itthattāyā’ti pajānātī”ti. Chaṭṭhaṁ.",
+   "nan-sn22.17": "諸比丘！有聞之聖弟子……乃至……知……不受後有。」",
+   "T0099-sa10": "我說是等解脫於生、老、病、死、憂、悲、苦、惱。」時，諸比丘聞佛所說，歡喜奉行。",
+   "T0099-sa9": "解脫者真實智生：『我生已盡，梵行已立，所作已作，自知不受後有。』」時，諸比丘聞佛所說，歡喜奉行。"
+  }
+ }
+}

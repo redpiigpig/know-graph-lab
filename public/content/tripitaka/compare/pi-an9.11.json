@@ -1,0 +1,181 @@
+{
+ "slug": "pi-an9.11",
+ "title": "增壹阿含經 （六）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "舍利弗請遊人間"
+  },
+  {
+   "id": "a02",
+   "label": "佛陀開許"
+  },
+  {
+   "id": "a03",
+   "label": "舍利弗出發"
+  },
+  {
+   "id": "a04",
+   "label": "比丘誹謗舍利弗"
+  },
+  {
+   "id": "a05",
+   "label": "佛陀召喚舍利弗"
+  },
+  {
+   "id": "a06",
+   "label": "比丘傳達佛陀呼喚"
+  },
+  {
+   "id": "a07",
+   "label": "舍利弗返回見佛"
+  },
+  {
+   "id": "a08",
+   "label": "佛陀詢問舍利弗"
+  },
+  {
+   "id": "a09",
+   "label": "舍利弗自辯清白"
+  },
+  {
+   "id": "a10",
+   "label": "眾比丘鼓掌稱譽"
+  },
+  {
+   "id": "a11",
+   "label": "舍利弗師子吼（身念譬喻）"
+  },
+  {
+   "id": "a12",
+   "label": "比丘懺悔"
+  },
+  {
+   "id": "a13",
+   "label": "佛陀開示懺悔利益"
+  },
+  {
+   "id": "a14",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "an9.11",
+   "lang": "pi",
+   "label": "巴利 AN9.11",
+   "who": "Mahāsaṅgīti 本・SuttaCentral",
+   "reorder": true
+  },
+  {
+   "id": "T0125-ea37.6",
+   "lang": "lzh",
+   "label": "增壹阿含經 （六）",
+   "who": "東晉 瞿曇僧伽提婆譯"
+  },
+  {
+   "id": "T0026-ma24",
+   "lang": "lzh",
+   "label": "中阿含經 （二四）舍梨子相應品師子吼經第四（初一日誦）",
+   "who": "東晉 瞿曇僧伽提婆譯"
+  }
+ ],
+ "works": [
+  "T0026",
+  "T0125"
+ ],
+ "anchors": [
+  {
+   "work": "T0125",
+   "node": "（六）",
+   "uid": "T02n0125_p0712c12"
+  },
+  {
+   "work": "T0026",
+   "node": "（二四）舍梨子相應品師子吼經第四（初一日誦）",
+   "uid": "T01n0026_p0452b22"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "an9.11": "Aṅguttara Nikāya 9.11 2. Sīhanādavagga",
+   "T0125-ea37.6": "聞如是：一時，佛在舍衛國祇樹給孤獨園。爾時，尊者舍利弗往詣世尊所，頭面禮足，在一面坐。",
+   "T0026-ma24": "我聞如是：一時，佛遊舍衛國，在勝林給孤獨園。爾時，世尊與大比丘眾俱，於舍衛國而受夏坐，尊者舍梨子亦遊舍衛國而受夏坐。"
+  },
+  "a01": {
+   "an9.11": "Sīhanādasutta",
+   "T0125-ea37.6": "爾時，舍利弗白世尊言：「我今以在舍衛城夏坐，意欲人間遊化。」",
+   "T0026-ma24": "於是，尊者舍梨子舍衛國受夏坐訖，過三月已，補治衣竟，攝衣持鉢，往詣佛所，稽首禮足，却坐一面，白曰：「世尊！我於舍衛國受夏坐訖。世尊！我欲遊行人間。」"
+  },
+  "a02": {
+   "an9.11": "Ekaṁ samayaṁ bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme.",
+   "T0125-ea37.6": "世尊告曰：「今正是時。」",
+   "T0026-ma24": "世尊告曰：「舍梨子！汝去，隨所欲，諸未度者當令得度，諸未脫者當令得脫，諸未般涅槃者令得般涅槃。舍梨子！汝去，隨所欲。」"
+  },
+  "a03": {
+   "an9.11": "Atha kho āyasmā sāriputto yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho āyasmā sāriputto bhagavantaṁ etadavoca: “vuttho me, bhante, sāvatthiyaṁ vassāvāso. Icchāmahaṁ, bhante, janapadacārikaṁ pakkamitun”ti. “Yassadāni tvaṁ, sāriputta, kālaṁ maññasī”ti. Atha kho āyasmā sāriputto uṭṭhāyāsanā bhagavantaṁ abhivādetvā padakkhiṇaṁ katvā pakkāmi.",
+   "T0125-ea37.6": "時，舍利弗即從坐起，頭面禮足，便退而去。",
+   "T0026-ma24": "於是，尊者舍梨子聞佛所說，善受善持，即從坐起，稽首佛足，繞三匝而去，還至己房，收舉床座，攝衣持鉢，即便出去遊行人間。"
+  },
+  "a04": {
+   "an9.11": "Atha kho aññataro bhikkhu acirapakkante āyasmante sāriputte bhagavantaṁ etadavoca: “āyasmā maṁ, bhante, sāriputto āsajja appaṭinissajja cārikaṁ pakkanto”ti.",
+   "T0125-ea37.6": "時，舍利弗去未久，有一比丘懷誹謗意，白世尊言：「舍利弗與諸比丘共諍競，不懺悔，今遊行人間。」",
+   "T0026-ma24": "尊者舍梨子去後不久，有一梵行在於佛前犯相違法，白世尊曰：「今日尊者舍梨子輕慢我已，遊行人間。」"
+  },
+  "a05": {
+   "an9.11": "Atha kho bhagavā aññataraṁ bhikkhuṁ āmantesi: “ehi tvaṁ, bhikkhu, mama vacanena sāriputtaṁ āmantehi: ‘satthā taṁ, āvuso sāriputta, āmantetī’”ti.",
+   "T0125-ea37.6": "爾時，世尊告一比丘：「汝速往持吾聲，喚舍利弗。」比丘對曰：「如是。世尊！」佛勅目連、阿難：「汝等使諸房中召諸比丘詣世尊所。所以然者，舍利弗所入三昧，今當在如來前作師子吼。」是時，諸比丘聞佛教已，各集世尊所，頭面禮足，在一面坐。",
+   "T0026-ma24": "世尊聞已，告一比丘：「汝往舍梨子所，語舍梨子：『世尊呼汝。汝去不久，有一梵行在於我前犯相違法，而作是語：「世尊！今日尊者舍梨子輕慢我已，遊行人間。」』」一比丘受教已，即從坐起，禮佛而去。於是，尊者阿難住世尊後執拂侍佛。一比丘去後不久，尊者阿難即持戶鑰，遍至諸房，見諸比丘便作是語：「善哉！諸尊！速詣講堂，今尊者舍梨子當在佛前而師子吼，若尊者舍梨子所說甚深，息中之息，妙中之妙，如是說者，諸尊及我得聞此已，當善誦習，當善受持。」彼時，諸比丘聞尊者阿難語已，悉詣講堂。"
+  },
+  "a06": {
+   "an9.11": "“Evaṁ, bhante”ti kho so bhikkhu bhagavato paṭissutvā yenāyasmā sāriputto tenupasaṅkami; upasaṅkamitvā āyasmantaṁ sāriputtaṁ etadavoca: “satthā taṁ, āvuso sāriputta, āmantetī”ti. “Evamāvuso”ti kho āyasmā sāriputto tassa bhikkhuno paccassosi.",
+   "T0125-ea37.6": "是時，彼比丘受世尊教，即往至舍利弗所，語舍利弗言：「如來欲得相見。」",
+   "T0026-ma24": "爾時，一比丘往詣尊者舍梨子所，白曰：「世尊呼汝。汝去不久，有一梵行在於我前犯相違法，而作是語：『世尊！今日尊者舍梨子輕慢我已，遊行人間。』"
+  },
+  "a07": {
+   "an9.11": "Atha kho āyasmā sāriputto yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdi. Ekamantaṁ nisinnaṁ kho āyasmantaṁ sāriputtaṁ bhagavā etadavoca: “idha te, sāriputta, aññataro sabrahmacārī khīyanadhammaṁ āpanno:",
+   "T0125-ea37.6": "爾時，舍利弗往至佛所，頭面禮足，在一面坐。",
+   "T0026-ma24": "」於是，尊者舍梨子聞已，即從坐起，便還詣佛，稽首禮足，却坐一面。"
+  },
+  "a08": {
+   "an9.11": "‘āyasmā maṁ, bhante, sāriputto āsajja appaṭinissajjacārikaṁ pakkanto’”ti.",
+   "T0125-ea37.6": "是時，佛告舍利弗言：「卿向者去未久，有穢行比丘來至我所，而白我言云：『舍利弗比丘與諸比丘共諍，亦不悔過，在人間遊化。』審實爾乎？」舍利弗白佛言：「如來自當知之。」世尊告曰：「我自知耳。但今大眾各懷狐疑。汝今於大眾中，可以己辯而自明淨。」",
+   "T0026-ma24": "佛便告曰：「舍梨子！汝去不久，有一梵行在於我前犯相違法，而作是語：『世尊！今日尊者舍梨子輕慢我已，遊行人間。』舍梨子！汝實輕慢一梵行已而遊人間耶？」"
+  },
+  "a09": {
+   "an9.11": "“Yassa nūna, bhante, kāye kāyagatāsati anupaṭṭhitā assa, so idha aññataraṁ sabrahmacāriṁ āsajja appaṭinissajja cārikaṁ pakkameyya.",
+   "T0125-ea37.6": "舍利弗白佛言：「自出母胎年向八十，每自思惟，未曾殺生，亦不妄語，正使於調戲之中亦不妄語，亦復未曾鬪亂彼此；設不專意之時，或能有此行耳。我今，世尊！心意清淨，豈當與梵行人共鬪諍乎？亦如此地，亦受淨，亦受不淨，屎尿穢惡皆悉受之，膿血涕唾終不逆之；然此地亦不言惡，亦不言善，我亦如是，世尊！心不移轉，何得與梵行人共諍而遠遊行？心不專者能有此耳。",
+   "T0026-ma24": "尊者舍梨子白曰：「世尊！若無身身念者，彼便輕慢於一梵行而遊人間。世尊！我善有身身念，我當云何輕慢一梵行而遊人間？"
+  },
+  "a10": {
+   "an9.11": "Tena kho pana samayena āyasmā ca mahāmoggallāno āyasmā ca ānando avāpuraṇaṁ ādāya vihāre āhiṇḍanti: “abhikkamathāyasmanto, abhikkamathāyasmanto. Idānāyasmā sāriputto bhagavato sammukhā sīhanādaṁ nadissatī”ti."
+  },
+  "a11": {
+   "an9.11": "Seyyathāpi, bhante, pathaviyaṁ sucimpi nikkhipanti asucimpi nikkhipanti gūthagatampi nikkhipanti muttagatampi nikkhipanti kheḷagatampi nikkhipanti pubbagatampi nikkhipanti lohitagatampi nikkhipanti, na ca tena pathavī aṭṭīyati vā harāyati vā jigucchati vā; evamevaṁ kho ahaṁ, bhante, pathavīsamena cetasā viharāmi vipulena mahaggatena appamāṇena averena abyāpajjena. Yassa nūna, bhante, kāye kāyagatāsati anupaṭṭhitā assa, so idha aññataraṁ sabrahmacāriṁ āsajja appaṭinissajja cārikaṁ pakkameyya. Seyyathāpi, bhante, āpasmiṁ sucimpi dhovanti asucimpi dhovanti gūthagatampi … muttagatampi … kheḷagatampi … pubbagatampi … lohitagatampi dhovanti, na ca tena āpo aṭṭīyati vā harāyati vā jigucchati vā; evamevaṁ kho ahaṁ, bhante, āposamena cetasā viharāmi vipulena mahaggatena appamāṇena averena abyāpajjena. Yassa nūna, bhante, kāye kāyagatāsati anupaṭṭhitā assa, so idha aññataraṁ sabrahmacāriṁ āsajja appaṭinissajja cārikaṁ pakkameyya. Seyyathāpi, bhante, tejo sucimpi ḍahati asucimpi ḍahati gūthagatampi … muttagatampi … kheḷagatampi … pubbagatampi … lohitagatampi ḍahati, na ca tena tejo aṭṭīyati vā harāyati vā jigucchati vā; evamevaṁ kho ahaṁ, bhante, tejosamena cetasā viharāmi vipulena mahaggatena appamāṇena averena abyāpajjena. Yassa nūna, bhante, kāye kāyagatāsati anupaṭṭhitā assa, so idha aññataraṁ sabrahmacāriṁ āsajja appaṭinissajja cārikaṁ pakkameyya. Seyyathāpi, bhante, vāyo sucimpi upavāyati asucimpi upavāyati gūthagatampi … muttagatampi … kheḷagatampi … pubbagatampi … lohitagatampi upavāyati, na ca tena vāyo aṭṭīyati vā harāyati vā jigucchati vā; evamevaṁ kho ahaṁ, bhante, vāyosamena cetasā viharāmi vipulena mahaggatena appamāṇena averena abyāpajjena. Yassa nūna, bhante, kāye kāyagatāsati anupaṭṭhitā assa, so idha aññataraṁ sabrahmacāriṁ āsajja appaṭinissajja cārikaṁ pakkameyya. Seyyathāpi, bhante, rajoharaṇaṁ sucimpi puñchati asucimpi puñchati gūthagatampi … muttagatampi … kheḷagatampi … pubbagatampi … lohitagatampi puñchati, na ca tena rajoharaṇaṁ aṭṭīyati vā harāyati vā jigucchati vā; evamevaṁ kho ahaṁ, bhante, rajoharaṇasamena cetasā viharāmi vipulena mahaggatena appamāṇena averena abyāpajjena. Yassa nūna, bhante, kāye kāyagatāsati anupaṭṭhitā assa, so idha aññataraṁ sabrahmacāriṁ āsajja appaṭinissajja cārikaṁ pakkameyya. Seyyathāpi, bhante, caṇḍālakumārako vā caṇḍālakumārikā vā kaḷopihattho nantakavāsī gāmaṁ vā nigamaṁ vā pavisanto nīcacittaṁyeva upaṭṭhapetvā pavisati; evamevaṁ kho ahaṁ, bhante, caṇḍālakumārakacaṇḍālakumārikāsamena cetasā viharāmi vipulena mahaggatena appamāṇena averena abyāpajjena. Yassa nūna, bhante, kāye kāyagatāsati anupaṭṭhitā assa, so idha aññataraṁ sabrahmacāriṁ āsajja appaṭinissajja cārikaṁ pakkameyya. Seyyathāpi, bhante, usabho chinnavisāṇo sūrato sudanto suvinīto rathiyāya rathiyaṁ siṅghāṭakena siṅghāṭakaṁ anvāhiṇḍanto na kiñci hiṁsati pādena vā visāṇena vā; evamevaṁ kho ahaṁ, bhante, usabhachinnavisāṇasamena cetasā viharāmi vipulena mahaggatena appamāṇena averena abyāpajjena. Yassa nūna, bhante, kāye kāyagatāsati anupaṭṭhitā assa, so idha aññataraṁ sabrahmacāriṁ āsajja appaṭinissajja cārikaṁ pakkameyya. Seyyathāpi, bhante, itthī vā puriso vā daharo yuvā maṇḍanakajātiko sīsaṁnhāto ahikuṇapena vā kukkurakuṇapena vā manussakuṇapena vā kaṇṭhe āsattena aṭṭīyeyya harāyeyya jiguccheyya; evamevaṁ kho ahaṁ, bhante, iminā pūtikāyena aṭṭīyāmi harāyāmi jigucchāmi. Yassa nūna, bhante, kāye kāyagatāsati anupaṭṭhitā assa, so idha aññataraṁ sabrahmacāriṁ āsajja appaṭinissajja cārikaṁ pakkameyya. Seyyathāpi, bhante, puriso medakathālikaṁ parihareyya chiddāvachiddaṁ uggharantaṁ paggharantaṁ; evamevaṁ kho ahaṁ, bhante, imaṁ kāyaṁ pariharāmi chiddāvachiddaṁ uggharantaṁ paggharantaṁ. Yassa nūna, bhante, kāye kāyagatāsati anupaṭṭhitā assa, so idha aññataraṁ sabrahmacāriṁ āsajja appaṭinissajja cārikaṁ pakkameyyā”ti.",
+   "T0125-ea37.6": "我今心正，何得與梵行人共諍而遠遊乎？亦如水，亦能使好物淨，亦能使不好物淨；彼水不作是念：『我淨是、置是。』此亦如是，無有異想，何得與梵行人共鬪而遠遊乎？猶如熾火焚燒山野，不擇好醜，終無想念。我亦如是，豈當有意與梵行人共諍乎？亦如掃灑，不擇好醜，皆能除之，終無想念。猶如牛無其雙角，極自良善，亦不𣧑暴，善可將御，隨意所至，終無疑難。唯然，世尊！我心如是，亦不與想有所傷害，豈當與梵行人共諍而遠遊乎？亦如旃陀羅女著弊壞衣，在人間乞食亦無禁忌。我亦如是，世尊！亦無想念，當興諍訟而遠遊也？亦如脂釜，處處漏壞，有目之人皆悉觀見處處漏出。我亦如是，世尊！九孔之中漏出不淨，豈當與梵行人共諍？猶如女人年少端正，復以死尸繫彼女頸，而厭患之。世尊！我亦如是，厭患此身如彼無異，豈當與梵行人共諍而遠遊乎？此事不然，世尊！自當知之，彼比丘亦當知之。設當有是者，願彼比丘受我懺悔。」爾時，世尊告彼比丘：「汝今可自悔過。所以然者，若不悔者頭便破為七分。」",
+   "T0026-ma24": "世尊！猶截角牛，至忍溫良，善調善御，從村至村，從巷至巷，所遊行處，無所侵犯。世尊！我亦如是，心如截角牛，無結無怨，無恚無諍，極廣甚大，無量善修，遍滿一切世間成就遊。世尊！若無身身念者，彼便輕慢於一梵行而遊人間。世尊！我善有身身念，我當云何輕慢一梵行而遊人間？「世尊！猶旃陀羅子而截兩手，其意至下，從村至村，從邑至邑，所遊行處，無所侵犯。世尊！我亦如是，心如截手旃陀羅子，無結無怨，無恚無諍，極廣甚大，無量善修，遍滿一切世間成就遊。世尊！若無身身念者，彼便輕慢於一梵行而遊人間。世尊！我善有身身念，我當云何輕慢一梵行而遊人間？「世尊！猶若如地，淨與不淨，大便、小便、涕、唾悉受，地不以此而有憎愛，不羞不慙，亦不愧恥。世尊！我亦如是，心如彼地，無結無怨，無恚無諍，極廣甚大，無量善修，遍滿一切世間成就遊。世尊！若無身身念者，彼便輕慢於一梵行而遊人間。世尊！我善有身身念，我當云何輕慢一梵行而遊人間？「世尊！猶若如水，淨與不淨，大便、小便、涕、唾悉洗，水不以此而有憎愛，不羞不慙，亦不愧恥。世尊！我亦如是，心如彼水，無結無怨，無恚無諍，極廣甚大，無量善修，遍滿一切世間成就遊。世尊！若無身身念者，彼便輕慢於一梵行而遊人間。世尊！我善有身身念，我當云何輕慢一梵行而遊人間？「世尊！猶若如火，淨與不淨，大便、小便、涕、唾悉燒，火不以此而有憎愛，不羞不慙，亦不愧恥。世尊！我亦如是，心如彼火，無結無怨，無恚無諍，極廣甚大，無量善修，遍滿一切世間成就遊。世尊！若無身身念者，彼便輕慢於一梵行而遊人間。世尊！我善有身身念，我當云何輕慢一梵行而遊人間？「世尊！猶若如風，淨與不淨，大便、小便、涕、唾悉吹，風不以此而有憎愛，不羞不慙，亦不愧耻。世尊！我亦如是，心如彼風，無結無怨，無恚無諍，極廣甚大，無量善修，遍滿一切世間成就遊。世尊！若無身身念者，彼便輕慢於一梵行而遊人間。世尊！我善有身身念，我當云何輕慢一梵行而遊人間？「世尊！猶如掃帚，淨與不淨，大便、小便、涕、唾悉掃，帚不以此而有憎愛，不羞不慙，亦不愧耻。世尊！我亦如是，心如掃帚，無結無怨，無恚無諍，極廣甚大，無量善修，遍滿一切世間成就遊。世尊！若無身身念者，彼便輕慢於一梵行而遊人間。世尊！我善有身身念，我當云何輕慢一梵行而遊人間？「世尊！猶晡旃尼，淨與不淨，大便、小便、涕、唾悉拭，晡旃尼不以此故而有憎愛，不羞不慙，亦不愧耻。世尊！我亦如是，心如晡旃尼，無結無怨，無恚無諍，極廣甚大，無量善修，遍滿一切世間成就遊。世尊！若無身身念者，彼便輕慢於一梵行而遊人間。世尊！我善有身身念，我當云何輕慢一梵行而遊人間？「世尊！猶如膏瓶處處裂破，盛滿膏已而著日中，漏遍漏津遍津。若有目人，來住一面，見此膏瓶處處裂破，盛滿膏已而著日中，漏遍漏津遍津。世尊！我亦如是，常觀此身九孔不淨，漏遍漏津遍津。世尊！若無身身念者，彼便輕慢於一梵行而遊人間。世尊！我善有身身念，我當云何輕慢一梵行而遊人間？「世尊！猶如有一自喜年少，沐浴澡洗，熏以塗香，著白淨衣，瓔珞自嚴，剃鬚治髮，頭冠華鬘，若以三屍，死蛇、死狗及以死人，青瘀膖脹，極臭爛壞，不淨流漫，繫著咽頸，彼懷羞慙，極惡穢之。世尊！我亦如是，常觀此身臭處不淨，心懷羞慙，極惡穢之。世尊！若無身身念者，彼便輕慢於一梵行而遊人間。世尊！我善有身身念，我當云何輕慢一梵行而遊人間？」"
+  },
+  "a12": {
+   "an9.11": "Atha kho so bhikkhu uṭṭhāyāsanā ekaṁsaṁ uttarāsaṅgaṁ karitvā bhagavato pādesu sirasā nipatitvā bhagavantaṁ etadavoca: “accayo maṁ, bhante, accagamā yathābālaṁ yathāmūḷhaṁ yathāakusalaṁ, yo ahaṁ āyasmantaṁ sāriputtaṁ asatā tucchā musā abhūtena abbhācikkhiṁ. Tassa me, bhante, bhagavā accayaṁ accayato paṭiggaṇhatu āyatiṁ saṁvarāyā”ti. “Taggha taṁ, bhikkhu, accayo accagamā yathābālaṁ yathāmūḷhaṁ yathāakusalaṁ, yo tvaṁ sāriputtaṁ asatā tucchā musā abhūtena abbhācikkhi. Yato ca kho tvaṁ, bhikkhu, accayaṁ accayato disvā yathādhammaṁ paṭikarosi, taṁ te mayaṁ paṭiggaṇhāma. Vuḍḍhihesā, bhikkhu, ariyassa vinaye yo accayaṁ accayato disvā yathādhammaṁ paṭikaroti āyatiṁ saṁvaraṁ āpajjatī”ti.",
+   "T0125-ea37.6": "是時，彼比丘心懷恐怖，衣毛皆竪，即從坐起，禮如來足，白世尊言：「我今自知犯舍利弗，唯願世尊受我懺悔。」世尊告曰：「汝比丘！自向舍利弗懺悔，若不爾者頭便為七分。」是時，彼比丘即向舍利弗頭面禮足，白舍利弗言：「唯願受我懺悔，愚不別真。」爾時，世尊告舍利弗：「汝今可受此比丘悔過，又以手摩頭。所以然者，若當不受此比丘懺悔者，頭破為七分。」爾時，舍利弗以手摩頭，語比丘曰：「聽汝懺悔！如愚如惑，此佛法中極為曠大，能隨時悔過者，善哉！今受汝懺悔，後更莫犯。」",
+   "T0026-ma24": "於是，彼比丘即從坐起，稽首佛足，白世尊曰：「悔過，世尊！自首，善逝！如愚如癡，如不定，如不善。所以者何？謂我以虛妄言誣謗清淨梵行舍梨子比丘。世尊！我今悔過，願為受之，見已發露，後不更作。」"
+  },
+  "a13": {
+   "an9.11": "Atha kho bhagavā āyasmantaṁ sāriputtaṁ āmantesi: “khama, sāriputta, imassa moghapurisassa, purā tassa tattheva sattadhā muddhā phalatī”ti. “Khamāmahaṁ, bhante, tassa āyasmato sace maṁ so āyasmā evamāha: ‘khamatu ca me so āyasmā’”ti.",
+   "T0125-ea37.6": "如是再三。是時，舍利弗告彼比丘曰：「汝更莫犯。所以然者，有六法入地獄，六法生天，六法至涅槃處。云何為六？欲害他人，我以起此害心，便歡喜踊躍，不能自勝；我當教人使害他，於中起害心；以得害人，於中起歡喜，我當得此不馨之問；未起此事便快愁憂。是謂有此六法，令人墮惡趣。「云何有六，令人至善處？所謂身戒具足，口戒具足，意戒具足，命根清淨，不殺害心，無妬嫉心。是謂有此六法，生於善處。「云何修六法至於涅槃？所謂六思念法。云何為六？所謂身行慈無瑕穢；口行慈無瑕穢；意行慈無瑕穢；若得利養之具，能與人等共分之而無悋想；奉持禁戒無瑕疵，智者所貴；如是之戒能具足諸有邪見、正見、賢聖出要，能得盡苦本。如是諸見皆悉分明。是謂六法得至涅槃。汝今，比丘！當求方便，行此六法。如是，比丘！當作是學。」爾時，彼比丘重從坐起，禮舍利弗足：「我今重自懺，如愚如惑而不別真。唯願，舍利弗！受我悔過，後不復犯。」舍利弗曰：「聽汝悔過！賢聖法中極為曠大，能自改往修來，莫復更犯。」",
+   "T0026-ma24": "世尊告曰：「如是。比丘！汝實如愚如癡，如不定，如不善。所以者何？謂汝以虛妄言空無真實，誣謗清淨梵行舍梨子比丘。汝能悔過，見已發露，後不更作。若有悔過，見已發露，後不更作者，如是長養於聖法、律則不衰退。」於是，佛告尊者舍梨子：「汝速受彼癡人悔過，莫令彼比丘即於汝前頭破七分。」尊者舍梨子即為哀愍彼比丘故，便受悔過。"
+  },
+  "a14": {
+   "an9.11": "Paṭhamaṁ.",
+   "T0125-ea37.6": "爾時，彼比丘聞舍利弗所說，歡喜奉行。",
+   "T0026-ma24": "佛說如是。尊者舍梨子及諸比丘，聞佛所說，歡喜奉行。師子吼經第四竟（千九百七十七字）"
+  }
+ }
+}

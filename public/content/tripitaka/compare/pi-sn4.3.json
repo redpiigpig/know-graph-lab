@@ -1,0 +1,91 @@
+{
+ "slug": "pi-sn4.3",
+ "title": "別譯雜阿含經 （三二）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "魔軍現形試佛"
+  },
+  {
+   "id": "a02",
+   "label": "佛知魔意說偈破魔"
+  },
+  {
+   "id": "a03",
+   "label": "魔退散結束"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn4.3",
+   "lang": "pi",
+   "label": "巴利 SN4.3",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn4.3",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN4.3",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.32",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （三二）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa1093",
+   "lang": "lzh",
+   "label": "雜阿含經 （一〇九三）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（三二）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一〇九三）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn4.3": "Saṁyutta Nikāya 4.3 1. Paṭhamavagga Subhasutta Evaṁ me sutaṁ— ekaṁ samayaṁ bhagavā uruvelāyaṁ viharati najjā nerañjarāya tīre ajapālanigrodhamūle paṭhamābhisambuddho.",
+   "nan-sn4.3": "〔三〕第三　淨〔爾時，世尊〕住優留毘羅林……",
+   "T0100-sa-2.32": "如是我聞：一時，佛在王舍城靈鷲山。爾時，佛與諸比丘讚嘆涅槃法。",
+   "T0099-sa1093": "如是我聞：一時，佛住欝鞞羅處尼連禪河側大菩提樹下，初成佛道。"
+  },
+  "a01": {
+   "sn4.3": "Tena kho pana samayena bhagavā rattandhakāratimisāyaṁ abbhokāse nisinno hoti, devo ca ekamekaṁ phusāyati. Atha kho māro pāpimā, bhagavato bhayaṁ chambhitattaṁ lomahaṁsaṁ uppādetukāmo, yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavato avidūre uccāvacā vaṇṇanibhā upadaṁseti, subhā ceva asubhā ca.",
+   "nan-sn4.3": "爾時，世尊闇夜坐於露地，雨絲霏霏下降。時，惡魔波旬欲令世尊生起恐怖，毛髮豎立，來詣世尊坐處。詣已，於世尊之近處，以顯或高或下之種種淨、不淨形相。",
+   "T0100-sa-2.32": "魔王作是念：「佛在王舍城，與諸比丘讚涅槃法。我今當往，而作壞亂。」作是念已，即便化形，作一百人，五十人極為端正，五十人極為醜惡，時，諸比丘皆生驚怪，今以何故，極為端正，復有極醜？",
+   "T0099-sa1093": "天魔波旬作是念：「此沙門瞿曇在欝鞞羅住處尼連禪河側菩提樹下，初成佛道。我今當往，為作留難。」即自變身，作百種淨、不淨色，詣佛所。"
+  },
+  "a02": {
+   "sn4.3": "Atha kho bhagavā “māro ayaṁ pāpimā” iti viditvā māraṁ pāpimantaṁ gāthāhi ajjhabhāsi: “Saṁsaraṁ dīghamaddhānaṁ, vaṇṇaṁ katvā subhāsubhaṁ; Alaṁ te tena pāpima, nihato tvamasi antaka. Ye ca kāyena vācāya, manasā ca susaṁvutā; Na te māravasānugā, na te mārassa baddhagū”ti.",
+   "nan-sn4.3": "時，世尊知是惡魔波旬，以偈言惡魔波旬曰：作淨不淨相汝之輪迴長\n波旬汝可去破壞者汝敗\n依身語及意人人善調魔\n無行惡魔配非惡魔弟子",
+   "T0100-sa-2.32": "佛知魔來欲作壞亂。爾時，世尊告波旬言：「汝於長夜生死之中，具受如是好惡之形，汝當云何得度苦岸？如是變化，復何用為？若有愛著於男女者，汝當變化作眾形相。我今都無男女之相，何用變化作眾形為？」",
+   "T0099-sa1093": "佛遙見波旬百種淨、不淨色，作是念：「惡魔波旬作百種淨、不淨色，欲作嬈亂。」即說偈言：「長夜生死中，作淨不淨色，\n汝何為作此，不度苦彼岸。\n若諸身口意，不作留難者，\n魔所不能教，不隨魔自在。"
+  },
+  "a03": {
+   "sn4.3": "Atha kho māro …pe… tatthevantaradhāyīti.",
+   "nan-sn4.3": "時，惡魔波旬……乃至……苦惱萎身於其處。",
+   "T0100-sa-2.32": "佛說是已，諸比丘聞佛所說，歡喜奉行。長壽、何帝及羂摾睡眠、經行、大毒蛇\n無所為、求悳、魔女壞亂變形及好惡",
+   "T0099-sa1093": "如是知惡魔，於是自滅去。」時，魔波旬作是念：「沙門瞿曇已知我心。」內懷憂慼，即沒不現。"
+  }
+ }
+}

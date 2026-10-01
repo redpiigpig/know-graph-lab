@@ -1,0 +1,169 @@
+{
+ "slug": "pi-sn42.10",
+ "title": "別譯雜阿含經 （一二六）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "聚落主初次詢問金銀寶物"
+  },
+  {
+   "id": "a02",
+   "label": "眾人爭論沙門是否可受金銀"
+  },
+  {
+   "id": "a03",
+   "label": "聚落主向佛請示是非"
+  },
+  {
+   "id": "a04",
+   "label": "佛說沙門不應受金銀寶物"
+  },
+  {
+   "id": "a05",
+   "label": "譬喻：尋物必須隨其用"
+  },
+  {
+   "id": "a06",
+   "label": "結語：聚落主歡喜而去"
+  },
+  {
+   "id": "a07",
+   "label": "阿難請眾比丘集會"
+  },
+  {
+   "id": "a08",
+   "label": "眾比丘集會，阿難稟報"
+  },
+  {
+   "id": "a09",
+   "label": "佛再述聚落主之言"
+  },
+  {
+   "id": "a10",
+   "label": "佛結論沙門不應受金銀"
+  },
+  {
+   "id": "a11",
+   "label": "聚落主復言應受五欲"
+  },
+  {
+   "id": "a12",
+   "label": "佛讚歎聚落主師子吼"
+  },
+  {
+   "id": "a13",
+   "label": "佛教比丘寧取糞穢不取寶物"
+  },
+  {
+   "id": "a14",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn42.10",
+   "lang": "pi",
+   "label": "巴利 SN42.10",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "T0100-sa-2.126",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （一二六）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa911",
+   "lang": "lzh",
+   "label": "雜阿含經 （九一一）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（一二六）"
+  },
+  {
+   "work": "T0099",
+   "node": "（九一一）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn42.10": "Saṁyutta Nikāya 42.10 1. Gāmaṇivagga Maṇicūḷakasutta",
+   "T0099-sa911": "如是我聞：一時，佛住王舍城迦蘭陀竹園。"
+  },
+  "a01": {
+   "sn42.10": "Ekaṁ samayaṁ bhagavā rājagahe viharati veḷuvane kalandakanivāpe.",
+   "T0100-sa-2.126": "爾時，有聚落主名如意珠頂髮，往詣佛所，頂禮佛足，在一面坐，即白佛言：「世尊！我於往日在王宮殿，與諸輔相共一處坐，群臣眷屬詳議講論，所謂作沙門者，為得捉於錢寶，以不得捉金不？",
+   "T0099-sa911": "時，有摩尼珠髻聚落主來詣佛所，稽首佛足，退坐一面，白佛言：「世尊！"
+  },
+  "a02": {
+   "sn42.10": "Tena kho pana samayena rājantepure rājaparisāya sannisinnānaṁ sannipatitānaṁ ayamantarākathā udapādi: “kappati samaṇānaṁ sakyaputtiyānaṁ jātarūparajataṁ, sādiyanti samaṇā sakyaputtiyā jātarūparajataṁ, paṭiggaṇhanti samaṇā sakyaputtiyā jātarūparajatan”ti. Tena kho pana samayena maṇicūḷako gāmaṇi tassaṁ parisāyaṁ nisinno hoti. Atha kho maṇicūḷako gāmaṇi taṁ parisaṁ etadavoca: “mā ayyo evaṁ avacuttha. Na kappati samaṇānaṁ sakyaputtiyānaṁ jātarūparajataṁ, na sādiyanti samaṇā sakyaputtiyā jātarūparajataṁ, nappaṭiggaṇhanti samaṇā sakyaputtiyā jātarūparajataṁ, nikkhittamaṇisuvaṇṇā samaṇā sakyaputtiyā apetajātarūparajatā”ti. Asakkhi kho maṇicūḷako gāmaṇi taṁ parisaṁ saññāpetuṁ. Atha kho maṇicūḷako gāmaṇi yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho maṇicūḷako gāmaṇi bhagavantaṁ etadavoca:",
+   "T0100-sa-2.126": "時，彼眾中有一人言：『縱令捉者，竟有何過？應當得捉。』有一人言：『不應得捉。沙門釋子不捉金寶。』",
+   "T0099-sa911": "先日國王集諸大臣，共論議言：『云何沙門釋子比丘自為受畜金銀寶物，為淨耶？為不淨耶？』其中有言：『沙門釋子應受畜金銀寶物。』又復有言：『不應自為受畜金銀寶物。』"
+  },
+  "a03": {
+   "sn42.10": "“idha, bhante, rājantepure rājaparisāya sannisinnānaṁ sannipatitānaṁ ayamantarākathā udapādi: ‘kappati samaṇānaṁ sakyaputtiyānaṁ jātarūparajataṁ, sādiyanti samaṇā sakyaputtiyā jātarūparajataṁ, paṭiggaṇhanti samaṇā sakyaputtiyā jātarūparajatan’ti. Evaṁ vutte, ahaṁ, bhante, taṁ parisaṁ etadavocaṁ: ‘mā ayyo evaṁ avacuttha. Na kappati samaṇānaṁ sakyaputtiyānaṁ jātarūparajataṁ, na sādiyanti samaṇā sakyaputtiyā jātarūparajataṁ, nappaṭiggaṇhanti samaṇā sakyaputtiyā jātarūparajataṁ, nikkhittamaṇisuvaṇṇā samaṇā sakyaputtiyā apetajātarūparajatā’ti. Asakkhiṁ khvāhaṁ, bhante, taṁ parisaṁ saññāpetuṁ. Kaccāhaṁ, bhante, evaṁ byākaramāno vuttavādī ceva bhagavato homi, na ca bhagavantaṁ abhūtena abbhācikkhāmi, dhammassa cānudhammaṁ byākaromi, na ca koci sahadhammiko vādānuvādo gārayhaṁ ṭhānaṁ āgacchatī”ti? “Taggha tvaṁ, gāmaṇi, evaṁ byākaramāno vuttavādī ceva me hosi, na ca maṁ abhūtena abbhācikkhasi, dhammassa cānudhammaṁ byākarosi, na ca koci sahadhammiko vādānuvādo gārayhaṁ ṭhānaṁ āgacchati.",
+   "T0100-sa-2.126": "世尊！如是二語，為得名為稱法而說，為不稱說？若作斯語，非為毀佛，非過言耶？為是佛說，為非是乎？」佛告聚落主：「若作是說，斯名謗我，為不稱說，名為過說。然我所說，實不同彼。",
+   "T0099-sa911": "世尊！彼言沙門釋子應自為受畜金銀寶物者，為從佛聞？為自出意說？作是語者，為隨順法？為不隨順？為真實說？為虛妄說？如是說者，得不墮於呵責處耶？」佛告聚落主：「此則妄說，非真實說、非是法說、非隨順說，墮呵責處。"
+  },
+  "a04": {
+   "sn42.10": "Na hi, gāmaṇi, kappati samaṇānaṁ sakyaputtiyānaṁ jātarūparajataṁ, na sādiyanti samaṇā sakyaputtiyā jātarūparajataṁ, nappaṭiggaṇhanti samaṇā sakyaputtiyā jātarūparajataṁ, nikkhittamaṇisuvaṇṇā samaṇā sakyaputtiyā apetajātarūparajatā. Yassa kho, gāmaṇi, jātarūparajataṁ kappati, pañcapi tassa kāmaguṇā kappanti. Yassa pañca kāmaguṇā kappanti (…), ekaṁsenetaṁ, gāmaṇi, dhāreyyāsi assamaṇadhammo asakyaputtiyadhammoti.",
+   "T0100-sa-2.126": "何以故？為比丘者，沙門釋子，法不應捉金等錢寶。若捉金等錢寶，彼非沙門釋子之法，佛之教法轉勝端嚴。佛如是說，為比丘者，不應捉於金等錢寶，設有捉者，非沙門法。」村主言：「我於彼時，於大眾中，亦作是說，沙門釋子實不應捉金等錢寶，若有捉者，宜應自恣放逸五欲。」",
+   "T0099-sa911": "所以者何？沙門釋子自為受畜金銀寶物者，不清淨故；若自為己受畜金銀寶物者，非沙門法、非釋種子法。」聚落主白佛言：「奇哉！世尊！沙門釋子受畜金銀寶物者，非沙門法、非釋種子法，此真實說！世尊！作是說者，增長勝妙，我亦作是說：『沙門釋子不應自為受畜金銀寶物。』」佛告聚落主：「若沙門釋子自為受畜金銀珍寶清淨者，五欲功德悉應清淨！」"
+  },
+  "a05": {
+   "sn42.10": "Api cāhaṁ, gāmaṇi, evaṁ vadāmi— tiṇaṁ tiṇatthikena pariyesitabbaṁ, dāru dārutthikena pariyesitabbaṁ, sakaṭaṁ sakaṭatthikena pariyesitabbaṁ, puriso purisatthikena pariyesitabbo."
+  },
+  "a06": {
+   "sn42.10": "Na tvevāhaṁ, gāmaṇi, kenaci pariyāyena ‘jātarūparajataṁ sāditabbaṁ pariyesitabban’ti vadāmī”ti.",
+   "T0100-sa-2.126": "時，彼村主聞佛所說，頂禮而去。",
+   "T0099-sa911": "摩尼珠髻聚落主聞佛所說，歡喜作禮而去。"
+  },
+  "a07": {
+   "T0100-sa-2.126": "當於爾時，阿難比丘侍立佛側，以扇扇佛。佛告阿難曰：「汝可召諸比丘依此王舍城而住止者，盡集講堂。」",
+   "T0099-sa911": "爾時，世尊知摩尼珠髻聚落主去已，告尊者阿難：「若諸比丘依止迦蘭陀竹園住者，悉呼令集於食堂。」"
+  },
+  "a08": {
+   "T0100-sa-2.126": "爾時，阿難奉佛教已，如佛所命，勅諸比丘，盡集講堂。時，諸比丘各來集已，阿難詣佛，頂禮佛足，在一面坐。白佛言：「世尊！諸比丘僧依王舍城迦蘭陀竹林者，皆來集在講堂之中，唯願世尊宜知是時。」爾時，世尊即往講堂，於眾僧前敷座而坐。",
+   "T0099-sa911": "時，尊者阿難即受佛教，周遍宣令依止迦蘭陀竹園比丘集於食堂。比丘集已，往白世尊：「諸比丘已集食堂，惟世尊知時！」"
+  },
+  "a09": {
+   "T0100-sa-2.126": "佛告比丘：「有如意珠頂髮聚落主來至我所，頂禮我已，而作是言：『我於往日，在王宮殿，與諸輔相共議講論沙門之法，為應捉持金等錢寶，為不捉耶？時，彼眾中有一人言：「假令沙門捉持錢寶及金銀等，有何過咎？但捉無苦。」復有人言：「沙門之法，法不應捉金等錢寶。」如斯二人，其語不同，此二人言，何者稱法？』",
+   "T0099-sa911": "爾時，世尊往詣食堂，大眾前坐，坐已，告諸比丘：「今日有摩尼珠髻聚落主來諒我所，作如是言：『先日國王集諸大臣，作如是論議：「沙門釋子自為受畜金銀寶物，為清淨不？」其中有言清淨者，有言不清淨者。今問世尊，言清淨者，為從佛聞？為自妄說？』……」如上廣說。"
+  },
+  "a10": {
+   "T0100-sa-2.126": "我即答言：『沙門釋子不應捉持金等錢寶。』",
+   "T0099-sa911": "「彼摩尼珠髻聚落主聞我所說，歡喜隨喜，作禮而去。"
+  },
+  "a11": {
+   "T0100-sa-2.126": "時，聚落主而作是言：『我於昔時，於彼眾中，亦作是語，如斯沙門，得捉金等及以錢寶，亦應恣令受於五欲。』時，彼村主聞我所說，歡喜而去。」"
+  },
+  "a12": {
+   "T0100-sa-2.126": "佛告諸比丘：「汝等當知，彼如意珠頂髮聚落主於眾人前作師子吼言：『沙門法不應受取金銀錢寶。』",
+   "T0099-sa911": "「諸比丘！國王、大臣共集論議，彼摩尼珠髻聚落主於大眾前師子吼說：『沙門釋種子不應自為受畜金銀寶物。』"
+  },
+  "a13": {
+   "T0100-sa-2.126": "汝諸比丘從今已後，若有所須，欲捉之者，當作草木及捉糞想，寧捉糞穢，不捉寶物。」",
+   "T0099-sa911": "諸比丘！汝等從今日，須木索木、須草索草、須車索車、須作人索作人，慎勿為己受取金銀種種寶物！」"
+  },
+  "a14": {
+   "sn42.10": "Dasamaṁ.",
+   "T0100-sa-2.126": "時，諸比丘聞佛所說，歡喜頂禮而去。",
+   "T0099-sa911": "佛說此經已，諸比丘聞佛所說，歡喜奉行。"
+  }
+ }
+}

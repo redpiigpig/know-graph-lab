@@ -1,0 +1,138 @@
+{
+ "slug": "pi-sn40.10",
+ "title": "雜阿含經 （五〇六）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "四眾請目揵連上三十三天"
+  },
+  {
+   "id": "a02",
+   "label": "目揵連入三昧往三十三天"
+  },
+  {
+   "id": "a03",
+   "label": "世尊說天眾來生之因"
+  },
+  {
+   "id": "a04",
+   "label": "天眾自說得淨而沒"
+  },
+  {
+   "id": "a05",
+   "label": "目揵連還世尊所白四眾語"
+  },
+  {
+   "id": "a06",
+   "label": "世尊囑目揵連還語七日後還閻浮提"
+  },
+  {
+   "id": "a07",
+   "label": "目揵連還閻浮提告四眾"
+  },
+  {
+   "id": "a08",
+   "label": "七日後世尊下閻浮提眾神迎會"
+  },
+  {
+   "id": "a09",
+   "label": "釋提桓因夜詣佛所問邊際梵行"
+  },
+  {
+   "id": "a10",
+   "label": "佛答受集滅等實知則得邊際"
+  },
+  {
+   "id": "a11",
+   "label": "天帝釋歡喜隨喜作禮而去"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn40.10",
+   "lang": "pi",
+   "label": "巴利 SN40.10",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "T0099-sa506",
+   "lang": "lzh",
+   "label": "雜阿含經 （五〇六）",
+   "who": "劉宋 求那跋陀羅譯"
+  },
+  {
+   "id": "T0099-sa988-989",
+   "lang": "lzh",
+   "label": "雜阿含經 （九八八）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099"
+ ],
+ "anchors": [
+  {
+   "work": "T0099",
+   "node": "（五〇六）"
+  },
+  {
+   "work": "T0099",
+   "node": "（九八八）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn40.10": "Saṁyutta Nikāya 40.10",
+   "T0099-sa506": "如是我聞：一時，佛住三十三天驄色虛軟石上，去波梨耶多羅、拘毘陀羅香樹不遠夏安居，為母及三十三天說法。爾時，尊者大目揵連在舍衛國祇樹給孤獨園安居。",
+   "T0099-sa988-989": "如是我聞：一時，佛住王舍城迦蘭陀竹園。"
+  },
+  "a01": {
+   "sn40.10": "1. Moggallānavagga Sakkasutta Atha kho āyasmā mahāmoggallāno—seyyathāpi nāma balavā puriso samiñjitaṁ vā bāhaṁ pasāreyya, pasāritaṁ vā bāhaṁ samiñjeyya; evameva—jetavane antarahito devesu tāvatiṁsesu pāturahosi. Atha kho sakko devānamindo pañcahi devatāsatehi saddhiṁ yenāyasmā mahāmoggallāno tenupasaṅkami; upasaṅkamitvā āyasmantaṁ mahāmoggallānaṁ abhivādetvā ekamantaṁ aṭṭhāsi. Ekamantaṁ ṭhitaṁ kho sakkaṁ devānamindaṁ āyasmā mahāmoggallāno etadavoca: “Sādhu kho, devānaminda, buddhasaraṇagamanaṁ hoti. Buddhasaraṇagamanahetu kho, devānaminda, evam’idhekacce sattā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjanti. Sādhu kho, devānaminda, dhammasaraṇagamanaṁ hoti. Dhammasaraṇagamanahetu kho, devānaminda, evam’idhekacce sattā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjanti. Sādhu kho, devānaminda, saṅghasaraṇagamanaṁ hoti. Saṅghasaraṇagamanahetu kho, devānaminda, evam’idhekacce sattā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjantī”ti. “Sādhu kho, mārisa moggallāna, buddhasaraṇagamanaṁ hoti. Buddhasaraṇagamanahetu kho, mārisa moggallāna, evam’idhekacce sattā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjanti. Sādhu kho, mārisa moggallāna, dhammasaraṇagamanaṁ hoti.",
+   "T0099-sa506": "時，諸四眾詣尊者大目揵連所，稽首禮足，退坐一面，白尊者大目揵連：「知世尊夏安居處不？」尊者大目揵連答言：「我聞世尊在三十三天驄色虛軟石上，去波梨耶多羅、拘毘陀羅香樹不遠夏安居，為母及三十三天說法。」時，諸四眾聞尊者大目揵連所說，歡喜隨喜，各從座起，作禮而去。時，諸四眾過三月安居已，復詣尊者大目揵連所，稽首禮足，退坐一面。時，尊者大目揵連為諸四眾種種說法，示、教、照、喜；示、教、照、喜已，默然而住。時，諸四眾從座而起，稽首作禮，白尊者大目揵連：「尊者大目揵連！當知我等不見世尊已久，眾甚虛渴欲見世尊。尊者大目揵連！若不憚勞者，願為我等往詣三十三天，普為我等問訊世尊：『少病少惱，起居輕利，安樂住不？』又白世尊：『閻浮提四眾願見世尊，而無神力昇三十三天禮敬世尊，三十三天自有神力來下人中，唯願世尊還閻浮提，以哀愍故。』」時，尊者大目犍連默然而許。時，諸四眾知尊者大目犍連默然許已，各從座起，作禮而去。"
+  },
+  "a02": {
+   "sn40.10": "Dhammasaraṇagamanahetu kho, mārisa moggallāna, evam’idhekacce sattā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjanti.",
+   "T0099-sa506": "爾時，尊者大目犍連知四眾去已，即入三昧，如其正受，如大力士屈伸臂頃，從舍衛國沒，於三十三天驄色虛軟石上，去波梨耶多羅、拘毘陀羅香樹不遠而現。"
+  },
+  "a03": {
+   "sn40.10": "Sādhu kho, mārisa moggallāna, saṅgha …pe… sugatiṁ saggaṁ lokaṁ upapajjantī”ti. Atha kho sakko devānamindo chahi devatāsatehi saddhiṁ …pe… atha kho sakko devānamindo sattahi devatāsatehi saddhiṁ …pe… atha kho sakko devānamindo aṭṭhahi devatāsatehi saddhiṁ …pe… atha kho sakko devānamindo asītiyā devatāsahassehi saddhiṁ yenāyasmā mahāmoggallāno tenupasaṅkami; upasaṅkamitvā āyasmantaṁ mahāmoggallānaṁ abhivādetvā ekamantaṁ aṭṭhāsi. Ekamantaṁ ṭhitaṁ kho sakkaṁ devānamindaṁ āyasmā mahāmoggallāno etadavoca: “Sādhu kho, devānaminda, buddhasaraṇagamanaṁ hoti. Buddhasaraṇagamanahetu kho, devānaminda, evam’idhekacce sattā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjanti. Sādhu kho, devānaminda, dhammasaraṇagamanaṁ hoti. Dhammasaraṇagamanahetu kho, devānaminda, evam’idhekacce sattā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjanti. Sādhu kho, devānaminda, saṅghasaraṇagamanaṁ hoti.",
+   "T0099-sa506": "爾時，世尊與三十三天眾無量眷屬圍繞說法。時，尊者大目犍連遙見世尊，踊躍歡喜，作是念：「今日世尊，諸天大眾圍繞說法，與閻浮提眾會不異。」爾時，世尊知尊者大目犍連心之所念，語尊者大目犍連言：「大目犍連！非為自力，我欲為諸天說法，彼即來集，欲令其去，彼即還去，彼隨心來，隨心去也。」爾時，尊者大目犍連稽首佛足，退坐一面，白世尊言：「種種諸天大眾雲集，彼天眾中，有曾從佛世尊聞所說法，得不壞淨，身壞命終，來生於此？」佛告尊者大目犍連：「如是，如是。此中種種諸天來雲集者，有從宿命聞法，得佛不壞淨，法、僧不壞淨，聖戒成就，身壞命終，來生於此。」時，天帝釋見世尊與尊者大目犍連歎說，諸天眾共語已，語尊者大目犍連：「如是，如是。尊者大目犍連！此中種種眾會皆是宿命，曾聞正法，得於佛不壞淨，法、僧不壞淨，聖戒成就，身壞命終，來生於此。」時，有異比丘見世尊與尊者大目犍連及天帝釋語言善相述可已，語尊者大目犍連：「如是，如是。尊者大目犍連！是中種種諸天來會此者，皆是宿命曾聞正法，得於佛不壞淨，法、僧不壞淨，聖戒成就，身壞命終，而來生此。」"
+  },
+  "a04": {
+   "sn40.10": "Saṅghasaraṇagamanahetu kho, devānaminda, evam’idhekacce sattā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjantī”ti. “Sādhu kho, mārisa moggallāna, buddhasaraṇagamanaṁ hoti. Buddhasaraṇagamanahetu kho, mārisa moggallāna, evam’idhekacce sattā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjanti. Sādhu kho, mārisa moggallāna, dhammasaraṇagamanaṁ hoti …pe… sādhu kho, mārisa moggallāna, saṅghasaraṇagamanaṁ hoti.",
+   "T0099-sa506": "時，有一天子從座起，整衣服，偏袒右肩，合掌白佛：「世尊！我亦成就於佛不壞淨，故來生此。」復有天子言：「我得法不壞淨。」有言得僧不壞淨，有言聖戒成就，故來生此。如是諸天無量千數，於世尊前各自記說得須陀洹法，悉於佛前即沒不現。"
+  },
+  "a05": {
+   "sn40.10": "Saṅghasaraṇagamanahetu kho, mārisa moggallāna, evam’idhekacce sattā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjantī”ti. Atha kho sakko devānamindo pañcahi devatāsatehi saddhiṁ yenāyasmā mahāmoggallāno tenupasaṅkami; upasaṅkamitvā āyasmantaṁ mahāmoggallānaṁ abhivādetvā ekamantaṁ aṭṭhāsi. Ekamantaṁ ṭhitaṁ kho sakkaṁ devānamindaṁ āyasmā mahāmoggallāno etadavoca: “Sādhu kho, devānaminda, buddhe aveccappasādena samannāgamanaṁ hoti: ‘itipi so bhagavā arahaṁ sammāsambuddho vijjācaraṇasampanno sugato lokavidū anuttaro purisadammasārathi satthā devamanussānaṁ buddho bhagavā’ti.",
+   "T0099-sa506": "時，尊者大目犍連知諸天眾去，不久從座起，整衣服，偏袒右肩，白佛言：「世尊！閻浮提四眾稽首敬禮世尊足，問訊世尊：『少病少惱，起居輕利，安樂住不？』四眾思慕，願見世尊。又白世尊：『我等人間無有神力昇三十三天禮覲世尊，然彼諸天有大德力悉能來下至閻浮提，唯願世尊還閻浮提，愍四眾故。』"
+  },
+  "a06": {
+   "sn40.10": "Buddhe aveccappasādena samannāgamanahetu kho, devānaminda, evam’idhekacce sattā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjanti.",
+   "T0099-sa506": "」佛告目犍連：「汝可還彼，語閻浮提人：『却後七日，世尊當從三十三天還閻浮提僧迦舍城，於外門外優曇鉢樹下。』"
+  },
+  "a07": {
+   "sn40.10": "Sādhu kho, devānaminda, dhamme aveccappasādena samannāgamanaṁ hoti:",
+   "T0099-sa506": "」尊者大目揵連受世尊教，即入三昧。"
+  },
+  "a08": {
+   "sn40.10": "‘svākkhāto bhagavatā dhammo sandiṭṭhiko akāliko ehipassiko opaneyyiko paccattaṁ veditabbo viññūhī’ti. Dhamme aveccappasādena samannāgamanahetu kho, devānaminda, evam’idhekacce sattā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjanti. Sādhu kho, devānaminda, saṅghe aveccappasādena samannāgamanaṁ hoti: ‘suppaṭipanno bhagavato sāvakasaṅgho, ujuppaṭipanno bhagavato sāvakasaṅgho, ñāyappaṭipanno bhagavato sāvakasaṅgho, sāmīcippaṭipanno bhagavato sāvakasaṅgho, yadidaṁ cattāri purisayugāni aṭṭha purisapuggalā esa bhagavato sāvakasaṅgho āhuneyyo pāhuneyyo dakkhiṇeyyo añjalikaraṇīyo anuttaraṁ puññakkhettaṁ lokassā’ti. Saṅghe aveccappasādena samannāgamanahetu kho, devānaminda, evam’idhekacce sattā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjanti. Sādhu kho, devānaminda, ariyakantehi sīlehi samannāgamanaṁ hoti akhaṇḍehi acchiddehi asabalehi akammāsehi bhujissehi viññuppasatthehi aparāmaṭṭhehi samādhisaṁvattanikehi. Ariyakantehi sīlehi samannāgamanahetu kho, devānaminda, evam’idhekacce sattā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjantī”ti. “Sādhu kho, mārisa moggallāna, buddhe aveccappasādena samannāgamanaṁ hoti: ‘itipi so …pe… satthā devamanussānaṁ buddho bhagavā’ti. Buddhe aveccappasādena samannāgamanahetu kho, mārisa moggallāna, evam’idhekacce sattā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjanti. Sādhu kho, mārisa moggallāna, dhamme aveccappasādena samannāgamanaṁ hoti: ‘svākkhāto bhagavatā dhammo …pe… paccattaṁ veditabbo viññūhī’ti. Dhamme aveccappasādena samannāgamanahetu kho, mārisa moggallāna, evam’idhekacce sattā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjanti. Sādhu kho, mārisa moggallāna, saṅghe aveccappasādena samannāgamanaṁ hoti: ‘suppaṭipanno bhagavato sāvakasaṅgho …pe… anuttaraṁ puññakkhettaṁ lokassā’ti. Saṅghe aveccappasādena samannāgamanahetu kho, mārisa moggallāna, evam’idhekacce sattā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjanti. Sādhu kho, mārisa moggallāna, ariyakantehi sīlehi samannāgamanaṁ hoti akhaṇḍehi …pe… samādhisaṁvattanikehi. Ariyakantehi sīlehi samannāgamanahetu kho, mārisa moggallāna, evam’idhekacce sattā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjantī”ti. Atha kho sakko devānamindo chahi devatāsatehi saddhiṁ …pe…. Atha kho sakko devānamindo sattahi devatāsatehi saddhiṁ …pe…. Atha kho sakko devānamindo aṭṭhahi devatāsatehi saddhiṁ …pe…. Atha kho sakko devānamindo asītiyā devatāsahassehi saddhiṁ yenāyasmā mahāmoggallāno tenupasaṅkami; upasaṅkamitvā āyasmantaṁ mahāmoggallānaṁ abhivādetvā ekamantaṁ aṭṭhāsi. Ekamantaṁ ṭhitaṁ kho sakkaṁ devānamindaṁ āyasmā mahāmoggallāno etadavoca: “Sādhu kho, devānaminda, buddhe aveccappasādena samannāgamanaṁ hoti: ‘itipi so bhagavā …pe… satthā devamanussānaṁ buddho bhagavā’ti. Buddhe aveccappasādena samannāgamanahetu kho, devānaminda, evam’idhekacce sattā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjanti. Sādhu kho, devānaminda, dhamme aveccappasādena samannāgamanaṁ hoti: ‘svākkhāto bhagavatā dhammo …pe… paccattaṁ veditabbo viññūhī’ti. Dhamme aveccappasādena samannāgamanahetu kho, devānaminda, evam’idhekacce sattā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjanti. Sādhu kho, devānaminda, saṅghe aveccappasādena samannāgamanaṁ hoti: ‘suppaṭipanno bhagavato sāvakasaṅgho …pe… anuttaraṁ puññakkhettaṁ lokassā’ti. Saṅghe aveccappasādena samannāgamanahetu kho, devānaminda, evam’idhekacce sattā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjanti. Sādhu kho, devānaminda, ariyakantehi sīlehi samannāgamanaṁ hoti akhaṇḍehi …pe… samādhisaṁvattanikehi. Ariyakantehi sīlehi samannāgamanahetu kho, devānaminda, evam’idhekacce sattā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjantī”ti. “Sādhu kho, mārisa moggallāna, buddhe aveccappasādena samannāgamanaṁ hoti: ‘itipi so bhagavā …pe… satthā devamanussānaṁ buddho bhagavā’ti. Buddhe aveccappasādena samannāgamanahetu kho, mārisa moggallāna, evam’idhekacce sattā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjanti. Sādhu kho, mārisa moggallāna, dhamme aveccappasādena samannāgamanaṁ hoti: ‘svākkhāto bhagavatā dhammo …pe… paccattaṁ veditabbo viññūhī’ti. Dhamme aveccappasādena samannāgamanahetu kho, mārisa moggallāna, evam’idhekacce sattā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjanti. Sādhu kho, mārisa moggallāna, saṅghe aveccappasādena samannāgamanaṁ hoti: ‘suppaṭipanno bhagavato sāvakasaṅgho …pe… anuttaraṁ puññakkhettaṁ lokassā’ti. Saṅghe aveccappasādena samannāgamanahetu kho, mārisa moggallāna, evam’idhekacce sattā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjanti. Sādhu kho, mārisa moggallāna, ariyakantehi sīlehi samannāgamanaṁ hoti akhaṇḍehi …pe… samādhisaṁvattanikehi. Ariyakantehi sīlehi samannāgamanahetu kho, mārisa moggallāna, evam’idhekacce sattā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjantī”ti. Atha kho sakko devānamindo pañcahi devatāsatehi saddhiṁ yenāyasmā mahāmoggallāno tenupasaṅkami …pe… ekamantaṁ ṭhitaṁ kho sakkaṁ devānamindaṁ āyasmā mahāmoggallāno etadavoca: “Sādhu kho, devānaminda, buddhasaraṇagamanaṁ hoti. Buddhasaraṇagamanahetu kho, devānaminda, evam’idhekacce sattā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjanti. Te aññe deve dasahi ṭhānehi adhigaṇhanti— dibbena āyunā, dibbena vaṇṇena, dibbena sukhena, dibbena yasena, dibbena ādhipateyyena, dibbehi rūpehi, dibbehi saddehi, dibbehi gandhehi, dibbehi rasehi, dibbehi phoṭṭhabbehi. Sādhu kho, devānaminda, dhammasaraṇagamanaṁ hoti. Dhammasaraṇagamanahetu kho, devānaminda, evam’idhekacce sattā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjanti. Te aññe deve dasahi ṭhānehi adhigaṇhanti— dibbena āyunā, dibbena vaṇṇena, dibbena sukhena, dibbena yasena, dibbena ādhipateyyena, dibbehi rūpehi, dibbehi saddehi, dibbehi gandhehi, dibbehi rasehi, dibbehi phoṭṭhabbehi. Sādhu kho, devānaminda, saṅghasaraṇagamanaṁ hoti. Saṅghasaraṇagamanahetu kho, devānaminda, evam’idhekacce sattā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjanti. Te aññe deve dasahi ṭhānehi adhigaṇhanti— dibbena āyunā, dibbena vaṇṇena, dibbena sukhena, dibbena yasena, dibbena ādhipateyyena, dibbehi rūpehi, dibbehi saddehi, dibbehi gandhehi, dibbehi rasehi, dibbehi phoṭṭhabbehī”ti. “Sādhu kho, mārisa moggallāna, buddhasaraṇagamanaṁ hoti. Buddhasaraṇagamanahetu kho, mārisa moggallāna, evam’idhekacce sattā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjanti. Te aññe deve dasahi ṭhānehi adhigaṇhanti— dibbena āyunā …pe… dibbehi phoṭṭhabbehi. Sādhu kho, mārisa moggallāna, dhammasaraṇagamanaṁ hoti …pe…. Sādhu kho, mārisa moggallāna, saṅghasaraṇagamanaṁ hoti. Saṅghasaraṇagamanahetu kho, mārisa moggallāna, evam’idhekacce sattā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjanti. Te aññe deve dasahi ṭhānehi adhigaṇhanti— dibbena āyunā, dibbena vaṇṇena, dibbena sukhena, dibbena yasena, dibbena ādhipateyyena, dibbehi rūpehi, dibbehi saddehi, dibbehi gandhehi, dibbehi rasehi, dibbehi phoṭṭhabbehī”ti. Atha kho sakko devānamindo chahi devatāsatehi saddhiṁ …pe… atha kho sakko devānamindo sattahi devatāsatehi saddhiṁ …pe… atha kho sakko devānamindo aṭṭhahi devatāsatehi saddhiṁ …pe… atha kho sakko devānamindo asītiyā devatāsahassehi saddhiṁ yenāyasmā mahāmoggallāno tenupasaṅkami; upasaṅkamitvā āyasmantaṁ mahāmoggallānaṁ abhivādetvā ekamantaṁ aṭṭhāsi. Ekamantaṁ ṭhitaṁ kho sakkaṁ devānamindaṁ āyasmā mahāmoggallāno etadavoca: “Sādhu kho, devānaminda, buddhasaraṇagamanaṁ hoti. Buddhasaraṇagamanahetu kho, devānaminda, evam’idhekacce sattā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjanti. Te aññe deve dasahi ṭhānehi adhigaṇhanti— dibbena āyunā …pe… dibbehi phoṭṭhabbehi. Sādhu kho, devānaminda, dhammasaraṇagamanaṁ hoti …pe…. Sādhu kho, devānaminda, saṅghasaraṇagamanaṁ hoti. Saṅghasaraṇagamanahetu kho, devānaminda, evam’idhekacce sattā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjanti. Te aññe deve dasahi ṭhānehi adhigaṇhanti— dibbena āyunā, dibbena vaṇṇena, dibbena sukhena, dibbena yasena, dibbena ādhipateyyena, dibbehi rūpehi, dibbehi saddehi, dibbehi gandhehi, dibbehi rasehi, dibbehi phoṭṭhabbehī”ti. “Sādhu kho, mārisa moggallāna, buddhasaraṇagamanaṁ hoti …pe… sādhu kho, mārisa moggallāna, dhammasaraṇagamanaṁ hoti …pe… sādhu kho, mārisa moggallāna, saṅghasaraṇagamanaṁ hoti. Saṅghasaraṇagamanahetu kho, mārisa moggallāna, evam’idhekacce sattā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjanti. Te aññe deve dasahi ṭhānehi adhigaṇhanti— dibbena āyunā, dibbena vaṇṇena, dibbena sukhena, dibbena yasena, dibbena ādhipateyyena, dibbehi rūpehi, dibbehi saddehi, dibbehi gandhehi, dibbehi rasehi, dibbehi phoṭṭhabbehī”ti. Atha kho sakko devānamindo pañcahi devatāsatehi saddhiṁ yenāyasmā mahāmoggallāno tenupasaṅkami; upasaṅkamitvā āyasmantaṁ mahāmoggallānaṁ abhivādetvā ekamantaṁ aṭṭhāsi. Ekamantaṁ ṭhitaṁ kho sakkaṁ devānamindaṁ āyasmā mahāmoggallāno etadavoca: “Sādhu kho, devānaminda, buddhe aveccappasādena samannāgamanaṁ hoti: ‘itipi so bhagavā …pe… satthā devamanussānaṁ buddho bhagavā’ti. Buddhe aveccappasādena samannāgamanahetu kho, devānaminda, evam’idhekacce sattā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjanti. Te aññe deve dasahi ṭhānehi adhigaṇhanti— dibbena āyunā …pe… dibbehi phoṭṭhabbehi. Sādhu kho, devānaminda, dhamme aveccappasādena samannāgamanaṁ hoti: ‘svākkhāto bhagavatā dhammo …pe… paccattaṁ veditabbo viññūhī’ti. Dhamme aveccappasādena samannāgamanahetu kho, devānaminda, evam’idhekacce sattā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjanti …pe…. Sādhu kho, devānaminda, saṅghe aveccappasādena samannāgamanaṁ hoti: ‘suppaṭipanno bhagavato sāvakasaṅgho …pe… lokassā’ti. Saṅghe aveccappasādena samannāgamanahetu kho, devānaminda, evam’idhekacce sattā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjanti …pe…. Sādhu kho, devānaminda, ariyakantehi sīlehi samannāgamanaṁ hoti akhaṇḍehi …pe… samādhisaṁvattanikehi. Ariyakantehi sīlehi samannāgamanahetu kho, devānaminda, evam’idhekacce sattā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjanti. Te aññe deve dasahi ṭhānehi adhigaṇhanti— dibbena āyunā …pe… dibbehi phoṭṭhabbehī”ti. “Sādhu kho, mārisa moggallāna, buddhe aveccappasādena samannāgamanaṁ hoti: ‘itipi so bhagavā …pe… satthā devamanussānaṁ buddho bhagavā’ti. Buddhe aveccappasādena samannāgamanahetu kho, mārisa moggallāna, evam’idhekacce sattā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjanti. Te aññe deve dasahi ṭhānehi adhigaṇhanti— dibbena āyunā …pe… dibbehi phoṭṭhabbehi. Sādhu kho, mārisa moggallāna, dhamme aveccappasādena samannāgamanaṁ hoti: ‘svākkhāto bhagavatā dhammo …pe… paccattaṁ veditabbo viññūhī’ti. Dhamme aveccappasādena samannāgamanahetu kho, mārisa moggallāna, evam’idhekacce sattā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjanti. Te aññe deve dasahi ṭhānehi adhigaṇhanti— dibbena āyunā …pe… dibbehi phoṭṭhabbehi. Sādhu kho, mārisa moggallāna, saṅghe aveccappasādena samannāgamanaṁ hoti: ‘suppaṭipanno bhagavato sāvakasaṅgho …pe… lokassā’ti. Saṅghe aveccappasādena samannāgamanahetu kho, mārisa moggallāna, evam’idhekacce sattā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjanti …pe…. Sādhu kho, mārisa moggallāna, ariyakantehi sīlehi samannāgamanaṁ hoti akhaṇḍehi …pe… samādhisaṁvattanikehi. Ariyakantehi sīlehi samannāgamanahetu kho, mārisa moggallāna, evam’idhekacce sattā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjanti. Te aññe deve dasahi ṭhānehi adhigaṇhanti— dibbena āyunā …pe… dibbehi phoṭṭhabbehī”ti. Atha kho sakko devānamindo chahi devatāsatehi saddhiṁ …pe… atha kho sakko devānamindo sattahi devatāsatehi saddhiṁ …pe… atha kho sakko devānamindo aṭṭhahi devatāsatehi saddhiṁ …pe… atha kho sakko devānamindo asītiyā devatāsahassehi saddhiṁ yenāyasmā mahāmoggallāno tenupasaṅkami; upasaṅkamitvā āyasmantaṁ mahāmoggallānaṁ abhivādetvā ekamantaṁ aṭṭhāsi. Ekamantaṁ ṭhitaṁ kho sakkaṁ devānamindaṁ āyasmā mahāmoggallāno etadavoca: “Sādhu kho, devānaminda, buddhe aveccappasādena samannāgamanaṁ hoti: ‘itipi so bhagavā arahaṁ sammāsambuddho vijjācaraṇasampanno sugato lokavidū anuttaro purisadammasārathi satthā devamanussānaṁ buddho bhagavā’ti. Buddhe aveccappasādena samannāgamanahetu kho, devānaminda, evam’idhekacce sattā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjanti. Te aññe deve dasahi ṭhānehi adhigaṇhanti— dibbena āyunā, dibbena vaṇṇena, dibbena sukhena, dibbena yasena, dibbena ādhipateyyena, dibbehi rūpehi, dibbehi saddehi, dibbehi gandhehi, dibbehi rasehi, dibbehi phoṭṭhabbehi. Sādhu kho, devānaminda, dhamme aveccappasādena samannāgamanaṁ hoti: ‘svākkhāto bhagavatā dhammo sandiṭṭhiko akāliko ehipassiko opaneyyiko paccattaṁ veditabbo viññūhī’ti. Dhamme aveccappasādena samannāgamanahetu kho, devānaminda, evam’idhekacce sattā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjanti. Te aññe deve dasahi ṭhānehi adhigaṇhanti— dibbena āyunā …pe… dibbehi phoṭṭhabbehi. Sādhu kho, devānaminda, saṅghe aveccappasādena samannāgamanaṁ hoti: ‘suppaṭipanno bhagavato sāvakasaṅgho, ujuppaṭipanno bhagavato sāvakasaṅgho, ñāyappaṭipanno bhagavato sāvakasaṅgho, sāmīcippaṭipanno bhagavato sāvakasaṅgho, yadidaṁ cattāri purisayugāni aṭṭha purisapuggalā esa bhagavato sāvakasaṅgho āhuneyyo pāhuneyyo dakkhiṇeyyo añjalikaraṇīyo anuttaraṁ puññakkhettaṁ lokassā’ti. Saṅghe aveccappasādena samannāgamanahetu kho, devānaminda, evam’idhekacce sattā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjanti. Te aññe deve dasahi ṭhānehi adhigaṇhanti— dibbena āyunā …pe… dibbehi phoṭṭhabbehi. Sādhu kho, devānaminda, ariyakantehi sīlehi samannāgamanaṁ hoti akhaṇḍehi acchiddehi asabalehi akammāsehi bhujissehi viññuppasatthehi aparāmaṭṭhehi samādhisaṁvattanikehi. Ariyakantehi sīlehi samannāgamanahetu kho, devānaminda, evam’idhekacce sattā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjanti. Te aññe deve dasahi ṭhānehi adhigaṇhanti— dibbena āyunā, dibbena vaṇṇena, dibbena sukhena, dibbena yasena, dibbena ādhipateyyena, dibbehi rūpehi, dibbehi saddehi, dibbehi gandhehi, dibbehi rasehi, dibbehi phoṭṭhabbehī”ti. “Sādhu kho, mārisa moggallāna, buddhe aveccappasādena samannāgamanaṁ hoti: ‘itipi so bhagavā …pe… satthā devamanussānaṁ buddho bhagavā’ti. Buddhe aveccappasādena samannāgamanahetu kho, mārisa moggallāna, evam’idhekacce sattā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjanti. Te aññe deve dasahi ṭhānehi adhigaṇhanti— dibbena āyunā …pe… dibbehi phoṭṭhabbehi. Sādhu kho, mārisa moggallāna, dhamme aveccappasādena samannāgamanaṁ hoti: ‘svākkhāto bhagavatā dhammo …pe… paccattaṁ veditabbo viññūhī’ti. Dhamme aveccappasādena samannāgamanahetu kho, mārisa moggallāna, evam’idhekacce sattā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjanti. Te aññe deve dasahi ṭhānehi adhigaṇhanti— dibbena āyunā …pe… dibbehi phoṭṭhabbehi. Sādhu kho, mārisa moggallāna, saṅghe aveccappasādena samannāgamanaṁ hoti: ‘suppaṭipanno bhagavato sāvakasaṅgho …pe… anuttaraṁ puññakkhettaṁ lokassā’ti. Saṅghe aveccappasādena samannāgamanahetu kho, mārisa moggallāna, evam’idhekacce sattā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjanti. Te aññe deve dasahi ṭhānehi adhigaṇhanti— dibbena āyunā …pe… dibbehi phoṭṭhabbehi. Sādhu kho, mārisa moggallāna, ariyakantehi sīlehi samannāgamanaṁ hoti akhaṇḍehi …pe… samādhisaṁvattanikehi. Ariyakantehi sīlehi samannāgamanahetu kho, mārisa moggallāna, evam’idhekacce sattā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjanti. Te aññe deve dasahi ṭhānehi adhigaṇhanti— dibbena āyunā, dibbena vaṇṇena, dibbena sukhena, dibbena yasena, dibbena ādhipateyyena, dibbehi rūpehi, dibbehi saddehi, dibbehi gandhehi, dibbehi rasehi, dibbehi phoṭṭhabbehī”ti. Dasamaṁ.",
+   "T0099-sa506": "譬如力士屈伸臂頃，從三十三天沒，至閻浮提，告諸四眾：「諸人當知，世尊却後七日，從三十三天還閻浮提僧迦舍城，於外門外優曇鉢樹下。」如期七日，世尊從三十三天下閻浮提僧迦舍城優曇鉢樹下，天龍鬼神，乃至梵天，悉從來下，即於此時，名此會名天下處。"
+  },
+  "a09": {
+   "T0099-sa988-989": "爾時，釋提桓因形色絕妙，於後夜時來詣佛所，稽首佛足，退住一面。天身威力，光明遍照迦蘭陀竹園。時，釋提桓因白佛言：「世尊！世尊曾於隔界山石窟中說言：『若有沙門、婆羅門無上愛盡解脫、心善解脫，彼邊際、究竟邊際、離垢邊際、梵行畢竟。』云何為比丘邊際、究竟邊際、離垢邊際、梵行畢竟？」"
+  },
+  "a10": {
+   "T0099-sa988-989": "佛告天帝釋：「謂比丘若所有受覺，若苦、若樂、若不苦不樂，彼諸受集、受滅、受味、受患、受出如實知；如實知已，觀察彼受無常，觀生滅、觀離欲、觀滅盡、觀捨；如是觀察已，則邊際，究竟邊際、離垢邊際、梵行畢竟。拘尸迦！是名比丘於正法、律邊際、究竟邊際、離垢邊際、梵行畢竟。」"
+  },
+  "a11": {
+   "T0099-sa988-989": "乃至天帝釋聞佛所說，歡喜隨喜，作禮而去。"
+  }
+ }
+}

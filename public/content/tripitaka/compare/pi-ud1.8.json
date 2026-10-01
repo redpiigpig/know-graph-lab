@@ -1,0 +1,127 @@
+{
+ "slug": "pi-ud1.8",
+ "title": "別譯雜阿含經 （一一）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。複核標記存疑 2 段：義段5與6在別譯雜阿含經（一一）與雜阿含經（一〇七二）中內容對調：偈頌內容出現在觀見段，而觀見段內容出現在偈頌段。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "僧鉗歸來"
+  },
+  {
+   "id": "a02",
+   "label": "舊妻攜子來訪"
+  },
+  {
+   "id": "a03",
+   "label": "舊妻三次請求養子"
+  },
+  {
+   "id": "a04",
+   "label": "舊妻遺子而去"
+  },
+  {
+   "id": "a05",
+   "label": "世尊觀見並說偈",
+   "doubt": true
+  },
+  {
+   "id": "a06",
+   "label": "偈頌",
+   "doubt": true
+  },
+  {
+   "id": "a07",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "ud1.8",
+   "lang": "pi",
+   "label": "巴利 UD1.8",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-ud1.8",
+   "lang": "lzh",
+   "label": "漢譯南傳 UD1.8",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.11",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （一一）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa1072",
+   "lang": "lzh",
+   "label": "雜阿含經 （一〇七二）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（一一）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一〇七二）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "ud1.8": "Udāna 1.8 Saṅgāmajisutta Evaṁ me sutaṁ— ekaṁ samayaṁ bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme.",
+   "T0100-sa-2.11": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。",
+   "T0099-sa1072": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。"
+  },
+  "a01": {
+   "ud1.8": "Tena kho pana samayena āyasmā saṅgāmaji sāvatthiṁ anuppatto hoti bhagavantaṁ dassanāya. Assosi kho āyasmato saṅgāmajissa purāṇadutiyikā: “ayyo kira saṅgāmaji sāvatthiṁ anuppatto”ti.",
+   "T0100-sa-2.11": "爾時，長老僧鉗從驕薩羅國遊行至舍衛國，到祇樹給孤獨園。",
+   "T0099-sa1072": "時，有尊者僧迦藍於拘薩羅人間遊行，至舍衛國祇樹給孤獨園。"
+  },
+  "a02": {
+   "ud1.8": "Sā dārakaṁ ādāya jetavanaṁ agamāsi. Tena kho pana samayena āyasmā saṅgāmaji aññatarasmiṁ rukkhamūle divāvihāraṁ nisinno hoti.",
+   "T0100-sa-2.11": "爾時，本二知僧鉗來至舍衛國，著衣服瓔珞，種種莊嚴，携將其子至僧鉗房。時，尊者僧鉗露地經行。",
+   "T0099-sa1072": "彼僧迦藍比丘有本二，在舍衛國中，聞僧迦藍比丘於拘薩羅人間遊行，至舍衛國祇樹給孤獨園。聞已，著好衣服，莊嚴華瓔，抱其兒來詣祇洹，至僧迦藍比丘房前。爾時，尊者僧迦藍出房露地經行。"
+  },
+  "a03": {
+   "ud1.8": "Atha kho āyasmato saṅgāmajissa purāṇadutiyikā yenāyasmā saṅgāmaji tenupasaṅkami; upasaṅkamitvā āyasmantaṁ saṅgāmajiṁ etadavoca: “khuddaputtañhi, samaṇa, posa man”ti. Evaṁ vutte, āyasmā saṅgāmaji tuṇhī ahosi. Dutiyampi kho āyasmato saṅgāmajissa purāṇadutiyikā āyasmantaṁ saṅgāmajiṁ etadavoca: “khuddaputtañhi, samaṇa, posa man”ti. Dutiyampi kho āyasmā saṅgāmaji tuṇhī ahosi. Tatiyampi kho āyasmato saṅgāmajissa purāṇadutiyikā āyasmantaṁ saṅgāmajiṁ etadavoca: “khuddaputtañhi, samaṇa, posa man”ti. Tatiyampi kho āyasmā saṅgāmaji tuṇhī ahosi.",
+   "T0100-sa-2.11": "到尊者所而語之言：「我子稚小，不能自活，故來相見尊者。」雖與相見，不共其語。第二第三，亦作是說。尊者僧鉗雖復相對，了不顧視，亦不與語。",
+   "T0099-sa1072": "時，彼本二來到其前，作是言：「此兒幼小，汝捨出家，誰當養活？」時，僧迦藍比丘不共語。如是再三，亦不共語。"
+  },
+  "a04": {
+   "ud1.8": "Atha kho āyasmato saṅgāmajissa purāṇadutiyikā taṁ dārakaṁ āyasmato saṅgāmajissa purato nikkhipitvā pakkāmi: “eso te, samaṇa, putto; posa nan”ti. Atha kho āyasmā saṅgāmaji taṁ dārakaṁ neva olokesi nāpi ālapi. Atha kho āyasmato saṅgāmajissa purāṇadutiyikā avidūraṁ gantvā apalokentī addasa āyasmantaṁ saṅgāmajiṁ taṁ dārakaṁ neva olokentaṁ nāpi ālapantaṁ, disvānassā etadahosi: “na cāyaṁ samaṇo puttenapi atthiko”ti. Tato paṭinivattitvā dārakaṁ ādāya pakkāmi.",
+   "T0100-sa-2.11": "本二即言：「我來見爾，不共我語，此是爾子，爾自養活。」著經行道頭，棄之而去，遠住遙看。爾時，尊者亦復不共子語。本二復自思念：「今此沙門善得解脫，能斷愛結。彼仙所斷，盡以獲得。」不滿所願，還來取兒，負還向家。",
+   "T0099-sa1072": "時，彼本二作如是言：「我再三告，不與我語，不見顧視，我今置兒。」著經行道頭而去，言：「沙門！此是汝子，汝自養活，我今捨去。」尊者僧迦藍亦不顧視其子。彼本二復言：「是沙門今於此兒都不顧視，彼必得仙人難得之處。善哉！沙門！必得解脫。」情願不遂，抱子而去。"
+  },
+  "a05": {
+   "ud1.8": "Addasā kho bhagavā dibbena cakkhunā visuddhena atikkantamānusakena āyasmato saṅgāmajissa purāṇadutiyikāya evarūpaṁ vippakāraṁ.",
+   "T0100-sa-2.11": "爾時，世尊以淨天耳過於人耳，具聞僧鉗、本二所說。",
+   "T0099-sa1072": "爾時，世尊入晝正受，以天耳過人之耳，聞尊者僧迦藍本二所說，即說偈言：「來者不歡喜，去亦不憂慼。"
+  },
+  "a06": {
+   "ud1.8": "Atha kho bhagavā etamatthaṁ viditvā tāyaṁ velāyaṁ imaṁ udānaṁ udānesi: “Āyantiṁ nābhinandati, pakkamantiṁ na socati; Saṅgā saṅgāmajiṁ muttaṁ, tamahaṁ brūmi brāhmaṇan”ti.",
+   "nan-ud1.8": "如是我聞。爾時，世尊住舍衛城祇陀林給孤獨園。爾時，尊者戰勝為禮世尊來至舍衛城。時尊者戰勝之舊妻聞尊者戰勝來至舍衛城，伴其兒赴祇陀林。彼時，尊者戰勝為日中休息，坐於一樹下，尊者戰勝之舊妻近至尊者戰勝而告彼曰：「沙門！我養小子。」雖如是言，尊者戰勝默然。尊者戰勝之舊妻再告彼言：「沙門！我養小子。」尊者再度默然。尊者戰勝之舊妻三告彼言：「沙門！我養小子。」尊者戰勝三再默然。尊者戰勝之舊妻如是云：「沙門！此為汝子，汝養此子。」捨彼兒於尊者之前而去。尊者戰勝不看其兒又不與語。彼之舊妻稍稍前行回顧，見尊者不看其兒又不與語，彼女即自思惟：「此沙門，子為無用。」彼女還來，攜兒而去。世尊以清淨超人之天眼，見尊者戰勝舊妻之為難。世尊知此已，彼時唱此優陀那：",
+   "T0100-sa-2.11": "爾時，世尊即說偈言：「見來亦不喜，見去亦不憂，\n捨除愛欲者，最上婆羅門。\n來時既不喜，去時亦不憂，\n離垢清淨行，名智婆羅門。」",
+   "T0099-sa1072": "於世間和合，解脫不染著。\n我說彼比丘，為真婆羅門。\n來者不歡喜，去亦不憂慼。\n不染亦無憂，二心俱寂靜，\n我說是比丘，是真婆羅門。」"
+  },
+  "a07": {
+   "ud1.8": "Aṭṭhamaṁ.",
+   "nan-ud1.8": "「不喜舊妻來，不悲舊妻去。戰勝離愛著，彼為婆羅門。」",
+   "T0100-sa-2.11": "說是偈已，諸比丘聞佛所說，歡喜奉行。善生及惡色提婆并象首\n二難陀、窒師般闍羅、少年\n長老并僧鉗",
+   "T0099-sa1072": "佛說此經已，尊者僧迦藍聞佛所說，歡喜隨喜，作禮而去。"
+  }
+ }
+}

@@ -1,0 +1,198 @@
+{
+ "slug": "pi-an8.55",
+ "title": "別譯雜阿含經 （九一）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "問現世四法"
+  },
+  {
+   "id": "a02",
+   "label": "答現世四法總說"
+  },
+  {
+   "id": "a03",
+   "label": "方便具足"
+  },
+  {
+   "id": "a04",
+   "label": "守護具足"
+  },
+  {
+   "id": "a05",
+   "label": "善知識具足"
+  },
+  {
+   "id": "a06",
+   "label": "正命具足"
+  },
+  {
+   "id": "a07",
+   "label": "現世四法結說"
+  },
+  {
+   "id": "a08",
+   "label": "問後世四法"
+  },
+  {
+   "id": "a09",
+   "label": "答後世四法總說"
+  },
+  {
+   "id": "a10",
+   "label": "信具足"
+  },
+  {
+   "id": "a11",
+   "label": "戒具足"
+  },
+  {
+   "id": "a12",
+   "label": "施具足"
+  },
+  {
+   "id": "a13",
+   "label": "慧具足"
+  },
+  {
+   "id": "a14",
+   "label": "後世四法結說"
+  },
+  {
+   "id": "a15",
+   "label": "偈頌"
+  },
+  {
+   "id": "a16",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "an8.55",
+   "lang": "pi",
+   "label": "巴利 AN8.55",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "T0100-sa-2.91",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （九一）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa91",
+   "lang": "lzh",
+   "label": "雜阿含經 （九一）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（九一）"
+  },
+  {
+   "work": "T0099",
+   "node": "（九一）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "an8.55": "Aṅguttara Nikāya 8.55 6. Gotamīvagga Ujjayasutta",
+   "T0100-sa-2.91": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。爾時，有一摩納名曰佛移，往詣佛所，稽首問訊，在一面坐。",
+   "T0099-sa91": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。時，有年少婆羅門名欝闍迦，來詣佛所，稽首佛足，退坐一面，白佛言：「世尊！"
+  },
+  "a01": {
+   "an8.55": "Atha kho ujjayo brāhmaṇo yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavatā saddhiṁ sammodi. Sammodanīyaṁ kathaṁ sāraṇīyaṁ vītisāretvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho ujjayo brāhmaṇo bhagavantaṁ etadavoca: “mayaṁ, bho gotama, pavāsaṁ gantukāmā. Tesaṁ no bhavaṁ gotamo amhākaṁ tathā dhammaṁ desetu—ye amhākaṁ assu dhammā diṭṭhadhammahitāya, diṭṭhadhammasukhāya, samparāyahitāya, samparāyasukhāyā”ti.",
+   "T0100-sa-2.91": "白佛言：「世尊！為有幾法，教在家人處於家中得現報利，并得利樂？」",
+   "T0099-sa91": "俗人在家當行幾法，得現法安及現法樂？」"
+  },
+  "a02": {
+   "an8.55": "“Cattārome, brāhmaṇa, dhammā kulaputtassa diṭṭhadhammahitāya saṁvattanti, diṭṭhadhammasukhāya. Katame cattāro? Uṭṭhānasampadā, ārakkhasampadā, kalyāṇamittatā, samajīvitā.",
+   "T0100-sa-2.91": "佛告摩納：「有四法使在家人得現世報，獲利益樂。何謂為四？一能精勤，二能守護諸根，三得善知識，四正理養命。",
+   "T0099-sa91": "佛告婆羅門：「有四法，俗人在家得現法安、現法樂。何等為四？謂方便具足、守護具足、善知識具足、正命具足。"
+  },
+  "a03": {
+   "an8.55": "Katamā ca, brāhmaṇa, uṭṭhānasampadā? Idha, brāhmaṇa, kulaputto yena kammaṭṭhānena jīvikaṁ kappeti— yadi kasiyā, yadi vaṇijjāya, yadi gorakkhena, yadi issattena, yadi rājaporisena, yadi sippaññatarena— tattha dakkho hoti analaso, tatrupāyāya vīmaṁsāya samannāgato, alaṁ kātuṁ alaṁ saṁvidhātuṁ. Ayaṁ vuccati, brāhmaṇa, uṭṭhānasampadā.",
+   "T0100-sa-2.91": "云何精勤？隨所作業，家計資生，或為王臣，或為農夫，或復治生，或復牧人，隨其所作，不憚劬勞，寒暑風雨，飢渴飽滿，蚊虻蠅蜂，雖有勤苦，不捨作業，為成業故，終不休廢，是名精勤。",
+   "T0099-sa91": "「何等為方便具足？謂善男子種種工巧業處以自營生，謂種田、商賈，或以王事，或以書䟽算畫。於彼彼工巧業處精勤修行，是名方便具足。"
+  },
+  "a04": {
+   "an8.55": "Katamā ca, brāhmaṇa, ārakkhasampadā? Idha, brāhmaṇa, kulaputtassa bhogā honti uṭṭhānavīriyādhigatā, bāhābalaparicitā, sedāvakkhittā, dhammikā dhammaladdhā. Te ārakkhena guttiyā sampādeti: ‘kinti me ime bhoge neva rājāno hareyyuṁ, na corā hareyyuṁ, na aggi ḍaheyya, na udakaṁ vaheyya, na appiyā dāyādā hareyyun’ti. Ayaṁ vuccati, brāhmaṇa, ārakkhasampadā.",
+   "T0100-sa-2.91": "云何名為守護諸根？若族姓子如法聚財，設有方計，不為王賊水火之所劫奪，怨憎之處悉不得侵，不生惡子，是名守護。",
+   "T0099-sa91": "「何等為守護具足？謂善男子所有錢穀，方便所得，自手執作，如法而得，能極守護，不令王、賊、水、火劫奪漂沒令失，不善守護者亡失，不愛念者輒取，及諸災患所壞，是名善男子善守護。"
+  },
+  "a05": {
+   "an8.55": "Katamā ca, brāhmaṇa, kalyāṇamittatā? Idha, brāhmaṇa, kulaputto yasmiṁ gāme vā nigame vā paṭivasati tatra ye te honti—gahapatī vā gahapatiputtā vā daharā vā vuddhasīlino, vuddhā vā vuddhasīlino, saddhāsampannā, sīlasampannā, cāgasampannā, paññāsampannā—tehi saddhiṁ santiṭṭhati sallapati sākacchaṁ samāpajjati; yathārūpānaṁ saddhāsampannānaṁ saddhāsampadaṁ anusikkhati, yathārūpānaṁ sīlasampannānaṁ sīlasampadaṁ anusikkhati, yathārūpānaṁ cāgasampannānaṁ cāgasampadaṁ anusikkhati, yathārūpānaṁ paññāsampannānaṁ paññāsampadaṁ anusikkhati. Ayaṁ vuccati, brāhmaṇa, kalyāṇamittatā.",
+   "T0100-sa-2.91": "云何名為近於善友？若族姓子近於善友，而此善友資性賢良，終不姦盜，亦不放逸飲酒醉亂，吐出實言，不為欺誑。與如此人共為親友，未生憂惱能令不生，已生憂惱能使滅除，未生喜樂能使得生，已生喜樂能使不失，是名善友。",
+   "T0099-sa91": "「何等為善知識具足？若有善男子不落度、不放逸、不虛妄、不凶險，如是知識能善安慰，未生憂苦能令不生，已生憂苦能令開覺，未生喜樂能令速生，已生喜樂護令不失，是名善男子善知識具足。"
+  },
+  "a06": {
+   "an8.55": "Katamā ca, brāhmaṇa, samajīvitā? Idha, brāhmaṇa, kulaputto āyañca bhogānaṁ viditvā vayañca bhogānaṁ viditvā samaṁ jīvikaṁ kappeti nāccogāḷhaṁ nātihīnaṁ: ‘evaṁ me āyo vayaṁ pariyādāya ṭhassati, na ca me vayo āyaṁ pariyādāya ṭhassatī’ti. Seyyathāpi, brāhmaṇa, tulādhāro vā tulādhārantevāsī vā tulaṁ paggahetvā jānāti: ‘ettakena vā onataṁ, ettakena vā unnatan’ti; evamevaṁ kho, brāhmaṇa, kulaputto āyañca bhogānaṁ viditvā vayañca bhogānaṁ viditvā samaṁ jīvikaṁ kappeti nāccogāḷhaṁ nātihīnaṁ: ‘evaṁ me āyo vayaṁ pariyādāya ṭhassati, na ca me vayo āyaṁ pariyādāya ṭhassatī’ti. Sacāyaṁ, brāhmaṇa, kulaputto appāyo samāno uḷāraṁ jīvikaṁ kappeti, tassa bhavanti vattāro: ‘udumbarakhādīvāyaṁ kulaputto bhoge khādatī’ti. Sace panāyaṁ, brāhmaṇa, kulaputto mahāyo samāno kasiraṁ jīvikaṁ kappeti, tassa bhavanti vattāro: ‘ajeṭṭhamaraṇaṁvāyaṁ kulaputto marissatī’ti. Yato ca khoyaṁ, brāhmaṇa, kulaputto āyañca bhogānaṁ viditvā vayañca bhogānaṁ viditvā samaṁ jīvikaṁ kappeti nāccogāḷhaṁ nātihīnaṁ: ‘evaṁ me āyo vayaṁ pariyādāya ṭhassati, na ca me vayo āyaṁ pariyādāya ṭhassatī’ti, ayaṁ vuccati, brāhmaṇa, samajīvitā. Evaṁ samuppannānaṁ, brāhmaṇa, bhogānaṁ cattāri apāyamukhāni honti— itthidhutto, surādhutto, akkhadhutto, pāpamitto pāpasahāyo pāpasampavaṅko. Seyyathāpi, brāhmaṇa, mahato taḷākassa cattāri ceva āyamukhāni, cattāri ca apāyamukhāni. Tassa puriso yāni ceva āyamukhāni tāni pidaheyya, yāni ca apāyamukhāni tāni vivareyya; devo ca na sammā dhāraṁ anuppaveccheyya. Evañhi tassa, brāhmaṇa, mahato taḷākassa parihāniyeva pāṭikaṅkhā, no vuddhi; evamevaṁ kho, brāhmaṇa, evaṁ samuppannānaṁ bhogānaṁ cattāri apāyamukhāni honti— itthidhutto, surādhutto, akkhadhutto, pāpamitto pāpasahāyo pāpasampavaṅko. Evaṁ samuppannānaṁ, brāhmaṇa, bhogānaṁ cattāri āyamukhāni honti— na itthidhutto, na surādhutto, na akkhadhutto, kalyāṇamitto kalyāṇasahāyo kalyāṇasampavaṅko. Seyyathāpi, brāhmaṇa, mahato taḷākassa cattāri ceva āyamukhāni cattāri ca apāyamukhāni. Tassa puriso yāni ceva āyamukhāni tāni vivareyya, yāni ca apāyamukhāni tāni pidaheyya; devo ca sammā dhāraṁ anuppaveccheyya. Evañhi tassa, brāhmaṇa, mahato taḷākassa vuddhiyeva pāṭikaṅkhā, no parihāni; evamevaṁ kho, brāhmaṇa, evaṁ samuppannānaṁ bhogānaṁ cattāri āyamukhāni honti— na itthidhutto …pe… kalyāṇasampavaṅko.",
+   "T0100-sa-2.91": "云何名為正理養命？若族姓子知其財物，量其多少，節其財用，入多於出，莫苟輕用。譬如有人食優曇果，初食之時，樹上甚多。既食之已，醉眠七日。既醒悟已，方覺失 果。宜處以理，奢儉得中。",
+   "T0099-sa91": "「云何為正命具足？謂善男子所有錢財出內稱量，周圓掌護，不令多入少出也、多出少入也。如執秤者，少則增之，多則減之，知平而捨。如是，善男子稱量財物，等入等出，莫令入多出少、出多入少，若善男子無有錢財而廣散用，以此生活，人皆名為優曇鉢果，無有種子，愚癡貪欲，不顧其後。或有善男子財物豐多，不能食用，傍人皆言是愚癡人如餓死狗。是故，善男子所有錢財能自稱量，等入等出，是名正命具足。"
+  },
+  "a07": {
+   "an8.55": "Ime kho, brāhmaṇa, cattāro dhammā kulaputtassa diṭṭhadhammahitāya saṁvattanti diṭṭhadhammasukhāya.",
+   "T0100-sa-2.91": "若有錢財，不能衣食，不能惠施，極自儉用，眾人咸言：『如此之人，死如狗死。』宜自籌量，不奢不儉，是名正理養命。」",
+   "T0099-sa91": "如是，婆羅門！四法成就，現法安、現法樂。」"
+  },
+  "a08": {
+   "an8.55": "Cattārome, brāhmaṇa, kulaputtassa dhammā samparāyahitāya saṁvattanti samparāyasukhāya.",
+   "T0100-sa-2.91": "摩納復白佛言：「修何等法，令在家人現受其利，後世得福？」",
+   "T0099-sa91": "婆羅門白佛言：「世尊！在家之人有幾法，能令後世安、後世樂？」"
+  },
+  "a09": {
+   "an8.55": "Katame cattāro? Saddhāsampadā, sīlasampadā, cāgasampadā, paññāsampadā.",
+   "T0100-sa-2.91": "佛告摩納：「有四種法能獲福報。何謂為四？所謂信戒及施、聞、慧。",
+   "T0099-sa91": "佛告婆羅門：「在家之人有四法，能令後世安、後世樂。何等為四？謂信具足、戒具足、施具足、慧具足。"
+  },
+  "a10": {
+   "an8.55": "Katamā ca, brāhmaṇa, saddhāsampadā? Idha, brāhmaṇa, kulaputto saddho hoti, saddahati tathāgatassa bodhiṁ: ‘itipi so bhagavā …pe… satthā devamanussānaṁ buddho bhagavā’ti. Ayaṁ vuccati, brāhmaṇa, saddhāsampadā.",
+   "T0100-sa-2.91": "云何名戒？能行不殺，乃至不飲酒。",
+   "T0099-sa91": "「何等為信具足？謂善男子於如來所，得信敬心，建立信本，非諸天、魔、梵及餘世人同法所壞，是名善男子信具足。"
+  },
+  "a11": {
+   "an8.55": "Katamā ca, brāhmaṇa, sīlasampadā? Idha, brāhmaṇa, kulaputto pāṇātipātā paṭivirato hoti …pe… surāmerayamajjapamādaṭṭhānā paṭivirato hoti. Ayaṁ vuccati, brāhmaṇa, sīlasampadā.",
+   "T0100-sa-2.91": "云何名施？施沙門、婆羅門、師長、父母、貧窮之者，乞與衣食、床敷、臥具、病瘦醫藥，種種所須，盡能惠與，名之為施。",
+   "T0099-sa91": "「何等戒具足？謂善男子不殺生、不偷盜、不邪婬、不妄語、不飲酒，是名戒具足。"
+  },
+  "a12": {
+   "an8.55": "Katamā ca, brāhmaṇa, cāgasampadā? Idha, brāhmaṇa, kulaputto vigatamalamaccherena cetasā agāraṁ ajjhāvasati muttacāgo payatapāṇi vosaggarato yācayogo dānasaṁvibhāgarato. Ayaṁ vuccati, brāhmaṇa, cāgasampadā.",
+   "T0100-sa-2.91": "云何聞慧？如實知苦，知苦諦；",
+   "T0099-sa91": "「云何施具足？謂善男子離慳垢心，在於居家，行解脫施，常自手與，樂修行捨，等心行施，是名善男子施具足。"
+  },
+  "a13": {
+   "an8.55": "Katamā ca, brāhmaṇa, paññāsampadā? Idha, brāhmaṇa, kulaputto paññavā hoti …pe… sammā dukkhakkhayagāminiyā. Ayaṁ vuccati, brāhmaṇa, paññāsampadā.",
+   "T0100-sa-2.91": "如實知習，知習諦；如實知道，知道諦；如實知滅，知滅諦；",
+   "T0099-sa91": "「云何為慧具足？謂善男子苦聖諦如實知，習、滅、道聖諦如實知，是名善男子慧具足。"
+  },
+  "a14": {
+   "an8.55": "“Ime kho, brāhmaṇa, cattāro dhammā kulaputtassa samparāyahitāya saṁvattanti samparāyasukhāyāti.",
+   "T0100-sa-2.91": "是名聞慧具足。」",
+   "T0099-sa91": "若善男子在家行此四法者，能得後世安、後世樂。」"
+  },
+  "a15": {
+   "an8.55": "Uṭṭhātā kammadheyyesu, appamatto vidhānavā; Samaṁ kappeti jīvikaṁ, sambhataṁ anurakkhati. Saddho sīlena sampanno, vadaññū vītamaccharo; Niccaṁ maggaṁ visodheti, sotthānaṁ samparāyikaṁ. Iccete aṭṭha dhammā ca, saddhassa gharamesino; Akkhātā saccanāmena, ubhayattha sukhāvahā. Diṭṭhadhammahitatthāya, samparāyasukhāya ca; Evametaṁ gahaṭṭhānaṁ,",
+   "T0100-sa-2.91": "爾時，世尊即說偈言：「精心修事業，勤守護不失，\n親近於善友，能正理養命。\n信戒施聞慧，除斷於慳貪，\n若能如是者，速獲清淨道。\n如是八種法，能得現利喜，\n於未來之世，亦得天上樂。」",
+   "T0099-sa91": "爾時，世尊復說偈言：「方便建諸業，積集能守護，\n知識善男子，正命以自活。\n淨信戒具足，惠施離慳垢，\n淨除於速道，得後世安樂。\n若處於居家，成就於八法，\n審諦尊所說，等正覺所知。\n現法得安隱，現法喜樂住，\n後世喜樂住。」"
+  },
+  "a16": {
+   "an8.55": "cāgo puññaṁ pavaḍḍhatī”ti. Pañcamaṁ.",
+   "T0100-sa-2.91": "佛說是已，佛移摩納聞佛所說，歡喜奉行。",
+   "T0099-sa91": "佛說此經已，欝闍迦聞佛所說，歡喜隨喜，作禮而去。"
+  }
+ }
+}

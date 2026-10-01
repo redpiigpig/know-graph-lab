@@ -1,0 +1,215 @@
+{
+ "slug": "pi-sn42.5",
+ "title": "別譯雜阿含經 （一二四）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "調馬師請問調馬之法"
+  },
+  {
+   "id": "a02",
+   "label": "三種調馬之法"
+  },
+  {
+   "id": "a03",
+   "label": "佛問不調之對策"
+  },
+  {
+   "id": "a04",
+   "label": "馬師答以殺害"
+  },
+  {
+   "id": "a05",
+   "label": "馬師請問調御丈夫之法"
+  },
+  {
+   "id": "a06",
+   "label": "佛說三種調御丈夫之法"
+  },
+  {
+   "id": "a07",
+   "label": "釋一向須濡之義"
+  },
+  {
+   "id": "a08",
+   "label": "釋麁之義"
+  },
+  {
+   "id": "a09",
+   "label": "釋亦濡亦麁之義"
+  },
+  {
+   "id": "a10",
+   "label": "馬師問不調之對策"
+  },
+  {
+   "id": "a11",
+   "label": "佛說不調則毀害"
+  },
+  {
+   "id": "a12",
+   "label": "馬師領解並發願改過"
+  },
+  {
+   "id": "a13",
+   "label": "佛讚歡喜結束"
+  },
+  {
+   "id": "a14",
+   "label": "重複請問（第二次）"
+  },
+  {
+   "id": "a15",
+   "label": "重複內容（第二次）"
+  },
+  {
+   "id": "a16",
+   "label": "佛首次答不答"
+  },
+  {
+   "id": "a17",
+   "label": "佛說惡見導致地獄"
+  },
+  {
+   "id": "a18",
+   "label": "佛說邪見導致惡趣"
+  },
+  {
+   "id": "a19",
+   "label": "馬師悲泣懺悔"
+  },
+  {
+   "id": "a20",
+   "label": "馬師說過去被欺"
+  },
+  {
+   "id": "a21",
+   "label": "結束偈頌"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn42.5",
+   "lang": "pi",
+   "label": "巴利 SN42.5",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "T0100-sa-2.124",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （一二四）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa909",
+   "lang": "lzh",
+   "label": "雜阿含經 （九〇九）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（一二四）"
+  },
+  {
+   "work": "T0099",
+   "node": "（九〇九）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn42.5": "Saṁyutta Nikāya 42.5 1. Gāmaṇivagga Assārohasutta",
+   "T0100-sa-2.124": "如是我聞：一時，佛在王舍城迦蘭陀竹林。爾時，善調馬師聚落主往詣佛所，頂禮佛足，在一面坐。",
+   "T0099-sa909": "如是我聞：一時，佛住王舍城迦蘭陀竹園。時，有調馬聚落主來詣佛所，恭敬問訊，退坐一面。"
+  },
+  "a01": {
+   "sn42.5": "Atha kho assāroho gāmaṇi yena bhagavā tenupasaṅkami; upasaṅkamitvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho assāroho gāmaṇi bhagavantaṁ etadavoca:",
+   "T0100-sa-2.124": "佛告調馬師曰：「以幾因緣，令馬得調？」馬師言：「瞿曇！",
+   "T0099-sa909": "爾時，世尊告調馬聚落主：「調伏馬者，有幾種法？」聚落主答言：「瞿曇！"
+  },
+  "a02": {
+   "sn42.5": "“sutaṁ metaṁ, bhante, pubbakānaṁ ācariyapācariyānaṁ assārohānaṁ bhāsamānānaṁ: ‘yo so assāroho saṅgāme ussahati vāyamati, tamenaṁ ussahantaṁ vāyamantaṁ pare hananti pariyāpādenti, so kāyassa bhedā paraṁ maraṇā parajitānaṁ devānaṁ sahabyataṁ upapajjatī’ti. Idha bhagavā kimāhā”ti?",
+   "T0100-sa-2.124": "以三事故，能令馬調：一者、一向須濡。二者、一向須麁。三者、亦濡亦麁。」",
+   "T0099-sa909": "有三種法。何等為三？謂一者柔軟，二者剛強，三者柔軟剛強。」"
+  },
+  "a03": {
+   "sn42.5": "“Alaṁ, gāmaṇi, tiṭṭhatetaṁ; mā maṁ etaṁ pucchī”ti.",
+   "T0100-sa-2.124": "佛語之言：「若斯三事不能調者，復當云何？」",
+   "T0099-sa909": "佛告聚落主：「若以三種法，馬猶不調，當如之何？」"
+  },
+  "a04": {
+   "sn42.5": "Dutiyampi kho …pe…",
+   "T0100-sa-2.124": "馬師對曰：「打令命終。」馬師即言：「瞿曇！",
+   "T0099-sa909": "聚落主言：「便當殺之？」聚落主白佛言：「瞿曇！"
+  },
+  "a05": {
+   "T0100-sa-2.124": "汝為無上調御之師，調丈夫時，以幾事調？」",
+   "T0099-sa909": "無上調御丈夫者，當以幾種法調御丈夫？」佛告聚落主：「我亦以三法調御丈夫。"
+  },
+  "a06": {
+   "T0100-sa-2.124": "佛言：「我亦以三事調御：一、須濡語。二者、麁語。三者、不濡不麁，而得調伏。",
+   "T0099-sa909": "何等為三？一者柔軟，二者剛強，三者柔軟剛強。」聚落主白佛：「瞿曇！"
+  },
+  "a07": {
+   "T0100-sa-2.124": "云何名為一向須濡？如佛告比丘：『汝若修三業善者，獲善果報，此是天，此是人。』是名一向以濡而得調伏。"
+  },
+  "a08": {
+   "T0100-sa-2.124": "云何名麁？如說三惡道，此是身口意業造惡果報。"
+  },
+  "a09": {
+   "T0100-sa-2.124": "云何名為麁而濡？說身口意有諸善業，得生人天，此是身口意善所獲果報；亦說身口意有諸惡業，當墮三塗，斯亦身口意所獲果報。是則名為亦麁亦濡，而調眾生。」"
+  },
+  "a10": {
+   "T0100-sa-2.124": "馬師白佛：「若以此三不調伏者，當云何調？」",
+   "T0099-sa909": "若三種調御丈夫，猶不調者，當如之何？」"
+  },
+  "a11": {
+   "T0100-sa-2.124": "佛告之曰：「與其切言，若不調者，深加毀害。」馬師對曰：「今汝沙門常說不殺，云何言害？」佛言：「馬師！如是！如是！言如來者，實不應殺，所不應作。如來世尊以此三事用調眾生，若不調者，終不與語，亦不教詔，亦不指授。」佛告馬師：「於汝意云何？",
+   "T0099-sa909": "佛言：「聚落主！三事調伏猶不調者，便當殺之。所以者何？莫令我法有所屈辱。」調馬聚落主白佛言：「瞿曇法中，殺生者不淨，瞿曇法中不應殺，而今說言：『不調伏者，亦當殺之。』？」佛告聚落主：「如汝所言：『如來法中，殺生者不淨，如來不應有殺。』聚落主！然我以三種法調御丈夫，彼不調者，不復與語，不復教授，不復教誡。聚落主！若如來調御丈夫，不復與語，不復教授，不復教誡，豈非殺耶？」"
+  },
+  "a12": {
+   "T0100-sa-2.124": "如來若不教授，設不與語，設不指授，如是者則名毀害，是真毀害。」馬師對曰：「實爾！瞿曇。如來若當不與其語，不教授法，實成毀害，甚於世害。」馬師復言：「瞿曇！",
+   "T0099-sa909": "調馬聚落主白佛言：「瞿曇！若調御丈夫不復與語，不復教授，不復教誡，真為殺也。是故我從今日，捨諸惡業，歸佛、歸法、歸比丘僧。」"
+  },
+  "a13": {
+   "T0100-sa-2.124": "我自今已後，當斷毀害，更不造惡。」佛即讚言：「馬師！如汝所說，實為真正。」爾時，馬師聞佛所說，歡喜頂禮而去。",
+   "T0099-sa909": "佛告聚落主：「此真實要。」佛說此經已，調馬聚落主聞佛所說，歡喜隨喜，即從坐起，作禮而去。"
+  },
+  "a14": {
+   "sn42.5": "tatiyampi kho assāroho gāmaṇi bhagavantaṁ etadavoca:"
+  },
+  "a15": {
+   "sn42.5": "“sutaṁ metaṁ, bhante, pubbakānaṁ ācariyapācariyānaṁ assārohānaṁ bhāsamānānaṁ: ‘yo so assāroho saṅgāme ussahati vāyamati, tamenaṁ ussahantaṁ vāyamantaṁ pare hananti pariyāpādenti, so kāyassa bhedā paraṁ maraṇā parajitānaṁ devānaṁ sahabyataṁ upapajjatī’ti. Idha bhagavā kimāhā”ti?"
+  },
+  "a16": {
+   "sn42.5": "“Addhā kho tyāhaṁ, gāmaṇi, na labhāmi: ‘alaṁ, gāmaṇi, tiṭṭhatetaṁ; mā maṁ etaṁ pucchī’ti. Api ca kho tyāhaṁ byākarissāmi."
+  },
+  "a17": {
+   "sn42.5": "Yo so, gāmaṇi, assāroho saṅgāme ussahati vāyamati tassa taṁ cittaṁ pubbe gahitaṁ dukkaṭaṁ duppaṇihitaṁ: ‘ime sattā haññantu vā bajjhantu vā ucchijjantu vā vinassantu vā mā ahesuṁ iti vā’ti. Tamenaṁ ussahantaṁ vāyamantaṁ pare hananti pariyāpādenti, so kāyassa bhedā paraṁ maraṇā parajito nāma nirayo tattha upapajjati."
+  },
+  "a18": {
+   "sn42.5": "Sace kho panassa evaṁ diṭṭhi hoti: ‘yo so assāroho saṅgāme ussahati vāyamati, tamenaṁ ussahantaṁ vāyamantaṁ pare hananti pariyāpādenti, so kāyassa bhedā paraṁ maraṇā parajitānaṁ devānaṁ sahabyataṁ upapajjatī’ti, sāssa hoti micchādiṭṭhi. Micchādiṭṭhikassa kho panāhaṁ, gāmaṇi, purisapuggalassa dvinnaṁ gatīnaṁ aññataraṁ gatiṁ vadāmi— nirayaṁ vā tiracchānayoniṁ vā”ti."
+  },
+  "a19": {
+   "sn42.5": "Evaṁ vutte, assāroho gāmaṇi parodi, assūni pavattesi. “Etaṁ kho tyāhaṁ, gāmaṇi, nālatthaṁ: ‘alaṁ, gāmaṇi, tiṭṭhatetaṁ; mā maṁ etaṁ pucchī’”ti. “Nāhaṁ, bhante, etaṁ rodāmi yaṁ maṁ bhagavā evamāha."
+  },
+  "a20": {
+   "sn42.5": "Api cāhaṁ, bhante, pubbakehi ācariyapācariyehi assārohehi dīgharattaṁ nikato vañcito paluddho: ‘yo so assāroho saṅgāme ussahati vāyamati, tamenaṁ ussahantaṁ vāyamantaṁ pare hananti pariyāpādenti, so kāyassa bhedā paraṁ maraṇā parajitānaṁ devānaṁ sahabyataṁ upapajjatī’”ti."
+  },
+  "a21": {
+   "sn42.5": "“Abhikkantaṁ, bhante …pe… ajjatagge pāṇupetaṁ saraṇaṁ gatan”ti. Pañcamaṁ."
+  }
+ }
+}

@@ -1,0 +1,215 @@
+{
+ "slug": "pi-sn42.11",
+ "title": "別譯雜阿含經 （一二八）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "聚落主請問苦集滅"
+  },
+  {
+   "id": "a02",
+   "label": "佛說過去未來苦難知"
+  },
+  {
+   "id": "a03",
+   "label": "佛說現在苦集滅"
+  },
+  {
+   "id": "a04",
+   "label": "聚落主請廣說"
+  },
+  {
+   "id": "a05",
+   "label": "設問縛殺所愛眾生苦惱"
+  },
+  {
+   "id": "a06",
+   "label": "答非所愛則無苦惱"
+  },
+  {
+   "id": "a07",
+   "label": "苦惱皆因欲生"
+  },
+  {
+   "id": "a08",
+   "label": "問未生子於母有愛否"
+  },
+  {
+   "id": "a09",
+   "label": "見聞子生愛"
+  },
+  {
+   "id": "a10",
+   "label": "子長遭難生苦"
+  },
+  {
+   "id": "a11",
+   "label": "苦惱皆因欲生重申"
+  },
+  {
+   "id": "a12",
+   "label": "遠子遣使憂慮譬喻"
+  },
+  {
+   "id": "a13",
+   "label": "苦惱隨愛數生"
+  },
+  {
+   "id": "a14",
+   "label": "偈頌：無愛無憂如蓮不著水"
+  },
+  {
+   "id": "a15",
+   "label": "重申現法苦集皆因欲"
+  },
+  {
+   "id": "a16",
+   "label": "聚落主得法眼淨"
+  },
+  {
+   "id": "a17",
+   "label": "聚落主歸依三寶"
+  },
+  {
+   "id": "a18",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn42.11",
+   "lang": "pi",
+   "label": "巴利 SN42.11",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "T0100-sa-2.128",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （一二八）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa913",
+   "lang": "lzh",
+   "label": "雜阿含經 （九一三）",
+   "who": "劉宋 求那跋陀羅譯",
+   "reorder": true
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（一二八）"
+  },
+  {
+   "work": "T0099",
+   "node": "（九一三）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn42.11": "Saṁyutta Nikāya 42.11 1. Gāmaṇivagga Bhadrakasutta",
+   "T0100-sa-2.128": "爾時，世尊遊行於末牢村邑，漸次至於優樓頻螺聚落，在鸚鵡閻無果林中。時，驢姓聚落主遙聞世尊遊末牢邑，至優樓頻螺聚落鸚鵡閻無果林，作是思惟：「我聞世尊瞿曇所說之法，能滅現在一切苦習，我亦欲滅現在一切苦習，宜應詣彼，聽斯妙法，彼或為我說於盡滅苦習之道。」時，彼驢姓思惟是已，即出聚落，往世尊所，頂禮佛足，在一面坐。",
+   "T0099-sa913": "如是我聞：一時，佛在力士人間遊行，到欝鞞羅住處鸚鵡閻浮林。時，有竭曇聚落主聞沙門瞿曇在力士人間遊行，至欝鞞羅聚落鸚鵡閻浮林，說現法苦集、苦沒。我當往詣彼沙門瞿曇，若我詣沙門瞿曇者，彼必為我說現法苦集、苦沒。"
+  },
+  "a01": {
+   "sn42.11": "Ekaṁ samayaṁ bhagavā mallesu viharati uruvelakappaṁ nāma mallānaṁ nigamo. Atha kho bhadrako gāmaṇi yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho bhadrako gāmaṇi bhagavantaṁ etadavoca: “sādhu me, bhante, bhagavā dukkhassa samudayañca atthaṅgamañca desetū”ti.",
+   "T0100-sa-2.128": "白佛言：「世尊！我聞如來所說之法，能滅眾生現在苦習。善哉！世尊垂哀矜愍，願為敷演現在能滅苦習之義。」",
+   "T0099-sa913": "即往彼欝鞞羅聚落，詣世尊所，稽首禮足，退坐一面，白佛言：「世尊！我聞世尊常為人說現法苦集、苦沒。善哉！世尊！為我說現法苦集、苦沒。」"
+  },
+  "a02": {
+   "sn42.11": "“Ahañce te, gāmaṇi, atītamaddhānaṁ ārabbha dukkhassa samudayañca atthaṅgamañca deseyyaṁ: ‘evaṁ ahosi atītamaddhānan’ti, tatra te siyā kaṅkhā, siyā vimati. Ahañce te, gāmaṇi, anāgatamaddhānaṁ ārabbha dukkhassa samudayañca atthaṅgamañca deseyyaṁ: ‘evaṁ bhavissati anāgatamaddhānan’ti, tatrāpi te siyā kaṅkhā, siyā vimati.",
+   "T0100-sa-2.128": "爾時，世尊即告之曰：「我若為汝說於過去曾更無量眾苦滅苦習法，汝或時信，或不信，或樂不樂。我今亦欲為汝說於未來無量眾苦滅苦習法，而汝或信，或不信，或樂不樂。」",
+   "T0099-sa913": "佛告聚落主：「我若說過去法苦集、苦沒者，知汝於彼為信、為不信，為欲、不欲，為念、不念，為樂、不樂，汝今苦不？我若說未來苦集、苦沒者，知汝於彼為信、不信，為欲、不欲，為念、不念，為樂、不樂，汝今苦不？"
+  },
+  "a03": {
+   "sn42.11": "Api cāhaṁ, gāmaṇi, idheva nisinno ettheva te nisinnassa dukkhassa samudayañca atthaṅgamañca desessāmi. Taṁ suṇāhi, sādhukaṁ manasi karohi; bhāsissāmī”ti.",
+   "T0100-sa-2.128": "佛復告曰：「我於今者，即於此處，為汝說於滅苦習法，汝當諦聽，至心受持。諸有眾生，起小苦處，而此苦中，種種差別，是等眾苦，因欲而生，皆習於欲，欲為根本，欲為因緣。」",
+   "T0099-sa913": "我今於此說現法苦集、苦沒，聚落主！若眾生所有苦生，彼一切皆以欲為本，欲生、欲集、欲起、欲因、欲緣而苦生。」"
+  },
+  "a04": {
+   "sn42.11": "“Evaṁ, bhante”ti kho bhadrako gāmaṇi bhagavato paccassosi.",
+   "T0100-sa-2.128": "時，聚落主復白佛言：「善哉！世尊！今我根鈍，不解略說，唯願垂愍，廣演斯義，令我開悟。」",
+   "T0099-sa913": "聚落主白佛言：「世尊極略說法，不廣分別，我所不解。善哉！世尊！唯願廣說，令我等解。」"
+  },
+  "a05": {
+   "sn42.11": "Bhagavā etadavoca: “Taṁ kiṁ maññasi, gāmaṇi, atthi te uruvelakappe manussā yesaṁ te vadhena vā bandhena vā jāniyā vā garahāya vā uppajjeyyuṁ sokaparidevadukkhadomanassupāyāsā”ti?",
+   "T0100-sa-2.128": "佛復告言：「今我問汝，隨所樂答。此優樓頻螺聚落中，所有民眾，假設有人盡繫縛之，加諸罵辱，皆悉斬戮，汝頗於中，生苦惱不？」聚落主言：「雖復憂慘，不必一向生大苦惱。」復白佛言：「世尊！",
+   "T0099-sa913": "佛告聚落主：「我今問汝，隨汝意說，聚落主！於意云何？若眾生於此欝鞞羅聚落住者，是若縛、若打、若責、若殺，汝心當起憂、悲、惱、苦不？」聚落主白佛言：「世尊！"
+  },
+  "a06": {
+   "sn42.11": "“Atthi me, bhante, uruvelakappe manussā yesaṁ me vadhena vā bandhena vā jāniyā vā garahāya vā uppajjeyyuṁ sokaparidevadukkhadomanassupāyāsā”ti. “Atthi pana te, gāmaṇi, uruvelakappe manussā yesaṁ te vadhena vā bandhena vā jāniyā vā garahāya vā nuppajjeyyuṁ sokaparidevadukkhadomanassupāyāsā”ti? “Atthi me, bhante, uruvelakappe manussā yesaṁ me vadhena vā bandhena vā jāniyā vā garahāya vā nuppajjeyyuṁ sokaparidevadukkhadomanassupāyāsā”ti.",
+   "T0100-sa-2.128": "此優樓頻螺聚落之中，是我愛者，則能生我憂悲苦惱，心不悅豫；非我愛者，非我所欲，非我所念，於斯等邊，我則無有憂悲苦惱。」佛告之曰：「聚落主！",
+   "T0099-sa913": "亦不一向。若諸眾生於此欝鞞羅聚落住者，於我有欲、有貪、有愛、有念、相習近者，彼遭若縛、若打、若責、若殺，我則生憂、悲、惱、苦。若彼眾生所無欲、貪、愛、念、相習近者，彼遭縛、打、責、殺，我何為橫生憂、悲、惱、苦？」"
+  },
+  "a07": {
+   "sn42.11": "“Ko nu kho, gāmaṇi, hetu, ko paccayo yena te ekaccānaṁ uruvelakappiyānaṁ manussānaṁ vadhena vā bandhena vā jāniyā vā garahāya vā uppajjeyyuṁ sokaparidevadukkhadomanassupāyāsā”ti? “Yesaṁ me, bhante, uruvelakappiyānaṁ manussānaṁ vadhena vā bandhena vā jāniyā vā garahāya vā uppajjeyyuṁ sokaparidevadukkhadomanassupāyāsā, atthi me tesu chandarāgo.",
+   "T0100-sa-2.128": "是故當知，一切種種苦惱之生，皆由於欲，悉因於欲，欲為根本。」佛復告言：「聚落主！",
+   "T0099-sa913": "佛告聚落主：「是故當知，眾生種種苦生，彼一切皆以欲為本，欲生、欲習、欲起、欲因、欲緣而生眾苦。"
+  },
+  "a08": {
+   "sn42.11": "Yesaṁ pana, bhante, uruvelakappiyānaṁ manussānaṁ vadhena vā bandhena vā jāniyā vā garahāya vā nuppajjeyyuṁ sokaparidevadukkhadomanassupāyāsā, natthi me tesu chandarāgo”ti. “Iminā tvaṁ, gāmaṇi, dhammena diṭṭhena viditena akālikena pattena pariyogāḷhena atītānāgate nayaṁ nehi:",
+   "T0100-sa-2.128": "於汝意云何？若汝子未生，未依於母，未見聞時，頗於彼所，有欲親昵、愛念心不？」對曰：「無也。」",
+   "T0099-sa913": "聚落主！於意云何？汝依父母不相見者，則生欲、貪、愛、念不？」聚落主言：「不也，世尊！」"
+  },
+  "a09": {
+   "sn42.11": "‘yaṁ kho kiñci atītamaddhānaṁ dukkhaṁ uppajjamānaṁ uppajji sabbaṁ taṁ chandamūlakaṁ chandanidānaṁ. Chando hi mūlaṁ dukkhassa.",
+   "T0100-sa-2.128": "佛復告言：「汝子依母而生長已，汝若見時，頗生欲親愛念以不？」對曰：「實爾。」",
+   "T0099-sa913": "「聚落主！於意云何？若見、若聞彼依父母，當起欲、愛、念不？」聚落主言：「如是，世尊！」"
+  },
+  "a10": {
+   "sn42.11": "Yampi hi kiñci anāgatamaddhānaṁ dukkhaṁ uppajjamānaṁ uppajjissati, sabbaṁ taṁ chandamūlakaṁ chandanidānaṁ. Chando hi mūlaṁ dukkhassā’”ti.",
+   "T0100-sa-2.128": "佛言：「汝子依母生已，漸大，設當敗壞，王賊劫奪，若如是者，汝生苦惱憂悲念不？」聚落主曰：「若遭是事，當于爾時，我心愁毒，若死若近死，況復不生憂悲苦惱？」",
+   "T0099-sa913": "復問：「聚落主！於意云何？彼依父母，若無常變異者，當起憂、悲、惱、苦不？」聚落主言：「如是，世尊！若依父母無常變異者，我或隣死，豈唯憂、悲、惱、苦？」"
+  },
+  "a11": {
+   "sn42.11": "“Acchariyaṁ, bhante, abbhutaṁ, bhante. Yāva subhāsitañcidaṁ, bhante, bhagavatā:",
+   "T0100-sa-2.128": "佛復告言：「是故當知，一切種種苦惱之生，皆因於欲，悉從欲生，欲為根本。」聚落主言：「希有世尊！",
+   "T0099-sa913": "佛告聚落主：「是故當知，若諸眾生所有苦生，一切皆以愛欲為本，欲生、欲集、欲起、欲因、欲緣而生苦。」聚落主言：「奇哉！世尊！善說如此依父母譬。"
+  },
+  "a12": {
+   "sn42.11": "‘yaṁ kiñci dukkhaṁ uppajjamānaṁ uppajjati, sabbaṁ taṁ chandamūlakaṁ chandanidānaṁ. Chando hi mūlaṁ dukkhassā’ti.",
+   "T0100-sa-2.128": "所說甚善！巧為方喻。」復白佛言：「我子設當在于遠處，遣使往看，使若還遲，我與其母心意不安，怪使遲晚，我子將不平安耶？」佛言：「聚落主！",
+   "T0099-sa913": "我有依父母，居在異處，我日日遣信問其安否；使未時還，我以憂苦，況復無常，而無憂苦？」"
+  },
+  "a13": {
+   "sn42.11": "Atthi me, bhante, ciravāsī nāma kumāro bahi āvasathe paṭivasati. So khvāhaṁ, bhante, kālasseva vuṭṭhāya purisaṁ uyyojemi:",
+   "T0100-sa-2.128": "是故當知，眾生苦惱，種種憂悲，皆因於欲，由欲而生，欲為根本。假使四愛敗壞變異，便生四種憂悲苦惱，若三亦皆生於憂悲苦惱，若有一愛，便生一憂悲苦惱。",
+   "T0099-sa913": "佛告聚落主：「若有四愛念無常變異者，則四憂苦生；若三、二，若一愛念無常變異者，則一憂苦生。聚落主！若都無愛念者，則無憂苦塵勞。」"
+  },
+  "a14": {
+   "T0100-sa-2.128": "若無愛者，是則無有憂悲苦惱，離於塵垢，如池蓮華，不著於水。」",
+   "T0099-sa913": "即說偈言：「若無世間愛念者，則無憂苦塵勞患，\n一切憂苦消滅盡，猶如蓮花不著水。」"
+  },
+  "a15": {
+   "sn42.11": "‘gaccha, bhaṇe, ciravāsiṁ kumāraṁ jānāhī’ti. Yāvakīvañca, bhante, so puriso nāgacchati, tassa me hoteva aññathattaṁ:",
+   "T0099-sa913": "佛告聚落主：「是故我說，其諸眾生所有憂苦，一切皆以欲為根本，欲生、欲集、欲起、欲因、欲緣而生憂苦。」"
+  },
+  "a16": {
+   "sn42.11": "‘mā heva ciravāsissa kumārassa kiñci ābādhayitthā’”ti.",
+   "T0100-sa-2.128": "說是法時，驢姓聚落主遠離塵垢，得法眼淨，見法得法，解法知法，度疑離惑，不從他心，不趣異道，於佛教法，獲得辯力。",
+   "T0099-sa913": "當其世尊說是法時，揭曇聚落主遠塵離垢，得法眼淨，見法得法，深入於法，度諸狐疑不由於他、不由他度，於正法、律得無所畏。"
+  },
+  "a17": {
+   "sn42.11": "“Taṁ kiṁ maññasi, gāmaṇi, ciravāsissa kumārassa vadhena vā bandhena vā jāniyā vā garahāya vā uppajjeyyuṁ sokaparidevadukkhadomanassupāyāsā”ti?",
+   "T0100-sa-2.128": "即從坐起，整衣服，合掌白佛，而作是言：「世尊！我已出離，歸依三寶，從今日夜為優婆塞，盡我形壽，生清淨信。」",
+   "T0099-sa913": "從坐起，整衣服，合掌白佛：「已度。世尊！我以超越。我從今日，歸佛、歸法、歸比丘僧，盡其壽命為優婆塞，唯憶持我！」"
+  },
+  "a18": {
+   "sn42.11": "“Ciravāsissa me, bhante, kumārassa vadhena vā bandhena vā jāniyā vā garahāya vā jīvitassapi siyā aññathattaṁ, kiṁ pana me nuppajjissanti sokaparidevadukkhadomanassupāyāsā”ti. “Imināpi kho etaṁ, gāmaṇi, pariyāyena veditabbaṁ: ‘yaṁ kiñci dukkhaṁ uppajjamānaṁ uppajjati, sabbaṁ taṁ chandamūlakaṁ chandanidānaṁ. Chando hi mūlaṁ dukkhassā’ti. Taṁ kiṁ maññasi, gāmaṇi, yadā te ciravāsimātā adiṭṭhā ahosi, assutā ahosi, te ciravāsimātuyā chando vā rāgo vā pemaṁ vā”ti? “No hetaṁ, bhante”. “Dassanaṁ vā te, gāmaṇi, āgamma savanaṁ vā evaṁ te ahosi: ‘ciravāsimātuyā chando vā rāgo vā pemaṁ vā’”ti? “Evaṁ, bhante”. “Taṁ kiṁ maññasi, gāmaṇi, ciravāsimātuyā te vadhena vā bandhena vā jāniyā vā garahāya vā uppajjeyyuṁ sokaparidevadukkhadomanassupāyāsā”ti? “Ciravāsimātuyā me, bhante, vadhena vā bandhena vā jāniyā vā garahāya vā jīvitassapi siyā aññathattaṁ, kiṁ pana me nuppajjissanti sokaparidevadukkhadomanassupāyāsā”ti. “Imināpi kho etaṁ, gāmaṇi, pariyāyena veditabbaṁ: ‘yaṁ kiñci dukkhaṁ uppajjamānaṁ uppajjati, sabbaṁ taṁ chandamūlakaṁ chandanidānaṁ. Chando hi mūlaṁ dukkhassā’”ti. Ekādasamaṁ.",
+   "T0100-sa-2.128": "聞佛所說，歡喜頂禮而去。諸比丘聞佛所說，歡喜奉行。",
+   "T0099-sa913": "佛說此經已，揭曇聚落主聞佛所說，歡喜隨喜，作禮而去。"
+  }
+ }
+}

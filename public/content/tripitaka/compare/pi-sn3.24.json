@@ -1,0 +1,180 @@
+{
+ "slug": "pi-sn3.24",
+ "title": "別譯雜阿含經 （六八）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "王問佈施處"
+  },
+  {
+   "id": "a02",
+   "label": "佛答隨心所樂"
+  },
+  {
+   "id": "a03",
+   "label": "王問大福田處"
+  },
+  {
+   "id": "a04",
+   "label": "佛設戰鬪喻問無學者"
+  },
+  {
+   "id": "a05",
+   "label": "王答無學者無用"
+  },
+  {
+   "id": "a06",
+   "label": "佛設戰鬪喻問有學者"
+  },
+  {
+   "id": "a07",
+   "label": "王答有學者有用"
+  },
+  {
+   "id": "a08",
+   "label": "結論：離五支具五支者為福田"
+  },
+  {
+   "id": "a09",
+   "label": "離五支解釋"
+  },
+  {
+   "id": "a10",
+   "label": "具五支解釋"
+  },
+  {
+   "id": "a11",
+   "label": "結偈：施具五支者得大果"
+  },
+  {
+   "id": "a12",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn3.24",
+   "lang": "pi",
+   "label": "巴利 SN3.24",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn3.24",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN3.24",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.68",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （六八）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa1145",
+   "lang": "lzh",
+   "label": "雜阿含經 （一一四五）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（六八）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一一四五）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn3.24": "Saṁyutta Nikāya 3.24 3. Tatiyavagga Issattasutta Sāvatthinidānaṁ.",
+   "nan-sn3.24": "〔二四〕第四　弓術〔爾時，世尊〕住舍衛城……",
+   "T0100-sa-2.68": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。爾時，波斯匿王往詣佛所，頂禮佛足，在一面坐。",
+   "T0099-sa1145": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。"
+  },
+  "a01": {
+   "sn3.24": "Ekamantaṁ nisinno kho rājā pasenadi kosalo bhagavantaṁ etadavoca: “kattha nu kho, bhante, dānaṁ dātabban”ti?",
+   "nan-sn3.24": "坐於一面之拘薩羅國波斯匿王，以此白世尊曰：「世尊！布施應於何處為之耶？」",
+   "T0100-sa-2.68": "白佛言：「世尊！布施之時，應與何處？」",
+   "T0099-sa1145": "時，波斯匿王來詣佛所，稽首佛足，退坐一面，白佛言：「世尊！"
+  },
+  "a02": {
+   "sn3.24": "“Yattha kho, mahārāja, cittaṁ pasīdatī”ti.",
+   "nan-sn3.24": "「大王！應於心之信樂處為作之。」",
+   "T0100-sa-2.68": "佛答王曰：「修布施者，隨意所樂，布施於彼。」"
+  },
+  "a03": {
+   "sn3.24": "“Kattha pana, bhante, dinnaṁ mahapphalan”ti? “Aññaṁ kho etaṁ, mahārāja, kattha dānaṁ dātabbaṁ, aññaṁ panetaṁ kattha dinnaṁ mahapphalanti? Sīlavato kho, mahārāja, dinnaṁ mahapphalaṁ, no tathā dussīle.",
+   "nan-sn3.24": "「世尊！於何處行施，有大果耶？」",
+   "T0100-sa-2.68": "王復問佛：「布施何處，得大果報？」",
+   "T0099-sa1145": "應施何等人？」佛言：「大王！隨心所樂處。」波斯匿王復白佛言：「應施何處，得大果報？」佛言：「大王！此是異問。所問『應施何處？』此問則異。復問『施何處，應得大果？』"
+  },
+  "a04": {
+   "sn3.24": "Tena hi, mahārāja, taññevettha paṭipucchissāmi. Yathā, te khameyya, tathā naṁ byākareyyāsi. Taṁ kiṁ maññasi, mahārāja, idha tyassa yuddhaṁ paccupaṭṭhitaṁ saṅgāmo samupabyūḷho. Atha āgaccheyya khattiyakumāro asikkhito akatahattho akatayoggo akatūpāsano bhīru chambhī utrāsī palāyī. Bhareyyāsi taṁ purisaṁ, attho ca te tādisena purisenā”ti?",
+   "nan-sn3.24": "「大王！布施應於何處為？與何處行施有大果者，有別也。大王！施於持戒者有大果；於惡戒者則不然。大王！誠然！今我問王，王之意云何耶？大王！王之意如何耶？於此王興起戰爭，其戰激烈。時，有不學，不熟習、不慣、不練、恐懼症而戰慄、恐怖、逃亡之剎帝利青年來，王扶持其人，如是其人有用耶？」",
+   "T0100-sa-2.68": "佛答王曰：「汝問異前。我今問汝，隨汝意答。如出軍陣，欲鬪戰時，如東方有剎利，盛壯有力，然其不能善解兵法，亦復不知善調其身，及以射術，畏憚前敵，生于驚懼，每常先退，不能住其所止之處；射箭不遠，設復射箭，終無所中，不堪處彼大陣之中。大王若鬪戰時，有如此人，王當安慰，汝親近我，當重賞賜。",
+   "T0099-sa1145": "此問復異。我今問汝，隨意答我。大王！譬如此國臨陣戰鬪，集諸戰士，而有一婆羅門子，從東方來，年少幼稚，柔弱端正，膚白髮黑，不習武藝，不學術策，恐怖退弱，不能自安，不忍敵觀，若刺若射，無有方便，不能傷彼。云何？大王，如此士夫，王當賞不？」"
+  },
+  "a05": {
+   "sn3.24": "“Nāhaṁ, bhante, bhareyyaṁ taṁ purisaṁ, na ca me attho tādisena purisenā”ti. “Atha āgaccheyya brāhmaṇakumāro asikkhito …pe… atha āgaccheyya vessakumāro asikkhito …pe… atha āgaccheyya suddakumāro asikkhito …pe… na ca me attho tādisena purisenā”ti.",
+   "nan-sn3.24": "「世尊！不，我不扶持其人，其人無有用。」「時，有不學〔……乃至……〕逃亡之婆羅門青年〔……〕毘舍之青年〔……〕首陀羅之青年來……乃至……不，我不扶持其人，其人無有用。」",
+   "T0100-sa-2.68": "王能爾不？」王言：「世尊！我實不用如是之人。何以故？鬪戰之時，所不須故。」「南方有婆羅門，西方有毘舍，北方有首陀，亦復如是。如此人等，王當用不？」王言：「若鬪戰時，皆所不用。」",
+   "T0099-sa1145": "王白佛言：「不賞。世尊！」「如是，大王！有剎利童子從南方來，鞞舍童子從西方來，首陀羅童子從北方來，無有伎術，皆如東方婆羅門子，王當賞不？」王白佛言：「不賞。"
+  },
+  "a06": {
+   "sn3.24": "“Taṁ kiṁ maññasi, mahārāja, idha tyassa yuddhaṁ paccupaṭṭhitaṁ saṅgāmo samupabyūḷho. Atha āgaccheyya khattiyakumāro susikkhito katahattho katayoggo katūpāsano abhīru acchambhī anutrāsī apalāyī. Bhareyyāsi taṁ purisaṁ, attho ca te tādisena purisenā”ti?",
+   "nan-sn3.24": "「大王！王之意云何耶？於此王興起戰爭，其戰激烈。時，有有學、熟習、慣、練、無恐懼症、不戰慄、不恐怖、不逃亡之剎帝利青年來，王扶持其人，如是其人有用耶？」",
+   "T0100-sa-2.68": "佛言：「若鬪戰時，東方有剎利來，年在盛壯，身體丁大，驍勇有力，善解兵法，兼知射術，種種諸術，多諸手伎，善能調身，勇於向敵，大膽不懼，心無驚畏，見敵不退，住所住處；彎弓遠射，能中於物，箭不虛發，勇捍直進，能壞大陣。大王若鬪戰時，當用何者？」",
+   "T0099-sa1145": "世尊！」佛告大王：「此國集軍臨戰鬪時，有婆羅門童子從東方來，年少端正，膚白髮黑，善學武藝，知鬪術法，勇健無畏，苦戰不退，安住諦觀，運戈能傷，能破巨敵。云何？大王！如此戰士，加重賞不？」"
+  },
+  "a07": {
+   "sn3.24": "“Bhareyyāhaṁ, bhante, taṁ purisaṁ, attho ca me tādisena purisenā”ti. “Atha āgaccheyya brāhmaṇakumāro …pe… atha āgaccheyya vessakumāro …pe… atha āgaccheyya suddakumāro susikkhito katahattho katayoggo katūpāsano abhīru acchambhī anutrāsī apalāyī. Bhareyyāsi taṁ purisaṁ, attho ca te tādisena purisenā”ti? “Bhareyyāhaṁ, bhante, taṁ purisaṁ, attho ca me tādisena purisenā”ti.",
+   "nan-sn3.24": "「世尊，我扶持其人，如是之人為有用。」「時，有有學〔……乃至……〕不逃亡之婆羅門青年〔……〕毘舍之青年〔……〕首陀羅之青年來……乃至……王扶持此人，如是之人有用耶？」「世尊！我扶持此人，如是之人有用。」",
+   "T0100-sa-2.68": "王答佛言：「用勇健者。何以故？鬪戰之法，須勇健故。南西北方，亦復如是。」",
+   "T0099-sa1145": "王白佛言：「重賞，世尊！」「如是，剎利童子從南方來，鞞舍童子從西方來，首陀羅童子從北方來，年少端正，善諸術藝，勇健堪能，苦戰却敵，皆如東方婆羅門子。如是戰士，王當賞不？」王白佛言：「重賞，世尊！」"
+  },
+  "a08": {
+   "sn3.24": "“Evameva kho, mahārāja, yasmā kasmā cepi kulā agārasmā anagāriyaṁ pabbajito hoti, so ca hoti pañcaṅgavippahīno pañcaṅgasamannāgato, tasmiṁ dinnaṁ mahapphalaṁ hoti.",
+   "nan-sn3.24": "「大王！如是任何家族，從其家族，無家而出家，以離五支並具五支者，施彼有大果。",
+   "T0100-sa-2.68": "佛告大王：「如是。大王！若有沙門、婆羅門，五支不具，不任福田。復有五支滿足，堪任福田，施得大果，得大利益，極為熾盛，果報增廣。",
+   "T0099-sa1145": "佛言：「大王！如是沙門、婆羅門遠離五支，成就五支，建立福田。施此田者，得大福利，得大果報。"
+  },
+  "a09": {
+   "sn3.24": "Katamāni pañcaṅgāni pahīnāni honti? Kāmacchando pahīno hoti, byāpādo pahīno hoti, thinamiddhaṁ pahīnaṁ hoti, uddhaccakukkuccaṁ pahīnaṁ hoti, vicikicchā pahīnā hoti. Imāni pañcaṅgāni pahīnāni honti.",
+   "nan-sn3.24": "如何為離五支耶？為離愛欲、離瞋、離惛眠、離掉悔、離疑、此謂離五支。",
+   "T0100-sa-2.68": "云何名為具於五支？斷除五蓋。云何斷除五蓋 ？斷除欲蓋、瞋恚、睡眠、調悔及疑。自知除五欲，名斷除五蓋。",
+   "T0099-sa1145": "何等為捨離五支？所謂貪欲蓋，瞋恚、睡眠、掉悔、疑蓋，已斷已知，是名捨離五支。"
+  },
+  "a10": {
+   "sn3.24": "Katamehi pañcahaṅgehi samannāgato hoti? Asekkhena sīlakkhandhena samannāgato hoti, asekkhena samādhikkhandhena samannāgato hoti, asekkhena paññākkhandhena samannāgato hoti, asekkhena vimuttikkhandhena samannāgato hoti, asekkhena vimuttiñāṇadassanakkhandhena samannāgato hoti. Imehi pañcahaṅgehi samannāgato hoti.",
+   "nan-sn3.24": "如何為具五支耶？為具無學戒蘊、具無學定蘊、具無學慧蘊、具無學解脫蘊、具無學解脫知見蘊，此謂具五支。",
+   "T0100-sa-2.68": "云何滿足五支？滿足無學戒、定、慧、解脫、解脫知見。若能滿足如是五支，沙門、婆羅門，施得大果，名大熾然，果報深廣。」",
+   "T0099-sa1145": "何等為成就五支？謂無學戒身成就，無學定身、慧身、解脫身、解脫知見身，是名成就五支。大王！如是捨離五支，成就五支，建立福田，施此田者，得大果報。」"
+  },
+  "a11": {
+   "sn3.24": "Iti pañcaṅgavippahīne pañcaṅgasamannāgate dinnaṁ mahapphalan”ti.",
+   "nan-sn3.24": "施如是離五支、具五支者有大果。」",
+   "T0100-sa-2.68": "爾時，世尊即說偈言：「譬如有一人，驍勇有大力，\n兼善解射術，眾技悉備知。\n鬪戰須此人，當厚賜財寶，\n并與其爵賞，不擇其種姓，\n但錄其功勳，大王應如是。\n若能行善者，柔和修忍辱，\n能見四真諦，得入於聖位。\n供養黠慧者，不應擇種姓，\n住處悉應有，飲食并臥具，\n如此之供養，應有具戒者。\n於大洪流中，應作浮囊栰，\n并造作橋船，自渡亦濟他。\n安直多聞者，譬如有密雲，\n遍覆於世界，電光甚赫曜，\n雷音聲遠震，降注于大雨，\n土地普沾洽，眾卉木叢林，\n無不蒙潤者。禾稼既滋茂，\n農夫生悅慶，如是信施主，\n多聞能惠施，無有慳嫉者。\n潤澤喻飲食，勸讓益進與，\n如雷音遠震，譬如降注雨，\n大獲於子實。能修布施者，\n大獲於功德，後得涅槃樂。」",
+   "T0099-sa1145": "爾時，世尊復說偈言：「運戈猛戰鬪，堪能勇士夫，\n為其戰鬪故，隨功重加賞。\n不賞名族胄，怯劣無勇者，\n忍辱修賢良，見諦建福田。\n賢聖律儀備，成就深妙智，\n族胄雖卑微，堪為施福田。\n衣食錢財寶，床臥等眾具，\n悉應以敬施，為持淨戒故。\n人表林野際，穿井給行人，\n溪㵎施橋梁，逈路造房舍。\n戒德多聞眾，行路得止息，\n譬如重雲起，雷電聲振耀。\n普雨於壤土，百卉悉扶踈，\n禽獸皆歡喜，田夫並欣樂。\n如是淨信心，聞慧捨慳垢，\n錢財豐飲食，常施良福田。\n高唱增歡愛，如雷雨良田，\n功德注流澤，霑洽施主心。\n財富名稱流，及涅槃大果。」"
+  },
+  "a12": {
+   "sn3.24": "Idamavoca bhagavā …pe… satthā: “Issattaṁ balavīriyañca, yasmiṁ vijjetha māṇave; Taṁ yuddhattho bhare rājā, nāsūraṁ jātipaccayā. Tatheva khantisoraccaṁ, dhammā yasmiṁ patiṭṭhitā; Ariyavuttiṁ medhāviṁ, hīnajaccampi pūjaye. Kāraye assame ramme, vāsayettha bahussute; Papañca vivane kayirā, dugge saṅkamanāni ca. Annaṁ pānaṁ khādanīyaṁ, vatthasenāsanāni ca; Dadeyya ujubhūtesu, vippasannena cetasā. Yathā hi megho thanayaṁ, vijjumālī satakkaku; Thalaṁ ninnañca pūreti, abhivassaṁ vasundharaṁ. Tatheva saddho sutavā, abhisaṅkhacca bhojanaṁ; Vanibbake tappayati, annapānena paṇḍito. Āmodamāno pakireti, detha dethāti bhāsati; Taṁ hissa gajjitaṁ hoti, devasseva pavassato; Sā puññadhārā vipulā, dātāraṁ abhivassatī”ti.",
+   "nan-sn3.24": "世尊宣說於此……乃至……師其時唱偈曰：王為戰生貴不扶持怯者\n善選巧弓術勇氣力青年\n如是之智者其生雖卑劣\n忍辱有慈悲善供聖跡人\n善住多聞者欣樂作小屋\n無水林設池嶮處與設道\n食物飲堅食衣服及住居\n以信樂之心善施直心人\n如受電華鬘轟百鳥冠雲\n雨降於大地高低皆潤濕\n有信而多聞賢者以集富\n食物及飲料惠於乞食者\n心喜而播散言予之予之\n此乃彼之轟如天之降雨\n廣大功德水以注眾人上",
+   "T0100-sa-2.68": "佛說是已，諸比丘聞佛所說，歡喜奉行。",
+   "T0099-sa1145": "佛說此經已，波斯匿王聞佛所說，歡喜隨喜，作禮而去。"
+  }
+ }
+}

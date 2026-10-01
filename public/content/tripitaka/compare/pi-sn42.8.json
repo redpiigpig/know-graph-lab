@@ -1,0 +1,342 @@
+{
+ "slug": "pi-sn42.8",
+ "title": "別譯雜阿含經 （一三一）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "結集論者聚落主請問尼乾陀若提子之法"
+  },
+  {
+   "id": "a02",
+   "label": "尼乾陀若提子之說：多行墮地獄"
+  },
+  {
+   "id": "a03",
+   "label": "佛初答：若如尼乾所說則眾生不墮惡趣"
+  },
+  {
+   "id": "a04",
+   "label": "結集論者請問時多時少之辨"
+  },
+  {
+   "id": "a05",
+   "label": "佛反問時多時少之答（殺生）"
+  },
+  {
+   "id": "a06",
+   "label": "佛反問時多時少之答（偷盜）"
+  },
+  {
+   "id": "a07",
+   "label": "佛反問時多時少之答（邪婬）"
+  },
+  {
+   "id": "a08",
+   "label": "佛反問時多時少之答（妄語）"
+  },
+  {
+   "id": "a09",
+   "label": "結集論者轉述尼乾陀之見：多行墮地獄"
+  },
+  {
+   "id": "a10",
+   "label": "佛破斥尼乾見：若如其說則無人墮地獄"
+  },
+  {
+   "id": "a11",
+   "label": "佛說世間教導者之過：隨作時多墮地獄"
+  },
+  {
+   "id": "a12",
+   "label": "結集論者自白：我先殺生必墮地獄等"
+  },
+  {
+   "id": "a13",
+   "label": "佛說如來種種因緣呵責惡業讚歡善業"
+  },
+  {
+   "id": "a14",
+   "label": "結集論者白佛：我曾作惡今自悔責得離罪"
+  },
+  {
+   "id": "a15",
+   "label": "佛說修正見得生天上淨眾生心"
+  },
+  {
+   "id": "a16",
+   "label": "結集論者問：殺時多不殺時多？答：殺時少不"
+  },
+  {
+   "id": "a17",
+   "label": "結集論者決心：從今不殺不生嫌恨嫉得歡喜愛"
+  },
+  {
+   "id": "a18",
+   "label": "佛以爪上土喻罪業少如爪上土福德多如大地土"
+  },
+  {
+   "id": "a19",
+   "label": "結集論者得法眼淨得度歸依佛法僧為優婆塞盡"
+  },
+  {
+   "id": "a20",
+   "label": "結集論者白佛：為利養親近惡師今重歸依佛法"
+  },
+  {
+   "id": "a21",
+   "label": "時造論姓聚落主聞佛所說歡喜頂禮而去"
+  },
+  {
+   "id": "a22",
+   "label": "佛告聚落主：欲何所論？尼揵若提子為何所說"
+  },
+  {
+   "id": "a23",
+   "label": "聚落主言：尼揵若提子說：殺生盜邪婬妄語皆"
+  },
+  {
+   "id": "a24",
+   "label": "佛告聚落主：若如尼揵所說則無眾生墮泥犁中"
+  },
+  {
+   "id": "a25",
+   "label": "聚落主白佛言：世尊！人於晝夜少時有心殺生"
+  },
+  {
+   "id": "a26",
+   "label": "佛告聚落主：若如是者豈非無有人墮於泥犁中"
+  },
+  {
+   "id": "a27",
+   "label": "聚落主！彼大師出興於世覺想籌量入覺想地住"
+  },
+  {
+   "id": "a28",
+   "label": "彼諸弟子若信其說言：我大師知其所知見其所"
+  },
+  {
+   "id": "a29",
+   "label": "得如是見乃至不捨此見不厭彼業不覺彼悔於未"
+  },
+  {
+   "id": "a30",
+   "label": "意解脫不滿足慧解脫不滿足故則為謗聖邪見邪"
+  },
+  {
+   "id": "a31",
+   "label": "如是聚落主！有因有緣眾生煩惱有因有緣眾生"
+  },
+  {
+   "id": "a32",
+   "label": "聚落主！如來應等正覺明行足善逝世間解無上"
+  },
+  {
+   "id": "a33",
+   "label": "聚落主！彼多聞聖弟子作如是學：隨時晝夜觀"
+  },
+  {
+   "id": "a34",
+   "label": "爾時世尊以爪甲抄少土語刀師氏聚落主言：云"
+  },
+  {
+   "id": "a35",
+   "label": "說是語時刀師氏聚落主遠塵離垢得法眼淨聚落"
+  },
+  {
+   "id": "a36",
+   "label": "從坐起整衣服右膝著地合掌白佛：我已度。世"
+  },
+  {
+   "id": "a37",
+   "label": "世尊！譬如士夫欲求燈明取其馬尾以為燈炷欲"
+  },
+  {
+   "id": "a38",
+   "label": "從今以去於彼尼揵愚痴不善不辯者所少信少敬"
+  },
+  {
+   "id": "a39",
+   "label": "時刀師氏聚落主聞佛所說歡喜隨喜作禮而去"
+  },
+  {
+   "id": "a40",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn42.8",
+   "lang": "pi",
+   "label": "巴利 SN42.8",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "T0100-sa-2.131",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （一三一）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa916",
+   "lang": "lzh",
+   "label": "雜阿含經 （九一六）",
+   "who": "劉宋 求那跋陀羅譯",
+   "reorder": true
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（一三一）"
+  },
+  {
+   "work": "T0099",
+   "node": "（九一六）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn42.8": "Saṁyutta Nikāya 42.8 1. Gāmaṇivagga Saṅkhadhamasutta",
+   "T0100-sa-2.131": "如是我聞：一時，佛住那羅健陀城賣疊林中。爾時，結集論者聚落主作是思惟：「我今不應往見尼乾，當到佛所。」作是念已，尋往詣佛，問訊已訖，在一面坐。",
+   "T0099-sa916": "如是我聞：一時，佛住那羅聚落好衣菴羅園中。時，有刀師氏聚落主，尼揵弟子，來詣佛所，稽首禮足，退坐一面。"
+  },
+  "a01": {
+   "sn42.8": "Ekaṁ samayaṁ bhagavā nāḷandāyaṁ viharati pāvārikambavane. Atha kho asibandhakaputto gāmaṇi nigaṇṭhasāvako yena bhagavā tenupasaṅkami; upasaṅkamitvā ekamantaṁ nisīdi. Ekamantaṁ nisinnaṁ kho asibandhakaputtaṁ gāmaṇiṁ bhagavā etadavoca: “kathaṁ nu kho, gāmaṇi, nigaṇṭho nāṭaputto sāvakānaṁ dhammaṁ desetī”ti?",
+   "T0100-sa-2.131": "爾時，佛告結集論者聚落主：「彼尼乾陀若提之子，為諸弟子說何等法？」時，聚落主白佛言：「世尊！"
+  },
+  "a02": {
+   "sn42.8": "“Evaṁ kho, bhante, nigaṇṭho nāṭaputto sāvakānaṁ dhammaṁ deseti: ‘yo koci pāṇaṁ atipāteti, sabbo so āpāyiko nerayiko, yo koci adinnaṁ ādiyati, sabbo so āpāyiko nerayiko, yo koci kāmesu micchā carati, sabbo so āpāyiko nerayiko, yo koci musā bhaṇati sabbo, so āpāyiko nerayiko. Yaṁbahulaṁ yaṁbahulaṁ viharati, tena tena nīyatī’ti. Evaṁ kho, bhante, nigaṇṭho nāṭaputto sāvakānaṁ dhammaṁ desetī”ti.",
+   "T0100-sa-2.131": "彼尼乾陀常作是說：『若作殺業，隨殺時多，必墮惡趣，入于地獄。偷盜邪婬及妄語等，亦復如是，隨作時多，必墮地獄。』"
+  },
+  "a03": {
+   "sn42.8": "“‘Yaṁbahulaṁ yaṁbahulañca, gāmaṇi, viharati, tena tena nīyati’, evaṁ sante na koci āpāyiko nerayiko bhavissati, yathā nigaṇṭhassa nāṭaputtassa vacanaṁ.",
+   "T0100-sa-2.131": "」爾時，世尊告聚落主：「若如尼乾之所說者，眾生都無墜墮惡趣，入于地獄。所以者何？如尼乾說，若作殺業，隨殺時多，必墮惡趣，入于地獄。偷盜邪婬及妄語等，亦如是者。"
+  },
+  "a04": {
+   "sn42.8": "Taṁ kiṁ maññasi, gāmaṇi, yo so puriso pāṇātipātī rattiyā vā divasassa vā samayāsamayaṁ upādāya, katamo bahutaro samayo, yaṁ vā so pāṇamatipāteti, yaṁ vā so pāṇaṁ nātipātetī”ti?",
+   "T0100-sa-2.131": "一切眾生，殺生時少，不殺時多。若以時多入地獄者，殺生時少，不殺時多，是故不應墮惡趣中，入于地獄。偷盜邪婬及妄語等，亦復如是，作業時少，不作時多，悉皆不應墜墮惡趣，入于地獄。」",
+   "T0099-sa916": "聚落主！於意云何？何等眾生於一切時有心殺生？復於何時有心不殺生，乃至何時有心妄語，何時有心不妄語？」聚落主白佛言：「世尊！"
+  },
+  "a05": {
+   "sn42.8": "“Yo so, bhante, puriso pāṇātipātī rattiyā vā divasassa vā samayāsamayaṁ upādāya, appataro so samayo yaṁ so pāṇamatipāteti, atha kho sveva bahutaro samayo yaṁ so pāṇaṁ nātipātetī”ti. “‘Yaṁbahulaṁ yaṁbahulañca, gāmaṇi, viharati tena tena nīyatī’ti, evaṁ sante na koci āpāyiko nerayiko bhavissati, yathā nigaṇṭhassa nāṭaputtassa vacanaṁ. Taṁ kiṁ maññasi, gāmaṇi,"
+  },
+  "a06": {
+   "sn42.8": "yo so puriso adinnādāyī rattiyā vā divasassa vā samayāsamayaṁ upādāya, katamo bahutaro samayo, yaṁ vā so adinnaṁ ādiyati, yaṁ vā so adinnaṁ nādiyatī”ti. “Yo so, bhante, puriso adinnādāyī rattiyā vā divasassa vā samayāsamayaṁ upādāya appataro so samayo, yaṁ so adinnaṁ ādiyati, atha kho sveva bahutaro samayo, yaṁ so adinnaṁ nādiyatī”ti. “‘Yaṁbahulaṁ yaṁbahulañca, gāmaṇi, viharati tena tena nīyatī’ti, evaṁ sante na koci āpāyiko nerayiko bhavissati, yathā nigaṇṭhassa nāṭaputtassa vacanaṁ."
+  },
+  "a07": {
+   "sn42.8": "Taṁ kiṁ maññasi, gāmaṇi, yo so puriso kāmesumicchācārī rattiyā vā divasassa vā samayāsamayaṁ upādāya, katamo bahutaro samayo, yaṁ vā so kāmesu micchā carati, yaṁ vā so kāmesu micchā na caratī”ti? “Yo so, bhante, puriso kāmesumicchācārī rattiyā vā divasassa vā samayāsamayaṁ upādāya, appataro so samayo yaṁ so kāmesu micchā carati, atha kho sveva bahutaro samayo, yaṁ so kāmesu micchā na caratī”ti. “‘Yaṁbahulaṁ yaṁbahulañca, gāmaṇi, viharati tena tena nīyatī’ti, evaṁ sante na koci āpāyiko nerayiko bhavissati, yathā nigaṇṭhassa nāṭaputtassa vacanaṁ."
+  },
+  "a08": {
+   "sn42.8": "Taṁ kiṁ maññasi, gāmaṇi, yo so puriso musāvādī rattiyā vā divasassa vā samayāsamayaṁ upādāya, katamo bahutaro samayo, yaṁ vā so musā bhaṇati, yaṁ vā so musā na bhaṇatī”ti? “Yo so, bhante, puriso musāvādī rattiyā vā divasassa vā samayāsamayaṁ upādāya, appataro so samayo, yaṁ so musā bhaṇati, atha kho sveva bahutaro samayo, yaṁ so musā na bhaṇatī”ti. “‘Yaṁbahulaṁ yaṁbahulañca, gāmaṇi, viharati tena tena nīyatī’ti, evaṁ sante na koci āpāyiko nerayiko bhavissati, yathā nigaṇṭhassa nāṭaputtassa vacanaṁ."
+  },
+  "a09": {
+   "sn42.8": "Idha, gāmaṇi, ekacco satthā evaṁvādī hoti evaṁdiṭṭhi: ‘yo koci pāṇamatipāteti, sabbo so āpāyiko nerayiko, yo koci adinnaṁ ādiyati, sabbo so āpāyiko nerayiko, yo koci kāmesu micchā carati, sabbo so āpāyiko nerayiko, yo koci musā bhaṇati, sabbo so āpāyiko nerayiko’ti. Tasmiṁ kho pana, gāmaṇi, satthari sāvako abhippasanno hoti. Tassa evaṁ hoti: ‘mayhaṁ kho satthā evaṁvādī evaṁdiṭṭhi— yo koci pāṇamatipāteti, sabbo so āpāyiko nerayikoti. Atthi kho pana mayā pāṇo atipātito, ahampamhi āpāyiko nerayikoti diṭṭhiṁ paṭilabhati. Taṁ, gāmaṇi, vācaṁ appahāya taṁ cittaṁ appahāya taṁ diṭṭhiṁ appaṭinissajjitvā yathābhataṁ nikkhitto evaṁ niraye. Mayhaṁ kho satthā evaṁvādī evaṁdiṭṭhi— yo koci adinnaṁ ādiyati, sabbo so āpāyiko nerayikoti. Atthi kho pana mayā adinnaṁ ādinnaṁ ahampamhi āpāyiko nerayikoti diṭṭhiṁ paṭilabhati. Taṁ, gāmaṇi, vācaṁ appahāya taṁ cittaṁ appahāya taṁ diṭṭhiṁ appaṭinissajjitvā yathābhataṁ nikkhitto evaṁ niraye. Mayhaṁ kho satthā evaṁvādī evaṁdiṭṭhi— yo koci kāmesu micchā carati, sabbo so āpāyiko nerayiko’ti. Atthi kho pana mayā kāmesu micchā ciṇṇaṁ. ‘Ahampamhi āpāyiko nerayiko’ti diṭṭhiṁ paṭilabhati. Taṁ, gāmaṇi, vācaṁ appahāya taṁ cittaṁ appahāya taṁ diṭṭhiṁ appaṭinissajjitvā yathābhataṁ nikkhitto evaṁ niraye. Mayhaṁ kho satthā evaṁvādī evaṁdiṭṭhi— yo koci musā bhaṇati, sabbo so āpāyiko nerayikoti. Atthi kho pana mayā musā bhaṇitaṁ. ‘Ahampamhi āpāyiko nerayiko’ti diṭṭhiṁ paṭilabhati. Taṁ, gāmaṇi, vācaṁ appahāya taṁ cittaṁ appahāya taṁ diṭṭhiṁ appaṭinissajjitvā yathābhataṁ nikkhitto evaṁ niraye.",
+   "T0099-sa916": "如尼揵所說：『有人殺生者，一切墮泥犁中，多習行者將往生彼，乃至妄語亦復如是。』"
+  },
+  "a10": {
+   "sn42.8": "Idha pana, gāmaṇi, tathāgato loke uppajjati arahaṁ sammāsambuddho vijjācaraṇasampanno sugato lokavidū anuttaro purisadammasārathi satthā devamanussānaṁ buddho bhagavā. So anekapariyāyena pāṇātipātaṁ garahati vigarahati, ‘pāṇātipātā viramathā’ti cāha. Adinnādānaṁ garahati vigarahati, ‘adinnādānā viramathā’ti cāha. Kāmesumicchācāraṁ garahati, vigarahati ‘kāmesumicchācārā viramathā’ti cāha. Musāvādaṁ garahati vigarahati ‘musāvādā viramathā’ti cāha. Tasmiṁ kho pana, gāmaṇi, satthari sāvako abhippasanno hoti. So iti paṭisañcikkhati: ‘bhagavā kho anekapariyāyena pāṇātipātaṁ garahati vigarahati, pāṇātipātā viramathāti cāha. Atthi kho pana mayā pāṇo atipātito yāvatako vā tāvatako vā. Yo kho pana mayā pāṇo atipātito yāvatako vā tāvatako vā, taṁ na suṭṭhu, taṁ na sādhu. Ahañceva kho pana tappaccayā vippaṭisārī assaṁ. Na metaṁ pāpaṁ kammaṁ akataṁ bhavissatī’ti. So iti paṭisaṅkhāya tañceva pāṇātipātaṁ pajahati. Āyatiñca pāṇātipātā paṭivirato hoti. Evametassa pāpassa kammassa pahānaṁ hoti. Evametassa pāpassa kammassa samatikkamo hoti. ‘Bhagavā kho anekapariyāyena adinnādānaṁ garahati vigarahati, adinnādānā viramathāti cāha. Atthi kho pana mayā adinnaṁ ādinnaṁ yāvatakaṁ vā tāvatakaṁ vā. Yaṁ kho pana mayā adinnaṁ ādinnaṁ yāvatakaṁ vā tāvatakaṁ vā taṁ na suṭṭhu, taṁ na sādhu. Ahañceva kho pana tappaccayā vippaṭisārī assaṁ, na metaṁ pāpaṁ kammaṁ akataṁ bhavissatī’ti. So iti paṭisaṅkhāya tañceva adinnādānaṁ pajahati. Āyatiñca adinnādānā paṭivirato hoti. Evametassa pāpassa kammassa pahānaṁ hoti. Evametassa pāpassa kammassa samatikkamo hoti. ‘Bhagavā kho pana anekapariyāyena kāmesumicchācāraṁ garahati vigarahati, kāmesumicchācārā viramathāti cāha. Atthi kho pana mayā kāmesu micchā ciṇṇaṁ yāvatakaṁ vā tāvatakaṁ vā. Yaṁ kho pana mayā kāmesu micchā ciṇṇaṁ yāvatakaṁ vā tāvatakaṁ vā taṁ na suṭṭhu, taṁ na sādhu. Ahañceva kho pana tappaccayā vippaṭisārī assaṁ, na metaṁ pāpaṁ kammaṁ akataṁ bhavissatī’ti. So iti paṭisaṅkhāya tañceva kāmesumicchācāraṁ pajahati, āyatiñca kāmesumicchācārā paṭivirato hoti. Evametassa pāpassa kammassa pahānaṁ hoti. Evametassa pāpassa kammassa samatikkamo hoti. ‘Bhagavā kho pana anekapariyāyena musāvādaṁ garahati vigarahati, musāvādā viramathāti cāha. Atthi kho pana mayā musā bhaṇitaṁ yāvatakaṁ vā tāvatakaṁ vā. Yaṁ kho pana mayā musā bhaṇitaṁ yāvatakaṁ vā tāvatakaṁ vā taṁ na suṭṭhu, taṁ na sādhu. Ahañceva kho pana tappaccayā vippaṭisārī assaṁ, na metaṁ pāpaṁ kammaṁ akataṁ bhavissatī’ti. So iti paṭisaṅkhāya tañceva musāvādaṁ pajahati, āyatiñca musāvādā paṭivirato hoti. Evametassa pāpassa kammassa pahānaṁ hoti. Evametassa pāpassa kammassa samatikkamo hoti. So pāṇātipātaṁ pahāya pāṇātipātā paṭivirato hoti. Adinnādānaṁ pahāya adinnādānā paṭivirato hoti. Kāmesumicchācāraṁ pahāya kāmesumicchācārā paṭivirato hoti. Musāvādaṁ pahāya musāvādā paṭivirato hoti. Pisuṇaṁ vācaṁ pahāya pisuṇāya vācāya paṭivirato hoti. Pharusaṁ vācaṁ pahāya pharusāya vācāya paṭivirato hoti. Samphappalāpaṁ pahāya samphappalāpā paṭivirato hoti. Abhijjhaṁ pahāya anabhijjhālu hoti. Byāpādappadosaṁ pahāya abyāpannacitto hoti. Micchādiṭṭhiṁ pahāya sammādiṭṭhiko hoti. Sa kho so, gāmaṇi, ariyasāvako evaṁ vigatābhijjho vigatabyāpādo asammūḷho sampajāno paṭissato mettāsahagatena cetasā ekaṁ disaṁ pharitvā viharati, tathā dutiyaṁ, tathā tatiyaṁ, tathā catutthaṁ. Iti uddhamadho tiriyaṁ sabbadhi sabbattatāya sabbāvantaṁ lokaṁ mettāsahagatena cetasā vipulena mahaggatena appamāṇena averena abyāpajjena pharitvā viharati. Seyyathāpi, gāmaṇi, balavā saṅkhadhamo appakasireneva catuddisā viññāpeyya; evameva kho, gāmaṇi, evaṁ bhāvitāya mettāya cetovimuttiyā evaṁ bahulīkatāya yaṁ pamāṇakataṁ kammaṁ, na taṁ tatrāvasissati, na taṁ tatrāvatiṭṭhati. Sa kho so, gāmaṇi, ariyasāvako evaṁ vigatābhijjho vigatabyāpādo asammūḷho sampajāno paṭissato karuṇāsahagatena cetasā …pe… muditāsahagatena cetasā …pe…. Upekkhāsahagatena cetasā ekaṁ disaṁ pharitvā viharati, tathā dutiyaṁ, tathā tatiyaṁ, tathā catutthaṁ. Iti uddhamadho tiriyaṁ sabbadhi sabbattatāya sabbāvantaṁ lokaṁ upekkhāsahagatena cetasā vipulena mahaggatena appamāṇena averena abyāpajjena pharitvā viharati. Seyyathāpi, gāmaṇi, balavā saṅkhadhamo appakasireneva catuddisā viññāpeyya; evameva kho, gāmaṇi, evaṁ bhāvitāya upekkhāya cetovimuttiyā evaṁ bahulīkatāya yaṁ pamāṇakataṁ kammaṁ na taṁ tatrāvasissati, na taṁ tatrāvatiṭṭhatī”ti. Evaṁ vutte, asibandhakaputto gāmaṇi bhagavantaṁ etadavoca: “abhikkantaṁ, bhante, abhikkantaṁ, bhante …pe… upāsakaṁ maṁ bhagavā dhāretu ajjatagge pāṇupetaṁ saraṇaṁ gatan”ti.",
+   "T0100-sa-2.131": "佛復告聚落主：「如汝說者，都無有人入于地獄。」時，聚落主即白佛言：「實爾，瞿曇。」"
+  },
+  "a11": {
+   "T0100-sa-2.131": "佛復告聚落主：「世間若有教導者，出能善量，有慧分別，在思量地，以己言辯才，是凡夫地，為諸弟子說如是法。若殺生者，盡墮惡道，入于地獄，隨作業時多，以是多業，牽入地獄。盜竊邪婬并妄語時，亦復如是，隨作業時多，墮於惡趣，入于地獄。其諸弟子專心信樂彼師所說，至心受持，作如是言：『我教導主，知彼前境，見彼所見。』此諸弟子復有弟子，而語之言：『我教導主作如是說，若有殺生時，隨殺時多，墮於惡趣，入于地獄。』"
+  },
+  "a12": {
+   "T0100-sa-2.131": "彼孫弟子作是念言：『我先殺生，必墮地獄。偷盜、邪婬及妄語時，必墮惡道，入於地獄。』因此作見，即得是見，是名邪見。不捨是見，不解疑惑，不悔所作，惡業之因，而猶常作如是惡業，心不肯改，不能滿足。心所解脫，亦不滿足。慧解脫，亦不滿足。以心解脫、慧解脫，不滿足故，誹謗賢聖。謗賢聖故，即是邪見。」佛復告聚落主：「設有一人，作是邪見，墮在惡道，入於地獄。一切眾生，皆有因緣染污心垢，以是緣故，一切眾生得業結使。"
+  },
+  "a13": {
+   "T0100-sa-2.131": "設有佛出，如來、應、正遍知、阿羅呵、三藐三佛陀，佛以種種因緣呵於殺生、偷盜、邪婬，及妄語等，亦復如是。兼讚嘆彼勝法，有決定信解。」"
+  },
+  "a14": {
+   "T0100-sa-2.131": "復白佛言：「我之世尊，真實知見，種種說法，令我得與弟子說如是法，種種因緣呵責殺生，讚嘆不殺生。種種因緣讚不妄語、不邪婬、不偷盜。我於昔時，已曾殺生、偷盜、邪婬，及妄語等，我以此因緣，常自悔責。雖自悔責，而得名為不作罪業。是故深自悔責，如是惡業，以懺悔故，皆除疑悔，增進善業。更不殺生、偷盜、邪婬，及妄語等，悔責先造，後更不作種種惡業。以是之故，心得滿足，而獲解脫，亦能滿足慧解脫。心慧滿故，不謗賢聖。不謗賢聖故，便得正見。」"
+  },
+  "a15": {
+   "T0100-sa-2.131": "佛告聚落主：「以能修於正見緣故，身壞命終，得向善趣，生于天上。以能懺悔正見之故，能淨一切眾生之心，亦能淨於眾生結業煩惱罪垢。賢聖弟子得聞此事，即時修學。"
+  },
+  "a16": {
+   "T0100-sa-2.131": "若時及時分，時分中間，中間晝夜已過，如是時中，為殺時多，不殺時多？以義推之，殺生時少，不殺時多。我於彼時故作殺生，我實不善，所作非理。"
+  },
+  "a17": {
+   "T0100-sa-2.131": "我從今已後，更不復殺。我於一切更不生嫌，更不生恨，亦不生嫉，深生歡喜。生歡喜故，深生愛樂。生愛樂故，深得猗樂。深猗樂故，得受於樂。以受樂故，其心得定。賢聖弟子心得定故，得與慈俱。與慈俱故，無怨嫌恨，得於無嫉，其心廣大，志趣弘博，無量無邊。善修慈故，於彼東方一切眾生都無怨嫌，南西北方，四維上下，亦復如是，於一切世界普生慈心，作是意解，當修立如是善心，於善中住。」"
+  },
+  "a18": {
+   "T0100-sa-2.131": "爾時，世尊取地少土，置於爪上，問造論姓聚落主言：「大地土多？爪上土多？」聚落主言：「爪上之土極為尠少，不可方喻。大地之土，百分、千分、千億分，不得比喻，共相挍量。」佛告聚落主：「所有罪業，如爪上土，大地之土算數譬喻不能量度。」聚落主言：「如是，如是。惡業挍量，可知如是少業，不能牽人令墮惡道，亦不能住，亦不可計。夫行慈者，所得功德，如大地土；殺生之罪，如爪上土。悲之功德，如大地土；偷盜之罪，如爪上土。喜之功德，如大地土；邪婬之罪，如爪上土。捨之功德，如大地土；妄語之罪，如爪上土。」"
+  },
+  "a19": {
+   "T0100-sa-2.131": "如來分別如是法時，造論姓聚落主聞佛所說，遠塵離垢，得法眼清淨，得法證法，見法知法，得法邊際，度諸疑惑，不隨他信，尋得已辦。即起離坐，整衣合掌，白佛言：「世尊！我已得度！我已得度！今歸依佛，歸依法僧，為優婆塞，盡其形命，信心清淨。」"
+  },
+  "a20": {
+   "T0100-sa-2.131": "聚落主復白佛言：「世尊！譬如為利養故，作於惡罵，日日轉惡，尚失己財，況復得利。我亦如是，為得利故，親近愚癡不善尼乾。我以狂惑，親近於彼，供養恭敬，我於彼所，不得善利，為其所陷，將墮地獄。世尊拔我，得離惡趣，今重歸佛法僧，我盡形壽為優婆塞。我先於彼愚癡尼乾所，有信心、愛念、恭敬，悉皆捨棄。我今第三亦重歸依佛法僧寶，盡我形壽為優婆塞，不生不信。」"
+  },
+  "a21": {
+   "T0100-sa-2.131": "時，造論姓聚落主聞佛所說，歡喜頂禮而去。動搖及鬪諍調馬與惡性\n頂髮并牟尼王髮及驢姓\n飢饉與種田說何論為十"
+  },
+  "a22": {
+   "T0099-sa916": "爾時，世尊告聚落主：「欲何所論？尼揵若提子為何所說？」"
+  },
+  "a23": {
+   "T0099-sa916": "聚落主言：「彼尼揵若提子說：『殺生者，一切皆墮泥犁中，以多行故，則將至彼；如是盜、邪婬、妄語皆墮泥犁中，以多行故，則將至彼。』"
+  },
+  "a24": {
+   "T0099-sa916": "」佛告聚落主：「若如尼犍若提子說殺生者墮泥犁中，以多行故，而往生彼者，則無有眾生墮泥犁中。"
+  },
+  "a25": {
+   "T0099-sa916": "人於晝夜，少時有心殺生，乃至少時有心妄語，而多時不有心殺生，乃至妄語。」"
+  },
+  "a26": {
+   "T0099-sa916": "佛告聚落主：「若如是者，豈非無有人墮於泥犁中耶？"
+  },
+  "a27": {
+   "T0099-sa916": "聚落主！彼大師出興于世，覺想籌量，入覺想地住。於凡夫地自辯所說，隨意籌量，為諸弟子作如是說法，言殺生者，一切皆墮泥犁中，多習行將往生彼，乃至妄語亦復如是。"
+  },
+  "a28": {
+   "T0099-sa916": "彼諸弟子若信其說，言：『我大師知其所知，見其所見，能為弟子作如是說：「若殺生者，一切皆墮泥犁中，多習行故，將往生彼。」我本有心殺生、偷盜、邪婬、妄語，當墮泥犁中。』"
+  },
+  "a29": {
+   "T0099-sa916": "得如是見，乃至不捨此見，不厭彼業，不覺彼悔，於未來世，不捨殺生，乃至不捨妄語，彼意解脫不滿足，慧解脫亦不滿足。"
+  },
+  "a30": {
+   "T0099-sa916": "意解脫不滿足、慧解脫不滿足故，則為謗聖邪見；邪見因緣故，身壞命終，生惡趣泥犁中。"
+  },
+  "a31": {
+   "T0099-sa916": "如是，聚落主！有因、有緣，眾生煩惱；有因、有緣，眾生業煩惱。"
+  },
+  "a32": {
+   "T0099-sa916": "「聚落主！如來、應、等正覺、明行足、善逝、世間解、無上士、調御丈夫、天人師、佛世尊出興於世，常為眾生呵責殺生，讚歎不殺；呵責偷盜、邪婬、妄語，讚歎不盜、不婬、不妄語。常以此法，化諸聲聞，令念、樂、信、重，言：『我大師知其所知，見其所見，呵責殺生，讚歎不殺，乃至呵責妄語，讚歎不妄語，我從昔來，以愚癡無慧，有心殺生，我緣是故，今自悔責。』雖不能令彼業不為，且因此悔責故，於未來世，得離殺生，乃至得離盜、婬、妄語，亦得滿足正意解脫，滿足慧解脫，意解脫、慧解脫滿足已，得不謗賢聖，正見成就；正見因緣故，得生善趣天上。如是，聚落主！有因、有緣，眾生業煩惱清淨。"
+  },
+  "a33": {
+   "T0099-sa916": "「聚落主！彼多聞聖弟子作如是學：『隨時晝夜觀察所起少有心殺生、多有心不殺生。』若於有心殺生，當自悔責，不是不類。若不有心殺生，無怨無憎，心生隨喜；隨喜已，歡喜生；歡喜已，心猗息；心猗息已，心受樂；受樂已，則心定。心定已，聖弟子心與慈俱，無怨無嫉，無有瞋恚，廣大無量，滿於一方，正受住；二方、三方，乃至四方、四維、上下、一切世間，心與慈俱，無怨無嫉，無有瞋恚，廣大無量，善修習，充滿諸方，具足正受住。」"
+  },
+  "a34": {
+   "T0099-sa916": "爾時，世尊以爪甲抄少土，語刀師氏聚落主言：「云何？聚落主！我爪甲土多？大地為多？」聚落主白佛言：「世尊！爪甲土少少耳，大地土無量無數。」佛告聚落主：「如甲上之土甚少，大地之土其數無量。如是心與慈俱，修習多修習，諸有量業者，如甲上土，不能將去，不能令住。如是偷盜對以悲心，邪婬對以喜心，妄語對以捨心，不得為比。」"
+  },
+  "a35": {
+   "T0099-sa916": "說是語時，刀師氏聚落主遠塵離垢，得法眼淨，聚落主見法、得法、覺法、知法、深入於法，離諸狐疑不由於他、不隨於他，於正法、律得無所畏。"
+  },
+  "a36": {
+   "T0099-sa916": "從坐起，整衣服，右膝著地，合掌白佛：「我已度。世尊！已越。世尊！我今歸佛、歸法、歸比丘僧，盡其壽命為優婆塞。"
+  },
+  "a37": {
+   "T0099-sa916": "世尊！譬如士夫欲求燈明，取其馬尾，以為燈炷，欲吹令然，終不得明，徒自疲勞，燈竟不然。我亦如是，欲求明智，於諸愚癡尼揵子所，愚癡習近，愚癡和合，愚癡奉事，徒自勞苦，不得明智，是故我今重歸依佛、歸法、歸僧。"
+  },
+  "a38": {
+   "T0099-sa916": "從今以去，於彼尼揵愚癡不善不辯者所，少信、少敬、少愛、少念，於今遠離。是故，我今第三歸佛、歸法、歸僧，乃至盡壽，為優婆塞，自淨其心。」"
+  },
+  "a39": {
+   "T0099-sa916": "時，刀師氏聚落主聞佛所說，歡喜隨喜，作禮而去。"
+  },
+  "a40": {
+   "sn42.8": "Aṭṭhamaṁ."
+  }
+ }
+}

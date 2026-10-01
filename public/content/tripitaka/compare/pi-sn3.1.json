@@ -1,0 +1,164 @@
+{
+ "slug": "pi-sn3.1",
+ "title": "別譯雜阿含經 （五三）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "王請問佛證悟"
+  },
+  {
+   "id": "a02",
+   "label": "佛自證無上菩提"
+  },
+  {
+   "id": "a03",
+   "label": "舉眾師不證自證"
+  },
+  {
+   "id": "a04",
+   "label": "王質疑年少出家"
+  },
+  {
+   "id": "a05",
+   "label": "四種年少不可輕"
+  },
+  {
+   "id": "a06",
+   "label": "偈頌：剎利"
+  },
+  {
+   "id": "a07",
+   "label": "偈頌：龍"
+  },
+  {
+   "id": "a08",
+   "label": "偈頌：火"
+  },
+  {
+   "id": "a09",
+   "label": "偈頌：比丘"
+  },
+  {
+   "id": "a10",
+   "label": "結偈：護命敬重"
+  },
+  {
+   "id": "a11",
+   "label": "王歡喜歸依"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn3.1",
+   "lang": "pi",
+   "label": "巴利 SN3.1",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn3.1",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN3.1",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.53",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （五三）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa1226",
+   "lang": "lzh",
+   "label": "雜阿含經 （一二二六）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（五三）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一二二六）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn3.1": "Saṁyutta Nikāya 3.1 1. Paṭhamavagga Daharasutta",
+   "nan-sn3.1": "〔一〕幼少如是我聞。爾時，世尊住舍衛城祇樹給孤獨園。",
+   "T0100-sa-2.53": "如是我聞：一時，佛在俱薩羅國漸次遊行，至舍衛城祇樹給孤獨園。",
+   "T0099-sa1226": "如是我聞：一時，佛在拘薩羅人間遊行，至舍衛國祇樹給孤獨園。時，波斯匿王聞世尊拘薩羅人間遊行，至舍衛國祇樹給孤獨園。"
+  },
+  "a01": {
+   "sn3.1": "Evaṁ me sutaṁ— ekaṁ samayaṁ bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme. Atha kho rājā pasenadi kosalo yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavatā saddhiṁ sammodi. Sammodanīyaṁ kathaṁ sāraṇīyaṁ vītisāretvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho rājā pasenadi kosalo bhagavantaṁ etadavoca:",
+   "nan-sn3.1": "時，拘薩羅之波斯匿王詣世尊處。詣已，與世尊交談敬重之見面禮，而坐於一面。",
+   "T0100-sa-2.53": "時，波斯匿王聞佛來至舍衛國祇樹給孤獨園，往詣佛所，稽首問訊，在一面坐，而白佛言：「世尊！我昔聞爾出家求道，要成無上至真、等正覺。汝為實有如是語耶？將非他人謬傳者乎？",
+   "T0099-sa1226": "聞已，往詣佛所，稽首佛足，退坐一面，白佛言：「世尊！我聞世尊自記說成阿耨多羅三藐三菩提，諸人傳者，得非虛妄過長說耶？為如說說、如法說、隨順法說耶？非是他人損同法者，於其問答生厭薄處耶？」佛告大王：「彼如是說，是真諦說，非為虛妄。如說說、如法說、隨順法說，非是他人損同法者，於其問答生厭薄處。"
+  },
+  "a02": {
+   "sn3.1": "“bhavampi no gotamo anuttaraṁ sammāsambodhiṁ abhisambuddhoti paṭijānātī”ti? “Yañhi taṁ, mahārāja, sammā vadamāno vadeyya ‘anuttaraṁ sammāsambodhiṁ abhisambuddho’ti, mameva taṁ sammā vadamāno vadeyya. Ahañhi, mahārāja, anuttaraṁ sammāsambodhiṁ abhisambuddho”ti.",
+   "nan-sn3.1": "坐於一面之拘薩羅國波斯匿王，白世尊曰：「世尊！瞿曇曾宣示證悟無上之正等覺否？」「大王！有正確言說證悟無上正等覺者，即是我。大王！我是證悟無上之正等覺。」",
+   "T0100-sa-2.53": "為是譏嫌，致於毀呰，作此語也？」佛告波斯匿言：「如此語者，是真實語，非為毀呰，亦非增減，實是我語，實如法說，非非法說，一切外人亦無有能譏嫌我者。」",
+   "T0099-sa1226": "所以者何？大王，我今實得阿耨多羅三藐三菩提故。」"
+  },
+  "a03": {
+   "sn3.1": "“Yepi te, bho gotama, samaṇabrāhmaṇā saṅghino gaṇino gaṇācariyā ñātā yasassino titthakarā sādhusammatā bahujanassa, seyyathidaṁ— pūraṇo kassapo, makkhali gosālo, nigaṇṭho nāṭaputto, sañcayo belaṭṭhaputto, pakudho kaccāyano, ajito kesakambalo; tepi mayā ‘anuttaraṁ sammāsambodhiṁ abhisambuddhoti paṭijānāthā’ti puṭṭhā samānā anuttaraṁ sammāsambodhiṁ abhisambuddhoti na paṭijānanti.",
+   "T0100-sa-2.53": "波斯匿王復作是言：「我雖聞爾有如此語，猶未能信。"
+  },
+  "a04": {
+   "sn3.1": "Kiṁ pana bhavaṁ gotamo daharo ceva jātiyā navo ca pabbajjāyā”ti?",
+   "nan-sn3.1": "「瞿曇！有僧伽、有群〔眾〕、為群〔眾〕之師、有名、有名聲，為救濟者、有受甚多人認定為善人之沙門婆羅門。猶如富蘭那迦葉、末伽梨瞿舍羅、尼乾陀若提子、刪闍耶吠羅底子、迦據陀迦旃延、阿耆多翅舍飲婆羅門等。問彼等曾宣示證悟無上正等覺否？未曾宣示證悟無上之正等覺。何況尊者瞿曇，其生年青少，出家又日淺！」",
+   "T0100-sa-2.53": "何故不信？自昔諸人，有久出家，耆老宿舊，諸婆羅門：富蘭那迦葉、末伽梨俱賒梨子、刪闍耶毘羅邸子、阿闍多翅舍欽婆羅、迦據多迦栴延、尼乾陀闍提弗多羅，彼諸宿舊，尚自不信得阿耨多羅三藐三菩提，況汝年少而出家未久，而當得乎？」",
+   "T0099-sa1226": "波斯匿王白佛言：「雖復世尊作如是說，我猶故不信。所以者何？此間有諸宿重沙門、婆羅門，所謂富蘭那迦葉、末迦利瞿舍梨子、刪闍耶毘羅胝子、阿耆多枳舍欽婆羅、迦羅拘陀迦栴延、尼乾陀若提子，彼等不自說言得阿耨多羅三藐三菩提，何得世尊幼小年少，出家未久，而便自證得阿耨多羅三藐三菩提？」"
+  },
+  "a05": {
+   "sn3.1": "“Cattāro kho me, mahārāja, daharāti na uññātabbā, daharāti na paribhotabbā. Katame cattāro? Khattiyo kho, mahārāja, daharoti na uññātabbo, daharoti na paribhotabbo. Urago kho, mahārāja, daharoti na uññātabbo, daharoti na paribhotabbo. Aggi kho, mahārāja, daharoti na uññātabbo, daharoti na paribhotabbo. Bhikkhu, kho, mahārāja, daharoti na uññātabbo, daharoti na paribhotabbo. Ime kho, mahārāja, cattāro daharāti na uññātabbā, daharāti na paribhotabbā”ti. Idamavoca bhagavā.",
+   "nan-sn3.1": "「大王！年少不可輕。年少不可輕有四種；何為四種耶？大王！年少不可輕，剎帝利是年少不可輕。大王！年少不可輕，蛇是年少不可輕。大王！年少不可輕，火是年少不可輕。大王！年少不可輕，比丘是年少不可輕視。大王！年少不可輕，此四種者是年少之不可輕視者。」",
+   "T0100-sa-2.53": "佛言：「大王！世有四事，小不可輕。何者為四？一者、王子雖小，最不可輕。二、龍子雖小，亦不可輕。三、火雖小，亦不可輕。四、比丘雖小，亦不可輕。」",
+   "T0099-sa1226": "佛告大王：「有四種雖小而不可輕。何等為四？剎利王子年少幼小而不可輕，龍子年少幼小而不可輕、小火雖微而不可輕、比丘幼小而不可輕。」"
+  },
+  "a06": {
+   "sn3.1": "Idaṁ vatvāna sugato athāparaṁ etadavoca satthā: “Khattiyaṁ jātisampannaṁ, abhijātaṁ yasassinaṁ; Daharoti nāvajāneyya, na naṁ paribhave naro.",
+   "T0100-sa-2.53": "爾時，世尊即說偈言：「王者雖為小，具習諸技藝，\n生處既真正，亦不雜鄙穢。\n有大美名稱，一切悉聞知，\n如此雖言小，其實不可輕。\n欲護己命者，不應輕於小。\n剎利雖云小，法應紹王位，\n既紹王位已，法當行謫罰，\n是以應敬順，不宜生輕慢。",
+   "T0099-sa1226": "爾時，世尊即說偈言：「剎利形相具，貴族發名稱，\n雖復年幼稚，智者所不輕。\n此必居王位，顧念生怨害，\n是故難可輕，應生大恭敬。\n善求自護者，自護如護命，\n以平等自護，而等護於命。"
+  },
+  "a07": {
+   "sn3.1": "Ṭhānañhi so manujindo, rajjaṁ laddhāna khattiyo; So kuddho rājadaṇḍena, tasmiṁ pakkamate bhusaṁ; Tasmā taṁ parivajjeyya, rakkhaṁ jīvitamattano.",
+   "T0100-sa-2.53": "於諸聚落中，及以閑靜處，\n若見小龍子，形狀雖微細，\n能大亦能小，亦復能興雲，\n降注於大雨。若以小故輕，\n必能縱毒螫，欲護身命者，\n不宜輕於彼。為於己利故，\n宜應自擁護。",
+   "T0099-sa1226": "聚落及空處，見彼幼龍者，\n莫以小蛇故，而生輕慢想。\n雜色小龍形，亦應令安樂，\n輕蛇無士女，悉為毒所害。\n是故自護者，當如護己命，\n以斯善護己，而等護於彼。"
+  },
+  "a08": {
+   "sn3.1": "Gāme vā yadi vā raññe, yattha passe bhujaṅgamaṁ; Daharoti nāvajāneyya, na naṁ paribhave naro. Uccāvacehi vaṇṇehi, urago carati tejasī;",
+   "T0100-sa-2.53": "亦如有小火，\n若具於眾緣，猛炎甚熾盛，\n遇於大暴風，能焚燒山野，\n既焚林野已，遇時還復生，\n欲護己命者，不應輕小火。\n若於淨戒所，惡口加罵辱，\n其身及子孫，一切皆毀謗，\n於未來世中，當同受惡報，\n是故應自護，莫以惡加彼。",
+   "T0099-sa1226": "猛火之所食，雖小食無限，\n小燭亦能燒，足薪則彌廣。\n從微漸進燒，盡聚落城邑，\n是故自護者，當如護己命。\n以斯善護己，而等護於彼，\n盛火之所焚，百卉蕩燒盡。"
+  },
+  "a09": {
+   "sn3.1": "So āsajja ḍaṁse bālaṁ, naraṁ nāriñca ekadā; Tasmā taṁ parivajjeyya, rakkhaṁ jīvitamattano. Pahūtabhakkhaṁ jālinaṁ, pāvakaṁ kaṇhavattaniṁ;",
+   "T0099-sa1226": "滅已不盈縮，戒火還復生，\n若輕毀比丘，受持淨戒火。\n燒身及子孫，眾災流百世，\n如燒多羅樹，無有生長期。\n是故當自護，如自護己命，\n以斯善自護，而等護於彼。"
+  },
+  "a10": {
+   "sn3.1": "Daharoti nāvajāneyya, na naṁ paribhave naro. Laddhā hi so upādānaṁ, mahā hutvāna pāvako; So āsajja ḍahe bālaṁ, naraṁ nāriñca ekadā; Tasmā taṁ parivajjeyya, rakkhaṁ jīvitamattano. Vanaṁ yadaggi ḍahati, pāvako kaṇhavattanī; Jāyanti tattha pārohā, ahorattānamaccaye. Yañca kho sīlasampanno, bhikkhu ḍahati tejasā; Na tassa puttā pasavo, dāyādā vindare dhanaṁ; Anapaccā adāyādā, tālāvatthū bhavanti te. Tasmā hi paṇḍito poso, sampassaṁ atthamattano; Bhujaṅgamaṁ pāvakañca, khattiyañca yasassinaṁ; Bhikkhuñca sīlasampannaṁ, sammadeva samācare”ti.",
+   "nan-sn3.1": "世尊宣說此已、善逝更宣示曰：善生而有譽具足尊貴姓\n如是剎帝利生年青少人\n勿以輕低視勿以藐視他\n得彼剎帝位成為人王時\n忿怒而強烈有加於王罰\n是故守己命以避遭繩罰\n於村或森林在此見蛇時\n以為是幼少勿輕勿藐視\n或高或低貌持炎蛇彷徨\n若愚男女近即直受彼咬\n是故守己命以避遭傷害\n餌食甚多貪熾燃火黑煙\n雖然是細小勿輕勿藐視\n只要得柴薪其火大炎出\n若愚男女近當即遭燃燒\n是故守己命以避受火害\n火燒於森林火盡成黑炭\n日夜以過後於此出草萌\n持戒之比丘若以戒炎燒\n其人無生子不富於子孫\n無子無相續彼等切斷芽\n不如多羅樹是故賢智人\n自己以見利小蛇與細火\n有譽剎帝利具戒之比丘\n以善於正行",
+   "T0100-sa-2.53": "剎利具技藝，龍子及與火，\n比丘持淨戒，此四不可輕。\n為護己命故，謹慎應遠離。」",
+   "T0099-sa1226": "剎利形相具，幼龍及小火，\n比丘具淨戒，不應起輕想。\n是故當自護，如自護己命，\n以斯善自護，而等護於彼。」"
+  },
+  "a11": {
+   "sn3.1": "Evaṁ vutte, rājā pasenadi kosalo bhagavantaṁ etadavoca: “abhikkantaṁ, bhante, abhikkantaṁ, bhante. Seyyathāpi, bhante, nikkujjitaṁ vā ukkujjeyya, paṭicchannaṁ vā vivareyya, mūḷhassa vā maggaṁ ācikkheyya, andhakāre vā telapajjotaṁ dhāreyya: ‘cakkhumanto rūpāni dakkhantī’ti; evamevaṁ bhagavatā anekapariyāyena dhammo pakāsito. Esāhaṁ, bhante, bhagavantaṁ saraṇaṁ gacchāmi dhammañca bhikkhusaṅghañca. Upāsakaṁ maṁ, bhante, bhagavā dhāretu ajjatagge pāṇupetaṁ saraṇaṁ gatan”ti.",
+   "nan-sn3.1": "如是語已，拘薩羅國之波斯匿王白尊曰：「世尊！是最勝，世尊，是最勝。世尊！譬喻倒者立起，覆者顯現，迷者教示道，如有眼者見諸色，如暗中揭明燈，如是世尊說種種法。世尊！我歸依佛，及歸依法與僧。世尊，容受我從今日，終生歸依為優婆塞。」",
+   "T0100-sa-2.53": "爾時，波斯匿王聞此語已，其心戰慄，身毛為竪，即從坐起，偏袒右肩，合掌向佛，白佛言：「世尊！我於今者，實有過罪，自知毀犯，譬如孾愚，狂癡無知，所作不善。唯願世尊憐愍我故，聽我懺悔。」佛告波斯匿王言：「我今愍汝，聽汝懺悔。」時，波斯匿王既蒙懺悔，心大歡喜，作禮而去。",
+   "T0099-sa1226": "佛說此經已，波斯匿王聞佛所說，歡喜隨喜，作禮而去。"
+  }
+ }
+}

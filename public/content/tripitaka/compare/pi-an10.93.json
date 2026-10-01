@@ -1,0 +1,198 @@
+{
+ "slug": "pi-an10.93",
+ "title": "別譯雜阿含經 （二〇二）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "長者出外道所"
+  },
+  {
+   "id": "a02",
+   "label": "外道問見"
+  },
+  {
+   "id": "a03",
+   "label": "長者答不知見"
+  },
+  {
+   "id": "a04",
+   "label": "長者請外道先說"
+  },
+  {
+   "id": "a05",
+   "label": "外道說常見"
+  },
+  {
+   "id": "a06",
+   "label": "外道說無常見"
+  },
+  {
+   "id": "a07",
+   "label": "外道說常無常見"
+  },
+  {
+   "id": "a08",
+   "label": "外道說邊見"
+  },
+  {
+   "id": "a09",
+   "label": "外道說命身見"
+  },
+  {
+   "id": "a10",
+   "label": "外道說如來死後見"
+  },
+  {
+   "id": "a11",
+   "label": "外道各自說見畢"
+  },
+  {
+   "id": "a12",
+   "label": "長者答所見"
+  },
+  {
+   "id": "a13",
+   "label": "外道讚長者"
+  },
+  {
+   "id": "a14",
+   "label": "長者往佛所"
+  },
+  {
+   "id": "a15",
+   "label": "佛讚長者"
+  },
+  {
+   "id": "a16",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "an10.93",
+   "lang": "pi",
+   "label": "巴利 AN10.93",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "T0100-sa-2.202",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （二〇二）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa968",
+   "lang": "lzh",
+   "label": "雜阿含經 （九六八）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（二〇二）"
+  },
+  {
+   "work": "T0099",
+   "node": "（九六八）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "an10.93": "Aṅguttara Nikāya 10.93 10. Upālivagga Kiṁdiṭṭhikasutta Ekaṁ samayaṁ bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme.",
+   "T0100-sa-2.202": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。爾時，長者須達多好欲詣佛，親近供養。",
+   "T0099-sa968": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。"
+  },
+  "a01": {
+   "an10.93": "Atha kho anāthapiṇḍiko gahapati divā divassa sāvatthiyā nikkhami bhagavantaṁ dassanāya. Atha kho anāthapiṇḍikassa gahapatissa etadahosi: “akālo kho tāva bhagavantaṁ dassanāya. Paṭisallīno bhagavā. Manobhāvanīyānampi bhikkhūnaṁ akālo dassanāya. Paṭisallīnā manobhāvanīyā bhikkhū. Yannūnāhaṁ yena aññatitthiyānaṁ paribbājakānaṁ ārāmo tenupasaṅkameyyan”ti.",
+   "T0100-sa-2.202": "復作是念：「我若往彼，日時故早，如來猶未從禪定起，我今應先至彼外道所住之處。」即往其所，既至彼已，共相慰問，在一面坐。",
+   "T0099-sa968": "時，給孤獨長者日日出見世尊，禮事供養，給孤獨長者作是念：「我今出太早，世尊及諸比丘禪思未起，我寧可過諸外道住處。」即入外道精舍，與諸外道共相問訊慰勞已，退坐一面。"
+  },
+  "a02": {
+   "an10.93": "Atha kho anāthapiṇḍiko gahapati yena aññatitthiyānaṁ paribbājakānaṁ ārāmo tenupasaṅkami.",
+   "T0100-sa-2.202": "異學外道問須達言：「汝可為我說，彼沙門瞿曇為作何見？」須達答言：「如來所說，我不能及其所知見，在吾分外。」外道言：「汝若不知佛之所見，頗復能知比丘見不？」",
+   "T0099-sa968": "時，彼外道問言：「長者！汝見沙門瞿曇，云何見？"
+  },
+  "a03": {
+   "an10.93": "Tena kho pana samayena aññatitthiyā paribbājakā saṅgamma samāgamma unnādino uccāsaddamahāsaddā anekavihitaṁ tiracchānakathaṁ kathentā nisinnā honti.",
+   "T0100-sa-2.202": "須達答言：「如斯之事，我亦不知。」外道復言：「汝若如是，竟何所見？若少所見，請聞其說。」",
+   "T0099-sa968": "何所見？」長者答言：「我亦不知云何見世尊，世尊何所見。」諸外道言：「汝言見眾僧，云何見眾僧？眾僧何所見？」長者答言：「我亦不知云何見僧，僧何所見。」外道復問：「長者！"
+  },
+  "a04": {
+   "an10.93": "Addasaṁsu kho te aññatitthiyā paribbājakā anāthapiṇḍikaṁ gahapatiṁ dūratova āgacchantaṁ.",
+   "T0100-sa-2.202": "須達復言：「汝當先說汝之所見，然後我當自說所見。」",
+   "T0099-sa968": "汝今云何自見？自何所見？」長者答言：「汝等各各自說所見，然後我說所見，亦不難。」"
+  },
+  "a05": {
+   "an10.93": "Disvāna aññamaññaṁ saṇṭhāpesuṁ:",
+   "T0100-sa-2.202": "爾時，外道語須達言：「我所見者，眾生之類，是常是實，餘皆妄語。」",
+   "T0099-sa968": "時，有一外道作如是言：「長者！我見一切世間常，是則真實，餘者虛妄。」"
+  },
+  "a06": {
+   "an10.93": "“appasaddā bhonto hontu, mā bhonto saddamakattha.",
+   "T0100-sa-2.202": "復有外道語須達言：「我之所見，一切無常，唯此為實，餘皆妄語。」",
+   "T0099-sa968": "復有說言：「長者！我見一切世間無常，此是真實，餘則虛妄。」"
+  },
+  "a07": {
+   "an10.93": "Ayaṁ anāthapiṇḍiko gahapati ārāmaṁ āgacchati samaṇassa gotamassa sāvako.",
+   "T0100-sa-2.202": "又復有言：「亦常無常，非常非無常，唯此為是，餘皆妄語。",
+   "T0099-sa968": "復有說言：「長者！世間常無常，此是真實，餘則虛妄。」"
+  },
+  "a08": {
+   "an10.93": "Yāvatā kho pana samaṇassa gotamassa sāvakā gihī odātavasanā sāvatthiyaṁ paṭivasanti, ayaṁ tesaṁ aññataro anāthapiṇḍiko gahapati.",
+   "T0100-sa-2.202": "世界有邊，世界無邊，亦有邊亦無邊，非有邊非無邊。",
+   "T0099-sa968": "復有說言：「世間非常非無常，此是真實，餘則虛妄。」復有說言：「世有邊，此是真實，餘則虛妄。」復有說言：「世無邊，此是真實，餘則虛妄。」復有說言：「世有邊無邊。」"
+  },
+  "a09": {
+   "an10.93": "Appasaddakāmā kho pana te āyasmanto appasaddavinītā appasaddassa vaṇṇavādino.",
+   "T0100-sa-2.202": "身即是命，命即是身，身異命異。",
+   "T0099-sa968": "復有說言：「世非有邊非無邊。」復有說言：「命即是身。」"
+  },
+  "a10": {
+   "an10.93": "Appeva nāma appasaddaṁ parisaṁ viditvā upasaṅkamitabbaṁ maññeyyā”ti.",
+   "T0100-sa-2.202": "眾生神我，死此生彼，死此不生彼，死此亦生彼亦不生彼。如是長者，我所見者，死此非生彼非不生彼。」",
+   "T0099-sa968": "復有說言：「命異身異。」復有說言：「如來死後有。」復有說言：「如來死後無。」復有說言：「如來死後有無。」復有說言：「如來死後非有非無，此是真實，餘則虛妄。」"
+  },
+  "a11": {
+   "an10.93": "Atha kho te aññatitthiyā paribbājakā tuṇhī ahesuṁ.",
+   "T0100-sa-2.202": "時諸外道各各自說己所見已，語須達言：「仁者當說。」",
+   "T0099-sa968": "諸外道語長者言：「我等各各已說所見，汝復應說汝所見。」"
+  },
+  "a12": {
+   "an10.93": "Atha kho anāthapiṇḍiko gahapati yena te aññatitthiyā paribbājakā tenupasaṅkami; upasaṅkamitvā tehi aññatitthiyehi paribbājakehi saddhiṁ sammodi. Sammodanīyaṁ kathaṁ sāraṇīyaṁ vītisāretvā ekamantaṁ nisīdi. Ekamantaṁ nisinnaṁ kho anāthapiṇḍikaṁ gahapatiṁ te aññatitthiyā paribbājakā etadavocuṁ: “vadehi, gahapati, kiṁdiṭṭhiko samaṇo gotamo”ti? “Na kho ahaṁ, bhante, bhagavato sabbaṁ diṭṭhiṁ jānāmī”ti. “Iti kira tvaṁ, gahapati, na samaṇassa gotamassa sabbaṁ diṭṭhiṁ jānāsi; vadehi, gahapati, kiṁdiṭṭhikā bhikkhū”ti? “Bhikkhūnampi kho ahaṁ, bhante, na sabbaṁ diṭṭhiṁ jānāmī”ti. “Iti kira tvaṁ, gahapati, na samaṇassa gotamassa sabbaṁ diṭṭhiṁ jānāsi napi bhikkhūnaṁ sabbaṁ diṭṭhiṁ jānāsi; vadehi, gahapati, kiṁdiṭṭhikosi tuvan”ti? “Etaṁ kho, bhante, amhehi na dukkaraṁ byākātuṁ yaṁdiṭṭhikā mayaṁ.",
+   "T0100-sa-2.202": "須達答言：「如我所見，一切眾生悉是有為，從諸因緣和合而有。言因緣者，即是業也。若假因緣和合有者，即是無常，無常即苦，苦即無我。以是義故，我於諸見，心無存著。汝諸外道作如是言：『一切諸法常，唯此為實，餘皆妄語。』如此計者，乃是眾苦之根本也，以貪著斯諸邪見者，與苦相應，能忍大苦，於生死中，受無窮苦，皆由計有，世界是常，乃至死後非生於彼非不生彼。如斯諸見，實是有為，業集因緣之所和合。以此推之，當知無常，無常即苦，苦即無我。」復有外道語須達言：「長者！眾生若是業集因緣和合而有，悉皆無常，無常即苦，苦即無我。若如是者，汝今亦復作諸苦本，與苦相應，於生死中，受無窮苦。」須達答言：「我先已說，一切諸見，心無所著，是故我今亦復不著如斯之見。」",
+   "T0099-sa968": "長者答言：「我之所見真實、有為、思量、緣起，若復真實、有為、思量、緣起者，彼則無常，無常者是苦。如是知已，於一切見都無所得。如汝所見：『世間常，此是真實，餘則虛妄。』者，此見真實、有為、思量、緣起；若真實、有為、思量、緣起者，是則無常，無常者是苦。是故汝等習近於苦，唯得於苦，堅住於苦，深入於苦。如是汝言世間無常，此是真實，餘則虛妄。有如是咎。」世間常、無常、非常非無常，世有邊、世無邊、世有邊無邊、世非有邊非無邊，命即是身、命異身異，如來死後有、如來死後無、如來死後有無、如來死後非有非無，此是真實，餘則虛妄，皆如上說。有一外道語給孤獨長者言：「如汝所說，若有見彼，則真實、有為、思量、緣起者，是無常法，若無常者是苦。是故，長者所見亦習近苦，得苦，住苦，深入於苦？」長者答言：「我先不言所見者，是真實、有為、思量、緣起法，悉皆無常，無常者是苦，知苦已，我於所見無所得耶？」"
+  },
+  "a13": {
+   "an10.93": "Iṅgha tāva āyasmanto yathāsakāni diṭṭhigatāni byākarontu, pacchāpetaṁ amhehi na dukkaraṁ bhavissati byākātuṁ yaṁdiṭṭhikā mayan”ti.",
+   "T0100-sa-2.202": "時彼外道讚須達言：「如是長者，汝亦應當作如是說。」",
+   "T0099-sa968": "彼外道言：「如是，長者！」"
+  },
+  "a14": {
+   "an10.93": "Evaṁ vutte, aññataro paribbājako anāthapiṇḍikaṁ gahapatiṁ etadavoca:",
+   "T0100-sa-2.202": "爾時，須達於彼外道異見眾中，作師子吼，令諸外道邪見之心，皆悉息已，往詣佛所，頂禮佛足，在一面坐，以己所見，共外道談論，向如來說。",
+   "T0099-sa968": "爾時，給孤獨長者於外道精舍伏彼異論，建立正論，於異學眾中作師子吼已，往詣佛所，稽首禮足，退坐一面，以向與諸外道共論事向佛廣說。"
+  },
+  "a15": {
+   "an10.93": "“sassato loko, idameva saccaṁ moghamaññanti—",
+   "T0100-sa-2.202": "佛即讚言：「善哉！",
+   "T0099-sa968": "佛告給孤獨長者：「善哉！"
+  },
+  "a16": {
+   "an10.93": "evaṁdiṭṭhiko ahaṁ, gahapatī”ti. Aññataropi kho paribbājako anāthapiṇḍikaṁ gahapatiṁ etadavoca: “asassato loko, idameva saccaṁ moghamaññanti— evaṁdiṭṭhiko ahaṁ, gahapatī”ti. Aññataropi kho paribbājako anāthapiṇḍikaṁ gahapatiṁ etadavoca: “antavā loko …pe… anantavā loko … taṁ jīvaṁ taṁ sarīraṁ … aññaṁ jīvaṁ aññaṁ sarīraṁ … hoti tathāgato paraṁ maraṇā … na hoti tathāgato paraṁ maraṇā … hoti ca na ca hoti tathāgato paraṁ maraṇā … neva hoti na na hoti tathāgato paraṁ maraṇā, idameva saccaṁ moghamaññanti— evaṁdiṭṭhiko ahaṁ, gahapatī”ti. Evaṁ vutte, anāthapiṇḍiko gahapati te paribbājake etadavoca: “yvāyaṁ, bhante, āyasmā evamāha: ‘sassato loko, idameva saccaṁ moghamaññanti— evaṁdiṭṭhiko ahaṁ, gahapatī’ti, imassa ayamāyasmato diṭṭhi attano vā ayonisomanasikārahetu uppannā paratoghosapaccayā vā. Sā kho panesā diṭṭhi bhūtā saṅkhatā cetayitā paṭiccasamuppannā. Yaṁ kho pana kiñci bhūtaṁ saṅkhataṁ cetayitaṁ paṭiccasamuppannaṁ tadaniccaṁ. Yadaniccaṁ taṁ dukkhaṁ. Yaṁ dukkhaṁ tadeveso āyasmā allīno, tadeveso āyasmā ajjhupagato. Yopāyaṁ, bhante, āyasmā evamāha: ‘asassato loko, idameva saccaṁ moghamaññanti— evaṁdiṭṭhiko ahaṁ, gahapatī’ti, imassāpi ayamāyasmato diṭṭhi attano vā ayonisomanasikārahetu uppannā paratoghosapaccayā vā. Sā kho panesā diṭṭhi bhūtā saṅkhatā cetayitā paṭiccasamuppannā. Yaṁ kho pana kiñci bhūtaṁ saṅkhataṁ cetayitaṁ paṭiccasamuppannaṁ tadaniccaṁ. Yadaniccaṁ taṁ dukkhaṁ. Yaṁ dukkhaṁ tadeveso āyasmā allīno, tadeveso āyasmā ajjhupagato. Yopāyaṁ, bhante, āyasmā evamāha: ‘antavā loko …pe… anantavā loko … taṁ jīvaṁ taṁ sarīraṁ … aññaṁ jīvaṁ aññaṁ sarīraṁ … hoti tathāgato paraṁ maraṇā … na hoti tathāgato paraṁ maraṇā … hoti ca na ca hoti tathāgato paraṁ maraṇā … neva hoti na na hoti tathāgato paraṁ maraṇā, idameva saccaṁ moghamaññanti— evaṁdiṭṭhiko ahaṁ, gahapatī’ti, imassāpi ayamāyasmato diṭṭhi attano vā ayonisomanasikārahetu uppannā paratoghosapaccayā vā. Sā kho panesā diṭṭhi bhūtā saṅkhatā cetayitā paṭiccasamuppannā. Yaṁ kho pana kiñci bhūtaṁ saṅkhataṁ cetayitaṁ paṭiccasamuppannaṁ tadaniccaṁ. Yadaniccaṁ taṁ dukkhaṁ. Yaṁ dukkhaṁ tadeveso āyasmā allīno, tadeveso āyasmā ajjhupagato”ti. Evaṁ vutte te paribbājakā anāthapiṇḍikaṁ gahapatiṁ etadavocuṁ: “byākatāni kho, gahapati, amhehi sabbeheva yathāsakāni diṭṭhigatāni. Vadehi, gahapati, kiṁdiṭṭhikosi tuvan”ti? “Yaṁ kho, bhante, kiñci bhūtaṁ saṅkhataṁ cetayitaṁ paṭiccasamuppannaṁ tadaniccaṁ. Yadaniccaṁ taṁ dukkhaṁ. ‘Yaṁ dukkhaṁ taṁ netaṁ mama, nesohamasmi, na meso attā’ti— evaṁdiṭṭhiko ahaṁ, bhante”ti. “Yaṁ kho, gahapati, kiñci bhūtaṁ saṅkhataṁ cetayitaṁ paṭiccasamuppannaṁ tadaniccaṁ. Yadaniccaṁ taṁ dukkhaṁ. Yaṁ dukkhaṁ tadeva tvaṁ, gahapati, allīno, tadeva tvaṁ, gahapati, ajjhupagato”ti. “Yaṁ kho, bhante, kiñci bhūtaṁ saṅkhataṁ cetayitaṁ paṭiccasamuppannaṁ tadaniccaṁ. Yadaniccaṁ taṁ dukkhaṁ. ‘Yaṁ dukkhaṁ taṁ netaṁ mama, nesohamasmi, nameso attā’ti—evametaṁ yathābhūtaṁ sammappaññāya sudiṭṭhaṁ. Tassa ca uttari nissaraṇaṁ yathābhūtaṁ pajānāmī”ti. Evaṁ vutte te paribbājakā tuṇhībhūtā maṅkubhūtā pattakkhandhā adhomukhā pajjhāyantā appaṭibhānā nisīdiṁsu. Atha kho anāthapiṇḍiko gahapati te paribbājake tuṇhībhūte maṅkubhūte pattakkhandhe adhomukhe pajjhāyante appaṭibhāne viditvā uṭṭhāyāsanā yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho anāthapiṇḍiko gahapati yāvatako ahosi tehi aññatitthiyehi paribbājakehi saddhiṁ kathāsallāpo taṁ sabbaṁ bhagavato ārocesi. “Sādhu sādhu, gahapati. Evaṁ kho te, gahapati, moghapurisā kālena kālaṁ sahadhammena suniggahitaṁ niggahetabbā”ti. Atha kho bhagavā anāthapiṇḍikaṁ gahapatiṁ dhammiyā kathāya sandassesi samādapesi samuttejesi sampahaṁsesi. Atha kho anāthapiṇḍiko gahapati bhagavatā dhammiyā kathāya sandassito samādapito samuttejito sampahaṁsito uṭṭhāyāsanā bhagavantaṁ abhivādetvā padakkhiṇaṁ katvā pakkāmi. Atha kho bhagavā acirapakkante anāthapiṇḍike gahapatimhi bhikkhū āmantesi: “yopi so, bhikkhave, bhikkhu vassasatupasampanno imasmiṁ dhammavinaye, sopi evamevaṁ aññatitthiye paribbājake sahadhammena suniggahitaṁ niggaṇheyya yathā taṁ anāthapiṇḍikena gahapatinā niggahitā”ti. Tatiyaṁ.",
+   "T0100-sa-2.202": "應當如是摧諸外道，令墮負處，應熾盛正法之論。」佛說是已，諸比丘聞佛所說，歡喜奉行。",
+   "T0099-sa968": "善哉！宜應時時摧伏愚癡外道，建立正論。」佛說是語已，給孤獨長者歡喜隨喜，作禮而去。"
+  }
+ }
+}

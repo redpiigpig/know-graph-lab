@@ -1,0 +1,115 @@
+{
+ "slug": "pi-sn1.3-sn2.19",
+ "title": "別譯雜阿含經 （一三八）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "天子問偈"
+  },
+  {
+   "id": "a02",
+   "label": "世尊答偈"
+  },
+  {
+   "id": "a03",
+   "label": "天子讚偈"
+  },
+  {
+   "id": "a04",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn1.3",
+   "lang": "pi",
+   "label": "巴利 SN1.3",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn1.3",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN1.3",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "sn2.19",
+   "lang": "pi",
+   "label": "巴利 SN2.19",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn2.19",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN2.19",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.138",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （一三八）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa1001",
+   "lang": "lzh",
+   "label": "雜阿含經 （一〇〇一）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（一三八）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一〇〇一）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn1.3": "Saṁyutta Nikāya 1.3 1. Naḷavagga Upanīyasutta Sāvatthinidānaṁ.",
+   "nan-sn1.3": "〔三〕引導者",
+   "sn2.19": "Saṁyutta Nikāya 2.19 2. Anāthapiṇḍikavagga Uttarasutta Rājagahanidānaṁ.",
+   "nan-sn2.19": "〔一九〕第九　優多羅王舍城因緣。",
+   "T0100-sa-2.138": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。",
+   "T0099-sa1001": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。"
+  },
+  "a01": {
+   "sn1.3": "Ekamantaṁ ṭhitā kho sā devatā bhagavato santike imaṁ gāthaṁ abhāsi: “Upanīyati jīvitamappamāyu, Jarūpanītassa na santi tāṇā; Etaṁ bhayaṁ maraṇe pekkhamāno, Puññāni kayirātha sukhāvahānī”ti.",
+   "nan-sn1.3": "立於一面之天神，於世尊面前，而唱偈曰：",
+   "sn2.19": "Ekamantaṁ ṭhito kho uttaro devaputto bhagavato santike imaṁ gāthaṁ abhāsi: “Upanīyati jīvitamappamāyu, Jarūpanītassa na santi tāṇā; Etaṁ bhayaṁ maraṇe pekkhamāno, Puññāni kayirātha sukhāvahānī”ti.",
+   "nan-sn2.19": "立於一面之優多羅天子，於世尊前，唱此偈曰：",
+   "T0100-sa-2.138": "時，有一天光色倍常，於其夜中，來詣佛所，威光顯赫，普照祇洹，悉皆大明，却坐一面，而說偈言：「人生壽不定，日日趣死徑，\n無常所侵奪，壽命甚短促。\n老來侵壯色，無有救護者，\n恐怖畏向死，作福得趣樂。」",
+   "T0099-sa1001": "時，有一天子，容色絕妙，於後夜時來詣佛所，稽首佛足，退坐一面。身諸光明遍照祇樹給孤獨園。時，彼天子而說偈言：「冥運持命去，故令人短壽，\n為老所侵迫，而無救護者。\n覩斯老病死，令人大恐怖，\n唯作諸功德，樂住至樂所。」"
+  },
+  "a02": {
+   "sn1.3": "“Upanīyati jīvitamappamāyu, Jarūpanītassa na santi tāṇā; Etaṁ bhayaṁ maraṇe pekkhamāno, Lokāmisaṁ pajahe santipekkho”ti.",
+   "nan-sn1.3": "生導死壽短導老無庇獲\n觀死此恐怖齎樂積功德〔世尊：〕生導死壽短導老無庇獲\n觀死此恐怖棄欲希寂靜",
+   "sn2.19": "“Upanīyati jīvitamappamāyu, Jarūpanītassa na santi tāṇā; Etaṁ bhayaṁ maraṇe pekkhamāno, Lokāmisaṁ pajahe santipekkho”ti.",
+   "nan-sn2.19": "生導死壽短老導無庇護\n觀死此恐懼齎樂積功德〔世尊：〕生導死壽短老導無庇護\n觀死此恐怖棄欲希寂靜",
+   "T0100-sa-2.138": "爾時，世尊以偈答言：「人生壽不定，日日趣死徑，\n無常所侵奪，壽命甚短促，\n老來侵壯色，無有救護者。\n恐怖畏向死，欲得寂滅樂，\n應捨世五欲，不宜深生著。」",
+   "T0099-sa1001": "爾時，世尊說偈答言：「冥運持命去，故令人短壽，\n為老所侵迫，而無救護者。\n觀此有餘過，令人大恐怖，\n當斷世貪愛，無餘涅槃樂。」"
+  },
+  "a03": {
+   "T0100-sa-2.138": "天讚偈言：「往昔已曾見，婆羅門涅槃，\n嫌怖久捨棄，能度世間愛。」",
+   "T0099-sa1001": "時，彼天子復說偈言：「久見婆羅門，逮得般涅槃，\n一切怖已過，永超世恩愛。」"
+  },
+  "a04": {
+   "T0100-sa-2.138": "時，此天子聞佛所說，歡喜而去。",
+   "T0099-sa1001": "時，彼天子聞佛所說，歡喜隨喜，稽首佛足，即沒不現。"
+  }
+ }
+}

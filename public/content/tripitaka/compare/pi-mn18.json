@@ -1,0 +1,217 @@
+{
+ "slug": "pi-mn18",
+ "title": "增壹阿含經 （一〇）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "但陀吧尼問答"
+  },
+  {
+   "id": "a02",
+   "label": "世尊答但陀吧尼"
+  },
+  {
+   "id": "a03",
+   "label": "但陀吧尼退去"
+  },
+  {
+   "id": "a04",
+   "label": "世尊告諸比丘"
+  },
+  {
+   "id": "a05",
+   "label": "比丘白世尊問論義"
+  },
+  {
+   "id": "a06",
+   "label": "世尊略說義"
+  },
+  {
+   "id": "a07",
+   "label": "世尊入室"
+  },
+  {
+   "id": "a08",
+   "label": "比丘議論誰能廣說"
+  },
+  {
+   "id": "a09",
+   "label": "往請大迦旃延"
+  },
+  {
+   "id": "a10",
+   "label": "大迦旃延問答"
+  },
+  {
+   "id": "a11",
+   "label": "大迦旃延喻說"
+  },
+  {
+   "id": "a12",
+   "label": "大迦旃延廣說義"
+  },
+  {
+   "id": "a13",
+   "label": "比丘歡喜受持"
+  },
+  {
+   "id": "a14",
+   "label": "阿難問經名"
+  },
+  {
+   "id": "a15",
+   "label": "世尊說經名"
+  },
+  {
+   "id": "a16",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "mn18",
+   "lang": "pi",
+   "label": "巴利 MN18",
+   "who": "Mahāsaṅgīti 本・SuttaCentral",
+   "reorder": true
+  },
+  {
+   "id": "nan-mn18",
+   "lang": "lzh",
+   "label": "漢譯南傳 MN18",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0125-ea40.10",
+   "lang": "lzh",
+   "label": "增壹阿含經 （一〇）",
+   "who": "東晉 瞿曇僧伽提婆譯",
+   "reorder": true
+  },
+  {
+   "id": "T0026-ma115",
+   "lang": "lzh",
+   "label": "中阿含經 （一一五）中阿含林品蜜丸喻經第九（第二小土城誦）",
+   "who": "東晉 瞿曇僧伽提婆譯"
+  }
+ ],
+ "works": [
+  "T0026",
+  "T0125"
+ ],
+ "anchors": [
+  {
+   "work": "T0125",
+   "node": "（一〇）",
+   "uid": "T02n0125_p0743a04"
+  },
+  {
+   "work": "T0026",
+   "node": "（一一五）中阿含林品蜜丸喻經第九（第二小土城誦）",
+   "uid": "T01n0026_p0603b10"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "mn18": "Majjhima Nikāya 18 Madhupiṇḍikasutta Evaṁ me sutaṁ— ekaṁ samayaṁ bhagavā sakkesu viharati kapilavatthusmiṁ nigrodhārāme. Atha kho bhagavā pubbaṇhasamayaṁ nivāsetvā pattacīvaramādāya kapilavatthuṁ piṇḍāya pāvisi. Kapilavatthusmiṁ piṇḍāya caritvā pacchābhattaṁ piṇḍapātapaṭikkanto yena mahāvanaṁ tenupasaṅkami divāvihārāya. Mahāvanaṁ ajjhogāhetvā beluvalaṭṭhikāya mūle divāvihāraṁ nisīdi.",
+   "nan-mn18": "第十八　蜜丸經如是我聞。——",
+   "T0125-ea40.10": "聞如是：一時，佛在釋翅迦毘羅衛國尼拘屢園，與大比丘眾五百人俱。爾時，世尊食後，從尼拘屢園往至毘羅耶致聚中，在一樹下坐。",
+   "T0026-ma115": "我聞如是：一時，佛遊釋羇瘦，在迦維羅衛。爾時，世尊過夜平旦，著衣持鉢，為乞食故，入迦維羅衛。食訖，中後收舉衣鉢，澡洗手足，以尼師壇著於肩上，往詣竹林釋迦寺中，入彼大林，至一樹下敷尼師檀，結加趺坐。"
+  },
+  "a01": {
+   "mn18": "Daṇḍapāṇipi kho sakko jaṅghāvihāraṁ anucaṅkamamāno anuvicaramāno yena mahāvanaṁ tenupasaṅkami. Mahāvanaṁ ajjhogāhetvā yena beluvalaṭṭhikā yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavatā saddhiṁ sammodi. Sammodanīyaṁ kathaṁ sāraṇīyaṁ vītisāretvā daṇḍamolubbha ekamantaṁ aṭṭhāsi. Ekamantaṁ ṭhito kho daṇḍapāṇi sakko bhagavantaṁ etadavoca: “kiṁvādī samaṇo kimakkhāyī”ti?",
+   "nan-mn18": "一時，世尊在釋迦國迦毘羅拔兜城之尼拘律樹園。爾時，世尊早晨著衣，執持衣鉢，為乞食故入迦毘羅拔兜城。於迦毘羅拔兜城行乞，食後，由行乞而歸，為日中安息而行往大林。入大林，於麥魯瓦樹之新枝葉下，為日中安息而結加趺坐。時，釋迦族但陀吧尼（執杖者）徘徊逍遙而往大林。入大林而詣麥魯瓦樹之新枝葉下佛之處。詣已問訊世尊，交談友誼親睦之語後，拄杖而立一面。依杖而立於一面之釋迦族但陀吧尼白世尊言：「沙門為如何等論為如何說者？」〔世尊曰：〕「卿！所立論者，俱天之世界，魔之世界，俱梵天之世界，俱沙門婆羅門之世界，俱天、人之世界，於任何者皆不至諍爭，又離脫欲而住，離猶豫、斷惡作、於生死棄渴愛，彼〔真〕婆羅門，憑種種想而無棲，如是予為論，為說者也。」如是說時，釋迦族之但陀吧尼搖頭作舌、三叉之顰眉作於前額，拄杖立去。如是世尊至傍晚從宴默起而往尼拘律樹園坐於設定之座。世尊就座已，告諸比丘曰：「諸比丘！予今朝著衣執持衣鉢為乞食故入迦毘羅拔兜城。於其城行乞，食後，從行乞而歸，為日中安息往於大林。入大林而於麥魯瓦樹之新枝葉下，為日中安息而坐。諸比丘！釋迦族之但陀吧尼亦徘徊逍遙而來大林。入大林走近麥魯瓦樹新枝葉下予之處。近而交談友誼親睦之語後，拄杖而立一面。諸比丘！於一面立之釋迦族但陀吧尼問予曰：『沙門為如何論，為如何說者？』諸比丘！如是問已，予為彼如次答之：『卿！所立之論者，俱天之世界，俱魔之世界，俱梵天之世界，俱沙門、婆羅門之世界，俱人天之世界，雖於任何者皆至不諍爭，又脫離欲而住，離猶豫、斷惡作、於生死去渴愛，彼〔真〕婆羅門憑種種想而無棲，如是為予之論，為予之說者。』如是說時，諸比丘！釋迦族之但陀吧尼搖頭作舌，三叉顰眉作於前額，拄杖而退去。」",
+   "T0125-ea40.10": "是時，執杖釋種出迦毘羅越至世尊所，在前默然而住。爾時，執杖釋種問世尊言：「沙門作何勅教？為何等論？」世尊告曰：「梵志當知，我之所論，非天、龍、鬼神所能及也；亦非著世，復非住世。我之所論，正謂斯耳。」",
+   "T0026-ma115": "於是，執杖釋拄杖而行，中後彷徉，往詣佛所，共相問訊，拄杖立佛前，問世尊曰：「沙門瞿曇！以何為宗本？說何等法？」世尊答曰：「釋！"
+  },
+  "a02": {
+   "mn18": "“Yathāvādī kho, āvuso, sadevake loke samārake sabrahmake sassamaṇabrāhmaṇiyā pajāya sadevamanussāya na kenaci loke viggayha tiṭṭhati, yathā ca pana kāmehi visaṁyuttaṁ viharantaṁ taṁ brāhmaṇaṁ akathaṅkathiṁ chinnakukkuccaṁ bhavābhave vītataṇhaṁ saññā nānusenti— evaṁvādī kho ahaṁ, āvuso, evamakkhāyī”ti.",
+   "nan-mn18": "如是說時，有比丘白世尊言：「世尊！世尊如何為論，俱天之世界，俱魔之世界，俱梵天之世界，俱沙門、婆羅門之世界，俱人天之世界，雖與任何者亦不至諍爭耶？又，如何世尊離脫欲而住，離猶豫、斷惡作、於生死去渴愛，彼〔真〕婆羅門憑種種想而得達無棲耶？」〔世尊曰：〕「比丘！由其因緣，人之迷執想分生起，若於其事物而至無可歡喜、歡迎、執著者，此實即貪隨眠之邊、瞋隨眠之邊、見隨眠之邊、疑隨眠、慢隨眠、存在欲隨眠、無明隨眠之邊也；又執其棒、執劍者至鬥爭、諍爭、論爭、抗爭、離間語、妄語之邊。於其處彼惡不善法，滅無餘矣。」",
+   "T0026-ma115": "若一切世間，天及魔、梵、沙門、梵志，從人至天，使不鬪諍，修習離欲清淨梵志，捨離諂曲，除悔，不著有、非有，亦無想，是我宗本；"
+  },
+  "a03": {
+   "mn18": "Evaṁ vutte, daṇḍapāṇi sakko sīsaṁ okampetvā, jivhaṁ nillāḷetvā, tivisākhaṁ nalāṭikaṁ nalāṭe vuṭṭhāpetvā daṇḍamolubbha pakkāmi. Atha kho bhagavā sāyanhasamayaṁ paṭisallānā vuṭṭhito yena nigrodhārāmo tenupasaṅkami; upasaṅkamitvā paññatte āsane nisīdi.",
+   "T0125-ea40.10": "是時，執杖釋種儼頭嘆吒已，便退而去。爾時，如來即從座起，還詣所止。",
+   "T0026-ma115": "說亦如是。」於是，執杖釋聞佛所說，不是不非，執杖釋奮頭而去。"
+  },
+  "a04": {
+   "mn18": "Nisajja kho bhagavā bhikkhū āmantesi: “idhāhaṁ, bhikkhave, pubbaṇhasamayaṁ nivāsetvā pattacīvaramādāya kapilavatthuṁ piṇḍāya pāvisiṁ. Kapilavatthusmiṁ piṇḍāya caritvā pacchābhattaṁ piṇḍapātapaṭikkanto yena mahāvanaṁ tenupasaṅkamiṁ divāvihārāya. Mahāvanaṁ ajjhogāhetvā beluvalaṭṭhikāya mūle divāvihāraṁ nisīdiṁ. Daṇḍapāṇipi kho, bhikkhave, sakko jaṅghāvihāraṁ anucaṅkamamāno anuvicaramāno yena mahāvanaṁ tenupasaṅkami. Mahāvanaṁ ajjhogāhetvā yena beluvalaṭṭhikā yenāhaṁ tenupasaṅkami; upasaṅkamitvā mayā saddhiṁ sammodi. Sammodanīyaṁ kathaṁ sāraṇīyaṁ vītisāretvā daṇḍamolubbha ekamantaṁ aṭṭhāsi. Ekamantaṁ ṭhito kho, bhikkhave, daṇḍapāṇi sakko maṁ etadavoca: ‘kiṁvādī samaṇo kimakkhāyī’ti? Evaṁ vutte, ahaṁ, bhikkhave, daṇḍapāṇiṁ sakkaṁ etadavocaṁ: ‘yathāvādī kho, āvuso, sadevake loke samārake sabrahmake sassamaṇabrāhmaṇiyā pajāya sadevamanussāya na kenaci loke viggayha tiṭṭhati, yathā ca pana kāmehi visaṁyuttaṁ viharantaṁ taṁ brāhmaṇaṁ akathaṅkathiṁ chinnakukkuccaṁ bhavābhave vītataṇhaṁ saññā nānusenti— evaṁvādī kho ahaṁ, āvuso, evamakkhāyī’ti. Evaṁ vutte, bhikkhave, daṇḍapāṇi sakko sīsaṁ okampetvā, jivhaṁ nillāḷetvā, tivisākhaṁ nalāṭikaṁ nalāṭe vuṭṭhāpetvā daṇḍamolubbha pakkāmī”ti.",
+   "nan-mn18": "世尊如是說已，如是說之善逝，從座起而入室。世尊入去後未久，彼等比丘生如次之念：「諸賢！世尊對我等略說如次之教，對其義無詳細之解說，從座起而入室，即——比丘，由其因緣，人間生起迷執之想分，於其事物而不至可歡喜、歡迎、執著者，此實至貪隨眠之邊、瞋隨眠之邊、見隨眠之邊、疑隨眠、慢隨眠、存在欲隨眠、無明隨眠之邊；又其執棒、執劍至鬥爭、諍爭、論爭、抗爭、離間語、妄語之邊矣。於其處，彼惡不善之法，滅無餘矣——。從此世尊之略說，對此無詳細解說所教之意義誰能詳細解說者耶？」於此，彼等比丘又生如次之念：「尊者大迦旃延為師所稱譽，被有智之同行所尊敬。尊者大迦旃延適宜從此世尊之略說，無詳細解說所教之意義，與以詳細解說者也。今我等往尊者大迦旃延之處。向尊者大迦旃延問此之義。」",
+   "T0125-ea40.10": "爾時，世尊告諸比丘：「向者，在彼園中坐，有執杖釋種來至我所，而問我言：『沙門為作何等論？』吾報之曰：『我之所論，非天、世人所能及也；亦非著世，復非住世，我之所論，正謂斯耳。』是時，執杖釋種聞此語已，便退而去。」",
+   "T0026-ma115": "於是，世尊執杖釋去後不久，則於晡時，從燕坐起，往詣講堂，比丘眾前敷座而坐，告諸比丘：「我今平旦著衣持鉢，為乞食故，入迦維羅衛。食訖，中後收舉衣鉢，澡洗手足，以尼師檀著於肩上，往詣竹林釋迦寺中，入彼大林，至一樹下敷尼師檀，結跏趺坐。於是，執杖釋拄杖而行，中後彷徉，來詣我所，共相問訊，拄杖立我前，問我曰：『沙門瞿曇！以何為宗本？說何等法？』我答曰：『釋！若一切世間，天及魔、梵、沙門、梵志，從人至天，使不鬪諍，修習離欲清淨梵志，捨離諂曲，除悔，不著有、非有，亦無想，是我宗本；說亦如是。』彼執杖釋聞我所說，不是不非，執杖釋奮頭而去。」"
+  },
+  "a05": {
+   "mn18": "Evaṁ vutte, aññataro bhikkhu bhagavantaṁ etadavoca: “kiṁvādī pana, bhante, bhagavā sadevake loke samārake sabrahmake sassamaṇabrāhmaṇiyā pajāya sadevamanussāya na kenaci loke viggayha tiṭṭhati? Kathañca pana, bhante, bhagavantaṁ kāmehi visaṁyuttaṁ viharantaṁ taṁ brāhmaṇaṁ akathaṅkathiṁ chinnakukkuccaṁ bhavābhave vītataṇhaṁ saññā nānusentī”ti?",
+   "nan-mn18": "於是彼等比丘往尊者大迦旃延處。往而向尊者大迦旃延問訊，交談友誼親睦之之語後，坐於一面。於一面坐之彼等比丘，對尊者大迦旃延如次言曰：「尊者迦旃延！世尊為我等略說如次之教，其義無詳細之解說，從座起而入室，即——比丘，由其因緣，人間迷執想分之生起，於其事物，而至無可歡喜、歡迎、執著者，此實至貪隨眠之邊、瞋隨眠之邊、見隨眠之邊、疑隨眠、慢隨眠、存在欲隨眠、無明隨眠之邊；又其執棒、執劍至鬥爭、諍爭、論爭、抗爭、離間語、妄語之邊也。於其處，彼惡不善法，滅無餘矣——。於是尊者迦旃延！世尊去後未久，我等生如次之念：『諸兄！世尊為我等略說此教，其義無詳細之說，從座起而入室，即——比丘，由其因緣，人間迷執想分之生起，於其事物不至可歡喜、歡迎、執著者，此實至貪隨眠之邊、瞋隨眠之邊、見隨眠之邊、疑隨眠、慢隨眠、存在欲隨眠、無明隨眠之邊；又其執棒、執劍至鬥爭、諍爭、論爭、抗爭、離間語、妄語之邊也。於其處，彼惡不善之法，滅無餘矣——。從此世尊之略說，無詳細解說所教之意義，誰得以詳細解說者耶？』尊者迦旃延！如是我等生如次之念：『尊者迦旃延為師所稱譽，為有智同行者所尊敬。尊者大迦旃延始適宜詳細解說世尊所略說而未詳細解說所教之意義也。今我等往尊者大迦旃延處。往而問尊者大迦旃延此之義。』尊者大迦旃延！願為解說！」",
+   "T0125-ea40.10": "爾時，有一比丘白世尊言：「云何亦不著世，復非住世？」",
+   "T0026-ma115": "於是，有一比丘即從坐起，偏袒著衣，叉手向佛，白曰：「世尊！云何一切世間，天及魔、梵、沙門、梵志，從人至天，使不鬪諍？云何修習離欲，得清淨梵志？云何捨離諂曲，除悔，不著有、非有，亦無想耶？」"
+  },
+  "a06": {
+   "mn18": "“Yatonidānaṁ, bhikkhu, purisaṁ papañcasaññāsaṅkhā samudācaranti. Ettha ce natthi abhinanditabbaṁ abhivaditabbaṁ ajjhositabbaṁ. Esevanto rāgānusayānaṁ, esevanto paṭighānusayānaṁ, esevanto diṭṭhānusayānaṁ, esevanto vicikicchānusayānaṁ, esevanto mānānusayānaṁ, esevanto bhavarāgānusayānaṁ, esevanto avijjānusayānaṁ, esevanto daṇḍādānasatthādānakalahaviggahavivādatuvaṁtuvaṁpesuññamusāvādānaṁ. Etthete pāpakā akusalā dhammā aparisesā nirujjhantī”ti. Idamavoca bhagavā.",
+   "nan-mn18": "〔大迦旃延曰：〕「諸賢！猶如有人欲心材、求心材者，探索具有心材之大樹心材〔而持斧入林〕，經過有心材之大樹根，以過其幹，想於枝葉索取心材，諸賢亦如是，我師當面〔請教〕以越其世尊，我等想得問其義，是不適宜。諸賢！彼世尊實知所知、以觀所觀。世尊為眼、為智、為法、為梵。是教說者、宣布者、利益之將來者、不死之施與者、法主、如來也。於是，實應向世尊間其義之時也，而且從世尊所解說，應如實受持之。」〔諸比丘曰：〕「尊者迦旃延！世尊實知所知、以觀所觀、為眼、為智、為法、為梵。是教說者、宣布者、利益之將來者、不死之施與者、法主、如來也。故此時實應向世尊問其義之時也。而且從世尊所解說，應如實受持之。然，尊者大迦旃延為我師之所稱譽，為有智之同行所尊敬。尊者大迦旃延實適宜從此世尊之略說，而無詳細解說所教之意義，以詳細解說者也。尊者大迦旃延！願不為所困難，請解說之！」〔大迦旃延曰：〕「若然！諸賢！諦聽！善思念之！我今將說之。」彼等比丘：「願樂欲聞。」而應尊者大迦旃延。如是，尊者大迦旃延曰：",
+   "T0125-ea40.10": "世尊告曰：「如我所論者，都不著世，如今於欲而得解脫，斷於釋種狐疑，無有眾想。我之所論者，正謂此耳。」",
+   "T0026-ma115": "世尊告曰：「比丘！若人所因念，出家學道，思想修習，及過去、未來、今現在法，不愛、不樂、不著、不住，是說苦邊。欲使，恚使、有使、慢使、無明使、見使、疑使、鬪諍、憎嫉、諛諂、欺誑、妄言、兩舌及無量惡不善之法，是說苦邊。」"
+  },
+  "a07": {
+   "mn18": "Idaṁ vatvāna sugato uṭṭhāyāsanā vihāraṁ pāvisi. Atha kho tesaṁ bhikkhūnaṁ acirapakkantassa bhagavato etadahosi:",
+   "T0125-ea40.10": "世尊作此語已，即起入室。",
+   "T0026-ma115": "佛說如是，即從坐起，入室燕坐。"
+  },
+  "a08": {
+   "mn18": "“idaṁ kho no, āvuso, bhagavā saṅkhittena uddesaṁ uddisitvā, vitthārena atthaṁ avibhajitvā, uṭṭhāyāsanā vihāraṁ paviṭṭho: ‘yatonidānaṁ, bhikkhu, purisaṁ papañcasaññāsaṅkhā samudācaranti. Ettha ce natthi abhinanditabbaṁ abhivaditabbaṁ ajjhositabbaṁ. Esevanto rāgānusayānaṁ …pe… etthete pāpakā akusalā dhammā aparisesā nirujjhantī’ti. Ko nu kho imassa bhagavatā saṅkhittena uddesassa uddiṭṭhassa vitthārena atthaṁ avibhattassa vitthārena atthaṁ vibhajeyyā”ti? Atha kho tesaṁ bhikkhūnaṁ etadahosi: “ayaṁ kho āyasmā mahākaccāno satthu ceva saṁvaṇṇito sambhāvito ca viññūnaṁ sabrahmacārīnaṁ. Pahoti cāyasmā mahākaccāno imassa bhagavatā saṅkhittena uddesassa uddiṭṭhassa vitthārena atthaṁ avibhattassa vitthārena atthaṁ vibhajituṁ.",
+   "nan-mn18": "「諸賢！實世尊如次略說，其義不詳解說，從座起而入室，即——比丘，其因緣，於人間所生起迷執之想分，於其事物不至可歡喜、歡迎、執著之物者，其實即貪隨眠之邊、瞋隨眠之邊、見隨眠之邊、疑隨眠、慢隨眠、存在欲隨眠、無明隨眠之邊也；又其乃執棒、執劍鬥爭、諍爭、論爭、抗爭、離間語、妄語之邊也。於其處，彼惡不善之法，滅無餘矣——，此教意義予如次解說，即：諸賢，緣眼於色而眼識生。三事和合而有觸。緣觸而有受，以想所受者，即覺知所想者，即迷執所覺知者。所迷執者，由其因緣，人於過去、未來、現在，依眼而識於色，即生起迷執之想分。諸賢！緣耳於聲而耳識生，三事和合而有觸，緣觸而有受，以想所受者，即覺知所想者，即迷執所覺知者。所迷執者，由其因緣，人於過去、未來、現在，依耳識於聲即生起迷執之想分。諸賢！緣鼻於香而鼻識生……依鼻識於香即生起迷執之想分。諸賢！緣舌於味而舌識生……依舌識於味即生起迷執之想分。諸賢！緣身於觸而身識生……依身而識於觸即生起迷執之想分。諸賢！緣意於法而意識生，三事和合而有觸，緣觸而有受，以想所受者，即覺知所想者，即迷執所覺知者。所迷執者由其因緣，人於過去、未來、現在，依意識於法即生起迷執之想分。諸賢！若眼有、色有、眼識有之時，知實有觸之施設。有觸之施設時，知實有受之施設。有受之施設時，知實有想之施設。有想之施設時，知實有覺知之施設。有覺知之施設時，知實有生起迷執想分之施設。諸賢！若又耳有、聲有、耳識有之時，知實有觸之施設……知實有生起迷執想分之施設。諸賢！若又鼻有、香有、鼻識有之時，知實有觸之施設……知實有生起迷執想分之施設。諸賢！若又舌有、味有、舌識有之時，知實有觸之施設……知實有生起迷執想分之施設。諸賢！若又身有、所觸有、身識有之時，知實有觸之施設……知實有生起迷執想分之施設。諸賢！若又意有、法有、意識有之時，知實有觸之施設。觸之施設有之時，知實有受之施設。受之施設有之時，知實有想之施設。想之施設有之時，知實有覺知之施設。覺知之施設有之時，知實有生起迷執想分之施設。諸賢！若眼非有、色非有、眼識非有之時，知非實有觸之施設。觸之施設非有之時，知非實有受之施設。受之施設非有之時，知非實有想之施設。想之施設非有之時，知非實有覺知之施設。覺知之施設非有之時，知非實有生起迷執想分之施設。諸賢！若又耳非有、聲非有、耳識非有之時，知非實有觸之施設……知非實有生起迷執想分之施設。諸賢！若又鼻非有、香非有鼻識非有之時，知非實有觸之施設……知非實有生起迷執想分之施設。諸賢！若又舌非有、味非有、舌識非有之時，知非實有觸之施設……知非實有生起迷執想分之施設。諸賢！若又身非有、所觸非有、身識非有時，知非實有觸之施設……知非實有生起迷執想分之施設。諸賢！若又意非有、法非有、意識非有時，知非實有觸之施設。觸之施設非有之時，知非實有受之施設。受之施設非有之時，知非實有想之施設。想之施設非有之時，知非實有覺知之施設。覺知之施設非有之時，知非實有生起迷執想分之施設。諸賢！實世尊如次略說，其義不詳解說，從座起而入室。——比丘，由其因緣，人所生起迷執想分，於其事物，至無有歡喜、歡迎、執著之物者，其實即貪隨眠之邊、瞋恚隨眠之邊、見隨眠之邊、疑隨眠、慢隨眠、存在欲隨眠、無明隨眠之邊也；又即其執棒、執劍至鬥爭、諍爭、論爭、抗爭、離間語、妄語之邊也。於其處，彼惡不善之法，滅無餘矣。此世尊之略說，不詳解說所教之意義，以予如是解說之。若諸賢喜歡者，諸賢詣世尊處，以間其義。而且如世尊之所解說，即應如是受持之。」",
+   "T0125-ea40.10": "是時，諸比丘各相謂言：「世尊向所論者，略說其義，誰能堪任廣說此義乎？」是時，諸比丘自相謂言：「世尊恒嘆譽尊者大迦栴延，今唯有迦栴延能說此義耳。」",
+   "T0026-ma115": "於是，諸比丘便作是念：「諸賢！當知世尊略說此義，不廣分別，即從坐起，入室燕坐。『若人所因念，出家學道，思想修習，及過去、未來、今現在法，不愛、不樂、不著、不住，是說苦邊。欲使、恚使、有使、慢使、無明使、見使、疑使、鬪諍、憎嫉、諛諂、欺誑、妄言、兩舌及無量惡不善之法，是說苦邊。』」彼復作是念：「諸賢！誰能廣分別世尊向所略說義？」彼復作是念：「尊者大迦旃延常為世尊之所稱譽，及諸智梵行人，尊者大迦旃延能廣分別世尊向所略說義。"
+  },
+  "a09": {
+   "mn18": "Yannūna mayaṁ yenāyasmā mahākaccāno tenupasaṅkameyyāma; upasaṅkamitvā āyasmantaṁ mahākaccānaṁ etamatthaṁ paṭipuccheyyāmā”ti. Atha kho te bhikkhū yenāyasmā mahākaccāno tenupasaṅkamiṁsu; upasaṅkamitvā āyasmatā mahākaccānena saddhiṁ sammodiṁsu.",
+   "nan-mn18": "於是彼等比丘歡喜尊者大迦旃延之說法，隨喜從座起而詣世尊之處。詣而稽首世尊，坐於一面。於一面坐之彼等比丘白世尊言：「世尊！實世尊為我等略說此教，其義不詳解說，從座起而入室。——比丘，由其因緣，人所生起迷執之想分，於其事物至無可歡喜、歡迎、執著之物者，其實即貪隨眠之邊、瞋隨眠之邊、見隨眠之邊、疑隨眠、慢隨眠、存在欲隨眠、無明隨眠之邊，又即其執棒、執劍至鬥爭、諍爭、論爭、抗爭、離間語、妄語之邊也。於其處，彼惡不善法，滅無餘矣——。世尊！若然我等於世尊去後未久，生如次之念：『諸兄！實世尊略說此教，不詳細解說其義而入室，即——比丘，由其因緣，人所生起迷執之想分，於其事物至無可歡喜、歡迎、執著之物者，其實即貪隨眠之邊……〔乃至〕……無明隨眠之邊也，又即其執棒、執劍至鬥爭、諍爭、論爭、抗爭、離間語、妄語之邊也。於其處，彼惡不善法，滅盡餘矣——。有誰能從此世尊之略說，不詳解說所教之意義，以詳解說者耶？』世尊！如是我等實生如次之念：『彼尊者大迦旃延為世尊所稱譽，為有智之同行者所尊敬。尊者大迦旃延適宜從此世尊之略說、不詳解說所教之意義，以詳解說者。今我等往尊者大迦旃延之處，為問其義而往尊者大迦旃延之處。』世尊，如是，我等往尊者大迦旃延之處。往而以其義問尊者大迦旃延。世尊！如是我等從尊者大迦旃延，依此等方法，以此等句、以此等語解說其義。」〔世尊曰：〕「諸比丘！大迦旃延是賢者。諸比丘！大迦旃延是大慧者。諸比丘！若汝等向予問其意義，予亦唯如從大迦旃延所解說，其義完全唯如其解說也。應如是受持之。」",
+   "T0125-ea40.10": "是時，眾多比丘語迦栴延曰：「向者，如來略說其義，唯願尊者當廣演說之，事事分別，使諸人得解。」",
+   "T0026-ma115": "諸賢！共往詣尊者大迦旃延所，請說此義；若尊者大迦旃延為分別者，我等當善受持。」"
+  },
+  "a10": {
+   "mn18": "Sammodanīyaṁ kathaṁ sāraṇīyaṁ vītisāretvā ekamantaṁ nisīdiṁsu. Ekamantaṁ nisinnā kho te bhikkhū āyasmantaṁ mahākaccānaṁ etadavocuṁ: “idaṁ kho no, āvuso kaccāna, bhagavā saṅkhittena uddesaṁ uddisitvā vitthārena atthaṁ avibhajitvā uṭṭhāyāsanā vihāraṁ paviṭṭho: ‘yatonidānaṁ, bhikkhu, purisaṁ papañcasaññāsaṅkhā samudācaranti. Ettha ce natthi abhinanditabbaṁ abhivaditabbaṁ ajjhositabbaṁ. Esevanto rāgānusayānaṁ …pe… etthete pāpakā akusalā dhammā aparisesā nirujjhantī’ti. Tesaṁ no, āvuso kaccāna, amhākaṁ acirapakkantassa bhagavato etadahosi: ‘idaṁ kho no, āvuso, bhagavā saṅkhittena uddesaṁ uddisitvā vitthārena atthaṁ avibhajitvā uṭṭhāyāsanā vihāraṁ paviṭṭho: “yatonidānaṁ, bhikkhu, purisaṁ papañcasaññāsaṅkhā samudācaranti. Ettha ce natthi abhinanditabbaṁ abhivaditabbaṁ ajjhositabbaṁ. Esevanto rāgānusayānaṁ …pe… etthete pāpakā akusalā dhammā aparisesā nirujjhantī”’ti. Ko nu kho imassa bhagavatā saṅkhittena uddesassa uddiṭṭhassa vitthārena atthaṁ avibhattassa vitthārena atthaṁ vibhajeyyāti? Tesaṁ no, āvuso kaccāna, amhākaṁ etadahosi: ‘ayaṁ kho āyasmā mahākaccāno satthu ceva saṁvaṇṇito sambhāvito ca viññūnaṁ sabrahmacārīnaṁ, pahoti cāyasmā mahākaccāno imassa bhagavatā saṅkhittena uddesassa uddiṭṭhassa vitthārena atthaṁ avibhattassa vitthārena atthaṁ vibhajituṁ. Yannūna mayaṁ yenāyasmā mahākaccāno tenupasaṅkameyyāma; upasaṅkamitvā āyasmantaṁ mahākaccānaṁ etamatthaṁ paṭipuccheyyāmā’ti. Vibhajatāyasmā mahākaccāno”ti.",
+   "nan-mn18": "如是說時。尊者阿難白世尊言：「世尊！譬喻因飢力衰之人，以得蜜丸者，彼從次第而食，如得純甘味，如是，世尊！精神力之優勝比丘，對知此法門以愈確認其意義，以得歡喜，得心之清安。世尊！今此法門應以何名之耶？」〔世尊曰：〕「阿難！如是之故，於此，汝以此法門名為蜜丸法門而受持之。」",
+   "T0125-ea40.10": "是時，諸比丘即受其教。迦栴延告曰：「今如來所言：『我之所論，非天、龍、鬼神之所能及，亦非著世，復非住世，然我於彼而得解脫，斷諸狐疑，無復猶豫，如今眾生之徒，好喜鬪訟，起諸亂想。』又如來言：『我不於中起染著心。』此是貪欲使，瞋恚、邪見、欲世間使，憍慢使，疑使，無明使，或遇刀杖苦痛之報，與人鬪訟，起若干不善之行，起諸亂想，興不善行。若眼見色而起識想，三事相因便有更樂，以有更樂便有痛，以有痛便有所覺，以有覺便有想，以有想便稱量之，起若干種想著之念。耳聞聲、鼻嗅香、舌甞味、身更細滑、意知法，而起識想，三事相因便有更樂，以有更樂便有痛，以有痛便有覺，以有覺便有想，以有想便稱量之，於中起若干種想著之念。此是貪欲之使、瞋恚使、邪見使、憍慢使、欲世間使、癡使、疑使，皆起刀杖之變，興若干種之變，不可稱計。「若有人作是說：『亦無眼，亦無色，而有更樂。』此事不然。設復言：『無更樂，有痛者。』此亦不然。設言：『無痛而有想著者。』此事不然。設復有人言：『無耳、無聲，無鼻、無香，無舌、無味，無身、無細滑，無意、無法，而言有識者。』終無此理也。設言：『無識而有更樂者。』此事不然。設：『無更樂而言有痛者。』此事不然。設言：『無痛而有想著者。』此事不然。若復人言：『有眼、有色於中起識。』此是必然。若言：『耳聲、鼻香、舌味、身細滑、意法於中起識者。』此事必然。諸賢當知，由此因緣，世尊說曰：『我之所論，天及世人、魔、若魔天不能及者，亦不著世，復不住世，然我於欲而得解脫，斷於狐疑，無復猶豫。』世尊因此緣略說其義耳。汝等心不解者，更至如來所，重問此義。設如來有所說者，好念奉持。」",
+   "T0026-ma115": "於是，諸比丘往詣尊者大迦旃延所，共相問訊，却坐一面，白曰：「尊者大迦旃延！當知世尊略說此義，不廣分別。即從坐起，入室燕坐。『比丘！若人所因念，出家學道，思想修習，及過去、未來、今現在法，不愛、不樂、不著、不住，是說苦邊。欲使、恚使、有使、慢使、無明使、見使、疑使、鬪諍、憎嫉、諛諂、欺誑、妄言、兩舌及無量惡不善之法，是說苦邊。』我等便作是念：『諸賢！誰能廣分別世尊向所略說義？』我等復作是念：『尊者大迦旃延常為世尊之所稱譽，及諸智梵行人，尊者大迦旃延能廣分別世尊向所略說義。』唯願尊者大迦旃延為慈愍故而廣說之。」爾時，尊者大迦旃延告曰：「諸賢！"
+  },
+  "a11": {
+   "mn18": "“Seyyathāpi, āvuso, puriso sāratthiko sāragavesī sārapariyesanaṁ caramāno mahato rukkhassa tiṭṭhato sāravato atikkammeva mūlaṁ, atikkamma khandhaṁ, sākhāpalāse sāraṁ pariyesitabbaṁ maññeyya; evaṁsampadamidaṁ āyasmantānaṁ satthari sammukhībhūte, taṁ bhagavantaṁ atisitvā, amhe etamatthaṁ paṭipucchitabbaṁ maññatha. So hāvuso, bhagavā jānaṁ jānāti, passaṁ passati, cakkhubhūto ñāṇabhūto dhammabhūto brahmabhūto, vattā pavattā, atthassa ninnetā, amatassa dātā, dhammassāmī tathāgato. So ceva panetassa kālo ahosi, yaṁ bhagavantaṁyeva etamatthaṁ paṭipuccheyyātha. Yathā vo bhagavā byākareyya tathā naṁ dhāreyyāthā”ti. “Addhāvuso kaccāna, bhagavā jānaṁ jānāti, passaṁ passati, cakkhubhūto ñāṇabhūto dhammabhūto brahmabhūto, vattā pavattā, atthassa ninnetā, amatassa dātā, dhammassāmī tathāgato. So ceva panetassa kālo ahosi, yaṁ bhagavantaṁyeva etamatthaṁ paṭipuccheyyāma. Yathā no bhagavā byākareyya tathā naṁ dhāreyyāma. Api cāyasmā mahākaccāno satthu ceva saṁvaṇṇito sambhāvito ca viññūnaṁ sabrahmacārīnaṁ, pahoti cāyasmā mahākaccāno imassa bhagavatā saṅkhittena uddesassa uddiṭṭhassa vitthārena atthaṁ avibhattassa vitthārena atthaṁ vibhajituṁ. Vibhajatāyasmā mahākaccāno agaruṁ katvā”ti. “Tena hāvuso, suṇātha, sādhukaṁ manasikarotha, bhāsissāmī”ti.",
+   "T0125-ea40.10": "迦栴延報曰：「猶如聚落有人出於彼村，欲求真實之物。彼若見大樹，便取斫殺，取其枝葉而捨之去。然今汝等亦復如是，捨如來已，來從枝求實。然彼如來皆觀見之，靡不周遍，照明世間，為天、人導，如來者是法之真主，汝等亦當有此時節，自然當遇如來說此義。」時，諸比丘對曰：「如來雖是法之真主，廣演其義；然尊者為世尊記，堪任廣說其義。」",
+   "T0026-ma115": "聽我說喻，慧者聞喻則解其義。諸賢！猶如有人欲得求實，為求實故，持斧入林，彼見大樹成根、莖、節、枝、葉、華、實，彼人不觸根、莖、節、實，但觸枝、葉。諸賢所說亦復如是，世尊現在，捨來就我而問此義。所以者何？諸賢！當知世尊是眼、是智、是義、是法、法主、法將，說真諦義，現一切義由彼世尊。諸賢應往詣世尊所而問此義：『世尊！此云何？此何義？』如世尊說者，諸賢等當善受持。」時，諸比丘白曰：「唯然。尊者大迦旃延！世尊是眼、是智、是義、是法、法主、法將，說真諦義，現一切義由彼世尊，我等應往詣世尊所而問此義：『世尊！此云何？此何義？』如世尊說者，我等當善受持。然，尊者大迦旃延常為世尊之所稱譽，及諸智梵行人，尊者大迦旃延能廣分別世尊向所略說義，唯願尊者大迦旃延為慈愍故而廣說之。」尊者大迦旃延告諸比丘：「諸賢等共聽我所說。"
+  },
+  "a12": {
+   "mn18": "Āyasmā mahākaccāno etadavoca: “Yaṁ kho no, āvuso, bhagavā saṅkhittena uddesaṁ uddisitvā vitthārena atthaṁ avibhajitvā uṭṭhāyāsanā vihāraṁ paviṭṭho: ‘yatonidānaṁ, bhikkhu, purisaṁ papañcasaññāsaṅkhā samudācaranti. Ettha ce natthi abhinanditabbaṁ abhivaditabbaṁ ajjhositabbaṁ, esevanto rāgānusayānaṁ …pe… etthete pāpakā akusalā dhammā aparisesā nirujjhantī’ti, imassa kho ahaṁ, āvuso, bhagavatā saṅkhittena uddesassa uddiṭṭhassa vitthārena atthaṁ avibhattassa evaṁ vitthārena atthaṁ ājānāmi— Cakkhuñcāvuso, paṭicca rūpe ca uppajjati cakkhuviññāṇaṁ, tiṇṇaṁ saṅgati phasso, phassapaccayā vedanā, yaṁ vedeti taṁ sañjānāti, yaṁ sañjānāti taṁ vitakketi, yaṁ vitakketi taṁ papañceti, yaṁ papañceti tatonidānaṁ purisaṁ papañcasaññāsaṅkhā samudācaranti atītānāgatapaccuppannesu cakkhuviññeyyesu rūpesu. Sotañcāvuso, paṭicca sadde ca uppajjati sotaviññāṇaṁ …pe… ghānañcāvuso, paṭicca gandhe ca uppajjati ghānaviññāṇaṁ …pe… jivhañcāvuso, paṭicca rase ca uppajjati jivhāviññāṇaṁ …pe… kāyañcāvuso, paṭicca phoṭṭhabbe ca uppajjati kāyaviññāṇaṁ …pe… manañcāvuso, paṭicca dhamme ca uppajjati manoviññāṇaṁ, tiṇṇaṁ saṅgati phasso, phassapaccayā vedanā, yaṁ vedeti taṁ sañjānāti, yaṁ sañjānāti taṁ vitakketi, yaṁ vitakketi taṁ papañceti, yaṁ papañceti tatonidānaṁ purisaṁ papañcasaññāsaṅkhā samudācaranti atītānāgatapaccuppannesu manoviññeyyesu dhammesu. So vatāvuso, cakkhusmiṁ sati rūpe sati cakkhuviññāṇe sati phassapaññattiṁ paññāpessatīti—ṭhānametaṁ vijjati. Phassapaññattiyā sati vedanāpaññattiṁ paññāpessatīti—ṭhānametaṁ vijjati. Vedanāpaññattiyā sati saññāpaññattiṁ paññāpessatīti—ṭhānametaṁ vijjati. Saññāpaññattiyā sati vitakkapaññattiṁ paññāpessatīti—ṭhānametaṁ vijjati. Vitakkapaññattiyā sati papañcasaññāsaṅkhāsamudācaraṇapaññattiṁ paññāpessatīti—ṭhānametaṁ vijjati. So vatāvuso, sotasmiṁ sati sadde sati …pe… ghānasmiṁ sati gandhe sati …pe… jivhāya sati rase sati …pe… kāyasmiṁ sati phoṭṭhabbe sati …pe… manasmiṁ sati dhamme sati manoviññāṇe sati phassapaññattiṁ paññāpessatīti—ṭhānametaṁ vijjati. Phassapaññattiyā sati vedanāpaññattiṁ paññāpessatīti—ṭhānametaṁ vijjati. Vedanāpaññattiyā sati saññāpaññattiṁ paññāpessatīti—ṭhānametaṁ vijjati. Saññāpaññattiyā sati vitakkapaññattiṁ paññāpessatīti—ṭhānametaṁ vijjati. Vitakkapaññattiyā sati papañcasaññāsaṅkhāsamudācaraṇapaññattiṁ paññāpessatīti—ṭhānametaṁ vijjati. So vatāvuso, cakkhusmiṁ asati rūpe asati cakkhuviññāṇe asati phassapaññattiṁ paññāpessatīti—netaṁ ṭhānaṁ vijjati. Phassapaññattiyā asati vedanāpaññattiṁ paññāpessatīti—netaṁ ṭhānaṁ vijjati. Vedanāpaññattiyā asati saññāpaññattiṁ paññāpessatīti—netaṁ ṭhānaṁ vijjati. Saññāpaññattiyā asati vitakkapaññattiṁ paññāpessatīti—netaṁ ṭhānaṁ vijjati. Vitakkapaññattiyā asati papañcasaññāsaṅkhāsamudācaraṇapaññattiṁ paññāpessatīti—netaṁ ṭhānaṁ vijjati. So vatāvuso, sotasmiṁ asati sadde asati …pe… ghānasmiṁ asati gandhe asati …pe… jivhāya asati rase asati …pe… kāyasmiṁ asati phoṭṭhabbe asati …pe… manasmiṁ asati dhamme asati manoviññāṇe asati phassapaññattiṁ paññāpessatīti—netaṁ ṭhānaṁ vijjati. Phassapaññattiyā asati vedanāpaññattiṁ paññāpessatīti—netaṁ ṭhānaṁ vijjati. Vedanāpaññattiyā asati saññāpaññattiṁ paññāpessatīti—netaṁ ṭhānaṁ vijjati. Saññāpaññattiyā asati vitakkapaññattiṁ paññāpessatīti—netaṁ ṭhānaṁ vijjati. Vitakkapaññattiyā asati papañcasaññāsaṅkhāsamudācaraṇapaññattiṁ paññāpessatīti—netaṁ ṭhānaṁ vijjati. Yaṁ kho no, āvuso, bhagavā saṅkhittena uddesaṁ uddisitvā vitthārena atthaṁ avibhajitvā uṭṭhāyāsanā vihāraṁ paviṭṭho: ‘yatonidānaṁ, bhikkhu, purisaṁ papañcasaññāsaṅkhā samudācaranti ettha ce natthi abhinanditabbaṁ abhivaditabbaṁ ajjhositabbaṁ esevanto rāgānusayānaṁ …pe… etthete pāpakā akusalā dhammā aparisesā nirujjhantī’ti, imassa kho ahaṁ, āvuso, bhagavatā saṅkhittena uddesassa uddiṭṭhassa vitthārena atthaṁ avibhattassa evaṁ vitthārena atthaṁ ājānāmi. Ākaṅkhamānā ca pana tumhe āyasmanto bhagavantaṁyeva upasaṅkamitvā etamatthaṁ paṭipuccheyyātha. Yathā vo bhagavā byākaroti tathā naṁ dhāreyyāthā”ti. Atha kho te bhikkhū āyasmato mahākaccānassa bhāsitaṁ abhinanditvā anumoditvā uṭṭhāyāsanā yena bhagavā tenupasaṅkamiṁsu; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdiṁsu. Ekamantaṁ nisinnā kho te bhikkhū bhagavantaṁ etadavocuṁ: “yaṁ kho no, bhante, bhagavā saṅkhittena uddesaṁ uddisitvā vitthārena atthaṁ avibhajitvā uṭṭhāyāsanā vihāraṁ paviṭṭho: ‘yatonidānaṁ, bhikkhu, purisaṁ papañcasaññāsaṅkhā samudācaranti. Ettha ce natthi abhinanditabbaṁ abhivaditabbaṁ ajjhositabbaṁ. Esevanto rāgānusayānaṁ …pe… etthete pāpakā akusalā dhammā aparisesā nirujjhantī’ti. Tesaṁ no, bhante, amhākaṁ acirapakkantassa bhagavato etadahosi: ‘idaṁ kho no, āvuso, bhagavā saṅkhittena uddesaṁ uddisitvā vitthārena atthaṁ avibhajitvā uṭṭhāyāsanā vihāraṁ paviṭṭho: “yatonidānaṁ, bhikkhu, purisaṁ papañcasaññāsaṅkhā samudācaranti. Ettha ce natthi abhinanditabbaṁ abhivaditabbaṁ ajjhositabbaṁ. Esevanto rāgānusayānaṁ, esevanto paṭighānusayānaṁ, esevanto diṭṭhānusayānaṁ, esevanto vicikicchānusayānaṁ, esevanto mānānusayānaṁ, esevanto bhavarāgānusayānaṁ, esevanto avijjānusayānaṁ, esevanto daṇḍādānasatthādānakalahaviggahavivādatuvaṁtuvaṁpesuññamusāvādānaṁ. Etthete pāpakā akusalā dhammā aparisesā nirujjhantī”ti. Ko nu kho imassa bhagavatā saṅkhittena uddesassa uddiṭṭhassa vitthārena atthaṁ avibhattassa vitthārena atthaṁ vibhajeyyā’ti? Tesaṁ no, bhante, amhākaṁ etadahosi: ‘ayaṁ kho āyasmā mahākaccāno satthu ceva saṁvaṇṇito sambhāvito ca viññūnaṁ sabrahmacārīnaṁ, pahoti cāyasmā mahākaccāno imassa bhagavatā saṅkhittena uddesassa uddiṭṭhassa vitthārena atthaṁ avibhattassa vitthārena atthaṁ vibhajituṁ, yannūna mayaṁ yenāyasmā mahākaccāno tenupasaṅkameyyāma; upasaṅkamitvā āyasmantaṁ mahākaccānaṁ etamatthaṁ paṭipuccheyyāmā’ti. Atha kho mayaṁ, bhante, yenāyasmā mahākaccāno tenupasaṅkamimha; upasaṅkamitvā āyasmantaṁ mahākaccānaṁ etamatthaṁ paṭipucchimha. Tesaṁ no, bhante, āyasmatā mahākaccānena imehi ākārehi imehi padehi imehi byañjanehi attho vibhatto”ti. “Paṇḍito, bhikkhave, mahākaccāno; mahāpañño, bhikkhave, mahākaccāno. Mañcepi tumhe, bhikkhave, etamatthaṁ paṭipuccheyyātha, ahampi taṁ evamevaṁ byākareyyaṁ yathā taṁ mahākaccānena byākataṁ. Eso cevetassa attho. Evañca naṁ dhārethā”ti.",
+   "T0125-ea40.10": "迦栴延報曰：「汝等諦聽！善思念之。吾當演說分別其義。」諸比丘對曰：「甚善。」",
+   "T0026-ma115": "諸賢！緣眼及色，生眼識，三事共會，便有更觸，緣更觸便有所覺，若所覺便想，若所想便思，若所思便念，若所念便分別。比丘者因是念出家學道，思想修習，此中過去、未來、今現在法，不愛、不樂、不著、不住，是說苦邊。欲使、恚使、有使、慢使、無明使、見使、疑使、鬪諍、憎嫉、諛諂、欺誑、妄言、兩舌及無量惡不善之法，是說苦邊。如是耳、鼻、舌、身緣意及法，生意識，三事共會，便有更觸，緣更觸便有所覺，若所覺便想，若所想便思，若所思便念，若所念便分別。比丘者因是念出家學道，思想修習，此中過去、未來、今現在法，不愛、不樂、不著、不住，是說苦邊。欲使、恚使、有使、慢使、無明使、見使、疑使、鬪諍、憎嫉、諛諂、欺誑、妄言、兩舌及無量惡不善之法，是說苦邊。「諸賢！比丘者，除眼、除色、除眼識，有更觸施設更觸者，是處不然。若不施設更觸，有覺施設覺者，是處不然。若不施設覺，有施設念、出家學道、思想修習者，是處不然。如是耳、鼻、舌、身，除意、除法、除意識，有更觸施設更觸者，是處不然。若不施設更觸，有覺施設覺者，是處不然。若不施設覺，有施設念、出家學道、思想修習者，是處不然。「諸賢！比丘者，因眼、因色、因眼識，有更觸施設更觸者，必有此處。因施設更觸，有覺施設覺者，必有此處。因施設覺，有施設念、出家學道、思想修習者，必有此處。如是耳、鼻、舌、身，因意、因法、因意識，有更觸施設更觸者，必有此處。因施設更觸，有覺施設覺者，必有此處。因施設覺，有施設念、出家學道、思想修習者，必有此處。諸賢！謂世尊略說此義，不廣分別，即從坐起，入室燕坐。『比丘！若人所因念，出家學道，思想修習，及過去、未來、今現在法，不愛、不樂、不著、不住，是說苦邊。欲使、恚使、有使、慢使、無明使、見使、疑使、鬪諍、憎嫉、諛諂、欺誑、妄言、兩舌及無量惡不善之法，是說苦邊。』此世尊略說不廣分別義，我以此句、以此文廣說如是。諸賢！可往向佛具陳，若如世尊所說義者，諸賢等便可受持。」"
+  },
+  "a13": {
+   "mn18": "“Evamāvuso”ti kho te bhikkhū āyasmato mahākaccānassa paccassosuṁ.",
+   "T0125-ea40.10": "是時，眾多比丘聞迦栴延所說，亦不言善，復不言非，即從座起而去。自相謂言：「我等當持此義往問如來，設世尊有所說者，當奉行之。」是時，眾多比丘往至世尊所，頭面禮足，在一面坐。爾時，眾多比丘以此緣本，具白世尊。爾時，如來告比丘曰：「迦栴延比丘聰明辯才，廣演其義，設汝等至吾所問此義，我亦當以此與汝說之。」爾時，阿難在如來後。",
+   "T0026-ma115": "於是，諸比丘聞尊者大迦旃延所說，善受持誦，即從坐起，遶尊者大迦旃延三匝而去，往詣佛所，稽首作禮，却坐一面，白曰：「世尊！向世尊略說此義，不廣分別，即從坐起，入室宴坐；尊者大迦旃延以此句、以此文而廣說之。」世尊聞已，歎曰：「善哉！善哉！我弟子中有眼、有智、有法、有義。所以者何？謂師為弟子略說此義，不廣分別，彼弟子以此句、以此文而廣說之。如迦旃延比丘所說，汝等應當如是受持。所以者何？以說觀義，應如是也。比丘！猶如有人因行無事處、山林樹間，忽得蜜丸，隨彼所食而得其味，如是族姓子於我此正法、律，隨彼所觀而得其味，觀眼得味，觀耳、鼻、舌、身，觀意得味。」爾時，尊者阿難執拂侍佛。"
+  },
+  "a14": {
+   "mn18": "Evaṁ vutte, āyasmā ānando bhagavantaṁ etadavoca: “seyyathāpi, bhante, puriso jighacchādubbalyapareto madhupiṇḍikaṁ adhigaccheyya, so yato yato sāyeyya, labhetheva sādurasaṁ asecanakaṁ. Evameva kho, bhante, cetaso bhikkhu dabbajātiko, yato yato imassa dhammapariyāyassa paññāya atthaṁ upaparikkheyya, labhetheva attamanataṁ, labhetheva cetaso pasādaṁ. Ko nāmo ayaṁ, bhante, dhammapariyāyo”ti?",
+   "T0125-ea40.10": "是時，阿難白佛言：「此經義理極為甚深，猶如有人行路而遇甘露，取而食之，極為香美，食無厭足。此亦如是，其善男子、善女人所至到處，聞此法而無厭足。」重白世尊：「此經名何等，當云何奉行。」",
+   "T0026-ma115": "於是，尊者阿難叉手向佛，白曰：「世尊！此法名何等？我當云何奉持？」世尊告曰：「阿難！"
+  },
+  "a15": {
+   "mn18": "“Tasmātiha tvaṁ, ānanda, imaṁ dhammapariyāyaṁ madhupiṇḍikapariyāyotveva naṁ dhārehī”ti. Idamavoca bhagavā.",
+   "nan-mn18": "如是，世尊說已，尊者阿難歡喜信受世尊之所說。",
+   "T0125-ea40.10": "佛告阿難：「此經名曰甘露法味，當念奉行。」",
+   "T0026-ma115": "此法名為蜜丸喻，汝當受持。」於是，世尊告諸比丘：「汝等受此蜜丸喻法，當諷誦讀。所以者何？比丘！此蜜丸喻有法有義，梵行之本，趣通趣覺，趣於涅槃。若族姓子剃除鬚髮，著袈裟衣，至信、捨家、無家、學道者，當善受持此蜜丸喻。」"
+  },
+  "a16": {
+   "mn18": "Attamano āyasmā ānando bhagavato bhāsitaṁ abhinandīti. Madhupiṇḍikasuttaṁ niṭṭhitaṁ aṭṭhamaṁ.",
+   "T0125-ea40.10": "爾時，阿難聞佛所說，歡喜奉行。",
+   "T0026-ma115": "佛說如是。尊者阿難及諸比丘聞佛所說，歡喜奉行。蜜丸喻經第九竟（二千二百七十二字）"
+  }
+ }
+}

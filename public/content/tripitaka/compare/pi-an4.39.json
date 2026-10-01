@@ -1,0 +1,117 @@
+{
+ "slug": "pi-an4.39",
+ "title": "別譯雜阿含經 （八九）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "優北伽/優波迦請問"
+  },
+  {
+   "id": "a02",
+   "label": "佛答不一概稱歎"
+  },
+  {
+   "id": "a03",
+   "label": "邪盛大會不可稱歎之說"
+  },
+  {
+   "id": "a04",
+   "label": "正盛大會可稱歎之說"
+  },
+  {
+   "id": "a05",
+   "label": "偈頌：馬脂等大祀"
+  },
+  {
+   "id": "a06",
+   "label": "偈頌：智者設大祀"
+  },
+  {
+   "id": "a07",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "an4.39",
+   "lang": "pi",
+   "label": "巴利 AN4.39",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "T0100-sa-2.89",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （八九）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa89",
+   "lang": "lzh",
+   "label": "雜阿含經 （八九）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（八九）"
+  },
+  {
+   "work": "T0099",
+   "node": "（八九）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "an4.39": "Aṅguttara Nikāya 4.39 4. Cakkavagga Ujjayasutta",
+   "T0100-sa-2.89": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。",
+   "T0099-sa89": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。"
+  },
+  "a01": {
+   "an4.39": "Atha kho ujjayo brāhmaṇo yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavatā saddhiṁ sammodi. Sammodanīyaṁ kathaṁ sāraṇīyaṁ vītisāretvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho ujjayo brāhmaṇo bhagavantaṁ etadavoca:",
+   "T0100-sa-2.89": "爾時，有一摩納名優北伽，往詣佛所，稽首問訊，在一面坐。",
+   "T0099-sa89": "時，有年少婆羅門名優波迦，來詣佛所，與世尊面相問訊慰勞已，退坐一面，白佛言：「瞿曇！"
+  },
+  "a02": {
+   "an4.39": "“bhavampi no gotamo yaññaṁ vaṇṇetī”ti?",
+   "T0100-sa-2.89": "白佛言：「世尊！婆羅門如法乞財，聚設大祀，教他設祀。如是之祀，為當作祀，為當不作？」",
+   "T0099-sa89": "諸婆羅門常稱歎邪盛大會，沙門瞿曇亦復稱歎邪盛大會不？」佛告優波迦：「我不一向稱歎，或有邪盛大會可稱歎，或有邪盛大會不可稱歎。」優波迦白佛：「何等邪盛大會可稱歎？何等邪盛大會不可稱歎？」"
+  },
+  "a03": {
+   "an4.39": "“Na kho ahaṁ, brāhmaṇa, sabbaṁ yaññaṁ vaṇṇemi; na panāhaṁ, brāhmaṇa, sabbaṁ yaññaṁ na vaṇṇemi. Yathārūpe kho, brāhmaṇa, yaññe gāvo haññanti, ajeḷakā haññanti, kukkuṭasūkarā haññanti, vividhā pāṇā saṅghātaṁ āpajjanti; evarūpaṁ kho ahaṁ, brāhmaṇa, sārambhaṁ yaññaṁ na vaṇṇemi. Taṁ kissa hetu? Evarūpañhi, brāhmaṇa, sārambhaṁ yaññaṁ na upasaṅkamanti arahanto vā arahattamaggaṁ vā samāpannā.",
+   "T0100-sa-2.89": "爾時，世尊說偈答言：「馬脂及人脂，牛脂并美食，\n吸風開祀門，此六名大祀；\n作業雖廣大，仙聖所毀呰。\n䍧羊及羖羊，牛王諸小牛，\n一切殺生類，此不為正祀，\n如是是邪祀，眾聖所不過。",
+   "T0099-sa89": "佛告優波迦：「若邪盛大會繫群少特牛、水特、水牸，及諸羊犢、小小眾生悉皆傷殺，逼迫苦切，僕使作人，鞭笞恐怛，悲泣號呼，不喜不樂，眾苦作役。如是等邪盛大會，我不稱歎，以造大難故。"
+  },
+  "a04": {
+   "an4.39": "Yathārūpe ca kho, brāhmaṇa, yaññe neva gāvo haññanti, na ajeḷakā haññanti, na kukkuṭasūkarā haññanti, na vividhā pāṇā saṅghātaṁ āpajjanti; evarūpaṁ kho ahaṁ, brāhmaṇa, nirārambhaṁ yaññaṁ vaṇṇemi, yadidaṁ niccadānaṁ anukulayaññaṁ. Taṁ kissa hetu? Evarūpañhi, brāhmaṇa, nirārambhaṁ yaññaṁ upasaṅkamanti arahanto vā arahattamaggaṁ vā samāpannāti.",
+   "T0100-sa-2.89": "若設正祀者，終不惱群生，\n不害有生命，設祀斷諸有，\n是名為正祀。若設如是祀，\n大仙必往彼，施及祀場餘，\n宜與彼應供。",
+   "T0099-sa89": "若復大會不繫縛群牛，乃至不令眾生辛苦作役者。如是邪盛大會，我所稱歎，以不造大難故。"
+  },
+  "a05": {
+   "an4.39": "Assamedhaṁ purisamedhaṁ, Sammāpāsaṁ vājapeyyaṁ niraggaḷaṁ; Mahāyaññā mahārambhā, Na te honti mahapphalā. Ajeḷakā ca gāvo ca, vividhā yattha haññare; Na taṁ sammaggatā yaññaṁ, upayanti mahesino.",
+   "T0100-sa-2.89": "清淨心惠施，\n時施施何處？當施勝福田。\n云何勝福田？所謂修梵行。\n若能如是施，斯名廣大祀。",
+   "T0099-sa89": "爾時，世尊即說偈言：「馬祀等大會，造諸大難事，\n如是等邪盛，大仙不稱歎。\n繫縛諸眾生，殺害微細蟲，\n是非為正會，大仙不隨順。\n若不害眾生，造作眾難者，\n是等名正會，大仙隨稱歎。"
+  },
+  "a06": {
+   "an4.39": "Ye ca yaññā nirārambhā, yajanti anukulaṁ sadā; Ajeḷakā ca gāvo ca, vividhā nettha haññare; Tañca sammaggatā yaññaṁ, upayanti mahesino.",
+   "T0100-sa-2.89": "設如是大祀，以如法聚財，\n淨水手自與，若能如是施，\n諸天生信敬，名為自他利，\n必獲大果報。如是設大祀，\n唯有智者能，能生於淨信，\n亦得心解脫，惱害不能加，\n得世間眾樂，得生於勝處。\n是名為智者，所設之大祀。」",
+   "T0099-sa89": "惠施修供養，為應法邪盛，\n施者清淨心，梵行良福田。\n如是大會者，是則羅漢會，\n是會得大果，諸天皆歡喜。\n自行恭敬請，自手而施與，\n彼我悉清淨，是施得大果。\n慧者如是施，信心應解脫，\n無罪樂世間，智者往生彼。」"
+  },
+  "a07": {
+   "an4.39": "Etaṁ yajetha medhāvī, eso yañño mahapphalo; Etaṁ hi yajamānassa, seyyo hoti na pāpiyo; Yañño ca vipulo hoti, pasīdanti ca devatā”ti. Navamaṁ.",
+   "T0100-sa-2.89": "佛說是已，優北伽摩納聞佛所說，歡喜而去。",
+   "T0099-sa89": "佛說此經已，優波迦婆羅門聞佛所說，歡喜隨喜，作禮而去。"
+  }
+ }
+}

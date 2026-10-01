@@ -1,0 +1,81 @@
+{
+ "slug": "pi-sn10.6",
+ "title": "別譯雜阿含經 （三二〇）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "阿那律誦法句"
+  },
+  {
+   "id": "a02",
+   "label": "偈頌勸子守戒離鬼胎"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn10.6",
+   "lang": "pi",
+   "label": "巴利 SN10.6",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn10.6",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN10.6",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.320",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （三二〇）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa1321",
+   "lang": "lzh",
+   "label": "雜阿含經 （一三二一）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（三二〇）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一三二一）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn10.6": "Saṁyutta Nikāya 10.6 1. Indakavagga Piyaṅkarasutta",
+   "nan-sn10.6": "〔六〕第六　夜叉童子",
+   "T0100-sa-2.320": "爾時，尊者阿那律從佛遊行，至彼摩竭提國鬼子母宮。",
+   "T0099-sa1321": "如是我聞：一時，佛住王舍城迦蘭陀竹園。時，尊者阿那律陀於摩竭提國人間遊行，到畢陵伽鬼子母住處宿。"
+  },
+  "a01": {
+   "sn10.6": "Ekaṁ samayaṁ āyasmā anuruddho sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme. Tena kho pana samayena āyasmā anuruddho rattiyā paccūsasamayaṁ paccuṭṭhāya dhammapadāni bhāsati. Atha kho piyaṅkaramātā yakkhinī puttakaṁ evaṁ tosesi:",
+   "nan-sn10.6": "爾時，尊者阿那律住舍衛城祇樹給孤獨園。時，尊者阿那律，黎明即起，以誦法句。",
+   "T0100-sa-2.320": "時阿那律中夜早起，正身端坐，誦法句偈，及波羅延大德之偈，又復高聲誦習其義，及修多羅等。時鬼子母所愛小子，字賓伽羅，啼泣墮淚。時鬼子母慰撫子言：「道人誦經，汝莫啼泣。」",
+   "T0099-sa1321": "時，尊者阿那律陀夜後分時，端身正坐，誦憂陀那、波羅延那、見真諦、諸上座所說偈、比丘尼所說偈、尸路偈、義品、牟尼偈、修多羅，悉皆廣誦。爾時，畢陵伽鬼子夜啼，畢陵伽鬼子母為其子說偈呵止言：「畢陵伽鬼子，汝今莫得啼，\n當聽彼比丘，誦習法句偈。"
+  },
+  "a02": {
+   "sn10.6": "“Mā saddaṁ kari piyaṅkara, Bhikkhu dhammapadāni bhāsati; Api ca dhammapadaṁ vijāniya, Paṭipajjema hitāya no siyā. Pāṇesu ca saṁyamāmase, Sampajānamusā na bhaṇāmase; Sikkhema susīlyamattano, Api muccema pisācayoniyā”ti.",
+   "nan-sn10.6": "時，夜叉童母之夜叉女，如是告其子曰：美哉迦羅汝勿騷作音聲\n比丘誦法句我若知法句\n以如是行者乃我等利益\n切勿殺生物知而勿妄語\n自己行善戒我等脫鬼胎",
+   "T0100-sa-2.320": "即說偈言：「汝賓伽羅止爾聲，聽道人誦法句偈，\n聽是偈已除破戒，獲得清淨能守禁。\n汝賓伽羅止爾聲，聽道人誦法句偈，\n聽是偈已得不殺。汝賓伽羅止爾聲，\n聽道人誦法句偈，聽是偈已得實語。\n汝賓伽羅止爾聲，聽道人誦法句偈，\n聽是偈已離鬼胎，是故汝應止啼聲。」",
+   "T0099-sa1321": "若知法句者，能自護持戒，\n遠離於殺生，實言不妄語，\n能自捨非義，解脫鬼神道。」畢陵伽鬼子母說是偈時，畢陵伽鬼子啼聲即止。"
+  }
+ }
+}

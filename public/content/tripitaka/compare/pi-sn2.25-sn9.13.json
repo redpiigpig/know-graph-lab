@@ -1,0 +1,111 @@
+{
+ "slug": "pi-sn2.25-sn9.13",
+ "title": "別譯雜阿含經 （三六三）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。複核標記存疑 1 段：義段3的巴利SN9.13與漢譯南傳SN9.13內容實為偈頌或流通分的重複，與序分無關，顯示位置錯置",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "天神說偈勸諭"
+  },
+  {
+   "id": "a02",
+   "label": "偈頌"
+  },
+  {
+   "id": "a03",
+   "label": "流通分",
+   "doubt": true
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn2.25",
+   "lang": "pi",
+   "label": "巴利 SN2.25",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn2.25",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN2.25",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "sn9.13",
+   "lang": "pi",
+   "label": "巴利 SN9.13",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn9.13",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN9.13",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.363",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （三六三）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa1343",
+   "lang": "lzh",
+   "label": "雜阿含經 （一三四三）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（三六三）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一三四三）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn2.25": "Saṁyutta Nikāya 2.25 3. Nānātitthiyavagga Jantusutta Evaṁ me sutaṁ— ekaṁ samayaṁ sambahulā bhikkhū, kosalesu viharanti himavantapasse araññakuṭikāya uddhatā unnaḷā capalā mukharā vikiṇṇavācā muṭṭhassatino asampajānā asamāhitā vibbhantacittā pākatindriyā.",
+   "nan-sn2.25": "〔二五〕第五　姜睹如是我聞。爾時，眾多比丘等，住於拘薩羅國雪山側之森林小屋。掉舉而高慢、多辯饒舌、忘念、不正知、心不安靜、散亂、不制伏諸根。",
+   "sn9.13": "Saṁyutta Nikāya 9.13 1. Vanavagga Pākatindriyasutta",
+   "nan-sn9.13": "〔一三〕第十三　不制御根（多比丘）爾時，眾多比丘住拘薩羅國之茂林。掉舉、心亂、輕騷、絮叨而多無聊語、妄念不正知、心不靜、散亂、諸根不制御。",
+   "T0100-sa-2.363": "爾時，復有眾多比丘在俱薩羅國，止住彼林。眾多比丘掉動不停，少於慚恥，輕躁佷戾，識念不定，心意惶惶，諸根馳散。",
+   "T0099-sa1343": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。"
+  },
+  "a01": {
+   "sn2.25": "Atha kho jantu devaputto tadahuposathe pannarase yena te bhikkhū tenupasaṅkami; upasaṅkamitvā te bhikkhū gāthāhi ajjhabhāsi:",
+   "nan-sn2.25": "時，姜睹天子，於其布薩十五日，詣其比丘等〔處〕，詣已，向比丘等言偈曰：",
+   "sn9.13": "Ekaṁ samayaṁ sambahulā bhikkhū kosalesu viharanti aññatarasmiṁ vanasaṇḍe uddhatā unnaḷā capalā mukharā vikiṇṇavācā muṭṭhassatino asampajānā asamāhitā vibbhantacittā pākatindriyā. Atha kho yā tasmiṁ vanasaṇḍe adhivatthā devatā tesaṁ bhikkhūnaṁ anukampikā atthakāmā te bhikkhū saṁvejetukāmā yena te bhikkhū tenupasaṅkami; upasaṅkamitvā te bhikkhū gāthāhi ajjhabhāsi:",
+   "nan-sn9.13": "時，住其林之天神，憐憫此比丘等，欲警覺彼等諸比丘，令思有益，來到此比丘等處。",
+   "T0100-sa-2.363": "爾時，天神作是念：「比丘之法不應如是，斯甚不善。",
+   "T0099-sa1343": "時，有眾多比丘在拘薩羅人間，住一林中，言語嬉戲，終日散亂，心不得定，縱諸根門，馳騁六境。"
+  },
+  "a02": {
+   "sn2.25": "“Sukhajīvino pure āsuṁ, bhikkhū gotamasāvakā; Anicchā piṇḍamesanā, anicchā sayanāsanaṁ; Loke aniccataṁ ñatvā, dukkhassantaṁ akaṁsu te. Dupposaṁ katvā attānaṁ, gāme gāmaṇikā viya; Bhutvā bhutvā nipajjanti, parāgāresu mucchitā. Saṅghassa añjaliṁ katvā, idhekacce vadāmahaṁ; Apaviddhā anāthā te, yathā petā tatheva te. Ye kho pamattā viharanti, te me sandhāya bhāsitaṁ; Ye appamattā viharanti,",
+   "nan-sn2.25": "往昔彼瞿曇弟子比丘等\n而住於安樂乞食無求心\n無求之心住知世之無常\n彼等苦惱盡今之比丘等\n惡向於自己如村長於村\n心奪他家富食餐而寢臥\n僧伽無合掌此有人禮我\n被棄無主人宛如於死屍\n對放逸之人我乃以語彼\n住不放逸者我乃行歸依",
+   "sn9.13": "“Sukhajīvino pure āsuṁ, bhikkhū gotamasāvakā; Anicchā piṇḍamesanā, anicchā sayanāsanaṁ; Loke aniccataṁ ñatvā, dukkhassantaṁ akaṁsu te. Dupposaṁ katvā attānaṁ, gāme gāmaṇikā viya; Bhutvā bhutvā nipajjanti, parāgāresu mucchitā. Saṅghassa añjaliṁ katvā, idhekacce vadāmahaṁ; Apaviddhā anāthā te, yathā petā tatheva te. Ye kho pamattā viharanti, te me sandhāya bhāsitaṁ; Ye appamattā viharanti, namo tesaṁ karomahan”ti.",
+   "nan-sn9.13": "到已，而以偈語彼等諸比丘曰：",
+   "T0100-sa-2.363": "我當為其說覺悟偈。」即說偈言：「瞿曇諸弟子，正命用自活，\n乞食及住時，常思於無常，\n於彼住坐臥，亦復思無常。\n已自難將養，佷戾心馳散，\n譬如世俗人，食訖皆睡眠，\n棄於自己舍，親近著他家。\n如為人所迫，強逼作沙門，\n無實無信心，亦不求出家，\n強著僧伽梨，如老牛駕犁。」",
+   "T0099-sa1343": "時，彼林中止住天神見是比丘不攝威儀，心不欣悅，而說偈言：「此先有瞿曇，正命弟子眾，\n無常心乞食，無常受床臥，\n觀世無常故，得究竟苦邊，\n今有難養眾，沙門所居止，\n處處求飲食，遍遊於他家，\n望財而出家，無真沙門欲，\n垂著僧伽梨，如老牛曳尾。」爾時，比丘語天神言：「汝欲厭我耶？」時，彼天神復說偈言：「不指其名姓，不非稱其人，\n而總向彼眾，說其不善者，\n踈漏相現者，方便說其過，\n勤修精進者，歸依恭敬禮。」"
+  },
+  "a03": {
+   "sn2.25": "namo tesaṁ karomahan”ti.",
+   "sn9.13": "Atha kho te bhikkhū tāya devatāya saṁvejitā saṁvegamāpādunti.",
+   "nan-sn9.13": "往昔瞿曇之弟子比丘等\n安樂而其住心無求乞食\n心無求而住知世之無常\n彼等苦惱盡如今比丘等\n以惡向自己如村長於村\n心為他富奪餐食而寢臥\n於僧不合掌此有人禮我\n然而被遺棄無主之人眾\n猶如諸死屍我對放逸者\n其眾人以語於不住放逸\n人人我歸依時，彼等諸比丘依天神之警覺而起驚。",
+   "T0100-sa-2.363": "爾時，諸比丘即答之言：「今者汝欲譏我等耶？」天復說偈答言：「我不見種姓，亦不稱名字，\n我今敬禮僧，譏毀作過者，\n若能住精進，我今亦禮足。」",
+   "T0099-sa1343": "彼諸比丘為天神勸發已，專精思惟，斷諸煩惱，得阿羅漢。"
+  }
+ }
+}

@@ -1,0 +1,142 @@
+{
+ "slug": "pi-an3.64",
+ "title": "別譯雜阿含經 （二〇四）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "外道宣稱勝過釋子"
+  },
+  {
+   "id": "a02",
+   "label": "比丘聞言至佛所白佛"
+  },
+  {
+   "id": "a03",
+   "label": "佛默然許往池側"
+  },
+  {
+   "id": "a04",
+   "label": "佛質問外道是否實說勝過"
+  },
+  {
+   "id": "a05",
+   "label": "外道三度默然不答"
+  },
+  {
+   "id": "a06",
+   "label": "佛說若能答則隨喜，不能則教導具足"
+  },
+  {
+   "id": "a07",
+   "label": "外道梵行弟子勸其答話"
+  },
+  {
+   "id": "a08",
+   "label": "佛舉三種譬喻說外道如截角牛等"
+  },
+  {
+   "id": "a09",
+   "label": "師子吼後還城，同行呵責外道"
+  },
+  {
+   "id": "a10",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "an3.64",
+   "lang": "pi",
+   "label": "巴利 AN3.64",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "T0100-sa-2.204",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （二〇四）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa970",
+   "lang": "lzh",
+   "label": "雜阿含經 （九七〇）",
+   "who": "劉宋 求那跋陀羅譯",
+   "reorder": true
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（二〇四）"
+  },
+  {
+   "work": "T0099",
+   "node": "（九七〇）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "an3.64": "Aṅguttara Nikāya 3.64 7. Mahāvagga Sarabhasutta Evaṁ me sutaṁ— ekaṁ samayaṁ bhagavā rājagahe viharati gijjhakūṭe pabbate.",
+   "T0100-sa-2.204": "如是我聞：一時，佛在王舍城須摩竭陀池岸。",
+   "T0099-sa970": "如是我聞：一時，佛住王舍城迦蘭陀竹園。"
+  },
+  "a01": {
+   "an3.64": "Tena kho pana samayena sarabho nāma paribbājako acirapakkanto hoti imasmā dhammavinayā. So rājagahe parisati evaṁ vācaṁ bhāsati: “aññāto mayā samaṇānaṁ sakyaputtikānaṁ dhammo. Aññāya ca panāhaṁ samaṇānaṁ sakyaputtikānaṁ dhammaṁ evāhaṁ tasmā dhammavinayā apakkanto”ti.",
+   "T0100-sa-2.204": "爾時，奢羅浮梵志在大眾中，而作是言：「我知釋子所說教法，我所知見，勝彼釋子。」",
+   "T0099-sa970": "時，王舍城有外道出家名舍羅步，住須摩竭陀池側，於自眾中作如是唱言：「沙門釋子法我悉知，我先已知彼法、律而悉棄捨。」"
+  },
+  "a02": {
+   "an3.64": "Atha kho sambahulā bhikkhū pubbaṇhasamayaṁ nivāsetvā pattacīvaramādāya rājagahaṁ piṇḍāya pavisiṁsu. Assosuṁ kho te bhikkhū sarabhassa paribbājakassa rājagahe parisati evaṁ vācaṁ bhāsamānassa: “aññāto mayā samaṇānaṁ sakyaputtikānaṁ dhammo. Aññāya ca panāhaṁ samaṇānaṁ sakyaputtikānaṁ dhammaṁ evāhaṁ tasmā dhammavinayā apakkanto”ti. Atha kho te bhikkhū rājagahe piṇḍāya caritvā pacchābhattaṁ piṇḍapātapaṭikkantā yena bhagavā tenupasaṅkamiṁsu; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdiṁsu. Ekamantaṁ nisinnā kho te bhikkhū bhagavantaṁ etadavocuṁ: “sarabho nāma, bhante, paribbājako acirapakkanto imasmā dhammavinayā. So rājagahe parisati evaṁ vācaṁ bhāsati: ‘aññāto mayā samaṇānaṁ sakyaputtikānaṁ dhammo. Aññāya ca panāhaṁ samaṇānaṁ sakyaputtikānaṁ dhammaṁ evāhaṁ tasmā dhammavinayā apakkanto’ti.",
+   "T0100-sa-2.204": "當于爾時，有眾多比丘入城乞食，見奢羅浮梵志在彼池岸，聞其所說，作如是言：「我知釋子所有法教，我所知者，出過於彼。」時諸比丘聞此語已，還至僧坊，收攝衣鉢，洗手足已，往詣佛所，頂禮佛足，在一面坐。白佛言：「世尊！我等今日入城乞食，食訖已，還歸於其中，路經須摩竭陀池，彼池岸上有一梵志，名奢羅浮，在大眾中，唱如是言：『我知釋子所有教法，我所知者，出過於彼。』",
+   "T0099-sa970": "時，有眾多比丘晨朝著衣持鉢，入王舍城乞食。聞有外道名舍羅步，住王舍城須摩竭陀池側，於自眾中作如是唱：「沙門釋子所有法、律我悉已知，先已知彼法、律，然後棄捨。」聞是語已，乞食畢，還精舍，舉衣鉢，洗足已，往詣佛所，稽首禮足，退坐一面，白佛言：「世尊！我等晨朝著衣持鉢，入王舍城乞食，聞有外道出家名舍羅步，住王舍城須摩竭陀池側，於自眾中作是唱言：『沙門釋子法我已悉知，知彼法、律已，然後棄捨。』"
+  },
+  "a03": {
+   "an3.64": "Sādhu, bhante, bhagavā yena sippinikātīraṁ paribbājakārāmo yena sarabho paribbājako tenupasaṅkamatu anukampaṁ upādāyā”ti. Adhivāsesi bhagavā tuṇhībhāvena.",
+   "T0100-sa-2.204": "善哉！世尊，唯願當往彼池岸。」爾時，如來默然許之，與諸比丘前後圍遶，往詣於彼須摩竭陀池。時奢羅浮遙見佛來，即從坐起，敷置高座，尋白佛言：「可就此坐。」",
+   "T0099-sa970": "善哉！世尊！可自往彼須摩竭陀池側，憐愍彼故！」爾時，世尊默然而許，於日晡時從禪覺，往到須摩竭陀池側外道舍羅步所。時，舍羅步外道出家遙見世尊來，即敷床坐，請佛令坐。"
+  },
+  "a04": {
+   "an3.64": "Atha kho bhagavā sāyanhasamayaṁ paṭisallānā vuṭṭhito yena sippinikātīraṁ paribbājakārāmo yena sarabho paribbājako tenupasaṅkami; upasaṅkamitvā paññatte āsane nisīdi. Nisajja kho bhagavā sarabhaṁ paribbājakaṁ etadavoca: “saccaṁ kira tvaṁ, sarabha, evaṁ vadesi: ‘aññāto mayā samaṇānaṁ sakyaputtikānaṁ dhammo. Aññāya ca panāhaṁ samaṇānaṁ sakyaputtikānaṁ dhammaṁ evāhaṁ tasmā dhammavinayā apakkanto’”ti?",
+   "T0100-sa-2.204": "佛即便就座，坐已而告之曰：「汝實作是言：『我知釋子所有法教，我所知者，出過於彼。』",
+   "T0099-sa970": "佛即就坐，告舍羅步言：「汝實作是語：『沙門釋子所有法、律，我悉已知。知彼法、律已，然後棄捨。』"
+  },
+  "a05": {
+   "an3.64": "Evaṁ vutte, sarabho paribbājako tuṇhī ahosi.",
+   "T0100-sa-2.204": "如是說不？」時彼梵志默然而住。",
+   "T0099-sa970": "耶？」時，舍羅步默而不答。"
+  },
+  "a06": {
+   "an3.64": "Dutiyampi kho bhagavā sarabhaṁ paribbājakaṁ etadavoca: “vadehi, sarabha, kinti te aññāto samaṇānaṁ sakyaputtikānaṁ dhammo? Sace te aparipūraṁ bhavissati, ahaṁ paripūressāmi. Sace pana te paripūraṁ bhavissati, ahaṁ anumodissāmī”ti. Dutiyampi kho sarabho paribbājako tuṇhī ahosi. Tatiyampi kho bhagavā sarabhaṁ paribbājakaṁ etadavoca: “yo kho, sarabha, paññāyati samaṇānaṁ sakyaputtikānaṁ dhammo vadehi, sarabha, kinti te aññāto samaṇānaṁ sakyaputtikānaṁ dhammo? Sace te aparipūraṁ bhavissati, ahaṁ paripūressāmi. Sace pana te paripūraṁ bhavissati, ahaṁ anumodissāmī”ti. Tatiyampi kho sarabho paribbājako tuṇhī ahosi.",
+   "T0100-sa-2.204": "佛復告曰：「何故默然而不答我？汝若解者，隨汝意說；若不解者，吾當為汝分別宣說，令汝具足；汝今若能具足說者，吾助爾喜。梵志當知，世若有人說言：『如來非阿羅呵、三藐三佛陀者。』如是說者，我稱善哉，當問彼言：『汝以何事，說言如來非阿羅呵、三藐三佛陀？』此眾生等，於理不決，不能正答，更說世間其餘談論，以諸雜語間錯其中，憍慢矜高，生毀害心。以不能答如斯問故，默然而住，慚愧低頭，失於機辯。奢羅浮！汝今亦爾。設復有人作如是言：『沙門瞿曇能善顯示，是有過法。』如是說者，我亦稱善。當問於彼：『以何智知如斯之事？』彼不能答，更說其餘世間談論，錯亂其中，辭窮理屈，慚愧低頭，默然而住，失於機辯，亦如汝今無有異也。若復說言：『沙門瞿曇所有弟子無善迴向，不具持戒。』我亦稱善，而問於彼：『汝以何法，驗知斯事？』彼不能答，更說世間其餘談論，錯亂其中，辭窮理屈，慚愧低頭，默然而住，失於機辯，汝今亦爾。」",
+   "T0099-sa970": "佛告舍羅步：「汝今應說，何故默然？汝所知滿足者，我則隨喜；不滿足者，我當令汝滿足。」時，舍羅步猶故默然。如是第二、第三說，彼再三默然住。"
+  },
+  "a07": {
+   "an3.64": "Atha kho te paribbājakā sarabhaṁ paribbājakaṁ etadavocuṁ: “yadeva kho tvaṁ, āvuso sarabha, samaṇaṁ gotamaṁ yāceyyāsi tadeva te samaṇo gotamo pavāreti. Vadehāvuso sarabha, kinti te aññāto samaṇānaṁ sakyaputtikānaṁ dhammo? Sace te aparipūraṁ bhavissati, samaṇo gotamo paripūressati. Sace pana te paripūraṁ bhavissati, samaṇo gotamo anumodissatī”ti. Evaṁ vutte, sarabho paribbājako tuṇhībhūto maṅkubhūto pattakkhandho adhomukho pajjhāyanto appaṭibhāno nisīdi. Atha kho bhagavā sarabhaṁ paribbājakaṁ tuṇhībhūtaṁ maṅkubhūtaṁ pattakkhandhaṁ adhomukhaṁ pajjhāyantaṁ appaṭibhānaṁ viditvā te paribbājake etadavoca:",
+   "T0100-sa-2.204": "當于爾時，奢羅浮同梵行者語奢羅浮：「汝今何故默然不答？汝昔日時，恒於大眾多人之中而言：『我所知見，出過瞿曇所有教法。』汝今宜問沙門瞿曇，云何乃使沙門瞿曇反問於汝？詰汝使說，作如是言：『汝所說者，若能具足，吾助爾喜，稱慶善哉；如其不具，吾當為汝分別宣示，令得具足。』」時奢羅浮聞斯語已，亦復默然，無所陳說。",
+   "T0099-sa970": "時，舍羅步有一梵行弟子白舍羅步言：「師應往詣沙門瞿曇說所知見，今沙門瞿曇自來詣此，何故不說？沙門瞿曇又告師言：『若滿足者，我則隨喜；不滿足者，當令滿足。』何故默然而不記說？」彼舍羅步梵行弟子勸時，亦復默然。爾時，世尊告舍羅步：「若復有言：『沙門瞿曇非如來、應、等正覺。』我若善諫善問，善諫善問時，彼則遼落說諸外事；或忿恚慢覆，對閡不忍，無由能現；或默然抱愧低頭，密自思省，如今舍羅步。若復作如是言非沙門瞿曇無正法、律者，我若善諫善問，彼亦如汝今日默然而住。若復有言非沙門瞿曇聲聞善向者，我若善諫善問，彼亦乃至如汝今日默然而住。」"
+  },
+  "a08": {
+   "an3.64": "“Yo kho maṁ, paribbājakā, evaṁ vadeyya: ‘sammāsambuddhassa te paṭijānato ime dhammā anabhisambuddhā’ti, tamahaṁ tattha sādhukaṁ samanuyuñjeyyaṁ samanugāheyyaṁ samanubhāseyyaṁ. So vata mayā sādhukaṁ samanuyuñjiyamāno samanugāhiyamāno samanubhāsiyamāno aṭṭhānametaṁ anavakāso yaṁ so tiṇṇaṁ ṭhānānaṁ nāññataraṁ ṭhānaṁ nigaccheyya, aññena vā aññaṁ paṭicarissati, bahiddhā kathaṁ apanāmessati, kopañca dosañca appaccayañca pātukarissati, tuṇhībhūto maṅkubhūto pattakkhandho adhomukho pajjhāyanto appaṭibhāno nisīdissati, seyyathāpi sarabho paribbājako. Yo kho maṁ, paribbājakā, evaṁ vadeyya: ‘khīṇāsavassa te paṭijānato ime āsavā aparikkhīṇā’ti, tamahaṁ tattha sādhukaṁ samanuyuñjeyyaṁ samanugāheyyaṁ samanubhāseyyaṁ. So vata mayā sādhukaṁ samanuyuñjiyamāno samanugāhiyamāno samanubhāsiyamāno aṭṭhānametaṁ anavakāso yaṁ so tiṇṇaṁ ṭhānānaṁ nāññataraṁ ṭhānaṁ nigaccheyya, aññena vā aññaṁ paṭicarissati, bahiddhā kathaṁ apanāmessati, kopañca dosañca appaccayañca pātukarissati, tuṇhībhūto maṅkubhūto pattakkhandho adhomukho pajjhāyanto appaṭibhāno nisīdissati, seyyathāpi sarabho paribbājako. Yo kho maṁ, paribbājakā, evaṁ vadeyya: ‘yassa kho pana te atthāya dhammo desito, so na niyyāti takkarassa sammā dukkhakkhayāyā’ti, tamahaṁ tattha sādhukaṁ samanuyuñjeyyaṁ samanugāheyyaṁ samanubhāseyyaṁ. So vata mayā sādhukaṁ samanuyuñjiyamāno samanugāhiyamāno samanubhāsiyamāno aṭṭhānametaṁ anavakāso yaṁ so tiṇṇaṁ ṭhānānaṁ nāññataraṁ ṭhānaṁ nigaccheyya, aññena vā aññaṁ paṭicarissati, bahiddhā kathaṁ apanāmessati, kopañca dosañca appaccayañca pātukarissati, tuṇhībhūto maṅkubhūto pattakkhandho adhomukho pajjhāyanto appaṭibhāno nisīdissati, seyyathāpi sarabho paribbājako”ti.",
+   "T0099-sa970": "爾時，舍羅步梵行弟子語舍羅步言：「譬如有牛，截其兩角，入空牛欄中，跪地大吼；師亦如是，於無沙門瞿曇弟子眾中作師子吼。譬如女人欲作丈夫聲，發聲即作女聲；師亦如是，於非沙門瞿曇弟子眾中作師子吼。譬如野干欲作狐聲，發聲還作野干聲；師亦如是，於非沙門瞿曇弟子眾中欲作師子吼。」時，舍羅步梵行弟子於舍羅步面前呵責毀呰已，從坐起去。"
+  },
+  "a09": {
+   "an3.64": "Atha kho bhagavā sippinikātīre paribbājakārāme tikkhattuṁ sīhanādaṁ naditvā vehāsaṁ pakkāmi. Atha kho te paribbājakā acirapakkantassa bhagavato sarabhaṁ paribbājakaṁ samantato vācāyasannitodakena sañjambharimakaṁsu: “seyyathāpi, āvuso sarabha, brahāraññe jarasiṅgālo ‘sīhanādaṁ nadissāmī’ti siṅgālakaṁyeva nadati, bheraṇḍakaṁyeva nadati; evamevaṁ kho tvaṁ, āvuso sarabha, aññatreva samaṇena gotamena ‘sīhanādaṁ nadissāmī’ti siṅgālakaṁyeva nadasi bheraṇḍakaṁyeva nadasi. Seyyathāpi, āvuso sarabha, ambukasañcarī ‘purisakaravitaṁ ravissāmī’ti ambukasañcariravitaṁyeva ravati; evamevaṁ kho tvaṁ, āvuso sarabha, aññatreva samaṇena gotamena ‘purisakaravitaṁ ravissāmī’ti, ambukasañcariravitaṁyeva ravasi. Seyyathāpi, āvuso sarabha, usabho suññāya gosālāya gambhīraṁ naditabbaṁ maññati; evamevaṁ kho tvaṁ, āvuso sarabha, aññatreva samaṇena gotamena gambhīraṁ naditabbaṁ maññasī”ti. Atha kho te paribbājakā sarabhaṁ paribbājakaṁ samantato vācāyasannitodakena sañjambharimakaṁsūti.",
+   "T0100-sa-2.204": "爾時，世尊在須摩竭陀池岸，作師子吼已，即從坐起，還王舍城。佛去不久，彼諸同行，種種呵責，作如是言：「汝於今者，如截角牛在屏處吼，汝亦如是。於閑靜處，作師子吼；於沙門瞿曇前，默然無所說。亦如童女，欲作男子聲，然不能作，還為女聲，汝亦如是。欲學瞿曇作師子吼而不能成，亦如雌野干欲作師子吼，然其出聲故作野干，終不能成師子之聲。」諸同行者如是種種呵責奢羅浮已，各四散而去。",
+   "T0099-sa970": "爾時，世尊於須摩竭陀池側師子吼已，從坐起而去。"
+  },
+  "a10": {
+   "an3.64": "Catutthaṁ."
+  }
+ }
+}

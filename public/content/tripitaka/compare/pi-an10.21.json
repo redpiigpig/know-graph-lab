@@ -1,0 +1,217 @@
+{
+ "slug": "pi-an10.21",
+ "title": "佛說佛十力經",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。複核標記存疑 1 段：義段9的增壹阿含經（四）內容實為第九力（宿住隨念智）的說法，但卻出現在義段9（應為第九力）中，實則內容與義段8（第七力：至處道智）相近，顯示有段落位置錯置。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "十力總說"
+  },
+  {
+   "id": "a02",
+   "label": "第一力：處非處智"
+  },
+  {
+   "id": "a03",
+   "label": "第二力：業智"
+  },
+  {
+   "id": "a04",
+   "label": "第三力：禪定解脫智"
+  },
+  {
+   "id": "a05",
+   "label": "第四力：根智"
+  },
+  {
+   "id": "a06",
+   "label": "第五力：信解智"
+  },
+  {
+   "id": "a07",
+   "label": "第六力：界智"
+  },
+  {
+   "id": "a08",
+   "label": "第七力：至處道智"
+  },
+  {
+   "id": "a09",
+   "label": "第八力：宿住隨念智",
+   "doubt": true
+  },
+  {
+   "id": "a10",
+   "label": "第九力：天眼智"
+  },
+  {
+   "id": "a11",
+   "label": "第十力：漏盡智"
+  },
+  {
+   "id": "a12",
+   "label": "結說：十力總結與讚歎"
+  }
+ ],
+ "versions": [
+  {
+   "id": "an10.21",
+   "lang": "pi",
+   "label": "巴利 AN10.21",
+   "who": "Mahāsaṅgīti 本・SuttaCentral",
+   "reorder": true
+  },
+  {
+   "id": "T0125-ea46.4",
+   "lang": "lzh",
+   "label": "增壹阿含經 （四）",
+   "who": "東晉 瞿曇僧伽提婆譯",
+   "reorder": true
+  },
+  {
+   "id": "T0099-sa684",
+   "lang": "lzh",
+   "label": "雜阿含經 （六八四）",
+   "who": "劉宋 求那跋陀羅譯"
+  },
+  {
+   "id": "T0099-sa701",
+   "lang": "lzh",
+   "label": "雜阿含經 （七〇一）",
+   "who": "劉宋 求那跋陀羅譯"
+  },
+  {
+   "id": "T0781",
+   "lang": "lzh",
+   "label": "佛說佛十力經",
+   "who": "宋 施護等譯"
+  },
+  {
+   "id": "T0802",
+   "lang": "lzh",
+   "label": "佛說信解智力經",
+   "who": "宋 法賢譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0125",
+  "T0781",
+  "T0802"
+ ],
+ "anchors": [
+  {
+   "work": "T0125",
+   "node": "（四）",
+   "uid": "T02n0125_p0776b14"
+  },
+  {
+   "work": "T0099",
+   "node": "（六八四）",
+   "uid": "T02n0099_p0186b26"
+  },
+  {
+   "work": "T0099",
+   "node": "（七〇一）",
+   "uid": "T02n0099_p0189a07"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "an10.21": "Aṅguttara Nikāya 10.21 3. Mahāvagga Sīhanādasutta “Sīho, bhikkhave, migarājā sāyanhasamayaṁ āsayā nikkhamati. Āsayā nikkhamitvā vijambhati. Vijambhitvā samantā catuddisaṁ anuviloketi. Samantā catuddisaṁ anuviloketvā tikkhattuṁ sīhanādaṁ nadati. Tikkhattuṁ sīhanādaṁ naditvā gocarāya pakkamati. Taṁ kissa hetu? ‘Māhaṁ khuddake pāṇe visamagate saṅghātaṁ āpādesin’ti.",
+   "T0125-ea46.4": "聞如是：一時，佛在舍衛國祇樹給孤獨園。爾時，世尊告諸比丘：「如來成十種力，得四無所畏，在大眾中能師子吼。",
+   "T0099-sa684": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。爾時，世尊告諸比丘：「若比丘於色生厭、離欲、滅盡、不起、解脫，是名阿羅訶三藐三佛陀。受、想、行、識亦如是說。若復比丘於色生厭、離欲、不起、解脫者，是名阿羅漢慧解脫。受、想、行、識亦如是說。諸比丘！如來應等正覺、阿羅漢慧解脫有何種種別異。」諸比丘白佛：「世尊是法根、法眼、法依，唯願為說，諸比丘聞已，當受奉行。」佛告比丘：「諦聽，善思，當為汝說。如來、應、等正覺者，先未聞法，能自覺知，現法自知，得三菩提，於未來世能說正法，覺諸聲聞，所謂四念處、四正斷、四如意足、五根、五力、七覺分、八聖道分，是名如來、應、等正覺。所未得法能得，未制梵行能制，能善知道、善說道，為眾將導，然後聲聞成就隨法隨道，樂奉大師教誡、教授，善於正法，是名如來應等正覺、阿羅漢慧解脫種種別異。",
+   "T0099-sa701": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。",
+   "T0781": "如是我聞：一時佛在舍衛國祇樹給孤獨園，與苾芻眾俱。",
+   "T0802": "如是我聞：一時，佛在舍衛國祇樹給孤獨園，與大苾芻眾俱。爾時，佛告諸苾芻言：「苾芻！汝等當知所有信解力法，此法能證真實之理，即是如來無所畏法，唯佛能知。苾芻或有聲聞，作如是言：『我於此信解力法，如實了知，精進不虛，離諸塵垢。』又復而言：『我能善說，我善調伏，我當說法，今正是時，是為最勝。令他依止，如是真實，應當修學，應當勤行。』又復而言：『當如是知，如是之法，最尊最上，無有等等。當如是見，如是聞，如是覺，如是知。』」佛告苾芻：「汝等當知，所有聲聞，作是言者，是即虛妄，非如是見，非如是聞，非如是覺，非如是知。何以故？此法即是諸佛真理，唯佛能解，不共聲聞之法。」"
+  },
+  "a01": {
+   "an10.21": "‘Sīho’ti kho, bhikkhave, tathāgatassetaṁ adhivacanaṁ arahato sammāsambuddhassa. Yaṁ kho, bhikkhave, tathāgato parisāya dhammaṁ deseti, idamassa hoti sīhanādasmiṁ. Dasayimāni, bhikkhave, tathāgatassa tathāgatabalāni, yehi balehi samannāgato tathāgato āsabhaṁ ṭhānaṁ paṭijānāti, parisāsu sīhanādaṁ nadati, brahmacakkaṁ pavatteti.",
+   "T0099-sa684": "「復次，五學力、如來十力。何等為學力？謂信力、精進力、念力、定力、慧力。何等為如來十力？",
+   "T0099-sa701": "爾時，世尊告諸比丘：「有十種如來力。若此力成就，如來、應、等正覺得先佛最勝處，能轉梵輪，於大眾中師子吼而吼。何等為十？謂如來處非處如實知，是名初力……」乃至漏盡，如上說。",
+   "T0781": "是時佛告諸苾芻言：「汝等當知，如來、應供、正等正覺有十種力，具是力者，即能了知廣大勝處，於大眾中作師子吼，轉妙梵輪。",
+   "T0802": "佛告苾芻：「信解法者，所謂如來五力、十力。何等為五？一者、信力；二者、進力；三者、念力；四者、定力；五者、慧力。信解之法，具此五力。又復如來、應供、正等正覺，具足如來十力，是能了知佛無上處，又復於大眾中作師子吼，善為眾生轉妙法輪。云何名為如來十力？"
+  },
+  "a02": {
+   "an10.21": "Katamāni dasa? Idha, bhikkhave, tathāgato ṭhānañca ṭhānato aṭṭhānañca aṭṭhānato yathābhūtaṁ pajānāti. Yampi, bhikkhave, tathāgato ṭhānañca ṭhānato aṭṭhānañca aṭṭhānato yathābhūtaṁ pajānāti, idampi, bhikkhave, tathāgatassa tathāgatabalaṁ hoti, yaṁ balaṁ āgamma tathāgato āsabhaṁ ṭhānaṁ paṭijānāti, parisāsu sīhanādaṁ nadati, brahmacakkaṁ pavatteti.",
+   "T0125-ea46.4": "云何為十力？於是，如來是處如實知之，非處如實知之。",
+   "T0099-sa684": "謂如來處非處如實知，是名如來初力。若成就此力者，如來、應、等正覺得先佛最勝處智，轉於梵輪，於大眾中能師子吼而吼。",
+   "T0781": "何等為十？所謂如來於一切處如實了知，一切非處亦如實知。由實知故，是為如來第一處非處智力。如來、應供、正等正覺具是力者，即能了知廣大勝處，於大眾中作師子吼，轉妙梵輪。",
+   "T0802": "所謂於處非處，如實了知。而處非處，若如實知，是為如來第一智力。而此智力，若諸如來、應供、正等正覺，具足智力，乃能了知佛無上處，於大眾中，作師子吼，善為眾生轉妙法輪。"
+  },
+  "a03": {
+   "an10.21": "Puna caparaṁ, bhikkhave, tathāgato atītānāgatapaccuppannānaṁ kammasamādānānaṁ ṭhānaso hetuso vipākaṁ yathābhūtaṁ pajānāti. Yampi, bhikkhave, tathāgato atītānāgatapaccuppannānaṁ kammasamādānānaṁ ṭhānaso hetuso vipākaṁ yathābhūtaṁ pajānāti, idampi, bhikkhave, tathāgatassa tathāgatabalaṁ hoti, yaṁ balaṁ āgamma tathāgato āsabhaṁ ṭhānaṁ paṭijānāti, parisāsu sīhanādaṁ nadati, brahmacakkaṁ pavatteti. Puna caparaṁ, bhikkhave, tathāgato sabbatthagāminiṁ paṭipadaṁ yathābhūtaṁ pajānāti. Yampi, bhikkhave, tathāgato sabbatthagāminiṁ paṭipadaṁ yathābhūtaṁ pajānāti, idampi, bhikkhave, tathāgatassa tathāgatabalaṁ hoti, yaṁ balaṁ āgamma tathāgato āsabhaṁ ṭhānaṁ paṭijānāti, parisāsu sīhanādaṁ nadati, brahmacakkaṁ pavatteti.",
+   "T0125-ea46.4": "「復次，如來處所，知他眾生因緣處所受其果報。",
+   "T0099-sa684": "「復次，如來於過去、未來、現在業法，受因事報如實知，是名第二如來力。如來、應、等正覺成就此力，得先佛最勝處，能轉梵輪，於大眾中作師子吼而吼。",
+   "T0781": "「復次，如來於過去、未來、現在一切有情諸所作業，若事若處、若因若報，皆如實知。由實知故，是為如來第二業智力。如來、應供、正等正覺具是力者，即能了知廣大勝處，於大眾中作師子吼，轉妙梵輪。",
+   "T0802": "「又復，如來智力於過現未來諸法行業因緣果報，皆如實知。如是如來，於過現未來諸法行業因緣果報，如實知已，是為如來第二智力。而此智力，若諸如來、應供、正等正覺，具足智力，乃能了知佛無上處，於大眾中，作師子吼，善為眾生轉妙法輪。"
+  },
+  "a04": {
+   "an10.21": "Puna caparaṁ, bhikkhave, tathāgato jhānavimokkhasamādhisamāpattīnaṁ saṅkilesaṁ vodānaṁ vuṭṭhānaṁ yathābhūtaṁ pajānāti. Yampi …pe… pajānāti, idampi, bhikkhave, tathāgatassa tathāgatabalaṁ hoti …pe… brahmacakkaṁ pavatteti.",
+   "T0125-ea46.4": "「復次，如來若干種解脫、無量解脫，如實知之。",
+   "T0099-sa684": "「復次，如來、應、等正覺禪解脫，三昧正受，染惡清淨，處淨如實知，是名如來第三力。若此力成就，如來、應、等正覺得先佛最勝處智，能轉梵輪，於大眾中師子吼而吼。",
+   "T0781": "「復次，如來於諸禪定解脫三摩地、三摩鉢底，若染若淨、諸定分位，皆如實知。由實知故，是為如來第三定智力。如來、應供、正等正覺具是力者，即能了知廣大勝處，於大眾中作師子吼，轉妙梵輪。",
+   "T0802": "「復次，如來於禪定解脫三摩地三摩鉢底乃至煩惱業苦，皆悉清淨，如實了知。如是如來，於禪定解脫三摩地三摩鉢底乃至煩惱業苦，皆悉清淨，如實知已，是為如來第三智力。而此智力，若諸如來、應供、正等正覺，具足智力，乃能了知佛無上處，於大眾中，作師子吼，善為眾生轉妙法輪。"
+  },
+  "a05": {
+   "an10.21": "Puna caparaṁ, bhikkhave, tathāgato sattānaṁ nānādhimuttikataṁ yathābhūtaṁ pajānāti. Yampi, bhikkhave, tathāgato sattānaṁ nānādhimuttikataṁ yathābhūtaṁ pajānāti, idampi, bhikkhave, tathāgatassa tathāgatabalaṁ hoti …pe… brahmacakkaṁ pavatteti. Puna caparaṁ, bhikkhave, tathāgato parasattānaṁ parapuggalānaṁ indriyaparopariyattaṁ yathābhūtaṁ pajānāti. Yampi, bhikkhave, tathāgato parasattānaṁ parapuggalānaṁ indriyaparopariyattaṁ yathābhūtaṁ pajānāti, idampi, bhikkhave, tathāgatassa tathāgatabalaṁ hoti …pe… brahmacakkaṁ pavatteti.",
+   "T0125-ea46.4": "「復次，如來知他眾生智慧多少，如實知之。",
+   "T0099-sa684": "「復次，如來知眾生種種諸根差別如實知，是名如來第四力。若成就此力，如來、應、等正覺得先佛最勝處智，能轉梵輪，於大眾中師子吼而吼。",
+   "T0781": "「復次，如來於諸有情，若自若他種種根性皆如實知。由實知故，是為如來第四根智力。如來、應供、正等正覺具是力者，即能了知廣大勝處，於大眾中作師子吼，轉妙梵輪。",
+   "T0802": "「復次，如來於諸眾生，種種根行，皆如實知。如是如來，於諸眾生種種根行，如實知已，是為如來第四智力。而此智力，若諸如來、應供、正等正覺，具足智力，乃能了知佛無上處，於大眾中，作師子吼，善為眾生轉妙法輪。"
+  },
+  "a06": {
+   "T0125-ea46.4": "「復次，如來知他眾生心中所念，如實知之：有欲心知有欲心，無欲心知無欲心；有瞋恚心知有瞋恚心，無瞋恚心知無瞋恚心；有愚癡心知有愚癡心，無愚癡心知無愚癡心；有愛心知有愛心，無愛心知無愛心；有受心知有受心，無受心知無受心；亂心知有亂心，無亂心知無亂心；散心知有散心，無散心知無散心；少心知有少心，無少心知無少心；廣心知有廣心，無廣心知無廣心；無量心知無量心，有量心知有量心，如實知之。定心知有定心，無定心知無定心；解脫心知解脫心，無解脫心知無解脫心。「復次，如來盡知一切所趣心之道，或一二生、三生、四生、五生、十生、五十生、百生、千生、億百千生、無量生、成劫、敗劫、無數成敗劫中，我昔生彼處，名是，字是，食如此之食，受其苦樂，壽命長短，死此生彼，彼死生此。自憶如是無數宿命之事。",
+   "T0099-sa684": "「復次，如來悉知眾生種種意解如實知，是名第五如來力。若此力成就，如來、應、等正覺得先佛最勝處智，能轉梵輪，於大眾中師子吼而吼。",
+   "T0781": "「復次，如來於諸有情種種信解，皆如實知。由實知故，是為如來第五信解智力。如來、應供、正等正覺具是力者，即能了知廣大勝處，於大眾中作師子吼，轉妙梵輪。",
+   "T0802": "「復次，如來於諸眾生種種信解，皆如實知。如是如來，於諸眾生種種信解，如實知已，是為如來第五智力。而此智力，若諸如來、應供、正等正覺，具足智力，乃能了知佛無上處，於大眾中，作師子吼，善為眾生轉妙法輪。"
+  },
+  "a07": {
+   "an10.21": "Puna caparaṁ, bhikkhave, tathāgato anekadhātuṁ nānādhātuṁ lokaṁ yathābhūtaṁ pajānāti. Yampi, bhikkhave, tathāgato anekadhātuṁ nānādhātuṁ lokaṁ yathābhūtaṁ pajānāti, idampi, bhikkhave, tathāgatassa tathāgatabalaṁ hoti …pe… brahmacakkaṁ pavatteti.",
+   "T0125-ea46.4": "「復次，如來知若干種界、若干種持、若干種入，如實知之。",
+   "T0099-sa684": "「復次，如來悉知世間眾生種種諸界如實知，是名第六如來力。若於此力成就，如來、應、等正覺得先佛最勝處智，能轉梵輪，於大眾中師子吼而吼。",
+   "T0781": "「復次，如來於種種界無數界性，皆如實知。由實知故，是為如來第六界性智力。如來、應供、正等正覺具是力者，即能了知廣大勝處，於大眾中作師子吼，轉妙梵輪。",
+   "T0802": "「復次，如來於種種界趣，皆如實知。如是如來，於種種界趣，如實知已，是為如來第六智力。而此智力，若諸如來、應供、正等正覺，具足智力，乃能了知佛無上處，於大眾中，作師子吼，善為眾生轉妙法輪。「復次，如來於諸眾生所樂欲性，皆如實知。如是如來，於諸眾生所樂欲性，如實知已，是為如來第七智力。而此智力，若諸如來、應供、正等正覺，具足智力，乃能了知佛無上處，於大眾中，作師子吼，善為眾生轉妙法輪。"
+  },
+  "a08": {
+   "T0125-ea46.4": "生死已盡，梵行已立，所作已辦，更不復受有，如實知之。",
+   "T0099-sa684": "「復次，如來於一切至處道如實知，是名第七如來力。若此力成就，如來、應、等正覺得先佛最勝處智，能轉梵輪，於大眾中師子吼而吼。",
+   "T0781": "「復次，如來於一切至處道，皆如實知。由實知故，是為如來第七至處道智力。如來、應供、正等正覺具是力者，即能了知廣大勝處，於大眾中作師子吼，轉妙梵輪。"
+  },
+  "a09": {
+   "an10.21": "Puna caparaṁ, bhikkhave, tathāgato anekavihitaṁ pubbenivāsaṁ anussarati, seyyathidaṁ—ekampi jātiṁ dvepi jātiyo tissopi jātiyo catassopi jātiyo pañcapi jātiyo dasapi jātiyo vīsampi jātiyo tiṁsampi jātiyo cattālīsampi jātiyo paññāsampi jātiyo jātisatampi jātisahassampi jātisatasahassampi anekepi saṁvaṭṭakappe anekepi vivaṭṭakappe anekepi saṁvaṭṭavivaṭṭakappe, ‘amutrāsiṁ evaṁnāmo evaṅgotto evaṁvaṇṇo evamāhāro evaṁsukhadukkhappaṭisaṁvedī evamāyupariyanto, so tato cuto amutra udapādiṁ; tatrāpāsiṁ evaṁnāmo evaṅgotto evaṁvaṇṇo evamāhāro evaṁsukhadukkhappaṭisaṁvedī evamāyupariyanto, so tato cuto idhūpapanno’ti, iti sākāraṁ sauddesaṁ anekavihitaṁ pubbenivāsaṁ anussarati. Yampi, bhikkhave, tathāgato anekavihitaṁ pubbenivāsaṁ anussarati, seyyathidaṁ—ekampi jātiṁ dvepi jātiyo …pe… iti sākāraṁ sauddesaṁ anekavihitaṁ pubbenivāsaṁ anussarati, idampi, bhikkhave, tathāgatassa tathāgatabalaṁ hoti, yaṁ balaṁ āgamma tathāgato āsabhaṁ ṭhānaṁ paṭijānāti, parisāsu sīhanādaṁ nadati, brahmacakkaṁ pavatteti.",
+   "T0125-ea46.4": "「云何如來得四無所畏？欲言如來成等正覺，若有眾生，欲言知者，則無此處；若復有沙門、婆羅門欲來誹謗佛，不成等正覺者，則無此處；以無此處，則獲安隱。「然我今日欲言已盡有漏，設復有沙門、婆羅門、天、若魔天來，欲言未盡有漏者，則無此處；以無此處，則獲安隱。「復次，我所說法，賢聖得出要者，如實盡於苦際。設有沙門、婆羅門、天、若魔天來，欲言未盡苦際者，無此處；以無此處，則獲安隱。「復次，我所說內法者、墮惡趣者，設復有沙門、婆羅門來，欲言非者，則無此處。是謂，比丘！如來有四無所畏。「設有外道異學言：『彼沙門瞿曇！有何等之力，有何無畏，自稱無著最尊？』汝等當持此十力往報之。設復外道異學重作是說：『我等亦成就十力。』汝等比丘復當問曰：『汝有何十力？』是時，外道異學則不能報也，遂增其惑。所以然者，我終不見沙門、婆羅門自稱言得四無所畏，除如來者。是故，比丘！當求方便，成十力、四無所畏。如是，比丘！當作是學。」爾時，諸比丘聞佛所說，歡喜奉行！",
+   "T0099-sa684": "「復次，如來於過去宿命種種事憶念：『從一生至百千生，從一劫至百千劫。我爾時於彼生如是族、如是姓、如是名、如是食、如是苦樂覺、如是長壽、如是久住、如是壽分齊。我於彼處死、此處生，彼處生、此處死，如是行、如是因、如是方。』宿命所更悉如實知，是名第八如來力。若此力成就，如來、應、等正覺得先佛最勝處智，能轉梵輪，於大眾中師子吼而吼。",
+   "T0781": "「復次，如來於無數種宿住隨念，所謂一生二生，三四五生，或十二十，乃至百生千生，無數百千生中，百千成劫壞劫，成壞等事，我在彼有情中隨所生處，如是名字、如是種姓、如是族氏、如是飲食苦樂、如是壽量長短分限，壽命盡已於某處生，此滅彼生、彼滅此生，此等事相緣法方處，無數種類，宿住隨念皆如實知。由實知故，是為如來第八宿住隨念智力。如來、應供、正等正覺具是力者，即能了知廣大勝處，於大眾中作師子吼，轉妙梵輪。",
+   "T0802": "「復次，如來思念過去無邊行法，所謂一生、十生、百生、千生及百千生，乃至無量無邊增劫減劫，如是生數劫數，所有眾生名字族姓，飲食苦樂，壽量長短，或復久住，死此生彼，死彼生此，如是體相業用，無量無邊過去等事，悉能思念。如是如來，於彼過去無邊行法，所謂一生、十生、百生、千生及百千生，乃至無量無邊增劫減劫，如是生數劫數，所有眾生名字族姓，飲食苦樂，壽量長短，或復久住，死此生彼，死彼生此，如是體相業用，無量無邊過去等事，如實知已，是為如來第八智力。而此智力，若諸如來、應供、正等正覺，具足智力，乃能了知佛無上處，於大眾中，作師子吼，善為眾生轉妙法輪。"
+  },
+  "a10": {
+   "an10.21": "Puna caparaṁ, bhikkhave, tathāgato dibbena cakkhunā visuddhena atikkantamānusakena satte passati cavamāne upapajjamāne hīne paṇīte suvaṇṇe dubbaṇṇe, sugate duggate yathākammūpage satte pajānāti: ‘ime vata bhonto sattā kāyaduccaritena samannāgatā vacīduccaritena samannāgatā manoduccaritena samannāgatā ariyānaṁ upavādakā micchādiṭṭhikā micchādiṭṭhikammasamādānā, te kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapannā; ime vā pana bhonto sattā kāyasucaritena samannāgatā vacīsucaritena samannāgatā manosucaritena samannāgatā ariyānaṁ anupavādakā sammādiṭṭhikā sammādiṭṭhikammasamādānā, te kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapannā’ti. Iti dibbena cakkhunā visuddhena atikkantamānusakena satte passati cavamāne upapajjamāne hīne paṇīte suvaṇṇe dubbaṇṇe, sugate duggate yathākammūpage satte pajānāti. Yampi, bhikkhave, tathāgato dibbena cakkhunā visuddhena atikkantamānusakena …pe… yathākammūpage satte pajānāti, idampi, bhikkhave, tathāgatassa tathāgatabalaṁ hoti, yaṁ balaṁ āgamma tathāgato āsabhaṁ ṭhānaṁ paṭijānāti, parisāsu sīhanādaṁ nadati, brahmacakkaṁ pavatteti.",
+   "T0125-ea46.4": "「復次，如來知眾生生死之趣，以天眼觀眾生之類，善色、惡色、善趣、惡趣，隨行所種，皆悉知之。或復眾生身、口、意行惡，誹謗賢聖，造邪見業，身壞命終，生地獄中；或復眾生身、口、意行善，不誹謗賢聖，恒行正見，身壞命終，生善處天上，是謂名為天眼清淨，觀眾生類所趣之行。",
+   "T0099-sa684": "「復次，如來以天眼淨過於人眼，見眾生死時、生時，妙色、惡色、下色、上色，向於惡趣、向於善趣、隨業法受悉如實知：『此眾生身惡業成就，口、意惡業成就，謗毀賢聖，受邪見業；以是因緣，身壞命終，墮惡趣，生地獄中。此眾生身善行，口、意善行，不謗賢聖，正見業法受；彼因彼緣，身壞命終，生善趣天上。』悉如實知，是名第九如來力。若此力成就，如來、應、等正覺得先佛最勝處智，能轉梵輪，於大眾中師子吼而吼。",
+   "T0781": "「復次，如來清淨天眼，過於人眼，觀見世間一切有情生時滅時，若好若醜、若貴若賤，若生善趣、若生惡趣，隨所作業如實知見。若諸有情身語意業作不善行，毀謗賢聖、起諸邪見，邪見業法合集為因，以彼因緣身壞命終，墮在惡趣地獄中生。若諸有情身語意業作諸善行，不謗賢聖、起於正見，正見業法合集為因，以彼因緣身壞命終，在於善趣天界中生。如是等事，皆如實知。由實知故，是為如來第九天眼智力。如來、應供、正等正覺具是力者，即能了知廣大勝處，於大眾中作師子吼，轉妙梵輪。",
+   "T0802": "「復次，如來以清淨天眼過於肉眼，觀見世間一切眾生，生滅好醜貴賤上下、善趣惡趣所作之業，乃至眾生具身口意諸不善業，毀謗賢聖，而復邪見，作不善業，行不善法，皆是邪因所起。由此邪因緣故，命終之後，墮於惡趣，受地獄苦。又復眾生，以身口意行十善業，不謗賢聖，起於正見，作諸善業，行諸善法，皆是正因所起。由此正見因緣故，命終之後，生於天界，而為天人。如是等法，皆如實知。如是如來，以清淨天眼過於肉眼，觀見世間一切眾生，生滅好醜貴賤上下、善趣惡趣及所作業，乃至眾生具身口意諸不善業，謗諸賢聖起於邪見造不善業行不善法。由此邪見因緣故，命終之後，墮於惡趣，受地獄苦。又復眾生，以身口意行十善業，不謗賢聖，起於正見，作諸善業，行諸善法。由此正見因緣故，命終之後，生於天界，而為天人。是為如來第九智力。而此智力，若諸如來、應供、正等正覺，具此智力，乃能了知佛無上處，於大眾中作師子吼，善為眾生轉妙法輪。"
+  },
+  "a11": {
+   "an10.21": "Puna caparaṁ, bhikkhave, tathāgato āsavānaṁ khayā anāsavaṁ cetovimuttiṁ paññāvimuttiṁ diṭṭheva dhamme sayaṁ abhiññā sacchikatvā upasampajja viharati. Yampi, bhikkhave, tathāgato āsavānaṁ khayā anāsavaṁ cetovimuttiṁ paññāvimuttiṁ diṭṭheva dhamme sayaṁ abhiññā sacchikatvā upasampajja viharati, idampi, bhikkhave, tathāgatassa tathāgatabalaṁ hoti, yaṁ balaṁ āgamma tathāgato āsabhaṁ ṭhānaṁ paṭijānāti, parisāsu sīhanādaṁ nadati, brahmacakkaṁ pavatteti.",
+   "T0125-ea46.4": "「復次，如來有漏盡，成無漏心解脫、智慧解脫；",
+   "T0099-sa684": "「復次，如來諸漏已盡，無漏心解脫、慧解脫，現法自知身作證：『我生已盡，梵行已立，所作已作，自知不受後有。』是名第十如來力。若此力成就，如來、應、等正覺得先佛最勝處智，能轉梵輪，於大眾中師子吼而吼。",
+   "T0781": "「復次，如來所有諸漏已盡，非漏隨增，心善解脫、慧善解脫，見如是法智證自果，我生已盡，梵行已立，所作已辦，不受後有，皆如實知。由實知故，是為如來第十漏盡智力。",
+   "T0802": "「復次，如來盡諸漏法，無漏解脫，智慧解脫，以自神通，了一切法，我生已盡，梵行已立，所作已辦，不受後有，如是等事，皆如實知。如是如來，盡諸漏法，無漏解脫，智慧解脫，以自神通，了一切法，我生已盡，梵行已立，所作已辦，不受後有，如實知已，是為如來第十智力。"
+  },
+  "a12": {
+   "an10.21": "Imāni kho, bhikkhave, dasa tathāgatassa tathāgatabalāni, yehi balehi samannāgato tathāgato āsabhaṁ ṭhānaṁ paṭijānāti, parisāsu sīhanādaṁ nadati, brahmacakkaṁ pavattetī”ti. Paṭhamaṁ.",
+   "T0125-ea46.4": "是謂如來有此十力，名為無著，得四無所畏，在大眾中作師子吼，轉於梵輪。",
+   "T0099-sa684": "「如此十力，唯如來成就，是名如來與聲聞種種差別。」佛說此經已，諸比丘聞佛所說，歡喜奉行。",
+   "T0099-sa701": "佛說此經已，諸比丘聞佛所說，歡喜奉行。",
+   "T0781": "如來、應供、正等正覺具是力者，即能了知廣大勝處，於大眾中作師子吼，轉妙梵輪。」佛說此經已，諸苾芻眾聞佛所說，皆大歡喜，信受奉行。",
+   "T0802": "而此智力，若諸如來、應供、正等正覺，具此智力，乃能了知佛無上處，於大眾中，作師子吼，善為眾生轉妙法輪。」爾時，佛告諸苾芻：「是彼如來處非處力，若有問言：『於處非處，云何如來所有智力，皆悉見聞覺知，乃至成等正覺？』如是問者，當為實答。「又復，『所有一切眾生自業智力，云何如來以業智力，皆悉見聞覺知，乃至成等正覺？』若有問者，當為實答。「又復，『所有禪定解脫三摩地三摩鉢底，云何如來以禪定智力，皆悉見聞覺知，乃至成等正覺？』若有問者，當為實答。「又復，『所有一切眾生，種種根性智力，云何如來以根性智力，皆悉見聞覺知，乃至成等正覺？』若有問者，當為實答。「又復，『所有一切眾生，種種信解智力，云何如來以信解智力，皆悉見聞覺知，乃至成等正覺？』若有問者，當為實答。「又復，『所有一切眾生，種種界智力，云何如來以界智力，皆悉見聞覺知，乃至成等正覺？』若有問者，當為實答。「又復，『所有一切眾生，樂欲智力，云何如來以樂欲智力，皆悉見聞覺知，乃至成等正覺？』若有問者，當為實答。「又復，『所有過去思念智力，云何如來以思念智力，皆悉見聞覺知，乃至成等正覺？』若有問者，當為實答。「又復，『所有一切眾生生滅等法，云何如來以天眼智力，皆悉見聞覺知，乃至成等正覺？』若有問者，當為實答。「又復，『所有漏盡智力，云何如來以漏盡智力，皆悉見聞覺知，乃至成等正覺？』若有問者，當為實答。」復告諸苾芻：「此處非處智力，我但為彼等持者說，而不為彼非等持者之所宣說。又此業智力，我但為彼等持者說，而不為彼非等持者之所宣說。又此禪定解脫三摩地三摩鉢底智力，我但為彼等持者說，而不為彼非等持者之所宣說。又此一切眾生種種根智力，我但為彼等持者說，而不為彼非等持者之所宣說。又此一切眾生種種信解智力，我但為彼等持者說，而不為彼非等持者之所宣說。又此一切眾生種種界智力，我但為彼等持者說，而不為彼非等持者之所宣說。又此一切眾生樂欲智力，我但為彼等持者說，而不為彼非等持者之所宣說。又此宿命智力，我但為彼等持者說，而不為彼非等持者之所宣說。又此天眼智力，我但為彼等持者說，而不為彼非等持者之所宣說。又此漏盡智力，我但為彼等持者說，而不為彼非等持者之所宣說。」佛告苾芻：「等持者是正道，非等持者是非道。是故，汝等咸應當知。」佛說此經已，彼諸苾芻聞佛所說，信受奉行。"
+  }
+ }
+}

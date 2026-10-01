@@ -1,0 +1,138 @@
+{
+ "slug": "pi-an7.72",
+ "title": "增壹阿含經 （一〇）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "見火積譬喻"
+  },
+  {
+   "id": "a02",
+   "label": "世尊坐下"
+  },
+  {
+   "id": "a03",
+   "label": "第一問答：投火 vs 交遊"
+  },
+  {
+   "id": "a04",
+   "label": "第二問答：受禮拜 vs 斷手足"
+  },
+  {
+   "id": "a05",
+   "label": "第三問答：受衣被 vs 熱鐵纏身"
+  },
+  {
+   "id": "a06",
+   "label": "第四問答：受信施食 vs 吞熱鐵丸"
+  },
+  {
+   "id": "a07",
+   "label": "第五問答：受床敷 vs 臥熱鐵床"
+  },
+  {
+   "id": "a08",
+   "label": "結教：當學戒定慧解脫"
+  },
+  {
+   "id": "a09",
+   "label": "流通分：六十比丘漏盡"
+  }
+ ],
+ "versions": [
+  {
+   "id": "an7.72",
+   "lang": "pi",
+   "label": "巴利 AN7.72",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "T0125-ea33.10",
+   "lang": "lzh",
+   "label": "增壹阿含經 （一〇）",
+   "who": "東晉 瞿曇僧伽提婆譯"
+  },
+  {
+   "id": "T0026-ma5",
+   "lang": "lzh",
+   "label": "中阿含經 （五）中阿含七法品木積喻經第五（初一日誦）",
+   "who": "東晉 瞿曇僧伽提婆譯",
+   "reorder": true
+  }
+ ],
+ "works": [
+  "T0026",
+  "T0125"
+ ],
+ "anchors": [
+  {
+   "work": "T0125",
+   "node": "（一〇）",
+   "uid": "T02n0125_p0689a04"
+  },
+  {
+   "work": "T0026",
+   "node": "（五）中阿含七法品木積喻經第五（初一日誦）",
+   "uid": "T01n0026_p0425a15"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "an7.72": "Aṅguttara Nikāya 7.72 7. Mahāvagga Aggikkhandhopamasutta Evaṁ me sutaṁ—",
+   "T0125-ea33.10": "聞如是：一時，佛在摩竭國光明池側，爾時世尊與大比丘眾五百人俱，在人間遊化。",
+   "T0026-ma5": "我聞如是：一時，佛遊拘薩羅，在人間，與大比丘眾翼從而行。"
+  },
+  "a01": {
+   "an7.72": "ekaṁ samayaṁ bhagavā kosalesu cārikaṁ carati mahatā bhikkhusaṅghena saddhiṁ. Addasā kho bhagavā addhānamaggappaṭipanno aññatarasmiṁ padese mahantaṁ aggikkhandhaṁ ādittaṁ sampajjalitaṁ sajotibhūtaṁ.",
+   "T0125-ea33.10": "爾時，世尊遙見大樹為火所燒，見已，如來更詣一樹下。",
+   "T0026-ma5": "爾時，世尊則於中路，忽見一處有大木積，洞燃俱熾，世尊見已，便下道側，更就餘樹敷尼師檀，結加趺坐。"
+  },
+  "a02": {
+   "an7.72": "Disvāna maggā okkamma aññatarasmiṁ rukkhamūle paññatte āsane nisīdi.",
+   "T0125-ea33.10": "到已，就樹下坐。",
+   "T0026-ma5": "世尊坐已，告諸比丘：「汝等見彼有大木積洞燃俱熾耶？」"
+  },
+  "a03": {
+   "an7.72": "Nisajja kho bhagavā bhikkhū āmantesi: “passatha no tumhe, bhikkhave, amuṁ mahantaṁ aggikkhandhaṁ ādittaṁ sampajjalitaṁ sajotibhūtan”ti? “Evaṁ, bhante”ti. “Taṁ kiṁ maññatha, bhikkhave? katamaṁ nu kho varaṁ—yaṁ amuṁ mahantaṁ aggikkhandhaṁ ādittaṁ sampajjalitaṁ sajotibhūtaṁ āliṅgetvā upanisīdeyya vā upanipajjeyya vā, yaṁ vā khattiyakaññaṁ vā brāhmaṇakaññaṁ vā gahapatikaññaṁ vā mudutalunahatthapādaṁ āliṅgetvā upanisīdeyya vā upanipajjeyya vā”ti?",
+   "T0125-ea33.10": "爾時，世尊告諸比丘：「云何，比丘！寧持身投此火中？為寧與端正女人而共交遊？」爾時，諸比丘白佛言：「寧與女人共相交遊，不投身入此火中。所以然者，此火毒熱不可稱計，斷其命根，受苦無量。」世尊告曰：「我今告汝等，非沙門行，言是沙門，非梵行人，言是梵行；不聞正法，言我聞法。無清白法，如是之人，寧投入此火中不與女人共相交遊。所以然者，彼人寧受此苦痛，不以此罪入地獄中受苦無量。",
+   "T0026-ma5": "時，諸比丘答曰：「見也。世尊！」世尊復告諸比丘曰：「於汝意云何？謂大木積洞燃俱熾，若抱、若坐、若臥，謂剎利女，梵志、居士、工師女，年在盛時，沐浴香薰，著明淨衣，華鬘、瓔珞嚴飾其身，若抱、若坐、若臥，何者為樂？」時，諸比丘白曰：「世尊！謂大木積洞燃俱熾，若抱、若坐、若臥，甚苦。世尊！謂剎利女，梵志、居士、工師女，年在盛時，沐浴香薰，著明淨衣，華鬘、瓔珞嚴飾其身，若抱、若坐、若臥，甚樂。世尊！」世尊告曰：「我為汝說，不令汝等學沙門失沙門道。汝欲成無上梵行者，寧抱木積洞燃俱熾，若坐、若臥，彼雖因此受苦或死，然不以是身壞命終，趣至惡處，生地獄中；若愚癡人犯戒不精進，生惡不善法，非梵行稱梵行，非沙門稱沙門；若抱剎利女，梵志、居士、工師女，年在盛時，沐浴香薰，著明淨衣，華鬘、瓔珞嚴飾其身，若坐、若臥者，彼愚癡人因是長夜不善不義，受惡法報，身壞命終，趣至惡處，生地獄中。"
+  },
+  "a04": {
+   "an7.72": "“Etadeva, bhante, varaṁ—yaṁ khattiyakaññaṁ vā brāhmaṇakaññaṁ vā gahapatikaññaṁ vā mudutalunahatthapādaṁ āliṅgetvā upanisīdeyya vā upanipajjeyya vā, dukkhañhetaṁ, bhante, yaṁ amuṁ mahantaṁ aggikkhandhaṁ ādittaṁ sampajjalitaṁ sajotibhūtaṁ āliṅgetvā upanisīdeyya vā upanipajjeyya vā”ti. “Ārocayāmi vo, bhikkhave, paṭivedayāmi vo, bhikkhave, yathā etadeva tassa varaṁ dussīlassa pāpadhammassa asucisaṅkassarasamācārassa paṭicchannakammantassa assamaṇassa samaṇapaṭiññassa abrahmacārissa brahmacāripaṭiññassa antopūtikassa avassutassa kasambujātassa yaṁ amuṁ mahantaṁ aggikkhandhaṁ ādittaṁ sampajjalitaṁ sajotibhūtaṁ āliṅgetvā upanisīdeyya vā upanipajjeyya vā. Taṁ kissa hetu? Tatonidānañhi so, bhikkhave, maraṇaṁ vā nigaccheyya maraṇamattaṁ vā dukkhaṁ, na tveva tappaccayā kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjeyya. Yañca kho so, bhikkhave, dussīlo pāpadhammo asucisaṅkassarasamācāro …pe… kasambujāto khattiyakaññaṁ vā brāhmaṇakaññaṁ vā gahapatikaññaṁ vā mudutalunahatthapādaṁ āliṅgetvā upanisīdati vā upanipajjati vā, tañhi tassa, bhikkhave, hoti dīgharattaṁ ahitāya dukkhāya kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjati.",
+   "T0125-ea33.10": "云何，比丘！寧受人禮拜恭敬？為寧使人取利劍斷其手足？」諸比丘對曰：「寧受恭敬禮拜，不使人以劍斷其手足。所以然者，斷其手足，痛不可稱計。」世尊告曰：「我今告汝等，非沙門行，言是沙門；非梵行人，言是梵行；不聞正法，言聞正法。無清白行，斷善根。如是之人，寧投身受此利劍，不以無戒受他恭敬。所以然者，此痛斯須間耳；地獄苦痛不可稱計。",
+   "T0026-ma5": "當作是學。」世尊復告諸比丘曰：「於意云何？若有力士以緊索毛繩絞勒其𨄔斷皮，斷皮已斷肉，斷肉已斷筋，斷筋已斷骨，斷骨已至髓而住，若從剎利、梵志、居士、工師受其信施，按摩身體、支節、手足，何者為樂？」時，諸比丘白曰：「世尊！若有力士以緊索毛繩絞勒其𨄔斷皮，斷皮已斷肉，斷肉已斷筋，斷筋已斷骨，斷骨已至髓而住，甚苦。世尊！若從剎利、梵志、居士、工師受其信施，按摩身體、支節、手足，甚樂。世尊！」世尊告曰：「我為汝說，不令汝等學沙門失沙門道。汝欲成無上梵行者，寧令力士以緊索毛繩絞勒其𨄔斷皮，斷皮已斷肉，斷肉已斷筋，斷筋已斷骨，斷骨已至髓而住，彼雖因此受苦或死，然不以是身壞命終，趣至惡處，生地獄中；若愚癡人犯戒不精進，生惡不善法，非梵行稱梵行，非沙門稱沙門，從剎利、梵志、居士、工師受其信施，按摩身體、支節、手足，彼愚癡人因是長夜不善不義，受惡法報，身壞命終，趣至惡處，生地獄中。是故汝等當觀自義、觀彼義、觀兩義，當作是念：『我出家學，不虛不空，有果有報，有極安樂，生諸善處而得長壽，受人信施衣被、飲食、床褥、湯藥，令諸施主得大福祐，得大果報，得大光明者。』當作是學。」世尊復告諸比丘曰：「於意云何？若有力士以瑩磨利刀截斷其髀，若從剎利、梵志、居士、工師受信施、禮拜，恭敬將迎，何者為樂？」時，諸比丘白曰：「世尊！若有力士以瑩磨利刀截斷其髀，甚苦。世尊！若從剎利、梵志、居士、工師受信施、禮拜，恭敬將迎，甚樂。世尊！」世尊告曰：「我為汝說，不令汝等學沙門失沙門道。汝欲成無上梵行者，寧令力士以瑩磨利刀截斷其髀，彼雖因此受苦或死，然不以是身壞命終，趣至惡處，生地獄中；若愚癡人犯戒不精進，生惡不善法，非梵行稱梵行，非沙門稱沙門，從剎利、梵志、居士、工師受信施、禮拜，恭敬將迎，彼愚癡人因是長夜不善不義，受惡法報，身壞命終，趣至惡處，生地獄中。是故汝等當觀自義、觀彼義、觀兩義，當作是念：我出家學，不虛不空，有果有報，有極安樂，生諸善處而得長壽，受人信施衣被、飲食床褥、湯藥，令諸施主得大福祐，得大果報，得大光明者。當作是學。」世尊復告諸比丘曰：「於意云何？"
+  },
+  "a05": {
+   "an7.72": "Taṁ kiṁ maññatha, bhikkhave, katamaṁ nu kho varaṁ—yaṁ balavā puriso daḷhāya vālarajjuyā ubho jaṅghā veṭhetvā ghaṁseyya—sā chaviṁ chindeyya chaviṁ chetvā cammaṁ chindeyya cammaṁ chetvā maṁsaṁ chindeyya maṁsaṁ chetvā nhāruṁ chindeyya nhāruṁ chetvā aṭṭhiṁ chindeyya aṭṭhiṁ chetvā aṭṭhimiñjaṁ āhacca tiṭṭheyya, yaṁ vā khattiyamahāsālānaṁ vā brāhmaṇamahāsālānaṁ vā gahapatimahāsālānaṁ vā abhivādanaṁ sādiyeyyā”ti? “Etadeva, bhante, varaṁ—yaṁ khattiyamahāsālānaṁ vā brāhmaṇamahāsālānaṁ vā gahapatimahāsālānaṁ vā abhivādanaṁ sādiyeyya, dukkhañhetaṁ, bhante, yaṁ balavā puriso daḷhāya vālarajjuyā …pe… aṭṭhimiñjaṁ āhacca tiṭṭheyyā”ti. Ārocayāmi vo, bhikkhave, paṭivedayāmi vo, bhikkhave, yathā etadeva tassa varaṁ dussīlassa …pe… kasambujātassa yaṁ balavā puriso daḷhāya vālarajjuyā ubho jaṅghā veṭhetvā …pe… aṭṭhimiñjaṁ āhacca tiṭṭheyya. Taṁ kissa hetu?",
+   "T0125-ea33.10": "云何，比丘！寧受人衣裳？為寧以熱鐵鍱用纏裹身？」諸比丘對曰：「寧以受人衣裳，不受此苦痛。所以然者，此毒痛不可稱計。」世尊告曰：「我今重告汝，無戒之人，寧以熱鐵鍱纏裹其身，不受人衣裳。所以然者，此痛須臾間耳；地獄苦痛不可稱計。",
+   "T0026-ma5": "若有力士以鐵銅鍱洞燃俱熾，纏絡其身，若從剎利、梵志、居士、工師受信施衣服，何者為樂？」時，諸比丘白曰：「世尊！若有力士以鐵銅鍱洞燃俱熾，纏絡其身，甚苦。世尊！若從剎利、梵志、居士、工師受信施衣服，甚樂。世尊！」世尊告曰：「我為汝說，不令汝等學沙門失沙門道。汝欲成無上梵行者，寧令力士以鐵銅鍱洞燃俱熾，纏絡其身，彼雖因此受苦或死，然不以是身壞命終，趣至惡處，生地獄中；若愚癡人犯戒不精進，生惡不善法，非梵行稱梵行，非沙門稱沙門，從剎利、梵志、居士、工師受信施衣服，彼愚癡人因是長夜不善不義，受惡法報，身壞命終，趣至惡處，生地獄中。是故汝等當觀自義、觀彼義、觀兩義，當作是念：『我出家學，不虛不空，有果有報，有極安樂，生諸善處而得長壽，受人信施衣被、飲食、床褥、湯藥，令諸施主得大福祐，得大果報，得大光明者。』當作是學。」世尊復告諸比丘曰：「於意云何？"
+  },
+  "a06": {
+   "an7.72": "Tatonidānañhi so, bhikkhave, maraṇaṁ vā nigaccheyya maraṇamattaṁ vā dukkhaṁ, na tveva tappaccayā kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjeyya. Yañca kho so, bhikkhave, dussīlo …pe… kasambujāto khattiyamahāsālānaṁ vā brāhmaṇamahāsālānaṁ vā gahapatimahāsālānaṁ vā abhivādanaṁ sādiyati, tañhi tassa, bhikkhave, hoti dīgharattaṁ ahitāya dukkhāya kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjati. “Taṁ kiṁ maññatha, bhikkhave, katamaṁ nu kho varaṁ—yaṁ balavā puriso tiṇhāya sattiyā teladhotāya paccorasmiṁ pahareyya, yaṁ vā khattiyamahāsālānaṁ vā brāhmaṇamahāsālānaṁ vā gahapatimahāsālānaṁ vā añjalikammaṁ sādiyeyyā”ti? “Etadeva, bhante, varaṁ—yaṁ khattiyamahāsālānaṁ vā brāhmaṇamahāsālānaṁ vā gahapatimahāsālānaṁ vā añjalikammaṁ sādiyeyya, dukkhañhetaṁ, bhante, yaṁ balavā puriso tiṇhāya sattiyā teladhotāya paccorasmiṁ pahareyyā”ti.",
+   "T0125-ea33.10": "云何，比丘！寧受人信施之食？為寧以吞熱鐵丸乎？」諸比丘對曰：「寧受人信施之食，不吞熱鐵丸。所以然者，此痛不可堪處。」世尊告曰：「我今語汝，寧吞熱鐵丸，不以無戒受人信施。所以然者，吞熱鐵丸，痛斯須間，不以無戒受他信施。",
+   "T0026-ma5": "若有力士以熱鐵鉗鉗開其口，便以鐵丸洞燃俱熾，著其口中，彼熱鐵丸燒脣，燒脣已燒舌，燒舌已燒齗，燒齗已燒咽，燒咽已燒心，燒心已燒腸胃，燒腸胃已下過，若從剎利、梵志、居士、工師受信施食無量眾味，何者為樂？」時，諸比丘白曰：「世尊！若有力士以熱鐵鉗鉗開其口，便以鐵丸洞燃俱熾，著其口中，彼熱鐵丸燒脣，燒脣已燒舌，燒舌已燒齗，燒齗已燒咽，燒咽已燒心，燒心已燒腸胃，燒腸胃已下過，甚苦。世尊！若從剎利、梵志、居士、工師受信施食無量眾味，甚樂。世尊！」世尊告曰：「我為汝說，不令汝等學沙門失沙門道。汝欲成無上梵行者，寧令力士以熱鐵鉗鉗開其口，便以鐵丸洞燃俱熾，著其口中，彼熱鐵丸燒脣，燒脣已燒舌，燒舌已燒齗，燒齗已燒咽，燒咽已燒心，燒心已燒腸胃，燒腸胃已下過，彼雖因此受苦或死，然不以是身壞命終，趣至惡處，生地獄中；若愚癡人犯戒不精進，生惡不善法，非梵行稱梵行，非沙門稱沙門，從剎利、梵志、居士、工師受信施食無量眾味，彼愚癡人因是長夜不善不義，受惡法報，身壞命終，趣至惡處，生地獄中。是故汝等當觀自義、觀彼義、觀兩義，當作是念：『我出家學，不虛不空，有果有報，有極安樂，生諸善處而得長壽，受人信施衣被、飲食、床褥、湯藥，令諸施主得大福祐，得大果報，得大光明者。』當作是學。」世尊復告諸比丘曰：「於意云何？"
+  },
+  "a07": {
+   "an7.72": "“Ārocayāmi vo, bhikkhave, paṭivedayāmi vo, bhikkhave, yathā etadeva tassa varaṁ dussīlassa …pe… kasambujātassa yaṁ balavā puriso tiṇhāya sattiyā teladhotāya paccorasmiṁ pahareyya. Taṁ kissa hetu? Tatonidānañhi so, bhikkhave, maraṇaṁ vā nigaccheyya maraṇamattaṁ vā dukkhaṁ, na tveva tappaccayā kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjeyya. Yañca kho so, bhikkhave, dussīlo pāpadhammo …pe… kasambujāto khattiyamahāsālānaṁ vā brāhmaṇamahāsālānaṁ vā gahapatimahāsālānaṁ vā añjalikammaṁ sādiyati, tañhi tassa, bhikkhave, hoti dīgharattaṁ ahitāya dukkhāya kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjati. Taṁ kiṁ maññatha, bhikkhave, katamaṁ nu kho varaṁ—yaṁ balavā puriso tattena ayopaṭṭena ādittena sampajjalitena sajotibhūtena kāyaṁ sampaliveṭheyya, yaṁ vā khattiyamahāsālānaṁ vā brāhmaṇamahāsālānaṁ vā gahapatimahāsālānaṁ vā saddhādeyyaṁ cīvaraṁ paribhuñjeyyā”ti? “Etadeva, bhante, varaṁ—yaṁ khattiyamahāsālānaṁ vā …pe… saddhādeyyaṁ cīvaraṁ paribhuñjeyya, dukkhañhetaṁ, bhante, yaṁ balavā puriso tattena ayopaṭṭena ādittena sampajjalitena sajotibhūtena kāyaṁ sampaliveṭheyyā”ti. “Ārocayāmi vo, bhikkhave, paṭivedayāmi vo, bhikkhave, yathā etadeva tassa varaṁ dussīlassa …pe… kasambujātassa yaṁ balavā puriso tattena ayopaṭṭena ādittena sampajjalitena sajotibhūtena kāyaṁ sampaliveṭheyya. Taṁ kissa hetu? Tatonidānañhi so, bhikkhave, maraṇaṁ vā nigaccheyya maraṇamattaṁ vā dukkhaṁ, na tveva tappaccayā kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjeyya. Yañca kho so, bhikkhave, dussīlo …pe… kasambujāto khattiyamahāsālānaṁ vā brāhmaṇamahāsālānaṁ vā gahapatimahāsālānaṁ vā saddhādeyyaṁ cīvaraṁ paribhuñjati, tañhi tassa, bhikkhave, hoti dīgharattaṁ ahitāya dukkhāya kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjati. Taṁ kiṁ maññatha, bhikkhave, katamaṁ nu kho varaṁ—yaṁ balavā puriso tattena ayosaṅkunā mukhaṁ vivaritvā tattaṁ lohaguḷaṁ ādittaṁ sampajjalitaṁ sajotibhūtaṁ mukhe pakkhipeyya—taṁ tassa oṭṭhampi daheyya mukhampi daheyya jivhampi daheyya kaṇṭhampi daheyya urampi daheyya antampi antaguṇampi ādāya adhobhāgā nikkhameyya, yaṁ vā khattiyamahāsālānaṁ vā brāhmaṇamahāsālānaṁ vā gahapatimahāsālānaṁ vā saddhādeyyaṁ piṇḍapātaṁ paribhuñjeyyā”ti? “Etadeva, bhante, varaṁ—yaṁ khattiyamahāsālānaṁ vā brāhmaṇamahāsālānaṁ vā gahapatimahāsālānaṁ vā saddhādeyyaṁ piṇḍapātaṁ paribhuñjeyya, dukkhañhetaṁ, bhante, yaṁ balavā puriso tattena ayosaṅkunā mukhaṁ vivaritvā tattaṁ lohaguḷaṁ ādittaṁ sampajjalitaṁ sajotibhūtaṁ mukhe pakkhipeyya—taṁ tassa oṭṭhampi daheyya mukhampi daheyya jivhampi daheyya kaṇṭhampi daheyya urampi daheyya antampi antaguṇampi ādāya adhobhāgaṁ nikkhameyyā”ti. “Ārocayāmi vo, bhikkhave, paṭivedayāmi vo, bhikkhave, yathā etadeva tassa varaṁ dussīlassa …pe… kasambujātassa yaṁ balavā puriso tattena ayosaṅkunā mukhaṁ vivaritvā tattaṁ lohaguḷaṁ ādittaṁ sampajjalitaṁ sajotibhūtaṁ mukhe pakkhipeyya—taṁ tassa oṭṭhampi daheyya mukhampi daheyya jivhampi daheyya kaṇṭhampi daheyya urampi daheyya antampi antaguṇampi ādāya adhobhāgaṁ nikkhameyya. Taṁ kissa hetu? Tatonidānañhi so, bhikkhave, maraṇaṁ vā nigaccheyya maraṇamattaṁ vā dukkhaṁ, na tveva tappaccayā kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjeyya. Yañca kho so, bhikkhave, dussīlo pāpadhammo …pe… kasambujāto khattiyamahāsālānaṁ vā brāhmaṇamahāsālānaṁ vā gahapatimahāsālānaṁ vā saddhādeyyaṁ piṇḍapātaṁ paribhuñjati, tañhi tassa hoti dīgharattaṁ ahitāya dukkhāya kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjati. Taṁ kiṁ maññatha, bhikkhave, katamaṁ nu kho varaṁ—yaṁ balavā puriso sīse vā gahetvā khandhe vā gahetvā tattaṁ ayomañcaṁ vā ayopīṭhaṁ vā abhinisīdāpeyya vā abhinipajjāpeyya vā, yaṁ vā khattiyamahāsālānaṁ vā brāhmaṇamahāsālānaṁ vā gahapatimahāsālānaṁ vā saddhādeyyaṁ mañcapīṭhaṁ paribhuñjeyyā”ti? “Etadeva, bhante, varaṁ—yaṁ khattiyamahāsālānaṁ vā brāhmaṇamahāsālānaṁ vā gahapatimahāsālānaṁ vā saddhādeyyaṁ mañcapīṭhaṁ paribhuñjeyya, dukkhañhetaṁ, bhante, yaṁ balavā puriso sīse vā gahetvā khandhe vā gahetvā tattaṁ ayomañcaṁ vā ayopīṭhaṁ vā abhinisīdāpeyya vā abhinipajjāpeyya vā”ti. “Ārocayāmi vo, bhikkhave, paṭivedayāmi vo, bhikkhave, yathā etadeva tassa varaṁ dussīlassa …pe… kasambujātassa yaṁ balavā puriso sīse vā gahetvā khandhe vā gahetvā tattaṁ ayomañcaṁ vā ayopīṭhaṁ vā abhinisīdāpeyya vā abhinipajjāpeyya vā. Taṁ kissa hetu? Tatonidānañhi so, bhikkhave, maraṇaṁ vā nigaccheyya maraṇamattaṁ vā dukkhaṁ, na tveva tappaccayā kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjeyya. Yañca kho so, bhikkhave, dussīlo pāpadhammo …pe… kasambujāto khattiyamahāsālānaṁ vā brāhmaṇamahāsālānaṁ vā gahapatimahāsālānaṁ vā saddhādeyyaṁ mañcapīṭhaṁ paribhuñjati. Tañhi tassa, bhikkhave, hoti dīgharattaṁ ahitāya dukkhāya kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjati. Taṁ kiṁ maññatha, bhikkhave, katamaṁ nu kho varaṁ—yaṁ balavā puriso uddhampādaṁ adhosiraṁ gahetvā tattāya lohakumbhiyā pakkhipeyya ādittāya sampajjalitāya sajotibhūtāya—so tattha pheṇuddehakaṁ paccamāno sakimpi uddhaṁ gaccheyya sakimpi adho gaccheyya sakimpi tiriyaṁ gaccheyya, yaṁ vā khattiyamahāsālānaṁ vā brāhmaṇamahāsālānaṁ vā gahapatimahāsālānaṁ vā saddhādeyyaṁ vihāraṁ paribhuñjeyyā”ti? “Etadeva, bhante, varaṁ—yaṁ khattiyamahāsālānaṁ vā brāhmaṇamahāsālānaṁ vā gahapatimahāsālānaṁ vā saddhādeyyaṁ vihāraṁ paribhuñjeyya, dukkhañhetaṁ, bhante, yaṁ balavā puriso uddhampādaṁ adhosiraṁ gahetvā tattāya lohakumbhiyā pakkhipeyya ādittāya sampajjalitāya sajotibhūtāya—so tattha pheṇuddehakaṁ paccamāno sakimpi uddhaṁ gaccheyya sakimpi adho gaccheyya sakimpi tiriyaṁ gaccheyyā”ti. “Ārocayāmi vo, bhikkhave, paṭivedayāmi vo, bhikkhave, yathā etadeva tassa varaṁ dussīlassa pāpadhammassa …pe… kasambujātassa yaṁ balavā puriso uddhampādaṁ adhosiraṁ gahetvā …pe… sakimpi tiriyaṁ gaccheyya. Taṁ kissa hetu? Tatonidānañhi so, bhikkhave, maraṇaṁ vā nigaccheyya maraṇamattaṁ vā dukkhaṁ, na tveva tappaccayā kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjeyya. Yañca kho so, bhikkhave, dussīlo pāpadhammo …pe… kasambujāto khattiyamahāsālānaṁ vā brāhmaṇamahāsālānaṁ vā gahapatimahāsālānaṁ vā saddhādeyyaṁ vihāraṁ paribhuñjati. Tañhi tassa, bhikkhave, hoti dīgharattaṁ ahitāya dukkhāya kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjati.",
+   "T0125-ea33.10": "云何，比丘！寧受人床敷之具？為寧臥熱鐵床上？」諸比丘對曰：「我等，世尊！寧受人床臥之具，不臥鐵床上。所以然者，此之毒痛不可稱計。」世尊告曰：「彼愚癡之人無有戒行，非沙門言是沙門；無有梵行，言修梵行，寧當臥鐵床上，不以無戒受他信施。何以故，臥鐵床上，痛斯須間，不以無戒受他信施。「比丘當知，如我今日觀無戒之人所趣向處，設彼人間者，形體枯悴，沸血從面孔出，便取命終，不與女人共相交遊，不受人禮敬之德，不受人衣被、飯食、床敷臥具、病瘦醫藥，以其無戒之人，不觀後世、前世之罪，不顧命根受此苦痛，無戒之人當生三惡趣中。所以然者，以其造惡行之所致也。「如來今日觀察善行人之所趣向，正使中毒，為刀所傷，自斷命根。何以故？欲捨此身受天之福，當生善處，皆由前世受善行報之所致也。",
+   "T0026-ma5": "若有力士以鐵銅床洞燃俱熾，強逼使人坐臥其上，若從剎利、梵志、居士、工師受其信施床㯓臥具，何者為樂？」時，諸比丘白曰：「世尊！若有力士以鐵銅床洞燃俱熾，強逼使人坐臥其上，甚苦。世尊！若從剎利、梵志、居士、工師受其信施床㯓臥具，甚樂。世尊！」世尊告曰：「我為汝說，不令汝等學沙門失沙門道。汝欲成無上梵行者，寧令力士以鐵銅床洞燃俱熾，強逼使人坐臥其上，彼雖因此受苦或死，然不以是身壞命終，趣至惡處，生地獄中；若愚癡人犯戒不精進，生惡不善法，非梵行稱梵行，非沙門稱沙門，從剎利、梵志、居士、工師受其信施床㯓臥具，彼愚癡人因是長夜不善不義，受惡法報，身壞命終，趣至惡處，生地獄中。是故汝等當觀自義、觀彼義、觀兩義，當作是念：『我出家學，不虛不空，有果有報，有極安樂，生諸善處而得長壽，受人信施衣被、飲食、床褥、湯藥，令諸施主得大福祐，得大果報，得大光明者。』當作是學。」世尊復告諸比丘曰：「於意云何？若有力士以大鐵銅釜洞燃俱熾，撮舉人已，倒著釜中，若從剎利、梵志、居士、工師受信施房舍，泥治堊灑，窗戶牢密，爐火熅暖，何者為樂？」時，諸比丘白曰：「世尊！若有力士以大鐵銅釜洞燃俱熾，撮舉人已，倒著釜中，甚苦。世尊！若從剎利、梵志、居士、工師受信施房舍，泥治堊灑，窗戶牢密，爐火熅暖，甚樂。世尊！」世尊告曰：「我為汝說，不令汝等學沙門失沙門道。汝欲成無上梵行者，寧令力士以大鐵銅釜洞燃俱熾，撮舉人已，倒著釜中，彼雖因此受苦或死，然不以是身壞命終，趣至惡處，生地獄中；若愚癡人犯戒不精進，生惡不善法，非梵行稱梵行，非沙門稱沙門，從剎利、梵志、居士、工師受信施房舍，泥治堊灑，窗戶牢密，爐火熅暖，彼愚癡人因是長夜不善不義，受惡法報，身壞命終，趣至惡處，生地獄中。是故汝等當觀自義、觀彼義、觀兩義，當作是念：『我出家學，不虛不空，有果有報，有極安樂，生諸善處而得長壽，受人信施衣被、飲食、床褥、湯藥，令諸施主得大福祐，得大果報，得大光明者。』"
+  },
+  "a08": {
+   "an7.72": "Tasmātiha, bhikkhave, evaṁ sikkhitabbaṁ: ‘yesañca mayaṁ paribhuñjāma cīvarapiṇḍapātasenāsanagilānappaccayabhesajjaparikkhāraṁ tesaṁ te kārā mahapphalā bhavissanti mahānisaṁsā, amhākañcevāyaṁ pabbajjā avañjhā bhavissati saphalā saudrayā’ti. Evañhi vo, bhikkhave, sikkhitabbaṁ: ‘attatthaṁ vā, bhikkhave, sampassamānena alameva appamādena sampādetuṁ; paratthaṁ vā, bhikkhave, sampassamānena alameva appamādena sampādetuṁ; ubhayatthaṁ vā, bhikkhave, sampassamānena alameva appamādena sampādetun’”ti. Idamavoca bhagavā.",
+   "T0125-ea33.10": "「是故，比丘，當念修行戒身、定身、慧身、解脫身、解脫所見身。欲使今世獲其果報，得甘露道，正使受人衣被、飲食、床敷臥具、病瘦醫藥而無過失，又使檀越受福無窮。",
+   "T0026-ma5": "是故汝等當觀自義、觀彼義、觀兩義，當作是念：『我出家學，不虛不空，有果有報，有極安樂，生諸善處而得長壽，受人信施衣被、飲食、床褥、湯藥，令諸施主得大福祐，得大果報，得大光明者。』"
+  },
+  "a09": {
+   "an7.72": "Imasmiñca pana veyyākaraṇasmiṁ bhaññamāne saṭṭhimattānaṁ bhikkhūnaṁ uṇhaṁ lohitaṁ mukhato uggañchi. Saṭṭhimattā bhikkhū sikkhaṁ paccakkhāya hīnāyāvattiṁsu: “sudukkaraṁ bhagavā, sudukkaraṁ bhagavā”ti. Saṭṭhimattānaṁ bhikkhūnaṁ anupādāya āsavehi cittāni vimucciṁsūti. Aṭṭhamaṁ.",
+   "T0125-ea33.10": "如是，諸比丘！當作是學。」爾時，說此法時，六十比丘漏盡意解，六十比丘還捨法服而作白衣。爾時，諸比丘聞佛所說，歡喜奉行。五王及月光尸婆、二種鬪\n二掃、二行法去住有二種\n枯樹最在後",
+   "T0026-ma5": "當作是學。」說此法時，六十比丘漏盡結解，六十比丘捨戒還家。所以者何？世尊教誡甚深、甚難，學道亦復甚深、甚難。佛說如是。彼諸比丘聞佛所說，歡喜奉行。木積喻經第五竟（二千六百四十四字）"
+  }
+ }
+}

@@ -1,0 +1,144 @@
+{
+ "slug": "pi-an4.36",
+ "title": "別譯雜阿含經 （二六七）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "發現佛跡"
+  },
+  {
+   "id": "a02",
+   "label": "追尋佛跡"
+  },
+  {
+   "id": "a03",
+   "label": "見佛容儀"
+  },
+  {
+   "id": "a04",
+   "label": "婆羅門請問"
+  },
+  {
+   "id": "a05",
+   "label": "佛答非天"
+  },
+  {
+   "id": "a06",
+   "label": "婆羅門問非龍等"
+  },
+  {
+   "id": "a07",
+   "label": "佛答非龍乃至非人"
+  },
+  {
+   "id": "a08",
+   "label": "婆羅門問何所是"
+  },
+  {
+   "id": "a09",
+   "label": "佛說偈頌"
+  },
+  {
+   "id": "a10",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "an4.36",
+   "lang": "pi",
+   "label": "巴利 AN4.36",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "T0100-sa-2.267",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （二六七）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa101",
+   "lang": "lzh",
+   "label": "雜阿含經 （一〇一）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（二六七）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一〇一）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "an4.36": "Aṅguttara Nikāya 4.36 4. Cakkavagga Doṇasutta",
+   "T0100-sa-2.267": "如是我聞：一時，佛在憍薩羅國遊行，至沙林聚落。",
+   "T0099-sa101": "如是我聞：一時，佛在拘薩羅人間遊行，有從迦帝聚落、墮鳩羅聚落二村中間，一樹下坐，入晝正受。"
+  },
+  "a01": {
+   "an4.36": "Ekaṁ samayaṁ bhagavā antarā ca ukkaṭṭhaṁ antarā ca setabyaṁ addhānamaggappaṭipanno hoti.",
+   "T0100-sa-2.267": "爾時，世尊捨於道次，在一樹下，正身端坐，繫念在前。",
+   "T0099-sa101": "時，有豆磨種姓婆羅門隨彼道行，尋佛後來，見佛脚跡千輻輪相，印文顯現，齊輻圓輞，眾好滿足。"
+  },
+  "a02": {
+   "an4.36": "Doṇopi sudaṁ brāhmaṇo antarā ca ukkaṭṭhaṁ antarā ca setabyaṁ addhānamaggappaṭipanno hoti.",
+   "T0100-sa-2.267": "時有一婆羅門，姓曰煙氏，在佛後來，見佛跡中，千輻輪相，怪未曾有。",
+   "T0099-sa101": "見已，作是念：「我未曾見人間有如是足跡，今當隨跡以求其人。」"
+  },
+  "a03": {
+   "an4.36": "Addasā kho doṇo brāhmaṇo bhagavato pādesu cakkāni sahassārāni sanemikāni sanābhikāni sabbākāraparipūrāni;",
+   "T0100-sa-2.267": "即自思惟：「我未見人有如是跡，我當推尋是何人跡。」",
+   "T0099-sa101": "即尋脚跡至於佛所，來見世尊坐一樹下，入晝正受，嚴容絕世，諸根澄靜，其心寂定，第一調伏，正觀成就，光相巍巍，猶若金山。"
+  },
+  "a04": {
+   "an4.36": "disvānassa etadahosi: “acchariyaṁ vata bho, abbhutaṁ vata bho. Na vatimāni manussabhūtassa padāni bhavissantī”ti. Atha kho bhagavā maggā okkamma aññatarasmiṁ rukkhamūle nisīdi pallaṅkaṁ ābhujitvā ujuṁ kāyaṁ paṇidhāya parimukhaṁ satiṁ upaṭṭhapetvā. Atha kho doṇo brāhmaṇo bhagavato padāni anugacchanto addasa bhagavantaṁ aññatarasmiṁ rukkhamūle nisinnaṁ pāsādikaṁ pasādanīyaṁ santindriyaṁ santamānasaṁ uttamadamathasamathamanuppattaṁ dantaṁ guttaṁ saṁyatindriyaṁ nāgaṁ. Disvāna yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ etadavoca: “Devo no bhavaṁ bhavissatī”ti?",
+   "T0100-sa-2.267": "作是念已，即尋其跡，往至佛所，瞻仰尊顏，容色悅豫，覩者信敬，諸相寂定，心意亦定，得最上調心，寂滅之寂，身真金色，猶如金樓。即白佛言：「世尊！",
+   "T0099-sa101": "見已，白言：「為是天耶？」"
+  },
+  "a05": {
+   "an4.36": "“Na kho ahaṁ, brāhmaṇa, devo bhavissāmī”ti.",
+   "T0100-sa-2.267": "汝當得天也。」佛言：「婆羅門！",
+   "T0099-sa101": "佛告婆羅門：「我非天也。」"
+  },
+  "a06": {
+   "an4.36": "“Gandhabbo no bhavaṁ bhavissatī”ti?",
+   "T0100-sa-2.267": "我不得天也。」婆羅門言：「當得阿修羅，為得龍、揵闥婆、夜叉、緊那羅、摩睺羅伽也。」",
+   "T0099-sa101": "「為龍、夜叉、乾闥婆、阿修羅、迦樓羅、緊那羅、摩睺羅伽、人、非人等？」"
+  },
+  "a07": {
+   "an4.36": "“Na kho ahaṁ, brāhmaṇa, gandhabbo bhavissāmī”ti.",
+   "T0100-sa-2.267": "佛言：「我皆不得。」",
+   "T0099-sa101": "佛告婆羅門：「我非龍乃至人、非人也。」"
+  },
+  "a08": {
+   "an4.36": "“Yakkho no bhavaṁ bhavissatī”ti? “Na kho ahaṁ, brāhmaṇa, yakkho bhavissāmī”ti. “Manusso no bhavaṁ bhavissatī”ti? “Na kho ahaṁ, brāhmaṇa, manusso bhavissāmī”ti. “‘Devo no bhavaṁ bhavissatī’ti, iti puṭṭho samāno: ‘na kho ahaṁ, brāhmaṇa, devo bhavissāmī’ti vadesi. ‘Gandhabbo no bhavaṁ bhavissatī’ti, iti puṭṭho samāno: ‘na kho ahaṁ, brāhmaṇa, gandhabbo bhavissāmī’ti vadesi. ‘Yakkho no bhavaṁ bhavissatī’ti, iti puṭṭho samāno: ‘na kho ahaṁ, brāhmaṇa, yakkho bhavissāmī’ti vadesi. ‘Manusso no bhavaṁ bhavissatī’ti, iti puṭṭho samāno: ‘na kho ahaṁ, brāhmaṇa, manusso bhavissāmī’ti vadesi. Atha ko carahi bhavaṁ bhavissatī”ti?",
+   "T0100-sa-2.267": "婆羅門言：「汝得人也。」佛言：「我不得人也。」婆羅門言：「我問汝為得天及龍、阿修羅、揵闥婆、夜叉、緊那羅、摩睺羅伽，及人，汝皆言不得，為何所得也？」",
+   "T0099-sa101": "婆羅門白佛：「若言非天、非龍，乃至非人、非非人，為是何等？」"
+  },
+  "a09": {
+   "an4.36": "“Yesaṁ kho ahaṁ, brāhmaṇa, āsavānaṁ appahīnattā devo bhaveyyaṁ, te me āsavā pahīnā ucchinnamūlā tālāvatthukatā anabhāvaṅkatā āyatiṁ anuppādadhammā. Yesaṁ kho ahaṁ, brāhmaṇa, āsavānaṁ appahīnattā gandhabbo bhaveyyaṁ … yakkho bhaveyyaṁ … manusso bhaveyyaṁ, te me āsavā pahīnā ucchinnamūlā tālāvatthukatā anabhāvaṅkatā āyatiṁ anuppādadhammā. Seyyathāpi, brāhmaṇa, uppalaṁ vā padumaṁ vā puṇḍarīkaṁ vā udake jātaṁ udake saṁvaḍḍhaṁ udakā accuggamma tiṭṭhati anupalittaṁ udakena; evamevaṁ kho ahaṁ, brāhmaṇa, loke jāto loke saṁvaḍḍho lokaṁ abhibhuyya viharāmi anupalitto lokena. Buddhoti maṁ, brāhmaṇa, dhārehīti. Yena devūpapatyassa, gandhabbo vā vihaṅgamo; Yakkhattaṁ yena gaccheyyaṁ, manussattañca abbaje; Te mayhaṁ āsavā khīṇā, viddhastā vinaḷīkatā. Puṇḍarīkaṁ yathā vaggu, Toyena nupalippati; Nupalippāmi lokena,",
+   "T0100-sa-2.267": "爾時，世尊即說偈言：「我非天龍阿修羅，緊那摩睺乾闥婆，\n亦非夜叉及以人，我漏已盡斷煩惱。\n我雖調馴如龍象，終不為他所制御，\n不為他制斷疑故，斷愛解脫離諸趣。\n一切盡知斷後生，如芬陀利善開敷，\n處於水中得增長，終不為水之所著。\n清淨香潔人所樂，八法不污如蓮華，\n我亦如是生世間，同於世法不染著。\n無量劫來常觀察，諸行所緣受苦惱，\n諸受生者皆終沒，遠塵離垢斷眾習，\n拔出毒箭斷煩惱，皆得盡於生死際。「以是之故，號之為佛。」",
+   "T0099-sa101": "爾時，世尊說偈答言：「天龍乾闥婆，緊那羅夜叉，\n無善阿修羅，諸摩睺羅伽，\n人與非人等，悉由煩惱生，\n如是煩惱漏，一切我已捨，\n已破已磨滅，如芬陀利生，\n雖生於水中，而未曾著水，\n我雖生世間，不為世間著，\n歷劫常選擇，純苦無暫樂，\n一切有為行，悉皆生滅故，\n離垢不傾動，已拔諸劍刺，\n究竟生死除，故名為佛陀。」"
+  },
+  "a10": {
+   "an4.36": "Tasmā buddhosmi brāhmaṇā”ti. Chaṭṭhaṁ.",
+   "T0100-sa-2.267": "煙姓婆羅門聞佛所說，歡喜而去。慢、優竭提　生聽、極老　比丘、種作　及梵天　佛陀、輪相為第十",
+   "T0099-sa101": "佛說此經已，豆摩種婆羅門聞佛所說，歡喜隨喜，從路而去。"
+  }
+ }
+}

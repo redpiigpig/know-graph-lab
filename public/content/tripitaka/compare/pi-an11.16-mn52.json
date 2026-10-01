@@ -1,0 +1,213 @@
+{
+ "slug": "pi-an11.16-mn52",
+ "title": "十支居士八城人經",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "居士請問阿難所在"
+  },
+  {
+   "id": "a02",
+   "label": "阿難答居士所在"
+  },
+  {
+   "id": "a03",
+   "label": "居士往見阿難"
+  },
+  {
+   "id": "a04",
+   "label": "居士問一法可得漏盡"
+  },
+  {
+   "id": "a05",
+   "label": "阿難答初禪可得漏盡"
+  },
+  {
+   "id": "a06",
+   "label": "阿難答第二禪可得漏盡"
+  },
+  {
+   "id": "a07",
+   "label": "阿難答第三禪可得漏盡"
+  },
+  {
+   "id": "a08",
+   "label": "阿難答第四禪可得漏盡"
+  },
+  {
+   "id": "a09",
+   "label": "阿難答慈解脫可得漏盡"
+  },
+  {
+   "id": "a10",
+   "label": "阿難答悲喜捨解脫可得漏盡"
+  },
+  {
+   "id": "a11",
+   "label": "阿難答空無邊處可得漏盡"
+  },
+  {
+   "id": "a12",
+   "label": "阿難答識無邊處可得漏盡"
+  },
+  {
+   "id": "a13",
+   "label": "阿難答無所有處可得漏盡"
+  },
+  {
+   "id": "a14",
+   "label": "居士以譬喻讚歎"
+  },
+  {
+   "id": "a15",
+   "label": "居士供養阿難"
+  }
+ ],
+ "versions": [
+  {
+   "id": "an11.16",
+   "lang": "pi",
+   "label": "巴利 AN11.16",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "mn52",
+   "lang": "pi",
+   "label": "巴利 MN52",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-mn52",
+   "lang": "lzh",
+   "label": "漢譯南傳 MN52",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0026-ma217",
+   "lang": "lzh",
+   "label": "中阿含經 （二一七）中阿含例品八城經第六（第五後誦）",
+   "who": "東晉 瞿曇僧伽提婆譯"
+  },
+  {
+   "id": "T0092",
+   "lang": "lzh",
+   "label": "十支居士八城人經",
+   "who": "後漢 安世高譯"
+  }
+ ],
+ "works": [
+  "T0026",
+  "T0092"
+ ],
+ "anchors": [
+  {
+   "work": "T0026",
+   "node": "（二一七）中阿含例品八城經第六（第五後誦）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "an11.16": "Aṅguttara Nikāya 11.16 2. Anussativagga Aṭṭhakanāgarasutta",
+   "mn52": "Majjhima Nikāya 52 Aṭṭhakanāgarasutta Evaṁ me sutaṁ—",
+   "nan-mn52": "第五十二　八城經",
+   "T0026-ma217": "我聞如是：一時，佛般涅槃後不久，眾多上尊名德比丘遊波羅利子城，住在雞園。是時，第十居士八城持多妙貨，往至波羅利子城治生販賣。於是，第十居士八城，彼多妙貨，貨賣速售，大得財利，歡喜踊躍，出波羅利子城，往詣鷄園眾多上尊名德比丘所，稽首禮足，却坐一面。時，諸上尊名德比丘為彼說法，勸發渴仰，成就歡喜，無量方便為彼說法，勸發渴仰，成就歡喜已，默然而住。時，諸上尊比丘為彼說法，勸發渴仰，成就歡喜已。",
+   "T0092": "聞如是：一時，諸上尊比丘，在波羅梨弗都盧城雞園中。世尊般涅槃不久，於是十支居士八城人多有財物，詣波羅梨弗都盧治生，於是十支居士八城人持錢財物盡買，盡買已極歡喜，得盈利極大歡喜意、極悅豫。出波羅梨弗都盧城已至雞園中，到已禮諸上尊比丘足，却坐一面。彼十支居士八城人却坐一面，時諸上尊比丘為說法勸進、等勸進，教授、等教授，以無量方便為說法勸進至等教授，等令歡喜已默然住。"
+  },
+  "a01": {
+   "an11.16": "Ekaṁ samayaṁ āyasmā ānando vesāliyaṁ viharati beluvagāmake. Tena kho pana samayena dasamo gahapati aṭṭhakanāgaro pāṭaliputtaṁ anuppatto hoti kenacideva karaṇīyena. Atha kho dasamo gahapati aṭṭhakanāgaro yena kukkuṭārāmo yena aññataro bhikkhu tenupasaṅkami; upasaṅkamitvā taṁ bhikkhuṁ etadavoca: “kahaṁ nu kho, bhante, āyasmā ānando etarahi viharati? Dassanakāmā hi mayaṁ, bhante, āyasmantaṁ ānandan”ti.",
+   "mn52": "ekaṁ samayaṁ āyasmā ānando vesāliyaṁ viharati beluvagāmake. Tena kho pana samayena dasamo gahapati aṭṭhakanāgaro pāṭaliputtaṁ anuppatto hoti kenacideva karaṇīyena. Atha kho dasamo gahapati aṭṭhakanāgaro yena kukkuṭārāmo yena aññataro bhikkhu tenupasaṅkami; upasaṅkamitvā taṁ bhikkhuṁ abhivādetvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho dasamo gahapati aṭṭhakanāgaro taṁ bhikkhuṁ etadavoca: “kahaṁ nu kho, bhante, āyasmā ānando etarahi viharati? Dassanakāmā hi mayaṁ taṁ āyasmantaṁ ānandan”ti.",
+   "nan-mn52": "如是我聞。——",
+   "T0026-ma217": "於是，第十居士八城白曰：「上尊！尊者阿難今在何處？我欲往見。」諸上尊比丘答曰：「居士！",
+   "T0092": "於是彼十支居士及八城人，聞諸上尊比丘所說法勸進至等歡喜已，白諸上尊比丘曰：「此諸上尊！今尊者阿難在何所住？我今欲見。」「此居士！彼尊者阿難，在毘舍離獼猴水岸上，欲見者當往見之。」"
+  },
+  "a02": {
+   "an11.16": "“Eso, gahapati, āyasmā ānando vesāliyaṁ viharati beluvagāmake”ti.",
+   "mn52": "“Eso, gahapati, āyasmā ānando vesāliyaṁ viharati beluvagāmake”ti.",
+   "T0026-ma217": "尊者阿難今在鞞舍離獼猴江邊高樓臺觀，若欲見者，可往至彼。」"
+  },
+  "a03": {
+   "an11.16": "Atha kho dasamo gahapati aṭṭhakanāgaro pāṭaliputte taṁ karaṇīyaṁ tīretvā yena vesālī beluvagāmako yenāyasmā ānando tenupasaṅkami; upasaṅkamitvā āyasmantaṁ ānandaṁ abhivādetvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho dasamo gahapati aṭṭhakanāgaro āyasmantaṁ ānandaṁ etadavoca:",
+   "mn52": "Atha kho dasamo gahapati aṭṭhakanāgaro pāṭaliputte taṁ karaṇīyaṁ tīretvā yena vesālī yena beluvagāmako yenāyasmā ānando tenupasaṅkami; upasaṅkamitvā āyasmantaṁ ānandaṁ abhivādetvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho dasamo gahapati aṭṭhakanāgaro āyasmantaṁ ānandaṁ etadavoca:",
+   "nan-mn52": "一時，尊者阿難住毘舍離城竹林邑。爾時，八城之居士第十，因某要事，抵巴羅利子城。此八城之居士第十，詣雞園一比丘之處。詣已，敬禮彼比丘，坐於一面。坐於一面八城之居士第十言：「師尊！尊者阿難今在何處？我等欲見彼尊者阿難。」〔彼比丘曰：〕「居士子！彼尊者阿難在毘舍離城之竹林村。」爾時八城之居士第十於巴羅利弗城辦事畢，乃詣毘舍離城竹林村尊者阿難處。詣已，敬禮阿難，坐於一面。坐於一面已，八城居士第十白尊者阿難曰：",
+   "T0026-ma217": "爾時，第十居士八城即從坐起，稽首諸上尊比丘足，繞三匝而去，往詣尊者阿難所，稽首禮足，却坐一面，白曰：「尊者阿難！欲有所問，聽我問耶？」尊者阿難告曰：「居士！欲問便問，我聞已當思。」",
+   "T0092": "於是十支居士八城人，從坐起，禮諸上尊比丘足，繞諸上尊已，離諸上尊，還至彼尊者阿難所。到已，禮尊者阿難足已，却坐一面。"
+  },
+  "a04": {
+   "an11.16": "“atthi nu kho, bhante ānanda, tena bhagavatā jānatā passatā arahatā sammāsambuddhena ekadhammo sammadakkhāto, yattha bhikkhuno appamattassa ātāpino pahitattassa viharato avimuttaṁ vā cittaṁ vimuccati, aparikkhīṇā vā āsavā parikkhayaṁ gacchanti, ananuppattaṁ vā anuttaraṁ yogakkhemaṁ anupāpuṇātī”ti? “Atthi kho, gahapati, tena bhagavatā jānatā passatā arahatā sammāsambuddhena ekadhammo sammadakkhāto, yattha bhikkhuno appamattassa ātāpino pahitattassa viharato avimuttaṁ vā cittaṁ vimuccati, aparikkhīṇā vā āsavā parikkhayaṁ gacchanti, ananuppattaṁ vā anuttaraṁ yogakkhemaṁ anupāpuṇātī”ti. “Katamo pana, bhante ānanda, tena bhagavatā jānatā passatā arahatā sammāsambuddhena ekadhammo sammadakkhāto, yattha bhikkhuno appamattassa ātāpino pahitattassa viharato avimuttaṁ vā cittaṁ vimuccati, aparikkhīṇā vā āsavā parikkhayaṁ gacchanti, ananuppattaṁ vā anuttaraṁ yogakkhemaṁ anupāpuṇātī”ti?",
+   "mn52": "“atthi nu kho, bhante ānanda, tena bhagavatā jānatā passatā arahatā sammāsambuddhena ekadhammo akkhāto yattha bhikkhuno appamattassa ātāpino pahitattassa viharato avimuttañceva cittaṁ vimuccati, aparikkhīṇā ca āsavā parikkhayaṁ gacchanti, ananuppattañca anuttaraṁ yogakkhemaṁ anupāpuṇātī”ti? “Atthi kho, gahapati, tena bhagavatā jānatā passatā arahatā sammāsambuddhena ekadhammo akkhāto, yattha bhikkhuno appamattassa ātāpino pahitattassa viharato avimuttañceva cittaṁ vimuccati, aparikkhīṇā ca āsavā parikkhayaṁ gacchanti, ananuppattañca anuttaraṁ yogakkhemaṁ anupāpuṇātī”ti. “Katamo pana, bhante ānanda, tena bhagavatā jānatā passatā arahatā sammāsambuddhena ekadhammo akkhāto, yattha bhikkhuno appamattassa ātāpino pahitattassa viharato avimuttañceva cittaṁ vimuccati, aparikkhīṇā ca āsavā parikkhayaṁ gacchanti, ananuppattañca anuttaraṁ yogakkhemaṁ anupāpuṇātī”ti?",
+   "nan-mn52": "「尊師阿難！是否有以彼世尊——知者、見者，應供者、等正覺者——所說之一法，若精進住於不放逸、精勤、自勵之比丘於尚未解脫之心解脫之，或尚未滅盡之諸漏滅盡之，或尚未逮得之無上瑜伽安穩（涅槃）之逮得耶？」〔阿難曰：〕「居士子！有以彼世尊——知者、見者、應供者、等正覺者所說之一法，住於不放逸、熱心、自勵之比丘，對於尚未解脫之心解脫之、尚未滅盡之諸漏滅盡之、尚未逮得之無上瑜伽安穩之逮得也！」〔居士曰：〕「師尊、阿難！然則，何者是以彼知者、見者、應供者、等正覺者世尊所說之一法，住於……之比丘，於尚未解脫之心解脫之，尚未滅盡之諸漏滅盡之，或尚未逮得之無上瑜伽安穩之逮得耶？」",
+   "T0026-ma217": "居士問曰：「尊者阿難！世尊、如來、無所著、正盡覺成就慧眼，見第一義，頗說一法，若聖弟子住漏盡無餘，得心解脫耶？」尊者阿難答曰：「如是。」居士問曰：「尊者阿難！世尊、如來、無所著、正盡覺成就慧眼，見第一義。云何說有一法，若聖弟子住漏盡無餘，得心解脫耶？」尊者阿難答曰：「居士！",
+   "T0092": "彼十支居士八城人却住一面已，白尊者阿難曰：「此阿難！我欲有所問，聽我所問。」「當問。居士！」聞已知之。「此尊者阿難！彼世尊有智有見，如來、無所著、等正覺，以眼見第一義說一法，聖弟子所住，於有餘處有漏盡意解脫不？」「此居士！彼世尊有智有見，如來、無所著、等正覺，以眼見第一義說一法，聖弟子所住，有餘處有漏盡意解脫。」「云何，尊者阿難！彼如來、無所著、等正覺，眼見第一義說一法，聖弟子所住，有餘處有漏盡意解脫？」"
+  },
+  "a05": {
+   "an11.16": "“Idha, gahapati, bhikkhu vivicceva kāmehi vivicca akusalehi dhammehi savitakkaṁ savicāraṁ vivekajaṁ pītisukhaṁ paṭhamaṁ jhānaṁ upasampajja viharati. So iti paṭisañcikkhati: ‘idampi kho paṭhamaṁ jhānaṁ abhisaṅkhataṁ abhisañcetayitaṁ’. ‘Yaṁ kho pana kiñci abhisaṅkhataṁ abhisañcetayitaṁ, tadaniccaṁ nirodhadhamman’ti pajānāti. So tattha ṭhito āsavānaṁ khayaṁ pāpuṇāti; no ce āsavānaṁ khayaṁ pāpuṇāti, teneva dhammarāgena tāya dhammanandiyā pañcannaṁ orambhāgiyānaṁ saṁyojanānaṁ parikkhayā opapātiko hoti tattha parinibbāyī anāvattidhammo tasmā lokā. Ayampi kho, gahapati, tena bhagavatā jānatā passatā arahatā sammāsambuddhena ekadhammo sammadakkhāto, yattha bhikkhuno appamattassa ātāpino pahitattassa viharato avimuttaṁ vā cittaṁ vimuccati, aparikkhīṇā vā āsavā parikkhayaṁ gacchanti, ananuppattaṁ vā anuttaraṁ yogakkhemaṁ anupāpuṇāti.",
+   "mn52": "“Idha, gahapati, bhikkhu vivicceva kāmehi vivicca akusalehi dhammehi savitakkaṁ savicāraṁ vivekajaṁ pītisukhaṁ paṭhamaṁ jhānaṁ upasampajja viharati. So iti paṭisañcikkhati: ‘idampi kho paṭhamaṁ jhānaṁ abhisaṅkhataṁ abhisañcetayitaṁ. Yaṁ kho pana kiñci abhisaṅkhataṁ abhisañcetayitaṁ tadaniccaṁ nirodhadhamman’ti pajānāti. So tattha ṭhito āsavānaṁ khayaṁ pāpuṇāti. No ce āsavānaṁ khayaṁ pāpuṇāti, teneva dhammarāgena tāya dhammanandiyā pañcannaṁ orambhāgiyānaṁ saṁyojanānaṁ parikkhayā opapātiko hoti tattha parinibbāyī anāvattidhammo tasmā lokā. Ayampi kho, gahapati, tena bhagavatā jānatā passatā arahatā sammāsambuddhena ekadhammo akkhāto, yattha bhikkhuno appamattassa ātāpino pahitattassa viharato avimuttañceva cittaṁ vimuccati, aparikkhīṇā ca āsavā parikkhayaṁ gacchanti, ananuppattañca anuttaraṁ yogakkhemaṁ anupāpuṇāti.",
+   "nan-mn52": "〔阿難曰：〕「居士子！關於此，比丘確已離諸欲、已離諸不善法，有尋、有伺，由離生喜樂，成就初禪而住之。彼如是思惟、如是知解：『此初禪是造作，是有思，且凡是造作、思惟，彼即是無常、應滅法。』彼如是知，彼住其處逮得漏盡；若彼雖不得漏盡，依其法愛、法之歡喜，以斷五下分結而成為化生，於彼處般涅槃，得不退法，終不還此。居士！此是彼知者、見者、應供者、等正覺者之世尊所說之一法，住於不放逸、熱心，自勵精勤之比丘，其於尚未解脫之心解脫之、尚未滅盡之諸漏滅盡之、或尚未逮得之無上瑜伽安穩逮得之也。",
+   "T0026-ma217": "多聞聖弟子離欲、離惡不善之法，至得第四禪成就遊。彼依此處，觀法如法，彼依此處，觀法如法，住彼得漏盡者，或有是處。若住彼，不得漏盡者，或因此法，欲法、愛法、樂法、靖法，愛樂歡喜，斷五下分結盡，化生於彼而般涅槃，得不退法，終不還此。",
+   "T0092": "「此居士！聖弟子所聞，於婬解脫至住四禪正受住，彼依入法法相觀行止，彼依入法法相觀行止住，可有是處；彼所住得有漏盡，不住彼處得有漏盡；彼自樂法、彼自愛法、彼自習法、彼自敬法，得歡喜，五下結盡得化生，彼般涅槃成阿那含，不還此世間。是為，居士！彼世尊有智有見，如來、無所著、等正覺，眼見第一義說一法，聖弟子所住，有餘處有漏盡意解脫。"
+  },
+  "a06": {
+   "an11.16": "Puna caparaṁ, gahapati, bhikkhu vitakkavicārānaṁ vūpasamā ajjhattaṁ sampasādanaṁ cetaso ekodibhāvaṁ avitakkaṁ avicāraṁ samādhijaṁ pītisukhaṁ dutiyaṁ jhānaṁ …pe… tatiyaṁ jhānaṁ …pe… catutthaṁ jhānaṁ upasampajja viharati. So iti paṭisañcikkhati: ‘idampi kho catutthaṁ jhānaṁ abhisaṅkhataṁ abhisañcetayitaṁ’. ‘Yaṁ kho pana kiñci abhisaṅkhataṁ abhisañcetayitaṁ tadaniccaṁ nirodhadhamman’ti pajānāti. So tattha ṭhito āsavānaṁ khayaṁ pāpuṇāti; no ce āsavānaṁ khayaṁ pāpuṇāti, teneva dhammarāgena tāya dhammanandiyā pañcannaṁ orambhāgiyānaṁ saṁyojanānaṁ parikkhayā opapātiko hoti tattha parinibbāyī anāvattidhammo tasmā lokā.",
+   "mn52": "Puna caparaṁ, gahapati, bhikkhu vitakkavicārānaṁ vūpasamā ajjhattaṁ sampasādanaṁ …pe… dutiyaṁ jhānaṁ upasampajja viharati. So iti paṭisañcikkhati: ‘idampi kho dutiyaṁ jhānaṁ abhisaṅkhataṁ abhisañcetayitaṁ …pe… anuttaraṁ yogakkhemaṁ anupāpuṇāti. Puna caparaṁ, gahapati, bhikkhu pītiyā ca virāgā …pe… tatiyaṁ jhānaṁ upasampajja viharati. So iti paṭisañcikkhati: ‘idampi kho tatiyaṁ jhānaṁ abhisaṅkhataṁ abhisañcetayitaṁ …pe… anuttaraṁ yogakkhemaṁ anupāpuṇāti.",
+   "nan-mn52": "居士！復次，比丘從尋伺之止息、內淨、一心、無尋無伺，由定生喜樂，成就第二禪而住之。彼如是思惟、如是知解：『此第二禪亦造作、有思，且凡是造作、有思，即是無常、應滅法。』彼如是知。彼住其處逮得漏盡，若彼雖不得漏盡，依其法愛、法喜，以斷五下分結即成為化生，於彼處般涅槃，得不退法，終不還此。居士！此是彼知者、見者、應供者、等正覺者、世尊所說之一法，住於不放逸、熱心、自勵精勤之比丘，於尚未解脫之心解脫之、尚未滅盡之諸漏滅盡之、或尚未逮得之無上瑜伽安穩逮得之也。"
+  },
+  "a07": {
+   "nan-mn52": "居士！復次，比丘從喜貪之捨離，〔為〕捨者而住之，為具念者、正知者，而以身感受樂，即諸聖者所謂『捨者、具念者、樂住者』成就第三禪而住之。彼如是思惟、如是知解：『此第三禪亦是造作、有思，且凡是造作、有思，彼即是無常、應滅法。』彼如是知。彼住〔其處逮得漏盡〕……乃至……逮得無上瑜伽安穩者也。"
+  },
+  "a08": {
+   "an11.16": "Ayampi kho, gahapati, tena bhagavatā jānatā passatā arahatā sammāsambuddhena ekadhammo sammadakkhāto, yattha bhikkhuno appamattassa ātāpino pahitattassa viharato avimuttaṁ vā cittaṁ vimuccati aparikkhīṇā vā āsavā parikkhayaṁ gacchanti, ananuppattaṁ vā anuttaraṁ yogakkhemaṁ anupāpuṇāti.",
+   "mn52": "Puna caparaṁ, gahapati, bhikkhu sukhassa ca pahānā …pe… catutthaṁ jhānaṁ upasampajja viharati. So iti paṭisañcikkhati: ‘idampi kho catutthaṁ jhānaṁ abhisaṅkhataṁ abhisañcetayitaṁ …pe… anuttaraṁ yogakkhemaṁ anupāpuṇāti.",
+   "nan-mn52": "居士！復次，比丘，由捨樂、由捨苦、〔由先已滅喜憂、不苦不樂，由捨、念、清淨〕，成就第四禪而住之。彼如是思惟精察、如是知解：『此第四禪亦是造作、有思，且凡是造作、有思，彼即是無常、應滅法。』彼如是知。彼住其處而得漏盡……乃至……逮得無上瑜伽安穩也。"
+  },
+  "a09": {
+   "an11.16": "Puna caparaṁ, gahapati, bhikkhu mettāsahagatena cetasā ekaṁ disaṁ pharitvā viharati tathā dutiyaṁ tathā tatiyaṁ tathā catutthaṁ. Iti uddhamadho tiriyaṁ sabbadhi sabbattatāya sabbāvantaṁ lokaṁ mettāsahagatena cetasā ekaṁ disaṁ pharitvā viharati vipulena mahaggatena appamāṇena averena abyāpajjena pharitvā viharati. So iti paṭisañcikkhati: ‘ayampi kho mettā cetovimutti abhisaṅkhatā abhisañcetayitā’. ‘Yaṁ kho pana kiñci abhisaṅkhataṁ abhisañcetayitaṁ tadaniccaṁ nirodhadhamman’ti pajānāti. So tattha ṭhito āsavānaṁ khayaṁ pāpuṇāti; no ce āsavānaṁ khayaṁ pāpuṇāti, teneva dhammarāgena tāya dhammanandiyā pañcannaṁ orambhāgiyānaṁ saṁyojanānaṁ parikkhayā opapātiko hoti tattha parinibbāyī anāvattidhammo tasmā lokā. Ayampi kho, gahapati, tena bhagavatā jānatā …pe… ananuppattaṁ vā anuttaraṁ yogakkhemaṁ anupāpuṇāti.",
+   "mn52": "Puna caparaṁ, gahapati, bhikkhu mettāsahagatena cetasā ekaṁ disaṁ pharitvā viharati, tathā dutiyaṁ, tathā tatiyaṁ, tathā catutthaṁ. Iti uddhamadho tiriyaṁ sabbadhi sabbattatāya sabbāvantaṁ lokaṁ mettāsahagatena cetasā vipulena mahaggatena appamāṇena averena abyābajjhena pharitvā viharati. So iti paṭisañcikkhati: ‘ayampi kho mettācetovimutti abhisaṅkhatā abhisañcetayitā. Yaṁ kho pana kiñci abhisaṅkhataṁ abhisañcetayitaṁ tadaniccaṁ nirodhadhamman’ti pajānāti. So tattha ṭhito …pe… anuttaraṁ yogakkhemaṁ anupāpuṇāti.",
+   "nan-mn52": "居士！復次，比丘以俱慈之心徧滿一方而住之；如是徧滿第二、第三、第四〔方〕；如是徧滿上、下、四維；彼以廣大、廣博、無量、無恚、無害之俱慈心，徧滿全世界、一切處而住之。彼如是思惟精察、如是知解：『此慈心解脫亦是造作、有思，且凡是造作、有思，彼即是無常、應滅法。』彼如是知，彼住其處〔逮得漏盡〕……乃至……逮得無上瑜伽安穩也。",
+   "T0026-ma217": "「復次，居士！多聞聖弟子心與慈俱，遍滿一方成就遊。如是二三四方、四維上下，普周一切，心與慈俱，無結無怨，無恚無諍，極廣甚大，無量善修，遍滿一切世間成就遊。"
+  },
+  "a10": {
+   "an11.16": "Puna caparaṁ, gahapati, bhikkhu karuṇāsahagatena cetasā …pe… muditāsahagatena cetasā …pe… upekkhāsahagatena cetasā ekaṁ disaṁ pharitvā viharati tathā dutiyaṁ tathā tatiyaṁ tathā catutthaṁ. Iti uddhamadho tiriyaṁ sabbadhi sabbattatāya sabbāvantaṁ lokaṁ upekkhāsahagatena cetasā vipulena mahaggatena appamāṇena averena abyāpajjena pharitvā viharati. So iti paṭisañcikkhati: ‘ayampi kho upekkhācetovimutti abhisaṅkhatā abhisañcetayitā’. ‘Yaṁ kho pana kiñci abhisaṅkhataṁ abhisañcetayitaṁ tadaniccaṁ nirodhadhamman’ti pajānāti. So tattha ṭhito āsavānaṁ khayaṁ pāpuṇāti; no ce āsavānaṁ khayaṁ pāpuṇāti, teneva dhammarāgena tāya dhammanandiyā pañcannaṁ orambhāgiyānaṁ saṁyojanānaṁ parikkhayā opapātiko hoti tattha parinibbāyī anāvattidhammo tasmā lokā. Ayampi kho, gahapati, tena bhagavatā jānatā …pe… ananuppattaṁ vā anuttaraṁ yogakkhemaṁ anupāpuṇāti.",
+   "mn52": "Puna caparaṁ, gahapati, bhikkhu karuṇāsahagatena cetasā …pe… muditāsahagatena cetasā …pe… upekkhāsahagatena cetasā ekaṁ disaṁ pharitvā viharati, tathā dutiyaṁ, tathā tatiyaṁ, tathā catutthaṁ. Iti uddhamadho tiriyaṁ sabbadhi sabbattatāya sabbāvantaṁ lokaṁ upekkhāsahagatena cetasā vipulena mahaggatena appamāṇena averena abyābajjhena pharitvā viharati. So iti paṭisañcikkhati: ‘ayampi kho upekkhācetovimutti abhisaṅkhatā abhisañcetayitā. Yaṁ kho pana kiñci abhisaṅkhataṁ abhisañcetayitaṁ tadaniccaṁ nirodhadhamman’ti pajānāti. So tattha ṭhito …pe… anuttaraṁ yogakkhemaṁ anupāpuṇāti.",
+   "nan-mn52": "居士！復次，比丘以俱悲之心……乃至……具喜之心……乃至……俱捨之心，徧滿一方而住之；如是第二、第三、第四〔方〕；如是上、下、四維；彼以廣大、廣博、無量、無恚、無害之俱捨心，徧滿世界一切處而住之。彼如是思惟精察、如是知解：『此捨心解脫亦是造作、有思，且凡是造作、有思，彼即是無常、應滅法。』彼如是知，彼住其處〔逮得漏盡〕……乃至……逮得無上瑜伽安穩也。",
+   "T0026-ma217": "如是悲、喜心與捨俱，無結無怨，無恚無諍，極廣甚大，無量善修，遍滿一切世間成就遊。彼依此處，觀法如法，彼依此處，觀法如法，住彼得漏盡者，或有是處，若住彼，不得漏盡者，或因此法，欲法、愛法、樂法、靖法，愛樂歡喜，斷五下分結盡，化生於彼而般涅槃，得不退法，終不還此。是謂如來、無所著、正盡覺成就慧眼，見第一義，說有一法，若聖弟子住漏盡無餘，得心解脫。",
+   "T0092": "復次，居士！聖弟子所聞，意與慈俱滿一方已正受住，如是二三四上下一切諸方，意與慈俱，無怨無二無恚，極廣極大無量極分別，滿諸方已正受住，如是意與悲喜護俱滿一切諸方已正受住，彼依入法法相觀行止，彼依入法法相觀行止住，可有是處，住彼已得有漏盡；不住彼處得有漏盡，若彼以法樂、以法愛，習行法敬法，得歡喜法，五下結盡得化生，於彼處般涅槃成阿那含，不還此世間。是為，居士！彼世尊有智有見，如來、無所著、等正覺，眼見第一義、說第一法，聖弟子所住，有餘處有漏盡意解脫。"
+  },
+  "a11": {
+   "an11.16": "Puna caparaṁ, gahapati, bhikkhu sabbaso rūpasaññānaṁ samatikkamā paṭighasaññānaṁ atthaṅgamā nānattasaññānaṁ amanasikārā ‘ananto ākāso’ti ākāsānañcāyatanaṁ upasampajja viharati. So iti paṭisañcikkhati: ‘ayampi kho ākāsānañcāyatanasamāpatti abhisaṅkhatā abhisañcetayitā’. ‘Yaṁ kho pana kiñci abhisaṅkhataṁ abhisañcetayitaṁ tadaniccaṁ nirodhadhamman’ti pajānāti. So tattha ṭhito āsavānaṁ khayaṁ pāpuṇāti; no ce āsavānaṁ khayaṁ pāpuṇāti, teneva dhammarāgena tāya dhammanandiyā pañcannaṁ orambhāgiyānaṁ saṁyojanānaṁ parikkhayā opapātiko hoti tattha parinibbāyī anāvattidhammo tasmā lokā. Ayampi kho, gahapati, tena bhagavatā jānatā …pe… ananuppattaṁ vā anuttaraṁ yogakkhemaṁ anupāpuṇāti.",
+   "mn52": "Puna caparaṁ, gahapati, bhikkhu sabbaso rūpasaññānaṁ samatikkamā paṭighasaññānaṁ atthaṅgamā nānattasaññānaṁ amanasikārā ‘ananto ākāso’ti ākāsānañcāyatanaṁ upasampajja viharati. So iti paṭisañcikkhati: ‘ayampi kho ākāsānañcāyatanasamāpatti abhisaṅkhatā abhisañcetayitā. Yaṁ kho pana kiñci abhisaṅkhataṁ abhisañcetayitaṁ tadaniccaṁ nirodhadhamman’ti pajānāti. So tattha ṭhito …pe… anuttaraṁ yogakkhemaṁ anupāpuṇāti.",
+   "nan-mn52": "居士！復次，比丘超越一切色想，滅沒有對想，由不作意種種想故，〔作意：〕『虛空是無邊』，成就空無邊處而住之。彼如是思惟精察，如是知解：『成就此虛空無邊處亦是造作、有思，且凡是造作、有思，彼即是無常、應滅法。』彼如是知，彼住其處〔逮得漏盡〕……乃至……逮得無上瑜伽安穩也。"
+  },
+  "a12": {
+   "an11.16": "Puna caparaṁ, gahapati, bhikkhu sabbaso ākāsānañcāyatanaṁ samatikkamma ‘anantaṁ viññāṇan’ti viññāṇañcāyatanaṁ upasampajja viharati …pe…",
+   "mn52": "Puna caparaṁ, gahapati, bhikkhu sabbaso ākāsānañcāyatanaṁ samatikkamma ‘anantaṁ viññāṇan’ti viññāṇañcāyatanaṁ upasampajja viharati. So iti paṭisañcikkhati: ‘ayampi kho viññāṇañcāyatanasamāpatti abhisaṅkhatā abhisañcetayitā. Yaṁ kho pana kiñci abhisaṅkhataṁ abhisañcetayitaṁ tadaniccaṁ nirodhadhamman’ti pajānāti. So tattha ṭhito …pe… anuttaraṁ yogakkhemaṁ anupāpuṇāti.",
+   "nan-mn52": "居士！復次，比丘超越一切空無邊處，〔作意：〕『識是無邊』，成就識無邊處而住之。彼如是思惟精察，如是知解：『成就此識無邊處亦是造作、有思，且凡是造作、有思，彼即是無常、應滅法。』彼如是知。彼住其處〔逮得漏盡〕……乃至……逮得無上瑜伽安穩也。"
+  },
+  "a13": {
+   "an11.16": "sabbaso viññāṇañcāyatanaṁ samatikkamma ‘natthi kiñcī’ti ākiñcaññāyatanaṁ upasampajja viharati. So iti paṭisañcikkhati: ‘ayampi kho ākiñcaññāyatanasamāpatti abhisaṅkhatā abhisañcetayitā’. ‘Yaṁ kho pana kiñci abhisaṅkhataṁ abhisañcetayitaṁ tadaniccaṁ nirodhadhamman’ti pajānāti. So tattha ṭhito āsavānaṁ khayaṁ pāpuṇāti; no ce āsavānaṁ khayaṁ pāpuṇāti, teneva dhammarāgena tāya dhammanandiyā pañcannaṁ orambhāgiyānaṁ saṁyojanānaṁ parikkhayā opapātiko hoti tattha parinibbāyī anāvattidhammo tasmā lokā. Ayampi kho, gahapati, tena bhagavatā jānatā …pe… ananuppattaṁ vā anuttaraṁ yogakkhemaṁ anupāpuṇātī”ti.",
+   "mn52": "Puna caparaṁ, gahapati, bhikkhu sabbaso viññāṇañcāyatanaṁ samatikkamma ‘natthi kiñcī’ti ākiñcaññāyatanaṁ upasampajja viharati. So iti paṭisañcikkhati: ‘ayampi kho ākiñcaññāyatanasamāpatti abhisaṅkhatā abhisañcetayitā. Yaṁ kho pana kiñci abhisaṅkhataṁ abhisañcetayitaṁ tadaniccaṁ nirodhadhamman’ti pajānāti. So tattha ṭhito āsavānaṁ khayaṁ pāpuṇāti. No ce āsavānaṁ khayaṁ pāpuṇāti, teneva dhammarāgena tāya dhammanandiyā pañcannaṁ orambhāgiyānaṁ saṁyojanānaṁ parikkhayā opapātiko hoti tattha parinibbāyī anāvattidhammo tasmā lokā. Ayampi kho, gahapati, tena bhagavatā jānatā passatā arahatā sammāsambuddhena ekadhammo akkhāto yattha bhikkhuno appamattassa ātāpino pahitattassa viharato avimuttañceva cittaṁ vimuccati, aparikkhīṇā ca āsavā parikkhayaṁ gacchanti, ananuppattañca anuttaraṁ yogakkhemaṁ anupāpuṇātī”ti.",
+   "nan-mn52": "居士！復次，比丘超越一切識無邊處，〔作意：〕『無任何（分別識）之存在』成就無所有處而住之。如是思惟、如是知解：『成就此無所有處亦是造作、有思，且凡是造作、有思，彼即是無常、應滅法。』彼如是知。彼住其處逮得漏盡，若不得漏盡，依彼法愛、法喜，以斷五下分結而成化生，於彼處般涅槃，得不退法，終不還此。居士！此是彼知者、見者、應供者、等正覺者、世尊所說之一法，住於不放逸、熱心、自勵精勤之比丘，於尚未解脫之心解脫之、尚未滅盡之諸漏滅盡之、尚未逮得之無上瑜伽安穩逮得之也。」",
+   "T0026-ma217": "「復次，居士！多聞聖弟子度一切色想，乃至非有想非無想處成就遊。彼於此處，觀法如法，彼於此處，觀法如法，住彼得漏盡者，或有是處。若住彼，不得漏盡者，或因此法，欲法、愛法、樂法、靖法，愛樂歡喜，斷五下分結盡，化生於彼而般涅槃，得不退法，終不還此。是謂如來、無所著、正盡覺成就慧眼，見第一義，說有一法，若聖弟子住漏盡無餘，得心解脫。」",
+   "T0092": "復次，居士！聖弟子所聞，度一切色相，至有想無想處正受住，彼依入法法相觀行止，至有漏盡意解脫。」"
+  },
+  "a14": {
+   "an11.16": "Evaṁ vutte dasamo gahapati aṭṭhakanāgaro āyasmantaṁ ānandaṁ etadavoca: “seyyathāpi, bhante ānanda, puriso ekaṁ nidhimukhaṁ gavesanto sakideva ekādasa nidhimukhāni adhigaccheyya; evamevaṁ kho ahaṁ, bhante, ekaṁ amatadvāraṁ gavesanto sakideva ekādasa amatadvārāni alatthaṁ sevanāya. Seyyathāpi, bhante, purisassa agāraṁ ekādasa dvāraṁ. So tasmiṁ agāre āditte ekamekenapi dvārena sakkuṇeyya attānaṁ sotthiṁ kātuṁ; evamevaṁ kho ahaṁ, bhante, imesaṁ ekādasannaṁ amatadvārānaṁ ekamekenapi amatadvārena sakkuṇissāmi attānaṁ sotthiṁ kātuṁ. Ime hi nāma, bhante, aññatitthiyā ācariyassa ācariyadhanaṁ pariyesissanti. Kiṁ panāhaṁ āyasmato ānandassa pūjaṁ na karissāmī”ti.",
+   "mn52": "Evaṁ vutte, dasamo gahapati aṭṭhakanāgaro āyasmantaṁ ānandaṁ etadavoca: “seyyathāpi, bhante ānanda, puriso ekaṁva nidhimukhaṁ gavesanto sakideva ekādasa nidhimukhāni adhigaccheyya; evameva kho ahaṁ, bhante, ekaṁ amatadvāraṁ gavesanto sakideva ekādasa amatadvārāni alatthaṁ bhāvanāya. Seyyathāpi, bhante, purisassa agāraṁ ekādasadvāraṁ, so tasmiṁ agāre āditte ekamekenapi dvārena sakkuṇeyya attānaṁ sotthiṁ kātuṁ; evameva kho ahaṁ, bhante, imesaṁ ekādasannaṁ amatadvārānaṁ ekamekenapi amatadvārena sakkuṇissāmi attānaṁ sotthiṁ kātuṁ. Imehi nāma, bhante, aññatitthiyā ācariyassa ācariyadhanaṁ pariyesissanti, kimaṅgaṁ panāhaṁ āyasmato ānandassa pūjaṁ na karissāmī”ti.",
+   "nan-mn52": "如是說已，八城居士第十，語尊者阿難曰：「尊師阿難！恰如求一妙寶之人，同時即得十一妙寶。如是，尊師！予求一甘露門同時即得聞十一甘露門。尊師！恰如人家有十一門，彼於其家失火時，由任一門，己皆得安穩。如是，師尊！予於此等十一甘露門之任一〔門〕，己皆得安穩也。尊師！彼等外道第子皆為師徧求束脩，予何不對尊者阿難作供養耶？」於是，八城居士第十，使「人」集巴羅利弗〔城〕及毘舍離〔城〕之比丘眾，以勝妙之硬食、軟食，親手供養之，滿足之；對各比丘各包與一套衣服，對尊者阿難則包與三衣，且為尊者阿難建立五百僧房。",
+   "T0026-ma217": "於是，第十居士八城即從坐起，偏袒著衣，叉手白曰：「尊者阿難！甚奇！甚特！我問尊者阿難一甘露門，而尊者阿難一時為我說於十二甘露法門，今此十二甘露法門必隨所依，得安隱出。尊者阿難！猶去村不遠，有大屋舍，開十二戶，若人所為故，入彼屋中。復一人來，不為彼人求義及饒益，不求安隱而燒彼屋。尊者阿難！彼人必得於此十二戶隨所依出，得自安隱。如是我問尊者阿難一甘露門，而尊者阿難一時為我說於十二甘露法門，今此十二甘露法門必隨所依，得安隱出。尊者阿難！梵志法、律中說不善法、律，尚供養師，況復我不供養大師尊者阿難耶？」",
+   "T0092": "於是十支居士八城人，白尊者阿難曰：「甚奇！尊者阿難！我等問尊者阿難一甘露門，而為說十二甘露門。甚多！尊者阿難！於此十二甘露門，依各各甘露門，當安隱自御之。猶若，尊者阿難！離城村不遠有重閣，若重閣房邊有十二門，或有人入中少有所為，或有人生無有義、不饒益、不安隱、不快樂，或有以火燒重閣，此尊者阿難！彼人於十二門，隨彼意安隱出。如是，甚奇！尊者阿難！我等問尊者阿難一甘露門，而為說十二甘露門。此尊者阿難！為甚多，當於十二甘露門，依各各甘露門各各當出之。此尊者阿難！彼諸婆羅門與惡法俱？施與師物；況當我等今於大師，當不以財施之？」"
+  },
+  "a15": {
+   "an11.16": "Atha kho dasamo gahapati aṭṭhakanāgaro vesālikañca pāṭaliputtakañca bhikkhusaṅghaṁ sannipātāpetvā paṇītena khādanīyena bhojanīyena sahatthā santappesi sampavāresi. Ekamekañca bhikkhuṁ paccekaṁ dussayugena acchādesi, āyasmantañca ānandaṁ ticīvarena. Āyasmato ānandassa pañcasataṁ vihāraṁ kārāpesīti. Chaṭṭhaṁ.",
+   "mn52": "Atha kho dasamo gahapati aṭṭhakanāgaro pāṭaliputtakañca vesālikañca bhikkhusaṅghaṁ sannipātetvā paṇītena khādanīyena bhojanīyena sahatthā santappesi sampavāresi, ekamekañca bhikkhuṁ paccekaṁ dussayugena acchādesi, āyasmantañca ānandaṁ ticīvarena acchādesi, āyasmato ca ānandassa pañcasatavihāraṁ kārāpesīti. Aṭṭhakanāgarasuttaṁ niṭṭhitaṁ dutiyaṁ.",
+   "T0026-ma217": "於是，第十居士八城即於夜中，施設極妙淨美豐饒食噉含消，施設食已，平旦敷座，請鷄園眾及鞞舍離眾皆集一處，自行澡水，則以極妙淨美豐饒食噉含消，手自斟酌，令得飽滿，食訖收器，行澡水竟，持五百種物買屋別施尊者阿難。尊者阿難受已，施與招提僧。尊者阿難所說如是。第十居士八城聞尊者阿難所說，歡喜奉行。八城經第六竟（一千一百七十字）",
+   "T0092": "於是十支居士八城人，於其夜饌具淨妙飲食。於其夜饌具淨妙飲食已，隨時敷座。敷座已，請雞園中比丘僧、毘舍離比丘僧皆悉聚之。雞園中諸比丘僧、毘舍離諸比丘僧皆悉聚已，以淨妙飲食手自授與。以淨妙飲食手授與已，知食訖，收攝鉢器，行澡水，以五百種物買房，施與尊者阿難以為私有。彼尊者阿難施與招提僧。阿難如是說。十支居士八城人聞尊者阿難所說，歡喜而樂。"
+  }
+ }
+}

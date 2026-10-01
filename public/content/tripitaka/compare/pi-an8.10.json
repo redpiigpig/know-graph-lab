@@ -1,0 +1,190 @@
+{
+ "slug": "pi-an8.10",
+ "title": "瞻婆比丘經",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "請問說戒"
+  },
+  {
+   "id": "a02",
+   "label": "世尊默然不答"
+  },
+  {
+   "id": "a03",
+   "label": "再請說戒"
+  },
+  {
+   "id": "a04",
+   "label": "三請說戒"
+  },
+  {
+   "id": "a05",
+   "label": "指點不淨比丘"
+  },
+  {
+   "id": "a06",
+   "label": "目揵連觀察眾心"
+  },
+  {
+   "id": "a07",
+   "label": "目揵連逐出不淨比丘"
+  },
+  {
+   "id": "a08",
+   "label": "目揵連白佛逐出已"
+  },
+  {
+   "id": "a09",
+   "label": "再請說戒（後夜）"
+  },
+  {
+   "id": "a10",
+   "label": "佛責目揵連妄逐"
+  },
+  {
+   "id": "a11",
+   "label": "不得在不淨眾說戒"
+  },
+  {
+   "id": "a12",
+   "label": "譬喻：穢麥"
+  },
+  {
+   "id": "a13",
+   "label": "譬喻：揚穀"
+  },
+  {
+   "id": "a14",
+   "label": "譬喻：通水槽"
+  },
+  {
+   "id": "a15",
+   "label": "結論：應共擯棄不淨者"
+  },
+  {
+   "id": "a16",
+   "label": "偈頌"
+  },
+  {
+   "id": "a17",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "an8.10",
+   "lang": "pi",
+   "label": "巴利 AN8.10",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "T0026-ma122",
+   "lang": "lzh",
+   "label": "中阿含經 （一二二）中阿含大品瞻波經第六（第三念誦）",
+   "who": "東晉 瞿曇僧伽提婆譯"
+  },
+  {
+   "id": "T0064",
+   "lang": "lzh",
+   "label": "瞻婆比丘經",
+   "who": "西晉 法炬譯"
+  }
+ ],
+ "works": [
+  "T0026",
+  "T0064"
+ ],
+ "anchors": [
+  {
+   "work": "T0026",
+   "node": "（一二二）中阿含大品瞻波經第六（第三念誦）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "an8.10": "Aṅguttara Nikāya 8.10 1. Mettāvagga Kāraṇḍavasutta",
+   "T0026-ma122": "我聞如是：一時，佛遊瞻波，在恒伽池邊。",
+   "T0064": "聞如是：一時，婆伽婆在瞻婆恒伽上法賴池水上。彼時，世尊十五日說戒，在比丘僧前坐。世尊坐已，觀諸比丘意之所念。觀諸比丘意之所念已，夜初一分時坐默然住。"
+  },
+  "a01": {
+   "T0026-ma122": "爾時，世尊月十五日說從解脫時，於比丘眾前敷座而坐。世尊坐已，即便入定，以他心智觀察眾心，觀眾心已，至初夜竟，默然而坐。於是，有一比丘即從坐起，偏袒著衣，叉手向佛，白曰：「世尊！初夜已訖，佛及比丘眾集坐來久，唯願世尊說從解脫。」",
+   "T0064": "於是，有異比丘從坐起，一向著衣，叉手向世尊，白世尊曰：「唯，世尊！夜一時已過，世尊及比丘僧坐已久，唯願世尊，當說戒。」"
+  },
+  "a02": {
+   "T0026-ma122": "爾時，世尊默然不答。於是，世尊復至中夜默然而坐。",
+   "T0064": "彼時，世尊默然住。"
+  },
+  "a03": {
+   "T0026-ma122": "彼一比丘再從坐起，偏袒著衣，叉手向佛，白曰：「世尊！初夜已過，中夜將訖，佛及比丘眾集坐來久，唯願世尊說從解脫。」世尊亦再默然不答。於是，世尊復至後夜默然而坐。",
+   "T0064": "世尊至夜半默然坐住，彼比丘再叉手向世尊，白世尊曰：「唯，世尊！夜已過初時，夜已過半。世尊！比丘僧坐已久，唯願世尊，當說戒。」彼時世尊亦默然住。"
+  },
+  "a04": {
+   "T0026-ma122": "彼一比丘三從坐起，偏袒著衣，叉手向佛，白曰：「世尊！初夜既過，中夜復訖，後夜垂盡，將向欲明，明出不久，佛及比丘眾集坐極久，唯願世尊說從解脫。」",
+   "T0064": "彼時世尊於夜半後坐默然住，彼比丘三叉手向世尊，白世尊曰：「唯願世尊，夜已過初時，夜已過半，夜已過半後明星欲出，不久當明星出。世尊！比丘僧坐已久，唯願世尊，當說戒。」"
+  },
+  "a05": {
+   "an8.10": "Ekaṁ samayaṁ bhagavā campāyaṁ viharati gaggarāya pokkharaṇiyā tīre. Tena kho pana samayena bhikkhū bhikkhuṁ āpattiyā codenti. So bhikkhu bhikkhūhi āpattiyā codiyamāno aññenāññaṁ paṭicarati, bahiddhā kathaṁ apanāmeti, kopañca dosañca appaccayañca pātukaroti. Atha kho bhagavā bhikkhū āmantesi: “niddhamathetaṁ, bhikkhave, puggalaṁ; niddhamathetaṁ, bhikkhave, puggalaṁ. Apaneyyeso, bhikkhave, puggalo. Kiṁ vo tena paraputtena visodhitena. Idha, bhikkhave, ekaccassa puggalassa tādisaṁyeva hoti abhikkantaṁ paṭikkantaṁ ālokitaṁ vilokitaṁ samiñjitaṁ pasāritaṁ saṅghāṭipattacīvaradhāraṇaṁ, seyyathāpi aññesaṁ bhaddakānaṁ bhikkhūnaṁ— yāvassa bhikkhū āpattiṁ na passanti. Yato ca khvassa bhikkhū āpattiṁ passanti, tamenaṁ evaṁ jānanti: ‘samaṇadūsīvāyaṁ samaṇapalāpo samaṇakāraṇḍavo’ti. Tamenaṁ iti viditvā bahiddhā nāsenti. Taṁ kissa hetu? Mā aññe bhaddake bhikkhū dūsesīti.",
+   "T0026-ma122": "爾時，世尊告彼比丘：「於此眾中有一比丘已為不淨。」彼時，尊者大目揵連亦在眾中。",
+   "T0064": "彼時，世尊告此比丘曰：「我比丘眾中有不淨者。」"
+  },
+  "a06": {
+   "T0026-ma122": "於是，尊者大目揵連便作是念：「世尊為何比丘而說此眾中有一比丘已為不淨？我寧可入如其像定，以如其像定他心之智觀察眾心。」尊者大目揵連即入如其像定，以如其像定他心之智觀察眾心，尊者大目揵連便知世尊所為比丘說此眾中有一比丘已為不淨。",
+   "T0064": "彼時尊者大目乾連亦在眾中會，眾中會已，於是尊者大目乾連作是念：「世尊為說何比丘？言眾中有不淨。我寧可作如其像三昧正受，以三昧意，觀諸比丘意之所念。」於是尊者大目乾連，即如其像三昧正受，以三昧意觀諸比丘意之所念。尊者大目乾連即便知之，世尊所為比丘。"
+  },
+  "a07": {
+   "T0026-ma122": "於是，尊者大目揵連即從定起，至彼比丘前，牽臂將出，開門置外：「癡人遠去，莫於此住，不復得與比丘眾會，從今已去，非是比丘。」",
+   "T0064": "於是尊者大目乾連從三昧起，便至彼比丘所，到已牽彼比丘臂將出門外：「汝愚人去！汝不應在此宿，無有比丘共汝住者，汝今為比丘外。」於是尊者大目乾連牽彼比丘臂將出門外，反閉門，閉門已，至世尊所，到已禮世尊足，却坐一面。"
+  },
+  "a08": {
+   "T0026-ma122": "閉門下鑰，還詣佛所，稽首佛足，却坐一面，白曰：「世尊所為比丘說此眾中有一比丘已為不淨者，我已逐出。",
+   "T0064": "尊者大目乾連却一面已，白世尊曰：「世尊！所說比丘者，言眾中有不淨，我已牽彼比丘臂將出門外。『汝愚人去，汝不應在此宿，無有比丘共住汝，今比丘為是外。』唯世尊！已過夜初分，已過夜半，已過夜半後，夜已欲曉明星出時，明星不久當出。"
+  },
+  "a09": {
+   "T0026-ma122": "世尊！初夜既過，中夜復訖，後夜垂盡，將向欲明，明出不久，佛及比丘眾集坐極久，唯願世尊說從解脫。」",
+   "T0064": "世尊！比丘僧坐已久，願世尊，當說戒。」"
+  },
+  "a10": {
+   "T0026-ma122": "世尊告曰：「大目揵連！彼愚癡人當得大罪，觸嬈世尊及比丘眾。大目揵連！若使如來在不淨眾說從解脫者，彼人則便頭破七分。",
+   "T0064": "「汝目乾連！彼愚癡人為多受罪，而觸嬈世尊及比丘僧。若目乾連！眾中有不淨比丘，如來說戒者，彼愚人頭當破為七分。是故汝，目乾連！"
+  },
+  "a11": {
+   "T0026-ma122": "是故，大目揵連！汝等從今已後說從解脫，如來不復說從解脫。所以者何？如是，大目揵連！或有癡人正知出入，善觀分別，屈申低仰，儀容庠序，善著僧伽梨及諸衣鉢，行住坐臥、眠寤語默，皆正知之，似如真梵行，至諸真梵行所，彼或不知。大目揵連！若諸梵行知者，便作是念：『是沙門污，是沙門辱，是沙門憎，是沙門刺。』知已，便當共擯棄之。所以者何？莫令污染諸梵行者。",
+   "T0064": "從今日始，汝等當共說戒，如來不復來說戒。何以故？目乾連！此一愚人如是過已，過觀而觀屈申卷舒，持僧伽梨衣鉢，而於他梵行者自言是梵行。此目乾連！若人言是梵行者，若人作是念：『沙門為幻，沙門為麤，沙門為刺，沙門非言。』如是知已，便棄著外。何以故？恐壞餘淨比丘故。"
+  },
+  "a12": {
+   "an8.10": "Seyyathāpi, bhikkhave, sampanne yavakaraṇe yavadūsī jāyetha yavapalāpo yavakāraṇḍavoti. Tassa tādisaṁyeva mūlaṁ hoti, seyyathāpi aññesaṁ bhaddakānaṁ yavānaṁ; tādisaṁyeva nāḷaṁ hoti, seyyathāpi aññesaṁ bhaddakānaṁ yavānaṁ; tādisaṁyeva pattaṁ hoti, seyyathāpi aññesaṁ bhaddakānaṁ yavānaṁ— yāvassa sīsaṁ na nibbattati. Yato ca khvassa sīsaṁ nibbattati, tamenaṁ evaṁ jānanti: ‘yavadūsīvāyaṁ yavapalāpo yavakāraṇḍavo’ti. Tamenaṁ iti viditvā samūlaṁ uppāṭetvā bahiddhā yavakaraṇassa chaḍḍenti. Taṁ kissa hetu? Mā aññe bhaddake yave dūsesīti. Evamevaṁ kho, bhikkhave, idhekaccassa puggalassa tādisaṁyeva hoti abhikkantaṁ paṭikkantaṁ ālokitaṁ vilokitaṁ samiñjitaṁ pasāritaṁ saṅghāṭipattacīvaradhāraṇaṁ, seyyathāpi aññesaṁ bhaddakānaṁ bhikkhūnaṁ— yāvassa bhikkhū āpattiṁ na passanti. Yato ca khvassa bhikkhū āpattiṁ passanti, tamenaṁ evaṁ jānanti: ‘samaṇadūsīvāyaṁ samaṇapalāpo samaṇakāraṇḍavo’ti. Tamenaṁ iti viditvā bahiddhā nāsenti. Taṁ kissa hetu? Mā aññe bhaddake bhikkhū dūsesīti.",
+   "T0026-ma122": "「大目揵連！猶如居士有良稻田，或有麥田，生草名穢麥，其根相似，莖、節、葉、花皆亦似麥，後生實已，居士見之，便作是念：『是麥污辱，是麥憎刺。』知已便拔，擲棄於外。所以者何？莫令污穢餘真好麥。如是，大目揵連！或有癡人正知出入，善觀分別，屈伸低仰，儀容庠序，善著僧伽梨及諸衣鉢，行住坐臥、眠寤語默，皆正知之，似如真梵行，至諸真梵行所，彼或不知。大目揵連！若諸梵行知者，便作是念：『是沙門污，是沙門辱，是沙門憎，是沙門刺。』知已，便當共擯棄之。所以者何？莫令污染諸梵行者。",
+   "T0064": "猶若，目乾連！成就稻田麥田，若中有惡草生，彼草根如麥根，枝節葉實亦如是，未成其子當棄之。目乾連！若成子已，彼田居士便作是念：『此為是壞麥子之草，麥之刺、麥之麤。』彼便拔，棄著外。何以故？恐壞餘淨麥故。如是，目乾連！若有一愚人作是念過已，過觀而觀屈申卷舒，持僧伽梨衣鉢，而於餘梵行者自言是梵行者。若，目乾連！他稱言是梵行者，彼若作是念：『此沙門壞，此沙門刺，此沙門麤，此沙門非言。』彼知已，便棄著外。何以故？恐壞餘淨比丘故。"
+  },
+  "a13": {
+   "an8.10": "Seyyathāpi, bhikkhave, mahato dhaññarāsissa phuṇamānassa tattha yāni tāni dhaññāni daḷhāni sāravantāni tāni ekamantaṁ puñjaṁ hoti, yāni pana tāni dhaññāni dubbalāni palāpāni tāni vāto ekamantaṁ apavahati. Tamenaṁ sāmikā sammajjaniṁ gahetvā bhiyyoso mattāya apasammajjanti. Taṁ kissa hetu? Mā aññe bhaddake dhaññe dūsesīti. Evamevaṁ kho, bhikkhave, idhekaccassa puggalassa tādisaṁyeva hoti abhikkantaṁ paṭikkantaṁ ālokitaṁ vilokitaṁ samiñjitaṁ pasāritaṁ saṅghāṭipattacīvaradhāraṇaṁ, seyyathāpi aññesaṁ bhaddakānaṁ bhikkhūnaṁ— yāvassa bhikkhū āpattiṁ na passanti. Yato ca khvassa bhikkhū āpattiṁ passanti, tamenaṁ evaṁ jānanti: ‘samaṇadūsīvāyaṁ samaṇapalāpo samaṇakāraṇḍavo’ti. Tamenaṁ iti viditvā bahiddhā nāsenti. Taṁ kissa hetu? Mā aññe bhaddake bhikkhū dūsesīti.",
+   "T0026-ma122": "「大目揵連！猶如居士秋時揚穀，穀聚之中若有成實者，揚便止住，若不成實及粃糠者，便隨風去，居士見已，即持掃帚，掃治令淨。所以者何？莫令污雜餘淨好稻。如是，大目揵連！或有癡人正知出入，善觀分別，屈伸低仰，儀容庠序，善著僧伽梨及諸衣鉢，行住坐臥、眠寤語默，皆正知之，似如真梵行，至諸真梵行所，彼或不知。大目揵連！若諸梵行知者，便作是念：『是沙門污，是沙門辱，是沙門憎，是沙門刺。』知已，便當共擯棄之。所以者何？莫令污染諸梵行者。",
+   "T0064": "猶若，目乾連！彼田居士，於冬月時治大穀積，若彼穀所有堅固住者，一向皆離去，謂所有若草若葉，彼揚著風中一向吹去，彼田居士，執掃帚在中是。目乾連！若愚人作是行過已，過觀穀故。如是，目乾連！若一愚人，作是行過已，過觀而觀屈申卷舒，持僧伽梨衣鉢，而於他梵行者，自言是梵行者。若，目乾連！他稱是梵行者，他作是念：『此沙門壞，此沙門麤，此沙門刺。』彼知已，棄著外。"
+  },
+  "a14": {
+   "an8.10": "Seyyathāpi, bhikkhave, puriso udapānapanāḷiyatthiko tiṇhaṁ kuṭhāriṁ ādāya vanaṁ paviseyya. So yaṁ yadeva rukkhaṁ kuṭhāripāsena ākoṭeyya tattha yāni tāni rukkhāni daḷhāni sāravantāni tāni kuṭhāripāsena ākoṭitāni kakkhaḷaṁ paṭinadanti; yāni pana tāni rukkhāni antopūtīni avassutāni kasambujātāni tāni kuṭhāripāsena ākoṭitāni daddaraṁ paṭinadanti. Tamenaṁ mūle chindati, mūle chinditvā agge chindati, agge chinditvā anto suvisodhitaṁ visodheti, anto suvisodhitaṁ visodhetvā udapānapanāḷiṁ yojeti. Evamevaṁ kho, bhikkhave, idhekaccassa puggalassa tādisaṁyeva hoti abhikkantaṁ paṭikkantaṁ ālokitaṁ vilokitaṁ samiñjitaṁ pasāritaṁ saṅghāṭipattacīvaradhāraṇaṁ, seyyathāpi aññesaṁ bhaddakānaṁ bhikkhūnaṁ— yāvassa bhikkhū āpattiṁ na passanti. Yato ca khvassa bhikkhū āpattiṁ passanti, tamenaṁ evaṁ jānanti: ‘samaṇadūsīvāyaṁ samaṇapalāpo samaṇakāraṇḍavo’ti. Tamenaṁ iti viditvā bahiddhā nāsenti. Taṁ kissa hetu? Mā aññe bhaddake bhikkhū dūsesīti.",
+   "T0026-ma122": "「大目揵連！猶如居士為過泉水故，作通水槽，持斧入林，扣打諸樹，若堅實者，其聲便小，若空中者，其聲便大，居士知已，便斫治節，擬作通水槽。如是，大目揵連！或有癡人正知出入，善觀分別，屈伸低仰，儀容庠序，善著僧伽梨及諸衣鉢，行住坐臥、眠寤語默，皆正知之，似如真梵行，至諸真梵行所，彼或不知。大目揵連！若諸梵行知者，便作是念：『是沙門污，是沙門辱，是沙門憎，是沙門刺。』知已，便當共擯棄之。所以者何？莫令污染諸梵行者。」",
+   "T0064": "何以故？恐壞餘比丘故。猶，目乾連！彼田居士，彼求水欲通水，執極利斧入於林中，彼執斧㭬樹，謂彼所有樹堅固住而不可入。謂所有枯樹打已斧則陷入。田居士截其根，截根已通其中，通其中已便作木筧凾通水。如是。目乾連！或一愚人作如是行過已，過觀而觀屈申卷舒。持僧伽梨衣鉢，而於他梵行者，自言是梵行者。若。目乾連！他稱言是梵行者，彼作是念：『沙門壞，沙門麤，沙門刺，沙門非。』彼知已，棄著外。何以故？恐壞餘淨比丘故。"
+  },
+  "a15": {
+   "an8.10": "Saṁvāsāyaṁ vijānātha, pāpiccho kodhano iti; Makkhī thambhī paḷāsī ca, issukī maccharī saṭho. Santavāco janavati, samaṇo viya bhāsati; Raho karoti karaṇaṁ, pāpadiṭṭhi anādaro. Saṁsappī ca musāvādī, taṁ viditvā yathātathaṁ; Sabbe samaggā hutvāna, abhinibbajjayātha naṁ. Kāraṇḍavaṁ niddhamatha, Kasambuṁ apakassatha; Tato palāpe vāhetha, Assamaṇe samaṇamānine. Niddhamitvāna pāpicche, pāpaācāragocare; Suddhāsuddhehi saṁvāsaṁ, kappayavho patissatā;"
+  },
+  "a16": {
+   "T0026-ma122": "於是，世尊說此頌曰：「共會集當知，惡欲憎嫉恚，\n不語結恨慳，嫉妬諂欺誑。\n在眾詐言息，屏處稱沙門，\n陰作諸惡行，惡見不守護。\n欺誑妄語言，如是當知彼，\n往集不與會，擯棄不共止。\n欺詐誑說多，非息稱說息，\n知時具淨行，擯棄遠離彼。\n清淨共清淨，常當共和合，\n和合得安隱，如是得苦邊。」",
+   "T0064": "說偈曰：「共止及當知，惡求及瞋恚，\n恚恨不捨貪，不棄幻諛諂。\n莊人詐言息，自說是沙門，\n自作諸惡行，惡見非是樂。\n多作諸妄言，如是知彼已，\n悉皆不與會，擯棄不共止。\n知時具淨行，分別誰言已，\n非息言沙門，惡行擯棄已。\n不與惡共止，數數及日日，\n悉皆共集會，當棄此苦際。」"
+  },
+  "a17": {
+   "an8.10": "Tato samaggā nipakā, dukkhassantaṁ karissathā”ti. Dasamaṁ. Mettāvaggo paṭhamo. Tassuddānaṁ Mettaṁ paññā ca dve piyā, dve lokā dve vipattiyo; Devadatto ca uttaro, nando kāraṇḍavena cāti.",
+   "T0026-ma122": "佛說如是。彼諸比丘聞佛所說，歡喜奉行。瞻波經第六竟（一千三百五十一字）",
+   "T0064": "佛如是說，彼諸比丘聞世尊所說，歡喜而樂。"
+  }
+ }
+}

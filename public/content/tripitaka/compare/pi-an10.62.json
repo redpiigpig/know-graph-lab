@@ -1,0 +1,321 @@
+{
+ "slug": "pi-an10.62",
+ "title": "中阿含經 （五二）中阿含習相應品食經第十一（初一日誦）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。複核標記存疑 7 段：義段22起，中阿含（五三）的內容開始錯位，將大海喻的內容提前敘述，導致後續義段皆與巴利經文對應錯亂。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "有愛者則有食"
+  },
+  {
+   "id": "a02",
+   "label": "有愛食是無明"
+  },
+  {
+   "id": "a03",
+   "label": "無明食是五蓋"
+  },
+  {
+   "id": "a04",
+   "label": "五蓋食是三惡行"
+  },
+  {
+   "id": "a05",
+   "label": "三惡行食是不護諸根"
+  },
+  {
+   "id": "a06",
+   "label": "不護諸根食是不正念不正智"
+  },
+  {
+   "id": "a07",
+   "label": "不正念不正智食是不正思惟"
+  },
+  {
+   "id": "a08",
+   "label": "不正思惟食是不信"
+  },
+  {
+   "id": "a09",
+   "label": "不信食是聞惡法"
+  },
+  {
+   "id": "a10",
+   "label": "聞惡法食是親近惡知識"
+  },
+  {
+   "id": "a11",
+   "label": "親近惡知識食是惡人"
+  },
+  {
+   "id": "a12",
+   "label": "惡人具足至有愛成就"
+  },
+  {
+   "id": "a13",
+   "label": "大海喻：從雨至大海展轉成滿"
+  },
+  {
+   "id": "a14",
+   "label": "有愛展轉具成（重述）"
+  },
+  {
+   "id": "a15",
+   "label": "明解脫亦有食"
+  },
+  {
+   "id": "a16",
+   "label": "明解脫食是七覺支"
+  },
+  {
+   "id": "a17",
+   "label": "七覺支食是四念處"
+  },
+  {
+   "id": "a18",
+   "label": "四念處食是三妙行"
+  },
+  {
+   "id": "a19",
+   "label": "三妙行食是護諸根"
+  },
+  {
+   "id": "a20",
+   "label": "護諸根食是正念正智"
+  },
+  {
+   "id": "a21",
+   "label": "正念正智食是正思惟"
+  },
+  {
+   "id": "a22",
+   "label": "正思惟食是信",
+   "doubt": true
+  },
+  {
+   "id": "a23",
+   "label": "信食是聞善法",
+   "doubt": true
+  },
+  {
+   "id": "a24",
+   "label": "聞善法食是親近善知識",
+   "doubt": true
+  },
+  {
+   "id": "a25",
+   "label": "親近善知識食是善人",
+   "doubt": true
+  },
+  {
+   "id": "a26",
+   "label": "善人具足至明解脫成就",
+   "doubt": true
+  },
+  {
+   "id": "a27",
+   "label": "大海喻重說（明解脫）",
+   "doubt": true
+  },
+  {
+   "id": "a28",
+   "label": "明解脫展轉具成（重述）",
+   "doubt": true
+  },
+  {
+   "id": "a29",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "an10.62",
+   "lang": "pi",
+   "label": "巴利 AN10.62",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "T0026-ma52",
+   "lang": "lzh",
+   "label": "中阿含經 （五二）中阿含習相應品食經第十一（初一日誦）",
+   "who": "東晉 瞿曇僧伽提婆譯"
+  },
+  {
+   "id": "T0026-ma53",
+   "lang": "lzh",
+   "label": "中阿含經 （五三）中阿含習相應品食經第十二（初一日誦）",
+   "who": "東晉 瞿曇僧伽提婆譯"
+  }
+ ],
+ "works": [
+  "T0026"
+ ],
+ "anchors": [
+  {
+   "work": "T0026",
+   "node": "（五二）中阿含習相應品食經第十一（初一日誦）"
+  },
+  {
+   "work": "T0026",
+   "node": "（五三）中阿含習相應品食經第十二（初一日誦）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "an10.62": "Aṅguttara Nikāya 10.62",
+   "T0026-ma52": "我聞如是：一時，佛遊舍衛國，在勝林給孤獨園。",
+   "T0026-ma53": "我聞如是：一時，佛遊舍衛國，在勝林給孤獨園。"
+  },
+  "a01": {
+   "an10.62": "7. Yamakavagga",
+   "T0026-ma52": "爾時，世尊告諸比丘：「有愛者，其本際不可知，本無有愛，然今生有愛，便可得知，所因有愛。",
+   "T0026-ma53": "爾時，世尊告諸比丘：「有愛者，其本際不可知，本無有愛，然今生有愛，便可得知，所因有愛。"
+  },
+  "a02": {
+   "an10.62": "Taṇhāsutta",
+   "T0026-ma52": "有愛者，則有食，非無食。",
+   "T0026-ma53": "有愛者，則有食，非無食。"
+  },
+  "a03": {
+   "an10.62": "“Purimā, bhikkhave, koṭi na paññāyati bhavataṇhāya: ‘ito pubbe bhavataṇhā nāhosi, atha pacchā samabhavī’ti.",
+   "T0026-ma52": "何謂有愛食？答曰無明為食。無明亦有食，非無食。",
+   "T0026-ma53": "何謂有愛食？答曰無明為食。無明亦有食，非無食。"
+  },
+  "a04": {
+   "an10.62": "Evañcetaṁ, bhikkhave, vuccati, atha ca pana paññāyati: ‘idappaccayā bhavataṇhā’ti.",
+   "T0026-ma52": "何謂無明食？答曰五蓋為食。五蓋亦有食，非無食。",
+   "T0026-ma53": "何謂無明食？答曰五蓋為食。五蓋亦有食，非無食。"
+  },
+  "a05": {
+   "an10.62": "Bhavataṇhampāhaṁ, bhikkhave, sāhāraṁ vadāmi, no anāhāraṁ.",
+   "T0026-ma52": "何謂五蓋食？答曰三惡行為食。",
+   "T0026-ma53": "何謂五蓋食？答曰三惡行為食。"
+  },
+  "a06": {
+   "an10.62": "Ko cāhāro bhavataṇhāya?",
+   "T0026-ma52": "三惡行亦有食，非無食。",
+   "T0026-ma53": "三惡行亦有食，非無食。"
+  },
+  "a07": {
+   "an10.62": "‘Avijjā’tissa vacanīyaṁ.",
+   "T0026-ma52": "何謂三惡行食？答曰不護諸根為食。",
+   "T0026-ma53": "何謂三惡行食？答曰不護諸根為食。"
+  },
+  "a08": {
+   "an10.62": "Avijjampāhaṁ, bhikkhave, sāhāraṁ vadāmi, no anāhāraṁ.",
+   "T0026-ma52": "不護諸根亦有食，非無食。",
+   "T0026-ma53": "不護諸根亦有食，非無食。"
+  },
+  "a09": {
+   "an10.62": "Ko cāhāro avijjāya?",
+   "T0026-ma52": "何謂不護諸根食？",
+   "T0026-ma53": "何謂不護諸根食？"
+  },
+  "a10": {
+   "an10.62": "‘Pañca nīvaraṇā’tissa vacanīyaṁ.",
+   "T0026-ma52": "答曰不正念、不正智為食。",
+   "T0026-ma53": "答曰不正念、不正智為食。"
+  },
+  "a11": {
+   "an10.62": "Pañca nīvaraṇepāhaṁ, bhikkhave, sāhāre vadāmi, no anāhāre.",
+   "T0026-ma52": "不正念、不正智亦有食，非無食。",
+   "T0026-ma53": "不正念、不正智亦有食，非無食。"
+  },
+  "a12": {
+   "an10.62": "Ko cāhāro pañcannaṁ nīvaraṇānaṁ?",
+   "T0026-ma52": "何謂不正念、不正智食？",
+   "T0026-ma53": "何謂不正念、不正智食？"
+  },
+  "a13": {
+   "an10.62": "‘Tīṇi duccaritānī’tissa vacanīyaṁ.",
+   "T0026-ma52": "答曰不正思惟為食。",
+   "T0026-ma53": "答曰不正思惟為食。"
+  },
+  "a14": {
+   "an10.62": "Tīṇipāhaṁ, bhikkhave, duccaritāni sāhārāni vadāmi, no anāhārāni.",
+   "T0026-ma52": "不正思惟亦有食，非無食。",
+   "T0026-ma53": "不正思惟亦有食，非無食。"
+  },
+  "a15": {
+   "an10.62": "Ko cāhāro tiṇṇannaṁ duccaritānaṁ?",
+   "T0026-ma52": "何謂不正思惟食？",
+   "T0026-ma53": "何謂不正思惟食？"
+  },
+  "a16": {
+   "an10.62": "‘Indriyaasaṁvaro’tissa vacanīyaṁ.",
+   "T0026-ma52": "答曰不信為食。不信亦有食，非無食。",
+   "T0026-ma53": "答曰不信為食。不信亦有食，非無食。"
+  },
+  "a17": {
+   "an10.62": "Indriyaasaṁvarampāhaṁ, bhikkhave, sāhāraṁ vadāmi, no anāhāraṁ.",
+   "T0026-ma52": "何謂不信食？答曰聞惡法為食。",
+   "T0026-ma53": "何謂不信食？答曰聞惡法為食。"
+  },
+  "a18": {
+   "an10.62": "Ko cāhāro indriyaasaṁvarassa?",
+   "T0026-ma52": "聞惡法亦有食，非無食。",
+   "T0026-ma53": "聞惡法亦有食，非無食。"
+  },
+  "a19": {
+   "an10.62": "‘Asatāsampajaññan’tissa vacanīyaṁ.",
+   "T0026-ma52": "何謂聞惡法食？答曰親近惡知識為食。",
+   "T0026-ma53": "何謂聞惡法食？答曰親近惡知識為食。"
+  },
+  "a20": {
+   "an10.62": "Asatāsampajaññampāhaṁ, bhikkhave, sāhāraṁ vadāmi, no anāhāraṁ.",
+   "T0026-ma52": "親近惡知識亦有食，非無食。",
+   "T0026-ma53": "親近惡知識亦有食，非無食。"
+  },
+  "a21": {
+   "an10.62": "Ko cāhāro asatā sampajaññassa?",
+   "T0026-ma52": "何謂親近惡知識食？",
+   "T0026-ma53": "何謂親近惡知識食？"
+  },
+  "a22": {
+   "an10.62": "‘Ayonisomanasikāro’tissa vacanīyaṁ.",
+   "T0026-ma52": "答曰惡人為食。「是為具惡人已，便具親近惡知識。",
+   "T0026-ma53": "答曰惡人為食。「大海亦有食，非無食。"
+  },
+  "a23": {
+   "an10.62": "Ayonisomanasikārampāhaṁ, bhikkhave, sāhāraṁ vadāmi, no anāhāraṁ.",
+   "T0026-ma52": "具親近惡知識已，便具聞惡法。",
+   "T0026-ma53": "何謂大海食？答曰雨為食。有時大雨，大雨已則山巖溪㵎、平澤水滿。"
+  },
+  "a24": {
+   "an10.62": "Ko cāhāro ayonisomanasikārassa?",
+   "T0026-ma52": "具聞惡法已，便具生不信。",
+   "T0026-ma53": "山巖溪㵎、平澤水滿已，則小川滿。"
+  },
+  "a25": {
+   "an10.62": "‘Assaddhiyan’tissa vacanīyaṁ.",
+   "T0026-ma52": "具生不信已，便具不正思惟。",
+   "T0026-ma53": "小川滿已，則大川滿。"
+  },
+  "a26": {
+   "an10.62": "Assaddhiyampāhaṁ, bhikkhave, sāhāraṁ vadāmi, no anāhāraṁ.",
+   "T0026-ma52": "具不正思惟已，便具不正念、不正智。",
+   "T0026-ma53": "大川滿已，則小河滿。"
+  },
+  "a27": {
+   "an10.62": "Ko cāhāro assaddhiyassa?",
+   "T0026-ma52": "具不正念、不正智已，便具不護諸根。",
+   "T0026-ma53": "小河滿已，則大河滿。"
+  },
+  "a28": {
+   "an10.62": "‘Assaddhammassavanan’tissa vacanīyaṁ.",
+   "T0026-ma52": "具不護諸根已，便具三惡行。",
+   "T0026-ma53": "大河滿已，則大海滿。"
+  },
+  "a29": {
+   "an10.62": "Assaddhammassavanampāhaṁ, bhikkhave, sāhāraṁ vadāmi, no anāhāraṁ. Ko cāhāro assaddhammassavanassa? ‘Asappurisasaṁsevo’tissa vacanīyaṁ. Iti kho, bhikkhave, asappurisasaṁsevo paripūro assaddhammassavanaṁ paripūreti, assaddhammassavanaṁ paripūraṁ assaddhiyaṁ paripūreti, assaddhiyaṁ paripūraṁ ayonisomanasikāraṁ paripūreti, ayonisomanasikāro paripūro asatāsampajaññaṁ paripūreti, asatāsampajaññaṁ paripūraṁ indriyaasaṁvaraṁ paripūreti, indriyaasaṁvaro paripūro tīṇi duccaritāni paripūreti, tīṇi duccaritāni paripūrāni pañca nīvaraṇe paripūrenti, pañca nīvaraṇā paripūrā avijjaṁ paripūrenti, avijjā paripūrā bhavataṇhaṁ paripūreti; evametissā bhavataṇhāya āhāro hoti, evañca pāripūri. Seyyathāpi, bhikkhave, uparipabbate thullaphusitake deve vassante taṁ udakaṁ yathāninnaṁ pavattamānaṁ pabbatakandarapadarasākhā paripūreti, pabbatakandarapadarasākhā paripūrā kusobbhe paripūrenti, kusobbhā paripūrā mahāsobbhe paripūrenti, mahāsobbhā paripūrā kunnadiyo paripūrenti, kunnadiyo paripūrā mahānadiyo paripūrenti, mahānadiyo paripūrā mahāsamuddaṁ sāgaraṁ paripūrenti; evametassa mahāsamuddassa sāgarassa āhāro hoti, evañca pāripūri. Evamevaṁ kho, bhikkhave, asappurisasaṁsevo paripūro assaddhammassavanaṁ paripūreti, assaddhammassavanaṁ paripūraṁ assaddhiyaṁ paripūreti, assaddhiyaṁ paripūraṁ ayonisomanasikāraṁ paripūreti, ayonisomanasikāro paripūro asatāsampajaññaṁ paripūreti, asatāsampajaññaṁ paripūraṁ indriyaasaṁvaraṁ paripūreti, indriyaasaṁvaro paripūro tīṇi duccaritāni paripūreti, tīṇi duccaritāni paripūrāni pañca nīvaraṇe paripūrenti, pañca nīvaraṇā paripūrā avijjaṁ paripūrenti, avijjā paripūrā bhavataṇhaṁ paripūreti; evametissā bhavataṇhāya āhāro hoti, evañca pāripūri. Vijjāvimuttimpāhaṁ, bhikkhave, sāhāraṁ vadāmi, no anāhāraṁ. Ko cāhāro vijjāvimuttiyā? ‘Satta bojjhaṅgā’tissa vacanīyaṁ. Sattapāhaṁ, bhikkhave, bojjhaṅge sāhāre vadāmi, no anāhāre. Ko cāhāro sattannaṁ bojjhaṅgānaṁ? ‘Cattāro satipaṭṭhānā’tissa vacanīyaṁ. Cattāropāhaṁ, bhikkhave, satipaṭṭhāne sāhāre vadāmi, no anāhāre. Ko cāhāro catunnaṁ satipaṭṭhānānaṁ? ‘Tīṇi sucaritānī’tissa vacanīyaṁ. Tīṇipāhaṁ, bhikkhave, sucaritāni sāhārāni vadāmi, no anāhārāni. Ko cāhāro tiṇṇannaṁ sucaritānaṁ? ‘Indriyasaṁvaro’tissa vacanīyaṁ. Indriyasaṁvarampāhaṁ, bhikkhave, sāhāraṁ vadāmi, no anāhāraṁ. Ko cāhāro indriyasaṁvarassa? ‘Satisampajaññan’tissa vacanīyaṁ. Satisampajaññampāhaṁ, bhikkhave, sāhāraṁ vadāmi, no anāhāraṁ. Ko cāhāro satisampajaññassa? ‘Yonisomanasikāro’tissa vacanīyaṁ. Yonisomanasikārampāhaṁ, bhikkhave, sāhāraṁ vadāmi, no anāhāraṁ. Ko cāhāro yonisomanasikārassa? ‘Saddhā’tissa vacanīyaṁ. Saddhampāhaṁ, bhikkhave, sāhāraṁ vadāmi, no anāhāraṁ. Ko cāhāro saddhāya? ‘Saddhammassavanan’tissa vacanīyaṁ. Saddhammassavanampāhaṁ, bhikkhave, sāhāraṁ vadāmi, no anāhāraṁ. Ko cāhāro saddhammassavanassa? ‘Sappurisasaṁsevo’tissa vacanīyaṁ. Iti kho, bhikkhave, sappurisasaṁsevo paripūro saddhammassavanaṁ paripūreti, saddhammassavanaṁ paripūraṁ saddhaṁ paripūreti, saddhā paripūrā yonisomanasikāraṁ paripūreti, yonisomanasikāro paripūro satisampajaññaṁ paripūreti, satisampajaññaṁ paripūraṁ indriyasaṁvaraṁ paripūreti, indriyasaṁvaro paripūro tīṇi sucaritāni paripūreti, tīṇi sucaritāni paripūrāni cattāro satipaṭṭhāne paripūrenti, cattāro satipaṭṭhānā paripūrā satta bojjhaṅge paripūrenti, satta bojjhaṅgā paripūrā vijjāvimuttiṁ paripūrenti; evametissā vijjāvimuttiyā āhāro hoti, evañca pāripūri. Seyyathāpi, bhikkhave, uparipabbate thullaphusitake deve vassante taṁ udakaṁ yathāninnaṁ pavattamānaṁ …pe… evametassa mahāsamuddassa sāgarassa āhāro hoti, evañca pāripūri. Evamevaṁ kho, bhikkhave, sappurisasaṁsevo paripūro saddhammassavanaṁ paripūreti …pe… evametissā vijjāvimuttiyā āhāro hoti, evañca pāripūrī”ti. Dutiyaṁ.",
+   "T0026-ma52": "具三惡行已，便具五葢。具五葢已，便具無明。具無明已，便具有愛。如是此有愛展轉具成。「大海亦有食，非無食。何謂大海食？答曰大河為食。大河亦有食，非無食。何謂大河食？答曰小河為食。小河亦有食，非無食。何謂小河食？答曰大川為食。大川亦有食，非無食。何謂大川食？答曰小川為食。小川亦有食，非無食。何謂小川食？答曰山巖溪㵎、平澤為食。山巖溪㵎、平澤亦有食，非無食。何謂山巖溪㵎、平澤食？答曰雨為食。有時大雨，大雨已，則山巖溪㵎、平澤水滿。山巖溪㵎、平澤水滿已，則小川滿。小川滿已，則大川滿。大川滿已，則小河滿。小河滿已，則大河滿。大河滿已，則大海滿。如是彼大海展轉成滿。「如是有愛亦有食，非無食。何謂有愛食？答曰無明為食。無明亦有食，非無食。何謂無明食？答曰五蓋為食。五蓋亦有食，非無食。何謂五蓋食？答曰三惡行為食。三惡行亦有食，非無食。何謂三惡行食？答曰不護諸根為食。不護諸根亦有食，非無食。何謂不護諸根食？答曰不正念、不正智為食。不正念、不正智亦有食，非無食。何謂不正念、不正智食？答曰不正思惟為食。不正思惟亦有食，非無食。何謂不正思惟食？答曰不信為食。不信亦有食，非無食。何謂不信食？答曰聞惡法為食。聞惡法亦有食，非無食。何謂聞惡法食？答曰親近惡知識為食。親近惡知識亦有食，非無食。何謂親近惡知識食？答曰惡人為食。「是為具惡人已，便具親近惡知識。具親近惡知識已，便具聞惡法。具聞惡法已，便具生不信。具生不信已，便具不正思惟。具不正思惟已，便具不正念、不正智。具不正念、不正智已，便具不護諸根。具不護諸根已，便具三惡行。具三惡行已，便具五蓋。具五蓋已，便具無明。具無明已，便具有愛。如是此有愛展轉具成。「明、解脫亦有食，非無食。何謂明、解脫食？答曰七覺支為食。七覺支亦有食，非無食。何謂七覺支食？答曰四念處為食。四念處亦有食，非無食。何謂四念處食？答曰三妙行為食。三妙行亦有食，非無食。何謂三妙行食？答曰護諸根為食。護諸根亦有食，非無食。何謂護諸根食？答曰正念、正智為食。正念、正智亦有食，非無食。何謂正念、正智食？答曰正思惟為食。正思惟亦有食，非無食。何謂正思惟食？答曰信為食。信亦有食，非無食。何謂信食？答曰聞善法為食。聞善法亦有食，非無食。何謂聞善法食？答曰親近善知識為食。親近善知識亦有食，非無食。何謂親近善知識食？答曰善人為食。「是為具善人已，便具親近善知識。具親近善知識已，便具聞善法。具聞善法已，便具生信。具生信已，便具正思惟。具正思惟已，便具正念、正智。具正念、正智已，便具護諸根。具護諸根已，便具三妙行。具三妙行已，便具四念處。具四念處已，便具七覺支。具七覺支已，便具明、解脫。如是此明、解脫展轉具成。「大海亦有食，非無食。何謂大海食？答曰大河為食。大河亦有食，非無食。何謂大河食？答曰小河為食。小河亦有食，非無食。何謂小河食？答曰大川為食。大川亦有食，非無食。何謂大川食？答曰小川為食。小川亦有食，非無食。何謂小川食？答曰山巖溪㵎、平澤為食。山巖溪㵎、平澤亦有食，非無食。何謂山巖溪㵎、平澤食？答曰雨為食。有時大雨，大雨已，則山巖溪㵎、平澤水滿。山巖溪㵎、平澤水滿已，則小川滿。小川滿已，則大川滿。大川滿已，則小河滿。小河滿已，則大河滿。大河滿已，則大海滿。如是彼大海展轉成滿。「如是明、解脫亦有食，非無食。何謂明、解脫食？答曰七覺支為食。七覺支亦有食，非無食。何謂七覺支食？答曰四念處為食。四念處亦有食，非無食。何謂四念處食？答曰三妙行為食。三妙行亦有食，非無食。何謂三妙行食？答曰護諸根為食。護諸根亦有食，非無食。何謂護諸根食？答曰正念、正智為食。正念、正智亦有食，非無食。何謂正念、正智食？答曰正思惟為食。正思惟亦有食，非無食。何謂正思惟食？答曰信為食。信亦有食，非無食。何謂信食？答曰聞善法為食。聞善法亦有食，非無食。何謂聞善法食？答曰親近善知識為食。親近善知識亦有食，非無食。何謂親近善知識食？答曰善人為食。「是為具善人已，便具親近善知識。具親近善知識已，便具聞善法。具聞善法已，便具生信。具生信已，便具正思惟。具正思惟已，便具正念、正智。具正念、正智已，便具護諸根。具護諸根已，便具三妙行。具三妙行已，便具四念處。具四念處已，便具七覺支。具七覺支已，便具明、解脫。如是此明、解脫展轉具成。」佛說如是。彼諸比丘聞佛所說，歡喜奉行。食經第十一竟（一千八百三十三字）",
+   "T0026-ma53": "如是彼大海展轉成滿。「如是具惡人已，便具親近惡知識。具親近惡知識已，便具聞惡法。具聞惡法已，便具生不信。具生不信已，便具不正思惟。具不正思惟已，便具不正念、不正智。具不正念、不正智已，便具不護諸根。具不護諸根已，便具三惡行。具三惡行已，便具五蓋。具五葢已，便具無明。具無明已，便具有愛。如是此有愛展轉具成。「明、解脫亦有食，非無食。何謂明、解脫食？答曰七覺支為食。七覺支亦有食，非無食。何謂七覺支食？答曰四念處為食。四念處亦有食，非無食。何謂四念處食？答曰三妙行為食。三妙行亦有食，非無食。何謂三妙行食？答曰護諸根為食。護諸根亦有食，非無食。何謂護諸根食？答曰正念、正智為食。正念、正智亦有食，非無食。何謂正念、正智食？答曰正思惟為食。正思惟亦有食，非無食。何謂正思惟食？答曰信為食。信亦有食，非無食。何謂信食？答曰聞善法為食。聞善法亦有食，非無食。何謂聞善法食？答曰親近善知識為食。親近善知識亦有食，非無食。何謂親近善知識食？答曰善人為食。「大海亦有食，非無食。何謂大海食？答曰雨為食。有時大雨，大雨已，則山巖溪㵎、平澤水滿。山巖溪㵎、平澤水滿已，則小川滿。小川滿已，則大川滿。大川滿已，則小河滿。小河滿已，則大河滿。大河滿已，則大海滿。如是彼大海展轉成滿。「如是善人具已，便具親近善知識。具親近善知識已，便具聞善法。具聞善法已，便具生信。具生信已，便具正思惟。具正思惟已，便具正念、正智。具正念、正智已，便具護諸根。具護諸根已，便具三妙行。具三妙行已，便具四念處。具四念處已，便具七覺支。具七覺支已，便具明、解脫。如是此明、解脫展轉具成。」佛說如是。彼諸比丘聞佛所說，歡喜奉行。食經第十二竟（九百三十字）"
+  }
+ }
+}

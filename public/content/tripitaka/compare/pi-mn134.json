@@ -1,0 +1,181 @@
+{
+ "slug": "pi-mn134",
+ "title": "尊上經",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "經題與序分"
+  },
+  {
+   "id": "a01",
+   "label": "天子問答：受持偈頌"
+  },
+  {
+   "id": "a02",
+   "label": "天子說偈頌內容"
+  },
+  {
+   "id": "a03",
+   "label": "天子教導受持總說分別"
+  },
+  {
+   "id": "a04",
+   "label": "天子消失"
+  },
+  {
+   "id": "a05",
+   "label": "尊者往見佛陀"
+  },
+  {
+   "id": "a06",
+   "label": "尊者向佛陀報告天子來訪"
+  },
+  {
+   "id": "a07",
+   "label": "佛陀問尊者是否識得天子"
+  },
+  {
+   "id": "a08",
+   "label": "佛陀宣說天子名號並勸請聽法"
+  },
+  {
+   "id": "a09",
+   "label": "佛陀說偈頌（第一次）"
+  },
+  {
+   "id": "a10",
+   "label": "佛陀問答：過去、未來、現在法的觀察"
+  },
+  {
+   "id": "a11",
+   "label": "佛陀重說偈頌（第二次）"
+  },
+  {
+   "id": "a12",
+   "label": "佛陀說法結束"
+  },
+  {
+   "id": "a13",
+   "label": "尊者隨喜結經"
+  }
+ ],
+ "versions": [
+  {
+   "id": "mn134",
+   "lang": "pi",
+   "label": "巴利 MN134",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-mn134",
+   "lang": "lzh",
+   "label": "漢譯南傳 MN134",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0026-ma166",
+   "lang": "lzh",
+   "label": "中阿含經 （一六六）中阿含根本分別品釋中禪室尊經第五（第四分別誦）",
+   "who": "東晉 瞿曇僧伽提婆譯",
+   "reorder": true
+  },
+  {
+   "id": "T0077",
+   "lang": "lzh",
+   "label": "尊上經",
+   "who": "西晉 竺法護譯"
+  }
+ ],
+ "works": [
+  "T0026",
+  "T0077"
+ ],
+ "anchors": [
+  {
+   "work": "T0026",
+   "node": "（一六六）中阿含根本分別品釋中禪室尊經第五（第四分別誦）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "mn134": "Majjhima Nikāya 134 Lomasakaṅgiyabhaddekarattasutta Evaṁ me sutaṁ— ekaṁ samayaṁ bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme. Tena kho pana samayena āyasmā lomasakaṅgiyo sakkesu viharati kapilavatthusmiṁ nigrodhārāme.",
+   "nan-mn134": "第一三四　盧夷強耆一夜賢者經如是我聞。",
+   "T0026-ma166": "我聞如是：一時，佛遊舍衛國，在勝林給孤獨園。爾時，尊者盧夷強耆遊於釋中，在無事禪室。於是，尊者盧夷強耆夜將向旦，從彼禪室出，在露地禪室蔭中，於繩床上敷尼師檀，結跏趺坐。爾時，有一天形體極妙，色像巍巍，夜將向旦，往詣尊者盧夷強耆所，稽首作禮，却住一面。彼天色像威神極妙，光明普照於其禪室。",
+   "T0077": "聞如是：一時，婆伽婆在舍衛城祇樹給孤獨園。彼時，尊者盧耶強耆，在釋䩭瘦阿練若窟中。彼時，尊者盧耶強耆，晨起而起，出窟已，在露地敷繩牀，著尼師檀已，依結加趺坐。於是有天，形色極妙，過夜已來詣尊者盧耶強耆所，到已禮尊者盧耶強耆足，却住一面已，因彼天光明，以妙光悉照窟。"
+  },
+  "a01": {
+   "mn134": "Atha kho candano devaputto abhikkantāya rattiyā abhikkantavaṇṇo kevalakappaṁ nigrodhārāmaṁ obhāsetvā yenāyasmā lomasakaṅgiyo tenupasaṅkami; upasaṅkamitvā ekamantaṁ aṭṭhāsi. Ekamantaṁ ṭhito kho candano devaputto āyasmantaṁ lomasakaṅgiyaṁ etadavoca: “dhāresi tvaṁ, bhikkhu, bhaddekarattassa uddesañca vibhaṅgañcā”ti? “Na kho ahaṁ, āvuso, dhāremi bhaddekarattassa uddesañca vibhaṅgañca. Tvaṁ panāvuso, dhāresi bhaddekarattassa uddesañca vibhaṅgañcā”ti? “Ahampi kho, bhikkhu, na dhāremi bhaddekarattassa uddesañca vibhaṅgañca. Dhāresi pana tvaṁ, bhikkhu, bhaddekarattiyo gāthā”ti? “Na kho ahaṁ, āvuso, dhāremi bhaddekarattiyo gāthā. Tvaṁ panāvuso, dhāresi bhaddekarattiyo gāthā”ti? “Dhāremi kho ahaṁ, bhikkhu, bhaddekarattiyo gāthā”ti. “Yathā kathaṁ pana tvaṁ, āvuso, dhāresi bhaddekarattiyo gāthā”ti?",
+   "nan-mn134": "一時，世尊住舍衛城祇陀林給孤獨園。其時，盧夷強耆住釋迦族之迦毘羅城尼拘律樹園。時有容色殊勝之旃達羅天子，夜將明時，明照全尼拘律樹園，而至彼尊者盧夷強耆之處。至已，立於一面。立於一面之旃達羅天子，如是言尊者盧夷強耆曰：「比丘！汝受持一夜賢者之總說及分別耶？」〔尊者曰：〕「友！我不受持一夜賢者之總說及分別。然者，汝受持一夜賢者之總說與分別耶？」〔天子言：〕「比丘！我亦不受持一夜賢者之總說及分別。比丘！然者，汝受持一夜賢者之偈耶？」〔尊者曰：〕「友！我不受持一夜賢者之偈。友！然者，汝受持一夜賢者之偈耶？」〔天子言：〕「比丘！我受持一夜賢者之偈。」〔尊者曰：〕「友！然者，汝如何受持一夜賢者之偈耶？」",
+   "T0026-ma166": "彼天却住於一面已，白尊者盧夷強耆曰：「比丘！受持跋地羅帝偈及其義耶？」尊者盧夷強耆答彼天曰：「我不受持跋地羅帝偈，亦不受義。」尋問彼天：「汝受持跋地羅帝偈及其義耶？」彼天答曰：「我受持跋地羅帝偈，然不受義。」尊者盧夷強耆復問彼天：「云何受持跋地羅帝偈而不受義耶？」",
+   "T0077": "彼天却住一面已，白尊者盧耶強耆曰：「比丘比丘！持賢善偈及解義不？」如是說已，彼尊者盧耶強耆報彼天曰：「此天！我不持賢善偈及解義。汝天！持此賢善偈及解義不？」如是說已，彼天報尊者盧耶強耆曰：「此比丘！我持賢善偈，不解義。」「云何，汝天！持賢善偈而不解義？」"
+  },
+  "a02": {
+   "mn134": "“Ekamidaṁ, bhikkhu, samayaṁ bhagavā devesu tāvatiṁsesu viharati pāricchattakamūle paṇḍukambalasilāyaṁ. Tatra bhagavā devānaṁ tāvatiṁsānaṁ bhaddekarattassa uddesañca vibhaṅgañca abhāsi: ‘Atītaṁ nānvāgameyya, nappaṭikaṅkhe anāgataṁ; Yadatītaṁ pahīnaṁ taṁ, appattañca anāgataṁ. Paccuppannañca yo dhammaṁ, tattha tattha vipassati; Asaṁhīraṁ asaṅkuppaṁ, taṁ vidvā manubrūhaye. Ajjeva kiccamātappaṁ, ko jaññā maraṇaṁ suve; Na hi no saṅgaraṁ tena, mahāsenena maccunā. Evaṁvihāriṁ ātāpiṁ, ahorattamatanditaṁ; Taṁ ve bhaddekarattoti, santo ācikkhate munī’ti. Evaṁ kho ahaṁ, bhikkhu, dhāremi bhaddekarattiyo gāthā.",
+   "nan-mn134": "〔天子言：〕「比丘！一時，世尊住三十三天之巴利奢陀伽（晝度樹）下之盤睹伽無巴羅尸羅（無垢白石。）於其處，世尊為三十三天之諸天神說一夜賢者之總說與分別。『勿追於過去勿願於未來\n一切過去者彼已皆捨去\n未來者未至而彼現在法\n處處善觀察不搖又不動\n了知彼修習唯應今日作\n作須誠熱心誰知明日死\n不遇死大軍實謂無是事\n熱心如是住晝夜不懈怠\n此一夜賢者謂靜寂默者』",
+   "T0026-ma166": "彼天答曰：「一時，世尊遊王舍城，住竹林迦蘭哆園。爾時，世尊為諸比丘說跋地羅帝偈：「『慎莫念過去，亦勿願未來，\n過去事已滅，未來復未至。\n現在所有法，彼亦當為思，\n念無有堅強，慧者覺如是。\n若學聖人行，孰知愁於死，\n我要不會彼，大苦災患終。\n如是行精勤，晝夜無懈怠，\n是故常當說，跋地羅帝偈。』「比丘！我如是受持跋地羅帝偈，不受持義。」尊者盧夷強耆復問彼天：「誰受持跋地羅帝偈及其義耶？」彼天答曰：「佛遊舍衛國，在勝林給孤獨園，彼受持跋地羅帝偈及其義也。",
+   "T0077": "「此比丘！我一時世尊在羅閱祇迦蘭陀竹園，彼為諸比丘說賢善偈：「『過去當不憶，當來無求念，\n過去已盡滅，當來無所得，\n謂現在之法，彼彼當思惟。\n所念非牢固，智者能自覺。\n得已能進行，何智憂命終？\n我心不離此，大眾不能脫，\n如是堅牢住，晝夜不捨之。\n是故賢善偈，人當作是觀。』「如是，比丘！我持賢善偈而不解義。」「云何，天！誰持賢善偈及以義？」"
+  },
+  "a03": {
+   "mn134": "Uggaṇhāhi tvaṁ, bhikkhu, bhaddekarattassa uddesañca vibhaṅgañca; pariyāpuṇāhi tvaṁ, bhikkhu, bhaddekarattassa uddesañca vibhaṅgañca; dhārehi tvaṁ, bhikkhu, bhaddekarattassa uddesañca vibhaṅgañca. Atthasaṁhito, bhikkhu, bhaddekarattassa uddeso ca vibhaṅgo ca ādibrahmacariyako”ti. Idamavoca candano devaputto.",
+   "T0026-ma166": "比丘！可往面從世尊，善受持誦跋地羅帝偈及其義也。所以者何？跋地羅帝偈及其義者，有義有法，為梵行本，趣智、趣覺、趣於涅槃，族姓者至信、捨家、無家、學道，當以跋地羅帝偈及其義善受持誦。」",
+   "T0077": "「此比丘！世尊在舍衛城祇樹給孤獨園，彼持此賢善偈及以義，是故汝比丘！當從世尊受持賢善偈及以義，善思惟念、諷誦持之。何以故？此比丘！彼賢善偈及以義，是義是法、行於梵行、成神通、至尊道、與涅槃相應。此族姓子，信樂學道，信樂出家，棄家學道，當持此賢善偈及以義，善思惟念、當奉持之。」"
+  },
+  "a04": {
+   "mn134": "Idaṁ vatvā tatthevantaradhāyi.",
+   "nan-mn134": "比丘！如是，我受持一夜賢者之偈。比丘！汝應學一夜賢者之總說及分別。比丘！汝應受持一夜賢者之總說及分別。比丘！持一夜賢者之總說及分別是梵行之初利益者也。」旃達羅天子如是言已，忽然消失（於其處。）",
+   "T0026-ma166": "彼天說如是，稽首尊者盧夷強耆足，繞三匝已，即彼處沒。",
+   "T0077": "彼天說已，禮尊者盧耶強耆足，繞尊者盧耶強耆已，即其處忽然不現。"
+  },
+  "a05": {
+   "mn134": "Atha kho āyasmā lomasakaṅgiyo tassā rattiyā accayena senāsanaṁ saṁsāmetvā pattacīvaramādāya yena sāvatthi tena cārikaṁ pakkāmi. Anupubbena cārikaṁ caramāno yena sāvatthi jetavanaṁ anāthapiṇḍikassa ārāmo yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho āyasmā lomasakaṅgiyo bhagavantaṁ etadavoca:",
+   "T0026-ma166": "天沒不久，於是，尊者盧夷強耆在釋中受夏坐訖。過三月已，補治衣竟，攝衣持鉢，往詣舍衛國，展轉進前，至舍衛國，住勝林給孤獨園。爾時，尊者盧夷強耆往詣佛所，稽首作禮，却坐一面，白曰：「世尊！",
+   "T0077": "於是尊者盧耶強耆，彼天還不久，在釋䩭瘦受歲。受歲過三月已，作衣已成衣，與衣鉢俱行至舍衛城，次第而行至舍衛城，住舍衛城祇樹給孤獨園。於是尊者盧耶強耆至世尊所，到已禮世尊足，却坐一面。尊者盧耶強耆却坐一面已，白世尊曰：「唯世尊！"
+  },
+  "a06": {
+   "mn134": "“Ekamidāhaṁ, bhante, samayaṁ sakkesu viharāmi kapilavatthusmiṁ nigrodhārāme. Atha kho, bhante, aññataro devaputto abhikkantāya rattiyā abhikkantavaṇṇo kevalakappaṁ nigrodhārāmaṁ obhāsetvā yenāhaṁ tenupasaṅkami; upasaṅkamitvā ekamantaṁ aṭṭhāsi. Ekamantaṁ ṭhito kho, bhante, so devaputto maṁ etadavoca: ‘dhāresi tvaṁ, bhikkhu, bhaddekarattassa uddesañca vibhaṅgañcā’ti?",
+   "nan-mn134": "時，尊者盧夷強耆，其夜將明時，收坐臥具，執衣鉢，出遊行彼舍衛城。次第遊行，至彼舍衛城祇陀林給孤獨園之世尊處。至已，敬禮世尊，坐於一面。坐於一面之尊者盧夷強耆如是白世尊言：「世尊！一時，我住釋迦族之迦毘羅城思拘律樹園。世尊！時，有容色殊勝一天子，夜將明時，明照全尼拘律樹園而來。來已，立於一面。世尊！立於一面之彼天子，如是言我曰：『比丘！汝受持一夜賢者之總說及分別耶？』世尊！如是言已，我對彼天子如是曰：『友！我不受持一夜賢者之總說及分別。友！然者，汝……梵行之初（利益）者也。』世尊！彼天子如是言。斯言已忽消失之。善哉！世尊！請世尊為我說一夜賢者之總說及分別。」",
+   "T0026-ma166": "我一時遊於釋中，在無事禪室。世尊！我於爾時夜將向旦，從彼禪室出，在露地禪室蔭中，於繩床上敷尼師檀，結跏趺坐。爾時，有一天形體極妙，色像巍巍，夜將向旦，來詣我所，稽首作禮，却住一面。彼天色像威神極妙，光明普照於其禪室。彼天却住於一面已，而白我曰：『比丘！受持跋地羅帝偈及其義耶？』",
+   "T0077": "我一時在釋䩭瘦寂靜窟中。唯世尊！晨起，起已出窟，於露地施繩牀，敷尼師檀已，結加趺坐。彼時有天。形色極妙，過夜已來至我所，到已禮我足却住一面，因彼天光明，以妙光悉照窟。彼天却住一面已語我曰：『比丘比丘！"
+  },
+  "a07": {
+   "mn134": "Evaṁ vutte, ahaṁ, bhante, taṁ devaputtaṁ etadavocaṁ: ‘na kho ahaṁ, āvuso, dhāremi bhaddekarattassa uddesañca vibhaṅgañca. Tvaṁ panāvuso, dhāresi bhaddekarattassa uddesañca vibhaṅgañcā’ti? ‘Ahampi kho, bhikkhu, na dhāremi bhaddekarattassa uddesañca vibhaṅgañca. Dhāresi pana tvaṁ, bhikkhu, bhaddekarattiyo gāthā’ti? ‘Na kho ahaṁ, āvuso, dhāremi bhaddekarattiyo gāthā. Tvaṁ panāvuso, dhāresi bhaddekarattiyo gāthā’ti? ‘Dhāremi kho ahaṁ, bhikkhu, bhaddekarattiyo gāthā’ti. ‘Yathā kathaṁ pana tvaṁ, āvuso, dhāresi bhaddekarattiyo gāthā’ti? ‘Ekamidaṁ, bhikkhu, samayaṁ bhagavā devesu tāvatiṁsesu viharati pāricchattakamūle paṇḍukambalasilāyaṁ. Tatra kho bhagavā devānaṁ tāvatiṁsānaṁ bhaddekarattassa uddesañca vibhaṅgañca abhāsi: “Atītaṁ nānvāgameyya, …pe… Taṁ ve bhaddekarattoti, santo ācikkhate munī”ti. Evaṁ kho ahaṁ, bhikkhu, dhāremi bhaddekarattiyo gāthā. Uggaṇhāhi tvaṁ, bhikkhu, bhaddekarattassa uddesañca vibhaṅgañca; pariyāpuṇāhi tvaṁ, bhikkhu, bhaddekarattassa uddesañca vibhaṅgañca; dhārehi tvaṁ, bhikkhu, bhaddekarattassa uddesañca vibhaṅgañca. Atthasaṁhito, bhikkhu, bhaddekarattassa uddeso ca vibhaṅgo ca ādibrahmacariyako’ti. Idamavoca, bhante, so devaputto. Idaṁ vatvā tatthevantaradhāyi. Sādhu me, bhante, bhagavā bhaddekarattassa uddesañca vibhaṅgañca desetū”ti. “Jānāsi pana tvaṁ, bhikkhu, taṁ devaputtan”ti? “Na kho ahaṁ, bhante, jānāmi taṁ devaputtan”ti.",
+   "nan-mn134": "〔世尊曰：〕「然者，比丘！汝知彼天子耶？」〔比丘言：〕「世尊！我不知彼天子。」",
+   "T0026-ma166": "我答彼天：『不受持跋地羅帝偈，亦不受義。』尋問彼天：『汝受持跋地羅帝偈及其義耶？』彼天答曰：『我受持跋地羅帝偈，然不受義。』我復問天：『云何受持跋地羅帝偈而不受義耶？』天答我曰：『一時，佛遊王舍城，住竹林迦蘭哆園。爾時，世尊為諸比丘說跋地羅帝偈：「『「慎莫念過去，亦勿願未來，\n過去事已滅，未來復未至。\n現在所有法，彼亦當為思，\n念無有堅強，慧者覺如是。\n若學聖人行，孰知愁於死，\n我要不會彼，大苦災患終。\n如是行精勤，晝夜不懈怠，\n是故常當說，跋地羅帝偈。」』「『比丘！我如是受持跋地羅帝偈，不受持義也。』我復問天：『誰受持跋地羅帝偈及其義耶？』天答我曰：『佛遊舍衛國，在勝林給孤獨園，彼受持跋地羅帝偈及其義也。比丘！可往面從世尊，善受持誦跋地羅帝偈及其義也。所以者何？跋地羅帝偈及其義者，有義有法，為梵行本，趣智、趣覺、趣於涅槃，族姓者至信、捨家、無家、學道，當以跋地羅帝偈及其義善受持誦。』彼天說如是，稽首我足，繞三匝已，即彼處沒。」於是，世尊問尊者盧夷強耆：「汝知彼天從何處來？彼天名何耶？」尊者盧夷強耆答曰：「世尊！我不知彼天從何處來，亦不知名也。」",
+   "T0077": "汝持賢善偈及義不？』如是說已，我報彼天曰：『此天！我不持賢善偈及以義。汝天！持賢善偈及以義不？』如是說已，彼天報我曰：『此比丘！我持賢善偈、不解義。』『云何，汝天！持賢善偈而不解義？』『此比丘！我於一時，世尊在羅閱祇迦蘭陀竹園，彼為比丘說賢善偈而不解義，說此偈（如上故不重寫）。如是比丘！我持賢善偈而不解義。』『云何，天！此誰持賢善偈及以義？』『此比丘！世尊在舍衛城祇樹給孤獨園，彼持賢善偈及以義。是故，汝比丘！當從世尊受持此賢善偈及以義，思惟念、當奉行之。何以故？此比丘！彼賢善偈及以義，是義、是行於梵行、成神通、至等道、與涅槃相應。此族姓子，信樂學道，信樂出家，棄家學道者，當持此賢善偈及以義，善思惟念、當奉持之。』彼天說已，禮我足繞我，即其處忽然不現。」「汝強耆！知彼天名字不？」「唯世尊！我不知彼天之名字。」"
+  },
+  "a08": {
+   "mn134": "“Candano nāma so, bhikkhu, devaputto. Candano, bhikkhu, devaputto aṭṭhiṁ katvā manasikatvā sabbacetasā samannāharitvā ohitasoto dhammaṁ suṇāti. Tena hi, bhikkhu, suṇāhi, sādhukaṁ manasi karohi; bhāsissāmī”ti. “Evaṁ, bhante”ti kho āyasmā lomasakaṅgiyo bhagavato paccassosi. Bhagavā etadavoca:",
+   "nan-mn134": "〔世尊曰：〕「比丘！彼名為旃達羅天子也。旃達羅〔言：〕比丘！義解、作意、集中一切之心，以傾耳聞法。故，比丘！〔汝亦〕諦聽，善作意之，我當說之。」尊者盧夷強耆答世尊言：「如是，世尊。」世尊如是曰：",
+   "T0026-ma166": "世尊告曰：「強耆！彼天子名般那，為三十三天軍將。」彼時，尊者盧夷強耆白曰：「世尊！今正是時。善逝！今正是時。若世尊為諸比丘說跋地羅帝偈及其義者，諸比丘從世尊聞已，當善受持。」世尊告曰：「強耆！諦聽，善思念之，我當為汝廣說其義。」尊者盧夷強耆白曰：「唯然。",
+   "T0077": "「此強耆！彼名般那末難天子，是三十三天大將。」「今是世尊時！今是善逝時！願世尊，當為諸比丘，說此賢善偈及以義。從世尊聞已，比丘當奉持之。」「是故，強耆！當善思聽之，善思惟念，我當為說。」「如是，世尊！」尊者盧耶強耆受世尊教。世尊告說此偈（如上故不重寫）：「云何，強耆！"
+  },
+  "a09": {
+   "mn134": "“Atītaṁ nānvāgameyya, nappaṭikaṅkhe anāgataṁ; Yadatītaṁ pahīnaṁ taṁ, appattañca anāgataṁ. Paccuppannañca yo dhammaṁ, tattha tattha vipassati; Asaṁhīraṁ asaṅkuppaṁ, taṁ vidvā manubrūhaye. Ajjeva kiccamātappaṁ, ko jaññā maraṇaṁ suve; Na hi no saṅgaraṁ tena, mahāsenena maccunā. Evaṁvihāriṁ ātāpiṁ, ahorattamatanditaṁ; Taṁ ve bhaddekarattoti, santo ācikkhate muni.",
+   "nan-mn134": "「勿追於過去勿願於未來\n……〔參照前偈〕……\n此一夜賢者謂靜寂默者"
+  },
+  "a10": {
+   "mn134": "Kathañca, bhikkhu, atītaṁ anvāgameti …pe… evaṁ kho, bhikkhu, atītaṁ anvāgameti. Kathañca, bhikkhu, atītaṁ nānvāgameti …pe… evaṁ kho, bhikkhu, atītaṁ nānvāgameti. Kathañca, bhikkhu, anāgataṁ paṭikaṅkhati …pe… evaṁ kho, bhikkhu, anāgataṁ paṭikaṅkhati. Kathañca, bhikkhu, anāgataṁ nappaṭikaṅkhati …pe… evaṁ kho, bhikkhu, anāgataṁ nappaṭikaṅkhati. Kathañca, bhikkhu, paccuppannesu dhammesu saṁhīrati …pe… evaṁ kho, bhikkhu, paccuppannesu dhammesu saṁhīrati. Kathañca, bhikkhu, paccuppannesu dhammesu na saṁhīrati …pe… evaṁ kho, bhikkhu, paccuppannesu dhammesu na saṁhīrati.",
+   "nan-mn134": "然者，比丘！如何為追過去：『於過去之時，有如是色。』於其處隨起喜悅。『於過去之時，有如是受。』……乃至……『有如是想。』……乃至……『有如是行。』……乃至……『有如是識。』於其處隨起喜悅。如是，比丘！為追於過去也。然者，比丘！如何為不追過去：『過去之時，有如是色。』……為不追過去也。然者，比丘！如何為願未來……〔參照前第百三十經〕，如是，比丘！於現在之諸法不搖動也。",
+   "T0026-ma166": "「強耆！云何比丘念過去耶？若比丘樂過去色，欲、著、住，樂過去覺、想、行、識，欲、著、住，如是比丘念過去也。強耆！云何比丘不念過去？若比丘不樂過去色，不欲、不著、不住，不樂過去覺、想、行、識，不欲、不著、不住，如是比丘不念過去。強耆！云何比丘願未來耶？若比丘樂未來色，欲、著、住，樂未來覺、想、行、識，欲、著、住，如是比丘願未來也。強耆！云何比丘不願未來？若比丘不樂未來色，不欲、不著、不住，不樂未來覺、想、行、識，不欲、不著、不住，如是比丘不願未來。「強耆！云何比丘受現在法？若比丘樂現在色，欲、著、住，樂現在覺、想、行、識，欲、著、住，如是比丘受現在法。強耆！云何比丘不受現在法？若比丘不樂現在色，不欲、不著、不住，不樂現在覺、想、行、識，不欲、不著、不住，如是比丘不受現在法。」"
+  },
+  "a11": {
+   "mn134": "Atītaṁ nānvāgameyya, nappaṭikaṅkhe anāgataṁ; Yadatītaṁ pahīnaṁ taṁ, appattañca anāgataṁ. Paccuppannañca yo dhammaṁ, tattha tattha vipassati; Asaṁhīraṁ asaṅkuppaṁ, taṁ vidvā manubrūhaye. Ajjeva kiccamātappaṁ, ko jaññā maraṇaṁ suve; Na hi no saṅgaraṁ tena, mahāsenena maccunā. Evaṁvihāriṁ ātāpiṁ, ahorattamatanditaṁ; Taṁ ve bhaddekarattoti, santo ācikkhate munī”ti.",
+   "nan-mn134": "『勿追於過去勿願於未來\n……乃至……\n此一夜賢者謂靜寂默者』」",
+   "T0026-ma166": "當受教聽。」佛言：「慎莫念過去，亦勿願未來，\n過去事已滅，未來復未至。\n現在所有法，彼亦當為思，\n念無有堅強，慧者覺如是。\n若作聖人行，孰知愁於死，\n我要不會彼，大苦災患終。\n如是行精勤，晝夜無懈怠，\n是故常當說，跋地羅帝偈。",
+   "T0077": "比丘過去憶念？此強耆！或比丘色過去，若樂、若著、於中住；過去痛想行過去識，若樂、若著、於中住。如是，強耆！比丘憶念過去。云何，強耆！比丘不憶念過去？此強耆！或比丘過去色，不樂、不著亦不於中住；過去痛想行識，不樂、不著、不於中住。如是，強耆！比丘不念過去。云何，強耆！比丘當來求念？此強耆！或比丘當來色，或樂、或著、於中住；當來痛想行識，於中樂、或著、於中住。如是，強耆！比丘當來憶念。云何，強耆！或比丘當來無求念？此強耆！或比丘色，當來不有樂、不有著、不於中住；當來痛想行識，不有樂、不有著、不於中住。如是，強耆！比丘當來無求念。云何，強耆！比丘現在法思惟？此強耆！或比丘樂於現在色，於中著、於中住；現在痛想行識，於中樂、於中著、於中住。如是，強耆！比丘現在法思惟念。云何，強耆！比丘現在當不思惟念？此強耆！或比丘現在色，不有樂、不有著、不有住，痛想行識，不有樂、不有著、不有住，比丘現在法不思惟念。」"
+  },
+  "a12": {
+   "mn134": "Idamavoca bhagavā.",
+   "T0026-ma166": "佛說如是。尊者盧夷強耆及諸比丘，聞佛所說，歡喜奉行。",
+   "T0077": "佛如是說。尊者盧耶強耆聞世尊所說，歡喜而樂。"
+  },
+  "a13": {
+   "mn134": "Attamano āyasmā lomasakaṅgiyo bhagavato bhāsitaṁ abhinandīti. Lomasakaṅgiyabhaddekarattasuttaṁ niṭṭhitaṁ catutthaṁ.",
+   "nan-mn134": "世尊如是說已。歡喜之尊者盧夷強耆隨喜世尊之所說。",
+   "T0026-ma166": "釋中禪室尊經第五竟（千五百三十六字）"
+  }
+ }
+}

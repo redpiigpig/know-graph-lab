@@ -1,0 +1,150 @@
+{
+ "slug": "pi-sn10.8",
+ "title": "別譯雜阿含經 （一八六）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "給孤獨長者至王舍城"
+  },
+  {
+   "id": "a02",
+   "label": "聞佛出世欲往見佛"
+  },
+  {
+   "id": "a03",
+   "label": "夜行三次遇夜叉障礙"
+  },
+  {
+   "id": "a04",
+   "label": "夜叉說偈勸進"
+  },
+  {
+   "id": "a05",
+   "label": "長者三次驚恐後定心前進"
+  },
+  {
+   "id": "a06",
+   "label": "詣佛所見世尊經行"
+  },
+  {
+   "id": "a07",
+   "label": "世尊稱須達多"
+  },
+  {
+   "id": "a08",
+   "label": "長者五體投地問訊"
+  },
+  {
+   "id": "a09",
+   "label": "世尊說偈讚涅槃安樂"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn10.8",
+   "lang": "pi",
+   "label": "巴利 SN10.8",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn10.8",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN10.8",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.186",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （一八六）",
+   "who": "失譯",
+   "reorder": true
+  },
+  {
+   "id": "T0099-sa592",
+   "lang": "lzh",
+   "label": "雜阿含經 （五九二）",
+   "who": "劉宋 求那跋陀羅譯",
+   "reorder": true
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（一八六）"
+  },
+  {
+   "work": "T0099",
+   "node": "（五九二）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn10.8": "Saṁyutta Nikāya 10.8 1. Indakavagga Sudattasutta",
+   "nan-sn10.8": "〔八〕第八　須達多",
+   "T0100-sa-2.186": "如是我聞：一時，佛在王舍城迦蘭陀竹林。",
+   "T0099-sa592": "如是我聞：一時，佛住王舍城寒林中丘塚間。"
+  },
+  "a01": {
+   "sn10.8": "Ekaṁ samayaṁ bhagavā rājagahe viharati sītavane. Tena kho pana samayena anāthapiṇḍiko gahapati rājagahaṁ anuppatto hoti kenacideva karaṇīyena.",
+   "nan-sn10.8": "爾時，世尊住王舍城之寒林。",
+   "T0100-sa-2.186": "時須達多長者有少因緣，從舍衛國至王舍城，詣護彌長者家，見其家中，竟夜不睡，破薪然火，辦諸供具，安置高座，敷諸床榻。須達多長者見是事已，作是思惟：「今此長者施設供具，為欲結婚歡樂宴會？為欲屈彼頻婆娑羅王及大臣乎？」復更思念：「若請國王，及以官屬，婚姻宴會，而此長者不應躬身，而自栖栖，執於勞苦，然火作食；必有勝人，不審是誰？我今當問。」思惟是已，即以所念，問於長者。時護彌長者即答之曰：「我亦不為婚姻歡會，亦不屈請頻婆娑羅王及大臣等，而為此會。我於明日，將欲請佛及比丘僧，故設斯供。」",
+   "T0099-sa592": "時，給孤獨長者有小因緣至王舍城，止宿長者舍。夜見長者告其妻子、僕使、作人言：「汝等皆起，破樵然火，炊飯作餅調和眾味，莊嚴堂舍。」給孤獨長者見已，作是念：「今此長者何所為作，為嫁女娶婦耶？為請賓客、國王、大臣耶？」念已，即問長者：「汝何所作？為嫁女娶婦？為請賓客、國王、大臣耶？」時，彼長者答給孤獨長者言：「我不嫁女娶婦，亦不請呼國王、大臣，唯欲請佛及比丘僧，設供養耳。」"
+  },
+  "a02": {
+   "sn10.8": "Assosi kho anāthapiṇḍiko gahapati: “buddho kira loke uppanno”ti. Tāvadeva ca pana bhagavantaṁ dassanāya upasaṅkamitukāmo hoti. Athassa anāthapiṇḍikassa gahapatissa etadahosi: “akālo kho ajja bhagavantaṁ dassanāya upasaṅkamituṁ. Sve dānāhaṁ kālena bhagavantaṁ dassanāya gamissāmī”ti buddhagatāya satiyā nipajji.",
+   "nan-sn10.8": "其時，給孤獨長者，有事到王舍城。給孤獨長者聞「佛實出現於世。」欲往拜見世尊。",
+   "T0100-sa-2.186": "須達多長者初聞佛名，身毛為竪，驚喜問言：「云何名佛？」護彌答言：「釋種出家，剃除鬚髮，成於無上正真之道，號曰為佛。」須達又問：「云何名僧？」長者答曰：「若剎利子，剃除鬚髮，逐佛出家。婆羅門種、居士種、首陀羅種，如是之等，信家非家，隨佛出家，是名為僧。我於今者，請佛及僧。」須達多問言：「今日如來為可見不？」護彌答言：「如來近在迦蘭陀林，爾今小待，佛當自來受我供養。」",
+   "T0099-sa592": "時，給孤獨長者聞未曾聞佛名字已，心大歡喜，身諸毛孔皆悉怡悅，問彼長者言：「何名為佛？」長者答言：「有沙門瞿曇，是釋種子，於釋種中剃除鬚髮，著袈裟衣，正信非家，出家學道，得阿耨多羅三藐三菩提，是名為佛。」給孤獨長者言：「云何名僧？」彼長者言：「若婆羅門種剃除鬚髮，著袈裟衣，信家非家，而隨佛出家；或剎利種、毘舍種、首陀羅種善男子等剃除鬚髮，著袈裟衣，正信非家，彼佛出家而隨出家，是名為僧。今日請佛及現前僧，設諸供養。」給孤獨長者問彼長者言：「我今可得往見世尊不？」彼長者答言：「汝且住此，我請世尊來至我舍，於此得見。」"
+  },
+  "a03": {
+   "sn10.8": "Rattiyā sudaṁ tikkhattuṁ vuṭṭhāsi pabhātanti maññamāno. Atha kho anāthapiṇḍiko gahapati yena sivathikadvāraṁ tenupasaṅkami. Amanussā dvāraṁ vivariṁsu. Atha kho anāthapiṇḍikassa gahapatissa nagaramhā nikkhamantassa āloko antaradhāyi, andhakāro pāturahosi, bhayaṁ chambhitattaṁ lomahaṁso udapādi, tatova puna nivattitukāmo ahosi.",
+   "nan-sn10.8": "時，給孤獨長者作如是思惟：「今日欲往拜見世尊，時已過遲。明日適時當始往拜見世尊。」則念佛而臥。其夜曾三度以為天亮而起身。時，給孤獨長者來到墓地之門，諸天則開其門。時，給孤獨長者走出市鎮，當離去時，光滅而暗，恐怖戰慄，毛髮豎立。長者就此欲退返。",
+   "T0100-sa-2.186": "時須達多內心踊躍，思覩世尊，便小睡眠，眠已尋寤，天猶未曉，意謂平旦，即便早起，趣於城門。然彼城門，初夜後夜二時常開。時須達多既至門下，見城門開，謂天已曉，即出門外，欲詣佛所。先以念佛故，有光明來照其身。到城外已，見一天祠，即時繞祠，恭敬禮拜，還復黑闇，心自念言：「天大黑闇，若人非人，或能害我，當還入城。」時尸婆天神放光照曜，乃至祇洹悉皆大明。天神即語須達多言：「汝可前進，不宜退還。」",
+   "T0099-sa592": "時，給孤獨長者即於其夜至心念佛，因得睡眠。天猶未明，忽見明相，謂天已曉，欲出其舍，行向城門，至城門下，夜始二更，城門未開，王家常法，待遠使命來往，至初夜盡，城門乃閉，中夜已盡，輒復開門，欲令行人早得往來。爾時，給孤獨長者見城門開，而作是念：「定是夜過天曉門開。」乘明相出於城門，出城門已，明相即滅，輒還闇冥。給孤獨長者心即恐怖，身毛為竪，得無為人及非人，或姦狡人恐怖我耶？即便欲還。爾時，城門側有天神住。時，彼天神即放身光，從其城門至寒林丘塜間光明普照，告給孤獨長者言：「汝且前進，可得勝利，慎勿退還。」"
+  },
+  "a04": {
+   "sn10.8": "Atha kho sivako yakkho antarahito saddamanussāvesi: “Sataṁ hatthī sataṁ assā, Sataṁ assatarīrathā; Sataṁ kaññāsahassāni, Āmukkamaṇikuṇḍalā; Ekassa padavītihārassa, Kalaṁ nāgghanti soḷasiṁ. Abhikkama gahapati, abhikkama gahapati; Abhikkamanaṁ te seyyo, no paṭikkamanan”ti.",
+   "nan-sn10.8": "時，尸婆迦夜叉來現其形，只令聞聲：百象與百馬又百之驢車\n百千之女亦裝摩尼耳環\n於此行一步不值十六一\n行進之長者行進之長者\n行進始能近退避當用脚",
+   "T0100-sa-2.186": "爾時天神即說偈言：「假使百匹馬，載滿眾珍寶，\n并及百金人，以持用布施，\n如是展轉施，遍滿閻浮提，\n如是功德聚，以用為一分，\n不如有一人，發心向佛所，\n舉足行一步，十六分中一。\n假使雪山中，所有大力象，\n其數足滿百，金寶莊挍身，\n其體甚姝大，其行極迅疾，\n暴逸倍有力，滿載諸雜寶，\n以此用布施，不如向佛所，\n一步之功德，十六分中一。\n假使劍摩耆，所出之寶女，\n顏容甚端嚴，其數足滿百，\n瓔珞以嚴身，真金為首飾，\n頭著寶珠瓔，以此用布施，\n所得之功德，不如向佛所，\n舉足行一步，十六分中一。\n是故我勸爾，於此莫退還。」時須達多即問之曰：「汝是誰耶？」天即答言：「我是汝昔日親舊善身摩納，於舍利弗、大目連所，臨終之時，生歡喜心，命終生天，得為北方天王毘沙門子。我於如來弟子所，發心隨喜，尚獲此福，況復佛也？」時須達多復自念言：「今此天神稱讚乃爾，以此量之，必知彼人功德尊勝。」",
+   "T0099-sa592": "時，彼天神即說偈言：「善良馬百匹，黃金滿百斤，\n騾車及馬車，各各有百乘，\n種種諸珍奇，重寶載其上，\n宿命種善根，得如此福報，\n若人宗重心，向佛行一步，\n十六分之一，過前福之上。「是故，長者！汝當前進，慎勿退還！」即復說偈：「雪山大龍象，純金為莊飾，\n巨身長大牙，以此象施人，\n不及向佛福，十六分之一。「是故，長者！當速前進，得其大利，非退還也。」復說偈言：「金菩闍國女，其數有百人，\n種種眾妙寶，瓔珞具莊嚴，\n以是持施與，不及行向佛，\n一步之功德，十六分之一。「是故，長者！當速前進，得其勝利，非退還也。」時，給孤獨長者問天神言：「賢者！汝是何人？」天神答言：「我是摩頭息揵大摩那婆先，是長者善知識，於尊者舍利弗、大目揵連所起信敬心，緣斯功德，今得生天，典此城門，是故告長者：『但當進前，慎莫退還，前進得利，非退還也。』」時，給孤獨長者作是念：「佛興於世，非為小事；得聞正法，亦非小事。是故天神勸我令進，往見世尊。」"
+  },
+  "a05": {
+   "sn10.8": "Atha kho anāthapiṇḍikassa gahapatissa andhakāro antaradhāyi, āloko pāturahosi, yaṁ ahosi bhayaṁ chambhitattaṁ lomahaṁso, so paṭippassambhi. Dutiyampi kho anāthapiṇḍikassa gahapatissa āloko antaradhāyi, andhakāro pāturahosi, bhayaṁ chambhitattaṁ lomahaṁso udapādi, tatova puna nivattitukāmo ahosi. Dutiyampi kho sivako yakkho antarahito saddamanussāvesi: “Sataṁ hatthī sataṁ assā, …pe… Kalaṁ nāgghanti soḷasiṁ. Abhikkama gahapati, abhikkama gahapati; Abhikkamanaṁ te seyyo, no paṭikkamanan”ti. Atha kho anāthapiṇḍikassa gahapatissa andhakāro antaradhāyi, āloko pāturahosi, yaṁ ahosi bhayaṁ chambhitattaṁ lomahaṁso, so paṭippassambhi. Tatiyampi kho anāthapiṇḍikassa gahapatissa āloko antaradhāyi, andhakāro pāturahosi, bhayaṁ chambhitattaṁ lomahaṁso udapādi, tatova puna nivattitukāmo ahosi. Tatiyampi kho sivako yakkho antarahito saddamanussāvesi: “Sataṁ hatthī sataṁ assā, …pe… Kalaṁ nāgghanti soḷasiṁ. Abhikkama gahapati, abhikkama gahapati; Abhikkamanaṁ te seyyo, no paṭikkamanan”ti. Atha kho anāthapiṇḍikassa gahapatissa andhakāro antaradhāyi, āloko pāturahosi, yaṁ ahosi bhayaṁ chambhitattaṁ lomahaṁso, so paṭippassambhi.",
+   "nan-sn10.8": "時，給孤獨長者，暗滅光現、毛髮豎立之恐怖戰慄亦靜止。二度……乃至……給孤獨長者，三度光滅而暗，恐怖戰慄，毛髮豎立。長者又欲從此而退返。三度尸婆迦夜叉不現其形，只令聞其聲……乃至……時，給孤獨長者，暗滅光現，毛髮豎立之恐怖戰慄亦靜止。"
+  },
+  "a06": {
+   "sn10.8": "Atha kho anāthapiṇḍiko gahapati yena sītavanaṁ yena bhagavā tenupasaṅkami. Tena kho pana samayena bhagavā rattiyā paccūsasamayaṁ paccuṭṭhāya abbhokāse caṅkamati. Addasā kho bhagavā anāthapiṇḍikaṁ gahapatiṁ dūratova āgacchantaṁ. Disvāna caṅkamā orohitvā paññatte āsane nisīdi.",
+   "nan-sn10.8": "時，給孤獨長者，來詣寒林於世尊住處。其時，世尊於夜曉起身，在露地經行。",
+   "T0100-sa-2.186": "爾時，世尊露地經行，須達多長者即詣佛所，初見世尊，不知禮敬，輒前直坐。時彼天神化作婆羅門，來至佛所，繞佛三匝，頂禮恭敬，然後就坐。時須達多既見之已，方效於彼，禮敬而坐，問訊：「不審聖體安樂以不？」",
+   "T0099-sa592": "時，給孤獨長者尋其光明，逕至寒林丘塜間。"
+  },
+  "a07": {
+   "sn10.8": "Nisajja kho bhagavā anāthapiṇḍikaṁ gahapatiṁ etadavoca: “ehi, sudattā”ti.",
+   "nan-sn10.8": "世尊見給孤獨長者從遠而來，見已下經行處，即坐所設座，坐已，世尊以此言給孤獨長者曰：「來！須達多。」",
+   "T0099-sa592": "爾時，世尊出房露地經行，給孤獨長者遙見佛已，即至其前，以俗人禮法恭敬問訊：「云何？"
+  },
+  "a08": {
+   "sn10.8": "Atha kho anāthapiṇḍiko gahapati, nāmena maṁ bhagavā ālapatīti, haṭṭho udaggo tattheva bhagavato pādesu sirasā nipatitvā bhagavantaṁ etadavoca: “kacci, bhante, bhagavā sukhamasayitthā”ti?",
+   "nan-sn10.8": "時，給孤獨長者：「世尊按名呼我。」於此，即於世尊足下，五體投地而白曰：「世尊！輕安而眠耶？」",
+   "T0100-sa-2.186": "時須達多禮佛足已，在一面坐。佛為種種說法，示教利喜，施論、戒論、生天之論，欲為不淨，出要為樂。佛知須達多心意專正，踊躍歡喜，佛為說四真諦，即於座上見四真諦，如新淨㲲易受染色，須達多易悟，亦復如是，見法證法，斷八十億洞然之結，得須陀洹。即從座起，整衣服，禮佛足已，白佛言：「世尊！我名須達多，我以布施貧乏之故，諸人稱為給孤獨氏。」佛言：「汝是何國人？出生何種族？」須達白言：「我所出生舍衛國，唯願世尊往詣彼國，我當終身施設供養。」佛告須達多：「彼國為有僧坊以不？」須達多白佛言：「世尊但往於彼，我當營造，使諸比丘來往於彼。」爾時如來默然受請。時須達多聞佛所說，并受其請，頂禮佛足，歡喜而去。",
+   "T0099-sa592": "爾時，世尊將給孤獨長者往入房中，就座而坐，端身繫念。爾時，世尊為其說法，示、教、照、喜已，世尊說：「諸法無常，宜布施福事、持戒福事、生天福事，欲味、欲患、欲出，遠離之福。」給孤獨長者聞法、見法、得法、入法、解法，度諸疑惑，不由他信，不由他度，入正法、律，心得無畏，即從座起，正衣服，為佛作禮，右膝著地，合掌白佛言：「已度。世尊！已度。善逝！我從今日盡其壽命，歸佛、歸法、歸比丘僧，為優婆塞，證知我。」爾時，世尊問給孤獨長者：「汝名何等？」長者白佛：「名須達多。以常給孤貧辛苦故，時人名我為給孤獨。」世尊復問：「汝居何處？」長者白佛言：「世尊！在拘薩羅人間，城名舍衛，唯願世尊來舍衛國，我當盡壽供養衣被、飲食、房舍、床臥、隨病湯藥。」佛問長者：「舍衛國有精舍不？」長者白佛：「無也，世尊！」佛告長者：「汝可於彼建立精舍，令諸比丘往來宿止。」長者白佛：「但使世尊來舍衛國，我當造作精舍僧房，令諸比丘往來止住。」爾時，世尊默然受請。時，長者知佛世尊默然受請已，從座起，稽首佛足而去。"
+  },
+  "a09": {
+   "sn10.8": "“Sabbadā ve sukhaṁ seti, brāhmaṇo parinibbuto; Yo na limpati kāmesu, sītibhūto nirūpadhi. Sabbā āsattiyo chetvā, vineyya hadaye daraṁ; Upasanto sukhaṁ seti, santiṁ pappuyya cetasā”ti.",
+   "nan-sn10.8": "〔世尊：〕煩惱火悉消婆羅門安眠\n不著於愛欲清涼無所依\n斷一切執著調伏心苦惱\n寂靜輕安寢是達心寂靜",
+   "T0100-sa-2.186": "爾時，世尊以偈答曰：「一切事安樂，婆羅門涅槃，\n無為欲所污，解脫於諸有。\n心斷諸欲求，心除熱惱病，\n其心得清淨，寂滅安隱眠。」爾時，世尊即將長者須達多入於房中，敷座而坐。",
+   "T0099-sa592": "世尊！安隱臥不？」爾時，世尊說偈答言：「婆羅門涅槃，是則常安樂，\n愛欲所不染，解脫永無餘。\n斷一切希望，調伏心熾燃，\n心得寂止息，止息安隱眠。」"
+  }
+ }
+}

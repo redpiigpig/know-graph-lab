@@ -1,0 +1,115 @@
+{
+ "slug": "pi-sn1.39",
+ "title": "別譯雜阿含經 （二七二）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "天女來現光明"
+  },
+  {
+   "id": "a02",
+   "label": "天女禮拜並立一面"
+  },
+  {
+   "id": "a03",
+   "label": "第一天女說偈"
+  },
+  {
+   "id": "a04",
+   "label": "第二天女說偈"
+  },
+  {
+   "id": "a05",
+   "label": "世尊讚許天女所說"
+  },
+  {
+   "id": "a06",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn1.39",
+   "lang": "pi",
+   "label": "巴利 SN1.39",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn1.39",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN1.39",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.272",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （二七二）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa1274",
+   "lang": "lzh",
+   "label": "雜阿含經 （一二七四）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（二七二）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一二七四）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn1.39": "Saṁyutta Nikāya 1.39 4. Satullapakāyikavagga Paṭhamapajjunnadhītusutta Evaṁ me sutaṁ—",
+   "nan-sn1.39": "〔三九〕第九　雲天公主（其一）",
+   "T0100-sa-2.272": "如是我聞：一時，佛在毘舍離北獼猴彼岸精舍之中。",
+   "T0099-sa1274": "如是我聞：一時，佛住毘舍離獼猴池側重閣講堂。"
+  },
+  "a01": {
+   "sn1.39": "ekaṁ samayaṁ bhagavā vesāliyaṁ viharati mahāvane kūṭāgārasālāyaṁ.",
+   "nan-sn1.39": "如是我聞，爾時，世尊住毘舍離之大重閣講堂。",
+   "T0100-sa-2.272": "時波純提天女、拙羅天女，光色倍常，往詣佛所，頂禮佛足，在一面坐。",
+   "T0099-sa1274": "時，有拘迦那娑天女、朱盧陀天女，容色絕妙，於後夜時來詣佛所，稽首佛足，退坐一面。"
+  },
+  "a02": {
+   "sn1.39": "Atha kho kokanadā pajjunnassa dhītā abhikkantāya rattiyā abhikkantavaṇṇā kevalakappaṁ mahāvanaṁ obhāsetvā yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ aṭṭhāsi.",
+   "nan-sn1.39": "時，雲天之紅蓮公主，其勝光徧照大林。於黎明往詣世尊處，詣已，禮敬世尊，立於一面。",
+   "T0100-sa-2.272": "時此二天女放大光明，遍照獼猴及毘舍離，悉皆大明。",
+   "T0099-sa1274": "其身光明遍照一切獼猴池側。"
+  },
+  "a03": {
+   "sn1.39": "Ekamantaṁ ṭhitā kho sā devatā kokanadā pajjunnassa dhītā bhagavato santike imā gāthāyo abhāsi: “Vesāliyaṁ vane viharantaṁ, Aggaṁ sattassa sambuddhaṁ; Kokanadāhamasmi abhivande, Kokanadā pajjunnassa dhītā. Sutameva pure āsi, Dhammo cakkhumatānubuddho; Sāhaṁ dāni sakkhi jānāmi, Munino desayato sugatassa. Ye keci ariyaṁ dhammaṁ, Vigarahantā caranti dummedhā; Upenti roruvaṁ ghoraṁ, Cirarattaṁ dukkhaṁ anubhavanti. Ye ca kho ariye dhamme, Khantiyā upasamena upetā; Pahāya mānusaṁ dehaṁ, Devakāyaṁ paripūressantī”ti.",
+   "nan-sn1.39": "立於一面彼雲天之紅蓮公主，於世尊前，唱此偈曰：住毘舍離林眾生之上首\n無上正覺者我雲天公主\n紅蓮恭禮奉有眼者之證\n此法我先聞我今眼當知\n善逝牟尼說不論任何人\n以謗此聖法閑蕩之愚人\n墮叫喚地獄長劫受痛苦\n不論任何者寂靜與忍辱\n近此聖法人以捨此身時\n應滿天之集",
+   "T0100-sa-2.272": "時拙羅天女即說偈言：「世尊婆伽婆，無上等正覺，\n在於毘舍離，住於大林中。\n求迦尼娑天，并及於拙羅，\n波純提女等，稽首尊足下。\n我往昔曾聞，能善稱說法，\n牟尼世尊者，今現在演說。\n諸有生譏毀，如斯深法者，\n是則名愚癡，後必墮惡趣。\n有能讚聖法，成就具於念，\n是名有智者，後必生善處。」",
+   "T0099-sa1274": "時，朱盧陀天女說偈白佛：「大師等正覺，住毘舍離國，\n拘迦那朱盧，稽首恭敬禮。\n我昔未曾聞，牟尼正法律，\n今乃得親見，現前說正法。\n若於聖法律，惡慧生厭惡，\n必當墮惡道，長夜受諸苦。\n若於聖法律，正念律儀備，\n彼則生天上，長夜受安樂。」"
+  },
+  "a04": {
+   "T0100-sa-2.272": "時求迦尼娑天女復說偈言：「口意宜修善，不應造眾惡，\n身不以小惡，加害於世間。\n觀欲性相空，修於念覺意，\n若自不樂苦，莫作損減業。」",
+   "T0099-sa1274": "拘迦娑天女復說偈言：「其心不為惡，及身口世間，\n五欲悉虛偽，正智正繫念。\n不習近眾苦，非義和合者。」"
+  },
+  "a05": {
+   "T0100-sa-2.272": "爾時，世尊告天女言：「如是！",
+   "T0099-sa1274": "佛告天女：「如是，如是，如汝所說：「『其心不為惡，及身口世間，\n五欲悉虛偽，正智正繫念。\n不習近眾苦，非義和合者。』」時，彼天女聞佛所說，歡喜隨喜，即沒不現。"
+  },
+  "a06": {
+   "T0100-sa-2.272": "如是！如汝所說。」時天女等聞佛說已，歡喜而去。",
+   "T0099-sa1274": "爾時，世尊夜過晨朝入僧中，敷座而坐，告諸比丘：「昨後夜時，有二天女，容色絕妙，來詣我所，為我作禮，退坐一面。朱盧陀天女而說偈言：「『大師等正覺，住毘舍離國，\n我拘迦那娑，及以朱盧陀。\n如是二天女，稽首禮佛足，\n我昔未曾聞，牟尼正法律。\n今乃見正覺，演說微妙法，\n若於正法律，厭惡住惡慧。\n必墮於惡道，長夜受大苦，\n若於正法律，正念律儀備。\n生善趣天上，長夜受安樂。』「拘迦那天女復說偈言：「『其心不為惡，及身口世間，\n五欲悉虛偽，正智正繫念。\n不習近眾苦，非義和合者。』「我時答言：『如是，如是，如汝所說：「『「其心不為惡，及身口世間，\n五欲悉虛偽，正智正繫念。\n不習近眾苦，非義和合者。」』」佛說此經已，諸比丘聞佛所說，歡喜奉行。"
+  }
+ }
+}

@@ -1,0 +1,141 @@
+{
+ "slug": "pi-sn11.20",
+ "title": "別譯雜阿含經 （四二）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "帝釋御車出遊"
+  },
+  {
+   "id": "a02",
+   "label": "御者摩得梨嚴駕回報"
+  },
+  {
+   "id": "a03",
+   "label": "帝釋下殿禮敬僧眾"
+  },
+  {
+   "id": "a04",
+   "label": "御者以偈問帝釋敬僧之因"
+  },
+  {
+   "id": "a05",
+   "label": "帝釋以偈答說敬僧之理由"
+  },
+  {
+   "id": "a06",
+   "label": "御者復偈隨喜敬僧"
+  },
+  {
+   "id": "a07",
+   "label": "帝釋乘車而去"
+  },
+  {
+   "id": "a08",
+   "label": "佛結說敬僧之意義"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn11.20",
+   "lang": "pi",
+   "label": "巴利 SN11.20",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn11.20",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN11.20",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.42",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （四二）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa1113",
+   "lang": "lzh",
+   "label": "雜阿含經 （一一一三）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（四二）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一一一三）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn11.20": "Saṁyutta Nikāya 11.20 2. Dutiyavagga Saṅghavandanāsutta",
+   "nan-sn11.20": "〔二〇〕第十　帝釋之禮敬（三）〔爾時，世尊〕住舍衛城祇樹給孤獨園……",
+   "T0100-sa-2.42": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。",
+   "T0099-sa1113": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。"
+  },
+  "a01": {
+   "sn11.20": "Sāvatthiyaṁ jetavane. Tatra kho …pe… etadavoca:",
+   "nan-sn11.20": "於此，世尊宣說：",
+   "T0100-sa-2.42": "佛告諸比丘：「昔釋提桓因欲詣遊戲園，勅御者摩得梨：『汝嚴駕千馬車。』",
+   "T0099-sa1113": "爾時，世尊告諸比丘：「過去世時，有天帝釋欲入園觀，王勅御者，令嚴駕千馬之車。"
+  },
+  "a02": {
+   "sn11.20": "“bhūtapubbaṁ, bhikkhave, sakko devānamindo mātaliṁ saṅgāhakaṁ āmantesi: ‘yojehi, samma mātali, sahassayuttaṁ ājaññarathaṁ, uyyānabhūmiṁ gacchāma subhūmiṁ dassanāyā’ti. ‘Evaṁ, bhaddantavā’ti kho, bhikkhave, mātali saṅgāhako sakkassa devānamindassa paṭissutvā, sahassayuttaṁ ājaññarathaṁ yojetvā sakkassa devānamindassa paṭivedesi: ‘yutto kho te, mārisa, sahassayutto ājaññaratho, yassadāni kālaṁ maññasī’ti.",
+   "nan-sn11.20": "「諸比丘！遠昔天帝釋呼御者摩多利：『摩多利！牽繫千頭駿馬車，我將往囿園觀賞美景。』御摩多利答天帝釋：『唯然！尊者。』牽繫千頭駿馬車，以告知天帝釋：『尊者！千頭駿馬車備齊。尊者！請知今時。』",
+   "T0100-sa-2.42": "時，摩得梨駕車已訖，詣帝釋所，白帝釋言：『嚴駕已訖，宜知是時。』",
+   "T0099-sa1113": "御者受教，即嚴駕已，還白帝釋：『乘已嚴駕，唯王知時。』"
+  },
+  "a03": {
+   "sn11.20": "Atha kho, bhikkhave, sakko devānamindo vejayantapāsādā orohanto añjaliṁ katvā sudaṁ bhikkhusaṅghaṁ namassati.",
+   "nan-sn11.20": "諸比丘！時天帝釋走下勝利殿，合掌以禮比丘眾。",
+   "T0100-sa-2.42": "爾時，帝釋出毘禪延堂，合掌西向。時，御者摩得梨見是事已，亦生驚懼，失鞭及轡。帝釋語言：『汝見何事，驚怖乃爾？』",
+   "T0099-sa1113": "「爾時，帝釋從常勝殿來下，周向諸方，合掌恭敬。「時，彼御者見天帝釋從殿來下，住於中庭，周向諸方，合掌恭敬。"
+  },
+  "a04": {
+   "sn11.20": "Atha kho, bhikkhave, mātali saṅgāhako sakkaṁ devānamindaṁ gāthāya ajjhabhāsi: ‘Tañhi ete namasseyyuṁ, pūtidehasayā narā; Nimuggā kuṇapamhete, khuppipāsasamappitā. Kiṁ nu tesaṁ pihayasi, anāgārāna vāsava; Ācāraṁ isinaṁ brūhi, taṁ suṇoma vaco tavā’ti.",
+   "nan-sn11.20": "諸比丘！時御者摩多利，以偈語天帝釋：持污穢身體沉淪於屍中\n為飢渴痛苦此人可尊敬\n婆娑婆出家等有何可羨\n語聖者等行我欲聞汝言",
+   "T0100-sa-2.42": "摩得梨言：『摩佉釋脂之夫！我今見汝合掌西向，心懷懼，故致失鞭轡。一切有生，皆敬於汝。一切地主，盡屬於汝。四天王天及三十三天，皆禮敬汝。誰復有德，勝於汝者？叉手合掌，敬向西方。』",
+   "T0099-sa1113": "見已驚怖，馬鞭落地，而說偈言：「『諸方唯有人，臭穢胞胎生，\n神處穢死尸，飢渴常燋然。\n何故憍尸迦，故重於非家？\n為我說其義，飢渴願欲聞。』"
+  },
+  "a05": {
+   "sn11.20": "‘Etaṁ tesaṁ pihayāmi, anāgārāna mātali; Yamhā gāmā pakkamanti, anapekkhā vajanti te. Na tesaṁ koṭṭhe openti, na kumbhi na kaḷopiyaṁ; Paraniṭṭhitamesānā, tena yāpenti subbatā. Sumantamantino dhīrā, tuṇhībhūtā samañcarā; Devā viruddhā asurehi, puthu maccā ca mātali. Aviruddhā viruddhesu, attadaṇḍesu nibbutā; Sādānesu anādānā, te namassāmi mātalī’ti.",
+   "nan-sn11.20": "〔帝釋：〕摩多利我羨此出家人眾\n彼等從村出悉除無欲望\n小屋無何藏無瓶又無鍋\n所望物備他此以養育身\n賢善語正語默然正遊方\n諸天修羅戰摩多利凡夫\n又是相鬥爭戰中有不戰\n自我持武器中者在靜寂\n執著者之中在於不執著\n摩多利我乃禮敬於彼等",
+   "T0100-sa-2.42": "帝釋答言『一切敬我，如汝所言。一切天人，所恭敬者，名之為僧，今我恭敬信向於僧。』爾時，摩得梨說偈問言：「『人身膿汗滿，劇於露死屍，\n恒患飢渴苦，豈羨彼無家？\n汝今以何故，極能恭敬彼？\n彼有何威儀，及以道德行？\n願汝為我說，我今至心聽。』「爾時，釋提桓因即說偈言：「『以彼無家故，我實羨於彼，\n彼亦無庫藏，倉庫及穀米。\n離諸眾事務，節食諧全命，\n善護於禁戒，辯說美妙法。\n勇健無怯心，行聖默然法，\n諸天阿脩羅，恒共有戰諍。\n一切諸人中，悉各有忿競，\n今我所敬者，悉皆離刀杖。\n一切皆積聚，彼悉能遠離，\n世間所愛著，彼心皆捨棄。\n我今敬禮者，遠離一切過，\n摩得梨！汝今應當知此事。』",
+   "T0099-sa1113": "「時，天帝釋說偈答言：「『我正恭敬彼，能出非家者，\n自在遊諸方，不計其行止。\n城邑國土色，不能累其心，\n不畜資生具，一往無欲定。\n往則無所求，唯無為為樂，\n言則定善言，不言則寂定。\n諸天阿修羅，各各共相違，\n人間自共諍，相違亦如是。\n唯有出家者，於諸諍無諍，\n於一切眾生，放捨於刀杖。\n於財離財色，不醉亦不荒，\n遠離一切惡，是故敬禮彼。』"
+  },
+  "a06": {
+   "sn11.20": "‘Seṭṭhā hi kira lokasmiṁ, ye tvaṁ sakka namassasi; Ahampi te namassāmi, ye namassasi vāsavā’”ti.",
+   "nan-sn11.20": "〔摩多利：〕帝釋汝禮人實世最勝者\n婆娑婆汝禮我亦當禮敬",
+   "T0100-sa-2.42": "「爾時，摩得梨復說偈言：「『汝禮者最勝，我亦隨恭敬，\n摩佉之所禮，我今隨汝禮。』",
+   "T0099-sa1113": "「是時，御者復說偈言：「『天王之所敬，是必世間勝，\n故我從今日，當禮出家人。』"
+  },
+  "a07": {
+   "sn11.20": "Idaṁ vatvāna maghavā, devarājā sujampati; Bhikkhusaṅghaṁ namassitvā, pamukho rathamāruhīti.",
+   "nan-sn11.20": "是語須闍夫天王摩怯婆\n語禮比丘僧最先乘其車」",
+   "T0100-sa-2.42": "「說是偈已，帝釋乘輿而去。」",
+   "T0099-sa1113": "「如是說已，天帝釋敬禮諸方一切僧畢，昇於馬車，遊觀園林。」"
+  },
+  "a08": {
+   "sn11.20": "Dutiyo vaggo. Tassuddānaṁ Devā pana tayo vuttā, daliddañca rāmaṇeyyakaṁ; Yajamānañca vandanā, tayo sakkanamassanāti.",
+   "nan-sn11.20": "此嗢陀南：諸天云三度貧人及所樂\n供犧者禮敬帝釋之禮敬",
+   "T0100-sa-2.42": "佛告諸比丘：「彼帝釋者，處人天自在，尚能敬僧，況汝比丘，出家修道，各宜敬僧。」佛說是已，諸比丘聞佛所說，歡喜奉行。帝釋、摩訶離以何因、夜叉\n得眼、得善勝縛繫及敬佛\n敬法、禮僧十",
+   "T0099-sa1113": "佛告比丘：「彼天帝釋於三十三天為自在王，而常恭敬眾僧，亦常讚歎恭敬僧功德。汝等比丘正信非家，出家學道，亦當如是恭敬眾僧，亦當讚歎敬僧功德。」佛說此經已，諸比丘聞佛所說，歡喜奉行。"
+  }
+ }
+}

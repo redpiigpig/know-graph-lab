@@ -1,0 +1,356 @@
+{
+ "slug": "pi-mn145-sn35.88",
+ "title": "佛說滿願子經",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "富樓那請求教誡"
+  },
+  {
+   "id": "a02",
+   "label": "世尊許可並開始說法"
+  },
+  {
+   "id": "a03",
+   "label": "眼耳鼻舌身意六境說法（染著生喜）"
+  },
+  {
+   "id": "a04",
+   "label": "眼耳鼻舌身意六境說法（不染著喜滅）"
+  },
+  {
+   "id": "a05",
+   "label": "世尊問富樓那將往何處住"
+  },
+  {
+   "id": "a06",
+   "label": "富樓那答將往須那巴蘭陀（西方輸盧那）住"
+  },
+  {
+   "id": "a07",
+   "label": "世尊說彼處人兇惡粗暴"
+  },
+  {
+   "id": "a08",
+   "label": "富樓那答若被罵辱如何應對"
+  },
+  {
+   "id": "a09",
+   "label": "世尊問若被打擲如何應對"
+  },
+  {
+   "id": "a10",
+   "label": "富樓那答若被手石打擲如何應對"
+  },
+  {
+   "id": "a11",
+   "label": "世尊問若被杖打如何應對"
+  },
+  {
+   "id": "a12",
+   "label": "富樓那答若被杖打如何應對"
+  },
+  {
+   "id": "a13",
+   "label": "世尊問若被刀打如何應對"
+  },
+  {
+   "id": "a14",
+   "label": "富樓那答若被刀打如何應對"
+  },
+  {
+   "id": "a15",
+   "label": "世尊問若被刀奪命如何應對"
+  },
+  {
+   "id": "a16",
+   "label": "富樓那答若被刀奪命如何應對"
+  },
+  {
+   "id": "a17",
+   "label": "世尊問若被利刃奪命如何應對"
+  },
+  {
+   "id": "a18",
+   "label": "富樓那答若被利刃奪命如何應對"
+  },
+  {
+   "id": "a19",
+   "label": "世尊讚歎富樓那忍辱堪能前往"
+  },
+  {
+   "id": "a20",
+   "label": "富樓那受教而去前往彼國"
+  },
+  {
+   "id": "a21",
+   "label": "富樓那在彼國安居教化"
+  },
+  {
+   "id": "a22",
+   "label": "富樓那般涅槃"
+  },
+  {
+   "id": "a23",
+   "label": "眾比丘問富樓那去處"
+  },
+  {
+   "id": "a24",
+   "label": "世尊答富樓那已般涅槃"
+  },
+  {
+   "id": "a25",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "mn145",
+   "lang": "pi",
+   "label": "巴利 MN145",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-mn145",
+   "lang": "lzh",
+   "label": "漢譯南傳 MN145",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "sn35.88",
+   "lang": "pi",
+   "label": "巴利 SN35.88",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn35.88",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN35.88",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0099-sa311",
+   "lang": "lzh",
+   "label": "雜阿含經 （三一一）",
+   "who": "劉宋 求那跋陀羅譯"
+  },
+  {
+   "id": "T0108",
+   "lang": "lzh",
+   "label": "佛說滿願子經",
+   "who": "失譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0108"
+ ],
+ "anchors": [
+  {
+   "work": "T0099",
+   "node": "（三一一）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "mn145": "Majjhima Nikāya 145",
+   "nan-mn145": "第一四五　教富樓那經",
+   "sn35.88": "Saṁyutta Nikāya 35.88 9. Channavagga Puṇṇasutta",
+   "nan-sn35.88": "〔八八〕第五　富樓那※二",
+   "T0099-sa311": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。",
+   "T0108": "聞如是：一時，佛遊摩鳩羅無種山中，與大比丘俱，比丘五百。"
+  },
+  "a01": {
+   "mn145": "Puṇṇovādasutta Evaṁ me sutaṁ— ekaṁ samayaṁ bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme. Atha kho āyasmā puṇṇo sāyanhasamayaṁ paṭisallānā vuṭṭhito yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho āyasmā puṇṇo bhagavantaṁ etadavoca: “sādhu maṁ, bhante, bhagavā saṅkhittena ovādena ovadatu, yamahaṁ bhagavato dhammaṁ sutvā eko vūpakaṭṭho appamatto ātāpī pahitatto vihareyyan”ti.",
+   "nan-mn145": "如是我聞。——一時，世尊住舍衛城祇陀林給孤獨園。時，尊者富樓那，日暮，從獨住起而詣世尊之處。詣已，敬禮世尊坐於一面，坐於一面之尊者富樓那，如是白世尊曰：「善哉！世尊！請世尊為我略〔說〕教誡其法。我從世尊聞已，應獨自隱棲、不放逸、誠心、勞力而住。」",
+   "sn35.88": "Atha kho āyasmā puṇṇo yena bhagavā tenupasaṅkami; upasaṅkamitvā …pe… ekamantaṁ nisinno kho āyasmā puṇṇo bhagavantaṁ etadavoca:",
+   "nan-sn35.88": "時，尊者富樓那來詣世尊住處。詣已……",
+   "T0099-sa311": "爾時，尊者富樓那來詣佛所，稽首禮足，退住一面，白佛言：「善哉！",
+   "T0108": "爾時，賢者邠耨，晡時從宴坐起往詣佛所，偏袒右肩右膝著地，稽首足下叉手白佛：「善哉世尊！為我且講要法，我當奉行，令身長夜安隱無極。」"
+  },
+  "a02": {
+   "mn145": "“Tena hi, puṇṇa, suṇāhi, sādhukaṁ manasi karohi; bhāsissāmī”ti. “Evaṁ, bhante”ti kho āyasmā puṇṇo bhagavato paccassosi.",
+   "nan-mn145": "〔世尊曰：〕「富樓那！然者，應諦聽，善思念，我當說之。」尊者富樓那奉答世尊：「如是，世尊。」",
+   "sn35.88": "“sādhu me, bhante, bhagavā saṅkhittena dhammaṁ desetu, yamahaṁ bhagavato dhammaṁ sutvā eko vūpakaṭṭho appamatto ātāpī pahitatto vihareyyan”ti.",
+   "nan-sn35.88": "坐於一面之尊者富樓那，白世尊言：「大德！願世尊為我說示簡略之法，我聞世尊之法，則一人以遠離其他，不放逸，熱誠專心而住。」",
+   "T0099-sa311": "世尊！為我說法，我坐獨一靜處，專精思惟，不放逸住，乃至自知不受後有。」佛告富樓那：「善哉！善哉！能問如來如是之義。諦聽，善思，當為汝說。",
+   "T0108": "佛言：「諦聽，善思念之。」邠耨應：「唯然，世尊！」"
+  },
+  "a03": {
+   "mn145": "Bhagavā etadavoca: “Santi kho, puṇṇa, cakkhuviññeyyā rūpā iṭṭhā kantā manāpā piyarūpā kāmūpasaṁhitā rajanīyā. Tañce bhikkhu abhinandati abhivadati ajjhosāya tiṭṭhati. Tassa taṁ abhinandato abhivadato ajjhosāya tiṭṭhato uppajjati nandī. ‘Nandīsamudayā dukkhasamudayo, puṇṇā’ti vadāmi. Santi kho, puṇṇa, sotaviññeyyā saddā … ghānaviññeyyā gandhā … jivhāviññeyyā rasā … kāyaviññeyyā phoṭṭhabbā … manoviññeyyā dhammā iṭṭhā kantā manāpā piyarūpā kāmūpasaṁhitā rajanīyā. Tañce bhikkhu abhinandati abhivadati ajjhosāya tiṭṭhati. Tassa taṁ abhinandato abhivadato ajjhosāya tiṭṭhato uppajjati nandī. ‘Nandīsamudayā dukkhasamudayo, puṇṇā’ti vadāmi.",
+   "nan-mn145": "世尊乃如是曰：「富樓那！有眼所識之諸色，〔此〕為可望、可好、可喜、可愛、俱欲者，當染著。若有比丘，歡喜、稱說、樂著而住者，彼因其歡喜、稱說、樂著而住故，喜生。喜之集故，富樓那！我言有苦之集。富樓那！有耳所識之諸聲、鼻所識之諸香、舌所識之諸味、身所識之諸所觸、意所識之諸法，此可望、可好、可喜、可愛、俱欲〔者〕，當染著。若有比丘，此歡喜、稱說、樂著而住者，彼因其歡喜、稱說、樂著而住故，喜生。富樓那！喜之集故，我說有苦之集。",
+   "sn35.88": "“Santi kho, puṇṇa, cakkhuviññeyyā rūpā iṭṭhā kantā manāpā piyarūpā kāmūpasaṁhitā rajanīyā. Tañce bhikkhu abhinandati abhivadati ajjhosāya tiṭṭhati. Tassa taṁ abhinandato abhivadato ajjhosāya tiṭṭhato uppajjati nandī. ‘Nandisamudayā dukkhasamudayo, puṇṇā’ti vadāmi …pe… santi kho, puṇṇa, jivhāviññeyyā rasā …pe… santi kho, puṇṇa, manoviññeyyā dhammā iṭṭhā kantā manāpā piyarūpā kāmūpasaṁhitā rajanīyā. Tañce bhikkhu abhinandati abhivadati ajjhosāya tiṭṭhati. Tassa taṁ abhinandato abhivadato ajjhosāya tiṭṭhato uppajjati nandī. ‘Nandisamudayā dukkhasamudayo, puṇṇā’ti vadāmi.",
+   "nan-sn35.88": "「富樓那！以眼識知有色，快意、樂、喜愛，誘心染於欲念。比丘若存念喜、讚、戀著於此者，則存念喜、讚、戀著，於彼則起喜悅心，由生起喜悅心，則有苦之生起，富樓那！余作是言。富樓那！以耳識知有聲……以鼻識知有香……以舌識知有味……以身識知有觸……富樓那！以意識知有法，快意、可愛、樂、喜愛，誘生欲念。比丘若喜、讚、戀著於此者，則存念喜、讚、戀著，於彼生起喜悅心，因生起喜悅心，則有苦之生起，富樓那！余作是言。",
+   "T0099-sa311": "若有比丘眼見可愛、可樂、可念、可意、長養欲之色，見已，欣悅，讚歎，繫著；欣悅、讚歎、繫著已，歡喜；歡喜已，樂著；樂著已，貪愛；貪愛已，阨礙。歡喜、樂著、貪愛、阨礙故，去涅槃遠。耳、鼻、舌、身、意亦如是說。",
+   "T0108": "佛告邠耨：「目見好色可眼之物，所可愛樂貪欲之，耳貪好聲，鼻識好香，舌知美味，身著細滑更樂可意，愛於所欲慕於貪求。假使比丘欣樂然可心處其中，已貪住則樂迷惑，從是致患憂惱之慼。假使，邠耨比丘！"
+  },
+  "a04": {
+   "mn145": "Santi ca kho, puṇṇa, cakkhuviññeyyā rūpā iṭṭhā kantā manāpā piyarūpā kāmūpasaṁhitā rajanīyā. Tañce bhikkhu nābhinandati nābhivadati nājjhosāya tiṭṭhati. Tassa taṁ anabhinandato anabhivadato anajjhosāya tiṭṭhato nandī nirujjhati. ‘Nandīnirodhā dukkhanirodho, puṇṇā’ti vadāmi. Santi ca kho, puṇṇa, sotaviññeyyā saddā … ghānaviññeyyā gandhā … jivhāviññeyyā rasā … kāyaviññeyyā phoṭṭhabbā … manoviññeyyā dhammā iṭṭhā kantā manāpā piyarūpā kāmūpasaṁhitā rajanīyā. Tañce bhikkhu nābhinandati nābhivadati nājjhosāya tiṭṭhati. Tassa taṁ anabhinandato anabhivadato anajjhosāya tiṭṭhato nandī nirujjhati. ‘Nandīnirodhā dukkhanirodho, puṇṇā’ti vadāmi.",
+   "nan-mn145": "富樓那！有眼所識之諸色，〔此〕可望、可好、可喜、可愛、俱欲者，當染著。若有比丘，其不歡喜、不稱說、不樂著而住者，於彼，其不歡喜、不稱說、不樂著而住故，〔即〕喜滅。富樓那！喜之滅故，我言有苦之滅。富樓那！有耳所識之諸聲、鼻所識之諸香、舌所識之諸味、身所識之諸所觸、意所識之諸法，此可望、可好、可喜、可愛、俱欲〔者〕，當染著。若有比丘，其不歡喜、不稱說、不樂著而住者，彼因其不歡喜、不稱說、不樂著而住故，〔即〕喜滅。富樓那！喜之滅故，我言有苦之滅。",
+   "sn35.88": "Santi kho, puṇṇa, cakkhuviññeyyā rūpā iṭṭhā kantā manāpā piyarūpā kāmūpasaṁhitā rajanīyā. Tañce bhikkhu nābhinandati nābhivadati nājjhosāya tiṭṭhati, tassa taṁ anabhinandato anabhivadato anajjhosāya tiṭṭhato nirujjhati nandī. ‘Nandinirodhā dukkhanirodho, puṇṇā’ti vadāmi …pe… santi kho, puṇṇa, manoviññeyyā dhammā iṭṭhā kantā manāpā piyarūpā kāmūpasaṁhitā rajanīyā. Tañce bhikkhu nābhinandati nābhivadati nājjhosāya tiṭṭhati, tassa taṁ anabhinandato anabhivadato anajjhosāya tiṭṭhato nirujjhati nandī. ‘Nandinirodhā dukkhanirodho, puṇṇā’ti vadāmi.",
+   "nan-sn35.88": "富樓那！以眼識知有色，快意、可愛、樂、喜愛，誘生欲念。比丘若不喜、不讚、不戀著此者，以不喜、不讚、不戀著此，於彼喜悅心則滅，因喜悅心之滅，則有苦之滅。富樓那！余作是言……乃至……富樓那！以意識知有法，快意、可愛、樂、喜愛，誘心染於欲念。比丘若不喜、不讚、不戀著此者，則不喜、不讚、不戀著此，於彼喜悅心則滅，因喜悅心之滅，則有苦之滅。富樓那！余作是言。",
+   "T0099-sa311": "「富樓那！若比丘眼見可愛、樂、可念、可意、長養欲之色，見已，不欣悅，不讚歎，不繫著；不欣悅、不讚歎、不繫著故，不歡喜；不歡喜故，不深樂；不深樂故，不貪愛；不貪愛故，不阨礙。不歡喜、不深樂、不貪愛、不阨礙故，漸近涅槃。耳、鼻、舌、身、意亦如是說。」",
+   "T0108": "目見色者，可眼之物不以歡樂，心不處中，惱患則除。耳鼻口身意亦復如是，是為粗舉要法。佛之教誨以誡勅汝，今欲所遊。」"
+  },
+  "a05": {
+   "mn145": "Iminā ca tvaṁ, puṇṇa, mayā saṅkhittena ovādena ovadito katarasmiṁ janapade viharissasī”ti?",
+   "nan-mn145": "然而，富樓那！汝受我如是略〔說〕之教誡於何國而住？」",
+   "sn35.88": "Iminā tvaṁ, puṇṇa, mayā saṅkhittena ovādena ovadito katamasmiṁ janapade viharissasī”ti?",
+   "nan-sn35.88": "富樓那！余以此簡約之教誡，而予教誡。汝將住於何處耶？」",
+   "T0099-sa311": "佛告富樓那：「我已略說法教，汝欲何所住？」"
+  },
+  "a06": {
+   "mn145": "“Imināhaṁ, bhante, bhagavatā saṅkhittena ovādena ovadito, atthi sunāparanto nāma janapado, tatthāhaṁ viharissāmī”ti.",
+   "nan-mn145": "〔富樓那曰：〕「世尊！我奉受世尊如是略〔說〕之教誡，應於西方輸那國住。」",
+   "sn35.88": "“Atthi, bhante, sunāparanto nāma janapado, tatthāhaṁ viharissāmī”ti.",
+   "nan-sn35.88": "「大德！有名為須那巴蘭陀地方，余將住彼處。」",
+   "T0099-sa311": "富樓那白佛言：「世尊！我已蒙世尊略說教誡，我欲於西方輸盧那人間遊行。」",
+   "T0108": "邠耨白佛：「唯然世尊，有一國名首那和蘭（晉曰所聞欲勝），欲遊彼國。」"
+  },
+  "a07": {
+   "mn145": "“Caṇḍā kho, puṇṇa, sunāparantakā manussā; pharusā kho, puṇṇa, sunāparantakā manussā. Sace taṁ, puṇṇa, sunāparantakā manussā akkosissanti paribhāsissanti, tattha te, puṇṇa, kinti bhavissatī”ti?",
+   "nan-mn145": "〔世尊曰：〕「富樓那！西方輸那國那國之諸人乃兇惡。富樓那！西方輸那國之諸人乃粗暴。富樓那！若彼西方輸那國之諸人，呵罵、毀辱汝者，其時，富樓那！汝應如何？」",
+   "sn35.88": "“Caṇḍā kho, puṇṇa, sunāparantakā manussā; pharusā kho, puṇṇa, sunāparantakā manussā. Sace taṁ, puṇṇa, sunāparantakā manussā akkosissanti paribhāsissanti, tatra te, puṇṇa, kinti bhavissatī”ti?",
+   "nan-sn35.88": "「富樓那！須那巴蘭陀人兇惡。富樓那！須那巴蘭陀人粗暴。富樓那！若須那巴蘭陀人嘲罵汝，富樓那！於汝應如何耶？」",
+   "T0099-sa311": "佛告富樓那：「西方輸盧那人兇惡、輕躁、弊暴、好罵。富樓那！汝若聞彼兇惡、輕躁、弊暴、好罵、毀辱者，當如之何？」",
+   "T0108": "佛言：「彼國凶惡志懷麁[麩-夫+黃]，不能柔和喜鬪亂人。假使彼國異心凶人罵詈毀辱，當云何乎？」"
+  },
+  "a08": {
+   "mn145": "“Sace maṁ, bhante, sunāparantakā manussā akkosissanti paribhāsissanti, tattha me evaṁ bhavissati: ‘bhaddakā vatime sunāparantakā manussā, subhaddakā vatime sunāparantakā manussā, yaṁ me nayime pāṇinā pahāraṁ dentī’ti. Evamettha, bhagavā, bhavissati; evamettha, sugata, bhavissatī”ti.",
+   "nan-mn145": "〔富樓那曰：〕「世尊！若西方輸那國之諸人，呵罵、毀辱我者，於我應如是：『此等西方輸那國之諸人，實為賢者！此等西方輸那國之諸人實為賢者！彼不至打擲我手耳！』世尊！其時應如是，善逝！其時應如是。」",
+   "sn35.88": "“Sace maṁ, bhante, sunāparantakā manussā akkosissanti paribhāsissanti, tatra me evaṁ bhavissati: ‘bhaddakā vatime sunāparantakā manussā, subhaddakā vatime sunāparantakā manussā, yaṁ me nayime pāṇinā pahāraṁ dentī’ti. Evamettha, bhagavā, bhavissati; evamettha, sugata, bhavissatī”ti.",
+   "nan-sn35.88": "「大德！須那巴蘭陀人若嘲罵我，於我應作如是：『實則此須那巴蘭陀人，當為善，實則此須那巴蘭陀人，當為極善，彼等不至以掌打我。』世尊！於此應如是，善逝！於此應如是。」",
+   "T0099-sa311": "富樓那白佛言：「世尊！若彼西方輸盧那國人，面前兇惡、訶罵、毀辱者，我作是念：『彼西方輸盧那人賢善智慧，雖於我前兇惡、弊暴、罵、毀辱我，猶尚不以手、石而見打擲。』」佛告富樓那：「彼西方輸盧那人但兇惡、輕躁、弊暴、罵辱，於汝則可脫，復當以手、石打擲者，當如之何？」",
+   "T0108": "「假使彼國異心惡人罵詈辱我，我當心念：『愛我敬我尚原赦我，手不推我。』"
+  },
+  "a09": {
+   "mn145": "“Sace pana te, puṇṇa, sunāparantakā manussā pāṇinā pahāraṁ dassanti, tattha pana te, puṇṇa, kinti bhavissatī”ti?",
+   "nan-mn145": "〔世尊曰：〕「富樓那！若復西方輸那國之諸人打擲汝手者，富樓那！其時，而汝應如何？」",
+   "sn35.88": "“Sace pana te, puṇṇa, sunāparantakā manussā pāṇinā pahāraṁ dassanti, tatra pana te, puṇṇa, kinti bhavissatī”ti?",
+   "nan-sn35.88": "「然則，富樓那！須那巴蘭陀人，若以掌打汝，富樓那！汝應如何耶？」",
+   "T0099-sa311": "富樓那白佛言：「世尊！",
+   "T0108": "」佛言：「假使扠汝，當奈之何？」"
+  },
+  "a10": {
+   "mn145": "“Sace me, bhante, sunāparantakā manussā pāṇinā pahāraṁ dassanti, tattha me evaṁ bhavissati: ‘bhaddakā vatime sunāparantakā manussā, subhaddakā vatime sunāparantakā manussā, yaṁ me nayime leḍḍunā pahāraṁ dentī’ti. Evamettha, bhagavā, bhavissati; evamettha, sugata, bhavissatī”ti.",
+   "nan-mn145": "〔富樓那曰：〕「世尊！若西方輸那國之諸人打擲我手者，其時，我應如是：『此等西方輸那國之諸人實是賢者！西方輸那國之諸人實為賢者！彼等不至以棒打擲我耳！』世尊！其時應如是，善逝！其時應如是。」",
+   "sn35.88": "“Sace me, bhante, sunāparantakā manussā pāṇinā pahāraṁ dassanti, tatra me evaṁ bhavissati: ‘bhaddakā vatime sunāparantakā manussā, subhaddakā vatime sunāparantakā manussā, yaṁ me nayime leḍḍunā pahāraṁ dentī’ti. Evamettha, bhagavā, bhavissati; evamettha, sugata, bhavissatī”ti.",
+   "nan-sn35.88": "「大德！須那巴蘭陀人若以掌打我，於此我應如是：『實則此須那巴蘭陀人，當為善，實則此須那巴蘭陀人，當為極善。彼等不至用土塊打我。』世尊！於此應作如是，善逝！於此應作如是。」",
+   "T0099-sa311": "西方輸盧那人脫以手、石加於我者，我當念言：『輸盧那人賢善智慧，雖以手、石加我，而不用刀杖。』」佛告富樓那：「若當彼人脫以刀杖而加汝者，復當云何？」",
+   "T0108": "邠耨白曰：「當心念言：『尚復愛我敬我賢善柔和，不以瓦石而打擲我。』"
+  },
+  "a11": {
+   "mn145": "“Sace pana te, puṇṇa, sunāparantakā manussā leḍḍunā pahāraṁ dassanti, tattha pana te, puṇṇa, kinti bhavissatī”ti?",
+   "nan-mn145": "〔世尊曰：〕「富樓那！若復西方輸那國之諸人以棒打擲汝者，富樓那！其時汝應如何？」",
+   "sn35.88": "“Sace pana te, puṇṇa, sunāparantakā manussā leḍḍunā pahāraṁ dassanti, tatra pana te, puṇṇa, kinti bhavissatī”ti?",
+   "nan-sn35.88": "「然則，富樓那！須那巴蘭陀人，若以土塊打汝，富樓那！於此汝應如何耶？」",
+   "T0108": "」佛言：「假使以瓦石打擲汝，當奈之何？」"
+  },
+  "a12": {
+   "mn145": "“Sace me, bhante, sunāparantakā manussā leḍḍunā pahāraṁ dassanti, tattha me evaṁ bhavissati: ‘bhaddakā vatime sunāparantakā manussā, subhaddakā vatime sunāparantakā manussā, yaṁ me nayime daṇḍena pahāraṁ dentī’ti. Evamettha, bhagavā, bhavissati; evamettha, sugata, bhavissatī”ti.",
+   "nan-mn145": "〔富樓那曰：〕「世尊！若西方輸那國之諸人以棒打擲我者，其時我應如是：『此等西方輸那國之諸人實是賢者！此等西方輸那國之諸人實為賢者！彼等不至以笞杖打擲我耳！』世尊！其時應如是，善逝！其時應如是。」",
+   "sn35.88": "“Sace me, bhante, sunāparantakā manussā leḍḍunā pahāraṁ dassanti, tatra me evaṁ bhavissati: ‘bhaddakā vatime sunāparantakā manussā, subhaddakā vatime sunāparantakā manussā, yaṁ me nayime daṇḍena pahāraṁ dentī’ti. Evamettha, bhagavā, bhavissati; evamettha, sugata, bhavissatī”ti.",
+   "nan-sn35.88": "「大德！須那巴蘭陀人，若以土塊打我，於此我應作如是：『實則此須那巴蘭陀人，當為善，實則此須那巴蘭陀人，當為極善。彼等不至以杖打我。』世尊！於此應作如是，善逝！於此應作如是。」",
+   "T0108": "邠耨白曰：「其國人善仁和溫雅，不以刀杖傷擊我身。」"
+  },
+  "a13": {
+   "mn145": "“Sace pana te, puṇṇa, sunāparantakā manussā daṇḍena pahāraṁ dassanti, tattha pana te, puṇṇa, kinti bhavissatī”ti?",
+   "nan-mn145": "〔世尊曰：〕「富樓那！若復……以笞杖……應如何？」",
+   "sn35.88": "“Sace pana puṇṇa, sunāparantakā manussā daṇḍena pahāraṁ dassanti, tatra pana te, puṇṇa, kinti bhavissatī”ti?",
+   "nan-sn35.88": "「然則，富樓那！須那巴蘭陀人，若以杖打汝，富樓那！於此汝應作如何耶？」",
+   "T0099-sa311": "富樓那白佛言：「世尊！",
+   "T0108": "佛言：「假使刀杖傷擊汝身，當奈之何？」"
+  },
+  "a14": {
+   "mn145": "“Sace me, bhante, sunāparantakā manussā daṇḍena pahāraṁ dassanti, tattha me evaṁ bhavissati: ‘bhaddakā vatime sunāparantakā manussā, subhaddakā vatime sunāparantakā manussā, yaṁ me nayime satthena pahāraṁ dentī’ti. Evamettha, bhagavā, bhavissati; evamettha, sugata, bhavissatī”ti.",
+   "nan-mn145": "〔富樓那曰：〕「世尊！若西方輸那國之諸人，以笞杖……『……彼等不至以刀打擲我耳！』……應如是。」",
+   "sn35.88": "“Sace me, bhante, sunāparantakā manussā daṇḍena pahāraṁ dassanti, tatra me evaṁ bhavissati: ‘bhaddakā vatime sunāparantakā manussā, subhaddakā vatime sunāparantakā manussā, yaṁ me nayime satthena pahāraṁ dentī’ti. Evamettha, bhagavā, bhavissati; evamettha, sugata, bhavissatī”ti.",
+   "nan-sn35.88": "「大德！須那巴蘭陀人，若以杖打我，於此我應作如是：『實則此須那巴蘭陀人當為善，實則此須那巴蘭陀人，當為極善。彼等不至以刀劍擊我。』世尊！於此應作如是，善逝！於此應作如是。」",
+   "T0099-sa311": "若當彼人脫以刀杖，而加我者，當作是念：『彼輸盧那人賢善智慧，雖以刀杖而加於我，而不見殺。』",
+   "T0108": "邠耨白曰：「我當念言：『其國人善柔和溫雅，不以利刀害我身命。』"
+  },
+  "a15": {
+   "mn145": "“Sace pana te, puṇṇa, sunāparantakā manussā satthena pahāraṁ dassanti, tattha pana te, puṇṇa, kinti bhavissatī”ti?",
+   "nan-mn145": "〔世尊曰：〕「富樓那！苦復……以刀……如何？」",
+   "sn35.88": "“Sace pana te, puṇṇa, sunāparantakā manussā satthena pahāraṁ dassanti, tatra pana te, puṇṇa, kinti bhavissatī”ti?",
+   "nan-sn35.88": "「然則，富樓那！須那巴蘭陀人，若以刀劍擊汝，於此汝應如何耶？」",
+   "T0099-sa311": "」佛告富樓那：「假使彼人脫殺汝者，當如之何？」富樓那白佛言：「世尊！",
+   "T0108": "」佛言：「假使利刀害汝身命，當奈之何？」"
+  },
+  "a16": {
+   "mn145": "“Sace me, bhante, sunāparantakā manussā satthena pahāraṁ dassanti, tattha me evaṁ bhavissati: ‘bhaddakā vatime sunāparantakā manussā, subhaddakā vatime sunāparantakā manussā, yaṁ maṁ nayime tiṇhena satthena jīvitā voropentī’ti. Evamettha, bhagavā, bhavissati; evamettha, sugata, bhavissatī”ti.",
+   "nan-mn145": "〔富樓那曰：〕「世尊！若……以刀……『……不至以剎刀奪我生命耳！』……應如是。」",
+   "sn35.88": "“Sace me, bhante, sunāparantakā manussā satthena pahāraṁ dassanti, tatra me evaṁ bhavissati: ‘bhaddakā vatime sunāparantakā manussā, subhaddakā vatime sunāparantakā manussā, yaṁ maṁ nayime tiṇhena satthena jīvitā voropentī’ti. Evamettha, bhagavā, bhavissati; evamettha, sugata, bhavissatī”ti.",
+   "nan-sn35.88": "「大德！須那巴蘭陀人，若以刀劍擊我，於此我應作如是：『實則此須那巴蘭陀人，當為善，實則此須那巴蘭陀人，當為極善。彼等不至以刀劍奪我之生命。』世尊！於此應作如是，善逝！於此應作如是。」",
+   "T0099-sa311": "若西方輸盧那人脫殺我者，當作是念：『有諸世尊弟子，當厭患身，或以刀自殺，或服毒藥，或以繩自繫，或投深坑；彼西方輸盧那人賢善智慧，於我朽敗之身，以少作方便，便得解脫。』",
+   "T0108": "邠耨白曰：「我當心念言：『身有六情為之所患，厭身眾惱不淨流出，求刀為食志唯在味，入於寂然以刀為食。』"
+  },
+  "a17": {
+   "mn145": "“Sace pana taṁ, puṇṇa, sunāparantakā manussā tiṇhena satthena jīvitā voropessanti, tattha pana te, puṇṇa, kinti bhavissatī”ti?",
+   "nan-mn145": "〔世尊曰：〕「富樓那！若復……奪汝生命者……應如何？」",
+   "sn35.88": "“Sace pana taṁ, puṇṇa, sunāparantakā manussā tiṇhena satthena jīvitā voropessanti, tatra pana te, puṇṇa, kinti bhavissatī”ti?",
+   "nan-sn35.88": "「然則，富樓那！須那巴蘭陀人，若以刀劍奪汝之生命，於此汝應如何耶？」"
+  },
+  "a18": {
+   "mn145": "“Sace maṁ, bhante, sunāparantakā manussā tiṇhena satthena jīvitā voropessanti, tattha me evaṁ bhavissati: ‘santi kho bhagavato sāvakā kāye ca jīvite ca aṭṭīyamānā harāyamānā jigucchamānā satthahārakaṁ pariyesanti. Taṁ me idaṁ apariyiṭṭhaṁyeva satthahārakaṁ laddhan’ti. Evamettha, bhagavā, bhavissati; evamettha, sugata, bhavissatī”ti.",
+   "nan-mn145": "〔富樓那曰：〕「世尊！若……奪我生命者，其時，我應如是：『世尊之弟子而為身體與生命之患惱、厭忌而有希求執刀者。然，我無希求而得執刀者。』世尊！其時應如是。善逝！其時，應如是。」",
+   "sn35.88": "“Sace maṁ, bhante, sunāparantakā manussā tiṇhena satthena jīvitā voropessanti, tatra me evaṁ bhavissati: ‘santi kho tassa bhagavato sāvakā kāyena ca jīvitena ca aṭṭīyamānā harāyamānā jigucchamānā satthahārakaṁ pariyesanti, taṁ me idaṁ apariyiṭṭhaññeva satthahārakaṁ laddhan’ti. Evamettha, bhagavā, bhavissati; evamettha, sugata, bhavissatī”ti.",
+   "nan-sn35.88": "「大德！須那巴蘭陀人民，若以利刃奪我之生命，於此我應作如是：『彼世尊之諸弟子，以身以命為惱、為鬱、為厭、以求持利刃者，對彼等之持此利刃者，我乃不求而得。』世尊！於此應作如是，善逝！於此應作如是。」"
+  },
+  "a19": {
+   "mn145": "“Sādhu sādhu, puṇṇa.",
+   "nan-mn145": "〔世尊曰：〕「善哉！善哉！富樓那！富樓那！汝具足如是之忍奪、應得於西方輸那國而住。富樓那！因此，今想汝是宜時。」",
+   "sn35.88": "“Sādhu sādhu, puṇṇa.",
+   "nan-sn35.88": "「善哉，善哉！富樓那！汝具有此自調與安息，汝能住須那巴蘭陀地方。富樓那！此是其時。」",
+   "T0099-sa311": "」佛言：「善哉！富樓那！汝善學忍辱，汝今堪能於輸盧那人間住止，汝今宜去度於未度，安於未安，未涅槃者令得涅槃。」",
+   "T0108": "」佛言：「善哉邠耨！汝能堪任以是比像，調順寂然忍辱仁賢，處於彼國隨意所欲。」"
+  },
+  "a20": {
+   "mn145": "Sakkhissasi kho tvaṁ, puṇṇa, iminā damūpasamena samannāgato sunāparantasmiṁ janapade viharituṁ. Yassadāni tvaṁ, puṇṇa, kālaṁ maññasī”ti. Atha kho āyasmā puṇṇo bhagavato bhāsitaṁ abhinanditvā anumoditvā uṭṭhāyāsanā bhagavantaṁ abhivādetvā padakkhiṇaṁ katvā senāsanaṁ saṁsāmetvā pattacīvaramādāya yena sunāparanto janapado tena cārikaṁ pakkāmi. Anupubbena cārikaṁ caramāno yena sunāparanto janapado tadavasari.",
+   "nan-mn145": "時，尊者富樓那歡喜、隨喜世尊之所說已，從座起，敬禮世尊，行右繞禮，收座具，執持衣鉢，遊行彼西方輸那國去。次第遊行而入彼西方輸那國。如是尊者富樓那！真正住西方輸那國。時尊者富樓那於雨安居中，令五百優婆塞修行。於其雨安居中，令五百之優婆夷修行。於其雨安居中〔自〕證三明。於是尊者富樓那後至般涅槃。",
+   "sn35.88": "Sakkhissasi kho tvaṁ, puṇṇa, iminā damūpasamena samannāgato sunāparantasmiṁ janapade vatthuṁ. Yassadāni tvaṁ, puṇṇa, kālaṁ maññasī”ti. Atha kho āyasmā puṇṇo bhagavato vacanaṁ abhinanditvā anumoditvā uṭṭhāyāsanā bhagavantaṁ abhivādetvā padakkhiṇaṁ katvā senāsanaṁ saṁsāmetvā pattacīvaramādāya yena sunāparanto janapado tena cārikaṁ pakkāmi. Anupubbena cārikaṁ caramāno yena sunāparanto janapado tadavasari.",
+   "nan-sn35.88": "其時，尊者富樓那歡受、隨喜於世尊之語，從座而起，禮拜世尊，行右繞禮，收座臥具攜衣，向須那巴蘭陀地方遊方而去。次第遊方，到達須那巴蘭陀地方，尊者富樓那於須那巴蘭陀地方住下。",
+   "T0099-sa311": "爾時，富樓那聞佛所說，歡喜隨喜，作禮而去。爾時，尊者富樓那夜過晨朝，著衣持鉢，入舍衛城乞食，食已還出，付囑臥具，持衣鉢去，至西方輸盧那人間遊行。",
+   "T0108": "於是，邠耨即從坐起，稽首佛足右遶三匝，自詣其室，即夜蓋藏床臥安眠，明晨著衣持鉢往詣彼國。"
+  },
+  "a21": {
+   "mn145": "Tatra sudaṁ āyasmā puṇṇo sunāparantasmiṁ janapade viharati. Atha kho āyasmā puṇṇo tenevantaravassena pañcamattāni upāsakasatāni paṭivedesi, tenevantaravassena pañcamattāni upāsikasatāni paṭivedesi, tenevantaravassena tisso vijjā sacchākāsi.",
+   "sn35.88": "Tatra sudaṁ āyasmā puṇṇo sunāparantasmiṁ janapade viharati. Atha kho āyasmā puṇṇo tenevantaravassena pañcamattāni upāsakasatāni paṭivedesi. Tenevantaravassena pañcamattāni upāsikāsatāni paṭivedesi. Tenevantaravassena tisso vijjā sacchākāsi.",
+   "nan-sn35.88": "時，尊者富樓那遂於次期之雨季令五百信士歸佛，於同雨季證得三明。於其同雨季入涅槃。",
+   "T0099-sa311": "到已，夏安居，為五百優婆塞說法，建立五百僧伽藍，繩床、臥褥、供養眾具悉皆備足。",
+   "T0108": "尋在其國，於一夏中教化勸立，請清信士凡五百人，清信女五百人，興于寺舍五百，窟室床㯓五百，及法坐具被枕各各五百。化五百人皆為沙門，在於其歲證三達尋滅度。"
+  },
+  "a22": {
+   "mn145": "Atha kho āyasmā puṇṇo aparena samayena parinibbāyi.",
+   "nan-mn145": "時，有眾多比丘，詣世尊之處。詣已敬禮世尊，坐於一面。坐於一面之彼等諸比丘。如是白世尊曰：「世尊！彼名為富樓那之善男子，受世尊略說之教誡者命終矣。於彼有如何之趣，有如何之未來耶？」",
+   "sn35.88": "Tenevantaravassena parinibbāyi.",
+   "T0099-sa311": "三月過已，具足三明，即於彼處入無餘涅槃。"
+  },
+  "a23": {
+   "mn145": "Atha kho sambahulā bhikkhū yena bhagavā tenupasaṅkamiṁsu; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdiṁsu. Ekamantaṁ nisinnā kho te bhikkhū bhagavantaṁ etadavocuṁ: “yo so, bhante, puṇṇo nāma kulaputto bhagavatā saṅkhittena ovādena ovadito so kālaṅkato. Tassa kā gati, ko abhisamparāyo”ti?",
+   "nan-mn145": "〔世尊曰：〕「諸比丘！善男子富樓那是賢者，彼行法之隨法，又彼為我法故無惱。諸比丘！善男子富樓那！〔善〕般涅槃。」",
+   "sn35.88": "Atha kho sambahulā bhikkhū yena bhagavā tenupasaṅkamiṁsu …pe… ekamantaṁ nisinnā kho te bhikkhū bhagavantaṁ etadavocuṁ: “yo so, bhante, puṇṇo nāma kulaputto bhagavatā saṅkhittena ovādena ovadito, so kālaṅkato. Tassa kā gati ko abhisamparāyo”ti?",
+   "nan-sn35.88": "因此，眾多之比丘等，來詣世尊之住處……",
+   "T0108": "滅度未久，諸比丘眾無央數千，往詣佛所稽首足下，却在一面，俱白佛言：「有一比丘名曰邠耨，佛為粗舉說其要法，今已滅度已來未久，為何所獲得何證乎？」"
+  },
+  "a24": {
+   "mn145": "“Paṇḍito, bhikkhave, puṇṇo kulaputto paccapādi dhammassānudhammaṁ, na ca maṁ dhammādhikaraṇaṁ viheṭhesi. Parinibbuto, bhikkhave, puṇṇo kulaputto”ti. Idamavoca bhagavā.",
+   "nan-mn145": "世尊如是說已。歡喜之彼等諸比丘隨喜世尊之所說。——",
+   "sn35.88": "“Paṇḍito, bhikkhave, puṇṇo kulaputto, paccapādi dhammassānudhammaṁ, na ca maṁ dhammādhikaraṇaṁ vihesesi. Parinibbuto, bhikkhave, puṇṇo kulaputto”ti. Pañcamaṁ.",
+   "nan-sn35.88": "坐於一面此等之比丘，白世尊曰：「大德！名為富樓那彼乃良家之子，為世尊以簡約之教誡所教誡，彼已歿矣！彼之所趣為何？彼之來世耶？」",
+   "T0108": "佛言：「諸比丘！彼族姓子已興三達證得六通，諦觀順法無與等者，不與餘事唯講法典，諸漏已盡無復塵垢，已度想念脫于智慧。"
+  },
+  "a25": {
+   "mn145": "Attamanā te bhikkhū bhagavato bhāsitaṁ abhinandunti. Puṇṇovādasuttaṁ niṭṭhitaṁ tatiyaṁ.",
+   "nan-sn35.88": "「諸比丘！良家之子富樓那是賢明。隨法行法，以法之故，不令余苦。諸比丘！良家之子富樓那入般涅槃矣。」",
+   "T0108": "現在於法極達諸通，證具足，於生死已斷，稱舉梵行所作已辦，鮮名色本諸慧無生，聖智具足已得羅漢。」於時，世尊莫不稱譽咨嗟無極邠耨文陀尼子。佛說如是。比丘莫不歡喜。"
+  }
+ }
+}

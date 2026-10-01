@@ -1,0 +1,135 @@
+{
+ "slug": "pi-sn3.15",
+ "title": "別譯雜阿含經 （六四）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "戰爭經過"
+  },
+  {
+   "id": "a02",
+   "label": "波斯匿王擒獲阿闍世王"
+  },
+  {
+   "id": "a03",
+   "label": "波斯匿王釋放阿闍世王之動機"
+  },
+  {
+   "id": "a04",
+   "label": "波斯匿王奪取四軍逐放阿闍世王"
+  },
+  {
+   "id": "a05",
+   "label": "眾比丘朝見世尊"
+  },
+  {
+   "id": "a06",
+   "label": "比丘白佛戰爭經過"
+  },
+  {
+   "id": "a07",
+   "label": "世尊說偈"
+  },
+  {
+   "id": "a08",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn3.15",
+   "lang": "pi",
+   "label": "巴利 SN3.15",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn3.15",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN3.15",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.64",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （六四）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa1237",
+   "lang": "lzh",
+   "label": "雜阿含經 （一二三七）",
+   "who": "劉宋 求那跋陀羅譯",
+   "reorder": true
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（六四）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一二三七）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn3.15": "Saṁyutta Nikāya 3.15 2. Dutiyavagga Dutiyasaṅgāmasutta",
+   "nan-sn3.15": "〔一五〕於戰之二語（其二）",
+   "T0100-sa-2.64": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。",
+   "T0099-sa1237": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。"
+  },
+  "a01": {
+   "sn3.15": "Atha kho rājā māgadho ajātasattu vedehiputto caturaṅginiṁ senaṁ sannayhitvā rājānaṁ pasenadiṁ kosalaṁ abbhuyyāsi yena kāsi. Assosi kho rājā pasenadi kosalo: “rājā kira māgadho ajātasattu vedehiputto caturaṅginiṁ senaṁ sannayhitvā mamaṁ abbhuyyāto yena kāsī”ti. Atha kho rājā pasenadi kosalo caturaṅginiṁ senaṁ sannayhitvā rājānaṁ māgadhaṁ ajātasattuṁ vedehiputtaṁ paccuyyāsi yena kāsi.",
+   "nan-sn3.15": "時，摩揭陀國韋提子阿闍世王，整備四軍，針對拘薩羅國之波斯匿王〔戰〕，攻入其迦尸國。拘薩羅國之波斯匿王，聞摩揭陀國韋提希子阿闍世王，整備四軍，攻入我迦尸國。時，拘薩羅國之波斯匿王，整備四軍，於迦尸國，迎戰摩揭陀國之韋提希子阿闍世王。",
+   "T0100-sa-2.64": "爾時，摩竭提阿闍世王及波斯匿王各嚴四兵，交兵大戰。",
+   "T0099-sa1237": "時，波斯匿王與摩竭提王阿闍世韋提希子共相違背。摩竭提王阿闍世韋提希子起四種軍，來至拘薩羅國，波斯匿王倍興四軍，出共鬪戰。"
+  },
+  "a02": {
+   "sn3.15": "Atha kho rājā ca māgadho ajātasattu vedehiputto rājā ca pasenadi kosalo saṅgāmesuṁ. Tasmiṁ kho pana saṅgāme rājā pasenadi kosalo rājānaṁ māgadhaṁ ajātasattuṁ vedehiputtaṁ parājesi, jīvaggāhañca naṁ aggahesi.",
+   "nan-sn3.15": "如是摩揭國之韋提希子阿闍世王，與拘薩羅國之波斯匿王挑起戰事。於此戰鬥，拘薩羅國之波斯匿王，攻破摩揭陀國之韋提希子阿闍世王，生擒彼〔王〕。",
+   "T0100-sa-2.64": "波斯匿王大破阿闍世王所將兵眾，并復擒得阿闍世王身。波斯匿王既得勝已，與阿闍世王同載一車，來詣佛所，頂禮佛足。時，波斯匿王白佛言：「世尊！",
+   "T0099-sa1237": "波斯匿王四種軍勝，阿闍世王四種軍退，摧伏星散。"
+  },
+  "a03": {
+   "sn3.15": "Atha kho rañño pasenadissa kosalassa etadahosi: “kiñcāpi kho myāyaṁ rājā māgadho ajātasattu vedehiputto adubbhantassa dubbhati, atha ca pana me bhāgineyyo hoti. Yannūnāhaṁ rañño māgadhassa ajātasattuno vedehiputtassa sabbaṁ hatthikāyaṁ pariyādiyitvā sabbaṁ assakāyaṁ pariyādiyitvā sabbaṁ rathakāyaṁ pariyādiyitvā sabbaṁ pattikāyaṁ pariyādiyitvā jīvantameva naṁ osajjeyyan”ti.",
+   "nan-sn3.15": "時，拘薩羅國之波斯匿王，如是思念：「如摩揭國之韋提希子阿闍世王，雖無害，但謂害我，乃我之甥。我寧奪摩揭陀國之韋提希子阿闍世王所有之象軍、馬軍、車軍、步軍、以逐放彼。」",
+   "T0100-sa-2.64": "此摩竭提阿闍世王，韋提希子，我於彼所，初無怨嫌。彼於我所，恒懷憎嫉。然其是我親友之子，以是之故，我今欲放，令得還國。」佛言：「大王！可放令去。若能放彼王，於長夜有大利益。」",
+   "T0099-sa1237": "此是阿闍世王韋提希子，長夜於我無怨恨人而生怨結，於好人所而作不好；然其是我善友之子，當放令還國。」佛告波斯匿王：「善哉！大王！放其令去，令汝長夜安樂饒益。」"
+  },
+  "a04": {
+   "sn3.15": "Atha kho rājā pasenadi kosalo rañño māgadhassa ajātasattuno vedehiputtassa sabbaṁ hatthikāyaṁ pariyādiyitvā sabbaṁ assakāyaṁ pariyādiyitvā sabbaṁ rathakāyaṁ pariyādiyitvā sabbaṁ pattikāyaṁ pariyādiyitvā jīvantameva naṁ osajji.",
+   "nan-sn3.15": "時，拘薩羅國之波斯匿王，奪摩揭陀國之韋提希子阿闍世王所有之象軍、馬軍、車軍、步軍而逐放彼。",
+   "T0099-sa1237": "波斯匿王悉皆虜掠阿闍世王象馬、車乘、錢財寶物，生禽阿闍世王身，載以同車，俱詣佛所，稽首佛足，退坐一面。波斯匿王白佛言：「世尊！"
+  },
+  "a05": {
+   "sn3.15": "Atha kho sambahulā bhikkhū pubbaṇhasamayaṁ nivāsetvā pattacīvaramādāya sāvatthiṁ piṇḍāya pavisiṁsu. Sāvatthiyaṁ piṇḍāya caritvā pacchābhattaṁ piṇḍapātapaṭikkantā yena bhagavā tenupasaṅkamiṁsu; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdiṁsu. Ekamantaṁ nisinnā kho te bhikkhū bhagavantaṁ etadavocuṁ:",
+   "nan-sn3.15": "時，眾多比丘，晨早著衣持鉢，入舍衛城，於舍衛城乞食，食已置鉢，往詣世尊處。詣已，禮敬世尊，而坐於一面；坐於一面之諸比丘等，以此事白世尊曰："
+  },
+  "a06": {
+   "sn3.15": "“Idha, bhante, rājā māgadho ajātasattu vedehiputto caturaṅginiṁ senaṁ sannayhitvā rājānaṁ pasenadiṁ kosalaṁ abbhuyyāsi yena kāsi. Assosi kho, bhante, rājā pasenadi kosalo: ‘rājā kira māgadho ajātasattu vedehiputto caturaṅginiṁ senaṁ sannayhitvā mamaṁ abbhuyyāto yena kāsī’ti. Atha kho, bhante, rājā pasenadi kosalo caturaṅginiṁ senaṁ sannayhitvā rājānaṁ māgadhaṁ ajātasattuṁ vedehiputtaṁ paccuyyāsi yena kāsi. Atha kho, bhante, rājā ca māgadho ajātasattu vedehiputto rājā ca pasenadi kosalo saṅgāmesuṁ. Tasmiṁ kho pana, bhante, saṅgāme rājā pasenadi kosalo rājānaṁ māgadhaṁ ajātasattuṁ vedehiputtaṁ parājesi, jīvaggāhañca naṁ aggahesi. Atha kho, bhante, rañño pasenadissa kosalassa etadahosi: ‘kiñcāpi kho myāyaṁ rājā māgadho ajātasattu vedehiputto adubbhantassa dubbhati, atha ca pana me bhāgineyyo hoti. Yannūnāhaṁ rañño māgadhassa ajātasattuno vedehiputtassa sabbaṁ hatthikāyaṁ pariyādiyitvā sabbaṁ assakāyaṁ sabbaṁ rathakāyaṁ sabbaṁ pattikāyaṁ pariyādiyitvā jīvantameva naṁ osajjeyyan’”ti. “Atha kho, bhante, rājā pasenadi kosalo rañño māgadhassa ajātasattuno vedehiputtassa sabbaṁ hatthikāyaṁ pariyādiyitvā sabbaṁ assakāyaṁ pariyādiyitvā sabbaṁ rathakāyaṁ pariyādiyitvā sabbaṁ pattikāyaṁ pariyādiyitvā jīvantameva naṁ osajjī”ti.",
+   "nan-sn3.15": "「世尊！如今，摩揭陀國之韋提希子阿闍世王，整備四軍，針對拘薩羅國之波斯匿王，攻入其迦尸國。世尊！拘薩羅國之波斯匿王，聞悉亦以整備四軍迎戰。於此交戰，拘薩羅國之波斯匿王，攻破摩揭陀國之韋提希子阿闍世王，生擒彼王。世尊！如是拘薩羅國之波斯匿王，如是思念：『如摩揭國之韋提希子阿闍世王，雖無害，但謂害我，乃我之甥，我寧奪彼王之四軍，以逐放彼王。』世尊，如是拘薩羅國之波斯匿王，奪得摩揭陀國之韋提希子阿闍世王之四軍，以逐放彼王。」"
+  },
+  "a07": {
+   "sn3.15": "Atha kho bhagavā etamatthaṁ viditvā tāyaṁ velāyaṁ imā gāthāyo abhāsi: “Vilumpateva puriso, yāvassa upakappati; Yadā caññe vilumpanti, so vilutto viluppati. Ṭhānañhi maññati bālo, yāva pāpaṁ na paccati; Yadā ca paccati pāpaṁ, atha dukkhaṁ nigacchati. Hantā labhati hantāraṁ, jetāraṁ labhate jayaṁ; Akkosako ca akkosaṁ, rosetārañca rosako; Atha kammavivaṭṭena, so vilutto viluppatī”ti.",
+   "nan-sn3.15": "時，世尊得知此義，其時，唱此偈曰：人為己利時即以掠奪他\n他之被奪時彼亦為所奪\n愚者惡不實雖思為當然\n惡之成實時即受於苦惱\n若以殺他人即得殺己者\n若以勝他人即得勝己者\n以譏他人者即得誹己者\n以惱他人者即得惱己者\n如是業輪轉奪人當被奪",
+   "T0100-sa-2.64": "爾時，世尊即說偈言：「力能破他軍，還為他所壞；\n力能侵掠人，還為他所掠。\n愚謂為無報，必受於大苦；\n若當命終時，乃知實有報。」",
+   "T0099-sa1237": "爾時，世尊即說偈言：「乃至力自在，能廣虜掠彼，\n助怨在力增，倍收己他利。」"
+  },
+  "a08": {
+   "T0100-sa-2.64": "佛說是已，諸比丘聞佛所說，歡喜奉行。",
+   "T0099-sa1237": "佛說此經已，波斯匿王及阿闍世王韋提希子聞佛所說。歡喜隨喜，作禮而去。"
+  }
+ }
+}

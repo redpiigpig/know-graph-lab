@@ -1,0 +1,148 @@
+{
+ "slug": "pi-sn10.5",
+ "title": "別譯雜阿含經 （三二四）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "優婆夷子被夜叉所持"
+  },
+  {
+   "id": "a02",
+   "label": "優婆夷嘆息說偈"
+  },
+  {
+   "id": "a03",
+   "label": "夜叉說偈"
+  },
+  {
+   "id": "a04",
+   "label": "夜叉續說偈"
+  },
+  {
+   "id": "a05",
+   "label": "優婆夷答夜叉偈"
+  },
+  {
+   "id": "a06",
+   "label": "夜叉放子"
+  },
+  {
+   "id": "a07",
+   "label": "優婆夷教子偈"
+  },
+  {
+   "id": "a08",
+   "label": "子出家又還俗"
+  },
+  {
+   "id": "a09",
+   "label": "母子互說偈"
+  },
+  {
+   "id": "a10",
+   "label": "子精進修道得阿羅漢"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn10.5",
+   "lang": "pi",
+   "label": "巴利 SN10.5",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn10.5",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN10.5",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.324",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （三二四）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa1325",
+   "lang": "lzh",
+   "label": "雜阿含經 （一三二五）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（三二四）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一三二五）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn10.5": "Saṁyutta Nikāya 10.5 1. Indakavagga Sānusutta",
+   "nan-sn10.5": "〔五〕第五　左奴",
+   "T0100-sa-2.324": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。",
+   "T0099-sa1325": "如是我聞：一時，佛住王舍城迦蘭陀竹園。"
+  },
+  "a01": {
+   "sn10.5": "Ekaṁ samayaṁ bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme.",
+   "nan-sn10.5": "爾時，世尊住舍衛城祇樹給孤獨園。",
+   "T0100-sa-2.324": "爾時，優婆夷有一男兒，受持八戒，於戒有缺，以犯戒故，鬼著而狂。",
+   "T0099-sa1325": "時，有優婆夷子，受八支齋，尋即犯戒，即為鬼神所持。"
+  },
+  "a02": {
+   "sn10.5": "Tena kho pana samayena aññatarissā upāsikāya sānu nāma putto yakkhena gahito hoti. Atha kho sā upāsikā paridevamānā tāyaṁ velāyaṁ imā gāthāyo abhāsi: “Cātuddasiṁ pañcadasiṁ, yā ca pakkhassa aṭṭhamī; Pāṭihāriyapakkhañca, aṭṭhaṅgasusamāgataṁ. Uposathaṁ upavasanti, brahmacariyaṁ caranti ye; Na tehi yakkhā kīḷanti, iti me arahataṁ sutaṁ; Sā dāni ajja passāmi,",
+   "nan-sn10.5": "時有優婆夷名左奴之子，為夜叉所魅惑。時，優婆夷嘆息，而唱此等偈曰：",
+   "T0100-sa-2.324": "時優婆夷即說偈言：「十四十五日，及以月八日，\n如來神足月，清淨持八戒。",
+   "T0099-sa1325": "爾時，優婆夷即說偈言：「十四十五日，及月分八日，\n神通瑞應月，八支善正受，\n受持於齋戒，不為鬼所持，\n我昔數諮問，世尊作是說。」"
+  },
+  "a03": {
+   "sn10.5": "yakkhā kīḷanti sānunā”ti. “Cātuddasiṁ pañcadasiṁ, yā ca pakkhassa aṭṭhamī; Pāṭihāriyapakkhañca, aṭṭhaṅgasusamāgataṁ; Uposathaṁ upavasanti, brahmacariyaṁ caranti ye.",
+   "nan-sn10.5": "我常聞如是阿羅漢宣說\n我常聞如是阿羅漢宣說\n然則今日我見夜叉魅弄\n左奴為何事十四十五日\n半月第八日得神變分日\n奉持八齋戒以住於布薩\n以行於梵行夜叉不能魅\n我聞羅漢說然我今日見\n夜叉魅左奴此乃為何事",
+   "T0100-sa-2.324": "修行不缺減，鬼神不擾亂，\n我從羅漢所，得聞如是事。」時有夜叉而說偈言：「十四十五日，及以月八日，\n神足月齋日，持戒不毀缺，\n具受八支齋，鬼神不擾亂。\n汝於羅漢所，所聞皆稱實。",
+   "T0099-sa1325": "爾時，彼鬼即說偈言：「十四十五日，及月分八日，\n神足瑞應月，八支修正受。\n齋肅清淨住，戒德善守護，\n不為鬼戲弄，善哉從佛聞。\n汝當說言放，我當放汝子。"
+  },
+  "a04": {
+   "sn10.5": "Na tehi yakkhā kīḷanti, sāhu te arahataṁ sutaṁ; Sānuṁ pabuddhaṁ vajjāsi, yakkhānaṁ vacanaṁ idaṁ; Mākāsi pāpakaṁ kammaṁ, āvi vā yadi vā raho. Sace ca pāpakaṁ kammaṁ, karissasi karosi vā; Na te dukkhā pamutyatthi, uppaccāpi palāyato”ti.",
+   "nan-sn10.5": "〔夜叉：〕十四十五日半月第八日\n得神變分日奉持八齋戒\n以住於布薩以住梵行者\n夜叉不能魅我聞羅漢說\n左奴若醒覺以此可語汝\n此乃夜叉語不分公與私\n勿行任何惡若作惡業者\n又若為欲為如鳥躍上逃\n難逃汝苦惱",
+   "T0100-sa-2.324": "我今必當放。」夜叉作是語：\n「毀戒鬼擾弄，若有所毀缺，\n現在鬼神惱，將來獲惡果。\n受戒如執刀，急緩俱能傷，\n智者須菩提，得中則無害，\n不持法沙門，後受地獄苦。\n如彼拙用刀，必傷於其手，\n善捉者不傷，能護沙門法，\n後必得涅槃。」",
+   "T0099-sa1325": "諸有慢緩業，染污行苦行，\n梵行不清淨，終不得大果。\n譬如拔菅草，執緩則傷手，\n沙門行惡觸，當墮地獄中。\n譬如拔菅草，急捉不傷手，\n沙門善攝持，則到般涅槃。」"
+  },
+  "a05": {
+   "sn10.5": "“Mataṁ vā amma rodanti, yo vā jīvaṁ na dissati; Jīvantaṁ amma passantī, kasmā maṁ amma rodasī”ti. “Mataṁ vā putta rodanti, yo vā jīvaṁ na dissati; Yo ca kāme cajitvāna, punarāgacchate idha; Taṁ vāpi putta rodanti, puna jīvaṁ mato hi so. Kukkuḷā ubbhato tāta, kukkuḷaṁ patitumicchasi; Narakā ubbhato tāta, narakaṁ patitumicchasi. Abhidhāvatha bhaddante, kassa ujjhāpayāmase; Ādittā nīhataṁ bhaṇḍaṁ, puna ḍayhitumicchasī”ti.",
+   "nan-sn10.5": "〔左奴：〕人皆哭死人生別時亦哭\n我活活於此母何故泣我〔優婆夷：〕人皆泣子死生別時亦哭\n然一度離欲而且又歸來\n亦以哭其子其生亦似死\n子汝出燼炎願不再墮燼\n愛子出地獄希不再入獄\n逃離為幸福誰此語我等\n盛火出家貨汝欲再燒耶"
+  },
+  "a06": {
+   "T0100-sa-2.324": "夜叉捉兒竟，\n捉已尋復放。",
+   "T0099-sa1325": "時，彼鬼神即放優婆夷子。"
+  },
+  "a07": {
+   "T0100-sa-2.324": "時彼優婆夷，\n尋語其子言：「汝今當聽我，\n夜叉之所說，諸有遲緩業，\n梵行不清淨，邪命并諂曲，\n彼不成大果。譬如拙用刀，\n必自傷害手，善持沙門法，\n後必近涅槃，如似善捉刀，\n不自傷其手。」",
+   "T0099-sa1325": "爾時，優婆夷說偈告子言：「子汝今聽我，說彼鬼神說，\n若有慢緩業，穢污修苦行。\n不清淨梵行，彼不得大果，\n譬如拔葌草，執緩則傷手。\n沙門起惡觸，當墮地獄中，\n如急執葌草，則不傷其手。\n沙門善執護，逮得般涅槃。」"
+  },
+  "a08": {
+   "T0100-sa-2.324": "爾時，優婆夷為子種種說是法已，其子尋即生於厭惡，既厭惡已，便求出家，剃除鬚髮，即著法服，年少出家，不能深樂出家之法，以不樂故，便還歸家。"
+  },
+  "a09": {
+   "T0100-sa-2.324": "時優婆夷遙見子來，舉手大喚，而說偈言：「舍既被燒，烟炎熾盛，善出諸物，\n何以復來，而欲入火？舍既焚燒，\n烟炎熾盛，何緣復來，欲被燒害？」爾時，其子復說偈言：「一切世人死，必應悲號哭，\n現在若不見，亦復應啼泣，\n母今以何故，如彼餓鬼哭？」其母復說偈言：「汝以先捨欲，出家為沙門。\n汝今欲還家，恐為魔所縛。\n我今以是故，是以哭於汝。」\n時優婆夷，如是種種，呵責其子，\n使生厭惡。",
+   "T0099-sa1325": "時，彼優婆夷子如是覺悟已，剃除鬚髮，著袈裟衣，正信非家，出家學道，心不得樂，還歸自家，母遙見子，而說偈言：「邁世而出家，何為還聚落，\n燒舍急出財，豈還投火中？」其子比丘說偈答言：「但念母命終，存亡不相見，\n故來還瞻視，何見子不歡。」時，母優婆夷說偈答言：「捨欲而出家，還欲服食之，\n是故我憂悲，恐隨魔自在。」是時，優婆夷如是如是發悟其子；"
+  },
+  "a10": {
+   "T0100-sa-2.324": "爾時，其子即向阿練若處，精勤修道，晝夜不廢，獲阿羅漢。",
+   "T0099-sa1325": "如是，其子還空閑處，精勤思惟，斷除一切煩惱結縛，得阿羅漢果證。"
+  }
+ }
+}

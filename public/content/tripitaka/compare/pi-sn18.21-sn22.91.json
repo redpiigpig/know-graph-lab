@@ -1,0 +1,120 @@
+{
+ "slug": "pi-sn18.21-sn22.91",
+ "title": "雜阿含經 （一九八）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "羅睺羅請問"
+  },
+  {
+   "id": "a02",
+   "label": "佛答以五蘊非我"
+  },
+  {
+   "id": "a03",
+   "label": "結論：如是知見則斷慢使"
+  },
+  {
+   "id": "a04",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn18.21",
+   "lang": "pi",
+   "label": "巴利 SN18.21",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn18.21",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN18.21",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "sn22.91",
+   "lang": "pi",
+   "label": "巴利 SN22.91",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn22.91",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN22.91",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0099-sa198",
+   "lang": "lzh",
+   "label": "雜阿含經 （一九八）",
+   "who": "劉宋 求那跋陀羅譯"
+  },
+  {
+   "id": "T0099-sa23",
+   "lang": "lzh",
+   "label": "雜阿含經 （二三）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099"
+ ],
+ "anchors": [
+  {
+   "work": "T0099",
+   "node": "（一九八）"
+  },
+  {
+   "work": "T0099",
+   "node": "（二三）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn18.21": "Saṁyutta Nikāya 18.21 2. Dutiyavagga Anusayasutta Sāvatthiyaṁ viharati.",
+   "nan-sn18.21": "〔二一〕第十一　使〔爾時，世尊〕住舍衛城。",
+   "sn22.91": "Saṁyutta Nikāya 22.91 9. Theravagga Rāhulasutta Sāvatthinidānaṁ.",
+   "nan-sn22.91": "〔九一〕第九　羅睺羅（一）〔爾時，世尊〕住舍衛國……乃至……時，具壽羅睺羅，來詣世尊之處。詣而……乃至……",
+   "T0099-sa198": "如是我聞：一時，佛住王舍城耆闍崛山。",
+   "T0099-sa23": "如是我聞：一時，佛住王舍城迦蘭陀竹園。"
+  },
+  "a01": {
+   "sn18.21": "Atha kho āyasmā rāhulo yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho āyasmā rāhulo bhagavantaṁ etadavoca:",
+   "nan-sn18.21": "爾時，尊者羅睺羅來詣世尊處。詣已，禮敬世尊，坐於一面。坐於一面之羅睺羅，白世尊言：",
+   "sn22.91": "Atha kho āyasmā rāhulo yena bhagavā tenupasaṅkami; upasaṅkamitvā …pe… ekamantaṁ nisinno kho āyasmā rāhulo bhagavantaṁ etadavoca:",
+   "nan-sn22.91": "坐於一面之具壽羅睺羅白世尊曰：",
+   "T0099-sa198": "爾時，尊者羅睺羅往詣佛所，稽首佛足，退住一面，白佛言：「世尊！",
+   "T0099-sa23": "爾時，尊者羅睺羅往詣佛所，頭面禮足，却住一面，白佛言：「世尊！"
+  },
+  "a02": {
+   "sn18.21": "“kathaṁ nu kho, bhante, jānato kathaṁ passato imasmiñca saviññāṇake kāye bahiddhā ca sabbanimittesu ahaṅkāramamaṅkāramānānusayā na hontī”ti? “Yaṁ kiñci, rāhula, rūpaṁ atītānāgatapaccuppannaṁ ajjhattaṁ vā bahiddhā vā oḷārikaṁ vā sukhumaṁ vā hīnaṁ vā paṇītaṁ vā yaṁ dūre santike vā, sabbaṁ rūpaṁ ‘netaṁ mama, nesohamasmi, na meso attā’ti evametaṁ yathābhūtaṁ sammappaññāya passati. Yā kāci vedanā …pe… yā kāci saññā … ye keci saṅkhārā … yaṁ kiñci viññāṇaṁ atītānāgatapaccuppannaṁ ajjhattaṁ vā bahiddhā vā oḷārikaṁ vā sukhumaṁ vā hīnaṁ vā paṇītaṁ vā yaṁ dūre santike vā, sabbaṁ viññāṇaṁ ‘netaṁ mama, nesohamasmi, na meso attā’ti evametaṁ yathābhūtaṁ sammappaññāya passati.",
+   "nan-sn18.21": "「大德！如何知？如何見？則對此有識身及外一切相，我之狀態，我所之狀態，無慢使耶？」",
+   "sn22.91": "“kathaṁ nu kho, bhante, jānato kathaṁ passato imasmiñca saviññāṇake kāye bahiddhā ca sabbanimittesu ahaṅkāramamaṅkāramānānusayā na hontī”ti? “Yaṁ kiñci, rāhula, rūpaṁ atītānāgatapaccuppannaṁ ajjhattaṁ vā bahiddhā vā oḷārikaṁ vā sukhumaṁ vā hīnaṁ vā paṇītaṁ vā yaṁ dūre santike vā, sabbaṁ rūpaṁ ‘netaṁ mama, nesohamasmi, na meso attā’ti evametaṁ yathābhūtaṁ sammappaññāya passati. Yā kāci vedanā … yā kāci saññā … ye keci saṅkhārā … yaṁ kiñci viññāṇaṁ atītānāgatapaccuppannaṁ ajjhattaṁ vā bahiddhā vā …pe… sabbaṁ viññāṇaṁ ‘netaṁ mama, nesohamasmi, na meso attā’ti evametaṁ yathābhūtaṁ sammappaññāya passati.",
+   "nan-sn22.91": "「大德！如何知、如何觀者，於此有識之身及外之一切相，得滅我慢、我所慢、慢隨眠耶？」「羅睺羅！一切色之過去、未來、現在、內外、粗、細、劣、勝、遠、近者，此非我所，此非我，此非我體，如是以正慧作如實觀。五～七一切之受……想……行……",
+   "T0099-sa198": "云何知、云何見我內識身及外一切相，令我、我所、我慢使繫著不生？」爾時，世尊告羅睺羅：「善哉！羅睺羅！能問如來甚深之義。」佛告羅睺羅：「眼若過去、若未來、若現在，若內、若外，若麁、若細，若好、若醜，若遠、若近，彼一切非我、非異我、不相在如實知。",
+   "T0099-sa23": "云何知、云何見我此識身及外境界一切相，能令無有我、我所見、我慢使繫著？」佛告羅睺羅：「善哉！善哉！能問如來：『云何知、云何見我此識身及外境界一切相，令無有我、我所見、我慢使繫著？』耶。」羅睺羅白佛言：「如是，世尊！」佛告羅睺羅：「善哉！諦聽！諦聽！善思念之，當為汝說。羅睺羅！當觀若所有諸色，若過去、若未來、若現在，若內、若外，若麁、若細，若好、若醜，若遠、若近，彼一切悉皆非我、不異我、不相在，如是平等慧正觀。如是受、想、行、識，若過去、若未來、若現在，若內、若外，若麁、若細，若好、若醜，若遠、若近，彼一切非我、不異我、不相在。"
+  },
+  "a03": {
+   "sn18.21": "Evaṁ kho, rāhula, jānato evaṁ passato imasmiñca saviññāṇake kāye bahiddhā ca sabbanimittesu ahaṅkāramamaṅkāramānānusayā na hontī”ti.",
+   "nan-sn18.21": "「羅睺羅！任何之色——過去、現在、未來，或內、或外、或麤、或細、或劣、或勝、或遠、或近——一切之色，以『此非我所，此非我，此非我之我。』如是，對此如實以正慧而見。任何之受……任何之想……任何之行……任何之識……過去、現在、未來、或內、或外、或麤、或細、或劣、或勝、或遠、或近——一切之識，以『此非我所，此非我、此非我之我。』如是，如實以正慧而見。羅睺羅！如是知，如是見，則對此有識之身及外之一切相，我之狀態，我所之狀態，為慢使。」",
+   "sn22.91": "Evaṁ kho, rāhula, jānato evaṁ passato imasmiñca saviññāṇake kāye bahiddhā ca sabbanimittesu ahaṅkāramamaṅkāramānānusayā na hontī”ti.",
+   "nan-sn22.91": "識之過去，未來、現在、內、外……乃至……此非我，此非我所，此非我體，如是以正慧作如實觀。羅睺羅！如是知，如是觀者，於此有識之身及外之一切相，得滅我慢、我所慢、慢隨眠。」",
+   "T0099-sa198": "耳、鼻、舌、身、意亦復如是。「羅睺羅！作如是知、如是見我此識身及外一切相，令我、我所、我慢使繫著不生。羅睺羅！如是我、我所、我慢使繫著不生者。羅睺羅！是名斷愛，轉結，正無間等，究竟苦邊。」",
+   "T0099-sa23": "如是平等慧如實觀。「如是，羅睺羅！比丘如是知、如是見。如是知、如是見者，於此識身及外境界一切相，無有我、我所見、我慢使繫著。"
+  },
+  "a04": {
+   "sn18.21": "Ekādasamaṁ.",
+   "sn22.91": "Navamaṁ.",
+   "T0099-sa198": "佛說此經已，尊者羅睺羅聞佛所說，歡喜奉行。如內入處，如是外入處，色、聲、香、味、觸、法，眼識，耳、鼻、舌、身、意識，眼觸，耳、鼻、舌、身、意觸，眼觸生受，耳、鼻、舌、身、意觸生受，眼觸生想，耳、鼻、舌、身、意觸生想，眼觸生思，耳、鼻、舌、身、意觸生思，眼觸生愛，耳、鼻、舌、身、意觸生愛，亦如上說。",
+   "T0099-sa23": "「羅睺羅！比丘若如是於此識身及外境界一切相，無有我、我所見、我慢使繫著者，比丘是名斷愛欲，轉去諸結，正無間等，究竟苦邊。」時，羅睺羅聞佛所說，歡喜奉行。"
+  }
+ }
+}

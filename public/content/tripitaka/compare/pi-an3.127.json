@@ -1,0 +1,99 @@
+{
+ "slug": "pi-an3.127",
+ "title": "別譯雜阿含經 （一八八）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "天子現身請問"
+  },
+  {
+   "id": "a02",
+   "label": "世尊問過去習法"
+  },
+  {
+   "id": "a03",
+   "label": "天子答三法無厭足"
+  },
+  {
+   "id": "a04",
+   "label": "天子說偈"
+  },
+  {
+   "id": "a05",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "an3.127",
+   "lang": "pi",
+   "label": "巴利 AN3.127",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "T0100-sa-2.188",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （一八八）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa594",
+   "lang": "lzh",
+   "label": "雜阿含經 （五九四）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（一八八）"
+  },
+  {
+   "work": "T0099",
+   "node": "（五九四）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "an3.127": "Aṅguttara Nikāya 3.127 13. Kusināravagga Hatthakasutta",
+   "T0100-sa-2.188": "如是我聞：一時，佛在曠野園第一林中。時首長者身遇困疾，爾時，世尊聞其患已，後日晨朝，著衣持鉢，往詣其家。時首長者遙見佛來，動身欲起，佛告長者：「不須汝起。」佛即慰問：「汝所患苦，為可忍不？醫療有降，不至增耶？」長者白佛：「今我患苦，極為難忍，所受痛劇，遂漸增長，苦痛逼切，甚可厭患。譬如有力之人，以手㨑搣無力者頭，揉捺牽掣，我患頭痛，亦復如是。譬如屠者以彼利刀，撓攪牛腹腸胃寸絕，我患腹痛，亦復如是。譬如二大力人，捉一羸病，向火燺炙，身體焦爛，患體熱痛，亦復如是。」佛告長者：「汝今，應於佛所生不壞信，法僧及戒，亦當如是。」長者白佛：「如佛所說，四不壞信，我已具得。」佛告長者「依於如是四不壞信，應修六念。」長者白佛：「如此六念，我已具修。」時首長者即白佛言：「唯願世尊，在此中食。」佛默然受請。日時已到，彼首長者為於如來設眾餚饍，種種備具，清淨香潔。設是供已，尋便奉施，合掌向佛，而作是言：「世尊出世，難可值遇。」佛為長者種種說法，示教利喜，從座而去。時首長者如來去後，尋於其夜，身壞命終，生無熱天。",
+   "T0099-sa594": "如是我聞：一時，佛住曠野精舍。時，有曠野長者疾病命終，生無熱天。"
+  },
+  "a01": {
+   "an3.127": "Ekaṁ samayaṁ bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme. Atha kho hatthako devaputto abhikkantāya rattiyā abhikkantavaṇṇo kevalakappaṁ jetavanaṁ obhāsetvā yena bhagavā tenupasaṅkami; upasaṅkamitvā: “bhagavato purato ṭhassāmī”ti osīdatimeva saṁsīdatimeva, na sakkoti saṇṭhātuṁ. Seyyathāpi nāma sappi vā telaṁ vā vālukāya āsittaṁ osīdatimeva saṁsīdatimeva, na saṇṭhāti; evamevaṁ hatthako devaputto: “bhagavato purato ṭhassāmī”ti osīdatimeva saṁsīdatimeva, na sakkoti saṇṭhātuṁ. Atha kho bhagavā hatthakaṁ devaputtaṁ etadavoca: “oḷārikaṁ, hatthaka, attabhāvaṁ abhinimmināhī”ti. “Evaṁ, bhante”ti, kho hatthako devaputto bhagavato paṭissutvā oḷārikaṁ attabhāvaṁ abhinimminitvā bhagavantaṁ abhivādetvā ekamantaṁ aṭṭhāsi.",
+   "T0100-sa-2.188": "既生天已，即作此念：「我於今者，應往佛所。」作是念已，尋來佛所，光色倍常，照于祇洹，悉皆大明，頂禮佛已，却坐一面，身滲入地，譬如蘇油。佛告天子：「汝可化為麁身，當作住想。」時首天子受佛勅已，即便化作欲界麁形，不復滲沒。",
+   "T0099-sa594": "生彼天已，即作是念：「我今不應久於此住，不見世尊。」作是念已，如力士屈申臂頃，從無熱天沒，現於佛前。時，彼天子天身委地，不能自立，猶如酥油委地，不能自立。如是，彼天子天身細軟，不自持立。爾時，世尊告彼天子：「汝當變化作此麁身，而立於地。」時，彼天子即自化形，作此麁身，而立於地。於是，天子前禮佛足，退坐一面。爾時，世尊告手天子：「汝手天子，本於此間為人身時，所受經法，今故憶念不悉忘耶？」手天子白佛言：「世尊！本所受持，今悉不忘。本人間時，有所聞法，不盡得者，今亦憶念，如世尊善說。世尊說言：『若人安樂處，能憶持法，非為苦處。』此說真實。如世尊在閻浮提，種種雜類，四眾圍遶，而為說法，彼諸四眾聞佛所說，皆悉奉行。我亦如是，於無熱天上，為諸天人大會說法，彼諸天眾悉受修學。」"
+  },
+  "a02": {
+   "an3.127": "Ekamantaṁ ṭhitaṁ kho hatthakaṁ devaputtaṁ bhagavā etadavoca: “Ye te, hatthaka, dhammā pubbe manussabhūtassa pavattino ahesuṁ, api nu te te dhammā etarahi pavattino”ti?",
+   "T0100-sa-2.188": "佛告首天子言：「汝行幾法不生厭足，身壞命終，生無熱天？」",
+   "T0099-sa594": "佛告手天子：「汝於此人間時，於幾法無厭足故，而得生彼無熱天中？」手天子白佛：「世尊！"
+  },
+  "a03": {
+   "an3.127": "“Ye ca me, bhante, dhammā pubbe manussabhūtassa pavattino ahesuṁ, te ca me dhammā etarahi pavattino; ye ca me, bhante, dhammā pubbe manussabhūtassa nappavattino ahesuṁ, te ca me dhammā etarahi pavattino. Seyyathāpi, bhante, bhagavā etarahi ākiṇṇo viharati bhikkhūhi bhikkhunīhi upāsakehi upāsikāhi rājūhi rājamahāmattehi titthiyehi titthiyasāvakehi; evamevaṁ kho ahaṁ, bhante, ākiṇṇo viharāmi devaputtehi. Dūratopi, bhante, devaputtā āgacchanti hatthakassa devaputtassa santike ‘dhammaṁ sossāmā’ti. Tiṇṇāhaṁ, bhante, dhammānaṁ atitto appaṭivāno kālaṅkato. Katamesaṁ tiṇṇaṁ? Bhagavato ahaṁ, bhante, dassanassa atitto appaṭivāno kālaṅkato; saddhammasavanassāhaṁ, bhante, atitto appaṭivāno kālaṅkato; saṅghassāhaṁ, bhante, upaṭṭhānassa atitto appaṭivāno kālaṅkato. Imesaṁ kho ahaṁ, bhante, tiṇṇaṁ dhammānaṁ atitto appaṭivāno kālaṅkatoti.",
+   "T0100-sa-2.188": "首天白佛：「我行三法，心無厭足，故得生天。見佛，聽法，供養眾僧，無厭足故，命終得生無熱天上。」",
+   "T0099-sa594": "我於三法無厭足故，身壞命終，生無熱天。何等三法？我於見佛無厭故，身壞命終生無熱天；我於佛法無厭足故，生無熱天；供養眾僧無厭足故，身壞命終，生無熱天。」"
+  },
+  "a04": {
+   "an3.127": "Nāhaṁ bhagavato dassanassa, Tittimajjhagā kudācanaṁ; Saṅghassa upaṭṭhānassa, Saddhammasavanassa ca. Adhisīlaṁ sikkhamāno, saddhammasavane rato; Tiṇṇaṁ dhammānaṁ atitto, hatthako avihaṁ gato”ti.",
+   "T0100-sa-2.188": "時首天子即說偈言：「我樂常見佛，不捨於聽法，\n供養比丘僧，受持賢聖法，\n調伏貪嫉心，得生無熱天。」",
+   "T0099-sa594": "時，手天子即說偈言：「見佛無厭足，聞法亦無厭，\n供養於眾僧，亦未曾知足，\n受持賢聖法，調伏慳著垢，\n三法不知足，故生無熱天。」"
+  },
+  "a05": {
+   "an3.127": "Pañcamaṁ.",
+   "T0100-sa-2.188": "時首天子說是偈已，歡喜頂禮，即從座沒，還於天宮。",
+   "T0099-sa594": "時，手天子聞佛所說，歡喜隨喜，即沒不現。"
+  }
+ }
+}

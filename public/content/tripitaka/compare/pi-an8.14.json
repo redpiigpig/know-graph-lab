@@ -1,0 +1,81 @@
+{
+ "slug": "pi-an8.14",
+ "title": "別譯雜阿含經 （一四九）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "八種馬過"
+  },
+  {
+   "id": "a02",
+   "label": "八種人過"
+  },
+  {
+   "id": "a03",
+   "label": "結句"
+  }
+ ],
+ "versions": [
+  {
+   "id": "an8.14",
+   "lang": "pi",
+   "label": "巴利 AN8.14",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "T0100-sa-2.149",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （一四九）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa924",
+   "lang": "lzh",
+   "label": "雜阿含經 （九二四）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（一四九）"
+  },
+  {
+   "work": "T0099",
+   "node": "（九二四）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "an8.14": "Aṅguttara Nikāya 8.14 2. Mahāvagga Assakhaḷuṅkasutta",
+   "T0100-sa-2.149": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。",
+   "T0099-sa924": "如是我聞：一時，佛住王舍城迦蘭陀竹園。"
+  },
+  "a01": {
+   "an8.14": "“Aṭṭha ca, bhikkhave, assakhaḷuṅke desessāmi aṭṭha ca assadose, aṭṭha ca purisakhaḷuṅke aṭṭha ca purisadose. Taṁ suṇātha, sādhukaṁ manasi karotha, bhāsissāmī”ti. “Evaṁ, bhante”ti kho te bhikkhū bhagavato paccassosuṁ. Bhagavā etadavoca: “Katame ca, bhikkhave, aṭṭha assakhaḷuṅkā aṭṭha ca assadosā? Idha, bhikkhave, ekacco assakhaḷuṅko ‘pehī’ti vutto, viddho samāno codito sārathinā pacchato paṭikkamati, piṭṭhito rathaṁ pavatteti. Evarūpopi, bhikkhave, idhekacco assakhaḷuṅko hoti. Ayaṁ, bhikkhave, paṭhamo assadoso. Puna caparaṁ, bhikkhave, idhekacco assakhaḷuṅko ‘pehī’ti vutto, viddho samāno codito sārathinā pacchā laṅghati, kubbaraṁ hanati, tidaṇḍaṁ bhañjati. Evarūpopi, bhikkhave, idhekacco assakhaḷuṅko hoti. Ayaṁ, bhikkhave, dutiyo assadoso. Puna caparaṁ, bhikkhave, idhekacco assakhaḷuṅko ‘pehī’ti vutto, viddho samāno codito sārathinā rathīsāya satthiṁ ussajjitvā rathīsaṁyeva ajjhomaddati. Evarūpopi, bhikkhave, idhekacco assakhaḷuṅko hoti. Ayaṁ, bhikkhave, tatiyo assadoso. Puna caparaṁ, bhikkhave, idhekacco assakhaḷuṅko ‘pehī’ti vutto, viddho samāno codito sārathinā ummaggaṁ gaṇhati, ubbaṭumaṁ rathaṁ karoti. Evarūpopi, bhikkhave, idhekacco assakhaḷuṅko hoti. Ayaṁ, bhikkhave, catuttho assadoso. Puna caparaṁ, bhikkhave, idhekacco assakhaḷuṅko ‘pehī’ti vutto, viddho samāno codito sārathinā laṅghati purimakāyaṁ paggaṇhati purime pāde. Evarūpopi, bhikkhave, idhekacco assakhaḷuṅko hoti. Ayaṁ, bhikkhave, pañcamo assadoso. Puna caparaṁ, bhikkhave, idhekacco assakhaḷuṅko ‘pehī’ti vutto, viddho samāno codito sārathinā anādiyitvā sārathiṁ anādiyitvā patodalaṭṭhiṁ dantehi mukhādhānaṁ vidhaṁsitvā yena kāmaṁ pakkamati. Evarūpopi, bhikkhave, idhekacco assakhaḷuṅko hoti. Ayaṁ, bhikkhave, chaṭṭho assadoso. Puna caparaṁ, bhikkhave, idhekacco assakhaḷuṅko ‘pehī’ti vutto, viddho samāno codito sārathinā neva abhikkamati no paṭikkamati tattheva khīlaṭṭhāyī ṭhito hoti. Evarūpopi, bhikkhave, idhekacco assakhaḷuṅko hoti. Ayaṁ, bhikkhave, sattamo assadoso. Puna caparaṁ, bhikkhave, idhekacco assakhaḷuṅko ‘pehī’ti vutto, viddho samāno codito sārathinā purime ca pāde saṁharitvā pacchime ca pāde saṁharitvā tattheva cattāro pāde abhinisīdati. Evarūpopi, bhikkhave, idhekacco assakhaḷuṅko hoti. Ayaṁ, bhikkhave, aṭṭhamo assadoso. Ime kho, bhikkhave, aṭṭha assakhaḷuṅkā aṭṭha ca assadosā.",
+   "T0100-sa-2.149": "爾時，世尊告諸比丘：「馬有八種，過世間所知，現在可見。何等為八？一者，乘馬之人控轡秉策，將即遠路，而彼惡馬嚙銜跳躑，頓絕羈勒，破碎乘具，傷毀形體，是名馬過。其第二者，御者乘之，不肯前進，而此惡馬騰躍叵制，破碎乘具。其第三者，御者乘之，不肯著路，但踰坑塹。其第四者，若乘之時，不肯前進，返更却行。其第五者，都不畏於御乘之人、鞭策之痛。其第六者，御馬之人，以鞭策之，方便距地二足雙立。其第七者，御馬之人意欲馳驟，返更臥地，不肯進路。其第八者，御馬之人意欲令行，而返停住。",
+   "T0099-sa924": "爾時，世尊告諸比丘：「世間馬有八態。何等為八？謂惡馬臨駕車時，後脚蹹人，前脚跪地，奮頭齧人，是名世間馬第一態。復次，惡馬就駕車時，低頭振軛，是名世間惡馬第二之態。復次，世間惡馬就駕車時，下道而去，或復偏厲車，令其翻覆，是名第三之態。復次，世間惡馬就駕車時，仰頭却行，是名世間惡馬第四之態。復次，世間惡馬就駕車時，小得鞭杖，或斷繮折勒，縱橫馳走，是名第五之態。復次，世間惡馬就駕車時，舉前兩足，而作人立，是名第六之態。復次，世間惡馬就駕之時，加之鞭杖，安住不動，是名第七之態。復次，世間惡馬就駕之時，叢聚四脚，伏地不起，是名第八之態。"
+  },
+  "a02": {
+   "an8.14": "Katame ca, bhikkhave, aṭṭha purisakhaḷuṅkā aṭṭha ca purisadosā? Idha, bhikkhave, bhikkhū bhikkhuṁ āpattiyā codenti. So bhikkhu bhikkhūhi āpattiyā codiyamāno ‘na sarāmī’ti asatiyā nibbeṭheti. Seyyathāpi so, bhikkhave, assakhaḷuṅko ‘pehī’ti vutto, viddho samāno codito sārathinā pacchato paṭikkamati, piṭṭhito rathaṁ vatteti; tathūpamāhaṁ, bhikkhave, imaṁ puggalaṁ vadāmi. Evarūpopi, bhikkhave, idhekacco purisakhaḷuṅko hoti. Ayaṁ, bhikkhave, paṭhamo purisadoso. Puna caparaṁ, bhikkhave, bhikkhū bhikkhuṁ āpattiyā codenti. So bhikkhu bhikkhūhi āpattiyā codiyamāno codakaṁyeva paṭippharati: ‘kiṁ nu kho tuyhaṁ bālassa abyattassa bhaṇitena. Tvampi nāma bhaṇitabbaṁ maññasī’ti. Seyyathāpi so, bhikkhave, assakhaḷuṅko ‘pehī’ti vutto, viddho samāno codito sārathinā pacchā laṅghati, kubbaraṁ hanati, tidaṇḍaṁ bhañjati; tathūpamāhaṁ, bhikkhave, imaṁ puggalaṁ vadāmi. Evarūpopi, bhikkhave, idhekacco purisakhaḷuṅko hoti. Ayaṁ, bhikkhave, dutiyo purisadoso. Puna caparaṁ, bhikkhave, bhikkhū bhikkhuṁ āpattiyā codenti. So bhikkhu bhikkhūhi āpattiyā codiyamāno codakasseva paccāropeti: ‘tvaṁ khosi itthannāmaṁ āpattiṁ āpanno, tvaṁ tāva paṭhamaṁ paṭikarohī’ti. Seyyathāpi so, bhikkhave, assakhaḷuṅko ‘pehī’ti vutto, viddho samāno codito sārathinā rathīsāya satthiṁ ussajjitvā rathīsaṁyeva ajjhomaddati; tathūpamāhaṁ, bhikkhave, imaṁ puggalaṁ vadāmi. Evarūpopi, bhikkhave, idhekacco purisakhaḷuṅko hoti. Ayaṁ, bhikkhave, tatiyo purisadoso. Puna caparaṁ, bhikkhave, bhikkhū bhikkhuṁ āpattiyā codenti. So bhikkhu bhikkhūhi āpattiyā codiyamāno aññenāññaṁ paṭicarati, bahiddhā kathaṁ apanāmeti, kopañca dosañca appaccayañca pātukaroti. Seyyathāpi so, bhikkhave, assakhaḷuṅko ‘pehī’ti vutto, viddho samāno codito sārathinā ummaggaṁ gaṇhati, ubbaṭumaṁ rathaṁ karoti; tathūpamāhaṁ, bhikkhave, imaṁ puggalaṁ vadāmi. Evarūpopi, bhikkhave, idhekacco purisakhaḷuṅko hoti. Ayaṁ, bhikkhave, catuttho purisadoso. Puna caparaṁ, bhikkhave, bhikkhū bhikkhuṁ āpattiyā codenti. So bhikkhu bhikkhūhi āpattiyā codiyamāno saṅghamajjhe bāhuvikkhepaṁ karoti. Seyyathāpi so, bhikkhave, assakhaḷuṅko ‘pehī’ti vutto, viddho samāno codito sārathinā laṅghati, purimakāyaṁ paggaṇhati purime pāde; tathūpamāhaṁ, bhikkhave, imaṁ puggalaṁ vadāmi. Evarūpopi, bhikkhave, idhekacco purisakhaḷuṅko hoti. Ayaṁ, bhikkhave, pañcamo purisadoso. Puna caparaṁ, bhikkhave, bhikkhū bhikkhuṁ āpattiyā codenti. So bhikkhu bhikkhūhi āpattiyā codiyamāno anādiyitvā saṅghaṁ anādiyitvā codakaṁ sāpattikova yena kāmaṁ pakkamati. Seyyathāpi so, bhikkhave, assakhaḷuṅko ‘pehī’ti vutto, viddho samāno codito sārathinā anādiyitvā sārathiṁ anādiyitvā patodalaṭṭhiṁ dantehi mukhādhānaṁ vidhaṁsitvā yena kāmaṁ pakkamati; tathūpamāhaṁ, bhikkhave, imaṁ puggalaṁ vadāmi. Evarūpopi, bhikkhave, idhekacco purisakhaḷuṅko hoti. Ayaṁ, bhikkhave, chaṭṭho purisadoso. Puna caparaṁ, bhikkhave, bhikkhū bhikkhuṁ āpattiyā codenti. So bhikkhu bhikkhūhi āpattiyā codiyamāno ‘nevāhaṁ āpannomhi, na panāhaṁ āpannomhī’ti so tuṇhībhāvena saṅghaṁ viheṭheti. Seyyathāpi so, bhikkhave, assakhaḷuṅko ‘pehī’ti vutto, viddho samāno codito sārathinā neva abhikkamati no paṭikkamati tattheva khīlaṭṭhāyī ṭhito hoti; tathūpamāhaṁ, bhikkhave, imaṁ puggalaṁ vadāmi. Evarūpopi, bhikkhave, idhekacco purisakhaḷuṅko hoti. Ayaṁ, bhikkhave, sattamo purisadoso. Puna caparaṁ, bhikkhave, bhikkhū bhikkhuṁ āpattiyā codenti. So bhikkhu bhikkhūhi āpattiyā codiyamāno evamāha: ‘kiṁ nu kho tumhe āyasmanto atibāḷhaṁ mayi byāvaṭā yāva idānāhaṁ sikkhaṁ paccakkhāya hīnāyāvattissāmī’ti. So sikkhaṁ paccakkhāya hīnāyāvattitvā evamāha: ‘idāni kho tumhe āyasmanto attamanā hothā’ti? Seyyathāpi so, bhikkhave, assakhaḷuṅko ‘pehī’ti vutto, viddho samāno codito sārathinā purime ca pāde saṁharitvā pacchime ca pāde saṁharitvā tattheva cattāro pāde abhinisīdati; tathūpamāhaṁ, bhikkhave, imaṁ puggalaṁ vadāmi. Evarūpopi, bhikkhave, idhekacco purisakhaḷuṅko hoti. Ayaṁ, bhikkhave, aṭṭhamo purisadoso.",
+   "T0100-sa-2.149": "「於佛法中，修學丈夫亦有如是八種過患。何等為八？若比丘同梵行者，有見聞疑事覺觸己身，即語彼言：『汝於今者，稚小無智，不善不了，汝今應當覺觸餘人，云何乃欲覺觸於我？汝自有過，反舉他事。』如是之人 猶第一馬。其第二者，見他比丘有見聞疑罪，同梵行者即便語彼：『有罪人言，汝於今者，犯如是罪。』時有罪人復語彼言：『汝今自犯如是之罪，若懺悔者，然後乃可糺舉我罪。』如是之人猶第二馬所有過失。其第三者，若有比丘作見聞疑罪，為他所舉，便作異語，隨於愛瞋及以怖，癡心生忿怒，如是之人猶第三馬所有過失。其第四者，若有比丘亦復作於見聞疑罪，為他所舉，即便語彼舉事人言：『我都不憶犯如是罪。』當知此人同第四馬所有過失。其第五者，若有比丘亦復犯於見聞疑罪，同梵行者而來舉之。時，犯罪人即攝衣鉢，隨意而去，其心都無畏忌眾僧及舉事者。當知斯人同第五馬所有過失。其第六者，若有比丘亦復犯於見聞疑罪，同梵行者而舉其事。時犯罪人即便於彼高處而坐，與諸長老比丘諍論道理，舉手大喚，作如是言：『汝等諸人，悉皆自犯見聞疑罪，而更說我犯如是罪。』當知斯人同第六馬所有過患。其第七者，若有比丘亦復犯於見聞疑罪，清淨比丘糺舉其事，彼有罪人嘿然而住，亦復不言有罪無罪，惱亂眾僧。當知斯人同第七馬所作過失。其第八者，若有比丘亦復犯於見聞疑罪，清淨比丘發舉其事，彼犯罪人即便捨戒，退失善根，罷道還俗。既休道已，在寺門邊，住立一面，語諸比丘：『我今還俗，為滿汝等所願以不？汝今歡喜極快樂不？』當知是人同第八馬所有過患。」",
+   "T0099-sa924": "「如是，世間惡丈夫於正法、律有八種過。何等為八？若比丘！諸梵行者以見聞疑罪而發舉時，彼則瞋恚，反呵責彼言：『汝愚癡，不辯不善，他立舉汝，汝云何舉我？』如彼惡馬，後脚雙蹹，前脚跪地，斷鞅折軛，是名丈夫於正法、律第一之過。「復次，比丘！諸梵行者以見聞疑舉，反出他罪，猶如惡馬怒項折軛，是名丈夫於正法、律第二之過。「復次，比丘！諸梵行者以見聞疑舉，不以正答，橫說餘事，瞋恚憍慢，隱覆嫌恨，不忍，無所由作，如彼惡馬不由正路，令車翻覆，是名丈夫於正法、律第三之過。「復次，比丘！諸梵行者以見聞疑舉，令其憶念，而作是言：『我不憶念！』觝突不伏，如彼惡馬却縮轉退，是名丈夫於正法、律第四之過。「復次，比丘！諸梵行者以見聞疑舉時，輕蔑不數其人，亦不數僧，攝持衣鉢，隨意而去，如彼惡馬加以鞭杖，縱橫馳走，是名丈夫於正法、律第五之過。「復次，比丘！諸梵行者以見聞疑舉時，自處高床、與諸上座共諍曲直，如彼惡馬雙脚人立，是名丈夫於正法、律第六之過。「復次，比丘！諸梵行者以見聞疑舉時，默然不應，以惱大眾，如彼惡馬加其鞭杖，兀然不動，是名丈夫於正法、律第七之過。「復次，比丘！諸梵行者以見聞疑舉時，則便捨戒，自生退沒，到於寺門，而作是言：『汝默然快喜安住，我自捨戒退沒。』如彼惡馬叢聚四足，伏地不動，是名丈夫於正法、律第八之過。"
+  },
+  "a03": {
+   "an8.14": "Ime kho, bhikkhave, aṭṭha purisakhaḷuṅkā aṭṭha ca purisadosā”ti. Catutthaṁ.",
+   "T0100-sa-2.149": "諸比丘聞佛所說，歡喜奉行。",
+   "T0099-sa924": "是名比丘於正法、律有八種丈夫過惡。」佛說此經已，諸比丘聞佛所說，歡喜奉行。"
+  }
+ }
+}

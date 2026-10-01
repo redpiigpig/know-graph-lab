@@ -1,0 +1,417 @@
+{
+ "slug": "pi-mn140",
+ "title": "佛說蓱沙王五願經",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "請宿陶家"
+  },
+  {
+   "id": "a02",
+   "label": "世尊問師"
+  },
+  {
+   "id": "a03",
+   "label": "弗區沙提答師"
+  },
+  {
+   "id": "a04",
+   "label": "世尊問見佛"
+  },
+  {
+   "id": "a05",
+   "label": "弗區沙提答未見佛"
+  },
+  {
+   "id": "a06",
+   "label": "世尊欲說法"
+  },
+  {
+   "id": "a07",
+   "label": "六界分別總說"
+  },
+  {
+   "id": "a08",
+   "label": "六界說"
+  },
+  {
+   "id": "a09",
+   "label": "六觸處說"
+  },
+  {
+   "id": "a10",
+   "label": "十八意行說"
+  },
+  {
+   "id": "a11",
+   "label": "四住處說"
+  },
+  {
+   "id": "a12",
+   "label": "不放逸慧等四種修學"
+  },
+  {
+   "id": "a13",
+   "label": "內地界說"
+  },
+  {
+   "id": "a14",
+   "label": "內水界說"
+  },
+  {
+   "id": "a15",
+   "label": "內火界說"
+  },
+  {
+   "id": "a16",
+   "label": "內風界說"
+  },
+  {
+   "id": "a17",
+   "label": "內空界說"
+  },
+  {
+   "id": "a18",
+   "label": "識受說"
+  },
+  {
+   "id": "a19",
+   "label": "樂受苦受不苦不樂受說"
+  },
+  {
+   "id": "a20",
+   "label": "譬喻：二木摩擦生熱"
+  },
+  {
+   "id": "a21",
+   "label": "譬喻：煉金師淨金"
+  },
+  {
+   "id": "a22",
+   "label": "譬喻：油燈盡滅"
+  },
+  {
+   "id": "a23",
+   "label": "具足比丘得最上慧住處"
+  },
+  {
+   "id": "a24",
+   "label": "具足比丘得最上諦住處"
+  },
+  {
+   "id": "a25",
+   "label": "具足比丘得最上施住處"
+  },
+  {
+   "id": "a26",
+   "label": "具足比丘得最上寂靜住處"
+  },
+  {
+   "id": "a27",
+   "label": "我見等妄想說"
+  },
+  {
+   "id": "a28",
+   "label": "略說六界分別"
+  },
+  {
+   "id": "a29",
+   "label": "弗區沙提懺悔求護"
+  },
+  {
+   "id": "a30",
+   "label": "世尊開許懺悔"
+  },
+  {
+   "id": "a31",
+   "label": "弗區沙提求具足戒"
+  },
+  {
+   "id": "a32",
+   "label": "世尊問衣缽"
+  },
+  {
+   "id": "a33",
+   "label": "弗區沙提答衣缽不具"
+  },
+  {
+   "id": "a34",
+   "label": "世尊說衣缽不具不得具足戒"
+  },
+  {
+   "id": "a35",
+   "label": "弗區沙提求衣缽而行"
+  },
+  {
+   "id": "a36",
+   "label": "弗區沙提被牛殺害"
+  },
+  {
+   "id": "a37",
+   "label": "眾比丘問弗區沙提去處"
+  },
+  {
+   "id": "a38",
+   "label": "世尊答弗區沙提得不退法"
+  },
+  {
+   "id": "a39",
+   "label": "眾比丘隨喜"
+  },
+  {
+   "id": "a40",
+   "label": "經終結句"
+  }
+ ],
+ "versions": [
+  {
+   "id": "mn140",
+   "lang": "pi",
+   "label": "巴利 MN140",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-mn140",
+   "lang": "lzh",
+   "label": "漢譯南傳 MN140",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0026-ma162",
+   "lang": "lzh",
+   "label": "中阿含經 （一六二）中阿含根本分別品分別六界經第一",
+   "who": "東晉 瞿曇僧伽提婆譯"
+  },
+  {
+   "id": "T0511",
+   "lang": "lzh",
+   "label": "佛說蓱沙王五願經",
+   "who": "吳 支謙譯"
+  }
+ ],
+ "works": [
+  "T0026",
+  "T0511"
+ ],
+ "anchors": [
+  {
+   "work": "T0026",
+   "node": "（一六二）中阿含根本分別品分別六界經第一"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "mn140": "Majjhima Nikāya 140",
+   "nan-mn140": "第一四〇　界分別經",
+   "T0026-ma162": "我聞如是：一時，佛遊摩竭陀國，往詣王舍城宿。",
+   "T0511": "聞如是：一時，佛在王舍國鷂山中，與五百比丘俱。時王舍國王號名蓱比沙，少小作太子，意常求五願：一者、「願我年少為王」；二者、「令我國中有佛」；三者、「使我出入常往來佛所」；四者、「常聽佛說經」；五者、「聞經心疾開解，得須陀洹道」。是五願，蓱比沙王皆得之。時王舍國北方有異國，國名德差伊羅。其國王名弗迦沙，甚高絕妙，宿命時曾更見佛，受佛經道，學身中六分經。何等六分？一者、身中有地，二者、身中有水，三者、身中有火，四者、身中有風，五者、身中有空，六者、身中有心。身中凡有是六分。蓱比沙王與弗迦沙王生未曾相見，遙相愛敬如兄弟，常書記往來，相問遺不絕。蓱比沙王意常念：「令我得絕奇好物，以遺弗迦沙。」弗迦沙王亦常意念：「令我得絕奇好物，以遺蓱比沙王。」弗迦沙王國中奄生一蓮華，一枚有千葉，皆金色。遣使者，以遺蓱比沙王。蓱比沙王見華大歡喜言：「弗迦沙王遺我物甚奇有異。」蓱比沙王作書與弗迦沙王言：「我國中有金銀珍寶甚多，我不用為寶。今我國中生一人華，人華字佛，紫磨金色，身有三十二相。」弗迦沙王讀書，聞佛聲，大歡喜踊躍，毛衣皆竪——宿命曾已見佛，故毛為竪。弗迦沙王作書與蓱比沙王：「願具聞神佛所施行教誡，當所奉行。願具告意。」弗迦沙王却後數日自念言：「人命不可知，在呼吸間。我不能復待蓱比沙報書，不如便自行見佛。」弗迦沙王主九十九小國，小國王曰來朝。弗迦沙勅諸小國王及群臣、百官、諸兵，皆悉嚴駕，發行到王舍國佛所。道逢蓱比沙王書，書上言：「佛教人棄家，捐妻子，斷愛欲，當除鬚髮，著法衣，作沙門。所以者何？人愚癡故，不當為者而為之便為癡。從癡為行；從行為識；從識為名色；從名色為六入。何等為六入？一者、眼，二者、耳，三者、鼻，四者、口，五者、身，六者、心。是為六。此六事皆外向：眼向色；耳向聲；鼻向香；口向味；身向細軟；心向欲。是為六向。從六向為合；從合為痛、樂；從痛、樂為愛；從愛為受；從受為有；從有為生；從生為老、死、憂、悲、苦不如意惱，如是合大苦陰隨習。凡合此勤苦，合名人。智者自去愚癡；愚癡盡眾惡消除；惡消除便行盡；行盡識盡；識盡名色盡；名色盡六入盡；六入盡合盡；合盡痛、樂盡；痛、樂盡愛盡；愛盡受盡；受盡有盡；有盡生盡；生盡老、死盡；老、死盡已，憂、悲、苦不如意惱，如是合大苦陰隨習為盡，便不復生；不生即得泥洹道無為。」弗迦沙王讀書竟，自思念。夜人定後，群臣、百官、士眾皆臥出，寂然無聲。竊起，亡去，入丘墓間，便自剃頭，被法衣，作沙門。無飯食應器，便取塚間久死人髑髏，淨刮洒以為應器。持是髑髏應器，轉行到王舍蓱比沙王國。止於城外，舉頭視日，念：「今日至佛所晚，明日乃行。」弗迦沙王前報窯家：「願寄一宿。」窯家言：「大善！我舍幸寬，有宿止處。」弗迦沙王於外取小草蓐入，於一屏處布座，坐其上，自思惟五內。佛以天眼從鷂山中遙見弗迦沙王來，到王舍國止於城外窯家。佛念弗迦沙王命盡明日，恐不復生相見。佛即飛行，就到窯家門外。佛報窯家：「願寄一宿。」窯家報言：「我舍幸大，可得相容。屬者有一沙門來寄宿，自與相報，相便安者，便可止宿。」佛即前至弗迦沙王所言：「我從主人寄一宿，云當報卿。卿寧肯令我一宿耶？」弗迦沙言：「我適有小草蓐，裁足坐耳。此舍幸寬，卿便自在所欲宿耳。」佛便自左右取小草蓐，於一處坐。佛端坐過三夜，弗迦沙亦端坐。佛自念：「是弗迦沙坐安諦寂寞，不動，不搖。」佛意試，欲前問用何等故作沙門？受何經戒？喜何等經？佛起到弗迦沙前問言：「卿師受誰道？用何等故作沙門？」弗迦沙報言：「我聞有佛，姓瞿曇，父字悅頭檀，白淨王也。其子剃頭鬚作沙門，得佛道。我師事之。我用佛故作沙門。佛所說經入我心中，我甚喜之。」佛問：「寧曾見佛不？」弗迦沙言：「未曾見。」「設使見者，寧能識是佛不？」弗迦沙言：「見之不能識。」佛念：「是賢者為用我故，作沙門。續當為子說宿命時所知經，爾乃解疾耳。」佛語弗迦沙言：「我為卿說經，上語亦善，中語亦善，下語亦善。為卿說身中六分事，善聽之！」弗迦沙言：「大善！」佛言：「合此六事，能成為人身。人身凡六事，有所覺知。人志用十八事轉動人意。凡有四事，道人所當奉行；奉行已，志不復轉；志不復轉者，便得道；得道已，不復生，不復老，不復病，不復於今世死，亦不復於後世死，亦不復愁，亦不復憂，亦不復怒，亦不復思，亦不復愛。是為度世之道。「請解六事合名為人。熟聽之！一者、地，二者、水，三者、火，四者、風，五者、空，六者、心。何等為地？地有二品：身地、外地。何等為身地者？謂髮、毛、爪、齒、皮、肉、筋、骨、脾、腎、肝、肺、腸、胃：身中諸堅者皆為地。身地、外地同合為地，身地、外地非我地，適無所復貪愛知者。當熟思惟，是以自解。「何等為水？水有二品：身水、外水。何等為身水者？謂淚、涕、唾、膿、血、汗、肪、髓、腦、小便：身中諸軟者皆為水。身水、外水同合為水，身水、外水非我水，適無所復貪愛知者。當熟思惟以自解。「何等為火？火有二品：身火、外火。何等為身火者？謂身中溫熱、腹中主消食：身中諸熱者皆為火。身火、外火同合為火，身火、外火非我火，適無所復貪愛知者。當熟思惟以自解。「何等為風？風有二品：身風、外風。何等為身風者？謂上氣風、下氣風、骨間風、腹中風、四支風、喘息風：身中諸起者皆為風。身風、外風同合為風，身風、外風非我風，適無所復貪愛知者。當熟思惟以自解。「何等為空？空有二品：身空、外空。何等為身空者？謂眼空、耳空、鼻空、口空、喉空、腹空、胃空、食所出入空。是為身空。身空、外空同合為空，身空、外空非我空，適無所復貪愛知者。當熟思惟以自解。「智者學道，能自別知身中五分，餘一分者心。心清淨無欲，自念：『我清潔如是』。若願欲上第二十五空慧天，恐於二十五天上壽數千劫不得脫；若復願上第二十六識慧天，壽復倍於二十五天上，恐復不得脫；若復願欲上第二十七無所念慧天，壽復倍二十六天上，恐復不得脫；若復願欲上第二十八無思想天，壽八十四千萬劫，恐復不得脫。志便厭苦，壽久不得脫，便取泥洹道。「何等為六事各合者？謂目合於色，耳合於聲，鼻合於香，舌合於味，身合於細滑，心合於知。是為六合。「何等為志十八轉者？謂目為好色轉，為惡色轉，為中色轉；耳為好聲轉，為悲聲轉，為惡聲轉；鼻為好香轉，為惡香轉，為臭香轉；舌為美味轉，為惡味轉，為無味轉；身為細軟轉，為麁堅轉，為寒溫轉；心為善事轉，為惡事轉，為世事轉。為志十八轉。「何等為四事堅制人者？一為至誠，二為等意，三為智慧，四為消滅諸惡。是為四堅志。目所貪愛，得之因快樂；快樂離人，自覺過去。從苦、致苦，能知為苦；苦已去，自知為脫苦。人行苦，難得樂，當思惟斷諸惡事。因得不苦、不樂，自知遠離諸苦。譬如兩木相揩生火，因別兩木，各著一面，火亦滅，木亦冷。恩愛合便得苦，棄捐恩愛，自知為脫。譬如鍛金師得好金，自在欲作何等奇物——臂環、耳璫、步瑤、華光及百種——皆能作之。道人持心，當如是鍛金師自在欲生，不假令欲生二十五天、二十六天、二十七天、二十八天。然審皆有是，雖久會當壞，皆當過去，無有常。知當復過去，意不復向，不復念，不復思，不復愛，是名為無為。智者自思惟，如是乃為高耳；人遠離諸惡，乃為智耳。目所見萬物皆當過，無有常，無為亦不復去，亦不復來。道人知是者，便信於道無為，最為至誠。未得道時，所喜愛樂身心所生；得道已，皆棄捐之，人棄所在恩愛，是名為無為。「志在婬妷故不得脫；志在瞋怒故不得脫；志在愚癡故不得脫。道人知是者，因棄婬妷之心，棄瞋怒之心，棄愚癡之心，拔恩愛之本，斷其枝條，截其根莖，不復生滋。是名無為。「自念有我志復動，無我志復動，我端正志復動，我不端正志復動。人豫自念，如是是為病，是為劇，是為痛，是為不脫。是故不欲多念。是謂諸苦之要。」弗迦沙本不知是佛，得第三阿那鋡道，能知為佛耳。即起以頭面著佛足言：「我實愚癡無狀，失於禮敬。」佛便自現光景威神。弗迦沙便自悔過言：「我愚癡人。」佛言：「若能自悔過為善，令若過除。」弗迦沙言：「願持我作沙門。」佛問：「若作沙門，衣鉢具不？」弗迦沙言：「未具。」佛言：「沙門衣鉢不具，不得作沙門。」弗迦沙言：「諾。請行具之。」佛言：「大善！」弗迦沙起，為佛作禮，遶佛三匝。弗迦沙明日即入城。入城未遠，城中有少齒牸牛，犇走以角觸抵弗迦沙。諸比丘展轉聞之，白佛言：「佛昨日可於窯家為說經？沙門辭行具衣鉢，為犇牛所抵殺，如是當趣何道？」佛言：「是大長者，我為說經，皆悉心受奉行之，即得第三道——須陀洹、斯陀鋡——阿那鋡；便棄五蓋——一者、婬妷，二者、瞋怒，三者、睡眠，四者、戲樂，五者、悔疑不正之心。今生十六天上阿那鋡中，便自於天上得阿羅漢度世去。今諸比丘共取弗迦沙身，好收葬之，於其上起塔。」諸比丘即共承受佛教，即為起塔。佛說經已，諸比丘皆叉手，為佛作禮。"
+  },
+  "a01": {
+   "mn140": "Dhātuvibhaṅgasutta",
+   "nan-mn140": "如是我聞。——",
+   "T0026-ma162": "於是，世尊往至陶家，語曰：「陶師！"
+  },
+  "a02": {
+   "mn140": "Evaṁ me sutaṁ—",
+   "nan-mn140": "一時，世尊遊行於摩羯陀國內，入彼王舍城，近至彼陶師跋伽瓦之處。至已而如是告陶師跋伽瓦曰：「跋伽瓦！汝若無支障者，我將一夜住〔汝〕家之入口處。」",
+   "T0026-ma162": "我今欲寄陶屋一宿，汝見聽耶？」"
+  },
+  "a03": {
+   "mn140": "ekaṁ samayaṁ bhagavā magadhesu cārikaṁ caramāno yena rājagahaṁ tadavasari;",
+   "nan-mn140": "〔陶師曰：〕「世尊！於我無支障。然，於此先既有出家者之入宿。彼若承諾，請世尊隨意住。」",
+   "T0026-ma162": "陶師答曰：「我無所違。"
+  },
+  "a04": {
+   "mn140": "yena bhaggavo kumbhakāro tenupasaṅkami; upasaṅkamitvā bhaggavaṁ kumbhakāraṁ etadavoca:",
+   "nan-mn140": "其時，恰好名為弗區沙提之善男子尊仰世尊為師，信仰而由在家出家為無家。彼先入宿於陶師家之入口處。時，世尊至彼尊者弗區沙提之處。至已，如是告尊者弗區沙提曰：「比丘！若汝無支障者，我將一夜住〔此〕家之入口處。」",
+   "T0026-ma162": "然有一比丘先已住中，若彼聽者，欲住隨意。」"
+  },
+  "a05": {
+   "mn140": "“sace te, bhaggava, agaru viharemu āvesane ekarattan”ti.",
+   "nan-mn140": "〔弗區沙提曰：〕「友！陶師家之入口曠寬，尊者請隨意住。」",
+   "T0026-ma162": "爾時，尊者弗迦邏娑利先已在彼住陶屋中。"
+  },
+  "a06": {
+   "mn140": "“Na kho me, bhante, garu.",
+   "nan-mn140": "時，世尊入於陶師家之入口已，設草座於一面，以結跏趺坐。身體正直，令念住立現前。時，世尊其夜坐至甚晚，尊者弗區沙提其夜亦坐至甚晚。時，世尊有如是思念：「今此善男子如何有信樂此行耶？今我以此問之。」世尊如是告尊者弗區沙提曰：「比丘！汝仰誰為師而出家耶？誰為汝師！或汝喜歡誰之法耶？」",
+   "T0026-ma162": "於是，世尊出陶師家入彼陶屋，語尊者弗迦邏娑利曰：「比丘！"
+  },
+  "a07": {
+   "mn140": "Atthi cettha pabbajito paṭhamaṁ vāsūpagato.",
+   "nan-mn140": "〔弗區沙提曰：〕「友！有稱為沙門瞿曇，釋子由釋迦族出家，而彼世尊如是善名流布：『彼世尊是阿羅漢、正等覺者、明行足者、善逝者、世間解者、無上者、調御丈夫者、天人師、覺者、世尊也。』仰彼世尊為師我乃出家。然而彼世尊乃我師。我喜歡彼世尊之法。」",
+   "T0026-ma162": "我今欲寄陶屋一宿，汝見聽耶？」"
+  },
+  "a08": {
+   "mn140": "Sace so anujānāti, viharatha, bhante, yathāsukhan”ti.",
+   "nan-mn140": "〔世尊曰：〕「比丘！然者，彼世尊、阿羅漢、正等覺者今住何處耶？」",
+   "T0026-ma162": "尊者弗迦邏娑利答曰：「君！"
+  },
+  "a09": {
+   "mn140": "Tena kho pana samayena pukkusāti nāma kulaputto bhagavantaṁ uddissa saddhāya agārasmā anagāriyaṁ pabbajito.",
+   "nan-mn140": "〔弗區沙提曰：〕「友！於北方之國土有名為舍衛城之都市，今彼世尊、阿羅漢、正等覺者住於彼處。」",
+   "T0026-ma162": "我無所違。且此陶屋草座已敷，君欲住者，自可隨意。」"
+  },
+  "a10": {
+   "mn140": "So tasmiṁ kumbhakārāvesane paṭhamaṁ vāsūpagato hoti.",
+   "nan-mn140": "〔世尊曰：〕「比丘！然者，汝曾見彼世尊耶？而且見了，汝認得彼〔世尊〕耶？」",
+   "T0026-ma162": "爾時，世尊從彼陶屋出外洗足訖，還入內，於草座上敷尼師檀，結跏趺坐，竟夜默然靖坐定意，尊者弗迦邏娑利亦竟夜默然靖坐定意。"
+  },
+  "a11": {
+   "mn140": "Atha kho bhagavā yenāyasmā pukkusāti tenupasaṅkami; upasaṅkamitvā āyasmantaṁ pukkusātiṁ etadavoca:",
+   "nan-mn140": "〔弗區沙提曰：〕「友！我未曾奉見彼世尊。又見了，我亦認不得。」",
+   "T0026-ma162": "彼時，世尊而作是念：「此比丘住止寂靖，甚奇！"
+  },
+  "a12": {
+   "mn140": "“sace te, bhikkhu, agaru viharemu āvesane ekarattan”ti.",
+   "nan-mn140": "時，世尊有如是思念：「此善男子乃仰我為師而出家。今我如何對彼說法。」時，世尊言彼尊者弗區沙提曰：「比丘！當為汝說法，諦聽，善思念之，我當說之。」",
+   "T0026-ma162": "甚特！我今寧可問彼比丘：『汝師是誰？"
+  },
+  "a13": {
+   "mn140": "“Urundaṁ, āvuso, kumbhakārāvesanaṁ.",
+   "nan-mn140": "尊者弗區沙提奉答世尊曰：「友！如是。」",
+   "T0026-ma162": "依誰出家學道受法？』"
+  },
+  "a14": {
+   "mn140": "Viharatāyasmā yathāsukhan”ti.",
+   "nan-mn140": "世尊如是曰：「比丘！此人有六界、有六觸處、十八意行、四住處。（安住其處者，諸想歡喜乃不轉。而諸想歡喜之不轉者，牟尼稱為寂靜。）應不放逸於慧，應護持於諦，應令增長捨，寂靜應當學之、此〔即〕六界分別之總說。",
+   "T0026-ma162": "」世尊念已，問曰：「比丘！"
+  },
+  "a15": {
+   "mn140": "Atha kho bhagavā kumbhakārāvesanaṁ pavisitvā ekamantaṁ tiṇasanthārakaṁ paññāpetvā nisīdi pallaṅkaṁ ābhujitvā ujuṁ kāyaṁ paṇidhāya parimukhaṁ satiṁ upaṭṭhapetvā.",
+   "nan-mn140": "然，如是言：『比丘！此人有六界。』而此緣何而言？有地界、水界、火界、風界、空界、識界。如是言：『比丘！此人有六界。』彼乃緣此而言。",
+   "T0026-ma162": "汝師是誰？依誰出家學道受法？」"
+  },
+  "a16": {
+   "mn140": "Atha kho bhagavā bahudeva rattiṁ nisajjāya vītināmesi.",
+   "nan-mn140": "復次，如是言：『比丘！此人有六觸處。』而此緣何而言耶？有眼觸處、耳觸處、鼻觸處、舌觸處、身觸處、意觸處。如是言：『比丘！此人有六觸處。』彼乃緣此而言。",
+   "T0026-ma162": "尊者弗迦邏娑利答曰：「賢者！"
+  },
+  "a17": {
+   "mn140": "Āyasmāpi kho pukkusāti bahudeva rattiṁ nisajjāya vītināmesi.",
+   "nan-mn140": "復次，如是言：『比丘！此人有十八意行。』而此緣何而言耶？由眼見色已，伺察可喜處之色，伺察可憂處之色，伺察可捨處之色。由耳聞聲已……乃至……由鼻嗅香已……乃至……由舌味味已……乃至……由身觸觸已……乃至……由意識法已，伺察喜處之法，伺察憂處之法，伺察捨處之法。如是有六喜行、六憂行、六捨行。如是言：『比丘！此人有十八意行。』彼即緣此而言。",
+   "T0026-ma162": "有沙門瞿曇釋種子，捨釋宗族，剃除鬚髮，著袈裟衣，至信、捨家、無家、學道，覺無上正盡覺，彼是我師，依彼出家學道受法。」"
+  },
+  "a18": {
+   "mn140": "Atha kho bhagavato etadahosi:",
+   "nan-mn140": "復次，如是言：『比丘！此人有四住處。』而此緣何而言耶？有慧住處、諦住處、捨住處、寂靜住處。如是言：『比丘！此人有四住處。』彼即緣此而言。",
+   "T0026-ma162": "世尊即復問曰：「比丘！"
+  },
+  "a19": {
+   "mn140": "“pāsādikaṁ kho ayaṁ kulaputto iriyati.",
+   "nan-mn140": "復次，如是言：『不應放逸於慧，應護持於諦，應令增長捨，寂靜應當學之。』而此緣何而言。而如何比丘！不放逸於慧？此等有六界。〔即〕地界、水界、火界、風界、空界、識界。",
+   "T0026-ma162": "曾見師耶？」尊者弗迦邏娑利答曰：「不見。」"
+  },
+  "a20": {
+   "mn140": "Yannūnāhaṁ puccheyyan”ti.",
+   "nan-mn140": "比丘！然者，如何是地界？地界者，當有內、有外。比丘！然者，如何為內地界？內者個個堅為而粗所執受，例如：髮、毛、爪、齒、皮、肉、筋、骨、髓、腎臟、心臟、肝臟、橫隔膜、脾臟、肺臟、大腸、小腸、胃、大便。或又其他之一切之內堅為粗所執受。比丘！如是言為內之地界。凡內之地界及外之地界者，此等皆為地界。此應以如是之如實正慧見之：『此非我所有，此非我，此非予之我。』由如是正慧，如實見已，由地界厭離，由地界令心離欲。",
+   "T0026-ma162": "世尊問曰：「若見師者，為識不耶？」"
+  },
+  "a21": {
+   "mn140": "Atha kho bhagavā āyasmantaṁ pukkusātiṁ etadavoca:",
+   "nan-mn140": "比丘！然者，如何為水界？水界當有內、有外。比丘！然者，如何為內之水界？內個個之水，而為水類所執受，例如：膽汁、啖、膿汁、血液、汗、脂、淚、膏、唾、洟、關節骨髓、小便。或其他內個個之水，為水類所執受。比丘！如是言為內水界。而內之水界、及外之水界者，如是即言為水界。此應以如實慧見之：『此非我所有，此非我，此非予之我。』如是以如實正慧見已由水界厭離，由水界令心離欲。",
+   "T0026-ma162": "尊者弗迦邏娑利答曰：「不識。"
+  },
+  "a22": {
+   "mn140": "“kaṁsi tvaṁ, bhikkhu, uddissa pabbajito? Ko vā te satthā? Kassa vā tvaṁ dhammaṁ rocesī”ti?",
+   "nan-mn140": "比丘！然者，如何為火界？火界當有內、有外。比丘！然者，如何為內之火界？內個個之火，為火類所執受，例如以溫、以消化，以食、飲、嚼、味令熱之即善消化。又其他一切內之個個之火，為火類所執受。比丘！如是言內之火界。凡內之火界，及外之火界者，如是此即為火界。如是……『此非我所有，此非我，此非予之我。』……令心離欲。",
+   "T0026-ma162": "然，賢者！我聞世尊、如來、無所著、等正覺、明行成為、善逝、世間解、無上士、道法御、天人師，號佛、眾祐，彼是我師，依彼出家學道受法。」"
+  },
+  "a23": {
+   "mn140": "“Atthāvuso, samaṇo gotamo sakyaputto sakyakulā pabbajito.",
+   "nan-mn140": "比丘！然者如何為風界？風界當有內、有外。比丘！然者，如何為內之風界？內個個之風，為風類所執受。例如上行之風、下行之風、在腹中之風、在腔處之風、流通各肢體之風、入息、出息。又他之一切，內個個之風、為風類所執受。比丘！如是言內之風。而又凡內之風及外之風者，如是此即為風界。",
+   "T0026-ma162": "彼時，世尊復作是念：「此族姓子依我出家學道受法，我今寧可為說法耶？」"
+  },
+  "a24": {
+   "mn140": "Taṁ kho pana bhagavantaṁ gotamaṁ evaṁ kalyāṇo kittisaddo abbhuggato:",
+   "nan-mn140": "比丘！然者，如何為空界？空界當有內、有外。比丘！然者，如何為內之空界？內個個之空，為空類所執受，例如耳孔、鼻孔、口腔，又由以食、飲、嚼、味之嚥下處（食道。）又由以食、飲、嚼、味之止住處（胃腸內。）又如以食、飲、嚼、味之下部排出處（肛門。）或又他之一切，內個個之空，為空類所執受。比丘！如是言內空界。而又凡內空界及外空界者，如是此即為空界……令心離欲。",
+   "T0026-ma162": "世尊念已，語尊者弗迦邏娑利曰：「比丘！"
+  },
+  "a25": {
+   "mn140": "‘itipi so bhagavā arahaṁ sammāsambuddho vijjācaraṇasampanno sugato lokavidū anuttaro purisadammasārathi satthā devamanussānaṁ buddho bhagavā’ti.",
+   "nan-mn140": "時，更餘有識。〔此〕清淨而潔白。由其識得知任何之物。知『樂』，知『苦』，知『不苦不樂』。比丘！樂受是緣觸而樂受生。彼受樂受，知『我受樂受。』彼又由彼樂受之觸滅，其所生之受，〔即〕緣樂受觸所生之樂受，彼滅，即知『彼是止息』。比丘！苦受，緣觸而苦受生。彼受苦受，而知『我受苦受。』彼又彼苦受，由觸之滅，其所生之受，〔即〕緣苦受觸所生之苦受，彼滅，即知『彼是止息』。受不苦不樂受，緣觸而不苦不樂受生。彼受不苦不樂受而知『我受不苦不樂受』。彼又由彼不苦不樂受之觸滅，其所生之受，〔即〕緣不苦不樂受觸所生之不苦不樂受，彼滅，即知『彼是止息』。",
+   "T0026-ma162": "我為汝說法，初善、中善、竟亦善，有義有文，具足清淨，顯現梵行，謂分別六界，汝當諦聽，善思念之。」"
+  },
+  "a26": {
+   "mn140": "Tāhaṁ bhagavantaṁ uddissa pabbajito.",
+   "nan-mn140": "比丘！譬喻由二木之結合、磨觸而生熱、起火，由此等二木之分離、擲散，凡彼所生之熱滅，彼乃止息。比丘！恰如是，樂受乃緣觸而樂受生。彼受樂受時，知『我受樂受』。彼由樂受之觸滅，其所生之受，〔即〕緣樂受觸而生之樂受，彼滅，即知『彼是止息』。比丘！苦受緣觸而苦受生。彼苦受……知……。彼又苦受……知『彼是止息』。比丘！不苦不樂受緣觸……知『彼是止息』。",
+   "T0026-ma162": "尊者弗迦邏娑利答曰：「唯然。」"
+  },
+  "a27": {
+   "mn140": "So ca me bhagavā satthā.",
+   "nan-mn140": "時，更餘有捨。〔此〕清淨潔白而且柔軟、調適、照耀。比丘！譬喻有巧妙之煉金師，或煉金師之弟子，預備鍛冶場，預備鍛冶場已，於熔爐起火，於熔爐起火已，以火箸取金投入熔爐中，而對彼或時時吹火、或時時注水、或時時觀察、彼金受火吹、善受吹、一直吹、令淨、取去垢滓成為柔軟、調適、照耀。喜歡作任何裝飾品——若腕環，若耳環、若首飾、若為金環——而且以達其〔各各之〕目的。比丘！正如是，時，更餘有捨，〔此〕清淨潔白而柔軟、調適、照耀。彼如是知：『若我將如是清淨、如是潔白之此捨移入空無邊處，且修其隨法之心，如是，我於此捨，依彼而維持長久之住。若我將如是清淨、如是潔白之捨，移入識無邊處，且修其隨法之心，如是，我於此捨，依彼而維持長久而住。若我將如是清淨、如是潔白之捨，移入無所有處，且修其隨法之心，如是，我於此捨，依彼維持長久而住。若我將如是清淨、如是潔白之捨，移入非想非非想處，且修其隨法之心，如是，我於此捨，依彼而維持長久而住。』彼如是知：『若我將如是清淨、如是潔白之此捨，移入空無邊處，且修其隨法之心，此乃有為。若我從如是清淨、如是潔白之捨，移入識無邊處，且修其隨法之心，此乃有為。若我將如是清淨、如是潔白之捨，移入無所有處，且修其隨法之心，此乃有為。若我將如是清淨、如是潔白之捨移入非想非非想處且修其隨法之心，此乃有為。』彼即對或有、或非有而不行、不思惟。彼對或有、或非有而不行、不思惟故，於世間不執受任何物。不執受故而無恐怖。無恐怖故而自般涅槃。知『生已盡，梵行圓成，所作已作，更不來此世。』彼若受樂受者，知『其無常。』知『不應繫著。』知『不應歡喜。』知彼若受苦受者：『此是無常。』知『不應繫著。』知『不應歡喜。』知受不苦不樂受……。彼若受樂者，應是離繫而受之。彼若受苦受者，應是離繫而受之。若受不苦不樂受者，應是離繫而受之。彼受身之最後之受，知『我受身之最後受。』受令之最後受，知『我受命之最後受。』身壞、命滅盡後，知『於此一切之喜受，應為清涼者。』",
+   "T0026-ma162": "佛告彼曰：「比丘！"
+  },
+  "a28": {
+   "mn140": "Tassa cāhaṁ bhagavato dhammaṁ rocemī”ti.",
+   "nan-mn140": "比丘！譬喻緣油、且緣炷而油燈燃，由彼油及炷之滅盡，而無其他之供給，無燃料即消息之。比丘！如是，受身之最後受，知『我受身之最後受。』受命之最後受，知『我受命之最後受。』身壞命之滅盡後，知『於此一切之喜受，應為清涼者。』",
+   "T0026-ma162": "人有六界聚、六觸處、十八意行、四住處。"
+  },
+  "a29": {
+   "mn140": "“Kahaṁ pana, bhikkhu, etarahi so bhagavā viharati arahaṁ sammāsambuddho”ti.",
+   "nan-mn140": "是故，具足如是之比丘，乃具足此最上慧之住處。比丘！如何其最上神聖之慧，此即於盡一切苦之智。彼於彼解脫，安立於諦而不動。比丘！如何彼虛妄法，是虛妄，彼不虛妄法〔即〕涅槃是諦。是故，具足如是之比丘，乃具足此最上諦之住處。比丘！如何彼最上聖諦，此即不虛妄法、涅槃也。而又彼曾為無智者，有諸依止，令成就、執持。而〔今〕於彼有諸斷，令從根斷、根絕、無有化、成為未來不生之法。是故，具足如是之比丘，乃具足此最上捨之住處。比丘！如何，其最上神聖之捨，此即一切依止之捨離。而又彼尚無智者，有貪、欲、有染。而〔今〕於彼令斷，令根斷、根絕、無有化、為未來不生之法。而又於彼，曾為無智者，有怒、瞋恚之過。而〔今〕於彼令斷、根斷、根絕、無有化、為未來不生之法。而又於彼，曾為無智者，有無明、癡之過。而〔今〕於彼令斷、根斷、根絕、無有化，為未來不生之法。是故，具足如是之比丘，〔即〕具足此最上寂靜之住處。比丘！任何其最上神聖之寂靜，即為貪、瞋、癡之寂靜。",
+   "T0026-ma162": "若有住彼，不聞憂慼事，不聞憂慼事已，意便不憎、不憂、不勞，亦不恐怖。"
+  },
+  "a30": {
+   "mn140": "“Atthāvuso, uttaresu janapadesu sāvatthi nāma nagaraṁ.",
+   "nan-mn140": "如是言：『應不放逸於慧。應護持於諦。應令增長於捨。寂靜應當學之。』彼乃緣此而言。",
+   "T0026-ma162": "如是有教，不放逸慧，守護真諦，長養惠施。"
+  },
+  "a31": {
+   "mn140": "Tattha so bhagavā etarahi viharati arahaṁ sammāsambuddho”ti.",
+   "nan-mn140": "復次，如是言：『安住其處者，諸想歡喜乃不轉，而諸想歡喜之不轉時，牟尼稱為寂靜。』然者，此緣何而言？比丘！『有我』，此乃妄想。『我是彼』，此乃妄想。『我當有』，此乃妄想。『我當無』，此乃妄想。『我當是有色者』，此乃妄想。『我當是無色者』，此乃妄想。『我當是有想者』，此乃妄想。『無當是無想者』，此乃妄想。『我當是非想非非想者』，此乃妄想。比丘！妄想是病、妄想是癰、妄想是箭也。比丘！然，由超越一切之妄想，牟尼稱〔此〕為寂靜。比丘！而實牟尼為寂靜者，是不生、不老、不動、不希求也。比丘！彼依此，無有以其生。無生如何有老。無老如何有死。無死如何有動搖。無動搖如何有希求耶？如是言：『安住其處，諸想歡喜乃不轉，而諸想歡喜之不轉時，牟尼稱為寂靜。』彼乃緣此而言。",
+   "T0026-ma162": "比丘！當學最上，當學至寂，分別六界。"
+  },
+  "a32": {
+   "mn140": "“Diṭṭhapubbo pana te, bhikkhu, so bhagavā;",
+   "nan-mn140": "比丘！我如是之略〔說〕，汝應受持六界分別。」",
+   "T0026-ma162": "如是，比丘！人有六界聚，此說何因？"
+  },
+  "a33": {
+   "mn140": "disvā ca pana jāneyyāsī”ti?",
+   "nan-mn140": "時，尊者弗區沙提：「我實遇〔見大〕師。我實遇見善逝。我實遇見正等覺者。」即從座起，衣〔露〕一肩，頭面頂禮世尊之足，而如是白世尊言：「世尊！大過落來於我，如愚者、如癡者、如不善者。此我若想起對世尊呼『友！』之語。然者，我為犯〔大〕罪過，請世尊攝受，而令防護未來。」",
+   "T0026-ma162": "謂地界、水界、火界、風界、空界、識界。"
+  },
+  "a34": {
+   "mn140": "“Na kho me, āvuso, diṭṭhapubbo so bhagavā;",
+   "nan-mn140": "〔世尊曰：〕「比丘！〔大〕過實落來於汝。恰如愚者、如癡者、如不善者，若想起汝如何得呼我為『友！』之語。比丘！然，汝已見犯〔大〕過，依如法改過，此，我對汝攝受。比丘！如何在聖者之律，有彼增益——彼已見犯〔大〕過，如法改過，入未來之防護者。」",
+   "T0026-ma162": "比丘！人有六界聚者，因此故說。"
+  },
+  "a35": {
+   "mn140": "disvā cāhaṁ na jāneyyan”ti.",
+   "nan-mn140": "〔弗區沙提曰：〕「世尊！我於世尊處，奉受具足戒。」",
+   "T0026-ma162": "「比丘！人有六觸處，此說何因？"
+  },
+  "a36": {
+   "mn140": "Atha kho bhagavato etadahosi:",
+   "nan-mn140": "〔世尊曰：〕「比丘！然者，汝完具衣、鉢耶？」",
+   "T0026-ma162": "謂比丘眼觸見色，耳觸聞聲，鼻觸嗅香，舌觸嘗味，身觸覺觸，意觸知法。"
+  },
+  "a37": {
+   "mn140": "“mamañca khvāyaṁ kulaputto uddissa pabbajito.",
+   "nan-mn140": "〔弗區沙提曰：〕「世尊！於我衣、鉢不完具。」",
+   "T0026-ma162": "比丘！人有六觸處者，因此故說。"
+  },
+  "a38": {
+   "mn140": "Yannūnassāhaṁ dhammaṁ deseyyan”ti.",
+   "nan-mn140": "〔世尊曰：〕「比丘！如來不可令衣、鉢不完具者，受具足〔戒〕。」",
+   "T0026-ma162": "比丘！人有十八意行，此說何因？"
+  },
+  "a39": {
+   "mn140": "Atha kho bhagavā āyasmantaṁ pukkusātiṁ āmantesi:",
+   "nan-mn140": "時，尊者弗區沙提，歡喜、隨喜世尊之所說已從座起而敬禮世尊，右繞為求衣、鉢而行去。時，步行求衣、鉢之尊者弗區沙提，以〔遇〕暴走之牝牛而奪命。",
+   "T0026-ma162": "謂比丘眼見色，觀色喜住，觀色憂住，觀色捨住，如是耳、鼻、舌、身，意知法，觀法喜住，觀法憂住，觀法捨住。"
+  },
+  "a40": {
+   "mn140": "“dhammaṁ te, bhikkhu, desessāmi. Taṁ suṇāhi, sādhukaṁ manasi karohi; bhāsissāmī”ti. “Evamāvuso”ti kho āyasmā pukkusāti bhagavato paccassosi. Bhagavā etadavoca: “‘Cha dhāturo ayaṁ, bhikkhu, puriso cha phassāyatano aṭṭhārasa manopavicāro caturādhiṭṭhāno; yattha ṭhitaṁ maññassavā nappavattanti, maññassave kho pana nappavattamāne muni santoti vuccati. Paññaṁ nappamajjeyya, saccamanurakkheyya, cāgamanubrūheyya, santimeva so sikkheyyā’ti— ayamuddeso dhātuvibhaṅgassa. ‘Cha dhāturo ayaṁ, bhikkhu, puriso’ti— iti kho panetaṁ vuttaṁ. Kiñcetaṁ paṭicca vuttaṁ? Chayimā, bhikkhu, dhātuyo— pathavīdhātu, āpodhātu, tejodhātu, vāyodhātu, ākāsadhātu, viññāṇadhātu. ‘Cha dhāturo ayaṁ, bhikkhu, puriso’ti— iti yaṁ taṁ vuttaṁ, idametaṁ paṭicca vuttaṁ. ‘Cha phassāyatano ayaṁ, bhikkhu, puriso’ti— iti kho panetaṁ vuttaṁ. Kiñcetaṁ paṭicca vuttaṁ? Cakkhusamphassāyatanaṁ, sotasamphassāyatanaṁ, ghānasamphassāyatanaṁ, jivhāsamphassāyatanaṁ, kāyasamphassāyatanaṁ, manosamphassāyatanaṁ. ‘Cha phassāyatano ayaṁ, bhikkhu, puriso’ti— iti yaṁ taṁ vuttaṁ, idametaṁ paṭicca vuttaṁ. ‘Aṭṭhārasa manopavicāro ayaṁ, bhikkhu, puriso’ti— iti kho panetaṁ vuttaṁ. Kiñcetaṁ paṭicca vuttaṁ? Cakkhunā rūpaṁ disvā somanassaṭṭhāniyaṁ rūpaṁ upavicarati, domanassaṭṭhāniyaṁ rūpaṁ upavicarati, upekkhāṭṭhāniyaṁ rūpaṁ upavicarati; sotena saddaṁ sutvā …pe… ghānena gandhaṁ ghāyitvā … jivhāya rasaṁ sāyitvā … kāyena phoṭṭhabbaṁ phusitvā … manasā dhammaṁ viññāya somanassaṭṭhāniyaṁ dhammaṁ upavicarati, domanassaṭṭhāniyaṁ dhammaṁ upavicarati, upekkhāṭṭhāniyaṁ dhammaṁ upavicarati— iti cha somanassupavicārā, cha domanassupavicārā, cha upekkhupavicārā. ‘Aṭṭhārasa manopavicāro ayaṁ, bhikkhu, puriso’ti— iti yaṁ taṁ vuttaṁ, idametaṁ paṭicca vuttaṁ. ‘Caturādhiṭṭhāno ayaṁ, bhikkhu, puriso’ti— iti kho panetaṁ vuttaṁ. Kiñcetaṁ paṭicca vuttaṁ? Paññādhiṭṭhāno, saccādhiṭṭhāno, cāgādhiṭṭhāno, upasamādhiṭṭhāno. ‘Caturādhiṭṭhāno ayaṁ, bhikkhu, puriso’ti— iti yaṁ taṁ vuttaṁ idametaṁ paṭicca vuttaṁ. ‘Paññaṁ nappamajjeyya, saccamanurakkheyya, cāgamanubrūheyya, santimeva so sikkheyyā’ti— iti kho panetaṁ vuttaṁ. Kiñcetaṁ paṭicca vuttaṁ? Kathañca, bhikkhu, paññaṁ nappamajjati? Chayimā, bhikkhu, dhātuyo— pathavīdhātu, āpodhātu, tejodhātu, vāyodhātu, ākāsadhātu, viññāṇadhātu. Katamā ca, bhikkhu, pathavīdhātu? Pathavīdhātu siyā ajjhattikā siyā bāhirā. Katamā ca, bhikkhu, ajjhattikā pathavīdhātu? Yaṁ ajjhattaṁ paccattaṁ kakkhaḷaṁ kharigataṁ upādinnaṁ, seyyathidaṁ— kesā lomā nakhā dantā taco maṁsaṁ nhāru aṭṭhi aṭṭhimiñjaṁ vakkaṁ hadayaṁ yakanaṁ kilomakaṁ pihakaṁ papphāsaṁ antaṁ antaguṇaṁ udariyaṁ karīsaṁ, yaṁ vā panaññampi kiñci ajjhattaṁ paccattaṁ kakkhaḷaṁ kharigataṁ upādinnaṁ— ayaṁ vuccati, bhikkhu, ajjhattikā pathavīdhātu. Yā ceva kho pana ajjhattikā pathavīdhātu yā ca bāhirā pathavīdhātu pathavīdhāturevesā. ‘Taṁ netaṁ mama nesohamasmi na meso attā’ti—evametaṁ yathābhūtaṁ sammappaññāya daṭṭhabbaṁ. Evametaṁ yathābhūtaṁ sammappaññāya disvā pathavīdhātuyā nibbindati, pathavīdhātuyā cittaṁ virājeti. Katamā ca, bhikkhu, āpodhātu? Āpodhātu siyā ajjhattikā siyā bāhirā. Katamā ca, bhikkhu, ajjhattikā āpodhātu? Yaṁ ajjhattaṁ paccattaṁ āpo āpogataṁ upādinnaṁ seyyathidaṁ— pittaṁ semhaṁ pubbo lohitaṁ sedo medo assu vasā kheḷo siṅghāṇikā lasikā muttaṁ, yaṁ vā panaññampi kiñci ajjhattaṁ paccattaṁ āpo āpogataṁ upādinnaṁ— ayaṁ vuccati, bhikkhu, ajjhattikā āpodhātu. Yā ceva kho pana ajjhattikā āpodhātu yā ca bāhirā āpodhātu āpodhāturevesā. ‘Taṁ netaṁ mama, nesohamasmi, na meso attā’ti—evametaṁ yathābhūtaṁ sammappaññāya daṭṭhabbaṁ. Evametaṁ yathābhūtaṁ sammappaññāya disvā āpodhātuyā nibbindati, āpodhātuyā cittaṁ virājeti. Katamā ca, bhikkhu, tejodhātu? Tejodhātu siyā ajjhattikā siyā bāhirā. Katamā ca, bhikkhu, ajjhattikā tejodhātu? Yaṁ ajjhattaṁ paccattaṁ tejo tejogataṁ upādinnaṁ, seyyathidaṁ— yena ca santappati, yena ca jīrīyati, yena ca pariḍayhati, yena ca asitapītakhāyitasāyitaṁ sammā pariṇāmaṁ gacchati, yaṁ vā panaññampi kiñci ajjhattaṁ paccattaṁ tejo tejogataṁ upādinnaṁ— ayaṁ vuccati, bhikkhu, ajjhattikā tejodhātu. Yā ceva kho pana ajjhattikā tejodhātu yā ca bāhirā tejodhātu tejodhāturevesā. ‘Taṁ netaṁ mama, nesohamasmi, na meso attā’ti—evametaṁ yathābhūtaṁ sammappaññāya daṭṭhabbaṁ. Evametaṁ yathābhūtaṁ sammappaññāya disvā tejodhātuyā nibbindati, tejodhātuyā cittaṁ virājeti. Katamā ca, bhikkhu, vāyodhātu? Vāyodhātu siyā ajjhattikā siyā bāhirā. Katamā ca, bhikkhu, ajjhattikā vāyodhātu? Yaṁ ajjhattaṁ paccattaṁ vāyo vāyogataṁ upādinnaṁ, seyyathidaṁ— uddhaṅgamā vātā adhogamā vātā kucchisayā vātā koṭṭhāsayā vātā aṅgamaṅgānusārino vātā assāso passāso iti, yaṁ vā panaññampi kiñci ajjhattaṁ paccattaṁ vāyo vāyogataṁ upādinnaṁ— ayaṁ vuccati, bhikkhu, ajjhattikā vāyodhātu. Yā ceva kho pana ajjhattikā vāyodhātu yā ca bāhirā vāyodhātu vāyodhāturevesā. ‘Taṁ netaṁ mama, nesohamasmi, na meso attā’ti—evametaṁ yathābhūtaṁ sammappaññāya daṭṭhabbaṁ. Evametaṁ yathābhūtaṁ sammappaññāya disvā vāyodhātuyā nibbindati, vāyodhātuyā cittaṁ virājeti. Katamā ca, bhikkhu, ākāsadhātu? Ākāsadhātu siyā ajjhattikā siyā bāhirā. Katamā ca, bhikkhu, ajjhattikā ākāsadhātu? Yaṁ ajjhattaṁ paccattaṁ ākāsaṁ ākāsagataṁ upādinnaṁ, seyyathidaṁ— kaṇṇacchiddaṁ nāsacchiddaṁ mukhadvāraṁ yena ca asitapītakhāyitasāyitaṁ ajjhoharati, yattha ca asitapītakhāyitasāyitaṁ santiṭṭhati, yena ca asitapītakhāyitasāyitaṁ adhobhāgaṁ nikkhamati, yaṁ vā panaññampi kiñci ajjhattaṁ paccattaṁ ākāsaṁ ākāsagataṁ aghaṁ aghagataṁ vivaraṁ vivaragataṁ asamphuṭṭhaṁ maṁsalohitehi upādinnaṁ— ayaṁ vuccati, bhikkhu, ajjhattikā ākāsadhātu. Yā ceva kho pana ajjhattikā ākāsadhātu yā ca bāhirā ākāsadhātu ākāsadhāturevesā. ‘Taṁ netaṁ mama, nesohamasmi, na meso attā’ti—evametaṁ yathābhūtaṁ sammappaññāya daṭṭhabbaṁ. Evametaṁ yathābhūtaṁ sammappaññāya disvā ākāsadhātuyā nibbindati, ākāsadhātuyā cittaṁ virājeti. Athāparaṁ viññāṇaṁyeva avasissati parisuddhaṁ pariyodātaṁ. Tena ca viññāṇena kiṁ vijānāti? ‘Sukhan’tipi vijānāti, ‘dukkhan’tipi vijānāti, ‘adukkhamasukhan’tipi vijānāti. Sukhavedaniyaṁ, bhikkhu, phassaṁ paṭicca uppajjati sukhā vedanā. So sukhaṁ vedanaṁ vedayamāno ‘sukhaṁ vedanaṁ vedayāmī’ti pajānāti. ‘Tasseva sukhavedaniyassa phassassa nirodhā yaṁ tajjaṁ vedayitaṁ sukhavedaniyaṁ phassaṁ paṭicca uppannā sukhā vedanā sā nirujjhati, sā vūpasammatī’ti pajānāti. Dukkhavedaniyaṁ, bhikkhu, phassaṁ paṭicca uppajjati dukkhā vedanā. So dukkhaṁ vedanaṁ vedayamāno ‘dukkhaṁ vedanaṁ vedayāmī’ti pajānāti. ‘Tasseva dukkhavedaniyassa phassassa nirodhā yaṁ tajjaṁ vedayitaṁ dukkhavedaniyaṁ phassaṁ paṭicca uppannā dukkhā vedanā sā nirujjhati, sā vūpasammatī’ti pajānāti. Adukkhamasukhavedaniyaṁ, bhikkhu, phassaṁ paṭicca uppajjati adukkhamasukhā vedanā. So adukkhamasukhaṁ vedanaṁ vedayamāno ‘adukkhamasukhaṁ vedanaṁ vedayāmī’ti pajānāti. ‘Tasseva adukkhamasukhavedaniyassa phassassa nirodhā yaṁ tajjaṁ vedayitaṁ adukkhamasukhavedaniyaṁ phassaṁ paṭicca uppannā adukkhamasukhā vedanā sā nirujjhati, sā vūpasammatī’ti pajānāti. Seyyathāpi, bhikkhu, dvinnaṁ kaṭṭhānaṁ saṅghaṭṭā samodhānā usmā jāyati, tejo abhinibbattati, tesaṁyeva dvinnaṁ kaṭṭhānaṁ nānābhāvā vinikkhepā yā tajjā usmā sā nirujjhati, sā vūpasammati; evameva kho, bhikkhu, sukhavedaniyaṁ phassaṁ paṭicca uppajjati sukhā vedanā. So sukhaṁ vedanaṁ vedayamāno ‘sukhaṁ vedanaṁ vedayāmī’ti pajānāti. ‘Tasseva sukhavedaniyassa phassassa nirodhā yaṁ tajjaṁ vedayitaṁ sukhavedaniyaṁ phassaṁ paṭicca uppannā sukhā vedanā sā nirujjhati, sā vūpasammatī’ti pajānāti. Dukkhavedaniyaṁ, bhikkhu, phassaṁ paṭicca uppajjati dukkhā vedanā. So dukkhaṁ vedanaṁ vedayamāno ‘dukkhaṁ vedanaṁ vedayāmī’ti pajānāti. ‘Tasseva dukkhavedaniyassa phassassa nirodhā yaṁ tajjaṁ vedayitaṁ dukkhavedaniyaṁ phassaṁ paṭicca uppannā dukkhā vedanā sā nirujjhati, sā vūpasammatī’ti pajānāti. Adukkhamasukhavedaniyaṁ, bhikkhu, phassaṁ paṭicca uppajjati adukkhamasukhā vedanā. So adukkhamasukhaṁ vedanaṁ vedayamāno ‘adukkhamasukhaṁ vedanaṁ vedayāmī’ti pajānāti. ‘Tasseva adukkhamasukhavedaniyassa phassassa nirodhā yaṁ tajjaṁ vedayitaṁ adukkhamasukhavedaniyaṁ phassaṁ paṭicca uppannā adukkhamasukhā vedanā sā nirujjhati, sā vūpasammatī’ti pajānāti. Athāparaṁ upekkhāyeva avasissati parisuddhā pariyodātā mudu ca kammaññā ca pabhassarā ca. Seyyathāpi, bhikkhu, dakkho suvaṇṇakāro vā suvaṇṇakārantevāsī vā ukkaṁ bandheyya, ukkaṁ bandhitvā ukkāmukhaṁ ālimpeyya, ukkāmukhaṁ ālimpetvā saṇḍāsena jātarūpaṁ gahetvā ukkāmukhe pakkhipeyya, tamenaṁ kālena kālaṁ abhidhameyya, kālena kālaṁ udakena paripphoseyya, kālena kālaṁ ajjhupekkheyya, taṁ hoti jātarūpaṁ sudhantaṁ niddhantaṁ nīhaṭaṁ ninnītakasāvaṁ mudu ca kammaññañca pabhassarañca, yassā yassā ca piḷandhanavikatiyā ākaṅkhati—yadi paṭṭikāya yadi kuṇḍalāya yadi gīveyyakāya yadi suvaṇṇamālāya tañcassa atthaṁ anubhoti; evameva kho, bhikkhu, athāparaṁ upekkhāyeva avasissati parisuddhā pariyodātā mudu ca kammaññā ca pabhassarā ca. So evaṁ pajānāti: ‘imañce ahaṁ upekkhaṁ evaṁ parisuddhaṁ evaṁ pariyodātaṁ ākāsānañcāyatanaṁ upasaṁhareyyaṁ, tadanudhammañca cittaṁ bhāveyyaṁ. Evaṁ me ayaṁ upekkhā tannissitā tadupādānā ciraṁ dīghamaddhānaṁ tiṭṭheyya. Imañce ahaṁ upekkhaṁ evaṁ parisuddhaṁ evaṁ pariyodātaṁ viññāṇañcāyatanaṁ upasaṁhareyyaṁ, tadanudhammañca cittaṁ bhāveyyaṁ. Evaṁ me ayaṁ upekkhā tannissitā tadupādānā ciraṁ dīghamaddhānaṁ tiṭṭheyya. Imañce ahaṁ upekkhaṁ evaṁ parisuddhaṁ evaṁ pariyodātaṁ ākiñcaññāyatanaṁ upasaṁhareyyaṁ, tadanudhammañca cittaṁ bhāveyyaṁ. Evaṁ me ayaṁ upekkhā tannissitā tadupādānā ciraṁ dīghamaddhānaṁ tiṭṭheyya. Imañce ahaṁ upekkhaṁ evaṁ parisuddhaṁ evaṁ pariyodātaṁ nevasaññānāsaññāyatanaṁ upasaṁhareyyaṁ, tadanudhammañca cittaṁ bhāveyyaṁ. Evaṁ me ayaṁ upekkhā tannissitā tadupādānā ciraṁ dīghamaddhānaṁ tiṭṭheyyā’ti. So evaṁ pajānāti: ‘imañce ahaṁ upekkhaṁ evaṁ parisuddhaṁ evaṁ pariyodātaṁ ākāsānañcāyatanaṁ upasaṁhareyyaṁ, tadanudhammañca cittaṁ bhāveyyaṁ; saṅkhatametaṁ. Imañce ahaṁ upekkhaṁ evaṁ parisuddhaṁ evaṁ pariyodātaṁ viññāṇañcāyatanaṁ upasaṁhareyyaṁ, tadanudhammañca cittaṁ bhāveyyaṁ; saṅkhatametaṁ. Imañce ahaṁ upekkhaṁ evaṁ parisuddhaṁ evaṁ pariyodātaṁ ākiñcaññāyatanaṁ upasaṁhareyyaṁ, tadanudhammañca cittaṁ bhāveyyaṁ; saṅkhatametaṁ. Imañce ahaṁ upekkhaṁ evaṁ parisuddhaṁ evaṁ pariyodātaṁ nevasaññānāsaññāyatanaṁ upasaṁhareyyaṁ, tadanudhammañca cittaṁ bhāveyyaṁ; saṅkhatametan’ti. So neva taṁ abhisaṅkharoti, na abhisañcetayati bhavāya vā vibhavāya vā. So anabhisaṅkharonto anabhisañcetayanto bhavāya vā vibhavāya vā na kiñci loke upādiyati, anupādiyaṁ na paritassati, aparitassaṁ paccattaṁyeva parinibbāyati. ‘Khīṇā jāti, vusitaṁ brahmacariyaṁ, kataṁ karaṇīyaṁ, nāparaṁ itthattāyā’ti pajānāti. So sukhañce vedanaṁ vedeti, ‘sā aniccā’ti pajānāti, ‘anajjhositā’ti pajānāti, ‘anabhinanditā’ti pajānāti. Dukkhañce vedanaṁ vedeti, ‘sā aniccā’ti pajānāti, ‘anajjhositā’ti pajānāti, ‘anabhinanditā’ti pajānāti. Adukkhamasukhañce vedanaṁ vedeti, ‘sā aniccā’ti pajānāti, ‘anajjhositā’ti pajānāti, ‘anabhinanditā’ti pajānāti. So sukhañce vedanaṁ vedeti, visaṁyutto naṁ vedeti; dukkhañce vedanaṁ vedeti, visaṁyutto naṁ vedeti; adukkhamasukhañce vedanaṁ vedeti, visaṁyutto naṁ vedeti. So kāyapariyantikaṁ vedanaṁ vedayamāno ‘kāyapariyantikaṁ vedanaṁ vedayāmī’ti pajānāti, jīvitapariyantikaṁ vedanaṁ vedayamāno ‘jīvitapariyantikaṁ vedanaṁ vedayāmī’ti pajānāti, ‘kāyassa bhedā paraṁ maraṇā uddhaṁ jīvitapariyādānā idheva sabbavedayitāni anabhinanditāni sītībhavissantī’ti pajānāti. Seyyathāpi, bhikkhu, telañca paṭicca vaṭṭiñca paṭicca telappadīpo jhāyati; tasseva telassa ca vaṭṭiyā ca pariyādānā aññassa ca anupahārā anāhāro nibbāyati; evameva kho, bhikkhu, kāyapariyantikaṁ vedanaṁ vedayamāno ‘kāyapariyantikaṁ vedanaṁ vedayāmī’ti pajānāti, jīvitapariyantikaṁ vedanaṁ vedayamāno ‘jīvitapariyantikaṁ vedanaṁ vedayāmī’ti pajānāti, ‘kāyassa bhedā paraṁ maraṇā uddhaṁ jīvitapariyādānā idheva sabbavedayitāni anabhinanditāni sītībhavissantī’ti pajānāti. Tasmā evaṁ samannāgato bhikkhu iminā paramena paññādhiṭṭhānena samannāgato hoti. Esā hi, bhikkhu, paramā ariyā paññā yadidaṁ— sabbadukkhakkhaye ñāṇaṁ. Tassa sā vimutti sacce ṭhitā akuppā hoti. Tañhi, bhikkhu, musā yaṁ mosadhammaṁ, taṁ saccaṁ yaṁ amosadhammaṁ nibbānaṁ. Tasmā evaṁ samannāgato bhikkhu iminā paramena saccādhiṭṭhānena samannāgato hoti. Etañhi, bhikkhu, paramaṁ ariyasaccaṁ yadidaṁ— amosadhammaṁ nibbānaṁ. Tasseva kho pana pubbe aviddasuno upadhī honti samattā samādinnā. Tyāssa pahīnā honti ucchinnamūlā tālāvatthukatā anabhāvaṅkatā āyatiṁ anuppādadhammā. Tasmā evaṁ samannāgato bhikkhu iminā paramena cāgādhiṭṭhānena samannāgato hoti. Eso hi, bhikkhu, paramo ariyo cāgo yadidaṁ— sabbūpadhipaṭinissaggo. Tasseva kho pana pubbe aviddasuno abhijjhā hoti chando sārāgo. Svāssa pahīno hoti ucchinnamūlo tālāvatthukato anabhāvaṅkato āyatiṁ anuppādadhammo. Tasseva kho pana pubbe aviddasuno āghāto hoti byāpādo sampadoso. Svāssa pahīno hoti ucchinnamūlo tālāvatthukato anabhāvaṅkato āyatiṁ anuppādadhammo. Tasseva kho pana pubbe aviddasuno avijjā hoti sammoho. Svāssa pahīno hoti ucchinnamūlo tālāvatthukato anabhāvaṅkato āyatiṁ anuppādadhammo. Tasmā evaṁ samannāgato bhikkhu iminā paramena upasamādhiṭṭhānena samannāgato hoti. Eso hi, bhikkhu, paramo ariyo upasamo yadidaṁ— rāgadosamohānaṁ upasamo. ‘Paññaṁ nappamajjeyya, saccamanurakkheyya, cāgamanubrūheyya, santimeva so sikkheyyā’ti— iti yaṁ taṁ vuttaṁ, idametaṁ paṭicca vuttaṁ. ‘Yattha ṭhitaṁ maññassavā nappavattanti, maññassave kho pana nappavattamāne muni santoti vuccatī’ti— iti kho panetaṁ vuttaṁ. Kiñcetaṁ paṭicca vuttaṁ? ‘Asmī’ti, bhikkhu, maññitametaṁ, ‘ayamahamasmī’ti maññitametaṁ, ‘bhavissan’ti maññitametaṁ, ‘na bhavissan’ti maññitametaṁ, ‘rūpī bhavissan’ti maññitametaṁ, ‘arūpī bhavissan’ti maññitametaṁ, ‘saññī bhavissan’ti maññitametaṁ, ‘asaññī bhavissan’ti maññitametaṁ, ‘nevasaññīnāsaññī bhavissan’ti maññitametaṁ. Maññitaṁ, bhikkhu, rogo maññitaṁ gaṇḍo maññitaṁ sallaṁ. Sabbamaññitānaṁ tveva, bhikkhu, samatikkamā muni santoti vuccati. Muni kho pana, bhikkhu, santo na jāyati, na jīyati, na mīyati, na kuppati, na piheti. Tañhissa, bhikkhu, natthi yena jāyetha, ajāyamāno kiṁ jīyissati, ajīyamāno kiṁ mīyissati, amīyamāno kiṁ kuppissati, akuppamāno kissa pihessati? ‘Yattha ṭhitaṁ maññassavā nappavattanti, maññassave kho pana nappavattamāne muni santoti vuccatī’ti— iti yaṁ taṁ vuttaṁ, idametaṁ paṭicca vuttaṁ. Imaṁ kho me tvaṁ, bhikkhu, saṅkhittena chadhātuvibhaṅgaṁ dhārehī”ti. Atha kho āyasmā pukkusāti: “satthā kira me anuppatto, sugato kira me anuppatto, sammāsambuddho kira me anuppatto”ti uṭṭhāyāsanā ekaṁsaṁ cīvaraṁ katvā bhagavato pādesu sirasā nipatitvā bhagavantaṁ etadavoca: “accayo maṁ, bhante, accagamā yathābālaṁ yathāmūḷhaṁ yathāakusalaṁ, yohaṁ bhagavantaṁ āvusovādena samudācaritabbaṁ amaññissaṁ. Tassa me, bhante, bhagavā accayaṁ accayato paṭiggaṇhātu āyatiṁ saṁvarāyā”ti. “Taggha tvaṁ, bhikkhu, accayo accagamā yathābālaṁ yathāmūḷhaṁ yathāakusalaṁ, yaṁ maṁ tvaṁ āvusovādena samudācaritabbaṁ amaññittha. Yato ca kho tvaṁ, bhikkhu, accayaṁ accayato disvā yathādhammaṁ paṭikarosi, taṁ te mayaṁ paṭiggaṇhāma. Vuddhihesā, bhikkhu, ariyassa vinaye yo accayaṁ accayato disvā yathādhammaṁ paṭikaroti, āyatiṁ saṁvaraṁ āpajjatī”ti. “Labheyyāhaṁ, bhante, bhagavato santike upasampadan”ti. “Paripuṇṇaṁ pana te, bhikkhu, pattacīvaran”ti? “Na kho me, bhante, paripuṇṇaṁ pattacīvaran”ti. “Na kho, bhikkhu, tathāgatā aparipuṇṇapattacīvaraṁ upasampādentī”ti. Atha kho āyasmā pukkusāti bhagavato bhāsitaṁ abhinanditvā anumoditvā uṭṭhāyāsanā bhagavantaṁ abhivādetvā padakkhiṇaṁ katvā pattacīvarapariyesanaṁ pakkāmi. Atha kho āyasmantaṁ pukkusātiṁ pattacīvarapariyesanaṁ carantaṁ vibbhantā gāvī jīvitā voropesi. Atha kho sambahulā bhikkhū yena bhagavā tenupasaṅkamiṁsu; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdiṁsu. Ekamantaṁ nisinnā kho te bhikkhū bhagavantaṁ etadavocuṁ: “yo so, bhante, pukkusāti nāma kulaputto bhagavatā saṅkhittena ovādena ovadito so kālaṅkato. Tassa kā gati, ko abhisamparāyo”ti? “Paṇḍito, bhikkhave, pukkusāti kulaputto paccapādi dhammassānudhammaṁ, na ca maṁ dhammādhikaraṇaṁ vihesesi. Pukkusāti, bhikkhave, kulaputto pañcannaṁ orambhāgiyānaṁ saṁyojanānaṁ parikkhayā opapātiko tattha parinibbāyī anāvattidhammo tasmā lokā”ti. Idamavoca bhagavā. Attamanā te bhikkhū bhagavato bhāsitaṁ abhinandunti. Dhātuvibhaṅgasuttaṁ niṭṭhitaṁ dasamaṁ.",
+   "nan-mn140": "時，眾多之諸比丘，詣彼世尊之處。詣已，敬禮世尊，坐於一面。坐於一面之彼等諸比丘，如是白世尊曰：「世尊！彼名為弗區沙提之善男子，〔受〕世尊略說教說者，彼命終矣！於彼有如何之趣，有如何之來生耶？」〔世尊曰：〕「諸比丘！善男子弗區沙提是賢者。入受於法、隨法。且為法故，而無煩我。諸比丘！善男子弗區沙提，滅盡五下分結而成化生，於其處般涅槃，由彼世間成為不退法。」世尊如是說已，歡喜之彼等諸比丘隨喜世尊之所說。——",
+   "T0026-ma162": "比丘！此六喜觀、六憂觀、六捨觀，合已十八行。比丘！人有十八意行者，因此故說。「比丘！人有四住處，此說何因？謂真諦住處、慧住處、施住處、息住處。比丘！人有四住處者，因此故說。云何比丘不放逸慧？若有比丘分別身界，今我此身有內地界而受於生，此為云何？謂髮、毛、爪、齒、麤細膚、皮、肉、骨、筋、腎、心、肝、肺、脾、大腸、𦝩、糞。如斯之比，此身中餘在內，內所攝堅，堅性住內，於生所受，是謂比丘內地界也。比丘！若有內地界及外地界者，彼一切總說地界，彼一切非我有，我非彼有，亦非神也。如是慧觀，知其如真，心不染著於此地界，是謂比丘不放逸慧。「復次，比丘不放逸慧。若有比丘分別身界，今我此身有內水界而受於生，此為云何？謂腦膜、眼淚、汗、涕、唾、膿、血、肪、髓、涎、淡、小便，如斯之比，此身中餘在內，內所攝水，水性潤內，於生所受，是謂比丘內水界也。比丘！若有內水界及外水界者，彼一切總說水界，彼一切非我有，我非彼有，亦非神也。如是慧觀，知其如真，心不染著於此水界，是謂比丘不放逸慧。「復次，比丘不放逸慧。若有比丘分別此身界，今我此身有內火界而受於生，此為云何？謂熱身、暖身、煩悶身、溫莊身，謂消飲食，如斯之比，此身中餘在內，內所攝火，火性熱內，於生所受，是謂比丘內火界也。比丘！若有內火界及外火界者，彼一切總說火界，彼一切非我有，我非彼有，亦非神也。如是慧觀，知其如真，心不染著於此火界，是謂比丘不放逸慧。「復次，比丘不放逸慧。若有比丘分別身界，今我此身有內風界而受於生，此為云何？謂上風、下風、脇風、掣縮風、蹴風、非道風、節節風、息出風、息入風。如斯之比，此身中餘在內，內所攝風，風性動內，於生所受，是謂比丘內風界也。比丘！若有內風界及外風界者，彼一切總說風界，彼一切非我有，我非彼有，亦非神也。如是慧觀，知其如真，心不染著於此風界，是謂比丘不放逸慧。「復次，比丘不放逸慧。若有比丘分別身界，今我此身有內空界而受於生，此為云何？謂眼空、耳空、鼻空、口空、咽喉動搖，謂食噉含消，安徐咽住，若下過出。如斯之比，此身中餘在內，內所攝空，在空不為肉、皮、骨、筋所覆，是謂比丘內空界也。比丘！若有內空界及外空界者，彼一切總說空界，彼一切非我有，我非彼有，亦非神也。如是慧觀，知其如真，心不染著於此空界，是謂比丘不放逸慧。「比丘！若有比丘於此五界知其如真，知如真已，心不染彼而解脫者，唯有餘識，此何等識？樂識、苦識、喜識、憂識、捨識。比丘！因樂更樂故生樂覺，彼覺樂覺，覺樂覺已，即知覺樂覺。若有比丘滅此樂更樂，滅此樂更樂已，若有從樂更樂生樂覺者，彼亦滅息止，知已冷也。比丘！因苦更樂故生苦覺，彼覺苦覺，覺苦覺已，即知覺苦覺。若有比丘滅此苦更樂，滅此苦更樂已，若有從苦更樂生苦覺者，彼亦滅息止，知已冷也。比丘！因喜更樂故生喜覺，彼覺喜覺，覺喜覺已，即知覺喜覺。若有比丘滅此喜更樂，滅此喜更樂已，若有從喜更樂生喜覺者，彼亦滅息止，知已冷也。「比丘！因憂更樂故生憂覺，彼覺憂覺，覺憂覺已，即知覺憂覺。若有比丘滅此憂更樂，滅此憂更樂已，若有從憂更樂生憂覺者，彼亦滅息止，知已冷也。比丘！因捨更樂故生捨覺，彼覺捨覺，覺捨覺已，即知覺捨覺。若有比丘滅此捨更樂，滅此捨更樂已，若有從捨更樂生捨覺者，彼亦滅息止，知已冷也。比丘！彼彼更樂故生彼彼覺，滅彼彼更樂已，彼彼覺亦滅，彼知此覺從更樂，更樂本，更樂習，從更樂生，以更樂為首，依更樂行。「比丘！猶如火母，因鑽及人方便熱相故，而生火也。比丘！彼彼眾多林木相離分散，若從彼生火，火數熱於生數受，彼都滅止息，則冷樵木也。如是，比丘！彼彼更樂故生彼彼覺，滅彼彼更樂故彼彼覺亦滅，彼知此覺從更樂，更樂本，更樂習，從更樂生，以更樂為首，依更樂行。若比丘不染此三覺而解脫者，彼比丘唯存於捨，極清淨也。比丘！彼比丘作是念：『我此清淨捨，移入無量空處，修如是心，依彼、住彼、立彼、緣彼、繫縛於彼。我此清淨捨，移入無量識處、無所有處、非有想非無想處，修如是心，依彼、住彼、立彼、緣彼、繫縛於彼。』「比丘！猶工煉金上妙之師，以火燒金，鍛令極薄，又以火燷，數數足火熟煉令淨，極使柔軟而有光明。比丘！此金者，於金師以數數足火熟煉令淨，極使柔軟而有光明已，彼金師者，隨所施設，或縺繒綵，嚴飾新衣，指鐶、臂釧、瓔珞、寶鬘，隨意所作。如是，比丘！彼比丘作是念：『我此清淨捨移入無量空處，修如是心，依彼、住彼、立彼、緣彼、繫縛於彼。我此清淨捨移入無量識處、無所有處、非有想非無想處，修如是心，依彼、住彼、立彼、緣彼、繫縛於彼。』「彼比丘復作是念：『我此清淨捨，依無量空處者，故是有為。若有為者，則是無常，若無常者，即是苦也。若是苦者，便知苦，知苦已，彼此捨不復移入無量空處。我此清淨捨，依無量識處、無所有處、非有想非無想處者，故是有為。若有為者，則是無常，若無常者，即是苦也。若是苦者，便知苦，知苦已，彼此捨不復移入無量識處、無所有處、非有想非無想處。』比丘！若有比丘於此四處以慧觀之，知其如真，心不成就，不移入者。彼於爾時不復有為，亦無所思，謂有及無，彼受身最後覺，則知受身最後覺，受命最後覺，則知受命最後覺，身壞命終，壽命已訖，彼所覺一切滅息止，知至冷也。「比丘！譬如燃燈，因油因炷，彼若無人更增益油，亦不續炷，是為前已滅訖，後不相續，無所復受。如是，比丘！受身最後覺，則知受身最後覺，受命最後覺，則知受命最後覺，身壞命終，壽命已訖，彼所覺一切滅息止，知至冷也。比丘！是謂比丘第一正慧，謂至究竟滅訖，漏盡比丘成就於彼，成就第一正慧處。比丘！此解脫住真諦，得不移動，真諦者，謂如法也，妄言者，謂虛妄法。比丘！成就彼第一真諦處。「比丘！彼比丘施說施若本必有怨家，彼於爾時放捨、吐離、解脫、滅訖。比丘！是謂比丘第一正惠施，謂捨離一切世盡，無欲、滅、息、止，比丘成就於彼，成就第一惠施處。比丘！彼比丘心為欲、恚、癡所穢，不得解脫。比丘！此一切婬、怒、癡盡，無欲、滅、息、止，得第一息。比丘！成就彼者成就第一息處。「比丘！我者是自舉，我當有是亦自舉，我當非有非無是亦自舉，我當色有是亦自舉，我當無色有是亦自舉，我當非有色非無色是亦自舉，我當有想是亦自舉，我當無想是亦自舉，我當非有想非無想是亦自舉。是貢高、是憍慠、是放逸，比丘！若無此一切自舉、貢高、憍慠、放逸者，意謂之息。比丘！若意息者，便不憎、不憂、不勞、不怖。所以者何？彼比丘成就法故，不復有可說憎者。若不憎則不憂，不憂則不愁，不愁則不勞，不勞則不怖，因不怖便當般涅槃，生已盡，梵行已立，所作已辦，不更受有，知如真。」說此法已，尊者弗迦邏娑利遠塵離垢，諸法法眼生。於是，尊者弗迦邏娑利見法得法，覺白淨法，斷疑度惑，更無餘尊，不復由他，無有猶豫，已住果證，於世尊法得無所畏，即從坐起，稽首佛足，白曰：「世尊！我悔過。善逝！我自首。如愚如癡，如不定，如不善解，不識良田，不能自知。所以者何？以我稱如來、無所著、等正覺為君也。唯願世尊聽我悔過，我悔過已，後不更作。」世尊告曰：「比丘！汝實愚癡，汝實不定，汝不善解，謂稱如來、無所著、等正覺為君也。比丘！若汝能自悔過，見已發露，護不更作者，比丘！如是則於聖法、律中益而不損，謂能自悔過，見已發露，護不更作。」佛說如是。尊者弗迦邏娑利聞佛所說，歡喜奉行。分別六界經第一竟（三千一百三十一字）"
+  }
+ }
+}

@@ -1,0 +1,183 @@
+{
+ "slug": "pi-an6.55",
+ "title": "增壹阿含經 （三）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "二十億耳心念"
+  },
+  {
+   "id": "a02",
+   "label": "世尊現前問答"
+  },
+  {
+   "id": "a03",
+   "label": "琴喻問答"
+  },
+  {
+   "id": "a04",
+   "label": "精進譬喻"
+  },
+  {
+   "id": "a05",
+   "label": "受教修行"
+  },
+  {
+   "id": "a06",
+   "label": "證得阿羅漢"
+  },
+  {
+   "id": "a07",
+   "label": "再詣世尊問六解脫"
+  },
+  {
+   "id": "a08",
+   "label": "六種解脫說明"
+  },
+  {
+   "id": "a09",
+   "label": "學地與無學地說明"
+  },
+  {
+   "id": "a10",
+   "label": "六根不動譬喻"
+  },
+  {
+   "id": "a11",
+   "label": "偈頌讚歎"
+  },
+  {
+   "id": "a12",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "an6.55",
+   "lang": "pi",
+   "label": "巴利 AN6.55",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "T0125-ea23.3",
+   "lang": "lzh",
+   "label": "增壹阿含經 （三）",
+   "who": "東晉 瞿曇僧伽提婆譯"
+  },
+  {
+   "id": "T0026-ma123",
+   "lang": "lzh",
+   "label": "中阿含經 （一二三）中阿含大品沙門二十億經第七（第三念誦）",
+   "who": "東晉 瞿曇僧伽提婆譯"
+  },
+  {
+   "id": "T0099-sa254",
+   "lang": "lzh",
+   "label": "雜阿含經 （二五四）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0026",
+  "T0099",
+  "T0125"
+ ],
+ "anchors": [
+  {
+   "work": "T0125",
+   "node": "（三）",
+   "uid": "T02n0125_p0612a17"
+  },
+  {
+   "work": "T0026",
+   "node": "（一二三）中阿含大品沙門二十億經第七（第三念誦）",
+   "uid": "T01n0026_p0611c27"
+  },
+  {
+   "work": "T0099",
+   "node": "（二五四）",
+   "uid": "T02n0099_p0062b22"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "an6.55": "Aṅguttara Nikāya 6.55 6. Mahāvagga Soṇasutta Evaṁ me sutaṁ— ekaṁ samayaṁ bhagavā rājagahe viharati gijjhakūṭe pabbate.",
+   "T0125-ea23.3": "聞如是：一時，佛在占波國雷聲池側。",
+   "T0026-ma123": "我聞如是：一時，佛遊舍衛國，在勝林給孤獨園。爾時，尊者沙門二十億亦遊舍衛國，在闇林中，前夜、後夜學習不眠，精勤正住，修習道品。",
+   "T0099-sa254": "如是我聞：一時，佛住王舍城迦蘭陀竹園。爾時，尊者二十億耳住耆闍崛山，常精勤修習菩提分法。"
+  },
+  "a01": {
+   "an6.55": "Tena kho pana samayena āyasmā soṇo rājagahe viharati sītavanasmiṁ. Atha kho āyasmato soṇassa rahogatassa paṭisallīnassa evaṁ cetaso parivitakko udapādi: “ye kho keci bhagavato sāvakā āraddhavīriyā viharanti, ahaṁ tesaṁ aññataro. Atha ca pana me na anupādāya āsavehi cittaṁ vimuccati, saṁvijjanti kho pana me kule bhogā, sakkā bhogā ca bhuñjituṁ puññāni ca kātuṁ. Yannūnāhaṁ sikkhaṁ paccakkhāya hīnāyāvattitvā bhoge ca bhuñjeyyaṁ puññāni ca kareyyan”ti. Atha kho bhagavā āyasmato soṇassa cetasā cetoparivitakkamaññāya—seyyathāpi nāma balavā puriso samiñjitaṁ vā bāhaṁ pasāreyya, pasāritaṁ vā bāhaṁ samiñjeyya; evamevaṁ kho—gijjhakūṭe pabbate antarahito sītavane āyasmato soṇassa sammukhe pāturahosi. Nisīdi bhagavā paññatte āsane. Āyasmāpi kho soṇo bhagavantaṁ abhivādetvā ekamantaṁ nisīdi.",
+   "T0125-ea23.3": "是時，尊者二十億耳在一靜處，自修法本，不捨頭陀十二法行，晝夜經行，不離三十七道品之教，若坐、若行，常修正法，初夜、中夜、竟夜，恒自剋勵，不捨斯須，然復不能於欲漏法心得解脫。是時，尊者二十億耳所經行處，脚壞血流，盈滿路側，猶如屠牛之處，烏鵲食血，然復不能於欲漏心得解脫。是時，尊者二十億耳便作是念：「釋迦文佛苦行精進弟子中，我為第一，然我今日漏心不得解脫；又我家業，多財饒寶，宜可捨服，還作白衣，持財物廣惠施。然今作沙門，甚難不易！」",
+   "T0026-ma123": "於是，尊者沙門二十億安靜獨住，宴坐思惟，心作是念：「若有世尊弟子精勤學習正法、律者，我為第一，然諸漏心不得解脫。我父母家極大富樂，多有錢財，我今寧可捨戒罷道行，欲布施修諸福業耶？」爾時，世尊以他心智知尊者沙門二十億心之所念，便告一比丘：「汝往至彼，呼沙門二十億來。」於是，一比丘白曰：「唯然。」即從坐起，稽首禮足，遶三匝而去，往至尊者沙門二十億所而語彼曰：「世尊呼汝！」",
+   "T0099-sa254": "時，尊者二十億耳獨靜禪思，而作是念：「於世尊弟子精勤聲聞中，我在其數，然我今日未盡諸漏，我是名族姓子，多饒財寶，我今寧可還受五欲，廣行施作福。」爾時，世尊知二十億耳心之所念，告一比丘，汝等今往二十億耳所，告言：「世尊呼汝。」是一比丘受佛教已，往詣二十億耳所，語言：「世尊呼汝。」二十億耳聞彼比丘稱大師命，即詣世尊所，稽首禮足，退住一面。"
+  },
+  "a02": {
+   "an6.55": "Ekamantaṁ nisinnaṁ kho āyasmantaṁ soṇaṁ bhagavā etadavoca: “Nanu te, soṇa, rahogatassa paṭisallīnassa evaṁ cetaso parivitakko udapādi: ‘ye kho keci bhagavato sāvakā āraddhavīriyā viharanti, ahaṁ tesaṁ aññataro. Atha ca pana me na anupādāya āsavehi cittaṁ vimuccati, saṁvijjanti kho pana me kule bhogā, sakkā bhogā ca bhuñjituṁ puññāni ca kātuṁ. Yannūnāhaṁ sikkhaṁ paccakkhāya hīnāyāvattitvā bhoge ca bhuñjeyyaṁ puññāni ca kareyyan’”ti? “Evaṁ, bhante”.",
+   "T0125-ea23.3": "爾時，世尊遙知二十億耳心之所念，便騰遊虛空，至彼經行處，敷坐具而坐。是時，尊者二十億耳前至佛所，頭面禮足，在一面坐。爾時，世尊問二十億耳曰：「汝向何故作是念：『釋迦文尼佛精進苦行弟子中，我為第一，然我今日漏心不得解脫；又我家業，饒財多寶，宜可捨服，還作白衣，持財物廣施。然今作沙門，甚難不易。』」二十億耳對曰：「如是。世尊！」世尊告曰：「我今還問汝，隨汝報我。",
+   "T0026-ma123": "尊者沙門二十億聞比丘語，即詣佛所，稽首作禮，却坐一面。世尊告曰：「沙門！汝實安靜獨住，宴坐思惟，心作是念：『若有世尊弟子精勤學習正法、律者，我為第一，然諸漏心不得解脫。我父母家極大富樂，多有錢財，我今寧可捨戒罷道行，欲布施修諸福業耶？』」彼時，尊者沙門二十億羞耻慙愧，則無無畏。「世尊知我心之所念。」叉手向佛，白曰：「實爾。」世尊告曰：「沙門！我今問汝，隨所解答。",
+   "T0099-sa254": "爾時，世尊告二十億耳：「汝實獨靜禪思作是念：『世尊精勤修學聲聞中，我在其數，而今未得漏盡解脫。我是名族姓子，又多錢財，我寧可還俗，受五欲樂，廣施作福。』耶？」時，二十億耳作是念：「世尊已知我心。」驚怖毛竪，白佛言：「實爾。世尊！」佛告二十億耳：「我今問汝，隨意答我。"
+  },
+  "a03": {
+   "an6.55": "“Taṁ kiṁ maññasi, soṇa, kusalo tvaṁ pubbe agāriyabhūto vīṇāya tantissare”ti? “Evaṁ, bhante”. “Taṁ kiṁ maññasi, soṇa, yadā te vīṇāya tantiyo accāyatā honti, api nu te vīṇā tasmiṁ samaye saravatī vā hoti kammaññā vā”ti? “No hetaṁ, bhante”. “Taṁ kiṁ maññasi, soṇa, yadā te vīṇāya tantiyo atisithilā honti, api nu te vīṇā tasmiṁ samaye saravatī vā hoti kammaññā vā”ti? “No hetaṁ, bhante”. “Yadā pana te, soṇa, vīṇāya tantiyo na accāyatā honti nātisithilā same guṇe patiṭṭhitā, api nu te vīṇā tasmiṁ samaye saravatī vā hoti kammaññā vā”ti? “Evaṁ, bhante”.",
+   "T0125-ea23.3": "云何，二十億耳！汝本在家時，善彈琴乎？」二十億耳對曰：「如是。世尊！我本在家時，善能彈琴。」世尊告曰：「云何，二十億耳！若彈絃極急，嚮不齊等，爾時琴音可聽採不？」二十億耳對曰：「不也。世尊！」世尊告曰：「云何，二十億耳！若琴絃復緩，爾時琴音可聽採不？」二十億耳對曰：「不也，世尊！」世尊告曰：「云何，二十億耳！若琴絃不急不緩，爾時琴音可聽採不？」二十億耳對曰：「如是。世尊！若琴絃不緩不急，爾時琴音便可聽採。」",
+   "T0026-ma123": "於意云何？汝在家時，善調彈琴，琴隨歌音，歌隨琴音耶？」尊者沙門二十億白曰：「如是。世尊！」世尊復問：「於意云何？若彈琴絃急，為有和音可愛樂耶？」沙門答曰：「不也。世尊！」世尊復問：「於意云何？若彈琴絃緩，為有和音可愛樂耶？」沙門答曰：「不也。世尊！」世尊復問：「於意云何？若彈琴調絃不急不緩，適得其中，為有和音可愛樂耶？」沙門答曰：「如是。世尊！」世尊告曰：「如是。",
+   "T0099-sa254": "二十億耳，汝在俗時，善彈琴不？」答言：「如是，世尊！」復問：「於意云何？汝彈琴時，若急其絃，得作微妙和雅音不？」答言：「不也，世尊！」復問：「云何？若緩其絃，寧發微妙和雅音不？」答言：「不也，世尊！」復問：「云何善調琴絃，不緩不急，然後發妙和雅音不？」答言：「如是，世尊！」"
+  },
+  "a04": {
+   "an6.55": "“Evamevaṁ kho, soṇa, accāraddhavīriyaṁ uddhaccāya saṁvattati, atisithilavīriyaṁ kosajjāya saṁvattati. Tasmātiha tvaṁ, soṇa, vīriyasamathaṁ adhiṭṭhaha, indriyānañca samataṁ paṭivijjha, tattha ca nimittaṁ gaṇhāhī”ti. “Evaṁ, bhante”ti kho āyasmā soṇo bhagavato paccassosi.",
+   "T0125-ea23.3": "世尊告曰：「此亦如是。極精進者，猶如調戲；若懈怠者，此墮邪見；若能在中者，此則上行。如是不久，當成無漏人。」",
+   "T0026-ma123": "沙門！極大精進，令心調亂；不極精進，令心懈怠。是故汝當分別此時，觀察此相，莫得放逸。」",
+   "T0099-sa254": "佛告二十億耳：「精進太急，增其掉悔，精進太緩，令人懈怠，是故汝當平等修習攝受，莫著、莫放逸、莫取相。」"
+  },
+  "a05": {
+   "an6.55": "Atha kho bhagavā āyasmantaṁ soṇaṁ iminā ovādena ovaditvā—seyyathāpi nāma balavā puriso samiñjitaṁ vā bāhaṁ pasāreyya, pasāritaṁ vā bāhaṁ samiñjeyya; evamevaṁ kho—sītavane antarahito gijjhakūṭe pabbate pāturahosi. Atha kho āyasmā soṇo aparena samayena vīriyasamathaṁ adhiṭṭhāsi, indriyānañca samataṁ paṭivijjhi, tattha ca nimittaṁ aggahesi.",
+   "T0125-ea23.3": "爾時，世尊與二十億耳比丘說微妙法已，還雷音池側。爾時，尊者二十億耳思惟世尊教勅，不捨須臾，在閑靜處修行其法。",
+   "T0026-ma123": "爾時，尊者沙門二十億聞佛所說，善受善持，即從坐起，稽首佛足，繞三匝而去。受佛彈琴喻教，在遠離獨住，心無放逸，修行精勤。",
+   "T0099-sa254": "時，尊者二十億耳聞佛所說，歡喜隨喜，作禮而去。時，尊者二十億耳常念世尊說彈琴譬，獨靜禪思。"
+  },
+  "a06": {
+   "an6.55": "Atha kho āyasmā soṇo eko vūpakaṭṭho appamatto ātāpī pahitatto viharanto nacirasseva—yassatthāya kulaputtā sammadeva agārasmā anāgāriyaṁ pabbajanti, tadanuttaraṁ—brahmacariyapariyosānaṁ diṭṭheva dhamme sayaṁ abhiññā sacchikatvā upasampajja vihāsi. “Khīṇā jāti, vusitaṁ brahmacariyaṁ, kataṁ karaṇīyaṁ, nāparaṁ itthattāyā”ti abbhaññāsi. Aññataro ca panāyasmā soṇo arahataṁ ahosi. Atha kho āyasmato soṇassa arahattappattassa etadahosi:",
+   "T0125-ea23.3": "所以族姓子出家學道，剃除鬚髮，修無上梵行：生死已盡，梵行已立，所作已辦，更不復受有，如實知之。",
+   "T0026-ma123": "彼在遠離獨住，心無放逸，修行精勤已，族姓子所為，剃除鬚髮，著袈裟衣，至信、捨家，無家，學道者，唯無上梵行訖，於現法中自知自覺，自作證成就遊，生已盡，梵行已立，所作已辦，不更受有，知如真。尊者沙門二十億知法已，至得阿羅訶。",
+   "T0099-sa254": "如上所說，乃至漏盡心得解脫，成阿羅漢。爾時，尊者二十億耳得阿羅漢，內覺解脫喜樂，作是念：「我今應往問訊世尊。」"
+  },
+  "a07": {
+   "an6.55": "“yannūnāhaṁ yena bhagavā tenupasaṅkameyyaṁ; upasaṅkamitvā bhagavato santike aññaṁ byākareyyan”ti. Atha kho āyasmā soṇo yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho āyasmā soṇo bhagavantaṁ etadavoca:",
+   "T0026-ma123": "彼時，尊者沙門二十億得阿羅訶已，而作是念：「今正是時，我寧可往詣世尊所，說得究竟智耶？」",
+   "T0099-sa254": "爾時，尊者二十億耳往詣佛所，稽首禮足，退坐一面，白佛言：「世尊！"
+  },
+  "a08": {
+   "an6.55": "“Yo so, bhante, bhikkhu arahaṁ khīṇāsavo vusitavā katakaraṇīyo ohitabhāro anuppattasadattho parikkhīṇabhavasaṁyojano sammadaññāvimutto, so cha ṭhānāni adhimutto hoti— nekkhammādhimutto hoti, pavivekādhimutto hoti, abyāpajjādhimutto hoti, taṇhākkhayādhimutto hoti, upādānakkhayādhimutto hoti, asammohādhimutto hoti. Siyā kho pana, bhante, idhekaccassa āyasmato evamassa: ‘kevalaṁsaddhāmattakaṁ nūna ayamāyasmā nissāya nekkhammādhimutto’ti. Na kho panetaṁ, bhante, evaṁ daṭṭhabbaṁ.",
+   "T0026-ma123": "於是，尊者沙門二十億往詣佛所，稽首作禮，却坐一面，白曰：「世尊！若有比丘得無所著，諸漏已盡，梵行已立，所作已辦，重擔已捨，有結已解，自得善義，正智正解脫者，彼於爾時樂此六處，樂於無欲，樂於遠離，樂於無諍，樂於愛盡，樂於受盡，樂心不移動。世尊！或有一人而作是念：『此賢者以依信故，樂於無欲者。』不應如是觀，但欲盡、恚盡、癡盡，是樂於無欲。世尊！或有一人而作是念：『此賢者以貪利稱譽求供養故，樂於遠離者。』不應如是觀，但欲盡、恚盡、癡盡，是樂於遠離。世尊！或有一人而作是念：『此賢者以依戒故，樂於無諍者。』不應如是觀，但欲盡、恚盡、癡盡，是樂於無諍，樂於愛盡，樂於受盡，樂心不移動。",
+   "T0099-sa254": "於世尊法中得阿羅漢，盡諸有漏，所作已作，捨離重擔，逮得己利，盡諸有結，正智心解脫，當於爾時解脫六處。云何為六？離欲解脫、離恚解脫、遠離解脫、愛盡解脫、諸取解脫、心不忘念解脫。「世尊！若有依少信心而言離欲解脫，此非所應；貪、恚、癡盡，是名真實離欲解脫。「若復有人依少持戒而言我得離恚解脫，此亦不應；貪、恚、癡盡，是名真實離恚解脫。「若復有人依於修習利養遠離而言遠離解脫，是亦不應；貪、恚、癡盡，是真實遠離解脫。「貪、恚、癡盡，亦名離愛，亦名離取，亦名離忘念解脫。"
+  },
+  "a09": {
+   "an6.55": "Khīṇāsavo, bhante, bhikkhu vusitavā katakaraṇīyo karaṇīyaṁ attano asamanupassanto katassa vā paṭicayaṁ khayā rāgassa vītarāgattā nekkhammādhimutto hoti, khayā dosassa vītadosattā nekkhammādhimutto hoti, khayā mohassa vītamohattā nekkhammādhimutto hoti. Siyā kho pana, bhante, idhekaccassa āyasmato evamassa: ‘lābhasakkārasilokaṁ nūna ayamāyasmā nikāmayamāno pavivekādhimutto’ti. Na kho panetaṁ, bhante, evaṁ daṭṭhabbaṁ. Khīṇāsavo, bhante, bhikkhu vusitavā katakaraṇīyo karaṇīyaṁ attano asamanupassanto katassa vā paṭicayaṁ khayā rāgassa vītarāgattā pavivekādhimutto hoti, khayā dosassa vītadosattā pavivekādhimutto hoti, khayā mohassa vītamohattā pavivekādhimutto hoti. Siyā kho pana, bhante, idhekaccassa āyasmato evamassa: ‘sīlabbataparāmāsaṁ nūna ayamāyasmā sārato paccāgacchanto abyāpajjādhimutto’ti. Na kho panetaṁ, bhante, evaṁ daṭṭhabbaṁ.",
+   "T0026-ma123": "世尊！若有比丘得無所著，諸漏已盡，梵行已立，所作已辦，重擔已捨，有結已解，自得善義，正智正解脫者，彼於爾時樂此六處。「世尊！若有比丘學未得意，求願無上安隱涅槃者，彼於爾時成就學根及學戒。彼於後時，諸漏已盡而得無漏，心解脫、慧解脫，於現法中自知自覺，自作證成就遊，生已盡，梵行已立，所作已辦，不更受有，知如真者。彼於爾時成就無學根及無學戒。世尊！猶幼少童子，彼於爾時成就小根及小戒，彼於後時具足學根者，彼於爾時成就學根及學戒。「如是，世尊！若有比丘學未得意，求願無上安隱涅槃者，彼於爾時成就學根及學戒。彼於後時，諸漏已盡而得無漏，心解脫、慧解脫，於現法中自知自覺，自作證成就遊，生已盡，梵行已立，所作已辦，不更受有，知如真者，彼於爾時成就無學根及無學戒。",
+   "T0099-sa254": "如是，世尊！若諸比丘未得羅漢，未盡諸漏，於此六處不得解脫。「若復比丘在於學地，未得增上樂，涅槃習向心住，爾時成就學戒，成就學根，後時當得漏盡、無漏心解脫，乃至自知不受後有。當於爾時得無學戒，得無學諸根。譬如嬰童愚小仰臥，爾時成就童子諸根，彼於後時漸漸增長，諸根成就，當於爾時成就長者諸根。在學地者亦復如是，未得增上安樂，乃至成就無學戒、無學諸根。"
+  },
+  "a10": {
+   "an6.55": "Khīṇāsavo, bhante, bhikkhu vusitavā katakaraṇīyo karaṇīyaṁ attano asamanupassanto katassa vā paṭicayaṁ khayā rāgassa vītarāgattā abyāpajjādhimutto hoti, khayā dosassa vītadosattā abyāpajjādhimutto hoti, khayā mohassa vītamohattā abyāpajjādhimutto hoti. Khayā rāgassa vītarāgattā taṇhākkhayādhimutto hoti, khayā dosassa vītadosattā taṇhākkhayādhimutto hoti, khayā mohassa vītamohattā taṇhākkhayādhimutto hoti. Khayā rāgassa vītarāgattā upādānakkhayādhimutto hoti, khayā dosassa vītadosattā upādānakkhayādhimutto hoti, khayā mohassa vītamohattā upādānakkhayādhimutto hoti. Khayā rāgassa vītarāgattā asammohādhimutto hoti, khayā dosassa vītadosattā asammohādhimutto hoti, khayā mohassa vītamohattā asammohādhimutto hoti. Evaṁ sammā vimuttacittassa, bhante, bhikkhuno bhusā cepi cakkhuviññeyyā rūpā cakkhussa āpāthaṁ āgacchanti, nevassa cittaṁ pariyādiyanti. Amissīkatamevassa cittaṁ hoti ṭhitaṁ āneñjappattaṁ vayañcassānupassati. Bhusā cepi sotaviññeyyā saddā … ghānaviññeyyā gandhā … jivhāviññeyyā rasā … kāyaviññeyyā phoṭṭhabbā … manoviññeyyā dhammā manassa āpāthaṁ āgacchanti, nevassa cittaṁ pariyādiyanti. Amissīkatamevassa cittaṁ hoti ṭhitaṁ āneñjappattaṁ vayañcassānupassati. Seyyathāpi, bhante, selo pabbato acchiddo asusiro ekagghano. Atha puratthimāya cepi disāya āgaccheyya bhusā vātavuṭṭhi neva naṁ saṅkampeyya na sampakampeyya na sampavedheyya, atha pacchimāya cepi disāya āgaccheyya bhusā vātavuṭṭhi … atha uttarāya cepi disāya āgaccheyya bhusā vātavuṭṭhi … atha dakkhiṇāya cepi disāya āgaccheyya bhusā vātavuṭṭhi neva naṁ saṅkampeyya na sampakampeyya na sampavedheyya; evamevaṁ kho, bhante, evaṁ sammāvimuttacittassa bhikkhuno bhusā cepi cakkhuviññeyyā rūpā cakkhussa āpāthaṁ āgacchanti, nevassa cittaṁ pariyādiyanti. Amissīkatamevassa cittaṁ hoti, ṭhitaṁ āneñjappattaṁ vayañcassānupassati. Bhusā cepi sotaviññeyyā saddā … ghānaviññeyyā gandhā … jivhāviññeyyā rasā … kāyaviññeyyā phoṭṭhabbā … manoviññeyyā dhammā manassa āpāthaṁ āgacchanti, nevassa cittaṁ pariyādiyanti. Amissīkatamevassa cittaṁ hoti ṭhitaṁ āneñjappattaṁ vayañcassānupassatīti.",
+   "T0026-ma123": "彼若有眼所知色與對眼者，不能令失此心解脫、慧解脫，心在內住，善制守持，觀興衰法。若有耳所知聲、鼻所知香、舌所知味、身所知觸、意所知法與對意者，不能令失此心解脫、慧解脫，心在內住，善制守持，觀興衰法。「世尊！猶去村不遠有大石山，不破不缺不脆，堅住不空合一，若東方有大風雨來，不能令搖，不動轉移；亦非東方風移至南方，若南方有大風雨來，不能令搖，不動轉移；亦非南方風移至西方，若西方有大風雨來，不能令搖，不動轉移；亦非西方風移至北方，若北方有大風雨來，不能令搖，不動轉移；亦非北方風移至諸方。如是彼若有眼所知色與對眼者，不能令失此心解脫、慧解脫，心在內住，善制守持，觀興衰法。若有耳所知聲、鼻所知香、舌所知味、身所知觸、意所知法與對意者，不能令失此心解脫、慧解脫，心在內住，善制守護，觀興衰法。」",
+   "T0099-sa254": "「若眼常識色，終不能妨心解脫、慧解脫，意堅住故，內修無量善解脫，觀察生滅，乃至無常。耳識聲、鼻識香、舌識味、身識觸、意識法，不能妨心解脫、慧解脫，意堅住故，內修無量善解脫，觀察生滅。譬如村邑近大石山，不斷、不壞、不穿，一向厚密，假使四方風吹，不能動搖、不能穿過。彼無學者亦復如是，眼常識色，乃至意常識法，不能妨心解脫、慧解脫，意堅住故，內修無量善解脫，觀察生滅。」"
+  },
+  "a11": {
+   "T0026-ma123": "於是，尊者沙門二十億說此頌曰：「樂在無欲，心存遠離，\n喜於無諍，受盡欣悅。\n亦樂受盡，心不移動，\n得知如真，從是心解。\n得心解已，比丘息根，\n作已不觀，無所求作。\n猶如石山，風不能動，\n色聲香味，身觸亦然。\n愛不愛法，不能動心。」尊者沙門二十億於佛前說得究竟智已，即從坐起，稽首佛足，繞三匝而去。",
+   "T0099-sa254": "爾時，二十億耳重說偈言：「離欲心解脫，無恚脫亦然，\n遠離心解脫，貪愛永無餘。\n諸取心解脫，及意不忘念，\n曉了入處生，於彼心解脫。\n彼心解脫者，比丘意止息，\n諸所作已作，更不作所作。\n猶如大石山，四風不能動。\n色聲香味觸，及法之好惡，\n六入處常對，不能動其心。\n心常住堅固，諦觀法生滅。」"
+  },
+  "a12": {
+   "an6.55": "Nekkhammaṁ adhimuttassa, pavivekañca cetaso; Abyāpajjādhimuttassa, upādānakkhayassa ca. Taṇhākkhayādhimuttassa, asammohañca cetaso; Disvā āyatanuppādaṁ, sammā cittaṁ vimuccati. Tassa sammā vimuttassa, santacittassa bhikkhuno; Katassa paṭicayo natthi, karaṇīyaṁ na vijjati. Selo yathā ekagghano, vātena na samīrati; Evaṁ rūpā rasā saddā, gandhā phassā ca kevalā. Iṭṭhā dhammā aniṭṭhā ca, nappavedhenti tādino; Ṭhitaṁ cittaṁ vippamuttaṁ, vayañcassānupassatī”ti. Paṭhamaṁ.",
+   "T0125-ea23.3": "尊者二十億耳便成阿羅漢。爾時，世尊告諸比丘：「我聲聞中第一弟子精懃苦行，所謂二十億耳比丘是。」爾時，諸比丘聞佛所說，歡喜奉行。",
+   "T0026-ma123": "爾時，世尊，尊者沙門二十億去後不久，告諸比丘：「諸族姓子！應如是來於我前說得究竟智，如沙門二十億來於我前說得究竟智，不自譽，不慢他，說義現法隨諸處也；莫令如癡增上慢所纏，來於我前說得究竟智，彼不得義，但大煩勞。沙門二十億來於我前說得究竟智，不自譽，不慢他，說義現法隨諸處也。」佛說如是。彼諸比丘聞佛所說，歡喜奉行。沙門二十億經第七竟（一千七百三十九字）",
+   "T0099-sa254": "尊者二十億耳說是法時，大師心悅，諸多聞梵行者聞尊者二十億耳所說，皆大歡喜。爾時，尊者二十億耳聞佛說法，歡喜隨喜，作禮而去。爾時，世尊知二十億耳去不久，告諸比丘：「善心解脫者，應如是記說，如二十億耳以智記說，亦不自舉，亦不下他，正說其義；非如增上慢者，不得其義，而自稱歎得過人法，自取損減。」"
+  }
+ }
+}

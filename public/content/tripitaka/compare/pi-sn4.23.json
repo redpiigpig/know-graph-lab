@@ -1,0 +1,214 @@
+{
+ "slug": "pi-sn4.23",
+ "title": "別譯雜阿含經 （三〇）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "瞿低迦反復得失時解脫"
+  },
+  {
+   "id": "a02",
+   "label": "瞿低迦第六次得失時解脫"
+  },
+  {
+   "id": "a03",
+   "label": "瞿低迦第七次得時解脫"
+  },
+  {
+   "id": "a04",
+   "label": "瞿低迦思念自刎"
+  },
+  {
+   "id": "a05",
+   "label": "魔波旬偈讚世尊"
+  },
+  {
+   "id": "a06",
+   "label": "世尊偈答魔波旬"
+  },
+  {
+   "id": "a07",
+   "label": "世尊告眾比丘往瞿低迦處"
+  },
+  {
+   "id": "a08",
+   "label": "眾比丘應諾隨佛"
+  },
+  {
+   "id": "a09",
+   "label": "佛與眾比丘至仙人山見瞿低迦"
+  },
+  {
+   "id": "a10",
+   "label": "見瞿低迦屍身如煙聚"
+  },
+  {
+   "id": "a11",
+   "label": "佛問眾比丘見煙聚否"
+  },
+  {
+   "id": "a12",
+   "label": "眾比丘答已見"
+  },
+  {
+   "id": "a13",
+   "label": "佛說煙聚是魔所為求識"
+  },
+  {
+   "id": "a14",
+   "label": "魔波旬化琴偈問神識所在"
+  },
+  {
+   "id": "a15",
+   "label": "世尊偈答魔波旬神識已滅"
+  },
+  {
+   "id": "a16",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn4.23",
+   "lang": "pi",
+   "label": "巴利 SN4.23",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn4.23",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN4.23",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.30",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （三〇）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa1091",
+   "lang": "lzh",
+   "label": "雜阿含經 （一〇九一）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（三〇）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一〇九一）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn4.23": "Saṁyutta Nikāya 4.23 3. Tatiyavagga Godhikasutta Evaṁ me sutaṁ—",
+   "nan-sn4.23": "〔二三〕第三　瞿低迦爾時，世尊住王舍城竹林栗鼠養餌所。",
+   "T0100-sa-2.30": "如是我聞：一時，佛在王舍城毘婆波世山七葉窟中。",
+   "T0099-sa1091": "如是我聞：一時，佛住王舍城毘婆羅山七葉樹林石室中。"
+  },
+  "a01": {
+   "sn4.23": "ekaṁ samayaṁ bhagavā rājagahe viharati veḷuvane kalandakanivāpe. Tena kho pana samayena āyasmā godhiko isigilipasse viharati kāḷasilāyaṁ. Atha kho āyasmā godhiko appamatto ātāpī pahitatto viharanto sāmayikaṁ cetovimuttiṁ phusi. Atha kho āyasmā godhiko tamhā sāmayikāya cetovimuttiyā parihāyi. Dutiyampi kho āyasmā godhiko appamatto ātāpī pahitatto viharanto sāmayikaṁ cetovimuttiṁ phusi. Dutiyampi kho āyasmā godhiko tamhā sāmayikāya cetovimuttiyā parihāyi. Tatiyampi kho āyasmā godhiko appamatto ātāpī pahitatto viharanto sāmayikaṁ cetovimuttiṁ phusi. Tatiyampi kho āyasmā godhiko tamhā …pe… parihāyi. Catutthampi kho āyasmā godhiko appamatto …pe… vimuttiṁ phusi. Catutthampi kho āyasmā godhiko tamhā …pe… parihāyi. Pañcamampi kho āyasmā godhiko …pe… cetovimuttiṁ phusi. Pañcamampi kho āyasmā …pe… vimuttiyā parihāyi.",
+   "nan-sn4.23": "爾時，尊者瞿低迦住伊師耆利山麓之黑曜巖。時，尊者瞿低迦不放逸、虔誠、精進而住，得一時之心解脫。時，尊者瞿低迦退轉其一時之心解脫。復次，尊者瞿低迦不放逸、虔誠、精進而住。得一時之心解脫。尊者瞿低迦又退轉其一時之心解脫。五～八",
+   "T0100-sa-2.30": "爾時，有一比丘名曰求悳，獨住仙山黑石窟中，處於閑靜，勤行精進，以不放逸，斷於我見，得時解脫，自身作證，復還退失。",
+   "T0099-sa1091": "時，有尊者瞿低迦，住王舍城仙人山側黑石室中，獨一思惟，不放逸行，修自饒益，時受意解脫身作證，數數退轉；一、二、三、四、五、六反退，還復得，時受意解脫身作證，尋復退轉。彼尊者瞿低迦作是念：「我獨一靜處思惟，不放逸行，精勤修習，以自饒益，時受意解脫身作證，而復數數退轉；"
+  },
+  "a02": {
+   "sn4.23": "Chaṭṭhampi kho āyasmā godhiko appamatto ātāpī pahitatto viharanto sāmayikaṁ cetovimuttiṁ phusi. Chaṭṭhampi kho āyasmā godhiko tamhā sāmayikāya cetovimuttiyā parihāyi.",
+   "nan-sn4.23": "三次……〔乃至〕……四次……〔乃至〕……五次……〔乃至〕……六次，尊者瞿低迦不放逸、虔誠、精進而住，得一時之心解脫。尊者瞿低迦六次退轉其一時之心解脫。",
+   "T0100-sa-2.30": "第二第三，乃至第六，亦還退失。",
+   "T0099-sa1091": "乃至六反，猶復退轉。"
+  },
+  "a03": {
+   "sn4.23": "Sattamampi kho āyasmā godhiko appamatto ātāpī pahitatto viharanto sāmayikaṁ cetovimuttiṁ phusi.",
+   "nan-sn4.23": "尊者瞿低迦七次不放逸、虔誠、精進而住，得一時之心解脫。"
+  },
+  "a04": {
+   "sn4.23": "Atha kho āyasmato godhikassa etadahosi: “yāva chaṭṭhaṁ khvāhaṁ sāmayikāya cetovimuttiyā parihīno. Yannūnāhaṁ satthaṁ āhareyyan”ti.",
+   "nan-sn4.23": "時，尊者瞿低迦作如是思念：「我至六次退轉一時之心解脫，我寧可將執劍！」",
+   "T0100-sa-2.30": "比丘念言：「我今獨處，修行精進，六返退失，若更退失，以刀自割。」魔王波旬知佛在王舍城毘婆波世山七葉窟中，瞿曇弟子名曰求悳，亦在王舍城獨住仙山黑石窟中，勤行精進，心不放逸，得時解脫，自身作證。得已，退失，如是六返。爾時，魔王而作是念：「求悳比丘若第七得，必自傷害，出魔境界。」",
+   "T0099-sa1091": "我今當以刀自殺，莫令第七退轉。」時，魔波旬作是念：「沙門瞿曇住王舍城毘婆羅山側七葉樹林石窟中，有弟子瞿低迦住王舍城仙人山側黑石室中，獨一靜處，專精思惟，得時受意解脫身作證，六反退轉，而復還得。彼作是念：『我已六反退，而復還得，莫令我第七退轉，我寧以刀自殺，莫令第七退轉。』若彼比丘以刀自殺者，莫令自殺，出我境界去，我今當往告彼大師。」"
+  },
+  "a05": {
+   "sn4.23": "Atha kho māro pāpimā āyasmato godhikassa cetasā cetoparivitakkamaññāya yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ gāthāhi ajjhabhāsi: “Mahāvīra mahāpañña, iddhiyā yasasā jala; Sabbaverabhayātīta, pāde vandāmi cakkhuma. Sāvako te mahāvīra, maraṇaṁ maraṇābhibhū; Ākaṅkhati cetayati, taṁ nisedha jutindhara. Kathañhi bhagavā tuyhaṁ, Sāvako sāsane rato; Appattamānaso sekkho, Kālaṁ kayirā janesutā”ti. Tena kho pana samayena āyasmatā godhikena satthaṁ āharitaṁ hoti.",
+   "nan-sn4.23": "時，惡魔波旬知尊者瞿低迦心之所念，詣於世尊處。詣已以偈語世尊：輝耀神通譽大雄大智慧\n離諸怖畏者禮奉卿足下\n大雄之勝死卿弟子想死\n以死是期望光明主止此\n世尊喜於教卿之弟子者\n如何未達證有學而為死其時，尊者瞿低迦執劍。",
+   "T0100-sa-2.30": "作是念已，捉琉璃琴，往到佛所，扣琴作偈：「大智大精進，有大神通達，\n於法得自在，威光極熾盛。\n汝聲聞弟子，今將欲自害，\n人中最上者，汝今應遮斷。\n云何樂汝法？何故學他死？」爾時，魔王說是偈已，佛告魔言：「波旬！汝今乃是諸放逸者之大親友，汝今所說自為說耳，乃不為彼比丘說也。」",
+   "T0099-sa1091": "爾時，波旬執琉璃柄琵琶，詣世尊所，鼓絃說偈：「大智大方便，自在大神力，\n得熾然弟子，而今欲取死。\n大牟尼當制，勿令其自殺，\n何聞佛世尊，正法律聲聞。\n學其所不得，而取於命終。」"
+  },
+  "a06": {
+   "sn4.23": "Atha kho bhagavā “māro ayaṁ pāpimā” iti viditvā māraṁ pāpimantaṁ gāthāya ajjhabhāsi: “Evañhi dhīrā kubbanti, nāvakaṅkhanti jīvitaṁ; Samūlaṁ taṇhamabbuyha, godhiko parinibbuto”ti.",
+   "nan-sn4.23": "時，世尊知是惡魔波旬，以偈語惡魔波旬曰：不欲於此生大雄乃如是\n拔除渴愛根瞿低迦涅槃",
+   "T0100-sa-2.30": "爾時，世尊復說偈言：「若人不怯弱，堅修行精進，\n恒樂於禪定，晝夜修眾善。\n乾竭愛欲使，壞汝魔軍眾，\n今捨後邊身，永入於涅槃。」爾時，魔王憂悲苦惱，失琉璃琴，愁毒悔恨，還本宮殿。",
+   "T0099-sa1091": "時，魔說此偈已，世尊說偈答言：「波旬放逸種，以自事故來，\n堅固具足士，常住妙禪定。\n晝夜勤精進，不顧於性命，\n見三有可畏，斷除彼愛欲。\n已摧伏魔軍，瞿低般涅槃，\n波旬心憂惱，琵琶落於地。\n內懷憂慼已，即沒而不現。」"
+  },
+  "a07": {
+   "sn4.23": "Atha kho bhagavā bhikkhū āmantesi: “āyāma, bhikkhave, yena isigilipassaṁ kāḷasilā tenupasaṅkamissāma yattha godhikena kulaputtena satthaṁ āharitan”ti.",
+   "nan-sn4.23": "時，世尊呼諸比丘：「諸比丘！我等今往伊師耆利山麓之黑曜巖，良家之子瞿低迦於彼執劍。」",
+   "T0100-sa-2.30": "佛告諸比丘：「當共汝等詣仙人山求悳比丘所。」",
+   "T0099-sa1091": "爾時，世尊告諸比丘：「汝等當來，共至仙人山側黑石室所，觀瞿低迦比丘以刀自殺。」"
+  },
+  "a08": {
+   "sn4.23": "“Evaṁ, bhante”ti kho te bhikkhū bhagavato paccassosuṁ.",
+   "nan-sn4.23": "「然唯！世尊。」彼等諸比丘應諾世尊。"
+  },
+  "a09": {
+   "sn4.23": "Atha kho bhagavā sambahulehi bhikkhūhi saddhiṁ yena isigilipassaṁ kāḷasilā tenupasaṅkami."
+  },
+  "a10": {
+   "sn4.23": "Addasā kho bhagavā āyasmantaṁ godhikaṁ dūratova mañcake vivattakkhandhaṁ semānaṁ. Tena kho pana samayena dhūmāyitattaṁ timirāyitattaṁ gacchateva purimaṁ disaṁ, gacchati pacchimaṁ disaṁ, gacchati uttaraṁ disaṁ, gacchati dakkhiṇaṁ disaṁ, gacchati uddhaṁ, gacchati adho, gacchati anudisaṁ.",
+   "nan-sn4.23": "時，世尊與眾多比丘俱，到伊師耆利山麓之黑曜巖。世尊由遠處見尊者瞿低迦，於牀上抱肩仰臥。其時，又見朦朧如煙霧，行往東方、行往西方、行往南方、行往北方、行於上方、行往下方，行往四維。",
+   "T0100-sa-2.30": "佛將諸比丘詣求悳所，見求悳尸東猶如煙聚。",
+   "T0099-sa1091": "爾時，世尊與眾多比丘往至仙人山側黑石室中，見瞿低迦比丘殺身在地，告諸比丘：「汝等見此瞿低迦比丘殺身在地不？」"
+  },
+  "a11": {
+   "sn4.23": "Atha kho bhagavā bhikkhū āmantesi:",
+   "nan-sn4.23": "時，世尊呼諸比丘曰：「諸比丘！汝等見矇朧如煙者，行往東方、行往西方、行往南方、行往北方、行往上方、行往下方、行往四維者否？」",
+   "T0100-sa-2.30": "佛告諸比丘：「汝等見此煙聚已不？」",
+   "T0099-sa1091": "諸比丘白佛：「唯然，已見，世尊！」"
+  },
+  "a12": {
+   "sn4.23": "“passatha no tumhe, bhikkhave, etaṁ dhūmāyitattaṁ timirāyitattaṁ gacchateva purimaṁ disaṁ, gacchati pacchimaṁ disaṁ, gacchati uttaraṁ disaṁ, gacchati dakkhiṇaṁ disaṁ, gacchati uddhaṁ, gacchati adho, gacchati anudisan”ti? “Evaṁ, bhante”.",
+   "nan-sn4.23": "「世尊！誠如所說。」",
+   "T0100-sa-2.30": "諸比丘言：「已見，世尊。」尸南西北亦如是聚。",
+   "T0099-sa1091": "佛告比丘：「汝等見瞿低迦比丘周匝遶身黑闇烟起，充滿四方不？」比丘白佛：「已見，世尊！」"
+  },
+  "a13": {
+   "sn4.23": "“Eso kho, bhikkhave, māro pāpimā godhikassa kulaputtassa viññāṇaṁ samanvesati: ‘kattha godhikassa kulaputtassa viññāṇaṁ patiṭṭhitan’ti? Appatiṭṭhitena ca, bhikkhave, viññāṇena godhiko kulaputto parinibbuto”ti.",
+   "nan-sn4.23": "「諸比丘！此惡魔波旬，以求良家子瞿低迦之識。良家子瞿低迦之識，住何處耶？然則！諸比丘！良家子瞿低迦之識已般涅槃而無住處。」",
+   "T0100-sa-2.30": "佛告比丘：「此是波旬隱形遶求悳所，覓其心識。」佛告比丘：「求悳比丘以入涅槃，無有神識，無所至方。」",
+   "T0099-sa1091": "佛告比丘：「此是惡魔波旬於瞿低迦善男子身側，周匝求其識神，然比丘瞿低迦以不住心，執刀自殺。」爾時，世尊為瞿低迦比丘受第一記。"
+  },
+  "a14": {
+   "sn4.23": "Atha kho māro pāpimā beluvapaṇḍuvīṇaṁ ādāya yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ gāthāya ajjhabhāsi: “Uddhaṁ adho ca tiriyaṁ, disā anudisā svahaṁ; Anvesaṁ nādhigacchāmi, godhiko so kuhiṁ gato”ti.",
+   "nan-sn4.23": "時，惡魔波旬取耶慮瓦樹之黃色箜篌來詣世尊處！詣已，以偈白世尊曰：我求於上下乃至於四維\n四方及八方不見瞿低迦\n往於何處耶",
+   "T0100-sa-2.30": "爾時，魔王化形摩納，而說偈言：「上下及四方，推求求悳識，\n莫知所至方，神識竟何趣？」",
+   "T0099-sa1091": "爾時，波旬而說偈言：「上下及諸方，遍求彼識神，\n都不見其處，瞿低何所之？」"
+  },
+  "a15": {
+   "sn4.23": "“Yo dhīro dhitisampanno, jhāyī jhānarato sadā; Ahorattaṁ anuyuñjaṁ, jīvitaṁ anikāmayaṁ. Jetvāna maccuno senaṁ, anāgantvā punabbhavaṁ; Samūlaṁ taṇhamabbuyha, godhiko parinibbuto”ti.",
+   "nan-sn4.23": "〔世尊：〕志堅英雄者常樂於禪思\n日夜從於道無願於此生\n打破死魔軍不行於再生\n拔除渴愛根瞿低迦涅槃",
+   "T0100-sa-2.30": "爾時，世尊告波旬言：「如此健夫，破汝軍眾，以入涅槃。」",
+   "T0099-sa1091": "爾時，世尊復說偈言：「如是堅固士，一切無所求，\n拔恩愛根本，瞿低般涅槃。」"
+  },
+  "a16": {
+   "sn4.23": "Tassa sokaparetassa, vīṇā kacchā abhassatha; Tato so dummano yakkho, tatthevantaradhāyathāti.",
+   "nan-sn4.23": "破敗於彼悲小脇落箜篌\n悲愴之夜叉以沒於此處",
+   "T0100-sa-2.30": "佛說是已，諸比丘聞佛所說，歡喜奉行。",
+   "T0099-sa1091": "佛說此經已，諸比丘聞佛所說，歡喜奉行。"
+  }
+ }
+}

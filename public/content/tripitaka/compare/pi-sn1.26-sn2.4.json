@@ -1,0 +1,107 @@
+{
+ "slug": "pi-sn1.26-sn2.4",
+ "title": "別譯雜阿含經 （三〇九）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "天子問偈"
+  },
+  {
+   "id": "a02",
+   "label": "世尊答偈"
+  },
+  {
+   "id": "a03",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn1.26",
+   "lang": "pi",
+   "label": "巴利 SN1.26",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn1.26",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN1.26",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "sn2.4",
+   "lang": "pi",
+   "label": "巴利 SN2.4",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn2.4",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN2.4",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.309",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （三〇九）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa1310",
+   "lang": "lzh",
+   "label": "雜阿含經 （一三一〇）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（三〇九）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一三一〇）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn1.26": "Saṁyutta Nikāya 1.26 3. Sattivagga Pajjotasutta",
+   "nan-sn1.26": "〔二六〕第六　光明",
+   "sn2.4": "Saṁyutta Nikāya 2.4 1. Paṭhamavagga Māgadhasutta Sāvatthinidānaṁ. Ekamantaṁ ṭhito kho māgadho devaputto bhagavantaṁ gāthāya ajjhabhāsi:",
+   "nan-sn2.4": "〔四〕第四　摩揭陀立於一面之摩揭陀天子，向世尊唱偈曰：",
+   "T0100-sa-2.309": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。",
+   "T0099-sa1310": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。爾時，有彌耆迦天子，容色絕妙，於後夜時來詣佛所，稽首佛足，退坐一面。"
+  },
+  "a01": {
+   "sn1.26": "“Kati lokasmiṁ pajjotā, Tehi loko pakāsati; Bhagavantaṁ puṭṭhumāgamma, Kathaṁ jānemu taṁ mayan”ti.",
+   "nan-sn1.26": "〔天神：〕世有幾何光普照此世間\n我等問世尊如何可得知",
+   "sn2.4": "“Kati lokasmiṁ pajjotā, yehi loko pakāsati; Bhavantaṁ puṭṭhumāgamma, kathaṁ jānemu taṁ mayan”ti.",
+   "nan-sn2.4": "世有幾多光徧照此世間\n我等問世尊如何得知此",
+   "T0100-sa-2.309": "時有天子名曰彌佉，來詣佛所，威光顯耀，赫然大明，頂禮佛足已却坐一面，而說偈言：「云何於世間，顯發於照明？\n何者是無上，第一之照明？\n如是甚深義，願佛為我說。」",
+   "T0099-sa1310": "其身光明遍照祇樹給孤獨園。"
+  },
+  "a02": {
+   "sn1.26": "“Cattāro loke pajjotā, pañcamettha na vijjati; Divā tapati ādicco, rattimābhāti candimā. Atha aggi divārattiṁ, tattha tattha pakāsati; Sambuddho tapataṁ seṭṭho, esā ābhā anuttarā”ti.",
+   "nan-sn1.26": "〔世尊：〕世有四種光此無第五光\n於晝太陽光於夜月普照\n時有日夜火彼此皆遍照\n正覺最勝火此為無上光",
+   "sn2.4": "“Cattāro loke pajjotā, pañcamettha na vijjati; Divā tapati ādicco, rattimābhāti candimā. Atha aggi divārattiṁ, tattha tattha pakāsati; Sambuddho tapataṁ seṭṭho, esā ābhā anuttarā”ti.",
+   "nan-sn2.4": "〔世尊：〕世有四種光此無第五光\n晝乃太陽輝夜乃月光照\n時火於日夜彼此相徧照\n正覺最勝火此為無上光",
+   "T0100-sa-2.309": "爾時世尊，以偈答曰：「於一切世間，凡有三照明，\n云何三照明？",
+   "T0099-sa1310": "時，彌耆迦天子說偈問佛：「明照有幾種，能照明世間，\n唯願世尊說，何等明最上？」爾時，世尊說偈答言：「有三種光明，能照耀世間：\n晝以日為照，月以照其夜，\n燈火晝夜照，照彼彼色像。\n上下及諸方，眾生悉蒙照；"
+  },
+  "a03": {
+   "T0100-sa-2.309": "所謂日月火。\n能於晝夜中，處處為照明，\n天上及人間，唯佛無上明。」時，彌佉天子聞佛所說，歡喜頂禮還于天宮。",
+   "T0099-sa1310": "人天光明中，佛光明為上。」佛說此經已，彌耆迦天子聞佛所說，歡喜隨喜，稽首佛足，即沒不現。"
+  }
+ }
+}

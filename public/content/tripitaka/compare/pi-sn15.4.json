@@ -1,0 +1,126 @@
+{
+ "slug": "pi-sn15.4",
+ "title": "別譯雜阿含經 （三三二）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "佛說輪迴無始"
+  },
+  {
+   "id": "a02",
+   "label": "問母乳與海水多少"
+  },
+  {
+   "id": "a03",
+   "label": "比丘答母乳更多"
+  },
+  {
+   "id": "a04",
+   "label": "佛讚善哉"
+  },
+  {
+   "id": "a05",
+   "label": "重結母乳多於海水"
+  },
+  {
+   "id": "a06",
+   "label": "說無始輪迴之因"
+  },
+  {
+   "id": "a07",
+   "label": "結句"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn15.4",
+   "lang": "pi",
+   "label": "巴利 SN15.4",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn15.4",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN15.4",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.332",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （三三二）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa939",
+   "lang": "lzh",
+   "label": "雜阿含經 （九三九）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（三三二）"
+  },
+  {
+   "work": "T0099",
+   "node": "（九三九）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn15.4": "Saṁyutta Nikāya 15.4 1. Paṭhamavagga Khīrasutta",
+   "nan-sn15.4": "〔四〕第四　乳",
+   "T0100-sa-2.332": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。",
+   "T0099-sa939": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。"
+  },
+  "a01": {
+   "sn15.4": "Sāvatthiyaṁ viharati.",
+   "nan-sn15.4": "〔爾時，世尊〕住舍衛城。",
+   "T0100-sa-2.332": "爾時，佛告諸比丘言：「生死長遠，無有邊際，無有能知其根源者。",
+   "T0099-sa939": "爾時，世尊告諸比丘：「眾生於無始生死，無明所蓋，愛繫其頸，長夜輪轉，不知苦之本際。」"
+  },
+  "a02": {
+   "sn15.4": "“Anamataggoyaṁ, bhikkhave, saṁsāro. Pubbā koṭi na paññāyati avijjānīvaraṇānaṁ sattānaṁ taṇhāsaṁyojanānaṁ sandhāvataṁ saṁsarataṁ.",
+   "nan-sn15.4": "〔爾時，世尊曰：〕「諸比丘！輪迴無始，眾生為無明所覆、渴愛所縛，不知流轉於輪迴之本際。」「諸比丘！汝等對此作如何思惟耶？汝等於此等長夜流轉輪迴所吞之母乳，與四海之水，何者為多耶？」",
+   "T0100-sa-2.332": "一切眾生皆為無明之所覆蓋，愛結纏縛，流轉生死，無有窮已，過去億苦無能知者。」",
+   "T0099-sa939": "佛告諸比丘：「於意云何？"
+  },
+  "a03": {
+   "sn15.4": "Taṁ kiṁ maññatha, bhikkhave, katamaṁ nu kho bahutaraṁ, yaṁ vā vo iminā dīghena addhunā sandhāvataṁ saṁsarataṁ mātuthaññaṁ pītaṁ, yaṁ vā catūsu mahāsamuddesu udakan”ti? “Yathā kho mayaṁ, bhante, bhagavatā dhammaṁ desitaṁ ājānāma, etadeva, bhante, bahutaraṁ yaṁ no iminā dīghena addhunā sandhāvataṁ saṁsarataṁ mātuthaññaṁ pītaṁ, na tveva catūsu mahāsamuddesu udakan”ti.",
+   "T0100-sa-2.332": "復告比丘：「譬如恒河流注四海，於昔過去生死曠遠，飲於母乳比恒河水，何者為多？」",
+   "T0099-sa939": "恒河流水及四大海，其水為多，汝等長夜輪轉生死，飲其母乳為多耶？」比丘白佛：「如我解世尊所說義，我等長夜輪轉生死，飲其母乳，多於恒河及四大海水。」"
+  },
+  "a04": {
+   "sn15.4": "“Sādhu sādhu, bhikkhave, sādhu kho me tumhe, bhikkhave, evaṁ dhammaṁ desitaṁ ājānātha.",
+   "nan-sn15.4": "「大德！我等知世尊所說之法，大德！我等於長夜流轉輪迴所吞之母乳為更多，非大海水所能比擬。」",
+   "T0100-sa-2.332": "比丘白佛：「如我解佛所說義者，過去久遠所飲母乳，多彼恒河，及四海水。」",
+   "T0099-sa939": "佛告比丘：「善哉！"
+  },
+  "a05": {
+   "sn15.4": "Etadeva, bhikkhave, bahutaraṁ yaṁ vo iminā dīghena addhunā sandhāvataṁ saṁsarataṁ mātuthaññaṁ pītaṁ, na tveva catūsu mahāsamuddesu udakaṁ.",
+   "nan-sn15.4": "「善哉，善哉！諸比丘！善哉！諸比丘！汝等對我所說之法，能如是知之矣。",
+   "T0099-sa939": "善哉！汝等長夜輪轉生死，飲其母乳，多於恒河及四大海水。所以者何？汝等長夜或生象中，飲其母乳，無量無數。或生駝、馬、牛、驢諸禽獸類飲其母乳，其數無量。汝等長夜棄於塜間，膿血流出，亦復無量。"
+  },
+  "a06": {
+   "sn15.4": "Taṁ kissa hetu? Anamataggoyaṁ, bhikkhave, saṁsāro …pe…",
+   "nan-sn15.4": "諸比丘！汝等長夜流轉輪迴而所吞飲之母乳為更多，非大海水所能比擬。所以者何？諸比丘！輪迴無始……足於能脫。」",
+   "T0100-sa-2.332": "「受形已來，無量無邊，或受象、馬、駝、驢、牛、羊、鹿等，種種畜獸，所飲母乳，不可稱計。譬如瀑流，漂諸草木，合成聚集，妨塞途路。愛之聚沫，亦復如是，能遮聖道。」餘如上說。",
+   "T0099-sa939": "或墮地獄、畜生、餓鬼，髓血流出，亦復如是。比丘！汝等無始生死輪轉已來，不知苦之本際。云何？比丘！色為常耶？為無常耶？」比丘白佛：「非常。世尊！」「乃至聖弟子於五受陰觀察非我、非我所，於諸世間得無所取；不取已，無所著，所作已作，自知不受後有。」佛說此經已，諸比丘聞佛所說，歡喜奉行。"
+  },
+  "a07": {
+   "sn15.4": "alaṁ vimuccitun”ti. Catutthaṁ."
+  }
+ }
+}

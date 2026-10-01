@@ -1,0 +1,212 @@
+{
+ "slug": "pi-mn50",
+ "title": "魔嬈亂經",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "經名與序分"
+  },
+  {
+   "id": "a01",
+   "label": "目犍連腹中見魔"
+  },
+  {
+   "id": "a02",
+   "label": "魔現形對話"
+  },
+  {
+   "id": "a03",
+   "label": "魔自認不及佛"
+  },
+  {
+   "id": "a04",
+   "label": "魔入喉部對話"
+  },
+  {
+   "id": "a05",
+   "label": "魔現形於胸前"
+  },
+  {
+   "id": "a06",
+   "label": "魔入婆羅門眾罵詈比丘"
+  },
+  {
+   "id": "a07",
+   "label": "佛教四無量心"
+  },
+  {
+   "id": "a08",
+   "label": "魔入婆羅門眾供養比丘"
+  },
+  {
+   "id": "a09",
+   "label": "佛教觀無常等"
+  },
+  {
+   "id": "a10",
+   "label": "魔化童子擊目連頭"
+  },
+  {
+   "id": "a11",
+   "label": "佛現神通觀察"
+  },
+  {
+   "id": "a12",
+   "label": "魔墮地獄受苦"
+  },
+  {
+   "id": "a13",
+   "label": "地獄苦報偈頌"
+  },
+  {
+   "id": "a14",
+   "label": "魔受苦報結論"
+  },
+  {
+   "id": "a15",
+   "label": "經結與分攝"
+  }
+ ],
+ "versions": [
+  {
+   "id": "mn50",
+   "lang": "pi",
+   "label": "巴利 MN50",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-mn50",
+   "lang": "lzh",
+   "label": "漢譯南傳 MN50",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0026-ma131",
+   "lang": "lzh",
+   "label": "中阿含經 （一三一）中阿含大品降魔經第十五（第三念誦）",
+   "who": "東晉 瞿曇僧伽提婆譯"
+  },
+  {
+   "id": "T0066",
+   "lang": "lzh",
+   "label": "魔嬈亂經",
+   "who": "失譯"
+  },
+  {
+   "id": "T0067",
+   "lang": "lzh",
+   "label": "弊魔試目連經",
+   "who": "吳 支謙譯"
+  }
+ ],
+ "works": [
+  "T0026",
+  "T0066",
+  "T0067"
+ ],
+ "anchors": [
+  {
+   "work": "T0026",
+   "node": "（一三一）中阿含大品降魔經第十五（第三念誦）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "mn50": "Majjhima Nikāya 50 Māratajjanīyasutta",
+   "nan-mn50": "第五十　魔訶責經如是我聞。——",
+   "T0026-ma131": "我聞如是：一時，佛遊婆奇瘦，在鼉山怖林鹿野園中。爾時，尊者大目犍連教授為佛而作禪屋，露地經行。",
+   "T0066": "聞如是：一時，婆伽婆在跋祇尸牧摩鼻量鹿野園中。彼時，尊者大目乾連，為世尊作窟，時露地彷徉，教授令作。",
+   "T0067": "聞如是：一時，佛遊於焚祇國妙華山恐懼聚鹿苑中。爾時，賢者大目乾連，夜於冥中經行，由於平路經行往返。"
+  },
+  "a01": {
+   "mn50": "Evaṁ me sutaṁ— ekaṁ samayaṁ āyasmā mahāmoggallāno bhaggesu viharati susumāragire bhesakaḷāvane migadāye. Tena kho pana samayena āyasmā mahāmoggallāno abbhokāse caṅkamati. Tena kho pana samayena māro pāpimā āyasmato mahāmoggallānassa kucchigato hoti koṭṭhamanupaviṭṭho. Atha kho āyasmato mahāmoggallānassa etadahosi: “kiṁ nu kho me kucchi garugaro viya? Māsācitaṁ maññe”ti. Atha kho āyasmā mahāmoggallāno caṅkamā orohitvā vihāraṁ pavisitvā paññatte āsane nisīdi. Nisajja kho āyasmā mahāmoggallāno paccattaṁ yoniso manasākāsi. Addasā kho āyasmā mahāmoggallāno māraṁ pāpimantaṁ kucchigataṁ koṭṭhamanupaviṭṭhaṁ.",
+   "nan-mn50": "一時，尊者大目犍連在婆伽國之鼉山（失悅摩羅山）恐怖林之鹿野苑。爾時，尊者大目犍連於露地經行，其時，惡魔入於尊者大目犍連之腹中，至〔下〕腹部，是時，尊者大目犍連作如是念：「我腹之贅重猶如滿月，何故然耶？」是時，尊者大目犍連由經行處下來，入僧房已，坐於所設之座，坐下之大目犍連獨自如理作意：於是，尊者大目犍連見入至下腹部之惡魔，作如是言：「惡者！出去！惡者！出去！汝勿觸嬈如來，勿觸嬈如來之弟子，汝勿長夜為不利、受苦者也。」是時，惡魔之如是念：「此沙門對予實不知、不見，而言：『惡者！出去！惡者！出去！勿觸嬈如來，勿觸嬈如來之弟子，汝勿長夜為不利、受苦者也。』彼師尚不能速知予，何況其弟子能知予耶？」是時，尊者大目犍連告惡魔曰：「惡魔！予實知汝，汝勿思——彼不知予——惡魔！汝為惡者也，惡魔，汝實如是念：『此沙門對予不知、不見而如是言——惡者！出去！惡者！出去！勿觸嬈如來，勿觸嬈如來之弟子，汝勿長夜為不利、受苦者也，彼師尚不能速知予，何況其弟子能知予耶？』」是時，惡魔之如是念：「此沙門實知予且見予，而如是言：『惡者！出去！惡者！出去！勿觸嬈如來，勿觸嬈如來之弟子，汝勿長夜為不利、受苦者』也。」是時，惡魔由大目犍連之〔腹〕部頂端上昇，住於其喉。",
+   "T0026-ma131": "彼時，魔王化作細形，入尊者大目揵連腹中。於是，尊者大目犍連即作是念：「我今腹中猶如食豆，我寧可入如其像定，以如其像定自觀其腹。」是時，尊者大目犍連至經行道頭，敷尼師檀，結跏趺坐，入如其像定，以如其像定自觀其腹，尊者大目犍連便知魔王在其腹中。尊者大目犍連即從定寤，語魔王曰：「汝波旬出！汝波旬出！莫觸嬈如來，亦莫觸嬈如來弟子，莫於長夜無義無饒益，必生惡處，受無量苦。」彼時，魔王便作是念：「此沙門不見不知而作是說：『汝波旬出！汝波旬出！莫觸嬈如來，亦莫觸嬈如來弟子，莫於長夜無義無饒益，必生惡處，受無量苦。』汝之尊師有大如意足，有大威德，有大福祐，有大威神，彼猶不能速知速見，況復弟子能知見耶？」尊者大目揵連復語魔王：「我復知汝意，汝作是念：『此沙門不知不見而作是說：「汝波旬出！汝波旬出！莫觸嬈如來，亦莫觸嬈如來弟子，莫於長夜無義無饒益，必生惡處，受無量苦。汝之尊師有大如意足，有大威德，有大福祐，有大威神，彼猶不能如是速知速見，況復弟子能知見耶？」』」彼魔波旬復作是念：「今此沙門知見我故，而作是說耳。」",
+   "T0066": "彼時，魔波旬自化其身令微小，入尊者目乾連腹中。彼時目乾連，便作是念：「何以故？我腹便重，猶若食豆，我寧可如其像三昧正受，以三昧意，自觀己腹。」於是尊者大目乾連，離彷徉處，至經行埵，敷尼師壇，結跏趺坐。於是尊者大目乾連，即如其像三昧正受，以三昧意，自觀己腹。彼尊者大目乾連，即便知之，此魔波旬，入我腹中。於是尊者大目乾連，還從三昧起，告魔波旬曰：「汝波旬還出！汝波旬還出！莫觸嬈如來及如來弟子，莫於長夜遭無量苦，無義饒益。」於是魔波旬，便作是念：「此沙門亦不知不見，而作此言：『汝，波旬！出！汝，波旬！出！莫觸嬈如來及如來弟子，莫於長夜遭無量苦，無義饒益。』謂彼世尊，有如是力，如是有所能，彼世尊猶不能知我見我，況復弟子，能知能見？是事不然！」「汝波旬！汝所念，我亦知之。汝所作念：『沙門不知不見，而作此言：「波旬！出！波旬！出！莫觸嬈如來及如來弟子，莫於長夜遭無量苦，無義饒益。」謂彼世尊，有如是力，如是有所能，彼猶不能知我見我，況復弟子，能知見我？",
+   "T0067": "於時，弊魔往詣佛所，自化徹景入目連腹中。賢者大目乾連：「吾腹何故而作雷鳴？猶如飢人而負重擔。吾將入室正受三昧，觀察其源。」於是目連即入其室三昧觀身，即時覩見弊魔作化徹景入其腹中，即謂之曰：「弊魔！且出且出！莫嬈如來及其弟子，將無長夜獲苦不安墜于惡趣。」魔心念言：「今此沙門，未會見我亦不知我，橫造妄語：『弊魔！且出且出！勿嬈如來及其弟子，將無長夜獲苦不安。』正使其師大聖世尊，尚不知吾，況其弟子？」目連報曰：「吾復知復知卿今心所念：『其師大聖尚不能知，況其弟子，知吾所在耶？』」魔即恐懼：「今此沙門已覺我矣！」"
+  },
+  "a02": {
+   "mn50": "Disvāna māraṁ pāpimantaṁ etadavoca: “nikkhama, pāpima; nikkhama, pāpima. Mā tathāgataṁ vihesesi, mā tathāgatasāvakaṁ. Mā te ahosi dīgharattaṁ ahitāya dukkhāyā”ti. Atha kho mārassa pāpimato etadahosi: “ajānameva kho maṁ ayaṁ samaṇo apassaṁ evamāha: ‘nikkhama, pāpima; nikkhama, pāpima. Mā tathāgataṁ vihesesi, mā tathāgatasāvakaṁ. Mā te ahosi dīgharattaṁ ahitāya dukkhāyā’ti. Yopissa so satthā sopi maṁ neva khippaṁ jāneyya, kuto pana maṁ ayaṁ sāvako jānissatī”ti?",
+   "nan-mn50": "尊者大目犍連見住於其喉之惡魔，即告惡魔曰：「惡魔！於此處予見汝，汝勿思：『彼不知予。』惡魔！汝住於〔予之〕喉；惡者！昔予生為魔是名惡觸嬈之魔也，其時，予有妹名伽利黤里，汝為彼之子也，汝是予之甥也。惡者！其時，拘留孫世尊、應供、等正覺者出現於世；惡者！拘留孫世尊、應供、等正覺者，有二大上首聲聞弟子名為無類者、蘇生者；惡者！就拘留孫世尊、應供、等正覺者弟子中，於說法不可能有任何人與尊者無類者相等者；惡者！依此理由，尊者無類者是伊多羅（無類者）、是伊多羅（無類者）之名生起。",
+   "T0026-ma131": "於是，魔波旬化作細形，從口中出，在尊者大目犍連前立。尊者大目揵連告曰：「波旬！昔有如來名覺礫拘荀大無所著、等正覺，我時作魔，名曰惡，我有妹，名黑，汝是彼子。波旬！因此事故，汝是我𡖦甥。波旬！覺礫拘荀大如來、無所著、等正覺有二大弟子，一者名音，二者名想。波旬！以何義故，尊者音名音耶？波旬！尊者音住梵天上，以常音聲滿千世界，更無有弟子音聲與彼等者、相似者、勝者。波旬！以是義故，尊者音名音也。「波旬！復以何義尊者想名想耶？波旬！尊者想所依遊行村邑，過夜平旦，著衣持鉢，入村乞食，善護其身，善攝諸根，立於正念。彼乞食已，食訖，中後收舉衣鉢，澡洗手足，以尼師檀著於肩上，至無事處，或至山林樹下，或至閑居靜處，敷尼師檀，結加趺坐，速入想知滅定。彼時，若有放牛羊人、取樵草人，或行路人，入彼山林，人見入想知滅定，便作是念：『今此沙門於無事處坐而命終，我等寧可以燥樵、草拾已，積聚覆其身上而耶維之。』即拾樵、草積覆其身，以火然之，便捨而去。彼尊者想過夜平旦，從定寤起，抖擻衣服，所依村邑遊行，如常著衣，持鉢入村乞食，善護其身，善攝諸根，立於正念。彼放牛羊人、取樵草人，或行路人，入彼山林人先見者，便作是念：『今此沙門在無事處坐坐而命終，我等昨已拾燥樵、草積覆其身，以火燒之，然已而去。然此賢者更復想也。』波旬！以是義故，尊者想名想也。「波旬！彼時惡魔便作是念：『此禿沙門以黑所縛，斷種無子，彼學禪，伺、增伺、數數伺，猶若如驢，竟日負重，繫在櫪上，不得麥食，為彼麥故，伺、增伺、數數伺。如是，此禿沙門為黑所縛，斷種無子，學禪，伺、增伺、數數伺，猶如猫子在鼠穴邊，欲捕鼠故，伺、增伺、數數伺。如是，此禿沙門為黑所縛，斷種無子，彼學禪，伺、增伺、數數伺，猶如鵂狐在燥樵積間，為捕鼠故，伺、增伺、數數伺。如是，此禿沙門為黑所縛，斷種無子，學禪，伺、增伺、數數伺，猶如鶴鳥在水岸邊，為捕魚故，伺、增伺、數數伺。如是，此禿沙門為黑所縛，斷種無子，學禪，伺、增伺、數數伺。彼何所伺？為何義伺？求何等伺？彼調亂狂發敗壞，我不知彼何所從來？亦不知彼何所從去？亦不知住止，不知死不知生，我寧可教勅梵志、居士，汝等共來罵詈精進沙門，打破責數。",
+   "T0066": "是事不然！』」於是魔波旬，復作是念：「此沙門為知見我，而作此言：『汝，波旬！出！汝，波旬！出！莫觸嬈如來及如來弟子，莫於長夜遭無量苦，無義饒益。』」於是魔波旬，即從尊者大目乾連口中出，便在前立。彼魔波旬，却住一面已，尊者大目乾連，告波旬曰：「波旬！昔過去世有如來，名拘樓孫無所著、等正覺。我在彼時，亦為觸嬈魔。我有妹名迦羅，汝是彼子。汝波旬！當以此知，汝是我妹子。彼拘樓孫如來、無所著、等正覺，魔波旬有弟子，名毗樓（音聲）薩若，最上最賢，勝諸弟子。何以故，波旬而令尊者毗樓，字為毗樓薩若？波旬！此尊者毗樓者，住梵天上，能以音聲，滿千世界，無有弟子與此等者、與聲等者，無相似者，謂能說法。此波旬以是故，而令尊者毗樓，名曰毗樓薩若。此波旬以何方便，令彼名薩若字曰薩若？此波旬名薩若者，彼依村城住，早起著衣服持衣鉢，詣村城乞食，自護其身，諸根具足，意念常定。彼詣村城乞食已，中後而還，舉衣鉢澡浴其足，舉尼師壇，著右肩上，若至靜處、若至樹下、若至空處，依敷尼師壇，結跏趺坐，輕舉速疾，入想知滅正受。彼中牧羊人，若見牧牛人，或擔薪人，或行路人，若見彼速疾入想知滅正受，見已作是念：『此沙門，坐此靜處今命終，我等寧可以乾草木牛糞，若敷碎草木，積覆其身，然火當還。』彼牧羊人、牧牛人、擔薪人、行路人，以乾草木，若敷碎草木，積覆其身，然火已，離而還。於是尊者薩若，過夜已從三昧起，輕舉速疾收拭其衣，依城村住。彼晨起著衣服，與衣鉢俱，詣城村乞食，自能護身，具足諸根，意念常定。若彼所見，牧羊人、牧牛人、擔薪人、行路人，見已作是念：『此沙門在他靜處而命終，我等以乾草木牛糞，若敷碎草木，積覆其身，然火已離而還。而今此尊者，還復命存。』此波旬，以是方便故，名為薩若，字曰薩若（還生）。",
+   "T0067": "即化徹身出住其前。目連告魔：「乃往過去久遠之世，拘樓秦佛時，我曾為魔，號曰瞋恨。吾有一姉，名曰黤黑，爾時汝為作子，以是知之，是吾姉子。爾時有佛出于世間，號拘樓秦如來、至真、等正覺，有二弟子，一曰洪音，二曰知想，最尊第一仁賢難及。何故賢者名曰洪音？住於梵天謦揚大聲，聞于三千大千世界。何故賢者名知想？若處閑居，坐於樹下、曠野山中，如其色像三昧正受。牧羊牧牛、擔薪負草、田居行人，見之如此，各相謂言：『於此命過，吾等各各輦薪負草，共蛇維之。』如其所言，即共蛇維。知想比丘從三昧起，奮迅衣服去其埃灰，更整法服，持鉢入城國邑聚落而行分衛。牧牛羊者負薪草人，心懷驚愕各各相謂：『吾在曠野閑居，見此比丘，坐於樹下而不喘息，謂之命過，共積薪草而蛇維之。』今者知想，以是之故曰想識。「於是瞋恚魔心自念言：『此輩沙門自謂持戒，寂然默聲思惟而行，譬如狗猫思欲捕鼠，靜然不動鼠出即搏，沙門禪思亦復如是。譬如鶬鶴而欲捕魚，默靜聲潛思魚出則吞，諸沙門等亦復如是，潛思惟念專有所求。譬如大驢晝負重駄至夜疲極，飢渴潛思欲得食飲，諸沙門等亦復如是。』「時，魔心念：『我寧可化於此國土長者梵志，取諸持戒沙門道人，撾捶罵詈、裂衣破鉢破頭。令起瞋恚，吾因是緣得其方便。』"
+  },
+  "a03": {
+   "mn50": "Atha kho āyasmā mahāmoggallāno māraṁ pāpimantaṁ etadavoca: “evampi kho tāhaṁ, pāpima, jānāmi, mā tvaṁ maññittho: ‘na maṁ jānātī’ti. Māro tvamasi, pāpima; tuyhañhi, pāpima, evaṁ hoti: ‘ajānameva kho maṁ ayaṁ samaṇo apassaṁ evamāha— nikkhama, pāpima; nikkhama, pāpima. Mā tathāgataṁ vihesesi, mā tathāgatasāvakaṁ. Mā te ahosi dīgharattaṁ ahitāya dukkhāyāti. Yopissa so satthā sopi maṁ neva khippaṁ jāneyya, kuto pana maṁ ayaṁ sāvako jānissatī’”ti?"
+  },
+  "a04": {
+   "mn50": "Atha kho mārassa pāpimato etadahosi: “jānameva kho maṁ ayaṁ samaṇo passaṁ evamāha: ‘nikkhama, pāpima; nikkhama, pāpima. Mā tathāgataṁ vihesesi, mā tathāgatasāvakaṁ. Mā te ahosi dīgharattaṁ ahitāya dukkhāyā’”ti."
+  },
+  "a05": {
+   "mn50": "Atha kho māro pāpimā āyasmato mahāmoggallānassa mukhato uggantvā paccaggaḷe aṭṭhāsi. Addasā kho āyasmā mahāmoggallāno māraṁ pāpimantaṁ paccaggaḷe ṭhitaṁ; disvāna māraṁ pāpimantaṁ etadavoca: “etthāpi kho tāhaṁ, pāpima, passāmi; mā tvaṁ maññittho ‘na maṁ passatī’ti. Eso tvaṁ, pāpima, paccaggaḷe ṭhito. Bhūtapubbāhaṁ, pāpima, dūsī nāma māro ahosiṁ, tassa me kāḷī nāma bhaginī. Tassā tvaṁ putto. So me tvaṁ bhāgineyyo ahosi. Tena kho pana, pāpima, samayena kakusandho bhagavā arahaṁ sammāsambuddho loke uppanno hoti. Kakusandhassa kho pana, pāpima, bhagavato arahato sammāsambuddhassa vidhurasañjīvaṁ nāma sāvakayugaṁ ahosi aggaṁ bhaddayugaṁ. Yāvatā kho pana, pāpima, kakusandhassa bhagavato arahato sammāsambuddhassa sāvakā. Tesu na ca koci āyasmatā vidhurena samasamo hoti yadidaṁ dhammadesanāya. Iminā kho evaṁ, pāpima, pariyāyena āyasmato vidhurassa vidhuroteva samaññā udapādi. Āyasmā pana, pāpima, sañjīvo araññagatopi rukkhamūlagatopi suññāgāragatopi appakasireneva saññāvedayitanirodhaṁ samāpajjati. Bhūtapubbaṁ, pāpima, āyasmā sañjīvo aññatarasmiṁ rukkhamūle saññāvedayitanirodhaṁ samāpanno nisinno hoti. Addasaṁsu kho, pāpima, gopālakā pasupālakā kassakā pathāvino āyasmantaṁ sañjīvaṁ aññatarasmiṁ rukkhamūle saññāvedayitanirodhaṁ samāpannaṁ nisinnaṁ; disvāna tesaṁ etadahosi: ‘acchariyaṁ vata bho, abbhutaṁ vata, bho. Ayaṁ samaṇo nisinnakova kālaṅkato. Handa naṁ dahāmā’ti. Atha kho te, pāpima, gopālakā pasupālakā kassakā pathāvino tiṇañca kaṭṭhañca gomayañca saṅkaḍḍhitvā āyasmato sañjīvassa kāye upacinitvā aggiṁ datvā pakkamiṁsu. Atha kho, pāpima, āyasmā sañjīvo tassā rattiyā accayena tāya samāpattiyā vuṭṭhahitvā cīvarāni papphoṭetvā pubbaṇhasamayaṁ nivāsetvā pattacīvaramādāya gāmaṁ piṇḍāya pāvisi. Addasaṁsu kho te, pāpima, gopālakā pasupālakā kassakā pathāvino āyasmantaṁ sañjīvaṁ piṇḍāya carantaṁ; disvāna nesaṁ etadahosi: ‘acchariyaṁ vata bho, abbhutaṁ vata, bho. Ayaṁ samaṇo nisinnakova kālaṅkato, svāyaṁ paṭisañjīvito’ti. Iminā kho evaṁ, pāpima, pariyāyena āyasmato sañjīvassa sañjīvoteva samaññā udapādi."
+  },
+  "a06": {
+   "mn50": "Atha kho, pāpima, dūsissa mārassa etadahosi: ‘imesaṁ kho ahaṁ bhikkhūnaṁ sīlavantānaṁ kalyāṇadhammānaṁ neva jānāmi āgatiṁ vā gatiṁ vā. Yannūnāhaṁ brāhmaṇagahapatike anvāviseyyaṁ— etha, tumhe bhikkhū sīlavante kalyāṇadhamme akkosatha paribhāsatha rosetha vihesetha. Appeva nāma tumhehi akkosiyamānānaṁ paribhāsiyamānānaṁ rosiyamānānaṁ vihesiyamānānaṁ siyā cittassa aññathattaṁ, yathā taṁ dūsī māro labhetha otāran’ti. Atha kho te, pāpima, dūsī māro brāhmaṇagahapatike anvāvisi: ‘etha, tumhe bhikkhū sīlavante kalyāṇadhamme akkosatha paribhāsatha rosetha vihesetha. Appeva nāma tumhehi akkosiyamānānaṁ paribhāsiyamānānaṁ rosiyamānānaṁ vihesiyamānānaṁ siyā cittassa aññathattaṁ, yathā taṁ dūsī māro labhetha otāran’ti. Atha kho te, pāpima, brāhmaṇagahapatikā anvāvisiṭṭhā dūsinā mārena bhikkhū sīlavante kalyāṇadhamme akkosanti paribhāsanti rosenti vihesenti: ‘ime pana muṇḍakā samaṇakā ibbhā kiṇhā bandhupādāpaccā “jhāyinosmā jhāyinosmā”ti pattakkhandhā adhomukhā madhurakajātā jhāyanti pajjhāyanti nijjhāyanti apajjhāyanti. Seyyathāpi nāma ulūko rukkhasākhāyaṁ mūsikaṁ maggayamāno jhāyati pajjhāyati nijjhāyati apajjhāyati; evamevime muṇḍakā samaṇakā ibbhā kiṇhā bandhupādāpaccā “jhāyinosmā jhāyinosmā”ti pattakkhandhā adhomukhā madhurakajātā jhāyanti pajjhāyanti nijjhāyanti apajjhāyanti. Seyyathāpi nāma kotthu nadītīre macche maggayamāno jhāyati pajjhāyati nijjhāyati apajjhāyati; evamevime muṇḍakā samaṇakā ibbhā kiṇhā bandhupādāpaccā “jhāyinosmā jhāyinosmā”ti pattakkhandhā adhomukhā madhurakajātā jhāyanti pajjhāyanti nijjhāyanti apajjhāyanti. Seyyathāpi nāma biḷāro sandhisamalasaṅkaṭīre mūsikaṁ maggayamāno jhāyati pajjhāyati nijjhāyati apajjhāyati; evamevime muṇḍakā samaṇakā ibbhā kiṇhā bandhupādāpaccā “jhāyinosmā jhāyinosmā”ti pattakkhandhā adhomukhā madhurakajātā jhāyanti pajjhāyanti nijjhāyanti apajjhāyanti. Seyyathāpi nāma gadrabho vahacchinno sandhisamalasaṅkaṭīre jhāyati pajjhāyati nijjhāyati apajjhāyati; evamevime muṇḍakā samaṇakā ibbhā kiṇhā bandhupādāpaccā “jhāyinosmā jhāyinosmā”ti pattakkhandhā adhomukhā madhurakajātā jhāyanti pajjhāyanti nijjhāyanti apajjhāyantī’ti. Ye kho pana, pāpima, tena samayena manussā kālaṁ karonti yebhuyyena kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjanti.",
+   "nan-mn50": "又，惡者！尊者蘇生者是閑林、樹下、空靜處住者以容易速入想受滅定；惡者！尊者蘇生者往昔坐於一樹下，入想受滅定；惡者！牧牛者、牧畜者、耕作者、旅行者等，見坐於樹下，入想受滅定之尊者蘇生者，見已，彼等有如是之念：『實不可思議！實未曾有哉！此沙門坐脫而死也，我等宜火葬彼。』惡者！是時，彼等牧牛者、牧畜者、耕作者、旅行者，拾聚草、木片、牛糞等，積覆於尊者蘇生者身上，彼等施火而去；惡者！是時，尊者蘇生者彼過其夜，由定而起，捽擻衣服，於晨早、著衣、執持衣，詣入村里乞食；惡者！彼等牧牛者、牧畜者、耕作者、旅行者，見乞食之尊者蘇生者，見已，彼等作如是念：『實不可思議哉！實未曾有哉！此沙門已坐脫而死，卻又蘇生也。』惡者！依此理由，尊者蘇生者是珊耆婆（蘇生者）、是珊耆婆（蘇生者）之名生起。惡者！是時，魔度使作如是念：『予不知此等持戒，善法諸比丘之來處，或趣處，予當魅入婆羅門居士眾，〔言〕：汝等對持戒、如是善法諸比丘罵詈之、誹謗之、使惱之、觸嬈之，然或被汝等罵詈、誹謗、使惱、觸嬈，而心生變異，令魔度使得其方便也。』惡者！是時，魔度使魅入彼等婆羅門之居士眾〔言〕：『汝等罵持戒、〔持喜法〕諸比丘，罵詈之、誹謗之、使惱之、觸嬈之，然或被汝等罵詈、誹謗、使悔、觸嬈者、而心生變異，令魔度使得其方便也。』惡者！是時，魔度使魅入彼等婆羅門居士眾，罵詈、誹謗、使惱、觸嬈持戒、持善法諸比丘〔言〕：此等禿頭、似沙門而非沙門、賤奴、黑奴、由梵天足〔所生〕子孫，〔又自言〕：『我等為禪思者也，我等為禪思者也。』縮肩、低頭、倦怠而禪思之、明思之、審思之、冥想之。猶如梟鳥於樹枝上狩獵，求鼠而禪思之，明思之、審思之、冥想之；如是此等禿頭，似沙門而非沙門、賤奴、黑奴，從梵天之足〔所生〕子孫，〔又自言〕：『我等為禪思者，我等為禪思者。』縮肩、低頭、倦怠而禪思之、明思之、審思之、冥想之；猶如野孤於河岸漁魚而禪思之、明思之、審思之、冥想之；如是此等禿頭……乃至冥想之；又猶如貓於罅隙垃圾箱、塵堆獵鼠、而禪思之、明思之、審思之、冥想之；如是此等禿頭，乃至冥想之；又猶如驢脫離牽獸〔隊伍〕、於罅隙、垃圾箱、塵堆、而禪思之、明思之、審思之、冥想之；如是此等禿頭，似沙門而非沙門、賤奴、黑奴、由梵天足〔所生〕子孫，〔又自言〕：『我等為禪思者也，我等為禪思者也。』縮肩、低頭、倦怠而禪思之、明思之、審思之、冥想之。惡者！其時，死去之人等，多數身壞命終後，生於惡生、惡趣、墮處、地獄。",
+   "T0026-ma131": "所以者何？或罵打破責數時，儻能起惡心，令我得其便。』「波旬！彼時惡魔便教勅梵志、居士，彼梵志、居士罵詈精進沙門，打破責數。彼梵志、居士或以木打，或以石擲，或以杖撾，或傷精進沙門頭，或裂壞衣，或破應器。爾時，梵志、居士若有死者，因此緣此，身壞命終，必至惡處，生地獄中。彼生已，作是念：『我應受此苦，當復更受極苦過是。所以者何？以我等向精進沙門行惡行故。』「波旬！覺礫拘荀大如來、無所著、等正覺弟子用傷其頭，裂壞其衣，破其應器已，往詣覺礫拘荀大如來、無所著、等正覺所。爾時，覺礫拘荀大如來、無所著、等正覺無量百千眷屬圍遶而為說法。覺礫拘荀大如來、無所著、等正覺遙見弟子頭傷、衣裂、鉢破而來，見已，告諸比丘：『汝等見不？惡魔教勅梵志、居士：「汝等共來罵詈精進沙門，打破嘖數。所以者何？或罵打破責數時，儻能起惡心，令我得其便。」",
+   "T0066": "「於是度數（弊也）簸提旬（惡也常波）作是念：『此剃頭沙門，以黑纏形，彼與禪俱，與禪相應，常行於禪。猶若驢常荷擔，繫在櫪上，或不得麥，禪而禪，與禪相應，常行於禪。如是剃頭沙門，以黑纏形，或與禪俱，與禪相應，行禪。猶若猫子，在於鼠穴前，而欲捕鼠在中，禪而禪，與禪相應，行於禪。如是此剃頭沙門，以黑纏形，常與禪俱，與禪相應，常行禪。猶若鵂狐在空牆上，在中捕鼠，禪而禪，與禪相應，常行禪。如是此剃頭沙門，以黑纏形，常與禪俱，與禪相應，常行禪。猶若鵁在水岸上，伺魚於中，禪而禪。如是此剃頭沙門，以黑纏形，與禪相應，禪而禪。此云何名為禪？為何所禪？為是何禪？或亂或忘或不定，我亦不見來，亦不見去，亦不見住，亦不見終，亦不見生，我寧可為婆羅門居士說。如是此沙門，精進當罵之，當打，當說非，當恚之，若少多罵打，瞋恚說其非。若意有異者，此惡魔求其便、索其便，或得其便，或得其因緣。』此魔波旬為弊魔，而向婆羅門居士：『彼沙門精進，當罵之說其非，當瞋恚之。彼精進沙門，當以木打之，當以石擲，或以杖撾，或破彼精進沙門頭，或裂衣壞鉢。』謂彼時婆羅門居士命終，彼因彼緣，身壞死，生惡趣泥犁中。生彼已，作是念：『今已受此苦，更或能復劇是處，而我於精進沙門，發於邪。』「於是波旬，取拘樓孫如來、無所著、等正覺弟子，破其頭，壞其鉢，裂其衣，便往至拘樓孫如來、無所著、等正覺所。「彼時拘樓孫如來、無所著、等正覺，在無量百千眾前圍遶，而為說法。拘樓孫如來、無所著、等正覺，遙見弟子，頭被打破，衣鉢被裂，從遠而來。見已告諸比丘：『汝諸比丘！當見此比丘，為弊魔向婆羅門居士說：「汝當取精進沙門，罵之撾打，當瞋恚少多撾打，瞋恚意或能有若干。」而此弊魔，求其便，索其因緣，求其因緣，得其因緣。",
+   "T0067": "尋如所念，即化國中長者梵志，取諸沙門持戒奉法，撾捶罵詈、壞鉢破頭、裂其被服。此諸沙門，如猫捕鼠如鶴吞魚，譬如鵄梟於樹間捕鼠，諸沙門坐禪亦復如是，如驢飢疲。時諸比丘，皆被毀辱低頭直行，至拘樓秦佛所。佛為四輩天龍鬼神廣說經道，見諸比丘被毀辱來，告諸比丘：『比丘！今瞋恨魔化諸國中長者梵志，取諸持戒奉法沙門，撾捶罵詈、破頭壞鉢、裂其衣服，令心變恨起瞋恚意，吾以是緣得其方便使道不成。"
+  },
+  "a07": {
+   "mn50": "Atha kho, pāpima, kakusandho bhagavā arahaṁ sammāsambuddho bhikkhū āmantesi: ‘anvāviṭṭhā kho, bhikkhave, brāhmaṇagahapatikā dūsinā mārena— etha, tumhe bhikkhū sīlavante kalyāṇadhamme akkosatha paribhāsatha rosetha vihesetha, appeva nāma tumhehi akkosiyamānānaṁ paribhāsiyamānānaṁ rosiyamānānaṁ vihesiyamānānaṁ siyā cittassa aññathattaṁ, yathā taṁ dūsī māro labhetha otāran’ti. Etha, tumhe, bhikkhave, mettāsahagatena cetasā ekaṁ disaṁ pharitvā viharatha, tathā dutiyaṁ, tathā tatiyaṁ, tathā catutthaṁ. Iti uddhamadho tiriyaṁ sabbadhi sabbattatāya sabbāvantaṁ lokaṁ mettāsahagatena cetasā vipulena mahaggatena appamāṇena averena abyābajjhena pharitvā viharatha. Karuṇāsahagatena cetasā …pe… muditāsahagatena cetasā …pe… upekkhāsahagatena cetasā ekaṁ disaṁ pharitvā viharatha, tathā dutiyaṁ, tathā tatiyaṁ, tathā catutthaṁ. Iti uddhamadho tiriyaṁ sabbadhi sabbattatāya sabbāvantaṁ lokaṁ upekkhāsahagatena cetasā vipulena mahaggatena appamāṇena averena abyābajjhena pharitvā viharathā’ti. Atha kho te, pāpima, bhikkhū kakusandhena bhagavatā arahatā sammāsambuddhena evaṁ ovadiyamānā evaṁ anusāsiyamānā araññagatāpi rukkhamūlagatāpi suññāgāragatāpi mettāsahagatena cetasā ekaṁ disaṁ pharitvā vihariṁsu, tathā dutiyaṁ, tathā tatiyaṁ, tathā catutthaṁ. Iti uddhamadho tiriyaṁ sabbadhi sabbattatāya sabbāvantaṁ lokaṁ mettāsahagatena cetasā vipulena mahaggatena appamāṇena averena abyābajjhena pharitvā vihariṁsu. Karuṇāsahagatena cetasā …pe… muditāsahagatena cetasā …pe… upekkhāsahagatena cetasā ekaṁ disaṁ pharitvā vihariṁsu, tathā dutiyaṁ, tathā tatiyaṁ, tathā catutthaṁ. Iti uddhamadho tiriyaṁ sabbadhi sabbattatāya sabbāvantaṁ lokaṁ upekkhāsahagatena cetasā vipulena mahaggatena appamāṇena averena abyābajjhena pharitvā vihariṁsu. Atha kho, pāpima, dūsissa mārassa etadahosi:",
+   "nan-mn50": "惡者！是時，拘留孫世尊、應供、等正覺者，對諸比丘曰：『諸比丘！魔度使確已魅入婆羅門居士眾，〔言〕：在此，汝等對持戒、〔持〕善法諸比丘，罵詈之、誹謗之、使惱之、觸嬈之，然或被汝等之罵詈、誹謗、使惱、觸嬈，而心生變異，令魔度使得其方便。——諸比丘！是時，汝等應以慈俱心、徧滿一方而住，如是第二、第三、第四、如是上、下、橫、一切處、將一切〔有情〕視為自己，對含有一切〔有情之〕世界，以廣大、廣博、無量、無怨、無瞋害慈俱心、徧滿而住；〔次〕以悲俱心……以喜俱心……捨俱心，徧滿一方而住，如是第二、第三、第四〔方〕，如是上、下、橫、一切處，一切〔有情〕視為自己，對含有一切〔有情之〕世界，以廣大、廣博、無量、無怨、無瞋害捨俱心、徧滿而住。』惡者！是時，依拘留孫世尊、應供、等正覺者，如是教誡、如是訓誡彼等比丘，行至森林、樹下及空靜處，以慈俱心、徧滿一方而住，如是第二、第三、第四〔方〕，如是上、下、橫、一切處，將一切〔有情〕視為自己，含有一切〔有情之〕世界，以廣大、廣博、無量、無怨、無瞋害慈俱心、徧滿而住；以悲俱心……以喜俱心……以捨俱心，徧滿而住之，如是第二、第三、第四〔方〕，如是上、下、橫、一切處，將一切〔有情〕視為自己，對含有一切〔有情之〕世界，以廣大、廣博、無量、無怨、無瞋害捨俱心，徧滿而住。",
+   "T0026-ma131": "比丘！汝等當以心與慈俱，遍滿一方成就遊。如是二三四方、四維上下，普周一切，心與慈俱，無結無怨，無恚無諍，極廣甚大，無量善修，遍滿一切世間成就遊。如是悲、喜心與捨俱，無結無怨，無恚無諍，極廣甚大，無量善修，遍滿一切世間成就遊，令惡魔求便不能得便。』「波旬！覺礫拘荀大如來、無所著、等正覺以此教教諸弟子，彼即受教，心與慈俱，遍滿一方成就遊。如是二三四方、四維上下，普周一切，心與慈俱，無結無怨，無恚無諍，極廣甚大，無量善修，遍滿一切世間成就遊。如是悲喜心與捨俱，無結無怨無恚無諍，極廣甚大，無量善修，遍滿一切世間成就遊。以此故，彼惡魔求便不能得便。「波旬！彼時惡魔復作是念：『我以此事求精進沙門便，而不能得。",
+   "T0066": "汝諸比丘！當與慈俱滿一方已正受住，如是二三四上下一切諸方意與慈俱，無怨無二無恚，極廣極大，無量極分別，滿一切諸方已正受住。如是，意與悲、喜、護俱，滿一切諸方已正受住，當令弊魔求其便，索其因緣，不得其便，不得其因緣。』於是波旬，向拘樓孫如來、無所著、等正覺弟子，說如此言：『彼與慈俱，滿一方已正受住，如是二三四上下一切諸方意與慈俱，無怨無二無恚，極廣極大，無量極分別，滿諸方已正受住。如是，意與悲、喜、護俱，滿一切諸方已正受住。謂彼惡魔求其便，索其因緣，不能得其便，不能得其因緣。』",
+   "T0067": "爾等於此，當行四等：慈、悲、喜、護，不懷怨結，無瞋恨心，廣大難限普安無邊等于十方，雖求汝便終不能得。』比丘受教，所在閑居曠野一心禪思，行四等心意無增減。時瞋恚魔，雖求持戒奉法沙門之便，永不能得。「爾時長者梵志從受魔教，毀辱持戒奉法沙門，壽終之後皆歸惡趣，勤苦瘦惱考掠之處。在地獄中受其化身，譬如大樹，其廣大如大曠野，在燒鐵地裸形自投，各自謂言：『吾等薄祐殃暴弊惡，乃取持戒奉法沙門毀辱罵詈，吾等於此歸命呼嗟，不能得見持戒奉法沙門，欲求其便因緣相見，已自造此自獲其殃，坐隨魔教不能護身。』「爾時，瞋恚魔心自念言：『因是方便，求諸沙門持戒人便，永不能得；必當變行，化諸長者梵志，供養奉侍持戒沙門，衣被飯食床臥醫藥，使貪供養，因是之緣吾得其便。』"
+  },
+  "a08": {
+   "mn50": "‘evampi kho ahaṁ karonto imesaṁ bhikkhūnaṁ sīlavantānaṁ kalyāṇadhammānaṁ neva jānāmi āgatiṁ vā gatiṁ vā, yannūnāhaṁ brāhmaṇagahapatike anvāviseyyaṁ: “etha, tumhe bhikkhū sīlavante kalyāṇadhamme sakkarotha garuṁ karotha mānetha pūjetha, appeva nāma tumhehi sakkariyamānānaṁ garukariyamānānaṁ māniyamānānaṁ pūjiyamānānaṁ siyā cittassa aññathattaṁ, yathā taṁ dūsī māro labhetha otāran”’ti. Atha kho te, pāpima, dūsī māro brāhmaṇagahapatike anvāvisi: ‘etha, tumhe bhikkhū sīlavante kalyāṇadhamme sakkarotha garuṁ karotha mānetha pūjetha, appeva nāma tumhehi sakkariyamānānaṁ garukariyamānānaṁ māniyamānānaṁ pūjiyamānānaṁ siyā cittassa aññathattaṁ, yathā taṁ dūsī māro labhetha otāran’ti. Atha kho te, pāpima, brāhmaṇagahapatikā anvāviṭṭhā dūsinā mārena bhikkhū sīlavante kalyāṇadhamme sakkaronti garuṁ karonti mānenti pūjenti. Ye kho pana, pāpima, tena samayena manussā kālaṁ karonti yebhuyyena kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjanti.",
+   "nan-mn50": "惡者！是時，魔度使如是念：『予雖如是為之，然不知此等持戒、〔持〕善法比丘之來處或趣處，予當魅入於婆羅門居士眾，〔言〕：在此，汝等對持戒、持善法諸比丘，應恭敬、尊重、奉事、供養，或被汝等恭敬、尊重、奉事、供養、而心生變異，令魔度使得其方便也。』惡者！是時，魔度使魅入於彼等婆羅門居士眾，言：『在此，汝等對持戒、〔持〕善法諸比丘，應恭敬、尊重、奉事、供養之，然或被汝等恭敬、尊重、奉事、供養、而心生變異，令魔度使得其方便。』惡魔！是時，魔度使魅入彼等婆羅門居士眾，對持戒、〔持〕善法諸比丘，恭敬、尊重、奉事、供養之；惡者！其時，死去之人等，多數身壞命終後，生於善趣、天界。",
+   "T0026-ma131": "我寧可教勅梵志、居士，汝等共來奉敬、供養、禮事精進沙門，或以奉敬、供養、禮事精進沙門，儻能起惡心，令我得其便。』波旬！彼梵志、居士為惡魔所教勅已，即共奉敬、供養、禮事精進沙門，以衣敷地而作是說：『精進沙門可於上行，精進沙門難行而行，令我長夜得利饒益，安隱快樂。』梵志、居士以髮布地而作是說：『精進沙門可於上行，精進沙門難行而行，令我長夜得利饒益，安隱快樂。』梵志、居士以手捧持種種飲食，住道邊待而作是說：『精進沙門受是食是，可持是去，隨意而用，令我長夜得利饒益，安隱快樂。』諸信梵志、居士見精進沙門，敬心扶抱，將入於內，持種種財物與精進沙門，作如是說：『受是用是，可持是去，隨意所用。』爾時，梵志、居士若有死者，因此緣此，身壞命終，必至善處，生於天上。生已，作是念：『我應受是樂，當復更受極樂勝是。所以者何？以我等向精進沙門行善行故。』「波旬！覺礫拘荀大如來、無所著、等正覺弟子得奉敬、供養、禮事已，往詣覺礫拘荀大如來、無所著、等正覺所。是時，覺礫拘荀大如來、無所著、等正覺無量百千眷屬圍遶而為說法。覺礫拘荀大如來、無所著、等正覺遙見弟子得奉敬、供養、禮事而來，見已，告諸比丘：『汝等見不？惡魔教勅梵志、居士：「汝等共來奉敬、供養、禮事精進沙門、或以奉敬、供養、禮事精進沙門，儻能起惡心，令我得其便。」",
+   "T0066": "於是波旬弊魔作是念：『我以此方便，不能得此沙門便，不能得此沙門其因緣，我寧可向婆羅門居士說：「汝當取此精進沙門，當恭敬承事禮事供養。」少多供養承事禮事已，若意有異，而彼弊魔，求其便、索其便，索其因緣，得其便，得其因緣。』此弊魔波旬，向居士婆羅門說：『彼精進沙門！當供養，當承事禮事。』令婆羅門居士，脫衣敷地，而作是言：『令此精進沙門，當蹈上行，精進沙門當遊上行。此精進沙門，為極苦行，當令我等於長夜得義饒益。』令婆羅門居士，自洗其髮，以敷著地，而作是言：『精進沙門！當蹈上行。精進沙門！當遊上行。此精進沙門，為極苦行，當令我等於長夜得義饒益。』當令婆羅門居士，手執囊種種滿中，而作是言：『唯願諸賢！當取此隨所用之。當令我等長夜得義饒益。』令婆羅門居士信樂，為彼精進沙門，自以手牽，將入己家，隨所欲施：『唯願諸賢！當取此施，隨所用之，當令我等長夜得義饒益。』彼時婆羅門居士命終，彼因彼緣，身壞死，生善處天上，生於彼已，便作是念：『我等此樂，無過於是，我等因向精進沙門有等見故。』於是波旬為拘樓孫如來、無所著、等正覺弟子，供養恭敬，承事禮事，便至拘樓孫如來、無所著、等正覺弟子所。「彼時拘樓孫如來、無所著、等正覺，於無量百千眾在前圍繞，而為說法。拘樓孫如來、無所著、等正覺，遙見弟子，他所供養恭敬、承事禮事，從遠而來。見已告諸比丘：『汝諸比丘見不？此弊魔波旬！向婆羅門居士說：「當供養恭敬，承事禮事，恭敬彼精進沙門。」少多恭敬承事禮事供養，意若有異，彼弊魔波旬，求其便，索其因緣，得其便，得其因緣。",
+   "T0067": "尋如其計，即化國中長者梵志，所在行路四徼道中，若在街曲，見諸持戒沙門道人，布髮著地令行其上，皆口稱曰：『持戒沙門，修身勤行，難值難遇，唯蹈吾髮，使我長夜得福無量。』持擎衣服，往造其所，稽首長跪：『願見愍傷，受此衣服。』笥籢盛食，詣就精舍，若街巷里頭供奉上供養：『持戒沙門難值難遇，願受此供，使我長夜得福無量。』抱之擎之，若負擔之輿之，歸於其舍，坐著好床，出諸飯食衣服袈裟金銀七寶，而著其前，長跪白曰：『持戒沙門難值難見，願受此供，唯見愍傷，恣意所欲，使我長夜得福無量。』「時拘樓秦佛為諸四輩諸天龍神，見諸持戒沙門道士，為諸長者梵志所見供養敬事無量。告諸比丘：『今瞋恚魔！化諸長者梵志，使供養持戒沙門道士，衣被飯食床臥醫藥，恣意所欲使著供養，吾因是緣得其方便，壞其善心使道不成。"
+  },
+  "a09": {
+   "mn50": "Atha kho, pāpima, kakusandho bhagavā arahaṁ sammāsambuddho bhikkhū āmantesi: ‘anvāviṭṭhā kho, bhikkhave, brāhmaṇagahapatikā dūsinā mārena: “etha, tumhe bhikkhū sīlavante kalyāṇadhamme sakkarotha garuṁ karotha mānetha pūjetha, appeva nāma tumhehi sakkariyamānānaṁ garukariyamānānaṁ māniyamānānaṁ pūjiyamānānaṁ siyā cittassa aññathattaṁ, yathā taṁ dūsī māro labhetha otāran”ti. Etha, tumhe, bhikkhave, asubhānupassino kāye viharatha, āhāre paṭikūlasaññino, sabbaloke anabhiratisaññino, sabbasaṅkhāresu aniccānupassino’ti. Atha kho te, pāpima, bhikkhū kakusandhena bhagavatā arahatā sammāsambuddhena evaṁ ovadiyamānā evaṁ anusāsiyamānā araññagatāpi rukkhamūlagatāpi suññāgāragatāpi asubhānupassino kāye vihariṁsu, āhāre paṭikūlasaññino, sabbaloke anabhiratisaññino, sabbasaṅkhāresu aniccānupassino.",
+   "nan-mn50": "惡者！是時拘留孫世尊、應供、等正覺者，對諸比丘曰：『諸比丘！婆羅門居士眾確已為魔度使所魅入，〔而言〕：在此，汝等對持戒、〔持〕善法之諸比丘，應恭敬、尊重、奉事、供養之，然或被汝等恭敬、尊重、奉事、供養、而心生變異，令魔度使得其方便。諸比丘！是時，汝等於觀身不淨而住之，於食作厭逆想，一切世間作不可樂想，於觀諸行無常。』惡者！是對拘留孫世尊、應供、等正覺者，如是教誡、如是訓誡彼等比丘，行至森林、樹下、或空靜處，於觀身不淨，於食作厭逆想，於一切世間作不可樂想，於觀諸行無常。",
+   "T0026-ma131": "比丘！汝等當觀諸行無常，觀興衰法，觀無欲，觀捨離，觀滅，觀斷，令惡魔求便而不能得。』波旬！覺礫拘荀大如來、無所著、等正覺以此教教諸弟子，彼即受教，觀一切行無常，觀興衰法，觀無欲，觀捨離，觀滅，觀斷，令惡魔求便而不能得。「波旬！彼時惡魔復作是念：『我以此事求精進沙門便，而不能得。我寧可化作年少形，手執大杖，住其道邊，打尊者音頭，令破血流污面。』",
+   "T0066": "汝諸比丘！當於一切行，見無常住，當見盡，當見離，當見滅，當見止，當見止住處。而令弊魔波旬，求其便，索其因緣，不得其便，不得其因緣。』彼波旬，為拘樓孫如來、無所著、等正覺弟子，說如此言：『此一切行，見無常住、見盡、見離、見滅、見止住處。彼弊魔波旬，求其便，索其因緣，不能得便，不得其因緣。』「於是弊魔波旬，便作是念：『我以此方便，不能得精進沙門便，不能得其因緣。",
+   "T0067": "汝等所由閑居巖處曠野，念諸萬物所在無常，雖著衣食莫以貪樂，苦空非身，魔雖求便終不能得。』諸比丘即受拘樓秦如來、至真、等正覺教，行之如法，魔雖求便永不能得。「魔所教化長者梵志，使令供養持戒沙門，由此之德皆生天上。生天上已，各心念言：『吾等供養奉法沙門持戒清淨，自獲是福，不由他人，非天所與。』「爾時，拘樓秦佛如來、至真、等正覺，飯食之後以日昳時，與大弟子洪音俱行遊於郡縣。"
+  },
+  "a10": {
+   "mn50": "Atha kho, pāpima, kakusandho bhagavā arahaṁ sammāsambuddho pubbaṇhasamayaṁ nivāsetvā pattacīvaramādāya āyasmatā vidhurena pacchāsamaṇena gāmaṁ piṇḍāya pāvisi. Atha kho, pāpima, dūsī māro aññataraṁ kumārakaṁ anvāvisitvā sakkharaṁ gahetvā āyasmato vidhurassa sīse pahāramadāsi; sīsaṁ vobhindi. Atha kho, pāpima, āyasmā vidhuro bhinnena sīsena lohitena gaḷantena kakusandhaṁyeva bhagavantaṁ arahantaṁ sammāsambuddhaṁ piṭṭhito piṭṭhito anubandhi.",
+   "nan-mn50": "惡者！是時，拘留孫世尊、應供、等正覺者，晨早著衣，執持衣鉢，與隨從沙門尊者伊多羅共往村里乞食。惡者！是時，魔度使魅入一兒童，取礫以擊尊者伊多羅，因而頭破；惡者！是時，尊者伊多羅頭破血流，跟隨著，跟隨著拘留孫世尊、應供、等正覺者之後；惡者！是時，拘留孫世尊、應供、等正覺者，猶如象視〔還迴體〕顧曰：『此魔度使真不知厭足。』",
+   "T0026-ma131": "波旬！覺礫拘荀大如來、無所著、等正覺於後所依村邑遊行，彼於平旦著衣持鉢，入村乞食，尊者音在後侍從。波旬！爾時，惡魔化作年少形，手執大杖，住在道邊，擊尊者音頭破血流污面。波旬！尊者音破頭流血已，隨從覺礫拘荀大如來、無所著、等正覺後，猶影不離。",
+   "T0066": "我寧可化作年少小兒童男形像，住他道邊。手執大木，當用擊尊者毗樓首，破令血流。』彼時拘樓孫如來、無所著、等正覺，依城村住，晨起著衣服持衣鉢，欲詣城村乞食，及尊者毗樓，隨從比丘。於是弊魔，在他處化作年少小兒童男形像已，在他道邊，手執大木，用擊尊者毗樓首，令血流。於是尊者毗樓被擊，首破流血，隨從拘樓孫如來、無所著、等正覺後。",
+   "T0067": "於時，弊魔化作大人為勇猛士，手執大棒住于道側，竊舉大棒擊洪音頭，破頭灑血其血流離，爾時辟䨴在世尊後，如影隨形默聲無言。時拘樓秦如來無極大聖，還顧歎息，口演此言：『今瞋恚魔！不知節限所造大過。』"
+  },
+  "a11": {
+   "mn50": "Atha kho, pāpima, kakusandho bhagavā arahaṁ sammāsambuddho nāgāpalokitaṁ apalokesi: ‘na vāyaṁ dūsī māro mattamaññāsī’ti.",
+   "T0026-ma131": "「波旬！覺礫拘荀大如來、無所著、等正覺至村邑已，極其身力右旋顧視，猶如龍視，不恐不怖，不驚不懼而觀諸方。波旬！覺礫拘荀大如來、無所著、等正覺見尊者音頭破血流污面，隨佛後行，如影不離，便作是說：『此惡魔凶暴，大有威力，此惡魔不知厭足。』",
+   "T0066": "於是拘樓孫如來、無所著、等正覺至村已，以一切身力，右旋顧視而視，不恐不怖，不驚不懅，而觀諸方。拘樓孫如來、無所著、等正覺，見尊者毘樓被擊，首破血流，從後而來，見已說言：『此弊魔為非，為無厭足。』"
+  },
+  "a12": {
+   "mn50": "Sahāpalokanāya ca pana, pāpima, dūsī māro tamhā ca ṭhānā cavi mahānirayañca upapajji. Tassa kho pana, pāpima, mahānirayassa tayo nāmadheyyā honti— chaphassāyataniko itipi, saṅkusamāhato itipi, paccattavedaniyo itipi. Atha kho maṁ, pāpima, nirayapālā upasaṅkamitvā etadavocuṁ: ‘yadā kho te, mārisa, saṅkunā saṅku hadaye samāgaccheyya. Atha naṁ tvaṁ jāneyyāsi: “vassasahassaṁ me niraye paccamānassā”’ti. So kho ahaṁ, pāpima, bahūni vassāni bahūni vassasatāni bahūni vassasahassāni tasmiṁ mahāniraye apacciṁ. Dasavassasahassāni tasseva mahānirayassa ussade apacciṁ vuṭṭhānimaṁ nāma vedanaṁ vediyamāno.",
+   "nan-mn50": "惡者！於迴顧之同時，魔度使由其處墮落，生於大地獄；惡者！彼大地獄有三種名，謂六觸處之〔地獄〕、謂擊樁〔地獄〕、謂各自受〔苦地獄〕。惡者！是時，獄卒來對予曰：『賢者！於汝之心臟中，如樁與樁交合時，汝當知！我千年間於地獄中受苦者也。』惡者！彼時，予實為多年居住、多百年居住、多千年居住，於彼大地獄中受苦，一萬年居住於彼大地獄增〔地獄〕正名謂起出受之苦；惡者！彼時予身，猶如人〔身〕，然予之頭卻猶如魚〔頭〕也。」惱害伊多羅聖者拘留孫\n度使陷地獄何如受諸苦\n有百之機械各別之苦受\n如是為地獄度使痛苦極\n惱害伊多羅聖者拘留孫\n佛之聲聞眾比丘彼知之\n惱害比丘者黑魔汝受苦\n湖中立天宮立有一劫間\n毘瑠琉之色光耀及燦爛\n玉女在於此種種飛彩舞\n佛之聲聞眾比丘彼知之\n惱害諸比丘黑魔汝受苦\n比丘現見前刺㦸於佛陀\n鹿子母講堂足指能震動\n佛之聲聞眾比丘彼知之\n惱害比丘者黑魔汝受苦\n最勝之講堂足指能搖之\n具持神通力諸神皆戰慄\n佛之聲聞眾比丘彼知之\n惱害比丘者黑魔汝受苦\n於最勝講堂問天帝釋曰\n梵天可欲知愛盡解脫耶\n如是問帝釋無能如實答\n佛之聲聞眾比丘彼知之\n惱害比丘者黑魔汝受苦\n近於善法殿以問梵天曰\n於汝常見有今尚為有耶\n梵天果光曜日過汝不見\n如是問梵天無能如實答\n予以嘗見有於今即為無\n梵天界光耀以見日過去\n我為以常恒及今得云何\n佛之聲聞眾比丘彼知之\n惱害比丘者黑魔汝受苦\n依於此解脫觸妙高山頂\n東方毘提訶湖森地橫人\n佛之聲聞眾比丘彼知之\n惱害比丘者黑魔汝受苦\n火不作此想我在燒癡人\n癡人以觸火必自然得燒\n如是惡魔羅觸嬈汝如來\n如愚人觸火當燒自己身\n魔羅為罪者以燒害如來\n惡魔為何想我不受惡報\n魔羅之所作長夜於惡積\n惡魔莫厭佛及莫望比丘\n比丘於怖林以擊惡魔羅\n彼憂愁夜叉爾時忽不現",
+   "T0026-ma131": "波旬！覺礫拘荀大如來、無所著、等正覺說語未訖，彼時，惡魔便於彼處，其身即墮無缺大地獄。波旬！此大地獄而有四名，一者無缺，二者百釘，三者逆刺，四者六更。彼大地獄其中有卒，往至惡魔所，語惡魔曰：『汝今當知，若釘釘等共合者，當知滿百年。』",
+   "T0066": "「復次，波旬！拘樓孫如來、無所著、等正覺，說言未竟，彼時弊魔，即以其身，墮大泥犁中。彼波旬，在大泥犁中，具有四事，無樂六更，身現受痛，鉤鎖鎖之。謂彼地獄獄卒，便至弊魔所，到已作是言：『汝若此鎖解者，汝當知我在地獄中，以滿百歲在地獄中。』彼時魔波旬，便恐怖身毛皆竪。」",
+   "T0067": "時瞋恚魔，即以此身墮沒地獄，宛轉地獄，如魚蝌蚪出水在於陸地，譬如生剝牛皮，宛轉在地痛不可言。時魔波旬，在於地獄宛轉毒痛，又過於此億千萬倍，譬若如人，身得狂病走不安處。「時魔波旬，墮大地獄苦痛無量，時泥梨傍往語之言：『子欲知之，若有一籌，一鳥飛現，知過十千萬歲，如是之比亦復難限。弊魔！吾在地獄壽數如是，然後乃從大地獄出，更復遭厄二萬餘歲。』爾時，弊魔甚大愁毒。」"
+  },
+  "a13": {
+   "mn50": "Tassa mayhaṁ, pāpima, evarūpo kāyo hoti, seyyathāpi manussassa. Evarūpaṁ sīsaṁ hoti, seyyathāpi macchassa. Kīdiso nirayo āsi, yattha dūsī apaccatha; Vidhuraṁ sāvakamāsajja, kakusandhañca brāhmaṇaṁ. Sataṁ āsi ayosaṅkū, sabbe paccattavedanā; Īdiso nirayo āsi, yattha dūsī apaccatha; Vidhuraṁ sāvakamāsajja, kakusandhañca brāhmaṇaṁ. Yo etamabhijānāti, bhikkhu buddhassa sāvako; Tādisaṁ bhikkhumāsajja, kaṇha dukkhaṁ nigacchasi. Majjhe sarassa tiṭṭhanti, vimānā kappaṭṭhāyino; Veḷuriyavaṇṇā rucirā, accimanto pabhassarā; Accharā tattha naccanti, puthu nānattavaṇṇiyo. Yo etamabhijānāti, bhikkhu buddhassa sāvako; Tādisaṁ bhikkhumāsajja, kaṇha dukkhaṁ nigacchasi. Yo ve buddhena codito, bhikkhu saṅghassa pekkhato; Migāramātupāsādaṁ, pādaṅguṭṭhena kampayi. Yo etamabhijānāti, bhikkhu buddhassa sāvako; Tādisaṁ bhikkhumāsajja, kaṇha dukkhaṁ nigacchasi. Yo vejayantaṁ pāsādaṁ, pādaṅguṭṭhena kampayi; Iddhibalenupatthaddho, saṁvejesi ca devatā. Yo etamabhijānāti, bhikkhu buddhassa sāvako; Tādisaṁ bhikkhumāsajja, kaṇha dukkhaṁ nigacchasi. Yo vejayantapāsāde, sakkaṁ so paripucchati; Api vāsava jānāsi, taṇhākkhayavimuttiyo; Tassa sakko viyākāsi, pañhaṁ puṭṭho yathātathaṁ. Yo etamabhijānāti, bhikkhu buddhassa sāvako; Tādisaṁ bhikkhumāsajja, kaṇha dukkhaṁ nigacchasi. Yo brahmaṁ paripucchati, sudhammāyābhito sabhaṁ; Ajjāpi tyāvuso diṭṭhi, yā te diṭṭhi pure ahu; Passasi vītivattantaṁ, brahmaloke pabhassaraṁ. Tassa brahmā viyākāsi, anupubbaṁ yathātathaṁ; Na me mārisa sā diṭṭhi, yā me diṭṭhi pure ahu. Passāmi vītivattantaṁ, brahmaloke pabhassaraṁ; Sohaṁ ajja kathaṁ vajjaṁ, ahaṁ niccomhi sassato. Yo etamabhijānāti, bhikkhu buddhassa sāvako; Tādisaṁ bhikkhumāsajja, kaṇha dukkhaṁ nigacchasi. Yo mahāmeruno kūṭaṁ, vimokkhena aphassayi; Vanaṁ pubbavidehānaṁ, ye ca bhūmisayā narā. Yo etamabhijānāti, bhikkhu buddhassa sāvako; Tādisaṁ bhikkhumāsajja, kaṇha dukkhaṁ nigacchasi. Na ve aggi cetayati, ‘ahaṁ bālaṁ ḍahāmī’ti; Bālo ca jalitaṁ aggiṁ, āsajja naṁ sa ḍayhati. Evameva tuvaṁ māra, āsajja naṁ tathāgataṁ; Sayaṁ ḍahissasi attānaṁ, bālo aggiṁva samphusaṁ. Apuññaṁ pasavī māro, āsajja naṁ tathāgataṁ; Kiṁ nu maññasi pāpima, na me pāpaṁ vipaccati. Karoto cīyati pāpaṁ, cirarattāya antaka; Māra nibbinda buddhamhā, āsaṁ mākāsi bhikkhusu.",
+   "T0026-ma131": "」於是，魔波旬聞說此已，即便心悸，恐怖驚懼，身毛皆竪，向尊者大目揵連即說頌曰：「云何彼地獄，惡魔昔在中，\n嬈害佛梵行，及犯彼比丘？」尊者大目揵連即時以偈答魔波旬曰：「地獄名無缺，惡魔曾在中，\n嬈害佛梵行，及犯彼比丘。\n彼鐵釘有百，一切各逆刺，\n地獄名無缺，惡魔昔在中。\n若有不知者，比丘佛弟子，\n必得如是苦，受黑業之報。\n若干種園觀，人者在於地，\n食自然粳米，居止在北洲。\n大須彌山巖，善修之所熏，\n修習於解脫，受持最後身。\n跱立在大泉，宮殿住至劫，\n金色可愛樂，猶火㷿晃昱。\n作諸眾妓樂，往詣帝釋所，\n本以一屋舍，善覺了為施。\n若釋在前行，昇毘闍延殿，\n見釋大歡喜，天女各各舞。\n若見比丘來，還顧有慚愧，\n若毘闍延殿，見比丘問義。\n大仙頗能知，愛盡得解脫？\n比丘即為答，問者如其義。\n拘翼我能知，愛盡得解脫。\n聞彼之所答，釋得歡喜樂。\n比丘多饒益，所說如其義。\n若毘闍延殿，問帝釋天王，\n此殿名何等，汝釋攝持城？\n釋答大仙人，名毘闍延哆。\n是謂千世界，於千世界中，\n無有勝此殿，如毘闍延哆。\n天王天帝釋，自在隨所遊，\n愛樂那遊哆，化作一行百。\n毘闍延殿內，釋得自在遊，\n毘闍延大殿，足指能震動。\n天王眼所觀，釋得自在遊。\n若鹿子母堂，築基極深堅，\n難動不可震，如意足能搖。\n彼有琉璃地，聖人之所履，\n滑澤樂更觸，布柔軟綿褥。\n愛語共和合，天王常歡喜，\n善能作妓樂，音節善諧和，\n謂天來會聚，而說須陀洹。\n若干無量千，及百諸那術，\n至三十三天，慧眼者說法，\n聞彼所說法，歡喜而奉行。\n我亦有是法，如仙人所說，\n謂至梵天上，問彼梵天事，\n梵故有此見，謂見昔時有，\n我住有常存，恒有不變易。\n梵天為答彼，大仙我無見，\n謂見昔時有，我恒常不變，\n我見此境界，諸梵皆過去，\n我今何由說，恒常不變易？\n我見此世間，正覺之所說，\n隨所因緣生，所往而轉還，\n火無有思念，我燒愚癡人，\n火然若愚觸，必自然得燒。\n如是汝波旬，觸嬈於如來，\n久作不善行，受報亦當久。\n魔汝莫厭佛，莫嬈害比丘，\n一比丘降魔，住在於怖林。",
+   "T0066": "尊者大目乾連，即時說偈曰：「云何止地獄，而令惡在中，\n犯佛婆羅門，及犯此比丘。\n名阿鼻泥犁，而令惡止中，\n犯佛婆羅門，及犯此比丘。\n鎖解則為百，在中受苦痛，\n在阿鼻泥犁，令惡止其中。\n若有不知者，比丘佛弟子，\n如是受此苦，當受黑之報。\n在於園觀中，及此地眾生，\n不種食秔米，當生北拘牢。\n極大須彌山，親近於解脫，\n自能分別者，身則行念持。\n彼山止泉中，常住於此劫，\n其形如金色，光明靡不照。\n作眾諸伎樂，是釋樂所遊，\n彼亦有二俱，在前而恭敬。\n若釋在前行，升此高堂上，\n見釋所從來，各各自娛樂。\n若見比丘來，還顧有羞恥，\n若有升堂上，則能問比丘。\n當知有此魔，愛盡得解脫，\n當為比丘記，聞說當如是。\n拘翼我知汝，愛盡得解脫，\n聞說智慧記，釋得歡喜樂。\n比丘多作行，當為更說此，\n若有升此堂，釋者能致問。\n云何名為堂，汝釋在其上？\n汝釋我當記，此名受報處。\n如是千世界，有此千世界，\n無有勝此堂，如是受報處。\n釋得自在遊，在中最清明，\n化一能為百，在此報堂上。\n釋得自在遊，昇在此堂上，\n足指能動之，令天眼而覩。\n釋得自在遊，昇在鹿堂上，\n神足能動轉，甚深極覆藏。\n難動難可轉，彼有琉璃地，\n聖之所居處，滑澤極柔軟。\n所敷極軟褥，言語亦柔軟，\n最勝今天王，善能作伎樂。\n種種若干異，諸天來會聚，\n趣向須陀洹，無量諸千種。\n及百諸那術，至三十三天，\n說法為作眼，彼聞此法已。\n信樂則然可，我知有此法，\n則名曰仙人，謂至梵天上。\n能令諸梵問，彼梵有此見，\n所見亦如前，常見有常住。\n我當為梵記，仙人我此見，\n不見不如前，我常有常住。\n我見報相應，梵天身在前，\n我今當何說，我常計有常。\n謂能知此世，等覺之所說，\n若有有所習，所生受其報。\n火無有是念，我當燒愚人，\n火燒愚人已，隨行則被燒。",
+   "T0067": "佛為目連說此偈言：「瞋魔所受罪，其地獄何類？\n拘樓秦佛時，化眾及弟子。\n所可受患惱，一切見考治。\n火然自燒身，其㷿面繞形，\n其地獄如斯，瞋恚魔所在。\n拘樓秦佛時，洪音大弟子，\n假使在佛前，及觀比丘眾，\n因由緣受罪，斯須得動擾。\n設有喜評相，比丘佛弟子，\n必當獲此殃，趣於極苦患。\n如人投深淵，捨於天宮殿，\n不在玉女間，棄於天上樂。\n其有曉了此，比丘佛弟子，\n自興從已出，危害墮苦患。\n魔當知吾身，倚於解脫門，\n不天處天人，忉利名聞天。\n假使分別此，比丘佛弟子，\n自身犯非法，因此歸惡趣。\n其以一足指，動搖最勝宮，\n所處神足力，目連大感應。\n其有曉了此，比丘佛弟子，\n身自為興立，安能墮惡趣。\n設端正有百，微妙好玉女，\n見比丘禪思，彼不住園觀。\n假使分別此，比丘佛弟子，\n比丘自造行，或能歸惡趣。\n假使等和同，詣帝釋問事，\n天帝為解不？何因獲解脫？\n釋應時發遣，隨其所問答，\n若自無所著，然後得解脫。\n假使曉了此，比丘佛弟子，\n隨己所作行，自到歸惡趣。\n或有至梵天，難問梵天王，\n何因致是處，得立于梵天？\n梵天即答曰，隨問而發遣，\n今吾所立處，未曾懷邪見。\n從梵天普見，光明有退轉，\n吾今當何說，我身長存乎？\n假使曉了此，比丘佛弟子，\n身自犯非法，自然歸勤苦。\n其火無想念，我當燒愚癡，\n愚騃自興火，還自危燒身。\n波旬當解此，用意向如來，\n還自危其身，如火燒癡人。\n人憙為眾惡，長夜為己身，\n命來不自覺，無得嬈比丘。"
+  },
+  "a14": {
+   "mn50": "Iti māraṁ atajjesi, bhikkhu bhesakaḷāvane; Tato so dummano yakkho, tatthevantaradhāyathā”ti.",
+   "T0026-ma131": "彼鬼愁憂慼，目連之所訶，\n恐怖無智慧，即於彼處沒。」尊者大目揵連所說如是。彼魔波旬聞尊者大目揵連所說，歡喜奉行。",
+   "T0066": "如是汝波旬，近於此如來，\n久作斯惡行，受報亦當久。\n汝魔莫厭佛，及莫嬈比丘，\n以此比丘說，魔在鼻量國。」",
+   "T0067": "魔慎莫試佛，無嬈諸弟子，\n長夜不安隱，必當歸惡趣。」\n於時魔降伏，坐恐比丘故，\n彼聞此憂愁，應時忽不現。佛說如是，諸天龍神莫不歡喜。"
+  },
+  "a15": {
+   "mn50": "Māratajjanīyasuttaṁ niṭṭhitaṁ dasamaṁ. Cūḷayamakavaggo niṭṭhito pañcamo. Tassuddānaṁ Sāleyya verañjaduve ca tuṭṭhi, Cūḷamahādhammasamādānañca; Vīmaṁsakā kosambi ca brāhmaṇo, Dūsī ca māro dasamo ca vaggo. Idaṁ vaggānamuddānaṁ Mūlapariyāyo ceva, sīhanādo ca uttamo; Kakaco ceva gosiṅgo, sāleyyo ca ime pañca. Mūlapaṇṇāsakaṁ samattaṁ.",
+   "T0026-ma131": "降魔經第十五竟（三千二百七十四字）",
+   "T0066": "鬼有憂慼念，目連所感勤，\n恐怖極恐懼，忽然則不現。"
+  }
+ }
+}

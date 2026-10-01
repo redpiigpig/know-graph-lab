@@ -1,0 +1,97 @@
+{
+ "slug": "pi-sn1.2",
+ "title": "別譯雜阿含經 （一七九）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "天神來問解脫"
+  },
+  {
+   "id": "a02",
+   "label": "世尊答解脫之道"
+  },
+  {
+   "id": "a03",
+   "label": "天神讚偈"
+  },
+  {
+   "id": "a04",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn1.2",
+   "lang": "pi",
+   "label": "巴利 SN1.2",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn1.2",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN1.2",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.179",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （一七九）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa1268",
+   "lang": "lzh",
+   "label": "雜阿含經 （一二六八）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（一七九）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一二六八）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn1.2": "Saṁyutta Nikāya 1.2 1. Naḷavagga Nimokkhasutta",
+   "nan-sn1.2": "〔二〕解脫〔爾時世尊〕……舍衛城……",
+   "T0100-sa-2.179": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。",
+   "T0099-sa1268": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。"
+  },
+  "a01": {
+   "sn1.2": "Sāvatthinidānaṁ.",
+   "nan-sn1.2": "時有天神於黎明放其殊勝妙光，徧照祇園。詣世尊之處，詣已，禮敬世尊立於一面。",
+   "T0100-sa-2.179": "時有一天，光色倍常，赫然大明，遍于祇洹，來詣佛所，頂禮足已，在一面坐。",
+   "T0099-sa1268": "時，有一天子，容色絕妙，於後夜時來詣佛所，稽首佛足，退坐一面。其身光明遍照祇樹給孤獨園。"
+  },
+  "a02": {
+   "sn1.2": "Atha kho aññatarā devatā abhikkantāya rattiyā abhikkantavaṇṇā kevalakappaṁ jetavanaṁ obhāsetvā yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ aṭṭhāsi. Ekamantaṁ ṭhitā kho sā devatā bhagavantaṁ etadavoca: “Jānāsi no tvaṁ, mārisa, sattānaṁ nimokkhaṁ pamokkhaṁ vivekan”ti? “Jānāmi khvāhaṁ, āvuso, sattānaṁ nimokkhaṁ pamokkhaṁ vivekan”ti. “Yathākathaṁ pana tvaṁ, mārisa, jānāsi sattānaṁ nimokkhaṁ pamokkhaṁ vivekan”ti? “Nandībhavaparikkhayā, Saññāviññāṇasaṅkhayā; Vedanānaṁ nirodhā upasamā, Evaṁ khvāhaṁ āvuso jānāmi; Sattānaṁ nimokkhaṁ pamokkhaṁ vivekan”ti.",
+   "nan-sn1.2": "立於一面之天神白世尊：「友！卿知眾生之解脫、令解脫、遠離耶？」世尊曰：「友！我知眾生之解脫，令解脫、遠離。」〔天神曰：〕「友！卿如何知眾生之解脫、令解脫、遠離耶？」〔世尊：〕有喜之滅盡亦盡想與識\n受滅皆寂靜友我之如是\n知眾生解脫令解脫遠離",
+   "T0100-sa-2.179": "問言：「瞿曇！汝今能知一切眾生所著所縛，及知一切眾生得解脫者，并淨解脫不？」爾時，世尊即告天曰：「我實盡知一切之所縛著，及得解脫、盡解脫、淨解脫者。」天復問言：「瞿曇！云何能知一切眾生之所縛著得解脫、盡解脫、淨解脫耶？」佛復告言：「我盡觀見有，汝天當知，今我之心得善解脫，得解脫故，能知眾生之所縛著，得解脫、盡解脫、淨解脫，亦悉知之。」",
+   "T0099-sa1268": "時，彼天子白佛言：「比丘知一切眾生所著、所集，決定解脫、廣解脫、極廣解脫耶？」佛告天子：「我悉知一切眾生所著、所集，決定解脫、廣解脫、極廣解脫。」天子白佛：「比丘云何知一切眾生所著、所集，決定解脫、廣解脫、極廣解脫？」佛告天子：「愛喜滅盡，我心解脫；心解脫已，故知一切眾生所著、所集，決定解脫、廣解脫、極廣解脫。」"
+  },
+  "a03": {
+   "T0100-sa-2.179": "天即讚言：「善哉！善哉！瞿曇！知縛著，乃至能知得淨解脫。」",
+   "T0099-sa1268": "時，彼天子復說偈言：「久見婆羅門，逮得般涅槃，\n一切怖已過，永超世恩愛。」"
+  },
+  "a04": {
+   "T0100-sa-2.179": "天復以偈讚言：「往昔已曾見，婆羅門涅槃，\n嫌怖久棄捨，能度世間愛。」爾時，此天說此偈已，歡喜還宮。",
+   "T0099-sa1268": "時，彼天子聞佛所說，歡喜隨喜，稽首佛足，即沒不現。"
+  }
+ }
+}

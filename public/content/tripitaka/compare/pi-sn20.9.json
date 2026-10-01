@@ -1,0 +1,168 @@
+{
+ "slug": "pi-sn20.9",
+ "title": "別譯雜阿含經 （二二）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。複核標記存疑 1 段：義段10的偈頌在巴利與漢譯南傳中未出現，僅見於別譯雜阿含經與雜阿含經，但內容與前後脈絡不符，顯為錯位",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "年少比丘非時入聚落"
+  },
+  {
+   "id": "a02",
+   "label": "諸比丘勸諫"
+  },
+  {
+   "id": "a03",
+   "label": "年少比丘反問"
+  },
+  {
+   "id": "a04",
+   "label": "眾比丘白佛"
+  },
+  {
+   "id": "a05",
+   "label": "佛說大象喻"
+  },
+  {
+   "id": "a06",
+   "label": "佛說小象喻"
+  },
+  {
+   "id": "a07",
+   "label": "長老比丘得利不染"
+  },
+  {
+   "id": "a08",
+   "label": "年少比丘得利而染"
+  },
+  {
+   "id": "a09",
+   "label": "結勸修學"
+  },
+  {
+   "id": "a10",
+   "label": "偈頌",
+   "doubt": true
+  },
+  {
+   "id": "a11",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn20.9",
+   "lang": "pi",
+   "label": "巴利 SN20.9",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn20.9",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN20.9",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.22",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （二二）",
+   "who": "失譯",
+   "reorder": true
+  },
+  {
+   "id": "T0099-sa1083",
+   "lang": "lzh",
+   "label": "雜阿含經 （一〇八三）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（二二）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一〇八三）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn20.9": "Saṁyutta Nikāya 20.9 1. Opammavagga Nāgasutta Evaṁ me sutaṁ— ekaṁ samayaṁ bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme.",
+   "nan-sn20.9": "〔九〕第九　象",
+   "T0100-sa-2.22": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。爾時，眾多比丘著衣持鉢入城乞食。",
+   "T0099-sa1083": "如是我聞：一時，佛住毘舍離國獼猴池側重閣講堂。時，有眾多比丘晨朝著衣持鉢，入毘舍離乞食。"
+  },
+  "a01": {
+   "sn20.9": "Tena kho pana samayena aññataro navo bhikkhu ativelaṁ kulāni upasaṅkamati.",
+   "nan-sn20.9": "〔爾時，世尊〕住舍衛城……",
+   "T0100-sa-2.22": "爾時，有一年少新學比丘，不以時節入於聚落。",
+   "T0099-sa1083": "時，有年少比丘出家未久，不閑法、律，當乞食時，不知先後次第。"
+  },
+  "a02": {
+   "sn20.9": "Tamenaṁ bhikkhū evamāhaṁsu: “māyasmā ativelaṁ kulāni upasaṅkamī”ti.",
+   "nan-sn20.9": "爾時，有一年少比丘，於非時之時，去近良家。諸比丘對彼比丘作如是言曰：「尊者！於非時之時，勿近良家。」",
+   "T0100-sa-2.22": "時，諸比丘處處見彼新學比丘，而語之言：「汝今新學，未知對治法門，云何處處經歷諸家？」",
+   "T0099-sa1083": "餘比丘見已而告之言：「汝是年少，出家未久，未知法、律，莫越！莫重！前後失次而行乞食，長夜當得不饒益苦。」"
+  },
+  "a03": {
+   "sn20.9": "So bhikkhu bhikkhūhi vuccamāno evamāha: “ime hi nāma therā bhikkhū kulāni upasaṅkamitabbaṁ maññissanti, kimaṅgaṁ panāhan”ti?",
+   "nan-sn20.9": "彼比丘聞此而作如是云：「實則長老之諸比丘想趣近良家，然則何故我不能耶？」",
+   "T0100-sa-2.22": "新學比丘白諸比丘言：「大德諸長老等皆往諸家，云何遮我不至諸家？」",
+   "T0099-sa1083": "年少比丘言：「諸上座亦復越次，不隨前後，非獨我也。」如是再三，不能令止。"
+  },
+  "a04": {
+   "sn20.9": "Atha kho sambahulā bhikkhū yena bhagavā tenupasaṅkamiṁsu; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdiṁsu. Ekamantaṁ nisinnā kho te bhikkhū bhagavantaṁ etadavocuṁ: “idha, bhante, aññataro navo bhikkhu ativelaṁ kulāni upasaṅkamati. Tamenaṁ bhikkhū evamāhaṁsu: ‘māyasmā ativelaṁ kulāni upasaṅkamī’ti. So bhikkhu bhikkhūhi vuccamāno evamāha: ‘ime hi nāma therā bhikkhū kulāni upasaṅkamitabbaṁ maññissanti, kimaṅgaṁ panāhan’”ti.",
+   "nan-sn20.9": "爾時，眾多比丘來詣世尊處……坐於一面。坐於一面之彼等諸比丘，白世尊言：「大德！此處一年少比丘，於非時之時近良家，對彼比丘，諸比丘作如是曰：『尊者！於非時之時，勿近良家。』然彼比丘對諸比丘成如是言曰：『實則此等長老諸比丘想近趣良家者，何故我不能耶？』」",
+   "T0100-sa-2.22": "時，諸比丘乞食食已，收攝衣鉢，洗足已，往至佛所，頂禮佛足，在一面坐。諸比丘等白佛言：「世尊！我等入城乞食，見一年少新學比丘，不以時節，往至諸家。我等語言：『汝是新學，未知對治，何緣非時往至他家？』答我等言：『諸老比丘亦到諸家，何故獨自而遮我耶？』",
+   "T0099-sa1083": "眾多比丘乞食已，還精舍，舉衣鉢，洗足已，詣佛所，稽首禮足，退坐一面，白佛言：「世尊！我等晨朝著衣持鉢，入毘舍離乞食，有一年少比丘！於此法、律出家未久，行乞食時不以次第，前後復重。諸比丘等再三諫不受，而作是言：『諸上座亦不次第，何故呵我？』我等諸比丘三呵不受，故來白世尊。唯願世尊為除非法，哀愍故！」"
+  },
+  "a05": {
+   "sn20.9": "“Bhūtapubbaṁ, bhikkhave, araññāyatane mahāsarasī. Taṁ nāgā upanissāya viharanti. Te taṁ sarasiṁ ogāhetvā soṇḍāya bhisamuḷālaṁ abbuhetvā suvikkhālitaṁ vikkhāletvā akaddamaṁ saṅkhāditvā ajjhoharanti. Tesaṁ taṁ vaṇṇāya ceva hoti balāya ca, na ca tatonidānaṁ maraṇaṁ vā nigacchanti maraṇamattaṁ vā dukkhaṁ.",
+   "nan-sn20.9": "「諸比丘！往昔於閑靜處有沼，諸象棲其邊。彼等潛於沼中，引拔蓮根，善洗滌，洗去其泥，無泥而食。彼等食已甚美，獲得氣力，因之而不至死，或無至死之苦。",
+   "T0100-sa-2.22": "」爾時，世尊告諸比丘：「大曠野中有一大池，有諸大象入彼池中，以鼻拔取池中藕根，淨抖擻已，用水洗之，然後乃食，身體肥盛，極得氣力。",
+   "T0099-sa1083": "佛告諸比丘：「如空澤中有大湖水，有大龍象而居其中，拔諸藕根，洗去泥土，然後食之。食已，身體肥悅，多力多樂，以是因緣，常喜樂住。"
+  },
+  "a06": {
+   "sn20.9": "Tesaṁyeva kho pana, bhikkhave, mahānāgānaṁ anusikkhamānā taruṇā bhiṅkacchāpā taṁ sarasiṁ ogāhetvā soṇḍāya bhisamuḷālaṁ abbuhetvā na suvikkhālitaṁ vikkhāletvā sakaddamaṁ asaṅkhāditvā ajjhoharanti. Tesaṁ taṁ neva vaṇṇāya hoti na balāya. Tatonidānaṁ maraṇaṁ vā nigacchanti maraṇamattaṁ vā dukkhaṁ.",
+   "nan-sn20.9": "諸比丘！又彼等中，模倣大象，弱小之象等，潛於沼中，拔蓮根，不善洗滌，連泥食之，彼等食已，不美，無氣力，因而至死，或受至死之苦。",
+   "T0100-sa-2.22": "諸小象等亦復食藕，不知抖擻并及水洗，合埿出食，後轉羸瘦，無有氣力，若死若近死。」",
+   "T0099-sa1083": "有異種族象，形體羸小，効彼龍象，拔其藕根，洗不能淨，合泥土食。食之不消，體不肥悅，轉轉羸弱，緣斯致死，或同死苦。"
+  },
+  "a07": {
+   "sn20.9": "Evameva kho, bhikkhave, idha therā bhikkhū pubbaṇhasamayaṁ nivāsetvā pattacīvaramādāya gāmaṁ vā nigamaṁ vā piṇḍāya pavisanti. Te tattha dhammaṁ bhāsanti. Tesaṁ gihī pasannākāraṁ karonti. Te taṁ lābhaṁ agadhitā amucchitā anajjhopannā ādīnavadassāvino nissaraṇapaññā paribhuñjanti. Tesaṁ taṁ vaṇṇāya ceva hoti balāya ca, na ca tatonidānaṁ maraṇaṁ vā nigacchanti maraṇamattaṁ vā dukkhaṁ.",
+   "nan-sn20.9": "諸比丘！同此，此處長老諸比丘，清晨著衣、持鉢入村或街，彼等於其處說法，主人因信樂，供給彼等之所需。彼等對其所得，不著、不惑、不墮、見禍、受用出離慧、彼等得色、得力，因而不至於死，或無至死之苦。",
+   "T0099-sa1083": "「如是，宿德比丘學道日久，不樂嬉戲，久修梵行，大師所歎，諸餘明智修梵行者亦復加歎。是等比丘依止城邑聚落，晨朝著衣持鉢，入城乞食，善護身口，善攝諸根，專心繫念，能令彼人不信者信、信者不異，若得財利、衣被、飲食、床臥、湯藥，不染、不著、不貪、不嗜、不迷、不逐，見其過患，見其出離，然復食之。食已，身心悅澤，得色得力，以是因緣，常得安樂。"
+  },
+  "a08": {
+   "sn20.9": "Tesaṁyeva kho pana, bhikkhave, therānaṁ bhikkhūnaṁ anusikkhamānā navā bhikkhū pubbaṇhasamayaṁ nivāsetvā pattacīvaramādāya gāmaṁ vā nigamaṁ vā piṇḍāya pavisanti. Te tattha dhammaṁ bhāsanti. Tesaṁ gihī pasannākāraṁ karonti. Te taṁ lābhaṁ gadhitā mucchitā ajjhopannā anādīnavadassāvino anissaraṇapaññā paribhuñjanti. Tesaṁ taṁ neva vaṇṇāya hoti na balāya, te tatonidānaṁ maraṇaṁ vā nigacchanti maraṇamattaṁ vā dukkhaṁ.",
+   "nan-sn20.9": "諸比丘！又追隨彼等長老比丘，年少之比丘，清晨著衣，持鉢入村或街乞食。",
+   "T0099-sa1083": "「彼年少比丘出家未久，未閑法、律，依諸長老，依止聚落，著衣持鉢，入村乞食，不善護身，不守根門，不專繫念，不能令彼不信者信、信者不變。若得財利、衣被、飲食、臥具、湯藥，染著貪逐，不見過患，不見出離，以嗜欲心食，不能令身悅澤，安隱快樂。緣斯食故，轉向於死，或同死苦。所言死者，謂捨戒還俗，失正法、正律。同死苦者，謂犯正法、律，不識罪相，不知除罪。」"
+  },
+  "a09": {
+   "sn20.9": "Tasmātiha, bhikkhave, evaṁ sikkhitabbaṁ: ‘agadhitā amucchitā anajjhopannā ādīnavadassāvino nissaraṇapaññā taṁ lābhaṁ paribhuñjissāmā’ti.",
+   "nan-sn20.9": "彼等於其處說法，主人因信樂，盡行布施，彼等對所得，或著，或惑、或墮、或不見禍、不受用出離慧，則彼等、無美、無力，因而至死，或受至死之苦。",
+   "T0100-sa-2.22": "若有諸比丘，具修清白法，\n若受於利養，無過能染著，\n是名修行者，猶如彼大象。\n不善解方便，後受於過患，\n後受其苦惱，如彼小象等。」"
+  },
+  "a10": {
+   "T0100-sa-2.22": "爾時，世尊而說偈言：「大象入池時，以鼻拔藕根，\n抖擻洗去泥，然後方食之。",
+   "T0099-sa1083": "爾時，世尊即說偈言：「龍象拔藕根，水洗而食之，\n異族象効彼，合泥而取食。"
+  },
+  "a11": {
+   "sn20.9": "Evañhi vo, bhikkhave, sikkhitabban”ti. Navamaṁ.",
+   "nan-sn20.9": "諸比丘！然則應如是學：『我等不著、不惑、不墮、見禍、受用出離慧』。諸比丘！汝等應如是學。」",
+   "T0100-sa-2.22": "諸比丘聞佛所說，歡喜奉行。阿難與結髮及以二陀驃\n賊并散倒吒拔彌、慚愧根\n苦子并覆瘡小大食藕根",
+   "T0099-sa1083": "因雜泥食故，羸病遂至死。」佛說此經已，諸比丘聞佛所說，歡喜奉行。"
+  }
+ }
+}

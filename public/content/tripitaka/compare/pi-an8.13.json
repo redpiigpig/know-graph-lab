@@ -1,0 +1,81 @@
+{
+ "slug": "pi-an8.13",
+ "title": "別譯雜阿含經 （一五〇）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "八種賢馬之相"
+  },
+  {
+   "id": "a02",
+   "label": "丈夫賢乘亦有八事"
+  },
+  {
+   "id": "a03",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "an8.13",
+   "lang": "pi",
+   "label": "巴利 AN8.13",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "T0100-sa-2.150",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （一五〇）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa925",
+   "lang": "lzh",
+   "label": "雜阿含經 （九二五）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（一五〇）"
+  },
+  {
+   "work": "T0099",
+   "node": "（九二五）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "an8.13": "Aṅguttara Nikāya 8.13 2. Mahāvagga Assājānīyasutta",
+   "T0100-sa-2.150": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。",
+   "T0099-sa925": "如是我聞：一時，佛住王舍城迦蘭陀竹園。"
+  },
+  "a01": {
+   "an8.13": "“Aṭṭhahi, bhikkhave, aṅgehi samannāgato rañño bhaddo assājānīyo rājāraho hoti rājabhoggo, rañño aṅganteva saṅkhaṁ gacchati. Katamehi aṭṭhahi? Idha, bhikkhave, rañño bhaddo assājānīyo ubhato sujāto hoti— mātito ca pitito ca. Yassaṁ disāyaṁ aññepi bhaddā assājānīyā jāyanti, tassaṁ disāyaṁ jāto hoti. Yaṁ kho panassa bhojanaṁ denti— allaṁ vā sukkhaṁ vā— taṁ sakkaccaṁyeva paribhuñjati avikiranto. Jegucchī hoti uccāraṁ vā passāvaṁ vā abhinisīdituṁ vā abhinipajjituṁ vā. Sorato hoti sukhasaṁvāso, na ca aññe asse ubbejetā. Yāni kho panassa honti sāṭheyyāni kūṭeyyāni jimheyyāni vaṅkeyyāni, tāni yathābhūtaṁ sārathissa āvikattā hoti. Tesamassa sārathi abhinimmadanāya vāyamati. Vāhī kho pana hoti. ‘Kāmaññe assā vahantu vā mā vā, ahamettha vahissāmī’ti cittaṁ uppādeti. Gacchanto kho pana ujumaggeneva gacchati. Thāmavā hoti yāva jīvitamaraṇapariyādānā thāmaṁ upadaṁsetā. Imehi kho, bhikkhave, aṭṭhahi aṅgehi samannāgato rañño bhaddo assājānīyo rājāraho hoti rājabhoggo, rañño aṅganteva saṅkhaṁ gacchati.",
+   "T0100-sa-2.150": "爾時，世尊告諸比丘：「有八種馬為賢所乘。所言賢者，轉輪聖王。何等為八？賢乘所生，是名第一賢馬之相。其第二者，極為調善，終不惱觸其餘凡馬，是名第二賢馬之相。其第三馬，所食之草，不擇好惡，悉盡無遺，是亦名為賢馬乘相。其第四者，有穢惡物，生不淨相，大小便處，終不於中止住眠臥，是名第四具賢馬相。其第五者，能示御者惡馬之過，能教御者治於惡馬所有疹態，是亦名為賢馬之相。其第六者，能忍重擔，而不求輕，恒作是念：『我常見於餘馬擔時，當為伐之。』是名第六賢乘馬相。其第七者，常在道中，初不越逸，道雖微淺，明了知之，是名第七賢馬之相。其第八者，病雖困篤，乃至臨終，力用不異，是名第八賢乘馬相。",
+   "T0099-sa925": "爾時，世尊告諸比丘：「世間良馬有八種德成就者，隨人所欲，取道多少。何等為八？生於良馬鄉，是名良馬第一之德。復次，體性溫良，不驚恐人，是名良馬第二之德。復次，良馬不擇飲食，是名良馬第三之德。復次，良馬厭惡不淨，擇地而臥，是名良馬第四之德。復次，良馬諸情態速為調馬者現，馬師調習，速捨其態，是名良馬第五之德。復次，良馬安於駕乘，不顧餘馬，隨其輕重，能盡其力，是名良馬第六之德。復次，良馬常隨正路，不隨非道，是名良馬第七之德。復次，良馬若病、若老，勉力駕乘，不厭不倦，是名良馬第八之德。"
+  },
+  "a02": {
+   "an8.13": "Evamevaṁ kho, bhikkhave, aṭṭhahi dhammehi samannāgato bhikkhu āhuneyyo hoti …pe… anuttaraṁ puññakkhettaṁ lokassa. Katamehi aṭṭhahi? Idha, bhikkhave, bhikkhu sīlavā hoti, pātimokkhasaṁvarasaṁvuto viharati ācāragocarasampanno aṇumattesu vajjesu bhayadassāvī, samādāya sikkhati sikkhāpadesu. Yaṁ kho panassa bhojanaṁ denti— lūkhaṁ vā paṇītaṁ vā— taṁ sakkaccaṁyeva paribhuñjati avihaññamāno. Jegucchī hoti kāyaduccaritena vacīduccaritena manoduccaritena; jegucchī hoti anekavihitānaṁ pāpakānaṁ akusalānaṁ dhammānaṁ samāpattiyā. Sorato hoti sukhasaṁvāso, na aññe bhikkhū ubbejetā. Yāni kho panassa honti sāṭheyyāni kūṭeyyāni jimheyyāni vaṅkeyyāni, tāni yathābhūtaṁ āvikattā hoti satthari vā viññūsu vā sabrahmacārīsu. Tesamassa satthā vā viññū vā sabrahmacārī abhinimmadanāya vāyamati. Sikkhitā kho pana hoti. ‘Kāmaññe bhikkhū sikkhantu vā mā vā, ahamettha sikkhissāmī’ti cittaṁ uppādeti. Gacchanto kho pana ujumaggeneva gacchati; tatrāyaṁ ujumaggo, seyyathidaṁ— sammādiṭṭhi …pe… sammāsamādhi. Āraddhavīriyo viharati: ‘kāmaṁ taco ca nhāru ca aṭṭhi ca avasissatu, sarīre upassussatu maṁsalohitaṁ; yaṁ taṁ purisathāmena purisavīriyena purisaparakkamena pattabbaṁ, na taṁ apāpuṇitvā vīriyassa saṇṭhānaṁ bhavissatī’ti.",
+   "T0100-sa-2.150": "「丈夫賢乘亦有八事。何等為八？其第一者，若有比丘善持禁戒，具足威儀，往返人間，無所毀犯，設誤犯於微小罪者，心生大畏。持所受戒，猶如瞎者護餘一目。當知是人同彼初馬生賢乘處。其第二者，若有比丘具足善法，終不惱觸同梵行者，共住安樂，如水乳合。當知是人同第二馬，生於賢處。其第三者，復有比丘受飲食時，不擇好惡，悉食無餘。當知斯人同第三馬，生於賢處。其第四者，若有比丘見諸惡法不清淨者，心生厭患，悉皆遠離三業不善，呵責惡法鄙陋下賤。當知是人同第四馬，生於賢處。其第五者，若有比丘既犯罪已，親於佛前陳己過罪，亦復於梵行所說，自發瑕疵。當知是人同第五馬，生於賢處。其第六者，若有比丘具足學戒，見同梵行諸比丘等，於戒有犯，心每念言：『我當修學，令無所毀。』當知斯人同第六馬，生於賢處。其第七者，若有比丘行八正道，不行邪徑。當知此人同第七馬不行非道，生於賢處。其第八者，若有比丘病雖困篤，乃至欲死，精勤無懈，志性堅固，不可輕動，恒欲進求諸勝妙法，心無疲倦。當知是人同第八馬，至死盡力，生於賢處，佛教法中，能得真實。」",
+   "T0099-sa925": "「如是，丈夫於正法、律八德成就，當知是賢士夫。何等為八？謂賢士夫住於正戒波羅提木叉律儀，威儀行處具足，見微細罪，能生怖畏，受持學戒，是名丈夫於正法、律第一之德。復次，丈夫性自賢善，善調善住，不惱、不怖諸梵行者，是名丈夫第二之德。復次，丈夫次行乞食，隨其所得，若麁、若細，其心平等，不嫌、不著，是名丈夫第三之德。復次，丈夫心生厭離於身惡業，口、意惡業，惡不善法及諸煩惱，重受諸有熾然苦報，於未來世生、老、病、死、憂、悲、惱、苦，增其厭離，是名丈夫第四之德。復次，丈夫若有沙門過，諂曲不實，速告大師及善知識，大師說法則時除斷，是名丈夫第五之德。復次，丈夫學心具足，作如是念：『設使餘人學以不學，我悉當學。』是名丈夫第六之德。復次，丈夫行八正道，不行非道，是名丈夫第七之德。復次，丈夫乃至盡壽，精勤方便，不厭不倦，是名丈夫第八之德。如是丈夫八德成就，隨其行地，能速昇進。」"
+  },
+  "a03": {
+   "an8.13": "Imehi kho, bhikkhave, aṭṭhahi dhammehi samannāgato bhikkhu āhuneyyo hoti …pe… anuttaraṁ puññakkhettaṁ lokassā”ti. Tatiyaṁ.",
+   "T0100-sa-2.150": "佛說是已，諸比丘聞佛所說，歡喜奉行。",
+   "T0099-sa925": "佛說此經已，諸比丘聞佛所說，歡喜奉行。"
+  }
+ }
+}

@@ -1,0 +1,80 @@
+{
+ "slug": "pi-an4.40",
+ "title": "別譯雜阿含經 （九〇）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "優北伽請問"
+  },
+  {
+   "id": "a02",
+   "label": "世尊答說偈頌"
+  },
+  {
+   "id": "a03",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "an4.40",
+   "lang": "pi",
+   "label": "巴利 AN4.40",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "T0100-sa-2.90",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （九〇）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa90",
+   "lang": "lzh",
+   "label": "雜阿含經 （九〇）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（九〇）"
+  },
+  {
+   "work": "T0099",
+   "node": "（九〇）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "an4.40": "Aṅguttara Nikāya 4.40 4. Cakkavagga Udāyīsutta",
+   "T0100-sa-2.90": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。"
+  },
+  "a01": {
+   "an4.40": "Atha kho udāyī brāhmaṇo yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavatā …pe… ekamantaṁ nisinno kho udāyī brāhmaṇo bhagavantaṁ etadavoca:",
+   "T0100-sa-2.90": "時有摩納名優北伽，往詣佛所，稽首問訊，在一面坐。",
+   "T0099-sa90": "如是我聞：一時，佛住舍衛國祇樹給孤獨園……廣說如上。"
+  },
+  "a02": {
+   "an4.40": "“bhavampi no gotamo yaññaṁ vaṇṇetī”ti? “Na kho ahaṁ, brāhmaṇa, sabbaṁ yaññaṁ vaṇṇemi; na panāhaṁ, brāhmaṇa, sabbaṁ yaññaṁ na vaṇṇemi. Yathārūpe kho, brāhmaṇa, yaññe gāvo haññanti, ajeḷakā haññanti, kukkuṭasūkarā haññanti, vividhā pāṇā saṅghātaṁ āpajjanti; evarūpaṁ kho ahaṁ, brāhmaṇa, sārambhaṁ yaññaṁ na vaṇṇemi. Taṁ kissa hetu? Evarūpañhi, brāhmaṇa, sārambhaṁ yaññaṁ na upasaṅkamanti arahanto vā arahattamaggaṁ vā samāpannā. Yathārūpe ca kho, brāhmaṇa, yaññe neva gāvo haññanti, na ajeḷakā haññanti, na kukkuṭasūkarā haññanti, na vividhā pāṇā saṅghātaṁ āpajjanti; evarūpaṁ kho ahaṁ, brāhmaṇa, nirārambhaṁ yaññaṁ vaṇṇemi, yadidaṁ niccadānaṁ anukulayaññaṁ. Taṁ kissa hetu? Evarūpañhi, brāhmaṇa, nirārambhaṁ yaññaṁ upasaṅkamanti arahanto vā arahattamaggaṁ vā samāpannāti. Abhisaṅkhataṁ nirārambhaṁ, yaññaṁ kālena kappiyaṁ; Tādisaṁ upasaṁyanti, saññatā brahmacārayo. Vivaṭacchadā ye loke, vītivattā kulaṁ gatiṁ; Yaññametaṁ pasaṁsanti, buddhā yaññassa kovidā. Yaññe vā yadi vā saddhe, habyaṁ katvā yathārahaṁ; Pasannacitto yajati, sukhette brahmacārisu. Suhutaṁ suyiṭṭhaṁ suppattaṁ, Dakkhiṇeyyesu yaṁ kataṁ; Yañño ca vipulo hoti, Pasīdanti ca devatā. Evaṁ yajitvā medhāvī, saddho muttena cetasā; Abyābajjhaṁ sukhaṁ lokaṁ, paṇḍito upapajjatī”ti.",
+   "T0100-sa-2.90": "白佛言：「世尊！婆羅門如法乞財，聚斂大祀，教他設祀。如是之祀，為當作祀，為當不作？」爾時，世尊說偈答言：「施設大祀具，不擾害群生，\n若能如是祀，所作皆清淨，\n是名祀深隱，梵行者所受。\n現於世間中，名聞極遠者，\n遠離於戰諍，如是祀可讚，\n諸佛所稱善。祀及祀之道，\n以清淨惠施，宜施彼應供，\n施時施何處，斯名廣大祀，\n諸天所信敬。以如法聚財，\n淨水手自與，若能如是祀，\n名為自他利，必獲大果報。\n如是之大祀，唯有智者能，\n能生於淨信，亦得心解脫，\n惱害不能加，得世間最樂，\n得生於勝處，名為有智者。」",
+   "T0099-sa90": "差別者，謂隨說異偈言：「無為無諸難，邪盛時清淨，\n如法隨順行，攝護諸梵行。\n馨香歸世界，超過諸凡鄙，\n佛於邪盛善，稱歎此邪盛。\n惠施修供養，邪盛隨所應，\n淨信平等施，梵行良福田。\n彼作如是施，是施羅漢田，\n如是廣大施，諸天所稱歎。\n自行恭敬請，自手而供養，\n等攝自他故，邪盛得大果。\n慧者如是施，淨信心解脫，\n於無罪世界，智者往生彼。」"
+  },
+  "a03": {
+   "an4.40": "Dasamaṁ. Cakkavaggo catuttho. Tassuddānaṁ Cakko saṅgaho sīho, Pasādo vassakārena pañcamaṁ; Doṇo aparihāniyo patilīno, Ujjayo udāyinā te dasāti.",
+   "T0100-sa-2.90": "佛說是已，優北伽聞佛所說，歡喜而去。",
+   "T0099-sa90": "佛說此經已，優波迦婆羅門聞佛所說，歡喜作禮而去。"
+  }
+ }
+}

@@ -1,0 +1,192 @@
+{
+ "slug": "pi-mn37",
+ "title": "增壹阿含經 （三）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。複核標記存疑 1 段：義段1的雜阿含經（五〇五）開頭是「時，尊者大目揵連在耆闍崛山中」，但原典此段應為天帝釋請問愛盡解脫，卻放了大目犍連的內容，屬於錯位。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "經題與序分"
+  },
+  {
+   "id": "a01",
+   "label": "天帝釋請問愛盡解脫",
+   "doubt": true
+  },
+  {
+   "id": "a02",
+   "label": "世尊初答愛盡解脫"
+  },
+  {
+   "id": "a03",
+   "label": "大目犍連現身三十三天"
+  },
+  {
+   "id": "a04",
+   "label": "天帝釋迎請大目犍連至最勝宮"
+  },
+  {
+   "id": "a05",
+   "label": "天女見大目犍連慚愧避入內房"
+  },
+  {
+   "id": "a06",
+   "label": "天帝釋與毘沙門隨行觀宮"
+  },
+  {
+   "id": "a07",
+   "label": "大目犍連震動宮殿以生恐怖"
+  },
+  {
+   "id": "a08",
+   "label": "諸天歎神足奇特"
+  },
+  {
+   "id": "a09",
+   "label": "大目犍連再詣世尊請問愛盡解脫"
+  },
+  {
+   "id": "a10",
+   "label": "世尊重答愛盡解脫（第一次）"
+  },
+  {
+   "id": "a11",
+   "label": "大目犍連復詣天帝釋問世尊答"
+  },
+  {
+   "id": "a12",
+   "label": "世尊重答愛盡解脫（第二次）"
+  },
+  {
+   "id": "a13",
+   "label": "結證：愛盡解脫之義已具足說"
+  },
+  {
+   "id": "a14",
+   "label": "流通分：隨喜奉行"
+  }
+ ],
+ "versions": [
+  {
+   "id": "mn37",
+   "lang": "pi",
+   "label": "巴利 MN37",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-mn37",
+   "lang": "lzh",
+   "label": "漢譯南傳 MN37",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0125-ea19.3",
+   "lang": "lzh",
+   "label": "增壹阿含經 （三）",
+   "who": "東晉 瞿曇僧伽提婆譯",
+   "reorder": true
+  },
+  {
+   "id": "T0099-sa505",
+   "lang": "lzh",
+   "label": "雜阿含經 （五〇五）",
+   "who": "劉宋 求那跋陀羅譯",
+   "reorder": true
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0125"
+ ],
+ "anchors": [
+  {
+   "work": "T0125",
+   "node": "（三）",
+   "uid": "T02n0125_p0593c13"
+  },
+  {
+   "work": "T0099",
+   "node": "（五〇五）",
+   "uid": "T02n0099_p0133b24"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "mn37": "Majjhima Nikāya 37",
+   "nan-mn37": "第三十七　愛盡小經",
+   "T0125-ea19.3": "聞如是：一時，佛在舍衛國祇樹給孤獨園。",
+   "T0099-sa505": "如是我聞：一時，佛住王舍城。"
+  },
+  "a01": {
+   "mn37": "Cūḷataṇhāsaṅkhayasutta",
+   "nan-mn37": "如是我聞。——",
+   "T0125-ea19.3": "爾時，釋提桓因至世尊所。",
+   "T0099-sa505": "時，尊者大目揵連在耆闍崛山中。"
+  },
+  "a02": {
+   "mn37": "Evaṁ me sutaṁ— ekaṁ samayaṁ bhagavā sāvatthiyaṁ viharati pubbārāme migāramātupāsāde. Atha kho sakko devānamindo yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ aṭṭhāsi. Ekamantaṁ ṭhito kho sakko devānamindo bhagavantaṁ etadavoca: “kittāvatā nu kho, bhante, bhikkhu saṅkhittena taṇhāsaṅkhayavimutto hoti accantaniṭṭho accantayogakkhemī accantabrahmacārī accantapariyosāno seṭṭho devamanussānan”ti? “Idha, devānaminda, bhikkhuno sutaṁ hoti: ‘sabbe dhammā nālaṁ abhinivesāyā’ti. Evañcetaṁ, devānaminda, bhikkhuno sutaṁ hoti: ‘sabbe dhammā nālaṁ abhinivesāyā’ti. So sabbaṁ dhammaṁ abhijānāti; sabbaṁ dhammaṁ abhiññāya sabbaṁ dhammaṁ parijānāti; sabbaṁ dhammaṁ pariññāya yaṁ kiñci vedanaṁ vedeti— sukhaṁ vā dukkhaṁ vā adukkhamasukhaṁ vā, so tāsu vedanāsu aniccānupassī viharati, virāgānupassī viharati, nirodhānupassī viharati, paṭinissaggānupassī viharati. So tāsu vedanāsu aniccānupassī viharanto, virāgānupassī viharanto, nirodhānupassī viharanto, paṭinissaggānupassī viharanto na kiñci loke upādiyati. Anupādiyaṁ na paritassati, aparitassaṁ paccattaññeva parinibbāyati: ‘khīṇā jāti, vusitaṁ brahmacariyaṁ, kataṁ karaṇīyaṁ, nāparaṁ itthattāyā’ti pajānāti. Ettāvatā kho, devānaminda, bhikkhu saṅkhittena taṇhāsaṅkhayavimutto hoti accantaniṭṭho accantayogakkhemī accantabrahmacārī accantapariyosāno seṭṭho devamanussānan”ti. Atha kho sakko devānamindo bhagavato bhāsitaṁ abhinanditvā anumoditvā bhagavantaṁ abhivādetvā padakkhiṇaṁ katvā tatthevantaradhāyi.",
+   "nan-mn37": "一時，世尊在舍衛城東園鹿母講堂。爾時，天帝釋詣世尊處。詣而稽首世尊，立於一面。於一面立之天帝釋白世尊曰：「世尊！略而言者，如何是比丘愛盡解脫，得畢竟究竟者、畢竟安穩者、畢竟梵行者、畢竟盡者、人天之最勝者耶？」〔世尊曰：〕「諸天之王！是比丘聞：『一切法實不值於貪著。』諸天王！若比丘聞：『一切法實不值於貪著者』彼知一切法。知一切法而熟知一切法也。熟知一切法而受所有受，即或樂、或苦、或不苦不樂之受，彼於此等受隨觀無常而住，隨觀離貪而住，以隨觀滅而住，以隨觀捨離而住。彼於此等受以隨觀無常而住，以隨觀離貪而住，以隨觀滅而住，以隨觀捨離而住者，於世間無所取。無所取即無惱，無惱者，即自般涅槃。知生已盡，梵行已成，所作已作，無更到此存在之狀態。諸天王略而說者，如是者，比丘愛盡解脫，畢竟究竟者、畢竟安穩者、畢竟梵行者、畢竟盡者、人天之最勝者也。」是天帝釋歡喜、隨喜世尊之說法，稽首世尊，右繞消失於其處。",
+   "T0125-ea19.3": "到已，頭面禮足，在一面住，白世尊曰：「云何比丘斷於愛欲，心得解脫，乃至究竟安隱之處，無有諸患，天、人所敬？」爾時，世尊告釋提桓因曰：「於是，拘翼！若是比丘聞此空法解無所有，則得解了一切諸法，如實知之。身所覺知苦樂之法，若不苦不樂之法，即於此身觀悉無常，皆歸於空。彼已觀此不苦不樂之變，亦不起想，以無有想，則無恐怖；以無恐怖，則般涅槃：生死已盡，梵行已立，所作已辦，更不復受有，如實知之。是謂，釋提桓因！比丘斷於愛欲，心得解脫，乃至究竟安隱之處，無有災患，天、人所敬。」爾時，釋提桓因禮世尊足已，繞三匝而退。",
+   "T0099-sa505": "爾時，尊者大目揵連獨一靜處禪思，作是念：「昔有時，釋提桓因於界隔山石窟中，問世尊愛盡解脫之義，世尊為說，聞已隨喜，似欲更有所問義，我今當往問其喜意。」"
+  },
+  "a03": {
+   "mn37": "Tena kho pana samayena āyasmā mahāmoggallāno bhagavato avidūre nisinno hoti. Atha kho āyasmato mahāmoggallānassa etadahosi: “kiṁ nu kho so yakkho bhagavato bhāsitaṁ abhisamecca anumodi udāhu no; yannūnāhaṁ taṁ yakkhaṁ jāneyyaṁ— yadi vā so yakkho bhagavato bhāsitaṁ abhisamecca anumodi yadi vā no”ti?",
+   "nan-mn37": "爾時尊者大目犍連近世尊而坐。是尊者大目犍連生是念：「彼藥叉了解世尊之說法，隨喜否？或不然否？然予對彼藥叉為知彼藥叉了解世尊之說法，隨喜否？或不然否？」於是尊者大目犍連恰如強力者以伸屈之臂，或以屈而伸臂，如〔速〕於東園鹿母講堂而消失之，現於三十三天。爾時天帝釋於一白蓮之園，以具備天之五百樂器而歡樂。天帝釋遙見尊者大目犍連來。見而制止天之五百樂器，詣尊者大目犍連之處。詣而言尊者大目犍連曰：「來！尊者目犍連！善來！尊者目犍連！尊者遂致此機來此處也。尊者目犍連！請坐！尊者目犍連！此所設之座也。」尊者大目犍連坐所設之座。天帝釋亦取一卑牀於一面坐。對於一面坐之天帝釋，尊者大目犍連曰：",
+   "T0125-ea19.3": "當於爾時，尊者大目犍連去世尊不遠結跏趺坐，正身正意，繫念在前。爾時，尊者大目犍連便作是念：「向者，帝釋得道跡而問事耶？為不得道跡而問義耶？",
+   "T0099-sa505": "作是念已，如力士屈申臂頃，於耆闍崛山沒，至三十三天，去一分陀利池不遠而住。時，天帝釋與五百婇女遊戲浴池，有諸天女，音聲美妙。爾時，帝釋遙見尊者大目揵連，語諸天女言：「莫歌。莫歌。」時，諸天女即便默然，天帝釋即詣尊者大目犍連所，稽首禮足，退住一面。"
+  },
+  "a04": {
+   "mn37": "Atha kho āyasmā mahāmoggallāno—seyyathāpi nāma balavā puriso samiñjitaṁ vā bāhaṁ pasāreyya, pasāritaṁ vā bāhaṁ samiñjeyya; evameva—pubbārāme migāramātupāsāde antarahito devesu tāvatiṁsesu pāturahosi. Tena kho pana samayena sakko devānamindo ekapuṇḍarīke uyyāne dibbehi pañcahi tūriyasatehi samappito samaṅgībhūto paricāreti. Addasā kho sakko devānamindo āyasmantaṁ mahāmoggallānaṁ dūratova āgacchantaṁ. Disvāna tāni dibbāni pañca tūriyasatāni paṭippaṇāmetvā yenāyasmā mahāmoggallāno tenupasaṅkami; upasaṅkamitvā āyasmantaṁ mahāmoggallānaṁ etadavoca: “ehi kho, mārisa moggallāna, svāgataṁ, mārisa moggallāna. Cirassaṁ kho, mārisa moggallāna, imaṁ pariyāyaṁ akāsi yadidaṁ idhāgamanāya. Nisīda, mārisa moggallāna, idamāsanaṁ paññattan”ti. Nisīdi kho āyasmā mahāmoggallāno paññatte āsane. Sakkopi kho devānamindo aññataraṁ nīcaṁ āsanaṁ gahetvā ekamantaṁ nisīdi. Ekamantaṁ nisinnaṁ kho sakkaṁ devānamindaṁ āyasmā mahāmoggallāno etadavoca: “yathā kathaṁ pana kho, kosiya, bhagavā saṅkhittena taṇhāsaṅkhayavimuttiṁ abhāsi? Sādhu mayampi etissā kathāya bhāgino assāma savanāyā”ti. “Mayaṁ kho, mārisa moggallāna, bahukiccā bahukaraṇīyā— appeva sakena karaṇīyena, api ca devānaṁyeva tāvatiṁsānaṁ karaṇīyena. Api ca, mārisa moggallāna, sussutaṁyeva hoti suggahitaṁ sumanasikataṁ sūpadhāritaṁ, yaṁ no khippameva antaradhāyati. Bhūtapubbaṁ, mārisa moggallāna, devāsurasaṅgāmo samupabyūḷho ahosi. Tasmiṁ kho pana, mārisa moggallāna, saṅgāme devā jiniṁsu, asurā parājiniṁsu. So kho ahaṁ, mārisa moggallāna, taṁ saṅgāmaṁ abhivijinitvā vijitasaṅgāmo tato paṭinivattitvā vejayantaṁ nāma pāsādaṁ māpesiṁ. Vejayantassa kho, mārisa moggallāna, pāsādassa ekasataṁ niyyūhaṁ. Ekekasmiṁ niyyūhe satta satta kūṭāgārasatāni. Ekamekasmiṁ kūṭāgāre satta satta accharāyo. Ekamekissā accharāya satta satta paricārikāyo. Iccheyyāsi no tvaṁ, mārisa moggallāna, vejayantassa pāsādassa rāmaṇeyyakaṁ daṭṭhun”ti? Adhivāsesi kho āyasmā mahāmoggallāno tuṇhībhāvena. Atha kho sakko ca devānamindo vessavaṇo ca mahārājā āyasmantaṁ mahāmoggallānaṁ purakkhatvā yena vejayanto pāsādo tenupasaṅkamiṁsu.",
+   "nan-mn37": "「庫奢耶！世尊為卿略說如何是愛盡解脫，我等亦聞，得備其法話者，為幸也！」〔帝釋曰：〕「尊者目犍連，我等甚忙，我等多所用，以自之用事及三十三天之用事〔甚忙也〕。然尊者目犍連！予善聞之，善得之，善思念之，善考慮之，故法不至於迅速消滅。尊者目犍連！昔諸天與阿修羅眾之間起戰鬥。於其戰，諸天戰勝，阿修羅眾戰敗。尊者目犍連！彼予其戰勝，為戰勝者，由彼而還，創建名為最勝之宮殿。尊者目犍連！其最勝宮殿有一百尖閣，一一之尖閣各有七重閣，一一之重閣各有七天女，一一之天女各有七侍女也。尊者目犍連！卿不欲觀我可愛最勝宮殿之〔結構〕否？」尊者大目犍連默然而應諾。",
+   "T0125-ea19.3": "我今當試之。」爾時，尊者大目犍連即以神足，如屈伸臂頃，便至三十三天。爾時，釋提桓因遙見大目犍連遠來，即起奉迎，並作是語：「善來！尊者大目犍連！尊自不至此，亦大久矣！願欲與尊論說法義，願在此處坐。」是時，目犍連問釋提桓因曰：「世尊與汝說斷愛欲之法，我欲聞之，今正是時，可與我說之。」釋提桓因白言：「我今諸天事猥多，或自有事，或復有諸天事，我所聞者即時而忘。昔者，目連，與諸阿須倫共鬪，當鬪之日，諸天得勝，阿須倫退。爾時，我身躬往自戰，尋復領諸天還上天宮，坐最勝講堂。因鬪勝故，故名為最勝講堂，階巷成行，陌陌相值，一一階頭，七百樓閣，一一樓閣上，各七玉女，一一玉女各有七使人，願尊目連在彼觀看。」",
+   "T0099-sa505": "世尊今在王舍城迦蘭陀竹園，尊者欲知我先界隔山中所問事者，今可往問世尊，如世尊說，汝當受持。然我此處有好堂觀，新成未久，可入觀看。」"
+  },
+  "a05": {
+   "mn37": "Addasaṁsu kho sakkassa devānamindassa paricārikāyo āyasmantaṁ mahāmoggallānaṁ dūratova āgacchantaṁ; disvā ottappamānā hirīyamānā sakaṁ sakaṁ ovarakaṁ pavisiṁsu. Seyyathāpi nāma suṇisā sasuraṁ disvā ottappati hirīyati; evameva sakkassa devānamindassa paricārikāyo āyasmantaṁ mahāmoggallānaṁ disvā ottappamānā hirīyamānā sakaṁ sakaṁ ovarakaṁ pavisiṁsu.",
+   "T0125-ea19.3": "爾時，釋提桓因左右玉女，各各馳走，莫知所如，猶如人間有所禁忌，皆懷慚愧。是時，釋提桓因所將玉女亦復如是。遙見大目犍連來，各各馳走，莫知所湊。時，大目犍連便作是念：「此釋提桓因意甚放逸，我今宜可使懷恐怖。」",
+   "T0099-sa505": "彼諸天女遙見帝釋來，皆作天樂，或歌或舞。諸天女輩著身瓔珞莊嚴之具，出妙音聲，合於五樂，如善作樂，音聲不異。諸天女輩既見尊者大目揵連，悉皆慚愧，入室藏隱。時，天帝釋語尊者大目揵連：「觀此堂觀地好平正，其壁、柱、梁、重閣、牕牖、羅網、簾障，悉皆嚴好。」尊者大目揵連語帝釋言：「憍尸迦！先修善法福德因緣，成此妙果。」如是，帝釋三自稱歎，問尊者大目揵連，尊者大目揵連亦再三答。時，尊者大目揵連作是念：「今此帝釋極自放逸，著界神住，歎此堂觀，我當令彼心生厭離。」"
+  },
+  "a06": {
+   "mn37": "Atha kho sakko ca devānamindo vessavaṇo ca mahārājā āyasmantaṁ mahāmoggallānaṁ vejayante pāsāde anucaṅkamāpenti anuvicarāpenti: “idampi, mārisa moggallāna, passa vejayantassa pāsādassa rāmaṇeyyakaṁ; idampi, mārisa moggallāna, passa vejayantassa pāsādassa rāmaṇeyyakan”ti. “Sobhati idaṁ āyasmato kosiyassa, yathā taṁ pubbe katapuññassa. Manussāpi kiñcideva rāmaṇeyyakaṁ disvā evamāhaṁsu: ‘sobhati vata bho yathā devānaṁ tāvatiṁsānan’ti. Tayidaṁ āyasmato kosiyassa sobhati, yathā taṁ pubbe katapuññassā”ti. Atha kho āyasmato mahāmoggallānassa etadahosi: “atibāḷhaṁ kho ayaṁ yakkho pamatto viharati. Yannūnāhaṁ imaṁ yakkhaṁ saṁvejeyyan”ti.",
+   "nan-mn37": "於是諸天帝釋及毘沙門大王，侍於尊者大目犍連之後，詣於最勝宮殿。天帝釋之侍女等，遙見尊者大目犍連來。見而慚愧，各自入於內房。恰如新婦見其翁姑之慚愧，如是天帝釋之侍女等見尊者大目犍連因慚愧而各自入於內房。於是天帝釋及毘沙門大王，隨行尊者大目犍連以逍遙最勝宮殿。言：「尊者目犍連！見此可愛之最勝宮殿！尊者目犍連！見此可愛之最勝宮殿！」〔目犍連答曰：〕「此是尊者庫奢耶之輝耀，此乃其相應前所作功德而輝耀也。人人見此何等可愛，謂『實如此輝耀於三十三天。』彼對此尊者庫奢耶之輝耀，此乃相應前所作之功德而輝耀也。」而尊者大目犍連作是念：「此藥叉是過於放逸，然，我使此藥叉戰慄。」於是尊者大目犍連以示神通力，以足拇指使最勝宮殿震搖激動。如是天帝釋、毘沙門大王及三十三天生希有、未曾有之念曰：「實應驚嘆哉！真未曾有哉！沙門之大神力、大威力。以足之拇指使天宮震搖激動。」於是尊者大目犍連知天帝釋之戰慄、身毛豎立，對天帝釋曰：",
+   "T0125-ea19.3": "爾時，釋提桓因及毘沙門天王在尊者目連後，往至最勝講堂所。是時，釋提桓因及毘沙門天王，白大目犍連曰：「此是最勝講堂，悉可遊看。」目犍連曰：「天王！此處極為微妙，皆由前身所作福祐故，致此自然寶堂，猶如人間小有樂處，各自慶賀，如天宮無異，皆由前身作福所致。」",
+   "T0099-sa505": "時，尊者大目揵連默然受請，即與天帝釋共入堂觀。"
+  },
+  "a07": {
+   "mn37": "Atha kho āyasmā mahāmoggallāno tathārūpaṁ iddhābhisaṅkhāraṁ abhisaṅkhāsi yathā vejayantaṁ pāsādaṁ pādaṅguṭṭhakena saṅkampesi sampakampesi sampavedhesi.",
+   "T0125-ea19.3": "是時，尊者大目犍連即以右脚指案地，彼宮殿六變震動。",
+   "T0099-sa505": "即入三昧，以神通力，以一足指撇其堂觀，悉令震動。時，尊者大目揵連即沒不現。"
+  },
+  "a08": {
+   "mn37": "Atha kho sakko ca devānamindo, vessavaṇo ca mahārājā, devā ca tāvatiṁsā acchariyabbhutacittajātā ahesuṁ: “acchariyaṁ vata, bho, abbhutaṁ vata, bho. Samaṇassa mahiddhikatā mahānubhāvatā, yatra hi nāma dibbabhavanaṁ pādaṅguṭṭhakena saṅkampessati sampakampessati sampavedhessatī”ti. Atha kho āyasmā mahāmoggallāno sakkaṁ devānamindaṁ saṁviggaṁ lomahaṭṭhajātaṁ viditvā sakkaṁ devānamindaṁ etadavoca: “yathā kathaṁ pana kho, kosiya, bhagavā saṅkhittena taṇhāsaṅkhayavimuttiṁ abhāsi? Sādhu mayampi etissā kathāya bhāgino assāma savanāyā”ti.",
+   "T0125-ea19.3": "是時，釋提桓因及毘沙門天王皆懷恐怖，衣毛皆竪，而作是念：「此大目犍連有大神足，乃能使此宮殿六返震動，甚奇！甚特！未曾有是！」是時，大目犍連便作是念：「今此釋身以懷恐怖，我今宜可問其深義。」",
+   "T0099-sa505": "諸天女眾見此堂觀震掉動搖，顛沛恐怖，東西馳走，白帝釋言：「此是憍尸迦大師，有此大功德力耶？」時，天帝釋語諸天女：「此非我師，是大師弟子大目揵連，梵行清淨，大德大力者。」諸天女言：「善哉！憍尸迦！乃有如此梵行大德大力同學，大師德力當復如何？」"
+  },
+  "a09": {
+   "mn37": "“Idhāhaṁ, mārisa moggallāna, yena bhagavā tenupasaṅkamiṁ; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ aṭṭhāsiṁ. Ekamantaṁ ṭhito kho ahaṁ, mārisa moggallāna, bhagavantaṁ etadavocaṁ: ‘kittāvatā nu kho, bhante, bhikkhu saṅkhittena taṇhāsaṅkhayavimutto hoti accantaniṭṭho accantayogakkhemī accantabrahmacārī accantapariyosāno seṭṭho devamanussānan’ti?",
+   "nan-mn37": "「庫奢耶！世尊對卿略說如何是愛盡解脫耶？我等亦聞，得備其法話，即甚幸也。」〔帝釋曰：〕「尊者目犍連！予前詣世尊之處。詣而稽首世尊，於一面立。尊者目犍連！於一面立之予向世尊如是問之：『世尊！略而說者，如何是比丘得愛盡解脫、畢竟究竟者、畢竟安穩者、畢竟梵行者、畢竟盡者、人天之最勝者耶？』尊者目犍連！如是問已，世尊如次答予：『諸天王！是比丘聞——一切法實不值貪著——諸天王！若比丘聞——一切法實不值貪著——者，彼知一切法。以知一切法而熟知一切法，熟知一切法而受所有受，即或樂、或苦、或不苦不樂之受。彼於此等受隨觀無常而住，隨觀離貪而住，隨觀滅而住，隨觀捨離而住也。彼於此等之受隨觀無常而住，隨觀離貪而住，隨觀滅而住，隨觀捨離而住者，於世間無所取。無所取即無所惱，無所惱即自般涅槃，知生已盡、梵行已成、所作已作，更不到此存在之狀態。諸天王！略而說者，如是比丘是愛盡解脫、畢竟究竟者、畢竟安穩者、畢竟梵行者、畢竟盡者、人天之最勝者也。』尊者目犍連！如是，世尊對予略說愛盡解脫。」是尊者大目犍連歡喜、隨喜天帝釋之說。恰如強力者以伸屈之臂，或以屈伸之臂，如是速於三十三天消失之，現於東園鹿母講堂。於是天帝釋之侍女等，於尊者大目犍連之去不久，白天帝釋曰：「吾君！彼是吾君之師，彼是世尊否？」〔帝釋曰〕「汝等！彼是我師，彼非世尊，彼是我之同行者，尊者大目犍連也。」〔侍女等曰：〕「吾君！吾君誠是榮幸！吾君之同行者，如是有大神力、如是有大威力，何況吾君之師，彼世尊是如何乎！」",
+   "T0125-ea19.3": "「云何，拘翼！如來所說除愛欲經者，今正是時，唯願與我等說。」",
+   "T0099-sa505": "尊者大目揵連問帝釋言：「汝先於界隔山中問世尊愛盡解脫義，聞已隨喜，汝意云何？為聞說隨喜？為更欲有所問，故隨喜耶？」天帝釋語尊者大目揵連：「我三十三天多著放逸樂，或憶先事，或時不憶。"
+  },
+  "a10": {
+   "mn37": "Evaṁ vutte, mārisa moggallāna, bhagavā maṁ etadavoca: ‘idha, devānaminda, bhikkhuno sutaṁ hoti: “sabbe dhammā nālaṁ abhinivesāyā”ti. Evañcetaṁ, devānaminda, bhikkhuno sutaṁ hoti “sabbe dhammā nālaṁ abhinivesāyā”ti. So sabbaṁ dhammaṁ abhijānāti, sabbaṁ dhammaṁ abhiññāya sabbaṁ dhammaṁ parijānāti, sabbaṁ dhammaṁ pariññāya yaṁ kiñci vedanaṁ vedeti sukhaṁ vā dukkhaṁ vā adukkhamasukhaṁ vā. So tāsu vedanāsu aniccānupassī viharati, virāgānupassī viharati, nirodhānupassī viharati, paṭinissaggānupassī viharati. So tāsu vedanāsu aniccānupassī viharanto, virāgānupassī viharanto, nirodhānupassī viharanto, paṭinissaggānupassī viharanto na kiñci loke upādiyati, anupādiyaṁ na paritassati, aparitassaṁ paccattaññeva parinibbāyati: “khīṇā jāti, vusitaṁ brahmacariyaṁ, kataṁ karaṇīyaṁ, nāparaṁ itthattāyā”ti pajānāti. Ettāvatā kho, devānaminda, bhikkhu saṅkhittena taṇhāsaṅkhayavimutto hoti accantaniṭṭho accantayogakkhemī accantabrahmacārī accantapariyosāno seṭṭho devamanussānan’ti. Evaṁ kho me, mārisa moggallāna, bhagavā saṅkhittena taṇhāsaṅkhayavimuttiṁ abhāsī”ti. Atha kho āyasmā mahāmoggallāno sakkassa devānamindassa bhāsitaṁ abhinanditvā anumoditvā—seyyathāpi nāma balavā puriso samiñjitaṁ vā bāhaṁ pasāreyya, pasāritaṁ vā bāhaṁ samiñjeyya; evameva—devesu tāvatiṁsesu antarahito pubbārāme migāramātupāsāde pāturahosi. Atha kho sakkassa devānamindassa paricārikāyo acirapakkante āyasmante mahāmoggallāne sakkaṁ devānamindaṁ etadavocuṁ: “eso nu te, mārisa, so bhagavā satthā”ti? “Na kho me, mārisa, so bhagavā satthā. Sabrahmacārī me eso āyasmā mahāmoggallāno”ti. “Lābhā te, mārisa, suladdhaṁ te, mārisa yassa te sabrahmacārī evaṁmahiddhiko evaṁmahānubhāvo. Aho nūna te so bhagavā satthā”ti. Atha kho āyasmā mahāmoggallāno yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho āyasmā mahāmoggallāno bhagavantaṁ etadavoca: “abhijānāti no, bhante, bhagavā ahu ñātaññatarassa mahesakkhassa yakkhassa saṅkhittena taṇhāsaṅkhayavimuttiṁ bhāsitā”ti?",
+   "nan-mn37": "如是尊者大目犍連詣世尊之處。詣而稽首世尊，於一面坐。於一面坐之尊者大目犍連白世尊曰：「世尊！世尊於前為或有大勢力之藥叉，同意略說愛盡解脫否？」〔世尊曰：〕「目犍連！予同意，即前天帝釋來予之處，來而稽首予，而於一面立。目犍連！於一面立之天帝釋如次問予：『世尊！略而說者，如何是比丘得愛盡解脫、畢竟究者、畢竟安穩者、畢竟梵行者、畢竟盡者、人天之最勝者耶？』目犍連！如是問已，予對天帝釋作是語：『諸天之王！是比丘聞——一切法實不值貪著。諸天王！若比丘聞——一切法實不值貪著——者，彼即知一切法。知一切法而熟知一切法也。熟知一切法於受所有受，即或樂、或苦、或不苦不樂之受，彼於此等受，隨觀無常而住、隨觀離貪而住，隨觀滅而住，隨觀捨離而住。彼於此等受，隨觀無常而住，隨觀離貪而住，隨觀滅而住，隨觀捨離而住者，於世間無所取。無所取即無所惱，無所惱即自般涅槃，知生已盡、梵行已成、所作已作、更不到此存在之狀態。諸天王！略而說者，如是比丘是愛盡解脫、畢竟究竟者、畢竟安穩者、畢竟梵行者、畢竟盡者、人天之最勝者也。』目犍連！如是予同意為天帝釋略說愛盡解脫。」",
+   "T0125-ea19.3": "釋提桓因報言：「目連！我前至世尊所，頭面禮足，在一面住。是時，我即白世尊曰：『云何比丘斷於愛欲，心得解脫，乃至究竟至無為處，無有患苦，天、人所敬？』爾時，世尊便告我言：『於是，拘翼！諸比丘聞法已，都無所著，亦不著色，盡解一切諸法，了無所有。以知一切諸法已，若苦、若樂、若不苦不樂，觀了無常，滅盡無餘，亦無斷壞。彼以觀此，已都無所著，已不起世間想，復無恐怖；以無恐怖，便般涅槃：生死已盡，梵行已立，所作已辦，更不復受有，如實知之。是謂，釋提桓因！比丘斷欲，心得解脫，乃至究竟無為之處，無有患苦，天、人所敬。』爾時，我聞此語已，便禮世尊足，遶三匝，即退而去，還歸天上。」是時，尊者大目犍連以深法之語，向釋提桓因及向毘沙門具分別之。爾時，目犍連具說法已，猶如士夫屈伸臂頃，從三十三天沒不現，便來至舍衛城祇樹給孤獨園，至世尊所，頭面禮足，在一面坐。爾時，目犍連即於座上白世尊曰：「如來前與釋提桓因說除欲之法，唯願世尊當與我說之。」爾時，世尊告目犍連曰：「汝當知之，釋提桓因來至我所，頭面禮足，在一面立。爾時，釋提桓因問我此義：『云何，世尊！比丘斷愛欲，心得解脫？』爾時，我告釋提桓因曰：『拘翼！若有比丘解知一切諸法空無所有，亦無所著，盡解一切諸法了無所有，以知一切諸法無常，滅盡無餘，亦無斷壞。彼已觀此，已都無所著，已不起世間想，復無恐怖；已無恐怖，便般涅槃：生死已盡，梵行已立，所作已辦，更不復受有，如實知之。是謂，釋提桓因，比丘斷欲，心得解脫。』爾時，釋提桓因即從坐起，頭面禮我足，便退而去。"
+  },
+  "a11": {
+   "mn37": "“Abhijānāmahaṁ, moggallāna, idha sakko devānamindo yenāhaṁ tenupasaṅkami; upasaṅkamitvā maṁ abhivādetvā ekamantaṁ aṭṭhāsi. Ekamantaṁ ṭhito kho, moggallāna, sakko devānamindo maṁ etadavoca: ‘kittāvatā nu kho, bhante, bhikkhu saṅkhittena taṇhāsaṅkhayavimutto hoti accantaniṭṭho accantayogakkhemī accantabrahmacārī accantapariyosāno seṭṭho devamanussānan’ti. Evaṁ vutte, ahaṁ, moggallāna, sakkaṁ devānamindaṁ etadavocaṁ"
+  },
+  "a12": {
+   "mn37": "‘idha devānaminda, bhikkhuno sutaṁ hoti “sabbe dhammā nālaṁ abhinivesāyā”ti. Evaṁ cetaṁ, devānaminda, bhikkhuno sutaṁ hoti “sabbe dhammā nālaṁ abhinivesāyā”ti. So sabbaṁ dhammaṁ abhijānāti, sabbaṁ dhammaṁ abhiññāya sabbaṁ dhammaṁ parijānāti, sabbaṁ dhammaṁ pariññāya yaṁ kiñci vedanaṁ vedeti sukhaṁ vā dukkhaṁ vā adukkhamasukhaṁ vā. So tāsu vedanāsu aniccānupassī viharati, virāgānupassī viharati, nirodhānupassī viharati, paṭinissaggānupassī viharati. So tāsu vedanāsu aniccānupassī viharanto, virāgānupassī viharanto, nirodhānupassī viharanto, paṭinissaggānupassī viharanto na kiñci loke upādiyati, anupādiyaṁ na paritassati, aparitassaṁ paccattaññeva parinibbāyati: “khīṇā jāti, vusitaṁ brahmacariyaṁ, kataṁ karaṇīyaṁ, nāparaṁ itthattāyā”ti pajānāti. Ettāvatā kho, devānaminda, bhikkhu saṅkhittena taṇhāsaṅkhayavimutto hoti accantaniṭṭho accantayogakkhemī accantabrahmacārī accantapariyosāno seṭṭho devamanussānan’ti."
+  },
+  "a13": {
+   "mn37": "Evaṁ kho ahaṁ, moggallāna, abhijānāmi sakkassa devānamindassa saṅkhittena taṇhāsaṅkhayavimuttiṁ bhāsitā”ti. Idamavoca bhagavā.",
+   "nan-mn37": "世尊如是說已。尊者大目犍連歡喜信受世尊之所說。",
+   "T0125-ea19.3": "還歸天上。」爾時，大目犍連聞佛所說，歡喜奉行。"
+  },
+  "a14": {
+   "mn37": "Attamano āyasmā mahāmoggallāno bhagavato bhāsitaṁ abhinandīti. Cūḷataṇhāsaṅkhayasuttaṁ niṭṭhitaṁ sattamaṁ."
+  }
+ }
+}

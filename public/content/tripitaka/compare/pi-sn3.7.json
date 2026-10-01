@@ -1,0 +1,108 @@
+{
+ "slug": "pi-sn3.7",
+ "title": "別譯雜阿含經 （五七）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "波斯匿王自陳所見"
+  },
+  {
+   "id": "a02",
+   "label": "世尊開示富貴者之過患"
+  },
+  {
+   "id": "a03",
+   "label": "譬喻：魚網"
+  },
+  {
+   "id": "a04",
+   "label": "偈頌"
+  },
+  {
+   "id": "a05",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn3.7",
+   "lang": "pi",
+   "label": "巴利 SN3.7",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn3.7",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN3.7",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.57",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （五七）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa1231",
+   "lang": "lzh",
+   "label": "雜阿含經 （一二三一）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（五七）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一二三一）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn3.7": "Saṁyutta Nikāya 3.7 1. Paṭhamavagga Aḍḍakaraṇasutta Sāvatthinidānaṁ.",
+   "nan-sn3.7": "〔七〕裁斷",
+   "T0100-sa-2.57": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。",
+   "T0099-sa1231": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。"
+  },
+  "a01": {
+   "sn3.7": "Ekamantaṁ nisinno kho rājā pasenadi kosalo bhagavantaṁ etadavoca: “idhāhaṁ, bhante, aḍḍakaraṇe nisinno passāmi khattiyamahāsālepi brāhmaṇamahāsālepi gahapatimahāsālepi aḍḍhe mahaddhane mahābhoge pahūtajātarūparajate pahūtavittūpakaraṇe pahūtadhanadhaññe kāmahetu kāmanidānaṁ kāmādhikaraṇaṁ sampajānamusā bhāsante. Tassa mayhaṁ, bhante, etadahosi: ‘alaṁ dāni me aḍḍakaraṇena, bhadramukho dāni aḍḍakaraṇena paññāyissatī’”ti.",
+   "nan-sn3.7": "坐於一面之拘薩羅國波斯匿王白世尊曰：",
+   "T0100-sa-2.57": "爾時，波斯匿王於閑靜處，作是思惟：「世界之中，少有能得富貴財業。設得財業，不尚驕奢，貞廉知足，節於嗜欲，不惱眾生，如是人少。世界多有眾人，得勝財業，驕逸自恣，貪嗜於欲，加惱眾生，如是人多。」波斯匿王於閑靜處，思惟是已，從坐而起，往詣佛所，頂禮佛足，在一面坐，即白佛言：「世尊！我於靜處作是思惟：『世界之中，若設有人，得勝財業，心自知足，能不驕恣，不嗜於欲，不惱於人，如是人少。若復有人，得勝基業，憍逸自恣，貪嗜於欲，加惱眾生，如是人多。』",
+   "T0099-sa1231": "時，波斯匿王於正殿上自觀察王事，見勝剎利大姓、見勝婆羅門大姓、見勝長者大姓因貪欲故，欺詐妄語，即作是念：「止此斷事！息此斷事！我更不復親臨斷事；我有賢子，當令斷事。云何自見此勝剎利大姓、婆羅門大姓、長者大姓為貪欲故，欺詐妄語？」時，波斯匿王作是念已，往詣佛所，稽首佛足，退坐一面，白佛言：「世尊！我於殿上自斷王事，見諸勝剎利大姓、婆羅門大姓，長者大姓為貪利故，欺詐妄語。世尊！我見是事已，作是念：『我從今日，止此斷事，息此斷事；我有賢子，當令其斷。不親自見此勝剎利大姓、婆羅門大姓、長者大姓緣貪利故，欺詐妄語。』"
+  },
+  "a02": {
+   "sn3.7": "“Evametaṁ, mahārāja, evametaṁ, mahārāja. Yepi te, mahārāja, khattiyamahāsālā brāhmaṇamahāsālā gahapatimahāsālā aḍḍhā mahaddhanā mahābhogā pahūtajātarūparajatā pahūtavittūpakaraṇā pahūtadhanadhaññā kāmahetu kāmanidānaṁ kāmādhikaraṇaṁ sampajānamusā bhāsanti; tesaṁ taṁ bhavissati dīgharattaṁ ahitāya dukkhāyā”ti. Idamavoca …pe…",
+   "nan-sn3.7": "「世尊！我坐於裁判之座，見有大富、有大財大產、甚多資財、甚多財穀之剎帝利、婆羅門、家主等，自知為欲樂，依於欲樂，欲樂之故而語妄語。故我生如是思念：『我今有充分裁斷，今當依裁斷以顯賢面。』」",
+   "T0100-sa-2.57": "」佛言：「大王！實爾，實爾。世界之中，多有眾人，得封祿已，憍慢自恣，貪嗜於欲，苦楚眾生。如是愚人，長夜受苦，得大損減，命終之後，必入地獄。」",
+   "T0099-sa1231": "」佛告波斯匿王：「如是，大王！如是，大王！彼勝剎利大姓、婆羅門大姓、長者大姓因貪利故，欺詐妄語，彼愚癡人長夜當得不饒益苦！"
+  },
+  "a03": {
+   "nan-sn3.7": "「大王！有大富，有大財大產，甚多金銀，甚多資財，甚多財穀之剎帝利、婆羅門、家主等，自知為欲樂，依於欲樂，欲樂之故而語妄語，彼等應長時之不利苦惱。」",
+   "T0100-sa-2.57": "佛言：「大王！譬如魚師及其弟子，於捕魚法善巧方便，以細密網截流而拖，魚鼈黿鼉，水性之屬，為網所得。此水性等，入網之者，悉皆集在魚師之手，牽挽旋轉，任魚師意。世間之中，多有眾人，得勝封祿，憍慢自恣，貪嗜五欲，加惱眾生，亦復如是。所以者何？如斯愚人，即入魔網，為網所獲，周迴舉動，住魔所為。」",
+   "T0099-sa1231": "大王當知，譬如漁師、漁師弟子，於河溪谷截流張網，殘殺眾生，令遭大苦。如是，大王！彼勝剎利大姓、婆羅門大姓、長者大姓因貪利故，欺詐妄語，長夜當得不饒益苦！」"
+  },
+  "a04": {
+   "sn3.7": "“Sārattā kāmabhogesu, giddhā kāmesu mucchitā; Atisāraṁ na bujjhanti, macchā khippaṁva oḍḍitaṁ; Pacchāsaṁ kaṭukaṁ hoti, vipāko hissa pāpako”ti.",
+   "nan-sn3.7": "〔世尊宣說此已……乃至……〕富迷於欲樂貪欲以奪心\n不知於道外如魚被網羅\n彼等後苦澀其果即是惡",
+   "T0100-sa-2.57": "爾時，世尊即說偈言：「縱逸著事業，荒迷嗜五欲，\n不知有惡果，如魚入密網，\n此業已成就，極受大苦惱。」",
+   "T0099-sa1231": "爾時，世尊復說偈言：「於財起貪欲，貪欲所迷醉，\n狂亂不自覺，猶如漁捕者，\n緣斯惡業故，當受劇苦報。」"
+  },
+  "a05": {
+   "T0100-sa-2.57": "佛說是已，諸比丘聞佛所說，歡喜奉行。",
+   "T0099-sa1231": "佛說此經已，波斯匿王聞佛所說，歡喜隨喜，作禮而去。"
+  }
+ }
+}

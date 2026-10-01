@@ -1,0 +1,138 @@
+{
+ "slug": "pi-sn22.47",
+ "title": "雜阿含經 （四五）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "經題與分類"
+  },
+  {
+   "id": "a01",
+   "label": "世尊住處與開示五受陰"
+  },
+  {
+   "id": "a02",
+   "label": "沙門婆羅門見我皆於五取蘊觀察"
+  },
+  {
+   "id": "a03",
+   "label": "問答：何為五取蘊"
+  },
+  {
+   "id": "a04",
+   "label": "凡夫於五蘊執著為我或我所"
+  },
+  {
+   "id": "a05",
+   "label": "執著我見導致諸根增長與觸生"
+  },
+  {
+   "id": "a06",
+   "label": "六觸入處與感覺生起"
+  },
+  {
+   "id": "a07",
+   "label": "聖弟子離無明生明，斷我見及諸增上慢"
+  },
+  {
+   "id": "a08",
+   "label": "結經：歡喜奉行"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn22.47",
+   "lang": "pi",
+   "label": "巴利 SN22.47",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn22.47",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN22.47",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0099-sa45",
+   "lang": "lzh",
+   "label": "雜阿含經 （四五）",
+   "who": "劉宋 求那跋陀羅譯",
+   "reorder": true
+  },
+  {
+   "id": "T0099-sa63",
+   "lang": "lzh",
+   "label": "雜阿含經 （六三）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099"
+ ],
+ "anchors": [
+  {
+   "work": "T0099",
+   "node": "（四五）"
+  },
+  {
+   "work": "T0099",
+   "node": "（六三）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn22.47": "Saṁyutta Nikāya 22.47 5. Attadīpavagga Samanupassanāsutta",
+   "nan-sn22.47": "〔四七〕第五　觀見一～二"
+  },
+  "a01": {
+   "sn22.47": "Sāvatthinidānaṁ.",
+   "nan-sn22.47": "〔爾時，世尊〕在舍衛城……乃至……",
+   "T0099-sa45": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。",
+   "T0099-sa63": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。"
+  },
+  "a02": {
+   "sn22.47": "“Ye hi keci, bhikkhave, samaṇā vā brāhmaṇā vā anekavihitaṁ attānaṁ samanupassamānā samanupassanti, sabbete pañcupādānakkhandhe samanupassanti, etesaṁ vā aññataraṁ.",
+   "nan-sn22.47": "「諸比丘！一類之沙門、婆羅門，觀種種有我之觀見，彼等皆觀五取蘊，或觀其隨一。",
+   "T0099-sa45": "云何為五？色受陰，受、想、行、識受陰。",
+   "T0099-sa63": "爾時，世尊告諸比丘：「有五受陰，謂色受陰，受、想、行、識受陰。"
+  },
+  "a03": {
+   "sn22.47": "Katame pañca?",
+   "nan-sn22.47": "以何為五耶？",
+   "T0099-sa45": "爾時，世尊告諸比丘：「有五受陰。",
+   "T0099-sa63": "比丘！若沙門、婆羅門計有我，一切皆於此五受陰計有我。"
+  },
+  "a04": {
+   "sn22.47": "Idha, bhikkhave, assutavā puthujjano ariyānaṁ adassāvī ariyadhammassa akovido ariyadhamme avinīto, sappurisānaṁ adassāvī sappurisadhammassa akovido sappurisadhamme avinīto rūpaṁ attato samanupassati, rūpavantaṁ vā attānaṁ; attani vā rūpaṁ, rūpasmiṁ vā attānaṁ. Vedanaṁ … saññaṁ … saṅkhāre … viññāṇaṁ attato samanupassati, viññāṇavantaṁ vā attānaṁ; attani vā viññāṇaṁ, viññāṇasmiṁ vā attānaṁ. Iti ayañceva samanupassanā ‘asmī’ti cassa avigataṁ hoti.",
+   "nan-sn22.47": "諸比丘！此處有無聞之凡夫，不見聖人……乃至……不順善知識之法。觀我是色，我以色有，我中有色，色中有我……觀受……想……行……識是我，我以識有，我中有識，識中有我。有如是觀見，謂不離我。",
+   "T0099-sa45": "若諸沙門、婆羅門見有我者，一切皆於此五受陰見我。諸沙門、婆羅門見色是我，色異我，我在色，色在我；見受、想、行、識是我，識異我，我在識，識在我。愚癡無聞凡夫以無明故，見色是我、異我、相在，言我真實不捨；",
+   "T0099-sa63": "何等為五？諸沙門、婆羅門於色見是我、異我、相在；如是受、想、行、識，見是我、異我、相在。如是愚癡無聞凡夫，計我、無明、分別如是觀，不離我所；"
+  },
+  "a05": {
+   "sn22.47": "‘Asmī’ti kho pana, bhikkhave, avigate pañcannaṁ indriyānaṁ avakkanti hoti— cakkhundriyassa sotindriyassa ghānindriyassa jivhindriyassa kāyindriyassa.",
+   "nan-sn22.47": "諸比丘！又謂不離我者，則有諸根之入，〔謂〕眼根、耳根、鼻根、舌根、身根是。",
+   "T0099-sa45": "以不捨故，諸根增長；諸根長已，增諸觸；",
+   "T0099-sa63": "不離我所者，入於諸根；入於諸根已，而生於觸；"
+  },
+  "a06": {
+   "sn22.47": "Atthi, bhikkhave, mano, atthi dhammā, atthi avijjādhātu. Avijjāsamphassajena, bhikkhave, vedayitena phuṭṭhassa assutavato puthujjanassa ‘asmī’tipissa hoti; ‘ayamahamasmī’tipissa hoti; ‘bhavissan’tipissa hoti; ‘na bhavissan’tipissa hoti; ‘rūpī bhavissan’tipissa hoti; ‘arūpī bhavissan’tipissa hoti; ‘saññī bhavissan’tipissa hoti; ‘asaññī bhavissan’tipissa hoti; ‘nevasaññīnāsaññī bhavissan’tipissa hoti. Tiṭṭhanteva kho, bhikkhave, tattheva pañcindriyāni.",
+   "nan-sn22.47": "諸比丘！有意、有法、有無明界，觸於無明觸所生之所受之無聞凡夫，思惟我，思惟此是我。思惟有，思惟無，思惟有色，思惟無色，思惟有想，思惟無想，思惟非想非非想。",
+   "T0099-sa45": "六觸入處所觸故，愚癡無聞凡夫起苦樂覺，從觸入處起。何等為六？謂眼觸入處，耳、鼻、舌、身、意觸入處。「如是，比丘！有意界、法界、無明界，愚癡無聞凡夫無明觸故，起有覺、無覺、有無覺、我勝覺、我等覺、我卑覺、我知我見覺。如是知、如是見覺，皆由六觸入故。",
+   "T0099-sa63": "六觸入所觸，愚癡無聞凡夫生苦樂，從是生此等及餘。謂六觸身，云何為六？謂眼觸入處，耳、鼻、舌、身、意觸入處。比丘！有意界、法界、無明界，無明觸所觸。愚癡無聞凡夫言有、言無、言有無、言非有非無、言我最勝、言我相似，我知、我見。"
+  },
+  "a07": {
+   "sn22.47": "Athettha sutavato ariyasāvakassa avijjā pahīyati, vijjā uppajjati. Tassa avijjāvirāgā vijjuppādā ‘asmī’tipissa na hoti; ‘ayamahamasmī’tipissa na hoti; ‘bhavissan’ti … ‘na bhavissan’ti … rūpī … arūpī … saññī … asaññī … ‘nevasaññīnāsaññī bhavissan’tipissa na hotī”ti.",
+   "nan-sn22.47": "諸比丘！亦即於其處住於五根。然則，有聞之聖弟子斷無明而生明。彼人離無明而生明故，不思惟我，不思惟此是我，不思惟有，不思惟無，不思惟有色……無色……有想……無想……非想非非想。」",
+   "T0099-sa45": "多聞聖弟子於此六觸入處，捨離無明而生明，不生有覺、無覺、有無覺、勝覺、等覺、卑覺、我知我見覺。如是知、如是見已，先所起無明觸滅，後明觸覺起。」",
+   "T0099-sa63": "「復次，比丘！多聞聖弟子住六觸入處，而能厭離無明，能生於明。彼於無明離欲而生於明，不有、不無、非有無、非不有無、非有我勝、非有我劣、非有我相似，我知、我見。作如是知、如是見已，所起前無明觸滅，後明觸集起。」"
+  },
+  "a08": {
+   "sn22.47": "Pañcamaṁ.",
+   "T0099-sa45": "佛說此經已，諸比丘聞佛所說，歡喜奉行。",
+   "T0099-sa63": "佛說是經已，諸比丘聞佛所說，歡喜奉行。"
+  }
+ }
+}

@@ -1,0 +1,139 @@
+{
+ "slug": "pi-sn2.23",
+ "title": "別譯雜阿含經 （一三六）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "天子問偈"
+  },
+  {
+   "id": "a02",
+   "label": "佛答偈"
+  },
+  {
+   "id": "a03",
+   "label": "天子讚歎請問"
+  },
+  {
+   "id": "a04",
+   "label": "天子自述施事"
+  },
+  {
+   "id": "a05",
+   "label": "四門施與被超越"
+  },
+  {
+   "id": "a06",
+   "label": "眾民來請施與功德"
+  },
+  {
+   "id": "a07",
+   "label": "天子自歎未達功德邊際"
+  },
+  {
+   "id": "a08",
+   "label": "重複讚歎佛偈"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn2.23",
+   "lang": "pi",
+   "label": "巴利 SN2.23",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn2.23",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN2.23",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.136",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （一三六）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa999",
+   "lang": "lzh",
+   "label": "雜阿含經 （九九九）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（一三六）"
+  },
+  {
+   "work": "T0099",
+   "node": "（九九九）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn2.23": "Saṁyutta Nikāya 2.23 3. Nānātitthiyavagga Serīsutta",
+   "nan-sn2.23": "〔二三〕第三　世理",
+   "T0100-sa-2.136": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。時，有一天光色倍常，於其夜中，來詣佛所，威光熾盛，遍照祇洹，悉皆大明。",
+   "T0099-sa999": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。時，有天子名悉鞞梨，容色絕妙，於後夜時來詣佛所，稽首佛足，退坐一面。身諸光明遍照祇樹給孤獨園。"
+  },
+  "a01": {
+   "sn2.23": "Ekamantaṁ ṭhito kho serī devaputto bhagavantaṁ gāthāya ajjhabhāsi: “Annamevābhinandanti, ubhaye devamānusā; Atha ko nāma so yakkho, yaṁ annaṁ nābhinandatī”ti.",
+   "nan-sn2.23": "立於一面之世理天子，向世尊唱此偈曰：不論天及人皆以食為樂\n時有不喜食夜叉實何者〔世尊：〕信仰清淨心行施食之人\n此世及後世皆可得其食\n是故調伏慳善施即勝垢\n功德乃人人後世渡津頭",
+   "T0100-sa-2.136": "爾時，此天禮佛足已，却坐一面，而說偈言：「世間天及人，飲食生歡喜，\n世間都無有，飲食不生喜。」",
+   "T0099-sa999": "時，彼天子而說偈言：「諸天及世人，於食悉欣樂，\n頗有諸世間，福樂自隨逐。」"
+  },
+  "a02": {
+   "sn2.23": "“Ye naṁ dadanti saddhāya, vippasannena cetasā; Tameva annaṁ bhajati, asmiṁ loke paramhi ca. Tasmā vineyya maccheraṁ, dajjā dānaṁ malābhibhū; Puññāni paralokasmiṁ, patiṭṭhā honti pāṇinan”ti.",
+   "nan-sn2.23": "〔天子曰：〕「世尊！希有，得未曾有。」實是世尊之善說：",
+   "T0100-sa-2.136": "爾時，世尊復說偈言：「若有能信施，使心極清淨，\n今世若後世，飲食福隨逐。」",
+   "T0099-sa999": "爾時，世尊說偈答言：「淨信心惠施，此世及後世，\n隨其所至處，福報常影隨。\n是故當捨慳，行無垢惠施，\n施已心歡喜，此世他世受。」"
+  },
+  "a03": {
+   "sn2.23": "“Acchariyaṁ, bhante, abbhutaṁ, bhante. Yāvasubhāsitamidaṁ, bhante, bhagavatā: ‘Ye naṁ dadanti saddhāya, vippasannena cetasā; Tameva annaṁ bhajati, asmiṁ loke paramhi ca. Tasmā vineyya maccheraṁ, dajjā dānaṁ malābhibhū; Puññāni paralokasmiṁ, patiṭṭhā honti pāṇinan’ti.",
+   "nan-sn2.23": "信仰清淨心行施食之人\n此世及後世皆可得其食\n是故調伏慳善施克服垢\n功德乃人人後世渡津頭",
+   "T0100-sa-2.136": "爾時，此天聞佛所說，白佛言：「世尊！實為希有！善說斯偈。」復白佛言：「世尊！",
+   "T0099-sa999": "時，彼悉鞞梨天子白佛言：「奇哉！世尊！善說斯義：「淨信心惠施，此世及他世，\n隨其所至處，福報常影隨。\n是故當捨慳，行無垢惠施，\n施已心歡喜，此世他世受。」悉鞞梨天子白佛言：「世尊！"
+  },
+  "a04": {
+   "sn2.23": "Bhūtapubbāhaṁ, bhante, sirī nāma rājā ahosiṁ dāyako dānapati dānassa vaṇṇavādī. Tassa mayhaṁ, bhante, catūsu dvāresu dānaṁ dīyittha samaṇabrāhmaṇakapaṇaddhikavanibbakayācakānaṁ. Atha kho maṁ, bhante, itthāgāraṁ upasaṅkamitvā etadavoca: ‘devassa kho dānaṁ dīyati; amhākaṁ dānaṁ na dīyati. Sādhu mayampi devaṁ nissāya dānāni dadeyyāma, puññāni kareyyāmā’ti. Tassa mayhaṁ, bhante, etadahosi: ‘ahaṁ khosmi dāyako dānapati dānassa vaṇṇavādī. Dānaṁ dassāmāti vadante kinti vadeyyan’ti?",
+   "nan-sn2.23": "「世尊，昔我是施者、施主，布施之讚歎者，名為世理王。世尊！我於四門，施與沙門、婆羅門、可憐之人眾、旅行者、無宿之人等、求乞者。時，世尊！妃妾等來言我曰：『陛下之行施與，我等不行施與，我等亦依陛下得行施與之功德者，即何善焉？』",
+   "T0100-sa-2.136": "我憶過去，有一人王名曰遲緩，然彼國王於四城門施於飲食，城中及市亦施飲食。時，王夫人白於王言：『王今作福，願聽我等助王為福。』",
+   "T0099-sa999": "我自知過去世時曾為國王，名悉鞞梨，於四城門普施為福，於其城內有四交道，亦於其中布施作福。「時，有第一夫人來語我言：『大王大作福德，而我無力修諸福業。』"
+  },
+  "a05": {
+   "sn2.23": "So khvāhaṁ, bhante, paṭhamaṁ dvāraṁ itthāgārassa adāsiṁ. Tattha itthāgārassa dānaṁ dīyittha; mama dānaṁ paṭikkami. Atha kho maṁ, bhante, khattiyā anuyantā upasaṅkamitvā etadavocuṁ: ‘devassa kho dānaṁ dīyati; itthāgārassa dānaṁ dīyati; amhākaṁ dānaṁ na dīyati. Sādhu mayampi devaṁ nissāya dānāni dadeyyāma, puññāni kareyyāmā’ti. Tassa mayhaṁ, bhante, etadahosi: ‘ahaṁ khosmi dāyako dānapati dānassa vaṇṇavādī. Dānaṁ dassāmāti vadante kinti vadeyyan’ti? So khvāhaṁ, bhante, dutiyaṁ dvāraṁ khattiyānaṁ anuyantānaṁ adāsiṁ. Tattha khattiyānaṁ anuyantānaṁ dānaṁ dīyittha, mama dānaṁ paṭikkami. Atha kho maṁ, bhante, balakāyo upasaṅkamitvā etadavoca: ‘devassa kho dānaṁ dīyati; itthāgārassa dānaṁ dīyati; khattiyānaṁ anuyantānaṁ dānaṁ dīyati; amhākaṁ dānaṁ na dīyati. Sādhu mayampi devaṁ nissāya dānāni dadeyyāma, puññāni kareyyāmā’ti. Tassa mayhaṁ, bhante, etadahosi: ‘ahaṁ khosmi dāyako dānapati dānassa vaṇṇavādī. Dānaṁ dassāmāti vadante kinti vadeyyan’ti? So khvāhaṁ, bhante, tatiyaṁ dvāraṁ balakāyassa adāsiṁ. Tattha balakāyassa dānaṁ dīyittha, mama dānaṁ paṭikkami. Atha kho maṁ, bhante, brāhmaṇagahapatikā upasaṅkamitvā etadavocuṁ: ‘devassa kho dānaṁ dīyati; itthāgārassa dānaṁ dīyati; khattiyānaṁ anuyantānaṁ dānaṁ dīyati; balakāyassa dānaṁ dīyati; amhākaṁ dānaṁ na dīyati. Sādhu mayampi devaṁ nissāya dānāni dadeyyāma, puññāni kareyyāmā’ti. Tassa mayhaṁ, bhante, etadahosi: ‘ahaṁ khosmi dāyako dānapati dānassa vaṇṇavādī. Dānaṁ dassāmāti vadante kinti vadeyyan’ti? So khvāhaṁ, bhante, catutthaṁ dvāraṁ brāhmaṇagahapatikānaṁ adāsiṁ. Tattha brāhmaṇagahapatikānaṁ dānaṁ dīyittha, mama dānaṁ paṭikkami.",
+   "nan-sn2.23": "世尊！我如是思之：『我是施者、施主、施之讚歎者。我對於言「我等亦應行布施」者，當作如何說耶？』世尊！如是我於第一門以與妃妾等，於此妃妾等行布施，超越我之施與。時，世尊！侍者之剎帝利等，來言我曰：『陛下之施與，妃妾等之施與，我等不施與，我等亦依陛下得行施與之功德者，即何善焉？』世尊！我如是思之：我是施者、施主、施之讚歎者。對於言『我等亦行布施』者，當如何說耶？世尊！如是我於第二門，以與侍者之剎帝利等，彼等於此行布施，超越我之施與。時，世尊！軍隊來說我……〔乃至〕……世尊！如是我於第三門與軍隊，與彼等於此行布施，超越我之施與。時，世尊！婆羅門家主等來言我……〔乃至〕……世尊！如是我於第四門，與婆羅門家主等，彼等於此行布施、超越我之施與。",
+   "T0100-sa-2.136": "王聞其言，以城東門所施之食，迴與夫人。王之太子亦白父言：『父母修福，我亦樂修。』王聞其言，以城南門所施之食，迴與太子。輔相後來，啟白王言：『王今修善，夫人、太子皆修福業，唯願聽我助修福業。』王聞其言，以城西門所施之食，迴與輔相。時，有諸臣復白王言：『夫人、太子及以輔相咸修福德，我等今者亦樂助修。』王聞其言，即以北門所施之食，迴與諸臣。",
+   "T0099-sa999": "我時告言：『城東門外布施作福悉皆屬汝。』時，諸王子復來白我：『大王多作功德，夫人亦同，而我無力作諸福業，我今願得依於大王少作功德。』我時答言：『城南門外所作施福悉皆屬汝。』時，有大臣復來白我：『今日大王多作功德，夫人、王子悉皆共之，而我無力作諸福業，願依大王少有所作。』我時告言：『城西門外所作施福悉皆屬汝。』時，諸將士復來白我：『今日大王多作功德，夫人、太子及諸大臣悉皆共之，唯我無力能修福業，願依大王得有所作。』我時答言：『城北門外所作施福悉皆屬汝。』"
+  },
+  "a06": {
+   "sn2.23": "Atha kho maṁ, bhante, purisā upasaṅkamitvā etadavocuṁ: ‘na kho dāni devassa koci dānaṁ dīyatī’ti. Evaṁ vuttāhaṁ, bhante, te purise etadavocaṁ: ‘tena hi, bhaṇe, yo bāhiresu janapadesu āyo sañjāyati tato upaḍḍhaṁ antepure pavesetha, upaḍḍhaṁ tattheva dānaṁ detha samaṇabrāhmaṇakapaṇaddhikavanibbakayācakānan’ti.",
+   "nan-sn2.23": "世尊！時，人人來說我曰：『今陛下任何皆不施與。』世尊！如是言云，我即向彼眾人曰：『然則，從城外諸州所收益之中，一半納於宮庭，一半施與沙門、婆羅門、可憐之人眾、旅行者、無宿之人、求乞者等。』",
+   "T0100-sa-2.136": "時，國中人復白王言：『夫人、太子、輔相咸修福德，願聽我等助修福業。』王聞其言，復以布施迴與人民。時，典施人白於王言：『王之所有，於四城門及以布施，悉皆迴與夫人、太子、輔相、大臣、國中人民，斷於王施，兼竭庫藏。』王即答言：『先所與者，已爾與盡，自今已後，他方小國所可貢獻，半入庫藏，半用修福。』",
+   "T0099-sa999": "國中庶民復來白我：『今日大王多作功德，夫人、王子、大臣、諸將悉皆共之，唯我無力不能修福，願依大王少有所作。』我時答言：『於其城內四交道頭所作施福悉屬汝等。』爾時，國王夫人、王子、大臣、將士、庶民悉皆惠施，作諸功德，我先所作惠施功德於茲則斷。「時，我所使諸作福者，還至我所，為我作禮而白我言：『大王當知，諸修福處，夫人、王子、大臣、將士及諸庶民各據其處，行施作福，大王所施於茲則斷。』我時答言：『善男子！諸方邊國歲輸財物應入我者，分半入庫，分其半分，即於彼處惠施作福。』彼聞教旨，往詣邊國，集諸財物，半送於庫，半留於彼惠施作福。"
+  },
+  "a07": {
+   "sn2.23": "So khvāhaṁ, bhante, evaṁ dīgharattaṁ katānaṁ puññānaṁ evaṁ dīgharattaṁ katānaṁ kusalānaṁ dhammānaṁ pariyantaṁ nādhigacchāmi— ettakaṁ puññanti vā ettako puññavipākoti vā ettakaṁ sagge ṭhātabbanti vāti.",
+   "nan-sn2.23": "世尊，於是我如是長久所行之功德，如是長久所行之善，未達其終極。有此諸功德，此諸功德之果，此諸之間當於天界〔其無終極〕。",
+   "T0100-sa-2.136": "世尊！我於爾時，長夜修福，我於長夜獲得勝報，常懷喜樂，所受福報，無有窮盡，不見邊際。如我所受，得大果報，乃知世尊善說斯偈。」時，遲緩天子聞佛所說，歡喜踊躍，頂禮佛足，還于天宮。",
+   "T0099-sa999": "「我先長夜如是惠施作福，長夜常得可愛、可念、可意福報，常受快樂，無有窮極。以斯福業及福果福報，悉皆入於大功德聚數。譬如五大河合為一流，所謂恒河、耶蒲那、薩羅由、伊羅跋提、摩醯。如是五河合為一流，無有人能量其河水百千萬億斗斛之數。彼大河水得為大水聚數，我亦如是，所作功德果、功德報不可稱量，悉得入於大功德聚數。」爾時，悉鞞梨天子聞佛所說，歡喜隨喜，稽首佛足，即沒不現。"
+  },
+  "a08": {
+   "sn2.23": "Acchariyaṁ, bhante, abbhutaṁ, bhante. Yāvasubhāsitamidaṁ, bhante, bhagavatā: ‘Ye naṁ dadanti saddhāya, vippasannena cetasā; Tameva annaṁ bhajati, asmiṁ loke paramhi ca. Tasmā vineyya maccheraṁ, dajjā dānaṁ malābhibhū; Puññāni paralokasmiṁ, patiṭṭhā honti pāṇinan’”ti.",
+   "nan-sn2.23": "世尊！希有、是最勝。此依世尊實是善說：信仰清淨心行施食之人\n此世及後世皆可得其食\n是故調伏慳善施克服垢\n功德乃人人後世渡津頭」"
+  }
+ }
+}

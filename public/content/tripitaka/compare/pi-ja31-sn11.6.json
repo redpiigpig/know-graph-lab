@@ -1,0 +1,109 @@
+{
+ "slug": "pi-ja31-sn11.6",
+ "title": "別譯雜阿含經 （四九）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。複核標記存疑 1 段：義段3的別譯雜阿含經（四九）與雜阿含經（一二二二）內容實際屬於義段2的偈頌與避鳥巢敘事，而非御者迴車與阿修羅恐懼的敘述，顯有對錯。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "天與阿修羅戰敗"
+  },
+  {
+   "id": "a02",
+   "label": "天帝避鳥巢之偈"
+  },
+  {
+   "id": "a03",
+   "label": "御者迴車與阿修羅恐懼",
+   "doubt": true
+  },
+  {
+   "id": "a04",
+   "label": "結說天帝以慈勝戰"
+  }
+ ],
+ "versions": [
+  {
+   "id": "ja31",
+   "lang": "pi",
+   "label": "巴利 JA31",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "sn11.6",
+   "lang": "pi",
+   "label": "巴利 SN11.6",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn11.6",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN11.6",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.49",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （四九）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa1222",
+   "lang": "lzh",
+   "label": "雜阿含經 （一二二二）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（四九）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一二二二）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "ja31": "Jātaka Ekakanipāta Kulāvakavagga 1. Kulāvakajātaka",
+   "sn11.6": "Saṁyutta Nikāya 11.6 1. Paṭhamavagga Kulāvakasutta",
+   "nan-sn11.6": "〔六〕第六　鳥巢",
+   "T0100-sa-2.49": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。",
+   "T0099-sa1222": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。"
+  },
+  "a01": {
+   "sn11.6": "Sāvatthiyaṁ. “Bhūtapubbaṁ, bhikkhave, devāsurasaṅgāmo samupabyūḷho ahosi. Tasmiṁ kho pana, bhikkhave, saṅgāme asurā jiniṁsu, devā parājiniṁsu. Parājitā ca kho, bhikkhave, devā apāyaṁsveva uttarenamukhā, abhiyaṁsveva ne asurā.",
+   "nan-sn11.6": "舍衛城因緣。「諸比丘！遠昔天與阿修羅之激戰。諸比丘！於其戰阿修羅勝，而諸天敗。諸比丘！戰敗之諸天向北逃走，阿修羅隨後追逐。",
+   "T0100-sa-2.49": "爾時，佛告諸比丘：「昔於一時，帝釋與阿脩羅戰。當于爾時，諸天不如，阿脩羅勝。爾時，帝釋見已不如，尋即迴駕，欲還天宮。",
+   "T0099-sa1222": "爾時，世尊告諸比丘：「過去世時，天、阿修羅對陣鬪戰，阿修羅勝，諸天不如。"
+  },
+  "a02": {
+   "ja31": "“Kulāvakā mātali simbalismiṁ, Īsāmukhena parivajjayassu; Kāmaṁ cajāma asuresu pāṇaṁ, Māme dijā vikkulāvā ahesun”ti. Kulāvakajātakaṁ paṭhamaṁ.",
+   "sn11.6": "Atha kho, bhikkhave, sakko devānamindo mātali saṅgāhakaṁ gāthāya ajjhabhāsi: ‘Kulāvakā mātali simbalismiṁ, Īsāmukhena parivajjayassu; Kāmaṁ cajāma asuresu pāṇaṁ, Māyime dijā vikulāvakā ahesun’ti.",
+   "nan-sn11.6": "諸比丘！時天帝以偈告御者摩多利。",
+   "T0100-sa-2.49": "於其道中，見苦娑羅樹，時，樹上有金翅鳥巢。爾時，帝釋即勅御者摩得梨言：『此巢中有二鳥卵，脫能傷損，汝可迴車，避於此樹。』帝釋即向摩得梨而說偈言：「『汝觀樹上巢，巢中有二卵，\n今車若往彼，必衝而傷破。\n我若以此身，入阿脩羅陣，\n喪失於身命，終不傷鳥卵。』"
+  },
+  "a03": {
+   "sn11.6": "‘Evaṁ, bhaddantavā’ti kho, bhikkhave, mātali saṅgāhako sakkassa devānamindassa paṭissutvā sahassayuttaṁ ājaññarathaṁ paccudāvattesi. Atha kho, bhikkhave, asurānaṁ etadahosi: ‘paccudāvatto kho dāni sakkassa devānamindassa sahassayutto ājaññaratho. Dutiyampi kho devā asurehi saṅgāmessantī’ti bhītā asurapurameva pāvisiṁsu.",
+   "nan-sn11.6": "摩多利辛巴利車轅避鳥之巢\n唯無此等鳥巢喜奪命於修羅御者摩多利答天帝釋：『唯然！尊者。』則以繫千頭駿馬之車輛回頭反馳。",
+   "T0100-sa-2.49": "「說是偈已，尋即迴車。時，阿脩羅眾見帝釋迴，生大恐怖，各作是言：『帝釋向者，詐現退散。今復迴者，必破我軍。』阿修羅眾即時退，諸天逐退，迫到其城。」",
+   "T0099-sa1222": "時，天帝釋軍壞退散，極生恐怖，乘車北馳，還歸天宮。「須彌山下道逕叢林，林下有金翅鳥巢，多有金翅鳥子。爾時，帝釋恐車馬過，踐殺鳥子，告御者言：『可回車還，勿殺鳥子。』御者白王：『阿修羅軍後來逐人，若回還者，為彼所困。』帝釋告言：『寧當回還為阿修羅殺，不以軍眾蹈殺眾生。』於道，御者轉乘南向。阿修羅軍遙見帝釋轉乘而還，謂為戰策，即還退走，眾大恐怖，壞陣流散，歸阿修羅宮。」"
+  },
+  "a04": {
+   "sn11.6": "Iti kho, bhikkhave, sakkassa devānamindassa dhammena jayo ahosī”ti.",
+   "nan-sn11.6": "諸比丘！時阿修羅如是思惟：『天帝釋今以繫千頭駿馬返車輛回頭反馳。諸天則再戰阿修羅。』恐怖而入阿修羅宮殿。諸比丘！如是天帝釋依法乃有勝利。」",
+   "T0100-sa-2.49": "佛告諸比丘：「釋提桓因居天王位，猶能長夜修於慈忍，汝等比丘，當如是學。」諸比丘聞佛所說，歡喜奉行。",
+   "T0099-sa1222": "佛告諸比丘：「彼天帝釋於三十三天為自在王，以慈心故，威力摧伏阿修羅軍，亦常讚嘆慈心功德。汝等比丘正信非家，出家學道，當修慈心，亦應讚嘆慈心功德。」佛說此經已，諸比丘聞佛所說，歡喜奉行。"
+  }
+ }
+}

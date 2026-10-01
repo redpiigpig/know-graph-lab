@@ -1,0 +1,192 @@
+{
+ "slug": "pi-an4.45-an4.46-sn2.26",
+ "title": "別譯雜阿含經 （三〇六）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "天子問不生不老不死處"
+  },
+  {
+   "id": "a02",
+   "label": "佛答無法以步行到達邊際"
+  },
+  {
+   "id": "a03",
+   "label": "天子讚歎並引佛先前之語"
+  },
+  {
+   "id": "a04",
+   "label": "天子自述過去神通與願望"
+  },
+  {
+   "id": "a05",
+   "label": "天子結論未達邊際而死"
+  },
+  {
+   "id": "a06",
+   "label": "天子再次讚歎佛語"
+  },
+  {
+   "id": "a07",
+   "label": "佛說不達邊際亦不脫苦，顯示正道"
+  },
+  {
+   "id": "a08",
+   "label": "結偈：行盡眾生邊，非盡苦際之道"
+  },
+  {
+   "id": "a09",
+   "label": "結論：知邊際者乃善知世，梵行已立"
+  },
+  {
+   "id": "a10",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "an4.45",
+   "lang": "pi",
+   "label": "巴利 AN4.45",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "an4.46",
+   "lang": "pi",
+   "label": "巴利 AN4.46",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "sn2.26",
+   "lang": "pi",
+   "label": "巴利 SN2.26",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn2.26",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN2.26",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.306",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （三〇六）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa1307",
+   "lang": "lzh",
+   "label": "雜阿含經 （一三〇七）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（三〇六）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一三〇七）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "an4.45": "Aṅguttara Nikāya 4.45 5. Rohitassavagga Rohitassasutta",
+   "an4.46": "Aṅguttara Nikāya 4.46 5. Rohitassavagga Dutiyarohitassasutta",
+   "sn2.26": "Saṁyutta Nikāya 2.26 3. Nānātitthiyavagga Rohitassasutta Sāvatthinidānaṁ.",
+   "nan-sn2.26": "〔二六〕第六　赤馬〔爾時，世尊〕住舍衛城……。",
+   "T0100-sa-2.306": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。",
+   "T0099-sa1307": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。時，有赤馬天子，容色絕妙，於後夜時來詣佛所，稽首佛足，退坐一面。其身光明遍照祇樹給孤獨園。"
+  },
+  "a01": {
+   "an4.45": "Ekaṁ samayaṁ bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme. Atha kho rohitasso devaputto abhikkantāya rattiyā abhikkantavaṇṇo kevalakappaṁ jetavanaṁ obhāsetvā yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ aṭṭhāsi. Ekamantaṁ ṭhito kho rohitasso devaputto bhagavantaṁ etadavoca:",
+   "an4.46": "Atha kho bhagavā tassā rattiyā accayena bhikkhū āmantesi: “imaṁ, bhikkhave, rattiṁ rohitasso devaputto abhikkantāya rattiyā abhikkantavaṇṇo kevalakappaṁ jetavanaṁ obhāsetvā yenāhaṁ tenupasaṅkami; upasaṅkamitvā maṁ abhivādetvā ekamantaṁ aṭṭhāsi. Ekamantaṁ ṭhito kho, bhikkhave, rohitasso devaputto maṁ etadavoca: ‘yattha nu kho, bhante, na jāyati na jīyati na mīyati na cavati na upapajjati, sakkā nu kho so, bhante, gamanena lokassa anto ñātuṁ vā daṭṭhuṁ vā pāpuṇituṁ vā’ti?",
+   "sn2.26": "Ekamantaṁ ṭhito kho rohitasso devaputto bhagavantaṁ etadavoca: “yattha nu kho, bhante, na jāyati na jīyati na mīyati na cavati na upapajjati, sakkā nu kho so, bhante, gamanena lokassa anto ñātuṁ vā daṭṭhuṁ vā pāpuṇituṁ vā”ti?",
+   "nan-sn2.26": "立於一面之赤馬天子，向世尊言此曰：「世尊！於此不生〔何物〕、不衰、不死、無生起之處，步行之而知、或見、或得到彼世界之邊極耶？」",
+   "T0100-sa-2.306": "時有天子名曰赤馬，光色倍常，來詣佛所，頂禮佛足，却坐一面，白佛言：「世尊！當於何處而能得有不生老死，不沒不出，眾生盡處？如是邊際，為可知不？」",
+   "T0099-sa1307": "時，彼赤馬天子白佛言：「世尊！頗有能行過世界邊，至不生、不老、不死處不？」"
+  },
+  "a02": {
+   "an4.45": "“Yattha nu kho, bhante, na jāyati na jīyati na mīyati na cavati na upapajjati, sakkā nu kho so, bhante, gamanena lokassa anto ñātuṁ vā daṭṭhuṁ vā pāpuṇituṁ vā”ti? “Yattha kho, āvuso, na jāyati na jīyati na mīyati na cavati na upapajjati, nāhaṁ taṁ gamanena lokassa antaṁ ñāteyyaṁ daṭṭheyyaṁ patteyyanti vadāmī”ti.",
+   "an4.46": "Evaṁ vutte, ahaṁ, bhikkhave, rohitassaṁ devaputtaṁ etadavocaṁ: ‘yattha kho, āvuso, na jāyati na jīyati na mīyati na cavati na upapajjati, nāhaṁ taṁ gamanena lokassa antaṁ ñāteyyaṁ daṭṭheyyaṁ patteyyanti vadāmī’ti. Evaṁ vutte, bhikkhave, rohitasso devaputto maṁ etadavoca:",
+   "sn2.26": "“Yattha kho, āvuso, na jāyati na jīyati na mīyati na cavati na upapajjati, nāhaṁ taṁ gamanena lokassa antaṁ ñāteyyaṁ daṭṭheyyaṁ patteyyanti vadāmī”ti.",
+   "nan-sn2.26": "〔世尊曰：〕「友！我不語於此不生〔何物〕，不衰、不死、不沒、步行之即得知、得見、得到達不生起彼世界之邊極。」",
+   "T0100-sa-2.306": "爾時，世尊告赤馬天子言：「不生老死，既不終沒，亦不出生，無有人能行至邊際，亦無有能往詣於彼，盡其崖限。」時赤馬天子白佛言：「世尊！",
+   "T0099-sa1307": "佛告赤馬：「無有能過世界邊，至不生、不老、不死處者。」赤馬天子白佛言：「奇哉！"
+  },
+  "a03": {
+   "an4.45": "“Acchariyaṁ, bhante, abbhutaṁ, bhante. Yāva subhāsitamidaṁ, bhante, bhagavatā: ‘yattha kho, āvuso, na jāyati na jīyati na mīyati na cavati na upapajjati, nāhaṁ taṁ gamanena lokassa antaṁ ñāteyyaṁ daṭṭheyyaṁ patteyyanti vadāmī’”ti.",
+   "an4.46": "‘acchariyaṁ, bhante, abbhutaṁ, bhante. Yāva subhāsitamidaṁ, bhante, bhagavatā— yattha kho, āvuso, na jāyati na jīyati na mīyati na cavati na upapajjati, nāhaṁ taṁ gamanena lokassa antaṁ ñāteyyaṁ daṭṭheyyaṁ patteyyanti vadāmi’.",
+   "sn2.26": "“Acchariyaṁ, bhante, abbhutaṁ, bhante. Yāvasubhāsitamidaṁ, bhante, bhagavatā: ‘yattha kho, āvuso, na jāyati na jīyati na mīyati na cavati na upapajjati, nāhaṁ taṁ gamanena lokassa antaṁ ñāteyyaṁ daṭṭheyyaṁ patteyyanti vadāmī’ti.",
+   "nan-sn2.26": "〔天子曰：〕「世尊！希有、得未曾有。世尊！此實是由世尊所語：『友！我不語於此不生〔何物〕，不衰、不死、不沒、步行之即得知、得見、得到達不生起彼世界之邊極。』",
+   "T0100-sa-2.306": "世尊所說，甚善希有，不生老死，乃至無能得其邊際。",
+   "T0099-sa1307": "世尊！善說斯義。如世尊說言：『無過世界邊，至不生、不老、不死處者。』"
+  },
+  "a04": {
+   "an4.45": "“Bhūtapubbāhaṁ, bhante, rohitasso nāma isi ahosiṁ bhojaputto iddhimā vehāsaṅgamo. Tassa mayhaṁ, bhante, evarūpo javo ahosi, seyyathāpi nāma daḷhadhammā dhanuggaho sikkhito katahattho katūpāsano lahukena asanena appakasirena tiriyaṁ tālacchāyaṁ atipāteyya. Tassa mayhaṁ, bhante, evarūpo padavītihāro ahosi, seyyathāpi nāma puratthimā samuddā pacchimo samuddo. Tassa mayhaṁ, bhante, evarūpena javena samannāgatassa evarūpena ca padavītihārena evarūpaṁ icchāgataṁ uppajji: ‘ahaṁ gamanena lokassa antaṁ pāpuṇissāmī’ti.",
+   "an4.46": "Bhūtapubbāhaṁ, bhante, rohitasso nāma isi ahosiṁ bhojaputto iddhimā vehāsaṅgamo. Tassa mayhaṁ, bhante, evarūpo javo ahosi, seyyathāpi nāma daḷhadhammā dhanuggaho sikkhito katahattho katūpāsano lahukena asanena appakasirena tiriyaṁ tālacchāyaṁ atipāteyya. Tassa mayhaṁ, bhante, evarūpo padavītihāro ahosi, seyyathāpi nāma puratthimā samuddā pacchimo samuddo. Tassa mayhaṁ, bhante, evarūpena javena samannāgatassa evarūpena ca padavītihārena evarūpaṁ icchāgataṁ uppajji: ‘ahaṁ gamanena lokassa antaṁ pāpuṇissāmī’ti.",
+   "sn2.26": "Bhūtapubbāhaṁ, bhante, rohitasso nāma isi ahosiṁ bhojaputto iddhimā vehāsaṅgamo. Tassa mayhaṁ, bhante, evarūpo javo ahosi; seyyathāpi nāma daḷhadhammā dhanuggaho susikkhito katahattho katayoggo katūpāsano lahukena asanena appakasireneva tiriyaṁ tālacchāyaṁ atipāteyya. Tassa mayhaṁ, bhante, evarūpo padavītihāro ahosi; seyyathāpi nāma puratthimā samuddā pacchimo samuddo. Tassa mayhaṁ, bhante, evarūpaṁ icchāgataṁ uppajji: ‘ahaṁ gamanena lokassa antaṁ pāpuṇissāmī’ti.",
+   "nan-sn2.26": "世尊！我往昔名為赤馬仙人，普奢之子，而有飛行於空中之神通。世尊！我有如是迅速之力；譬如精巧練習、熟練，取弓於輕矢，其〔速力〕如以超越射透多羅樹之葉蔭。",
+   "T0100-sa-2.306": "所以者何？念我過去，曾為仙人，號名赤馬，斷於欲結，得世五通，神力駿疾，過於日月，舉足一踔，能渡大海。而作是念：『我今神力駿疾如是，我當行盡眾生邊際。』",
+   "T0099-sa1307": "所以者何？世尊！我自憶宿命，名曰赤馬，作外道仙人，得神通，離諸愛欲。我時，作是念：『我有如是捷疾神足，如健士夫，以利箭橫射過多羅樹影之頃，能登一須彌，至一須彌，足躡東海，超至西海。』我時，作是念：『我今成就如是捷疾神力，今日寧可求世界邊。』"
+  },
+  "a05": {
+   "an4.45": "So kho ahaṁ, bhante, aññatreva asitapītakhāyitasāyitā aññatra uccārapassāvakammā aññatra niddākilamathapaṭivinodanā vassasatāyuko vassasatajīvī vassasataṁ gantvā appatvāva lokassa antaṁ antarāyeva kālaṅkato.",
+   "an4.46": "So kho ahaṁ, bhante, aññatreva asitapītakhāyitasāyitā aññatra uccārapassāvakammā aññatra niddākilamathapaṭivinodanā vassasatāyuko vassasatajīvī vassasataṁ gantvā appatvāva lokassa antaṁ antarāyeva kālaṅkato.",
+   "sn2.26": "So khvāhaṁ, bhante, evarūpena javena samannāgato evarūpena ca padavītihārena, aññatreva asitapītakhāyitasāyitā aññatra uccārapassāvakammā aññatra niddākilamathapaṭivinodanā vassasatāyuko vassasatajīvī vassasataṁ gantvā appatvāva lokassa antaṁ antarāva kālaṅkato.",
+   "nan-sn2.26": "世尊！斯我一足之幅度，有如由東海至西海之廣。於我起如是願：我於步行，得到世界之邊極。",
+   "T0100-sa-2.306": "我於爾時，志欲專求眾生邊故，心意𢛌𢛌都無閑暇，唯除洗手，并飲食時及大小便，於百年中，竟不能得眾生邊際，而便命終。",
+   "T0099-sa1307": "作是念已，即便發行，唯除食息便利，減節睡眠，常行百歲，於彼命終，竟不能得過世界邊，至不生、不老、不死之處。」"
+  },
+  "a06": {
+   "an4.45": "Acchariyaṁ, bhante, abbhutaṁ, bhante. Yāva subhāsitamidaṁ, bhante, bhagavatā: ‘yattha kho, āvuso, na jāyati na jīyati na mīyati na cavati na upapajjati, nāhaṁ taṁ gamanena lokassa antaṁ ñāteyyaṁ daṭṭheyyaṁ patteyyanti vadāmī’”ti.",
+   "an4.46": "Acchariyaṁ, bhante, abbhutaṁ, bhante. Yāva subhāsitamidaṁ, bhante, bhagavatā: ‘yattha kho, āvuso, na jāyati na jīyati na mīyati na cavati na upapajjati, nāhaṁ taṁ gamanena lokassa antaṁ ñāteyyaṁ daṭṭheyyaṁ patteyyanti vadāmī’ti.",
+   "sn2.26": "Acchariyaṁ, bhante, abbhutaṁ, bhante. Yāvasubhāsitamidaṁ, bhante, bhagavatā: ‘yattha kho, āvuso, na jāyati na jīyati na mīyati na cavati na upapajjati, nāhaṁ taṁ gamanena lokassa antaṁ ñāteyyaṁ daṭṭheyyaṁ patteyyanti vadāmī’”ti.",
+   "nan-sn2.26": "世尊！我具有如是速力，於如是足幅，於飯食之外，大小便之外，睡以治疲勞外，行我壽命百歲之間，未達世界之邊極，中途而死。",
+   "T0100-sa-2.306": "以是故知，如來善說，不生老死，不出不沒，欲往於彼，知其邊際，都無是處。」"
+  },
+  "a07": {
+   "an4.45": "“‘Yattha kho, āvuso, na jāyati na jīyati na mīyati na cavati na upapajjati, nāhaṁ taṁ gamanena lokassa antaṁ ñāteyyaṁ daṭṭheyyaṁ patteyyan’ti vadāmi. Na cāhaṁ, āvuso, appatvāva lokassa antaṁ dukkhassa antakiriyaṁ vadāmi. Api cāhaṁ, āvuso, imasmiṁyeva byāmamatte kaḷevare sasaññimhi samanake lokañca paññāpemi lokasamudayañca lokanirodhañca lokanirodhagāminiñca paṭipadanti.",
+   "an4.46": "Evaṁ vutte, ahaṁ, bhikkhave, rohitassaṁ devaputtaṁ etadavocaṁ: ‘Yattha kho, āvuso, na jāyati na jīyati na mīyati na cavati na upapajjati, nāhaṁ, taṁ gamanena lokassa antaṁ ñāteyyaṁ daṭṭheyyaṁ patteyyanti vadāmī’ti.",
+   "sn2.26": "“Na kho panāhaṁ, āvuso, appatvā lokassa antaṁ dukkhassa antakiriyaṁ vadāmi. Api ca khvāhaṁ, āvuso, imasmiṁyeva byāmamatte kaḷevare sasaññimhi samanake lokañca paññapemi lokasamudayañca lokanirodhañca lokanirodhagāminiñca paṭipadanti.",
+   "nan-sn2.26": "世尊！希有，得未曾有也。世尊！此實是由世尊所語：『我不語於此不生〔何物〕，不衰、不死、不沒，步行而得知、得見、得到達不生起彼世界之邊極。』」",
+   "T0100-sa-2.306": "佛告赤馬天子曰：「如是！如是！若有不生老死，不出不沒，眾生邊際，實無是處。若欲知者，眾生邊際即是涅槃，若盡苦際，是即名為得其邊際。」",
+   "T0099-sa1307": "佛告赤馬：「我今但以一尋之身，說於世界、世界集、世界滅、世界滅道跡。赤馬天子！何等為世間？謂五受陰。何等為五？色受陰、受受陰、想受陰、行受陰、識受陰，是名世間。何等為色集？謂當來有愛，貪、喜俱，彼彼染著，是名世間集。云何為世間滅？若彼當來有愛，貪、喜俱，彼彼染著無餘斷、捨、離、盡、無欲、滅、息、沒，是名世間滅。何等為世間滅道跡？謂八聖道，正見、正志、正語、正業、正命、正方便、正念、正定，是名世間滅道跡。「赤馬！了知世間，斷世間；了知世間集，斷世間集；了知世間滅，證世間滅；了知世間滅道跡，修彼滅道跡。赤馬！若比丘於世間苦若知、若斷，世間集若知、若斷，世間滅若知、若證，世間滅道跡若知、若修。赤馬！是名得世界邊，度世間愛。」"
+  },
+  "a08": {
+   "an4.45": "Gamanena na pattabbo, lokassanto kudācanaṁ; Na ca appatvā lokantaṁ, dukkhā atthi pamocanaṁ.",
+   "an4.46": "Na cāhaṁ, āvuso, appatvāva lokassa antaṁ dukkhassantakiriyaṁ vadāmi. Api cāhaṁ, āvuso, imasmiṁyeva byāmamatte kaḷevare sasaññimhi samanake lokañca paññāpemi lokasamudayañca lokanirodhañca lokanirodhagāminiñca paṭipadanti. Gamanena na pattabbo, lokassanto kudācanaṁ; Na ca appatvā lokantaṁ, dukkhā atthi pamocanaṁ.",
+   "sn2.26": "Gamanena na pattabbo, lokassanto kudācanaṁ; Na ca appatvā lokantaṁ, dukkhā atthi pamocanaṁ.",
+   "T0100-sa-2.306": "爾時，世尊即說偈言：「雖有是神力，終無有能得，\n行盡眾生邊。若不得邊際，\n何能盡苦際？",
+   "T0099-sa1307": "爾時，世尊重說偈言：「未曾遠遊行，而得世界邊，\n無得世界邊，終不盡苦邊。"
+  },
+  "a09": {
+   "an4.45": "Tasmā have lokavidū sumedho, Lokantagū vusitabrahmacariyo; Lokassa antaṁ samitāvi ñatvā, Nāsīsatī lokamimaṁ parañcā”ti.",
+   "an4.46": "Tasmā have lokavidū sumedho, Lokantagū vusitabrahmacariyo; Lokassa antaṁ samitāvi ñatvā, Nāsīsatī lokamimaṁ parañcā”ti.",
+   "sn2.26": "Tasmā have lokavidū sumedho, Lokantagū vusitabrahmacariyo; Lokassa antaṁ samitāvi ñatvā,",
+   "nan-sn2.26": "〔世尊曰：〕友！我非說不達世界之邊極而成苦惱之邊極。友！我說示：於此一尋之有想有意之身體上、到達世界與世界之果、世界之滅與世界之滅道。步行於世界不得達邊極\n不達世邊極不以脫苦惱\n是故實賢者及世間解者\n達世界邊極終以成梵行\n惡之澄靜者知世之邊極\n此世及後世無有所求者",
+   "T0100-sa-2.306": "是故我牟尼，\n得名善知世，唯有勝智人，\n能曉了邊際，梵行已得立，\n正智眾生邊，度邊之彼岸。」",
+   "T0099-sa1307": "以是故牟尼，能知世界邊，\n善解世界邊，諸梵行已立。\n於彼世界邊，平等覺知者，\n是名賢聖行，度世間彼岸。」"
+  },
+  "a10": {
+   "an4.45": "Pañcamaṁ.",
+   "an4.46": "Chaṭṭhaṁ.",
+   "sn2.26": "Nāsīsati lokamimaṁ parañcā”ti.",
+   "T0100-sa-2.306": "時赤馬天子聞佛所說，歡喜頂禮，還于天宮。",
+   "T0099-sa1307": "是時，赤馬天子聞佛所說，歡喜隨喜，稽首佛足，即沒不現。"
+  }
+ }
+}

@@ -1,0 +1,87 @@
+{
+ "slug": "pi-an10.76",
+ "title": "雜阿含經 （三四六）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "三法不可意"
+  },
+  {
+   "id": "a02",
+   "label": "三法不斷則不能離"
+  },
+  {
+   "id": "a03",
+   "label": "三法斷則能離"
+  },
+  {
+   "id": "a04",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "an10.76",
+   "lang": "pi",
+   "label": "巴利 AN10.76",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "T0099-sa346",
+   "lang": "lzh",
+   "label": "雜阿含經 （三四六）",
+   "who": "劉宋 求那跋陀羅譯"
+  },
+  {
+   "id": "T0099-sa760",
+   "lang": "lzh",
+   "label": "雜阿含經 （七六〇）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099"
+ ],
+ "anchors": [
+  {
+   "work": "T0099",
+   "node": "（三四六）"
+  },
+  {
+   "work": "T0099",
+   "node": "（七六〇）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "an10.76": "Aṅguttara Nikāya 10.76 8. Ākaṅkhavagga Tayodhammasutta",
+   "T0099-sa346": "如是我聞：一時，佛住王舍城迦蘭陀竹園。",
+   "T0099-sa760": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。"
+  },
+  "a01": {
+   "an10.76": "“Tayome, bhikkhave, dhammā loke na saṁvijjeyyuṁ, na tathāgato loke uppajjeyya arahaṁ sammāsambuddho, na tathāgatappavedito dhammavinayo loke dibbeyya. Katame tayo? Jāti ca, jarā ca, maraṇañca— ime kho, bhikkhave, tayo dhammā loke na saṁvijjeyyuṁ, na tathāgato loke uppajjeyya arahaṁ sammāsambuddho, na tathāgatappavedito dhammavinayo loke dibbeyya. Yasmā ca kho, bhikkhave, ime tayo dhammā loke saṁvijjanti tasmā tathāgato loke uppajjati arahaṁ sammāsambuddho, tasmā tathāgatappavedito dhammavinayo loke dibbati.",
+   "T0099-sa346": "爾時，世尊告諸比丘：「有三法，世間所不愛、不念、不可意。何等為三？謂老、病、死。世間若無此三法不可愛、不可念、不可意者，如來、應、等正覺不出於世間，世間亦不知有如來、應、等正覺知見，說正法、律。以世間有老、病、死三法不可愛、不可念、不可意故，是故如來、應、等正覺出於世間，世間知有如來、應、等正覺所知、所見，說正法、律。",
+   "T0099-sa760": "爾時，世尊告諸比丘：「世有三法，不可喜、不可愛、不可念。何等為三？謂老、病、死，此三法不可喜、不可愛、不可念。世間若無此三法不可喜、不可愛、不可念者，無有如來、應、等正覺出於世間，世間亦不知有如來說法教誡、教授。以世間有此三法不可喜、不可愛、不可念故，如來、應、等正覺出於世間，世間知有如來說法教誡、教授。」諸比丘白佛：「有道有跡，斷此三法不可喜、不可愛、不可念者不？」佛告比丘：「有道有跡，修習多修習，斷此三法不可喜、不可愛、不可念。何等為道？何等為跡？修習多修習，斷此三法不可喜、不可愛、不可念？謂八聖道，正見、正志、正語、正業、正命、正方便、正念、正定。」"
+  },
+  "a02": {
+   "an10.76": "Tayome, bhikkhave, dhamme appahāya abhabbo jātiṁ pahātuṁ jaraṁ pahātuṁ maraṇaṁ pahātuṁ. Katame tayo? Rāgaṁ appahāya, dosaṁ appahāya, mohaṁ appahāya— ime kho, bhikkhave, tayo dhamme appahāya abhabbo jātiṁ pahātuṁ jaraṁ pahātuṁ maraṇaṁ pahātuṁ. Tayome, bhikkhave, dhamme appahāya abhabbo rāgaṁ pahātuṁ dosaṁ pahātuṁ mohaṁ pahātuṁ. Katame tayo? Sakkāyadiṭṭhiṁ appahāya, vicikicchaṁ appahāya, sīlabbataparāmāsaṁ appahāya— ime kho, bhikkhave, tayo dhamme appahāya abhabbo rāgaṁ pahātuṁ dosaṁ pahātuṁ mohaṁ pahātuṁ. Tayome, bhikkhave, dhamme appahāya abhabbo sakkāyadiṭṭhiṁ pahātuṁ vicikicchaṁ pahātuṁ sīlabbataparāmāsaṁ pahātuṁ. Katame tayo? Ayonisomanasikāraṁ appahāya, kummaggasevanaṁ appahāya, cetaso līnattaṁ appahāya— ime kho, bhikkhave, tayo dhamme appahāya abhabbo sakkāyadiṭṭhiṁ pahātuṁ vicikicchaṁ pahātuṁ sīlabbataparāmāsaṁ pahātuṁ. Tayome, bhikkhave, dhamme appahāya abhabbo ayoniso manasikāraṁ pahātuṁ kummaggasevanaṁ pahātuṁ cetaso līnattaṁ pahātuṁ. Katame tayo? Muṭṭhassaccaṁ appahāya, asampajaññaṁ appahāya, cetaso vikkhepaṁ appahāya— ime kho, bhikkhave, tayo dhamme appahāya abhabbo ayonisomanasikāraṁ pahātuṁ kummaggasevanaṁ pahātuṁ cetaso līnattaṁ pahātuṁ. Tayome, bhikkhave, dhamme appahāya abhabbo muṭṭhassaccaṁ pahātuṁ asampajaññaṁ pahātuṁ cetaso vikkhepaṁ pahātuṁ. Katame tayo? Ariyānaṁ adassanakamyataṁ appahāya, ariyadhammassa asotukamyataṁ appahāya, upārambhacittataṁ appahāya— ime kho, bhikkhave, tayo dhamme appahāya abhabbo muṭṭhassaccaṁ pahātuṁ asampajaññaṁ pahātuṁ cetaso vikkhepaṁ pahātuṁ. Tayome, bhikkhave, dhamme appahāya abhabbo ariyānaṁ adassanakamyataṁ pahātuṁ ariyadhammassa asotukamyataṁ pahātuṁ upārambhacittataṁ pahātuṁ. Katame tayo? Uddhaccaṁ appahāya, asaṁvaraṁ appahāya, dussilyaṁ appahāya— ime kho, bhikkhave, tayo dhamme appahāya abhabbo ariyānaṁ adassanakamyataṁ pahātuṁ ariyadhammassa asotukamyataṁ pahātuṁ upārambhacittataṁ pahātuṁ. Tayome, bhikkhave, dhamme appahāya abhabbo uddhaccaṁ pahātuṁ asaṁvaraṁ pahātuṁ dussilyaṁ pahātuṁ. Katame tayo? Assaddhiyaṁ appahāya, avadaññutaṁ appahāya, kosajjaṁ appahāya— ime kho, bhikkhave, tayo dhamme appahāya abhabbo uddhaccaṁ pahātuṁ asaṁvaraṁ pahātuṁ dussilyaṁ pahātuṁ. Tayome, bhikkhave, dhamme appahāya abhabbo assaddhiyaṁ pahātuṁ avadaññutaṁ pahātuṁ kosajjaṁ pahātuṁ. Katame tayo? Anādariyaṁ appahāya, dovacassataṁ appahāya, pāpamittataṁ appahāya— ime kho, bhikkhave, tayo dhamme appahāya abhabbo assaddhiyaṁ pahātuṁ avadaññutaṁ pahātuṁ kosajjaṁ pahātuṁ. Tayome, bhikkhave, dhamme appahāya abhabbo anādariyaṁ pahātuṁ dovacassataṁ pahātuṁ pāpamittataṁ pahātuṁ. Katame tayo? Ahirikaṁ appahāya, anottappaṁ appahāya, pamādaṁ appahāya— ime kho, bhikkhave, tayo dhamme appahāya abhabbo anādariyaṁ pahātuṁ dovacassataṁ pahātuṁ pāpamittataṁ pahātuṁ. Ahirikoyaṁ, bhikkhave, anottāpī pamatto hoti. So pamatto samāno abhabbo anādariyaṁ pahātuṁ dovacassataṁ pahātuṁ pāpamittataṁ pahātuṁ. So pāpamitto samāno abhabbo assaddhiyaṁ pahātuṁ avadaññutaṁ pahātuṁ kosajjaṁ pahātuṁ. So kusīto samāno abhabbo uddhaccaṁ pahātuṁ asaṁvaraṁ pahātuṁ dussilyaṁ pahātuṁ. So dussīlo samāno abhabbo ariyānaṁ adassanakamyataṁ pahātuṁ ariyadhammassa asotukamyataṁ pahātuṁ upārambhacittataṁ pahātuṁ. So upārambhacitto samāno abhabbo muṭṭhassaccaṁ pahātuṁ asampajaññaṁ pahātuṁ cetaso vikkhepaṁ pahātuṁ. So vikkhittacitto samāno abhabbo ayonisomanasikāraṁ pahātuṁ kummaggasevanaṁ pahātuṁ cetaso līnattaṁ pahātuṁ. So līnacitto samāno abhabbo sakkāyadiṭṭhiṁ pahātuṁ vicikicchaṁ pahātuṁ sīlabbataparāmāsaṁ pahātuṁ. So vicikiccho samāno abhabbo rāgaṁ pahātuṁ dosaṁ pahātuṁ mohaṁ pahātuṁ. So rāgaṁ appahāya dosaṁ appahāya mohaṁ appahāya abhabbo jātiṁ pahātuṁ jaraṁ pahātuṁ maraṇaṁ pahātuṁ.",
+   "T0099-sa346": "「以三法不斷故，不堪能離老、病、死。何等為三？謂貪、恚、癡，復有三法不斷故，不堪能離貪、恚、癡。何等為三？謂身見、戒取、疑，復有三法不斷故，不堪能離身見、戒取、疑。何等為三？謂不正思惟、習近邪道，及懈怠心，復有三法不斷故，不堪能離不正思惟、習近邪道及懈怠心。何等為三？謂失念、不正知、亂心，復有三法不斷故，不堪能離失念、不正知、亂心。何等為三？謂掉、不律儀、不學戒，復有三法不斷故，不堪能離掉、不律儀、不學戒。何等為三？謂不信、難教、懈怠，復有三法不斷故，不堪能離不信、難教、嬾墮。何等為三？謂不欲見聖、不欲聞法、常求人短，復有三法不斷故，不堪能離不欲見聖、不欲聞法、常求人短。何等為三？謂不恭敬、戾語、習惡知識，復有三法不斷故，不堪能離不恭敬、戾語、習惡知識。何等為三？謂無慚、無愧、放逸，此三法不斷故，不堪能離不恭敬、戾語、習惡知識。「所以者何？以無慚、無愧故放逸，放逸故不恭敬，不恭敬故習惡知識，習惡知識故不欲見聖、不欲聞法、常求人短，求人短故不信、難教、戾語、嬾墮，嬾墮故掉、不律儀、不學戒，不學戒故失念、不正知、亂心，亂心故不正思惟、習近邪道、懈怠心，懈怠心故身見、戒取、疑，疑故不離貪、恚、癡，不離貪、恚、癡故不堪能離老、病、死。"
+  },
+  "a03": {
+   "an10.76": "Tayome, bhikkhave, dhamme pahāya bhabbo jātiṁ pahātuṁ jaraṁ pahātuṁ maraṇaṁ pahātuṁ. Katame tayo? Rāgaṁ pahāya, dosaṁ pahāya, mohaṁ pahāya— ime kho, bhikkhave, tayo dhamme pahāya bhabbo jātiṁ pahātuṁ jaraṁ pahātuṁ maraṇaṁ pahātuṁ. Tayome, bhikkhave, dhamme pahāya bhabbo rāgaṁ pahātuṁ dosaṁ pahātuṁ mohaṁ pahātuṁ. Katame tayo? Sakkāyadiṭṭhiṁ pahāya, vicikicchaṁ pahāya, sīlabbataparāmāsaṁ pahāya— ime kho, bhikkhave, tayo dhamme pahāya bhabbo rāgaṁ pahātuṁ dosaṁ pahātuṁ mohaṁ pahātuṁ. Tayome, bhikkhave, dhamme pahāya bhabbo sakkāyadiṭṭhiṁ pahātuṁ vicikicchaṁ pahātuṁ sīlabbataparāmāsaṁ pahātuṁ. Katame tayo? Ayonisomanasikāraṁ pahāya, kummaggasevanaṁ pahāya, cetaso līnattaṁ pahāya— ime kho, bhikkhave, tayo dhamme pahāya bhabbo sakkāyadiṭṭhiṁ pahātuṁ vicikicchaṁ pahātuṁ sīlabbataparāmāsaṁ pahātuṁ. Tayome, bhikkhave, dhamme pahāya bhabbo ayonisomanasikāraṁ pahātuṁ kummaggasevanaṁ pahātuṁ cetaso līnattaṁ pahātuṁ. Katame tayo? Muṭṭhassaccaṁ pahāya, asampajaññaṁ pahāya, cetaso vikkhepaṁ pahāya— ime kho, bhikkhave, tayo dhamme pahāya bhabbo ayonisomanasikāraṁ pahātuṁ kummaggasevanaṁ pahātuṁ cetaso līnattaṁ pahātuṁ. Tayome, bhikkhave, dhamme pahāya bhabbo muṭṭhassaccaṁ pahātuṁ asampajaññaṁ pahātuṁ cetaso vikkhepaṁ pahātuṁ. Katame tayo? Ariyānaṁ adassanakamyataṁ pahāya, ariyadhammassa asotukamyataṁ pahāya, upārambhacittataṁ pahāya— ime kho, bhikkhave, tayo dhamme pahāya bhabbo muṭṭhassaccaṁ pahātuṁ asampajaññaṁ pahātuṁ cetaso vikkhepaṁ pahātuṁ. Tayome, bhikkhave, dhamme pahāya bhabbo ariyānaṁ adassanakamyataṁ pahātuṁ ariyadhammassa asotukamyataṁ pahātuṁ upārambhacittataṁ pahātuṁ. Katame tayo? Uddhaccaṁ pahāya, asaṁvaraṁ pahāya, dussilyaṁ pahāya— ime kho, bhikkhave, tayo dhamme pahāya bhabbo ariyānaṁ adassanakamyataṁ pahātuṁ ariyadhammassa asotukamyataṁ pahātuṁ upārambhacittataṁ pahātuṁ. Tayome, bhikkhave, dhamme pahāya bhabbo uddhaccaṁ pahātuṁ asaṁvaraṁ pahātuṁ dussilyaṁ pahātuṁ. Katame tayo? Assaddhiyaṁ pahāya, avadaññutaṁ pahāya, kosajjaṁ pahāya— ime kho, bhikkhave, tayo dhamme pahāya bhabbo uddhaccaṁ pahātuṁ asaṁvaraṁ pahātuṁ dussilyaṁ pahātuṁ. Tayome, bhikkhave, dhamme pahāya bhabbo assaddhiyaṁ pahātuṁ avadaññutaṁ pahātuṁ kosajjaṁ pahātuṁ. Katame tayo? Anādariyaṁ pahāya, dovacassataṁ pahāya, pāpamittataṁ pahāya— ime kho, bhikkhave, tayo dhamme pahāya bhabbo assaddhiyaṁ pahātuṁ avadaññutaṁ pahātuṁ kosajjaṁ pahātuṁ. Tayome, bhikkhave, dhamme pahāya bhabbo anādariyaṁ pahātuṁ dovacassataṁ pahātuṁ pāpamittataṁ pahātuṁ. Katame tayo? Ahirikaṁ pahāya, anottappaṁ pahāya, pamādaṁ pahāya— ime kho, bhikkhave, tayo dhamme pahāya bhabbo anādariyaṁ pahātuṁ dovacassataṁ pahātuṁ pāpamittataṁ pahātuṁ. Hirīmāyaṁ, bhikkhave, ottāpī appamatto hoti. So appamatto samāno bhabbo anādariyaṁ pahātuṁ dovacassataṁ pahātuṁ pāpamittataṁ pahātuṁ. So kalyāṇamitto samāno bhabbo assaddhiyaṁ pahātuṁ avadaññutaṁ pahātuṁ kosajjaṁ pahātuṁ. So āraddhavīriyo samāno bhabbo uddhaccaṁ pahātuṁ asaṁvaraṁ pahātuṁ dussilyaṁ pahātuṁ. So sīlavā samāno bhabbo ariyānaṁ adassanakamyataṁ pahātuṁ ariyadhammassa asotukamyataṁ pahātuṁ upārambhacittataṁ pahātuṁ. So anupārambhacitto samāno bhabbo muṭṭhassaccaṁ pahātuṁ asampajaññaṁ pahātuṁ cetaso vikkhepaṁ pahātuṁ. So avikkhittacitto samāno bhabbo ayonisomanasikāraṁ pahātuṁ kummaggasevanaṁ pahātuṁ cetaso līnattaṁ pahātuṁ. So alīnacitto samāno bhabbo sakkāyadiṭṭhiṁ pahātuṁ vicikicchaṁ pahātuṁ sīlabbataparāmāsaṁ pahātuṁ. So avicikiccho samāno bhabbo rāgaṁ pahātuṁ dosaṁ pahātuṁ mohaṁ pahātuṁ. So rāgaṁ pahāya dosaṁ pahāya mohaṁ pahāya bhabbo jātiṁ pahātuṁ jaraṁ pahātuṁ maraṇaṁ pahātun”ti.",
+   "T0099-sa346": "「斷三法故，堪能離老、病、死。云何三？謂貪、恚、癡，此三法斷已，堪能離老、病、死，復三法斷故，堪能離貪、恚、癡。云何三？謂身見、戒取、疑，此三法斷故，堪能離貪、恚、癡，復三法斷故，堪能離身見、戒取、疑。云何為三？謂不正思惟、習近邪道、起懈怠心，此三法斷故，堪能離身見、戒取、疑，復三法斷故，堪能離不正思惟、習近邪道及懈怠心。云何為三？謂失念心、不正知、亂心，此三法斷故，堪能離不正思惟、習近邪道及心懈怠，復三法斷故，堪能離失念心、不正知、亂心。何等為三？謂掉、不律儀、犯戒，此三法斷故，堪能離失念心、不正知、亂心，復有三法斷故，堪能離掉、不律儀、犯戒。云何三？謂不信、難教、嬾墮，此三法斷故，堪能離掉、不律儀、犯戒，復有三法斷故，堪能離不信、難教、嬾墮。云何為三？謂不欲見聖、不樂聞法、好求人短，此三法斷故，堪能離不信、難教、嬾墮，復三法斷故，堪能離不欲見聖、不欲聞法、好求人短。云何為三？謂不恭敬、戾語、習惡知識，此三法斷故，離不欲見聖、不欲聞法、好求人短，復有三法斷故，堪能離不恭敬、戾語、習惡知識。云何三？謂無慚、無愧、放逸。「所以者何？以慚愧故不放逸，不放逸故恭敬順語、為善知識，為善知識故樂見賢聖、樂聞正法、不求人短，不求人短故生信、順語、精進，精進故不掉、住律儀、學戒，學戒故不失念、正知、住不亂心，不亂心故正思惟、習近正道、心不懈怠，心不懈怠故不著身見、不著戒取、度疑惑，不疑故不起貪、恚、癡，離貪、恚、癡故堪能斷老、病、死。」"
+  },
+  "a04": {
+   "an10.76": "Chaṭṭhaṁ.",
+   "T0099-sa346": "佛說此經已，諸比丘聞佛所說，歡喜奉行。",
+   "T0099-sa760": "佛說此經已，諸比丘聞佛所說，歡喜奉行。"
+  }
+ }
+}

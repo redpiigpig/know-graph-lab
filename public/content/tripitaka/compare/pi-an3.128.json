@@ -1,0 +1,126 @@
+{
+ "slug": "pi-an3.128",
+ "title": "別譯雜阿含經 （二〇）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "佛見比丘心念不善"
+  },
+  {
+   "id": "a02",
+   "label": "佛初次教誡比丘"
+  },
+  {
+   "id": "a03",
+   "label": "比丘受教生怖而去"
+  },
+  {
+   "id": "a04",
+   "label": "佛還城乞食後告眾比丘"
+  },
+  {
+   "id": "a05",
+   "label": "眾比丘請問義理"
+  },
+  {
+   "id": "a06",
+   "label": "佛答種苦子等四義"
+  },
+  {
+   "id": "a07",
+   "label": "偈頌"
+  },
+  {
+   "id": "a08",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "an3.128",
+   "lang": "pi",
+   "label": "巴利 AN3.128",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "T0100-sa-2.20",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （二〇）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa1081",
+   "lang": "lzh",
+   "label": "雜阿含經 （一〇八一）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（二〇）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一〇八一）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "an3.128": "Aṅguttara Nikāya 3.128 13. Kusināravagga Kaṭuviyasutta",
+   "T0100-sa-2.20": "如是我聞：一時，佛在波羅奈國古仙人住處鹿野苑中。爾時，世尊時到，著衣持鉢，入城乞食。",
+   "T0099-sa1081": "如是我聞：一時，佛住波羅㮈國鹿野苑中。爾時，世尊晨朝著衣持鉢，入波羅㮈城乞食。"
+  },
+  "a01": {
+   "an3.128": "Ekaṁ samayaṁ bhagavā bārāṇasiyaṁ viharati isipatane migadāye. Atha kho bhagavā pubbaṇhasamayaṁ nivāsetvā pattacīvaramādāya bārāṇasiṁ piṇḍāya pāvisi. Addasā kho bhagavā goyogapilakkhasmiṁ piṇḍāya caramāno aññataraṁ bhikkhuṁ rittassādaṁ bāhirassādaṁ muṭṭhassatiṁ asampajānaṁ asamāhitaṁ vibbhantacittaṁ pākatindriyaṁ.",
+   "T0100-sa-2.20": "有一比丘在天祠邊，心念惡覺，嗜欲在心。",
+   "T0099-sa1081": "時，有異比丘著衣持鉢，入城乞食，於其路邊，住一樹下，起不善覺，以依惡貪。"
+  },
+  "a02": {
+   "an3.128": "Disvā taṁ bhikkhuṁ etadavoca: “Mā kho tvaṁ, bhikkhu, attānaṁ kaṭuviyamakāsi. Taṁ vata, bhikkhu, kaṭuviyakataṁ attānaṁ āmagandhena avassutaṁ makkhikā nānupatissanti nānvāssavissantīti, netaṁ ṭhānaṁ vijjatī”ti.",
+   "T0100-sa-2.20": "時，佛世尊語比丘言：「比丘！比丘！汝種苦子，極為鄙穢，諸根惡漏，有漏汁處，必有蠅集。」",
+   "T0099-sa1081": "爾時，世尊見彼比丘住一樹下，以生不善覺，依惡貪嗜，而告之曰：「比丘！比丘！莫種苦種，而發熏生臭，汁漏流出。若比丘種苦種子，自發生臭，汁漏流出者，欲令蛆蠅不競集者，無有是處！」時，彼比丘作是念：「世尊知我心之惡念。」"
+  },
+  "a03": {
+   "an3.128": "Atha kho so bhikkhu bhagavatā iminā ovādena ovadito saṁvegamāpādi.",
+   "T0100-sa-2.20": "爾時，比丘聞佛所說，知佛世尊識其心念，生大怖畏，身毛皆竪，疾疾而去。佛乞食還，食已洗足，還僧坊中，入靜房坐。從靜房出，在眾僧前敷座而坐。",
+   "T0099-sa1081": "即生恐怖，身毛皆竪。爾時，世尊入城乞食畢，還精舍，舉衣鉢，洗足已，入室坐禪。"
+  },
+  "a04": {
+   "an3.128": "Atha kho bhagavā bārāṇasiyaṁ piṇḍāya caritvā pacchābhattaṁ piṇḍapātapaṭikkanto bhikkhū āmantesi: “Idhāhaṁ, bhikkhave, pubbaṇhasamayaṁ nivāsetvā pattacīvaramādāya bārāṇasiṁ piṇḍāya pāvisiṁ. Addasaṁ kho ahaṁ, bhikkhave, goyogapilakkhasmiṁ piṇḍāya caramāno aññataraṁ bhikkhuṁ rittassādaṁ bāhirassādaṁ muṭṭhassatiṁ asampajānaṁ asamāhitaṁ vibbhantacittaṁ pākatindriyaṁ. Disvā taṁ bhikkhuṁ etadavocaṁ: ‘Mā kho tvaṁ, bhikkhu, attānaṁ kaṭuviyamakāsi. Taṁ vata bhikkhu kaṭuviyakataṁ attānaṁ āmagandhena avassutaṁ makkhikā nānupatissanti nānvāssavissantīti, netaṁ ṭhānaṁ vijjatī’ti. Atha kho, bhikkhave, so bhikkhu mayā iminā ovādena ovadito saṁvegamāpādī”ti.",
+   "T0100-sa-2.20": "佛告諸比丘：「我今入城乞食，見一比丘在天祠邊，心念惡覺。嗜欲在心。我即語言：『比丘！比丘！汝種苦子，極為鄙穢，諸根惡漏，有漏汁處，必有蠅集。』是時，比丘聞佛所說，生大驚怖，身毛皆竪，疾疾而去。」",
+   "T0099-sa1081": "晡時從禪覺，至於僧中，於眾前敷座而坐，告諸比丘：「我今晨朝著衣持鉢，入城乞食，見一比丘住於樹下，以生不善覺，依惡貪嗜。我時見已，即告之言：『比丘！比丘！莫種苦種，發熏生臭，惡汁流出。若有比丘種苦種子，發熏生臭，惡汁流出，蛆蠅不集，無有是處！』時，彼比丘即思念：『佛已知我心之所念。』慚愧恐怖，心驚毛竪，隨路而去。」"
+  },
+  "a05": {
+   "an3.128": "Evaṁ vutte, aññataro bhikkhu bhagavantaṁ etadavoca: “kiṁ nu kho, bhante, kaṭuviyaṁ? Ko āmagandho? Kā makkhikā”ti?",
+   "T0100-sa-2.20": "佛說是已，有一比丘從坐而起，叉手合掌，白佛言：「世尊！云何名種苦子？云何名為鄙穢？云何名為惡漏？云何名為蠅集？」",
+   "T0099-sa1081": "時，有異比丘從坐起，整衣服，偏袒右肩，合掌白佛：「世尊！"
+  },
+  "a06": {
+   "an3.128": "“Abhijjhā kho, bhikkhu, kaṭuviyaṁ; byāpādo āmagandho; pāpakā akusalā vitakkā makkhikā. Taṁ vata, bhikkhu, kaṭuviyakataṁ attānaṁ āmagandhena avassutaṁ makkhikā nānupatissanti nānvāssavissantīti, netaṁ ṭhānaṁ vijjatīti.",
+   "T0100-sa-2.20": "佛言：「諦聽！諦聽！當為汝說。瞋恚嫌害，名種苦子。縱心五欲，名為鄙穢。由六觸入，不攝戒行，名為惡漏。煩惱止住，能起無明、憍慢、無慚、無愧，起諸結使，所謂蠅集。」",
+   "T0099-sa1081": "云何苦種？云何生臭？云何汁流？云何蛆蠅？」佛告比丘：「忿怒煩怨，名曰苦種。五欲功德，名為生臭。於六觸入處不攝律儀，是名汁流。謂觸入處不攝已，貪、憂、諸惡不善心競生，是名蛆蠅。」"
+  },
+  "a07": {
+   "an3.128": "Aguttaṁ cakkhusotasmiṁ, indriyesu asaṁvutaṁ; Makkhikānupatissanti, saṅkappā rāganissitā. Kaṭuviyakato bhikkhu, āmagandhe avassuto; Ārakā hoti nibbānā, vighātasseva bhāgavā. Gāme vā yadi vāraññe, aladdhā samathamattano; Pareti bālo dummedho, makkhikāhi purakkhato. Ye ca sīlena sampannā, paññāyūpasameratā; Upasantā sukhaṁ senti, nāsayitvāna makkhikā”ti.",
+   "T0100-sa-2.20": "爾時，世尊即說偈言：「若有不攝諸根者，增長欲愛種苦子，\n作諸鄙穢常流出，親近欲覺惱害覺，\n若在聚落空閑處，心終無有暫樂時。\n若於己身修正定，修集諸通得三明，\n彼得快樂安隱眠，能滅覺蠅使無餘，\n能修得行住健處，履行聖迹到善方，\n得正智迹終不還，入於涅槃寂滅樂。」",
+   "T0099-sa1081": "爾時，世尊即說偈言：「耳目不防護，貪欲從是生，\n是名為苦種。生臭汁潛流，\n諸覺觀氣味，依於惡貪嗜，\n聚落及空處，若於晝若夜，\n遠離修梵行，究竟於苦邊，\n若內心寂靜，決定諦明了。\n臥覺常安樂，諸惡蛆蠅滅，\n正士所習近，善說賢聖路。\n了知八正道，不還更受身。」"
+  },
+  "a08": {
+   "an3.128": "Chaṭṭhaṁ.",
+   "T0100-sa-2.20": "佛說是已，諸比丘聞已，歡喜奉行。",
+   "T0099-sa1081": "佛說此經已，諸比丘聞佛所說，歡喜奉行。"
+  }
+ }
+}

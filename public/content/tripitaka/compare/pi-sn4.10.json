@@ -1,0 +1,109 @@
+{
+ "slug": "pi-sn4.10",
+ "title": "別譯雜阿含經 （二四）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "佛說人壽短促"
+  },
+  {
+   "id": "a02",
+   "label": "魔王波旬偈問"
+  },
+  {
+   "id": "a03",
+   "label": "世尊答偈"
+  },
+  {
+   "id": "a04",
+   "label": "魔王退散"
+  },
+  {
+   "id": "a05",
+   "label": "結嗢陀南"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn4.10",
+   "lang": "pi",
+   "label": "巴利 SN4.10",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn4.10",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN4.10",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.24",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （二四）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa1085",
+   "lang": "lzh",
+   "label": "雜阿含經 （一〇八五）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（二四）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一〇八五）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn4.10": "Saṁyutta Nikāya 4.10 1. Paṭhamavagga Dutiyaāyusutta",
+   "nan-sn4.10": "〔一〇〕第十　壽命（其二）",
+   "T0100-sa-2.24": "如是我聞：一時，佛在王舍城寒林之中。",
+   "T0099-sa1085": "如是我聞：一時，佛住王舍城寒林中丘塚間。"
+  },
+  "a01": {
+   "sn4.10": "Evaṁ me sutaṁ— ekaṁ samayaṁ bhagavā rājagahe viharati veḷuvane kalandakanivāpe. Tatra kho bhagavā …pe… etadavoca: “Appamidaṁ, bhikkhave, manussānaṁ āyu. Gamanīyo samparāyo, kattabbaṁ kusalaṁ, caritabbaṁ brahmacariyaṁ. Natthi jātassa amaraṇaṁ. Yo, bhikkhave, ciraṁ jīvati, so vassasataṁ appaṁ vā bhiyyo”ti.",
+   "nan-sn4.10": "〔爾時，世尊〕住王舍城……",
+   "T0100-sa-2.24": "爾時，佛告諸比丘：「諸行無常，迅速不停，無可恃怙，是敗壞法，應當速離，趣解脫道。」",
+   "T0099-sa1085": "爾時，世尊告諸比丘：「一切行無常，一切行不恒、不安，非穌息，變易之法，乃至當止一切有為行，厭離、不樂、解脫。」"
+  },
+  "a02": {
+   "sn4.10": "Atha kho māro pāpimā yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ gāthāya ajjhabhāsi: “Nāccayanti ahorattā, Jīvitaṁ nūparujjhati; Āyu anupariyāyati maccānaṁ, Nemīva rathakubbaran”ti.",
+   "nan-sn4.10": "時，世尊曰：「諸比丘！人類壽命短。不可不行未來，不可不為善，不可不行梵行，生者無不死。諸比丘！則長壽者，亦少多於百歲。」時，惡魔波旬來，詣世尊前。詣已，以偈白世尊曰：",
+   "T0100-sa-2.24": "爾時，魔王波旬復作是念：「沙門瞿曇住王舍城在寒林中，為諸聲聞說如是法，我當往彼而為嬈亂。」",
+   "T0099-sa1085": "時，魔波旬作是念：「今沙門瞿曇住王舍城寒林中，為諸聲聞說如是法：『一切行無常、不恒，非穌息，變易之法，乃至當止一切有為，厭離、不樂、解脫。』我當往彼，為作嬈亂。」即化作年少，往詣佛所，住於佛前，而說偈言：「壽命日夜流，無有窮盡時，\n壽命當來去，猶如車輪轉。」"
+  },
+  "a03": {
+   "sn4.10": "“Accayanti ahorattā, jīvitaṁ uparujjhati; Āyu khīyati maccānaṁ, kunnadīnaṁva odakan”ti.",
+   "nan-sn4.10": "日夜猶未逝壽命亦未盡\n如輪軸迴轉人命亦輪逝",
+   "T0100-sa-2.24": "爾時魔王作是念已，化為摩納，往至佛所，在一面立，而說偈言：「晝夜恒在，命常迴來，如輪軸轉，\n周迴無已。」",
+   "T0099-sa1085": "爾時，世尊作是念：「此是惡魔欲作嬈亂。」"
+  },
+  "a04": {
+   "sn4.10": "Atha kho māro pāpimā “jānāti maṁ bhagavā, jānāti maṁ sugato”ti dukkhī dummano tatthevantaradhāyīti.",
+   "nan-sn4.10": "〔世尊：〕日夜之過逝壽命亦將盡\n如小河水竭人壽命亦滅",
+   "T0100-sa-2.24": "佛知魔王來作嬈亂，即說偈言：「命欲日夜盡，壽者多患難，\n猶如陷下河，速盡無遺餘，\n是故汝波旬，不應作壞亂。」魔作是念：「佛知我心。」愁憂苦惱，極生悔恨，隱形而去，還于天宮。",
+   "T0099-sa1085": "即說偈言：「日夜常遷流，壽亦隨損減，\n人命漸消亡，猶如小河水。\n我知汝惡魔，便自消滅去。」時，魔波旬作是念：「沙門瞿曇已知我心。」慚愧憂慼，即沒不現。"
+  },
+  "a05": {
+   "sn4.10": "Paṭhamo vaggo. Tassuddānaṁ Tapokammañca nāgo ca, subhaṁ pāsena te duve; Sappo supati nandanaṁ, āyunā apare duveti.",
+   "nan-sn4.10": "時，惡魔波旬苦惱以：「世尊已知我！善逝已知我。」而萎身隱沒於其處。此嗢陀南：苦業之與象淨係蹄等二\n蛇睡眠歡喜壽命又為二"
+  }
+ }
+}

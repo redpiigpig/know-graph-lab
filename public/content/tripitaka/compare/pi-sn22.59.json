@@ -1,0 +1,128 @@
+{
+ "slug": "pi-sn22.59",
+ "title": "佛說五蘊皆空經",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。複核標記存疑 1 段：義段3的佛說五蘊皆空經內容與其他本不符，實為義段4的內容",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "五蘊無我說"
+  },
+  {
+   "id": "a02",
+   "label": "問答：常無常"
+  },
+  {
+   "id": "a03",
+   "label": "問答：苦樂",
+   "doubt": true
+  },
+  {
+   "id": "a04",
+   "label": "問答：我見"
+  },
+  {
+   "id": "a05",
+   "label": "遍計諸蘊非我"
+  },
+  {
+   "id": "a06",
+   "label": "聖弟子厭離解脫"
+  },
+  {
+   "id": "a07",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn22.59",
+   "lang": "pi",
+   "label": "巴利 SN22.59",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn22.59",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN22.59",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0099-sa34",
+   "lang": "lzh",
+   "label": "雜阿含經 （三四）",
+   "who": "劉宋 求那跋陀羅譯"
+  },
+  {
+   "id": "T0102",
+   "lang": "lzh",
+   "label": "佛說五蘊皆空經",
+   "who": "唐 義淨譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0102"
+ ],
+ "anchors": [
+  {
+   "work": "T0099",
+   "node": "（三四）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn22.59": "Saṁyutta Nikāya 22.59 6. Upayavagga Anattalakkhaṇasutta Ekaṁ samayaṁ bhagavā bārāṇasiyaṁ viharati isipatane migadāye.",
+   "nan-sn22.59": "〔五九〕五群比丘波羅捺國，鹿野苑之因緣。二～三",
+   "T0099-sa34": "如是我聞：一時，佛住波羅㮈國仙人住處鹿野苑中。",
+   "T0102": "如是我聞：一時薄伽梵，在婆羅痆斯仙人墮處施鹿林中。"
+  },
+  "a01": {
+   "sn22.59": "Tatra kho bhagavā pañcavaggiye bhikkhū āmantesi: “bhikkhavo”ti. “Bhadante”ti te bhikkhū bhagavato paccassosuṁ. Bhagavā etadavoca: “Rūpaṁ, bhikkhave, anattā. Rūpañca hidaṁ, bhikkhave, attā abhavissa, nayidaṁ rūpaṁ ābādhāya saṁvatteyya, labbhetha ca rūpe: ‘evaṁ me rūpaṁ hotu, evaṁ me rūpaṁ mā ahosī’ti. Yasmā ca kho, bhikkhave, rūpaṁ anattā, tasmā rūpaṁ ābādhāya saṁvattati, na ca labbhati rūpe: ‘evaṁ me rūpaṁ hotu, evaṁ me rūpaṁ mā ahosī’ti. Vedanā anattā. Vedanā ca hidaṁ, bhikkhave, attā abhavissa, nayidaṁ vedanā ābādhāya saṁvatteyya, labbhetha ca vedanāya: ‘evaṁ me vedanā hotu, evaṁ me vedanā mā ahosī’ti. Yasmā ca kho, bhikkhave, vedanā anattā, tasmā vedanā ābādhāya saṁvattati, na ca labbhati vedanāya: ‘evaṁ me vedanā hotu, evaṁ me vedanā mā ahosī’ti. Saññā anattā …pe… saṅkhārā anattā. Saṅkhārā ca hidaṁ, bhikkhave, attā abhavissaṁsu, nayidaṁ saṅkhārā ābādhāya saṁvatteyyuṁ, labbhetha ca saṅkhāresu: ‘evaṁ me saṅkhārā hontu, evaṁ me saṅkhārā mā ahesun’ti. Yasmā ca kho, bhikkhave, saṅkhārā anattā, tasmā saṅkhārā ābādhāya saṁvattanti, na ca labbhati saṅkhāresu: ‘evaṁ me saṅkhārā hontu, evaṁ me saṅkhārā mā ahesun’ti. Viññāṇaṁ anattā. Viññāṇañca hidaṁ, bhikkhave, attā abhavissa, nayidaṁ viññāṇaṁ ābādhāya saṁvatteyya, labbhetha ca viññāṇe: ‘evaṁ me viññāṇaṁ hotu, evaṁ me viññāṇaṁ mā ahosī’ti. Yasmā ca kho, bhikkhave, viññāṇaṁ anattā, tasmā viññāṇaṁ ābādhāya saṁvattati, na ca labbhati viññāṇe: ‘evaṁ me viññāṇaṁ hotu, evaṁ me viññāṇaṁ mā ahosī’ti.",
+   "nan-sn22.59": "於此，世尊告五比丘曰……乃至……如是說曰：※三「諸比丘！色是無我。諸比丘！若此色有我者，此色則無致病，於色則得謂：『我用此色，不用彼色。』諸比丘！然而，色無我故，色乃致病，於色不得謂：『我用此色，不用彼色。』受是無我。諸比丘！若此受是有我者，此受則無致病，於此受乃得謂：『我用此受，不用彼受。』諸比丘！然而，受是無我故，受乃致病，於受不得謂：『我用此受，不用彼受。』想是無我……行是無我。諸比丘！若此行是有我者，則此行無致病，於此行則得謂：『我用此行，不用彼行。』諸比丘！然而，行是無我故，行乃致病，則於行不得謂：『我用此行，不用彼行。』識是無我。諸比丘！若此識是有我者，則此識無致病，於此識則得謂：『我用此識，不用彼識。』諸比丘！然而，識是無我故，識乃致病，則於識不得謂：『我用此識，不用彼識。』",
+   "T0099-sa34": "爾時，世尊告餘五比丘：「色非有我。若色有我者，於色不應病、苦生，亦不得於色欲令如是、不令如是。以色無我故，於色有病、有苦生，亦得於色欲令如是、不令如是；受、想、行、識亦復如是。",
+   "T0102": "爾時世尊，告五苾芻曰：「汝等當知，色不是我，若是我者，色不應病及受苦惱。『我欲如是色，我不欲如是色。』既不如是，隨情所欲，是故當知，色不是我；受想行識，亦復如是。"
+  },
+  "a02": {
+   "sn22.59": "Taṁ kiṁ maññatha, bhikkhave, rūpaṁ niccaṁ vā aniccaṁ vā”ti?",
+   "nan-sn22.59": "諸比丘！汝等於意云何？色是常耶、無常耶？」「大德！是無常！」",
+   "T0099-sa34": "比丘！於意云何？色為是常、為無常耶？」比丘白佛：「無常。",
+   "T0102": "復次苾芻！於汝意云何？色為是常？為是無常？」白言：「大德！色是無常。」佛言：「色既無常，此即是苦，或苦苦、壞苦、行苦。"
+  },
+  "a03": {
+   "sn22.59": "“Aniccaṁ, bhante”. “Yaṁ panāniccaṁ dukkhaṁ vā taṁ sukhaṁ vā”ti? “Dukkhaṁ, bhante”.",
+   "nan-sn22.59": "「無常者，是苦耶？是樂耶？」「大德！是苦。」",
+   "T0099-sa34": "世尊！」「比丘！若無常者，是苦耶？」比丘白佛：「是苦。",
+   "T0102": "然我聲聞多聞弟子，執有我不？"
+  },
+  "a04": {
+   "sn22.59": "“Yaṁ panāniccaṁ dukkhaṁ vipariṇāmadhammaṁ, kallaṁ nu taṁ samanupassituṁ: ‘etaṁ mama, esohamasmi, eso me attā’”ti? “No hetaṁ, bhante”. “Vedanā … saññā … saṅkhārā … viññāṇaṁ niccaṁ vā aniccaṁ vā”ti? “Aniccaṁ, bhante”. “Yaṁ panāniccaṁ dukkhaṁ vā taṁ sukhaṁ vā”ti? “Dukkhaṁ, bhante”. “Yaṁ panāniccaṁ dukkhaṁ vipariṇāmadhammaṁ, kallaṁ nu taṁ samanupassituṁ: ‘etaṁ mama, esohamasmi, eso me attā’”ti? “No hetaṁ, bhante”.",
+   "nan-sn22.59": "「以觀見無常、苦而變易之法，得為『此是我所，此是我，此是我體』耶？」「大德！不也。」一三～一五受……想……行……「識是常住耶、無常耶？」「大德！是無常。」「無常者，是苦耶？是樂耶？」「大德！是苦。」「觀見無常、苦而變易之法者，得為『此是我所，此是我，此是我體』耶？」「大德！不也。」",
+   "T0099-sa34": "世尊！」「比丘！若無常、苦，是變易法，多聞聖弟子寧於中見是我、異我、相在不？」比丘白佛：「不也，世尊！」「受、想、行、識亦復如是。",
+   "T0102": "色即是我，我有諸色，色屬於我，我在色中不？」「不爾！世尊！」「應知受想行識，常與無常，亦復如是。"
+  },
+  "a05": {
+   "sn22.59": "“Tasmātiha, bhikkhave, yaṁ kiñci rūpaṁ atītānāgatapaccuppannaṁ ajjhattaṁ vā bahiddhā vā oḷārikaṁ vā sukhumaṁ vā hīnaṁ vā paṇītaṁ vā yaṁ dūre santike vā, sabbaṁ rūpaṁ: ‘netaṁ mama, nesohamasmi, na meso attā’ti evametaṁ yathābhūtaṁ sammappaññāya daṭṭhabbaṁ. Yā kāci vedanā atītānāgatapaccuppannā ajjhattā vā bahiddhā vā …pe… yā dūre santike vā, sabbā vedanā: ‘netaṁ mama, nesohamasmi, na meso attā’ti evametaṁ yathābhūtaṁ sammappaññāya daṭṭhabbaṁ. Yā kāci saññā …pe… ye keci saṅkhārā atītānāgatapaccuppannā ajjhattaṁ vā bahiddhā vā …pe… ye dūre santike vā, sabbe saṅkhārā: ‘netaṁ mama, nesohamasmi, na meso attā’ti evametaṁ yathābhūtaṁ sammappaññāya daṭṭhabbaṁ. Yaṁ kiñci viññāṇaṁ atītānāgatapaccuppannaṁ ajjhattaṁ vā bahiddhā vā oḷārikaṁ vā sukhumaṁ vā hīnaṁ vā paṇītaṁ vā yaṁ dūre santike vā, sabbaṁ viññāṇaṁ: ‘netaṁ mama, nesohamasmi, na meso attā’ti evametaṁ yathābhūtaṁ sammappaññāya daṭṭhabbaṁ.",
+   "nan-sn22.59": "「諸比丘！是故，所有色之過去、未來、現在、內、外、粗、細、劣、勝、遠、近，應如是以正慧作如實觀，此非我所，此非我，此非我體。所有受之……想之……行之……識之過去、未來、現在、內、外、粗、細、劣、勝、遠、近，應如是以正慧，作如實觀：此非我所，此非我、此非我體。",
+   "T0099-sa34": "是故，比丘！諸所有色，若過去、若未來、若現在，若內、若外，若麁、若細，若好、若醜，若遠、若近，彼一切非我、非我所，如實觀察。受、想、行、識亦復如是。",
+   "T0102": "凡所有色，若過去未來現在，內外麁細，若勝若劣、若遠若近，悉皆無我。"
+  },
+  "a06": {
+   "sn22.59": "Evaṁ passaṁ, bhikkhave, sutavā ariyasāvako rūpasmimpi nibbindati, vedanāyapi nibbindati, saññāyapi nibbindati, saṅkhāresupi nibbindati, viññāṇasmimpi nibbindati. Nibbindaṁ virajjati; virāgā vimuccati. Vimuttasmiṁ vimuttamiti ñāṇaṁ hoti. ‘Khīṇā jāti, vusitaṁ brahmacariyaṁ, kataṁ karaṇīyaṁ, nāparaṁ itthattāyā’ti pajānātī”ti.",
+   "nan-sn22.59": "諸比丘！多聞之聖弟子，作如是觀者，則厭患色，厭患受……想……行……識，厭患者則離貪，離貪者則解脫，解脫者則生已解脫智，知：生已盡、梵行已立、所作已辦、不受後有。」",
+   "T0099-sa34": "「比丘！多聞聖弟子於此五受陰見非我、非我所。如是觀察，於諸世間都無所取，無所取故無所著，無所著故自覺涅槃：『我生已盡，梵行已立，所作已作，自知不受後有。』",
+   "T0102": "汝等當知，應以正智而善觀察，如是所有受想行識，過去未來現在，悉應如前正智觀察。"
+  },
+  "a07": {
+   "sn22.59": "Idamavoca bhagavā. Attamanā pañcavaggiyā bhikkhū bhagavato bhāsitaṁ abhinanduṁ. Imasmiñca pana veyyākaraṇasmiṁ bhaññamāne pañcavaggiyānaṁ bhikkhūnaṁ anupādāya āsavehi cittāni vimucciṁsūti. Sattamaṁ.",
+   "nan-sn22.59": "世尊如是說已，五群比丘信受歡喜世尊之所說。又說此教時，五比丘無取著，而從諸漏令心解脫。",
+   "T0099-sa34": "」佛說此經已，餘五比丘不起諸漏，心得解脫。佛說此經已，諸比丘聞佛所說，歡喜奉行。",
+   "T0102": "若我聲聞聖弟子眾，觀此五取蘊，知無有我及以我所，如是觀已，即知世間，無能取所取，亦非轉變，但由自悟而證涅槃，我生已盡，梵行已立，所作已辦，不受後有。」說此法時，五苾芻等，於諸煩惱，心得解脫，信受奉行。"
+  }
+ }
+}

@@ -1,0 +1,91 @@
+{
+ "slug": "pi-sn4.11",
+ "title": "別譯雜阿含經 （二七）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "魔王推石"
+  },
+  {
+   "id": "a02",
+   "label": "世尊說偈"
+  },
+  {
+   "id": "a03",
+   "label": "魔王退散"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn4.11",
+   "lang": "pi",
+   "label": "巴利 SN4.11",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn4.11",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN4.11",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.27",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （二七）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa1088",
+   "lang": "lzh",
+   "label": "雜阿含經 （一〇八八）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（二七）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一〇八八）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn4.11": "Saṁyutta Nikāya 4.11 2. Dutiyavagga Pāsāṇasutta",
+   "nan-sn4.11": "〔一一〕第一　巖爾時，世尊住王舍城靈鷲山。",
+   "T0100-sa-2.27": "如是我聞：一時，佛在王舍城耆闍崛山中。值天雲霧，降少微雨，電光暉赫，處處晃耀。",
+   "T0099-sa1088": "如是我聞：一時，佛住王舍城耆闍崛山中。"
+  },
+  "a01": {
+   "sn4.11": "Ekaṁ samayaṁ bhagavā rājagahe viharati gijjhakūṭe pabbate. Tena kho pana samayena bhagavā rattandhakāratimisāyaṁ abbhokāse nisinno hoti, devo ca ekamekaṁ phusāyati. Atha kho māro pāpimā bhagavato bhayaṁ chambhitattaṁ lomahaṁsaṁ uppādetukāmo yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavato avidūre mahante pāsāṇe padālesi.",
+   "nan-sn4.11": "爾時，世尊闇夜中坐於露地。雨絲霏霏下降。",
+   "T0100-sa-2.27": "爾時，世尊即於其夜露地經行。魔王波旬而作是念：「沙門瞿曇在王舍城耆闍崛山，值天雲霧，降少微雨，電光暉赫，處處光耀，於其夜中露地經行。我當往彼，而作壞亂。」爾時，魔王作是念已，在其山上，推大石下，欲到佛所。",
+   "T0099-sa1088": "爾時，世尊於夜闇時，天小微雨，電光睒現，出房經行。時，魔波旬作是念：「今沙門瞿曇住王舍城耆闍崛山中，夜闇微雨，電光時現，出房經行。我今當往，為作留難。」執大團石，兩手調弄，到於佛前，碎成微塵。"
+  },
+  "a02": {
+   "sn4.11": "Atha kho bhagavā “māro ayaṁ pāpimā” iti viditvā māraṁ pāpimantaṁ gāthāya ajjhabhāsi: “Sacepi kevalaṁ sabbaṁ, gijjhakūṭaṁ calessasi; Neva sammāvimuttānaṁ,",
+   "nan-sn4.11": "時，惡魔波旬欲令生恐怖，毛髮豎立。以詣世處。詣已，於世尊不遠之處，以碎大石巖。時，世尊知是惡魔波旬，以偈謂惡魔波旬曰：",
+   "T0100-sa-2.27": "時，彼大石，自然碎壞。爾時，世尊即說偈言：「汝壞靈鷲山，令如粉微塵，\n巨海及大地，悉皆分碎裂。\n欲使正解脫，生於怖畏相，\n欲令毛髮竪，終無有是處。」",
+   "T0099-sa1088": "爾時，世尊作是念：「惡魔波旬欲作嬈亂。」即說偈言：「若耆闍崛山，於我前令碎，\n於佛等解脫，不能動一毛。\n假令四海內，一切諸山地，\n放逸之親族，令其碎成塵。\n亦不能傾動，如來一毛髮。」"
+  },
+  "a03": {
+   "sn4.11": "buddhānaṁ atthi iñjitan”ti. Atha kho māro pāpimā “jānāti maṁ bhagavā, jānāti maṁ sugato”ti dukkhī dummano tatthevantaradhāyīti.",
+   "nan-sn4.11": "猶如靈鷲山雖震動一切\n正解脫佛陀絲毫不動搖時，惡魔波旬苦惱以：「世尊已知我，善逝已知我。」而萎身沒形於其處。",
+   "T0100-sa-2.27": "爾時，魔王作是念言：「沙門瞿曇知我所念。」憂愁苦惱，即便隱身，還于天宮。",
+   "T0099-sa1088": "時，魔波旬作是念：「沙門瞿曇已知我心。」內懷憂慼，即沒不現。"
+  }
+ }
+}

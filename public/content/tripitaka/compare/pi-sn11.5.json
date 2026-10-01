@@ -1,0 +1,158 @@
+{
+ "slug": "pi-sn11.5",
+ "title": "別譯雜阿含經 （三八）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "天阿修羅議論勝負之因"
+  },
+  {
+   "id": "a02",
+   "label": "阿修羅王請帝釋說偈"
+  },
+  {
+   "id": "a03",
+   "label": "帝釋請阿修羅王說偈"
+  },
+  {
+   "id": "a04",
+   "label": "阿修羅王第一偈"
+  },
+  {
+   "id": "a05",
+   "label": "帝釋第一偈"
+  },
+  {
+   "id": "a06",
+   "label": "阿修羅王第二偈"
+  },
+  {
+   "id": "a07",
+   "label": "帝釋第二偈"
+  },
+  {
+   "id": "a08",
+   "label": "眾會評論偈義與勝負"
+  },
+  {
+   "id": "a09",
+   "label": "結論：善語勝利"
+  },
+  {
+   "id": "a10",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn11.5",
+   "lang": "pi",
+   "label": "巴利 SN11.5",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn11.5",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN11.5",
+   "who": "元亨寺版（譯自巴利）",
+   "reorder": true
+  },
+  {
+   "id": "T0100-sa-2.38",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （三八）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa1109",
+   "lang": "lzh",
+   "label": "雜阿含經 （一一〇九）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（三八）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一一〇九）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn11.5": "Saṁyutta Nikāya 11.5",
+   "nan-sn11.5": "〔五〕第五　善語之勝利",
+   "T0100-sa-2.38": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。",
+   "T0099-sa1109": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。"
+  },
+  "a01": {
+   "sn11.5": "1. Paṭhamavagga Subhāsitajayasutta Sāvatthinidānaṁ. “Bhūtapubbaṁ, bhikkhave, devāsurasaṅgāmo samupabyūḷho ahosi.",
+   "nan-sn11.5": "舍衛城因緣。「諸比丘！遠昔天與阿修羅激戰。時，諸比丘！吠波質底阿修羅，以此謂天帝釋曰：『諸天王！善語致勝利！』『吠波質底！善語致勝利！』諸比丘！時天與阿修羅，於其會眾應知誰是善語、惡語者。",
+   "T0100-sa-2.38": "爾時，世尊告諸比丘：「昔釋提桓因將諸天眾，將欲往與阿脩羅戰。時，釋提桓因語毘摩質多羅阿脩羅王言：『我等今者，不必苟須多將人眾，共相傷害，但共講論，以決勝負。』毘摩質多羅語釋提桓因言：『憍尸迦！我等講論，若有勝負，誰當分別？』釋提桓因言：『我等眾中，并阿修羅，亦有聰哲、智慧、辯才，能當善惡，決勝負者。』",
+   "T0099-sa1109": "爾時，世尊告諸比丘：「過去世時，天、阿修羅對陣欲戰，釋提桓因語毘摩質多羅阿修羅王：『莫得各各共相殺害，但當論議，理屈者伏。』毘摩質多羅阿修羅王言：『設共論議，誰當證知理之通塞？』天帝釋言：『諸天眾中自有智慧明記識者，阿修羅眾亦復自有明記識者。』毘摩質多羅阿修羅言：『可爾。』"
+  },
+  "a02": {
+   "sn11.5": "Atha kho, bhikkhave, vepacitti asurindo sakkaṁ devānamindaṁ etadavoca: ‘hotu, devānaminda, subhāsitena jayo’ti. ‘Hotu, vepacitti, subhāsitena jayo’ti. Atha kho, bhikkhave, devā ca asurā ca pārisajje ṭhapesuṁ: ‘ime no subhāsitadubbhāsitaṁ ājānissantī’ti. Atha kho, bhikkhave, vepacitti asurindo sakkaṁ devānamindaṁ etadavoca: ‘bhaṇa, devānaminda, gāthan’ti.",
+   "nan-sn11.5": "諸比丘！時吠波質底阿修羅王，以此謂天帝釋：『帝釋！唱偈！』諸比丘！如是言已，天帝釋以此謂吠波質底阿修羅王：『吠波質底！汝往昔於此是天。吠波質底！請說偈！』",
+   "T0100-sa-2.38": "毘摩質多言：『帝釋汝今先說。』帝釋答言：『我亦能說；汝是舊天，應當先說。』",
+   "T0099-sa1109": "釋提桓因言：『汝等可先立論，然後我當隨後立論，則不為難。』"
+  },
+  "a03": {
+   "sn11.5": "Evaṁ vutte, bhikkhave, sakko devānamindo vepacittiṁ asurindaṁ etadavoca: ‘tumhe khvettha, vepacitti, pubbadevā. Bhaṇa, vepacitti, gāthan’ti.",
+   "nan-sn11.5": "諸比丘！時天帝釋以此謂吠波質底阿修羅曰：『吠波質底！唱偈！』"
+  },
+  "a04": {
+   "sn11.5": "Evaṁ vutte, bhikkhave, vepacitti asurindo imaṁ gāthaṁ abhāsi: ‘Bhiyyo bālā pabhijjeyyuṁ, no cassa paṭisedhako; Tasmā bhusena daṇḍena, dhīro bālaṁ nisedhaye’ti. Bhāsitāya kho pana, bhikkhave, vepacittinā asurindena gāthāya asurā anumodiṁsu, devā tuṇhī ahesuṁ. Atha kho, bhikkhave, vepacitti asurindo sakkaṁ devānamindaṁ etadavoca: ‘bhaṇa, devānaminda, gāthan’ti.",
+   "nan-sn11.5": "諸比丘！如是言已，吠波質底阿修羅王，以說此偈：若不止禁者愚人益招猛\n是故重刑罰智者止愚人諸比丘！吠波質底阿修羅王語此偈時，阿修羅歡呼，諸天則默然。諸比丘！其時吠波質底阿修羅王，以此謂天帝釋：『帝釋！唱偈！』",
+   "T0100-sa-2.38": "「毘摩質多即說偈言：「『今我見忍過，愚者謂忍法，\n彼怖故生忍，便以己為勝。』",
+   "T0099-sa1109": "「時，毘摩質多羅阿修羅王即說偈立論言：「『我若行忍者，於事則有闕，\n愚癡者當言，怖畏故行忍。』"
+  },
+  "a05": {
+   "sn11.5": "Evaṁ vutte, bhikkhave, sakko devānamindo imaṁ gāthaṁ abhāsi: ‘Etadeva ahaṁ maññe, bālassa paṭisedhanaṁ; Paraṁ saṅkupitaṁ ñatvā, yo sato upasammatī’ti. Bhāsitāya kho pana, bhikkhave, sakkena devānamindena gāthāya, devā anumodiṁsu, asurā tuṇhī ahesuṁ. Atha kho, bhikkhave, sakko devānamindo vepacittiṁ asurindaṁ etadavoca: ‘bhaṇa, vepacitti, gāthan’ti.",
+   "nan-sn11.5": "諸比丘！如是言已，天帝釋唱此偈：於我之思惟以止禁愚者\n以知其他怒寂靜於正念諸比丘！天帝釋唱此偈時，諸天歡呼，阿修羅默然。",
+   "T0100-sa-2.38": "「釋提桓因復說偈言：「『隨彼言怖畏，己利最為勝，\n財寶及諸利，無勝忍辱者。』",
+   "T0099-sa1109": "「釋提桓因說偈答言：「『正使愚癡者，言恐怖故忍，\n及其不言者，於理何所傷。\n但自觀其義，亦觀於他義，\n彼我悉獲安，斯忍為最上。』"
+  },
+  "a06": {
+   "sn11.5": "Evaṁ vutte, bhikkhave, vepacitti asurindo imaṁ gāthaṁ abhāsi: ‘Etadeva titikkhāya, vajjaṁ passāmi vāsava; Yadā naṁ maññati bālo, bhayā myāyaṁ titikkhati; Ajjhāruhati dummedho, gova bhiyyo palāyinan’ti. Bhāsitāya kho pana, bhikkhave, vepacittinā asurindena gāthāya asurā anumodiṁsu, devā tuṇhī ahesuṁ. Atha kho, bhikkhave, vepacitti asurindo sakkaṁ devānamindaṁ etadavoca: ‘bhaṇa, devānaminda, gāthan’ti.",
+   "nan-sn11.5": "婆娑婆此忍我見為過失\n愚人恐怖我以為是忍他\n如使牛逃者必增益猛追\n愚人益增長諸比丘！又吠波質底阿修羅王唱此偈時，阿修羅歡呼，諸天默然。諸比丘！時吠波質底阿修羅王，以此謂天帝釋：『帝釋！唱偈！』",
+   "T0100-sa-2.38": "「毘摩質多羅復說偈言：「『愚者無智慧，要當須止制，\n譬如彼後牛，騰陌先牛上，\n是故須刀杖，摧伏於愚者。』",
+   "T0099-sa1109": "「毘摩質多羅阿修羅復說偈言：「『若不制愚癡，愚癡則傷人，\n猶如兇惡牛，捨走逐觸人。\n執杖而強制，怖畏則調伏，\n是故堅持杖，折伏彼愚夫。』"
+  },
+  "a07": {
+   "sn11.5": "Evaṁ vutte, bhikkhave, sakko devānamindo imā gāthāyo abhāsi: ‘Kāmaṁ maññatu vā mā vā, bhayā myāyaṁ titikkhati; Sadatthaparamā atthā, khantyā bhiyyo na vijjati. Yo have balavā santo, dubbalassa titikkhati; Tamāhu paramaṁ khantiṁ, niccaṁ khamati dubbalo. Abalaṁ taṁ balaṁ āhu, yassa bālabalaṁ balaṁ; Balassa dhammaguttassa, paṭivattā na vijjati. Tasseva tena pāpiyo, yo kuddhaṁ paṭikujjhati; Kuddhaṁ appaṭikujjhanto, saṅgāmaṁ jeti dujjayaṁ. Ubhinnamatthaṁ carati, attano ca parassa ca; Paraṁ saṅkupitaṁ ñatvā, yo sato upasammati. Ubhinnaṁ tikicchantānaṁ, attano ca parassa ca; Janā maññanti bāloti, ye dhammassa akovidā’ti. Bhāsitāsu kho pana, bhikkhave, sakkena devānamindena gāthāsu, devā anumodiṁsu, asurā tuṇhī ahesuṁ.",
+   "nan-sn11.5": "諸比丘！如是言已，天帝釋唱此偈：以忍為怖畏欲思則令思\n己利勝者中無有勝忍辱\n有力忍無力此云最勝忍\n無力人常忍謂無力之力\n其力愚人力有力護於法\n無須要反駁忿者還與忿\n更是為惡事忿者不還忿\n激戰得二度最大之勝利\n知他之忿怒正念靜己人\n自己以及他雙方之醫師\n唯無知法者其人為愚者諸比丘！天帝釋唱此偈時，諸天歡呼，阿修羅默然。",
+   "T0100-sa-2.38": "「釋提桓因以偈答言：「『我觀止制愚，默忍最為勝，\n極大瞋恚忿，能忍彼自息。\n無瞋無害者，彼即是賢聖，\n亦賢聖弟子，常應親近之。\n諸有瞋恚者，瞋重障如山。\n若有瞋恚時，能少禁制者，\n是名為善業，如轡制惡馬。』",
+   "T0099-sa1109": "「帝釋復說偈言：「『我常觀察彼，制彼愚夫者，\n愚者瞋恚盛，智以靜默伏。\n不瞋亦不害，常與賢聖俱，\n惡罪起瞋恚，堅住如石山。\n盛瞋恚能持，如制逸馬車，\n我說善御士，非謂執繩者。』"
+  },
+  "a08": {
+   "sn11.5": "Atha kho, bhikkhave, devānañca asurānañca pārisajjā etadavocuṁ: ‘bhāsitā kho vepacittinā asurindena gāthāyo. Tā ca kho sadaṇḍāvacarā sasatthāvacarā, iti bhaṇḍanaṁ iti viggaho iti kalaho. Bhāsitā kho sakkena devānamindena gāthāyo. Tā ca kho adaṇḍāvacarā asatthāvacarā, iti abhaṇḍanaṁ iti aviggaho iti akalaho.",
+   "nan-sn11.5": "諸比丘！諸天與阿修羅之會眾，於此謂曰：『吠波質底阿修羅王所語之偈語，屬於力、劍、爭、不和與激戰。』『天帝釋之偈語、非屬力、劍、爭、不和、激戰。勝利在於天帝釋之有善語。』",
+   "T0100-sa-2.38": "「諸天及阿脩羅眾有智慧者，詳共評議，量其勝負。",
+   "T0099-sa1109": "「爾時，天眾中有天智慧者，阿修羅眾中有阿修羅智慧者，於此偈思惟稱量觀察，作是念：『毘摩質多羅阿修羅所說偈，終竟長夜起於鬪訟戰諍，當知毘摩質多羅阿修羅王教人長夜鬪訟戰諍；釋提桓因所說偈，長夜終竟息於鬪訟戰諍，當知天帝釋長夜教人息於鬪訟戰諍，當知帝釋善論得勝。』"
+  },
+  "a09": {
+   "sn11.5": "Sakkassa devānamindassa subhāsitena jayo’ti. Iti kho, bhikkhave, sakkassa devānamindassa subhāsitena jayo ahosī”ti.",
+   "nan-sn11.5": "諸比丘！勝利在於天帝釋之致善語。」",
+   "T0100-sa-2.38": "以阿脩羅說諍鬪為本，釋提桓因止息諍訟，心無忿競，以阿脩羅負，帝釋為勝。」",
+   "T0099-sa1109": "」佛告諸比丘：「釋提桓因以善論議伏阿修羅。"
+  },
+  "a10": {
+   "T0100-sa-2.38": "佛告諸比丘：「釋提桓因天中自在，長夜忍辱，讚忍辱法，汝等比丘，若能忍辱，讚嘆忍者，稱出家法。」佛說是已，諸比丘聞佛所說，歡喜奉行。",
+   "T0099-sa1109": "諸比丘！釋提桓因於三十三天為自在王，立於善論，讚歎善論。汝等比丘亦應如是，正信非家，出家學道，亦當善論，讚歎善論，應當學！」佛說此經已，諸比丘聞佛所說，歡喜奉行。"
+  }
+ }
+}

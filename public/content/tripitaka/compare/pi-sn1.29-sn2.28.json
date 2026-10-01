@@ -1,0 +1,107 @@
+{
+ "slug": "pi-sn1.29-sn2.28",
+ "title": "別譯雜阿含經 （一七二）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "天子問偈"
+  },
+  {
+   "id": "a02",
+   "label": "世尊答偈"
+  },
+  {
+   "id": "a03",
+   "label": "天子讚偈及結束"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn1.29",
+   "lang": "pi",
+   "label": "巴利 SN1.29",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn1.29",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN1.29",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "sn2.28",
+   "lang": "pi",
+   "label": "巴利 SN2.28",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn2.28",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN2.28",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.172",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （一七二）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa588",
+   "lang": "lzh",
+   "label": "雜阿含經 （五八八）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（一七二）"
+  },
+  {
+   "work": "T0099",
+   "node": "（五八八）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn1.29": "Saṁyutta Nikāya 1.29 3. Sattivagga Catucakkasutta",
+   "nan-sn1.29": "〔二九〕第九　四輪",
+   "sn2.28": "Saṁyutta Nikāya 2.28 3. Nānātitthiyavagga Nandivisālasutta",
+   "nan-sn2.28": "〔二八〕第八　難提毘舍羅立於一面之難提毘舍羅天子，向世尊語偈曰：",
+   "T0100-sa-2.172": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。",
+   "T0099-sa588": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。時，有一天子，容色絕妙，於後夜時來詣佛所，稽首佛足，身諸光明遍照祇樹給孤獨園。"
+  },
+  "a01": {
+   "sn1.29": "“Catucakkaṁ navadvāraṁ, puṇṇaṁ lobhena saṁyutaṁ; Paṅkajātaṁ mahāvīra, kathaṁ yātrā bhavissatī”ti.",
+   "nan-sn1.29": "〔天神：〕四輪九門孔污穢滿貪欲\n乃是不淨性大雄從如何\n有此之出口",
+   "sn2.28": "Ekamantaṁ ṭhito kho nandivisālo devaputto bhagavantaṁ gāthāya ajjhabhāsi: “Catucakkaṁ navadvāraṁ, puṇṇaṁ lobhena saṁyutaṁ; Paṅkajātaṁ mahāvīra, kathaṁ yātrā bhavissatī”ti.",
+   "nan-sn2.28": "四輪九門孔污穢滿貪欲\n乃是不淨性大雄從如何\n有此之出口",
+   "T0100-sa-2.172": "時有一天，光色倍常，於其夜中，來詣佛所，威光普照，遍于祇洹，赫然大明，却坐一面，而說偈言：「九門四輪轉，內盛滿重銅，\n深淤泥之中，云何而得去？」",
+   "T0099-sa588": "時，彼天子說偈問佛：「有四轉九門，充滿貪欲住，\n深溺烏泥中，大象云何出？」"
+  },
+  "a02": {
+   "sn1.29": "“Chetvā naddhiṁ varattañca, icchā lobhañca pāpakaṁ; Samūlaṁ taṇhamabbuyha, evaṁ yātrā bhavissatī”ti.",
+   "nan-sn1.29": "〔世尊：〕以斷惡欲貪乃至繩與綱\n拔除渴愛根如是有出口",
+   "sn2.28": "“Chetvā naddhiṁ varattañca, icchālobhañca pāpakaṁ; Samūlaṁ taṇhamabbuyha, evaṁ yātrā bhavissatī”ti.",
+   "nan-sn2.28": "〔世尊：〕以斷惡欲貪乃至繩與網\n拔棄渴愛根如是有出口",
+   "T0100-sa-2.172": "爾時，世尊以偈答曰：「斷於喜愛結，及以欲貪惡，\n拔於愛根本，然後安隱出。」",
+   "T0099-sa588": "爾時，世尊說偈答言：「斷愛喜長縻，貪欲等諸惡，\n拔愛欲根本，正向於彼處。」"
+  },
+  "a03": {
+   "T0100-sa-2.172": "天復以偈讚言：「往昔已曾見，婆羅門涅槃，\n嫌怖久捨離，能度世間愛。」爾時，此天說此偈已，歡喜還宮。",
+   "T0099-sa588": "時，彼天子復說偈言：「久見婆羅門，逮得般涅槃，\n一切怖已過，永超世恩愛。」時，彼天子聞佛所說，歡喜隨喜，稽首佛足，即沒不現。"
+  }
+ }
+}

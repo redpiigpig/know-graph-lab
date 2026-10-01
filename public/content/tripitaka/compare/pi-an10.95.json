@@ -1,0 +1,196 @@
+{
+ "slug": "pi-an10.95",
+ "title": "別譯雜阿含經 （一九九）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "優陟問世有邊無邊"
+  },
+  {
+   "id": "a02",
+   "label": "佛答世有邊無邊為無記"
+  },
+  {
+   "id": "a03",
+   "label": "優陟問世無邊有邊無邊非有非無邊"
+  },
+  {
+   "id": "a04",
+   "label": "佛答世無邊等亦為無記"
+  },
+  {
+   "id": "a05",
+   "label": "優陟問諸四句有邊等"
+  },
+  {
+   "id": "a06",
+   "label": "佛答諸四句皆無記"
+  },
+  {
+   "id": "a07",
+   "label": "優陟再問何法可記說"
+  },
+  {
+   "id": "a08",
+   "label": "佛說為聲聞弟子記說道盡苦"
+  },
+  {
+   "id": "a09",
+   "label": "優陟問道是否為一切世間所出"
+  },
+  {
+   "id": "a10",
+   "label": "世尊默然不答"
+  },
+  {
+   "id": "a11",
+   "label": "阿難執扇侍佛並說優陟重問致默然"
+  },
+  {
+   "id": "a12",
+   "label": "阿難說城守門喻"
+  },
+  {
+   "id": "a13",
+   "label": "喻中城門唯一守門智者知出入皆由此門"
+  },
+  {
+   "id": "a14",
+   "label": "喻中守門不知數量但知出入者皆由此門"
+  },
+  {
+   "id": "a15",
+   "label": "佛以喻說知出入苦邊者皆由此道"
+  },
+  {
+   "id": "a16",
+   "label": "優陟聞說歡喜而去"
+  }
+ ],
+ "versions": [
+  {
+   "id": "an10.95",
+   "lang": "pi",
+   "label": "巴利 AN10.95",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "T0100-sa-2.199",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （一九九）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa965",
+   "lang": "lzh",
+   "label": "雜阿含經 （九六五）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（一九九）",
+   "uid": "T02n0100_p0447b19"
+  },
+  {
+   "work": "T0099",
+   "node": "（九六五）",
+   "uid": "T02n0099_p0247c14"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "an10.95": "Aṅguttara Nikāya 10.95 10. Upālivagga Uttiyasutta",
+   "T0100-sa-2.199": "如是我聞：一時，佛住王舍城。時有梵志，厥名優陟，來詣佛所，問訊佛已，在一面坐。",
+   "T0099-sa965": "如是我聞：一時，佛住王舍城迦蘭陀竹園。"
+  },
+  "a01": {
+   "an10.95": "Atha kho uttiyo paribbājako yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavatā saddhiṁ sammodi. Sammodanīyaṁ kathaṁ sāraṇīyaṁ vītisāretvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho uttiyo paribbājako bhagavantaṁ etadavoca: “kiṁ nu kho, bho gotama, sassato loko, idameva saccaṁ moghamaññan”ti?",
+   "T0100-sa-2.199": "即問佛言：「瞿曇！一切世界為有邊耶？",
+   "T0099-sa965": "時，有外道出家名曰欝低迦，來詣佛所，與世尊面相問訊慰勞已，退坐一面，白佛言：「瞿曇！"
+  },
+  "a02": {
+   "an10.95": "“Abyākataṁ kho etaṁ, uttiya, mayā: ‘sassato loko, idameva saccaṁ moghamaññan’”ti.",
+   "T0100-sa-2.199": "為無邊耶？」佛告優陟：「如斯等問，吾初不答。」",
+   "T0099-sa965": "云何，瞿曇！世有邊耶？」佛告欝低迦：「此是無記。」"
+  },
+  "a03": {
+   "an10.95": "“Kiṁ pana, bho gotama, asassato loko, idameva saccaṁ moghamaññan”ti?",
+   "T0100-sa-2.199": "優陟言：「瞿曇！我問世界有邊無邊，悉不見答。",
+   "T0099-sa965": "欝低迦白佛：「云何，瞿曇！世無邊耶？有邊無邊耶？非有邊非無邊耶？」"
+  },
+  "a04": {
+   "an10.95": "“Etampi kho, uttiya, abyākataṁ mayā: ‘asassato loko, idameva saccaṁ moghamaññan’”ti.",
+   "T0100-sa-2.199": "若然者，汝常說法，解釋問難，為何所答？」佛言：「優陟！吾於諸法，悉善知已，為聲聞弟子分別正道，蠲除眾苦，盡其邊際。」",
+   "T0099-sa965": "佛告欝低迦：「此是無記。」"
+  },
+  "a05": {
+   "an10.95": "“Kiṁ nu kho, bho gotama, antavā loko …pe… anantavā loko … taṁ jīvaṁ taṁ sarīraṁ … aññaṁ jīvaṁ aññaṁ sarīraṁ … hoti tathāgato paraṁ maraṇā … na hoti tathāgato paraṁ maraṇā … hoti ca na ca hoti tathāgato paraṁ maraṇā … neva hoti na na hoti tathāgato paraṁ maraṇā, idameva saccaṁ moghamaññan”ti?",
+   "T0100-sa-2.199": "優陟言：「瞿曇！汝於諸法，悉善知已，為聲聞弟子，說於正道，蠲除眾苦，盡其邊際。",
+   "T0099-sa965": "欝低迦白佛：「云何，瞿曇！『世有邊耶？』答言：『無記』；『世無邊耶？世有邊無邊耶？世非有邊非無邊耶？』答言：『無記』？"
+  },
+  "a06": {
+   "an10.95": "“Etampi kho, uttiya, abyākataṁ mayā: ‘neva hoti na na hoti tathāgato paraṁ maraṇā, idameva saccaṁ moghamaññan’”ti. “‘Kiṁ nu kho, bho gotama, sassato loko, idameva saccaṁ moghamaññan’ti, iti puṭṭho samāno ‘abyākataṁ kho etaṁ, uttiya, mayā— sassato loko, idameva saccaṁ moghamaññan’ti vadesi. ‘Kiṁ pana, bho gotama, asassato loko, idameva saccaṁ moghamaññan’ti, iti puṭṭho samāno: ‘etampi kho, uttiya, abyākataṁ mayā asassato loko, idameva saccaṁ moghamaññan’ti vadesi. ‘Kiṁ nu kho, bho gotama, antavā loko …pe… anantavā loko … taṁ jīvaṁ taṁ sarīraṁ … aññaṁ jīvaṁ aññaṁ sarīraṁ … hoti tathāgato paraṁ maraṇā … na hoti tathāgato paraṁ maraṇā … hoti ca na ca hoti tathāgato paraṁ maraṇā … neva hoti na na hoti tathāgato paraṁ maraṇā, idameva saccaṁ moghamaññan’ti, iti puṭṭho samāno: ‘etampi kho, uttiya, abyākataṁ mayā— neva hoti na na hoti tathāgato paraṁ maraṇā, idameva saccaṁ moghamaññan’ti vadesi.",
+   "T0100-sa-2.199": "若如是者，汝所得道，為一切人盡行是道，為有多少而行斯道？」"
+  },
+  "a07": {
+   "an10.95": "Atha kiñcarahi bhotā gotamena byākatan”ti?",
+   "T0100-sa-2.199": "爾時，如來默然不答。",
+   "T0099-sa965": "瞿曇！於何等法而可記說？」"
+  },
+  "a08": {
+   "an10.95": "“Abhiññāya kho ahaṁ, uttiya, sāvakānaṁ dhammaṁ desemi sattānaṁ visuddhiyā sokaparidevānaṁ samatikkamāya dukkhadomanassānaṁ atthaṅgamāya ñāyassa adhigamāya nibbānassa sacchikiriyāyā”ti. “Yaṁ panetaṁ bhavaṁ gotamo abhiññāya sāvakānaṁ dhammaṁ desesi sattānaṁ visuddhiyā sokaparidevānaṁ samatikkamāya dukkhadomanassānaṁ atthaṅgamāya ñāyassa adhigamāya nibbānassa sacchikiriyāya, sabbo vā tena loko nīyati upaḍḍho vā tibhāgo vā”ti? Evaṁ vutte, bhagavā tuṇhī ahosi.",
+   "T0100-sa-2.199": "第二第三亦如是問，如來默然，悉不加報。",
+   "T0099-sa965": "佛告欝低迦：「知者，智者，我為諸弟子而記說道，令正盡苦，究竟苦邊。」欝低迦白佛：「云何，瞿曇！"
+  },
+  "a09": {
+   "T0100-sa-2.199": "爾時，阿難執扇侍佛，以扇扇佛，聞彼優陟所諮已，即語之言：「汝後所問，與前無異，是以世尊默然不答汝。",
+   "T0099-sa965": "為諸弟子說道，令正盡苦，究竟苦邊？為一切世間從此道出，為少分耶？」"
+  },
+  "a10": {
+   "T0100-sa-2.199": "我且為汝說一方喻譬。",
+   "T0099-sa965": "爾時，世尊默然不答。"
+  },
+  "a11": {
+   "an10.95": "Atha kho āyasmato ānandassa etadahosi: “mā hevaṁ kho uttiyo paribbājako pāpakaṁ diṭṭhigataṁ paṭilabhi: ‘sabbasāmukkaṁsikaṁ vata me samaṇo gotamo pañhaṁ puṭṭho saṁsādeti, no vissajjeti, na nūna visahatī’ti. Tadassa uttiyassa paribbājakassa dīgharattaṁ ahitāya dukkhāyā”ti.",
+   "T0100-sa-2.199": "如邊守有城，牆壁牢實，欄楯窓牖，悉皆堅固。街巷里陌，官府市肆，周障布置，不相干錯。",
+   "T0099-sa965": "第二、第三問，佛亦第二、第三默然不答。爾時，尊者阿難住於佛後，執扇扇佛。"
+  },
+  "a12": {
+   "an10.95": "Atha kho āyasmā ānando uttiyaṁ paribbājakaṁ etadavoca: “tenahāvuso uttiya, upamaṁ te karissāmi. Upamāya m’idhekacce viññū purisā bhāsitassa atthaṁ ājānanti.",
+   "T0100-sa-2.199": "而此城中，唯有一門。時守門人，聰明智慧，有大念力，善能分別客舊諸人，識者聽入，不識則遮。",
+   "T0099-sa965": "尊者阿難語欝低迦外道出家：「汝初已問此義，今復以異說而問，是故，世尊不為記說。欝低迦！今當為汝說譬，夫智者因譬得解。"
+  },
+  "a13": {
+   "an10.95": "Seyyathāpi, āvuso uttiya, rañño paccantimaṁ nagaraṁ daḷhuddhāpaṁ daḷhapākāratoraṇaṁ ekadvāraṁ. Tatrassa dovāriko paṇḍito byatto medhāvī aññātānaṁ nivāretā ñātānaṁ pavesetā. So tassa nagarassa samantā anupariyāyapathaṁ anukkamati. Anupariyāyapathaṁ anukkamamāno na passeyya pākārasandhiṁ vā pākāravivaraṁ vā, antamaso biḷāranikkhamanamattampi. No ca khvassa evaṁ ñāṇaṁ hoti: ‘ettakā pāṇā imaṁ nagaraṁ pavisanti vā nikkhamanti vā’ti.",
+   "T0100-sa-2.199": "時城中人，欲有出者，不知出要，周匝遍觀，更無孔穴，唯此一門乃從求出。而此守門智慧之人，雖不具知城中種類，然知其中將出城者，皆由此門。",
+   "T0099-sa965": "「譬如國王，有邊境城，四周堅固，巷陌平正，唯有一門。立守門者聰明黠慧，善能籌量，外有人來，應入者聽入，不應入者不聽。"
+  },
+  "a14": {
+   "an10.95": "Atha khvassa evamettha hoti: ‘ye kho keci oḷārikā pāṇā imaṁ nagaraṁ pavisanti vā nikkhamanti vā, sabbe te iminā dvārena pavisanti vā nikkhamanti vā’ti. Evamevaṁ kho, āvuso uttiya, na tathāgatassa evaṁ ussukkaṁ hoti: ‘sabbo vā tena loko nīyati, upaḍḍho vā, tibhāgo vā’ti.",
+   "T0100-sa-2.199": "如是優陟，如來亦爾，雖不具悉思惟分別，然知出入，皆由此門。",
+   "T0099-sa965": "周匝遶城，求第二門，都不可得，都無猫狸出入之處，況第二門？彼守門者都不覺悟入者、出者，然彼士夫知一切人唯從此門若出若入，更無餘處。"
+  },
+  "a15": {
+   "an10.95": "Atha kho evamettha tathāgatassa hoti: ‘ye kho keci lokamhā nīyiṁsu vā nīyanti vā nīyissanti vā, sabbe te pañca nīvaraṇe pahāya cetaso upakkilese paññāya dubbalīkaraṇe, catūsu satipaṭṭhānesu suppatiṭṭhitacittā, satta bojjhaṅge yathābhūtaṁ bhāvetvā. Evamete lokamhā nīyiṁsu vā nīyanti vā nīyissanti vā’ti. Yadeva kho tvaṁ, āvuso uttiya, bhagavantaṁ pañhaṁ apucchi tadevetaṁ pañhaṁ bhagavantaṁ aññena pariyāyena apucchi. Tasmā te taṁ bhagavā na byākāsī”ti. Pañcamaṁ.",
+   "T0100-sa-2.199": "如來亦然，知過去苦，現在、未來苦之邊際，皆由斯道，得盡於苦。」",
+   "T0099-sa965": "如是，世尊雖不用心覺悟眾生，一切世間從此道出，及以少分，然知眾生正盡苦，究竟苦邊者，一切皆悉從此道出。」"
+  },
+  "a16": {
+   "T0100-sa-2.199": "優陟梵志聞佛所說，歡喜而去。",
+   "T0099-sa965": "時，欝低迦外道出家聞佛所說，歡喜隨喜，從坐起而去。"
+  }
+ }
+}

@@ -1,0 +1,186 @@
+{
+ "slug": "pi-sn16.9",
+ "title": "別譯雜阿含經 （一一七）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "迦葉來見佛"
+  },
+  {
+   "id": "a02",
+   "label": "佛稱讚迦葉"
+  },
+  {
+   "id": "a03",
+   "label": "迦葉問坐位"
+  },
+  {
+   "id": "a04",
+   "label": "佛答坐位"
+  },
+  {
+   "id": "a05",
+   "label": "迦葉就坐"
+  },
+  {
+   "id": "a06",
+   "label": "初禪修習"
+  },
+  {
+   "id": "a07",
+   "label": "第二禪修習"
+  },
+  {
+   "id": "a08",
+   "label": "第三禪修習"
+  },
+  {
+   "id": "a09",
+   "label": "第四禪修習"
+  },
+  {
+   "id": "a10",
+   "label": "慈悲喜捨修習"
+  },
+  {
+   "id": "a11",
+   "label": "四無色定修習"
+  },
+  {
+   "id": "a12",
+   "label": "神通修習"
+  },
+  {
+   "id": "a13",
+   "label": "六種神通修習"
+  },
+  {
+   "id": "a14",
+   "label": "漏盡智修習"
+  },
+  {
+   "id": "a15",
+   "label": "結讚"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn16.9",
+   "lang": "pi",
+   "label": "巴利 SN16.9",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "T0100-sa-2.117",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （一一七）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa1142",
+   "lang": "lzh",
+   "label": "雜阿含經 （一一四二）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（一一七）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一一四二）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn16.9": "Saṁyutta Nikāya 16.9",
+   "T0100-sa-2.117": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。",
+   "T0099-sa1142": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。"
+  },
+  "a01": {
+   "sn16.9": "1. Kassapavagga",
+   "T0100-sa-2.117": "爾時，尊者摩訶迦葉在於邊遠，草敷而住，衣被弊壞，染色變脫，鬚髮亦長，來詣佛所。",
+   "T0099-sa1142": "爾時，尊者摩訶迦葉久住舍衛國阿練若床坐處，長鬚髮，著弊納衣，來詣佛所。"
+  },
+  "a02": {
+   "sn16.9": "Jhānābhiññasutta",
+   "T0100-sa-2.117": "爾時，世尊大眾圍遶，而為說法。",
+   "T0099-sa1142": "爾時，世尊、無數大眾圍繞說法。"
+  },
+  "a03": {
+   "T0100-sa-2.117": "時，諸比丘見迦葉已，皆生是念：「彼尊者不知出家所有威儀，衣色變穢，鬚髮亦長，威儀不具。」",
+   "T0099-sa1142": "時，諸比丘見摩訶迦葉從遠而來，見已，於尊者摩訶迦葉所起輕慢心，言：「此何等比丘？"
+  },
+  "a04": {
+   "T0100-sa-2.117": "爾時，世尊知諸比丘心之所念，為欲令彼生欽尚故，遙見迦葉，即語之言：「善來迦葉！」",
+   "T0099-sa1142": "衣服麁陋，無有儀容而來，衣服佯佯而來。」"
+  },
+  "a05": {
+   "T0100-sa-2.117": "尋分半座，命令共坐，我當思惟：「汝先出家，我後出家，是故命汝，與爾分座。」",
+   "T0099-sa1142": "爾時，世尊知諸比丘心之所念，告摩訶迦葉：「善來！"
+  },
+  "a06": {
+   "sn16.9": "Sāvatthiyaṁ viharati.",
+   "T0100-sa-2.117": "摩訶迦葉聞斯教已，即懷惶悚，便起合掌，頂禮佛足，白佛言：「世尊是我大師，我是弟子，云何與師同共同坐？」",
+   "T0099-sa1142": "迦葉！於此半座，我今竟知誰先出家，汝耶？"
+  },
+  "a07": {
+   "sn16.9": "“Ahaṁ, bhikkhave, yāvade ākaṅkhāmi vivicceva kāmehi vivicca akusalehi dhammehi savitakkaṁ savicāraṁ vivekajaṁ pītisukhaṁ paṭhamaṁ jhānaṁ upasampajja viharāmi.",
+   "T0100-sa-2.117": "第二第三，亦作是言。",
+   "T0099-sa1142": "我耶？」彼諸比丘心生恐怖，身毛皆竪，並相謂言：「奇哉！"
+  },
+  "a08": {
+   "sn16.9": "Kassapopi, bhikkhave, yāvade ākaṅkhati vivicceva kāmehi vivicca akusalehi dhammehi savitakkaṁ savicāraṁ vivekajaṁ pītisukhaṁ paṭhamaṁ jhānaṁ upasampajja viharati.",
+   "T0100-sa-2.117": "佛告迦葉：「實如汝言，我是汝師，汝是弟子。」",
+   "T0099-sa1142": "尊者！彼尊者摩訶迦葉，大德大力，大師弟子，請以半座。」"
+  },
+  "a09": {
+   "sn16.9": "Ahaṁ, bhikkhave, yāvade ākaṅkhāmi vitakkavicārānaṁ vūpasamā ajjhattaṁ sampasādanaṁ cetaso ekodibhāvaṁ avitakkaṁ avicāraṁ samādhijaṁ pītisukhaṁ dutiyaṁ jhānaṁ upasampajja viharāmi.",
+   "T0100-sa-2.117": "即命迦葉：「汝可於彼所應坐處，於中而坐。」",
+   "T0099-sa1142": "爾時，尊者摩訶迦葉合掌白佛言：「世尊！"
+  },
+  "a10": {
+   "sn16.9": "Kassapopi, bhikkhave, yāvade ākaṅkhati vitakkavicārānaṁ vūpasamā …pe… dutiyaṁ jhānaṁ upasampajja viharati.",
+   "T0100-sa-2.117": "時，尊者迦葉即奉佛教，敷座而坐。",
+   "T0099-sa1142": "佛是我師，我是弟子。」"
+  },
+  "a11": {
+   "sn16.9": "Ahaṁ, bhikkhave, yāvade ākaṅkhāmi pītiyā ca virāgā upekkhako ca viharāmi sato ca sampajāno sukhañca kāyena paṭisaṁvedemi, yaṁ taṁ ariyā ācikkhanti: ‘upekkhako satimā sukhavihārī’ti tatiyaṁ jhānaṁ upasampajja viharāmi.",
+   "T0100-sa-2.117": "爾時，世尊為欲令彼諸比丘等，益增厭惡，自呵責故，為欲讚歎摩訶迦葉功德尊重與佛齊故，告諸比丘：「我修離欲之定，入于初禪，作意思惟，迦葉比丘亦欲離惡不善，有覺有觀，入于初禪，亦復晝夜，欲入初禪；",
+   "T0099-sa1142": "佛告迦葉：「如是！"
+  },
+  "a12": {
+   "sn16.9": "Kassapopi, bhikkhave, yāvade ākaṅkhati pītiyā ca virāgā upekkhako ca viharati sato ca sampajāno, sukhañca kāyena paṭisaṁvedeti, yaṁ taṁ ariyā ācikkhanti: ‘upekkhako satimā sukhavihārī’ti tatiyaṁ jhānaṁ upasampajja viharati.",
+   "T0100-sa-2.117": "二禪、三禪，及第四禪，亦復如是。",
+   "T0099-sa1142": "如是！我為大師，汝是弟子，汝今且坐，隨其所安。」"
+  },
+  "a13": {
+   "sn16.9": "Ahaṁ, bhikkhave, yāvade ākaṅkhāmi sukhassa ca pahānā dukkhassa ca pahānā pubbeva somanassadomanassānaṁ atthaṅgamā adukkhamasukhaṁ upekkhāsatipārisuddhiṁ catutthaṁ jhānaṁ upasampajja viharāmi.",
+   "T0100-sa-2.117": "我若發心欲入慈心、無嫌怨心、無惱心、遍廣心、善修無量，於其東方，作如是心，南西北方，四維上下，亦作是心，我於晝夜，欲修是心。",
+   "T0099-sa1142": "尊者摩訶迦葉稽首佛足，退坐一面。"
+  },
+  "a14": {
+   "sn16.9": "Kassapopi, bhikkhave, yāvade ākaṅkhati sukhassa ca pahānā …pe… catutthaṁ jhānaṁ upasampajja viharati.",
+   "T0100-sa-2.117": "摩訶迦葉，亦復如是，欲入慈心、無嫌怨心、無惱心、遍廣心、善修無量，於其東方，作如是心，南西北方，四維上下，亦作是心。",
+   "T0099-sa1142": "爾時，世尊復欲警悟諸比丘，復以尊者摩訶迦葉同己所得殊勝廣大功德為現眾故，告諸比丘：「我離欲、惡不善法，有覺有觀，初禪具足住，若日、若夜、若日夜；"
+  },
+  "a15": {
+   "sn16.9": "Ahaṁ, bhikkhave, yāvade ākaṅkhāmi sabbaso rūpasaññānaṁ samatikkamā paṭighasaññānaṁ atthaṅgamā nānattasaññānaṁ amanasikārā ananto ākāsoti ākāsānañcāyatanaṁ upasampajja viharāmi. Kassapopi, bhikkhave, yāvade ākaṅkhati sabbaso rūpasaññānaṁ samatikkamā …pe… ākāsānañcāyatanaṁ upasampajja viharati. Ahaṁ, bhikkhave, yāvade ākaṅkhāmi sabbaso ākāsānañcāyatanaṁ samatikkamma anantaṁ viññāṇanti viññāṇañcāyatanaṁ upasampajja viharāmi. Kassapopi, bhikkhave, yāvade ākaṅkhati sabbaso ākāsānañcāyatanaṁ samatikkamma anantaṁ viññāṇanti viññāṇañcāyatanaṁ upasampajja viharati. Ahaṁ, bhikkhave, yāvade ākaṅkhāmi sabbaso viññāṇañcāyatanaṁ samatikkamma ‘natthi kiñcī’ti ākiñcaññāyatanaṁ upasampajja viharāmi. Kassapopi, bhikkhave, yāvade ākaṅkhati …pe… ākiñcaññāyatanaṁ upasampajja viharati. Ahaṁ, bhikkhave, yāvade ākaṅkhāmi sabbaso ākiñcaññāyatanaṁ samatikkamma nevasaññānāsaññāyatanaṁ upasampajja viharāmi. Kassapopi, bhikkhave, yāvade ākaṅkhati …pe… nevasaññānāsaññāyatanaṁ upasampajja viharati. Ahaṁ, bhikkhave, yāvade ākaṅkhāmi sabbaso nevasaññānāsaññāyatanaṁ samatikkamma saññāvedayitanirodhaṁ upasampajja viharāmi. Kassapopi, bhikkhave …pe… saññāvedayitanirodhaṁ upasampajja viharati. Ahaṁ, bhikkhave, yāvade ākaṅkhāmi anekavihitaṁ iddhividhaṁ paccanubhomi—ekopi hutvā bahudhā homi, bahudhāpi hutvā eko homi; āvibhāvaṁ, tirobhāvaṁ, tirokuṭṭaṁ, tiropākāraṁ, tiropabbataṁ, asajjamāno gacchāmi, seyyathāpi ākāse; pathaviyāpi ummujjanimujjaṁ karomi, seyyathāpi udake; udakepi abhijjamāne gacchāmi, seyyathāpi pathaviyaṁ; ākāsepi pallaṅkena kamāmi, seyyathāpi pakkhī sakuṇo; imepi candimasūriye evaṁmahiddhike evaṁmahānubhāve pāṇinā parimasāmi parimajjāmi; yāva brahmalokāpi kāyena vasaṁ vattemi. Kassapopi, bhikkhave, yāvade ākaṅkhati anekavihitaṁ iddhividhaṁ paccanubhoti …pe… yāva brahmalokāpi kāyena vasaṁ vatteti. Ahaṁ, bhikkhave, yāvade ākaṅkhāmi dibbāya sotadhātuyā visuddhāya atikkantamānusikāya ubho sadde suṇāmi, dibbe ca mānuse ca, ye dūre santike ca. Kassapopi, bhikkhave, yāvade ākaṅkhati dibbāya sotadhātuyā …pe… dūre santike ca. Ahaṁ, bhikkhave, yāvade ākaṅkhāmi parasattānaṁ parapuggalānaṁ cetasā ceto paricca pajānāmi— sarāgaṁ vā cittaṁ sarāgaṁ cittanti pajānāmi, vītarāgaṁ vā cittaṁ vītarāgaṁ cittanti pajānāmi, sadosaṁ vā cittaṁ …pe… vītadosaṁ vā cittaṁ … samohaṁ vā cittaṁ … vītamohaṁ vā cittaṁ … saṅkhittaṁ vā cittaṁ … vikkhittaṁ vā cittaṁ … mahaggataṁ vā cittaṁ … amahaggataṁ vā cittaṁ … sauttaraṁ vā cittaṁ … anuttaraṁ vā cittaṁ … samāhitaṁ vā cittaṁ … asamāhitaṁ vā cittaṁ … vimuttaṁ vā cittaṁ … avimuttaṁ vā cittaṁ avimuttaṁ cittanti pajānāmi. Kassapopi, bhikkhave, yāvade ākaṅkhati parasattānaṁ parapuggalānaṁ cetasā ceto paricca pajānāti— sarāgaṁ vā cittaṁ sarāgaṁ cittanti pajānāti …pe… avimuttaṁ vā cittaṁ avimuttaṁ cittanti pajānāti. Ahaṁ, bhikkhave, yāvade ākaṅkhāmi anekavihitaṁ pubbenivāsaṁ anussarāmi, seyyathidaṁ—ekampi jātiṁ dvepi jātiyo tissopi jātiyo catassopi jātiyo pañcapi jātiyo dasapi jātiyo vīsampi jātiyo tiṁsampi jātiyo cattālīsampi jātiyo paññāsampi jātiyo jātisatampi jātisahassampi jātisatasahassampi, anekepi saṁvaṭṭakappe anekepi vivaṭṭakappe anekepi saṁvaṭṭavivaṭṭakappe: ‘amutrāsiṁ evaṁnāmo evaṅgotto evaṁvaṇṇo evamāhāro evaṁsukhadukkhappaṭisaṁvedī evamāyupariyanto, so tato cuto amutra udapādiṁ; tatrāpāsiṁ evaṁnāmo evaṅgotto evaṁvaṇṇo evamāhāro evaṁsukhadukkhappaṭisaṁvedī evamāyupariyanto, so tato cuto idhūpapanno’ti. Iti sākāraṁ sauddesaṁ anekavihitaṁ pubbenivāsaṁ anussarāmi. Kassapopi, bhikkhave, yāvade ākaṅkhati anekavihitaṁ pubbenivāsaṁ anussarati, seyyathidaṁ—ekampi jātiṁ …pe… iti sākāraṁ sauddesaṁ anekavihitaṁ pubbenivāsaṁ anussarati. Ahaṁ, bhikkhave, yāvade ākaṅkhāmi dibbena cakkhunā visuddhena atikkantamānusakena satte passāmi cavamāne upapajjamāne hīne paṇīte suvaṇṇe dubbaṇṇe, sugate duggate yathākammūpage satte pajānāmi: ‘ime vata, bhonto, sattā kāyaduccaritena samannāgatā vacīduccaritena samannāgatā manoduccaritena samannāgatā ariyānaṁ upavādakā micchādiṭṭhikā micchādiṭṭhikammasamādānā; te kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapannā, ime vā pana, bhonto, sattā kāyasucaritena samannāgatā vacīsucaritena samannāgatā manosucaritena samannāgatā ariyānaṁ anupavādakā sammādiṭṭhikā sammādiṭṭhikammasamādānā; te kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapannā’ti. Iti dibbena cakkhunā visuddhena atikkantamānusakena satte passāmi cavamāne upapajjamāne hīne paṇīte suvaṇṇe dubbaṇṇe, sugate duggate yathākammūpage satte pajānāmi. Kassapopi, bhikkhave, yāvade ākaṅkhati dibbena cakkhunā visuddhena atikkantamānusakena satte passati cavamāne …pe… yathākammūpage satte pajānāti. Ahaṁ, bhikkhave, āsavānaṁ khayā anāsavaṁ cetovimuttiṁ paññāvimuttiṁ diṭṭheva dhamme sayaṁ abhiññā sacchikatvā upasampajja viharāmi. Kassapopi, bhikkhave, āsavānaṁ khayā anāsavaṁ cetovimuttiṁ paññāvimuttiṁ diṭṭheva dhamme sayaṁ abhiññā sacchikatvā upasampajja viharatī”ti. Navamaṁ.",
+   "T0100-sa-2.117": "我若修於悲喜捨心，我於晝夜，常入此心。摩訶迦葉亦復如是，於晝夜中，常入此心。我欲滅除惱壞，却於色想，除若干想，入無邊虛空，亦欲晝夜常入此定，識處不用處，非想非非想處，亦復如是。我亦欲入神通等定，能以一身作無量身，以無量身還作一身。我欲觀察諸方上下，入于石壁，無有障礙，猶如虛空，坐臥空中，如彼鴈王，履地如水，履水如地，身至梵天，手捫日月。若我晝夜欲修是定，迦葉比丘，亦復如是，欲入於彼神通等定，能以一身作無量身，以無量身還為一身，觀察四方，四維上下，能以此身入于石壁，無有障閡，猶如虛空，坐臥空中，如彼鴈王，履地如水，履水如地，身至梵天，手捫日月，亦欲晝夜常入此定。天眼、天耳，及他心智、宿命、漏盡，亦復如是。」爾時，世尊於彼無量大眾之中，稱讚迦葉功德，尊重如是，種種與己齊等。時，諸比丘聞佛所說，歡喜奉行。",
+   "T0099-sa1142": "摩訶迦葉亦復如我，離欲、惡不善法，乃至初禪具足住，若日、若夜、若日夜。我欲第二、第三、第四禪具足住，若日、若夜、若日夜，彼摩訶迦葉亦復如是。乃至第四禪具足住，若日、若夜、若日夜。我隨所欲，慈、悲、喜、捨，空入處、識入處、無所有入處、非想非非想入處，神通境界，天耳、他心智、宿命智、生死智、漏盡智具足住，若日、若夜、若日夜；彼迦葉比丘亦復如是。乃至漏盡智具足住，若日、若夜、若日夜。」爾時，世尊於無量大眾中稱歎摩訶迦葉同己廣大勝妙功德已，諸比丘聞佛所說，歡喜奉行。"
+  }
+ }
+}

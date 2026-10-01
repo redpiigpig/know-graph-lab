@@ -1,0 +1,111 @@
+{
+ "slug": "pi-an5.168-an5.24",
+ "title": "中阿含經 （四六）中阿含習相應品慚愧經第五（初一日誦）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "無慚無愧者之過失"
+  },
+  {
+   "id": "a02",
+   "label": "樹喻（無慚無愧）"
+  },
+  {
+   "id": "a03",
+   "label": "有慚有愧者之功德"
+  },
+  {
+   "id": "a04",
+   "label": "樹喻（有慚有愧）"
+  },
+  {
+   "id": "a05",
+   "label": "結誦"
+  }
+ ],
+ "versions": [
+  {
+   "id": "an5.168",
+   "lang": "pi",
+   "label": "巴利 AN5.168",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "an5.24",
+   "lang": "pi",
+   "label": "巴利 AN5.24",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "T0026-ma46",
+   "lang": "lzh",
+   "label": "中阿含經 （四六）中阿含習相應品慚愧經第五（初一日誦）",
+   "who": "東晉 瞿曇僧伽提婆譯"
+  },
+  {
+   "id": "T0099-sa495",
+   "lang": "lzh",
+   "label": "雜阿含經 （四九五）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0026",
+  "T0099"
+ ],
+ "anchors": [
+  {
+   "work": "T0026",
+   "node": "（四六）中阿含習相應品慚愧經第五（初一日誦）"
+  },
+  {
+   "work": "T0099",
+   "node": "（四九五）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "an5.168": "Aṅguttara Nikāya 5.168 17. Āghātavagga Sīlasutta",
+   "an5.24": "Aṅguttara Nikāya 5.24 3. Pañcaṅgikavagga Dussīlasutta",
+   "T0026-ma46": "我聞如是：一時，佛遊舍衛國，在勝林給孤獨園。",
+   "T0099-sa495": "如是我聞：一時，佛住王舍城迦蘭陀竹園。"
+  },
+  "a01": {
+   "an5.168": "Tatra kho āyasmā sāriputto bhikkhū āmantesi: “dussīlassa, āvuso, sīlavipannassa hatūpaniso hoti sammāsamādhi; sammāsamādhimhi asati sammāsamādhivipannassa hatūpanisaṁ hoti yathābhūtañāṇadassanaṁ; yathābhūtañāṇadassane asati yathābhūtañāṇadassanavipannassa hatūpaniso hoti nibbidāvirāgo; nibbidāvirāge asati nibbidāvirāgavipannassa hatūpanisaṁ hoti vimuttiñāṇadassanaṁ.",
+   "an5.24": "“Dussīlassa, bhikkhave, sīlavipannassa hatūpaniso hoti sammāsamādhi; sammāsamādhimhi asati sammāsamādhivipannassa hatūpanisaṁ hoti yathābhūtañāṇadassanaṁ; yathābhūtañāṇadassane asati yathābhūtañāṇadassanavipannassa hatūpaniso hoti nibbidāvirāgo; nibbidāvirāge asati nibbidāvirāgavipannassa hatūpanisaṁ hoti vimuttiñāṇadassanaṁ.",
+   "T0026-ma46": "爾時，尊者舍梨子告諸比丘：「諸賢！若比丘無慚無愧，便害愛恭敬；若無愛恭敬，便害其信；若無其信，便害正思惟；若無正思惟，便害正念正智；若無正念正智，便害護諸根、護戒、不悔、歡悅、喜、止、樂、定、見如實、知如真、厭、無欲、解脫；若無解脫，便害涅槃。",
+   "T0099-sa495": "時，尊者舍利弗在耆闍崛山中。爾時，尊者舍利弗告諸比丘：「其犯戒者，以破戒故，所依退減，心不樂住；"
+  },
+  "a02": {
+   "an5.168": "Seyyathāpi, āvuso, rukkho sākhāpalāsavipanno. Tassa papaṭikāpi na pāripūriṁ gacchati, tacopi pheggupi sāropi na pāripūriṁ gacchati. Evamevaṁ kho, āvuso, dussīlassa sīlavipannassa hatūpaniso hoti sammāsamādhi; sammāsamādhimhi asati sammāsamādhivipannassa hatūpanisaṁ hoti yathābhūtañāṇadassanaṁ; yathābhūtañāṇadassane asati yathābhūtañāṇadassanavipannassa hatūpaniso hoti nibbidāvirāgo; nibbidāvirāge asati nibbidāvirāgavipannassa hatūpanisaṁ hoti vimuttiñāṇadassanaṁ.",
+   "an5.24": "Seyyathāpi, bhikkhave, rukkho sākhāpalāsavipanno. Tassa papaṭikāpi na pāripūriṁ gacchati, tacopi na pāripūriṁ gacchati, pheggupi na pāripūriṁ gacchati, sāropi na pāripūriṁ gacchati; evamevaṁ kho, bhikkhave, dussīlassa sīlavipannassa hatūpaniso hoti sammāsamādhi; sammāsamādhimhi asati sammāsamādhivipannassa hatūpanisaṁ hoti yathābhūtañāṇadassanaṁ; yathābhūtañāṇadassane asati yathābhūtañāṇadassanavipannassa hatūpaniso hoti nibbidāvirāgo; nibbidāvirāge asati nibbidāvirāgavipannassa hatūpanisaṁ hoti vimuttiñāṇadassanaṁ.",
+   "T0026-ma46": "諸賢！猶如有樹，若害外皮，則內皮不成，內皮不成，則莖、幹、心、節、枝、葉、華、實皆不得成。諸賢！當知比丘亦復如是，若無慚無愧，便害愛恭敬；若無愛恭敬，便害其信；若無其信，便害正思惟；若無正思惟，便害正念正智；若無正念正智，便害護諸根、護戒、不悔、歡悅、喜、止、樂、定、見如實、知如真、厭、無欲、解脫；若無解脫，便害涅槃。",
+   "T0099-sa495": "不樂住已，失喜、息、樂、寂靜三昧、如實知見、厭離、離欲、解脫已，永不能得無餘涅槃。如樹根壞，枝葉華果悉不成就，犯戒比丘亦復如是。功德退減，心不樂住，不信樂已，失喜、息、樂、寂靜三昧、如實知見、厭離、離欲、解脫，失解脫已，永不能得無餘涅槃。"
+  },
+  "a03": {
+   "an5.168": "Sīlavato, āvuso, sīlasampannassa upanisasampanno hoti sammāsamādhi; sammāsamādhimhi sati sammāsamādhisampannassa upanisasampannaṁ hoti yathābhūtañāṇadassanaṁ; yathābhūtañāṇadassane sati yathābhūtañāṇadassanasampannassa upanisasampanno hoti nibbidāvirāgo; nibbidāvirāge sati nibbidāvirāgasampannassa upanisasampannaṁ hoti vimuttiñāṇadassanaṁ.",
+   "an5.24": "Sīlavato, bhikkhave, sīlasampannassa upanisasampanno hoti sammāsamādhi; sammāsamādhimhi sati sammāsamādhisampannassa upanisasampannaṁ hoti yathābhūtañāṇadassanaṁ; yathābhūtañāṇadassane sati yathābhūtañāṇadassanasampannassa upanisasampanno hoti nibbidāvirāgo; nibbidāvirāge sati nibbidāvirāgasampannassa upanisasampannaṁ hoti vimuttiñāṇadassanaṁ.",
+   "T0026-ma46": "「諸賢！若比丘有慚有愧，便習愛恭敬；若有愛恭敬，便習其信；若有其信，便習正思惟；若有正思惟，便習正念正智；若有正念正智，便習護諸根、護戒、不悔、歡悅、喜、止、樂、定、見如實、知如真、厭、無欲、解脫；若有解脫，便習涅槃。",
+   "T0099-sa495": "「持戒比丘根本具足，所依具足，心得信樂；得信樂已，心得歡喜、息、樂、寂靜三昧、如實知見、厭離、離欲、解脫；"
+  },
+  "a04": {
+   "an5.168": "Seyyathāpi, āvuso, rukkho, sākhāpalāsasampanno. Tassa papaṭikāpi pāripūriṁ gacchati, tacopi pheggupi sāropi pāripūriṁ gacchati. Evamevaṁ kho, āvuso, sīlavato sīlasampannassa upanisasampanno hoti sammāsamādhi; sammāsamādhimhi sati sammāsamādhisampannassa upanisasampannaṁ hoti yathābhūtañāṇadassanaṁ; yathābhūtañāṇadassane sati yathābhūtañāṇadassanasampannassa upanisasampanno hoti nibbidāvirāgo; nibbidāvirāge sati nibbidāvirāgasampannassa upanisasampannaṁ hoti vimuttiñāṇadassanan”ti.",
+   "an5.24": "Seyyathāpi, bhikkhave, rukkho sākhāpalāsasampanno. Tassa papaṭikāpi pāripūriṁ gacchati, tacopi pāripūriṁ gacchati, pheggupi pāripūriṁ gacchati, sāropi pāripūriṁ gacchati; evamevaṁ kho, bhikkhave, sīlavato sīlasampannassa upanisasampanno hoti sammāsamādhi; sammāsamādhimhi sati sammāsamādhisampannassa upanisasampannaṁ hoti yathābhūtañāṇadassanaṁ; yathābhūtañāṇadassane sati yathābhūtañāṇadassanasampannassa upanisasampanno hoti nibbidāvirāgo; nibbidāvirāge sati nibbidāvirāgasampannassa upanisasampannaṁ hoti vimuttiñāṇadassanan”ti.",
+   "T0026-ma46": "諸賢！猶如有樹，不害外皮，則內皮得成，內皮得成，則莖、幹、心、節、枝、葉、華、實皆得成就。諸賢！當知比丘亦復如是，若有慚有愧，便習愛恭敬；若有愛恭敬，便習其信；若有其信，便習正思惟；若有正思惟，便習正念正智；若有正念正智，便習護諸根、護戒、不悔、歡悅、喜、止、樂、定、見如實、知如真、厭、無欲、解脫；若有解脫，便習涅槃。」",
+   "T0099-sa495": "得解脫已，悉能疾得無餘涅槃。譬如樹根不壞，枝葉華果悉得成就，持戒比丘亦復如是。"
+  },
+  "a05": {
+   "an5.168": "Aṭṭhamaṁ.",
+   "an5.24": "Catutthaṁ.",
+   "T0026-ma46": "尊者舍梨子所說如是。彼諸比丘聞尊者舍梨子所說，歡喜奉行。慚愧經第五竟（四百六十二字）",
+   "T0099-sa495": "根本具足，所依成就，心得信樂，得信樂已，歡喜、息、樂、寂靜三昧、如實知見、厭離、離欲、解脫，疾得無餘涅槃。」尊者舍利弗說是經已，諸比丘聞其所說，歡喜奉行。"
+  }
+ }
+}

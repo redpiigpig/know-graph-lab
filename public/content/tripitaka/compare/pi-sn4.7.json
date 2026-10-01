@@ -1,0 +1,111 @@
+{
+ "slug": "pi-sn4.7",
+ "title": "別譯雜阿含經 （二六）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。複核標記存疑 1 段：義段1的漢譯南傳SN4.7內容與序分重複，實際應屬序分而非世尊夜行洗足入室作師子臥，屬對錯位置",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "世尊夜行洗足入室作師子臥",
+   "doubt": true
+  },
+  {
+   "id": "a02",
+   "label": "魔王波旬生念欲擾亂世尊"
+  },
+  {
+   "id": "a03",
+   "label": "魔王波旬以偈問世尊睡眠之義"
+  },
+  {
+   "id": "a04",
+   "label": "世尊以偈答破愛網安眠無礙"
+  },
+  {
+   "id": "a05",
+   "label": "魔王波旬聞偈慚愧而隱沒"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn4.7",
+   "lang": "pi",
+   "label": "巴利 SN4.7",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn4.7",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN4.7",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.26",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （二六）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa1087",
+   "lang": "lzh",
+   "label": "雜阿含經 （一〇八七）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（二六）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一〇八七）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn4.7": "Saṁyutta Nikāya 4.7 1. Paṭhamavagga Supatisutta Ekaṁ samayaṁ bhagavā rājagahe viharati veḷuvane kalandakanivāpe.",
+   "nan-sn4.7": "〔七〕第七　睡眠",
+   "T0100-sa-2.26": "如是我聞：一時，佛住王舍城迦蘭陀竹林。",
+   "T0099-sa1087": "如是我聞：一時，佛住王舍城迦蘭陀竹園。"
+  },
+  "a01": {
+   "sn4.7": "Atha kho bhagavā bahudevarattiṁ abbhokāse caṅkamitvā rattiyā paccūsasamayaṁ pāde pakkhāletvā vihāraṁ pavisitvā dakkhiṇena passena sīhaseyyaṁ kappesi pāde pādaṁ accādhāya sato sampajāno uṭṭhānasaññaṁ manasi karitvā.",
+   "nan-sn4.7": "爾時，世尊住王舍城竹林栗鼠養餌所。",
+   "T0100-sa-2.26": "爾時，世尊於初夜後分，坐臥經行。",
+   "T0099-sa1087": "爾時，世尊夜起經行，至後夜時，洗足入室，右脇臥息，繫念明相，正念正智，作起覺想。"
+  },
+  "a02": {
+   "sn4.7": "Atha kho māro pāpimā yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ gāthāya ajjhabhāsi:",
+   "nan-sn4.7": "爾時，世尊，其當夜多作露地經行後，將曉，洗足入室。盤腿起思惟於正念、正心時，而作師子臥。",
+   "T0100-sa-2.26": "於其晨朝，洗足入房，右脇著地，足足相累，繫心在明，修於念覺，而生起想。爾時，魔王波旬即作是念：「沙門瞿曇在王舍城迦蘭陀竹林中，經行坐臥。於其晨朝，洗足入房，右脇著地，足足相累，繫心在明，修於念覺，作於起想。我當至彼，而作嬈亂。」",
+   "T0099-sa1087": "時，魔波旬作是念：「今沙門瞿曇住王舍城迦蘭陀竹園，乃至作起覺想。我今當往，為作留難。」"
+  },
+  "a03": {
+   "sn4.7": "“Kiṁ soppasi kiṁ nu soppasi, Kimidaṁ soppasi dubbhago viya; Suññamagāranti soppasi, Kimidaṁ soppasi sūriye uggate”ti.",
+   "nan-sn4.7": "時，惡魔波旬來詣世尊前。詣已，以偈語世尊曰：",
+   "T0100-sa-2.26": "作是念已，化為摩納，在佛前住，而說偈言：「何以睡眠？何以睡眠？云何睡眠，\n如入涅槃？如所作辦，而自安眠，\n乃至日出，故復眠也。」",
+   "T0099-sa1087": "即化作年少，往住佛前，而說偈言：「何眠何故眠？已滅何復眠？\n空舍何以眠，得出復何眠？」爾時，世尊作是念：「惡魔波旬欲作嬈亂。」"
+  },
+  "a04": {
+   "sn4.7": "“Yassa jālinī visattikā, Taṇhā natthi kuhiñci netave; Sabbūpadhiparikkhayā buddho, Soppati kiṁ tavettha mārā”ti.",
+   "nan-sn4.7": "何故睡眠耶睡眠為何故\n今何如眠死空舍為眠乎\n日已高上昇何以睡眠乎〔世尊：〕破愛貪著網何處均無惑\n一切有依盡覺者於睡眠\n惡魔汝何為",
+   "T0100-sa-2.26": "佛知天魔來作嬈亂，即說偈言：「愛網著諸有，遍覆一切處，\n我今破斯網，諸愛永已斷。\n一切有生盡，安隱涅槃樂，\n波旬汝今者，於我復何為？」",
+   "T0099-sa1087": "即說偈言：「愛網故染著，無愛誰持去，\n一切有餘盡，唯佛得安眠，\n汝惡魔波旬，於此何所說。」時，魔波旬作是念：「沙門瞿曇已知我心。」"
+  },
+  "a05": {
+   "sn4.7": "Atha kho māro pāpimā …pe… tatthevantaradhāyīti.",
+   "T0100-sa-2.26": "爾時，魔王聞說偈已，憂愁苦惱，即便隱形，還于天宮。",
+   "T0099-sa1087": "慚愧憂慼，即沒不現。"
+  }
+ }
+}

@@ -1,0 +1,90 @@
+{
+ "slug": "pi-sn42.1",
+ "title": "別譯雜阿含經 （一二五）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "聚落主請問惱觸之因"
+  },
+  {
+   "id": "a02",
+   "label": "佛說惱觸生瞋之因（未斷貪瞋痴）"
+  },
+  {
+   "id": "a03",
+   "label": "佛說斷貪瞋痴則不生瞋"
+  },
+  {
+   "id": "a04",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn42.1",
+   "lang": "pi",
+   "label": "巴利 SN42.1",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "T0100-sa-2.125",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （一二五）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa910",
+   "lang": "lzh",
+   "label": "雜阿含經 （九一〇）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（一二五）"
+  },
+  {
+   "work": "T0099",
+   "node": "（九一〇）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn42.1": "Saṁyutta Nikāya 42.1 1. Gāmaṇivagga Caṇḍasutta Sāvatthinidānaṁ.",
+   "T0100-sa-2.125": "如是我聞：一時，佛在王舍城迦蘭陀竹林。時，聚落主名曰惡性，往詣佛所，頂禮佛足，在一面坐。",
+   "T0099-sa910": "如是我聞：一時，佛住王舍城迦蘭陀竹園。"
+  },
+  "a01": {
+   "sn42.1": "Atha kho caṇḍo gāmaṇi yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho caṇḍo gāmaṇi bhagavantaṁ etadavoca: “ko nu kho, bhante, hetu, ko paccayo yena midhekacco caṇḍo caṇḍotveva saṅkhaṁ gacchati. Ko pana, bhante, hetu, ko paccayo yena midhekacco sorato soratotveva saṅkhaṁ gacchatī”ti?",
+   "T0100-sa-2.125": "即白佛言：「世尊！如世有人無所修集，惱觸於他，作惱觸語。是故諸人，咸稱其人，名為極惡。」佛告聚落主：「設有一人，惱觸於彼，作惱害語，出惱語故，令他瞋忿，以是之故，名為惡性。",
+   "T0099-sa910": "時，有兇惡聚落主來詣佛所，稽首佛足，退坐一面，白佛言：「世尊！不修何等法故，於他生瞋恚；生瞋恚故，口說惡言，他為其作惡性名字？」"
+  },
+  "a02": {
+   "sn42.1": "“Idha, gāmaṇi, ekaccassa rāgo appahīno hoti. Rāgassa appahīnattā pare kopenti, parehi kopiyamāno kopaṁ pātukaroti. So caṇḍotveva saṅkhaṁ gacchati. Doso appahīno hoti. Dosassa appahīnattā pare kopenti, parehi kopiyamāno kopaṁ pātukaroti. So caṇḍotveva saṅkhaṁ gacchati. Moho appahīno hoti. Mohassa appahīnattā pare kopenti, parehi kopiyamāno kopaṁ pātukaroti. So caṇḍotveva saṅkhaṁ gacchati. Ayaṁ kho, gāmaṇi, hetu, ayaṁ paccayo yena midhekacco caṇḍo caṇḍotveva saṅkhaṁ gacchati.",
+   "T0100-sa-2.125": "不修正見、正業、正語、正命、正念、正方便、正志、正定，不修正定故，惱觸於彼。以惱觸故，極生瞋忿。以瞋忿故，出瞋忿語。出瞋語故，名為惡性。」時，村主言：「希有瞿曇！實如所言，以惱觸故，實名惡性。我以不修正見故，為彼觸惱。以惱觸故，稱我惡性。一切世人咸皆稱我，以為惡性，從是已來，名為惡性。」村主復言：「瞿曇！云何得不惱觸？」",
+   "T0099-sa910": "佛告聚落主：「不修正見故，於他生瞋；生瞋恚已，口說惡言，他為其作惡性名字。不修正志、正語、正業、正命、正方便、正念、正定故，於他生瞋；生瞋恚故，口說惡言，他為其作惡性名字。」復問：「世尊！修習何法，於他不瞋，不瞋恚故，口說善言，他為其作賢善名字？」"
+  },
+  "a03": {
+   "sn42.1": "Idha pana, gāmaṇi, ekaccassa rāgo pahīno hoti. Rāgassa pahīnattā pare na kopenti, parehi kopiyamāno kopaṁ na pātukaroti. So soratotveva saṅkhaṁ gacchati. Doso pahīno hoti. Dosassa pahīnattā pare na kopenti, parehi kopiyamāno kopaṁ na pātukaroti. So soratotveva saṅkhaṁ gacchati. Moho pahīno hoti. Mohassa pahīnattā pare na kopenti, parehi kopiyamāno kopaṁ na pātukaroti. So soratotveva saṅkhaṁ gacchati. Ayaṁ kho, gāmaṇi, hetu ayaṁ paccayo yena midhekacco sorato soratotveva saṅkhaṁ gacchatī”ti. Evaṁ vutte, caṇḍo gāmaṇi bhagavantaṁ etadavoca: “abhikkantaṁ, bhante, abhikkantaṁ, bhante. Seyyathāpi, bhante, nikkujjitaṁ vā ukkujjeyya, paṭicchannaṁ vā vivareyya, mūḷhassa vā maggaṁ ācikkheyya, andhakāre vā telapajjotaṁ dhāreyya: ‘cakkhumanto rūpāni dakkhantī’ti; evamevaṁ bhagavatā anekapariyāyena dhammo pakāsito. Esāhaṁ, bhante, bhagavantaṁ saraṇaṁ gacchāmi dhammañca bhikkhusaṅghañca.",
+   "T0100-sa-2.125": "「無惱觸故，得無惱語。雖復為彼之所惱觸，不惱於他。雖復為彼之所惱語，而不惱語以惱於彼。雖為他惱，不生心惱。以不惱故，世人咸稱能忍善者，亦復於彼生忍善想。若如是者，能修正見。修正見故，正業、正語、正命、正志、正方便、正定、正念。修正定故，為他所觸，而不生惱。不生惱故，名為忍善。」村主言：「希有瞿曇！所說甚善。實如所言，我以不修正見故，為他所惱。為他惱故，出惱觸言，是以世人，稱我惡性，皆生惡想，故名惡性。不修八正道故，為他所觸，出惱觸語，遂至瞋忿。有是想故，世人稱我，以為惡性。」村主言：「瞿曇！我從今已後，如是惡性，卒暴、我慢、凶險，我當捨棄。」佛讚之曰：「汝若如是，實為甚善。」",
+   "T0099-sa910": "佛告聚落主：「修正見故，於他不瞋；不瞋恚故，口說善言，他為其作賢善名字。修習正志、正語、正業、正命、正方便、正念、正定故，於他不瞋；不瞋恚故，口說善言，他為其作賢善名字。」兇惡聚落主白佛言：「奇哉！世尊！善說此言。我不修正見故，於他生瞋；生瞋恚已，口說惡言，他為我作惡性名字。我不修正志、正語、正業、正命、正方便、正念、正定故，於他生瞋；生瞋恚故，口說惡言，他為我作惡性名字。是故，我今當捨瞋恚、剛強、麁澁。」佛告聚落主：「此真實要。」"
+  },
+  "a04": {
+   "sn42.1": "Upāsakaṁ maṁ bhagavā dhāretu ajjatagge pāṇupetaṁ saraṇaṁ gatan”ti. Paṭhamaṁ.",
+   "T0100-sa-2.125": "時，彼村主聞佛所說，歡喜頂禮而去。",
+   "T0099-sa910": "佛說此經已，兇惡聚落主歡喜隨喜，作禮而去。"
+  }
+ }
+}

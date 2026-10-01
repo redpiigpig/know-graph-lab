@@ -1,0 +1,187 @@
+{
+ "slug": "pi-sn1.50-sn2.24",
+ "title": "別譯雜阿含經 （一八九）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "天子問偈"
+  },
+  {
+   "id": "a02",
+   "label": "世尊答偈"
+  },
+  {
+   "id": "a03",
+   "label": "天子自說身份"
+  },
+  {
+   "id": "a04",
+   "label": "世尊詰問天子"
+  },
+  {
+   "id": "a05",
+   "label": "天子說過去身份"
+  },
+  {
+   "id": "a06",
+   "label": "世尊確認過去事"
+  },
+  {
+   "id": "a07",
+   "label": "結證過去因緣"
+  },
+  {
+   "id": "a08",
+   "label": "結語讚歎"
+  },
+  {
+   "id": "a09",
+   "label": "流通分"
+  },
+  {
+   "id": "a10",
+   "label": "雜阿含結偈"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn1.50",
+   "lang": "pi",
+   "label": "巴利 SN1.50",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn1.50",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN1.50",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "sn2.24",
+   "lang": "pi",
+   "label": "巴利 SN2.24",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn2.24",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN2.24",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.189",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （一八九）",
+   "who": "失譯",
+   "reorder": true
+  },
+  {
+   "id": "T0099-sa595",
+   "lang": "lzh",
+   "label": "雜阿含經 （五九五）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（一八九）"
+  },
+  {
+   "work": "T0099",
+   "node": "（五九五）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn1.50": "Saṁyutta Nikāya 1.50 5. Ādittavagga Ghaṭīkārasutta",
+   "nan-sn1.50": "〔五〇〕第十　陶師",
+   "sn2.24": "Saṁyutta Nikāya 2.24 3. Nānātitthiyavagga Ghaṭīkārasutta",
+   "nan-sn2.24": "〔二四〕第四　陶師",
+   "T0100-sa-2.189": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。",
+   "T0099-sa595": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。時，有無煩天子，容色絕妙，來詣佛所，稽首佛足，退坐一面。其身光明遍照祇樹給孤獨園。"
+  },
+  "a01": {
+   "sn1.50": "“Avihaṁ upapannāse, vimuttā satta bhikkhavo; Rāgadosaparikkhīṇā, tiṇṇā loke visattikan”ti.",
+   "nan-sn1.50": "〔陶師：〕比丘解脫有七人而上生達無煩天\n欲貪瞋恚滅無餘並超世間之愛著\n難超死魔之領域誰是超越泥地者\n此世捨此人身後亦離天軛者是誰\n優波迦波羅犍陀弗久左底為第三\n跋提耶犍陀提婆婆睺羅祇頻祇耶\n此等諸人捨人身亦是離於天軛人",
+   "sn2.24": "Ekamantaṁ ṭhito kho ghaṭīkāro devaputto bhagavato santike imaṁ gāthaṁ abhāsi: “Avihaṁ upapannāse, vimuttā satta bhikkhavo; Rāgadosaparikkhīṇā,",
+   "nan-sn2.24": "立於一面之陶師天子，於世尊前，唱此偈曰：",
+   "T0100-sa-2.189": "時有一天，來至佛所，光色倍常，威光暉曜，遍照祇洹，悉皆大明，却坐一面，而說偈言：「七比丘解脫，生於無煩天，\n盡於善受有，度世間愛著。\n誰使度駛流？而此駛流者，\n死極得自在，甚難可得度。",
+   "T0099-sa595": "時，彼天子而說偈言：「生彼無煩天，解脫七比丘，\n貪瞋恚已盡，超世度恩愛，\n誰度於諸流，難度死魔軍，\n誰斷死魔縻，永超煩惱軛。」"
+  },
+  "a02": {
+   "sn1.50": "“Ke ca te ataruṁ paṅkaṁ, maccudheyyaṁ suduttaraṁ; Ke hitvā mānusaṁ dehaṁ, dibbayogaṁ upaccagun”ti.",
+   "nan-sn1.50": "〔世尊：〕逃惡魔係蹄言之何微妙\n彼等知誰法斷除有結縛",
+   "sn2.24": "tiṇṇā loke visattikan”ti. “Ke ca te ataruṁ paṅkaṁ, maccudheyyaṁ suduttaraṁ; Ke hitvā mānusaṁ dehaṁ,",
+   "nan-sn2.24": "比丘解脫有七人得上生於無煩天\n欲貪瞋恚滅無餘並超世間之愛著\n難超死魔之領域誰是超越泥地者\n此世捨此人身後亦離天軛者是誰\n優波迦波羅犍陀弗久左底為第三\n跋提耶犍陀捉婆婆睺羅祇頻祇耶\n此等諸人捨人身亦是離卻天軛人",
+   "T0100-sa-2.189": "誰救死羂弶？出過天境界。」爾時，世尊以偈答曰：「優比羅建陀，第三佛羯羅，\n跋直羯提婆，婆睺提毘紐，\n如是等比丘，盡度於駛流。\n能度死自在，盡斷生死羂，\n出過於天界，言說極深遠，\n難識難可解，所說無不善。",
+   "T0099-sa595": "爾時，世尊說偈答言：「尊者優波迦，及波羅揵荼、\n弗迦羅娑梨、跋提、揵陀疊、\n亦婆休難提，及波毘瘦㝹，\n如是等一切，悉皆度諸流，\n斷絕死魔縻，度彼難度者，\n斷諸死魔縻，超越諸天軛，\n說甚深妙法，覺悟難知者，\n巧便問深義，汝今為是誰？」"
+  },
+  "a03": {
+   "sn1.50": "“Upako palagaṇḍo ca, pukkusāti ca te tayo; Bhaddiyo khaṇḍadevo ca, bāhuraggi ca siṅgiyo; Te hitvā mānusaṁ dehaṁ, dibbayogaṁ upaccagun”ti.",
+   "nan-sn1.50": "〔陶師：〕無外世尊法無外世尊教\n彼等知其法斷除有結縛\n於此名與色滅盡無有餘\n此世知其法彼斷有結縛",
+   "sn2.24": "dibbayogaṁ upaccagun”ti. “Upako palagaṇḍo ca, pukkusāti ca te tayo; Bhaddiyo khaṇḍadevo ca, bāhuraggi ca saṅgiyo; Te hitvā mānusaṁ dehaṁ, dibbayogaṁ upaccagun”ti.",
+   "nan-sn2.24": "〔世尊：〕逃惡魔係蹄言之何微妙\n彼等知誰法斷除有結縛",
+   "T0100-sa-2.189": "汝是何天耶？來問我此事。」爾時，此天以偈答曰：「我不還此有，名為無煩天，\n是故我盡知，七比丘解脫，\n斷棄於愛有，度世之縛結。",
+   "T0099-sa595": "時，彼天子說偈白佛：「我是阿那含，生彼無煩天，\n故能知斯等，解脫七比丘，\n盡貪欲瞋恚，永超世恩愛。」"
+  },
+  "a04": {
+   "sn1.50": "“Kusalī bhāsasī tesaṁ, mārapāsappahāyinaṁ; Kassa te dhammamaññāya, acchiduṁ bhavabandhanan”ti.",
+   "nan-sn1.50": "〔世尊：〕知難復悟難汝言深奧語\n汝知何人法以語如是言",
+   "sn2.24": "“Kusalī bhāsasī tesaṁ, mārapāsappahāyinaṁ; Kassa te dhammamaññāya, acchiduṁ bhavabandhanan”ti.",
+   "nan-sn2.24": "〔陶師：〕無外世尊法無外世尊教\n彼等知其法斷除有結縛\n於此名與色滅盡無有餘\n此世知其法彼斷有結縛",
+   "T0100-sa-2.189": "淨身守口意，盡住最後身，\n如是諸大人，我共為善伴。」",
+   "T0099-sa595": "爾時，世尊復說偈言：「眼耳鼻舌身，第六意入處，\n若彼名及色，得無餘滅盡，\n能知此諸法，解脫七比丘，\n貪有悉已盡，永超世恩愛。」"
+  },
+  "a05": {
+   "sn1.50": "“Na aññatra bhagavatā, nāññatra tava sāsanā; Yassa te dhammamaññāya, acchiduṁ bhavabandhanaṁ. Yattha nāmañca rūpañca, asesaṁ uparujjhati; Taṁ te dhammaṁ idhaññāya, acchiduṁ bhavabandhanan”ti.",
+   "nan-sn1.50": "〔陶師：〕昔世我陶師於耶發鄰加\n街村作陶壺以事父與母\n迦葉如來世乃為優婆塞\n遠離於[泳-永+(瑤-王)]欲無欲修梵行\n我本同鄉者前為卿之友\n然而我正是解脫七比丘\n貪瞋滅無餘知超世愛者",
+   "sn2.24": "“Na aññatra bhagavatā, nāññatra tava sāsanā; Yassa te dhammamaññāya, acchiduṁ bhavabandhanaṁ. Yattha nāmañca rūpañca, asesaṁ uparujjhati; Taṁ te dhammaṁ idhaññāya, acchiduṁ bhavabandhanan”ti.",
+   "nan-sn2.24": "〔世尊：〕知難悟又難汝言深奧語\n汝知何人法以語如是語",
+   "T0100-sa-2.189": "我生天先緣，今日當具說。\n梵行盡於漏，迦葉優婆塞，\n瓦師養父母，遠離於婬欲，\n迦葉及父母，愛答摩納等，\n彼是我親友，我亦與彼昵。",
+   "T0099-sa595": "時，彼天子復說偈言：「鞞跋楞伽村，我於彼中住，\n名難提婆羅，造作諸瓦器，\n迦葉佛弟子，持優婆塞法，\n供養於父母，離欲修梵行，\n世世為我友，我亦彼知識，\n如是等大士，宿命共和合，\n善修於身心，持此後邊身。」"
+  },
+  "a06": {
+   "sn1.50": "“Gambhīraṁ bhāsasī vācaṁ, dubbijānaṁ sudubbudhaṁ; Kassa tvaṁ dhammamaññāya, vācaṁ bhāsasi īdisan”ti.",
+   "nan-sn1.50": "〔世尊：〕跋伽婆如汝所語有如是\n汝前為陶師於耶發鄰加\n街村作陶壺遠離於[泳-永+(瑤-王)]欲\n無欲修梵行我乃同鄉者\n以前實我友",
+   "sn2.24": "“Gambhīraṁ bhāsasī vācaṁ, dubbijānaṁ sudubbudhaṁ; Kassa tvaṁ dhammamaññāya, vācaṁ bhāsasi īdisan”ti.",
+   "nan-sn2.24": "〔陶師：〕昔世我陶師於耶發鄰加\n行村作陶壺以事父與母\n迦葉如來世乃為優婆塞\n遠離於[泳-永+(瑤-王)]欲無欲修梵行\n我本同鄉者前為卿之友\n然而我正是解脫七比丘\n貪瞋滅無餘知超世愛著",
+   "T0100-sa-2.189": "爾時，世尊復答天曰：「如是！",
+   "T0099-sa595": "爾時，世尊復說偈言：「如是汝賢士，如汝之所說，\n鞞跋楞伽村，名難提婆羅，\n迦葉佛弟子，受優婆塞法，\n供養於父母，離欲修梵行，\n昔是汝知識，汝亦彼良友，\n如是諸正士，宿命共和合，\n善修其身心，持此後邊身。」"
+  },
+  "a07": {
+   "sn1.50": "“Kumbhakāro pure āsiṁ, vekaḷiṅge ghaṭīkaro; Mātāpettibharo āsiṁ, kassapassa upāsako. Virato methunā dhammā, brahmacārī nirāmiso; Ahuvā te sagāmeyyo, ahuvā te pure sakhā.",
+   "nan-sn1.50": "積此高修習最後身二人\n邂逅昔故友真實乃如是",
+   "sn2.24": "“Kumbhakāro pure āsiṁ, vekaḷiṅge ghaṭīkaro; Mātāpettibharo āsiṁ, kassapassa upāsako. Virato methunā dhammā, brahmacārī nirāmiso; Ahuvā te sagāmeyyo, ahuvā te pure sakhā.",
+   "nan-sn2.24": "〔世尊：〕跋伽婆如汝之語有如是\n汝前為陶師於耶發鄰加\n街村作陶壺遠離於[泳-永+(瑤-王)]欲\n無欲修梵行我乃同鄉者\n以前實我友",
+   "T0100-sa-2.189": "如是。實如所說。「瓦師如爾言，本毘婆陵伽，\n難提婆瓦師，迦葉優婆塞，\n孝事於父母，梵行盡於漏，\n彼與我親友，我亦為彼親。"
+  },
+  "a08": {
+   "sn1.50": "Sohamete pajānāmi, vimutte satta bhikkhavo; Rāgadosaparikkhīṇe, tiṇṇe loke visattikan”ti.",
+   "sn2.24": "Sohamete pajānāmi, vimutte satta bhikkhavo; Rāgadosaparikkhīṇe, tiṇṇe loke visattikan”ti.",
+   "nan-sn2.24": "積此高修習最後身二人\n邂逅昔故友真實如是者",
+   "T0100-sa-2.189": "如是諸大人，本日相親近，\n善修身口意，住於最後身。」"
+  },
+  "a09": {
+   "sn1.50": "“Evametaṁ tadā āsi, yathā bhāsasi bhaggava; Kumbhakāro pure āsi, vekaḷiṅge ghaṭīkaro; Mātāpettibharo āsi, kassapassa upāsako. Virato methunā dhammā, brahmacārī nirāmiso; Ahuvā me sagāmeyyo, ahuvā me pure sakhā”ti. “Evametaṁ purāṇānaṁ, sahāyānaṁ ahu saṅgamo; Ubhinnaṁ bhāvitattānaṁ, sarīrantimadhārinan”ti. Ādittavaggo pañcamo. Tassuddānaṁ Ādittaṁ kiṁdadaṁ annaṁ, ekamūlaanomiyaṁ; Accharāvanaropajetaṁ, maccharena ghaṭīkaroti.",
+   "sn2.24": "“Evametaṁ tadā āsi, yathā bhāsasi bhaggava; Kumbhakāro pure āsi, vekaḷiṅge ghaṭīkaro. Mātāpettibharo āsi, kassapassa upāsako; Virato methunā dhammā, brahmacārī nirāmiso; Ahuvā me sagāmeyyo, ahuvā me pure sakhā”ti. “Evametaṁ purāṇānaṁ, sahāyānaṁ ahu saṅgamo; Ubhinnaṁ bhāvitattānaṁ, sarīrantimadhārinan”ti.",
+   "T0100-sa-2.189": "爾時，彼天聞佛所說，歡喜頂禮而去。",
+   "T0099-sa595": "佛說此經已，時彼天子聞佛所說，歡喜隨喜，即沒不現。"
+  },
+  "a10": {
+   "nan-sn1.50": "此嗢陀南燃燒及與何一根及完人\n天女植林園慳貪是陶師",
+   "T0100-sa-2.189": "常驚恐、顏色羅吒國、估客\n輸波羅、須達須達多生天\n首長者生天又有無煩天"
+  }
+ }
+}

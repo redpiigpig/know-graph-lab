@@ -1,0 +1,129 @@
+{
+ "slug": "pi-mn34",
+ "title": "增壹阿含經 （六）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "佛告諸比丘"
+  },
+  {
+   "id": "a02",
+   "label": "愚牧牛喻第一"
+  },
+  {
+   "id": "a03",
+   "label": "智牧牛喻第二"
+  },
+  {
+   "id": "a04",
+   "label": "譬喻結義：阿羅漢等"
+  },
+  {
+   "id": "a05",
+   "label": "佛自稱具德"
+  },
+  {
+   "id": "a06",
+   "label": "世尊復說偈頌"
+  },
+  {
+   "id": "a07",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "mn34",
+   "lang": "pi",
+   "label": "巴利 MN34",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-mn34",
+   "lang": "lzh",
+   "label": "漢譯南傳 MN34",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0125-ea43.6",
+   "lang": "lzh",
+   "label": "增壹阿含經 （六）",
+   "who": "東晉 瞿曇僧伽提婆譯"
+  },
+  {
+   "id": "T0099-sa1248",
+   "lang": "lzh",
+   "label": "雜阿含經 （一二四八）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0125"
+ ],
+ "anchors": [
+  {
+   "work": "T0125",
+   "node": "（六）",
+   "uid": "T02n0125_p0761b14"
+  },
+  {
+   "work": "T0099",
+   "node": "（一二四八）",
+   "uid": "T02n0099_p0342a22"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "mn34": "Majjhima Nikāya 34 Cūḷagopālakasutta Evaṁ me sutaṁ— ekaṁ samayaṁ bhagavā vajjīsu viharati ukkacelāyaṁ gaṅgāya nadiyā tīre.",
+   "nan-mn34": "第三十四　牧牛者小經如是我聞。——",
+   "T0125-ea43.6": "聞如是：一時，佛在摩竭國神祇恒水側，與大比丘眾五百人俱。",
+   "T0099-sa1248": "如是我聞：一時，佛住王舍城迦蘭陀竹園。"
+  },
+  "a01": {
+   "mn34": "Tatra kho bhagavā bhikkhū āmantesi: “bhikkhavo”ti. “Bhadante”ti te bhikkhū bhagavato paccassosuṁ.",
+   "nan-mn34": "一時，世尊於跋耆國郁伽奢羅，住恒伽河岸。爾時，世尊呼諸比丘言：「諸比丘！」彼等比丘應諾：「世尊！」世尊乃說：",
+   "T0125-ea43.6": "爾時，世尊告諸比丘：「猶如摩竭牧牛人愚惑，少智慧，意欲從恒水此岸，渡牛至彼岸，亦復不觀彼此之岸深淺之處，便駈牛入水，先渡瘦者，又犢尚小，在水中央，極為羸劣，不能得至彼岸。",
+   "T0099-sa1248": "爾時，世尊告諸比丘：「過去世時，摩竭提國有牧牛者，愚癡無慧，夏末秋初，不善觀察恒水此岸，亦不善觀恒水彼岸，而駈群牛峻岸而下，峻岸而上，中間洄澓，多起患難。"
+  },
+  "a02": {
+   "mn34": "Bhagavā etadavoca: “Bhūtapubbaṁ, bhikkhave, māgadhako gopālako duppaññajātiko, vassānaṁ pacchime māse saradasamaye, asamavekkhitvā gaṅgāya nadiyā orimaṁ tīraṁ, asamavekkhitvā pārimaṁ tīraṁ, atittheneva gāvo patāresi uttaraṁ tīraṁ suvidehānaṁ. Atha kho, bhikkhave, gāvo majjhegaṅgāya nadiyā sote āmaṇḍaliyaṁ karitvā tattheva anayabyasanaṁ āpajjiṁsu. Taṁ kissa hetu? Tathā hi so, bhikkhave, māgadhako gopālako duppaññajātiko, vassānaṁ pacchime māse saradasamaye, asamavekkhitvā gaṅgāya nadiyā orimaṁ tīraṁ, asamavekkhitvā pārimaṁ tīraṁ, atittheneva gāvo patāresi uttaraṁ tīraṁ suvidehānaṁ. Evameva kho, bhikkhave, ye hi keci samaṇā vā brāhmaṇā vā akusalā imassa lokassa akusalā parassa lokassa, akusalā māradheyyassa akusalā amāradheyyassa, akusalā maccudheyyassa akusalā amaccudheyyassa, tesaṁ ye sotabbaṁ saddahātabbaṁ maññissanti, tesaṁ taṁ bhavissati dīgharattaṁ ahitāya dukkhāya.",
+   "nan-mn34": "「諸比丘！昔摩揭陀人有無智慧之牧牛者，雨期最後之月，於秋時不觀察恆河之此岸，不觀察彼岸，而於無渡口處，即驅牛群渡往須奇提訶國之對岸。諸比丘！於此牛密集於恒河之中流，忽遇災厄。何其故？諸比丘！如是，實彼摩揭陀人之牧牛者無智慧，因雨期最後之月，於秋時不觀察恒河之此岸、不觀察彼、此岸而於無渡口處，即驅牛群渡往須奇提河之對岸也。諸比丘！如是，任何沙門或婆羅門，闇於此界、闇於彼界、闇於魔界、闇於非魔界、闇於死神界、闇於非死神界者，對於彼等以可聽、可信而思惟者，彼等永久非饒益、成為不幸也。",
+   "T0125-ea43.6": "復次，渡中流之牛不肥不瘦，亦不得渡，於中受其苦惱。次復，渡極有力者，亦在水中，受其困厄。「今我眾中比丘亦復如是，心意闇鈍，無有慧明，不別生死位，不別魔之橋船，意欲渡生死之流，不習於禁戒之法，便為波旬得其便也。從邪道求於涅槃，望得滅度，終不果獲。自造罪業，復墮他人著罪中。",
+   "T0099-sa1248": "諸比丘！過去世時，摩竭提國有牧牛人，不愚不癡者，有方便慧，夏末秋初，能善觀察恒水此岸，亦善觀察恒水彼岸，善度其牛，至平博山谷好水草處。彼初度時，先度大牛能領群者，斷其急流。次駈第二多力少牛，隨後而度，然後第三駈羸小者，隨逐下流，悉皆次第安隱得度。新生犢子愛戀其母，亦隨其後，得度彼岸。「如是，比丘！我說斯譬，當知其義。彼摩竭提牧牛者，愚癡無慧；"
+  },
+  "a03": {
+   "mn34": "Bhūtapubbaṁ, bhikkhave, māgadhako gopālako sappaññajātiko, vassānaṁ pacchime māse saradasamaye, samavekkhitvā gaṅgāya nadiyā orimaṁ tīraṁ, samavekkhitvā pārimaṁ tīraṁ, tittheneva gāvo patāresi uttaraṁ tīraṁ suvidehānaṁ. So paṭhamaṁ patāresi ye te usabhā gopitaro gopariṇāyakā. Te tiriyaṁ gaṅgāya sotaṁ chetvā sotthinā pāraṁ agamaṁsu. Athāpare patāresi balavagāvo dammagāvo. Tepi tiriyaṁ gaṅgāya sotaṁ chetvā sotthinā pāraṁ agamaṁsu. Athāpare patāresi vacchatare vacchatariyo. Tepi tiriyaṁ gaṅgāya sotaṁ chetvā sotthinā pāraṁ agamaṁsu. Athāpare patāresi vacchake kisābalake. Tepi tiriyaṁ gaṅgāya sotaṁ chetvā sotthinā pāraṁ agamaṁsu.",
+   "nan-mn34": "諸比丘！昔摩揭陀人有智慧之牧牛者，雨期最後之月，於秋時，觀察恒河之此岸、觀察彼岸，依其渡口處，從牛驅渡往對岸須奇提訶國。彼先渡牡牛、牛父、牛群之首領。彼等橫渡恒河之流，安穩到達彼岸。其次即渡強力及善馴者。彼等亦橫渡恒河之流、安穩到達彼岸，其次即渡離乳牡牛，彼等亦橫渡河之流，安穩到達彼岸。其次即渡力弱之犢，彼等亦橫渡恒河之流，安穩到達彼岸。諸比丘！昔，若有犢子，只要以母牛之吼聲而導引之，彼亦橫渡恒河之流，安穩到達彼岸。何其故？諸比丘！如是實摩揭陀人有智慧之牧牛者，雨期最後之月，於秋時，觀察恒河之此岸、觀察彼岸、依渡口處、從牛軀渡往對岸之須奇提訶國。諸比丘！如是實任何沙門或婆羅門通此界、通彼界、通魔界、通非魔界、通死神界、通非死神界者，對彼等可聽、可信而思惟者，彼等永久饒益、成為幸福。",
+   "T0125-ea43.6": "猶摩竭牧牛人𭶑慧多智，意欲渡牛至彼此之岸，先觀察深淺之處，前渡極盛力牛到彼岸；次渡中流之牛，不肥不瘦，亦得渡至彼岸；次渡極羸者，亦渡無他，小犢尋從其後而濟渡無為。",
+   "T0099-sa1248": "彼諸六師富蘭那等亦復如是，習諸邪見，向於邪道。如彼牧牛人愚癡無慧，夏末秋初，不善觀察此岸彼岸，高峻山嶮，從峻岸下，峻岸而上，中間洄澓，多生患難。如是六師富蘭那等愚癡無慧，不觀此岸，謂於此世；不觀彼岸，謂於他世；中間洄澓，謂境諸魔，自遭苦難。彼諸見者，習其所學，亦遭患難。"
+  },
+  "a04": {
+   "mn34": "Bhūtapubbaṁ, bhikkhave, vacchako taruṇako tāvadeva jātako mātugoravakena vuyhamāno, sopi tiriyaṁ gaṅgāya sotaṁ chetvā sotthinā pāraṁ agamāsi. Taṁ kissa hetu? Tathā hi so, bhikkhave, māgadhako gopālako sappaññajātiko, vassānaṁ pacchime māse saradasamaye, samavekkhitvā gaṅgāya nadiyā orimaṁ tīraṁ, samavekkhitvā pārimaṁ tīraṁ, tittheneva gāvo patāresi uttaraṁ tīraṁ suvidehānaṁ. Evameva kho, bhikkhave, ye hi keci samaṇā vā brāhmaṇā vā kusalā imassa lokassa kusalā parassa lokassa, kusalā māradheyyassa kusalā amāradheyyassa, kusalā maccudheyyassa kusalā amaccudheyyassa, tesaṁ ye sotabbaṁ saddahātabbaṁ maññissanti, tesaṁ taṁ bhavissati dīgharattaṁ hitāya sukhāya. Seyyathāpi, bhikkhave, ye te usabhā gopitaro gopariṇāyakā te tiriyaṁ gaṅgāya sotaṁ chetvā sotthinā pāraṁ agamaṁsu; evameva kho, bhikkhave, ye te bhikkhū arahanto khīṇāsavā vusitavanto katakaraṇīyā ohitabhārā anuppattasadatthā parikkhīṇabhavasaṁyojanā sammadaññāvimuttā, te tiriyaṁ mārassa sotaṁ chetvā sotthinā pāraṅgatā. Seyyathāpi te, bhikkhave, balavagāvo dammagāvo tiriyaṁ gaṅgāya sotaṁ chetvā sotthinā pāraṁ agamaṁsu; evameva kho, bhikkhave, ye te bhikkhū pañcannaṁ orambhāgiyānaṁ saṁyojanānaṁ parikkhayā opapātikā tattha parinibbāyino anāvattidhammā tasmā lokā, tepi tiriyaṁ mārassa sotaṁ chetvā sotthinā pāraṁ gamissanti. Seyyathāpi te, bhikkhave, vacchatarā vacchatariyo tiriyaṁ gaṅgāya sotaṁ chetvā sotthinā pāraṁ agamaṁsu; evameva kho, bhikkhave, ye te bhikkhū tiṇṇaṁ saṁyojanānaṁ parikkhayā rāgadosamohānaṁ tanuttā sakadāgāmino sakideva imaṁ lokaṁ āgantvā dukkhassantaṁ karissanti, tepi tiriyaṁ mārassa sotaṁ chetvā sotthinā pāraṁ gamissanti. Seyyathāpi te, bhikkhave, vacchakā kisābalakā tiriyaṁ gaṅgāya sotaṁ chetvā sotthinā pāraṁ agamaṁsu; evameva kho, bhikkhave, ye te bhikkhū tiṇṇaṁ saṁyojanānaṁ parikkhayā sotāpannā avinipātadhammā niyatā sambodhiparāyanā, tepi tiriyaṁ mārassa sotaṁ chetvā sotthinā pāraṁ gamissanti. Seyyathāpi so, bhikkhave, vacchako taruṇako tāvadeva jātako mātugoravakena vuyhamāno tiriyaṁ gaṅgāya sotaṁ chetvā sotthinā pāraṁ agamāsi; evameva kho, bhikkhave, ye te bhikkhū dhammānusārino saddhānusārino, tepi tiriyaṁ mārassa sotaṁ chetvā sotthinā pāraṁ gamissanti.",
+   "nan-mn34": "諸比丘！猶如彼等牡牛、牛父，及牛群之首領，橫渡恒河之流，安穩到達彼岸，如是，諸比丘！彼等比丘成為阿羅漢，諸漏已盡，修行圓滿，所作已作，已棄重擔，逮達理想，斷存在之結，正智而解脫者，彼等橫渡魔之流，安穩到達彼岸。諸比丘！猶如彼等強力、善馴之牛，橫渡恒河，安穩到達彼岸，如是，諸比丘！彼等比丘斷五下分結，為化生者，於彼處般涅槃，依其界而不還者，彼等橫渡魔之流，安穩到達彼岸。諸比丘！猶如彼等離乳牡牛，橫渡恒河之流，安穩到達彼岸，如是，諸比丘！彼等斷三結，貪、瞋、癡薄，成為一來者、唯一次來此界而得苦盡之比丘，彼等橫渡魔之流，安穩到達彼岸。諸比丘！猶如彼等力弱之犢，橫渡恒河之流而安穩到達彼岸，如是，諸比丘！彼等斷三結，成為預流者，不墮惡趣者，已決定正覺之比丘，彼等橫渡魔之流，安穩到達彼岸。諸比丘！猶如小犢，只以母牛之吼聲而導引之，橫渡恒河之流，安穩到達彼岸，如是，諸比丘！彼等隨法，隨信之比丘，彼等橫渡魔之流，安穩到達彼岸。諸比丘！予通此界、通彼界、通魔界、通非魔界、通死神界、通非死神界。諸比丘！如是對予？為可聽、可信者，於彼等成其饒益、幸福。」",
+   "T0125-ea43.6": "「比丘！如來亦復如是，善察今世、後世，觀生死之海，魔之徑路，自以八正道度生死之難。復以此道度不度者，猶如道牛之正；一正，餘者悉從。我弟子亦復如是，盡有漏成無漏，心解脫、智慧解脫，於現法中以身作證而自遊化，度魔境界至無為處。亦如彼有力之牛渡彼恒水得至彼岸。我聲聞亦復如是，斷五下結，成阿那含，於彼般涅槃不還來此間，度魔境界至無為處。如彼中流之牛，不肥不瘦，得渡恒水而無疑難。我弟子亦復如是，斷三結使，婬、怒、癡薄，成斯陀含，來至此世，盡於苦際，斷魔境界至無為之處。如彼瘦牛將諸小犢得渡彼恒水，我弟子亦復如是，斷結使，成須陀洹，必至得度，度魔境界，度生死之難。如彼小犢從母得渡。我弟子亦復如是，持信奉法，斷魔諸縛，至無為處。」",
+   "T0099-sa1248": "「彼摩竭提善牧牛者，不愚不癡，有方便慧，謂如來、應、等正覺。如牧牛者善觀此岸，善觀彼岸，善度其牛，於平博山谷，先度大牛能領群者，橫截急流，安度彼岸。如是我聲聞能盡諸漏，乃至自知不受後有。橫截惡魔世間貪流，安隱得度生死彼岸。「如摩竭提國善牧牛者，次度第二多力少牛，截流橫度。如是我諸聲聞斷五下分結，得阿那含，於彼受生，不還此世，亦復斷截惡魔貪流，安隱得度生死彼岸。「如摩竭提國善牧牛者，駈其第三羸小少牛，隨其下流，安隱得度。如是我聲聞斷三結，貪、恚、癡薄，得斯陀含，一來此世，究竟苦邊，橫截於彼惡魔貪流，安隱得度生死彼岸。「如摩竭提國善牧牛者，新生犢子愛戀其母，亦隨得度。如是我聲聞斷三結，得須陀洹，不墮惡趣，決定正向三菩提，七有天人往生，究竟苦邊，斷截惡魔貪流，安隱得度生死彼岸。」"
+  },
+  "a05": {
+   "mn34": "Ahaṁ kho pana, bhikkhave, kusalo imassa lokassa kusalo parassa lokassa, kusalo māradheyyassa kusalo amāradheyyassa, kusalo maccudheyyassa kusalo amaccudheyyassa. Tassa mayhaṁ, bhikkhave, ye sotabbaṁ saddahātabbaṁ maññissanti, tesaṁ taṁ bhavissati dīgharattaṁ hitāya sukhāyā”ti. Idamavoca bhagavā."
+  },
+  "a06": {
+   "mn34": "Idaṁ vatvā sugato athāparaṁ etadavoca satthā: “Ayaṁ loko paro loko, jānatā suppakāsito; Yañca mārena sampattaṁ, appattaṁ yañca maccunā. Sabbaṁ lokaṁ abhiññāya, sambuddhena pajānatā; Vivaṭaṁ amatadvāraṁ, khemaṁ nibbānapattiyā. Chinnaṁ pāpimato sotaṁ, Viddhastaṁ vinaḷīkataṁ; Pāmojjabahulā hotha, Khemaṁ pattattha bhikkhavo”ti.",
+   "nan-mn34": "世尊如是說，如是說之善逝、尊師，復曰：「此世及彼世依智者光明\n惡魔及死神所棲與非棲\n知一切世間正覺者智者\n開甘露法門到寂滅涅槃\n斷惡魔之路拔本摧破壞\n汝等滿歡喜到達於安淨」",
+   "T0125-ea43.6": "爾時，世尊便說斯偈：「魔王所應獲，不究生死邊，\n如來今究竟，世間現慧明。\n諸佛所覺了，梵志不明曉，\n猶涉生死岸，兼度未度者。\n今此五種人，及餘不可計，\n欲度生死難，盡佛威神力。「是故，比丘！當專其心，無放逸行，亦求方便，成賢聖八品之道；依賢聖道已，便能自度生死之海。所以然者，猶如彼愚牧牛之人，外道梵志是也，自溺生死之流，復墮他人著罪中。彼恒水者，即是生死之海也。彼𭶑慧牧牛者，如來是也；度生死之難，由聖八品道。是故，比丘！當求方便，成八聖道。",
+   "T0099-sa1248": "爾時，世尊即說偈言：「此世及他世，明智善顯現，\n諸魔得未得，乃至於死魔。\n一切悉知者，三藐三佛智，\n斷截諸魔流，破壞令消亡。\n開示甘露門，顯現正真道，\n心常多欣悅，逮得安隱處。」"
+  },
+  "a07": {
+   "mn34": "Cūḷagopālakasuttaṁ niṭṭhitaṁ catutthaṁ.",
+   "T0125-ea43.6": "如是，諸比丘！當作是學。」爾時，諸比丘聞佛所說，歡喜奉行。",
+   "T0099-sa1248": "佛說此經已，諸比丘聞佛所說，歡喜奉行。"
+  }
+ }
+}

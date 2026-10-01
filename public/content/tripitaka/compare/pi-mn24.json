@@ -1,0 +1,240 @@
+{
+ "slug": "pi-mn24",
+ "title": "增壹阿含經 （一〇）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "經題與序分"
+  },
+  {
+   "id": "a01",
+   "label": "眾比丘夏坐與稱譽"
+  },
+  {
+   "id": "a02",
+   "label": "舍利弗稱讚芬那滿達尼弗多"
+  },
+  {
+   "id": "a03",
+   "label": "世尊遊舍衛城"
+  },
+  {
+   "id": "a04",
+   "label": "芬那滿達尼弗多來舍衛城"
+  },
+  {
+   "id": "a05",
+   "label": "世尊與芬那滿達尼弗多說法"
+  },
+  {
+   "id": "a06",
+   "label": "比丘問舍利弗芬那滿達尼弗多之稱譽"
+  },
+  {
+   "id": "a07",
+   "label": "舍利弗追隨芬那滿達尼弗多"
+  },
+  {
+   "id": "a08",
+   "label": "舍利弗與芬那滿達尼弗多相見問答"
+  },
+  {
+   "id": "a09",
+   "label": "舍利弗問梵行清淨之次第"
+  },
+  {
+   "id": "a10",
+   "label": "芬那滿達尼弗多答非也"
+  },
+  {
+   "id": "a11",
+   "label": "芬那滿達尼弗多說梵行之義"
+  },
+  {
+   "id": "a12",
+   "label": "舍利弗問義所趣向"
+  },
+  {
+   "id": "a13",
+   "label": "芬那滿達尼弗多說七車譬喻"
+  },
+  {
+   "id": "a14",
+   "label": "芬那滿達尼弗多譬喻結論"
+  },
+  {
+   "id": "a15",
+   "label": "舍利弗讚歎並問名號"
+  },
+  {
+   "id": "a16",
+   "label": "芬那滿達尼弗多答名號"
+  },
+  {
+   "id": "a17",
+   "label": "舍利弗答名號"
+  },
+  {
+   "id": "a18",
+   "label": "二賢共論歡喜奉行"
+  },
+  {
+   "id": "a19",
+   "label": "經結"
+  }
+ ],
+ "versions": [
+  {
+   "id": "mn24",
+   "lang": "pi",
+   "label": "巴利 MN24",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-mn24",
+   "lang": "lzh",
+   "label": "漢譯南傳 MN24",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0125-ea39.10",
+   "lang": "lzh",
+   "label": "增壹阿含經 （一〇）",
+   "who": "東晉 瞿曇僧伽提婆譯",
+   "reorder": true
+  },
+  {
+   "id": "T0026-ma9",
+   "lang": "lzh",
+   "label": "中阿含經 （九）中阿含七法品七車經第九（初一日誦）",
+   "who": "東晉 瞿曇僧伽提婆譯"
+  }
+ ],
+ "works": [
+  "T0026",
+  "T0125"
+ ],
+ "anchors": [
+  {
+   "work": "T0125",
+   "node": "（一〇）",
+   "uid": "T02n0125_p0733c28"
+  },
+  {
+   "work": "T0026",
+   "node": "（九）中阿含七法品七車經第九（初一日誦）",
+   "uid": "T01n0026_p0429c28"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "mn24": "Majjhima Nikāya 24",
+   "nan-mn24": "第二十四　傳車經",
+   "T0125-ea39.10": "聞如是：一時，佛在羅閱城迦蘭陀竹園所，與大比丘眾五百人俱。",
+   "T0026-ma9": "我聞如是：一時，佛遊王舍城，在竹林精舍，與大比丘眾共受夏坐，尊者滿慈子亦於生地受夏坐。"
+  },
+  "a01": {
+   "mn24": "Rathavinītasutta",
+   "nan-mn24": "如是我聞。——",
+   "T0125-ea39.10": "滿願子亦將五百比丘遊本生處。",
+   "T0026-ma9": "是時，生地諸比丘受夏坐訖，過三月已，補治衣竟，攝衣持鉢，從生地出，向王舍城，展轉進前，至王舍城，住王舍城竹林精舍。是時，生地諸比丘詣世尊所，稽首作禮，却坐一面。世尊問曰：「諸比丘！從何所來？何處夏坐？」生地諸比丘白曰：「世尊！從生地來，於生地夏坐。」世尊問曰：「於彼生地諸比丘中，何等比丘為諸比丘所共稱譽，自少欲、知足，稱說少欲、知足；自閑居，稱說閑居；自精進，稱說精進；自正念，稱說正念；自一心，稱說一心；自智慧，稱說智慧；自漏盡，稱說漏盡；自勸發渴仰、成就歡喜，稱說勸發渴仰、成就歡喜？」生地諸比丘白曰：「世尊！尊者滿慈子於彼生地，為諸比丘所共稱譽，自少欲、知足，稱說少欲、知足；自閑居，稱說閑居；自精進，稱說精進；自正念，稱說正念；自一心，稱說一心；自智慧，稱說智慧；自漏盡，稱說漏盡；自勸發渴仰、成就歡喜，稱說勸發渴仰、成就歡喜。」"
+  },
+  "a02": {
+   "mn24": "Evaṁ me sutaṁ— ekaṁ samayaṁ bhagavā rājagahe viharati veḷuvane kalandakanivāpe. Atha kho sambahulā jātibhūmakā bhikkhū jātibhūmiyaṁ vassaṁvuṭṭhā yena bhagavā tenupasaṅkamiṁsu; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdiṁsu. Ekamantaṁ nisinne kho te bhikkhū bhagavā etadavoca: “Ko nu kho, bhikkhave, jātibhūmiyaṁ jātibhūmakānaṁ bhikkhūnaṁ sabrahmacārīnaṁ evaṁ sambhāvito: ‘attanā ca appiccho appicchakathañca bhikkhūnaṁ kattā, attanā ca santuṭṭho santuṭṭhikathañca bhikkhūnaṁ kattā, attanā ca pavivitto pavivekakathañca bhikkhūnaṁ kattā, attanā ca asaṁsaṭṭho asaṁsaggakathañca bhikkhūnaṁ kattā, attanā ca āraddhavīriyo vīriyārambhakathañca bhikkhūnaṁ kattā, attanā ca sīlasampanno sīlasampadākathañca bhikkhūnaṁ kattā, attanā ca samādhisampanno samādhisampadākathañca bhikkhūnaṁ kattā, attanā ca paññāsampanno paññāsampadākathañca bhikkhūnaṁ kattā, attanā ca vimuttisampanno vimuttisampadākathañca bhikkhūnaṁ kattā, attanā ca vimuttiñāṇadassanasampanno vimuttiñāṇadassanasampadākathañca bhikkhūnaṁ kattā, ovādako viññāpako sandassako samādapako samuttejako sampahaṁsako sabrahmacārīnan’”ti? “Puṇṇo nāma, bhante, āyasmā mantāṇiputto jātibhūmiyaṁ jātibhūmakānaṁ bhikkhūnaṁ sabrahmacārīnaṁ evaṁ sambhāvito: ‘attanā ca appiccho appicchakathañca bhikkhūnaṁ kattā, attanā ca santuṭṭho …pe… ovādako viññāpako sandassako samādapako samuttejako sampahaṁsako sabrahmacārīnan’”ti. Tena kho pana samayena āyasmā sāriputto bhagavato avidūre nisinno hoti. Atha kho āyasmato sāriputtassa etadahosi: “lābhā āyasmato puṇṇassa mantāṇiputtassa, suladdhalābhā āyasmato puṇṇassa mantāṇiputtassa, yassa viññū sabrahmacārī satthu sammukhā anumassa anumassa vaṇṇaṁ bhāsanti, tañca satthā abbhanumodati. Appeva nāma mayampi kadāci karahaci āyasmatā puṇṇena mantāṇiputtena saddhiṁ samāgaccheyyāma, appeva nāma siyā kocideva kathāsallāpo”ti.",
+   "nan-mn24": "一時，世尊在王舍城竹林迦蘭陀迦尼婆波。爾時，眾多生於此地之比丘，於此出生地行雨季安居之後，詣世尊之處，詣已稽首世尊而坐於一面。世尊對於一面坐之彼等比丘曰：「諸比丘！生於此地之比丘，於此出生地，誰從同行者，如次為善稱譽者，即：『自少欲而且為諸比丘作少欲之稱說者，自知足而且為諸比丘作知足之稱說者，自獨居而且為諸比丘作獨居之稱說者，自不染世間而且為諸比丘作不染世間之稱說者，自勇猛精進而且為諸比丘作勇猛精進之稱說者，自戒成就而且為諸比丘作戒成就之稱說者，自定成就而且為諸比丘作定成就之稱說者，自慧成就而且為諸比丘作慧成就之稱說者，自解脫成就而且為諸比丘作解脫成就之稱說者，自解脫智見成就而且為諸比丘作解脫智見成就之稱說者，為同行者之勸誡者，是令善識者、開示者、勸發者、獎勵者、令歡喜者也』。」〔於是，諸比丘白世尊曰：〕「世尊！芬那滿達尼弗多（滿嚴飾尼子）是於此出生地，此地比丘之同行者中，被如是稱譽，即：『自少欲而且為諸比丘作少欲稱說者……乃至……為同行者之勸誡者，善令識者、開示者、勸發者、獎勵者而令歡喜者也。』」",
+   "T0125-ea39.10": "爾時，舍利弗去世尊不遠，結跏趺坐，正身正意，繫念在前。爾時，舍利弗便作是念：「今滿願子快得善利。所以然者，諸梵行比丘歎譽其德，然復世尊稱可其語，亦不逆之。我當何日與彼人得共相見，與其談論？」",
+   "T0026-ma9": "是時，尊者舍梨子在眾中坐，尊者舍梨子作如是念：「世尊如事問彼生地諸比丘輩，生地諸比丘極大稱譽賢者滿慈子，自少欲、知足，稱說少欲、知足；自閑居，稱說閑居；自精進，稱說精進；自正念，稱說正念；自一心，稱說一心；自智慧，稱說智慧；自漏盡，稱說漏盡；自勸發渴仰、成就歡喜，稱說勸發渴仰，成就歡喜。」尊者舍梨子復作是念：「何時當得與賢者滿慈子共聚集會，問其少義，彼或能聽我之所問。」"
+  },
+  "a03": {
+   "mn24": "Atha kho bhagavā rājagahe yathābhirantaṁ viharitvā yena sāvatthi tena cārikaṁ pakkāmi. Anupubbena cārikaṁ caramāno yena sāvatthi tadavasari. Tatra sudaṁ bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme.",
+   "nan-mn24": "爾時，尊者舍利弗坐在佛傍邊，彼作是之念：「尊者芬那滿達尼弗多是榮幸、尊者芬那滿達尼弗多真是幸福、智者之同行者於我師之面前稱譽彼之種種殊勝言行。於彼我師亦嘉之。嗚呼！我等亦何時共會尊者芬那滿達尼弗多，而且得為共語者。」",
+   "T0125-ea39.10": "爾時，世尊於羅閱城九十日夏坐已，漸漸在人間遊化，來至舍衛城中祇樹給孤獨園。爾時，眾多比丘各散在人間，亦來至世尊所。到已，頭面禮足，在一面坐。爾時，世尊問諸比丘：「汝等為在何處夏坐？」諸比丘對曰：「在本所生處而受夏坐。」世尊告曰：「汝等所生之處比丘之中，能自行阿練若，復能稱譽阿練若，自行乞食，復教他人使行乞食，不失時宜，自著補納衣，復教他人使著補納衣，自修知足，亦復歎譽知足之行，自行少欲，亦復歎說少欲之行，自樂閑靜之處，復教他人在閑靜之處，自守其行，復教他人使守其行，己身戒具清淨，復教他人使修其戒，己身三昧成就，復教他人使行三昧，己身智慧成就，復教他人使行智慧，己身解脫成就，復教他人使行解脫，己身解脫見慧成就，復教他人使行此法，身能教化不有厭足，說法無懈倦。」爾時，諸比丘白世尊言：「比丘滿願子於此諸比丘中，堪任教化，己身修阿練若行，亦復歎譽阿練若行，己身著補納衣，少欲知足，精進勇猛，乞食，樂閑靜之處，戒、三昧、智慧、解脫、解脫見慧成就，復教他人使行此法，自能教化，說法無厭足。」爾時，世尊與諸比丘說微妙法。是時，諸比丘聞佛說法已，小停左右，便從坐起，遶佛三匝，便退而去。",
+   "T0026-ma9": "爾時，世尊於王舍城受夏坐訖，過三月已，補治衣竟，攝衣持鉢，從王舍城出，向舍衛國，展轉進前，至舍衛國，即住勝林給孤獨園。尊者舍梨子與生地諸比丘於王舍城共住少日，攝衣持鉢，向舍衛國，展轉進前，至舍衛國，共住勝林給孤獨園。"
+  },
+  "a04": {
+   "mn24": "Assosi kho āyasmā puṇṇo mantāṇiputto: “bhagavā kira sāvatthiṁ anuppatto; sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme”ti. Atha kho āyasmā puṇṇo mantāṇiputto senāsanaṁ saṁsāmetvā pattacīvaramādāya yena sāvatthi tena cārikaṁ pakkāmi. Anupubbena cārikaṁ caramāno yena sāvatthi jetavanaṁ anāthapiṇḍikassa ārāmo yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdi.",
+   "T0125-ea39.10": "是時，滿願子於本生處，教化周訖，漸漸人間教化，來至世尊所，頭面禮足，在一面坐。",
+   "T0026-ma9": "是時，尊者滿慈子於生地受夏坐訖，過三月已，補治衣竟，攝衣持鉢，從生地出，向舍衛國，展轉進前，至舍衛國，亦住勝林給孤獨園。"
+  },
+  "a05": {
+   "mn24": "Ekamantaṁ nisinnaṁ kho āyasmantaṁ puṇṇaṁ mantāṇiputtaṁ bhagavā dhammiyā kathāya sandassesi samādapesi samuttejesi sampahaṁsesi. Atha kho āyasmā puṇṇo mantāṇiputto bhagavatā dhammiyā kathāya sandassito samādapito samuttejito sampahaṁsito bhagavato bhāsitaṁ abhinanditvā anumoditvā uṭṭhāyāsanā bhagavantaṁ abhivādetvā padakkhiṇaṁ katvā yena andhavanaṁ tenupasaṅkami divāvihārāya.",
+   "nan-mn24": "時世尊隨意住王舍城之後，向舍衛城遊行，轉轉遊行而入舍衛城。是時世尊住舍衛城祇樹給孤獨園。尊者芬那滿達尼弗多聞：「世尊入舍衛城，在舍衛城祇樹林給孤獨園。」是時尊者芬那滿達尼弗多收攝牀座、執持衣鉢，向舍衛城遊行，順次遊行至舍衛城祇樹林給孤獨園而詣世尊之處。詣而稽首世尊以坐一面。世尊對坐於一面之尊者芬那滿達尼弗多，以法開示、勸發、鼓勵、令歡喜。如是由世尊法語所開示、勸發、鼓勵、歡喜之尊者芬那滿達尼弗多，歡喜、隨喜世尊之教，從座而起稽首世尊，右遶之後，為日中之安息而行往安達林。",
+   "T0125-ea39.10": "爾時，世尊漸與說法。是時，滿願子聞說法已，即從坐起，頭面禮足，便退而去。以尼師檀著右肩上，往詣晝闇園中。",
+   "T0026-ma9": "尊者滿慈子詣世尊所，稽首作禮，於如來前敷尼師檀，結加趺坐。"
+  },
+  "a06": {
+   "mn24": "Atha kho aññataro bhikkhu yenāyasmā sāriputto tenupasaṅkami; upasaṅkamitvā āyasmantaṁ sāriputtaṁ etadavoca: “yassa kho tvaṁ, āvuso sāriputta, puṇṇassa nāma bhikkhuno mantāṇiputtassa abhiṇhaṁ kittayamāno ahosi, so bhagavatā dhammiyā kathāya sandassito samādapito samuttejito sampahaṁsito bhagavato bhāsitaṁ abhinanditvā anumoditvā uṭṭhāyāsanā bhagavantaṁ abhivādetvā padakkhiṇaṁ katvā yena andhavanaṁ tena pakkanto divāvihārāyā”ti.",
+   "T0125-ea39.10": "爾時，有一比丘，遙見滿願子以尼師檀著右肩上，至彼園中，見已，即往至舍利弗所，白舍利弗言：「世尊常所歎滿願子方至如來所，從佛聞法，今詣園中，尊者宜知是時。」是時，舍利弗聞比丘語，即從坐起，以尼師檀著右肩上，往至彼園中。是時，滿願子在一樹下結跏趺坐，舍利弗亦復在一樹下端坐思惟。",
+   "T0026-ma9": "時，尊者舍梨子問餘比丘：「諸賢！何者是賢者滿慈子耶？」諸比丘白尊者舍梨子：「唯然，尊者在如來前坐，白皙隆鼻，如鸚鵡𠿘，即其人也。」時，尊者舍梨子知滿慈子色貌已，則善記念。尊者滿慈子過夜平旦，著衣持鉢，入舍衛國而行乞食，食訖中後，還舉衣鉢，澡洗手足，以尼師檀著於肩上，至安陀林經行之處。尊者舍梨子亦過夜平旦，著衣持鉢，入舍衛國而行乞食，食訖中後，還舉衣鉢，澡洗手足，以尼師檀著於肩上，至安陀林經行之處。時，尊者滿慈子到安陀林，於一樹下敷尼師檀，結加趺坐。尊者舍梨子亦至安陀林，離滿慈子不遠，於一樹下敷尼師檀，結加趺坐。"
+  },
+  "a07": {
+   "mn24": "Atha kho āyasmā sāriputto taramānarūpo nisīdanaṁ ādāya āyasmantaṁ puṇṇaṁ mantāṇiputtaṁ piṭṭhito piṭṭhito anubandhi sīsānulokī. Atha kho āyasmā puṇṇo mantāṇiputto andhavanaṁ ajjhogāhetvā aññatarasmiṁ rukkhamūle divāvihāraṁ nisīdi. Āyasmāpi kho sāriputto andhavanaṁ ajjhogāhetvā aññatarasmiṁ rukkhamūle divāvihāraṁ nisīdi.",
+   "nan-mn24": "是時或比丘行往尊者舍利弗之處，往已，語尊者舍利弗曰：「尊者舍利弗！尊者常稱揚之比丘芬那滿達尼弗多，受世尊法語之開示、勸發、鼓勵，而歡喜，歡喜、隨喜世尊之教，即從座而起，稽首世尊，右遶之後，為日中之安息行往安達林。」於是尊者舍利弗急持座具，注視前方，跟踪尊者芬那滿達尼弗多之後而行。時尊者芬那滿達尼弗多入安達林，於一樹下為日中之安息而坐。尊者舍利弗亦入於安達林，於一樹下為日中之安息而坐。是時尊者舍利弗至日昏從宴默而起，行往尊者芬那滿達尼弗多之處。至而與尊者芬那滿達尼弗多問訊、交談友誼親睦之語後，坐於一面。於一面坐之尊者舍利弗言尊者芬那滿達尼弗多曰：「尊者！實從世尊而住於梵行否？」〔滿達尼弗多曰：〕「然！尊者！」「尊者！實為戒清淨，從世尊而住於梵行否？」「實不然！尊者！」「尊者！若然，為見清淨，從世尊而住於梵行否？」「實不然！尊者！」「尊者！若然，為心清淨，從世尊而住於梵行否？」「實不然！尊者！」「尊者！若然！為斷疑清淨，從世尊而住於梵行否？」「實不然！尊者！」「尊者！若然！實為道非道知見清淨，從世尊而住於梵行否？」「實不然！尊者！」「尊者！若然！為道跡知見清淨，從世尊而住於梵行否？」「實不然！尊者！」「尊者！實為知見清淨，從世尊而住於梵行否？」「實不然！尊者！」〔舍利弗曰：〕「尊者！予問：『實為戒清淨，從世尊而住於梵行否？』答『實不然！尊者！』問：『尊者！若然！為心清淨，從世尊而住於梵行否？』答：『實不然！尊者！』問：『尊者！為實見清淨，從世尊而住於梵行否？』答：『實不然！尊者！』……乃至……問：『尊者！實為知見清淨，從世尊而住於梵行否？』答：『實不然！尊者！』『若然者，尊者何為從世尊而住於梵行否？』」〔滿達尼弗多曰：〕「尊者！為無取著般涅槃，從世尊而住於梵行。」〔舍利弗曰：〕「實於戒清淨是無取著，為般涅槃否？」「不然！尊者！」「尊者！若然者，心清淨是無取著，是般涅槃否？」「實不然！」「尊者！見清淨是無取著，是般涅槃否？」「實不然！尊者！」「尊者！若然者！斷疑清淨是無取著，是般涅槃否？」「實不然！尊者！」「尊者！道非道知見清淨是無取著，是般涅槃否？」「實不然！尊者！」「尊者！若然者！道跡知見清淨是無取著，是般涅槃否？」「實不然！尊者！」「尊者！知見清淨是無取著，是般涅槃否？」「實不然！尊者！」「尊者！若然者除此等之法，無取著，是般涅槃否？」「實不然！尊者！」〔舍利弗曰：〕問：「尊者！『戒清淨是無取著、是般涅槃否？』答：『實不然！尊者！』問：『尊者！若然者，心清淨是無取著、是般涅槃否？』答：『實不然！尊者！』問：『尊者！見清淨無取著，是般涅槃否？』答：『實不然！尊者！』……乃至……問：『尊者！知見清淨是無取著，是般涅槃否？』答：『實不然！尊者！』問：『尊者！若然者，除此等之法，無取著，是般涅槃否？』答：『實不然！尊者！』尊者！若然者，如何知此教之意義耶？」",
+   "T0125-ea39.10": "是時，舍利弗便從坐起，往至滿願子所。"
+  },
+  "a08": {
+   "mn24": "Atha kho āyasmā sāriputto sāyanhasamayaṁ paṭisallānā vuṭṭhito yenāyasmā puṇṇo mantāṇiputto tenupasaṅkami; upasaṅkamitvā āyasmatā puṇṇena mantāṇiputtena saddhiṁ sammodi. Sammodanīyaṁ kathaṁ sāraṇīyaṁ vītisāretvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho āyasmā sāriputto āyasmantaṁ puṇṇaṁ mantāṇiputtaṁ etadavoca:",
+   "T0125-ea39.10": "到已，共相問訊，在一面坐。",
+   "T0026-ma9": "尊者舍梨子則於晡時從燕坐起，往詣尊者滿慈子所，共相問訊，却坐一面，則問尊者滿慈子曰：「賢者！從沙門瞿曇修梵行耶？」答曰：「如是。」"
+  },
+  "a09": {
+   "mn24": "“Bhagavati no, āvuso, brahmacariyaṁ vussatī”ti?",
+   "T0125-ea39.10": "爾時，舍利弗問滿願子曰：「云何，滿願子。為由世尊得修梵行為弟子乎？」滿願子報曰：「如是，如是。」時，舍利弗復問曰：「復因世尊得修清淨戒乎？」",
+   "T0026-ma9": "「云何，賢者！以戒淨故，從沙門瞿曇修梵行耶？」"
+  },
+  "a10": {
+   "mn24": "“Evamāvuso”ti. “Kiṁ nu kho, āvuso, sīlavisuddhatthaṁ bhagavati brahmacariyaṁ vussatī”ti? “No hidaṁ, āvuso”. “Kiṁ panāvuso, cittavisuddhatthaṁ bhagavati brahmacariyaṁ vussatī”ti? “No hidaṁ, āvuso”. “Kiṁ nu kho, āvuso, diṭṭhivisuddhatthaṁ bhagavati brahmacariyaṁ vussatī”ti? “No hidaṁ, āvuso”. “Kiṁ panāvuso, kaṅkhāvitaraṇavisuddhatthaṁ bhagavati brahmacariyaṁ vussatī”ti? “No hidaṁ, āvuso”. “Kiṁ nu kho, āvuso, maggāmaggañāṇadassanavisuddhatthaṁ bhagavati brahmacariyaṁ vussatī”ti? “No hidaṁ, āvuso”. “Kiṁ panāvuso, paṭipadāñāṇadassanavisuddhatthaṁ bhagavati brahmacariyaṁ vussatī”ti? “No hidaṁ, āvuso”. “Kiṁ nu kho, āvuso, ñāṇadassanavisuddhatthaṁ bhagavati brahmacariyaṁ vussatī”ti? “No hidaṁ, āvuso”.",
+   "T0125-ea39.10": "滿願子言：「非也。」舍利弗言：「為由心清淨於如來所，而修梵行乎？」滿願子報曰：「非也。」舍利弗言：「為見清淨於如來所，得修梵行乎？」滿願子報曰：「非也。」舍利弗言：「云何為無猶豫，得修梵行乎？」滿願子報曰：「非也。」舍利弗曰：「為由行跡清淨，得修梵行乎？」滿願子報曰：「非也。」舍利弗言：「云何於道之中，智修清淨，得修梵行乎？」滿願子報曰：「非也。」舍利弗言：「云何知見清淨，得修梵行乎？」滿願子報曰：「非也。」舍利弗言：「我今所問，於如來所，得修梵行乎？汝復報吾言：『如是。』吾復問，智慧、心清淨，道知見清淨，得修梵行耶？汝復言：『非也。』汝今云何於如來所，得修梵行耶？」",
+   "T0026-ma9": "答曰：「不也。」「以心淨故、以見淨故、以疑蓋淨故、以道非道知見淨故、以道跡知見淨故、以道跡斷智淨故，從沙門瞿曇修梵行耶？」答曰：「不也。」又復問曰：「我向問賢者從沙門瞿曇修梵行耶？則言如是。今問賢者以戒淨故從沙門瞿曇修梵行耶？便言不也。以心淨故、以見淨故、以疑蓋淨故、以道非道知見淨故、以道跡知見淨故、以道跡斷智淨故，從沙門瞿曇修梵行耶？便言不也。然以何義，從沙門瞿曇修梵行耶？」答曰：「賢者！以無餘涅槃故。」又復問曰：「云何，賢者！以戒淨故，沙門瞿曇施設無餘涅槃耶？」答曰：「不也。」「以心淨故、以見淨故、以疑蓋淨故、以道非道知見淨故、以道跡知見淨故、以道跡斷智淨故，沙門瞿曇施設無餘涅槃耶？」答曰：「不也。」又復問曰：「我向問仁，云何賢者以戒淨故，沙門瞿曇施設無餘涅槃耶？賢者言不。以心淨故、以見淨故、以疑蓋淨故、以道非道知見淨故、以道跡知見淨故、以道跡斷智淨故，沙門瞿曇施設無餘涅槃耶？賢者言不。賢者所說為是何義？云何得知？」答曰：「賢者！若以戒淨故，世尊沙門瞿曇施設無餘涅槃者，則以有餘稱說無餘；以心淨故、以見淨故、以疑蓋淨故、以道非道知見淨故、以道跡知見淨故、以道跡斷智淨故，世尊沙門瞿曇施設無餘涅槃者，則以有餘稱說無餘。賢者！若離此法，世尊施設無餘涅槃者，則凡夫亦當般涅槃，以凡夫亦離此法故。"
+  },
+  "a11": {
+   "mn24": "“‘Kiṁ nu kho, āvuso, sīlavisuddhatthaṁ bhagavati brahmacariyaṁ vussatī’ti iti puṭṭho samāno ‘no hidaṁ, āvuso’ti vadesi. ‘Kiṁ panāvuso, cittavisuddhatthaṁ bhagavati brahmacariyaṁ vussatī’ti iti puṭṭho samāno ‘no hidaṁ, āvuso’ti vadesi.",
+   "nan-mn24": "〔於是尊者芬那滿達尼弗多曰：〕「尊者！世尊若教以無取著戒清淨，是般涅槃者，即等於有取著教以無取著，是般涅槃。尊者！世尊若教以無取著是心清淨……見清淨……斷疑清淨……道非道知見清淨……道跡知見清淨……知見清淨，是般涅槃者，即等於無取著，而教無取著，是般涅槃也。尊者！若除此等之法，是無取著，成為般涅槃者，凡夫應是般涅槃，何以故？尊者！凡夫是於此等諸法以外而存在者也。尊者！是故我今實為尊者說譬喻，實智者因譬喻而知教說之意義也。尊者！恰如住舍衛城之拘薩羅國王波斯匿於薩伽陀城或生急用，為彼舍衛城與薩伽陀城之間，備有七轉接車輛。尊者！於是拘薩羅國之王波斯匿從舍衛城出，由王宮之門，乘第一轉接車，以第一轉接車至第二轉接車之處，以捨第一轉接車，而乘第二轉接車，以第二轉接車至第三轉接車之處，即捨棄第二轉接車，以乘第三轉接車，以第三轉接車至第四轉接車之處，即捨棄第三轉接車以乘第四轉接車……〔乃至〕……捨棄第六轉接車以乘第七轉接車，以第七轉接車至薩伽陀城之王宮門。至彼王宮之門，彼其友人、同僚、親戚、血緣者如次問之。『大王！大王以此車從舍衛城至薩伽陀城王宮之門否？』其時，尊者！如何解答者，為拘薩羅國王波斯匿得正解答否？」〔舍利弗曰：〕「尊者！拘薩羅國王波斯匿若如次解答者，即得正解答，即：『予住舍衛城，因薩伽陀城或生急事。彼為予從舍衛城與薩伽陀城之間，備有七輛轉接車。予從舍衛城出，由王宮之門乘第一轉接車，以第一轉接車至第二轉接車處，即捨棄第一轉接車，以乘第二轉接車，以第二轉接車至第三轉接車處……〔乃至〕……乘第七轉接車，以第七轉接車至薩伽陀城王宮之門。』尊者！如是解答而拘薩羅國王波斯匿為得正解答。」〔芬那滿達尼弗多曰：〕「尊者！如是戒清淨是唯至心清淨，心清淨是唯至見清淨，見清淨是唯至斷疑清淨，斷疑清淨是唯至道非道知見清淨，道非道知見清淨是唯至道跡知見清淨，道跡知見清淨是唯至知見清淨，知見清淨是唯至無取著，是至般涅槃。尊者！無取著，是至般涅槃，從世尊而住於梵行也。」",
+   "T0125-ea39.10": "滿願子報曰：「戒清淨義者，能使心清淨，心清淨義者，能使見清淨，見清淨義者，能使無猶豫清淨，無猶豫清淨義者，能使行跡清淨，行跡清淨義者，能使道清淨，道清淨義者，能使知見清淨，知見清淨義者，能使入涅槃義，是謂於如來所得修梵行。」",
+   "T0026-ma9": "賢者！但以戒淨故，得心淨，以心淨故，得見淨，以見淨故，得疑蓋淨，以疑葢淨故，得道非道知見淨，以道非道知見淨故，得道跡知見淨，以道跡知見淨故，得道跡斷智淨，以道跡斷智淨故，世尊沙門瞿曇施設無餘涅槃也。"
+  },
+  "a12": {
+   "mn24": "‘Kiṁ nu kho, āvuso, diṭṭhivisuddhatthaṁ …pe… kaṅkhāvitaraṇavisuddhatthaṁ …pe… maggāmaggañāṇadassanavisuddhatthaṁ …pe… paṭipadāñāṇadassanavisuddhatthaṁ …pe… kiṁ nu kho, āvuso, ñāṇadassanavisuddhatthaṁ bhagavati brahmacariyaṁ vussatī’ti iti puṭṭho samāno ‘no hidaṁ āvuso’ti vadesi.",
+   "nan-mn24": "如是說時，尊者舍利弗白尊者芬那滿達尼弗多曰：「尊者是何名耶？同行者如何稱呼尊者耶？」〔芬那滿達尼弗多曰：〕「尊者！我名云芬那，同行者呼予為滿達尼弗多。」〔舍利弗曰：〕「可驚嘆哉！尊者！未曾有哉！尊者！多聞之聲聞。善正知我師之教，如是從尊者芬那滿達尼弗，以甚深之問，盡能解說。得見尊者芬那滿達尼弗多者，得親近之，彼等同行者誠是榮幸，真幸福也。若得見同行者，以布纏於頭上，得見從尊者芬那滿達尼弗多戴於頭上而行，以得親近者，在彼等又誠是榮幸、真幸福也。得見尊者芬那滿達尼弗多，以得親近，我等亦誠是榮幸、真幸福也。」",
+   "T0125-ea39.10": "舍利弗言：「汝今所說義，何所趣向？」滿願子言：「我今當引譬喻解此義，智者以譬喻解此義，智者自寤。"
+  },
+  "a13": {
+   "mn24": "Kimatthaṁ carahāvuso, bhagavati brahmacariyaṁ vussatī”ti? “Anupādāparinibbānatthaṁ kho, āvuso, bhagavati brahmacariyaṁ vussatī”ti. “Kiṁ nu kho, āvuso, sīlavisuddhi anupādāparinibbānan”ti? “No hidaṁ, āvuso”.",
+   "T0125-ea39.10": "猶如今日波斯匿王，從舍衛城至婆祇國，兩國中間布七乘車。是時，波斯匿王出城先乘一車，至第二車，即乘第二車，復捨第一車，小復前行，乘第三車而捨第二車，小復前行，乘第四車而捨第三車，小復前行，乘第五車而捨第四車，又復前行，乘第六車而捨第五車，又復前行，乘第七車而捨第六車，入婆祇國。是時，波斯匿王以至宮中。設有人問：『大王今日為乘何等車來至此宮？』彼王欲何報。」舍利弗報言：「設當有人問者，當如是報曰：『吾出舍衛城，先乘第一車至第二車，復捨第二車乘第三車，復捨第三車乘第四車，復捨第四車乘第五車，復捨第五車乘第六車，復捨第六車乘第七車，至婆祇國。』所以然者，皆由前車至第二車，展轉相因，得至彼國。設有人問者，應當作是報之。」",
+   "T0026-ma9": "「賢者！復聽。昔拘薩羅王波斯匿在舍衛國，於婆雞帝有事，彼作是念：『以何方便，令一日行，從舍衛國至婆雞帝耶？』復作是念：『我今寧可從舍衛國至婆雞帝，於其中間布置七車。』爾時，即從舍衛國至婆雞帝，於其中間布置七車。布七車已，從舍衛國出，至初車，乘初車，至第二車，捨初車，乘第二車，至第三車，捨第二車，乘第三車，至第四車，捨第三車，乘第四車，至第五車，捨第四車，乘第五車，至第六車，捨第五車，乘第六車，至第七車，乘第七車，於一日中至婆雞帝。「彼於婆雞帝辦其事已，大臣圍繞，坐王正殿，群臣白曰：『云何，天王！以一日行從舍衛國至婆雞帝耶？』王曰：『如是。』『云何，天王！乘第一車一日從舍衛國至婆雞帝耶？』王曰：『不也。』『乘第二車乘第三車至第七車，從舍衛國至婆雞帝耶？』王曰：『不也。』云何，賢者！拘薩羅王波斯匿群臣復問，當云何說？「王答群臣：『我在舍衛國，於婆雞帝有事，我作是念：「以何方便，令一日行，從舍衛國至婆雞帝耶？」我復作是念：「我今寧可從舍衛國至婆雞帝，於其中間布置七車。」我時即從舍衛國至婆雞帝，於其中間布置七車。布七車已，從舍衛國出，至初車，乘初車，至第二車，捨初車，乘第二車，至第三車，捨第二車，乘第三車，至第四車，捨第三車，乘第四車，至第五車，捨第四車，乘第五車，至第六車，捨第五車，乘第六車，至第七車，乘第七車，於一日中至婆雞帝。』「如是，賢者！拘薩羅王波斯匿答對群臣所問如是。"
+  },
+  "a14": {
+   "mn24": "“Kiṁ panāvuso, cittavisuddhi anupādāparinibbānan”ti? “No hidaṁ, āvuso”. “Kiṁ nu kho, āvuso, diṭṭhivisuddhi anupādāparinibbānan”ti? “No hidaṁ, āvuso”. “Kiṁ panāvuso, kaṅkhāvitaraṇavisuddhi anupādāparinibbānan”ti? “No hidaṁ, āvuso”. “Kiṁ nu kho, āvuso, maggāmaggañāṇadassanavisuddhi anupādāparinibbānan”ti? “No hidaṁ, āvuso”. “Kiṁ panāvuso, paṭipadāñāṇadassanavisuddhi anupādāparinibbānan”ti?",
+   "nan-mn24": "如是言時，尊者芬那滿達尼弗多，向尊者舍利弗作是言：「尊者是何名耶？同行者如何稱呼尊者耶？」〔舍利弗曰：〕「尊者！我名云優波提沙，同行者呼我舍利弗。」〔滿達尼弗多曰：〕「尊者！實似我師與聲聞共作法談，我等是以尊者不知是『尊者舍利弗』，若實我等以尊者知是『尊者舍利弗』者，我等不為如是答。可驚嘆哉！尊者！未曾有哉！尊者！多聞之聲聞善正知我師之教，如是從舍利弗盡問甚深之問。得見尊者舍利弗，得親近之，彼等同行者誠是榮幸、真幸福也。若得見同行者以布纏於頭上，從尊者舍利弗戴於頭上而行，以得親近者，在彼等又誠是榮幸、真幸福也。得見尊者舍利弗、得親近之，我等亦誠是榮幸、真幸福也。」",
+   "T0125-ea39.10": "滿願子報曰：「戒清淨義，亦復如是。由心清淨，得見清淨，由見清淨，得至除猶豫清淨，由無猶豫義，得至行跡清淨，由行跡清淨義，得至道清淨，由道清淨義，得至知見清淨，由知見清淨義，得至涅槃義，於如來所得修梵行。所以然者，戒清淨義者，是受入之貌，然如來說使除受入，心清淨義亦是受入之貌，然如來說除受入，乃至知見之義亦是受入，如來說除受入，乃至涅槃。如來所得修梵行。若當戒清淨，於如來所得修梵行者，凡夫之人亦當取滅度。所以然者，凡夫之人亦有此戒法，世尊所說者，以次成道，得至涅槃界，非獨戒清淨，得至滅度。猶如有欲上七重樓上，要當以次而至。戒清淨義，亦復如是。漸漸至心，由心至見，由見至無猶豫，由無猶豫淨至於行跡，由淨行跡得至於道，由於淨道得至知見，由淨知見得至涅槃。」",
+   "T0026-ma9": "如是，賢者！以戒淨故，得心淨，以心淨故，得見淨，以見淨故，得疑蓋淨，以疑葢淨故，得道非道知見淨，以道非道知見淨故，得道跡知見淨，以道跡知見淨故，得道跡斷智淨，以道跡斷智淨故，世尊施設無餘涅槃。」"
+  },
+  "a15": {
+   "mn24": "“No hidaṁ, āvuso”. “Kiṁ nu kho, āvuso, ñāṇadassanavisuddhi anupādāparinibbānan”ti? “No hidaṁ, āvuso”.",
+   "nan-mn24": "如是實彼等兩大龍象相互讚歎善說。",
+   "T0125-ea39.10": "是時，舍利弗即稱：「善哉！善哉！快說此義，汝今為名何等？諸比丘梵行之人，稱汝何等號？」",
+   "T0026-ma9": "於是，尊者舍梨子問尊者滿慈子：「賢者名何等？諸梵行人云何稱賢者耶？」尊者滿慈子答曰：「賢者！"
+  },
+  "a16": {
+   "mn24": "“Kiṁ panāvuso, aññatra imehi dhammehi anupādāparinibbānan”ti? “No hidaṁ, āvuso”. “‘Kiṁ nu kho, āvuso, sīlavisuddhi anupādāparinibbānan’ti iti puṭṭho samāno ‘no hidaṁ, āvuso’ti vadesi. ‘Kiṁ panāvuso, cittavisuddhi anupādāparinibbānan’ti iti puṭṭho samāno ‘no hidaṁ, āvuso’ti vadesi. ‘Kiṁ nu kho, āvuso, diṭṭhivisuddhi anupādāparinibbānan’ti …pe… kaṅkhāvitaraṇavisuddhi … maggāmaggañāṇadassanavisuddhi …",
+   "T0125-ea39.10": "滿願子言：「我今名為滿願子，母姓彌多那尼。」舍利弗言：「善哉！善哉！滿願子！賢聖法中實無等倫，懷抱甘露，演布無窮，我今所問甚深之義，汝盡演說。設當諸梵行人以首戴行世間，猶不能得報其恩。其有來親近問訊者，彼人快得善利，我今亦得其善利，承受其教。」滿願子報曰：「善哉！善哉！如汝所言。汝今為名何等？諸比丘為何等號？」",
+   "T0026-ma9": "我號滿也。我母名慈，故諸梵行人稱我為滿慈子。」尊者舍梨子歎曰：「善哉，善哉！賢者滿慈子，為如來弟子，所作智辯聰明決定，安隱無畏，成就調御，逮大辯才，得甘露幢，於甘露界自作證成就遊，以問賢者甚深義盡能報故。賢者滿慈子！諸梵行人為得大利，得值賢者滿慈子，隨時往見，隨時禮拜，我今亦得大利，隨時往見，隨時禮拜。諸梵行人應當縈衣頂上戴賢者滿慈子，為得大利，我今亦得大利，隨時往見，隨時禮拜。」尊者滿慈子問尊者舍梨子：「賢者名何等，諸梵行人云何稱賢者耶？」尊者舍梨子答曰：「賢者！"
+  },
+  "a17": {
+   "mn24": "paṭipadāñāṇadassanavisuddhi … ‘kiṁ nu kho, āvuso, ñāṇadassanavisuddhi anupādāparinibbānan’ti iti puṭṭho samāno ‘no hidaṁ, āvuso’ti vadesi. ‘Kiṁ panāvuso, aññatra imehi dhammehi anupādāparinibbānan’ti iti puṭṭho samāno ‘no hidaṁ, āvuso’ti vadesi. Yathākathaṁ panāvuso, imassa bhāsitassa attho daṭṭhabbo”ti?",
+   "T0125-ea39.10": "舍利弗報曰：「我名憂波提舍，母名舍利，諸比丘號吾為舍利弗。」滿願子言：「我今與大人共論，先亦不知法之大主來至此間，設當知尊者舍利弗來至此者，亦無此辯共相酬答，然尊問此甚深之義，尋時發遣。善哉！舍利弗！佛弟子中最為上首，恒以甘露法味而自娛樂，設當諸梵行人，以首戴尊者舍利弗行世間，從歲至歲，猶不能報斯須之恩。其有眾生來問訊尊者、親近者，彼人快得善利，我等亦快得善利。」",
+   "T0026-ma9": "我字優波鞮舍，我母名舍梨，故諸梵行人稱我為舍梨子。」尊者滿慈子歎曰：「我今與世尊弟子共論而不知，第二尊共論而不知，法將共論而不知，轉法輪復轉弟子共論而不知。若我知尊者舍梨子者，不能答一句，況復爾所深論？善哉，善哉！尊者舍梨子！為如來弟子，所作智辯聰明決定，安隱無畏、成就調御、逮大辯才、得甘露幢，於甘露界自作證成就遊，以尊者甚深甚深問故。尊者舍梨子！諸梵行人為得大利，得值尊者舍梨子，隨時往見，隨時禮拜，我今亦得大利，隨時往見，隨時禮拜。諸梵行人應當縈衣頂上戴尊者舍梨子，為得大利，我今亦得大利，隨時往見，隨時禮拜。」"
+  },
+  "a18": {
+   "mn24": "“Sīlavisuddhiñce, āvuso, bhagavā anupādāparinibbānaṁ paññapeyya, saupādānaṁyeva samānaṁ anupādāparinibbānaṁ paññapeyya. Cittavisuddhiñce, āvuso, bhagavā anupādāparinibbānaṁ paññapeyya, saupādānaṁyeva samānaṁ anupādāparinibbānaṁ paññapeyya. Diṭṭhivisuddhiñce, āvuso, bhagavā anupādāparinibbānaṁ paññapeyya, saupādānaṁyeva samānaṁ anupādāparinibbānaṁ paññapeyya. Kaṅkhāvitaraṇavisuddhiñce, āvuso, bhagavā anupādāparinibbānaṁ paññapeyya, saupādānaṁyeva samānaṁ anupādāparinibbānaṁ paññapeyya. Maggāmaggañāṇadassanavisuddhiñce, āvuso, bhagavā anupādāparinibbānaṁ paññapeyya, saupādānaṁyeva samānaṁ anupādāparinibbānaṁ paññapeyya. Paṭipadāñāṇadassanavisuddhiñce, āvuso, bhagavā anupādāparinibbānaṁ paññapeyya, saupādānaṁyeva samānaṁ anupādāparinibbānaṁ paññapeyya. Ñāṇadassanavisuddhiñce, āvuso, bhagavā anupādāparinibbānaṁ paññapeyya, saupādānaṁyeva samānaṁ anupādāparinibbānaṁ paññapeyya. Aññatra ce, āvuso, imehi dhammehi anupādāparinibbānaṁ abhavissa, puthujjano parinibbāyeyya. Puthujjano hi, āvuso, aññatra imehi dhammehi. Tena hāvuso, upamaṁ te karissāmi; upamāyapidhekacce viññū purisā bhāsitassa atthaṁ ājānanti. Seyyathāpi, āvuso, rañño pasenadissa kosalassa sāvatthiyaṁ paṭivasantassa sākete kiñcideva accāyikaṁ karaṇīyaṁ uppajjeyya. Tassa antarā ca sāvatthiṁ antarā ca sāketaṁ satta rathavinītāni upaṭṭhapeyyuṁ. Atha kho, āvuso, rājā pasenadi kosalo sāvatthiyā nikkhamitvā antepuradvārā paṭhamaṁ rathavinītaṁ abhiruheyya, paṭhamena rathavinītena dutiyaṁ rathavinītaṁ pāpuṇeyya, paṭhamaṁ rathavinītaṁ vissajjeyya dutiyaṁ rathavinītaṁ abhiruheyya. Dutiyena rathavinītena tatiyaṁ rathavinītaṁ pāpuṇeyya, dutiyaṁ rathavinītaṁ vissajjeyya, tatiyaṁ rathavinītaṁ abhiruheyya. Tatiyena rathavinītena catutthaṁ rathavinītaṁ pāpuṇeyya, tatiyaṁ rathavinītaṁ vissajjeyya, catutthaṁ rathavinītaṁ abhiruheyya. Catutthena rathavinītena pañcamaṁ rathavinītaṁ pāpuṇeyya, catutthaṁ rathavinītaṁ vissajjeyya, pañcamaṁ rathavinītaṁ abhiruheyya. Pañcamena rathavinītena chaṭṭhaṁ rathavinītaṁ pāpuṇeyya, pañcamaṁ rathavinītaṁ vissajjeyya, chaṭṭhaṁ rathavinītaṁ abhiruheyya. Chaṭṭhena rathavinītena sattamaṁ rathavinītaṁ pāpuṇeyya, chaṭṭhaṁ rathavinītaṁ vissajjeyya, sattamaṁ rathavinītaṁ abhiruheyya. Sattamena rathavinītena sāketaṁ anupāpuṇeyya antepuradvāraṁ. Tamenaṁ antepuradvāragataṁ samānaṁ mittāmaccā ñātisālohitā evaṁ puccheyyuṁ: ‘iminā tvaṁ, mahārāja, rathavinītena sāvatthiyā sāketaṁ anuppatto antepuradvāran’ti? Kathaṁ byākaramāno nu kho, āvuso, rājā pasenadi kosalo sammā byākaramāno byākareyyā”ti? “Evaṁ byākaramāno kho, āvuso, rājā pasenadi kosalo sammā byākaramāno byākareyya: ‘idha me sāvatthiyaṁ paṭivasantassa sākete kiñcideva accāyikaṁ karaṇīyaṁ uppajji. Tassa me antarā ca sāvatthiṁ antarā ca sāketaṁ satta rathavinītāni upaṭṭhapesuṁ. Atha khvāhaṁ sāvatthiyā nikkhamitvā antepuradvārā paṭhamaṁ rathavinītaṁ abhiruhiṁ. Paṭhamena rathavinītena dutiyaṁ rathavinītaṁ pāpuṇiṁ, paṭhamaṁ rathavinītaṁ vissajjiṁ dutiyaṁ rathavinītaṁ abhiruhiṁ. Dutiyena rathavinītena tatiyaṁ rathavinītaṁ pāpuṇiṁ, dutiyaṁ rathavinītaṁ vissajjiṁ, tatiyaṁ rathavinītaṁ abhiruhiṁ. Tatiyena rathavinītena catutthaṁ rathavinītaṁ pāpuṇiṁ, tatiyaṁ rathavinītaṁ vissajjiṁ, catutthaṁ rathavinītaṁ abhiruhiṁ. Catutthena rathavinītena pañcamaṁ rathavinītaṁ pāpuṇiṁ, catutthaṁ rathavinītaṁ vissajjiṁ, pañcamaṁ rathavinītaṁ abhiruhiṁ. Pañcamena rathavinītena chaṭṭhaṁ rathavinītaṁ pāpuṇiṁ, pañcamaṁ rathavinītaṁ vissajjiṁ, chaṭṭhaṁ rathavinītaṁ abhiruhiṁ. Chaṭṭhena rathavinītena sattamaṁ rathavinītaṁ pāpuṇiṁ, chaṭṭhaṁ rathavinītaṁ vissajjiṁ, sattamaṁ rathavinītaṁ abhiruhiṁ. Sattamena rathavinītena sāketaṁ anuppatto antepuradvāran’ti. Evaṁ byākaramāno kho, āvuso, rājā pasenadi kosalo sammā byākaramāno byākareyyā”ti. “Evameva kho, āvuso, sīlavisuddhi yāvadeva cittavisuddhatthā, cittavisuddhi yāvadeva diṭṭhivisuddhatthā, diṭṭhivisuddhi yāvadeva kaṅkhāvitaraṇavisuddhatthā, kaṅkhāvitaraṇavisuddhi yāvadeva maggāmaggañāṇadassanavisuddhatthā, maggāmaggañāṇadassanavisuddhi yāvadeva paṭipadāñāṇadassanavisuddhatthā, paṭipadāñāṇadassanavisuddhi yāvadeva ñāṇadassanavisuddhatthā, ñāṇadassanavisuddhi yāvadeva anupādāparinibbānatthā. Anupādāparinibbānatthaṁ kho, āvuso, bhagavati brahmacariyaṁ vussatī”ti. Evaṁ vutte, āyasmā sāriputto āyasmantaṁ puṇṇaṁ mantāṇiputtaṁ etadavoca: “konāmo āyasmā, kathañca panāyasmantaṁ sabrahmacārī jānantī”ti? “Puṇṇoti kho me, āvuso, nāmaṁ; mantāṇiputtoti ca pana maṁ sabrahmacārī jānantī”ti. “Acchariyaṁ, āvuso, abbhutaṁ, āvuso. Yathā taṁ sutavatā sāvakena sammadeva satthusāsanaṁ ājānantena, evameva āyasmatā puṇṇena mantāṇiputtena gambhīrā gambhīrapañhā anumassa anumassa byākatā. Lābhā sabrahmacārīnaṁ, suladdhalābhā sabrahmacārīnaṁ, ye āyasmantaṁ puṇṇaṁ mantāṇiputtaṁ labhanti dassanāya, labhanti payirūpāsanāya. Celaṇḍukena cepi sabrahmacārī āyasmantaṁ puṇṇaṁ mantāṇiputtaṁ muddhanā pariharantā labheyyuṁ dassanāya, labheyyuṁ payirūpāsanāya, tesampi lābhā tesampi suladdhaṁ, amhākampi lābhā amhākampi suladdhaṁ, ye mayaṁ āyasmantaṁ puṇṇaṁ mantāṇiputtaṁ labhāma dassanāya, labhāma payirūpāsanāyā”ti. Evaṁ vutte, āyasmā puṇṇo mantāṇiputto āyasmantaṁ sāriputtaṁ etadavoca: “ko nāmo āyasmā, kathañca panāyasmantaṁ sabrahmacārī jānantī”ti? “Upatissoti kho me, āvuso, nāmaṁ; sāriputtoti ca pana maṁ sabrahmacārī jānantī”ti. “Satthukappena vata kira, bho, sāvakena saddhiṁ mantayamānā na jānimha: ‘āyasmā sāriputto’ti. Sace hi mayaṁ jāneyyāma ‘āyasmā sāriputto’ti, ettakampi no nappaṭibhāseyya. Acchariyaṁ, āvuso, abbhutaṁ, āvuso. Yathā taṁ sutavatā sāvakena sammadeva satthusāsanaṁ ājānantena, evameva āyasmatā sāriputtena gambhīrā gambhīrapañhā anumassa anumassa pucchitā. Lābhā sabrahmacārīnaṁ suladdhalābhā sabrahmacārīnaṁ, ye āyasmantaṁ sāriputtaṁ labhanti dassanāya, labhanti payirūpāsanāya. Celaṇḍukena cepi sabrahmacārī āyasmantaṁ sāriputtaṁ muddhanā pariharantā labheyyuṁ dassanāya, labheyyuṁ payirūpāsanāya, tesampi lābhā tesampi suladdhaṁ, amhākampi lābhā amhākampi suladdhaṁ, ye mayaṁ āyasmantaṁ sāriputtaṁ labhāma dassanāya, labhāma payirūpāsanāyā”ti. Itiha te ubhopi mahānāgā aññamaññassa subhāsitaṁ samanumodiṁsūti.",
+   "T0125-ea39.10": "爾時，二賢在彼園共如是論議。是時，二人各聞所說，歡喜奉行。等法及晝度水及城郭喻\n識、均頭、二輪波蜜及七車",
+   "T0026-ma9": "如是二賢更相稱說，更相讚善已，歡喜奉行，即從坐起，各還所止。七車經第九竟（二千五百八字）"
+  },
+  "a19": {
+   "mn24": "Rathavinītasuttaṁ niṭṭhitaṁ catutthaṁ."
+  }
+ }
+}

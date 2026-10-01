@@ -1,0 +1,78 @@
+{
+ "slug": "pi-an8.27",
+ "title": "雜阿含經 （六九二）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "八力說明"
+  },
+  {
+   "id": "a02",
+   "label": "八力細分說明"
+  },
+  {
+   "id": "a03",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "an8.27",
+   "lang": "pi",
+   "label": "巴利 AN8.27",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "T0099-sa692",
+   "lang": "lzh",
+   "label": "雜阿含經 （六九二）",
+   "who": "劉宋 求那跋陀羅譯"
+  },
+  {
+   "id": "T0099-sa693",
+   "lang": "lzh",
+   "label": "雜阿含經 （六九三）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099"
+ ],
+ "anchors": [
+  {
+   "work": "T0099",
+   "node": "（六九二）"
+  },
+  {
+   "work": "T0099",
+   "node": "（六九三）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "an8.27": "Aṅguttara Nikāya 8.27 3. Gahapativagga Paṭhamabalasutta",
+   "T0099-sa692": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。",
+   "T0099-sa693": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。"
+  },
+  "a01": {
+   "an8.27": "“Aṭṭhimāni, bhikkhave, balāni. Katamāni aṭṭha? Ruṇṇabalā, bhikkhave, dārakā, kodhabalā mātugāmā, āvudhabalā corā, issariyabalā rājāno, ujjhattibalā bālā, nijjhattibalā paṇḍitā, paṭisaṅkhānabalā bahussutā, khantibalā samaṇabrāhmaṇā— imāni kho, bhikkhave, aṭṭha balānī”ti.",
+   "T0099-sa692": "爾時，世尊告諸比丘：「有八力。何等為八？謂自在王者力、斷事大臣力、結恨女人力、啼泣嬰兒力、毀呰愚人力、審諦𭶑慧力、忍辱出家力、計數多聞力。」",
+   "T0099-sa693": "爾時，世尊告諸比丘……如上說。"
+  },
+  "a02": {
+   "T0099-sa693": "差別者：「謂自在王力者，王者現自在威力。斷事大臣力者，大臣現斷事之力。結恨女人力者，女人之法現結恨力。啼泣嬰兒力者，嬰兒之法現啼泣力。毀呰愚人力者，愚人之法觸事毀呰。審諦𭶑慧力者，智慧之人常現審諦。忍辱出家力者，出家之人常現忍辱。計數多聞力者，多聞之人常現思惟計數。」"
+  },
+  "a03": {
+   "an8.27": "Sattamaṁ.",
+   "T0099-sa692": "佛說此經已，諸比丘聞佛所說，歡喜奉行。",
+   "T0099-sa693": "佛說此經已，諸比丘聞佛所說，歡喜奉行。"
+  }
+ }
+}

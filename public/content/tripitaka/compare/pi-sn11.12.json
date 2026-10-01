@@ -1,0 +1,99 @@
+{
+ "slug": "pi-sn11.12",
+ "title": "別譯雜阿含經 （三五）",
+ "family": "pi",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。複核標記存疑 1 段：義段1的別譯雜阿含經（三五）內容實為義段2的問答，與佛告諸比丘無關，屬對錯位置",
+ "units": [
+  {
+   "id": "a00",
+   "label": "序分"
+  },
+  {
+   "id": "a01",
+   "label": "佛告諸比丘",
+   "doubt": true
+  },
+  {
+   "id": "a02",
+   "label": "帝釋昔為人時之名號"
+  },
+  {
+   "id": "a03",
+   "label": "七種持戒之義"
+  },
+  {
+   "id": "a04",
+   "label": "流通分"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sn11.12",
+   "lang": "pi",
+   "label": "巴利 SN11.12",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn11.12",
+   "lang": "lzh",
+   "label": "漢譯南傳 SN11.12",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "T0100-sa-2.35",
+   "lang": "lzh",
+   "label": "別譯雜阿含經 （三五）",
+   "who": "失譯"
+  },
+  {
+   "id": "T0099-sa1106",
+   "lang": "lzh",
+   "label": "雜阿含經 （一一〇六）",
+   "who": "劉宋 求那跋陀羅譯"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（三五）"
+  },
+  {
+   "work": "T0099",
+   "node": "（一一〇六）"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "sn11.12": "Saṁyutta Nikāya 11.12 2. Dutiyavagga Sakkanāmasutta Sāvatthiyaṁ jetavane.",
+   "nan-sn11.12": "〔一二〕第二　諸天（二）〔爾時，世尊〕住舍衛城祇樹給孤獨園……",
+   "T0100-sa-2.35": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。",
+   "T0099-sa1106": "如是我聞：一時，佛住鞞舍離國獼猴池側重閣講堂。"
+  },
+  "a01": {
+   "sn11.12": "Tatra kho bhagavā bhikkhū etadavoca:",
+   "nan-sn11.12": "於此，世尊以此告諸比丘：",
+   "T0100-sa-2.35": "爾時，有一比丘往到佛所，頂禮佛足，在一面立。白佛言：「世尊！云何名帝釋？云何作帝釋相？」",
+   "T0099-sa1106": "時，有異比丘來詣佛所，稽首佛足，退住一面，白佛言：「世尊！何因、何緣釋提桓因名釋提桓因？」"
+  },
+  "a02": {
+   "sn11.12": "“sakko, bhikkhave, devānamindo pubbe manussabhūto samāno magho nāma māṇavo ahosi, tasmā maghavāti vuccati. Sakko, bhikkhave, devānamindo pubbe manussabhūto samāno pure dānaṁ adāsi, tasmā purindadoti vuccati. Sakko, bhikkhave, devānamindo pubbe manussabhūto samāno sakkaccaṁ dānaṁ adāsi, tasmā sakkoti vuccati. Sakko, bhikkhave, devānamindo pubbe manussabhūto samāno āvasathaṁ adāsi, tasmā vāsavoti vuccati. Sakko, bhikkhave, devānamindo sahassampi atthānaṁ muhuttena cinteti, tasmā sahassakkhoti vuccati. Sakkassa, bhikkhave, devānamindassa sujā nāma asurakaññā pajāpati, tasmā sujampatīti vuccati. Sakko, bhikkhave, devānamindo devānaṁ tāvatiṁsānaṁ issariyādhipaccaṁ rajjaṁ kāreti, tasmā devānamindoti vuccati. Sakkassa, bhikkhave, devānamindassa pubbe manussabhūtassa satta vatapadāni samattāni samādinnāni ahesuṁ, yesaṁ samādinnattā sakko sakkattaṁ ajjhagā.",
+   "nan-sn11.12": "「諸比丘！天帝釋以前為人時，名為摩怯儒兒童，是故今稱摩怯婆。諸比丘！天帝釋以前為人時，施與各街市，是故稱富蘭陀羅。諸比丘！天帝釋以前為人時，恭敬而與施，故稱釋羅。諸比丘！天帝釋以前為人時，以與住處，故稱婆娑婆。諸比丘！天帝釋以前為人時，一剎那間能思慮千事，故稱千眼者。諸比丘！天帝釋稱須闍者，乃有阿修羅女之妻，故稱須闍之夫。諸比丘！天帝釋乃統治三十三天之主權者，故稱為天王。」一〇～一二〔同前經之二～五〕",
+   "T0100-sa-2.35": "佛告比丘：「帝釋本在人中，所有布施，生純信心，信心施於貧窮、沙門、婆羅門等。其所施時，施漿飲食，種種餚饍，種種華鬘，種種諸香，燒香、塗香，財帛床榻。以是因緣。時諸天等名為帝釋。」比丘復白佛：「何故名帝釋為富蘭但那？」佛告比丘：「帝釋昔在人中，施無厭足，數數施故，諸天號名為富蘭但那。」「以何因緣，復名帝釋為摩佉婆？」佛告比丘：「帝釋本作婆羅門，名摩佉婆。」又問：「復何因緣，名婆娑婆？」佛言：「數數常以衣服施沙門、婆羅門，以是緣故，名婆娑婆。」又問：「復何因緣，名憍尸迦？」佛告比丘：「帝釋本為人時，姓憍尸迦，故名憍尸迦。」「復何因緣，名舍脂夫？」佛告比丘：「帝釋娶毘摩質多羅阿修羅王女，名舍脂。」又問：「復以何緣，名為千眼？」佛告比丘：「帝釋本為人時，極大聰明，斷事之時，須臾之間，能斷千事，以是因緣，故名千眼。」「復以何緣，名因陀羅？」佛告比丘：「帝釋居天王位，斷理天事故，名因陀羅。」",
+   "T0099-sa1106": "佛告比丘：「釋提桓因本為人時，行於頓施；沙門、婆羅門、貧窮、困苦、求生行路乞，施以飲食、錢財、穀、帛、華香、嚴具、床臥、燈明，以堪能故，名釋提桓因。」比丘復白佛言：「世尊！何因、何緣故，釋提桓因復名富蘭陀羅？」佛告比丘：「彼釋提桓因本為人時，數數行施衣被、飲食，乃至燈明。以是因緣，故名富蘭陀羅。」比丘復白佛言：「何因、何緣故，復名摩伽婆。」佛告比丘：「彼釋提桓因本為人時，名摩伽婆故，釋提桓因即以本名，名摩伽婆。」比丘復白佛言：「何因、何緣復名娑婆婆？」佛告比丘：「彼釋提桓因本為人時，數以婆詵私衣布施供養。以是因緣故，釋提桓因名娑婆婆。」比丘復白佛言：「世尊！何因、何緣釋提桓因復名憍尸迦？」佛告比丘：「彼釋提桓因本為人時，為憍尸族姓人。以是因緣故，彼釋提桓因復名憍尸迦。」比丘問佛言：「世尊！何因、何緣彼釋提桓因名舍脂鉢低？」佛告比丘：「彼阿修羅女名曰舍脂，為天帝釋第一天后，是故帝釋名舍脂鉢低。」比丘白佛言：「世尊！何因、何緣釋提桓因復名千眼？」佛告比丘：「彼釋提桓因本為人時，聰明智慧，於一坐間，思千種義，觀察稱量。以是因緣，彼天帝釋復名千眼。」比丘白佛：「何因、何緣彼釋提桓因復名因提利？」佛告比丘：「彼天帝釋於諸三十三天，為王為主。以是因緣故，彼天帝釋名因提利。」"
+  },
+  "a03": {
+   "sn11.12": "Katamāni satta vatapadāni? Yāvajīvaṁ mātāpettibharo assaṁ, yāvajīvaṁ kule jeṭṭhāpacāyī assaṁ, yāvajīvaṁ saṇhavāco assaṁ, yāvajīvaṁ apisuṇavāco assaṁ, yāvajīvaṁ vigatamalamaccherena cetasā agāraṁ ajjhāvaseyyaṁ muttacāgo payatapāṇi vossaggarato yācayogo dānasaṁvibhāgarato, yāvajīvaṁ saccavāco assaṁ, yāvajīvaṁ akkodhano assaṁ—sacepi me kodho uppajjeyya, khippameva naṁ paṭivineyyanti. Sakkassa, bhikkhave, devānamindassa pubbe manussabhūtassa imāni satta vatapadāni samattāni samādinnāni ahesuṁ, yesaṁ samādinnattā sakko sakkattaṁ ajjhagāti.",
+   "T0099-sa1106": "佛告比丘：「然彼釋提桓因本為人時，受持七種受。以是因緣，得天帝釋。何等為七？釋提桓因本為人時，供養父母；乃至等行惠施，是為七種受。以是因緣，為天帝釋。」"
+  },
+  "a04": {
+   "sn11.12": "Mātāpettibharaṁ jantuṁ, kule jeṭṭhāpacāyinaṁ; Saṇhaṁ sakhilasambhāsaṁ, pesuṇeyyappahāyinaṁ. Maccheravinaye yuttaṁ, saccaṁ kodhābhibhuṁ naraṁ; Taṁ ve devā tāvatiṁsā, āhu sappuriso itī”ti.",
+   "T0100-sa-2.35": "爾時，世尊告比丘：「能具上七事，以是緣故，諸天號曰帝釋。」佛說是已，諸比丘聞佛所說，歡喜奉行。",
+   "T0099-sa1106": "爾時，世尊即說偈言……如上廣說。佛說此經已，諸比丘聞佛所說，歡喜奉行。"
+  }
+ }
+}
