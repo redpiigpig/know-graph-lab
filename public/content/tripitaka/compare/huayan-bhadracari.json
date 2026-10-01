@@ -128,7 +128,15 @@
   "T0296",
   "T0297"
  ],
- "anchors": [],
+ "anchors": [
+  {
+   "work": "T0293",
+   "range": [
+    "T10n0293_p0847a01",
+    "T10n0293_p0848b11"
+   ]
+  }
+ ],
  "cells": {
   "bh-00": {
    "sa": "atha khalu samantabhadro bodhisattvo mahāsattvaḥ evameva lokadhātuparaṃparānabhilāpyānabhilāpyabuddhakṣetraparamāṇurajaḥsamān kalpān kalpaprasarānabhidyotayamāno bhūyasyā mātrayā gāthābhigītena praṇidhānamakārṣīt -",

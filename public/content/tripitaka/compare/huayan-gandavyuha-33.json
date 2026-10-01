@@ -1,0 +1,115 @@
+{
+ "slug": "huayan-gandavyuha-33",
+ "title": "華嚴經・入法界品 33　安住地神",
+ "family": "sa",
+ "intro": "入法界品第 33 章（藏譯章次），安住地神（Sthāvarā）。分三節：參詣請問／善知識說所得法門（以回答善財「云何學菩薩行」的第一句為界）／「我唯知此…」謙推勝進、指示後友、辭退。",
+ "units": [
+  {
+   "id": "g33-a",
+   "label": "善財參詣・請問菩薩行"
+  },
+  {
+   "id": "g33-b",
+   "label": "安住地神說所得法門"
+  },
+  {
+   "id": "g33-c",
+   "label": "謙推勝進・指示後友・辭退"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本",
+   "who": "Gaṇḍavyūha・GRETIL（Vaidya 1960）"
+  },
+  {
+   "id": "T0278",
+   "lang": "lzh",
+   "label": "六十華嚴",
+   "who": "佛馱跋陀羅譯《華嚴經》入法界品・421 年",
+   "work": "T0278"
+  },
+  {
+   "id": "T0279",
+   "lang": "lzh",
+   "label": "八十華嚴",
+   "who": "實叉難陀譯《華嚴經》入法界品・699 年",
+   "work": "T0279"
+  },
+  {
+   "id": "T0293",
+   "lang": "lzh",
+   "label": "四十華嚴",
+   "who": "般若譯《華嚴經》入不思議解脫境界普賢行願品・798 年",
+   "work": "T0293"
+  },
+  {
+   "id": "bo",
+   "lang": "bo",
+   "label": "藏譯",
+   "who": "德格版 Toh 44 第 45 品（Gaṇḍavyūha）・84000"
+  },
+  {
+   "id": "en",
+   "lang": "en",
+   "label": "84000 英譯",
+   "who": "譯自藏譯・與藏文逐句對齊"
+  }
+ ],
+ "works": [
+  "T0278",
+  "T0279",
+  "T0293"
+ ],
+ "anchors": [
+  {
+   "work": "T0278",
+   "range": [
+    "T09n0278_p0719c15",
+    "T09n0278_p0719c29"
+   ]
+  },
+  {
+   "work": "T0279",
+   "range": [
+    "T10n0279_p0368b28",
+    "T10n0279_p0369a14"
+   ]
+  },
+  {
+   "work": "T0293",
+   "range": [
+    "T10n0293_p0737c12",
+    "T10n0293_p0738b13"
+   ]
+  }
+ ],
+ "cells": {
+  "g33-a": {
+   "sa": "atha khalu sudhanaḥ śreṣṭhidārako 'nupūrveṇa yena magadhaviṣaye bodhimaṇḍe sthāvarā pṛthvīdevatā tenopasaṃkrāntaḥ / daśapṛthivīdevatāśatasahasrāṇi anyonyamevaṃ vācamudīrayāmāsuḥ - ayaṃ sa āgacchati, yaḥ sarvasattvānāṃ pratiśaraṇabhūto bhaviṣyati / ayaṃ sa tathāgatagarbha āgacchati, yaḥ sarvasattvānāmavidyāṇḍakośaṃ nirbhetsyati / ayaṃ sa dharmarājakulodita āgacchati, yo 'saṅgavaravimaladharmarājapaṭṭamābandhiṣyati / ayaṃ sa jñānanārāyaṇavajrapraharaṇaśūra āgacchati, yaḥ sarvaparapravādicakraṃ pramardiṣyati / atha tāni sthāvarāpramukhāni daśapṛthivīdevatāśatasahasrāṇi mahāpṛthivīcālaṃ kṛtvā gambhīrajaladharanirnādaṃ janayitvā sarvaṃ trisāhasraṃ lokadhātumudāreṇāvabhāsenāvabhāsya sarvaratnābharaṇālaṃkārapratimaṇḍitaśarīrāṇi vidyullatākalāpā iva gaganatale lambamānāḥ, prarohadbhiḥ sarvavṛkṣāṅkuraiḥ, praphulladbhiḥ sarvapuṣpavṛkṣaiḥ, pravarṣadbhiḥ sarvanadīsrotobhiḥ, unnamadbhiḥ sarvotsasarohradataḍāgaiḥ, pravarṣadbhirmahāgandhodakavarṣaiḥ, pravāyadbhiḥ kusumaughotkarapravāhibhirmahāvātaiḥ, pravādayadbhiḥ tūryakoṭīniyutaśatasahasraiḥ, prasaradbhiḥ divyavimānābharaṇamakuṭaiḥ, praṇadadbhiḥ govṛṣagajavyāghramṛgendraiḥ, pragarjadbhiḥ devāsuroragabhūtādhipatibhiḥ, saṃghaṭṭamānairmahāśailendraiḥ utplavadbhiḥ, nidhicayakoṭīśatasahasraiḥ unnamadbhiḥ, dharaṇītalādabhyudgatāni //",
+   "T0278": "趣摩竭國，詣彼道場安住地神。爾時，一萬地天各作是言：「此來童子，能攝眾生，即是佛藏；能破一切眾生無明㲉膜，生法王家，離垢無礙，寶繒以冠其頂，智慧寶藏摧外道輪。」時，安住地天等一萬地天，雨眾香水以灑其地，掃以香風而以莊嚴，放大光明普照三千大千世界。眾寶莊嚴，一切華樹開敷鮮茂，一切果樹悉成果實，一切泉源、河池流相灌注，演出種種娛樂音聲，諸天眾寶莊嚴樓閣，異類眾鳥皆悉歡喜，出哀和音，無量寶藏自然涌出。爾時，安住地神告善財言：「善來童子！汝欲自見曾於此處所種善根果報不乎？」爾時，善財頭面敬禮彼地神足，恭敬合掌，於一面住，白言：「大聖！唯然欲見。」時，彼地神即以足指按地，無量阿僧祇那由他寶藏開發顯現。",
+   "T0279": "爾時，善財童子漸次遊行，趣摩竭提國菩提場內安住神所，百萬地神同在其中，更相謂言：「此來童子即是佛藏，必當普為一切眾生作所依處，必當普壞一切眾生無明㲉藏。此人已生法王種中，當以離垢無礙法繒而冠其首，當開智慧大珍寶藏，摧伏一切邪論異道。」時，安住等百萬地神，放大光明，遍照三千大千世界，普令大地同時震吼，種種寶物處處莊嚴，影潔光流遞相鑒徹；一切葉樹俱時生長，一切華樹咸共開敷，一切果樹靡不成熟，一切河流遞相灌注，一切池沼悉皆盈滿；雨細香雨遍灑其地，風來吹華普散其上，無數音樂一時俱奏，天莊嚴具咸出美音；牛王、象王、師子王等，皆生歡喜，踊躍、哮吼，猶如大山相擊出聲；百千伏藏自然踊現。時，安住地神告善財言：「善來童子！汝於此地曾種善根，我為汝現，汝欲見不？」爾時，善財禮地神足，遶無數匝，合掌而立，白言：「聖者！唯然！欲見。」",
+   "T0293": "爾時，善財童子受天神教，漸次前行，往東北方趣摩竭提國菩提樹王大道場處，將詣自性不動神所。十千地神同在其中，更相謂言：「此來童子，即是一切如來寶藏，必當普為一切眾生作所依怙，必當普壞一切眾生無明㲉藏。此人已生法王種中，當以法繒而冠其首，當開智慧大珍寶藏；當執菩薩金剛慧劍，勇猛自在，得法無畏，摧伏一切異道邪論；當以法船於生死海，運濟眾生，令達彼岸。智解圓滿，猶如白月，必當息滅一切眾生熱惱亂心。」爾時，自性不動神等一萬地神，即以神力震動大地，出雷吼聲，放大光明遍照三千大千世界。種種寶物處處莊嚴，影潔光流遞相鑒徹，一切葉樹俱時生長，一切華樹咸共開敷，一切果樹靡不成熟，一切河流互相灌注，一切池沼悉皆盈滿。興大密雲，雨細香雨，遍灑其地。香風時來，吹眾名華普散其上。無數音樂一時俱奏，出可愛聲，天莊嚴具，咸出美音，令人歡悅。天、阿修羅，乃至非人、牛王、象王、師子王等，皆大歡喜，踊躍哮吼，猶如大山相擊出聲。百千伏藏，自然涌現。時，彼地神告善財言：「善來童子！汝於此處曾種善根，我為汝現，汝欲見不？」爾時，善財禮地神足，遶無數匝，合掌而立，白言：「聖者！唯然欲見。」時，彼地神以足按地，百千億阿僧祇摩尼寶藏自然涌出，開發顯現。",
+   "bo": "དེ་ནས་ཚོང་དཔོན་གྱི་བུ་ནོར་བཟངས་མཐར་གྱིས་ཡུལ་མ་གདྷའི་སྙིང་པོ་བྱང་ཆུབ་ཏུ་སའི་ལྷ་མོ་བརྟན་མ་གང་ན་བ་དེར་སོང་བ་དང་དེ་འགྲོ་བའི་ཚེ་སའི་ལྷ་མོ་བརྒྱ་སྟོང་ཕྲག་བཅུ་གཅིག་ལ་གཅིག་འདི་སྐད་ཅེས་འཛེར་ཏོ། ། སེམས་ཅན་ཐམས་ཅད་ཀྱི་རྟེན་དུ་འགྱུར་བ་ཞིག་ནི་འདི་ནས་ཚུར་འོང་ངོ་། །དེ་བཞིན་གཤེགས་པའི་སྙིང་པོ་ཅན་སེམས་ཅན་ཐམས་ཅད་ཀྱི་མ་རིག་པའི་སྒོ་ངའི་སྦུབས་འདྲ་ལ་བར་འགྱུར་བ་ཞིག་ནི་འདི་ནས་ཚུར་འོང་ངོ་། ། ཆོས་ཀྱི་རྒྱལ་པོའི་རིགས་སུ་བྱུང་བ་ཆགས་པ་མེད་ཅིང་དྲི་མ་མེད་པའི་ཆོས་ཀྱི་རྒྱལ་པོའི་གོ་འཕང་དམ་པ་འཐོབ་པར་འགྱུར་བ་ཞིག་ནི་འདི་ནས་ཚུར་འོང་ངོ་། ། ཡེ་ཤེས་ཀྱི་མཐུ་བོ་ཆེ་རྡོ་རྗེའི་མཚོན་ཆ་ཅན་དཔའ་བོ་ཕས་ཀྱི་རྒོལ་བའི་འཁོར་ཐམས་ཅད་རབ་ཏུ་འདུལ་བ་ཞིག་ནི་འདི་ནས་ཚུར་འོང་ངོ་ཞེས་ནས། དེའི་མོད་ལ་ལྷ་མོ་བརྟན་མ་ལ་སྩོགས་པ། སའི་ལྷ་མོ་བརྒྱ་སྟོང་ཕྲག་བཅུས་ས་ཆེན་པོ་རབ་ཏུ་བསྐྱོད་དེ། འབྲུག་སྒྲ་ཟབ་མོ་ལྟ་བུའི་སྒྲ་ཆེན་པོ་གྲག་པར་བྱས་ནས། སྟོང་གསུམ་གྱི་སྟོང་ཆེན་པོའི་འཇིག་རྟེན་གྱི་ཁམས་འོད་ཆེན་པོས་སྣང་བར་བྱས་ཏེ། ལུས་རིན་པོ་ཆེའི་རྒྱན་དང་། ལྷབ་ལྷུབ་ཐམས་ཅད་ཀྱིས་ཤིན་ཏུ་བརྒྱན་ནས། གློག་གི་ཕྲེང་བའི་ཚོགས་ནམ་མཁའི་དབྱིངས་ལས་འགྱུ་ཞིང་སྣང་བ་ལྟ་བུ་ཤ་སྟག་དུ་བྱས་ཏེ། ཤིང་ཐམས་ཅད་ཀྱི་མྱུ་གུ་ནི་སྐྱེ་བར་བྱེད། མེ་ཏོག་གི་ཤིང་ཐམས་ཅད་ནི་ཁ་འབུ་བར་བྱེད། ཆུ་ཀླུང་གི་རྒྱུན་ཐམས་ཅད་ནི་འབབ་པར་བྱེད། མཚོ་དང་མཚེའུ་དང་ལུ་མ་ཐམས་ཅད་ནི་རྒྱས་པར་བྱེད། སྤོས་ཆུའི་ཆར་པ་ནི་རབ་ཏུ་འབབ་པར་བྱེད། མེ་ཏོག་གི་སྤྲིན་རབ་ཏུ་འཐོར་བའི་རླུང་ཆེན་པོ་ནི་ལྡང་བར་བྱེད། སིལ་སྙན་བྱེ་བ་ཁྲག་ཁྲིག་བརྒྱ་སྟོང་ནི་རབ་ཏུ་ སྒྲ་སྒྲོག་པར་བྱེད། ལྷ་རྫས་ཀྱི་གཞལ་མེད་ཁང་དང་རྒྱན་གྱི་ཚོགས་མང་པོ་ནི་རབ་ཏུ་འཁྲོལ་བར་བྱེད། བ་ལང་དང་། ཁྱུ་མཆོག་དང་། གླང་པོ་དང་། སྟག་དང་། རི་དགས་ཀྱི་དབང་པོ་ནི་རབ་ཏུ་སྒྲ་འབྱིན་པར་བྱེད། ལྷ་དང་ལྷ་མ་ཡིན་དང་། ཀླུ་དང་འབྱུང་པོའི་དབང་པོ་རྣམས་ནི་འབྲུག་སྒྲ་འབྱིན་པར་བྱེད།",
+   "en": "Sthāvarā Chapter 33  Then Sudhana, the head merchant’s son, eventually reached the goddess of the earth, Sthāvarā, in the land of Magadha’s bodhimaṇḍa. When he arrived there, one million earth goddesses proclaimed to one another, “Someone who will be a refuge for all beings is coming here! Someone who has the essence of the tathāgatas and who will break open the enclosing egg of ignorance of all beings is coming here! Someone who is in the family of the kings of Dharma and will attain the state of an unimpeded, stainless king of the Dharma is coming here! Someone who is a hero with the thunderbolt weapon that has the great power of wisdom and who will subdue the circle of opponents is coming here!” At that moment, Sthāvarā and the other one million earth goddesses shook the great earth, caused a loud sound like deep thunder, and illuminated the world realm of a billion worlds with a vast light. Their bodies were adorned by all adornments and precious jewelry. They shone and moved in the sky like a mass of streaks of lightning. They rose up out of the ground, causing the seedlings of all trees to sprout; causing all flowering trees to blossom; causing all rivers to flow; causing lakes, ponds, and reservoirs to rise; causing a great rain of scented water to fall; causing a great wind that scattered a cloud of flowers to blow; causing a quintillion musical instruments to sound; causing a multitude of divine aerial palaces and ornaments to spread; causing the lords of cows, bulls, elephants, tigers, and deer to make their cries; causing the leaders of devas, asuras, nāgas, and bhūtas to roar; causing the great lords of mountains to clash together; and causing trillions of masses of treasures to emerge."
+  },
+  "g33-b": {
+   "sa": "atha sthāvarā pṛthivīdevatā sudhanaṃ śreṣṭhidārakamevamāha - svāgataṃ te kulaputra / ayaṃ sa pṛthivīpradeśo yatra te sthitvā kuśalamūlānyavaropitāni yatrāhaṃ pratyakṣā / kimicchasi tadvipākaphalaikadeśaṃ draṣṭum? atha khalu sudhanaḥ śreṣṭhidārakaḥ sthāvarāyāḥ pṛthivīdevatāyāḥ pādau śirasābhivandya sthāvarāṃ pṛthivīdevatāmanekaśatasahasrakṛtvaḥ pradakṣiṇīkṛtya sthāvarāyāḥ pṛthivīdevatāyāḥ purataḥ prāñjaliḥ sthitvā evamāha - icchāmyārye // atha khalu sthāvarā pṛthivīdevatā pādatalābhyāṃ mahāpṛthivīṃ parāhatya asaṃkhyeyamaṇiratnanidhānakoṭīśatasahasrapratimaṇḍitāmupadarśya evamāha - imāni kulaputra maṇiratnanidhānakoṭīniyutaśatasahasrāṇi tavānugāmīni, tava purojavāni, tava yathecchopabhogyāni, tava puṇyavipākanirjātāni, tava puṇyabalarakṣitāni / tebhyastvaṃ gṛhītvā yatkārthaṃ tatkuruṣva / api tvahaṃ kulaputra jñānaduryodhanagarbhasya bodhisattvavimokṣasya lābhinī / sā ahametena bodhisattvavimokṣeṇa samanvāgatā dīpaṃkaratathāgatamupādāya bodhisattvasya nityānubaddhā satatamārakṣāpratipannā / tataḥ prabhṛti ahaṃ kulaputra bodhisattvasya cittacaritaṃ vyavacārayāmi, jñānaviṣayamavagāhayāmi, sarvapraṇidhānamaṇḍalamavatarāmi, bodhisattvacaryāviśuddhimanugacchāmi, sarvasamādhinayamanusarāmi, sarvabodhisattvābhijñācittavipulatāṃ spharāmi / sarvabodhisattvabalādhipateyatāṃ sarvabodhisattvāsaṃhāryatāṃ sarvakṣetrajālaspharaṇatāṃ sarvatathāgatavyākaraṇasaṃpratīcchanatāṃ sarvakālābhisaṃbodhisaṃdarśanatāṃ sarvadharmacakrapravartananayaṃ sarvasūtrāntasaṃprabhāṣaṇadharmameghanayaṃ mahādharmāvalokāvabhāsanayaṃ (Gv 170) sarvasattvaparipācanavinayajñānanayaṃ sarvabuddhavikurvitasaṃdarśananayaṃ ca anugacchāmi saṃdhārayāmi saṃpratīcchāmi // eṣa ca me kulaputra jñānaduryodhanagarbho bodhisattvavimokṣaḥ sumeruparamāṇurajaḥsamānāṃ kalpānāṃ pareṇa paratareṇa candradhvajāyāṃ lokadhātau sunetrasya tathāgatasyāntikātpratilabdhaḥ avabhāsavyūhe kalpe / sā ahaṃ kulaputra imaṃ jñānaduryodhanagarbhaṃ bodhisattvavimokṣamāyūhantī niryūhantī saṃvardhayantī vipulīkurvāṇā avirahitābhūvaṃ tathāgatadarśanena yāvad bhadrakalpāt / atra ca mayā anabhilāpyānabhilāpyabuddhakṣetraparamāṇurajaḥsamāstathāgatā arhantaḥ samyaksaṃbuddhā ārāgitāḥ / sarveṣā ca me teṣāṃ tathāgatānāṃ bodhimaṇḍopasaṃkramaṇavikurvitaṃ dṛṣṭam / sarveṣāṃ ca ahaṃ teṣāṃ tathāgatānāṃ kuśalamūleṣu sākṣībhūtā /",
+   "T0278": "「善男子！汝昔所種善根、果報，致此寶藏自在隨汝。善男子！我已成就菩薩不可壞藏法門，我於然燈佛來，常護菩薩修習菩薩行，深入智慧境界，盡其源底，大願成滿，淨菩薩行，出生菩薩一切通明，具足菩薩諸力功德，成就菩薩不可壞法。遊諸佛剎，聞一切佛所授記法，轉一切法輪，一切修多羅法雲以大法光明教化眾生，受持諸佛自在神力。善男子！乃往古世，過須彌山微塵等劫，有劫名莊嚴，世界名月幢，佛號善眼。於彼佛所得此法門，修習長養淨此法門，於其中間常遇不可說不可說佛剎微塵等佛，彼諸如來往詣道場，自在神力皆悉奉覲，於此佛所修集善根。",
+   "T0279": "時，安住地神以足按地，百千億阿僧祇寶藏自然踊出，告言：「善男子！今此寶藏隨逐於汝，是汝往昔善根果報，是汝福力之所攝受，汝應隨意自在受用。「善男子！我得菩薩解脫，名：不可壞智慧藏，常以此法成就眾生。「善男子！我憶自從然燈佛來，常隨菩薩，恭敬守護，觀察菩薩所有心行、智慧境界、一切誓願、諸清淨行、一切三昧、廣大神通、大自在力、無能壞法，遍往一切諸佛國土，普授一切諸如來記，轉於一切諸佛法輪，廣說一切修多羅門，大法光明普皆照耀，教化調伏一切眾生，示現一切諸佛神變，我皆能領受、皆能憶持。「善男子！乃往古世，過須彌山微塵數劫，有劫名：莊嚴，世界名：月幢，佛號：妙眼，於彼佛所得此法門。善男子！我於此法門，若入若出修習增長，常見諸佛未曾捨離，始從初得乃至賢劫，於其中間，值遇不可說不可說佛剎微塵數如來、應、正等覺，悉皆承事，恭敬供養；亦見彼佛詣菩提座，現大神力；亦見彼佛所有一切功德善根。",
+   "T0293": "地神告言：「善男子！今此寶藏隨逐汝行，是汝往昔善根果報，是汝福力之所守護，汝應恣意自在而用。善男子！我得菩薩解脫，名難摧伏智慧藏，常以此法具足圓滿成熟眾生。「善男子！我憶自從然燈佛來，常隨菩薩恭敬守護，如影隨形。從始至今，念念無間，觀察菩薩所有心行，普遍尋求深入菩薩一切誓願智慧境界，圓滿菩薩一切所修諸清淨行，思惟菩薩一切三昧，隨順、明達、安住菩薩一切法門，究竟了知一切心性，圓滿一切大自在力，增長一切無能壞法，遍往一切諸佛剎土，普受一切諸如來記，憶持現覺一切智性，轉於一切諸佛法輪，廣說一切修多羅門，大法光明普皆照耀，教化調伏一切眾生，示現一切諸佛神變，隨順解知，受持憶念，常無忘失。善男子！乃往古世過須彌山極微塵數劫，有劫名莊嚴，世界名月幢，佛號妙眼；於彼佛所最初獲得此解脫門。善男子！我從是來，於此法門若入、若出，修習、增長，常見諸佛未曾捨離。始從初得，乃至賢劫，於其中間值遇不可說不可說佛剎極微塵數如來、應、正等覺，悉皆承事，恭敬供養。亦見彼佛詣菩提樹坐道場時，現大神通種種佛事；亦見彼佛所有一切功德善根。",
+   "bo": "རིའི་དབང་པོ་ཆེན་པོ་རྣམས་ནི་ཕན་ཚུན་ཐུག་པར་བྱེད། གཏེར་གྱི་ཚོགས་བྱེ་བ་བརྒྱ་སྟོང་ནི་མངོན་དུ་བྱུང་བར་བྱེད་ཅིང་སའི་འོག་ནས་འཐོན་ཏོ། །དེ་ནས་སའི་ལྷ་མོ་བརྟན་མས་ཚོང་དཔོན་གྱི་བུ་ནོར་བཟངས་ལ་འདི་སྐད་ཅེས་སྨྲས་སོ། །རིགས་ཀྱི་བུ་ཁྱོད་འདིར་འོངས་པ་ལེགས་སོ། ། སའི་ཕྱོགས་འདི་ནི་སྔོན་ཁྱོད་ཀྱི་གནས་སུ་གྱུར་ཏེ། ཁོ་མོའི་མངོན་སུམ་དུ་དགེ་བའི་རྩ་བ་བསྐྱེད་པ་ཡིན་ན། དེའི་རྣམ་པར་སྨྱིན་པའི་ཕྱོགས་འགའ་ཙམ་བལྟ་བར་འདོད་དམ། དེ་ནས་ཚོང་དཔོན་གྱི་བུ་ནོར་བཟངས་ཀྱིས་སའི་ལྷ་མོ་བརྟན་མའི་རྐང་པ་གཉིས་ལ་སྤྱི་བོས་ཕྱག་འཚལ་ཏེ། སའི་ལྷ་མོ་བརྟན་མ་ལ་ལན་བརྒྱ་སྟོང་དུ་མར་གཡས་ཕྱོགས་སུ་བསྐོར་བ་བྱས་ནས། སའི་ལྷ་མོ་བརྟན་མའི་མདུན་དུ་འདུག་སྟེ་ཐལ་མོ་སྦྱར་ནས་འདི་སྐད་ཅེས་སྨྲས་སོ། །འཕགས་མ་འཚལ་ལོ། ། དེ་ནས་སའི་ལྷ་མོ་བརྟན་མས་རྐང་པའི་མཐིལ་གྱིས་ས་ཆེན་པོ་ལ་བརྡབས་ཏེ། རིན་པོ་ཆེའི་གཏེར་བྱེ་བ་བརྒྱ་སྟོང་གྲངས་མེད་པ་རབ་ཏུ་བརྒྱན་པ་བསྟན་ནས་འདི་སྐད་ཅེས་སྨྲས་སོ། །རིགས་ཀྱི་བུ་རིན་པོ་ཆེའི་གཏེར་བྱེ་བ་ཁྲག་ཁྲིག་བརྒྱ་སྟོང་འདི་དག་ཀྱང་ཁྱོད་ཀྱི་རྗེས་སུ་འབྲང་བའོ། ། ཁྱོད་ཀྱི་སྔོན་དུ་འགྲོ་བའོ། ། ཁྱོད་ཀྱིས་ཅི་དགར་སྤྱད་པའོ། ། ཁྱོད་ཀྱི་བསོད་ནམས་ཀྱི་རྣམ་པར་སྨིན་པ་ལས་བྱུང་བའོ། ། ཁྱོད་ཀྱི་བསོད་ནམས་ཀྱི་སྟོབས་ཀྱིས་བསྲུངས་པའོ། ། འདི་ལས་ལོང་སྟེ། ཁྱོད་ཀྱིས་ཅི་དགོས་པ་དེ་དག་གྱིས་ཤིག ། རིགས་ཀྱི་བུ་གཞན་ཡང་ཁོ་མོ་ནི་བྱང་ཆུབ་སེམས་དཔའི་རྣམ་པར་ཐར་པ་ཡེ་ཤེས་ཐུབ་པར་དཀའ་ བའི་སྙིང་པོ་ཅན་ཐོབ་པ་སྟེ། དེ་ལྟར་ཁོ་མོ་ནི་བྱང་ཆུབ་སེམས་དཔའི་རྣམ་པར་ཐར་པ་འདི་དང་ལྡན་པས། དེ་བཞིན་གཤེགས་པ་མར་མེ་མཛད་ཚུན་ཆད་དུ་བྱང་ཆུབ་སེམས་དཔའི་རྗེས་སུ་འབྲང་ཞིང་། རྟག་ཏུ་བསྲུང་བ་ལ་ཞུགས་པ་སྟེ། དེ་ཚུན་ཆད་དུ་རིགས་ཀྱི་བུ་ཁོ་མོ་ནི་བྱང་ཆུབ་སེམས་དཔའི་སེམས་ཀྱི་སྤྱོད་པ་ལ་རྣམ་པར་སྤྱོད་དོ། །ཡེ་ཤེས་ཀྱི་ཡུལ་ལ་འཇུག་གོ །སྨོན་ལམ་གྱི་དཀྱིལ་འཁོར་ཁོང་དུ་ཆུད་པར་བྱེད་དོ། །བྱང་ཆུབ་སེམས་དཔའི་སྤྱོད་པ་རྣམ་པར་དག་པ་རྗེས་སུ་རྟོགས་པར་བྱེད་དོ། །ཏིང་ངེ་འཛིན་ཐམས་ཅད་ཀྱི་ཚུལ་གྱི་རྗེས་སུ་འབྲང་ངོ་། །བྱང་ཆུབ་སེམས་དཔའི་མངོན་པར་ཤེས་པ་ཐམས་ཅད་དང་། སེམས་རྒྱ་ཆེན་པོས་རྒྱས་པར་འགེངས་སོ། །བྱང་ཆུབ་སེམས་དཔའ་ཐམས་ཅད་ཀྱི་སྟོབས་ཀྱིས་དབང་བསྒྱུར་བ་དང་། ཞིང་གི་དྲ་བ་ཐམས་ཅད་རྒྱས་པར་དགང་བ་དང་། དེ་བཞིན་གཤེགས་པ་ཐམས་ཅད་ཀྱིས་ལུང་བསྟན་པ་ཡང་དག་པར་མནོད་པ་དང་། དུས་ཐམས་ཅད་དུ་མངོན་པར་འཚང་རྒྱ་བ་ཡང་དག་པར་བསྟན་པ་དང་། ཆོས་ཀྱི་འཁོར་ལོ་བསྐོར་བའི་ཚུལ་ཐམས་ཅད་དང་། མདོ་སྡེ་ཡང་དག་པར་བརྗོད་པའི་ཆོས་ཀྱི་སྤྲིན་གྱི་ཚུལ་ཐམས་ཅད་དང་། ཆོས་སྣང་བ་ཆེན་པོས་སྣང་བར་བྱ་བའི་ཚུལ་དང་། སེམས་ཅན་ཐམས་ཅད་ཡོངས་སུ་སྨྱིན་པར་བྱ་བའི་ཚུལ་དང་། སངས་རྒྱས་ཀྱི་རྣམ་པར་འཕྲུལ་པ་ཐམས་ཅད་ཡང་དག་པར་བསྟན་པའི་ཚུལ་ཡང་རྗེས་སུ་རྟོགས་པར་བྱེད་དོ། ། ཡང་དག་པར་འཛིན་ཏོ། །ཡང་དག་པར་ནོད་དོ། །རིགས་ཀྱི་བུ་བྱང་ཆུབ་སེམས་དཔའི་རྣམ་པར་ཐར་པ་ཡེ་ཤེས་ཐུབ་པར་དཀའ་བའི་སྙིང་པོ་ཅན་འདི་ཡང་བསྐལ་པ་རི་རབ་ཀྱི་རྡུལ་ཤིན་ཏུ་ཕྲ་བ་སྙེད་ཀྱི་ཕ་རོལ་དེའི་ཡང་ཕ་རོལ་ཅིག་ཏུ་འཇིག་རྟེན་གྱི་ཁམས་ཟླ་བའི་རྒྱལ་མཚན་ཞེས་བྱ་བར་བསྐལ་པ་སྣང་བས་རྣམ་པར་བརྒྱན་པ་ལ་དེ་བཞིན་གཤེགས་པ་སྤྱན་བཟང་པོ་ལས་ཐོབ་སྟེ། རིགས་ཀྱི་བུ་དེ་ལྟར་ཁོ་མོ་བྱང་ཆུབ་ སེམས་དཔའི་རྣམ་པར་ཐར་པ་ཡེ་ཤེས་ཐུབ་པར་དཀའ་བའི་སྙིང་པོ་ཅན་འདི་ལ་ཡོངས་སུ་དཔྱོད་དཔྱོད། རྣམ་པར་དཔྱོད་དཔྱོད། ཤིན་དུ་དཔྱོད་དཔྱོད། ཡང་དག་པར་འཕེལ་བར་བྱེད་བྱེད་དེ། ཤིན་ཏུ་རྒྱས་པར་བྱེད་བྱེད་པས། བསྐལ་པ་བཟང་པོ་ལ་ཐུག་གི་བར་དུ་དེ་བཞིན་གཤེགས་པ་མཐོང་བ་དང་མ་བྲལ་ལོ། །དེ་སྲིད་ཀྱི་བར་གྱིས་ཁོ་མོས་དེ་བཞིན་གཤེགས་པ་དགྲ་བཅོམ་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་སངས་རྒྱས་ཀྱི་ཞིང་བརྗོད་དུ་མེད་པའི་ཡང་བརྗོད་དུ་མེད་པའི་རྡུལ་ཤིན་ཏུ་ཕྲ་བ་སྙེད་ཅིག་བསྙེན་བཀུར་ཏོ། ། དེ་བཞིན་གཤེགས་པ་དེ་དག་ཐམས་ཅད་སྙིང་པོ་བྱང་ཆུབ་ཏུ་གཤེགས་པའི་རྣམ་པར་འཕྲུལ་པ་ཡང་མཐོང་སྟེ། ཁོ་མོ་ནི་དེ་བཞིན་གཤེགས་པ་དེ་དག་ཐམས་ཅད་ཀྱི་དགེ་བའི་རྩ་བ་མངོན་སུམ་དུ་མཐོང་བའོ། །",
+   "en": "Then the earth goddess Sthāvarā said to Sudhana, the head merchant’s son, “Noble one, it is excellent that you have come here. This area is where in the past you dwelled and generated roots of merit, where I am the witness for that. Do you wish to see just a fraction of their ripening?” Sudhana, the head merchant’s son, bowed his head to the feet of the earth goddess Sthāvarā. He circumambulated the earth goddess Sthāvarā many hundreds of thousands of times, keeping her to his right. Then he stood before her and, with his hands placed together in homage, said, “Āryā, I do wish it!” Then the earth goddess Sthāvarā stamped on the ground with the sole of her foot and revealed an array of countless millions of millions of precious treasures and said, “Noble one, these millions of millions of precious treasures follow you. They go before you. You can use them as you like. They come from the ripening of your merit. They are protected by the power of your merit. You can take from among them whatever you need. “Noble one, moreover, I have attained the bodhisattva liberation called the essence of invincible wisdom. Through my possessing this bodhisattva liberation, since the time of the Tathāgata Dīpaṅkara I have constantly followed bodhisattvas and always protected them. Since that time, noble one, I have practiced the mental conduct of the bodhisattvas, been immersed within the scope of wisdom, entered the domain of prayer, realized pure bodhisattva conduct, followed the ways of all samādhis, permeated the vast motivations and higher cognitions of all bodhisattvas, and realized, possessed, and acquired mastery of the powers of all bodhisattvas, the pervasion of the network of all realms, the acquisition of prophecies from all the tathāgatas, the sight at all times of the attainment of buddhahood, all the ways of turning the wheel of the Dharma, all the ways of the clouds of Dharma that elucidate the sūtras, the way of illumination by the great radiance of the Dharma, the way of completely ripening all beings, and the way of the display of all the miraculous manifestations of the buddhas. “Noble one, I received this bodhisattva liberation, the essence of invincible wisdom, far beyond and even more beyond as many past kalpas as there are atoms in Sumeru, during a kalpa called Avabhāsavyūha, in a world realm called Candradhvajā, from the Tathāgata Sunetra. “Noble one, in that way, until this Bhadra kalpa, while cultivating, practicing, increasing, and augmenting this bodhisattva liberation called the essence of invincible wisdom, I have never been deprived of the sight of the tathāgatas. “During that time, I have propitiated as many tathāgata arhat samyaksaṃbuddhas as there are atoms in an anabhilāpyānabhilāpya of buddha realms. I have seen the miraculous manifestation of all those tathāgatas going to the bodhimaṇḍa. I have witnessed the roots of merit of all those tathāgatas."
+  },
+  "g33-c": {
+   "sa": "etamahaṃ kulaputra jñānaduryodhanagarbhaṃ bodhisattvavimokṣaṃ jānāmi / kiṃ mayā śakyaṃ sarvatathāgatānubaddhānāṃ bodhisattvānāṃ sarvabuddhakathānudhāriṇāṃ sarvatathāgatajñānagahanapraviṣṭānāṃ cittakṣaṇadharmadhātuspharaṇānujavānāṃ tathāgatasamatāśarīrāṇāṃ sarvabuddhāśayavimalagarbhāṇāṃ sadābhinirhṛtasarvabuddhotpādānāmasaṃbhinnasarvabuddhakāyadūtānāṃ caryāṃ jñātuṃ guṇān vā vaktum // gaccha kulaputra, idamihaiva jambudvīpe magadhaviṣaye kapilavastu nāma nagaram / tatra vāsantī nāma rātridevatā prativasati / tāmupasaṃkramya paripṛccha - kathaṃ bodhisattvena bodhisattvacaryāyāṃ śikṣitavyam, kathaṃ pratipattavyam // atha khalu sudhanaḥ śreṣṭhidārakaḥ sthāvarāyāḥ pṛthivīdevatāyāḥ pādau śirasābhivandya sthāvarāṃ pṛthivīdevatāmanekaśatasahasrakṛtvaḥ pradakṣiṇīkṛtya punaḥ punaravalokya sthāvarāyāḥ pṛthivīdevatāyā antikātprakrāntaḥ // 31 // 34 Vāsantī /",
+   "T0278": "善男子！我唯知此法門，諸大菩薩常能隨侍一切諸佛，悉聞受持彼諸佛法，深入諸佛祕密教法，於念念中出淨法身等一切佛、一切佛影藏，出一切佛法所行無壞，我當云何能知、能說彼功德行？善男子！此閻浮提有城，名曰迦毘羅婆；彼有夜天，名婆娑婆陀。汝詣彼問云何菩薩學菩薩行、修菩薩道。」時，善財童子頭面敬禮安住地神，遶無數匝，辭詣彼城。",
+   "T0279": "「善男子！我唯知此不可壞智慧藏法門。如諸菩薩摩訶薩常隨諸佛，能持一切諸佛所說，入一切佛甚深智慧，念念充遍一切法界，等如來身，生諸佛心，具諸佛法，作諸佛事；而我云何能知能說彼功德行？「善男子！此閻浮提摩竭提國迦毘羅城，有主夜神，名：婆珊婆演底。汝詣彼問：菩薩云何學菩薩行、修菩薩道？」時，善財童子禮地神足，遶無數匝，慇懃瞻仰，辭退而去。",
+   "T0293": "善男子！我唯知此難摧伏智慧藏解脫門；如諸菩薩摩訶薩，常能隨侍一切諸佛，能持一切佛所說法，入一切佛甚深智慧，念念充遍一切法界，等如來身，生諸佛心、具諸佛法、作諸佛事，心心出生一切諸佛清淨法藏，離分別心常無間斷，而我云何能知、能說彼功德行？善男子！此閻浮提摩竭提國恒河北岸，有一大城名迦毘羅，有主夜神名曰春和；汝詣彼問菩薩云何學菩薩行、修菩薩道。」時，善財童子禮地神足，遶無數匝，慇懃瞻仰，一心戀慕，辭退而去。",
+   "bo": "རིགས་ཀྱི་བུ་ཁོ་མོས་བྱང་ཆུབ་སེམས་དཔའི་རྣམ་པར་ཐར་པ་ཡེ་ཤེས་ཐུབ་པར་དཀའ་བའི་སྙིང་པོ་ཅན་འདི་ཤེས་པར་ཟད་ན། ཁོ་མོས་བྱང་ཆུབ་སེམས་དཔའ་དེ་བཞིན་གཤེགས་པ་ཐམས་ཅད་ཀྱི་ཞམ་རིང་དུ་འབྲང་བ། སངས་རྒྱས་ཐམས་ཅད་ཀྱི་གསུང་གི་རྗེས་སུ་འབྲང་བ། དེ་བཞིན་གཤེགས་པའི་ཡེ་ཤེས་འཇུག་པར་དཀའ་བ་ལ་རབ་ཏུ་ཞུགས་པ། སེམས་ཀྱི་སྐད་ཅིག་གིས་ཆོས་ཀྱི་དབྱིངས་ཐམས་ཅད་རྒྱས་པར་འགེངས་པའི་ཤུགས་དང་ལྡན་པ། དེ་བཞིན་གཤེགས་པ་དང་མཉམ་པ་ཉིད་དུ་གྱུར་པའི་ལུས་དང་ལྡན་པ། སངས་རྒྱས་ཐམས་ཅད་ཀྱི་དགོངས་པ་དྲི་མ་མེད་པའི་སྙིང་པོར་གྱུར་པ། སངས་རྒྱས་འབྱུང་བ་ཐམས་ཅད་རྟག་ཏུ་མངོན་པར་བསྒྲུབས་པ། སངས་རྒྱས་ཀྱི་འཕྲིན་ལས་ཐ་མི་དད་པའི་ཕོ་ཉར་གྱུར་པ། དེ་དག་གི་སྤྱོད་པ་ཤེས་པའམ། ཡོན་ཏན་བརྗོད་པར་ནུས་རེ་སྐན། །སོང་རིགས་ཀྱི་བུ་འཛམ་བུའི་གླིང་འདི་ཉིད་ཀྱི་ཡུལ་མ་ག་དྷ་ཞེས་བྱ་བ་ན་གྲོང་ཁྱེར་སེར་སྐྱའི་གནས་ཞེས་བྱ་བ་ཡོད་དེ། དེ་ན་མཚན་མོའི་ལྷ་མོ་དཔྱིད་དང་ལྡན་ པ་ཞེས་བྱ་བ་འདུག་གིས་དེའི་གན་དུ་སོང་ལ། ཇི་ལྟར་བྱང་ཆུབ་སེམས་དཔས་བྱང་ཆུབ་སེམས་དཔའི་སྤྱོད་པ་ལ་བསླབ་པར་བྱ་བ་དང་། ཇི་ལྟར་ནན་ཏན་དུ་བྱ་བ་དྲིས་ཤིག ། དེ་ནས་ཚོང་དཔོན་གྱི་བུ་ནོར་བཟངས་ཀྱིས་སའི་ལྷ་མོ་བརྟན་མའི་རྐང་པ་གཉིས་ལ་སྤྱི་བོས་ཕྱག་འཚལ་ཏེ། སའི་ལྷ་མོ་བརྟན་མ་ལ་ལན་བརྒྱ་སྟོང་དུ་མར་གཡས་ཕྱོགས་སུ་བསྐོར་བ་བྱས་ནས་ཡང་དང་ཡང་བལྟས་ཏེ། སའི་ལྷ་མོ་བརྟན་མའི་དྲུང་ནས་སོང་ངོ་། །དེ་ནས་ཚོང་དཔོན་གྱི་བུ་ནོར་བཟངས་སའི་ལྷ་མོ་བརྟན་མའི་གདམས་ངག་རྗེས་སུ་དྲན་པར་བྱེད་ཅིང་། བྱང་ཆུབ་སེམས་དཔའི་རྣམ་པར་ཐར་པ་ཡེ་ཤེས་ཐུབ་པར་དཀའ་བའི་སྙིང་པོ་ཅན་དེ་རྗེས་སུ་དྲན་པར་བྱ་བ་དང་།",
+   "en": "“Noble one, I know only the bodhisattva liberation called the essence of invincible wisdom. How could I know the conduct or describe the qualities of bodhisattvas who attend all tathāgatas, who follow the teaching of all buddhas, who enter into the impenetrable wisdom of the tathāgatas, who have the power to pervade the entire realm of phenomena in one instant of mind, who have bodies that are the same as those of the tathāgatas, who have the essence of the stainless intention of all the buddhas, who always realize all appearances of buddhas, and who are emissaries inseparable from the activity of the buddhas? “Depart, noble one. In this Jambudvīpa, in the land of Magadha, in the city of Kapilavastu, is the goddess of the night named Vāsantī. Go to her and ask her, ‘How should a bodhisattva train in bodhisattva conduct? How should a bodhisattva practice it?’ ” Then Sudhana, the head merchant’s son, bowed his head to the feet of the earth goddess Sthāvarā, circumambulated the earth goddess Sthāvarā many hundreds of thousands of times, keeping her to his right, and, looking back again and again, departed from the earth goddess Sthāvarā."
+  }
+ }
+}

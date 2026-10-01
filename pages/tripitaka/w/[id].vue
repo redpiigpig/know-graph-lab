@@ -406,10 +406,13 @@ async function loadCompare() {
     let n: any = tocByI.value.get(d)
     while (n) { onPage.add(`u:${nodeUid(n)}`); onPage.add(`h:${n.head}`); n = tocByI.value.get(n.parent) }
   }
+  // 範圍錨點（range＝段落 uid 起訖）：組界不落在目錄節點上（華嚴十地品、入法界品），只在範圍內的頁面載入
+  const pageUids = segments.value.map((s: any) => String(s.uid ?? s.seg ?? ''))
+  const inRange = (r: string[]) => pageUids.some(u => u >= r[0] && u <= r[1])
   const want = cmpIndex.value.filter((c: any) => {
     if (!c.works.includes(id.value)) return false
     const mine = (c.anchors || []).filter((a: any) => a.work === id.value)
-    return !mine.length || mine.some((a: any) => onPage.has(a.uid ? `u:${a.uid}` : `h:${a.node}`))
+    return !mine.length || mine.some((a: any) => a.range ? inRange(a.range) : onPage.has(a.uid ? `u:${a.uid}` : `h:${a.node}`))
   })
   const got = await Promise.all(want.slice(0, 80).map((c: any) =>
     $fetch<CmpSet>(`/content/tripitaka/compare/${c.slug}.json`).catch(() => null)))
@@ -455,7 +458,7 @@ const blocks = computed(() => cmpSets.value.map(set => {
   const keys = keyMap(set)
   const self = keys.get('self')
   const covered = new Set<string>()
-  const mine = (set.anchors || []).filter((a: any) => a.work === id.value)
+  const mine = (set.anchors || []).filter((a: any) => a.work === id.value && !a.range)
   if (mine.length) {
     const roots = toc.value.filter((n: any) => mine.some((a: any) => a.uid ? nodeUid(n) === a.uid : n.head === a.node))
       .map((n: any) => n.i)

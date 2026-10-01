@@ -1,0 +1,115 @@
+{
+ "slug": "huayan-gandavyuha-49",
+ "title": "華嚴經・入法界品 49　堅固解脫長者",
+ "family": "sa",
+ "intro": "入法界品第 49 章（藏譯章次），堅固解脫長者（Muktāsāra）。分三節：參詣請問／善知識說所得法門（以回答善財「云何學菩薩行」的第一句為界）／「我唯知此…」謙推勝進、指示後友、辭退。",
+ "units": [
+  {
+   "id": "g49-a",
+   "label": "善財參詣・請問菩薩行"
+  },
+  {
+   "id": "g49-b",
+   "label": "堅固解脫長者說所得法門"
+  },
+  {
+   "id": "g49-c",
+   "label": "謙推勝進・指示後友・辭退"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本",
+   "who": "Gaṇḍavyūha・GRETIL（Vaidya 1960）"
+  },
+  {
+   "id": "T0278",
+   "lang": "lzh",
+   "label": "六十華嚴",
+   "who": "佛馱跋陀羅譯《華嚴經》入法界品・421 年",
+   "work": "T0278"
+  },
+  {
+   "id": "T0279",
+   "lang": "lzh",
+   "label": "八十華嚴",
+   "who": "實叉難陀譯《華嚴經》入法界品・699 年",
+   "work": "T0279"
+  },
+  {
+   "id": "T0293",
+   "lang": "lzh",
+   "label": "四十華嚴",
+   "who": "般若譯《華嚴經》入不思議解脫境界普賢行願品・798 年",
+   "work": "T0293"
+  },
+  {
+   "id": "bo",
+   "lang": "bo",
+   "label": "藏譯",
+   "who": "德格版 Toh 44 第 45 品（Gaṇḍavyūha）・84000"
+  },
+  {
+   "id": "en",
+   "lang": "en",
+   "label": "84000 英譯",
+   "who": "譯自藏譯・與藏文逐句對齊"
+  }
+ ],
+ "works": [
+  "T0278",
+  "T0279",
+  "T0293"
+ ],
+ "anchors": [
+  {
+   "work": "T0278",
+   "range": [
+    "T09n0278_p0766c12",
+    "T09n0278_p0766c25"
+   ]
+  },
+  {
+   "work": "T0279",
+   "range": [
+    "T10n0279_p0419a14",
+    "T10n0279_p0419a25"
+   ]
+  },
+  {
+   "work": "T0293",
+   "range": [
+    "T10n0293_p0806a23",
+    "T10n0293_p0806b07"
+   ]
+  }
+ ],
+ "cells": {
+  "g49-a": {
+   "sa": "atha khalu sudhanaḥ śreṣṭhidārako 'nupūrveṇa dakṣiṇāpathaṃ gatvā yena bharukacche nagare muktāsāro hairaṇyakaḥ, tenopasaṃkramya muktāsārahairaṇyakasya pādau śirasābhivandya purataḥ prāñjaliḥ sthitvā evamāha - mayā ārya anuttarāyāṃ samyaksaṃbodhau cittamutpāditam / na ca jānāmi kathaṃ bodhisattvena bodhisattvacaryāyāṃ śikṣitavyam, kathaṃ pratipattavyam / śrutaṃ ca me āryo bodhisattvānāmavavādānuśāsanīṃ dadātīti / tadvadatu me āryaḥ - kathaṃ bodhisattvena bodhisattvacaryāyāṃ śikṣitavyam, kathaṃ pratipattavyam //",
+   "T0278": "到於彼城，詣長者所，禮足圍遶，合掌恭敬，於一面立，白言：「聖者！我已先發阿耨多羅三藐三菩提心，而未知菩薩云何學菩薩行、修菩薩道？我聞聖者善能誘誨，願為我說。」",
+   "T0279": "到於彼城，詣長者所，禮足圍遶，合掌恭敬，於一面立，白言：「聖者！我已先發阿耨多羅三藐三菩提心，而未知菩薩云何學菩薩行？云何修菩薩道？我聞聖者善能誘誨，願為我說！」",
+   "T0293": "爾時，善財童子漸次南行到於彼城，詣長者所，禮足右遶，合掌恭敬，於一面立，白言：「聖者！我已先發阿耨多羅三藐三菩提心，而未知菩薩云何學菩薩行、云何修菩薩道，我聞聖者善能誘誨，願為我說。」",
+   "bo": "དེ་ནས་ཚོང་དཔོན་གྱི་བུ་ནོར་བཟངས་མཐར་གྱིས་ལྷོ་ཕྱོགས་ཀྱི་རྒྱུད་དུ་སོང་སྟེ། གྲོང་ཁྱེར་རྒྱས་པའི་འགྲམ་དུ་གསེར་འཚོང་གཅེས་པ་གཏོང་བ་གང་ན་བ་དེར་ཕྱིན་ཏེ། གསེར་འཚོང་གཅེས་པ་གཏོང་བའི་རྐང་པ་གཉིས་ལ་སྤྱི་བོས་ཕྱག་འཚལ་ཏེ། མདུན་དུ་འདུག་ནས་ཐལ་མོ་སྦྱར་ཏེ་འདི་སྐད་ཅེས་སྨྲས་སོ། །འཕགས་པ་བདག་གིས་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་ཏུ་སེམས་བསྐྱེད་ན། ཇི་ལྟར་བྱང་ཆུབ་སེམས་དཔས་བྱང་ཆུབ་སེམས་དཔའི་སྤྱོད་པ་ལ་བསླབ་པར་བགྱི་བ་དང་། ཇི་ལྟར་ནན་ཏན་ཏུ་བགྱི་བ་མ་འཚལ་ཏེ། འཕགས་པ་ནི་བྱང་ཆུབ་སེམས་དཔའ་རྣམས་ལ་གདམས་ངག་དང་རྗེས་སུ་བསྟན་པ་མཛད་དོ། །ཞེས་བདག་གིས་ཐོས་ན། ཇི་ལྟར་བྱང་ཆུབ་སེམས་དཔས་བྱང་ཆུབ་སེམས་དཔའི་སྤྱོད་པ་ལ་བསླབ་པར་བགྱི་བ་དང་། ཇི་ལྟར་ནན་ཏན་ཏུ་བགྱི་བ་འཕགས་པས་བདག་ལ་བཀའ་སྩལ་དུ་གསོལ། དེས་སྨྲས་པ།",
+   "en": "Muktāsāra Chapter 49  Sudhana, the head merchant’s son, eventually arrived in the southern region, and in the town of Bharukaccha he approached the goldsmith Muktāsāra. He bowed his head to the feet of the goldsmith Muktāsāra and then, standing before him with his palms together in homage, said, “Ārya, I have developed the aspiration for the highest, complete enlightenment, but I do not know how bodhisattvas should train in bodhisattva conduct and in what way they should practice it. “Ārya, I have heard that you give instruction and teachings to bodhisattvas! I pray that you explain to me how bodhisattvas should train in bodhisattva conduct and how they should practice it!”"
+  },
+  "g49-b": {
+   "sa": "so 'vocat - ahaṃ kulaputra asaṅgasmṛtivyūhaṃ nāma bodhisattvavimokṣaṃ jānāmi / apratiprasrabdhā ca me daśasu dikṣu sarvatathāgatapādamūleṣu dharmaparyeṣṭiḥ /",
+   "T0278": "長者答言：「善男子！我得菩薩解脫，名無著清淨念。我自得是解脫已來，法願充滿，於十方佛所無復希求。",
+   "T0279": "長者答言：「善男子！我得菩薩解脫，名：無著念清淨莊嚴。我自得是解脫已來，於十方佛所勤求正法無有休息。",
+   "T0293": "長者告言：「善男子！我得菩薩解脫，名無著念清淨莊嚴。我自得是解脫已來，於十方界一切佛所，勤求正法無有休息。",
+   "bo": "རིགས་ཀྱི་བུ་ཁོ་བོ་ནི་བྱང་ཆུབ་སེམས་དཔའི་རྣམ་པར་ཐར་པ་དྲན་པ་ཐོགས་པ་མྱེད་པ་ལ་རྣམ་པར་དག་པས་རྣམ་པར་བརྒྱན་པ་ཞེས་བྱ་བ་ཤེས་ཏེ། ཁོ་བོས་ནི་ཕྱོགས་བཅུའི་དེ་བཞིན་གཤེགས་པ་རྣམས་ཀྱི་ཞབས་ཀྱི་དྲུང་ན་ཆོས་ཡོངས་སུ་ཚོལ་བ་རྒྱུན་མི་གཅོད་པའོ། །",
+   "en": "When he had said that, the goldsmith Muktāsāra said, “Noble one, I know the bodhisattva liberation called the display of pureunimpeded memory. I continuously seek the Dharma at the feet of the tathāgatas in the ten directions."
+  },
+  "g49-c": {
+   "sa": "etamahaṃ kulaputra asaṅgasmṛtivyūhaṃ bodhisattvavimokṣaṃ jānāmi, prajānāmi / kiṃ mayā śakyaṃ bodhisattvānāmacchambhitasiṃhanādanādināṃ mahāpuṇyajñānapratiṣṭhitānāṃ caryāṃ jñātuṃ guṇān vā vaktum // gaccha kulaputra, ayamihaiva bharukacche nagare sucandro nāma gṛhapatiḥ prativasati / tadavabhāsitamasya gṛham / tamupasaṃkramya paripṛccha - kathaṃ bodhisattvena bodhisattvacaryāyāṃ śikṣitavyam, kathaṃ pratipattavyam // atha khalu sudhanaḥ śreṣṭhidārako muktāsārasya hairaṇyakasya pādau śirasābhivandya muktāsāraṃ hairaṇyakamanekaśatasahasrakṛtvaḥ pradakṣiṇīkṛtya punaḥ punaravalokya muktāsārasya hairaṇyakasyāntikātprakrāntaḥ // 47 // 50 Sucandraḥ /",
+   "T0278": "善男子！我唯知此淨念解脫，如諸菩薩摩訶薩獲無所畏大師子吼，安住高廣福慧之聚。而我云何能知、能說彼功德行？善男子！即此城中有一長者，名為妙月，其長者宅常有光明。汝詣彼問云何菩薩學菩薩行、修菩薩道。」時，善財童子禮堅固足，遶無數匝，辭退而行。",
+   "T0279": "「善男子！我唯知此無著念淨莊嚴解脫。如諸菩薩摩訶薩，獲無所畏大師子吼，安住廣大福智之聚；而我云何能知能說彼功德行？「善男子！即此城中，有一長者，名為：妙月；其長者宅，常有光明。汝詣彼問：菩薩云何學菩薩行、修菩薩道？」時，善財童子禮堅固足，遶無數匝，辭退而行。",
+   "T0293": "善男子！我唯知此無著念清淨莊嚴解脫門。如諸菩薩摩訶薩，獲無所畏，猶師子吼，安住廣大福德智慧殊勝之聚，以大音聲開悟群品，如是菩薩功德智行，而我云何能知、能說？善男子！即此城中有一長者，名為妙月，其所住宅，常有光明。汝詣彼問菩薩云何學菩薩行，修菩薩道。」時，善財童子禮長者足，遶無數匝，慇懃瞻仰，辭退而去。",
+   "bo": "རིགས་ཀྱི་བུ་ཁོ་བོ་ནི་བྱང་ཆུབ་སེམས་དཔའི་རྣམ་པར་ཐར་པ་དྲན་པ་ཐོགས་པ་མེད་པ་ལ་རྣམ་པར་དག་པས་རྣམ་པར་བརྒྱན་པ་འདི་ཤེས་པར་ཟད་ན། ཁོ་བོས་བྱང་ཆུབ་སེམས་དཔའ་བག་ཚ་བ་མྱེད་པར་སེང་གེའི་ང་རོ་སྒྲོག་པ་བསོད་ནམས་དང་ཡེ་ཤེས་ཆེན་པོ་ལ་གནས་པ་དེ་དག་གི་སྤྱོད་པ་ཤེས་པའམ། ཡོན་ཏན་བརྗོད་པར་ནུས་རེ་སྐན། ། སོང་རིགས་ཀྱི་བུ་རྒྱས་པའི་འགྲམ་གྱི་གྲོང་ཁྱེར་འདི་ཉིད་ན་ཁྱིམ་བདག་ཟླ་བ་བཟང་པོ་ཞེས་བྱ་བ་རྟག་ཏུ་ཁྱིམ་སྣང་བར་གྱུར་པ་དང་ལྡན་པ་ཞིག་འདུག་གིས་དེའི་གན་དུ་སོང་ལ་ཇི་ལྟར་བྱང་ཆུབ། སེམས་དཔས་བྱང་ཆུབ་སེམས་དཔའི་སྤྱོད་པ་ལ་བསླབ་པར་བྱ་བ་དང་། ཇི་ལྟར་ནན་ཏན་དུ་བྱ་བ་དྲིས་ཤིག ། དེ་ནས་ཚོང་དཔོན་གྱི་བུ་ནོར་བཟངས་ཀྱིས་གསེར་འཚོང་གཅེས་པ་གཏོང་བའི་རྐང་པ་གཉིས་ལ་སྤྱི་བོས་ཕྱག་འཚལ་ཏེ། གསེར་འཚོང་གཅེས་པ་གཏོང་བ་ལ་ལན་བརྒྱ་སྟོང་དུ་མར་གཡས་ཕྱོགས་སུ་བསྐོར་བ་བྱས་ནས། ཡང་དང་ཡང་བལྟས་ཏེ། གསེར་འཚོང་གཅེས་པ་གཏོང་བའི་དྲུང་ནས་སོང་ངོ་། །དེ་ནས་ཚོང་དཔོན་གྱི་བུ་ནོར་བཟངས་ཁྱིམ་བདག་ཟླ་བ་བཟང་པོ་གང་ན་བ་དེར་སོང་སྟེ།",
+   "en": "“Noble one, I know only this bodhisattva liberation called the display of pureunimpeded memory. How could I know the conduct or describe the qualities of the bodhisattvas who have the fearless lion’s roar and are established in great merit and wisdom? “Depart, noble one. In the forest beside this town of Bharukaccha resides a householder by the name of Sucandra who has a continuously shining house. Go to him and ask him, ‘How should a bodhisattva train in and practice bodhisattva conduct?’ ” Sudhana, the head merchant’s son, bowed his head to the feet of the goldsmith Muktāsāra. He circumambulated the goldsmith Muktāsāra many hundreds of thousands of times, keeping him to his right, and, looking back at him again and again, he departed from the goldsmith Muktāsāra."
+  }
+ }
+}

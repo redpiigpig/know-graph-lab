@@ -1,0 +1,115 @@
+{
+ "slug": "huayan-gandavyuha-52",
+ "title": "華嚴經・入法界品 52　最寂靜婆羅門",
+ "family": "sa",
+ "intro": "入法界品第 52 章（藏譯章次），最寂靜婆羅門（Śivarāgra）。分三節：參詣請問／善知識說所得法門（以回答善財「云何學菩薩行」的第一句為界）／「我唯知此…」謙推勝進、指示後友、辭退。",
+ "units": [
+  {
+   "id": "g52-a",
+   "label": "善財參詣・請問菩薩行"
+  },
+  {
+   "id": "g52-b",
+   "label": "最寂靜婆羅門說所得法門"
+  },
+  {
+   "id": "g52-c",
+   "label": "謙推勝進・指示後友・辭退"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本",
+   "who": "Gaṇḍavyūha・GRETIL（Vaidya 1960）"
+  },
+  {
+   "id": "T0278",
+   "lang": "lzh",
+   "label": "六十華嚴",
+   "who": "佛馱跋陀羅譯《華嚴經》入法界品・421 年",
+   "work": "T0278"
+  },
+  {
+   "id": "T0279",
+   "lang": "lzh",
+   "label": "八十華嚴",
+   "who": "實叉難陀譯《華嚴經》入法界品・699 年",
+   "work": "T0279"
+  },
+  {
+   "id": "T0293",
+   "lang": "lzh",
+   "label": "四十華嚴",
+   "who": "般若譯《華嚴經》入不思議解脫境界普賢行願品・798 年",
+   "work": "T0293"
+  },
+  {
+   "id": "bo",
+   "lang": "bo",
+   "label": "藏譯",
+   "who": "德格版 Toh 44 第 45 品（Gaṇḍavyūha）・84000"
+  },
+  {
+   "id": "en",
+   "lang": "en",
+   "label": "84000 英譯",
+   "who": "譯自藏譯・與藏文逐句對齊"
+  }
+ ],
+ "works": [
+  "T0278",
+  "T0279",
+  "T0293"
+ ],
+ "anchors": [
+  {
+   "work": "T0278",
+   "range": [
+    "T09n0278_p0767a20",
+    "T09n0278_p0767b07"
+   ]
+  },
+  {
+   "work": "T0279",
+   "range": [
+    "T10n0279_p0419b21",
+    "T10n0279_p0419c06"
+   ]
+  },
+  {
+   "work": "T0293",
+   "range": [
+    "T10n0293_p0807c18",
+    "T10n0293_p0809a16"
+   ]
+  }
+ ],
+ "cells": {
+  "g52-a": {
+   "sa": "atha khalu sudhanaḥ śreṣṭhidārako 'nupūrveṇa dharmagrāmaṃ gatvā yena śivarāgro brāhmaṇaḥ, tenopasaṃkramya śivarāgrasya brāhmaṇasya pādau śirasābhivandya purataḥ prāñjaliḥ sthitvā evamāha - mayā ārya anuttarāyāṃ samyaksaṃbodhau cittamutpāditam / na ca jānāmi - kathaṃ bodhisattvena bodhisattvacaryāyāṃ śikṣitavyam, kathaṃ pratipattavyam / śrutaṃ ca me āryo bodhisattvānāmavavādānuśāsanīṃ dadādīti / tadvadatu me āryaḥ - kathaṃ bodhisattvena bodhisattvacaryāyāṃ śikṣitavyam, kathaṃ pratipattavyam //",
+   "T0278": "詣彼聚落，見尸毘最勝，禮足圍遶，合掌恭敬，於一面立，白言：「聖者！我已先發阿耨多羅三藐三菩提心，而未知菩薩云何學菩薩行、修菩薩道？我聞聖者善能誘誨，願為我說。」",
+   "T0279": "漸次南行，詣彼聚落，見最寂靜，禮足圍遶，合掌恭敬，於一面立，白言：「聖者！我已先發阿耨多羅三藐三菩提心，而未知菩薩云何學菩薩行？云何修菩薩道？我聞聖者善能誘誨，願為我說！」",
+   "T0293": "爾時，善財童子思惟憶念無盡相解脫門，漸次前行詣彼聚落，向最寂靜婆羅門所。見已，禮足圍遶，恭敬合掌而立。白言：「聖者！我已先發阿耨多羅三藐三菩提心，而未知菩薩云何學菩薩行、云何修菩薩道，我聞聖者善能誘誨，願為我說。」",
+   "bo": "ཁྱིམ་བདག་མི་ཕམ་སྡེའི་དྲུང་ནས་སོང་ངོ་། །དེ་ནས་ཚོང་དཔོན་གྱི་བུ་ནོར་བཟངས་མཐར་གྱིས་ཆོས་ཀྱི་ཡུལ་གྲུར་སོང་ནས། བྲམ་ཟེ་ཞི་འཛིན་མཆོག་གང་ན་བ་དེར་ཕྱིན་ཏེ། བྲམ་ཟེ་ཞི་འཛིན་མཆོག་གི་རྐང་པ་གཉིས་ལ་སྤྱི་བོས་ཕྱག་འཚལ་ནས་མདུན་དུ་འདུག་སྟེ། ཐལ་ མོ་སྦྱར་ནས་འདི་སྐད་ཅེས་སྨྲས་སོ། །འཕགས་པ་བདག་གིས་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་ཏུ་སེམས་བསྐྱེད་ན། ཇི་ལྟར་བྱང་ཆུབ་སེམས་དཔས་བྱང་ཆུབ་སེམས་དཔའི་སྤྱོད་པ་ལ་བསླབ་པར་བགྱི་བ་དང་། ཇི་ལྟར་ནན་ཏན་ཏུ་བགྱི་བ་མ་འཚལ་ཏེ། འཕགས་པ་ནི་བྱང་ཆུབ་སེམས་དཔའ་རྣམས་ལ་གདམས་ངག་དང་རྗེས་སུ་བསྟན་པ་མཛད་དོ། །ཞེས་བདག་གིས་ཐོས་ན། ཇི་ལྟར་བྱང་ཆུབ་སེམས་དཔས་བྱང་ཆུབ་སེམས་དཔའི་སྤྱོད་པ་ལ་བསླབ་པར་བགྱི་བ་དང་། ཇི་ལྟར་ནན་ཏན་དུ་བགྱི་བ་འཕགས་པས་བདག་ལ་བཀའ་སྩལ་དུ་གསོལ། །",
+   "en": "Śivarāgra Chapter 52  Sudhana eventually reached the village of Dharma and approached the brahmin Śivarāgra. He bowed his head to the feet of the brahmin Śivarāgra, stood before him, and, with his palms together in homage, said, “Ārya, I have developed the aspiration for the highest, complete enlightenment, but I do not know how bodhisattvas should train in bodhisattva conduct and in what way they should practice it. Ārya, I have heard that you give instruction and teachings to bodhisattvas! I pray that you explain to me how bodhisattvas should train in bodhisattva conduct and how they should practice it!”"
+  },
+  "g52-b": {
+   "sa": "so 'vocat - ahaṃ kulaputra satyādhiṣṭhānena carāmi / yena satyena satyavacanena tryadhvasu na kaścidbodhisattvo 'nuttarāyāḥ samyaksaṃbodhervivṛttaḥ, na vivartate, na vivartiṣyati, tena satyavacanādhiṣṭhānena idaṃ ca me kāryaṃ smṛdhyatviti / tanme yathābhiprāyaṃ sarvaṃ samṛdhyati / etenāhaṃ kulaputra satyavacanādhiṣṭhānena sarvakāryāṇi sādhayāmi /",
+   "T0278": "婆羅門答言：「善男子！我得菩薩法門，名誠願語。過去、現在、未來菩薩以是語故，乃至於阿耨多羅三藐三菩提無有退轉，無已退，無現退，無當退。善男子！我以住於誠願語故，隨意所作莫不成滿。",
+   "T0279": "婆羅門答言：「善男子！我得菩薩解脫，名：誠願語；過去、現在、未來菩薩，以是語故，乃至於阿耨多羅三藐三菩提，無有退轉，無已退、無現退、無當退。「善男子！我以住於誠願語故，隨意所作，莫不成滿。",
+   "T0293": "時，婆羅門告善財言：「善男子！我得菩薩解脫，名誠願語。一切菩薩由此誠願真實語故，皆於阿耨多羅三藐三菩提無退轉者；無已退，無現退，無當退。善男子！我以住此真實威德誠願語故，於諸世間、出世間法，一切所作，無不成就，隨所願求，皆令滿足。」善財白言：「聖者！今此解脫真實威德，名誠願語，是何義耶？」婆羅門言：「善男子！誠願語者，是如如義，不變異義，無二體義，勝義，諦義，三世如來法身體義。」善財復言：「一切菩薩云何修習得此法身？」答言：「善男子！菩薩若能修十種法，具足圓滿得此法身。何等為十？所謂：平等身，清淨身，無盡身，修集身，法性身，離尋伺身，不思議身，寂靜身，虛空身，妙智身。若諸菩薩具此十身，則得如來清淨法身。」善財復言：「聖者！諸菩薩等住此解脫，於何等位，得此十身？」婆羅門言：「善男子！菩薩初地，住此解脫得平等身。何以故？通達法性，離諸邪曲，見法平等故。菩薩二地，住此解脫得清淨身。何以故？離犯戒垢，於一切戒性常清淨故。菩薩三地，住此解脫得無盡身。何以故？離欲瞋恚慳嫉惡法，住諸勝定故。菩薩四地，住此解脫得修集身。何以故？常勤修集一切諸佛菩提分法故。菩薩五地，住此解脫得法性身。何以故？觀察覺悟一切諦理，證法體性故。菩薩六地，住此解脫得無尋伺身。何以故？觀緣起理，難解難知，非尋伺境界故。菩薩七地，住此解脫得不思議身。何以故？集諸佛法，方便善巧，智行滿足故。菩薩八地，住此解脫得寂靜身。何以故？一切煩惱不復現行，離諸世間戲論等事故。菩薩九地，住此解脫得虛空身。何以故？身相無邊，遍滿一切故。菩薩十地，住此解脫得妙智身。何以故？一切種智微妙境界，普集圓滿故。」善財復言：「如來法身，與彼菩薩十種法身，有何差別？」答言：「善男子！當知法身，體性無異，功德威力有差別耳。」善財復言：「是義云何？」答言：「善男子！謂佛菩薩所有法身，等無差別。所以者何？以一切法性相平等同一體故；如是乃至凡聖、迷悟、染淨、因果、去來、進退，皆同一相。所言功德威力異者，即如來身功德圓滿，具勝威力，菩薩不爾，由此事故，我當為汝宣說譬諭，開示其義。善男子！譬如摩尼妙寶真珠，未經巧匠彫飾磨瑩，無有光彩，凡所見者，不生愛重，若經磨瑩，光彩熾盛，人天寶重，珠體無異，相差別故。雖諸菩薩與如來身，同一體性，俱名法身，不可說言、難思清淨、功德智寶，神通威力同於如來。所以者何？以諸如來於無數劫，淨修一切微妙功德，究竟圓滿，無邊無量，如太虛空，滿十方界，妙善清淨，離諸惑垢，廣大光明，無所不照，殊勝威力，普濟眾生，其諸菩薩，雖具法身，功德未圓，有餘垢故。譬如白月，從初一日，至十五日，名體雖同，光相有異。何以故？滿不滿相，有差別故。善男子！菩薩法身，與佛法身亦復如是，滿不滿相有差別故。以菩薩身，如從月初至十四日，所有光明不能圓照，如來法身，如十五日白月圓滿，光明普照，無有限礙。而彼菩薩十種法身，與如來身同一體性，無有二相，但由所修功德有異，不可言一。是故，善男子！若諸菩薩住此解脫，具足十身，則能證得諸佛功德圓滿法身。「復次，菩薩由十種義，得於金剛不可壞身。何等為十？一者、一切煩惱、貪、瞋、癡毒不能壞故；二者、我慢、慳嫉、邪見、顛倒不能壞故；三者、一切惡趣、苦惱、逼迫不能壞故；四者、利、衰、毀、譽、稱、譏、苦、樂不能壞故；五者、生、老、病、死、愁、歎、憂惱不能壞故；六者、一切異見、外道、邪論不能壞故；七者、諸煩惱魔、蘊魔、死魔不能壞故；八者、一切天魔及魔眷屬不能壞故；九者、一切聲聞及諸獨覺不能壞故；十者、一切世間可愛欲境不能壞故。菩薩若能具此十義，則得諸佛猶如金剛不可壞身。「善男子！復有十種善巧正道，能正了知，無邪謬說。何等為十？一、若諸眾生應以大乘而調伏者，為說種種菩薩乘道，不為演說聲聞乘道。二、若諸眾生應聲聞乘而調伏者，為說種種聲聞乘道，不為演說菩薩乘道。三、若諸眾生應以佛乘而調伏者，為說如來一切智道，不為演說獨覺乘道。四、若諸眾生應獨覺乘而調伏者，為說種種獨覺乘道，不為演說一切智道。五、若諸眾生執著我法，為說無我及諸法空，不說我、人、眾生、壽命、士夫養育補特伽羅、假、我、法道。六、若諸眾生執著有無，為說處中離邊際法，不說有無墮邊際法。七、若諸眾生其心散亂，為說寂靜諸奢摩他、毘鉢舍那，不說種種散亂道法。八、若諸眾生愛樂世法，為說出世如如智道，不說愚癡嬰兒之道。九、若諸眾生樂處生死，為說涅槃出生死道，不說住世化眾生道。十、若諸眾生執法空等，不行正道，為說正直無棘刺法，不說棘刺諸邪險道。善男子！若諸菩薩具此十法，得入正道，善能了知無邪謬說，所言誠實。",
+   "bo": "དེས་སྨྲས་པ། རིགས་ཀྱི་བུ་ཁོ་བོ་ནི་བདེན་པའི་བྱིན་གྱི་རླབས་ཀྱིས་སྤྱོད་པ་སྟེ། བདེན་པའི་ཚིག་གང་གིས་དུས་གསུམ་དུ་བྱང་ཆུབ་སེམས་དཔའ་གང་ཡང་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་ལས་ཕྱིར་མི་ལྡོག་ལྡོག་པར་མི་འགྱུར་ཞེ་ན། བདེན་པའི་ཚིག་གི་བྱིན་གྱི་རླབས་དེས། བདག་གི་དགོས་པ་འདི་དང་འདི་ཞིག་གྲུབ་པར་ཤོག་ཤིག་ཅེས་བྱས་ན་ཡང་དེས་ཁོ་བོའི་བསམ་པ་ཐམས་ཅད་དེ་བཞིན་དུ་འགྲུབ་བོ། ། རིགས་ཀྱི་བུ་ཁོ་བོ་ནི་བདེན་པའི་བྱིན་གྱི་རླབས་དེ་ལྟ་བུས་དགོས་པ་ཐམས་ཅད་སྒྲུབ་སྟེ།",
+   "en": "When he had said that, the brahmin Śivarāgra said, “Noble one, I have the conduct empowered by truth. There is the speech of truth by which the bodhisattvas in the three times have not turned back, do not turn back, and will never turn back from the highest, complete enlightenment. Through the empowerment of that speech of truth, if I say ‘May this and that necessity be accomplished!’ then all my wishes become fulfilled."
+  },
+  "g52-c": {
+   "sa": "etamahaṃ kulaputra satyādhiṣṭhānaṃ jānāmi / kiṃ mayā śakyaṃ satyānuparivartanī vākpratilabdhānāṃ bodhisattvānāṃ caryāṃ jñātuṃ guṇān vā vaktum // gaccha kulaputra, iyamihaiva dakṣiṇāpathe sumanāmukhaṃ nāma nagaram / tatra śrīsaṃbhavo nāma dārakaḥ prativasati, śrīmatiśca nāma dārikā / tāvupasaṃkramya paripṛccha kathaṃ bodhisattvena bodhisattvacaryāyāṃ śikṣitavyam, kathaṃ pratipattavyam // atha khalu sudhanaḥ śreṣṭhidārako mahādharmagauravamutpādya śivarāgrasya brāhmaṇasya pādau śirasābhivandya śivarāgraṃ brāhmaṇamanekaśatasahasrakṛtvaḥ pradakṣiṇīkṛtya punaḥpunaravalokya śivarāgrasya brāhmaṇasyāntikātprakrāntaḥ // 50 // 53 śrīsaṃbhavaḥ śrīmatiśca /",
+   "T0278": "善男子！我唯知此誠語法門，如諸菩薩摩訶薩與誠願語，行止無違，言必以誠，未曾虛妄，無量功德因之出生。而我云何能知、能說？善男子！於此南方有城，名妙意華門。彼有童子，名曰德生。復有童女，名為有德。汝詣彼問云何菩薩學菩薩行、修菩薩道。」時，善財童子於法尊重，禮婆羅門足，遶無數匝，戀仰而去。",
+   "T0279": "善男子！我唯知此誠語解脫。如諸菩薩摩訶薩，與誠願語，行止無違，言必以誠，未曾虛妄，無量功德因之出生；而我云何能知能說？「善男子！於此南方，有城名：妙意華門；彼有童子，名曰：德生；復有童女，名為：有德。汝詣彼問：菩薩云何學菩薩行、修菩薩道？」時，善財童子於法尊重，禮婆羅門足，遶無數匝，戀仰而去。",
+   "T0293": "善男子！我唯知此住誠願語、無盡威德菩薩解脫。如諸菩薩摩訶薩，與誠願語行止無違，心常隨順無有退轉，被本願力堅固甲冑，大慈悲心不捨眾生；增長福智心無厭足，善巧方便相續現前，勤修增上光明地智，隨順覺悟諸蘊、界、處，深入眾生，善知正道；菩薩地智，安住過去佛法平等清淨心，安住未來佛法平等清淨心，安住現在佛法平等清淨心，安住戒性平等清淨心，安住心性平等清淨心，安住見性平等清淨心，安住能斷自他疑性平等清淨心，安住一切正道非道智性平等清淨心，安住修道滅惑智行性平等清淨心，安住一切菩提分法增上修習平等清淨心，安住調伏一切眾生廣大悲化平等清淨心，言必以誠，未曾虛妄，出生無量功德智門，而我云何能知、能說？善男子！於此南方有城，名妙意華門，彼有童子，名為德生，復有童女，名為有德。汝詣彼問菩薩云何學菩薩行，修菩薩道。」時，善財童子於此大法起尊重心，禮婆羅門足，遶無數匝，慇懃瞻仰，一心戀慕，辭退而去。",
+   "bo": "རིགས་ཀྱི་བུ་ཁོ་བོས་བདེན་པའི་བྱིན་གྱིས་རླབས་འདི་ཤེས་པར་ཟད་ན། ཁོ་བོས་བྱང་ཆུབ་སེམས་དཔའ་བདེན་པའི་རྗེས་སུ་འབྲང་བའི་ཚིག་རབ་ཏུ་ཐོབ་པ་རྣམས་ཀྱི་སྤྱོད་པ་ཤེས་པའམ། ཡོན་ཏན་བརྗོད་པར་ནུས་རེ་སྐན། ། སོང་རིགས་ཀྱི་བུ་ལྷོ་ཕྱོགས་ཀྱི་རྒྱུད་འདི་ཉིད་ན་གྲོང་ཁྱེར་ཡིད་བཟང་པོའི་སྒོ་ཞེས་བྱ་བ་ཡོད་དེ། དེ་ན་ཁྱེའུ་དཔལ་འབྱུང་བ་ཞེས་བྱ་བ་དང་། བུ་མོ་དཔལ་གྱི་བློ་གྲོས་མ་ཞེས་བྱ་བ་གཉིས་ཤིག་འཁོད་ཀྱིས་དེའི་གན་དུ་སོང་ལ། ཇི་ལྟར་བྱང་ཆུབ་སེམས་དཔས་བྱང་ཆུབ་སེམས་དཔའི་སྤྱོད་པ་ལ་བསླབ་པར་བྱ་བ་དང་། ཇི་ལྟར་ནན་ཏན་དུ་བྱ་བ་དྲིས་ཤིག ། དེ་ནས་ཚོང་དཔོན་གྱི་བུ་ནོར་བཟངས་ཀྱི་ཆོས་ཀྱི་རིམ་གྲོ་ཆེར་བསྐྱེད་དེ། བྲམ་ཟེ་ཞི་འཛིན་མཆོག་གི་རྐང་པ་གཉིས་ལ་སྤྱི་བོས་ཕྱག་འཚལ་ནས། བྲམ་ཟེ་ཞི་འཛིན་མཆོག་ལ་ལན་བརྒྱ་སྟོང་དུ་མར་གཡས་ ཕྱོགས་སུ་བསྐོར་བ་བྱས་ཏེ། ཡང་དང་ཡང་བལྟས་ནས། བྲམ་ཟེ་ཞི་འཛིན་མཆོག་གི་དྲུང་ནས་སོང་ངོ་།",
+   "en": "“Noble one, I know only this empowerment of the truth. How could I know the conduct or describe the qualities of the bodhisattvas who have attained the speech devoted to truth? “Depart, noble one. In this southern region there is a town called Sumanāmukha. There resides a boy by the name of Śrīsaṃbhava and a girl by the name of Śrīmati. Go to them and ask them, ‘How should a bodhisattva train in and practice bodhisattva conduct?’ ” Sudhana, the head merchant’s son, bowed his head to the feet of the brahmin Śivarāgra. He circumambulated the brahmin Śivarāgra many hundreds of thousands of times, keeping him to his right, and, looking back at him again and again, he departed from the brahmin Śivarāgra."
+  }
+ }
+}

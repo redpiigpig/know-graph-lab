@@ -1,0 +1,115 @@
+{
+ "slug": "huayan-gandavyuha-51",
+ "title": "華嚴經・入法界品 51　無勝軍長者",
+ "family": "sa",
+ "intro": "入法界品第 51 章（藏譯章次），無勝軍長者（Ajitasena）。分三節：參詣請問／善知識說所得法門（以回答善財「云何學菩薩行」的第一句為界）／「我唯知此…」謙推勝進、指示後友、辭退。",
+ "units": [
+  {
+   "id": "g51-a",
+   "label": "善財參詣・請問菩薩行"
+  },
+  {
+   "id": "g51-b",
+   "label": "無勝軍長者說所得法門"
+  },
+  {
+   "id": "g51-c",
+   "label": "謙推勝進・指示後友・辭退"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本",
+   "who": "Gaṇḍavyūha・GRETIL（Vaidya 1960）"
+  },
+  {
+   "id": "T0278",
+   "lang": "lzh",
+   "label": "六十華嚴",
+   "who": "佛馱跋陀羅譯《華嚴經》入法界品・421 年",
+   "work": "T0278"
+  },
+  {
+   "id": "T0279",
+   "lang": "lzh",
+   "label": "八十華嚴",
+   "who": "實叉難陀譯《華嚴經》入法界品・699 年",
+   "work": "T0279"
+  },
+  {
+   "id": "T0293",
+   "lang": "lzh",
+   "label": "四十華嚴",
+   "who": "般若譯《華嚴經》入不思議解脫境界普賢行願品・798 年",
+   "work": "T0293"
+  },
+  {
+   "id": "bo",
+   "lang": "bo",
+   "label": "藏譯",
+   "who": "德格版 Toh 44 第 45 品（Gaṇḍavyūha）・84000"
+  },
+  {
+   "id": "en",
+   "lang": "en",
+   "label": "84000 英譯",
+   "who": "譯自藏譯・與藏文逐句對齊"
+  }
+ ],
+ "works": [
+  "T0278",
+  "T0279",
+  "T0293"
+ ],
+ "anchors": [
+  {
+   "work": "T0278",
+   "range": [
+    "T09n0278_p0767a07",
+    "T09n0278_p0767a20"
+   ]
+  },
+  {
+   "work": "T0279",
+   "range": [
+    "T10n0279_p0419b09",
+    "T10n0279_p0419b19"
+   ]
+  },
+  {
+   "work": "T0293",
+   "range": [
+    "T10n0293_p0807a19",
+    "T10n0293_p0807a26"
+   ]
+  }
+ ],
+ "cells": {
+  "g51-a": {
+   "sa": "atha khalu sudhanaḥ śreṣṭhidārako 'nupūrveṇa rorukaṃ nagaraṃ gatvā yena ajitaseno nāma gṛhapatistenopasaṃkramya ajitasenasya gṛhapateḥ pādau śirasābhivandya purataḥ prāñjaliḥ sthitvā evamāha - mayā ārya anuttarāyāṃ samyaksaṃbodhau cittamutpāditam / na ca jānāmi - kathaṃ bodhisattvena bodhisattvacaryāyāṃ śikṣitavyam, kathaṃ pratipattavyam / śrutaṃ ca me āryo bodhisattvānāmavavādānuśāsanīṃ dadātīti / tadvadatu me āryaḥ - kathaṃ bodhisattvena bodhisattvacaryāyāṃ śikṣitavyam, kathaṃ pratipattavyam //",
+   "T0278": "漸向彼城，至長者所，禮足圍遶，合掌恭敬，於一面立，白言：「聖者！我已先發阿耨多羅三藐三菩提心，而未知菩薩云何學菩薩行、修菩薩道？我聞聖者善能誘誨，願為我說。」",
+   "T0279": "漸向彼城，至長者所，禮足圍遶，合掌恭敬，於一面立，白言：「聖者！我已先發阿耨多羅三藐三菩提心，而未知菩薩云何學菩薩行？云何修菩薩道？我聞聖者善能誘誨，願為我說！」",
+   "T0293": "爾時，善財童子思惟所得智光解脫，漸次南行，向彼大城，詣長者所，禮足右遶，合掌恭敬，於一面立，白言：「聖者！我已先發阿耨多羅三藐三菩提心，而未知菩薩云何學菩薩行，云何修菩薩道，我聞聖者善能誘誨，願為我說。」",
+   "bo": "ཁྱིམ་བདག་མི་ཕམ་སྡེ་གང་ན་བ་དེར་ཕྱིན་ནས། ཁྱིམ་བདག་མི་ཕམ་སྡེའི་རྐང་པ་གཉིས་ལ་སྤྱི་བོས་ཕྱག་འཚལ་ཏེ། མདུན་དུ་འདུག་ནས་ཐལ་མོ་སྦྱར་ཏེ་འདི་སྐད་ཅེས་སྨྲས་སོ། །འཕགས་པ་བདག་གིས་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་ཏུ་སེམས་བསྐྱེད་ན། ཇི་ལྟར་བྱང་ཆུབ་སེམས་དཔས་བྱང་ཆུབ་སེམས་དཔའི་སྤྱོད་པ་ལ་བསླབ་པར་བགྱི་བ་དང་། ཇི་ལྟར་ནན་ཏན་དུ་བགྱི་བ་མ་འཚལ་ཏེ། འཕགས་པ་ནི་བྱང་ཆུབ་སེམས་དཔའ་རྣམས་ལ་གདམས་ངག་དང་རྗེས་སུ་བསྟན་པ་མཛད་དོ། །ཞེས་བདག་གིས་ཐོས་ན། ཇི་ལྟར་བྱང་ཆུབ་སེམས་དཔས་བྱང་ཆུབ་སེམས་དཔའི་སྤྱོད་པ་ལ་བསླབ་པར་བགྱི་བ་དང་། ཇི་ལྟར་ནན་ཏན་དུ་བགྱི་བ་བདག་ལ་བཀའ་སྩལ་དུ་གསོལ། སྨྲས་པ།",
+   "en": "Ajitasena Chapter 51  Sudhana eventually reached the town of Roruka and approached the householder Ajitasena, bowed his head to the feet of the householder Ajitasena, stood before him, and, with his palms together in homage, said, “Ārya, I have developed the aspiration for the highest, complete enlightenment, but I do not know how bodhisattvas should train in bodhisattva conduct and in what way they should practice it. Ārya, I have heard that you give instruction and teachings to bodhisattvas! I pray that you explain to me how bodhisattvas should train in bodhisattva conduct and how they should practice it!”"
+  },
+  "g51-b": {
+   "sa": "āha - mayā kulaputra akṣayalakṣaṇo nāma bodhisattvavimokṣaḥ pratilabdhaḥ, yasya sahapratilambhādakṣayabuddhadarśananidhānapratilābho bhavati //",
+   "T0278": "長者答言：「善男子！我得菩薩解脫，名無盡相。我以證此菩薩解脫，見無量佛，得無盡藏。",
+   "T0279": "長者答言：「善男子！我得菩薩解脫，名：無盡相。我以證此菩薩解脫，見無量佛，得無盡藏。",
+   "T0293": "長者答言：「善男子！我得菩薩解脫，名無盡相。我以證此解脫門故，見無量佛，得無盡藏。」善財復言：「菩薩云何得此解脫？」答言：「善男子！菩薩若能勤修十法，則能證得如是解脫。何等為十？一者、應處閑寂深觀五欲，為欲修習諸禪定故；二者、應勤方便入諸三昧，普現色身化眾生故；三者、應以智慧，平等觀察生死涅槃同一相故；四者、應勤修習堅固念力，知善不善無忘失故；五者、應勤積集菩薩功德，波羅蜜道無厭足故；六者、應勤種植淨戒林樹，於法園苑常遊戲故；七者、應勤救護惡見眾生，令超邪徑住正見故；八者、應勤給施種種法藥，除滅眾生煩惱病故；九者、應勤觀察三世諸法，如夢幻等無染著故；十者、應勤摧伏外道邪論，不令異見損眾生故。若諸菩薩勤求修習，具此十法，即能證得如是解脫；亦於無數百千法門，入出自在。復次，善男子！菩薩若能遠離十法，得此解脫。何等為十？一者、遠離一切破諸禁戒補特伽羅；二者、遠離一切破諸正見補特伽羅；三者、遠離一切破正威儀補特伽羅；四者、遠離一切破正活命補特伽羅；五者、遠離一切雜說世論補特伽羅；六者、遠離一切懈怠嬾惰補特伽羅；七者、遠離一切貪著欲樂補特伽羅；八者、遠離一切常樂親近在家白衣補特伽羅；九者、遠離一切樂修邪福，不住正行，出家在家補特伽羅；十者、遠離一切深重煩惱，身心放逸，不可諫止補特伽羅。若諸菩薩，常能遠離如是十種諸不善人，而亦於彼不懷厭捨，亦不於彼生下劣心，但應慈念攝受調伏。菩薩復念一切眾生處生死中，由近如是不善人故，壞諸善根，墮於惡趣，常當遠離一切惡人。善男子！是為菩薩遠離十法，即能證得如是解脫。",
+   "bo": "རིགས་ཀྱི་བུ་ཁོ་བོས་ནི་བྱང་ཆུབ་སེམས་དཔའི་རྣམ་པར་ཐར་པ་མྱི་ཟད་པའི་མཚན་ཉིད་ཅེས་བྱ་བ་ཐོབ་སྟེ་དེ་ཐོབ་པས་ནི། སངས་རྒྱས་མི་ཟད་པ་མཐོང་བའི་གཏེར་རབ་ཏུ་ཐོབ་པར་འགྱུར་ཏོ། །",
+   "en": "When he had said that, the householder Ajitasena said, “Noble one, I have attained the bodhisattva liberation called unceasing characteristics so that I have attained the treasure of the unceasing vision of the buddhas."
+  },
+  "g51-c": {
+   "sa": "gaccha kulaputra iyamihaiva dakṣiṇāpathe dharmagrāme śivarāgro nāma brāhmaṇaḥ prativasati / tamupasaṃkramya paripṛccha - kathaṃ bodhisattvena bodhisattvacaryāyāṃ śikṣitavyam, kathaṃ pratipattavyam // atha khalu sudhanaḥ śreṣṭhidārako 'jitasenasya gṛhapateḥ pādau śirasābhivandya ajitasenaṃ gṛhapatimanekaśatasahasrakṛtvaḥ pradakṣiṇīkṛtya punaḥ punaravalokya ajitasenasya gṛhapaterantikātprakrāntaḥ // 49 // 52 śivarāgraḥ /",
+   "T0278": "善男子！我唯知此無盡相解脫，如諸菩薩摩訶薩得無限智、無礙辯才。而我云何能知、能說彼功德行？善男子！於此城南有一聚落，名之為法。彼聚落中有婆羅門，名尸毘最勝。汝詣彼問云何菩薩學菩薩行、修菩薩道。」時，善財童子禮無勝軍足，遶無數匝，戀仰辭去，漸次南行。",
+   "T0279": "「善男子！我唯知此無盡相解脫。如諸菩薩摩訶薩得無限智無礙辯才，而我云何能知能說彼功德行？「善男子！於此城南，有一聚落，名之為：法；彼聚落中，有婆羅門，名：最寂靜。汝詣彼問：菩薩云何學菩薩行、修菩薩道？」時，善財童子禮無勝軍足，遶無數匝，戀仰辭去。",
+   "T0293": "善男子！我唯知此無盡相解脫門，如諸菩薩摩訶薩，大悲為首，發起眾行，過去願力，皆悉現前，堅固勤求一切智智，積集莊嚴種種佛土，甚深觀察一切諸法，一切體性；常樂勤求一切如來力、無所畏、不共佛法，相及隨好圓滿音聲，乃至一切增上功德，無不現證，於諸如來甚深解脫，能隨順解，方便善巧皆能悟入，知諸眾生、我、人、壽命，士夫養育補特伽羅，蘊、處、界等性皆空寂，無所執著；常能利樂一切世間，令其安隱無諸煩惱；常勤愛樂一切智智；常勤救護一切眾生；常勤尊重一切正法，聞法愛樂隨順修行，能以正說饒益眾生，咸令安樂不入世趣，住勝精進相續不斷，住不退轉無雜染行，具足廣大平等智道，誓度眾生無能制伏。如是菩薩功德智行，而我云何能知、能說？善男子！於此城南有一聚落，名為達磨；有婆羅門，名最寂靜。汝詣彼問菩薩云何學菩薩行，修菩薩道。」時，善財童子禮無勝軍足，遶無數匝，慇懃瞻仰，戀慕而去。",
+   "bo": "སོང་རིགས་ཀྱི་བུ་ལྷོ་ཕྱོགས་ཀྱི་རྒྱུད་འདི་ཉིད་ཀྱི་ཆོས་ཀྱི་ཡུལ་གྲུ་ན་བྲམ་ཟེ་ཞི་འཛིན་མཆོག་ཅེས་བྱ་བ་ཞིག་འདུག་གིས། དེའི་གན་དུ་སོང་ལ་ཇི་ལྟར་བྱང་ཆུབ་སེམས་དཔས་བྱང་ཆུབ་སེམས་དཔའི་སྤྱོད་པ་ལ་བསླབ་པར་བྱ་བ་དང་། ཇི་ལྟར་ནན་ཏན་དུ་བྱ་བ་དྲིས་ཤིག ། དེ་ནས་ཚོང་དཔོན་གྱི་བུ་ནོར་བཟངས་ཀྱིས་ཁྱིམ་བདག་མྱི་ཕམ་སྡེའི་རྐང་པ་གཉིས་ལ་སྤྱི་བོས་ཕྱག་འཚལ་ཏེ། ཁྱིམ་བདག་མི་ཕམ་སྡེ་ལ་ལན་བརྒྱ་སྟོང་དུ་མར་གཡས་ཕྱོགས་སུ་བསྐོར་བ་བྱས་ནས་ཡང་དང་ཡང་བལྟས་ཏེ།",
+   "en": "“Depart, noble one. In this southern region, in the village called Dharma, resides a brahmin by the name of Śivarāgra. Go to him and ask him, ‘How should a bodhisattva train in and practice bodhisattva conduct?’ ” Sudhana, the head merchant’s son, bowed his head to the feet of the householder Ajitasena. He circumambulated the householder Ajitasena many hundreds of thousands of times, keeping him to his right, and, looking back at him again and again, he departed from the householder Ajitasena."
+  }
+ }
+}

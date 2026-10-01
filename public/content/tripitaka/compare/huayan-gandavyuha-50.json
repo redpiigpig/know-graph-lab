@@ -1,0 +1,115 @@
+{
+ "slug": "huayan-gandavyuha-50",
+ "title": "華嚴經・入法界品 50　妙月長者",
+ "family": "sa",
+ "intro": "入法界品第 50 章（藏譯章次），妙月長者（Sucandra）。分三節：參詣請問／善知識說所得法門（以回答善財「云何學菩薩行」的第一句為界）／「我唯知此…」謙推勝進、指示後友、辭退。",
+ "units": [
+  {
+   "id": "g50-a",
+   "label": "善財參詣・請問菩薩行"
+  },
+  {
+   "id": "g50-b",
+   "label": "妙月長者說所得法門"
+  },
+  {
+   "id": "g50-c",
+   "label": "謙推勝進・指示後友・辭退"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本",
+   "who": "Gaṇḍavyūha・GRETIL（Vaidya 1960）"
+  },
+  {
+   "id": "T0278",
+   "lang": "lzh",
+   "label": "六十華嚴",
+   "who": "佛馱跋陀羅譯《華嚴經》入法界品・421 年",
+   "work": "T0278"
+  },
+  {
+   "id": "T0279",
+   "lang": "lzh",
+   "label": "八十華嚴",
+   "who": "實叉難陀譯《華嚴經》入法界品・699 年",
+   "work": "T0279"
+  },
+  {
+   "id": "T0293",
+   "lang": "lzh",
+   "label": "四十華嚴",
+   "who": "般若譯《華嚴經》入不思議解脫境界普賢行願品・798 年",
+   "work": "T0293"
+  },
+  {
+   "id": "bo",
+   "lang": "bo",
+   "label": "藏譯",
+   "who": "德格版 Toh 44 第 45 品（Gaṇḍavyūha）・84000"
+  },
+  {
+   "id": "en",
+   "lang": "en",
+   "label": "84000 英譯",
+   "who": "譯自藏譯・與藏文逐句對齊"
+  }
+ ],
+ "works": [
+  "T0278",
+  "T0279",
+  "T0293"
+ ],
+ "anchors": [
+  {
+   "work": "T0278",
+   "range": [
+    "T09n0278_p0766c25",
+    "T09n0278_p0767a07"
+   ]
+  },
+  {
+   "work": "T0279",
+   "range": [
+    "T10n0279_p0419a27",
+    "T10n0279_p0419b07"
+   ]
+  },
+  {
+   "work": "T0293",
+   "range": [
+    "T10n0293_p0806b09",
+    "T10n0293_p0807a16"
+   ]
+  }
+ ],
+ "cells": {
+  "g50-a": {
+   "sa": "atha khalu sudhanaḥ śreṣṭhidārako yena sucandro gṛhapatiḥ, tenopasaṃkramya sucandrasya gṛhapateḥ pādau śirasābhivandya purataḥ prāñjaliḥ sthitvā evamāha - mayā ārya anuttarāyāṃ samyaksaṃbodhau cittamutpāditam / na ca jānāmi - kathaṃ bodhisattvena bodhisattvacaryāyāṃ śikṣitavyam, kathaṃ pratipattavyam / śrutaṃ ca me āryo bodhisattvānāmavavādānuśāsanīṃ dadātītī / tadvadatu me āryaḥ - kathaṃ bodhisattvena bodhisattvacaryāyāṃ śikṣitavyam, kathaṃ pratipattavyam //",
+   "T0278": "向妙月所，禮足圍遶，合掌恭敬，於一面立，白言：「聖者！我已先發阿耨多羅三藐三菩提心，而未知菩薩云何學菩薩行、修菩薩道？我聞聖者善能誘誨，願為我說。」",
+   "T0279": "向妙月所，禮足圍遶，合掌恭敬，於一面立，白言：「聖者！我已先發阿耨多羅三藐三菩提心，而未知菩薩云何學菩薩行？云何修菩薩道？我聞聖者善能誘誨，願為我說！」",
+   "T0293": "爾時，善財童子即詣妙月長者所，禮足右遶，合掌恭敬，於一面立，白言：「聖者！我已先發阿耨多羅三藐三菩提心，而未知菩薩云何學菩薩行、修菩薩道，我聞聖者善能誘誨，願為我說。」",
+   "bo": "ཁྱིམ་བདག་ཟླ་བ་བཟང་པོའི་རྐང་པ་གཉིས་ལ་སྤྱི་བོས་ཕྱག་འཚལ་ནས་མདུན་དུ་འདུག་སྟེ། ཐལ་མོ་སྦྱར་ནས་འདི་སྐད་ཅེས་སྨྲས་སོ། །འཕགས་པ་བདག་གིས་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་ཏུ་སེམས་བསྐྱེད་ན། ཇི་ལྟར་བྱང་ཆུབ་སེམས་དཔས་བྱང་ཆུབ་སེམས་དཔའི་སྤྱོད་པ་ལ་བསླབ་པར་བགྱི་བ་དང་། ཇི་ལྟར་ནན་ཏན་དུ་བགྱི་བ་མ་འཚལ་ཏེ། འཕགས་པ་ནི་བྱང་ཆུབ་སེམས་དཔའ་རྣམས་ལ་གདམས་ངག་དང་རྗེས་སུ་བསྟན་པ་མཛད་དོ། །ཞེས་བདག་གིས་ཐོས་ན། ཇི་ལྟར་བྱང་ཆུབ་སེམས་དཔས་བྱང་ཆུབ་སེམས་དཔའི་སྤྱོད་པ་ལ་བསླབ་པར་བགྱི་བ་དང་། ཇི་ལྟར་ནན་ཏན་དུ་བགྱི་བ་འཕགས་པས་བདག་ལ་བསྟན་དུ་གསོལ།",
+   "en": "Sucandra Chapter 50  Sudhana went to the householder Sucandra, bowed his head to the feet of the householder Sucandra, stood before him, and, with his palms together in homage, said, “Ārya, I have developed the aspiration for the highest, complete enlightenment, but I do not know how bodhisattvas should train in bodhisattva conduct and in what way they should practice it. Ārya, I have heard that you give instruction and teachings to bodhisattvas! I pray that you explain to me how bodhisattvas should train in bodhisattva conduct and how they should practice it!”"
+  },
+  "g50-b": {
+   "sa": "āha - mayā kulaputra vimalajñānaprabho nāma bodhisattvavimokṣaḥ pratilabdhaḥ /",
+   "T0278": "妙月答言：「善男子！我得菩薩解脫，名淨智光明。",
+   "T0279": "妙月答言：「善男子！我得菩薩解脫，名：淨智光明。",
+   "T0293": "妙月答言：「善男子！我得菩薩解脫，名無垢智光明。」善財白言：「聖者！云何修行得此解脫？」長者告言：「善男子！若諸菩薩能行十法，則能具足得此解脫。何等為十？所謂：常不捨離諸善知識；常不捨離憶念見佛；常不捨離樂聞正法；常不捨離於佛菩薩善知識所，先意問訊，恭敬供養；常不捨離多聞智慧，善友法師，能說法者；常不捨離聽聞一切波羅蜜行；常不捨離聽聞一切菩提分法；常不捨離三解脫門；常不捨離四梵住法；常不捨離一切智體。善男子！若諸菩薩常不捨離如是十法，則能得此無垢智光解脫門。」善財復言：「聖者！此解脫門云何現前而能證得？」長者答言：「善男子！現前當作般若波羅蜜心，極令相應，隨所見知皆能證入。」善財復言：「聖者！為由聽聞般若波羅蜜言說章句，而現證耶？」答言：「不也。何以故？般若波羅蜜，見一切法真實體性而現證故。」善財白言：「豈不由於從聞生智及思智性，得見真如而自證悟？」長者答言：「不也。若從聞思得自證悟，無有是處。善男子！我於此義，應說譬喻，汝當諦聽：如大沙磧中無泉井，春夏熱時，有人從西向東而行，遇有丈夫從東而來，即問之言：『我今熱渴，何處有水、清涼樹陰？我欲於中飲浴休憩，除其熱渴。』彼大丈夫善知、善說，而告之言：『從此東行，有其二路，一左一右。宜從右路勤力而行，決定當得至甘泉所，及庇清陰。』善男子！於意云何？彼熱渴者，雖聞如是泉及樹名，思惟往趣，能除熱渴，獲清涼不？」答言：「不也。何以故？要依示道至彼泉池，沐浴飲用方除熱渴，乃得清涼。」「善男子！菩薩亦爾，不但唯以聞思慧解，而能證入一切法門。善男子！言沙磧者，即謂生死；西來人者，謂諸眾生，熱謂眾惑，渴即貪愛；東來知道大丈夫者，即佛菩薩，住一切智，得法真性平等實義是也；得清淨水，無熱渴者，即自證悟真實是也。」「復次，善男子！我今為汝重說譬諭，汝應諦聽。善男子！假使如來住壽一劫，種種方便，以巧言辭為閻浮人說，天蘇陀具足眾德，柔軟妙觸，色香美味。於意云何？彼諸眾生如是聽受思惟之時，知天味不？」白言：「不也。」妙月告言：「此亦如是，不但聞思，而能證入般若真性。」善財復言：「云何菩薩，善巧宣說，令諸眾生，真實得證？」妙月告言：「善男子！菩薩所證般若真性，是彼言說決定正因；為由證得此解脫故，能為眾生善巧宣說。復次，菩薩具足十法，得此解脫，何等為十？一者、遠離諸不善法，二者、不違如來制戒，三者、遠離一切慳嫉，四者、供養一切如來，五者、勤修一切福業，六者、具足智慧，七者、具足方便，八者、具足大願，九者、具足厭離，十者、具足精進。若諸菩薩具足十法，證此解脫。",
+   "bo": "སྨྲས་པ་རིགས་ཀྱི་བུ་ཁོ་བོས་ནི་རྣམ་པར་ཐར་པ་ཡེ་ཤེས་དྲི་མ་མེད་པའི་འོད་ཅེས་བྱ་བ་ཐོབ་སྟེ།",
+   "en": "When he had said that, the householder Sucandra said, “Noble one, I know the bodhisattva liberation called the stainless light of wisdom."
+  },
+  "g50-c": {
+   "sa": "etamahaṃ kulaputra vimalajñānaprabhaṃ bodhisattvavimokṣaṃ jānāmi / kiṃ mayā śakyamapramāṇavimokṣapratilabdhānāṃ bodhisattvānāṃ caryāṃ jñātuṃ guṇān vā vaktum // gaccha kulaputra, idamihaiva dakṣiṇāpathe rorukaṃ nāma nagaram / tatra ajitaseno nāma gṛhapatiḥ prativasati / tamupasaṃkramya paripṛccha - kathaṃ bodhisattvena bodhisattvacaryāyāṃ śikṣitavyam, kathaṃ pratipattavyam // atha khalu sudhanaḥ śreṣṭhidārakaḥ sucandrasya gṛhapateḥ pādua śirasābhivandya sucandraṃ gṛhapatimanekaśatasahasrakṛtvaḥ pradakṣiṇīkṛtya punaḥ punaravalokya sucandrasya gṛhapaterantikātprakrāntaḥ // 48 // 51 Ajitasenaḥ /",
+   "T0278": "善男子！我唯知此智光解脫，如諸菩薩摩訶薩證得無量解脫法門，而我云何能知、能說彼功德行？善男子！於此南方，有城名出生，彼有長者，名無勝軍。汝詣彼問云何菩薩學菩薩行、修菩薩道。」是時，善財禮妙月足，遶無數匝，戀仰辭去。",
+   "T0279": "「善男子！我唯知此智光解脫。如諸菩薩摩訶薩證得無量解脫法門，而我云何能知能說彼功德行？「善男子！於此南方，有城名：出生；彼有長者，名：無勝軍。汝詣彼問：菩薩云何學菩薩行、修菩薩道？」是時，善財禮妙月足，遶無數匝，戀仰辭去。",
+   "T0293": "善男子！我唯知此無垢智光菩薩解脫門，如諸菩薩摩訶薩，修行種種菩薩智門，常勤作意，行無上業，其心正直，志性調柔，常樂寂靜，安住大悲，不離世間，心無染著，諸所施為，不望恩報，常念諸佛廣大境界，常思諸佛真實妙法，常樂親近諸菩薩僧，常行菩薩諸波羅蜜，常住菩薩所證諸地，常觀如來力、無所畏、不共佛法。證入無量大三昧海，究竟解脫真實法門，而我云何能知、能說彼功德行？善男子！於此南方有城，名廣大聲，彼有長者，名無勝軍。汝詣彼問菩薩云何學菩薩行，修菩薩道。」是時，善財禮妙月足，遶無數匝，慇懃瞻仰，一心戀慕，辭退而去。",
+   "bo": "རིགས་ཀྱི་བུ་ཁོ་བོས་བྱང་ཆུབ་སེམས་དཔའི་རྣམ་པར་ཐར་པ་ཡེ་ཤེས་དྲི་མ་མྱེད་པའི་འོད་འདི་ཤེས་པར་ཟད་ན། ཁོ་བོས་བྱང་ཆུབ་སེམས་དཔའི་རྣམ་པར་ཐར་པ་ཚད་མེད་པ་ཐོབ་པ་རྣམས་ཀྱི་སྤྱོད་པ་ཤེས་པའམ། ཡོན་ཏན་བརྗོད་པར་ནུས་རེ་སྐན། ། སོང་རིགས་ཀྱི་བུ་ལྷོ་ཕྱོགས་ཀྱི་རྒྱུད་འདི་ཉིད་ན་གྲོང་ཁྱེར་རི་དགས་གནས་ཤེས་བྱ་བ་ཡོད་དེ། དེ་ན་ཁྱིམ་བདག་མྱི་ཕམ་སྡེ་ཞེས་བྱ་བ་འདུག་གིས་དེའི་གན་དུ་སོང་ལ་ཇི་ལྟར་བྱང་ཆུབ་སེམས་དཔས་བྱང་ཆུབ་སེམས་དཔའི་སྤྱོད་པ་ལ་བསླབ་པར་བྱ་བ་དང་། ཇི་ལྟར་ནན་ཏན་དུ་བྱ་བ་དྲིས་ཤིག ། དེ་ནས་ཚོང་དཔོན་གྱི་བུ་ནོར་བཟངས་ཀྱིས་ཁྱིམ་བདག་ཟླ་བ་བཟང་པོའི་རྐང་པ་གཉིས་ལ་སྤྱི་བོས་ཕྱག་འཚལ་ཏེ། ཁྱིམ་བདག་ཟླ་བ་བཟང་པོ་ལ་ལན་བརྒྱ་ སྟོང་དུ་མར་གཡས་ཕྱོགས་སུ་བསྐོར་བ་བྱས་ནས། ཡང་དང་ཡང་བལྟས་ཏེ། ཁྱིམ་བདག་ཟླ་བ་བཟང་པོའི་དྲུང་ནས་སོང་ངོ་། །དེ་ནས་ཚོང་དཔོན་གྱི་བུ་ནོར་བཟངས་མཐར་གྱིས་གྲོང་ཁྱེར་རི་དགས་ཀྱི་གནས་གང་ན་བ་དེར་སོང་སྟེ།",
+   "en": "“Noble one, I know only this bodhisattva liberation called the stainless light of wisdom. How could I know the conduct or describe the qualities of the bodhisattvas who have attained countless liberations? “Depart, noble one. In this southern region there is a town called Roruka. There resides a householder by the name of Ajitasena. Go to him and ask him, ‘How should a bodhisattva train in and practice bodhisattva conduct?’ ” Sudhana, the head merchant’s son, bowed his head to the feet of the householder Sucandra. He circumambulated the householder Sucandra many hundreds of thousands of times, keeping him to his right, and, looking back at him again and again, he departed from the householder Sucandra."
+  }
+ }
+}

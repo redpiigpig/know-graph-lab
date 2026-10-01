@@ -1,0 +1,115 @@
+{
+ "slug": "huayan-gandavyuha-48",
+ "title": "華嚴經・入法界品 48　賢勝優婆夷",
+ "family": "sa",
+ "intro": "入法界品第 48 章（藏譯章次），賢勝優婆夷（Bhadrottamā）。分三節：參詣請問／善知識說所得法門（以回答善財「云何學菩薩行」的第一句為界）／「我唯知此…」謙推勝進、指示後友、辭退。",
+ "units": [
+  {
+   "id": "g48-a",
+   "label": "善財參詣・請問菩薩行"
+  },
+  {
+   "id": "g48-b",
+   "label": "賢勝優婆夷說所得法門"
+  },
+  {
+   "id": "g48-c",
+   "label": "謙推勝進・指示後友・辭退"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本",
+   "who": "Gaṇḍavyūha・GRETIL（Vaidya 1960）"
+  },
+  {
+   "id": "T0278",
+   "lang": "lzh",
+   "label": "六十華嚴",
+   "who": "佛馱跋陀羅譯《華嚴經》入法界品・421 年",
+   "work": "T0278"
+  },
+  {
+   "id": "T0279",
+   "lang": "lzh",
+   "label": "八十華嚴",
+   "who": "實叉難陀譯《華嚴經》入法界品・699 年",
+   "work": "T0279"
+  },
+  {
+   "id": "T0293",
+   "lang": "lzh",
+   "label": "四十華嚴",
+   "who": "般若譯《華嚴經》入不思議解脫境界普賢行願品・798 年",
+   "work": "T0293"
+  },
+  {
+   "id": "bo",
+   "lang": "bo",
+   "label": "藏譯",
+   "who": "德格版 Toh 44 第 45 品（Gaṇḍavyūha）・84000"
+  },
+  {
+   "id": "en",
+   "lang": "en",
+   "label": "84000 英譯",
+   "who": "譯自藏譯・與藏文逐句對齊"
+  }
+ ],
+ "works": [
+  "T0278",
+  "T0279",
+  "T0293"
+ ],
+ "anchors": [
+  {
+   "work": "T0278",
+   "range": [
+    "T09n0278_p0766b19",
+    "T09n0278_p0766c12"
+   ]
+  },
+  {
+   "work": "T0279",
+   "range": [
+    "T10n0279_p0418c24",
+    "T10n0279_p0419a12"
+   ]
+  },
+  {
+   "work": "T0293",
+   "range": [
+    "T10n0293_p0806a01",
+    "T10n0293_p0806a21"
+   ]
+  }
+ ],
+ "cells": {
+  "g48-a": {
+   "sa": "atha khalu sudhanaḥ śreṣṭhidārako yena kevalake janapade vartanakaṃ nagaram, yena ca bhadrottamopāsikā, tenopajagāma / upetya bhadrottamāyā upāsikāyāḥ pādau śirasābhivandya bhadrottamāmupāsikāmanekaśatasahasrakṛtvaḥ pradakṣiṇīkṛtya bhadrottamāyā upāsikāyāḥ purataḥ prāñjaliḥ sthitvā evamāha - mayā ārye anuttarāyāṃ samyaksaṃbodhau cittamutpāditam / na ca jānāmi - kathaṃ bodhisattvena bodhisattvacaryāyāṃ śikṣitavyam, kathaṃ pratipattavyam / śrutaṃ ca me āryā bodhisattvānāmavavādānuśāsanīṃ dadātīti / tadvadatu me āryā - kathaṃ bodhisattvena bodhisattvacaryāyāṃ śikṣitavyam, kathaṃ pratipattavyam //",
+   "T0278": "向聚落城至賢勝所，禮足圍遶，合掌恭敬，於一面立，白言：「聖者！我已先發阿耨多羅三藐三菩提心，而未知菩薩云何學菩薩行、修菩薩道？我聞聖者善能誘誨，願為我說。」",
+   "T0279": "向聚落城，至賢勝所，禮足圍遶，合掌恭敬，於一面立，白言：「聖者！我已先發阿耨多羅三藐三菩提心，而未知菩薩云何學菩薩行？云何修菩薩道？我聞聖者善能誘誨，願為我說！」",
+   "T0293": "爾時，善財童子漸次前行，詣婆怛那城有義聚落，至於賢勝優婆夷所，頂禮其足，遶無數匝，合掌恭敬，於一面立。白言：「聖者！我已先發阿耨多羅三藐三菩提心，而未知菩薩云何學菩薩行，云何修菩薩道，我聞聖者善能誘誨，願為我說。」",
+   "bo": "ཚོང་དཔོན་གྱི་བུ་བཟོ་མངོན་པར་ཤེས་པའི་དྲུང་ནས་སོང་ངོ་། །དེ་ནས་ཚོང་དཔོན་གྱི་བུ་ནོར་བཟངས་ལྗོངས་དག་པའི་གྲོང་ཁྱེར་འཚོ་བ་གང་ན་བ་དང་། དགེ་བསྙེན་མ་བཟང་མོའི་མཆོག་གང་ན་བ་དེར་སོང་སྟེ་ཕྱིན་ནས། དགེ་བསྙེན་མ་བཟང་མོའི་མཆོག་གི་རྐང་པ་གཉིས་ལ་སྤྱི་བོས་ཕྱག་འཚལ་ནས། དགེ་བསྙེན་མ་བཟང་མོའི་མཆོག་ལ་ལན་བརྒྱ་སྟོང་དུ་མར་གཡས་ཕྱོགས་སུ་བསྐོར་བ་བྱས་ཏེ། དགེ་བསྙེན་མ་བཟང་མོའི་མཆོག་གི་མདུན་དུ་འདུག་ནས་ཐལ་མོ་སྦྱར་ཏེ། འདི་སྐད་ཅེས་སྨྲས་སོ། །འཕགས་མ་བདག་གིས་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་ཏུ་སེམས་བསྐྱེད་ན། ཇི་ལྟར་བྱང་ཆུབ་སེམས་དཔས་བྱང་ཆུབ་སེམས་དཔའི་སྤྱོད་པ་ལ་བསླབ་པར་བགྱི་བ་དང་། ཇི་ལྟར་ནན་ཏན་ཏུ་བགྱི་བ་མ་འཚལ་ཏེ། འཕགས་མ་ནི་བྱང་ཆུབ་སེམས་ དཔའ་རྣམས་ལ་གདམས་ངག་དང་རྗེས་སུ་བསྟན་པ་མཛད་དོ། །ཞེས་བདག་གིས་ཐོས་ན། ཇི་ལྟར་བྱང་ཆུབ་སེམས་དཔས་བྱང་ཆུབ་སེམས་དཔའི་སྤྱོད་པ་ལ་བསླབ་པར་བགྱི་བ་དང་། ཇི་ལྟར་ནན་ཏན་ཏུ་བགྱི་བ་འཕགས་མས་བདག་ལ་བསྟན་དུ་གསོལ།",
+   "en": "Bhadrottamā Chapter 48  Sudhana, the head merchant’s son, went to the town called Vartanaka in the region of Kevalaka and approached the kalyāṇamitra Bhadrottamā. When he approached the kalyāṇamitra Bhadrottamā, he bowed his head to her feet, and then he stood before the kalyāṇamitra Bhadrottamā with his palms together in homage and said, “Āryā, I have developed the aspiration for the highest, complete enlightenment, but I do not know how bodhisattvas should train in bodhisattva conduct and in what way they should practice it. Āryā, I have heard that you give instruction and teachings to bodhisattvas! I pray that you explain to me how bodhisattvas should train in bodhisattva conduct and how they should practice it!”"
+  },
+  "g48-b": {
+   "sa": "sā avocat - ahaṃ kulaputra anālayamaṇḍalaṃ nāma dharmaparyāyaṃ jānāmi deśayāmi / adhiṣṭhānaśca me samādhiḥ pratilabdhaḥ / na tatra samādhau kasyaciddharmasyādhiṣṭhānam / tatra sarvajñatācakṣuḥ pravartate 'dhiṣṭhānaṃ sarvajñatāśrotram / adhiṣṭhānaṃ sarvajñatāghrāṇam, adhiṣṭhānaṃ sarvajñatājihvā, adhiṣṭhānaḥ sarvajñatākāyaḥ, adhiṣṭhānaṃ tatra sarvajñatāmanaḥ pravartate, adhiṣṭhānā sarvajñatormiḥ, adhiṣṭhānā sarvajñatāvidyut, adhiṣṭhānāḥ sarvajñatāvegāḥ pravartante jagadrocanāmaṇḍalāḥ /",
+   "T0278": "賢勝答言：「善男子！我得菩薩法門，名無依處道場，既自開解復為人說。又得無盡三昧，非彼三昧法有盡無盡，以能出生一切智性眼無盡故；又能出生一切智性耳無盡故；又能出生一切智性鼻無盡故；又能出生一切智性舌無盡故；又能出生一切智性身無盡故；又能出生一切智性意無盡故；又能出生一切智性種種慧明無盡故；又能出生一切智性周遍神通無盡故；又能出生一切智性如海波濤無量功德皆無盡故；又能出生一切智性遍世間光無盡故。",
+   "T0279": "賢勝答言：「善男子！我得菩薩解脫，名：無依處道場；既自開解，復為人說。又得無盡三昧，非彼三昧法有盡、無盡，以能出生一切智性眼無盡故，又能出生一切智性耳無盡故，又能出生一切智性鼻無盡故，又能出生一切智性舌無盡故，又能出生一切智性身無盡故，又能出生一切智性意無盡故，又能出生一切智性功德波濤無盡故，又能出生一切智性智慧光明無盡故，又能出生一切智性速疾神通無盡故。",
+   "T0293": "賢勝告言：「善男子！我得菩薩解脫，名無住處無盡輪，既自開解，復為人說，我住於此大三昧中，出生諸法無盡無住。所謂：出生一切智性眼無盡無住，出生一切智性耳無盡無住，出生一切智性鼻無盡無住，出生一切智性舌無盡無住，出生一切智性身無盡無住，出生一切智性意無盡無住，出生一切智性功德波濤無盡無住，出生一切智性智電光明無盡無住，出生一切智性照眾生智無盡無住，出生一切智性速疾神通無盡無住。",
+   "bo": "དེས་སྨྲས་པ་རིགས་ཀྱི་བུ་ཁོ་མོ་ནི་ཆོས་ཀྱི་རྣམ་གྲངས་གནས་མེད་པའི་དཀྱིལ་འཁོར་ཅེས་བྱ་བ་ཤེས་ཤིང་སྟོན་པ་སྟེ། ཁོ་མོས་ཐོགས་པ་མྱེད་པ་ཞེས་བྱ་བའི་ཏིང་ངེ་འཛིན་ཀྱང་ཐོབ་པོ། །ཏིང་ངེ་འཛིན་དེ་ནི་ཆོས་གང་ལ་ཡང་ཐོགས་པ་མྱེད་དེ། དེ་ལ་གནས་ན་ཐམས་ཅད་མཁྱེན་པ་ཉིད་དུ་མྱིག་ཐོགས་པ་མེད་པ་ལ་འཇུག་གོ ། ཐམས་ཅད་མཁྱེན་པ་ཉིད་དུ་རྣ་བ་ཐོགས་པ་མྱེད་པ་དང་། ཐམས་ཅད་མཁྱེན་པ་ཉིད་དུ་སྣ་ཐོགས་པ་མྱེད་པ་དང་། ཐམས་ཅད་མཁྱེན་པ་ཉིད་དུ་ལྕེ་ཐོགས་པ་མྱེད་པ་དང་། ཐམས་ཅད་མཁྱེན་པ་ཉིད་དུ་ལུས་ཐོགས་པ་མྱེད་པ་དང་། ཐམས་ཅད་མཁྱེན་པ་ཉིད་དུ་ཡིད་ཐོགས་པ་མྱེད་པ་ཡང་རབ་ཏུ་འཇུག་གོ །ཐམས་ཅད་མཁྱེན་པ་ཉིད་ཀྱི་རླབས་ཐོགས་པ་མྱེད་པ་དང་། ཐམས་ཅད་མཁྱེན་པ་ཉིད་དུ་སྣང་བ་ཐོགས་པ་མྱེད་པ་དང་། ཐམས་ཅད་མཁྱེན་པ་ཉིད་དུ་ཤུགས་ཐོགས་པ་མྱེད་པ་འགྲོ་བ་རབ་ཏུ་སྣང་བའི་དཀྱིལ་འཁོར་དག་ཀྱང་རབ་ཏུ་འཇུག་གོ །",
+   "en": "When he had said that, the kalyāṇamitra Bhadrottamā said, “Noble one, I know and teach the Dharma teaching called The Field without Location, and I have attained the samādhi called unimpeded. That samādhi is unimpeded toward any phenomenon, and when I rest within it, I have the unimpeded eyes of omniscience, I have the unimpeded ears of omniscience, I have the unimpeded nose of omniscience, I have the unimpeded tongue of omniscience, I have the unimpeded body of omniscience, I have the unimpeded mind of omniscience, I have the unimpeded waves of omniscience, I have the unimpeded lightning of omniscience, and I have the unimpeded power of omniscience and the field of the illumination of beings."
+  },
+  "g48-c": {
+   "sa": "etamahaṃ kulaputra, anālayamaṇḍalaṃ dharmaparyāyaṃ jānāmi / kiṃ mayā śakyamasaṅgabodhisattvacaryā sakalā jñātum? gaccha kulaputra dakṣiṇāpathe / tatra bharukacchaṃ nāma nagaram / tatra muktāsāro nāma hairaṇyakaḥ prativasati / tamupasaṃkramya paripṛccha - kathaṃ bodhisattvena bodhisattvacaryāyāṃ śikṣitavyam, kathaṃ pratipattavyam // atha khalu sudhanaḥ śreṣṭhidārako bhadrottamāyā upāsikāyāḥ pādau śirasābhivandya bhadrottamāmupāsikāmanekaśatasahasrakṛtvaḥ pradakṣiṇīkṛtya punaḥ punaravalokya bhadrottamāyā upāsikāyā antikātprakrāntaḥ // 46 // 49 Muktāsāraḥ /",
+   "T0278": "善男子！我唯知此無依處道場法門，如諸菩薩摩訶薩一切無著功德行。而我云何盡能知說？善男子！南方有城，名為沃田。彼有長者，名堅固解脫。汝可往問云何菩薩學菩薩行、修菩薩道。」爾時，善財禮賢勝足，遶無數匝，戀慕瞻仰，辭退南行。",
+   "T0279": "「善男子！我唯知此無依處道場解脫。如諸菩薩摩訶薩一切無著功德行，而我云何盡能知說？「善男子！南方有城，名為：沃田；彼有長者，名：堅固解脫。汝可往問：菩薩云何學菩薩行、修菩薩道？」爾時，善財禮賢勝足，遶無數匝，戀慕瞻仰，辭退南行。",
+   "T0293": "善男子！我唯知此無住處無盡輪解脫門。如諸菩薩摩訶薩，一切無著功德智行無盡法門，而我云何能知、能說？善男子！於此南方有一大城，名為沃田，彼有長者，名堅固解脫，鬻金為業。汝詣彼問菩薩云何學菩薩行，修菩薩道。」爾時，善財禮賢勝足，遶無數匝，慇懃瞻仰，一心戀慕，辭退而去。",
+   "bo": "རིགས་ཀྱི་བུ་ཁོ་མོ་ནི་ཆོས་ཀྱི་རྣམ་གྲངས་གནས་མེད་པའི་དཀྱིལ་འཁོར་འདི་ཤེས་ཤིང་ཁོང་དུ་ཆུད་པར་ཟད་ན། ཁོ་མོས་བྱང་ཆུབ་སེམས་དཔའི་སྤྱོད་པ་ཆགས་པ་མེད་པ་ལ་རིལ་གྱིས་ཤེས་པར་ནུས་རེ་སྐན། ། སོང་རིགས་ཀྱི་བུ་ལྷོ་ཕྱོགས་ཀྱི་རྒྱུད་ན་གྲོང་ཁྱེར་རྒྱས་པའི་འགྲམ་ཞེས་པ་ཡོད་དེ། དེ་ན་གསེར་འཚོང་གཅེས་པ་གཏོང་བ་ཞེས་བྱ་བ་འདུག་གིས་དེའི་གན་དུ་སོང་ལ། ཇི་ལྟར་བྱང་ཆུབ་སེམས་དཔས་བྱང་ཆུབ་སེམས་དཔའི་སྤྱོད་པ་ལ་བསླབ་པར་བྱ་བ་དང་། ཇི་ལྟར་ནན་ཏན་དུ་བྱ་བ་དྲིས་ཤིག ། དེ་ནས་ཚོང་དཔོན་གྱི་བུ་ནོར་བཟངས་ཀྱིས་དགེ་བསྙེན་མ་བཟང་མོའི་མཆོག་གི་རྐང་པ་གཉིས་ལ་སྤྱི་བོས་ཕྱག་འཚལ་ཏེ། དགེ་བསྙེན་མ་བཟང་མོའི་མཆོག་ལ་ལན་ བརྒྱ་སྟོང་དུ་མར་གཡས་ཕྱོགས་སུ་བསྐོར་བ་བྱས་ནས། ཡང་དང་ཡང་བལྟས་ཏེ། དགེ་བསྙེན་མ་བཟང་མོའི་མཆོག་གི་དྲུང་ནས་སོང་ངོ་། །",
+   "en": "“Noble one, I know only this Dharma teaching called The Field without Location. How could I know completely unimpeded bodhisattva conduct? “Depart, noble one. In the southern region there is town called Bharukaccha. There resides a goldsmith by the name of Muktāsāra. Go to him and ask him, ‘How should a bodhisattva train in and practice bodhisattva conduct?’ ” Sudhana, the head merchant’s son, bowed his head to the feet of the kalyāṇamitra Bhadrottamā. He circumambulated the kalyāṇamitra Bhadrottamā many hundreds of thousands of times, keeping her to his right, and, looking back at her again and again, he departed from the kalyāṇamitra Bhadrottamā."
+  }
+ }
+}

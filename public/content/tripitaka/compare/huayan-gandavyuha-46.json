@@ -1,0 +1,103 @@
+{
+ "slug": "huayan-gandavyuha-46",
+ "title": "華嚴經・入法界品 46　遍友童子師",
+ "family": "sa",
+ "intro": "入法界品第 46 章（藏譯章次），遍友童子師（Viśvāmitra）。",
+ "units": [
+  {
+   "id": "g46-a",
+   "label": "善財參詣・請問菩薩行"
+  },
+  {
+   "id": "g46-b",
+   "label": "遍友指示善知眾藝"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本",
+   "who": "Gaṇḍavyūha・GRETIL（Vaidya 1960）"
+  },
+  {
+   "id": "T0278",
+   "lang": "lzh",
+   "label": "六十華嚴",
+   "who": "佛馱跋陀羅譯《華嚴經》入法界品・421 年",
+   "work": "T0278"
+  },
+  {
+   "id": "T0279",
+   "lang": "lzh",
+   "label": "八十華嚴",
+   "who": "實叉難陀譯《華嚴經》入法界品・699 年",
+   "work": "T0279"
+  },
+  {
+   "id": "T0293",
+   "lang": "lzh",
+   "label": "四十華嚴",
+   "who": "般若譯《華嚴經》入不思議解脫境界普賢行願品・798 年",
+   "work": "T0293"
+  },
+  {
+   "id": "bo",
+   "lang": "bo",
+   "label": "藏譯",
+   "who": "德格版 Toh 44 第 45 品（Gaṇḍavyūha）・84000"
+  },
+  {
+   "id": "en",
+   "lang": "en",
+   "label": "84000 英譯",
+   "who": "譯自藏譯・與藏文逐句對齊"
+  }
+ ],
+ "works": [
+  "T0278",
+  "T0279",
+  "T0293"
+ ],
+ "anchors": [
+  {
+   "work": "T0278",
+   "range": [
+    "T09n0278_p0765b19",
+    "T09n0278_p0765b26"
+   ]
+  },
+  {
+   "work": "T0279",
+   "range": [
+    "T10n0279_p0417c27",
+    "T10n0279_p0418a02"
+   ]
+  },
+  {
+   "work": "T0293",
+   "range": [
+    "T10n0293_p0804a17",
+    "T10n0293_p0804a21"
+   ]
+  }
+ ],
+ "cells": {
+  "g46-a": {
+   "sa": "atha khalu sudhanaḥ śreṣṭhidārako tridaśendrabhavanādavatīrya anupūrveṇa yena kapilavastuni mahānagare viśvāmitro dārakācāryastenopajagāma / upetya viśvāmitrasya dārakācāryasya pādau śirasābhivandya viśvāmitraṃ dārakācāryamanekaśatasahasrakṛtvaḥ pradakṣiṇīkṛtya viśvāmitrasya dārakācāryasya purataḥ prāñjaliḥ sthitvā evamāha - mayā ārya anuttarāyāṃ samyaksaṃbodhau cittamutpāditam / na ca jānāmi - kathaṃ bodhisattvena bodhisattvacaryāyāṃ śikṣitavyam, kathaṃ pratipattavyam / śrutaṃ ca me āryo bodhisattvānāmavavādānuśāsanīṃ dadātīti / tadvadatu me āryaḥ - kathaṃ bodhisattvena bodhisattvacaryāyāṃ śikṣitavyam, kathaṃ pratipattavyam /",
+   "T0278": "從天宮下，漸向彼城，至遍友所，禮足圍遶，合掌恭敬，於一面立，白言：「聖者！我已先發阿耨多羅三藐三菩提心，而未知菩薩云何學菩薩行、修菩薩道？我聞聖者善能誘誨，願為我說。」",
+   "T0279": "從天宮下，漸向彼城。至遍友所，禮足圍遶，合掌恭敬，於一面立，白言：「聖者！我已先發阿耨多羅三藐三菩提心，而未知菩薩云何學菩薩行？云何修菩薩道？我聞聖者善能誘誨，願為我說！」",
+   "T0293": "爾時，善財從天宮下，向迦毘羅城，詣遍友所，禮足右遶，合掌恭敬，於一面立，白言：「聖者！我已先發阿耨多羅三藐三菩提心，而未知菩薩云何學菩薩行，云何修菩薩道；我聞聖者善能誘誨，願為我說。」",
+   "bo": "དེ་ནས་ཚོང་དཔོན་གྱི་བུ་ནོར་བཟངས་སུམ་ཅུ་རྩ་གསུམ་གྱི་དབང་པོའི་གནས་ནས་བབས་ཏེ། མཐར་གྱིས་གྲོང་ཁྱེར་ཆེན་པོ་སེར་སྐྱའི་གནས་སུ་བྱིས་པའི་སློབ་དཔོན་ཀུན་གྱི་བཤེས་གཉེན་གང་ན་བ་དེར་སོང་སྟེ། ཕྱིན་ནས། བྱིས་པའི་སློབ་དཔོན་ཀུན་གྱི་བཤེས་གཉེན་གྱི་རྐང་པ་གཉིས་ལ་སྤྱི་བོས་ཕྱག་འཚལ་ཏེ། བྱིས་པའི་སློབ་དཔོན་ཀུན་གྱི་བཤེས་གཉེན་ལ་ལན་བརྒྱ་སྟོང་དུ་མར་གཡས་ཕྱོགས་སུ་བསྐོར་བ་བྱས་ནས། བྱིས་པའི་སློབ་དཔོན་ཀུན་གྱི་བཤེས་གཉེན་གྱི་མདུན་དུ་འདུག་སྟེ། ཐལ་མོ་སྦྱར་ནས་འདི་སྐད་ཅེས་སྨྲས་སོ། །འཕགས་པ་བདག་གིས་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་ཏུ་སེམས་བསྐྱེད་ན། ཇི་ལྟར་བྱང་ཆུབ་སེམས་དཔས་བྱང་ཆུབ་སེམས་དཔའི་སྤྱོད་པ་ལ་བསླབ་པར་བགྱི་བ་དང་། ཇི་ལྟར་ནན་ཏན་ཏུ་བགྱི་བ་མ་འཚལ་ཏེ། འཕགས་པ་ནི་བྱང་ཆུབ་སེམས་དཔའ་རྣམས་ལ་གདམས་ངག་དང་རྗེས་སུ་བསྟན་པ་མཛད་དོ། །ཞེས་བདག་གིས་ཐོས་ན། ཇི་ལྟར་བྱང་ཆུབ་སེམས་དཔས་བྱང་ཆུབ་སེམས་དཔའི་སྤྱོད་པ་ལ་བསླབ་ པར་བགྱི་བ་དང་། ཇི་ལྟར་ནན་ཏན་ཏུ་བགྱི་བ་འཕགས་པས་བདག་ལ་བཀའ་སྩལ་དུ་གསོལ།",
+   "en": "Viśvāmitra Chapter 46  Sudhana descended from the paradise of the lord of Trāyastriṃśa and eventually came to Viśvāmitra, the teacher of children, in the city of Kapilavastu. When he came to him, he bowed his head to the feet of Viśvāmitra, the teacher of children; circumambulated Viśvāmitra, the teacher of children, many hundreds of thousands of times, keeping him to his right; and then stood before Viśvāmitra, the teacher of children, with his palms together in homage and said, “Ārya, I have developed the aspiration for the highest, complete enlightenment, but I do not know how bodhisattvas should train in bodhisattva conduct and in what way they should practice it. Ārya, I have heard that you give instruction and teachings to bodhisattvas! Ārya, I pray that you explain to me how bodhisattvas should train in bodhisattva conduct and how they should practice it!”"
+  },
+  "g46-b": {
+   "sa": "evamukte viśvāmitro dārakācāryaḥ sudhanaṃ śreṣṭhidārakametadavocat - ayaṃ kulaputra śilpābhijño nāma śreṣṭhidārako bodhisattvāllipijñānaṃ śikṣitaḥ / etamupasaṃkramya paripṛccha / eṣa te nirdekṣyati yathā bodhisattvacaryāyāṃ śikṣitavyam, yathā pratipattavyam // 44 // 47 śilpābhijñaḥ /",
+   "T0278": "遍友答言：「善男子！此有童子名善知眾藝，學菩薩字智。汝可問之，當為汝說。」",
+   "T0279": "遍友答言：「善男子！此有童子，名：善知眾藝，學菩薩字智。汝可問之，當為汝說。」",
+   "T0293": "遍友答言：「善男子！此有童子名善知眾藝，修學菩薩字智法門。汝可問之，當為汝說。」",
+   "bo": "དེ་སྐད་ཅེས་སྨྲས་པ་དང་། བྱིས་པའི་སློབ་དཔོན་ཀུན་གྱི་བཤེས་གཉེན་གྱིས་ཚོང་དཔོན་གྱི་བུ་ནོར་བཟངས་ལ་འདི་སྐད་ཅེས་སྨྲས་སོ། །རིགས་ཀྱི་བུ་ཚོང་དཔོན་གྱི་བུ་བཟོ་མངོན་པར་ཤེས་པ་ཞེས་བྱ་བ་འདི་ནི་བྱང་ཆུབ་སེམས་དཔའ་ལས་ཡི་གེའི་ཤེས་པ་སློབ་སློབ་པ་ཡིན་གྱིས་འདིའི་གན་དུ་སོང་སྟེ་དྲིས་དང་། འདི་ནི་ཁྱོད་ལ་ཇི་ལྟར་བྱང་ཆུབ་སེམས་དཔས་བྱང་ཆུབ་སེམས་དཔའི་སྤྱོད་པ་ལ་བསླབ་པར་བྱ་བ་དང་། ཇི་ལྟར་ནན་ཏན་ཏུ་བྱ་བ་སྟོན་པར་འགྱུར་རོ་ཞེས་ནས།",
+   "en": "When he had said that, Viśvāmitra, the teacher of children, said to Sudhana, the head merchant’s son, “Noble one, Śilpābhijña, a head merchant’s son here, has studied the knowledge of words from bodhisattvas. You should go to him and ask him, and he will teach you how bodhisattvas should train in bodhisattva conduct and how they should practice it.”"
+  }
+ }
+}

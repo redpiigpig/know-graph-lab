@@ -1,0 +1,115 @@
+{
+ "slug": "huayan-gandavyuha-31",
+ "title": "華嚴經・入法界品 31　正趣菩薩",
+ "family": "sa",
+ "intro": "入法界品第 31 章（藏譯章次），正趣菩薩（Ananyagāmin）。分三節：參詣請問／善知識說所得法門（以回答善財「云何學菩薩行」的第一句為界）／「我唯知此…」謙推勝進、指示後友、辭退。",
+ "units": [
+  {
+   "id": "g31-a",
+   "label": "善財參詣・請問菩薩行"
+  },
+  {
+   "id": "g31-b",
+   "label": "正趣菩薩說所得法門"
+  },
+  {
+   "id": "g31-c",
+   "label": "謙推勝進・指示後友・辭退"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本",
+   "who": "Gaṇḍavyūha・GRETIL（Vaidya 1960）"
+  },
+  {
+   "id": "T0278",
+   "lang": "lzh",
+   "label": "六十華嚴",
+   "who": "佛馱跋陀羅譯《華嚴經》入法界品・421 年",
+   "work": "T0278"
+  },
+  {
+   "id": "T0279",
+   "lang": "lzh",
+   "label": "八十華嚴",
+   "who": "實叉難陀譯《華嚴經》入法界品・699 年",
+   "work": "T0279"
+  },
+  {
+   "id": "T0293",
+   "lang": "lzh",
+   "label": "四十華嚴",
+   "who": "般若譯《華嚴經》入不思議解脫境界普賢行願品・798 年",
+   "work": "T0293"
+  },
+  {
+   "id": "bo",
+   "lang": "bo",
+   "label": "藏譯",
+   "who": "德格版 Toh 44 第 45 品（Gaṇḍavyūha）・84000"
+  },
+  {
+   "id": "en",
+   "lang": "en",
+   "label": "84000 英譯",
+   "who": "譯自藏譯・與藏文逐句對齊"
+  }
+ ],
+ "works": [
+  "T0278",
+  "T0279",
+  "T0293"
+ ],
+ "anchors": [
+  {
+   "work": "T0278",
+   "range": [
+    "T09n0278_p0718c06",
+    "T09n0278_p0719a17"
+   ]
+  },
+  {
+   "work": "T0279",
+   "range": [
+    "T10n0279_p0367b10",
+    "T10n0279_p0367c29"
+   ]
+  },
+  {
+   "work": "T0293",
+   "range": [
+    "T10n0293_p0735b20",
+    "T10n0293_p0736a18"
+   ]
+  }
+ ],
+ "cells": {
+  "g31-a": {
+   "sa": "atha khalu sudhanaḥ śreṣṭhidārako 'valokiteśvarasya bodhisattvasya jñānagāthālabdhacitto 'valokiteśvarasya bodhisattvasyāvitṛpto darśanena vāṇīmaprativahan yena ananyagāmī bodhisattvastenopasaṃkramya ananyagāmino bodhisattvasya pādau śirasābhivandya purataḥ prāñjaliḥ sthitvā evamāha - mayā ārya anuttarāyāṃ samyaksaṃbodhau cittamutpāditam / na ca jānāmi kathaṃ bodhisattvena bodhisattvacaryāyāṃ śikṣitavyam, kathaṃ pratipattavyam / śrutaṃ ca me āryo bodhisattvānāmavavādānuśāsanīṃ dadātīti / tadvadatu me āryaḥ - kathaṃ bodhisattvena bodhisattvacaryāyāṃ śikṣitavyam, kathaṃ pratipattavyam // so 'vocat - ahaṃ kulaputra samantamukhanirjavanasya bodhisattvavimokṣasya lābhī /",
+   "T0278": "爾時，東方有一菩薩，名曰正趣，來詣此土。住金剛山頂，至此山時，娑婆世界六種震動，眾寶莊嚴放大光明，映蔽日月。釋、梵、天龍八部，光明悉如聚墨，普照地獄、餓鬼、畜生、閻羅王處，滅除眾苦，斷除煩惱及諸病苦。普雨寶雨，充滿佛剎，乃至普雨一切莊嚴雲雨，供養如來。隨其所應，示現其身，然後來詣觀世音所。時，觀世音告善財言：「善男子！汝見此眾中正趣菩薩不？」答言：「唯然，已見。」「善男子！汝詣彼問云何菩薩學菩薩行、修菩薩道。」時，善財童子頭面敬禮觀世音足，遶無數匝，觀察無厭，正念聖教，深入智海，辭詣正趣，頭面禮足，右遶畢，恭敬合掌，於一面住，白言：「大聖！我已先發阿耨多羅三藐三菩提心，而未知菩薩云何學菩薩行、修菩薩道。」",
+   "T0279": "爾時，東方有一菩薩，名曰：正趣，從空中來，至娑婆世界輪圍山頂，以足按地；其娑婆世界六種震動，一切皆以眾寶莊嚴。正趣菩薩放身光明，映蔽一切日、月、星、電，天龍八部、釋、梵、護世所有光明皆如聚墨；其光普照一切地獄、畜生、餓鬼、閻羅王處，令諸惡趣，眾苦皆滅，煩惱不起，憂悲悉離。又於一切諸佛國土，普雨一切華香、瓔珞、衣服、幢蓋；如是所有諸莊嚴具，供養於佛。復隨眾生心之所樂，普於一切諸宮殿中而現其身，令其見者皆悉歡喜，然後來詣觀自在所。時，觀自在菩薩告善財言：「善男子！汝見正趣菩薩來此會不？」白言：「已見。」告言：「善男子！汝可往問：菩薩云何學菩薩行、修菩薩道？」爾時，善財童子敬承其教，遽即往詣彼菩薩所，頂禮其足，合掌而立，白言：「聖者！我已先發阿耨多羅三藐三菩提心，而未知菩薩云何學菩薩行？云何修菩薩道？我聞聖者善能教誨，願為我說！」",
+   "T0293": "爾時，有一菩薩名正性無異行，從於東方虛空中來，至此世界輪圍山頂，以足按地。時，此世界六種震動，變成無數雜寶莊嚴。復於其身放大光明，映蔽一切釋、梵、護世、天龍八部、日、月、星、電所有光明，皆如聚墨；其光普照地獄、餓鬼、畜生、閻羅王界，及餘一切苦惱眾生，罪垢銷除、身心清淨。又於一切諸佛剎土普興一切諸供養雲，普雨一切華香、瓔珞、衣服、幢蓋，如是所有諸莊嚴具，供養於佛。復以神力隨諸眾生心之所樂，普於一切諸宮殿中而現其身，令其見者皆悉歡喜，然後來詣觀自在菩薩摩訶薩所。時，觀自在菩薩告善財言：「善男子！汝見正性無異行菩薩來此大會道場中不？」善財答言：「唯然！已見。」告言：「善男子！汝可往問菩薩云何學菩薩行，修菩薩道。」爾時，善財童子於觀自在菩薩所，得甚深智入大悲門，以甚深心隨順觀察，心無疲厭。一心頂禮觀自在菩薩足，遶無數匝，敬承其教，辭退而行。往詣正性無異行菩薩所，頂禮其足，合掌而立，白言：「聖者！我已先發阿耨多羅三藐三菩提心，而未知菩薩云何學菩薩行，云何修菩薩道；我聞聖者善能誘誨，願為我說。」",
+   "bo": "བྱང་ཆུབ་སེམས་དཔའ་སྤྱན་རས་གཟིགས་ཀྱི་དབང་པོའི་དྲུང་ནས་སོང་ངོ་། །དེ་ནས་ཚོང་དཔོན་གྱི་ བུ་ནོར་བཟངས་བྱང་ཆུབ་སེམས་དཔའ་སྤྱན་རས་གཟིགས་ཀྱི་དབང་པོའི་ཡེ་ཤེས་ཀྱི་གཏིང་མ་རྙེད་པའི་སེམས་ཀྱིས་སྤྱན་རས་གཟིགས་ཀྱི་དབང་པོ་བལྟ་བས་ཀྱང་མ་ངོམས་བཞིན་དུ་བསྒོ་བ་དང་། མི་འགལ་བར་བྱང་ཆུབ་སེམས་དཔའ་གཞན་དུ་མི་འགྲོ་བ་གང་ན་བ་དེར་སོང་སྟེ། བྱང་ཆུབ་སེམས་དཔའ་གཞན་དུ་མི་འགྲོ་བའི་རྐང་པ་གཉིས་ལ་སྤྱི་བོས་ཕྱག་འཚལ་ནས་མདུན་དུ་འདུག་སྟེ། ཐལ་མོ་སྦྱར་ནས་འདི་སྐད་ཅེས་སྨྲས་སོ། །འཕགས་པ་བདག་གིས་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་ཏུ་སེམས་བསྐྱེད་ན། ཇི་ལྟར་བྱང་ཆུབ་སེམས་དཔས་བྱང་ཆུབ་སེམས་དཔའི་སྤྱོད་པ་ལ་བསླབ་པར་བགྱི་བ་དང་། ཇི་ལྟར་ནན་ཏན་དུ་བགྱི་བ་མ་འཚལ་ཏེ། འཕགས་པ་ནི་བྱང་ཆུབ་སེམས་དཔའ་རྣམས་ལ་གདམས་ངག་དང་རྗེས་སུ་བསྟན་པ་མཛད་དོ་ཞེས་བདག་གིས་ཐོས་ན། ཇི་ལྟར་བྱང་ཆུབ་སེམས་དཔས་བྱང་ཆུབ་སེམས་དཔའི་སྤྱོད་པ་ལ་བསླབ་པར་བགྱི་བ་དང་། ཇི་ལྟར་ནན་ཏན་དུ་བགྱི་བ་འཕགས་པས་བདག་ལ་བཤད་དུ་གསོལ། །",
+   "en": "Ananyagāmin Chapter 31  Sudhana, the head merchant’s son, his mind having acquired Avalokiteśvara’s verses of wisdom, had not had enough of gazing on the bodhisattva Avalokiteśvara, but so as not to disobey his instruction, Sudhana went to where the bodhisattva Ananyagāmin was. He bowed his head to the feet of the bodhisattva Ananyagāmin. Then he stood before him and, with his hands placed together in homage, said, “Ārya, I have developed the aspiration for the highest, complete enlightenment, but I do not know how bodhisattvas should train in bodhisattva conduct and in what way they should practice it. “Ārya, I have heard that you give instruction and teachings to bodhisattvas! Explain to me how bodhisattvas should train in bodhisattva conduct and how they should practice it!”"
+  },
+  "g31-b": {
+   "sa": "āha - katamasya tvayā ārya tathāgatasya pādamūlādeṣa samantamukhanirjavano nāma bodhisattvavimokṣaḥ pratilabdhaḥ? kiyaddūre vā sa ito lokadhātuḥ? kiyacciroccalito vāsi tato lokadhātoḥ? āha - durvijñeyametatkulaputra sthānaṃ sadevamānuṣāsureṇa lokena saśramaṇabrāhmaṇikayā prajayā - yaduta bodhisattvaparākramī bodhisattvavīryānivartyatā bodhisattvavīryasaṃhāryatā / nedaṃ kulaputra śakyaṃ kalyāṇamitrāparigṛhītairbuddhāsamanvāhṛtairanupacitakuśalamūlairapariśuddhāśayairapratilabdhabodhisattvendriyaiḥ prajñācakṣuvirahitaiḥ śrotuṃ vā saṃdhārayituṃ vā adhimoktuṃ vā avatarituṃ vā / āha - vadatu me āryaḥ / adhimokṣyāmi śraddhāsyāmi buddhānubhāvena kalyāṇamitraparigraheṇa ca / so 'vocat - ahaṃ kulaputra pūrvasyāṃ diśi śrīgarbhavatyā lokadhātorāgacchāmi samantaśrīsaṃbhavasya tathāgatasya buddhakṣetrāt / tasya me kulaputra samantaśrīsaṃbhavasya tathāgatasya pādamūlādeṣa samantamukhanirjavano nāma bodhisattvavimokṣaḥ pratilabdhaḥ / tataśca me kulaputra śrīgarbhavatyā lokadhātoruccalitasya anabhilāpyānabhilāpyabuddhakṣetraparamāṇurajaḥsamāḥ kalpāḥ kṣīṇāḥ / ekaikena ca cittotpādena anabhilāpyānabhilāpyabuddhakṣetraparamāṇurajaḥsamān padavyavahārān vyatikramāmi / ekaikena ca padavyavahāreṇa anabhilāpyānabhilāpyabuddhakṣetraparamāṇurajaḥsamāni buddhakṣetrāṇyatikramāmi / sarvāṇi ca tāni buddhakṣetrāṇi avirahitāni tathāgataiḥ / avatarāmi sarvāṃśca tān buddhān bhagavataḥ / anuttarayā manomayyā anabhisaṃskāradharmadhātumudrāmudritayā tathāgatānujñātayā sarvabodhisattvapraharṣasaṃjananyā tathāgataṃ pūjayāmi / yāvataśca tāsu lokadhātuṣu sattvasamudrān paśyāmi, sarveṣāṃ ca teṣāṃ cittasāgarānavatarāmi, sarveṣāṃ ca teṣāmindriyacakraṃ parijñāya yathāśayādhimuktito rūpakāyaṃ saṃdarśayāmi / dharmaghoṣamudīrayāmi / prabhāmaṇḍalamutsṛjāmi / vividhopakaraṇasaṃpadamupasaṃharāmi / svakāyaṃ caiṣāmadhitiṣṭhāmi, yaduta paripākavinayaprayogāpratiprasrabdhaye / yathā ca pūrvasyā diśo niryāmi, evaṃ dakṣiṇāyāḥ paścimāyāḥ uttarāyā uttarapūrvāyāḥ pūrvadakṣiṇāyā dakṣiṇapaścimāyāḥ paścimottarāyā adha (Gv 166) ūrdhvāyā diśo niryāmi /",
+   "T0278": "「善男子！我已成就菩薩普門速行法門。」白言：「大聖！於何佛所得此法門？所從來剎去此幾何？發來久如？」答言：「善男子！此處難知。一切諸天、人、非人等，所不能了。唯精進不退，近善知識，佛所護念，具足善根，淨正直心，得菩薩根，開智慧眼，多聞多知菩薩境界。」「唯願大聖為我解說！我當承佛神力、善知識力，而得信解。」答言：「善男子！我所從來剎，名曰妙藏，佛號妙德。於彼佛所得此法門，從彼發來已經不可說佛剎微塵等劫；於一念中行不可說佛剎微塵等步；一步過不可說佛剎微塵等世界；所經諸國，佛皆現在，以一切菩薩諸供養具而供養之。悉能了知彼世界中諸群生海，分別諸根，隨其所應而為說法，放大光網，普照十方，出妙音聲，演說正法，饒益度脫彼諸眾生，乃至十方亦復如是。",
+   "T0279": "正趣菩薩言：「善男子！我得菩薩解脫，名：普門速疾行。」善財言：「聖者！於何佛所得此法門？所從來剎，去此幾何？發來久如？」告言：「善男子！此事難知，一切世間天、人、阿脩羅、沙門、婆羅門等所不能了；唯勇猛精進無退無怯諸菩薩眾，已為一切善友所攝、諸佛所念，善根具足，志樂清淨，得菩薩根，有智慧眼，能聞能持，能解能說。」善財言：「聖者！我承佛神力、善知識力，能信能受，願為我說！」正趣菩薩言：「善男子！我從東方妙藏世界普勝生佛所而來此土，於彼佛所得此法門，從彼發來已經不可說不可說佛剎微塵數劫，一一念中舉不可說不可說佛剎微塵數步，一一步過不可說不可說世界微塵數佛剎。一一佛剎，我皆遍入，至其佛所，以妙供具而為供養；此諸供具，皆是無上心所成，無作法所印，諸如來所忍，諸菩薩所歎。善男子！我又普見彼世界中一切眾生，悉知其心，悉知其根，隨其欲解，現身說法，或放光明，或施財寶，種種方便，教化調伏，無有休息。如從東方，南、西、北方，四維、上、下，亦復如是。",
+   "T0293": "菩薩告言：「善男子！我得菩薩解脫，名普門不動速疾行。」善財白言：「聖者！於何佛所得此解脫？所從來剎去此幾何？發來久如？」菩薩告言：「善男子！如此境界甚深難解，一切世間天、人、阿脩羅、沙門、婆羅門等所不能了。唯諸菩薩最勝精進，具菩薩行，無退、無怯，已能親近諸善知識，善友所攝，諸佛所念，增長善根，志樂清淨；得菩薩根、有智慧眼，能聞、能持、能解、能入。」善財白言：「唯願聖者為我宣說。我當承佛威神之力、善知識力，能信、能受、能解、能入。」菩薩告言：「善男子！我從東方具足吉祥藏世界，普吉祥出生佛所而來此土。善男子！於彼佛所得此法門；從彼發來，已經不可說不可說佛剎極微塵數劫；一一念中舉不可說不可說佛剎極微塵數步；一一步過不可說不可說佛剎極微塵數世界；一一世界我皆遍入，以最勝心至其佛所，以妙供具而為供養，及施一切諸眾生海。此諸供具皆是無上心所成，無作法所印，諸如來所忍，諸菩薩所歎。善男子！我又普見彼世界中一切眾生，悉知其心、悉知其根，隨其解欲，現身說法；或放光明，或施財寶，種種方便教化、調伏、利樂、成熟，無有休息。如從東方，南、西、北方，四維，上、下，亦復如是。",
+   "bo": "དེས་སྨྲས་པ་རིགས་ཀྱི་བུ་ང་ནི་བྱང་ཆུབ་སེམས་དཔའི་རྣམ་པར་ཐར་བ་སྒོ་ཀུན་ཏུ་འགྲོ་བ་ཐོབ་པའོ། ། སྨྲས་པ། འཕགས་པ་ཁྱོད་ཀྱིས་དེ་བཞིན་གཤེགས་པ་གང་གི་ཞབས་ཀྱི་དྲུང་ནས་བྱང་ཆུབ་སེམས་དཔའི་རྣམ་པར་ཐར་པའི་སྒོ་ཀུན་ཏུ་འགྲོ་བ་ཞེས་བྱ་བ་འདི་བརྙེས། འཇིག་རྟེན་གྱི་ཁམས་དེ་ནི་འདི་ནས་ཇི་སྲིད་ཅིག་ན་མཆིས། འཇིག་རྟེན་གྱི་ཁམས་དེ་ནས་བཞུད་ནས་ནི་ཇི་སྲིད་ཅིག་ལགས། སྨྲས་པ་རིགས་ཀྱི་བུ་གནས་འདི་ནི་ལྷ་དང་མི་དང་ལྷ་མ་ཡིན་དུ་བཅས་པའི་འཇིག་རྟེན་དང་། དགེ་སྦྱོང་དང་བྲམ་ཟེར་བཅས་པའི་སྐྱེ་དགུས་ཀྱང་ཤེས་པར་དཀའ་སྟེ། དེ་ནི་བྱང་ཆུབ་སེམས་དཔའི་མཐུ་དང་། བྱང་ཆུབ་སེམས་དཔའི་བརྩོན་འགྲུས་མི་ལྡོག་པ་དང་། བྱང་ཆུབ་སེམས་དཔའི་སྤྱོད་པ་མི་འཕྲོགས་པའི་ཡུལ་ཏེ། དེ་ནི་རིགས་ཀྱི་བུ་དགེ་བའི་བཤེས་གཉེན་གྱིས་ཡོངས་སུ་མ་ཟིན་པ། སངས་རྒྱས་ཀྱིས་མ་དགོངས་པ། དགེ་བའི་རྩ་བ་མ་བསྩགས་པ། བསམ་པ་ཡོངས་སུ་མ་དག་པ། བྱང་ཆུབ་སེམས་དཔའི་དབང་པོ་མ་ཐོབ་པ། ཤེས་རབ་ཀྱི་མིག་དང་མི་ ལྡན་པ་རྣམས་ཀྱིས་ཐོས་བ་འམ། ཡོངས་སུ་གཟུང་བའམ། ཡིད་ཆེས་པའམ། ཁོང་དུ་ཆུད་པར་བྱ་བར་མི་ནུས་སོ། ། སྨྲས་པ། སངས་རྒྱས་ཀྱི་མཐུ་དང་། དགེ་བའི་བཤེས་གཉེན་གྱི་གཟུངས་ཀྱིས་དད་པ་དང་། མོས་པར་བགྱི་ན་འཕགས་པས་བདག་ལ་བཀའ་མི་སྩལ་ཏམ། དེས་སྨྲས་པ་རིགས་ཀྱི་བུ་ང་ནི་ཤར་ཕྱོགས་ཀྱི་འཇིག་རྟེན་གྱི་ཁམས་དཔལ་གྱི་སྙིང་པོ་དང་ལྡན་པ་དེ་བཞིན་གཤེགས་པ་དཔལ་ཀུན་ནས་ཡང་དག་པར་འབྱུང་བའི་སངས་རྒྱས་ཀྱི་ཞིང་ནས་འོངས་ཏེ། དེ་བཞིན་གཤེགས་པ་དཔལ་ཀུན་ནས་ཡང་དག་པར་འབྱུང་བའི་ཞབས་ཀྱི་དྲུང་ནས་ངས་བྱང་ཆུབ་སེམས་དཔའི་རྣམ་པར་ཐར་པ་སྒོ་ཀུན་ཏུ་འགྲོ་བ་འདི་ཐོབ་བོ། ། རིགས་ཀྱི་བུ་འཇིག་རྟེན་གྱི་ཁམས་དཔལ་གྱི་སྙིང་པོ་དང་ལྡན་པ་དེ་ནས་ང་སོང་ནས་ནི་བསྐལ་པ་སངས་རྒྱས་ཀྱི་ཞིང་བརྗོད་དུ་མེད་པའི་རྡུལ་ཤིན་ཏུ་ཕྲ་བ་སྙེད་ཅིག་འདས་ཏེ། སེམས་བསྐྱེད་པ་རེ་རེ་ཞིང་ཡང་གོམ་པ་སངས་རྒྱས་ཀྱི་ཞིང་བརྗོད་དུ་མེད་པའི་རྡུལ་ཤིན་ཏུ་ཕྲ་བ་སྙེད་ཅིག་བོར་རོ། ། གོམ་པ་རེ་རེས་ཀྱང་སངས་རྒྱས་ཀྱི་ཞིང་བརྗོད་དུ་མེད་པའི་རྡུལ་ཤིན་ཏུ་ཕྲ་བ་སྙེད་ཀྱི་སངས་རྒྱས་ཀྱི་ཞིང་འདས་ཏེ། སངས་རྒྱས་ཀྱི་ཞིང་དེ་དག་ཐམས་ཅད་ཀྱང་དེ་བཞིན་གཤེགས་པ་དང་ལྡན་པར་ཤེས་ཏེ། སངས་རྒྱས་བཅོམ་ལྡན་འདས་དེ་དག་ཐམས་ཅད་ལ་འང་དེ་བཞི་གཤེགས་པའི་མཆོད་པ་བླ་ན་མེད་པ་ཡིད་ཀྱིས་རང་བཞིན་ཆོས་ཉིད་མངོན་པར་འདུ་བ་བ་མེད་པའི་རྒྱས་བཏབ་པ་དེ་བཞིན་གཤེགས་པས་གནང་བ། བྱང་ཆུབ་སེམས་དཔའི་དགའ་བ་ཡོངས་སུ་བསྐྱེད་པས་མཆོད་པ་བྱས་སོ། ། འཇིག་རྟེན་གྱི་ཁམས་དེ་དག་ན་སེམས་ཅན་གྱི་ཁམས་རྒྱ་མཚོ་ཇི་སྙེད་པ་དེ་དག་ཐམས་ཅད་ཀྱང་མཐོང་སྟེ། དེ་དག་ཐམས་ཅད་ཀྱི་སེམས་རྒྱ་མཚོ་ཡང་ཁོང་དུ་ཆུད་དོ། །དེ་དག་ཐམས་ཅད་ཀྱི་དབང་པོའི་འཁོར་ལོ་ཡང་ཡོངས་སུ་ཤེས་ཤིང་བསམ་པ་དང་། མོས་པ་ཇི་ལྟ་བ་བཞིན་དུ་གཟུགས་ཀྱི་ལུས་ཡོངས་སུ་བསྟན་ཏོ། །ཆོས་ཀྱི་དབྱངས་རབ་ཏུ་བསྒྲགས་སོ། །འོད་ཀྱི་དཀྱིལ་འཁོར་ཡོངས་སུ་བཀྱེའོ། །ཡོ་བྱད་སྣ་ཚོགས་ཕུན་སུམ་ཚོགས་པས་ཀྱང་ཉེ་བར་བསྡུད་དོ། རང་གི་ལུས་ཀྱང་དེ་དག་ ལ་བྱིན་གྱིས་བརླབས་ཏེ། དེ་ནི་ཡོངས་སུ་སྨིན་པར་བྱ་བ་དང་། གདུལ་བའི་སྦྱོར་བ་རྒྱུན་མི་འཆད་པའི་ཕྱིར་རོ། ། ཤར་ཕྱོགས་ནས་ཇི་ལྟར་འོངས་པ་དེ་བཞིན་དུ་ལྷོ་ཕྱོགས་དང་ནུབ་ཕྱོགས་དང་། བྱང་ཕྱོགས་དང་། བྱང་ཤར་གྱི་ཕྱོགས་མཚམས་དང་། ཤར་ལྷོའི་ཕྱོགས་མཚམས་དང་། ལྷོ་ནུབ་ཀྱི་ཕྱོགས་མཚམས་དང་།",
+   "en": "Then the bodhisattva Ananyagāmin said, “Noble one, I have attained the bodhisattva liberation called the arising of every gateway.” Sudhana asked, “Ārya, at the feet of which tathāgata did you attain the bodhisattva liberation called the arising of every gateway? How far from here is that world realm? How long did it take to come from that world realm?” The bodhisattva Ananyagāmin said, “Noble one, this is something that is difficult to comprehend for beings such as the śramaṇas and brahmins in this world with its devas, humans, and asuras. It is the power of the bodhisattvas, the irreversible diligence of the bodhisattvas, and the unsurpassable conduct of the bodhisattvas. “Noble one, those who are not in the care of a kalyāṇamitra, who are not regarded by the buddhas, who have not accumulated the roots of merit, who do not have a pure motivation, who have not attained the faculties of a bodhisattva, and who do not have the eyes of wisdom will not be able to hear of it, grasp it, believe in it, or comprehend it.” Sudhana said, “Tell it to me, for I am apprehended by the buddhas and in the care of kalyāṇamitras, and I have faith and aspiration!” The bodhisattva Ananyagāmin said, “Noble one, I have come from a world realm in the eastern direction that is called Śrīgarbhavatī, the buddha realm of the Tathāgata Samantaśrīsaṃbhava. I obtained the bodhisattva liberation called the arising of every gateway at the feet of the Tathāgata Samantaśrīsaṃbhava. “Noble one, as many kalpas as there are atoms in an anabhilāpyānabhilāpya of buddha realms passed while I came from the world realm Śrīgarbhavatī. “With each development of an aspiration, I took as many steps as there are atoms in an anabhilāpyānabhilāpya of buddha realms. With each step, I passed as many buddha realms as there are atoms in an anabhilāpyānabhilāpya of buddha realms. There was a tathāgata in each of those buddha realms, and I perceived all those buddha bhagavats. To all those tathāgatas I made offerings that were authorized by the tathāgatas and were unsurpassable, composed of the mind, and sealed by the noncomposite nature of phenomena and gave rise to joy in bodhisattvas. “I saw in those world realms an ocean of beings, and I perceived the ocean of all their minds. I knew the wheels of all their faculties, and I manifested physical bodies in accord with their aspirations, proclaimed the words of the Dharma, radiated a halo of light, brought them the gift of various necessities, and empowered my own body, so that I could continuously be engaged in ripening and guiding them. “In the same way that I came from the east, I came from the south, from the west, from the north, from the northeast, from the southeast, from the southwest, from the northwest, from below, and from above."
+  },
+  "g31-c": {
+   "sa": "etamahaṃ kulaputra samantamukhanirjavanaṃ bodhisattvavimokṣaṃ jānāmi / kiṃ mayā śakyaṃ sarvatrānugatānāṃ bodhisattvānāṃ samatādigabhimukhānāmasaṃbhinnajñānaviṣayāṇāṃ sarvadharmadhātusuvibhaktaśarīrāṇāṃ yathāśayādhimuktasarvasattvānuvicāriṇāṃ sarvakṣetraspharaṇakāyānāṃ sarvadharmayathānugatānāṃ tryadhvapathasamatānuprāptānāṃ sarvadikpathasamatānusaraṇānāṃ sarvajagatpathavirocanānāṃ tathāgatapathāvikalpānāmasaṅgasarvapathānugatānāmanālayapathapratiṣṭhitānāṃ caryāṃ jñātuṃ guṇān vā vaktum // gaccha kulaputra, ihaiva dakṣiṇāpathe dvāravatī nāma nagarī / tatra mahādevo devaḥ prativasati / tamupasaṃkramya paripṛccha kathaṃ - bodhisattvena bodhisattvacaryāyāṃ śikṣitavyam, kathaṃ pratipattavyam // atha khalu sudhanaḥ śreṣṭhidārako 'nanyagāmino bodhisattvasya pādau śirasābhivandya ananyagāminaṃ bodhisattvamanekaśatasahasrakṛtvaḥ pradakṣiṇīkṛtya punaḥ punaravalokya ananyagāmino bodhisattvasyāntikāt prakrāntaḥ // 29 // 32 Mahādevaḥ /",
+   "T0278": "善男子！我唯知此菩薩普門速行法門。諸大菩薩普於十方，無所不至，境界無量，無能壞者；清淨法身充滿法界，分別了知諸眾生道，滿一切剎，順一切法，等觀三世，說平等法，隨順世間，不著佛道，普至諸道，無著無礙，我當云何能知、能說彼功德行？善男子！於此南方，有城名婆羅波提；彼有一天，名曰大天。汝詣彼問云何菩薩學菩薩行、修菩薩道。」時，善財童子頭面敬禮正趣菩薩，遶無數匝，眷仰觀察，辭退南行。",
+   "T0279": "「善男子！我唯得此菩薩普疾行解脫，能疾周遍到一切處。如諸菩薩摩訶薩，普於十方無所不至，智慧境界等無差別，善布其身悉遍法界，至一切道，入一切剎，知一切法，到一切世，平等演說一切法門，同時照耀一切眾生，於諸佛所不生分別，於一切處無有障礙；而我云何能知能說彼功德行？「善男子！於此南方有城，名：墮羅鉢底；其中有神，名曰：大天。汝詣彼問：菩薩云何學菩薩行、修菩薩道？」時，善財童子頂禮其足，遶無數匝，慇懃瞻仰，辭退而去。",
+   "T0293": "善男子！我唯得此菩薩普門不動速疾行解脫，能疾周遍到一切處，如諸菩薩摩訶薩隨順遍行，普於十方無所不至。智慧境界，等無差別；善布其身，悉遍法界。至一切道，入一切剎，知一切法，觀一切世平等，演說一切法門，深信愛樂一切妙行。同時照曜一切眾生，於諸佛所不生分別，於一切處無有障礙。而我云何能知、能說彼功德行？善男子！南方有城名為門主，其中有神名曰大天。汝詣彼問菩薩云何學菩薩行、修菩薩道。」時，善財童子禮菩薩足，遶無數匝，慇懃瞻仰，辭退而去。",
+   "bo": "ནུབ་བྱང་གི་ཕྱོགས་མཚམས་དང་། འོག་དང་སྟེང་གི་ཕྱོགས་ནས་ཀྱང་དེ་བཞིན་ཏེ། རིགས་ཀྱི་བུ་ངས་ནི་བྱང་ཆུབ་སེམས་དཔའི་རྣམ་པར་ཐར་བའི་སྒོ་ཀུན་ཏུ་འགྲོ་བ་ཞེས་བྱ་བ་འདི་ཤེས་པར་ཟད་ན། ངས་བྱང་ཆུབ་སེམས་དཔའ་ཕྱོགས་ཀུན་ཏུ་མངོན་པར་གཞོལ་བ། ཐ་མི་དད་པའི་ཡེ་ཤེས་ཀྱི་ཡུལ་དང་ལྡན་པ། ཆོས་ཀྱི་དབྱིངས་ཐམས་ཅད་དུ་ལུས་རྣམ་པར་བཀོད་པ། སེམས་ཅན་ཐམས་ཅད་ཀྱི་བསམ་པ་དང་། མོས་པ་ཇི་ལྟ་བ་བཞིན་དུ་མཐུན་པར་སྤྱོད་པ། ཞིང་ཐམས་ཅད་ལུས་ཀྱིས་རྒྱས་པར་འགེངས་པ། ཆོས་ཐམས་ཅད་ཀྱི་རྒྱུད་ཀྱི་རྗེས་སུ་སོང་བ། དུས་གསུམ་གྱི་རྒྱུད་མཉམ་པ་ཉིད་དུ་གྱུར་པ། ཆོས་ཕྱོགས་ཀྱི་རྒྱུད་དང་མཉམ་པ་ཉིད་དུ་གྱུར་པའི་ལུས་དང་ལྡན་པ། འགྲོ་བའི་རྒྱུད་ཐམས་ཅད་དུ་རྣམ་པར་སྣང་བ། དེ་བཞིན་གཤེགས་པའི་རྒྱུད་ཐམས་ཅད་ལ་རྣམ་པར་རྟོག་པ་མེད་པ། ཆགས་པ་མེད་པའི་རྒྱུད་ཐམས་ཅད་ཁོང་དུ་ཆུད་པ། གནས་མེད་པའི་རྒྱུད་ལ་རབ་ཏུ་གནས་པ་དེ་དག་གི་སྤྱོད་པ་ཤེས་པའམ། ཡོན་ཏན་བརྗོད་པར་ནུས་རེ་སྐན། །སོང་རིགས་ཀྱི་བུ་ལྷོ་ཕྱོགས་ཀྱི་རྒྱུད་འདི་ཉིད་ན་གྲོང་ཁྱེར་སྒོ་དང་ལྡན་པ་ཞེས་བྱ་བ་ཡོད་དེ། དེ་ན་ལྷ་ལྷ་ཆེན་པོ་ཞེས་བྱ་བ་འདུག་གིས་དེའི་གན་དུ་སོང་ལ། ཇི་ལྟར་བྱང་ཆུབ་སེམས་དཔས་བྱང་ཆུབ་སེམས་དཔའི་སྤྱོད་པ་ལ་བསླབ་པར་བྱ་བ་དང་། ཇི་ལྟར་ནན་ཏན་དུ་བྱ་བ་དྲིས་ཤིག ། དེ་ནས་ཚོང་དཔོན་གྱི་བུ་ནོར་བཟངས་ཀྱིས་བྱང་ཆུབ་སེམས་དཔའ་གཞན་དུ་མི་འགྲོ་བའི་རྐང་པ་གཉིས་ལ་སྤྱི་བོས་ཕྱག་འཚལ་ཏེ། བྱང་ཆུབ་སེམས་དཔའ་གཞན་དུ་མི་འགྲོ་བ་ལ་ལན་བརྒྱ་སྟོང་དུ་མར་གཡས་ཕྱོགས་སུ་བསྐོར་བ་བྱས་ནས་ཡང་དང་ཡང་བལྟས་ཏེ། བྱང་ཆུབ་སེམས་དཔའ་གཞན་དུ་མི་འགྲོ་བའི་དྲུང་ ནས་སོང་ངོ་། །",
+   "en": "“Noble one, I know only the bodhisattva liberation called the arising of every gateway. How could I know the conduct or describe the qualities of bodhisattvas who face in all directions; who have a scope of wisdom that is without division; who distribute their bodies throughout the realm of phenomena; who act in accord with the thoughts and aspirations of all beings; who pervade all realms with their bodies; who act in conformance with all phenomena; who have arrived at the equality of the three times; who have bodies that are equal to the range of phenomena in every direction; who illuminate every range of worlds of beings; who have no conceptualization of the range of tathāgatas; who enter all regions without impediment; and who dwell in the state that has no location? “Depart, noble one. In this southern region, there is a city named Dvāravatī. There dwells the deity by the name of Mahādeva. Go to him and ask him, ‘How should a bodhisattva train in bodhisattva conduct? How should a bodhisattva practice it?’ ” Then Sudhana, the head merchant’s son, bowed his head to the feet of the bodhisattva Ananyagāmin, circumambulated the bodhisattva Ananyagāmin many hundreds of thousands of times, keeping him to his right, and, looking back again and again, departed from the bodhisattva Ananyagāmin."
+  }
+ }
+}

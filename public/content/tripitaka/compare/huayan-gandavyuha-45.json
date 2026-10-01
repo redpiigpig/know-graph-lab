@@ -1,0 +1,115 @@
+{
+ "slug": "huayan-gandavyuha-45",
+ "title": "華嚴經・入法界品 45　天主光天女",
+ "family": "sa",
+ "intro": "入法界品第 45 章（藏譯章次），天主光天女（Surendrābhā）。分三節：參詣請問／善知識說所得法門（以回答善財「云何學菩薩行」的第一句為界）／「我唯知此…」謙推勝進、指示後友、辭退。",
+ "units": [
+  {
+   "id": "g45-a",
+   "label": "善財參詣・請問菩薩行"
+  },
+  {
+   "id": "g45-b",
+   "label": "天主光天女說所得法門"
+  },
+  {
+   "id": "g45-c",
+   "label": "謙推勝進・指示後友・辭退"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本",
+   "who": "Gaṇḍavyūha・GRETIL（Vaidya 1960）"
+  },
+  {
+   "id": "T0278",
+   "lang": "lzh",
+   "label": "六十華嚴",
+   "who": "佛馱跋陀羅譯《華嚴經》入法界品・421 年",
+   "work": "T0278"
+  },
+  {
+   "id": "T0279",
+   "lang": "lzh",
+   "label": "八十華嚴",
+   "who": "實叉難陀譯《華嚴經》入法界品・699 年",
+   "work": "T0279"
+  },
+  {
+   "id": "T0293",
+   "lang": "lzh",
+   "label": "四十華嚴",
+   "who": "般若譯《華嚴經》入不思議解脫境界普賢行願品・798 年",
+   "work": "T0293"
+  },
+  {
+   "id": "bo",
+   "lang": "bo",
+   "label": "藏譯",
+   "who": "德格版 Toh 44 第 45 品（Gaṇḍavyūha）・84000"
+  },
+  {
+   "id": "en",
+   "lang": "en",
+   "label": "84000 英譯",
+   "who": "譯自藏譯・與藏文逐句對齊"
+  }
+ ],
+ "works": [
+  "T0278",
+  "T0279",
+  "T0293"
+ ],
+ "anchors": [
+  {
+   "work": "T0278",
+   "range": [
+    "T09n0278_p0765a08",
+    "T09n0278_p0765b19"
+   ]
+  },
+  {
+   "work": "T0279",
+   "range": [
+    "T10n0279_p0417b17",
+    "T10n0279_p0417c25"
+   ]
+  },
+  {
+   "work": "T0293",
+   "range": [
+    "T10n0293_p0802c11",
+    "T10n0293_p0804a13"
+   ]
+  }
+ ],
+ "cells": {
+  "g45-a": {
+   "sa": "atha khalu sudhanaḥ śreṣṭhidārako yena tridaśendrabhavanaṃ yena ca surendrābhā devakanyā smṛtimato devaputrasya duhitā, tenopajagāma / upetya surendrābhāyā devakanyāyāḥ pādau śirasābhivandya surendrābhāṃ devakanyāmanekaśatasahasrakṛtvaḥ pradakṣiṇīkṛtya surendrābhāyā devakanyāyāḥ purataḥ prāñjaliḥ sthitva evamāha - mayā ārye anuttarāyāṃ samyaksaṃbodhau cittamutpāditam / na ca jānāmi - kathaṃ bodhisattvena bodhisattvacaryāyāṃ śikṣitavyam, kathaṃ pratipattavyam / śrutaṃ ca me āryā bodhisattvānāmavavādānuśāsanīṃ dadātīti / tadvadasva me devate kathaṃ bodhisattvena bodhisattvacaryāyāṃ śikṣitavyam, kathaṃ pratipattavyam //",
+   "T0278": "遂往天宮見彼童女，禮足圍遶，合掌前住，白言：「聖者！我已先發阿耨多羅三藐三菩提心，而未知菩薩云何學菩薩行、修菩薩道？我聞聖者善能誘誨，願為我說。」",
+   "T0279": "遂往天宮，見彼天女，禮足圍遶，合掌前住，白言：「聖者！我已先發阿耨多羅三藐三菩提心，而未知菩薩云何學菩薩行？云何修菩薩道？我聞聖者善能誘誨，願為我說！」",
+   "T0293": "爾時，善財順知識教，遂即往詣三十三天具足正念天王宮中，見彼天女，禮足圍遶，合掌前住，白言：「聖者！我已先發阿耨多羅三藐三菩提心，而未知菩薩云何學菩薩行？云何修菩薩道？我聞聖者善能誘誨，願為我說。」",
+   "bo": "སངས་རྒྱས་རྨད་གཅད་ཅེས་བྱ་བ་ཤིན་ཏུ་རྒྱས་པ་ཆེན་པོའི་མདོ། །བམ་པོ་བཅུ་བདུན་པ། །དེ་ནས་ཚོང་དཔོན་གྱི་བུ་ནོར་བཟངས་སུམ་ཅུ་རྩ་གསུམ་གྱི་དབང་པོའི་གནས་གང་ན་བ་དང་། ལྷའི་བུ་དྲན་པ་དང་ལྡན་པའི་བུ་མོ་ལྷ་དབང་འོད་གང་ན་བ་དེར་སོང་སྟེ་ཕྱིན་ནས། ལྷའི་བུ་མོ་ལྷ་དབང་འོད་ཀྱི་རྐང་པ་གཉིས་ལ་སྤྱི་བོས་ཕྱག་འཚལ་ཏེ། ལྷའི་བུ་མོ་ལྷ་དབང་འོད་ལ་ལན་བརྒྱ་སྟོང་དུ་མར་གཡས་ཕྱོགས་སུ་བསྐོར་བ་བྱས་ནས། ལྷའི་བུ་མོ་ལྷ་དབང་འོད་ཀྱི་མདུན་དུ་འདུག་སྟེ། ཐལ་མོ་སྦྱར་ནས་འདི་སྐད་ཅེས་སྨྲས་སོ། །འཕགས་མ་ལྷ་མོ་བདག་གིས་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་ཏུ་སེམས་བསྐྱེད་ན། ཇི་ལྟར་བྱང་ཆུབ་སེམས་དཔས་བྱང་ཆུབ་སེམས་དཔའི་སྤྱོད་པ་ལ་བསླབ་པར་བགྱི་བ་དང་། ཇི་ལྟར་ནན་ཏན་དུ་བགྱི་བ་མ་འཚལ་ཏེ། འཕགས་མ་ནི་བྱང་ཆུབ་སེམས་དཔའ་རྣམས་ལ་གདམས་ངག་དང་རྗེས་སུ་བསྟན་པ་མཛད་དོ་ཞེས་བདག་གིས་ཐོས་ན། འཕགས་མ་ལྷ་མོ་ཇི་ལྟར་བྱང་ཆུབ་སེམས་དཔས་བྱང་ཆུབ་སེམས་དཔའི་སྤྱོད་པ་ལ་བསླབ་པར་བགྱི་བ་དང་། ཇི་ལྟར་ནན་ཏན་དུ་བགྱི་བ་བདག་ལ་བསྟན་དུ་གསོལ།",
+   "en": "Surendrābhā Chapter 45  Sudhana went to the paradise of the lord of Trāyastriṃśa and approached the deva maiden Surendrābhā, the daughter of the deva Smṛtimat. He bowed his head to the feet of the deva maiden Surendrābhā, circumambulated the deva maiden Surendrābhā many hundreds of thousands of times, keeping her to his right, and then stood before the deva maiden Surendrābhā with his palms together in homage and said, “Āryā, goddess, I have developed the aspiration for the highest, complete enlightenment, but I do not know how bodhisattvas should train in bodhisattva conduct and in what way they should practice it. Āryā, I have heard that you give instruction and teachings to bodhisattvas! I pray that you explain to me how bodhisattvas should train in bodhisattva conduct and how they should practice it!”"
+  },
+  "g45-b": {
+   "sa": "evamukte surendrābhā nāma devakanyā sudhanaṃ śreṣṭhidārakametadavocat - ahaṃ kulaputra asaṅgasmṛtiviśuddhavyūhasya bodhisattvavimokṣasya lābhinī / sā ahaṃ kulaputra abhijānāmi - utpalako nāma kalpo 'bhūt / tatra me gaṅgānadīvālukāsamāstathāgatā ārāgitāḥ / abhiniṣkrāmatāṃ caiṣāmārakṣā kṛtā, pūjā kṛtā, ārāmāśca kṛtāḥ paribhogāya / yaśca tairbuddhairbhagavadbhirbodhisattvabhūtairmātuḥ kukṣigatairjāyamānaiḥ sapta padāni prakrāmadbhirmahāsiṃhanādaṃ nadadbhiḥ kumārabhūmisthitairantaḥpuramadhyagatairvā abhiniṣkrāmadbhirvā bodhimabhisaṃbudhyamānairvā dharmacakraṃ pravartayamānaiḥ sarvabuddhavikurvitaṃ vā saṃdarśayadbhiḥ sattvaparipākavinayaḥ kṛtaḥ, tatsarvaṃ prathamacittotpādāya yāvatsaddharmaparyantaniṣṭhaṃ prajānāmi smarāmi anusmarāmi dhārayāmi saṃdhārayāmi upadhārayāmi anusarāmi / subhūtirnāma kalpo 'bhūt / tatra me daśa gaṅgānadīvālukāsamāstathāgatā ārāgitāḥ / subhago nāma kalpo 'bhūttatra me buddhakṣetraparamāṇurajaḥsamāstathāgatā ārāgitāḥ / anilambho nāma kalpo 'bhūt, tatra me caturaśītirbuddhakoṭīniyutaśatasahasrāṇyārāgitāni / suprabho nāma kalpo 'bhūt tatra me jambudvīpaparamāṇurajaḥsamāstathāgatā ārāgitāḥ / atulaprabho nāma kalpo 'bhūt, tatra me viṃśatigaṅgānadīvālukāsamāstathāgatā ārāgitāḥ / uttaptaśrīrnāma kalpobhūt, tatra me gaṅgānadīvālukāsamāstathāgatā ārāgitāḥ / sūryodayo nāma kalpo 'bhūt, tatra me 'śītigaṅgānadīvālukāsamāstathāgatā ārāgitāḥ / jayaṃgamo nāma kalpo 'bhūt, tatra me ṣaṣṭigaṅgānadīvālukāsamāstathāgatā ārāgitāḥ / sucandro nāma kalpo 'bhūt, tatra me saptatirgaṅgānadīvālukāsamāstathāgatā ārāgitāḥ / iti hi kulaputra anenopāyena gaṅgānadīvālukāsamān kalpānanusmarāmi, yadahaṃ satatasamitamavirahitābhūvaṃ tathāgatairarhadbhiḥ samyaksaṃbuddhaiḥ / sarveṣāṃ ca me teṣāṃ tathāgatānāmantikādayamasaṅgasmṛtiviśuddhavyūho bodhisattvavimokṣaḥ śrutaḥ / śrutvā ca ārāgitaḥ yathoktaṃ ca pratipannaḥ / evaṃ cāhaṃ vimokṣaṃ satatasamitamanupraviṣṭā yacca teṣāṃ sarvatathāgatānāṃ bodhisattvabhūmimupādāya yāvatsaddharmasthitiparyantaniṣṭhaṃ buddhavikurvitaṃ tatsarvamanena asaṅgasmṛtiviśuddhavyūhena bodhisattvavimokṣeṇānusmarāmi dhārayāmi saṃdhārayāmi upadhārayāmi anusmarāmi /",
+   "T0278": "天女答言：「善男子！我得菩薩解脫，名無礙念清淨莊嚴。善男子！我念過去有最勝劫，名青蓮華。我於彼劫中，供養恒河沙等諸佛如來。彼諸如來從初出家，我皆瞻奉、守護、供養，造僧伽藍營辦什物。又彼諸佛從為菩薩住母胎時，誕生之時，行七步時，大師子吼時，住童子位在宮中時，向菩提樹成正覺時，轉正法輪、現佛神變、教化調伏眾生之時，如是一切諸所作事，從初發心乃至法盡，我皆明憶無有遺餘，常現在前，念持不忘。又憶過去劫，名善地，我於彼供養十恒河沙等諸佛如來。又過去劫，名為妙德，我於彼供養一佛世界微塵等諸佛如來。又劫名無所得，我於彼供養八十四億百千那由他諸佛如來。又劫名善光，我於彼供養閻浮提微塵等諸佛如來。又劫名無量光，我於彼供養二十恒河沙等諸佛如來。又劫名精進德，我於彼供養一恒河沙等諸佛如來。又劫名善悲，我於彼供養八十恒河沙等諸佛如來。又劫名勝遊，我於彼供養六十恒河沙等諸佛如來。又劫名妙月，我於彼供養七十恒河沙等諸佛如來。善男子！如是憶念恒河沙劫，我常不捨諸佛如來、應、正等覺，從彼一切諸如來所，聞此無礙念清淨莊嚴菩薩解脫，受持修行，恒不間斷，隨順趣入。如是先劫所有如來，從初菩薩乃至法盡，一切神變我以淨嚴解脫之力，皆隨憶念明了現前，持而順行，曾無懈廢。",
+   "T0279": "天女答言：「善男子！我得菩薩解脫，名：無礙念清淨莊嚴。善男子！我以此解脫力，憶念過去，有最勝劫，名：青蓮華。我於彼劫中，供養恒河沙數諸佛如來。彼諸如來，從初出家，我皆瞻奉，守護供養，造僧伽藍，營辦什物。又，彼諸佛從為菩薩住母胎時，誕生之時，行七步時，大師子吼時，住童子位在宮中時，向菩提樹成正覺時，轉正法輪現佛神變教化調伏眾生之時；如是一切諸所作事，從初發心乃至法盡，我皆明憶，無有遺餘，常現在前，念持不忘。又，憶過去劫，名：善地，我於彼供養十恒河沙數諸佛如來；又，過去劫名為：妙德，我於彼供養一佛世界微塵數諸佛如來；又，劫名：無所得，我於彼供養八十四億百千那由他諸佛如來；又，劫名：善光，我於彼供養閻浮提微塵數諸佛如來；又，劫名：無量光，我於彼供養二十恒河沙數諸佛如來；又，劫名：最勝德，我於彼供養一恒河沙數諸佛如來；又，劫名：善悲，我於彼供養八十恒河沙數諸佛如來；又，劫名：勝遊，我於彼供養六十恒河沙數諸佛如來；又，劫名：妙月，我於彼供養七十恒河沙數諸佛如來。「善男子！如是憶念恒河沙劫，我常不捨諸佛如來、應、正等覺，從彼一切諸如來所，聞此無礙念清淨莊嚴菩薩解脫，受持修行恒不忘失。如是，先劫所有如來，從初菩薩，乃至法盡，一切所作，我以淨嚴解脫之力，皆隨憶念，明了現前，持而順行，曾無懈廢。",
+   "T0293": "天女告言：「善男子！我得菩薩無礙念清淨莊嚴解脫門。」善財白言：「聖者！此解脫門境界云何？修行何法得此解脫？」天女答言：「善男子！菩薩勤修無量不思議法門，得此解脫。汝若欲入此解脫門，亦當如是精勤修學。云何勤修不思議法門？所謂：汝應勤修不可思議諸法義智；謂如實覺悟一切諸法，差別、性相、真實體故。汝應勤修守護正法；謂種種妙法為人誹謗，以理摧伏顯勝義故。汝應勤修表、無表戒；謂若性、若遮、有罪、無罪，微細觀察無缺減故。汝應勤修無諍訟法；謂世間種種綺雜言說，無益集會常遠離故。汝應勤修住安忍地；謂種種苦惱逼迫身心，審諦觀察能忍受故。汝應勤修忍耐諸境；謂惡言毀辱、怨結毒害，不壞內心常安忍故。汝應勤修解微細法；謂知蘊、界、處，流轉還滅，善了性相不可得故。「汝應勤修善巧法句；謂巧能宣說種種法門，真實性相令顯現故。汝應勤修合不合法；謂了知諸法性不可奪，亦無增減離合等故。汝應勤修觀過去智；謂微細觀察種種業因，善惡等相無不知故。汝應勤修未來際智；謂微細觀察種種業緣，果報等相無不知故。汝應勤修三世平等；謂三世行相雖各不同，但隨住法有差別故。汝應勤修三輪清淨；謂過、現、未來一切諸法，性不可得離心意故。汝應勤修心住處法；謂普遍了知內、外、中間，心相本性不可得故。汝應勤修守護威儀；謂一切時中微細觀察，身、口、意業不迷惑故。汝應勤修清淨威儀；謂密護根門，藏覆善法，所有不善恒發露故。「汝應勤修離不善法；謂愚癡凡夫種種惡法，不與共住常覺悟故。汝應勤修集菩薩行；謂普遍了知勇猛精進，難行能行種種行故。汝應勤修恭敬尊長；謂床座供具給侍奉迎，身心謙下無懈怠故。汝應勤修攝持身心；謂普能攝持諸清淨法，不失不壞常了知故。汝應勤修隨順覺智；謂於諸世間、出世間法，隨順性相而覺悟故。汝應勤修入甚深法；謂了達一切生滅法相，令心增長無生智故。汝應勤修音聲法智；謂如實演說種種法門，開示語言真實性故。「汝應勤修遠離無益；謂以諸方便令自及他，超過諸有無益法故。汝應勤修丈夫集會；謂諸佛、菩薩、聲聞、獨覺，親近承事常供養故。汝應勤修遠惡知識；謂遠離樂起斷常諸見，及嬾惰等惡眾生故。汝應勤修不依凡夫；謂見凡夫法，皆與愚癡而共相應，多過失故。汝應勤修常不輕心；謂於諸眾生了性平等，不於貧下生輕賤故。汝應勤修愍破戒者；謂以大慈悲拔濟犯罪，安置菩薩淨戒中故。汝應勤修增慈悲力；謂觀察十方三世眾生，種種逼迫能救護故。「汝應勤修財法攝受；謂財物飲食攝諸眾生，令入甚深真實法故。汝應勤修如說能行；謂修種種善開發自心，具足敷榮得圓滿故。汝應勤修昔相應善；謂求宿住智善巧多聞，能知過去相應行故。汝應勤修樂獨善寂；謂遠離處眾諸雜談說，常樂親近白淨法故。汝應勤修少欲知足；謂衣服、飲食、臥具、醫藥，自作教他知止足故。汝應勤修相應行法；謂三十七品菩提分法，常勤修習令相應故。汝應勤修菩薩行境；謂十波羅蜜一切行門，具足修習令圓滿故。汝應勤修菩薩地法；謂十種智地入住及出相，及得果皆證知故。汝應勤修入如來地；謂若菩提智及所斷障，種種體用皆證得故。汝應勤修難了知法；謂諸佛、菩薩、獨覺、聲聞，皆悉了知不思議故。汝應勤修不取諸相；謂修習覺悟諸法性相，如幻如夢同實相故。汝應勤修解脫法智；謂金剛三昧散壞塵習，澄靜妄念智不動故。「善男子！有如是等佛剎極微塵數不可思議種種法門，我皆勤修得此解脫，汝能修行亦當證得。善男子！汝向所問解脫境界，我此解脫境界無邊。又，善男子！我以得此解脫力故，憶念古世，爾時有劫名優鉢羅華，於彼劫中，承事供養恒河沙數諸佛如來。彼諸如來，從初出家，我皆瞻奉守護供養，造僧伽藍，營辦資具。又彼如來從為菩薩入母胎時，誕生之時，行七步時，師子吼時，童子位時，處宮中時，厭棄王位初出家時，詣菩提樹成正覺時，轉正法輪，現佛神變，教化調伏諸眾生時；如是一切諸所作事，從初發心行菩薩道，乃至法盡，我皆明記無有遺餘，常現在前念持不忘。又憶過去劫名善地，我於彼劫，復得值遇十恒河沙諸佛如來，承事供養。復憶有劫，名為妙德，於彼值遇十佛世界極微塵數諸佛如來，承事供養。又憶往劫，名無所得，於彼值遇八十百千億那由他諸佛如來，承事供養。復憶有劫，名為妙光，於彼值遇閻浮提極微塵數諸佛如來，承事供養。復憶往劫，名無稱光，於彼值遇二十恒河沙諸佛如來，承事供養。復憶往劫，名最勝吉祥，於彼值遇一恒河沙諸佛如來，承事供養。復憶往劫，名出現日，於彼值遇八十恒河沙諸佛如來，承事供養。復憶往劫，名勝性遊行，於彼值遇六十恒河沙諸佛如來，承事供養。復憶有劫，名為妙月，於彼值遇七十恒河沙諸佛如來，承事供養。善男子！如是憶念恒河沙劫，我常不離諸佛如來、應、正等覺，種種方便恭敬供養，從彼一切諸如來所，皆得聞此無礙念清淨莊嚴菩薩解脫，聞已受持，如說修行，恒不忘失；如是往劫所有如來，從初發心乃至法盡，諸所作事，我皆以此清淨莊嚴解脫之力，隨順憶念，明了現前，持而順行，念念觀察，曾無懈廢。",
+   "bo": "དེ་སྐད་ཅེས་སྨྲས་པ་དང་། ལྷའི་བུ་མོ་ལྷ་དབང་འོད་ཀྱིས་ཚོང་དཔོན་གྱི་བུ་ནོར་བཟངས་ལ་འདི་སྐད་ཅེས་སྨྲས་སོ། །རིགས་ཀྱི་བུ་ཁོ་མོ་ནི་བྱང་ཆུབ་སེམས་དཔའི་རྣམ་པར་ཐར་བ་དྲན་པ་ཐོགས་པ་མེད་ལ་རྣམ་པར་དག་པས་བརྒྱན་པ་ཞེས་བྱ་བ་ཐོབ་པ་སྟེ། རིགས་ཀྱི་བུ་ཁོ་མོས་མངོན་པར་དྲན་པ་བསྐལ་པ་ཨུད་པ་ལ་ཞེས་བྱ་བ་ཞིག་བྱུང་བ་ལ་ཁོ་མོས་དེ་བཞིན་གཤེགས་པ་ཆུ་ཀླུང་གང་གཱའི་བྱེ་མ་སྙེད་ཅིག་བསྙེན་བཀུར་ཏེ། དེ་དག་མངོན་ པར་བྱུང་བའི་ཚེའང་ཡོངས་སུ་བསྲུང་བ་བྱས་སོ། །མཆོད་པ་བྱས་སོ། །ལོངས་སྤྱོད་པའི་དོན་དུ་བཟའ་ཤིང་གི་ར་བ་གསོལ་ཏོ། ། སངས་རྒྱས་བཅོམ་ལྡན་འདས་དེ་དག་བྱང་ཆུབ་སེམས་དཔར་གྱུར་ཏེ། ཡུམ་གྱི་སྐུ་ན་བཞུགས་པ་དང་། བལྟམ་པ་དང་གཤེགས་སྟབས་བདུན་དུ་བཞུད་པ་དང་། སེང་གེའི་ང་རོ་ཆེན་པོ་སྒྲོགས་པ་དང་། གཞོན་ནུའི་ས་ལ་བཞུགས་པ་དང་། བཙུན་མོའི་འཁོར་གྱི་ནང་ན་བཞུགས་པའམ། མངོན་པར་འབྱུང་བའམ། བྱང་ཆུབ་ཏུ་མངོན་པར་རྫོགས་པར་འཚང་རྒྱ་བ་འམ། ཆོས་ཀྱི་འཁོར་ལོ་བསྐོར་བའམ། སངས་རྒྱས་ཀྱི་རྣམ་པར་འཕྲུལ་པ་ཐམས་ཅད་ཡོངས་སུ་སྟོན་པ་མཛད་པའི་ཚེ། སེམས་ཅན་ཡོངས་སུ་སྨིན་པ་དང་། རྣམ་པར་གདུལ་བ་མཛད་པ་དེ་དག་ཐམས་ཅད་ཀྱང་ཐུགས་དང་པོ་བསྐྱེད་པ་ནས་ཉེ་བར་བཟུང་བ་ཚུན་ཅད་དམ་པའི་ཆོས་མཐར་ཐུག་པར་ཟད་ཀྱི་བར་དུ་ཁོ་མོས་ཤེས་སོ། ། དྲན་ནོ། །རྗེས་སུ་དྲན་ནོ། །བཟུང་ངོ་། །ཡོངས་སུ་བཟུང་ངོ་། །ཉེ་བར་བཟུང་ངོ་། ། རྗེས་སུ་འབྲང་བར་བྱེད་དོ། །བསྐལ་པས་བཟང་པོ་ཞེས་བྱ་བ་ཞིག་བྱུང་བ་དེ་ལ། ཁོ་མོས་དེ་བཞིན་གཤེགས་པ་ཆུ་ཀླུང་གདྒཱ་བཅུའི་བྱེ་མ་སྙེད་ཅིག་བསྙེན་བཀུར་ཏོ། ། བསྐལ་པ་གྲགས་པ་བཟང་པོ་ཞེས་བྱ་བ་ཞིག་བྱུང་བ་དེ་ལ་ཁོ་མོས་དེ་བཞིན་གཤེགས་པ་སངས་རྒྱས་ཀྱི་ཞིང་གི་རྡུལ་ཤིན་ཏུ་ཕྲ་བ་སྙེད་ཅིག་བསྙེན་བཀུར་ཏོ། ། བསྐལ་པ་དམིགས་སུ་མེད་པ་ཞེས་བྱ་བ་ཞིག་བྱུང་བ་དེ་ལ་ཁོ་མོས་སངས་རྒྱས་བྱེ་བ་ཁྲག་ཁྲིག་བརྒྱ་སྟོང་ཕྲག་བརྒྱད་ཅུ་རྩ་བཞི་བསྙེན་བཀུར་ཏོ། ། བསྐལ་པ་འོད་བཟང་པོ་ཞེས་བྱ་བ་ཞིག་བྱུང་བ་དེ་ལ་ཁོ་མོས་དེ་བཞིན་གཤེགས་པ་འཛམ་བུའི་གླིང་གི་རྡུལ་ཤིན་ཏུ་ཕྲ་བ་སྙེད་ཅིག་བསྙེན་བཀུར་ཏོ། ། བསྐལ་པ་འོད་གཞལ་དུ་མེད་པ་ཞེས་བྱ་བ་ཞིག་བྱུང་བ་དེ་ལ་ཁོ་མོས་དེ་བཞིན་གཤེགས་པ་ཆུ་ཀླུང་གངྒཱ་ཉི་ཤུའི་བྱེ་མ་སྙེད་ཅིག་བསྙེན་བཀུར་ཏོ། ། བསྐལ་པ་དཔལ་ཤིན་ཏུ་འབར་བ་ཞེས་བྱ་བ་ཞིག་བྱུང་བ་དེ་ལ་ཁོ་མོས་དེ་བཞིན་གཤེགས་པ་ཆུ་ཀླུང་གང་གཱའི་བྱེ་མ་ སྙེད་ཅིག་བསྙེན་བཀུར་ཏོ། ། བསྐལ་པ་སྙིང་རྗེ་བཟང་པོ་ཞེས་བྱ་བ་ཞིག་བྱུང་བ་དེ་ལ་ཁོ་མོས་དེ་བཞིན་གཤེགས་པ་ཆུ་ཀླུང་གང་གཱ་བརྒྱད་ཅུའི་བྱེ་མ་སྙེད་ཅིག་བསྙེན་བཀུར་ཏོ། ། བསྐལ་པ་རྒྱལ་བར་གྱུར་པ་ཞེས་བྱ་བ་ཞིག་བྱུང་བ་དེ་ལ་ཁོ་མོས་དེ་བཞིན་གཤེགས་པ་ཆུ་ཀླུང་གངྒཱ་དྲུག་ཅུའི་བྱེ་མ་སྙེད་ཅིག་བསྙེན་བཀུར་ཏོ། ། བསྐལ་པ་ཟླ་བ་བཟང་པོ་ཞེས་བྱ་བ་ཞིག་བྱུང་བ་དེ་ལ་ཁོ་མོས་དེ་བཞིན་གཤེགས་པ་ཆུ་ཀླུང་གང་གཱ་བདུན་ཅུའི་བྱེ་མ་སྙེད་ཅིག་བསྙེན་བཀུར་ཏོ། ། རིགས་ཀྱི་བུ་དེ་ལྟར་ཚུལ་དེ་བཞིན་དུ་ཁོ་མོ་རྟག་ཏུ་རྒྱུན་མ་ཆད་པར་དེ་བཞིན་གཤེགས་པ་དགྲ་བཅོམ་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་རྣམས་དང་བྲལ་བར་མ་གྱུར་པ་ནི་བསྐལ་པ་ཆུ་ཀླུང་གངྒཱའི་བྱེ་མ་སྙེད་ཅིག་དྲན་ཏེ། ཁོ་མོས་དེ་བཞིན་གཤེགས་པ་དེ་དག་ཐམས་ཅད་ལས་བྱང་ཆུབ་སེམས་དཔའི་རྣམ་པར་ཐར་པ་དྲན་པ་ཐོགས་པ་མེད་ལ་རྣམ་པར་དག་པས་བརྒྱན་པ་འདི་ཐོས་སོ། ། ཐོས་ནས་ཀྱང་ཡོངས་སུ་བཟུང་ངོ་། ། ཇི་སྐད་དུ་གསུངས་པ་བཞིན་དུ་ཁོང་དུ་ཆུད་དོ། ། རྣམ་པར་ཐར་པ་འདི་ཉིད་ལ་ཁོ་མོ་རྟག་ཏུ་རྒྱུན་མ་ཆད་པར་རྗེས་སུ་ཞུགས་པར་གནས་གནས་ཏེ། དེ་བཞིན་གཤེགས་པ་དེ་དག་གི་བྱང་ཆུབ་སེམས་དཔའི་ས་ཉེ་བར་བཟུང་བ་ནས་དམ་པའི་ཆོས་གནས་པ་ཟད་པའི་མཐར་ཐུག་གི་བར་གྱི་སངས་རྒྱས་ཀྱི་རྣམ་པར་འཕྲུལ་པ་ཇི་སྙེད་པ་དེ་དག་ཐམས་ཅད་ཀྱང་བྱང་ཆུབ་སེམས་དཔའི་རྣམ་པར་ཐར་པ་དྲན་པ་ཐོགས་པ་མེད་ལ་རྣམ་པར་དག་པས་བརྒྱན་པ་འདི་དྲན་ནོ། ། རྗེས་སུ་དྲན་ནོ། །བཟུང་ངོ་། །ཡོངས་སུ་བཟུང་ངོ་། །ཉེ་བར་བཟུང་ངོ་། །རྗེས་སུ་འབྲང་བར་བྱེད་དོ། །",
+   "en": "When he had said that, the deva maiden Surendrābhā said to Sudhana, the head merchant’s son, “Noble one, I have attained the bodhisattva liberation called the display of pure, unimpeded memory. “Noble one, I remember a kalpa called Utpala in which I served as many tathāgatas as there are grains of sand in the Ganges River. When they set forth, I protected them, made offerings to them, and gave them parks to enjoy. “I know when those buddha bhagavats were bodhisattvas, were within the bodies of their mothers, were born, took their first seven steps, roared the lion’s roar, were youths, were within their harems, set forth into homelessness, attained the enlightenment of buddhahood, turned the wheel of the Dharma, and displayed all the miraculous manifestations of a buddha, and when they ripened and guided beings, throughout all those times, from their first development of the aspiration for enlightenment until their final Dharma teaching. I remember that, recollect that, grasp that, retain that, reflect upon that, and follow that. “There was a kalpa called Subhūti, in which I served as many tathāgatas as there are grains of sand in ten Ganges Rivers. “There was a kalpa called Subhaga, in which I served as many tathāgatas as there are atoms in a buddha realm. “There was a kalpa called Anilambha, in which I served eighty-four hundred thousand quintillion tathāgatas. “There was a kalpa called Suprabha, in which I served as many tathāgatas as there are atoms in Jambudvīpa. “There was a kalpa called Atulaprabha, in which I served as many tathāgatas as there are grains of sand in twenty Ganges Rivers. “There was a kalpa called Uttaptaśrī, in which I served as many tathāgatas as there are grains of sand in one Ganges River. “There was a kalpa called Sūryodaya, in which I served as many tathāgatas as there are grains of sand in eighty Ganges Rivers. “There was a kalpa called Jayaṃgama, in which I served as many tathāgatas as there are grains of sand in sixty Ganges Rivers. “There was a kalpa called Sucandra, in which I served as many tathāgatas as there are grains of sand in seventy Ganges Rivers. “Noble one, in that way, I remember never being apart from the tathāgata arhat samyaksaṃbuddhas throughout kalpas as numerous as the grains of sand in the Ganges River. I heard from all those tathāgatas this bodhisattva liberation called the display of pure, unimpeded memory. I heard it and retained it. I comprehended whatever they said. I have constantly, always remained within this liberation. Through this bodhisattva liberation called the display of pure, unimpeded memory, I remember those tathāgatas from the time they attained the level of a bodhisattva until the time their Dharma ceased to exist. I recollect that, grasp that, retain that, reflect upon that, and follow that."
+  },
+  "g45-c": {
+   "sa": "etamahaṃ kulaputra bodhisattvavimokṣaṃ jānāmi / kiṃ mayā śakyaṃ bodhisattvānāṃ vigatatamondhakārāṇāṃ saṃsārarātriprabhāvitānāṃ (Gv 351) vigatanivaraṇānāmanidrāgamānāṃ vigatastyānamiddhānāṃ prasrabdhakāyasaṃskārāṇāṃ sarvadharmasvabhāvānubodhasuviśuddhānāṃ daśabalaviśuddhibodhayitṝṇāṃ caryāṃ jñātuṃ guṇān vā vaktum // gaccha kulaputra, kapilavastuni mahānagare viśvāmitro nāma dārakācāryaḥ prativasati / tamupasaṃkramya paripṛccha - kathaṃ bodhisattvena bodhisattvacaryāyāṃ śikṣitavyam, kathaṃ pratipattavyam // atha khalu sudhanaḥ śreṣṭhidārakaḥ tuṣṭa udagra āttamanāḥ prītisaumanasyajāto 'cintyakuśalamūlavegasaṃvardhitaḥ surendrābhāyā devakanyāyāḥ pādau śirasābhivandya surendrābhāṃ devakanyāmanekaśatasahasrakṛtvaḥ pradakṣiṇīkṛtya punaḥ punaravalokya surendrābhāyā devakanyāyā antikātprakrāntaḥ // 43 // 46 Viśvāmitraḥ /",
+   "T0278": "善男子！我唯知此無礙念清淨解脫，如諸菩薩摩訶薩出生死夜，朗然明徹，永離癡冥，未甞惛寐，心無諸蓋，身行輕安，於諸法性清淨覺了，成就十力，開悟群生。而我云何能知、能說彼功德行？善男子！迦毘羅城有童子師，名曰遍友。汝詣彼問云何菩薩學菩薩行、修菩薩道。」時，善財童子以聞法故，身心遍悅，不思議善根流派增廣，頭面敬禮天主光足，遶無數匝，戀仰辭去。",
+   "T0279": "「善男子！我唯知此無礙念清淨解脫。如諸菩薩摩訶薩，出生死夜朗然明徹，永離癡冥未嘗惛寐，心無諸蓋、身行輕安，於諸法性清淨覺了，成就十力開悟群生；而我云何能知能說彼功德行？「善男子！迦毘羅城有童子師，名曰：遍友。汝詣彼問：菩薩云何學菩薩行、修菩薩道？」時，善財童子以聞法故，歡喜踊躍，不思議善根自然增廣；頂禮其足，遶無數匝，辭退而去。",
+   "T0293": "「善男子！我唯知此無礙念清淨莊嚴菩薩解脫，如諸菩薩摩訶薩，出生死夜，朗然明徹，永離癡冥，未嘗昏寐，心無諸蓋，身行輕安，於諸法性，清淨覺了，決擇甚深修多羅藏，了不了義一切難處，善護自他，常勤修習菩薩淨戒，若利非利心恒平等，善巧出生神通妙智，隨順世間種種方便，增長福慧心無厭足，起大精進勤修助道，積集慈悲心無厭倦，成就如來十力無畏，十八不共一切佛法，隨順開悟一切眾生，晝夜精勤更無餘念，而我云何能知、能說彼功德行？善男子！此迦毘羅城，有童子師名為遍友，汝詣彼問菩薩云何學菩薩行，修菩薩道。」時，善財童子以聞法故，歡喜踊躍，不思議善根速疾增長，頂禮其足，遶無數匝，慇懃瞻仰，辭退而去。",
+   "bo": "རིགས་ཀྱི་བུ་ཁོ་མོས་བྱང་ཆུབ་སེམས་དཔའི་རྣམ་པར་ཐར་པ་འདི་ཤེས་པར་ཟད་ན། ཁོ་མོས་བྱང་ཆུབ་སེམས་དཔའ་མུན་པའི་མུན་ནག་དང་བྲལ་བ། འཁོར་བའི་ནམ་ནངས་པ། སྒྲིབ་པ་དང་བྲལ་བ། གཉིད་མེད་པ་ལ་མོས་ཤིང་། དགའ་བ་སྙོམས་པ་དང་། ལེ་ལོ་རྣམ་པར་སྤངས་པ། ལུས་ཀྱི་འདུ་བྱེད་ཤིན་ཏུ་བྱང་བ། རྟག་པར་ཆོས་ཐམས་ཅད་ཀྱི་རང་ བཞིན་ཁོང་དུ་ཆུད་པས་ཤིན་ཏུ་དག་པ། སྟོབས་བཅུ་རྣམ་པར་དག་པ་ཁོང་དུ་ཆུད་པ། དེ་དག་གི་སྤྱོད་པ་ཤེས་པའམ། ཡོན་ཏན་བརྗོད་པར་ནུས་རེ་སྐན། །སོང་རིགས་ཀྱི་བུ་གྲོང་ཁྱེར་ཆེན་པོ་སེར་སྐྱའི་གནས་ན་བྱིས་པའི་སློབ་དཔོན་ཀུན་གྱི་བཤེས་གཉེན་ཞེས་བྱ་བ་འདུག་གིས། དེའི་གན་དུ་སོང་ལ་ཇི་ལྟར་བྱང་ཆུབ་སེམས་དཔས་བྱང་ཆུབ་སེམས་དཔའི་སྤྱོད་པ་ལ་བསླབ་པར་བྱ་བ་དང་། ཇི་ལྟར་ནན་ཏན་དུ་བྱ་བ་དྲིས་ཤིག ། དེ་ནས་ཚོང་དཔོན་གྱི་བུ་ནོར་བཟངས་དགའ་རངས་ཏེ། མགུ་ཞིང་ཉམས་བདེ་ལ་ཚིམ་ཞིང་ཡིད་བདེ་བ་སྐྱེས་ནས། དགེ་བའི་རྩ་བ་བསམ་གྱིས་མི་ཁྱབ་པའི་ཤུགས་དྲག་པོ་རྣམ་པར་འཕེལ་བས། ལྷའི་བུ་མོ་ལྷ་དབང་འོད་ཀྱི་རྐང་པ་གཉིས་ལ་སྤྱི་བོས་ཕྱག་འཚལ་ཏེ། ལྷའི་བུ་མོ་ལྷ་དབང་འོད་ལ་ལན་བརྒྱ་སྟོང་དུ་མར་གཡས་ཕྱོགས་སུ་བསྐོར་བ་བྱས་ནས། ཡང་དང་ཡང་བལྟས་ཏེ། ལྷའི་བུ་མོ་ལྷ་དབང་འོད་ཀྱི་དྲུང་ནས་སོང་ངོ་། །",
+   "en": "“Noble one, I know only this bodhisattva liberation called the display of pure, unimpeded memory. How could I know or describe the qualities of the bodhisattvas who are free from the blindness of darkness, who have risen out of saṃsāra, who are free of obscurations, who aspire not to be asleep, who are free of apathy and idleness, whose body formations are purified, who continuously understand the nature of all phenomena, and who have realized the pure ten strengths? “Depart, noble one. In the great city of Kapilavastu resides a teacher of children by the name of Viśvāmitra. Go to him and ask him, ‘How should a bodhisattva train in and practice bodhisattva conduct?’ ” Then Sudhana, the head merchant’s son, filled with joy, delighted, elated, pleased, and happy, bowed his head to the feet of the deva maiden Surendrābhā. He circumambulated the deva maiden Surendrābhā many hundreds of thousands of times, keeping her to his right, and, looking back at her again and again, departed from the deva maiden Surendrābhā."
+  }
+ }
+}

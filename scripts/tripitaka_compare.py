@@ -3774,7 +3774,8 @@ SETS["huayan-bhadracari"] = {
                   ("bh-11", "若有同行者"), ("bh-12", "一一微塵中"), ("bh-13", "神力遍遊行"), ("bh-14", "三世諸佛行"),
                   ("bh-16", "如文殊師利"), ("bh-17", "嚴淨普賢行")]},
         {"id": "T0293", "lang": "lzh", "label": "四十華嚴", "who": "般若譯《華嚴經》卷四十偈頌・798 年", "reorder": True,
-         "src": {"work": "T0293", "start": "爾時，普賢菩薩摩訶薩欲重宣此義，普觀十方而說偈言", "end": "南天竺烏茶國深信最勝善逝法者"},
+         "src": {"work": "T0293", "start": "爾時，普賢菩薩摩訶薩欲重宣此義，普觀十方而說偈言", "end": "南天竺烏茶國深信最勝善逝法者",
+                 "anchor_nodes": []},
          "cuts": [("bh-00", "爾時，普賢菩薩摩訶薩欲重宣此義"), ("bh-01", "「所有十方世界中"), ("bh-02", "各以一切音聲海"),
                   ("bh-03", "以諸最勝妙華鬘"), ("bh-04", "我昔所造諸惡業"), ("bh-05", "十方一切諸眾生，二乘"), ("bh-06", "十方所有世間燈"),
                   ("bh-07", "諸佛若欲示涅槃"), ("bh-08", "所有禮讚供養福"), ("bh-09", "我隨一切如來學"), ("bh-10", "我為菩提修行時"),
@@ -3796,6 +3797,100 @@ SETS["huayan-bhadracari"] = {
          for side, label, who in [("bo", "藏譯", "德格版 Toh 44 第 45 品末・84000"), ("en", "84000 英譯", "譯自藏譯・與藏文逐句對齊")]],
     "extra_works": [],
 }
+
+
+# 入法界品：照藏譯 56 章（一位善知識一章）一章一組，slug huayan-gandavyuha-NN。各本切點在 tripitaka_compare_gandavyuha.json
+# （漢、梵給起頭字串，藏英給 TMX 句號），由暫存的產生器產出後人工核過：章首靠「辭退」後的「爾時，善財童子…」與梵本
+# 「頂禮右繞」後那段；章內第二刀是善知識回答善財「而未知菩薩云何學菩薩行」的第一句（梵 kulaputra、英 Noble one），
+# 第三刀是「我唯知此…」（梵 etamahaṃ kulaputra…／kiṃ mayā śakyaṃ 的前一句、英 I know only）。
+# 第 1–3 章（序分、普賢開示、文殊出遊）另分四、三、四節；遍友（46）、文殊（55）、普賢（56）三章沒有謙推句，只分兩節。
+GV_HEADS = {"T0278": [f"入法界品第三十四之{n}" for n in
+                      "一 二 三 四 五 六 七 八 九 十 十一 十二 十三 十四 十五 十六 十七".split()],
+            "T0279": [f"入法界品第三十九之{n}" for n in
+                      "一 二 三 四 五 六 七 八 九 十 十一 十二 十三 十四 十五 十六 十七 十八 十九 二十 二十一".split()]}
+GV_NAMES = [
+    ("序分・逝多林會", "Nidāna"), ("普賢菩薩開示", "Samantabhadra"), ("文殊師利出遊・福城東", "Mañjuśrī"),
+    ("德雲比丘", "Meghaśrī"), ("海雲比丘", "Sāgaramegha"), ("善住比丘", "Supratiṣṭhita"), ("彌伽", "Megha"),
+    ("解脫長者", "Muktaka"), ("海幢比丘", "Sāgaradhvaja"), ("休捨優婆夷", "Āśā"), ("毘目瞿沙仙人", "Bhīṣmottaranirghoṣa"),
+    ("勝熱婆羅門", "Jayoṣmāyatana"), ("慈行童女", "Maitrāyaṇī"), ("善見比丘", "Sudarśana"), ("自在主童子", "Indriyeśvara"),
+    ("具足優婆夷", "Prabhūtā"), ("明智居士", "Vidvān"), ("法寶髻長者", "Ratnacūḍa"), ("普眼長者", "Samantanetra"),
+    ("無厭足王", "Anala"), ("大光王", "Mahāprabha"), ("不動優婆夷", "Acalā"), ("遍行外道", "Sarvagāmin"),
+    ("優鉢羅華長者", "Utpalabhūti"), ("婆施羅船師", "Vaira"), ("無上勝長者", "Jayottama"), ("師子頻申比丘尼", "Siṃhavijṛmbhitā"),
+    ("婆須蜜多女", "Vasumitrā"), ("鞞瑟胝羅居士", "Veṣṭhila"), ("觀自在菩薩", "Avalokiteśvara"), ("正趣菩薩", "Ananyagāmin"),
+    ("大天神", "Mahādeva"), ("安住地神", "Sthāvarā"), ("婆珊婆演底主夜神", "Vāsantī"),
+    ("普德淨光主夜神", "Samantagambhīraśrīvimalaprabhā"), ("喜目觀察眾生主夜神", "Pramuditanayanajagadvirocanā"),
+    ("普救眾生妙德主夜神", "Samantasattvatrāṇojaḥśrī"), ("寂靜音海主夜神", "Praśāntarutasāgaravatī"),
+    ("守護一切城主夜神", "Sarvanagararakṣāsaṃbhavatejaḥśrī"), ("開敷一切樹華主夜神", "Sarvavṛkṣapraphullanasukhasaṃvāsā"),
+    ("大願精進力救護一切眾生主夜神", "Sarvajagadrakṣāpraṇidhānavīryaprabhā"), ("妙德圓滿神（嵐毘尼林）", "Sutejomaṇḍalaratiśrī"),
+    ("釋迦瞿波女", "Gopā"), ("摩耶夫人", "Māyādevī"), ("天主光天女", "Surendrābhā"), ("遍友童子師", "Viśvāmitra"),
+    ("善知眾藝童子", "Śilpābhijña"), ("賢勝優婆夷", "Bhadrottamā"), ("堅固解脫長者", "Muktāsāra"), ("妙月長者", "Sucandra"),
+    ("無勝軍長者", "Ajitasena"), ("最寂靜婆羅門", "Śivarāgra"), ("德生童子・有德童女", "Śrīsaṃbhava, Śrīmati"),
+    ("彌勒菩薩", "Maitreya"), ("文殊師利菩薩", "Mañjuśrī"), ("普賢菩薩", "Samantabhadra"),
+]
+GV_HEAD_LABELS = {
+    1: {"a": "序：逝多林大莊嚴重閣・大眾", "b": "大眾心念・佛入師子頻申三昧・十方菩薩來集", "c": "諸大聲聞在會而不見",
+        "d": "十方菩薩說偈讚佛"},
+    2: {"a": "普賢說師子頻申三昧十種法句", "b": "普賢說偈", "c": "佛放眉間光・菩薩悟入・文殊說偈"},
+    3: {"a": "文殊出善住樓閣・辭佛南行", "b": "舍利弗率六千比丘隨行", "c": "文殊至福城東・說法・觀善財",
+        "d": "善財說偈請法・文殊指示德雲"},
+}
+
+
+def _gv_sets() -> None:
+    spec = json.loads((ROOT / "scripts/tripitaka_compare_gandavyuha.json").read_text(encoding="utf-8"))
+    sa_rows, en_rows = spec["sa"], spec["en"]
+    for k in range(56):
+        ch = k + 1
+        name, skt = GV_NAMES[k]
+        units_order = [u for u, _ in sa_rows[k]["cuts"]]
+        if ch in GV_HEAD_LABELS:
+            labels = GV_HEAD_LABELS[ch]
+        else:
+            labels = {"a": "善財參詣・請問菩薩行", "b": f"{name}說所得法門",
+                      "c": "謙推勝進・指示後友・辭退"}
+            if ch == 46:
+                labels["b"] = "遍友指示善知眾藝"
+            elif ch == 55:
+                labels["b"] = "文殊遙伸右手摩頂・令入普賢行"
+            elif ch == 56:
+                labels["b"] = "普賢開示本行・善財入普賢智海"
+        uid = lambda u: f"g{ch:02d}-{u}"
+        vs = [{"id": "sa", "lang": "sa", "label": "梵本", "who": "Gaṇḍavyūha・GRETIL（Vaidya 1960）",
+               "src": {"gretil": "sa_gaNDavyUhasUtra", "start": sa_rows[k]["cuts"][0][1],
+                       "end": sa_rows[k + 1]["cuts"][0][1] if ch < 56 else spec["sa_end"]},
+               "cuts": [(uid(u), x) for u, x in sa_rows[k]["cuts"]]}]
+        for w, label, who in [("T0278", "六十華嚴", "佛馱跋陀羅譯《華嚴經》入法界品・421 年"),
+                              ("T0279", "八十華嚴", "實叉難陀譯《華嚴經》入法界品・699 年"),
+                              ("T0293", "四十華嚴", "般若譯《華嚴經》入不思議解脫境界普賢行願品・798 年")]:
+            rows = spec["zh"][w]
+            src = {"work": w, "start": rows[k]["cuts"][0][1], "anchor_nodes": []}
+            if w in GV_HEADS:
+                src["nodes"] = GV_HEADS[w]
+            nxt = rows[k + 1]["cuts"][0][1] if ch < 56 else spec["zh_end"][w]
+            if nxt:
+                src["end"] = nxt
+            vs.append({"id": w, "lang": "lzh", "label": label, "who": who, "src": src,
+                       "cuts": [(uid(u), x) for u, x in rows[k]["cuts"]]})
+        a = en_rows[k]["lines"][0][1]
+        z = en_rows[k + 1]["lines"][0][1] if ch < 56 else spec["en_end"]
+        for side, label, who in [("bo", "藏譯", "德格版 Toh 44 第 45 品（Gaṇḍavyūha）・84000"),
+                                 ("en", "84000 英譯", "譯自藏譯・與藏文逐句對齊")]:
+            vs.append({"id": side, "lang": side, "label": label, "who": who,
+                       "src": {"tmx": "toh44-45", "side": side, "from": a, "to": z},
+                       "lines": [(uid(u), n - a) for u, n in en_rows[k]["lines"]]})
+        intro = (f"入法界品第 {ch} 章（藏譯章次），{name}（{skt}）。"
+                 + ("全品依藏譯 56 章（一位善知識一章）分組；梵本 Gaṇḍavyūha 無章題，依「頂禮右繞辭去」後下一段定章首。"
+                    "漢譯三本：佛馱跋陀羅六十華嚴（天主光至德生一段原缺，大正藏已補入地婆訶羅補譯）、實叉難陀八十華嚴、"
+                    "般若四十華嚴（擴充本，卷末普賢十大願另見普賢行願讚一組）。聖堅《羅摩伽經》只譯部分，未收。"
+                    if ch == 1 else
+                    "分三節：參詣請問／善知識說所得法門（以回答善財「云何學菩薩行」的第一句為界）／「我唯知此…」謙推勝進、"
+                    "指示後友、辭退。" if ch not in GV_HEAD_LABELS and ch not in (46, 55, 56) else ""))
+        SETS[f"huayan-gandavyuha-{ch:02d}"] = {
+            "title": f"華嚴經・入法界品 {ch}　{name}", "family": "sa", "intro": intro,
+            "units": [(uid(u), labels[u]) for u in units_order], "versions": vs}
+
+
+_gv_sets()
 
 
 # ── 讀原文 ──────────────────────────────────────────────────────────────────
@@ -3829,6 +3924,27 @@ def zh_text(src: dict) -> str:
             raise SystemExit(f"  ✗ {src['work']}: 找不到截止點「{src['end']}」")
         body = body[:j]
     return body
+
+
+def zh_seg_range(src: dict) -> tuple[str, str]:
+    """zh_text 取出的那一段，起訖落在哪兩個段落（uid）。"""
+    segs = read_jsonl(src["work"])
+    heads = src.get("nodes") or ([src["node"]] if "node" in src else [])
+    if heads:
+        toc = json.loads((TRIP / f"{src['work']}.toc.json").read_text(encoding="utf-8"))
+        nodes = toc if isinstance(toc, list) else toc["toc"]
+        ids = {n["i"] for n in nodes if n["head"] in heads}
+        segs = [s for s in segs if s["d"] in ids and s["kind"] != "head"]
+    segs = [s for s in segs if s["kind"] != "byline"]
+    body, owner = "", []
+    for s in segs:
+        body += s["sources"]["lzh"]
+        owner.append((len(body), s.get("uid") or s.get("seg")))
+    i = body.find(src["start"])
+    j = body.find(src["end"], i) if "end" in src else len(body)
+    first = next(u for e, u in owner if e > i)
+    last = next(u for e, u in owner if e >= j)
+    return first, last
 
 
 def tmx_lines(src: dict) -> list[str]:
@@ -3967,7 +4083,10 @@ def build(slug: str) -> dict:
                     for v in cfg["versions"] if v["src"].get("work")
                     # anchor_nodes：取文用的節點比本組寬時（十地品一組只佔一卷的一部分），另指錨點；給 [] 就不掛錨點，閱讀器改比對文字
                     for h in (v["src"]["anchor_nodes"] if "anchor_nodes" in v["src"]
-                              else v["src"].get("nodes") or ([v["src"]["node"]] if v["src"].get("node") else []))],
+                              else v["src"].get("nodes") or ([v["src"]["node"]] if v["src"].get("node") else []))]
+                   # anchor_nodes 給 [] 的本子改掛段落 uid 起訖：閱讀器只在這個範圍的頁面載入本組，涵蓋則比對文字
+                   + [{"work": v["src"]["work"], "range": list(zh_seg_range(v["src"]))}
+                      for v in cfg["versions"] if v["src"].get("work") and v["src"].get("anchor_nodes") == []],
         "cells": cells,
     }
 
