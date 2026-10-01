@@ -313,3 +313,7 @@ z-lib/ drop folder 的處理：
   **人工點一次驗證**。`scripts/annas_search.mjs --file q.txt --out hits.json` 用持久 profile `c:/tmp/annas_profile`，卡驗證時
   會等最多 10 分鐘並印「等待人工驗證」，且約 30 筆後會再跳一次。🚨 結果列的書名連結是 `a.js-vim-focus`；頁面另有一排
   「最近下載」也是 `/md5/` 連結——抓錯會每筆都回剛好 12 筆無關的書。
+- **獵表改走 LibGen 直接抓**：`scripts/libgen_wanted.py --sources a,b --apply`（不加 `--apply` 只查不下）。對得上
+  （expect 是書名子字串＋作者姓吻合）就下載進 z-lib/ 並在帳本記 `status: downloaded, pick.via: libgen`，z-lib 排程即跳過。
+  同一份清單可再開一支 `--reverse` 從尾端倒著跑、會合時自停。10-01 首輪：cw30 中譯本 22/109、三套全集 11/107、
+  代表作約 41/153、譜系學命中率最高（前 46 筆對上 35）。🚨 要 `python -u` 否則紀錄檔一直是空的（輸出被緩衝）。
