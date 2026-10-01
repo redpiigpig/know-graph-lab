@@ -165,7 +165,9 @@ def strip_leading_titles(text: str, titles: list[str]) -> str:
 
 
 def split_notes_keep_order(text: str) -> tuple[list[str], list[str]]:
-    """一塊 → (正文段落, 註釋條目)。分隔線之間的、以及以 (N) 起頭的段都算註。"""
+    """一塊 → (正文段落, 註釋條目)。只有分隔線之後的才算註。
+    🚨 10-02：曾把正文裡「(1) 」起頭的分點論述（Watson《十誡》、神學大全問題清單、註釋書的分點）
+    全當成註釋搬到章末——字數不少、守恆全過，但正文順序被打亂。分隔線外的 (N) 段一律是正文。"""
     body, notes, in_notes = [], [], False
     for p in rb.paras(text):
         if rb.FOOT_RULE_RE.match(p):
@@ -174,7 +176,7 @@ def split_notes_keep_order(text: str) -> tuple[list[str], list[str]]:
         if HEAD_RE.match(p):
             in_notes = False
             body.append(p)
-        elif in_notes or FN_ITEM.match(p):
+        elif in_notes:
             if FN_ITEM.match(p) or not notes:
                 notes.append(p)
             else:

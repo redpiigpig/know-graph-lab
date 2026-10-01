@@ -97,3 +97,11 @@ def test_paginate_trailing_heading_page_keeps_previous_pages():
     joined = "\n\n".join(p["content"] for p in pages)
     assert all(f"{{{{s:1-{k}}}}}" in joined for k in range(1, 5))
     assert len({p["content"] for p in pages}) == len(pages)
+
+
+def test_numbered_points_outside_rule_stay_in_body():
+    import rebuild_reference_bilingual as rb
+    body, notes = r.split_notes_keep_order("正文開頭。\n\n(1) 第一個分點論述。\n\n(2) 第二點。\n\n"
+                                           + rb.FOOT_RULE + "\n\n(1) 真正的註。")
+    assert body == ["正文開頭。", "(1) 第一個分點論述。", "(2) 第二點。"]
+    assert notes == ["(1) 真正的註。"]
