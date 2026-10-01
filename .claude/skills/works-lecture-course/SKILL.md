@@ -1084,6 +1084,9 @@ B 線＝前人概論怎麼切（比較表）。一次派一個 Sonnet。
   （站上 `data/creeds/protestant-confessions/01-luther-small-catechism.ts`：十誡／信經／主禱文／聖事）
   都只算西方傳統的佐證；要從東方諸禮、早期（《遺訓》、使徒行傳）證明它古今通用。
 - 約 14:6：Brown 註釋或教父讀法都可以用。
+- **認信一站按功能認定**（做法一）：古代禮序沒有信經那一站時，**承認「耶穌是基督」「耶穌是主」**就是認信
+  （作者：「承認耶穌是基督、承認他是主，不就是了嗎？」）。這不是以今看古——這兩句本身是新約的宣認
+  （羅 10:9、林前 12:3、太 16:16、約壹 5:1），信經是從它們長出來的。禮序比較表要在各禮中找這類宣認的位置。
 - 補書不只 z-lib；先查站上既有（梵二 SC／DV 中拉英在 `data/creeds/ecumenical-councils/vatican-ii/`、
   奧斯堡信條與路德小教理在 `data/creeds/protestant-confessions/`、通諭中譯在 `data/encyclicals/`），
   再查 TRC／天主教在線目錄。館藏確認沒有：《天主教教理》全本中譯、《協同書》中譯、Schmemann、Bria、Brown 第二冊。
