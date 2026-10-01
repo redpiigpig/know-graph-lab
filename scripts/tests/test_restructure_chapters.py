@@ -88,3 +88,12 @@ def test_paginate_about_5000_per_page_with_notes():
 
 def test_paginate_short_chapter_untouched():
     assert len(r.paginate("## 甲\n\n{{s:1}}短。", "甲", {}, {})) == 1
+
+
+def test_paginate_trailing_heading_page_keeps_previous_pages():
+    paras = [f"{{{{s:1-{k}}}}}" + "字" * 3000 for k in range(1, 5)] + ["### p. 52"]
+    text = "## 章\n\n" + "\n\n".join(paras)
+    pages = r.paginate(text, "章", {}, {})
+    joined = "\n\n".join(p["content"] for p in pages)
+    assert all(f"{{{{s:1-{k}}}}}" in joined for k in range(1, 5))
+    assert len({p["content"] for p in pages}) == len(pages)

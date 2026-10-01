@@ -334,8 +334,15 @@ def paginate(text: str, path: str, base: dict, known: dict) -> list[dict]:
         size += len(para)
     # 只剩標題的尾頁併回前一頁
     if len(pages) > 1 and all(p.startswith("#") for p in pages[-1]):
-        pages[-2] += pages.pop()
-    notes = [n for n in rb.paras(notes_txt) if FN_ITEM.match(n)]
+        # 🚨 不可寫成 pages[-2] += pages.pop()：-2 在 pop 前就算好位置，pop 後蓋掉的是前一頁（曾整節消失、末頁重複）
+        tail = pages.pop()
+        pages[-1] += tail
+    notes: list[str] = []
+    for n in rb.paras(notes_txt):              # 不帶 (N) 的續段跟著前一條註走，不可濾掉（曾整本少 7 千字被守恆擋下）
+        if FN_ITEM.match(n) or not notes:
+            notes.append(n)
+        else:
+            notes[-1] += "\n\n" + n
     texts = ["\n\n".join(p) for p in pages]
     owner: dict[int, int] = {}
     for i, t in enumerate(texts):
@@ -343,7 +350,8 @@ def paginate(text: str, path: str, base: dict, known: dict) -> list[dict]:
             owner.setdefault(int(n), i)
     per_page: dict[int, list[str]] = {}
     for n in notes:
-        per_page.setdefault(owner.get(int(FN_ITEM.match(n).group(1)), len(texts) - 1), []).append(n)
+        mn = FN_ITEM.match(n)
+        per_page.setdefault(owner.get(int(mn.group(1)), len(texts) - 1) if mn else len(texts) - 1, []).append(n)
     inv = {v: k for k, v in known.items()}
     prev_pdf = base.get("page_number")
     cur_path = path
