@@ -68,7 +68,7 @@ export interface CwAuthor {
   disciplineGroup: string // 學科分組（portal 依此分區：哲學／社會學／宗教學／神學／佛學／心理學／人類學…）
   sortYear?: number // 學科組內排序用（生年；BCE 為負）。缺省者維持陣列插入序、排在有值者之後
   era?: string // 年代分層（僅哲學／神學用；如「古代」「中世紀」「近代」「現代與當代」「教父時代」「宗教改革」）
-  region?: string // 地域分層（僅哲學／神學用；如「希臘‧地中海」「西方」「伊斯蘭」「中國」「東方（希臘／東正教）」）
+  region?: string // 地域分層（僅哲學／神學用；如「希臘‧地中海」「西方」「伊斯蘭」「中國」「東正教」「東方教會」）
   discipline: string // 一句話定位（portal 卡片副標）
   fields: string[] // 領域標籤
   portraitUrl: string
@@ -27655,7 +27655,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "神學",
           "sortYear": 951,
           "era": "中世紀",
-          "region": "東方（東方正統教會）",
+          "region": "東方教會",
           "discipline": "亞美尼亞神秘詩僧，2015年獲教宗方濟各封為天主教會聖師",
           "fields": [
                 "神秘主義",
@@ -27747,7 +27747,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "神學",
           "sortYear": 1226,
           "era": "中世紀",
-          "region": "東方（東方正統教會）",
+          "region": "東方教會",
           "discipline": "敘利亞正統教會總主教，百科全書式史學‧哲學‧神學‧教會法學者",
           "fields": [
                 "教會史",
@@ -27860,7 +27860,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "神學",
           "sortYear": 1399,
           "era": "中世紀",
-          "region": "東方（東方正統教會）",
+          "region": "東方教會",
           "discipline": "衣索比亞正教「神學君王」，統一禮儀教義的所羅門王朝皇帝",
           "fields": [
                 "君王神學",
@@ -29327,7 +29327,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "神學",
           "sortYear": 184,
           "era": "教父時代",
-          "region": "東方（希臘）",
+          "region": "東正教",
           "discipline": "亞歷山大學派巨擘，早期教會最博學的聖經學者；系統神學與寓意釋經法的先驅（部分教說後遭定罪）",
           "fields": [
                 "聖經文本考證",
@@ -29459,7 +29459,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "神學",
           "sortYear": 296,
           "era": "教父時代",
-          "region": "東方（希臘）",
+          "region": "東正教",
           "discipline": "亞歷山大主教，尼西亞正統信仰終身捍衛者；「舉世抗衡亞他那修」的堅毅象徵",
           "fields": [
                 "三一論",
@@ -29578,7 +29578,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "神學",
           "sortYear": 329,
           "era": "教父時代",
-          "region": "東方（希臘）",
+          "region": "東正教",
           "discipline": "「神學家」貴格利，卡帕多家三教父之一；五篇神學講辭確立正統三一論表述典範",
           "fields": [
                 "三一論修辭學",
@@ -29697,7 +29697,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "神學",
           "sortYear": 330,
           "era": "教父時代",
-          "region": "東方（希臘）",
+          "region": "東正教",
           "discipline": "凱撒利亞主教、卡帕多家三教父之首；東方修道制度奠基者，聖靈神性的捍衛者",
           "fields": [
                 "三一論（聖靈神性）",
@@ -29812,7 +29812,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "神學",
           "sortYear": 335,
           "era": "教父時代",
-          "region": "東方（希臘）",
+          "region": "東正教",
           "discipline": "巴西流之弟，卡帕多家三教父中哲學思辨最深邃者；神秘神學「永恆進展」論奠基人",
           "fields": [
                 "神秘神學",
@@ -29931,7 +29931,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "神學",
           "sortYear": 347,
           "era": "教父時代",
-          "region": "東方（希臘）",
+          "region": "東正教",
           "discipline": "君士坦丁堡總主教，「金口」美譽的傳世講道家；批判社會不義而遭放逐至死",
           "fields": [
                 "釋經講道",
@@ -30051,14 +30051,14 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
     },
     {
           "slug": "maximus-the-confessor",
-          "name": "篤信者馬克西姆",
+          "name": "認信者馬克西姆",
           "nameEn": "Maximus the Confessor",
           "nameOriginal": "Μάξιμος ὁ Ὁμολογητής",
           "lifespan": "約 580–662",
           "disciplineGroup": "神學",
           "sortYear": 580,
           "era": "教父時代",
-          "region": "東方（希臘）",
+          "region": "東正教",
           "discipline": "拜占庭修士神學家；為捍衛基督二意二能論遭割舌斷手，希臘教父末期最深邃的思想綜合者",
           "fields": [
                 "基督論（二意二能論）",
@@ -30072,7 +30072,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "emoji": "✝️",
           "contribution": [
                 "馬克西姆早年曾任拜占庭皇帝伊拉克略的宮廷秘書長，中年毅然放棄仕途出家為僧，此後半生輾轉於北非、羅馬與拜占庭各地，親歷阿拉伯帝國興起對地中海世界的劇烈衝擊。他學術生涯最重要的貢獻，是以驚人的思辨深度**綜合了希臘教父傳統與基督教新柏拉圖主義**（尤其偽狄奧尼修斯的思想），寫成《疑難解》系統疏解偽狄奧尼修斯與納西盎的貴格利著作中晦澀難解的段落，並在《奧秘引導論》中發展出將整個宇宙、教會禮儀與人靈魂三者互相對應的精緻神學圖式，是拜占庭神學思想最豐富的綜合體系之一。",
-                "他一生最為人稱道的，是晚年為捍衛正統基督論所付出的慘痛代價：面對拜占庭朝廷為求政治統一與伊斯蘭勢力妥協、推行「基督僅有一個意志」（一志論）的官方教義，馬克西姆挺身而出堅持基督兼具**神性與人性兩個完整意志與運作能力**（二意二能論），主張若基督無真實人性意志，人類意志便無從在祂裡面得贖。他因此遭皇帝下令割去舌頭、砍斷右手（使其無法再言說或書寫異議），流放至高加索地區的拉齊卡，同年去世——「篤信者」（Confessor，意指為信仰受苦卻未致命殉道者）之名由此而來。681 年第三次君士坦丁堡大公會議正式確立二意二能論為正統教義，馬克西姆的立場終獲平反。"
+                "他一生最為人稱道的，是晚年為捍衛正統基督論所付出的慘痛代價：面對拜占庭朝廷為求政治統一與伊斯蘭勢力妥協、推行「基督僅有一個意志」（一志論）的官方教義，馬克西姆挺身而出堅持基督兼具**神性與人性兩個完整意志與運作能力**（二意二能論），主張若基督無真實人性意志，人類意志便無從在祂裡面得贖。他因此遭皇帝下令割去舌頭、砍斷右手（使其無法再言說或書寫異議），流放至高加索地區的拉齊卡，同年去世——「認信者」（Confessor，意指為信仰受苦卻未致命殉道者）之名由此而來。681 年第三次君士坦丁堡大公會議正式確立二意二能論為正統教義，馬克西姆的立場終獲平反。"
           ],
           "sourceNote": "卒於 662 年，全部希臘文原典屬公有領域；現有英譯選集散見學術出版（如 Andrew Louth、Paul Blowers 等現代譯者版本，屬當代版權），公有領域原文可供希臘／繁中對照，英譯視版本情況個別評估。",
           "timeline": [
@@ -30177,7 +30177,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "神學",
           "sortYear": 675,
           "era": "教父時代",
-          "region": "東方（希臘）",
+          "region": "東正教",
           "discipline": "希臘教父傳統最後一位集大成者；在伊斯蘭治下捍衛聖像敬禮，系統彙整教父教義為《知識之源》",
           "fields": [
                 "系統神學彙整",
@@ -30278,7 +30278,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "神學",
           "sortYear": 306,
           "era": "教父時代",
-          "region": "東方（敘利亞／東方教會）",
+          "region": "東方教會",
           "discipline": "「聖靈的豎琴」，敘利亞語教會最偉大的詩人神學家；以詩歌而非論述體傳達教義",
           "fields": [
                 "敘利亞詩歌神學",
@@ -30389,7 +30389,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "神學",
           "sortYear": 257,
           "era": "教父時代",
-          "region": "東方（東方正統教會）",
+          "region": "東方教會",
           "discipline": "亞美尼亞使徒教會奠基者，首位大公牧首，促成亞美尼亞立基督教為國教",
           "fields": [
                 "教會奠基",
@@ -30473,7 +30473,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "神學",
           "sortYear": 440,
           "era": "教父時代",
-          "region": "東方（東方正統教會）",
+          "region": "東方教會",
           "discipline": "馬布格主教，反迦克墩基督論健將，主持敘利亞文新約修訂本",
           "fields": [
                 "基督論",
@@ -30576,7 +30576,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "神學",
           "sortYear": 451,
           "era": "教父時代",
-          "region": "東方（東方正統教會）",
+          "region": "東方教會",
           "discipline": "敘利亞正統教會「聖神的笛子」，韻文講道教父詩人主教",
           "fields": [
                 "教父神學",
@@ -35151,7 +35151,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "神學",
           "sortYear": 1871,
           "era": "現代與當代",
-          "region": "東方（希臘／東正教）",
+          "region": "東正教",
           "discipline": "俄國東正教神父神學家，索菲亞學（智慧論）創立者",
           "fields": [
                 "索菲亞學",
@@ -35273,7 +35273,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "神學",
           "sortYear": 1893,
           "era": "現代與當代",
-          "region": "東方（希臘／東正教）",
+          "region": "東正教",
           "discipline": "俄國東正教神學家，提出「新教父綜合」方法論",
           "fields": [
                 "新教父綜合",
@@ -35399,7 +35399,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "神學",
           "sortYear": 1903,
           "era": "現代與當代",
-          "region": "東方（希臘／東正教）",
+          "region": "東正教",
           "discipline": "俄國僑民東正教神學家，系統闡述東方神秘神學",
           "fields": [
                 "東正教神秘神學",
@@ -35505,7 +35505,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "神學",
           "sortYear": 1921,
           "era": "現代與當代",
-          "region": "東方（希臘／東正教）",
+          "region": "東正教",
           "discipline": "俄裔美籍東正教神父，聖弗拉基米爾神學院院長，禮儀神學奠基人",
           "fields": [
                 "禮儀神學",
@@ -35631,7 +35631,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "神學",
           "sortYear": 1931,
           "era": "現代與當代",
-          "region": "東方（希臘／東正教）",
+          "region": "東正教",
           "discipline": "希臘東正教都主教，以「位格共融」重構三一與教會論",
           "fields": [
                 "位格存有論",
@@ -35745,7 +35745,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "神學",
           "sortYear": 1919,
           "era": "現代與當代",
-          "region": "東方（東方正統教會）",
+          "region": "東方教會",
           "discipline": "科普特正教修道復興運動領袖，聖馬卡里烏斯修道院革新者",
           "fields": [
                 "修道靈修",
@@ -35846,7 +35846,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "神學",
           "sortYear": 1922,
           "era": "現代與當代",
-          "region": "東方（東方正統教會）",
+          "region": "東方教會",
           "discipline": "印度馬蘭卡正教德里都主教，20世紀普世教會運動神哲學家",
           "fields": [
                 "普世神學",
@@ -35948,7 +35948,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "神學",
           "sortYear": 1923,
           "era": "現代與當代",
-          "region": "東方（東方正統教會）",
+          "region": "東方教會",
           "discipline": "科普特正教第117任亞歷山大宗主教，當代最多產神學作家",
           "fields": [
                 "系統神學",
@@ -36056,7 +36056,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "神學",
           "sortYear": 1926,
           "era": "現代與當代",
-          "region": "東方（希臘／東正教）",
+          "region": "東正教",
           "discipline": "美國東正教會（OCA）拜占庭神學與帕拉馬斯學權威，聖弗拉基米爾神學院院長",
           "fields": [
                 "拜占庭神學",
@@ -36316,7 +36316,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "神學",
           "sortYear": 1893,
           "era": "現代與當代",
-          "region": "東方（希臘／東正教）",
+          "region": "東正教",
           "discipline": "聖體教會論（eucharistic ecclesiology）奠基者，巴黎聖塞爾吉教會法學者",
           "fields": [
                 "教會論",
@@ -36398,7 +36398,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "神學",
           "sortYear": 1903,
           "era": "現代與當代",
-          "region": "東方（希臘／東正教）",
+          "region": "東正教",
           "discipline": "羅馬尼亞正教系統神學家，《東正教教義神學》與《愛善集》羅文版編譯者",
           "fields": [
                 "系統神學",
@@ -36499,7 +36499,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "神學",
           "sortYear": 1935,
           "era": "現代與當代",
-          "region": "東方（希臘／東正教）",
+          "region": "東正教",
           "discipline": "希臘信徒哲學家與東正教神學家，位格論與反西方神學的主要聲音",
           "fields": [
                 "位格論",
@@ -36627,7 +36627,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "神學",
           "sortYear": 1934,
           "era": "現代與當代",
-          "region": "東方（希臘／東正教）",
+          "region": "東正教",
           "discipline": "英國皈依者、牛津東正教學者與狄奧克里亞都主教；《東正教會》作者",
           "fields": [
                 "東正教入門",
@@ -36758,7 +36758,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "神學",
           "sortYear": 1887,
           "era": "現代與當代",
-          "region": "東方（東方正統教會）",
+          "region": "東方教會",
           "discipline": "安提阿敘利亞正教會牧首與敘利亞學者；《散落的珍珠》作者",
           "fields": [
                 "敘利亞文學史",
@@ -36816,7 +36816,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "神學",
           "sortYear": 1932,
           "era": "現代與當代",
-          "region": "東方（東方正統教會）",
+          "region": "東方教會",
           "discipline": "全亞美尼亞大主教首領與《卡爾西頓會議與亞美尼亞教會》作者",
           "fields": [
                 "基督論",
@@ -36875,7 +36875,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "神學",
           "sortYear": 1912,
           "era": "現代與當代",
-          "region": "東方（東方正統教會）",
+          "region": "東方教會",
           "discipline": "印度馬蘭卡拉正教神學家，重審卡爾西頓會議的非迦克敦方代表",
           "fields": [
                 "基督論",
@@ -36937,7 +36937,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "神學",
           "sortYear": 1975,
           "era": "現代與當代",
-          "region": "東方（敘利亞／東方教會）",
+          "region": "東方教會",
           "discipline": "東方亞述教會現任大公牧首與巴巴伊《合一書》校訂者",
           "fields": [
                 "東方教會基督論",
