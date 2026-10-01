@@ -25,13 +25,79 @@ CH = rb.CHUNKS
 DONE = Path(__file__).resolve().parents[1] / "output" / "restructure" / "repaginate_done.txt"
 
 
+def _split_notes(text: str) -> tuple[list[str], list[str]]:
+    import re
+    m = re.search(r"\n\n" + re.escape(rb.FOOT_RULE) + r"\n\n", text)
+    body, notes = (text[:m.start()], text[m.end():]) if m else (text, "")
+    items: list[str] = []
+    for n in rb.paras(notes):
+        if rc.FN_ITEM.match(n) or not items:
+            items.append(n if rc.FN_ITEM.match(n) else f"(0) {n}")
+        else:
+            items[-1] += "\n\n" + n          # 沒配上註號的原註是接在前一條下的續段，跟著走、不可丟
+    return body.split("\n\n"), items
+
+
+def paginate_bilingual(c: dict) -> list[dict]:
+    """中英對照頁（rebuild_reference_bilingual 產的，兩欄正文列數相等）：同一列一起切，每頁中文約五千字。
+    中文註依 [^N] 所在頁分配，英文註（已配成相同註號）跟著同一頁。列數不等就不切。"""
+    import re
+    zb, zn = _split_notes(c.get("content") or "")
+    eb, en = _split_notes(c.get("source_text") or "")
+    if len(zb) != len(eb) or len(c.get("content") or "") <= rc.PAGE_MAX:
+        return [c]
+    pages: list[list[int]] = [[]]
+    size = 0
+    for i, z in enumerate(zb):
+        sec = z.startswith("### ")
+        if pages[-1] and ((sec and size >= 1500) or (not sec and size + len(z) > rc.PAGE_TARGET and size >= 800)):
+            pages.append([])
+            size = 0
+        pages[-1].append(i)
+        size += len(z)
+    owner = {}
+    for pi, rows in enumerate(pages):
+        for i in rows:
+            for n in re.findall(r"\[\^(\d+)\]", zb[i]):
+                owner.setdefault(int(n), pi)
+    num = lambda s: int(rc.FN_ITEM.match(s).group(1))  # noqa: E731
+    out = []
+    top = (c.get("chapter_path") or "").split(" / ")[0]
+    path = c.get("chapter_path") or ""
+    for pi, rows in enumerate(pages):
+        zt = "\n\n".join(zb[i] for i in rows)
+        et = "\n\n".join(eb[i] for i in rows)
+        zns = [n for n in zn if owner.get(num(n), len(pages) - 1) == pi]
+        ens = [n for n in en if owner.get(num(n), len(pages) - 1) == pi]
+        zns = [n[4:] if n.startswith("(0) ") else n for n in zns]     # 拿掉臨時標記
+        ens = [n[4:] if n.startswith("(0) ") else n for n in ens]
+        if zns:
+            zt += f"\n\n{rb.FOOT_RULE}\n\n" + "\n\n".join(zns)
+        if ens:
+            et += f"\n\n{rb.FOOT_RULE}\n\n" + "\n\n".join(ens)
+        sec = re.match(r"### (.+)", zb[rows[0]])
+        if pi and sec:
+            path = f"{top} / {sec.group(1).strip()}"
+        mk = re.search(r"\{\{p:(\d+)\}\}", zt)
+        d = dict(c, content=zt, source_text=et, chapter_path=c.get("chapter_path") if pi == 0 else path)
+        if pi and mk:
+            d["printed_page"] = int(mk.group(1))
+        out.append(d)
+    return out
+
+
 def repaginate(chunks: list[dict]) -> tuple[list[dict], int]:
     known = rb.printed_map(chunks)
     out, split = [], 0
     for c in chunks:
         t = c.get("content") or ""
-        if len(t) <= rc.PAGE_MAX or c.get("source_text") or c.get("sources"):
+        if len(t) <= rc.PAGE_MAX or c.get("sources"):
             out.append(c)
+            continue
+        if c.get("source_text"):
+            pages = paginate_bilingual(c)
+            split += len(pages) > 1
+            out += pages
             continue
         pages = rc.paginate(t, c.get("chapter_path") or "", c, known)
         split += len(pages) > 1
