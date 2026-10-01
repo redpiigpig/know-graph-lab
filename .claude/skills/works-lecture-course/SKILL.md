@@ -1141,6 +1141,10 @@ B 線＝前人概論怎麼切（比較表）。一次派一個 Sonnet。
   兩軸與原點放在第四章最後一節（從禮拜長出四傳統），不另立導言。
 - ✅ 作者確認（2026-10-01）：教義內容放第六章認信、會議經過放第三章歷史；第三章以伊斯蘭興起為一節的分界；
   第二章只講故事主線，制度與實踐的源頭留給第五～八章各自追溯。**第三關（大綱）結束，下一步第四關逐章備料。**
+- 第四關順序：第四章→第一章→二、三、五、六、七、八、九→序（作者同意）。
+  第四章備料完成（`output/christianity-intro/sources_ch04.md`，62 筆；必備缺 23、重要缺 22），待作者刪減。
+  觀察：二世紀沒有任何單一文本撐得起四站（只能靠按功能認定＋Bradshaw「別把片段拼成一條線」）；
+  非西方最缺教堂空間與古代禮儀；禮儀史標準書（Taft、Jungmann、Dix、Talley、Senn、White）館藏全無。
 - 補書不只 z-lib；先查站上既有（梵二 SC／DV 中拉英在 `data/creeds/ecumenical-councils/vatican-ii/`、
   奧斯堡信條與路德小教理在 `data/creeds/protestant-confessions/`、通諭中譯在 `data/encyclicals/`），
   再查 TRC／天主教在線目錄。館藏確認沒有：《天主教教理》全本中譯、《協同書》中譯、Schmemann、Bria、Brown 第二冊。
