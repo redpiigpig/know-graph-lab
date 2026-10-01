@@ -3,7 +3,7 @@
  "title": "維摩詰經・觀人物品第七",
  "family": "sa",
  "auto": true,
- "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。（藏、英兩欄自動對齊錯位，已暫時撤下，待人工對齊。）",
  "units": [
   {
    "id": "a00",
@@ -305,18 +305,6 @@
    "lang": "sa",
    "label": "梵本",
    "who": "GRETIL 校訂本"
-  },
-  {
-   "id": "bo",
-   "lang": "bo",
-   "label": "藏譯",
-   "who": "德格版 Toh 176・84000"
-  },
-  {
-   "id": "en",
-   "lang": "en",
-   "label": "84000 英譯",
-   "who": "譯自藏譯・與藏文逐句對齊"
   }
  ],
  "works": [
@@ -346,33 +334,23 @@
    "T0474": "於是文殊師利問維摩詰言：「菩薩何以觀察人物？」答曰：「譬如幻者見幻事相，菩薩觀人物為若此。譬如達士見水中月，菩薩觀人物為若此。譬如明鏡見其面像，菩薩觀人物為若此。取要言之，如熱時之焰，如呼聲之響，如空中之霧，如地水火風空，如諸情同等，如無像之像，如真人斷三垢，如溝港見自身，如如來諸所有，如所見諸色像，如得盡定無身不身，如空中之鳥無跡，如蟲蚤之根自然，如夢所見已寤，如未生塵，如真人現；菩薩觀人物為若此也。」",
    "T0475": "爾時文殊師利問維摩詰言：「菩薩云何觀於眾生？」",
    "T0476": "時妙吉祥問無垢稱：「云何菩薩觀諸有情？」無垢稱言：「譬如幻師觀所幻事。如是，菩薩應正觀察一切有情。「又，妙吉祥！如有智人觀水中月、觀鏡中像、觀陽焰水、觀呼聲響、觀虛空中雲城臺閣、觀水聚沫所有前際、觀水浮泡或起或滅、觀芭蕉心所有堅實、觀第五大、觀第六蘊、觀第七根、觀十三處、觀十九界、觀無色界眾色影像、觀燋敗種所出牙莖、觀龜毛等所作衣服、觀夭沒者受欲戲樂、觀預流果所起分別薩迦耶見、觀一來果受第三有、觀不還果入母胎藏、觀阿羅漢貪瞋癡毒、觀得忍菩薩慳悋犯戒恚害等心、觀諸如來習氣相續、觀生盲者覩見眾色、觀住滅定有出入息、觀虛空中所有鳥跡、觀半擇迦根有勢用、觀石女兒所有作業、觀佛所化起諸結縛、觀諸畢竟不生煩惱、觀夢悟已夢中所見、觀不生火有所焚燒、觀阿羅漢後有相續。如是，菩薩應正觀察一切有情。所以者何？諸法本空，真實無我、無有情故。」妙吉祥言：「若諸菩薩如是觀察一切有情，云何於彼修於大慈？」",
-   "sa": "Vkn 6.1 atha khalu mañjuśrīḥ kumārabhūto vimalakīrtiṃ licchavim etad avocat: kathaṃ satpuruṣa bodhisatvena sarvasatvā avekṣitavyāḥ / āha: tadyathāpi nāma mañjuśrīḥ vijñapuruṣa udakacandram avekṣeta, evaṃ bodhisatvena sarvasatvā avekṣitavyāḥ / tadyathāpi nāma mañjuśrīḥ ādarśamaṇḍale mukhamaṇḍalam ālokayet, evaṃ bodhisatvena sarvasatvā avekṣitavyāḥ / tadyathā mañjuśrīḥ marīcikāyām udakam, evaṃ bodhisatvena sarvasatvā avekṣitavyāḥ / tadyathā mañjuśrīḥ māyākāro māyākāranirmitaṃ puruṣam avekṣeta, evaṃ bodhisatvena sarvasatvā avekṣitavyāḥ / tadyathā mañjuśrīḥ pratiśrutkāyā rutaghoṣaḥ, evaṃ bodhisatvena sarvasatvā avekṣitavyāḥ / tadyathā mañjuśrīḥ gagane 'bhrakūṭam, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ phenapiṇḍasya pūrvāntaḥ, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśriḥ udakabudbudānām utpādavyayaḥ, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ kadalyāḥ sāradarśanam, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ vidyutaḥ saṃkrāntiḥ, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ pañcamo dhātuḥ / evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ saptamam āyatanam, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ ārūpyeṣu rūpāvabhāsaḥ, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ paritaptānāṃ bījānām aṅkurapariniṣpattiḥ, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ maṇḍūkaromapravāraḥ, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ mṛtasya kāmakrīḍāratiḥ, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ srotaāpannasya satkāyadṛṣṭiḥ, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśriḥ sakṛdāgāminas tṛtīyo bhavaḥ, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ anāgāmino garbhāvakrāntiḥ, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśriḥ arhataḥ rāgadoṣamohāḥ, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ kṣāntipratilabdhasya bodhisatvasya mātsaryadauḥśīlyavyāpādavihiṃsācittāni, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ tathāgatasya kleśavāsanā, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ jātyandhasya puruṣasya rūpadarśanam, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ nirodhasamāpannasyāśvāsāḥ, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ ākāśe śakunipadam, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ paṇḍakasyendriyasya prādurbhāvaḥ, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ bandhyāyāḥ putrapratilambhaḥ, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ tathāgatanirmitasyānutpannāḥ kleśāḥ, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ svapnadarśanapratibuddhasya darśanam, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśriḥ aparikalpayataḥ kleśāḥ, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ anupādānasyāgneḥ saṃbhavaḥ, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ parinirvṛtasya pratisaṃdhiḥ, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / evaṃ hi mañjuśrīr bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / Vkn 6.2 āha: yadi kulaputraivaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ, kathaṃ punar asya mahāmaitrī bhavati sarvasatveṣu /",
-   "bo": "དེ་ནས་འཇམ་དཔལ་གཞོན་ནུར་གྱུར་པས་ལིད་ཙ་བཱི་དྲི་མ་མེད་པར་གྲགས་པ་ལ་འདི་སྐད་ཅེས་སྨྲས་སོ། སྐྱེས་བུ་དམ་པ་བྱང་ཆུབ་སེམས་དཔས་སེམས་ཅན་ཐམས་ཅད་ལ་ཇི་ལྟར་བལྟ་བར་བྱ།",
-   "en": "Thereupon, Mañjuśrī, the crown prince, addressed the Licchavi Vimalakīrti: “Good sir, how should a bodhisattva regard all living beings?”"
+   "sa": "Vkn 6.1 atha khalu mañjuśrīḥ kumārabhūto vimalakīrtiṃ licchavim etad avocat: kathaṃ satpuruṣa bodhisatvena sarvasatvā avekṣitavyāḥ / āha: tadyathāpi nāma mañjuśrīḥ vijñapuruṣa udakacandram avekṣeta, evaṃ bodhisatvena sarvasatvā avekṣitavyāḥ / tadyathāpi nāma mañjuśrīḥ ādarśamaṇḍale mukhamaṇḍalam ālokayet, evaṃ bodhisatvena sarvasatvā avekṣitavyāḥ / tadyathā mañjuśrīḥ marīcikāyām udakam, evaṃ bodhisatvena sarvasatvā avekṣitavyāḥ / tadyathā mañjuśrīḥ māyākāro māyākāranirmitaṃ puruṣam avekṣeta, evaṃ bodhisatvena sarvasatvā avekṣitavyāḥ / tadyathā mañjuśrīḥ pratiśrutkāyā rutaghoṣaḥ, evaṃ bodhisatvena sarvasatvā avekṣitavyāḥ / tadyathā mañjuśrīḥ gagane 'bhrakūṭam, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ phenapiṇḍasya pūrvāntaḥ, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśriḥ udakabudbudānām utpādavyayaḥ, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ kadalyāḥ sāradarśanam, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ vidyutaḥ saṃkrāntiḥ, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ pañcamo dhātuḥ / evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ saptamam āyatanam, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ ārūpyeṣu rūpāvabhāsaḥ, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ paritaptānāṃ bījānām aṅkurapariniṣpattiḥ, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ maṇḍūkaromapravāraḥ, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ mṛtasya kāmakrīḍāratiḥ, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ srotaāpannasya satkāyadṛṣṭiḥ, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśriḥ sakṛdāgāminas tṛtīyo bhavaḥ, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ anāgāmino garbhāvakrāntiḥ, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśriḥ arhataḥ rāgadoṣamohāḥ, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ kṣāntipratilabdhasya bodhisatvasya mātsaryadauḥśīlyavyāpādavihiṃsācittāni, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ tathāgatasya kleśavāsanā, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ jātyandhasya puruṣasya rūpadarśanam, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ nirodhasamāpannasyāśvāsāḥ, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ ākāśe śakunipadam, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ paṇḍakasyendriyasya prādurbhāvaḥ, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ bandhyāyāḥ putrapratilambhaḥ, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ tathāgatanirmitasyānutpannāḥ kleśāḥ, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ svapnadarśanapratibuddhasya darśanam, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśriḥ aparikalpayataḥ kleśāḥ, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ anupādānasyāgneḥ saṃbhavaḥ, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ parinirvṛtasya pratisaṃdhiḥ, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / evaṃ hi mañjuśrīr bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / Vkn 6.2 āha: yadi kulaputraivaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ, kathaṃ punar asya mahāmaitrī bhavati sarvasatveṣu /"
   },
   "a01": {
-   "T0475": "維摩詰言：「譬如幻師，見所幻人，菩薩觀眾生為若此。如智者見水中月，如鏡中見其面像，如熱時焰，如呼聲響，如空中雲，如水聚沫，如水上泡，如芭蕉堅，如電久住，如第五大，如第六陰，如第七情，如十三入，如十九界，菩薩觀眾生為若此。如無色界色，如焦穀牙，如須陀洹身見，如阿那含入胎，如阿羅漢三毒，如得忍菩薩貪恚毀禁，如佛煩惱習，如盲者見色，如入滅盡定出入息，如空中鳥跡，如石女兒，如化人起煩惱，如夢所見已寤，如滅度者受身，如無因之火，菩薩觀眾生為若此。」",
-   "bo": "དཔེར་ན་སྐྱེས་བུ་མཁས་པ་ཆུ་ཟླ་ལ་ལྟ་བ་དེ་བཞིན་དུ་བྱང་ཆུབ་སེམས་དཔས་སེམས་ཅན་ཐམས་ཅད་ལ་བལྟ་བར་བྱའོ། དཔེར་ན་མེ་ལོང་གི་དཀྱིལ་འཁོར་ལ་བཞིན་ལྟ་བ་དེ་བཞིན་དུ་ སྨིག་རྒྱུའི་ཆུ་ལྟར་ བྲག་ཅའི་སྒྲ་སྐད་ལྟ་བུར་ ནམ་མཁའ་ལ་སྤྲིན་གྱི་ཕུང་པོ་ལྟ་བུར་ དབུ་བ་རྡོས་པའི་སྔོན་གྱི་མཐའ་ལྟ་བུར་ ཆུའི་ཆུ་བུར་འབྱུང་བ་དང་འཇིག་པ་ལྟར ཆུ་ཤིང་ལ་སྙིང་པོ་ལྟ་བ་ལྟར་ གློག་གི་འཕོ་བ་ལྟར་ ཁམས་ལྔ་པོ་ལྟར་ སྐྱེ་མཆེད་བདུན་པོ་ལྟར་ གཟུགས་མེད་པ་དག་ལ་གཟུགས་སུ་སྣང་བ་ལྟར་ ས་བོན་བརྔོས་པ་ལས་མྱུ་གུ་འགྲུབ་པ་ལྟར་ སྦལ་པའི་སྤུའི་གོས་ལྟར་ ཤི་བ་འདོད་པའི་རྩེད་མོ་ལ་དགའ་བ་ལྟར་ རྒྱུན་དུ་ཞུགས་པའི་འཇིག་ཚོགས་ལ་ལྟ་བ་ལྟར་ ལན་ཅིག་ཕྱིར་འོང་བ་ལ་སྲིད་པ་གསུམ་པོ་ལྟར་ ཕྱིར་མི་འོང་བ་ལ་མངལ་དུ་འཇུག་པ་ལྟར་ དགྲ་བཅོམ་པ་ལ་འདོད་ཆགས་དང་། ཞེ་སྡང་དང་། གཏི་མུག་བཞིན་དུ་ ལ་སེར་སྣ་དང་། འཆལ་པའི་ཚུལ་ཁྲིམས་དང་། གནོད་སེམས་དང་། རྣམ་པར་འཚེ་བའི་སེམས་བཞིན་དུ་ དེ་བཞིན་གཤེགས་པ་ལ་བག་ཆགས་བཞིན་དུ་ མི་དམུས་ལོང་གིས་གཟུགས་མཐོང་བ་ལྟར་ འགོག་པ་ལ་སྙོམས་པར་ཞུགས་པའི་དབུགས་འབྱུང་བ་དང་རྔུབ་པ་དེ་བཞིན་དུ་ ནམ་མཁའ་ལ་ནི་བྱའི་རྗེས་བཞིན་དུ་ མ་ནིང་ལ་ཕོ་མཚན་སྐྱེ་བ་བཞིན་དུ་ མོ་གཤམ་གྱི་བུ་རྙེད་པ་བཞིན་དུ་ དེ་བཞིན་གཤེགས་པས་སྤྲུལ་པའི་ཉོན་མོངས་པའི་མ་སྐྱེས་པ་དེ་བཞིན་དུ་ རྨི་ལམ་ན་སྣང་བ་སད་ན་མཐོང་བ་བཞིན་དུ་ ཀུན་ཏུ་མི་རྟོག་པ་ལ་ཉོན་མོངས་པ་བཞིན་དུ་ རྒྱུ་མེད་པ་ལས་མེ་འབྱུང་བ་བཞིན་དུ་ ཡོངས་སུ་མྱ་ངན་ལས་འདས་པའི་ཉིང་མཚམས་སྦྱོར་བ་བཞིན་དུ་ འཇམ་དཔལ་དེ་ལྟ་བུར་ཡང་དག་པ་ཉིད་བདག་མེད་པར་རབ་ཏུ་རྟོགས་པས་བྱང་ཆུབ་སེམས་དཔས་སེམས་ཅན་ཐམས་ཅད་ལ་སོ་སོར་བརྟག་གོ། ། རིགས་ཀྱི་བུ་གལ་ཏེ་བྱང་ཆུབ་སེམས་དཔས་སེམས་ཅན་ཐམས་ཅད་ལ་དེ་ལྟ་བུར་སོ་སོར་བརྟག་ན་ཇི་ལྟར་ན་དེ་སེམས་ཅན་ཐམས་ཅད་ལ་བྱམས་པ་ཆེན་པོ་སྐྱེ་བར་འགྱུར།",
-   "en": "a bodhisattva should regard all living beings as a wise man regards the reflection of the moon in water or as magicians regard men created by magic. as being like a face in a mirror; like the water of a mirage; like the sound of an echo; like a mass of clouds in the sky; like the previous moment of a ball of foam; like the appearance and disappearance of a bubble of water; like the core of a plantain tree; like a flash of lightning; like the fifth great element; like the seventh sense-medium; like the appearance of matter in an immaterial realm; like a sprout from a rotten seed; like a tortoise-hair coat; like the fun of games for one who wishes to die; like the egoistic views of a stream-winner; like a third rebirth of a once-returner; like the descent of a nonreturner into a womb; like the existence of desire, hatred, and folly in an arhat; like thoughts of avarice, immorality, wickedness, and hostility in a bodhisattva who has attained tolerance; like the instincts of afflictions in a tathāgata; like the perception of color in one blind from birth; like the inhalation and exhalation of an ascetic absorbed in the meditation of cessation; like the track of a bird in the sky; like the erection of a eunuch; like the pregnancy of a barren woman; like the unproduced afflictions of an emanated incarnation of the Tathāgata; like dream-visions seen after waking; like the afflictions of one who is free of conceptualizations; like fire burning without fuel; like the reincarnation of one who has attained ultimate liberation. “Precisely thus, Mañjuśrī, does a bodhisattva who realizes ultimate selflessness consider all beings.” ‌Noble sir, if a bodhisattva considers all living beings in such a way, how does he generate the great love toward them?”"
+   "T0475": "維摩詰言：「譬如幻師，見所幻人，菩薩觀眾生為若此。如智者見水中月，如鏡中見其面像，如熱時焰，如呼聲響，如空中雲，如水聚沫，如水上泡，如芭蕉堅，如電久住，如第五大，如第六陰，如第七情，如十三入，如十九界，菩薩觀眾生為若此。如無色界色，如焦穀牙，如須陀洹身見，如阿那含入胎，如阿羅漢三毒，如得忍菩薩貪恚毀禁，如佛煩惱習，如盲者見色，如入滅盡定出入息，如空中鳥跡，如石女兒，如化人起煩惱，如夢所見已寤，如滅度者受身，如無因之火，菩薩觀眾生為若此。」"
   },
   "a02": {
    "T0474": "文殊師利曰：「如是觀者，何以行慈？」答曰：「如是觀人，人物為幻，知法亦然，而為說法。以慈修止，止而慈者，為無所起。行不嬈慈，以無瑕穢；行等之慈，等于三塗；行無諍慈，無所止處；行不二慈，內外無習；行不怒慈，為都成就；行牢強慈，強若金剛，莫能沮壞；行清白慈，內性已淨；行平等慈，平若虛空；行如來慈，如本隨覺；行佛之慈，覺諸凡人；行自然慈，以自覺正；行道之慈，同其所味；行無比慈，能却眾惡；行大悲慈，導以大乘；行不視慈，其視如空；行布施慈，無所遺忘；行戒以慈，與惡戒眼；行忍以慈，彼我皆護；行精進慈，荷負眾人；行一心慈，思所當念；行智慧慈，而以知時；行善權慈，一切現聞；行不諂慈，意淨無求；行不飾慈，心無所著；行不我慈，無復惡意；行安慰慈，至于得佛，為立大安。",
-   "T0475": "文殊師利言：「若菩薩作是觀者，云何行慈？」",
-   "bo": "འཇམ་དཔལ་ནམ་བྱང་ཆུབ་སེམས་དཔའ་དེ་ལྟར་སོ་སོར་རྟོག་པ་ན་",
-   "en": "“Mañjuśrī, when a bodhisattva considers all living beings in this way,"
+   "T0475": "文殊師利言：「若菩薩作是觀者，云何行慈？」"
   },
   "a03": {
    "T0475": "維摩詰言：「菩薩作是觀已，自念：『我當為眾生說如斯法。』是即真實慈也。行寂滅慈，無所生故；行不熱慈，無煩惱故；行等之慈，等三世故；行無諍慈，無所起故；行不二慈，內外不合故；行不壞慈，畢竟盡故；行堅固慈，心無毀故；行清淨慈，諸法性淨故；行無邊慈，如虛空故；行阿羅漢慈，破結賊故；行菩薩慈，安眾生故；行如來慈，得如相故；行佛之慈，覺眾生故；行自然慈，無因得故；行菩提慈，等一味故；行無等慈，斷諸愛故；行大悲慈，導以大乘故；行無厭慈，觀空無我故；行法施慈，無遺惜故；行持戒慈，化毀禁故；行忍辱慈，護彼我故；行精進慈，荷負眾生故；行禪定慈，不受味故；行智慧慈，無不知時故；行方便慈，一切示現故；行無隱慈，直心清淨故；行深心慈，無雜行故；行無誑慈，不虛假故；行安樂慈，令得佛樂故。",
    "T0476": "無垢稱言：「菩薩如是觀有情已，自念：『我當為諸有情說如斯法，令其解了。』是名真實修於大慈，與諸有情究竟安樂。如是，菩薩修寂滅慈，無諸取故；修無熱慈，離煩惱故；修如實慈，三世等故；修不違慈，無等起故；修無二慈，離內外故；修無壞慈，畢竟住故；修堅固慈，增上意樂如金剛故；修清淨慈，本性淨故；修平等慈，等虛空故；修阿羅漢慈，永害結賊故；修獨覺慈，不待師資故；修菩薩慈，成熟有情無休息故；修如來慈，隨覺諸法真如性故；修佛之慈，覺悟睡夢諸有情故；修自然慈，任運等覺諸法性故；修菩提慈，等一味故；修無偏慈，愛憎斷故；修大悲慈，顯大乘故；修無諍慈，觀無我故；修無厭慈，觀性空故；修法施慈，離師捲故；修淨戒慈，成熟犯戒諸有情故；修堪忍慈，隨護自他令無損故；修精進慈，荷負有情利樂事故；修靜慮慈，無愛味故；修般若慈，於一切時現知法故；修方便慈，於一切門普示現故；修妙願慈，無量大願所引發故；修大力慈，能辦一切廣大事故；修若那慈，了知一切法性相故；修神通慈，不壞一切法性相故；修攝事慈，方便攝益諸有情故；修無著慈，無礙染故；修無詐慈，意樂淨故；修無諂慈，加行淨故；修無誑慈，不虛假故；修深心慈，離瑕穢故；修安樂慈，建立諸佛安樂事故。唯，妙吉祥！是名菩薩修於大慈。」",
-   "sa": "āha: yadā mañjuśrīḥ bodhisatva evaṃ pratyavekṣate, mayā hy eṣāṃ satvānām evaṃ dharmaparijñāyai dharmo deśayitavya iti, ato 'sya bhūtā satvatrāṇamaitrī sarvasatveṣūtpadyate 'nārambaṇatayā, upaśamamaitry anutpādanatayā, niṣparidāhamaitrī niḥkleśatayā, yathāvadmaitrī tryadhvasamatayā, avirodhamaitry aparyupasthānatayā, advayamaitry adhyātmabahirdhāsaṃsṛṣṭatayā, akopyamaitry atyantaniṣṭhatayā, dṛḍhamaitrī vajradṛḍhābhedyāśayatayā, śuddhamaitrī prakṛtiśuddhatayā, samamaitry ākāśasamatayā, arhanmaitry arinirghātanatayā, bodhisatvamaitrī satvaparipākāsraṃsanatayā, tathāgatamaitrī tathatānubodhanatayā, buddhamaitrī suptasatvaprabodhanatayā, svayambhumaitrī svayamabhisaṃbodhanatayā bodhimaitri samarasatayā, asamāropamaitry anunayapratighaprahāṇatayā, mahākaruṇāmaitrī mahāyānaparidīpanatayā, aparikhedamaitrī śūnyanairātmyapratyavekṣaṇatayā, dharmadānamaitry anācāryamuṣṭitayā, śīlamaitrī duḥśīlasatvāvekṣaṇatayā, kṣāntimaitry ātmaparākṣaṇyanatayā, vīryamaitrī sarvasatvabhāravahanatayā, dhyānamaitry anāsvādanatayā, prajñāmaitrī kālasaṃprāpaṇatayā, upāyamaitrī sarvatramukhoddarśanatayā, akuhanamaitry āśayapariśuddhitayā, aśāṭhyamaitry āśayatayā, adhyāśayamaitrī niraṅgaṇatayā, amāyāmaitry akṛtrimatayā, saukhyamaitrī buddhasaukhyapratiṣṭhāpanatayā / iyaṃ mañjuśrīḥ bodhisatvasya mahāmaitrī / Vkn 6.3 āha: katarā punar asya mahākaruṇā / āha: yat kṛtaṃ kṛtaṃ kuśalamūlaṃ sarvasatvebhya utsṛjati / āha: katarā punar asya mahāmuditā / āha: yad datvāttamanā bhavati, na vipratisārī / āha: katarā punar asya mahopekṣā / āha: yobhayato 'rthatā /",
-   "bo": "དེ་ལྟར་ཆོས་ཡོངས་སུ་ཤེས་ནས་སེམས་ཅན་འདི་དག་ལའང་བདག་གིས་ཆོས་བསྟན་ཏོ་སྙམ་སྟེ། དེ་བས་ན་དེ་སེམས་ཅན་ཐམས་ཅད་ལ་ཡང་དག་པའི་སྐྱབས་ཀྱི་བྱམས་པ་སྐྱེ་སྟེ། ལེན་པ་མེད་པའི་ཕྱིར་ཉེ་བར་ཞི་བའི་བྱམས་པའོ། ཉོན་མོངས་པ་མེད་པས་གདུང་བ་མེད་པའི་བྱམས་པའོ། ། དུས་གསུམ་མཉམ་པ་ཉིད་ཀྱི་ཕྱིར་ཅི་བཞིན་པ་ཉིད་ཀྱི་བྱམས་པའོ། ཀུན་ནས་ལྡང་བ་མེད་པའི་ཕྱིར་འགལ་བ་མེད་པའི་བྱམས་པའོ། ། ཕྱི་ནང་མ་འདྲེས་པའི་ཕྱིར་གཉིས་སུ་མེད་པའི་བྱམས་པའོ། ། ཤིན་ཏུ་མཐར་ཐུག་པའི་ཕྱིར་མི་འཁྲུགས་པའི་བྱམས་པའོ། ། བསམ་པ་རྡོ་རྗེ་ལྟ་བུར་མི་ཕྱེད་པའི་ཕྱིར་བརྟན་པའི་བྱམས་པའོ། ། རང་བཞིན་གྱིས་ཡོངས་སུ་དག་པའི་ཕྱིར་ཡོངས་སུ་དག་པའི་བྱམས་པའོ། ། བསམ་པ་མཉམ་པའི་ཕྱིར་མཉམ་པའི་བྱམས་པའོ། ། དགྲ་བཅོམ་པའི་ཕྱིར་དགྲ་བཅོམ་པའི་བྱམས་པའོ། ། སེམས་ཅན་ཡོངས་སུ་སྨིན་པར་བྱ་བ་རྒྱུན་མི་འཆད་པའི་ཕྱིར་བྱང་ཆུབ་སེམས་དཔའི་བྱམས་པའོ། ཡང་དེ་བཞིན་ཉིད་ཁོང་དུ་ཆུད་པའི་ཕྱིར་དེ་བཞིན་གཤེགས་པའི་བྱམས་པའོ། ། སེམས་ཅན་གཉིད་ཀྱིས་ལོག་པ་རབ་ཏུ་སད་པར་བྱེད་པའི་ཕྱིར་སངས་རྒྱས་ཀྱི་བྱམས་པའོ། ། རང་མངོན་པར་རྫོགས་པར་བྱང་ཆུབ་པའི་ཕྱིར་རང་བྱུང་གི་བྱམས་པའོ། རོ་མཚུངས་པའི་ཕྱིར་བྱང་ཆུབ་ཀྱི་བྱམས་པའོ། རྗེས་སུ་ཆགས་པ་དང་། ཁོང་ཁྲོ་བ་སྤངས་པའི་ཕྱིར་སྒྲོ་བཏགས་པ་མེད་པའི་བྱམས་པའོ། ཐེག་པ་ཆེན་པོ་ཡོངས་སུ་སྣང་བར་བྱེད་པའི་ཕྱིར་སྙིང་རྗེ་ཆེན་པོའི་བྱམས་པའོ། སྟོང་པ་དང་བདག་མེད་པར་སོ་སོར་རྟོག་པའི་ཕྱིར་ཡོངས་སུ་མི་སྐྱོ་བའི་བྱམས་པའོ། སློབ་དཔོན་དཔེ་མཁྱུད་མེད་པའི་ཕྱིར་ཆོས་ཀྱི་སྦྱིན་པའི་བྱམས་པའོ། ། ཚུལ་ཁྲིམས་འཆལ་པའི་སེམས་ཅན་ལ་ལྟ་བའི་ཕྱིར་ཚུལ་ཁྲིམས་ཀྱི་བྱམས་པའོ། ། བདག་དང་ཕ་རོལ་སྲུང་བའི་ཕྱིར་བཟོད་པའི་བྱམས་པའོ། ། སེམས་ཅན་ཐམས་ཅད་ཀྱི་ཁུར་ཁྱེར་བའི་ཕྱིར་བརྩོན་འགྲུས་ཀྱི་བྱམས་པའོ། ། རོ་མྱང་བ་མེད་པའི་ཕྱིར་བསམ་གཏན་གྱི་བྱམས་པའོ། ། དུས་སུ་ཐོབ་པར་བྱེད་པའི་ཕྱིར་ཤེས་རབ་ཀྱི་བྱམས་པའོ། ། ཐམས་ཅད་དུ་སྒོ་སྟོན་པའི་ཕྱིར་ཐབས་ཀྱི་བྱམས་པའོ། ། བསམ་པ་རྣམ་པར་དག་པའི་ཕྱིར་ཚུལ་འཆོས་པ་མེད་པའི་བྱམས་པའོ། ། བསམ་པ་ཐག་པ་ནས་བྱེད་པའི་ཕྱིར་གཡོ་མེད་པའི་བྱམས་པའོ། ། ཉོན་མོངས་པ་མེད་པའི་ཕྱིར་ལྷག་པའི་བསམ་པའི་བྱམས་པའོ། ། བཅོས་མ་མ་ཡིན་པའི་ཕྱིར་སྒྱུ་མེད་པའི་བྱམས་པའོ། ། སངས་རྒྱས་ཀྱི་བདེ་བ་ལ་འགོད་པའི་ཕྱིར་བདེ་བའི་བྱམས་པ་སྟེ། །",
-   "en": "he thinks: ‘Just as I have realized the Dharma, so should I teach it to living beings.’ Thereby, he generates the love that is truly a refuge for all living beings; the love that is peaceful because free of grasping; the love that is not feverish, because free of passions; the love that accords with reality because it is the very same in all three times; the love that is without conflict because free of the violence of the passions; the love that is nondual because it is involved neither with the external nor with the internal; the love that is imperturbable because totally ultimate. “Thereby he generates the love that is firm, its high resolve unbreakable, like a diamond; the love that is pure, purified in its intrinsic nature; the love that is even, its aspirations being equal; the arhat’s love that has eliminated its enemy; the bodhisattva’s love that continuously develops living beings; the Tathāgata’s love that understands reality; the Buddha’s love that causes living beings to awaken from their sleep; the love that is spontaneous because it is fully enlightened spontaneously; the love that is enlightenment because it is unity of experience; the love that has no presumption because it has eliminated attachment and aversion; the love that is great compassion because it infuses the Mahāyāna with radiance; the love that is never exhausted because it acknowledges voidness and selflessness; the love that is giving because it bestows the gift of Dharma free of the tight fist of a bad teacher; the love that is morality because it improves immoral living beings; the love that is tolerance because it protects both self and others; the love that is effort because it takes responsibility for all living beings; the love that is contemplation because it refrains from indulgence in tastes; the love that is wisdom because it causes attainment at the proper time; the love that is liberative art because it shows the way everywhere; the love that is without formality because it is pure in motivation; the love that is without deviation because it acts from decisive motivation; the love that is high resolve because it is without passions; the love that is without deceit because it is not artificial; the love that is happiness because it introduces living beings to the happiness of the Buddha."
+   "sa": "āha: yadā mañjuśrīḥ bodhisatva evaṃ pratyavekṣate, mayā hy eṣāṃ satvānām evaṃ dharmaparijñāyai dharmo deśayitavya iti, ato 'sya bhūtā satvatrāṇamaitrī sarvasatveṣūtpadyate 'nārambaṇatayā, upaśamamaitry anutpādanatayā, niṣparidāhamaitrī niḥkleśatayā, yathāvadmaitrī tryadhvasamatayā, avirodhamaitry aparyupasthānatayā, advayamaitry adhyātmabahirdhāsaṃsṛṣṭatayā, akopyamaitry atyantaniṣṭhatayā, dṛḍhamaitrī vajradṛḍhābhedyāśayatayā, śuddhamaitrī prakṛtiśuddhatayā, samamaitry ākāśasamatayā, arhanmaitry arinirghātanatayā, bodhisatvamaitrī satvaparipākāsraṃsanatayā, tathāgatamaitrī tathatānubodhanatayā, buddhamaitrī suptasatvaprabodhanatayā, svayambhumaitrī svayamabhisaṃbodhanatayā bodhimaitri samarasatayā, asamāropamaitry anunayapratighaprahāṇatayā, mahākaruṇāmaitrī mahāyānaparidīpanatayā, aparikhedamaitrī śūnyanairātmyapratyavekṣaṇatayā, dharmadānamaitry anācāryamuṣṭitayā, śīlamaitrī duḥśīlasatvāvekṣaṇatayā, kṣāntimaitry ātmaparākṣaṇyanatayā, vīryamaitrī sarvasatvabhāravahanatayā, dhyānamaitry anāsvādanatayā, prajñāmaitrī kālasaṃprāpaṇatayā, upāyamaitrī sarvatramukhoddarśanatayā, akuhanamaitry āśayapariśuddhitayā, aśāṭhyamaitry āśayatayā, adhyāśayamaitrī niraṅgaṇatayā, amāyāmaitry akṛtrimatayā, saukhyamaitrī buddhasaukhyapratiṣṭhāpanatayā / iyaṃ mañjuśrīḥ bodhisatvasya mahāmaitrī / Vkn 6.3 āha: katarā punar asya mahākaruṇā / āha: yat kṛtaṃ kṛtaṃ kuśalamūlaṃ sarvasatvebhya utsṛjati / āha: katarā punar asya mahāmuditā / āha: yad datvāttamanā bhavati, na vipratisārī / āha: katarā punar asya mahopekṣā / āha: yobhayato 'rthatā /"
   },
   "a04": {
    "T0474": "菩薩之慈為若此也。」",
-   "T0475": "菩薩之慈，為若此也。」",
-   "bo": "འཇམ་དཔལ་དེ་ནི་བྱང་ཆུབ་སེམས་དཔའི་བྱམས་པ་ཆེན་པོའོ། ། དེའི་སྙིང་རྗེ་ཆེན་པོ་གང་ཡིན། དགེ་བའི་རྩ་བ་ཅི་བྱས་པ་སེམས་ཅན་ཐམས་ཅད་ལ་གཏོང་བའོ། དེའི་དགའ་བ་ཆེན་པོ་གང་ཡིན། གང་བྱིན་ནས་ཡིད་དགའ་བར་འགྱུར་ཏེ་མི་འགྱོད་པའོ། དེའི་བཏང་སྙོམས་གང་ཡིན། གང་གཉི་གའི་དོན་དུ་འགྱུར་བའོ། འཁོར་བའི་འཇིགས་པས་སྐྲག་པ་གང་ལ་བརྟེན་པར་བྱ། འཇམ་དཔལ་བྱང་ཆུབ་སེམས་དཔའ་འཁོར་བའི་འཇིགས་པས་སྐྲག་པ་ནི་སངས་རྒྱས་ཀྱི་ཆེ་བ་ཉིད་ལ་བརྟེན་པར་བྱའོ། སངས་རྒྱས་ཀྱི་ཆེ་བ་ཉིད་ལ་གནས་པར་འདོད་པས་གང་ལ་གནས་པར་བྱ། སེམས་ཅན་ཐམས་ཅད་ལ་སྙོམས་པར་གནས་པར་བྱའོ། སེམས་ཅན་ཐམས་ཅད་ལ་སྙོམས་པར་གནས་པར་འདོད་པས་གང་ལ་གནས་པར་བྱ། སེམས་ཅན་ཐམས་ཅད་རབ་ཏུ་ཐར་བར་བྱ་བའི་ཕྱིར་གནས་པར་བྱའོ། སེམས་ཅན་ཐམས་ཅད་རབ་ཏུ་ཐར་བར་བྱ་བར་འདོད་པས་ཇི་ལྟ་བུར་བྱ། ཉོན་མོངས་པ་ལས་རབ་ཏུ་ཐར་བར་བྱའོ། ཉོན་མོངས་པ་སྤང་བར་འདོད་པས། ཇི་ལྟར་རབ་ཏུ་སྦྱར་བར་བྱ། ཚུལ་བཞིན་རབ་ཏུ་སྦྱར་བར་བྱའོ ཇི་ལྟ་བུར་རབ་ཏུ་སྦྱར་ན། ཚུལ་བཞིན་དུ་རབ་ཏུ་སྦྱོར་བ་ཡིན། སྐྱེ་བ་མེད་པ་དང་། འགག་པ་མེད་པ་ལ་རབ་ཏུ་སྦྱོར་བ་ནི་ཚུལ་བཞིན་དུ། རབ་ཏུ་སྦྱོར་བ་ཡིན་ནོ། ཅི་མི་སྐྱེད། ཅི་མི་འགོག མི་དགེ་བ་རྣམས་མི་སྐྱེད་ཅིང་། དགེ་བ་རྣམས་མི་འགོག་གོ། དགེ་བ་དང་མི་དགེ་བའི་རྩ་བ་གང་། འཇིག་ཚོགས་ནི་རྩ་བའོ། འཇིག་ཚོགས་ཀྱི་རྩ་བ་གང་། འཇིག་ཚོགས་ཀྱི་རྩ་བ་ནི་འདོད་པ་དང་ཆགས་པའོ། འདོད་པ་དང་ཆགས་པའི་རྩ་བ་གང་། འདོད་པ་དང་ཆགས་པའི་རྩ་བ་ནི་ཡང་དག་པ་མ་ཡིན་པ་ཀུན་རྟོག་པའོ།",
-   "en": "Such, Mañjuśrī, is the great love of a bodhisattva.” What is the great compassion of a bodhisattva? It is the giving of all accumulated roots of virtue to all living beings. What is the great joy of a bodhisattva? It is to be joyful and without regret in giving. What is the equanimity of a bodhisattva? It is what benefits both self and others. To what should one resort when terrified by fear of life? Mañjuśrī, a bodhisattva who is terrified by fear of life should resort to the magnanimity of the Buddha. Where should he who wishes to resort to the magnanimity of the Buddha take his stand? He should stand in equanimity toward all living beings. Where should he who wishes to stand in equanimity toward all living beings take his stand? He should live for the liberation of all living beings. What should he who wishes to liberate all living beings do? He should liberate them from their afflictions. How should he who wishes to eliminate afflictions apply himself? He should apply himself appropriately. How should he apply himself, to “apply himself appropriately”? He should apply himself to productionlessness and to destructionlessness. What is not produced? And what is not destroyed? Evil is not produced and good is not destroyed. What is the root of good and evil? Materiality is the root of good and evil. What is the root of materiality? Desire is the root of materiality. What is the root of desire and attachment? Unreal construction is the root of desire."
+   "T0475": "菩薩之慈，為若此也。」"
   },
   "a05": {
    "T0474": "文殊師利又問：「何謂為悲？」曰：「所造德本，修辯為人。」「何謂為喜？」曰：「所以施眾而無悔。」「何謂為護？」曰：「兼利之。」又問：「生死為畏，菩薩何以御之？」曰：「生死畏者，菩薩以聖大之意，為之作御。」又問：「欲建聖大，當何所立？」曰：「建聖大者，必等一切而度眾生。」",
@@ -425,9 +403,7 @@
   },
   "a15": {
    "T0475": "又問：「虛妄分別孰為本？」答曰：「顛倒想為本。」",
-   "T0476": "又問：「虛妄分別孰為本？」曰：「倒想為本。」",
-   "bo": "ཡང་དག་པ་མ་ཡིན་པ་ཀུན་རྟོག་པའི་རྩ་བ་གང་། རྩ་བ་ནི་ཕྱིན་ཅི་ལོག་གི་འདུ་ཤེས་སོ། ཕྱིན་ཅི་ལོག་གི་འདུ་ཤེས་ཀྱི་རྩ་བ་གང་། རྟེན་མེད་པའོ། རྟེན་མེད་པའི་རྩ་བ་གང་། འཇམ་དཔལ་གང་རྟེན་མེད་པ་དེའི་རྩ་བར་འགྱུར་བ་ཅི་ཞིག་ཡོད་དེ།",
-   "en": "What is the root of unreal construction? The false concept is its root. What is the root of the false concept? Baselessness. What is the root of baselessness? Mañjuśrī, when something is baseless, how can it have any root?"
+   "T0476": "又問：「虛妄分別孰為本？」曰：「倒想為本。」"
   },
   "a16": {
    "T0475": "又問：「顛倒想孰為本？」答曰：「無住為本。」",
@@ -442,73 +418,53 @@
   "a18": {
    "T0474": "如是，仁者！不住之本無所為本，從不住本立一切法。」",
    "T0475": "文殊師利！從無住本，立一切法。」",
-   "sa": "āha: yan mañjuśrīḥ apratiṣṭhānaṃ tasya kiṃ mūlaṃ bhaviṣyati / iti hy apratiṣṭhānamūlapratiṣṭhitāḥ sarvadharmāḥ / Vkn 6.7 atha yā tatra gṛhe devatā prativasati, sā teṣāṃ bodhisatvānāṃ mahāsatvānām imaṃ dharmanirdeśaṃ śrutvā tuṣṭodagrāttamanā, audārikam ātmabhāvaṃ saṃdarśya divyaiḥ puṣpais tān mahāsatvāṃs tāṃś ca mahāśrāvakān abhyavakirati sma / abhyavakīrṇānāṃ ca tatra yāni bodhisatvānāṃ kāye puṣpāṇi patitāni, tāni dharaṇitale pratiṣṭhitāni / yāni punar mahāśrāvakāṇāṃ kāye puṣpāṇi patitāni, tāni tatraiva sthitāni na bhūmau patitāni / tatas te mahāśrāvakā ṛddhiprātihāryaiḥ tāni puṣpāṇy utsṛjanti, na ca patanti /",
-   "bo": "དེ་ལྟར་ཆོས་ཐམས་ཅད་ནི་རྟེན་མེད་པའི་རྩ་བ་ལ་གནས་པའོ། །",
-   "en": "Therefore, all things stand on the root that is baseless."
+   "sa": "āha: yan mañjuśrīḥ apratiṣṭhānaṃ tasya kiṃ mūlaṃ bhaviṣyati / iti hy apratiṣṭhānamūlapratiṣṭhitāḥ sarvadharmāḥ / Vkn 6.7 atha yā tatra gṛhe devatā prativasati, sā teṣāṃ bodhisatvānāṃ mahāsatvānām imaṃ dharmanirdeśaṃ śrutvā tuṣṭodagrāttamanā, audārikam ātmabhāvaṃ saṃdarśya divyaiḥ puṣpais tān mahāsatvāṃs tāṃś ca mahāśrāvakān abhyavakirati sma / abhyavakīrṇānāṃ ca tatra yāni bodhisatvānāṃ kāye puṣpāṇi patitāni, tāni dharaṇitale pratiṣṭhitāni / yāni punar mahāśrāvakāṇāṃ kāye puṣpāṇi patitāni, tāni tatraiva sthitāni na bhūmau patitāni / tatas te mahāśrāvakā ṛddhiprātihāryaiḥ tāni puṣpāṇy utsṛjanti, na ca patanti /"
   },
   "a19": {
    "T0474": "於是，有天在其室止，聞上人言，現其天身，即以天華散諸菩薩、大弟子上。",
    "T0475": "時維摩詰室有一天女，見諸大人聞所說法，便現其身，即以天華散諸菩薩、大弟子上。",
-   "T0476": "時無垢稱室中有一本住天女，見諸大人、聞所說法，得未曾有，踴躍歡喜，便現其身，即以天花散諸菩薩、大聲聞眾。",
-   "bo": "དེ་ནས་ཁྱིམ་དེ་ན་གང་གནས་པའི་ལྷ་མོ་དེས་ བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་དེ་དག་གི་ཆོས་བསྟན་པ་འདི་ཐོས་ནས་དགའ་ཞིང་མགུ་ལ་ཡི་རངས་ཏེ། བདག་གི་ལུས་རགས་པ་བསྟན་ནས་ལྷའི་མེ་ཏོག་དག་གིས་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་དེ་དག་དང་། ཉན་ཐོས་ཆེན་པོ་དེ་དག་ལ་མངོན་པར་གཏོར་ཏེ།",
-   "en": "Thereupon, a certain goddess who lived in that house, having heard this teaching of the Dharma of the great heroic bodhisattvas, and being delighted, pleased, and overjoyed, manifested herself in a material body and showered the great spiritual heroes, the bodhisattvas, and the great disciples with heavenly flowers."
+   "T0476": "時無垢稱室中有一本住天女，見諸大人、聞所說法，得未曾有，踴躍歡喜，便現其身，即以天花散諸菩薩、大聲聞眾。"
   },
   "a20": {
    "T0474": "華至諸菩薩即如應若持，至大弟子，即著不墮，一切弟子神足舉華，便不墮落。天問舍利弗：「何故舉華？」曰：「不如應，是以舉之。」天曰：「不然！此華如應！何為賢者謂之不應？又如此華無應不應，賢者自為應不應耳。觀諸大人華不著身者，以一切棄應不應也。",
    "T0475": "華至諸菩薩，即皆墮落，至大弟子，便著不墮。一切弟子神力去華，不能令去。",
-   "T0476": "時彼天花至菩薩身即便墮落，至大聲聞便著不墮。時聲聞眾各欲去華，盡其神力皆不能去。",
-   "bo": "གཏོར་བ་དང་བྱང་ཆུབ་སེམས་དཔའ་རྣམས་ཀྱི་ལུས་ལ་མེ་ཏོག་གང་དག་བབ་པ་དེ་དག་ནི་ས་ལ་ལྷུང་ངོ་། །ཉན་ཐོས་ཆེན་པོ་རྣམས་ཀྱི་ལུས་ལ་མེ་ཏོག་གང་དག་བབ་པ་དེ་དག་ནི་དེ་ཉིད་དུ་ཆགས་ནས་ས་ལ་མ་ལྷུང་ངོ་། དེ་ནས་ཉན་ཐོས་ཆེན་པོ་དེ་དག་རྫུ་འཕྲུལ་གྱི་ཆོ་འཕྲུལ་གྱིས་མེ་ཏོག་དེ་དག་སྤྲུགས་ཀྱང་མ་ལྷུང་ངོ་།",
-   "en": "When the flowers fell on the bodies of the bodhisattvas, they fell off on the floor, but when they fell on the bodies of the great disciples, they stuck to them and did not fall. The great disciples shook the flowers and even tried to use their magical powers, but still the flowers would not shake off."
+   "T0476": "時彼天花至菩薩身即便墮落，至大聲聞便著不墮。時聲聞眾各欲去華，盡其神力皆不能去。"
   },
   "a21": {
    "T0475": "爾時天女問舍利弗：「何故去華？」答曰：「此華不如法，是以去之。」",
    "T0476": "爾時，天女即問尊者舍利子言：「何故去華？」舍利子言：「華不如法，我故去之。」",
-   "sa": "Vkn 6.8 atha sā devatāyuṣmantaṃ śāriputram evam āha: kiṃ bhadantaśāriputra, etāni puṣpāṇy utsṛjasi / āha: akalpikāni devate etāni puṣpāṇi / tasmād aham etāni puṣpāṇy apanayāmi / devatāha: mā bhadantaśāriputra evaṃ vocaḥ / tat kasmād dhetoḥ / etāni hi puṣpāṇi kalpikāni / kiṃ kāraṇam / tathā hy etāni puṣpāṇi na kalpayanti na vikalpayanti / sthaviraḥ punaḥ śāriputraḥ kalpayati vikalpayati ca / ye bhadantaśāriputra svākhyāte dharmavinaye pravrajyāṃ kalpayanti vikalpayanti ca, te 'kalpikāḥ / sthaviras tu kalpayati vikalpayati ca / ye punar na kalpayanti na vikalpayanti, te kalpikāḥ / paśya bhadantaśāriputra eṣāṃ mahāsatvānāṃ kāye puṣpāṇi na śliṣyanti / yathāpi nāma sarvakalpavikalpaprahīṇatvāt / tadyathāpi nāma bhīrukajātīyasya puruṣasyāmanuṣyā avatāraṃ Iabhante / evam eva saṃsārabhayabhītānāṃ rūpaśabdagandharasaspraṣṭavyāny avatāraṃ labhante / ye punaḥ sarvasaṃsārakleśabhayavigatāḥ, kiṃ teṣāṃ rūpaśabdagandharasaspraṣṭavyāni kariṣyanti / yeṣāṃ vāsanāprahīṇā, teṣāṃ kāye puṣpāṇi śliṣyanti / tasmāt sarvavāsanāprahīṇānāṃ kāye puṣpāṇi na śliṣyanti /",
-   "bo": "དེ་ནས་ལྷ་མོ་དེས་ཚེ་དང་ལྡན་པ་ཤཱ་རིའི་བུ་ལ་འདི་སྐད་ཅེས་སྨྲས་སོ། ། བཙུན་པ་ཤཱ་རིའི་བུ་མེ་ཏོག་འདི་དག་སྤྲུགས་ཏེ་ཅི་བྱ། ལྷ་མོ་མེ་ཏོག་འདི་དག་ནི་རུང་བ་མ་ཡིན་པས་ན་བདག་མེ་ཏོག་འདི་དག་འདོར་རོ། ལྷ་མོས་སྨྲས་པ།",
-   "en": "Then, the goddess said to the venerable Śāriputra, “Reverend Śāriputra, why do you shake these flowers?” “Goddess, these flowers are not proper for religious persons and so we are trying to shake them off.” The goddess said,"
+   "sa": "Vkn 6.8 atha sā devatāyuṣmantaṃ śāriputram evam āha: kiṃ bhadantaśāriputra, etāni puṣpāṇy utsṛjasi / āha: akalpikāni devate etāni puṣpāṇi / tasmād aham etāni puṣpāṇy apanayāmi / devatāha: mā bhadantaśāriputra evaṃ vocaḥ / tat kasmād dhetoḥ / etāni hi puṣpāṇi kalpikāni / kiṃ kāraṇam / tathā hy etāni puṣpāṇi na kalpayanti na vikalpayanti / sthaviraḥ punaḥ śāriputraḥ kalpayati vikalpayati ca / ye bhadantaśāriputra svākhyāte dharmavinaye pravrajyāṃ kalpayanti vikalpayanti ca, te 'kalpikāḥ / sthaviras tu kalpayati vikalpayati ca / ye punar na kalpayanti na vikalpayanti, te kalpikāḥ / paśya bhadantaśāriputra eṣāṃ mahāsatvānāṃ kāye puṣpāṇi na śliṣyanti / yathāpi nāma sarvakalpavikalpaprahīṇatvāt / tadyathāpi nāma bhīrukajātīyasya puruṣasyāmanuṣyā avatāraṃ Iabhante / evam eva saṃsārabhayabhītānāṃ rūpaśabdagandharasaspraṣṭavyāny avatāraṃ labhante / ye punaḥ sarvasaṃsārakleśabhayavigatāḥ, kiṃ teṣāṃ rūpaśabdagandharasaspraṣṭavyāni kariṣyanti / yeṣāṃ vāsanāprahīṇā, teṣāṃ kāye puṣpāṇi śliṣyanti / tasmāt sarvavāsanāprahīṇānāṃ kāye puṣpāṇi na śliṣyanti /"
   },
   "a22": {
    "T0475": "天曰：「勿謂此華為不如法。所以者何？是華無所分別，仁者自生分別想耳！若於佛法出家，有所分別，為不如法；若無所分別，是則如法。觀諸菩薩華不著者，已斷一切分別想故。",
-   "T0476": "天女言：「止，勿謂此華為不如法。所以者何？是華如法，惟尊者等自不如法。所以者何？華無分別、無異分別，惟尊者等自有分別、有異分別。於善說法毘奈耶中，諸出家者若有分別、有異分別，則不如法；若無分別、無異分別，是則如法。惟，舍利子！觀諸菩薩華不著者，皆由永斷一切分別及異分別，觀諸聲聞華著身者，皆由未斷一切分別及異分別。",
-   "bo": "བཙུན་པ་ཤཱ་རིའི་བུ་དེ་སྐད་མ་སྨྲ་ཞིག མེ་ཏོག་འདི་དག་ནི་རུང་བ་ཡིན་ནོ། འདི་ལྟར་མེ་ཏོག་དེ་དག་ནི་མི་རྟོག །རྣམ་པར་མི་རྟོག་པ་སྟེ། གནས་བརྟན་ཤཱ་རིའི་བུ་ཉིད་རྟོག་ཅིང་རྣམ་པར་རྟོག་གོ། ། བཙུན་པ་ཤཱ་རིའི་བུ་གང་དག་ལེགས་པར་གསུངས་པའི་ཆོས་འདུལ་བ་ལ་རབ་ཏུ་བྱུང་ནས་རྟོག་པ་དང་རྣམ་པར་རྟོག་པ་དེ་དག་ནི་རུང་བ་མ་ཡིན་པའོ། །གནས་བརྟན་ནི་རྟོག་ཅིང་རྣམ་པར་རྟོག་སྟེ། གང་དག་མི་རྟོག་པ་དེ་དག་ནི་རུང་བའོ། ། བཙུན་པ་ཤཱ་རིའི་བུ་འདི་ལྟར་རྟོག་པ་དང་རྣམ་པར་རྟོག་པ་སྤངས་པའི་ཕྱིར་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་འདི་དག་གི་ལུས་ལ་མེ་ཏོག་མི་ཆགས་པ་ལ་ལྟོས་",
-   "en": "“Do not say that, reverend Śāriputra. These flowers are proper indeed! Such flowers have neither constructual thought nor discrimination. But the elder Śāriputra has both constructual thought and discrimination. “Reverend Śāriputra, impropriety for one who has renounced the world for the discipline of the rightly taught Dharma consists of constructual thought and discrimination, yet the elders are full of such thoughts. One who is without such thoughts is always proper. “Reverend Śāriputra, see how these flowers do not stick to the bodies of these great spiritual heroes, the bodhisattvas! This is because they have eliminated constructual thoughts and discriminations."
+   "T0476": "天女言：「止，勿謂此華為不如法。所以者何？是華如法，惟尊者等自不如法。所以者何？華無分別、無異分別，惟尊者等自有分別、有異分別。於善說法毘奈耶中，諸出家者若有分別、有異分別，則不如法；若無分別、無異分別，是則如法。惟，舍利子！觀諸菩薩華不著者，皆由永斷一切分別及異分別，觀諸聲聞華著身者，皆由未斷一切分別及異分別。"
   },
   "a23": {
    "T0474": "譬如丈夫畏時，非人得其便；弟子畏生死故，色聲香味細滑得其便；已離畏者，一切五樂無能為也，止處未斷，華著身耳，止處斷者，華不著也。」",
    "T0475": "譬如人畏時，非人得其便；如是弟子畏生死故，色、聲、香、味、觸得其便也。已離畏者，一切五欲無能為也；結習未盡，華著身耳！結習盡者，華不著也。」",
-   "T0476": "「惟，舍利子！如人有畏時，非人得其便；若無所畏，一切非人不得其便。若畏生死業煩惱者，即為色、聲、香、味、觸等而得其便；不畏生死業煩惱者，世間色、聲、香、味、觸等不得其便。又，舍利子！若煩惱習未永斷者，華著其身；若煩惱習已永斷者，華不著也。」",
-   "bo": "དཔེར་ན་འཇིགས་པའི་རང་བཞིན་ཅན་གྱི་མི་ལ་ནི་མི་མ་ཡིན་པ་རྣམས་ཀྱིས་གླགས་རྙེད་དོ། ། དེ་བཞིན་དུ་འཁོར་བའི་འཇིགས་པས་སྐྲག་པ་རྣམས་ལ་ནི་གཟུགས་དང་། སྒྲ་དང་། དྲི་དང་། རོ་དང་། རེག་བྱས་གླགས་རྙེད་པར་འགྱུར་རོ། །གང་དག་འདུ་བྱེད་ཐམས་ཅད་ཀྱི་ཉོན་མོངས་པའི་འཇིགས་པ་དང་བྲལ་བ་དེ་དག་ལ་ནི་གཟུགས་དང་། སྒྲ་དང་། དྲི་དང་། རོ་དང་། རེག་བྱས་ཅི་ཞིག་བྱར་ཡོད། གང་དག་བག་ཆགས་མ་སྤངས་པ་དེ་དག་ལ་ནི་མེ་ཏོག་ཀྱང་འཆགས་ཀྱི། གང་དག་བག་ཆགས་སྤངས་པ་དེ་དག་གི་ལུས་ལ་མེ་ཏོག་མི་ཆགས་ཏེ། དེ་བས་ན་བག་ཆགས་ཐམས་ཅད་སྤངས་པ་རྣམས་ཀྱི་ལུས་ལ་མེ་ཏོག་མི་ཆགས་སོ། ། དེ་ནས་ཚེ་དང་ལྡན་པ་ཤཱ་རིའི་བུས་ལྷ་མོ་དེ་ལ་འདི་སྐད་ཅེས་སྨྲས་སོ། །",
-   "en": "“In the same way that evil spirits have power over fearful men those intimidated by fear of the world are in the power of forms, sounds, smells, tastes, and textures, which do not disturb those who are free from fear of the passions inherent in the constructive world. Thus, these flowers stick to the bodies of those who have not eliminated their instincts for the passions and do not stick to the bodies of those who have eliminated their instincts. Therefore, the flowers do not stick to the bodies of these bodhisattvas, who have abandoned all instincts.” Then the venerable Śāriputra said to the goddess,"
+   "T0476": "「惟，舍利子！如人有畏時，非人得其便；若無所畏，一切非人不得其便。若畏生死業煩惱者，即為色、聲、香、味、觸等而得其便；不畏生死業煩惱者，世間色、聲、香、味、觸等不得其便。又，舍利子！若煩惱習未永斷者，華著其身；若煩惱習已永斷者，華不著也。」"
   },
   "a24": {
    "T0474": "舍利弗言：「天止此室，其已久如？」",
    "T0475": "舍利弗言：「天止此室，其已久如？」",
    "T0476": "舍利子言：「天止此室經今幾何？」",
-   "sa": "Vkn 6.9 atha khalv āyuṣmāñ śāriputras tāṃ devatām etad avocat: kiyacciraniviṣṭā punas tvaṃ devate iha gṛhe / āha: yāvacciraniviṣṭā sthavirasyāryā vimuktiḥ / āha: na cirasthitā tvaṃ devate iha gṛhe / āha: kiyacciraniviṣṭā punaḥ sthavirasyāryā vimuktiḥ /",
-   "bo": "ལྷ་མོ་ཁྱོད་ཁྱིམ་འདིའི་ནང་དུ་ཞུགས་ནས་ཡུན་ཇི་སྲིད་ཅིག་ལོན།",
-   "en": "“Goddess, how long have you been in this house?”"
+   "sa": "Vkn 6.9 atha khalv āyuṣmāñ śāriputras tāṃ devatām etad avocat: kiyacciraniviṣṭā punas tvaṃ devate iha gṛhe / āha: yāvacciraniviṣṭā sthavirasyāryā vimuktiḥ / āha: na cirasthitā tvaṃ devate iha gṛhe / āha: kiyacciraniviṣṭā punaḥ sthavirasyāryā vimuktiḥ /"
   },
   "a25": {
    "T0474": "曰：「至於此久，如耆年解脫。」又問：「止此久耶？」曰：「耆年解脫，亦何如久？」舍利弗默而不答。",
    "T0475": "答曰：「我止此室，如耆年解脫。」舍利弗言：「止此久耶？」天曰：「耆年解脫，亦何如久？」舍利弗默然不答。",
-   "T0476": "天女答言：「我止此室如舍利子所住解脫。」舍利子言：「天止此室如是久耶？」天女復言：「所住解脫亦何如久？」",
-   "bo": "གནས་བརྟན་གྱིས་རྣམ་པར་གྲོལ་བ་ལ་ཞུགས་ནས་ཡུན་ཇི་སྲིད་པའོ། ལྷ་མོ་ཁྱོད་ཁྱིམ་འདིར་གནས་ནས་རིང་པོ་མ་ལོན་པ་ལྟ་ཞིག གནས་བརྟན་གྱིས་རྣམ་པར་གྲོལ་བ་ལ་ཞུགས་ནས་ཇི་སྲིད་ལོན།",
-   "en": "“I have been here as long as the elder has been in liberation.” “Then, have you been in this house for quite some time?” “Has the elder been in liberation for quite some time?”"
+   "T0476": "天女答言：「我止此室如舍利子所住解脫。」舍利子言：「天止此室如是久耶？」天女復言：「所住解脫亦何如久？」"
   },
   "a26": {
    "T0474": "天曰：「如何耆舊大智而默？」曰：「真解者無所言取，故吾於是不知所云。」天曰：「若耆年案文言之，則一切如文解相。",
    "T0475": "天曰：「如何耆舊大智而默？」答曰：「解脫者無所言說，故吾於是不知所云。」",
    "T0476": "時舍利子默然不答。天曰：「尊者是大聲聞，具大慧辯，得此小問默不見答。」舍利子言：「夫解脫者，離諸名言，吾今於此竟知何說。」",
-   "sa": "tataḥ sthaviras tūṣṇīm abhūt / āha: kim idānīṃ mahāprajñānām agryaḥ sthaviras tūṣṇīm abhūt / prāptakālaṃ praśnaṃ na visarjayati / āha: apravyāhārā hi devate vimuktiḥ / tan na jāne kiṃ vyāharāmīti / āha: yad yad eva sthaviro 'kṣaram udāharati, sarvāṇy etāny akṣarāṇi vimuktilakṣaṇāni / tat kasmād dhetoḥ / yā hi sā vimuktiḥ, sā nādhyātmaṃ na bahir nobhayam antareṇopalabhyate / evam akṣarāṇy api / tasmāt tarhi bhadantaśāriputra mā akṣarāpanayena vimuktiṃ nirdiśa / tat kasmād dhetoḥ / sarvadharmasamatā hi vimuktiḥ / āha: nanu devate rāgadoṣamohavigamād vimuktiḥ /",
-   "bo": "དེ་ནས་གནས་བརྟན་ཅང་མི་ཟེར་བར་གྱུར་ཏོ། གནས་བརྟན་ཤེས་རབ་ཆེན་པོ་དང་ལྡན་པའི་མཆོག་ནི་ཅིའི་ཕྱིར་མི་སྨྲ་ཞིང་། ད་དུས་ལ་བབ་ན་དྲིས་པའི་ལན་མི་བླན། ། ལྷ་མོ་རྣམ་པར་གྲོལ་བ་ནི་བརྗོད་དུ་མེད་ན་དེ་ཇི་སྐད་དུ་བརྗོད་མི་ཤེས་སོ།",
-   "en": "At that, the elder Śāriputra fell silent. “Elder, you are ‘foremost of the wise!’ Why do you not speak? Now, when it is your turn, you do not answer the question.” Since liberation is inexpressible, goddess, I do not know what to say."
+   "sa": "tataḥ sthaviras tūṣṇīm abhūt / āha: kim idānīṃ mahāprajñānām agryaḥ sthaviras tūṣṇīm abhūt / prāptakālaṃ praśnaṃ na visarjayati / āha: apravyāhārā hi devate vimuktiḥ / tan na jāne kiṃ vyāharāmīti / āha: yad yad eva sthaviro 'kṣaram udāharati, sarvāṇy etāny akṣarāṇi vimuktilakṣaṇāni / tat kasmād dhetoḥ / yā hi sā vimuktiḥ, sā nādhyātmaṃ na bahir nobhayam antareṇopalabhyate / evam akṣarāṇy api / tasmāt tarhi bhadantaśāriputra mā akṣarāpanayena vimuktiṃ nirdiśa / tat kasmād dhetoḥ / sarvadharmasamatā hi vimuktiḥ / āha: nanu devate rāgadoṣamohavigamād vimuktiḥ /"
   },
   "a27": {
    "T0474": "何則？解脫者，不內不外，不從兩間得，而文字亦無內外兩間之得。是故，賢者！無以文字說解脫也。所以者何？一切諸法皆從等解。」曰：「不復以不欲婬怒癡而解乎？」天曰：「甚慢者，不用是說解，如不樂慢，婬怒癡者乃以是解。」",
    "T0475": "天曰：「言說文字，皆解脫相。所以者何？解脫者，不內不外，不在兩間；文字亦不內不外，不在兩間。是故，舍利弗！無離文字說解脫也。所以者何？一切諸法是解脫相。」",
-   "T0476": "天曰：「所說文字皆解脫相。所以者何？如此解脫，非內、非外、非離二種中間可得；文字亦爾，非內、非外、非離二種中間可得。是故，無離文字說於解脫。所以者何？以其解脫，與一切法其性平等。」",
-   "bo": "གནས་བརྟན་གྱིས་གང་ཡི་གེར་བརྗོད་པ་དེ་ཐམས་ཅད་ཀྱང་རྣམ་པར་གྲོལ་བའི་མཚན་ཉིད་དོ། རྣམ་པར་གྲོལ་བ་གང་ཡིན་པ་དེ་ནི་ནང་ནའང་མེད། ཕྱི་རོལ་ནའང་མེད། གཉི་ག་མེད་པར་ཡང་མི་དམིགས་སོ། དེ་བཞིན་དུ་ཡི་གེ་དེ་ནང་ནའང་མེད། ཕྱི་རོལ་ནའང་མེད། གཉི་ག་མེད་པར་ཡང་མི་དམིགས་སོ། ། དེ་ལྟ་བས་ན་བཙུན་པ་ཤཱ་རིའི་བུ་ཡི་གེ་བསལ་བས་རྣམ་པར་གྲོལ་བ་མ་སྟོན་ཅིག ཆོས་ཐམས་ཅད་མཉམ་པ་ནི་འཕགས་པའི་རྣམ་པར་གྲོལ་བ་ཡིན་པའི་ཕྱིར་རོ།",
-   "en": "All the syllables pronounced by the elder have the nature of liberation. Liberation is neither internal nor external, nor can it be apprehended apart from them. Likewise, syllables are neither internal nor external, nor can they be apprehended anywhere else. Therefore, reverend Śāriputra, do not point to liberation by abandoning speech! The holy liberation is the equality of all things!"
+   "T0476": "天曰：「所說文字皆解脫相。所以者何？如此解脫，非內、非外、非離二種中間可得；文字亦爾，非內、非外、非離二種中間可得。是故，無離文字說於解脫。所以者何？以其解脫，與一切法其性平等。」"
   },
   "a28": {
    "T0475": "舍利弗言：「不復以離婬、怒、癡為解脫乎？」",
@@ -517,23 +473,17 @@
   "a29": {
    "T0475": "天曰：「佛為增上慢人說離婬、怒、癡為解脫耳；若無增上慢者，佛說婬、怒、癡性，即是解脫。」",
    "T0476": "天曰：「佛為諸增上慢者說離一切貪、瞋、癡等以為解脫；若為遠離增上慢者即說一切貪、瞋、癡等本性解脫。」",
-   "sa": "devatāha: abhimānikānām eṣa nirdeṣo rāgadoṣamohavigamād vimuktir iti / ye nirabhimānikāḥ, teṣāṃ rāgadoṣamohaprakṛtir eva vimuktiḥ / Vkn 6.10 atha khalv āyuṣmāñ śāriputras tāṃ devatām etad avocat: sādhu sādhu devate kiṃ tvayā prāptaṃ kiṃ vā sākṣātkṛtam, yasyās ta īdṛśaṃ pratibhānam / āha: na mayā bhadantaśāriputra kiṃcit prāptaṃ sākṣātkṛtaṃ vā / tena ma īdṛśaṃ pratibhānam / yeṣām evaṃ bhavaty asmābhiḥ prāptaṃ vā sākṣātkṛtaṃ ceti, te svākhyāte dharmavinaya ābhimānikā ity ucyante /",
-   "bo": "ལྷ་མོ་འདོད་ཆགས་དང་། ཞེ་སྡང་དང་། གཏི་མུག་དང་བྲལ་བའི་ཕྱིར་རྣམ་པར་གྲོལ་བ་མ་ཡིན་ནམ། འདོད་ཆགས་དང་། ཞེ་སྡང་དང་། གཏི་མུག་དང་བྲལ་བས་རྣམ་པར་གྲོལ་བའོ་ཞེས་བྱ་བ་འདི་ནི་མངོན་པའི་ང་རྒྱལ་ཅན་རྣམས་ལ་བསྟན་པ་སྟེ། ། གང་དག་མངོན་པའི་ང་རྒྱལ་མེད་པ་དེ་དག་ལ་ནི་འདོད་ཆགས་དང་། ཞེ་སྡང་དང་། གཏི་མུག་གི་རང་བཞིན་ཉིད་རྣམ་པར་གྲོལ་བའོ།",
-   "en": "Goddess, is not liberation the freedom from desire, hatred, and folly? “Liberation is freedom from desire, hatred, and folly”—that is the teaching for the excessively proud. But those free of pride are taught that the very nature of desire, hatred, and folly is itself liberation."
+   "sa": "devatāha: abhimānikānām eṣa nirdeṣo rāgadoṣamohavigamād vimuktir iti / ye nirabhimānikāḥ, teṣāṃ rāgadoṣamohaprakṛtir eva vimuktiḥ / Vkn 6.10 atha khalv āyuṣmāñ śāriputras tāṃ devatām etad avocat: sādhu sādhu devate kiṃ tvayā prāptaṃ kiṃ vā sākṣātkṛtam, yasyās ta īdṛśaṃ pratibhānam / āha: na mayā bhadantaśāriputra kiṃcit prāptaṃ sākṣātkṛtaṃ vā / tena ma īdṛśaṃ pratibhānam / yeṣām evaṃ bhavaty asmābhiḥ prāptaṃ vā sākṣātkṛtaṃ ceti, te svākhyāte dharmavinaya ābhimānikā ity ucyante /"
   },
   "a30": {
    "T0474": "舍利弗言：「善哉，善哉！",
    "T0475": "舍利弗言：「善哉，善哉！",
-   "T0476": "舍利子言：「善哉，天女！",
-   "bo": "ལེགས་སོ་ལེགས་སོ། །ལྷ་མོ་ཁྱོད་ཀྱིས་ཅི་ཐོབ་ཅིང་ཅི་ལ་མངོན་དུ་བྱས་ནས་ཁྱོད་དེ་ལྟ་བུའི་སྤོབས་པ་དང་ལྡན།",
-   "en": "Excellent! Excellent, goddess! Pray, what have you attained, what have you realized, that you have such eloquence?"
+   "T0476": "舍利子言：「善哉，天女！"
   },
   "a31": {
    "T0474": "天女！奚得以何為證，辯乃如是？」曰：「不我得，不為證，故辯如是。若有得有證則於自然法律為甚慢矣！」",
    "T0475": "天女！汝何所得？以何為證？辯乃如是！」天曰：「我無得無證，故辯如是。所以者何？若有得有證者，即於佛法為增上慢。」",
-   "T0476": "汝何得證慧辯若斯？」天曰：「我今無得、無證，慧辯如是。若言我今有得、有證，即於善說法毘奈耶為增上慢。」舍利子言：「汝於三乘為何發趣？」天女答言：「我於三乘竝皆發趣。」舍利子言：「汝何密意作如是說？」",
-   "bo": "བཙུན་པ་ཤཱ་རིའི་བུ་བདག་གིས་ནི་ཅིའང་ཐོབ་པའང་མེད། མངོན་སུམ་དུ་བྱས་པའང་མེད་དེ། དེས་ན་བདག་གི་སྤོབས་པ་འདི་འདྲའོ། ། གང་དག་འདི་སྙམ་དུ་བདག་གིས་ཐོབ་ཅིང་མངོན་སུམ་དུ་བྱས་སོ་སྙམ་པ་དེ་དག་ནི་ལེགས་པར་གསུངས་པའི་ཆོས་འདུལ་བ་ལ་ང་རྒྱལ་ཅན་ཞེས་བྱའོ། ། ལྷ་མོ་ཁྱོད་ཉན་ཐོས་ཀྱི་ཐེག་པ་པའམ། རང་སངས་རྒྱས་ཀྱི་ཐེག་པ་པའམ། ཐེག་པ་ཆེན་པོ་པའམ།",
-   "en": "I have attained nothing, reverend Śāriputra. I have no realization. Therefore I have such eloquence. Whoever thinks, “I have attained! I have realized!” is overly proud in the discipline of the well taught Dharma. Goddess, do you belong to the Disciple Vehicle, to the Solitary Sage Vehicle, or to the Great Vehicle?"
+   "T0476": "汝何得證慧辯若斯？」天曰：「我今無得、無證，慧辯如是。若言我今有得、有證，即於善說法毘奈耶為增上慢。」舍利子言：「汝於三乘為何發趣？」天女答言：「我於三乘竝皆發趣。」舍利子言：「汝何密意作如是說？」"
   },
   "a32": {
    "T0474": "舍利弗問天：「汝於三乘，為何志求？」天曰：「弟子行者，乘弟子法；緣一覺行，眼見道意；求大乘者，自行大悲。",
@@ -542,112 +492,80 @@
   },
   "a33": {
    "T0475": "天曰：「以聲聞法化眾生故，我為聲聞；以因緣法化眾生故，我為辟支佛；以大悲法化眾生故，我為大乘。",
-   "T0476": "天曰：「我常宣說大乘令他聞故，我為聲聞；自然現覺真法性故，我為獨覺；常不捨離大慈悲故，我為大乘。「又，舍利子！我為化度求聲聞乘諸有情故，我為聲聞；我為化度求獨覺乘諸有情故，我為獨覺；我為化度求無上乘諸有情故，我為大乘。",
-   "bo": "བདག་ནི་ཉན་ཐོས་ཀྱི་ཐེག་པ་སྟོན་པས་ན་ཉན་ཐོས་ཀྱི་ཐེག་པ་ཅན་ནོ། ། བདག་ནི་རྟེན་འབྲེལ་བཅུ་གཉིས་ཀྱི་སྒོ་ནས་འཇུག་པས་ན་རང་སངས་རྒྱས་ཀྱི་ཐེག་པ་ཅན་ནོ། བདག་ནི་སྙིང་རྗེ་ཆེན་པོ་མི་གཏོང་བས་ན་ཐེག་པ་ཆེན་པོ་པ་ཡིན་མོད་ཀྱི་",
-   "en": "I belong to the Disciple Vehicle when I teach it to those who need it. I belong to the Solitary Sage Vehicle when I teach the twelve links of dependent origination to those who need them. And, since I never abandon the great compassion, I belong to the Great Vehicle,"
+   "T0476": "天曰：「我常宣說大乘令他聞故，我為聲聞；自然現覺真法性故，我為獨覺；常不捨離大慈悲故，我為大乘。「又，舍利子！我為化度求聲聞乘諸有情故，我為聲聞；我為化度求獨覺乘諸有情故，我為獨覺；我為化度求無上乘諸有情故，我為大乘。"
   },
   "a34": {
    "T0474": "如入栴檀林者，唯嗅栴檀，不嗅他香。如是，賢者！在佛德香之室者，不樂弟子、緣一覺香。若天龍神、釋梵四天王得入此室，聞斯正士講說法者，皆樂佛美德香，終不起欲樂香也。昔者菩薩發意出家，十有二年吾止此室，不聞弟子、緣一覺之雜言，但聞殊異菩薩雜語，大慈大悲不可思議佛法積要。",
    "T0475": "舍利弗！如人入瞻蔔林，唯嗅瞻蔔，不嗅餘香。如是，若入此室，但聞佛功德之香，不樂聞聲聞、辟支佛功德香也。舍利弗！其有釋、梵、四天王，諸天、龍、鬼神等，入此室者，聞斯上人講說正法，皆樂佛功德之香，發心而出。",
-   "T0476": "「又，舍利子！譬如有人入瞻博迦林，一切惟嗅瞻博迦香，終無樂嗅草麻香等。如是，若有止此室者，惟樂大乘功德之香，終不樂於聲聞、獨覺功德香等，由此室中一切佛法功德妙香常所薰故。「又，舍利子！諸有釋梵四大天王、那伽、藥叉及阿素洛，廣說乃至人非人等，入此室者皆為瞻仰如是大士及為親近禮敬、供養聽聞大法，一切皆發大菩提心、皆持一切佛法功德妙香而出。",
-   "bo": "འོན་ཀྱང་བཙུན་པ་ཤཱ་རིའི་བུ་དཔེར་ན་ཙམ་པ་ཀའི་ཚལ་དུ་ཞུགས་ན་ཨེ་རན་ཏའི་དྲི་ལ་མི་སྣོམ་གྱི། ཙམ་པ་ཀའི་ཚལ་དུ་ཞུགས་ན་ཙམ་པ་ཀ་ཉིད་ཀྱི་དྲི་ལ་སྣོམ་པ་ དེ་བཞིན་དུ་བཙུན་པ་ཤཱ་རིའི་བུ་ཁྱིམ་འདི་ན་སངས་རྒྱས་ཀྱི་ཆོས་ཀྱི་ཡོན་ཏན་དྲི་དང་ལྡན་པ་གནས་པས་ཉན་ཐོས་དང་རང་སངས་རྒྱས་ཀྱི་དྲི་ལ་མི་སྣོམ་མོ། ། བཙུན་པ་ཤཱ་རིའི་བུ་ཁྱིམ་འདིར་བརྒྱ་བྱིན་དང་། ཚངས་པ་དང་། འཇིག་རྟེན་སྐྱོང་བ་དང་། ལྷ་དང་། ཀླུ་དང་། གནོད་སྦྱིན་དང་། དྲི་ཟ་དང་། ལྷ་མ་ཡིན་དང་། ནམ་མཁའ་ལྡིང་དང་། མིའམ་ཅི་དང་། ལྟོ་འཕྱེ་ཆེན་པོ་གང་དག་ཁྱིམ་འདིར་གནས་པ་དེ་དག་ཀྱང་ སྐྱེས་བུ་དམ་པ་འདིའི་ཆོས་ཐོས་པས་སངས་རྒྱས་ཀྱི་ཆོས་ཀྱི་ཡོན་ཏན་གྱི་དྲིས་བྱང་ཆུབ་ཀྱི་སེམས་བསྐྱེད་དེ་དོང་ངོ་། །",
-   "en": "Nevertheless, reverend Śāriputra, just as one cannot smell the castor plant in a magnolia wood, but only the magnolia flowers, so, reverend Śāriputra, living in this house, which is redolent with the perfume of the virtues of the buddha qualities, one does not smell the perfume of the disciples and the solitary sages. Reverend Śāriputra, the Śakras, the Brahmās, the Lokapālas, the devas, nāgas, yakṣas, gandharvas, asuras, garuḍas, kinnaras, and mahoragas who live in this house hear the Dharma from the mouth of this holy man and, enticed by the perfume of the virtues of the buddha qualities, proceed to conceive the spirit of enlightenment"
+   "T0476": "「又，舍利子！譬如有人入瞻博迦林，一切惟嗅瞻博迦香，終無樂嗅草麻香等。如是，若有止此室者，惟樂大乘功德之香，終不樂於聲聞、獨覺功德香等，由此室中一切佛法功德妙香常所薰故。「又，舍利子！諸有釋梵四大天王、那伽、藥叉及阿素洛，廣說乃至人非人等，入此室者皆為瞻仰如是大士及為親近禮敬、供養聽聞大法，一切皆發大菩提心、皆持一切佛法功德妙香而出。"
   },
   "a35": {
    "T0475": "舍利弗！吾止此室十有二年，初不聞說聲聞、辟支佛法，但聞菩薩大慈大悲、不可思議諸佛之法。",
-   "T0476": "「又，舍利子！吾止此室十有二年，曾不聞說聲聞獨覺相應言論，惟聞大乘諸菩薩行大慈大悲不可思議諸佛妙法相應言論。",
-   "bo": "བཙུན་པ་ཤཱ་རིའི་བུ་བདག་ཁྱིམ་འདི་ན་ལོ་བཅུ་གཉིས་ལོན་ཡང་བྱམས་པ་ཆེན་པོ་དང་། སྙིང་རྗེ་ཆེན་པོར་ལྡན་པ་དང་། བསམ་གྱིས་མི་ཁྱབ་པའི་སངས་རྒྱས་ཀྱི་ཆོས་དང་ལྡན་པ་མ་གཏོགས་པར་ཉན་ཐོས་དང་རང་སངས་རྒྱས་དང་ལྡན་པའི་གཏམ་སྔོན་མ་ཐོས་སོ།",
-   "en": "Reverend Śāriputra, I have been in this house for twelve years, and I have heard no discourses concerning the disciples and solitary sages but have heard only those concerning the great love, the great compassion, and the inconceivable qualities of the Buddha."
+   "T0476": "「又，舍利子！吾止此室十有二年，曾不聞說聲聞獨覺相應言論，惟聞大乘諸菩薩行大慈大悲不可思議諸佛妙法相應言論。"
   },
   "a36": {
    "T0474": "又，舍利弗！此室有八未曾有自然之法，以現正化。",
    "T0475": "舍利弗！此室常現八未曾有難得之法。",
    "T0476": "「又，舍利子！此室常現八未曾有殊勝之法。",
-   "sa": "Vkn 6.13 iha bhadantaśāriputra gṛhe 'ṣṭāv āścaryādbhutā dharmāḥ satatasamitaṃ saṃdṛśyante / katame 'ṣṭau /",
-   "bo": "བཙུན་པ་ཤཱ་རིའི་བུ་ཁྱིམ་འདི་ནི་ངོ་མཚར་རྨད་དུ་བྱུང་བའི་ཆོས་རྣམ་པ་བརྒྱད་རྟག་ཏུ་རྒྱུན་མི་འཆད་པར་སྣང་ངོ་། །",
-   "en": "Reverend Śāriputra, eight strange and wonderful things manifest themselves constantly in this house."
+   "sa": "Vkn 6.13 iha bhadantaśāriputra gṛhe 'ṣṭāv āścaryādbhutā dharmāḥ satatasamitaṃ saṃdṛśyante / katame 'ṣṭau /"
   },
   "a37": {
    "T0474": "何謂八？此室晝夜照以智慧覩佛金光，不以日月所照為樂，是為一未曾有；",
    "T0475": "何等為八？此室常以金色光照，晝夜無異，不以日月所照為明，是為一未曾有難得之法；",
    "T0476": "何等為八？謂，舍利子！此室常有金色光明周遍照曜，晝夜無異，不假日月所照為明，是為一未曾有殊勝之法。「又，舍利子！此室常有一切世間人、非人等，入此室已不為一切煩惱所害，是為二未曾有殊勝之法。",
-   "sa": "neha rātrir vā divaso vā prajñāyate sadāvabhāsitam idaṃ gṛhaṃ suvarṇavarṇayā prabhayā / neha sūryācandramasau prajñāyete, na bhrājete / ayaṃ prathama āścaryādbhuto dharmaḥ / punar aparaṃ bhadantaśāriputra ye praviśantīdaṃ gṛham, teṣāṃ samanantarapraviṣṭānāṃ sarvakleśā na bādhante / ayaṃ dvitīya āścaryādbhuto dharmaḥ /",
-   "bo": "བརྒྱད་པོ་གང་ཞེ་ན། ། ཁྱིམ་འདི་ན་གསེར་གྱི་ཁ་དོག་གི་འོད་རྟག་ཏུ་རྒྱུན་མི་འཆད་པས་ན་མཚན་མོའམ། ཉིན་བར་དུ་ཡང་མི་མངོན། ཁྱིམ་འདིར་ཟླ་བ་དང་ཉི་མའང་མི་མངོན་མི་སྣང་སྟེ། ། དེ་ནི་ངོ་མཚར་རྨད་དུ་བྱུང་བའི་ཆོས་དང་ལྡན་པ་དང་པོའོ།",
-   "en": "What are these eight? A light of golden hue shines here constantly, so bright that it is hard to distinguish day and night, and neither the moon nor the sun shines here distinctly. That is the first wonder of this house."
+   "sa": "neha rātrir vā divaso vā prajñāyate sadāvabhāsitam idaṃ gṛhaṃ suvarṇavarṇayā prabhayā / neha sūryācandramasau prajñāyete, na bhrājete / ayaṃ prathama āścaryādbhuto dharmaḥ / punar aparaṃ bhadantaśāriputra ye praviśantīdaṃ gṛham, teṣāṃ samanantarapraviṣṭānāṃ sarvakleśā na bādhante / ayaṃ dvitīya āścaryādbhuto dharmaḥ /"
   },
   "a38": {
    "T0474": "此室入者，在中而止，一切無復婬怒癡垢，是為二未曾有；",
-   "T0475": "此室入者，不為諸垢之所惱也，是為二未曾有難得之法；",
-   "bo": "བཙུན་པ་ཤཱ་རིའི་བུ་གཞན་ཡང་གང་དག་ཁྱིམ་འདིར་ཞུགས་པ་དེ་དག་ཞུགས་མ་ཐག་ཏུ་ཉོན་མོངས་པས་གཙེ་བ་མེད་དེ་ དེ་ནི་ངོ་མཚར་རྨད་དུ་བྱུང་བའི་ཆོས་གཉིས་པའོ། །",
-   "en": "Furthermore, reverend Śāriputra, whoever enters this house is no longer troubled by his afflictions from the moment he is within. That is the second strange and wonderful thing."
+   "T0475": "此室入者，不為諸垢之所惱也，是為二未曾有難得之法；"
   },
   "a39": {
    "T0474": "此室恒有釋梵四天王、異剎菩薩來會不休，是為三未曾有；此室常聞講說道，化六度無極不退之輪，法語不廢，是為四未曾有；",
    "T0475": "此室常有釋、梵、四天王、他方菩薩來會不絕，是為三未曾有難得之法；",
    "T0476": "「又，舍利子！此室常有一切釋梵四天王等及餘世界諸大菩薩集會不空，是為三未曾有殊勝之法。「又，舍利子！此室常聞菩薩六種波羅蜜多不退法輪相應言論，是為四未曾有殊勝之法。",
-   "sa": "punar aparaṃ bhadantaśāriputra idaṃ gṛham avirahitaṃ śakrabrahmalokapālair anyabuddhakṣetrasaṃnipatitaiś ca bodhisatvaiḥ / ayaṃ tṛtīya āścaryādbhuto dharmaḥ / punar aparaṃ bhadantaśāriputra idaṃ gṛhaṃ satatasamitam avirahitaṃ dharmaśravaṇena ṣaṭpāramitāpratisaṃyuktayā kathayāvivartyadharmakathayā ca / ayaṃ caturtha āścaryādbhuto dharmaḥ / punar aparaṃ bhadantaśāriputra iha gṛhe yās tūryasaṃgītayo divyamānuṣyakāṇi vā vādyāni vādyante, tebhyas tūryebhyo 'pramāṇo dharmaśabdanirhāro niścarati sārvakālikaḥ / ayaṃ pañcama āścaryādbhuto dharmaḥ /",
-   "bo": "བཙུན་པ་ཤཱ་རིའི་བུ་གཞན་ཡང་ཁྱིམ་འདི་ན་རྟག་ཏུ་བརྒྱ་བྱིན་དང་། ཚངས་པ་དང་། འཇིག་རྟེན་སྐྱོང་བ་དང་། སངས་རྒྱས་ཀྱི་ཞིང་ཐམས་ཅད་ནས་ལྷགས་པའི་བྱང་ཆུབ་སེམས་དཔའ་རྣམས་དང་མི་འབྲལ་ཏེ། དེ་ནི་ངོ་མཚར་རྨད་དུ་བྱུང་བའི་ཆོས་གསུམ་པའོ། །",
-   "en": "Furthermore, reverend Śāriputra, this house is never forsaken by Śakra, Brahmā, the Lokapālas, and the bodhisattvas from all the other buddhafields. That is the third strange and wonderful thing."
+   "sa": "punar aparaṃ bhadantaśāriputra idaṃ gṛham avirahitaṃ śakrabrahmalokapālair anyabuddhakṣetrasaṃnipatitaiś ca bodhisatvaiḥ / ayaṃ tṛtīya āścaryādbhuto dharmaḥ / punar aparaṃ bhadantaśāriputra idaṃ gṛhaṃ satatasamitam avirahitaṃ dharmaśravaṇena ṣaṭpāramitāpratisaṃyuktayā kathayāvivartyadharmakathayā ca / ayaṃ caturtha āścaryādbhuto dharmaḥ / punar aparaṃ bhadantaśāriputra iha gṛhe yās tūryasaṃgītayo divyamānuṣyakāṇi vā vādyāni vādyante, tebhyas tūryebhyo 'pramāṇo dharmaśabdanirhāro niścarati sārvakālikaḥ / ayaṃ pañcama āścaryādbhuto dharmaḥ /"
   },
   "a40": {
-   "T0475": "此室常說六波羅蜜不退轉法，是為四未曾有難得之法；",
-   "bo": "གཞན་ཡང་བཙུན་པ་ཤཱ་རིའི་བུ་ཁྱིམ་འདི་ན་རྟག་ཏུ་རྒྱུན་མི་འཆད་པར་ཆོས་བསྒྲགས་པ་དང་། ཕ་རོལ་ཏུ་ཕྱིན་པ་དྲུག་དང་ལྡན་པའི་གཏམ་དང་། ཕྱིར་མི་ལྡོག་པའི་ཆོས་ཀྱི་འཁོར་ལོའི་གཏམ་དང་མི་འབྲལ་ཏེ། ། དེ་ནི་ངོ་མཚར་རྨད་དུ་བྱུང་བའི་ཆོས་བཞི་པའོ། །",
-   "en": "Furthermore, reverend Śāriputra, this house is never empty of the sounds of the Dharma, the discourse on the six transcendences, and the discourses of the irreversible wheel of the Dharma. That is the fourth strange and wonderful thing."
+   "T0475": "此室常說六波羅蜜不退轉法，是為四未曾有難得之法；"
   },
   "a41": {
    "T0474": "此室天人恒歌正樂，絃出無量法化之聲，是為五未曾有；",
    "T0475": "此室常作天人第一之樂，絃出無量法化之聲，是為五未曾有難得之法；",
-   "T0476": "「又，舍利子！此室常作天人伎樂，於諸樂中演出無量百千法音，是為五未曾有殊勝之法。「又，舍利子！此室常有四大寶藏、眾珍盈溢，恒無有盡，給施一切貧窮、鰥寡、孤獨、無依、乞求之者皆令稱遂，終不窮盡，是為六未曾有殊勝之法。「又，舍利子！此室常有釋迦牟尼如來、無量壽如來、難勝如來、不動如來、寶勝如來、寶焰如來、寶月如來、寶嚴如來、寶音聲如來、師子吼如來、一切義成如來，如是等十方無量如來。",
-   "bo": "གཞན་ཡང་བཙུན་པ་ཤཱ་རིའི་བུ་ཁྱིམ་འདི་ན་རྟག་ཏུ་ལྷ་དང་། མིའི་རྔ་དང་། གླུའི་དབྱངས་དང་། རོལ་མོ་བྱེད་དེ། རྔ་དེ་དག་ལས་སངས་རྒྱས་ཀྱི་ཆོས་ཚད་མེད་པ་བསྒྲུབ་པའི་སྒྲ་དུས་ཐམས་ཅད་དུ་འབྱུང་སྟེ། ། འདི་ནི་ངོ་མཚར་རྨད་དུ་བྱུང་བའི་ཆོས་ལྔ་པའོ། །",
-   "en": "Furthermore, reverend Śāriputra, in this house one always hears the rhythms, songs, and music of gods and men, and from this music constantly resounds the sound of the infinite Dharma of the Buddha. That is the fifth strange and wonderful thing."
+   "T0476": "「又，舍利子！此室常作天人伎樂，於諸樂中演出無量百千法音，是為五未曾有殊勝之法。「又，舍利子！此室常有四大寶藏、眾珍盈溢，恒無有盡，給施一切貧窮、鰥寡、孤獨、無依、乞求之者皆令稱遂，終不窮盡，是為六未曾有殊勝之法。「又，舍利子！此室常有釋迦牟尼如來、無量壽如來、難勝如來、不動如來、寶勝如來、寶焰如來、寶月如來、寶嚴如來、寶音聲如來、師子吼如來、一切義成如來，如是等十方無量如來。"
   },
   "a42": {
    "T0474": "此室其中有四大藏眾寶積滿，周窮濟乏求得無盡，是為六未曾有；此室釋迦文、阿閦佛、寶首、樂忻、寶月、寶淨、無量、固受、師子響、慧作斯，彼諸如來等，是正士念時說時，彼佛即為來，來說佛行無不悅懌，是為七未曾有；",
    "T0475": "此室有四大藏，眾寶積滿，賙窮濟乏，求得無盡，是為六未曾有難得之法；",
-   "sa": "punar aparaṃ bhadantaśāriputra iha gṛhe catvāri mahānidhānāni sarvaratnaparipūrṇāny akṣayāṇi yato niṣyandaṃ sarvadaridrakṛpaṇā ādāya prakrāmanti, na ca kṣīyante / ayaṃ ṣaṣṭha āścaryādbhuto dharmaḥ / punar aparaṃ bhadantaśāriputra iha gṛhe śākyamunis tathāgato 'mitābho 'kṣobhyo ratnaśrī ratnārcī ratnacandro ratnavyūho duḥprasahaḥ sarvārthasiddhaḥ prabhūtaratnaḥ siṃhanādanādī siṃhaghoṣas tathāgata evaṃ pramukhā daśasu dikṣv apramāṇās tathāgatā ye 'sya satpuruṣasya cintitamātreṇāgacchanti / āgatya ca tathāgataguhyaṃ nāma dharmamukhapraveśaṃ deśayitvā prakrāmanti / ayaṃ saptama āścaryādbhuto dharmaḥ /",
-   "bo": "བཙུན་པ་ཤཱ་རིའི་བུ་གཞན་ཡང་ཁྱིམ་འདི་ན་རིན་པོ་ཆེ་ཐམས་ཅད་ཀྱིས་གང་བ་ཟད་མི་ཤེས་པའི་གཏེར་ཆེན་པོ་བཞི་ཡོད་དེ། དེའི་མཐུས་སེམས་ཅན་དབུལ་ཞིང་ཕོངས་པ་ཐམས་ཅད་ཀྱིས་ཁྱེར་ཏེ་དོང་ཡང་ཟད་མི་ཤེས་ཏེ། དེ་ནི་ངོ་མཚར་རྨད་དུ་བྱུང་བའི་ཆོས་དྲུག་པའོ།",
-   "en": "Furthermore, reverend Śāriputra, in this house there are always four inexhaustible treasures, replete with all kinds of jewels, which never decrease, although all the poor and wretched may partake of them to their satisfaction. That is the sixth strange and wonderful thing."
+   "sa": "punar aparaṃ bhadantaśāriputra iha gṛhe catvāri mahānidhānāni sarvaratnaparipūrṇāny akṣayāṇi yato niṣyandaṃ sarvadaridrakṛpaṇā ādāya prakrāmanti, na ca kṣīyante / ayaṃ ṣaṣṭha āścaryādbhuto dharmaḥ / punar aparaṃ bhadantaśāriputra iha gṛhe śākyamunis tathāgato 'mitābho 'kṣobhyo ratnaśrī ratnārcī ratnacandro ratnavyūho duḥprasahaḥ sarvārthasiddhaḥ prabhūtaratnaḥ siṃhanādanādī siṃhaghoṣas tathāgata evaṃ pramukhā daśasu dikṣv apramāṇās tathāgatā ye 'sya satpuruṣasya cintitamātreṇāgacchanti / āgatya ca tathāgataguhyaṃ nāma dharmamukhapraveśaṃ deśayitvā prakrāmanti / ayaṃ saptama āścaryādbhuto dharmaḥ /"
   },
   "a43": {
    "T0475": "此室釋迦牟尼佛、阿彌陀佛、阿閦佛、寶德、寶炎、寶月、寶嚴、難勝、師子響一切利成，如是等十方無量諸佛，是上人念時即皆為來，廣說諸佛秘要法藏，說已還去，是為七未曾有難得之法；",
-   "T0476": "若此大士發心祈請，應時即來廣為宣說一切如來祕要法門，說已還去，是為七未曾有殊勝之法。",
-   "bo": "བཙུན་པ་ཤཱ་རིའི་བུ་གཞན་ཡང་ཁྱིམ་འདི་ན་དེ་བཞིན་གཤེགས་པ་ཤཱཀྱ་ཐུབ་པ་དང་། སྣང་བ་མཐའ་ཡས་དང་། མི་འཁྲུགས་པ་དང་། དཀོན་མཆོག་དཔལ་དང་། དཀོན་མཆོག་འོད་འཕྲོ་དང་། དཀོན་མཆོག་ཟླ་བ་དང་། དཀོན་མཆོག་བཀོད་པ་དང་། བཟོད་དཀའ་དང་། དོན་ཐམས་ཅད་གྲུབ་པ་དང་། རིན་ཆེན་མང་དང་། སེང་གེ་བསྒྲགས་པ་དང་། སེང་གེའི་སྒྲ་དེ་བཞིན་གཤེགས་པ་ལ་སོགས་པ་ཕྱོགས་བཅུའི་དེ་བཞིན་གཤེགས་པ་ཚད་མེད་པ་རྣམས་སྐྱེས་བུ་དམ་པ་འདིས་བསམས་མ་ཐག་ཏུ་ཀུན་གཤེགས་ཏེ། ། གཤེགས་ནས་ཀྱང་དེ་བཞིན་གཤེགས་པའི་གསང་བ་ཞེས་བྱ་བའི་ཆོས་ཀྱི་སྒོ་ལ་འཇུག་པ་བསྟན་ནས་སླར་གཤེགས་ཏེ། ། དེ་ནི་ངོ་མཚར་རྨད་དུ་བྱུང་བའི་ཆོས་བདུན་པའོ། །",
-   "en": "Furthermore, reverend Śāriputra, at the wish of this good man, to this house come the innumerable tathāgatas of the ten directions, such as the Tathāgatas Śākyamuni, Amitābha, Akṣobhya, Ratnaśrī ‌, Ratnārcis, Ratnacandra, Ratnavyūha, Duḥprasāha, Sarvārthasiddha, Prabhūtaratna, Siṃhanādanādī, Siṃhaghoṣa, and so forth, and when they come they teach the door of Dharma called The Secrets of the Tathāgatas , and then depart. That is the seventh strange and wonderful thing."
+   "T0476": "若此大士發心祈請，應時即來廣為宣說一切如來祕要法門，說已還去，是為七未曾有殊勝之法。"
   },
   "a44": {
    "T0474": "此室清淨，常見諸天名好宮室，及一切佛嚴淨之土，是為八未曾有自然之法。如是，賢者！此常見正，誰已見此，當復捨學弟子法乎？」",
    "T0475": "此室一切諸天嚴飾宮殿、諸佛淨土，皆於中現，是為八未曾有難得之法。",
    "T0476": "「又，舍利子！此室常現一切佛土功德莊嚴、諸天宮殿眾妙綺飾，是為八未曾有殊勝之法。",
-   "sa": "punar aparaṃ bhadantaśāriputra iha gṛhe sarvadevabhavanavyūhāḥ sarvabuddhakṣetraguṇavyūhāś ca saṃdṛśyante / ayam aṣṭama āścaryādbhuto dharmaḥ / ime bhadantaśāriputra aṣṭāv āścaryādbhutā dharmāḥ satatasamitam iha gṛhe saṃdṛśyante / tat kasmād dhetoḥ / ka imām acintyadharmatāṃ paśyañ śrāvakadharmatāyai spṛhayet /",
-   "bo": "བཙུན་པ་ཤཱ་རིའི་བུ་གཞན་ཡང་ཁྱིམ་འདི་ན་ལྷ་ཐམས་ཅད་ཀྱི་གནས་ཀྱི་བཀོད་པ་དང་། སངས་རྒྱས་ཀྱི་ཞིང་གི་ཡོན་ཏན་བཀོད་པ་ཐམས་ཅད་སྣང་སྟེ། དེ་ནི་ངོ་མཚར་རྨད་དུ་བྱུང་བའི་ཆོས་བརྒྱད་པའོ། །",
-   "en": "Furthermore, reverend Śāriputra, all the splendors of the abodes of the gods and all the splendors of the fields of the buddhas shine forth in this house. That is the eighth strange and wonderful thing."
+   "sa": "punar aparaṃ bhadantaśāriputra iha gṛhe sarvadevabhavanavyūhāḥ sarvabuddhakṣetraguṇavyūhāś ca saṃdṛśyante / ayam aṣṭama āścaryādbhuto dharmaḥ / ime bhadantaśāriputra aṣṭāv āścaryādbhutā dharmāḥ satatasamitam iha gṛhe saṃdṛśyante / tat kasmād dhetoḥ / ka imām acintyadharmatāṃ paśyañ śrāvakadharmatāyai spṛhayet /"
   },
   "a45": {
    "T0475": "舍利弗！此室常現八未曾有難得之法，誰有見斯不思議事，而復樂於聲聞法乎？」",
-   "T0476": "「唯，舍利子！此室常現八未曾有殊勝之法，誰有見斯不思議事而復發心樂求聲聞、獨覺法乎？」",
-   "bo": "བཙུན་པ་ཤཱ་རིའི་བུ་ཁྱིམ་འདི་ན་ངོ་མཚར་རྨད་དུ་བྱུང་བའི་ཆོས་བརྒྱད་པོ་དེ་དག་སྣང་སྟེ། འདི་ལྟ་བུ་བསམ་གྱིས་མི་ཁྱབ་པའི་ཆོས་མཐོང་ན་ཉན་ཐོས་ཀྱི་ཆོས་ལ་སུ་ཞིག་འདོད་པར་འགྱུར། །",
-   "en": "Reverend Śāriputra, these eight strange and wonderful things are seen in this house. Who then, seeing such inconceivable things, would believe the teaching of the disciples?"
+   "T0476": "「唯，舍利子！此室常現八未曾有殊勝之法，誰有見斯不思議事而復發心樂求聲聞、獨覺法乎？」"
   },
   "a46": {
    "T0474": "舍利弗問天：「汝何以不轉女人身？」天曰：「滿十二歲，始以女人形求而得之，夫女人相猶幻事也。故女人為幻觀世如類，而云何以轉女人身？」舍利弗言：「觀諸有身皆無所成。」「如是，賢者！一切諸法亦無所成，奚為復問何轉女身？」",
    "T0475": "舍利弗言：「汝何以不轉女身？」",
    "T0476": "時舍利子問天女言：「汝今何不轉此女身？」",
-   "sa": "Vkn 6.14 āha: kiṃ tvaṃ devate strībhāvaṃ na nivartayasi /",
-   "bo": "ལྷ་མོ་ཁྱོད་བུད་མེད་ཀྱི་དངོས་པོ་ལས་བསྒྱུར་ན་ཅི་ཉེས།",
-   "en": "Goddess, what prevents you from transforming yourself out of your female state?"
+   "sa": "Vkn 6.14 āha: kiṃ tvaṃ devate strībhāvaṃ na nivartayasi /"
   },
   "a47": {
    "T0475": "天曰：「我從十二年來，求女人相了不可得，當何所轉？譬如幻師化作幻女，若有人問：『何以不轉女身？』是人為正問不？」",
    "T0476": "天女答言：「我居此室十有二年，求女人性了不可得。",
-   "sa": "āha: paripūrṇāni me dvādaśavarṣāṇy upādāya strībhāvaṃ paryeṣamāṇāyā na cainaṃ labhe / api ca bhadantaśāriputra yā māyākāreṇa strīnirmitā yas tām evaṃ vadet: kiṃ tvaṃ strībhāvaṃ na nivartayasīti, sa kiṃ vadet / āha: na tasyāḥ kācit bhūtā pariniṣpattiḥ /",
-   "bo": "བདག་གི་ལོ་བཅུ་གཉིས་ཀྱི་བར་དུ་བུད་མེད་ཀྱི་དངོས་པོ་བཙལ་ནའང་ད་དུང་མ་རྙེད་དོ། བཙུན་པ་ཤཱ་རིའི་བུ་སྒྱུ་མ་མཁན་གྱིས་བུད་མེད་སྤྲུལ་པ་དེ་ལ་འདི་ལྟར་ཁྱོད་བུད་མེད་ཀྱི་དངོས་པོ་ལས་བསྒྱུར་ན་ཅི་ཉེས་ཞེས་བྱས་ན་དེ་ཇི་སྐད་ཟེར་བར་འགྱུར། །",
-   "en": "Although I have sought my “female state” for these twelve years, I have not yet found it. Reverend Śāriputra, if a magician were to incarnate a woman by magic, would you ask her, “What prevents you from transforming yourself out of your female state?”"
+   "sa": "āha: paripūrṇāni me dvādaśavarṣāṇy upādāya strībhāvaṃ paryeṣamāṇāyā na cainaṃ labhe / api ca bhadantaśāriputra yā māyākāreṇa strīnirmitā yas tām evaṃ vadet: kiṃ tvaṃ strībhāvaṃ na nivartayasīti, sa kiṃ vadet / āha: na tasyāḥ kācit bhūtā pariniṣpattiḥ /"
   },
   "a48": {
    "T0475": "舍利弗言：「不也！幻無定相，當何所轉？」",
-   "T0476": "當何所轉？惟，舍利子！譬如幻師化作幻女。",
-   "bo": "དེ་ལ་ཡང་དག་པ་ཡོངས་སུ་གྲུབ་པ་གང་ཡང་མེད་དོ། བཙུན་པ་ཤཱ་རིའི་བུ་དེ་བཞིན་དུ་ཆོས་ཐམས་ཅད་ཡོངས་སུ་མ་གྲུབ་པ་སྟེ། སྒྱུ་མས་སྤྲུལ་པའི་ངོ་བོ་ཉིད་ལ་བུད་མེད་ཀྱི་དངོས་པོ་ལས་བསྒྱུར་ན་ཅི་ཉེས་ཞེས་ཁྱོད་དེ་སྙམ་དུ་སེམས།",
-   "en": "No! Such a woman would not really exist, so what would there be to transform? Just so, reverend Śāriputra, all things do not really exist. Now, would you think, “What prevents one whose nature is that of a magical incarnation from transforming herself out of her female state?”"
+   "T0476": "當何所轉？惟，舍利子！譬如幻師化作幻女。"
   },
   "a49": {
    "T0475": "天曰：「一切諸法亦復如是，無有定相，云何乃問不轉女身？」",
@@ -657,16 +575,12 @@
   "a50": {
    "T0474": "於是，其天即以神足，立舍利弗令如天像，天自化身如舍利弗。既現化，而問曰：「云何賢者轉為此女像？」舍利弗以天女像而答曰：「不識吾何以轉成此女像也。」",
    "T0475": "即時天女以神通力，變舍利弗令如天女，天自化身如舍利弗，而問言：「何以不轉女身？」舍利弗以天女像而答言：「我今不知何轉而變為女身？」天曰：「舍利弗！若能轉此女身，則一切女人亦當能轉。如舍利弗非女而現女身，一切女人亦復如是，雖現女身，而非女也。",
-   "T0476": "即時天女以神通力變舍利子令如天女，自變其身如舍利子而問之言：「尊者！云何不轉女身？」時舍利子以天女像而答之言：「我今不知轉滅男身轉生女像。」天女復言：「尊者若能轉此女身，一切女身亦當能轉。如舍利子實非是女而現女身；一切女身亦復如是，雖現女身而實非女。",
-   "bo": "དེ་ནས་ལྷ་མོ་དེས་འདི་ལྟ་བུར་བྱིན་གྱི་བརླབ་པས་བྱིན་གྱིས་བརླབས་ནས་ཇི་ལྟ་བུར་གནས་བརྟན་ཤཱ་རིའི་བུ་ལྷ་མོ་དེ་ཅི་འདྲ་བ་དེ་འདྲ་བར་སྣང་སྟེ། ལྷ་མོ་དེ་ཡང་གནས་བརྟན་ཤཱ་རིའི་བུ་ཅི་འདྲ་བ་དེ་འདྲ་བར་སྣང་ངོ་། ། དེ་ནས་ལྷ་མོ་ཤཱ་རིའི་བུའི་གཟུགས་སུ་གྱུར་པ་དེས་ཤཱ་རིའི་བུ་ལྷ་མོའི་གཟུགས་སུ་གྱུར་པ་དེ་ལ་ འདི་ལྟར་བཙུན་པ་ཤཱ་རིའི་བུ་བུད་མེད་ཀྱི་དངོས་པོ་ལས་བསྒྱུར་ན་ཅི་ཉེས་ཞེས་དྲིས་སོ། ཤཱ་རིའི་བུ་ལྷ་མོའི་གཟུགས་སུ་གྱུར་པས་འདི་སྐད་ཅེས་སྨྲས་སོ། ། ཁོ་བོ་སྐྱེས་པའི་གཟུགས་ནི་མི་སྣང་བར་གྱུར་ཏེ། ཁོ་བོ་བུད་མེད་ཀྱི་ལུས་སུ་གྱུར་ནས་གང་བསྒྱུར་མི་ཤེས་སོ། ། གལ་ཏེ་གནས་བརྟན་གྱིས་བུད་མེད་ཀྱི་གཟུགས་ལས་སླར་བསྒྱུར་ནུས་ན་ནི་བུད་མེད་ཐམས་ཅད་ཀྱང་བུད་མེད་ཀྱི་དངོས་པོ་ལས་འགྱུར་རོ། ཇི་ལྟར་གནས་བརྟན་བུད་མེད་དུ་སྣང་བ་དེ་བཞིན་དུ་བུད་མེད་ཐམས་ཅད་ཀྱང་བུད་མེད་ཀྱི་གཟུགས་སུ་སྣང་སྟེ། བུད་མེད་མ་ཡིན་པ་ལས་བུད་མེད་ཀྱི་གཟུགས་སུ་སྣང་ངོ་། །",
-   "en": "Thereupon, the goddess employed her magical power to cause the elder Śāriputra to appear in her form and to cause herself to appear in his form. Then the goddess, transformed into Śāriputra, said to Śāriputra, transformed into a goddess, “Reverend Śāriputra, what prevents you from transforming yourself out of your female state?” And Śāriputra, transformed into the goddess, replied, “I no longer appear in the form of a male! My body has changed into the body of a woman! I do not know what to transform!” “If the elder could again change out of the female state, then all women could also change out of their female states. All women appear in the form of women in just the same way as the elder appears in the form of a woman. While they are not women in reality, they appear in the form of women."
+   "T0476": "即時天女以神通力變舍利子令如天女，自變其身如舍利子而問之言：「尊者！云何不轉女身？」時舍利子以天女像而答之言：「我今不知轉滅男身轉生女像。」天女復言：「尊者若能轉此女身，一切女身亦當能轉。如舍利子實非是女而現女身；一切女身亦復如是，雖現女身而實非女。"
   },
   "a51": {
    "T0474": "天曰：「賢者！若能轉此女像，則眾女人身可轉，若其不女于女身亦不見者，則眾女人雖女身，為非女非見也。又如佛言：『一切諸法非女非男。』」即時，舍利弗身復如故。天曰：「賢者！何緣作此女相？」曰：「吾不作，非不作。」天曰：「如是，賢者！諸法亦非作非不作。夫不作非不作者，佛所說也。」",
    "T0475": "是故佛說一切諸法非男、非女。」",
-   "T0476": "世尊依此密意說言：『一切諸法，非男、非女。』」爾時，天女作是語已還攝神力各復本形，問舍利子：「尊者女身今何所在？」舍利子言：「今我女身無在、無變。」天曰：「尊者！善哉善哉。一切諸法亦復如是，無在、無變。說一切法無在、無變，是真佛語。」",
-   "bo": "དེ་ལ་དགོངས་ཏེ་བཅོམ་ལྡན་འདས་ཀྱིས་ཆོས་ཐམས་ཅད་བུད་མེད་ཀྱང་མ་ཡིན། སྐྱེས་པའང་མ་ཡིན་ཞེས་གསུངས་སོ། དེ་ནས་ལྷ་མོ་དེས་བྱིན་གྱིས་བརླབས་དེ་བཏང་བ་དང་། ཚེ་དང་ལྡན་པ་ཤཱ་རིའི་བུ་སླར་ཡང་བདག་གི་གཟུགས་དང་ལྡན་པར་གྱུར་ཏོ། ། བཙུན་པ་ཤཱ་རིའི་བུ་ཁྱོད་ཀྱིས་བུད་མེད་ཀྱི་གཟུགས་སུ་བྱས་པ་དེ་ག་རེ། བདག་གིས་བྱས་པའང་མེད་བསྒྱུར་བའང་མེད་དོ། དེ་བཞིན་དུ་ཆོས་ཐམས་ཅད་ཀྱང་བྱས་པའང་མེད། བསྒྱུར་བའང་མེད་དོ། །གང་མ་བྱས་ཤིང་བསྒྱུར་བ་མེད་པ་དེ་ནི་སངས་རྒྱས་ཀྱི་བཀའོ། ལྷ་མོ་ཁྱོད་འདི་ནས་ཤི་འཕོས་ནས་གང་དུ་སྐྱེ་སྨྲས་པ། དེ་བཞིན་གཤེགས་པས་སྤྲུལ་པ་དེ་གར་སྐྱེ་བར་བདག་ཀྱང་དེར་སྐྱེའོ། དེ་བཞིན་གཤེགས་པས་སྤྲུལ་པ་ལ་ནི་འཆི་འཕོ་བ་ཡང་མེད། སྐྱེ་བ་ཡང་མེད་དོ། ཆོས་ཐམས་ཅད་ཀྱང་དེ་བཞིན་ཏེ། འཆི་འཕོ་མེད་ཅིང་སྐྱེ་བ་མེད་དོ།",
-   "en": "With this in mind, the Buddha said, ‘In all things, there is neither male nor female.’ ” Then, the goddess released her magical power and each returned to their ordinary form. “Reverend Śāriputra, what have you done with your female form?” I neither made it nor did I change it. Just so, all things are neither made nor changed, and that they are not made and not changed, that is the teaching of the Buddha. Goddess, where will you be born when you transmigrate after death? I will be born where all the magical incarnations of the Tathāgata are born. But the emanated incarnations of the Tathāgata do not transmigrate nor are they born. All things and living beings are just the same; they do not transmigrate nor are they born!"
+   "T0476": "世尊依此密意說言：『一切諸法，非男、非女。』」爾時，天女作是語已還攝神力各復本形，問舍利子：「尊者女身今何所在？」舍利子言：「今我女身無在、無變。」天曰：「尊者！善哉善哉。一切諸法亦復如是，無在、無變。說一切法無在、無變，是真佛語。」"
   },
   "a52": {
    "T0475": "即時天女還攝神力，舍利弗身還復如故。"
@@ -692,9 +606,7 @@
   },
   "a58": {
    "T0475": "舍利弗問天：「汝久如當得阿耨多羅三藐三菩提？」",
-   "T0476": "時舍利子問天女言：「汝當久如證得無上正等菩提？」",
-   "bo": "ལྷ་མོ་ཁྱོད་ཅི་སྲིད་ན་བྱང་ཆུབ་མངོན་པར་རྫོགས་པར་འཚང་རྒྱ་བར་འགྱུར། གང་གི་ཚེ་གནས་བརྟན་ཁྱོད་སོ་སོའི་སྐྱེ་བོའི་ཆོས་དང་ལྡན་པར་འགྱུར་བ་དེའི་ཚེ་བདག་ཀྱང་བྱང་ཆུབ་མངོན་པར་རྫོགས་པར་འཚང་རྒྱའོ། ལྷ་མོ་ཁོ་བོ་སོ་སོའི་སྐྱེ་བོའི་ཆོས་དང་ལྡན་པར་འགྱུར་བ་དེ་ནི་གནས་མ་ཡིན་ནོ། བཙུན་པ་ཤཱ་རིའི་བུ་དེ་བཞིན་དུ་བདག་ཀྱང་བྱང་ཆུབ་མངོན་པར་རྫོགས་པར་འཚང་རྒྱ་བ་དེ་ནི་གནས་མ་ཡིན་ནོ། བྱང་ཆུབ་ནི་གནས་མ་ཡིན་པ་ལ་གནས་པའི་ཕྱིར་ཏེ། དེ་ལྟ་བས་ན་གནས་མ་ཡིན་པ་ལ་ནི་སུ་ཡང་མངོན་པར་རྫོགས་པར་འཚང་རྒྱ་བ་མེད་དོ། དེ་བཞིན་གཤེགས་པས་གསུངས་པ་ནི་ གང་གཱའི་ཀླུང་གི་བྱེ་མ་སྙེད་ཀྱི་དེ་བཞིན་གཤེགས་པ་རྣམས་མངོན་པར་རྫོགས་པར་སངས་རྒྱས་སོ། མངོན་པར་རྫོགས་པར་འཚང་རྒྱའོ། །མངོན་པར་རྫོགས་པར་འཚང་རྒྱ་བར་འགྱུར་རོ་ཞེས་གསུངས་སོ།",
-   "en": "Goddess, how soon will you attain the perfect enlightenment of buddhahood? At such time as you, elder, become endowed once more with the qualities of an ordinary individual, then will I attain the perfect enlightenment of buddhahood. Goddess, it is impossible that I should become endowed once more with the qualities of an ordinary individual. Just so, reverend Śāriputra, it is impossible that I should attain the perfect enlightenment of buddhahood! Because perfect enlightenment stands upon the impossible. Because it is impossible, no one attains the perfect enlightenment of buddhahood. But the Tathāgata has declared: “The tathāgatas, who are as numerous as the sands of the Ganges, have attained perfect buddhahood, are attaining perfect buddhahood, and will go on attaining perfect buddhahood.”"
+   "T0476": "時舍利子問天女言：「汝當久如證得無上正等菩提？」"
   },
   "a59": {
    "T0475": "天曰：「如舍利弗還為凡夫，我乃當成阿耨多羅三藐三菩提。」",
@@ -713,15 +625,11 @@
   },
   "a63": {
    "T0475": "天曰：「皆以世俗文字數故，說有三世，非謂菩提有去、來、今。」天曰：「舍利弗！",
-   "T0476": "天曰：「尊者！皆是文字、俗數、語言，說有三世諸佛證得，非謂菩提有去、來、今。所以者何？無上菩提超過三世。",
-   "bo": "བཙུན་པ་ཤཱ་རིའི་བུ་འདས་པ་དང་། མ་འོངས་པ་དང་། ད་ལྟར་བྱུང་བའི་སངས་རྒྱས་རྣམས་ཞེས་བྱ་བ་དེ་ནི་ཡི་གེ་བགྲང་བའི་བརྡའི་ཚིག་བླ་དགས་ཏེ། སངས་རྒྱས་རྣམས་ནི་འདས་པའམ་མ་འོངས་པའམ། ད་ལྟར་བྱུང་བ་མ་ཡིན་ཏེ། བྱང་ཆུབ་ནི་དུས་གསུམ་ལས་ཡང་དག་པར་འདས་པའོ། །",
-   "en": "Reverend Śāriputra, the expression “the buddhas of the past, present, and future” is a conventional expression made up of a certain number of syllables. The buddhas are neither past, nor present, nor future. Their enlightenment transcends the three times!"
+   "T0476": "天曰：「尊者！皆是文字、俗數、語言，說有三世諸佛證得，非謂菩提有去、來、今。所以者何？無上菩提超過三世。"
   },
   "a64": {
    "T0475": "汝得阿羅漢道耶？」",
-   "T0476": "又，舍利子！汝已證得阿羅漢耶？」舍利子言：「不得而得，得無所得。」天曰：「尊者！菩提亦爾，不證而證，證無所證。」",
-   "bo": "གནས་བརྟན་གྱིས་དགྲ་བཅོམ་པ་ཐོབ་བམ། ། ཐོབ་པ་མེད་པའི་རྒྱུས་ཐོབ་བོ། དེ་བཞིན་དུ་མངོན་པར་རྫོགས་པར་བྱང་ཆུབ་པ་མེད་པའི་རྒྱུས་མངོན་པར་རྫོགས་པར་བྱང་ཆུབ་བོ།",
-   "en": "But tell me, elder, have you attained the state of arhat? It is attained, because there is no attainment. Just so, there is perfect enlightenment because there is no attainment of perfect enlightenment."
+   "T0476": "又，舍利子！汝已證得阿羅漢耶？」舍利子言：「不得而得，得無所得。」天曰：「尊者！菩提亦爾，不證而證，證無所證。」"
   },
   "a65": {
    "T0475": "曰：「無所得故而得。」"
@@ -733,9 +641,7 @@
    "T0474": "爾時，維摩詰謂賢者舍利弗言：「是天已奉事九十二億佛，神通之智已解了，所願普具，法忍已得，已不退轉，願行如言所欲能現。」",
    "T0475": "爾時維摩詰語舍利弗：「是天女已曾供養九十二億佛，已能遊戲菩薩神通，所願具足，得無生忍，住不退轉；以本願故，隨意能現，教化眾生。」",
    "T0476": "時無垢稱即語尊者舍利子言：「如是，天女已曾供養、親近、承事九十有二百千俱胝那庾多佛、已能遊戲神通智慧、所願滿足得無生忍、已於無上正等菩提永不退轉，乘本願力如其所欲，隨所宜處成熟有情。」",
-   "sa": "Vkn 6.17 atha vimalakīrtir licchavir āyuṣmantaṃ śāriputram evam āha: dvānavatibuddhakoṭīparyupāsitā bhadantaśāriputra eṣā devatābhijñājñānavikrīḍitā praṇidhānasamucchritā kṣāntipratilabdhāvaivartikasamavasaraṇā praṇidhānavaśena yathecchati tathā tiṣṭhati satvaparipākāya // // devatāparivartaḥ ṣaṣṭhaḥ //",
-   "bo": "དེ་ནས་ལིད་ཙ་བཱི་དྲི་མ་མེད་པར་གྲགས་པས་ཚེ་དང་ལྡན་པ་གནས་བརྟན་ཤཱ་རིའི་བུ་ལ་འདི་སྐད་ཅེས་སྨྲས་སོ། ། བཙུན་པ་ཤཱ་རིའི་བུ་ལྷ་མོ་འདི་ནི་སངས་རྒྱས་བྱེ་བ་ཁྲག་ཁྲིག་ཕྲག་དགུ་བཅུ་རྩ་གཉིས་ལ་བསྙེན་བཀུར་བྱས་ཏེ། ། ཕྱིར་མི་ལྡོག་པ་ལ་ཡང་དག་པར་ཞུགས་པ་སྟེ། སེམས་ཅན་ཡོངས་སུ་སྨིན་པར་བྱ་བའི་ཕྱིར་སྨོན་ལམ་གྱི་དབང་གིས་ཇི་ལྟར་འདོད་པ་དེ་བཞིན་དུ་གནས་སོ། །།",
-   "en": "Then the Licchavi Vimalakīrti said to the venerable elder Śāriputra, “Reverend Śāriputra, this goddess has already served ninety-two million billion buddhas. She has actually attained irreversibility. She can live wherever she wishes on the strength of her vow to develop living beings.”"
+   "sa": "Vkn 6.17 atha vimalakīrtir licchavir āyuṣmantaṃ śāriputram evam āha: dvānavatibuddhakoṭīparyupāsitā bhadantaśāriputra eṣā devatābhijñājñānavikrīḍitā praṇidhānasamucchritā kṣāntipratilabdhāvaivartikasamavasaraṇā praṇidhānavaśena yathecchati tathā tiṣṭhati satvaparipākāya // // devatāparivartaḥ ṣaṣṭhaḥ //"
   }
  }
 }
