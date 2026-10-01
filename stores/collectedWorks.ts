@@ -36046,6 +36046,943 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                 }
           ]
     },
+    // 東方各教會神學家（2026-10-01 補 9 位；沿用既有「東方」region 名，不拆分）
+    {
+          "slug": "john-meyendorff",
+          "name": "約翰‧梅延多夫",
+          "nameEn": "John Meyendorff",
+          "nameOriginal": "Иван Феофилович Мейендорф / Jean Meyendorff",
+          "lifespan": "1926–1992",
+          "disciplineGroup": "神學",
+          "sortYear": 1926,
+          "era": "現代與當代",
+          "region": "東方（希臘／東正教）",
+          "discipline": "美國東正教會（OCA）拜占庭神學與帕拉馬斯學權威，聖弗拉基米爾神學院院長",
+          "fields": [
+                "拜占庭神學",
+                "帕拉馬斯與靜修主義",
+                "東正教教會史",
+                "普世對話"
+          ],
+          "portraitUrl": "",
+          "color": "sky",
+          "emoji": "📜",
+          "contribution": [
+                "生於法國訥伊（Neuilly-sur-Seine）俄僑家庭；巴黎聖塞爾吉東正教神學院畢業，1958 年獲索邦博士（帕拉馬斯研究）；1959 年起任教紐約聖弗拉基米爾神學院（SVS），1984–1992 任院長；兼任哈佛敦巴頓橡樹園（Dumbarton Oaks）與哥倫比亞、福特漢姆大學教職；美國東正教會（OCA）主要神學代表，世界基督教協進會（WCC）信與憲委員會委員。",
+                "二十世紀拜占庭神學與帕拉馬斯學的最高權威：以法文博士論文與《帕拉馬斯研究》重新確立「靜修主義」（hesychasm）與本質／能量區分在拜占庭神學中的正典地位，奠定新教父綜合（弗洛羅夫斯基路線）的學術實證；《拜占庭神學》為英語世界標準教本；同時是東正教與天主教、普世教會對話的代言人，並以《拜占庭與俄羅斯的興起》開創拜占庭—俄羅斯關係史。引用率最高的東正教史家—神學家之一。"
+          ],
+          "sourceNote": "著作皆受版權保護（status=copyright），來源待合法取得；中文書名凡標「（暫譯）」者為暫譯、未查得出版中譯本，非定案譯名。部分書目年份與出版者據一般書目知識，未逐筆核實。",
+          "timeline": [
+                {
+                      "year": "1926",
+                      "text": "2 月 17 日生於法國訥伊（Neuilly-sur-Seine）俄僑家庭。"
+                },
+                {
+                      "year": "1958",
+                      "text": "索邦大學神學博士，論文研究格列高里‧帕拉馬斯。"
+                },
+                {
+                      "year": "1959",
+                      "text": "出版《格列高里‧帕拉馬斯研究導論》（Seuil）；赴美任教聖弗拉基米爾神學院。"
+                },
+                {
+                      "year": "1974",
+                      "text": "出版《拜占庭神學：歷史趨勢與教義主題》。"
+                },
+                {
+                      "year": "1984–1992",
+                      "text": "任聖弗拉基米爾神學院院長。"
+                },
+                {
+                      "year": "1992",
+                      "text": "7 月 22 日辭世於加拿大蒙特婁。"
+                }
+          ],
+          "works": [
+                {
+                      "title": "格列高里‧帕拉馬斯研究導論（暫譯）",
+                      "titleOriginal": "Introduction à l'étude de Grégoire Palamas",
+                      "year": "1959",
+                      "yearSort": 1959,
+                      "category": "帕拉馬斯與靜修主義",
+                      "languages": [
+                            "fr"
+                      ],
+                      "status": "copyright",
+                      "note": "英譯本：A Study of Gregory Palamas（George Lawrence 譯，Faith Press 1964；SVS Press 1974）。未查得中譯本。"
+                },
+                {
+                      "title": "聖格列高里‧帕拉馬斯與正教神秘主義（暫譯）",
+                      "titleOriginal": "Saint Grégoire Palamas et la mystique orthodoxe",
+                      "year": "1959",
+                      "yearSort": 1959,
+                      "category": "帕拉馬斯與靜修主義",
+                      "languages": [
+                            "fr"
+                      ],
+                      "status": "copyright",
+                      "note": "英譯本：St Gregory Palamas and Orthodox Spirituality（Adele Fiske 譯，SVS Press 1974）。未查得中譯本。"
+                },
+                {
+                      "title": "格列高里‧帕拉馬斯《為神聖靜修者辯》校訂本（暫譯）",
+                      "titleOriginal": "Grégoire Palamas: Défense des saints hésychastes（Triades 校訂本，2 卷）",
+                      "year": "1959",
+                      "yearSort": 1959,
+                      "category": "帕拉馬斯與靜修主義",
+                      "languages": [
+                            "fr",
+                            "el"
+                      ],
+                      "status": "copyright",
+                      "note": "希臘文校訂加法譯本，共 2 卷（Louvain，1959；第二版 1973）。未查得中譯本。"
+                },
+                {
+                      "title": "東正教會的昨天與今天（暫譯）",
+                      "titleOriginal": "L'Église orthodoxe hier et aujourd'hui",
+                      "year": "1960",
+                      "yearSort": 1960,
+                      "category": "教會論與普世對話",
+                      "languages": [
+                            "fr"
+                      ],
+                      "status": "copyright",
+                      "note": "英譯本：The Orthodox Church: Its Past and Its Role in the World Today（John Chapin 譯，Pantheon 1962；SVS 修訂版 1981）。未查得中譯本。"
+                },
+                {
+                      "title": "東正教會中的彼得首位權（暫譯）",
+                      "titleOriginal": "The Primacy of Peter in the Orthodox Church（合著論文集：Meyendorff、Afanasiev、Schmemann、Koulomzine）",
+                      "year": "1963",
+                      "yearSort": 1963,
+                      "category": "教會論與普世對話",
+                      "languages": [
+                            "en"
+                      ],
+                      "status": "copyright",
+                      "note": "合著論文集（梅延多夫、阿法納西耶夫、施梅曼等），Faith Press 1963。未查得中譯本。"
+                },
+                {
+                      "title": "東正教與大公性（暫譯）",
+                      "titleOriginal": "Orthodoxy and Catholicity",
+                      "year": "1966",
+                      "yearSort": 1966,
+                      "category": "教會論與普世對話",
+                      "languages": [
+                            "en"
+                      ],
+                      "status": "copyright",
+                      "note": "Sheed & Ward 1966。未查得中譯本。"
+                },
+                {
+                      "title": "拜占庭神學中的基督",
+                      "titleOriginal": "Le Christ dans la théologie byzantine / Christ in Eastern Christian Thought",
+                      "year": "1969",
+                      "yearSort": 1969,
+                      "category": "基督論與拜占庭神學",
+                      "languages": [
+                            "fr",
+                            "en"
+                      ],
+                      "status": "copyright",
+                      "note": "中譯本：譚立鑄譯，道風書社（香港），2012。英譯本：Christ in Eastern Christian Thought（SVS 修訂版 1975）。"
+                },
+                {
+                      "title": "婚姻：東正教的觀點（暫譯）",
+                      "titleOriginal": "Marriage: An Orthodox Perspective",
+                      "year": "1970",
+                      "yearSort": 1970,
+                      "category": "牧職與婚姻",
+                      "languages": [
+                            "en"
+                      ],
+                      "status": "copyright",
+                      "note": "SVS Press 1970（第三版 1984）。未查得中譯本。"
+                },
+                {
+                      "title": "拜占庭靜修主義：歷史、神學與社會問題（暫譯）",
+                      "titleOriginal": "Byzantine Hesychasm: Historical, Theological and Social Problems (Collected Studies)",
+                      "year": "1974",
+                      "yearSort": 1974,
+                      "category": "帕拉馬斯與靜修主義",
+                      "languages": [
+                            "en"
+                      ],
+                      "status": "copyright",
+                      "note": "論文集，Variorum Reprints 1974。未查得中譯本。"
+                },
+                {
+                      "title": "拜占庭神學：歷史趨勢與教義主題（暫譯）",
+                      "titleOriginal": "Byzantine Theology: Historical Trends and Doctrinal Themes",
+                      "year": "1974",
+                      "yearSort": 1974,
+                      "category": "拜占庭神學與教會史",
+                      "languages": [
+                            "en"
+                      ],
+                      "status": "copyright",
+                      "note": "Fordham University Press 1974，英語世界標準教本。未查得中譯本。"
+                },
+                {
+                      "title": "活的傳統：當代世界的東正教見證（暫譯）",
+                      "titleOriginal": "Living Tradition: Orthodox Witness in the Contemporary World",
+                      "year": "1978",
+                      "yearSort": 1978,
+                      "category": "拜占庭神學與教會史",
+                      "languages": [
+                            "en"
+                      ],
+                      "status": "copyright",
+                      "note": "SVS Press 1978。未查得中譯本。"
+                },
+                {
+                      "title": "拜占庭與俄羅斯的興起（暫譯）",
+                      "titleOriginal": "Byzantium and the Rise of Russia",
+                      "year": "1981",
+                      "yearSort": 1981,
+                      "category": "拜占庭神學與教會史",
+                      "languages": [
+                            "en"
+                      ],
+                      "status": "copyright",
+                      "note": "Cambridge University Press 1981。未查得中譯本。"
+                },
+                {
+                      "title": "東正教會中的拜占庭遺產（暫譯）",
+                      "titleOriginal": "The Byzantine Legacy in the Orthodox Church",
+                      "year": "1982",
+                      "yearSort": 1982,
+                      "category": "教會論與普世對話",
+                      "languages": [
+                            "en"
+                      ],
+                      "status": "copyright",
+                      "note": "SVS Press 1982。未查得中譯本。"
+                },
+                {
+                      "title": "大公性與教會（暫譯）",
+                      "titleOriginal": "Catholicity and the Church",
+                      "year": "1983",
+                      "yearSort": 1983,
+                      "category": "帕拉馬斯與靜修主義",
+                      "languages": [
+                            "en"
+                      ],
+                      "status": "copyright",
+                      "note": "SVS Press 1983。未查得中譯本。"
+                },
+                {
+                      "title": "格列高里‧帕拉馬斯《三部曲》（暫譯）",
+                      "titleOriginal": "Gregory Palamas: The Triads（編＋導論；Nicholas Gendle 譯）",
+                      "year": "1983",
+                      "yearSort": 1983,
+                      "category": "拜占庭神學與教會史",
+                      "languages": [
+                            "en"
+                      ],
+                      "status": "copyright",
+                      "note": "編輯並撰導論，Nicholas Gendle 英譯，Paulist Press（Classics of Western Spirituality）1983。未查得中譯本。"
+                },
+                {
+                      "title": "帝國統一與基督徒分裂：450–680 年的教會（暫譯）",
+                      "titleOriginal": "Imperial Unity and Christian Divisions: The Church 450–680 A.D.（The Church in History 第 2 卷）",
+                      "year": "1989",
+                      "yearSort": 1989,
+                      "category": "拜占庭神學與教會史",
+                      "languages": [
+                            "en"
+                      ],
+                      "status": "copyright",
+                      "note": "《教會史》（The Church in History）第 2 卷，SVS Press 1989。未查得中譯本。"
+                },
+                {
+                      "title": "羅馬、君士坦丁堡、莫斯科：歷史與神學研究（暫譯）",
+                      "titleOriginal": "Rome, Constantinople, Moscow: Historical and Theological Studies",
+                      "year": "1996",
+                      "yearSort": 1996,
+                      "category": "代表著作",
+                      "languages": [
+                            "en"
+                      ],
+                      "status": "copyright",
+                      "note": "身後出版，SVS Press 1996。未查得中譯本。"
+                }
+          ]
+    },
+    {
+          "slug": "nicholas-afanasiev",
+          "name": "尼古拉‧阿法納西耶夫",
+          "nameEn": "Nicholas Afanasiev (Nikolai Afanasʹev)",
+          "nameOriginal": "Николай Николаевич Афанасьев",
+          "lifespan": "1893–1966",
+          "disciplineGroup": "神學",
+          "sortYear": 1893,
+          "era": "現代與當代",
+          "region": "東方（希臘／東正教）",
+          "discipline": "聖體教會論（eucharistic ecclesiology）奠基者，巴黎聖塞爾吉教會法學者",
+          "fields": [
+                "教會論",
+                "教會法",
+                "聖體神學"
+          ],
+          "portraitUrl": "",
+          "color": "teal",
+          "emoji": "⛪",
+          "contribution": [
+                "生於敖德薩，教會法學者，流亡巴黎，任教聖塞爾吉神學院（教會法、教會史）；晚年與梅延多夫、施梅曼同屬巴黎—SVS 圈。",
+                "「聖體教會論」（eucharistic ecclesiology）奠基者：教會即聚集於聖餐的地方教會；其《聖靈的教會》（1971，身後）被齊澤烏拉斯、羅馬公教梵二後的教會論（Congar、Kasper）廣泛引用，是梵蒂岡二屆「地方教會」神學與東西方對話的重要資源。"
+          ],
+          "sourceNote": "著作皆受版權保護（status=copyright），來源待合法取得；中文書名凡標「（暫譯）」者為暫譯、未查得出版中譯本，非定案譯名。部分書目年份與出版者據一般書目知識，未逐筆核實。",
+          "timeline": [
+                {
+                      "year": "1893",
+                      "text": "9 月 4 日生於敖德薩。"
+                },
+                {
+                      "year": "1940",
+                      "text": "晉鐸，赴突尼西亞牧養（至 1947）；其後回聖塞爾吉神學院任教至逝世。"
+                },
+                {
+                      "year": "1952",
+                      "text": "出版《主的筵席》（俄文）。"
+                },
+                {
+                      "year": "1966",
+                      "text": "12 月 4 日辭世於巴黎；《聖靈的教會》1971 年身後出版。"
+                }
+          ],
+          "works": [
+                {
+                      "title": "主的筵席（暫譯）",
+                      "titleOriginal": "Трапеза Господня",
+                      "year": "1952",
+                      "yearSort": 1952,
+                      "category": "代表著作",
+                      "languages": [
+                            "ru"
+                      ],
+                      "status": "copyright",
+                      "note": "聖體教會論的奠基作（巴黎，1952）。未查得中譯本。"
+                },
+                {
+                      "title": "聖靈的教會（暫譯）",
+                      "titleOriginal": "Церковь Духа Святого",
+                      "year": "1971",
+                      "yearSort": 1971,
+                      "category": "代表著作",
+                      "languages": [
+                            "ru",
+                            "en"
+                      ],
+                      "status": "copyright",
+                      "note": "身後出版（1971）。英譯本：The Church of the Holy Spirit（Vitaly Permiakov 譯，Michael Plekon 編，University of Notre Dame Press 2007）。未查得中譯本。"
+                },
+                {
+                      "title": "〈以愛主持的教會〉（暫譯）",
+                      "titleOriginal": "Primacy of Peter 論文〈The Church Which Presides in Love〉",
+                      "year": "1963",
+                      "yearSort": 1963,
+                      "category": "代表著作",
+                      "languages": [
+                            "en"
+                      ],
+                      "status": "copyright",
+                      "note": "論文，收於《東正教會中的彼得首位權》（Faith Press 1963，見梅延多夫條）。未查得中譯本。"
+                }
+          ]
+    },
+    {
+          "slug": "dumitru-staniloae",
+          "name": "杜米特魯‧斯塔尼洛埃",
+          "nameEn": "Dumitru Stăniloae",
+          "nameOriginal": "Dumitru Stăniloae",
+          "lifespan": "1903–1993",
+          "disciplineGroup": "神學",
+          "sortYear": 1903,
+          "era": "現代與當代",
+          "region": "東方（希臘／東正教）",
+          "discipline": "羅馬尼亞正教系統神學家，《東正教教義神學》與《愛善集》羅文版編譯者",
+          "fields": [
+                "系統神學",
+                "愛善集",
+                "教父學",
+                "神化論"
+          ],
+          "portraitUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Freiburg-_Universit%C3%A4t%3B_Professor_der_Theologie_Staniloae,_Bukarest_-_LABW_-_Staatsarchiv_Freiburg_W_134_Nr._037864.jpeg?width=500",
+          "portraitCredit": "Wikimedia Commons，Landesarchiv Baden-Württemberg / Staatsarchiv Freiburg W 134 Nr. 037864，CC BY 4.0",
+          "color": "indigo",
+          "emoji": "📖",
+          "contribution": [
+                "特蘭西瓦尼亞生，雅典、慕尼黑、柏林、巴黎、貝爾格萊德進修；錫比烏（Sibiu）、布加勒斯特神學教授；1958–63 因共產政權遭關押；編譯羅馬尼亞文《愛善集》（Filocalia）。",
+                "二十世紀最重要的東正教系統神學家之一：《東正教教義神學》（3 卷，1978）把教父與《愛善集》傳統化為現代系統神學，「創造—神化—位格共融」；對羅馬尼亞教會復興與東歐正教影響巨大，英譯（Holy Cross《The Experience of God》六卷）使其進入國際討論。"
+          ],
+          "sourceNote": "著作皆受版權保護（status=copyright），來源待合法取得；中文書名凡標「（暫譯）」者為暫譯、未查得出版中譯本，非定案譯名。部分書目年份與出版者據一般書目知識，未逐筆核實。",
+          "timeline": [
+                {
+                      "year": "1903",
+                      "text": "11 月 29 日生於特蘭西瓦尼亞弗拉代尼（Vlădeni）。"
+                },
+                {
+                      "year": "1946",
+                      "text": "起編譯羅馬尼亞文《愛善集》。"
+                },
+                {
+                      "year": "1958–1963",
+                      "text": "1958 年 9 月遭共產政權逮捕關押，1963 年 1 月獲釋。"
+                },
+                {
+                      "year": "1978",
+                      "text": "出版《東正教教義神學》（羅馬尼亞文）。"
+                },
+                {
+                      "year": "1993",
+                      "text": "10 月 4 日辭世於布加勒斯特。"
+                }
+          ],
+          "works": [
+                {
+                      "title": "東正教教義神學（暫譯）",
+                      "titleOriginal": "Teologia Dogmatică Ortodoxă（3 卷）",
+                      "year": "1978",
+                      "yearSort": 1978,
+                      "category": "代表著作",
+                      "languages": [
+                            "ro",
+                            "en"
+                      ],
+                      "status": "copyright",
+                      "note": "羅馬尼亞文 3 卷（1978）；英譯本：The Experience of God: Orthodox Dogmatic Theology（6 卷，2005–2013）。未查得中譯本。"
+                },
+                {
+                      "title": "愛善集（羅馬尼亞文版）（暫譯）",
+                      "titleOriginal": "Filocalia sau culegere din scrierile Sfinților Părinți（12 卷，編譯）",
+                      "year": "1946–1991",
+                      "yearSort": 1946,
+                      "category": "代表著作",
+                      "languages": [
+                            "ro"
+                      ],
+                      "status": "copyright",
+                      "note": "編譯，自 1946 年起陸續出版；全部卷數與完成年份各來源說法不一（維基百科列九卷至 1980），待核。未查得中譯本。"
+                },
+                {
+                      "title": "神學與教會（暫譯）",
+                      "titleOriginal": "Theology and the Church（英譯論文集）",
+                      "year": "1980",
+                      "yearSort": 1980,
+                      "category": "代表著作",
+                      "languages": [
+                            "en"
+                      ],
+                      "status": "copyright",
+                      "note": "英譯論文集（SVS Press，1980）。未查得中譯本。"
+                },
+                {
+                      "title": "東正教禮儀中的靈性與共融（暫譯）",
+                      "titleOriginal": "Spiritualitate și comuniune în liturghia ortodoxă / Orthodox Spirituality: A Practical Guide for the Faithful and a Definitive Manual for the Scholar",
+                      "year": "1986/2002",
+                      "yearSort": 1986,
+                      "category": "代表著作",
+                      "languages": [
+                            "ro",
+                            "en"
+                      ],
+                      "status": "copyright",
+                      "note": "羅馬尼亞文 1986；英譯本：Orthodox Spirituality: A Practical Guide for the Faithful and a Definitive Manual for the Scholar（2002）。未查得中譯本。"
+                }
+          ]
+    },
+    {
+          "slug": "christos-yannaras",
+          "name": "克里斯多‧揚納拉斯",
+          "nameEn": "Christos Yannaras",
+          "nameOriginal": "Χρήστος Γιανναράς",
+          "lifespan": "1935–2024",
+          "disciplineGroup": "神學",
+          "sortYear": 1935,
+          "era": "現代與當代",
+          "region": "東方（希臘／東正教）",
+          "discipline": "希臘信徒哲學家與東正教神學家，位格論與反西方神學的主要聲音",
+          "fields": [
+                "位格論",
+                "存有論",
+                "教父學與海德格",
+                "東西方關係"
+          ],
+          "portraitUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Christos_Yannaras_at_Orthodox_Theological_Research_Forum_2013_at_St_Edmund_Hall_Oxford.jpg?width=500",
+          "portraitCredit": "Wikimedia Commons，James Hyndman，CC BY-SA 2.0",
+          "color": "violet",
+          "emoji": "🏛️",
+          "contribution": [
+                "生於雅典；神學學士出身，赴波昂、巴黎研究哲學，取得薩洛尼卡亞里斯多德大學與巴黎索邦大學兩個博士學位；1982–2002 任潘提翁（Panteion）大學哲學教授；五十餘部著作，被譯為多語。",
+                "「希臘新教父」運動與反西方神學（反經院、反個人主義）的主要聲音；將海德格存有論與東方教父的位格／共融思想對讀（《論上帝的缺席與不可知性》），影響希臘知識界與教會；與齊澤烏拉斯同為二十世紀位格主義東正教路線代表，但較尖銳批判西方。"
+          ],
+          "sourceNote": "著作皆受版權保護（status=copyright），來源待合法取得；中文書名凡標「（暫譯）」者為暫譯、未查得出版中譯本，非定案譯名。部分書目年份與出版者據一般書目知識，未逐筆核實。",
+          "timeline": [
+                {
+                      "year": "1935",
+                      "text": "4 月 10 日生於雅典。"
+                },
+                {
+                      "year": "1967",
+                      "text": "出版《論上帝的缺席與不可知性》（希臘文）。"
+                },
+                {
+                      "year": "1970",
+                      "text": "出版《道德的自由》（希臘文）。"
+                },
+                {
+                      "year": "1982–2002",
+                      "text": "任雅典潘提翁大學哲學教授。"
+                },
+                {
+                      "year": "2024",
+                      "text": "8 月 24 日辭世於基西拉島。"
+                }
+          ],
+          "works": [
+                {
+                      "title": "道德的自由（暫譯）",
+                      "titleOriginal": "Η ελευθερία του ήθους",
+                      "year": "1970",
+                      "yearSort": 1970,
+                      "category": "代表著作",
+                      "languages": [
+                            "el",
+                            "en"
+                      ],
+                      "status": "copyright",
+                      "note": "希臘文 1970；英譯本：The Freedom of Morality（1984）。未查得中譯本。"
+                },
+                {
+                      "title": "論上帝的缺席與不可知性（暫譯）",
+                      "titleOriginal": "Περί της απουσίας και αγνωσίας του Θεού",
+                      "year": "1967",
+                      "yearSort": 1967,
+                      "category": "代表著作",
+                      "languages": [
+                            "el",
+                            "en"
+                      ],
+                      "status": "copyright",
+                      "note": "希臘文 1967；英譯本：On the Absence and Unknowability of God: Heidegger and the Areopagite（2005）。未查得中譯本。"
+                },
+                {
+                      "title": "位格與愛慾（暫譯）",
+                      "titleOriginal": "Το πρόσωπο και ο έρως",
+                      "year": "1976",
+                      "yearSort": 1976,
+                      "category": "代表著作",
+                      "languages": [
+                            "el",
+                            "en"
+                      ],
+                      "status": "copyright",
+                      "note": "希臘文 1976；英譯本：Person and Eros（2008）。未查得中譯本。"
+                },
+                {
+                      "title": "信仰的初階（暫譯）",
+                      "titleOriginal": "Αλφαβητάρι της πίστης",
+                      "year": "1977",
+                      "yearSort": 1977,
+                      "category": "代表著作",
+                      "languages": [
+                            "el",
+                            "en"
+                      ],
+                      "status": "copyright",
+                      "note": "希臘文 1977；英譯本：Elements of Faith（1991）。未查得中譯本。"
+                },
+                {
+                      "title": "東正教與西方（暫譯）",
+                      "titleOriginal": "Orthodoxy and the West",
+                      "year": "2006",
+                      "yearSort": 2006,
+                      "category": "代表著作",
+                      "languages": [
+                            "el",
+                            "en"
+                      ],
+                      "status": "copyright",
+                      "note": "希臘文 1992；英譯本 2006。未查得中譯本。"
+                },
+                {
+                      "title": "後現代形上學（暫譯）",
+                      "titleOriginal": "Postmodern Metaphysics",
+                      "year": "2004",
+                      "yearSort": 2004,
+                      "category": "代表著作",
+                      "languages": [
+                            "en"
+                      ],
+                      "status": "copyright",
+                      "note": "英譯本 2004（Holy Cross）。未查得中譯本。"
+                }
+          ]
+    },
+    {
+          "slug": "kallistos-ware",
+          "name": "卡利斯托斯‧韋爾",
+          "nameEn": "Kallistos Ware (Timothy Ware)",
+          "nameOriginal": "Kallistos (Timothy) Ware",
+          "lifespan": "1934–2022",
+          "disciplineGroup": "神學",
+          "sortYear": 1934,
+          "era": "現代與當代",
+          "region": "東方（希臘／東正教）",
+          "discipline": "英國皈依者、牛津東正教學者與狄奧克里亞都主教；《東正教會》作者",
+          "fields": [
+                "東正教入門",
+                "靜修靈修",
+                "愛善集英譯",
+                "普世對話"
+          ],
+          "portraitUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Kallistos_Ware,_Oakland,_CA,_2008.jpg?width=500",
+          "portraitCredit": "Wikimedia Commons，Narsil，CC BY-SA 3.0",
+          "color": "emerald",
+          "emoji": "🕯️",
+          "contribution": [
+                "英國巴斯出生，1958 皈依東正教，1966 晉鐸（修士神父），牛津大學東方正教研究講師，2007 起任狄奧克里亞（Diokleia）都主教；與 Mother Mary 合譯禮儀文本，與 Palmer、Sherrard 合譯《愛善集》（Philokalia）。",
+                "英語世界最具影響的東正教傳播者；《東正教會》（企鵝 1963）是全球最廣泛使用的東正教入門書；《東正教的道路》將靜修傳統通俗化；英譯《Philokalia》使東方靈修傳統進入西方。"
+          ],
+          "sourceNote": "著作皆受版權保護（status=copyright），來源待合法取得；中文書名凡標「（暫譯）」者為暫譯、未查得出版中譯本，非定案譯名。部分書目年份與出版者據一般書目知識，未逐筆核實。",
+          "timeline": [
+                {
+                      "year": "1934",
+                      "text": "9 月 11 日生於英國巴斯（Bath）。"
+                },
+                {
+                      "year": "1958",
+                      "text": "4 月皈依東正教。"
+                },
+                {
+                      "year": "1966",
+                      "text": "晉鐸並受剃度，法名卡利斯托斯（Kallistos）。"
+                },
+                {
+                      "year": "1979",
+                      "text": "《愛善集》英譯第 1 卷出版（至 1999 年共 4 卷）。"
+                },
+                {
+                      "year": "1982",
+                      "text": "祝聖為狄奧克里亞（Diokleia）主教。"
+                },
+                {
+                      "year": "2007",
+                      "text": "3 月 30 日，狄奧克里亞教區升格為都主教區。"
+                },
+                {
+                      "year": "2022",
+                      "text": "8 月 24 日辭世於牛津。"
+                }
+          ],
+          "works": [
+                {
+                      "title": "東正教會導論",
+                      "titleOriginal": "The Orthodox Church",
+                      "year": "1963",
+                      "yearSort": 1963,
+                      "category": "代表著作",
+                      "languages": [
+                            "en"
+                      ],
+                      "status": "copyright",
+                      "note": "中譯本：《東正教會導論》，田原譯，道風書社（香港），2013。原書 1963 年初版，1993、2015 年新版。"
+                },
+                {
+                      "title": "東正教的道路（暫譯）",
+                      "titleOriginal": "The Orthodox Way",
+                      "year": "1979",
+                      "yearSort": 1979,
+                      "category": "代表著作",
+                      "languages": [
+                            "en"
+                      ],
+                      "status": "copyright",
+                      "note": "初版 1979；SVS 修訂版 1995。未查得中譯本。"
+                },
+                {
+                      "title": "名字的能力：東正教靈修中的耶穌禱文（暫譯）",
+                      "titleOriginal": "The Power of the Name: The Jesus Prayer in Orthodox Spirituality",
+                      "year": "1974",
+                      "yearSort": 1974,
+                      "category": "代表著作",
+                      "languages": [
+                            "en"
+                      ],
+                      "status": "copyright",
+                      "note": "Fairacres Publications，1974。未查得中譯本。"
+                },
+                {
+                      "title": "內在的國度（文集第一卷）（暫譯）",
+                      "titleOriginal": "The Inner Kingdom (Collected Works vol. 1)",
+                      "year": "2000",
+                      "yearSort": 2000,
+                      "category": "代表著作",
+                      "languages": [
+                            "en"
+                      ],
+                      "status": "copyright",
+                      "note": "2000。未查得中譯本。"
+                },
+                {
+                      "title": "二十一世紀的東正教神學（暫譯）",
+                      "titleOriginal": "Orthodox Theology in the Twenty-First Century",
+                      "year": "2012",
+                      "yearSort": 2012,
+                      "category": "代表著作",
+                      "languages": [
+                            "en"
+                      ],
+                      "status": "copyright",
+                      "note": "2012。未查得中譯本。"
+                },
+                {
+                      "title": "愛善集全文英譯（暫譯）",
+                      "titleOriginal": "The Philokalia: The Complete Text（G. E. H. Palmer, Philip Sherrard, Kallistos Ware 譯，4 卷）",
+                      "year": "1979–1995",
+                      "yearSort": 1979,
+                      "category": "代表著作",
+                      "languages": [
+                            "en"
+                      ],
+                      "status": "copyright",
+                      "note": "與 G. E. H. Palmer、Philip Sherrard 合譯，卷 1–4 出版於 1979、1982、1986、1999，卷 5 於 2023 年出版。未查得中譯本。"
+                }
+          ]
+    },
+    {
+          "slug": "ignatius-aphrem-barsoum",
+          "name": "伊格那丟‧阿弗蘭一世‧巴爾蘇姆",
+          "nameEn": "Ignatius Aphrem I Barsoum",
+          "nameOriginal": "ܐܝܓܢܛܝܘܣ ܐܦܪܝܡ ܒܪܨܘܡ",
+          "lifespan": "1887–1957",
+          "disciplineGroup": "神學",
+          "sortYear": 1887,
+          "era": "現代與當代",
+          "region": "東方（東方正統教會）",
+          "discipline": "安提阿敘利亞正教會牧首與敘利亞學者；《散落的珍珠》作者",
+          "fields": [
+                "敘利亞文學史",
+                "教會史",
+                "東方基督教"
+          ],
+          "portraitUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Ignatius_Afram_I_Barsoum.jpg?width=500",
+          "portraitCredit": "Wikimedia Commons，Public domain",
+          "color": "rose",
+          "emoji": "📚",
+          "contribution": [
+                "1887 年生於摩蘇爾，1933 年起任安提阿敘利亞正教會牧首直至 1957 年逝世；敘利亞學者與教父學者。",
+                "《散落的珍珠：敘利亞文學與科學史》（阿拉伯文 1943）是敘利亞教會文獻史的經典參考書，被 Brock 等西方敘利亞學者沿用；同時是 20 世紀敘利亞正教自我書寫其文學傳統的象徵。作者 1957 卒 → 未滿七十年。"
+          ],
+          "sourceNote": "著作皆受版權保護（status=copyright），來源待合法取得；中文書名凡標「（暫譯）」者為暫譯、未查得出版中譯本，非定案譯名。部分書目年份與出版者據一般書目知識，未逐筆核實。",
+          "timeline": [
+                {
+                      "year": "1887",
+                      "text": "6 月 15 日生於摩蘇爾。"
+                },
+                {
+                      "year": "1933",
+                      "text": "就任安提阿敘利亞正教會牧首（至逝世）。"
+                },
+                {
+                      "year": "1943",
+                      "text": "《散落的珍珠》（阿拉伯文）出版。"
+                },
+                {
+                      "year": "1957",
+                      "text": "6 月 23 日辭世於敘利亞。"
+                }
+          ],
+          "works": [
+                {
+                      "title": "散落的珍珠：敘利亞科學與文學史（暫譯）",
+                      "titleOriginal": "اللؤلؤ المنثور في تاريخ العلوم والآداب السريانية",
+                      "year": "1943",
+                      "yearSort": 1943,
+                      "category": "代表著作",
+                      "languages": [
+                            "ar"
+                      ],
+                      "status": "copyright",
+                      "note": "阿拉伯文，1943。英譯本：The Scattered Pearls: A History of Syriac Literature and Sciences（Matti Moosa 譯，Gorgias Press）。未查得中譯本。"
+                }
+          ]
+    },
+    {
+          "slug": "karekin-i-sarkissian",
+          "name": "卡雷金一世‧薩爾基相",
+          "nameEn": "Karekin I (Karekin Sarkissian)",
+          "nameOriginal": "Գարեգին Ա. Սարգսյան",
+          "lifespan": "1932–1999",
+          "disciplineGroup": "神學",
+          "sortYear": 1932,
+          "era": "現代與當代",
+          "region": "東方（東方正統教會）",
+          "discipline": "全亞美尼亞大主教首領與《卡爾西頓會議與亞美尼亞教會》作者",
+          "fields": [
+                "基督論",
+                "卡爾西頓爭議",
+                "亞美尼亞教會",
+                "普世運動"
+          ],
+          "portraitUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Sa_Saintet%C3%A9_KAREKIN_Ier.png?width=500",
+          "portraitCredit": "Wikimedia Commons，CC BY-SA 4.0",
+          "color": "amber",
+          "emoji": "✝️",
+          "contribution": [
+                "生於敘利亞凱薩布（Kesab），牛津大學 B.Litt.（論文即《卡爾西頓大公會議與亞美尼亞教會》）；曾任奇里乞亞教區首長，後任聖埃奇米阿津的全亞美尼亞大主教首領；普世教會運動的亞美尼亞代表。",
+                "《卡爾西頓大公會議與亞美尼亞教會》（1965，S.P.C.K.）是亞美尼亞教會對卡爾西頓問題最系統的學術辯護與歷史說明，常被引為非迦克敦教會「非性一論」立場的代表文獻；網查確認為其 Oxford B.Litt. 論文。"
+          ],
+          "sourceNote": "著作皆受版權保護（status=copyright），來源待合法取得；中文書名凡標「（暫譯）」者為暫譯、未查得出版中譯本，非定案譯名。部分書目年份與出版者據一般書目知識，未逐筆核實。",
+          "timeline": [
+                {
+                      "year": "1932",
+                      "text": "8 月 27 日生於敘利亞凱薩布（Kesab）。"
+                },
+                {
+                      "year": "1965",
+                      "text": "出版《卡爾西頓大公會議與亞美尼亞教會》（倫敦，S.P.C.K.）。"
+                },
+                {
+                      "year": "1994",
+                      "text": "全國教會會議選出為全亞美尼亞大主教首領。"
+                },
+                {
+                      "year": "1999",
+                      "text": "6 月 29 日辭世於瓦加爾沙帕特（Vagharshapat，埃奇米阿津）。"
+                }
+          ],
+          "works": [
+                {
+                      "title": "卡爾西頓大公會議與亞美尼亞教會（暫譯）",
+                      "titleOriginal": "The Council of Chalcedon and the Armenian Church",
+                      "year": "1965",
+                      "yearSort": 1965,
+                      "category": "代表著作",
+                      "languages": [
+                            "en"
+                      ],
+                      "status": "copyright",
+                      "note": "S.P.C.K.，倫敦，1965（牛津大學學位論文）。未查得中譯本。"
+                }
+          ]
+    },
+    {
+          "slug": "v-c-samuel",
+          "name": "V. C. 薩穆埃爾",
+          "nameEn": "V. C. Samuel (Vilakuvel Cherian Samuel)",
+          "nameOriginal": "V. C. Samuel",
+          "lifespan": "1912–1998",
+          "disciplineGroup": "神學",
+          "sortYear": 1912,
+          "era": "現代與當代",
+          "region": "東方（東方正統教會）",
+          "discipline": "印度馬蘭卡拉正教神學家，重審卡爾西頓會議的非迦克敦方代表",
+          "fields": [
+                "基督論",
+                "卡爾西頓會議",
+                "東方正統教會對話"
+          ],
+          "portraitUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Father_V.C._Samuel.jpg?width=500",
+          "portraitCredit": "Wikimedia Commons，CC BY-SA 2.0",
+          "color": "orange",
+          "emoji": "🌴",
+          "contribution": [
+                "生於喀拉拉，馬蘭卡拉正教司鐸；耶魯大學博士（1957），曾任教塞蘭坡學院、亞的斯亞貝巴海爾‧塞拉西一世大學、班加羅爾聯合神學院與科塔亞姆東正教神學院；多次擔任普世教協大會正式代表，是普世教會運動中非迦克敦方的代表人物；以《卡爾西頓會議再檢討》（1977）聞名。",
+                "以歷史方法重新檢視卡爾西頓大公會議，主張基督論爭議含有大量語言與政治誤會，為 1960–80 年代東方正統教會與東正教（迦克敦）／羅馬公教的非正式對話（Aarhus 1964、Bristol 1967、Geneva 1970、Addis Ababa 1971）提供學術基礎；網查《Ecumenical Contribution of V.C. Samuel》。"
+          ],
+          "sourceNote": "著作皆受版權保護（status=copyright），來源待合法取得；中文書名凡標「（暫譯）」者為暫譯、未查得出版中譯本，非定案譯名。部分書目年份與出版者據一般書目知識，未逐筆核實。",
+          "timeline": [
+                {
+                      "year": "1912",
+                      "text": "4 月 6 日生於喀拉拉（Omalloor，特拉凡科爾）。"
+                },
+                {
+                      "year": "1957",
+                      "text": "耶魯大學哲學博士。"
+                },
+                {
+                      "year": "1960–1963",
+                      "text": "任教塞蘭坡學院（Serampore College）；其後任教亞的斯亞貝巴海爾‧塞拉西一世大學（1963–1966、1968–1976）、班加羅爾聯合神學院等。"
+                },
+                {
+                      "year": "1977",
+                      "text": "出版《卡爾西頓會議再檢討》（馬德拉斯）。"
+                },
+                {
+                      "year": "1998",
+                      "text": "11 月 18 日辭世於班加羅爾。"
+                }
+          ],
+          "works": [
+                {
+                      "title": "卡爾西頓會議再檢討：歷史與神學的考察（暫譯）",
+                      "titleOriginal": "The Council of Chalcedon Re-Examined: A Historical and Theological Survey",
+                      "year": "1977",
+                      "yearSort": 1977,
+                      "category": "代表著作",
+                      "languages": [
+                            "en"
+                      ],
+                      "status": "copyright",
+                      "note": "初版 Christian Literature Society（馬德拉斯）1977；後有 British Orthodox Press 2003 版。未查得中譯本。"
+                }
+          ]
+    },
+    {
+          "slug": "mar-awa-iii-royel",
+          "name": "馬爾‧阿瓦三世‧羅耶爾",
+          "nameEn": "Mar Awa III (David Royel)",
+          "nameOriginal": "ܡܪܝ ܐܘܐ ܬܠܝܬܝܐ",
+          "lifespan": "1975–",
+          "disciplineGroup": "神學",
+          "sortYear": 1975,
+          "era": "現代與當代",
+          "region": "東方（敘利亞／東方教會）",
+          "discipline": "東方亞述教會現任大公牧首與巴巴伊《合一書》校訂者",
+          "fields": [
+                "東方教會基督論",
+                "敘利亞文獻",
+                "巴巴伊大帝"
+          ],
+          "portraitUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Mar_Awa_III_(cropped).jpg?width=500",
+          "portraitCredit": "Wikimedia Commons，CC0",
+          "color": "purple",
+          "emoji": "🕊️",
+          "contribution": [
+                "生於美國伊利諾伊州的亞述裔家庭，羅馬宗座東方學院（Pontifical Oriental Institute）神學博士；2021 年起任東方亞述教會大公牧首。",
+                "以《巴巴伊大帝的〈合一書〉》（Book of Union）英譯並刊出校訂敘利亞文本（Brill, Texts and Studies in Eastern Christianity 第 32 卷），把東方教會（常被稱「聶斯托留派」）最重要的基督論文獻帶進學術討論，並與天主教（1994 共同基督論宣言）對話的神學傳統接續。"
+          ],
+          "sourceNote": "著作皆受版權保護（status=copyright），來源待合法取得；中文書名凡標「（暫譯）」者為暫譯、未查得出版中譯本，非定案譯名。部分書目年份與出版者據一般書目知識，未逐筆核實。",
+          "timeline": [
+                {
+                      "year": "1975",
+                      "text": "7 月 4 日生。"
+                },
+                {
+                      "year": "2021",
+                      "text": "9 月 8 日當選、9 月 13 日就任東方亞述教會大公牧首。"
+                },
+                {
+                      "year": "2024",
+                      "text": "《巴巴伊大帝的〈合一書〉》英譯與校訂敘利亞文本由 Brill 出版。"
+                }
+          ],
+          "works": [
+                {
+                      "title": "巴巴伊大帝的《合一書》（暫譯）",
+                      "titleOriginal": "The Book of Union of Babai the Great（英譯＋校訂敘利亞文）",
+                      "year": "2024",
+                      "yearSort": 2024,
+                      "category": "代表著作",
+                      "languages": [
+                            "en",
+                            "syc"
+                      ],
+                      "status": "copyright",
+                      "note": "英譯加校訂敘利亞文本，Brill（Texts and Studies in Eastern Christianity 第 32 卷），2024 年 10 月出版（版權頁另載 2025）；英譯者 Michael J. Birnie，Mar Awa Royel 編校敘利亞文本。未查得中譯本。"
+                }
+          ]
+    },
     {
           "slug": "pierre-teilhard-de-chardin",
           "name": "德日進",
