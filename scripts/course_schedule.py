@@ -243,8 +243,10 @@ def syllabus_rows(c):
     weekend = c['code'] in ('PPA066', 'PPA001')
     for _label, date, title, extra, _chs in c['rows']:
         if weekend:
-            out.append((_md(date), [title]))
-            out.append((_md(date), list(extra) or ['']))
+            # 雙週班一次佔兩列：內容（含補充說明）全寫在第一列，第二列只留日期
+            #（2026-10-01 使用者：校外教學那兩列重寫兩次，寫在第一列就好）
+            out.append((_md(date), [title] + list(extra)))
+            out.append((_md(date), ['']))
         else:
             out.append((_md(date), [title] + list(extra)))
     out = out[:SYLLABUS_ROWS]
