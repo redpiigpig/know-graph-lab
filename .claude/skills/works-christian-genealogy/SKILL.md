@@ -191,6 +191,8 @@ description: 《基督宗教譜系學》成書管線（/works/christian-genealog
   （先前「全球南方拆兩段、近代獨立教會入第7章」的暫定作廢。）非洲錫安派等先有神醫運動後接五旬宗者，放五旬宗的
   **多中心起源**談（Anderson）；把各地復興連成一個家族的正是《使徒信心報》＝立宗。1901 年以前的靈恩運動（孟他努、
   歐文派、震顫派…）歸「經驗」那條譜系的歷次浮現（暫定，我提）。
+* ✅ **口吻與人稱**（10-01）：學術專書，用「**筆者**」。全書字數依討論的規模而定，不先設上限。
+* **補書：英譯本優先**（10-01）：z-lib 找不到的德法原版，有英譯就先排英譯（genealogy-sources 的 *-en 筆）。
 * 譯名：charisma 用「卡理斯瑪」（遠流康樂、簡惠美譯本），**不加「又譯」**。
 * **逐章備料 10-01 完成**：總表 `output/christian-genealogy/sourcing_summary.md`（各章 `sources_chN.md`，約 1,400 筆；
   優先書約 195 本已進 z-lib 第 2 層）。新教總表查證 `verify_protestant_table.md`、亞美尼亞 `research_armenian_fathers.md`。
