@@ -1,0 +1,161 @@
+{
+ "slug": "suvarnaprabhasa-c06",
+ "title": "金光明經・空品",
+ "family": "sa",
+ "intro": "梵本〈Śūnyatā〉＝藏譯第六章＝曇無讖〈空品〉＝合部〈空品〉＝義淨〈重顯空性品〉。全品是偈：身如空聚、六根如六賊、四大如篋中四蛇、十二緣起本無，以智慧刀斷煩惱網、開甘露門；末以伐盡三千界草木為塵喻佛智無量（曇無讖本無此末段）。",
+ "units": [
+  {
+   "id": "s6-00",
+   "label": "略說空義之因"
+  },
+  {
+   "id": "s6-01",
+   "label": "身如空聚・六根如賊"
+  },
+  {
+   "id": "s6-02",
+   "label": "身無作者・四大如蛇・身死"
+  },
+  {
+   "id": "s6-03",
+   "label": "觀無我・十二緣起本無"
+  },
+  {
+   "id": "s6-04",
+   "label": "斷煩惱網・開甘露門・擊法鼓"
+  },
+  {
+   "id": "s6-05",
+   "label": "往昔捨身供佛・佛智無量"
+  },
+  {
+   "id": "s6-05x",
+   "label": "義淨：大眾聞空得解"
+  },
+  {
+   "id": "s6-06",
+   "label": "品尾題"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本",
+   "who": "Nobel 校訂本・GRETIL"
+  },
+  {
+   "id": "bo",
+   "lang": "bo",
+   "label": "藏譯",
+   "who": "德格版 Toh 557・84000 翻譯記憶"
+  },
+  {
+   "id": "en",
+   "lang": "en",
+   "label": "84000 英譯",
+   "who": "譯自藏譯・與藏文逐句對齊"
+  },
+  {
+   "id": "T0663",
+   "lang": "lzh",
+   "label": "曇無讖本",
+   "who": "曇無讖譯《金光明經》・五世紀初",
+   "work": "T0663"
+  },
+  {
+   "id": "T0664",
+   "lang": "lzh",
+   "label": "合部本",
+   "who": "寶貴合《合部金光明經》・597 年",
+   "work": "T0664"
+  },
+  {
+   "id": "T0665",
+   "lang": "lzh",
+   "label": "義淨本",
+   "who": "義淨譯《金光明最勝王經》・703 年",
+   "work": "T0665"
+  }
+ ],
+ "works": [
+  "T0663",
+  "T0664",
+  "T0665"
+ ],
+ "anchors": [
+  {
+   "work": "T0663",
+   "node": "金光明經空品第五",
+   "uid": "T16n0663_p0340a07"
+  },
+  {
+   "work": "T0664",
+   "node": "金光明經空品第八",
+   "uid": "T16n0664_p0379b06"
+  },
+  {
+   "work": "T0665",
+   "node": "金光明最勝王經重顯空性品第九",
+   "uid": "T16n0665_p0424a19"
+  }
+ ],
+ "cells": {
+  "s6-00": {
+   "sa": "// Śūnyatāparivartaḥ // atha khalu bhagavāṃstasyāṃ velāyāmimā gāthā abhāṣata // anyeṣu sūtreṣu acintiyeṣu ativistaraṃ deśitaśūnyadharmāḥ / tasmādime sūtravarottame vaḥ saṃkṣepato deśita śūnyadharmāḥ // Suv_6.1 // sattvo 'lpabuddhiravijānamāno na śakya jñātuṃ khalu sarvadharmā / paśyeha sūtrendravarottamena saṃkṣepato deśita śūnyadharmāḥ // Suv_6.2 // anyairupāyairnayahetubhiśca sattvāna kāruṇyavaśodayārtham / prakāśitaṃ sūtravarendrametaṃ yathābhijānanti hi sarvasattvāḥ // Suv_6.3 //",
+   "bo": "དེ་ནས་བཅོམ་ལྡན་འདས་ཀྱིས་དེའི་ཚེ་ཚིགས་སུ་བཅད་པ་འདི་དག་གསུངས་སོ། །བསམ་གྱིས་མི་ཁྱབ་མདོ་རྣམས་གཞན་དག་ཏུ། །སྟོང་པའི་ཆོས་རྣམས་རབ་ཏུ་རྒྱས་བཤད་དེ། ། དེ་ལྟ་བས་ན་མདོ་མཆོག་དམ་པ་འདིར། །སྟོང་པའི་ཆོས་རྣམས་མདོ་ཙམ་བཤད་པ་ཡིན། ། སེམས་ཅན་བློ་ཆུང་རྣམ་པར་མི་ཤེས་པས། །ཆོས་རྣམས་ཐམས་ཅད་ཤེས་པར་མི་ནུས་ཏེ། ། དེ་ལྟ་བས་ན་མདོ་མཆོག་དམ་པ་འདིར། །སྟོང་པའི་ཆོས་རྣམས་མདོ་ཙམ་རབ་ཏུ་བཤད། ། སེམས་ཅན་ཀུན་གྱིས་ཅི་ནས་ཤེས་འགྱུར་དང་། །སེམས་ཅན་འབྱུང་བྱའི་ཕྱིར་ནི་སྙིང་རྗེའི་དབང་། །ཐབས་དང་ཚུལ་དང་རྒྱུ་གཞན་རྣམས་ཀྱིས་ནི། །མདོ་མཆོག་དམ་པ་དབང་པོ་འདི་བཤད་དོ། །",
+   "en": "Chapter 6: Emptiness  Then the Bhagavat recited these verses:  “I have taught the Dharmas of emptiness Very extensively in countless other sūtras. Therefore, in this supreme sūtra I will teach the Dharmas of emptiness briefly. “Unknowing beings with little intelligence Are not able to know all the Dharmas. Therefore, in this supreme sūtra I will teach the Dharmas of emptiness briefly. “I teach this lord of supreme sūtras Through other methods, ways, and causes, And through compassion, so that all beings will understand And so that it will arise in beings.",
+   "T0663": "「無量餘經，已廣說空，是故此中， 略而解說。眾生根鈍，尠於智慧， 不能廣知，無量空義，故此尊經， 略而說之；異妙方便，種種因緣， 為鈍根故，起大悲心，今我演說， 此妙經典。如我所解，知眾生意，",
+   "T0664": "「無量餘經，已廣說空，是故此中， 略而解說。眾生根鈍，尠於智慧， 不能廣知，無量空義。故此尊經， 略而說之，異妙方便，種種因緣。 為鈍根故，起大悲心，今我演說， 此妙經典。如我所解，知眾生意，",
+   "T0665": "爾時，世尊說此呪已，為欲利益菩薩摩訶薩人天大眾，令得悟解甚深真實第一義故，重明空性而說頌曰：「我已於餘甚深經，廣說真空微妙法； 今復於此經王內，略說空法不思議。 於諸廣大甚深法，有情無智不能解； 故我於斯重敷演，令於空法得開悟。 大悲哀愍有情故，以善方便勝因緣； 我今於此大眾中，演說令彼明空義。"
+  },
+  "s6-01": {
+   "sa": "ayaṃ ca kāyo yatha śūnyagrāmaḥ ṣaḍgrāma coropama indriyāṇi / tānyekagrāme nivasanti sarve na te vijānanti paraspareṇa // Suv_6.4 // cakṣurindriyaṃ rūpameteṣu dhāvati śrotrendriyaṃ śabdavicāraṇena / ghrāṇendriyaṃ gandhavicitrahāri jihvandriyaṃ nitya raseṣu dhāvati // Suv_6.5 // kāyendriyaṃ sparśagato 'bhidhāvati manendriyaṃ dharmavicāraṇena / ṣaḍindriyāṇīti paraspareṇa svakaṃ svakaṃ viṣayamabhidhāvati // Suv_6.6 // cittaṃ hi māyopama cañcalaṃ ca ṣaḍindriyaṃ viṣayavicāraṇaṃ ca / yathā naro dhāvati śūnyagrāme saṃgrāma caurebhi samāśritaśca // Suv_6.7 // cittaṃ yathā ṣaḍviṣayāśritaṃ ca prajānate indriya gocaraṃ ca / rūpaṃ ca śabdaṃ ca tathaiva gandhaṃ rasaṃ ca sparśa tatha dharmagocaram // Suv_6.8 // cittaṃ ca sarvatra ṣaḍindriyeṣu śakuniriva cañcalaṃ indriyasaṃpraviṣṭam / yatra yatrendriyasaṃśritaṃ ca na cendriyaṃ kurvatu jānamātmakam // Suv_6.9 //",
+   "bo": "ལུས་འདི་གྲོང་ཁྱིམ་སྟོང་པ་ཇི་བཞིན་ཏེ། །དབང་པོ་རྣམས་ནི་དམག་དང་ཆོམ་རྐུན་འདྲ། ། དེ་དག་ཐམས་ཅད་གྲོང་གཅིག་གནས་མོད་ཀྱི། །དེ་དག་ཕན་ཚུན་རྣམ་པར་མི་ཤེས་སོ། ། མིག་གི་དབང་པོ་གཟུགས་གྱུར་རྣམས་ལ་རྒྱུག །རྣ་བའི་དབང་པོ་སྒྲ་ལ་རྣམ་པར་སྤྱོད། །སྣ་ཡི་དབང་པོ་སྣ་ཚོགས་དྲི་རྣམས་འཕྲོག །ལྕེ་ཡི་དབང་པོ་རྟག་ཏུ་རོ་ལ་རྒྱུག །ལུས་ཀྱི་དབང་པོ་རེག་པ་དག་ལ་རྒྱུག ། ཡིད་ཀྱི་དབང་པོ་ཆོས་རྣམས་རྣམ་པར་སྤྱོད། །དབང་པོ་དྲུག་པོ་འདི་དག་ཕན་ཚུན་དུ། །རང་རང་ཡུལ་ལ་རབ་ཏུ་འཇུག་པར་བྱེད། ། སེམས་ནི་སྒྱུ་མ་ལྟ་བུར་གཡོ་བ་ཡིན། ། དབང་པོ་དྲུག་ནི་ཡུལ་ལ་རྣམ་སྤྱོད་དེ། ། ཇི་ལྟར་མི་ཞིག་གྲོང་སྟོང་རྒྱུག་པ་དང་། །དམག་དང་ཆོམ་རྐུན་དག་དང་གནས་པ་བཞིན། །ཇི་ལྟར་སེམས་ནི་ཡུལ་དྲུག་གནས་བཅས་ཤིང་། །དབང་པོའི་སྤྱོད་ཡུལ་དག་ཀྱང་རབ་ཤེས་པ། ། དེ་ལྟར་སེམས་ནི་ཡུལ་དྲུག་གནས་བཅས་ཏེ། །དབང་པོའི་སྤྱོད་ཡུལ་རྣམས་ཀྱང་རབ་ཏུ་ཤེས། །གཟུགས་དང་སྒྲ་དང་དེ་བཞིན་དྲི་རྣམས་དང་། །རོ་དང་རེག་བྱ་དེ་བཞིན་སྤྱོད་ཡུལ་ཆོས། །སེམས་ནི་དབང་པོ་དྲུག་པོ་ཐམས་ཅད་ལ། །དབང་པོར་བཞུགས་པ་བྱ་བཞིན་གཡོ་བར་འགྱུར། ། དབང་པོ་གང་དང་གང་དུ་གནས་བཅས་པ། །དབང་པོ་དེ་ནི་ཤེས་པར་བདག་ཉིད་བྱེད། །",
+   "en": "“This body is like an empty village. The senses are like six village thieves, Who, although they are in the same village, Are not aware of one another. “The sense of sight runs toward forms; The sense of hearing moves after sounds; The sense of smell steals various aromas; The sense of taste runs after flavors;  “The sense of touch pursues tactility; The mental sense investigates phenomena. These six senses in relation to one another Are each engaging with their own objects of perception. “The mind is unstable, like an illusion. The six senses experience their fields of perception. The six village thieves present there, Are like a man running around in an empty village. “Just as the mind and the six present senses Know the range of sensory perception— Forms, sounds, and likewise smells, Flavors, tactility, and the range of mental phenomena—  “The mind enters the senses, moving like a bird Throughout all six of them. In whatever sense it is present, It has the nature of that sense’s perception.",
+   "T0663": "是身虛偽，猶如空聚；六入村落， 結賊所止，一切自住，各不相知。 眼根受色；耳分別聲；鼻嗅諸香； 舌嗜於味；所有身根，貪受諸觸； 意根分別，一切諸法；六情諸根， 各各自緣，諸塵境界，不行他緣。 心如幻化，馳騁六情，而常妄想， 分別諸法；猶如世人，馳走空聚， 六賊所害，愚不知避。心常依止， 六根境界，各各自知，所伺之處， 隨行色聲、香味觸法。心處六情， 如鳥投網，其心在在，常處諸根， 隨逐諸塵，無有暫捨。",
+   "T0664": "是身虛偽，猶如空聚。六入村落， 結賊所止，一切自住，各不相知。 眼根受色、耳分別聲、鼻嗅諸香、 舌嗜於味、所有身根，貪受諸觸、 意根分別，一切諸法。六情諸根， 各各自緣，諸塵境界，不行他緣。 心如幻化，馳騁六情，而常妄想， 分別諸法。猶如世人，馳走空聚， 六賊所害，愚不知避。心常依止， 六根境界，各各自知，所伺之處。 隨行色、聲、香、味、觸、法，心處六情， 如鳥投網。其心在在，常處諸根， 隨逐諸塵，無有暫捨。",
+   "T0665": "當知此身如空聚，六賊依止不相知； 六塵諸賊別依根，各不相知亦如是。 眼根常觀於色處，耳根聽聲不斷絕， 鼻根恒嗅於香境，舌根鎮甞於美味， 身根受於輕軟觸，意根了法不知厭， 此等六根隨事起，各於自境生分別。 識如幻化非真實，依止根處妄貪求； 如人奔走空聚中，六識依根亦如是。 心遍馳求隨處轉，託根緣境了諸事； 常愛色聲香味觸，於法尋思無暫停。 隨緣遍行於六根，如鳥飛空無障礙； 藉此諸根作依處，方能了別於外境。"
+  },
+  "s6-02": {
+   "sa": "kāyaśca niśceṣṭa nirvyāpāraṃ ca asārakaḥ pratyayasaṃbhavaśca / abhūtavikalpasamutthitaśca sthitakarmayantraṃ ivaṃ śūnyagrāmaḥ // Suv_6.10 // kṣityambhatejo 'nilāni yathā cauragrāmāntaḥ sthita deśadeśe / paraspareṇaiva sadā viruddhā yathaiva āśīviṣa ekaveśmani // Suv_6.11 // dhātūragāste ca caturvidhāni dve ūrdhvagāmī dvaya heṣṭagāmī / dvayādvayaṃ diśi vidiśāsu sarvaṃ naśyanti tā dhātubhujaṅgamāni // Suv_6.12 // kṣityuragaśca saliloragaśca imau ca heṣṭā kṣayatāṃ vrajete / tejoragaścānilamārutoraga imau hi dve ūrdhvagatau nabho 'nte // Suv_6.13 // cittaṃ ca vijñānamadhyasthitaṃ ca gatvā yathā pūrvakṛtena karmāṇā / deve manuṣyaeṣu ca triṣvapāyā yathākṛtaṃ pūrvabhave pravarttyā // Suv_6.14 // śleṣmānilapittakṣayāntaprāptaḥ kāyaḥ śakṛnmūtraparīṣapūrṇaḥ / nirābhirāmaḥ kṛmikṣudrapūrṇaḥ kṣiptaḥ śmaśāne yatha kāṣṭhabhūtaḥ // Suv_6.15 //",
+   "bo": "ལུས་ནི་གཡོ་བ་མེད་ཅིང་བྱེད་པ་མེད། ། སྙིང་པོ་མེད་ཅིང་རྐྱེན་ལས་བྱུང་བ་ཡིན། ། ཡང་དག་མ་ཡིན་ཡོངས་ སུ་རྟོག་ལས་བྱུང་། ། གྲོང་སྟོང་ལས་ཀྱི་འཁྲུལ་འཁོར་འདྲ་བར་གནས། ། ས་དང་མེ་དང་ཆུ་དང་རླུང་རྣམས་ནི། །གཞན་དུ་གནས་ཏེ་ཕྱོགས་དང་ཕྱོགས་ན་གནས། ། དཔེར་ན་སྦྲུལ་གདུག་གནས་གཅིག་ཇི་བཞིན་ཏེ། །རྟག་ཏུ་ཕན་ཚུན་མཐུན་པ་མ་ཡིན་བཞིན། ། ཁམས་ཀྱི་སྦྲུལ་རྣམས་བཞི་པོ་དེ་དག་ཀྱང་། །གཉིས་ནི་སྟེང་འགྲོ་གཉིས་ནི་ཐུར་དུ་འགྲོ། །ཕྱོགས་དང་ཕྱོགས་མཚམས་རྣམས་སུ་གཉིས་གཉིས་ཏེ། །ཁམས་སྦྲུལ་དེ་དག་ཐམས་ཅད་འཇིག་པར་འགྱུར། ། ས་ཡི་སྦྲུལ་དང་ཆུ་ཡི་སྦྲུལ་དག་དང་། །འདི་གཉིས་འོག་ཏུ་ཟད་པར་འགྱུར་བ་ཡིན། ། མེ་ཡི་སྦྲུལ་དང་རླུང་གི་སྦྲུལ་དག་དང་། །འདི་གཉིས་སྟེང་གི་ནམ་མཁར་འགྲོ་བ་ཡིན། ། ཇི་ལྟར་སྔོན་ཆད་བྱས་པའི་ལས་རྣམས་ཀྱིས། །སེམས་དང་རྣམ་ཤེས་ཀུན་ཏུ་གནས་ནས་དོང་། ། ལྷ་དང་མི་དང་ངན་སོང་གསུམ་དག་ཏུ། །ཇི་ལྟར་བྱས་པའི་ལས་ཀྱིས་སྲིད་པར་སྐྱེ། ། བད་ཀན་རླུང་དང་མཁྲིས་པ་ཟད་གྱུར་ན། །ལུས་ནི་གཅིན་དང་ངན་སྐྱུགས་རྣམས་ཀྱིས་གང་། ། མངོན་པར་མི་དགའ་སྲིན་བུའི་ཕུང་པོར་གྱུར། །དུར་ཁྲོད་དག་ན་འཐོར་བ་ཤིང་བཞིན་གྱུར། །",
+   "en": "“The body is unmoving and has no activity. It has no essence and arises from conditions. It has no real existence but arises from concepts. It is an empty village; it is like a working machine. “Earth, fire, water, and air Dwell here and there outside the village. They are like poisonous snakes in one location That are always in conflict with one another. “Of those four snakes of the elements, Two move upward and two go downward; They go in twos to the main and intermediate directions, And all those element snakes are destroyed. “The earth snake and the water snake— These two come to an end below. The fire snake and the air snake— They go upward into the sky. “The mind and the consciousnesses remain, And they go according to previous karma. According to the karma created in the past, they are reborn Into an existence among devas, humans, or the three lower realms. “When the phlegm, air, and bile come to an end, The body becomes covered with urine and vomit. It becomes a disgusting mass of worms And is cast into the charnel ground as if it were wood.",
+   "T0663": "身空虛偽， 不可長養，無有諍訟，亦無正主， 從諸因緣，和合而有，無有堅實， 妄想故起。業力機關，假為空聚， 地水火風，合集成立，隨時增減， 共相殘害；猶如四蛇，同處一篋， 四大蚖蛇，其性各異，二上二下， 諸方亦二，如是蛇大，悉滅無餘。 地水二蛇，其性沈下；風火二蛇， 性輕上升；心識二性，躁動不停， 隨業受報，人天諸趣，隨所作業， 而墮諸有。水火風種，散滅壞時， 大小不淨，盈流於外；體生諸蟲， 無可愛樂；捐棄塚間，如朽敗木。",
+   "T0664": "身空虛偽， 不可長養，無有諍訟、亦無正主。 從諸因緣，和合而有，無有堅實， 妄想故起。業力機關，假偽空聚， 地、水、火、風，合集成立，隨時增減， 共相殘害，猶如四蛇，同處一篋。 四大蚖蛇，其性各異，二上、二下， 諸方亦二，如是蛇大，悉滅無餘。 地、水二蛇，其性沈下；風、火二蛇， 性輕上昇。心、識二性，躁動不停， 隨業受報，天人諸趣，隨所作業， 而墮三有。水、火、風種，散滅壞時， 大小不淨，盈流於外，體生諸蟲， 無可愛樂，捐棄塚間，如朽敗木。",
+   "T0665": "此身無知無作者，體不堅固託緣成； 皆從虛妄分別生，譬如機關由業轉。 地水火風共成身，隨彼因緣招異果； 同在一處相違害，如四毒蛇居一篋。 此四大蛇性各異，雖居一處有昇沈； 或上或下遍於身，斯等終歸於滅法。 於此四種毒蛇中，地水二蛇多沈下； 風火二蛇性輕舉，由此乖違眾病生。 心識依止於此身，造作種種善惡業； 當往人天三惡趣，隨其業力受身形。 遭諸疾病身死後，大小便利悉盈流； 膿爛蟲蛆不可樂，棄在屍林如朽木。"
+  },
+  "s6-03": {
+   "sa": "paśyāhi tvaṃ devata ebhi evaṃ katyatra sattvastatha pudgalo vā / śūnyā hi ete khalu sarvadharmā avidyataḥ pratyayasaṃbhavāśca // Suv_6.16 // ete mahābhūta abhūta sarvāśca yasmānmahābhūtaprakṛtyabhāvā / tasmācca bhūtā hi asaṃbhavāśca avidyamānā na kadāci vidyate // Suv_6.17 // avidyataḥ pratyayasaṃbhavāśca avidyamānaiva avidyavācaḥ / tasmānmayā ukta avidya eṣā saṃskāravijñāna sanāmarūpam // Suv_6.18 // ṣaḍāyatanasparśa tathaiva vedanā tṛṣṇā upādāna tathā bhavaśca / jātijarāmaraṇaśoka upadravāṇāṃ duḥkhāni saṃskāra acintiyāni // Suv_6.19 // saṃsāracakre ca yathā sthitāni abhūta saṃbhūta asaṃbhavāśca / ayoniśaścittavicāraṇaṃ tathā dṛṣṭīgataṃ chetsyatha ātmanaiva // Suv_6.20 //",
+   "bo": "ལྷ་མོ་ཁྱོད་ནི་ཆོས་འདི་རྣམས་ལ་ལྟོས། །འདི་ལ་སེམས་ཅན་དེ་བཞིན་གང་ཟག་དང་། །ཆོས་རྣམས་འདི་དག་ཐམས་ཅད་སྟོང་པ་སྟེ། །མ་རིག་པ་ཡི་རྐྱེན་ལས་བྱུང་བ་ཡིན། ། འབྱུང་བ་ཆེན་པོ་འདི་དག་ཆེ་འབྱུང་མིན། ། མ་བྱུང་བ་ལས་བྱུང་ཞིང་མི་འབྱུང་སྟེ། །གང་གི་ཕྱིར་ནི་འབྱུང་བ་མི་འབྱུང་བ། ། དེ་ཕྱིར་འབྱུང་བ་ཆེ་ཞེས་ངས་བརྗོད་དོ། ། ཡོད་པ་མིན་ཞིང་གཞར་ཡང་ཡོད་མིན་ལ། ། མ་རིག་པ་ཡི་རྐྱེན་ལས་བྱུང་བ་ཡིན། ། མ་རིག་འདི་ནི་ཡོད་པ་མ་ཡིན་ཏེ། ། དེ་བས་ངས་ནི་མ་རིག་འདི་བཤད་དོ། ། འདུ་བྱེད་རྣམ་ཤེས་མིང་དང་གཟུགས་བཅས་དང་། །སྐྱེ་མཆེད་དྲུག་དང་རེག་དང་ཚོར་བ་དང་། །སྲེད་དང་ལེན་དང་དེ་བཞིན་སྲིད་པ་དང་། །སྐྱེ་དང་རྒ་ཤི་མྱ་ངན་གནོད་པ་རྣམས། །འཁོར་བའི་སྡུག་བསྔལ་བསམ་གྱིས་མི་ཁྱབ་པ། ། འཁོར་བའི་འཁོར་ལོ་ཇི་ལྟར་གནས་པ་དག །མ་བྱུང་བ་ལས་བྱུང་དང་མི་འབྱུང་དང་། །ཚུལ་བཞིན་མ་ཡིན་སེམས་ཀྱིས་རྣམ་དཔྱད་དང་། །བདག་གི་ལྟ་བར་གྱུར་པར་བཅད་པར་གྱིས། །",
+   "en": "“Goddess, look at these phenomena, At whatever being or individual is here; All of these phenomena are empty, But they occur through the factor of ignorance. “All these great elements are not ‘great occurrences.’ They occur through nonoccurrence and so do not occur. Because the occurring elements are nonoccurring, For that reason I call them ‘great elements.’ “They are not existent and never were existent. They come to be because of ignorance. This ignorance, too, is not existent. Therefore, I teach that this is ignorance. “Formations, consciousness, and name and form; The six āyatanas, contact, and sensation; Craving, grasping, and likewise becoming; And the misfortunes of birth, aging and death, and misery—  “Those inconceivable sufferings in saṃsāra That are present in the wheel of saṃsāra Have happened without happening and have no origination. The distinctions made by an erroneous mind,  “And the view that there is a self, should be cut through.",
+   "T0663": "善女當觀，諸法如是，何處有人， 及以眾生？本性空寂，無明故有， 如是諸大，一一不實，本自不生， 性無和合。以是因緣，我說諸大， 從本不實，和合而有；無明體相， 本自不有，妄想因緣，和合而有； 無所有故，假名無明，是故我說， 名曰無明、行識名色、六入觸受、 愛取有生、老死愁惱，眾苦行業， 不可思議，生死無際，輪轉不息。 本無有生，亦無和合，不善思惟， 心行所造。",
+   "T0664": "善女當觀：諸法如是，何處有人、 及以眾生？本性空寂，無明故有。 如是諸大，一一不實，本自不生， 性無和合。以是因緣，我說諸大， 從本不實，和合而有。無明體性， 本自不有，妄想因緣，和合而生。 無所有故，假名無明，是故我說， 名曰無明。行、識、名色、六入、觸、受、 愛、取、有、生、老、死、憂、惱，眾苦行業， 不可思議。生死無際，輪轉不息， 本無有生，亦無和合。不善思惟， 心行所造，",
+   "T0665": "汝等當觀法如是，云何執有我眾生？ 一切諸法盡無常，悉從無明緣力起。 彼諸大種咸虛妄，本非實有體無生； 故說大種性皆空，知此浮虛非實有。 無明自性本是無，藉眾緣力和合有； 於一切時失正慧，故我說彼為無明。 行識為緣有名色，六處及觸受隨生； 愛取有緣生老死，憂悲苦惱恒隨逐。 眾苦惡業常纏迫，生死輪迴無息時； 本來非有體是空，由不如理生分別。"
+  },
+  "s6-04": {
+   "sa": "jñānāsinā chindatha kleśajālaṃ skandhālayaṃ paśyatha śūnyabhūtam / sparśetha taṃ bodhiguṇaṃ hyudāraṃ vivarta ca me amṛtapurasya dvāram // Suv_6.21 // saṃdarśi taṃ amṛtapurasya bhājanaṃ pravekṣya taṃ amṛtapurālayaṃ śubham / tarpiṣya ha amṛtatarasena ātmanāṃ parāhatā me varadharmabherīḥ // Suv_6.22 // āpūrito me varadharmaśaṅkhaḥ prajvālitā me varadharma ulkā / suvarṣitaṃ me varadharmavarṣaṃ parājitā me parakleśaśatravaḥ // Suv_6.23 // ucchrepitaṃ me varadharmadhvajaṃ pratāritā me bhavasattvasamudrāḥ / pidhitāni me 'pāyapathāni trīṇi kleśāgnidāhaṃ śamayitva prāṇinām // Suv_6.24 //",
+   "bo": "ཡེ་ཤེས་རལ་གྲིས་ཉོན་མོངས་རྒྱ་མོ་གྲོལ། ། ཕུང་ པོའི་གནས་ལ་སྟོང་པར་གྱུར་པར་ལྟོས། ། བྱང་ཆུབ་ཡོན་ཏན་རྒྱ་ཆེན་རེག་པར་གྱིས། ། ངས་ནི་བདུད་རྩི་གྲོང་ཁྱེར་སྒོ་ཡང་ཕྱེ། ། བདུད་རྩི་ཁུ་བའི་སྣོད་ཀྱང་ཀུན་ཏུ་བསྟན། ། ང་ནི་བདུད་རྩིའི་གྲོང་ཁྱེར་གནས་དེར་འཇུག །ངས་ནི་བདུད་རྩིའི་ཁུ་བས་བདག་ཚིམ་བྱས། ། ངས་ནི་ཆོས་ཀྱི་རྔ་ཆེན་དམ་པ་བརྡུངས། ། ངས་ནི་ཆོས་ཀྱི་དུང་གི་མཆོག་ཀྱང་བུས། ། ངས་ནི་ཆོས་ཀྱི་སྒྲོན་མ་མཆོག་འབར་བྱས། །ངས་ནི་ཆོས་ཀྱི་ཆར་པ་དམ་པ་ཕབ། ། ང་ནི་ཉོན་མོངས་དགྲ་མཆོག་རྣམས་ལས་རྒྱལ། ། ངས་ནི་ཆོས་ཀྱི་རྒྱལ་མཚན་དམ་པ་བསྒྲེང་། ། སྲིད་པའི་མཚོ་ལས་སེམས་ཅན་རབ་ཏུ་བསྒྲལ། ། ངས་ནི་ངན་སོང་གསུམ་གྱི་ལམ་རྣམས་བཀག ། སེམས་ཅན་ཉོན་མོངས་མེ་ཡིས་གདུངས་གྱུར་པ། །རྟེན་མེད་གྱུར་ཅིང་དཔུང་གཉེན་མེད་པ་དག ། སྲོག་ཆགས་ཉོན་མོངས་མེས་གདུངས་ཞི་བྱས་ནས། །བདུད་རྩིའི་ཁུ་བ་བསིལ་བས་ཚིམ་པར་བྱས། །",
+   "en": "Cut through the net of the kleśas with the sword of wisdom. See that the basis of the skandhas is empty. Reach the vast qualities of the buddhas. “I have opened the gate of the city of amṛta. I have shown everyone the vessel of amṛta liquid. I have entered the place that is the city of amṛta, And I have been satiated by the amṛta liquid. “I have beaten the sublime great drum of the Dharma. I have blown the sublime conch of the Dharma. I have lit the sublime lamp of the Dharma, And I have sent down a sublime rain of Dharma. “I have defeated the supreme enemy, the kleśas. I have raised the sublime banner of the Dharma. I have brought beings across the ocean of existence. I have blocked the road to the three lower existences. “There are beings who are tormented by the fire of the kleśas, Who have no support or protector. I have extinguished the fire of the kleśas in those beings And brought them relief with the cooling liquid of amṛta.",
+   "T0663": "我斷一切，諸見纏等， 以智慧刀，裂煩惱網；五陰舍宅， 觀悉空寂，證無上道，微妙功德； 開甘露門、示甘露器、入甘露城、 處甘露室，令諸眾生，食甘露味。 吹大法螺、擊大法鼓、然大法炬、 雨勝法雨。我今摧伏，一切怨結， 竪立第一，微妙法幢；度諸眾生， 於生死海，永斷三惡，無量苦惱。 煩惱熾然，燒諸眾生，無有救護， 無所依止；我以甘露，清涼美味， 充足是輩，令離焦熱，",
+   "T0664": "我斷一切，諸見纏等。 以智慧刀，裂煩惱網，五陰舍宅， 觀悉空寂。證無上道，微妙功德， 開甘露門、示甘露器、入甘露城、 處甘露室，令諸眾生，食甘露味。 吹大法螺、擊大法鼓、然大法燈、 雨勝法雨。我今摧伏，一切怨結， 竪立第一，微妙法幢。度諸眾生， 於生死海，永斷三惡，無量苦惱。 煩惱熾然，燒諸眾生，無有救護、 無所依止。我以甘露，清涼美味， 充足是輩，令離燋熱。",
+   "T0665": "我斷一切諸煩惱，常以正智現前行； 了五蘊宅悉皆空，求證菩提真實處。 我開甘露大城門，示現甘露微妙器； 既得甘露真實味，常以甘露施群生。 我擊最勝大法鼓，我吹最勝大法螺， 我然最勝大明燈，我降最勝大法雨。 降伏煩惱諸怨結，建立無上大法幢； 於生死海濟群迷，我當關閉三惡趣。 煩惱熾火燒眾生，無有救護無依止； 清涼甘露充足彼，身心熱惱並皆除。"
+  },
+  "s6-05": {
+   "sa": "yasmāddhi pūrvamahamanekakalpān acintiyā pūjitva nāyakā hi / caritva bodhāya dṛḍhavratena saddharmakāyaṃ pariveṣamāṇaḥ // Suv_6.25 // hastau ca pādau ca parityajitvā dhanaṃ hiraṇyaṃ maṇimuktabhūṣaṇam / nayanottamāṅgaṃ priyadāraputraṃ suvarṇavaiḍūryavicitraratnāni // Suv_6.26 // chinditvā trisāhasrāyāṃ sarvavṛkṣavanaspatīm / sarvaṃ ca cūrṇayitvā tat kuryāt sūkṣmarajopamam // Suv_6.27 // cūrṇarāśiṃ karitvā tu yāvadākāśagocaram / aśakadbhabhāgabhinnāya dharaṇīrajaḥsamāni vā // Suv_6.28 // sarvasattvā aneke hi jñānavata tathaiva ca / sarvaṃ gaṇayituṃ śakyaṃ na tu jñātaṃ jinasya ca // Suv_6.29 // ekakṣaṇapravṛttaṃ tu yajjñānaṃ ca mahāmuneḥ / anekakalpakoṭīṣu na śakyaṃ gaṇayituṃ kvacit // Suv_6.30 //",
+   "bo": "གང་ཕྱིར་བསྐལ་པ་དུ་མར་སྔོན་ཆད་ངས། །འདྲེན་པ་བསམ་གྱིས་མི་ཁྱབ་མཆོད་པ་བྱས། །ཆོས་ཀྱི་སྐུ་དེ་ཡོངས་སུ་ཚོལ་བ་ན། །བརྟུལ་ཞུགས་བརྟན་པས་བྱང་ཆུབ་ཕྱིར་སྤྱད་དེ། ། ལག་པ་དང་ནི་མིག་དང་རྐང་པ་དང་། །ཡན་ལག་མཆོག་དང་བུ་སྡུག་བུ་མོ་དང་། །ནོར་དབྱིག་ནོར་བུ་མུ་ཏིག་རྒྱན་དང་གསེར། །བཻ་ཌཱུརྱ་དང་རིན་ཆེན་སྣ་ཚོགས་བཏང་། །སྟོང་གསུམ་ཤིང་ལྗོན་ཐམས་ཅད་དང་། །རྩྭ་དང་རྩྭ་རྣམས་ཐམས་ཅད་དང་། ། ནགས་ཚལ་དག་དང་ས་ལས་ནི། །སྐྱེ་བ་ཐམས་ཅད་བཅད་གཏུབས་ཏེ། །དེ་དག་ཐམས་ཅད་ཕྱེར་བརླག་ནས། །རབ་ཏུ་ཕྲ་བའི་རྡུལ་འདྲར་བྱས། །ནམ་མཁའི་དཀྱིལ་འཁོར་ཇི་ཙམ་པར། །ཕྱེ་མའི་ཕུང་པོ་སྤུངས་ནས་ནི། །འདི་ལ་ཆ་གསུམ་དབྱེ་བར་ནུས། ། ས་ལ་རྡུལ་ནི་ཡོད་པ་རྣམས། །སྟོང་གསུམ་དག་ནི་ཐམས་ཅད་ཀྱི། །རྡུལ་ཁམས་བསམ་གྱིས་མི་ཁྱབ་པ། །སེམས་ཅན་ཀུན་གྱི་ཤེས་པ་གང་། །དེ་ནི་སེམས་ཅན་གཅིག་གིར་གྱུར། །ཤེས་པ་དེ་ཡིས་རྡུལ་རྣམས་ཀྱི། །ཕྱེ་མ་བགྲང་བར་བྱེད་ན་ནི། །སེམས་ཅན་ཀུན་ལས་རབ་འཕགས་པ། །ཡེ་ཤེས་རབ་ལྡན་མི་རྣམས་ཀྱིས། །ཐམས་ཅད་བགྲང་བར་ནུས་སྲིད་ཀྱི། ། རྒྱལ་བའི་མཁྱེན་ལ་མི་ནུས་སོ། །ཐུབ་པ་ཆེན་པོའི་ ཡེ་ཤེས་གང་། །སྐད་ཅིག་གཅིག་ལ་འཇུག་པ་ཡང་། །བསྐལ་པ་བྱེ་བ་དུ་མར་ནི། །གང་དུའང་བགྲང་བར་མི་ནུས་སོ། །",
+   "en": "“For that reason, through many past eons I made offerings to innumerable guides, And in seeking for the Dharma body I practiced resolute discipline for the sake of enlightenment. “I gave away my arms, eyes, and legs; My head, beloved sons and daughters, Wealth, treasures, ornamentations of jewels and pearls, Gold, beryl, and various kinds of jewels. “If all the trees in the trichiliocosm, And all the grasses, the plants, And the forests—everything that Grows from the ground—were to be cut down,  “And they were all ground down And made into the smallest atoms And were formed into a heap of powder That reached the domain of the sky,  “It would not be possible to divide that into portions. There are the particles that exist in the earth— The countless elemental particles In all the trichiliocosm worlds—  “And if the knowledge of all beings Could become that of a single being, Such that with that knowledge All those particles could be counted,  “Then the humans with that perfect wisdom, Who would be superior to all other beings, Could possibly count all those particles, But still they would not be able to calculate a jina’s wisdom. “If they were to engage with a single instant Of the wisdom of the great Muni, For many millions of eons, They would still be unable to calculate it.”",
+   "T0663": "於無量劫， 遵修諸行，供養恭敬，諸佛世尊； 堅固修習，菩提之道；求於如來， 真實法身；捨諸所重，肢節手足、 頭目髓腦、所愛妻子、錢財珍寶、 真珠瓔珞、金銀琉璃，種種異物。」",
+   "T0664": "於無量劫， 遵修諸行，供養恭敬，諸佛世尊。 堅固修集，菩提之道，求於如來， 真實法身。捨諸所重，肢節、手、足、 頭、目、髓、腦、所愛男女、錢財、珍寶、 真珠、瓔珞、金、銀、琉璃、種種異物。 三千大千世界中，所有樹木折為籌， 三千大地碎微塵，是等微塵遍虛空， 一切眾生有智慧，以此智慧與一人， 如是人等如微塵，算此微塵可知數； 如來智慧不可數，如來一念有智慧， 不可數劫算不盡。」",
+   "T0665": "由是我於無量劫，恭敬供養諸如來； 堅持禁戒趣菩提，求證法身安樂處。 施他眼耳及手足，妻子僮僕心無悋， 財寶七珍莊嚴具，隨來求者咸供給。 忍等諸度皆遍修，十地圓滿成正覺； 故我得稱一切智，無有眾生度量者。 假使三千大千界，盡此土地生長物； 所有叢林諸樹木，稻麻竹葦及枝條。 此等諸物皆伐取，竝悉細末作微塵； 隨處積集量難知，乃至充滿虛空界。 一切十方諸剎土，所有三千大千界； 地土皆悉末為塵，此微塵量不可數。 假使一切眾生智，以此智慧與一人； 如是智者量無邊，容可知彼微塵數。 牟尼世尊一念智，令彼智人共度量； 於多俱胝劫數中，不能算知其少分。」"
+  },
+  "s6-05x": {
+   "T0665": "時諸大眾聞佛說此甚深空性，有無量眾生，悉能了達四大、五蘊體性俱空，六根、六境妄生繫縛，願捨輪迴，正修出離，深心慶喜，如說奉持。"
+  },
+  "s6-06": {
+   "sa": "iti śrīsuvarṇaprabhāsottamasūtrendrarāje śūnyatāparivarto nāma ṣaṣṭhaḥ //",
+   "bo": "གསེར་འོད་དམ་པ་མདོ་སྡེའི་དབང་པོའི་རྒྱལ་པོ་ལས། སྟོང་པ་ཉིད་ཀྱི་ལེའུ་ཞེས་བྱ་བ་སྟེ་དྲུག་པའོ།། །།དེ་ནས་རྒྱལ་པོ་ཆེན་པོ་རྣམ་ཐོས་ཀྱི་བུ་དང་། རྒྱལ་པོ་ཆེན་པོ་ཡུལ་འཁོར་སྲུང་དང་། རྒྱལ་པོ་ཆེན་པོ་འཕགས་སྐྱེས་པོ་དང་། རྒྱལ་པོ་ཆེན་པོ་མིག་མི་བཟང་རྣམས་སྟན་ལས་ལངས་ཏེ། བླ་གོས་ཕྲག་པ་གཅིག་ཏུ་བགོས་ནས་པུས་མོ་གཡས་པའི་ལྷ་ང་ས་ལ་བཙུགས་ཏེ། བཅོམ་ལྡན་འདས་ག་ལ་བ་དེ་ལོགས་སུ་ཐལ་མོ་སྦྱར་བ་བཏུད་ནས་བཅོམ་ལྡན་འདས་ལ་འདི་སྐད་ཅེས་གསོལ་ཏོ། །བཙུན་པ་བཅོམ་ལྡན་འདས་གསེར་འོད་དམ་པ་མདོ་སྡེའི་དབང་པོའི་རྒྱལ་པོ་འདི་ནི་དེ་བཞིན་གཤེགས་པ་ཐམས་ཅད་ཀྱིས་གསུངས་པ། དེ་བཞིན་གཤེགས་པ་ཐམས་ཅད་ཀྱིས་གཟིགས་པ། དེ་བཞིན་གཤེགས་པ་ཐམས་ཅད་ཀྱིས་དགོངས་པ།",
+   "en": "This concludes “Emptiness,” the sixth chapter of “The Lord King of Sūtras, The Sublime Golden Light.”"
+  }
+ }
+}

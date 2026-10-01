@@ -1,0 +1,151 @@
+{
+ "slug": "suvarnaprabhasa-c05",
+ "title": "金光明經・讚歎品（蓮華喻讚）",
+ "family": "sa",
+ "intro": "梵本〈Kamalākara-sarvatathāgatastava〉＝藏譯第五章＝曇無讖〈讚歎品〉＝合部〈讚歎品〉＝義淨〈蓮華喻讚品〉。佛說過去金龍尊王以偈讚三世諸佛相好，發願夢聞金鼓懺悔、與二子同受記。漢譯末尾點明金龍尊王即妙幢（信相）、二子即銀相銀光，梵藏無此句。",
+ "units": [
+  {
+   "id": "s5-00",
+   "label": "佛說金龍尊王讚佛因緣"
+  },
+  {
+   "id": "s5-01",
+   "label": "讚諸佛相好・初生光明"
+  },
+  {
+   "id": "s5-02",
+   "label": "三世諸佛如微塵・功德難說"
+  },
+  {
+   "id": "s5-03",
+   "label": "讚畢迴向・王發弘願"
+  },
+  {
+   "id": "s5-04",
+   "label": "以金鼓奉佛之果・二子同受記・願眾生離苦"
+  },
+  {
+   "id": "s5-05",
+   "label": "漢譯：金龍尊王即妙幢"
+  },
+  {
+   "id": "s5-06",
+   "label": "品尾題"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本",
+   "who": "Nobel 校訂本・GRETIL"
+  },
+  {
+   "id": "bo",
+   "lang": "bo",
+   "label": "藏譯",
+   "who": "德格版 Toh 557・84000 翻譯記憶"
+  },
+  {
+   "id": "en",
+   "lang": "en",
+   "label": "84000 英譯",
+   "who": "譯自藏譯・與藏文逐句對齊"
+  },
+  {
+   "id": "T0663",
+   "lang": "lzh",
+   "label": "曇無讖本",
+   "who": "曇無讖譯《金光明經》・五世紀初",
+   "work": "T0663"
+  },
+  {
+   "id": "T0664",
+   "lang": "lzh",
+   "label": "合部本",
+   "who": "寶貴合《合部金光明經》・597 年",
+   "work": "T0664"
+  },
+  {
+   "id": "T0665",
+   "lang": "lzh",
+   "label": "義淨本",
+   "who": "義淨譯《金光明最勝王經》・703 年",
+   "work": "T0665"
+  }
+ ],
+ "works": [
+  "T0663",
+  "T0664",
+  "T0665"
+ ],
+ "anchors": [
+  {
+   "work": "T0663",
+   "node": "金光明經讚歎品第四",
+   "uid": "T16n0663_p0339a07"
+  },
+  {
+   "work": "T0664",
+   "node": "讚歎品第七",
+   "uid": "T16n0664_p0378b06"
+  },
+  {
+   "work": "T0665",
+   "node": "蓮華喻讚品第七",
+   "uid": "T16n0665_p0422b26"
+  }
+ ],
+ "cells": {
+  "s5-00": {
+   "sa": "// kamalākarasarvatathāgatastavaparivartaḥ // atha khalu bhagavāṃstāṃ bodhisattvasamuccayāṃ kuladevatāmetadavocat / tena khalu punaḥ kuladevate kālena tena samayena rājā suvarṇabhujendro nāmāsīt / etena kamalākareṇa sarvatathāgatastavenātītānāgatapratyutpannān buddhān bhagavato 'bhyastāvīt //",
+   "bo": "དེ་ནས་བཅོམ་ལྡན་འདས་ཀྱིས་རིགས་ཀྱི་ལྷ་མོ་བྱང་ཆུབ་ཡང་དག་པར་བསྡུས་པ་ལ་འདི་སྐད་ཅེས་བཀའ་སྩལ་ཏོ། །རིགས་ཀྱི་ལྷ་མོ་དེའི་ཚེ་དེའི་དུས་ན། རྒྱལ་པོ་གསེར་གྱི་ལག་པའི་དབང་པོ་ཞེས་བྱ་བ་དེས། དེ་བཞིན་གཤེགས་པ་ཐམས་ཅད་ལ་བསྟོད་པ་པདྨའི་འབྱུང་གནས་འདིས། འདས་པ་དང་མ་འོངས་པ་དང་ད་ལྟར་བྱུང་བའི་སངས་རྒྱས་བཅོམ་ལྡན་འདས་རྣམས་ལ་མངོན་པར་བསྟོད་དོ། །",
+   "en": "Chapter 5: The Source of Lotus Flowers: A Praise of All the Buddhas  Then the Bhagavat said to the noble goddess Bodhisattvasamuccayā, “Noble goddess, at that time, in that time, there was a king by the name of Suvarṇabhujendra. Through this praise of all the tathāgatas, The Source of Lotus Flowers, he praised the buddha bhagavats of the past, future, and present.",
+   "T0663": "爾時佛告地神堅牢：「善女天！過去有王名金龍尊，常以讚歎，讚歎去來現在諸佛：",
+   "T0664": "爾時，佛告地神堅牢善女天：「過去有王名金龍尊，常以讚歎讚歎去、來、現在諸佛：",
+   "T0665": "爾時，佛告菩提樹神：「善女天！汝今應知，妙幢夜夢見妙金鼓出大音聲，讚佛功德并懺悔法，此之因緣我為汝等廣說其事，應當諦聽，善思念之。過去有王名金龍主，常以蓮華喻讚稱歎十方三世諸佛。」"
+  },
+  "s5-01": {
+   "sa": "ye jina pūrvaka ye ca bhavanti ye ca dhriyanti daśodiśi loke / teṣa jināna karomi praṇāmaṃ taṃ jinasaṃghamahaṃ praśayiṣye // Suv_5.1 // śāntapraśāntaviśuddhamunīndraṃ suvarṇavarṇaprabhāsitagātram / sarvasurāsurasusvarabuddhaṃ brahmarute svaragarjitaghoṣam // Suv_5.2 // ṣaṭpadamaulamahīruhakeśaṃ nīlasukuñcitakāśanikāśam / śaṅkhatuṣārasupāṇḍaladantaṃ hemavirājitabhāsitanābham // Suv_5.3 // nīlaviśālaviśuddhasunetraṃ nīlamivitpalapracyutibhāsam / padmasuvarṇaviśālasujihvaṃ padmaprabhāsitapadmamukhābham // Suv_5.4 // śaṅkhamṛṇālanibhāmukhatorṇaṃ dakṣiṇavartitaverulivarṇam / sūkṣmaniśākarakṣīṇaśaśīva gātra munermramarājvalanābham // Suv_5.5 // kāñcanakoṭi suvarṇamṛduraṃ nāsamukhonnata pīvaraghrāṇam / agradharāgraviśiṣṭasunāsaṃ mṛduka sarvajināṃśa satatam // Suv_5.6 // ekasame cittaromamukhāgraṃ vālasuromapradakṣiṇavartam / nīlanibhā jvalakuṇḍalajātaṃ nīlavirājitamaulisugrīvam // Suv_5.7 // jātasamānaprabhāsitagātraṃ pūjitasarvi deśodiśi loke / duḥkhamanantapraśāntatriloke sarvasukhena ca tarpitasattvam // Suv_5.8 // narakagātiṣvatha tiryaggatīṣu pretasurāsuramanuṣyagatīṣu / teṣu ca sarvasukhārpitasattvaṃ sarvapraśānta apāyagatīṣu // Suv_5.9 // varṇasuvarṇakanākanibhāsaṃ kāñcanataptaprabhāsitagātram / saumyaśaśāṅkasuvimalavakraṃ vikāsitarājitasuvimalavadanam // Suv_5.10 // taruṇatanūruhakomalagātraṃ siṃhamivākramavikramanāgam / lambitahasta pralambitabāhuṃ mārutapreritaśālalateva // Suv_5.11 // vyomaprabhājvalamuñcitaraśmiṃ sūryasahasramiva pratapantam / nirmalagātravarebhi munīndraṃ sarvaprabhāsita kṣetramanantam // Suv_5.12 // candraniśākarabhāskarajālaṃ kṣetramanantasahasraśateṣu / te 'pi ca niṣṭhita sarvamabhūṣi buddhaprabhāsavirocanatāyai // Suv_5.13 // buddhadivākaralokapradipaṃ buddhadivākaraśatasahasram / kṣetramanantasahasraśateṣu paśyatu sattva tathāgatasūryam // Suv_5.14 // puṇyasahasraśatāccitakāyaṃ sarvaguṇebhiralaṅkṛtagātram / śauṇḍagajendranibhaṃ jinabāhuṃ vimalasulakṣaṇamaṇḍitahastam // Suv_5.15 //",
+   "bo": "རྒྱལ་བ་གང་དག་སྔར་གྱུར་གང་བྱུང་དང་། །ཕྱོགས་བཅུའི་འཇིག་རྟེན་དག་ན་གང་བཞུགས་པ། །རྒྱལ་བ་དེ་དག་རྣམས་ལ་ཕྱག་བགྱིའོ། །རྒྱལ་བ་དེ་དག་ཀུན་ལ་བདག་གིས་བསྟོད། ། ཐུབ་དབང་ཞི་ཞིང་རབ་ཞི་རྣམ་པར་དག ། སྐུ་ནི་གསེར་གྱི་མདོག་ཏུ་རབ་ཏུ་གདའ། ། དབྱངས་རྣམས་ཀུན་གྱིས་སངས་རྒྱས་གསུང་སྙན་ཏེ། །ཚངས་པའི་སྒྲ་དབྱངས་རབ་ཏུ་བསྒྲགས་པའི་གསུང་། ། བུང་བ་རྨ་བྱ་ཨུཏྤལ་སྔོན་པོའི་དབུ། །མཐོན་མཐིང་ལྕང་ལོ་བྱ་ནི་ཙ་ཤ་འདྲ། ། ཁ་བ་དུང་ལྟར་རབ་ཏུ་དཀར་བའི་ཚེམས། །རྟག་ཏུ་གསེར་ལྟར་རྣམ་པར་མཛེས་པར་གདའ། ། སྤྱན་ནི་རིང་ཞིང་མཐོན་མཐིང་དྲི་མ་མེད། །ཨུཏྤལ་སྔོན་པོ་རབ་ཏུ་རྒྱས་པ་འདྲ། ། ལྗགས་ནི་ཆེ་ཞིང་ལེགས་ལ་པདྨའི་མདོག །པདྨ་འདྲར་སྣང་པདྨའི་ཟེ་བ་འདྲ། ། ཞལ་གྱི་མཛོད་སྤུ་པདྨ་དུང་དང་འདྲ། །བཻ་ཌཱུརྱ་ཡི་མདོག་འདྲ་གཡས་སུ་འཁྱིལ། ། ཐུབ་པའི་ཟླ་བ་ཕྲ་ཞིང་ཟླ་བ་ཟད་པ་འདྲ། ། སྐུ་ ཡི་ལྟེ་བ་བུང་བ་གསལ་བ་བཞིན། ། ཞལ་མཐོའི་ཤངས་ནི་རྟག་ཏུ་ལྷག་གེ་སྟེ། །འཇམ་ཞིང་ས་ལའི་གསེར་ལྟར་ཁ་དོག་བཟང་། ། རྟག་པར་རྒྱུན་དུ་རྒྱལ་བ་ཐམས་ཅད་ཀྱི། །རོ་མཆོག་འཇམ་ཞིང་དམ་པ་མཆོག་རབ་འཕགས། ། སྤུ་ཡི་བུ་ག་ནས་ནི་རེ་རེ་སྐྱེས། །སྤུ་རྣམས་སྐྱེས་པ་གཡས་སུ་འཁྱིལ་པ་སྟེ། །མཐོན་མཐིང་འོད་འབར་འཚེར་ཞིང་ལྕང་ལོ་ཅན། །རྨ་བྱའི་མགྲིན་སྡུག་འདྲ་བར་སྔོ་ལ་མཛེས། ། བལྟམས་མ་ཐག་ཏུ་སྐུ་ཡིས་སྣང་བར་བགྱིས། །ཕྱོགས་བཅུའི་འཇིག་རྟེན་དག་ནི་ཐམས་ཅད་གང་། །འཇིག་རྟེན་གསུམ་ན་སྡུག་བསྔལ་མཐའ་ཡས་ཞི། །བདེ་བ་ཀུན་གྱི་སེམས་ཅན་རྣམས་ཀྱང་ཚིམ། ། སེམས་དམྱལ་འགྲོ་དང་དུད་འགྲོའི་འགྲོ་བ་དང་། །ཡི་དགས་ལྷ་གནས་མི་ཡི་འགྲོ་རྣམས་སུ། །སེམས་ཅན་དེ་དག་ཐམས་ཅད་བདེ་བས་ཚིམ། །ངན་སོང་འགྲོ་བ་རྣམས་ནི་ཐམས་ཅད་ཞི། ། ཁ་དོག་མདོག་བཟང་གསེར་དང་འདྲ་བའི་འོད། །བཙོ་མའི་གསེར་ལྟར་རབ་ཏུ་སྣང་བའི་སྐུ། ། བདེ་གཤེགས་ཟླ་བ་རབ་ཏུ་དྲི་མེད་ཞལ། །འཛུམ་ཞིང་རྣམ་མཛེས་ཤིན་ཏུ་དྲི་མེད་ཞལ། ། གཞོན་ནུ་བཙས་འདྲར་སྐུ་ལུས་ཡན་ལག་འཇམ། ། སེང་གེ་འདྲ་བར་རྩལ་གྱིས་གནོན་པའི་མཆོག ། ཕྱག་རིང་ཕྱག་ནི་རབ་ཏུ་རིང་བ་སྟེ། །སཱ་ལའི་ལྕུག་མ་རླུང་གིས་བསྐྱོད་པ་བཞིན། ། འདོམ་གང་འོད་འབར་འོད་ཟེར་རབ་ཏུ་གཏོང་། །ཉི་མ་སྟོང་ལྟར་རབ་ཏུ་ལྷག་གེའོ། ། ཐུབ་པའི་དབང་པོའི་སྐུ་མཆོག་དྲི་མ་མེད། །ཞིང་རྣམས་མཐའ་ཡས་ཐམས་ཅད་རབ་ཏུ་སྣང་། ། སངས་རྒྱས་འོད་ནི་རྣམ་པར་ལྷང་ངེ་བས། །ཞིང་རྣམས་མཐའ་ཡས་བརྒྱ་སྟོང་རྣམས་སུ་ཡང་། །མཚན་བྱད་ཟླ་བ་ཉི་མ་མང་པོ་དག །དེ་དག་ཐམས་ཅད་འོད་ནི་མེད་པར་གྱུར། ། སངས་རྒྱས་ཉི་མ་འཇིག་རྟེན་སྒྲོན་མ་སྟེ། །སངས་རྒྱས་ཉི་མ་བརྒྱ་ཕྲག་སྟོང་རྣམས་ནི། །ཞིང་རྣམས་མཐའ་ཡས་སྟོང་ཕྲག་བརྒྱ་དག་ན། །དེ་བཞིན་གཤེགས་པའི་ཉི་མ་སེམས་ཅན་མཐོང་། ། བསོད་ནམས་སྟོང་ཕྲག་བརྒྱ་དང་ལྡན་པའི་སྐུ། ། ཡོན་ཏན་ཀུན་གྱིས་རབ་ཏུ་བརྒྱན་པའི་སྐུ། ། གླང་ཆེན་དབང་པོའི་སྣ་འདྲ་རྒྱལ་བའི་ཕྱག ། ཕྱག་དང་ཞབས་འོད་རབ་མཛེས་དྲི་མ་མེད། །ས་ཡི་སྟེང་གི་རྡུལ་ དང་མཚུངས་འདྲ་སྙེད། །ཕྲ་བའི་རྡུལ་སྙེད་སངས་རྒྱས་གང་འདས་དང་། །གང་དག་ཕྲ་བའི་རྡུལ་སྙེད་བྱུང་བ་དང་། །",
+   "en": "“ ‘The jinas who have appeared in the past And the jinas present in worlds in the ten directions, I pay homage to those jinas And I praise all those jinas. “ ‘A lord of munis is peaceful, totally peaceful, and pure. His body is a perfect golden color. A buddha’s speech is pleasant with every utterance, A speech that resounds like the voice of Brahmā. “ ‘He has hair like a bee, a peacock, and a blue lotus, With dark blue curls like the blue jaybird. His teeth are pure white like snow or a conch, And he is always beautiful like gold. “ ‘His eyes are long, dark blue, and stainless; They are like blossomed blue lotuses. His broad, excellent tongue is the color of a red lotus, Glowing like a red lotus, like red-lotus anthers. “ ‘The ūrṇā hair on his face is the color of a conch or lotus root; It curls to the right and is the color of white beryl. It is like a sliver of moon, the last of the moon. The Muni’s body has a navel as vivid as a carpenter bee. “ ‘He has a prominent nose that is always gleaming And is soft and an excellent color, like bright gold. He always, continuously, has the perfect nose of all the jinas, Which is soft, sublime, supreme, and noble. “ ‘From each and every pore there Rises a hair that curls to the right, A dark blue, shining, gleaming curl, Blue and beautiful like a peacock’s neck. “ ‘As soon as he was born, his body shone, Filling all worlds in the ten directions with light, Ending the endless sufferings in the three worlds, And satisfying beings with every happiness. “ ‘He satisfied with happiness The beings in the hells, animals, Pretas, devas, and human beings, And brought to an end all lower existences. “ ‘His light was the excellent color of gold; His body shone like purified gold. His perfectly stainless face is a sugata moon, His stainless mouth smiling beautifully. “ ‘His body and limbs are soft like a young boy’s. He has a perfect, powerful stride like a lion’s. He has long hands and very long arms Like vines on a sal tree moved by the breeze. “ ‘He has a fathom-wide aura that radiates light; He is as bright as a thousand suns. The stainless, supreme body of the lord of munis Illuminates all of the infinite realms. “ ‘A multitude of night-bringing moons and suns, In endless hundreds of thousands of realms, All become eclipsed by The brilliant light of the Buddha. “ ‘In endless hundreds of thousands of realms, May beings see the tathāgata suns— The suns of the buddhas, the lamps of worlds— As a hundred thousand buddha suns. “ ‘His body is endowed with a hundred thousand merits. His body is adorned by all good qualities. The Jina’s arms are like the trunk of the king of elephants. His hands and feet are beautiful with stainless light.",
+   "T0663": "「『我今尊重，敬禮讚歎，去來現在， 十方諸佛。諸佛清淨，微妙寂滅， 色中上色，金光照耀；於諸聲中， 佛聲最上，猶如大梵，深遠雷音； 其髮紺黑，光螺焰起，蜂翠孔雀， 色不得喻；其齒鮮白，猶如珂雪， 顯發金顏，分齊分明；其目脩廣， 清淨無垢，如青蓮華，映水開敷； 舌相廣長，形色紅輝，光明照耀， 如華初生；眉間毫相，白如珂月， 右旋潤澤，如淨琉璃；眉細脩揚， 形如月初，其色黑耀，過於蜂王； 鼻高圓直，如鑄金鋌，微妙柔軟， 當于面門；如來勝相，次第最上， 得味真正，無與等者；一一毛孔， 一毛旋生，軟細紺青，猶孔雀項。 即於生時，身放大光，普照十方， 無量國土，滅盡三界，一切諸苦， 令諸眾生，悉受快樂，地獄畜生， 及以餓鬼，諸人天等，安隱無患， 悉滅一切，無量惡趣。身色微妙， 如融金聚；面貌清淨，如月盛滿； 佛身明耀，如日初出；進止威儀， 猶如師子；脩臂下垂，立過于膝， 猶如風動，娑羅樹枝；圓光一尋， 能照無量，猶如聚集，百千日月； 佛身淨妙，無諸垢穢，其明普照， 一切佛剎；佛光巍巍，明焰熾盛， 悉能隱蔽，無量日月；佛日燈炬， 照無量界，皆令眾生，尋光見佛。 本所修習，百千行業，聚集功德， 莊嚴佛身，臂𦟛纖圓，如象王鼻； 手足淨軟，敬愛無厭；",
+   "T0664": "「『我今尊重、敬禮、讚歎，去、來、現在， 十方諸佛。諸佛清淨，微妙寂滅， 色中上色，金光照曜。於諸聲中， 佛聲最上，猶如大梵，深遠雷音。 其髮紺黑，光螺焰起，蜂翠孔雀， 色不得喻。其齒鮮白，猶如珂雪， 顯發金顏，分齊分明。其目脩廣， 清淨無垢，如青蓮華，映水開敷。 舌相廣長，形色紅暉，光明照耀， 如華初生。眉間毫相，白如珂月， 右旋潤澤，如淨琉璃。眉細脩楊， 形如月初，其色黑曜，過於蜂王。 鼻高圓直，如鑄金鋌，微妙柔軟， 當于面門。如來勝相，次第最上， 得味真正，無與等者。一一毛孔， 一毛旋生，軟細紺青，猶孔雀項。 即於生時，身放大光，普照十方， 無量國土，滅盡三界，一切諸苦， 令諸眾生，悉受快樂。地獄、畜生、 及以餓鬼、諸人、天等，安隱無患， 悉滅一切，無量惡趣。身色微妙， 如鎔金聚；面貌清淨，如月盛滿； 佛身明曜，如日初出；進止威儀， 猶如師子；脩臂下垂，立過于膝， 猶如風動，娑羅樹枝；圓光一尋， 能照無量，猶如聚集，百千日月。 佛身淨妙，無諸垢穢，其明普照， 一切佛剎。佛光巍巍，明焰火盛， 悉能隱蔽，無量日月。佛日燈炬， 照無量界，皆令眾生，尋光見佛。 本所修集，百千行業，聚集功德， 莊嚴佛身。臂𦟛纖圓，如象王鼻， 手足淨軟，敬愛無厭。",
+   "T0665": "即為大眾說其讚曰：「過去未來現在佛，安住十方世界中； 我今至誠稽首禮，一心讚歎諸最勝。 無上清淨牟尼尊，身光照耀如金色； 一切聲中最為上，如大梵響震雷音。 髮彩喻若黑蜂王，宛轉旋文紺青色； 齒白齊密如珂雪，平正顯現有光明。 目淨無垢妙端嚴，猶如廣大青蓮葉； 舌相廣長極柔軟，譬如紅蓮出水中。 眉間常有白毫光，右旋宛轉頗梨色； 眉細纖長類初月，其色晃耀比蜂王。 鼻高脩直如金鋌，淨妙光潤相無虧； 一切世間殊妙香，聞時悉知其所在。 世尊最勝身金色，一一毛端相不殊； 紺青柔軟右旋文，微妙光彩難為喻。 初誕身有妙光明，普照一切十方界； 能滅三有眾生苦，令彼悉蒙安隱樂。 地獄傍生鬼道中，阿蘇羅天及人趣； 令彼除滅於眾苦，常受自然安隱樂。 身色光明常普照，譬如鎔金妙無比； 面貌圓明如滿月，脣色赤好喻頻婆。 行步威儀類師子，身光朗耀同初日； 臂肘纖長立過膝，狀等垂下娑羅枝。 圓光一尋照無邊，赫奕猶如百千日； 悉能遍至諸佛剎，隨緣所在覺群迷。 淨光明網無倫比，流耀遍滿百千界； 普照十方無障礙，一切冥闇悉皆除。 善逝慈光能與樂，妙色映徹等金山； 流光悉至百千土，眾生遇者皆出離。 佛身成就無量福，一切功德共莊嚴； 超過三界獨稱尊，世間殊勝無與等。"
+  },
+  "s5-02": {
+   "sa": "bhūmitalopamarajasamatulyaṃ sūkṣmarajopama ye gatabuddhāḥ // sūkṣmarajopama ye ca bhavanti sūkṣmarajopama ye ca sthihanti // Suv_5.16 // teṣa jināna karomi praṇāmaṃ kāyatu vācamanena prasannaḥ / puṣpapradānasugandhapradānairvarṇaśatena sucetasi cāpi // Suv_5.17 // jihvaśatairapi buddhaguṇāni kalpasahasraśate na hi vaktum / ye guṇasādhunivṛtti jinānāṃ sā ca varāgravicitra anekaiḥ // Suv_5.18 // ekajinasya guṇā na hi śakyā jihvaśatairapi bhāṣitu kaścit / kāmamaśakti hi sarvajinānāṃ ekaguṇasya hi vistara vaktum // Suv_5.19 // sarvasadevakuloktasamūhaḥ sarvabhavāgrabhave jalapūrṇā / keśagrahaṇena tu śakya pramātuṃ naiva ca ekaguṇā sugatānām // Suv_5.20 //",
+   "bo": "གང་དག་ཕྲ་བའི་རྡུལ་སྙེད་བཞུགས་པ་ཡི། །རྒྱལ་བ་དེ་དག་ལ་ནི་རབ་དང་བའི། །ངག་ཡིད་ལུས་ཀྱིས་མེ་ཏོག་དབུལ་བ་དང་། །སྤོས་རྣམས་དབུལ་དང་བསྔགས་པ་བརྒྱ་དག་དང་། །དགེ་བའི་སེམས་ཀྱིས་ཀྱང་ནི་ཕྱག་འཚལ་ལོ། ། རྒྱལ་བའི་ཡོན་ཏན་གང་དག་དགེར་གྱུར་པ། །སྙིང་པོ་མཆོག་རབ་སྣ་ཚོགས་དུ་མ་སྟེ། ། བདག་གིས་བསྐལ་པ་སྟོང་དུ་ལྕེ་བརྒྱ་ཡིས། །སངས་རྒྱས་ཡོན་ཏན་བརྗོད་པར་མི་ནུས་སོ། ། རྒྱལ་བ་གཅིག་གི་ཡོན་ཏན་རྣམས་ཀྱང་ནི། །ལྕེ་སྟོང་གིས་ཀྱང་ཅུང་ཟད་བརྗོད་མི་ནུས། །བདག་གིས་རྒྱལ་བ་དག་ནི་ཐམས་ཅད་ཀྱི། །ཡོན་ཏན་ལྕེ་བརྒྱས་བརྗོད་པར་ག་ལ་ནུས། ། ལྷར་བཅས་འཇིག་རྟེན་ཐམས་ཅད་མཚོར་གྱུར་ཏེ། །སྲིད་པའི་རྩེ་མོ་མན་ཆད་ཆུས་གང་བ། །སྐྲ་ཡི་རྩེ་མོས་དཔག་པར་ནུས་སྲིད་ཀྱི། ། བདེ་གཤེགས་རྣམས་ཀྱི་ཡོན་ཏན་གཅིག་ལ་མིན། །",
+   "en": "“ ‘The buddhas who have been, who are as numerous as atoms; Who are as numerous as the dust on the surface of the earth; Those who are appearing, who are as numerous as atoms; Those who are present, who are as numerous as atoms—  “ ‘To those jinas I pay homage In pure faith, with body and speech, Offering flowers and offering perfumes, And with a hundred praises and a virtuous mind. “ ‘The good qualities that the jinas have Are a manifold multitude of the very best. I could not describe those qualities of the jinas In a thousand eons with a hundred tongues. “ ‘With a thousand tongues I could not describe Even a fraction of the qualities of a single jina, So how could I describe with a thousand tongues The qualities of all the jinas? “ ‘If the world and its paradises became an ocean, And up to the summit of existence became filled with water, It would be possible to measure it with the tip of a hair. But one cannot measure a single quality of the sugatas.",
+   "T0663": "去來諸佛， 數如微塵，現在諸佛，亦復如是； 如是如來，我今悉禮。身口清淨， 意亦如是，以妙香華，供養奉獻， 百千功德，讚詠歌歎，設以百舌， 於千劫中，歎佛功德，不能得盡； 如來所有，現世功德，種種深固， 微妙第一，設復千舌，欲讚一佛， 尚不能盡，功德少分，況欲歎美， 諸佛功德？大地及天，以為大海， 乃至有頂，滿其中水，尚以一毛， 知其滴數，無有能知，佛一功德。",
+   "T0664": "去、來諸佛， 數如微塵；現在諸佛，亦復如是。 如是如來，我今悉禮，身、口清淨、 意亦如是。以好華香，供養奉獻， 百千功德，讚詠歌歎。設以百舌， 於千劫中，歎佛功德，不能得盡。 如來所有，現世功德，種種深固， 微妙第一。設復千舌，欲讚一佛， 尚不能盡，功德少分；況欲歎美， 諸佛功德？大地及天，以為大海， 乃至有頂，滿其中水，尚可以毛， 知其渧數；無有能知，佛一功德。",
+   "T0665": "所有過去一切佛，數同大地諸微塵； 未來現在十方尊，亦如大地微塵眾。 我以至誠身語意，稽首歸依三世佛； 讚歎無邊功德海，種種香花皆供養。 設我口中有千舌，經無量劫讚如來； 世尊功德不思議，最勝甚深難可說。 假令我舌有百千，讚歎一佛一功德； 於中少分尚難知，況諸佛德無邊際。 假使大地及諸天，乃至有頂為海水； 可以毛端滴知數，佛一功德甚難量。"
+  },
+  "s5-03": {
+   "sa": "varṇita saṃstuta me jinasarvaṃ kāyatu vāca prasannamanena / yanmama sañcitapuṇyaphalāgraṃ tena ca sattva prabhotu jinatvam // Suv_5.21 // evaṃ stavitva narapati buddhaṃ evaṃ karoti nṛpaḥ praṇidhānam / yatra ca kutraci mahya bhaveta jāti anāgatakalpamanantā // Suv_5.22 // īdṛśi bheri mi paśyami svapne īdṛśa deśana tatra śṛṇomi / īdṛśa jīnastutikamalākara jātiṣu tatra labhe smaraṇatvam // Suv_5.23 // buddhaguṇāni anantamatulyā ye 'pi ca durlabha kalpasahasraiḥ / amu śruṇeya ca svapnagato 'pi teṣu ca deśayi divasagato 'pi // Suv_5.24 // duḥkhasamudra vimocayi sattvā pūrayi ṣaḍabhi pi pāramitābhiḥ / bodhimanuttara paśca labheyaṃ kṣetra bhaveta mamā asamarthyam // Suv_5.25 //",
+   "bo": "ལུས་དང་ངག་ཡིད་རབ་ཏུ་དང་བ་ཡིས། །རྒྱལ་བ་ཀུན་ལ་བདག་གིས་བསྔགས་བསྟོད་པས། ། བདག་གིས་བསོད་ནམས་འབྲས་བུ་མཆོག་བསགས་གང་། །དེས་ནི་སེམས་ཅན་རྒྱལ་བ་རེག་གྱུར་ཅིག ། དེ་ལྟར་རྒྱལ་པོས་སངས་རྒྱས་རྣམས་བསྟོད་ནས། །རྒྱལ་པོ་འདི་ལྟར་སྨོན་ལམ་འདེབས་པ་ནི། །མ་འོངས་བསྐལ་པ་མཐའ་ཡས་རྣམས་སུ་ཡང་། །གང་དང་གང་དུ་བདག་ནི་སྐྱེ་བ་ན། །རྨི་ལམ་དུ་ནི་འདི་འདྲའི་རྔ་བལྟ་ཞིང་། ། དེར་ནི་བཤགས་པ་འདི་འདྲ་མཉན་པར་བགྱི། ། རྒྱལ་བསྟོད་པདྨ་འབྱུང་རྒྱལ་འདི་འདྲ་བ། །སྐྱེ་བ་དེ་དང་དེར་ནི་རྙེད་པར་བགྱི། ། སངས་རྒྱས་ཡོན་ཏན་མཐའ་ཡས་མཚུངས་མེད་དང་། །གང་ཡང་བསྐལ་པ་སྟོང་དུ་རྙེད་དཀའ་བ། །དེ་དག་རྨི་ལམ་དུ་ཡང་མཉན་པར་བགྱི། །ཉིན་གྱུར་ཚེ་ཡང་དེ་དག་བཤད་པར་བགྱི། ། སེམས་ཅན་སྡུག་བསྔལ་མཚོ་ལས་ཐར་བར་བགྱི། ། ཕ་རོལ་ཕྱིན་པ་དྲུག་པོ་རྫོགས་པར་བགྱི། །ཕྱི་ནས་བྱང་ཆུབ་བླ་མེད་ཐོབ་པར་བགྱི། །བདག་གི་ཞིང་ནི་ལྷོད་པ་མེད་གྱུར་ཅིག །",
+   "en": "“ ‘With faith and with body, speech, and mind I praise and eulogize all the jinas. Through my accumulated perfect results of merit, May beings reach the state of buddhahood.’ “When the king had praised the Buddha in that way, The king prayed in this way: ‘Wherever I am born, In endless future eons,  “ ‘May I see such a drum in a dream. There, may I hear this kind of confession. May I encounter in every lifetime A praise such as this Source of Lotuses. “ ‘May I hear in a dream of those Infinite, unequaled qualities of the buddhas, Which are difficult to acquire even in a thousand eons, And may I teach them when I am awake. “ ‘May I free beings from the ocean of suffering. May I complete the six perfections And afterward attain the highest enlightenment, And may my realm be without an equal.",
+   "T0663": "我今以禮，讚歎諸佛，身口意業， 悉皆清淨，一切所修，無量善業， 與諸眾生，證無上道。』如是人王， 讚歎佛已，復作如是，無量誓願： 『若我來世，無量無邊，阿僧祇劫， 在在生處，常於夢中，見妙金鼓， 得聞懺悔，深奧之聲。今所讚歎， 面貌清淨，願我來世，亦得如是。 諸佛功德，不可思議，於百千劫， 甚難得值，願於當來，無量之世， 夜則夢見，晝如實說。我當具足， 修行六度，濟拔眾生，越於苦海， 然後我身，成無上道；令我世界， 無與等者，",
+   "T0664": "我今已禮，讚歎諸佛，身、口、意業， 悉皆清淨。一切所修，無量善業， 與諸眾生，證無上道。』如是人王， 讚歎佛已，復作如是，無量誓願： 『若我來世，無量無邊，阿僧祇劫， 在在生處，常於夢中，見妙金鼓， 得聞懺悔，深奧之聲。今所讚歎， 面貌清淨，願我來世，亦得如是。 諸佛功德，不可思議，於百千劫， 甚難得值，願於當來，無量之世， 夜則夢見、晝如實說。我當具足， 修行六度，濟拔眾生，越於苦海， 然後我身，成無上道，令我世界， 無與等者。",
+   "T0665": "我以至誠身語意，禮讚諸佛德無邊； 所有勝福果難思，迴施眾生速成佛。 彼王讚歎如來已，倍復深心發弘願； 願我當於未來世，生在無量無數劫。 夢中常見大金鼓，得聞顯說懺悔音； 讚佛功德喻蓮華，願證無生成正覺。 諸佛出世時一現，於百千劫甚難逢； 夜夢常聞妙鼓音，晝則隨應而懺悔。 我當圓滿修六度，拔濟眾生出苦海； 然後得成無上覺，佛土清淨不思議。"
+  },
+  "s5-04": {
+   "sa": "bheripradānavipākaphalena sarvajināna ca saṃstutihetoḥ / saṃmukha paśyami śākyamunīndraṃ vyākaraṇaṃ hyahu tatra labheyam // Suv_5.26 // ye ima dāraka dvau mama putrau kanakendra kanakaprabhāsvaraḥ / te ubhi dāraka tatra labheyaṃ bodhimanuttara vyākaraṇaṃ ca // Suv_5.27 // ye 'pi ca sattva arakṣa atrāṇā śaraṇavihīna viyāsagatāśca / teṣu bhaveya anāgata sarva trāṇaparāyaṇaśaraṇebhiśca // Suv_5.28 // duḥkhasamudbhavasaṃkṣayakartā sarvasukhasya ca ākarabhūtaḥ / kalpa anāgata bodhi careyaṃ yattaka pūrvakakoṭigatāśca // Suv_5.29 // svarṇaprabhottamadeśanatāya pāpasamudra śoṣatu mahyam / karmasamudra vikīryatu mahyaṃ kleśasamudra vicchidyatu mahyam // Suv_5.30 // puṇyasamudra prapūryatu mahyaṃ jñānasamudra viśodhyatu mahyam / vimalajñānaprabhāsabalena sarvaguṇāna samudra bhaveyā // Suv_5.31 // bodhiguṇairguṇaratna prapūrṇā deśanasvarṇa prabhāsabalena / puṇyaprabhāsa bhaviṣyati mahyaṃ bodhiprabhāsa viśodhyatu mahyam // Suv_5.32 // kāyaprabhāsa bhaviṣyati mahyaṃ puṇyaprabhāsa virocanatā ca / sarvatriloki viśiṣṭa bhaveyaṃ pūṇyabalena samanvita nityam // Suv_5.33 // duḥkhasamudra uttārayitā sarvasukhasya ca sāgarakalpya / kalpamanāgata bodhi careyaṃ yattakapūrvakakoṭigatāśca // Suv_5.34 // yādṛśakṣetraviśiṣṭa triloke sarvajinānamananta guṇena / tādṛśakṣetramanantaguṇaṃ bheṣyati mahyamanāgatasarvam // Suv_5.35 //",
+   "bo": "རྔ་ཕུལ་རྣམ་པར་སྨིན་པའི་འབྲས་བུ་དང་། །རྒྱལ་བ་ཐམས་ཅད་ལ་ཡང་བསྟོད་པའི་རྒྱུས། །ཤཱཀྱ་ཐུབ་དབང་མངོན་དུ་བལྟ་བར་བགྱི། །དེར་ནི་བདག་ གིས་ལུང་བསྟན་ཐོབ་གྱུར་ཅིག ། གསེར་གྱི་ལག་པའི་དབང་དང་གསེར་གྱི་འོད། །བདག་གི་ཁྱེའུ་ནི་གང་ཡིན་འདི་གཉིས་ཀྱང་། །དེར་ནི་བུ་ཕོ་དེ་དག་གཉི་ག་དང་། །བྱང་ཆུབ་བླ་མེད་ལུང་བསྟན་ཐོབ་པར་ཤོག ། སེམས་ཅན་གང་དག་གནས་དང་རྟེན་མེད་ཅིང་། །སྐྱབས་དང་བྲལ་ནས་ཕོངས་པར་གྱུར་པ་དག །དེ་དག་ལ་ཡང་མ་འོངས་དུས་རྣམས་ན། །སྐྱོབ་དང་དཔུང་གཉེན་སྐྱབས་དང་རྟེན་གྱུར་ཤོག ། སྡུག་བསྔལ་ཀུན་འབྱུང་ཟད་པར་བྱེད་གྱུར་ཅིག ། དགེ་བ་ཀུན་གྱི་འབྱུང་གནས་གྱུར་པར་ཤོག ། སྔོན་མཐའ་འདས་པ་དེ་དག་ཇི་སྲིད་པ། །མ་འོངས་བསྐལ་པར་བྱང་ཆུབ་སྤྱད་པར་བགྱི། ། གསེར་འོད་དམ་པ་ཡི་ནི་བཤགས་པ་ཡིས། །བདག་གི་སྡིག་པའི་རྒྱ་མཚོ་བསྐམས་པར་ཤོག །བདག་གི་ལས་ཀྱི་རྒྱ་མཚོ་ཟད་གྱུར་ཅིག ། བདག་གི་ཉོན་མོངས་རྒྱ་མཚོ་ཟད་པར་ཤོག །བདག་གི་བསོད་ནམས་རྒྱ་མཚོ་རྫོགས་གྱུར་ཅིག ། ཡེ་ཤེས་དྲི་མེད་སྣང་བ་དམ་པ་ཡི། །བདག་གི་ཡེ་ཤེས་རྒྱ་མཚོ་རྣམ་དག་ཅིང་། །ཡོན་ཏན་ཀུན་གྱི་རྒྱ་མཚོར་གྱུར་པར་ཤོག ། བྱང་ཆུབ་ཡོན་ཏན་རིན་ཆེན་རྫོགས་གྱུར་ཅིག ། གསེར་འོད་དམ་པའི་བཤགས་པའི་སྟོབས་ཀྱིས་ནི། ། བདག་གི་བསོད་ནམས་རབ་ཏུ་སྣང་བར་ཤོག ། བདག་གི་བྱང་ཆུབ་སྣང་བ་རྣམ་དག་གྱུར། ། ཡེ་ཤེས་དྲི་མེད་སྣང་བ་དམ་པ་ཡི། །བདག་གི་ལུས་ཀྱི་འོད་ནི་སྣང་བར་ཤོག ། བསོད་ནམས་སྣང་བ་ལྷག་གེར་བྱ་བའི་ཕྱིར། །འཇིག་རྟེན་གསུམ་ན་ཁྱད་པར་འཕགས་གྱུར་ཅིག ། བསོད་ནམས་སྟོབས་དང་རྟག་ཏུ་ལྡན་པར་ཤོག ། སྡུག་བསྔལ་རྒྱ་མཚོ་ལས་ནི་སྒྲོལ་བ་དང་། །བདེ་བ་ཀུན་གྱི་རྒྱ་མཚོ་འདྲ་བ་ཡིས། །མ་འོངས་བསྐལ་པར་བྱང་ཆུབ་སྤྱད་པར་བགྱི། ། འཇིག་རྟེན་གསུམ་ན་སྔོན་མཐར་ཇི་སྙེད་གཤེགས། །དེ་དག་ཞིང་ནི་རྒྱལ་བ་ཐམས་ཅད་ཀྱི། །ཡོན་ཏན་མཐའ་ཡས་ཁྱད་འཕགས་ཅི་འདྲ་བ། །ཡོན་ཏན་མཐའ་ཡས་རྣམས་ཀྱིས་བདག་གི་ཞིང་། །མ་འོངས་དུས་ན་དེ་འདྲར་འགྱུར་བར་ཤོག །",
+   "en": "“ ‘Through the ripened result of offering a drum, And through the cause that is praising the buddhas, May I directly see the Śākya lord of munis, And may I attain there the prophecy of my buddhahood. “ ‘May these two youths, my two sons, Kanakabhujendra and Kanakaprabhāsvara, Attain there the prophecy Of attaining the highest enlightenment. “ ‘May those beings who have no protector or savior, Who are without a refuge and are in distress, May they all in the future Have saviors, protectors, and refuges. “ ‘May the source of all suffering come to an end. May there be the source of all happiness. May I have the conduct of enlightenment in future eons, Which are as numerous as the eons of the past. “ ‘Through the confession of The Sublime Golden Light, May my ocean of bad actions dry up, May my ocean of karma come to an end, And may my ocean of kleśas cease to exist. “ ‘May my ocean of merit become complete. Through the power of the light of stainless wisdom, May the ocean of my wisdom become complete, And may there be an ocean of all qualities. “ ‘May the precious qualities of enlightenment be complete. Through the power of The Sublime Golden Light confession. May my merit become radiant. May the light of my enlightenment be purified. “ ‘Through the sublime light of stainless wisdom, May my body shine with light. In order that the light of merit be bright, May I become preeminent within the three worlds. “ ‘May I always have the power of merit. May I be liberated from the ocean of suffering And practice enlightened conduct in future eons With every happiness that is like an ocean. “ ‘In future times, may my realm Have the same infinite qualities As the superior, infinite qualities Of all the jinas in the realms That have been in the three worlds in the past.’ ”",
+   "T0663": "奉貢金鼓，讚佛因緣， 以此果報，當來之世，值釋迦佛， 得受記莂，并令二子：金龍金光， 常生我家，同共受記。若有眾生， 無救護者，眾苦逼切，無所依止， 我於當來，為是等輩，作大救護， 及依止處，能除眾苦，悉令滅盡， 施與眾生，諸善安樂。我未來世， 行菩薩道，不計劫數，如盡本際， 以此金光，懺悔因緣，使我惡海， 及以業海、煩惱大海，悉竭無餘。 我功德海，願悉成就；智慧大海， 清淨具足；無量功德，助菩提道， 猶如大海，珍寶具足。以此金光， 懺悔力故，菩提功德，光明無礙， 慧光無垢，照徹清淨。我當來世， 身光普照，功德威神，光明焰盛， 於三界中，最勝殊特，諸功德力， 無所減少，當度眾生，越於苦海， 并復安置，功德大海。來世多劫， 行菩提道，如昔諸佛，行菩提者。 三世諸佛，淨妙國土；諸佛至尊， 無量功德；令我來世，得此殊異， 功德淨土，如佛世尊。』",
+   "T0664": "奉貢金鼓，讚佛因緣， 以此果報，當來之世，值釋迦佛， 得授記莂；并令二子，金龍、金光， 常生我家，同共授記。若有眾生， 無救護者，眾苦逼切，無所依止。 我於當來，為是等輩，作大救護、 及依止處，能除眾苦，悉令滅盡， 施與眾生，諸善安樂。我未來世， 行菩提道，不計劫數，如盡本際。 以此金光，懺悔因緣，使我惡海、 及以業海、煩惱大海，悉竭無餘； 我功德海，願悉成就；智慧大海， 清淨具足。無量功德，助菩提道， 猶如大海，珍寶具足。以此金光， 懺悔力故，菩提功德，光明無礙。 慧光無垢，照徹清淨，我當來世， 身光普照。功德威神，光明焰盛， 於三界中，最勝殊特。諸功德力， 無所減少，當度眾生，越於苦海， 并復安置，功德大海。來世多劫， 行菩提道，如昔諸佛，行菩提道。 三世諸佛，淨妙國土；諸佛至尊， 無量功德。令我來世，得此殊異， 功德淨土，如佛世尊。』",
+   "T0665": "以妙金鼓奉如來，并讚諸佛實功德； 因斯當見釋迦佛，記我當紹人中尊。 金龍金光是我子，過去曾為善知識； 世世願生於我家，共授無上菩提記。 若有眾生無救護，長夜輪迴受眾苦； 我於來世作歸依，令彼常得安隱樂。 三有眾苦願除滅，悉得隨心安樂處； 於未來世修菩提，皆如過去成佛者。 願此金光懺悔福，永竭苦海罪消除； 業障煩惱悉皆亡，令我速招清淨果。 福智大海量無邊，清淨離垢深無底； 願我獲斯功德海，速成無上大菩提。 以此金光懺悔力，當獲福德淨光明； 既得清淨妙光明，常以智光照一切。 願我身光等諸佛，福德智慧亦復然； 一切世界獨稱尊，威力自在無倫匹。 有漏苦海願超越，無為樂海願常遊； 現在福海願恒盈，當來智海願圓滿。 願我剎土超三界，殊勝功德量無邊； 諸有緣者悉同生，皆得速成清淨智。"
+  },
+  "s5-05": {
+   "T0663": "信相當知， 爾時國王，金龍尊者，則汝身是； 爾時二子，金龍金光，今汝二子， 銀相等是。」",
+   "T0664": "信相當知： 爾時國王，金龍尊者，則汝身是； 爾時二子，金龍、金光，今汝二子， 銀相等是。",
+   "T0665": "妙幢汝當知，國王金龍主； 曾發如是願，彼即是汝身。 往時有二子，金龍及金光； 即銀相銀光，當授我所記。」 大眾聞是說，皆發菩提心； 願現在未來，常依此懺悔。"
+  },
+  "s5-06": {
+   "sa": "iti śrīsuvarṇaprabhāsottamasūtrendrarāje kamalākarasarvatathāgatastavaparivarto nāma pañcamaḥ //",
+   "bo": "གསེར་འོད་དམ་པ་མདོ་སྡེའི་དབང་པོའི་རྒྱལ་པོ་ལས། འདས་པ་དང་མ་འོངས་པ་དང་། ད་ལྟར་བྱུང་བའི་དེ་བཞིན་གཤེགས་པ་ཐམས་ཅད་ལ་བསྟོད་པ་མེ་ཏོག་པདྨའི་འབྱུང་གནས་ཀྱི་ལེའུ་ཞེས་བྱ་བ་སྟེ་ ལྔ་པའོ།། །།",
+   "en": "This concludes “The Source of Lotus Flowers: A Praise of All the Buddhas,” the fifth chapter of “The Lord King of Sūtras, The Sublime Golden Light.”"
+  }
+ }
+}
