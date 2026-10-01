@@ -8,7 +8,7 @@
 只動章節結構可靠的書，其餘跳過並記原因（寧可不做也不要做壞）：
   - 用 audit_toc_accuracy.audit() 現場重判，帶 NO_TOC／BODY_AS_TITLE／RUNNING_HEADER／JUNK_TITLE／
     PRINTED_TOC_MISS／SEQ_BROKEN／THIN_TEXT 任一旗標就跳過；
-  - 同一章名在書中不連續出現（切錯）、全書少於 2 章、合併後單章超過 MAX_CHAPTER 字 → 跳過；
+  - 同一章名在書中不連續出現（切錯）、全書少於 2 章 → 跳過；章超過 PAGE_MAX 字就分頁（約五千字一頁）；
   - 寫回前做「內容守恆」檢查：去掉標記、標題井號、註號後的字元數，改前改後差距超過 0.5% 就不寫。
 
 每本做的事：
@@ -43,8 +43,8 @@ import rebuild_reference_bilingual as rb  # noqa: E402
 
 CH = rb.CHUNKS
 OUT = Path(__file__).resolve().parents[1] / "output" / "restructure"
-MAX_CHAPTER = 150_000
-PAGE_CHUNK = 60_000          # 無節的超大章在段落交界處約每 6 萬字切一頁
+PAGE_TARGET = 5_000          # 10-01 使用者定：每頁約五千字
+PAGE_MAX = 6_500             # 超過才分頁（一章五、六千字的就不切）
 ALLOW_COLLECTED = False          # --collected：只處理 collection=collected-works 的單語全集
 # 10-01 放寬：BODY_AS_TITLE 多半是英文長章名（誤擋），改在 repair_paths 修中文「第N章黏正文」再用自己的黏正文閘；
 # SEQ_BROKEN／PRINTED_TOC_MISS 只是可疑，合併照原順序保留內容、有守恆把關，放行
@@ -312,67 +312,60 @@ def fix_marker(c: dict, known: dict) -> str:
     return t if not pp else f"{{{{p:{pp}}}}}" + t[m.end():]
 
 
-def split_big_chapter(text: str, top: str, cs: list[dict], known: dict) -> list[dict] | None:
-    """超過 MAX_CHAPTER 的章在 ### 節標題處切成多頁：
-    - 第一頁（章名＋第一個節之前的引言）chapter_path＝章名；其餘每頁「章名 / 節名」，側欄目錄照樣歸在章下；
-    - 章末集中的註釋，依 [^N] 出現在哪一頁就分到那一頁（沒被引用的放最後一頁）；
-    - page_number 用頁內第一個印刷頁碼標記回推 PDF 頁（推不出就沿用前一頁的）。
-    單一節本身仍超過上限（或整章沒有節）→ 回 None，整本跳過。"""
+def paginate(text: str, path: str, base: dict, known: dict) -> list[dict]:
+    """一章（或一頁）切成每頁約 PAGE_TARGET 字（10-01 使用者定：全館每頁約五千字）。
+    - 優先在 ### 節標題處換頁（目前這頁已有 ≥1,500 字才換，太短的節併在一起）；節太長就在段落交界換頁；
+    - 段號照原樣（整章編好的，不斷號）；章末註釋依 [^N] 出現在哪一頁分過去（沒被引用的放最後一頁）；
+    - chapter_path：從節開始的頁＝「章 / 節」，續頁沿用所接那一頁的路徑（側欄目錄去重後只列一次）；
+    - page_number 用頁內第一個印刷頁碼標記回推 PDF 頁，推不出就沿用前一頁。"""
+    if len(text) <= PAGE_MAX:
+        return [dict(base, content=text, chapter_path=path)]
+    top = path.split(" / ")[0]
     m = re.search(r"\n\n" + re.escape(rb.FOOT_RULE) + r"\n\n", text)
     body, notes_txt = (text[:m.start()], text[m.end():]) if m else (text, "")
-    parts = re.split(r"\n\n(?=### )", body)
-    if len(parts) >= 2 and "{{s:" not in parts[0]:
-        parts = [parts[0] + "\n\n" + parts[1]] + parts[2:]     # 章名後直接接第一節：別留一頁只有章標題
-    # 沒有節、或單一節本身仍過大：在段落交界處約每 PAGE_CHUNK 字再切（標「（續N）」），段號照整章不斷號
-    cut: list[str] = []
-    for p in parts:
-        if len(p) <= MAX_CHAPTER:
-            cut.append(p)
-            continue
-        buf: list[str] = []
-        for para in p.split("\n\n"):
-            if buf and sum(len(x) for x in buf) + len(para) > PAGE_CHUNK:
-                cut.append("\n\n".join(buf))
-                buf = []
-            buf.append(para)
-        if buf:
-            cut.append("\n\n".join(buf))
-    parts = cut
-    if len(parts) < 2 or any(len(p) > MAX_CHAPTER for p in parts):
-        return None
+    pages: list[list[str]] = [[]]
+    size = 0
+    for para in body.split("\n\n"):
+        is_sec = para.startswith("### ")
+        if pages[-1] and ((is_sec and size >= 1500) or (not is_sec and size + len(para) > PAGE_TARGET and size >= 800)):
+            pages.append([])
+            size = 0
+        pages[-1].append(para)
+        size += len(para)
+    # 只剩標題的尾頁併回前一頁
+    if len(pages) > 1 and all(p.startswith("#") for p in pages[-1]):
+        pages[-2] += pages.pop()
     notes = [n for n in rb.paras(notes_txt) if FN_ITEM.match(n)]
+    texts = ["\n\n".join(p) for p in pages]
     owner: dict[int, int] = {}
-    for i, p in enumerate(parts):
-        for n in re.findall(r"\[\^(\d+)\]", p):
+    for i, t in enumerate(texts):
+        for n in re.findall(r"\[\^(\d+)\]", t):
             owner.setdefault(int(n), i)
     per_page: dict[int, list[str]] = {}
     for n in notes:
-        per_page.setdefault(owner.get(int(FN_ITEM.match(n).group(1)), len(parts) - 1), []).append(n)
+        per_page.setdefault(owner.get(int(FN_ITEM.match(n).group(1)), len(texts) - 1), []).append(n)
     inv = {v: k for k, v in known.items()}
-    base = dict(cs[0])
     prev_pdf = base.get("page_number")
-    last_sec = ""
+    cur_path = path
     out = []
-    for i, p in enumerate(parts):
+    for i, t in enumerate(texts):
         c = dict(base)
         for k in ("page_numbers", "printed_pages", "section_anchors"):
             c.pop(k, None)
-        mk = re.search(r"\{\{p:(\d+)\}\}", p)
-        if mk and int(mk.group(1)) in inv:
+        mk = re.search(r"\{\{p:(\d+)\}\}", t)
+        if i and mk and int(mk.group(1)) in inv:
             prev_pdf = inv[int(mk.group(1))]
         c["page_number"] = prev_pdf
-        c["printed_page"] = int(mk.group(1)) if mk else None
-        sec = re.search(r"(?m)^### (.+)", p) if i == 0 else re.match(r"### (.+)", p)
-        if i == 0 and not p.lstrip().startswith("## "):
-            sec = None
-        content = p if i == 0 else f"## {display_title(top)}\n\n{p}"
+        if i:
+            c["printed_page"] = int(mk.group(1)) if mk else c.get("printed_page")
+            sec = re.match(r"### (.+)", t)
+            if sec:
+                cur_path = f"{top} / {sec.group(1).strip()}"
         if per_page.get(i):
-            content += f"\n\n{rb.FOOT_RULE}\n\n" + "\n\n".join(per_page[i])
-        c.update(content=content, chunk_type="chapter", format="markdown",
-                 chapter_path=top if i == 0 else f"{top} / {sec.group(1).strip()}" if sec
-                 else f"{top} / {last_sec}（續）" if last_sec else f"{top} / （續{i + 1}）")
-        if i > 0 and sec:
-            last_sec = sec.group(1).strip()
+            t += f"\n\n{rb.FOOT_RULE}\n\n" + "\n\n".join(per_page[i])
+        c.update(content=t, chunk_type="chapter", format="markdown", chapter_path=path if i == 0 else cur_path)
+        if "\n### " in t or t.startswith("### "):
+            c["section_anchors"] = True
         out.append(c)
     return out
 
@@ -528,12 +521,11 @@ def restructure(chunks: list[dict], meta: dict) -> tuple[list[dict] | None, str,
             out += [dict(c) for c in cs]
             continue
         text = build_chapter(labels[key], key[1], cs, known)
-        if len(text) > MAX_CHAPTER:
-            # 10-01 使用者定（選 A）：超大章改一節一頁，章名照舊、段號照整章編好的不變
-            pages_out = split_big_chapter(text, key[1], cs, known)
-            if pages_out is None:
-                return None, f"合併後單章 {len(text):,} 字超過上限且無節可切", {}
-            out += pages_out
+        if len(text) > PAGE_MAX:
+            # 10-01 使用者定：全館每頁約五千字——超過就分頁（節優先、再段落），章名段號照舊
+            first = dict(cs[0])
+            first["printed_page"] = known.get(first.get("page_number")) or rb.infer_printed(first.get("page_number") or 0, known)
+            out += paginate(text, key[1], first, known)
             continue
         first = dict(cs[0])
         pages = [p for c in cs for p in (c.get("page_numbers") or ([c["page_number"]] if c.get("page_number") else []))]
@@ -550,7 +542,7 @@ def restructure(chunks: list[dict], meta: dict) -> tuple[list[dict] | None, str,
         c["chunk_index"] = i
     # 合併後再驗一次段落：一頁一段的書，跨頁斷句接回去之後會整章變一段（Taiwan's Buddhist Nuns）
     chs = [c for c in out if c.get("chunk_type") == "chapter" and "{{s:" in c["content"]]
-    lumpy = [c for c in chs if len(c["content"]) > 5000 and c["content"].count("{{s:") <= 3]
+    lumpy = [c for c in chs if len(c["content"]) > 6000 and c["content"].count("{{s:") <= 1]   # 每頁約五千字後，一頁兩三段是正常的
     if chs and len(lumpy) * 4 > len(chs):
         return None, f"合併後段落沒切開（{len(lumpy)}/{len(chs)} 章字多但不到 4 段）", {}
     before, after = mass(chunks), mass(out)

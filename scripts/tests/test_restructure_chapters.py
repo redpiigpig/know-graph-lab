@@ -75,16 +75,16 @@ def test_place_figures_caption_and_anchor():
     assert len(used) == 2 and miss == 0
 
 
-def test_split_big_chapter_by_sections_and_notes():
+def test_paginate_about_5000_per_page_with_notes():
     import rebuild_reference_bilingual as rb
-    old = r.MAX_CHAPTER
-    r.MAX_CHAPTER = 200
-    try:
-        text = ("## 第一章\n\n{{s:1-0-1}}引言。\n\n### 甲\n\n{{s:1-1-1}}" + "甲" * 120 + "[^1]\n\n### 乙\n\n{{s:1-2-1}}"
-                + "乙" * 120 + "[^2]\n\n" + rb.FOOT_RULE + "\n\n(1) 註一\n\n(2) 註二")
-        pages = r.split_big_chapter(text, "第一章", [{"page_number": 5}], {})
-        assert [p["chapter_path"] for p in pages] == ["第一章", "第一章 / 甲", "第一章 / 乙"]
-        assert "(1) 註一" in pages[1]["content"] and "(2) 註二" in pages[2]["content"]
-        assert pages[2]["content"].startswith("## 第一章\n\n### 乙")
-    finally:
-        r.MAX_CHAPTER = old
+    text = ("## 第一章\n\n{{s:1-0-1}}引言。\n\n### 甲\n\n{{s:1-1-1}}" + "甲" * 4000 + "[^1]\n\n{{s:1-1-2}}" + "丙" * 3000
+            + "\n\n### 乙\n\n{{s:1-2-1}}" + "乙" * 2000 + "[^2]\n\n" + rb.FOOT_RULE + "\n\n(1) 註一\n\n(2) 註二")
+    pages = r.paginate(text, "第一章", {"page_number": 5}, {})
+    assert [p["chapter_path"] for p in pages] == ["第一章", "第一章", "第一章 / 乙"]
+    assert pages[1]["content"].startswith("{{s:1-1-2}}")          # 節太長：段落交界換頁，續頁沿用路徑
+    assert "(1) 註一" in pages[0]["content"] and "(2) 註二" in pages[2]["content"]
+    assert all(len(p["content"]) < 7000 for p in pages)
+
+
+def test_paginate_short_chapter_untouched():
+    assert len(r.paginate("## 甲\n\n{{s:1}}短。", "甲", {}, {})) == 1
