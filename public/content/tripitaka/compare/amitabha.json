@@ -1,0 +1,277 @@
+{
+ "slug": "amitabha",
+ "title": "阿彌陀經",
+ "family": "sa",
+ "intro": "節依梵本《小本極樂莊嚴經》穆勒校本 //1//–//20//。羅什本講名號因由先光明後壽命，與梵本 §8、§9 次第交錯，合為一節。玄奘本《稱讚淨土佛攝受經》篇幅約為羅什本兩倍，多出的段落併在對應節內（如 §16 含東南、西南、西北、東北四方諸佛）。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "歸敬"
+  },
+  {
+   "id": "a01",
+   "label": "§1 如是我聞・聲聞菩薩諸天大眾"
+  },
+  {
+   "id": "a02",
+   "label": "§2 西方極樂世界・何故名極樂"
+  },
+  {
+   "id": "a03",
+   "label": "§3 七重欄楯羅網行樹"
+  },
+  {
+   "id": "a04",
+   "label": "§4 七寶池・八功德水・蓮華"
+  },
+  {
+   "id": "a05",
+   "label": "§5 天樂・黃金地・雨天華供養他方佛"
+  },
+  {
+   "id": "a06",
+   "label": "§6 眾鳥演法・無三惡道"
+  },
+  {
+   "id": "a07",
+   "label": "§7 微風吹寶樹羅網出妙音"
+  },
+  {
+   "id": "a08",
+   "label": "§8–9 名號因由（無量壽・無量光）・十劫・聲聞眾"
+  },
+  {
+   "id": "a10",
+   "label": "§10 菩薩不退・發願往生・執持名號臨終來迎"
+  },
+  {
+   "id": "a11",
+   "label": "§11 東方諸佛出廣長舌相"
+  },
+  {
+   "id": "a12",
+   "label": "§12 南方諸佛"
+  },
+  {
+   "id": "a13",
+   "label": "§13 西方諸佛"
+  },
+  {
+   "id": "a14",
+   "label": "§14 北方諸佛"
+  },
+  {
+   "id": "a15",
+   "label": "§15 下方諸佛"
+  },
+  {
+   "id": "a16",
+   "label": "§16 上方諸佛"
+  },
+  {
+   "id": "a17",
+   "label": "§17 經名「一切諸佛所護念」・發願皆得不退"
+  },
+  {
+   "id": "a18",
+   "label": "§18 諸佛稱讚釋迦五濁惡世成道"
+  },
+  {
+   "id": "a19",
+   "label": "§19 甚難希有"
+  },
+  {
+   "id": "a20",
+   "label": "§20 歡喜信受"
+  },
+  {
+   "id": "a21",
+   "label": "尾題・往生咒"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本",
+   "who": "《小本極樂莊嚴經》穆勒校本・GRETIL"
+  },
+  {
+   "id": "T0366",
+   "lang": "lzh",
+   "label": "羅什本",
+   "who": "鳩摩羅什譯・402 年",
+   "work": "T0366"
+  },
+  {
+   "id": "T0367",
+   "lang": "lzh",
+   "label": "玄奘本",
+   "who": "玄奘譯《稱讚淨土佛攝受經》・650 年",
+   "work": "T0367"
+  },
+  {
+   "id": "bo",
+   "lang": "bo",
+   "label": "藏譯",
+   "who": "施戒等譯・德格版 Toh 115・84000"
+  },
+  {
+   "id": "en",
+   "lang": "en",
+   "label": "84000 英譯",
+   "who": "譯自藏譯・與藏文逐句對齊"
+  }
+ ],
+ "works": [
+  "T0366",
+  "T0367"
+ ],
+ "anchors": [],
+ "cells": {
+  "a00": {
+   "sa": "// namaḥ sarvajñāya //",
+   "bo": "སངས་རྒྱས་དང་བྱང་ཆུབ་སེམས་དཔའ་ཐམས་ཅད་ལ་ཕྱག་འཚལ་ལོ།",
+   "en": "Homage to all the buddhas and bodhisattvas"
+  },
+  "a01": {
+   "sa": "evaṃ mayā śrutaṃ / ekasmin samaye bhagavāñ śrāvastyāṃ viharati sma jetavane 'nāthapiṃḍadasyārāme mahatā bhikṣusaṃghena sārdham ardhatrayodaśabhir bhikṣuśatair abhijñānābhijñātaiḥ sthavirair mahāśrāvakaiḥ sarvair arhadbhiḥ / tadyathā sthavireṇa ca śāriputreṇa mahāmaudgalyāyanena ca mahākāśyapena ca mahākapphiṇena ca mahākātyāyanena ca mahākauṣṭhilena ca revatena ca śuddhipaṃthakena ca naṃdena cānaṃdena ca rāhulena ca gavāṃpatinā ca bharadvājena ca kālodayinā ca vakkulena cāniruddhena ca / etaiś cānyaiś ca saṃbahulair mahāśrāvakaiḥ saṃbahulaiś ca bodhisattvair mahāsattvaiḥ / tadyathā maṃjuśriyā ca kumārabhūtenājitena ca bodhisattvena gaṃdhahastinā ca bodhisattvena nityodyuktena ca bodhisattvenānikṣiptadhureṇa ca bodhisattvena / etaiś cānyaiś ca saṃbahulair bodhisattvair mahāsattvaiḥ / śakreṇa ca devānām iṃdreṇa brahmaṇā ca sahāṃpatinā / etaiś cānyaiś ca saṃbahulair devaputranayutaśatasahasraiḥ //1//",
+   "T0366": "如是我聞：一時，佛在舍衛國祇樹給孤獨園，與大比丘僧千二百五十人俱，皆是大阿羅漢，眾所知識。長老舍利弗、摩訶目乾連、摩訶迦葉、摩訶迦栴延、摩訶拘絺羅、離婆多、周梨槃陀迦、難陀、阿難陀、羅睺羅、憍梵波提、賓頭盧頗羅墮、迦留陀夷、摩訶劫賓那、薄俱羅、阿㝹樓馱，如是等諸大弟子，并諸菩薩摩訶薩——文殊師利法王子、阿逸多菩薩、乾陀訶提菩薩、常精進菩薩——與如是等諸大菩薩，及釋提桓因等無量諸天大眾俱。",
+   "T0367": "如是我聞：一時，薄伽梵在室羅筏住誓多林給孤獨園，與大苾芻眾千二百五十人俱，一切皆是尊宿聲聞眾望所識大阿羅漢，其名曰：尊者舍利子、摩訶目犍連、摩訶迦葉、阿泥律陀，如是等諸大聲聞而為上首。復與無量菩薩摩訶薩俱，一切皆住不退轉位，無量功德眾所莊嚴，其名曰：妙吉祥菩薩、無能勝菩薩、常精進菩薩、不休息菩薩，如是等諸大菩薩而為上首。復有帝釋、大梵天王、堪忍界主、護世四王，如是上首百千俱胝那庾多數諸天子眾，及餘世間無量天、人、阿素洛等，為聞法故，俱來會坐。",
+   "bo": "འདི་སྐད་བདག་གིས་ཐོས་པ་དུས་གཅིག་ན། བཅོམ་ལྡན་འདས་མཉན་ཡོད་ན། རྒྱལ་བུ་རྒྱལ་བྱེད་ཀྱི་ཚལ་མགོན་མེད་ཟས་སྦྱིན་གྱི་ཀུན་དགའ་ར་བ་ན། དགེ་སློང་སྟོང་ཉིས་བརྒྱ་ལྔ་བཅུའི་དགེ་སློང་གི་དགེ་འདུན་ཆེན་པོ་གནས་བརྟན་ཉན་ཐོས་ཆེན་པོ་དགྲ་བཅོམ་པ་ཤ་སྟག་ལ་ འདི་ལྟ་སྟེ། གནས་བརྟན་ཤཱ་རིའི་བུ་དང་། མཽད་གལ་གྱི་བུ་ཆེན་པོ་དང་། འོད་སྲུང་ཆེན་པོ་དང་། ཀཱ་ཏྱཱའི་བུ་ཆེན་པོ་དང་ ཀ་པི་ན་ཆེན་པོ་དང་། གསུས་པོ་ཆེ་དང་། ནམ་གྲུ་དང་། ལམ་ཕྲན་བསྟན་དང་། དགའ་བོ་དང་། ཀུན་དགའ་བོ་དང་། སྒྲ་གཅན་ཟིན་དང་། བ་ལང་བདག་དང་། བྷ་ར་དྷྭ་ཛི་དང་། འཆར་བྱེད་ནག་པོ་དང་། བ་ཀུ་ལ་དང་། མ་འགགས་པ་དང་། དེ་དག་དང་། ཉན་ཐོས་ཆེན་པོ་གཞན་དག་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་མང་པོ་ལ་འདི་ལྟ་སྟེ། འཇམ་དཔལ་གཞོན་ནུར་གྱུར་པ་དང་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་མི་ཕམ་པ་དང་། ། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་སྤོས་ཀྱི་གླང་པོ་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་རྟག་ཏུ་བརྩོན་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་བརྩོན་པ་མི་འདོར་བ་དང་། དེ་དག་དང་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་གཞན་མང་པོ་དག་དང་། ལྷའི་དབང་པོ་བརྒྱ་བྱིན་དང་། མི་མཇེད་ཀྱི་བདག་པོ་ཚངས་པ་དང་། དེ་དག་དང་ལྷ་བྱེ་བ་ཁྲག་ཁྲིག་འབུམ་ཕྲག་མང་པོ་གཞན་དག་དང་ཡང་ཐབས་ཅིག་ཏུ་བཞུགས་ཏེ།",
+   "en": "Thus did I hear at one time The Bhagavān was dwelling in Anāthapiṇḍada’s park in the Jeta Grove in Śrāvastī, along with a large monastic saṅgha of 1,250 bhikṣus, all of them great elders, śrāvakas, and arhats, such as the elder Śāriputra, Mahāmaudgalyāyana, Mahākāśyapa, Mahākātyāyana, Mahākapphiṇa, Mahākauṣṭhila, Revata, Śuddhipaṃthaka, Nanda, Ānanda, Rāhula, Gavāṃpati, Bharadvāja, Kālodāyin, Vakula, and Aniruddha. He dwelt with these and other great śrāvakas and with many bodhisattva mahāsattvas, such as the youthful Mañjuśrī, the bodhisattva mahāsattva Ajita, the bodhisattva mahāsattva Gandhahastin, the bodhisattva mahāsattva Nityodyukta, and the bodhisattva mahāsattva Anikṣiptadhura, along with many other bodhisattva mahāsattvas. He was also accompanied by Śakra, the lord of gods, and Brahmā, the ruler of the Sahā world, along with many myriads of gods."
+  },
+  "a02": {
+   "sa": "P--O.93:J.196 tatra khalu bhagavān āyuṣmaṃtaṃ śāriputram āmaṃtrayati sma / asti śāriputra paścime digbhāga ito buddhakṣetraṃ koṭiśatasahasraṃ buddhakṣetrāṇām atikramya sukhāvatī nāma lokadhātuḥ / tatrāmitāyurnāma tathāgato 'rhan samyaksaṃbuddha etarhi tiṣṭhati dhriyate yāpayati dharmaṃ ca deśayati / tat kiṃ manyase śāriputra kena kāraṇena sā lokadhātuḥ sukhāvatīty ucyate / tatra khalu punaḥ śāriputra sukhāvatyāṃ lokadhātau nāsti sattvānāṃ kāyaduḥkhaṃ na cittaduḥkhaṃ apramāṇāny eva sukhakāraṇāni / tena kāraṇena sā lokadhātuḥ sukhāvatīty ucyate //2//",
+   "T0366": "爾時，佛告長老舍利弗：「從是西方過十萬億佛土，有世界名曰極樂。其土有佛，號阿彌陀，今現在說法。舍利弗！彼土何故名為極樂？其國眾生無有眾苦，但受諸樂，故名極樂。",
+   "T0367": "爾時，世尊告舍利子：「汝今知不？於是西方，去此世界過百千俱胝那庾多佛土，有佛世界名曰極樂。其中世尊名無量壽及無量光，如來、應、正等覺十號圓滿，今現在彼安隱住持，為諸有情宣說甚深微妙之法，令得殊勝利益安樂。「又，舍利子！何因何緣，彼佛世界名為極樂？舍利子！由彼界中諸有情類，無有一切身心憂苦，唯有無量清淨喜樂，是故名為極樂世界。",
+   "bo": "དེ་ནས་བཅོམ་ལྡན་འདས་ཀྱིས་ཚེ་དང་ལྡན་པ་ཤཱ་རིའི་བུ་ལ་བཀའ་སྩལ་པ། ཤཱ་རིའི་བུ་སངས་རྒྱས་ཀྱི་ཞིང་འདི་ནས་ནུབ་ཕྱོགས་ལོགས་སུ་སངས་རྒྱས་ཀྱི་ཞིང་བྱེ་བ་ཁྲག་ཁྲིག་ཕྲག་འབུམ་འདས་པ་ན་འཇིག་རྟེན་གྱི་ཁམས་བདེ་བ་ཅན་ཞེས་བྱ་བ་ཡོད་དེ། དེ་ན་དེ་བཞིན་གཤེགས་པ་དགྲ་བཅོམ་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་ཚེ་དཔག་མེད་ཅེས་བྱ་བ་བཞུགས་ཏེ་འཚོ་ཞིང་གཞེས་ལ་ཆོས་ཀྱང་སྟོན་ཏོ། ། ཤཱ་རིའི་བུ་འདི་ཇི་སྙམ་དུ་སེམས། འཇིག་རྟེན་གྱི་ཁམས་དེ་ཅིའི་ཕྱིར་བདེ་བ་ཅན་ཞེས་བྱ་ཞེ་ན། ཤཱ་རིའི་བུ་འཇིག་རྟེན་གྱི་ཁམས་བདེ་བ་ཅན་དེ་ན་སེམས་ཅན་རྣམས་ཀྱི་ལུས་ལ་སྡུག་བསྔལ་མེད། སེམས་ལ་སྡུག་བསྔལ་མེད་ཅིང་བདེ་བའི་རྒྱུ་ཚད་མེད་པར་ཡོད་དེ། དེའི་ཕྱིར་འཇིག་རྟེན་གྱི་ཁམས་བདེ་བ་ཅན་ཞེས་བྱའོ",
+   "en": "On that occasion, the Bhagavān said to the venerable Śāriputra, “Śāriputra, if you go from this buddha realm past one hundred thousand myriad buddha realms toward the western direction, there is a world known as Sukhāvatī. In that place the tathāgata, the arhat, the perfectly and fully enlightened buddha known as Amitāyus, dwells, lives, and abides, teaching the Dharma. “Now what do you think, Śāriputra, why is that world called ‘Sukhāvatī’? “Śāriputra, in the Sukhāvatī world, sentient beings experience neither physical pain nor mental suffering and the causes for their happiness are limitless. For this reason, this world is called Sukhāvatī. Furthermore,"
+  },
+  "a03": {
+   "sa": "punar aparaṃ śāriputra sukhāvatī lokadhātuḥ saptabhir vedikābhiḥ saptabhis tālapaṃktibhiḥ kiṃkiṇījālaiś ca samalaṃkṛtā samaṃtato 'nuparikṣiptā citrā darśanīyā caturṇāṃ ratnānāṃ / tadyathā suvarṇasya rūpyasya vaiḍūryasya sphaṭikasya / evaṃrūpaiḥ śāriputra buddhakṣetraguṇavyūhaiḥ samalaṃkṛtaṃ tadbuddhakṣetraṃ //3//",
+   "T0366": "又舍利弗！極樂國土，七重欄楯、七重羅網、七重行樹，皆是四寶周匝圍繞，是故彼國名曰極樂。",
+   "T0367": "「又，舍利子！極樂世界淨佛土中，處處皆有七重行列妙寶欄楯、七重行列寶多羅樹，及有七重妙寶羅網，周匝圍繞，四寶莊嚴——金寶、銀寶、吠琉璃寶、頗胝迦寶，妙飾間綺。舍利子！彼佛土中有如是等眾妙綺飾，功德莊嚴甚可愛樂，是故名為極樂世界。",
+   "bo": "ཤཱ་རིའི་བུ་གཞན་ཡང་འཇིག་རྟེན་གྱི་ཁམས་བདེ་བ་ཅན་ནི་ཁ་ཁྱེར་རིམ་པ་བདུན་དང་། ཤིང་ཏ་ལའི་ཕྲེང་བ་རིམ་པ་བདུན་དང་། དྲིལ་བུ་གཡེར་ཀའི་དྲ་བ་རྣམས་ཀྱིས་ཀུན་ནས་ཡོངས་སུ་བསྐོར་བ། བཀྲ་བ་བལྟ་ན་སྡུག་པའོ། ཤཱ་རིའི་བུ་སངས་རྒྱས་ཀྱི་ཞིང་དེ་ནི་རིན་པོ་ཆེ་སྣ་བཞི་ལ་འདི་ལྟ་སྟེ། གསེར་དང་། དངུལ་དང་། བཻ་དཱུརྱ་དང་། ཤེལ་དང་། རྣམ་པ་དེ་ལྟ་བུའི་སངས་རྒྱས་ཀྱི་ཞིང་གི་ཡོན་ཏན་བཀོད་པ་དག་གིས་ལེགས་པར་བརྒྱན་པའོ། །",
+   "en": "Śāriputra, the Sukhāvatī world is surrounded on all sides by seven layers of terraces, seven rows of palm trees, and filigrees of chimes. It is radiantly beautiful. Śāriputra, this buddha realm is beautifully adorned with displays of the excellences of buddha realms, such as the four kinds of jewels, namely, gold, silver, beryl, and crystal."
+  },
+  "a04": {
+   "sa": "punar aparaṃ śāriputra sukhāvatyāṃ lokadhātau saptaratnamayyaḥ puṣkariṇyaḥ / tadyathā suvarṇasya rūpyasya vaiḍūryasya sphaṭikasya lohita- muktasyāśmagarbhasya musāragalvasya saptamasya ratnasya / aṣṭāṃgopetavāri- paripūrṇāḥ samatīrthakāḥ kākapeyā(1) suvarṇavālukāsaṃstṛtāḥ / tāsu ca puṣkariṇīṣu samaṃtāc caturdiśaṃ catvāri sopānāni citrāṇi darśanīyāni caturṇāṃ ratnānāṃ / tadyathā suvarṇasya rūpyasya vaiḍūryasya sphaṭikasya / tāsāṃ ca puṣkariṇīnāṃ samaṃtād ratnavṛkṣā jātāś citrā darśanīyā saptānāṃ ratnānāṃ / tadyathā suvarṇasya rūpyasya vaiḍūryasya sphaṭikasya lohitamuktasyāśmagarbhasya musāragalvasya saptamasya P--O.94:J.198 ratnasya / tāsu ca puṣkariṇīṣu saṃti padmāni jātāni nīlāni nīlavarṇāni nīlanirbhāsāni nīlanidarśanāni / pītāni pītavarṇāni pītanirbhāsāni pītanidarśanāni / lohitāni lohitavarṇāni lohitanirbhāsāni lohitanidarśanāni / avadātāny avadātavarṇāny avadātanirbhāsāny avadātanidarśanāni / citrāni citravarṇāni citranirbhāsāni citranidarśanāni śakaṭacakra- pramāṇapariṇāhāni / evaṃrūpaiḥ śāriputra buddhakṣetraguṇavyūhaiḥ samalaṃkṛtaṃ tadbuddhakṣetraṃ //4//",
+   "T0366": "「又舍利弗！極樂國土有七寶池，八功德水充滿其中，池底純以金沙布地。四邊階道，金、銀、琉璃、頗梨合成；上有樓閣，亦以金、銀、琉璃、頗梨、車𤦲、赤珠、馬瑙而嚴飾之。池中蓮花，大如車輪，青色青光，黃色黃光，赤色赤光，白色白光，微妙香潔。舍利弗！極樂國土成就如是功德莊嚴。",
+   "T0367": "「又，舍利子！極樂世界淨佛土中，處處皆有七妙寶池，八功德水彌滿其中。何等名為八功德水？一者澄淨，二者清冷，三者甘美，四者輕軟，五者潤澤，六者安和，七者飲時除飢渴等無量過患，八者飲已定能長養諸根四大；增益種種殊勝善根，多福眾生常樂受用。是諸寶池底布金沙，四面周匝有四階道，四寶莊嚴甚可愛樂。諸池周匝有妙寶樹，間飾行列香氣芬馥，七寶莊嚴甚可愛樂。言七寶者，一金、二銀、三吠琉璃、四頗胝迦、五赤真珠、六阿濕摩揭拉婆寶、七牟娑落揭拉婆寶。是諸池中常有種種雜色蓮華，量如車輪，青形青顯青光青影，黃形黃顯黃光黃影，赤形赤顯赤光赤影，白形白顯白光白影，四形四顯四光四影。舍利子！彼佛土中有如是等眾妙綺飾，功德莊嚴甚可愛樂，是故名為極樂世界。",
+   "bo": "ཤཱ་རིའི་བུ་གཞན་ཡང་འཇིག་རྟེན་གྱི་ཁམས་བདེ་བ་ཅན་ན་རིན་པོ་ཆེ་སྣ་བདུན་གྱི་རྫིང་ཡན་ལག་བརྒྱད་དང་ལྡན་པའི་ཆུས་ཡོངས་སུ་གང་བ། རིན་པོ་ཆེའི་པད་མས་ཁེབས་པ། བྱ་རོག་གིས་བཏུང་དུ་རུང་བར་ཁ་ད་ཆད་དུ་གྱུར་པ་གསེར་གྱི་བྱེ་མ་བདལ་བ་དག་ཡོད་དེ། རྫིང་དེ་དག་གི་ཕྱོགས་བཞི་ཀུན་ན་ཐེམ་སྐས་བཀྲ་བ། བལྟ་ན་སྡུག་པ། གསེར་དང་། དངུལ་དང་། བཻ་དཱུརྱ་དང་། ཤེལ་དང་། རིན་པོ་ཆེ་སྣ་བཞི་ལས་བྱས་པ་བཞི་བཞི་ཡོད་དོ། ། རྫིང་དེ་དག་གི་འགྲམ་ན་རིན་པོ་ཆེའི་ཤིང་ལྗོན་པ་རིན་པོ་ཆེ་སྣ་བདུན་ལ་འདི་ལྟ་སྟེ། གསེར་དང་། དངུལ་དང་། བཻ་དཱུརྱ་དང་། ཤེལ་དང་། མུ་ཏིག་དམར་པོ་དང་། རྡོའི་སྙིང་པོ་དང་། སྤུག་གི་ཤིང་བཀྲ་བ། བལྟ་ན་སྡུག་པ་དག་སྐྱེས་སོ། གསེར་དང་། གསེར་གྱི་ཁ་དོག །གསེར་གྱི་འོད་འབྱུང་བ། གསེར་ལྟ་བུར་སྟོན་པ། སྔོན་པོ་ཁ་དོག་སྔོན་པོ། འོད་སྔོན་པོ་འབྱུང་བ། སྔོན་པོ་ལྟ་བུར་སྟོན་པ། སེར་པོ་ཁ་དོག་སེར་པོ། འོད་སེར་པོ་འབྱུང་བ། སེར་པོ་ལྟ་བུར་སྟོན་པ།",
+   "en": "Furthermore, Śāriputra, the Sukhāvatī world has ponds adorned with seven kinds of jewels. The ponds are full of water possessing the eight qualities. They are covered by jeweled lotuses, are filled to the top to enable crows to drink, and are lined with golden sand. All around, on the four sides of the ponds are four radiantly elegant staircases, each made of one of the four precious substances: gold, silver, beryl, and crystal. By the banks of the ponds grow jeweled trees of the seven radiantly beautiful jewels: gold, silver, beryl, crystal, rosy pearls, emerald, and coral. “The golden lotuses have a golden hue, a golden sheen, and manifest as gold. The blue ones have a blue hue, a blue sheen, and manifest as blue. The yellow ones have a yellow hue, a yellow sheen, and manifest as yellow."
+  },
+  "a05": {
+   "sa": "punar aparaṃ śāriputra tatra buddhakṣetre nityapravāditāni divyāni tūryāṇi suvarṇavarṇā ca mahāpṛthivī ramaṇīyā / tatra ca buddhakṣetre triṣkṛtvo rātrau triṣkṛtvo divasasya puṣpavarṣaṃ pravarṣati divyānāṃ māṃdāravapuṣpāṇāṃ / tatra ye sattvā upapannās ta ekena purobhaktena koṭiśatasahasraṃ buddhānāṃ vaṃdaṃty anyāṃl lokadhātūn gatvā / ekaikaṃ ca tathāgataṃ koṭiśatasahasrābhiḥ puṣpavṛṣṭibhir abhyavakīrya punar api tām eva lokadhātum āgacchaṃti divāvihārāya / evaṃrūpaiḥ śāriputra buddhakṣetraguṇavyūhaiḥ samalaṃkṛtaṃ tadbuddhakṣetraṃ //5//",
+   "T0366": "「又舍利弗！彼佛國土，常作天樂，黃金為地，晝夜六時，天雨曼陀羅華。其國眾生，常以清旦，各以衣裓盛眾妙華，供養他方十萬億佛；即以食時，還到本國，飯食經行。舍利弗！極樂國土成就如是功德莊嚴。",
+   "T0367": "「又，舍利子！極樂世界淨佛土中，自然常有無量無邊眾妙伎樂，音曲和雅甚可愛樂。諸有情類聞斯妙音，諸惡煩惱悉皆消滅，無量善法漸次增長，速證無上正等菩提。舍利子！彼佛土中有如是等眾妙綺飾，功德莊嚴甚可愛樂，是故名為極樂世界。「又，舍利子！極樂世界淨佛土中，周遍大地真金合成，其觸柔軟，香潔光明，無量無邊妙寶間飾。舍利子！彼佛土中有如是等眾妙綺飾，功德莊嚴甚可愛樂，是故名為極樂世界。「又，舍利子！極樂世界淨佛土中，晝夜六時常雨種種上妙天華，光澤香潔，細軟雜色，雖令見者身心適悅而不貪著，增長有情無量無數不可思議殊勝功德。彼有情類，晝夜六時常持供養無量壽佛；每晨朝時，持此天華，於一食頃，飛至他方無量世界，供養百千俱胝諸佛，於諸佛所各以百千俱胝樹花持散供養，還至本處遊天住等。舍利子！彼佛土中有如是等眾妙綺飾，功德莊嚴甚可愛樂，是故名為極樂世界。",
+   "bo": "དེ་བཞིན་གཤེགས་པ་རེ་རེ་ལ་ཡང་མེ་ཏོག་སྐོན་བུ་བྱེ་བ་ཕྲག་འབུམ་མངོན་པར་འཐོར་ཏེ།",
+   "en": "They also toss hundreds of thousands of bouquets of flowers toward each tathāgata."
+  },
+  "a06": {
+   "sa": "punar aparaṃ śāriputra tatra buddhakṣetre saṃti haṃsāḥ kraiṃcā mayūrāś ca / te triṣkṛtvo rātrau triṣkṛtvo divasasya saṃnipatya saṃgītiṃ kurvaṃti sma svakasvakāni ca rutāni pravyāharaṃti / teṣāṃ pravyāharatām iṃdriyabalabodhyaṃgaśabdo niścarati / tatra teṣāṃ manuṣyāṇāṃ taṃ śabdaṃ śrutvā buddhamanasikāra utpadyate dharmamanasikāra utpadyate saṃghamanasikāra utpadyate // tat kiṃ manyase śāriputra tiryagyonigatās te P--O.95:J.200 sattvāḥ / na punar evaṃ draṣṭavyaṃ / tat kasmād dhetoḥ / nāmāpi śāriputra tatra buddhakṣetre nirayāṇāṃ nāsti tiryagyonīnāṃ yamalokasya nāsti / te punaḥ pakṣisaṃghās tenāmitāyuṣā tathāgatena nirmitā dharmaśabdaṃ niścārayaṃti / evaṃrūpaiḥ śāriputra buddhakṣetraguṇavyūhaiḥ samalaṃkṛtaṃ tadbuddhakṣetraṃ //6//",
+   "T0366": "「復次舍利弗！彼國常有種種奇妙雜色之鳥——白鵠、孔雀、鸚鵡、舍利、迦陵頻伽、共命之鳥。是諸眾鳥，晝夜六時出和雅音，其音演暢五根、五力、七菩提分、八聖道分如是等法。其土眾生聞是音已，皆悉念佛、念法、念僧。舍利弗！汝勿謂此鳥實是罪報所生。所以者何？彼佛國土無三惡趣。舍利弗！其佛國土尚無三惡道之名，何況有實？是諸眾鳥，皆是阿彌陀佛欲令法音宣流，變化所作。",
+   "T0367": "「又，舍利子！極樂世界淨佛土中，常有種種奇妙可愛雜色眾鳥，所謂：鵝鴈、鶖鷺、鴻鶴、孔雀、鸚鵡、羯羅頻迦、命命鳥等。如是眾鳥，晝夜六時恒共集會，出和雅聲，隨其類音宣揚妙法，所謂：甚深念住、正斷、神足、根、力、覺、道支等無量妙法。彼土眾生聞是聲已，各得念佛、念法、念僧無量功德熏修其身。汝舍利子，於意云何？彼土眾鳥豈是傍生惡趣攝耶？勿作是見。所以者何？彼佛淨土無三惡道，尚不聞有三惡趣名，何況有實罪業所招傍生！眾鳥當知皆是無量壽佛變化所作，令其宣暢無量法音，作諸有情利益安樂。舍利子！彼佛土中有如是等眾妙綺飾，功德莊嚴甚可愛樂，是故名為極樂世界。",
+   "bo": "ཤཱ་རིའི་བུ་སངས་རྒྱས་ཀྱི་ཞིང་དེ་ནི་སངས་རྒྱས་ཀྱི་ཞིང་གི་ཡོན་ཏན་བཀོད་པ་རྣམ་པ་དེ་ལྟ་བུ་དག་གིས་ལེགས་པར་བརྒྱན་པའོ། །ཤཱ་རིའི་བུ་གཞན་ཡང་འཇིག་རྟེན་གྱི་ཁམས་བདེ་བ་ཅན་ན་ངང་པ་དང་། ཁྲུང་ཁྲུང་དང་། རྨ་བྱ་དག་ཡོད་པ་དེ་དག་ཀྱང་ཉིན་ལན་གསུམ། མཚན་ལན་གསུམ་འདུས་ནས་ཡང་དག་པར་བགྲོ་བར་བྱེད་དེ། ། རང་རང་གི་སྐད་དག་གིས་སྨྲའོ དེ་དག་སྨྲ་བ་ན་དབང་པོ་དང་སྟོབས་དང་། བྱང་ཆུབ་ཀྱི་ཡན་ལག་གི་སྒྲ་དག་འབྱུང་ངོ་། ། སེམས་ཅན་གང་དག་དེར་སྐྱེས་པ་དེ་དག་གིས་སྒྲ་དེ་ཐོས་ནས་སངས་རྒྱས་ཡིད་ལ་བྱེད་པ་སྐྱེ། ཆོས་ཡིད་ལ་བྱེད་པ་སྐྱེ། དགེ་འདུན་ཡིད་ལ་བྱེད་པར་སྐྱེའོ། ཤཱ་རིའི་བུ་འདི་ཇི་སྙམ་དུ་སེམས། སེམས་ཅན་དེ་དག་དུད་འགྲོའི་སྐྱེ་གནས་སུ་གྱུར་པ་ཡིན་སྙམ་དུ་སེམས་པ་ལྟ་ན་དེ་ལྟར་མི་བལྟའོ། །དེ་ཅིའི་ཕྱིར་ཞེ་ན། ། ཤཱ་རིའི་བུ་སངས་རྒྱས་ཀྱི་ཞིང་དེ་ན་སེམས་ཅན་དམྱལ་བ་དང་། དུད་འགྲོའི་སྐྱེ་གནས་དང་། གཤིན་རྗེའི་འཇིག་རྟེན་དུ་སྐྱེ་བའི་མིང་ཡང་མེད་དོ། ། བྱའི་ཚོགས་དེ་དག་ནི་དེ་བཞིན་གཤེགས་པ་ཚེ་དཔག་མེད་དེ་ཉིད་ཀྱིས་ཆོས་ཀྱི་སྒྲ་དབྱུང་བའི་ཕྱིར་སྤྲུལ་པ་དག་གོ།",
+   "en": "Śāriputra, this buddha realm is beautifully adorned by such displays of the excellences of buddha realms. “Furthermore, Śāriputra, in the Sukhāvatī world there are swans, cranes, and peacocks that assemble three times during the day and three times at night and perform a concert, each singing its own melody. When they sing, the sounds of the powers, strengths, and branches of enlightenment emerge. Upon hearing those sounds, the sentient beings born there are moved to contemplate the Buddha, to contemplate the Dharma, and to contemplate the Saṅgha. Now what do you think about this, Śāriputra? Have those sentient beings taken birth as animals? You should not think so. Why is that? Śāriputra, in this buddha realm there are not even words for birth as a hell being, birth as an animal, or birth in the world of the Lord of Death. Those flocks of birds were manifested by the Tathāgata Amitāyus himself to voice the sound of Dharma."
+  },
+  "a07": {
+   "sa": "punar aparaṃ śāriputra tatra buddhakṣetre tāsāṃ ca tālapaṃktīnāṃ teṣāṃ ca kiṃkiṇījālānāṃ vāteritānāṃ valgur manojñaḥ śabdo niścarati / tadyathāpi nāma śāriputra koṭiśatasahasrāṃgikasya divyasya tūryasya cāryaiḥ(2) saṃpravāditasya valgur manojñaḥ śabdo niścarati evam eva śāriputra tāsāṃ ca tālapaṃktīnāṃ teṣāṃ ca kiṃkiṇījālānāṃ vāteritānāṃ valgur manojñaḥ śabdo niścarati / tatra teṣāṃ manuṣyāṇāṃ taṃ śabdaṃ śrutvā buddhānusmṛtiḥ kāye saṃtiṣṭhati dharmānusmṛtiḥ kāye saṃtiṣṭhati saṃghānusmṛtiḥ kāye saṃtiṣṭhati / evaṃrūpaiḥ śāriputra buddhakṣetraguṇavyūhaiḥ samalaṃkṛtaṃ tadbuddhakṣetraṃ //7//",
+   "T0366": "舍利弗！彼佛國土微風吹動，諸寶行樹及寶羅網出微妙音，譬如百千種樂同時俱作，聞是音者，皆自然生念佛、念法、念僧之心。舍利弗！其佛國土成就如是功德莊嚴。",
+   "T0367": "「又，舍利子！極樂世界淨佛土中，常有妙風吹諸寶樹及寶羅網出微妙音。譬如百千俱胝天樂同時俱作，出微妙聲甚可愛玩；如是彼土常有妙風吹眾寶樹及寶羅網，擊出種種微妙音聲說種種法。彼土眾生聞是聲已，起佛、法、僧念作意等無量功德。舍利子！彼佛土中有如是等眾妙綺飾，功德莊嚴甚可愛樂，是故名為極樂世界。「又，舍利子！極樂世界淨佛土中，有如是等無量無邊不可思議甚希有事。假使經於百千俱胝那庾多劫，以其無量百千俱胝那庾多舌，一一舌上出無量聲讚其功德亦不能盡，是故名為極樂世界。",
+   "bo": "ཤཱ་རིའི་བུ་སངས་རྒྱས་ཀྱི་ཞིང་དེ་ནི་སངས་རྒྱས་ཀྱི་ཞིང་གི་ཡོན་ཏན་བཀོད་པ་རྣམ་པ་དེ་ལྟ་བུ་དག་གིས་ལེགས་པར་བརྒྱན་པའོ། །ཤཱ་རིའི་བུ་གཞན་ཡང་སངས་རྒྱས་ཀྱི་ཞིང་དེའི་ཏ་ལའི་ཕྲེང་བ་དེ་དག་དང་། དྲིལ་བུ་གཡེར་ཀའི་དྲ་བ་དེ་དག་ལ་རླུང་གིས་ཕོག་ཅིང་རླུང་གིས་བསྐྱོད་ན་སྒྲ་སྙན་པ་ཡིད་དུ་འོང་བ། ཉམས་དགའ་བ་འབྱུང་སྟེ། འདི་ལྟ་སྟེ་དཔེར་ན། རོལ་མོ་མཁན་གྱིས་ཡན་ལག་བྱེ་བ་འབུམ་དང་ལྡན་པའི་ལྷའི་སིལ་སྙན་བླངས་པ་བཞིན་ནོ། ། དེར་མི་དེ་དག་གིས་སྒྲ་དེ་ཐོས་ནས་སངས་རྒྱས་རྗེས་སུ་དྲན་པ་དང་། ཆོས་རྗེས་སུ་དྲན་པ་དང་། དགེ་འདུན་རྗེས་སུ་དྲན་པ་ལུས་ལ་གནས་སོ། །",
+   "en": "Śāriputra, this buddha realm is beautifully adorned by such displays of the excellences of buddha realms. “Furthermore, Śāriputra, when the wind blows in that buddha realm it sways the rows of palm trees and the filigree net of chimes, creating sweet, enchanting, and delightful sounds, like the myriad subtleties of divine cymbals when played by a skilled musician. The people there, upon hearing those sounds, settle into the recollection of the Buddha, the recollection of the Dharma, and the recollection of the Saṅgha."
+  },
+  "a08": {
+   "sa": "tat kiṃ manyase śāriputra kena kāraṇena sa tathāgato 'mitāyur nāmocyate / tasya khalu punaḥ śāriputra tathāgatasya teṣāṃ ca manuṣyāṇām(3) aparimitam āyuḥpramāṇaṃ / tena kāraṇena sa tathāgato 'mitāyur nāmocyate / tasya ca śāriputra tathāgatasya daśa kalpā anuttarāṃ samyaksaṃbodhim abhisaṃbuddhasya //8// tat kiṃ manyase śāriputra kena kāraṇena sa tathāgato 'mitābho nāmocyate / tasya khalu punaḥ śāriputra tathāgatasyābhāpratihatā sarvabuddhakṣetreṣu / tena kāraṇena sa tathāgato 'mitābho nāmocyate // P--O.96:J.202 tasya ca śāriputra tathāgatasyāprameyaḥ śrāvakasaṃgho yeṣāṃ na sukaraṃ pramāṇam ākhyātuṃ śuddhānām arhatāṃ / evaṃrūpaiḥ śāriputra buddhakṣetraguṇavyūhaiḥ samalaṃkṛtaṃ tadbuddhakṣetraṃ //9//",
+   "T0366": "「舍利弗！於汝意云何？彼佛何故號阿彌陀？舍利弗！彼佛光明無量，照十方國無所障礙，是故號為阿彌陀。又舍利弗！彼佛壽命及其人民，無量無邊阿僧祇劫，故名阿彌陀。舍利弗！阿彌陀佛成佛已來，於今十劫。又舍利弗！彼佛有無量無邊聲聞弟子，皆阿羅漢，非是算數之所能知；諸菩薩，亦復如是。舍利弗！彼佛國土成就如是功德莊嚴。",
+   "T0367": "「又，舍利子！極樂世界淨佛土中，佛有何緣名無量壽？舍利子！由彼如來及諸有情，壽命無量無數大劫；由是緣故，彼土如來名無量壽。舍利子！無量壽佛證得阿耨多羅三藐三菩提已來經十大劫。舍利子！何緣彼佛名無量光？舍利子！由彼如來恒放無量無邊妙光，遍照一切十方佛土，施作佛事無有障礙；由是緣故，彼土如來名無量光。舍利子！彼佛淨土成就如是功德莊嚴甚可愛樂，是故名為極樂世界。「又，舍利子！極樂世界淨佛土中，無量壽佛常有無量聲聞弟子，一切皆是大阿羅漢，具足種種微妙功德，其量無邊不可稱數。舍利子！彼佛淨土成就如是功德莊嚴甚可愛樂，是故名為極樂世界。",
+   "bo": "ཤཱ་རིའི་བུ་སངས་རྒྱས་ཀྱི་ཞིང་དེ་ནི་སངས་རྒྱས་ཀྱི་ཞིང་གི་ཡོན་ཏན་བཀོད་པའི་རྒྱན་རྣམ་པ་དེ་ལྟ་བུ་དག་གིས་ལེགས་པར་བརྒྱན་པའོ། །ཤཱ་རིའི་བུ་འདི་ཇི་སྙམ་དུ་སེམས། ཅིའི་ཕྱིར་དེ་བཞིན་གཤེགས་པ་ཚེ་དཔག་ཏུ་མེད་ཅེས་བྱ་ཞེ་ན། ཤཱ་རིའི་བུ་དེ་བཞིན་གཤེགས་པ་ཚེ་དཔག་མེད་དེའི་ཚེའི་ཚད་དཔག་ཏུ་མེད་དེ། དེའི་ཕྱིར་དེ་བཞིན་གཤེགས་པ་ཚེ་དཔག་མེད་ཅེས་བྱའོ། ཤཱ་རིའི་བུ་གཞན་ཡང་ཅིའི་ཕྱིར་དེ་བཞིན་གཤེགས་པ་དེ་འོད་དཔག་མེད་ཅེས་བྱ་ཞེ་ན། ཤཱ་རིའི་བུ་དེ་བཞིན་གཤེགས་པ་འོད་དཔག་མེད་དེའི་འོད་སངས་རྒྱས་ཀྱི་ཞིང་ཐམས་ཅད་དུ་ཐོགས་པ་མེད་དེ། དེའི་ཕྱིར་དེ་བཞིན་གཤེགས་པ་འོད་དཔག་མེད་ཅེས་བྱའོ། ། བཅོམ་ལྡན་འདས་དེ་བཞིན་གཤེགས་པ་འོད་དཔག་མེད་དེ་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་ཏུ་མངོན་པར་རྫོགས་པར་སངས་རྒྱས་ནས་བསྐལ་པ་བཅུ་ལོན་ནོ། ། ཤཱ་རིའི་བུ་གཞན་ཡང་བཅོམ་ལྡན་འདས་དེའི་ཉན་ཐོས་ཀྱི་དགེ་འདུན་དག་པ་དགྲ་བཅོམ་པ་ཤ་སྟག་ཚད་མེད་དེ། དེ་དག་གི་ཚད་བརྗོད་པར་སླ་བ་མ་ཡིན་ནོ། །",
+   "en": "Śāriputra, this buddha realm is beautifully adorned by such displays of the excellences of buddha realms. “Now what do you think, Śāriputra, why is that tathāgata called ‘Amitāyus’ (Immeasurable Life)? Śāriputra, the lifespan of the Tathāgata Amitāyus is immeasurable. For this reason, he is called ‘Tathāgata Amitāyus.’ Furthermore, Śāriputra, why is that tathāgata called ‘Amitābha’ (Immeasurable Light)? Śāriputra, the light of the Tathāgata Amitābha shines unimpeded throughout all buddha realms. For this reason, he is called ‘Tathāgata Amitābha.’ The Bhagavān Tathāgata Amitābha fully awakened to unsurpassable, completely perfect enlightenment ten eons ago. “Furthermore, Śāriputra, this bhagavān has an immeasurable saṅgha of śrāvakas, who are all pure arhats; their number cannot be easily expressed."
+  },
+  "a10": {
+   "sa": "punar aparaṃ śāriputra ye 'mitāyuṣas tathāgatasya buddhakṣetre sattvā upapannāḥ śuddhā bodhisattvā avinivartanīyā ekajātipratibaddhās teṣāṃ śāriputra bodhisattvānāṃ na sukaraṃ pramāṇam ākhyātum anyatrāprameyāsaṃkhyeyā iti saṃkhyāṃ gacchaṃti // tatra khalu punaḥ śāriputra buddhakṣetre sattvaiḥ praṇidhānaṃ kartavyaṃ / tat kasmād dhetoḥ / yatra hi nāma tathārūpaiḥ satpuruṣaiḥ saha samavadhānaṃ bhavati / nāvaramātrakeṇa śāriputra kuśalamūlenāmitāyuṣas tathāgatasya buddhakṣetre sattvā upapadyaṃte / yaḥ kaścic chāriputra kulaputro vā kuladuhitā vā tasya bhagavato 'mitāyuṣas tathāgatasya nāmadheyaṃ śroṣyati śrutvā ca manasikariṣyati ekarātraṃ vā dvirātraṃ vā trirātraṃ vā catūrātraṃ vā paṃcarātraṃ vā ṣaḍrātraṃ vā saptarātraṃ vāvikṣiptacitto manasikariṣyati yadā sa kulaputro vā kuladuhitā vā kālaṃ kariṣyati tasya kālaṃ kurvataḥ so 'mitāyus tathāgataḥ śrāvakasaṃghaparivṛto bodhisattvagaṇapuraskṛtaḥ purataḥ sthāsyati so 'viparyastacittaḥ kālaṃ kariṣyati ca(4) / sa kālaṃ krtvā tasyaivāmitāyuṣas tathāgatasya buddhakṣetre sukhāvatyāṃ lokadhātāv upapatsyate / tasmāt tarhi śāriputra idam arthavaśam saṃpaśyamāna evaṃ vadāmi satkṛtya kulaputreṇa vā kuladuhitrā vā tatra buddhakṣetre cittapraṇidhānaṃ kartavyaṃ //10//",
+   "T0366": "「又舍利弗！極樂國土眾生生者，皆是阿鞞跋致。其中多有一生補處，其數甚多，非是算數所能知之，但可以無量無邊阿僧祇劫說。舍利弗！眾生聞者，應當發願，願生彼國。所以者何？得與如是諸上善人俱會一處。「舍利弗！不可以少善根福德因緣得生彼國。舍利弗！若有善男子、善女人，聞說阿彌陀佛，執持名號，若一日、若二日、若三日、若四日、若五日、若六日、若七日，一心不亂。其人臨命終時，阿彌陀佛與諸聖眾，現在其前。是人終時，心不顛倒，即得往生阿彌陀佛極樂國土。舍利弗！我見是利，故說此言。若有眾生聞是說者，應當發願生彼國土。",
+   "T0367": "「又，舍利子！極樂世界淨佛土中，無量壽佛常有無量菩薩弟子，一切皆是一生所繫，具足種種微妙功德，其量無邊不可稱數，假使經於無數量劫讚其功德終不能盡。舍利子！彼佛土中成就如是功德莊嚴甚可愛樂，是故名為極樂世界。「又，舍利子！若諸有情生彼土者皆不退轉，必不復墮諸險惡趣、邊地下賤蔑戾車中，常遊諸佛清淨國土，殊勝行願念念增進，決定當證阿耨多羅三藐三菩提。舍利子！彼佛土中成就如是功德莊嚴甚可愛樂，是故名為極樂世界。「又，舍利子！若諸有情聞彼西方無量壽佛清淨佛土無量功德眾所莊嚴，皆應發願生彼佛土。所以者何？若生彼土，得與如是無量功德眾所莊嚴諸大士等同一集會，受用如是無量功德眾所莊嚴清淨佛土，大乘法樂常無退轉，無量行願念念增進，速證無上正等菩提。故，舍利子！生彼佛土諸有情類成就無量無邊功德，非少善根諸有情類當得往生無量壽佛極樂世界清淨佛土。「又，舍利子！若有淨信諸善男子或善女人，得聞如是無量壽佛無量無邊不可思議功德名號、極樂世界功德莊嚴，聞已思惟，若一日夜，或二、或三、或四、或五、或六、或七，繫念不亂。是善男子或善女人臨命終時，無量壽佛與其無量聲聞弟子、菩薩眾俱前後圍繞，來住其前，慈悲加祐，令心不亂；既捨命已，隨佛眾會，生無量壽極樂世界清淨佛土。「又，舍利子！我觀如是利益安樂大事因緣，說誠諦語。若有淨信諸善男子或善女人，得聞如是無量壽佛不可思議功德名號、極樂世界淨佛土者，一切皆應信受發願，如說修行，生彼佛土。",
+   "bo": "ཤཱ་རིའི་བུ་གཞན་ཡང་སངས་རྒྱས་ཀྱི་ཞིང་དེར་སྐྱེས་པའི་སེམས་ཅན་དག་ནི་ཕྱིར་མི་ལྡོག་པ། སྐྱེ་བ་གཅིག་གིས་ཐོགས་པའི་བྱང་ཆུབ་སེམས་དཔའ་དག་པ་ཤ་སྟག་གོ། ། ཤཱ་རིའི་བུ་བྱང་ཆུབ་སེམས་དཔའ་དེ་དག་གི་ཚད་ནི་བརྗོད་པར་སླ་བ་མ་ཡིན་ཏེ། ཤཱ་རིའི་བུ་སངས་རྒྱས་ཀྱི་ཞིང་དེ་ནི་སངས་རྒྱས་ཀྱི་ཞིང་གི་ཡོན་ཏན་བཀོད་པ་རྣམ་པ་དེ་ལྟ་བུ་དག་གིས་ལེགས་པར་བརྒྱན་པའོ། ཤཱ་རིའི་བུ་དེ་ལྟ་བས་ན་རིགས་ཀྱི་བུའམ་རིགས་ཀྱི་བུ་མོས་སངས་རྒྱས་ཀྱི་ཞིང་དེར་སྐྱེ་བར་བྱ་བའི་ཕྱིར་དགེ་བའི་རྩ་བ་རྣམས་གུས་པར་ཡོངས་སུ་བསྔོ་བར་བྱའོ། ། དེ་ཅིའི་ཕྱིར་ཞེ་ན། འདི་ལྟར་སྐྱེས་བུ་དམ་པ་དེ་ལྟ་བུ་དག་དང་ཕྲད་པར་འགྱུར་བའི་ཕྱིར་རོ། ། ཤཱ་རིའི་བུ་དགེ་བའི་རྩ་བ་ངན་ངོན་ཙམ་གྱིས་ནི་བཅོམ་ལྡན་འདས་དེ་བཞིན་གཤེགས་པ་ཚེ་དཔག་མེད་དེའི་ཞིང་དུ་སྐྱེ་བར་མི་འགྱུར་རོ། ། ཤཱ་རིའི་བུ་རིགས་ཀྱི་བུའམ་རིགས་ཀྱི་བུ་མོ་གང་གིས་བཅོམ་ལྡན་འདས་དེ་བཞིན་གཤེགས་པ་ཚེ་དཔག་མེད་དེའི་མཚན་ཐོས་ལ་ཐོས་ནས་ཀྱང་ཡིད་ལ་བྱེད་ཅིང་ནུབ་གཅིག་གམ། ནུབ་གཉིས་སམ། ནུབ་གསུམ་མམ། ནུབ་བཞི་འམ། ནུབ་ལྔའམ། ནུབ་དྲུག་གམ། ནུབ་བདུན་དུ་གཡེང་བ་མེད་པའི་སེམས་ཀྱིས་ཡིད་ལ་བྱེད་ན། ། རིགས་ཀྱི་བུའམ། རིགས་ཀྱི་བུ་མོ་དེ་འཆི་བའི་དུས་ཀྱི་ཚེ་ཕྱིན་ཅི་ལོག་མེད་པའི་སེམས་ཀྱིས་འཆི་བའི་དུས་བྱས་ནས་འཆི་བའི་དུས་བྱས་པ་དེ་དེ་བཞིན་གཤེགས་པ་འོད་དཔག་མེད་ཉན་ཐོས་ཀྱི་དགེ་འདུན་གྱིས་ཡོངས་སུ་བསྐོར་ཅིང་བྱང་ཆུབ་སེམས་དཔའི་ཚོགས་ཀྱིས་མདུན་གྱིས་བལྟས་པའི་མདུན་ན་བཞུགས་པ་བཅོམ་ལྡན་འདས་དེ་བཞིན་གཤེགས་པ་འོད་དཔག་མེད་དེའི་སངས་རྒྱས་ཀྱི་ཞིང་འཇིག་རྟེན་གྱི་ཁམས་བདེ་བ་ཅན་དུ་སྐྱེ་བར་འགྱུར་རོ། ཤཱ་རིའི་བུ་དེ་ལྟ་བས་ན་དོན་གྱི་དབང་དེ་མཐོང་ནས་རིགས་ཀྱི་བུ་འམ། རིགས་ཀྱི་བུ་མོས་སངས་རྒྱས་ཀྱི་ཞིང་དེར་གུས་པར་སྨོན་ལམ་གདབ་པར་བྱའོ་ཞེས་དེ་སྐད་བརྗོད་དོ",
+   "en": "Furthermore, Śāriputra, the sentient beings born in this buddha realm are all pure bodhisattvas who will not regress and are bound by only one more birth. Śāriputra, one cannot express the total number of bodhisattvas except to say that they are immeasurable or countless. Śāriputra, this buddha realm is beautifully adorned by such displays of the excellences of buddha realms. “Therefore Śāriputra, sons and daughters of good family should completely dedicate all roots of virtue in a respectful manner to be born in that buddha realm. Why? Because by doing so, they will be able to meet holy beings similar to themselves. Śāriputra, one cannot take birth in the realm of the Bhagavān Tathāgata Amitāyus merely with minimal roots of virtue. “Śāriputra, if those sons and daughters of good family hear the name of the Bhagavān Tathāgata Amitāyus and keep it in mind unwaveringly for one, two, three, four, five, six, or seven nights, when the hour of their death arrives, they will depart in an undeluded state. After they have passed away, the Tathāgata Amitābha will stand before them, entirely surrounded by a śrāvaka assembly and honored by a congregation of bodhisattvas. These sons and daughters of good family will be born in the Sukhāvatī world, the buddha realm of the Bhagavān Tathāgata Amitābha. Therefore, Śāriputra, having seen its real point, sons and daughters of good family, I declare, ought to respectfully make prayers to reach that buddha realm."
+  },
+  "a11": {
+   "sa": "tadyathāpi nāma śāriputra aham etarhi tāṃ parikīrtayāmi evam eva P--O.97:J.204 śāriputra pūrvasyāṃ diśy akṣobhyo nāma tathāgato merudhvajo nāma tathāgato mahāmerur nāma tathāgato meruprabhāso nāma tathāgato maṃjudhvajo nāma tathāgata evaṃpramukhāḥ śāriputra pūrvasyāṃ diśi gaṃgānadīvālukopamā buddhā bhagavaṃtaḥ svakasvakāni buddhakṣetrāṇi jihveṃdriyeṇa saṃcchādayitvā nirveṭhanaṃ kurvaṃti / pratīyatha yūyam idam aciṃtyaguṇa- parikīrtanaṃ sarvabuddhaparigrahaṃ nāma dharmaparyāyaṃ //11//",
+   "T0366": "「舍利弗！如我今者，讚歎阿彌陀佛不可思議功德；東方亦有阿閦鞞佛、須彌相佛、大須彌佛、須彌光佛、妙音佛，如是等恒河沙數諸佛，各於其國出廣長舌相，遍覆三千大千世界，說誠實言：『汝等眾生，當信是稱讚不可思議功德一切諸佛所護念經。』",
+   "T0367": "「又，舍利子！如我今者，稱揚讚歎無量壽佛無量無邊不可思議佛土功德；如是東方亦有現在不動如來、山幢如來、大山如來、山光如來、妙幢如來，如是等佛如殑伽沙住在東方，自佛淨土各各示現廣長舌相遍覆三千大千世界周匝圍繞，說誠諦言：『汝等有情皆應信受如是稱讚不可思議佛土功德一切諸佛攝受法門。』",
+   "bo": "ཤཱ་རིའི་བུ་ཇི་ལྟར་དེ་བཞིན་གཤེགས་པ་ངས་ད་ལྟར་ཡོངས་སུ་བརྗོད་པ་དེ་བཞིན་དུ་ཤཱ་རིའི་བུ་ཤར་ཕྱོགས་ན་བཅོམ་ལྡན་འདས་དེ་བཞིན་གཤེགས་པ་མི་འཁྲུགས་པ་ཞེས་བྱ་བ་དང་། དེ་བཞིན་གཤེགས་པ་ལྷུན་པོའི་རྒྱལ་མཚན་ཞེས་བྱ་བ་དང་། དེ་བཞིན་གཤེགས་པ་ལྷུན་པོ་ཞེས་བྱ་བ་དང་། དེ་བཞིན་གཤེགས་པ་ལྷུན་པོ་ཆེན་པོ་ཞེས་བྱ་བ་དང་། དེ་བཞིན་གཤེགས་པ་ལྷུན་པོ་ཆེན་པོ་སྣང་བ་ཞེས་བྱ་བ་དང་། དེ་བཞིན་གཤེགས་པ་འཇམ་སྒྲ་ཞེས་བྱ་བ་དང་། དེ་བཞིན་གཤེགས་པ་འཇམ་དབྱངས་ཞེས་བྱ་བ་དང་། དེ་དག་ལ་སོགས་པ་ཤར་ཕྱོགས་ཀྱི་སངས་རྒྱས་བཅོམ་ལྡན་འདས་གང་གཱའི་ཀླུང་གི་བྱེ་མ་སྙེད་དག་རང་རང་གི་སངས་རྒྱས་ཀྱི་ཞིང་རྣམས་ལྗགས་ཀྱི་དབང་པོས་ཁེབས་པར་མཛད་དེ། ། ཁྱེད་ཅག་ཡོན་ཏན་བསམ་གྱིས་མི་ཁྱབ་པ་ཡོངས་སུ་བརྗོད་པ་སངས་རྒྱས་ཐམས་ཅད་ཀྱིས་ཡོངས་སུ་བཟུང་བའི་ཆོས་ཀྱི་རྣམ་གྲངས་འདི་ལ་ཡིད་ཆེས་པར་གྱིས་ཤིག་ཅེས་གསུང་བ་མཛད་དོ། །",
+   "en": "“O Śāriputra, I, the Tathāgata, at present praise [this Sukhāvatī]. So, likewise, Śāriputra, in the east, the Tathāgata Akṣobhya, the Tathāgata Merudhvaja, the Tathāgata Meru, the Tathāgata Mahāmeru, the Tathāgata Mahāmeruprabhāsa, the Tathāgata Harmonious Speech, the Tathāgata Harmonious Voice, and the other bhagavān buddhas of the east, who are as numerous as the grains of sand of the river Ganges, pervade their own buddha realms with the power of their speech and proclaim, ‘You should place your trust in this Dharma discourse called “Complete Embrace by all Buddhas,” which praises inconceivable qualities.’"
+  },
+  "a12": {
+   "sa": "evaṃ dakṣiṇasyāṃ diśi caṃdrasūryapradīpo nāma tathāgato yaśaḥprabho nāma tathāgato mahārciskaṃdho nāma tathāgato merupradīpo nāma tathāgato 'naṃtavīryo nāma tathāgata evaṃpramukhāḥ śāriputra dakṣiṇasyāṃ diśi gaṃgānadīvālukopamā buddhā bhagavaṃtaḥ svakasvakāni buddhakṣetrāṇi jihveṃdriyeṇa saṃcchādayitvā nirveṭhanaṃ kurvaṃti / pratīyatha yūyam idam aciṃtyaguṇaparikīrtanaṃ sarvabuddhaparigrahaṃ nāma dharmaparyāyaṃ //12//",
+   "T0366": "「舍利弗！南方世界有日月燈佛、名聞光佛、大焰肩佛、須彌燈佛、無量精進佛，如是等恒河沙數諸佛，各於其國出廣長舌相，遍覆三千大千世界，說誠實言：『汝等眾生，當信是稱讚不可思議功德一切諸佛所護念經。』",
+   "T0367": "「又，舍利子！如是南方亦有現在日月光如來、名稱光如來、大光蘊如來、迷盧光如來、無邊精進如來，如是等佛如殑伽沙住在南方，自佛淨土各各示現廣長舌相遍覆三千大千世界周匝圍繞，說誠諦言：『汝等有情皆應信受如是稱讚不可思議佛土功德一切諸佛攝受法門。』",
+   "bo": "དེ་བཞིན་དུ་ལྷོ་ཕྱོགས་ན་དེ་བཞིན་གཤེགས་པ་ཉི་ཟླའི་སྒྲོན་མ་ཞེས་བྱ་བ་དང་། དེ་བཞིན་གཤེགས་པ་གྲགས་པ་ཞེས་བྱ་བ་དང་། དེ་བཞིན་གཤེགས་པ་གྲགས་པའི་འོད་ཅེས་བྱ་བ་དང་། དེ་བཞིན་གཤེགས་པ་འོད་འཕྲོ་ཕུང་པོ་ཞེས་བྱ་བ་དང་། དེ་བཞིན་གཤེགས་པ་ལྷུན་པོའི་སྒྲོན་མ་ཞེས་བྱ་བ་དང་། དེ་བཞིན་གཤེགས་པ་བརྩོན་འགྲུས་མཐའ་ཡས་ཞེས་བྱ་བ་དང་། དེ་དག་ལ་སོགས་པ་ལྷོ་ཕྱོགས་ཀྱི་སངས་རྒྱས་བཅོམ་ལྡན་འདས་གང་གཱའི་ཀླུང་གི་བྱེ་མ་སྙེད་དག་རང་རང་གི་སངས་རྒྱས་ཀྱི་ཞིང་རྣམས་ལྗགས་ཀྱི་དབང་པོས་ཁེབས་པར་མཛད་དེ། དེ་དག་ལ་སོགས་པ་ནུབ་ཕྱོགས་ཀྱི་སངས་རྒྱས་བཅོམ་ལྡན་འདས་གང་གཱའི་ཀླུང་གི་བྱེ་མ་སྙེད་དག་རང་རང་གི་སངས་རྒྱས་ཀྱི་ཞིང་རྣམས་ལྗགས་ཀྱི་དབང་པོས་ཁེབས་པར་མཛད་དེ། ཁྱེད་ཅག་ཡོན་ཏན་བསམ་གྱིས་མི་ཁྱབ་པ་ཡོངས་སུ་བརྗོད་པ་སངས་རྒྱས་ཐམས་ཅད་ཀྱིས་ཡོངས་སུ་བཟུང་བའི་ཆོས་ཀྱི་རྣམ་གྲངས་འདི་ལ་ཡིད་ཆེས་པར་གྱིས་ཤིག་ཅེས་གསུང་བ་མཛད་དོ། ། ཁྱེད་ཅག་ཡོན་ཏན་བསམ་གྱིས་མི་ཁྱབ་པ་ཡོངས་སུ་བརྗོད་པ་སངས་རྒྱས་ཐམས་ཅད་ཀྱིས་ཡོངས་སུ་བཟུང་བའི་ཆོས་ཀྱི་རྣམ་གྲངས་འདི་ལ་ཡིད་ཆེས་པར་གྱིས་ཤིག་ཅེས་གསུང་བ་མཛད་དོ། །དེ་བཞིན་དུ་ནུབ་ཕྱོགས་ན་དེ་བཞིན་གཤེགས་པ་ཚེ་དཔག་མེད་ཅེས་བྱ་བ་དང་། དེ་བཞིན་གཤེགས་པ་ཕུང་པོ་དཔག་མེད་ཅེས་བྱ་བ་དང་། དེ་བཞིན་གཤེགས་པ་རྒྱལ་མཚན་དཔག་མེད་ཅེས་བྱ་བ་དང་། དེ་བཞིན་གཤེགས་པ་འོད་ཆེན་ཞེས་བྱ་བ་དང་།",
+   "en": "“Likewise, in the south, the bhagavān buddhas of the south, such as the Tathāgata Candrasūryapradīpa, the Tathāgata Renown, the Tathāgata Yaśaḥprabha, the Tathāgata Merupradīpa, the Tathāgata Anaṃtavīrya, and others, who are as numerous as the grains of sand of the river Ganges, pervade their own buddha realms with the power of their speech and proclaim, and others, who are as numerous as the grains of sand of the river Ganges, pervade their own buddha realms with the power of their speech and proclaim, ‘You should place your trust in this Dharma discourse called “Complete Embrace by all Buddhas,” which praises inconceivable qualities.’ ‘You should place your trust in this Dharma discourse called “Complete Embrace by all Buddhas,” which praises inconceivable qualities.’ “Likewise, in the west, the bhagavān buddhas of the west, such as the Tathāgata Amitāyus, the Tathāgata Amitaskandha, the Tathāgata Amitadhvaja, the Tathāgata Mahāprabha,"
+  },
+  "a13": {
+   "sa": "evaṃ paścimāyāṃ diśy amitāyur nāma tathāgato 'mitaskaṃdho nāma tathāgato 'mitadhvajo nāma tathāgato mahāprabho nāma tathāgato mahāratnaketur nāma tathāgataḥ śuddharaśmiprabho nāma tathāgata evaṃpramukhāḥ śāriputra paścimāyāṃ diśi gaṃgānadīvālukopamā buddhā bhagavaṃtaḥ svakasvakāni buddhakṣetrāṇi jihveṃdriyeṇa saṃcchādayitvā nirveṭhanaṃ kurvaṃti / pratīyatha yūyam idam aciṃtyaguṇaparikīrtanaṃ sarvabuddhaparigrahaṃ nāma dharmaparyāyaṃ //13//",
+   "T0366": "「舍利弗！西方世界有無量壽佛、無量相佛、無量幢佛、大光佛、大明佛、寶相佛、淨光佛，如是等恒河沙數諸佛，各於其國出廣長舌相，遍覆三千大千世界，說誠實言：『汝等眾生，當信是稱讚不可思議功德一切諸佛所護念經。』",
+   "T0367": "「又，舍利子！如是西方亦有現在無量壽如來、無量蘊如來、無量光如來、無量幢如來、大自在如來、大光如來、光焰如來、大寶幢如來、放光如來，如是等佛如殑伽沙住在西方，自佛淨土各各示現廣長舌相遍覆三千大千世界周匝圍繞，說誠諦言：『汝等有情皆應信受如是稱讚不可思議佛土功德一切諸佛攝受法門。』",
+   "bo": "དེ་བཞིན་གཤེགས་པ་འོད་ཟེར་སྣང་བ་ཞེས་བྱ་བ་དང་། དེ་བཞིན་གཤེགས་པ་རིན་པོ་ཆེའི་ཏོག་ཅེས་བྱ་བ་དང་། དེ་བཞིན་གཤེགས་པ་འོད་ཟེར་དག་པ་ཞེས་བྱ་བ་དང་།",
+   "en": "the Tathāgata Illuminating Light Rays, the Tathāgata Ratnaketu, the Tathāgata Śuddharaśmiprabha,"
+  },
+  "a14": {
+   "sa": "evam uttarāyāṃ diśi mahārciskaṃdho nāma tathāgato vaiśvānaranirghoṣo nāma tathāgato duṃdubhisvaranirghoṣo nāma tathāgato P--O.98:J.206 duṣpradharṣo nāma tathāgata ādityasaṃbhavo nāma tathāgato jaleniprabho nāma tathāgataḥ prabhākaro nāma tathāgata evaṃpramukhā(5) śāriputrottarāyāṃ diśi gaṃgānadīvālukopamā buddhā bhagavaṃtaḥ svakasvakāni buddhakṣetrāṇi jihveṃdriyeṇa saṃcchādayitvā nirveṭhanaṃ kurvaṃti / pratīyatha yūyam idam aciṃtyaguṇaparikīrtanaṃ sarvabuddhaparigrahaṃ nāma dharmaparyāyaṃ //14//",
+   "T0366": "「舍利弗！北方世界有焰肩佛、最勝音佛、難沮佛、日生佛、網明佛，如是等恒河沙數諸佛，各於其國出廣長舌相，遍覆三千大千世界，說誠實言：『汝等眾生，當信是稱讚不可思議功德一切諸佛所護念經。』",
+   "T0367": "「又，舍利子！如是北方亦有現在無量光嚴通達覺慧如來、無量天鼓震大妙音如來、大蘊如來、光網如來、娑羅帝王如來，如是等佛如殑伽沙住在北方，自佛淨土各各示現廣長舌相遍覆三千大千世界周匝圍繞，說誠諦言：『汝等有情皆應信受如是稱讚不可思議佛土功德一切諸佛攝受法門。』",
+   "bo": "དེ་བཞིན་དུ་བྱང་ཕྱོགས་ན་དེ་བཞིན་གཤེགས་པ་འོད་འཕྲོའི་ཕུང་པོ་ཆེན་པོ་ཞེས་བྱ་བ་དང་། དེ་བཞིན་གཤེགས་པ་ཐམས་ཅད་སྒྲོལ་བའི་དབྱངས་ཞེས་བྱ་བ་དང་། དེ་བཞིན་གཤེགས་པ་རབ་ཏུ་ཐུལ་དཀའ་ཞེས་བྱ་བ་དང་། དེ་བཞིན་གཤེགས་པ་ཉི་མ་འབྱུང་ཞེས་བྱ་བ་དང་། དེ་བཞིན་གཤེགས་པ་དྲ་བ་ཅན་གྱི་འོད་ཅེས་བྱ་བ་དང་། དེ་བཞིན་གཤེགས་པ་འོད་ཀྱི་འབྱུང་གནས་ཞེས་བྱ་བ་དང་། དེ་དག་ལ་སོགས་པ་བྱང་ཕྱོགས་ཀྱི་སངས་རྒྱས་བཅོམ་ལྡན་འདས་གང་གཱའི་ཀླུང་གི་བྱེ་མ་སྙེད་དག་རང་རང་གི་སངས་རྒྱས་ཀྱི་ཞིང་རྣམས་ལྗགས་ཀྱི་དབང་པོས་ཁེབས་ ཁྱེད་ཅག་ཡོན་ཏན་བསམ་གྱིས་མི་ཁྱབ་པ་ཡོངས་སུ་བརྗོད་པ་སངས་རྒྱས་ཐམས་ཅད་ཀྱིས་ཡོངས་སུ་བཟུང་བའི་ཆོས་ཀྱི་རྣམ་གྲངས་འདི་ལ་ཡིད་ཆེས་པར་གྱིས་ཤིག་ཅེས་གསུང་བ་མཛད་དོ། །",
+   "en": "“Likewise, in the north, the bhagavān buddhas of the north, such as the Tathāgata Mahārciskandha, the Tathāgata Vaiśvānaranirghoṣa, the Tathāgata Duṣpradharṣa, the Tathāgata Ādityasaṃbhava, the Tathāgata Jālinīprabha, the Tathāgata Prabhākara, ‘You should place your trust in this Dharma discourse called “Complete Embrace by all Buddhas,” which praises inconceivable qualities.’"
+  },
+  "a15": {
+   "sa": "evam adhastāyāṃ diśi siṃho nāma tathāgato yaśo nāma tathāgato yaśaḥprabhāso nāma tathāgato dharmo nama tathāgato dharmadharo nāma tathāgato dharmadhvajo nāma tathāgata evaṃpramukhāḥ śāriputrādhastāyāṃ diśi gaṃgānadīvālukopamā buddhā bhagavaṃtaḥ svakasvakāni buddhakṣetrāṇi jihveṃdriyeṇa saṃcchādayitvā nirveṭhanaṃ kurvaṃti / pratīyatha yūyam idam aciṃtyaguṇaparikīrtanaṃ sarvabuddhaparigrahaṃ nāma dharmaparyāyaṃ //15//",
+   "T0366": "「舍利弗！下方世界有師子佛、名聞佛、名光佛、達摩佛、法幢佛、持法佛，如是等恒河沙數諸佛，各於其國出廣長舌相，遍覆三千大千世界，說誠實言：『汝等眾生，當信是稱讚不可思議功德一切諸佛所護念經。』",
+   "T0367": "「又，舍利子！如是下方亦有現在示現一切妙法正理常放火王勝德光明如來、師子如來、名稱如來、譽光如來、正法如來、妙法如來、法幢如來、功德友如來、功德號如來，如是等佛如殑伽沙住在下方，自佛淨土各各示現廣長舌相遍覆三千大千世界周匝圍繞，說誠諦言：『汝等有情皆應信受如是稱讚不可思議佛土功德一切諸佛攝受法門。』",
+   "bo": "དེ་བཞིན་དུ་འོག་གི་ཕྱོགས་ན་དེ་བཞིན་གཤེགས་པ་སེང་གེ་ཞེས་བྱ་བ་དང་། དེ་བཞིན་གཤེགས་པ་གྲགས་པ་ཞེས་བྱ་བ་དང་། དེ་བཞིན་གཤེགས་པ་གྲགས་འོད་ཅེས་བྱ་བ་དང་། དེ་བཞིན་གཤེགས་པ་ཆོས་ཞེས་བྱ་བ་དང་། དེ་བཞིན་གཤེགས་པ་ཆོས་འཛིན་ཅེས་བྱ་བ་དང་། དེ་བཞིན་གཤེགས་པ་ཆོས་ཀྱི་རྒྱལ་མཚན་ཞེས་བྱ་བ་དང་། དེ་དག་ལ་སོགས་པ་འོག་གི་ཕྱོགས་ཀྱི་སངས་རྒྱས་བཅོམ་ལྡན་འདས་གང་གཱའི་ཀླུང་གི་བྱེ་མ་སྙེད་དག་རང་རང་གི་སངས་རྒྱས་ཀྱི་ཞིང་རྣམས་ལྗགས་ཀྱི་དབང་པོས་ཁེབས་པར་མཛད་དེ། །",
+   "en": "“Likewise, in the nadir, the bhagavān buddhas of the nadir, such as the Tathāgata Siṃha, the Tathāgata Yaśas, the Tathāgata Yaśaḥprabhāsa, the Tathāgata Dharma, the Tathāgata Dharmadhara, the Tathāgata Dharmadhvaja, and others, who are as numerous as the grains of sand of the river Ganges, pervade their own buddha realms with the power of their speech"
+  },
+  "a16": {
+   "sa": "evam upariṣṭhāyāṃ diśi brahmaghoṣo nāma tathāgato nakṣatrarājo nāma tathāgata iṃdraketudhvajarājo nāma tathāgato gaṃdhottamo nama tathāgato gaṃdhaprabhāso nāma tathāgato mahārciskaṃdho nāma tathāgato ratnakusumasaṃpuṣpitagātro nāma tathāgataḥ sāleṃdrarājo nāma tathāgato ratnotpalaśrīr nāma tathāgataḥ sarvārthadarśo nāma tathāgataḥ sumerukalpo nāma tathāgata evaṃpramukhāḥ śāriputropariṣṭhāyāṃ diśi gaṃgānadīvālukopamā buddhā bhagavaṃtaḥ svakasvakāni buddhakṣetrāṇi jihveṃdriyeṇa saṃcchādayitvā nirveṭhanaṃ kurvaṃti / pratīyatha yūyam idam aciṃtyaguṇaparikīrtanaṃ sarvabuddhaparigrahaṃ nāma dharmaparyāyaṃ //16//",
+   "T0366": "「舍利弗！上方世界有梵音佛、宿王佛、香上佛、香光佛、大焰肩佛、雜色寶華嚴身佛、娑羅樹王佛、寶華德佛、見一切義佛、如須彌山佛，如是等恒河沙數諸佛，各於其國出廣長舌相，遍覆三千大千世界，說誠實言：『汝等眾生，當信是稱讚不可思議功德一切諸佛所護念經。』",
+   "T0367": "「又，舍利子！如是上方亦有現在梵音如來、宿王如來、香光如來、如紅蓮華勝德如來、示現一切義利如來，如是等佛如殑伽沙住在上方，自佛淨土各各示現廣長舌相遍覆三千大千世界周匝圍繞，說誠諦言：『汝等有情皆應信受如是稱讚不可思議佛土功德一切諸佛攝受法門。』「又，舍利子！如是東南方亦有現在最上廣大雲雷音王如來，如是等佛如殑伽沙住東南方，自佛淨土各各示現廣長舌相遍覆三千大千世界周匝圍繞，說誠諦言：『汝等有情皆應信受如是稱讚不可思議佛土功德一切諸佛攝受法門。』「又，舍利子！如是西南方亦有現在最上日光名稱功德如來，如是等佛如殑伽沙住西南方，自佛淨土各各示現廣長舌相遍覆三千大千世界周匝圍繞，說誠諦言：『汝等有情皆應信受如是稱讚不可思議佛土功德一切諸佛攝受法門。』「又，舍利子！如是西北方亦有現在無量功德火王光明如來，如是等佛如殑伽沙住西北方，自佛淨土各各示現廣長舌相遍覆三千大千世界周匝圍繞，說誠諦言：『汝等有情皆應信受如是稱讚不可思議佛土功德一切諸佛攝受法門。』「又，舍利子！如是東北方亦有現在無數百千俱胝廣慧如來，如是等佛如殑伽沙住東北方，自佛淨土各各示現廣長舌相遍覆三千大千世界周匝圍繞，說誠諦言：『汝等有情皆應信受如是稱讚不可思議佛土功德一切諸佛攝受法門。』",
+   "bo": "དེ་བཞིན་དུ་སྟེང་གི་ཕྱོགས་ན་དེ་བཞིན་གཤེགས་པ་ཚངས་པའི་དབྱངས་ཞེས་བྱ་བ་དང་། དེ་བཞིན་གཤེགས་པ་སྐར་མའི་རྒྱལ་པོ་ཞེས་བྱ་བ་དང་། དེ་བཞིན་གཤེགས་པ་སྤོས་མཆོག་ཅེས་བྱ་བ་དང་། དེ་བཞིན་གཤེགས་པ་སྤོས་འོད་ཅེས་བྱ་བ་དང་། དེ་བཞིན་གཤེགས་པ་སྤོས་ཀྱི་ཕུང་པོ་ཞེས་བྱ་བ་དང་། དེ་བཞིན་གཤེགས་པ་རིན་ཆེན་མེ་ཏོག་ཤིན་ཏུ་རྒྱས་པའི་རིགས་ཞེས་བྱ་བ་དང་། དེ་བཞིན་གཤེགས་པ་སཱ་ལའི་དབང་པོའི་རྒྱལ་པོ་ཞེས་བྱ་བ་དང་། དེ་བཞིན་གཤེགས་པ་རིན་ཆེན་ཨུད་པལའི་དཔལ་ཞེས་བྱ་བ་དང་། དེ་བཞིན་གཤེགས་པ་མཐོང་བ་དོན་ཡོད་ཅེས་བྱ་བ་དང་། དེ་བཞིན་གཤེགས་པ་རི་རབ་ལྟ་བུ་ཞེས་བྱ་བ་དང་། དེ་དག་ལ་སོགས་པ་སྟེང་གི་ཕྱོགས་ཀྱི་སངས་རྒྱས་བཅོམ་ལྡན་འདས་གང་གཱའི་ཀླུང་གི་བྱེ་མ་སྙེད་དག་རང་རང་གི་སངས་རྒྱས་ཀྱི་ཞིང་རྣམས་ལྗགས་ཀྱི་དབང་པོས་ཁེབས་པར་མཛད་དེ། ཁྱེད་ཅག་ཡོན་ཏན་བསམ་གྱིས་མི་ཁྱབ་པ་ཡོངས་སུ་བརྗོད་པ་སངས་རྒྱས་ཐམས་ཅད་ཀྱིས་ཡོངས་སུ་བཟུང་བའི་ཆོས་ཀྱི་རྣམ་གྲངས་འདི་ལ་ཡིད་ཆེས་པར་གྱིས་ཤིག་ཅེས་གསུང་བ་མཛད་དོ། །",
+   "en": "“Likewise, in the zenith, the bhagavān buddhas of the zenith, such as the Tathāgata Brahmaghoṣa, the Tathāgata Nakṣatrarāja, the Tathāgata Gandhottama, the Tathāgata Gandhaprabhāsa, the Tathāgata Heap of Incense, the Tathāgata Ratnakusumasaṃpuṣpitagotra, the Tathāgata Sālendrarāja, the Tathāgata Ratnotpalaśrī, the Tathāgata Sarvārthadarśa, the Tathāgata Sumerukalpa, and others who are as numerous as the grains of sand of the river Ganges, pervade their own buddha realms with the power of their speech and proclaim, ‘You should place your trust in this Dharma discourse called “Complete Embrace by all Buddhas,”"
+  },
+  "a17": {
+   "sa": "P--O.99:J.208 tat kiṃ manyase śāriputra kena kāraṇenāyaṃ dharmaparyāyaḥ sarvabuddhaparigraho nāmocyate / ye kecic chāriputra kulaputrā vā kuladuhitaro vāsya dharmaparyāyasya nāmadheyaṃ śroṣyaṃti teṣāṃ ca buddhānāṃ bhagavatāṃ nāmadheyaṃ dhārayiṣyaṃti sarve te buddhaparigṛhītā bhaviṣyaṃty avinivartanīyāś ca bhaviṣyaṃty anuttarāyāṃ samyaksaṃbodhau(6) / tasmāt tarhi śāriputra śraddadhādhvaṃ pratīyatha mākāṃkṣayatha mama ca teṣāṃ ca buddhānāṃ bhagavatāṃ / ye kecic chāriputra kulaputrā vā kuladuhitaro vā tasya bhagavato 'mitāyuṣas tathāgatasya buddhakṣetre cittapraṇidhānaṃ kariṣyaṃti kṛtaṃ vā kurvaṃti vā sarve te 'vinivartanīyā bhaviṣyaṃty anuttarāyāṃ samyaksaṃbodhau(6) tatra ca buddhakṣetra upapatsyaṃty upapannā vopapadyaṃti vā / tasmāt tarhi śāriputra śrāddhaiḥ kulaputraiḥ kuladuhitṛbhiś ca tatra buddhakṣetre cittapraṇidhir utpādayitavyaḥ //17//",
+   "T0366": "「舍利弗！於汝意云何？何故名為『一切諸佛所護念經』？舍利弗！若有善男子、善女人，聞是經受持者，及聞諸佛名者；是諸善男子、善女人，皆為一切諸佛共所護念，皆得不退轉於阿耨多羅三藐三菩提。是故舍利弗！汝等皆當信受我語及諸佛所說。「舍利弗！若有人已發願、今發願、當發願，欲生阿彌陀佛國者；是諸人等，皆得不退轉於阿耨多羅三藐三菩提，於彼國土若已生、若今生、若當生。是故舍利弗！諸善男子、善女人若有信者，應當發願生彼國土。",
+   "T0367": "「又，舍利子！何緣此經名為『稱讚不可思議佛土功德一切諸佛攝受法門』？舍利子！由此經中稱揚讚歎無量壽佛極樂世界不可思議佛土功德，及十方面諸佛世尊為欲方便利益安樂諸有情故，各住本土現大神變說誠諦言，勸諸有情信受此法，是故此經名為『稱讚不可思議佛土功德一切諸佛攝受法門』。「又，舍利子！若善男子或善女人，或已得聞，或當得聞，或今得聞，聞是經已，深生信解；生信解已，必為如是住十方面十殑伽沙諸佛世尊之所攝受；如說行者，一切定於阿耨多羅三藐三菩提得不退轉，一切定生無量壽佛極樂世界清淨佛土。是故，舍利子！汝等有情一切皆應信受領解我及十方佛世尊語，當勤精進，如說修行，勿生疑慮。「又，舍利子！若善男子或善女人，於無量壽極樂世界清淨佛土功德莊嚴，若已發願，若當發願，若今發願，必為如是住十方面十殑伽沙諸佛世尊之所攝受；如說行者，一切定於阿耨多羅三藐三菩提得不退轉，一切定生無量壽佛極樂世界清淨佛土。是故，舍利子！若有淨信諸善男子或善女人，一切皆應於無量壽極樂世界清淨佛土，深心信解，發願往生，勿行放逸。",
+   "bo": "ཤཱ་རིའི་བུ་འདི་ཇི་སྙམ་དུ་སེམས། ཅིའི་ཕྱིར་ཆོས་ཀྱི་རྣམ་གྲངས་འདི་སངས་རྒྱས་ཐམས་ཅད་ཀྱིས་ཡོངས་སུ་བཟུང་བ་ཞེས་བྱ་ཞེ་ན། ཤཱ་རིའི་བུ་རིགས་ཀྱི་བུའམ་རིགས་ཀྱི་བུ་མོ་གང་དག་ཆོས་ཀྱི་རྣམ་གྲངས་འདི་དང་། སངས་རྒྱས་བཅོམ་ལྡན་འདས་དེ་དག་གི་མཚན་ཐོས་པར་གྱུར་པ་དང་། ཐོས་པ་དང་ཐོས་པར་འགྱུར་བ་དེ་དག་ཐམས་ཅད་སངས་རྒྱས་བཅོམ་ལྡན་འདས་རྣམས་ཀྱིས་ཡོངས་སུ་བཟུང་བར་འགྱུར་རོ། ཤཱ་རིའི་བུ་སེམས་ཅན་གང་དག་བཅོམ་ལྡན་འདས་དེ་བཞིན་གཤེགས་པ་འོད་དཔག་མེད་དེའི་སངས་རྒྱས་ཀྱི་ཞིང་འཇིག་རྟེན་གྱི་ཁམས་བདེ་བ་ཅན་དུ་སེམས་ཀྱིས་སྨོན་པར་བྱེད་པའམ། བྱས་པའམ། བྱེད་པའམ། བྱེད་པར་འགྱུར་བ་དེ་དག་ཐམས་ཅད་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་ལས་ཕྱིར་མི་ལྡོག་གོ། །ཕྱིར་མ་ལོག་གོ་ཕྱིར་མི་ལྡོག་པར་འགྱུར་རོ།",
+   "en": "which praises Sukhāvatī’s inconceivable qualities.’ “What do you think about this, Śāriputra, why is this Dharma discourse called ‘Complete Embrace by All Buddhas’? Śāriputra, those sons and daughters of good family who have heard, now hear, or will hear this Dharma discourse and the names of those bhagavān buddhas will all be embraced completely by the bhagavān buddhas. Śāriputra, of all those sentient beings who aspire—who have made, are making, or will make aspirations—to the Sukhāvatī world, the buddha realm of the Bhagavān Tathāgata Amitābha, none has turned away, is turning away, or will ever turn away from the pursuit of unsurpassable, completely perfect enlightenment."
+  },
+  "a18": {
+   "sa": "tadyathāpi nāma śāriputrāham etarhi teṣāṃ buddhānāṃ bhagavatām evamaciṃtyaguṇān parikīrtayāmi evam eva śāriputra mamāpi te buddhā bhagavaṃta evamaciṃtyaguṇān parikīrtayaṃti / suduṣkaraṃ bhagavatā śākyamuninā śākyādhirājena kṛtaṃ / sahāyāṃ lokadhātāv anuttarāṃ samyaksaṃbodhim abhisaṃbudhya sarvalokavipratyayanīyo dharmo deśitaḥ kalpakaṣāye sattvakaṣāye dṛṣṭikaṣāya āyuṣkaṣāye kleśakaṣāye //18//",
+   "T0366": "「舍利弗！如我今者，稱讚諸佛不可思議功德；彼諸佛等，亦稱說我不可思議功德，而作是言：『釋迦牟尼佛能為甚難希有之事，能於娑婆國土五濁惡世，劫濁、見濁、煩惱濁、眾生濁、命濁中，得阿耨多羅三藐三菩提，為諸眾生說是一切世間難信之法。』",
+   "T0367": "「又，舍利子！如我今者，稱揚讚歎無量壽佛極樂世界不可思議佛土功德；彼十方面諸佛世尊，亦稱讚我不可思議無邊功德，皆作是言：『甚奇希有！釋迦寂靜釋迦法王如來、應、正等覺、明行圓滿、善逝、世間解、無上丈夫、調御士、天人師、佛世尊，乃能於是堪忍世界五濁惡時，所謂：劫濁、諸有情濁、諸煩惱濁、見濁、命濁，於中證得阿耨多羅三藐三菩提，為欲方便利益安樂諸有情故，說是世間極難信法。』",
+   "bo": "ཤཱ་རིའི་བུ་ཇི་ལྟར་ད་ལྟ་རང་སངས་རྒྱས་བཅོམ་ལྡན་འདས་དེ་དག་གི་ཡོན་ཏན་བསམ་གྱིས་མི་ཁྱབ་པ་ཡོངས་སུ་བརྗོད་པ་དེ་བཞིན་དུ། ཤཱ་རིའི་བུ་སངས་རྒྱས་བཅོམ་ལྡན་འདས་དེ་དག་ཀྱང་ངའི་ཡོན་ཏན་བསམ་གྱིས་མི་ཁྱབ་པ་ཡོངས་སུ་བརྗོད་དོ། ཤཱ་རིའི་བུས་གསོལ་པ། བཅོམ་ལྡན་འདས་ཤཱཀྱ་ཐུབ་པ་ཤཱཀྱའི་རྒྱལ་པོས་བསྐལ་པའི་སྙིགས་མ་དང་། ཉོན་མོངས་པའི་སྙིགས་མ་དང་། སེམས་ཅན་གྱི་སྙིགས་མ་དང་། ལྟ་བའི་སྙིགས་མ་དང་། ཚེའི་སྙིགས་མའི་ཚེ་འཇིག་རྟེན་གྱི་ཁམས་མི་མཇེད་དུ་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་མངོན་པར་རྫོགས་པར་སངས་རྒྱས་ཏེ། འཇིག་རྟེན་ཐམས་ཅད་དང་མི་འཐུན་པའི་ཆོས་བསྟན་པ་ནི་ངོ་མཚར་ལགས་སོ། །བཅོམ་ལྡན་འདས་ཀྱིས་བཀའ་སྩལ་པ། ཤཱ་རིའི་བུ་སྙིགས་མ་ལྔའི་ཚེ་འཇིག་རྟེན་དུ་ངས་གང་འཇིག་རྟེན་གྱི་ཁམས་མི་མཇེད་དུ་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་མངོན་པར་རྫོགས་པར་སངས་རྒྱས་ཏེ།",
+   "en": "Śāriputra, just as I now praise the inconceivable qualities of those bhagavān buddhas, likewise, Śāriputra, those bhagavān buddhas also praise my inconceivable qualities.” Śāriputra declared, “Bhagavān Śākyamuni, king of the Śākyas, you have fully awakened to unsurpassable, completely perfect enlightenment in this Sahā world. You have taught the Dharma that the whole world was reluctant to accept at the time of the degeneration of the eon, the degeneration of afflictions, the degeneration of beings, the degeneration of views, and the degeneration of lifespan. How marvelous indeed!” The Bhagavān replied, “Śāriputra, having fully awakened to unsurpassable, completely perfect enlightenment in this world, the Sahā world, at the time of the five degenerations,"
+  },
+  "a19": {
+   "sa": "tan mamāpi śāriputra paramaduṣkaraṃ yan mayā sahāyāṃ lokadhātāv anuttarāṃ samyaksaṃbodhim abhisaṃbudhya sarvalokavipratyayanīyo dharmo deśitaḥ sattvakaṣāye dṛṣṭikaṣāye kleśakaṣāya āyuṣkaṣāye kalpakaṣāye //19//",
+   "T0366": "舍利弗！當知我於五濁惡世行此難事，得阿耨多羅三藐三菩提，為一切世間說此難信之法，是為甚難！」",
+   "T0367": "是故，舍利子！當知我今於此雜染堪忍世界五濁惡時，證得阿耨多羅三藐三菩提，為欲方便利益安樂諸有情故，說是世間極難信法，甚為希有，不可思議。「又，舍利子！於此雜染堪忍世界五濁惡時，若有淨信諸善男子或善女人，聞說如是一切世間極難信法，能生信解、受持、演說、如教修行。當知是人甚為希有，無量佛所曾種善根。是人命終定生西方極樂世界，受用種種功德莊嚴清淨佛土大乘法樂，日夜六時親近供養無量壽佛，遊歷十方供養諸佛，於諸佛所聞法受記，福慧資糧疾得圓滿，速證無上正等菩提。」",
+   "bo": "འཇིག་རྟེན་ཐམས་ཅད་དང་མི་འཐུན་པའི་ཆོས་བསྟན་པ་དེ་ནི་མཆོག་ཏུ་དཀའ་བ་བྱེད་པའོ། །",
+   "en": "I have taught the Dharma that the whole world was reluctant to accept."
+  },
+  "a20": {
+   "sa": "P--O.100:J.210 idam avocad bhagavān āttamanāḥ /(7) āyuṣmāñ śāriputras te ca bhikṣavas te ca bodhisattvāḥ sadevamānuṣāsuragaṃdharvaś ca loko bhagavato bhāsitam abhyanaṃdan //20//",
+   "T0366": "佛說此經已，舍利弗及諸比丘，一切世間天、人、阿修羅等，聞佛所說，歡喜信受，作禮而去。",
+   "T0367": "時，薄伽梵說是經已。尊者舍利子等諸大聲聞，及諸菩薩摩訶薩眾，無量天、人、阿素洛等，一切大眾聞佛所說皆大歡喜信受奉行。",
+   "bo": "བཅོམ་ལྡན་འདས་ཀྱིས་དེ་སྐད་ཅེས་བཀའ་སྩལ་ནས་ཚེ་དང་ལྡན་པ་ཤཱ་རིའི་བུ་དང་། ཉན་ཐོས་ཆེན་པོ་དེ་དག་དང་། བྱང་ཆུབ་སེམས་དཔའ་དེ་དག་དང་། ལྷ་དང་མི་དང་ལྷ་མ་ཡིན་དང་། དྲི་ཟར་བཅས་པའི་འཇིག་རྟེན་ཡི་རངས་ཏེ་བཅོམ་ལྡན་འདས་ཀྱིས་གསུངས་པ་ལ་མངོན་པར་བསྟོད་དོ། །",
+   "en": "After the Bhagavān had thus spoken, the whole world, including the venerable Śāriputra, the great śrāvakas, bodhisattvas, gods, humans, demigods, and gandharvas, were delighted and praised highly the words spoken by the Bhagavān."
+  },
+  "a21": {
+   "sa": "// sukhāvatīvyūho nāma mahāyānasūtraṃ //",
+   "T0366": "無量壽佛　說往生淨土呪：南無阿彌多婆夜　哆他伽哆夜　哆地夜他　阿彌唎（上聲）都婆毘　阿彌唎哆　悉耽婆毘　阿彌唎哆　毘迦蘭哆　伽彌膩　伽伽那　抧多迦隸　莎婆訶誦此呪者，阿彌陀佛常住其頂，命終之後任運往生。龍樹菩薩願生安養，夢感此呪。耶舍三藏誦此呪，天平寺銹法師從耶舍三藏口受此呪。其人云：「經本外國不來。受持呪法，日夜六時各誦三七遍；晨夜澡漱，嚼楊枝，然香火，於形象前跪，合掌誦三七遍。日日恒爾，即滅四重、五逆、十惡，謗方等罪悉得除滅。現在不為一切諸邪鬼神之所惱亂，命終之後任運往生阿彌陀國。何況晝夜受持誦讀功德不可思議！」佛說阿彌陀經卷第一",
+   "bo": "འཕགས་པ་བདེ་བ་ཅན་གྱི་བཀོད་པ་ཞེས་བྱ་བ་ཐེག་པ་ཆེན་པོའི་མདོ་རྫོགས་སོ།། རྒྱ་གར་གྱི་མཁན་པོ་དཱ་ན་ཤཱི་ལ་དང་། ཞུ་ཆེན་གྱི་ལོ་ཙཱ་བ་བན་དེ་ཡེ་ཤེས་སྡེ་ལ་སོགས་པས་བསྒྱུར་ཅིང་གཏན་ལ་ཕབ་པ།།",
+   "en": "This completes The Noble Mahāyāna Sūtra “ The Display of Sukhāvatī This sūtra was translated and finalized by the Indian preceptor Dānaśīla and the principal revisor-translator Bandé Yeshé Dé, along with others."
+  }
+ }
+}
