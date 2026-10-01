@@ -1975,6 +1975,14 @@ Clean 750+ ebook chunks: convert simplified Chinese → traditional, fix formatt
 
 > 2026-09-28 續：交接文件 `docs/SESSION_HANDOFF_ebook_quality_2026-09-28.md`（OCR／目錄章節／註腳／雙欄四線，含可貼 PROMPT）。
 > 新工具 `scripts/relink_missing_footnotes.py`：補「有註文、正文沒 [^N]」的註號（規則步驟＋`--llm` 模型定位，`--scan` 全館盤點）。
+> **2026-10-01 註腳全館盤點與分型**（`--scan`：519 本有註文、缺連結 74,635 條）。扣掉 DO_NOT_TOUCH 94 本、無 `.bak_restructure` 9 本，
+> 可動 409 本（神學／宗教學／世界宗教 325 本缺 11,722；其餘 84 本缺 3,657）。其中 374 本缺連結比例 >90%，**絕大多數不是 OCR 丟註號**，分型（以書為單位，409 本）：
+> F「正文完全沒有任何註號標記」287 本、缺 11,139——章末註釋整批落在該章最後一頁（11,023／11,139 在章末頁），正文連 `[N]`、`(N)`、上標都沒有，
+> `.bak_restructure` 與現檔都零標記＝EPUB 解析時就把 `<sup>`／錨點丟了，**relink 救不了**，要回原 EPUB 讀 `<sup>`／`epub:type=noteref` 錨點重建，再依引用頁分配註釋；
+> E「短條清單」58 本（神學大全：`(1) Whether it is necessary?` 是問題清單不是註腳，是 `(N) ` 格式的誤判，應從 gap_count 排除）；
+> A「有 `[^]` 但缺」34 本、缺 3,563（relink 的正規對象）；C「正文內嵌 `(N)`／`（N）` 括號」27 本、缺 164（真誥校注：註釋跨頁錯位，不能直接補）；D「`[N]` 方括號」3 本。
+> 規則步驟（64 本 A–D 型）只補 3 條——上一輪已把規則能補的收乾淨，剩下的都得靠模型。模型步驟一本 985 缺口的書要跑一小時以上（Gemini 日額度用完後走 NVIDIA、慢），批次驅動在 `output/relink/batch.py`（每本前重讀 DNT 檔）。
+> 🚨 `relink --scan` 的「缺連結」分母含 E 型誤判與 F 型，不能當成 OCR 品質指標；盤點時 `import requests` 要用 `_whisper_venv` 的 python（uv 那顆沒有）。
 > 🚨 `chapters_via_llm_toc.py` 覆蓋過半就放行，會漏章（Madsen 英文本漏第一、二章），補好的 473 本要再稽核。
 
 `scripts/audit_toc_accuracy.py`（唯讀，讀 Drive `_chunks/*.jsonl` 約 30 分鐘）→ `output/toc_audit/toc_audit.tsv`（一書一列）＋ `summary.md`。
