@@ -293,7 +293,7 @@ build＝`scripts/chaohwei_seeder_build.py`；設定＝`scan_books.py` 的 `chaoh
 
 - [chaohwei_collected_works.md](chaohwei_collected_works.md) —— 昭慧法師全集
   （《心靈的交會：山間對話》✅ 上架、《初期唯識思想》✅ 上架、
-  《人間佛教的播種者》前半 OCR 87/133 頁，後半待掃）
+  《人間佛教的播種者》✅ 2026-10-01 全書上架、後半待 Gemini 補校；《律學今詮》只掃到頁 55，待掃完）
 
 ## See also
 
