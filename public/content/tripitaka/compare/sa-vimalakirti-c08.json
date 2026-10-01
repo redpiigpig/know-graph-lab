@@ -1,0 +1,450 @@
+{
+ "slug": "sa-vimalakirti-c08",
+ "title": "維摩詰經・不二入品第九",
+ "family": "sa",
+ "auto": true,
+ "intro": "自動對齊（模型定切點、腳本逐字切分與把關），未經人工校讀。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "維摩詰發問入不二法門"
+  },
+  {
+   "id": "a01",
+   "label": "法自在菩薩說生滅為二"
+  },
+  {
+   "id": "a02",
+   "label": "德守菩薩說我我所為二"
+  },
+  {
+   "id": "a03",
+   "label": "不眴菩薩說受不受為二"
+  },
+  {
+   "id": "a04",
+   "label": "德頂菩薩說垢淨為二"
+  },
+  {
+   "id": "a05",
+   "label": "善宿菩薩說動念為二"
+  },
+  {
+   "id": "a06",
+   "label": "善眼菩薩說一相無相為二"
+  },
+  {
+   "id": "a07",
+   "label": "妙臂菩薩說菩薩心聲聞心為二"
+  },
+  {
+   "id": "a08",
+   "label": "弗沙菩薩說善不善為二"
+  },
+  {
+   "id": "a09",
+   "label": "師子菩薩說罪福為二"
+  },
+  {
+   "id": "a10",
+   "label": "師子意菩薩說有漏無漏為二"
+  },
+  {
+   "id": "a11",
+   "label": "淨解菩薩說有為無為為二"
+  },
+  {
+   "id": "a12",
+   "label": "那羅延菩薩說世間出世間為二"
+  },
+  {
+   "id": "a13",
+   "label": "善意菩薩說生死涅槃為二"
+  },
+  {
+   "id": "a14",
+   "label": "現見菩薩說盡不盡為二"
+  },
+  {
+   "id": "a15",
+   "label": "普守菩薩說我無我為二"
+  },
+  {
+   "id": "a16",
+   "label": "電天菩薩說明無明為二"
+  },
+  {
+   "id": "a17",
+   "label": "喜見菩薩說色色空為二"
+  },
+  {
+   "id": "a18",
+   "label": "明相菩薩說四種異空種異為二"
+  },
+  {
+   "id": "a19",
+   "label": "妙意菩薩說眼色等六塵為二"
+  },
+  {
+   "id": "a20",
+   "label": "無盡意菩薩說佈施迴向等六度為二"
+  },
+  {
+   "id": "a21",
+   "label": "深慧菩薩說空無相無作為二"
+  },
+  {
+   "id": "a22",
+   "label": "寂根菩薩說佛法眾為二"
+  },
+  {
+   "id": "a23",
+   "label": "心無礙菩薩說身身滅為二"
+  },
+  {
+   "id": "a24",
+   "label": "上善菩薩說身口意業為二"
+  },
+  {
+   "id": "a25",
+   "label": "福田菩薩說福罪不動行為二"
+  },
+  {
+   "id": "a26",
+   "label": "華嚴菩薩說從我起二為二"
+  },
+  {
+   "id": "a27",
+   "label": "德藏菩薩說有所得相為二"
+  },
+  {
+   "id": "a28",
+   "label": "月上菩薩說闇明為二"
+  },
+  {
+   "id": "a29",
+   "label": "寶印手菩薩說樂涅槃不樂世間為二"
+  },
+  {
+   "id": "a30",
+   "label": "珠頂王菩薩說正道邪道為二"
+  },
+  {
+   "id": "a31",
+   "label": "樂實菩薩說實不實為二"
+  },
+  {
+   "id": "a32",
+   "label": "諸菩薩畢說問文殊師利"
+  },
+  {
+   "id": "a33",
+   "label": "文殊師利答以無言無說為入不二法門"
+  },
+  {
+   "id": "a34",
+   "label": "文殊師利問維摩詰當說何等"
+  },
+  {
+   "id": "a35",
+   "label": "維摩詰默然無言"
+  },
+  {
+   "id": "a36",
+   "label": "文殊師利讚歎默然為真入不二法門"
+  },
+  {
+   "id": "a37",
+   "label": "說入不二法門品時五千菩薩皆得無生法忍"
+  }
+ ],
+ "versions": [
+  {
+   "id": "T0474",
+   "lang": "lzh",
+   "label": "佛說維摩詰經",
+   "who": "吳 支謙譯",
+   "work": "T0474"
+  },
+  {
+   "id": "T0475",
+   "lang": "lzh",
+   "label": "維摩詰所說經",
+   "who": "姚秦 鳩摩羅什譯",
+   "work": "T0475"
+  },
+  {
+   "id": "T0476",
+   "lang": "lzh",
+   "label": "說無垢稱經",
+   "who": "唐 玄奘譯",
+   "work": "T0476"
+  },
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本",
+   "who": "GRETIL 校訂本"
+  },
+  {
+   "id": "bo",
+   "lang": "bo",
+   "label": "藏譯",
+   "who": "德格版 Toh 176・84000"
+  },
+  {
+   "id": "en",
+   "lang": "en",
+   "label": "84000 英譯",
+   "who": "譯自藏譯・與藏文逐句對齊"
+  }
+ ],
+ "works": [
+  "T0474",
+  "T0475",
+  "T0476"
+ ],
+ "anchors": [
+  {
+   "work": "T0474",
+   "node": "維摩詰經不二入品第九",
+   "uid": "T14n0474_p0530c23"
+  },
+  {
+   "work": "T0475",
+   "node": "維摩詰所說經入不二法門品第九",
+   "uid": "T14n0475_p0550b28"
+  },
+  {
+   "work": "T0476",
+   "node": "說無垢稱經不二法門品第九",
+   "uid": "T14n0476_p0577a11"
+  }
+ ],
+ "cells": {
+  "a00": {
+   "T0474": "於是，維摩詰問眾菩薩曰：「諸正士！所樂菩薩不二入法門者，為何謂也？」座中有名法作菩薩，答曰：「族姓子！起分為二，不起、不生則無有二，得不起法忍者，是不二入。」首閉菩薩曰：「吾我為二，如不有二，不同像則無吾我，以無吾我，無所同像者，是不二入。」",
+   "T0475": "爾時維摩詰謂眾菩薩言：「諸仁者！云何菩薩入不二法門？各隨所樂說之。」",
+   "T0476": "時無垢稱普問眾中諸菩薩曰：「云何菩薩善能悟入不二法門？仁者皆應任己辯才各隨樂說。」時眾會中有諸菩薩各隨所樂次第而說。",
+   "sa": "Vkn 8.1 atha vimalakīrtir licchavis tān bodhisatvān āmantrayate sma: pratibhātu satpuruṣāḥ katamo bodhisatvānām advayadharmamukhapraveśaḥ / tatra dharmavikurvaṇo nāma bodhisatvaḥ saṃnipatitaḥ / sa evam āha: utpādabhaṅgau kulaputra dvayam / yan na jātaṃ notpannaṃ na tasya kaścid bhaṅgaḥ / anutpādadharmakṣāntipratilambho 'dvayapraveśaḥ / Vkn 8.2 śrīgupto bodhisatva āha: ahaṃ mameti dvayam etat / ātmāsamāropān mameti na bhavati / yaś cāsamāropo 'yam advayapraveśaḥ / Vkn 8.3 śrīkūṭo bodhisatva āha: saṃkleśo vyavadānam iti dvayam etat / saṃkleśaparijñānād vyavadānamananā na bhavati / sarvamananāsamudghātā sārūpyagāminī pratipad ayam advayapraveśaḥ /",
+   "bo": "དེ་ནས་ལིད་ཙ་བཱི་དྲི་མ་མེད་པར་གྲགས་པས་བྱང་ཆུབ་སེམས་དཔའ་དེ་དག་ལ་འདི་སྐད་ཅེས་སྨྲས་སོ། ། སྐྱེས་བུ་དམ་པ་དག་བྱང་ཆུབ་སེམས་དཔའ་རྣམས་ཀྱི་གཉིས་སུ་མེད་པའི་ཆོས་ཀྱི་སྒོར་འཇུག་པ་གང་ཡིན། ། བྱང་ཆུབ་སེམས་དཔའ་ཆོས་རྣམ་པར་འཕྲུལ་པ་ཞེས་བྱ་བ་དེར་འདུས་པ་དེས་འདི་སྐད་ཅེས་སྨྲས་སོ། ། རིགས་ཀྱི་བུ་སྐྱེ་བ་དང་འཇིག་པ་ནི་གཉིས་ཏེ། གང་མ་སྐྱེས་མ་བྱུང་བ་དེ་ལ་འཇིག་པ་གང་ཡང་མེད་དེ། ། མི་སྐྱེ་བའི་ཆོས་ལ་བཟོད་པ་ཐོབ་པ་ནི་གཉིས་སུ་མེད་པ་ལ་འཇུག་པའོ། །",
+   "en": "Then, the Licchavi Vimalakīrti asked those bodhisattvas, “Good sirs, please explain how the bodhisattvas enter the Dharma-door of nonduality!” The bodhisattva Dharmavikurvaṇa declared, Noble sir, production and destruction are two, but what is not produced and does not occur cannot be destroyed. Thus the attainment of the tolerance of the birthlessness of things is the entrance into nonduality.”"
+  },
+  "a01": {
+   "T0475": "會中有菩薩名法自在，說言：「諸仁者！生滅為二。法本不生，今則無滅，得此無生法忍，是為入不二法門。」",
+   "T0476": "時有菩薩名法自在，作如是言：「生、滅為二。若諸菩薩了知諸法本來無生，亦無有滅，證得如是無生法忍，是為悟入不二法門。」"
+  },
+  "a02": {
+   "T0475": "德守菩薩曰：「我、我所為二。因有我故，便有我所；若無有我，則無我所，是為入不二法門。」",
+   "T0476": "復有菩薩名曰勝密，作如是言：「我及我所分別為二。因計我故便計我所，若了無我亦無我所，是為悟入不二法門。」復有菩薩名曰無瞬，作如是言：「有取、無取分別為二。若諸菩薩了知無取則無所得，無所得故則無增減、無作、無息，於一切法無所執著，是為悟入不二法門。」復有菩薩名曰勝峯，作如是言：「雜染、清淨分別為二。若諸菩薩了知雜染、清淨無二則無分別，永斷分別趣寂滅跡，是為悟入不二法門。」",
+   "bo": "ང་དང་ང་འོ་ཞེས་བྱ་བ་དེ་ནི་གཉིས་ཏེ། བདག་ཏུ་སྒྲོ་བཏགས་པ་མེད་ན་ངའི་བར་མི་འགྱུར་ཏེ། ། གང་སྒྲོ་བཏགས་པ་མེད་པ་དེ་ནི་གཉིས་སུ་མེད་པ་ལ་འཇུག་པའོ། ། བྱང་ཆུབ་སེམས་དཔའ་དཔལ་སྦས་ཀྱིས་སྨྲས་པ། བྱང་ཆུབ་སེམས་དཔའ་དཔལ་བརྩེགས་ཀྱིས་སྨྲས་པ།",
+   "en": "“ ‘I’ and ‘mine’ are two. If there is no presumption of a self, there will be no possessiveness. Thus, the absence of presumption is the entrance into nonduality.” The bodhisattva Śrīkūṭa declared, The bodhisattva Śrīgupta declared,"
+  },
+  "a03": {
+   "T0474": "不眴菩薩曰：「有受為二，如不受則無得，無得者不作淵，以無作無馳騁者，是不二入。」首立菩薩曰：「勞生為二，為勞乘者其於生也，弗知弗樂，以過眾知而受色欲者，是不二入。」善宿菩薩曰：「慮知為二，當以不慮不知，於諸法念作而行不念作者，是不二入。」善多菩薩曰：「菩薩意、弟子意為二，如我以等意於所更樂，無菩薩意，無弟子意，與無意同相者，是不二入。」善眼菩薩曰：「一相、不相為二，若都不視、不熟視、不暫視，不作一相，亦不暫相，於視不視以等視者，是不二入。」",
+   "T0475": "不眴菩薩曰：「受、不受為二。若法不受，則不可得；以不可得故，無取無捨、無作無行，是為入不二法門。」"
+  },
+  "a04": {
+   "T0475": "德頂菩薩曰：「垢、淨為二。見垢實性，則無淨相，順於滅相，是為入不二法門。」",
+   "bo": "ཀུན་ནས་ཉོན་མོངས་པ་དང་། རྣམ་པར་བྱང་བ་ཞེས་བྱ་བ་དེ་ནི་གཉིས་ཏེ། ། ཀུན་ནས་ཉོན་མོངས་པ་ཡོངས་སུ་ཤེས་ནས་རྣམ་པར་བྱང་བ་ལ་རློམ་སེམས་སུ་མི་འགྱུར་ཞིང་ རློམ་སེམས་ཐམས་ཅད་ལེགས་པར་འཇོམས་པ་དང་། འཐུན་པར་འགྲོ་བའི་ལམ་དེ་ནི་གཉིས་སུ་མེད་པ་ལ་འཇུག་པའོ། ། བྱང་ཆུབ་སེམས་དཔའ་སྐར་བཟངས་ཀྱིས་སྨྲས་པ།",
+   "en": "“ ‘Defilement’ and ‘purification’ are two. When there is thorough knowledge of defilement, there will be no conceit about purification. The path leading to the complete conquest of all conceit is the entrance into nonduality.” The bodhisattva Sunakṣatra declared,"
+  },
+  "a05": {
+   "T0475": "善宿菩薩曰：「是動、是念為二。不動則無念，無念則無分別，通達此者，是為入不二法門。」",
+   "T0476": "復有菩薩名曰妙星，作如是言：「散動、思惟分別為二。若諸菩薩了知一切無有散動、無所思惟，則無作意。住無散動，無所思惟、無有作意，是為悟入不二法門。」",
+   "sa": "Vkn 8.4 sunakṣatro bodhisatva āha: iñjanā mananeti dvayam etat / yat punar nāñjate na manasikaroty anadhikāraḥ, adhikāravirahito 'yam advayapraveśaḥ / Vkn 8.5 subāhur bodhisatva āha: bodhicittaṃ śrāvakacittam iti dvayam etat / yā punar māyācittasamadarśanatā tatra na bodhicittaṃ na śrāvakacittam / yā cittasamalakṣaṇatāyam advayapraveśaḥ / Vkn 8.6 animiṣo bodhisatva āha: upādānam anupādānam iti dvayam etat / yan nopādadāti tan nopalabhate, tatrohāpohaṃ na karoti / akaraṇam avyāpattiḥ sarvadharmāṇām ayam advayapraveśaḥ /",
+   "bo": "གཡོ་བ་དང་རློམ་སེམས་དེ་ནི་གཉིས་ཏེ། གང་གཡོ་བ་མེད་ཅིང་རློམ་སེམས་སུ་མི་བྱེད། ཡིད་ལ་མི་བྱེད། ལྷག་པར་བྱ་བ་མེད་པ། ལྷག་པར་བྱ་བ་དང་བྲལ་བ་དེ་ནི་གཉིས་སུ་མེད་པར་འཇུག་པའོ། ། བྱང་ཆུབ་སེམས་དཔའ་ལག་བཟངས་ཀྱིས་སྨྲས་པ།",
+   "en": "“ ‘Distraction’ and ‘attention’ are two. When there is no distraction, there will be no attention, no mentation, and no mental intensity. Thus, the absence of mental intensity is the entrance into nonduality.” The bodhisattva Subāhu declared,"
+  },
+  "a06": {
+   "T0475": "善眼菩薩曰：「一相、無相為二。若知一相即是無相，亦不取無相，入於平等，是為入不二法門。」",
+   "T0476": "復有菩薩名曰妙眼，作如是言：「一相、無相分別為二。若諸菩薩了知諸法無有一相、無有異相、亦無無相，則知如是一相、異相、無相平等，是為悟入不二法門。」",
+   "sa": "Vkn 8.7 sunetro bodhisatva āha: ekalakṣaṇam alakṣaṇam iti dvayam etat / yat punar na lakṣayati na vikalpayati, naikalakṣaṇaṃ karoti nālakṣaṇam / yal lakṣaṇavilakṣaṇasamalakṣaṇapraveśo 'yam advayapraveśaḥ / Vkn 8.8 puṣyo bodhisatva āha: kuśalam akuśalam iti dvayam etat / yā kuśalākuśalasyānupasthānatā tad animittam / animittakoṭyāś cādvayatā / yatra nistīraṇatāyam advayapraveśaḥ /"
+  },
+  "a07": {
+   "T0475": "妙臂菩薩曰：「菩薩心、聲聞心為二。觀心相空如幻化者，無菩薩心、無聲聞心，是為入不二法門。」",
+   "T0476": "復有菩薩名曰妙臂，作如是言：「菩薩、聲聞二心為二。若諸菩薩了知二心性空如幻，無菩薩心、無聲聞心，如是二心其相平等皆同幻化，是為悟入不二法門。」",
+   "bo": "བྱང་ཆུབ་ཀྱི་སེམས་དང་། ཉན་ཐོས་ཀྱི་སེམས་ཞེས་བྱ་བ་དེ་ནི་གཉིས་ཏེ། གང་སྒྱུ་མའི་སེམས་དང་མཚུངས་པར་མཐོང་བ་དེ་ནི་བྱང་ཆུབ་ཀྱི་སེམས་ཀྱང་མེད། ཉན་ཐོས་ཀྱི་སེམས་ཀྱང་མེད་དེ། གང་སེམས་ཀྱི་མཚན་ཉིད་མཚུངས་པ་དེ་ནི་གཉིས་སུ་མེད་པར་འཇུག་པའོ། ། བྱང་ཆུབ་སེམས་དཔའ་མིག་མི་འཛུམས་ཀྱིས་སྨྲས་པ། ལེན་པ་དང་མི་ལེན་པ་དེ་ནི་གཉིས་ཏེ། གང་མི་ལེན་པ་དེ་མི་དམིགས་པ་སྟེ། གང་མི་དམིགས་པ་དེ་ལ་རྟོག་པ་དང་བསལ་བར་མི་བྱེད། ཆོས་ཐམས་ཅད་མི་བྱེད་མི་སྤྱོད་པ་དེ་ནི་གཉིས་སུ་མེད་པར་འཇུག་པའོ། ། བྱང་ཆུབ་སེམས་དཔའ་མིག་བཟངས་ཀྱིས་སྨྲས་པ། མཚན་ཉིད་གཅིག་པ་དང་མཚན་ཉིད་མེད་པ་ཞེས་བྱ་བ་དེ་ནི་གཉིས་སོ། ། གང་རྟོག་པར་མི་བྱེད། ཀུན་ཏུ་རྟོག་པར་མི་བྱེད། མཚན་ཉིད་གཅིག་པར་མི་བྱེད། མཚན་ཉིད་མེད་པར་མི་བྱེད་དོ། །གང་མཚན་ཉིད་དང་མཚན་ཉིད་མི་འདྲ་བ་ལ་མཚན་ཉིད་མཚུངས་པར་འཇུག་པ་དེ་ནི་གཉིས་སུ་མེད་པར་འཇུག་པའོ། བྱང་ཆུབ་སེམས་དཔའ་སྐར་རྒྱལ་གྱིས་སྨྲས་པ།",
+   "en": "“ ‘Bodhisattva spirit’ and ‘disciple spirit’ are two. When both are seen to resemble an illusory spirit, there is no bodhisattva spirit, nor any disciple spirit. Thus, the sameness of natures of spirits is the entrance into nonduality.” The bodhisattva Animiṣa declared, “ ‘Grasping’ and ‘nongrasping’ are two. What is not grasped is not perceived, and what is not perceived is neither presumed nor repudiated. Thus, the inaction and non-involvement of all things is the entrance into nonduality.” The bodhisattva Sunetra declared, “ ‘Uniqueness’ and ‘characterlessness’ are two. Not to presume or construct something is neither to establish its uniqueness nor to establish its characterlessness. To penetrate the equality of these two is to enter nonduality.” The bodhisattva Puṣya declared,"
+  },
+  "a08": {
+   "T0474": "奉養菩薩曰：「善、不善為二，於善不善如無所興，是謂無想，以無想立者，而不為二，都於其中而無度者，是不二入。」師子意菩薩曰：「一切不受為二，當如金剛而無覺知，不為愚行亦不解者，是不二入。」勇意菩薩曰：「漏、不漏為二，如得正法則其意等，已得等者，終不為漏不漏想，亦不以無想而得，不以想受而住者，是不二入。」",
+   "T0475": "弗沙菩薩曰：「善、不善為二。若不起善、不善，入無相際而通達者，是為入不二法門。」",
+   "T0476": "復有菩薩名曰育養，作如是言：「善及不善分別為二。若諸菩薩了知善性及不善性無所發起，相與無相二句平等，無取、無捨，是為悟入不二法門。」",
+   "bo": "དགེ་བ་དང་མི་དགེ་བ་ཞེས་བྱ་བ་དེ་ནི་གཉིས་ཏེ། གང་དགེ་བ་དང་མི་དགེ་བ་མི་སློང་ཞིང་མཚན་མ་དང་མཚན་མ་མེད་པ་ལ་གཉིས་སུ་མེད་པར་རྟོག་པ་ནི་གཉིས་སུ་མེད་པར་འཇུག་པའོ། ། བྱང་ཆུབ་སེམས་དཔའ་སེང་གེས་སྨྲས་པ།",
+   "en": "“ ‘Good’ and ‘evil’ are two. Seeking neither good nor evil, the understanding of the nonduality of the significant and the meaningless is the entrance into nonduality.” The bodhisattva Siṃha declared,"
+  },
+  "a09": {
+   "T0475": "師子菩薩曰：「罪、福為二。若達罪性，則與福無異，以金剛慧決了此相，無縛無解者，是為入不二法門。」",
+   "T0476": "復有菩薩名曰師子，作如是言：「有罪、無罪分別為二。若諸菩薩了知有罪及與無罪二皆平等，以金剛慧通達諸法，無縛、無解，是為悟入不二法門。」",
+   "sa": "Vkn 8.9 siṃho bodhisatva āha: avadyatānavadyateti dvayam etat / yat punar vajranibaddhajñānatayā na badhyate na mucyate 'yam advayapraveśaḥ / Vkn 8.10 siṃhamatir bodhisatva āha: idaṃ sāsravam idam anāsravam iti dvayam etat / yat punaḥ samatādharmaprāptaḥ sāsravānāsravasaṃjñaṃ na karoti, na vāsaṃjñāprāptaḥ, na cāsaṃjñāsamatāyāṃ samatāprāptaḥ, na saṃjñāgrathitaḥ / ya evaṃ praveśo 'yam advayapraveśaḥ / Vkn 8.11 sukhādhimukto bodhisatva āha: idaṃ sukham idam asukham iti dvayam etat / yat punaḥ sarvasaukhyāpagato gaganasamabuddhiḥ suviśuddhajñānatayā na sañjaty ayam advayapraveśaḥ /",
+   "bo": "ཁ་ན་མ་ཐོ་བ་དང་བཅས་པ་དང་། ཁ་ན་མ་ཐོ་བ་མེད་པ་ཞེས་བྱ་བ་དེ་ནི་གཉིས་ཏེ། གང་གིས་རྡོ་རྗེ་ལྟར་རབ་ཏུ་འབིགས་པའི་ཡེ་ཤེས་ཀྱིས་མི་འཆིང་མི་འགྲོལ་བ་དེ་ནི་གཉིས་སུ་མེད་པར་འཇུག་པའོ། བྱང་ཆུབ་སེམས་དཔའ་སེང་གེ་བློ་གྲོས་ཀྱིས་སྨྲས་པ། འདི་ནི་ཟག་པ་དང་བཅས་པ། འདི་ནི་ཟག་པ་མེད་པའོ་ཞེས་བྱ་བ་དེ་ནི་གཉིས་ཏེ། ། གང་མཉམ་པ་ཉིད་ཀྱི་ཆོས་ཐོབ་པས་ཟག་པ་དང་ཟག་པ་མེད་པའི་འདུ་ཤེས་སུ་མི་བྱེད་འདུ་ཤེས་མེད་པར་གྱུར་པའང་མ་ཡིན། ། མཉམ་པ་ཉིད་ལ་མཉམ་པ་ཉིད་ཐོབ་པའང་མེད་ཅིང་འདུ་ཤེས་ཀྱི་མདུད་པ་མེད་པ་ དེ་ལྟར་གང་འཇུག་པ་དེ་ནི་གཉིས་སུ་མེད་པར་འཇུག་པའོ། ། བྱང་ཆུབ་སེམས་དཔའ་བདེ་མོས་ཀྱིས་སྨྲས་པ། འདི་ནི་བདེ་བ། འདི་ནི་མི་བདེ་བའོ་ཞེས་བྱ་བ་དེ་ནི་གཉིས་ཏེ། གང་ཡེ་ཤེས་ཤིན་ཏུ་རྣམ་པར་དག་པའི་ཕྱིར་གྲངས་ཐམས་ཅད་དང་བྲལ་ཞིང་བློ་ནམ་མཁའ་དང་མཚུངས་པར་མི་ཆགས་པ་དེ་ནི་གཉིས་སུ་མེད་པར་འཇུག་པའོ། །",
+   "en": "“ ‘Sinfulness’ and ‘sinlessness’ are two. By means of the diamond-like wisdom that pierces to the quick, not to be bound or liberated is the entrance into nonduality.” The bodhisattva Siṃhamati declared, “To say, ‘this is impure’ and ‘that is immaculate’ makes for duality. One who, attaining equanimity, forms no conception of impurity or immaculateness, yet is not utterly without conception, has equanimity without any attainment of equanimity—he enters the absence of conceptual knots. Thus, he enters into nonduality.” The bodhisattva Sukhādhimukta declared, “To say, ‘this is happiness’ and ‘that is misery’ is dualism. One who is free of all calculations, through the extreme purity of gnosis—his mind is aloof, like empty space; and thus he enters into nonduality.”"
+  },
+  "a10": {
+   "T0475": "師子意菩薩曰：「有漏、無漏為二。若得諸法等，則不起漏、不漏想，不著於相，亦不住無相，是為入不二法門。」",
+   "T0476": "復有菩薩名師子慧，作如是言：「有漏、無漏分別為二。若諸菩薩知一切法性皆平等，於漏、無漏不起二想，不著有想、不著無想，是為悟入不二法門。」"
+  },
+  "a11": {
+   "T0474": "淨解菩薩曰：「此有數、此無數為二，若離一切數則道與空等，意都已解無所著者，是不二入。」人乘菩薩曰：「是世間、是世尊為二，若世間意空，於其中不捨不念，不依尊上者，是不二入。」",
+   "T0475": "淨解菩薩曰：「有為、無為為二。若離一切數，則心如虛空，以清淨慧無所礙者，是為入不二法門。」",
+   "T0476": "復有菩薩名淨勝解，作如是言：「有為、無為分別為二。若諸菩薩了知二法性皆平等，遠離諸行，覺慧如空，智善清淨，無執、無遣，是為悟入不二法門。」"
+  },
+  "a12": {
+   "T0475": "那羅延菩薩曰：「世間、出世間為二。世間性空，即是出世間，於其中不入、不出、不溢、不散，是為入不二法門。」",
+   "T0476": "復有菩薩名那羅延，作如是言：「世出、世間分別為二。若諸菩薩了知世間本性空寂，無入、無出，無流、無散，亦不執著，是為悟入不二法門。」",
+   "sa": "Vkn 8.12 nārāyaṇo bodhisatva āha: idaṃ laukikam idaṃ lokottaram iti dvayam etat / yā laukikasya prakṛtiśūnyatā, na tatra kiṃcid uttīryate nāvatīryate na sāryate na visāryate / yatra nottaraṇaṃ nāvataraṇaṃ na saraṇaṃ na visaraṇam ayam advayapraveśaḥ / Vkn 8.13 dāntamatir bodhisatva āha: saṃsāro nirvāṇam iti dvayam etat / saṃsārasvabhāvadarśanān na saṃsarati na parinirvāti / yaivaṃ budhyanāyam advayapraveśaḥ /",
+   "bo": "བྱང་ཆུབ་སེམས་དཔའ་སྲེད་མེད་ཀྱིས་སྨྲས་པ། ། འདི་ནི་འཇིག་རྟེན་པའོ། །འདི་ནི་འཇིག་རྟེན་ལས་འདས་པའོ་ཞེས་བྱ་བ་དེ་ནི་གཉིས་ཏེ། གང་འཇིག་རྟེན་གྱི་རང་བཞིན་སྟོང་པ་དེ་ལ་ཅུང་ཟད་ཀྱང་རྒལ་བ་ཡང་མེད། འཇུག་པ་ཡང་མེད། འགྲོ་བའང་མེད། མི་འགྲོ་བའང་མེད་དེ། ། གང་ལ་མི་རྒལ། མི་འཇུག །འགྲོ་བའང་མེད། མི་འགྲོ་བའང་མེད་པ་ དེ་ནི་གཉིས་སུ་མེད་པར་འཇུག་པའོ། བྱང་ཆུབ་སེམས་དཔའ་དུལ་བའི་བློ་གྲོས་ཀྱིས་སྨྲས་པ། འཁོར་བ་དང་མྱ་ངན་ལས་འདས་པ་ཞེས་བྱ་བ་དེ་ནི་གཉིས་ཏེ། འཁོར་བའི་ངོ་བོ་ཉིད་མཐོང་བས་མི་འཁོར་ཞིང་ཡོངས་སུ་མྱ་ངན་ལས་མི་འདའ་སྟེ། གང་དེ་ལྟར་རྟོགས་པ་དེ་ནི་གཉིས་སུ་མེད་པར་འཇུག་པའོ། །",
+   "en": "The bodhisattva Nārāyaṇa declared, “To say, ‘this is mundane’ and ‘that is transcendental’ is dualism. This world has the nature of voidness, so there is neither transcendence nor involvement, neither progress nor standstill. Thus, neither to transcend nor to be involved, neither to go nor to stop— this is the entrance into nonduality.” The bodhisattva Dāntamati declared, “ ‘Life’ and ‘liberation’ are dualistic. Having seen the nature of life, one neither belongs to it nor is one utterly liberated from it. Such understanding is the entrance into nonduality.”"
+  },
+  "a13": {
+   "T0475": "善意菩薩曰：「生死、涅槃為二。若見生死性，則無生死，無縛無解，不然不滅，如是解者，是為入不二法門。」",
+   "T0476": "復有菩薩名調順慧，作如是言：「生死、涅槃分別為二。若諸菩薩了知生死其性本空，無有流轉亦無寂滅，是為悟入不二法門。」"
+  },
+  "a14": {
+   "T0474": "目見菩薩曰：「盡、不盡為二，盡者都盡，都盡者不可盡，是謂無盡；無所盡，故曰盡。曰盡者，無有盡，如斯入者，是不二入。」普閉菩薩曰：「我、非我為二，如我之不得，非我何可得？於我自然而不作者，是不二入。」明天菩薩曰：「明、不明為二，不明滋多，是故有明，若是不用不計，以作等計，於其中而平等，不以二得要者，是不二入。」愛覲菩薩曰：「世間空耳，作之為二。色空不色敗空，色之性空，如是痛想行識空而作之為二，識空不識敗空，識之性空，彼於五陰，知其性者，是不二入。」",
+   "T0475": "現見菩薩曰：「盡、不盡為二。法若究竟盡、若不盡，皆是無盡相；無盡相即是空，空則無有盡、不盡相。如是入者，是為入不二法門。」",
+   "T0476": "復有菩薩名曰現見，作如是言：「有盡、無盡分別為二。若諸菩薩了知都無有盡、無盡，要究竟盡乃名為盡，若究竟盡不復當盡則名無盡。又，有盡者謂一剎那，一剎那中定無有盡則是無盡。有盡無故，無盡亦無。了知有盡、無盡性空，是為悟入不二法門。」",
+   "sa": "Vkn 8.14 pratyakṣadarśī bodhisatva āha: kṣayo 'kṣaya iti dvayam etat / kṣayo 'tyantakṣīṇaḥ / yaś cātyantakṣīṇaḥ sa na kṣapayitavyaḥ / tenocyate 'kṣaya iti / yaś cākṣayaḥ sa kṣaṇikaḥ / kṣanikasya nāsti kṣayaḥ / evaṃ praviṣṭo 'dvayadharmamukhapraviṣṭo vaktavyaḥ / Vkn 8.15 samantagupto bodhisatva āha: ātmā nirātmeti dvayam etat / yas tām ātmatāṃ nopalabhate, sa kiṃ nirātmīkariṣyati / ātmasvabhāvadarśī dvayaṃ na karoty ayam advayapraveśaḥ /",
+   "bo": "བྱང་ཆུབ་སེམས་དཔའ་མངོན་སུམ་མཐོང་གིས་སྨྲས་པ། ཟད་པ་དང་མི་ཟད་པ་ཞེས་བྱ་བ་དེ་ནི་གཉིས་སོ། ། ཟད་པ་ནི་ཤིན་ཏུ་ཟད་པ་སྟེ། ། གང་ཤིན་ཏུ་ཟད་པ་དེ་ལ་ཟད་པར་བྱ་བ་མ་ཡིན་པས་ན་དེའི་ཕྱིར་མི་ཟད་པ་ཞེས་བྱའོ། གང་མི་ཟད་པ་དེ་ནི་སྐད་ཅིག་པ་སྟེ། སྐད་ཅིག་པ་ལ་ཟད་པ་མེད་དོ། ། དེ་ལྟ་བུར་རབ་ཏུ་ཞུགས་པ་དེ་ནི་གཉིས་སུ་མེད་པའི་ཆོས་ཀྱི་སྒོར་ཞུགས་པ་ཞེས་བྱའོ། བྱང་ཆུབ་སེམས་དཔའ་ཀུན་ནས་སྦས་ཀྱིས་སྨྲས་པ། །",
+   "en": "The bodhisattva Pratyakṣadarśa declared, “ ‘Destructible’ and ‘indestructible’ are dualistic. What is destroyed is ultimately destroyed. What is ultimately destroyed does not become destroyed; hence, it is called ‘indestructible.’ What is indestructible is instantaneous, and what is instantaneous is indestructible. The experience of such is called ‘the entrance into the principle of nonduality.’ ” The bodhisattva Samantagupta declared,"
+  },
+  "a15": {
+   "T0475": "普守菩薩曰：「我、無我為二。我尚不可得，非我何可得？見我實性者，不復起二，是為入不二法門。」",
+   "T0476": "復有菩薩名曰普密，作如是言：「有我、無我分別為二。若諸菩薩了知有我尚不可得，何況無我？見我、無我其性無二，是為悟入不二法門。」",
+   "bo": "བདག་དང་བདག་མེད་དོ་ཞེས་བྱ་བ་དེ་ནི་གཉིས་ཏེ། གང་བདག་གི་དངོས་པོ་མི་དམིགས་པ་དེ་ཅི་ཞིག་བདག་མེད་པར་བྱེད་པར་འགྱུར་བ་དེ་དག་གི་ངོ་བོ་ཉིད་མཐོང་བས་གཉིས་སུ་མེད་པ་ནི་གཉིས་སུ་མེད་པར་འཇུག་པའོ། །",
+   "en": "“ ‘Self’ and ‘selflessness’ are dualistic. Since the existence of self cannot be perceived, what is there to be made ‘selfless’? Thus, the nondual vision of their nature is the entrance into nonduality.”"
+  },
+  "a16": {
+   "T0475": "電天菩薩曰：「明、無明為二。無明實性即是明，明亦不可取，離一切數，於其中平等無二者，是為入不二法門。」",
+   "T0476": "復有菩薩名曰電天，作如是言：「明與無明分別為二。若諸菩薩了知無明本性是明，明與無明俱不可得，不可算計、超算計路，於中現觀平等無二，是為悟入不二法門。」",
+   "sa": "Vkn 8.16 vidyuddevo bodhisatva āha: vidyāvidyeti dvayam etat / avidyāprakṛtikaiva vidyā / yā cāvidyā sāprakṛtikāgaṇanā gaṇanāpathasamatikrāntā / yo 'trābhisamayo 'dvayābhisamayo 'yam advayapraveśaḥ /",
+   "bo": "བྱང་ཆུབ་སེམས་དཔའ་གློག་གི་ལྷས་སྨྲས་པ། རིག་པ་དང་མ་རིག་པ་ཞེས་བྱ་བ་དེ་ནི་གཉིས་ཏེ་ མ་རིག་པའི་རང་བཞིན་ལྟར་རིག་པའང་དེ་བཞིན་ཏེ། མ་རིག་པ་གང་ཡིན་པ་དེ་ནི་ལུང་དུ་མ་བསྟན་པ། བགྲང་དུ་མེད་པ་བགྲང་བའི་ལམ་ལས་འདས་པའོ། ། གང་འདི་ལ་མངོན་པར་རྟོགས་པ་དེ་ནི་གཉིས་སུ་མེད་པར་འཇུག་པའོ། ། བྱང་ཆུབ་སེམས་དཔའ་མཐོང་དགས་སྨྲས་པ། གཟུགས་ཉིད་སྟོང་པ་སྟེ། ། གཟུགས་བཤིག་པ་ལས་སྟོང་པ་མ་ཡིན་གྱི། གཟུགས་ཀྱི་རང་བཞིན་ནི་སྟོང་པ་སྟེ། དེ་བཞིན་དུ་ཚོར་བ་དང་། འདུ་ཤེས་དང་། འདུ་བྱེད་དང་། རྣམ་པར་ཤེས་པ་སྟོང་པ་ཉིད་ཅེས་བྱ་བ་དེ་ནི་གཉིས་སོ། ། རྣམ་པར་ཤེས་པ་ཉིད་ནི་སྟོང་པ་ཉིད་དེ། རྣམ་པར་ཤེས་པ་བཤིག་པས་སྟོང་པ་མ་ཡིན་གྱི། ། རྣམ་པར་ཤེས་པའི་རང་བཞིན་ནི་སྟོང་པ་ཉིད་དོ། འདི་ལ་གང་གིས་ཉེ་བར་ལེན་པའི་ཕུང་པོ་ལྔ་ལ་དེ་བཞིན་དུ་ཤེས་ཤིང་དེ་ལྟ་བུར་ཡེ་ཤེས་ཀྱིས་རིག་པ་དེ་ནི་གཉིས་སུ་མེད་པར་འཇུག་པའོ། བྱང་ཆུབ་སེམས་དཔའ་འོད་ཀྱི་ཏོག་གིས་སྨྲས་པ། །",
+   "en": "The bodhisattva Vidyuddeva declared, “ ‘Knowledge’ and ‘ignorance’ are dualistic. The natures of ignorance and knowledge are the same, for ignorance is undefined, incalculable, and beyond the sphere of thought. The realization of this is the entrance into nonduality.” The bodhisattva Priyadarśana declared, “Matter itself is void. Voidness does not result from the destruction of matter, but the nature of matter is itself voidness. Therefore, to speak of voidness on the one hand, and of matter, or of sensation, or of intellect, or of motivation, or of consciousness on the other, is entirely dualistic. Consciousness itself is voidness. Voidness does not result from the destruction of consciousness, but the nature of consciousness is itself voidness. Such understanding of the five compulsive aggregates and the knowledge of them as such by means of gnosis is the entrance into nonduality.” The bodhisattva Prabhāketu declared,"
+  },
+  "a17": {
+   "T0475": "喜見菩薩曰：「色、色空為二。色即是空，非色滅空，色性自空；如是，受、想、行、識、識空為二，識即是空，非識滅空，識性自空，於其中而通達者，是為入不二法門。」",
+   "T0476": "復有菩薩名曰憙見，作如是言：「色、受、想、行及識與空分別為二。若知取蘊性本是空，即是色空、非色滅空，乃至識蘊亦復如是，是為悟入不二法門。」復有菩薩名曰光幢，作如是言：「四界與空分別為二。若諸菩薩了知四界即虛空性，前中後際四界與空性皆無倒，悟入諸界，是為悟入不二法門。」",
+   "sa": "Vkn 8.17 priyadarśano bodhisatva āha: rūpaṃ śūnyam iti dvayam etat / rupam eva hi śūnyatā / na rūpavināśāc chūnyatā, rūpaprakṛtir eva śūnyatā / evaṃ vedanā saṃjñā saṃskārā vijñānaṃ śūnyam iti dvayam etat / vijñānam eva hi śūnyatā / na vijñānavināśāc chūnyatā, vijñānaprakṛtir eva śūnyatā / yo 'tra pañcasūpādānaskandheṣv evaṃ jñānānubodho 'yam advayapraveśaḥ / Vkn 8.18 prabhāketur bodhisatva āha: anye catvāro dhātavo 'nya ākāśadhātur iti dvayam etat / ākāśasvabhāvā eva catvāro dhātavaḥ / pūrvāntata ākāśasvabhāvā aparāntata ākāśasvabhāvās tathā pratyutpannato 'py ākāśasvabhāvāḥ / yac caivaṃ dhātupraveśajñānam ayam advayapraveśaḥ /"
+  },
+  "a18": {
+   "T0474": "光造菩薩曰：「四種異、空種異為二，空種自然，四大亦爾，本空自然，末空自然，知此種者，是不二入。」善意菩薩曰：「眼色為二，其知眼者，見色不染、不怒、不癡，是謂清淨。如是耳聲、鼻香、舌味、身更、心法為二，其知心者，於法不染、不怒、不癡，是謂清淨。如此住者，是不二入。」無盡意菩薩曰：「布施、一切智而分布為二，布施而自然，一切智亦爾；一切智自然，布施亦爾。如是持戒、忍辱、精進、一心、智慧、一切智而分布為二，智慧而自然，一切智亦爾；一切智自然，智慧亦爾。於其中而一入者，是不二入。」深妙菩薩曰：「空異、無相異、無願異為二，如空則無相，無相則無願，無願者不意、不心、不識、不行，其以一向行眾解門者，是不二入。」",
+   "T0475": "明相菩薩曰：「四種異、空種異為二。四種性即是空種性，如前際、後際空故，中際亦空。若能如是知諸種性者，是為入不二法門。」",
+   "bo": "ཁམས་བཞི་པོ་ཡང་གཞན་ལ་ནམ་མཁའི་ཁམས་ཀྱང་གཞན་ནོ་ཞེས་བྱ་བ་དེ་ནི་གཉིས་ཏེ། ། ཁམས་བཞི་པོ་ནི་ནམ་མཁའི་རང་བཞིན་ནོ། སྔོན་གྱི་མཐའ་ཡང་ནམ་མཁའི་རང་བཞིན་ནོ། ཕྱི་མའི་མཐའ་ཡང་ནམ་མཁའི་རང་བཞིན་ནོ། དེ་བཞིན་དུ་ད་ལྟར་ཡང་ནམ་མཁའི་རང་བཞིན་ཏེ། ། གང་དེ་ལྟར་ཁམས་ལ་འཇུག་པའི་ཡེ་ཤེས་དེ་ནི་གཉིས་སུ་མེད་པར་འཇུག་པའོ། །",
+   "en": "“To say that the four main elements are one thing and the etheric space-element another is dualistic. The four main elements are themselves the nature of space. The past itself is also the nature of space. The future itself is also the nature of space. Likewise, the present itself is also the nature of space. The gnosis that penetrates the elements in such a way is the entrance into nonduality.”"
+  },
+  "a19": {
+   "T0475": "妙意菩薩曰：「眼、色為二。若知眼性，於色不貪、不恚、不癡，是名寂滅；如是，耳、聲，鼻、香，舌、味，身、觸，意、法為二，若知意性，於法不貪、不恚、不癡，是名寂滅，安住其中，是為入不二法門。」",
+   "T0476": "復有菩薩名曰妙慧，作如是言：「眼色、耳聲、鼻香、舌味、身觸、意法分別為二。若諸菩薩了知一切其性皆空，見眼自性於色無貪、無瞋、無癡；如是，乃至見意自性於法無貪、無瞋、無癡，此則為空。如是見已，寂靜安住，是為悟入不二法門。」",
+   "sa": "Vkn 8.19 sumatir bodhisatva āha: cakṣū rūpaṃ ca dvayam etat / yat punaś cakṣuḥparijñātāvī rūpeṣu na rajyati na duṣyati na muhyati, sa ucyate śānta iti / śrotraṃ śabdāś ca ghrāṇaṃ gandhāś ca jihvā rasāś ca kāyaḥ spraṣṭavyāni ca mano dharmāś ca dvayam etat / yat punar manaḥparijñātāvī dharmeṣu na rajyate na duṣyati na muhyati, sa ucyate śānta iti / evaṃ śāntasthitasyādvayapraveśaḥ / Vkn 8.20 akṣayamatir bodhisatva āha: dānaṃ sarvajñatāyāṃ pariṇāmayatīti dvayam etat / dānasvabhāvaiva sarvajñatā, sarvajñatāsvabhāva eva pariṇāmaḥ / evaṃ śīlaṃ kṣāntiṃ vīryaṃ dhyānaṃ prajñāṃ sarvajñatāyāṃ pariṇāmayatīti dvayam etat / prajñāsvabhāvaiva sarvajñatā, sarvajñatāsvabhāva eva pariṇāmaḥ / yo 'traikanayapraveśo 'yam advayapraveśaḥ / Vkn 8.21 gambhīrabuddhir bodhisatva āha: anyā śūnyatānyad animittam anyad apraṇihitam iti dvayam etat / yad dhi śūnyaṃ tatra na kiṃcin nimittam / animitte 'praṇihitam / apraṇihite na cittaṃ na mano na manovijñānaṃ pracarati / yatraikaṃ vimokṣamukhaṃ tatra sarvāṇi vimokṣamukhāni draṣṭavyāny ayam advayapraveśaḥ /",
+   "bo": "བྱང་ཆུབ་སེམས་དཔའ་རབ་ཀྱི་བློ་གྲོས་ཀྱིས་སྨྲས་པ། ། མིག་དང་གཟུགས་སོ་ཞེས་བྱ་བ་དེ་ནི་གཉིས་ཏེ། ། གང་མིག་ཡོངས་སུ་ཤེས་པས་གཟུགས་ལ་མི་ཆགས། མི་སྡང་མི་རྨོངས་པ་དེ་ནི་ཞི་བ་ཞེས་བྱའོ། ། དེ་བཞིན་དུ་རྣ་བ་དང་སྒྲ། སྣ་དང་དྲི། ལྕེ་དང་རོ། ལུས་དང་རེག །ཡིད་དང་ཆོས་དེ་དག་ནི་གཉིས་སོ། གང་ཡང་ཡིད་ཡོངས་སུ་ཤེས་ནས་ཆོས་ལ་མི་ཆགས། མི་སྡང་། མི་རྨོངས་པ་དེ་ནི་ཞི་བ་ཞེས་བྱའོ། ། དེ་ལྟར་ཞི་བ་ལ་གནས་པ་ནི་གཉིས་སུ་མེད་པར་འཇུག་པའོ།",
+   "en": "The bodhisattva Sumati declared, “ ‘Eye’ and ‘form’ are dualistic. To understand the eye correctly, and not to have attachment, aversion, or confusion with regard to form—that is called ‘peace.’ Similarly, ‘ear’ and ‘sound,’ ‘nose’ and ‘smell,’ ‘tongue’ and ‘taste,’ ‘body’ and ‘touch,’ and ‘mind’ and ‘phenomena’—all are dualistic. But to know the mind, and to be neither attached, averse, nor confused with regard to phenomena—that is called ‘peace.’ To live in such peace is to enter into nonduality.”"
+  },
+  "a20": {
+   "T0475": "無盡意菩薩曰：「布施、迴向一切智為二。布施性即是迴向一切智性，如是，持戒、忍辱、精進、禪定、智慧、迴向一切智為二，智慧性即是迴向一切智性，於其中入一相者，是為入不二法門。」",
+   "T0476": "復有菩薩名無盡慧，作如是言：「布施、迴向一切智性各別為二；如是，分別戒、忍、精進、靜慮、般若及與迴向一切智性各別為二。若了布施即所迴向一切智性，此所迴向一切智性即是布施；如是，乃至般若自性即所迴向一切智性，此所迴向一切智性即是般若。了此一理，是為悟入不二法門。」復有菩薩名甚深覺，作如是言：「空、無相、無願分別為二。若諸菩薩了知空中都無有相，此無相中亦無有願，此無願中無心、無意、無識可轉。如是，即於一解脫門具攝一切三解脫門。若此通達，是為悟入不二法門。」",
+   "bo": "བྱང་ཆུབ་སེམས་དཔའ་བློ་གྲོས་མི་ཟད་པས་སྨྲས་པ། ། སྦྱིན་པ་ཐམས་ཅད་མཁྱེན་པ་ཉིད་དུ་ཡོངས་སུ་བསྔོ་བ་དེ་ནི་གཉིས་ཏེ། ། སྦྱིན་པའི་ངོ་བོ་ཉིད་ནི་ཐམས་ཅད་མཁྱེན་པའོ། ཐམས་ཅད་མཁྱེན་པའི་ངོ་བོ་ཉིད་ནི་ཡོངས་སུ་བསྔོ་བའོ། དེ་བཞིན་དུ་ཚུལ་ཁྲིམས་དང་། བཟོད་པ་དང་། བརྩོན་འགྲུས་དང་། བསམ་གཏན་དང་། ཤེས་རབ་ཐམས་ཅད་མཁྱེན་པ་ཉིད་དུ་ཡོངས་སུ་བསྔོ་བ་དེ་ནི་གཉིས་སོ། ། ཐམས་ཅད་མཁྱེན་པ་ནི་ཤེས་རབ་ཀྱི་རང་བཞིན་ནོ། ། ཡོངས་སུ་བསྔོ་བ་ཡང་ཐམས་ཅད་མཁྱེན་པའི་རང་བཞིན་ཏེ། ། གང་ཚུལ་གཅིག་པ་འདི་ལ་འཇུག་པ་དེ་ནི་གཉིས་སུ་མེད་པར་འཇུག་པའོ། ། བྱང་ཆུབ་སེམས་དཔའ་བློ་ཟབ་ཀྱིས་སྨྲས་པ།",
+   "en": "The bodhisattva Akṣayamati declared, “The dedication of generosity for the sake of attaining omniscience is dualistic. The nature of generosity is itself omniscience, and the nature of omniscience itself is total dedication. Likewise, it is dualistic to dedicate morality, tolerance, effort, meditation, and wisdom for the sake of omniscience. Omniscience is the nature of wisdom, and total dedication is the nature of omniscience. Thus, the entrance into this principle of uniqueness is the entrance into nonduality.” The bodhisattva Gambhīrabuddhi declared,"
+  },
+  "a21": {
+   "T0475": "深慧菩薩曰：「是空、是無相、是無作為二。空即無相，無相即無作；若空、無相、無作，則無心、意、識，於一解脫門即是三解脫門者，是為入不二法門。」",
+   "bo": "སྟོང་པ་ཉིད་ཀྱང་གཞན་ལ་མཚན་མ་མེད་པ་དང་། སྨོན་པ་མེད་པ་ཡང་གཞན་ནོ་ཞེས་བྱ་བ་དེ་ནི་གཉིས་ཏེ།",
+   "en": "“It is dualistic to say that voidness is one thing, signlessness another, and wishlessness still another."
+  },
+  "a22": {
+   "T0474": "寂根菩薩曰：「佛法眾為二，佛性則法，法性則眾，一切是三寶無有數，無數則朴，朴則正諸法，樂隨此者，是不二入。」不毀根菩薩曰：「有身與有身盡為二，有身則有盡，何則？從身生見，從見有身。是故有身有毀滅雜，彼以無雜自然如滅，而不迷不惑者，是不二入。」善斷菩薩曰：「身、口、心為二，所以者何？是身則無為之相也，如身之無為，口相亦無為，如口之無為，心相亦無為，如其心之無為，一切法亦無為。其以無二無三事者，是不二入。」福土菩薩曰：「福與不福，為與不知為為二，於福不福，如不知為如，不有為是則無二。其於罪福不以知為如自然相，以空知者，不是福不非福，亦不無知，覺如此者，是不二入。」首懷菩薩曰：「攀緣稱說為二，若其不攀緣則無所不善、無非善也。如無不善、無非善者，是不二入。」",
+   "T0475": "寂根菩薩曰：「佛、法、眾為二。佛即是法，法即是眾，是三寶皆無為相，與虛空等，一切法亦爾。能隨此行者，是為入不二法門。」",
+   "T0476": "復有菩薩名寂靜根，作如是言：「佛、法、僧寶分別為二。若諸菩薩了知佛性即是法性、法即僧性，如是三寶皆無為相，與虛空等；諸法亦爾。若此通達，是為悟入不二法門。」復有菩薩名無礙眼，作如是言：「是薩迦耶及薩迦耶滅分別為二。若諸菩薩知薩迦耶即薩迦耶滅，如是了知，畢竟不起薩迦耶見，於薩迦耶薩迦耶滅，即無分別、無異分別。證得此二究竟滅性，無所猜疑、無驚、無懼，是為悟入不二法門。」",
+   "sa": "Vkn 8.22 śāntendriyo bodhisatva āha: buddho dharmaḥ saṃgha iti dvayam etat / buddhasya hi dharmaḥ, dharmaprakṛtikaś ca saṃghaḥ / sarvāṇy etāni ratnāny asaṃskṛtāni, asaṃskṛtaṃ cākāśam, ākāśasamaś ca sarvadharmanayaḥ / ya evam anugamo 'yam advayapraveśaḥ / Vkn 8.23 apratihatacakṣur bodhisatva āha: satkāyaḥ satkāyanirodha iti dvayam etat / satkāya eva hi nirodhaḥ / tat kasmād dhetoḥ / tathā hi sa satkāya iti dṛṣṭiṃ nopasthāpayati, yayā dṛṣṭyā satkāya iti vā satkāyanirodha iti vā kalpayati / so 'kalpo 'vikalpo 'tyantāvikalpo nirodhasvabhāvaprāptaḥ, na saṃbhavati na vibhavaty ayam advayapraveśaḥ / Vkn 8.24 suvinīto bodhisatva āha: kāyavāṅmanaḥsaṃvara iti dvayam etat / tat kasmād dhetoḥ / anabhisaṃskāralakṣanā hy ete dharmāḥ / yā kāyasyānabhisaṃskāratā tallakṣaṇaiva vāganabhisaṃskāratā tallakṣaṇaiva mano'nabhisaṃskāratā / yā ca sarvadharmāṇām anabhisaṃskāratā, sā jñātavyānugantavyā / yad atrānabhisaṃskārajñānam ayam advayapraveśaḥ / Vkn 8.25 puṇyakṣetro bodhisatva āha: puṇyapuṇyāniñjyān saṃskāran abhisaṃskarotīti dvayam etat / yat punaḥ puṇyāpuṇyāniñjyānabhisaṃskāratā sādvayā / yā ca puṇyāpuṇyāniñjyānāṃ saṃskārāṇāṃ svalakṣaṇaśūnyatā na tatra puṇyāpuṇyāniñjyāḥ saṃskārāḥ / yaivam anumārjanāyam advayapraveśaḥ /",
+   "bo": "སྟོང་པ་གང་ཡིན་པ་དེ་ལ་མཚན་མ་གང་ཡང་མེད་དོ། ། མཚན་མ་མེད་པ་ལ་སྨོན་པ་མེད། ། སྨོན་པ་མེད་པ་ལ་སེམས་དང་། ཡིད་དང་། རྣམ་པར་ཤེས་པ་རྒྱུ་བ་མེད་དེ། གང་རྣམ་པར་ཐར་པ་གཅིག་གི་སྒོ་དེ་ལ་རྣམ་པར་ཐར་པ་ཐམས་ཅད་ཀྱི་སྒོ་རྣམས་སུ་བལྟ་བར་བྱ་བ་དེ་ནི་གཉིས་སུ་མེད་པའི་སྒོར་འཇུག་པའོ། བྱང་ཆུབ་སེམས་དཔའ་དབང་པོ་ཞི་བས་སྨྲས་པ། སངས་རྒྱས་དང་། ཆོས་དང་། དགེ་འདུན་ནོ་ཞེས་བྱ་བ་དེ་ནི་གཉིས་ཏེ། སངས་རྒྱས་ཀྱི་རང་བཞིན་ནི་ཆོས་སོ། ། ཆོས་ཀྱི་རང་བཞིན་ནི་དགེ་འདུན་ཏེ། དེ་དག་ཐམས་ཅད་ཀྱང་འདུས་མ་བྱས་པའོ། ། འདུས་མ་བྱས་ནི་ནམ་མཁའོ། ཆོས་ཐམས་ཅད་ཀྱི་ཚུལ་ནི་ནམ་མཁའ་དང་མཚུངས་ཏེ། གང་དེ་ལྟར་རྗེས་སུ་འགྲོ་བ་དེ་ནི་གཉིས་སུ་མེད་པར་འཇུག་པའོ། ། བྱང་ཆུབ་སེམས་དཔའ་ཐོགས་པ་མེད་པའི་མིག་གིས་སྨྲས་པ། འཇིག་ཚོགས་དང་འཇིག་ཚོགས་འགོག་པ་ཞེས་བྱ་བ་དེ་ནི་གཉིས་ཏེ། ། འཇིག་ཚོགས་ཉིད་ནི་འགོག་པའོ། དེ་ཅིའི་ཕྱིར་ཞེ་ན། འཇིག་ཚོགས་སུ་ལྟ་བ་མི་སྐྱེ་བ་མེད་ཅིང་གང་ལྟ་བ་དེས་འཇིག་ཚོགས་སོ་ཞེའམ། འཇིག་ཚོགས་འགོག་ཅེས་མི་རྟོག་སྟེ། དེ་མི་རྟོག །རྣམ་པར་མི་རྟོག །ཤིན་ཏུ་མི་རྟོག་པས་འགོག་པའི་རང་བཞིན་དུ་གྱུར་ཏེ། མི་འབྱུང་མི་འཇིག་པ་དེ་ནི་གཉིས་སུ་མེད་པར་འཇུག་པའོ། །། བྱང་ཆུབ་སེམས་དཔའ་ཤིན་ཏུ་དུལ་བས་སྨྲས་པ།",
+   "en": "What is void has no sign. What has no sign has no wish. Where there is no wish there is no process of thought, mind, or consciousness. To see the doors of all liberations in the door of one liberation is the entrance into nonduality.” The bodhisattva Sāntendriya declared, “It is dualistic to say ‘Buddha,’ ‘Dharma,’ and ‘Saṅgha.’ The Dharma is itself the nature of the Buddha, the Saṅgha is itself the nature of the Dharma, and all of them are uncompounded. The uncompounded is infinite space, and the processes of all things are equivalent to infinite space. Adjustment to this is the entrance into nonduality.” The bodhisattva Apratihatacakṣu declared, “It is dualistic to refer to ‘aggregates’ and to the ‘cessation of aggregates.’ Aggregates themselves are cessation. The egoistic views of aggregates, being unproduced themselves, do not exist ultimately. Hence such views do not really conceptualize ‘these are aggregates’ or ‘these aggregates cease.’ Ultimately, they have no such discriminative constructions and no such conceptualizations. Therefore, such views have themselves the nature of cessation. Nonoccurrence and nondestruction are the entrance into nonduality.” The bodhisattva Suvinīta declared,"
+  },
+  "a23": {
+   "T0475": "心無礙菩薩曰：「身、身滅為二。身即是身滅。所以者何？見身實相者，不起見身及見滅身，身與滅身無二無分別，於其中不驚、不懼者，是為入不二法門。」"
+  },
+  "a24": {
+   "T0475": "上善菩薩曰：「身、口、意業為二。是三業皆無作相，身無作相，即口無作相；口無作相，即意無作相；是三業無作相，即一切法無作相。能如是隨無作慧者，是為入不二法門。」",
+   "T0476": "復有菩薩名善調順，作如是言：「是身、語、意三種律儀分別為二。若諸菩薩了知如是三種律儀皆無作相，其相無二。所以者何？此三業道皆無作相——身無作相即語無作相、語無作相即意無作相、意無作相即一切法俱無作相——若能隨入無造作相，是為悟入不二法門。」",
+   "bo": "ལུས་དང་། ངག་དང་། ཡིད་ཀྱི་སྡོམ་པ་ཞེས་བྱ་བ་དེ་ནི་གཉིས་སུ་མེད་དེ། ཆོས་འདི་དག་ནི་མངོན་པར་འདུ་མི་བྱེད་པའི་མཚན་ཉིད་དེ། ལུས་ཀྱི་མངོན་པར་འདུ་མི་བྱེད་པ་གང་ཡིན་པ་ངག་གི་མངོན་པར་འདུ་མི་བྱེད་པའང་དེའི་མཚན་ཉིད་དོ། ཡིད་ཀྱི་མངོན་པར་འདུ་མི་བྱེད་པའང་དེའི་མཚན་ཉིད་དེ། གང་ཆོས་ཐམས་ཅད་ཀྱི་མངོན་པར་འདུ་མི་བྱེད་པ་དེ་ཡིན་པར་ཤེས་པར་བྱ། རྗེས་སུ་རིག་པར་བྱ་སྟེ། ཤེས་པ་དེ་ནི་གཉིས་སུ་མེད་པར་འཇུག་པའོ།",
+   "en": "“Physical, verbal, and mental vows do not exist dualistically. These things have the nature of inactivity. The nature of inactivity of the body is the same as the nature of inactivity of speech, whose nature of inactivity is the same as the nature of inactivity of the mind. It is necessary to know and to understand this fact of the ultimate inactivity of all things, for this knowledge is the entrance into nonduality.”"
+  },
+  "a25": {
+   "T0475": "福田菩薩曰：「福行、罪行、不動行為二。三行實性即是空，空則無福行、無罪行、無不動行。於此三行而不起者，是為入不二法門。」",
+   "T0476": "復有菩薩名曰福田，作如是言：「罪行、福行及不動行分別為二。若諸菩薩了知罪行、福及不動皆無作相，其相無二。所以者何？罪、福、不動如是三行性相皆空，空中無有罪、福、不動三行差別，如是通達，是為悟入不二法門。」",
+   "bo": "བྱང་ཆུབ་སེམས་དཔའ་བསོད་ནམས་ཞིང་གིས་སྨྲས་པ། བསོད་ནམས་དང་། བསོད་ནམས་མ་ཡིན་པ་དང་། མི་གཡོ་བ་མངོན་པར་འདུ་བྱ་བ་མངོན་པར་འདུ་བྱེད་དོ་ཞེས་བྱ་བ་དེ་ནི་གཉིས་ཏེ། གང་བསོད་ནམས་དང་བསོད་ནམས་མ་ཡིན་པ་དང་། མི་གཡོ་བ་མངོན་པར་འདུ་མི་བྱེད་པ་དེ་ནི་གཉིས་སུ་མེད་པའོ། ། བསོད་ནམས་དང་། བསོད་ནམས་མ་ཡིན་པ་དང་། མི་གཡོ་བའི་འདུ་བྱེད་རྣམས་ཀྱི་རང་གི་མཚན་ཉིད་སྟོང་པ་སྟེ། དེ་ལ་བསོད་ནམས་ཀྱང་མེད། བསོད་ནམས་མ་ཡིན་པ་ཡང་མེད། མི་གཡོ་བ་ཡང་མེད། མངོན་པར་འདུ་བྱེད་པའང་མེད་དེ། གང་དེ་ལྟར་མི་སྒྲུབ་པ་དེ་ནི་གཉིས་སུ་མེད་པར་འཇུག་པའོ། ། བྱང་ཆུབ་སེམས་དཔའ་པད་མ་བཀོད་པས་སྨྲས་པ། བདག་ཀུན་ནས་ལྡང་བ་ལས་སྐྱེས་པ་དེ་ནི་གཉིས་ཏེ། ། བདག་ཡོངས་སུ་ཤེས་པ་དེ་ནི་གཉིས་མི་སློང་ངོ་། དེ་ལྟར་གཉིས་སུ་མེད་པར་གནས་པ་ལ་རྣམ་པར་རིག་པ་མེད་པས་རྣམ་པར་རིག་པ་མེད་པ་དེ་ནི་གཉིས་སུ་མེད་པར་འཇུག་པའོ། ། བྱང་ཆུབ་སེམས་དཔའ་དཔལ་གྱི་སྙིང་པོས་སྨྲས་པ། ། དམིགས་པས་རབ་ཏུ་ཕྱེ་བ་དེ་ནི་གཉིས་སོ། ། གང་མི་དམིགས་པ་དེ་ནི་གཉིས་སུ་མེད་པ་སྟེ། དེའི་ཕྱིར་གང་ལེན་པ་མེད་ཅིང་འདོར་བ་མེད་པ་དེ་ནི་གཉིས་སུ་མེད་པར་འཇུག་པའོ། ། བྱང་ཆུབ་སེམས་དཔའ་ཟླ་བའི་བླ་མས་སྨྲས་པ།",
+   "en": "The bodhisattva Puṇyakṣetra declared, “It is dualistic to consider actions meritorious, sinful, or unmoving. The non-undertaking of meritorious, sinful, and unmoving actions is not dualistic. The intrinsic nature of all such actions is voidness, wherein ultimately there is neither merit, nor sin, nor non-movement, nor action itself. The nonaccomplishment of such actions is the entrance into nonduality.” The bodhisattva Padmavyūha declared, “Dualism is produced from obsession with self, but true understanding of self does not result in dualism. Who thus abides in nonduality is without ideation, and that absence of ideation is the entrance into nonduality.” The bodhisattva Śrīgarbha declared, “Duality is constituted by perceptual manifestation. Nonduality is objectlessness. Therefore, nongrasping and nonrejection is the entrance into nonduality.” The bodhisattva Candrottara declared,"
+  },
+  "a26": {
+   "T0475": "華嚴菩薩曰：「從我起二為二。見我實相者，不起二法；若不住二法，則無有識；無所識者，是為入不二法門。」",
+   "T0476": "復有菩薩名曰華嚴，作如是言：「一切二法皆從我起。若諸菩薩知我實性即不起二，不起二故即無了別，無了別故無所了別，是為悟入不二法門。」復有菩薩名曰勝藏，作如是言：「一切二法有所得起。若諸菩薩了知諸法都無所得則無取捨，既無取捨，是為悟入不二法門。」",
+   "sa": "Vkn 8.26 padmavyūho bodhisatva āha: ātmasamutthānasamutthitaṃ dvayam / ātmaparijñātāvī dvayaṃ notthāpayati / advayasthitasya vijñāptir nāsti / avijñaptikaś cādvayapraveśaḥ / Vkn 8.27 śrīgarbho bodhisatva āha: upalambhaprabhāvitaṃ dvayam / yan na labhate tan nopalabhate, tan nāyūhati na niryūhati / tatra nāyūho na niryūho 'yam advayapraveśaḥ /"
+  },
+  "a27": {
+   "T0475": "德藏菩薩曰：「有所得相為二。若無所得，則無取捨；無取捨者，是為入不二法門。」"
+  },
+  "a28": {
+   "T0474": "月盛菩薩曰：「闇與明為二，不闇不明，乃無有二。何則？如滅定者，無闇無明，如諸法相而等入者，是不二入。」",
+   "T0475": "月上菩薩曰：「闇與明為二。無闇、無明，則無有二。所以者何？如入滅受想定，無闇、無明，一切法相亦復如是，於其中平等入者，是為入不二法門。」",
+   "T0476": "復有菩薩名曰月上，作如是言：「明之與暗分別為二。若諸菩薩了知實相無暗、無明，其性無二。所以者何？譬如苾芻入滅盡定，無暗、無明；一切諸法其相亦爾。如是妙契諸法平等，是為悟入不二法門。」",
+   "sa": "Vkn 8.28 candrottaro bodhisatva āha: tamaḥ prakāśa iti dvayam etat / atamo 'prakāśa ity advayam / tat kasmād dhetoḥ / tathā hi nirodhasamāpannasya na tamo na prakāśaḥ / evaṃlakṣaṇāś ca sarvadharmāḥ / yo 'tra samatāpraveśo 'yam advayapraveśaḥ / Vkn 8.29 ratnamudrāhasto bodhisatva āha: nirvāṇe 'bhiratiḥ saṃsāre 'nabhiratir iti dvayam etat / yasya na nirvāṇe 'bhiratir na saṃsāre 'nabhiratir idam advayam / tat kasmād dhetoḥ / baddhasya hi sato mokṣaḥ prabhāvyate / yo 'tyantam evābaddhaḥ sa kiṃ mokṣaṃ paryeṣiṣyate / abaddho 'mukto bhikṣur na ratim utpādayati nāratim ayam advayapraveśaḥ / Vkn 8.30 maṇikūṭarājo bodhisatva āha: mārgaḥ kumārga iti dvayam etat / mārgapratipannasya na kumārgaḥ samudācarati / asamudācārasthitasya na mārgasaṃjñā bhavati na kumārgasaṃjñā / saṃjñāparijñātāvino hi dvaye buddhir nākrāmaty ayam asyādvayapraveśaḥ / Vkn 8.31 satyanandī bodhisatva āha: satyaṃ mṛṣeti dvayam etat / satyadarśī satyam eva na samanupaśyati, kuto mṛṣā drakṣyati / tat kasmād dhetoḥ / na hi sa māṃsacakṣuṣā paśyati, prajñācakṣuṣā paśyati / tathā ca paśyati, na vipaśyati / yatra ca na paśyanā na vipaśyanāyam advayapraveśaḥ /",
+   "bo": "མུན་པ་དང་སྣང་བ་ཞེས་བྱ་བ་དེ་ནི་གཉིས་ཏེ། མུན་པའང་མེད། སྣང་བའང་མེད་པ་དེ་ནི་གཉིས་སུ་མེད་པའོ། ། འདི་ལྟར་འགོག་པར་སྙོམས་པར་ཞུགས་པ་ལ་མུན་པ་ཡང་མེད། སྣང་བ་ཡང་མེད་དེ། ཆོས་ཐམས་ཅད་ཀྱི་མཚན་ཉིད་ཀྱང་དེ་བཞིན་ཏེ། གང་མཉམ་པ་ཉིད་འདི་ལ་འཇུག་པ་དེ་ནི་གཉིས་སུ་མེད་པར་འཇུག་པའོ།",
+   "en": "“ ‘Darkness’ and ‘light’ are dualistic, but the absence of both darkness and light is nonduality. At the time of absorption in cessation, there is neither darkness nor light, and likewise with the natures of all things. The entrance into this equanimity is the entrance into nonduality.”"
+  },
+  "a29": {
+   "T0474": "寶印手菩薩曰：「其樂泥洹，不樂生死為二，如不樂泥洹，不惡生死，乃無有二。何則？在生死縛彼乃求解，若都無縛，其誰求解？如無縛、無解、無樂、無不樂者，是不二入。」心珠立菩薩曰：「大道、小道為二，依大道者不樂小道，亦不習塵，無大道相，無小道相，如如想之士，無以行道者，是不二入。」誠樂仰菩薩曰：「誠不誠為二，誠見者不見誠，奚欺偽之能見！何則？非肉眼所見也，以慧見乃而見。其以如見、無見、無不見者，是不二入。」",
+   "T0475": "寶印手菩薩曰：「樂涅槃、不樂世間為二。若不樂涅槃、不厭世間，則無有二。所以者何？若有縛，則有解；若本無縛，其誰求解？無縛無解，則無樂、厭，是為入不二法門。」",
+   "T0476": "復有菩薩名寶印手，作如是言：「欣厭涅槃、生死為二。若諸菩薩了知涅槃及與生死不生欣厭則無有二。所以者何？若為生死之所繫縛則求解脫；若知畢竟無生死縛，何為更求涅槃解脫？如是通達，無縛、無解，不欣涅槃、不厭生死，是為悟入不二法門。」",
+   "bo": "བྱང་ཆུབ་སེམས་དཔའ་ལག་ན་ཕྱག་རྒྱ་རིན་པོ་ཆེས་སྨྲས་པ། མྱ་ངན་ལས་འདས་པ་ལ་མངོན་པར་དགའ་ཞིང་འཁོར་བ་ལ་མི་དགའ་བ་དེ་ནི་གཉིས་ཏེ། གང་མྱ་ངན་ལས་འདས་པ་ལ་ཡང་མངོན་པར་དགའ་བ་མེད་པ། འཁོར་བ་ལ་ཡང་མི་དགའ་བ་མེད་པ་དེ་ནི་གཉིས་སུ་མེད་པའོ། ། གང་བཅིངས་པ་ལས་ནི་གྲོལ་བར་བསྟན་གྱི། ། གང་ཤིན་ཏུ་མ་བཅིངས་པ་དེ་ཐར་པ་ག་ལ་ཚོལ། མ་བཅིངས་མ་གྲོལ་བའི་དགེ་སློང་གིས་ནི་དགའ་བ་དང་མི་དགའ་བ་ཡང་མི་རྙེད་དེ། དེ་ནི་གཉིས་སུ་མེད་པར་འཇུག་པའོ། །",
+   "en": "The bodhisattva Ratnamudrāhasta declared, “It is dualistic to detest the world and to rejoice in liberation, and neither detesting the world nor rejoicing in liberation is nonduality. Liberation can be found where there is bondage, but where there is ultimately no bondage where is there need for liberation? The mendicant who is neither bound nor liberated does not experience any like or any dislike and thus he enters nonduality.”"
+  },
+  "a30": {
+   "T0475": "珠頂王菩薩曰：「正道、邪道為二。住正道者，則不分別是邪是正，離此二者，是為入不二法門。」",
+   "T0476": "復有菩薩名珠髻王，作如是言：「正道、邪道分別為二。若諸菩薩善能安住正道，邪道究竟不行；以不行故，則無正道、邪道二相；除二相故則無二覺；若無二覺，是為悟入不二法門。」",
+   "bo": "བྱང་ཆུབ་སེམས་དཔའ་ནོར་བུ་བརྩེགས་པའི་རྒྱལ་པོས་སྨྲས་པ། ལམ་དང་ལམ་ངན་པའོ་ཞེས་བྱ་བ་དེ་ནི་གཉིས་ཏེ། ལམ་དུ་ཞུགས་པ་ལ་ནི་ལམ་ངན་པ་མི་སྤྱོད་དོ། ། མི་སྤྱོད་པ་ལ་གནས་པ་ནི་ལམ་གྱི་འདུ་ཤེས་སམ། ལམ་མ་ཡིན་པའི་འདུ་ཤེས་སུ་མི་འགྱུར་རོ། ། འདུ་ཤེས་ཡོངས་སུ་རིག་པ་ནི་བློ་གཉིས་སུ་མི་འཇུག་སྟེ། དེ་ནི་གཉིས་སུ་མེད་པར་འཇུག་པའོ། བྱང་ཆུབ་སེམས་དཔའ་བདེན་དགས་སྨྲས་པ།",
+   "en": "The bodhisattva Maṇikūṭarāja declared, “It is dualistic to speak of ‘good paths’ and ‘bad paths’. One who is on the path is not concerned with good or bad paths. Living in such unconcern, he entertains no concepts of ‘path’ or ‘nonpath.’ Understanding the nature of concepts, his mind does not engage in duality. Such is the entrance into nonduality.” The bodhisattva Satyananda declared,"
+  },
+  "a31": {
+   "T0475": "樂實菩薩曰：「實、不實為二。實見者尚不見實，何況非實？所以者何？非肉眼所見，慧眼乃能見，而此慧眼，無見無不見，是為入不二法門。」",
+   "T0476": "復有菩薩名曰諦實，作如是言：「虛之與實分別為二。若諸菩薩觀諦實性尚不見實，何況見虛？所以者何？此性非是肉眼所見，慧眼乃見。如是見時，於一切法無見、無不見，是為悟入不二法門。」",
+   "bo": "བདེན་པ་དང་བརྫུན་པ་ཞེས་བྱ་བ་དེ་ནི་གཉིས་ཏེ། བདེན་པ་མཐོང་བས་ཀྱང་བདེན་པ་ཉིད་ཡང་དག་པར་རྗེས་སུ་མི་མཐོང་ན་བརྫུན་པ་ལྟ་ག་ལ་མཐོང་། ། ཤའི་མིག་གིས་མི་མཐོང་གི་ཤེས་རབ་ཀྱི་མིག་གིས་མཐོང་སྟེ། ཇི་ལྟར་མི་མཐོང་ན་རྣམ་པར་མི་མཐོང་བ་དེ་ལྟར་མཐོང་ངོ་། །གང་ལ་མཐོང་བ་ཡང་མེད། རྣམ་པར་མཐོང་བ་ཡང་མེད་པ་དེ་ནི་གཉིས་སུ་མེད་པར་འཇུག་པའོ།",
+   "en": "“It is dualistic to speak of ‘true’ and ‘false.’ When one sees truly, one does not ever see any truth, so how could one see falsehood? One does not see with the physical eye, one sees with the eye of wisdom. And with the wisdom-eye one sees only insofar as there is neither sight nor nonsight. There, where there is neither sight nor nonsight, is the entrance into nonduality.”"
+  },
+  "a32": {
+   "T0474": "如是，諸菩薩各各說已，又問文殊師利：「何謂菩薩不二入法門者？」文殊師利曰：「如彼所言，皆各建行，於一切法如，無所取、無度、無得、無思、無知、無見、無聞，是謂不二入。」",
+   "T0475": "如是諸菩薩各各說已，問文殊師利：「何等是菩薩入不二法門？」",
+   "T0476": "如是，會中有諸菩薩隨所了知各別說已，同時發問妙吉祥言：「云何菩薩名為悟入不二法門？」時妙吉祥告諸菩薩：「汝等所言雖皆是善，如我意者，汝等此說猶名為二。",
+   "sa": "Vkn 8.32 ity evaṃ te bodhisatvāḥ svakasvakān nirdeśān nirdiśya mañjuśriyam kumārabhūtam etad avocat: katamo mañjuśriḥ bodhisatvasyādvayapraveśaḥ / mañjuśrīr āha: subhāṣitaṃ yuṣmākaṃ satpuruṣāḥ sarveṣām / api tu yāvad yuṣmābhir nirdiṣṭaṃ sarvam etad dvayam / ekanirdeśaṃ sthāpayitvā yaḥ sarvadharmāṇām anudāhāro 'pravyāhāro 'nudīranākīrtanānabhilapanam aprajñapanam ayam advayapraveśaḥ / Vkn 8.33 atha khalu mañjuśrīḥ kumārabhūto vimalakīrtiṃ licchavim etad avocat: nirdiṣṭo 'smābhiḥ kulaputra svakasvako nirdeśaḥ / pratibhātu tavāpy advayadharmapraveśanirdeśaḥ /",
+   "bo": "དེ་ལྟར་བྱང་ཆུབ་སེམས་དཔའ་དེ་དག་གིས་རང་རང་གི་བསྟན་པ་བཤད་ནས་འཇམ་དཔལ་གཞོན་ནུར་གྱུར་པ་ལ་འདི་སྐད་ཅེས་སྨྲས་སོ། ། འཇམ་དཔལ་བྱང་ཆུབ་སེམས་དཔའི་གཉིས་སུ་མེད་པར་འཇུག་པ་གང་ཡིན།",
+   "en": "When the bodhisattvas had given their explanations, they all addressed the crown prince Mañjuśrī: “Mañjuśrī, what is the bodhisattva’s entrance into nonduality?”"
+  },
+  "a33": {
+   "T0475": "文殊師利曰：「如我意者，於一切法無言無說，無示無識，離諸問答，是為入不二法門。」",
+   "T0476": "若諸菩薩於一切法無言、無說，無表、無示，離諸戲論、絕於分別，是為悟入不二法門。」",
+   "bo": "འཇམ་དཔལ་གྱིས་སྨྲས་པ། །། སྐྱེས་བུ་དམ་པ་ཁྱེད་ཀུན་གྱིས་ཀྱང་ལེགས་པར་སྨྲས་མོད་ཀྱི་ཁྱེད་ཀྱིས་བཤད་པ་དེ་ཐམས་ཅད་ནི་གཉིས་སོ། ། བསྟན་པ་གཅིག་ནི་མ་གཏོགས་ཏེ་བརྗོད་དུ་མེད་པ། སྨྲར་མེད་པ། བཤད་དུ་མེད་པ། བསྒྲག་ཏུ་མེད་པ། བསྟན་དུ་མེད་པར་གདགས་སུ་མེད་པ་དེ་ནི་གཉིས་སུ་མེད་པར་འཇུག་པའོ། ། དེ་ནས་འཇམ་དཔལ་གཞོན་ནུར་གྱུར་པས་ལིད་ཙ་བཱི་དྲི་མ་མེད་པར་གྲགས་པ་ལ་འདི་སྐད་ཅེས་སྨྲས་སོ། །",
+   "en": "Mañjuśrī replied, “Good sirs, you have all spoken well. Nevertheless, all your explanations are themselves dualistic. To know no one teaching, to express nothing, to say nothing, to explain nothing, to announce nothing, to indicate nothing, and to designate nothing—that is the entrance into nonduality.” Then, the crown prince Mañjuśrī said to the Licchavi Vimalakīrti,"
+  },
+  "a34": {
+   "T0475": "於是文殊師利問維摩詰：「我等各自說已，仁者當說何等是菩薩入不二法門？」",
+   "T0476": "時妙吉祥復問菩薩無垢稱言：「我等隨意各別說已，仁者當說，云何菩薩名為悟入不二法門？」",
+   "bo": "ཁོ་བོ་ཅག་གིས་ནི་རང་རང་གི་བསྟན་པ་བཤད་ཟིན་ན་རིགས་ཀྱི་བུ་ཁྱོད་ཀྱང་གཉིས་སུ་མེད་པའི་ཆོས་ཀྱི་སྒོ་བསྟན་པ་ལ་སྤོབས་པར་གྱིས་ཤིག །",
+   "en": "“We have all given our own teachings, noble sir. Now, may you elucidate the teaching of the entrance into the principle of nonduality!”"
+  },
+  "a35": {
+   "T0475": "時維摩詰默然無言。",
+   "T0476": "時無垢稱默然無說。妙吉祥言：「善哉善哉！",
+   "sa": "atha vimalakīrtir licchavis tūṣṇīm abhūt /",
+   "bo": "དེ་ནས་ལིད་ཙ་བཱི་དྲི་མ་མེད་པར་གྲགས་པ་ཅང་མི་སྨྲ་བར་གྱུར་ཏོ། དེ་ནས་འཇམ་དཔལ་གཞོན་ནུར་གྱུར་པས་ལིད་ཙ་བཱི་དྲི་མ་མེད་པར་གྲགས་པ་ལ་ལེགས་སོ་ཞེས་བྱ་བ་བྱིན་ཏེ།",
+   "en": "Thereupon, the Licchavi Vimalakīrti kept his silence, saying nothing at all. The crown prince Mañjuśrī applauded the Licchavi Vimalakīrti:"
+  },
+  "a36": {
+   "T0475": "文殊師利歎曰：「善哉，善哉！乃至無有文字、語言，是真入不二法門。」",
+   "T0476": "如是菩薩是真悟入不二法門，於中都無一切文字言說分別。」此諸菩薩說是法時，於眾會中五千菩薩皆得悟入不二法門，俱時證會無生法忍。",
+   "sa": "atha mañjuśrīḥ kumārabhūto vimalakīrter licchaveḥ sādhukāram adāt: sādhu sādhu kulaputra ayaṃ bodhisatvānām advayadharmamukhapraveśo yatra nākṣararutaravitavijñaptipracāraḥ / iha nirdeśe nirdiśyamāne pañcānāṃ bodhisatvasahasrāṇām advayadharmamukhapraveśād anutpattikadharmakṣāntipratilambho 'bhūt // // advayadharmamukhapraveśaparivarto 'ṣṭamaḥ //",
+   "bo": "ལེགས་སོ་ལེགས་སོ། །རིགས་ཀྱི་བུ་ འདི་ནི་བྱང་ཆུབ་སེམས་དཔའ་རྣམས་ཀྱི་གཉིས་སུ་མེད་པར་འཇུག་པ་ཡིན་ཏེ། ། དེ་ལ་ཡི་གེ་དང་། སྒྲ་དང་། རྣམ་པར་རིག་པའི་རྒྱུ་བ་མེད་དོ། ། བསྟན་པ་འདི་བཤད་པ་ན་བྱང་ཆུབ་སེམས་དཔའ་ལྔ་སྟོང་གཉིས་སུ་མེད་པའི་ཆོས་ཀྱི་སྒོར་ཞུགས་པས་མི་སྐྱེ་བའི་ཆོས་ལ་བཟོད་པ་ཐོབ་པར་གྱུར་ཏོ། །།",
+   "en": "“Excellent! Excellent, noble sir! This is indeed the entrance into the nonduality of the bodhisattvas. Here there is no use for syllables, sounds, and ideas.” When these teachings had been declared, five thousand bodhisattvas entered the door of the Dharma of nonduality and attained tolerance of the birthlessness of things."
+  },
+  "a37": {
+   "T0475": "說是入不二法門品時，於此眾中五千菩薩，皆入不二法門，得無生法忍。"
+  }
+ }
+}
