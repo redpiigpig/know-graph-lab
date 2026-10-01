@@ -1148,6 +1148,9 @@ B 線＝前人概論怎麼切（比較表）。一次派一個 Sonnet。
   暫定刪減（作者回「繼續」未逐項表態）：刪《遺訓》、游斯丁法文批判本與拉丁《彌撒經書》（有 ANF／中文替代）；
   必備其餘 16 本進 `data/zlib-wanted/user-named.jsonl`（含台灣主教團中文《彌撒經書》）；
   台灣長老教會《教會禮拜與聖禮典手冊》z-lib 不會有，列給作者購買；重要級 22 本待作者定。
+  第一章備料完成（`output/christianity-intro/sources_ch01.md`，62 筆，核實 54／部分 8；必備缺 13＋獵表 5）。
+  觀察：§5 最早的宣認證據最薄（靠 Hurtado、Bauckham，館藏幾無）；非西方四塊各只一兩本；**第一序偏天主教與東正教、
+  新教基督論缺位**（巴特、潘霍華）；華人新教耶穌論專書沒查到；站上無 NA28（以 SBLGNT 為底）；cuv2010 詩體續行要核腓 2:6–11。
 - 補書不只 z-lib；先查站上既有（梵二 SC／DV 中拉英在 `data/creeds/ecumenical-councils/vatican-ii/`、
   奧斯堡信條與路德小教理在 `data/creeds/protestant-confessions/`、通諭中譯在 `data/encyclicals/`），
   再查 TRC／天主教在線目錄。館藏確認沒有：《天主教教理》全本中譯、《協同書》中譯、Schmemann、Bria、Brown 第二冊。
