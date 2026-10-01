@@ -442,7 +442,9 @@ async function main() {
       try {
         await gotoPastWall(page, best.href.startsWith('http') ? best.href : HOST + best.href)
         const [dl] = await Promise.all([
-          page.waitForEvent('download', { timeout: 60000 }),
+          // 百 MB 級的掃描本站方要先備檔，60 秒內常等不到 download 事件；
+          // 單本手動補抓時可用 ZLIB_DL_TIMEOUT_MS 拉長（2026-10-01《神的演化》104 MB）。
+          page.waitForEvent('download', { timeout: Number(process.env.ZLIB_DL_TIMEOUT_MS || 60000) }),
           // 真正的下載是 a.addDownloadedBook（href=/dl/…）；a.dlButton 在 DOM 裡
           // 先出現的那個是 "Read Online"，點了不會有 download 事件。
           page.click('a.addDownloadedBook, a[href^="/dl/"]', { timeout: 20000 }),
