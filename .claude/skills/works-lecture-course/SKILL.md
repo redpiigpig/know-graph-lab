@@ -1153,6 +1153,9 @@ B 線＝前人概論怎麼切（比較表）。一次派一個 Sonnet。
   新教基督論缺位**（巴特、潘霍華）；華人新教耶穌論專書沒查到；站上無 NA28（以 SBLGNT 為底）；cuv2010 詩體續行要核腓 2:6–11。
   暫定刪減（作者回「繼續」）：刪 NA28、Kasper 德文、Holmes、約瑟夫 Loeb（有替代）；補 8 本＋新教第一序巴特 CD IV/1、
   潘霍華《基督論》共 10 本進獵表。兩章重要級缺書（ch04 22、ch01 16）仍待作者定。
+  第二章備料完成（`output/christianity-intro/sources_ch02.md`，64 筆，核實 57／部分 7；必備缺 10＋獵表 5）。
+  觀察：§4 讀律法與 §2 十句話最薄（無十誡專書）；猶太學者偏美國、拉比一手只有英譯；談猶太人的官方文件天主教 4、
+  新教 2、東正教 0；「取代論」與反猶傳統的一手缺；台灣原創舊約／猶太教專書未核到。站上有 wlc、lxx、思高可頂 BHS／Rahlfs。
 - 補書不只 z-lib；先查站上既有（梵二 SC／DV 中拉英在 `data/creeds/ecumenical-councils/vatican-ii/`、
   奧斯堡信條與路德小教理在 `data/creeds/protestant-confessions/`、通諭中譯在 `data/encyclicals/`），
   再查 TRC／天主教在線目錄。館藏確認沒有：《天主教教理》全本中譯、《協同書》中譯、Schmemann、Bria、Brown 第二冊。
