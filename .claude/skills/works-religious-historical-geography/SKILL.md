@@ -108,8 +108,13 @@ description: 《宗教歷史地理學》的撰寫與重寫——獨立專書（�
   J.Z. Smith、Josephson、Park、嚴耕望、Turchin、竺可楨、葛全勝、Osterhammel、Pomeranz、Fowden、Melton、島薗進…）；
   刪的理由只是「同作者第二本」「離三軸較遠」「未能核實」，這些都不等於不相關。
   **改為：165 條全數保留為工作書目（`litreview_paradigms.md`）；`litreview_core.md` 只是「先讀、先補」的順序。**
-- z-lib 獵表：`data/zlib-wanted/gods-coordinates.jsonl`，核心缺書 40 本（source `gods-coordinates-core`，第 2 層）＋
-  其餘缺書 62 本（`gods-coordinates`，第 30 層書稿層）。阿拉伯文、梵文原典改用通行英譯名搜。
+- 🚨 **全部下載，比對過才決定用不用**（作者 2026-10-01）：相關與否要讀了才知道，不是看書目猜。
+- z-lib 獵表：`data/zlib-wanted/gods-coordinates.jsonl`，缺書 102 本全在第 2 層（`gods-coordinates-core` 40 本＋
+  `gods-coordinates` 62 本，前者只是同層的先後）。阿拉伯文、梵文原典改用通行英譯名搜。
+- 期刊論文 26 篇不在 z-lib：`output/religious-historical-geography/gods-coordinates-doi.json`（20 篇有 DOI、6 篇待人工找），
+  到校時跑 `node scripts/doi_browser_fetch.mjs <該 json> "<Drive 研究資料對應夾>"`（校內網路才有訂閱）。
+- 不走 z-lib 的古典：空海《十住心論》在 CBETA（大正藏 T2425）；Mādhava、Haribhadra 英譯是公有領域，走 archive.org；
+  竺可楨 1972、內藤湖南〈概括的唐宋時代觀〉（《內藤湖南全集》）另找。
 - 文獻回顧由我刪到核心：`output/religious-historical-geography/litreview_core.md`（64 條，依導論與三部分組），待作者過目。
 
 ### （已定案，保留提案原文備查）−1200 以前怎麼切、為何從 −1200 起

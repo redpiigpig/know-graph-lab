@@ -85,9 +85,9 @@ PRIORITY = {
     # 同一本書逐章備料（output/christian-genealogy/sources_chN.md）各章建議優先補的書，10-01 起。
     "genealogy-sources": 2,
     # 《諸神的座標》（原《宗教歷史地理學》）重寫的文獻回顧，10-01 使用者同意補書。
-    # 核心 40 本排最前；其餘照樣要進書目，放在書稿層。檔案 data/zlib-wanted/gods-coordinates.jsonl。
+    # 使用者：全部下載，比對過才決定用不用——所以兩份都在第 2 層，核心只是排在同層前面的順序。檔案 data/zlib-wanted/gods-coordinates.jsonl。
     "gods-coordinates-core": 2,
-    "gods-coordinates": 30,
+    "gods-coordinates": 2,
     # 全集：梅延多夫與當代各東方教會神學家（10-01 使用者點名），與其他全集同層。
     "collected-eastern-theologians": 12,
     "collected-pelikan-harnack": 12,
