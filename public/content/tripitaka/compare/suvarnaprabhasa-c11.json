@@ -1,0 +1,131 @@
+{
+ "slug": "suvarnaprabhasa-c11",
+ "title": "金光明經・散脂鬼神品",
+ "family": "sa",
+ "intro": "梵本〈Saṃjñeya-mahāyakṣasenāpati〉＝藏譯第十一章＝曇無讖、合部〈散脂鬼神品〉＝義淨〈僧慎爾耶藥叉大將品〉。散脂（正了知）大將與二十八部願護說法者，自說名「正了知」之由，為說法者增益辯才。曇無讖、合部品末禮寶華功德海等佛名（梵藏在上一品章首）；義淨本另有陀羅尼。",
+ "units": [
+  {
+   "id": "s11-00",
+   "label": "散脂與二十八部發願護說法者"
+  },
+  {
+   "id": "s11-01",
+   "label": "何故名正了知：了知一切法"
+  },
+  {
+   "id": "s11-02",
+   "label": "增益說法者辯才・流布此經"
+  },
+  {
+   "id": "s11-02x",
+   "label": "義淨：正了知陀羅尼"
+  },
+  {
+   "id": "s11-03",
+   "label": "曇無讖、合部：禮寶華功德海等佛名"
+  },
+  {
+   "id": "s11-04",
+   "label": "品尾題"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本",
+   "who": "Nobel 校訂本・GRETIL"
+  },
+  {
+   "id": "bo",
+   "lang": "bo",
+   "label": "藏譯",
+   "who": "德格版 Toh 557・84000 翻譯記憶"
+  },
+  {
+   "id": "en",
+   "lang": "en",
+   "label": "84000 英譯",
+   "who": "譯自藏譯・與藏文逐句對齊"
+  },
+  {
+   "id": "T0663",
+   "lang": "lzh",
+   "label": "曇無讖本",
+   "who": "曇無讖譯《金光明經》・五世紀初",
+   "work": "T0663"
+  },
+  {
+   "id": "T0664",
+   "lang": "lzh",
+   "label": "合部本",
+   "who": "寶貴合《合部金光明經》・597 年",
+   "work": "T0664"
+  },
+  {
+   "id": "T0665",
+   "lang": "lzh",
+   "label": "義淨本",
+   "who": "義淨譯《金光明最勝王經》・703 年",
+   "work": "T0665"
+  }
+ ],
+ "works": [
+  "T0663",
+  "T0664",
+  "T0665"
+ ],
+ "anchors": [
+  {
+   "work": "T0663",
+   "node": "金光明經散脂鬼神品第十",
+   "uid": "T16n0663_p0346b15"
+  },
+  {
+   "work": "T0664",
+   "node": "金光明經散脂鬼神品第十五",
+   "uid": "T16n0664_p0389b20"
+  },
+  {
+   "work": "T0665",
+   "node": "金光明最勝王經僧慎爾耶藥叉大將品第十九",
+   "uid": "T16n0665_p0441a26"
+  }
+ ],
+ "cells": {
+  "s11-00": {
+   "sa": "// Saṃjñeyamahāyakṣasenāpatiparivartaḥ // atha khalu saṃjñeyo nāma mahāyakṣasenāpatiraṣṭāviṃśatibhirmahāyakṣasenāpatibhiḥ sārdhamutthāyāsanādekāṃsaṃ cīvaraṃ prāvṛtya dakṣiṇaṃ jānumaṇḍalaṃ pṛthivyāṃ pratiṣṭhāpya yena bhagavāṃstenāñjaliṃ praṇamya bhagavantametadavocat / ayaṃ bhadanta bhagavansuvarṇaprabhāsottamaḥ sūtrendrarāja etarhi cānagate 'dhvani yatra grāme vā nagare vā nigame vā janapade vā janapadapradeśe vāraṇyāyatane vā girikandare vā rājakule vā gṛhe vā pracariṣyati / tatrāhaṃ bhadanta bhagavansaṃjñeyo nāma mahāyakṣasenāpatiḥ sārdhamaṣṭāviṃśati bhirmahāyakṣasenāpatibhistatra grāme vā nagare vā nigame vā janapade vāraṇye vā girikandare vā rājakule vopasaṃkramiṣyāmi / adṛśyamānenātmabhāvena tasya dharmabhāṇakasya bhikṣo rakṣāṃ kariṣyāmi / paritrāṇaṃ parigrahaṃ paripālanaṃ daṇḍaparihāraṃ śastraparihāraṃ śāntisvaratyayanaṃ kariṣyami / teṣāṃ ca sarveṣāṃ dharmaśravaṇikānāṃ strīpuruṣadārakadārikāṇāṃ yeṣāṃ keṣāṃciditaḥ suvarṇaprabhāsottamātsūtrendrarājādantaśa ekā catuṣpādikāpi gāthā śrutā bhavedantaśa ekapadamapi suvarṇaprabhāsottamātsūtrendrarājādekabodhisattvanāmadheyamapi śrutaṃ bhavedudgṛhītaṃ vaikatathāgatanāmadheyaṃ vāntaśaścāsya suvarṇaprabhāsottamasya sūtrendrarājasya nāmadheyaṃ śrutaṃ bhavedudgṛhītaṃ vā teṣāṃ sarveṣāmārakṣāṃ kariṣyāmi / paritrāṇaṃ parigrahaṃ paripālanaṃ daṇḍaparihāraṃ śastraparihāraṃ śāntisvastyayanaṃ ca kariṣyāmi / teṣāṃ ca kulānāṃ teṣāṃ ca gṛhāṇāṃ teṣāṃ ca nagarāṇāṃ teṣāṃ ca grāmāṇāṃ teṣāṃ ca nigamānāṃ teṣāṃ cāraṇyānāṃ teṣāṃ ca rājakulānāmārakṣāṃ kariṣyāmi / paritrāṇaṃ parigrahaṃ paripālanaṃ daṇḍaparihāraṃ śastraparihāraṃ śāntisvastyayanaṃ kariṣyāmi //",
+   "bo": "དེ་ནས་གནོད་སྦྱིན་གྱི་སྡེ་དཔོན་ཆེན་པོ་ཡང་དག་ཤེས་གནོད་སྦྱིན་གྱི་སྡེ་དཔོན་ཆེན་པོ་ཉི་ཤུ་རྩ་བརྒྱད་དང་ལྷན་ཅིག་ཏུ་སྟན་ལས་ལངས་ཏེ། གོས་ཕྲག་པ་གཅིག་ཏུ་བགོས་ནས་པུས་མོ་གཡས་པའི་ལྷ་ང་ས་ལ་བཙུགས་ཏེ། བཅོམ་ལྡན་འདས་ག་ལ་བ་དེ་ལོགས་སུ་ཐལ་མོ་སྦྱར་བ་བཏུད་ནས། བཅོམ་ལྡན་འདས་ལ་འདི་སྐད་ཅེས་གསོལ་ཏོ། །བཙུན་པ་བཅོམ་ལྡན་འདས་ད་ལྟར་དང་མ་འོངས་པའི་དུས་ན། གསེར་འོད་དམ་པ་མདོ་སྡེའི་དབང་པོའི་རྒྱལ་པོ་འདི་གྲོང་ངམ། གྲོང་ཁྱེར་རམ། གྲོང་རྡལ་ལམ། ལྗོངས་སམ། དགོན་པའི་ཕྱོགས་སམ། རིའི་སྨན་ལྗོངས་སམ། ཕོ་བྲང་འཁོར་གང་དུ་འབྱུང་བར་འགྱུར་བ་དེར་བཙུན་པ་བཅོམ་ལྡན་འདས་གནོད་སྦྱིན་གྱི་སྡེ་དཔོན་ཆེན་པོ་ཡང་དག་ཤེས་བདག་གནོད་སྦྱིན་གྱི་སྡེ་དཔོན་ཆེན་པོ་ཉི་ཤུ་རྩ་བརྒྱད་པོ་དེ་དག་དང་ལྷན་ཅིག་ཏུ་གྲོང་ངམ། གྲོང་ཁྱེར་རམ། གྲོང་རྡལ་ལམ། ལྗོངས་སམ། དགོན་པའི་ཕྱོགས་སམ། རིའི་སྨན་ལྗོངས་སམ། ཕོ་བྲང་འཁོར་དེར་མཆི་བར་བགྱིའོ། །ལུས་མི་གདའ་བར་བགྱི་སྟེ་དགེ་སློང་ཆོས་སྨྲ་བ་དེ་བསྲུང་བར་བགྱིའོ། ། ཡོངས་སུ་བསྐྱབ་པ་དང་། ཡོངས་སུ་གཟུང་བ་དང་། ཡོངས་སུ་བསྐྱང་བ་དང་། ཆད་པ་སྤང་བ་དང་། ཞི་བ་དང་བདེ་ལེགས་སུ་འགྱུར་བར་བགྱིའོ། ། སྐྱེས་པའམ་བུད་མེད་དམ་ཁྱེའུ་འམ་བུ་མོ་ཆོས་ཉན་པ་དེ་དག་ཐམས་ཅད་དང་། གང་སུ་དག་གསེར་འོད་དམ་པ་མདོ་སྡེའི་དབང་པོའི་རྒྱལ་པོ་འདི་ལས་ཐ་ན་ཚིག་བཞི་པའི་ཚིགས་སུ་བཅད་པ་གཅིག་ཉན་པ་དང་ཐ་ན་ཚིག་གཅིག་དང་། ཐ་ན་གསེར་འོད་དམ་པ་མདོ་སྡེའི་དབང་པོའི་རྒྱལ་པོ་འདི་ལས་བྱང་ཆུབ་སེམས་དཔའི་མིང་གཅིག་གམ། དེ་བཞིན་གཤེགས་པའི་མཚན་ གཅིག་ཐོས་པར་གྱུར་ཏེ། གཟུང་བ་དང་ཐ་ན་གསེར་འོད་དམ་པ་མདོ་སྡེའི་དབང་པོའི་རྒྱལ་པོ་འདིའི་མིང་ཐོས་པར་གྱུར་ཏེ། གཟུང་བ་དེ་དག་ཐམས་ཅད་ཀྱང་ཀུན་ཏུ་བསྲུང་བར་བགྱིའོ། །ཡོངས་སུ་བསྐྱབ་པ་དང་། ཡོངས་སུ་གཟུང་བ་དང་། ཡོངས་སུ་བསྐྱང་བ་དང་། ཆད་པ་སྤང་བ་དང་། ཞི་བ་དང་བདེ་ལེགས་སུ་འགྱུར་བར་བགྱིའོ། །རིགས་དེ་དག་དང་། ཁྱིམ་དེ་དག་དང་། གྲོང་དེ་དག་དང་། གྲོང་ཁྱེར་དེ་དག་དང་། གྲོང་རྡལ་དེ་དག་དང་། དགོན་པ་དེ་དག་དང་། ཕོ་བྲང་འཁོར་དེ་དག་ཀྱང་ཀུན་ཏུ་བསྲུང་བར་བགྱིའོ། །ཡོངས་སུ་བསྐྱབ་པ་དང་། ཡོངས་སུ་གཟུང་བ་དང་། ཡོངས་སུ་བསྐྱང་བ་དང་། ཆད་པ་སྤང་བ་དང་། ཞི་བ་དང་བདེ་ལེགས་སུ་འགྱུར་བར་བགྱིའོ། །",
+   "en": "Chapter 11: Saṃjñeya  Then the great yakṣa general Saṃjñeya, accompanied by twenty-eight yakṣa generals, rose from his seat and, with his robe over one shoulder, kneeling with his right knee on the ground and with palms together, bowed toward the Bhagavat and said to the Bhagavat, “Venerable Bhagavat, wherever this Lord King of Sūtras, the Sublime Golden Light appears, in the present or in future times, whether in a village, town, market town, region, wilderness, mountain cave, or royal residence, Bhagavat, I, the great yakṣa general Saṃjñeya, accompanied by twenty-eight yakṣa generals, will come to that village, town, market town, region, wilderness, mountain cave, or royal residence. “I will make my body invisible and will guard that dharmabhāṇaka bhikṣu. I will defend him, take care of him, protect him, save him from punishment, and bring him peace and well-being. “All men, women, boys, or girls who listen to the Dharma, whoever hears and retains even one four-line verse from this Lord King of Sūtras, the Sublime Golden Light or even one line, or even the name of one bodhisattva from this Lord King of Sūtras, the Sublime Golden Light, or the name of one tathāgata, or even just hears and retains the name of this Lord King of Sūtras, the Sublime Golden Light, I will defend them all, take care of them, protect them, save them from punishment, and bring them peace and well-being. I will defend, take care of, protect, save from punishment, and bring peace and well-being to all those families, those homes, those villages, those towns, those market towns, those wildernesses, and those royal residences.",
+   "T0663": "爾時散脂鬼神大將，及二十八部諸鬼神等，即從座起，偏袒右肩右膝著地，白佛言：「世尊！是金光明微妙經典，若現在世及未來世，在在處處，若城邑聚落、若山澤空處、若王宮宅，隨是經典所流布處，我當與此二十八部大鬼神等，往至彼所隱蔽其形，隨逐擁護是說法者，消滅諸惡令得安隱；及聽法眾，若男若女童男童女，於是經中乃至得聞一如來名、一菩薩名及此經典首題名字，受持讀誦，我當隨侍宿衛擁護，悉滅其惡令得安隱，及國邑城郭，若王宮殿、舍宅空處，皆亦如是。世尊！何因緣故，我名散脂鬼神大將？唯然世尊，自當證知。",
+   "T0664": "爾時，散脂鬼神大將軍及二十八部諸鬼神等，即從坐起，偏袒右肩，右膝著地白佛言：「世尊！是金光明微妙經典，若現在世及未來世，在在處處——若城邑聚落、若山澤空處、若王宮宅——隨是經典所流布處，我當與此二十八部大鬼神等往至彼所，隱蔽其形隨逐擁護是說法者，消滅諸惡令得安隱；及聽法眾——若男、若女、童男、童女——於是經中乃至得聞一如來名、一菩薩名、及此經典首題名字，受持讀誦，我當隨侍宿衛擁護，悉滅其惡，令得安隱；及國邑、城郭、若王宮殿、舍宅空處皆亦如是。",
+   "T0665": "爾時，僧慎爾耶藥叉大將，并與二十八部藥叉諸神，於大眾中皆從座起，偏袒右肩，右膝著地，合掌向佛白言：「世尊！此金光明最勝經王，若現在世及未來世，所在宣揚流布之處，若於城邑聚落、山澤空林，或王宮殿或僧住處，世尊！我僧慎爾耶藥叉大將，并與二十八部藥叉諸神俱詣其所，各自隱形，隨處擁護彼說法師，令離衰惱，常受安樂。及聽法者，若男若女，童男童女，於此經中乃至受持一四句頌，或持一句，或此經王首題名號，及此經中一如來名，一菩薩名，發心稱念，恭敬供養者，我當救護攝受，令無災橫，離苦得樂。世尊！何故我名正了知？此之因緣，是佛親證，我知諸法，我曉一切法，隨所有一切法，如所有一切法，諸法種類體性差別，世尊！如是諸法，我能了知。我有難思智光，我有難思智炬，我有難思智行，我有難思智聚，我於難思智境而能通達。世尊！如我於一切法，正知正曉正覺，能正觀察。世尊！以是因緣，我藥叉大將名正了知。以是義故，我能令彼說法之師，言詞辯了，具足莊嚴，亦令精氣從毛孔入，身力充足，威神勇健，難思智光皆得成就，得正憶念，無有退屈，增益彼身，令無衰減，諸根安樂，常生歡喜。以是因緣，為彼有情，已於百千佛所植諸善根修福業者，於贍部洲廣宣流布，不速隱沒。彼諸有情聞是經已，得不可思議大智光明，及以無量福智之聚，於未來世，當受無量俱胝那庾多劫不可思量人天勝樂，常與諸佛共相值遇，速證無上正等菩提，閻羅之界三塗極苦，不復經過。」"
+  },
+  "s11-01": {
+   "sa": "tatkatamena hetunā / sarvadharmāḥ parijñātāḥ sarvadharmā avabuddhāḥ / yāvantaśca sarvadharmāḥ / yathā ca sarvadharmāḥ / saṃsthitā ye ca sarvadharmāḥ / samyagjñātāśca sarvadharmāḥ / sarvadharmeṣvahaṃ bhadanta bhagavanpratyakṣaḥ / acintyā me bhadanta bhagavañjñānāvabhāsāḥ / acintyo jñānālokaḥ / acintyo jñānapracāraḥ / acintyo jñānaskandhaḥ / acintyo me bhadanta bhagavansarvadharmeṣu jñānaviṣayaḥ pravartate / yathā ca me bhadanta bhagavansarvadharmāḥ samamyagjñātāḥ / samyakparīkṣitāḥ samyakparijñātāḥ (Bagchi 69) samyagvyavalokitāḥ samyagavabuddhāḥ / tena hetunā mama bhadanta bhagavansaṃjñeyasya mahāyakṣasenāpateḥ saṃjñeya iti nāmadheyaṃ samudapādi //",
+   "bo": "བཙུན་པ་བཅོམ་ལྡན་འདས་རྒྱུ་གང་དག་གིས། བདག་གནོད་སྦྱིན་གྱི་སྡེ་དཔོན་ཆེན་པོ་ཡང་དག་ཤེས་ཞེས་མིང་དུ་ཆགས་པར་གྱུར་ཅེ་ན། འདི་ནི་བཙུན་པ་བཅོམ་ལྡན་འདས་ཉིད་ཀྱི་མངོན་སུམ་མོ། ། བཙུན་པ་བཅོམ་ལྡན་འདས་བདག་གིས་ཆོས་ཐམས་ཅད་འཚལ་ཏོ། །ཆོས་ཐམས་ཅད་ཡོངས་སུ་འཚལ་ཏོ། ། ཆོས་ཐམས་ཅད་ཁོང་དུ་ཆུད་དོ། །ཆོས་ཐམས་ཅད་ཇི་སྙེད་པ་དང་། ཆོས་ཐམས་ཅད་ཇི་ལྟ་བ་དང་གནས་པ་གང་ལགས་པ་དང་། ཆོས་ཐམས་ཅད་ཀྱི་རིགས་གང་ལགས་པ་དང་། བཙུན་པ་བཅོམ་ལྡན་འདས་ཆོས་ཐམས་ཅད་བདག་ལ་མངོན་སུམ་མོ། ། བཙུན་པ་བཅོམ་ལྡན་འདས་ཆོས་ཐམས་ཅད་ལ་བདག་གི་ཡེ་ཤེས་སྣང་བ་བསམ་གྱིས་མི་ཁྱབ་བོ། །ཡེ་ཤེས་ཀྱི་གསལ་བ་བསམ་གྱིས་མི་ཁྱབ་བོ། །ཡེ་ཤེས་ཀྱི་རྒྱུ་བ་བསམ་གྱིས་མི་ཁྱབ་བོ། །ཡེ་ཤེས་ཀྱི་ཕུང་པོ་བསམ་གྱིས་མི་ཁྱབ་བོ། ། བཙུན་པ་བཅོམ་ལྡན་འདས་ཆོས་ཐམས་ཅད་ལ་བདག་གི་ཡེ་ཤེས་ཀྱི་ཡུལ་འཇུག་པ་བསམ་གྱིས་མི་ཁྱབ་བོ། །བཙུན་པ་བཅོམ་ལྡན་འདས་ཇི་ལྟར་བདག་ཆོས་ཐམས་ཅད་ཡང་དག་པར་འཚལ་བ་དང་། ཡང་དག་པར་ཡོངས་སུ་བརྟགས་པ་དང་། ཡང་དག་པར་ཡོངས་སུ་འཚལ་བ་དང་། ཡང་དག་པར་རྣམ་པར་བལྟས་པ་དང་། ཡང་དག་པར་ཁོང་དུ་ཆུད་པའི་རྒྱུ་དེས་ན། བཙུན་པ་བཅོམ་ལྡན་འདས་བདག་གནོད་སྦྱིན་གྱི་སྡེ་དཔོན་ཆེན་པོ་ཡང་ དག་ཤེས་ཞེས་མིང་དུ་ཆགས་སོ། །",
+   "en": "“Venerable Bhagavat, why am I named the great yakṣa general Saṃjñeya? Venerable Bhagavat, it is because I know all Dharmas, I understand all Dharmas, I comprehend all Dharmas. Whatever the number of Dharmas, the nature of the Dharmas, or the classes of Dharmas, venerable Bhagavat, I have direct knowledge of all Dharmas. “Venerable Bhagavat, in all Dharmas my illumination by wisdom is inconceivable, my clarity of wisdom is inconceivable, my activity of wisdom is inconceivable, and my accumulation of wisdom is inconceivable. “Venerable Bhagavat, in all Dharmas my engagement in the field of wisdom is inconceivable. “Venerable Bhagavat, it is because of my correct knowledge, my correct examination, my correct view, and my correct comprehension of all Dharmas that I am named the great yakṣa general Saṃjñeya.",
+   "T0663": "「世尊！我知一切法一切緣法，了一切法，知法分齊，如法安住一切法如性，於一切法含受一切法。世尊！我現見不可思議智光、不可思議智炬、不可思議智行、不可思議智聚、不可思議智境。世尊！我於諸法正解正觀，得正分別，正解於緣，正能覺了。世尊！以是義故，名散脂大將。",
+   "T0664": "「世尊！何因緣故我名散脂鬼神大將？唯然，世尊！自當證知。世尊！我知一切法、一切緣法、了一切法，知法分齊，如法安住一切法如性，於一切法含受一切法。世尊！我現見不可思議智光、不可思議智炬、不可思議智行、不可思議智聚、不可思議智境。世尊！我於諸法正解、正觀、得正分別、正解於緣、正能覺了。世尊！以是故名散脂大將。"
+  },
+  "s11-02": {
+   "sa": "ahaṃ bhadanta bhagavandharmabhāṇakasya bhikṣorvākyavibhūṣaṇārthāya pratibhānamupasaṃhariṣyāmi / romāntareṣu ca tasyaujaḥ prakṣepsyāmi / mahāntaṃ ca tasya sthāma ca balaṃ vīryaṃ ca kāye saṃjanayiṣyāmi / acintyaṃ tasya jñānāvabhāsaṃ kariṣyāmi / smṛtiṃ ca tasya bodhayiṣyāmi / mahantaṃ ca tasyotsahaṃ dāsyāmi / yathā ca sa dharmabhāṇako na klāntakāyo bhavet / sukhendriyakāyo bhavet / praharṣajātaśca bhavet / yenāyaṃ suvarṇaprabhāsottamaḥ sūtrendrarājasteṣāṃ buddhasahasrāvaruptakuśalamūlānāṃ sattvānāmarthāya ciraṃ jambudvīpe pracaret / na kṣipramantardhāpayet / sattvāścemaṃ suvarṇaprabhāsottamaṃ sūtrendrarājaṃ śṛṇuyuḥ / acintyaṃ ca jñānaskandhaṃ pratilabheyuḥ / prajñāvantaśca bhaveyuḥ / aparimitaṃ ca puṇyaskandhaṃ parigṛhṇīyuḥ / anāgate 'dhvanyanekakalpakoṭīniyutaśatasahasrāṇyacintyāni divyamānuṣyakāni sukhānyanubhaveyuḥ / tathāgatasamavadhānagatāśca bhaveyuranāgate 'dhvanyanuttarāṃ samyaksaṃbodhimabhisaṃbudhyeran / sarvanarakatiryagyoniyamalokaduḥkhāni cātyantena samucchinnāni bhaveyuriti //",
+   "bo": "བཙུན་པ་བཅོམ་ལྡན་འདས་བདག་གིས་དགེ་སློང་ཆོས་སྨྲ་བ་དེའི་ཚིག་བརྒྱན་པར་བགྱི་བའི་སླད་དུ་སྤོབས་པ་ཉེ་བར་བསྒྲུབ་པར་བགྱིའོ། །ཇི་ལྟར་ཆོས་སྨྲ་བ་དེའི་ལུས་མི་ངལ་བར་འགྱུར་བ་དང་། ལུས་ཀྱི་དབང་པོ་བདེ་བར་འགྱུར་བ་དང་། རབ་ཏུ་དགའ་བ་སྐྱེ་བར་འགྱུར་བ་དང་། གང་གི་སླད་དུ་སངས་རྒྱས་བརྒྱ་སྟོང་དག་ལ་དགེ་བའི་རྩ་བ་བསྐྲུན་པའི་སེམས་ཅན་རྣམས་ཀྱི་དོན་གྱི་སླད་དུ། གསེར་འོད་དམ་པ་མདོ་སྡེའི་དབང་པོའི་རྒྱལ་པོ་འདི་འཛམ་བུའི་གླིང་དུ་ཡུན་རིང་དུ་གནས་ཤིང་མྱུར་དུ་ནུབ་པར་མི་འགྱུར་བ་དང་། སེམས་ཅན་རྣམས་ཀྱང་གསེར་འོད་དམ་པ་མདོ་སྡེའི་དབང་པོའི་རྒྱལ་པོ་འདི་ཉན་པར་འགྱུར་བ་དང་། ཡེ་ཤེས་ཀྱི་ཕུང་པོ་བསམ་གྱིས་མི་ཁྱབ་པ་ཐོབ་པར་འགྱུར་བ་དང་། ཤེས་རབ་དང་ལྡན་པར་འགྱུར་བ་དང་། བསོད་ནམས་ཀྱི་ཕུང་པོ་རབ་ཏུ་འཛིན་པར་འགྱུར་བ་དང་། མ་འོངས་པའི་དུས་ན་བསྐལ་པ་བྱེ་བ་ཁྲག་ཁྲིག་བརྒྱ་སྟོང་ཕྲག་དུ་མར་ལྷ་དང་མིའི་བདེ་བ་བསམ་གྱིས་མི་ཁྱབ་པ་མྱོང་བར་འགྱུར་བ་དང་། དེ་བཞིན་གཤེགས་པ་དང་འགྲོགས་པར་འགྱུར་བ་དང་། མ་འོངས་པའི་དུས་ན་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་མངོན་པར་རྫོགས་པར་འཚང་རྒྱ་བར་འགྱུར་བ་དང་། སེམས་ཅན་དམྱལ་བ་དང་། དུད་འགྲོའི་སྐྱེ་གནས་དང་། གཤིན་རྗེའི་འཇིག་རྟེན་གྱི་སྡུག་བསྔལ་ཐམས་ཅད་ཤིན་ཏུ་རྒྱུན་ཆད་པར་འགྱུར་བར་དེའི་སྤུའི་བུ་ག་རྣམས་སུ་མདངས་སྩལ་བར་བགྱིའོ། །དེའི་ལུས་ལ་མཐུ་དང་སྟོབས་དང་བརྩོན་འགྲུས་ཆེན་པོ་བསྐྱེད་པར་བགྱིའོ། །དེའི་ཡེ་ཤེས་ཀྱི་སྣང་བ་བསམ་གྱིས་མི་ཁྱབ་པར་བགྱིའོ། །",
+   "en": "“Venerable Bhagavat, I will bring eloquence to the dharmabhāṇaka bhikṣu in order to beautify his words. I will bring brilliance to his pores and develop in his body great power, strength, and diligence; I will make the illumination of his wisdom inconceivable; and I will make his memory comprehensive and make him greatly enthusiastic, so that the dharmabhāṇaka’s body will not become fatigued, his body’s faculties will be blissful, he will feel great joy, and so that for the sake of those beings who have planted good roots with hundreds of thousands of buddhas, this Lord King of Sūtras, the Sublime Golden Light will remain for a long time in Jambudvīpa and will not soon vanish, and so that beings will hear this Lord King of Sūtras, the Sublime Golden Light and will attain an inconceivable accumulation of wisdom, will possess an accumulation of merit, and in the future will experience inconceivable happiness among devas and humans for many hundreds of thousands of quintillions of eons, will be in the company of tathāgatas, will in a future time attain the highest, most complete enlightenment of buddhahood, and will cease to experience the suffering of the hells, of birth as animals, or of the world of Yama.”",
+   "T0663": "「世尊！我散脂大將，令說法者莊嚴言辭辯不斷絕，眾味精氣從毛孔入，充益身力心進勇銳，成就不可思議智慧入正憶念，如是等事悉令具足心無疲厭，身受諸樂心得歡喜，以是意故，能為眾生廣說是經。「若有眾生，於百千佛所種諸善根，說法之人，為是眾生於閻浮提內，廣宣流布是妙經典令不斷絕；無量眾生聞是經已，當得不可思議智聚，攝取不可思議功德之聚，於未來世無量百千劫，人天之中常受快樂，於未來世值遇諸佛，疾得證成阿耨多羅三藐三菩提。一切眾苦、三惡趣分永滅無餘。",
+   "T0664": "「世尊！我散脂大將令說法者莊嚴言辭、辯不斷絕、眾味精氣從毛孔入、充益身力、心進勇銳、成就不可思議智慧、入正憶念，如是等事悉令具足，心無疲厭，身受諸樂，心得歡喜。以是之故，能為眾生廣說是經。若諸眾生於百千佛所種諸善根，說法之人為是眾生，閻浮提內廣宣流布是妙經典，令不斷絕。無量眾生聞是經已，當得不可思議智聚、攝取不可思議功德之聚，於未來世無量百千劫人天之中常受快樂、於未來世值遇諸佛、疾得證成阿耨多羅三藐三菩提、一切眾苦三惡趣分永滅無餘。"
+  },
+  "s11-02x": {
+   "T0665": "爾時，正了知藥叉大將白佛言：「世尊！我有陀羅尼，今對佛前親自陳說，為欲饒益憐愍諸有情故。」即說呪曰：「南謨佛陀（引）也　南謨達摩（引）也　南謨僧伽（引）也　南謨跋囉蚶（火含反）摩也　南謨因達囉也　南謨折咄喃　莫喝囉闍喃　怛姪他　呬哩呬哩　弭哩弭哩　瞿哩　莫訶瞿哩　健陀哩　莫訶健陀哩　達羅弭雉　莫訶達羅弭雉　單茶曲勸（駈問反）第（去）訶訶訶訶訶　呬呬呬呬呬　呼呼呼呼呼　漢魯曇謎瞿曇謎　者者者者　只只只只主主主主栴茶攝（之涉反）　鉢攞　尸揭囉（上）尸揭囉　嗢底瑟咤呬　薄伽梵　僧慎爾耶　莎訶「若復有人於此明呪能受持者，我當給與資生樂具、飲食衣服、花果珍異，或求男女、童男童女、金銀珍寶諸瓔珞具，我皆供給，隨所願求，令無闕乏。此之明呪有大威力，若誦呪時，我當速至其所，令無障礙，隨意成就。若持此呪時，應知其法，先畫一鋪僧慎爾耶藥叉形像，高四五尺，手執鉾鑹，於此像前作四方壇，安四滿瓶蜜水，或沙糖水，塗香粖香燒香及諸花鬘。又於壇前作地火爐，中安炭火，以蘇摩芥子燒於爐中，口誦前呪一百八遍，一遍一燒。乃至我藥叉大將自來現身，問呪人曰：『爾何所須？意所求者？』即以事答，我即隨言於所求事皆令滿足。或須金銀及諸伏藏，或欲神仙乘空而去，或求天眼通，或知他心事，於一切有情隨意自在，令斷煩惱，速得解脫，皆得成就。」爾時，世尊告正了知藥叉大將曰：「善哉！善哉！汝能如是利益一切眾生，說此神呪，擁護正法，福利無邊。」"
+  },
+  "s11-03": {
+   "T0663": "「南無寶華功德海琉璃金山光照如來、應供、正遍知。南無無量百千億那由他莊嚴其身釋迦如來、應供、正遍知，熾然如是微妙法炬。南無第一威德成就眾事大功德天。南無不可思量智慧功德成就大辯天。」",
+   "T0664": "「南無寶華功德海琉璃金山光照如來、應、正遍知，南無無量百千億那由他莊嚴其身釋迦如來、正遍知，熾然如是微妙法炬；南無第一威德成就眾事大功德天，南無不可思量智慧功德成就大辯天。」"
+  },
+  "s11-04": {
+   "sa": "iti śrīsuvarṇaprabhāsottamasūtrendrarāje saṃjñeyamahāyakṣasenāpati parivarto nāma dvādaśaḥ //",
+   "bo": "དེའི་དྲན་པ་ཁོང་དུ་ཆུད་པར་བགྱིའོ། །དེ་ཆེར་སྤྲོ་བར་བགྱིའོ། །གསེར་འོད་དམ་པ་མདོ་སྡེའི་དབང་པོའི་རྒྱལ་པོ་ལས། ཡང་དག་ཤེས་ཀྱི་ལེའུ་ཞེས་བྱ་བ་སྟེ་བཅུ་གཅིག་པའོ།། །།",
+   "en": "This concludes “Saṃjñeya,” the eleventh chapter of “The Lord King of Sūtras, the Sublime Golden Light.”"
+  }
+ }
+}
