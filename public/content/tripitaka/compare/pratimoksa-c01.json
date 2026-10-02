@@ -1,0 +1,255 @@
+{
+ "slug": "pratimoksa-c01",
+ "title": "比丘戒本（一）序：說戒緣起",
+ "family": "pi",
+ "intro": "波羅提木叉（別解脫）是半月布薩時誦出的比丘學處條文，各部律各有一本，條數二百二十七（巴利）至二百六十三（說一切有部梵本）不等。本對讀收十本：巴利《比丘波羅提木叉》（上座部）、梵本三部（說一切有部、大眾說出世部、根本說一切有部），漢譯六部：《四分戒本》（法藏部）、《五分戒本》（化地部）、《十誦戒本》（說一切有部）、《僧祇戒本》（大眾部）、《解脫戒經》（飲光部）、義淨《根本說一切有部戒經》。一篇聚一組，節的次第與編號一律照巴利本，他部次第不同者標「段序依原本」。未收：大眾部梵本另一校本（Pachow & Mishra 1956，與 Tatia 本同屬大眾說出世部，取 Tatia 本）、GRETIL 的梵本殘片集（sa_prAtimokSasUtrafragments）；大正藏 T1422b《五分戒本》（「丹本」）經文字比對與《十誦戒本》相合（九十波夜提、眾學一百零七、闡陀偈句、殺眾草木等皆十誦系文句），不是化地部本，不收，五分取 T1422a《彌沙塞五分戒本》（九十一波逸提、眾學一百，與《五分律》相合）；《四分僧戒本》T1430 與 T1429 同出佛陀耶舍，取懷素集本。本組是說戒前的序分。各本詳略差異很大：讚戒偈有「稽首禮諸佛」（四分）、「是解脫戒經」（解脫戒經）、「別解脫經難得聞」（根有，梵本根有第 1–13 頌同文）、大眾說出世部梵本的 upodghāta 五頌與 vastu 諸頌；「合十指爪掌」偈見於五分、十誦、僧祇、根有（「合十指恭敬」，梵本根有第 14–19 頌），說一切有部梵本此處是讚別解脫的六首 āryā 頌（Einl. III），位置與作用相同，歸同一節。「冬時一月過少一夜…老死至近，佛法欲滅」（時節與勸精進）巴利、四分無；說一切有部梵本把集僧、說欲（前行問答）放在時節之前，大眾說出世部梵本把白羯磨放在「老死至近」與十利之前，皆依原本次第。《解脫戒經》在篇首就誦出七佛略說戒偈（他本在戒本之末），單列一節；《僧祇戒本》卷首的「六念法」、《四分戒本》懷素集序與《解脫戒經》僧昉〈譯經緣起〉皆單列。巴利本卷首是後世加入的「前行（pubbakaraṇa）、前務（pubbakicca）、適時（pattakalla）」偈與請說戒文，歸前行一節。",
+ "units": [
+  {
+   "id": "s0",
+   "label": "卷首後序：懷素〈四分比丘戒本序〉・僧昉〈譯經緣起〉"
+  },
+  {
+   "id": "s0b",
+   "label": "六念法（僧祇戒本卷首）"
+  },
+  {
+   "id": "s1",
+   "label": "讚戒偈（說戒緣起）"
+  },
+  {
+   "id": "s2",
+   "label": "時節：老死至近，佛法欲滅，當勤精進"
+  },
+  {
+   "id": "s3",
+   "label": "說戒前行：集僧、未受具者出、說欲清淨、比丘尼請教誡"
+  },
+  {
+   "id": "s3b",
+   "label": "七佛略說戒偈（解脫戒經置於篇首）"
+  },
+  {
+   "id": "s4",
+   "label": "說戒偈：合十指爪掌，我今欲說戒"
+  },
+  {
+   "id": "s5",
+   "label": "白羯磨：今十五日布薩說戒"
+  },
+  {
+   "id": "s6",
+   "label": "說戒序：有罪發露，無罪默然，故妄語障道"
+  },
+  {
+   "id": "s7",
+   "label": "已說戒序・三問清淨"
+  }
+ ],
+ "versions": [
+  {
+   "id": "pi",
+   "lang": "pi",
+   "label": "巴利・上座部",
+   "who": "Theravāda Bhikkhupātimokkha・Mahāsaṅgīti 本（SuttaCentral）"
+  },
+  {
+   "id": "T1429",
+   "lang": "lzh",
+   "label": "四分戒本",
+   "who": "法藏部・後秦 佛陀耶舍譯《四分律比丘戒本》（唐 懷素集）",
+   "work": "T1429"
+  },
+  {
+   "id": "T1422a",
+   "lang": "lzh",
+   "label": "五分戒本",
+   "who": "化地部・劉宋 佛陀什等譯《彌沙塞五分戒本》",
+   "work": "T1422a"
+  },
+  {
+   "id": "sa-sarv",
+   "lang": "sa",
+   "label": "梵・說一切有部",
+   "who": "Sarvāstivāda Prātimokṣasūtra・von Simson 1986／2000（GRETIL）",
+   "reorder": true
+  },
+  {
+   "id": "T1436",
+   "lang": "lzh",
+   "label": "十誦戒本",
+   "who": "說一切有部・姚秦 鳩摩羅什譯《十誦比丘波羅提木叉戒本》",
+   "work": "T1436"
+  },
+  {
+   "id": "sa-mahl",
+   "lang": "sa",
+   "label": "梵・大眾說出世部",
+   "who": "Mahāsāṃghika-Lokottaravāda Prātimokṣasūtra・Tatia 1976（GRETIL）",
+   "reorder": true
+  },
+  {
+   "id": "T1426",
+   "lang": "lzh",
+   "label": "僧祇戒本",
+   "who": "大眾部・東晉 佛陀跋陀羅譯《摩訶僧祇律大比丘戒本》",
+   "work": "T1426"
+  },
+  {
+   "id": "T1460",
+   "lang": "lzh",
+   "label": "解脫戒經",
+   "who": "飲光部・元魏 般若流支譯",
+   "work": "T1460"
+  },
+  {
+   "id": "sa-mula",
+   "lang": "sa",
+   "label": "梵・根本說一切有部",
+   "who": "Mūlasarvāstivāda Prātimokṣasūtra・Banerjee 1954（GRETIL）"
+  },
+  {
+   "id": "T1454",
+   "lang": "lzh",
+   "label": "根有戒經",
+   "who": "根本說一切有部・唐 義淨譯《根本說一切有部戒經》",
+   "work": "T1454"
+  }
+ ],
+ "works": [
+  "T1422a",
+  "T1426",
+  "T1429",
+  "T1436",
+  "T1454",
+  "T1460"
+ ],
+ "anchors": [
+  {
+   "work": "T1429",
+   "range": [
+    "T22n1429_p1015a03",
+    "T22n1429_p1015c03"
+   ]
+  },
+  {
+   "work": "T1422a",
+   "range": [
+    "T22n1422a_p0194c07",
+    "T22n1422a_p0195a07"
+   ]
+  },
+  {
+   "work": "T1436",
+   "range": [
+    "T23n1436_p0470b28",
+    "T23n1436_p0471a01"
+   ]
+  },
+  {
+   "work": "T1426",
+   "range": [
+    "T22n1426_p0549a10",
+    "T22n1426_p0549b24"
+   ]
+  },
+  {
+   "work": "T1460",
+   "range": [
+    "T24n1460_p0659a03",
+    "T24n1460_p0659c21"
+   ]
+  },
+  {
+   "work": "T1454",
+   "range": [
+    "T24n1454_p0500b20",
+    "T24n1454_p0500c20"
+   ]
+  }
+ ],
+ "cells": {
+  "s0": {
+   "T1429": "四分比丘戒本（并序）夫戒者，迺是定慧之宏基、聖賢之妙趾，窮八正之道、盡七覺之源。然既樹五制之良規，傳須獲實；揚六和之清訓，學者知詮。竊尋流行，總有四本。據其理雖復同，會其文則有異。致使弘揚失於宗敘、修奉乖於行儀，虧鹿野之微言、紊龍城之要旨。故今詳撿律本，參驗戒心，依於正文，錄之如左。庶使順菩提之妙業，成實相之嘉謀，作六趣之舟航，為三乘之軌躅者也。",
+   "T1460": "解脫戒經譯經緣起戒律者，建定慧之妙幢、殄闇惑之明燈，度危嶮之蹊徑、開憺怕之梁津。寶殿之功罔初弗起、踰越重閣非梯靡昇，正法住滅驗之常典，大聖泯暉邁餘千紀，法澤遐流猶未周備，令文學之徒異論競興、薄俗之士訕音滿世。余聽斯談輒𨶳慈範，昧攬玄言乃矚大集，聖所嗟歎言迦葉毘，妙觀我人善摧惱結、閑邪辯正極聖冲典。每尋斯文慨五數闕，敢以追訪獲斯戒本，雖未廣具，敬以洗心，剪世浮辭。大魏武定癸亥之年，在鄴京都，侍中尚書令高澄請為出焉。羯磨中，外國云「若僧到時」（漢地迴文言「時到」）「僧忍聽」（言僧至我作法時，莫遮我所作，故言「聽」）外國耳聽（遮聽，言音字別，漢用一字，所以致或）。"
+  },
+  "s0b": {
+   "T1426": "六念法「一者，當知日數，月一日、二日，乃至十四日、十五日，月大、月小悉應知。「二者，清旦當作施食法：『今日得食施某甲，某甲於我不計意，我當食。』（如是三說）「三者，日日自憶若干臘數。「四者，當憶念受持衣及淨施者。「五者，當念不別眾食。「六者，當念病不病。」"
+  },
+  "s1": {
+   "T1429": "稽首禮諸佛，及法比丘僧， 今演毘尼法，令正法久住。 戒如海無涯，如寶求無厭， 欲護聖法財，眾集聽我說。 欲除四棄法，及滅僧殘法， 障三十捨墮，眾集聽我說。 毘婆尸式棄，毘舍拘樓孫， 拘那含牟尼，迦葉釋迦文， 諸世尊大德，為我說是事， 我今欲善說，諸賢咸共聽。 譬如人毀足，不堪有所涉， 毀戒亦如是，不得生天人。 欲得生天上，若生人間者， 常當護戒足，勿令有毀損。 如御入險道，失轄折軸憂， 毀戒亦如是，死時懷恐懼。 如人自照鏡，好醜生欣慼， 說戒亦如是，全毀生憂喜。 如兩陣共戰，勇怯有進退， 說戒亦如是，淨穢生安畏。 世間王為最，眾流海為最， 眾星月為最，眾聖佛為最。 一切眾律中，戒經為上最， 如來立禁戒，半月半月說。",
+   "sa-mahl": "Prātimokṣasūtram* namo bhagavate vītarāgāya / narendradevendrasuvanditena trilokavighuṣṭaviśālakīrtinā / buddhena lokārthacareṇa tāyinā sudeśitaṃ prātimokṣaṃ vidunā // 1 // taṃ prātimokṣaṃ bhavaduḥkhamokṣaṃ śrutvāna dhīrāḥ sugatasya bhāṣitaṃ / ṣaḍindriyasaṃvarasaṃvṛtatvāt karonti jātīmaraṇasya antaṃ // 2 // cirasya labdhvā ratanāni trīṇi buddhotpādaṃ mānuṣikāñ ca śraddhāṃ / dauḥśīlyavadyaṃ parivarjayitvā viśuddhaśīlā bhavathāpramattāḥ // 3 // śīlena yukto śramaṇo 'tiveti śīlena yukto brāhmaṇo 'tiveti / śīlena yukto naradevapūjyo śīlena yuktasya hi prātimokṣaṃ // 4 // anekabuddhānumataṃ viśuddhaṃ śīlaṃ pratiṣṭhā dharaṇīva sānuṃ / udāhariṣyāmy ahaṃ saṃghamadhye hitāya lokasya sadevakasya // 5 // [iti] upodghātaḥ // kiṃ jīvitena teṣāṃ yeṣām ihākuśalamūlajālāni / pracchādayanti hṛdayaṃ gaganam iva samunnatā meghāḥ // atijīvitaṃ ca teṣāṃ yeṣām ihākuśalamūlajālāni / vilayaṃ vrajanti kṣipraṃ divasakarahatāndhakāram iva // 6-7 // kiṃ poṣadhena teṣāṃ ye te sāvadyaśīlacaritrāḥ / jarāmaraṇapañjaragatā amaravitarkehi khādyanti // kāryaṃ ca poṣadhena teṣāṃ ye te anavadyaśīlacāritrāḥ / jarāmaraṇāntakarā mārabalapramardanā dhīrāḥ // 8-9 // kiṃ poṣadhena teṣām alajjināṃ bhinnavṛttaśīlānāṃ / mithyājīvaratānām asaraṇam iva carantānāṃ // kāryaṃ ca poṣadhena teṣāṃ lajjinām abhinnavṛttaśīlānāṃ / samyagjīvaratānām adhyāśayaśuddhaśīlānāṃ // 10-11 // kiṃ poṣadhena teṣāṃ ye te duḥśīlapāpakarmāntāḥ / kuṇapam iva samudrato samutkṣiptāḥ śāstu prāvacanāt // kāryaṃ ca poṣadhena teṣāṃ ye te traidhātuke anupaliptāḥ / ākāśe viya pāṇi śuddhānāṃ vimuktacittānāṃ // 12-13 // kiṃ poṣadhena teṣāṃ ṣaḍindriyaṃ yehi yehi surakṣitaṃ nityaṃ / patitānāṃ māraviṣaye svagocaraṃ varjayantānāṃ // kāryaṃ ca poṣadhena teṣāṃ ṣaḍindriyaṃ yehi surakṣitaṃ nityaṃ / yuktānāṃ śāstur vacane jinavacane śāsanaratānāṃ // 14-15 // kiṃ poṣadhena teṣām ātmaśīlehi ye hy upavadanti / sabrahmacāriṇaś ca śastā devamanuṣyāś ca duḥśīlāḥ // kāryaṃ ca poṣadhena teṣāṃ śīlehi nāsti gārhyaṃ / sarvatra nopavadyā vijñānāṃ vai sadevake loke // 16-17 // kiṃ poṣadhena teṣāṃ virāgitaṃ śāstuḥ śāsanaṃ yehi / āsevitā ca yehi vipattīyo pañca cāpattīḥ // kāryaṃ ca poṣadhena teṣāṃ yuktānāṃ śāsane daśabalasya / sarvajñasya sarvadarśino maitrīpadā yehi paricīrṇāḥ // 18-19 // yeṣāṃ ca vasati hṛdaye śāstā dharmo gaṇottamo / śikṣā uddeśo saṃvāso saṃbhogo śāstuno vacanaṃ // teṣām upoṣadho 'dya aparityaktāni yehi etāni / paricarya dharmarājaṃ te yānti asaṃskṛtaṃ sthānaṃ // 20-21 // śuddhasya vai sadā phalguḥ sadā śuddhasya poṣadho / śuddhasya śucikarmasya sadā sampadyate vrataṃ // 22 // yāvat sūtrapratikṣepo gaṇamadhye na bheṣyati / tāvat sthāsyati saddharmo sāmagrī ca gaṇottame // 23 // yāvac ca deśayitāraḥ pratipattāraś ca dharmaratnasya / tāvat sthāsyati saddharmmo hitāya sarvalokasya // 24 // tasmāt samagrāḥ sahitāḥ sagauravāḥ bhaviyā anyamanyaṃ paricaratha / dharmarājam adhigacchatha nirvāṇam atandritā acyutam padam aśokam iti // 25 // (iti) vastu /",
+   "T1460": "是解脫戒經，億劫難得聞， 攝受正修行，斯事倍復難。 有佛興世樂，興世說法樂， 眾僧和合樂，和合持戒樂。",
+   "sa-mula": "namaḥ sarvajñāya // praṇamya pūrvaṃ jagati pradhānaṃ duḥkhālayottīrṇam anantapāram* / sarvajñaśikṣāpadaratnakośam udghāṭayāmy āryagaṇasya madhye // 1 // trailokyavikhyātayaśaḥpatākaṃ saddharmanādoditasiṃhanādam* / sarvaṃ kaṣāsāditaratnakośaṃ brahmāṇḍacūḍāmaṇighṛṣṭapādam* // 2 // kṛtsnasyāgādhapārasya bauddhasya vinayodadheḥ / pratiṣṭhāhṛdayaṃ sāraṃ prātimokṣo 'yam ucyate // 3 // eṣa saddharmarājasya saddharmālekhyasaṃgrahaḥ / eṣa bhikṣuvaṇiggrāmaḥ śikṣāpaṇyamahāpaṇaḥ // 4 // eṣa dauḥśīlyaduṣṭānāṃ viṣaviṣkambhaṇo 'gadaḥ / eṣa yauvanavibhrāntakumāradvipadāṅkuśaḥ // 5 // eṣa sāgaragambhīrasaṃsārottaraṇaplavaḥ / eṣa kleśajayo mārgo nṛpater agranāyakaḥ // 6 // eṣa mokṣapurārohe mūlasopānavat sthitaḥ / nirvṛte mayi yuṣmākam eṣa śāstety abhiṣṭutaḥ // 7 // svayaṃ + + + + + kṣumamakṣam caiva yatnataḥ / nihatākṣaḥ samantaḥ + + + + + + + + + // + + + + + + + + + + naibhyaty adīkṣitaiḥ / prātimokṣaḥ sadā rakṣo bhikṣubhir nirmumukṣubhiḥ // jita pravṛtte 'py ahitāya + + + + + + + / kṛtopakāre 'py apakartumīhate + + + + + // prātimokṣasya śravaṇaṃ durlabhaṃ kalpakoṭibhiḥ / grahaṇaṃ dharaṇaṃ caivatipattiḥ sudurlabhā // 8 // buddhānāṃ sukham utpādaḥ sukhā dharmasya dhīṣaṇā sukhā saṃghasya sāmagrī śramaṇānāṃ tapaḥ sukham* // 9 // sukhaṃ darśanam āryāṇāṃ saṃvāso 'pi satā sukhaḥ / adarśanena bālānāṃ nityam eva sukhaṃ bhavet* // 10 // sukhaṃ dṛṣṭāḥ śīlavantaḥ sukhaṃ dṛṣṭā bahuśrutāḥ / arhantaś ca sukhaṃ dṛṣṭā vipramuktapunarbhavāḥ // 11 // sukhā nadī sukhaṃ tīrthaṃ sukhaṃ dharmajito jataḥ / sukhaṃ prajñāpratilaṃbho hy asmimānakṣayaḥ sukham* // 12 // sukho hi vāsaḥ kṛtaniścayānāṃ jitendriyāṇāṃ ca bahuśrutānām* / śānteṣv araṇyeṣu jarāṃ gatānāṃ vaneṣu nirvāpitayauvanānām* // 13 //",
+   "T1454": "別解脫經難得聞，經於無量俱胝劫； 讀誦受持亦如是，如說行者更難遇。 諸佛出現於世樂，演說微妙正法樂； 僧伽一心同見樂，和合俱修勇進樂。 若見聖人則為樂，并與共住亦為樂； 若不見諸愚癡人，是則名為常受樂。 見具尸羅者為樂，若見多聞亦名樂； 見阿羅漢是真樂，由於後有不生故。 於河津處妙階樂，以法降怨戰勝樂； 證得正慧果生時，能除我慢盡為樂。 若有能為決定意，善伏根欲具多聞； 從少至老處林中，寂靜閑居蘭若樂。"
+  },
+  "s2": {
+   "T1422a": "「大德僧聽！春時一月過少一夜，餘有一夜三月在，老死至近，佛法欲滅。諸大德！為得道故一心勤精進。所以者何？諸佛一心勤精進故得阿耨多羅三藐三菩提，何況餘善道法！",
+   "sa-sarv": "nirgatam āyuṣmanto grīṣmād ekarātrono māsaḥ saikarātrās trayo māsā avaśiṣṭāḥ / II ākramate jarāmaraṇaṃ pralujyati śāstuḥ śāsanam vilupyate jīvitendriyaṃ / nirgacchati saddharmaḥ sīdati pratip...ir jāyate śaithilyaṃ / vivṛyante apāyadvārā / pithīyante amṛtadvārā cchidyate dharmasetur bhidyate dharmapotaḥ saṃsīdati dharmaplavo / niśāmyate dharmolkā / utpāṭyate dharmavṛkṣaḥ prapatati dharmadhvajaḥ ucchrapyate māradhvajaḥ śuṣyate dharmasamudro vikīryate jñānasumerur astaṃgacchaṃti vādiśārdūlā + + karṇādhārāḥ satpathopadeśakāḥ acirād dhi manuṣyāṇāṃ mṛgasaṃjñā [bh]. .i + + + ti tasmāt sarvair āyuṣmadbhir udvignaiḥ saṃvegam āpannaiḥ tasyānuttaradaśabaladharadharmarājacakravartinaḥ paurāṇasucaritakarmavipākanirjātasya mṛṣāvādapaiśunyapāruṣyābaddhapralāpavivarjitasya satyānuvartivaca[na] + + + māsāvavādānuśāsanaṃ śrotavyam apramādenāyuṣmadbhir yogaḥ karaṇīyaḥ apramādādhigatā hi tathāgatānām arhatāṃ samyaksaṃbuddhānāṃ bodhir ye cāpy anye kuśalā dharmā bodhapakṣyāḥ //",
+   "T1436": "「大德僧聽！冬時一月過少一夜，餘有一夜三月在。老死至近，佛法欲滅。諸大德！為得道故，一心勤精進。所以者何？諸佛一心勤精進故，得阿耨多羅三藐三菩提，何況餘善道法！」",
+   "sa-mahl": "abhimukhaṃ krāmati jarāmaraṇaṃ kṣīyati jīvitendriyaṃ, hāyati saddharmo astameti dharmolko, nirvāyanti deśayitāraḥ, parīttā bhavanti pratipattāraḥ / gacchanti kṣaṇalavamuhūrttarātrindivasamāsārdhamāsaṛtusaṃvatsarāḥ / girinadījalacapalacañcalopamā āyuḥ saṃskārā muhūrttam api nāvatiṣṭhante / apramādenāyuṣmantehi sampādayitavyaṃ / tat kasya hetoḥ? apramādādhigatānāṃ hi tathāgatānām arhatāṃ samyaksaṃbuddhānāṃ bodhiḥ / apramādādhigato cānuttaro upadhisaṃkṣayo ti vadāmi / tenāpramādenāyuṣmantehi saṃpādayitavyaṃ / daśārthavaśān sampaśyamānās tathāgatārhantaḥ samyaksaṃbuddhāḥ śrāvakāṇām adhiśīlaṃ śikṣāpadaṃ prajñāpayanti, pratimokṣaṃ ca sūtram uddiśanti / katamān daśa? saṃyyathīdaṃ (1) saṃghasaṃgrahāya (2) saṃghasuṣṭhutāya (3) durmaṅkūnāṃ pudgalānāṃ nigrahāya (4) peśalānāṃ ca bhikṣūṇāṃ phāsuvihārāya (5) aprasannānāṃ prasādāya (6) prasannānāṃ ca bhūyobhāvāya dṛṣṭadhārmikāṇām āśravāṇāṃ nirghātāya (8) samparāyikāṇām āśravāṇām āyatyām ananuśravaṇatāya (9) yathemaṃ syāt prāvacanaṃ cirasthitikaṃ (10) bāhujanyaṃ vivṛtaṃ suprakāśitaṃ yāvad devamanuṣyeṣv iti / imān daśārthavaśān saṃpaśyamānās tathāgatā arhantaḥ samyaksambuddhāḥ śrāvakāṇām adhiśīlaṃ śikṣāpadaṃ prajñāpayanti prātimokṣaṃ ca sūtram uddiśanti /",
+   "T1426": "摩訶僧祇律波羅提木叉大比丘戒本「大德僧聽！冬時一月過，少一夜，餘有一夜三月在，老死至近、佛法欲滅。諸大德！為得道故一心勤精進。所以者何？諸佛一心勤精進故得阿耨多羅三藐三菩提，何況餘助道法！」",
+   "T1460": "「諸大德！時分一月過三月在，老死欲至，佛法漸滅，當一心精進，莫行放逸。所以者何？如來勤精進故，得阿耨多羅三藐三菩提，及餘善法菩提分法。",
+   "sa-mula": "nirgatam āyuṣmanto grīṣmāṇāṃ yāvat tāvad avaśiṣṭam* / atikrāmati āyuḥ āgataṃ jarāmaraṇam* / pralaṅghyate śāstuḥ śāsanam (PrMoSū_Mū-Banerjee 6) apramādena āuṣmadbhir yogaḥ karaṇīyaḥ / apramādādhigatāhi tathāgatānām arhatāṃ samyaksaṃbuddhānāṃ bodhir iti vā apy evaṃbhāgīyāḥ kuśalā dharmā bodhipakṣyāḥ /",
+   "T1454": "「諸大德！春時爾許過，餘有爾許在，老死既侵命根漸減，大師教法不久當滅。諸大德！應勤光顯莫為放逸，由不放逸，必當證得如來、應、正等覺，何況所餘覺品善法。"
+  },
+  "s3": {
+   "pi": "Dvemātikāpāḷi Theravāda Bhikkhupātimokkha Pubbakaraṇaṁ Sammajjanī padīpo ca, udakaṁ āsanena ca; Uposathassa etāni, “pubbakaraṇa”nti vuccati. Pubbakiccaṁ Chanda, pārisuddhi, utukkhānaṁ, bhikkhugaṇanā ca ovādo; Uposathassa etāni, “pubbakicca”nti vuccati. Pattakallaaṅgā Uposatho, yāvatikā ca bhikkhū kammappattā; Sabhāgāpattiyo ca na vijjanti; Vajjanīyā ca puggalā tasmiṁ na honti, “pattakalla”nti vuccati. Pubbakaraṇapubbakiccāni samāpetvā desitāpattikassa samaggassa bhikkhusaṅghassa anumatiyā pātimokkhaṁ uddisituṁ ārādhanaṁ karoma.",
+   "T1429": "「僧集？」（答言：「僧集。」）「和合？」（答言：「和合。」）「未受大戒者出？」（有者遣出，答言：「未受大戒者已出。」無者，答言：「此中無未受大戒者。」）「不來諸比丘，說欲及清淨？」（有依法竟，答言：「說欲已。」無者，答言：「此中無說欲者。」）「誰遣比丘尼來請教誡？」（有受尼囑者，為說訖，答言：「請教誡。」已無者，答云：「此中無尼來請教誡。」）「僧今和合何所作為？」（答云：「說戒羯磨。」）",
+   "T1422a": "未受具戒者已出，僧今和合先作何事？」（一人答言：「布薩說戒。」）「諸大德！不來諸比丘說欲及清淨。」（一人答言：「說欲訖。」）",
+   "sa-sarv": "EINLEITUNG (nidānam) I s(i)ddham* niṣkrāntā anupasaṃpannāḥ samagraḥ saṃghaḥ saṃnipatitaḥ kiṃ saṃghasya karaṇīyam anāgatānām āyuṣmantaś chandaṃ pariśuddhiṃ cārocayata ārocite ca pravedayataḥ",
+   "T1436": "「未受具戒者已出。」「僧今和合，先作何事？」（一人應言：「布薩說戒。」）「諸大德！不來諸比丘，說欲及清淨。」",
+   "sa-mahl": "PrMoSū(Mā-L)Einl. abhikrāntāḥ suvihitāḥ śuddhā nipuṇā anusaṅgāyanto upaniṣaṇṇā, cāritāḥ śalākā, gaṇitā bhikḥū sīmāprāptā ettakā janāḥ / anāgatānām āyuḥmanto bhikḥūṇāṃ cchandapāriśuddhim ārocettha, ārocitaṃ ca prativedetha / ko bhikḥu bhikḥuṇīnāṃ cchandahārako? nāsti cātra kaścid anupasaṃpanno nāsti utkḥiptako / nāsti mātṛghātī, nāsti pitṛghātī / nāsti arhantaghātako, nāsti saṃghabhedako, nāsti tathāgatasya duḥṭacittarudhirotpādako / nāsti bhikḥuṇīdūḥako / nāsti stainyasaṃvāsiko, nāsti nānāsaṃvāsiko, nāsti asaṃvāsiko / nāsti tīrthikāpakrāntako / nāsti svayaṃsannaddhako / tad evaṃ samanvāharantu bhagavato śrāvakāṇāṃ nityaviśuddhānāṃ pariśuddhaśīlānāṃ / śṛṇotu me bhante saṃgho Ō adya saṃghasya cāturdaśiko vā sandhipoṣadho vā viśuddhinakṣatraṃ / ettakaṃ ṛtusya nirgataṃ / etta[ka]m avaśiṣṭaṃ / kiṃ saṃghasya pūrvakṛtyaṃ? alpakṛtyo bhagavataḥ śrāvakasaṃgho so bhavati /",
+   "T1426": "「未受具戒者已出。」「僧今和合先作何事？」（一人答言：「布薩說戒。」）「諸大德！不來諸比丘說欲及清淨。」「誰與比丘尼取欲？」",
+   "T1460": "眾僧和合坐。未受具戒者出。」「眾僧和合先作何事？不來諸比丘說欲清淨。比丘尼遣誰來受教？」",
+   "sa-mula": "kiṃ bhagavataḥ śrāvakasaṃghasya pūrvakālakaraṇīyam alpo 'rtho 'lpakṛtyam* / anāgatānām āyuṣmantaś chandapariśuddhiṃ cārocayata ārocitāṃ ca pravedayata /",
+   "T1454": "大德僧伽！先作何事？佛聲聞眾少求少事。未受近圓者出。不來諸苾芻說欲及清淨。」（其持欲者各對比坐而說）「誰遣苾芻尼請教授？」"
+  },
+  "s3b": {
+   "T1460": "「毘婆尸如來，六十八百千， 阿羅漢眾中，說此解脫戒： 忍辱第一義，佛說涅槃最， 出家惱他人，不名為沙門。 尸棄牟尼尊，金山無與等， 三十六萬眾，說此解脫戒： 譬如明眼人，有足能避嶮， 世有聰明人，能遠離眾患。 毘舍浮如來，永離諸煩惱， 百千大眾中，說此解脫戒： 不屏說人惡，不惱亂他人， 常奉行於戒，衣食知止足。 拘留村陀佛，知見廣無畏， 四十千眾中，說此解脫戒： 譬如蜂採花，但取其香味， 持至所住處；比丘入聚然， 不破壞他意，不觀作不作， 但自觀身行，若正若不正。 迦那迦牟尼，三十千沙門， 羅漢大眾中，說此解脫戒： 正觀莫放逸，當學牟尼法， 如是無憂愁，心寂入涅槃。 迦葉波如來，大智大名稱， 三十千眾中，說此解脫戒： 一切惡莫作，當具足眾善， 自調伏其心，此是諸佛教。 世尊大智慧，釋法王牟尼， 為尼羅浮眾，說此解脫戒： 善護於口業，自淨其心意， 身莫作眾惡，此三業清淨。 僧眾甚廣大，說法亦無量， 名聞大供養，說此解脫戒。」"
+  },
+  "s4": {
+   "T1422a": "合十指爪掌，供養釋師子， 我今欲說戒，僧當一心聽。 乃至小罪中，心應大怖畏， 有罪一心悔，後更莫復犯。 心馬馳惡道，放逸難禁制， 佛說切戒行，亦如利轡勒。 佛口說教誡，善者能信受， 是人馬調順，能破煩惱軍。 若不受教勅，亦不愛樂戒， 是人馬不調，沒在煩惱軍。 若人守護戒，如犛牛愛尾， 繫心不放逸，亦如猴著鎖。 日夜常精進，求實智慧故， 是人佛法中，能得清淨命。",
+   "sa-sarv": "III PrMoSū_Einl.III.1: śāsayatīti hi śāstraṃ proktaṃ samyak ca śāsayaty eṣaḥ mokṣāya prātimokṣas tasmāc chāstraṃ pravaram etat (1) / PrMoSū_Einl.III.2: kāryākāryam avācyaṃ vācyaṃ yac caiva bhikṣuṇā yuktam tad iha nikhilena muninā prakāśitaṃ prātimokṣe 'smiṃ 2 / PrMoSū_Einl.III.3: duścaritād vārayati trividhāt trividhe śubhe niyojayati / bṛṃhayati kuśalapakṣaṃ kṣapayati doṣāṃ guṇasapatnāṃ 3 / PrMoSū_Einl.III.4: mithyājīvam anāryaṃ vināśayati durgatipraṇetāram svargāpavargamārgaṃ viśodhayati cānupūrveṇa 4 / PrMoSū_Einl.III.5: yāvat sthāsyaty eṣaḥ prakāśitas tena lokanāthena / tāvat sthāsyati dharmo loke 'smiṃ śākyasiṃhasya 5 / PrMoSū_Einl.III.6: tasmād ātmahitārthaṃ sthityarthaṃ śāsanasya caiva ciram / śṛṇuta muhūrtam avahitā vakṣyāmi prātimokṣam aham 6 / //",
+   "T1436": "「合十指爪掌，供養釋師子； 我今欲說戒，僧當一心聽！ 乃至小罪中，心應大怖畏； 有罪一心悔，後更莫復犯。 心馬馳惡道，放逸難禁制； 佛說切戒行，亦如利轡勒。 佛口說教誡，善者能信受； 是人馬調順，能破煩惱軍。 若不受教勅，亦不愛樂戒； 是人馬不調，沒在煩惱軍。 若人守護戒，如犛牛愛尾； 繫心不放逸，亦如猴著鎖。 日夜常精進，求實智慧故； 是人佛法中，能得清淨命。」",
+   "T1426": "「合十指爪掌，供養釋師子； 我今欲說戒，僧當一心聽。 乃至小罪中，心應大怖畏； 有罪一心悔，後更莫復犯。 心馬馳惡道，放逸難禁制； 佛說切戒行，亦如利轡勒。 佛口說教誡，善者能信受； 是人馬調順，能破煩惱軍。 若不受教勅，亦不愛樂戒； 是人馬不調，沒在煩惱軍。 若人守護戒，如𤛆牛愛尾； 繫心不放逸，亦如猴著鎖。 日夜常精進，求實智慧故； 是人佛法中，能得清淨命。」",
+   "sa-mula": "praṇamya śākyasiṃhāya bhūtvā hy asmai kṛtāṃjaliḥ / prātimokṣaṃ pravakṣyāmi vinayaṃ tac chṛṇotu naḥ // 14 // śrutvā ca tat karotv atra yathā proktaṃ maharṣiṇā / aṇumātreṣv avadyeṣu bhavatā yatnakāriṇā // 15 // yatnād drutaṃ satataṃ yaś ca cittahayaṃ mukhavacaneṣu anusārayati / prātimokṣakhalīnam api sadṛśaṃ śatakaṇṭakaṃ tīkṣṇaṃ yenātividhyate // 16 // mahātmanaḥ ye vacanamātreṇa yathābhāgān na nivartante / puruṣaturagās te khalu kleśaraṇajayino bhaviṣyanti // 17 // yeṣāṃ tu khalīnam idaṃ na vidyate nāpi antaḥkāmaṃ / te tu kleśaraṇavimathyatā uddāmā vibhramiṣyanti // 19 //",
+   "T1454": "合十指恭敬，禮釋迦師子； 別解脫調伏，我說仁善聽。 聽已當正行，如大仙所說； 於諸小罪中，勇猛亦勤護。 心馬難制止，勇決恒相續， 別解脫如銜，有百針極利。 若人違軌則，聞教便能止， 大士若良馬，當出煩惱陣。 若人無此銜，亦不曾喜樂， 彼沒煩惱陣，迷轉於生死。"
+  },
+  "s5": {
+   "pi": "Nidānuddeso Suṇātu me bhante saṅgho. Ajjuposatho pannaraso, yadi saṅghassa pattakallaṁ, saṅgho uposathaṁ kareyya, pātimokkhaṁ uddiseyya.",
+   "T1429": "「大德僧聽！今十五日眾僧說戒，若僧時到僧忍聽，和合說戒。白如是。作白成不？」（若成，答云：「成。」若不成，答云：「不成。」）",
+   "T1422a": "「大德僧聽！今十五日布薩說戒，僧一心作布薩說戒。若僧時到僧忍聽，一心共作布薩。白如是。」",
+   "sa-sarv": "IV śṛṇotu bhadantaḥ saṃghaḥ adya saṃghasya poṣathaḥ pāṃcadaśikaḥ sacet saṃghasya prāptakālaḥ kṣamate ājñā ca saṃghasya yat samagraḥ saṃgho 'dya poṣathaṃ kuryāt prātimokṣasūtram uddiśed eṣā jñaptiḥ",
+   "T1436": "「大德僧聽！今十五日布薩說波羅提木叉。若僧時到僧忍聽，僧一心作布薩說波羅提木叉，白如是。」",
+   "sa-mahl": "śṛṇotu me bhante saṃgho Ō adya saṃghasya pāñcadaśiko poṣadho viśuddhinakṣatraṃ / yadi saṃghasya prāptakālaṃ saṃgho imasmin pṛthivīpradeśe yāvatakaṃ bhikṣusaṃghenābhigṛhītaṃ samantanavyāmamātraṃ atrāntare pāñcadaśikaṃ poṣadhaṃ kuryāt prātimokṣaṃ ca sūtram uddiśeyyā / ovayikā eṣā jñaptiḥ / kariṣyati bhante saṃgho imasmin pṛthivīpradeśe yāvatakaṃ bhikṣusaṃghenābhigṛhītaṃ samantanavyāmamātram atrāntare pāñcadaśikaṃ poṣadhaṃ prātimokṣaṃ ca sūtram uddiśiṣyati / kṣamate taṃ saṃghasya, yasmāt tūṣṇīm evam etaṃ dhārayāmi /",
+   "T1426": "「大德僧聽！今十五日布薩說波羅提木叉。若僧時到僧忍聽，僧一心共作布薩說波羅提木叉。如是白。」",
+   "T1460": "「大德僧聽！僧今十五日布薩說解脫戒。若僧到時僧忍聽，僧作布薩說解脫戒。白如是。」",
+   "sa-mula": "śṛṇotu bhadantaḥ saṃghaḥ adya saṃghasya poṣadhaḥ cāturdaśikaḥ pāṃcadaśiko vā (PrMoSū_Mū-Banerjee 7) sacet saṃghasya prāptakālaṃ kṣametānujānīyāt saṃgho yat saṃghasya poṣadhaṃ kuryāt prātimokṣasūtroddeśam uddeśayed eṣā jñaptiḥ /",
+   "T1454": "「大德僧伽聽！今僧伽黑月十四日（或白月十五日）作褒灑陀，若僧伽時至聽者，僧伽應許僧伽今作褒灑陀，說波羅底木叉戒經。白如是。」"
+  },
+  "s6": {
+   "pi": "Kiṁ saṅghassa pubbakiccaṁ? Pārisuddhiṁ āyasmanto ārocetha, pātimokkhaṁ uddisissāmi, taṁ sabbeva santā sādhukaṁ suṇoma manasi karoma. Yassa siyā āpatti, so āvikareyya, asantiyā āpattiyā tuṇhī bhavitabbaṁ, tuṇhībhāvena kho panāyasmante “parisuddhā”ti vedissāmi. Yathā kho pana paccekapuṭṭhassa veyyākaraṇaṁ hoti, evamevaṁ evarūpāya parisāya yāvatatiyaṁ anusāvitaṁ hoti. Yo pana bhikkhu yāvatatiyaṁ anusāviyamāne saramāno santiṁ āpattiṁ nāvikareyya, sampajānamusāvādassa hoti. Sampajānamusāvādo kho panāyasmanto antarāyiko dhammo vutto bhagavatā, tasmā saramānena bhikkhunā āpannena visuddhāpekkhena santī āpatti āvikātabbā, āvikatā hissa phāsu hoti.",
+   "T1429": "「諸大德！我今欲說波羅提木叉戒，汝等諦聽，善思念之。若自知有犯者即應自懺悔，不犯者默然；默然者，知諸大德清淨。若有他問者，亦如是答。如是比丘在眾中，乃至三問，憶念有罪而不懺悔者，得故妄語罪；故妄語者佛說障道法。若彼比丘憶念有罪，欲求清淨者，應懺悔；懺悔得安樂。",
+   "T1422a": "「諸大德！今布薩說波羅提木叉，一切共聽，善思念之。若有罪應發露，無罪者嘿然。嘿然故，當知我及諸大德清淨。如聖嘿然，我及諸大德亦如是。若比丘如是眾中乃至三唱，憶有罪不發露，得故妄語罪。故妄語罪，佛說遮道法。發露者得安樂，不發露罪益深。」",
+   "sa-sarv": "poṣathaṃ vayam āyuṣmaṃtaḥ kariṣyāmaḥ prātimokṣasūtram uddekṣyāmas tat sarve saṃtaḥ śṛṇuta sādhu ca suṣṭhu ca manasikuruta yasya vaḥ syāt saty āpattiḥ sāviṣkartavyā asatyām āpattau tūṣṇīṃ bhavitavyaṃ tūṣṇīṃbhāvena vayam āyuṣmantaḥ pariśuddhā iti vedayiṣyāmo yathā ca pratyekapṛṣṭasya bhikṣor vyākaraṇaṃ bhavaty evam evaivaṃrūpāyāṃ bhikṣupariṣadi yāvat trir apy anuśrāvaṇā bhavati / yaḥ punar bhikṣur evaṃrūpāyāṃ bhikṣupariṣadi yāvat trir apy anuśrāvyamāṇe smaraṃ satīm āpattiṃ nāviṣkaroti saṃprajānamṛṣāvādo 'sya bhavati saṃprajānamṛṣāvādas tv āyuṣmanta antarāyiko dharma ity uktaṃ bhagavatā tasmād āpannena bhikṣuṇā viśuddhiprekṣiṇā smaratā satī āpattir āviṣkartavyā / āviṣkṛtvāsya phāṣaṃ bhavati nānāviṣkṛtvā //",
+   "T1436": "「諸大德！今共作布薩說波羅提木叉，僧一心善聽，有罪者發露，無罪者默然。默然故，當知諸大德清淨。如一一比丘問答，是比丘眾中三唱亦如是。若有比丘如是比丘眾中第三唱，憶有罪不發露，得故妄語罪。諸大德！故妄語罪，佛說遮道法。比丘於此中欲求清淨，憶有罪應發露，發露則安隱，不發露罪益深。」",
+   "sa-mahl": "prātimokṣam āyuṣmanto sūtram uddiśiṣyāmi / taṃ śṛṇuta sādhu ca suṣṭhu ca manasi kuruta / bhāṣiṣyāmi / yasya vo siyāpattiḥ so 'viṣkarotu, asantīye āpattīye tūṣṇīṃ bhavitavyaṃ / tūṣṇīmbhāvena kho punar āyuṣmanto pariśuddhā iti vedayiṣyāmi / yathā kho punar āyuṣmanto pratyekaṃ pratyekaṃ pṛcchitasya bhikṣusya vyākaraṇaṃ bhavati evam eva rūpāye bhikṣuparṣāye yāvantṛtīyakaṃ samanuśrāvayiṣyati / yo puna bhikṣu evaṃrūpāye bhikṣuparṣāye yāvantṛtīyakaṃ samanuśrāviyamāṇo smaramāṇo santīm āpattiṃ nāviṣkaroti saṃprajānamṛṣāvādo se bhavati / saṃprajānamṛṣāvādo kho punar āyuṣmanto āntarāyiko dharmo ukto bhagavatā / tasmāt smaramāṇena bhikṣuṇā āpannena viśuddhiprekṣeṇa santī āpattī āviṣkartavyā / āviṣkṛtvā ca se phāsu bhavati, no anāviṣkṛtvā /",
+   "T1426": "「諸大德！今布薩說波羅提木叉，僧一心善聽。有罪者應發露、無罪者默然，默然故當知諸大德清淨。如一一比丘問答，是比丘眾中三唱。若比丘如是比丘眾中三唱，憶有罪應發露，不發露得故妄語罪。諸大德！故妄語罪，佛說障道法，是故比丘欲求清淨故，憶有罪應發露，發露則安隱，不發露罪益深。」",
+   "T1460": "「諸大德！今說解脫戒，眾集默然聽，善思念之。若有犯者當發露，無犯者默然。默然故，知眾清淨。如一一比丘問，如是比丘乃至三問，若比丘如是眾中乃至三問，憶念有犯當發露，不發露得故妄語罪。諸大德，故妄語罪，佛說障道法。彼比丘自憶知有犯，欲求清淨當發露。發露則安隱，不發露罪益深。",
+   "sa-mula": "poṣadhaṃ vayam āyuṣman kariṣyāmaḥ prātimokṣasūtroddeśam uddeśāmaḥ / yasya syāt āpattiḥ tena āviṣkartavyā / āpattyāṃ asatyāṃ tūṣṇīṃ bhavitavyam* / tūṣṇīṃbhāvena ca vayam āyuṣmataḥ pariśuddhān vedayiṣyāmaḥ / yathāpi pratyekaṃ pṛṣṭasya bhikṣor vyākaraṇaṃ bhavati evam evaṃ evaṃrūpāyāṃ bhikṣuparṣadi yāvat trir apy anuśrāvaṇaṃ bhavati / yaḥ punar bhikṣur evaṃrūpāyāṃ bhikṣuparṣadi yāvat trir apy anuśrāvyamāne smaran satīm āpattiṃ nāviṣkaroti saṃprajānan mṛṣāvādo 'sya bhavati / saṃprajānan mṛṣāvādaḥ khalv āyuṣmantaḥ antarāyiko dharma ukto bhagavatā / tasmāt smaratā bhikṣuṇā āpannena viśuddhāpekṣeṇa satī āpattir āviṣkartavyā / āviṣkṛtenāsya phāsu bhavati nāviṣkṛtena na bhavati /",
+   "T1454": "「諸大德！我今作褒灑陀，說波羅底木叉戒經。仁等諦聽！善思念之。若有犯者當發露，無犯者默然。默然故，知諸大德清淨。如餘問時，即如實答。我今於此勝苾芻眾中乃至三問，亦應如實答。若苾芻憶知有犯不發露者，得故妄語罪。諸大德！佛說故妄語是障礙法。是故苾芻欲求清淨者，當發露。發露即安樂，不發露不安樂。"
+  },
+  "s7": {
+   "pi": "Uddiṭṭhaṁ kho āyasmanto nidānaṁ. Tatthāyasmante pucchāmi, kaccittha parisuddhā, dutiyampi pucchāmi, kaccittha parisuddhā, tatiyampi pucchāmi, kaccittha parisuddhā, parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti. Nidānaṁ niṭṭhitaṁ.",
+   "T1429": "「諸大德！我已說戒經序。今問諸大德！是中清淨不？（第二、第三亦如是說）。「諸大德！是中清淨，默然故，是事如是持。",
+   "T1422a": "「諸大德已說戒經序。今問諸大德是中清淨不？」（第二、第三亦如是說）「諸大德是中清淨，嘿然故，是事如是持。」",
+   "sa-sarv": "V uddiṣṭaṃ mayāyuṣmantaḥ prātimokṣasūtroddeśasya nidānaṃ / tatrāham āyuṣmataḥ pṛcchāmi kaccit sthātra pariśuddhā dvir api trir api pṛcchāmi kaccit sthātra pariśuddhā(ḥ) pariśuddhā atrāyuṣmanto yasmāt tūṣṇīm evam evāhaṃ dhārayāmi //",
+   "T1436": "「諸大德！已說波羅提木叉序，今問諸大德是中清淨不？」第二、第三亦如是問：「是中清淨不？」「諸大德！是中清淨，默然故，是事如是持。」",
+   "sa-mahl": "// [iti] nidānaṃ //",
+   "T1426": "「諸大德！已說波羅提木叉序。今問諸大德！是中清淨不？是中清淨不？是中清淨不？」「諸大德！是中清淨，默然故，是事如是持。」",
+   "T1460": "諸大德！我已說解脫戒經序。今問諸大德是中清淨不？」（如是三說）「諸大德是中清淨，默然故，是事如是持。」",
+   "sa-mula": "uddiṣṭaṃ khalu mayāyuṣmantaḥ prātimokṣasūtroddeśanidānam* / tatrāyuṣmataḥ pṛcchāmi -- kaccit sthātra pariśuddhāḥ dvir api trir api pṛcchāmi -- kaccit sthātra pariśuddhāḥ atrāyuṣmanto yasmāt tūṣṇīm evam etad dhārayāmi /",
+   "T1454": "諸大德！我已說戒經序。今問諸大德！是中清淨不？」（如是三說）「諸大德！是中清淨，默然故，我今如是持。」"
+  }
+ }
+}
