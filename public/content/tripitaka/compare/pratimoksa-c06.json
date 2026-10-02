@@ -1,0 +1,1630 @@
+{
+ "slug": "pratimoksa-c06",
+ "title": "比丘戒本（六）九十二波逸提",
+ "family": "pi",
+ "intro": "九十二波逸提（單墮，pācittiya／pātayantika／pācattika／波夜提／波逸底迦）：犯者對一比丘懺悔即可。條數巴利、僧祇與大眾說出世部梵本九十二，五分九十一，四分、十誦、解脫戒經、根有戒經與說一切有部、根本說一切有部梵本九十。節的次第與編號照巴利本；各部次第差異極大，除巴利外各本皆「段序依原本」，所以九十多條只能合為一組，無法在某處切開而不讓同一本跨組。次第可分三系：四分、五分自成一路；十誦、說一切有部梵本、根本說一切有部梵本與根有戒經大致相同（開頭即「發諍」「隨親厚迴僧物」「雜碎戒」）；僧祇戒本與大眾說出世部梵本九十二條次第完全一致，兩本互證。缺條與併條：「往比丘尼住處教誡」（巴利 23）只見於五分、僧祇、解脫戒經與大眾說出世部梵本；「知物向僧迴與他人」（巴利 82）巴利、五分、僧祇與大眾說出世部有，四分、十誦與兩部有部系歸入捨墮「迴僧物入己」；五分「知水有蟲，若取澆泥、若飲食諸用」一條兼含澆用與飲用（巴利 20、62），歸第 20 節。解脫戒經第九條「知他施僧物，迴與知識」位置相當於他部的「隨親厚迴僧物」（巴利 81），條文內容則是巴利 82 的迴物與人，依內容歸第 82 節；同經比丘尼一組中的「獨與女人屏處坐」條文是女人不是比丘尼，歸巴利 45，該經無「與比丘尼屏處坐」。根有戒經篇中的攝頌歸下一條，大眾說出世部梵本每十條後的攝頌歸上一條；說一切有部梵本 Pāt.15／16、79／80 與根本說一切有部梵本 Pāy.2／3、大眾說出世部梵本 Pāc.11／12 原檔同在一行，在條號標記處下刀。",
+ "units": [
+  {
+   "id": "pc0",
+   "label": "總標：九十（二）波逸提法半月半月說"
+  },
+  {
+   "id": "pc1",
+   "label": "單墮一・故妄語"
+  },
+  {
+   "id": "pc2",
+   "label": "單墮二・毀呰語（種類形相語）"
+  },
+  {
+   "id": "pc3",
+   "label": "單墮三・兩舌（離間語）"
+  },
+  {
+   "id": "pc4",
+   "label": "單墮四・與未受具者同句誦法"
+  },
+  {
+   "id": "pc5",
+   "label": "單墮五・與未受具者同宿過二、三夜"
+  },
+  {
+   "id": "pc6",
+   "label": "單墮六・與女人同室宿"
+  },
+  {
+   "id": "pc7",
+   "label": "單墮七・為女人說法過五六語"
+  },
+  {
+   "id": "pc8",
+   "label": "單墮八・向未受具者說實得過人法"
+  },
+  {
+   "id": "pc9",
+   "label": "單墮九・向未受具者說他比丘麁罪"
+  },
+  {
+   "id": "pc10",
+   "label": "單墮十・掘地"
+  },
+  {
+   "id": "pc11",
+   "label": "單墮十一・壞鬼神村（生種）"
+  },
+  {
+   "id": "pc12",
+   "label": "單墮十二・異語惱他（不隨問答）"
+  },
+  {
+   "id": "pc13",
+   "label": "單墮十三・嫌罵（譏毀）"
+  },
+  {
+   "id": "pc14",
+   "label": "單墮十四・露地敷僧臥具去不舉"
+  },
+  {
+   "id": "pc15",
+   "label": "單墮十五・僧房內敷臥具去不舉"
+  },
+  {
+   "id": "pc16",
+   "label": "單墮十六・後來強敷（強惱先住）"
+  },
+  {
+   "id": "pc17",
+   "label": "單墮十七・瞋恚牽比丘出房"
+  },
+  {
+   "id": "pc18",
+   "label": "單墮十八・重閣上脫脚床用力坐臥"
+  },
+  {
+   "id": "pc19",
+   "label": "單墮十九・作大房覆過二三節"
+  },
+  {
+   "id": "pc20",
+   "label": "單墮二十・用有蟲水澆草土"
+  },
+  {
+   "id": "pc21",
+   "label": "單墮二十一・僧不差教誡比丘尼"
+  },
+  {
+   "id": "pc22",
+   "label": "單墮二十二・教誡比丘尼至日暮"
+  },
+  {
+   "id": "pc23",
+   "label": "單墮二十三・往比丘尼住處教誡"
+  },
+  {
+   "id": "pc24",
+   "label": "單墮二十四・謗言為飲食故教誡尼"
+  },
+  {
+   "id": "pc25",
+   "label": "單墮二十五・與非親里比丘尼衣"
+  },
+  {
+   "id": "pc26",
+   "label": "單墮二十六・與非親里比丘尼作衣"
+  },
+  {
+   "id": "pc27",
+   "label": "單墮二十七・與比丘尼期同道行"
+  },
+  {
+   "id": "pc28",
+   "label": "單墮二十八・與比丘尼期同船"
+  },
+  {
+   "id": "pc29",
+   "label": "單墮二十九・食比丘尼讚歎因緣得食"
+  },
+  {
+   "id": "pc30",
+   "label": "單墮三十・與比丘尼屏處坐"
+  },
+  {
+   "id": "pc31",
+   "label": "單墮三十一・施一食處過受"
+  },
+  {
+   "id": "pc32",
+   "label": "單墮三十二・別眾食"
+  },
+  {
+   "id": "pc33",
+   "label": "單墮三十三・展轉食（數數食）"
+  },
+  {
+   "id": "pc34",
+   "label": "單墮三十四・白衣家多與餅麨過受二三鉢"
+  },
+  {
+   "id": "pc35",
+   "label": "單墮三十五・足食已不作餘食法而食"
+  },
+  {
+   "id": "pc36",
+   "label": "單墮三十六・知他足食勸令更食"
+  },
+  {
+   "id": "pc37",
+   "label": "單墮三十七・非時食"
+  },
+  {
+   "id": "pc38",
+   "label": "單墮三十八・食殘宿食"
+  },
+  {
+   "id": "pc39",
+   "label": "單墮三十九・無病為己索美食"
+  },
+  {
+   "id": "pc40",
+   "label": "單墮四十・不受食著口中"
+  },
+  {
+   "id": "pc41",
+   "label": "單墮四十一・自手與外道食"
+  },
+  {
+   "id": "pc42",
+   "label": "單墮四十二・共至聚落不與食驅出"
+  },
+  {
+   "id": "pc43",
+   "label": "單墮四十三・食家強坐"
+  },
+  {
+   "id": "pc44",
+   "label": "單墮四十四・食家屏處坐（立）"
+  },
+  {
+   "id": "pc45",
+   "label": "單墮四十五・獨與女人露處（屏處）坐"
+  },
+  {
+   "id": "pc46",
+   "label": "單墮四十六・受請食前食後不囑行詣餘家"
+  },
+  {
+   "id": "pc47",
+   "label": "單墮四十七・過四月自恣請受藥"
+  },
+  {
+   "id": "pc48",
+   "label": "單墮四十八・往觀軍陣"
+  },
+  {
+   "id": "pc49",
+   "label": "單墮四十九・有緣至軍中過二三宿"
+  },
+  {
+   "id": "pc50",
+   "label": "單墮五十・軍中觀軍合戰"
+  },
+  {
+   "id": "pc51",
+   "label": "單墮五十一・飲酒"
+  },
+  {
+   "id": "pc52",
+   "label": "單墮五十二・以指擊攊"
+  },
+  {
+   "id": "pc53",
+   "label": "單墮五十三・水中戲"
+  },
+  {
+   "id": "pc54",
+   "label": "單墮五十四・不受諫（不恭敬）"
+  },
+  {
+   "id": "pc55",
+   "label": "單墮五十五・恐怖比丘"
+  },
+  {
+   "id": "pc56",
+   "label": "單墮五十六・無病露地然火"
+  },
+  {
+   "id": "pc57",
+   "label": "單墮五十七・減半月浴"
+  },
+  {
+   "id": "pc58",
+   "label": "單墮五十八・新衣不作三種壞色"
+  },
+  {
+   "id": "pc59",
+   "label": "單墮五十九・淨施衣不捨（不問主）而用"
+  },
+  {
+   "id": "pc60",
+   "label": "單墮六十・藏他比丘衣鉢"
+  },
+  {
+   "id": "pc61",
+   "label": "單墮六十一・故殺畜生"
+  },
+  {
+   "id": "pc62",
+   "label": "單墮六十二・飲用有蟲水"
+  },
+  {
+   "id": "pc63",
+   "label": "單墮六十三・如法滅諍後更發舉"
+  },
+  {
+   "id": "pc64",
+   "label": "單墮六十四・覆藏他比丘麁罪"
+  },
+  {
+   "id": "pc65",
+   "label": "單墮六十五・與未滿二十歲者受具足戒"
+  },
+  {
+   "id": "pc66",
+   "label": "單墮六十六・與賊伴期同道行"
+  },
+  {
+   "id": "pc67",
+   "label": "單墮六十七・與女人期同道行"
+  },
+  {
+   "id": "pc68",
+   "label": "單墮六十八・惡見違諫（行婬欲非障道）"
+  },
+  {
+   "id": "pc69",
+   "label": "單墮六十九・供給共住未捨惡見者"
+  },
+  {
+   "id": "pc70",
+   "label": "單墮七十・畜養被擯沙彌"
+  },
+  {
+   "id": "pc71",
+   "label": "單墮七十一・被諫言我今不學此戒"
+  },
+  {
+   "id": "pc72",
+   "label": "單墮七十二・毀毘尼（何用雜碎戒）"
+  },
+  {
+   "id": "pc73",
+   "label": "單墮七十三・說戒時言我今始知"
+  },
+  {
+   "id": "pc74",
+   "label": "單墮七十四・瞋打比丘"
+  },
+  {
+   "id": "pc75",
+   "label": "單墮七十五・瞋以手擬比丘"
+  },
+  {
+   "id": "pc76",
+   "label": "單墮七十六・以無根僧殘謗"
+  },
+  {
+   "id": "pc77",
+   "label": "單墮七十七・故令他比丘生疑惱"
+  },
+  {
+   "id": "pc78",
+   "label": "單墮七十八・鬪諍時屏處默聽"
+  },
+  {
+   "id": "pc79",
+   "label": "單墮七十九・與欲後悔（更呵）"
+  },
+  {
+   "id": "pc80",
+   "label": "單墮八十・僧斷事時不與欲而去"
+  },
+  {
+   "id": "pc81",
+   "label": "單墮八十一・同羯磨後言隨親厚迴僧物"
+  },
+  {
+   "id": "pc82",
+   "label": "單墮八十二・知物向僧迴與他人"
+  },
+  {
+   "id": "pc83",
+   "label": "單墮八十三・未出未藏寶入王宮門"
+  },
+  {
+   "id": "pc84",
+   "label": "單墮八十四・捉寶及寶莊飾具"
+  },
+  {
+   "id": "pc85",
+   "label": "單墮八十五・非時入聚落不囑比丘"
+  },
+  {
+   "id": "pc86",
+   "label": "單墮八十六・骨牙角作針筒"
+  },
+  {
+   "id": "pc87",
+   "label": "單墮八十七・床足過佛八指"
+  },
+  {
+   "id": "pc88",
+   "label": "單墮八十八・兜羅綿貯床褥"
+  },
+  {
+   "id": "pc89",
+   "label": "單墮八十九・坐具（尼師壇）過量"
+  },
+  {
+   "id": "pc90",
+   "label": "單墮九十・覆瘡衣過量"
+  },
+  {
+   "id": "pc91",
+   "label": "單墮九十一・雨浴衣過量"
+  },
+  {
+   "id": "pc92",
+   "label": "單墮九十二・與佛等量作衣"
+  },
+  {
+   "id": "pcz",
+   "label": "結說・三問清淨"
+  }
+ ],
+ "versions": [
+  {
+   "id": "pi",
+   "lang": "pi",
+   "label": "巴利・上座部",
+   "who": "Theravāda Bhikkhupātimokkha・Mahāsaṅgīti 本（SuttaCentral）"
+  },
+  {
+   "id": "T1429",
+   "lang": "lzh",
+   "label": "四分戒本",
+   "who": "法藏部・後秦 佛陀耶舍譯《四分律比丘戒本》（唐 懷素集）",
+   "work": "T1429",
+   "reorder": true
+  },
+  {
+   "id": "T1422a",
+   "lang": "lzh",
+   "label": "五分戒本",
+   "who": "化地部・劉宋 佛陀什等譯《彌沙塞五分戒本》",
+   "work": "T1422a",
+   "reorder": true
+  },
+  {
+   "id": "sa-sarv",
+   "lang": "sa",
+   "label": "梵・說一切有部",
+   "who": "Sarvāstivāda Prātimokṣasūtra・von Simson 1986／2000（GRETIL）",
+   "reorder": true
+  },
+  {
+   "id": "T1436",
+   "lang": "lzh",
+   "label": "十誦戒本",
+   "who": "說一切有部・姚秦 鳩摩羅什譯《十誦比丘波羅提木叉戒本》",
+   "work": "T1436",
+   "reorder": true
+  },
+  {
+   "id": "sa-mahl",
+   "lang": "sa",
+   "label": "梵・大眾說出世部",
+   "who": "Mahāsāṃghika-Lokottaravāda Prātimokṣasūtra・Tatia 1976（GRETIL）",
+   "reorder": true
+  },
+  {
+   "id": "T1426",
+   "lang": "lzh",
+   "label": "僧祇戒本",
+   "who": "大眾部・東晉 佛陀跋陀羅譯《摩訶僧祇律大比丘戒本》",
+   "work": "T1426",
+   "reorder": true
+  },
+  {
+   "id": "T1460",
+   "lang": "lzh",
+   "label": "解脫戒經",
+   "who": "飲光部・元魏 般若流支譯",
+   "work": "T1460",
+   "reorder": true
+  },
+  {
+   "id": "sa-mula",
+   "lang": "sa",
+   "label": "梵・根本說一切有部",
+   "who": "Mūlasarvāstivāda Prātimokṣasūtra・Banerjee 1954（GRETIL）",
+   "reorder": true
+  },
+  {
+   "id": "T1454",
+   "lang": "lzh",
+   "label": "根有戒經",
+   "who": "根本說一切有部・唐 義淨譯《根本說一切有部戒經》",
+   "work": "T1454",
+   "reorder": true
+  }
+ ],
+ "works": [
+  "T1422a",
+  "T1426",
+  "T1429",
+  "T1436",
+  "T1454",
+  "T1460"
+ ],
+ "anchors": [
+  {
+   "work": "T1429",
+   "range": [
+    "T22n1429_p1018b08",
+    "T22n1429_p1020b25"
+   ]
+  },
+  {
+   "work": "T1422a",
+   "range": [
+    "T22n1422a_p0197a08",
+    "T22n1422a_p0198c04"
+   ]
+  },
+  {
+   "work": "T1436",
+   "range": [
+    "T23n1436_p0474a15",
+    "T23n1436_p0476b25"
+   ]
+  },
+  {
+   "work": "T1426",
+   "range": [
+    "T22n1426_p0552a17",
+    "T22n1426_p0554a19"
+   ]
+  },
+  {
+   "work": "T1460",
+   "range": [
+    "T24n1460_p0662a27",
+    "T24n1460_p0663c23"
+   ]
+  },
+  {
+   "work": "T1454",
+   "range": [
+    "T24n1454_p0503c21",
+    "T24n1454_p0506b07"
+   ]
+  }
+ ],
+ "cells": {
+  "pc0": {
+   "pi": "Suddhapācittiyā Ime kho panāyasmanto dvenavuti pācittiyā dhammā uddesaṁ āgacchanti.",
+   "T1429": "「諸大德！是九十波逸提法，半月半月說，戒經中來。",
+   "T1422a": "「諸大德！是九十一波逸提法，半月半月戒經中說。",
+   "sa-sarv": "V. pātayantikā dharmāḥ PrMoSū_Pāt.0: ime punar āyuṣmanto navati pātayantikā dharmā anvardhamāsaṃ prātimokṣasūtroddeśam āgacchanti /",
+   "T1436": "「諸大德！是九十波夜提法，半月半月波羅提木叉中說。",
+   "sa-mahl": "[V. dvānavati śuddhapācattikā dharmāḥ] ime kho punar āyuṣmanto dvānavatiṃ śuddhapācattikā dharmā anvardhamāsaṃ sūtre prātimokṣe uddeśam āgacchanti Ō",
+   "T1426": "「諸大德！是九十二波夜提法，半月半月次說波羅提木叉。",
+   "T1460": "「諸大德！是九十波逸提法，半月半月說解脫戒經中來。",
+   "sa-mula": "navatiḥ pāyantikā dharmāḥ ime khalv āyuṣmantaḥ navatiḥ pāyantikā dharmā anvardhamāsaṃ prātimokṣasūtroddeśam āgacchanti /",
+   "T1454": "「諸大德！此九十波逸底迦法，半月半月戒經中說。」總攝頌曰：故妄及種子，不差并數食， 虫水命伴行，傍生賊徒請。"
+  },
+  "pc1": {
+   "pi": "Chapter 1. Musāvāda Pācittiya 1. Musāvāda Sampajānamusāvāde pācittiyaṁ.",
+   "T1429": "「若比丘！知而妄語者，波逸提。",
+   "T1422a": "「若比丘故妄語，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.1: saṃprajānamṛṣāvādāt pātayantikā 1",
+   "T1436": "「若比丘，故妄語，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.1. saṃprajānamṛṣāvāde pācattikaṃ /",
+   "T1426": "「若比丘，知而故妄語，波夜提。",
+   "T1460": "「若比丘，故妄語，波逸提。",
+   "sa-mula": "Pāy.1 (PrMoSū_Mū-Banerjee) saṃprajānan mṛṣāvādāt pāyantikā /",
+   "T1454": "初別攝頌曰：妄毀及離間，發舉說同聲， 說罪得上人，隨親輒輕毀。「若復苾芻，故妄語者，波逸底迦。"
+  },
+  "pc2": {
+   "pi": "Pācittiya 2. Omasavāda Omasavāde pācittiyaṁ.",
+   "T1429": "「若比丘！種類毀呰語者，波逸提。",
+   "T1422a": "「若比丘，毀呰比丘，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.2: apakarṣavādāt pātayantikā 2",
+   "T1436": "「若比丘，毀訾語，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.2. omṛṣyavāde pācattikaṃ /",
+   "T1426": "「若比丘，種類形相語，波夜提。",
+   "T1460": "「若比丘，毀呰語，波逸提。",
+   "sa-mula": "Pāy.2 (PrMoSū_Mū-Banerjee) ūnamanuṣyavādāt pāyantikā /",
+   "T1454": "「若復苾芻，毀訾語故，波逸底迦。"
+  },
+  "pc3": {
+   "pi": "Pācittiya 3. Pesuñña Bhikkhupesuññe pācittiyaṁ.",
+   "T1429": "「若比丘！兩舌語者，波逸提。",
+   "T1422a": "「若比丘，兩舌鬪亂比丘，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.3: bhikṣupaiśunyāt pātayantikā 3",
+   "T1436": "「若比丘，兩舌鬪他比丘者，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.3. bhikṣupaiśunye pācattikaṃ /",
+   "T1426": "「若比丘，兩舌語，波夜提。",
+   "T1460": "「若比丘，兩舌語，波逸提。",
+   "sa-mula": "Pāy.3 (PrMoSū_Mū-Banerjee) bhikṣupaiśunyāt pāyantikā /",
+   "T1454": "「若復苾芻，離間語故，波逸底迦。"
+  },
+  "pc4": {
+   "pi": "Pācittiya 4. Padasodhamma Yo pana bhikkhu anupasampannaṁ padaso dhammaṁ vāceyya, pācittiyaṁ.",
+   "T1429": "「若比丘！與未受大戒人共誦者，波逸提。",
+   "T1422a": "「若比丘，教未受具戒人經並誦者，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.6: yaḥ punar bhikṣur anupasaṃpannena pudgalena sārdhaṃ padaśo dharmaṃ vācayet pātayantikā 6",
+   "T1436": "「若比丘，以闡陀偈句教未受具戒人者，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.6. yo puna bhikṣur anupasaṃpannaṃ pudgalaṃ padaśo dharmaṃ vāceya pācattikaṃ /",
+   "T1426": "「若比丘，教未受具戒人說句法，波夜提。",
+   "T1460": "「若比丘，與未受具戒人同誦，波逸提。",
+   "sa-mula": "Pāy.6 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur anupasaṃpannāya pudgalāya padaśo dharmaṃ vācayet pāyantikā /",
+   "T1454": "「若復苾芻，與未近圓人，同句讀誦教授法者，波逸底迦。"
+  },
+  "pc5": {
+   "pi": "Pācittiya 5. Paṭhamasahaseyya Yo pana bhikkhu anupasampannena uttaridirattatirattaṁ sahaseyyaṁ kappeyya, pācittiyaṁ.",
+   "T1429": "「若比丘！與未受大戒人共宿，過二宿至三宿者，波逸提。",
+   "T1422a": "「若比丘，與未受具戒人宿過三夜，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.53: yaḥ punar bhikṣur anupasaṃpannena pudgalena sārdham uttaraṃdvirātraṃ sahāgāraśayyāṃ kalpayet pātayantikā (5)3",
+   "T1436": "「若比丘，未受具戒人，共一房宿過二夜，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.42. yo puna bhikṣur anupasaṃpannena pudgalena sārdhaṃ uttari dvirātraṃ trirātraṃ vā sahagāraśayyāṃ kalpeya pācattikaṃ /",
+   "T1426": "「若比丘，與未受具戒人同屋過三宿，波夜提。",
+   "T1460": "「若比丘，與未受具戒人同室宿，至三宿，波逸提。",
+   "sa-mula": "Pāy.54 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur anupasaṃpannena pudgalena sārdhaṃ dvirātrād ūrdhvaṃ sahāgāraśayyāṃ kalpayet pāyantikā /",
+   "T1454": "「若復苾芻，與未近圓人，同室宿過二夜者，波逸底迦。"
+  },
+  "pc6": {
+   "pi": "Pācittiya 6. Dutiyasahaseyya Yo pana bhikkhu mātugāmena sahaseyyaṁ kappeyya, pācittiyaṁ.",
+   "T1429": "「若比丘！與女人同室宿者，波逸提。",
+   "T1422a": "「若比丘，與女人同室宿，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.65: yaḥ punar bhikṣur mātṛgrāmeṇa sārdhaṃ sahāgāraśayyāṃ kalpayet pātayantikā (6)5",
+   "T1436": "「若比丘，共女人一房舍宿，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.69. yo puna bhikṣu mātṛgrāmeṇa sārdhaṃ sahagāraśayyāṃ kalpeya pācattikaṃ /",
+   "T1426": "「若比丘，與女人同屋宿，波夜提。",
+   "T1460": "「若比丘，與女人同室宿，波逸提。",
+   "sa-mula": "Pāy.65 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur mātṛgrāmeṇa sārdhaṃ sahāgāraśayyāṃ kalpayet pāyantikā /",
+   "T1454": "「若復苾芻，共女人同室宿者，波逸底迦。"
+  },
+  "pc7": {
+   "pi": "Pācittiya 7. Dhammadesanā Yo pana bhikkhu mātugāmassa uttarichappañcavācāhi dhammaṁ deseyya aññatra viññunā purisaviggahena, pācittiyaṁ.",
+   "T1429": "「若比丘！與女人說法過五、六語，除有知男子，波逸提。",
+   "T1422a": "「若比丘，為女人說法過五六語，除有別知善惡語男子，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.5: yaḥ punar bhikṣur mātṛgrāmasyottaraṃṣaṭpañcikayā vācā dharmaṃ deśayed anyatra vijñapuruṣāt pātayantikā 5",
+   "T1436": "「若比丘，為女人說法若過五六語，波夜提；除有智男子。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.5. yo puna bhikṣur akalpiyakāro mātṛgrāmasya dharmaṃ deśeya uttari cchahi pañcahi vācāhi anyatra vijñapuruṣapudgalena pācattikaṃ /",
+   "T1426": "「若比丘，為女人說法過五六語，除有智男子，波夜提。",
+   "T1460": "「若比丘，與女人說法過五六語，除有智男子，波逸提。",
+   "sa-mula": "Pāy.5 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur mātṛgrāmasyottari ṣaṭpaṃcikayā vācā dharmaṃ deśayed anyatra vijñapuruṣāt pāyantikā /",
+   "T1454": "「若復苾芻，為女人說法，過五六語，除有智男子，波逸底迦。"
+  },
+  "pc8": {
+   "pi": "Pācittiya 8. Bhūtārocana Yo pana bhikkhu anupasampannassa uttarimanussadhammaṁ āroceyya, bhūtasmiṁ pācittiyaṁ.",
+   "T1429": "「若比丘！向未受大戒人說過人法，言：『我見是，我知是。』實者，波逸提。",
+   "T1422a": "「若比丘，向未受具戒人自說得過人法，言：『我如是知、如是見。』實者，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.7: yaḥ punar bhikṣur anupasaṃpannasya pudgalasyottaraṃmanuṣyadharmam ārocayed bhūtaṃ pātayantikā 7",
+   "T1436": "「若比丘，未受具戒人前，自為身說過人法，若知若見，自稱言：『我如是知、如是見。』乃至實，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.7. yo puna bhikṣur anupasaṃpannasya pudgalasya santike ātmopanāyikam uttarimanuṣyadharmam alamāryajñānadarśanaṃ viśeṣādhigamaṃ pratijāneya Ō iti jānāmi iti paśyāmīti bhūtasmiṃ pācattikaṃ /",
+   "T1426": "「若比丘，自稱向未受具戒人說得過人法：『我如是知、如是見。』說實者，波夜提。",
+   "T1460": "「若比丘，向未受具戒人自說得過人法，實者，波逸提。",
+   "sa-mula": "Pāy.8 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur anupasaṃpannāya pudgalāyottaraṃmanuṣyadharmam ārocayed bhūtāt pāyantikā /",
+   "T1454": "「若復苾芻，實得上人法，向未近圓人說者，波逸底迦。"
+  },
+  "pc9": {
+   "pi": "Pācittiya 9. Duṭṭhullārocana Yo pana bhikkhu bhikkhussa duṭṭhullaṁ āpattiṁ anupasampannassa āroceyya aññatra bhikkhusammutiyā, pācittiyaṁ.",
+   "T1429": "「若比丘！知他比丘有麁惡罪，向未受大戒人說，除僧羯磨，波逸提。",
+   "T1422a": "「若比丘，知他比丘麁罪，向未受具戒人說，除僧羯磨，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.8: yaḥ punar bhikṣur bhikṣor jānaṃ duṣṭhūlām āpattim anupasaṃpannasya pudgalasyāntike ārocayed anyatra saṃghasaṃmatyā pā(ta)ya(n)tik(ā) 8",
+   "T1436": "「若比丘，知他比丘麁罪，向未受具戒人說，波夜提；除僧羯磨。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.8. yo puna bhikṣur jānan bhikṣusya duṣṭhullām āpattim anupasaṃpannasya pudgalasya santike āroceya anyatra kṛtāye prakāśanāsaṃmutīye pācattikaṃ /",
+   "T1426": "「若比丘，知比丘麁罪，向未受具戒人說，除僧羯磨，波夜提。",
+   "T1460": "「若比丘，知他比丘有麁惡罪，向未受大戒人說，除僧羯磨，波逸提。",
+   "sa-mula": "Pāy.7 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur anupasaṃpannāya pudgalāya duṣṭhulāpattim ārocayed anyatra saṃghasaṃmatyān [saṃghasaṃvṛtyā] pāyantikā /",
+   "T1454": "「若復苾芻，知他苾芻有麁惡罪，向未近圓人說，除眾羯磨，波逸底迦。"
+  },
+  "pc10": {
+   "pi": "Pācittiya 10. Pathavīkhaṇana Yo pana bhikkhu pathaviṁ khaṇeyya vā khaṇāpeyya vā pācittiyaṁ. Musāvādavaggo paṭhamo",
+   "T1429": "「若比丘！自手掘地，若教人掘者，波逸提（一十）。",
+   "T1422a": "「若比丘，自掘地、若使人掘、言：『掘。』者，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.73: yaḥ punar bhikṣuḥ pṛthivīṃ khanyāt khānayed vā pātayantikā (7)3",
+   "T1436": "「若比丘，自手掘地、若使人掘，若指示言：『掘是。』波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.73. yo puna bhikṣuḥ svahastaṃ pṛthivīṃ khaneya vā khanāpeya vā antamaśato iha khanehīti vā vadeya pācattikaṃ /",
+   "T1426": "「若比丘，自手掘地、若使人掘，若指授語：『掘是地。』波夜提。",
+   "T1460": "「若比丘，自掘地、若教人掘地，波逸提。",
+   "sa-mula": "Pāy.73 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣuḥ svahastena pṛthivīṃ khanyāt khānayed vā pāyantikā /",
+   "T1454": "「若復苾芻，自手掘地、若教人掘者，波逸底迦。"
+  },
+  "pc11": {
+   "pi": "Chapter 2. Bhūtagāma Pācittiya 11. Bhūtagāma Bhūtagāmapātabyatāya pācittiyaṁ.",
+   "T1429": "「若比丘！壞鬼神村者，波逸提。",
+   "T1422a": "「若比丘，自伐鬼村、若使人伐，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.11: bījagrāmabhūtagrāmapātanāt pā(ta)yantikā 11",
+   "T1436": "「若比丘，殺眾草木，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.11. bījagrāmabhūtagrāmapātāpanake pācattikaṃ /",
+   "T1426": "「若比丘，壞種子破鬼村，波夜提。",
+   "T1460": "「若比丘，壞種子鬼神村，波逸提。",
+   "sa-mula": "Pāy.11 (PrMoSū_Mū-Banerjee) bījagrāmabhūtagrāmapātanapātāpanāt pāyantikā /",
+   "T1454": "第二攝頌曰：種子輕惱教，安床草蓐牽， 強住脫脚床，澆草應三二。「若復苾芻，自壞種子有情村及令他壞者，波逸底迦。"
+  },
+  "pc12": {
+   "pi": "Pācittiya 12. Aññavādaka Aññavādake, vihesake pācittiyaṁ.",
+   "T1429": "「若比丘！妄作異語惱他者，波逸提。",
+   "T1422a": "「若比丘，故不隨問答，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.13: any(a)vādaviheṭhanāt pāta(yantikā) 13",
+   "T1436": "「若比丘，不隨問答惱他，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.12. anyavādavihiṃsanake pācattikaṃ /",
+   "T1426": "「若比丘，異語惱他，波夜提。",
+   "T1460": "「若比丘，不受諫，波逸提。",
+   "sa-mula": "Pāy.13 (PrMoSū_Mū-Banerjee) ājñāviheṭhanāt pāyantikā /",
+   "T1454": "「若復苾芻，違惱言教者，波逸底迦。"
+  },
+  "pc13": {
+   "pi": "Pācittiya 13. Ujjhāpanaka Ujjhāpanake, khiyyanake pācittiyaṁ.",
+   "T1429": "「若比丘！嫌罵者，波逸提。",
+   "T1422a": "「若比丘，誣說僧所差人，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.12: avadhyānakṣipaṇāt pātayantikā 12",
+   "T1436": "「若比丘，嫌罵，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.13. odhyāyanakṣīyanake pācattikaṃ /",
+   "T1426": "「若比丘，嫌責語，波夜提。",
+   "T1460": "「若比丘，譏罵者，波逸提。",
+   "sa-mula": "Pāy.12 (PrMoSū_Mū-Banerjee) avadhyānakṣipaṇāt pāyantikā /",
+   "T1454": "「若復苾芻，嫌毀輕賤苾芻者，波逸底迦。"
+  },
+  "pc14": {
+   "pi": "Pācittiya 14. Paṭhamasenāsana Yo pana bhikkhu saṅghikaṁ mañcaṁ vā pīṭhaṁ vā bhisiṁ vā kocchaṁ vā ajjhokāse santharitvā vā santharāpetvā vā taṁ pakkamanto neva uddhareyya, na uddharāpeyya, anāpucchaṁ vā gaccheyya, pācittiyaṁ.",
+   "T1429": "「若比丘！取僧繩床、木床、若臥具、坐蓐，露地敷，若教人敷，捨去，不自舉，不教人舉，波逸提。",
+   "T1422a": "「若比丘，於露地自敷僧臥具、若使人敷、若他敷，若坐若臥，去時不自舉、不教人舉、不囑舉，若見僧臥具敷在露地而不舉者，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.14: yaḥ punar bhikṣuḥ sāṃghikaṃ śayyāsanaṃ pīṭhaṃ vā mañcaṃ vā brisiṃ vā kurcaṃ vā abhyavakāśe prajñapya tataḥ prakramen noddharen noddhārayed vā pātayantikā 14",
+   "T1436": "「若比丘，僧臥具，若坐床、若臥床、若鉤縶、若坐臥具，露地若自敷、若使人敷，是中若坐若臥，去時不自舉、不教人舉，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.14. yo puna bhikṣuḥ sāṃghike bhikṣuvihāre abhyavakāśe mañcaṃ vā pīṭhaṃ vā viśikaṃ vā caturaśrakaṃ vā kurcaṃ vā bimbohanaṃ vā prajñāpetvā vā prajñāpayitvā vā tato prakramanto na uddhareya vā, na uddharāpeya vā, anāmantrayitvā vā prakrameya pācattikaṃ /",
+   "T1426": "「若比丘，僧住處露地敷臥床、坐床褥枕，若自敷、若使人敷，去時不自舉、不使人舉，波夜提。",
+   "T1460": "「若比丘，露地置僧臥具，不自收舉、不教人舉，捨行，波逸提。",
+   "sa-mula": "Pāy.14 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣuḥ sāṃghikaṃ maṃcaṃ vā pīṭhaṃ vā vṛṣiko vā biṃbopadhānacaturaśrakaṃ vā abhyavakāśe upanikṣipyoparikṣipya vā anuddhṛtānuddhṛtya vā tato viprakrāmet santaṃ bhikṣum anavalokyānyatra tadrūpāt pratyayāt pāyantikā /",
+   "T1454": "「若復苾芻，於露地處安僧敷具及諸床座，去時不自舉、不教人舉，若有苾芻不囑授，除餘緣故，波逸底迦。"
+  },
+  "pc15": {
+   "pi": "Pācittiya 15. Dutiyasenāsana Yo pana bhikkhu saṅghike vihāre seyyaṁ santharitvā vā santharāpetvā vā taṁ pakkamanto neva uddhareyya, na uddharāpeyya, anāpucchaṁ vā gaccheyya, pācittiyaṁ.",
+   "T1429": "「若比丘！於僧房中，敷僧臥具，若自敷，若教人敷，若坐、若臥，去時，不自舉、不教人舉，波逸提。",
+   "T1422a": "「若比丘，於僧房內自敷僧臥具、若使人敷、若他敷，若坐若臥，去時不自舉、不教人舉、不囑舉，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.15: yaḥ punar bhikṣuḥ sāṃghike vihāre śayyāṃ saṃstīrya vā saṃstārayed vā tataḥ prakramen noddharen noddhārayed vā pātayantikā (1)5",
+   "T1436": "「若比丘，比丘房舍中敷臥具，若自敷、若使人敷，是中若坐、若臥，去時不自舉、不教人舉，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.15. yo punar bhikṣuḥ sāṃghike bhikṣuvihāre antośayyāṃ prajñāpetvā prajñāpayitvā vā tato prakramanto na uddhareya vā, na uddharāpeya vā, anāmantrayitvā vā prakrameya pācattikaṃ /",
+   "T1426": "「若比丘，僧房內敷床褥，若自敷、若使人敷、去時不自舉、不使人舉，波夜提。",
+   "T1460": "「若比丘，僧房中鋪草鋪葉，不自舉、不教人舉，捨行，波逸提。",
+   "sa-mula": "Pāy.15 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣuḥ sāṃghike vihāre tṛṇasaṃstaraṃ vā parṇasaṃstaraṃ vā saṃstīrya vā saṃstārya vā anuddhṛtyānuddhārya vā tato viprakrāmet santaṃ bhikṣum anavalokyānyatra tadrūpāt pratyayāt pāyantikā /",
+   "T1454": "「若復苾芻，於僧房內，若草、若葉，自敷、教人敷，去時不自舉、不教人舉，若有苾芻不囑授，除餘緣故，波逸底迦。"
+  },
+  "pc16": {
+   "pi": "Pācittiya 16. Anupakhajja Yo pana bhikkhu saṅghike vihāre jānaṁ pubbupagataṁ bhikkhuṁ anupakhajja seyyaṁ kappeyya “yassa sambādho bhavissati, so pakkamissatī”ti etadeva paccayaṁ karitvā anaññaṁ, pācittiyaṁ.",
+   "T1429": "「若比丘！知先比丘住處，後來強於中間敷臥具止宿，念言：『彼若嫌迮者，自當避我去。』作如是因緣非餘，非威儀，波逸提。",
+   "T1422a": "「若比丘，知他先敷臥具，後來強自敷、若使人敷，作是念：『若不樂者自當出去。』波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.17: yaḥ punar bhikṣuḥ sāṃghike vihāre jānaṃ pūrvopagatāṃ bhikṣ(ū)ṃ paścād āgatyānupraskadya śayyāṃ kalpayed yasya saṃbādhaṃ bhaviṣyati sa prakramiṣyatīti idam eva pratyayaṃ kṛtvā nānyathāt pātayantikā (1)7",
+   "T1436": "「若比丘，比丘房舍中，知諸比丘先安住敷臥具竟，後來強以臥具若自敷、若使人敷，作是念：『若不樂者自當出去。』是因緣故不異，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.17. yo puna bhikṣu sāṃghike bhikṣuvihāre jānan bhikṣūṇāṃ pūrvaprajñaptāhi śayyāhi paścād āgatvā madhyeśayyāṃ prajñāpeya yasyodvahiṣyati so prakramiṣyatīti / etad eva pratyayaṃ kṛtvā, ananyam imaṃ tasya bhikṣusya udvāhanapācattikaṃ /",
+   "T1426": "「若比丘，知僧房內比丘先敷床褥，後來敷欲擾亂令去，作是因緣不異，波夜提。",
+   "T1460": "「若比丘，知他比丘先住處，後來強鋪臥具宿，『若嫌迮者自當去。』以是因緣，波逸提。",
+   "sa-mula": "Pāy.17 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur jānan sāṃghike vihāre pūrvopagatānāṃ bhikṣūṇāṃ tataḥ paścād āgatyānupraskandyāsane niṣadyāṃ śayyāṃ vā kalpayed yasya saṃbādho bhaviṣyati sa viprakramiṣyatīti ity eva pratyayaṃ kṛtvā pāyantikā /",
+   "T1454": "「若復苾芻，於僧住處，知諸苾芻先此處住，後來於中故相惱觸，於彼臥具若坐、若臥，作如是念：『彼若生苦者，自當避我去。』波逸底迦。"
+  },
+  "pc17": {
+   "pi": "Pācittiya 17. Nikkaḍḍhana Yo pana bhikkhu bhikkhuṁ kupito anattamano saṅghikā vihārā nikkaḍḍheyya vā nikkaḍḍhāpeyya vā, pācittiyaṁ.",
+   "T1429": "「若比丘！瞋他比丘，不喜，僧房中，若自牽出，教他牽出，波逸提。",
+   "T1422a": "「若比丘，瞋不喜，於僧房中自牽比丘出、若使人牽，作是語：『出去、滅去，莫此中住。』波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.16: yaḥ punar bhikṣur abhiṣaktaḥ kupitaś caṇḍīkṛto 'nāptamanāḥ sāṃghikād vihārād bhikṣuṃ niṣkarṣen niṣkarṣayed vā cara pareṇa mohapuruṣa naśya tvaṃ na tvayeha vastavyam idam eva pratyayaṃ kṛtvā nānyathāt pā(tayantikā) 16",
+   "T1436": "「若比丘，比丘房舍中，瞋恚忿心不喜，若自挽出、若使人挽出，如是言：『出去！滅去！汝不應是中住。』是因緣故不異，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.16. yo punar bhikṣu bhikṣusya duṣṭo doṣāt kupito anāttamano sāṃghikād bhikṣuvihārād bhikṣuṃ nikaḍḍheya vā nikaḍḍhāpeya vā antamasato neha bhikṣū ti vā vadeya pācattikaṃ /",
+   "T1426": "「若比丘，瞋恨不喜，僧房內牽比丘出、若自牽、若使人牽，下至言：『汝出去！』波夜提。",
+   "T1460": "「若比丘，先瞋恚，為惱亂故牽他出房，波逸提。",
+   "sa-mula": "Pāy.16 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur abhiṣaktaḥ kupitaś caṇḍībhūto 'nāttamanā sāṃghikād vihārād bhikṣuṃ niṣkarṣen niṣkārṣāpayed vā anyatra tadrūpāt pratyayāt pāyantikā /",
+   "T1454": "「若復苾芻，瞋恚不喜，於僧住處牽苾芻出，或令他牽出者，除餘緣故，波逸底迦。"
+  },
+  "pc18": {
+   "pi": "Pācittiya 18. Vehāsakuṭi Yo pana bhikkhu saṅghike vihāre uparivehāsakuṭiyā āhaccapādakaṁ mañcaṁ vā pīṭhaṁ vā abhinisīdeyya vā abhinipajjeyya vā, pācittiyaṁ.",
+   "T1429": "「若比丘！若房若重閣上，脫脚繩床、木床，若坐，若臥，波逸提。",
+   "T1422a": "「若比丘，僧重閣上尖脚繩床木床用力坐臥，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.18: yaḥ punar bhikṣuḥ sāṃghike vihāre uparivihāyasikuṭikāyām ahāryapādake pīṭhe vā mañce vā balena niṣīded vā nipadyed vā (pāta)yantikā",
+   "T1436": "「若比丘，比丘重閣上，若尖脚坐床、若臥床，用力若坐、若臥，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.18. yo puna bhikṣuḥ sāṃghike bhikṣuvihāre upari vaihāyasakuṭikāye āhatya pādake mañce vā pīṭhe vā abhiniṣīdeya vā abhinipadyeya vā pācattikaṃ /",
+   "T1426": "「若比丘，僧房閣屋上敷尖脚床，若坐若臥，波夜提。",
+   "T1460": "「若比丘，房重閣上脫脚床，不支持，若坐若臥，波逸提。",
+   "sa-mula": "Pāy.18 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur jānan sāṃghike vihāre uparivihāyasikṛtāyāṃ kuṭikāyām āhāryapādake maṃce vā pīṭhe vā sahasā balenābhipaded vābhinipadyeta vā pāyantikā /",
+   "T1454": "「若復苾芻，於僧住處，知重房棚上脫脚床及餘坐物，放身坐臥者，波逸底迦。"
+  },
+  "pc19": {
+   "pi": "Pācittiya 19. Mahallakavihāra Mahallakaṁ pana bhikkhunā vihāraṁ kārayamānena yāva dvārakosā aggaḷaṭṭhapanāya ālokasandhiparikammāya dvatticchadanassa pariyāyaṁ appaharite ṭhitena adhiṭṭhātabbaṁ, tato ce uttari appaharitepi ṭhito adhiṭṭhaheyya, pācittiyaṁ.",
+   "T1429": "「若比丘！作大房，戶扉窓牖，及餘莊飾具，指授覆苫，齊二、三節，若過者，波逸提（二十）。",
+   "T1422a": "「若比丘作大房舍，從平地壘，留窓戶處，極令堅牢，再三重覆。若過，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.20: mahallakaṃ bhikṣuṇā vihāraṃ kārayatā yāvad dvārakośārgaḍasthāpana ālokasaṃ(dhi)bhūmipari(karm)///...///nā dvau trayo vācchāda(na)pathāḥ saṃcaro///...///vyādhiṣṭhātavyā tata uttara(m) adhitiṣṭhet pātayantikā //",
+   "T1436": "「若比丘，欲作大房舍，從戶牖平地邊漸次，若二、若三壘令堅牢。若過壘，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.20. mahallakaṃ bhikṣuṇā vihāraṃ chādāpayamānena yāvad dvārakoṣārgalapratiṣṭhānam ālokasandhiparikarmam upādāya dve vā trayo vā cchādanaparyāyā adhiṣṭhihitavyāḥ alpaharite sthitena / taduttariṃ adhiṣṭhiheya alpaharite sthito pi pācattikaṃ / // uddānaṃ // (11) bījam (12) anyavādaṃ (13) odhyāyanaṃ (14) mañca (15) śayyā (16) nikaḍḍhanaṃ / (17) pūrvopagataṃ (18) vaihāyasaṃ (19) udaka (20) cchādanena // dvitīyo vargaḥ //",
+   "T1426": "「若比丘，經營作大房，施戶牖，齊再三覆，當於少草地中住教。若過者，波夜提。（二十竟）",
+   "T1460": "「若比丘，欲作大房，自觀視二覆三覆，至窓牖。若過，波逸提。（二十。外國平頭屋上開窓，橫覆二三板則至牖）",
+   "sa-mula": "Pāy.20 (PrMoSū_Mū-Banerjee) mahāntaṃ bhikṣuṇā vihāraṃ kārayitvā yāvad dvārakośārgalasthānād ālokasaṃjñinā bhūmiparikarmopādāya dvau vā trayo vā chedanaparyāyāḥ saharitāḥ adhiṣṭhātavyāḥ tata uttari adhitiṣṭhet pāyantikā /",
+   "T1454": "「若復苾芻，作大住處，於門梐邊應安撗扂及諸窓牖，并安水竇。若起牆時是濕泥者，應二、三重齊撗扂處。若過者，波逸底迦。」"
+  },
+  "pc20": {
+   "pi": "Pācittiya 20. Sappāṇaka Yo pana bhikkhu jānaṁ sappāṇakaṁ udakaṁ tiṇaṁ vā mattikaṁ vā siñceyya vā siñcāpeyya vā, pācittiyaṁ. Bhūtagāmavaggo dutiyo",
+   "T1429": "「若比丘！知水有蟲，若自澆泥、若澆草，若教人澆者，波逸提。",
+   "T1422a": "「若比丘，知水有蟲，若取澆泥、若飲食諸用，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.19: yaḥ punar bhikṣuḥ saprāṇakenodakena tṛṇaṃ vā mṛttikaṃ vā siṃcet secayed vā pātayantikā",
+   "T1436": "「若比丘，知水有蟲，若自澆草土、若使人澆，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.19. yo puna bhikṣur jānan saprāṇakenodakena tṛṇaṃ vā mṛttikāṃ vā siñceya vā siñcāpeya vā pācattikaṃ /",
+   "T1426": "「若比丘，知水有蟲，澆草泥、若使人澆，波夜提。",
+   "T1460": "「若比丘，知水有蟲，自澆草土、若教人澆，波逸提。",
+   "sa-mula": "Pāy.19 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur jānan saprāṇakenodakena tṛṇaṃ vā gomayaṃ vā mṛttikāṃ vā siñcet siñcayed vā pāyantikā /",
+   "T1454": "「若復苾芻，知水有虫，自澆草土、若和牛糞，及教人澆者，波逸底迦。"
+  },
+  "pc21": {
+   "pi": "Chapter 3. Ovāda Pācittiya 21. Ovāda Yo pana bhikkhu asammato bhikkhuniyo ovadeyya, pācittiyaṁ.",
+   "T1429": "「若比丘！僧不差，教誡比丘尼者，波逸提。",
+   "T1422a": "「若比丘，僧不差教誡比丘尼，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.21: yaḥ punar bhikṣur asaṃmataḥ saṃghena bhikṣuṇīr avavadet (p)ā(tayantikā 21)",
+   "T1436": "「若比丘，僧不差，教誡比丘尼，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.21. yo puna bhikṣu asaṃmato bhikṣuṇīm ovadeya pācattikaṃ /",
+   "T1426": "「若比丘，僧不差而教誡比丘尼，波夜提。",
+   "T1460": "「若比丘，僧不差，教授比丘尼，波逸提。",
+   "sa-mula": "Pāy.21 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur asaṃmataḥ saṃghena bhikṣuṇīr avavadet tadrūpadharmasamanvāgamāt pāyantikā /",
+   "T1454": "第三攝頌曰：不差至日沒，為食二種衣， 同路及乘船，二屏教化食。「若復苾芻，眾不差遣，自往教誡苾芻尼者，除獲勝法，波逸底迦。"
+  },
+  "pc22": {
+   "pi": "Pācittiya 22. Atthaṅgata Sammatopi ce bhikkhu atthaṅgate sūriye bhikkhuniyo ovadeyya, pācittiyaṁ.",
+   "T1429": "「若比丘！為僧差，教授比丘尼，乃至日暮者，波逸提。",
+   "T1422a": "「若比丘，僧差教誡比丘尼，至日沒，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.22: saṃ(ma)to 'trāpi bhi(kṣur) yāvat sūryāstaṃgamanakālasamayād bhikṣuṇīr avav(adet pā)tayantikā (2)2",
+   "T1436": "「若比丘，僧雖差教誡比丘尼，是比丘乃至日沒時，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.22. saṃmato vāpi bhikṣuḥ bhikṣūṇīm ovadeya vikāle, astaṃgate sūrye, anūhate aruṇe pācattikaṃ /",
+   "T1426": "「若比丘，僧差教誡比丘尼，從日沒乃至明相未出，波夜提。",
+   "T1460": "「若比丘，為僧差，教授比丘尼，乃至日沒，波逸提。",
+   "sa-mula": "Pāy.22 (PrMoSū_Mū-Banerjee) saṃmataś cāpi bhikṣur saṃghena yāvat sūryāstagamanakālasamayāt pāyantikā /",
+   "T1454": "「若復苾芻，雖被眾差教誡苾芻尼，乃至日沒時而教誡者，波逸底迦。"
+  },
+  "pc23": {
+   "pi": "Pācittiya 23. Bhikkhunupassaya Yo pana bhikkhu bhikkhunupassayaṁ upasaṅkamitvā bhikkhuniyo ovadeyya aññatra samayā, pācittiyaṁ. Tatthāyaṁ samayo, gilānā hoti bhikkhunī, ayaṁ tattha samayo.",
+   "T1422a": "「若比丘，僧不差，為教誡故入比丘尼住處，除病因緣，波逸提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.23. yo puna bhikṣu ovādaprekṣo bhikṣuṇīupāśrayam upasaṃkrameya santaṃ bhikṣum anāmantrayitvā, anyatra samaye pācattikaṃ / tatrāyaṃ samayo Ō gilānā bhikṣuṇī ovaditavyā anuśāsitavyā bhavati / ayam atra samayo /",
+   "T1426": "「若比丘，往尼住處教誡，不白善比丘，除餘時，波夜提。餘時者，病時。",
+   "T1460": "「若比丘，入比丘尼寺，為無病比丘尼說法教授，波逸提。"
+  },
+  "pc24": {
+   "pi": "Pācittiya 24. Āmisa Yo pana bhikkhu evaṁ vadeyya “āmisahetu therā bhikkhū bhikkhuniyo ovadantī”ti, pācittiyaṁ.",
+   "T1429": "「若比丘！語餘比丘作如是語：『諸比丘為飲食故，教授比丘尼』者，波逸提。",
+   "T1422a": "「若比丘，作是語：『諸比丘為供養利故教誡比丘尼。』波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.23: yaḥ punar bhikṣur evaṃ (va)ded āmiṣahetor bhikṣ(avo bhikṣuṇīr avavad)antīti pā(tayantikā 2)3",
+   "T1436": "「若比丘，如是語：『為供養利故，諸比丘教化比丘尼。』波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.24. yo puna bhikṣu bhikṣum evaṃ vadeya Ō āmiṣahetor āyuṣman bhikṣu bhikṣuṇīṃ te ovadatīti pācattikaṃ /",
+   "T1426": "「若比丘語比丘言：『長老！為食故教誡比丘尼。』波夜提。",
+   "T1460": "「若比丘，語比丘言：『諸比丘為資生故教授比丘尼。』波逸提。",
+   "sa-mula": "Pāy.23 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur bhikṣum evaṃ vaded āmiṣakiṃcithetor bhikṣavo bhikṣuṇīr avadantīti pāyantikā /",
+   "T1454": "「若復苾芻，向諸苾芻作如是語：『汝為飲食供養故，教誡苾芻尼。』者，波逸底迦。"
+  },
+  "pc25": {
+   "pi": "Pācittiya 25. Cīvaradāna Yo pana bhikkhu aññātikāya bhikkhuniyā cīvaraṁ dadeyya aññatra pārivattakā, pācittiyaṁ.",
+   "T1429": "「若比丘！與非親里比丘尼衣，除貿易，波逸提。",
+   "T1422a": "「若比丘，與非親里比丘尼衣，除貿易，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.27: yaḥ punar bhikṣur ajñātyā bhikṣuṇyāś cīvaraṃ dadyāt pātayantikā (2)7",
+   "T1436": "「若比丘，與非親里比丘尼衣，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.28. yo puna bhikṣu anyātikāye bhikṣuṇīye cīvaraṃ dadyād anyatra pallaṭṭhakena pācattikaṃ /",
+   "T1426": "「若比丘，與非親里比丘尼衣，除貿易，波夜提。",
+   "T1460": "「若比丘，與非親里比丘尼衣，波逸提。",
+   "sa-mula": "Pāy.24 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur ajñātikāyai bhikṣuṇyai cīvaraṃ dadyād anyatra parivartakāt pāyantikā /",
+   "T1454": "「若復苾芻，與非親苾芻尼衣，除貿易，波逸底迦。"
+  },
+  "pc26": {
+   "pi": "Pācittiya 26. Cīvarasibbana Yo pana bhikkhu aññātikāya bhikkhuniyā cīvaraṁ sibbeyya vā sibbāpeyya vā, pācittiyaṁ.",
+   "T1429": "「若比丘！與非親里比丘尼作衣者，波逸提。",
+   "T1422a": "「若比丘，與非親里比丘尼作衣，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.26: yaḥ punar bhikṣur ajñātyā bhikṣuṇyāś cīvaraṃ kuryāt pātayantikā (26)",
+   "T1436": "「若比丘，與非親里比丘尼作衣，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.29. yo puna bhikṣur anyātikāye bhikṣuṇīye cīvaraṃ sīveya vā sīvāpeya vā pācattikaṃ /",
+   "T1426": "「若比丘，與非親里比丘尼作衣，波夜提。",
+   "T1460": "「若比丘，與非親里比丘尼作衣，波逸提。",
+   "sa-mula": "Pāy.25 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur ajñātikāyā bhikṣuṇyāś cīvaraṃ kuryāt pāyantikā /",
+   "T1454": "「若復苾芻，與非親苾芻尼作衣者，波逸底迦。"
+  },
+  "pc27": {
+   "pi": "Pācittiya 27. Saṁvidhāna Yo pana bhikkhu bhikkhuniyā saddhiṁ saṁvidhāya ekaddhānamaggaṁ paṭipajjeyya antamaso gāmantarampi aññatra samayā, pācittiyaṁ. Tatthāyaṁ samayo, satthagamanīyo hoti maggo, sāsaṅkasammato, sappaṭibhayo, ayaṁ tattha samayo.",
+   "T1429": "「若比丘！與比丘尼共期同一道行，從一村乃至一村間，除異時，波逸提。異時者，與估客行，若疑畏怖時，是謂異時。",
+   "T1422a": "「若比丘，與比丘尼先期共道行，從此聚落到彼聚落，除因緣，波逸提。因緣者，若多伴、有疑畏處，是名因緣。",
+   "sa-sarv": "PrMoSū_Pāt.24: yaḥ punar bhikṣur bhikṣuṇyā sārdhaṃ saṃvidhāya samānamārgaṃ pratipadyetāntato grāmāntaram api anyatra samayāt pātayantikā (tatrā)yaṃ sama(yaḥ) sār(thagamanīyo mārgo bhavati sāśaṅkasaṃ)mataḥ sabhayasaṃmataḥ sapratibhayabhairavasaṃmato 'yaṃ tatra samayaḥ (2)4",
+   "T1436": "「若比丘，與比丘尼議共道行，乃至到一聚落，波夜提；除因緣。因緣者，若多伴、所行道有疑怖畏，是名因緣。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.26. yo puna bhikṣu bhikṣuṇīya sārdhaṃ saṃvidhāya adhvānamārgaṃ pratipadyeya antamasato grāmāntaraṃ pi, anyatra samaye, pācattikaṃ / tatrāyaṃ samayo Ō mārgo bhavati sabhayo sapratibhayo sāśaṃkasaṃmato / ayam atra samayo /",
+   "T1426": "「若比丘，與比丘尼期共道行，下至聚落間，除疑怖畏估客伴時，波夜提。",
+   "T1460": "「若比丘，與比丘尼計挍同道行，除餘時，波逸提。餘時者，若多伴行、有疑恐怖，此是餘時。",
+   "sa-mula": "Pāy.26 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur bhikṣuṇīsārtheṇa sārdham adhvānamārgaṃ pratipadyeta ato grāmāntaram api pāyantikā / tatrāyaṃ samayaḥ sārthagamanīyo mārgo bhavati sāśaṅkasaṃmataḥ sabhayasaṃmataḥ sapratibhayabhairavasaṃmato 'yaṃ tatra samayaḥ /",
+   "T1454": "「若復苾芻，與苾芻尼共商旅期行者，除餘時，波逸底迦。餘時者，謂有恐怖畏難處，此是時。"
+  },
+  "pc28": {
+   "pi": "Pācittiya 28. Nāvābhiruhana Yo pana bhikkhu bhikkhuniyā saddhiṁ saṁvidhāya ekaṁ nāvaṁ abhiruheyya uddhaṅgāminiṁ vā adhogāminiṁ vā aññatra tiriyaṁ taraṇāya, pācittiyaṁ.",
+   "T1429": "「若比丘！與比丘尼，共期同乘一船，上水，下水，除直渡者，波逸提。",
+   "T1422a": "「若比丘，與比丘尼先期共船行，若上水、若下水，除直渡，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.25: yaḥ punar bhikṣur bhikṣu(ṇyā sārdhaṃ saṃvidhā)yaikanāvam abhiruhed ū(r)dhvag(āminīṃ vādhogāmi)nīṃ vānyatra tīryakpārasaṃtaraṇāt pātayantikā (2)5",
+   "T1436": "「若比丘，與比丘尼議共載船，若上水、若下水，波夜提；除直度。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.27. yo puna bhikṣu bhikṣuṇīya sārdhaṃ saṃvidhāya ekanāvāṃ abhiruheya ūrdhvagāminīṃ vā adhogāminīṃ vā, anyatra tiryottaraṇāya pācattikaṃ /",
+   "T1426": "「若比丘，與比丘尼期共載船，上水下水，除直渡，波夜提。",
+   "T1460": "「若比丘，與比丘尼計挍乘一船，若上水、若下水，除直渡，波逸提。",
+   "sa-mula": "Pāy.27 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur bhikṣuṇīsārtheṇa sārdhaṃ saṃvidhāya ekanāvam abhirohed ūrdhvagāminīṃ vā adhogāminīṃ vānyatra tīryakpārasantaraṇāt pātayantikā /",
+   "T1454": "「若復苾芻，與苾芻尼期乘一船，若沿流、若泝流，除直渡，波逸底迦。"
+  },
+  "pc29": {
+   "pi": "Pācittiya 29. Paripācita Yo pana bhikkhu jānaṁ bhikkhuniparipācitaṁ piṇḍapātaṁ bhuñjeyya aññatra pubbe gihisamārambhā, pācittiyaṁ.",
+   "T1429": "「若比丘！知比丘尼讚歎教化因緣得食食，除檀越先有意者，波逸提。",
+   "T1422a": "「若比丘，知比丘尼讚歎因緣得食食，除檀越先發心作，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.30: yaḥ punar bhikṣur bhikṣuṇīparipācitaṃ piṇḍapātaṃ paribhuṃjītānyatra prāg(g)ṛhisamārambhāt pātayantikā 30 //",
+   "T1436": "「若比丘，知比丘尼讚因緣得食食，波夜提；除先白衣時善因緣。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.30. yo puna bhikṣur jānan bhikṣuṇīparipācitaṃ pinḍapātaṃ paribhuñjeya, anyatra pūrve gṛhīsamārambhe pācattikaṃ / // uddānaṃ // (21) asaṃmato (22) saṃmato cāpi (23) ovādo (24) āmiṣaṃ (25) niṣadyā ca / (26) adhvānamārgo (27) nāvā ca (28) deti (29) sīveti (30) paripācanena // tṛtīyo vargaḥ //",
+   "T1426": "「若比丘，知比丘尼讚歎食，除舊檀越，波夜提。（三十事竟）",
+   "T1460": "「若比丘，知比丘尼讚歎食，除施主先有意，波逸提。",
+   "sa-mula": "Pāy.30 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur jānan bhikṣuṇīparipācitaṃ piṇḍapātaṃ paribhuṃjītānyatra pūrvaṃ gṛhisamāraṃbhāt pāyantikā /",
+   "T1454": "「若復苾芻，知苾芻尼讚歎因緣得食食，除施主先有意，波逸底迦。」"
+  },
+  "pc30": {
+   "pi": "Pācittiya 30. Rahonisajja Yo pana bhikkhu bhikkhuniyā saddhiṁ eko ekāya raho nisajjaṁ kappeyya, pācittiyaṁ. Ovādavaggo tatiyo",
+   "T1429": "「若比丘！與比丘尼在屏處坐者，波逸提。",
+   "T1422a": "「若比丘，與比丘尼、式叉摩那、沙彌尼獨屏處坐，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.28: yaḥ punar bhikṣur bhikṣuṇyā sārdham ekākī rahasi praticchanne niṣadyāṃ kalpayet pātayantikā (2)8",
+   "T1436": "「若比丘，共比丘尼獨屏覆處坐，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.25. yo puna bhikṣu bhikṣuṇīya sārdham eko ekāya raho niṣadyāṃ kalpeya pācattikaṃ /",
+   "T1426": "「若比丘，共一比丘尼空靜處坐，波夜提。",
+   "sa-mula": "Pāy.29 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur bhikṣuṇyā sārdham eka ekikayā rahasi praticchanne tiṣṭhet pāyantikā /",
+   "T1454": "「若復苾芻，獨與一苾芻尼屏處坐者，波逸底迦。"
+  },
+  "pc31": {
+   "pi": "Chapter 4. Bhojanavaggo Pācittiya 31. Āvasathapiṇḍa Agilānena bhikkhunā eko āvasathapiṇḍo bhuñjitabbo. Tato ce uttari bhuñjeyya, pācittiyaṁ.",
+   "T1429": "「若比丘！施一食處，無病比丘應一食，若過受者，波逸提。",
+   "T1422a": "「若比丘，無病施一食處過一食，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.32: ekāvasathoṣitena bhikṣuṇā aglānenaikaḥ piṇḍapāta(ḥ) paribhoktavyas tata uttaraṃ paribhuṃjīta pā(tayantikā 32)",
+   "T1436": "「若比丘，施一食處，無病比丘應一食。若過一食，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.31. ekāhaparamaṃ bhikṣuṇā agilānena āvasathapiṇḍapāto paribhuñjitavyo, taduttariṃ paribhuṃjeya pācattikaṃ /",
+   "T1426": "「若比丘，施一食處，不病比丘過一食，波夜提。",
+   "T1460": "「若比丘，施一食處，無病比丘應一食。若過受，波逸提。",
+   "sa-mula": "Pāy.32 (PrMoSū_Mū-Banerjee) ekāvasathoṣitena bhikṣuṇā aglānenaikapiṇḍapātaḥ paribhoktavyas tataḥ uttari paribhuṃjīta pāyantikā /",
+   "T1454": "「若復苾芻，於外道住處得經一宿一食，除病因緣。若過者，波逸底迦。"
+  },
+  "pc32": {
+   "pi": "Pācittiya 32. Gaṇabhojana Gaṇabhojane aññatra samayā pācittiyaṁ. Tatthāyaṁ samayo, gilānasamayo, cīvaradānasamayo, cīvarakārasamayo, addhānagamanasamayo, nāvābhiruhanasamayo, mahāsamayo, samaṇabhattasamayo, ayaṁ tattha samayo.",
+   "T1429": "「若比丘！別眾食，除餘時，波逸提。餘時者，病時、作衣時、施衣時、道行時、乘船時、大眾集時、沙門施食時，此是時。",
+   "T1422a": "「若比丘，受別請眾食，波逸提，除因緣。因緣者，病時、衣時、施衣時、作衣時、行路時、船上行時、大會時、沙門會時，是名因緣。",
+   "sa-sarv": "PrMoSū_Pāt.36: gaṇabhojanam anyatra samayāt pātayantikā tatrāyaṃ samayo glānasamayaś cīvaradānakālasamayaḥ adhvānamārgasamayaḥ nāvādhirohaṇaṃ mahāsamājaśramaṇabhaktasamayo 'yaṃ tatra samayaḥ (3)6",
+   "T1436": "「若比丘，別眾食，波夜提；除因緣。因緣者，病時、作衣時、欲道行時、欲船上行時、大會時、外道沙門施食時，是名因緣。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.40. gaṇabhojane anyatra samaye pācattikaṃ / tatrāyaṃ samayo Ō gilānasamayo cīvaradānakālasamayo adhvānagamanasamayo nāvābhirohaṇasamayo mahāsamayo śravaṇabhaktaṃ / ayam atra samayo / // uddānaṃ // (31) āvasatho (32) parampara (33) pravāraṇā (34) āsādanā (35) adinnaṃ / (36) vikālaṃ (37) sannidhiṃ (38) manthā (39) vijñaptiḥ (40) gaṇabhojanena // caturtho vargaḥ //",
+   "T1426": "「若比丘，別眾食，除餘時，波夜提。餘時者，病時、衣時、行時、船上時、大眾會時、外道施食時。（四十事竟）",
+   "T1460": "「若比丘，別眾食，除餘時，波逸提。除餘時者，病時、作衣時、施衣時、道行時、船行時、大會時、沙門施食時，此是時。",
+   "sa-mula": "Pāy.36 (PrMoSū_Mū-Banerjee) gaṇabhojanād anyatra samayāt pāyantikā / tatrāyaṃ samayaḥ glānasamayaḥ karmasamayo 'dhvānamārgasamayo nāvādhirohaṇaṃ mahāsamājaḥ śramaṇabhaktasamayo 'yaṃ tatra samayaḥ /",
+   "T1454": "「若復苾芻，別眾食者，除餘時，波逸底迦。餘時者，病時、作衣時、道行時、船行時、大眾食時、沙門施食時，此是時。"
+  },
+  "pc33": {
+   "pi": "Pācittiya 33. Paramparabhojana Paramparabhojane aññatra samayā pācittiyaṁ. Tatthāyaṁ samayo, gilānasamayo, cīvaradānasamayo, cīvarakārasamayo, ayaṁ tattha samayo.",
+   "T1429": "「若比丘！展轉食，除餘時，波逸提。餘時者，病時、施衣時，是謂餘時。",
+   "T1422a": "「若比丘，數數食，除因緣，波逸提。因緣者，病時、衣時、施衣時，是名因緣。",
+   "sa-sarv": "PrMoSū_Pāt.31: paraṃparabhojanam anyatra samayāt pātayantikā tatrāyaṃ samayo glānasamayaś cīvaradānakālasamayo 'yaṃ tatra samayaḥ 31",
+   "T1436": "「若比丘，數數食，波夜提；除因緣。因緣者，病時、布施衣時，是名因緣。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.32. paramparābhojane anyatra samaye pācattikaṃ / tatrāyaṃ samayo gilānasamayo cīvaradānakālasamayo / ayam atra samayo /",
+   "T1426": "「若比丘，處處食，除病時、衣時，波夜提。",
+   "T1460": "「若比丘，展轉食，除餘時，波逸提。餘時者，病時、作衣時、施衣時，此是時。",
+   "sa-mula": "Pāy.31 (PrMoSū_Mū-Banerjee) paraṃparabhojanād anyatra samayāt pāyantikā / tatrāyaṃ samayo glānasamayaḥ karmasamayaḥ adhvānamārgasamayaḥ cīvaradānakālasamayaḥ /",
+   "T1454": "第四攝頌曰：數食一宿處，受鉢不為餘， 足食別非時，觸不受妙食。「若復苾芻，展轉食者，除餘時，波逸底迦。餘時者，病時、作時、道行時、施衣時，此是時。"
+  },
+  "pc34": {
+   "pi": "Pācittiya 34. Kāṇamātu Bhikkhuṁ paneva kulaṁ upagataṁ pūvehi vā manthehi vā abhihaṭṭhuṁ pavāreyya, ākaṅkhamānena bhikkhunā dvattipattapūrā paṭiggahetabbā. Tato ce uttari paṭiggaṇheyya, pācittiyaṁ. Dvattipattapūre paṭiggahetvā tato nīharitvā bhikkhūhi saddhiṁ saṁvibhajitabbaṁ, ayaṁ tattha sāmīci.",
+   "T1429": "「若比丘！至白衣家，請比丘與餅、[麩-夫+少]、飯，若比丘欲須者，當二、三鉢受，還至僧伽藍中，應分與餘比丘食。若比丘無病，過二、三鉢受持，還至僧伽藍中，不分與餘比丘食者，波逸提。",
+   "T1422a": "「若比丘，到白衣家自恣多與飲食，若餅、若[麩-夫+少]。若不住其家食，須二三鉢應受，出外與餘比丘共食。若無病，過是受及不與餘比丘共食，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.33: (bhikṣa)vaḥ punaḥ saṃbahulāḥ kulāny upasaṃkrameyus tāṃś cec chrāddhā b(r)āhmaṇagṛ(ha)patay(o yāva)darthaṃ pravārayeyuḥ pūpair vā manthair vā ākāṃkṣamāṇais tair bhikṣubhi(r) dv(au) trayo (vā) pātrapūrāḥ pratigṛhīta(vy)ās tata uttaraṃ pratigṛhṇīyuḥ pātayantikā / dvau trīṃ vā pātrapūrāṃ pratigṛhya bahi(r ārā)maṃ (n)iṣk(r)amya santo bhikṣavaḥ saṃvedayitavyā iyaṃ tatra sāmīciḥ 33",
+   "T1436": "「若比丘，到白衣家自恣多與，若餅、若[麩-夫+少]。諸比丘若須，若二、若三鉢應受。若過是取，波夜提。二、三鉢受已出外，應與餘善比丘，是事法爾。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.38. bhikṣuṃ kho punaḥ kulehi upasaṃkrāntaṃ pravāreṃsu pūpehi vā manthehi vā / tathāpravāritena bhikṣuṇā yāvattripātrapūraparamaṃ tato pratigṛhṇitavyaṃ / pratigṛhṇitvā bahirdhā nīharitavyaṃ / bahirdhā nīharitvā agilānakehi bhikṣūhi sārdhaṃ saṃvibhajitvā khāditavyaṃ bhuṃjitavyaṃ / taduttariṃ pratigṛhṇitvā bahirdhā nīharitvā agilānakehi bhikṣūhi sārdhaṃ saṃvibhajitvā vā asaṃvibhajitvā vā khādeya vā bhuṃjeya vā pācattikaṃ /",
+   "T1426": "「若比丘，往白衣家自恣與餅[麩-夫+少]，得受兩三鉢出外共不病比丘食。若過受不共食，波夜提。",
+   "T1460": "「若眾多比丘於檀越家乞食，信法長者多與餅[麩-夫+少]，比丘須者應取二三鉢。若過取，波逸提。持至住處，和合共食。此法應爾。",
+   "sa-mula": "Pāy.33 (PrMoSū_Mū-Banerjee) bhikṣavaḥ khalu saṃbahulāḥ kulāni saṃkrāmeyus tāṃś cec chrāddhā brāhmaṇagṛhapatayas tv arthaṃ pravārayeyur maṇḍaiś cāpūpaiś cākāṃkṣibhis tair bhikṣubhir dvau trayo vā pātrapūrāḥ pratigrahītavyāḥ tata uttari pratigṛhṇīyuḥ pāyantikā / dvau trīn vā pātrapūrān pratigṛhya tair bhikṣubhir bahirārāmaṃ gatvā santo bhikṣavaḥ saṃvibhaktavyā ātmanā ca paribhoktavyam ayaṃ tatra samayaḥ /",
+   "T1454": "「若復眾多苾芻往俗家中，有淨信婆羅門、居士殷勤請與餅[麩-夫+少]飯，苾芻須者應兩三鉢受。若過受者，波逸底迦。既受得已還至住處，若有苾芻應共分食，此是時。"
+  },
+  "pc35": {
+   "pi": "Pācittiya 35. Paṭhamapavāraṇā Yo pana bhikkhu bhuttāvī pavārito anatirittaṁ khādanīyaṁ vā bhojanīyaṁ vā khādeyya vā bhuñjeyya vā, pācittiyaṁ.",
+   "T1429": "「若比丘！足食竟，或時受請，不作餘食法而食者，波逸提。",
+   "T1422a": "「若比丘，食竟不作殘食法，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.34: yaḥ punar bhikṣur bhuktavāṃ pravāritaḥ akṛtā(t)iriktaṃ khādanīyabhojanīyaṃ khāded vā bhuṃjīta vā pātayantikā 34",
+   "T1436": "「若比丘，食竟不受殘食法，若食，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.33. yo puna bhikṣur bhuṃjāvī pravārito utthito āsanāto, anatiriktaṃ kṛtaṃ khādanīyaṃ vā bhojanīyaṃ vā khādeya vā bhuṃjeya vā pācattikaṃ /",
+   "T1426": "「若比丘，食已足離坐處，不作殘食法食者，波夜提。",
+   "T1460": "「若比丘，足食竟更食者，波逸提。",
+   "sa-mula": "Pāy.34 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur bhuktavān pravāritaḥ akṛtātiriktaṃ khādanīyabhojanīyaṃ khāded bhuñjīta vā pāyantikā /",
+   "T1454": "「若復苾芻，足食竟，不作餘食法更食者，波逸底迦。"
+  },
+  "pc36": {
+   "pi": "Pācittiya 36. Dutiyapavāraṇā Yo pana bhikkhu bhikkhuṁ bhuttāviṁ pavāritaṁ anatirittena khādanīyena vā bhojanīyena vā abhihaṭṭhuṁ pavāreyya “handa bhikkhu khāda vā bhuñja vā”ti jānaṁ āsādanāpekkho, bhuttasmiṁ pācittiyaṁ.",
+   "T1429": "「若比丘！知他比丘足食已，若受請，不作餘食法，慇懃請與食：『長老！取是食。』以是因緣，非餘，欲使他犯者，波逸提。",
+   "T1422a": "「若比丘，知他比丘食竟，不作殘食法強勸令食，欲使犯罪，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.35: yaḥ punar bhikṣur jānaṃ bhikṣuṃ bhuktavantaṃ pravāritam akṛt(āt)iriktena khādanīyabhojanīyena yāvadarthaṃ pravārayed idam āyuṣmaṃ khādeti bhuṃkṣvety āsādanaprekṣī kaccid eṣa bhikṣur muhūrtam apy āsāditaḥ syād idam eva pratyayaṃ kṛtvā nānyathā pātayantikā 35",
+   "T1436": "「若比丘，知他比丘食竟不受殘食法，強勸自恣多與飲食，如是言：『比丘食。』為惱故作是念：『令是比丘乃至少許時得惱。』是因緣故不異，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.34. yo puna bhikṣur jānan bhikṣu bhuktāvī pravāritam utthitam āsanāto āsādanāprekṣo anatiriktakṛtena khādanīyena vā bhojanīyena vā upanimantreya, ehi bhikṣu khādāhi bhuṃjāhīti vā vadeya bhuktasmiṃ pācattikaṃ /",
+   "T1426": "「若比丘，知彼比丘食已足離坐處，不作殘食法，欲惱故勸言：『長老！食此食。』食者，波夜提。",
+   "T1460": "「若比丘，知他比丘足食竟，請與食，波逸提。",
+   "sa-mula": "Pāy.35 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur jānan bhikṣuṃ bhuktavantaṃ akṛtātirikte khādanīyabhojanīyenetyarthaṃ pravārayed idam āyuṣman khāda idaṃ bhuṃkṣva ity āsvādanaprekṣī kaścid eṣa bhikṣur āsvādito bhaviṣyati ity etad eva pratyayaṃ kṛtvā pāyantikā /",
+   "T1454": "「若復苾芻，知他苾芻足食竟，不作餘食法勸令更食，告言：『具壽！當噉食。』以此因緣，欲使他犯生憂惱者，波逸底迦。"
+  },
+  "pc37": {
+   "pi": "Pācittiya 37. Vikālabhojana Yo pana bhikkhu vikāle khādanīyaṁ vā bhojanīyaṁ vā khādeyya vā bhuñjeyya vā, pācittiyaṁ.",
+   "T1429": "「若比丘！非時，受食食者，波逸提。",
+   "T1422a": "「若比丘，非時食，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.37: yaḥ punar bhikṣur akāle khādanīyabhojanīyaṃ khāded vā bhuṃjīta vā pātaya(n)tikā 37",
+   "T1436": "「若比丘，非時食，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.36. vikālābhojane pācattikaṃ /",
+   "T1426": "「若比丘，非時食，波夜提。",
+   "T1460": "「若比丘，非時食可食物，波逸提。",
+   "sa-mula": "Pāy.37 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur akāle khādanīyabhojanīyaṃ khāded bhuñjīta vā pāyantikā /",
+   "T1454": "「若復苾芻，非時食者，波逸底迦。"
+  },
+  "pc38": {
+   "pi": "Pācittiya 38. Sannidhikāraka Yo pana bhikkhu sannidhikārakaṁ khādanīyaṁ vā bhojanīyaṁ vā khādeyya vā bhuñjeyya vā, pācittiyaṁ.",
+   "T1429": "「若比丘！殘宿食而食者，波逸提。",
+   "T1422a": "「若比丘，食殘宿食，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.38: yaḥ punar bhikṣuḥ saṃnihitaṃ khādanīyabhojanīyaṃ khāded vā bhuṃjīta vā pātayantikā 38",
+   "T1436": "「若比丘，殘宿食食，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.37. sannidhikārabhojane pācattikaṃ /",
+   "T1426": "「若比丘，停食食，波夜提。",
+   "T1460": "「若比丘，食殘宿食，波逸提。",
+   "sa-mula": "Pāy.38 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣuḥ saṃnihitaṃ khādanīyabhojanīyaṃ khāded bhuñjīta vā pāyantikā /",
+   "T1454": "「若復苾芻，食曾經觸食者，波逸底迦。"
+  },
+  "pc39": {
+   "pi": "Pācittiya 39. Paṇītabhojana Yāni kho pana tāni paṇītabhojanāni, seyyathidaṁ—sappi, navanītaṁ, telaṁ, madhu, phāṇitaṁ, maccho, maṁsaṁ, khīraṁ, dadhi. Yo pana bhikkhu evarūpāni paṇītabhojanāni agilāno attano atthāya viññāpetvā bhuñjeyya, pācittiyaṁ.",
+   "T1429": "「若比丘！得好美飲食，乳、酪、魚、及肉，若比丘如此美飲食，無病，自為己索者，波逸提（四十）。",
+   "T1422a": "「若諸家中有如是美食：乳、酪、酥油、魚、肉。若比丘無病，為己索得食者，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.40: yāni punas tāni kuleṣu praṇītabhojanāny anujñātāni tadyathā kṣīraṃ dadhi navanītaṃ sarpis tailaṃ matsyo māṃsavallūrā yaḥ punar bhikṣur evaṃrūpāṇi praṇītabhojanāny ātmārtham aglāno vijñapayet pātayantikā 40 //",
+   "T1436": "「若比丘，諸家中如是美食：乳酪、生酥、熟酥、油、魚、肉脯，若比丘無病，如是美食為身索，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.39. yāni kho punar imāni praṇītasaṃmatāni bhojanāni bhavanti saṃyyathīdaṃ sarpistailaṃ madhu phāṇitaṃ dugdhaṃ dadhi matsyaṃ māṃsaṃ yo puna bhikṣur evaṃrūpāṇi praṇītasaṃmatāni bhojanāni ātmārthāya agilāno kulehi vijñapetvā vā vijñāpāyetvā vā khādeya vā bhuṃjeya vā pācattikaṃ /",
+   "T1426": "「若比丘，不病，為身乞酥、油、蜜、石蜜、乳酪、魚、肉，如是乞美食食者，波夜提。",
+   "T1460": "「若比丘，得好美飲食，酥油、蜜、石蜜、乳酪、生酥、若魚若肉，無病為己索而食者，波逸提。",
+   "sa-mula": "Pāy.40 (PrMoSū_Mū-Banerjee) yāni tāni bhagavatā bhikṣūṇāṃ praṇītabhojanāny akhyātāni tadyathā kṣīraṃ dadhi navanītaṃ matsyo māṃsaṃ vallūrī yaḥ punar bhikṣuḥ evaṃrūpāṇi praṇītabhojanāni ātmārtham aglānaḥ parakulebhyo vijñāpya khāded bhuñjītā vā pāyantikā /",
+   "T1454": "「若復苾芻，如世尊說：『上妙飲食：乳酪、生酥、魚及肉。』若苾芻無病，為己詣他家乞取食者，波逸底迦。」"
+  },
+  "pc40": {
+   "pi": "Pācittiya 40. Dantapona Yo pana bhikkhu adinnaṁ mukhadvāraṁ āhāraṁ āhareyya aññatra udakadantaponā, pācittiyaṁ. Bhojanavaggo catuttho",
+   "T1429": "「若比丘！不受食，若藥著口中，除水及楊枝，波逸提。",
+   "T1422a": "「若比丘，不受食著口中，除甞食、楊枝及水，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.39: yaḥ punar bhikṣur aparigṛhītam āhāraṃ mukhadvāreṇāhared anyatrodakadantakāṣṭhābhyāṃ pātayantikā 39",
+   "T1436": "「若比丘，不受飲食著口中，波夜提；除水及楊枝。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.35. yo puna bhikṣur adinnam apratigrāhitaṃ mukhadvārikam āhāram āhāreya anyatrodakadantapoṇe pācattikaṃ /",
+   "T1426": "「若比丘，不與不受著口中，除水及楊枝，波夜提。",
+   "T1460": "「若比丘，不受食舉入口中，除水、楊枝，波逸提。",
+   "sa-mula": "Pāy.39 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur adattaṃ mukhadvārāhāram āhared anyatrodakadantakāṣṭhāt pāyantikā /",
+   "T1454": "「若復苾芻，不受食，舉著口中而噉咽者，除水及齒木，波逸底迦。"
+  },
+  "pc41": {
+   "pi": "Chapter 5. Acelaka Pācittiya 41. Acelaka Yo pana bhikkhu acelakassa vā paribbājakassa vā paribbājikāya vā sahatthā khādanīyaṁ vā bhojanīyaṁ vā dadeyya, pācittiyaṁ.",
+   "T1429": "「若比丘！外道男外道女自手與食者，皆波逸提。",
+   "T1422a": "「若比丘，自手與外道裸形若男若女食，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.44: yaḥ punar bhikṣur acelakasya parivrājakasya vā parivrājikāyā vā svahastaṃ khādanīyabhojanīyaṃ dadyāt pātayantikā 44",
+   "T1436": "「若比丘，裸形外道，若出家男、若出家女，自手與食，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.52. yo puna bhikṣu acelakasya vā acelikāya vā parivrājakasya vā parivrājakāye vā svahastaṃ khādanīyaṃ vā bhojanīyaṃ vā dadyāt pācattikaṃ /",
+   "T1426": "「若比丘，自手與無衣出家男女食，波夜提。",
+   "T1460": "「若比丘，出家外道自手與食，波逸提。",
+   "sa-mula": "Pāy.44 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur acelakāya vā acelikāyai vā parivrājakāya vā svahastaṃ khādanīyabhojanīyaṃ dadyāt pāyantikā /",
+   "T1454": "「若復苾芻，自手授與無衣外道及餘外道男女食者，波逸底迦。"
+  },
+  "pc42": {
+   "pi": "Pācittiya 42. Uyyojana Yo pana bhikkhu bhikkhuṁ “ehāvuso, gāmaṁ vā nigamaṁ vā piṇḍāya pavisissāmā”ti tassa dāpetvā vā adāpetvā vā uyyojeyya “gacchāvuso, na me tayā saddhiṁ kathā vā nisajjā vā phāsu hoti, ekakassa me kathā vā nisajjā vā phāsu hotī”ti etadeva paccayaṁ karitvā anaññaṁ, pācittiyaṁ.",
+   "T1429": "「若比丘！語餘比丘作如是語：『大德！共至聚落，當與汝食。』彼比丘竟不教與是比丘食，語言：『汝去！我與汝一處，若坐、若語不樂，我獨坐獨語樂。』以此因緣非餘，方便遣去者，波逸提。",
+   "T1422a": "「若比丘，語彼比丘：『共到諸家，與汝多美飲食。』既到不與，作是言：『汝出去，共汝若坐若語不樂，我獨坐獨語樂。』欲令彼惱，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.51: ya(ḥ pu)nar bhikṣur bhikṣum evaṃ vaded ehy āyuṣmaṃ kulāny upasaṃkramiṣyāvas tatra te dāpayiṣyāmi praṇītaṃ khādanīyabhojanīyaṃ sa tasya bhikṣor adāpayitvā tataḥ paścād evaṃ vaded gaccha tvam āyuṣman na me tvayā sārdhaṃ phāṣa(ṃ) kathā vā niṣadyā vā ekākino me phāṣaṃ kathā vā niṣadyā vā udyojanaprekṣī kaccid eṣa bhikṣur muhūrtam apy udyojitaḥ syād etad eva pratyayaṃ kṛtvā nānyathā pātayantikā (5)1",
+   "T1436": "「若比丘，語彼比丘：『大德來至諸家，使與汝多美飲食。』是比丘不使與彼比丘食，如是言：『汝去！共汝若坐、若語不樂，我獨坐獨語樂。』欲令惱故作是念：『令是比丘乃至少時得惱。』是因緣故不異，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.44. yo puna bhikṣu bhikṣum evaṃ vadeya Ō ehi tvam āyuṣman grāmaṃ pinḍāya praviśiṣyāmaḥ / ahaṃ ca te tatra kiṃcid dāpayiṣyaṃ / so tatra tasya kiñcid dāpayitvā vā adāpayitvā vā paścād udyojanaprekṣo evaṃ vadeya Ō gaccha tvam āyuṣman na me tvayā sārdhaṃ phāsu bhavati kathāya vā niṣadyāya vā, ekasyaiva mama phāsu bhavati kathāya vā niṣadyāya vā / etad eva pratyayaṃ kṛtvā ananyam, imaṃ tasya bhikṣusya udyojanapācattikaṃ /",
+   "T1426": "「若比丘語比丘言：『長老！共汝入聚落，到彼當與汝食，若自與、若使人與。』後欲驅故便言：『汝去！我共汝住不樂，我獨住樂。』作是因緣不異，波夜提。",
+   "T1460": "「若比丘，語比丘言：『長老！共入某村，當與汝多美食。』是比丘至村，竟不令與此比丘食。語言：『長老！汝去。我共汝若坐若語不樂，我獨坐獨語樂。』非餘因緣而遣去者，波逸提。",
+   "sa-mula": "Pāy.51 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur bhikṣum evaṃ vaded ehy āyuṣman kulāny upasaṃkramāvas tatra te dāpayiṣyāmi khādanīyabhojanīyaṃ yāvadāptaṃ / sa tasya dāpayitvā praṇītaṃ khādanīyabhojanīyaṃ yāvadāptaṃ tataḥ paścād evaṃ vaded gaccha tvam āyuṣman na mama tvayā sārdhaṃ sparśo 'pi tu ekākina eva me sparśo bhavati kathāyāṃ vā niṣadyāyāṃ vā ity udyojanaprekṣī kaścid eṣa bhikṣur udyojito bhaviṣyatīty etad eva pratyayaṃ kṛtvā pāyantikā /",
+   "T1454": "第六攝頌曰：伴惱觸火欲，同眠法非障， 未捨求寂染，收寶極炎時。「若復苾芻，語餘苾芻，作如是語：『具壽！共汝詣俗家，當與汝美好食，令得飽滿。』彼苾芻至俗家，竟不與食，語言：『具壽！汝去！我與汝共坐共語不樂，我獨坐獨語樂。』作是語時，欲令生惱者，波逸底迦。"
+  },
+  "pc43": {
+   "pi": "Pācittiya 43. Sabhojana Yo pana bhikkhu sabhojane kule anupakhajja nisajjaṁ kappeyya, pācittiyaṁ.",
+   "T1429": "「若比丘！在食家中有寶，強安坐者，波逸提。",
+   "T1422a": "「若比丘，食家中與女人坐，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.42: yaḥ punar bhikṣuḥ sabhojane kule anupraskadya āsane niṣadyāṃ kalpayet pātayantikā 42",
+   "T1436": "「若比丘，食家中臥處坐，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.53. yo puna bhikṣur jānan saṃbhojanīye kule anupakhajjāsane niṣadyāṃ kalpeya pācattikaṃ /",
+   "T1426": "「若比丘，知食家婬處坐，波夜提。",
+   "T1460": "「若比丘，知他食家，直入，波逸提。",
+   "sa-mula": "Pāy.42 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur jānan sabhojane kule anupraskandyāsane niṣadyāṃ kalpayet pāyantikā /",
+   "T1454": "「若復苾芻，知有食家強安坐者，波逸底迦。"
+  },
+  "pc44": {
+   "pi": "Pācittiya 44. Rahopaṭicchanna Yo pana bhikkhu mātugāmena saddhiṁ raho paṭicchanne āsane nisajjaṁ kappeyya, pācittiyaṁ.",
+   "T1429": "「若比丘！食家中有寶，在屏處坐者，波逸提。",
+   "T1422a": "「若比丘，與女人獨屏處坐，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.43: yaḥ punar bhikṣuḥ sabhojane kule ekākī ekayā rahasi praticchanne niṣadyāṃ kalpayet pātayantikā 43",
+   "T1436": "「若比丘，食家中獨與一女人臥處強坐，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.54. yo puna bhikṣur jānan saṃbhojanīye kule praticchannāsane niṣadyāṃ kalpeya pācattikaṃ /",
+   "T1426": "「若比丘，知食家屏處坐，波夜提。",
+   "T1460": "「若比丘，食家強坐，波逸提。",
+   "sa-mula": "Pāy.43 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur jānan sabhojane kule praticchanne tiṣṭhet pāyantikā /",
+   "T1454": "「若復苾芻，知有食家在屏處強立者，波逸底迦。"
+  },
+  "pc45": {
+   "pi": "Pācittiya 45. Rahonisajja Yo pana bhikkhu mātugāmena saddhiṁ eko ekāya raho nisajjaṁ kappeyya, pācittiyaṁ.",
+   "T1429": "「若比丘！獨與女人露地坐者，波逸提。",
+   "T1422a": "「若比丘，與女人獨露處坐，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.29: yaḥ punar bhikṣur ekā(kī) mātṛgrāmeṇa sārdham abhyavakāśe niṣadyāṃ kalpayet pātayantikā (2)9",
+   "T1436": "「若比丘，共女人獨露處坐，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.70. yo puna bhikṣu mātṛgrāmeṇa sārdhaṃ eko ekāya raho niṣadyāṃ kalpeya pācattikaṃ / // uddānam // (61) saṃcintya (62) kaukṛtyam (63) apratyuddharitvā (64) apaniheya / (65) bhīṣeya (66) udaka (67) aṅguli (68) saṃvidhāya (69) sahagāra (70) niṣadyāya // saptamo vargaḥ //",
+   "T1426": "「若比丘，與女人獨屏處坐，波夜提。（七十事竟）",
+   "T1460": "「若比丘，獨與女人屏處坐，波逸提。",
+   "sa-mula": "Pāy.28 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur mātṛgrāmena sārdham eka ekayā rahasi praticchanne āsane niṣadyāṃ kalpayet pāyantikā /",
+   "T1454": "「若復苾芻，獨與一女人屏處坐者，波逸底迦。"
+  },
+  "pc46": {
+   "pi": "Pācittiya 46. Cāritta Yo pana bhikkhu nimantito sabhatto samāno santaṁ bhikkhuṁ anāpucchā purebhattaṁ vā pacchābhattaṁ vā kulesu cārittaṁ āpajjeyya aññatra samayā, pācittiyaṁ. Tatthāyaṁ samayo, cīvaradānasamayo, cīvarakārasamayo, ayaṁ tattha samayo.",
+   "T1429": "「若比丘！先受請已，前食、後食行詣餘家，不囑授餘比丘，除餘時，波逸提。餘時者，病時、作衣時、施衣時，是謂餘時。",
+   "T1422a": "「若比丘，受他請食前食後食，行詣餘家，不近白餘比丘，除因緣。波逸提。因緣者，衣時，是名因緣。",
+   "sa-sarv": "PrMoSū_Pāt.81: yaḥ punar bhikṣuḥ sabhaktaṃ(?) kuleṣūpanimantritaḥ pūrvabhaktaṃ paścādbhaktaṃ kuleṣu cāritram āpadyeta pā(tayantikā) 81",
+   "T1436": "「若比丘，請食，食前、食後行至餘家，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.81. yo puna bhikṣu sabhakto samāno purebhaktaṃ paścādbhaktaṃ vā kuleṣu cāritram āpadyeya santaṃ bhikṣum anāmantrayitvā, anyatra samaye pācattikaṃ / tatrāyam samayo Ō cīvaradānakālasamayo / ayam atra samayaḥ /",
+   "T1426": "「若比丘同食處，食前、食後不白善比丘，行至餘處，除衣時，波夜提。",
+   "T1460": "「若比丘先受請，若前食若後食，不囑餘比丘行詣餘家，波逸提。",
+   "sa-mula": "Pāy.81 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣuḥ sabhaktaḥ kule nimantritaḥ pūrvabhaktaṃ paścādbhaktaṃ kuleṣu cāritram āpadyeta santaṃ kulaṃ apratisaṃvedito 'nyatra tadrūpāt pratyayāt pāyantikā /",
+   "T1454": "第九攝頌曰：食明相今知，針筒床脚量， 貯花并坐具，瘡雨大師衣。「若復苾芻，受食家請，食前食後行詣餘家，不囑授者，波逸底迦。"
+  },
+  "pc47": {
+   "pi": "Pācittiya 47. Mahānāma Agilānena bhikkhunā catumāsappaccayapavāraṇā sāditabbā aññatra punapavāraṇāya, aññatra niccapavāraṇāya. Tato ce uttari sādiyeyya, pācittiyaṁ.",
+   "T1429": "「若比丘！請四月與藥，無病比丘應受；若過受，除常請、更請、分請、盡形壽請者，波逸提",
+   "T1422a": "「若比丘，受四月自恣請藥，若過是受，除更請、自送請、長請，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.74: caturmāsikā bhikṣuṇā pravāraṇā sādhayitavyā anyatra nityapravāraṇāyā anyatra punaḥpunaḥpravāraṇāyā anyatra pratyekapravāraṇāyā tata uttaraṃ sādhayet pātayantikā 74",
+   "T1436": "「若比丘，受四月自恣請，過是受者，波夜提；除常自恣請、除數數自恣請、除獨自恣請。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.74. cāturmāsikā bhikṣuṇā pratyekapravāraṇā sādayitavyā / taduttariṃ sādiyeya, anyatra punaḥ pravāraṇe, anyatra yāvajjīvikāye pācattikaṃ /",
+   "T1426": "「若比丘，四月別請應受。過受，波夜提。除更請、長請。",
+   "T1460": "「若比丘，受四月請，無病比丘應受。若過受，除常請、更請、分請、盡形請，波逸提。",
+   "sa-mula": "Pāy.74 (PrMoSū_Mū-Banerjee) cāturmāsikapravāraṇā bhikṣuṇā svīkartavyā tatottaraṃ pāyantikā / pratyekapravāraṇāyā punaḥ punaḥ pravāraṇāyāḥ kālikapravāraṇāyā nityapravāraṇāyā anyatra ayaṃ tatra samayaḥ /",
+   "T1454": "「若復苾芻，有四月請，須時應受。若過受者，除餘時，波逸底迦。餘時者，謂別請、更請、殷勤請、常請，此是時。"
+  },
+  "pc48": {
+   "pi": "Pācittiya 48. Uyyuttasenā Yo pana bhikkhu uyyuttaṁ senaṁ dassanāya gaccheyya aññatra tathārūpappaccayā, pācittiyaṁ.",
+   "T1429": "「若比丘往觀軍陣，除時因緣，波逸提。",
+   "T1422a": "「若比丘，觀軍發行，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.45: yaḥ punar bhikṣur udyuktāṃ senāṃ darśanāyopasaṃkramed anyatras tathārūpapratyayāt pātayantikā 45",
+   "T1436": "「若比丘，軍發行往觀，波夜提；除因緣。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.55. yo puna bhikṣur udyuktāṃ senāṃ darśanāya gaccheya pācattikaṃ /",
+   "T1426": "「若比丘，看軍發行，波夜提。",
+   "T1460": "「若比丘，往觀軍陣，除因緣，波逸提。",
+   "sa-mula": "Pāy.45 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur udyuktāṃ senāṃ darśanāyopasaṃkrāmet pāyantikā /",
+   "T1454": "「若復苾芻，往觀整裝軍者，波逸底迦。"
+  },
+  "pc49": {
+   "pi": "Pācittiya 49. Senāvāsa Siyā ca tassa bhikkhuno kocideva paccayo senaṁ gamanāya, dirattatirattaṁ tena bhikkhunā senāya vasitabbaṁ. Tato ce uttari vaseyya, pācittiyaṁ.",
+   "T1429": "「若比丘！有因緣，聽至軍中二宿、三宿，若過者，波逸提。",
+   "T1422a": "「若比丘，有因緣到軍中乃至二三宿。若過，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.46: syād bhikṣos tathārūpapratyayo yenodyuktāṃ senāṃ gacched dvirātraparamaṃ tena bhikṣuṇā tatra senāyāṃ vastavyaṃ tata uttaraṃ vaset pātayantikā 46",
+   "T1436": "「若比丘，有因緣到軍中，乃至二宿應住。若過宿，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.56. syāt tasya bhikṣusya kocid eva pratyayo senāyāṃ gamanāya, dvirātraṃ vā trirātraṃ vā tena bhikṣuṇā senāyāṃ vasitavyaṃ / taduttariṃ vaseya pācattikaṃ /",
+   "T1426": "「若比丘，有因緣事得到軍中三宿，若過者，波夜提。",
+   "T1460": "「若比丘，有因緣入軍中，若過二宿至三宿，波逸提。",
+   "sa-mula": "Pāy.46 (PrMoSū_Mū-Banerjee) syād bhikṣos tadrūpaḥ pratyayaḥ udyuktāṃ senāṃ darśanāya upasaṃkramituṃ dvirātraparamaṃ tena bhikṣuṇā tasyāṃ senāyāṃ vipravastavyaṃ tata uttari vipravaset pāyantikā /",
+   "T1454": "「若復苾芻，有因緣往軍中，應齊二夜。若過宿者，波逸底迦。"
+  },
+  "pc50": {
+   "pi": "Pācittiya 50. Uyyodhika Dirattatirattaṁ ce bhikkhu senāya vasamāno uyyodhikaṁ vā balaggaṁ vā senābyūhaṁ vā anīkadassanaṁ vā gaccheyya, pācittiyaṁ. Acelakavaggo pañcamo",
+   "T1429": "「若比丘！二宿、三宿軍中住，或時觀軍陣鬪戰，若觀遊軍象馬力勢者，波逸提（五十）。",
+   "T1422a": "「若比丘，有因緣到軍中二三宿，觀軍陣合戰，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.47: dvirātraparamaṃ ced bhikṣuḥ senāyāṃ vasaty udyūthikāṃ senāṃ darśanāyopasaṃkramed dhvajāgraṃ vā balāgraṃ vā senāvyūhaṃ vā anīkadarśanaṃ vā pātayantikā 47",
+   "T1436": "「若比丘，乃至二宿軍中住，觀軍發行、主將幢麾、軍陣合戰，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.57. tatrāpi ca bhikṣu dvirātraṃ vā trirātraṃ vā senāyāṃ vasamāno āyūhikaṃ vā niyūddhikaṃ vā anekavyūhaṃ vā saṃgrāmaśīrṣaṃ vā darśanāya gaccheya pācattikaṃ /",
+   "T1426": "「若比丘，有因緣事得到軍中三宿，若看軍發行牙旗鬪勢，波夜提。",
+   "T1460": "「若比丘，軍中住若二宿若三宿，觀軍發行勢力幢麾，種種觀視心生樂順，波逸提。",
+   "sa-mula": "Pāy.47 (PrMoSū_Mū-Banerjee) dvirātraparamam api ced bhikṣus tasyāṃ senāyāṃ vipravasāṃ udyūṣikāṃ vā gacched dhvajāgraṃ vā balāgraṃ vā senāvyūham anīkadarśanaṃ vā pratyanubhavet pāyantikā /",
+   "T1454": "「若復苾芻，在軍中經二宿，觀整裝軍，見先旗兵及看布陣散兵者，波逸底迦。"
+  },
+  "pc51": {
+   "pi": "Chapter 6. Surāpāna Pācittiya 51. Surāpāna Surāmerayapāne pācittiyaṁ.",
+   "T1429": "「若比丘！飲酒者，波逸提。",
+   "T1422a": "「若比丘，飲酒，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.79: surāmaireyamadyapānāt pātayantikā 79",
+   "T1436": "「若比丘，飲酒，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.76. surāmaireyamadya[pānaṃ] pācattikaṃ /",
+   "T1426": "「若比丘，飲酒，咽咽波夜提。",
+   "T1460": "「若比丘，飲酒者，波逸提。",
+   "sa-mula": "Pāy.79 (PrMoSū_Mū-Banerjee) surāmaireyamadyapānāt pāyantikā /",
+   "T1454": "「若復苾芻，飲諸酒者，波逸底迦。"
+  },
+  "pc52": {
+   "pi": "Pācittiya 52. Aṅgulipatodaka Aṅgulipatodake pācittiyaṁ.",
+   "T1429": "「若比丘！以指相擊攊者，波逸提。",
+   "T1422a": "「若比丘，擊攊比丘，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.63: aṅgulipratodanāt pātayantikā (6)3",
+   "T1436": "「若比丘，指痛挃，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.67. aṅgulipratodanake pācattikaṃ /",
+   "T1426": "「若比丘，以指相指，波夜提。",
+   "T1460": "「若比丘，擊攊比丘，波逸提。",
+   "sa-mula": "Pāy.63 (PrMoSū_Mū-Banerjee) aṅgulipratodanāt pāyantikā /",
+   "T1454": "「若復苾芻，以指擊攊他者，波逸底迦。"
+  },
+  "pc53": {
+   "pi": "Pācittiya 53. Hasadhamma Udake hasadhamme pācittiyaṁ.",
+   "T1429": "「若比丘！水中嬉戲者，波逸提。",
+   "T1422a": "「若比丘，水中戲，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.64: udakaharṣaṇāt pātayantikā (6)4",
+   "T1436": "「若比丘，水中戲，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.66. udakahastasaṃmardanāt pācattikaṃ /",
+   "T1426": "「若比丘，水中戲，波夜提。",
+   "T1460": "「若比丘，水中戲，波逸提。",
+   "sa-mula": "Pāy.64 (PrMoSū_Mū-Banerjee) udakaharṣaṇāt pāyantikā /",
+   "T1454": "「若復苾芻，水中戲者，波逸底迦。"
+  },
+  "pc54": {
+   "pi": "Pācittiya 54. Anādariya Anādariye pācittiyaṁ.",
+   "T1429": "「若比丘！不受諫者，波逸提。",
+   "T1422a": "「若比丘，輕師及戒，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.78: anādareyakāt pātayantikā (7)8",
+   "T1436": "「若比丘，輕他比丘，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.77. bhikṣunādarye pācattikaṃ /",
+   "T1426": "「若比丘，輕他比丘，波夜提。",
+   "T1460": "「若比丘，不恭敬，波逸提。",
+   "sa-mula": "Pāy.78 (PrMoSū_Mū-Banerjee) anādaravṛttāt pāyantikā /",
+   "T1454": "「若復苾芻，不恭敬者，波逸底迦。"
+  },
+  "pc55": {
+   "pi": "Pācittiya 55. Bhiṁsāpana Yo pana bhikkhu bhikkhuṁ bhiṁsāpeyya, pācittiyaṁ.",
+   "T1429": "「若比丘！恐怖他比丘者，波逸提。",
+   "T1422a": "「若比丘，故恐怖比丘，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.66: yaḥ punar bhikṣur bhikṣuṃ bhīṣayed bhīṣāpayed vā antato hāsyaprekṣyam api pātayantikā (6)6",
+   "T1436": "「若比丘，自恐怖他比丘、若使人恐怖，乃至戲笑，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.65. yo puna bhikṣur bhikṣuṃ bhīṣeya pācattikam /",
+   "T1426": "「若比丘，恐怖比丘，波夜提。",
+   "T1460": "「若比丘，恐他比丘，乃至戲笑，波逸提。",
+   "sa-mula": "Pāy.66 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur bhikṣuṃ bhīṣayed bhīṣāpayed vāntato hāsyaprekṣyam api pāyantikā /",
+   "T1454": "「若復苾芻，若自恐怖、若教人恐怖他苾芻，下至戲笑者，波逸底迦。"
+  },
+  "pc56": {
+   "pi": "Pācittiya 56. Joti Yo pana bhikkhu agilāno visibbanāpekkho jotiṁ samādaheyya vā samādahāpeyya vā aññatra tathārūpappaccayā, pācittiyaṁ.",
+   "T1429": "「若比丘！無病自為炙身故，在露地然火，若教人然，除時因緣，波逸提。",
+   "T1422a": "「若比丘，無病，為炙故自然火、若使人然，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.52: yaḥ punar bhikṣur aglāno vitapanaprekṣī abhyavakāśe jyotiḥ samindhyāt samedhayed vānyatra pratyayāt pātayantikā (5)2",
+   "T1436": "「若比丘，無病欲露地自炙，若草木、牛屎、糞掃，若自燒、若使人燒，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.41. yo puna bhikṣur ātmārthāya agilāno jyotismiṃ vitāpanāprekṣo tṛṇaṃ vā kāṣṭhaṃ vā gomayaṃ vā sakalikāṃ vā tuṣaṃ vā saṃkāraṃ vā ādaheya vā ādahāpeya vā anyatra samaye pācattikaṃ /",
+   "T1426": "「若比丘，無病，自為身然草木牛屎，若自然、若使人然，除因緣，波夜提。",
+   "T1460": "「若比丘，無病因緣，露地然火、若教人然，波逸提。",
+   "sa-mula": "Pāy.52 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur ātmārtham aglāno vitapanaprekṣī jyotiḥ samavadhavyāt samavadhāpayed vā pāyantikā /",
+   "T1454": "「若復苾芻，無病為身，若自然火、若教他然者，波逸底迦。"
+  },
+  "pc57": {
+   "pi": "Pācittiya 57. Nahāna Yo pana bhikkhu orenaddhamāsaṁ nahāyeyya aññatra samayā, pācittiyaṁ. Tatthāyaṁ samayo “diyaḍḍho māso seso gimhāna”nti “vassānassa paṭhamo māso” iccete aḍḍhateyyamāsā uṇhasamayo, pariḷāhasamayo, gilānasamayo, kammasamayo, addhānagamanasamayo, vātavuṭṭhisamayo, ayaṁ tattha samayo.",
+   "T1429": "「若比丘！半月洗浴，無病比丘應受，不得過，除餘時，波逸提。餘時者：熱時、病時、作時、風時、雨時、道行時，此是餘時。",
+   "T1422a": "「若比丘，半月內浴，除因緣，波逸提。因緣者，病時、作時、行時、風雨時、熱時，是名因緣。",
+   "sa-sarv": "PrMoSū_Pāt.60: ardhamāsikaṃ snātram anyatra samayāt tadatikrāmataḥ pātayantikā tatrāyaṃ samayaḥ sārdho māsaḥ śeṣo grīṣmasya pūrvo māso varṣāṇām etau sārdhau dvau māsau paridāghasamayaḥ avaśiṣṭaṃ glānasamayaḥ karmasamayo vātasamayo vṛṣṭisamayo 'dhvānamārgasamayo 'yaṃ tatra samayaḥ 60 //",
+   "T1436": "「若比丘，半月內浴，波夜提；除因緣。因緣者，春殘一月半、夏初一月，是二月半名熱時。除病時、風時、雨時、作時、行路時，是名因緣。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.50. anvardhamāsaṃ snānam uktaṃ bhagavatā / anyatra samaye pācattikaṃ / tatrāyaṃ samayo Ō dvyardho māso śeṣo grīṣmāṇāṃ, varṣāṇāṃ ca purimo māso ity ete aḍḍhātīyamāsāḥ, paridāhakālasamayo, adhvānagamanakālasamayo, gilānasamayo, karmasamayo, vātasamayo, vṛṣṭisamayo / ayam atra samayo / // uddānam // (41) jyotiḥ (42) sahagāra (43) cchandam (44) udyojanā (45-47) trayo 'ntarāyikā (48) akṛtakalpaṃ (49) ratanaṃ (50) snānena // pañcamo vargaḥ //",
+   "T1426": "「若比丘，減半月浴，除餘時，波夜提。餘時者，春後一月半、夏初一月。此二月半，是熱時、病時、風時、雨時、作時、行時。（五十事竟）",
+   "T1460": "「若比丘，半月浴，除餘時，波逸提。餘時者，熱時、病時、作時、風時、雨時、行時，此是時。",
+   "sa-mula": "Pāy.60 (PrMoSū_Mū-Banerjee) bhagavatā deśitam anvardhamāsaṃ snāyād anyatra samayāt tadatikramāt pāyantikā / ayaṃ tatra samayaḥ -- adhyardho māsaḥ śeṣo grīṣmāṇāṃ pūrvo māso varṣāṇāṃ ity ete ardhatṛtīyamāsā uṣṇasamayo 'vaśiṣṭaṃ glānasamayaḥ karmasamayo vṛṣṭisamayo vātavṛṣṭisamayo 'yaṃ tatra samayaḥ /",
+   "T1454": "「若復苾芻，半月應洗浴，故違而浴者，除餘時，波逸底迦。餘時者，熱時、病時、作時、行時、風時、雨時、風雨時，此是時。」"
+  },
+  "pc58": {
+   "pi": "Pācittiya 58. Dubbaṇṇakaraṇa Navaṁ pana bhikkhunā cīvaralābhena tiṇṇaṁ dubbaṇṇakaraṇānaṁ aññataraṁ dubbaṇṇakaraṇaṁ ādātabbaṁ nīlaṁ vā kaddamaṁ vā kāḷasāmaṁ vā. Anādā ce bhikkhu tiṇṇaṁ dubbaṇṇakaraṇānaṁ aññataraṁ dubbaṇṇakaraṇaṁ navaṁ cīvaraṁ paribhuñjeyya, pācittiyaṁ.",
+   "T1429": "「若比丘！得新衣，應作三種壞色，一一色中隨意壞，若青、若黑、若木蘭。若比丘！不以三種壞色，若青、若黑、若木蘭，著餘新衣者，波逸提（六十）。",
+   "T1422a": "「若比丘，新得衣應三種色作幟，若青、若黑、若木蘭。若不以三色作幟，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.59: navacīvarapratilābhād bhikṣuṇā trayāṇāṃ durvarṇīkaraṇānām anyatamānyatamam ādātavyaṃ navasya durvarṇīkaraṇāya nīlaṃ vā kardamo vā kāḍiśāmo vā anādāya ced bhikṣus trayāṇāṃ durvarṇīkaraṇānām anyatamānyatamaṃ durvarṇīkaraṇaṃ navaṃ cīvaraṃ paribhuṃjīta pātayantikā 59",
+   "T1436": "「若比丘，得新衣應三種壞色一一壞色：若青、若泥、若木蘭。若比丘三種壞色中不一一壞色：若青、若泥、若木蘭，作新衣，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.48. navacīvaralābhinā bhikṣuṇā trayāṇāṃ durvarṇīkaraṇānām anyatarānyataraṃ durvaṇīkaraṇam ādayitavyaṃ Ō nīlaṃ vā kardamaṃ vā kālaśyāmaṃ vā / tato ca bhikṣur anādāya navaṃ cīvaraṃ paribhuṃjeya pācattikaṃ /",
+   "T1426": "「若比丘，得新衣當三種壞色，若一一壞色青、黑、木蘭。若不壞色受用者，波夜提。",
+   "T1460": "「若比丘，得新衣不作壞色，青、黑、木蘭，波逸提。",
+   "sa-mula": "Pāy.58 (PrMoSū_Mū-Banerjee) navaṃ khalu bhikṣuṇā cīvaraṃ pratilabhya trayāṇāṃ durvarṇīkaraṇānām anyatamānyatamaḥ nīlo vā lohito vā pīto vā durvarṇīkaraṇāya ādātavyo 'nādāya ced bhikṣus trayāṇāṃ durvarṇīkaraṇānām anyatamānyatamaṃ durvaṇīkaraṇaṃ nīlaṃ vā lohitaṃ vā pītaṃ vā navaṃ cīvaraṃ paribhuṃjīta pāyantikā /",
+   "T1454": "「若復苾芻，得新衣，當作三種染壞色：若青、若泥、若赤，隨一而壞。若不作三種壞色而受用者，波逸底迦。"
+  },
+  "pc59": {
+   "pi": "Pācittiya 59. Vikappana Yo pana bhikkhu bhikkhussa vā bhikkhuniyā vā sikkhamānāya vā sāmaṇerassa vā sāmaṇeriyā vā sāmaṁ cīvaraṁ vikappetvā appaccuddhāraṇaṁ paribhuñjeyya, pācittiyaṁ.",
+   "T1429": "「若比丘！與比丘、比丘尼、式叉摩那、沙彌、沙彌尼衣，後不語主還取著者，波逸提。",
+   "T1422a": "「若比丘，與比丘、比丘尼、式叉摩那、沙彌、沙彌尼淨施衣，還奪，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.68: yaḥ punar bhikṣur bhikṣoḥ pātraṃ vā cīvaram vā dat(t)vā tataḥ paścād apratyuddhārya paribhuṃjīta pātayantikā 68",
+   "T1436": "「若比丘，與比丘、比丘尼、式叉摩那、沙彌、沙彌尼衣輒還用，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.63. yo puna bhikṣu bhikṣusya vā bhikṣuṇīye vā śrāmaṇerasya vā śrāmaṇerīye vā śikṣamāṇāye vā cīvaraṃ datvā apratyuddhareya paribhuṃjeya, apratyuddhāraparibhoge pācattikaṃ /",
+   "T1426": "「若比丘，淨施五眾衣，後不捨而受用者，波夜提。",
+   "T1460": "「若比丘，淨施沙彌衣鉢，不問輒用，波逸提。",
+   "sa-mula": "Pāy.68 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur bhikṣoś cīvaram vikalya tataḥ paścād apratyuddhārya paribhuṃjīta pāyantikā /",
+   "T1454": "「若復苾芻，受他寄衣，後時不問主，輒自著用者，波逸底迦。"
+  },
+  "pc60": {
+   "pi": "Pācittiya 60. Apanidhāna Yo pana bhikkhu bhikkhussa pattaṁ vā cīvaraṁ vā nisīdanaṁ vā sūcigharaṁ vā kāyabandhanaṁ vā apanidheyya vā apanidhāpeyya vā antamaso hasāpekkhopi, pācittiyaṁ. Surāpānavaggo chaṭṭho",
+   "T1429": "「若比丘！藏他比丘衣、鉢、坐具、針筒，若自藏，教人藏，下至戲笑者，波逸提。",
+   "T1422a": "「若比丘，為戲笑故，藏比丘若衣若鉢、坐具針筒。如是一一生活具，若使人藏，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.67: yaḥ punar bhikṣur bhikṣoḥ pātraṃ vā cīvaraṃ vā kuñcikaṃ vā upānahaṃ vā sūcīgharakaṃ vā anyatamānyatamaṃ vā śrāmaṇakaṃ pariṣkāram upanidadhyād upanidhāpayed vā antato hāsyaprekṣyam api pātayantikā 67",
+   "T1436": "「若比丘，他比丘若鉢、若衣、若戶鉤𨷲、若革屣、若針筒，如是一一生活具，若自藏、若使人藏，乃至戲笑，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.64. yo puna bhikṣu bhikṣusya pātraṃ vā cīvaraṃ vā niṣīdanaṃ vā sūcīvigrahaṃ vā apaniheya vā apanihāpeya vā antamaśato hāsyārthaṃ pi pācattikaṃ /",
+   "T1426": "「若比丘，戲笑藏比丘衣鉢尼師壇針筒、若使人藏，波夜提。",
+   "T1460": "「若比丘，藏他比丘衣鉢資具、若教人藏，乃至戲笑，除餘時，波逸提。",
+   "sa-mula": "Pāy.67 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur bhikṣor vā bhikṣuṇyā vā śikṣamāṇāyā vā śrāmaṇerasya vā śrāmaṇerikāyā vā pātraṃ vā cīvaraṃ vā upānahaṃ vā sūcīgharaṃ vā kāyabandhanaṃ vānyatamānyatamaṃ vā jīvitapariṣkāram upanidadhyād upanidhāpayet tadrūpapratyayād anyatra pāyantikā /",
+   "T1454": "「若復苾芻，自藏苾芻、苾芻尼、若正學女、求寂、求寂女衣鉢及餘資具、若教人藏，除餘緣故，波逸底迦。"
+  },
+  "pc61": {
+   "pi": "Chapter 7. Sappāṇa Pācittiya 61. Sañcicca Yo pana bhikkhu sañcicca pāṇaṁ jīvitā voropeyya, pācittiyaṁ.",
+   "T1429": "「若比丘！故殺畜生命者，波逸提。",
+   "T1422a": "「若比丘，故奪畜生命，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.61: yaḥ punar bhikṣuḥ saṃcintya tīryagyonigataṃ prāṇinaṃ jīvitād vyaparopayet pātayantikā 61",
+   "T1436": "「若比丘，故奪畜生命，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.61. yo puna bhikṣuḥ saṃcintya tiryagyonigataṃ prāṇinaṃ jīvitād vyaparopeya pācattikaṃ /",
+   "T1426": "「若比丘，故奪畜生命，波夜提。",
+   "T1460": "「若比丘，故斷畜生命，波逸提。",
+   "sa-mula": "Pāy.61 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣuḥ saṃcintya tīryagyonigataṃ prāṇinaṃ jīvitād vyaparopayet pāyantikā /",
+   "T1454": "第七攝頌曰：殺傍生故惱，擊攊水同眠， 怖藏資寄衣，無根女同路。「若復苾芻，故斷傍生命者，波逸底迦。"
+  },
+  "pc62": {
+   "pi": "Pācittiya 62. Sappāṇaka Yo pana bhikkhu jānaṁ sappāṇakaṁ udakaṁ paribhuñjeyya, pācittiyaṁ.",
+   "T1429": "「若比丘！知水有蟲飲用者，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.41: yaḥ punar bhikṣur jānaṃ saprāṇakam udakaṃ paribhuṃjīta pātayantikā 41",
+   "T1436": "「若比丘，知水有蟲取用，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.51. yo puna bhikṣur jānan saprāṇakam udakaṃ paribhuñjeya pācattikaṃ /",
+   "T1426": "「若比丘，知水有虫飲者，波夜提。",
+   "T1460": "「若比丘，知水有蟲，飲用者，波逸提。",
+   "sa-mula": "Pāy.41 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur jānan saprāṇakam udakaṃ paribhuñjīta pāyantikā /",
+   "T1454": "第五攝頌曰：虫水二食舍，無服往觀軍， 兩夜觀遊兵，打擬覆麁罪。「若復苾芻，知水有虫受用者，波逸底迦。"
+  },
+  "pc63": {
+   "pi": "Pācittiya 63. Ukkoṭana Yo pana bhikkhu jānaṁ yathādhammaṁ nihatādhikaraṇaṁ punakammāya ukkoṭeyya, pācittiyaṁ.",
+   "T1429": "「若比丘！知諍事，如法懺悔已，後更發起者，波逸提。",
+   "T1422a": "「若比丘，知僧如法斷事竟還發起，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.4: yaḥ punar bhikṣur jānaṃ saṃghena yathādharmaṃ nikṣiptam adhikaraṇaṃ punaḥ karmaṇy utkoṭayet pātayantikā 4",
+   "T1436": "「若比丘，知僧如法斷事竟，還更發起，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.4. yo puna bhikṣur jānaṃ saṃghasyādhikaraṇāni dharmeṇa vinayena vihitāni vyupaśāntāni punaḥ karmāya utkhoṭeya Ō idaṃ punaḥ karma kartavyaṃ bhaviṣyatīti Ō etad eva pratyayaṃ kṛtvā ananyam imaṃ tasya bhikṣusya utkhoṭanaṃ pācattikaṃ /",
+   "T1426": "「若比丘，知僧如法如律滅諍已，更發起言：『此羯磨不了，當更作。』作是因緣不異，波夜提。",
+   "T1460": "「若比丘，僧如法斷事後發起，波逸提。",
+   "sa-mula": "Pāy.4 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur jānan samagreṇa saṃghena yathādharmam adhikaraṇam upanikṣiptaṃ punaḥ karmaṇaḥ khoṭayet pāyantikā /",
+   "T1454": "「若復苾芻，知和合僧伽如法斷諍，事已除滅，後於羯磨處更發舉者，波逸底迦。"
+  },
+  "pc64": {
+   "pi": "Pācittiya 64. Duṭṭhulla Yo pana bhikkhu bhikkhussa jānaṁ duṭṭhullaṁ āpattiṁ paṭicchādeyya, pācittiyaṁ.",
+   "T1429": "「若比丘！知他比丘犯麁罪，覆藏者，波逸提。",
+   "T1422a": "「若比丘，知比丘犯麁罪，覆藏過一宿，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.50: (yaḥ) punar bhikṣur bhikṣor j(ā)naṃ duṣṭhūlāpatti(ṃ) praticchādayed antata ekarātram api pā(tayantikā) 50",
+   "T1436": "「若比丘，知他比丘麁罪，覆藏乃至一宿，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.60. yo puna bhikṣur jānan bhikṣusya duṣṭhullām āpattiṃ kṛtām adhyācīrṇāṃ cchādeya, so na pareṣām āroceya kiṃ ti se mā pare jānantū ti / avadya praticchādane pācattikaṃ / // uddānaṃ // (51) saprāṇakam (52) acelako (53) anupakhajjaṃ (54) praticchannāsanaṃ (55-57) trayaṃ senāyāṃ (58) praharati (59) talaśaktikā (60) praticchādanena // ṣaṣṭho vargaḥ //",
+   "T1426": "「若比丘，知比丘麁罪覆藏者，波夜提。（六十事竟）",
+   "T1460": "「若比丘，知他比丘有麁惡罪，覆藏者，波逸提。",
+   "sa-mula": "Pāy.50 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur jānan bhikṣoḥ duṣṭhulām āpattiṃ praticchādayet pāyantikā /",
+   "T1454": "「若復苾芻，知他苾芻有麁惡罪，覆藏者，波逸底迦。」"
+  },
+  "pc65": {
+   "pi": "Pācittiya 65. Ūnavīsativassa Yo pana bhikkhu jānaṁ ūnavīsativassaṁ puggalaṁ upasampādeyya, so ca puggalo anupasampanno, te ca bhikkhū gārayhā, idaṁ tasmiṁ pācittiyaṁ.",
+   "T1429": "「若比丘！知年不滿二十，與受大戒，此人不得戒；彼比丘可呵，癡故，波逸提。",
+   "T1422a": "「若比丘，知不滿二十歲與受具足戒，波逸提。是人不得戒，諸比丘亦可呵。是法應爾。",
+   "sa-sarv": "PrMoSū_Pāt.72: yaḥ punar bhikṣur ūnaviṃśativarṣaṃ pudgalaṃ bhikṣubhāvenopasaṃpādayet pātayantikā sa ca pudgalo 'nupasaṃpannas te ca bhikṣavo garhyā iyaṃ tatra sāmīciḥ 72",
+   "T1436": "「若比丘，不滿二十歲人與受具足戒，波夜提。是人不得戒，諸比丘亦可呵，是事法爾。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.71. yo puna bhikṣur jānan ūnaviṃśativarṣapudgalaṃ bhikṣubhāvāya upasaṃpādeya, so ca pudgalo anupasaṃpanno, te ca bhikṣū gārhyāṃ, imaṃ teṣāṃ bhikṣūṇāṃ garhaṇapācattikaṃ /",
+   "T1426": "「若比丘，知人不滿二十，與受具足戒，是人不名受具足。諸比丘應被呵，波夜提。",
+   "T1460": "「若比丘，知年未滿二十，與受具足戒，波逸提。此人不得戒，眾僧有犯。此法如是。",
+   "sa-mula": "Pāy.72 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur ūnaviṃśavarṣaṃ pudgalaṃ bhikṣubhāvāyopasaṃpādayeta pāyantikā / sa ca pudgalo 'nupasaṃpannas te ca bhikṣavo garhyā ayaṃ tatra samayaḥ /",
+   "T1454": "「若復苾芻，知年未滿二十，與受近圓成苾芻性者，波逸底迦。此非近圓，諸苾芻得罪。"
+  },
+  "pc66": {
+   "pi": "Pācittiya 66. Theyyasattha Yo pana bhikkhu jānaṁ theyyasatthena saddhiṁ saṁvidhāya ekaddhānamaggaṁ paṭipajjeyya antamaso gāmantarampi, pācittiyaṁ.",
+   "T1429": "「若比丘！知是賊伴，結要，共同一道行，乃至一村間者，波逸提。",
+   "T1422a": "「若比丘，與賊期共道行，從此聚落到彼聚落，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.71: yaḥ punar bhikṣuḥ steyasārthena sārdhaṃ saṃvidhāya samānamārgaṃ pratipadyeta antato grāmāntaram api pātayantikā 71",
+   "T1436": "「若比丘，與賊眾議共道行，乃至到一聚落，波夜提。（七十）",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.72. yo puna bhikṣur jānan stainyasārthena sārdhaṃ saṃvidhāya adhvānamārgaṃ pratipadyeya antamaśato grāmāntaraṃ pi pācattikaṃ /",
+   "T1426": "「若比丘，知賊眾期共道行，下至聚落中，波夜提。",
+   "T1460": "「若比丘，知是賊伴，共同道行，乃至一村間，波逸提。",
+   "sa-mula": "Pāy.71 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣuḥ steyasārthena sārdhaṃ saṃvidhāyādhvamārgaṃ pratipadyetāntato grāmāntaram api pāyantikā /",
+   "T1454": "第八攝頌曰：賊徒年未滿，掘地請違教， 竊聽默然去，不敬酒非時。「若復苾芻，與賊商旅共同道行，乃至一村間者，波逸底迦。"
+  },
+  "pc67": {
+   "pi": "Pācittiya 67. Saṁvidhāna Yo pana bhikkhu mātugāmena saddhiṁ saṁvidhāya ekaddhānamaggaṁ paṭipajjeyya antamaso gāmantarampi, pācittiyaṁ.",
+   "T1429": "「若比丘！與婦女，共期同一道行，乃至一村間，波逸提（三十）。",
+   "T1422a": "「若比丘，與女人期共道行，從此聚落到彼聚落，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.70: yaḥ punar bhikṣur mātṛgrāmeṇa sārdhaṃ saṃvidhāya samānamārgaṃ pratipadyeta antato grāmāntaram api pātayantikā 70 //",
+   "T1436": "「若比丘，與女人議共道行，乃至到一聚落，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.68. yo puna bhikṣu mātṛgrāmeṇa sārdhaṃ saṃvidhāya adhvānamārgaṃ pratipadyeya antamaśato grāmāntaraṃ pi pācattikaṃ /",
+   "T1426": "「若比丘，與女人期共道行，下至聚落中，波夜提。",
+   "T1460": "「若比丘，與女人同路行，乃至一村間，波逸提。",
+   "sa-mula": "Pāy.70 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur apuruṣayā striyā sārdhaṃ saṃvidhāyādhvamārgaṃ pratipadyetāntato grāmāntaram api pāyantikā /",
+   "T1454": "「若復苾芻，共女人同道行，更無男子，乃至一村間者，波逸底迦。」"
+  },
+  "pc68": {
+   "pi": "Pācittiya 68. Ariṭṭha Yo pana bhikkhu evaṁ vadeyya “tathāhaṁ bhagavatā dhammaṁ desitaṁ ājānāmi, yathā yeme antarāyikā dhammā vuttā bhagavatā, te paṭisevato nālaṁ antarāyāyā”ti, so bhikkhu bhikkhūhi evamassa vacanīyo “māyasmā evaṁ avaca, mā bhagavantaṁ abbhācikkhi, na hi sādhu bhagavato abbhakkhānaṁ, na hi bhagavā evaṁ vadeyya, anekapariyāyenāvuso antarāyikā dhammā antarāyikā vuttā bhagavatā, alañca pana te paṭisevato antarāyāyā”ti. Evañca so bhikkhu bhikkhūhi vuccamāno tatheva paggaṇheyya, so bhikkhu bhikkhūhi yāvatatiyaṁ samanubhāsitabbo tassa paṭinissaggāya. Yāvatatiyañce samanubhāsiyamāno taṁ paṭinissajjeyya, iccetaṁ kusalaṁ. No ce paṭinissajjeyya, pācittiyaṁ.",
+   "T1429": "「若比丘！作如是語：『我知佛所說法，行婬欲，非障道法。』彼比丘諫此比丘言：『大德！莫作是語，莫謗世尊，謗世尊者不善，世尊不作是語，世尊無數方便，說行婬欲是障道法。』彼比丘諫此比丘時，堅持不捨，彼比丘乃至三諫。捨此事故，若三諫捨者善，不捨者，波逸提。",
+   "T1422a": "「若比丘，作是語：『如我解佛所說，障道法不能障道。』諸比丘語彼比丘：『汝莫作是語，莫謗佛、莫誣佛。佛說障道法實能障道。汝捨是惡邪見。』如是諫，堅持不捨，應第二、第三諫。捨是事善，不捨者波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.55: yaḥ punar bhikṣur evaṃ vadet tathāhaṃ bhagavato dharma(ṃ) deśitam ājānāmi ye antarāyikā dharmās tāṃ pratiṣevato nālam antarāyāyeti sa bhikṣur bhikṣubhir evaṃ syād vacanīyo mā tvam āyuṣmann evaṃ vada tathāhaṃ bhagavato dharmaṃ deśitam ājānāmi ye antarāyikā dharmās tāṃ pratiṣevato nālam antarāyāyeti mā bhagavantaṃ vivada mā bhagavantam abhyākhyāhi na sādhu bhagavato 'bhyākhyānaṃ bhavati na ca punar bhagavān evaṃ vaded anekaparyāyeṇa bhagavatā antarāyikā dharmāḥ samānā antarāyikā dharmā ity uktās tāṃś ca pratiṣevato 'lam antarāyāyeti niḥsṛja tvam āyuṣmann idam evaṃrūpaṃ pāpakaṃ dṛṣṭigatam eva(ṃ) ce(t sa) bhikṣur bhikṣubhir ucyamānas tad vastu pratiniḥsṛjed ity evaṃ kuśalaṃ na cet pratiniḥsṛjed dvir api trir api samanuśāsitavyas tasya vastunaḥ pratiniḥsargāya (dv)ir api trir api samanuśiṣyamāṇas tad vastu pratiniḥsṛjed ity evaṃ kuśalaṃ no cet pratiniḥsṛjet pātayantikā 55",
+   "T1436": "「若比丘，作是言：『我如是知佛法義，行障道法不能障道。』是比丘，諸比丘應如是諫：『汝大德！莫作是語：「我如是知佛法義，行障道法不能障道。」汝莫謗佛、莫誣佛，謗佛不善。佛不作是語，佛種種因緣說行障道法實障道。汝大德！捨是惡邪見。』是比丘，諸比丘如是諫時，若堅持是事不捨，諸比丘應第二、第三諫。捨是事好；若不捨，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.45. yo puna bhikṣu bhikṣūn evaṃ vadeya / tathāham āyuṣmanto bhagavatā dharmaṃ deśitam ājānāmi yathā ye ime antarāyikā dharmā uktā bhagavatā tān pratisevato nālam antarāyāya / so bhikṣu bhikṣūhi evam asya vacanīyo Ō mā āyuṣmann evaṃ vada, mā bhagavantam abhyācakṣa asatā durgṛhītena / antarāyikā evāyuṣman dharmāḥ samānā antarāyikā dharmā uktā bhagavatā, alaṃ ca punas tān pratiṣevato antarāyāya / evaṃ ca so bhikṣu bhikṣūhi vucyamāno taṃ vastuṃ pratinissareya ity etaṃ kuśalaṃ / no ca pratinissareya so bhikṣu bhikṣūhi yāvantṛtīyakaṃ samanugrāhitavyo samanubhāṣitavyo tasya vastusya pratinissargāya / yāvantṛtīyakaṃ samanugrāhiyamāṇo vā samanubhāṣiyamāṇo vā taṃ vastuṃ pratinissareya ity etaṃ kuśalaṃ / no ca pratinissareya so bhikṣuḥ samagreṇa saṃghena utkṣipitavyo / imaṃ tasya bhikṣusya utkṣepaṇapācattikaṃ /",
+   "T1426": "「若比丘作是語：『長老！我知世尊說障道法，習此法不能障道。』諸比丘應諫言：『長老！汝莫謗世尊！謗世尊者不善，世尊不作是語。世尊說障道法實障道。汝捨此惡事。』如是諫時，若堅持不捨，應第二、第三諫，捨者善；若不捨，僧應作舉羯磨。是比丘，波夜提。",
+   "T1460": "「若比丘，如是說：『我知佛法義，行婬欲不障道。』諸比丘應諫此比丘言：『長老！莫作是語，莫謗世尊，謗世尊者不善。世尊不作是說，世尊無數方便說行婬欲是障道法。如是世尊說欲障道，長老捨此惡見。』是比丘如是諫時，捨者善；若不捨，彼比丘應三諫，捨是事故。乃至三諫，捨者善；若不捨，波逸提。",
+   "sa-mula": "Pāy.55 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur evaṃ vadet tathāhaṃ bhagavato dharmaṃ deśitam ājānāmi yathā ye antarāyikā dharmā uktā bhagavatā te pratisevyamānā nālam antarāyāyeti / so bhikṣur bhikṣubhir idaṃ syād vacanīyo mā tvam āyuṣmann evaṃ vocas tathāhaṃ bhagavato dharmaṃ deśitam ājānāmi yathā ye antarāyikā dharmā uktā bhagavatā te ca pratisevyamānā nālam antarāyāya iti / mā bhagavantam abhyācakṣuḥ na sādhu bhavati bhagavato 'bhyākhyānaṃ na ca punar bhagavān evam āha anekaparyāyeṇa āyuṣmann antarāyikā dharmāḥ santaḥ antarāyikā evoktā bhagavatā te ca pratisevyamānā alam antarāyāyeti niḥsṛja tvam āyuṣmann evaṃrūpaṃ pāpakaṃ dṛṣṭigataṃ / so bhikṣur bhikṣubhir ucyamānas tad vastu pratiniḥsṛjed ity evaṃ kuśalaṃ no cet pratiniḥsṛjed dvir api trir api samanuyoktavyaḥ samanuśāsitavyas tasya pratiniḥsargāya dvir api trir api samanuyujyamānaḥ samanuśiṣyamānas tad vastu pratiniḥsṛjed ity evaṃ kuśalaṃ no cet pratiniḥsṛjet pāyantikā /",
+   "T1454": "「若復苾芻，作如是語：『我知佛所說法「欲是障礙」者，習行之時非是障礙。』諸苾芻應語彼苾芻言：『汝莫作是語：「我知佛所說『欲是障礙法』者，習行之時非是障礙。」汝莫謗世尊，謗世尊者不善。世尊不作是語，世尊以無量門於諸欲法說為障礙。汝可棄捨如是惡見。』諸苾芻如是諫時，捨者善。若不捨者，應可再三殷勤正諫，隨教應詰，令捨是事。捨者善；若不捨者，波逸底迦。"
+  },
+  "pc69": {
+   "pi": "Pācittiya 69. Ukkhittasambhoga Yo pana bhikkhu jānaṁ tathāvādinā bhikkhunā akaṭānudhammena taṁ diṭṭhiṁ appaṭinissaṭṭhena saddhiṁ sambhuñjeyya vā, saṁvaseyya vā, saha vā seyyaṁ kappeyya, pācittiyaṁ.",
+   "T1429": "「若比丘！知如是語人未作法，如是邪見而不捨，供給所須，共同羯磨，止宿言語者，波逸提。",
+   "T1422a": "「若比丘，知彼比丘不如法悔、不捨惡邪見，共坐共語、共宿共事，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.56: yaḥ punar bhikṣur jānaṃs tathāvādinaṃ pudgalam akṛtānudharmāṇam apratiniḥsṛṣṭena pāpakena dṛṣṭigatena saṃbhuṃjīta vā saṃvased vā tena vā sārdhaṃ sahāgāraśayyāṃ kalpayet pātayantikā (5)6",
+   "T1436": "「若比丘，知是人如是語不如法悔，不捨是惡邪見故擯。若畜使共事、共語、共宿，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.46. yo puna bhikṣur jānan bhikṣuṃ tathā utkṣiptaṃ samagreṇa saṃghena dharmeṇa vinayena yathāvādiṃ tathākāriṃ tāṃ pāpikāṃ dṛṣṭiṃ apratinissarantaṃ akṛtānudharmaṃ saṃbhuñjeya vā saṃvaseya vā sahagāraśayyāṃ vā kalpeya pācattikaṃ /",
+   "T1426": "「若比丘，知比丘惡見不捨，僧如法、如律作舉羯磨。未作如法、如律，共食、共同屋住，波夜提。",
+   "T1460": "「若比丘，知如是人未捨惡見，共宿共食、同一羯磨，波逸提。",
+   "sa-mula": "Pāy.56 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur jānaṃs tathāvādinaṃ pudgalam akṛtānudharmāṇam apratiniḥsṛṣṭe tasmin pāpake dṛṣṭigate ālāpayet saṃlapet tena sārdhaṃ saṃvaset saṃbhuṃjīta sahāgāraśayyām api kalpayet pāyantikā /",
+   "T1454": "「若復苾芻知如是語人，未為隨法、不捨惡見。共為言說、共住受用、同室而宿者，波逸底迦。"
+  },
+  "pc70": {
+   "pi": "Pācittiya 70. Kaṇṭaka Samaṇuddesopi ce evaṁ vadeyya “tathāhaṁ bhagavatā dhammaṁ desitaṁ ājānāmi, yathā yeme antarāyikā dhammā vuttā bhagavatā, te paṭisevato nālaṁ antarāyāyā”ti, so samaṇuddeso bhikkhūhi evamassa vacanīyo “māvuso, samaṇuddesa evaṁ avaca, mā bhagavantaṁ abbhācikkhi, na hi sādhu bhagavato abbhakkhānaṁ, na hi bhagavā evaṁ vadeyya, anekapariyāyenāvuso, samaṇuddesa antarāyikā dhammā antarāyikā vuttā bhagavatā, alañca pana te paṭisevato antarāyāyā”ti, evañca so samaṇuddeso bhikkhūhi vuccamāno tatheva paggaṇheyya, so samaṇuddeso bhikkhūhi evamassa vacanīyo “ajjatagge te, āvuso, samaṇuddesa na ceva so bhagavā satthā apadisitabbo, yampi caññe samaṇuddesā labhanti bhikkhūhi saddhiṁ dirattatirattaṁ sahaseyyaṁ, sāpi te natthi, cara pire, vinassā”ti. Yo pana bhikkhu jānaṁ tathānāsitaṁ samaṇuddesaṁ upalāpeyya vā, upaṭṭhāpeyya vā, sambhuñjeyya vā, saha vā seyyaṁ kappeyya, pācittiyaṁ. Sappāṇakavaggo sattamo",
+   "T1429": "「若比丘！知沙彌作如是語：『我從佛聞法，行婬欲非障道法。』彼比丘諫此沙彌如是言：『汝莫誹謗世尊，謗世尊者不善。世尊不作是語。沙彌！世尊無數方便說婬欲是障道法。』彼比丘諫此沙彌時，堅持不捨。彼比丘應乃至再三呵諫，令捨此事故，乃至三諫，捨者善，不捨者，彼比丘，應語此沙彌言：『汝自今已去，不得言佛是我世尊，不得隨逐餘比丘，如諸沙彌得與比丘二、三宿，汝今無是事，汝出去、滅去，不應住此。』若比丘知如是眾中被擯沙彌，而誘將畜養共止宿言語者，波逸提（七十）。",
+   "T1422a": "「若沙彌作是語：『如我解佛所說，受五欲不能障道。』諸比丘語是沙彌：『汝莫作是語，莫謗佛、莫誣佛。佛說五欲障道實能障道。汝沙彌捨是惡邪見。』如是教，堅持不捨，應第二、第三教。第二、第三教捨是事善。若不捨，諸比丘應語是沙彌：『汝出去。從今莫言佛是我師，莫在比丘後行，如餘沙彌得共比丘二宿，汝亦無是事。癡人出去、滅去，莫此中住。』若比丘知如法擯沙彌，畜使共住共語，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.57: śramaṇoddeśaś ced evaṃ vadet tathāhaṃ bhagavato dharmaṃ deśitam ājānāmi yat kāmāṃ pratiṣevato nālam antarāyāyeti / sa śramaṇoddeśo bhikṣubhir evaṃ syād vacanīyo mā tvam āyuṣmaṃ śramaṇoddeśa evaṃ vada tathāhaṃ bhagavato dharmaṃ deśitam ājānāmi yat kāmāṃ pratiṣevato nālam antarāyāyeti mā bhagavantaṃ vivada mā bhagavantam abhyākhyāhi na sādhu bhagavato 'bhyākhyānaṃ bhavati na ca punar bhagavān evaṃ vaded anekaparyāyeṇa bhagavatā antarāyikāḥ kāmāḥ samānā antarāyikā ity uktās tāṃś ca pratiṣevato 'lam antarāyāyeti niḥsṛja tvaṃ śramaṇoddeśa idam evaṃrūpaṃ pāpakaṃ dṛṣṭigatam evaṃ cet sa śramaṇoddeśo bhikṣubhir ucyamānas tat pāpakaṃ dṛṣṭigataṃ pratiniḥsṛjed ity evaṃ kuśalaṃ no cet pratiniḥsṛje(d) dvir api trir api samanuśāsitavyas tasya vastunaḥ pratiniḥsargāya sa yāva(d) dvir api trir api samanuśiṣyamāṇa(ḥ) sacet pratiniḥsṛjed ity evaṃ kuśalaṃ no cet pratiniḥsṛjet sa śramaṇod(d)eśo bhikṣubhir evaṃ syād vacanīyaḥ adyāgreṇa te śramaṇoddeśa na sa bhagavāṃ śāstā vyapadeṣṭavyo nāpy anye bhikṣavaḥ samanubandhitavyā yām apy anye śramaṇodd(eś)ā labhante bhikṣubhiḥ sārdhaṃ dvirātraṃ sahāgāraśayyāṃ sāpi te adyāgreṇa nāsti cara pareṇa mohapuruṣa naśya tvaṃ na tvayeha vastavyam iti / yaḥ punar bhikṣur jānaṃs tathānāśitaṃ śramaṇoddeśam upasthāpayed vā upalāḍayed vā tena vā sārdhaṃ sahāgāraśayyāṃ kalpayet pātayantikā 57",
+   "T1436": "「若有沙彌作是言：『我如是知佛法義，行諸欲不能障道。』是沙彌，諸比丘應如是教：『汝沙彌！莫作是語：「我如是知佛法義，行諸欲不能障道。」汝莫謗佛、莫誣佛，謗佛不善。佛不作是語，佛種種因緣說行諸欲能障道。汝沙彌捨是惡邪見。』是沙彌，諸比丘如是教時，若堅持不捨，諸比丘應第二、第三教。捨是事好；若不捨者，諸比丘應如是語：『汝沙彌！從今日不應言：「佛是我師。」亦不應隨諸比丘後行。諸餘沙彌得共比丘乃至一宿、兩宿，汝亦無是事。癡人出去！滅去！莫此中住。』若比丘知是擯沙彌，若畜使一房舍宿，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.47. śramaṇuddeso pi ced evaṃ vadeya tathāham āyuṣmanto bhagavatā dharmaṃ deśitam ājānāmi yathā ye ime antarāyikā kāmā uktā bhagavatā tān pratisevato nālam antarāyāya / so śramaṇuddeśo bhikṣūhi evam asya vacanīyo Ō mā āyuṣman cchramaṇuddeśa evaṃ vada, mā bhagavantam abhyācakṣa asattā durgṛhītena / antarāyikā evāyuṣman cchramaṇuddeśa kāmāḥ samānā antarāyikāḥ kāmā uktā bhagavatā / alaṃ ca punas tān pratisevato antarāyāya / evaṃ ca so śramaṇuddeśo bhikṣūhi vucyamāno taṃ vastuṃ pratinissareya ity etaṃ kuśalaṃ / no ca pratinissareya so śramaṇuddeśo bhikṣūhi yāvantṛtīyakaṃ samanugrāhitavyo samanubhāṣitavyo tasya vastusya pratinissargāya yāvantṛtīyakaṃ samanugrāhiyamāṇo vā samanubhāṣiyamāṇo vā taṃ vastuṃ pratinissareya ity etaṃ kuśalaṃ, no ca pratinissareya so śramaṇuddeśo bhikṣūhi nāśayitavyo Ō adyadagreṇa te āyuṣman śramaṇuddeśa na caiva so bhagavāṃs tathāgato 'rhan samyaksaṃbuddho śāstā vyapadiśitavyo / yaṃ pi ca dāni labhasi bhikṣūhi sārdhaṃ dvirātraṃ vā trirātraṃ vā sahagāraśayyāṃ sāpi te adyadagreṇa nāsti / gaccha naśya cala prapalāhi / yo puna bhikṣur jānan tathānāśitaṃ śramaṇuddeśaṃ yathāvādīṃ tathākāriṃ tāṃ pāpikāṃ dṛṣṭim apratinissarantaṃ akṛtānudharmaṃ upasthāpeya vā upalāpeya vā saṃbhuṃjeya vā saṃvaseya vā sahagāraśayyāṃ vā kalpeya pācattikaṃ /",
+   "T1426": "「若沙彌作是言：『如來說婬欲是障道法，我知習婬欲不能障道。』諸比丘應諫言：『汝沙彌莫謗世尊！謗世尊者不善，世尊不作是語。世尊說婬欲實障道法。汝捨此惡見。』如是諫時，若堅持不捨，應第二、第三諫，捨者善；若不捨應驅出，言：『汝從今已後不應言：「佛是我師。」亦不得共比丘三宿。汝去，不得此中住。』若比丘知沙彌惡見不捨驅出，未作如法，誘喚畜養共食、共住，波夜提。",
+   "T1460": "「若比丘，知沙彌作如是說：『我如是知佛法義，行婬欲非障道法。』諸比丘應諫此沙彌言：『莫作是語，莫謗世尊，謗世尊者不善。世尊不作是語，世尊無數方便說行婬欲是障道法。沙彌！捨此惡見。』如是諫時，捨者善；若不捨者，是比丘應語此沙彌言：『汝自今已後莫言世尊是我大師。汝非順梵行，不得隨餘比丘。如餘沙彌，得與大比丘二三宿，癡人汝今無是事。出去滅去，不須此中住。』若比丘知如是擯沙彌，若畜同一止宿，波逸提。",
+   "sa-mula": "Pāy.57 (PrMoSū_Mū-Banerjee) śramaṇoddeśaś cāpy evaṃ vadet tathāhaṃ bhagavato dharmaṃ deśitam ājānāmi yathā ye antarāyikā dharmā uktā bhagavatā te ca pratisevyamānā nālam antarāyāyeti / sa śramaṇoddeśo bhikṣubhir idaṃ syād vacanīyo mā tvam āyuṣman śramaṇoddeśa evaṃ vocaḥ tathāhaṃ bhagavato dharmaṃ deśitam ājānāmi yathā ye antarāyikā dharmā uktā bhagavatā te ca pratisevyamānā nālam antarāyāyeti / mā bhagavantam abhyācakṣuḥ na sādhu bhavati bhagavato 'bhyākhyānaṃ na ca punar bhagavān evāha anekaparyāyeṇa śramaṇoddeśa antarāyikā dhamāḥ santaḥ antarāyikā evoktā bhagavatā te ca pratisevyamānā alam antarāyāyeti / niḥsṛja tvam* śramaṇoddeśa evaṃrūpaṃ dṛṣṭigatam* / sa śramaṇoddeśo bhikṣubhir ucyamānas tad vastu cet pratiniḥsṛjed ity evaṃ kuśalaṃ no cet pratiniḥsṛjed dvir api trir api samanuyoktavyaḥ samanuśāsitavyas tasya vastunaḥ pratiniḥsargāya dvir api trir api samanuyujyamānaḥ samanuśiṣyamānas tad vastu pratiniḥsṛjed ity evaṃ kuśalaṃ no cet pratiniḥsṛjet sa śramaṇoddeśo bhikṣubhir idaṃ syād vacanīyo 'dyāgreṇāyuṣman śramaṇoddeśa nāsau bhagavāṃs tathāgataḥ arhan samyaksaṃbuddhaḥ śāstā / evaṃrūpasyānyatamānyatmasya brahmacāriṇaḥ pṛṣṭataḥ mā samanubadhāna yāvad apy anye śramaṇoddeśāḥ labhante bhikṣubhiḥ sārdhaṃ dvirātraparamaṃ sahāgāraśayyāṃ sāpi te adyāgreṇa nāsti cara careṇa mohapuruṣa naśyati / yaḥ punar bhikṣur jānan tathānāśitaṃ śramaṇoddeśam upasthāpayed vā upalālayed vā tena vā sārdhaṃ sahāgāraśayyāṃ kalpayet pāyantikā /",
+   "T1454": "「若復苾芻，見有求寂作如是語：『我知佛所說法「欲是障礙法」者，習行之時非是障礙。』諸苾芻應語彼求寂言：『汝莫作是語：「我知佛所說『欲是障礙法』者，習行之時非是障礙。」汝莫謗世尊，謗世尊者不善。世尊不作是語，世尊以無量門於諸欲法說為障礙。汝可棄捨如是惡見。』諸苾芻語彼求寂時，捨此事者善。若不捨者，乃至二三隨正應諫，隨正應教，令捨是事。捨者善；若不捨者，諸苾芻應語彼求寂言：『汝從今已去不應說言：「如來、應、正等覺是我大師。」若有尊宿及同梵行者，不應隨行，如餘求寂得與苾芻二夜同宿。汝今無是事，汝愚癡人可速滅去。』若苾芻知是被擯求寂，而攝受饒益同室宿者，波逸底迦。"
+  },
+  "pc71": {
+   "pi": "Chapter 8. Sahadhammika Pācittiya 71. Sahadhammika Yo pana bhikkhu bhikkhūhi sahadhammikaṁ vuccamāno evaṁ vadeyya “na tāvāhaṁ, āvuso, etasmiṁ sikkhāpade sikkhissāmi, yāva na aññaṁ bhikkhuṁ byattaṁ vinayadharaṁ paripucchāmī”ti, pācittiyaṁ. Sikkhamānena, bhikkhave, bhikkhunā aññātabbaṁ paripucchitabbaṁ paripañhitabbaṁ, ayaṁ tattha sāmīci.",
+   "T1429": "「若比丘！餘比丘如法諫時，作如是語：『我今不學此戒。』當難問餘智慧持律比丘者，波逸提。若為知為學故，應難問。",
+   "T1422a": "「若比丘，數數犯罪。諸比丘如法諫，作是語：『我不學是戒，當問餘比丘持法持律者。』波逸提。比丘欲求解，應問持法持律者。是法應爾。",
+   "sa-sarv": "PrMoSū_Pāt.75: yaḥ punar bhikṣur bhikṣubhir ucyamāna iha te śikṣāyāṃ śikṣitavyam ity evaṃ vaden nāhaṃ yuṣmākaṃ bālānāṃ mūḍhānāṃ duṣprajñānāṃ vacanenātra śikṣāyāṃ śikṣiṣyāmi anyān ahaṃ bhikṣūṃ prakṣyāmi sūtradharān vinayadharān mātṛkādharān iti pātayantikā / ājñātukāmena bhikṣuṇā tatra śikṣāyāṃ śikṣitavyaṃ bhikṣavaś ca praṣṭavyāḥ sūtradharā vinayadharā mātṛkādharāḥ / iyaṃ tatra sāmīciḥ 75",
+   "T1436": "「若比丘，說戒時如是言：『我今未學是戒，先當問諸比丘誦修多羅、毘尼、阿毘曇者。』波夜提。若比丘欲得法利，是波羅提木叉中應學，亦應問諸比丘誦修多羅、毘尼、阿毘曇者，應如是言：『諸大德！是語有何義？』是事法爾。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.75. yo puna bhikṣu bhikṣūhi evaṃ vucyamāno Ō imehi te āyuṣman pañcahi āpattikāyehi anadhyāvācāya śikṣā karaṇīyeti, so bhikṣu tān bhikṣūn evaṃ vadeya Ō na yāvad aham āyuṣmantānāṃ vacanena śikṣiṣyaṃ yāvad ahaṃ na drakṣyāmi sthavirān bhikṣūn sūtradharān vinayadharān mātṛkādharān madhyamān bhikṣūn sūtradharān vinayadharān mātṛkādharān, navakān bhikṣūn sūtradharān vinayadharān mātṛkādharān / tāṃs tāvad aham upasaṃkramya paripṛcchiṣyaṃ paripraśnīkariṣyaṃ ti, pācattikaṃ / śikṣākāmena bhikṣuṇā ājñātavyam upalakṣayitavyaṃ upadhārayitavyaṃ //",
+   "T1426": "「若比丘語比丘言：『長老！當學，莫犯五眾罪。』是比丘言：『我不隨汝語，若見餘長老寂根多聞、持法深解，我當從諮問，彼有所說我當受行。』除餘時，波夜提。餘時者，比丘欲得法利應學，亦應問餘比丘。",
+   "T1460": "「若比丘，語比丘言：『汝當學此戒。』是比丘言：『我不從汝癡愚人不正語人學戒乃至持修多羅。持律、持摩帝隸迦（居多反），我當從問波逸提。』為求解者，應當問持經、持律、摩帝隸迦比丘。此是如法。",
+   "sa-mula": "Pāy.75 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur bhikṣubhir āyuṣmatā tvayā śikṣāyāṃ śikṣitavyam iti ucyamāna evaṃ vaden nāhaṃ tava bālasya mūḍhasya duṣprajñasya vacanāni śikṣiṣyāmi yāvan nāhaṃ bhikṣūn prakṣyāmi sūtradharān vinayadharān mātṛkadharān iti pāyantikā / sarvajñatākāmena bhikṣuṇā śikṣāyāṃ śikṣitavyaṃ bhikṣavaḥ praṣṭavyāḥ sūtradharā vinayadharā mātṛkadharā ayaṃ tatra samayaḥ /",
+   "T1454": "「若復苾芻，聞諸苾芻作如是語：『具壽！仁今當習如是學處。』彼作如是語：『我實不能用汝愚癡不分明、不善解者所說之言受行學處。我若見餘善閑三藏，當隨彼言而受行。』者，波逸底迦。若苾芻實欲求解者，當問三藏，此是時。"
+  },
+  "pc72": {
+   "pi": "Pācittiya 72. Vilekhana Yo pana bhikkhu pātimokkhe uddissamāne evaṁ vadeyya “kiṁ panimehi khuddānukhuddakehi sikkhāpadehi uddiṭṭhehi, yāvadeva kukkuccāya vihesāya vilekhāya saṁvattantī”ti, sikkhāpadavivaṇṇake pācittiyaṁ.",
+   "T1429": "「若比丘！說戒時，作如是語：『大德！何用說是雜碎戒為？說是戒時，令人惱愧懷疑。』輕呵戒故，波逸提。",
+   "T1422a": "「若比丘，作是語：『何用是雜碎戒為？說是戒時令人憂惱作。』如是毀呰戒者，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.10: yaḥ punar bhikṣuḥ prātimokṣasūtroddiśyamāne evaṃ vadet kiṃ punar ebhiḥ kṣudrānukṣudraiḥ śikṣāpadair uddiṣṭair yāni bhikṣūṇāṃ kaukṛtyāya vilekhāya viheṭhāya saṃvartantīti śikṣāvidaṇḍanāt pātayantikā 10 //",
+   "T1436": "「若比丘，說戒時作是言：『何用說是雜碎戒為？半月半月波羅提木叉中說，說是戒故，諸比丘心悔、心壞、心惱、心熱，憂愁不樂生反戒心。』作是輕呵戒者，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.10. yo puna bhikṣur anvardhamāsaṃ sūtre prātimokṣe uddiśyamāne evaṃ vadeya Ō kiṃ punar āyuṣmanto imehi kṣudrānukṣūdrehi śikṣāpadehi uddiṣṭehi yāvad eva bhikṣūṇāṃ kaukṛtyāya vighātāya vilekhāya saṃvartantīti, śikṣāvigarhaṇe pācattikaṃ / // uddānam // (1) mṛṣā (2) omṛṣya (3) paiśunya (4) utkhoṭana (5) dharmadeśanā / (6) padaśo (7) viśeṣaṇam (8) ārocanā (9) yathāsaṃstuta (10) vigarhaṇena ca // prathamo vargaḥ //",
+   "T1426": "「若比丘，僧半月誦波羅提木叉經時，作是言：『長老！用誦是雜碎戒為？使諸比丘生疑悔。』作是輕呵戒因緣不異，波夜提。（十事竟）",
+   "T1460": "「若比丘，半月說戒時作是說：『何用此雜碎戒為？說是戒時令人悔惱懷疑。』輕毀戒故，波逸提。十。",
+   "sa-mula": "Pāy.10 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur anvardhamāsaṃ prātimokṣasūtroddeśe uddiśyamāne evaṃ vadet kiṃ punar ebhir āyuṣmantaḥ kṣudrānukṣudraiḥ śikṣāpadair anvardhamāsaṃ prātimokṣasūtroddeśair uccāryamānair yāni bhikṣūṇāṃ kaukṛtyāya saṃvartante ālekhāya vilekhāya vileṭhāya vipratisārāyeti śikṣāpadavilaṃghanāt pāyantikā /",
+   "T1454": "「若復苾芻，半月半月說戒經時，作如是語：『具壽！何用說此小隨小學處為？說是戒時，令諸苾芻心生惡作，惱悔懷憂。』若作如是輕呵戒者，波逸底迦。」"
+  },
+  "pc73": {
+   "pi": "Pācittiya 73. Mohana Yo pana bhikkhu anvaddhamāsaṁ pātimokkhe uddissamāne evaṁ vadeyya “idāneva kho ahaṁ jānāmi, ayampi kira dhammo suttāgato suttapariyāpanno anvaddhamāsaṁ uddesaṁ āgacchatī”ti. Tañce bhikkhuṁ aññe bhikkhū jāneyyuṁ nisinnapubbaṁ iminā bhikkhunā dvattikkhattuṁ pātimokkhe uddissamāne, ko pana vādo bhiyyo, na ca tassa bhikkhuno aññāṇakena mutti atthi, yañca tattha āpattiṁ āpanno, tañca yathādhammo kāretabbo, uttari cassa moho āropetabbo “tassa te, āvuso, alābhā, tassa te dulladdhaṁ, yaṁ tvaṁ pātimokkhe uddissamānena sādhukaṁ aṭṭhiṁ katvā manasi karosī”ti, idaṁ tasmiṁ mohanake pācittiyaṁ.",
+   "T1429": "「若比丘！說戒時，作如是語：『我今始知此法戒經所載，半月半月說，戒經中來。』餘比丘，知是比丘，若二、若三說戒中坐，何況多！彼比丘無知無解，若犯罪，應如法治，更重增無知罪。語言：『長老！汝無利，不善得。汝說戒時，不用心念、不一心攝耳聽法。』彼無知故，波逸提。",
+   "T1422a": "「若比丘，說戒時作是語：『我今始知是法半月布薩戒經中說。』諸比丘知是比丘已再三說戒中坐，是比丘不以不知故得脫，隨所犯罪如法治。應呵其不知、所作不善。說戒時不一心聽、不著心中，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.83: yaḥ punar bhikṣuḥ prātimokṣasūtroddiśyamāne evaṃ vaded idānīm ahaṃ jānāmi yad aya(ṃ) dharmaḥ sūtragataḥ sūtraparyāpanna iti taṃ ca bhikṣavo jānīyuḥ saṃniṣaṇṇapūrvo 'yam āyuṣmāṃ dvis triḥ prātimokṣasūtroddeśe kaḥ punar vādo bhūya iti tasya punar bhikṣor nāsty ajñānān mokṣo yāṃ cāpattim āpannaḥ syāt tāṃ yathādharmaṃ kārayitavya uttarañ ca saṃvejayitavyas tasya te āyuṣmann alābho na lābhaḥ durlabdho na sulabdhaḥ yo hi nāma tvam anvardhamāsaṃ prātimokṣasūtroddiśyamāne na satkṛtyārthīkṛtvā na gurukṛtvā na manasīkṛtvā naikāgracitto nāvahitaśrotro na sarvacetasā samanvāhṛtya śṛṇoṣi iyaṃ tasya saṃvejanāt pātayantikā (8)3",
+   "T1436": "「若比丘，說戒時如是言：『我今始知是法半月半月入戒經中說。』諸比丘知是比丘乃至若二、若三說戒中坐，何況多！是比丘不以不知故得脫，隨所犯罪如法治，應呵令厭：『汝大德！汝失無利，汝不善，汝說戒時不敬說戒，不作是念：「實有是事。」不貴重、不著心中、不一心念、不攝耳聽法從彼事。』波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.92. yo puna bhikṣur anvardhamāsaṃ sūtre prātimokṣe uddiśyamāne evaṃ vadeya Ō adya punar ahaṃ jānāmi, idānīṃ punar ahaṃ jānāmi Ō ayaṃ pi dharmo sūtrāgato sūtraparyāpanno anvardhamāsaṃ sūtre prātimokṣe uddeśam āgacchati / yāvad ahaṃ na jānāmi tāvan nāstītthaṃ mahyam āpattir jāneṃsu ca te bhikṣu taṃ bhikṣuṃ sakṛd dvikkhuto trikkhuto āgatapūrvaṃ pi sanniṣaṇṇapūrvaṃ pi, kaḥ punar vādo bahuśo / nāsti kho punas tasya bhikṣusya ajñānena muktiḥ / atha khu yāṃ pi ca so bhikṣur āpattim āpanno tāṃ kṣipram eva yathādharmmaṃ yathāvinayaṃ kārāpayitavyo, uttariṃ ca saṃmoham āpādayitavyo / tasya te āyuṣman lābhā durlabdhā yas tvaṃ anvardhamāsaṃ sūtre prātimokṣe uddiśyamāne nāsthīkṛtvā na manasikṛtvā na sarvacetasā samanvāhṛtya avahitaśroto satkṛtya dharmaṃ śṛṇoṣīti / imaṃ tasya bhikṣusya saṃmohapācattikaṃ /",
+   "T1426": "「若比丘，僧半月說波羅提木叉經時，作是言：『長老！我今始知是法入修多羅，半月波羅提木叉中說。』諸比丘知彼比丘本若二、若三，說《波羅提木叉經》中坐，況復多！彼比丘不以不知故無罪。隨所犯罪一一如法治，應呵責言：『長老！汝失善利，半月說《波羅提木叉經》時，汝不尊重、不一心念、不攝耳聽法。』呵已，波夜提。」（九十二事竟）",
+   "T1460": "「若比丘，說解脫戒時作是言：『大德！我今始知是法半月半月戒經中說。』若比丘知此比丘先已二三說戒處坐，何況多時。隨彼比丘所犯罪，應如法治，更增厭離法：『長老！汝無利、得不善。汝於說戒時，不一心聽、不敬重、不作意、不憶念。』此名厭離，波逸提。",
+   "sa-mula": "Pāy.83 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur anvardhamāsaṃ prātimokṣasūtre uddiśyamāne evaṃ vaded idānīm ahaṃ jānāmi āyuṣmanto 'yam api kila dharmaḥ sūtragataḥ sūtraparyāyāpannoddeśyam āgacchatīti tatrāyuṣmantaṃ ced bhikṣavo jānīyuḥ niṣaṇṇapūrvaṃ āyuṣmatā dvitrikṛtvaṃ poṣadhe kaḥ punar vādo bhūya iti āyuṣmato ajñānataḥ na muktiḥ yata āpattim āpannaḥ tato yathādharmaṃ kārayitavya uttaraṃ ca kaukṛtyam āropayitavyaṃ -- āyuṣman te alābho 'labdhaḥ durlabdho na sulabdho yat tvaṃ anvardhamāsaṃ prātimokṣasūtroddiśyamāne na satkṛtya śṛṇoṣi na gurukaroṣi nārthikaroṣi na manasikaroṣi ekāgracittenāvahitaśrotreṇa na śṛṇoṣi sarvacittasaṃkalpair api na śṛṇoṣi / āyuṣman tatra kaukṛtyāt pāyantikā /",
+   "T1454": "「若復苾芻，半月半月說戒經時，作如是語：『具壽！我今始知是法戒經中說。』諸苾芻知是苾芻，若二、若三同作長淨，況復過此，應語彼言：『具壽！非不知故得免其罪，汝所犯罪應如法說悔。』當勸喻言：『具壽！此法希奇難可逢遇，汝說戒時不恭敬、不住心、不殷重、不作意、不一想、不攝耳、不策念而聽法。』者，波逸底迦。"
+  },
+  "pc74": {
+   "pi": "Pācittiya 74. Pahāra Yo pana bhikkhu bhikkhussa kupito anattamano pahāraṁ dadeyya, pācittiyaṁ.",
+   "T1429": "「若比丘！瞋恚故不喜，打比丘者，波逸提。",
+   "T1422a": "「若比丘，瞋故打比丘，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.48: yaḥ punar bhikṣur abhiṣaktaḥ kupitaś caṇḍībhūto 'nāpta(ma)nā bhikṣoḥ prahāraṃ dadyāt pāta(yantikā) 48",
+   "T1436": "「若比丘，瞋他比丘，恚忿不喜手打，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.58. yo puna bhikṣu bhikṣuṃ prahareya pācattikaṃ /",
+   "T1426": "「若比丘，瞋恨不喜打比丘，波夜提。",
+   "T1460": "「若比丘，瞋恚心打比丘，波逸提。",
+   "sa-mula": "Pāy.48 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣuḥ kupitaś caṇḍībhūto 'nāttamanā bhikṣoḥ prahāraṃ dadyāt pāyantikā /",
+   "T1454": "「若復苾芻，瞋恚故不喜，打苾芻者，波逸底迦。"
+  },
+  "pc75": {
+   "pi": "Pācittiya 75. Talasattika Yo pana bhikkhu bhikkhussa kupito anattamano talasattikaṁ uggireyya, pācittiyaṁ.",
+   "T1429": "「若比丘！瞋恚不喜，以手搏比丘者，波逸提。",
+   "T1422a": "「若比丘，瞋故以手擬比丘，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.49: (yaḥ puna)r bhikṣur abhiṣaktaḥ kupitaś caṇḍībhūto 'nāptamanā bhikṣos talaśaktikayā prahāram avaguret pātayantikā (49)",
+   "T1436": "「若比丘，瞋他比丘，恚忿不憙手搏，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.59. yo puna bhikṣu bhikṣusya talaśaktikām āvarjeya pācattikaṃ /",
+   "T1426": "「若比丘，瞋恨不喜掌刀擬比丘，波夜提。",
+   "T1460": "「若比丘，瞋恚心以手擬比丘，波逸提。",
+   "sa-mula": "Pāy.49 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur abhiṣaktaḥ kupitaś caṇḍībhūto 'nāttamanā bhikṣoḥ prahāram upadarśayet* antatas talaśaktikam api pāyantikā /",
+   "T1454": "「若復苾芻，瞋恚故不喜，擬手向苾芻者，波逸底迦。"
+  },
+  "pc76": {
+   "pi": "Pācittiya 76. Amūlaka Yo pana bhikkhu bhikkhuṁ amūlakena saṅghādisesena anuddhaṁseyya, pācittiyaṁ.",
+   "T1429": "「若比丘！瞋恚故，以無根僧伽婆尸沙法謗者，波逸提（八十）。",
+   "T1422a": "「若比丘，以無根僧伽婆尸沙謗比丘，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.69: yaḥ punar bhikṣur bhikṣum amūlakena saṃghāvaśeṣeṇa dharmeṇānudhvaṃsayet pātayantikā 69",
+   "T1436": "「若比丘，無根僧伽婆尸沙法謗他比丘，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.90. yo puna bhikṣu bhikṣusya duṣṭo doṣāt kupito anāttamano amūlakena saṃghātiśeṣeṇa dharmeṇānudhvaṃseya pācattikaṃ /",
+   "T1426": "「若比丘，瞋恨不喜，以無根僧伽婆尸沙法謗，波夜提。",
+   "T1460": "「若比丘，以無根僧伽婆尸沙法謗者，波逸提。",
+   "sa-mula": "Pāy.69 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣuḥ kupito 'nāttamanā pariśuddhaṃ anāpattikaṃ bhikṣuṃ amūlakena saṃghāvaśeṣeṇa dharmeṇānudhvaṃsayet pāyantikā /",
+   "T1454": "「若復苾芻，瞋恚故，知彼苾芻清淨無犯，以無根僧伽伐尸沙法謗者，波逸底迦。"
+  },
+  "pc77": {
+   "pi": "Pācittiya 77. Sañcicca Yo pana bhikkhu bhikkhussa sañcicca kukkuccaṁ upadaheyya “itissa muhuttampi aphāsu bhavissatī”ti etadeva paccayaṁ karitvā anaññaṁ, pācittiyaṁ.",
+   "T1429": "「若比丘！故惱他比丘，令須臾間不樂者，波逸提。",
+   "T1422a": "「若比丘，故令比丘生疑悔，作是念：『令彼比丘乃至少時惱。』波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.62: yaḥ punar bhikṣur bhikṣoḥ saṃcintya kaukṛtyam upasaṃhared viheṭhanāprekṣī kaccid asya bhikṣor muhūrtam api tāvad aphāṣaṃ bhaved idam eva pratyayaṃ kṛtvā nānyathā pātayantikā (6)2",
+   "T1436": "「若比丘，故令他比丘心疑，作是念：『令是比丘乃至少時得惱。』是因緣故不異，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.62. yo puna bhikṣu bhikṣusya saṃcintya kaukṛtyam upasaṃhareya kiṃ ti se muhūrtaṃ pi aphāsu bhavatū ti pācattikaṃ /",
+   "T1426": "「若比丘，故令他比丘起疑悔須臾不樂，作是因緣不異，波夜提。",
+   "T1460": "「若比丘，疑惱比丘，乃至少時不樂，波逸提。",
+   "sa-mula": "Pāy.62 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣuḥ saṃcintya kaccid asya bhikṣor muhūrtam api tāvad aphāṣaṃ sparśaṃ bhaved etad eva pratyayaṃ kṛtvā bhikṣoḥ kaukṛtyam upasaṃharet pātayantikā /",
+   "T1454": "「若復苾芻，故惱他苾芻，乃至少時不樂，以此為緣者，波逸底迦。"
+  },
+  "pc78": {
+   "pi": "Pācittiya 78. Upassuti Yo pana bhikkhu bhikkhūnaṁ bhaṇḍanajātānaṁ kalahajātānaṁ vivādāpannānaṁ upassutiṁ tiṭṭheyya “yaṁ ime bhaṇissanti, taṁ sossāmī”ti etadeva paccayaṁ karitvā anaññaṁ, pācittiyaṁ.",
+   "T1429": "「若比丘！比丘共鬪諍已，聽此語向彼說，波逸提。",
+   "T1422a": "「若比丘共諍，己默聽，作是念：『諸比丘所說我憶持。』波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.76: yaḥ punar bhikṣur bhikṣūṇāṃ kalahajātānāṃ bhaṇḍanajātānāṃ vigṛhītānāṃ vivādam āpannānāṃ tūṣṇīm upaśrutikas tiṣṭhed yad ete bhikṣavo vakṣyanti tad ahaṃ śrutvā tathānuvyāhariṣyāmīti pā(tayantikā) (7)6",
+   "T1436": "「若比丘，共諸比丘鬪亂諍訟時，屏處默然立聽，作是念：『諸比丘所說我當憶持。』波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.78. yo puna bhikṣu bhikṣūhi kalahajātehi bhaṇḍanajātehi vigrahavivādāpannehi viharantehi upaśrotrasthāne tiṣṭheya Ō yaṃ ete vadiṣyanti taṃ paścād upasaṃhariṣyāmīti / etad eva pratyayaṃ kṛtvā, ananyam, imaṃ tasya bhikṣusya upaśrotrasthāne pācattikaṃ /",
+   "T1426": "「若比丘，諸比丘諍訟時默然立聽，彼有所說我當憶持，作是因緣不異，波夜提。",
+   "T1460": "「若比丘，知他共鬪諍，默然聽此語向彼說，波逸提。",
+   "sa-mula": "Pāy 76 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur bhikṣūṇāṃ kalahajātānāṃ bhaṇḍanajātānāṃ bhedagṛhītānāṃ vivādam āpannānāṃ tūṣṇīm upaśrutikas tiṣṭhed yad ete bhikṣavo vakṣyanti tad ahaṃ dhārayiṣyāmīty etad eva pratyayaṃ kṛtvā pāyantikā /",
+   "T1454": "「若復苾芻，知餘苾芻評論事生求過紛擾諍競而住，默然往彼聽其所說，作如是念：『我欲聽已當令鬪亂。』以此為緣者，波逸底迦。"
+  },
+  "pc79": {
+   "pi": "Pācittiya 79. Kammappaṭibāhana Yo pana bhikkhu dhammikānaṁ kammānaṁ chandaṁ datvā pacchā khīyanadhammaṁ āpajjeyya, pācittiyaṁ.",
+   "T1429": "「若比丘！與欲已，後悔者，波逸提。",
+   "T1422a": "「若比丘。僧斷事時如法與欲竟後更呵。波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.54: yaḥ punar bhikṣur dhārmike saṃghakaraṇīye cchandaṃ dat(t)vā tataḥ paścāt kṣepadharmam āpadyeta pātayantikā (5)4",
+   "T1436": "「若比丘，如法僧事與欲竟，後更呵，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.43. yo puna bhikṣu bhikṣūṇāṃ karmaṇā cchandaṃ datvā paścād duṣṭo doṣāt kupito anāttamano evaṃ vadeya Ō adinno me chando, durdinno me chando, akṛtāny etāni karmāṇi duṣkṛtāny etāni karmāṇi, nāham eteṣāṃ karmaṇāṃ cchandaṃ demīti vadeya pācattikaṃ /",
+   "T1426": "「若比丘，與羯磨欲已，後瞋恨不喜作是言：『我不與欲、不好與，此羯磨不成就，我不與此欲。』波夜提。",
+   "T1460": "「若比丘，與欲已後還悔，波逸提。",
+   "sa-mula": "Pāy.53 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur dhārmikasaṃghakaraṇīye bhikṣoś chandaṃ datvā paścād abhiṣaktaḥ kupitaś caṇḍībhūto nāttamanā kṣepadharmam āpadyeta / āhara bhikṣoś chandaṃ na te dadāmīti pāyantikā /",
+   "T1454": "「若復苾芻，與他欲已，後便悔言：『還我欲來，不與汝。』者，波逸底迦。"
+  },
+  "pc80": {
+   "pi": "Pācittiya 80. Chandaṁadatvāgamana Yo pana bhikkhu saṅghe vinicchayakathāya vattamānāya chandaṁ adatvā uṭṭhāyāsanā pakkameyya, pācittiyaṁ.",
+   "T1429": "「若比丘！眾僧斷事未竟，不與欲而起去者，波逸提。",
+   "T1422a": "「若比丘，僧斷事時不與欲起去，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.77: yaḥ punar bhikṣuḥ saṃghasy(a) n(i)ścitāyāṃ kathāyāṃ vartamānāyāṃ tūṣṇīm utthāya prakramet saṃtaṃ bhikṣum anava(lokya pātaya)ntikā (77)",
+   "T1436": "「若比丘，僧斷事時默然起去，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.79. yo puna bhikṣuḥ saṃghe viniścayakathāhi vartamānāhi utthāyāsanāt prakrameya santaṃ bhikṣum anāmantrayitvā, anyatra tathārūpe atyāyike karaṇīye pācattikaṃ /",
+   "T1426": "「若比丘，僧斷事不與欲，出去不白，波夜提。",
+   "T1460": "「若比丘，僧說戒時，不與欲默然去，波逸提。",
+   "sa-mula": "Pāy.77 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣuḥ saṃghe dharmikāyāṃ viniścayakathāyāṃ vartamānāyāṃ āsanāt tūṣṇīm utthāya prakrāmet santaṃ bhikṣum anavapṛcchyānyatra tadrūpapratyayāt pāyantikā /",
+   "T1454": "「若復苾芻，知眾如法評論事時，默然從座起去，有苾芻不囑授者，除餘緣故，波逸底迦。"
+  },
+  "pc81": {
+   "pi": "Pācittiya 81. Dubbala Yo pana bhikkhu samaggena saṅghena cīvaraṁ datvā pacchā khīyanadhammaṁ āpajjeyya “yathāsanthutaṁ bhikkhū saṅghikaṁ lābhaṁ pariṇāmentī”ti, pācittiyaṁ.",
+   "T1429": "「若比丘！共同羯磨已後，如是語：『諸比丘，隨親厚以眾僧物與』者，波逸提。",
+   "T1422a": "「若比丘，作是語：『諸比丘隨知識迴僧物與。』波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.9: yaḥ punar bhikṣuḥ pūrvaṃ samanujñako bhūtvā tataḥ paścād evaṃ vaded yathā saṃstutānām ime bhikṣavaḥ sāṃghikaṃ lābhaṃ pariṇāmayantīti pāta(yant)i(kā) 9",
+   "T1436": "「若比丘，先歡喜聽，後如是言：『諸比丘隨親厚，迴僧物與。』波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.9. yo puna bhikṣur jānan sāṃghike lābhe bhājīyamāne pūrve samanujño bhūtvā paścāt kṣiyādharmam āpadyeya Ō yathāsaṃstutam evāyuṣmanto, jānan sāṃghikaṃ lābhaṃ saṃghe pariṇataṃ pudgalo pudgalasya pariṇāmayatīti pācattikaṃ /",
+   "T1426": "「若比丘，僧應分物，先聽與而後遮言：『長老！汝親厚意，迴僧物與人。』波夜提。",
+   "sa-mula": "Pāy.9 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣuḥ pūrvaṃ samanujño bhūtvā tataḥ paścād evaṃ vaded yathā saṃstutikayāyuṣmantaḥ sāṃghikaṃ lābhaṃ pariṇatam ātmanaḥ paudgalikaṃ pariṇāmayantīti pāyantikā /",
+   "T1454": "「若復苾芻，先同心許，後作是說：『諸具壽以僧利物隨親厚處迴與別人。』者，波逸底迦。"
+  },
+  "pc82": {
+   "pi": "Pācittiya 82. Pariṇāmana Yo pana bhikkhu jānaṁ saṅghikaṁ lābhaṁ pariṇataṁ puggalassa pariṇāmeyya, pācittiyaṁ. Sahadhammikavaggo aṭṭhamo",
+   "T1422a": "「若比丘，知檀越欲與僧物，迴與餘人，波逸提。」",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.91. yo puna bhikṣur jānan sāṃghikaṃ lābhaṃ saṃghe pariṇataṃ pudgalo pudgalasya pariṇāmeya pācattikaṃ /",
+   "T1426": "「若比丘，知物向僧迴與餘人，波夜提。",
+   "T1460": "「若比丘，知他施僧物，迴與知識，波逸提。"
+  },
+  "pc83": {
+   "pi": "Chapter 9. Ratana Pācittiya 83. Antepura Yo pana bhikkhu rañño khattiyassa muddhābhisittassa anikkhantarājake aniggataratanake pubbe appaṭisaṁvidito indakhīlaṁ atikkāmeyya, pācittiyaṁ.",
+   "T1429": "「若比丘！剎利水澆頭王種，王未出，未藏寶而入。若過宮門閾者，波逸提。",
+   "T1422a": "「若比丘，王未出、未藏寶，若入過後宮門限，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.82: yaḥ punar bhikṣu rājñaḥ kṣatriyasya mūrdhābhiṣiktasya ani(ṣk)rānte rājñ(i) anirgṛhīteṣu ratneṣu indrakīlaṃ vā indrakīlabhūmiṃ vā samatikramed anyatra tathārūpapratyayāt pātayantikā (8)2",
+   "T1436": "「若比丘，剎帝利王水澆頂，夜未曉未藏寶，若門藝門藝邊過，波夜提；除大因緣。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.82. yo puna bhikṣu rājñaḥ kṣatriyasya mūrdhābhiṣiktasya janapadasthāmavīryaprāptasya antaḥpuraṃ praviśeyāniṣkrānte rājāne, aniṣkrānte antaḥpure, anirgatehi ratanehi antamaśato indrakīlaṃ pi atikrameya pācattikaṃ /",
+   "T1426": "「若比丘入王宮，夫人未藏寶，下至過門限，波夜提。",
+   "T1460": "「若比丘，灌頂王夜未曉，王未出，入宮門，除因緣。波逸提。",
+   "sa-mula": "Pāy.82 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur anirgatāyāṃ rajanyām anudgate 'ruṇe anirhṛteṣu ratneṣu ratnasaṃmateṣu vā rājñaḥ kṣatriyasya mūrdhābhiṣiktasya indrakīlaṃ vā indrakīlasāmantakaṃ vā samatikraned anyatra tadrūpāt pratyayāt pāyantikā /",
+   "T1454": "「若復苾芻，明相未出，剎帝利灌頂王未藏寶及寶類，若入過宮門閫者，除餘緣故，波逸底迦。"
+  },
+  "pc84": {
+   "pi": "Pācittiya 84. Ratana Yo pana bhikkhu ratanaṁ vā ratanasammataṁ vā aññatra ajjhārāmā vā ajjhāvasathā vā uggaṇheyya vā uggaṇhāpeyya vā, pācittiyaṁ. Ratanaṁ vā pana bhikkhunā ratanasammataṁ vā ajjhārāme vā ajjhāvasathe vā uggahetvā vā uggahāpetvā vā nikkhipitabbaṁ “yassa bhavissati, so harissatī”ti, ayaṁ tattha sāmīci.",
+   "T1429": "「若比丘！若寶中寶莊飾具，若自捉，若教人捉，除僧伽藍中及寄宿處，波逸提。若比丘在僧伽藍中，若寄宿處，捉寶若寶莊飾具，自捉，教人捉，當作是意：『若有主識者當取。』作如是因緣非餘。",
+   "T1422a": "「若比丘，若寶、若寶等物，若自取、若教人取，除僧坊內及宿處，波逸提。若僧坊內及宿處取寶等物，後有主索，應還。是事應爾。",
+   "sa-sarv": "PrMoSū_Pāt.58: yaḥ punar bhikṣu ratnaṃ vā ratnasaṃmataṃ vā svahastam udgṛhṇīyād udgrāhayed vā anyatrādhyārāmagatād vā adhyāvāsagatād vā pātayantikā adhyārāmagataṃ adhyāvāsagataṃ ratnaṃ vā ratnasaṃmataṃ vā evaṃcittenodgṛhītavyam udgrāhayitavyaṃ vā yasya bhaviṣyati sa enaṃ hariṣyati iyaṃ tatra sāmīciḥ 58",
+   "T1436": "「若比丘，若寶、若名寶，若自取、若語取是物，波夜提；除僧房內、若住處內。若寶、若名寶，僧房內、住處內，如是生心：『是誰有？是主取去。』是事法爾。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.49. yo puna bhikṣur anyatra adhyārāme vā adhyāvasathe vā ratanaṃ vā ratanasaṃmataṃ vā udgṛhṇeya vā udgṛhṇāpeya vā, pācattikaṃ / ākāṃkṣamāṇena bhikṣuṇā ratanaṃ vā ratanasaṃmataṃ vā adhyārāme vā adhyāvasathe vā udgṛhṇitavyaṃ vā udgṛhṇāpayitavyaṃ vā Ō yasya bhaviṣyati so hariṣyatīti / etad eva pratyayaṃ kṛtvā, ananyam / iyam atra sāmīcī /",
+   "T1426": "「若比丘，僧住處內寶、若名寶，若自取、若使人取，除內取為主來求者與，波夜提。",
+   "T1460": "「若比丘，若寶、若似寶，若自取、若教人取，波逸提，除僧伽藍及寄宿處。若取寶莊飾具，作如是念：『取者當還。』此是時。",
+   "sa-mula": "Pāy.59 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣu ratnaṃ vā ratnasaṃmataṃ vā svahastena udgṛhṇīyād udgrāhayed vānyatrādhyārāmagatād vādhyāvāsagatād vā pāyantikā / bhikṣuṇādhyārāmagataṃ vādhyāvāsagataṃ vā ratnaṃ ratnasaṃmataṃ vā udgrahītavyaṃ yasyedaṃ bhaviṣyati so hariṣyati ity evaṃ manasikṛtvā / ayaṃ tatra samayaḥ /",
+   "T1454": "「若復苾芻，寶及寶類，若自捉、教人捉，除在寺內及白衣舍，波逸底迦。若在寺內及白衣舍，見寶及寶類，應作是念然後當取：『若有認者，我當與之。』此是時。"
+  },
+  "pc85": {
+   "pi": "Pācittiya 85. Vikālagāmappavesana Yo pana bhikkhu santaṁ bhikkhuṁ anāpucchāvikāle gāmaṁ paviseyya aññatra tathārūpā accāyikā karaṇīyā, pācittiyaṁ.",
+   "T1429": "「若比丘！非時入聚落，不囑比丘者，波逸提。",
+   "T1422a": "「若比丘，非時入聚落，不近白善比丘，除因緣，波逸提。因緣者，難時，是名因緣。",
+   "sa-sarv": "PrMoSū_Pāt.80: yaḥ punar bhikṣur akāle grāmaṃ praviśet santaṃ bhikṣum anavalokyānyatra tathārūpapratyayāt pātayantikā 80 //",
+   "T1436": "「若比丘，非時入聚落，不白善比丘，波夜提；除因緣。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.80. yo puna bhikṣu āraṇyake śayyāsane viharanto vikāle grāmaṃ praviśeya santaṃ bhikṣum anāmantrayitvā, anyatra tathārūpe atyāyike karaṇīye pācattikaṃ / // uddānaṃ // (71) ūnaviṃśati (72) stainyasārtho (73) pṛthivī (74) pravāraṇā (75) na śikṣiṣyaṃ (76) madyapānam (77) anādaryam (78) upaśrotra (79) viniścaya (80) āraṇyakena // aṣṭamo vargaḥ //",
+   "T1426": "「若比丘，阿蘭若處住，非時入聚落，不白善比丘，除急事，波夜提（八十事竟）",
+   "T1460": "「若比丘，非時入聚落，不囑比丘者，波逸提。",
+   "sa-mula": "Pāy.80 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur akāle grāmaṃ praviśet santaṃ bhikṣum anavapṛcchya anyatra tadrūpāt pratyayāt pāyantikā /",
+   "T1454": "「若復苾芻，非時入聚落，不囑餘苾芻，除餘緣故，波逸底迦。」"
+  },
+  "pc86": {
+   "pi": "Pācittiya 86. Sūcighara Yo pana bhikkhu aṭṭhimayaṁ vā dantamayaṁ vā visāṇamayaṁ vā sūcigharaṁ kārāpeyya, bhedanakaṁ pācittiyaṁ.",
+   "T1429": "「若比丘！作骨、牙、角針筒，刳刮成者，波逸提。",
+   "T1422a": "「若比丘，用骨牙角作針筒，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.84: yaḥ punar bhikṣur asthimayaṃ dantamayaṃ viṣāṇamayaṃ vā sūcīgharakaṃ kārayet pātaya(n)tikā (8)4",
+   "T1436": "「若比丘，若骨、若齒、若角作針筒，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.83. yo puna bhikṣu dantamayaṃ vā asthimayaṃ vā śṛṅgamayaṃ vā suvarṇamayaṃ vā rūpyamayaṃ vā ratanamayaṃ vā sūcīvigrahaṃ kārāpeya bhedanapācattikaṃ /",
+   "T1426": "「若比丘，骨牙角作針筒，破已，波夜提。",
+   "T1460": "「若比丘，骨牙角作鍼筒成者，波逸提。",
+   "sa-mula": "Pāy.84 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur asthimayaṃ vā viṣāṇamayaṃ vā sūcigharaṃ kārayet tad bhedanāt pāyantikā /",
+   "T1454": "「若復苾芻，用骨牙角作針筒成者，應打碎，波逸底迦。"
+  },
+  "pc87": {
+   "pi": "Pācittiya 87. Mañcapīṭha Navaṁ pana bhikkhunā mañcaṁ vā pīṭhaṁ vā kārayamānena aṭṭhaṅgulapādakaṁ kāretabbaṁ sugataṅgulena aññatra heṭṭhimāya aṭaniyā. Taṁ atikkāmayato chedanakaṁ pācittiyaṁ.",
+   "T1429": "「若比丘！作繩床、木床，足應高如來八指，除入梐孔上截竟，若過者，波逸提。",
+   "T1422a": "「若比丘，自作坐臥繩床木床，足應高修伽陀八指，除入梐。若過，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.85: pīṭhaṃ vā bhikṣuṇā mañcaṃ vā kārayatā sugatāṣṭāṅgulipramāṇāḥ pādāḥ kārayitavyā anyatrāraṇyās tata uttaraṃ kārayet p(ātayantikā 8)5",
+   "T1436": "「若比丘，欲作坐床若臥床，足應高八指，除入梐。若過作，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.84. mañcaṃ vā pīṭhaṃ vā bhikṣuṇā kārāpayamāṇena sugatāṣṭāṅgulapramāṇāḥ pādakāḥ kārāpayitavyāḥ anyatrāṭṭanīye, taduttariṃ kārāpeya cchedanapācattikaṃ /",
+   "T1426": "「若比丘，作床脚應高佛八指，除入梐。若過，截已，波夜提。",
+   "T1460": "「若比丘，作繩床、若木床，足應高如來八指，除入梐。若過成者，波逸提。",
+   "sa-mula": "Pāy.85 (PrMoSū_Mū-Banerjee) bhikṣuṇā saṃghasya pīṭhaṃ vā mañcaṃ kārayatā sugatāṣṭāṅgulipramāṇāḥ pādāḥ kārayitavyā anyatra adhastāt* aṭanyās tata uttaraṃ kārayec chedanāt pāyantikā /",
+   "T1454": "「若復苾芻，作大小床足應高佛八指，除入梐木。若過者應截去，波逸底迦。"
+  },
+  "pc88": {
+   "pi": "Pācittiya 88. Tūlonaddha Yo pana bhikkhu mañcaṁ vā pīṭhaṁ vā tūlonaddhaṁ kārāpeyya, uddālanakaṁ pācittiyaṁ.",
+   "T1429": "「若比丘！作兜羅綿，貯繩床、木床、大、小蓐，成者，波逸提。",
+   "T1422a": "「若比丘，以兜羅貯坐臥具，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.86: yaḥ punar bhikṣus tūlasaṃstṛtāṃ śayyām avanahed avanāhayed vā pātayantikā (8)6",
+   "T1436": "「若比丘，自以兜羅綿貯褥、若使人貯，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.85. yo puna bhikṣuḥ tūlasaṃstṛte mañce vā pīṭhe vā abhiniṣīdeya vā abhi[ni]padyeya vā uddālanapācattikaṃ /",
+   "T1426": "「若比丘，兜羅綿紵褥，若坐、若臥，出已，波夜提。",
+   "T1460": "「若比丘，持兜羅綿貯繩床木床，若自作、若教人作，成者，波逸提。",
+   "sa-mula": "Pāy.86 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣus tūlasaṃstṛtaṃ pīṭhaṃ vā mañcaṃ avanahed avanāhayed vā uddalanāt pāyantikā /",
+   "T1454": "「若復苾芻，以木綿等貯僧床座者，應撤去，波逸底迦。"
+  },
+  "pc89": {
+   "pi": "Pācittiya 89. Nisīdana Nisīdanaṁ pana bhikkhunā kārayamānena pamāṇikaṁ kāretabbaṁ, tatridaṁ pamāṇaṁ, dīghaso dve vidatthiyo sugatavidatthiyā, tiriyaṁ diyaḍḍhaṁ, dasā vidatthi. Taṁ atikkāmayato chedanakaṁ pācittiyaṁ.",
+   "T1429": "「若比丘！作尼師檀，當應量作。是中量者，長佛二磔手，廣一磔手半，更增廣長，各半磔手，若過裁竟，波逸提。",
+   "T1422a": "「若比丘，作尼師壇應如量作，長二修伽陀搩手、廣一搩手半，若續方一搩手。若過，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.89: niṣīdanaṃ bhikṣuṇā kārayatā prāmāṇikaṃ kārayitavyaṃ tatredaṃ pramāṇaṃ dīrghato vitastī dve sugatavitastyā tīryak sārdhavitastir daśānāṃ ca vitastis tata uttaraṃ kārayet pātayantikā 89",
+   "T1436": "「若比丘，欲作尼師壇應料量，是中量：長二修伽陀磔手、廣一修伽陀磔手半。若益一磔手縷、若過作，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.86. niṣīdanaṃ bhikṣuṇā kārāpayamāṇena prāmāṇikaṃ kārāpayitavyaṃ / tatredaṃ pramāṇaṃ Ō dīrghaśo dve vitastīyo sugatavitastinā tiryag dvyardham anyatra daśavitastikaṃ / taduttariṃ kārāpeya cchedanapācattikaṃ /",
+   "T1426": "「若比丘，作尼師壇應量作：長二修伽陀磔手、廣一磔手半，更益一磔手。若過，截已，波夜提。",
+   "T1460": "「若比丘，作坐具當應量作。是中量者，長佛二手、廣一手半，廣長各益半手。若過成者，波逸提。",
+   "sa-mula": "Pāy.87 (PrMoSū_Mū-Banerjee) niṣīdanaṃ bhikṣuṇā kārayatā prāmāṇikaṃ kārayitavyaṃ tatredaṃ pramāṇaṃ -- dīrghato vitastrī dve sugatavitastyās tīryak sārdhavitastir daśānāñ ca vitastis tata uttaraṃ kārayed bhedanāt pāyantikā /",
+   "T1454": "「若復苾芻，作尼師但那，當應量作。是中量者，長佛二張手、廣一張手半，長中更增一張手。若過作者應截去，波逸底迦。"
+  },
+  "pc90": {
+   "pi": "Pācittiya 90. Kaṇḍuppaṭicchādi Kaṇḍuppaṭicchādiṁ pana bhikkhunā kārayamānena pamāṇikā kāretabbā, tatridaṁ pamāṇaṁ, dīghaso catasso vidatthiyo sugatavidatthiyā, tiriyaṁ dve vidatthiyo. Taṁ atikkāmayato chedanakaṁ pācittiyaṁ.",
+   "T1429": "「若比丘！作覆瘡衣，當應量作。是中量者，長佛四磔手，廣二磔手，裁竟過者，波逸提。",
+   "T1422a": "「若比丘，作覆瘡衣應如量作，長四修伽陀搩手、廣二搩手。若過，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.88: kaṇḍupraticchādanaṃ bhikṣuṇā kārayatā prāmāṇikaṃ kārayitavyaṃ tatredaṃ pramāṇaṃ dīrghataś catasro vitastayaḥ sugatavitastyā tīryag dve tata uttaraṃ kārayet pātayantikā (8)8",
+   "T1436": "「若比丘，欲作覆身衣應料量，是中量：長四修伽陀磔手、廣二修伽陀磔手半。若過作，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.87. kaṇḍūpraticchādanaṃ bhikṣuṇā kārāpayamāṇena prāmāṇikaṃ kārāpayitavyaṃ / tatredaṃ pramāṇaṃ Ō dīrghaśo catvāri vitastīyo sugatavitastinā, tiryag dve / taduttariṃ kārāpeya cchedanapācattikaṃ /",
+   "T1426": "「若比丘，作覆瘡衣應長四修伽陀磔手、廣二磔手。若過，截已，波夜提。",
+   "T1460": "「若比丘，作覆疥瘡衣，當應量作。是中量者，長佛四手、廣二手。若過成，波逸提。",
+   "sa-mula": "Pāy.88 (PrMoSū_Mū-Banerjee) kaṇḍupraticchādanaṃ bhikṣuṇā kārayatā prāmāṇikaṃ kārayitavyaṃ tatredaṃ pramāṇaṃ -- dīrghataś catasro vitastayaḥ sugatavitastyas tiryag dve tata uttaraṃ kārayec chedanāt pāyantikā /",
+   "T1454": "「若復苾芻，作覆瘡衣，當應量作。是中量者，長佛四張手、廣二張手。若過作者應截去，波逸底迦。"
+  },
+  "pc91": {
+   "pi": "Pācittiya 91. Vassikasāṭika Vassikasāṭikaṁ pana bhikkhunā kārayamānena pamāṇikā kāretabbā, tatridaṁ pamāṇaṁ, dīghaso cha vidatthiyo sugatavidatthiyā, tiriyaṁ aḍḍhateyyā. Taṁ atikkāmayato chedanakaṁ pācittiyaṁ.",
+   "T1429": "「若比丘！作雨浴衣，當應量作。是中量者，長佛六磔手，廣二磔手半，過者裁竟，波逸提。",
+   "T1422a": "「若比丘，作雨浴衣應如量作，長五修伽陀搩手、廣二搩手半。若過，波逸提。",
+   "sa-sarv": "PrMoSū_Pāt.87: varṣāśāṭīcīvaraṃ bhikṣuṇā kārayatā prāmāṇikaṃ kārayitavyaṃ tatredaṃ pramāṇaṃ dīrghataḥ ṣaḍ vitastayaḥ sugatavitastyā tīryak sārdhe dve tata uttaraṃ kārayet pātayantikā (8)7",
+   "T1436": "「若比丘，欲作雨浴衣應料量。是中量：長六修伽陀磔手、廣二修伽陀磔手半。若過作，波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.88. varṣāśāṭikā bhikṣuṇā kārāpayamāṇena prāmāṇikā kārāpayitavyā / tatredaṃ pramāṇaṃ Ō dīrghaśo ṣaḍvitastīyo sugatavitastinā, tiryag aḍḍhatīyaṃ / taduttariṃ kārāpeya cchedanapācattikaṃ /",
+   "T1426": "「若比丘，作雨浴衣應長六修伽陀磔手、廣二磔手半。若過，截已，波夜提。",
+   "T1460": "「若比丘，作雨衣，當應量作。是中量者，長佛六手、廣二手半。若過成者，波逸提。",
+   "sa-mula": "Pāy.89 (PrMoSū_Mū-Banerjee) varṣāśāṭīcīvaraṃ bhikṣuṇā kārayatā prāmāṇikaṃ kārayitavyaṃ tatredaṃ pramāṇaṃ -- dīrghataḥ ṣaṭ vitastayaḥ sugatavitastyas tiryak sārdhe dve tata uttaraṃ kārayec chedanāt pāyantikā /",
+   "T1454": "「若復苾芻，作雨浴衣，當應量作。是中量者，長佛六張手、廣二張手半。若過作者應截去，波逸底迦。"
+  },
+  "pc92": {
+   "pi": "Pācittiya 92. Nanda Yo pana bhikkhu sugatacīvarappamāṇaṁ cīvaraṁ kārāpeyya, atirekaṁ vā, chedanakaṁ pācittiyaṁ. Tatridaṁ sugatassa sugatacīvarappamāṇaṁ, dīghaso nava vidatthiyo sugatavidatthiyā, tiriyaṁ cha vidatthiyo, idaṁ sugatassa sugatacīvarapamāṇanti. Ratanavaggo navamo",
+   "T1429": "「若比丘！與如來等量作衣，若過量作者，波逸提。是中如來衣量者，長佛九磔手，廣六磔手，是謂如來衣量（九十）。",
+   "T1422a": "「若比丘，作修伽陀衣量衣、若過，波逸提。修伽陀衣量者，長九修伽陀搩手、廣六搩手，是名修伽陀衣量。",
+   "sa-sarv": "PrMoSū_Pāt.90: yaḥ punar bhikṣuḥ sugatacīvarapramāṇena cīvaraṃ kārayed uttaraṃ vā sugatacīvarāt pātayantikā / tatredaṃ sugatacīvarapramāṇaṃ dīrghato nava vitastayaḥ sugatavitastyā tīryak ṣaḍ idaṃ tatra sugatacīvarapramāṇaṃ 90 //",
+   "T1436": "「若比丘，佛衣等量作衣，若過佛衣量，波夜提。是中佛衣量：長九修伽陀磔手、廣六修伽陀磔手，是名佛衣量。」",
+   "sa-mahl": "PrMoSū(Mā-L)Pāc.89. yo puna bhikṣuḥ sugatacīvarapramāṇaṃ cīvaraṃ kārāpeya Ō kiñca tasya bhagavato tathāgatasyārhataḥ samyaksaṃbuddhasya sugatasya sugatacīvarapramāṇaṃ? dirghaśo nava vitastīyo sugatavitastinā, tiryak ṣaṭ / idaṃ tasya bhagavato tathāgatasyārhataḥ samyaksaṃbuddhasya sugatasya sugatacīvarapramāṇaṃ / tato vā punar uttariṃ kārāpeya cchedanapācattikaṃ /",
+   "T1426": "「若比丘，與如來衣量等作衣。若過，截已，波夜提。如來衣長九修伽陀磔手、廣六磔手。",
+   "T1460": "「若比丘，與如來等量作衣、若過量作衣，成者，波逸提。是中佛衣量者，長佛九手量、廣六手量，是名佛衣量。」",
+   "sa-mula": "Pāy.90 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣuḥ sugatacīvarapramāṇaṃ cīvaraṃ kārayed uttaraṃ vā sugatacīvarāt pāyantikā / tatredaṃ sugatacīvarapramāṇaṃ dīrghato nava vitastayaḥ tiryak ṣaḍ vitastayaḥ idaṃ sugatacīvarapramāṇam* /",
+   "T1454": "「若復苾芻，同佛衣量作衣，或復過者，波逸底迦。是中佛衣量者，長佛十張手、廣六張手，此是佛衣量。」"
+  },
+  "pcz": {
+   "pi": "Uddiṭṭhā kho āyasmanto dvenavuti pācittiyā dhammā. Tatthāyasmante pucchāmi, kaccittha parisuddhā, dutiyampi pucchāmi, kaccittha parisuddhā, tatiyampi pucchāmi, kaccittha parisuddhā, parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti. Pācittiyā niṭṭhitā",
+   "T1429": "「諸大德！我已說九十波逸提法。今問諸大德！是中清淨不？（如是三說）諸大德！是中清淨，默然故，是事如是持。",
+   "T1422a": "「諸大德！已說九十一波逸提法。今問，諸大德是中清淨不？」（第二、第三亦如是說）「諸大德是中清淨，默然故，是事如是持。」",
+   "sa-sarv": "uddiṣṭā mayāyuṣmanto navati pātayantikā dharmās tatrāham āyuṣmataḥ pṛcchāmi kaccit sthātra pariśuddhā dvir api trir api pṛcchāmi kaccit sthātra par(i)ś(uddhā pariśu)ddhā atrāyuṣmanto yasmāt tūṣṇīm evam etad dhārayāmi //",
+   "T1436": "「諸大德！已說九十波夜提法。今問諸大德是中清淨不？」（第二、第三亦如是問。）「諸大德！是中清淨，默然故，是事如是持。」",
+   "sa-mahl": "// uddānam // (81) sabhakto (82) rājño (83) sūcī gṛhaṃ (84) mañca (85) tūla (86) niṣīdanaṃ / (87) kaṇḍū (88) varṣāśāṭikā (89) sugatacīvaram (90) abhyākhyānaṃ (91) pariṇāmanam (92) ajñānakena // navamo vargaḥ // // vargāṇām uddānaṃ // (1) mṛṣā (2) bījaṃ (3) asaṃmato (4) ekāhaparamo / (5) jyoti (6) saprāṇakaṃ (7) sañcintya (8) ūnaviṃśati (9) sabhaktakena navamaḥ / uddiṣṭāḥ kho punar āyuṣmanto dvānavati śuddhapācattikā dharmāḥ / tatrāyuṣmanto pṛcchāmi kaccittha pariśuddhāḥ? dvitīyaṃ pi āyuṣmanto pṛcchāmi kaccittha pariśuddhāḥ? tṛtīyaṃ pi āyuṣmanto pṛcchāmi kaccittha pariśuddhāḥ? pariśuddhā atrāyuṣmanto yasmāt tūṣṇīm evam etaṃ dhārayāmi /",
+   "T1426": "「諸大德！已說九十二波夜提法。今問諸大德！是中清淨不？是中清淨不？是中清淨不？」「諸大德！是中清淨，默然故，是事如是持。」",
+   "T1460": "「諸大德！我已說九十波逸提法。今問諸大德是中清淨不？」（如是三說）「諸大德是中清淨，默然故，是事如是持。」",
+   "sa-mula": "Pay.Schl. uddiṣṭā mayāyuṣmanto navatiḥ pāyantikā dharmāḥ / tatrāham āyuṣmantaḥ pṛcchāmi -- kaccit sthātra pariśuddhāḥ pariśuddhā atrāyuṣmanto yasmāt tuṣṇīm evāhaṃ dhārayāmi /",
+   "T1454": "「諸大德！我已說九十波逸底迦法。今問諸大德！是中清淨不？」（如是三說）「諸大德！是中清淨，默然故，我今如是持。」"
+  }
+ }
+}
