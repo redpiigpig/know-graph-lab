@@ -1,0 +1,185 @@
+{
+ "slug": "astasahasrika-c09",
+ "title": "八千頌般若・第9品 讚歎品（Stuti）",
+ "family": "sa",
+ "intro": "梵本第九品＝第四會〈讚歎品〉＝施護〈歎勝品〉；道行在〈嘆品〉（自須菩提問「彌勒云何說」起），大明度、羅什、第五會在〈清淨品〉／〈歎淨品〉後段。鈔經無此品。須菩提問般若但有名字、彌勒當以何名說；般若清淨；受持者不橫死、諸天隨侍；諸天唱「閻浮提再見法輪轉」，佛（羅什作須菩提）言非初轉非二轉；般若為大波羅蜜、無邊波羅蜜等諸名。",
+ "units": [
+  {
+   "id": "c09-01",
+   "label": "般若但有名字・彌勒成佛當云何說"
+  },
+  {
+   "id": "c09-02",
+   "label": "般若清淨：色清淨故"
+  },
+  {
+   "id": "c09-03",
+   "label": "聞持般若者得大利・不橫死、諸天隨侍・多留難"
+  },
+  {
+   "id": "c09-04",
+   "label": "諸天唱再見法輪轉・非初轉非二轉"
+  },
+  {
+   "id": "c09-05",
+   "label": "大波羅蜜・空無相無願無轉無還"
+  },
+  {
+   "id": "c09-06",
+   "label": "般若諸名：無邊、平等、離、不可壞…波羅蜜"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本",
+   "who": "Vaidya 校訂本（1960）・GRETIL"
+  },
+  {
+   "id": "T0224",
+   "lang": "lzh",
+   "label": "道行般若經",
+   "who": "後漢・支婁迦讖譯《道行般若經》・179 年",
+   "work": "T0224"
+  },
+  {
+   "id": "T0225",
+   "lang": "lzh",
+   "label": "大明度經",
+   "who": "吳・支謙譯《大明度經》（第一品夾注）・三世紀",
+   "work": "T0225"
+  },
+  {
+   "id": "T0227",
+   "lang": "lzh",
+   "label": "羅什本",
+   "who": "姚秦・鳩摩羅什譯《小品般若波羅蜜經》・408 年",
+   "work": "T0227"
+  },
+  {
+   "id": "T0220d",
+   "lang": "lzh",
+   "label": "玄奘・第四會",
+   "who": "唐・玄奘譯《大般若經》第四會（卷 538–555）・663 年",
+   "work": "T0220d"
+  },
+  {
+   "id": "T0220d-5",
+   "lang": "lzh",
+   "label": "玄奘・第五會",
+   "who": "唐・玄奘譯《大般若經》第五會（卷 556–565）・663 年",
+   "work": "T0220d"
+  },
+  {
+   "id": "T0228",
+   "lang": "lzh",
+   "label": "施護本",
+   "who": "宋・施護譯《佛母出生三法藏般若波羅蜜多經》・十世紀末",
+   "work": "T0228"
+  }
+ ],
+ "works": [
+  "T0220d",
+  "T0224",
+  "T0225",
+  "T0227",
+  "T0228"
+ ],
+ "anchors": [
+  {
+   "work": "T0220d",
+   "node": "第四分讚歎品第九",
+   "uid": "T07n0220d_p0804a15"
+  },
+  {
+   "work": "T0228",
+   "node": "歎勝品第九",
+   "uid": "T08n0228_p0618b26"
+  },
+  {
+   "work": "T0224",
+   "range": [
+    "T08n0224_p0443b29",
+    "T08n0224_p0444a17"
+   ]
+  },
+  {
+   "work": "T0225",
+   "range": [
+    "T08n0225_p0489a17",
+    "T08n0225_p0489b05"
+   ]
+  },
+  {
+   "work": "T0227",
+   "range": [
+    "T08n0227_p0552c20",
+    "T08n0227_p0553a26"
+   ]
+  },
+  {
+   "work": "T0220d",
+   "range": [
+    "T07n0220d_p0886c12",
+    "T07n0220d_p0887c11"
+   ]
+  }
+ ],
+ "cells": {
+  "c09-01": {
+   "sa": "ASP_9: stutiparivarto navamaḥ / atha khalvāyuṣmān subhūtirbhagavantametadavocat - prajñāpāramiteti bhagavan nāmadheyamātram etat / tacca nāma idamiti nopalabhyate / vāgvastveva nāmetyucyate / sāpi prajñāpāramitā na vidyate nopalabhyate / yathaiva nāma, tathaiva prajñāpāramitā / yathā prajñāpāramitā tathā nāma / dharmadvayametanna vidyate nopalabhyate / kiṃ kāraṇaṃ bhagavan maitreyo bodhisattvo mahāsattvo 'nuttarāṃ samyaksaṃbodhimabhisaṃbudhya ebhireva nāmabhiḥ ebhireva padaiḥ ebhirevākṣaraiḥ asminneva pṛthivīpradeśe prajñāpāramitāṃ bhāṣiṣyate? evamukte bhagavānāyuṣmantaṃ subhūtimetadavocat - tathā hi subhūte maitreyo bodhisattvo mahāsattvo na rūpaṃ nityaṃ nānityaṃ na rūpaṃ baddhaṃ na muktam, atyantaviśuddhamityabhisaṃbhotsyate / evaṃ nā vedanāṃ na saṃjñāṃ na saṃskārān / na vijñānaṃ nityaṃ nānityam, na vijñānaṃ baddhaṃ na muktam, atyantaviśuddhamityabhisaṃbhotsyate / anena subhūte kāraṇena maitreyo bodhisattvo mahāsattvaḥ anuttarāṃ samyaksaṃbodhimabhisaṃbudhya ebhireva nāmabhirebhireva padavyañjanairasminneva pṛthivīpradeśe imāmeva prajñāpāramitāṃ bhāṣiṣyate //",
+   "T0224": "須菩提白佛言：「云何彌勒菩薩摩訶薩於是處說般若波羅蜜？」佛語須菩提：「彌勒菩薩摩訶薩於是成阿惟三佛時，不受色說般若波羅蜜，不空色說般若波羅蜜，不受痛痒思想生死識說般若波羅蜜，亦不空識說般若波羅蜜，亦不脫色說般若波羅蜜，亦不縛色說般若波羅蜜，亦不脫痛痒思想生死識說般若波羅蜜，亦不縛識說般若波羅蜜。」",
+   "T0225": "曰：「云何說五陰不受，說不空，說不著，說不脫五陰，說歎？」",
+   "T0227": "爾時須菩提白佛言：「世尊！彌勒菩薩成阿耨多羅三藐三菩提時，於是處云何說般若波羅蜜？」「須菩提！彌勒菩薩成阿耨多羅三藐三菩提時，說般若波羅蜜，不說色空，不說受、想、行、識空；不說色縛，不說色解；不說受、想、行、識縛，不說受、想、行、識解。」",
+   "T0220d": "爾時，具壽善現便白佛言：「世尊！如是般若波羅蜜多但有名字，如是名字亦不可得，但依語言假施設有，是故般若波羅蜜多亦無所有、實不可得。名字、般若波羅蜜多，如是二法展轉相似，同無所有、俱不可得。何緣佛說：慈氏菩薩當證無上正等覺時即以此名，亦於此處宣說般若波羅蜜多。」佛告善現：「慈氏菩薩當證無上正等覺時，不證色空，不證受、想、行、識空；不證色縛，不證受、想、行、識縛；不證色脫，不證受、想、行、識脫。即以如是諸行、狀、相，慈氏菩薩當證無上正等菩提即以此名，亦於此處宣說般若波羅蜜多。」",
+   "T0220d-5": "爾時，善現便白佛言：「慈氏菩薩當證無上正等覺時，以何等名即於此處宣說般若波羅蜜多？」佛告善現：「慈氏菩薩當證無上正等覺時，不說色空法，不說受、想、行、識空法；不說色縛脫法，不說受、想、行、識縛脫法。」",
+   "T0228": "爾時，尊者須菩提白佛言：「世尊！般若波羅蜜多甚深微妙，於其名中畢竟不可得，非彼語言而能宣說，如般若波羅蜜多名不可得故，般若波羅蜜多法亦不可得。而此般若波羅蜜多，名字及法無二差別，皆無所生、俱不可得。世尊！如佛所言，慈氏菩薩摩訶薩當成阿耨多羅三藐三菩提果已，於此地方亦復如是宣說般若波羅蜜多者，此法甚深，彼云何說？」爾時，佛告尊者須菩提言：「彼慈氏菩薩摩訶薩當成阿耨多羅三藐三菩提果已，於此地方說般若波羅蜜多時，不說色若常若無常、若解若縛，不說受、想、行、識若常若無常、若解若縛。說色、受、想、行、識畢竟清淨。須菩提！彼菩薩以如是名句文，如實宣說般若波羅蜜多。」"
+  },
+  "c09-02": {
+   "sa": "evamukte āyuṣmān subhūtirbhagavantametadavocat - pariśuddhā bateyaṃ bhagavan prajñāpāramitā? bhagavānāha - rūpaviśuddhitaḥ subhūte pariśuddhā prajñāpāramitā / evaṃ vedanāsaṃjñāsaṃskārāḥ / vijñānaviśuddhitaḥ subhūte pariśuddhā prajñāpāramitā / rūpānutpādānirodhāsaṃkleśāvyavadānaviśuddhitaḥ subhūte pariśuddhā prajñāpāramitā / evaṃ vedanāsaṃjñāsaṃskārāḥ / vijñānānutpādānirodhāsaṃkleśāvyavadānaviśuddhitaḥ subhūte pariśuddhā prajñāpāramitā / ākāśaviśuddhitaḥ subhūte pariśuddhā prajñāpāramitā / rūpanirupalepāparigrahatayā subhūte pariśuddhā prajñāpāramitā / evaṃ vedanāsaṃjñāsaṃskārāḥ / vijñānanirupalepāparigrahatayā subhūte pariśuddhā prajñāpāramitā / ākāśapratiśrutkāvacanīyapravyāhāranirupalepatayā subhūte pariśuddhā prajñāpāramitā / sarvopalepānulepadharmānupalepatayā subhūte pariśuddhā prajñāpāramitā //",
+   "T0224": "須菩提白佛言：「般若波羅蜜甚清淨，天中天！」佛言：「色亦清淨。」須菩提言：「故般若波羅蜜清淨。」佛言：「痛痒思想生死識亦清淨。」須菩提言：「故般若波羅蜜清淨。」佛言：「如是空之清淨。」須菩提言：「故般若波羅蜜清淨。」佛言：「色清淨無瑕穢，般若波羅蜜亦如是，痛痒思想生死識清淨無瑕穢，般若波羅蜜亦如是。」佛言：「如空無瑕穢，故般若波羅蜜亦清淨。」",
+   "T0225": "曰：「清淨，天中天！」佛言：「五陰清淨明度清淨，如空也。」對曰：「五陰無穢，天中天！」佛言：「無穢矣。」",
+   "T0227": "須菩提言：「世尊！般若波羅蜜清淨？」佛言：「色淨故，般若波羅蜜清淨。」「受、想、行、識淨故，般若波羅蜜清淨？」佛言：「虛空淨故，般若波羅蜜清淨；色無染故，般若波羅蜜清淨；受、想、行、識無染故，般若波羅蜜清淨。須菩提！虛空無染故，般若波羅蜜清淨。」",
+   "T0220d": "具壽善現復白佛言：「甚深般若波羅蜜多最為清淨。」佛告善現：「色清淨故，甚深般若波羅蜜多最為清淨；受、想、行、識清淨故，甚深般若波羅蜜多最為清淨；虛空清淨故，甚深般若波羅蜜多最為清淨；色無染故，甚深般若波羅蜜多最為清淨；受、想、行、識無染故，甚深般若波羅蜜多最為清淨；虛空無染故，甚深般若波羅蜜多最為清淨；一切有染及無染法不可得故，甚深般若波羅蜜多最為清淨。」",
+   "T0220d-5": "具壽善現復白佛言：「甚深般若波羅蜜多最為清淨。」佛告善現：「色清淨故，甚深般若波羅蜜多最為清淨；受、想、行、識清淨故，甚深般若波羅蜜多最為清淨；虛空清淨故，甚深般若波羅蜜多最為清淨；色無染故，甚深般若波羅蜜多最為清淨；受、想、行、識無染故，甚深般若波羅蜜多最為清淨；虛空無染故，甚深般若波羅蜜多最為清淨。」",
+   "T0228": "爾時，須菩提白佛言：「世尊！般若波羅蜜多清淨。」佛言：「須菩提！色清淨故，般若波羅蜜多清淨。受、想、行、識清淨故，般若波羅蜜多清淨。色不生不滅、不著煩惱、不出世間故清淨，般若波羅蜜多亦如是清淨。受、想、行、識不生不滅、不著煩惱、不出世間故清淨，般若波羅蜜多亦如是清淨。色無染故，般若波羅蜜多清淨，受、想、行、識無染故，般若波羅蜜多清淨；一切法無染故，般若波羅蜜多清淨；虛空清淨故，般若波羅蜜多清淨；一切法如虛空、如聲響故清淨，般若波羅蜜多亦如是清淨。」"
+  },
+  "c09-03": {
+   "sa": "evamukte āyuṣmān subhūtirbhagavantametadavocat - sulabdhā bata lābhāsteṣāṃ bhagavan kulaputrāṇāṃ kuladuhitṝṇāṃ ca, yeṣāmiyaṃ prajñāpāramitā śrotrāvabhāsamapyāgamiṣyati, prāgeva ya udgrahīṣyanti dhārayiṣyanti vācayiṣyanti paryavāpsyanti pravartayiṣyanti deśayiṣyantyupadekṣyantyuddekṣyanti svādhyāsyanti / na teṣāṃ cakṣūrogo bhaviṣyati, na śrotrarogo na ghrāṇarogo na jihvārogo na kāyarogo bhaviṣyati / na dhandhāyitatā bhaviṣyati, na te viṣamāparihāreṇa kālaṃ kariṣyanti / bahūni caiṣāṃ devatāsahasrāṇi pṛṣṭhataḥ pṛṣṭhato 'nubaddhāni bhaviṣyanti / aṣṭamīṃ caturdaśīṃ pañcadaśīṃ ca sa dharmabhāṇakaḥ kulaputro vā kuladuhitā vā yatra yatra prajñāpāramitāṃ bhāṣiṣyate, tatra tatra bahutaraṃ puṇyaṃ prasaviṣyati / evamukte bhagavānāyuṣmantaṃ subhūtimetadavocat - evametatsubhūte, evam etat / bahūni subhūte tasya kulaputrasya vā kuladuhiturvā devatāsahasrāṇi pṛṣṭhataḥ pṛṣṭhato 'nubaddhāni bhaviṣyanti / bahūni ca devatāsahasrāṇi tatrāgamiṣyanti sarvāṇi dharmaśravaṇārthikāni / tāni ca rakṣāvaraṇaguptiṃ saṃvidhāsyanti tasya dharmabhāṇakasya imāṃ prajñāpāramitāṃ bhāṣamāṇasya / tatkasya hetoḥ? sadevamānuṣāsurasya hi subhūte lokasya prajñāpāramitā anuttaraṃ ratnam / ato 'pi subhūte kulaputro vā kuladuhitā vā tatonidānaṃ bahutaraṃ puṇyaṃ prasaviṣyati / api tu khalu punaḥ subhūte bahavo 'ntarāyā bhaviṣyanti asyā gambhīrāyāḥ prajñāpāramitāyā likhyamānāyā udgṛhyamāṇāyā dhāryamāṇāyā vācyamānāyāḥ paryavāpyamānāyāḥ pravartyamānāyā upadiśyamānāyā uddiśyamānāyāḥ svādhyāyyamānāyāḥ / tatkasya hetoḥ? tathā hi subhūte bahupratyarthikāni mahāratnāni bhavanti / yathāsāraṃ ca gurutarapratyarthikāni bhavanti / anuttaraṃ cedaṃ subhūte mahāratnaṃ lokasya yaduta prajñāpāramitā / hitāya sukhāya pratipannā lokasya / sarvadharmāṇāmanutpādāyānirodhāyāsaṃkleśāyāvināśayogena pratyupasthitā / na ca subhūte prajñāpāramitā kaṃciddharmamālīyate, na kaṃciddharmaṃ saṃkliśyate, na kaṃciddharmaṃ parigṛhṇāti / tatkasya hetoḥ? tathā hi subhūte sarve te dharmā na saṃvidyante nopalabhyante / anupalabdhitaḥ subhūte anupaliptā prajñāpāramitā / anupalipteti subhūte iyaṃ prajñāpāramitā / tathā hi subhūte rūpanirupalepatayā anupalipteyaṃ prajñāpāramitā / evaṃ vedanāsaṃjñāsaṃskārāḥ / vijñānanirupalepatayā subhūte anupalipteyaṃ prajñāpāramitā / sacedevam api subhūte bodhisattvo mahāsattvo na saṃjānīte, carati prajñāpāramitāyām / sā khalu punariyaṃ subhūte prajñāpāramitā na kasyaciddharmasyāveśikā vā niveśikā vā saṃdarśikā vā nidarśikā vā āvāhikā vā nirvāhikā vā //",
+   "T0224": "須菩提白佛言：「其受學誦般若波羅蜜者終不橫死，若干百天若干千天常隨侍之。若善男子、善女人為法師者，月八日、十四日、十五日說法時，得功德不可復計。」佛言：「如是，如是！須菩提！得其功德不可復計。若守般若波羅蜜者，其功德出是上去。何以故？須菩提！般若波羅蜜者，即是珍寶故。於法無有作者，亦無有得法者，亦無有持者。何以故？法甚深故。亦不可見，亦不可得，亦無有得者。須菩提！亦不見般若波羅蜜。何以故？須菩提！亦不可名，亦無有見，得般若波羅蜜者。所索不可得，亦不見般若波羅蜜，甚深如是亦無有生處，般若波羅蜜無所行，亦無所不行，般若波羅蜜亦無有持法者，亦無有守法者，如空無所取無所持，無所見，亦不無觀，亦不無見。",
+   "T0225": "善業言：「學是者，不橫死也，諸尊天常隨之。經師月八日、十四日、十五日說經時，諸闓士常來大會。」佛言：「是善士女得功德，甚多難計。所以然者，明度無所近法、無所取經，無有無得、無瑕無玷、無求無想，是為求明度無所觀見法。」",
+   "T0227": "「世尊！若有善男子、善女人，能受持讀誦般若波羅蜜者，終不橫死。若干百千諸天，皆共隨從。若月八日、十四日、十五日、二十三日、二十九日、三十日，在在處處，說般若波羅蜜，其福甚多。」佛言：「如是，如是！須菩提！是人說般若波羅蜜，得福甚多。須菩提！般若波羅蜜多有留難。何以故？般若波羅蜜是大珍寶，於法無所著，無所取。所以者何？謂諸法無所有，不可得故。須菩提！般若波羅蜜無所得故，無能染污。何以故？般若波羅蜜以無法故，名為無染般若波羅蜜。般若波羅蜜無污故，諸法亦無污。若如是，亦不分別。名為行般若波羅蜜。須菩提！般若波羅蜜無有法，若見若不見，無有法若取若捨。」",
+   "T0220d": "具壽善現復白佛言：「若善男子、善女人等，但聞如是甚深般若波羅蜜多功德名號，尚為獲得廣大善利，況能受持、讀誦、修習、書寫、解說、廣令流布！是善男子、善女人等，終不橫死亦無橫病及諸殃禍，常為無量百千天神恭敬圍遶隨逐守護。若善男子、善女人等於黑白月各第八日、第十四日、第十五日，在在處處讀誦講說甚深般若波羅蜜多， 當獲無邊功德勝利。」佛告善現：「如是！如是！如汝所說。是善男子、善女人等，讀誦、宣說甚深般若波羅蜜多，無量天神常來恭敬圍遶守護。所以者何？甚深般若波羅蜜多，是諸天、人、阿素洛等無上珍寶。由此因緣，是善男子、善女人等當獲無邊功德勝利。「復次，善現！甚深般若波羅蜜多聽聞、受持、讀誦、書寫、供養、修學、宣說等時，多有邪魔為作留難。所以者何？甚深般若波羅蜜多是大珍寶多諸怨賊，譬如世間所貴珍寶，隨所在處多諸怨賊。善現當知！甚深般若波羅蜜多是無上寶，能與世間利益安樂。「復次，善現！甚深般若波羅蜜多於一切法不生不滅、不成不壞、不向不背、不引不遣、不取不捨、不垢不淨、不增不減、不近不遠。所以者何？以一切法都無所有皆不可得。善現當知！甚深般若波羅蜜多於一切法無所得故，非能染污、非所染污。所以者何？無法不能染污無法。善現當知！色無染污故，甚深般若波羅蜜多亦無染污；受、想、行、識無染污故，甚深般若波羅蜜多亦無染污；甚深般若波羅蜜多無染污故，色等諸法亦無染污。若於如是亦不分別，是行般若波羅蜜多。善現當知！甚深般若波羅蜜多無分別故，於一切法無取無捨、無說無示、無引無遣。」",
+   "T0220d-5": "具壽善現復白佛言：「若諸有情受持、讀誦甚深般若波羅蜜多，終不橫死亦無橫病及橫殃禍，常為無量百千天神恭敬圍遶隨逐守護。若善男子、善女人等於黑白月各第八日、第十四日、第十五日，在在處處讀誦講說甚深般若波羅蜜多，當獲無邊功德勝利。」佛告善現：「如是！如是！如汝所說。善現當知！甚深般若波羅蜜多說、聽等時多有留難。所以者何？甚深般若波羅蜜多是大珍寶多諸怨賊，於一切法無著無取。何以故？以一切法都無所有、不可得故。善現當知！甚深般若波羅蜜多，於一切法無所得故，非能染污非所染污。何以故？無法不能染無法故。以無染故說名無染波羅蜜多，由此般若波羅蜜多無染污故，餘一切法亦無染污。若於如是亦不分別，是行般若波羅蜜多。善現當知！甚深般若波羅蜜多無分別故，於一切法無見不見、無取無捨。」",
+   "T0228": "爾時，尊者須菩提白佛言：「世尊！若有善男子、善女人，於此般若波羅蜜多法門發清淨心，聽受讀誦、為人演說，當知是人得大善利，眼、耳、鼻、舌、身根清淨，離諸病苦，一切惡毒不能傷害，壽命增長無中夭難。常得千天子眾或時導前或時從後，於一切處密為守護。世尊！諸持法者善男子、善女人，應於白月八日、十四日、十五日，清淨身語心業，於諸方處讀誦此般若波羅蜜多法門，或為他人解說其義。當知是善男子、善女人得福甚多。」佛告須菩提言：「如是，如是！如汝所說。若有善男子、善女人，於一切處讀誦解說此般若波羅蜜多法門時，常有千天子眾往彼持法人所，為欲聽受正法大利益故密護其人。何以故？此般若波羅蜜多法門，於天上人間為最勝寶。以是緣故，善男子、善女人能受持者，得福甚多。「復次，須菩提！若有受持讀誦解說此甚深般若波羅蜜多法門者，於現世中得大善利，獲最勝寶，天上人間共所尊重。何以故？此般若波羅蜜多法門，能與眾生廣大利樂。須菩提！彼一切法，不生不滅、不染不淨、無取無捨，無所有、無所得，般若波羅蜜多亦不生不滅、不染不淨、無取無捨，無所有、無所得。何以故？色無染故，般若波羅蜜多亦無染，受、想、行、識無染故，般若波羅蜜多亦無染。菩薩摩訶薩若於諸法不生分別，是為行般若波羅蜜多。須菩提！般若波羅蜜多，非內非外、不出不入，無法可示、無法可觀。」"
+  },
+  "c09-04": {
+   "sa": "atha khalu saṃbahulāni devaputrasahasrāṇi antarīkṣe kilakilāprakṣveḍitena cailavikṣepānakārṣuḥ, dvitīyaṃ batedaṃ dharmacakrapravartanaṃ jambūdvīpe paśyāma iti cāvocan / atha khalu bhagavānāyuṣmantaṃ subhūtiṃ sthavirametadavocat - nedaṃ subhūte dvitīyaṃ dharmacakrapravartanaṃ nāpi kasyaciddharmasya pravartanaṃ vā nivartanaṃ vā / evamiyaṃ subhūte bodhisattvasya mahāsattvasya prajñāpāramitā //",
+   "T0224": "三千大千剎土諸天子飛在上俱皆觀，便舉聲共嘆曰：『於閻浮利地上再見法輪轉。』」佛謂須菩提：「無兩法輪為轉，亦不想有一法輪轉，不轉是者即般若波羅蜜。」",
+   "T0225": "諸天子心大歡喜，同聲而歎曰：「斯天下乃再見經輪轉。」佛告善業：「不兩經輪轉，無所從生法，不來不去如是。」",
+   "T0227": "是時若干百千諸天子，踊躍歡喜，於虛空中同聲唱言：「我於閻浮提，再見法輪轉。」須菩提語諸天子：「非初轉，非二轉。何以故？般若波羅蜜法中，無轉無還。」",
+   "T0220d": "時，有無量百千天子住虛空中，歡喜踊躍互相慶慰，同聲唱言：「我等今者於贍部洲見佛第二轉妙法輪。」爾時，世尊告善現曰：「如是法輪非第一轉亦非第二。所以者何？甚深般若波羅蜜多於一切法不為轉故、不為還故出現世間，但以無性自性空故出現世間。若菩薩摩訶薩能如是知無所分別，是行般若波羅蜜多。」",
+   "T0220d-5": "時，有無量百千天子住虛空中，歡喜踊躍互相慶慰，同聲唱言：「我等今者於贍部洲見佛第二轉妙法輪。」爾時，世尊告善現曰：「如是法輪非第一轉亦非第二，甚深般若波羅蜜多無轉還故。」",
+   "T0228": "爾時，三千大千世界所來集會一切梵王、帝釋及諸天子，各各踊躍歡喜，咸作是言：「我等今日於閻浮提中，得聞世尊第二轉此甚深般若波羅蜜多法輪。彼當來世，慈氏菩薩成正覺已轉此法輪時，願我亦復得聞此法。」佛告須菩提言：「法非初轉、非第二轉，當知諸法畢竟無所有而不可轉。須菩提！菩薩摩訶薩修學般若波羅蜜多亦復如是。」"
+  },
+  "c09-05": {
+   "sa": "evamukte āyuṣmān subhūtirbhagavantametadavocat - mahāpāramiteyaṃ bhagavaṃstasya bodhisattvasya mahāsattvasya, yasyāsaṅgatā sarvadharmeṣu, yo 'sāvanuttarāṃ samyaksaṃbodhimabhisaṃboddhukāmo na ca kaṃciddharmamabhisaṃbudhyate, dharmacakraṃ ca pravartayiṣyati, na ca kaṃciddharmaṃ saṃdarśayiṣyati / tatkasya hetoḥ? na hi kaściddharmo ya upalabhyate, yo vā dharmaḥ sūcyate / nāpi kaściddharmaṃ pravartayiṣyati / tatkasya hetoḥ? atyantānabhinirvṛttā hi bhagavan sarvadharmāḥ / nāpi kaṃciddharmaṃ nivartayiṣyati / tatkasya hetoḥ? ādyanabhinirvṛttā hi bhagavan sarvadharmāḥ, prakṛtiviviktatvātsarvadharmāṇām // evamukte bhagavānāyuṣmantaṃ subhūtimetadavocat - evametatsubhūte, evam etat / na hi subhūte śūnyatā pravartate vā nivartate vā / nāpi subhūte ānimittaṃ pravartate vā nivartate vā / nāpi subhūte apraṇihitaṃ pravartate vā nivartate vā / yā subhūte evaṃ deśanā, iyaṃ sā sarvadharmāṇāṃ deśanā / naiva ca kenaciddeśitā, nāpi kenacicchrutā, nāpi kenacitpratīcchitā, nāpi kenacitsākṣātkṛtā, nāpi kenacitsākṣātkriyate, nāpi kenacitsākṣātkariṣyate / nāpyanayā dharmadeśanayā kaścitparinirvṛto nāpi parinirvāsyati nāpi parinirvāti / nāpyanayā dharmadeśanayā kaściddakṣiṇīyaḥ kṛtaḥ //",
+   "T0224": "須菩提言：「如是，天中天！極安隱摩訶波羅蜜是，於菩薩摩訶薩無所罣礙法，阿耨多羅三耶三菩阿惟三佛，是無有法成阿惟三佛者。何所法輪，惟三佛見法為轉，無所還法為轉，亦無法有恐者，無有法而憂者。何以故？若有兩法，為不可得，何所法憂，亦無法轉者，故諸法如空無所轉，亦無法有還者，乃至諸法亦為無所有。」佛語須菩提：「空者無所轉，亦無轉還，亦無想，亦無願，亦無生死，亦無所從生，亦不有轉，亦不轉還。作是說者，是為說法無所說者，亦無所得，亦無有證，作是說法亦不般泥洹，作是說法亦無有盡。」",
+   "T0225": "善業言：「求安闓士，諸法皆無所罣礙，作無上正真道平等正覺。」佛言：「無經輪轉、無經還。何所為經輪轉？無見經還，何所為經輪轉？無見經、無觀法。何以故？諸經所生，如虛空，無轉無去，作是說便為說經。無說經者、無聞者、無證。是說經者為滅度，是說經為無人。」",
+   "T0227": "佛告須菩提：「摩訶波羅蜜是菩薩般若波羅蜜，所謂於一切法無轉無著。得阿耨多羅三藐三菩提，亦無所得。轉法輪時，亦無所轉，無法可還，無法可示，無法可見。是法不可得故。何以故？須菩提！空不轉不還，無相無作，無起無生，無所有，不轉不還，如是說名為說般若波羅蜜。無聽者，無受者，無證者，亦無以法作福田者。」",
+   "T0220d": "具壽善現便白佛言：「甚深般若波羅蜜多是為廣大波羅蜜多，達一切法自性空故。雖達諸法自性皆空，而諸菩薩摩訶薩依深般若波羅蜜多，於一切法無縛無著，證得無上正等菩提，轉妙法輪度有情眾；雖證菩提而無所證，證不證法不可得故；雖轉法輪而無所轉，轉法還法不可得故；雖度有情而無所度，見不見法不可得故。世尊！此大般若波羅蜜多甚深教中，轉法輪事都不可得。所以者何？以於此中無法可顯、無法可示、無法可得、無法可轉、無法可還。所以者何？以一切法畢竟不生亦復不滅，不生滅故無轉無還。」爾時，世尊告善現曰：「如是！如是！所以者何？非空、無相、無願法中，可有能轉及能還法，轉還性法不可得故。若能如是宣說開示，是名善淨宣說般若波羅蜜多，此中都無說者、受者、所說受法。既無說者、受者及法，諸能證者亦不可得，無證者故，亦無有能得涅槃者，亦無說法作福田者，福田無故，福性亦空。表示名言皆不可得，故名廣大波羅蜜多。」",
+   "T0220d-5": "爾時，善現便白佛言：「甚深般若波羅蜜多是為廣大波羅蜜多，於一切法無縛無著，雖證菩提而無所證，雖轉法輪而無所轉，無法可示、無法可顯、無法可得、無法可轉、無法可還，以一切法畢竟不生亦復不滅，不生滅故無轉無還。」爾時，世尊告善現曰：「如是！如是！所以者何？以空、無相、無願、無作、無生、無滅、無性法中，若轉若還俱不可得。若能如是宣說開示，是名善淨宣說般若波羅蜜多，此中都無說者、受者，亦無作證得涅槃者，亦無說法作福田者，福田無故福性亦空，表示名言皆不可得，故名廣大波羅蜜多。」",
+   "T0228": "爾時，尊者須菩提白佛言：「世尊！大波羅蜜多是般若波羅蜜多，所以者何？彼一切法離諸著故。而諸菩薩摩訶薩修一切法，乃至證得阿耨多羅三藐三菩提果，亦無法可證。雖轉法輪，亦無法可示、無法可得。以無證、無示、無所得故，一切法空，畢竟離著。由離著故，即一切法無還無轉。何以故？世尊！一切法離性，是故無還無轉。」佛告尊者須菩提言：「如是，如是！如汝所說，須菩提！彼空解脫門無還無轉，無相、無願解脫門亦無還無轉。須菩提！雖於諸法如是宣說，而諸法性畢竟寂滅，無說、無示、無聞、無得，無法可證。以無所證故，亦無證者。是故諸法無滅無非滅。」"
+  },
+  "c09-06": {
+   "sa": "evamukte āyuṣmān subhūtirbhagavantametadavocat - asatpāramiteyaṃ bhagavan ākāśasattāmupādāya / asamasamatāpāramiteyaṃ bhagavan sarvadharmānupalabdhitāmupādāya / viviktapāramiteyaṃ bhagavan atyantaśūnyatāmupādāya / anavamṛdyapāramiteyaṃ bhagavan sarvadharmānupalabdhitāmupādāya / apadapāramiteyaṃ bhagavan anāmāśarīratāmupādāya / asvabhāvapāramiteyaṃ bhagavan anāgatimagatimupādāya / avacanapāramiteyaṃ bhagavan sarvadharmāvikalpatāmupādāya / anāmapāramiteyaṃ bhagavan skandhānupalabdhitāmupādāya / agamanapāramiteyaṃ bhagavan sarvadharmāgamanatāmupādāya / asaṃhāryapāramiteyaṃ bhagavan sarvadharmāgrāhyatāmupādāya / akṣayapāramiteyaṃ bhagavan akṣayadharmayogatāmupādāya / anutpattipāramiteyaṃ bhagavan sarvadharmānabhinirvṛttitāmupādāya / akārakapāramiteyaṃ bhagavan kārakānupalabdhitāmupādāya / ajānakapāramiteyaṃ bhagavan sarvadharmāṇāmanātmatāmupādāya / asaṃkrāntipāramiteyaṃ bhagavan cyutyupapattyanupattitāmupādāya / avinayapāramiteyaṃ bhagavan pūrvāntāparāntapratyutpannārthānupalabdhitāmupādāya / svapnapratiśrutkāpratibhāsamarīcimāyāpāramiteyaṃ bhagavan anutpādavijñāpanatāmupādāya / asaṃkleśapāramiteyaṃ bhagavan rāgadveṣamohāsvabhāvatāmupādāya / avyavadānapāramiteyaṃ bhagavan āśrayānupalabdhitāmupādāya / anupalepapāramiteyaṃ bhagavan ākāśānupalepatāmupādāya / aprapañcapāramiteyaṃ bhagavan sarvadharmamananasamatikramatāmupādāya / amananapāramiteyaṃ bhagavan aniñjanatāmupādāya / acalitapāramiteyaṃ bhagavan dharmadhātusthititāmupādāya / virāgapāramiteyaṃ bhagavan sarvadharmāvitathatāmupādāya / asamutthānapāramiteyaṃ bhagavan sarvadharmanirvikalpatāmupādāya / śāntapāramiteyaṃ bhagavan sarvadharmanimittānupalabdhitāmupādāya / nirdoṣapāramiteyaṃ bhagavan guṇapāramitāmupādāya / niḥkleśapāramiteyaṃ bhagavan parikalpāsattāmupādāya / niḥsattvapāramiteyaṃ bhagavan bhūtakoṭitāmupādāya / apramāṇapāramiteyaṃ bhagavan sarvadharmasamutthānāsamutthānatāmupādāya / antadvayānanugamapāramiteyaṃ bhagavan sarvadharmānabhiniveśanatāmupādāya / asaṃbhinnapāramiteyaṃ bhagavan sarvadharmāsaṃbhedanatāmupādāya / aparāmṛṣṭapāramiteyaṃ bhagavan sarvaśrāvakapratyekabuddhabhūmyaspṛhaṇatāmupādāya / avikalpapāramiteyaṃ bhagavan vikalpasamatāmupādāya / aprameyapāramiteyaṃ bhagavan apramāṇadharmatāmupādāya / asaṅgapāramiteyaṃ bhagavan sarvadharmāsaṅgatāmupādāya / anityapāramiteyaṃ bhagavan sarvadharmāsaṃskṛtatāmupādāya / duḥkhapāramiteyaṃ bhagavan ākāśasamadharmatāmupādāya / śūnyapāramiteyaṃ bhagavan sarvadharmānupalabdhitāmupādāya / anātmapāramiteyaṃ bhagavan sarvadharmānabhiniveśanatāmupādāya / alakṣaṇapāramiteyaṃ bhagavan sarvadharmānabhinirvṛttitāmupādāya / sarvaśūnyatāpāramiteyaṃ bhagavan anantāparyantatāmupādāya / smṛtyupasthānādibodhipakṣadharmapāramiteyaṃ bhagavaṃsteṣāmanupalabdhitāmupādāya / śūnyatānimittāpraṇihitapāramiteyaṃ bhagavan trivimokṣamukhānupalabdhitāmupādāya / aṣṭavimokṣapāramiteyaṃ bhagavaṃsteṣāmanupalabdhitāmupādāya / navānupūrvavihārapāramiteyaṃ bhagavan prathamadhyānādīnāmanupalabdhitāmupādāya / catuḥsatyapāramiteyaṃ bhagavan duḥkhādīnāmanupalabdhitāmupādāya / daśapāramiteyaṃ bhagavan dānādīnāmanupalabdhitāmupādāya / balapāramiteyaṃ bhagavan anavamṛdyatāmupādāya / vaiśāradyapāramiteyaṃ bhagavan atyantānavalīnatāmupādāya / pratisaṃvitpāramiteyaṃ bhagavan sarvajñatāsaṅgāpratighātitāmupādāya / sarvabuddhadharmāveṇikapāramiteyaṃ bhagavan gaṇanāsamatikramatāmupādāya / tathāgatatathatāpāramiteyaṃ bhagavan sarvadharmāvitathatāmupādāya / svayaṃbhūpāramiteyaṃ bhagavan sarvadharmāsvabhāvatāmupādāya / sarvajñajñānapāramiteyaṃ bhagavan yaduta prajñāpāramitā sarvadharmasvabhāvasarvākāraparijñānatāmupādāyeti // āryāṣṭasāhasrikāyāṃ prajñāpāramitāyāṃ stutiparivarto nāma navamaḥ //",
+   "T0224": "須菩提白佛言：「無極波羅蜜，如空無有極。天中天！一等波羅蜜者於諸法悉平等。天中天！二恍忽波羅蜜者為本空。天中天！三無上波羅蜜於諸法無所著。天中天！四無人波羅蜜無有身。天中天！五無所去波羅蜜無所至。天中天！六無所有波羅蜜無所持。天中天！七無有盡波羅蜜無有極。天中天！八無所從生波羅蜜無所滅。天中天！九無作波羅蜜無有造者。天中天！十不知波羅蜜無所得。天中天！十一無所至波羅蜜無所到。天中天！十二無垢波羅蜜用淨故。天中天！十三無著波羅蜜無所得。天中天！十四夢波羅蜜無有我。天中天！十五清淨波羅蜜無瑕穢。天中天！十六不可見波羅蜜無有處。天中天！十七定波羅蜜不動搖。天中天！十八無念波羅蜜悉平等。天中天！十九不動搖波羅蜜法不移。天中天！二十無欲波羅蜜本無故。天中天！二十一無所生波羅蜜無所向。天中天！二十二寂波羅蜜無有想。天中天！二十三無恚波羅蜜無有恨。天中天！二十四無人波羅蜜本無故。天中天！二十五不觀波羅蜜法無所從起。天中天！二十六不至邊波羅蜜無所止，天中天！二十七不腐波羅蜜無有敗。天中天！二十八無不入波羅蜜，諸羅漢、辟支佛所不及。天中天！二十九不亂波羅蜜無有誤。天中天！三十不可量波羅蜜無有小法。天中天！三十一無形波羅蜜於諸法無所罣礙。天中天！三十二不可得波羅蜜無所生。天中天！三十三無常波羅蜜不有壞。天中天！三十四無苦波羅蜜諸法不相侵。天中天！三十五無我波羅蜜於諸法無所求。天中天！三十六空波羅蜜於諸法不可得。天中天！三十七無有想波羅蜜於諸法無所出。天中天！三十八力波羅蜜於諸法為有勝。天中天！三十九不可計佛法波羅蜜於諸法出計去。天中天！四十自然波羅蜜，般若波羅蜜是。天中天！四十一於諸法亦無自然故。」",
+   "T0225": "善業白佛：「如虛空無極悉明度，平觀諸法，無不明了。天中天！本空無上，諸法不可逮，無著無身，無去無來，無有無持，無盡無根，無所從生、無滅，無作無師，不知無想，無所罣礙、無適，無壞、無本，如幻無見、如夢無我，清淨無穢，不可見、無處，定不動搖，無念平等，不動法不移，無欲法無異無所生向，無想去垢盡恚恨，無人，人本無，不觀法，無所起，不至邊，無所止，不腐無敗，無不入，諸應儀、緣一覺所不能及，不亂無誤不可量，無小法，無形，無所生起，無苦，諸法不相侵，無我，無所著，空。諸法無所出，力無能勝者，不可計，出計去，無所畏心不懈。如來諸法，本無，無師，無為寂寞，明度無極。天中天！」",
+   "T0227": "須菩提白佛言：「世尊！無邊波羅蜜是般若波羅蜜，虛空無邊故。世尊！正波羅蜜是般若波羅蜜，諸法平等故。世尊！離波羅蜜是般若波羅蜜，諸法性離故。世尊！不可破波羅蜜是般若波羅蜜，諸法不可得故。世尊！無處波羅蜜是般若波羅蜜，諸法無形無名故。世尊！無去波羅蜜是般若波羅蜜，諸法無來故。世尊！無奪波羅蜜是般若波羅蜜，諸法不可取故。世尊！盡波羅蜜是般若波羅蜜，諸法無盡故。世尊！無生波羅蜜是般若波羅蜜，諸法無生故。世尊！無作波羅蜜是般若波羅蜜，作者不可得故。世尊！不出波羅蜜是般若波羅蜜，出者不可得故。世尊！不至波羅蜜是般若波羅蜜，無退沒故。世尊！無垢波羅蜜是般若波羅蜜，諸煩惱清淨故。世尊！無污波羅蜜是般若波羅蜜，處不污故。世尊！不滅波羅蜜是般若波羅蜜，諸法離前際故。世尊！幻波羅蜜是般若波羅蜜，諸法不生故。世尊！夢波羅蜜是般若波羅蜜，意識平等故。世尊！不戲波羅蜜是般若波羅蜜，諸戲平等故。世尊！不念波羅蜜是般若波羅蜜，諸念不生故。世尊！不動波羅蜜是般若波羅蜜，法性常住故。世尊！離欲波羅蜜是般若波羅蜜，諸法不虛誑故。世尊！不起波羅蜜是般若波羅蜜，諸法無分別故。世尊！寂滅波羅蜜是般若波羅蜜，諸法相不可得故。世尊！無煩惱波羅蜜是般若波羅蜜，諸法無過咎故。世尊！無眾生波羅蜜是般若波羅蜜，眾生際不可得故。世尊！不斷波羅蜜是般若波羅蜜，諸法不起故。世尊！無二邊波羅蜜是般若波羅蜜，諸法無著故。世尊！不異波羅蜜是般若波羅蜜，諸法不和合故。世尊！不著波羅蜜是般若波羅蜜，不分別聲聞、辟支佛地故。世尊！不分別波羅蜜是般若波羅蜜，諸分別平等故。世尊！無量波羅蜜是般若波羅蜜，量法不生故。世尊！虛空波羅蜜是般若波羅蜜，諸法無障礙故。世尊！不生波羅蜜是般若波羅蜜，諸法不起故。世尊！無常波羅蜜是般若波羅蜜，諸法不失故。世尊！苦波羅蜜是般若波羅蜜，諸法無苦惱故。世尊！無我波羅蜜是般若波羅蜜，諸法無所貪著故。世尊！空波羅蜜是般若波羅蜜，諸法無所得故。世尊！無相波羅蜜是般若波羅蜜，諸法相不可得故。世尊！無作波羅蜜是般若波羅蜜，諸法無所成故。世尊！力波羅蜜是般若波羅蜜，諸法不可破故。世尊！無量佛法波羅蜜是般若波羅蜜，過算數法故。世尊！無所畏波羅蜜是般若波羅蜜，心不沒故。世尊！如波羅蜜是般若波羅蜜，諸法不異故。世尊！自然波羅蜜是般若波羅蜜，諸法無性故。」",
+   "T0220d": "爾時，善現復白佛言：「甚深般若波羅蜜多是為無邊波羅蜜多，如太虛空無邊際故；是為無等波羅蜜多，以一切法不可得故；是為遠離波羅蜜多，畢竟空故；是為難伏波羅蜜多，諸法性相不可得故；是為無跡波羅蜜多，無往無來無形體故；是為無性波羅蜜多，無往來故；是為無行波羅蜜多，以一切法無動轉故；是為無奪波羅蜜多，以一切法不可取故；是為無盡波羅蜜多，與無盡法恒相應故；是為無生波羅蜜多，以一切法不可生故；是為無作波羅蜜多，以諸作者不可得故；是為無知波羅蜜多，以一切法無知者故；是為無見波羅蜜多，以一切法無見者故；是為無轉波羅蜜多，以死生者不可得故；是為無壞波羅蜜多，前、後、中際不可得故；是為如幻波羅蜜多，諸法無生無表示故；是為如夢波羅蜜多，是諸意識平等性故；是無雜染波羅蜜多，以貪、瞋、癡無自性故；是無所得波羅蜜多，以所依止不可得故；是無戲論波羅蜜多，以一切法超思議故；是無思慮波羅蜜多，以一切法無動搖故；是無動轉波羅蜜多，住法界故；是為離染波羅蜜多，以一切法不虛妄故；是無等起波羅蜜多，以一切法無分別故；是為寂靜波羅蜜多，一切法相不可得故；是無過失波羅蜜多，修諸功德到彼岸故；是無有情波羅蜜多，證實際故；是為無斷波羅蜜多，以一切法無等起故；是為如實波羅蜜多，無分別故；是無二邊波羅蜜多，於一切法無執著故；是無雜壞波羅蜜多，以一切法不和合故；是無取著波羅蜜多，超諸聲聞、獨覺地故；是無尋伺波羅蜜多，至尋伺法平等性故；是為無量波羅蜜多，無量法故；是為無起波羅蜜多，離我法故；是無分別波羅蜜多，是諸分別平等性故；是不可得波羅蜜多，至一切法真實性故；是為無著波羅蜜多，於一切法皆無著故；是為無依波羅蜜多，無所依故；是為不生波羅蜜多，以一切法皆不生故；是為無常波羅蜜多，以一切法常無性故；是名為苦波羅蜜多，是逼惱法平等性故；是為無我波羅蜜多，於一切法無執著故；是名為空波羅蜜多，以一切法不可得故；是為無相波羅蜜多，以一切法離諸相故；是為無願波羅蜜多，無所成故；是名為力波羅蜜多，以一切法不可屈故；是無量佛法波羅蜜多，過數量故；是無所畏波羅蜜多，其心畢竟無怯畏故；是為真如波羅蜜多，是一切法無變性故；是為自然波羅蜜多，以一切法無自性故；是一切智智波羅蜜多，知一切法無自性故。」佛言：「善現！如是！如是！如汝所說。」",
+   "T0220d-5": "爾時，善現復白佛言：「甚深般若波羅蜜多是為無邊波羅蜜多，如太虛空無邊際故；是為正等波羅蜜多，以一切法性平等故；是為遠離波羅蜜多，以一切法畢竟空故；是為難伏波羅蜜多，以一切法不可得故；是為無跡波羅蜜多，以一切法無名體故；是為無行波羅蜜多，以一切法無往來故；是為無奪波羅蜜多，以一切法不可取故；是為無盡波羅蜜多，以一切法不可盡故；是為無生波羅蜜多，以一切法不可生故；是為無作波羅蜜多，以諸作者不可得故；是為無知波羅蜜多，以諸知者不可得故；是為無轉波羅蜜多，諸死生者不可得故；是為無垢波羅蜜多，煩惱淨故；是為無染波羅蜜多，以所依處不可得故；是為無壞波羅蜜多，離前際故；是為如幻波羅蜜多，以一切法皆不生故；是為如夢波羅蜜多，是諸意識平等性故；是無戲論波羅蜜多，覺諸戲論平等性故；是無思慮波羅蜜多，諸思慮法畢竟無故；是無動轉波羅蜜多，住法界故；是為離染波羅蜜多，以一切法不虛妄故；是無作用波羅蜜多，於一切法無分別故；是為寂靜波羅蜜多，一切法相不可得故；是無煩惱波羅蜜多，離過失故；是無有情波羅蜜多，有情實際不可得故；是為無斷波羅蜜多，以一切法無等起故；是無二邊波羅蜜多，於一切法無執著故；是無取著波羅蜜多，於二乘地無分別故；是無分別波羅蜜多，覺諸分別平等性故；是為無量波羅蜜多，無量法故；是為無起波羅蜜多，離我法故；是為虛空波羅蜜多，於一切法皆無礙故；是為不生波羅蜜多，以一切法皆不起故；是為無常波羅蜜多，以一切法常無性故；是名為苦波羅蜜多，是逼惱法平等性故；是為無我波羅蜜多，於一切法無執著故；是名為空波羅蜜多，以一切法不可得故；是為無相波羅蜜多，以一切法離諸相故；是為無願波羅蜜多，以一切法無所成故；是名為力波羅蜜多，以一切法不可屈故；是無量佛法波羅蜜多，過數量故；是無所畏波羅蜜多，心無怯故；是為真如波羅蜜多，以一切法不虛妄故；是為自然波羅蜜多，以一切法無自性故。」佛告善現：「如是！如是！如汝所說。」",
+   "T0228": "爾時，尊者須菩提白佛言：「世尊！無邊波羅蜜多是般若波羅蜜多，虛空無邊故。無等等波羅蜜多是般若波羅蜜多，一切法不可得故。離波羅蜜多是般若波羅蜜多，畢竟空故。不可破波羅蜜多是般若波羅蜜多，一切法性不可得故。無句波羅蜜多是般若波羅蜜多，諸法無名無相故。無性波羅蜜多是般若波羅蜜多，諸法無來故。無言波羅蜜多是般若波羅蜜多，諸法無分別故。無來波羅蜜多是般若波羅蜜多，諸蘊不可得故。無去波羅蜜多是般若波羅蜜多，諸法無來故。無集波羅蜜多是般若波羅蜜多，諸法無取故。無盡波羅蜜多是般若波羅蜜多，諸法無盡相故。無生波羅蜜多是般若波羅蜜多，諸法無著故。無作波羅蜜多是般若波羅蜜多，作者不可得故。無知者波羅蜜多是般若波羅蜜多，諸法無主宰故。無所至波羅蜜多是般若波羅蜜多，無退沒故。不滅波羅蜜多是般若波羅蜜多，前後中際不可得故。夢幻、影響、陽焰等波羅蜜多是般若波羅蜜多，諸法不生故。無煩惱波羅蜜多是般若波羅蜜多，貪瞋癡等性清淨故。無出世波羅蜜多是般若波羅蜜多，所依止不可得故。無染污波羅蜜多是般若波羅蜜多，虛空清淨故。無戲論波羅蜜多是般若波羅蜜多，諸法平等故。無念波羅蜜多是般若波羅蜜多，諸念不生故。無動波羅蜜多是般若波羅蜜多，諸法性常住故。離欲波羅蜜多是般若波羅蜜多，諸法性真實故。無起波羅蜜多是般若波羅蜜多，諸法無疑故。寂靜波羅蜜多是般若波羅蜜多，諸法相不可得故。無過失波羅蜜多是般若波羅蜜多，具足諸功德故。無眾生波羅蜜多是般若波羅蜜多，眾生際不可得故。無斷波羅蜜多是般若波羅蜜多，諸法不起故。無二邊波羅蜜多是般若波羅蜜多，諸法離著故。無異波羅蜜多是般若波羅蜜多，諸法無和合故。無著波羅蜜多是般若波羅蜜多，不分別聲聞、緣覺地故。不分別波羅蜜多是般若波羅蜜多，分別平等故。無量波羅蜜多是般若波羅蜜多，量法平等故。如虛空波羅蜜多是般若波羅蜜多，一切法無障礙故。無常波羅蜜多是般若波羅蜜多，一切法有為故。苦波羅蜜多是般若波羅蜜多，虛空平等故。空波羅蜜多是般若波羅蜜多，一切法不可得故。無我波羅蜜多是般若波羅蜜多，我不可得故。無相波羅蜜多是般若波羅蜜多，一切法不可轉故。空性波羅蜜多是般若波羅蜜多，畢竟無邊故。念處、正懃、神足、根、力、覺、道波羅蜜多是般若波羅蜜多，三十七菩提分法不可得故。空、無相、無願波羅蜜多是般若波羅蜜多，三解脫門不可得故。內有色觀外色等波羅蜜多是般若波羅蜜多，八解脫不可得故。初禪定等波羅蜜多是般若波羅蜜多，九先行法不可得故。苦、集、滅、道波羅蜜多是般若波羅蜜多，四聖諦法不可得故。布施等波羅蜜多是般若波羅蜜多，十波羅蜜多不可得故。十力波羅蜜多是般若波羅蜜多，不可破壞故。四無所畏波羅蜜多是般若波羅蜜多，不怯不懼不退不沒故。離繫波羅蜜多是般若波羅蜜多，一切智智無著無礙故。如來無量功德波羅蜜多是般若波羅蜜多，過諸數法故。如來真如波羅蜜多是般若波羅蜜多，一切法真如平等故。自然智波羅蜜多是般若波羅蜜多，一切法自性平等故。一切智智波羅蜜多是般若波羅蜜多，一切法性一切法相，不可得不可知故。」"
+  }
+ }
+}
