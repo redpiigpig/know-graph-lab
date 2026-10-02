@@ -1185,6 +1185,11 @@ B 線＝前人概論怎麼切（比較表）。一次派一個 Sonnet。
   Old、Smalley、West、González《Santa Biblia》、Metzger《Early Versions》、Ullendorff）。觀察：§3 經課表最薄（耶路撒冷、
   拜占庭經課一手無、無中文）；馬克西姆線全在獵表；哥德／亞美尼亞／喬治亞／科普特譯本只靠 Metzger；中文十誡專書、
   思高學會專書、中文《彌撒讀經》查不到可核條目。🚨 獵表裡同名他書：Amy-Jill Levine≠Lee Levine、Brock 導論≠《Bible in the Syriac Tradition》。
+- 第六章備料完成（`sources_ch06.md`，65 筆，自補 §0 創造；必備缺 18）；新增 7 本 8 行進獵表（Cullmann《Earliest Christian
+  Confessions》撐「認信按功能認定」、Behr 兩卷、Boff、McGrath《Iustitia Dei》、Cochrane 巴門、Cloete–Smit 貝爾哈、Pelikan
+  《Development》）。站上有：台灣長老教會信仰告白全文（`public/content/research-data/pct/`）、Schaff 卷二 Mogila 與 Philaret 要理、
+  Denzinger 輔仁中譯。🚨 Drive 的巴特《教會教義學》只是簡體選本掃描、無文字層、不可引；Grillmeier 只有卷一；
+  站上 Benedictus Deus 檔名標 1334，一般作 1336，引用前核。
 - 補書不只 z-lib；先查站上既有（梵二 SC／DV 中拉英在 `data/creeds/ecumenical-councils/vatican-ii/`、
   奧斯堡信條與路德小教理在 `data/creeds/protestant-confessions/`、通諭中譯在 `data/encyclicals/`），
   再查 TRC／天主教在線目錄。館藏確認沒有：《天主教教理》全本中譯、《協同書》中譯、Schmemann、Bria、Brown 第二冊。
