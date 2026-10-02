@@ -1,0 +1,249 @@
+{
+ "slug": "karunapundarika-c01",
+ "title": "悲華經・轉法輪品",
+ "family": "sa",
+ "intro": "梵本 Karuṇāpuṇḍarīka（GRETIL，Yamada 1968 本，全本六品）＋藏譯 Toh 112《悲白蓮華》＋84000 英譯＋曇無讖《悲華經》T0157、失譯《大乘悲分陀利經》T0158。梵本〈dharmacakrapravartana〉＝藏譯第一章＝兩漢譯〈轉法輪品〉。釋迦於耆闍崛山，彌勒等萬菩薩向東南禮蓮華尊（蓮華上）佛，寶日光明（寶照明）問其因緣，佛說蓮華世界莊嚴與蓮華尊佛昨夜成道、現神變、轉不退法輪。梵本會眾次第不同（先比丘尼、再文殊等八萬菩薩、再帝釋諸天），且無彌勒等禮佛一段，改作釋迦放光照十方、大地六種震動（c1-04x，他本無）。",
+ "units": [
+  {
+   "id": "c1-00",
+   "label": "經題・歸敬"
+  },
+  {
+   "id": "c1-01",
+   "label": "如是我聞・比丘眾"
+  },
+  {
+   "id": "c1-02",
+   "label": "菩薩眾"
+  },
+  {
+   "id": "c1-03",
+   "label": "諸天、龍王眾"
+  },
+  {
+   "id": "c1-04",
+   "label": "世尊為四眾說法"
+  },
+  {
+   "id": "c1-04x",
+   "label": "梵本：世尊放光遍照・六種震動"
+  },
+  {
+   "id": "c1-05",
+   "label": "彌勒等萬菩薩向東南禮蓮華尊佛"
+  },
+  {
+   "id": "c1-06",
+   "label": "寶日光明問其因緣"
+  },
+  {
+   "id": "c1-07",
+   "label": "佛讚善問・誡聽"
+  },
+  {
+   "id": "c1-08",
+   "label": "蓮華世界：琉璃地・寶樹"
+  },
+  {
+   "id": "c1-09",
+   "label": "樓觀・寶池・華中化生菩薩"
+  },
+  {
+   "id": "c1-10",
+   "label": "金山・佛光寶光・無晝夜"
+  },
+  {
+   "id": "c1-11",
+   "label": "菩提樹・蓮華座・昨夜成道"
+  },
+  {
+   "id": "c1-12",
+   "label": "問神變：肉髻放光照上方・諸菩薩來集"
+  },
+  {
+   "id": "c1-13",
+   "label": "廣長舌相"
+  },
+  {
+   "id": "c1-14",
+   "label": "毛孔放光・十方菩薩來集"
+  },
+  {
+   "id": "c1-15",
+   "label": "轉不退轉法輪"
+  },
+  {
+   "id": "c1-16",
+   "label": "品尾題"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本",
+   "who": "Yamada 1968 校訂本・GRETIL"
+  },
+  {
+   "id": "bo",
+   "lang": "bo",
+   "label": "藏譯",
+   "who": "德格版 Toh 112・84000 翻譯記憶"
+  },
+  {
+   "id": "en",
+   "lang": "en",
+   "label": "84000 英譯",
+   "who": "譯自藏譯・與藏文逐句對齊"
+  },
+  {
+   "id": "T0157",
+   "lang": "lzh",
+   "label": "曇無讖本",
+   "who": "曇無讖譯《悲華經》十卷・北涼（五世紀初）",
+   "work": "T0157"
+  },
+  {
+   "id": "T0158",
+   "lang": "lzh",
+   "label": "悲分陀利經",
+   "who": "失譯《大乘悲分陀利經》八卷・附秦錄",
+   "work": "T0158"
+  }
+ ],
+ "works": [
+  "T0157",
+  "T0158"
+ ],
+ "anchors": [
+  {
+   "work": "T0157",
+   "node": "轉法輪品第一",
+   "uid": "T03n0157_p0167a07"
+  },
+  {
+   "work": "T0158",
+   "node": "轉法輪品第一",
+   "uid": "T03n0158_p0233c15"
+  }
+ ],
+ "cells": {
+  "c1-00": {
+   "sa": "Karuṇāpuṇḍarīka-sūtram dharma-cakra-pravartano nāma prathamaḥ parivartaḥ om namaḥ śrīsarvabuddhabodhisattvebhyaḥ // buddhaṃ praṇamya sarvajñaṃ dharmaṃ saṅghaṃ guṇākaraṃ / karuṇāpuṇḍarīkākhyaṃ pravakṣye bodhisūtrakaṃ //",
+   "bo": "༄༅༅། །རྒྱ་གར་སྐད་དུ། ཨཱརྱ་ཀ་རུ་ཎཱ་པུཎྜ་རཱི་ཀ་ནཱ་མ་མ་ཧཱ་ཡཱ་ན་སཱུ་ཏྲ། བོད་སྐད་དུ། འཕགས་པ་སྙིང་རྗེ་པད་མ་དཀར་པོ་ཞེས་བྱ་བ་ཐེག་པ་ཆེན་པོའི་མདོ། བམ་པོ་དང་པོ། སངས་རྒྱས་དང་བྱང་ཆུབ་སེམས་དཔའ་ཐམས་ཅད་ལ་ཕྱག་འཚལ་ལོ།",
+   "en": "The Noble Mahāyāna Sūtra The White Lotus of Compassion  Turning the Wheel of the Dharma Chapter 1 Homage to all buddhas and bodhisattvas."
+  },
+  "c1-01": {
+   "sa": "evaṃ mayā śrutam / ekasmin samaye bhagavān rājagṛhe viharati sma gṛdhrakūṭe parvate mahatā bhikṣusaṅghena sārdhaṃ dvādaśabhirbhikṣuśataiḥ sarvairarhadbhiḥ kṣīṇāsravairniḥkleśairvaśībhūtaiḥ suvimuktacittaiḥ suvimuktaprajñairājāneyairmahānāgaiḥ kṛtakṛtyaiḥ kṛtakaraṇīyairapahṛtabhārairanuprāptasvakārthaiḥ parikṣīṇabhavasaṃyojanaiḥ samyagājñāsuvimuktacittaiḥ sarvacetovaśiparamapāramitāprāptairabhijñānābhijñātairmahāśrāvakaiḥ / (KpSū 2) tadyathā, āyuṣmatā cājñātakauṇḍinyena āyuṣmatā cāsvajitā āyuṣmatā ca bāṣpeṇa āyuṣmatā ca mahāsthāmnā āyuṣmatā ca bhadrikeṇa āyuṣmatā ca mahākāśyapena āyuṣmatā coruvilvākāśyapena āyuṣmatā ca gayākāśyepena āyuṣmatā ca śāriputreṇa āyuṣmatā ca mahāmaudgalyāyanena āyuṣmatā ca mahākātyāyanena āyuṣmatā cāniruddhena āyuṣmatā ca revatena āyuṣmatā ca kaṃphillena āyuṣmatā ca gavāṃpatinā āyuṣmatā ca pilindavatsena āyuṣmatā ca bakulena āyuṣmatā ca mahākauṣṭhilena āyuṣmatā ca bharadvājena āyuṣmatā ca mahānandena āyuṣmatā copanandena āyuṣmatā ca sundaranandena āyuṣmatā ca pūrṇena āyuṣmatā ca subhūtinā āyuṣmatā ca rāhulena / evaṃ pramukhaiścānekairmahāśrākairāyuṣmatā cānandena śaikṣeṇa, anyābhyāṃ bhikṣusahasrābhyāṃ śaikṣāśaikṣābhyāṃ / mahāprajāpatīpramukhaiśca ṣaḍbhikṣuṇīsahasraiḥ, yaśodharayā ca bhikṣuṇyā rāhulamātrā saparivārayā /",
+   "bo": "།འདི་སྐད་བདག་གིས་ཐོས་པ་དུས་གཅིག་ན། བཅོམ་ལྡན་འདས་རྒྱལ་པོའི་ཁབ་ན་བྱ་རྒོད་ཀྱི་ཕུང་པོའི་རི་ལ། དགེ་སློང་དྲུག་ཁྲི་ཉིས་སྟོང་གི་དགེ་སློང་གི་དགེ་འདུན་ཆེན་པོ་ཐམས་ཅད་ཀྱང་དགྲ་བཅོམ་པ། ཟག་པ་ཟད་པ། ཉོན་མོངས་པ་མེད་པ། དབང་དང་ལྡན་པར་གྱུར་པ། སེམས་ཤིན་ཏུ་རྣམ་པར་གྲོལ་བ། ཤེས་རབ་ཤིན་ཏུ་རྣམ་པར་གྲོལ་བ། ཅང་ཤེས་པ། གླང་པོ་ཆེན་པོ་བྱ་བ་བྱས་པ། བྱེད་པ་བྱས་པ། ཁུར་བོར་བ། བདག་གི་དོན་རྗེས་སུ་ཐོབ་པ། སྲིད་པར་ཀུན་ཏུ་སྦྱོར་བ་ཡོངས་སུ་ཟད་པ། ཡང་དག་པའི་ཤེས་པས་སེམས་ཤིན་ཏུ་རྣམ་པར་གྲོལ་བ། སེམས་ཀྱི་དབང་ཐམས་ཅད་ཀྱི་དམ་པའི་ཕ་རོལ་ཏུ་སོན་པ་ཤ་སྟག་དང་ཐབས་ཅིག་ཏུ་བཞུགས་ཏེ་གང་ཟག་གཅིག་མ་གཏོགས་པ་ནི་འདི་ལྟ་སྟེ། ཚེ་དང་ལྡན་པ་ཀུན་དགའ་བོའོ།",
+   "en": "Thus did I hear at one time:  the Bhagavat was residing at Rājagṛha, on Vulture Peak Mountain, accompanied by a great saṅgha of 62,000 bhikṣus who, with the exception of one individual—which is to say, Venerable Ānanda—were all arhats whose outflows had ceased, who were without kleśas, who were self-controlled, who had liberated minds, who had completely liberated wisdom, who were noble beings,  who were great elephants, who had done what had to be done, who had accomplished what had to be accomplished, who had put down their burden, who had reached their goals, who had ended the fetters to existence, who had liberated their minds through true knowledge, and who had attained all the perfect, highest, most complete powers of the mind.",
+   "T0157": "如是我聞：一時佛在王舍城耆闍崛山，與大比丘僧六萬二千人俱，皆阿羅漢，諸漏已盡，無復煩惱，一切自在，心得解脫，慧得解脫；譬如善調摩訶那伽，所作已辦，捨於重擔，逮得己利，盡諸有結，正智得解，心得自在，於一切心，得度彼岸，唯除阿難。",
+   "T0158": "如是我聞：一時，佛住王舍城耆闍崛山中，與大比丘眾六萬二千人俱，皆是阿羅漢——諸漏已盡，盡諸有結皆得自在，心善解脫、慧善解脫，如調象王，所作已辦，脫於重擔，逮得己利往來已盡，得正智已，心得自在，到於彼岸——唯除一人長老阿難。"
+  },
+  "c1-02": {
+   "sa": "aśītibhiśca bodhisattvasahasraiḥ sarvairavaivartikairekajātipratibaddhairyadutānuttarāyāṃ samyaksaṃboddhau dhāraṇīpratilabdhairmahāpratibhānapratiṣṭhitairavaivartyadharmacakrapravartakairbahubuddhaśatasahasraparyupāsitair (KpSū 3) bahubuddhaśatasahasrāvaropitakuśalamūlairbahubuddhaśatasahasrasaṃstutairmaitrīparibhāvitakāyacittaistathāgatajñānāvatāraṇakuśalairmahāprajñaiḥ prajñāpāramitāgatiṃgatairbahulokadhātuśatasahasraviśrutairbahuprāṇakoṭīniyutaśatasahasrasaṃpālakaiḥ / tadyathā, mañjuśriyā ca kumārabhūtena bodhisattvena mahāsattvena avalokiteśvareṇa ca mahāsthāmaprāptena ca sarvārthanāmnā ca nityodyuktena ca anikṣiptadhureṇa ca ratnapāṇinā ca bhaiṣajyarājena ca bhaiṣajyasamudgatena ca vyūharājena ca pradānaśūreṇa ca ratnacandreṇa ca pūrṇacandreṇa ca mahāvikramiṇā ca anantavikramiṇā ca trailokyavikramiṇā ca mahāpratibhānena ca satatasamitābhiyuktena ca dharaṇiṃdhareṇa ca akṣayamatinā ca mahāmatinā ca śāntamatinā ca nakṣatrarājena ca ratnavairocanena ca maitreyeṇa ca bodhisattvena mahāsattvena siṃhena ca bodhisattvena mahāsattvena / bhadrapālapūrvaṃgamaiśca ṣoḍaśabhiḥ satpuruṣaiḥ sārdhaṃ / tadyathā, bhadrapālena ca ratnākareṇa ca susārthavāhena ca naradattena ca guhaguptena ca varuṇadattena ca indradattena ca uttaramatinā ca viśeṣamatinā ca vardhamānamatinā ca amoghadarśinā ca susaṃprasthitena ca suvikrāntavikramiṇā (KpSū 4) ca anupamamatinā ca sūryagarbheṇa ca dharaṇiṃdhareṇa ca / evaṃ pramukhairaśītibhirbodhisattvasahasraiḥ sārdhaṃ /",
+   "bo": "།བྱམས་པ་ལ་སོགས་པ་གཟུངས་དང་། བཟོད་པ་དང་། ཏིང་ངེ་འཛིན་ཐོབ་པ། སྟོང་པ་ཉིད་ལ་གནས་པ། ཕྱིར་མི་ལྡོག་པའི་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་ས་ཡ་ཕྲག་བརྒྱད་དང་ཡང་ཐབས་ཅིག་གོ།",
+   "en": "Also present were eighty million irreversible bodhisattva mahāsattvas, such as Maitreya, who were established in retention, acceptance, samādhi, and emptiness.",
+   "T0157": "菩薩摩訶薩四百四十萬人，彌勒菩薩最為上首，皆得陀羅尼忍辱禪定，深解諸法空無定想，如是大士皆不退轉。",
+   "T0158": "菩薩摩訶薩眾八十四百千人俱，彌勒為首，皆得陀羅尼忍辱三昧，樂居空靜皆不退轉。"
+  },
+  "c1-03": {
+   "sa": "śakreṇa ca devānāmindreṇa viṃśatidevaputrasahasraparivāreṇa / tadyathā, candreṇa ca devaputreṇa sūryeṇa ca samantagandhena ca ratnaprabheṇa ca avabhāsaprabheṇa ca / evaṃ pramukhaiścānyairdevaputraiḥ / caturbhiśca mahārājaiḥ sārdhaṃ saparivāraiḥ / brahmaṇā ca sahāpatinā sārdhaṃ dvādaśabrahmakāyikāsahasreṇa śikhinā ca brahmaṇā jyotiḥprabheṇa ca brahmanā / evaṃ pramukhairdvādaśabhiśca brahmakāyikadevaputrasahasraiḥ / aṣṭābhiśca nāgarājaiḥ sārdhaṃ bahunāgakoṭīśatasahasraparivāraiḥ / caturbhiśca kinnararājaiḥ sārdhaṃ bahukinnarakoṭīśatasahasraparivāraiḥ / caturbhiśca gandharvakāyikairdevaputraiḥ sārdhaṃ bahugandharvaśatasahasraparivāraiḥ / caturbhiścāsurendraiḥ sārdhaṃ bahvasurakoṭīśatasahasraparivāraiḥ / caturbhiśca garuḍendraiḥ sārdhaṃ bahugaruḍakoṭīniyutaśatasahasraparivāraiḥ / rājñā cājātaśatruṇā māgadhena vaidehīputreṇa sārdhaṃ bahumanuṣyarājasāmātyapaurajānapadaparivāraiḥ //",
+   "bo": "།མི་མཇེད་ཀྱི་བདག་པོ་ཚངས་པ་དང་། ཚངས་རིས་ཀྱི་ལྷའི་བུ་འབུམ་ཕྲག་མང་པོ་དང་ཡང་ཐབས་ཅིག་གོ། ། ལྷའི་བུ་གཞན་འཕྲུལ་དང་། གཞན་འཕྲུལ་གྱི་ལྷའི་བུ་ས་ཡ་ཕྲག་བརྒྱད་དང་ཡང་ཐབས་ཅིག་གོ། །ལྷའི་བུ་འཕྲུལ་དགའ་དང་། འཕྲུལ་དགའི་ལྷའི་བུ་ས་ཡ་ཕྲག་བདུན་དང་ཡང་ཐབས་ཅིག་གོ། །ལྷའི་བུ་ཡོངས་སུ་དགའ་ལྡན་དང་། ཡོངས་སུ་དགའ་ལྡན་ལྷའི་བུ་ས་ཡ་ཕྲག་དྲུག་དང་ཡང་ཐབས་ཅིག་གོ། །ལྷའི་བུ་རབ་འཐབ་བྲལ་དང་། རབ་འཐབ་བྲལ་གྱི་ལྷའི་བུ་ས་ཡ་ཕྲག་བདུན་དང་། ཉི་འབུམ་དང་ཡང་ཐབས་ཅིག་གོ། ། ལྷའི་དབང་པོ་བརྒྱ་བྱིན་དང་། སུམ་ཅུ་རྩ་གསུམ་པའི་ལྷའི་བུ་ས་ཡ་ཕྲག་བརྒྱད་དང་ཡང་ཐབས་ཅིག་གོ། །རྒྱལ་པོ་ཆེན་པོ་རྣམ་ཐོས་ཀྱི་བུ་གནོད་སྦྱིན་འབུམ་གྱིས་ཡོངས་སུ་བསྐོར་བ་དང་ཡང་ཐབས་ཅིག་གོ། །མིག་མི་བཟང་ཀླུ་འབུམ་གྱིས་ཡོངས་སུ་བསྐོར་བ་དང་ཡང་ཐབས་ཅིག་གོ། །འཕགས་སྐྱེས་ པོ་གྲུལ་བུམ་འབུམ་གྱིས་ཡོངས་སུ་བསྐོར་བ་དང་ཡང་ཐབས་ཅིག་གོ། །ཡུལ་འཁོར་སྲུང་དྲི་ཟ་འབུམ་གྱིས་ཡོངས་སུ་བསྐོར་བ་དང་ཡང་ཐབས་ཅིག་གོ། །ཀླུའི་རྒྱལ་པོ་དགའ་བོ་དང་། ཉེ་དགའ་བོ་ཀླུའི་རྒྱལ་པོ་སྟོང་གིས་ཡོངས་སུ་བསྐོར་བ་དང་།",
+   "en": "Also present was Brahmā, the lord of Sahā, with many hundreds of thousands of Brahmā-realm devas. Also present was Paranirmitavaśavartin with eighty million Paranirmitavaśavartin devas. Also present was Sunirmita with seventy million Nirmāṇarata devas. Also present was Saṃtuṣita with sixty million Saṃtuṣita devas. Also present was Suyāma with 70,200,000 Yāma  devas. Also present was Śakra, lord of the devas, with eighty million Trāyastriṃśa devas. Also present was the mahārāja Vaiśravaṇa with a hundred thousand yakṣas. Also present was the mahārāja Virūpākṣa with a hundred thousand nāgas. Also present was the mahārāja Virūḍhaka with a hundred thousand kumbhāṇḍas. Also present was the mahārāja Dhṛtarāṣṭra with a hundred thousand gandharvas. Also present were a thousand nāga kings, such as the nāga kings Nanda and Upananda.",
+   "T0157": "是時，復有大梵天王與無量百千諸梵天子俱，他化自在天王與其眷屬四百萬人俱，化樂天王亦與眷屬三百五十萬人俱，兜率天王亦與眷屬三百萬人俱，夜摩天王亦與眷屬三百五十萬人俱，忉利天王釋提桓因亦與眷屬四百萬人俱，毘沙門天王亦與鬼神眷屬十萬人俱，毘樓勒天王亦與拘辦荼眷屬一千俱，毘樓勒叉天王亦與諸龍眷屬一千俱，提頭賴吒天王與乾闥婆眷屬一千俱，難陀龍王、婆難陀龍王亦各與一千眷屬俱，如是等眾，皆已發心趣於大乘，已行六波羅蜜。",
+   "T0158": "娑訶世界主梵天與無量百千梵天俱，他化天子與八十百千他化天子俱，化自在天子與七十百千化自在天子俱，珊兜率天子與六十百千兜率天子俱，須夜摩天子與七十二百千須夜摩天子俱，釋提桓因與八十百千三十三天俱，毘沙門天王與其眷屬百千夜叉俱，毘留勒伽與其眷屬千鳩槃荼俱，毘留波叉與其眷屬千龍俱，提陀羅吒各與其眷屬千龍王俱。"
+  },
+  "c1-04": {
+   "sa": "tena khalu punaḥ samayena bhagavāṃścatasṛbhiḥ parṣadbhiḥ parivṛtaḥ puraskṛtaḥ satkṛto gurukṛto mānitaḥ (KpSū 5) pūjito 'rcito 'pacāyitaḥ, tadā bodhisattvaviṣayasaṃdarśanapraṇidhānavyūhasamādhiviṣayadhāraṇīmukhavyūhaṃ samādhānamukhanirdeśaṃ caryāvaiśāradyaṃ nāma dharmaparyāyaṃ sūtrāntaṃ mahāvaipulyaṃ bodhisattvānugataṃ sarvabuddhaparigrahaṃ bhāṣitumārabdhavān,",
+   "bo": "དེ་དག་ལ་སོགས་པ་ཐེག་པ་ཆེན་པོ་ལ་ཡང་དག་པར་ཞུགས་པ། ཕ་རོལ་ཏུ་ཕྱིན་པ་དྲུག་ལ་སྤྱོད་པ། ཕྱིན་ཅི་ལོག་བཞིའི་ཆོས་སྣང་ཞིང་གསལ་བར་རྟོགས་པར་ཁོང་དུ་ཆུད་པ་གང་གིས་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་རྣམས་ཏིང་ངེ་འཛིན་སྣ་ཚོགས་རབ་ཏུ་འཐོབ་པར་འགྱུར་བ་དང་། གང་གིས་ཉན་ཐོས་དང་། རང་སངས་རྒྱས་ཀྱིས་ལས་ཡང་དག་པར་འདའ་བར་འགྱུར་བ་དང་། ཏིང་ངེ་འཛིན་གང་གིས་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་ཏུ་ངེས་པར་འགྱུར་བའི་འཕགས་པའི་བདེན་པ་བཞི་ཡང་དག་པར་རབ་ཏུ་རྟོགས་པར་བྱ་བའི་ཕྱིར་ཆོས་སྟོན་པ་ཤ་སྟག་གིས་ཡོངས་སུ་བསྐོར་ཅིང་མདུན་གྱིས་བལྟས་ཏེ་བཞུགས་སོ། །",
+   "en": "They and others had all entered the Mahāyāna, practiced the six perfections, and perceived, understood, and comprehended the Dharma of the four misapprehensions.  They were all gathered around and they looked upon the one before them who teaches the Dharma in order that the four noble truths will be realized, and so that bodhisattva mahāsattvas will attain the various samādhis, the level of the śrāvakas and pratyekabuddhas will be transcended, and through samādhi the highest, most complete enlightenment will be attained.",
+   "T0157": "爾時世尊，眷屬圍繞，為諸大眾說微妙法，除四顛倒，生善法明，得智慧光，了四聖諦，欲令來世諸菩薩等得入三昧，入三昧已，過於聲聞、辟支佛地，於阿耨多羅三藐三菩提無有退轉。",
+   "T0158": "爾時世尊，與如是等上首——皆求大乘行六波羅蜜——圍遶。捨四顛倒法，明慧光照，因四諦說法，令諸菩薩摩訶薩得種種三昧，以是三昧過聲聞、辟支佛地，以是三昧令得堅固阿耨多羅三藐三菩提。"
+  },
+  "c1-04x": {
+   "sa": "tadā nānāvarṇaraśmayo niścaritā yatprabhābhirayaṃ trisāhasramahāsāhasro lokadhāturmahatāvabhāsena sphuṭo 'bhūt / tena cāvabhāsena lokāntarikā aghā aghasphuṭā andhakāratamisrāḥ, yatremau candrasūryau eva maharddhikau mahānubhāvau maheśākhyau nābhipatato na virocatastatra ye sattvā upapannāste svakasvakamapi bāhuprasāritaṃ na paśyanti sma, tatrāpi tenāvabhāsena parisphuṭāḥ samānā anyonyaṃ paśyanti smānyonyaṃ saṃjānante sma / sarvāṇi buddhakṣetrāṇi ca parisphuṭāni saṃdṛśyante sma yāvad avīcirmahānirayo yāvadbrahmalokaṃ parisphuṭaṃ dṛśyate sma / ye ca teṣu sarveṣu kṣetreṣu ṣaṭsu gatiṣu sattvāste sarve saṃdṛśyante sma / ye ca teṣu buddhakṣetreṣu buddhā bhagavantastiṣṭhanto dhriyanto yāpayanto yaṃ dharmaṃ bhāṣante sma sa ca sarvo nikhilena śrūyate sma / ye ca teṣu buddhakṣetreṣu bhikṣubhikṣuṇyupāsakopāsikā yogino yogācārāḥ prāptaphalāścāprāptaphalāśca te 'pi (KpSū 6) sarve saṃdṛśyante sma / ye ca teṣu buddhakṣetreṣu bodhisattvā mahāsattvā anekavividhāśravaṇārambaṇādhimuktihetukāraṇopāyakauśalyairbodhicaryācāriṇaste 'pi sarve saṃdṛśyante sma / ye ca teṣu buddhakṣetreṣu buddhā bhagavantaḥ parinirvṛtāste 'pi sarve saṃdṛśyante sma / ye ca teṣu parinirvṛtānāṃ buddhānāṃ bhagavatāṃ ratnamayadhātustūpāste 'pi sarve saṃdṛśyante sma / antarīkṣācca puṣpavarṣam abhiprāvarṣat, manojñaśabdā amāradundubhyaḥ prasasvanuḥ ; sarvaścāyaṃ trisāhasramahāsāhasro lokadhātuḥ ṣaḍvikāram aṣṭādaśamahānimittam akampat prākampat saṃprākampat, avedhat prāvedhat saṃprāvedhat, acalat prācalat saṃprācalat, akṣubhyat prākṣubhyat saṃprākṣubhyat, araṇat prāraṇat saṃprāraṇat, agarjat prāgarjat saṃprāgarjat / tasmin kṣaṇe sarvato lokeṣu harṣaṇīyāstoṣaṇīyāḥ prasādanīyā avalokanīyāḥ prahlādanīyā manojñāḥ śabdāḥ śrūyante sma / na ca kasyacit sattvasya viheṭhā vā trāso vā bhayaṃ vā stambhitatvaṃ vā / na cānyadevalokānāṃ prabhāḥ prajñāyante / sarvanarakatiryagyoniyamalokopapannāḥ sattvā vigataduḥkhāḥ sarvasukhasamarpitāścābhuvān / na ca kasyacit sattvasya rāgo vā dveṣo vā moho vā mātsaryo (KpSū 7) vā īrṣyā vā māno vā mrakṣo vā mado vā krodho vā vyāpādo vā paridāho vā bādhate / sarvasattvāśca parasparamitracittā hitacittā mātṛpitṛsaṃjñino 'bhūvan //"
+  },
+  "c1-05": {
+   "bo": "དེའི་ཚེ་ན་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་བྱམས་པ་དང་། བྱང་ཆུབ་སེམས་དཔའ་མཐོང་བ་དོན་ཡོད་དང་། བྱང་ཆུབ་སེམས་དཔའ་ཆུ་ལྷ་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེང་གེའི་བློ་གྲོས་དང་། བྱང་ཆུབ་སེམས་དཔའ་རྣམ་པར་སྣང་བྱེད་བློ་གྲོས་དང་། དེ་དག་ལ་སོགས་པ་བྱང་ཆུབ་སེམས་དཔའ་ཁྲི་ལྷན་ཅིག་ཏུ་སྟན་ལས་ལངས་ཏེ། བླ་གོས་ཕྲག་པ་གཅིག་ཏུ་གཟར་ནས་པུས་མོ་གཡས་པའི་ལྷ་ང་ས་ལ་བཙུགས་ཏེ་ཐལ་མོ་སྦྱར་བ་བཏུད་ནས་ཤར་ལྷོའི་ཕྱོགས་ལོགས་སུ་མངོན་པར་ཕྱོགས་ཏེ་རབ་ཏུ་དགའ་ཞིང་རབ་ཏུ་དང་བའི་ཡིད་ཀྱིས་བལྟས་ནས་ཚིག་འདི་སྐད་དུ་དེ་བཞིན་གཤེགས་པ་དགྲ་བཅོམ་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་པད་མ་དམ་པ་མངོན་པར་རྫོགས་པར་སངས་རྒྱས་ནས་རིང་པོ་མ་ལོན་པར་ཆོ་འཕྲུལ་ཆེན་པོ་དག་བསྟན་ནས། སེམས་ཅན་རྣམས་ལས་སྲོག་ཆགས་བྱེ་བ་ཁྲག་ཁྲིག་འབུམ་ཕྲག་དུ་མ་དག་གི་དགེ་བའི་རྩ་བ་ཡོངས་སུ་སྨིན་པར་མཛད་ཅིང་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་ལས་ཕྱིར་མི་ལྡོག་པ་ལ་བཀོད་པ་ནི་ངོ་མཚར་ཏེ་ཕྱག་འཚལ་ལོ་ཕྱག་འཚལ་ལོ་ཞེས་ཀྱང་སྨྲས་སོ། །",
+   "en": "At that time, the bodhisattva mahāsattva Maitreya, the bodhisattva Amoghadarśin, the bodhisattva Varuṇa, the bodhisattva Siṃhamati, the bodhisattva Vairocanamati, and ten thousand other bodhisattvas rose from their seats together, removed their robes from one shoulder, knelt on their right knees, bowed with their hands placed together, and, facing southeast and looking in that direction with great joy and delight, said these words: “Tathāgata Arhat Samyaksambuddha Padmottara, you attained complete buddhahood and soon after manifested great miraculous powers, caused the good karma of many hundreds of thousands of millions of trillions of beings to ripen, and established them in irreversible progress toward the highest, most complete enlightenment. That is a marvel! We pay homage to you! We pay homage to you!”",
+   "T0157": "爾時，彌勒菩薩、無癡見菩薩、水天菩薩、師子意菩薩、日光菩薩，如是等上首菩薩摩訶薩十千人俱，即從座起，偏袒右肩，右膝著地，叉手合掌，向東南方，一心歡喜，恭敬瞻仰而作是言：「南無蓮華尊多陀阿伽度、阿羅呵、三藐三佛陀！南無蓮華尊多陀阿伽度、阿羅呵、三藐三佛陀！希有世尊！成阿耨多羅三藐三菩提，未久而能示現種種無量神足變化，令無量無邊百千億那由他眾生得種善根，不退轉於阿耨多羅三藐三菩提。」",
+   "T0158": "爾時彌勒菩薩摩訶薩、無礙見菩薩、水天菩薩、師子意菩薩、照明菩薩摩訶薩，如是等十千菩薩，俱從座起整衣服，面東南向，右膝著地，叉手合掌，喜踊意視，作如是言：「南無南無蓮華上多陀阿伽度、阿羅呵、三藐三佛陀，成佛未久現大神通，勸發無數億那由他百千眾生，善根成就，得不退轉阿耨多羅三藐三菩提。」"
+  },
+  "c1-06": {
+   "sa": "atha ratnavairocano nāma bodhisattvo mahāsattvastaṃ mahānimittaprātihāryaṃ dṛṣṭvā sahasotthāyaikāṃśamuttarāsaṅgaṃ kṛtvā dakṣiṇajānumaṇḍalaṃ pṛthivyāṃ pratiṣṭhāpya yena bhagavāṃstenāñjaliṃ praṇamya bhagavantametadavocat / \"paramāścaryādbhutaprāpto 'haṃ bhagavan, kuta ime raśmaya āgatāḥ?, kasyaiṣa prabhāvaḥ?, ko nvatra bhagavan hetuḥ?, kaḥ pratyayo bhaviṣyati?\"",
+   "bo": "དེ་ནས་བྱང་ཆུབ་སེམས་དཔའ་རིན་པོ་ཆེ་རྣམ་པར་སྣང་བྱེད་སྟན་ལས་ལངས་ཏེ་བླ་གོས་ཕྲག་པ་གཅིག་ཏུ་གཟར་ནས་པུས་མོ་ གཡས་པའི་ལྷ་ང་ས་ལ་བཙུགས་ཏེ། བཅོམ་ལྡན་འདས་ག་ལ་བ་དེ་ལོགས་སུ་ཐལ་མོ་སྦྱར་བ་བཏུད་ནས་བཅོམ་ལྡན་འདས་ལ་འདི་སྐད་ཅེས་གསོལ་ཏོ། །བཅོམ་ལྡན་འདས་གང་གི་སླད་དུ་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་བྱམས་པ་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་མཐོང་བ་དོན་ཡོད་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་ཆུ་ལྷ་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་སེང་གེའི་བློ་གྲོས་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་རྣམ་པར་སྣང་བྱེད་བློ་གྲོས་དང་། དེ་དག་ལ་སོགས་པ་བྱང་ཆུབ་སེམས་དཔའ་ཁྲིས་བཅོམ་ལྡན་འདས་ཀྱི་ཆོས་བསྟན་པ་བཅད་ནས་ལྷན་ཅིག་ཏུ་སྟན་ལས་ལངས་ཏེ་བླ་གོས་ཕྲག་པ་གཅིག་ཏུ་གཟར་ནས་པུས་མོ་གཡས་པའི་ལྷ་ང་ས་ལ་བཙུགས་ཏེ། ཐལ་མོ་སྦྱར་བ་བཏུད་ནས་ཤར་ལྷོའི་ཕྱོགས་ལོགས་སུ་མངོན་པར་ཕྱོགས་ཏེ་རབ་ཏུ་དགའ་ཞིང་རབ་ཏུ་དང་བའི་ཡིད་ཀྱིས་བལྟས་ནས་ཚིག་འདི་སྐད་དུ་དེ་བཞིན་གཤེགས་པ་དགྲ་བཅོམ་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་པད་མ་དམ་པ་མངོན་པར་རྫོགས་པར་སངས་རྒྱས་ནས། རིང་པོ་མ་ལོན་པར་ཆོ་འཕྲུལ་ཆེན་པོ་དག་བསྟན་ནས། སྲོག་ཆགས་བྱེ་བ་ཁྲག་ཁྲིག་འབུམ་ཕྲག་དུ་མ་དགེ་བའི་རྩ་བ་དག་ལ་ཡོངས་སུ་སྨིན་པར་མཛད་པ་ནི་ངོ་མཚར་ཏེ་ཕྱག་འཚལ་ལོ་ཕྱག་འཚལ་ལོ་ཞེས་མཆི། བཅོམ་ལྡན་འདས་དེ་བཞིན་གཤེགས་པ་དགྲ་བཅོམ་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་པད་མ་དམ་པ་ཤུལ་ནི་ཇི་སྲིད་ཅིག་ན་བཞུགས། བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་མངོན་པར་རྫོགས་པར་སངས་རྒྱས་ནས་ནི་ཡུན་ཇི་སྲིད་ཅིག་ལགས། གང་ན་དེ་བཞིན་གཤེགས་པ་པད་མ་དམ་པ་ཞེས་བགྱི་བ་བཞུགས་པའི་འཇིག་རྟེན་གྱི་ཁམས་དེའི་མིང་ཅི་ཞེས་བགྱི། འཇིག་རྟེན་གྱི་ཁམས་དེའི་བཀོད་པ་ནི་ཇི་ལྟ་བུ་ཞིག་གིས་བརྒྱན་པ་ལགས། ཅིའི་སླད་དུ་དེ་བཞིན་གཤེགས་པ་དགྲ་བཅོམ་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་པད་མ་དམ་པས་ཆོ་འཕྲུལ་ཆེན་པོ་རྣམ་པ་དེ་ལྟ་བུ་དག་བསྟན་པ་མཛད། རྐྱེན་གང་གིས་ན་བྱང་ཆུབ་སེམས་དཔའ་ཁ་ཅིག་གིས་ནི་ཕྱོགས་བཅུའི་འཇིག་རྟེན་གྱི་ཁམས་བགྲང་བ་ལས་ཡང་དག་པར་འདས་པ་གཞན་དག་ན་བཞུགས་པའི་ སངས་རྒྱས་བཅོམ་ལྡན་འདས་རྣམས་མཐོང་ཞིང་། སངས་རྒྱས་བཅོམ་ལྡན་འདས་དེ་དག་གིས་ཆོ་འཕྲུལ་གང་དག་རྣམ་པར་བསྟན་པ་དེ་དག་ཀྱང་མཐོང་ལ་བདག་ཅག་གིས་མི་མཐོང་བར་འགྱུར་ལགས། དེ་སྐད་ཅེས་གསོལ་པ་དང་།",
+   "en": "Then the bodhisattva Ratnavairocana rose from his seat, removed his robe from one shoulder, knelt on his right knee, placed his hands together, bowed in the direction of the Bhagavat, and inquired of the Bhagavat, “Bhagavat, why did the bodhisattva mahāsattva Maitreya, the bodhisattva Amoghadarśin, the bodhisattva Varuṇa, the bodhisattva Siṃhamati, the bodhisattva Vairocanamati, and ten thousand other bodhisattvas rise from their seats together, remove their robes from one shoulder, kneel on their right knees, bow with their hands placed together, and, facing southeast and looking in that direction with great joy and delight, say these words: ‘Tathāgata Arhat Samyaksambuddha Padmottara, you attained complete buddhahood and soon after manifested great miraculous powers, caused the good karma of many hundreds of thousands of millions of trillions of beings to ripen, and established them in irreversible progress toward the highest, most complete enlightenment. That is a marvel! We pay homage to you! We pay homage to you!’? “ How long was the tathāgata arhat samyaksambuddha Padmottara on the path? How long has it been since he attained the highest, most complete enlightenment, becoming a complete buddha? What is the name of the realm in which the Tathāgata Padmottara resides? In what way is that realm adorned by an array of qualities? For what reason did the tathāgata arhat samyaksambuddha Padmottara perform that kind of great miracle? What is the reason why some bodhisattvas can see the bhagavat buddhas who reside in other innumerable realms in the ten directions, and can see the miracles of those buddha bhagavats, while we cannot see them?”",
+   "T0157": "爾時，會中有菩薩摩訶薩，名寶日光明，即從座起，偏袒右肩，右膝著地，合掌向佛，而白佛言：「彌勒菩薩！無癡見菩薩！水天菩薩！師子意菩薩！日光菩薩！如是等上首菩薩摩訶薩十千人等！以何緣故，捨於聽法，而從座起，偏袒右肩，右膝著地，叉手合掌，向東南方，一心歡喜而作是言：『南無蓮華尊多陀阿伽度、阿羅呵、三藐三佛陀！南無蓮華尊多陀阿伽度、阿羅呵、三藐三佛陀！希有世尊！成阿耨多羅三藐三菩提，未久而能示現種種無量神足變化，令無量無邊百千億那由他眾生得種善根。』世尊！是蓮華尊佛去此遠近？彼佛成道已來幾時？國土何名？以何莊嚴？蓮華尊佛何故示現種種變化？於十方世界所有諸佛示現種種無量變化，或有菩薩而得瞻見，我獨不覩？」",
+   "T0158": "爾時寶照明菩薩即從座起，整衣服，右膝著地，叉手合掌，白佛言：「世尊！以何因緣，彌勒菩薩、無礙見菩薩、水天菩薩、師子意菩薩、照明菩薩摩訶薩，如是等十千菩薩，俱捨世尊所說法，從座起，整衣服，面東南向，右膝著地，叉手合掌，喜踊意視，作如是言：『南無南無蓮華上多陀阿伽度、阿羅呵、三藐三佛陀，甚為希有，成佛未久現大神通，瑞應勸發無數億那由他百千眾生善根成就。』蓮華上如來、應供、正遍知，去此遠近？成阿耨多羅三藐三菩提來幾時？蓮華上如來世界何名？彼土嚴飾，云何莊嚴？以何蓮華上如來、應供、正遍知現大神通？以何因緣，有菩薩見於十方無數他方世界現在諸佛世尊，又見彼諸佛所現神通，我等不見？」"
+  },
+  "c1-07": {
+   "sa": "atha khalu bhagavān ratnavairocanaṃ bodhisattvaṃ mahāsattvametadavocat - \"śṛṇu kulaputra sādhu ca suṣṭhu ca manasikuru bhāṣiṣye 'haṃ te\" / \"sādhu sādhu bhagavan\" niti ratnavairocano bhagavataḥ pratyaśroṣīt / bhagavān ratnavairocanaṃ bodhisattvaṃ mahāsattvametadavocat /",
+   "bo": "བཅོམ་ལྡན་འདས་ཀྱིས་བྱང་ཆུབ་སེམས་དཔའ་རིན་པོ་ཆེ་རྣམ་པར་སྣང་བྱེད་ལ་འདི་སྐད་ཅེས་བཀའ་སྩལ་ཏོ། །རིགས་ཀྱི་བུ་ལེགས་སོ་ལེགས་སོ། །རིགས་ཀྱི་བུ་ཁྱོད་སེམས་ཅན་བྱེ་བ་ཁྲག་ཁྲིག་འབུམ་ཕྲག་མང་པོ་རྣམས་ཀྱི་དགེ་བའི་རྩ་བ་ཡོངས་སུ་སྨིན་པར་བྱ་བའི་དོན་དུ་དེ་བཞིན་གཤེགས་པ་པད་མ་དམ་པས་བྱང་ཆུབ་ཐོབ་པའི་ཆོ་འཕྲུལ་རྣམ་པར་བསྟན་པར་བྱ་བ་དང་སངས་རྒྱས་ཀྱི་ཞིང་གི་ཡོན་ཏན་བཀོད་པ་ཡོངས་སུ་དྲི་བའི་ཕྱིར་དེ་བཞིན་གཤེགས་པ་ལ་དོན་དེ་ལྟ་བུ་ཡོངས་སུ་ཞུ་བར་སེམས་པ་ནི་ཁྱོད་ཀྱི་སྤོབས་པ་དགེ་བ་ཡིན་ཏེ་ཁྱོད་ཀྱིས་ཡོངས་སུ་ཞུས་པ་ལེགས་པ་ཡིན་ནོ། །རིགས་ཀྱི་བུ་དེའི་ཕྱིར་ཁྱོད་ལེགས་པར་རབ་ཏུ་ཉོན་ལ་ཡིད་ལ་ཟུང་ཤིག་དང་བཤད་པར་བྱའོ། །བྱང་ཆུབ་སེམས་དཔའ་རིན་པོ་ཆེ་རྣམ་པར་སྣང་བྱེད་ཀྱིས་བཅོམ་ལྡན་འདས་དེ་བཞིན་ནོ་ཞེས་གསོལ་ཏེ་བཅོམ་ལྡན་འདས་ཀྱི་ལྟར་ཉན་པ་དང་།",
+   "en": "The bodhisattva Ratnavairocana said those words, and then the Bhagavat addressed him in return: “Noble son, excellent! Excellent! Noble son, it is excellent that you have made this request. In order to ripen the good karma of many hundreds of thousands of millions of trillions of beings, you have asked about the Tathāgata Padmottara’s manifestation of the miracle of attaining enlightenment and the qualities of his buddha realm. You have asked this because of the virtue of your confidence. Noble son, listen carefully and pay attention, for I will explain it to you.” “ Bhagavat, I will do so,” said the bodhisattva Ratnavairocana.",
+   "T0157": "爾時，佛告寶日光明菩薩：「善男子！善哉！善哉！汝所問者，即是珍寶，即是賢善，即是善辯，即是善問，汝善男子！能問如來如是妙義，欲得教化無量萬億那由他眾生令種善根，欲得顯現蓮華尊界種種莊嚴。善男子！我今當說，諦聽！諦聽！善思念之，善受攝持。」寶日光明菩薩一心歡喜受教而聽。",
+   "T0158": "爾時世尊告寶照明菩薩言：「善哉，善哉！善男子！機辯甚善，所問賢快。汝，善男子！乃問如來如是之義，為無量億那由他百千眾生善根成就故，乃問蓮華上如來所現神通佛土莊嚴。汝，善男子！諦聽，諦聽！善思念之！當為汝說。」「唯然！世尊！寶照明菩薩聽佛所說。」"
+  },
+  "c1-08": {
+   "sa": "\"asti kulaputra pūrvadakṣiṇasyāṃ diśi, ito buddhakṣetrakoṭīśatasahasragaṅgānadīvālukāsamān buddhakṣetrān atikramya padmā nāma lokadhāturnānāguṇavibhūṣitā nānāpuṣpasamīritā nānāgandhaiśca sphuṭā ratnavṛkṣairalaṅkṛtā ratnaparvatairākīrṇā; nīlavaiḍūryamayī tatra bhūmir (KpSū 8) bodhisattvairākīrṇā dharmaśabdena sphuṭā; sā ca punarvaiḍūryamayī bhūmirmṛdukācalindikasukhasaṃsparśa, nikṣipte ca caraṇe caturaṅgulamavanamati, utkṣipte ca caraṇe caturaṅgulamunnamati, nānāpadmaiścākīrṇā / tatra ca saptaratnamayā vṛkṣāḥ saptayojanānyuccatvena; teṣu ca vṛkṣeṣu divyakāṣāyavastrāṇi pralambante, divyāni ca vādyāni manojñāni saṃpravādyante; teṣu ca vṛkṣeṣu nānāśakuntā indriyabalabodhyaṅgamanojñāṃ śabdāṃ pravyāharanti; teṣāṃ vṛkṣāṇāṃ patrāṇi parasparaṃ spṛśya divyātikrāntaṃ pañcāṅgikatūryaśabdaṃ niścārayanti; ekaikasya ca vṛkṣasya divyātikrāntenodāreṇa gandhena yojanasahasraṃ sphurati; teṣu ca vṛkṣeṣu divyānyalaṅkārāṇyabhipralambante sma /",
+   "bo": "བཅོམ་ལྡན་འདས་ཀྱིས་བྱང་ཆུབ་སེམས་དཔའ་རིན་པོ་ཆེ་རྣམ་པར་སྣང་བྱེད་ལ་འདི་སྐད་ཅེས་བཀའ་སྩལ་ཏོ། །རིགས་ཀྱི་བུ་འདི་ནས་ཤར་ལྷོའི་ཕྱོགས་ལོགས་སུ་སངས་རྒྱས་ཀྱི་ཞིང་བྱེ་བ་ཁྲག་ཁྲིག་འབུམ་ཕྲག་གང་གཱའི་ཀླུང་གི་བྱེ་མ་སྙེད་དག་གི་སངས་རྒྱས་ཀྱི་ཞིང་རྣམས་འདས་པ་ན། འཇིག་རྟེན་གྱི་ཁམས་པད་མ་ཞེས་བྱ་བ་ཡོན་ཏན་སྣ་ཚོགས་ཀྱིས་བརྒྱན་པ། མེ་ཏོག་སྣ་ཚོགས་བཀྲམ་པ། སྤོས་སྣ་ཚོགས་ཀྱིས་ཁྱབ་པ། རིན་པོ་ཆེའི་ཤིང་ལྗོན་པ་དག་གིས་བརྒྱན་པ། རིན་པོ་ཆེའི་པད་མ་དག་གིས་ཀུན་ཏུ་གང་བ་ཞིག་ཡོད་དེ། དེ་ནས་གཞི་ནི་བཻ་དཱུརྱ་སྔོན་པོ་ལས་གྲུབ་ཅིང་། བྱང་ཆུབ་སེམས་དཔའ་དག་གིས་ཀུན་ཏུ་གང་ལ་ཆོས་ཀྱི་སྒྲས་ཁྱབ་པ་ཡིན་ནོ། །བཻ་དཱུརྱ་ལས་གྲུབ་པའི་ས་གཞི་དེ་ཡང་ཀ་ཙ་ལིན་དི་ཀ་ལྟར་རེག་ན་བདེ་ཞིང་འཇམ་ལ། རྐང་པ་བཞག་ན་ནི་སོར་བཞི་ཙམ་ནེམས་ཞེས་བྱེད། རྐང་པ་བཏེག་ན་ནི་སོར་བཞི་ཙམ་པར་ཅེས་བྱེད་ཅིང་པད་མ་སྣ་ཚོགས་དག་གིས་ཀུན་ཏུ་གང་བ་ཡིན་ནོ། །དེ་ན་རིན་པོ་ཆེ་སྣ་བདུན་གྱི་ཤིང་ལྗོན་པ་འཕང་དུ་དཔག་ཚད་བདུན་གྱི་སྲིད་ཙམ་ པ་དག་ཡོད་དེ། ཤིང་ལྗོན་པ་དེ་དག་ལ་ལྷའི་གོས་ངུར་སྨྲིག་དག་རབ་ཏུ་འཕྱང་ཞིང་། ལྷའི་སིལ་སྙན་ཡིད་དུ་འོང་བའི་སྒྲ་ཡང་དག་པར་འབྱིན་པ་དག་ཀྱང་ཡོད་དོ། །ཤིང་ལྗོན་པ་དེ་དག་ལ་བྱ་སྣ་ཚོགས་དབང་པོ་དང་། སྟོབས་དང་། བྱང་ཆུབ་ཀྱི་ཡན་ལག་གི་སྒྲ་ཡིད་དུ་འོང་བ་རབ་ཏུ་སྒྲོགས་པ་དག་ཀྱང་ཡོད་དོ། །ཤིང་ལྗོན་པ་དེ་དག་གི་ལོ་མ་དག་ཕན་ཚུན་ཕྲད་པ་ན་ལྷའི་ལས་ཤིན་ཏུ་འདས་པའི་སིལ་སྙན་ཡན་ལག་ལྔ་དང་ལྡན་པ་དག་གི་སྒྲ་ཡང་འབྱུང་ངོ་། །ཤིང་ལྗོན་པ་རེ་རེའི་དྲི་རྒྱ་ཆེན་པོ་ལྷའི་ལས་འདས་པས་ཀྱང་དཔག་ཚད་འབུམ་དུ་ཁྱབ་པར་བྱེད་ཅིང་ཤིང་ལྗོན་པ་དེ་དག་ལ་ལྷའི་རྒྱན་དག་ཀྱང་མངོན་པར་རབ་ཏུ་འཕྱང་ངོ་།",
+   "en": "As he listened to the Bhagavat, the Bhagavat recounted to the bodhisattva Ratnavairocana the following description.  “ Noble son, in the southeast, beyond buddha realms as numerous as the grains of sand in a hundred thousand million trillion Ganges Rivers, there is a realm by the name of Padmā, which is adorned with a variety of good qualities, scattered with a variety of flowers, pervaded by a variety of fragrances, adorned with precious trees, and filled with precious lotuses. Its ground is made of blue beryl. It is filled with bodhisattvas and pervaded by the sound of the Dharma. The ground made of beryl is as soft and pleasant to the touch as down. A foot stepping on it sinks to the depth of four finger-widths, and when the foot is raised, the ground rises back up four finger-widths. Varieties of lotuses cover the ground. “ The trees there are made of the seven jewels and are seven yojanas in height. They are hung with divine orange cloth, and they emit beautiful, divine music. On those trees there are a variety of birds that sing the beautiful words of the powers, strengths, and factors of enlightenment. When the leaves of those trees touch each other, they create music of the five tempos, which surpasses that of the deva realms. Each of those trees has a pervasive fragrance, which surpasses that of the deva realms and spreads over a hundred thousand  yojanas, and each of those trees is hung with divine adornments. “",
+   "T0157": "爾時，世尊告寶日光明：「善男子！東南方去此一億百千佛土，有佛世界名曰蓮華。以種種莊嚴而挍餝之，散諸名華，香氣遍熏，寶樹莊嚴，種種寶山紺琉璃地，無量菩薩充滿其國，善法妙音周遍而聞。其地柔軟譬如天衣，行時足下蹈入四寸，舉足還復自然而生種種蓮華。其七寶樹高七由旬，其枝自然懸天袈裟。其佛世界常聞諸天伎樂音聲，彼諸眾鳥聲中，常出根、力、覺意妙法之音；諸樹枝葉相掁作聲，過諸天人五樂之音。一一樹根所出香氣過諸天香，香氣遍滿過千由旬。其樹中間懸天瓔珞。",
+   "T0158": "爾時世尊告寶照明菩薩言：「善男子！東南方去此佛土，過億百千佛剎，有世界名蓮華；諸妙莊嚴散眾名華，種種妙香充滿世界，寶樹莊嚴多諸寶山，地紺琉璃，菩薩遍滿法音不絕。彼琉璃地柔軟妙好，猶若天衣，若以足蹈則下四寸，舉足還復；多諸蓮花。七寶行樹高七由旬，其寶樹上垂諸天衣。天作音樂柔軟妙好。樹上眾鳥，演出根、力、覺、道法化之聲。諸寶樹葉互相𢴤觸，所出音聲勝天五樂。一一寶樹所出妙香遍千由旬。諸寶樹上垂天瓔珞，"
+  },
+  "c1-09": {
+   "sa": "teṣu ca vṛkṣāntareṣu saptaratnamayāḥ kūṭāgārāḥ, pañcayojanaśatamuccatvena sapādaśatayojanaṃ vistāreṇa / teṣu ca kūṭāgāreṣu samantāccaturdiśaṃ toraṇāḥ / tebhyaśca toraṇāgrebhyo bahirdhā kūṭāgārebhyaḥ puṣkariṇyaḥ, aśītiyojanāni dīrghatvena pañcāśadyojanāni vistāreṇa / tābhyaśca puṣkariṇībhyaḥ samantāccaturdiśaṃ sopānāḥ saptaratnamayāḥ / sāmantakāśca puṣkariṇyaḥ saptaratnamayaiḥ padmaiḥ pūrṇāḥ, ekaikaṃ ca padmaṃ (KpSū 9) yojanaṃ vistāreṇa / tebhyaśca puṣpakeśarebhyo bodhisattvā mahāsattvāḥ prajāyanti; te rātryāḥ prathame yāme teṣu padmakeśareṣupapadyante, tāṃ ca rātriṃ paryaṅkenātināmayanti, vimuktiprītisukhaṃ ca pratisaṃvedayanti / tatra ca rātryāḥ pratyūṣakālasamaye śītalā vāyavaḥ sugandhikā mṛdukāḥ sukhasaṃsparśacalitāḥ pravāyante, te ca saṃkucitāni puṣpāṇi rohayanti / te ca bodhisattvāḥ samādhito vyutthāya vimuktiprītisukhaṃ pratiprasrabhya padmakeśareṣvavatīryā, teṣu ca kūṭāgāreṣu praviśya saptaratnamayeṣvāsaneṣu paryaṅkeṇa niṣaṇṇā dharmaṃ śṛṇvanti sma /",
+   "bo": "།ཤིང་ལྗོན་པ་དེ་དག་གི་བར་དག་ན་རིན་པོ་ཆེ་སྣ་བདུན་གྱི་ཁང་པ་བརྩེགས་པ་འཕང་དུ་ནི་དཔག་ཚད་ལྔ་བརྒྱ་རྒྱར་ནི་དཔག་ཚད་བརྒྱ་པ་དག་ཡོད་དེ། ཁང་པ་བརྩེགས་པ་དེ་དག་ཀུན་ལ་ཡང་ཕྱོགས་བཞི་ན་རྟ་བབས་དག་ཡོད་དོ། །རྟ་བབས་དེ་དག་གི་ནང་རོལ་ཁང་པ་བརྩེགས་པ་དེ་དག་གི་ཕྱི་རོལ་ན་རྫིང་བུ་སྲིད་དུ་ནི་དཔག་ཚད་བརྒྱད་ཅུ་རྒྱར་ནི་དཔག་ཚད་ལྔ་བཅུ་པ་དག་ཡོད་དོ། །རྫིང་བུ་དེ་དག་གི་ཕྱོགས་བཞི་ཁོ་ར་ཁོར་ཡུག་ན་རིན་པོ་ཆེ་སྣ་བདུན་ལས་བྱས་པའི་ཐེམ་སྐས་དག་ཀྱང་ཡོད་དོ། །རྫིང་བུ་དེ་དག་ཀྱང་ཁོ་ར་ཁོར་ཡུག་ཏུ་མེ་ཏོག་ཨུད་པ་ལ་དང་། པད་མ་དག་གིས་ཀུན་ནས་ཡོག་སྟེ། མེ་ཏོག་རེ་རེ་ལ་ཡང་རྒྱར་ནི་དཔག་ཚད་ཙམ་ཡོད་དོ། །མེ་ཏོག་དེ་དག་གི་ཟེ་བ་དག་ལས་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་དག་རབ་ཏུ་སྐྱེས་ཏེ། དེ་དག་ཀྱང་ནམ་གྱི་གུང་ཐུན་དང་པོ་ལ་པད་མ་དེ་དག་གི་ཟེ་བ་དག་ལས་སྐྱེ་ཞིང་རྣམ་པར་གྲོལ་བའི་དགའ་བ་དང་། བདེ་བ་མྱོང་བཞིན་དུ་སྐྱིལ་མོ་ཀྲུང་གིས་མཚན་མོ་དེ་འདའ་བར་བྱེད་དེ། དེ་ན་མཚན་མོ་དེའི་ནང་པར་གྱི་དུས་ཀྱི་ཚེ་ཕྱོགས་བཞི་ནས་དྲི་ཞིམ་ཞིང་ཡིད་དུ་འོང་ལ་འཇམ་ཞིང་རེག་ན་བདེ་བར་བྱེད་པའི་རླུང་དག་རབ་ཏུ་ལྡང་སྟེ། དེ་དག་གིས་མེ་ཏོག་ཁ་ཟུམས་པ་རྣམས་མངོན་པར་འབྱེད་པར་བྱེད་ཅིང་། བྱང་ཆུབ་སེམས་དཔའ་དེ་དག་ཀྱང་ཏིང་ངེ་འཛིན་དེ་ལས་ལངས་ཏེ། རྣམ་པར་གྲོལ་བའི་དགའ་བ་དང་བདེ་བ་སྤངས་ནས་པད་མའི་ཟེ་བ་དག་ལས་བབས་ཏེ། ཁང་པ་བརྩེགས་པ་དེ་དག་ཏུ་ཞུགས་ནས་རིན་པོ་ཆེ་སྣ་བདུན་གྱི་སྟན་དག་ལ་སྐྱིལ་མོ་ ཀྲུང་བཅས་ཏེ་འདུག་ཅིང་ཆོས་ཉན་པར་བྱེད་དོ།",
+   "en": "In between those trees are kūṭāgāras made of the seven jewels, which are each five hundred yojanas high and a hundred yojanas wide. Around all these kūṭāgāras, in each of the four directions, there is an ornamental arch. Between these ornamental arches and the kūṭāgāras, there are pools that are eighty-eight yojanas long and fifty yojanas wide. On the four sides of those pools there are steps made of the seven jewels. Those ponds are covered with blue lotuses and red lotuses. Each flower is one yojana across. Bodhisattva mahāsattvas are born from the pericarps of those flowers. They appear on the pericarps of those lotuses in the first watch  of the night. They spend the night sitting cross-legged, experiencing the joy and bliss of liberation. When the night turns to dawn, there come cool,  fragrant, gentle breezes, the touch of which is delightful, and which cause the closed flowers to open and the bodhisattvas to emerge from their meditation. Leaving behind the joy and bliss of liberation, they come down from the pericarps and enter the kūṭāgāras, where they sit cross-legged on seats made of the seven jewels and listen to the Dharma. “",
+   "T0157": "有七寶樓觀，高五百由旬，縱廣正等一百由旬，周匝欄楯七寶所成。其樓四邊有大池水，長八十由旬，廣五十由旬，其池四方有妙階道純以七寶，其池水中有優鉢羅華、拘物頭華、波頭摩華、芬陀利華，一一蓮華縱廣正等滿一由旬。於夜初分有諸菩薩，於華臺中生結加趺坐，受於解脫喜悅之樂。過夜分已四方有風，柔軟香潔觸菩薩身，其風能令合華開敷吹散布地。是時菩薩從三昧起，復受解脫喜悅之樂，下蓮華臺昇於高樓，於七寶座處，結加趺坐聽受妙法。",
+   "T0158": "一一樹間有七寶臺，高五百由旬，廣百由旬，其臺四邊有諸窓牖，遶臺周匝。自然池水，長八十由旬，廣五十由旬，池水四邊七寶梯階，芙蓉青蓮華遍覆水上，一一蓮華廣一由旬。「眾華臺上生諸菩薩摩訶薩，於初夜時，華臺上生結加趺坐，受解脫樂，歡喜竟夜；天欲明時，四方微風柔軟香好吹華開敷，彼諸菩薩從三昧起，捨解脫樂，從華臺下昇諸寶臺，於七寶座結加趺坐，而聽受法。"
+  },
+  "c1-10": {
+   "sa": "teṣu ca vṛkṣakūṭāgārāntariteṣu ca caturdiśaṃ jāmbunadamayāḥ parvatā, viṃśatiyojanānyuccatvena trīṇi yojanāni vistāreṇa; teṣu ca parvateṣu anekaśatasahasrāṇi sūryakāntacandrakāntendranīlajyotīrasāśca maṇayo 'ntarāntare dṛśyanti sma / padmottarasya buddhasyābhā teṣu parvatemaṇiṣu nipatyā tayā ca buddhābhayā ca maṇiprabhayā sarvā sā padmā lokadhāturnityodāreṇāvabhāsena sphuṭā / na ca tatra candrasūryayoḥ prabhā prajñāyate, nānyatra yadā padmāḥ saṃkucanti pakṣiṇaścālpaśabdā bhavanti tadā rātrīti saṃjñā bhavati, viparyayāddivasaṃ / teṣāṃ ca (KpSū 10) parvatānāmupari nīlavaiḍūryamayāḥ kūṭāgārāḥ ṣaṣṭiyojanānyuccatvena viṃśatiyojanāni vistāreṇa, tebhyaśca kūṭāgārebhyaścaturdiśaṃ saptaratnamayāstoraṇāstebhyaḥ kūṭāgārebhyaśca saptaratnamayāḥ paryaṅkā yatraikajātipratibaddhā bodhisattvā dharmaṃ śṛṇvanti /",
+   "bo": "།ཤིང་ལྗོན་པ་དེ་དག་དང་ཁང་པ་བརྩེགས་པ་དེ་དག་གི་ཕྱོགས་བཞི་ཁོ་ར་ཁོར་ཡུག་དག་ན་རིན་པོ་ཆེ་འཛམ་བུ་ཆུ་བོའི་གསེར་གྱི་རི་འཕང་དུ་ནི་དཔག་ཚད་ཉི་ཤུ་རྒྱར་ནི་དཔག་ཚད་གསུམ་པ་དག་ཡོད་དེ། རི་དེ་དག་གི་བར་བར་དག་ན་ཆུ་ཤེལ་དང་། མེ་ཤེལ་དང་། ཨན་ད་རྙིལ་དང་། ནོར་བུ་སྐར་མདོག་འབུམ་ཕྲག་དུ་མ་དག་སྣང་ངོ་། །དེ་ན་སངས་རྒྱས་པད་མ་དམ་པའི་འོད་ཀྱིས་རི་དང་ནོར་བུ་དག་ལ་ཕོག་པ་ན་སངས་རྒྱས་ཀྱི་འོད་དེ་དང་། ནོར་བུའི་འོད་དེས་འཇིག་རྟེན་གྱི་ཁམས་པད་མ་དེ་རྟག་ཏུ་སྣང་བ་རྒྱ་ཆེན་པོས་ཁྱབ་པར་བྱས་ཏེ། དེ་ན་ཉི་མ་དང་ཟླ་བ་དག་གི་འོད་ཀྱང་མི་མངོན་ཏེ་གཞན་དུ་ན་གང་གི་ཚེ་པད་མ་རྣམས་ཁ་ཟུམས་ཤིང་བྱ་དག་སྒྲ་ཆུང་བར་གྱུར་པ་དེའི་ཚེ་ནི་མཚན་མོ་ཞེས་བྱ་བའི་གྲངས་སུ་འགྱུར་ལ་དེ་ལས་བཟློག་པ་ནི་ཉིན་པར་ཡིན་ནོ། །རི་དེ་དག་གི་སྟེང་ན་བཻ་དཱུརྱ་སྔོན་པོ་ལས་བྱས་པའི་ཁང་པ་བརྩེགས་པ་འཕང་དུ་ནི་དཔག་ཚད་དྲུག་ཅུ་རྒྱར་ནི་དཔག་ཚད་ཉི་ཤུ་པ་དག་ཡོད་དེ། ཁང་པ་བརྩེགས་པ་དེ་དག་གི་ཕྱོགས་བཞི་ན་རིན་པོ་ཆེ་སྣ་བདུན་ལས་བྱས་པའི་རྟ་བབས་དག་ཀྱང་ཡོད་དོ། །ཁང་པ་བརྩེགས་པ་དེ་དག་ན་རིན་པོ་ཆེ་སྣ་བདུན་ལས་བྱས་པའི་ཁྲི་དག་ཡོད་དེ་དེ་ལ་སྐྱེ་བ་གཅིག་གིས་ཐོགས་པའི་བྱང་ཆུབ་སེམས་དཔའ་དག་འདུག་ཅིང་ཆོས་ཉན་པར་བྱེད་དོ།",
+   "en": "Surrounding the trees and kūṭāgāras are mountains made of Jambu River gold. They are each twenty yojanas high and three yojanas wide. Between those mountains, many hundreds of thousands of moonstones, sunstones, sapphires, and jyotīrasas are visible. When the light of the Buddha Padmottara strikes the mountains and jewels, the light of that buddha and the light of the jewels becomes a continuous great radiance throughout the Padmā realm. The light of a sun or moon is unknown, but when the lotuses close and the birdsong diminishes, that is called night, and the opposite is day. “ On top of the mountains are kūṭāgāras of blue beryl, which are sixty yojanas high and twenty yojanas wide. In each of the four directions from the kūṭāgāras there are ornamental archways made of the seven jewels. Within the kūṭāgāras, there are thrones made of the seven jewels, upon which bodhisattvas in their last lifetime sit and listen to the Dharma. “",
+   "T0157": "其園觀外周匝四邊，有閻浮檀紫磨金山高二十由旬，縱廣正等滿三由旬，山有無量百千珍寶、紺琉璃珠、火珠之明間錯其間。爾時，蓮華尊佛以大光明并諸寶明，和合顯照其佛世界，其土光明微妙第一，更無日月亦無晝夜，以華合鳥栖而知時節。其寶山上有紺琉璃妙好之臺，高六十由旬，縱廣二十由旬。其臺四邊周匝欄楯七寶所成，其臺中央有七寶床，其床各有一生菩薩坐聽受法。",
+   "T0158": "諸樹寶臺周匝四面，紫磨寶山高二十由旬，廣三由旬，其諸山上有無數百千日明月明、王紺大紺明月寶珠，處處皆現蓮華上佛光明，山珠佛光珠明普照蓮華世界。妙光常遍，晝夜無異，無日月光不覺有夜，蓮華合時眾鳥聲止，以是知夜。彼諸山上有紺琉璃寶臺，高六十由旬，廣二十由旬，寶臺周匝七寶窓牖，其寶臺中有七寶座，一生補處菩薩坐上聽法。"
+  },
+  "c1-11": {
+   "sa": "padmāyāṃ kulaputra lokadhātau indro nāma bodhivṛkṣastrīṇi yojanasahasrāṇyudvedhena pañcayojanaśatāni vistāreṇa, yojanasahasraṃ śākhāpatrapalāśaṃ susaṃsthitaṃ / tasya ca bodhivṛkṣasya mūle padmo raupyamayo nālaḥ pañcayojanaśatānyudvedhena, tasya koṭīśatasahasrasuvarṇamayāni patrāṇi pañcadaśayojanānyudvedhena / sarveṣu ca keśareṣvaśmagarbhamayāni kiñjalkāni, saptaratnamayāḥ keśarā daśayojanānyudvedhena saptayojanāni vistāreṇa / tatrādyarātrau padmottareṇa tathāgatenārhatā samyaksaṃbuddhenānuttarā samyaksaṃbodhirabhisaṃbuddhā, tasya buddhāsanapadmasya samantataḥ padmā yatra bodhisattvā niṣaṇṇāḥ padmottarasya tathāgatasyārhataḥ samyaksaṃbuddhasya prātihāryāṇi paśyanti sma\" /",
+   "bo": "།རིགས་ཀྱི་བུ་འཇིག་རྟེན་གྱི་ཁམས་པད་མ་དེ་ན་བྱང་ཆུབ་ཀྱི་ཤིང་དབང་པོ་ཞེས་བྱ་བ་འཕང་དུ་ནི་དཔག་ཚད་སུམ་སྟོང་རྒྱར་ནི་དཔག་ཚད་ལྔ་བརྒྱ། ཡལ་ག་དང་། ལོ་མ་དང་། འདབ་མ་དག་ནི་དཔག་ཚད་སྟོང་དུ་ལེགས་པར་གནས་པ་ཡོད་དོ། །བྱང་ཆུབ་ཀྱི་ཤིང་དེའི་དྲུང་ན་དངུལ་ལས་བྱས་པའི་པད་མ་སྡོང་བུའི་འཕང་དུ་ནི་དཔག་ཚད་ལྔ་བརྒྱ་ཡོད་ལ། དེའི་འདབ་མ་ནི་གསེར་ལས་བྱས་པ་བྱེ་བ་ཕྲག་འབུམ་ཡོད་དེ་འཕང་དུ་ནི་དཔག་ཚད་ལྔ་ཡོད་དོ། །ཟེ་བ་ཐམས་ཅད་ན་རིན་པོ་ཆེ་རྡོའི་སྙིང་པོ་ལས་བྱས་པའི་ཟེའུ་འབྲུ་དག་ཡོད་དོ། །ཟེ་བ་རྣམས་ནི་རིན་པོ་ཆེ་སྣ་བདུན་ལས་བྱས་པ་སྟེ། འཕང་དུ་ནི་དཔག་ཚད་བཅུ་རྒྱར་ནི་དཔག་ཚད་བདུན་ཡོད་དོ། །དེར་དེ་བཞིན་གཤེགས་པ་དགྲ་བཅོམ་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་པད་མ་དམ་པ་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་མངོན་པར་རྫོགས་པར་སངས་རྒྱས་སོ། །སངས་ རྒྱས་ཀྱི་གདན་པད་མ་དེའི་ཁོ་ར་ཁོར་ཡུག་ན་ཡང་པད་མ་དག་ཡོད་དེ། དེ་དག་ལ་བྱང་ཆུབ་སེམས་དཔའ་དག་འཁོད་པས་དེ་བཞིན་གཤེགས་པ་དགྲ་བཅོམ་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་པད་མ་དམ་པའི་ཆོ་འཕྲུལ་དག་མཐོང་བར་གྱུར་ཏོ། །",
+   "en": "Noble son, in the Padmā realm there is the excellent presence of a Bodhi tree called Indra, which is three thousand yojanas high with a trunk five hundred yojanas wide. Its branches, leaves, and petals are a thousand yojanas wide. “ At the foot of this Bodhi tree there is a silver lotus stalk, which is five hundred yojanas high. It has a hundred thousand million gold petals, five yojanas in height. All the pericarps have emerald stamens, and the pericarps, which are made of the seven jewels, are ten yojanas high and seven yojanas wide. It is upon this that the tathāgata arhat samyaksambuddha Padmottara attained the highest, most complete enlightenment, becoming a complete buddha. “ Encircling that buddha’s lotus seat are other lotuses, upon which sit bodhisattvas who see the miracles of the tathāgata arhat samyaksambuddha Padmottara.”",
+   "T0157": "「善男子！其佛世界有菩提樹名因陀羅，高三千由旬，樹莖縱廣五百由旬，枝葉縱廣一千由旬。下有蓮華，琉璃為莖高五百由旬。一一諸華各有一億百千金葉高五由旬，馬瑙為䩸、七寶為鬚高十由旬，縱廣正等滿七由旬。爾時，蓮華尊佛坐此華上，即於昨夜成阿耨多羅三藐三菩提。其菩提華座周匝復有種種蓮華，有諸菩薩各坐其上，見蓮華尊佛種種變化。」",
+   "T0158": "「善男子！蓮華世界菩提之樹，名因陀羅，高三千五百由旬，枝葉分布五千由旬；彼菩提樹下有蓮花，高五百由旬，琉璃為莖，黃金為葉，有億百千，長五百由旬，七寶為臺，馬瑙為鬚，高十由旬，廣七由旬。蓮華上如來、應供、正遍知，於彼華上昨夜成阿耨多羅三藐三菩提。於其道場周匝華座，皆有菩薩而坐其上，觀蓮華上如來現大神通。」"
+  },
+  "c1-12": {
+   "sa": "evamukte, ratnavairocano bodhisattvo bhagavantametadavocat - \"kiyadrūpāṇi bhagavān padmottarastathāgato (KpSū 11) mahāprātihāryāṇi kṛtavān?\" / evamukte, bhagavān ratnavairocanaṃ bodhisattvametadavocat - \"adyarātryāḥ paścime yāme padmottareṇa tathāgatenārhatā samyaksaṃbuddhenānuttarā samyaksaṃbodhirabhisaṃbuddhā, rātryāḥ pratyuśakālasamaye tadrupamṛddhyabhisaṃskāramabhisaṃskṛtavān, yāvad brahmalokamātmānamabhinirmāya uṣṇīṣamūrdhnaḥ ṣaṣṭiraśmikoṭīnayutaśatasahasrāṇi pramucyate, raśmibhirūrdhvāyā diśo buddhakṣetraparamāṇurajaḥsamān lokadhātūn avabhāsayati / ye punastasmin samaye ūrdhvāyāṃ diśi sthitā bodhisattvā adhodiśam avalokayanti, teṣāṃ na sumeruravabhāsamāgacchati, na cakravāḍamahācakravāḍā na kālaparvatāḥ / ye ca bodhisattvāstebhyo lokadhātubhyo vyākṛtā ye samādhipratilabdhā ye dhāraṇīpratilabdhā ye kṣāntipratilabdhā ye ca bhūmyatikrāntā ye caikajātipratibaddhā bodhisattvā mahāsattvāste 'pi tenāvabhāsena sphuṭā, añjaliṃ pragṛhya padmottarasya tathāgatasyātmabhāvaṃ vyavalokayitvā dvātriṃśadbhirmahāpuruṣalakṣaṇaiḥ samalaṅkṛtagātraṃ aśītibhiścānuvyañjanairdṛṣṭvā ca tāṃ bodhisattvaparṣadaṃ padmāṃ ca lokadhātuṃ buddhakṣetraguṇavyūhāṃśca dṛṣṭvā paramaprītisaumanasyajātāste (KpSū 12) ca bodhisattvā mahāsattvā buddhakṣetraparamāṇurajaḥsamebhyo lokadhātubhyo gaṇanāsamatikrāntā bodhisattvāstāṃstāṃ lokadhātūnapahāya ṛddhibalena padmāṃ lokadhātumanuprāptāḥ padmottarasya tathāgatasyārhataḥ samyaksaṃbuddhasya pūjanāya vandanāya paryupāsanāya /",
+   "bo": "དེ་སྐད་ཅེས་བཀའ་སྩལ་པ་དང་། བཅོམ་ལྡན་འདས་ལ་བྱང་ཆུབ་སེམས་དཔའ་རིན་པོ་ཆེ་རྣམ་པར་སྣང་བྱེད་ཀྱིས་འདི་སྐད་ཅེས་གསོལ་ཏོ། །བཅོམ་ལྡན་འདས་དེ་བཞིན་གཤེགས་པ་དགྲ་བཅོམ་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་པད་མ་དམ་པས་ཆོ་འཕྲུལ་ཆེན་པོ་ཇི་ལྟ་བུ་དག་བསྟན་པ་མཛད་པ་ལགས། དེ་སྐད་ཅེས་གསོལ་པ་དང་། བཅོམ་ལྡན་འདས་ཀྱིས་བྱང་ཆུབ་སེམས་དཔའ་རིན་པོ་ཆེ་རྣམ་པར་སྣང་བྱེད་ལ་འདི་སྐད་ཅེས་བཀའ་སྩལ་ཏོ། །རིགས་ཀྱི་བུ་དེ་བཞིན་གཤེགས་པ་དགྲ་བཅོམ་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་པད་མ་དམ་པ་ནི་མདང་གི་ནམ་གྱི་ཐུན་ཐ་མ་ལ་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་མངོན་པར་རྫོགས་པར་སངས་རྒྱས་ནས། ད་ནང་ནང་པར་གྱི་དུས་ཀྱི་ཚེ་འདི་ལྟ་བུའི་རྫུ་འཕྲུལ་མངོན་པར་འདུ་བྱ་བ་མངོན་པར་མཛད་དེ་བདག་ཉིད་ཚངས་པའི་འཇིག་རྟེན་གྱི་བར་དུ་མངོན་པར་སྤྲུལ་ནས་དབུའི་གཙུག་ཏོར་ནས་འོད་ཟེར་བྱེ་བ་ཁྲག་ཁྲིག་འབུམ་རབ་ཏུ་བཀྱེའོ། །འོད་ཟེར་དེ་དག་གིས་སྟེང་གི་ཕྱོགས་ཀྱི་འཇིག་རྟེན་གྱི་ཁམས་སངས་རྒྱས་ཀྱི་ཞིང་གི་རྡུལ་ཕྲ་རབ་ཀྱི་རྡུལ་སྙེད་དག་སྣང་བས་ཁྱབ་པར་མཛད་དོ། །དེའི་ཚེ་སྟེང་གི་ཕྱོགས་ན་བྱང་ཆུབ་སེམས་དཔའ་གང་དག་གནས་པ་དག་གིས་ཐུར་དུ་བལྟས་ན་དེ་དག་ལ་རི་རབ་དང་། ཁོར་ཡུག་དང་། ཁོར་ཡུག་ཆེན་པོ་དང་། རི་ནག་པོ་རྣམས་ཀྱང་སྣང་བར་མ་གྱུར་ཏོ། ། འཇིག་རྟེན་གྱི་ཁམས་དེ་དག་ན་བྱང་ཆུབ་སེམས་དཔའ་གང་དག་ལུང་བསྟན་པ་དག་དང་། གང་དག་ཏིང་ངེ་འཛིན་ཐོབ་པ་དག་དང་། གང་དག་གཟུངས་ཐོབ་པ་དག་དང་། གང་དག་བཟོད་པ་ཐོབ་པ་དག་དང་། གང་དག་ས་ལས་ཤིན་ཏུ་འདས་པ་དག་དང་། དེ་ན་གང་དག་སྐྱེ་བ་གཅིག་གིས་ཐོགས་པའི་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་དེ་དག་ཀྱང་སྣང་བ་དེ་ཁྱབ་པར་གྱུར་ནས་ཐལ་མོ་སྦྱར་ཏེ། དེ་བཞིན་གཤེགས་པ་དགྲ་བཅོམ་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་པད་མ་དམ་པ་དེའི་ སྐྱེས་བུ་ཆེན་པོའི་མཚན་སུམ་ཅུ་རྩ་གཉིས་དང་། དཔེ་བྱད་བཟང་པོ་བརྒྱད་ཅུས་ལེགས་པར་བརྒྱན་པའི་སྐུ་ཡང་མཐོང་། བྱང་ཆུབ་སེམས་དཔའ་འཁོར་དེ་དང་། འཇིག་རྟེན་གྱི་ཁམས་པད་མའི་སངས་རྒྱས་ཀྱི་ཞིང་གི་ཡོན་ཏན་བཀོད་པ་ཡང་མཐོང་ངོ་། །མཐོང་ནས་ཀྱང་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་དེ་དག་མཆོག་ཏུ་དགའ་བ་དང་། བདེ་བ་སྐྱེས་ཏེ། འཇིག་རྟེན་གྱི་ཁམས་སངས་རྒྱས་ཀྱི་ཞིང་གི་རྡུལ་ཕྲ་རབ་ཀྱི་རྡུལ་སྙེད་དག་ནས་བྱང་ཆུབ་སེམས་དཔའ་བགྲང་བ་ལས་ཡང་དག་པར་འདས་པ་དག་རང་རང་གིས་སངས་རྒྱས་ཀྱི་ཞིང་བོར་ནས་དེ་བཞིན་གཤེགས་པ་དགྲ་བཅོམ་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་པད་མ་དམ་པ་ལ་མཆོད་པ་བྱ་བ་དང་། ཕྱག་བྱ་བ་དང་། བསྙེན་བཀུར་བྱ་བའི་ཕྱིར་རྫུ་འཕྲུལ་གྱི་མཐུས་འཇིག་རྟེན་གྱི་ཁམས་པད་མར་ལྷགས་སོ།",
+   "en": "The bodhisattva Ratnavairocana then asked the Bhagavat, “Bhagavat, what kind of miracles did the tathāgata arhat samyaksambuddha Padmottara manifest?” The Bhagavat replied to the bodhisattva Ratnavairocana, “Noble son,  in the last watch of the night, the tathāgata arhat samyaksambuddha Padmottara attained the highest, most complete enlightenment, becoming a complete buddha, and at dawn he performed a miracle. He transformed himself to the height of the Brahmā realm and his uṣṇīṣa radiated a hundred thousand million trillion light rays. Those light rays illuminated the upper region’s realms, which are as numerous as the particles in a buddha realm. At that time, the bodhisattvas who dwelt in the upper regions looked downward. They did not perceive Sumeru or the Cakravāḍa, Mahācakravāḍa, or Kāla mountain ranges. In those worlds, the bodhisattvas who had received prophecy, who had attained samādhi, who had attained retention, who had attained acceptance, and who had completely transcended the levels of the śrāvakas and pratyekabuddhas,  and those bodhisattva mahāsattvas who were in their final lifetime, were illuminated, placed their palms together in reverence, and saw the tathāgata arhat samyaksambuddha Padmottara’s body, which was perfectly adorned by the thirty-two signs and eighty excellent features of a great being. “ They also saw the assembly of bodhisattvas and the array of good qualities of that buddha realm, the world known as Padmā. The bodhisattva mahāsattvas became perfectly joyous and happy when they saw that. Countless bodhisattvas, from realms as numerous as the particles in a buddha realm, through their miraculous powers left their buddha realms and came to the Padmā realm in order to make offerings to, pay homage to, and honor the tathāgata arhat samyaksambuddha Padmottara. “",
+   "T0157": "爾時，世尊釋迦牟尼說是事已，寶日光明菩薩摩訶薩白佛言：「世尊！蓮華尊佛以何相貌作諸變化？惟願說之。」佛告寶日光明：「善男子！蓮華尊佛於昨夜分成阿耨多羅三藐三菩提，其佛過夜分已示現種種神足變化。其身變現乃至梵天，頂肉髻相放六十億那由他百千光明，照於上方微塵數等諸佛世界。爾時，上方菩薩不觀下方眼所緣色，所謂大小鐵圍及諸小山，但觀佛光所及世界。於諸世界有諸菩薩得授記莂，若得陀羅尼忍辱三昧，或得上位一生補處。是菩薩等所有光明，以佛光故悉不復現。如是等眾叉手向於蓮華尊佛瞻仰尊顏。爾時，惟見三十二相瓔珞其身，八十種好次第莊嚴，見蓮華尊佛及其世界種種莊嚴，如是見已，心得歡喜。爾時，如微塵數等諸佛世界中，諸菩薩摩訶薩見蓮華尊佛光明變化及其世界已，各捨本土以自神足，悉共發來詣彼佛所，禮拜、圍繞、供養、恭敬、尊重、讚歎。",
+   "T0158": "是時寶照明菩薩白佛言：「世尊！蓮華上如來，云何現大神通？」爾時佛告寶照明菩薩言：「蓮華上如來於昨後夜成阿耨多羅三藐三菩提，即夜向明現是神通，變化身至梵天，頂上肉髻放六十億那由他百千光明，照於上方，過一佛世界微塵數諸佛國土。是時上方諸菩薩，觀見下方，大鐵圍山、小鐵圍山、黑山，無能障礙。諸世界中大菩薩得授記者，有得三昧，有得總持，有得忍辱，有得過地，有得一生補處。菩薩摩訶薩皆見光明，叉手合掌觀蓮華上如來身，見三十二大人之相，八十種好以自莊嚴；并見菩薩摩訶薩眾，蓮華世界佛土莊嚴。見已歡喜，皆發善心。過一佛土微塵數世界菩薩摩訶薩，各各捨己國土，以神足力至蓮華世界，供養恭敬親近蓮華上如來、應供、正遍知。"
+  },
+  "c1-13": {
+   "sa": "sa ca kulaputra padmottarastathāgato jihvendriyaṃ mukhānnirnāmayitvā sarvāvatīmimāṃ cāturdvīpikāṃ lokadhātuṃ niṣaṇṇāḥ sthitāścaṅkramanto jihvendriyeṇa paricchāditavān / ye cātra bodhisattvāḥ samāpannāste samādhibhyo vyutthāya sarvāvatī sā parṣat padmottarasya tathāgatasya pūjākarmaṇe udyuktā /",
+   "bo": "།རིགས་ཀྱི་བུ་དེ་བཞིན་གཤེགས་པ་པད་མ་དམ་པ་དེས་ཀྱང་བཞུགས་པ་དང་། བཞེངས་པ་དང་། འཆགས་བཞིན་དུ་ཞལ་གྱི་སྒོ་ནས་ལྗགས་ཀྱི་དབང་པོ་ཕྱུང་སྟེ་ཐམས་ཅད་དང་ལྡན་པའི་གླིང་བཞི་པའི་འཇིག་རྟེན་གྱི་ཁམས་དེ་ལྗགས་ཀྱི་དབང་པོས་ཡོངས་སུ་ཁེབས་པར་མཛད་དོ། །དེ་ནས་བྱང་ཆུབ་སེམས་དཔའ་གང་དག་སྙོམས་པར་ཞུགས་པ་དེ་དག་ཀྱང་ཏིང་ངེ་འཛིན་ལས་ལངས་ནས་དེ་བཞིན་གཤེགས་པ་པད་མ་དམ་པ་དང་། ཐམས་ཅད་དང་ལྡན་པའི་འཁོར་ལ་མཆོད་པ་བྱ་བའི་ལས་ལ་བརྩོན་པར་གྱུར་ཏོ།",
+   "en": "Noble son, the Tathāgata Padmottara, while sitting, standing, and walking, extended his tongue from his mouth and covered that entire world of four continents with his tongue. Then the bodhisattvas who were in meditation arose from their samādhi and applied themselves to making offerings to the Tathāgata and the entire assembly.  “",
+   "T0157": "「善男子！爾時，彼佛見諸菩薩出其舌相，悉皆遍覆諸四天下行住坐等一切眾生，或有菩薩入於禪定，從禪定起在大眾中，禮拜、圍繞、供養、恭敬、尊重、讚歎蓮華尊佛。善男子！彼佛爾時示現如是廣長舌相，作變化已即還攝之。",
+   "T0158": "「善男子！蓮華上如來見大眾集，現廣長舌相，遍覆大眾及四天下，行、住、坐、立於此座上。菩薩皆從三昧起，一切大眾供養蓮華上如來。"
+  },
+  "c1-14": {
+   "sa": "atha kulaputra padmottarastathāgato jihvendriyamṛddhyabhisaṃskāreṇa pratiprasrambhayitvā, punaraparaṃ padmottarastathāgataḥ sarvāvantātkāyāt sarvaromakūpebhya ekaikasmād romakūpavivarāt ṣaṣṭiraśmikoṭīnayutaśatasahasrāṇi niścārayitvā daśasu dikṣvekaikasyāṃ diśi buddhakṣetraparamāṇurajaḥsamāṃ lokadhātūn udāreṇāvabhāsena sphuritvā, bodhisattvā mahāsattvāstebhyo lokadhātubhyo vyākṛtā ye samādhipratilabdhā iti te 'pi bodhisattvā mahāsattvāḥ svakasvakabuddhakṣetrābhayā ṛddhibalena padmāṃ lokadhātuṃ saṃprāptāḥ padmottarasya (KpSū 13) tathāgatasyārhataḥ samyaksaṃbuddhasya darśanāya vandanāya pūjanāya paryupāsanāya /",
+   "bo": "།རིགས་ཀྱི་བུ་དེ་ནས་དེ་བཞིན་གཤེགས་པ་པད་མ་དམ་པས་ལྗགས་ཀྱི་དབང་པོའི་རྫུ་འཕྲུལ་མངོན་པར་འདུ་མཛད་པའི་ཕྱིར་བསྡུས་ནས། གཞན་ཡང་དེ་བཞིན་གཤེགས་པ་པད་མ་དམ་པས་སྐུ་ཐམས་ཅད་ནས་སྤུའི་ཁུང་བུ་ཐམས་ཅད་ཀྱི་སྤུའི་ཁུང་བུའི་སྒོ་རེ་རེ་ནས་ཀྱང་། འོད་ཟེར་བྱེ་བ་ཁྲག་ཁྲིག་འབུམ་ཕྲག་དྲུག་ཅུ་དྲུག་ཅུ་བྱུང་ཞིང་ཕྱོགས་བཅུའི་ཕྱོགས་རེ་རེར་ཡང་འཇིག་རྟེན་གྱི་ཁམས་སངས་རྒྱས་ཀྱི་ཞིང་གི་རྡུལ་ཕྲ་རབ་ཀྱི་རྡུལ་སྙེད་དག་སྣང་བ་རྒྱ་ཆེན་པོས་ཁྱབ་པར་མཛད་ནས། འཇིག་རྟེན་གྱི་ཁམས་དེ་དག་ན་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་གང་དག་ལུང་བསྟན་པ་དག་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་གང་དག་ཏིང་ངེ་འཛིན་ཐོབ་པ་དེ་དག་ཀྱང་དེ་བཞིན་གཤེགས་པ་དགྲ་བཅོམ་པ་ཡང་དག་ པར་རྫོགས་པའི་སངས་རྒྱས་པད་མ་དམ་པ་ལ་བལྟ་བ་དང་། ཕྱག་བྱ་བ་དང་། བསྙེན་བཀུར་བྱ་བའི་ཕྱིར་རང་རང་གི་སངས་རྒྱས་ཀྱི་ཞིང་གི་སྣང་བ་དང་། རྫུ་འཕྲུལ་གྱི་སྟོབས་ཀྱིས་འཇིག་རྟེན་གྱི་ཁམས་པད་མར་ལྷགས་སོ།",
+   "en": "Noble son, when the Tathāgata Padmottara ceased manifesting the miraculous power of his tongue, he emitted six thousand trillion light rays from each pore of his entire body. This vast radiance reached realms in all the ten directions as numerous as the particles in a buddha realm. There were bodhisattva mahāsattvas in those realms who received prophecies and attained samādhi. Those bodhisattva mahāsattvas, through their miraculous powers, departed from their own buddha realms  and came to the Padmā realm in order to see, pay homage to, and honor the tathāgata arhat samyaksambuddha Padmottara. “",
+   "T0157": "「善男子！蓮華尊佛復放身毛孔光，一一毛孔出六十億那由他百千光明，其光微妙普遍十方，一一方面各各過於微塵數等諸佛世界。彼世界中在在處處，所有菩薩得授記已，得陀羅尼三昧忍辱，或得上位一生補處。見是光已，各各自捨其佛世界，乘神通力，皆共發來至彼佛所，禮拜、圍繞、供養、恭敬、尊重、讚歎。",
+   "T0158": "「善男子！蓮華上如來還攝舌相神通，復放一一身諸毛孔各六十億那由他百千光明，遍照十方各一佛世界微塵數國土。於諸剎中菩薩摩訶薩，有授記者，得三昧者，略說。彼諸菩薩摩訶薩，各各捨己佛剎，以神足力到蓮華世界，供養恭敬親近蓮華上如來。"
+  },
+  "c1-15": {
+   "sa": "atha khalu kulaputra padmottarastathāgato 'rhan samyaksaṃbuddho ṛddhyabhisaṃskāraṃ pratiprasrabhya sarvāvatyāṃ bodhisattvaparṣadi avaivartikacakraṃ nāma dhārmikaṃ dharmacakraṃ pravartitavān bahujanahitāya bahujanasukhāya lokānukampāyai, arthāya hitāya sukhāya devānāṃ ca manuṣyāṇāṃ ca mahāyānasya paripūraṇārthaṃ\" //",
+   "bo": "།རིགས་ཀྱི་བུ་དེ་ནས་དེ་བཞིན་གཤེགས་པ་དགྲ་བཅོམ་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་པད་མ་དམ་པས་རྫུ་འཕྲུལ་མངོན་པར་འདུ་མཛད་པ་དེ་ཕྱིར་བསྡུས་ནས། སྐྱེ་བོ་མང་པོ་ལ་ཕན་པ་དང་། སྐྱེ་བོ་མང་པོ་ལ་བདེ་བ་དང་། འཇིག་རྟེན་ལ་ཐུགས་བརྩེ་བ་དང་། ལྷ་དང་མི་རྣམས་ལ་ཕན་པ་དང་། བདེ་བ་དང་། ཐེག་པ་ཆེན་པོ་ཡོངས་སུ་རྫོགས་པར་བྱ་བའི་ཕྱིར་ཐམས་ཅད་དང་ལྡན་པའི་བྱང་ཆུབ་བྱང་ཆུབ་སེམས་དཔའི་འཁོར་ལ་ཕྱིར་མི་ལྡོག་པའི་འཁོར་ལོ་ཞེས་བྱ་བ་ཆོས་དང་ལྡན་པའི་ཆོས་ཀྱི་འཁོར་ལོ་བསྐོར་ཏོ།",
+   "en": "Noble son, when the tathāgata arhat samyaksambuddha Padmottara concluded his miraculous manifestations, in order to benefit many beings, for the sake of the happiness of many beings, from compassion for the world, in order to bring benefit and happiness  to devas and humans, and in order to perfectly complete the purpose of the Mahāyāna, he turned the righteous wheel of the Dharma called the Irreversible Wheel for the entire assembly of bodhisattvas.”",
+   "T0157": "善男子！爾時，彼佛作此變化，即復還攝，為諸菩薩及諸大眾，講說正法，轉不退輪，欲令無量無邊眾生得大利益，得大快樂。憐愍世間為人天故，欲令具足無上大乘。」",
+   "T0158": "「善男子！爾時蓮華上如來，還攝神通，為一切菩薩大眾，轉不退轉正法之輪，多所饒益，愍念世間，為饒益安樂諸天世人成就大乘故。」"
+  },
+  "c1-16": {
+   "sa": "iti śrīkaruṇāpuṇḍarīke mahāyānasūtre dharmacakrapravartano nāma prathamaḥ parivartaḥ // 1 //",
+   "bo": "།ཐེག་པ་ཆེན་པོའི་མདོ་སྙིང་རྗེ་པད་མ་དཀར་པོ་ལས་ཆོས་ཀྱི་འཁོར་ལོ་བསྐོར་བ་ཞེས་བྱ་བའི་ལེའུ་སྟེ་དང་པོའོ།། །།",
+   "en": "That concludes “Turning the Wheel of the Dharma,” which is the first chapter of the Mahāyāna sūtra titled The White Lotus of Compassion."
+  }
+ }
+}
