@@ -1,0 +1,651 @@
+{
+ "slug": "pratimoksa-c05",
+ "title": "比丘戒本（五）三十捨墮",
+ "family": "pi",
+ "intro": "三十尼薩耆波逸提（捨墮，nissaggiya pācittiya）：犯者先於僧中捨物、再懺波逸提。各部都是三十條、內容一一相當，但次第各有出入（段序依原本）：巴利分衣、敷具（蠶綿）、鉢三品，各十條。衣品前三條各部同；「從非親尼取衣」與「使非親尼浣故衣」巴利、說一切有部梵本、根本說一切有部梵本與根有戒經是浣在前，四分、五分、十誦、僧祇、解脫戒經與大眾說出世部梵本是取在前。敷具品：僧祇與大眾說出世部梵本把「純黑」「二分」放在「蠶綿（憍奢耶）」之前；解脫戒經「坐具帖故」在「六年」之前；金銀錢三條（捉金銀、金銀交易、販賣），五分、解脫戒經次第倒過來，僧祇與大眾說出世部梵本是捉、販賣、金銀交易。鉢品最亂：五分把乞縷、織師、奪衣、迴僧物、藥、阿蘭若、雨浴衣、急施八條放在衣品之後，鉢與敷具二品居末；十誦、根有、解脫戒經與說一切有部、根本說一切有部梵本以「藥過七日」居末。「金銀交易」一條，四分作「種種賣買寶物」、十誦「以金銀買種種物」、僧祇「種種販賣生色似色」、根有「種種出納求利」，依梵本（rūpyavyavahāra／rūpikavyavahāra／jātarūparajatavikṛtivyavahāra）對定；「販賣」即 krayavikraya。根有戒經篇中的攝頌歸下一條，大眾說出世部梵本每十條後的攝頌（uddāna）歸上一條。",
+ "units": [
+  {
+   "id": "np0",
+   "label": "總標：三十捨墮法半月半月說"
+  },
+  {
+   "id": "np1",
+   "label": "捨墮一・長衣過十日"
+  },
+  {
+   "id": "np2",
+   "label": "捨墮二・離三衣宿"
+  },
+  {
+   "id": "np3",
+   "label": "捨墮三・非時衣過一月"
+  },
+  {
+   "id": "np4",
+   "label": "捨墮四・使非親里比丘尼浣故衣"
+  },
+  {
+   "id": "np5",
+   "label": "捨墮五・從非親里比丘尼取衣"
+  },
+  {
+   "id": "np6",
+   "label": "捨墮六・從非親里居士乞衣"
+  },
+  {
+   "id": "np7",
+   "label": "捨墮七・失衣過分取"
+  },
+  {
+   "id": "np8",
+   "label": "捨墮八・居士辦衣價，往勸增好"
+  },
+  {
+   "id": "np9",
+   "label": "捨墮九・二居士各辦衣價，往勸合作"
+  },
+  {
+   "id": "np10",
+   "label": "捨墮十・王臣遣使送衣價，索衣過六反"
+  },
+  {
+   "id": "np11",
+   "label": "捨墮十一・蠶綿（憍奢耶）作敷具"
+  },
+  {
+   "id": "np12",
+   "label": "捨墮十二・純黑羊毛作敷具"
+  },
+  {
+   "id": "np13",
+   "label": "捨墮十三・敷具不用二分黑、三分白、四分下"
+  },
+  {
+   "id": "np14",
+   "label": "捨墮十四・敷具未滿六年更作"
+  },
+  {
+   "id": "np15",
+   "label": "捨墮十五・作新坐具不帖故者一磔手"
+  },
+  {
+   "id": "np16",
+   "label": "捨墮十六・擔羊毛過三由旬"
+  },
+  {
+   "id": "np17",
+   "label": "捨墮十七・使非親里比丘尼浣染擘羊毛"
+  },
+  {
+   "id": "np18",
+   "label": "捨墮十八・自捉金銀錢"
+  },
+  {
+   "id": "np19",
+   "label": "捨墮十九・種種金銀（寶物）交易"
+  },
+  {
+   "id": "np20",
+   "label": "捨墮二十・種種販賣"
+  },
+  {
+   "id": "np21",
+   "label": "捨墮二十一・長鉢過十日"
+  },
+  {
+   "id": "np22",
+   "label": "捨墮二十二・鉢減五綴更乞新鉢"
+  },
+  {
+   "id": "np23",
+   "label": "捨墮二十三・殘藥過七日"
+  },
+  {
+   "id": "np24",
+   "label": "捨墮二十四・雨浴衣過前求、過前用"
+  },
+  {
+   "id": "np25",
+   "label": "捨墮二十五・與比丘衣後瞋恚奪"
+  },
+  {
+   "id": "np26",
+   "label": "捨墮二十六・自乞縷使非親里織師織"
+  },
+  {
+   "id": "np27",
+   "label": "捨墮二十七・往勸織師好織"
+  },
+  {
+   "id": "np28",
+   "label": "捨墮二十八・急施衣過衣時"
+  },
+  {
+   "id": "np29",
+   "label": "捨墮二十九・阿蘭若比丘寄衣離宿過六夜"
+  },
+  {
+   "id": "np30",
+   "label": "捨墮三十・知物向僧迴入己"
+  },
+  {
+   "id": "npz",
+   "label": "結說・三問清淨"
+  }
+ ],
+ "versions": [
+  {
+   "id": "pi",
+   "lang": "pi",
+   "label": "巴利・上座部",
+   "who": "Theravāda Bhikkhupātimokkha・Mahāsaṅgīti 本（SuttaCentral）"
+  },
+  {
+   "id": "T1429",
+   "lang": "lzh",
+   "label": "四分戒本",
+   "who": "法藏部・後秦 佛陀耶舍譯《四分律比丘戒本》（唐 懷素集）",
+   "work": "T1429",
+   "reorder": true
+  },
+  {
+   "id": "T1422a",
+   "lang": "lzh",
+   "label": "五分戒本",
+   "who": "化地部・劉宋 佛陀什等譯《彌沙塞五分戒本》",
+   "work": "T1422a",
+   "reorder": true
+  },
+  {
+   "id": "sa-sarv",
+   "lang": "sa",
+   "label": "梵・說一切有部",
+   "who": "Sarvāstivāda Prātimokṣasūtra・von Simson 1986／2000（GRETIL）",
+   "reorder": true
+  },
+  {
+   "id": "T1436",
+   "lang": "lzh",
+   "label": "十誦戒本",
+   "who": "說一切有部・姚秦 鳩摩羅什譯《十誦比丘波羅提木叉戒本》",
+   "work": "T1436",
+   "reorder": true
+  },
+  {
+   "id": "sa-mahl",
+   "lang": "sa",
+   "label": "梵・大眾說出世部",
+   "who": "Mahāsāṃghika-Lokottaravāda Prātimokṣasūtra・Tatia 1976（GRETIL）",
+   "reorder": true
+  },
+  {
+   "id": "T1426",
+   "lang": "lzh",
+   "label": "僧祇戒本",
+   "who": "大眾部・東晉 佛陀跋陀羅譯《摩訶僧祇律大比丘戒本》",
+   "work": "T1426",
+   "reorder": true
+  },
+  {
+   "id": "T1460",
+   "lang": "lzh",
+   "label": "解脫戒經",
+   "who": "飲光部・元魏 般若流支譯",
+   "work": "T1460",
+   "reorder": true
+  },
+  {
+   "id": "sa-mula",
+   "lang": "sa",
+   "label": "梵・根本說一切有部",
+   "who": "Mūlasarvāstivāda Prātimokṣasūtra・Banerjee 1954（GRETIL）",
+   "reorder": true
+  },
+  {
+   "id": "T1454",
+   "lang": "lzh",
+   "label": "根有戒經",
+   "who": "根本說一切有部・唐 義淨譯《根本說一切有部戒經》",
+   "work": "T1454",
+   "reorder": true
+  }
+ ],
+ "works": [
+  "T1422a",
+  "T1426",
+  "T1429",
+  "T1436",
+  "T1454",
+  "T1460"
+ ],
+ "anchors": [
+  {
+   "work": "T1429",
+   "range": [
+    "T22n1429_p1017a21",
+    "T22n1429_p1018b05"
+   ]
+  },
+  {
+   "work": "T1422a",
+   "range": [
+    "T22n1422a_p0196a15",
+    "T22n1422a_p0197a07"
+   ]
+  },
+  {
+   "work": "T1436",
+   "range": [
+    "T23n1436_p0472c04",
+    "T23n1436_p0474a12"
+   ]
+  },
+  {
+   "work": "T1426",
+   "range": [
+    "T22n1426_p0551a11",
+    "T22n1426_p0552a15"
+   ]
+  },
+  {
+   "work": "T1460",
+   "range": [
+    "T24n1460_p0661b01",
+    "T24n1460_p0662a25"
+   ]
+  },
+  {
+   "work": "T1454",
+   "range": [
+    "T24n1454_p0502b25",
+    "T24n1454_p0503c17"
+   ]
+  }
+ ],
+ "cells": {
+  "np0": {
+   "pi": "Nissaggiyapācittiyā Ime kho panāyasmanto tiṁsa nissaggiyā pācittiyā dhammā uddesaṁ āgacchanti.",
+   "T1429": "「諸大德！是三十尼薩耆波逸提法，半月半月說，戒經中來。",
+   "T1422a": "「諸大德！是三十尼薩耆波逸提法，半月半月戒經中說。",
+   "sa-sarv": "IV. niḥsargikāḥ pātayantikā dharmāḥ PrMoSū_NP.0: ime puna(r ā)yuṣmantas triṃśan niḥsargikāḥ pātayantikā dharmā anvardhamāsaṃ prātimokṣasūtroddeśam āgacchanti //",
+   "T1436": "「諸大德！是三十尼薩耆波夜提法，半月半月波羅提木叉中說。",
+   "sa-mahl": "[IV. triṃśan nissargikapācattikā dharmāḥ] ime kho punar āyuṣmanto triṃśan nissargikapācattikā dharmā anvardhamāsaṃ sūtre prātimokṣe uddeśam āgacchanti Ō",
+   "T1426": "「諸大德！是三十尼薩耆波夜提法，半月半月次說波羅提木叉。",
+   "T1460": "「諸大德！此三十尼薩耆波逸提法，半月半月說解脫戒經中來。",
+   "sa-mula": "triṃśan naisargikapāyantikā dharmāḥ ime khalu āyuṣmantas triṃśan naisargikāḥ pāyantikā dharmā anvardhamāsaṃ prātimokṣasūtroddeśam āgacchanti /",
+   "T1454": "「諸大德！此三十泥薩祇波逸底迦法，半月半月戒經中說。」初攝頌曰：持離畜浣衣，取衣乞過受， 同價及別主，遣使送衣直。"
+  },
+  "np1": {
+   "pi": "Chapter 1. Kaṭhina Nissaggiya Pācittiya 1. Kathina Niṭṭhitacīvarasmiṁ bhikkhunā ubbhatasmiṁ kathine dasāhaparamaṁ atirekacīvaraṁ dhāretabbaṁ, taṁ atikkāmayato nissaggiyaṁ pācittiyaṁ.",
+   "T1429": "「若比丘！衣已竟，迦絺那衣已出，畜長衣經十日，不淨施得畜，若過十日，尼薩耆波逸提。",
+   "T1422a": "「若比丘，三衣竟，捨迦絺那衣已，長衣乃至十日。若過，尼薩耆波逸提。",
+   "sa-sarv": "PrMoSū_NP.1: niṣṭhitacīvareṇa bhikṣuṇā uddhṛte kaṭhine daśāhaparamam atiriktaṃ cīvaraṃ dhārayitavyaṃ tata uttaraṃ dhārayen niḥsargikā pātayantikā 1",
+   "T1436": "「若比丘，三衣具足訖，迦絺那衣時，長衣乃至十日應畜。若過畜，尼薩耆波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)NP.1. kṛtacīvarehi bhikṣūhi uddhṛtasmin kaṭhine daśāhaparamaṃ bhikṣuṇā atirekacīvaraṃ dhārayitavyaṃ / taduttariṃ dhāreya, nissargikapācattikaṃ /",
+   "T1426": "「若比丘，衣竟，迦絺那衣已捨，若得長衣十日畜，若過者，尼薩耆波夜提。",
+   "T1460": "「若比丘，衣已竟，出迦絺那衣，畜長衣經十日得持。若過畜，尼薩耆波逸提。",
+   "sa-mula": "NP.1 (PrMoSū_Mū-Banerjee) niṣṭhitacīvareṇa bhikṣuṇā uddhṛte kaṭhine daśāhaparamaṃ atirekacīvaram avikalpitaṃ dhārayitavyaṃ tataḥ uttari dhārayen naisargikā pāyantikā /",
+   "T1454": "「若復苾芻，作衣已竟，羯恥那衣復出，得長衣齊十日不分別應畜。若過畜者，泥薩祇波逸底迦。"
+  },
+  "np2": {
+   "pi": "Nissaggiya Pācittiya 2. Udosita Niṭṭhitacīvarasmiṁ bhikkhunā ubbhatasmiṁ kathine ekarattampi ce bhikkhu ticīvarena vippavaseyya, aññatra bhikkhusammutiyā nissaggiyaṁ pācittiyaṁ.",
+   "T1429": "「若比丘！衣已竟，迦絺那衣已出，三衣中，離一一衣異處宿，除僧羯磨，尼薩耆波逸提。",
+   "T1422a": "「若比丘，三衣竟，捨迦絺那衣已，三衣中離一一衣宿，過一夜，除僧羯磨，尼薩耆波逸提。",
+   "sa-sarv": "PrMoSū_NP.2: niṣṭhitacīvaro bhikṣur uddhṛte kaṭhine ekarātram api trayāṇāṃ cīvarāṇām anyatamānyatamasmāc cīvarād vipravased anyatra saṃghasaṃmatyā niḥsargikā pātayantikā 2",
+   "T1436": "「若比丘，三衣具足訖，迦絺那衣時，三衣中若離一一衣餘處宿，尼薩耆波夜提；除僧羯磨。",
+   "sa-mahl": "PrMoSū(Mā-L)NP.2. kṛtacīvarehi bhikṣūhi uddhṛtasmin kaṭhine ekarātraṃ pi ced bhikṣuḥ trayāṇāṃ cīvarāṇām anyatarānyatareṇa vipravaseya anyatra saṃghasaṃmutīye, nissargikapācattikaṃ /",
+   "T1426": "「若比丘，衣竟，迦絺那衣已捨，三衣中若離一一衣餘處宿，除僧羯磨，尼薩耆波夜提。",
+   "T1460": "「若比丘，衣已竟，出迦絺那衣，於三衣中離一一衣，異處經一宿，除僧羯磨，尼薩耆波逸提。",
+   "sa-mula": "NP.2 (PrMoSū_Mū-Banerjee) niṣṭhitacīvaro bhikṣuḥ uddhṛtakaṭhine ekarātram api cet trayāṇāṃ cīvarāṇām anyatamānyatamasya cīvarād bahiḥsīmāṃ vipravased anyatra saṃghasaṃmatyā [Hs.: saṃghasaṃvṛttyā] naisargikapāyantikā /",
+   "T1454": "「若復苾芻，作衣已竟，羯恥那衣復出，於三衣中離一一衣界外宿，下至一夜，除眾作法，泥薩祇波逸底迦。"
+  },
+  "np3": {
+   "pi": "Nissaggiya Pācittiya 3. Akālacīvara Niṭṭhitacīvarasmiṁ bhikkhunā ubbhatasmiṁ kathine bhikkhuno paneva akālacīvaraṁ uppajjeyya, ākaṅkhamānena bhikkhunā paṭiggahetabbaṁ, paṭiggahetvā khippameva kāretabbaṁ, no cassa pāripūri, māsaparamaṁ tena bhikkhunā taṁ cīvaraṁ nikkhipitabbaṁ ūnassa pāripūriyā satiyā paccāsāya. Tato ce uttari nikkhipeyya satiyāpi paccāsāya, nissaggiyaṁ pācittiyaṁ.",
+   "T1429": "「若比丘！衣已竟，迦絺那衣已出，若比丘得非時衣，欲須便受，受已疾疾成衣，若足者善；若不足者，得畜一月，為滿足故。若過畜，尼薩耆波逸提。",
+   "T1422a": "「若比丘，三衣竟，捨迦絺那衣已，得非時衣，若須應受，速作受持。若足者善，若不足望更有得處，令具足成，乃至一月。若過，尼薩耆波逸提。",
+   "sa-sarv": "PrMoSū_NP.3: niṣṭhitacīvarasya bhikṣor uddhṛte kaṭhine utpadyetākālacīvaram āk(ā)ṃkṣamāṇena tena bhikṣuṇā pratigṛhītavyaṃ pratigṛhya sacet paripūryeta kṣipram eva kṛ(tvā) dhārayitavyaṃ no cet paripūryeta māsaparamaṃ tena bhikṣuṇā tac cīvaram upanikṣi(ptavyaṃ) satyā(ṃ) cīvarapratyāśāyām ūnasya vā paripūryārthaṃ tata uttaram upanikṣipen niḥsargikā pātaya(n)tikā 3",
+   "T1436": "「若比丘，三衣具足訖，迦絺那衣時，若得非時衣，是比丘若須衣得自手取物，應疾作比丘衣畜。若得足者好，若不足若知更有得處，若為滿故，是比丘是衣乃至一月應畜。若過一月畜，尼薩耆波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)NP.3. kṛtacīvarehi bhikṣūhi uddhṛtasmin kaṭhine utpadyeya bhikṣusya akālacīvaram ākāṃkṣamāṇena bhikṣuṇā pratigṛhṇitavyaṃ / pratigṛhṇitvā kṣipram eva taṃ cīvaraṃ kārāpayitavyaṃ / kārāpayato ca tasya bhikṣusya taṃ cīvaraṃ na paripūreya, māsaparamaṃ tena bhikṣuṇā taṃ cīvaraṃ nikṣipitavyaṃ ūnasya pāripūrīye santīye pratyāśāye / taduttariṃ nikṣipeya santīye vā asantīye vā pratyāśāye nissargikapācattikaṃ /",
+   "T1426": "「若比丘，衣竟，迦絺那衣已捨，若得非時衣，比丘若須，應取疾作衣受。若不足，有望處，為滿故聽一月畜。若過者，足不足，尼薩耆波夜提。",
+   "T1460": "「若比丘，衣已竟，出迦絺那衣，得非時衣，欲須便受，受已疾成衣。若足者善，若不足得畜至一月。若過畜，尼薩耆波逸提。",
+   "sa-mula": "NP.3 (PrMoSū_Mū-Banerjee) niṣṭhitacīvarasya bhikṣor uddhṛte kaṭhine utpatya akālacīvaram ākāṃkṣinā tena bhikṣuṇā tac cīvaraṃ pratigṛhītavyaṃ pratigṛhya sacet paripūryate kṣipram eva kṛtvā dhārayitavyam* / no cet paripūryate māsaparamaṃ tena bhikṣuṇā tac cīvaram upanikṣiptavyaṃ satyāṃ cīvarapratyāśāyām ūnasya vā paripūrayet tataḥ uttari upanikṣipen naisargikapāyantikā /",
+   "T1454": "「若復苾芻，作衣已竟，羯恥那衣復出，得非時衣，欲須應受。受已當疾成衣，若有望處求令滿足，若不足者得畜經一月。若過者，泥薩祇波逸底迦。"
+  },
+  "np4": {
+   "pi": "Nissaggiya Pācittiya 4. Purāṇacīvara Yo pana bhikkhu aññātikāya bhikkhuniyā purāṇacīvaraṁ dhovāpeyya vā rajāpeyya vā ākoṭāpeyya vā, nissaggiyaṁ pācittiyaṁ.",
+   "T1429": "「若比丘！令非親里比丘尼浣故衣，若染、若打，尼薩耆波逸提。",
+   "T1422a": "「若比丘，使非親里比丘尼浣故衣，若染、若打，尼薩耆波逸提。",
+   "sa-sarv": "PrMoSū_NP.4: yaḥ punar bhikṣur ajñātyā bhikṣuṇyā purāṇacīvaraṃ dhāvayed vā rañjayed vā ākoṭayed vā niḥsargikā pātayantik(ā) 4",
+   "T1436": "「若比丘，使非親里比丘尼浣故衣，若染若打，尼薩耆波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)NP.5. yo puna bhikṣur anyātikāye bhikṣuṇīye purāṇacīvaraṃ dhovāpeya vā rañjāpeya vā ākoṭāpeya vā nissargikapācattikaṃ /",
+   "T1426": "「若比丘，使非親里比丘尼浣故衣，若染若打，尼薩耆波夜提。",
+   "T1460": "「若比丘，使非親里比丘尼浣染打故衣，尼薩耆波逸提。",
+   "sa-mula": "NP.4 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur ajñātikayā bhikṣuṇyā purāṇacīvaraṃ dhāvayed raṃjayed ākoṭayed vā naisargikapāyantikā /",
+   "T1454": "「若復苾芻，使非親苾芻尼浣染打故衣者，泥薩祇波逸底迦。"
+  },
+  "np5": {
+   "pi": "Nissaggiya Pācittiya 5. Cīvarapaṭiggahaṇa Yo pana bhikkhu aññātikāya bhikkhuniyā hatthato cīvaraṁ paṭiggaṇheyya aññatra pārivattakā, nissaggiyaṁ pācittiyaṁ.",
+   "T1429": "「若比丘！從非親里比丘尼取衣，除貿易，尼薩耆波逸提。",
+   "T1422a": "「若比丘，從非親里比丘尼取衣，除貿易，尼薩耆波逸提。",
+   "sa-sarv": "PrMoSū_NP.5: yaḥ punar bhikṣur ajñātyā bhikṣuṇyāḥ santikāc cīvaraṃ pratigṛhṇīyād anyatra parivartakena niḥsargikā pātayantikā 5",
+   "T1436": "「若比丘，從非親里比丘尼邊取衣，尼薩耆波夜提；除貿易。",
+   "sa-mahl": "PrMoSū(Mā-L)NP.4. yo puna bhikṣur anyātikāye bhikṣuṇīye cīvaraṃ pratigṛhṇeya anyatra pallaṭṭhakena nissargikapācattikaṃ /",
+   "T1426": "「若比丘，取非親里比丘尼衣，除貿易，尼薩耆波夜提。",
+   "T1460": "「若比丘，共與非親里比丘尼博衣貿易，尼薩耆波逸提。",
+   "sa-mula": "NP.5 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur ajñātikayā bhikṣuṇyā santikāc cīvaraṃ pratigṛhṇīyād anyatra parivartakān naisargikapātayantikā /",
+   "T1454": "「若復苾芻，從非親苾芻尼取衣者，除貿易，泥薩祇波逸底迦。"
+  },
+  "np6": {
+   "pi": "Nissaggiya Pācittiya 6. Aññātakaviññatti Yo pana bhikkhu aññātakaṁ gahapatiṁ vā gahapatāniṁ vā cīvaraṁ viññāpeyya aññatra samayā, nissaggiyaṁ pācittiyaṁ. Tatthāyaṁ samayo, acchinnacīvaro vā hoti bhikkhu, naṭṭhacīvaro vā, ayaṁ tattha samayo.",
+   "T1429": "「若比丘！從非親里居士、若居士婦乞衣，除餘時，尼薩耆波逸提。餘時者，若比丘奪衣、失衣、燒衣、漂衣，是謂餘時。",
+   "T1422a": "「若比丘，從非親里居士居士婦乞衣，除因緣，尼薩耆波逸提。因緣者，奪衣、失衣、燒衣、漂衣、衣壞，是名因緣。",
+   "sa-sarv": "PrMoSū_NP.6: yaḥ punar bhikṣur ajñātiṃ gṛhapatiṃ gṛhapatipatnīṃ vā cīvaraṃ vijñāpayed anyatra samayād abhiniṣpanne cīvare niḥsargikā pātayantikā 6 tatrā(ya)ṃ samaya ācchinnacīvaro bhikṣuḥ syān naṣṭacīvaro (v)ā dagdhacīvaro (v)ā ūḍhacīvar(o vā ayaṃ) tatra samayaḥ",
+   "T1436": "「若比丘，從非親里居士、若居士婦乞衣得者，尼薩耆波夜提；除因緣。因緣者，奪衣、失衣、燒衣、漂衣，是名因緣。",
+   "sa-mahl": "PrMoSū(Mā-L)NP.6. yo puna bhikṣur anyātakaṃ gṛhapatiṃ vā gṛhapatiputraṃ [?Śtipatinīṃ] vā cīvaraṃ yāceya anyatra samaye nissargikapācattikaṃ / tatrāyaṃ samayo Ō ācchinnacīvaro bhikṣur bhavati / ayam atra samayo /",
+   "T1426": "「若比丘，從非親里居士、居士婦乞衣，除餘時，尼薩耆波夜提。餘時者，失衣時。",
+   "T1460": "「若比丘，從非親里居士居士婦乞衣，除餘時，尼薩耆波逸提。餘時者，奪衣、失衣、燒衣、漂衣，名餘時。",
+   "sa-mula": "NP.6 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur ajñātigṛhapatiṃ gṛhapatipatnīṃ vopasaṃkramya cīvaraṃ vijñāpayed anyatra samayān naisargikapāyantikā / tatrāyaṃ samaya ācchinnacīvaro bhikṣur bhavati naṣṭacīvaro dagdhacīvaro ūḍhacīvaro hṛtacīvaro 'yaṃ tatra samayaḥ /",
+   "T1454": "「若復苾芻，從非親居士、居士婦乞衣，除餘時，泥薩祇波逸底迦。餘時者，若苾芻奪衣、失衣、燒衣、吹衣、漂衣，此是時。"
+  },
+  "np7": {
+   "pi": "Nissaggiya Pācittiya 7. Tatuttari Tañce aññātako gahapati vā gahapatānī vā bahūhi cīvarehi abhihaṭṭhuṁ pavāreyya, santaruttaraparamaṁ tena bhikkhunā tato cīvaraṁ sāditabbaṁ. Tato ce uttari sādiyeyya, nissaggiyaṁ pācittiyaṁ.",
+   "T1429": "「若比丘！失衣、奪衣、燒衣、漂衣，若非親里居士、居士婦，自恣請多與衣，是比丘當知足受衣。若過受者，尼薩耆波逸提。",
+   "T1422a": "「若比丘，奪衣、失衣、燒衣、漂衣、衣壞，從非親里居士居士婦乞衣。若居士居士婦欲多與衣，是比丘應受二衣，若過是受，尼薩耆波逸提。",
+   "sa-sarv": "PrMoSū_NP.7: ācchinnacīvareṇa bhikṣuṇā naṣṭacīvareṇa vā dagdhacīvareṇa vā ūḍhacīvareṇa vā ajñāti(ṃ g)ṛ(hapa)tiṃ gṛhapatipatnīṃ vā cīvaraṃ vijñā... (taṃ ced bhi)kṣu(ṃ) śrā(d)dh(o) gṛhapatir gṛhapatipatnī vā saṃbahulaiś cīvarai(ḥ) pravārayed ākāṃkṣamāṇena tena bhikṣuṇā sāntarottarapa(ra)ma(ṃ) tataś cīvaraṃ pratigṛhītavyaṃ tata uttaraṃ prati(gṛhṇīyān n)iḥsargikā pātayantikā 7",
+   "T1436": "「若比丘，奪衣、失衣、燒衣、漂衣，從非親里居士、若居士婦乞衣。若非親里居士、若居士婦自恣多與衣，是比丘若欲取，乃至上下衣應受。若過受，尼薩耆波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)NP.7. ācchinnacīvareṇa bhikṣuṇā kṣamate anyātakaṃ gṛhapatiṃ vā gṛhapatiputrīṃ [Śtipatinīṃ] vā cīvaraṃ yācituṃ / tam enam abhihṛṣṭo samāno saṃbahulehi cīvarehi pravāreya, tathāpravāritena bhikṣuṇā sāntarottaraparamaṃ cīvaraṃ sādayitavyaṃ / taduttariṃ sādiyeya nissargikapācattikaṃ /",
+   "T1426": "「若比丘，失衣時，得從非親里居士、居士婦乞衣，若自恣與得取上下衣。若過受，尼薩耆波夜提。",
+   "T1460": "「若比丘，奪衣、失衣、燒衣、漂衣。時非親里有信居士居士婦多與衣，是比丘當知足受衣。若過受，尼薩耆波逸提。",
+   "sa-mula": "NP.7 (PrMoSū_Mū-Banerjee) ācchinnacīvareṇa bhikṣuṇā naṣṭacīvareṇa dagdhacīvareṇa ūḍhacīvareṇa hṛtacīvareṇājñātigṛhapatinā gṛhapatipatnīṃ cīvaraṃ vijñāpayitavyaḥ taṃ cec chrāddho brāhmaṇo gṛhapatir vātyarthaṃ saṃbahulaiś cīvaraiḥ pravārayed ākāṃkṣatā tena bhikṣuṇā sāntarottaraparamaṃ tasmāc cīvaraṃ pratigṛhītavyaṃ tata uttari pratigṛhṇīyān naisargikā pāyantikā /",
+   "T1454": "「若復苾芻，奪衣、失衣、燒衣、吹衣、漂衣，從非親居士、居士婦乞衣，彼多施衣，苾芻若須應受上下二衣。若過受者，泥薩祇波逸底迦。"
+  },
+  "np8": {
+   "pi": "Nissaggiya Pācittiya 8. Paṭhamaupakkhaṭa Bhikkhuṁ paneva uddissa aññātakassa gahapatissa vā gahapatāniyā vā cīvaracetāpannaṁ upakkhaṭaṁ hoti “iminā cīvaracetāpannena cīvaraṁ cetāpetvā itthannāmaṁ bhikkhuṁ cīvarena acchādessāmī”ti, tatra ce so bhikkhu pubbe appavārito upasaṅkamitvā cīvare vikappaṁ āpajjeyya “sādhu vata maṁ āyasmā iminā cīvaracetāpannena evarūpaṁ vā evarūpaṁ vā cīvaraṁ cetāpetvā acchādehī”ti kalyāṇakamyataṁ upādāya, nissaggiyaṁ pācittiyaṁ.",
+   "T1429": "「若比丘！居士、居士婦，為比丘辦衣價，買如是衣與某甲比丘，是比丘先不受自恣請，到居士家，作如是說：『善哉居士！為我買如是如是衣與我，為好故。』若得衣者，尼薩耆波逸提。",
+   "T1422a": "「若比丘，非親里居士居士婦共議，當以如是衣直作衣，與某甲比丘。是比丘先不自恣請，便往問居士居士婦言：『汝為我以如是衣直作衣不？』答言：『如是。』便言：『善哉居士居士婦！可作如是衣與我，為好故。』尼薩耆波逸提。",
+   "sa-sarv": "PrMoSū_NP.8: bhikṣuṃ punar uddiśya ajñātinā gṛhapatinā gṛhapatipatnyā vā cīvaracetanakāny upaskṛtāni syur ebhir ahaṃ cīvaracetanakair evaṃrūpa(m) e(vaṃ)rūpaṃ cīvaraṃ cetayitvā evaṃnāmānaṃ bhikṣum ācchādayiṣyāmīti tatra cet sa bhikṣuḥ pūrva(m a)pravāritaḥ samānaḥ upasaṃkramya ajñātiṃ gṛhapatiṃ gṛhapatipatnīṃ vā kaṃcid eva v(i)k(a)lp(am ā)padyann evaṃ vaded yāni tāny āyuṣmatā mām uddiśya cīvaracetanakāny upaskṛtāny ebhi(ś c)īvaracetanakair evaṃrūpam eva(ṃr)ū(paṃ cīvaraṃ) cetayitvā (e)va(ṃ)nāmānaṃ bhikṣum ācchādayiṣyāmīti sādhv āyuṣmaṃs taiś cīvara(ceta)nakair evaṃrūpam evaṃrūpaṃ cīvaraṃ cetayitvā cīvareṇa mā(m ā)cchādayeti kalyāṇakāmatām upādāya abhiniṣpanne cīvare niḥsargikā pātayantikā 8",
+   "T1436": "「若比丘，非親里居士、若居士婦，為辦衣價念言：『我如是如是衣價，買如是如是衣，與某甲比丘。』是比丘先不自恣，為好衣故少作因緣，便到非親里居士、若居士婦所，作如是言：『汝等善哉！辦如是如是衣價，買如是如是衣與我，為好故。』若得是衣，尼薩耆波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)NP.8. bhikṣuṃ kho punar uddiśya anyatareṣāṃ dvinnāṃ gṛhapatikānāṃ cīvaracetāpanāny abhisaṃskṛtāni bhavanti abhisaṃcetayitāni Ō imehi vayaṃ cīvaracetāpanehi civaraṃ cetāpayitvā itthanāmaṃ bhikṣuṃ cīvareṇācchadayiṣyāmaḥ / tatra ca bhikṣuḥ pūrvaṃ apravārito upasaṃkramitvā vikalpam āpadyeya Ō sādhu kho puna yūyam āyuṣmanto imehi cīvaracetāpanehi cīvaraṃ cetāpayitvā itthaṃnāmaṃ bhikṣuṃ cīvareṇācchādetha / evaṃrūpeṇa vā [evaṃrūpeṇa vā] ubhau pi sahitau ekena kalyāṇakāmatām upādāya / abhiniṣpanne cīvare ni[ssa]rgikapācattikaṃ /",
+   "T1426": "「若居士、居士婦，為比丘辦衣價言：『我辦如是衣價，買如是衣與某甲比丘。』是比丘先不請，為好故便往勸言：『善哉居士！如是衣價，買如是色衣與我。』若得衣，尼薩耆波夜提。",
+   "T1460": "「若比丘，非親里居士居士婦為比丘具衣價，持此衣價與某甲比丘。是比丘先不受自恣請至居士家，作如是說：『居士實為我故辦衣價不？』居士言：『實爾。』比丘言：『善哉居士！當為我辦如是好色衣，為好故。』若得衣，尼薩耆波逸提。",
+   "sa-mula": "NP.8 (PrMoSū_Mū-Banerjee) bhikṣuṃ khalūddiśyājñātinā gṛhapatinā gṛhapatipatnyā vā cīvaracetanakāni pratyupasthāpitāni syuḥ ebhir ahaṃ cīvaracetanakair evaṃrūpaṃ caivaṃrūpaṃ ca cīvaraṃ cetayitvā evaṃnāmā bhikṣur upasaṃkramiṣyati tam ācchādayiṣyāmi cīvareṇa kāle kalpikeneti / tatra caiko bhikṣuḥ pūrvam apravāritaḥ san kaṃcid eva vikalpaṃ pratipadya tam ajñātiṃ gṛhapatiṃ gṛhapatipatnīṃ vopasaṃkramyaivaṃ vaded yāni tāni āyuṣmatā mām uddiśya cīvaracetanakāni pratyupasthāpitāni sādhyāyuṣmaṃs te cīvaracetanakair evaṃrūpaṃ caivaṃrūpaṃ ca cīvaraṃ cetayitvā ācchādaye 'haṃ cīvareṇa kālena kalpikeneti / abhiniṣpanne cīvare naisargikā pāyantikā /",
+   "T1454": "「若復苾芻，有非親居士、居士婦共辦衣價，當買如是清淨衣，與某甲苾芻及時應用。此苾芻先不受請，因他告知，便詣彼家作如是語：『善哉！仁者為我所辦衣價，可買如是清淨衣及時與我，為好故。』若得衣者，泥薩祇波逸底迦。"
+  },
+  "np9": {
+   "pi": "Nissaggiya Pācittiya 9. Dutiyaupakkhaṭa Bhikkhuṁ paneva uddissa ubhinnaṁ aññātakānaṁ gahapatīnaṁ vā gahapatānīnaṁ vā paccekacīvaracetāpannāni upakkhaṭāni honti “imehi mayaṁ paccekacīvaracetāpannehi paccekacīvarāni cetāpetvā itthannāmaṁ bhikkhuṁ cīvarehi acchādessāmā”ti, tatra ce so bhikkhu pubbe appavārito upasaṅkamitvā cīvare vikappaṁ āpajjeyya “sādhu vata maṁ āyasmanto imehi paccekacīvaracetāpannehi evarūpaṁ vā evarūpaṁ vā cīvaraṁ cetāpetvā acchādetha ubhova santā ekenā”ti kalyāṇakamyataṁ upādāya, nissaggiyaṁ pācittiyaṁ.",
+   "T1429": "「若比丘！二居士、居士婦，與比丘辦衣價，持如是衣價買如是衣，與某甲比丘。是比丘，先不受居士自恣請，到二居士家，作如是言：『善哉居士！辦如是如是衣價與我，共作一衣，為好故。』若得衣者，尼薩耆波逸提。",
+   "T1422a": "「若非親里居士居士婦共議：『我當各以如是衣直作衣，與某甲比丘。』是比丘先不自恣請，便往問居士居士婦言：『汝各為我以如是衣直作衣不？』答言：『如是。』便言：『善哉居士居士婦！可合作一衣與我，為好故。』尼薩耆波逸提。",
+   "sa-sarv": "PrMoSū_NP.9: bhikṣuṃ punar uddiśya dvābhyām ajñātibhyāṃ gṛhapatibhyāṃ gṛhapati patnībhyāṃ vā pratyekacīvaracetanakāny upaskṛtāni syur ebhir āvāṃ cīvaracetanakair evaṃrūpaṃ evaṃrūpaṃ pratyekacīvaraṃ cetayitvā evaṃnāmānaṃ bhikṣum ācchādayiṣyāvaḥ pratyekacīvarābhyām iti / tatra cet sa bhikṣuḥ pūrvam apravāritaḥ samāna upasaṃkramya tau dvāv ajñātī gṛhapatī gṛhapatipatnyau vā kaṃcid eva vikalpam āpadyann evaṃ vaded yāni tāny āyuṣmadbhyāṃ mām uddiśya cīvaracetanakāny upaskṛtāny ebhir āvāṃ cīvaracetanakair evaṃ(rūpam e)vaṃrūpaṃ pratyekacīvaraṃ cetayitvā evaṃnāmānaṃ bhikṣum ācchādayiṣyāvaḥ sādhv āyuṣmantau taiś cīvaracetanakair evaṃrūpam evaṃrūpa(ṃ) pratyekacīvaraṃ cetayitv(ā)cchādayata(ṃ) māṃ cīvareṇa ubhau bhūtvaikeneti kalyāṇakāmatām upādāyābhiniṣpanne cīvare niḥsargik(ā pātayantikā) 9",
+   "T1436": "「若比丘，非親里居士、若居士婦，各各辦衣價，念言：『我如是如是衣價，買如是如是衣，與某甲比丘。』是比丘先不自恣請，為好衣故少作因緣，便到非親里居士、若居士婦所，作如是言：『汝等善哉！辦如是如是衣價，買合作一衣與我，為好故。』若得是衣，尼薩耆波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)NP.9. bhikṣuṃ kho punar uddiśya anyatareṣāṃ dvinnāṃ gṛhapatikasya gṛhapatinīye ca pratyekacīvaracetāpanāni abhisaṃskṛtāni bhavanti, abhisaṃcetayitāni Ō imehi vayaṃ pratyekacīvaracetāpanehi pratyekaṃ pratyekaṃ cīvaraṃ cetāpayitvā itthaṃnāmaṃ bhikṣuṃ pratyekaṃ pratyekaṃ cīvareṇācchadayiṣyāmaḥ / tatra ca bhikṣuḥ pūrvaṃ apravārito upasaṃkramitvā vikalpam āpadyeya Ō sādhu kho punas tvam āyuṣman, tvaṃ ca bhagini, imehi pratyekacīvaracetāpanehi pratyekaṃ cīvaraṃ cetāpayitvā itthaṃnāmaṃ bhikṣuṃ pratyekaṃ cīvareṇācchādetha evaṃrūpeṇa vā evaṃrūpeṇa vā ubhau pi sahitau ekena kalyāṇakāmatām upādāya / abhiniṣpanne cīvare nissargikapācattikaṃ /",
+   "T1426": "「若比丘，居士、居士婦各辦如是衣價言：『我等辦如是衣價，買如是衣與某甲比丘。』是比丘先不請，為好故便往勸言：『善哉居士！各辦如是衣價，共作一如是色衣與我。』若得衣，尼薩耆波夜提。",
+   "T1460": "「若比丘，二居士各各為比丘辦衣價：『此物作衣已，與某甲比丘。』是比丘先不受自恣請，憶念往至彼居士家，作如是說：『居士！汝二人實欲為我作衣不耶？』答言：『實爾。』比丘言：『善哉居士！辦如是好衣價。為我共作一衣，為好故。』若得衣，尼薩耆波逸提。",
+   "sa-mula": "NP.9 (PrMoSū_Mū-Banerjee) bhikṣuṃ khalūddiśyājñātinā gṛhapatinā gṛhapatipatnyā ca pratyekapratyekāni cīvaracetanakāni pratyupasthāpitāni syuḥ / ebhir āvāṃ pratyekapratyekaiḥ cīvaracetanakair evaṃrūpaṃ caivaṃrūpaṃ ca pratyekapratyekaṃ cīvaraṃ cetayitvā evaṃnāmā bhikṣur upasaṃkramiṣyati tam ācchādayiṣyāvaḥ / pratyekapratyekābhyāṃ cīvaracetanakābhyāṃ kāle kalpikābhyām iti / tatra cet sa bhikṣuḥ pūrvam apravāritaḥ san kaṃcid eva vikalpam āpatya tam ajñātigṛhapatiṃ gṛhapatipatnīṃ vopasaṃkramyaivaṃ vaded yāni tāny āyuṣmatyātmān uddiśya pratyekapratyekāni cīvaracetanakāni pratyupasthāpitāni / sādhyāyuṣmatau tau pratyekapratyekaiś cīvaracetanakair evaṃrūpaṃ caivaṃrūpaṃ ca cīvaraṃ cetayitvā ācchādayatām ubhāv api bhūtvā ekaikena cīvareṇa kāle kalpikena kalyāṇakāmatām upādāyābhiniṣpanne cīvare naisargikā pāyantikā /",
+   "T1454": "「若復苾芻，有非親居士、居士婦各辦衣價，當買如是清淨衣，與某甲苾芻。此苾芻先不受請，因他告知，便詣彼家作如是語：『善哉！仁者為我所辦衣價，可共買如是清淨衣，及時與我，為好故。』若得衣者，泥薩祇波逸底迦。"
+  },
+  "np10": {
+   "pi": "Nissaggiya Pācittiya 10. Rāja Bhikkhuṁ paneva uddissa rājā vā rājabhoggo vā brāhmaṇo vā gahapatiko vā dūtena cīvaracetāpannaṁ pahiṇeyya “iminā cīvaracetāpannena cīvaraṁ cetāpetvā itthannāmaṁ bhikkhuṁ cīvarena acchādehī”ti. So ce dūto taṁ bhikkhuṁ upasaṅkamitvā evaṁ vadeyya “idaṁ kho, bhante, āyasmantaṁ uddissa cīvaracetāpannaṁ ābhataṁ, paṭiggaṇhātu āyasmā cīvaracetāpanna”nti. Tena bhikkhunā so dūto evamassa vacanīyo “na kho mayaṁ, āvuso, cīvaracetāpannaṁ paṭiggaṇhāma, cīvarañca kho mayaṁ paṭiggaṇhāma kālena kappiya”nti. So ce dūto taṁ bhikkhuṁ evaṁ vadeyya “atthi panāyasmato koci veyyāvaccakaro”ti. Cīvaratthikena, bhikkhave, bhikkhunā veyyāvaccakaro niddisitabbo ārāmiko vā upāsako vā “eso kho, āvuso, bhikkhūnaṁ veyyāvaccakaro”ti. So ce dūto taṁ veyyāvaccakaraṁ saññāpetvā taṁ bhikkhuṁ upasaṅkamitvā evaṁ vadeyya “yaṁ kho, bhante, āyasmā veyyāvaccakaraṁ niddisi, saññatto so mayā, upasaṅkamatāyasmā kālena, cīvarena taṁ acchādessatī”ti. Cīvaratthikena, bhikkhave, bhikkhunā veyyāvaccakaro upasaṅkamitvā dvattikkhattuṁ codetabbo sāretabbo “attho me, āvuso, cīvarenā”ti, dvattikkhattuṁ codayamāno sārayamāno taṁ cīvaraṁ abhinipphādeyya, iccetaṁ kusalaṁ, no ce abhinipphādeyya, catukkhattuṁ pañcakkhattuṁ chakkhattuparamaṁ tuṇhībhūtena uddissa ṭhātabbaṁ, catukkhattuṁ pañcakkhattuṁ chakkhattuparamaṁ tuṇhībhūto uddissa tiṭṭhamāno taṁ cīvaraṁ abhinipphādeyya, iccetaṁ kusalaṁ, tato ce uttari vāyamamāno taṁ cīvaraṁ abhinipphādeyya, nissaggiyaṁ pācittiyaṁ. No ce abhinipphādeyya, yatassa cīvaracetāpannaṁ ābhataṁ, tattha sāmaṁ vā gantabbaṁ, dūto vā pāhetabbo “yaṁ kho tumhe āyasmanto bhikkhuṁ uddissa cīvaracetāpannaṁ pahiṇittha, na taṁ tassa bhikkhuno kiñci atthaṁ anubhoti, yuñjantāyasmanto sakaṁ, mā vo sakaṁ vinassā”ti, ayaṁ tattha sāmīci. Kathinavaggo paṭhamo.",
+   "T1429": "「若比丘！若王、若大臣、若婆羅門、若居士、居士婦，遣使為比丘送衣價，持如是衣價與某甲比丘。彼使人至比丘所語比丘言：『大德！今為汝故，送是衣價，受取。』是比丘應語彼使如是言：『我不應受此衣價，我若須衣，合時，清淨，當受。』彼使語比丘言：『大德！有執事人不？』須衣比丘應語言：『有！若僧伽藍民、若優婆塞，此是比丘執事人，常為諸比丘執事。』時彼使往至執事人所，與衣價已，還至比丘所作如是言：『大德！所示某甲執事人，我已與衣價，大德！知時，往彼當得衣。』須衣比丘，當往執事人所，若二反、三反，為作憶念，應語言：『我須衣。』若二反、三反，為作憶念，若得衣者善；若不得衣，應四反、五反、六反，在前默然住，令彼憶念。若四反、五反、六反，在前默然住，得衣者善；若不得衣，過是求得衣者，尼薩耆波逸提。若不得衣，從所得衣價處，若自往、若遣使往，語言：『汝先遣使持衣價與某甲比丘，是比丘竟不得衣，汝還取，莫使失，此是時（一十）。』",
+   "T1422a": "「若王、若大臣、婆羅門、居士，為比丘故，遣使送衣直。使到比丘所言：『大德！彼王、大臣送此衣直，大德受之。』是比丘言：『我不應受衣直。若得淨衣，當手受持。』使言：『大德！有執事人不？』比丘即指示處。使便到執事所語言：『某王、大臣送此衣直，與某甲比丘。汝為受作取。』便與之。使既與已，還比丘所，白言：『大德！所示執事人，我已與竟。大德須衣，便可往取。』是比丘二返三返到執事所語言：『我須衣。我須衣。』若得者善。若不得，四返五返六返到執事前，默然立。若得者善。若過求得者，尼薩耆波逸提。若不得衣，隨使來處，若自往、若遣信語言：『汝為某甲比丘送衣直，是比丘竟不得。汝還自索，莫使失。是事應爾。』",
+   "sa-sarv": "PrMoSū_NP.10: bhikṣuṃ punar uddiśya rājñā vā rājamahāmātreṇa vā brāhmaṇena vā gṛhapatinā vā dūtasya haste cīvaracetanakāni preṣitāni syuḥ sa dūtas taṃ bhikṣum upasaṃkramyaivaṃ vaded imāni te āyuṣm(a)ṃ rājñā vā rāja(mah)ā(m)ā(tr)eṇa vā brāhm(a)ṇ(e)na (vā) gṛhapati(nā vā cī)varacetanakāni preṣitāni pratigṛhṇātv āyuṣmāṃ cīvaracetanakāny anukampām upādāya / sa bhikṣus taṃ dūtam evaṃ vaden nāyuṣman dūta kalpante bhikṣūṇāṃ cīvaracetanakāni pratigṛhītuṃ cīvaraṃ tu vayaṃ labdhvā kālena kalpikaṃ svahastaṃ pratigṛhya kṣipram eva kṛtvā dhārayāmaḥ sa dūtas taṃ bhikṣum evaṃ vaded asty āyuṣmatāṃ kaścid vaiyyāpatyakaro yo bhikṣūṇāṃ vaiyyāpatyaṃ karoti / cīvarārthikena bhikṣuṇā vaiyyāpatyakaro vyapadeṣṭavya ārāmiko vā upāsako vā eṣa bhikṣūṇāṃ vaiyyāpatyaṃ karoti / sa dūtas taṃ vaiyyāpatyakaram upasaṃkramyaivaṃ vaded imāny āyuṣmaṃ vaiyyāpatyakara cīvaracetanakāni rājñā vā rājamahāmātreṇa vā brāhmaṇena vā gṛhapatinā vā evaṃnāmānaṃ bhikṣum uddiśya preṣitāni sādhv āyuṣmaṃ vaiyyāpatyakara tvam ebhiś cīvaracetanakair evaṃrūpam evaṃrūpaṃ cīvaraṃ cetayitvā / sa bhikṣus tvām upasaṃkramiṣyati kālena taṃ tvam ācchādaya cīvareṇa kalpikeneti / evaṃ sa dūtas taṃ vaiyyāpatyakaraṃ sādhu ca suṣṭhu ca samanuśiṣya taṃ bhikṣum upasaṃkramyaivaṃ vaded yo sāv āyuṣmatā vaiyyāpatyakaro vyapadiṣṭaḥ samanuśiṣṭaḥ sa mayā / taṃ tvam upasaṃkrama kālena ācchādayiṣyati tvāṃ cīvareṇa kalpikeneti / cīvarārthikena bhikṣuṇā vaiyyāpatyakaram upasaṃkramya dvis triś codayitavyaḥ smārayitavyaḥ artho me vaiyyāpatyakara cīvareṇa dvis triś codayataḥ smārayataḥ saced abhiniṣpadyeta cīvaram ity evaṃ kuśalaṃ no ced abhiniṣpadyeta catuṣpañcaṣaṭkṛtvāparamaṃ tūṣṇīm uddeśe sthātavyaṃ tūṣṇīm uddeśe sthitasya saced abhiniṣpadyeta cīvaram ity evaṃ kuśalaṃ no ced abhiniṣpadyeta tata uttaraṃ vyāyameta cīvarasyābhiniṣpattaye abhiniṣpanne cīvare niḥsargikā pātayantikā / no ced abhiniṣpadyeta tena bhikṣuṇā yatas tāni cīvaracetanakāny ānītāni tatra svayaṃ vā gantavyaṃ dūto vā preṣitavyo yāni tāny āyuṣmatā mām uddiśya cīvaracetanakāni preṣitāni na tāny asmākaṃ kaṃcid arthaṃ prakurvanti prajānātv āyuṣmā(ṃ) svam arthaṃ mā te praṇaśyed iyaṃ tatra sāmīciḥ 10 //",
+   "T1436": "「若比丘，若王、若王臣、若婆羅門、若居士，遣使送衣價。是使到是比丘所，語是比丘言：『大德知不？是衣價若王、若王臣、若婆羅門、若居士所送。大德受是衣價。』是比丘應語使如是言：『諸比丘法不應受衣價，我曹須衣時得清淨衣，應自手取物疾作衣畜。』使語比丘言：『大德！有執事人常能為諸比丘執事不？』須衣比丘應示使執事人、若守僧房人、若優婆塞，應語言：『是人等常能為諸比丘執事。』使向執事人所，語執事人言：『善哉執事！如是如是衣價，買作如是如是衣，與某甲比丘。是比丘須衣時至當來，當與衣。』使若自勸喻、若使人勸喻已，還到比丘所，到已白言：『大德所示執事人，我勸喻作已。大德！須衣時往取，當與大德衣。』須衣比丘應到執事所索衣，作是言：『我須衣！我須衣！』第二、第三亦如是索。若得衣者好；若不得，第四、第五、極至第六，在執事前默然立。若第四、第五、極至第六，在執事前立，得衣者好；若不得，為得衣故過是求，若得是衣，尼薩耆波夜提。若不得衣，隨衣價來處，若自去、若遣使，應如是言：『汝為某甲比丘送衣價，是比丘於汝衣價竟不得用，汝自知財莫使失，是事法爾。』",
+   "sa-mahl": "PrMoSū(Mā-L)NP.10. bhikṣuṃ kho punar uddiśya anyataro rājā vā rājabhogyo vā dūtena cīvaracetāpanāni preṣeya / so bhikṣus tenopasaṃkramitvā taṃ bhikṣum evaṃ vadeya Ō imāni khalv āryam uddiśya itthaṃnāmena rājñā ca rājabhogyena vā dūtena cīvaracetāpanāni preṣitāni, tāni āryo pratigṛhṇātu / tena bhikṣuṇā so dūto evam asya vacanīyo Ō na kho punar āyuṣman kṣamate bhikṣusya cīvaracetāpanāni pratigṛhṇituṃ / cīvaraṃ tu vayaṃ pratigṛhṇāmaḥ kālena samayena kalpikaṃ dīyamānaṃ / evam ukte so dūto taṃ bhikṣum evaṃ vadeya [sa]nti punar ārya kecid bhikṣūṇāṃ vaiyāpṛtyakarāti / ākāṃkṣamāṇena bhikṣuṇā santā vaiyāpṛtyakarā vyapadiśitavyāḥ ārāmikā vā / ete āyuṣman bhikṣūṇāṃ vaiyāpṛtyakarā ye bhikṣūṇāṃ vaiyāpṛtyaṃ karonti / evam ukte so dūto yena vaiyāpṛtyakarās tenopasaṃkramitvā tān vaiyāpṛtyakarān evaṃ vadeya Ō sādhu kho puna yūyam āyuṣmanto vaiyāpṛtyakarā imehi cīvaracetāpanehi cīvaraṃ cetāpayitvā itthaṃnāma bhikṣuṃ cīvareṇācchādetha kālena samayena kalpikenānavadyena / so ca dūto tān vaiyāpṛtyakarān saṃjñapayitvā yena so bhikṣus tenopasaṃkramitvā na bhikṣum eva vadeya ye khu te āryeṇa vaiyāpṛtyakarā vyapadiṣṭās te mayā saṃjñaptās tān upasaṃkrameyāmi / ācchādayiṣyanti te cīvareṇa kālena samayena kalpikenānavadyena / ākāṃkṣamāṇena bhikṣuṇā cīvarārthikena [yena] te vaiyāpṛtyakarās tenopasaṃkramitvā te vaiyāpṛtyakarāḥ sakṛt* dvikkhutto trikkhutto codayitavyā vijñāpayitavyāḥ Ō artho āyuṣmanto bhikṣusya cīvareṇeti / sakṛt* dvikkhutto trikkhutto codayanto vijñāpayanto taṃ cīvaram abhiniṣpādeya ity etat kuśalaṃ, no ced abhiniṣpādeya catukkhutto pañcakhutto ṣaṭkhuttoparamaṃ tena bhikṣuṇā tūṣṇībhūtena uddeśe sthātavyaṃ / catukkhutto pañcakkhutto ṣaṭkkhuttoparamaṃ tūṣṇībhūto uddeśe tiṣṭhanto taṃ cīvaram abhiniṣpādeya, ity etat kuśalaṃ, no ced abhiniṣpādeya tad uttapanto vā vyāyamanto vā taṃ cīvaram abhiniṣpādeya, abhiniṣpanne cīvare nissargikapācattikaṃ / no ced abhiniṣpādeya yena se tāni rājñā vā rājabhogyena vā dūtena cīvaracetāpanāni preṣitāni tatra tena bhikṣuṇā svayaṃ vā gantavyaṃ, dūto vā pratirūpo preṣayitavyo, yāni khu āyuṣmantehi itthaṃnāmaṃ bhikṣum uddiśya dūtena cīvaracetāpanāni preṣitāni na khu tāni tasya bhikṣusya kiñcid arthaṃ spharanti, pratyanveṣatha, na svakaṃ dharmo / vo vipraṇaśiṣyatīti iyam atra sāmīcī / // uddānaṃ // (1) daśāhaṃ (2) vipravāso (3) akāle ca (4) pratigraho (5) dhovanā (6) yācanā caṃva / (7) sāntarottaraṃ (8-9) dve ca vikalpena (10) rājā ca // prathamo vargaḥ //",
+   "T1426": "「為比丘故，若王、大臣遣使送衣直與是比丘，使到言：『如是衣直，若王、大臣送，尊者應受。』比丘言：『我不得受是衣直，送淨衣來者應受。』使言：『尊者有執事人不？』比丘若須衣，應示使若薗民、若優婆塞言：『是人能為比丘執事。』使到勸言：『善哉執事！如是衣價，買如是淨衣與某甲比丘，是比丘來取衣時與。』使勸喻已，還到比丘所言：『尊者所示執事人，我已勸作已，須衣時往取。』比丘若須衣，應到執事所言：『我須衣！我須衣！』第二、第三亦如是說；若得衣者好，若不得應第四、第五、第六在執事人前默然立，得衣者善；若不得，過是求，若得衣，尼薩耆波夜提。若不得，隨衣直來處，若自去、若遣使言：『汝為某甲比丘送衣直，是比丘於汝衣直竟不得用，汝自知莫令失，是事法爾。』（十事）",
+   "T1460": "「若比丘，若王、若大臣、若婆羅門、若長者、若居士、若商主、若長者婦，為比丘送衣價：『持此衣價與某甲比丘。』彼使至比丘所，作是說：『大德！受此衣價，慈愍故。』比丘言：『我不應受此衣價。若我須衣時，得淨衣便受。』使語比丘言：『大德！有執事人不？』須衣比丘言：『有。若守園人、若優婆塞，此是比丘執事人。』彼使詣執事人所，白言：『執事！此是某甲衣價，為某甲比丘作衣已，某時當與某甲比丘。』彼使與衣價已，至比丘所，語比丘言：『大德！所示某甲執事人，我已與衣價。大德！須衣時往取，當得衣。』須衣比丘往執事人所，二返三返語言：『我須衣。』若二返三返為作憶念，得衣者善；若不得衣，四返五返六返在前默然住，令彼憶念。若四返五返六返在前默然住，得衣者善；若不得衣，過是求得衣，尼薩耆波逸提。若不得衣，隨衣價所來處，若自往、若遣好使，往語施主言：『汝先遣使送衣價與某甲比丘，是比丘未曾得衣。施主還取，莫使失。是名如法。』",
+   "sa-mula": "NP.10 (PrMoSū_Mū-Banerjee) bhikṣuṃ khalūddiśya rājñā vā rājamātreṇa vā brāhmaṇena vā gṛhapatinā vā naigamena vā jānapadena vā dhaninā vā śreṣṭhinā vā sārthavāhena vā dūtasya haste cīvaracetanakāni anupreṣitāni syuḥ / atha sa dūtas tāni cetanakāni ādāya yena sa bhikṣus tenopasaṃkrāmed upasaṃkramya taṃ bhikṣum evaṃ vaded yat khalv ārya jānīyāt tvām uddiśya rājñā vā rājamātreṇa vā brāhmaṇena vā gṛhapatinā vā naigamena vā jānapadena vā dhaninā vā śreṣṭhinā vā sārthavāhena vā cīvaracetanakena vānupreṣitāny āryaṃ pratigṛhṇātv anukampām upādāya / tena bhikṣuṇā sa dūta idaṃ syād vacanīyaḥ -- gacchāyuṣman dūta bhikṣūṇāṃ cīvaracetanakāni patyante parigṛhītuṃ / cīvaraṃ tu vayaṃ labdhvā pratigṛhṇīmaḥ kāle kalpikaṃ / sa dūtas taṃ bhikṣum evaṃ vaded asti kaścid āryāṇāṃ vaiyyāvṛtyakaro ya āryāṇāṃ vaiyyāvṛtyaṃ pratyanubhavatīti / cīvarārthikena bhikṣuṇā vaiyyāvṛtyakaro vyapadeṣṭavya ārāmiko vā upāsako vā ete dūta bhikṣūṇāṃ vaiyyāvṛtyakarā ete bhikṣūṇāṃ vaiyyāvṛtyaṃ pratyanubhavantīti / atha sa dūtas tāni cīvaracetanakāny ādāya yena sa vaiyyāvṛtyakaras tenopasaṃkrāmet* / upasaṃkramya taṃ vaiyyāvṛtyakaram evaṃ vadet* / khalv āyuṣman vaiyyāvṛtyakara jānīyā ebhis taṃ cīvaracetanakair evaṃrūpam caivaṃrūpaṃ ca cīvaraṃ cetayitvā evaṃnāmā bhikṣur upasaṃkramiṣyati tam ācchādayethā cīvareṇa kāle kalpiteneti / atha sa dūtas taṃ vaiyyāvṛtyakaraṃ sādhu ca suṣṭhu ca samanuyujya samanuśiṣya yena sa bhikṣus tena saṃkrāmet* / upasaṃkramya taṃ bhikṣum evaṃ vaded yo 'sāv āryeṇa vaiyyāvṛtyakaro vyapadiṣṭaḥ samanuśiṣṭaḥ samayena tam upasaṃkrāmethā ācchādayiṣyati sa satvāṃ cīvareṇa kāle kalpiteneti / cīvarārthikena bhikṣuṇā vaiyyāvṛtyakara upasaṃkramya dvis triś codayitavyaḥ smārayitavyo 'rthiko 'smy āyuṣman vaiyyāvṛtyakara cīvareṇārthiko 'smy āyuṣman vaiyyāvṛtyakara cīvareṇeti / dvis triś codayataḥ smārayataḥ sacet tac cīvaram abhiniṣpadyate ity evaṃ kuśalaṃ no ced abhiniṣpadyeta catuṣpaṃcaṣaṭkṛtvaḥ paraṃ tūṣṇīm uddeśe sthātavyaṃ catuṣpaṃcaṣaṭkṛtvā paraṃ tūṣṇahīm uddeśe sthitasya sacet tac cīvaram abhiniṣpadyeta ity evaṃ kuśalaṃ no ced abhiniṣpadyeta na uttari dhyāyacchec cīvarasyābhinivartaye abhiṣpanne cīvare naisargikapāyantikā / no ced abhiniṣpadyeta yasyā diśas tāni cīvaracetanakāny ānītāni tatra svayaṃ vā gantavyam āpto vā dūto 'nupreṣitavyaḥ yāni tāny āyuṣmadbhir evaṃnāmānaṃ bhikṣum uddiśya cīvaracetanakāny anupreṣitāni na tāni tasya bhikṣoḥ kaṃcid arthaṃ spharanti prajānātv āyuṣmantaḥ svam arthaṃ mā vo 'rthaḥ praṇaśyatv ity ayaṃ tatra sāmayaḥ /",
+   "T1454": "「若復苾芻，若王、若大臣、婆羅門、居士等，遣使為苾芻送衣價。彼使持衣價至苾芻所，白言：『大德！此物是某甲王、大臣、婆羅門、居士等，遣我送來。大德！哀愍為受。』是苾芻語彼使言：『仁此衣價我不應受；若得順時淨衣應受。』彼使白言：『大德！有執事人不？』須衣苾芻言：『有！若僧淨人、若鄔波索迦，此是苾芻執事人。』彼使往執事人所，與衣價已語言：『汝可以此衣價，買順時清淨衣與某甲苾芻，令其披服。』彼使善教執事人已，還至苾芻所，白言：『大德！所示執事人，我已與衣價，得清淨衣應受。』苾芻須衣，應往執事人所，若二、若三，令彼憶念，告言：『我須衣。』若得者善；若不得者，乃至四、五、六返往彼默然隨處而住。若四、五、六返得衣者善；若不得衣，過是求，得衣者，泥薩祇波逸底迦。若竟不得衣，是苾芻應隨彼送衣價處，若自往、若遣可信人往，報言：『仁為某甲苾芻送衣價，彼苾芻竟不得衣。仁應知，勿令失。此是時。』」"
+  },
+  "np11": {
+   "pi": "Chapter 2. Kosiya Nissaggiya Pācittiya 11. Kosiya Yo pana bhikkhu kosiyamissakaṁ santhataṁ kārāpeyya, nissaggiyaṁ pācittiyaṁ.",
+   "T1429": "「若比丘！雜野蠶綿，作新臥具，尼薩耆波逸提。",
+   "T1422a": "「若比丘。新憍賒耶作臥具。尼薩耆波逸提。",
+   "sa-sarv": "PrMoSū_NP.11: yaḥ punar bhikṣur navaṃ kauśeyaṃ saṃstaraṃ kārayen niḥsargikā pātayantikā 11",
+   "T1436": "「若比丘，新憍奢耶作敷具，尼薩耆波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)NP.13. yo puna bhikṣuḥ kauśeyamiśrāṇām eḍakalomānāṃ navaṃ santhataṃ kārāpeya nissargikapācattikaṃ /",
+   "T1426": "「若比丘，憍奢耶雜純黑羺羊毛作新敷具，尼薩耆波夜提。",
+   "T1460": "「若比丘，雜憍奢耶作臥具、若使他作，成者，尼薩耆波逸提。",
+   "sa-mula": "NP.11 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur navaṃ kauśeyasaṃstaraṃ kārayen naisargikapāyantikā /",
+   "T1454": "第二攝頌曰：高世耶純黑，分六尼師但， 擔毛浣金銀，納質并賣買。「若復苾芻，用新高世耶絲綿作敷具者，泥薩祇波逸底迦。"
+  },
+  "np12": {
+   "pi": "Nissaggiya Pācittiya 12. Suddhakāḷaka Yo pana bhikkhu suddhakāḷakānaṁ eḷakalomānaṁ santhataṁ kārāpeyya, nissaggiyaṁ pācittiyaṁ.",
+   "T1429": "「若比丘！以新純黑羺羊毛，作新臥具，尼薩耆波逸提。",
+   "T1422a": "「若比丘，純黑羺羊毛作新臥具，尼薩耆波逸提。",
+   "sa-sarv": "PrMoSū_NP.12: yaḥ punar bhikṣuḥ śuddhakāḍānām eḍakalomnāṃ navaṃ saṃstaraṃ kārayen niḥsargikā pātayantikā 12",
+   "T1436": "「若比丘，純黑羺羊毛作新敷具，尼薩耆波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)NP.11. yo puna bhikṣuḥ śuddhakālakānām eḍakalomānāṃ navaṃ santhataṃ kārāpeya nissargikapācattikaṃ /",
+   "T1426": "「若比丘，純黑羺羊毛作新敷具，尼薩耆波夜提。",
+   "T1460": "「若比丘，純黑羺羊毛作臥具、若使人作，尼薩耆波逸提。",
+   "sa-mula": "NP.12 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣuḥ śuddhakālakānām eḍakaromnāṃ navaṃ saṃstaraṃ kārayen naisargikapāyantikā /",
+   "T1454": "「若復苾芻，用純黑羊毛作新敷具者，泥薩祇波逸底迦。"
+  },
+  "np13": {
+   "pi": "Nissaggiya Pācittiya 13. Dvebhāga Navaṁ pana bhikkhunā santhataṁ kārayamānena dve bhāgā suddhakāḷakānaṁ eḷakalomānaṁ ādātabbā, tatiyaṁ odātānaṁ, catutthaṁ gocariyānaṁ. Anādā ce bhikkhu dve bhāge suddhakāḷakānaṁ eḷakalomānaṁ, tatiyaṁ odātānaṁ, catutthaṁ gocariyānaṁ, navaṁ santhataṁ kārāpeyya, nissaggiyaṁ pācittiyaṁ.",
+   "T1429": "「若比丘！作新臥具，應用二分純黑羊毛，三分白，四分尨。若比丘不用二分黑，三分白，四分尨，作新臥具者，尼薩耆波逸提。",
+   "T1422a": "「若比丘，作新臥具，應用二分純黑羺羊毛、第三分白、第四分下。若過是作，尼薩耆波逸提。",
+   "sa-sarv": "PrMoSū_NP.13: navaṃ punar bhikṣuṇā saṃstaraṃ kārayatā dvau bhāgau śuddhakāḍānām eḍakalomnām ādātavyau tṛtīyo 'vadātānāṃ caturtho gocarikānām anādāya ced bhikṣur dvau bhāgau śuddhakāḍānām eḍakalomnām tṛtīyam avadātānāṃ caturthaṃ gocarikānāṃ navaṃ saṃstaraṃ kārayet kalyāṇakāmatām upādāya niḥsargikā pātayantikā 13",
+   "T1436": "「若比丘，欲作新敷具，應用二分純黑羺羊毛、第三分白、第四分下。若比丘不用二分純黑羺羊毛、第三分白、第四分下作新敷具，尼薩耆波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)NP.12. navaṃ santhataṃ bhikṣuṇā kārāpayamāṇena śuddhakālakānām eḍakalomānāṃ dve bhāgā ādayitavyās tṛtīyo odātikānāṃ caturtho gocarikāṇāṃ / taduttarim ādiyeya nissargikapācattikaṃ /",
+   "T1426": "「若比丘，作新敷具，應用二分純黑羺羊毛、三分白、四分下。若過分，尼薩耆波夜提。",
+   "T1460": "「若比丘，作臥具，應用二分黑羊毛、第三分白、第四分尨，若使人作，尼薩耆波逸提。",
+   "sa-mula": "NP.13 (PrMoSū_Mū-Banerjee) navaṃ bhikṣuṇā saṃstaraṃ kārayatā dvau bhāgau śuddhakālakānām eḍakaromnām ādātavyau tṛtīyo 'vadātānāṃ caturtho gocarikāṇām anādāya ced bhikṣur dvau bhāgau śuddhakālakānām eḍakaromnāṃ tṛtīyo 'vadātānāṃ caturtho gocarikāṇāṃ navaṃ saṃstaraṃ kārayen naisargikapāyantikā /",
+   "T1454": "「若復苾芻，作新羊毛敷具，應用二分純黑、第三分白、第四分麁。若苾芻不用二分純黑、第三分白、第四分麁作新敷具者，泥薩祇波逸底迦。"
+  },
+  "np14": {
+   "pi": "Nissaggiya Pācittiya 14. Chabbassa Navaṁ pana bhikkhunā santhataṁ kārāpetvā chabbassāni dhāretabbaṁ, orena ce channaṁ vassānaṁ taṁ santhataṁ vissajjetvā vā avissajjetvā vā aññaṁ navaṁ santhataṁ kārāpeyya aññatra bhikkhusammutiyā, nissaggiyaṁ pācittiyaṁ.",
+   "T1429": "「若比丘！作新臥具，持至六年。若減六年，不捨故，更作新者，除僧羯磨，尼薩耆波逸提。",
+   "T1422a": "「若比丘，作新臥具，應六年畜。未滿六年，若捨若不捨，更作新臥具，除僧羯磨，尼薩耆波逸提。",
+   "sa-sarv": "PrMoSū_NP.14: navaṃ punar bhikṣuṇā saṃstaraṃ kārayitvā akāmaṃ ṣaḍ varṣāṇi dhārayitavyaṃ arvāk ced bhikṣuḥ ṣaḍbhyo varṣebhyaḥ purāṇasaṃstaraṃ niḥsṛjya vā aniḥsṛjya vā anyaṃ navaṃ saṃstaraṃ kārayed anyatra saṃghasaṃmatyā kalyāṇakāmatām upādāya niḥsargikā pātayantikā 14",
+   "T1436": "「若比丘，欲作新敷具，故敷具必應滿六年畜，若比丘六年內故敷具若捨、若不捨，更作新敷具，尼薩耆波夜提；除僧羯磨。",
+   "sa-mahl": "PrMoSū(Mā-L)NP.14. navaṃ santhataṃ bhikṣuṇā kārāpayamāṇena akāmaṃ ṣaḍvarṣāṇi dhārayitavyaṃ / tato ca bhikṣuḥ pratyoreṇa taṃ purāṇaṃ santhataṃ visarjayitvā vā avisarjayitvā vā anyaṃ navaṃ santhataṃ kārāpeya kalyāṇakāmatām upādāya, anyatra namatasaṃmutīye nissargikapācattikaṃ /",
+   "T1426": "「若比丘，作新敷具，應至六年持。若減六年，故敷具若捨若不捨，作新敷具，除僧羯磨，尼薩耆波夜提。",
+   "T1460": "「若比丘，作臥具，應六年持。若減六年更作臥具，尼薩耆波逸提。",
+   "sa-mula": "NP.14 (PrMoSū_Mū-Banerjee) navaṃ bhikṣuṇā saṃstaraṃ kārayatā akāmaṃ ṣaḍ varṣāṇi kṛtvā dhārayitavyam* / arvāk ced bhikṣuḥ ṣaṇṇāṃ varṣāṇāṃ taṃ purāṇasaṃstaraṃ niḥsṛjya vā aniḥsṛjya vā anyaṃ navaṃ saṃstaraṃ kārayed anyatra saṃghasaṃmatyā [saṃghasaṃvṛtyā] naisargikapāyantikā /",
+   "T1454": "「若復苾芻，作新敷具，縱心不樂應六年持。若減六年，不捨故更作新者，除得眾法，泥薩祇波逸底迦。"
+  },
+  "np15": {
+   "pi": "Nissaggiya Pācittiya 15. Nisīdanasanthata Nisīdanasanthataṁ pana bhikkhunā kārayamānena purāṇasanthatassa sāmantā sugatavidatthi ādātabbā dubbaṇṇakaraṇāya. Anādā ce bhikkhu purāṇasantha tassa sāmantā sugatavidatthiṁ, navaṁ nisīdanasanthataṁ kārāpeyya, nissaggiyaṁ pācittiyaṁ.",
+   "T1429": "「若比丘！作新坐具，當取故者，縱廣一磔手，帖著新者上，用壞色故。若作新坐具，不取故者，縱廣一磔手，帖著新者上，用壞色故，尼薩耆波逸提。",
+   "T1422a": "「若比丘，純黑羺羊毛作新尼師壇，應用故尼師壇一修伽陀搩手壞好色。若不壞，尼薩耆波逸提。",
+   "sa-sarv": "PrMoSū_NP.15: navaṃ bhikṣuṇā niṣīdanasaṃstaraṃ kārayatā purāṇaniṣīdanasaṃstarasāmantakāt sugatavitastir ādātavyā navasya durvarṇīkaraṇāya anādāya ced bhikṣuḥ purāṇaniṣīdanasaṃstarasāmantakāt sugatavitastiṃ navasya durvarṇīkaraṇāya navaṃ niṣīdanasaṃstaraṃ kārayet kalyāṇakāmatām upādāya niḥsargikā pātayantikā 15",
+   "T1436": "「若比丘，欲作新尼師壇，故尼師壇四邊各取一修伽陀磔手，為壞好色故。若比丘不取故尼師壇四邊各一修伽陀磔手壞色，為好故，尼薩耆波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)NP.15. navaṃ santhataniṣīdanaṃ bhikṣuṇā kārāpayamāṇena tato purāṇasanthatāto samantāt sugatavitastinā bhāgo ādayitavyo navasya durvaṇṇīkaraṇārthaṃ / tato ca bhikṣur anādāya navasanthataṃ niṣīdanaṃ kārāpeya nissargikapācattikaṃ /",
+   "T1426": "「若比丘，作新敷具氈尼師壇，應著故敷具氈方一修伽陀磔手，為壞色故。若不著，作新敷具氈尼師壇，尼薩耆波夜提。",
+   "T1460": "「若比丘，作新臥具，當取故者方一手褋新者上。若不著，尼薩耆波逸提。",
+   "sa-mula": "NP.15 (PrMoSū_Mū-Banerjee) navaṃ bhikṣuṇā niṣadanaṃ kārayitā purāṇaniṣadanasāmantakāt sugatavitastir ādātavyā navasya durvarṇīkaraṇāya / anādāya ced bhikṣuḥ purāṇaniṣadanasāmantakāt sugatavitastiṃ navasya durvarṇīkaraṇāya navaṃ niṣadanaṃ paribhuṃjīta naisargikapāyantikā /",
+   "T1454": "「若復苾芻，作新尼師但那，應取故者堅處縱廣佛一張手帖新者上，為壞色故。若苾芻作新尼師但那，不以故者帖新者上，為壞色故，泥薩祇波逸底迦。"
+  },
+  "np16": {
+   "pi": "Nissaggiya Pācittiya 16. Eḷakaloma Bhikkhuno paneva addhānamaggappaṭipannassa eḷakalomāni uppajjeyyuṁ, ākaṅkhamānena bhikkhunā paṭiggahetabbāni, paṭiggahetvā tiyojanaparamaṁ sahatthā haritabbāni asante hārake. Tato ce uttari hareyya, asantepi hārake, nissaggiyaṁ pācittiyaṁ.",
+   "T1429": "「若比丘！道路行得羊毛，若無人持，得自持，乃至三由旬。若無人持，自持，過三由旬，尼薩耆波逸提。",
+   "T1422a": "「若比丘，得羊毛須持，有所至，若自持乃至三由旬。若過，尼薩耆波逸提。",
+   "sa-sarv": "PrMoSū_NP.16: bhikṣoś ced adhvānamārgapratipannasyotpadyerann eḍakalomāni ākāṅkṣatā tena bhikṣuṇā pratigṛhītavyāni pratigṛhya yāvat triyojanaparamaṃ svayaṃ hartavyāny asati hartari tata uttaraṃ haren niḥsargikā pātayantikā 16",
+   "T1436": "「若比丘，行道中得羺羊毛欲受，是比丘應自手取，乃至三由旬。若無代過擔者，尼薩耆波夜提",
+   "sa-mahl": "PrMoSū(Mā-L)NP.16. bhikṣusya kho punar adhvānamārge pratipannasya utpadyeṃsu e[ḍa]kalomāni / ākāṃkṣamāṇena bhikṣuṇā pratigṛhṇitavyaṃ / pratigṛhṇitvā sāmaṃ triyojanaparamaṃ hartavyam asante anyasmi[n] hārake taduttariṃ hāreya sante vā asante vā anyasmi[n] hārake, nissargikapācattikaṃ /",
+   "T1426": "「若比丘，道行得羊毛，若須得取至三由旬。若過者，尼薩耆波夜提。",
+   "T1460": "「若比丘，行路中得羊毛，須者應取。若無人持，得自持行三由旬。若過者，尼薩耆波逸提。",
+   "sa-mula": "NP.16 (PrMoSū_Mū-Banerjee) bhikṣoḥ khalv adhvapratipannasyotpadyerann eḍakaromāṇy ākāṃkṣatā tena bhikṣuṇā pratigṛhītavyāni pratigṛhya yāvat triyojanaparamaṃ svayaṃ hartavyāny asati hārake tata uttari pāren naisargikapāyantikā /",
+   "T1454": "「若復苾芻，行路中得羊毛，欲須應取。若無人持，得自持至三踰繕那。若過者，泥薩祇波逸底迦。"
+  },
+  "np17": {
+   "pi": "Nissaggiya Pācittiya 17. Eḷakalomadhovāpana Yo pana bhikkhu aññātikāya bhikkhuniyā eḷakalomāni dhovāpeyya vā rajāpeyya vā vijaṭāpeyya vā, nissaggiyaṁ pācittiyaṁ.",
+   "T1429": "「若比丘！使非親里比丘尼浣、染、擘羊毛者、尼薩耆波逸提。",
+   "T1422a": "「若比丘，使非親里比丘尼浣、染、擘羺羊毛，尼薩耆波逸提。",
+   "sa-sarv": "PrMoSū_NP.17: yaḥ punar bhikṣur ajñātyā bhikṣuṇyā eḍakalomāni dhāvayed vā rañjayed vā vijaṭayed vā niḥsargikā pātayantikā 17",
+   "T1436": "「若比丘，使非親里比丘尼浣染擘羺羊毛，尼薩耆波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)NP.17. yo puna bhikṣur anyātikāye bhikṣuṇīye eḍakalomādi dhovāpeya vā raṃjāpe[ya] vā vivaṭāpaye vā, nissargikapācattikaṃ /",
+   "T1426": "「若比丘，使非親里比丘尼浣染擘羊毛，尼薩耆波夜提。",
+   "T1460": "「若比丘，使非親里比丘尼浣染擗羊毛，尼薩耆波逸提。",
+   "sa-mula": "NP.17 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur ajñātikayā bhikṣuṇyā eḍakaromāṇi dhāvayed raṃjayed vivaṭed vivaṭāpayed vā naisargikapāyantikā /",
+   "T1454": "「若復苾芻，使非親苾芻尼浣染擘羊毛者，泥薩祇波逸底迦。"
+  },
+  "np18": {
+   "pi": "Nissaggiya Pācittiya 18. Rūpiya Yo pana bhikkhu jātarūparajataṁ uggaṇheyya vā uggaṇhāpeyya vā upanikkhittaṁ vā sādiyeyya, nissaggiyaṁ pācittiyaṁ.",
+   "T1429": "「若比丘！自手捉錢、若金、銀。若教人捉，若置地受者，尼薩耆波逸提。",
+   "T1422a": "「若比丘，自捉金銀及錢，若使人捉、若發心受，尼薩耆波逸提。」",
+   "sa-sarv": "PrMoSū_NP.18: yaḥ punar bhikṣuḥ svahastaṃ rūpyam u(d)gṛhṇīyād vā udgrāhayed vā niḥsargikā (pātayantikā) 18",
+   "T1436": "「若比丘，自手取金銀，若使人取、若教他取，尼薩耆波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)NP.18. yo puna bhikṣuḥ svahastaṃ jātarūparajatam udgṛhṇeya vā udgṛhṇāpeya vā antamasato iha nikṣipehīti vā vadeya, upanikṣiptaṃ vā sādiyeya nissargikapācattikaṃ /",
+   "T1426": "「若比丘，自手捉生色似色，若使人捉舉染著者，尼薩耆波夜提。",
+   "T1460": "「若比丘，自手取寶，尼薩耆波逸提。",
+   "sa-mula": "NP.18 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣuḥ svahastaṃ jātarūparajatam udgṛhṇīyād udgrāhanasatvā naisargikā pāyantikā /",
+   "T1454": "「若復苾芻，自手捉金銀錢等、若教他捉，泥薩祇波逸底迦。"
+  },
+  "np19": {
+   "pi": "Nissaggiya Pācittiya 19. Rūpiyasaṁvohāra Yo pana bhikkhu nānappakārakaṁ rūpiyasaṁvohāraṁ samāpajjeyya, nissaggiyaṁ pācittiyaṁ.",
+   "T1429": "「若比丘！種種賣買寶物者，尼薩耆波逸提。",
+   "T1422a": "「若比丘，以金銀及錢種種賣買，尼薩耆波逸提。",
+   "sa-sarv": "PrMoSū_NP.19: yaḥ punar bhikṣur nānāprakāraṃ rūpyavyavahāraṃ samāpadyeta niḥsargikā pātayantikā 19",
+   "T1436": "「若比丘，以金銀買種種物，尼薩耆波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)NP.20. yo puna bhikṣur anekavidhaṃ jātarūparajatavikṛtivyavahāraṃ samāpadyeya nissargikapācattikam // // uddānaṃ // (11) śuddhakālakānāṃ (12) dve bhāgā (13) kauśeyamiśra (14) ṣaḍvarṣāṇi (15) niṣīdanaṃ (16) adhvānamārgo (17) vivaṭā vā (18) svahastaṃ (19) krayavikraya (20) vikṛtivyavahāreṇa // dvitīyo vargaḥ //",
+   "T1426": "「若比丘，種種販賣生色似色，尼薩耆波夜提。（二十竟）",
+   "T1460": "「若比丘，種種貿易寶物，尼薩耆波逸提。",
+   "sa-mula": "NP.19 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur nānāprakāraṃ rūpikavyavahāraṃ samāpadyeta naisargikā pāyantikā /",
+   "T1454": "「若復苾芻，種種出納求利者，泥薩祇波逸底迦。"
+  },
+  "np20": {
+   "pi": "Nissaggiya Pācittiya 20. Kayavikkaya Yo pana bhikkhu nānappakārakaṁ kayavikkayaṁ samāpajjeyya, nissaggiyaṁ pācittiyaṁ. Kosiyavaggo dutiyo.",
+   "T1429": "「若比丘！種種販賣者，尼薩耆波逸提（二十）。",
+   "T1422a": "「若比丘，種種販賣求利，尼薩耆波逸提。",
+   "sa-sarv": "PrMoSū_NP.20 : yaḥ punar bhikṣur nānāprakāraṃ krayavikrayaṃ samāpadyeta niḥsargi(kā pātayantikā) 20 //",
+   "T1436": "「若比丘，種種販賣，尼薩耆波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)NP.19. yo puna bhikṣur anekavidhaṃ krayavikrayavyavahāraṃ samāpadyeya saṃyyathīdaṃ imaṃ kriṇa ito kriṇa ettakamettake[na krī]ṇāhīti vā vadeya, nissargikapācattikaṃ /",
+   "T1426": "「若比丘，種種賣買，尼薩耆波夜提。",
+   "T1460": "「若比丘，種種販賣，尼薩耆波逸提。",
+   "sa-mula": "NP.20 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur nānāprakāraṃ krayavikrayaṃ samāpadyeta naisargikā pāyantikā /",
+   "T1454": "「若復苾芻，種種賣買者，泥薩祇波逸底迦。」"
+  },
+  "np21": {
+   "pi": "Chapter 3. Patta Nissaggiya Pācittiya 21. Patta Dasāhaparamaṁ atirekapatto dhāretabbo, taṁ atikkāmayato nissaggiyaṁ pācittiyaṁ.",
+   "T1429": "「若比丘！畜長鉢不淨施，得齊十日。若過者，尼薩耆波逸提。",
+   "T1422a": "「若比丘，長鉢乃至十日，若過，尼薩耆波逸提。",
+   "sa-sarv": "PrMoSū_NP.21: daśāhaparamaṃ bhikṣuṇā atiriktaṃ pātraṃ dhārayitavyaṃ tata uttaraṃ dhārayen niḥ(sa)r(gikā pātayantikā) 21",
+   "T1436": "「若比丘，畜長鉢得至十日，若過畜，尼薩耆波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)NP.21. daśāhaparamaṃ bhikṣuṇā atirekapātraṃ dhārayitavyaṃ / taduttariṃ dhāreya nissargikapācattikaṃ /",
+   "T1426": "「若比丘，長鉢得十日畜。若過者，尼薩耆波夜提。",
+   "T1460": "「若比丘，畜長鉢不淨施，過十日，尼薩耆波逸提。",
+   "sa-mula": "NP.21 (PrMoSū_Mū-Banerjee) daśāhaparamaṃ bhikṣuṇā atirekapātraṃ dhārayitavyaṃ tata uttaraṃ paridhārayen naisargikā pāyantikā /",
+   "T1454": "第三攝頌曰：二鉢二織師，奪衣并急施， 阿蘭若雨衣，迴僧七日藥。「若復苾芻，畜長鉢過十日不分別者，泥薩祇波逸底迦。"
+  },
+  "np22": {
+   "pi": "Nissaggiya Pācittiya 22. Ūnapañcabandhana Yo pana bhikkhu ūnapañcabandhanena pattena aññaṁ navaṁ pattaṁ cetāpeyya, nissaggiyaṁ pācittiyaṁ. Tena bhikkhunā so patto bhikkhuparisāya nissajjitabbo, yo ca tassā bhikkhuparisāya pattapariyanto, so tassa bhikkhuno padātabbo “ayaṁ te bhikkhu patto yāva bhedanāya dhāretabbo”ti, ayaṁ tattha sāmīci.",
+   "T1429": "「若比丘！畜鉢減五綴不漏，更求新鉢，為好故，若得者，尼薩耆波逸提。彼比丘應往僧中捨，展轉取最下鉢，與之令持。乃至破，應持，此是時。",
+   "T1422a": "「若比丘，鉢未滿五綴，更乞新鉢，為好故，尼薩耆波逸提。是鉢應僧中捨。僧應取眾中最下鉢與之，語言：『汝受是鉢乃至破。是法應爾。』",
+   "sa-sarv": "PrMoSū_NP.22: yaḥ punar bhikṣuḥ sati pāribhogīye pātre ūnapañcabandhane anyaṃ navaṃ pātraṃ vijñāpayet kalyāṇakāmatām upādāya niḥsargikā pātayantikā / tena bhikṣuṇā tat pātraṃ bhikṣupariṣadi niḥsṛṣṭavyaṃ yas tasyāṃ bhikṣupariṣadi pātraparyantaḥ sa tasyānupradātavyaḥ idaṃ te bhikṣo pātraṃ na visarjayitavyaṃ na vikalpayitavyaṃ yāvad bhedād dhārayitavyaṃ iyaṃ tatra sāmīciḥ 22",
+   "T1436": "「若比丘，所用鉢不滿五綴，更乞新鉢，為好故，尼薩耆波夜提。是比丘是鉢應比丘眾中捨，是比丘眾中最下鉢應與。應如是教：『汝比丘受是鉢乃至破，是事法爾。』",
+   "sa-mahl": "PrMoSū(Mā-L)NP.22. yo puna bhikṣu ūnapañcabandhanabaddhena pātreṇa anyaṃ navaṃ pātraṃ paryeṣeya kāmātām upādāya, tena bhikṣuṇā taṃ pātraṃ bhikṣuparṣāye nissaritavyaṃ / yo tahi bhikṣuparṣāye pātraparyanto bhavati so tasya bhikṣusya anupradātavyo Ō evaṃ te āyuṣman pātro dhārayitavyo yāvad bhedanaṃ, nissargikapācattikaṃ /",
+   "T1426": "「若比丘，所用鉢減五綴，更乞新鉢為好故，尼薩耆波夜提。是鉢應眾中捨。眾中最下鉢應與，作是言：『長老！是鉢受持，破乃止。是事法爾。』",
+   "T1460": "「若比丘，鉢減五綴不漏，更求新鉢，為好故，若得者，尼薩耆波逸提。彼比丘應僧中捨，若無鉢比丘應受。應好持，乃至破。是法應爾。",
+   "sa-mula": "NP.22 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur ūnapaṃcabandhanena pātreṇa pāribhogikenānyaṃ navaṃ pātraṃ paryeṣeta / kalyāṇakāmatām upādāyābhiniṣpanne pātre naisargikā pāyantikā / tena bhikṣuṇā tat pātraṃ bhikṣuparṣady upaniḥsṛṣṭavyaḥ yaḥ tasyāṃ bhikṣuparṣadi pātraparyanto bhavati / tat tasya bhikṣor anupradātavyam idaṃ te bhikṣoḥ pātraṃ vādhiṣṭhātavyaṃ na vikārayitavyaṃ sacen mandaṃ mandaṃ paribhoktavyaṃ yāvad bhedanaparyantam upādāya ity ayaṃ tatra samayaḥ /",
+   "T1454": "「若復苾芻，有鉢減五綴，堪得受用，為好故更求餘鉢得者，泥薩祇波逸底迦。彼苾芻當於眾中捨此鉢，取眾中最下鉢與彼苾芻，報言：『此鉢還汝，不應守持、不應分別、亦勿施人，應自審詳徐徐受用，乃至破，應護持，此是其法。』"
+  },
+  "np23": {
+   "pi": "Nissaggiya Pācittiya 23. Bhesajja Yāni kho pana tāni gilānānaṁ bhikkhūnaṁ paṭisāyanīyāni bhesajjāni, seyyathidaṁ—sappi navanītaṁ telaṁ madhu phāṇitaṁ, tāni paṭiggahetvā sattāhaparamaṁ sannidhikārakaṁ paribhuñjitabbāni, taṁ atikkāmayato nissaggiyaṁ pācittiyaṁ.",
+   "T1429": "「若比丘！有病，殘藥酥、油、生酥、蜜、石蜜，齊七日得服。若過七日服者，尼薩耆波逸提。",
+   "T1422a": "「若比丘病，得服四種含消藥：酥、油、蜜、石蜜。一受乃至七日。若過，尼薩耆波逸提。",
+   "sa-sarv": "PrMoSū_NP.30: yāni tāni bhagavatā glānānāṃ bhikṣūṇāṃ sāṃpreyāṇi pratiṣevanīyāni bhaiṣajyāny anujñātāni tadyathā sarpis tailaṃ madhu phāṇitaṃ saptāhaparamaṃ tāni glānena bhikṣuṇā saṃnidhikāraparibhogena paribhoktavyāni tata uttaraṃ paribhuñjīta niḥsargikā pātayantikā 30 //",
+   "T1436": "「若比丘，佛聽諸病比丘服四種含消藥：酥、油、蜜、石蜜。是藥病比丘殘共宿，極至七日應服，若過七日，尼薩耆波夜提。」",
+   "sa-mahl": "PrMoSū(Mā-L)NP.23. yāni kho punar imāni gilānapratiṣevaṇīyāni bhaiṣajyāni bhavanti sayyathīdaṃ sarpistailamadhuphāṇitaṃ Ō evaṃrūpāṇi gilānena bhikṣuṇā satkṛtyābhigṛhītāni, kṣamate saptāhaṃ sannidhikāraṃ paribhuñjituṃ, santaṃ śeṣaṃ nissaritavyaṃ tad uttaritavyaṃ / taduttariṃ khādeya vā bhuṃjeya vā santaṃ vā śeṣabhū[taṃ] nissareya nissargikapācattikaṃ /",
+   "T1426": "「若比丘，病應服酥、油、蜜、石蜜、生酥及脂，一受七日服。若過七日，有殘不捨而服，尼薩耆波夜提。",
+   "T1460": "「若比丘，有病聽畜酥油、生酥、蜜、石蜜，齊七日得服。若過七日服，尼薩耆波逸提。」",
+   "sa-mula": "NP.30 (PrMoSū_Mū-Banerjee) yāni tāni bhagavatā glānānāṃ bhikṣūṇāṃ sāṃpreyāṇi pratisevanīyāni bhaiṣajyāny ākhyātāni tadyathā sarpis tailaṃ madhu phāṇitaṃ tāny ākāṃkṣatā glānena bhikṣuṇā saptāhaparamaṃ svayam adhiṣṭhāya saṃnidhikāraparibhogena paribhoktavyāni tata uttari paribhuṃjīta naisargikā pāyantikā /",
+   "T1454": "「若復苾芻，如世尊說聽諸病苾芻所有諸藥，隨意服食，謂酥、油、糖蜜，於七日中應自守持觸宿而服。若苾芻過七日服者，泥薩祇波逸底迦。」"
+  },
+  "np24": {
+   "pi": "Nissaggiya Pācittiya 24. Vassikasāṭika “Māso seso gimhāna”nti bhikkhunā vassikasāṭikacīvaraṁ pariyesitabbaṁ, “addhamāso seso gimhāna”nti katvā nivāsetabbaṁ. Orena ce “māso seso gimhāna”nti vassikasāṭikacīvaraṁ pariyeseyya, orena“ddhamāso seso gimhāna”nti katvā nivāseyya, nissaggiyaṁ pācittiyaṁ.",
+   "T1429": "「若比丘！春殘一月在，當求雨浴衣，半月應用浴。若比丘！過一月前求雨浴衣，過半月前用浴，尼薩耆波逸提。",
+   "T1422a": "「若比丘，春餘一月應求雨浴衣，餘半月應持。若未至一月求、先半月持，尼薩耆波逸提。",
+   "sa-sarv": "PrMoSū_NP.26: māsaśeṣe grīṣme bhikṣuṇā varṣāśāṭīcīvaraṃ paryeṣitavyaṃ yāvad ardhamāsakṛtāsu varṣāsu dhārayitavyaṃ / arvāk ced bhikṣur māsaśeṣād grīṣmād varṣāśāṭīcīvaraṃ paryeṣeta ūrdhvaṃ cārdhamāsakṛtāsu varṣāsu dhārayen niḥsargikā pātayantikā 26",
+   "T1436": "「若比丘，春殘一月，比丘應求雨浴衣，半月應畜。若比丘春殘一月內求雨浴衣，過半月畜，尼薩耆波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)NP.25. māso śeṣo grīṣmāṇām iti bhikṣuṇā varṣāsāṭikācīvaraṃ paryeṣitavyaṃ / ardhamāso avaśiṣṭo ti kṛtvā snapitavyam / tato ca bhikṣuḥ pra[tyo]reṇa varṣāsāṭikācīvaraṃ paryeṣeya, kṛtvā vā snāpeya, nissargikapācattikaṃ /",
+   "T1426": "「若比丘，春殘一月在，當求雨浴衣，半月在當作成受用。若未至求雨浴衣，作成受用者，尼薩耆波夜提。",
+   "T1460": "「若比丘，春末一月在應求雨浴衣，半月後應用。若過用，尼薩耆波逸提。",
+   "sa-mula": "NP.28 (PrMoSū_Mū-Banerjee) māsyaḥ śeṣo grīṣmāṇāṃ bhikṣuṇā varṣāśāṭīcīvaraṃ paryeṣitavyam ardhamāsāvaśiṣṭā kṛtvā dhārayitavyam* / arvāk ced bhikṣuḥ śeṣo grīṣmāṇāṃ varṣāśāṭīcīvaraṃ paryeṣeta ūrdhvam ardhamāsāvaśiṣṭā varṣāḥ kṛtvā dhārayen naisargikā pāyantikā /",
+   "T1454": "「若復苾芻，春殘一月在，應求雨浴衣，齊後半月來應持用。若苾芻未至春殘一月求雨浴衣，至後半月仍持用者，泥薩祇波逸底迦。"
+  },
+  "np25": {
+   "pi": "Nissaggiya Pācittiya 25. Cīvaraacchindana Yo pana bhikkhu bhikkhussa sāmaṁ cīvaraṁ datvā kupito anattamano acchindeyya vā acchindāpeyya vā, nissaggiyaṁ pācittiyaṁ.",
+   "T1429": "「若比丘！先與比丘衣，後瞋恚故，若自奪、若教人奪取。還我衣來，不與汝。是比丘還衣，彼取衣者，尼薩耆波逸提。",
+   "T1422a": "「若比丘，與比丘衣後瞋不喜，若自奪、若使人奪，作是語：『還我衣，不與汝。』尼薩耆波逸提。",
+   "sa-sarv": "PrMoSū_NP.25: yaḥ punar bhikṣur bhikṣoḥ pātraṃ vā cīvaraṃ vā dattvā tataḥ paścād abhiṣaktaḥ kupitaś caṇḍīkṛto 'nāptamanā ācchindyād ācchedayed vā ānaya bhikṣo cīvaraṃ na te bhūyo dadāmīti tena bhikṣuṇā sa vastuśeṣo niḥsṛṣṭavyo bhavati cāsya niḥsargikā pātayantikā 25",
+   "T1436": "「若比丘，與他比丘衣，後瞋恚忿心不喜，若自奪、若使人奪，作是言：『汝比丘還我衣來，不與汝。』尼薩耆波夜提。是比丘應諸比丘前捨是衣。",
+   "sa-mahl": "PrMoSū(Mā-L)NP.24. yo puna bhikṣu bhikṣusya cīvaraṃ datvā yathā duṣṭo doṣāt kupito anāttamāno ācchindeya vā ācchindāpayeya vā Ō āhara bhikṣu cīvaraṃ, na te 'haṃ demīti vā vadeya, nissargikapācattikaṃ /",
+   "T1426": "「若比丘，與比丘衣已，後瞋恨不喜，若自奪、若使人奪，得衣者，尼薩耆波夜提。",
+   "T1460": "「若比丘，先與比丘衣，後瞋恚，若自奪、若使人奪取，尼薩耆波逸提。",
+   "sa-mula": "NP.25 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur bhikṣoś cīvaraṃ datvā tataḥ paścād abhiṣiktaḥ kupitaś caṇḍībhūto nātmamanā ācchindyād ācchedayed vā evaṃ cainaṃ vaded ānaya bhikṣo cīvaraṃ na te bhūyo dadāmīti / tena bhikṣuṇā tac cīvaraṃ tac ca śeṣam upaniḥsṛṣṭavyaṃ bhuktasya ca naisargikā pāyantikā /",
+   "T1454": "「若復苾芻，先與苾芻衣，彼於後時惱瞋罵詈生嫌賤心，若自奪、若教他奪，報言：『還我衣來，不與汝。』若衣離彼身自受用者，泥薩祇波逸底迦。"
+  },
+  "np26": {
+   "pi": "Nissaggiya Pācittiya 26. Suttaviññatti Yo pana bhikkhu sāmaṁ suttaṁ viññāpetvā tantavāyehi cīvaraṁ vāyāpeyya, nissaggiyaṁ pācittiyaṁ.",
+   "T1429": "「若比丘！自乞縷線，使非親里織師織作衣者，尼薩耆波逸提。",
+   "T1422a": "「若比丘，自行乞縷，雇織師織作衣，尼薩耆波逸提。",
+   "sa-sarv": "PrMoSū_NP.23: yaḥ punar bhikṣuḥ svayācitaṃ sūtraṃ vijñapya ajñātinā tantravāyena cīvaraṃ vāyayen niḥsargikā pātayantikā 23",
+   "T1436": "「若比丘，自乞縷，使非親里織師織，尼薩耆波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)NP.26. yo puna bhikṣuḥ svayaṃyācikāya sūtraṃ tantuvāyena cīvaraṃ vunāpeya nissargikapācattikaṃ /",
+   "T1426": "「若比丘，自行乞縷，使非親里織作衣，尼薩耆波夜提。",
+   "T1460": "「若比丘，自乞縷，使非親里織師織作衣，尼薩耆波逸提。",
+   "sa-mula": "NP.23 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣuḥ svayaṃ yācitena sūtreṇājñātinā tantuvāyena cīvaraṃ vāyeyam iti niṣpanne cīvare naisargikā pāyantikā /",
+   "T1454": "「若復苾芻，自乞縷線，使非親織師織作衣。若得衣者，泥薩祇波逸底迦。"
+  },
+  "np27": {
+   "pi": "Nissaggiya Pācittiya 27. Mahāpesakāra Bhikkhuṁ paneva uddissa aññātako gahapati vā gahapatānī vā tantavāyehi cīvaraṁ vāyāpeyya, tatra ce so bhikkhu pubbe appavārito tantavāye upasaṅkamitvā cīvare vikappaṁ āpajjeyya “idaṁ kho, āvuso, cīvaraṁ maṁ uddissa viyyati, āyatañca karotha, vitthatañca, appitañca, suvītañca, suppavāyitañca, suvilekhitañca, suvitacchitañca karotha, appeva nāma mayampi āyasmantānaṁ kiñcimattaṁ anupadajjeyyāmā”ti. Evañca so bhikkhu vatvā kiñcimattaṁ anupadajjeyya antamaso piṇḍapātamattampi, nissaggiyaṁ pācittiyaṁ.",
+   "T1429": "「若比丘！居士、居士婦，使織師為比丘織作衣。彼比丘先不受自恣請，便往織師所語言：『此衣為我作，與我極好織，令廣大堅緻，我當少多與汝價。』是比丘與價，乃至一食直，若得衣者，尼薩耆波逸提。",
+   "T1422a": "「若居士居士婦，為比丘，使織師織作衣。是比丘先不自恣請，便到織師所作是言：『汝知不？此衣為我作。汝好為我織，令極緻廣，當別相報。』後若與一食、若一食直，得者，尼薩耆波逸提。",
+   "sa-sarv": "PrMoSū_NP.24: bhikṣuṃ ced uddiśya ajñātir gṛhapatir gṛhapatipatnī vā tantravāyena cīvaraṃ vāyayet tatra cet sa bhikṣuḥ pūrvam apravāritaḥ samāna upasaṃkramya taṃ tantravāyaṃ kaṃcid eva vikalpam āpadyann evaṃ vaded yad āyuṣmaṃ tantravāya jānāsi idaṃ cīvaraṃ mām uddiśya ūyate sādhv āyuṣmān etac cīvaraṃ sūtaṃ ca karotu sulikhitaṃ ca suvistṛtaṃ ca sutakṣitaṃ ca apy eva vayam āyuṣmataḥ k(i)ṃcid eva mātram upasaṃhariṣyāmaḥ piṇḍapātaṃ vā piṇḍapātamātraṃ vā piṇḍapātasaṃvaraṃ vā evaṃ cet sa bhikṣus taṃ tantravāyaṃ saṃjña(pya vā) saṃjñāpya vā tataḥ paścāt k(i)ṃcid eva mātram upasaṃhared piṇḍapātaṃ vā piṇḍapātamātraṃ vā piṇḍapātasaṃvaraṃ vā cīvarasyābhiniṣpattaye abhiniṣpanne cīvare niḥsargikā pātaya(nti)kā 24",
+   "T1436": "「若比丘，非親里居士、若居士婦，使織師為比丘織作衣，是比丘先不自恣請，為好衣故，少作因緣，往到織師所語織師言：『汝知不？此衣為我作，汝好織令緻廣，我或當與汝少物。』是比丘若自勸喻、若使人勸喻已，後時與少物，乃至一食、若一食具、若一食直，為得衣故。若得是衣，尼薩耆波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)NP.27. bhikṣuṃ kho punar uddiśya anyataro gṛhapatir vā gṛhapatiputro vā tantuvāyena cīvaraṃ vunāpeya, tena ca bhikṣuḥ pūrvaṃ apravārito upasaṃkramitvā vikalpam āpadyeya Ō sādhu kho punas tvam āyuṣmann imaṃ cīvaram āyataṃ ca karohi, vistṛtaṃ ca karohi, suvutaṃ ca karohi, sutacchitaṃ ca karohi, suvilikhitaṃ ca karohi / apy eva nāma vayaṃ pi tava kiñcid eva mātrām upasaṃharema, māṣakaṃ vā māṣakārhaṃ vā piṇḍapātaṃ vā piṇḍapātārhaṃ vā / tatra ca so bhikṣur evaṃ vaditvā na kiñcid eva mātrām upasaṃhareya māṣakaṃ vā māṣakārhaṃ vā piṇḍapātaṃ vā piṇḍapātārhaṃ vā, abhiniṣpanne cīvare nissargikapācattikaṃ /",
+   "T1426": "「若居士、居士婦使織師為比丘織作衣，是比丘先不請，為好故便往勸織師言：『善哉居士！此衣為我作，汝當好織令緻長廣，當與汝錢直、若食直。』如是勸，得衣者，尼薩耆波夜提。",
+   "T1460": "「若比丘，非親里居士使織師為比丘織作衣。是比丘先不受自恣請，憶念往織師所，語織師言：『汝今當知，此衣為我織。極好織令緻好，我當多少與汝衣價。』若比丘與價，乃至一食，得衣者，尼薩耆波逸提。",
+   "sa-mula": "NP.24 (PrMoSū_Mū-Banerjee) bhikṣuṃ khalūddiśyājñātiḥ gṛhapatir vā gṛhapatipatnī vājñātitantuvāyena cīvaraṃ vāyayet tatra cet sa bhikṣuḥ pūrvam apravāritaḥ san kaṃcid eva vikalpam āpadya tam ajñātiṃ tantuvāyam upasaṃkramyaivaṃ vadet* / yat khalv āyuṣmāṃs tantuvāya jānīyā idaṃ cīvaram asmān uddiśya ūyate sādhv āyuṣmaṃs tantuvāya idaṃ cīvaraṃ suvistṛtaṃ ca kuru suvilikhitaṃ ca suvitakṣitaṃ ca svākoṭitaṃ cāpy eva vayam āyuṣmate tantuvāyāya kāṃcid eva mātram upasaṃhariṣyāmo yaduta piṇḍapātaṃ vā piṇḍapātamātraṃ vā piṇḍapātasaṃbalaṃ vā cīvarasyābhiniṣpattaye abhiniṣpanne cīvare naisargikā pāyantikā /",
+   "T1454": "「若復苾芻，有非親居士、居士婦，為苾芻使非親織師織作衣。此苾芻先不受請，便生異念，詣彼織師所，作如是言：『汝今知不？此衣為我織。善哉織師！應好織淨梳治，善簡擇極堅打，我當以少鉢食、或鉢食類、或復食直而相濟給。』若苾芻以如是物與織師，求得衣者，泥薩祇波逸底迦。"
+  },
+  "np28": {
+   "pi": "Nissaggiya Pācittiya 28. Accekacīvara Dasāhānāgataṁ kattikatemāsikapuṇṇamaṁ bhikkhuno paneva accekacīvaraṁ uppajjeyya, accekaṁ maññamānena bhikkhunā paṭiggahetabbaṁ, paṭiggahetvā yāva cīvarakālasamayaṁ nikkhipitabbaṁ. Tato ce uttari nikkhipeyya, nissaggiyaṁ pācittiyaṁ.",
+   "T1429": "「若比丘！十日未竟夏三月，諸比丘得急施衣。比丘知是急施衣，當受。受已，乃至衣時，應畜。若過畜者，尼薩耆波逸提。",
+   "T1422a": "「若比丘，前後安居十日未至自恣，得急施衣，若須應受。乃至衣時若過，尼薩耆波逸提。",
+   "sa-sarv": "PrMoSū_NP.27: daśāhānāgatāyāṃ pravāraṇāyāṃ bhikṣor utpadyetākālacīvaram ākāṃkṣatā tena bhikṣuṇā pratigṛhītavyaṃ pratigṛhya yāvac cīvarakālasamayā(n) nikṣiptavyaṃ tata uttaram upanikṣipen niḥsargikā pātaya(n)tikā 27",
+   "T1436": "「若比丘，十日未至自恣，得急施衣，是比丘若須衣，得自手取物，乃至衣時應畜。若過畜，尼薩耆波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)NP.28. daśāhānāgataṃ kho puna tremāsaṃ kārttikī paurṇamāsī utpadyeya bhikṣusya ātyāyikaṃ cīvaram ātyāyikaṃ manyamāno na bhikṣuṇā pratigṛhṇitavyaṃ / pratigṛhṇitvā yāvac cīvaradānakālasamayaṃ nikṣipitavyaṃ / taduttariṃ nikṣipeya nissargikapācattikam /",
+   "T1426": "「若比丘，十日未至自恣得急施衣，須者得取畜至衣時。若過時畜，尼薩耆波夜提。",
+   "T1460": "「若比丘，十日未滿夏三月，若有急施衣，欲須便受，受已依時應畜。若過畜，尼薩耆波逸提。",
+   "sa-mula": "NP.26 (PrMoSū_Mū-Banerjee) daśāham āgatāyāṃ kārtikyāṃ paurṇamāsyāṃ bhikṣor utpadyetātyayakacīvaram ākāṃkṣatā tena bhikṣuṇā pratigṛhītavyaṃ pratigṛhya yāvac cīvaradānakālasamayād dhārayitavyaṃ tata uttaraṃ dhārayen naisargikā pāyantikā /",
+   "T1454": "「若復苾芻，前三月雨安居十日未滿，有急施衣，苾芻須者應受，乃至施衣時應畜。若過畜者，泥薩祇波逸底迦。"
+  },
+  "np29": {
+   "pi": "Nissaggiya Pācittiya 29. Sāsaṅka Upavassaṁ kho pana kattikapuṇṇamaṁ yāni kho pana tāni āraññakāni senāsanāni sāsaṅkasammatāni sappaṭibhayāni, tathārūpesu bhikkhu senāsanesu viharanto ākaṅkhamāno tiṇṇaṁ cīvarānaṁ aññataraṁ cīvaraṁ antaraghare nikkhipeyya, siyā ca tassa bhikkhuno kocideva paccayo tena cīvarena vippavāsāya, chārattaparamaṁ tena bhikkhunā tena cīvarena vippavasitabbaṁ. Tato ce uttari vippavaseyya aññatra bhikkhusammutiyā, nissaggiyaṁ pācittiyaṁ.",
+   "T1429": "「若比丘！夏三月竟，後迦提一月滿，在阿蘭若有疑恐怖處住，比丘在如是處住，三衣中，欲留一一衣置村舍內，諸比丘有因緣得離衣宿，乃至六夜。若過者，尼薩耆波逸提。",
+   "T1422a": "「若比丘住阿鍊若處。安居三月未滿八月，若處有恐怖，聽寄一一衣著界內白衣家。若有因緣出界，離此衣宿乃至六夜。若過，尼薩耆波逸提。",
+   "sa-sarv": "PrMoSū_NP.28: trayomāsānāgate kārttike pūrṇamāse ūnavarṣāraṇyako bhikṣu(r) āraṇyakeṣu śayyāsaneṣūpagataḥ sy(ā)t sāśaṅkasaṃmateṣu sabhayasaṃmateṣu sapratibhayabhairavasaṃmateṣu ākāṃkṣatāraṇyakena bhikṣuṇā trayāṇāṃ cīvarāṇām anyatamānyatamaṃ cīvaram antargṛhe upanikṣiptavyaṃ syād āraṇyakasya bhikṣos tathārūpapratyayo bahiḥsīmaṃ gantuṃ ṣaḍrātraparamam āraṇyakena bhikṣuṇā tataś cīvarād vipravastavyaṃ tata uttaraṃ vipravasen niḥsargikā pātayantikā 28",
+   "T1436": "「若比丘，夏三月過有閏，未滿八月。若阿蘭若比丘在阿蘭若處住，意有疑恐怖畏難，若是比丘欲三衣中若一一衣著舍內，若有因緣出界故離衣宿，極至六夜。若過宿，尼薩耆波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)NP.29. upavarṣaṃ kho punaḥ tremāsaṃ kārttikī paurṇamāsī bhikṣu cāraṇyake śayanāsane viharanti samaye sapratibhaye sāśaṃkasaṃmate / ākāṃkṣamāṇena bhikṣuṇā trayāṇāṃ cīvarāṇām anyatarānyataraṃ cīvaram antaragṛhe nikṣipitavyaṃ, syāt tasya bhikṣusya kocid eva pratyayo tasmāc cīvarād vipravāsāya, ṣaḍāhaparamaṃ tena bhikṣuṇā tasmāc cīvarād vipravasitavyaṃ / taduttariṃ vipravaseya anyatra bhikṣu saṃmutīye nissargikapācattikam /",
+   "T1426": "「夏三月未至，夏末月比丘在阿練若處住，有疑恐怖有因緣事，三衣中若一一衣得寄家內離六宿。若過者，除僧羯磨，尼薩耆波夜提。",
+   "T1460": "「若比丘，在阿蘭若有疑怖畏處，比丘三衣中若留一一衣置舍內，及有因緣出界離衣，乃至六夜。若過，尼薩耆波逸提。",
+   "sa-mula": "NP.27 (PrMoSū_Mū-Banerjee) bhikṣavaḥ khalu saṃbahulāḥ āraṇyakeṣu śayanāsaneṣu na varṣakā bhavanti sāśaṅkasaṃmateṣu nānābhayasaṃmateṣu sapratibhayabhairavasaṃmateṣu ākāṃkṣatā āraṇyakena bhikṣuṇā trayāṇāṃ cīvarāṇām anyatamānyatamaṃ cīvaram antargṛhe upanikṣiptavyaṃ syāt khalv āraṇyakasya bhikṣos tadrūpapratyayo bahiḥsīmāṃ gantuṃ ṣaḍrātraparamam āraṇyakena bhikṣuṇā tasmāc cīvarād bahiḥsīmāṃ vipravastavyaṃ tata uttari vipravasen naisargikā pāyantikā /",
+   "T1454": "「若復眾多苾芻在阿蘭若處住，作後安居，有驚怖畏難處，苾芻欲於三衣中隨留一衣置村舍內。若苾芻有緣須出阿蘭若界者，得齊六夜離衣而宿。若過者，泥薩祇波逸底迦。"
+  },
+  "np30": {
+   "pi": "Nissaggiya Pācittiya 30. Pariṇata Yo pana bhikkhu jānaṁ saṅghikaṁ lābhaṁ pariṇataṁ attano pariṇāmeyya, nissaggiyaṁ pācittiyaṁ. Pattavaggo tatiyo.",
+   "T1429": "「若比丘！知是僧物，自求入己者，尼薩耆波逸提（三十）。",
+   "T1422a": "「若比丘，知檀越欲與僧物，迴以入己，尼薩耆波逸提。",
+   "sa-sarv": "PrMoSū_NP.29: yaḥ punar bhikṣur jānaṃ sāṃghikaṃ lābhaṃ pariṇatam ātman(aḥ) pariṇāmayen niḥsargikā pātayantikā 29",
+   "T1436": "「若比丘，知檀越欲與僧物，自迴向己，尼薩耆波夜提。",
+   "sa-mahl": "PrMoSū(Mā-L)NP.30. yo puna bhikṣur jānan sāṃghikāṃ lābhaṃ saṃghe pariṇatam ātmano pariṇāmeya nissargikapācattikam //",
+   "T1426": "「若比丘，知物向僧自迴向己，尼薩耆波夜提。」（三十事竟）",
+   "T1460": "「若比丘。知他與僧物。自迴入己。尼薩耆波逸提。",
+   "sa-mula": "NP.29 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur jānan sāṃghikaṃ lābhaṃ pariṇatam ātmanaḥ paudgalikaṃ pariṇāmayen naisargikā pāyantikā /",
+   "T1454": "「若復苾芻，知他與僧利物，自迴入己者，泥薩祇波逸底迦。"
+  },
+  "npz": {
+   "pi": "Uddiṭṭhā kho āyasmanto tiṁsa nissaggiyā pācittiyā dhammā. Tatthāyasmante pucchāmi, kaccittha parisuddhā, dutiyampi pucchāmi, kaccittha parisuddhā, tatiyampi pucchāmi, kaccittha parisuddhā, parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti. Nissaggiyapācittiyā niṭṭhitā",
+   "T1429": "「諸大德！我已說三十尼薩耆波逸提法。今問諸大德！是中清淨不？（如是三說）諸大德！是中清淨，默然故，是事如是持。",
+   "T1422a": "「諸大德！已說三十尼薩耆波逸提法。今問，諸大德是中清淨不？」（第二、第三亦如是說）「諸大德是中清淨，默然故，是事如是持。」",
+   "sa-sarv": "uddiṣṭā mayāyuṣmantas triṃśan niḥsargikā(ḥ) pātayantikā dharmās tatrāham āyuṣmataḥ pṛcchāmi kaccit sthātra pariśuddhā dvir api trir api pṛcchāmi kaccit sthātra pariśuddhāḥ pariśuddhā atrāyuṣmanto yasmāt tūṣṇīm evam etad dhārayāmi // //",
+   "T1436": "「諸大德！已說三十尼薩耆波夜提法。今問諸大德是中清淨不？」（第二、第三亦如是問。）「諸大德！是中清淨，默然故，是事如是持。」",
+   "sa-mahl": "// uddānaṃ // (21) pātra (22) bandhanaṃ (23) bhaiṣajyam (24) ācchedo (25) varṣāśāṭikā / (26-27) tantuvāyena dve (28) daśāhānāgatam (29) upavarṣaṃ (30) pariṇāmanena // tṛtīyo vargaḥ // uddiṣṭāḥ kho punar āyuṣmanto triṃśan nissarggikapācattikā dharmmāḥ / tatrāyuṣmanto pṛcchāmi kaccittha pariśuddhāḥ? dvitīyaṃ pi āyuṣmanto pṛcchāmi kaccittha pariśuddhāḥ? tṛtīyaṃ pi āyuṣmanto pṛcchāmi kaccittha pariśuddhāḥ? pariśuddhā atrāyuṣmanto yasmāt tūṣṇīm evam etaṃ dhārayāmi /",
+   "T1426": "「諸大德！已說三十尼薩耆波夜提法。今問諸大德！是中清淨不？是中清淨不？是中清淨不？」「諸大德！是中清淨，默然故，是事如是持。」",
+   "T1460": "「諸大德！我已說三十尼薩耆波逸提法。今問諸大德是中清淨不？」（如是三說）「諸大德是中清淨，默然故，是事如是持。」",
+   "sa-mula": "uddiṣṭā me āyuṣmantas triṃśan naisargikapāyantikā dharmāḥ / tatrāham āyuṣmantaḥ paripṛcchāmi -- kaścit sthātra pariśuddhāḥ dvir api trir api paripṛcchāmi -- kaścit sthātra pariśuddhāḥ pariśuddhā atrāyuṣmanto yasmāt tūṣṇīm evam etad dhārayāmi /",
+   "T1454": "「諸大德！我已說三十泥薩祇波逸底迦法。今問諸大德！是中清淨不？」（如是三說）「諸大德！是中清淨，默然故，我今如是持。」"
+  }
+ }
+}
