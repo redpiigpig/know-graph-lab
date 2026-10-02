@@ -1209,6 +1209,11 @@ B 線＝前人概論怎麼切（比較表）。一次派一個 Sonnet。
   東正教專書收了幾本（福音經、神學導論、東正教史），Schmemann 中譯、《協同書》站上沒有。🚨 內文簡轉繁不會自動跑：
   排程只 parse，`simp_to_trad_batch.py --id` 要逐本補（目前只轉了已 parse 的 34 本）。大藏經提案
   `PROPOSAL_2026-10-02_zlz.md` 實收 107 部，36 部待人工判。
+- 第九章備料完成（`sources_ch09.md`，50 筆；必備缺 20）；新增 7 本進獵表（Johnson & Ross《Atlas》、Kinnamon & Cope、van Beek、
+  Miller & Yamamori、Hanciles、Martin《On Secularization》、Walls《Cross-Cultural Process》）。🚨 Pew 2025 撒哈拉以南非洲 30.7%
+  是最大單一地區、不是多數；《共同宣言：論稱義》不在 `_corpus\ecumenical`。
+- **第四關（逐章備料）九章全部完成（2026-10-02）**：清單在 `output/christianity-intro/sources_ch0{1..9}.md`（第三章分 03a／03b）。
+  序不另備料（術語與兩序的材料沿用第一章、第四章清單）。各章重要級缺書與作者判斷事項都記「暫定」待確認。
 - 補書不只 z-lib；先查站上既有（梵二 SC／DV 中拉英在 `data/creeds/ecumenical-councils/vatican-ii/`、
   奧斯堡信條與路德小教理在 `data/creeds/protestant-confessions/`、通諭中譯在 `data/encyclicals/`），
   再查 TRC／天主教在線目錄。館藏確認沒有：《天主教教理》全本中譯、《協同書》中譯、Schmemann、Bria、Brown 第二冊。
