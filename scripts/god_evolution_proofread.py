@@ -15,7 +15,9 @@ import difflib
 import hashlib
 import json
 import re
+import os
 import sys
+import threading
 import time
 from pathlib import Path
 
@@ -66,15 +68,45 @@ def gate(orig: list[str], new: list[str]) -> list[str | None]:
     return out
 
 
-def ask(prompt: str) -> tuple[str, str]:
-    import chapters_via_llm_toc as c  # Gemini 輪 key → 全 429 冷卻 → NVIDIA
-    if NVIDIA_ONLY:   # Gemini 額度要留給掃描頁 OCR，校對直接走 NVIDIA
-        c._gem_dead_until = time.time() + 86400
-    return c.ask_model(prompt)
+_rr = 0
+_rr_lock = threading.Lock()
+
+
+def ask(prompt: str, tries: int = 4, timeout: int = 90) -> tuple[str, str]:
+    """直打 NVIDIA（Gemini 額度留給掃描頁 OCR）。🚨 10-02 第三版卡在第 05 章一小時多：
+    原用 te.nvidia_chat 單次 timeout=300、整體 deadline=600、連線例外只休 30 秒，
+    某次請求被伺服器吊住就整條線空等。改成：單次 90 秒逾時、輪 key 最多 4 次，
+    全失敗回 ("", "engine-failed")，由呼叫端沿用原文並記下來。"""
+    global _rr
+    import requests
+    import translate_ebook_to_zh as te
+    last = "?"
+    for _ in range(tries):
+        with _rr_lock:
+            idx = _rr % len(te.NVIDIA_KEYS); _rr += 1
+        try:
+            r = requests.post(
+                te.NVIDIA_URL,
+                headers={"Authorization": f"Bearer {te.NVIDIA_KEYS[idx]}", "Content-Type": "application/json"},
+                json={"model": te.NVIDIA_MODELS[0], "messages": [{"role": "user", "content": prompt}],
+                      "temperature": 0.1, "max_tokens": 6000,
+                      "chat_template_kwargs": {"enable_thinking": False}},
+                timeout=timeout)
+        except requests.exceptions.RequestException as e:
+            last = f"conn {type(e).__name__}"; time.sleep(2); continue
+        if r.status_code == 200:
+            try:
+                return te._THINK_RE.sub("", r.json()["choices"][0]["message"]["content"]).strip(), "nvidia"
+            except (KeyError, IndexError, ValueError):
+                last = "bad-json"; continue
+        last = f"http {r.status_code}"
+        time.sleep(15 if r.status_code == 429 else 3)
+    return "", f"engine-failed {last}"
 
 
 def split_json_wrapper(raw: str) -> str:
-    return re.sub(r"^```\w*\n|\n```$", "", raw.strip())
+    raw = re.sub(r"^```\w*\n|\n```$", "", raw.strip())
+    return re.sub(r"^(@@@\s*)+|(\s*@@@)+$", "", raw.strip()).strip()   # 模型常在首尾多吐 @@@
 
 
 def batches(paras: list[str]):
@@ -88,44 +120,72 @@ def batches(paras: list[str]):
         yield cur
 
 
+def save(cache: dict) -> None:
+    tmp = CACHE.with_suffix(".tmp")
+    tmp.write_text(json.dumps(cache, ensure_ascii=False), encoding="utf-8")
+    os.replace(tmp, CACHE)
+
+
 def main() -> int:
+    from concurrent.futures import ThreadPoolExecutor, as_completed
     ap = argparse.ArgumentParser()
     ap.add_argument("--chapters", default="")
     ap.add_argument("--limit", type=int, default=0)
+    ap.add_argument("--workers", type=int, default=4)
     a = ap.parse_args()
     want = set(a.chapters.split(",")) if a.chapters else None
     cache = json.loads(CACHE.read_text(encoding="utf-8")) if CACHE.exists() else {}
     CACHE.parent.mkdir(parents=True, exist_ok=True)
     chs = g.build(g.load_pages(), proof={})
-    calls = ok = rej = 0
-    for ch in chs:
-        if want and ch["no"] not in want:
-            continue
-        todo = [p for p in ch["paras"] if not g.is_heading(p) and sha(p) not in cache and not p.isascii()]
-        for b in batches(todo):
-            if a.limit and calls >= a.limit:
-                break
-            raw, eng = ask(PROMPT.replace("{text}", SEP.join(b).replace("\n@@@\n", SEP)))
-            calls += 1
-            raw = split_json_wrapper(raw)
-            new = [x.strip() for x in re.split(r"\n\s*@@@\s*\n", raw)]
-            if len(new) != len(b):
-                rej += len(b); print(f"  {ch['no']} 段數不符 {len(new)}/{len(b)} ({eng})"); 
-                if len(b) > 1:   # 退一步：單段重送
-                    for p in b:
-                        r2, _ = ask(PROMPT.replace("{text}", p)); calls += 1
-                        r = gate([p], [split_json_wrapper(r2)])[0]
-                        if r is not None:
-                            cache[sha(p)] = r; ok += 1
-                continue
+    lock = threading.Lock()
+    st = {"calls": 0, "ok": 0, "rej": 0, "fail": 0}
+
+    def work(no: str, b: list[str]) -> None:
+        raw, eng = ask(PROMPT.replace("{text}", SEP.join(b)))
+        res: dict[str, str] = {}
+        calls, rej, fail = 1, 0, 0
+        new = [x.strip() for x in re.split(r"\n\s*@@@\s*\n", split_json_wrapper(raw))] if raw else []
+        if len(new) == len(b):
             for p, r in zip(b, gate(b, new)):
                 if r is None:
                     rej += 1
                 else:
-                    cache[sha(p)] = r; ok += 1
-            CACHE.write_text(json.dumps(cache, ensure_ascii=False), encoding="utf-8")
-        print(f"{ch['no']} 累計 呼叫 {calls}、採用 {ok}、不採用 {rej}", flush=True)
-    CACHE.write_text(json.dumps(cache, ensure_ascii=False), encoding="utf-8")
+                    res[sha(p)] = r
+        else:
+            print(f"  {no} 段數不符或失敗 {len(new)}/{len(b)} ({eng})", flush=True)
+            if len(b) > 1:   # 退一步：單段重送
+                for p in b:
+                    r2, e2 = ask(PROMPT.replace("{text}", p)); calls += 1
+                    r = gate([p], [split_json_wrapper(r2)])[0] if r2 else None
+                    if r is None:
+                        rej += 1; fail += (not r2)
+                    else:
+                        res[sha(p)] = r
+            else:
+                rej += 1; fail += 1
+        with lock:
+            cache.update(res)
+            st["calls"] += calls; st["ok"] += len(res); st["rej"] += rej; st["fail"] += fail
+            save(cache)
+
+    jobs = []
+    for ch in chs:
+        if want and ch["no"] not in want:
+            continue
+        todo = [p for p in ch["paras"] if not g.is_heading(p) and sha(p) not in cache and not p.isascii()]
+        jobs += [(ch["no"], b) for b in batches(todo)]
+    if a.limit:
+        jobs = jobs[:a.limit]
+    print(f"待校對 {len(jobs)} 批", flush=True)
+    done = 0
+    with ThreadPoolExecutor(a.workers) as ex:
+        futs = [ex.submit(work, no, b) for no, b in jobs]
+        for f in as_completed(futs):
+            f.result(); done += 1
+            if done % 10 == 0 or done == len(jobs):
+                print(f"{done}/{len(jobs)} 呼叫 {st['calls']}、採用 {st['ok']}、不採用 {st['rej']}（其中引擎失敗 {st['fail']}）", flush=True)
+    save(cache)
+    print(f"完成：呼叫 {st['calls']}、採用 {st['ok']}、不採用 {st['rej']}（引擎失敗 {st['fail']}）")
     return 0
 
 

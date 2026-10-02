@@ -127,6 +127,9 @@ def page_paras(body: str) -> list[str]:
         ln = ln.strip()
         if not ln or ln.startswith("[^") or ln.startswith("<table") or re.match(r"^\d{1,3}$", ln)                 or re.match(r"^\^\d{1,3}\s*[:：]", ln):      # 註釋行（有的頁寫成 ^10: 沒有方括號）
             continue
+        ln = re.sub(r"【(頁|眉)([^】}]*)\}", r"【\1\2】", ln)    # Gemini 偶爾把 】 寫成 }（252／281／287 頁）
+        ln = re.sub(r"\[\^(\d+)\}", r"[^\1]", ln)
+        ln = re.sub(r"\s*\[\^\d+\]\s*[:：].*$", "", ln)      # 同行尾巴接著的 [^N]: 註文（281 頁）
         ln = re.sub(r"\s*\^\d{1,3}\s*[:：].*$", "", ln)               # 被 unwrap 接到正文行尾的註釋
         ln = re.sub(r"\s*\^\d{1,3}(?!\d)", "", ln)           # 正文註號另一種寫法 ^10
         ln = re.sub(r"\[\^[^\]]*\]", "", ln)           # 正文註號
@@ -172,6 +175,9 @@ def build(pages: dict[int, dict], proof: dict | None = None):
         paras = [fix_simplified(p) for p in paras]
         if proof:
             paras = [proof.get(hashlib.sha1(p.encode("utf-8")).hexdigest(), p) for p in paras]
+        # 🚨 註號殘留：`\^10` 先被剝掉會讓 `[^10]` 變成空的 `[]`（全書 439 處）；
+        # 在校正檔套用「之後」才清，段落雜湊鍵（含 []）不受影響。另有幾處 `[1]`／`[12]` 純數字方括號。
+        paras = [re.sub(r"\[(?:\d{1,3})?\]", "", p) for p in paras]
         chapters.append({"no": no, "title": title, "paras": paras, "missing": missing})
     return chapters
 
