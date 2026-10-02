@@ -1,0 +1,253 @@
+{
+ "slug": "pi-mn10",
+ "title": "念處經",
+ "family": "pi",
+ "intro": "巴利 MN 10〈念處經〉＋漢譯南傳。MN 10 的四聖諦只有一句總說，廣說見 DN 22 那組。中阿含 98〈念處經〉與增壹阿含 12.1 同時對應 DN 22 與 MN 10，兩組都收。中阿含身念處多出以善念治惡念、齒齒相著、四禪喻、光明想與觀相六項，出入息排在正知之後；法念處只有六處、五蓋、七覺支三項（六處在五蓋之前），沒有五取蘊與四聖諦（設 reorder）。增壹 12.1 身念處只有不淨、四界、諸孔、塚間，法念處是七覺支與四禪，沒有出入息、威儀、正知、五蓋、五蘊、六處、四諦，也沒有「七年乃至七日」一段。各本獨有的項目單列一節。",
+ "units": [
+  {
+   "id": "p00",
+   "label": "經題"
+  },
+  {
+   "id": "p01",
+   "label": "如是我聞・拘樓劍磨瑟曇"
+  },
+  {
+   "id": "p02",
+   "label": "一乘道・四念處總標"
+  },
+  {
+   "id": "p03",
+   "label": "身念處：出入息"
+  },
+  {
+   "id": "p04",
+   "label": "身念處：四威儀"
+  },
+  {
+   "id": "p05",
+   "label": "身念處：正知"
+  },
+  {
+   "id": "p05a",
+   "label": "身念處：以善念治惡念、齒齒相著以心治心（中阿含獨有）"
+  },
+  {
+   "id": "p05c",
+   "label": "身念處：四禪喻・光明想・觀相（中阿含獨有）"
+  },
+  {
+   "id": "p06",
+   "label": "身念處：不淨（三十一／三十二身分）"
+  },
+  {
+   "id": "p07",
+   "label": "身念處：四界（六界）"
+  },
+  {
+   "id": "p07a",
+   "label": "身念處：觀身諸孔漏出不淨（增壹獨有）"
+  },
+  {
+   "id": "p08",
+   "label": "身念處：塚間諸相"
+  },
+  {
+   "id": "p09",
+   "label": "受念處"
+  },
+  {
+   "id": "p10",
+   "label": "心念處"
+  },
+  {
+   "id": "p11",
+   "label": "法念處：五蓋"
+  },
+  {
+   "id": "p12",
+   "label": "法念處：五取蘊"
+  },
+  {
+   "id": "p13",
+   "label": "法念處：六內外處・結"
+  },
+  {
+   "id": "p14",
+   "label": "法念處：七覺支"
+  },
+  {
+   "id": "p14a",
+   "label": "法念處：四禪（增壹獨有）"
+  },
+  {
+   "id": "p15",
+   "label": "法念處：四聖諦"
+  },
+  {
+   "id": "p20",
+   "label": "修習之果：七年乃至七日"
+  },
+  {
+   "id": "p21",
+   "label": "結：一乘道・歡喜奉行"
+  }
+ ],
+ "versions": [
+  {
+   "id": "mn10",
+   "lang": "pi",
+   "label": "巴利 MN 10",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-mn10",
+   "lang": "lzh",
+   "label": "漢譯南傳 MN 10",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "MA98",
+   "lang": "lzh",
+   "label": "中阿含 98 念處經",
+   "who": "瞿曇僧伽提婆譯・397–398 年",
+   "work": "T0026",
+   "reorder": true
+  },
+  {
+   "id": "EA12.1",
+   "lang": "lzh",
+   "label": "增壹阿含 12.1",
+   "who": "瞿曇僧伽提婆譯・384–385 年",
+   "work": "T0125"
+  }
+ ],
+ "works": [
+  "T0026",
+  "T0125"
+ ],
+ "anchors": [
+  {
+   "work": "T0026",
+   "node": "（九八）中阿含因品念處經第二（第二小土城誦）",
+   "uid": "T01n0026_p0582b07"
+  },
+  {
+   "work": "T0125",
+   "range": [
+    "T02n0125_p0568a01.2",
+    "T02n0125_p0568c21"
+   ]
+  }
+ ],
+ "cells": {
+  "p00": {
+   "mn10": "Majjhima Nikāya 10 Satipaṭṭhānasutta",
+   "nan-mn10": "第十　念處經"
+  },
+  "p01": {
+   "mn10": "Evaṁ me sutaṁ— ekaṁ samayaṁ bhagavā kurūsu viharati kammāsadhammaṁ nāma kurūnaṁ nigamo. Tatra kho bhagavā bhikkhū āmantesi: “bhikkhavo”ti. “Bhadante”ti te bhikkhū bhagavato paccassosuṁ. Bhagavā etadavoca:",
+   "nan-mn10": "如是我聞。—— 一時，世尊在庫盧國康摩薩單摩之聚落。爾時，世尊呼諸比丘曰：「諸比丘！」彼等比丘應世尊言：「世尊！」世尊乃曰：",
+   "MA98": "我聞如是：一時，佛遊拘樓瘦，在劒磨瑟曇拘樓都邑。",
+   "EA12.1": "聞如是：一時，佛在舍衛國祇樹給孤獨園。"
+  },
+  "p02": {
+   "mn10": "“Ekāyano ayaṁ, bhikkhave, maggo sattānaṁ visuddhiyā, sokaparidevānaṁ samatikkamāya, dukkhadomanassānaṁ atthaṅgamāya, ñāyassa adhigamāya, nibbānassa sacchikiriyāya, yadidaṁ cattāro satipaṭṭhānā. Katame cattāro? Idha, bhikkhave, bhikkhu kāye kāyānupassī viharati ātāpī sampajāno satimā, vineyya loke abhijjhādomanassaṁ; vedanāsu vedanānupassī viharati ātāpī sampajāno satimā, vineyya loke abhijjhādomanassaṁ; citte cittānupassī viharati ātāpī sampajāno satimā, vineyya loke abhijjhādomanassaṁ; dhammesu dhammānupassī viharati ātāpī sampajāno satimā, vineyya loke abhijjhādomanassaṁ. Uddeso niṭṭhito.",
+   "nan-mn10": "「諸比丘！於此，為有情之淨化、愁悲之超越、苦憂之消滅、正道之獲得、涅槃之作證，此有一法，即四念處也。四者何耶？曰：比丘！於此，於身隨觀身，熱心而注意，甚深持念，於世間除去貪憂。於受隨觀受，熱心而甚注意，有持念，於世間除去貪憂。於心隨觀心，熱心而甚注意，有持念，於世間除去貪憂。於法隨觀法，熱心而甚注意，有持念，於世間除去貪憂。〔如是謂四念處〕。",
+   "MA98": "爾時，世尊告諸比丘：「有一道淨眾生，度憂畏，滅苦惱，斷啼哭，得正法，謂四念處。若有過去諸如來、無所著、等正覺，悉斷五蓋——心穢、慧羸，立心正住於四念處，修七覺支，得覺無上正盡之覺。若有未來諸如來、無所著、等正覺，悉斷五蓋——心穢、慧羸，立心正住於四念處，修七覺支，得覺無上正盡之覺。我今現在如來、無所著、等正覺，我亦斷五蓋——心穢、慧羸，立心正住於四念處，修七覺支，得覺無上正盡之覺。「云何為四？觀身如身念處，如是觀覺、心、法如法念處。",
+   "EA12.1": "爾時，世尊告諸比丘：「有一入道，淨眾生行，除去愁憂，無有諸惱，得大智慧，成泥洹證。所謂當滅五蓋，思惟四意止。云何名為一入？所謂專一心，是謂一入。云何為道？所謂賢聖八品道，一名正見，二名正治，三名正業，四名正命，五名正方便，六名正語，七名正念，八名正定，是謂名道，是謂一入道。「云何當滅五蓋？所謂貪欲蓋、瞋恚蓋、調戲蓋、眠睡蓋、疑蓋，是謂當滅五蓋。「云何思惟四意止？於是，比丘內自觀身，除去惡念，無有愁憂；外自觀身，除去惡念，無有愁憂；內外觀身，除去惡念，無有愁憂。內觀痛痛而自娛樂，外觀痛痛，內外觀痛痛；內觀心而自娛樂，外觀心，內外觀心；內觀法，外觀法，內外觀法而自娛樂。"
+  },
+  "p03": {
+   "mn10": "1. Kāyānupassanā 1.1. Kāyānupassanāānāpānapabba Kathañca, bhikkhave, bhikkhu kāye kāyānupassī viharati? Idha, bhikkhave, bhikkhu araññagato vā rukkhamūlagato vā suññāgāragato vā nisīdati, pallaṅkaṁ ābhujitvā, ujuṁ kāyaṁ paṇidhāya, parimukhaṁ satiṁ upaṭṭhapetvā. So satova assasati, satova passasati. Dīghaṁ vā assasanto ‘dīghaṁ assasāmī’ti pajānāti, dīghaṁ vā passasanto ‘dīghaṁ passasāmī’ti pajānāti, rassaṁ vā assasanto ‘rassaṁ assasāmī’ti pajānāti, rassaṁ vā passasanto ‘rassaṁ passasāmī’ti pajānāti. ‘Sabbakāyapaṭisaṁvedī assasissāmī’ti sikkhati, ‘sabbakāyapaṭisaṁvedī passasissāmī’ti sikkhati. ‘Passambhayaṁ kāyasaṅkhāraṁ assasissāmī’ti sikkhati, ‘passambhayaṁ kāyasaṅkhāraṁ passasissāmī’ti sikkhati. Seyyathāpi, bhikkhave, dakkho bhamakāro vā bhamakārantevāsī vā dīghaṁ vā añchanto ‘dīghaṁ añchāmī’ti pajānāti, rassaṁ vā añchanto ‘rassaṁ añchāmī’ti pajānāti; evameva kho, bhikkhave, bhikkhu dīghaṁ vā assasanto ‘dīghaṁ assasāmī’ti pajānāti, dīghaṁ vā passasanto ‘dīghaṁ passasāmī’ti pajānāti, rassaṁ vā assasanto ‘rassaṁ assasāmī’ti pajānāti, rassaṁ vā passasanto ‘rassaṁ passasāmī’ti pajānāti; ‘sabbakāyapaṭisaṁvedī assasissāmī’ti sikkhati, ‘sabbakāyapaṭisaṁvedī passasissāmī’ti sikkhati; ‘passambhayaṁ kāyasaṅkhāraṁ assasissāmī’ti sikkhati, ‘passambhayaṁ kāyasaṅkhāraṁ passasissāmī’ti sikkhati. Iti ajjhattaṁ vā kāye kāyānupassī viharati, bahiddhā vā kāye kāyānupassī viharati, ajjhattabahiddhā vā kāye kāyānupassī viharati; samudayadhammānupassī vā kāyasmiṁ viharati, vayadhammānupassī vā kāyasmiṁ viharati, samudayavayadhammānupassī vā kāyasmiṁ viharati. ‘Atthi kāyo’ti vā panassa sati paccupaṭṭhitā hoti. Yāvadeva ñāṇamattāya paṭissatimattāya anissito ca viharati, na ca kiñci loke upādiyati. Evampi kho, bhikkhave, bhikkhu kāye kāyānupassī viharati. Ānāpānapabbaṁ niṭṭhitaṁ.",
+   "nan-mn10": "諸比丘！如何是比丘於身隨觀身耶？諸比丘！於此，比丘或行於閑林、或行於樹下、或行於空閑處，結跏趺坐，以身正直，當前立念。彼念而出息，念而入息。或長出息，知『予長出息』；或長入息，知『予長入息』；或短出息，知『予短出息』；或短入息，知『予短入息』。或修觀『予覺一切身而出息』；或修觀『予覺一切身而入息』。又修觀『予令靜止身行而出息』；或修觀『予令靜止身行而入息』。諸比丘！恰如精巧之轆轤工或轆轤工之弟子，或長旋轉而知『予長旋轉』，或短旋轉而知『予短旋轉』，如是，比丘或長出息而知『予長出息』……乃至……修觀『予令靜止身行而出息』。如是，於內身而隨觀身，於外身而隨觀身，於內外身而隨觀身。於身而隨觀某法、於身而隨觀滅法、於身而隨觀某滅之法。彼現『身是存在』之念，如是資其慧，資其思念。彼無有依止而住，即不執著世間。如是，比丘則於身隨觀身也。",
+   "MA98": "「復次，比丘觀身如身，比丘者，念入息即知念入息，念出息即知念出息，入息長即知入息長，出息長即知出息長，入息短即知入息短，出息短即知出息短；覺一切身息入，覺一切身息出，覺止身行息入，覺止口行息出。如是比丘觀內身如身，觀外身如身，立念在身，有知有見，有明有達，是謂比丘觀身如身。"
+  },
+  "p04": {
+   "mn10": "1.2. Kāyānupassanāiriyāpathapabba Puna caparaṁ, bhikkhave, bhikkhu gacchanto vā ‘gacchāmī’ti pajānāti, ṭhito vā ‘ṭhitomhī’ti pajānāti, nisinno vā ‘nisinnomhī’ti pajānāti, sayāno vā ‘sayānomhī’ti pajānāti. Yathā yathā vā panassa kāyo paṇihito hoti tathā tathā naṁ pajānāti. Iti ajjhattaṁ vā kāye kāyānupassī viharati, bahiddhā vā kāye kāyānupassī viharati, ajjhattabahiddhā vā kāye kāyānupassī viharati; samudayadhammānupassī vā kāyasmiṁ viharati, vayadhammānupassī vā kāyasmiṁ viharati, samudayavayadhammānupassī vā kāyasmiṁ viharati. ‘Atthi kāyo’ti vā panassa sati paccupaṭṭhitā hoti. Yāvadeva ñāṇamattāya paṭissatimattāya anissito ca viharati, na ca kiñci loke upādiyati. Evampi kho, bhikkhave, bhikkhu kāye kāyānupassī viharati. Iriyāpathapabbaṁ niṭṭhitaṁ.",
+   "nan-mn10": "諸比丘！復次，比丘或行，而知『予在行』，或立而知『予在立』，或坐而知『予在坐』，或臥而知『予在臥』。如彼身之所示，其知如是。如是，於內身而隨觀身……不執著世間也。如是，比丘於身隨觀身而住。",
+   "MA98": "云何觀身如身念處？比丘者，行則知行，住則知住，坐則知坐，臥則知臥，眠則知眠，寤則知寤，眠寤則知眠寤。如是比丘觀內身如身，觀外身如身，立念在身，有知有見，有明有達，是謂比丘觀身如身。"
+  },
+  "p05": {
+   "mn10": "1.3. Kāyānupassanāsampajānapabba Puna caparaṁ, bhikkhave, bhikkhu abhikkante paṭikkante sampajānakārī hoti, ālokite vilokite sampajānakārī hoti, samiñjite pasārite sampajānakārī hoti, saṅghāṭipattacīvaradhāraṇe sampajānakārī hoti, asite pīte khāyite sāyite sampajānakārī hoti, uccārapassāvakamme sampajānakārī hoti, gate ṭhite nisinne sutte jāgarite bhāsite tuṇhībhāve sampajānakārī hoti. Iti ajjhattaṁ vā kāye kāyānupassī viharati …pe… evampi kho, bhikkhave, bhikkhu kāye kāyānupassī viharati. Sampajānapabbaṁ niṭṭhitaṁ.",
+   "nan-mn10": "諸比丘！復次，比丘是往、是歸，善識之；前觀、後觀，善識之；欲屈、欲伸，善識之；欲持大衣、衣鉢，善識之；在噉，飲、嚼、味，善識之；大小便時，善識之；在行、住、坐、眠、寤、言、默，善識之而住。如是，於內身隨觀身……不執世間也。如是，比丘於身隨觀身而住。",
+   "MA98": "復次，比丘觀身如身，比丘者，正知出入，善觀分別，屈伸低昂，儀容庠序，善著僧伽梨及諸衣鉢，行住坐臥，眠寤語默皆正知之。如是比丘觀內身如身，觀外身如身，立念在身，有知有見，有明有達，是謂比丘觀身如身。"
+  },
+  "p05a": {
+   "MA98": "「復次，比丘觀身如身，比丘者，生惡不善念，以善法念治斷滅止，猶木工師、木工弟子，彼持墨繩，用拼於木，則以利斧斫治令直。如是比丘生惡不善念，以善法念治斷滅止。如是比丘觀內身如身，觀外身如身，立念在身，有知有見，有明有達，是謂比丘觀身如身。復次，比丘觀身如身，比丘者，齒齒相著，舌逼上齶，以心治心，治斷滅止。猶二力士捉一羸人，處處旋捉，自在打鍛。如是比丘齒齒相著，舌逼上齶，以心治心，治斷滅止。如是比丘觀內身如身，觀外身如身，立念在身，有知有見，有明有達，是謂比丘觀身如身。"
+  },
+  "p05c": {
+   "MA98": "「復次，比丘觀身如身，比丘者，離生喜樂，漬身潤澤，普遍充滿於此身中，離生喜樂無處不遍。猶工浴人器盛澡豆，水和成摶，水漬潤澤，普遍充滿無處不周。如是比丘離生喜樂，漬身潤澤，普遍充滿於此身中，離生喜樂無處不遍。如是比丘觀內身如身，觀外身如身，立念在身，有知有見，有明有達，是謂比丘觀身如身。「復次，比丘觀身如身，比丘者，定生喜樂，漬身潤澤，普遍充滿於此身中，定生喜樂無處不遍。猶如山泉，清淨不濁，充滿流溢，四方水來，無緣得入，即彼泉底，水自涌出，流溢於外，漬山潤澤，普遍充滿無處不周。如是比丘定生喜樂，漬身潤澤，普遍充滿於此身中，定生喜樂無處不遍。如是比丘觀內身如身，觀外身如身，立念在身，有知有見，有明有達，是謂比丘觀身如身。「復次，比丘觀身如身，比丘者，無喜生樂，漬身潤澤，普遍充滿於此身中，無喜生樂無處不遍。猶青蓮華，紅、赤、白蓮，水生水長，在於水底，彼根莖華葉悉漬潤澤，普遍充滿無處不周。如是比丘無喜生樂，漬身潤澤，普遍充滿於此身中，無喜生樂無處不遍。如是比丘觀內身如身，觀外身如身，立念在身，有知有見，有明有達，是謂比丘觀身如身。「復次，比丘觀身如身，比丘者，於此身中，以清淨心意解遍滿成就遊，於此身中，以清淨心無處不遍。猶有一人，被七肘衣或八肘衣，從頭至足，於其身體無處不覆。如是比丘於此身中，以清淨心無處不遍。如是比丘觀內身如身，觀外身如身，立念在身，有知有見，有明有達，是謂比丘觀身如身。「復次，比丘觀身如身，比丘者，念光明想，善受善持，善憶所念，如前後亦然，如後前亦然，如晝夜亦然，如夜晝亦然，如下上亦然，如上下亦然。如是不顛倒，心無有纏，修光明心，心終不為闇之所覆。如是比丘觀內身如身，觀外身如身，立念在身，有知有見，有明有達，是謂比丘觀身如身。「復次，比丘觀身如身，比丘者，善受觀相，善憶所念，猶如有人，坐觀臥人，臥觀坐人。如是比丘善受觀相，善憶所念。如是比丘觀內身如身，觀外身如身，立念在身，有知有見，有明有達，是謂比丘觀身如身。"
+  },
+  "p06": {
+   "mn10": "1.4. Kāyānupassanāpaṭikūlamanasikārapabba Puna caparaṁ, bhikkhave, bhikkhu imameva kāyaṁ uddhaṁ pādatalā, adho kesamatthakā, tacapariyantaṁ pūraṁ nānappakārassa asucino paccavekkhati: ‘atthi imasmiṁ kāye kesā lomā nakhā dantā taco maṁsaṁ nhāru aṭṭhi aṭṭhimiñjaṁ vakkaṁ hadayaṁ yakanaṁ kilomakaṁ pihakaṁ papphāsaṁ antaṁ antaguṇaṁ udariyaṁ karīsaṁ pittaṁ semhaṁ pubbo lohitaṁ sedo medo assu vasā kheḷo siṅghāṇikā lasikā muttan’ti. Seyyathāpi, bhikkhave, ubhatomukhā putoḷi pūrā nānāvihitassa dhaññassa, seyyathidaṁ—sālīnaṁ vīhīnaṁ muggānaṁ māsānaṁ tilānaṁ taṇḍulānaṁ. Tamenaṁ cakkhumā puriso muñcitvā paccavekkheyya: ‘ime sālī ime vīhī ime muggā ime māsā ime tilā ime taṇḍulā’ti. Evameva kho, bhikkhave, bhikkhu imameva kāyaṁ uddhaṁ pādatalā, adho kesamatthakā, tacapariyantaṁ pūraṁ nānappakārassa asucino paccavekkhati: ‘atthi imasmiṁ kāye kesā lomā …pe… muttan’ti. Iti ajjhattaṁ vā kāye kāyānupassī viharati …pe… evampi kho, bhikkhave, bhikkhu kāye kāyānupassī viharati. Paṭikūlamanasikārapabbaṁ niṭṭhitaṁ.",
+   "nan-mn10": "復次，諸比丘！比丘善觀此身，從頭頂至足底止，皆為皮膚所覆，其中充滿種種不淨，即：『於此身有髮、髦、爪、齒、皮、肉、筋、骨、髓、腎、心、肝、肋、脾、肺、腸、臟腑、胃、糞、膽汁、痰、膿、血、汗、脂、淚、膏、唾、洟、滑液、小便也。』諸比丘！恰如有兩口之袋，以充〔填〕種種穀物，即：稻、粟、綠豆、豆顆、胡麻、米。以此，具眼者出而觀察『此是稻、此是粟、此是綠豆、此是豆顆、此是胡麻、此是大米也。』如是，比丘善觀此身，從頭頂至足底止，為皮膚所覆，其中充滿種種不淨，即：『此身有髮、髦、爪、齒、皮、肉、筋、胃、髓、腎、心、肝、肋、脾、肺、腸、臟腑、胃、糞、膽汁、痰、膿、血、汗、脂、淚、膏、唾、洟、滑液、小便也。』如是，於內身隨觀身……不執著世間。如是，比丘於身隨觀身而住。",
+   "MA98": "「復次，比丘觀身如身，比丘者，此身隨住，隨其好惡，從頭至足，觀見種種不淨充滿：『我此身中有髮、髦、爪、齒、麁細薄膚、皮、肉、筋、骨、心、腎、肝、肺、大腸、小腸、脾、胃、摶糞、腦及腦根、淚、汗、涕、唾、膿、血、肪、髓、涎、膽、小便。』猶如器盛若干種子，有目之士，悉見分明，謂稻、粟種、蔓菁、芥子。如是比丘此身隨住，隨其好惡，從頭至足，觀見種種不淨充滿：『我此身中有髮、髦、爪、齒、麤細薄膚、皮、肉、筋、骨、心、腎、肝、肺、大腸、小腸、脾、胃、摶糞、腦及腦根、淚、汗、涕、唾、膿、血、肪、髓、涎、膽、小便。』如是比丘觀內身如身，觀外身如身，立念在身，有知有見，有明有達，是謂比丘觀身如身。",
+   "EA12.1": "「云何比丘內觀身而自娛樂？於是，比丘觀此身隨其性行，從頭至足，從足至頭，觀此身中皆悉不淨，無有可貪。復觀此身有毛、髮、爪、齒、皮、肉、筋、骨、髓、腦、脂膏、腸、胃、心、肝、脾、腎之屬，皆悉觀知。屎、尿、生熟二藏、目淚、唾、涕、血脈、肪、膽，皆當觀知，無可貪者。如是，諸比丘！當觀身自娛樂，除去惡念，無有愁憂。"
+  },
+  "p07": {
+   "mn10": "1.5. Kāyānupassanādhātumanasikārapabba Puna caparaṁ, bhikkhave, bhikkhu imameva kāyaṁ yathāṭhitaṁ yathāpaṇihitaṁ dhātuso paccavekkhati: ‘atthi imasmiṁ kāye pathavīdhātu āpodhātu tejodhātu vāyodhātū’ti. Seyyathāpi, bhikkhave, dakkho goghātako vā goghātakantevāsī vā gāviṁ vadhitvā catumahāpathe bilaso vibhajitvā nisinno assa. Evameva kho, bhikkhave, bhikkhu imameva kāyaṁ yathāṭhitaṁ yathāpaṇihitaṁ dhātuso paccavekkhati: ‘atthi imasmiṁ kāye pathavīdhātu āpodhātu tejodhātu vāyodhātū’ti. Iti ajjhattaṁ vā kāye kāyānupassī viharati …pe… evampi kho, bhikkhave, bhikkhu kāye kāyānupassī viharati. Dhātumanasikārapabbaṁ niṭṭhitaṁ.",
+   "nan-mn10": "復次，諸比丘！比丘以此身，其如所置、如其所示，以觀察界，即：『此身有地界、水界、火界、風界。』諸比丘！恰如熟練之屠牛者或屠牛者之弟子，於衢屠牛，坐乾路口，一分一分以割其體。如是，比丘以界觀察此身，其如所置、如其所示，以觀察界，即：『此身有地界、水界、火界、風界也。』如是，於內身隨觀身……不執著世間。如是，比丘於身隨觀身而住。",
+   "MA98": "「復次，比丘觀身如身，比丘者，觀身諸界，我此身中有地界、水界、火界、風界、空界、識界。猶如屠兒殺牛，剝皮布地於上，分作六段。如是比丘觀身諸界，我此身中，地界、水界、火界、風界、空界、識界。如是比丘觀內身如身，觀外身如身，立念在身，有知有見，有明有達，是謂比丘觀身如身。",
+   "EA12.1": "「復次，比丘！還觀此身有地種耶？水、火、風種耶？如是，比丘觀此身。復次，比丘！觀此身，分別諸界，此身有四種，猶如巧能屠牛之士、若屠牛弟子，解牛節解，而自觀見此是脚，此是心，此是節，此是頭。如是，彼比丘分別此界，而自觀察此身有地、水、火、風種。如是，比丘觀身而自娛樂。"
+  },
+  "p07a": {
+   "EA12.1": "「復次，比丘！觀此身有諸孔，漏出不淨。猶如彼人觀竹園，若觀葦叢。如是，比丘觀此身有諸孔，漏出諸不淨。"
+  },
+  "p08": {
+   "mn10": "1.6. Kāyānupassanānavasivathikapabba Puna caparaṁ, bhikkhave, bhikkhu seyyathāpi passeyya sarīraṁ sivathikāya chaḍḍitaṁ ekāhamataṁ vā dvīhamataṁ vā tīhamataṁ vā uddhumātakaṁ vinīlakaṁ vipubbakajātaṁ. So imameva kāyaṁ upasaṁharati: ‘ayampi kho kāyo evaṁdhammo evaṁbhāvī evaṁanatīto’ti. Iti ajjhattaṁ vā kāye kāyānupassī viharati …pe… evampi kho, bhikkhave, bhikkhu kāye kāyānupassī viharati. Puna caparaṁ, bhikkhave, bhikkhu seyyathāpi passeyya sarīraṁ sivathikāya chaḍḍitaṁ kākehi vā khajjamānaṁ kulalehi vā khajjamānaṁ gijjhehi vā khajjamānaṁ kaṅkehi vā khajjamānaṁ sunakhehi vā khajjamānaṁ byagghehi vā khajjamānaṁ dīpīhi vā khajjamānaṁ siṅgālehi vā khajjamānaṁ vividhehi vā pāṇakajātehi khajjamānaṁ. So imameva kāyaṁ upasaṁharati: ‘ayampi kho kāyo evaṁdhammo evaṁbhāvī evaṁanatīto’ti. Iti ajjhattaṁ vā kāye kāyānupassī viharati …pe… evampi kho, bhikkhave, bhikkhu kāye kāyānupassī viharati. Puna caparaṁ, bhikkhave, bhikkhu seyyathāpi passeyya sarīraṁ sivathikāya chaḍḍitaṁ aṭṭhikasaṅkhalikaṁ samaṁsalohitaṁ nhārusambandhaṁ …pe… Aṭṭhikasaṅkhalikaṁ nimaṁsalohitamakkhitaṁ nhārusambandhaṁ …pe… Aṭṭhikasaṅkhalikaṁ apagatamaṁsalohitaṁ nhārusambandhaṁ …pe… Aṭṭhikāni apagatasambandhāni disā vidisā vikkhittāni, aññena hatthaṭṭhikaṁ aññena pādaṭṭhikaṁ aññena gopphakaṭṭhikaṁ aññena jaṅghaṭṭhikaṁ aññena ūruṭṭhikaṁ aññena kaṭiṭṭhikaṁ aññena phāsukaṭṭhikaṁ aññena piṭṭhiṭṭhikaṁ aññena khandhaṭṭhikaṁ aññena gīvaṭṭhikaṁ aññena hanukaṭṭhikaṁ aññena dantaṭṭhikaṁ aññena sīsakaṭāhaṁ. So imameva kāyaṁ upasaṁharati: ‘ayampi kho kāyo evaṁdhammo evaṁbhāvī evaṁanatīto’ti. Iti ajjhattaṁ vā kāye kāyānupassī viharati …pe… evampi kho, bhikkhave, bhikkhu kāye kāyānupassī viharati. Puna caparaṁ, bhikkhave, bhikkhu seyyathāpi passeyya sarīraṁ sivathikāya chaḍḍitaṁ, aṭṭhikāni setāni saṅkhavaṇṇapaṭibhāgāni …pe… Aṭṭhikāni puñjakitāni terovassikāni …pe… Aṭṭhikāni pūtīni cuṇṇakajātāni. So imameva kāyaṁ upasaṁharati: ‘ayampi kho kāyo evaṁdhammo evaṁbhāvī evaṁanatīto’ti. Iti ajjhattaṁ vā kāye kāyānupassī viharati, bahiddhā vā kāye kāyānupassī viharati, ajjhattabahiddhā vā kāye kāyānupassī viharati; samudayadhammānupassī vā kāyasmiṁ viharati, vayadhammānupassī vā kāyasmiṁ viharati, samudayavayadhammānupassī vā kāyasmiṁ viharati. ‘Atthi kāyo’ti vā panassa sati paccupaṭṭhitā hoti. Yāvadeva ñāṇamattāya paṭissatimattāya anissito ca viharati, na ca kiñci loke upādiyati. Evampi kho, bhikkhave, bhikkhu kāye kāyānupassī viharati. Navasivathikapabbaṁ niṭṭhitaṁ. Cuddasakāyānupassanā niṭṭhitā.",
+   "nan-mn10": "復次，諸比丘！譬如比丘，見死屍被遺棄於墓地，或經一日、或二日、或三日，膨脹而變色青黑，分化腐爛，彼致念此身：『觀此身亦如是法，成為如是，難免如此之狀況。』如是，於內身隨觀身……不執著世間。復次，諸比丘！譬如比丘見死屍被遺棄於墓地，或被鳥、兀鷹、鷲野狗、豺或被種種蟲類啄噉，彼致念此身：『觀此身亦如是法，成為如是，彼難免如是之狀況。』如是，於內身隨觀身……不執著世間。復次，諸比丘！比丘見死屍被遺棄於墓地，骸骨之連鎖，尚帶血肉，被筋連縛。又，連鎖之骸骨（已經）肉隤血污，被筋連縛。又，血肉皆無，唯筋連縛。又，骨節解散，散亂諸方，手骨、足骨、脛骨、腿骨、腰骨、脊骨、頭骸骨等，各於異處。彼致念此身：『此身亦如是之法、成為如是，彼難免如此之狀況。』如是，於內身隨觀身……而不執著世間。復次，諸比丘！比丘見死屍被遺棄於墓地，其骨白似螺色，經年堆積，又腐爛而為碎，彼致念此身：『觀此身亦如是之法，成為如是，彼難免如此之狀況。』如是，於內身隨觀身、於外身隨觀身、於內外身隨觀身而住。於身隨觀集法、於身隨觀滅法、於身隨觀集滅之法而住。彼現『身存在』之念，如是資其慧，資其思念。彼無有依止而住，不執著世間，如是，比丘於身隨觀身而住。",
+   "MA98": "「復次，比丘觀身如身，比丘者，觀彼死屍，或一、二日，至六、七日，烏鵄所啄，犲狼所食，火燒埋地，悉腐爛壞，見已自比：『今我此身亦復如是，俱有此法，終不得離。』如是比丘觀內身如身，觀外身如身，立念在身，有知有見，有明有達，是謂比丘觀身如身。「復次，比丘觀身如身，比丘者，如本見息道骸骨青色，爛腐食半，骨璅在地，見已自比：『今我此身亦復如是，俱有此法，終不得離。』如是比丘觀內身如身，觀外身如身，立念在身，有知有見，有明有達，是謂比丘觀身如身。復次，比丘觀身如身，比丘者，如本見息道離皮肉血，唯筋相連，見已自比：『今我此身亦復如是，俱有此法，終不得離。』如是比丘觀內身如身，觀外身如身，立念在身，有知有見，有明有達，是謂比丘觀身如身。「復次，比丘觀身如身，比丘者，如本見息道骨節解散，散在諸方，足骨、膞骨、髀骨、髖骨、脊骨、肩骨、頸骨、髑髏骨，各在異處，見已自比：『今我此身亦復如是，俱有此法，終不得離。』如是比丘觀內身如身，觀外身如身，立念在身，有知有見，有明有達，是謂比丘觀身如身。復次，比丘觀身如身，比丘者，如本見息道骨白如螺，青猶鴿色，赤若血塗，腐壞碎粖，見已自比：『今我此身亦復如是，俱有此法，終不得離。』如是比丘觀內身如身，觀外身如身，立念在身，有知有見，有明有達，是謂比丘觀身如身。若比丘、比丘尼，如是少少觀身如身者，是謂觀身如身念處。",
+   "EA12.1": "「復次，比丘！觀死屍，或死一宿，或二宿，或三宿、四宿，或五宿、六宿、七宿，身體膖脹，臭處不淨。復自觀身與彼無異，吾身不免此患。若復比丘觀死屍，烏鵲、鵄鳥所見噉食；或為虎狼、狗犬、虫獸之屬所見噉食。復自觀身與彼無異，吾身不離此患。是謂比丘觀身而自娛樂。「復次，比丘！觀死屍，或噉半散落在地，臭處不淨。復自觀身與彼無異，吾身不離此法。復次，觀死屍，肉已盡，唯有骨在，血所塗染。復以此身觀彼身亦無有異。如是，比丘觀此身。復次，比丘！觀死屍筋纏束薪，復自觀身與彼無異。如是，比丘觀此身。「復次，比丘！觀死屍骨節分散，散在異處，或手骨、脚骨各在一處；或膞骨，或腰骨，或尻骨，或臂骨，或肩骨，或脇骨，或脊骨，或項骨，或髑髏。復以此身與彼無異，吾不免此法，吾身亦當壞敗。如是，比丘觀身而自娛樂。「復次，比丘！觀死屍白色、白珂色。復自觀身與彼無異，吾不離此法，是謂比丘自觀身。「復次，比丘！若見死屍、骨青、瘀想，無可貪者，或與灰土同色不可分別。如是，比丘！自觀身除去惡念，無有愁憂；此身無常，為分散法。如是，比丘內自觀身，外觀身，內外觀身，解無所有。"
+  },
+  "p09": {
+   "mn10": "2. Vedanānupassanā Kathañca, bhikkhave, bhikkhu vedanāsu vedanānupassī viharati? Idha, bhikkhave, bhikkhu sukhaṁ vā vedanaṁ vedayamāno ‘sukhaṁ vedanaṁ vedayāmī’ti pajānāti. Dukkhaṁ vā vedanaṁ vedayamāno ‘dukkhaṁ vedanaṁ vedayāmī’ti pajānāti. Adukkhamasukhaṁ vā vedanaṁ vedayamāno ‘adukkhamasukhaṁ vedanaṁ vedayāmī’ti pajānāti. Sāmisaṁ vā sukhaṁ vedanaṁ vedayamāno ‘sāmisaṁ sukhaṁ vedanaṁ vedayāmī’ti pajānāti. Nirāmisaṁ vā sukhaṁ vedanaṁ vedayamāno ‘nirāmisaṁ sukhaṁ vedanaṁ vedayāmī’ti pajānāti. Sāmisaṁ vā dukkhaṁ vedanaṁ vedayamāno ‘sāmisaṁ dukkhaṁ vedanaṁ vedayāmī’ti pajānāti. Nirāmisaṁ vā dukkhaṁ vedanaṁ vedayamāno ‘nirāmisaṁ dukkhaṁ vedanaṁ vedayāmī’ti pajānāti. Sāmisaṁ vā adukkhamasukhaṁ vedanaṁ vedayamāno ‘sāmisaṁ adukkhamasukhaṁ vedanaṁ vedayāmī’ti pajānāti. Nirāmisaṁ vā adukkhamasukhaṁ vedanaṁ vedayamāno ‘nirāmisaṁ adukkhamasukhaṁ vedanaṁ vedayāmī’ti pajānāti. Iti ajjhattaṁ vā vedanāsu vedanānupassī viharati, bahiddhā vā vedanāsu vedanānupassī viharati, ajjhattabahiddhā vā vedanāsu vedanānupassī viharati; samudayadhammānupassī vā vedanāsu viharati, vayadhammānupassī vā vedanāsu viharati, samudayavayadhammānupassī vā vedanāsu viharati. ‘Atthi vedanā’ti vā panassa sati paccupaṭṭhitā hoti. Yāvadeva ñāṇamattāya paṭissatimattāya anissito ca viharati, na ca kiñci loke upādiyati. Evampi kho, bhikkhave, bhikkhu vedanāsu vedanānupassī viharati. Vedanānupassanā niṭṭhitā.",
+   "nan-mn10": "諸比丘！比丘如何於受隨觀受而住耶？於此，比丘受樂受而知：『予受樂受。』受苦受而知：『予受苦受。』受不苦不樂受而知：『予受不苦不樂受。』受物質之樂受而知：『予受物質之樂受。』受非物質之樂受而知：『予受非物質之樂受。』受物質之苦受而知：『予受物質之苦受。』受非物質之苦受而知：『予受非物質之苦受。』受物質之不苦不樂受而知：『予受物質之不苦不樂受。』受非物質之不苦不樂受而知：『予受非物質之不苦不樂受。』如是，於內受而隨觀受，於外受而隨觀受，於內外受而隨觀受。於受而隨觀集法、於受而隨觀滅法、於受而隨觀集滅之法而住。若彼現『受存在』之念，如是資其慧，資其思念，彼無有依止而住。不執著世間。如是，比丘於受隨觀受而住。",
+   "MA98": "「云何觀覺如覺念處？比丘者，覺樂覺時，便知覺樂覺。覺苦覺時，便知覺苦覺。覺不苦不樂覺時，便知覺不苦不樂覺。覺樂身、苦身、不苦不樂身；樂心、苦心、不苦不樂心；樂食、苦食、不苦不樂食；樂無食、苦無食、不苦不樂無食；樂欲、苦欲、不苦不樂欲。樂無欲、苦無欲覺、不苦不樂無欲覺時，便知覺不苦不樂無欲覺。如是比丘觀內覺如覺，觀外覺如覺，立念在覺，有知有見，有明有達，是謂比丘觀覺如覺。若比丘、比丘尼如是少少觀覺如覺者，是謂觀覺如覺念處。",
+   "EA12.1": "「云何比丘內觀痛痛？於是，比丘得樂痛時，即自覺知我得樂痛；得苦痛時，即自覺知我得苦痛；得不苦不樂痛時，即自覺知我得不苦不樂痛。若得食樂痛時，便自覺知我得食樂痛；若得食苦痛時，便自覺知我得食苦痛；若得食不苦不樂痛時，亦自覺知我食不苦不樂痛。若得不食樂痛時，便自覺知我得不食樂痛；若得不食苦痛時，亦自覺知我不食苦痛；若得不食不苦不樂痛時，亦自覺知我得不食不苦不樂痛。如是，比丘內自觀痛。「復次。若復比丘得樂痛時，爾時不得苦痛，爾時自覺知我受樂痛。若得苦痛時，爾時不得樂痛，自覺知我受苦痛。若得不苦不樂痛時，爾時無苦無樂，自覺知我受不苦不樂痛。彼習法而自娛樂，亦觀盡法，復觀習盡之法。或復有痛而現在前可知可見，思惟原本，無所依倚而自娛樂，不起世間想；於其中亦不驚怖，以不驚怖，便得泥洹：生死已盡，梵行已立，所作已辦，更不復受有，如真實知。如是，比丘內自觀痛，除去亂念，無有愁憂；外自觀痛，內外觀痛，除去亂念，無有愁憂。如是，比丘內外觀痛。"
+  },
+  "p10": {
+   "mn10": "3. Cittānupassanā Kathañca, bhikkhave, bhikkhu citte cittānupassī viharati? Idha, bhikkhave, bhikkhu sarāgaṁ vā cittaṁ ‘sarāgaṁ cittan’ti pajānāti. Vītarāgaṁ vā cittaṁ ‘vītarāgaṁ cittan’ti pajānāti. Sadosaṁ vā cittaṁ ‘sadosaṁ cittan’ti pajānāti. Vītadosaṁ vā cittaṁ ‘vītadosaṁ cittan’ti pajānāti. Samohaṁ vā cittaṁ ‘samohaṁ cittan’ti pajānāti. Vītamohaṁ vā cittaṁ ‘vītamohaṁ cittan’ti pajānāti. Saṅkhittaṁ vā cittaṁ ‘saṅkhittaṁ cittan’ti pajānāti. Vikkhittaṁ vā cittaṁ ‘vikkhittaṁ cittan’ti pajānāti. Mahaggataṁ vā cittaṁ ‘mahaggataṁ cittan’ti pajānāti. Amahaggataṁ vā cittaṁ ‘amahaggataṁ cittan’ti pajānāti. Sauttaraṁ vā cittaṁ ‘sauttaraṁ cittan’ti pajānāti. Anuttaraṁ vā cittaṁ ‘anuttaraṁ cittan’ti pajānāti. Samāhitaṁ vā cittaṁ ‘samāhitaṁ cittan’ti pajānāti. Asamāhitaṁ vā cittaṁ ‘asamāhitaṁ cittan’ti pajānāti. Vimuttaṁ vā cittaṁ ‘vimuttaṁ cittan’ti pajānāti. Avimuttaṁ vā cittaṁ ‘avimuttaṁ cittan’ti pajānāti. Iti ajjhattaṁ vā citte cittānupassī viharati, bahiddhā vā citte cittānupassī viharati, ajjhattabahiddhā vā citte cittānupassī viharati; samudayadhammānupassī vā cittasmiṁ viharati, vayadhammānupassī vā cittasmiṁ viharati, samudayavayadhammānupassī vā cittasmiṁ viharati. ‘Atthi cittan’ti vā panassa sati paccupaṭṭhitā hoti. Yāvadeva ñāṇamattāya paṭissatimattāya anissito ca viharati, na ca kiñci loke upādiyati. Evampi kho, bhikkhave, bhikkhu citte cittānupassī viharati. Cittānupassanā niṭṭhitā.",
+   "nan-mn10": "諸比丘！比丘如何於心隨觀心而住耶？於此，比丘有貪欲心而知：『有貪欲心。』無貪欲心而知：『無貪欲心。』有瞋恚心而知：『有瞋恚心。』無瞋恚心而知：『無瞋恚心。』有愚癡心而知：『有愚癡心。』無愚癡心而知：『無愚癡心。』攝心而知：『攝心。』散心而知：『散心。』高廣心而知：『高廣心。』非高廣心而知：『非高廣心。』有上心而知：『有上心。』無上心而知：『無上心。』定心而知：『定心。』非定心而知：『非定心。』解脫心而知：『解脫心。』非解脫心而知：『非解脫心。』如是，於內心隨觀心，於外心隨觀心，於內外心隨觀心而住。於心而隨觀集法，於心而隨觀滅法，於心而隨觀生滅之法而住。彼現『心存在』之念，如是資其慧、資其思念。彼無有依止而住，不執著世間。如是，比丘於心隨觀心而住。",
+   "MA98": "「云何觀心如心念處？比丘者，有欲心知有欲心如真，無欲心知無欲心如真，有恚，無恚，有癡，無癡，有穢污，無穢污。有合，有散，有下，有高，有小，有大，修，不修，定，不定，有不解脫心知不解脫心如真，有解脫心知解脫心如真。如是比丘觀內心如心，觀外心如心，立念在心，有知有見，有明有達，是謂比丘觀心如心。若有比丘、比丘尼如是少少觀心如心者，是謂觀心如心念處。",
+   "EA12.1": "「云何比丘觀心心法而自娛樂？於是，比丘有愛欲心，便自覺知有愛欲心；無愛欲心，亦自覺知無愛欲心。有瞋恚心，便自覺知有瞋恚心；無瞋恚心，亦自覺知無瞋恚心。有愚癡心，便自覺知有愚癡心；無愚癡心，便自覺知無愚癡心。有愛念心，便自覺知有愛念心；無愛念心，便自覺知無愛念心。有受入心，便自覺知有受入心；無受入心，便自覺知無受入心。有亂念心，便自覺知有亂心；無亂心，便自覺知無亂心。有散落心，亦自覺知有散落心；無散落心，便自覺知無散落心。有普遍心，便自覺知有普遍心；無普遍心，便自覺知無普遍心。有大心，便自覺知有大心；無大心，便自覺知無大心。有無量心，便自覺知有無量心；無無量心，便自覺知無無量心。有三昧心，便自覺知有三昧心；無三昧心，便自覺知無三昧心。未解脫心，便自覺知未解脫心；已解脫心，便自覺知已解脫心。如是，比丘心相觀意止。「觀習法，觀盡法，并觀習盡之法，思惟法觀而自娛樂。可知、可見、可思惟、不可思惟，無所猗，不起世間想，已不起想，便無畏怖；已無畏怖，便無餘；已無餘，便涅槃：生死已盡，梵行已立，所作已辦，更不復受有，如實知之。如是，比丘內自觀心心意止，除去亂念，無有憂愁；外觀心，內外觀心心意止。如是，比丘心心相觀意止。"
+  },
+  "p11": {
+   "mn10": "4. Dhammānupassanā 4.1. Dhammānupassanānīvaraṇapabba Kathañca, bhikkhave, bhikkhu dhammesu dhammānupassī viharati? Idha, bhikkhave, bhikkhu dhammesu dhammānupassī viharati pañcasu nīvaraṇesu. Kathañca pana, bhikkhave, bhikkhu dhammesu dhammānupassī viharati pañcasu nīvaraṇesu? Idha, bhikkhave, bhikkhu santaṁ vā ajjhattaṁ kāmacchandaṁ ‘atthi me ajjhattaṁ kāmacchando’ti pajānāti, asantaṁ vā ajjhattaṁ kāmacchandaṁ ‘natthi me ajjhattaṁ kāmacchando’ti pajānāti; yathā ca anuppannassa kāmacchandassa uppādo hoti tañca pajānāti, yathā ca uppannassa kāmacchandassa pahānaṁ hoti tañca pajānāti, yathā ca pahīnassa kāmacchandassa āyatiṁ anuppādo hoti tañca pajānāti. Santaṁ vā ajjhattaṁ byāpādaṁ ‘atthi me ajjhattaṁ byāpādo’ti pajānāti, asantaṁ vā ajjhattaṁ byāpādaṁ ‘natthi me ajjhattaṁ byāpādo’ti pajānāti; yathā ca anuppannassa byāpādassa uppādo hoti tañca pajānāti, yathā ca uppannassa byāpādassa pahānaṁ hoti tañca pajānāti, yathā ca pahīnassa byāpādassa āyatiṁ anuppādo hoti tañca pajānāti. Santaṁ vā ajjhattaṁ thinamiddhaṁ ‘atthi me ajjhattaṁ thinamiddhan’ti pajānāti, asantaṁ vā ajjhattaṁ thinamiddhaṁ ‘natthi me ajjhattaṁ thinamiddhan’ti pajānāti, yathā ca anuppannassa thinamiddhassa uppādo hoti tañca pajānāti, yathā ca uppannassa thinamiddhassa pahānaṁ hoti tañca pajānāti, yathā ca pahīnassa thinamiddhassa āyatiṁ anuppādo hoti tañca pajānāti. Santaṁ vā ajjhattaṁ uddhaccakukkuccaṁ ‘atthi me ajjhattaṁ uddhaccakukkuccan’ti pajānāti, asantaṁ vā ajjhattaṁ uddhaccakukkuccaṁ ‘natthi me ajjhattaṁ uddhaccakukkuccan’ti pajānāti; yathā ca anuppannassa uddhaccakukkuccassa uppādo hoti tañca pajānāti, yathā ca uppannassa uddhaccakukkuccassa pahānaṁ hoti tañca pajānāti, yathā ca pahīnassa uddhaccakukkuccassa āyatiṁ anuppādo hoti tañca pajānāti. Santaṁ vā ajjhattaṁ vicikicchaṁ ‘atthi me ajjhattaṁ vicikicchā’ti pajānāti, asantaṁ vā ajjhattaṁ vicikicchaṁ ‘natthi me ajjhattaṁ vicikicchā’ti pajānāti; yathā ca anuppannāya vicikicchāya uppādo hoti tañca pajānāti, yathā ca uppannāya vicikicchāya pahānaṁ hoti tañca pajānāti, yathā ca pahīnāya vicikicchāya āyatiṁ anuppādo hoti tañca pajānāti. Iti ajjhattaṁ vā dhammesu dhammānupassī viharati, bahiddhā vā dhammesu dhammānupassī viharati, ajjhattabahiddhā vā dhammesu dhammānupassī viharati; samudayadhammānupassī vā dhammesu viharati, vayadhammānupassī vā dhammesu viharati, samudayavayadhammānupassī vā dhammesu viharati. ‘Atthi dhammā’ti vā panassa sati paccupaṭṭhitā hoti. Yāvadeva ñāṇamattāya paṭissatimattāya anissito ca viharati, na ca kiñci loke upādiyati. Evampi kho, bhikkhave, bhikkhu dhammesu dhammānupassī viharati pañcasu nīvaraṇesu. Nīvaraṇapabbaṁ niṭṭhitaṁ.",
+   "nan-mn10": "諸比丘！比丘如何於法隨觀法而住耶？曰：於此，比丘於五蓋法隨觀法而住。比丘如何於五蓋法隨觀法而住耶？諸比丘！於此，比丘內存有愛欲而知：『予內存有愛欲。』若內無愛欲而知：『予內無愛欲。』未生之愛欲生起者，其知之；已生之愛欲捨離者，其知之；所捨離之愛欲於未來不生者，其知之。又，於內有瞋恚而知：『予內有瞋恚。』內無瞋恚而知：『予於內無瞋恚。』有未生之瞋恚生起者，其知之；有已生瞋恚之捨離者，其知之；所捨離之瞋恚於未來不生者，其知之。於昏沈、睡眠、調悔、及疑，亦如是。如是，於內法隨觀法、於外法隨觀法於內外法隨觀法而住。於法隨觀集法而住，於法隨觀滅法而住，於法隨觀集滅之法而住。彼現『法存在』之念，如是資其慧、資其思念。彼無有依止而住，不執著世間。如是，比丘於五蓋法隨觀法而住。",
+   "MA98": "「復次，比丘觀法如法。比丘者，內實有欲知有欲如真，內實無欲知無欲如真，若未生欲而生者知如真，若已生欲滅不復生者知如真，如是瞋恚、睡眠、調悔。內實有疑知有疑如真，內實無疑知無疑如真，若未生疑而生者知如真，若已生疑滅不復生者知如真。如是比丘觀內法如法，觀外法如法，立念在法，有知有見，有明有達，是謂比丘觀法如法，謂五蓋也。"
+  },
+  "p12": {
+   "mn10": "4.2. Dhammānupassanākhandhapabba Puna caparaṁ, bhikkhave, bhikkhu dhammesu dhammānupassī viharati pañcasu upādānakkhandhesu. Kathañca pana, bhikkhave, bhikkhu dhammesu dhammānupassī viharati pañcasu upādānakkhandhesu? Idha, bhikkhave, bhikkhu: ‘iti rūpaṁ, iti rūpassa samudayo, iti rūpassa atthaṅgamo; iti vedanā, iti vedanāya samudayo, iti vedanāya atthaṅgamo; iti saññā, iti saññāya samudayo, iti saññāya atthaṅgamo; iti saṅkhārā, iti saṅkhārānaṁ samudayo, iti saṅkhārānaṁ atthaṅgamo; iti viññāṇaṁ, iti viññāṇassa samudayo, iti viññāṇassa atthaṅgamo’ti; iti ajjhattaṁ vā dhammesu dhammānupassī viharati, bahiddhā vā dhammesu dhammānupassī viharati, ajjhattabahiddhā vā dhammesu dhammānupassī viharati; samudayadhammānupassī vā dhammesu viharati, vayadhammānupassī vā dhammesu viharati, samudayavayadhammānupassī vā dhammesu viharati. ‘Atthi dhammā’ti vā panassa sati paccupaṭṭhitā hoti. Yāvadeva ñāṇamattāya paṭissatimattāya anissito ca viharati, na ca kiñci loke upādiyati. Evampi kho, bhikkhave, bhikkhu dhammesu dhammānupassī viharati pañcasu upādānakkhandhesu. Khandhapabbaṁ niṭṭhitaṁ.",
+   "nan-mn10": "復次，諸比丘！比丘於五取蘊之法隨觀法而住。諸比丘！比丘如何於五取蘊之法隨觀法而住耶？於此，比丘於：『有如是色、有如是色之集、有如是色之沒。有如是受、有如是受之集、有如是受之沒。有如是想……〔乃至〕……想之沒。有如是行……〔乃至〕……行之沒。有如是識、有如是識之集、有如是識之沒。』如是，於內法隨觀法……不執著世間。如是，比丘於五取蘊之法隨觀法而住。"
+  },
+  "p13": {
+   "mn10": "4.3. Dhammānupassanāāyatanapabba Puna caparaṁ, bhikkhave, bhikkhu dhammesu dhammānupassī viharati chasu ajjhattikabāhiresu āyatanesu. Kathañca pana, bhikkhave, bhikkhu dhammesu dhammānupassī viharati chasu ajjhattikabāhiresu āyatanesu? Idha, bhikkhave, bhikkhu cakkhuñca pajānāti, rūpe ca pajānāti, yañca tadubhayaṁ paṭicca uppajjati saṁyojanaṁ tañca pajānāti, yathā ca anuppannassa saṁyojanassa uppādo hoti tañca pajānāti, yathā ca uppannassa saṁyojanassa pahānaṁ hoti tañca pajānāti, yathā ca pahīnassa saṁyojanassa āyatiṁ anuppādo hoti tañca pajānāti. Sotañca pajānāti, sadde ca pajānāti, yañca tadubhayaṁ paṭicca uppajjati saṁyojanaṁ tañca pajānāti, yathā ca anuppannassa saṁyojanassa uppādo hoti tañca pajānāti, yathā ca uppannassa saṁyojanassa pahānaṁ hoti tañca pajānāti, yathā ca pahīnassa saṁyojanassa āyatiṁ anuppādo hoti tañca pajānāti. Ghānañca pajānāti, gandhe ca pajānāti, yañca tadubhayaṁ paṭicca uppajjati saṁyojanaṁ tañca pajānāti, yathā ca anuppannassa saṁyojanassa uppādo hoti tañca pajānāti, yathā ca uppannassa saṁyojanassa pahānaṁ hoti tañca pajānāti, yathā ca pahīnassa saṁyojanassa āyatiṁ anuppādo hoti tañca pajānāti. Jivhañca pajānāti, rase ca pajānāti, yañca tadubhayaṁ paṭicca uppajjati saṁyojanaṁ tañca pajānāti, yathā ca anuppannassa saṁyojanassa uppādo hoti tañca pajānāti, yathā ca uppannassa saṁyojanassa pahānaṁ hoti tañca pajānāti, yathā ca pahīnassa saṁyojanassa āyatiṁ anuppādo hoti tañca pajānāti. Kāyañca pajānāti, phoṭṭhabbe ca pajānāti, yañca tadubhayaṁ paṭicca uppajjati saṁyojanaṁ tañca pajānāti, yathā ca anuppannassa saṁyojanassa uppādo hoti tañca pajānāti, yathā ca uppannassa saṁyojanassa pahānaṁ hoti tañca pajānāti, yathā ca pahīnassa saṁyojanassa āyatiṁ anuppādo hoti tañca pajānāti. Manañca pajānāti, dhamme ca pajānāti, yañca tadubhayaṁ paṭicca uppajjati saṁyojanaṁ tañca pajānāti, yathā ca anuppannassa saṁyojanassa uppādo hoti tañca pajānāti, yathā ca uppannassa saṁyojanassa pahānaṁ hoti tañca pajānāti, yathā ca pahīnassa saṁyojanassa āyatiṁ anuppādo hoti tañca pajānāti. Iti ajjhattaṁ vā dhammesu dhammānupassī viharati, bahiddhā vā dhammesu dhammānupassī viharati, ajjhattabahiddhā vā dhammesu dhammānupassī viharati; samudayadhammānupassī vā dhammesu viharati, vayadhammānupassī vā dhammesu viharati, samudayavayadhammānupassī vā dhammesu viharati. ‘Atthi dhammā’ti vā panassa sati paccupaṭṭhitā hoti. Yāvadeva ñāṇamattāya paṭissatimattāya anissito ca viharati na ca kiñci loke upādiyati. Evampi kho, bhikkhave, bhikkhu dhammesu dhammānupassī viharati chasu ajjhattikabāhiresu āyatanesu. Āyatanapabbaṁ niṭṭhitaṁ.",
+   "nan-mn10": "復次，諸比丘！比丘於六內外處之法隨觀法而住。諸比丘！比丘如何於六內外處之法隨觀法而住耶？於此，比丘知眼、知色、知緣此兩者而生結。未生之結生起者，其知之；已生之結捨離者，其知之；所捨離之結於未來不生者，其知之。知耳、知聲、知緣此兩者而生結……乃至……知鼻、知香、知緣此兩者而生結……知舌、知味、知緣此兩者而生結……知身、知觸、知緣此兩者而生結……知意、知法、知緣此兩者而生結。未生之結生起者，其知之；已生之結捨離者，其知之；已捨離之結於未來不生者，其知之。如是，於內法隨觀法而住……不執著世間。如是，比丘於六內外處之法隨觀法而住。",
+   "MA98": "「云何觀法如法念處？眼緣色生內結，比丘者，內實有結知內有結如真，內實無結知內無結如真，若未生內結而生者知如真，若已生內結滅不復生者知如真；如是耳、鼻、舌、身，意緣法生內結，比丘者，內實有結知內有結如真，內實無結知內無結如真，若未生內結而生者知如真，若已生內結滅不復生者知如真。如是比丘觀內法如法，觀外法如法，立念在法，有知有見，有明有達，是謂比丘觀法如法，謂內六處。"
+  },
+  "p14": {
+   "mn10": "4.4. Dhammānupassanābojjhaṅgapabba Puna caparaṁ, bhikkhave, bhikkhu dhammesu dhammānupassī viharati sattasu bojjhaṅgesu. Kathañca pana, bhikkhave, bhikkhu dhammesu dhammānupassī viharati sattasu bojjhaṅgesu? Idha, bhikkhave, bhikkhu santaṁ vā ajjhattaṁ satisambojjhaṅgaṁ ‘atthi me ajjhattaṁ satisambojjhaṅgo’ti pajānāti, asantaṁ vā ajjhattaṁ satisambojjhaṅgaṁ ‘natthi me ajjhattaṁ satisambojjhaṅgo’ti pajānāti, yathā ca anuppannassa satisambojjhaṅgassa uppādo hoti tañca pajānāti, yathā ca uppannassa satisambojjhaṅgassa bhāvanāya pāripūrī hoti tañca pajānāti. Santaṁ vā ajjhattaṁ dhammavicayasambojjhaṅgaṁ ‘atthi me ajjhattaṁ dhammavicayasambojjhaṅgo’ti pajānāti, asantaṁ vā ajjhattaṁ dhammavicayasambojjhaṅgaṁ ‘natthi me ajjhattaṁ dhammavicayasambojjhaṅgo’ti pajānāti, yathā ca anuppannassa dhammavicayasambojjhaṅgassa uppādo hoti tañca pajānāti, yathā ca uppannassa dhammavicayasambojjhaṅgassa bhāvanāya pāripūrī hoti tañca pajānāti. Santaṁ vā ajjhattaṁ vīriyasambojjhaṅgaṁ ‘atthi me ajjhattaṁ vīriyasambojjhaṅgo’ti pajānāti, asantaṁ vā ajjhattaṁ vīriyasambojjhaṅgaṁ ‘natthi me ajjhattaṁ vīriyasambojjhaṅgo’ti pajānāti, yathā ca anuppannassa vīriyasambojjhaṅgassa uppādo hoti tañca pajānāti, yathā ca uppannassa vīriyasambojjhaṅgassa bhāvanāya pāripūrī hoti tañca pajānāti. Santaṁ vā ajjhattaṁ pītisambojjhaṅgaṁ ‘atthi me ajjhattaṁ pītisambojjhaṅgo’ti pajānāti, asantaṁ vā ajjhattaṁ pītisambojjhaṅgaṁ ‘natthi me ajjhattaṁ pītisambojjhaṅgo’ti pajānāti, yathā ca anuppannassa pītisambojjhaṅgassa uppādo hoti tañca pajānāti, yathā ca uppannassa pītisambojjhaṅgassa bhāvanāya pāripūrī hoti tañca pajānāti. Santaṁ vā ajjhattaṁ passaddhisambojjhaṅgaṁ ‘atthi me ajjhattaṁ passaddhisambojjhaṅgo’ti pajānāti, asantaṁ vā ajjhattaṁ passaddhisambojjhaṅgaṁ ‘natthi me ajjhattaṁ passaddhisambojjhaṅgo’ti pajānāti, yathā ca anuppannassa passaddhisambojjhaṅgassa uppādo hoti tañca pajānāti, yathā ca uppannassa passaddhisambojjhaṅgassa bhāvanāya pāripūrī hoti tañca pajānāti. Santaṁ vā ajjhattaṁ samādhisambojjhaṅgaṁ ‘atthi me ajjhattaṁ samādhisambojjhaṅgo’ti pajānāti, asantaṁ vā ajjhattaṁ samādhisambojjhaṅgaṁ ‘natthi me ajjhattaṁ samādhisambojjhaṅgo’ti pajānāti, yathā ca anuppannassa samādhisambojjhaṅgassa uppādo hoti tañca pajānāti, yathā ca uppannassa samādhisambojjhaṅgassa bhāvanāya pāripūrī hoti tañca pajānāti. Santaṁ vā ajjhattaṁ upekkhāsambojjhaṅgaṁ ‘atthi me ajjhattaṁ upekkhāsambojjhaṅgo’ti pajānāti, asantaṁ vā ajjhattaṁ upekkhāsambojjhaṅgaṁ ‘natthi me ajjhattaṁ upekkhāsambojjhaṅgo’ti pajānāti, yathā ca anuppannassa upekkhāsambojjhaṅgassa uppādo hoti tañca pajānāti, yathā ca uppannassa upekkhāsambojjhaṅgassa bhāvanāya pāripūrī hoti tañca pajānāti. Iti ajjhattaṁ vā dhammesu dhammānupassī viharati, bahiddhā vā dhammesu dhammānupassī viharati, ajjhattabahiddhā vā dhammesu dhammānupassī viharati; samudayadhammānupassī vā dhammesu viharati, vayadhammānupassī vā dhammesu viharati, samudayavayadhammānupassī vā dhammesu viharati. ‘Atthi dhammā’ti vā panassa sati paccupaṭṭhitā hoti. Yāvadeva ñāṇamattāya paṭissatimattāya anissito ca viharati, na ca kiñci loke upādiyati. Evampi kho, bhikkhave, bhikkhu dhammesu dhammānupassī viharati sattasu bojjhaṅgesu. Bojjhaṅgapabbaṁ niṭṭhitaṁ.",
+   "nan-mn10": "復次，諸比丘！比丘於七覺支法隨觀法而住。諸比丘！比丘如何於七覺支法隨觀法而住耶？諸比丘！於此，比丘內有念覺支而知：『予內有念覺支。』內無念覺知而知：『予內無念覺支。』若未生念覺支有生起者，其知之；有已生念覺支修習完滿者其知之。內有擇法覺支而知：『予內有擇法覺支。』內無擇法覺支而知：『予內無擇法覺支。』未生之擇法覺支有生起者，其知之；有已生之擇法覺支修習完滿者，其知之。……〔乃至〕……知精進覺支……〔乃至〕……喜覺支……〔乃至〕……輕安覺支……〔乃至〕……定覺支……〔乃至〕……捨覺支。如是，於內法隨觀法……不執著世間。如是，比丘於七覺支之法隨觀法而住。",
+   "MA98": "「復次，比丘觀法如法。比丘者，內實有念覺支知有念覺支如真，內實無念覺支知無念覺支如真，若未生念覺支而生者知如真，若已生念覺支便住不忘而不衰退，轉修增廣者知如真，如是法、精進、喜、息、定。比丘者，內實有捨覺支知有捨覺支如真，內實無捨覺支知無捨覺支如真，若未生捨覺支而生者知如真，若已生捨覺支便住不忘而不衰退，轉修增廣者知如真。如是比丘觀內法如法，觀外法如法，立念在法，有知有見，有明有達，是謂比丘觀法如法，謂七覺支。若有比丘、比丘尼如是少少觀法如法者，是謂觀法如法念處。",
+   "EA12.1": "「云何比丘法法相觀意止？於是，比丘修念覺意，依觀、依無欲、依滅盡，捨諸惡法。修法覺意、修精進覺意、修喜覺意、修猗覺意、修三昧覺意、修護覺意，依觀、依無欲、依滅盡，捨諸惡法。如是，比丘法法相觀意止。"
+  },
+  "p14a": {
+   "EA12.1": "「復次，比丘！於愛欲解脫，除惡不善法，有覺、有觀，有猗念，樂於初禪而自娛樂。如是，比丘法法相觀意止。「復次，比丘！捨有覺、有觀，內發歡喜，專其一意，成無覺、無觀，念猗喜安，遊二禪而自娛樂。如是，比丘法法相觀意止。「復次，比丘！捨於念，修於護，恒自覺知身覺樂，諸賢聖所求，護念清淨，行於三禪。如是，比丘法法相觀意止。「復次，比丘！捨苦樂心，無復憂喜，無苦無樂，護念清淨，樂於四禪。如是，比丘法法相觀意止。彼行習法，行盡法，并行習盡之法而自娛樂，便得法意止而現在前。可知可見，除去亂想，無所依猗，不起世間想；已不起想，便無畏怖；已無畏怖，生死便盡；梵行已立，所作已辦，更不復受有，如實知之。"
+  },
+  "p15": {
+   "mn10": "4.5. Dhammānupassanāsaccapabba Puna caparaṁ, bhikkhave, bhikkhu dhammesu dhammānupassī viharati catūsu ariyasaccesu. Kathañca pana, bhikkhave, bhikkhu dhammesu dhammānupassī viharati catūsu ariyasaccesu? Idha, bhikkhave, bhikkhu ‘idaṁ dukkhan’ti yathābhūtaṁ pajānāti, ‘ayaṁ dukkhasamudayo’ti yathābhūtaṁ pajānāti, ‘ayaṁ dukkhanirodho’ti yathābhūtaṁ pajānāti, ‘ayaṁ dukkhanirodhagāminī paṭipadā’ti yathābhūtaṁ pajānāti. Iti ajjhattaṁ vā dhammesu dhammānupassī viharati, bahiddhā vā dhammesu dhammānupassī viharati, ajjhattabahiddhā vā dhammesu dhammānupassī viharati; samudayadhammānupassī vā dhammesu viharati, vayadhammānupassī vā dhammesu viharati, samudayavayadhammānupassī vā dhammesu viharati. ‘Atthi dhammā’ti vā panassa sati paccupaṭṭhitā hoti. Yāvadeva ñāṇamattāya paṭissatimattāya anissito ca viharati, na ca kiñci loke upādiyati. Evampi kho, bhikkhave, bhikkhu dhammesu dhammānupassī viharati catūsu ariyasaccesu. Saccapabbaṁ niṭṭhitaṁ. Dhammānupassanā niṭṭhitā.",
+   "nan-mn10": "復次，諸比丘！比丘於四聖諦法隨觀法而住。比丘如何於四聖諦法隨觀法而住耶？諸比丘！比丘於此如實知『此是苦』，如實知『此是苦之集』，如實知『此是苦之滅』，如實知『此是致苦滅之道』。如是，於內法隨觀法而住、於外法隨觀法而住、於內外法隨觀法而住。於法隨觀集法、於法隨觀滅法、於法隨觀集滅之法而住。彼現『法存在』之念，如是資其慧、資其思念。彼無有依止而住，不執著世間。如是，比丘於四聖諦法隨觀法而住。"
+  },
+  "p20": {
+   "mn10": "Yo hi koci, bhikkhave, ime cattāro satipaṭṭhāne evaṁ bhāveyya satta vassāni, tassa dvinnaṁ phalānaṁ aññataraṁ phalaṁ pāṭikaṅkhaṁ diṭṭheva dhamme aññā; sati vā upādisese anāgāmitā. Tiṭṭhantu, bhikkhave, satta vassāni. Yo hi koci, bhikkhave, ime cattāro satipaṭṭhāne evaṁ bhāveyya cha vassāni …pe… pañca vassāni … cattāri vassāni … tīṇi vassāni … dve vassāni … ekaṁ vassaṁ … tiṭṭhatu, bhikkhave, ekaṁ vassaṁ. Yo hi koci, bhikkhave, ime cattāro satipaṭṭhāne evaṁ bhāveyya satta māsāni, tassa dvinnaṁ phalānaṁ aññataraṁ phalaṁ pāṭikaṅkhaṁ diṭṭheva dhamme aññā; sati vā upādisese anāgāmitā. Tiṭṭhantu, bhikkhave, satta māsāni. Yo hi koci, bhikkhave, ime cattāro satipaṭṭhāne evaṁ bhāveyya cha māsāni …pe… pañca māsāni … cattāri māsāni … tīṇi māsāni … dve māsāni … ekaṁ māsaṁ … aḍḍhamāsaṁ … tiṭṭhatu, bhikkhave, aḍḍhamāso. Yo hi koci, bhikkhave, ime cattāro satipaṭṭhāne evaṁ bhāveyya sattāhaṁ, tassa dvinnaṁ phalānaṁ aññataraṁ phalaṁ pāṭikaṅkhaṁ diṭṭheva dhamme aññā sati vā upādisese anāgāmitāti.",
+   "nan-mn10": "諸比丘！此等四念處如是修習七年者，彼於二果中可豫期一果，即：於現法得究竟智，又，若有依者，則不還位也。雖不至七年，六年、五年、四年、三年、二年或一年，修習此四念處者；不，雖不至一年，於七個月修習此四念處者，彼於二果中可豫期一果：於現法得究竟智，若有依者，則不還位也。不，雖不至七月，實於六月、五月、四月、三月、二月、一月或半月；不，雖不至半月，僅七日修習此四念處者，彼於二果中可豫期一果，即：於現法得究竟智，又，若有依者，則不還位也。",
+   "MA98": "「若有比丘、比丘尼七年立心正住四念處者，彼必得二果，或現法得究竟智，或有餘得阿那含。置七年，六五四三二一年，若有比丘、比丘尼七月立心正住四念處者，彼必得二果，或現法得究竟智，或有餘得阿那含。置七月，六五四三二一月，若有比丘、比丘尼七日七夜立心正住四念處者，彼必得二果，或現法得究竟智，或有餘得阿那含。置七日七夜，六五四三二，置一日一夜，若有比丘、比丘尼少少須臾頃立心正住四念處者，彼朝行如是，暮必得昇進，暮行如是，朝必得昇進。」"
+  },
+  "p21": {
+   "mn10": "‘Ekāyano ayaṁ, bhikkhave, maggo sattānaṁ visuddhiyā sokaparidevānaṁ samatikkamāya dukkhadomanassānaṁ atthaṅgamāya ñāyassa adhigamāya nibbānassa sacchikiriyāya yadidaṁ cattāro satipaṭṭhānā’ti. Iti yaṁ taṁ vuttaṁ, idametaṁ paṭicca vuttan”ti. Idamavoca bhagavā. Attamanā te bhikkhū bhagavato bhāsitaṁ abhinandunti. Satipaṭṭhānasuttaṁ niṭṭhitaṁ dasamaṁ. Mūlapariyāyavaggo niṭṭhito paṭhamo. Tassuddānaṁ Mūlasusaṁvaradhammadāyādā, Bheravānaṅgaṇākaṅkheyyavatthaṁ; Sallekhasammādiṭṭhisatipaṭṭhaṁ, Vaggavaro asamo susamatto.",
+   "nan-mn10": "如此說：『諸比丘！於此，為有情之淨化、愁悲之超越、苦憂之消滅、正道之到達、涅槃之作證，有此一法，即四念處也。』是緣此而說之也。」 世尊如是說已，彼等比丘歡喜信受世尊之所說。",
+   "MA98": "佛說如是。彼諸比丘聞佛所說，歡喜奉行。念處經第二竟（三千一百三十七字）",
+   "EA12.1": "諸比丘！依一入道眾生得清淨，遠愁憂，無復喜想，便逮智慧，得涅槃證。所謂滅五蓋，修四意止也。」爾時，諸比丘聞佛所說，歡喜奉行。"
+  }
+ }
+}
