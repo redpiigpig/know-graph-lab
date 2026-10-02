@@ -1,0 +1,239 @@
+{
+ "slug": "anaksara-karandaka",
+ "title": "無字寶篋經",
+ "family": "bo",
+ "intro": "梵本已佚，以藏譯 Toh 259（勝友、施戒等校定）＋84000 英譯為骨架；漢譯菩提流支《無字寶篋經》（六世紀前半）、地婆訶羅《大乘離文字普光明藏經》與《大乘遍照光明藏無字法門經》（七世紀末，同一譯者先後兩譯）。勝思惟問三事：菩薩應斷一法、應護一法（「己所不欲，勿施於人」）、如來所覺一法。流支本開頭只問兩事，第二事另起一問；應斷之法各本數目不同（藏、流支各八；離文字本九，多疑惑、憍慢而無無明；遍照本九，多疑惑），遍照本「應護一法」擴為十善。眷屬一段各本所配大士不一（藏譯慈氏與「紹尊位」者俱，地婆訶羅兩本作觀世音），只能整段對讀。",
+ "units": [
+  {
+   "id": "b01",
+   "label": "序：耆闍崛山・諸菩薩功德"
+  },
+  {
+   "id": "b02",
+   "label": "上首菩薩名號"
+  },
+  {
+   "id": "b03",
+   "label": "諸大士各與眷屬俱・日月失光・天龍來集・十方菩薩供養"
+  },
+  {
+   "id": "b04",
+   "label": "勝思惟請問「二字」・佛許"
+  },
+  {
+   "id": "b05",
+   "label": "三問：應斷一法、應護一法、如來所覺一法"
+  },
+  {
+   "id": "b06",
+   "label": "佛讚・許說"
+  },
+  {
+   "id": "b07",
+   "label": "應斷一法：貪、瞋、癡、我見、懈怠、睡眠、愛、無明"
+  },
+  {
+   "id": "b08",
+   "label": "應護一法：己所不欲勿施於人・持一切戒"
+  },
+  {
+   "id": "b09",
+   "label": "如來所覺：無有一法可覺・不生不滅・離二邊"
+  },
+  {
+   "id": "b10",
+   "label": "業與因緣如電光・普光明藏之名"
+  },
+  {
+   "id": "b11",
+   "label": "如幻如焰・自性一味解脫"
+  },
+  {
+   "id": "b12",
+   "label": "一法門：不來不去、非因非緣…不可言說"
+  },
+  {
+   "id": "b13",
+   "label": "聞法得益"
+  },
+  {
+   "id": "b14",
+   "label": "囑羅睺羅・九十億菩薩與四天王誓持"
+  },
+  {
+   "id": "b15",
+   "label": "聞此經者功德：臨終見阿彌陀佛・得宿命・不墮惡道"
+  },
+  {
+   "id": "b16",
+   "label": "五逆者書持讀誦亦不墮惡道・得五眼"
+  },
+  {
+   "id": "b17",
+   "label": "流通"
+  }
+ ],
+ "versions": [
+  {
+   "id": "bo",
+   "lang": "bo",
+   "label": "藏譯",
+   "who": "勝友、施戒、牟尼鎧校定・德格版 Toh 259・84000"
+  },
+  {
+   "id": "en",
+   "lang": "en",
+   "label": "84000 英譯",
+   "who": "譯自藏譯・與藏文逐句對齊"
+  },
+  {
+   "id": "T0828",
+   "lang": "lzh",
+   "label": "流支本",
+   "who": "菩提流支譯《無字寶篋經》・六世紀前半",
+   "work": "T0828"
+  },
+  {
+   "id": "T0829",
+   "lang": "lzh",
+   "label": "離文字普光明藏經",
+   "who": "地婆訶羅譯《大乘離文字普光明藏經》・七世紀末",
+   "work": "T0829"
+  },
+  {
+   "id": "T0830",
+   "lang": "lzh",
+   "label": "遍照光明藏無字法門經",
+   "who": "地婆訶羅再譯《大乘遍照光明藏無字法門經》・七世紀末",
+   "work": "T0830"
+  }
+ ],
+ "works": [
+  "DKtoh0259",
+  "T0828",
+  "T0829",
+  "T0830"
+ ],
+ "anchors": [],
+ "cells": {
+  "b01": {
+   "bo": "༄༅༅། །རྒྱ་གར་སྐད་དུ། ཨཱརྱ་ནཱ་ཀྵ་ར་ཀ་རཎྜ་ཀ་བཻ་རོ་ཙ་ན་གརྦྷ་ནཱ་མ་མ་ཧཱ་ཡཱ་ན་སཱུ་ཏྲ། བོད་སྐད་དུ། འཕགས་པ་ཡི་གེ་མེད་པའི་ཟ་མ་ཏོག་རྣམ་པར་སྣང་མཛད་ཀྱི་སྙིང་པོ་ཞེས་བྱ་བ་ཐེག་པ་ཆེན་པོའི་མདོ། སངས་རྒྱས་དང་བྱང་ཆུབ་སེམས་དཔའ་ཐམས་ཅད་ལ་ཕྱག་འཚལ་ལོ། །འདི་སྐད་བདག་གིས་ཐོས་པ་དུས་གཅིག་ན། བཅོམ་ལྡན་འདས་རྒྱལ་པོའི་ཁབ་ན་བྱ་རྒོད་ཀྱི་ཕུང་པོའི་རི་ལ་དགེ་སློང་གི་དགེ་འདུན་ཆེན་པོ་དང་ཐབས་ཅིག་ཏུ་བཞུགས་སོ། །བྱང་ཆུབ་སེམས་དཔའ་བྱེ་བ་ཁྲག་ཁྲིག་བརྒྱ་སྟོང་དུ་མ་ཐམས་ཅད་ཀྱང་རྒྱ་ཆེན་པོ་ཤེས་པ། ཐབས་ལ་མཁས་པ། གསལ་བ། ལེ་ལོ་མེད་པ། ཡི་གེ་སྒྲུབ་པ་ལ་མཁས་པ། གནས་དང་གནས་མ་ཡིན་པ་ཁོང་དུ་ཆུད་པར་བྱེད་པ། རྣམ་པར་གྲོལ་བ་ཕུན་སུམ་ཚོགས་པ། འདུལ་བའི་མྱུ་གུ་དང་ལྡན་པ། ངོ་ཚ་ཤེས་པའི་ཡན་ལག་དང་ལྡན་པ། སྙིང་རྗེའི་བདག་ ཉིད་ཅན། སེམས་ཅན་ལ་མཉེས་གཤིན་པ། ཏིང་ངེ་འཛིན་མང་པོ་དང་ལྡན་པ། ཤེས་རབ་ཀྱི་ལག་པ་དང་ལྡན་པ། བླ་མ་ལ་སྲི་ཞུ་ཆེ་བ། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་རིན་པོ་ཆེའི་གླིང་དང་མཚུངས་པ། དགེ་བ་དང་མི་དགེ་བ་ཤེས་པ། གཡོ་ཁོང་དུ་ཆུད་པར་བྱེད་པ། ངེས་པའི་ཚིག་དང་སྤོབས་པ་ཟད་མི་ཤེས་པ་དང་། ཟུང་ཁོང་དུ་ཆུད་པར་བྱེད་པ། རྣམ་པར་རྒྱལ་བ་ཐོབ་པ། སེམས་ཅན་ཐམས་ཅད་ལ་ཁོང་དུ་ཆུད་པར་བྱེད་པ། ཡང་དག་པའི་མཐའ་ལས་བྱུང་ཞིང་བརྟེན་པ། ཤིན་ཏུ་དཔའ་བ། གནས་པ་མེད་པ། ཆོས་བླ་མའི་རང་བཞིན་ལ་ངེས་པ། རང་བཞིན་མེད་པའི་ཁྱད་པར་སེམས་པ་སྙིང་པོ་ལ་དཔའ་བ། སྐྱེ་བ་ལ་སྨོད་པའི་སྐྱེས་བུ། ཆོས་ཁོང་དུ་ཆུད་པར་བྱེད་པ། མཚན་གྱི་གཞི་ཤེས་པ། ཡུལ་འཁོར་སྲུང་བ། ཡུལ་འཁོར་སྐྱོང་བ། སྒྲ་གྲགས་པ། རྒྱལ་བའི་སྒྲ་དང་ལྡན་པ། རྣམ་པར་རྒྱལ་བའི་མཛོད་དང་ལྡན་པ། ཡི་གེ་མེད་པའི་སྙིང་པོ་དང་ལྡན་པ། ཤིན་ཏུ་གཉིད་ཀྱིས་མ་ལོག་པ། ཡེ་ཤེས་ཀྱི་ཕུང་པོ་ལ་གཞོལ་བ། རང་གི་ལས་ལ་མངོན་པར་དགའ་བ། རང་གི་རིགས་བསྟེན་པ། ཀུན་ཏུ་བཟང་བ། མཉམ་པ་ཉིད་ལ་དགའ་བ། རྣམ་པར་དག་པ། རང་གི་རྒྱུད་དང་། ཕ་རོལ་གྱི་རྒྱུད་རྣམ་པར་སྦྱོང་བར་བྱེད་པ། རྣམ་པར་རྒྱལ་བ་ཐོབ་པ་ཤ་སྟག་ལ་འདི་ལྟ་སྟེ།",
+   "en": "The Noble Mahāyāna Sūtra The Basket without Words, The Illuminator’s Matrix Homage to all buddhas and bodhisattvas. Thus did I hear at one time. The Blessed One was dwelling in Rājagṛha on Vulture Peak together with a great saṅgha of monastics. There were also many hundred sextillions of bodhisattvas, all with extensive knowledge, skilled in means, lucid, free from laziness, and skilled in their command of words. They comprehended what is correct and what is incorrect. They were completely liberated. Endowed with the bud of discipline and the branch of conscience, they were compassionate by nature and affectionate toward sentient beings. They had attained many meditative concentrations, possessed the hand of insight, and showed great respect to their teachers. They resembled the bodhisattva great being Ratnadvīpa. They knew what was virtuous and nonvirtuous and comprehended deception. They comprehended both semantic elucidation and inexhaustible eloquence. They had attained victory and they engendered comprehension in all sentient beings. They emerged from and relied upon  the limit of reality. Extremely heroic, they had no abode. They were certain about the nature of the highest teachings. Their thoughts distinctly focused on the lack of inherent existence, they were courageous with regard to the matrix. They were beings who despised rebirth. They comprehended phenomena and knew their bases of characterization. They were guardians and protectors of realms. They were renowned. They were endowed with the conqueror’s voice, endowed with the treasury of conquest, and endowed with the matrix without words. Absolutely awake and absorbed in the aggregate of knowledge, they delighted in their own actions and relied on those who were like them. They were good in every way, took delight in equality, and were completely pure. They had purified their own and others’ continuums and attained victory.",
+   "T0828": "如是我聞：一時，婆伽婆住王舍大城耆闍崛山中。時，有無量百千萬億大菩薩眾圍遶如來，皆是大智，善權方便，勇猛精進；善能通達無字法門；善能清淨是處、非處；慚愧解脫羅網所覆，調伏諸根；以慈悲牙、以慚愧牙，愍念眾生；得大三昧，以智為首、善敬智母；猶如寶洲大寶之藏；皆悉善知善、不善法；覺三世事，一切成就；無字辯才，善達二空，得勝妙地；善學諸諦，通達實際；無邊勇健，無所執著；悉能通達自性上法；能善思惟實以不實二種法門；胎藏示生，永離生死；善覺祕密，善知諸相；應護諸國，得大名稱；皆悉復得勝名勝藏；得無言藏，永安隱眠；諸所施為，皆悉善樂；姓名普聞，離於三界；能救三界所住眾生；善覺真如，普示普賢；遍示其身，諸根清淨；善能覺達自身、他身；皆得成就明利智慧。",
+   "T0829": "如是我聞：一時佛在王舍城耆闍崛山中，與大菩薩無量百千億那由他數——皆是大智精進善巧，證無言法獲妙辯才，是處非處不相違反，善調身心具諸解脫，常遊三昧不捨大悲，慚愧為身智慧為首，多所饒益如大寶洲，了知諸法善不善相，不著文字而有言說，於真俗門洞達無礙，深明實際不住其中，善能分別而無所受，雖厭生死常護世間，周遍十方有大名稱，於真妙藏寂然宴息，雖現受身永出三界，而行諸有勉濟眾生，平等教誨志常賢善，平等憐愍心無染著，能令自他莫不清淨，成就如是無量功德——",
+   "T0830": "如是我聞：一時，佛住王舍城耆闍崛山，與大菩薩及比丘僧無量百千億那由他眾俱。其諸菩薩，一切皆得大智善權，悉能通達無字法藏，具樂說辯不違真俗，勇猛精進永離蓋纏，調伏諸根無所執著，憐愍眾生如視一子，愛重實智如大寶洲，慚愧為身定慧為首，以大慈悲而為體性，知善不善、實不實法，照了二空住勝妙地，得大名稱永安隱眠，決定修行最上之法，永離胎藏下劣之身，示現受生守護國土，諸所施為普遍賢善，離於三界能救三界，其行清淨善達自他，皆得具足如是功德。"
+  },
+  "b02": {
+   "bo": "བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་རྣམ་པར་རྒྱལ་བའི་དབྱངས་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་ཆོས་སྒྲོགས་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་རྒྱལ་བའི་གནས་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་ཆོས་སྤྲུལ་པ་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་སྟོང་གི་འབྱུང་གནས་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་སྨོན་ལམ་བརྩེགས་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་ཁྱད་པར་སེམས་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་ས་འཛིན་དང་།",
+   "en": "Together there were the following: the bodhisattva great being Voice of Victory, the bodhisattva great being Dharma Speaker, the bodhisattva great being Conqueror’s Abode, the bodhisattva great being Emanation of the Dharma, the bodhisattva great being Source of a Thousand Attributes,  the bodhisattva great being Aspirations Amassed, the bodhisattva great being Viśeṣacintin, the bodhisattva great being Dharaṇīdhara, the bodhisattva great being Jagatīndhara,  the bodhisattva great being Melodious Song of the Earth, the bodhisattva great being Pratibhānasampad, the bodhisattva great being Supreme Accumulation, the bodhisattva great being Lotus Petal Eyes, the bodhisattva great being Lotus Face, and the bodhisattva great being Maṇicūḍa.",
+   "T0828": "所謂：勝響菩薩、法響菩薩、勝諸分菩薩、法眼菩薩、千相菩薩、辯聚菩薩、勝思惟菩薩、治地菩薩、治地際菩薩、深入地際響菩薩、地響菩薩、具辯菩薩、上積菩薩、華目菩薩、優鉢羅目菩薩、頂髻菩薩、文殊響菩薩。",
+   "T0829": "其名曰：勝思惟菩薩、法震音菩薩、妙身菩薩、法輞菩薩、辯積菩薩、持地菩薩、持世菩薩、大名稱菩薩、具諸辯菩薩、千容相菩薩、功德山菩薩、蓮華眼菩薩、蓮華面菩薩、珠髻菩薩、妙音菩薩。",
+   "T0830": "其名曰：勝思惟菩薩，勝趣行菩薩，妙音菩薩，美音菩薩，辯具菩薩，辯聚菩薩，珠髻菩薩，千輻菩薩，法輞菩薩，法響菩薩，蓮花面菩薩，蓮華眼菩薩，持地菩薩，持世菩薩，聲遍大地菩薩。"
+  },
+  "b03": {
+   "bo": "བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་འགྲོ་བ་འཛིན་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་ དཔའ་ཆེན་པོ་སའི་སྒྲ་དབྱངས་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་སྤོབས་པ་ཕུན་སུམ་ཚོགས་པ་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་ཤིན་ཏུ་བརྩེགས་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་པད་མའི་འདབ་མའི་མིག་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་པད་མའི་གདོང་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་གཙུག་ན་ནོར་བུ་དང་ཐབས་ཅིག་གོ། །བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་འཇམ་པའི་དབྱངས་ནི་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་བགྲང་བ་ལས་འདས་པ་ཐམས་ཅད་ཀྱང་གཞོན་ནུར་གྱུར་པ་ཤ་སྟག་དང་ལྷན་ཅིག །བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་བྱམས་པ་ནི་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་ཐམས་ཅད་ཀྱང་རྒྱལ་ཚབ་ཏུ་གྱུར་པ་གང་གཱའི་ཀླུང་གི་བྱེ་མ་སྙེད་དང་ལྷན་ཅིག ། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་ཁྱད་པར་སེམས་ནི་བརྒྱ་བྱིན་དུ་མ་དང་ལྷན་ཅིག ། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་ཀུན་ཏུ་བཟང་པོ་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་ནམ་མཁའི་སྙིང་པོ་དང་། རྒྱལ་པོ་ཆེན་པོ་བཞི་ནི་འཁོར་ལོས་སྒྱུར་བ་དུ་མ་དག་དང་ལྷན་ཅིག །བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་མཐུ་ཆེན་ཐོབ་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་སྤྱན་རས་གཟིགས་དབང་ཕྱུག་ནི་ཚངས་པ་དུ་མ་དག་དང་ལྷན་ཅིག ། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་མཐོང་བ་དོན་ཡོད་ནི་འཁོར་རྣམ་ཐོས་ཀྱི་བུ་དུ་མ་དག་དང་ལྷན་ཅིག ། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་སྐར་མའི་རྒྱལ་པོ་ནི་འཇིག་རྟེན་སྐྱོང་བ་ལྷག་མ་རྣམས་དང་ལྷན་ཅིག ། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་ཡིད་གཉིས་འཇོམས་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་སྒྲིབ་པ་ཐམས་ཅད་རྣམ་པར་སེལ་བ་ནི་དེ་བཞིན་གཤེགས་པ་བྱང་ཆུབ་སེམས་དཔའི་ཆ་བྱད་འཛིན་པ་དུ་མ་དང་ལྷན་ཅིག ། ཤ་ར་དྭ་ཏིའི་བུ་དང་། མཽད་གལ་གྱི་བུ་དང་། འོད་སྲུང་ཆེན་པོ་ལ་སོགས་པ་དགྲ་བཅོམ་པ་ཐམས་ཅད་དང་ཡང་ལྷན་ཅིག ། བྱང་ཆུབ་ སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་དགེ་མང་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་ཁྱད་པར་སེམས་ནི་ལྷའི་བུ་མོ་སྟོང་ཕྲག་དུ་མ་དག་དང་ལྷན་ཅིག་ཅིང་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་སྨན་གྱི་རྒྱལ་པོ་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་སྨན་ཡང་དག་བྱུང་དང་། ཕྱོགས་བཅུའི་འཇིག་རྟེན་གྱི་ཁམས་གང་གཱའི་ཀླུང་གི་བྱེ་མ་སྙེད་ན་ཟླ་བ་དང་ཉི་མ་རང་གི་གཟི་བརྗིད་སྙེམས་པ་ཇི་སྙེད་པ་དེ་དག་ཐམས་ཅད་བཅོམ་ལྡན་འདས་ག་ལ་བ་དེར་དོང་སྟེ། གང་གི་ཚེ་བཅོམ་ལྡན་འདས་ཀྱི་སྤྱན་སྔར་འཁོད་པ་དེའི་ཚེ་འཛམ་བུའི་ཆུ་བོའི་གསེར་གྱི་མདུན་དུ་སྣག་ཚའི་ཡུག་བཞག་པ་དེ་བཞིན་དུ། ཟླ་བ་དང་ཉི་མ་དེ་དག་བཅོམ་ལྡན་འདས་ཀྱི་སྤྱན་སྔར་ཕྱིར་ཞིང་མི་མཛེས། ཕྱིར་ཞིང་མི་འབར། ཕྱིར་ཞིང་ལམ་མེ་མ་ཡིན། ཕྱིར་ཞིང་ལྷན་ནེ་མ་ཡིན། ཕྱིར་ཞིང་ལྷང་ངེ་མ་ཡིན་ནོ། །སྲེད་མེད་ཀྱི་བུ་ལ་སོགས་པ་ལྷའི་ཚོགས་ཇི་སྙེད་པ་དང་། ཀླུའི་རྒྱལ་པོ་ཆུ་ལྷ་དང་། འཇོག་པོ་དང་། མ་དྲོས་པ་ལ་སོགས་པ་ཀླུའི་རྒྱལ་པོ་འཁོར་དང་བཅས་པ་ཐམས་ཅད་དང་། དྲི་ཟའི་བདག་པོ་ཤིན་ཏུ་ཡིད་དུ་འོང་བ་ནི་དྲི་ཟ་བྱེ་བ་ཕྲག་དུ་མ་དང་ལྷན་ཅིག་ནམ་མཁའ་ལྡིང་གི་རྒྱལ་པོ་དྲི་མ་མེད་པ་ཆེན་པོ་ནི་ནམ་མཁའ་ལྡིང་བྱེ་བ་ཕྲག་བདུན་དང་ལྷན་ཅིག་ཏུ་བཅོམ་ལྡན་འདས་ག་ལ་བ་དེར་དོང་ངོ་། །ཕྱོགས་བཅུའི་འཇིག་རྟེན་གྱི་ཁམས་གང་གཱའི་ཀླུང་གི་བྱེ་མ་སྙེད་ན་བྱང་ཆུབ་སེམས་དཔའ་ཇི་སྙེད་འཁོད་པ་དེ་དག་རང་རང་གི་དེ་བཞིན་གཤེགས་པ་ལས་གནང་བ་མནོས་ཏེ། འཁོར་བཞི་དག་དང་ལྷན་ཅིག་དོང་ནས། བཅོམ་ལྡན་འདས་དང་བྱང་ཆུབ་སེམས་དཔའ་དེ་དག་ལ་ཡང་འཇིག་རྟེན་ལས་འདས་པའི་མཆོད་པ་བྱས་ནས་རང་རང་གི་པད་མའི་སྟན་ལ་འཁོད་དོ།",
+   "en": "The bodhisattva great being Mañjuśrī was also there together with bodhisattva great beings beyond number, all of whom were youthful. The bodhisattva great being Maitreya  was also there together with bodhisattva great beings who were all regents, as many as the grains of sand in the Ganges. The bodhisattva great being Viśeṣacintin was there together with many Śakras. The bodhisattva great being Samantabhadra, the bodhisattva great being Ākāśagarbha, and the Four Great Kings were there together with a multitude of universal monarchs. The bodhisattva great being Mahāsthāmaprāpta and the bodhisattva great being Avalokiteśvara were there together with a multitude of Brahmās. The bodhisattva great being Amoghadarśin was there together with a retinue of a multitude of Vaiśravaṇas. The bodhisattva great being Nakṣatrarāja was there together with the other guardians of the world. The bodhisattva great being Destroyer of Doubt and the bodhisattva great being Sarvanīvaraṇaviṣkambhin were there together with many thus-gone ones bearing the appearance of bodhisattvas. Śāradvatīputra, Maudgalyāyana, Mahākāśyapa, and so forth were there together with all the arhats. The bodhisattva great being Abundant Virtues and the bodhisattva great being Viśeṣacintin  were there together with a multitude of thousands of goddesses. The bodhisattva great being Bhaiṣajyarāja, the bodhisattva great being Arisen from Remedies, and all the Moons and Suns in as many world systems of the ten directions as there are grains of sand in the Ganges, proud of their own splendor, proceeded to where the Blessed One was. When seated in the Blessed One’s presence, it was as if lumps of soot had been placed before gold from the Jambu River—those Moons and Suns were no longer beautiful, no longer blazed, no longer shone, no longer gleamed, and no longer illuminated in the Blessed One’s presence. All the assemblies of gods such as Nārāyaṇa; all the kings of the nāgas such as Varuṇa, Takṣaka, and Anavatapta, together with their retinues; the lord of the gandharvas Sumanāpa together with many tens of millions of gandharvas; and the king of the garuḍas Great Stainless One together with seventy million garuḍas proceeded to the place where the Blessed One was. All the bodhisattvas dwelling in as many world systems of the ten directions as there are grains of sand in the Ganges obtained permission from their respective thus-gone ones and, together with their fourfold assemblies, proceeded there and made supramundane offerings to the Blessed One and to the bodhisattvas and then sat on their respective lotus seats.",
+   "T0828": "如是等菩薩摩訶薩不可算數，皆是童子，皆從他方不可觀察恒河沙等世界來集，一切皆住受法王職太子位處。勝思惟菩薩，無量釋梵之所圍遶。普賢菩薩、虛空藏等，四大神王及有無量轉輪聖王之所圍遶。得大勢至、觀世自在菩薩，無量梵眾之所圍遶。不空見菩薩，多有無量毘沙門王之所圍遶。星宿王菩薩，無量星宿及餘護世之所圍遶。復有破疑菩薩、滅一切障菩薩，自身示現如來之身，無量諸佛之所圍遶，及舍利弗、大目犍連、大迦葉等，一切悉是大阿羅漢。真練菩薩、勝思惟菩薩，無量天女之所圍遶。藥王菩薩、藥上菩薩，無量眷屬之所圍遶。所有十方恒河沙等世界之中諸有日月，自恃威德生我慢者，一切皆悉來向佛所。到佛所已，於如來前，却住一面，即見自身無有光明，猶如聚墨在於閻浮那提金邊。此諸日月，住如來前，不自顯現亦復如是。無心欲住，亦不欲說，無有威德，不能顯現。那羅延等，無量諸天之所圍遶。大神龍神得叉迦阿那婆達多等諸大龍王，無量諸龍之所圍遶。善音乾闥婆王，有無量億乾闥婆眾之所圍遶。無厭足迦樓羅王，亦有七億迦樓羅眾之所圍遶，來至佛所。時，此三千大千世界恒河沙等諸世界中，所有諸菩薩，各於彼處啟請其佛。既請佛已，四眾圍遶，來至娑婆，持出世間諸供養具，來至佛所。彼諸菩薩，供養佛已，各各自坐蓮華座上。",
+   "T0829": "如是等菩薩摩訶薩，皆如童子色相端嚴，於此眾中而為上首。爾時觀自在菩薩與恒河沙等紹尊位者諸菩薩俱；殊勝見菩薩與無央數天帝釋俱；虛空藏菩薩與無量菩薩及無量四天王眾俱；大勢至菩薩與無量億梵天眾俱；遍吉祥菩薩與無量婇女俱；普賢菩薩、不空見菩薩、星宿王菩薩、離疑菩薩、息諸蓋菩薩、藥王菩薩、藥上菩薩，各與無量菩薩眾俱；其中亦有無量諸佛自變其身作菩薩像；尊者舍利弗、摩訶目乾連、摩訶迦葉，如是等大阿羅漢，各與無量聲聞眾俱；那羅延等無量天眾，乃至恒沙國土日月諸天，威光照耀悉來佛所。至佛所已，彼天威光不能復現，猶如聚墨對閻浮金。婆樓那龍王、德叉迦龍王、阿那婆達多龍王、美音乾闥婆王、無擾濁迦樓羅王，各與無量諸眷屬俱，來入此會。十方世界如恒河沙所有菩薩，咸於本土啟請如來，與諸四眾同時到此，各持種種出過世間殊好供養，奉上於佛、諸菩薩已，即於會中坐蓮華座。",
+   "T0830": "如是等菩薩摩訶薩，一切皆是童子像類，於此眾中而為上首，各各與己眷屬等俱。爾時，觀世音菩薩，與無量無數灌頂受職諸菩薩眾之所圍繞；得大勢菩薩，與無量億大梵天眾之所圍繞；勝思惟菩薩，與無量菩薩及天主帝釋之所圍繞；虛空藏菩薩，與無量四天王眾之所圍繞；眾所知識菩薩，與無量婇女之所圍繞；普賢菩薩、離疑菩薩、不空見菩薩、止諸蓋菩薩、無量善巧藥王菩薩、藥上菩薩等，各與無量菩薩大眾之所圍繞；長老舍利弗、摩訶目乾連、摩訶迦葉等，各與一切大阿羅漢之所圍繞；乃至十方恒河沙等一切世界所有日月諸天子等，各以威光來至佛所，以佛神力，彼彼威光不能照曜，猶如聚墨比閻浮金；又有無量那羅延天，及以水天德叉迦龍王、阿那婆達多龍王等，亦與眷屬之所圍繞；美音乾闥婆王，亦與無量乾闥婆眾之所圍繞；無濁迦婁羅王，與七億迦婁羅王眷屬圍繞；乃至十方恒沙世界一切菩薩，各請己佛，與眷屬俱，來至此間娑婆世界，持諸上妙出世供具，供養於佛及菩薩已，各禮佛足却住一面，坐蓮華座瞻仰世尊。"
+  },
+  "b04": {
+   "bo": "།དེ་ནས་བཅོམ་ལྡན་འདས་ལ་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་ཁྱད་པར་སེམས་ཀྱིས་འདི་སྐད་ཅེས་གསོལ་ཏོ། །གལ་ཏེ་བདག་ལ་བཅོམ་ལྡན་འདས་ཀྱིས་གནང་ན་བཅོམ་ལྡན་འདས་ལ་ཡི་གེ་གཉིས་ཤིག་ཞུ་ལགས་སོ། །བཅོམ་ལྡན་འདས་ཀྱིས་བཀའ་སྩལ་པ། ངས་གནང་ གིས་ཁྱད་པར་སེམས་ཁྱོད་ཅི་བསམས་པ་དེ་བཞིན་གཤེགས་པ་ལ་དྲིས་ཤིག ། དེ་བཞིན་གཤེགས་པ་ནི་སེམས་ཅན་གཅིག་གི་དོན་གྱི་ཕྱིར་འདིར་བྱུང་བ་མ་ཡིན་གྱི་ང་ནི་ཁྱེད་ཀྱི་དོན་གྱི་ཕྱིར་འདིར་བྱུང་ངོ་།",
+   "en": "Then the bodhisattva great being Viśeṣacintin said to the Blessed One, “If the Blessed One gives me permission, I would like to ask the Blessed One about two words.” The Blessed One replied, “I give my permission. Therefore, Viśeṣacintin, ask the Thus-Gone One whatever you have in mind. The Thus-Gone One did not appear here for the sake of just anyone's benefit, I appeared here for the sake of your benefit.”",
+   "T0828": "爾時，有菩薩摩訶薩名勝思惟，來至佛所，即白佛言：「世尊！世尊若為聽許我者，我乃敢問如來二字。」爾時，佛告勝思惟菩薩言：「聽汝所問，隨汝意問。如來不為一眾生故，此處成道，乃為汝等諸大龍象，我出於此。」",
+   "T0829": "爾時勝思惟菩薩摩訶薩從座而起，偏袒右肩右膝著地，合掌向佛而作是言：「世尊！我今欲請二字之義，惟願如來垂哀見許。」佛告勝思惟菩薩言：「善男子！欲有問者隨汝意問，如來不為一眾生故出現世間，為欲利益無量眾生而出現耳！」",
+   "T0830": "爾時勝思惟菩薩摩訶薩即從座起，偏袒右肩，右膝著地，合掌向佛，而作是言：「世尊！我為四眾，欲問如來二字之義，惟願如來為我解說，令我等輩咸得利益。」爾時世尊告勝思惟菩薩言：「善男子！如來豈為一眾生故出現於世？乃為利益無量眾生出現於世。善男子！汝今乃能為四眾故，請問於我二字之義。隨汝所問，當為汝說。」"
+  },
+  "b05": {
+   "bo": "།དེ་ནས་བཅོམ་ལྡན་འདས་ལ་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་ཁྱད་པར་སེམས་ཀྱིས་འདི་སྐད་ཅེས་གསོལ་ཏོ། །བཅོམ་ལྡན་འདས་བྱང་ཆུབ་སེམས་དཔས་གང་སྤང་བར་བགྱི་བའི་ཆོས་གཅིག་པོ་དེ་གང་ལགས། བཅོམ་ལྡན་འདས་བྱང་ཆུབ་སེམས་དཔས་གང་བསྲུངས་ན་བསླབ་པའི་གཞི་ཐམས་ཅད་ཡོངས་སུ་བཟུང་བར་འགྱུར་བའི་ཆོས་གཅིག་པོ་དེ་གང་ལགས། བཅོམ་ལྡན་འདས་དེ་བཞིན་གཤེགས་པས་གང་མངོན་པར་རྫོགས་པར་སངས་རྒྱས་པའི་ཆོས་གཅིག་པོ་དེ་གང་ལགས། དེ་སྐད་ཅེས་གསོལ་པ་དང་།",
+   "en": "Then the bodhisattva Viśeṣacintin asked the Blessed One, “Blessed One, what is one factor that bodhisattvas abandon? Blessed One, what is one quality that, when safeguarded by bodhisattvas, encompasses all the foundations of the training? Blessed One, what is one phenomenon to which thus-gone ones have truly and perfectly awakened?”",
+   "T0828": "爾時，勝思惟菩薩白佛言：「世尊！何者一法，而是菩薩所除滅者？何者一法，而是如來所證覺者？」",
+   "T0829": "於是勝思惟菩薩即白佛言：「世尊！何者一法，是諸菩薩所應永離？何者一法，是諸菩薩應常護持？何者一法，是諸如來現所覺了？」",
+   "T0830": "於是勝思惟菩薩蒙佛聽許，白佛言：「世尊！有何等法，菩薩摩訶薩應當除滅及以守護？復有何法，如來克證及以覺知？如是二義惟願為說。」"
+  },
+  "b06": {
+   "bo": "བཅོམ་ལྡན་འདས་ཀྱིས་བྱང་ཆུབ་སེམས་དཔའ་ཁྱད་པར་སེམས་ལ་ལེགས་སོ་ཞེས་བྱ་བ་བྱིན་ཏེ། ཚངས་པ་དེ་སྐད་སྨྲ་བ་ནི་ལེགས་སོ་ལེགས་སོ། །རིགས་ཀྱི་བུ་དེ་བཞིན་གཤེགས་པའི་བྱིན་གྱི་རླབས་ཀྱིས་སྤོབས་པ་འདི་ལྟ་བུ་བྱུང་ངོ་། །རིགས་ཀྱི་བུ་དེ་བཞིན་གཤེགས་པས་བྱིན་གྱིས་བརླབས་པ་མ་མཛད་ན། དེ་བཞིན་གཤེགས་པ་ལ་སུ་ཡང་ཞུ་བ་འདི་ལྟ་བུ་ཞུ་བར་མི་འགྱུར་རོ། །ཁྱད་པར་སེམས་དེའི་ཕྱིར་ཁྱོད་ལེགས་པར་རབ་ཏུ་ཉོན་ལ་ཡིད་ལ་ཟུང་ཤིག་དང་ངས་ཁྱོད་ལ་བཤད་དོ། །བཅོམ་ལྡན་འདས་ཀྱིས་དེ་སྐད་ཅེས་བཀའ་སྩལ་ནས། བྱང་ཆུབ་སེམས་དཔའ་ཁྱད་པར་སེམས་ཀྱིས་བཅོམ་ལྡན་འདས་ཀྱི་ལྟར་ཉན་པ་དང་།",
+   "en": "Questioned in this way, the Blessed One gave his approval to the bodhisattva Viśeṣacintin. “ Brahmā,  the words you have spoken are excellent, excellent! Child of a good family, such eloquence arises through the Thus-Gone One’s blessing. Child of a good family, if the Thus-Gone One did not bestow blessings, no one would ask the Thus-Gone One such questions. Viśeṣacintin, because of that, you should listen very carefully and keep this in mind. I will explain this to you.” After the Blessed One said this, the bodhisattva Viśeṣacintin listened to the Blessed One accordingly.",
+   "T0828": "爾時，世尊讚勝思惟菩薩摩訶薩言：「善哉，善哉！梵天！汝已淳熟無量善根，諸佛加持問此句義。善男子！汝今諦聽，善思念之，我為汝說。」爾時，勝思惟菩薩禮如來足，頂戴而受。",
+   "T0829": "佛言：「善哉善哉！善男子！汝以如來威神之力，乃能問我如是深義。諦聽諦聽，善思念之！當為汝說。",
+   "T0830": "爾時，佛讚勝思惟言：「善哉，善哉！善男子！汝已成就無量福慧，復為如來加威神力，乃能問我如是之義。諦聽，諦聽！善思念之！吾當為汝分別解說。"
+  },
+  "b07": {
+   "bo": "བཅོམ་ལྡན་འདས་ཀྱིས་དེ་ལ་འདི་སྐད་ཅེས་བཀའ་སྩལ་ཏོ། །རིགས་ཀྱི་བུ་བྱང་ཆུབ་སེམས་དཔས་ཆོས་གཅིག་གང་སྤང་བར་བྱ་བའི་ཆོས་གཅིག་པོ་གང་ཞེ་ན། འདི་ལྟ་སྟེ། འདོད་ཆགས་ཀྱི་ཆོས་ཏེ། རིགས་ཀྱི་བུ་འདི་ནི་སྤང་བར་བྱ་བའི་ཆོས་གཅིག་གོ། །ཡང་སྤང་བར་བྱ་བའི་ཆོས་གཅིག་སྟེ། འདི་ལྟར་ཞེ་སྡང་གི་ཆོས་ཏེ། འདི་ནི་སྤང་བར་བྱ་བའི་ཆོས་གཅིག་གོ། །ཡང་སྤང་བར་བྱ་བའི་ཆོས་གཅིག་སྟེ། འདི་ལྟར་གཏི་མུག་གི་ཆོས་ཏེ། འདི་ནི་སྤང་བར་བྱ་བའི་ཆོས་གཅིག་གོ། །ཡང་སྤང་བར་བྱ་བའི་ ཆོས་གཅིག་སྟེ། འདི་ལྟར་བདག་ཏུ་འཛིན་པ་སྟེ། འདི་ནི་སྤང་བར་བྱ་བའི་ཆོས་གཅིག་གོ། །ཡང་སྤང་བར་བྱ་བའི་ཆོས་གཅིག་སྟེ། འདི་ལྟར་ལེ་ལོ་སྟེ། འདི་ནི་སྤང་བར་བྱ་བའི་ཆོས་གཅིག་གོ། །ཡང་སྤང་བར་བྱ་བའི་ཆོས་གཅིག་སྟེ། འདི་ལྟར་རྨུགས་པ་དང་གཉིད་དེ། འདི་ནི་སྤང་བར་བྱ་བའི་ཆོས་གཅིག་གོ། །ཡང་སྤང་བར་བྱ་བའི་ཆོས་གཅིག་སྟེ། འདི་ལྟར་སྲེད་པ་སྟེ། འདི་ནི་སྤང་བར་བྱ་བའི་ཆོས་གཅིག་གོ། །རིགས་ཀྱི་བུ་ཡང་བྱང་ཆུབ་སེམས་དཔའ་སྤང་བར་བྱ་བའི་ཆོས་གཅིག་སྟེ། འདི་ལྟར་མ་རིག་པ་སྟེ། རིགས་ཀྱི་བུ་འདི་ནི་བྱང་ཆུབ་སེམས་དཔས་སྤང་བར་བྱ་བའི་ཆོས་གཅིག་གོ།",
+   "en": "The Blessed One said to him, “Child of a good family, someone may ask, ‘What is one factor that bodhisattvas should abandon?’ It is the quality of attachment. Child of a good family, this is one factor that should be abandoned. Moreover, one factor that should be abandoned is the quality of anger. This is one factor that should be abandoned. Moreover, one factor that should be abandoned is the quality of delusion. This is one factor that should be abandoned. Moreover, one factor that should be abandoned is grasping at a self. This is one factor that should be abandoned. Moreover, one factor that should be abandoned is laziness. This is one factor that should be abandoned. Moreover, one factor that should be abandoned is lethargy and sleepiness. This is one factor that should be abandoned. Moreover, one factor that should be abandoned is craving. This is one factor that should be abandoned. Child of a good family, moreover, one factor that bodhisattvas should abandon is ignorance. Child of a good family, this is one factor that bodhisattvas should abandon.  “",
+   "T0828": "佛言：「善男子！有一種法，菩薩應滅，所謂貪法。善男子！此是一法，應當永滅。善男子！復有一法，菩薩應滅，所謂瞋法。善男子！此是一法，應當永滅。善男子！復有一法，菩薩應滅，所謂癡法。善男子！此是一法，應當永滅。善男子！復有一法，菩薩應滅，所謂我見。善男子！此是一法，應當永滅。善男子！復有一法，菩薩應滅，所謂懈怠。善男子！此是一法，應當永滅。善男子！復有一法，菩薩應滅，所謂睡眠。善男子！此是一法，應當永滅。善男子！復有一法，菩薩應滅，所謂貪愛。善男子！此是一法，應當永滅。善男子！菩薩復應除滅一法，所謂無明。善男子！此是一法，應當永滅。」",
+   "T0829": "「善男子！有一種法菩薩應離，所謂欲貪。善男子！如是一法是諸菩薩所應永離。善男子！復有一法菩薩應離，所謂瞋怒，如是一法是諸菩薩所應永離。善男子！復有一法菩薩應離，所謂愚癡，如是一法是諸菩薩所應永離。善男子！復有一法菩薩應離，所謂我取。善男子！復有一法菩薩應離，所謂疑惑。善男子！復有一法菩薩應離，所謂憍慢。善男子！復有一法菩薩應離，所謂懈怠。善男子！復有一法菩薩應離，所謂惛眠。善男子！復有一法菩薩應離，所謂愛著。善男子！如是一法，是諸菩薩所應永離。",
+   "T0830": "「善男子！有一種法，菩薩摩訶薩應當除滅。何等一法？所謂欲貪。如是一法，菩薩摩訶薩應當除滅。善男子！復有一法，菩薩摩訶薩應當除滅。何等一法？所謂瞋恚。如是一法，菩薩摩訶薩應當除滅。善男子！復有一法，菩薩摩訶薩應當除滅。何等一法？所謂愚癡。如是一法，菩薩摩訶薩應當除滅。善男子！復有一法，菩薩摩訶薩應當除滅。何等一法？所謂我執。如是一法，菩薩摩訶薩應當除滅。善男子！復有一法，菩薩摩訶薩應當除滅。何等一法？所謂懈怠。如是一法，菩薩摩訶薩應當除滅。善男子！復有一法，菩薩摩訶薩應當除滅。何等一法？所謂睡眠。如是一法，菩薩摩訶薩應當除滅。善男子！復有一法，菩薩摩訶薩應當除滅。何等一法？所謂染愛。如是一法，菩薩摩訶薩應當除滅。善男子！復有一法，菩薩摩訶薩應當除滅。何等一法？所謂疑惑。如是一法，菩薩摩訶薩應當除滅。善男子！復有一法，菩薩摩訶薩應當除滅。何等一法？所謂無明。如是一法，菩薩摩訶薩應當除滅。善男子！如上所說如是等法，菩薩摩訶薩應當除滅。"
+  },
+  "b08": {
+   "bo": "།རིགས་ཀྱི་བུ་གང་བྱང་ཆུབ་སེམས་དཔས་རྟག་པར་རྒྱུན་དུ་མངོན་པར་བསྲུང་བར་བྱ་བའི་ཆོས་གཅིག་པོ་དེ་གང་ཞེ་ན། རིགས་ཀྱི་བུ་བྱང་ཆུབ་སེམས་དཔས་གང་བདག་མི་འདོད་པ་དེ་གཞན་དག་ལ་མི་བྱའོ། །རིགས་ཀྱི་བུ་བྱང་ཆུབ་སེམས་དཔའ་གང་ལ་ལ་ཞིག་ཆོས་གཅིག་པོ་དེ་སྲུང་ན། དེས་དེ་བཞིན་གཤེགས་པའི་བསླབ་པའི་གཞི་ཐམས་ཅད་བསྲུངས་པར་འགྱུར་རོ། །དེ་ཅིའི་ཕྱིར་ཞེ་ན། རིགས་ཀྱི་བུ་གང་བདག་གི་སྲོག་ཕངས་པར་འཛིན་པ་དེ་སྲོག་མི་གཅོད་དོ། །གང་བདག་གི་ནོར་ཕངས་པར་འཛིན་པ་དེ་མ་བྱིན་པར་མི་ལེན་ཏོ། །གང་བདག་གི་ཆུང་མ་ཕངས་པར་འཛིན་པ་དེ་གཞན་གྱི་ཆུང་མའི་གན་དུ་མི་འགྲོའོ། །རིགས་ཀྱི་བུ་དེ་ལ་སོགས་ཏེ། གང་ལ་ལ་ཞིག་འདི་སྙམ་དུ་དེ་བཞིན་གཤེགས་པའི་བཀའ་བཞིན་དུ་བྱའོ་སྙམ་དུ་སེམས་པ་དེས་ཆོས་གཅིག་པོ་འདི་བསྲུང་བར་བྱའོ་ཞེས་བཤད་དོ། །དེ་ཅིའི་ཕྱིར་ཞེ་ན། རིགས་ཀྱི་བུ་གང་ལ་ལ་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་དོན་དུ་གཉེར་བ་དེ་དག་ཐམས་ཅད་ནི་རང་གི་བདེ་བའི་རྒྱུར་དོན་དུ་གཉེར་གྱི། །སུ་ཡང་བདག་སྡུག་བསྔལ་བ་མི་འདོད་དེ། འགྲོ་བ་ནི་བདེ་བ་འདོད་ཅེས་བྱ་བའི་ཐ་ཚིག་གོ། །གང་ཁྱེད་ཅག་མི་འདོད་པ་དེ་གཞན་དག་ལ་མ་བྱེད་ཅིག་ཅེས་ང་སྨྲའོ། །རིགས་ཀྱི་བུ་འདི་ནི་གང་བྱང་ཆུབ་སེམས་དཔས་རྟག་པར་རྒྱུན་དུ་མངོན་པར་བསྲུང་བར་བྱ་བའི་ཆོས་གཅིག་གོ།",
+   "en": "Child of a good family, someone may ask, ‘What is one quality that bodhisattvas should constantly and continuously safeguard?’ Child of a good family, whatever bodhisattvas do not desire, they should not do to others. Child of a good family, those bodhisattvas who safeguard this one quality will thereby safeguard all the foundations of the thus-gone ones’ training. Why is this so? Child of a good family, whoever values their own life does not kill. Whoever values their own wealth does not take what has not been given. Whoever values their wife does not approach another’s wife. Child of a good family, I have explained that those who think in these or similar ways and understand, 'I should act in accordance with the Thus-Gone One’s teachings,\" should safeguard this one quality. “ Why is this so? Child of a good family, all those who seek unsurpassed, perfect, and complete awakening seek the causes  of their own happiness. That means that no one desires their own suffering; beings desire happiness. I say, ‘Do not do to others what you do not desire.’ Child of a good family, this is one quality that bodhisattvas should constantly and continuously safeguard. “",
+   "T0828": "爾時，勝思惟梵天白佛言：「世尊！何者是一法，而諸菩薩日夜防護？」爾時，世尊語勝思惟菩薩言：「善男子！所謂菩薩，己所不欲，勿勸他人。善男子！若有善男子、善女人，護持此法，彼善男子、善女人，護持如來一切戒藏。何以故？善男子！愛自命者則不殺生、愛自財者不盜他物、愛自妻者不侵他妻。善男子！是等眾生，發如是意，言『我敬順如來正教。』彼善男子，常當勤心防護此法。以何義故？善男子！若有善男子、善女人，欲求無上正真等覺大菩提者，彼人悉是為樂故求，而無有求自身苦者，世間惟有樂受樂者。以是義故，我說此言。汝等當知，己所不欲，勿勸他人。善男子！此是一法，菩薩常當日夜護之。",
+   "T0829": "「善男子！汝復問我：『何者一法，是諸菩薩應常護持？』善男子！謂諸菩薩非己所安不加於物。若諸菩薩守護此法，即是能持諸佛如來一切禁戒。何以故？自愛身命不應殺生；自重資財不應偷盜；自護妻室不應侵他。如是等行皆名一法。善男子！若有敬順如來語者，於此一法常當憶念。何以故？無有眾生愛樂於苦，凡有所作悉求安樂，乃至菩薩求阿耨多羅三藐三菩提亦為自他皆得樂故。善男子！以如是義我說此言，非己所安不加於物，如是一法是諸菩薩應常護持。",
+   "T0830": "「善男子！汝問於我，復有何法，菩薩摩訶薩應守護者，今為汝說。善男子！有一種法，菩薩摩訶薩常當守護。何等一法？所謂己所不欲，勿勸他人。如是一法，菩薩摩訶薩常應守護。何以故？若菩薩摩訶薩守護此法，即是守護諸佛如來一切戒藏。如諸菩薩，自愛命者則不應殺，自愛財者則不應盜，自愛妻者不應侵他，自愛實語不應誑彼，自愛和合不應間他，自愛正直不應邪綺，自愛柔軟不應惡罵，自愛止足終不於他而生貪欲，自愛仁恕終不於他而生瞋恚，自愛正見終不教他令生邪見。善男子！如是菩薩發意說言，『我今敬順如來正教，應當勤心守護此法』，是名菩薩摩訶薩守護一法。善男子！我見如是諸菩薩等，欲求無上大菩提者，悉為樂故而求菩提，無有為苦求之者也。善男子！是故我說己所不欲，勿勸他人。如是等法，菩薩摩訶薩應當守護。」"
+  },
+  "b09": {
+   "bo": "།རིགས་ཀྱི་བུ་ གང་དེ་བཞིན་གཤེགས་པས་མངོན་པར་རྫོགས་པར་སངས་རྒྱས་པའི་ཆོས་གཅིག་པོ་དེ་གང་ཡིན་ཞེས་དེ་སྐད་ཟེར་བ་ནི་རིགས་ཀྱི་བུ་གང་དེ་བཞིན་གཤེགས་པས་མངོན་པར་རྫོགས་པར་སངས་རྒྱས་པའི་ཆོས་གཅིག་པོ་དེ་གང་ཡང་མེད་དོ། །རིགས་ཀྱི་བུ་གང་ལ་ཆོས་གང་ཡང་རྟོགས་པ་མེད་པ་དེ་དེ་བཞིན་གཤེགས་པས་མངོན་པར་རྫོགས་པར་སངས་རྒྱས་པའོ། །རིགས་ཀྱི་བུ་ཡང་དེ་བཞིན་གཤེགས་པས་ཆོས་ཐམས་ཅད་མ་སྐྱེས་པར་ཐུགས་སུ་ཆུད་དོ། །དེ་བཞིན་གཤེགས་པས་ཆོས་ཐམས་ཅད་འགགས་པ་མེད་པར་ཐུགས་སུ་ཆུད་དོ། །རིགས་ཀྱི་བུ་ཡང་དེ་བཞིན་གཤེགས་པས་ཆོས་ཐམས་ཅད་མཐའ་གཉིས་ལས་གྲོལ་བར་ཐུགས་སུ་ཆུད་དོ། །རིགས་ཀྱི་བུ་དེ་བཞིན་གཤེགས་པས་ཆོས་ཐམས་ཅད་མ་བྱུང་བར་ཐུགས་སུ་ཆུད་དོ།",
+   "en": "Child of a good family, someone may ask, ‘What is one phenomenon to which thus-gone ones have truly and perfectly awakened?’ Child of a good family, there is no one phenomenon to which thus-gone ones have truly and perfectly awakened. Child of a good family, without any phenomenon whatsoever to realize,  thus-gone ones have truly and perfectly awakened. “ Child of a good family, thus-gone ones also comprehend that all phenomena are unborn. Thus-gone ones comprehend that all phenomena are without cessation. Child of a good family, thus-gone ones also comprehend that all phenomena are free from the two extremes. Child of a good family, thus-gone ones comprehend that all phenomena are unarisen.",
+   "T0828": "「善男子！如汝所問，何者一法，而是如來所證覺者。善男子！無有一法，如來所覺。善男子！於法無覺，是如來覺。善男子！一切法不生，而如來證覺，一切法不滅，而如來證覺。「復次，善男子！法性離二邊，而如來證覺。一切法不實，而如來證覺。",
+   "T0829": "「善男子！如汝所問：『何者一法，是諸如來現所覺了？』善男子！無有少法是如來覺。何以故？如來覺者無所覺故。善男子！一切法無生是如來覺；一切法無滅是如來覺；一切法離二邊是如來覺；一切法不實是如來覺。",
+   "T0830": "爾時勝思惟菩薩復白佛言：「世尊！何等之法，如來克證及以覺知？惟願為我開演其義。」佛言：「善男子！無有一法而是如來所覺所證。何以故？於諸法中無覺無證，此是如來所證所覺。善男子！一切諸法本無有法，如來覺證；一切諸法本無有滅，如來覺證；一切諸法性離二邊，如來覺證；一切諸法本無有實，如來覺證。"
+  },
+  "b10": {
+   "bo": "།རིགས་ཀྱི་བུ་དེ་བཞིན་གཤེགས་པས་ལས་བདག་གིར་བྱ་བར་ཐུགས་སུ་ཆུད་དོ། །དེ་བཞིན་གཤེགས་པས་ཆོས་ཐམས་ཅད་རྒྱུ་དང་རྐྱེན་ལས་རག་ལས་པར་ཐུགས་སུ་ཆུད་དོ། །རིགས་ཀྱི་བུ་དེ་བཞིན་གཤེགས་པས་རྒྱུ་དང་རྐྱེན་ནི་གློག་དང་འདྲ་བར་ཐུགས་སུ་ཆུད་དོ། །དེ་བཞིན་གཤེགས་པས་རྒྱུ་དང་རྐྱེན་མེད་པ་ལས་སྐྱེ་བ་མེད་པར་ཐུགས་སུ་ཆུད་དོ། །དེ་ལྟར་དེ་བཞིན་གཤེགས་པས་རྣམ་པར་སྣང་མཛད་ཀྱི་སྙིང་པོའི་ཆོས་ཉིད་ཐུགས་སུ་ཆུད་དོ། །ཅིའི་ཕྱིར་ཡོངས་སུ་རྟོག་པ་དག་རྣམ་པར་སྣང་མཛད་ཀྱི་སྙིང་པོ་ཞེས་སྨྲ་ཞེ་ན། རིགས་ཀྱི་བུ་འཇིག་རྟེན་པ་དང་། འཇིག་རྟེན་ལས་འདས་པའི་ཡེ་ཤེས་ལ་སོགས་པ་གང་དག་ཅི་འབྱུང་བའི་མངལ་དེ་ཡིན་པའི་ཕྱིར་རོ། །གང་གི་ཚེ་ཡེ་ཤེས་དེའི་རང་བཞིན་ལ་ཡོངས་སུ་རྟོག་པ་དེའི་ཚེ་ཤེས་རབ་ཀྱི་ཕ་རོལ་ཏུ་ཕྱིན་པའི་མངལ་དུ་ཆུད་པ་ཡིན་ཏེ། དེའི་ཚེ་རྣམ་པར་སྣང་མཛད་ཀྱི་སྙིང་པོ་ཞེས་བྱ་བའི་མིང་འཐོབ་བོ།",
+   "en": "Child of a good family, thus-gone ones comprehend the appropriation of karma. Thus-gone ones comprehend that all phenomena depend on causes and conditions. Child of a good family, thus-gone ones comprehend that causes and conditions are like lightning. Thus-gone ones comprehend that there is no birth without causes and conditions. In this way, thus-gone ones comprehend the true nature that is the illuminator’s matrix. “ Someone may ask, ‘Why are these realizations  called the illuminator’s matrix?’ Child of a good family, this is because they are the womb from which all mundane and supramundane wisdom and so forth arises. When one examines the nature of that wisdom, then one enters the womb of the perfection of wisdom. That is called the illuminator’s matrix. “",
+   "T0828": "善男子！如來善說業因緣，如來善證業因緣，一切法因緣所縛，而如來善覺。善男子！彼因緣者，猶如電光，而如來所覺，離因離緣。如來說言，無有業報，既成正覺而受之也。一切法廣博嚴藏，是如來所證。善男子！以何義故，說廣博嚴藏？善男子！所有世間、出世間智等，彼從何生？若彼智以真實觀正觀察時，般若波羅蜜轉為甚深，彼法爾時得名為藏。",
+   "T0829": "善男子！諸業自性是如來覺；一切法從因緣生是如來覺；因緣之法猶如電光是如來覺；以因緣故而有諸業是如來覺。善男子！一切法性普光明藏是如來覺。善男子！何故法性名普光明藏？善男子！世出世智依之以生，如母懷子，故名為藏。若智生時反照其本，如是法性為般若波羅蜜之所攝藏，是故名為普光明藏。",
+   "T0830": "「復次善男子！一切諸法，皆從自業因緣力故而得生起；而是因緣，念念不住猶如電光，如是業緣，如來覺證。是故我說以因緣故而諸法生，以因緣故而諸法滅，若離因緣，則無業報。如是等事，如來覺知。善男子！如是所覺一切法性，是名遍照光明之藏。善男子！何故法性名之為藏？以諸眾生世出世智，皆依此藏而得生故。如以實智觀彼法性，智依彼生，故名為藏。"
+  },
+  "b11": {
+   "bo": "།རིགས་ཀྱི་བུ་ཡང་དེ་བཞིན་གཤེགས་པས་ཆོས་ཐམས་ཅད་སྒྱུ་མ་དང་སྨིག་རྒྱུ་དང་འདྲ་བར་ཐུགས་སུ་ཆུད་དོ། །དེ་བཞིན་གཤེགས་པས་རང་བཞིན་གྱིས་རྣམ་པར་གྲོལ་བའི་རང་གི་ཆོས་ཉིད་ཐུགས་སུ་ཆུད་དོ། །རྣམ་པར་གྲོལ་བ་གང་ཡིན་པ་དེ་རྣམ་པར་སྣང་ མཛད་ཀྱི་སྙིང་པོའི་ཆོས་ཉིད་དོ།",
+   "en": "Child of a good family, thus-gone ones also comprehend that all phenomena are like a magician’s illusions and like mirages. Thus-gone ones comprehend their own true nature  that is naturally liberated. That which is liberated is the true nature of the illuminator’s matrix. “",
+   "T0828": "「善男子！我亦復說一切諸法如幻如焰，是佛所覺。性相一味解脫之法，是佛所覺。所有性相一味解脫，是一切法廣博嚴藏。",
+   "T0829": "善男子！一切法如幻如焰是如來覺。善男子！諸法實性一味解脫是如來覺，一味解脫是即名為普光明藏。",
+   "T0830": "「復次善男子！我亦復說一切諸法如幻如焰，如水中月，如是等事，如來覺證；又善男子！諸法性相，一味解脫，如是等事，如來覺證。善男子！如是解脫一味法性，是名遍照光明之藏。"
+  },
+  "b12": {
+   "bo": "།རིགས་ཀྱི་བུ་ཡང་དེ་བཞིན་གཤེགས་པས་ཆོས་ཀྱི་སྒོ་གཅིག་ཐུགས་སུ་ཆུད་དེ། རིགས་ཀྱི་བུ་གང་ལ་འགྲོ་བ་མེད་པ་དང་། འོང་བ་མེད་པ་དང་། རྒྱུ་མེད་པ་དང་། རྐྱེན་མེད་པ་དང་། འཆི་འཕོ་མེད་པ་དང་། སྐྱེ་བ་མེད་པ་དང་། བླང་བ་མེད་པ་དང་། དོར་བ་མེད་པ་དང་། འགྲིབ་པ་མེད་པ་དང་། འཕེལ་བ་མེད་པ་དང་། རིགས་ཀྱི་བུ་གང་རང་བཞིན་གྱིས་རང་བཞིན་མེད་དེ། གང་ལ་དཔེར་བྱ་བར་མི་ནུས་པ་དང་། གང་ཡི་གེ་དང་ངེས་པའི་ཚིག་གིས་བརྗོད་པར་མི་ནུས་པའི་ཆོས་ཀྱི་སྒོ་གཅིག་པོ་དེ་དེ་བཞིན་གཤེགས་པས་ཐུགས་སུ་ཆུད་དོ།",
+   "en": "Child of a good family, thus-gone ones also comprehend the single gateway of the Dharma. Child of a good family, that which is without going, without coming, without causes, without conditions, without death and transmigration, without birth, without acceptance, without rejection,  without decrease, and without increase; and, child of a good family, what is naturally natureless, what cannot be indicated by analogy, what cannot be expressed by words or language—that single gateway of the Dharma is comprehended by the thus-gone ones.”",
+   "T0828": "「善男子！若善男子、善女人，復有一法，是佛所覺。善男子！所謂：諸法不去不來、無因無緣、無生無滅、無思不思、無增無減。善男子！若法畢竟自性法性非是自性，若法譬喻所不可說，若以名字亦不可說，此是一法如來所覺。」",
+   "T0829": "善男子！一相法是如來覺。云何一相？所謂諸法不來不去、非因非緣、不生不滅、無取無捨、不增不減。善男子！諸法自性本無所有不可為喻，非是文詞之所辯說。如是一法，是諸如來現所覺了。」",
+   "T0830": "「復次善男子！又有一法如來覺證。何等一法？所謂諸法不生不滅、不增不減、不來不去、不取不捨、非因非緣。如是等法，如來覺證。「復次善男子！如來了知一切諸法無有自性，不可為喻，無有文字之所辯說。如是之法，如來覺證。善男子！如上所說如是之法，悉是如來所覺所證。」"
+  },
+  "b13": {
+   "bo": "།བཀོད་པའི་རྒྱལ་པོ་བསྟན་པ་ཡི་གེ་མེད་པའི་ཟ་མ་ཏོག་རྣམ་པར་སྣང་མཛད་ཀྱི་སྙིང་པོའི་ཆོས་ཀྱི་རྣམ་གྲངས་འདི་བཤད་པ་ན་ས་བཅུ་ལ་གནས་པའི་བྱང་ཆུབ་སེམས་དཔའི་མིག་ལ་རྡུལ་ཕྲ་རབ་ཇི་སྙེད་སྣང་བར་འགྱུར་བ་དེ་སྙེད་ཀྱི་སེམས་ཅན་རྣམས་ཀྱིས་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་ཏུ་སེམས་བསྐྱེད་དོ། །དེ་སྙེད་གཅིག་གིས་དགྲ་བཅོམ་པ་ཉིད་མངོན་དུ་བྱས་སོ། །དེ་བས་ཆེས་མང་བའི་སེམས་ཅན་དག་སེམས་ཅན་དམྱལ་བ་ནས་ཤི་འཕོས་ནས་ལྷ་དང་མིར་སྐྱེས་སོ། །བྱང་ཆུབ་སེམས་དཔའ་དུ་མ་ནི་ས་ཐོབ་པར་གྱུར་ཏོ། །བྱང་ཆུབ་སེམས་དཔའ་དུ་མ་ནི་ཏིང་ངེ་འཛིན་བརྒྱ་སྟོང་མངོན་དུ་གྱུར་ཏོ། །མང་དུ་ཅི་དགོས་ཏེ་གཏམ་འདི་ནི་སུ་ལ་ཡང་དོན་མེད་པར་མ་གྱུར་ཏོ།",
+   "en": "When the teaching of the king of arrays, this Dharma discourse on the basket without words, the illuminator’s matrix, was explained,  as many sentient beings as the minute particles that would appear to the eyes of a bodhisattva abiding on the tenth ground generated the mind of unsurpassed, perfect, and complete awakening. The same number attained arhatship. Moreover, an even greater number of sentient beings than that died and transmigrated from among the hell beings and were born as humans and gods. Many bodhisattvas attained the grounds. Many bodhisattvas actualized hundreds of thousands of meditative concentrations. Many found that due to this discourse they did not lack anything they needed.",
+   "T0828": "說此廣嚴上王無字寶篋光嚴法門時，乃至得住十地菩薩，有微塵數眼不覩者，如是等眾，皆得阿耨多羅三藐三菩提心。如是等眾生，證阿羅漢果。復過此數眾生，捨地獄苦，生於天中。無量諸菩薩現百千萬諸三昧門。何況多說而無利益。",
+   "T0829": "當佛說此莊嚴王離文字普光明藏法門之時，有十地菩薩所見微塵數眾生，悉發阿耨多羅三藐三菩提心；復有如是微塵數眾生，皆發聲聞、辟支佛心；復有如是微塵數眾生，在地獄者皆得離苦生人天中；無量菩薩得入初地，無量菩薩得百千三昧；無量眾生悉蒙利益，無空過者。",
+   "T0830": "當佛說此遍照光明藏無字法時，有微塵數諸菩薩等得住十地；又有無量諸菩薩等住於諸地；又有無量諸菩薩等證得百千諸大三昧；又有無量塵數眾生發阿耨多羅三藐三菩提心；又有無量無邊眾生得阿羅漢果；又有無量無邊眾生得脫地獄、餓鬼、畜生種種諸苦，生人天中受勝妙樂；諸在會眾悉不唐捐，無有一人而空過者。"
+  },
+  "b14": {
+   "bo": "།དེ་ནས་བཅོམ་ལྡན་འདས་ཀྱིས་ཚེ་དང་ལྡན་པ་སྒྲ་གཅན་ཟིན་ལ་བཀའ་སྩལ་པ། སྒྲ་གཅན་ཟིན་ཁྱོད་ངའི་ཆོས་ཀྱི་ཚུལ་འདི་གཟུང་བར་སྤྲོ་བར་གྱིས་ཤིག ། བཅོམ་ལྡན་འདས་ཀྱིས་བཀའ་སྩལ་མ་ཐག་ཏུ་སངས་རྒྱས་ཀྱི་མཐུས་འཁོར་དེ་ནས་བྱང་ཆུབ་སེམས་དཔའ་བྱེ་བ་ཕྲག་དགུ་སྟན་ལས་ལངས་ཏེ། བཅོམ་ལྡན་འདས་ལ་འདི་སྐད་ཅེས་གསོལ་ཏོ། །བཅོམ་ལྡན་འདས་དེ་བཞིན་གཤེགས་པའི་ཆོས་ཀྱི་ཚུལ་འདི་བདག་ཅག་གིས་གཟུང་བར་བགྱིའོ། །སླད་མའི་ཚེ་སླད་མའི་དུས་ན་བྱང་ཆུབ་སེམས་དཔའི་སྣོད་དུ་འཚལ་བར་བགྱིས་ལ། འཇིག་རྟེན་གྱི་ཁམས་མི་མཇེད་དུ་ཡང་དག་པར་བཤད་པར་ བགྱིའོ། །རྒྱལ་པོ་ཆེན་པོ་བཞིས་བཅོམ་ལྡན་འདས་ལ་འདི་སྐད་ཅེས་གསོལ་ཏོ། །བཅོམ་ལྡན་འདས་བདག་ཅག་གིས་གང་དག་འདི་ལྟ་བུའི་ཆོས་ཀྱི་སྣོད་དུ་གྱུར་པ་འབྱུང་བར་འགྱུར་བའི་བྱང་ཆུབ་སེམས་དཔའ་དེ་དག་གི་བསམ་པ་ཐམས་ཅད་ཡོངས་སུ་རྫོགས་པར་བགྱིའོ།",
+   "en": "Then the Blessed One said to Venerable Rāhula, “Rāhula, you should remember this Dharma instruction of mine enthusiastically.” Immediately after the Blessed One spoke, by the power of the Buddha, ninety million bodhisattvas from that retinue arose from their seats and said to the Blessed One, “Blessed One, we will remember this Dharma instruction of the Thus-Gone One. At a later time, in the future, we will explain it well in the Sahā world to those who seek the Bodhisattva Collection.” The Four Great Kings said to the Blessed One, “Blessed One, we will fulfill all the wishes of those bodhisattvas who become vessels of teachings like this.”",
+   "T0828": "爾時，佛告羅睺羅言：「汝能受持我此所說正法義不？」說此語時，以佛神力，恒河沙等諸世界中九億菩薩，從坐而起，即白佛言：「世尊！我等皆能持此法門，令於此間娑婆世界未來世中，為諸眾生流通不絕，知是菩薩是智器者。」爾時，四大神王白佛言：「世尊！我等亦能受持如來所說法義，令彼菩薩所求滿足，若於是中是智器者。」",
+   "T0829": "爾時佛告羅睺羅言：「善男子！我此法要汝當受持。」說是語時，會中有九十億菩薩摩訶薩，承佛威神即皆避座，白佛言：「世尊！我等誓當受持如來所說法要，於此娑婆國土最後時中，見有其人流通為說。」爾時四天王白佛言：「世尊！若有能持此經典者，我當擁護，令其志願皆得滿足。所以者何？能持此經是法器故。」",
+   "T0830": "爾時佛告羅睺羅言：「善男子！我此法要，汝當受持。」時彼會中有九十億菩薩摩訶薩聞是語已，承佛神力，白佛言：「世尊！我等誓於娑婆世界後時後分，見有堪能為法器者，我當為彼宣說是經，惟願世尊不以為慮。」爾時四天王復白佛言：「世尊！若當來世有善男子及善女人，能有受持此經典者，我當擁護，諸有願求皆令滿足。何以故？此善男子及善女人，能持此經，是法器故。」"
+  },
+  "b15": {
+   "bo": "།དེ་ནས་བཅོམ་ལྡན་འདས་ཀྱིས་ཐམས་ཅད་དང་ལྡན་པའི་འཁོར་དེ་ལ་གཟིགས་ནས་བཀའ་སྩལ་པ། གྲོགས་པོ་དག་ཤིན་ཏུ་རྒྱས་པ་བསྡུས་པའི་ཡི་གེ་མེད་པའི་ཟ་མ་ཏོག་རྣམ་པར་སྣང་མཛད་ཀྱི་སྙིང་པོའི་ཆོས་ཀྱི་རྣམ་གྲངས་འདི་ཉན་པ་དེ་དག་ནི་དགེ་བའི་རྩ་བ་ཆུང་ངུ་དང་ལྡན་པར་མི་འགྱུར་རོ། །དེ་ཅིའི་ཕྱིར་ཞེ་ན། ང་ལ་སྐྱེས་བུ་དམ་པ་དེ་དག་གིས་བཀུར་སྟིར་བྱས། བླ་མར་བྱས། བཙུན་པར་བྱས་པའི་ཕྱིར་རོ། །རིགས་ཀྱི་བུ་དེ་དག་ནི་ངའི་བྱང་ཆུབ་ཕྲག་པ་ལ་ཐོགས་པར་འགྱུར་རོ། །དེ་དག་གི་སྤོབས་པ་ཕུན་སུམ་ཚོགས་པ་རྒྱུན་མི་འཆད་པར་འགྱུར་རོ། །དེ་དག་གི་སངས་རྒྱས་ཀྱི་ཞིང་ཤིན་ཏུ་ཡོངས་སུ་དག་པར་འགྱུར་རོ། །འཆི་བའི་དུས་ཀྱི་ཚེ་ན་ཡང་དེ་བཞིན་གཤེགས་པ་འོད་དཔག་མེད་ཉན་ཐོས་ཀྱི་དགེ་འདུན་གྱིས་ཡོངས་སུ་བསྐོར་ཅིང་བྱང་ཆུབ་སེམས་དཔའི་ཚོགས་ཀྱིས་མདུན་གྱིས་བལྟས་ནས་མདུན་ན་བཞུགས་པར་གྱུར་ཏེ་མཐོང་བར་འགྱུར་རོ། །ང་ཡང་བྱང་ཆུབ་སེམས་དཔའ་འདི་དག་ཉིད་དང་ཐབས་ཅིག་ཏུ་རིའི་རྒྱལ་པོ་བྱ་རྒོད་ཀྱི་ཕུང་པོ་ལ་གནས་པར་མཐོང་བར་འགྱུར་རོ། །རིགས་ཀྱི་བུ་དེ་དག་གི་ཆོས་ཀྱི་མཛོད་མི་ཟད་པར་འགྱུར་རོ། །དེ་དག་ཚེ་རབས་དྲན་པར་འགྱུར་རོ། །ངན་སོང་རྣམས་སུ་སྐྱེ་བར་མི་འགྱུར་རོ།",
+   "en": "Then the Blessed One looked upon the entire retinue and said, “Friends, those who hear this Dharma discourse on the basket without words, the illuminator’s matrix, which condenses the very extensive sūtras, will not be endowed with lesser roots of virtue. Why is this so? This is because all those excellent beings have served, venerated,  and honored me. Those children of a good family will carry my awakening on their shoulders. Their consummate eloquence will be unceasing. Their buddha realms will be thoroughly and completely pure. “ Also, at the time of death, they will see standing before them the Thus-Gone One Amitābha surrounded by a saṅgha of śrāvakas and attended by an assembly of bodhisattvas. They will also see me together with these very bodhisattvas abiding on Vulture Peak, the king of mountains. The treasury of the Dharma will never be exhausted for those children of a good family. They will remember their past lives. They will not be born in the lower realms. “",
+   "T0828": "爾時，世尊周遍觀察一切眾已，作如是言：「善男子！我非惟修微少善根而成正覺。彼諸眾生，若有能聞此正法者，彼亦非修微少善根。若能受持此廣博嚴上王無字寶篋法門，若能聞者，彼人則為已恭敬我，尊重讚嘆。善男子！是善男子、善女人，則為兩肩荷擔菩提。彼人則得不斷辯才，得善清淨諸佛世界。命終之時，則得現見阿彌陀佛，聲聞、菩薩大眾圍遶，住其人前；亦見我身於此耆闍崛山王頂，及見此等諸菩薩眾。善男子！彼善男子、善女人，則為己得大法庫藏，而不可盡；得宿命智，不生惡道。",
+   "T0829": "爾時世尊普觀眾會而作是言：「諸仁者！我此所說甚深方廣希有法門，非諸眾生有少善根而能聽受，能聽受者即為承事供養於我，亦為荷擔無上菩提。是人當得辯才無礙，決定生於清淨佛土；是人臨終定得親見阿彌陀佛、菩薩大眾而現在前。我今在此耆闍崛山，諸菩薩眾所共圍繞，彼臨終時亦如是見！當知是人即為已得無盡法藏；當知是人得宿命智；當知是人不墮惡道。",
+   "T0830": "爾時世尊，見九十億諸菩薩等，及四天王如是請已，便作是言：「善男子！我此所說遍照光明藏無字法門，我得佛來未曾演說，今為汝等而演說之。善男子！彼未來世諸眾生等，若得聞此希有法門，當知是人久已成就無量福慧；當知是人則為承事供養於我；當知是人則為荷擔佛大菩提；當知是人決定當得成就辯才；當知是人決定當得清淨佛土；當知是人臨命終時定當得見阿彌陀佛，菩薩大眾之所圍繞；當知是人常見我身在靈鷲山，及見此等諸菩薩眾；當知是人則為已得無盡法藏；當知是人得宿命智；當知是人不墮惡道。"
+  },
+  "b16": {
+   "bo": "།རིགས་ཀྱི་བུ་ང་ནི་འཇིག་རྟེན་ཐམས་ཅད་དང་མི་འཐུན་པའི་ཚིག་འདི་སྨྲ་སྟེ། རིགས་ཀྱི་བུ་དག་གལ་ཏེ་མཚམས་མེད་པ་ལྔ་བྱེད་པར་འགྱུར་ལ། ཆོས་ཀྱི་རྣམ་གྲངས་འདི་ལུས་ལ་བཏགས་སམ། ཡི་གེར་འདྲི་འམ། ཀློག་གམ། ཀུན་ཆུབ་པར་བྱེད་ན་དེ་ནི་ངན་སོང་ངན་འགྲོ་ལོག་པར་ལྟུང་བར་འགྲོ་བར་ངས་མ་མཐོང་ངོ་། །བྱང་ཆུབ་སེམས་དཔའ་དེ་སངས་རྒྱས་ཐམས་ཅད་ཀྱིས་དབང་བསྐུར་ཞིང་མིག་ལྔ་ཐོབ་པར་འགྱུར་རོ། །དབང་པོ་ཉམས་པར་མི་འགྱུར་རོ། །སངས་ རྒྱས་ཐམས་ཅད་ཀྱིས་ཡོངས་སུ་བཟུང་ངོ་། །བྱང་ཆུབ་སེམས་དཔའ་ཐམས་ཅད་ཀྱིས་ཡོངས་སུ་བཟུང་ངོ་། །དེའི་ལས་ཚད་མེད་པ་རྣམ་པར་དག་པར་འགྱུར་རོ། །རིགས་ཀྱི་བུ་ཚིག་འདི་ནི་ཐ་མར་སྨྲ་སྟེ། དེ་མངོན་པར་རྫོགས་པར་སངས་རྒྱས་པར་ངས་མཐོང་ངོ་། །བཅོམ་ལྡན་འདས་ཀྱིས་དེ་སྐད་ཅེས་བཀའ་སྩལ་ནས། ཁྱད་པར་སེམས་ལ་སོགས་པ་བྱང་ཆུབ་སེམས་དཔའ་རྣམས་དང་། བརྒྱ་བྱིན་ལ་སོགས་པ་ལྷའི་བུ་རྣམས་དང་། རྒྱལ་པོ་ཆེན་པོ་བཞི་དང་།",
+   "en": "Child of a good family, I have spoken these words that contradict the whole world. I have never seen children of a good family who commit the five actions with immediate retribution and then fasten this Dharma discourse to their bodies, write it out, recite it, or master it fall into the lower realms. Those bodhisattvas will be empowered by all the buddhas and attain the five eyes. They will not have inferior faculties. They will be embraced by all buddhas. They will be embraced by all bodhisattvas. Their limitless actions will be purified. Child of a good family, I see that they will speak these words in the future and become truly and perfectly awakened.”",
+   "T0828": "「善男子！我今說此一切世間所未曾有難信法門。善男子！若彼善男子、善女人，設有逆罪，以其善能讀誦、受持此勝法門，若自書寫、若勸人書，若自讀誦、勸人讀誦，若能自持、若勸人持。善男子！我說彼人，不見惡道，則為一切諸佛所記。彼諸菩薩皆得五眼，諸根具足，一切諸佛之所護念，一切菩薩之所攝受，令滅無量煩惱，業障即得清淨。「善男子！我此所說最後言說，自我得道成正覺來，未說此言。」",
+   "T0829": "「善男子！我今說此一切世間難信之法，設有眾生作五逆罪，聞是經已書持、讀誦、為人解說，所有業障咸得消除，終不受於惡趣之苦，斯人即為諸佛菩薩之所護念，在在所生諸根具足，蒙佛灌頂五眼清淨。善男子！取要言之，我見是人已成佛道。」",
+   "T0830": "「復次善男子！今我說是未曾有法，若當來世有善男子及善女人，設有已作五逆等罪，聞此法門，若能書、持、讀誦、解說，或勸他人書、持、讀誦及以解說，我見是人不墮惡道，其人所有諸煩惱障、業障、報障，皆得清淨，其人來世具得五眼，其人則為一切諸佛所共灌頂，其人則為諸佛世尊及諸菩薩之所護念，其人來世在在所生，具足諸根無有缺減。」"
+  },
+  "b17": {
+   "bo": "ལྷ་དང་། མི་དང་། ལྷ་མ་ཡིན་དང་། དྲི་ཟར་བཅས་པའི་འཇིག་རྟེན་ཡི་རངས་ཏེ། བཅོམ་ལྡན་འདས་ཀྱིས་གསུངས་པ་ལ་མངོན་པར་བསྟོད་དོ།། །། འཕགས་པ་ཡི་གེ་མེད་པའི་ཟ་མ་ཏོག་རྣམ་པར་སྣང་མཛད་ཀྱི་སྙིང་པོ་ཞེས་བྱ་བ་ཐེག་པ་ཆེན་པོའི་མདོ་རྫོགས་སོ།། །། རྒྱ་གར་གྱི་མཁན་པོ་ཛི་ན་མི་ཏྲ་དང་། དཱ་ན་ཤཱི་ལ་དང་། མུ་ནི་བརྨ་དང་། ཞུ་ཆེན་གྱི་ལོཙྪ་བ་བན་དེ་ཡེ་ཤེས་སྡེས་ཞུས་ནས་གཏན་ལ་ཕབ་པ།།",
+   "en": "When the Blessed One had spoken these words, Viśeṣacintin and the other bodhisattvas, Śakra and the gods, the Four Great Kings, and the world with its gods, humans, asuras, and gandharvas rejoiced and praised what the Blessed One had said. This concludes the noble Mahāyāna sūtra “The Basket without Words, The Illuminator’s Matrix.” It was edited and finalized by the Indian preceptors Jinamitra, Dānaśīla, and Munivarman, and the chief editor-translator Bandé Yeshé Dé.",
+   "T0828": "佛說此經已，勝思惟等諸大菩薩，帝釋王等諸天及四大王，人、天、阿修羅、迦樓羅、緊那羅、乾闥婆等，一切世間，聞佛所說，皆大歡喜。",
+   "T0829": "佛說此經已，勝思惟等一切菩薩，及諸聲聞、天龍八部，皆大歡喜，信受奉行。",
+   "T0830": "佛說是經已，勝思惟菩薩摩訶薩等，及諸比丘，天龍八部，聞佛所說，皆大歡喜，信受奉行。"
+  }
+ }
+}
