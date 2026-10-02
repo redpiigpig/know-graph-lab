@@ -722,6 +722,13 @@ def cmd_run(limit: int | None, dry_run: bool):
         print(f"  category: {cls['category']}  subcat: {cls.get('subcategory')}  ({cls['source']}, conf={cls['confidence']:.2f})")
 
         target = build_target_path(meta, cls["category"])
+        # 🚨 下面的「目標已存在就刪 z-lib 那份」只看這次算出來的目標夾。分到 _待審分類 時，
+        # 同一本其實早在宗教學／神學夾裡也看不到，於是又入庫一份重複的（10-02 重分類時抓出 13 本）。
+        # 放進待審前，先找所有類別夾有沒有同名檔，有就改指向那一份走重複處理。
+        if cls["category"] == REVIEW_CATEGORY and not target.exists():
+            same = [q for q in DRIVE_ROOT.glob(f"*/{target.name}") if q.parent.name != REVIEW_CATEGORY]
+            if same:
+                target = same[0]
         print(f"  target: {target}")
 
         if dry_run:
