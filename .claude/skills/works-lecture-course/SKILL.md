@@ -1196,6 +1196,12 @@ B 線＝前人概論怎麼切（比較表）。一次派一個 Sonnet。
   神為人做皮衣（創 3:21）；祈禱＝亞伯獻祭（創 4:4，照方向軸獻祭是往上獻，歸祈禱而非聖事；詩 141:2、來 13:15）＋以挪士求告；
   認信＝亞伯「因著信」（來 11:4）→亞伯拉罕「天地的主至高的神」（創 14:22）、信就算為義（創 15:6）→
   申 26:5「我祖原是一個將亡的亞蘭人」（雅各；von Rad 稱「小歷史信經」）→ Shema；來 11:13 列祖「承認」（ὁμολογήσαντες）。
+- 第七章備料完成（`sources_ch07.md`，64 筆，已補以挪士與亞伯；必備缺 20）；新增 7 本 8 行進獵表（Taft《Liturgy of the Hours》、
+  Bradshaw《Daily Prayer》、Brock《Syriac Fathers on Prayer》、尼尼微的以撒、《朝聖者之路》英中、大馬士革的約翰論聖像、
+  Ouspensky）。🚨 以挪士「求告」在猶太傳統與教父的讀法相反，要如實並列。ACCS 創 1–11 是掃描無文字層，OCR 在
+  `c:/tmp/accs_gen_*.raw.jsonl`。衣索比亞日課、科普特 Agpeya 英譯書目未核到。
+- 作者另要求（2026-10-02）：基督教史／教會史／教會研究／基督教研究「前五百篇」，十九世紀至今，要下載。
+  走 [[research-data-top-papers]]；待作者定：只收論文或連專著（傾向都收）、四組分法、與「史學五百篇」連結。
 - 補書不只 z-lib；先查站上既有（梵二 SC／DV 中拉英在 `data/creeds/ecumenical-councils/vatican-ii/`、
   奧斯堡信條與路德小教理在 `data/creeds/protestant-confessions/`、通諭中譯在 `data/encyclicals/`），
   再查 TRC／天主教在線目錄。館藏確認沒有：《天主教教理》全本中譯、《協同書》中譯、Schmemann、Bria、Brown 第二冊。
